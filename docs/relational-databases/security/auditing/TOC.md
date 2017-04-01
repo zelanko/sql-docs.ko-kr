@@ -1,0 +1,7 @@
+# [SQL Server 감사 로그 보기](view-a-sql-server-audit-log.md)
+# [SQL Server Audit 동작 그룹 및 동작](sql-server-audit-action-groups-and-actions.md)
+# [SQL Server Audit 레코드](sql-server-audit-records.md)
+# [보안 로그에 SQL Server Audit 이벤트 쓰기](write-sql-server-audit-events-to-the-security-log.md)
+# [서버 감사 및 서버 감사 사양 만들기](create-a-server-audit-and-server-audit-specification.md)
+# [서버 감사 및 데이터베이스 감사 사양 만들기](create-a-server-audit-and-database-audit-specification.md)
+# [SQL Server Audit(데이터베이스 엔진)](sql-server-audit-database-engine.md)

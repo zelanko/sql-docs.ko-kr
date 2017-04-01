@@ -1,0 +1,1 @@
+ <Token> !(/Image/Shiproom/needhelp_person_icon.png) **도움이 필요하세요?**  [MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=SQLServer2016Preview) |  [stackoverflow](http://stackoverflow.com/questions/tagged/sql-server-2016) | [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)에서 문제 기록 또는 제안</Token>
