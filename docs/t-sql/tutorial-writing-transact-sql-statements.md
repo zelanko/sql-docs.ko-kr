@@ -47,7 +47,7 @@ caps.handback.revision: 21
   
 시스템에는 다음이 설치되어 있어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](버전은 관계 없음)  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\(버전은 관계 없음)  
   
 -  [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)  
   

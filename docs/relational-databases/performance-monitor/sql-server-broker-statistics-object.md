@@ -25,7 +25,7 @@ caps.handback.revision: 32
 |SQL Server Broker Statistics 카운터|설명|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 활성화 저장 프로시저가 오류로 인해 종료된 횟수입니다.|  
-|**Broker Transaction Rollbacks**|DML 문과 관련된 [!INCLUDE[ssSB](../../includes/sssb-md.md)](예: SEND 및 RECEIVE)를 포함하는 롤백된 트랜잭션의 수입니다.|  
+|**Broker Transaction Rollbacks**|DML 문과 관련된 [!INCLUDE[ssSB](../../includes/sssb-md.md)]\(예: SEND 및 RECEIVE)를 포함하는 롤백된 트랜잭션의 수입니다.|  
 |**Corrupted Messages Total**|인스턴스에 의해 수신된 손상된 메시지의 수입니다.|  
 |**Dequeued Transmission Msgs/sec**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 전송 큐에서 초당 제거된 메시지의 수입니다.|  
 |**Dialog timer event count**|대화 프로토콜 계층에서 활성 상태인 타이머의 수입니다. 이 수는 활성 대화의 수에 해당됩니다.|  

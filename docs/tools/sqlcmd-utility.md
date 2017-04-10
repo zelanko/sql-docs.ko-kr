@@ -42,7 +42,7 @@ caps.handback.revision: 150
 
   SSMS에서 sqlcmd 문을 실행하려면 위쪽 탐색 쿼리 메뉴 드롭다운에서 SQLCMD 모드를 선택합니다.  
   
-> [!IMPORTANT] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS)에서는 **쿼리 편집기**의 일반 및 SQLCMD 모드에서 실행하기 위해 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]SqlClient를 사용합니다. 명령줄에서 **sqlcmd** 를 실행할 경우 **sqlcmd** 는 ODBC 드라이버를 사용합니다. 서로 다른 기본 옵션이 적용될 수 있으므로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQLCMD 모드 및 **sqlcmd** 유틸리티에서 동일한 쿼리를 실행할 때 다른 동작이 수행될 수 있습니다.  
+> [!IMPORTANT] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]\(SSMS)에서는 **쿼리 편집기**의 일반 및 SQLCMD 모드에서 실행하기 위해 [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]SqlClient를 사용합니다. 명령줄에서 **sqlcmd** 를 실행할 경우 **sqlcmd** 는 ODBC 드라이버를 사용합니다. 서로 다른 기본 옵션이 적용될 수 있으므로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] SQLCMD 모드 및 **sqlcmd** 유틸리티에서 동일한 쿼리를 실행할 때 다른 동작이 수행될 수 있습니다.  
 >   
   
  현재는 **sqlcmd** 를 실행할 때 명령줄 옵션과 값 사이에 공백을 넣을 필요가 없습니다. 하지만 후속 릴리스에서는 명령줄 옵션과 값 사이에 공백을 넣어야 할 수도 있습니다.  

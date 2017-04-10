@@ -17,7 +17,7 @@ manager: "jhubbard"
 caps.handback.revision: 30
 ---
 # MDS(Master Data Services) 업그레이드
-  다음은 Microsoft [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)](으)로 업그레이드하는 시나리오입니다.  
+  다음은 Microsoft [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]\(으)로 업그레이드하는 시나리오입니다.  
   
 -   [데이터베이스 엔진 업그레이드 없이 업그레이드](../../database-engine/install-windows/upgrade-master-data-services.md#noengine)  
   
@@ -102,7 +102,7 @@ caps.handback.revision: 30
     3.  **적용**을 클릭합니다.  
   
 ##  <a name="engine"></a> 데이터베이스 엔진 업그레이드를 사용해서 업그레이드  
- 이 시나리오에서는 데이터베이스 엔진과 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 응용 프로그램을 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)](으)로 모두 업그레이드합니다.  
+ 이 시나리오에서는 데이터베이스 엔진과 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 응용 프로그램을 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]\(으)로 모두 업그레이드합니다.  
   
  **데이터베이스 엔진 업그레이드를 사용해서 업그레이드하려면**  
   
@@ -113,7 +113,7 @@ caps.handback.revision: 30
 3.  [데이터베이스 엔진 업그레이드 없이 업그레이드](#noengine) 에서 모든 단계를 완료합니다.  
   
 ##  <a name="twocomputer"></a> 두 컴퓨터에서의 업그레이드 시나리오  
- 이 시나리오에서는 SQL Server가 설치되어 있는 두 컴퓨터(하나는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)](으)로, 다른 하나는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)](으)로)의 시스템을 업그레이드합니다.  
+ 이 시나리오에서는 SQL Server가 설치되어 있는 두 컴퓨터(하나는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]\(으)로, 다른 하나는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]\(으)로)의 시스템을 업그레이드합니다.  
   
  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이(가) 설치된 경우 계속 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 을(를) 각각 사용하여 한 컴퓨터에서 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 웹 응용 프로그램을 사용하여 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 웹 응용 프로그램에서 더 이상 액세스할 수 없습니다.  
   

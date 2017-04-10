@@ -411,7 +411,7 @@ caps.handback.revision: 43
      SQL Server와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다.  
   
      **백업 압축 설정** 목록  
-     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)](이상 버전)에서 다음 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 값 중 하나를 선택합니다.  
+     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]\(이상 버전)에서 다음 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 값 중 하나를 선택합니다.  
   
     |||  
     |-|-|  

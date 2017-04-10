@@ -24,7 +24,7 @@ caps.handback.revision: 22
 # Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)](AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  
+  이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]\(AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용할 경우의 중요한 이점 중 하나는 읽기 가능한 보조 복제본을 보고 데이터 원본으로 사용하는 것과 동시에 보조 복제본이 주 데이터베이스에 대한 장애 조치(Failover) 기능을 제공할 수 있다는 점입니다.  
   

@@ -59,7 +59,7 @@ caps.handback.revision: 62
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (이상 버전)에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다.  
   
  **백업 압축 설정**  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)](이상 버전)에서 다음 백업 압축 값 중 하나를 선택합니다.  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]\(이상 버전)에서 다음 백업 압축 값 중 하나를 선택합니다.  
   
 |||  
 |-|-|  

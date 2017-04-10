@@ -132,7 +132,7 @@ Else
 샘플 모델  |엔터티  |비즈니스 규칙 이름|Description    
 ---------|---------|---------|------------  
 Product     | Product        |  Default Name| Color 및 Class 특성 값에 따라 기본 제품 이름을 지정합니다. Color 특성 값이 YLO가 아니고 Class 특성이 NA가 아니면 기본 이름은 Yellow NA입니다.         
-다음 비즈니스 규칙에서 Color 및 Class 특성이 `is equal`규칙 조건을 충족하지 않으면 `defaults to`[[규칙 작업](../master-data-services/business-rule-actions-master-data-services.md)](Business%20Rule%20Conditions%20(Master%20Data%20Services).xml)이 Name 특성에 적용됩니다.  
+다음 비즈니스 규칙에서 Color 및 Class 특성이 `is equal`규칙 조건을 충족하지 않으면 `defaults to`[[규칙 작업](../master-data-services/business-rule-actions-master-data-services.md)]\(Business%20Rule%20Conditions%20(Master%20Data%20Services).xml)이 Name 특성에 적용됩니다.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  

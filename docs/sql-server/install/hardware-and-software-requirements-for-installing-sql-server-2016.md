@@ -119,7 +119,7 @@ manager: "jhubbard"
 > [!NOTE]  
 >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치는 x64 프로세서에서만 지원됩니다. x86 프로세서에서는 더 이상 지원되지 않습니다.  
   
- *[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS)에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소를 설치하는 데 필요한 최소 메모리는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 최소 메모리 요구 사항과 달리 2GB RAM입니다. DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오.  
+ *[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]\(DQS)에 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 구성 요소를 설치하는 데 필요한 최소 메모리는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 최소 메모리 요구 사항과 달리 2GB RAM입니다. DQS 설치에 대한 자세한 내용은 [Install Data Quality Services](../../data-quality-services/install-windows/install-data-quality-services.md)를 참조하십시오.  
   
  **WOW64 지원:**  
   
@@ -193,11 +193,11 @@ manager: "jhubbard"
 |**기능**|**디스크 공간 요구 사항**|  
 |-----------------|--------------------------------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 데이터 파일, 복제, 전체 텍스트 검색 및 Data Quality Services|1480MB|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)](위의 설명 참조), R Services(데이터베이스 내) 포함|2744MB|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)](위의 설명 참조), 외부 데이터용 PolyBase 쿼리 서비스 포함|4194MB|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]\(위의 설명 참조), R Services(데이터베이스 내) 포함|2744MB|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]\(위의 설명 참조), 외부 데이터용 PolyBase 쿼리 서비스 포함|4194MB|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 및 데이터 파일|698MB|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|967MB|  
-|[!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)](독립 실행형)|280MB|  
+|[!INCLUDE[rsql_platform](../../includes/rsql-platform-md.md)]\(독립 실행형)|280MB|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint|1203MB|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(SharePoint 제품용)|325MB|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|121MB|  

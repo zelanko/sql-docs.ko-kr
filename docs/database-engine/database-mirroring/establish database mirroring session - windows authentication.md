@@ -23,7 +23,7 @@ manager: "jhubbard"
   
  데이터베이스 미러링 세션을 설정하고 데이터베이스에 대한 데이터베이스 미러링 속성을 수정하려면 **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용합니다. **미러링** 페이지를 사용하여 데이터베이스 미러링을 구성하기 전에 다음 요구 사항이 충족되었는지 확인합니다.  
   
--   주 서버 인스턴스 및 미러 서버 인스턴스에서 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Standard 또는 Enterprise)를 실행하고 있어야 합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
+-   주 서버 인스턴스 및 미러 서버 인스턴스에서 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(Standard 또는 Enterprise)를 실행하고 있어야 합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
   
     > [!NOTE]  
     >  미러링 모니터 서버 인스턴스는 일부 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  

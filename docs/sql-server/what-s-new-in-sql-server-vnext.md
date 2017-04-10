@@ -79,7 +79,7 @@ SQL Server vNext는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이
 ## <a name="see-also"></a>참고 항목    
  + [![릴리스 정보](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png)](SQL%20Server%20vNext%20Release%20Notes.md)[ SQL Server VNext 릴리스 정보](../sql-server/sql-server-vnext-release-notes.md). 
 + [버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)
- + [[설치 하드웨어 및 소프트웨어 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)](Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
+ + [[설치 하드웨어 및 소프트웨어 요구 사항](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)]\(Hardware%20and%20Software%20Requirements%20for%20Installing%20SQL%20Server%202016.md)
  + [설치 마법사](../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)
  
  + [설치 및 서비스 설치](Setup%20and%20Servicing%20Installation.md)

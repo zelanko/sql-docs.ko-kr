@@ -34,7 +34,7 @@ caps.handback.revision: 39
 |**MarginLeft**|보고서에 대해 설정할 왼쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: **1in**). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**MarginRight**|보고서에 대해 설정할 오른쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: **1in**). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**MarginTop**|보고서에 대해 설정할 위쪽 여백 값(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: **1in**). 이 값은 보고서의 원래 설정을 재정의합니다.|  
-|**OutputFormat**|출력 형식에서 지원하는 [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)])입니다. **BMP**, **EMF**, **GIF**, **JPEG**, **PNG** 또는 **TIFF**|  
+|**OutputFormat**|출력 형식에서 지원하는 [!INCLUDE[ndptecgdiexpanded](../includes/ndptecgdiexpanded-md.md)]\([!INCLUDE[ndptecgdi](../includes/ndptecgdi-md.md)])입니다. **BMP**, **EMF**, **GIF**, **JPEG**, **PNG** 또는 **TIFF**|  
 |**PageHeight**|보고서에 대해 설정할 페이지 높이(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: **11in**). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**PageWidth**|보고서에 대해 설정할 페이지 너비(인치)입니다. 정수 또는 10진수 값과 그 뒤의 "in"을 포함해야 합니다(예: **8.5in**). 이 값은 보고서의 원래 설정을 재정의합니다.|  
 |**PrintDpiX**|출력 이미지의 수평 해상도입니다. 기본값은 **300**입니다. **EMF**(확장 메타파일) 출력 형식에 적용됩니다.|  

@@ -115,7 +115,7 @@ caps.handback.revision: 60
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
   
 ### 기본 사항  
  Columnstore 테이블 및 인덱스는 항상 columnstore 압축으로 저장됩니다. 보관 압축이라고 하는 추가 압축을 구성하여 columnstore 데이터 크기를 더 줄일 수 있습니다.  보관 압축을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터에 대해 Microsoft XPRESS 압축 알고리즘을 실행합니다. 다음 데이터 압축 유형을 사용하여 보관 압축을 추가하거나 제거합니다.  
@@ -220,7 +220,7 @@ REBUILD PARTITION = ALL WITH (
 ## 압축이 복제에 주는 영향 
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
  데이터 압축과 복제를 함께 사용할 때는 다음 사항을 고려해야 합니다.  
   
 -   스냅숏 에이전트에서 초기 스키마 스크립트를 생성할 때 새 스키마는 테이블과 해당 인덱스 모두에 대해 동일한 압축 설정을 사용합니다. 압축을 인덱스에 사용하지 않고 테이블에만 사용할 수는 없습니다.  
@@ -245,7 +245,7 @@ REBUILD PARTITION = ALL WITH (
 ## 압축이 다른 SQL Server 구성 요소에 주는 영향 
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
    
  압축은 저장소 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
   

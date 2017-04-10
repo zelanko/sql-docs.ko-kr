@@ -390,7 +390,7 @@ model 데이터베이스의 새 값 및 모델을 기반으로 하는 새 데이
 - **ALTER ANY SECURITY POLICY** 권한은 행 수준 보안 구현의 일부로 제공됩니다.
 - **ALTER ANY MASK** 및 **UNMASK** 권한은 동적 데이터 마스킹 구현의 일부로 제공됩니다.
 - **ALTER ANY COLUMN ENCRYPTION KEY**, **VIEW ANY COLUMN ENCRYPTION KEY**, **ALTER ANY COLUMN MASTER KEY DEFINITION**및 **VIEW ANY COLUMN MASTER KEY DEFINITION** 권한은 상시 암호화 기능 구현의 일부로 제공됩니다.
-- **ALTER ANY EXTERNAL DATA SOURCE** 및 **ALTER ANY EXTERNAL FILE FORMAT** 권한은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 표시되지만 [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]([!INCLUDE[ssDW](../../includes/ssdw-md.md)])에만 적용됩니다.
+- **ALTER ANY EXTERNAL DATA SOURCE** 및 **ALTER ANY EXTERNAL FILE FORMAT** 권한은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 표시되지만 [!INCLUDE[ssAPS](../../includes/ssaps-md.md)]\([!INCLUDE[ssDW](../../includes/ssdw-md.md)])에만 적용됩니다.
 - **EXECUTE ANY EXTERNAL SCRIPT** 권한은 R 스크립트 지원의 일부로 제공됩니다.
  - **ALTER ANY DATABASE SCOPED CONFIGURATION** 권한은 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 문 사용에 대한 권한을 부여하기 위해 제공됩니다.
 

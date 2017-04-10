@@ -78,7 +78,7 @@ caps.handback.revision: 24
   
 ### 데이터 옵션  
  **ConnectionManager**  
- .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
+ .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
   
  **TableOrView**  
  프로파일링할 열이 포함된 기존 테이블이나 뷰를 선택합니다.  
@@ -132,7 +132,7 @@ caps.handback.revision: 24
  자세한 내용은 이 항목의 앞부분에 나오는 "구분 기호 및 기호 사용 이해"를 참조하십시오.  
   
  **TagTableConnectionManager**  
- .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SqlClient)를 사용하여 태그 테이블이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
+ .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)를 사용하여 태그 테이블이 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "태그 테이블 사용 이해"를 참조하십시오.  
   

@@ -41,7 +41,7 @@ caps.handback.revision: 101
 > [!NOTE]  
 >  [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자의 **Type System Version** 속성을 **SQL Server 2005**로 설정하면 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 날짜 데이터 형식을 DT_WSTR로 변환합니다.  
   
- [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 공급자를 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SqlClient)로 지정하면 시스템은 UDT(사용자 정의 데이터 형식)를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] BLOB(Binary Large Object)으로 변환합니다. 시스템은 UDT 데이터 형식을 변환할 때 다음 규칙을 적용합니다.  
+ [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 공급자를 .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)로 지정하면 시스템은 UDT(사용자 정의 데이터 형식)를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] BLOB(Binary Large Object)으로 변환합니다. 시스템은 UDT 데이터 형식을 변환할 때 다음 규칙을 적용합니다.  
   
 -   데이터가 큰 UDT가 아니면 시스템은 데이터를 DT_BYTES로 변환합니다.  
   

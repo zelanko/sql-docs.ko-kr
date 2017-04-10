@@ -51,7 +51,7 @@ caps.handback.revision: 24
   
 ### 데이터 옵션  
  **ConnectionManager**  
- .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
+ .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
   
  **TableOrView**  
  프로파일링할 기존 테이블이나 뷰를 선택합니다.  

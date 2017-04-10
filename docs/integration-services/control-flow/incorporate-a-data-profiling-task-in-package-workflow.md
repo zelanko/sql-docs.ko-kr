@@ -82,7 +82,7 @@ caps.handback.revision: 24
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
   
-2.  패키지에 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 추가합니다. .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SqlClient)를 사용하고, 가용한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 인스턴스에 연결하도록 이 연결 관리자를 구성합니다.  
+2.  패키지에 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 추가합니다. .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)를 사용하고, 가용한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 인스턴스에 연결하도록 이 연결 관리자를 구성합니다.  
   
      기본적으로 연결 관리자의 이름은 \<server name>.AdventureWorks1입니다.  
   

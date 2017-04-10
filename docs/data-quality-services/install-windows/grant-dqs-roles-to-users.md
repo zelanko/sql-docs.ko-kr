@@ -17,7 +17,7 @@ manager: "jhubbard"
 caps.handback.revision: 10
 ---
 # 사용자에게 DQS 역할 부여
-  이 항목에서는 Windows 보안 주체를 기반으로 SQL 로그인을 만들고 사용자에게 DQS_MAIN 데이터베이스에 대한 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS) 역할을 부여하는 방법에 대해 설명합니다.  
+  이 항목에서는 Windows 보안 주체를 기반으로 SQL 로그인을 만들고 사용자에게 DQS_MAIN 데이터베이스에 대한 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]\(DQS) 역할을 부여하는 방법에 대해 설명합니다.  
   
 ## 필수 구성 요소  
   

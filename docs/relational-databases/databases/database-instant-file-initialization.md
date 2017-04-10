@@ -40,7 +40,7 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  인스턴트 파일 초기화는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[winxppro](../../includes/winxppro-md.md)] 또는 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)] 이상 버전에서만 사용할 수 있습니다.  
   
- 즉시 파일 초기화는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER) 서비스 계정에 SE_MANAGE_VOLUME_NAME을 부여받은 경우에만 사용할 수 있습니다. Windows Administrator 그룹의 구성원은 이 권한을 가지고 있으며 다른 사용자에게 **볼륨 유지 관리 작업 수행** 보안 정책을 추가하여 이 권한을 부여할 수 있습니다. 사용자 권한 할당에 대한 자세한 내용은 Windows 설명서를 참조하세요.  
+ 즉시 파일 초기화는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(MSSQLSERVER) 서비스 계정에 SE_MANAGE_VOLUME_NAME을 부여받은 경우에만 사용할 수 있습니다. Windows Administrator 그룹의 구성원은 이 권한을 가지고 있으며 다른 사용자에게 **볼륨 유지 관리 작업 수행** 보안 정책을 추가하여 이 권한을 부여할 수 있습니다. 사용자 권한 할당에 대한 자세한 내용은 Windows 설명서를 참조하세요.  
   
  TDE를 사용하도록 설정되어 있으면 즉시 파일 초기화를 사용할 수 없습니다.  
   

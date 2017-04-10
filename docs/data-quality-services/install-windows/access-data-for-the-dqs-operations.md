@@ -17,7 +17,7 @@ manager: "jhubbard"
 caps.handback.revision: 15
 ---
 # DQS 작업을 위해 데이터 액세스
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS) 작업에 원본 데이터를 사용하고 처리된 데이터를 내보내려면 다음 중 하나를 수행할 수 있습니다.  
+  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]\(DQS) 작업에 원본 데이터를 사용하고 처리된 데이터를 내보내려면 다음 중 하나를 수행할 수 있습니다.  
   
 -   원본 데이터를 DQS_STAGING_DATA 데이터베이스의 테이블/뷰로 복사한 다음 이를 DQS 작업에 사용합니다. 처리된 데이터를 DQS_STAGING_DATA 데이터베이스의 새 테이블로 내보낼 수도 있습니다. 이렇게 하려면 Windows 사용자 계정에 DQS_STAGING_DATA 데이터베이스에 대한 읽기/쓰기 액세스 권한을 부여해야 합니다.  
   

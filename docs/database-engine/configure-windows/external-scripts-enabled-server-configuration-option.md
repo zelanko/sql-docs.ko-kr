@@ -29,7 +29,7 @@ caps.handback.revision: 8
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
  **sp_execute_external_script** 프로시저를 사용하여 외부 스크립트를 실행하려면 외부 스크립트 사용 옵션을 사용하도록 설정해야 합니다. **sp_execute_external_script**를 사용하여 R 등의 지원되는 언어로 작성된 스크립트를 실행합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]와 함께 설치되는 서버 구성 요소와, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 고성능 환경에 데이터 기술자를 연결해 주는 워크스테이션 도구 및 연결 라이브러리 집합으로 구성됩니다.  R 스크립트를 실행할 수 있도록 설정하려면 **설치 중에** 고급 분석 확장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치합니다. 자세한 내용은 [Installing Previous Versions of SQL Server R Services](../Topic/Installing%20Previous%20Versions%20of%20SQL%20Server%20R%20Services.md)을(를) 참조하십시오.  
   

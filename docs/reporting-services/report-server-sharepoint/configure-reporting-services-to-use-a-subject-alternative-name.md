@@ -18,7 +18,7 @@ manager: "erikre"
 caps.handback.revision: 6
 ---
 # 주체 대체 이름을 사용하도록 Reporting Services 구성
-  이 항목에서는 rsreportserver.config 파일을 수정하고 Netsh.exe 도구를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)](SSRS)를 구성하고 SAN(주체 대체 이름)을 사용하는 방법에 대해 설명합니다.  
+  이 항목에서는 rsreportserver.config 파일을 수정하고 Netsh.exe 도구를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]\(SSRS)를 구성하고 SAN(주체 대체 이름)을 사용하는 방법에 대해 설명합니다.  
   
 ||  
 |-|  

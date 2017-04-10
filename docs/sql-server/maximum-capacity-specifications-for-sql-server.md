@@ -40,7 +40,7 @@ caps.handback.revision: 85
 ##  <a name="Engine"></a> [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 정의되거나 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 참조되는 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체(object)||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64비트)|추가 정보|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 개체(object)||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\(64비트)|추가 정보|  
 |---------------------------------------------------------|-|------------------------------------------------------------------|----------------------------|  
 |일괄 처리 크기||65,536 * 네트워크 패킷 크기|네트워크 패킷 크기는 응용 프로그램과 관계형 [!INCLUDE[ssDE](../includes/ssde-md.md)] 간의 통신에 사용되는 TDS(Tabular Data Stream) 패킷의 크기입니다. 기본 패킷 크기는 4KB이며 네트워크 패킷 크기 구성 옵션으로 제어됩니다.|  
 |짧은 문자열 열당 바이트 수||8,000||  
@@ -103,7 +103,7 @@ caps.handback.revision: 85
 ##  <a name="Utility"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64비트)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\(64비트)|  
 |----------------------------------------------|-|------------------------------------------------------------------|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티당 컴퓨터(물리적 컴퓨터 또는 가상 컴퓨터) 수||100|  
 |컴퓨터당 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 인스턴스 수||5|  
@@ -120,7 +120,7 @@ caps.handback.revision: 85
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 응용 프로그램)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64비트)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체||최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\(64비트)|  
 |------------------------------------------|-|------------------------------------------------------------------|  
 |DAC당 데이터베이스 수||1|  
 |DAC당 개체 수*||데이터베이스의 개체 수 또는 사용 가능한 메모리로 제한|  

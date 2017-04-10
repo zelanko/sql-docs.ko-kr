@@ -92,7 +92,7 @@ manager: "jhubbard"
  데이터베이스를 복원하기 전의 마지막 단계로 로그 백업을 수행합니다. 자세한 내용은 [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 참조하세요.  
   
  **백업 압축 설정**  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)](이상 버전)에서 다음 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 값 중 하나를 선택합니다.  
+ [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]\(이상 버전)에서 다음 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 값 중 하나를 선택합니다.  
   
 |||  
 |-|-|  

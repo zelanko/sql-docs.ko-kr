@@ -149,7 +149,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ```  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 데이터를 가져오려면( `bcp in –c –C65001 –f format_file` …” 또는 “`BULK INSERT`/`OPENROWSET` ... `FORMATFILE='format_file' CODEPAGE=65001` ...”을 사용하여) 데이터 정렬/코드 페이지에 대한 정보는 65001보다 높은 우선 순위를 갖습니다.  
-따라서 서식 파일을 생성하는 경우 생성된 서식 파일에서 데이터 정렬 정보를 수동으로 삭제한 후 데이터 가져오기를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](으)로 다시 가져와야 합니다.  
+따라서 서식 파일을 생성하는 경우 생성된 서식 파일에서 데이터 정렬 정보를 수동으로 삭제한 후 데이터 가져오기를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(으)로 다시 가져와야 합니다.  
 다음은 데이터 정렬 정보가 없는 서식 파일의 예입니다.  
   
 ```  

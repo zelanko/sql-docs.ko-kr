@@ -83,13 +83,13 @@ caps.handback.revision: 63
   
 #### [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 다중 서브넷 장애 조치(Failover) 클러스터로 업그레이드하려면(기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터가 다중 서브넷 클러스터가 아닌 경우)  
   
-1.  클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](으)로 업그레이드하려면 위의 단계를 따릅니다.  
+1.  클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]\(으)로 업그레이드하려면 위의 단계를 따릅니다.  
   
 2.  AddNode 설치 동작을 사용하여 다른 서브넷에 있는 노드를 추가하고 **클러스터 네트워크 구성** 페이지에서 IP 주소 리소스 종속성을 OR로 설정합니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)를 참조하세요.  
   
 #### 현재 V-LAN 확장을 사용하는 다중 서브넷 클러스터를 업그레이드하려면  
   
-1.  클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)](으)로 업그레이드하려면 위의 단계를 따릅니다.  
+1.  클러스터를 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]\(으)로 업그레이드하려면 위의 단계를 따릅니다.  
   
 2.  네트워크 설정을 변경하여 원격 노드를 다른 서브넷으로 이동합니다.  
   

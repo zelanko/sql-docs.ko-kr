@@ -183,7 +183,7 @@ NULL
 |Target Mail DT|Bike Buyer|1.|2|500|Likelihood|제곱 평균 오차|0.342721344892651|  
   
 ## 요구 사항  
- 교차 유효성 검사는 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 해당)에서만 사용할 수 있습니다.  
+ 교차 유효성 검사는 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)]\([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 해당)에서만 사용할 수 있습니다.  
   
 ## 관련 항목:  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   

@@ -53,7 +53,7 @@ caps.handback.revision: 28
     SQL Server 2012 또는 SQL Server 2014를 실행하는 다른 Analysis Services 인스턴스에 완성된 테이블 형식 모델을 배포하려는 경우에만 이전 호환성 수준을 선택하는 것이 좋습니다. 자세한 내용은 [호환성 수준](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을참조하세요.   
   
 ## SQL Server Data Tools 테이블 형식 모델 제작 환경 이해  
-새 테이블 형식 모델 프로젝트를 만들었으므로 이제 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)](Visual Studio 2010 이상)의 테이블 형식 모델 제작 환경에 대해 간단히 살펴보겠습니다.  
+새 테이블 형식 모델 프로젝트를 만들었으므로 이제 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]\(Visual Studio 2010 이상)의 테이블 형식 모델 제작 환경에 대해 간단히 살펴보겠습니다.  
   
 프로젝트를 만들면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 열립니다. 모델 디자이너에 빈 모델이 표시되고 **솔루션 탐색기** 창에서 **Model.bim** 파일이 선택됩니다. 데이터를 추가하면 테이블과 열이 디자이너에 표시됩니다. 디자이너가 표시되지 않으면(Model.bim 탭에 빈 창이 표시됨) **솔루션 탐색기**의 **AW Internet Sales Tabular Model**에서 **Model.bim** 파일을 두 번 클릭합니다.  
   

@@ -415,8 +415,8 @@ caps.handback.revision: 203
   
 |서비스/응용 프로그램|기능|필요한 권한|  
 |--------------------------|-------------------|-------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER)|xp_sendmail을 사용하여 메일 슬롯에 씁니다.|네트워크 쓰기 권한|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 이외의 사용자를 위해 xp_cmdshell을 실행합니다.|운영 체제의 일부로 작동하며 프로세스 수준의 토큰을 교체합니다.|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(MSSQLSERVER)|xp_sendmail을 사용하여 메일 슬롯에 씁니다.|네트워크 쓰기 권한|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(MSSQLSERVER)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자 이외의 사용자를 위해 xp_cmdshell을 실행합니다.|운영 체제의 일부로 작동하며 프로세스 수준의 토큰을 교체합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트(MSSQLSERVER)|자동 재시작 기능을 사용합니다.|Administrators 로컬 그룹의 멤버여야 합니다.|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자|최적의 쿼리 성능을 위해 데이터베이스를 튜닝합니다.|처음 사용하는 경우 시스템 관리 자격 증명이 있는 사용자가 응용 프로그램을 초기화해야 합니다. 초기화한 다음에는 dbo 사용자가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 튜닝 관리자를 사용하여 자신이 소유한 테이블만 튜닝할 수 있습니다. 자세한 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 온라인 설명서의 "처음 사용할 때의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 튜닝 관리자 초기화"를 참조하십시오.|  
   
