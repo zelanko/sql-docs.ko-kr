@@ -1,0 +1,60 @@
+---
+title: "SQL 스크립트 생성(복제 개체) | Microsoft Docs"
+ms.custom: ""
+ms.date: "03/14/2017"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+f1_keywords: 
+  - "sql13.rep.generatesqlscript.f1"
+helpviewer_keywords: 
+  - "SQL 스크립트 생성 대화 상자"
+ms.assetid: b7ccc34e-1c22-44b8-8eb5-f6423af3164e
+caps.latest.revision: 24
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 24
+---
+# SQL 스크립트 생성(복제 개체)
+  복제 스크립트에는 게시 또는 구독과 같이 스크립팅된 복제 구성 요소를 구현하는 데 필요한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 시스템 저장 프로시저가 포함되어 있습니다. 토폴로지의 모든 복제 구성 요소는 재해 복구 계획의 일부로 스크립팅되어야 하며 반복 태스크를 자동화하는 데도 스크립트를 사용할 수 있습니다. 복제에서는 복제 개체를 스크립팅할 수 있는 다음 두 개의 대화 상자를 제공합니다.  
+  
+-   **SQL 스크립트 생성**, 상황에 맞는 메뉴에서 사용할 수는 **복제** 폴더와 모든 하위 폴더에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 이 대화 상자를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 복제 개체를 스크립팅할 수 있습니다.  
+  
+-   **SQL 스크립트 생성 \< o b j>**, 게시 및 구독에 대 한 상황에 맞는 메뉴에서 사용할 수 있습니다. 이 대화 상자를 사용하여 개별 개체를 스크립팅할 수 있습니다.  
+  
+ 이러한 대화 상자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 단일 인스턴스에 있는 개체를 스크립팅하며, 다른 인스턴스에 연결하여 관련 개체를 스크립팅하지는 않습니다.  
+  
+## SQL 스크립트 생성 옵션  
+ **배포자 속성**  
+ 저장 프로시저를 스크립팅하여 배포자를 설정 또는 해제하고, 배포자와 연결된 게시자를 추가 또는 삭제하고, 배포 데이터베이스를 생성 또는 삭제하려면 선택합니다.  
+  
+ **다음 데이터 원본의 게시**  
+ 저장 프로시저를 스크립팅하여 게시를 설정 또는 해제하고, 아티클, 밀어넣기 구독 및 복제 작업을 생성 또는 삭제하려면 선택합니다.  
+  
+ **다음 데이터 원본의 구독**  
+ 저장 프로시저를 스크립팅하여 끌어오기 구독 및 복제 작업을 생성 또는 삭제하려면 선택합니다.  
+  
+ **만들거나 구성 요소를 사용 하도록 설정 하려면** 및 **를 삭제 하거나 구성 요소를 사용 하지 않도록 설정**  
+ 복제 개체를 생성 또는 삭제하는 명령을 스크립트에 포함할지 여부를 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 대화 상자를 사용하여 구성 요소를 설정 및 해제하는 스크립트 집합을 만들 것을 권장합니다.  
+  
+ **복제 작업**  
+ 저장 프로시저 호출과 함께 복제 작업을 스크립팅하려면 선택합니다. 이 옵션은 배포자에서 스크립팅하는 경우에만 사용할 수 있습니다.  
+  
+ 복제 저장 프로시저는 실행될 때 필요한 작업을 만들기 때문에 이 옵션을 선택할 필요가 없습니다. 그러나 개별 작업을 다시 만들어야 하는 경우 작업 레코드를 만들어 두는 것이 좋습니다.  
+  
+## SQL 스크립트 생성 \< o b j> 옵션  
+ **만들거나 구성 요소를 사용 하도록 설정 하려면** 및 **를 삭제 하거나 구성 요소를 사용 하지 않도록 설정**  
+ 복제 개체를 생성 또는 삭제하는 명령을 스크립트에 포함할지 여부를 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 대화 상자를 사용하여 구성 요소를 설정 및 해제하는 스크립트 집합을 만들 것을 권장합니다.  
+  
+ **복제 작업**  
+ 이 옵션은 에서만 사용할 수는 **SQL 스크립트 생성** 대화 상자입니다.  
+  
+## 참고 항목  
+ [복제 스크립팅](../../relational-databases/replication/scripting-replication.md)  
+  
+  

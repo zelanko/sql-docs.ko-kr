@@ -1,0 +1,7 @@
+# [SQL Server 업데이트 설치 후 DQS 데이터베이스 스키마 업그레이드](upgrade-dqs-databases-schema-after-installing-sql-server-update.md)
+# [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](upgrade-sqlclr-assemblies-after-net-framework-update.md)
+# [사용자에게 DQS 역할 부여](grant-dqs-roles-to-users.md)
+# [DQS 작업을 위해 데이터 액세스](access-data-for-the-dqs-operations.md)
+# [Dqsinstaller.exe를 사용하여 DQS 기술 자료 내보내기 및 가져오기](export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)
+# [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)
+# [Data Quality Services 설치](install-data-quality-services.md)

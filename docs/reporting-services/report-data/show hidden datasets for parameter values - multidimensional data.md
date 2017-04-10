@@ -1,0 +1,43 @@
+---
+title: "다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: ""
+ms.date: "12/09/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "reporting-services-sharepoint"
+  - "reporting-services-native"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+ms.assetid: eb01c4ca-4fd6-4629-b595-f0d2565915df
+caps.latest.revision: 7
+author: "guyinacube"
+ms.author: "asaxton"
+manager: "erikre"
+---
+# 다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시(보고서 작성기 및 SSRS)
+  보고서에는 보고서 데이터 창에 기본적으로 표시되지 않는 자동 생성 데이터 집합(숨겨진 데이터 집합이라고도 함)이 포함될 수도 있습니다. 이러한 데이터 집합은 다음과 같은 방법으로 생성됩니다.  
+  
+-   다차원 데이터베이스에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 쿼리 창의 필터 영역에서 필터링할 필드를 지정하고, 필터에 쿼리 매개 변수를 만들지 여부를 선택할 수 있습니다. 매개 변수 옵션을 선택하면 보고서 매개 변수에 올바른 값을 제공하기 위해 보고서 데이터 집합이 자동으로 만들어집니다.  
+  
+-   다차원 데이터베이스를 기반으로 하는 쿼리를 가져올 경우 보고서에 숨겨진 데이터 집합도 포함될 수 있습니다.  
+  
+ 마법사에서는 숨겨진 데이터 집합을 사용할 수 없습니다.  
+  
+ 보고서 데이터 창의 뷰를 변경하여 보고서의 모든 데이터 집합을 표시할 수 있습니다.  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
+  
+### 숨겨진 데이터 집합을 표시하려면  
+  
+-   보고서 데이터 창에서 데이터 집합 폴더를 마우스 오른쪽 단추로 클릭한 다음 **숨겨진 데이터 집합 표시**를 클릭합니다.  
+  
+## 관련 항목:  
+ [쿼리 디자이너&#40;보고서 작성기&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)   
+ [Reporting Services 쿼리 디자이너](../Topic/Reporting%20Services%20Query%20Designers.md)   
+ [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
+  
+  

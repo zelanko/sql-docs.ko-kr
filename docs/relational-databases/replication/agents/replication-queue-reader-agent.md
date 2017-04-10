@@ -1,0 +1,130 @@
+---
+title: "복제 큐 판독기 에이전트 | Microsoft Docs"
+ms.custom: ""
+ms.date: "06/02/2016"
+ms.prod: "sql-server-2016"
+ms.reviewer: ""
+ms.suite: ""
+ms.technology: 
+  - "replication"
+ms.tgt_pltfrm: ""
+ms.topic: "article"
+helpviewer_keywords: 
+  - "에이전트 [SQL Server 복제], 큐 판독기 에이전트"
+  - "명령 프롬프트 [SQL Server 복제]"
+  - "큐 판독기 에이전트, 매개 변수 참조"
+  - "큐 판독기 에이전트, 실행 파일"
+ms.assetid: 8e227793-11f6-47c6-99dc-ffc282f5d4bf
+caps.latest.revision: 36
+author: "BYHAM"
+ms.author: "rickbyh"
+manager: "jhubbard"
+caps.handback.revision: 36
+---
+# 복제 큐 판독기 에이전트
+  복제 큐 판독기 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 큐 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 메시지 큐에 저장된 메시지를 읽고 해당 메시지를 게시자에 적용하는 실행 파일입니다. 큐 판독기 에이전트는 지연 업데이트를 허용하는 스냅숏 및 트랜잭션 게시와 함께 사용됩니다.  
+  
+> [!NOTE]  
+>  매개 변수는 지정되는 순서에 제한을 받지 않습니다. 선택적 매개 변수가 지정되지 않은 경우 기본 에이전트 프로필을 기반으로 하여 미리 정의된 값이 사용됩니다.  
+  
+## 구문  
+  
+```  
+  
+qrdrsvc [-?]  
+[-Continuous]  
+[-DefinitionFile definition_file]  
+[-Distributor server_name[\instance_name]]  
+[-DistributionDB distribution_database]  
+[-DistributorLogin distributor_login]  
+[-DistributorPassword distributor_password]  
+[-DistributorSecurityMode [0|1]]  
+[-EncryptionLevel [0|1|2]]  
+[-HistoryVerboseLevel [0|1|2|3]]  
+[-LoginTimeOut login_time_out_seconds]  
+[-Output output_path_and_file_name]  
+[-OutputVerboseLevel [0|1|2]]  
+[-PollingInterval polling_interval]  
+[-PublisherFailoverPartner server_name[\instance_name] ]  
+[-ProfileName agent_profile_name]  
+[-QueryTimeOut query_time_out_seconds]  
+[-ResolverState [1|2|3]]  
+```  
+  
+## 인수  
+ **-?**  
+ 사용법 정보를 표시합니다.  
+  
+ **-Continuous**  
+ 에이전트에서 지연된 트랜잭션의 처리를 계속 시도할지 여부를 지정합니다. 이 인수가 지정된 경우 에이전트는 구독자에서 보류 중인 지연 트랜잭션이 없는 경우에도 실행을 계속합니다.  
+  
+ **-DefinitionFile** *def_path_and_file_name*  
+ 에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령줄 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
+  
+ **-배포자** *server_name*[**\\***instance_name*]  
+ 배포자 이름입니다. 지정 *server_name* 의 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 지정 *server_name*\\*instance_name* 의 명명 된 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 이 인수가 지정되지 않은 경우 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
+  
+ **-DistributionDB** *distribution_database*  
+ 배포 데이터베이스입니다.  
+  
+ **-DistributorLogin** *distributor_login*  
+ 배포자의 로그인 이름입니다.  
+  
+ **-DistributorPassword** *distributor_password*  
+ 배포자 암호입니다.  
+  
+ **-DistributorSecurityMode** [ **0**| **1**]  
+ 배포자의 보안 모드를 지정합니다. 값이 **0** 나타냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드 (기본값), 및의 값 **1** Windows 인증 모드를 나타냅니다.  
+  
+ **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ 연결을 만들 때 큐 판독기 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
+  
+|EncryptionLevel 값|설명|  
+|---------------------------|-----------------|  
+|**0**|SSL이 사용되지 않음을 지정합니다.|  
+|**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
+|**2**|SSL이 사용되고 인증서가 확인됨을 지정합니다.|  
+  
+ 자세한 내용은 참조 [보안 개요 & #40; 복제 및 #41;](../../../relational-databases/replication/security/security-overview-replication.md)합니다.  
+  
+ **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
+ 큐 판독기 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
+  
+|HistoryVerboseLevel 값|설명|  
+|-------------------------------|-----------------|  
+|**0**|기록 로깅을 사용하지 않습니다(권장되지 않음).|  
+|**1**|기본. 시작, 진행, 성공 등과 같이 상태가 동일한 이전 기록 메시지를 항상 업데이트합니다. 상태가 같은 이전 레코드가 없으면 새 레코드를 삽입합니다.|  
+|**2**|유휴 메시지 또는 장기 실행 작업 메시지를 포함하여 새 기록 레코드를 삽입합니다.|  
+|**3**|문제 해결에 유용한 추가 정보를 포함하는 새 기록 레코드를 삽입합니다.|  
+  
+ **-LoginTimeOut** *login_time_out_seconds*  
+ 로그인 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 15초입니다.  
+  
+ **-출력** *output_path_and_file_name*  
+ 에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
+  
+ **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ 출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 자세한 정보 표시 수준이 **2** (기본값), 모든 오류 메시지와 진행률 보고 메시지가 출력 되며,이 디버깅에 유용 합니다.  
+  
+ **-PollingInterval** *polling_interval*  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기반 큐를 사용하는 구독 업데이트에만 해당됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 큐가 보류 중인 지연 트랜잭션에 대해 폴링되는 빈도(초)를 지정합니다. 이 값은 0초에서 240초 사이일 수 있습니다. 기본값은 5초입니다.  
+  
+ **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
+ 게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 참조 [데이터베이스 미러링 및 복제 & #40; SQL Server 및 #41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)합니다.  
+  
+ **-ProfileName** *agent_profile_name*  
+ 에이전트에 대한 기본값 집합을 제공하는 데 사용되는 에이전트 프로필의 이름입니다. 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)합니다.  
+  
+ **-QueryTimeOut** *query_time_out_seconds*  
+ 쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 1800초입니다.  
+  
+ **-ResolverState** [ **1**| **2**| **3**]  
+ 지연 업데이트 충돌의 해결 방법을 지정합니다. 값 **1** 은 충돌 시 게시자의 내용이 적용되고, 현재 충돌하는 지연 트랜잭션이 게시자 및 원래 업데이트 구독자에서 다시 롤백되며, 이후 지연 트랜잭션의 처리가 계속됨을 나타냅니다. 값 **2** 는 충돌 시 구독자의 내용이 적용되고 지연 트랜잭션이 게시자의 값을 재정의함을 나타냅니다. 값이 **3** 나타내고 충돌이 있는 구독자 다시 초기화 하면; 게시자에 충돌에서 우선 적용, 이후 지연 트랜잭션의 처리가 종료 되며, 구독이 다시 초기화 됩니다. 기본 설정은 트랜잭션 게시의 경우 **1** 이고 스냅숏 게시의 경우 **3** 입니다.  
+  
+## 주의  
+ 큐 판독기 에이전트를 시작하려면 명령 프롬프트에서 **qrdrsvc.exe** 를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하십시오.  
+  
+## 참고 항목  
+ [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  
+  
+  
