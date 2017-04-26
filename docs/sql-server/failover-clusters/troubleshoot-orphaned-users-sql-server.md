@@ -1,30 +1,34 @@
 ---
-title: "분리된 사용자 문제 해결(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "분리된 사용자 [SQL Server]"
-  - "로그인 [SQL Server], 분리된 사용자"
-  - "[SQL Server] 문제 해결, 사용자 계정"
-  - "사용자 계정 [SQL Server], 분리된 사용자"
-  - "장애 조치(Failover) [SQL Server], 메타데이터 관리"
-  - "데이터베이스 미러링 [SQL Server], 메타데이터"
-  - "사용자 [SQL Server], 분리된"
+title: "분리된 사용자 문제 해결(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- orphaned users [SQL Server]
+- logins [SQL Server], orphaned users
+- troubleshooting [SQL Server], user accounts
+- user accounts [SQL Server], orphaned users
+- failover [SQL Server], managing metadata
+- database mirroring [SQL Server], metadata
+- users [SQL Server], orphaned
 ms.assetid: 11eefa97-a31f-4359-ba5b-e92328224133
 caps.latest.revision: 41
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f76cf5789d67f93443149074b0c4e8708f90000
+ms.lasthandoff: 04/11/2017
+
 ---
-# 분리된 사용자 문제 해결(SQL Server)
+# <a name="troubleshoot-orphaned-users-sql-server"></a>분리된 사용자 문제 해결(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 분리된 사용자는 데이터베이스 사용자가 **마스터** 데이터베이스의 로그인을 기반으로 하지만 해당 로그인이 **마스터**에 더 이상 존재하지 않는 경우 발생합니다. 이는 로그인이 삭제되었거나 데이터베이스가 로그인이 존재하지 않는 다른 서버로 이동된 경우에 발생할 수 있습니다. 이 항목에서는 분리된 사용자를 찾아서 로그인에 다시 매핑하는 방법을 설명합니다.  
@@ -32,8 +36,8 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  포함된 데이터베이스 사용자를 이동될 수 있는 데이터베이스에 사용하면 분리된 사용자가 발생할 가능성이 감소합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
-## 배경  
- 로그인을 기반으로 하는 보안 주체(데이터베이스 사용자 ID)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 있는 데이터베이스에 연결하려면 해당 주체가 **master** 데이터베이스에 유효한 로그인을 가지고 있어야 합니다. 이 로그인은 주체의 ID를 확인하고 해당 주체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결할 수 있는지 여부를 확인하는 인증 프로세스에서 사용됩니다. 서버 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 **sys.server_principals** 카탈로그 뷰 및 **sys.sql_logins** 호환성 뷰에서 볼 수 있습니다.  
+## <a name="background"></a>배경  
+ 로그인을 기반으로 하는 보안 주체(데이터베이스 사용자 ID)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 있는 데이터베이스에 연결하려면 해당 주체가 **master** 데이터베이스에 유효한 로그인을 가지고 있어야 합니다. 이 로그인은 주체의 ID를 확인하고 해당 주체가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결할 수 있는지 여부를 확인하는 인증 프로세스에서 사용됩니다. 서버 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 **sys.server_principals** 카탈로그 뷰 및 **sys.sql_logins** 호환성 뷰에서 볼 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 매핑된 "데이터베이스 사용자"를 사용하여 개별 데이터베이스에 액세스합니다. 이 규칙에는 세 가지 예외가 있습니다.  
   
@@ -53,11 +57,11 @@ caps.handback.revision: 41
   
  해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서버 인스턴스에서 정의되지 않았거나 잘못 정의되어 있는 데이터베이스 사용자(로그인 기반)는 이 인스턴스에 로그인할 수 없습니다. 이러한 사용자는 해당 서버 인스턴스에 있는 데이터베이스의 *분리된 사용자* 라고 합니다. 데이터베이스 사용자가 `master` 인스턴스에 없는 로그인 SID로 매핑되는 경우 사용자가 분리될 수 있습니다. 로그인이 생성되지 않은 경우 데이터베이스가 복원되거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 인스턴스에 연결된 후 데이터베이스 사용자가 분리될 수 있습니다. 또한 데이터베이스 사용자는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 삭제되면 분리될 수 있습니다. 로그인을 다시 만들더라도 SID가 다르므로 여전히 데이터베이스 사용자가 분리됩니다.  
   
-## 분리된 사용자를 검색하려면  
+## <a name="to-detect-orphaned-users"></a>분리된 사용자를 검색하려면  
 
 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 PDW의 경우**
 
-누락된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인을 기준으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 분리된 사용자를 검색하려면 사용자 데이터베이스에서 다음 문을 실행합니다.  
+누락된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인을 기준으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 분리된 사용자를 검색하려면 사용자 데이터베이스에서 다음 문을 실행합니다.  
   
 ```  
 SELECT dp.type_desc, dp.SID, dp.name AS user_name  
@@ -93,8 +97,8 @@ SQL 데이터베이스 또는 SQL 데이터 웨어하우스에서는 `sys.server
 
 3. 두 목록을 비교하여 사용자 데이터베이스 `sys.database_principals` 테이블에 master 데이터베이스 `sql_logins` 테이블의 로그인 SID와 일치하지 않는 사용자 SID가 있는지 확인합니다. 
   
-## 분리된 사용자를 확인하려면  
-master 데이터베이스에서 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 문을 SID 옵션과 함께 사용하고 이전 섹션에서 받은 데이터베이스 사용자의 `SID`를 제공하여 누락된 로그인을 다시 만듭니다.  
+## <a name="to-resolve-an-orphaned-user"></a>분리된 사용자를 확인하려면  
+master 데이터베이스에서 [CREATE LOGIN](../../t-sql/statements/create-login-transact-sql.md) 문을 SID 옵션과 함께 사용하고 이전 섹션에서 받은 데이터베이스 사용자의 `SID` 를 제공하여 누락된 로그인을 다시 만듭니다.  
   
 ```  
 CREATE LOGIN <login_name>   
@@ -117,9 +121,9 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 > [!IMPORTANT]  
 >  어떤 로그인도 자신의 암호를 변경할 수 있습니다. `ALTER ANY LOGIN` 사용 권한이 있는 로그인으로만 다른 사용자의 로그인 암호를 변경할 수 있습니다. 그러나 **sysadmin** 역할의 멤버만 **sysadmin** 역할 멤버의 암호를 수정할 수 있습니다.  
   
- 사용되지 않는 프로시저 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md)은 분리된 사용자에 대해서도 작동합니다. `sp_change_users_login` 에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]을 사용할 수 없습니다.  
+ 사용되지 않는 프로시저 [sp_change_users_login](../../relational-databases/system-stored-procedures/sp-change-users-login-transact-sql.md) 은 분리된 사용자에 대해서도 작동합니다. `sp_change_users_login` 에 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]을 사용할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [ALTER USER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-user-transact-sql.md)   
  [CREATE USER&#40;Transact-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)   
@@ -134,3 +138,4 @@ ALTER LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
  [sys.syslogins&#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslogins-transact-sql.md)  
   
   
+

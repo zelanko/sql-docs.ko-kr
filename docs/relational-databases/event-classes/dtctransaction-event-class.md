@@ -1,27 +1,31 @@
 ---
-title: "DTCTransaction 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DTCTransaction 이벤트 클래스"
+title: "DTCTransaction 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DTCTransaction event class
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7832dce3ed058f5ddd599fd19abd9703b20ff06
+ms.lasthandoff: 04/11/2017
+
 ---
-# DTCTransaction 이벤트 클래스
-  **DTCTransaction** 이벤트 클래스를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTC(Distributed Transaction Coordinator)를 통해 통합된 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 트랜잭션의 상태를 모니터링할 수 있습니다. 여기에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 동일 인스턴스에서 둘 이상의 데이터베이스와 관련된 트랜잭션 또는 둘 이상의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 관련된 분산 트랜잭션이 있습니다.  
+# <a name="dtctransaction-event-class"></a>DTCTransaction 이벤트 클래스
+  **DTCTransaction** 이벤트 클래스를 사용하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] DTC(Distributed Transaction Coordinator)를 통해 통합된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트랜잭션의 상태를 모니터링할 수 있습니다. 여기에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 동일 인스턴스에서 둘 이상의 데이터베이스와 관련된 트랜잭션 또는 둘 이상의 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와 관련된 분산 트랜잭션이 있습니다.  
   
-## DTCTransaction 이벤트 클래스 데이터 열  
+## <a name="dtctransaction-event-class-data-columns"></a>DTCTransaction 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -42,7 +46,7 @@ caps.handback.revision: 37
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
-|**ServerName**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |**StartTime**|**datetime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|14|예|  
@@ -50,7 +54,7 @@ caps.handback.revision: 37
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |**XactSequence**|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

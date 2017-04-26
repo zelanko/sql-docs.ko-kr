@@ -1,31 +1,35 @@
 ---
-title: "파일 복원(전체 복구 모델) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "파일 복원 [SQL Server]"
-  - "전체 복구 모델 [SQL Server], 복원 수행"
-  - "파일 복원 [SQL Server], Transact-SQL 복원 순서"
-  - "파일 복원 [SQL Server]"
-  - "파일 복원 [SQL Server], 전체 복구 모델"
-  - "파일 복원 [SQL Server], 전체 복구 모델"
-  - "Transact-SQL 복원 시퀀스"
-  - "파일 복원 [SQL Server], Transact-SQL 복원 순서"
+title: "파일 복원(전체 복구 모델) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server]
+- full recovery model [SQL Server], performing restores
+- restoring files [SQL Server], Transact-SQL restore sequence
+- restoring files [SQL Server]
+- file restores [SQL Server], full recovery model
+- restoring files [SQL Server], full recovery model
+- Transact-SQL restore sequence
+- file restores [SQL Server], Transact-SQL restore sequence
 ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686d6473f247f5b71764c1b4529bdf30c2f2efc1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 파일 복원(전체 복구 모델)
+# <a name="file-restores-full-recovery-model"></a>파일 복원(전체 복구 모델)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 전체 또는 대량 로드 복구 모델에서 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우와 관련된 내용을 다룹니다.  
@@ -48,16 +52,11 @@ caps.handback.revision: 41
   
      *온라인 파일 복원*의 경우 데이터베이스가 복원 시점에 온라인 상태이면 파일 복원 중에 온라인 상태로 유지됩니다. 그러나 파일을 복원할 각 파일 그룹은 복원 작업 중에 오프라인 상태입니다. 오프라인 파일 그룹의 모든 파일이 복구되면 파일 그룹이 자동으로 온라인 상태가 됩니다.  
   
-     온라인 페이지 및 파일 복원 지원에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요. 온라인 복원에 대한 자세한 내용은 [온라인 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)을 참조하세요.  
+     온라인 페이지 및 파일 복원 지원에 대한 자세한 내용은 [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요. 온라인 복원에 대한 자세한 내용은 [온라인 복원(SQL Server)](../../relational-databases/backup-restore/online-restore-sql-server.md)을 참조하세요.
   
     > [!TIP]  
-    >  파일 복원을 위해 데이터베이스를 오프라인 상태로 전환하려면 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 문인 ALTER DATABASE *database_name* SET OFFLINE을 실행하여 복원 시퀀스를 시작하기 전에 데이터베이스를 오프라인으로 설정합니다.  
+    >  파일 복원을 위해 데이터베이스를 오프라인 상태로 전환하려면 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md) 문인 ALTER DATABASE *database_name* SET OFFLINE을 실행하여 복원 시퀀스를 시작하기 전에 데이터베이스를 오프라인으로 설정합니다.  
   
- **항목 내용**  
-  
--   [파일 백업에서 손상된 파일 복원](#Overview)  
-  
--   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="Overview"></a> 파일 백업에서 손상된 파일 복원  
   
@@ -83,12 +82,12 @@ caps.handback.revision: 41
 > [!NOTE]  
 >  파일 백업은 지정 시간 이전의 시점으로 데이터베이스를 복원하는 데 사용될 수 있습니다. 이렇게 하려면 파일 백업의 전체 세트를 복원한 후 최근 복원된 파일 백업 다음에 있는 대상 지점에 이를 때까지 순서대로 트랜잭션 로그 백업을 복원해야 합니다. 지정 시간 복구에 대한 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
   
-## 오프라인 파일 복원을 위한 Transact-SQL 복원 시퀀스(전체 복구 모델)  
+## <a name="transact-sql-restore-sequence-for-an-offline-file-restore-full-recovery-model"></a>오프라인 파일 복원을 위한 Transact-SQL 복원 시퀀스(전체 복구 모델)  
  파일 복원 시나리오는 해당 데이터를 복사하고 롤포워드하고 복구하는 단일 복원 시퀀스로 이루어집니다.  
   
- 이 섹션에서는 파일 복원 시퀀스에 대한 필수 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 옵션을 보여 줍니다. 이 용도와 관련 없는 구문 및 세부 사항은 생략됩니다.  
+ 이 섹션에서는 파일 복원 시퀀스에 대한 필수 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 옵션을 보여 줍니다. 이 용도와 관련 없는 구문 및 세부 사항은 생략됩니다.  
   
- 다음 예에서는 WITH NORECOVERY를 사용하여 두 개의 보조 파일 `A`와 `B`를 오프라인 복원하는 경우를 보여 줍니다. 그런 다음 두 개의 로그 백업에 NORECOVERY를 적용한 다음 WITH RECOVERY를 사용하여 복원되는 비상 로그 백업을 실행합니다.  
+ 다음 예에서는 WITH NORECOVERY를 사용하여 두 개의 보조 파일 `A` 와 `B`를 오프라인 복원하는 경우를 보여 줍니다. 그런 다음 두 개의 로그 백업에 NORECOVERY를 적용한 다음 WITH RECOVERY를 사용하여 복원되는 비상 로그 백업을 실행합니다.  
   
 > [!NOTE]  
 >  다음 예에서는 파일을 오프라인으로 전환하여 복원 시퀀스를 시작하고 비상 로그 백업을 만듭니다.  
@@ -117,7 +116,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
    WITH RECOVERY;  
 ```  
   
-## 예  
+## <a name="examples"></a>예  
   
 -   [예제: 읽기-쓰기 파일의 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-write-file-full-recovery-model.md)  
   
@@ -134,15 +133,14 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>(SMO)  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [백업 및 복원: 상호 운용성 및 공존성&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md)   
  [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)   
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   

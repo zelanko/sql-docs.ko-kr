@@ -1,27 +1,31 @@
 ---
-title: "SQL Server Audit(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "SQL Server Audit"
-  - "감사 [SQL Server], SQL Server Audit"
+title: "SQL Server Audit(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- SQL Server Audit
+- audits [SQL Server], SQL Server Audit
 ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 caps.latest.revision: 58
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7852b00948b193a07e4ac38d1ace6135a63bc599
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Audit(데이터베이스 엔진)
+# <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   *인스턴스 또는 개별 데이터베이스를* 감사 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] 할 때는 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 발생하는 이벤트를 추적 및 기록합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 서버 수준 이벤트에 대한 서버 감사 사양과 데이터베이스 수준 이벤트에 대한 데이터베이스 감사 사양을 포함하는 서버 감사를 생성할 수 있습니다. 감사된 이벤트는 이벤트 로그 또는 감사 파일에 쓸 수 있습니다.  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
  인스턴스별 서버 감사 동작 그룹을 기록할 수 있으며 데이터베이스별 데이터베이스 감사 동작 그룹 또는 데이터베이스 감사 동작을 기록할 수 있습니다. 감사 가능한 동작이 발생할 때마다 감사 이벤트가 발생합니다.  
   
- 모든 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 서버 수준 감사를 지원합니다. [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1부터 모든 버전에서 데이터베이스 수준 감사를 지원합니다. 이전에는 데이터베이스 수준 감사가 Enterprise, Developer 및 Evaluation 버전에서만 지원되었습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+ 모든 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 서버 수준 감사를 지원합니다. [!INCLUDE[ssSQL15_md](../../../includes/sssql15-md.md)] SP1부터 모든 버전에서 데이터베이스 수준 감사를 지원합니다. 이전에는 데이터베이스 수준 감사가 Enterprise, Developer 및 Evaluation 버전에서만 지원되었습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 > [!NOTE]  
 >  이 항목의 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용됩니다.  [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 경우 [SQL 데이터베이스 감사 시작](https://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)을 참조하세요.  
@@ -38,7 +42,7 @@ caps.handback.revision: 58
 ## <a name="sql-server-audit-components"></a>SQL Server Audit 구성 요소  
  *감사* 는 특정 서버 동작 또는 데이터베이스 동작 그룹에 대한 여러 요소를 하나의 패키지로 결합한 것입니다. 보고서 정의가 그래픽 및 데이터 요소와 결합되어 보고서가 생성되는 것처럼 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit의 구성 요소가 결합되어 감사가 만들어집니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 감사를 만들기 위해 *확장 이벤트*를 사용합니다. 확장 이벤트에 대한 자세한 내용은 [확장 이벤트](../../../relational-databases/extended-events/extended-events.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에서는 감사를 만들기 위해 *확장 이벤트* 를 사용합니다. 확장 이벤트에 대한 자세한 내용은 [확장 이벤트](../../../relational-databases/extended-events/extended-events.md)를 참조하세요.  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  *SQL Server Audit* 개체는 사용자가 모니터링하려는 서버 또는 데이터베이스 수준 동작 및 동작 그룹에 대한 하나의 인스턴스를 수집합니다. 감사는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 수준으로 존재합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스별로 여러 개의 감사를 가질 수 있습니다.  
@@ -213,3 +217,5 @@ caps.handback.revision: 58
  [SQL Server 감사 기록](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   
   
+
+

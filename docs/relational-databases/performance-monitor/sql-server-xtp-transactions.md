@@ -1,22 +1,26 @@
 ---
-title: "SQL Server XTP 트랜잭션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server의 XTP 트랜잭션 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 443d67e4-1c7f-41d7-b18d-2d657f58c22a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40baae3d8967f5e4f193c1264e30749d291b0b2a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP 트랜잭션
+# <a name="sql-server-xtp-transactions"></a>SQL Server XTP 트랜잭션
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   SQL Server XTP 트랜잭션 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메모리 내 OLTP 트랜잭션과 관련된 카운터가 포함됩니다.  
@@ -36,7 +40,7 @@ caps.handback.revision: 7
 |**Transactions aborted/sec**|사용자 및 시스템에 의해 중단된 초당 트랜잭션 수입니다(평균).|  
 |**Transactions created/sec**|시스템에서 생성된 초당 트랜잭션 수입니다(평균).<br /><br /> XTP 트랜잭션은 디스크 기반 트랜잭션과 다르게 계산됩니다(Databases:Transactions/sec에 반영됨). 예를 들어, created/sec 트랜잭션은 read/only 트랜잭션을 계산하지만 Databases:Transactions/sec는 그렇지 않습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server XTP&#40;메모리 내 OLTP&#41; 성능 카운터](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

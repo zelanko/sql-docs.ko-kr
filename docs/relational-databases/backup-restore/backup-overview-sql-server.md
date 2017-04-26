@@ -1,38 +1,42 @@
 ---
-title: "Backup Overview (SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "테이블 [SQL Server], 데이터 백업"
-  - "백업 [SQL Server]"
-  - "데이터베이스 백업 [SQL Server]"
-  - "백업 유형 [SQL Server]"
-  - "데이터 백업 [SQL Server]"
-  - "테이블 백업 [SQL Server]"
-  - "데이터베이스 복원 [SQL Server], 백업"
-  - "백업 [SQL Server], 백업 정보"
-  - "복원 [SQL Server], 백업 유형"
-  - "백업 [SQL Server], 정보"
-  - "backups [SQL Server], table-level backups unsupported"
+title: "백업 개요(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 07/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server], backing up data
+- backups [SQL Server]
+- database backups [SQL Server]
+- backup types [SQL Server]
+- data backups [SQL Server]
+- backing up tables [SQL Server]
+- database restores [SQL Server], backups
+- backing up [SQL Server], about backing up
+- restoring [SQL Server], backup types
+- backups [SQL Server], about
+- backups [SQL Server], table-level backups unsupported
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 caps.latest.revision: 84
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 84
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6839d0474f1062f5dc0e247e9bb1fdbbf492c9c9
+ms.lasthandoff: 04/11/2017
+
 ---
-# Backup Overview (SQL Server)
+# <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 구성 요소에 대해 소개합니다. 데이터를 보호하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업해야 합니다. 여기서는 백업 유형과 백업 제한 사항에 대해 설명합니다. 또한 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치와 백업 미디어를 소개합니다.  
   
   
-## 용어
+## <a name="terms"></a>용어
  
  **백업[동사]**  
  데이터 또는 로그 레코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 해당 트랜잭션 로그에서 백업 장치(예: 디스크)로 복사하여 데이터 백업 또는 로그 백업을 만들 수 있습니다.  
@@ -46,7 +50,7 @@ caps.handback.revision: 84
  **[복원(restore)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)**  
  지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서 지정된 데이터베이스로 모든 데이터 및 로그 페이지를 복사하고 기록된 변경 사항을 적용하여 데이터를 최신 상태로 전환함으로써 백업에 기록된 모든 트랜잭션을 롤포워드하는 다단계 프로세스입니다.  
   
- ## 백업 유형  
+ ## <a name="types-of-backups"></a>백업 유형  
   
  **[복사 전용 백업](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
  정기적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 특수 백업입니다.  
@@ -58,7 +62,7 @@ caps.handback.revision: 84
  데이터베이스 백업입니다. 전체 데이터베이스 백업은 백업이 완료된 시점의 전체 데이터베이스를 나타냅니다. 차등 데이터베이스 백업은 가장 최근의 전체 데이터베이스 백업 이후에 데이터베이스에 수행된 변경 내용만 포함합니다.  
   
  **[차등 백업(differential backup)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  
- 전체 또는 부분 데이터베이스, 데이터 파일 집합 또는 파일 그룹(*차등 기반*)에 대한 최신 전체 백업을 기반으로 하고, 해당 차등 기준 이후에 변경된 데이터 범위만 포함하는 데이터 백업입니다.  
+ 전체 또는 부분 데이터베이스, 데이터 파일 집합 또는 파일 그룹( *차등 기반*)에 대한 최신 전체 백업을 기반으로 하고, 해당 차등 기준 이후에 변경된 데이터 범위만 포함하는 데이터 백업입니다.  
   
  차등 부분 백업은 차등 기반이라고 하는 이전 부분 백업 이후에 파일 그룹에서 변경된 데이터 익스텐트만 기록합니다.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 84
  **[부분 백업(partial backup)](../../relational-databases/backup-restore/partial-backups-sql-server.md)**  
  주 파일 그룹, 모든 읽기/쓰기 파일 그룹 및 필요에 따라 지정된 읽기 전용 파일을 비롯하여 데이터베이스에 있는 일부 파일 그룹의 데이터만 포함합니다.  
   
-## 백업 미디어 용어 및 정의  
+## <a name="backup-media-terms-and-definitions"></a>백업 미디어 용어 및 정의  
   
  **[백업 장치(backup device)](../../relational-databases/backup-restore/backup-devices-sql-server.md)**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 장치입니다. SQL Server 백업은 Windows Azure Blob 저장소 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
@@ -100,7 +104,7 @@ caps.handback.revision: 84
 ##  <a name="Restrictions"></a>  백업 작업 제한 사항 
  백업은 데이터베이스가 온라인 상태이며 사용 중인 경우 발생할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
   
-### 오프라인 데이터를 백업할 수 없습니다.  
+### <a name="cannot-back-up-offline-data"></a>오프라인 데이터를 백업할 수 없습니다.  
  오프라인 데이터를 암시적으로 또는 명시적으로 참조하는 백업 작업은 실패합니다. 그러한 경우를 몇 가지 예로 들면 다음과 같습니다.  
   
 -   전체 데이터베이스 백업을 요청하지만 데이터베이스의 파일 그룹 한 개가 오프라인입니다. 모든 파일 그룹이 암시적으로 전체 데이터베이스 백업에 포함되므로 이 작업은 실패합니다.  
@@ -113,7 +117,7 @@ caps.handback.revision: 84
   
  일반적으로 로그 백업은 하나 이상의 데이터 파일을 사용할 수 없더라도 성공적으로 수행됩니다. 그러나 일부 파일에 대량 로그 복구 모델에서 수행된 대량 로그 변경 내용이 포함되어 있는 경우 모든 파일이 온라인 상태에 있어야 백업이 성공합니다.  
   
-### 동시성 제한 사항   
+### <a name="concurrency-restrictions"></a>동시성 제한 사항   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 온라인 백업 프로세스를 사용하여 데이터베이스가 사용 중일 때도 데이터베이스 백업을 수행할 수 있습니다. 백업 시 대부분의 작업을 수행할 수 있습니다. 예를 들어 INSERT, UPDATE 또는 DELETE 문은 백업 작업 시에도 사용할 수 있습니다. 그러나 데이터베이스 파일을 만들거나 삭제하는 동안 백업 작업을 시작하려고 하면 만들기 또는 삭제 작업이 완료되거나 백업 시간 제한이 초과될 때까지 백업 작업이 대기합니다.  
   
  데이터베이스 백업 또는 트랜잭션 로그 백업 시에 실행할 수 없는 작업은 다음과 같습니다.  
@@ -147,7 +151,7 @@ caps.handback.revision: 84
   
 -   [장치에서 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **백업 만들기**  
   
@@ -166,13 +170,13 @@ caps.handback.revision: 84
   
 -   [백업 또는 복원 중 백업 체크섬 설정 또는 해제&#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [오류 발생 후 백업 또는 복원 작업 계속 또는 중지 여부 지정&#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [오류 발생 후 백업 또는 복원 작업 계속 또는 중지 여부 지정&#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
--   [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## 기타 
+## <a name="and-more"></a>기타 
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
@@ -180,3 +184,4 @@ caps.handback.revision: 84
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

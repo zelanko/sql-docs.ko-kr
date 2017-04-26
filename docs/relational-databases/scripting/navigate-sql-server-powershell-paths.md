@@ -1,25 +1,29 @@
 ---
-title: "SQL Server PowerShell 경로 탐색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server PowerShell 경로 탐색 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d68aca48-d161-45ed-9f4f-14122ed30218
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dfdebbe0e80cbe5b1b852a86254f577f52d304a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server PowerShell 경로 탐색
+# <a name="navigate-sql-server-powershell-paths"></a>SQL Server PowerShell 경로 탐색
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 공급자는 SQL Server 인스턴스의 개체를 파일 경로와 비슷한 구조로 표시합니다. Windows PowerShell cmdlet을 사용하여 공급자 경로를 탐색하고 사용자 지정 드라이브를 만들어 입력해야 하는 경로를 단축할 수 있습니다.  
   
-## 시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  Windows PowerShell은 cmdlet을 구현하여 PowerShell 공급자가 지원하는 개체의 계층 구조를 보여주는 경로 구조를 탐색합니다. 경로의 노드를 탐색한 후 다른 cmdlet을 사용하여 현재 개체에 대한 기본 작업을 수행할 수 있습니다. cmdlet은 자주 사용되므로 간단한 정규 별칭을 가지고 있습니다. 또한 cmdlet을 유사한 명령 프롬프트 명령에 매핑하는 별칭 집합과 UNIX 셸 명령에 대한 별칭 집합도 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 다음 테이블과 같이 공급자 cmdlet의 하위 집합을 구현합니다.  
@@ -36,7 +40,7 @@ caps.handback.revision: 8
 > [!IMPORTANT]  
 >  일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자(개체 이름)의 경우 Windows PowerShell에서 지원하지 않는 문자가 경로 이름에 포함되어 있습니다. 이러한 문자가 포함된 이름을 사용하는 방법은 [SQL Server Identifiers in PowerShell](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)을 참조하십시오.  
   
-### Get-ChildItem이 반환하는 SQL Server 정보  
+### <a name="sql-server-information-returned-by-get-childitem"></a>Get-ChildItem이 반환하는 SQL Server 정보  
  **Get-ChildItem** 또는 **dir** 및 **ls** 별칭에서 반환하는 정보는 SQLSERVER: 경로에서의 현재 위치에 따라 결정됩니다.  
   
 |경로 위치|Get-ChildItem 결과|  
@@ -47,17 +51,17 @@ caps.handback.revision: 8
 |Databases와 같은 개체 클래스 노드|데이터베이스(예: master, model, AdventureWorks20008R2) 목록과 같은 해당 유형의 개체 목록입니다.|  
 |AdventureWorks2012와 같은 개체 이름 노드|개체 내에 포함된 개체 유형 목록입니다. 예를 들어 데이터베이스는 테이블 및 뷰와 같은 개체 유형을 나열합니다.|  
   
- 기본적으로 **Get-ChildItem**은 시스템 개체를 나열하지 않습니다. *Force* 매개 변수를 사용하여 **sys** 스키마의 개체와 같은 시스템 개체를 볼 수 있습니다.  
+ 기본적으로 **Get-ChildItem** 은 시스템 개체를 나열하지 않습니다. *Force* 매개 변수를 사용하여 **sys** 스키마의 개체와 같은 시스템 개체를 볼 수 있습니다.  
   
-### 사용자 지정 드라이브  
+### <a name="custom-drives"></a>사용자 지정 드라이브  
  Windows PowerShell을 통해 사용자는 PowerShell 드라이브라고 하는 가상 드라이브를 정의할 수 있습니다. 이러한 가상 드라이브는 경로 문의 시작 노드로 매핑되며 일반적으로 자주 형식화되는 경로를 줄이는 데 사용됩니다. SQLSERVER: 경로가 길어지면 Windows PowerShell 창에서 공간을 차지하고 많은 텍스트를 입력해야 할 수 있습니다. 특정 경로 노드에서 많은 작업을 수행하려는 경우 해당 노드에 매핑되는 사용자 지정 Windows PowerShell 드라이브를 정의할 수 있습니다.  
   
-## PowerShell cmdlet 별칭 사용  
+## <a name="use-powershell-cmdlet-aliases"></a>PowerShell cmdlet 별칭 사용  
  **cmdlet 별칭 사용**  
   
 -   전체 cmdlet 이름을 입력하는 대신 익숙한 명령 프롬프트 명령에 매핑되는 별칭이나 단축 별칭을 입력합니다.  
   
-### 별칭 예(PowerShell)  
+### <a name="alias-example-powershell"></a>별칭 예(PowerShell)  
  예를 들어 SQLSERVER:\SQL 폴더로 이동하고 해당 폴더의 자식 항목 목록을 요청하여 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 목록을 검색하려면 다음과 같은 cmdlet 또는 별칭의 집합 중 하나를 사용하면 됩니다.  
   
 ```  
@@ -78,14 +82,14 @@ cd SQLSERVER:\SQL
 ls  
 ```  
   
-## Get-ChildItem 사용  
+## <a name="use-get-childitem"></a>Get-ChildItem 사용  
  **Get-Childitem을 사용하여 정보 반환**  
   
 1.  childrem의 목록을 원하는 노드로 이동합니다.  
   
 2.  Get-childitem을 실행하여 목록 가져옵니다.  
   
-### Get-childitem 예(PowerShell)  
+### <a name="get-childitem-example-powershell"></a>Get-childitem 예(PowerShell)  
  다음 예에서는 SQL Server 공급자 경로의 각 노드에 대해 Get-ChildItem이 반환하는 정보에 대해 설명합니다.  
   
 ```  
@@ -110,14 +114,14 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases
 Get-ChildItem -force  
 ```  
   
-## 사용자 지정 드라이브 만들기  
+## <a name="create-a-custom-drive"></a>사용자 지정 드라이브 만들기  
  **사용자 지정 드라이브 만들기 및 사용**  
   
-1.  **New-PSDrive**를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. **Root** 매개 변수를 사용하여 사용자 지정 드라이브 이름에 표시되는 경로를 지정할 수 있습니다.  
+1.  **New-PSDrive** 를 사용하여 사용자 지정 드라이브를 정의할 수 있습니다. **Root** 매개 변수를 사용하여 사용자 지정 드라이브 이름에 표시되는 경로를 지정할 수 있습니다.  
   
 2.  경로 탐색 cmdlet(예: **Set-Location**)에서 사용자 지정 드라이브 이름을 참조합니다.  
   
-### 사용자 지정 드라이브 예(PowerShell)  
+### <a name="custom-drive-example-powershell"></a>사용자 지정 드라이브 예(PowerShell)  
  이 예에서는 AdventureWorks2012 예제 데이터베이스의 배포된 복사본에 대해 노드에 매핑되는 AWDB라는 가상 드라이브를 만듭니다. 그런 다음 가상 드라이브를 사용하여 데이터베이스에서 테이블을 탐색합니다.  
   
 ```  
@@ -128,7 +132,7 @@ New-PSDrive -Name AWDB -Root SQLSERVER:\SQL\localhost\DEFAULT\Databases\Adventur
 Set-Location AWDB:\Tables\Purchasing.Vendor  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell 경로 작업](../../relational-databases/scripting/work-with-sql-server-powershell-paths.md)   
  [URN을 SQL Server 공급자 경로로 변환](../../relational-databases/scripting/convert-urns-to-sql-server-provider-paths.md)   

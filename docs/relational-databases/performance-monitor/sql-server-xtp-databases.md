@@ -1,24 +1,28 @@
 ---
-title: "SQL Server XTP 데이터베이스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 2016 XTP 데이터베이스"
+title: "SQL Server XTP 데이터베이스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server 2016 XTP Databases
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server XTP 데이터베이스
+# <a name="sql-server-xtp-databases"></a>SQL Server XTP 데이터베이스
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 **SQL Server XTP 데이터베이스** 성능 개체는 메모리 내 OLTP 데이터베이스 관련 카운터를 제공합니다.
@@ -64,5 +68,5 @@ caps.handback.revision: 3
 |**Tail Cache Page Count Peak**|비상 캐시에 할당된 최대 페이지 수입니다. 이 카운터는 사용자용이 아닌 매우 낮은 수준의 카운터입니다.|
 
 
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
 [SQL Server XTP&#40;메모리 내 OLTP&#41; 성능 카운터](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

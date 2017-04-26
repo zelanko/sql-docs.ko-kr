@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG014117 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG014117 오류"
+title: "MSSQL_ENG014117 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG014117 error
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b53e204550ce8f48b14e2b76667eb74fadc86346
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG014117
+# <a name="mssqleng014117"></a>MSSQL_ENG014117
     
-## 메시지 정보  
+## <a name="message-details"></a>메시지 정보  
   
 |||  
 |-|-|  
@@ -31,7 +35,7 @@ caps.handback.revision: 17
 |심볼 이름||  
 |메시지 텍스트|'%s'이(가) 배포 데이터베이스로 구성되지 않았습니다.|  
   
-## 설명  
+## <a name="explanation"></a>설명  
  이 오류는 다음 상황 중 하나 또는 둘 다에 해당되는 경우 발생할 수 있습니다.  
   
 -   지정된 배포 데이터베이스에 대한 항목이 **msdb..MSdistributiondbs**에 없습니다.  
@@ -42,7 +46,7 @@ caps.handback.revision: 17
   
      IP 주소나 FQDN(정규화된 도메인 이름)으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 등록한 경우에는 복제가 지원되지 않습니다. 복제 구성 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 IP 주소 또는 FQDN으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스를 등록한 경우 이 오류가 발생할 수 있습니다.  
   
-## 사용자 동작  
+## <a name="user-action"></a>사용자 동작  
  배포자 인스턴스가 제대로 등록되었는지 확인합니다. 컴퓨터의 네트워크 이름과 SQL Server 인스턴스의 이름이 다른 경우 다음 중 하나를 수행하십시오.  
   
 -   SQL Server 인스턴스 이름을 유효한 네트워크 이름으로 추가합니다. 대체 네트워크 이름을 설정하는 한 가지 방법은 해당 이름을 로컬 호스트 파일에 추가하는 것입니다. 로컬 호스트 파일은 기본적으로 WINDOWS\system32\drivers\etc 또는 WINNT\system32\drivers\etc에 있습니다. 자세한 내용은 Windows 설명서를 참조하세요.  
@@ -51,7 +55,7 @@ caps.handback.revision: 17
   
      10.193.17.129 inst1  
   
--   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 따르십시오.  
+-   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 수행하세요.  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -60,17 +64,17 @@ caps.handback.revision: 17
     go  
     ```  
   
-     실행 한 후의 [sp_addserver (& a) #40; TRANSACT-SQL & #41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 저장된 프로시저를 다시 시작 해야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용을 적용 하려면 @@SERVERNAME 하기 위해 서비스입니다.  
+     [sp_addserver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md) 저장 프로시저를 실행한 후에 @@SERVERNAME 변경 내용을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
   
-     클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 참조 [AlwaysOn 장애 조치 클러스터 인스턴스 및 #40; SQL Server 및 #41;](../Topic/AlwaysOn%20Failover%20Cluster%20Instances%20\(SQL%20Server\).md)합니다.  
+     클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 클러스터 관리자를 사용하여 해당 이름을 변경해야 합니다. 자세한 내용은 [Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)를 참조하세요.  
   
  배포자 인스턴스가 제대로 등록되었는지 확인한 후 배포 데이터베이스가 **msdb..MSdistributiondbs**에 나열되어 있는지 확인합니다. 배포 데이터베이스가 목록에 없는 경우 다음을 수행하십시오.  
   
-1.  배포 구성을 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+1.  배포 구성을 스크립팅합니다. 자세한 내용은 [Scripting Replication](../../relational-databases/replication/scripting-replication.md)를 참조하세요.  
   
-2.  배포를 해제한 다음 다시 설정합니다. 자세한 내용은 참조 [배포 구성](../../relational-databases/replication/configure-distribution.md)합니다.  
+2.  배포를 해제한 다음 다시 설정합니다. 자세한 내용은 [배포 구성](../../relational-databases/replication/configure-distribution.md)을 참조하세요.  
   
-## 참고 항목  
- [오류 및 이벤트 참조 & #40입니다. 복제 및 #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>관련 항목:  
+ [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

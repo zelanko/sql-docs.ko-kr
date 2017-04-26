@@ -1,25 +1,29 @@
 ---
-title: "Audit Fulltext 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Audit Fulltext 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 95e4c5fd-e16f-446e-b42b-105495a8f39a
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 801b0483c4eb3650dd3e86bf91547d681d209aa2
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Fulltext 이벤트 클래스
-  **Audit Fulltext** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 전체 텍스트 필터 데몬 프로세스에 연결되어 통신할 때 발생합니다.  
+# <a name="audit-fulltext-event-class"></a>Audit Fulltext 이벤트 클래스
+  **Audit Fulltext** 이벤트 클래스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 전체 텍스트 필터 데몬 프로세스에 연결되어 통신할 때 발생합니다.  
   
-## Audit Fulltext 이벤트 클래스 데이터 열  
+## <a name="audit-fulltext-event-class-data-columns"></a>Audit Fulltext 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -35,7 +39,7 @@ caps.handback.revision: 9
 |**TargetLoginSid**|**int**|로그인을 대상으로 하는 동작(예: 새 로그인 추가)의 경우 대상 로그인의 SID(보안 ID)입니다.|43|예|  
 |**TextData**|**ntext**|전체 텍스트 이벤트에 대한 텍스트 정보입니다. 일반적으로 이 필드에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스와 전체 텍스트 필터 데몬 프로세스간 연결에 대한 정보가 표시됩니다.|1|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -1,40 +1,44 @@
 ---
-title: "WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ELEMENTS XSINIL 지시어"
-  - "네임스페이스 추가"
-  - "XSINIL 지시어"
-  - "기본 네임스페이스"
-  - "쿼리 [SQL Server의 XML], WITH XMLNAMESPACES 절"
-  - "미리 정의된 네임스페이스 [SQL Server의 XML]"
-  - "FOR XML 절, WITH XMLNAMESPACES 절"
-  - "네임스페이스 [SQL Server의 XM]"
-  - "xml 데이터 형식 [SQL Server], WITH XMLNAMESPACES 절"
-  - "WITH XMLNAMESPACES 절"
+title: "WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ELEMENTS XSINIL directive
+- adding namespaces
+- XSINIL directive
+- default namespaces
+- queries [XML in SQL Server], WITH XMLNAMESPACES clause
+- predefined namespaces [XML in SQL Server]
+- FOR XML clause, WITH XMLNAMESPACES clause
+- namespaces [XML in SQL Server]
+- xml data type [SQL Server], WITH XMLNAMESPACES clause
+- WITH XMLNAMESPACES clause
 ms.assetid: 2189cb5e-4460-46c5-a254-20c833ebbfec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 63cc371d0a4b1c19971fe7f9e614f10d5c04765f
+ms.lasthandoff: 04/11/2017
+
 ---
-# WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
-  [WITH XMLNAMESPACES(Transact-SQL)](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)는 다음과 같은 방식으로 네임스페이스 URI를 지원합니다.  
+# <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가
+  [WITH XMLNAMESPACES(Transact-SQL)](../../t-sql/xml/with-xmlnamespaces.md) 는 다음과 같은 방식으로 네임스페이스 URI를 지원합니다.  
   
 -   [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md) 쿼리 시 URI 매핑에 대한 네임스페이스 접두사를 사용할 수 있도록 만듭니다.  
   
 -   [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)의 정적 네임스페이스 컨텍스트에 URI 매핑에 대한 네임스페이스를 사용할 수 있도록 만듭니다.  
   
-## FOR XML 쿼리에서 WITH XMLNAMESPACES 사용  
+## <a name="using-with-xmlnamespaces-in-the-for-xml-queries"></a>FOR XML 쿼리에서 WITH XMLNAMESPACES 사용  
  WITH XMLNAMESPACES를 사용하면 FOR XML 쿼리에 XML 네임스페이스를 포함시킬 수 있습니다. 예를 들어 다음 FOR XML 쿼리를 참조하십시오.  
   
 ```  
@@ -95,7 +99,7 @@ FOR XML RAW ('ns1:Prod'), ELEMENTS
     INSERT INTO T VALUES('<myNS:root/>')  
     ```  
   
-## XSINIL 지시어 사용  
+## <a name="using-the-xsinil-directive"></a>XSINIL 지시어 사용  
  ELEMENTS XSINIL 지시어를 사용할 때는 WITH XMLNAMESPACES 절에서 xsi 접두사를 정의할 수 없습니다. 대신 ELEMENTS XSINIL을 사용할 때 자동으로 추가됩니다. 다음 쿼리에서는 **xsi:nil** 특성이 True로 설정된 요소에 Null 값이 매핑되는 요소 중심 XML을 생성하는 ELEMENTS XSINIL을 사용합니다.  
   
 ```  
@@ -118,7 +122,7 @@ FOR XML RAW, ELEMENTS XSINIL
 </row>  
 ```  
   
-## 기본 네임스페이스 지정  
+## <a name="specifying-default-namespaces"></a>기본 네임스페이스 지정  
  네임스페이스 접두사를 선언하는 대신 DEFAULT 키워드를 사용하여 기본 네임스페이스를 선언할 수 있습니다. FOR XML 쿼리에서 기본 네임스페이스를 결과 XML의 XML 노드에 바인딩합니다. 다음 예에서 WITH XMLNAMESPACES는 기본 네임스페이스와 함께 정의된 두 개의 네임스페이스 접두사를 정의합니다.  
   
 ```  
@@ -161,7 +165,7 @@ WHERE ProductID=316 or ProductID=317
 FOR XML AUTO, ROOT('ns2:root'), ELEMENTS  
 ```  
   
-## 미리 정의된 네임스페이스 사용  
+## <a name="using-predefined-namespaces"></a>미리 정의된 네임스페이스 사용  
  ELEMENTS XSINIL이 사용되는 경우의 xml 네임스페이스 및 xsi 네임스페이스를 제외한 미리 정의된 네임스페이스를 사용하는 경우 WITH XMLNAMESPACES를 사용하여 네임스페이스 바인딩을 명시적으로 지정해야 합니다. 다음 쿼리는 미리 정의된 네임스페이스에 대해 URI 바인딩에 대한 네임스페이스 접두사를 명시적으로 정의합니다(`urn:schemas-microsoft-com:xml-sql`).  
   
 ```  
@@ -200,8 +204,8 @@ go
 </Translation>  
 ```  
   
-## xml 데이터 형식 메서드에서 WITH XMLNAMESPACES 사용  
- **modify()** 메서드인 경우 SELECT 쿼리 또는 UPDATE에 지정된 [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)는 모두 해당 프롤로그에서 네임스페이스 선언을 반복해야 합니다. 이 작업은 시간이 많이 걸리는 작업입니다 예를 들어 다음 쿼리는 카탈로그 설명에 사양이 포함되지 않는 제품 모델 ID를 검색합니다. 즉, <`Specifications`> 요소가 있습니다.  
+## <a name="using-with-xmlnamespaces-with-the-xml-data-type-methods"></a>xml 데이터 형식 메서드에서 WITH XMLNAMESPACES 사용  
+ [modify()](../../t-sql/xml/xml-data-type-methods.md) 메서드인 경우 SELECT 쿼리 또는 UPDATE에 지정된 **xml 데이터 형식 메서드** 는 모두 해당 프롤로그에서 네임스페이스 선언을 반복해야 합니다. 이 작업은 시간이 많이 걸리는 작업입니다 예를 들어 다음 쿼리는 카탈로그 설명에 사양이 포함되지 않는 제품 모델 ID를 검색합니다. 즉, <`Specifications`> 요소가 있습니다.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -241,10 +245,10 @@ Go
   
  XQuery 프롤로그에 있는 명시적 선언은 네임스페이스 접두사와 WITH 절에 정의된 기본 요소 네임스페이스를 무시합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)   
  [XQuery 언어 참조&#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)   
- [WITH XMLNAMESPACES&#40;Transact-SQL&#41;](../Topic/WITH%20XMLNAMESPACES%20\(Transact-SQL\).md)   
+ [WITH XMLNAMESPACES&#40;Transact-SQL&#41;](../../t-sql/xml/with-xmlnamespaces.md)   
  [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

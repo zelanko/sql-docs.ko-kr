@@ -1,30 +1,34 @@
 ---
-title: "ASP.NET에서 중첩 FOR XML 쿼리 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 절, 중첩 FOR XML 쿼리"
-  - "쿼리 [SQL Server의 XML], ASP.NET 및"
-  - "ASP.NET에서 중첩 FOR XML 쿼리"
-  - "ASP.NET [SQL Server]"
+title: "ASP.NET에서 중첩 FOR XML 쿼리 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, nested FOR XML queries
+- queries [XML in SQL Server], ASP.NET and
+- nested FOR XML queries in ASP.NET
+- ASP.NET [SQL Server]
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ecd3e1bd26780c54fa4ab24d48526f12398445b
+ms.lasthandoff: 04/11/2017
+
 ---
-# ASP.NET에서 중첩 FOR XML 쿼리 사용
+# <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET에서 중첩 FOR XML 쿼리 사용
   이 예에서ASP.NET 응용 프로그램은 SQL Server에서 저장 프로시저를 실행하여 브라우저에  XML을 반환합니다. 저장 프로시저는 중첩 쿼리를 사용하여 XML을 생성합니다. 유사한 SELECT 문은 [중첩 AUTO 모드 쿼리를 사용하여 형제 생성](../../relational-databases/xml/generate-siblings-with-a-nested-auto-mode-query.md)항목에 설명되어 있습니다. 다음 예에서는 중첩 FOR XML 쿼리를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 요소 중심 XML을 생성하는 한 가지 방법을 보여 줍니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 CREATE PROC GetSalesOrderInfo AS  
@@ -83,7 +87,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
 %>  
 ```  
   
-##### 응용 프로그램을 테스트하려면  
+##### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
   
 1.  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 저장 프로시저를 만듭니다.  
   
@@ -91,7 +95,7 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 3.  응용 프로그램(http://server/GetSalesOrderInfo.aspx)을 실행합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [중첩 FOR XML 쿼리 사용](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

@@ -1,33 +1,37 @@
 ---
-title: "복제 배포 에이전트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "배포 에이전트, 실행 파일"
-  - "에이전트 [SQL Server 복제], 배포 에이전트"
-  - "배포 에이전트, 매개 변수 참조"
-  - "명령 프롬프트 [SQL Server 복제]"
+title: "복제 배포 에이전트 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Distribution Agent, executables
+- agents [SQL Server replication], Distribution Agent
+- Distribution Agent, parameter reference
+- command prompt [SQL Server replication]
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed4deeaf1b608410977ba5d5bbe14a09d379020f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복제 배포 에이전트
+# <a name="replication-distribution-agent"></a>복제 배포 에이전트
   복제 배포 에이전트는 스냅숏(스냅숏 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
   
 > [!NOTE]  
 >  매개 변수는 지정되는 순서에 제한을 받지 않습니다. 선택적 매개 변수가 지정되지 않은 경우 로컬 컴퓨터의 미리 정의된 레지스트리 설정 값이 사용됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -85,18 +89,18 @@ distrib [-?]
 [-UseOledbStreaming]  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  **-?**  
  사용 가능한 모든 매개 변수를 출력합니다.  
   
- **-게시자** *server_name*[**\\***i**nstance_name*]  
- 게시자의 이름입니다. 지정 *server_name* 의 기본 인스턴스에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다.  
+ **-Publisher** *server_name*[**\\***i**nstance_name*]  
+ 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-PublisherDB** *publisher_database*  
  게시자 데이터베이스의 이름입니다.  
   
- **-구독자** *server_name*[**\\***instance_name*]  
- 구독자의 이름입니다. 지정 *server_name* 의 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다.  
+ **-Subscriber** *server_name*[**\\***instance_name*]  
+ 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-SubscriberDB** *subscriber_database*  
  구독자 데이터베이스의 이름입니다.  
@@ -119,7 +123,7 @@ distrib [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령 프롬프트 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
- **-배포자** *배포자*  
+ **-Distributor** *distributor*  
  배포자 이름입니다. 배포자(밀어넣기) 배포의 경우에는 로컬 배포자의 이름이 기본 이름이 됩니다.  
   
  **-DistributorLogin** *distributor_login*  
@@ -140,7 +144,7 @@ distrib [-?]
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
 |**2**|SSL이 사용되고 인증서가 확인됨을 지정합니다.|  
   
- 자세한 내용은 참조 [보안 개요 & #40; 복제 및 #41;](../../../relational-databases/replication/security/security-overview-replication.md)합니다.  
+ 자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)를 참조하세요.  
   
  **-ErrorFile** *error_path_and_file_name*  
  배포 에이전트에서 생성한 오류 파일의 경로 및 파일 이름입니다. 이 파일은 구독자에서 복제 트랜잭션을 적용하는 동안 오류가 발생할 때마다 생성되며 게시자나 배포자에서 발생한 오류는 이 파일에 기록되지 않습니다. 이 파일에는 실패한 복제 트랜잭션 및 관련 오류 메시지가 들어 있습니다. 지정하지 않으면 오류 파일이 배포 에이전트의 현재 디렉터리에 생성됩니다. 오류 파일 이름은 배포 에이전트의 이름에 .err 확장명을 붙인 것입니다. 지정된 파일 이름이 존재하면 오류 메시지가 파일에 추가됩니다. 이 매개 변수는 최대 256개의 유니코드 문자일 수 있습니다.  
@@ -149,7 +153,7 @@ distrib [-?]
  확장 이벤트 XML 구성 파일의 경로 및 파일 이름을 지정합니다. 확장 이벤트 구성 파일에서는 세션을 구성하고 추적 이벤트를 사용하도록 설정할 수 있습니다.  
   
  **-FileTransferType** [ **0**| **1**]  
- 파일 전송 유형을 지정합니다. 값이 **0** UNC (범용 명명 규칙),의 값 **1** FTP (파일 전송 프로토콜)를 나타냅니다.  
+ 파일 전송 유형을 지정합니다. 값 **0** 은 UNC(Universal Naming Convention)를 나타내고, 값 **1** 은 FTP(File Transfer Protocol)를 나타냅니다.  
   
  **-FtpAddress** *ftp_address*  
  배포자용 FTP 서비스의 네트워크 주소입니다. 지정되지 않은 경우, **DistributorAddress** 가 사용됩니다. **DistributorAddress** 가 지정되지 않은 경우 **Distributor** 가 사용됩니다.  
@@ -183,7 +187,7 @@ distrib [-?]
  로그인 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 **15** 초입니다.  
   
  **-MaxBcpThreads** *number_of_threads*  
- 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 보다 큰 값이 있어야 **0** 없습니다 하드 코딩 된 상한값이 있습니다. 기본값은 최대값이 **8** 인 프로세서 수의 **2**배입니다. 게시자에서 동시 스냅숏 옵션을 사용하여 생성된 스냅숏을 적용할 경우 **MaxBcpThreads**에 지정한 숫자에 관계없이 하나의 스레드가 사용됩니다.  
+ 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 **0** 보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 최대값이 **8** 인 프로세서 수의 **2**배입니다. 게시자에서 동시 스냅숏 옵션을 사용하여 생성된 스냅숏을 적용할 경우 **MaxBcpThreads**에 지정한 숫자에 관계없이 하나의 스레드가 사용됩니다.  
   
  **-MaxDeliveredTransactions** *number_of_transactions*  
  한 번의 동기화에서 구독자에 적용되는 밀어넣기 또는 끌어오기 트랜잭션의 최대 개수입니다. 값 **0** 은 최대값이 무한개의 트랜잭션임을 나타냅니다. 다른 값은 구독자가 게시자에서 끌어오는 동기화의 기간을 줄이는 데 사용할 수 있습니다.  
@@ -203,11 +207,11 @@ distrib [-?]
  **-OledbStreamThreshold** *oledb_stream_threshold*  
  BLOB(Binary Large Object)의 최소 크기(바이트)를 지정합니다. 이 크기를 넘으면 데이터가 스트림으로 바인딩됩니다. 이 매개 변수를 사용하려면 **–UseOledbStreaming** 을 지정해야 합니다. 값은 400바이트에서 1048576바이트 사이일 수 있으며 기본값은 16384바이트입니다.  
   
- **-출력** *output_path_and_file_name*  
+ **-Output** *output_path_and_file_name*  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
- 출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 자세한 정보 표시 수준이 **2** (기본값), 모든 오류 메시지와 진행률 보고 메시지가 출력 되며,이 디버깅에 유용 합니다.  
+ 출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 정보 표시 수준이 **2** (기본값)이면 디버깅에 유용한 오류 메시지와 진행률 보고 메시지가 모두 출력됩니다.  
   
  **-PacketSize** *packet_size*  
  패킷 크기(바이트)입니다. 기본값은 4096바이트입니다.  
@@ -216,9 +220,9 @@ distrib [-?]
  배포 데이터베이스에서 복제된 트랜잭션을 쿼리하는 빈도(초)입니다. 기본값은 5초입니다.  
   
  **-ProfileName** *profile_name*  
- 에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)합니다.  
+ 에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
- **-게시**  *게시*  
+ **-Publication**  *publication*  
  게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
@@ -231,16 +235,16 @@ distrib [-?]
  이 에이전트에서 건너뛸 오류 번호를 지정하는 콜론으로 구분된 목록입니다.  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
- 이면 Jet 데이터베이스 (.mdb 파일)의 경로를 **SubscriberType** 는 **2** (ODBC 데이터 원본 이름 (DSN) 없이 Jet 데이터베이스에 대 한 연결 수 있음).  
+ **SubscriberType** 이 **2** 로서, ODBC DSN(데이터 원본 이름)이 없는 Jet 데이터베이스에 대한 연결이 허용되는 경우 Jet 데이터베이스(.mdb 파일)의 경로입니다.  
   
  **-SubscriberLogin** *subscriber_login*  
- 구독자의 로그인 이름입니다. 경우 **SubscriberSecurityMode** 는 **0** (에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증),이 매개 변수를 지정 해야 합니다.  
+ 구독자의 로그인 이름입니다. **SubscriberSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
  **-SubscriberPassword** *subscriber_password*  
- 구독자 암호입니다. 경우 **SubscriberSecurityMode** 는 **0** (에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증),이 매개 변수를 지정 해야 합니다.  
+ 구독자 암호입니다. **SubscriberSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- 구독자의 보안 모드를 지정합니다. 값이 **0** 나타냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증과 값 **1** Windows 인증 모드 (기본값)를 나타냅니다.  
+ 구독자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 나타내고 값 **1** 은 Windows 인증 모드(기본값)를 나타냅니다.  
   
  **-SubscriberType** [ **0**| **1**| **3**]  
  배포 에이전트에서 사용하는 구독자 연결 유형을 지정합니다.  
@@ -258,43 +262,44 @@ distrib [-?]
 >  여러 연결 중 하나가 실행 또는 커밋되지 않으면 모든 연결에서 현재 일괄 처리를 중지하고 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다. 이러한 재시도 단계가 완료되기 전에는 구독자에 임시 트랜잭션 불일치가 발생할 수 있으며 실패한 일괄 처리가 성공적으로 커밋되면 구독자의 트랜잭션 일관성이 다시 유지됩니다.  
   
 > [!IMPORTANT]  
->  2 이상에 대 한 값을 지정 하면 **-SubscriptionStreams**, 구독자에서 트랜잭션을 수신 된 순서가 게시자에서 적용 된 순서와에서 다를 수 있습니다. 이 동작으로 인해 동기화 중 제약 조건 위반이 발생할 경우에는 동기화할 때 NOT FOR REPLICATION 옵션을 사용하여 제약 조건이 적용되지 않도록 해야 합니다. 자세한 내용은 참조 [트리거 동작 및 동기화 중 제약 조건 및 #40; 제어 복제 TRANSACT-SQL 프로그래밍 & #41;](../../../relational-databases/replication/control behavior of triggers and constraints in synchronization.md)합니다.  
+>  **-SubscriptionStreams**의 값으로 2 이상을 지정할 경우 구독자에서 트랜잭션을 받는 순서가 게시자에서 트랜잭션을 만든 순서와 다를 수 있습니다. 이 동작으로 인해 동기화 중 제약 조건 위반이 발생할 경우에는 동기화할 때 NOT FOR REPLICATION 옵션을 사용하여 제약 조건이 적용되지 않도록 해야 합니다. 자세한 내용은 [동기화하는 동안 트리거 및 제약 조건 동작 제어&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md)를 참조하세요.  
   
 > [!NOTE]  
 >  Subscriptionstreams는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 제공하도록 구성된 아티클에 대해서는 작동하지 않습니다. subscriptionstreams를 사용하려면 대신 저장 프로시저 호출을 제공하도록 아티클을 구성하십시오.  
   
  **-SubscriptionTableName** *subscription_table*  
- 지정된 구독자에서 생성되거나 사용된 구독 테이블의 이름입니다. 지정 되지 않은 경우는 [MSreplication_subscriptions (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블 사용 됩니다. 긴 파일 이름을 지원하지 않는 DBMS(데이터베이스 관리 시스템)의 경우에 이 옵션을 사용합니다.  
+ 지정된 구독자에서 생성되거나 사용된 구독 테이블의 이름입니다. 지정되지 않은 경우 [MSreplication_subscriptions&#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블이 사용됩니다. 긴 파일 이름을 지원하지 않는 DBMS(데이터베이스 관리 시스템)의 경우에 이 옵션을 사용합니다.  
   
  **-SubscriptionType** [ **0**| **1**| **2**]  
  배포의 구독 유형을 지정합니다. 값 **0** 은 밀어넣기 구독을, 값 **1** 은 끌어오기 구독을, 값 **2** 는 익명 구독을 나타냅니다.  
   
  **-TransactionsPerHistory** [ **0**| **1**|... **10000**]  
- 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. 앞에 나온 **– MessageInterval**매개 변수를 참조하세요.  
+ 기록 로깅의 트랜잭션 간격을 지정합니다. 기록 로깅의 마지막 인스턴스 후 커밋된 트랜잭션의 수가 이 옵션보다 클 경우 기록 메시지가 기록됩니다. 기본값은 100입니다. 값이 **0** 이면 **TransactionsPerHistory**에는 제한이 없습니다. See the preceding **–MessageInterval**parameter.  
   
  **-UseDTS**  
  데이터 변환을 허용하는 게시의 매개 변수로 지정해야 합니다.  
   
  **-UseInprocLoader**  
- 배포 에이전트에서 구독자에 스냅숏 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅숏의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅숏 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자와 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅숏 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우) 또는 에이전트에서 로드한 ODBC 드라이버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우)가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
+ 배포 에이전트에서 구독자에 스냅숏 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅숏의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅숏 또는[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자와 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅숏 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우) 또는 에이전트에서 로드한 ODBC 드라이버( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우)가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
   
  **-UseOledbStreaming**  
- 이 인수를 지정하면 BLOB(Binary Large Object) 데이터를 스트림으로 바인딩할 수 있습니다. 사용 하 여 **-OledbStreamThreshold** 크기를 지정 합니다 (바이트) 보다는 스트림을 사용할 수 있습니다. **UseOledbStreaming** 은 기본적으로 사용하도록 설정됩니다. **UseOledbStreaming** 에 기록 된 **C:\Program Files\Microsoft SQL Server\\< 버전\>\COM** 폴더입니다.  
+ 이 인수를 지정하면 BLOB(Binary Large Object) 데이터를 스트림으로 바인딩할 수 있습니다. 크기(바이트)가 얼마 이상일 때 스트림을 사용할지를 지정하려면 **-OledbStreamThreshold** 를 사용합니다. **UseOledbStreaming** 은 기본적으로 사용하도록 설정됩니다. **UseOledbStreaming**은 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 폴더에 데이터를 씁니다.  
   
-## 주의  
+## <a name="remarks"></a>주의  
   
 > [!IMPORTANT]  
 >  도메인 사용자 계정(기본값)이 아닌 로컬 시스템 계정에서 실행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 설치한 경우 해당 서비스에서는 로컬 컴퓨터에만 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 실행되는 배포 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에 로그인할 때 Windows 인증 모드를 사용하도록 구성된 경우 해당 배포 에이전트가 실패합니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증입니다. 보안 계정을 변경하는 방법에 대한 자세한 내용은 [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)을 참조하십시오.  
   
- 배포 에이전트를 시작하려면 명령 프롬프트에서 **distrib.exe** 를 실행합니다. 내용은 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+ 배포 에이전트를 시작하려면 명령 프롬프트에서 **distrib.exe** 를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-## 변경 내역  
+## <a name="change-history"></a>변경 내역  
   
 |업데이트된 내용|  
 |---------------------|  
-|추가 **-ExtendedEventConfigFile** 매개 변수입니다.|  
+|**-ExtendedEventConfigFile** 매개 변수를 추가했습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
+

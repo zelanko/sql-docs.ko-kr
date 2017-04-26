@@ -1,35 +1,39 @@
 ---
-title: "테이블 열 속성(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65558"
-  - "vdtsql.chm:69657"
-  - "vdt.ppg.columns"
+title: "테이블 열 속성(SQL Server Management Studio) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65558
+- vdtsql.chm:69657
+- vdt.ppg.columns
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8eefd641ac7c9672b6e5f52412bd7cafe623ea09
+ms.lasthandoff: 04/11/2017
+
 ---
-# 테이블 열 속성(SQL Server Management Studio)
+# <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   이러한 속성은 테이블 디자이너의 아래쪽 창에 나타납니다. 별도로 언급하지 않는 한 열을 선택하면 속성 창에서 이러한 속성을 편집할 수 있습니다. **열 속성** 을 범주 또는 사전순으로 표시할 수 있습니다. 많은 속성의 경우 특정 데이터 형식에 대해서만 나타나거나 변경할 수 있습니다.  
   
 > [!NOTE]  
->  테이블이 복제용으로 게시된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)이나 SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
+>  테이블이 복제용으로 게시된 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 이나 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)를 사용하여 스키마를 변경해야 합니다. 테이블 디자이너 또는 데이터베이스 다이어그램 디자이너를 사용하여 스키마를 변경하면 테이블 삭제 및 재생성이 시도됩니다. 게시된 개체를 삭제할 수 없으므로 스키마가 변경되지 않습니다.  
   
  **일반**  
- 확장하면 **이름**, **Null 허용**, **데이터 형식**, **기본값 또는 바인딩**, **길이**, **정밀도** 및 **소수 자릿수**가 표시됩니다.  
+ 확장하면 **이름**, **Null 허용**, **데이터 형식**, **기본값 또는 바인딩**, **길이**, **정밀도**및 **소수 자릿수**가 표시됩니다.  
   
  **이름**  
  선택한 열의 이름을 표시합니다.  
@@ -41,7 +45,7 @@ caps.handback.revision: 33
  선택한 열의 데이터 형식을 표시합니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
   
  **기본값 또는 바인딩**  
- 현재 열에 지정된 값이 없는 경우 현재 열의 기본값을 표시합니다. 이 필드 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제약 조건 값 또는 열이 바인딩된 전역 제약 조건의 이름이 될 수 있습니다. 드롭다운 목록에는 데이터베이스에 정의된 모든 전역 기본값이 포함되어 있습니다. 열을 전역 기본값에 바인딩하려면 드롭다운 목록에서 선택합니다. 열에 대한 기본 제약 조건을 만들려면 직접 기본값을 텍스트로 입력합니다.  
+ 현재 열에 지정된 값이 없는 경우 현재 열의 기본값을 표시합니다. 이 필드 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 제약 조건 값 또는 열이 바인딩된 전역 제약 조건의 이름이 될 수 있습니다. 드롭다운 목록에는 데이터베이스에 정의된 모든 전역 기본값이 포함되어 있습니다. 열을 전역 기본값에 바인딩하려면 드롭다운 목록에서 선택합니다. 열에 대한 기본 제약 조건을 만들려면 직접 기본값을 텍스트로 입력합니다.  
   
  **길이**  
  문자 기반 데이터 형식에 허용되는 문자 수를 표시합니다. 이 속성은 문자 기반 데이터 형식에 대해서만 사용할 수 있습니다.  
@@ -49,14 +53,14 @@ caps.handback.revision: 33
  **소수 자릿수**  
  현재 열의 값의 소수점 오른쪽에 나타날 수 있는 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
- **전체 자릿수**  
+ **정밀도**  
  현재 열의 값에 대한 최대 자릿수를 표시합니다. 이 속성은 숫자가 아닌 데이터 형식에 대해 **0** 을 표시합니다.  
   
  **테이블 디자이너**  
  **테이블 디자이너** 섹션을 확장합니다.  
   
  **데이터 정렬**  
- 열의 값이 쿼리 결과 행을 정렬하는 데 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 기본적으로 열에 적용하는 데이터 정렬 순서를 표시합니다. 데이터 정렬을 편집하려면 속성을 선택하여 속성 값 오른쪽에 있는 줄임표(...)를 클릭한 다음 **데이터 정렬** 대화 상자를 엽니다.  
+ 열의 값이 쿼리 결과 행을 정렬하는 데 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 기본적으로 열에 적용하는 데이터 정렬 순서를 표시합니다. 데이터 정렬을 편집하려면 속성을 선택하여 속성 값 오른쪽에 있는 줄임표(...)를 클릭한 다음 **데이터 정렬** 대화 상자를 엽니다.  
   
  **계산 열 사양**  
  계산 열에 대한 정보를 표시합니다. 속성에 대해 표시된 값은 **수식** 자식 속성 값과 동일하며 계산 열에 대한 수식을 표시합니다.  
@@ -88,9 +92,9 @@ caps.handback.revision: 33
 > [!NOTE]  
 >  **전체 텍스트 사양** 속성에 대해 표시된 값을 변경하려면 해당 값을 확장하여 **전체 텍스트가 인덱싱됨** 자식 속성을 편집해야 합니다.  
   
--   **전체 텍스트가 인덱싱됨** 현재 열이 전체 텍스트 인덱싱이 적용된 열인지 여부를 나타냅니다. 이 열의 데이터 형식이 전체 텍스트로 검색 가능한 경우 및 이 열이 속하는 테이블에 전체 텍스트 인덱스가 지정되어 있는 경우에만 이 속성을 **예**로 설정할 수 있습니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 값을 선택합니다.  
+-   **전체 텍스트가 인덱싱됨** 현재 열이 전체 텍스트 인덱싱이 적용된 열인지 여부를 나타냅니다. 이 열의 데이터 형식이 전체 텍스트로 검색 가능한 경우 및 이 열이 속하는 테이블에 전체 텍스트 인덱스가 지정되어 있는 경우에만 이 속성을 **예** 로 설정할 수 있습니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 값을 선택합니다.  
   
--   **전체 텍스트 유형 열** 이 열이 전체 텍스트 인덱싱된 열의 이름을 표시합니다. 현재 열의 **데이터 형식** 속성이 **이미지** 또는 **varbinary**인 경우 이 속성을 설정해야 합니다. 이 속성에 명명된 열은 **[n]char, [n]varchar,** 또는 **xml** 형식이어야 하고 이 속성의 드롭다운 목록은 이러한 세 개의 데이터 형식 중 하나에 해당하는 열만 포함합니다. 이 속성이 명명한 열의 행은 검색 가능한 전체 텍스트 열의 행에 상응하는 문서 형식을 나타냅니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
+-   **전체 텍스트 유형 열** 이 열이 전체 텍스트 인덱싱된 열의 이름을 표시합니다. 현재 열의 **데이터 형식** 속성이 **이미지** 또는 **varbinary**인 경우 이 속성을 설정해야 합니다. 이 속성에 명명된 열은 **[n]char, [n]varchar,** 또는 **xml**형식이어야 하고 이 속성의 드롭다운 목록은 이러한 세 개의 데이터 형식 중 하나에 해당하는 열만 포함합니다. 이 속성이 명명한 열의 행은 검색 가능한 전체 텍스트 열의 행에 상응하는 문서 형식을 나타냅니다. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
   
 -   **언어** 열을 인덱싱하는 데 사용되는 단어 분리기용 언어를 나타냅니다. 이 속성에 저장된 값은 단어 분리기의 실제 로캘 식별자입니다. 단어 분리기 및 LCID에 대한 자세한 내용은 단어 분리기 및 형태소 분석기를 참조하십시오. 이 속성을 편집하려면 해당 값을 클릭하고 드롭다운 목록을 확장한 다음 다른 값을 선택합니다.  
   
@@ -133,6 +137,7 @@ caps.handback.revision: 33
  열의 데이터 형식에 허용되는 크기(바이트)를 표시합니다. 예를 들어 nchar 데이터 형식의 경우 길이가 10(문자 수)까지 허용되면 유니코드 문자 집합의 경우에는 크기가 20까지 허용될 수 있습니다.  
   
 > [!NOTE]  
->  **(max)** 데이터 형식의 길이는 각 행에 따라 달라집니다. **sp_help**는 **(max)** 열의 길이로 (-1)을 반환합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 열 크기로 -1을 표시합니다.  
+>  **(max)** 데이터 형식의 길이는 각 행에 따라 달라집니다. **sp_help** 는 **(max)** 열의 길이로 (-1)을 반환합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 열 크기로 -1을 표시합니다.  
   
   
+

@@ -1,25 +1,29 @@
 ---
-title: "메모리 액세스에 최적화된 테이블의 테이블 및 행 크기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블의 테이블 및 행 크기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 caps.latest.revision: 28
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  메모리 액세스에 최적화된 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 메모리 액세스에 최적화된 테이블에서 행 내부 데이터는 8,060바이트를 초과할 수 없습니다. 그러나 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 여러 큰 열(예: 여러 varbinary(8000) 열) 및 LOB 열(즉, varbinary(max), varchar(max) 및 nvarchar(max))이 있는 테이블을 만들 수 있습니다. 특별한 내부 테이블에서 행 내부 데이터의 최대 크기를 초과하는 열은 행 외부에 배치됩니다. 이러한 내부 테이블에 대한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조하세요.
+  메모리 액세스에 최적화된 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 메모리 액세스에 최적화된 테이블에서 행 내부 데이터는 8,060바이트를 초과할 수 없습니다. 그러나 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 여러 큰 열(예: 여러 varbinary(8000) 열) 및 LOB 열(즉, varbinary(max), varchar(max) 및 nvarchar(max))이 있는 테이블을 만들 수 있습니다. 특별한 내부 테이블에서 행 내부 데이터의 최대 크기를 초과하는 열은 행 외부에 배치됩니다. 이러한 내부 테이블에 대한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조하세요.
   
  테이블과 행 크기를 계산하는 이유는 두 가지입니다.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 28
   
  다음 그림에서는 인덱스 및 행을 포함하며 차례로 행 헤더와 본문을 가지는 테이블을 보여줍니다.  
   
- ![메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "메모리 액세스에 최적화된 테이블")  
+ ![메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 인덱스와 행으로 구성된 메모리 액세스에 최적화된 테이블  
   
  테이블의 메모리 내 크기(바이트)는 다음과 같이 계산됩니다.  
@@ -52,7 +56,7 @@ caps.handback.revision: 28
 [hash index size] = 8 * [actual bucket count]  
 ```  
 
- 비클러스터형 인덱스의 크기는 `[row count] * [index key size]` 순입니다.
+ 비클러스터형 인덱스의 크기는 `[row count] * [index key size]`순입니다.
   
  행 크기는 헤더 및 본문을 추가하여 계산됩니다.  
   
@@ -96,13 +100,13 @@ caps.handback.revision: 28
   
  다음 그림에서는 두 개의 인덱스가 있는 테이블에 대한 행 구조를 보여 줍니다.  
   
- ![두 개의 인덱스가 있는 테이블에 대한 행 구조](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "두 개의 인덱스가 있는 테이블에 대한 행 구조")  
+ ![두 개의 인덱스가 있는 테이블의 행 구조](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
   
  시작 및 종료 타임스탬프는 특정 행 버전의 유효 기간을 나타냅니다. 이 기간에 시작되는 트랜잭션은 이 행 버전을 참조할 수 있습니다. 자세한 내용은 [Transactions with Memory-Optimized Tables](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)(메모리 액세스에 최적화된 테이블의 트랜잭션)를 참조하세요.  
   
  인덱스 포인터는 체인에서 해시 버킷에 속한 그 다음 행을 가리킵니다. 다음 그림에서는 두 개의 열(이름, 도시)이 있는 테이블의 구조를 보여 줍니다. 여기에는 두 개의 인덱스가 있는데, 하나의 이름 열에 대한 것이고 다른 하나는 도시 열에 대한 것입니다.  
   
- ![두 개의 열과 인덱스가 있는 테이블의 구조](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "두 개의 열과 인덱스가 있는 테이블의 구조")  
+ ![두 개의 열과 인덱스가 있는 테이블의 구조](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Structure of a table with two columns and indexes.")  
   
  이 그림에서는 John과 Jane이라는 이름이 첫 번째 버킷에 해시됩니다. Susan은 두 번째 버킷에 해시됩니다. 베이징과 보고타는 첫 번째 버킷에 해시됩니다. 파리와 프라하는 두 번째 버킷에 해시됩니다.  
   
@@ -227,7 +231,7 @@ select * from sys.dm_db_xtp_table_memory_stats
 where object_id = object_id('dbo.Orders')  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

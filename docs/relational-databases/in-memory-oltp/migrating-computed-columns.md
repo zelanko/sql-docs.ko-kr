@@ -1,27 +1,31 @@
 ---
-title: "계산 열 마이그레이션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "계산 열 마이그레이션 | Microsoft 문서"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 64a9eade-22c3-4a9d-ab50-956219e08df1
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4fda63a6cf7dae045a247eb26163d0e041841b8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 계산 열 마이그레이션
+# <a name="migrating-computed-columns"></a>계산 열 마이그레이션
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 계산 열은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 그러나 계산 열을 시뮬레이션할 수 있습니다.
 
-**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 액세스에 최적화된 테이블 및 인덱스에서 지원됩니다.
 
 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션하는 경우 계산 열을 유지할 필요성을 고려해야 합니다. 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저의 다양한 성능 특성 때문에 계산 열을 유지할 필요성이 무시될 수 있습니다.  
@@ -93,3 +97,4 @@ GO
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

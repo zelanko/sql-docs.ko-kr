@@ -1,28 +1,32 @@
 ---
-title: "확장 이벤트 세션 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "확장 이벤트 세션 변경 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 114ec05b-7eca-4c87-b276-25e37b84be39
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9330ef01cb491fef9307149e0cc774fa2b042c52
+ms.lasthandoff: 04/11/2017
+
 ---
-# 확장 이벤트 세션 변경
+# <a name="alter-an-extended-events-session"></a>확장 이벤트 세션 변경
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   확장 이벤트 세션을 만든 후 **SQL Server 확장 이벤트 마법사**를 사용하여 필요한 대로 변경할 수 있습니다.  
   
-## 시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  활성 및 비활성 세션의 대상과 활성 세션에 대한 고급 속성 구성은 변경할 수 없습니다.  
   
  활성 및 비활성 이벤트 세션 모두에 대해 다음과 같은 변경 작업을 수행할 수 있습니다.  
@@ -40,9 +44,9 @@ caps.handback.revision: 9
 -   고급 속성 구성을 변경할 수 있습니다.  
   
 > [!NOTE]  
->  **SQL Server 확장 이벤트 마법사**에서는 이벤트 세션 수정을 지원하지 않습니다.  
+>  **SQL Server 확장 이벤트 마법사** 에서는 이벤트 세션 수정을 지원하지 않습니다.  
   
-## SQL Server 확장 이벤트 마법사를 사용하여 확장 이벤트 세션을 변경하는 방법  
+## <a name="how-to-alter-an-extended-events-session-using-the-sql-server-extended-events-wizard"></a>SQL Server 확장 이벤트 마법사를 사용하여 확장 이벤트 세션을 변경하는 방법  
   
 -   개체 탐색기에서 **관리**, **확장 이벤트**, **세션**을 차례로 확장합니다.  
   
@@ -50,8 +54,8 @@ caps.handback.revision: 9
   
 -   **속성** 대화 상자에서 적절한 변경 작업을 수행한 다음 **확인**을 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
- [쿼리 편집기를 사용하여 확장 이벤트 세션 만들기](../Topic/Create%20an%20Extended%20Events%20Session%20Using%20Query%20Editor.md)  
+ [쿼리 편집기를 사용하여 확장 이벤트 세션 만들기](http://msdn.microsoft.com/library/cba0e02b-b201-4863-bf1b-9164e68e5fa8)  
   
   

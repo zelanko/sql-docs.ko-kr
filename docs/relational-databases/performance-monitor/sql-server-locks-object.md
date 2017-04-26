@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, Locks 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Locks 개체"
-  - "SQLServer:Locks"
+title: "SQL Server, Locks 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Locks object
+- SQLServer:Locks
 ms.assetid: ace04f0d-3993-4444-8317-ca39d7087e49
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca441cd00d9626914117e2f2e60d4786332ba1
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Locks 개체
+# <a name="sql-server-locks-object"></a>SQL Server, Locks 개체
   Microsoft **의** SQLServer:Locks [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 개별 리소스 유형에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 잠금 정보를 제공합니다. 트랜잭션 동안 읽거나 수정한 행과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에는 잠금이 설정되어 다른 트랜잭션에서 동시에 리소스를 사용하는 것을 방지합니다. 예를 들어 트랜잭션에 의해 테이블에 있는 행에 배타적(X) 잠금이 설정되어 있다면 잠금을 풀기 전까지는 다른 트랜잭션으로 수정할 수 없습니다. 잠금을 최소화하면 동시성을 늘려 성능을 향상시킬 수 있습니다. **Locks** 개체의 여러 인스턴스는 리소스 유형의 잠금을 나타내는 각 인스턴스와 함께 동시 모니터링이 가능합니다.  
   
  이 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Locks** 카운터를 설명합니다.  
@@ -29,7 +33,7 @@ caps.handback.revision: 25
 |**Average Wait Time(ms)**|대기한 각 잠금 요청에 대한 평균 대기 시간(밀리초)입니다.|  
 |**Average Wait Time Base**|내부용으로만 사용할 수 있습니다.|
 |**Lock Requests/sec**|잠금 관리자에서 요청한 초당 새 잠금 및 잠금 변환 수입니다.|  
-|**Lock Timeouts (timeout > 0)/sec**|시간 초과된 초당 잠금 요청 수입니다. 단, 여기에는 NOWAIT 잠금에 대한 요청이 제외됩니다.|  
+|**Lock Timeouts (timeout &gt; 0)/sec**|시간 초과된 초당 잠금 요청 수입니다. 단, 여기에는 NOWAIT 잠금에 대한 요청이 제외됩니다.|  
 |**Lock Timeouts/sec**|시간 초과된 초당 잠금 요청 수입니다. 여기에는 NOWAIT 잠금에 대한 요청이 포함됩니다.|  
 |**Lock Wait Time(ms)**|마지막 1초 동안의 잠금에 대한 총 대기 시간(밀리초)입니다.|  
 |**Lock Waits/sec**|호출자가 기다려야 하는 초당 잠금 요청 수입니다.|  
@@ -52,7 +56,7 @@ caps.handback.revision: 25
 |**호출**|데이터베이스의 8KB 페이지에 대한 잠금입니다.|  
 |**RID**|행 ID를 의미하며 힙의 단일 행에 대한 잠금입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "백업 [SQL Server 복제], 스냅숏 복제"
-  - "복원 [SQL Server 복제], 트랜잭션 복제"
-  - "스냅숏 복제 [SQL Server], 백업 및 복원"
-  - "복원 [SQL Server 복제], 스냅숏 복제"
-  - "복구 [SQL Server 복제], 트랜잭션 복제"
-  - "트랜잭션 복제, 백업 및 복원"
-  - "복구 [SQL Server 복제], 스냅숏 복제"
-  - "백업으로 동기화 [SQL Server 복제]"
-  - "백업 [SQL Server 복제], 트랜잭션 복제"
+title: "스냅숏 및 트랜잭션 복제의 백업 및 복원 전략 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backups [SQL Server replication], snapshot replication
+- restoring [SQL Server replication], transactional replication
+- snapshot replication [SQL Server], backup and restore
+- restoring [SQL Server replication], snapshot replication
+- recovery [SQL Server replication], transactional replication
+- transactional replication, backup and restore
+- recovery [SQL Server replication], snapshot replication
+- sync with backup [SQL Server replication]
+- backups [SQL Server replication], transactional replication
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 caps.latest.revision: 59
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58cc3e019838c102405191b25ef734b011915244
+ms.lasthandoff: 04/11/2017
+
 ---
-# 스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략
+# <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략
   스냅숏 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
   
 -   백업할 데이터베이스  
@@ -35,9 +39,9 @@ caps.handback.revision: 59
   
 -   데이터베이스를 복원하는 데 필요한 단계. 이 단계는 선택한 복제 유형 및 옵션에 따라 달라집니다.  
   
- 이 항목에서는 다음 3개의 섹션에서 각 영역을 설명합니다. 백업 및 복원에 대 한 Oracle 게시에 대 한 정보를 참조 하십시오. [Oracle 게시자 용 백업 및 복원](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)합니다.  
+ 이 항목에서는 다음 3개의 섹션에서 각 영역을 설명합니다. Oracle 게시에 대한 백업 및 복원에 대한 자세한 내용은 [Oracle 게시자 백업 및 복원](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)을 참조하세요.  
   
-## 데이터베이스 백업  
+## <a name="backing-up-databases"></a>데이터베이스 백업  
  스냅숏 및 트랜잭션 복제의 경우 다음 데이터베이스를 정기적으로 백업해야 합니다.  
   
 -   게시자의 게시 데이터베이스  
@@ -50,7 +54,7 @@ caps.handback.revision: 59
   
  정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)을 참조하세요.  
   
-## 트랜잭션 복제에 대한 백업 설정  
+## <a name="backup-settings-for-transactional-replication"></a>트랜잭션 복제에 대한 백업 설정  
  트랜잭션 복제 과정에는 배포 데이터베이스 및 게시 데이터베이스에 설정할 수 있는 **sync with backup** 옵션이 사용됩니다.  
   
 -   배포 데이터베이스에는 이 옵션을 항상 설정하는 것이 좋습니다.  
@@ -70,14 +74,14 @@ caps.handback.revision: 59
   
  **sync with backup 옵션을 설정하려면**  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [트랜잭션 복제 및 #40;에 대 한 통합 백업을 사용 하도록 설정 복제 TRANSACT-SQL 프로그래밍 & #41;](../../../relational-databases/replication/administration/enable coordinated backups for transactional replication.md)  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [트랜잭션 복제에 대해 통합 백업 사용&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)  
   
-## 복제와 관련된 데이터베이스 복원  
+## <a name="restoring-databases-involved-in-replication"></a>복제와 관련된 데이터베이스 복원  
  최근 백업을 사용할 수 있는 상태에서 적절한 단계를 수행하면 복제 토폴로지의 모든 데이터베이스를 복원할 수 있습니다. 게시 데이터베이스의 복원 단계는 사용된 복제 유형 및 옵션에 따라 다르지만 다른 모든 데이터베이스의 복원 단계는 유형 및 옵션과 상관이 없습니다.  
   
  복제에서는 복제된 데이터베이스를 백업이 생성된 서버 및 데이터베이스로 복원할 수 있습니다. 복제된 데이터베이스의 백업을 다른 서버 또는 데이터베이스로 복원할 경우 복제 설정은 유지되지 않습니다. 이 경우 백업 복원 후 모든 게시 및 구독을 다시 만들어야 합니다.  
   
-### 게시자  
+### <a name="publisher"></a>게시자  
  다음과 같은 복제 유형에 대한 복원 단계가 제공됩니다.  
   
 -   스냅숏 복제  
@@ -90,7 +94,7 @@ caps.handback.revision: 59
   
  이 4가지 복제에 대한 **msdb** 데이터베이스 및 **master** 데이터베이스(이 섹션에서 함께 설명됨)의 복원은 모두 동일합니다.  
   
-#### 게시 데이터베이스: 스냅숏 복제  
+#### <a name="publication-database-snapshot-replication"></a>게시 데이터베이스: 스냅숏 복제  
   
 1.  게시 데이터베이스의 최신 백업을 복원합니다. 2단계로 이동합니다.  
   
@@ -98,9 +102,9 @@ caps.handback.revision: 59
   
 3.  게시자, 배포자 및 구독자에서 복제 구성을 제거한 후 구성을 다시 만듭니다. 이 단계로 복원이 완료됩니다.  
   
-     복제를 제거 하는 방법에 대 한 자세한 내용은 참조 [sp_removedbreplication (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)합니다.  
+     복제를 제거하는 방법은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
   
-#### 게시 데이터베이스: 읽기 전용 트랜잭션 복제  
+#### <a name="publication-database-read-only-transactional-replication"></a>게시 데이터베이스: 읽기 전용 트랜잭션 복제  
   
 1.  게시 데이터베이스의 최신 백업을 복원합니다. 2단계로 이동합니다.  
   
@@ -112,15 +116,15 @@ caps.handback.revision: 59
   
 4.  복원된 게시 데이터베이스의 구성 정보가 최신 상태가 아닙니다. 따라서 배포 데이터베이스의 처리 중인 모든 명령이 구독자에 배포되었는지 확인한 다음 복제 구성을 삭제하고 다시 만들어야 합니다.  
   
-    1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 사용 하 여 모든 명령이 구독자에 배달 되었는지 확인는 **배포 되지 않은 명령** 탭 쿼리하여 또는 복제 모니터에는 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 배포 데이터베이스의 보기입니다. b 단계로 이동합니다.  
+    1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 복제 모니터에서 **배포되지 않은 명령** 탭을 사용하거나 배포 데이터베이스에서 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 뷰를 쿼리하여 모든 명령이 구독자에 배달되었는지 확인합니다. b 단계로 이동합니다.  
   
-         배포 에이전트를 실행 하는 방법에 대 한 자세한 내용은 참조 [시작 및 중지 복제 에이전트 & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+         배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-         명령을 확인 하는 방법에 대 한 자세한 내용은 참조 [보기 복제 된 명령 및 기타 정보에는 배포 데이터베이스 & #40; 복제 TRANSACT-SQL 프로그래밍 & #41;](../../../relational-databases/replication/monitor/view replicated commands and information in distribution database.md) 및 [정보 보기 및 구독 & #40;와 관련 된 에이전트에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)합니다.  
+         명령을 확인하는 방법은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
     2.  게시자, 배포자 및 구독자에서 복제 구성을 제거한 후 구성을 다시 만듭니다. 구독을 다시 만들 때 구독자에 이미 데이터가 있다고 지정합니다. 이로써 복원이 완료됩니다.  
   
-         복제를 제거 하는 방법에 대 한 자세한 내용은 참조 [sp_removedbreplication (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)합니다.  
+         복제를 제거하는 방법은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
   
          구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
@@ -129,126 +133,126 @@ caps.handback.revision: 59
     > [!IMPORTANT]  
     >  이 과정을 수행하면 게시된 테이블이 백업에서 복원된 다른 비게시 테이블보다 더 최신 시점으로 복원될 수 있습니다.  
   
-    1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 사용 하 여 모든 명령이 구독자에 배달 되었는지 확인는 **배포 되지 않은 명령** 탭 쿼리하여 또는 복제 모니터에는 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 배포 데이터베이스의 보기입니다. b 단계로 이동합니다.  
+    1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 복제 모니터에서 **배포되지 않은 명령** 탭을 사용하거나 배포 데이터베이스에서 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 뷰를 쿼리하여 모든 명령이 구독자에 배달되었는지 확인합니다. b 단계로 이동합니다.  
   
-         배포 에이전트를 실행 하는 방법에 대 한 자세한 내용은 참조 [시작 및 중지 복제 에이전트 & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+         배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-         명령을 확인 하는 방법에 대 한 자세한 내용은 참조 [보기 복제 된 명령 및 기타 정보에는 배포 데이터베이스 & #40; 복제 TRANSACT-SQL 프로그래밍 & #41;](../../../relational-databases/replication/monitor/view replicated commands and information in distribution database.md) 및 [정보 보기 및 구독 & #40;와 관련 된 에이전트에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)합니다.  
+         명령을 확인하는 방법은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
     2.  [tablediff 유틸리티](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
   
-         에 대 한 자세한 내용은 **tablediff** 유틸리티 참조 [차이 & #40;에 대 한 복제 된 테이블 비교 복제 프로그래밍 및 #41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)합니다.  
+         **tablediff** 유틸리티에 대한 자세한 내용은 [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)를 참조하세요.  
   
-    3.  복원된 백업이 완료되었으며 최신 상태인지 확인합니다. 또한 모든 게시 및 구독에 대한 최신 구성을 포함하고 있는지 확인합니다. 그렇다면 실행는 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 저장 프로시저를 배포자 메타 데이터와 게시자 메타 데이터를 다시 동기화 합니다. 이로써 복원이 완료됩니다. 그렇지 않으면 d 단계로 이동합니다.  
+    3.  복원된 백업이 완료되었으며 최신 상태인지 확인합니다. 또한 모든 게시 및 구독에 대한 최신 구성을 포함하고 있는지 확인합니다. 그렇다면 저장 프로시저 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 를 실행하여 게시자 메타데이터를 배포자 메타데이터와 다시 동기화합니다. 이로써 복원이 완료됩니다. 그렇지 않으면 d 단계로 이동합니다.  
   
     4.  게시자, 배포자 및 구독자에서 복제 구성을 제거한 후 구성을 다시 만듭니다. 구독을 다시 만들 때 구독자에 이미 데이터가 있다고 지정합니다. 이로써 복원이 완료됩니다.  
   
-         복제를 제거 하는 방법에 대 한 자세한 내용은 참조 [sp_removedbreplication (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)합니다.  
+         복제를 제거하는 방법은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
   
          구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
-#### 게시 데이터베이스: 구독 업데이트가 있는 트랜잭션 복제  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>게시 데이터베이스: 구독 업데이트가 있는 트랜잭션 복제  
   
 1.  게시 데이터베이스의 최신 백업을 복원합니다. 2단계로 이동합니다.  
   
-2.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 사용 하 여 모든 명령이 구독자에 배달 되었는지 확인는 **배포 되지 않은 명령** 탭 쿼리하여 또는 복제 모니터에는 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 배포 데이터베이스의 보기입니다. 3단계로 이동합니다.  
+2.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 복제 모니터에서 **배포되지 않은 명령** 탭을 사용하거나 배포 데이터베이스에서 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 뷰를 쿼리하여 모든 명령이 구독자에 배달되었는지 확인합니다. 3단계로 이동합니다.  
   
-     배포 에이전트를 실행 하는 방법에 대 한 자세한 내용은 참조 [시작 및 중지 복제 에이전트 & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+     배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-     명령을 확인 하는 방법에 대 한 자세한 내용은 참조 [보기 복제 된 명령 및 기타 정보에는 배포 데이터베이스 & #40; 복제 TRANSACT-SQL 프로그래밍 & #41;](../../../relational-databases/replication/monitor/view replicated commands and information in distribution database.md) 및 [정보 보기 및 구독 & #40;와 관련 된 에이전트에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)합니다.  
+     명령을 확인하는 방법은 [배포 데이터베이스의 복제된 명령 및 기타 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md) 및 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
-3.  지연 업데이트 구독을 사용 하는 각 구독자에 연결 및 모든 행을 삭제할는 [MSreplication_queue (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) 구독 데이터베이스의 테이블입니다. 4단계로 이동합니다.  
+3.  지연 업데이트 구독을 사용하는 경우 각 구독자에 연결하고 구독 데이터베이스에 있는 [MSreplication_queue&#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msreplication-queue-transact-sql.md) 테이블의 모든 행을 삭제합니다. 4단계로 이동합니다.  
   
     > [!NOTE]  
-    >  지연 업데이트 구독을 사용하고 있으며 테이블에 ID 열이 있는 경우 복원 후에 올바른 ID 범위가 지정되었는지 확인해야 합니다. 자세한 내용은 참조 [Id 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.  
+    >  지연 업데이트 구독을 사용하고 있으며 테이블에 ID 열이 있는 경우 복원 후에 올바른 ID 범위가 지정되었는지 확인해야 합니다. 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
   
 4.  배포 데이터베이스의 처리 중인 모든 명령이 구독자에 배달되었는지 확인한 다음 복원된 백업에 포함되지 않은 모든 트랜잭션을 게시 데이터베이스에 수동으로 적용해야 합니다.  
   
     > [!IMPORTANT]  
     >  이 과정을 수행하면 게시된 테이블이 백업에서 복원된 다른 비게시 테이블보다 더 최신 시점으로 복원될 수 있습니다.  
   
-    1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 복제 모니터를 사용 하 여 또는 쿼리하여 모든 명령이 구독자에 배달 되었는지 확인는 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 배포 데이터베이스의 보기입니다. b 단계로 이동합니다.  
+    1.  모든 구독자가 배포 데이터베이스의 처리 중인 명령과 동기화될 때까지 배포 에이전트를 실행합니다. 복제 모니터를 사용하거나 배포 데이터베이스에서 [MSdistribution_status](../../../relational-databases/system-views/msdistribution-status-transact-sql.md) 뷰를 쿼리하여 모든 명령이 구독자에 배달되었는지 확인합니다. b 단계로 이동합니다.  
   
-    2.   [tablediff Utility](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
+    2.  [tablediff Utility](../../../tools/tablediff-utility.md) 또는 다른 도구를 사용하여 게시자를 구독자와 수동으로 동기화합니다. 이렇게 하면 게시 데이터베이스 백업에 포함되지 않은 데이터를 구독 데이터베이스에서 복구할 수 있습니다. c 단계로 이동합니다.  
   
-         에 대 한 자세한 내용은 **tablediff** 유틸리티 참조 [차이 & #40;에 대 한 복제 된 테이블 비교 복제 프로그래밍 및 #41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)합니다.  
+         **tablediff** 유틸리티에 대한 자세한 내용은 [복제된 테이블의 차이점 비교&#40;복제 프로그래밍&#41;](../../../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)를 참조하세요.  
   
-    3.  복원된 백업이 완료되었으며 최신 상태인지 확인합니다. 또한 모든 게시 및 구독에 대한 최신 구성을 포함하고 있는지 확인합니다. 그렇다면 실행는 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 저장 프로시저를 배포자 메타 데이터와 게시자 메타 데이터를 다시 동기화 합니다. 이로써 복원이 완료됩니다. 그렇지 않으면 d 단계로 이동합니다.  
+    3.  복원된 백업이 완료되었으며 최신 상태인지 확인합니다. 또한 모든 게시 및 구독에 대한 최신 구성을 포함하고 있는지 확인합니다. 그렇다면 저장 프로시저 [sp_replrestart](../../../relational-databases/system-stored-procedures/sp-replrestart-transact-sql.md) 를 실행하여 게시자 메타데이터를 배포자 메타데이터와 다시 동기화합니다. 이로써 복원이 완료됩니다. 그렇지 않으면 d 단계로 이동합니다.  
   
     4.  게시자, 배포자 및 구독자에서 복제 구성을 제거한 후 구성을 다시 만듭니다. 구독을 다시 만들 때 구독자에 이미 데이터가 있다고 지정합니다. 이로써 복원이 완료됩니다.  
   
-         복제를 제거 하는 방법에 대 한 자세한 내용은 참조 및 [sp_removedbreplication (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)합니다.  
+         복제를 제거하는 방법은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
   
          구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
-#### 게시 데이터베이스: 피어 투 피어 트랜잭션 복제  
- 다음 단계에서 게시 데이터베이스에서 **A**, **B**, 및 **C** 피어 투 피어 트랜잭션 복제 토폴로지에 됩니다. **A** 및 **C** 데이터베이스는 온라인 상태이며 제대로 작동하고 있습니다. **B** 데이터베이스는 복원될 데이터베이스입니다. 여기에서 설명하는 절차, 특히 7, 10 및 11단계는 피어 투 피어 토폴로지에 노드를 추가하는 데 필요한 절차와 매우 비슷합니다. 이러한 단계를 가장 간단하게 수행하려면 피어 투 피어 토폴로지 구성 마법사를 사용하면 되지만, 저장 프로시저를 사용할 수도 있습니다.  
+#### <a name="publication-database-peer-to-peer-transactional-replication"></a>게시 데이터베이스: 피어 투 피어 트랜잭션 복제  
+ 다음 단계에서 게시 데이터베이스 **A**, **B**및 **C** 는 피어 투 피어 트랜잭션 복제 토폴로지에 있습니다. **A** 및 **C** 데이터베이스는 온라인 상태이며 제대로 작동하고 있습니다. **B** 데이터베이스는 복원될 데이터베이스입니다. 여기에서 설명하는 절차, 특히 7, 10 및 11단계는 피어 투 피어 토폴로지에 노드를 추가하는 데 필요한 절차와 매우 비슷합니다. 이러한 단계를 가장 간단하게 수행하려면 피어 투 피어 토폴로지 구성 마법사를 사용하면 되지만, 저장 프로시저를 사용할 수도 있습니다.  
   
-1.  데이터베이스의 구독을 동기화 하려면 배포 에이전트 실행 **A** 및 **C**합니다. 2단계로 이동합니다.  
+1.  배포 에이전트를 실행하여 **A** 및 **C** 데이터베이스의 구독을 동기화합니다. 2단계로 이동합니다.  
   
-     배포 에이전트를 실행 하는 방법에 대 한 자세한 내용은 참조 [시작 및 중지 복제 에이전트 & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+     배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-2.  배포 데이터베이스를 **B** 사용 하 여 데이터베이스 간에 구독을 동기화 하는 배포 에이전트 실행 계속 사용할 수는 **B** 및 **A** 및 데이터베이스와 B 및 **C**합니다. 3단계로 이동합니다.  
+2.  **B**에서 사용하는 배포 데이터베이스를 아직 사용할 수 있는 경우 배포 에이전트를 실행하여 **B** 데이터베이스와 **A** 데이터베이스 간의 구독과 B 데이터베이스와 **C** 데이터베이스 간의 구독을 동기화합니다. 3단계로 이동합니다.  
   
-3.  배포에서 메타 데이터를 제거 하는 데이터베이스 **B** 를 실행 하 여 사용 하 여 [sp_removedistpublisherdbreplication](../../../relational-databases/system-stored-procedures/sp-removedistpublisherdbreplication-transact-sql.md) 에 대 한 배포 데이터베이스에서 **B**합니다. 4단계로 이동합니다.  
+3.  **B**에 대한 배포 데이터베이스에서 [sp_removedistpublisherdbreplication](../../../relational-databases/system-stored-procedures/sp-removedistpublisherdbreplication-transact-sql.md)을 실행하여 **B**에서 사용하는 배포 데이터베이스의 메타데이터를 제거합니다. 4단계로 이동합니다.  
   
-4.  데이터베이스에서 **A** 및 **C**, 데이터베이스에 게시에 구독을 삭제 **B**합니다. 5단계로 이동합니다.  
+4.  **A** 및 **C** 데이터베이스에서 **B** 데이터베이스의 게시에 대한 구독을 삭제합니다. 5단계로 이동합니다.  
   
      구독 삭제 방법은 [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)을 참조하십시오.  
   
-5.  로그 백업 또는 데이터베이스의 전체 백업을 수행 **A**합니다. 6단계로 이동합니다.  
+5.  **A** 데이터베이스의 로그 백업 또는 전체 백업을 수행합니다. 6단계로 이동합니다.  
   
-6.  데이터베이스의 백업을 복원 **A** 데이터베이스에 **B**합니다. 데이터베이스 **B** 이제 데이터베이스의 데이터에 **A**, 있지만 복제 구성은 없습니다. 백업을 다른 서버로 복원 하면 복제가 제거 합니다. 복제 데이터베이스에서 제거 되었습니다 따라서 **B**합니다. 7단계로 이동합니다.  
+6.  **A** 데이터베이스의 백업을 **B** 데이터베이스에 복원합니다. 이제 **B** 데이터베이스에는 **A** 데이터베이스의 데이터는 있지만 복제 구성은 없습니다. 백업을 다른 서버로 복원하면 복제가 제거되므로 이 경우 **B** 데이터베이스에서 복제가 제거된 것입니다. 7단계로 이동합니다.  
   
-7.  데이터베이스에서 게시를 다시 만듭니다 **B**, 데이터베이스 간에 구독을 다시 만듭니다 **A** 및 **B**합니다. (구독 데이터베이스와 관련 된 **C** 이후 단계에서 처리 됩니다.).  
+7.  **B** 데이터베이스에 게시를 다시 만든 후 **A** 데이터베이스와 **B** 데이터베이스 간에 구독을 다시 만듭니다. **C** 데이터베이스와 관련된 구독은 이후 단계에서 처리합니다.  
   
-    1.  데이터베이스에서 게시를 다시 만듭니다 **B**합니다. b 단계로 이동합니다.  
+    1.  **B** 데이터베이스에 게시를 다시 만듭니다. b 단계로 이동합니다.  
   
-    2.  데이터베이스에서 구독을 다시 만듭니다 **B** 의 게시 데이터베이스에 **A**, 백업으로 구독을 초기화할 수를 지정 (값 **백업으로 초기화** 에 대 한는 **@sync_type** 의 매개 변수 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). c 단계로 이동합니다.  
+    2.  구독자에 이미 데이터가 있음을 지정하여 **B** 데이터베이스에서 **A**데이터베이스의 게시에 대한 구독을 다시 만들고 해당 구독이 백업으로 초기화되도록 지정합니다. 즉, **sp_addsubscription** 의 **@sync_type** 매개 변수에 [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)값을 지정합니다. c 단계로 이동합니다.  
   
-    3.  데이터베이스에서 구독을 다시 만듭니다 **A** 의 게시 데이터베이스에 **B**, 구독자에 이미 데이터가 있다고 지정 (값 **복제만 지원** 에 대 한는 **@sync_type** 의 매개 변수 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). 8단계로 이동합니다.  
+    3.  구독자에 이미 데이터가 있음을 지정하여 **A** 데이터베이스에서 **B**데이터베이스의 게시에 대한 구독을 다시 만들고 해당 구독자에 이미 데이터가 있다고 지정합니다. 즉, **sp_addsubscription** 의 **@sync_type** 매개 변수에 [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)값을 지정합니다. 8단계로 이동합니다.  
   
-8.  데이터베이스의 구독을 동기화 하려면 배포 에이전트 실행 **A** 및 **B**합니다. 게시된 테이블에 ID 열이 있으면 9단계로 이동합니다. 그렇지 않은 경우에는 10단계로 이동합니다.  
+8.  배포 에이전트를 실행하여 **A** 및 **B** 데이터베이스의 구독을 동기화합니다. 게시된 테이블에 ID 열이 있으면 9단계로 이동합니다. 그렇지 않은 경우에는 10단계로 이동합니다.  
   
-9. 데이터베이스의 각 테이블에 할당 한 id 범위 복원 후 **A** 데이터베이스에도 사용 됩니다 **B**합니다. 다음 사항을 확인 복원된 된 데이터베이스 **B** 실패 한 데이터베이스에서 변경 내용을 받았는지 **B** 전파 데이터베이스에 **A** 및 데이터베이스 **C**; 다음 각 테이블에 대 한 id 범위 초기값을 다시 설정 합니다.  
+9. 복원 후에 **A** 데이터베이스의 각 테이블에 할당한 ID 범위는 **B** 데이터베이스에서도 사용됩니다. 복원된 **B** 데이터베이스가 실패한 **B** 데이터베이스의 모든 변경 내용(**A** 데이터베이스와 **C** 데이터베이스로 전파됨)을 받았는지 확인한 다음 각 테이블의 ID 범위에 대한 초기값을 다시 설정합니다.  
   
-    1.  실행 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 데이터베이스에 **B** 출력 매개 변수를 검색 하 고 **@request_id**합니다. b 단계로 이동합니다.  
+    1.  **B** 데이터베이스에서 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)를 실행하고 출력 매개 변수 **@request_id**를 검색합니다. b 단계로 이동합니다.  
   
-    2.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. 자세한 내용은 참조 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) 또는 [시작 및 중지 복제 에이전트 & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)합니다. c 단계로 이동합니다.  
+    2.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md) 또는 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)를 참조하세요. c 단계로 이동합니다.  
   
-    3.  실행 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), 제공 하는 **@request_id** 값 b 단계에서 검색 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. d 단계로 이동합니다.  
+    3.  [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)를 실행하고 b 단계에서 검색한 **@request_id** 값을 지정합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. d 단계로 이동합니다.  
   
     4.  [DBCC CHECKIDENT](../../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md) 를 통해 **B** 데이터베이스에 있는 각 테이블의 ID 범위에 대한 초기값을 다시 설정하여 적절한 범위가 사용되도록 합니다. 10단계로 이동합니다.  
   
-     Id 범위를 관리 하는 방법에 대 한 자세한 내용은의 "id 범위 수동 관리를 위한 범위 할당" 섹션을 참조 하십시오. [Id 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.  
+     ID 범위 관리 방법은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)의 "ID 범위 수동 관리를 위한 범위 할당" 섹션을 참조하세요.  
   
-10. 이 시점에서 데이터베이스 **B** 및 데이터베이스 **C** 직접 연결 되지 않은 데이터베이스를 통해 변경 내용을 받습니다 하지만 **A**합니다. 토폴로지에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]가 실행되는 노드가 들어 있으면 11단계로 이동하고, 그렇지 않으면 12단계로 이동합니다.  
+10. 이 시점에서 **B** 데이터베이스와 **C** 데이터베이스는 직접 연결되어 있지 않지만 **A** 데이터베이스를 통해 변경 내용을 받습니다. 토폴로지에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]가 실행되는 노드가 들어 있으면 11단계로 이동하고, 그렇지 않으면 12단계로 이동합니다.  
   
-11. 시스템을 정지 하 여 데이터베이스 간에 구독을 다시 만들어야 **B** 및 **C**합니다. 시스템 정지 과정에서는 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 받았는지 확인합니다.  
+11. 시스템을 정지하고 **B** 및 **C** 데이터베이스 간에 구독을 다시 만듭니다. 시스템 정지 과정에서는 모든 노드에서 게시된 테이블에 대한 작업을 중지하고 각 노드가 다른 모든 노드의 변경 내용을 받았는지 확인합니다.  
   
     1.  피어 투 피어 토폴로지의 게시된 테이블에 대한 모든 작업을 중지합니다. b 단계로 이동합니다.  
   
-    2.  실행 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) 데이터베이스에 **B** 출력 매개 변수를 검색 하 고 **@request_id**합니다. c 단계로 이동합니다.  
+    2.  **B** 데이터베이스에서 [sp_requestpeerresponse](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)를 실행하고 출력 매개 변수 **@request_id**를 검색합니다. c 단계로 이동합니다.  
   
     3.  기본적으로 배포 에이전트는 연속적으로 실행되도록 설정되므로 토큰이 모든 노드로 자동 전송됩니다. 배포 에이전트가 연속 모드로 실행되지 않을 경우에는 에이전트를 실행합니다. d 단계로 이동합니다.  
   
-    4.  실행 [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md), 제공 하는 **@request_id** 값 b 단계에서 검색 합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. e 단계로 이동합니다.  
+    4.  [sp_helppeerresponses](../../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)를 실행하고 b 단계에서 검색한 **@request_id** 값을 지정합니다. 모든 노드가 피어 요청을 받았음을 표시할 때까지 기다립니다. e 단계로 이동합니다.  
   
-    5.  데이터베이스에서 구독을 다시 만들고 **B** 의 게시 데이터베이스에 **C**, 구독자에 이미 데이터가 있다고 지정 합니다. b 단계로 이동합니다.  
+    5.  구독자에 이미 데이터가 있음을 지정하여 **B** 데이터베이스에서 **C**데이터베이스의 게시에 대한 구독을 다시 만듭니다. b 단계로 이동합니다.  
   
-    6.  데이터베이스에서 구독을 다시 만들고 **C** 의 게시 데이터베이스에 **B**, 구독자에 이미 데이터가 있다고 지정 합니다. 13단계로 이동합니다.  
+    6.  구독자에게 이미 데이터가 있음을 지정하여 **C** 데이터베이스에서 **B**데이터베이스의 게시에 대한 구독을 다시 만듭니다. 13단계로 이동합니다.  
   
-12. 데이터베이스 간에 구독을 다시 만들고 **B** 및 **C**:  
+12. **B** 데이터베이스와 **C**데이터베이스 간에 구독을 다시 만듭니다.  
   
-    1.  데이터베이스에서 **B**, 쿼리는 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 해당 데이터베이스의 가장 최근 트랜잭션 로그 시퀀스 번호 (LSN)를 검색 하려면 테이블 **B** 데이터베이스에서 받은 **C**합니다.  
+    1.  **B**데이터베이스에서 [MSpeer_lsns](../../../relational-databases/system-tables/mspeer-lsns-transact-sql.md) 테이블을 쿼리하여 **B** 데이터베이스에서 **C**데이터베이스로부터 받은 최신 트랜잭션의 LSN(로그 시퀀스 번호)을 검색합니다.  
   
-    2.  데이터베이스에서 구독을 다시 만듭니다 **B** 의 게시 데이터베이스에 **C**, LSN을 기반으로 하는 구독을 초기화할 수를 지정 (값 **lsn에서 초기화** 에 대 한는 **@sync_type** 의 매개 변수 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)). b 단계로 이동합니다.  
+    2.  구독자에 이미 데이터가 있음을 지정하여 **B** 데이터베이스에서 **C**데이터베이스의 게시에 대한 구독을 다시 만들고 LSN을 기반으로 구독이 초기화되도록 지정합니다. 즉, **sp_addsubscription** 의 **@sync_type** 매개 변수에 [initialize with backup](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)값을 지정합니다. b 단계로 이동합니다.  
   
-    3.  데이터베이스에서 구독을 다시 만들고 **C** 의 게시 데이터베이스에 **B**, 구독자에 이미 데이터가 있다고 지정 합니다. 13단계로 이동합니다.  
+    3.  구독자에게 이미 데이터가 있음을 지정하여 **C** 데이터베이스에서 **B**데이터베이스의 게시에 대한 구독을 다시 만듭니다. 13단계로 이동합니다.  
   
-13. 데이터베이스의 구독을 동기화 하려면 배포 에이전트 실행 **B** 및 **C**합니다. 이로써 복원이 완료됩니다.  
+13. 배포 에이전트를 실행하여 **B** 및 **C** 데이터베이스의 구독을 동기화합니다. 이로써 복원이 완료됩니다.  
   
-#### msdb 데이터베이스(게시자)  
+#### <a name="msdb-database-publisher"></a>msdb 데이터베이스(게시자)  
   
 1.  **msdb** 데이터베이스의 최신 백업을 복원합니다.  
   
@@ -256,15 +260,15 @@ caps.handback.revision: 59
   
 3.  복제 스크립트에서 구독 정리 작업을 다시 만듭니다. 복구가 완료되었습니다.  
   
-#### master 데이터베이스(게시자)  
+#### <a name="master-database-publisher"></a>master 데이터베이스(게시자)  
   
 1.  **master** 데이터베이스의 최신 백업을 복원합니다.  
   
 2.  해당 데이터베이스의 복제 구성 및 설정이 게시 데이터베이스의 복제 구성 및 설정과 일치하는지 확인합니다.  
   
-### 배포자의 데이터베이스  
+### <a name="databases-at-the-distributor"></a>배포자의 데이터베이스  
   
-#### 배포 데이터베이스  
+#### <a name="distribution-database"></a>배포 데이터베이스  
   
 1.  배포 데이터베이스의 최신 백업을 복원합니다.  
   
@@ -274,19 +278,19 @@ caps.handback.revision: 59
   
 3.  복원된 백업이 완료되었으며 최신 상태인지 확인합니다. 또한 모든 게시 및 구독에 대한 최신 구성을 포함하고 있는지 확인합니다. 그렇다면 복구가 완료된 것이며 그렇지 않으면 4단계로 이동합니다.  
   
-4.  복원 된 배포 데이터베이스의 구성 정보가 최신 상태가 또는 **백업 사용 하 여 동기화** 배포 데이터베이스에 옵션이 설정 되지 않았습니다. 복원 후 게시자에서 커밋되었지만 구독자로 배달되지 않은 트랜잭션이 배포 데이터베이스에는 없을 수도 있습니다. 복제를 삭제하고 다시 만든 다음 유효성 검사를 실행합니다.  
+4.  복원된 배포 데이터베이스의 구성 정보가 최신 상태가 아니거나 배포 데이터베이스에 **sync with backup** 옵션이 설정되지 않았습니다. 복원 후 게시자에서 커밋되었지만 구독자로 배달되지 않은 트랜잭션이 배포 데이터베이스에는 없을 수도 있습니다. 복제를 삭제하고 다시 만든 다음 유효성 검사를 실행합니다.  
   
     1.  게시자, 배포자 및 구독자에서 복제 구성을 제거한 후 구성을 다시 만듭니다. 구독을 다시 만들 때 구독자에 이미 데이터가 있다고 지정합니다. b 단계로 이동합니다.  
   
-         복제를 제거 하는 방법에 대 한 자세한 내용은 참조 [sp_removedbreplication (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)합니다.  
+         복제를 제거하는 방법은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
   
          구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
     2.  모든 게시의 유효성을 검사하도록 표시합니다. 유효성 검사에 실패한 모든 구독을 다시 초기화합니다. 복구가 완료되었습니다.  
   
-         유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)를 참조하십시오. 다시 초기화 하는 방법에 대 한 자세한 내용은 참조 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)합니다.  
+         유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)를 참조하십시오. 다시 초기화에 대한 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
-#### msdb 데이터베이스(배포자)  
+#### <a name="msdb-database-distributor"></a>msdb 데이터베이스(배포자)  
   
 1.  **msdb** 데이터베이스의 최신 백업을 복원합니다.  
   
@@ -294,27 +298,27 @@ caps.handback.revision: 59
   
 3.  게시자, 배포자 및 구독자에서 복제 구성을 제거한 후 구성을 다시 만듭니다. 구독을 다시 만들 때 구독자에 이미 데이터가 있다고 지정합니다. 4단계로 이동합니다.  
   
-     복제를 제거 하는 방법에 대 한 자세한 내용은 참조 [sp_removedbreplication (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)합니다.  
+     복제를 제거하는 방법은 [sp_removedbreplication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 참조하세요.  
   
      구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
 4.  모든 게시의 유효성을 검사하도록 표시합니다. 유효성 검사에 실패한 모든 구독을 다시 초기화합니다. 복구가 완료되었습니다.  
   
-     유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)를 참조하십시오. 다시 초기화 하는 방법에 대 한 자세한 내용은 참조 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)합니다.  
+     유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../../../relational-databases/replication/validate-replicated-data.md)를 참조하십시오. 다시 초기화에 대한 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
-#### master 데이터베이스(배포자)  
+#### <a name="master-database-distributor"></a>master 데이터베이스(배포자)  
   
 1.  **master** 데이터베이스의 최신 백업을 복원합니다.  
   
 2.  해당 데이터베이스의 복제 구성 및 설정이 게시 데이터베이스의 복제 구성 및 설정과 일치하는지 확인합니다.  
   
-### 구독자의 데이터베이스  
+### <a name="databases-at-the-subscriber"></a>구독자의 데이터베이스  
   
-#### 구독 데이터베이스  
+#### <a name="subscription-database"></a>구독 데이터베이스  
   
 1.  최신 구독 데이터베이스 백업이 배포 데이터베이스의 최소 배포 보존 기간 설정보다 최신인지 확인합니다. 이를 통해 배포자에 구독자를 최신 상태로 만들기 위해 필요한 명령이 모두 있는지 여부를 확인합니다. 그렇다면 2단계로 이동합니다. 그렇지 않으면 구독을 다시 초기화합니다. 복구가 완료되었습니다.  
   
-     최대 배포 보존 기간 설정을 확인, 하려면 실행 [sp_helpdistributiondb](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) 에서 값을 검색 하 고는 **max_distretention** 열 (이 값은 시간 있음).  
+     최대 배포 보존 기간 설정을 확인하려면 [sp_helpdistributiondb](../../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md) 를 실행하고 **max_distretention** 열의 값을 검색합니다. 이 값은 시간 단위로 표시됩니다.  
   
      구독을 다시 초기화하는 방법은 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)를 참조하십시오.  
   
@@ -324,9 +328,9 @@ caps.handback.revision: 59
   
 4.  구독자를 동기화하려면 배포 에이전트를 실행합니다. 복구가 완료되었습니다.  
   
-     배포 에이전트를 실행 하는 방법에 대 한 자세한 내용은 참조 [시작 및 중지 복제 에이전트 & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+     배포 에이전트를 실행하는 방법은 [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-#### msdb 데이터베이스(구독자)  
+#### <a name="msdb-database-subscriber"></a>msdb 데이터베이스(구독자)  
   
 1.  **msdb** 데이터베이스의 최신 백업을 복원합니다. 이 구독자에서 끌어오기 구독이 사용되는지 확인합니다. 그렇지 않으면 복원이 완료된 것입니다. 그렇다면 2단계로 이동합니다.  
   
@@ -338,18 +342,18 @@ caps.handback.revision: 59
   
      구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
-#### master 데이터베이스(구독자)  
+#### <a name="master-database-subscriber"></a>master 데이터베이스(구독자)  
   
 1.  **master** 데이터베이스의 최신 백업을 복원합니다.  
   
 2.  해당 데이터베이스의 복제 구성 및 설정이 게시 데이터베이스의 복제 구성 및 설정과 일치하는지 확인합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 데이터베이스 백업 및 복원](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [배포 구성](../../../relational-databases/replication/configure-distribution.md)   
  [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)   
+ [Subscribe to Publications](../../../relational-databases/replication/subscribe-to-publications.md)   
  [구독 초기화](../../../relational-databases/replication/initialize-a-subscription.md)   
  [데이터 동기화](../../../relational-databases/replication/synchronize-data.md)  
   

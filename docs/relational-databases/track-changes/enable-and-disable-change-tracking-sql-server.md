@@ -1,35 +1,39 @@
 ---
-title: "변경 내용 추적 설정 및 해제(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "변경 내용 추적 [SQL Server], 비활성화"
-  - "데이터 변경 내용 [SQL Server]"
-  - "변경 내용 추적 [SQL Server], 활성화"
-  - "데이터 변경 내용 추적 [SQL Server]"
-  - "변경 내용 추적 [SQL Server], 구성"
-  - "데이터 [SQL Server], 변경"
+title: "변경 내용 추적 설정 및 해제(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], disabling
+- data changes [SQL Server]
+- change tracking [SQL Server], enabling
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], configuring
+- data [SQL Server], changing
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 156e5514169d9b4ca9f8cca9e5f06a46187211aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 변경 내용 추적 설정 및 해제(SQL Server)
+# <a name="enable-and-disable-change-tracking-sql-server"></a>변경 내용 추적 설정 및 해제(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 데이터베이스 및 테이블에 변경 내용 추적을 사용하도록 설정하거나 사용하지 않도록 설정하는 방법에 대해 설명합니다.  
   
-## 데이터베이스에 변경 내용 추적을 사용하도록 설정  
- 변경 내용 추적을 사용하기 전에 데이터베이스 수준에서 변경 내용 추적을 설정해야 합니다. 다음 예에서는 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)를 사용하여 변경 내용 추적을 사용하도록 설정하는 방법을 보여 줍니다.  
+## <a name="enable-change-tracking-for-a-database"></a>데이터베이스에 변경 내용 추적을 사용하도록 설정  
+ 변경 내용 추적을 사용하기 전에 데이터베이스 수준에서 변경 내용 추적을 설정해야 합니다. 다음 예에서는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)를 사용하여 변경 내용 추적을 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -37,7 +41,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- [데이터베이스 속성&#40;변경 내용 추적 페이지&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 변경 내용을 설정할 수도 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
  변경 내용 추적을 설정할 때 CHANGE_RETENTION 및 AUTO_CLEANUP 옵션을 지정할 수 있으며, 변경 내용 추적을 설정한 후 언제든지 이 값을 변경할 수 있습니다.  
   
@@ -51,7 +55,7 @@ SET CHANGE_TRACKING = ON
   
 -   스냅숏 격리를 사용하는 것은 모든 변경 내용 추적 정보가 일관되도록 보장하는 가장 쉬운 방법입니다. 이러한 이유로 데이터베이스에 대해 스냅숏 격리를 ON으로 설정하는 것이 가장 좋습니다. 자세한 내용은 [변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)을 참조하세요.  
   
-## 테이블에 변경 내용 추적을 사용하도록 설정  
+## <a name="enable-change-tracking-for-a-table"></a>테이블에 변경 내용 추적을 사용하도록 설정  
  추적하려는 테이블마다 변경 내용 추적을 설정해야 합니다. 변경 내용 추적이 설정되면 DML 작업에 의해 영향을 받는 테이블의 모든 행에 대해 변경 내용 추적 정보가 유지 관리됩니다.  
   
  다음 예에서는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 변경 내용 추적을 사용하도록 설정하는 방법을 보여 줍니다.  
@@ -62,14 +66,14 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- [데이터베이스 속성&#40;변경 내용 추적 페이지&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 대화 상자를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 테이블의 변경 내용을 추적하도록 설정할 수도 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
- TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 응용 프로그램이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 저장소 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
+ TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 응용 프로그램이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 저장소 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
   
-## 데이터베이스 또는 테이블에 변경 내용 추적을 사용하지 않도록 설정  
- 우선 변경 내용 추적이 설정된 모든 테이블에 대해 변경 내용 추적을 해제해야 해당 데이터베이스에 대한 변경 내용 추적을 OFF로 설정할 수 있습니다. 데이터베이스에서 변경 내용 추적이 설정된 테이블을 확인하려면 [sys.change_tracking_tables](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md) 카탈로그 뷰를 사용합니다.  
+## <a name="disable-change-tracking-for-a-database-or-table"></a>데이터베이스 또는 테이블에 변경 내용 추적을 사용하지 않도록 설정  
+ 우선 변경 내용 추적이 설정된 모든 테이블에 대해 변경 내용 추적을 해제해야 해당 데이터베이스에 대한 변경 내용 추적을 OFF로 설정할 수 있습니다. 데이터베이스에서 변경 내용 추적이 설정된 테이블을 확인하려면 [sys.change_tracking_tables](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md) 카탈로그 뷰를 사용합니다.  
   
- 데이터베이스의 테이블에 변경 내용 추적이 설정되어 있지 않으면 해당 데이터베이스에 대해 변경 내용 추적을 해제할 수 있습니다. 다음 예에서는 [ALTER DATABASE](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)를 사용하여 데이터베이스에 변경 내용 추적을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
+ 데이터베이스의 테이블에 변경 내용 추적이 설정되어 있지 않으면 해당 데이터베이스에 대해 변경 내용 추적을 해제할 수 있습니다. 다음 예에서는 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-set-options.md)를 사용하여 데이터베이스에 변경 내용 추적을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
   
 ```tsql  
 ALTER DATABASE AdventureWorks2012  
@@ -83,14 +87,15 @@ ALTER TABLE Person.Contact
 DISABLE CHANGE_TRACKING;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 속성&#40;변경 내용 추적 페이지&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases&#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables&#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [변경 데이터 작업&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)   
  [변경 내용 추적 관리&#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)  
   
   
+

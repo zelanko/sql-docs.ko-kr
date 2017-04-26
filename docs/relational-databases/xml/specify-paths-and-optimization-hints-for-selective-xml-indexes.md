@@ -1,22 +1,26 @@
 ---
-title: "선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c07b191fe73f8cab21a9f3876230d344ad99968
+ms.lasthandoff: 04/11/2017
+
 ---
-# 선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
+# <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>선택적 XML 인덱스에 대한 경로 및 최적화 힌트 지정
   이 항목에서는 선택적 XML 인덱스를 만들거나 변경할 때 인덱싱할 노드 경로 및 인덱싱에 대한 최적화 힌트를 지정합니다.  
   
  노드 경로 및 최적화 힌트는 다음 문 중 하나에 동시에 지정합니다.  
@@ -40,11 +44,11 @@ caps.handback.revision: 11
   
  XML 데이터 형식의 value() 메서드에 적용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형 시스템과 XQuery 식 XML 유형 시스템과 간에는 약간의 차이가 있습니다. 이러한 차이점은 다음과 같습니다.  
   
--   XQuery 유형 시스템은 후행 공백을 인식합니다. 예를 들어 XQuery 유형 의미 체계에서는 문자열 "abc"와 "abc "가 같은 문자열이 아니지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이러한 문자열이 같은 문자열입니다.  
+-   XQuery 유형 시스템은 후행 공백을 인식합니다. 예를 들어 XQuery 유형 의미 체계에서는 문자열 "abc"와 "abc "가 같은 문자열이 아니지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 문자열이 같은 문자열입니다.  
   
 -   XQuery 부동 소수점 데이터 형식에서는 +/- 0 및 +/- 무한대와 같은 특수 값이 지원되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 부동 소수점 데이터 형식에서는 이러한 특수 값이 지원되지 않습니다.  
   
-### 형식화되지 않은 XML의 XQuery 유형  
+### <a name="xquery-types-in-untyped-xml"></a>형식화되지 않은 XML의 XQuery 유형  
   
 -   XQuery 유형은 value() 메서드를 비롯한 XML 데이터 형식의 모든 메서드에 있는 XQuery 식과 일치합니다.  
   
@@ -105,7 +109,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
 -- pathY - Performance is improved; secondary indexes are possible; storage is saved.  
 ```  
   
-### 형식화되지 않은 XML의 SQL Server 유형  
+### <a name="sql-server-types-in-untyped-xml"></a>형식화되지 않은 XML의 SQL Server 유형  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유형은 value() 메서드의 반환 값과 일치합니다.  
   
@@ -132,10 +136,9 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 )  
 ```  
   
- [항목 내용](#top)  
   
 ##  <a name="typed"></a> 형식화된 XML에 대한 선택적 XML 인덱스 지원 이해  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 형식화된 XML은 지정된 XML 문서와 연결된 스키마입니다. 스키마는 전체 문서 구조와 노드 유형을 정의합니다.. 스키마가 있으면 사용자가 경로를 승격시킬 때 선택적 XML 인덱스가 해당 스키마 구조를 적용하기 때문에 경로에 대한 XQUERY 유형을 지정할 필요가 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 형식화된 XML은 지정된 XML 문서와 연결된 스키마입니다. 스키마는 전체 문서 구조와 노드 유형을 정의합니다. 스키마가 있으면 사용자가 경로를 승격시킬 때 선택적 XML 인덱스가 해당 스키마 구조를 적용하기 때문에 경로에 대한 XQUERY 유형을 지정할 필요가 없습니다.  
   
  선택적 XML 인덱스는 다음 XSD 유형을 지원합니다.  
   
@@ -211,7 +214,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ##  <a name="paths"></a> 경로 지정  
  선택적 XML 인덱스를 사용하면 저장된 XML 데이터에서 실행할 쿼리와 관련 있는 노드의 하위 집합만 인덱싱할 수 있습니다. 관련 노드의 하위 집합이 XML 문서에 있는 총 노드 수보다 훨씬 적을 경우 선택적 XML 인덱스는 관련 노드만 저장합니다. 선택적 XML 인덱스를 사용하려면 인덱싱할 노드의 올바른 하위 집합을 식별해야 합니다.  
   
-### 인덱싱할 노드 선택  
+### <a name="choosing-the-nodes-to-index"></a>인덱싱할 노드 선택  
  다음과 같은 두 가지 간단한 원칙을 사용하여 선택적 XML 인덱스에 추가할 노드의 올바른 하위 집합을 식별할 수 있습니다.  
   
 1.  **원칙 1**: 지정된 XQuery 식을 평가하려면 검사할 모든 노드를 인덱싱합니다.  
@@ -247,7 +250,7 @@ FOR
 )  
 ```  
   
-### 동일한 경로 인덱싱  
+### <a name="indexing-identical-paths"></a>동일한 경로 인덱싱  
  동일한 경로를 서로 다른 경로 이름을 사용하는 동일한 데이터 형식으로 승격시킬 수 없습니다. 예를 들어 다음 쿼리를 실행하면 `pathOne` 과 `pathTwo` 가 동일하기 때문에 오류가 발생합니다.  
   
 ```tsql  
@@ -270,7 +273,7 @@ FOR
 )  
 ```  
   
-### 예  
+### <a name="examples"></a>예  
  다음은 서로 다른 XQuery 형식에 대해 인덱싱할 올바른 노드를 선택하는 몇 가지 추가 예입니다.  
   
  **예제 1**  
@@ -301,7 +304,7 @@ WHERE T.xmldata.exist('/a/b/c/d/e[./f = "SQL"]') = 1
   
 |인덱스에 포함할 열|이 노드를 인덱싱하는 이유|  
 |----------------------------------|-----------------------------------|  
-|**/a/b/c/d/e**|조건자가 `e` 노드를 통해 적용됩니다.|  
+|**/a/b/c/d/e**|조건자가 `e`노드를 통해 적용됩니다.|  
 |**/a/b/c/d/e/f**|`f` 노드의 값이 조건자 내에서 평가됩니다.|  
   
  **예 3**  
@@ -318,7 +321,7 @@ FROM myXMLTable T
   
 |인덱스에 포함할 열|이 노드를 인덱싱하는 이유|  
 |----------------------------------|-----------------------------------|  
-|**/a/b/c/d/e**|조건자가 `e` 노드를 통해 적용됩니다.|  
+|**/a/b/c/d/e**|조건자가 `e`노드를 통해 적용됩니다.|  
 |**/a/b/c/d/e/f**|`f` 노드의 값이 조건자 내에서 평가됩니다.|  
 |**/a/b/c/d/e/g**|`g` 노드의 값이 value() 메서드에 의해 반환됩니다.|  
   
@@ -343,7 +346,6 @@ WHERE T.xmldata.exist('
 |**/a/b/c/d/e/f**|`f` 노드의 값이 FLWOR 절에서 평가됩니다.|  
 |**/a/b/c/d/e/g**|`g` 노드의 존재 여부가 exist() 메서드에 의해 평가됩니다.|  
   
- [항목 내용](#top)  
   
 ##  <a name="hints"></a> 최적화 힌트 지정  
  선택적 최적화 힌트를 사용하여 선택적 XML 인덱스에 의해 인덱싱되는 노드에 대한 추가 매핑 정보를 지정할 수 있습니다. 예를 들어 노드의 데이터 형식과 카디널리티, 그리고 데이터의 구조에 대한 특정 정보를 지정할 수 있습니다. 이 추가 정보를 사용하면 매핑이 향상될 뿐 아니라 성능과 저장소의 저장 능력도 향상됩니다.  
@@ -352,7 +354,7 @@ WHERE T.xmldata.exist('
   
  SINGLETON 힌트와 같은 일부 최적화 힌트는 데이터에 대한 제약 조건을 소개합니다. 경우에 따라 이러한 제약 조건을 충족하지 못할 경우 오류가 발생할 수 있습니다.  
   
-### 최적화 힌트의 이점  
+### <a name="benefits-of-optimization-hints"></a>최적화 힌트의 이점  
  다음 표에서는 보다 효율적인 저장소 및 향상된 성능을 지원하는 최적화 힌트를 보여 줍니다.  
   
 |최적화 힌트|보다 효율적인 저장소|성능 향상|  
@@ -362,7 +364,7 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|예|예|  
 |**MAXLENGTH**|예|예|  
   
-### 최적화 힌트 및 데이터 형식  
+### <a name="optimization-hints-and-data-types"></a>최적화 힌트 및 데이터 형식  
  노드를 XQuery 데이터 형식 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식으로 인덱싱할 수 있습니다. 다음 표에서는 각 데이터 형식에서 지원되는 최적화 힌트를 보여 줍니다.  
   
 |최적화 힌트|XQuery 데이터 형식|SQL 데이터 형식|  
@@ -372,7 +374,7 @@ WHERE T.xmldata.exist('
 |**DATA TYPE**|예|아니요|  
 |**MAXLENGTH**|예|아니요|  
   
-### node() 최적화 힌트  
+### <a name="node-optimization-hint"></a>node() 최적화 힌트  
  적용 대상: XQuery 데이터 형식  
   
  node() 최적화를 사용하여 일반 쿼리를 평가하는 데 필요 없는 값을 가진 노드를 지정합니다. 이 힌트는 일반 쿼리가 노드의 존재 여부를 평가하기만 하면 될 때 저장소 요구 사항을 줄여줍니다. 기본적으로 선택적 XML 인덱스는 복잡한 노드 유형을 제외하고 승격된 모든 노드의 값을 저장합니다.  
@@ -384,13 +386,13 @@ SELECT T.record FROM myXMLTable T
 WHERE T.xmldata.exist('/a/b[./c=5]') = 1  
 ```  
   
- 선택적 XML 인덱스를 사용하여 이 쿼리를 평가하려면 `b` 및 `c` 노드를 승격시킵니다. 그러나 `b` 노드의 값이 필요 없기 때문에 node() 힌트를 다음 구문과 함께 사용할 수 있습니다.  
+ 선택적 XML 인덱스를 사용하여 이 쿼리를 평가하려면 `b` 및 `c`노드를 승격시킵니다. 그러나 `b` 노드의 값이 필요 없기 때문에 node() 힌트를 다음 구문과 함께 사용할 수 있습니다.  
   
  `/a/b/ as node()`  
   
  쿼리에 node() 힌트를 사용하여 인덱싱된 노드의 값이 필요한 경우에는 선택적 XML 인덱스를 사용할 수 없습니다.  
   
-### SINGLETON 최적화 힌트  
+### <a name="singleton-optimization-hint"></a>SINGLETON 최적화 힌트  
  적용 대상: XQuery 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식  
   
  SINGLETON 최적화 힌트는 노드의 카디널리티를 지정합니다. 이 힌트를 사용하면 노드가 해당 부모 노드 또는 상위 항목에 최대 한 번만 표시된다는 것을 미리 알 수 있기 때문에 쿼리 성능이 향상됩니다.  
@@ -401,21 +403,20 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
   
  SINGLETON 힌트가 지정되었지만 노드가 해당 부모 노드 또는 상위 항목에 두 번 이상 표시되면 기존 데이터에 대한 인덱스를 만들거나 새 데이터에 대한 쿼리를 실행할 때 오류가 발생합니다.  
   
-### DATA TYPE 최적화 힌트  
+### <a name="data-type-optimization-hint"></a>DATA TYPE 최적화 힌트  
  적용 대상: XQuery 데이터 형식  
   
  DATA TYPE 최적화 힌트를 사용하면 인덱싱된 노드에 대해 XQuery 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정할 수 있습니다. 이 데이터 형식은 선택적 XML 인덱스의 데이터 테이블에서 인덱싱된 노드에 해당하는 열에 사용됩니다.  
   
  기존 값을 지정된 데이터 형식으로 캐스팅하는 작업이 실패해도 인덱스에 대한 삽입 작업은 실패하지 않지만 인덱스의 데이터 테이블에 null 값이 삽입됩니다.  
   
-### MAXLENGTH 최적화 힌트  
+### <a name="maxlength-optimization-hint"></a>MAXLENGTH 최적화 힌트  
  적용 대상: XQuery 데이터 형식  
   
  MAXLENGTH 최적화 힌트를 사용하면 xs:string 데이터의 길이를 제한할 수 있습니다. VARCHAR 또는 NVARCHAR 데이터 형식을 지정할 때 길이를 지정하므로 MAXLENGTH는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식과는 관련이 없습니다.  
   
  기존 문자열이 지정된 MAXLENGTH보다 길면 인덱스에 값을 삽입하는 작업이 실패합니다.  
   
- [항목 내용](#top)  
   
 ##  <a name="sample"></a> 예제용 샘플 XML 문서  
  다음 샘플 XML 문서는 이 항목의 예에서 참조됩니다.  
@@ -434,9 +435,8 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
 </a>  
 ```  
   
- [항목 내용](#top)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)   
  [선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)  
   

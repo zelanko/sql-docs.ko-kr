@@ -1,34 +1,38 @@
 ---
-title: "SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 추적, 해당하는 확장 이벤트 항목"
-  - "확장된 이벤트 [SQL Server], 해당하는 SQL 추적 항목"
-  - "확장된 이벤트 [SQL Server], 사용자 구성 가능 이벤트"
+title: "SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인(Transact-SQL) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, extended events equivalents
+- extended events [SQL Server], SQL Trace equivalents
+- extended events [SQL Server], user configurable events
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfa6eb722a8dcbd4c3a9e72d731fe8a59d436ba8
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
+# <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   확장 이벤트를 사용하여 SQL 추적 이벤트 클래스 및 열에 해당하는 이벤트 데이터를 수집하려는 경우 SQL 추적 이벤트가 확장 이벤트의 이벤트 및 동작에 매핑되는 방식을 이해하고 있으면 유용합니다.  
   
  다음 절차에 따라 각 SQL 추적 이벤트 및 관련 열에 해당하는 확장 이벤트의 이벤트 및 동작을 확인할 수 있습니다.  
   
-## 쿼리 편집기를 사용하여 SQL 추적 이벤트에 해당하는 확장 이벤트를 보려면  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>쿼리 편집기를 사용하여 SQL 추적 이벤트에 해당하는 확장 이벤트를 보려면  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기에서 다음 쿼리를 실행합니다.  
   
@@ -79,7 +83,7 @@ caps.handback.revision: 13
   
 -   사용자가 구성할 수 있는 SQL 추적 이벤트 클래스(UserConfigurable:1 ~ UserConfigurable:9)의 경우 확장 이벤트에서는 단일 이벤트를 사용하여 이러한 이벤트 클래스를 대체합니다. 이 이벤트의 이름은 user_event입니다. 이 이벤트는 SQL 추적에서 사용되는 것과 동일한 sp_trace_generateevent 저장 프로시저를 사용하여 발생합니다. user_event 이벤트는 저장 프로시저에 전달된 이벤트 ID에 관계없이 반환됩니다. 그러나 event_id 필드는 이벤트 데이터의 일부로 반환됩니다. 이 필드를 사용하여 이벤트 ID를 기반으로 하는 조건자를 만들 수 있습니다. 예를 들어 코드에 UserConfigurable:0(event ID = 82)을 사용하는 경우 세션에 user_event 이벤트를 추가하고 'event_id = 82'라는 조건자를 지정할 수 있습니다. 그에 따라 sp_trace_generateevent 저장 프로시저에서 확장 이벤트의 user_event 이벤트와 해당하는 SQL 추적 이벤트 클래스를 생성하므로 코드를 변경할 필요가 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_generateevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

@@ -1,40 +1,44 @@
 ---
-title: "찾기 및 바꾸기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "대/소문자 구분 [SQL Server]"
-  - "실행 취소 작업"
-  - "검색 [SQL Server Management Studio]"
-  - "텍스트 바꾸기"
-  - "빠른 검색 및 교체 [SQL Server Management Studio]"
-  - "쿼리 편집기 [SQL Server Management Studio], 실행 취소"
-  - "쿼리 편집기 [SQL Server Management Studio], 검색"
-  - "정규식 [SQL Server Management Studio]"
-  - "텍스트 찾기 [SQL Server Management Studio]"
-  - "텍스트 [SQL Server], 검색 및 교체 작업"
-  - "찾기 [SQL Server Management Studio]"
-  - "텍스트 찾기"
-  - "쿼리 편집기 [SQL Server Management Studio], 텍스트 바꾸기"
-  - "찾기 및 바꾸기 대화 상자"
-  - "와일드카드 옵션 [SQL Server Management Studio]"
-  - "단어 단위로 [SQL Server]"
-  - "검색 [SQL Server Management Studio], 바꾸기"
+title: "찾기 및 바꾸기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- match case [SQL Server]
+- undo operations
+- searches [SQL Server Management Studio]
+- replacing text
+- quick search and replaces [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], undo
+- Query Editor [SQL Server Management Studio], searching
+- regular expressions [SQL Server Management Studio]
+- finding text [SQL Server Management Studio]
+- text [SQL Server], search and replace operations
+- finding [SQL Server Management Studio]
+- locating text
+- Query Editor [SQL Server Management Studio], replacing text
+- Find and Replace dialog box
+- wildcard options [SQL Server Management Studio]
+- match whole word [SQL Server]
+- searches [SQL Server Management Studio], replacing
 ms.assetid: 3641c7b3-3e3e-4ddd-af82-c15b50004f94
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d590c437733827916e41e9299ed7a6d3df48574
+ms.lasthandoff: 04/11/2017
+
 ---
-# 찾기 및 바꾸기
+# <a name="search-and-replace"></a>찾기 및 바꾸기
   텍스트를 찾아서 바꾸는 방법에는 여러 가지가 있습니다. **편집** 메뉴에서 **찾기 및 바꾸기** 는 **빠른 찾기**, **빠른 바꾸기**, **파일에서 찾기**또는 **파일에서 바꾸기**의 네 가지 선택 사항을 제공합니다. 이러한 각 항목은 해당 버전의 **찾기 및 바꾸기** 대화 상자를 엽니다. 또한 증분 검색 바로 가기 키를 사용하여 대화 상자 없이 검색을 수행할 수 있습니다. 이러한 기술을 사용하면 찾기 및 바꾸기의 범위를 제어하고 검색 조건과 일치하는 항목 및 바꾼 항목을 검토하는 방법을 선택할 수 있습니다.  
   
  텍스트를 검색하고 바꿀 경우에는 다음 사항을 살펴 보십시오.  
@@ -47,7 +51,7 @@ caps.handback.revision: 21
   
  일반적으로 그래픽 보기가 포함된 항목은 검색할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [활성 문서에서 입력하는 순서대로 검색](../../relational-databases/scripting/search-an-active-document-incrementally.md)   
  [대화형으로 문서 검색](../../relational-databases/scripting/search-documents-interactively.md)   
  [결과 목록을 사용하여 문서 검색](../../relational-databases/scripting/search-documents-using-results-lists.md)   

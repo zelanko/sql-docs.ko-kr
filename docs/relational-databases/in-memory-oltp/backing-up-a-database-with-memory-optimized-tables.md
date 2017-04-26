@@ -1,22 +1,26 @@
 ---
-title: "메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 43fa6642db8924195fa1291d74291c21d0b064d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
+# <a name="backing-up-a-database-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 포함된 데이터베이스 백업
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   메모리 액세스에 최적화된 테이블은 일반적인 데이터베이스 백업의 일부로 백업됩니다. 디스크 기반 테이블의 경우 저장소 손상을 검색하기 위해 데이터베이스 백업의 일부로 데이터 및 델타 파일 쌍의 CHECKSUM 유효성이 검사됩니다.  
@@ -28,7 +32,7 @@ caps.handback.revision: 18
   
  메모리 액세스에 최적화된 테이블이 하나 이상인 데이터베이스의 전체 백업은 디스크 기반 테이블의 할당된 저장소(있는 경우), 활성 트랜잭션 로그, 메모리 액세스에 최적화된 테이블의 데이터 및 델타 파일 쌍(검사점 파일 쌍이라고도 함)으로 구성됩니다. 그러나 [메모리 액세스에 최적화된 테이블에 대한 내구성](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)에 설명된 대로 메모리 액세스에 최적화된 테이블에서 사용하는 저장소는 메모리 내의 해당 크기보다 훨씬 클 수 있으며, 이는 데이터베이스 백업의 크기에 영향을 미칩니다.  
   
-## 전체 데이터베이스 백업  
+## <a name="full-database-backup"></a>전체 데이터베이스 백업  
  디스크 기반 테이블의 백업 방식은 동일하므로, 여기서는 메모리 액세스에 최적화된 지속형 테이블이 포함된 데이터베이스의 백업에 대해 중점적으로 설명합니다. 메모리 액세스에 최적화된 파일 그룹의 검사점 파일 쌍은 다양한 상태에 있을 수 있습니다. 아래의 표에서는 백업되는 파일의 부분에 대해 설명합니다.  
   
 |검사점 파일 쌍 상태|백업|  
@@ -43,7 +47,7 @@ caps.handback.revision: 18
   
  메모리 액세스에 최적화된 테이블이 하나 이상 포함된 데이터베이스 백업의 크기는 일반적으로 메모리 내의 백업 크기보다는 크지만 디스크상 저장소보다는 작습니다. 삭제된 행의 수를 비롯한 여러 요인에 따라 백업이 더 커질 수도 있습니다.  
   
-### 전체 데이터베이스 백업의 크기 예측  
+### <a name="estimating-size-of-full-database-backup"></a>전체 데이터베이스 백업의 크기 예측  
   
 > [!IMPORTANT]  
 >  메모리 내 OLTP에 대한 백업 크기를 추정하려면 BackupSizeInBytes 값을 사용하지 않는 것이 좋습니다.  
@@ -52,7 +56,7 @@ caps.handback.revision: 18
   
  두 번째 작업 시나리오에서는 삽입, 삭제 및 업데이트 작업을 많이 수행합니다. 최악의 경우 각 검사점 파일 쌍은 삭제된 행을 고려한 후 50% 로드됩니다. 따라서 데이터베이스 백업의 크기는 적어도 메모리 내 데이터 크기의 2배입니다.  
   
-## 메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 차등 백업  
+## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 차등 백업  
  메모리 액세스에 최적화된 테이블의 저장소는 [메모리 액세스에 최적화된 테이블에 대한 내구성](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md)에 설명된 대로 데이터 및 델타 파일로 구성되어 있습니다. 메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 차등 백업에는 다음 데이터가 포함됩니다.  
   
 -   메모리 액세스에 최적화된 테이블이 있어도 디스크를 기반으로 테이블을 저장하는 파일 차등 백업은 영향을 받지 않습니다.  
@@ -67,7 +71,7 @@ caps.handback.revision: 18
   
  메모리 액세스에 최적화된 테이블이 데이터베이스 크기의 상당 부분을 차지하는 경우 차등 백업으로 데이터베이스 백업의 크기를 대폭 줄일 수 있습니다. 일반적인 OLTP 작업의 경우 차등 백업이 전체 데이터베이스 백업보다 상당히 작습니다.  
   
-## 참고 항목  
- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

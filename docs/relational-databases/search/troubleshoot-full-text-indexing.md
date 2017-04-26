@@ -1,26 +1,30 @@
 ---
-title: "전체 텍스트 인덱싱 문제 해결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 [전체 텍스트 검색]"
-  - "문제 해결 [SQL Server], 전체 텍스트 검색"
-  - "문제 해결 [전체 텍스트 검색]"
+title: "전체 텍스트 인덱싱 문제 해결 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [full-text search]
+- troubleshooting [SQL Server], full-text search
+- troubleshooting [full-text search]
 ms.assetid: 964c43a8-5019-4179-82aa-63cd0ef592ef
 caps.latest.revision: 44
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5d3238bdf788f27c7e004139b66d0fcb501a57a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 전체 텍스트 인덱싱 문제 해결
+# <a name="troubleshoot-full-text-indexing"></a>전체 텍스트 인덱싱 문제 해결
      
 ##  <a name="failure"></a> 전체 텍스트 인덱싱 오류 문제 해결  
  전체 텍스트 인덱스를 채우거나 유지 관리하는 동안 전체 텍스트 인덱서는 아래에서 설명하는 이유로 인해 하나 이상의 행을 인덱싱하지 못할 수 있습니다. 이러한 행 수준 오류가 발생해도 채우기는 완료됩니다. 그러나 인덱서가 이러한 행을 건너뛰므로 이러한 행에 포함된 내용은 쿼리할 수 없습니다.  
@@ -45,20 +49,18 @@ caps.handback.revision: 43
   
  중요한 전체 텍스트 인덱스 채우기 작업을 완료한 다음이나 채우기가 완료되지 않은 경우 탐색 로그를 확인해야 합니다.  
   
-### 서명되지 않은 구성 요소  
+### <a name="unsigned-components"></a>서명되지 않은 구성 요소  
  기본적으로 전체 텍스트 인덱서를 사용하려면 로드하는 필터 및 단어 분리기에 서명해야 합니다. 일부 사용자 지정 구성 요소 설치 시에서와 같이 구성 요소를 서명하지 않는 경우에는 전체 텍스트 인덱서가 서명 확인을 무시하도록 구성해야 합니다.  
   
 > [!IMPORTANT]  
 >  서명 확인을 무시하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 보안 수준이 낮아집니다. 구현하는 모든 구성 요소에 서명하거나 가져오는 모든 구성 요소에 서명이 되어 있는지 확인하는 것이 좋습니다. 구성 요소에 서명하는 방법은 [sp_fulltext_service&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)를 참조하세요.  
   
- [항목 내용](#top)  
   
 ##  <a name="state"></a> 트랜잭션 로그가 복원된 후 일관성 없는 상태의 전체 텍스트 인덱스  
  데이터베이스의 트랜잭션 로그를 복원할 때 전체 텍스트 인덱스에 일관성이 없다는 경고가 표시될 수 있습니다. 이는 데이터베이스가 백업된 후 테이블에 대한 전체 텍스트 인덱스가 수정되었기 때문입니다. 전체 텍스트 인덱스를 일관성 있게 구성하려면 해당 테이블에 대해 전체 채우기(탐색)를 실행해야 합니다. 자세한 내용은 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
- [항목 내용](#top)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER FULLTEXT CATALOG&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)   
  [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)  
   

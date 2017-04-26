@@ -1,40 +1,44 @@
 ---
-title: "일반적인 복제 성능 향상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "게시 [SQL Server 복제], 디자인 및 성능"
-  - "데이터베이스 디자인 [SQL Server], 복제 성능"
-  - "스냅숏 에이전트, 성능"
-  - "스냅숏 [SQL Server 복제], 성능 고려 사항"
-  - "병합 복제 성능 [SQL Server 복제]"
-  - "스냅숏 복제 [SQL Server], 성능"
-  - "구독 [SQL Server 복제], 성능 고려 사항"
-  - "에이전트 [SQL Server 복제], 성능"
-  - "성능 [SQL Server 복제], 일반 고려 사항"
-  - "트랜잭션 복제, 성능"
+title: "일반적인 복제 성능 향상 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publications [SQL Server replication], design and performance
+- designing databases [SQL Server], replication performance
+- Snapshot Agent, performance
+- snapshots [SQL Server replication], performance considerations
+- merge replication performance [SQL Server replication]
+- snapshot replication [SQL Server], performance
+- subscriptions [SQL Server replication], performance considerations
+- agents [SQL Server replication], performance
+- performance [SQL Server replication], general considerations
+- transactional replication, performance
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02f3e2ad2af0d11f5842bacc01ecb8cdf771bd56
+ms.lasthandoff: 04/11/2017
+
 ---
-# 일반적인 복제 성능 향상
+# <a name="enhance-general-replication-performance"></a>일반적인 복제 성능 향상
   이 항목에서 설명하는 지침을 따르면 응용 프로그램 및 네트워크에서 모든 복제 유형의 일반적인 성능을 향상시킬 수 있습니다.  
   
-## 서버 및 네트워크  
+## <a name="server-and-network"></a>서버 및 네트워크  
   
--    [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 할당될 최소 및 최대 메모리 양을 설정합니다.  
   
-     기본적으로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. 복제 작업 중 사용 가능한 메모리의 부족을 방지하기 위해 **min server memory** 옵션을 사용해서 사용 가능한 최소 메모리를 설정합니다. 메모리를 확보하기 위해 운영 체제가 디스크로 페이징하지 않도록 하기 위해 **max server memory** 옵션을 사용하여 최대 메모리를 설정할 수도 있습니다. 자세한 내용은 참조 [서버 메모리 서버 구성 옵션](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)합니다.  
+     기본적으로 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 은 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. 복제 작업 중 사용 가능한 메모리의 부족을 방지하기 위해 **min server memory** 옵션을 사용해서 사용 가능한 최소 메모리를 설정합니다. 메모리를 확보하기 위해 운영 체제가 디스크로 페이징하지 않도록 하기 위해 **max server memory** 옵션을 사용하여 최대 메모리를 설정할 수도 있습니다. 자세한 내용은 [서버 메모리 서버 구성 옵션](../../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
 -   데이터베이스 데이터 파일 및 로그 파일이 적절히 할당되도록 합니다. 복제와 관련된 모든 데이터베이스의 트랜잭션 로그에 별도의 디스크 드라이브를 사용합니다.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 45
   
      트랜잭션 복제의 경우 특히 네트워크로 인해 심각한 성능 병목 상태가 발생할 수 있습니다. 100Mbps 이상의 빠른 네트워크를 사용하여 변경 내용을 구독자로 전파하는 기능을 크게 향상시킬 수 있습니다. 네트워크 속도가 느린 경우 네트워크 설정 및 에이전트 매개 변수를 적절히 지정합니다.  
   
-## 데이터베이스 디자인  
+## <a name="database-design"></a>데이터베이스 디자인  
   
 -   최상의 데이터베이스 디자인 방법을 따릅니다.  
   
@@ -65,25 +69,25 @@ caps.handback.revision: 45
     SET READ_COMMITTED_SNAPSHOT ON  
     ```  
   
-     자세한 내용은 참조 [ALTER DATABASE & #40; TRANSACT-SQL & #41;](../../../t-sql/statements/alter-database-transact-sql.md)합니다.  
+     자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 -   트리거의 응용 프로그램 논리에 유의합니다.  
   
      구독자의 사용자 정의 트리거에 있는 비즈니스 논리로 인해 구독자에 대한 변경 내용 복제의 속도가 느려질 수 있습니다.  
   
-    -   트랜잭션 복제의 경우 복제된 명령을 적용하는 데 사용되는 사용자 지정 저장 프로시저에 이 논리를 포함하는 것이 더 효율적입니다. 자세한 내용은 참조 [트랜잭션 아티클에 대 한 변경 내용이 전파 되는 방법을 지정](../../../relational-databases/replication/transactional/specify-how-changes-are-propagated-for-transactional-articles.md)합니다.  
+    -   트랜잭션 복제의 경우 복제된 명령을 적용하는 데 사용되는 사용자 지정 저장 프로시저에 이 논리를 포함하는 것이 더 효율적입니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
-    -   병합 복제의 경우 비즈니스 논리 처리기를 사용하는 것이 보다 효율적일 수 있습니다. 자세한 내용은 참조 [병합 동기화 중 비즈니스 논리 실행](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)합니다.  
+    -   병합 복제의 경우 비즈니스 논리 처리기를 사용하는 것이 보다 효율적일 수 있습니다. 자세한 내용은 [병합 동기화 중 비즈니스 논리 실행](../../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)을 참조하세요.  
   
-     트리거를 사용하여 병합 복제에 대해 게시된 테이블의 참조 무결성을 유지 관리하려면 병합 에이전트에 필요한 다시 시도 횟수를 줄이도록 테이블 처리 순서를 지정합니다. 자세한 내용은 참조 [는 처리 순서의 병합 아티클을 지정](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)합니다.  
+     트리거를 사용하여 병합 복제에 대해 게시된 테이블의 참조 무결성을 유지 관리하려면 병합 에이전트에 필요한 다시 시도 횟수를 줄이도록 테이블 처리 순서를 지정합니다. 자세한 내용은 [병합 아티클의 처리 순서 지정](../../../relational-databases/replication/merge/specify-the-processing-order-of-merge-articles.md)을 참조하세요.  
   
 -   LOB(Large Object) 데이터 형식의 사용을 제한합니다.  
   
-     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 응용 프로그램에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. Lob를 포함 하는 경우 데이터 형식을 사용 하는 것이 좋습니다 **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, 각각.  
+     LOB은 다른 열 데이터 형식보다 많은 저장 공간과 처리 작업을 필요로 합니다. 응용 프로그램에 필요한 경우가 아니면 이러한 열을 아티클에 포함하지 마십시오. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**를 각각 사용하는 것이 좋습니다.  
   
      트랜잭션 복제의 경우 **OLEDB 스트리밍에 대한 배포 프로필**이라고 하는 배포 에이전트 프로필을 사용해 보십시오. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
-## 게시 디자인  
+## <a name="publication-design"></a>게시 디자인  
   
 -   필요한 데이터만 게시합니다.  
   
@@ -95,29 +99,29 @@ caps.handback.revision: 45
   
      데이터 하위 집합을 각 구독자에 게시하거나 응용 프로그램이 지정된 행의 변경 내용을 지정된 노드로 직접 게시하도록 하여 변경 내용을 분할할 수 있습니다.  
   
-    -   병합 복제에서는 단일 게시에서 매개 변수가 있는 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-row-filters.md)을 참조하세요.  
+    -   병합 복제에서는 단일 게시에서 매개 변수가 있는 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
   
-    -   트랜잭션 복제에서는 여러 게시에서 정적 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 참조 [데이터를 게시 하는 필터](../../../relational-databases/replication/publish/filter-published-data.md)합니다.  
+    -   트랜잭션 복제에서는 여러 게시에서 정적 필터를 사용하여 데이터 하위 집합을 게시할 수 있습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
 -   행 필터를 주의해서 사용합니다.  
   
      트랜잭션 게시에 행 필터를 사용하는 아티클이 하나 이상 있을 경우 로그 판독기 에이전트는 트랜잭션 로그를 검색할 때 테이블 업데이트에 의해 영향을 받는 각 행에 필터를 적용해야 합니다. 따라서 로그 판독기 에이전트의 처리량은 영향을 받게 됩니다.  
   
-     마찬가지로 병합 에이전트는 변경되거나 삭제된 행을 평가하여 이러한 행을 받을 구독자를 결정해야 합니다. 구독자에 필요한 데이터를 줄이는 데 행 필터가 사용되면 이러한 처리는 모든 행을 한 테이블에서 게시할 때 보다 복잡해지고 느려질 수 있습니다. 각 구독자에서 저장소 요구 사항을 줄이는 것과 최대 처리량을 달성해야 할 필요성 간의 관계를 신중하게 고려합니다. 필터링에 대 한 자세한 내용은 참조 하십시오. [데이터를 게시 하는 필터](../../../relational-databases/replication/publish/filter-published-data.md)합니다.  
+     마찬가지로 병합 에이전트는 변경되거나 삭제된 행을 평가하여 이러한 행을 받을 구독자를 결정해야 합니다. 구독자에 필요한 데이터를 줄이는 데 행 필터가 사용되면 이러한 처리는 모든 행을 한 테이블에서 게시할 때 보다 복잡해지고 느려질 수 있습니다. 각 구독자에서 저장소 요구 사항을 줄이는 것과 최대 처리량을 달성해야 할 필요성 간의 관계를 신중하게 고려합니다. 필터링에 대한 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
-## 구독 고려 사항  
+## <a name="subscription-considerations"></a>구독 고려 사항  
   
 -   다수의 구독자가 있을 경우 끌어오기 구독을 사용합니다.  
   
-     배포 에이전트와 병합 에이전트는 밀어넣기 구독의 경우에는 배포자에서, 끌어오기 구독의 경우에는 구독자에서 실행됩니다. 끌어오기 구독을 사용하면 배포자에서 구독자로 에이전트 처리를 이동하여 성능을 향상시킬 수 있습니다. 자세한 내용은 참조 [게시를 구독할](../../../relational-databases/replication/subscribe-to-publications.md)합니다.  
+     배포 에이전트와 병합 에이전트는 밀어넣기 구독의 경우에는 배포자에서, 끌어오기 구독의 경우에는 구독자에서 실행됩니다. 끌어오기 구독을 사용하면 배포자에서 구독자로 에이전트 처리를 이동하여 성능을 향상시킬 수 있습니다. 자세한 내용은 [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)을 참조하세요.  
   
 -   구독자가 너무 오래된 경우 구독을 다시 초기화합니다.  
   
-     많은 양의 변경 내용을 구독자로 보내야 할 경우 이를 새 스냅숏과 함께 다시 초기화하면 복제를 사용하여 개별 변경 내용을 이동하는 것보다 빠르게 보낼 수 있습니다. 자세한 내용은 참조 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)합니다.  
+     많은 양의 변경 내용을 구독자로 보내야 할 경우 이를 새 스냅숏과 함께 다시 초기화하면 복제를 사용하여 개별 변경 내용을 이동하는 것보다 빠르게 보낼 수 있습니다. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
-     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 참조 [정보 보기 및는 에이전트 구독 관련 & #40;에 대 한 작업 수행 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)합니다.  
+     트랜잭션 복제의 경우 복제 모니터는 **배포되지 않은 명령** 탭에 구독자로 아직 배포되지 않은 배포 데이터베이스의 트랜잭션 수와 이러한 트랜잭션에 대한 예상 배포 시간 등을 표시합니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
-## 스냅숏 고려 사항  
+## <a name="snapshot-considerations"></a>스냅숏 고려 사항  
   
 -   필요할 경우와 사용률이 낮은 시간에만 스냅숏 에이전트를 실행합니다.  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 45
   
 -   문자 모드 스냅숏이 필요한 경우가 아니라면 기본 모드 스냅숏을 사용합니다.  
   
-     문자 모드 스냅숏이 필요한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외의 구독자와 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]를 실행하는 구독자를 제외하고 모든 구독자에 대해 기본값인 기본 모드 스냅숏을 사용합니다.  
+     문자 모드 스냅숏이 필요한[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외의 구독자와 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]를 실행하는 구독자를 제외하고 모든 구독자에 대해 기본값인 기본 모드 스냅숏을 사용합니다.  
   
 -   게시에 대해 단일 스냅숏 폴더를 사용합니다.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 45
   
      스냅숏 에이전트는 스냅숏 폴더에 데이터를 순차적으로 씁니다. 다른 데이터베이스나 로그 파일과 분리된 별도의 드라이브에 스냅숏 폴더를 두면 디스크 간 경합을 줄이고 스냅숏 과정을 좀 더 빠르게 완료할 수 있습니다.  
   
--   구독자에서 구독 데이터베이스를 만들 때는 단순 또는 대량 로그 복구 모델을 지정합니다. 이렇게 하면 구독자에서 스냅숏을 적용하는 동안 수행된 대량 삽입의 로깅이 최소화됩니다. 스냅숏이 구독 데이터베이스에 적용된 후 필요에 따라 다른 복구 모델로 변경할 수 있습니다. 복제된 데이터베이스는 모든 복구 모델을 사용할 수 있습니다. 복구 모델을 선택 하는 방법에 대 한 자세한 내용은 참조 [복원 및 복구 개요 & #40; SQL Server 및 #41;](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)합니다.  
+-   구독자에서 구독 데이터베이스를 만들 때는 단순 또는 대량 로그 복구 모델을 지정합니다. 이렇게 하면 구독자에서 스냅숏을 적용하는 동안 수행된 대량 삽입의 로깅이 최소화됩니다. 스냅숏이 구독 데이터베이스에 적용된 후 필요에 따라 다른 복구 모델로 변경할 수 있습니다. 복제된 데이터베이스는 모든 복구 모델을 사용할 수 있습니다. 복구 모델을 선택하는 방법은 [복원 및 복구 개요&#40;SQL Server&#41;](../../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요.  
   
 -   느린 대역폭 네트워크의 경우 이동식 미디어에서 대체 스냅숏 폴더와 압축 스냅숏을 사용해 봅니다.  
   
@@ -145,24 +149,24 @@ caps.handback.revision: 45
   
 -   구독을 수동으로 초기화해 봅니다.  
   
-     큰 초기 데이터 집합과 관련된 일부 시나리오에서는 스냅숏 대신 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 자세한 내용은 참조 [초기화는 Transactional Subscription Without a Snapshot](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)합니다.  
+     큰 초기 데이터 집합과 관련된 일부 시나리오에서는 스냅숏 대신 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)를 참조하세요.  
   
-## 에이전트 매개 변수  
+## <a name="agent-parameters"></a>에이전트 매개 변수  
   
 -   초기 테스트, 모니터링 또는 디버깅 도중을 제외하고 복제 에이전트의 정보 표시 수준을 줄입니다.  
   
      배포 에이전트 및 병합 에이전트의 **–HistoryVerboseLevel** 매개 변수 및 **–OutputVerboseLevel** 매개 변수를 줄입니다. 이렇게 하면 추적 에이전트 기록 및 출력에 삽입되는 새 행의 수가 줄어듭니다. 대신 상태가 같은 이전 기록 메시지는 새 기록 정보로 업데이트됩니다. 에이전트 작업에 대한 정보를 최대한 많이 가질 수 있도록 테스트, 모니터링 및 디버깅의 정보 표시 수준을 늘립니다.  
   
--   사용 된 **– MaxBCPThreads** 스냅숏 에이전트, 병합 에이전트 및 배포 에이전트 (지정 된 스레드 수는 컴퓨터의 프로세서 수를 초과 하지 해야)의 매개 변수입니다. 이 매개 변수는 스냅숏이 생성되어 적용될 때 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다.  
+-   스냅숏 에이전트, 병합 에이전트 및 배포 에이전트의 **–MaxBCPThreads** 매개 변수를 사용합니다. 지정된 스레드 수는 컴퓨터의 프로세서 수를 초과할 수 없습니다. 이 매개 변수는 스냅숏이 생성되어 적용될 때 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다.  
   
--   사용 된 **– UseInprocLoader** 배포 에이전트 및 병합 에이전트 (이 매개 변수에 사용할 수 없음 게시 된 테이블 XML 열을 포함 하는 경우)의 매개 변수입니다. 이 매개 변수를 사용할 경우 스냅숏이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
+-   배포 에이전트와 병합 에이전트의 **–UseInprocLoader** 매개 변수를 사용합니다. 게시된 테이블에 XML 열이 있는 경우 이 매개 변수를 사용할 수 없습니다. 이 매개 변수를 사용할 경우 스냅숏이 적용되면 에이전트가 BULK INSERT 명령을 사용할 수 있습니다.  
   
  에이전트 프로필 및 명령줄에서 에이전트 매개 변수를 지정할 수 있습니다. 참조 항목:  
   
 -   [복제 에이전트 프로필 작업](../../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)  
   
--   [보기 및 복제 에이전트 명령 프롬프트 매개 변수 & #40; 수정 SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/view and modify replication agent command prompt parameters.md)  
+-   [복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+-   [Replication Agent Executables Concepts](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)에 할당될 최소 및 최대 메모리 양을 설정합니다.  
   
   

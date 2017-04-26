@@ -1,29 +1,33 @@
 ---
-title: "데이터베이스 엔진 권한 시작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "권한 [SQL Server], 시작"
+title: "데이터베이스 엔진 사용 권한 시작 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- permissions [SQL Server], getting started
 ms.assetid: 051af34e-bb5b-403e-bd33-007dc02eef7b
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 엔진 권한 시작
+# <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할을 통해 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할을 통해 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에 대한 모델은 각 데이터베이스 내에서 동일한 시스템을 노출하지만 서버 수준 권한을 사용할 수 없습니다. 이 항목에서는 몇 가지 기본 보안 개념을 검토한 다음 일반적인 권한 구현을 설명합니다.  
   
-## 보안 주체  
+## <a name="security-principals"></a>보안 주체  
  보안 주체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 사용하며, 작업 수행 권한을 할당 받을 수 있는 ID의 공식 이름입니다. 이들은 일반적으로 사람 또는 사람의 그룹이지만 사람을 가장하는 다른 엔터티일 수도 있습니다. 나열된 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하거나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 보안 주체를 만들고 관리할 수 있습니다.  
   
  로그인  
@@ -53,10 +57,10 @@ caps.handback.revision: 12
   
  Windows 사용자, Windows 그룹, 로그인 및 데이터베이스 사용자 간의 관계를 보여 주는 그래픽은 [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md)를 참조하세요.  
   
-## 일반적인 시나리오  
+## <a name="typical-scenario"></a>일반적인 시나리오  
  다음 예제에서는 권한 구성의 일반적인 방법 및 권장 방법을 나타냅니다.  
   
-#### Active Directory 또는 Azure Active Directory에서 다음을 수행합니다.  
+#### <a name="in-active-directory-or-azure-active-directory"></a>Active Directory 또는 Azure Active Directory에서 다음을 수행합니다.  
   
 1.  각 사용자에 대한 Windows 사용자를 만듭니다.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 12
   
 3.  Windows 그룹에 Windows 사용자를 추가합니다.  
   
-#### 연결하는 사용자를 여러 데이터베이스에 연결하는 경우  
+#### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>연결하는 사용자를 여러 데이터베이스에 연결하는 경우  
   
 1.  Windows 그룹에 대한 로그인을 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 Active Directory 단계를 건너뛰고 여기에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인을 만듭니다.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 12
   
 5.  사용자 정의 데이터베이스 역할에 권한을 부여합니다.  
   
-#### 연결하는 사용자를 하나의 데이터베이스에만 연결하는 경우  
+#### <a name="if-the-person-connecting-will-be-connecting-to-only-one-database"></a>연결하는 사용자를 하나의 데이터베이스에만 연결하는 경우  
   
 1.  Windows 그룹에 대한 로그인을 만듭니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 경우 Active Directory 단계를 건너뛰고 여기에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 로그인을 만듭니다.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 12
   
  이 시점에서 Windows 사용자는 일반적으로 Windows 그룹의 멤버입니다. Windows 그룹에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]의 로그인이 있습니다. 로그인은 사용자 데이터베이스에서 사용자 ID에 매핑됩니다. 사용자는 데이터베이스 역할의 멤버입니다. 이제 역할에 권한을 추가해야 합니다.  
   
-## 권한 할당  
+## <a name="assigning-permissions"></a>권한 할당  
  대부분의 권한 문은 다음과 같은 형식입니다.  
   
 ```  
@@ -101,7 +105,7 @@ AUTHORIZATION  PERMISSION  ON  SECURABLE::NAME  TO  PRINCIPAL;
   
 -   `PERMISSION` 은 허용되거나 금지된 작업을 설정합니다. [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 에서는 230개의 권한을 지정할 수 있습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 에는 일부 작업이 Azure에서 관련이 없기 때문에 더 적은 권한이 있습니다. 사용 권한은 [사용 권한&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/permissions-database-engine.md) 항목 및 아래에 참조된 차트에 나와 있습니다.  
   
--   `ON SECURABLE::NAME` 은 보안 개체(서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체)의 형식과 해당 이름입니다. 일부 권한은 명확하거나 컨텍스트에서 부적절하므로 `ON SECURABLE::NAME` 이 필요 없습니다. 예를 들어 `CREATE TABLE` 권한에는 `ON SECURABLE::NAME` 절이 필요 없습니다. 예를 들어 `GRANT CREATE TABLE TO Mary;`는 Mary가 테이블을 만들도록 허용합니다.  
+-   `ON SECURABLE::NAME` 은 보안 개체(서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체)의 형식과 해당 이름입니다. 일부 권한은 명확하거나 컨텍스트에서 부적절하므로 `ON SECURABLE::NAME` 이 필요 없습니다. 예를 들어 `CREATE TABLE` 권한에는 `ON SECURABLE::NAME` 절이 필요 없습니다. 예를 들어 `GRANT CREATE TABLE TO Mary;` 는 Mary가 테이블을 만들도록 허용합니다.  
   
 -   `PRINCIPAL` 은 권한을 받거나 상실하는 보안 주체(로그인, 사용자 또는 역할)입니다. 가능한 경우 역할에 권한을 부여합니다.  
   
@@ -125,7 +129,7 @@ GRANT UPDATE ON OBJECT::Production.Parts TO PartsTeam;
 > [!NOTE]  
 >  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]를 사용하여 권한을 구성할 수 있습니다. 개체 탐색기에서 보안 개체를 찾아서 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. **사용 권한** 페이지를 선택합니다. 사용 권한 페이지 사용에 대한 도움말은 [Permissions or Securables Page](../../../relational-databases/security/permissions-or-securables-page.md)를 참조하세요.  
   
-## 권한 계층  
+## <a name="permission-hierarchy"></a>권한 계층  
  권한에는 부모/자식 계층이 있습니다. 즉, 데이터베이스에 대한 `SELECT` 권한을 부여하는 경우 이 권한에는 데이터베이스의 모든 자식 스키마에 대한 `SELECT` 권한이 포함됩니다. 스키마에 대한 `SELECT` 권한을 부여하는 경우 이 권한에는 스키마의 모든 자식 테이블과 뷰에 대한 `SELECT` 권한이 포함됩니다. 권한은 전이적입니다. 즉, 데이터베이스에 대한 `SELECT` 권한을 부여하는 경우 이 권한에는 모든 자식 스키마와 모든 손자 테이블 및 뷰에 대한 `SELECT` 권한이 포함됩니다.  
   
  권한에는 포함 권한도 있습니다. 개체에 대한 `CONTROL` 권한은 일반적으로 해당 개체에 대한 모든 권한을 부여합니다.  
@@ -152,20 +156,20 @@ GRANT SELECT ON DATABASE::SalesDB TO Ted;
 GRANT CONTROL ON DATABASE::SalesDB TO Ted;  
 ```  
   
-## 최소 권한 부여  
+## <a name="grant-the-least-permission"></a>최소 권한 부여  
  위에 나열된 첫 번째 권한(`GRANT SELECT ON OBJECT::Region TO Ted;`)은 가장 세분화된 권한입니다. 즉, 이 문은 `SELECT`를 부여할 수 있는 최소 권한입니다. 하위 개체에 대한 권한은 함께 제공되지 않습니다. 항상 가능한 최소 권한을 부여하는 것이 좋지만 권한 부여 시스템을 간소화하려면 상위 수준에서 부여해야 합니다. 따라서 Ted에게 전체 스키마에 대한 권한이 필요한 경우 테이블 또는 뷰 수준에서 `SELECT` 권한을 여러 번 부여하는 대신 스키마 수준에서 `SELECT` 권한을 한 번 부여합니다. 데이터베이스의 디자인은 이 전략의 성공 가능성에 큰 영향을 미칩니다. 이 전략은 동일한 권한이 필요한 개체가 단일 스키마에 포함되도록 데이터베이스가 디자인된 경우에 가장 효과적입니다.  
   
-## 권한 목록  
- [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 에는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 에는 195개의 권한이 있습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]및 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 에는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되지 않는 일부 권한이 있지만 데이터베이스 엔진의 일부만 노출하기 때문에 권한 수가 적습니다. 다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이 항목에서는 포스터가 너무 작아 읽기 어렵습니다. [http://go.microsoft.com/fwlink/?LinkId=229142](http://go.microsoft.com/fwlink/?LinkId=229142)에서 데이터베이스 엔진 권한 포스터를 다운로드하세요.  
+## <a name="list-of-permissions"></a>권한 목록  
+ [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 에는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 에는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] 에는 195개의 권한이 있습니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], [!INCLUDE[ssDW](../../../includes/ssdw-md.md)]및 [!INCLUDE[ssAPS](../../../includes/ssaps-md.md)] 에는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 적용되지 않는 일부 권한이 있지만 데이터베이스 엔진의 일부만 노출하기 때문에 권한 수가 적습니다. 다음 그래픽에서는 권한과 각 권한의 상호 관계를 보여 줍니다. 일부 높은 수준의 권한(예: `CONTROL SERVER`)은 여러 번 나열되어 있습니다. 이 항목에서는 포스터가 너무 작아 읽기 어렵습니다. 이미지를 클릭하여 **데이터베이스 엔진 사용 권한 포스터**를 pdf 형식으로 다운로드합니다.  
   
- ![Database Engine Permissions](../../../relational-databases/security/media/database-engine-permissions.PNG "Database Engine Permissions")  
-  
+[![데이터베이스 사용 엔진 권한](../../../relational-databases/security/media/database-engine-permissions.PNG)](http://go.microsoft.com/fwlink/?LinkId=229142)
+ 
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 보안 주체와 서버 및 데이터베이스 개체 간의 관계를 보여 주는 그래픽은 [사용 권한 계층 구조&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)를 참조하세요.  
   
-## 권한과 고정 서버 및 고정 데이터베이스 역할  
+## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>권한과 고정 서버 및 고정 데이터베이스 역할  
  고정 서버 역할과 고정 데이터베이스 역할의 권한은 유사하지만 세분화된 권한과 정확히 동일하지는 않습니다. 예를 들어 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]권한으로 로그인할 경우 `CONTROL SERVER` 인스턴스에 대한 모든 권한을 가집니다. 그러나 `CONTROL SERVER` 권한을 부여할 경우 로그인이 sysadmin 고정 서버 역할의 멤버로 설정되지 않으며,  `sysadmin` 고정 서버 역할에 로그인을 추가할 경우 로그인에  `CONTROL SERVER` 권한이 명시적으로 부여되지 않습니다. 경우에 따라 저장 프로시저는 세분화된 권한을 확인하지 않고 고정 역할을 확인하여 권한을 확인합니다. 예를 들어 데이터베이스를 분리하려면 `db_owner` 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 동등한 `CONTROL DATABASE` 권한으로는 부족합니다. 이 두 시스템은 병렬로 작동하지만 거의 서로 상호 작용하지 않습니다. 가능한 경우 고정 역할 대신 세분화된 새 권한 시스템을 사용하는 것이 좋습니다.  
   
-## 권한 모니터링  
+## <a name="monitoring-permissions"></a>권한 모니터링  
  다음 뷰는 보안 정보를 반환합니다.  
   
 -   서버의 로그인 및 사용자 정의 서버 역할은 `sys.server_principals` 뷰를 사용하여 검사할 수 있습니다. 이 뷰는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 사용할 수 없습니다.  
@@ -180,32 +184,29 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
   
 -   서버 역할 멤버 자격은 `sys.server_role_members` 뷰를 사용하여 검사할 수 있습니다. 이 뷰는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]에서 사용할 수 없습니다.  
   
--   추가 보안 관련 뷰는 [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)를 참조하세요.  
+-   추가 보안 관련 뷰는 [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md) 를 사용하여 보안 주체를 만들고 관리할 수 있습니다.  
   
-### 유용한 Transact-SQL 문  
+### <a name="useful-transact-sql-statements"></a>유용한 Transact-SQL 문  
  다음 문은 권한에 대한 유용한 정보를 반환합니다.  
   
  데이터베이스에서 부여되거나 거부된 명시적 권한([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])을 반환하려면 데이터베이스에서 다음 문을 실행합니다.  
   
-```  
+```tsql  
 SELECT   
     perms.state_desc AS State,   
     permission_name AS [Permission],   
     obj.name AS [on Object],   
-    dPrinc.name AS [to User Name],   
-    sPrinc.name AS [who is Login Name]  
+    dPrinc.name AS [to User Name]  
 FROM sys.database_permissions AS perms  
 JOIN sys.database_principals AS dPrinc  
     ON perms.grantee_principal_id = dPrinc.principal_id  
 JOIN sys.objects AS obj  
-    ON perms.major_id = obj.object_id  
-LEFT OUTER JOIN sys.server_principals AS sPrinc  
-    ON dPrinc.sid = sPrinc.sid;  
+    ON perms.major_id = obj.object_id;  
 ```  
   
- 서버 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]만)를 반환하려면 다음 문을 실행합니다.  
+ 서버 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 만)를 반환하려면 다음 문을 실행합니다.  
   
-```  
+```tsql  
 SELECT sRole.name AS [Server Role Name] , sPrinc.name AS [Members]  
 FROM sys.server_role_members AS sRo  
 JOIN sys.server_principals AS sPrinc  
@@ -214,9 +215,10 @@ JOIN sys.server_principals AS sRole
     ON sRo.role_principal_id = sRole.principal_id;  
 ```  
   
+ 
  데이터베이스 역할의 멤버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)])를 반환하려면 데이터베이스에서 다음 문을 실행합니다.  
   
-```  
+```tsql  
 SELECT dRole.name AS [Database Role Name], dPrinc.name AS [Members]  
 FROM sys.database_role_members AS dRo  
 JOIN sys.database_principals AS dPrinc  
@@ -225,20 +227,22 @@ JOIN sys.database_principals AS dRole
     ON dRo.role_principal_id = dRole.principal_id;  
 ```  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  시작하는 데 유용한 추가 항목은 다음을 참조하세요.  
   
--   [자습서: 데이터베이스 엔진 시작](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [데이터베이스 만들기&#40;자습서&#41;](../../../t-sql/creating-a-database-tutorial.md)  
+-   [자습서: 데이터베이스 엔진 시작](../../../relational-databases/tutorial-getting-started-with-the-database-engine.md) [데이터베이스 만들기&#40;자습서&#41;](../../../t-sql/lesson-1-1-creating-a-database.md)  
   
 -   [자습서: SQL Server Management Studio](../../../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
   
 -   [자습서: Transact-SQL 문 작성](../../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
  [보안 함수&#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
  [보안 관련 동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)   
  [보안 카탈로그 뷰&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
- [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)  
+ [sys.fn_builtin_permissions&#40;Transact-SQL&#41;](../../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [효과적인 데이터베이스 엔진 사용 권한 결정](../../../relational-databases/security/authentication-access/determining-effective-database-engine-permissions.md)
   
   
+

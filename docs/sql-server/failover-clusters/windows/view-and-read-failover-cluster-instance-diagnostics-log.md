@@ -1,29 +1,33 @@
 ---
-title: "장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
+# <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
   SQL Server 리소스 DLL에 대한 모든 오류 및 경고 이벤트는 Windows 이벤트 로그에 기록됩니다. [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) 시스템 저장 프로시저에서 캡처된 SQL Server 관련 진단 정보의 실행 로그는 SQL Server 장애 조치(failover) 클러스터 진단(*SQLDIAG* 로그라고도 함) 로그 파일에 기록됩니다.  
   
 -   **시작하기 전 주의 사항:**  [권장 사항](#Recommendations), [보안](#Security)  
   
--   **진단 로그를 보려면:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure) 사용  
+-   **To View the Diagnostic Log, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **진단 로그 설정을 구성하려면:** [Transact-SQL](#TsqlConfigure) 사용  
+-   **To Configure Diagnostic Log settings, using:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -96,24 +100,24 @@ ORDER BY Time;
   
 ###  <a name="ConfigTsqlExample"></a> 예(Transact-SQL)  
   
-####  <a name="TsqlExample"></a> 진단 로그 옵션 설정  
+####  <a name="TsqlExample"></a> Setting diagnostic log options  
  이 섹션의 예에서는 진단 로그 옵션 값을 설정하는 방법을 보여 줍니다.  
   
-##### 1. 진단 로깅 시작  
+##### <a name="a-starting-diagnostic-logging"></a>1. 진단 로깅 시작  
  다음 예에서는 진단 데이터의 로깅을 시작합니다.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### 2. 진단 로깅 중지  
+##### <a name="b-stopping-diagnostic-logging"></a>2. 진단 로깅 중지  
  다음 예에서는 진단 데이터의 로깅을 중지합니다.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### 3. 진단 로그의 위치 지정  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>3. 진단 로그의 위치 지정  
  다음 예에서는 진단 로그의 위치를 지정된 파일 경로로 설정합니다.  
   
 ```  
@@ -121,7 +125,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### 4. 각 진단 로그의 최대 크기 지정  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>4. 각 진단 로그의 최대 크기 지정  
  다음 예에서는 각 진단 로그의 최대 크기를 10MB로 설정합니다.  
   
 ```  
@@ -129,7 +133,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

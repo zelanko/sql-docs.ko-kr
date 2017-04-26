@@ -1,31 +1,35 @@
 ---
-title: "OLE 자동화 반환 코드 및 오류 정보 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ole"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "반환 코드 [SQL Server]"
-  - "OLE 자동화 [SQL Server], 반환 코드"
-  - "OLE 자동화 [SQL Server], 오류"
+title: "OLE 자동화 반환 코드 및 오류 정보 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ole
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- return codes [SQL Server]
+- OLE Automation [SQL Server], return codes
+- OLE Automation [SQL Server], errors
 ms.assetid: 9696fb05-e9e8-4836-b359-d4de0be0eeb2
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1a64e9ca8e9999411edf97c76c50f577790af27
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLE 자동화 반환 코드 및 오류 정보
+# <a name="ole-automation-return-codes-and-error-information"></a>OLE 자동화 반환 코드 및 오류 정보
   OLE 자동화 시스템 저장 프로시저는 기본 OLE 자동화 작업에 의해 반환되는 HRESULT를 **int** 반환 코드로 반환합니다. HRESULT 값이 0이면 성공을 나타냅니다. 0이 아닌 HRESULT는 0x800*nnnnn*과 같은 16진수 형태의 OLE 오류 코드이고, 저장 프로시저 반환 코드에서 **int** 값으로 반환된 경우에는 HRESULT의 형태가 214*nnnnnnn*입니다.  
   
  예를 들어 잘못된 개체 이름(SQLDMO.Xyzzy)을 sp_OACreate에 전달하면 프로시저는 16진수로 0x800401f3인 2147221005의 **int** HRESULT를 반환합니다.  
   
- `CONVERT(binary(4), @hresult)`를 사용하여 **int** HRESULT를 **binary** 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))`를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 예제 HexToChar 저장 프로시저를 사용하면 **int** HRESULT를 알아볼 수 있는 16진수 문자열이 포함된 **char** 값으로 변환할 수 있습니다.  
+ `CONVERT(binary(4), @hresult)` 를 사용하여 **int** HRESULT를 **binary** 값으로 변환할 수 있습니다. 그러나 `CONVERT(char(10), CONVERT(binary(4), @hresult))` 를 사용하면 HRESULT의 각 바이트가 하나의 ASCII 문자로 변환되어 알아볼 수 없는 문자열이 됩니다. 다음 예제 HexToChar 저장 프로시저를 사용하면 **int** HRESULT를 알아볼 수 있는 16진수 문자열이 포함된 **char** 값으로 변환할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -111,7 +115,7 @@ AS
 GO  
 ```  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [sp_OAGetErrorInfo&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-oageterrorinfo-transact-sql.md)  
   
   

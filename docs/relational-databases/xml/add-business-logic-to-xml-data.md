@@ -1,24 +1,28 @@
 ---
-title: "XML 데이터에 비즈니스 논리 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "비즈니스 논리 [XML]"
+title: "XML 데이터에 비즈니스 논리 추가 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 데이터에 비즈니스 논리 추가
+# <a name="add-business-logic-to-xml-data"></a>XML 데이터에 비즈니스 논리 추가
   비즈니스 논리를 여러 가지 방식으로 XML 데이터에 추가할 수 있습니다.  
   
 -   XML 데이터의 삽입 및 수정 중에 도메인 특정 제약 조건을 강화하도록 행 또는 열 제약 조건을 작성할 수 있습니다.  
@@ -29,8 +33,8 @@ caps.handback.revision: 18
   
 -   비즈니스 요구에 맞게 XML 열에서 처리를 시작하는 Transact-SQL 저장 프로시저와 함수를 작성할 수 있습니다.  
   
-## 예제: XSL 변환 적용  
- 파일에 저장된 **xml** 데이터 형식 인스턴스와 XSL 변환을 수락하고, XML 데이터에 XSL 변환을 적용하고, 변환된 XML을 결과로 반환하는 CLR 함수 **TransformXml()**를 고려해 보세요. 다음은 C#으로 작성된 기초 함수입니다.  
+## <a name="example-applying-xsl-transformation"></a>예제: XSL 변환 적용  
+ 파일에 저장된 **xml** 데이터 형식 인스턴스와 XSL 변환을 수락하고, XML 데이터에 XSL 변환을 적용하고, 변환된 XML을 결과로 반환하는 CLR 함수 **TransformXml()** 를 고려해 보세요. 다음은 C#으로 작성된 기초 함수입니다.  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  
@@ -50,7 +54,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- 어셈블리를 등록하고 사용자 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 만든 후 다음 쿼리에서와 같이 **TransformXml()**에 해당하는 **SqlXslTransform()** 함수를 Transact-SQL로부터 호출할 수 있습니다.  
+ 어셈블리를 등록하고 사용자 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 만든 후 다음 쿼리에서와 같이 **TransformXml()** 에 해당하는 **SqlXslTransform()**함수를 Transact-SQL로부터 호출할 수 있습니다.  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

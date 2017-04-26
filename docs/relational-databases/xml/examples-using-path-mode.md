@@ -1,27 +1,31 @@
 ---
-title: "예제: PATH 모드 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PATH FOR XML 모드, 예제"
+title: "예제: PATH 모드 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01caa2a86cde9fc2d8e857f1fd04486008d5886c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 예제: PATH 모드 사용
+# <a name="examples-using-path-mode"></a>예제: PATH 모드 사용
   다음 예에서는 SELECT 쿼리에서 XML을 생성할 때 PATH 모드를 사용하는 방법을 보여 줍니다. 이러한 쿼리는 대부분 ProductModel 테이블의 Instructions 열에 저장된 자전거 제조 지침 XML 문서에 대해 지정됩니다.  
   
-## 간단한 PATH 모드 쿼리 지정  
+## <a name="specifying-a-simple-path-mode-query"></a>간단한 PATH 모드 쿼리 지정  
  이 쿼리는 FOR XML PATH 모드를 지정합니다.  
   
 ```  
@@ -120,7 +124,7 @@ GO
   
  `<Name>Bike Wash</Name>`  
   
-## XPath 형식의 열 이름 지정  
+## <a name="specifying-xpath-like-column-names"></a>XPath 형식의 열 이름 지정  
  다음 쿼리에서 지정된 열 이름 `ProductModelID`는 '@'으로 시작하며 슬래시 기호('/')를 포함하지 않으므로 해당 열 값을 포함하는 <`row`> 요소의 특성이 결과 XML에 만들어집니다.  
   
 ```  
@@ -148,7 +152,7 @@ GO
   
  `</ ProductModelData >`  
   
- `root`에 `FOR XML` 옵션을 지정하여 최상위 요소 하나를 추가할 수 있습니다.  
+ `root` 에 `FOR XML`옵션을 지정하여 최상위 요소 하나를 추가할 수 있습니다.  
   
 ```  
 SELECT ProductModelID AS "@id",  
@@ -243,7 +247,7 @@ FOR XML PATH ('ns2:ProductInfo'), root('ns1:root');
 GO  
 ```  
   
- `MI`에는 `WITH XMLNAMESPACES` 접두사도 정의됩니다. 그 결과로 지정된 **xml** 유형의 **query()** 메서드는 쿼리 프롤로그에 접두사를 정의하지 않습니다. 다음은 결과입니다.  
+ `MI` 에는 `WITH XMLNAMESPACES`접두사도 정의됩니다. 그 결과로 지정된 **xml** 유형의 **query()** 메서드는 쿼리 프롤로그에 접두사를 정의하지 않습니다. 다음은 결과입니다.  
   
  `<ns1:root xmlns:MI="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions" xmlns="uri2" xmlns:ns2="uri2" xmlns:ns1="uri1">`  
   
@@ -273,7 +277,7 @@ GO
   
  `</ns1:root>`  
   
-## PATH 모드를 사용하여 값 목록 생성  
+## <a name="generating-a-value-list-using-path-mode"></a>PATH 모드를 사용하여 값 목록 생성  
  이 쿼리에서는 각 제품 모델에 대해 제품 ID의 값 목록을 생성하고 이 XML 조각에서와 같이 각 제품 ID에 대해 <`ProductName`> 중첩 요소를 생성합니다.  
   
  `<ProductModelData ProductModelID="7" ProductModelName="..."`  
@@ -380,7 +384,7 @@ WHERE ProductModelID= 7 OR ProductModelID=9
 FOR XML PATH('ProductModelData');  
 ```  
   
-## 결과 XML에 네임스페이스 추가  
+## <a name="adding-namespaces-in-the-resulting-xml"></a>결과 XML에 네임스페이스 추가  
  [WITH XMLNAMESPACES를 사용하여 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)항목에 설명된 대로 WITH XMLNAMESPACES를 사용하여 PATH 모드 쿼리에 네임스페이스를 포함시킬 수 있습니다. 예를 들어 SELECT 절에 지정된 이름에는 네임스페이스 접두사가 포함됩니다. 다음 `PATH` 모드 쿼리는 네임스페이스가 있는 XML을 생성합니다.  
   
 ```  
@@ -404,7 +408,7 @@ GO
   
  `</Translation>`  
   
- 다음 쿼리는 `WITH XMLNAMESPACES`를 사용하여 XML 결과에 네임스페이스를 포함한다는 점을 제외하고 예 3과 비슷합니다. 자세한 내용은 [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)를 참조하세요.  
+ 다음 쿼리는 `WITH XMLNAMESPACES` 를 사용하여 XML 결과에 네임스페이스를 포함한다는 점을 제외하고 예 3과 비슷합니다. 자세한 내용은 [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)를 참조하세요.  
   
 ```  
 USE AdventureWorks2012;  
@@ -463,7 +467,7 @@ FOR XML PATH('ProductModelData'), root('root');
   
  `</root>`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

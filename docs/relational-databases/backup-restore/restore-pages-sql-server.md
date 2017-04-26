@@ -1,34 +1,38 @@
 ---
-title: "페이지 복원(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorepage.general.f1"
-helpviewer_keywords: 
-  - "페이지 복원 [SQL Server]"
-  - "페이지 [SQL Server], 복원"
-  - "데이터베이스 [SQL Server], 손상"
-  - "페이지 복원 [SQL Server]"
-  - "페이지 [SQL Server], 손상"
-  - "복원 [SQL Server], 페이지"
+title: "페이지 복원(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorepage.general.f1
+helpviewer_keywords:
+- restoring pages [SQL Server]
+- pages [SQL Server], restoring
+- databases [SQL Server], damaged
+- page restores [SQL Server]
+- pages [SQL Server], damaged
+- restoring [SQL Server], pages
 ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 caps.latest.revision: 67
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1cdf13c937ecdaa54c31831625dc6fc41b35be70
+ms.lasthandoff: 04/11/2017
+
 ---
-# 페이지 복원(SQL Server)
+# <a name="restore-pages-sql-server"></a>페이지 복원(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 페이지를 복원하는 방법에 대해 설명합니다. 페이지 복원의 목표는 전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 페이지를 복원하는 것입니다. 일반적으로 복원 후보 페이지는 페이지에 액세스할 때 발생한 오류 때문에 "주의 대상"으로 표시됩니다. 주의 대상 페이지는 **msdb** 데이터베이스의 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블에서 확인할 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 페이지를 복원하는 방법에 대해 설명합니다. 페이지 복원의 목표는 전체 데이터베이스를 복원하지 않고 하나 이상의 손상된 페이지를 복원하는 것입니다. 일반적으로 복원 후보 페이지는 페이지에 액세스할 때 발생한 오류 때문에 "주의 대상"으로 표시됩니다. 주의 대상 페이지는 [msdb](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 데이터베이스의 **suspect_pages** 테이블에서 확인할 수 있습니다.  
   
  **항목 내용**  
   
@@ -86,13 +90,13 @@ caps.handback.revision: 67
 -   페이지 복원 시나리오:  
   
      오프라인 페이지 복원  
-     모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스가 오프라인 상태일 때에도 페이지를 복원할 수 있습니다. 오프라인 페이지 복원에서 손상된 페이지가 복원되는 동안 데이터베이스는 오프라인 상태가 됩니다. 복원 시퀀스의 마지막에 데이터베이스는 온라인 상태가 됩니다.  
+     모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 데이터베이스가 오프라인 상태일 때에도 페이지를 복원할 수 있습니다. 오프라인 페이지 복원에서 손상된 페이지가 복원되는 동안 데이터베이스는 오프라인 상태가 됩니다. 복원 시퀀스의 마지막에 데이터베이스는 온라인 상태가 됩니다.  
   
      온라인 페이지 복원  
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서는 온라인 페이지 복원을 지원하며, 데이터베이스가 현재 오프라인 상태인 경우에는 오프라인 복원을 사용합니다. 대부분의 경우 손상된 페이지는 페이지가 복원될 파일 그룹을 비롯한 데이터베이스가 온라인 상태로 유지되는 동안 복원될 수 있습니다. 주 파일 그룹이 온라인 상태이면 하나 이상의 보조 파일 그룹이 오프라인 상태이더라도 페이지 복원은 대개 온라인 상태로 수행됩니다. 그러나 손상된 페이지를 오프라인으로 복원해야 하는 경우도 있습니다. 예를 들어 중요한 특정 페이지가 손상되어 데이터베이스를 시작할 수 없는 경우가 이에 해당합니다.  
   
     > [!WARNING]  
-    >  손상된 페이지에 중요한 데이터베이스 메타데이터가 저장되어 있으면 온라인 페이지 복원을 시도하는 동안 메타데이터에 필요한 업데이트가 실패할 수 있습니다. 이 경우 오프라인 페이지 복원을 수행할 수 있지만 이를 위해서는 먼저 RESTORE WITH NORECOVERY로 트랜잭션 로그를 백업하여 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 만들어야 합니다.  
+    >  손상된 페이지에 중요한 데이터베이스 메타데이터가 저장되어 있으면 온라인 페이지 복원을 시도하는 동안 메타데이터에 필요한 업데이트가 실패할 수 있습니다. 이 경우 오프라인 페이지 복원을 수행할 수 있지만 이를 위해서는 먼저 RESTORE WITH NORECOVERY로 트랜잭션 로그를 백업하여 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 을 만들어야 합니다.  
   
 -   페이지 복원은 페이지 체크섬을 포함하여 향상된 페이지 수준 오류 보고와 추적을 사용합니다. 페이지가 체크섬이나 조각난 쓰기에 의해 손상된 것으로 확인될 경우 이러한 *손상된 페이지*는 페이지 복원 작업을 통해 복원할 수 있습니다. 이때 명시적으로 지정한 페이지만 복원됩니다. 지정한 각 페이지는 지정한 데이터 백업의 해당 페이지 복사본으로 대체됩니다.  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 67
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]부터는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 페이지 복원을 지원합니다.  
   
-#### 페이지를 복원하려면  
+#### <a name="to-restore-pages"></a>페이지를 복원하려면  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결하고 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -117,16 +121,16 @@ caps.handback.revision: 67
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **복원**을 차례로 가리킨 다음 **페이지**를 클릭하여 **페이지 복원** 대화 상자를 엽니다.  
   
      **복원**  
-     이 섹션은 [데이터베이스 복원(일반 페이지)](../../relational-databases/backup-restore/restore-database-general-page.md)의 **복원 위치**와 동일한 기능을 수행합니다.  
+     이 섹션은 **데이터베이스 복원(일반 페이지)** 의 [복원 위치](../../relational-databases/backup-restore/restore-database-general-page.md)와 동일한 기능을 수행합니다.  
   
      **데이터베이스**  
      복원할 데이터베이스를 지정합니다. 새 데이터베이스를 입력하거나 드롭다운 목록에서 기존 데이터베이스를 선택할 수 있습니다. 이 목록에는 시스템 데이터베이스인 **master** 및 **tempdb**를 제외한 서버의 모든 데이터베이스가 포함되어 있습니다.  
   
     > [!WARNING]  
-    >  암호로 보호된 백업을 복원하려면 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 문을 사용해야 합니다.  
+    >  암호로 보호된 백업을 복원하려면 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용해야 합니다.  
   
      **비상 로그 백업**  
-     **백업 장치**에서 데이터베이스에 대한 비상 로그 백업이 저장될 파일 이름을 입력하거나 선택합니다.  
+     **백업 장치** 에서 데이터베이스에 대한 비상 로그 백업이 저장될 파일 이름을 입력하거나 선택합니다.  
   
      **백업 세트**  
      이 섹션에는 복원에 관련된 백업 세트가 표시됩니다.  
@@ -134,7 +138,7 @@ caps.handback.revision: 67
     |머리글|값|  
     |------------|------------|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**, **파일** 또는 **\<비어 있음>**(트랜잭션 로그의 경우)이 될 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 **\<비어 있음>**(트랜잭션 로그의 경우)이 될 수 있습니다.|  
     |**형식**|수행된 백업 유형입니다. **전체**, **차등**또는 **트랜잭션 로그**일 수 있습니다.|  
     |**Server**|백업 작업을 수행한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
     |**데이터베이스**|백업 작업과 관련된 데이터베이스의 이름입니다.|  
@@ -154,11 +158,11 @@ caps.handback.revision: 67
 4.  손상된 페이지를 확인하려면 **데이터베이스** 상자에서 올바른 데이터베이스를 선택한 상태에서 **데이터베이스 페이지 확인**을 클릭합니다. 이 작업을 실행하는 데는 오랜 시간이 소요됩니다.  
   
     > [!WARNING]  
-    >  손상되지 않은 특정 페이지를 복원하려면 **추가**를 클릭하고 복원할 페이지의 **파일 ID**와 **페이지 ID**를 입력합니다.  
+    >  손상되지 않은 특정 페이지를 복원하려면 **추가** 를 클릭하고 복원할 페이지의 **파일 ID** 와 **페이지 ID** 를 입력합니다.  
   
-5.  복원할 페이지를 확인하는 데는 페이지 표가 사용됩니다. 처음에는 이 표가 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 시스템 테이블의 내용으로 채워집니다. 표에서 페이지를 추가하거나 제거하려면 **추가** 또는 **제거**를 클릭합니다. 자세한 내용은 [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)를 참조하세요.  
+5.  복원할 페이지를 확인하는 데는 페이지 표가 사용됩니다. 처음에는 이 표가 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 시스템 테이블의 내용으로 채워집니다. 표에서 페이지를 추가하거나 제거하려면 **추가** 또는 **제거**를 클릭합니다. 자세한 내용은 [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)에서 페이지를 복원하는 방법에 대해 설명합니다.  
   
-6.  **백업 세트** 표에는 기본 복원 계획의 백업 세트가 나열됩니다. 필요할 경우 **확인** 을 클릭하여 복원은 수행하지 않고 백업을 읽을 수 있는지와 백업 세트가 완전한지만 확인할 수 있습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)를 참조하세요.  
+6.  **백업 세트** 표에는 기본 복원 계획의 백업 세트가 나열됩니다. 필요할 경우 **확인** 을 클릭하여 복원은 수행하지 않고 백업을 읽을 수 있는지와 백업 세트가 완전한지만 확인할 수 있습니다. 자세한 내용은 [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)를 참조하세요.  
   
      **페이지**  
   
@@ -175,9 +179,9 @@ caps.handback.revision: 67
   
  `WITH NORECOVERY`  
   
- PAGE 옵션의 매개 변수에 대한 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)를 참조하세요. RESTORE DATABASE 구문에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)를 참조하세요.  
+ PAGE 옵션의 매개 변수에 대한 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요. RESTORE DATABASE 구문에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
-#### 페이지를 복원하려면  
+#### <a name="to-restore-pages"></a>페이지를 복원하려면  
   
 1.  복원하려는 손상된 페이지의 페이지 ID를 확인합니다. 체크섬 또는 조각난 쓰기 오류가 페이지 ID를 반환하고 페이지를 지정하는 데 필요한 정보를 제공합니다. 손상된 페이지의 페이지 ID를 조회하려면 다음 원본 중 하나를 사용하세요.  
   
@@ -185,7 +189,7 @@ caps.handback.revision: 67
     |-----------------------|-----------|  
     |**msdb..suspect_pages**|[suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)|  
     |오류 로그|[SQL Server 오류 로그 보기&#40;SQL Server Management Studio&#41;](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)|  
-    |이벤트 추적|[이벤트 모니터링 및 응답](../../ssms/agent/monitor-and-respond-to-events.md)|  
+    |이벤트 추적|[이벤트 모니터링 및 응답](http://msdn.microsoft.com/library/f7fbe155-5b68-4777-bc71-a47637471f32)|  
     |DBCC|[DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)|  
     |WMI 공급자|[서버 이벤트용 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)|  
   
@@ -203,7 +207,7 @@ caps.handback.revision: 67
     >  이 시퀀스는 파일 복원 시퀀스와 유사하며 동일한 시퀀스의 일부로 페이지 복원과 파일 복원을 모두 수행할 수도 있습니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예에서는`B`로 `NORECOVERY` 파일의 손상된 4페이지를 복원합니다. 그런 다음 두 개의 로그 백업에 `NORECOVERY`를 적용하고 `RECOVERY`로 복원되는 비상 로그 백업을 실행합니다. 이 예에서는 온라인 복원을 수행합니다. 이 예에서 `B` 파일의 파일 ID는 `1`이고 손상된 페이지의 페이지 ID는 각각 `57`, `202`, `916` 및 `1016`입니다.  
+ 다음 예에서는 `B` 로 `NORECOVERY`파일의 손상된 4페이지를 복원합니다. 그런 다음 두 개의 로그 백업에 `NORECOVERY`를 적용하고 `RECOVERY`로 복원되는 비상 로그 백업을 실행합니다. 이 예에서는 온라인 복원을 수행합니다. 이 예에서 `B` 파일의 파일 ID는 `1`이고 손상된 페이지의 페이지 ID는 각각 `57`, `202`, `916`및 `1016`입니다.  
   
 ```tsql  
 RESTORE DATABASE <database> PAGE='1:57, 1:202, 1:916, 1:1016'  
@@ -218,8 +222,8 @@ RESTORE LOG <database> FROM <new_log_backup> WITH RECOVERY;
 GO  
 ```  
   
-## 참고 항목  
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>참고 항목  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)   
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  

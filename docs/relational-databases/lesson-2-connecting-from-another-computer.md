@@ -1,24 +1,28 @@
 ---
-title: "2단원: 다른 컴퓨터에서 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "2단원: 다른 컴퓨터에서 연결 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1e72554b59c7ecf738235d4c5d74f35915116b4b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 2단원: 다른 컴퓨터에서 연결
+# <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
 보안을 강화하기 위해 처음 설치 시에는 [!INCLUDE[ssDE](../includes/ssde-md.md)] Developer, Express 및 Evaluation 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 을 다른 컴퓨터에서 액세스할 수 없습니다. 이 단원에서는 다른 컴퓨터에서 연결하기 위해 프로토콜을 설정하고 포트를 구성하며 Windows 방화벽을 구성하는 방법을 보여 줍니다.  
   
 이 단원에서는 다음 태스크를 다룹니다.  
@@ -36,9 +40,9 @@ caps.handback.revision: 22
 ## <a name="protocols"></a>프로토콜 설정  
 보안을 강화하기 위해 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], Developer 및 Evaluation에는 제한된 네트워크 연결만 설치됩니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 에는 동일한 컴퓨터에서 실행하는 도구를 사용하여 연결할 수 있지만 다른 컴퓨터에서는 연결할 수 없습니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]과 동일한 컴퓨터에서 개발 작업을 수행하려는 경우 추가 프로토콜을 사용할 필요가 없습니다. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 는 공유 메모리 프로토콜을 사용하여 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 연결합니다. 연결합니다.  
   
-다른 컴퓨터에서 [!INCLUDE[ssDE](../includes/ssde-md.md)]에 연결하려는 경우에는 TCP/IP와 같은 프로토콜을 설정해야 합니다.  
+다른 컴퓨터에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에 연결하려는 경우에는 TCP/IP와 같은 프로토콜을 설정해야 합니다.  
   
-#### 다른 컴퓨터에서 TCP/IP 연결을 설정하는 방법  
+#### <a name="how-to-enable-tcpip-connections-from-another-computer"></a>다른 컴퓨터에서 TCP/IP 연결을 설정하는 방법  
   
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 22
 > [!NOTE]  
 > 포트 번호 할당은 Internet Assigned Numbers Authority에서 관리하며 이 목록은 [http://www.iana.org](http://go.microsoft.com/fwlink/?LinkId=48844)에서 볼 수 있습니다. 포트 번호는 49152에서 65535 사이의 숫자에서 할당해야 합니다.  
   
-#### SQL Server가 특정 포트에서 수신하도록 구성  
+#### <a name="configure-sql-server-to-listen-on-a-specific-port"></a>SQL Server가 특정 포트에서 수신하도록 구성  
   
 1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 구성할 서버 인스턴스를 클릭합니다.  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 22
   
 6.  왼쪽 창에서 **SQL Server 서비스**를 클릭하고  
   
-7.  오른쪽 창에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 다시 시작되면 포트 **49172**에서 수신합니다.  
+7.  오른쪽 창에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **다시 시작**을 클릭합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 이 다시 시작되면 포트 **49172**에서 수신합니다.  
   
 ## <a name="firewall"></a>방화벽에서 포트 열기  
 방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽이 설정된 경우 다른 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 연결하려면 방화벽에서 포트를 열어야 합니다.  
@@ -94,11 +98,11 @@ caps.handback.revision: 22
   
 [!INCLUDE[ssDE](../includes/ssde-md.md)] 에서 고정 포트를 사용하도록 구성한 후 다음 지침에 따라 Windows 방화벽에서 해당 포트를 엽니다. 기본 인스턴스의 고정 포트는 이미 TCP 포트 1433에 고정되어 있기 때문에 구성할 필요가 없습니다.  
   
-#### Windows 방화벽에서 TCP 액세스용 포트를 열려면(Windows 7)  
+#### <a name="to-open-a-port-in-the-windows-firewall-for-tcp-access-windows-7"></a>Windows 방화벽에서 TCP 액세스용 포트를 열려면(Windows 7)  
   
 1.  **시작** 메뉴에서 **실행**을 클릭한 다음 **WF.msc**를 입력하고 **확인**을 클릭합니다.  
   
-2.  **고급 보안이 포함된 Windows 방화벽**의 왼쪽 창에서 **인바운드 규칙**을 마우스 오른쪽 단추로 클릭한 다음 동작 창에서 **새 규칙**을 클릭합니다.  
+2.  **고급 보안이 포함된 Windows 방화벽**의 왼쪽 창에서 **인바운드 규칙**을 마우스 오른쪽 단추로 클릭한 다음 동작 창에서 **새 규칙** 을 클릭합니다.  
   
 3.  **규칙 유형** 대화 상자에서 **포트**를 선택한 다음 **다음**을 클릭합니다.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 22
   
 서버 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 서비스를 실행 중인 상태에서 방화벽이 UDP 포트 1434를 열면 컴퓨터 이름과 인스턴스 이름을 사용하여 연결을 설정할 수 있습니다. 보안을 강화하기 위해 이 예에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browser 서비스를 사용하지 않습니다.  
   
-#### 다른 컴퓨터에서 데이터베이스 엔진에 연결하려면  
+#### <a name="to-connect-to-the-database-engine-from-another-computer"></a>다른 컴퓨터에서 데이터베이스 엔진에 연결하려면  
   
 1.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 클라이언트 도구가 있는 두 번째 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결할 수 있는 권한이 있는 계정으로 로그인한 다음 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 엽니다.  
   
@@ -137,6 +141,8 @@ caps.handback.revision: 22
   
 이것으로 기본 연결에 대한 간단한 자습서를 마칩니다.  
   
-## 자습서 포털로 돌아가기  
+## <a name="return-to-tutorials-portal"></a>자습서 포털로 돌아가기  
 [자습서: 데이터베이스 엔진 시작](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
+
+

@@ -1,61 +1,65 @@
 ---
-title: "스크립트 생성 및 게시 마법사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql9.swb.generatescriptswizard.chooseviews.f1"
-  - "sql13.swb.generatescriptswizard.manageproviders.f1"
-  - "sql9.swb.generatescriptswizard.scriptwizarddescription.f1"
-  - "sql9.swb.generatescriptswizard.choosedefaults.f1"
-  - "sql13.swb.generatescriptswizard.summarypage.f1"
-  - "sql13.swb.generatescriptswizard.providerconfiguration.f1"
-  - "sql9.swb.generatescriptswizard.chooseuddt.f1"
-  - "sql9.swb.generatescriptswizard.chooserules.f1"
-  - "sql13.swb.generatescriptswizard.introduction.f1"
-  - "sql13.swb.generatescriptswizard.setscriptingoptions.f1"
-  - "sql13.swb.generatescriptswizard.saveorpublishscripts.f1"
-  - "sql9.swb.generatescriptswizard.progress.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql9.swb.generatescriptswizard.welcome.f1"
-  - "sql9.swb.generatescriptswizard.scriptfileoption.f1"
-  - "sql13.swb.generatescriptswizard.chooseobjects.f1"
-  - "sql13.swb.generatescriptswizard.advancedpublishingoptions.f1"
-  - "sql9.swb.generatescriptswizard.selectdatabase.f1"
-  - "sql9.swb.generatescriptswizard.choosetables.f1"
-  - "sql9.swb.generatescriptswizard.choosestoredprocedures.f1"
-  - "sql9.swb.generatescriptswizard.chooseobjecttypes.f1"
-  - "sql13.swb.generatescriptswizard.advancedscriptingoptions.f1"
-  - "sql9.swb.generatescriptswizard.choosescriptoptions.f1"
-  - "sql9.swb.generatescriptswizard.chooseudf.f1"
-helpviewer_keywords: 
-  - "데이터베이스 [SQL Server], 게시"
-  - "데이터베이스 게시"
-  - "스크립트 [SQL Server], 생성"
-  - "스크립트 [SQL Server], 게시"
-  - "데이터베이스 [SQL Server], 스크립트 생성"
-  - "데이터베이스 게시 마법사"
+title: "스크립트 생성 및 게시 마법사 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql9.swb.generatescriptswizard.chooseviews.f1
+- sql13.swb.generatescriptswizard.manageproviders.f1
+- sql9.swb.generatescriptswizard.scriptwizarddescription.f1
+- sql9.swb.generatescriptswizard.choosedefaults.f1
+- sql13.swb.generatescriptswizard.summarypage.f1
+- sql13.swb.generatescriptswizard.providerconfiguration.f1
+- sql9.swb.generatescriptswizard.chooseuddt.f1
+- sql9.swb.generatescriptswizard.chooserules.f1
+- sql13.swb.generatescriptswizard.introduction.f1
+- sql13.swb.generatescriptswizard.setscriptingoptions.f1
+- sql13.swb.generatescriptswizard.saveorpublishscripts.f1
+- sql9.swb.generatescriptswizard.progress.f1
+- sql9.swb.generatescriptswizard.chooseobjects.f1
+- sql9.swb.generatescriptswizard.welcome.f1
+- sql9.swb.generatescriptswizard.scriptfileoption.f1
+- sql13.swb.generatescriptswizard.chooseobjects.f1
+- sql13.swb.generatescriptswizard.advancedpublishingoptions.f1
+- sql9.swb.generatescriptswizard.selectdatabase.f1
+- sql9.swb.generatescriptswizard.choosetables.f1
+- sql9.swb.generatescriptswizard.choosestoredprocedures.f1
+- sql9.swb.generatescriptswizard.chooseobjecttypes.f1
+- sql13.swb.generatescriptswizard.advancedscriptingoptions.f1
+- sql9.swb.generatescriptswizard.choosescriptoptions.f1
+- sql9.swb.generatescriptswizard.chooseudf.f1
+helpviewer_keywords:
+- databases [SQL Server], publishing
+- publishing databases
+- scripts [SQL Server], generating
+- scripts [SQL Server], publishing
+- databases [SQL Server], generating scripts
+- Publish Database Wizard
 ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 caps.latest.revision: 45
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4632b3a980608ca8feb63436d4120759e7a1e756
+ms.lasthandoff: 04/11/2017
+
 ---
-# 스크립트 생성 및 게시 마법사
-  **스크립트 생성 및 게시 마법사**를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
+# <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
+  **스크립트 생성 및 게시 마법사** 를 사용하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]인스턴스 간에 데이터베이스를 전송하는 스크립트를 만들 수 있습니다. 스크립트는 로컬 네트워크의 데이터베이스 인스턴스에 있는 데이터베이스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 생성할 수 있습니다. 생성된 스크립트는 데이터베이스 엔진의 다른 인스턴스나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 실행할 수 있습니다. 마법사를 사용하여 데이터베이스 게시 서비스 프로젝트를 통해 생성된 웹 서비스에 직접 데이터베이스의 내용을 게시할 수도 있습니다. 전체 데이터베이스에 대한 스크립트를 만들거나 특정 개체로 제한할 수 있습니다.  
   
-1.  **시작하기 전 주의 사항:**  [호스티드 서비스에 게시](#PubHostSvc), [사용 권한](#Permissions)  
+1.  **Before you begin:**  [Publishing to a Hosted Service](#PubHostSvc), [Permissions](#Permissions)  
   
-2.  **스크립트를 생성하거나 게시하려면 다음을 사용합니다.**  [스크립트 생성 및 게시 마법사](#GenPubScriptWiz)  
+2.  **To generate or publish a script, using:**  [The Generate and Publish Scripts Wizard](#GenPubScriptWiz)  
   
-## 시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  원본 및 대상 데이터베이스는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이상을 실행하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 인스턴스에 있을 수 있습니다.  
   
 ###  <a name="PubHostSvc"></a> 호스티드 서비스에 게시  
@@ -149,7 +153,7 @@ caps.handback.revision: 45
   
  **일반** - 다음 옵션이 전체 스크립트에 적용됩니다.  
   
--   **ANSI 패딩** - 스크립트에 **ANSI PADDING ON**을 포함합니다. 기본값은 **True**입니다.  
+-   **ANSI 패딩** - 스크립트에 **ANSI PADDING ON** 을 포함합니다. 기본값은 **True**입니다.  
   
 -   **파일에 추가** - **True**이면 **스크립팅 옵션 설정** 페이지에서 지정한 기존 스크립트의 아래쪽에 이 스크립트가 추가되고, **False**이면 새 스크립트가 이전 스크립트를 덮어씁니다. 기본값은 **False**입니다.  
   
@@ -304,7 +308,7 @@ caps.handback.revision: 45
   
  **암호 저장** - 로컬 컴퓨터의 암호를 암호화하고 저장합니다.  
   
- **사용 가능한 데이터베이스** - 호스팅 공급자에 대해 구성된 데이터베이스는 *server_name*.*database_name* 형식으로 오름차순으로 나열됩니다.  
+ **사용 가능한 데이터베이스** - 호스팅 공급자에 대해 구성된 데이터베이스는 *server_name*.*database_name*형식으로 오름차순으로 나열됩니다.  
   
  **새로 만들기** - **데이터베이스** 구성 대화 상자를 열고 새 데이터베이스를 추가합니다.  
   
@@ -334,23 +338,23 @@ caps.handback.revision: 45
   
  **마침** - 처리가 완료된 후에나 오류가 발생한 경우 마법사를 닫으려면 클릭합니다.  
  
-## Azure SQL 데이터 웨어하우스에서 스크립트 생성  
+## <a name="generating-scripts-on-azure-sql-data-warehouse"></a>Azure SQL 데이터 웨어하우스에서 스크립트 생성  
 
 "다른 이름으로 스크립팅..."을 사용할 때 구문이 생성된 경우 은 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 구문과 다르게 보이거나 오류 메시지를 받는 경우 SQL Server Management Studio의 스크립팅 옵션을 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]로 설정해야 할 수 있습니다.  
 
-### SQL 데이터 웨어하우스에 기본 스크립팅 옵션을 설정하는 방법  
+### <a name="how-to-set-default-scripting-options-to-sql-data-warehouse"></a>SQL 데이터 웨어하우스에 기본 스크립팅 옵션을 설정하는 방법  
 
-[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 구문으로 개체를 스크립팅하려면 다음과 같이 기본 스크립팅 옵션을 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]로 설정합니다.  
+[!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 구문으로 개체를 스크립팅하려면 다음과 같이 기본 스크립팅 옵션을 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 로 설정합니다.  
 
-1. **도구**를 클릭한 다음 **옵션**을 클릭합니다.  
+1. **도구** 를 클릭한 다음 **옵션**을 클릭합니다.  
 2. **일반 스크립팅 옵션** 설정에서 다음을 수행합니다.  
     1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL 데이터베이스**  
     2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL 데이터 웨어하우스 버전**  
 3. **확인**을 클릭합니다.
 
-### 기본 스크립팅 옵션이 아닌 경우 SQL 데이터 웨어하우스에 대한 스크립트를 생성하는 방법  
+### <a name="how-to-generate-scripts-for-sql-data-warehouse-when-it-is-not-the-default-scripting-option"></a>기본 스크립팅 옵션이 아닌 경우 SQL 데이터 웨어하우스에 대한 스크립트를 생성하는 방법  
 
-위에 표시된 대로 기본 스크립팅 옵션으로 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]를 설정하면 이러한 지침은 무시될 수 있습니다. 그러나 다른 기본 스크립팅 옵션을 선택하면 오류가 발생할 수 있습니다. 오류를 방지하려면 다음 단계에 따라 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에 대한 스크립트를 생성 및 게시합니다.  
+위에 표시된 대로 기본 스크립팅 옵션으로 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] 를 설정하면 이러한 지침은 무시될 수 있습니다. 그러나 다른 기본 스크립팅 옵션을 선택하면 오류가 발생할 수 있습니다. 오류를 방지하려면 다음 단계에 따라 [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)]에 대한 스크립트를 생성 및 게시합니다.  
 
 1. SQL 데이터 웨어하우스 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
 2. **스크립트 생성...**을 선택합니다.  
@@ -358,11 +362,11 @@ caps.handback.revision: 45
 4. **스크립팅 옵션**에서 **고급**을 클릭합니다. **일반** 설정에서 다음을 수행합니다.  
     1. 데이터베이스 엔진 유형에 대한 스크립트: **Microsoft Azure SQL 데이터베이스**  
     2. 데이터베이스 엔진 버전에 대한 스크립트: **Microsoft Azure SQL 데이터 웨어하우스 버전**  
-5. **스크립트 저장 또는 게시**를 클릭한 다음 **마침**을 클릭합니다.  
+5. **스크립트 저장 또는 게시** 를 클릭한 다음 **마침**을 클릭합니다.  
 
 4단계에서 설정한 옵션은 저장되지 않습니다. 이러한 옵션을 저장하려면 **SQL 데이터 웨어하우스에 기본 스크립팅 옵션을 설정하는 방법**의 지침을 따릅니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SMO 설치](../../relational-databases/server-management-objects-smo/installing-smo.md)   
  [데이터베이스를 다른 서버로 복사](../../relational-databases/databases/copy-databases-to-other-servers.md)  
   

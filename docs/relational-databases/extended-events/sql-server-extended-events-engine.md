@@ -1,25 +1,29 @@
 ---
-title: "SQL Server 확장 이벤트 엔진 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "확장 이벤트 [SQL Server], 엔진"
+title: "SQL Server 확장 이벤트 엔진 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], engine
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e11bf82e65be3b127ca7ee6c4f43ab2b60531b71
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 확장 이벤트 엔진
+# <a name="sql-server-extended-events-engine"></a>SQL Server 확장 이벤트 엔진
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트 엔진은 다음과 같은 역할을 하는 서비스 및 개체의 집합입니다.  
@@ -36,13 +40,13 @@ caps.handback.revision: 14
   
  다음 그림은 확장 이벤트 세션을 간략히 요약하여 보여 줍니다. 자세한 내용은 [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)을 참조하세요.  
   
- ![자세한 확장 이벤트 아키텍처](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "자세한 확장 이벤트 아키텍처")  
+ ![자세한 확장 이벤트 아키텍처](../../relational-databases/extended-events/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
   
  다음에 유의하세요.  
   
 -   각 Windows 프로세스에는 하나 이상의 모듈(**Win32 프로세스**, **Win32 모듈**)이 있을 수 있습니다. 이를 *바이너리* 또는 *실행 모듈*이라고도 합니다.  
   
--   각 Windows 프로세스 모듈은 하나 이상의 확장 이벤트 개체(**Type**, **Target**, **Action**, **Map**, **Predicate** 및 **Event**)가 포함된 확장 이벤트 패키지(**Package**)를 포함할 수 있습니다.  
+-   각 Windows 프로세스 모듈은 하나 이상의 확장 이벤트 개체(**Type**,**Target**, **Action**, **Map**, **Predicate**및 **Event**)가 포함된 확장 이벤트 패키지( **Package**)를 포함할 수 있습니다.  
   
 -   호스트 프로세스 내부에는 다음과 같은 역할을 하는 확장 이벤트 엔진(**Extended event engine**)의 인스턴스가 하나만 포함될 수 있습니다.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 14
   
     -   버퍼가 가득 차면 해당 버퍼가 대상으로 디스패치됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

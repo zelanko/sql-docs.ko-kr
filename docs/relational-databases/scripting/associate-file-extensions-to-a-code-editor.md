@@ -1,31 +1,35 @@
 ---
-title: "파일 확장명을 코드 편집기에 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "파일 확장명 [SQL Server]"
-  - "파일 확장명 연결 [SQL Server]"
-  - "쿼리 편집기 [SQL Server Management Studio], 파일 확장명 연결"
+title: "파일 확장명을 코드 편집기에 연결 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file extensions [SQL Server]
+- associating file extensions [SQL Server]
+- Query Editor [SQL Server Management Studio], associating file extensions
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac76f08879c6fabae99b4ff7dc5bb0cffa74b0fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 파일 확장명을 코드 편집기에 연결
+# <a name="associate-file-extensions-to-a-code-editor"></a>파일 확장명을 코드 편집기에 연결
   파일 확장명을 특정 코드 편집기에 연결하면 Windows 탐색기에서 파일을 두 번 클릭하여 해당 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 코드 편집기에서 파일을 열 수 있습니다. .sql 및 .mdx와 같이 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 많이 사용되는 확장명은 설치 중에 연결됩니다. 새 파일 확장명은 파일 시스템에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에 연결해야 합니다. 이 기능을 사용하여 다른 편집기로 만든 파일을 열거나 .sql 파일의 백업인 .bak 파일과 같이 이름이 바뀐 파일을 열 수 있습니다.  
   
  이 과정은 두 단계로 구성됩니다. 먼저 확장명을 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]와 연결한 다음 해당 확장명을 특정 코드 편집기에 연결합니다.  
   
-### 새 파일 확장명을 SQL Server Management Studio와 연결하려면  
+### <a name="to-associate-a-new-file-extension-with-sql-server-management-studio"></a>새 파일 확장명을 SQL Server Management Studio와 연결하려면  
   
 1.  **시작** 메뉴에서 **모든 프로그램**, **보조프로그램**을 차례로 가리키고 **Windows 탐색기**를 클릭합니다.  
   
@@ -41,7 +45,7 @@ caps.handback.revision: 23
   
 7.  **닫기** 를 클릭하여 **폴더 옵션** 대화 상자를 닫은 다음 Windows 탐색기를 닫습니다.  
   
-### 새 파일 확장명을 SQL Server Management Studio의 코드 편집기와 연결하려면  
+### <a name="to-associate-a-new-file-extension-with-a-code-editor-in-sql-server-management-studio"></a>새 파일 확장명을 SQL Server Management Studio의 코드 편집기와 연결하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 23
   
 4.  **편집기** 상자에서 이 파일 형식을 열 때 사용할 코드 편집기를 클릭하고 **추가**를 클릭한 다음 **확인**을 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Ssms 유틸리티](../../tools/sql-server-management-studio/ssms-utility.md)  
   
   

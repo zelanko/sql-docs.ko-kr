@@ -1,31 +1,35 @@
 ---
-title: "트랜잭션 로그 백업 복원(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoretlog.general.f1"
-  - "sql13.swb.restoretlog.options.f1"
-helpviewer_keywords: 
-  - "로그 복원"
-  - "트랜잭션 로그 백업 [SQL Server], 복원"
-  - "트랜잭션 로그 백업 [SQL Server], 복원"
-  - "트랜잭션 로그 복원 [SQL Server], 백업 복원"
-  - "트랜잭션 로그 복원 [SQL Server], SQL Server Management Studio"
+title: "트랜잭션 로그 백업 복원(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoretlog.general.f1
+- sql13.swb.restoretlog.options.f1
+helpviewer_keywords:
+- restore log
+- backing up transaction logs [SQL Server], restoring
+- transaction log backups [SQL Server], restoring
+- restoring transaction logs [SQL Server], restoring backups
+- transaction log restores [SQL Server], SQL Server Management Studio
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58f0b1ab65e812e778d630a2a95db8539e1b47eb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 트랜잭션 로그 백업 복원(SQL Server)
+# <a name="restore-a-transaction-log-backup-sql-server"></a>트랜잭션 로그 백업 복원(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 트랜잭션 로그 백업을 복원하는 방법에 대해 설명합니다.  
@@ -68,9 +72,9 @@ caps.handback.revision: 36
 > [!WARNING]  
 >  일반적인 복원 프로세스는 데이터 백업 및 차등 백업과 함께 **데이터베이스 복원** 대화 상자에서 로그 백업을 선택하는 것입니다.  
   
-#### 트랜잭션 로그 백업을 복원하려면  
+#### <a name="to-restore-a-transaction-log-backup"></a>트랜잭션 로그 백업을 복원하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 36
     |------------|-----------|  
     |**복원**|선택된 확인란은 복원될 백업 세트를 나타냅니다.|  
     |**이름**|백업 세트의 이름입니다.|  
-    |**구성 요소**|백업된 구성 요소입니다. **데이터베이스**, **파일** 또는 \<비어 있음>(트랜잭션 로그의 경우)이 될 수 있습니다.|  
+    |**구성 요소**|백업된 구성 요소: **데이터베이스**, **파일** 또는 \<비어 있음>(트랜잭션 로그의 경우)이 될 수 있습니다.|  
     |**데이터베이스**|백업 작업과 연관된 데이터베이스의 이름입니다.|  
     |**Start Date**|클라이언트의 국가별 설정으로 표시되는 백업 작업 시작 날짜 및 시간입니다.|  
     |**완료 날짜**|클라이언트의 국가별 설정으로 표시되는 백업 작업 완료 날짜 및 시간입니다.|  
@@ -149,7 +153,7 @@ caps.handback.revision: 36
   
          이 옵션은 **RECOVERY** 옵션을 사용하여 백업을 복원하는 것과 같은 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다.** 옵션(뒷부분에서 설명)과 함께만 사용할 수 있습니다.  
   
-         이 옵션을 선택하는 것은 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** 문에서 **KEEP_REPLICATION** 옵션을 사용하는 것과 같습니다.  
+         이 옵션을 선택하는 것은 **RESTORE** 문에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]**KEEP_REPLICATION** 옵션을 사용하는 것과 같습니다.  
   
     -   **각 백업 복원 전에 확인**  
   
@@ -161,19 +165,19 @@ caps.handback.revision: 36
   
     -   **복원된 데이터베이스에 대한 액세스 제한(WITH RESTRICTED_USER)**  
   
-         **db_owner**, **dbcreator** 또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
+         **db_owner**, **dbcreator**또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
   
-         이 옵션을 선택하는 것은 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTORE** 문에서 **RESTRICTED_USER** 옵션을 사용하는 것과 같습니다.  
+         이 옵션을 선택하는 것은 **RESTORE** 문에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RESTRICTED_USER** 옵션을 사용하는 것과 같습니다.  
   
 10. **복구 상태** 옵션에서 복원 작업 이후의 데이터베이스 상태를 지정합니다.  
   
-    -   **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. 없습니다(RESTORE WITH RECOVERY).**  
+    -   **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. (RESTORE WITH RECOVERY)**  
   
          데이터베이스를 복구합니다. 이 옵션은 **RESTORE** 문의 [!INCLUDE[tsql](../../includes/tsql-md.md)]**RECOVERY** 옵션과 같습니다.  
   
          복원할 로그 파일이 없는 경우에만 이 옵션을 선택합니다.  
   
-    -   **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 있습니다(RESTORE WITH NORECOVERY).**  
+    -   **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 (RESTORE WITH NORECOVERY)**  
   
          데이터베이스를 복원되지 않은 **RESTORING** 상태로 유지합니다. 이 옵션은 **RESTORE** 문에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]**NORECOVERY** 옵션을 사용하는 것과 같습니다.  
   
@@ -182,7 +186,7 @@ caps.handback.revision: 36
         > [!IMPORTANT]  
         >  미러 또는 보조 데이터베이스의 경우 항상 이 옵션을 선택합니다.  
   
-    -   **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션 실행을 취소하지만 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 파일에 저장합니다(RESTORE WITH STANDBY).**  
+    -   **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션 실행을 취소하지만 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 파일에 (RESTORE WITH STANDBY)**  
   
          데이터베이스를 대기 모드로 유지합니다. 이 옵션은 **RESTORE** 문에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]**STANDBY** 옵션을 사용하는 것과 같습니다.  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  모호하지 않도록 항상 모든 RESTORE 문에 명시적으로 WITH NORECOVERY 또는 WITH RECOVERY를 지정하는 것이 좋습니다. 이는 스크립트 작성 시 특히 중요합니다.  
   
-#### 트랜잭션 로그 백업을 복원하려면  
+#### <a name="to-restore-a-transaction-log-backup"></a>트랜잭션 로그 백업을 복원하려면  
   
 1.  RESTORE LOG 문을 실행하여 트랜잭션 로그 백업을 적용합니다. 이때 다음을 지정합니다.  
   
@@ -242,7 +246,7 @@ caps.handback.revision: 36
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
-#### 1. 단일 트랜잭션 로그 백업 적용  
+#### <a name="a-applying-a-single-transaction-log-backup"></a>1. 단일 트랜잭션 로그 백업 적용  
  다음 예에서는 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이라는 백업 장치에 상주하는 전체 데이터베이스 백업을 사용하여 `AdventureWorks2012_1`데이터베이스를 복원합니다. 그런 다음 `AdventureWorks2012_log`라는 백업 장치에 상주하는 첫 번째 트랜잭션 로그 백업을 적용합니다. 마지막으로 데이터베이스를 복구합니다.  
   
 ```tsql  
@@ -260,7 +264,7 @@ RESTORE DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### 2. 여러 트랜잭션 로그 백업 적용  
+#### <a name="b-applying-multiple-transaction-log-backups"></a>2. 여러 트랜잭션 로그 백업 적용  
  다음 예에서는 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 이라는 백업 장치에 상주하는 전체 데이터베이스 백업을 사용하여 `AdventureWorks2012_1`데이터베이스를 복원합니다. 그런 다음 `AdventureWorks2012_log`라는 백업 장치에 상주하는 처음 3개의 트랜잭션 로그 백업을 하나씩 적용합니다. 마지막으로 데이터베이스를 복구합니다.  
   
 ```tsql  
@@ -294,14 +298,14 @@ GO
   
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
--   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [데이터베이스를 표시된 트랜잭션으로 복원&#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## 참고 항목  
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>참고 항목  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   

@@ -1,32 +1,36 @@
 ---
-title: "디스크 또는 테이프를 백업 대상으로 지정(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "백업 장치 [SQL Server], 테이프"
-  - "데이터베이스 백업 [SQL Server], 테이프"
-  - "데이터베이스 백업 [SQL Server], 테이프"
-  - "백업 장치 [SQL Server], 디스크"
-  - "디스크 백업 장치 [SQL Server]"
-  - "데이터베이스 백업 [SQL Server], 디스크"
-  - "데이터베이스 백업 [SQL Server], 디스크"
-  - "백업 [SQL Server], 만들기"
-  - "테이프 백업 장치, 백업"
+title: "디스크 또는 테이프를 백업 대상으로 지정(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup devices [SQL Server], tapes
+- backing up databases [SQL Server], tapes
+- database backups [SQL Server], tapes
+- backup devices [SQL Server], disks
+- disk backup devices [SQL Server]
+- database backups [SQL Server], disks
+- backing up databases [SQL Server], disks
+- backups [SQL Server], creating
+- tape backup devices, backing up
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f82d446fbbe47be4698ae458704e28fa8ac95c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# 디스크 또는 테이프를 백업 대상으로 지정(SQL Server)
+# <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>디스크 또는 테이프를 백업 대상으로 지정(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 백업 대상으로 디스크 또는 테이프를 지정하는 방법에 대해 설명합니다.  
@@ -57,9 +61,9 @@ caps.handback.revision: 30
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 디스크나 테이프를 백업 대상으로 지정하려면  
+#### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>디스크나 테이프를 백업 대상으로 지정하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 30
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 디스크나 테이프를 백업 대상으로 지정하려면  
+#### <a name="to-specify-a-disk-or-tape-as-a-backup-destination"></a>디스크나 테이프를 백업 대상으로 지정하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -87,7 +91,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

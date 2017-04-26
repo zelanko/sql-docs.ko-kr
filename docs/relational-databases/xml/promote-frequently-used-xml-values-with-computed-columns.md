@@ -1,33 +1,37 @@
 ---
-title: "계산 열을 사용하여 자주 사용되는 XML 값 승격 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "속성 승격 [SQL Server의 XML]"
-  - "속성 승격 [SQL Server의 XML]"
+title: "계산 열을 사용하여 자주 사용되는 XML 값 승격 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- promoting properties [XML in SQL Server]
+- property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc333316c144154f0f06d4f8f9ae0a2887660700
+ms.lasthandoff: 04/11/2017
+
 ---
-# 계산 열을 사용하여 자주 사용되는 XML 값 승격
+# <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
   쿼리가 주로 적은 수의 요소 및 특성 값으로 작성된 경우 이러한 수량을 관계형 열로 승격시킬 수 있습니다. 이 방식은 전체 XML 인스턴스를 검색하는 동안 XML 데이터의 일부에 대해서 쿼리가 실행된 경우에 유용합니다. XML 열에 XML 인덱스를 만들 필요는 없습니다. 대신 승격된 열을 인덱싱할 수 있습니다. 승격된 열을 사용하도록 쿼리를 작성해야 합니다. 즉, 쿼리 최적화 프로그램은 XML 열에 있는 쿼리를 승격된 열로 다시 대상화하지 않습니다.  
   
  승격된 열은 같은 테이블에 있는 계산 열이거나 테이블에서 사용자가 유지 관리하는 별개의 열일 수 있습니다. 각 XML 인스턴스로부터 단일 항목 값이 승격되는 경우에는 이것으로 충분합니다. 하지만 다중 값 속성의 경우 다음 섹션의 설명과 같이 속성에 대해 별개의 테이블을 만들어야 합니다.  
   
-## xml 데이터 형식에 따른 계산 열  
+## <a name="computed-column-based-on-the-xml-data-type"></a>xml 데이터 형식에 따른 계산 열  
  계산 열은 **xml** 데이터 형식 메서드를 호출하는 사용자 정의 함수를 사용하여 만들 수 있습니다. 계산 열의 유형은 XML을 포함하는 모든 SQL 유형일 수 있습니다. 다음 예에서 확인할 수 있습니다.  
   
-### 예: xml 데이터 형식 메서드에 따른 계산 열  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>예: xml 데이터 형식 메서드에 따른 계산 열  
  책 ISBN 번호에 대한 사용자 정의 함수를 만듭니다.  
   
 ```  
@@ -49,7 +53,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  계산 열은 일반적인 방식으로 인덱싱될 수 있습니다.  
   
-### 예: xml 데이터 형식 메서드에 따른 계산 열 쿼리  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>예: xml 데이터 형식 메서드에 따른 계산 열 쿼리  
  ISBN이 0-7356-1588-2인 <`book`>을 가져오려면  
   
 ```  
@@ -68,7 +72,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
  사용자 정의 함수를 만들고 사용하여 **xml** 데이터 형식과 계산 열을 반환할 수 있습니다. 하지만 XML 계산 열에는 XML 인덱스를 만들 수 없습니다.  
   
-## 속성 테이블 만들기  
+## <a name="creating-property-tables"></a>속성 테이블 만들기  
  XML 데이터에서 여러 값의 속성 중 일부를 하나 이상의 테이블로 승격시키고 해당 테이블에서 인덱스를 만들고 이를 사용하도록 쿼리를 다시 대상화할 수 있습니다. 일반적인 시나리오는 속성 중 일부에 대부분의 쿼리 작업이 포함되는 경우입니다. 사용할 수 있는 기능은 다음과 같습니다.  
   
 -   다중 값 속성을 보유하도록 하나 이상의 테이블을 만듭니다. 테이블마다 하나의 속성을 저장하고 기본 테이블로 다시 조인하기 위해 속성 테이블에 있는 기본 테이블의 기본 키를 중복시키는 것이 편리할 수 있습니다.  
@@ -77,20 +81,20 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   속성 테이블을 유지 관리하기 위해 XML 열에 트리거를 만듭니다. 트리거 내에서 다음 중 하나를 수행합니다.  
   
-    -   **nodes()** 및 **value()**와 같은 **xml** 데이터 형식의 메서드를 사용하여 속성 테이블의 행을 삽입 및 삭제합니다.  
+    -   **nodes()** 및 **value()** 와 같은 **xml**데이터 형식의 메서드를 사용하여 속성 테이블의 행을 삽입 및 삭제합니다.  
   
     -   속성 테이블의 행을 삽입 및 삭제하기 위해 CLR(공용 언어 런타임)에 스트리밍 테이블 반환 함수를 만듭니다.  
   
     -   속성 테이블에 대한 SQL 액세스 및 기본 테이블의 XML 열에 대한 XML 액세스를 위한 쿼리를 작성하고 해당 기본 키를 사용하여 테이블 간 조인을 포함시킵니다.  
   
-### 예: 속성 테이블 만들기  
+### <a name="example-create-a-property-table"></a>예: 속성 테이블 만들기  
  이해를 돕기 위해 저자의 이름을 승격해야 한다고 가정해 보십시오. 책에는 한 명 이상의 저자가 있으므로 이름은 다중 값 속성입니다. 각 이름은 속성 테이블의 별개의 행에 저장됩니다. 기본 테이블의 기본 키는 역 조인을 위해 속성 테이블에 중복됩니다.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### 예: XML 인스턴스로부터 행 집합을 생성하기 위한 사용자 정의 함수 만들기  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>예: XML 인스턴스로부터 행 집합을 생성하기 위한 사용자 정의 함수 만들기  
  다음 테이블 반환 함수 udf_XML2Table은 기본 키 값과 XML 인스턴스를 허용합니다. 이 함수는 <`book`> 요소에 대한 모든 저자의 이름을 검색하고 기본 키와 이름의 쌍인 행 집합을 반환합니다.  
   
 ```  
@@ -106,7 +110,7 @@ begin
 end  
 ```  
   
-### 예: 속성 테이블을 채우기 위한 트리거 만들기  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>예: 속성 테이블을 채우기 위한 트리거 만들기  
  삽입 트리거는 속성 테이블에 행을 삽입합니다.  
   
 ```  
@@ -153,7 +157,7 @@ begin
 end  
 ```  
   
-### 예: 저자의 이름이 같은 XML 인스턴스 찾기  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>예: 저자의 이름이 같은 XML 인스턴스 찾기  
  XML 열에 쿼리를 만들 수 있습니다. 또는 속성 테이블에서 "David"라는 이름을 검색하고 기본 테이블에서 역 조인을 수행하여 XML 인스턴스를 반환할 수 있습니다. 예를 들어  
   
 ```  
@@ -162,7 +166,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### 예: CLR 스트리밍 테이블 반환 함수를 사용한 해결 방법  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>예: CLR 스트리밍 테이블 반환 함수를 사용한 해결 방법  
  이 해결 방법은 다음 단계로 구성됩니다.  
   
 1.  ISqlReader를 구현하고 XML 인스턴스에 경로 식을 적용하여 스트리밍 테이블 반환 출력을 생성하는 SqlReaderBase라는 CLR 클래스를 정의합니다.  
@@ -174,7 +178,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
  이렇게 하려면 먼저 스트리밍 CLR 함수를 만듭니다. **xml** 데이터 형식은 ADO.NET의 관리 클래스 SqlXml로 제공되며 XmlReader를 반환하는 **CreateReader()** 메서드를 지원합니다.  
   
 > [!NOTE]  
->  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 응용 프로그램에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](../Topic/Architecture%20of%20CLR%20Integration.md)를 참조하세요.  
+>  이 섹션의 예제 코드에서는 XPathDocument 및 XPathNavigator가 사용됩니다. 이를 통해 사용자는 모든 XML 문서를 메모리에 강제로 로드할 수 있습니다. 일부 큰 XML 문서를 처리하기 위해 응용 프로그램에서 비슷한 코드를 사용하는 경우 이 코드는 확장할 수 없습니다. 대신 메모리 할당을 적게 유지하고 가능한 모든 경우에 스트리밍 인터페이스를 사용합니다. 성능에 대한 자세한 내용은 [CLR 통합 아키텍처](http://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)를 참조하세요.  
   
 ```  
 public class c_streaming_xml_tvf {  
@@ -252,7 +256,7 @@ as
   
  삭제 트리거는 비-CLR 버전과 동일합니다. 하지만 업데이트 트리거는 udf_XML2Table() 함수를 CLR_udf_XML2Table() 함수로 바꿉니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [계산 열에 XML 사용](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

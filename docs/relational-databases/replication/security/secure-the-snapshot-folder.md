@@ -1,30 +1,34 @@
 ---
-title: "스냅숏 폴더 보안 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스냅숏 [SQL Server 복제], 보안"
+title: "스냅숏 폴더 보안 설정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server replication], security
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 190f5cb081710100927ef837a09699cfc6c78f11
+ms.lasthandoff: 04/11/2017
+
 ---
-# 스냅숏 폴더 보안 설정
+# <a name="secure-the-snapshot-folder"></a>스냅숏 폴더 보안 설정
   스냅숏 폴더는 스냅숏 파일을 저장하는 디렉터리입니다. 스냅숏 저장 전용 디렉터리를 지정하는 것이 좋습니다. 스냅숏 에이전트에 폴더에 대한 쓰기 권한을 부여하고 병합 에이전트 또는 배포 에이전트가 폴더에 액세스할 때 사용하는 Windows 계정에만 읽기 권한을 부여합니다. 에이전트에 연결된 Windows 계정은 원격 컴퓨터에 있는 스냅숏 폴더에 액세스할 수 있는 도메인 계정이어야 합니다.  
   
 > [!NOTE]  
->  사용자 계정 컨트롤 (UAC)를 쉽게 관리할 수는 관리자 권한으로 권한 관리 (라고도 *권한*). UAC를 사용하도록 설정된 운영 체제에서 실행할 때는 관리자가 해당 관리자 권한을 사용하지 않습니다. 대신 대부분의 동작을 관리 권한이 없는 일반 사용자로 수행하며 필요한 경우에만 임시로 해당 관리자 권한을 사용합니다. UAC에서는 스냅숏 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅숏 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅숏 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다.  
+>  UAC(사용자 계정 컨트롤)는 관리자가 승격된 사용자 권한( *권한*이라고도 함)을 관리하는 데 유용합니다. UAC를 사용하도록 설정된 운영 체제에서 실행할 때는 관리자가 해당 관리자 권한을 사용하지 않습니다. 대신 대부분의 동작을 관리 권한이 없는 일반 사용자로 수행하며 필요한 경우에만 임시로 해당 관리자 권한을 사용합니다. UAC에서는 스냅숏 공유에 대한 관리 액세스를 거부할 수 있습니다. 따라서 스냅숏 에이전트, 배포 에이전트 및 병합 에이전트에서 사용하는 Windows 계정에 스냅숏 공유 권한을 명시적으로 부여해야 합니다. Windows 계정이 Administrators 그룹의 멤버인 경우에도 이 작업을 수행해야 합니다.  
   
- 배포 구성 마법사나 새 게시 마법사를 통해 배포자를 구성할 때 스냅숏 폴더를 로컬 경로로 기본값: X:\Program Files\Microsoft SQL Server\\*\< 인스턴스>*\MSSQL\ReplData입니다. 원격 배포자 또는 끌어오기 구독을 사용 하는 경우 UNC 네트워크 공유를 지정 해야 합니다 (예: \\\\<*컴퓨터 이름 >*\snapshot)는 로컬 경로 대신 합니다.  
+ 배포 구성 마법사나 새 게시 마법사를 사용하여 배포자를 구성할 때 스냅숏 폴더의 기본값은 로컬 경로인 X:\Program Files\Microsoft SQL Server\\\*\<instance>*\MSSQL\ReplData입니다. 원격 배포자나 끌어오기 구독을 사용하는 경우에는 로컬 경로 대신 UNC 네트워크 공유(예: \\\\<*computername>*\snapshot)를 지정해야 합니다.  
   
  스냅숏 폴더에 대한 액세스 권한을 부여할 때는 폴더가 액세스되는 방법에 따라 권한을 부여해야 합니다. 다음 대화 상자 탭은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003에서 사용됩니다.  
   
@@ -40,20 +44,20 @@ caps.handback.revision: 46
 > [!NOTE]  
 >  게시를 삭제하면 복제는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트에서 스냅숏 폴더를 제거합니다. 이 계정에 충분한 권한이 없는 경우에는 적절한 권한이 있는 계정으로 로그인하여 해당 폴더를 수동으로 삭제해야 합니다. 폴더를 삭제하려면 폴더가 로컬 경로인 경우 **수정** 권한이 필요하고 네트워크 경로인 경우 **모든 권한** 이 필요합니다.  
   
-## FTP를 통해 스냅숏 배달  
+## <a name="delivering-snapshots-through-ftp"></a>FTP를 통해 스냅숏 배달  
  보안상 스냅숏을 UNC 공유에 저장하는 것이 가장 좋지만 스냅숏을 FTP 공유에 저장한 다음 FTP를 통해 구독자로 배달할 수도 있습니다. FTP 서버를 구성할 때는 스냅숏 에이전트가 게시에 대한 쓰기 권한을 가지도록 허용하는 기본 UNC 공유가 가상 디렉터리에 표시되도록 합니다.  
   
  구독자를 구성하여 FTP를 통해 스냅숏을 검색하려면 먼저 FTP 서버에 FTP 로그인과 암호를 설정합니다. 이 로그인과 암호는 스냅숏 파일을 다운로드할 수 있도록 구독자에게 읽기(또는 "가져오기") 액세스 권한을 허용합니다.  
   
- FTP 통해 스냅숏을 배달 하려면 참조 [FTP를 통해 스냅숏 배달](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)합니다.  
+ FTP를 통해 스냅숏을 배달하려면 [FTP를 통해 스냅숏 배달](../../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
  FTP를 통해 스냅숏에 액세스하는 데 필요한 암호를 설정하고 변경하는 방법은 [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)항목의 "FTP 스냅숏 배달" 섹션을 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [대체 스냅숏 폴더 위치](../../../relational-databases/replication/alternate-snapshot-folder-locations.md)   
  [스냅숏으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [복제 보안을 위한 최선의 구현 방법](../../../relational-databases/replication/security/replication-security-best-practices.md)   
- [보안 및 보호 & #40입니다. 복제 및 #41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
+ [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
+ [보안 및 보호&#40;복제&#41;](../../../relational-databases/replication/security/security-and-protection-replication.md)   
  [FTP를 통해 스냅숏 전송](../../../relational-databases/replication/transfer-snapshots-through-ftp.md)  
   
   

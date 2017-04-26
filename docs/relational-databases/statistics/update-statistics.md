@@ -1,25 +1,29 @@
 ---
-title: "통계 업데이트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "통계 업데이트"
-  - "통계 [SQL Server], 업데이트"
+title: "통계 업데이트 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- updating statistics
+- statistics [SQL Server], updating
 ms.assetid: 4b97c0b4-03ff-4cfb-9c3f-3b33290b7a2c
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fca31288577f6905b99ac2c76e018ed134f10171
+ms.lasthandoff: 04/11/2017
+
 ---
-# 통계 업데이트
+# <a name="update-statistics"></a>통계 업데이트
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰에 대한 쿼리 최적화 통계를 업데이트할 수 있습니다. 기본적으로 쿼리 최적화 프로그램은 필요할 때 통계를 업데이트하여 쿼리 계획을 향상시킵니다. 하지만 경우에 따라 사용자가 UPDATE STATISTICS 또는 `sp_updatestats` 저장 프로시저를 사용하여 기본 업데이트 주기보다 자주 통계를 업데이트하여 쿼리 성능을 향상시킬 수 있습니다.  
   
  통계를 업데이트하면 쿼리가 최신 통계로 컴파일되지만 쿼리도 다시 컴파일됩니다. 쿼리 계획 향상과 쿼리 재컴파일 소요 시간 간의 성능 균형을 유지해야 하므로 통계를 너무 자주 업데이트하지 않는 것이 좋습니다. 구체적인 성능 균형 유지의 정도는 응용 프로그램에 따라 달라집니다. UPDATE STATISTIC은 통계를 작성하기 위해 tempdb를 사용하여 행 샘플을 정렬할 수 있습니다.  
@@ -45,7 +49,7 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 통계 개체를 업데이트하려면  
+#### <a name="to-update-a-statistics-object"></a>통계 개체를 업데이트하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 통계를 업데이트할 데이터베이스를 확장합니다.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 특정 통계 개체를 업데이트하려면  
+#### <a name="to-update-a-specific-statistics-object"></a>특정 통계 개체를 업데이트하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 9
     GO  
     ```  
   
-#### 테이블의 모든 통계를 업데이트하려면  
+#### <a name="to-update-all-statistics-in-a-table"></a>테이블의 모든 통계를 업데이트하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 9
   
  자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)를 참조하세요.  
   
-#### 데이터베이스의 모든 통계를 업데이트하려면  
+#### <a name="to-update-all-statistics-in-a-database"></a>데이터베이스의 모든 통계를 업데이트하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

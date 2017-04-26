@@ -1,28 +1,32 @@
 ---
-title: "백업 및 복원: 상호 운용성 및 공존성(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "파일 복원 [SQL Server], 관련 기능"
-  - "복원 [SQL Server], 파일"
-  - "파일 [SQL Server] 복원, 관련 기능"
-  - "백업 [SQL Server], 파일 또는 파일 그룹"
-  - "파일 백업 [SQL Server], 관련 기능"
+title: "백업 및 복원: 상호 운용성 및 공존성(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- file restores [SQL Server], related features
+- restoring [SQL Server], files
+- restoring files [SQL Server], related features
+- backups [SQL Server], files or filegroups
+- file backups [SQL Server], related features
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aadb21aaaf4d71cd4a22c3642d2e9a02db7008b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 백업 및 복원: 상호 운용성 및 공존성(SQL Server)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다. 이러한 기능에는 파일 복원 및 데이터베이스 시작, 온라인 복원 및 비활성 인덱스, 데이터베이스 미러링, 증분 복원 및 전체 텍스트 인덱스가 포함됩니다.  
@@ -71,12 +75,12 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  데이터베이스에서 파일 그룹의 하위 집합 복사본을 배포하려면 복제를 이용하세요. 다른 서버로 복사할 파일 그룹의 개체만 복제해야 합니다. 복제에 대한 자세한 내용은 [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md)를 참조하세요.  
   
-### 미러 데이터베이스 만들기  
- 미러 데이터베이스는 미러 서버에서 주 데이터베이스의 백업을 복구하지 않고 복원함으로써 생성됩니다. 복원 시 동일한 데이터베이스 이름을 유지해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
+### <a name="creating-the-mirror-database"></a>미러 데이터베이스 만들기  
+ 미러 데이터베이스는 미러 서버에서 주 데이터베이스의 백업을 복구하지 않고 복원함으로써 생성됩니다. 복원 시 동일한 데이터베이스 이름을 유지해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)의 몇 가지 기능에 대한 백업 및 복원 고려 사항에 대해 설명합니다.  
   
  지원되는 경우 증분 복원 시퀀스를 사용하여 미러 데이터베이스를 만들 수 있습니다. 그러나 파일 그룹을 모두 복원하기 전까지는 미러링을 시작할 수 없으며 일반적으로 미러 데이터베이스를 가져오기 위한 복원된 로그 백업은 주 데이터베이스에 의해 지정 시간 내에 닫을 수 있습니다. 자세한 내용은 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
   
-### 미러링 도중 백업 및 복원에 대한 제한 사항  
+### <a name="restrictions-on-backup-and-restore-during-mirroring"></a>미러링 도중 백업 및 복원에 대한 제한 사항  
  데이터베이스 미러링 세션이 활성화되어 있는 동안에는 다음과 같은 제한 사항이 적용됩니다.  
   
 -   미러 데이터베이스의 백업 및 복원이 허용되지 않습니다.  
@@ -93,7 +97,7 @@ caps.handback.revision: 45
 > [!NOTE]  
 >  전체 텍스트 인덱스가 포함된 파일 그룹의 파일 그룹 ID를 보려면 [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)의 data_space_id 열을 선택합니다.  
   
-### 분리된 파일 그룹 내의 전체 텍스트 인덱스 및 테이블  
+### <a name="full-text-indexes-and-tables-in-separate-filegroups"></a>분리된 파일 그룹 내의 전체 텍스트 인덱스 및 테이블  
  전체 텍스트 인덱스가 모든 관련 테이블 데이터와 별개의 파일 그룹에 존재하는 경우 증분 복원의 동작은 어느 파일 그룹이 먼저 복원되어 온라인 상태가 되는지에 따라 달라집니다.  
   
 -   전체 텍스트 인덱스가 포함된 파일 그룹이 관련 테이블 데이터가 포함된 파일 그룹보다 먼저 복원되어 온라인 상태가 되는 경우 전체 텍스트 검색은 전체 텍스트 인덱스가 온라인 상태가 된 직후부터 올바르게 동작합니다.  
@@ -106,7 +110,7 @@ caps.handback.revision: 45
   
     -   인덱스를 사용할 수 없으므로 변경 내용 추적에 관계 없이 전체 텍스트 쿼리는 실패합니다. 전체 텍스트 인덱스가 포함된 파일 그룹이 오프라인일 때 전체 텍스트 쿼리를 시도하면 오류가 반환됩니다.  
   
-    -   상태 함수(예: FULLTEXTCATALOGPROPERTY)는 전체 텍스트 인덱스에 액세스할 필요가 없을 때에만 성공합니다. 예를 들어 온라인 전체 텍스트 메타데이터에 대한 액세스는 성공하지만 **uniquekeycount, itemcount**는 실패합니다.  
+    -   상태 함수(예: FULLTEXTCATALOGPROPERTY)는 전체 텍스트 인덱스에 액세스할 필요가 없을 때에만 성공합니다. 예를 들어 온라인 전체 텍스트 메타데이터에 대한 액세스는 성공하지만 **uniquekeycount, itemcount** 는 실패합니다.  
   
      전체 텍스트 인덱스 파일 그룹을 복원하여 온라인 상태로 만든 후에는 인덱스 데이터와 테이블 데이터가 일치합니다.  
   
@@ -130,9 +134,10 @@ caps.handback.revision: 45
   
 -   [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[활성 보조: 보조 복제본에 백업\(Always On 가용성 그룹)\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[활성 보조: 보조 복제본에 백업 \(Always On 가용성 그룹)\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   
+

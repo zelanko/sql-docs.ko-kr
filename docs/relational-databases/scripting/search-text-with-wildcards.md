@@ -1,32 +1,36 @@
 ---
-title: "와일드카드로 텍스트 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.wildcards"
-  - "vswildcardsbuilder"
-helpviewer_keywords: 
-  - "검색 [SQL Server Management Studio], 와일드카드"
-  - "쿼리 편집기 [SQL Server Management Studio], 와일드카드 검색"
-  - "와일드카드 옵션 [SQL Server Management Studio]"
+title: "와일드카드로 텍스트 검색 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.wildcards
+- vswildcardsbuilder
+helpviewer_keywords:
+- searches [SQL Server Management Studio], wildcards
+- Query Editor [SQL Server Management Studio], wildcard searches
+- wildcard options [SQL Server Management Studio]
 ms.assetid: 449600f8-cc87-4b3f-878a-59c158a88a40
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c34c1db9c36da6e23375df861ed5a3ad6d2bd12f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 와일드카드로 텍스트 검색
+# <a name="search-text-with-wildcards"></a>와일드카드로 텍스트 검색
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 다음 식은 문자나 숫자를 대체할 수 있습니다.  
   
-#### 와일드카드를 사용하여 검색하려면  
+#### <a name="to-search-using-wildcards"></a>와일드카드를 사용하여 검색하려면  
   
 1.  빠른 찾기, **파일에서 찾기** , **빠른 바꾸기**또는 **파일에서 바꾸기**작업 중에 **찾을 내용** 필드에서 와일드카드를 사용할 수 있게 하려면 **찾기 옵션** 아래에서 **사용** 옵션을 선택한 다음 **와일드카드**를 선택합니다.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 23
 |하나 이상의 문자|*|하나 이상의 임의의 문자와 대응합니다. 예를 들어 new*는 "new"를 포함하는 임의의 텍스트(예: newfile.txt)와 대응합니다.|  
 |문자 집합|[ ]|집합에 지정된 문자 중 하나와 대응합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [찾기 및 바꾸기](../../relational-databases/scripting/search-and-replace.md)   
  [정규식을 사용한 텍스트 검색](../../relational-databases/scripting/search-text-with-regular-expressions.md)  
   

@@ -1,27 +1,31 @@
 ---
-title: "게시 정보, 에이전트(스냅숏 게시) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1"
+title: "게시 정보, 에이전트(스냅숏 게시) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publicationinfo.downlevelagents.snapshot.f1
 ms.assetid: 599ff80b-392c-43aa-9db2-dc4ed33d4f6e
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e8cdcea6f91b4126170c7590cc5e98f4ae3af1f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 게시 정보, 에이전트(스냅숏 게시)
+# <a name="publication-information-agents-snapshot-publication"></a>게시 정보, 에이전트(스냅숏 게시)
   **에이전트** 탭은 선택한 게시에 대한 스냅숏 에이전트의 요약 정보를 표시합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  자세한 내용 및 스냅숏 에이전트와 관련된 태스크를 보려면 해당 에이전트에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
 -   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 정렬합니다.  
@@ -46,7 +50,7 @@ caps.handback.revision: 23
 -   완료  
   
  **에이전트**  
- 스냅숏 에이전트 이 에이전트는 스냅숏 게시와 연결된 유일한 에이전트입니다. 배포 에이전트는 이 게시에 대한 구독과 연결됩니다. 자세한 내용은 참조 [정보 보기 및는 에이전트 구독 관련 & #40;에 대 한 작업 수행 복제 모니터 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)합니다.  
+ 스냅숏 에이전트 이 에이전트는 스냅숏 게시와 연결된 유일한 에이전트입니다. 배포 에이전트는 이 게시에 대한 구독과 연결됩니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  
@@ -57,10 +61,10 @@ caps.handback.revision: 23
  **마지막 동작**  
  가장 최근의 에이전트 실행에서 수행된 마지막 동작입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [정보 보기 및 게시 & #40;에 대 한 작업을 수행 합니다. 복제 모니터 & #41.](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
- [정보 보기 및 게시 & #40;와 관련 된 에이전트에 대 한 작업을 수행 합니다. 복제 모니터 & #41.](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)   
+ [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

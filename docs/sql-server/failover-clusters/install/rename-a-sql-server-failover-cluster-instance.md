@@ -1,27 +1,31 @@
 ---
-title: "SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클러스터 [SQL Server], 가상 서버"
-  - "가상 서버 이름 바꾸기"
-  - "가상 서버 [SQL Server], 장애 조치(failover) 클러스터링"
-  - "장애 조치(failover) 클러스터링 [SQL Server], 가상 서버"
+title: "SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], virtual servers
+- renaming virtual servers
+- virtual servers [SQL Server], failover clustering
+- failover clustering [SQL Server], virtual servers
 ms.assetid: 2a49d417-25fb-4760-8ae5-5871bfb1e6f3
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0d98bc0762d800a4fc86c56c37ee815fd189a4cd
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
+# <a name="rename-a-sql-server-failover-cluster-instance"></a>SQL Server 장애 조치(Failover) 클러스터 인스턴스 이름 변경
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 장애 조치 클러스터의 일부인 경우 가상 서버의 이름을 바꾸는 방법은 독립 실행형 인스턴스의 이름을 바꾸는 방법과 다릅니다. 자세한 내용은 [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)를 참조하세요.  
   
  가상 서버의 이름은 항상 SQL 네트워크 이름(SQL 가상 서버 네트워크 이름)과 동일합니다. 가상 서버의 이름은 바꿀 수 있지만 인스턴스 이름은 바꿀 수 없습니다. 예를 들어 VS1\instance1이라는 가상 서버 이름을 SQL35\instance1과 같은 다른 이름으로 바꿀 수 있지만 이름 중 인스턴스 부분인 instance1은 바뀌지 않습니다.  
@@ -32,7 +36,7 @@ caps.handback.revision: 16
   
 -   데이터베이스 미러링을 사용하도록 구성된 가상 서버 이름을 바꿀 때는 이름 바꾸기 작업을 수행하기 전에 데이터베이스 미러링을 해제한 다음 새로운 가상 서버 이름으로 데이터베이스 미러링을 다시 구성해야 합니다. 데이터베이스 미러링의 메타데이터는 새로운 가상 서버 이름을 반영하도록 자동으로 업데이트되지 않습니다.  
   
-### 가상 서버 이름을 바꾸려면  
+### <a name="to-rename-a-virtual-server"></a>가상 서버 이름을 바꾸려면  
   
 1.  클러스터 관리자를 사용하여 SQL 네트워크 이름을 새 이름으로 바꿉니다.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 16
   
 3.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스를 다시 온라인으로 만듭니다.  
   
-## 이름 바꾸기 작업 확인  
+## <a name="verify-the-renaming-operation"></a>이름 바꾸기 작업 확인  
  가상 서버 이름을 바꾼 후 이전 이름을 사용하던 연결은 새 이름을 사용하여 연결해야 합니다.  
   
  이러한 남은 작업이 완료되었는지 확인하기 위해 **@@servername** 또는 **sys.servers**에서 정보를 선택합니다. **@@servername** 함수는 새로운 가상 서버 이름을 반환하며 **sys.servers** 테이블은 새로운 가상 서버 이름을 표시합니다. 또한 장애 조치 프로세스가 새 이름으로 제대로 작동하는지 확인하기 위해 다른 노드에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스에 오류를 발생시켜 봐야 합니다.  
@@ -49,7 +53,7 @@ caps.handback.revision: 16
   
  가상 서버 이름 바꾸기 작업에 따른 네트워크 전파 지연을 최소화하려면 다음과 같은 단계를 수행하십시오.  
   
-#### 네트워크 전파 지연을 최소화하려면  
+#### <a name="to-minimize-network-propagation-delay"></a>네트워크 전파 지연을 최소화하려면  
   
 1.  서버 노드의 명령 프롬프트에서 다음 명령을 실행합니다.  
   
@@ -59,20 +63,18 @@ caps.handback.revision: 16
     nbtstat –RR  
     ```  
   
-## 이름 바꾸기 작업 후 추가 고려 사항  
+## <a name="additional-considerations-after-the-renaming-operation"></a>이름 바꾸기 작업 후 추가 고려 사항  
  장애 조치(Failover) 클러스터의 네트워크 이름을 바꾼 후에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 모든 시나리오를 지원하기 위해 다음 지침을 확인하고 수행해야 합니다.  
-  
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Windows 클러스터 관리 도구를 사용하여 [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 네트워크 이름을 변경한 후 이후 업그레이드 또는 설치 제거 작업이 실패할 수 있습니다. 이 문제를 해결하려면 [이 문서](http://go.microsoft.com/fwlink/?LinkId=244002)(http://go.microsoft.com/fwlink/?LinkId=244002)의 문제 해결 섹션에 있는 지침에 따라 **ClusterName** 레지스트리 항목을 업데이트합니다.  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 서비스에 대한 아래의 추가 작업을 확인 및 수행합니다.  
   
--   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md)을 참조하세요.  
+-   SQL 에이전트가 이벤트를 전달하도록 구성된 경우 레지스트리 설정을 수정합니다. 자세한 내용은 [이벤트 전달 서버 지정&#40;SQL Server Management Studio&#41;](http://msdn.microsoft.com/library/81dfcbe4-3000-4e77-99de-bf85fef63a12)을 참조하세요.  
   
 -   컴퓨터/클러스터 네트워크 이름을 바꿀 때 마스터 서버(MSX) 및 대상 서버(TSX) 인스턴스 이름을 수정합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
-    -   [마스터 서버에서 여러 대상 서버 제거](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [마스터 서버에서 여러 대상 서버 제거](http://msdn.microsoft.com/library/61a3713b-403a-4806-bfc4-66db72ca1156)  
   
-    -   [다중 서버 환경 만들기](../../../ssms/agent/create-a-multiserver-environment.md)  
+    -   [다중 서버 환경 만들기](http://msdn.microsoft.com/library/edc2b60d-15da-40a1-8ba3-f1d473366ee6)  
   
 -   업데이트된 서버 이름을 사용하여 로그를 백업 및 복원할 수 있도록 로그 전달을 다시 구성합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -80,9 +82,9 @@ caps.handback.revision: 16
   
     -   [로그 전달 제거&#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   
--   서버 이름을 기반으로 하는 작업 단계를 업데이트합니다. 자세한 내용은 [Manage Job Steps](../../../ssms/agent/manage-job-steps.md)을(를) 참조하세요.  
+-   서버 이름을 기반으로 하는 작업 단계를 업데이트합니다. 자세한 내용은 [Manage Job Steps](http://msdn.microsoft.com/library/51352afc-a0a4-428b-8985-f9e58bb57c31)을(를) 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

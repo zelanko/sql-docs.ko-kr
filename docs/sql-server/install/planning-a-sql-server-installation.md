@@ -1,30 +1,34 @@
 ---
-title: "SQL Server 설치 계획 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "SQL Server 설치, 계획"
+title: "SQL Server 설치 계획 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- installing SQL Server, planning
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 72117bfd62b37633e2b815fb1c8014b48c63d2ab
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 설치 계획
+# <a name="planning-a-sql-server-installation"></a>SQL Server 설치 계획
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하려면 다음 단계를 수행하십시오.  
   
 -   설치 요구 사항, 시스템 구성 검사 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치를 위한 보안 고려 사항을 검토합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 설치하거나 이후 버전으로 업그레이드합니다. 업그레이드하기 전에 [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)을 검토합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행하여 설치하거나 이후 버전으로 업그레이드합니다. 업그레이드하기 전에 [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)을 검토합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성합니다.  
   
@@ -33,23 +37,23 @@ caps.handback.revision: 36
  사용 조건은 검토 및 동의를 위해 설치 프로그램 사용자 인터페이스에 표시됩니다. /Q 또는 /QS 매개 변수를 사용한 무인 설치는 /IAcceptSQLServerLicenseTerms 매개 변수를 포함해야 합니다. [Microsoft  소프트웨어 사용권 계약(Microsoft  Software  License  Terms)](http://go.microsoft.com/fwlink/?LinkID=148209)에서 사용 조건을 별도로 검토할 수 있습니다.  
   
 > [!NOTE]  
->  소프트웨어의 수령 방법(예:  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스를 통해 수령)에 따라 사용자의 소프트웨어 사용에 추가 조건이 적용될 수 있습니다.  
+>  소프트웨어의 수령 방법(예: [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스를 통해 수령)에 따라 사용자의 소프트웨어 사용에 추가 조건이 적용될 수 있습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 설치의 새로운 기능](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
- 이 항목에서는 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 새로운 기능 및 향상된 기능에 대해 자세히 설명합니다.  
+ 이 항목에서는 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전의 새로운 기능 및 향상된 기능에 대해 자세히 설명합니다.  
   
- [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md)  
- 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
+ [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
+ 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스를 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
   
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
- 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하기 전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 후에 고려해야 하는 보안 권장 사항에 대해 설명합니다.  
+ 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하기 전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 후에 고려해야 하는 보안 권장 사항에 대해 설명합니다.  
   
  [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이 릴리스에서 기본 서비스 구성과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 중에 그리고 설치 후에 설정할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 구성 옵션에 대해 설명합니다.  
   
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)  
- 이 항목에서는 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스의 네트워크 프로토콜 기본 구성과 사용 가능한 구성 옵션에 대해 설명합니다.  
+ 이 항목에서는 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]릴리스의 네트워크 프로토콜 기본 구성과 사용 가능한 구성 옵션에 대해 설명합니다.  
   
  [여러 버전 및 인스턴스의 SQL Server 작업](../../sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 여러 버전 및 인스턴스를 설치할 때 고려해야 할 사항에 대해 설명합니다.  
@@ -57,26 +61,27 @@ caps.handback.revision: 36
  [SQL Server의 로컬 언어 버전](../../sql-server/install/local-language-versions-in-sql-server.md)  
  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 지역화된 버전에 대해 설명합니다.  
   
-## 관련 단원  
- [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016.md)  
- 이 섹션에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다.  
+## <a name="related-sections"></a>관련 단원  
+ [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)  
+ 이 섹션에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]설치를 위해 필요한 여러 설치 옵션에 대한 개요를 제공합니다.  
   
- [SQL Server 2016 비즈니스 인텔리전스 기능 설치](../../sql-server/install/install-sql-server-2016-business-intelligence-features.md)  
+ [SQL Server 2016 비즈니스 인텔리전스 기능 설치](../../sql-server/install/install-sql-server-business-intelligence-features.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 Microsoft BI 플랫폼의 일부인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 설치하는 방법에 대해 설명합니다.  
   
- [SQL Server 2016으로 업그레이드](../../database-engine/install-windows/upgrade-to-sql-server-2016.md)  
+ [Upgrade to SQL Server 2016](../../database-engine/install-windows/upgrade-sql-server.md)  
  이 섹션에서는 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 인스턴스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드에 대한 개요를 제공합니다.  
   
- [SQL Server 2016 제거](../../sql-server/install/uninstall-sql-server-2016.md)  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 인스턴스를 완전히 제거하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비하려면 이 섹션을 참조하십시오.  
+ [SQL Server 2016 제거](../../sql-server/install/uninstall-sql-server.md)  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 기존 인스턴스를 완전히 제거하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비하려면 이 섹션을 참조하십시오.  
   
  [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 설명서 중 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터를 설치 및 구성하는 방법에 대해 설명합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [고가용성 솔루션&#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
  [장애 조치(Failover) 클러스터링을 설치하기 전에](../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
- [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)  
+ [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   
+

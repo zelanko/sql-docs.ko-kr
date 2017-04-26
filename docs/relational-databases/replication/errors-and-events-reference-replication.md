@@ -1,34 +1,38 @@
 ---
-title: "오류 및 이벤트 참조(복제) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "오류 [SQL Server 복제], 문제 해결"
-  - "문제 해결 [SQL Server 복제], 오류"
-  - "복제 [SQL Server], 문제 해결"
-  - "오류 [SQL Server 복제]"
-  - "오류 및 이벤트 참조 [SQL Server 복제]"
+title: "오류 및 이벤트 참조(복제) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server replication], troubleshooting
+- troubleshooting [SQL Server replication], errors
+- replication [SQL Server], troubleshooting
+- errors [SQL Server replication]
+- errors and events reference [SQL Server replication]
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
+ms.lasthandoff: 04/11/2017
+
 ---
-# 오류 및 이벤트 참조(복제)
+# <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
   설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  
   
-|오류| 메시지 |  
+|오류|메시지|  
 |-----------|-------------|  
-|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|개체에 중복 키 행을 삽입할 수 없습니다 ' %. * l s 고유 인덱스가 ' %.\*l s '입니다.|  
-|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|%ls 제약 조건 '%.*ls'을(를) 위반했습니다. 개체에 중복 키를 삽입할 수 없습니다 ' %.\*l s '입니다.|  
+|[MSSQL_ENG002601](../../relational-databases/replication/mssql-eng002601.md)|고유 인덱스가 '%.\*ls'인 개체 '%.*ls'에 중복 키 행을 삽입할 수 없습니다.|  
+|[MSSQL_ENG002627](../../relational-databases/replication/mssql-eng002627.md)|%ls 제약 조건 '%.*ls'을(를) 위반했습니다. 개체 '%.\*ls'에 중복 키를 삽입할 수 없습니다.|  
 |[MSSQL_ENG003165](../../relational-databases/replication/mssql-eng003165.md)|데이터베이스 '%ls'이(가) 복원되었지만 복제가 복원/제거되는 동안 오류가 발생했습니다. 데이터베이스가 오프라인 상태로 남아 있습니다. SQL Server 온라인 설명서의 MSSQL_ENG003165 항목을 참조하십시오.|  
 |[MSSQL_ENG003724](../../relational-databases/replication/mssql-eng003724.md)|%S_MSG '%.*ls'은(는) 복제에 사용 중이므로 %S_MSG할 수 없습니다.|  
 |[MSSQL_ENG004929](../../relational-databases/replication/mssql-eng004929.md)|%S_MSG '%.*ls'은(는) 복제용으로 게시 중이므로 변경할 수 없습니다.|  
@@ -50,7 +54,7 @@ caps.handback.revision: 25
 |[MSSQL_ENG014163](../../relational-databases/replication/mssql-eng014163.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG014164](../../relational-databases/replication/mssql-eng014164.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
 |[MSSQL_ENG014165](../../relational-databases/replication/mssql-eng014165.md)|게시 [%s]에 대한 임계값 [%s:%s]이(가) 설정되어 있습니다. 병합 에이전트가 실행 중이고 필요한 요구 사항에 맞는지 확인하십시오.|  
-|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|사용자가 로그인 하지 못했습니다 ' %. * ls'.%.\*ls|  
+|[MSSQL_ENG018456](../../relational-databases/replication/mssql-eng018456.md)|사용자 '%.*ls'이(가) 로그인하지 못했습니다.%.\*ls|  
 |[MSSQL_ENG018752](../../relational-databases/replication/mssql-eng018752.md)|한 번에 하나의 로그 판독기 에이전트 또는 로그 관련 프로시저(sp_repldone, sp_replcmds 및 sp_replshowcmds)만 데이터베이스에 연결할 수 있습니다. 로그 관련 프로시저를 실행한 경우 로그 판독기 에이전트를 시작하거나 다른 로그 관련 프로시저를 실행하기 전에 프로시저가 실행된 연결을 삭제하거나 해당 연결에 대해 sp_replflush를 실행하십시오.|  
 |[MSSQL_ENG020554](../../relational-databases/replication/mssql-eng020554.md)|복제 에이전트가 %ld분 동안 진행률 메시지를 로깅하지 않았습니다. 이것은 에이전트가 응답하지 않거나 시스템 작업이 많음을 나타낼 수 있습니다. 레코드가 대상으로 복제되고 구독자, 게시자 및 배포자에 대한 연결이 여전히 활성 상태인지 확인하십시오.|  
 |[MSSQL_ENG020557](../../relational-databases/replication/mssql-eng020557.md)|에이전트를 종료합니다. 자세한 내용은 작업 '%s'에 대한 SQL Server 에이전트 작업 기록을 참조하십시오.|  

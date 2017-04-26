@@ -1,30 +1,34 @@
 ---
-title: "인덱스 속성 F1 도움말 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.swb.indexproperties.filter.f1"
-  - "sql13.swb.indexproperties.partitions.f1"
-  - "sql13.swb.indexproperties.general.f1"
-  - "sql13.swb.indexproperties.storage.f1"
-  - "sql13.swb.indexproperties.columns.f1"
-  - "sql13.swb.indexproperties.options.f1"
-  - "sql13.swb.indexproperties.spatial.f1"
+title: "인덱스 속성 F1 도움말 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.swb.indexproperties.filter.f1
+- sql13.swb.indexproperties.partitions.f1
+- sql13.swb.indexproperties.general.f1
+- sql13.swb.indexproperties.storage.f1
+- sql13.swb.indexproperties.columns.f1
+- sql13.swb.indexproperties.options.f1
+- sql13.swb.indexproperties.spatial.f1
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d646d06bd41ce4db35011d65ecab45109326c15
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 속성 F1 도움말
+# <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목의 섹션에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 대화 상자를 사용하여 이용할 수 있는 다양한 인덱스 속성을 참조합니다.  
@@ -67,13 +71,13 @@ caps.handback.revision: 38
   
  16개 이하의 열만 단일 복합 인덱스에 참여할 수 있습니다. 열이 17개 이상인 경우에는 이 항목의 마지막 부분에 있는 "포괄 열"을 참조하세요.  
   
- 공간 인덱스는 공간 데이터 형식이 포함되어 있는 단일 열(*공간 열*)에 대해서만 정의할 수 있습니다.  
+ 공간 인덱스는 공간 데이터 형식이 포함되어 있는 단일 열( *공간 열*)에 대해서만 정의할 수 있습니다.  
   
  **이름**  
  인덱스 키에 참여하는 열 이름을 표시합니다.  
   
  **정렬 순서**  
- 선택한 인덱스 열의 정렬 방향(**오름차순** 또는 **내림차순**)을 지정합니다.  
+ 선택한 인덱스 열의 정렬 방향( **오름차순** 또는 **내림차순**)을 지정합니다.  
   
 > [!NOTE]  
 >  인덱스 유형이 **기본 XML** 또는 **공간**인 경우에는 테이블에 이 열이 나타나지 않습니다.  
@@ -82,7 +86,7 @@ caps.handback.revision: 38
  데이터 형식 정보를 표시합니다.  
   
 > [!NOTE]  
->  테이블 열이 계산 열인 경우에는 **데이터 형식**에 "계산 열"이 표시됩니다.  
+>  테이블 열이 계산 열인 경우에는 **데이터 형식** 에 "계산 열"이 표시됩니다.  
   
  **크기**  
  열 데이터 형식을 저장하는 데 필요한 최대 바이트 수를 표시합니다. 공간 또는 XML 열의 경우에는 0이 표시됩니다.  
@@ -94,7 +98,7 @@ caps.handback.revision: 38
  인덱스 키에 참여하는 열이 테이블 또는 뷰 열에 NULL 값을 저장하도록 허용할지 여부를 나타냅니다.  
   
  **추가**  
- 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<테이블 이름>**에서 열 선택*** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
+ 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<테이블 이름>***에서 열 선택** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
   
  **제거**  
  선택된 열을 인덱스 키에 참여하는 열에서 제거합니다.  
@@ -106,7 +110,7 @@ caps.handback.revision: 38
  인덱스 키 표에서 선택된 열을 아래로 이동합니다.  
   
  **Columnstore 열**  
- **추가**를 클릭하여 columnstore 인덱스의 열을 선택합니다. columnstore 인덱스에 대한 제한 사항은 [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 참조하세요.  
+ **추가** 를 클릭하여 columnstore 인덱스의 열을 선택합니다. columnstore 인덱스에 대한 제한 사항은 [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)를 참조하세요.  
   
  **포괄 열**  
  비클러스터형 인덱스에 키가 아닌 열을 포함합니다. 이 옵션을 사용하면 비클러스터형 인덱스의 리프 수준에 열을 추가할 때 키가 아닌 열로 추가하여 인덱스 키의 전체 크기 및 인덱스 키에 포함되는 최대 열 수에 대한 제한을 무시할 수 있습니다. 자세한 내용은 [포괄 열을 사용하여 인덱스 만들기](../../relational-databases/indexes/create-indexes-with-included-columns.md)를 참조하세요.  
@@ -127,10 +131,10 @@ caps.handback.revision: 38
  열의 크기를 바이트 단위로 표시한 것입니다.  
   
  **ID**  
- ID 열인 경우 **예**를 표시하고 ID 열이 아닌 경우 **아니요**를 표시합니다.  
+ ID 열인 경우 **예** 를 표시하고 ID 열이 아닌 경우 **아니요** 를 표시합니다.  
   
- **Null 허용**  
- 테이블 정의에 따라 열에 Null 값이 허용되는 경우 **예**를 표시합니다. 테이블 정의에 따라 열에 Null 값이 허용되지 않는 경우 **아니요** 를 표시합니다.  
+ **Allow Nulls**  
+ 테이블 정의에 따라 열에 Null 값이 허용되는 경우 **예** 를 표시합니다. 테이블 정의에 따라 열에 Null 값이 허용되지 않는 경우 **아니요** 를 표시합니다.  
   
 ##  <a name="Storage"></a> 저장소 페이지 옵션  
  이 페이지를 사용하여 선택한 인덱스의 파일 그룹 또는 파티션 구성표 속성을 확인하거나 수정할 수 있습니다. 인덱스 유형과 관련된 옵션만 표시됩니다.  
@@ -161,7 +165,7 @@ caps.handback.revision: 38
  열의 데이터 형식을 표시합니다.  
   
 > [!NOTE]  
->  테이블 열이 계산 열이면 **열 데이터 형식**에 "계산 열"이 표시됩니다.  
+>  테이블 열이 계산 열이면 **열 데이터 형식** 에 "계산 열"이 표시됩니다.  
   
  **인덱스를 이동하는 동안 DML 문의 온라인 처리 허용**  
  이 옵션을 사용하면 사용자는 인덱스 작업 중에 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있습니다. 자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
@@ -178,24 +182,24 @@ caps.handback.revision: 38
 ##  <a name="Spatial"></a> 공간 페이지 인덱스 옵션  
  **공간** 페이지를 사용하여 공간 속성의 값을 확인하거나 지정할 수 있습니다. 자세한 내용은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)을 참조하세요.  
   
-### 경계 상자  
- *경계 상자*는 기하 평면에서 최상위 표의 경계입니다. 경계 상자 매개 변수는 기하 도형 표 공간 분할에서만 존재합니다. 이러한 매개 변수는 **공간 분할(tessellation) 구성표** 가 **지리 표**인 경우 사용할 수 없습니다.  
+### <a name="bounding-box"></a>경계 상자  
+ *경계 상자* 는 기하 평면에서 최상위 표의 경계입니다. 경계 상자 매개 변수는 기하 도형 표 공간 분할에서만 존재합니다. 이러한 매개 변수는 **공간 분할(tessellation) 구성표** 가 **지리 표**인 경우 사용할 수 없습니다.  
   
  패널에는 경계 상자의 **(***X-min***,***Y-min***)** 및 **(***X-max***,***Y-max***)** 좌표가 표시됩니다. 기본 좌표 값은 없습니다. 따라서 **geometry** 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
   
- **X 최소값**  
+ **X-min**  
  경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  
   
- **Y 최소값**  
+ **Y-min**  
  경계 상자의 왼쪽 아래 모퉁이의 Y 좌표입니다.  
   
- **X 최대값**  
+ **X-max**  
  경계 상자의 오른쪽 위 모퉁이의 X 좌표입니다.  
   
- **Y 최대값**  
+ **Y-max**  
  경계 상자의 오른쪽 위 모퉁이의 Y 좌표입니다.  
   
-### 일반  
+### <a name="general"></a>일반  
  **공간 분할(tessellation) 구성표**  
  인덱스의 공간 분할(tessellation) 구성표를 나타냅니다. 지원되는 공간 분할(tessellation) 구성표는 다음과 같습니다.  
   
@@ -203,13 +207,13 @@ caps.handback.revision: 38
  **geometry** 데이터 형식의 열에 적용되는 기하 도형 표 공간 분할(tessellation) 구성표를 지정합니다.  
   
  **기하 도형 자동 표**  
- 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  
+ 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  
   
  **지리 표**  
  **geography** 데이터 형식의 열에 적용되는 지리 표 공간 분할(tessellation) 구성표를 지정합니다.  
   
  **지리 자동 표**  
- 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  
+ 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 분할을 구현하는 방법은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)를 참조하세요.  
   
@@ -218,8 +222,8 @@ caps.handback.revision: 38
   
  최상위 수준에서, 개체가 *n*으로 지정된 셀보다 많은 셀을 포함하는 경우 인덱싱 시 전체 최상위 수준 공간 분할을 제공하는 데 필요한 만큼의 셀 수를 사용합니다. 이 경우 개체는 지정된 셀 수보다 많은 수의 셀을 받을 수 있습니다. 여기서 최대 수는 최상위 표에 의해 생성된 셀의 개수로, **수준 1** 밀도에 따라 달라집니다.  
   
-### 표  
- 이 패널에는 각 공간 분할(tessellation) 구성표 수준에서 표의 밀도가 표시됩니다. 밀도는 **낮음**, **보통**또는 **높음**으로 지정됩니다. 기본값은 **보통**입니다. **낮음**은 4x4 표(16개의 셀), **보통**은 8x8 표(64개의 셀), **높음**은 16x16 표(256개의 셀)를 나타냅니다. **기하 도형 자동 표** 또는 **지리 자동 표** 공간 분할 옵션을 선택한 경우에는 이러한 옵션을 사용할 수 없습니다.  
+### <a name="grids"></a>표  
+ 이 패널에는 각 공간 분할(tessellation) 구성표 수준에서 표의 밀도가 표시됩니다. 밀도는 **낮음**, **보통**또는 **높음**으로 지정됩니다. 기본값은 **보통**입니다. **낮음** 은 4x4 표(16개의 셀), **보통** 은 8x8 표(64개의 셀), **높음** 은 16x16 표(256개의 셀)를 나타냅니다. **기하 도형 자동 표** 또는 **지리 자동 표** 공간 분할 옵션을 선택한 경우에는 이러한 옵션을 사용할 수 없습니다.  
   
  **수준 1**  
  첫째 수준(최상위) 표의 밀도입니다.  
@@ -239,9 +243,10 @@ caps.handback.revision: 38
  **필터 식**  
  필터링된 인덱스에 포함할 데이터 행을 정의합니다. 예를 들면 다음과 같습니다. `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [인덱스 옵션 설정](../../relational-databases/indexes/set-index-options.md)   
  [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
  [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   
+

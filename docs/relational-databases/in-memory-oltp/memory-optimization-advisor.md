@@ -1,28 +1,32 @@
 ---
-title: "메모리 최적화 관리자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "swb.memoryoptimizationwizard.f1"
-  - "sql13.swb.memoryoptimizationwizard.f1"
+title: "메모리 최적화 관리자 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- swb.memoryoptimizationwizard.f1
+- sql13.swb.memoryoptimizationwizard.f1
 ms.assetid: 181989c2-9636-415a-bd1d-d304fc920b8a
 caps.latest.revision: 17
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04ee098de4740d0d4a3d3c195d24869ee41cea9a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 최적화 관리자
+# <a name="memory-optimization-advisor"></a>메모리 최적화 관리자
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  트랜잭션 성능 분속 보고서([메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 SQL Server Management Studio의 메모리 최적화 관리자를 사용하여 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션할 수 있습니다.  
+  트랜잭션 성능 분속 보고서( [메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)참조)는 메모리 내 OLTP를 사용하도록 변환할 경우 효과를 얻을 수 있는 데이터베이스 테이블을 알려 줍니다. 메모리 내 OLTP를 사용하도록 포팅할 테이블을 식별한 후 SQL Server Management Studio의 메모리 최적화 관리자를 사용하여 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션할 수 있습니다.  
   
  메모리 액세스 최적화 관리자를 통해 다음 작업을 할 수 있습니다.  
   
@@ -32,17 +36,17 @@ caps.handback.revision: 17
     
  마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](http://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
-## 메모리 최적화 관리자 사용 연습  
+## <a name="walkthrough-using-the-memory-optimization-advisor"></a>메모리 최적화 관리자 사용 연습  
  **개체 탐색기**에서 변환할 테이블을 마우스 오른쪽 단추로 클릭하고 **메모리 최적화 관리자**를 선택합니다. **테이블 메모리 최적화 관리자**시작 페이지가 표시됩니다.  
   
-### 메모리 최적화 검사 목록  
- **테이블 메모리 최적화 관리자** 시작 페이지에서 **다음**을 클릭하면 메모리 최적화 검사 목록이 표시됩니다. 메모리 액세스에 최적화된 테이블은 디스크 기반 테이블의 기능 중 일부를 지원하지 않습니다. 메모리 액세스 최적화 검사 목록은 디스크 기반 테이블에 메모리 액세스에 최적화된 테이블과 호환되지 않는 기능이 사용되는지 여부를 보고합니다. **테이블 메모리 최적화 관리자**는 메모리 내 OLTP 사용을 위해 마이그레이션이 가능하도록 디스크 기반 테이블을 수정하는 작업은 수행하지 않습니다. 마이그레이션을 계속하려면 먼저 사용자가 테이블을 변경해야 합니다. 호환되지 않는 기능이 발견되면 **테이블 메모리 최적화 관리자**는 디스크 기반 테이블을 수정하는 데 도움이 되는 링크를 표시합니다.  
+### <a name="memory-optimization-checklist"></a>메모리 최적화 검사 목록  
+ **테이블 메모리 최적화 관리자** 시작 페이지에서 **다음**을 클릭하면 메모리 최적화 검사 목록이 표시됩니다. 메모리 액세스에 최적화된 테이블은 디스크 기반 테이블의 기능 중 일부를 지원하지 않습니다. 메모리 액세스 최적화 검사 목록은 디스크 기반 테이블에 메모리 액세스에 최적화된 테이블과 호환되지 않는 기능이 사용되는지 여부를 보고합니다. **테이블 메모리 최적화 관리자** 는 메모리 내 OLTP 사용을 위해 마이그레이션이 가능하도록 디스크 기반 테이블을 수정하는 작업은 수행하지 않습니다. 마이그레이션을 계속하려면 먼저 사용자가 테이블을 변경해야 합니다. 호환되지 않는 기능이 발견되면 **테이블 메모리 최적화 관리자** 는 디스크 기반 테이블을 수정하는 데 도움이 되는 링크를 표시합니다.  
   
  마이그레이션 계획을 위해 호환되지 않는 기능 목록을 보관하려면 **보고서 생성** 을 클릭하여 HTML 목록을 생성합니다.  
   
  테이블에 호환되지 않는 기능이 없고 메모리 내 OLTP 기능이 있는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 인스턴스에 연결된 경우 **다음**을 클릭합니다.  
   
-### 메모리 최적화 경고  
+### <a name="memory-optimization-warnings"></a>메모리 최적화 경고  
  다음에 표시되는 메모리 최적화 경고 페이지에는 메모리 내 OLTP를 사용하도록 테이블을 마이그레이션하는 데 방해가 되지는 않지만 저장 프로시저 또는 CLR 함수와 같은 다른 개체의 동작이 실패하거나 예기치 않은 동작을 야기할 수 있는 문제 목록이 제공됩니다.  
   
  목록의 처음 몇 가지 경고는 정보 제공 목적으로만 제공되며 사용자 테이블에는 해당되지 않는 내용일 수도 있습니다. 표의 오른쪽 열에 있는 링크는 자세한 정보로 연결됩니다.  
@@ -53,7 +57,7 @@ caps.handback.revision: 17
   
  **보고서 생성** 을 클릭하여 HTML 경고 보고서를 생성합니다. 계속 진행하려면 **다음** 을 클릭합니다.  
   
-### 최적화 옵션 검토  
+### <a name="review-optimization-options"></a>최적화 옵션 검토  
  다음 화면에서는 메모리 내 OLTP로의 마이그레이션에 대한 옵션을 수정할 수 있습니다.  
   
  메모리 액세스에 최적화된 파일 그룹  
@@ -91,12 +95,12 @@ caps.handback.revision: 17
   
  계속하려면 **다음** 을 클릭합니다.  
   
-### 기본 키 변환 검토  
+### <a name="review-primary-key-conversion"></a>기본 키 변환 검토  
  다음 화면은 **기본 키 변환 검토**화면입니다. 메모리 최적화 관리자는 테이블에 하나 이상의 기본 키가 있는지 확인하고 기본 키 메타데이터를 기준으로 열 목록을 채웁니다. 기본 키가 없는 경우 메모리 액세스에 최적화된 영구 테이블로 마이그레이션하려면 기본 키를 만들어야 합니다.  
   
  기본 키가 없고 테이블을 비영구 테이블로 마이그레이션하는 경우에는 이 화면이 표시되지 않습니다.  
   
- 텍스트 열(**char**, **nchar**, **varchar** 및 **nvarchar** 형식의 열)의 경우 적절한 데이터 정렬을 선택해야 합니다. 메모리 내 OLTP는 메모리 액세스에 최적화된 테이블의 열에 대해 BIN2 데이터 정렬만 지원하고 보조 문자를 사용한 데이터 정렬은 지원하지 않습니다. 지원되는 데이터 정렬 및 데이터 정렬 변경이 주는 잠재적 영향은 [Collations and Code Pages](../Topic/Collations%20and%20Code%20Pages.md) 를 참조하십시오.  
+ 텍스트 열( **char**, **nchar**, **varchar**및 **nvarchar**형식의 열)의 경우 적절한 데이터 정렬을 선택해야 합니다. 메모리 내 OLTP는 메모리 액세스에 최적화된 테이블의 열에 대해 BIN2 데이터 정렬만 지원하고 보조 문자를 사용한 데이터 정렬은 지원하지 않습니다. 지원되는 데이터 정렬 및 데이터 정렬 변경이 주는 잠재적 영향은 [Collations and Code Pages](http://msdn.microsoft.com/library/c626dcac-0474-432d-acc0-cfa643345372) 를 참조하십시오.  
   
  기본 키에 대해 다음 매개 변수를 구성할 수 있습니다.  
   
@@ -110,23 +114,23 @@ caps.handback.revision: 17
   
 -   비클러스터형 인덱스. 이 유형의 인덱스는 범위 쿼리가 많은 인덱스에 적합합니다. **열 정렬 및 순서** 목록의 각 열에 대해 정렬 순서를 구성할 수 있습니다.  
   
- 기본 키에 적합한 인덱스 형식을 확인하려면 [해시 인덱스](../Topic/Hash%20Indexes.md)를 참조하세요.  
+ 기본 키에 적합한 인덱스 형식을 확인하려면 [해시 인덱스](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)를 참조하세요.  
   
  기본 키를 선택한 후 **다음** 을 클릭합니다.  
   
-### 인덱스 변환 검토  
+### <a name="review-index-conversion"></a>인덱스 변환 검토  
  다음 페이지는 **인덱스 변환 검토**페이지입니다. 메모리 최적화 관리자는 테이블에 하나 이상의 인덱스가 있는지 확인하고 열 및 데이터 형식 목록을 채웁니다. **인덱스 변환 검토** 페이지에서 구성할 수 있는 매개 변수는 앞의 **기본 키 변환 검토** 페이지와 유사합니다.  
   
  테이블에 기본 키만 있고 영구 테이블로 마이그레이션하는 경우에는 이 화면이 표시되지 않습니다.  
   
  테이블의 모든 인덱스에 대해 적절한 설정을 지정한 후 **다음**을 클릭합니다.  
   
-### 마이그레이션 작업 확인  
+### <a name="verify-migration-actions"></a>마이그레이션 작업 확인  
  다음 페이지는 **마이그레이션 작업 확인**페이지입니다. 마이그레이션 작업을 스크립팅하려면 **스크립트** 를 클릭하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성합니다. 그런 다음 스크립트를 수정하고 실행할 수 있습니다. **마이그레이션** 을 클릭하여 테이블 마이그레이션을 시작합니다.  
   
- 프로세스가 완료되면 **개체 탐색기**를 새로 고쳐 새 메모리 액세스에 최적화된 테이블 및 이전의 디스크 기반 테이블이 표시되는지 확인합니다. 편의대로 테이블을 유지하거나 삭제할 수 있습니다.  
+ 프로세스가 완료되면 **개체 탐색기** 를 새로 고쳐 새 메모리 액세스에 최적화된 테이블 및 이전의 디스크 기반 테이블이 표시되는지 확인합니다. 편의대로 테이블을 유지하거나 삭제할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

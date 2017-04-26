@@ -1,45 +1,49 @@
 ---
-title: "인덱스 다시 구성 및 다시 작성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.index.rebuild.f1"
-  - "sql13.swb.indexproperties.fragmentation.f1"
-  - "sql13.swb.index.reorg.f1"
-helpviewer_keywords: 
-  - "큰 개체 조각 모음"
-  - "인덱스 [SQL Server], 다시 구성"
-  - "인덱스 다시 구성 [SQL Server]"
-  - "인덱스 다시 구성"
-  - "큰 개체 데이터 형식 조각 모음"
-  - "인덱스 조각화 [SQL Server]"
-  - "인덱스 다시 작성 [SQL Server]"
-  - "인덱스 다시 작성"
-  - "인덱스 [SQL Server], 다시 작성"
-  - "인덱스 조각 모음"
-  - "비클러스터형 인덱스 [SQL Server], 조각 모음"
-  - "조각 모음 [SQL Server]"
-  - "인덱스 조각 모음 [SQL Server]"
-  - "LOB 데이터 [SQL Server], 조각 모음"
-  - "클러스터형 인덱스, 조각 모음"
+title: "인덱스 다시 구성 및 다시 빌드 | Microsoft 문서"
+ms.custom: 
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.index.rebuild.f1
+- sql13.swb.indexproperties.fragmentation.f1
+- sql13.swb.index.reorg.f1
+helpviewer_keywords:
+- large object defragmenting
+- indexes [SQL Server], reorganizing
+- index reorganization [SQL Server]
+- reorganizing indexes
+- defragmenting large object data types
+- index fragmentation [SQL Server]
+- index rebuilding [SQL Server]
+- rebuilding indexes
+- indexes [SQL Server], rebuilding
+- defragmenting indexes
+- nonclustered indexes [SQL Server], defragmenting
+- fragmentation [SQL Server]
+- index defragmenting [SQL Server]
+- LOB data [SQL Server], defragmenting
+- clustered indexes, defragmenting
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 3c0adf0cb598d11b8bf07d31281c63561fd8db43
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 다시 구성 및 다시 작성
+# <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 조각난 인덱스를 다시 구성하거나 다시 작성하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 기본 데이터에 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 인덱스를 자동으로 유지 관리합니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다. 심하게 조각화된 인덱스는 쿼리 성능을 저하시키고 응용 프로그램의 응답을 늦출 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 조각난 인덱스를 다시 구성하거나 다시 작성하는 방법에 대해 설명합니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 기본 데이터에 삽입, 업데이트 또는 삭제 작업을 수행할 때마다 인덱스를 자동으로 유지 관리합니다. 이러한 수정이 거듭되면 시간이 흐름에 따라 인덱스의 정보가 조각화되어 데이터베이스 내에 흩어지게 될 수 있습니다. 조각화는 키 값을 기준으로 하는 인덱스의 논리적 페이지 순서가 데이터 파일 내의 물리적 순서와 일치하지 않을 때 나타납니다. 심하게 조각화된 인덱스는 쿼리 성능을 저하시키고 응용 프로그램의 응답을 늦출 수 있습니다.  
   
  인덱스를 다시 구성하거나 다시 작성하여 인덱스 조각화 문제를 해결할 수 있습니다. 파티션 구성표에 작성한 분할된 인덱스의 경우 전체 인덱스나 인덱스의 단일 파티션에 이러한 방법 중 하나를 사용할 수 있습니다. 인덱스를 다시 작성하면 이 인덱스가 삭제된 다음 다시 생성됩니다. 이렇게 하면 조각화를 제거하고, 지정된 채우기 비율 또는 기존 채우기 비율 설정을 기준으로 페이지를 압축하여 디스크 공간을 회수하고, 인덱스 행을 연속된 페이지로 다시 정렬할 수 있습니다. ALL을 지정하면 테이블의 모든 인덱스가 단일 트랜잭션으로 삭제되고 다시 작성됩니다. 인덱스를 다시 구성할 때는 최소한의 시스템 리소스가 사용됩니다. 이때는 왼쪽에서 오른쪽으로 표시되는 리프 노드의 논리적 순서에 맞도록 리프 수준 페이지를 물리적으로 다시 정렬하여 테이블 및 뷰의 클러스터형 및 비클러스터형 인덱스의 리프 수준에 대한 조각 모음을 수행합니다. 다시 구성 작업을 수행하면 인덱스 페이지도 압축됩니다. 이때 압축은 기존 채우기 비율 값을 기준으로 수행됩니다.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 70
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Fragmentation"></a> 조각화 검색  
- 사용할 조각 모음 방법을 결정하기 위한 첫 번째 단계는 인덱스를 분석하여 조각화 수준을 확인하는 것입니다. [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 시스템 함수를 사용하여 특정 인덱스, 테이블이나 인덱싱된 뷰의 모든 인덱스, 데이터베이스의 모든 인덱스 또는 모든 데이터베이스 내 모든 인덱스에서 조각화를 검색할 수 있습니다. 분할된 인덱스의 경우 **sys.dm_db_index_physical_stats**에서도 각 파티션의 조각화 정보를 제공합니다.  
+ 사용할 조각 모음 방법을 결정하기 위한 첫 번째 단계는 인덱스를 분석하여 조각화 수준을 확인하는 것입니다. [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)시스템 함수를 사용하여 특정 인덱스, 테이블이나 인덱싱된 뷰의 모든 인덱스, 데이터베이스의 모든 인덱스 또는 모든 데이터베이스 내 모든 인덱스에서 조각화를 검색할 수 있습니다. 분할된 인덱스의 경우 **sys.dm_db_index_physical_stats** 에서도 각 파티션의 조각화 정보를 제공합니다.  
   
  **sys.dm_db_index_physical_stats** 함수에서 반환한 결과 집합은 다음 열을 포함합니다.  
   
@@ -82,7 +86,7 @@ caps.handback.revision: 70
   
 |**avg_fragmentation_in_percent** 값|수정문|  
 |-----------------------------------------------|--------------------------|  
-|> 5% 및 \< = 30%|ALTER INDEX REORGANIZE|  
+|> 5% 및 < = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
   
  \* 온라인 또는 오프라인으로 인덱스를 다시 작성할 수 있습니다. 인덱스를 다시 구성하는 과정은 항상 온라인으로 실행됩니다. 다시 구성할 때와 비슷한 가용성을 얻으려면 온라인으로 인덱스를 다시 작성해야 합니다.  
@@ -112,7 +116,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureFrag"></a> SQL Server Management Studio 사용  
   
-#### 인덱스의 조각화를 확인하려면  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>인덱스의 조각화를 확인하려면  
   
 1.  개체 탐색기에서 인덱스의 조각화를 확인할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 70
   
 ##  <a name="TsqlProcedureFrag"></a> Transact-SQL 사용  
   
-#### 인덱스의 조각화를 확인하려면  
+#### <a name="to-check-the-fragmentation-of-an-index"></a>인덱스의 조각화를 확인하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -207,7 +211,7 @@ caps.handback.revision: 70
   
 ##  <a name="SSMSProcedureReorg"></a> SQL Server Management Studio 사용  
   
-#### 인덱스를 다시 구성하거나 다시 작성하려면  
+#### <a name="to-reorganize-or-rebuild-an-index"></a>인덱스를 다시 구성하거나 다시 작성하려면  
   
 1.  개체 탐색기에서 인덱스를 다시 구성할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -223,9 +227,9 @@ caps.handback.revision: 70
   
 7.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-8.   **확인.**  
+8.  **확인.**  
   
-#### 테이블의 모든 인덱스를 다시 구성하려면  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>테이블의 모든 인덱스를 다시 구성하려면  
   
 1.  개체 탐색기에서 인덱스를 다시 구성할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -239,9 +243,9 @@ caps.handback.revision: 70
   
 6.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-7.   **확인.**  
+7.  **확인.**  
   
-#### 인덱스를 다시 작성하려면  
+#### <a name="to-rebuild-an-index"></a>인덱스를 다시 작성하려면  
   
 1.  개체 탐색기에서 인덱스를 다시 구성할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -257,11 +261,11 @@ caps.handback.revision: 70
   
 7.  **큰 개체 열 데이터 압축** 확인란을 선택하여 LOB(Large Object) 데이터가 포함된 모든 페이지도 압축되도록 지정합니다.  
   
-8.   **확인.**  
+8.  **확인.**  
   
 ##  <a name="TsqlProcedureReorg"></a> Transact-SQL 사용  
   
-#### 조각 모음된 인덱스를 다시 구성하려면  
+#### <a name="to-reorganize-a-defragmented-index"></a>조각 모음된 인덱스를 다시 구성하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -279,7 +283,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### 테이블의 모든 인덱스를 다시 구성하려면  
+#### <a name="to-reorganize-all-indexes-in-a-table"></a>테이블의 모든 인덱스를 다시 구성하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 70
     GO  
     ```  
   
-#### 조각 모음된 인덱스를 다시 작성하려면  
+#### <a name="to-rebuild-a-defragmented-index"></a>조각 모음된 인덱스를 다시 작성하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -306,7 +310,7 @@ caps.handback.revision: 70
   
      [!code-sql[IndexDDL#AlterIndex1](../../relational-databases/indexes/codesnippet/tsql/reorganize-and-rebuild-i_1.sql)]  
   
-#### 테이블에서 모든 인덱스를 다시 작성하려면  
+#### <a name="to-rebuild-all-indexes-in-a-table"></a>테이블에서 모든 인덱스를 다시 작성하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -318,7 +322,8 @@ caps.handback.revision: 70
   
  자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft SQL Server 2000 인덱스 조각 모음 최상의 방법](http://technet.microsoft.com/library/cc966523.aspx)  
   
   
+

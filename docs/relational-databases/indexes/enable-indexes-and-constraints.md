@@ -1,29 +1,33 @@
 ---
-title: "인덱스 및 제약 조건 활성화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 [SQL Server], 활성화"
-  - "비클러스터형 인덱스 [SQL Server], 비활성화된 인덱스 활성화"
-  - "인덱스 설정 [SQL Server]"
-  - "비활성 인덱스 [SQL Server], 활성화 방법"
-  - "제약 조건 [SQL Server], 활성화"
-  - "클러스터형 인덱스, 비활성화된 인덱스 활성화"
+title: "인덱스 및 제약 조건 활성화 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], enabling
+- nonclustered indexes [SQL Server], enabling a disabled index
+- index enabling [SQL Server]
+- disabled indexes [SQL Server], how to enable
+- constraints [SQL Server], enabling
+- clustered indexes, enabling disabled indexes
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e0e171e2cf2bdc35a3e9c3c7e5ed1077aabe4dc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 및 제약 조건 활성화
+# <a name="enable-indexes-and-constraints"></a>인덱스 및 제약 조건 활성화
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 비활성화된 인덱스를 활성화하는 방법에 대해 설명합니다. 비활성화된 인덱스는 다시 작성되거나 삭제될 때까지 비활성화된 상태로 유지됩니다.  
@@ -76,7 +80,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 비활성화된 인덱스를 활성화하려면  
+#### <a name="to-enable-a-disabled-index"></a>비활성화된 인덱스를 활성화하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스를 활성화할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 27
   
 6.  **인덱스 다시 작성** 대화 상자에서 **다시 작성할 인덱스** 표에 올바른 인덱스가 있는지 확인한 다음 **확인**을 클릭합니다.  
   
-#### 테이블의 모든 인덱스를 활성화하려면  
+#### <a name="to-enable-all-indexes-on-a-table"></a>테이블의 모든 인덱스를 활성화하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스를 활성화할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### ALTER INDEX를 사용하여 비활성화된 인덱스를 활성화하려면  
+#### <a name="to-enable-a-disabled-index-using-alter-index"></a>ALTER INDEX를 사용하여 비활성화된 인덱스를 활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### CREATE INDEX를 사용하여 비활성화된 인덱스를 활성화하려면  
+#### <a name="to-enable-a-disabled-index-using-create-index"></a>CREATE INDEX를 사용하여 비활성화된 인덱스를 활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -146,7 +150,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### DBCC DBREINDEX를 사용하여 비활성화된 인덱스를 활성화하려면  
+#### <a name="to-enable-a-disabled-index-using-dbcc-dbreindex"></a>DBCC DBREINDEX를 사용하여 비활성화된 인덱스를 활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### ALTER INDEX를 사용하여 테이블의 모든 인덱스를 활성화하려면  
+#### <a name="to-enable-all-indexes-on-a-table-using-alter-index"></a>ALTER INDEX를 사용하여 테이블의 모든 인덱스를 활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -181,7 +185,7 @@ caps.handback.revision: 27
     GO  
     ```  
   
-#### DBCC DBREINDEX를 사용하여 테이블의 모든 인덱스를 활성화하려면  
+#### <a name="to-enable-all-indexes-on-a-table-using-dbcc-dbreindex"></a>DBCC DBREINDEX를 사용하여 테이블의 모든 인덱스를 활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -201,3 +205,4 @@ caps.handback.revision: 27
  자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md), [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md) 및 [DBCC DBREINDEX&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md)를 참조하세요.  
   
   
+

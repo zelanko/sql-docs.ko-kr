@@ -1,22 +1,26 @@
 ---
-title: "데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fce8ff8377ee7da4ff7c9d9e57ec01872702abc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
+# <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출
   이 항목에서는 데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저를 호출하는 방법에 대한 지침을 설명합니다.  
   
  커서는 고유하게 컴파일된 저장 프로시저를 반복할 수 없습니다.  
@@ -31,7 +35,7 @@ caps.handback.revision: 10
  SqlClient는 고유하게 컴파일된 저장 프로시저(CommandType.SchemaOnly)에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 사용하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client는 고유하게 컴파일된 저장 프로시저에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 사용하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보다 이전 버전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Native Client는 고유하게 컴파일된 저장 프로시저에서 반환되는 결과 집합에 대한 스키마 전용 정보 검색(메타데이터 검색)을 지원하지 않습니다. 대신 [sp_describe_first_result_set&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)를 사용하세요.  
   
  다음은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서 ODBC 드라이버를 사용하여 고유하게 컴파일된 저장 프로시저를 호출할 때 적용되는 권장 사항입니다.  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 10
   
 -   **SQLBindParameter**를 사용하여 매개 변수를 바인딩합니다.  
   
--    **SQLPrepare.**을 사용하여 프로시저 호출을 준비합니다.  
+-   **SQLPrepare.**을 사용하여 프로시저 호출을 준비합니다.  
   
 -   **SQLExecute**를 사용하여 저장 프로시저를 여러 번 실행합니다.  
   
@@ -79,7 +83,7 @@ for (unsigned int i = 0; i < order.ItemCount; i++) {
 }  
 ```  
   
-## ODBC를 사용하여 고유하게 컴파일된 저장 프로시저 실행  
+## <a name="using-odbc-to-execute-a-natively-compiled-stored-procedure"></a>ODBC를 사용하여 고유하게 컴파일된 저장 프로시저 실행  
  이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버를 사용하여 매개 변수를 바인딩하고 저장 프로시저를 실행하는 방법을 보여 줍니다.  이 예제에서는 직접 실행을 사용하여 단일 주문을 삽입하고 준비된 실행을 사용하여 주문 세부 정보를 삽입하는 콘솔 응용 프로그램으로 컴파일합니다.  
   
  이 예제를 실행하려면:  
@@ -391,7 +395,7 @@ int _tmain() {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

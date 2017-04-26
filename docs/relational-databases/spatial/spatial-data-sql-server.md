@@ -1,30 +1,34 @@
 ---
-title: "공간 데이터(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography 데이터 형식 [SQL Server], 공간 저장소 디자인"
-  - "평면 공간 데이터 [SQL Server], 디자인"
-  - "공간 데이터 형식 [SQL Server]"
-  - "측지 공간 데이터 [SQL Server]"
-  - "geometry 데이터 형식 [SQL Server], 공간 저장소 디자인"
-  - "공간 저장소 [SQL Server]"
-  - "측지 공간 데이터 [SQL Server], 디자인"
+title: "공간 데이터(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server], spatial storage design
+- planar spatial data [SQL Server], designing
+- spatial data types [SQL Server]
+- geodetic spatial data [SQL Server]
+- geometry data type [SQL Server], spatial storage design
+- spatial storage [SQL Server]
+- geodetic spatial data [SQL Server], designing
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7ed039271847202c8c84a03ec56d55a96593089
+ms.lasthandoff: 04/11/2017
+
 ---
-# 공간 데이터(SQL Server)
+# <a name="spatial-data-sql-server"></a>공간 데이터(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   공간 데이터는 기하학적 개체의 물리적 위치와 모양에 대한 정보를 표시합니다. 이러한 개체는 위치나 지역, 도로 또는 호수와 같은 좀 더 복잡한 개체를 가리킬 수 있습니다.  
@@ -38,7 +42,7 @@ caps.handback.revision: 34
  두 가지 데이터 형식 모두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 새로운 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407) 백서를 다운로드하세요.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 새로운 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 2012의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407)백서를 다운로드하세요.  
   
 ##  <a name="reltasks"></a> 관련 태스크  
  [geometry 인스턴스 만들기, 구성 및 쿼리](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  
@@ -53,7 +57,7 @@ caps.handback.revision: 34
  [공간 인덱스 만들기, 수정 및 삭제](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)  
  공간 인덱스를 생성, 변경 및 삭제하는 방법에 대해 설명합니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)  
  공간 데이터 형식을 소개합니다.  
   

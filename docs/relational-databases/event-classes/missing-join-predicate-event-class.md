@@ -1,27 +1,31 @@
 ---
-title: "Missing Join Predicate 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Missing Join Predicate 이벤트 클래스"
+title: "Missing Join Predicate 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Missing Join Predicate event class
 ms.assetid: 0668cb4d-5682-4140-aab5-7b0da5cd3479
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fdd6f18f8c2423c9118e27bfa5ae9bf1d67fad3a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Missing Join Predicate 이벤트 클래스
-  Missing Join Predicate 이벤트 클래스는 조인 조건자가 없는 쿼리가 실행 중임을 나타냅니다. 이 결과 실행 시간이 긴 쿼리가 나타날 수 있습니다. 조인 조건자에 대한 자세한 내용은 [조건자&#40;Transact-SQL&#41;](../Topic/Predicates%20\(Transact-SQL\).md)를 참조하세요.  
+# <a name="missing-join-predicate-event-class"></a>Missing Join Predicate 이벤트 클래스
+  Missing Join Predicate 이벤트 클래스는 조인 조건자가 없는 쿼리가 실행 중임을 나타냅니다. 이 결과 실행 시간이 긴 쿼리가 나타날 수 있습니다. 조인 조건자에 대한 자세한 내용은 [조건자&#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)를 참조하세요.  
   
-## Missing Join Predicate 이벤트 클래스 데이터 열  
+## <a name="missing-join-predicate-event-class-data-columns"></a>Missing Join Predicate 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -40,14 +44,15 @@ caps.handback.revision: 33
 |NTUserName|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
 |ServerName|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
-|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
+|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |XactSequence|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   
+

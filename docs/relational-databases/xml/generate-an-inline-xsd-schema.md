@@ -1,30 +1,34 @@
 ---
-title: "인라인 XSD 스키마 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD 스키마 [SQL Server]"
-  - "XMLSCHEMA 옵션"
-  - "스키마 [SQL Server], XML"
-  - "XDR 스키마"
-  - "FOR XML 절, 인라인 XSD 스키마 생성"
-  - "인라인 XSD 스키마 생성 [SQL Server]"
-  - "XMLDATA 옵션"
+title: "인라인 XSD 스키마 생성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- XMLSCHEMA option
+- schemas [SQL Server], XML
+- XDR schemas
+- FOR XML clause, inline XSD schema generation
+- inline XSD schema generation [SQL Server]
+- XMLDATA option
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인라인 XSD 스키마 생성
+# <a name="generate-an-inline-xsd-schema"></a>인라인 XSD 스키마 생성
   FOR XML 절에서는 쿼리가 쿼리 결과와 함께 인라인 스키마를 반환하도록 요청할 수 있습니다. XDR 스키마가 필요한 경우 FOR XML 절에 XMLDATA 키워드를 사용합니다. XSD 스키마가 필요한 경우 XMLSCHEMA 키워드를 사용합니다.  
   
  이 항목에서는 XMLSCHEMA 키워드에 대해 설명하고 결과 인라인 XSD 스키마의 구조를 설명합니다. 인라인 스키마를 요청하는 경우 다음과 같은 제한 사항이 있습니다.  
@@ -81,7 +85,7 @@ WHERE ProductModelID=1
 FOR XML AUTO, XMLSCHEMA ('MyURI')  
 ```  
   
-## 엔터티 요소  
+## <a name="entity-elements"></a>엔터티 요소  
  쿼리 결과에 대해 생성된 XSD 스키마 구조의 세부 내용을 다루기 전에 엔터티 요소에 대해 먼저 이해해야 합니다.  
   
  FOR XML 쿼리에 의해 반환된 XML 데이터에 있는 엔터티 요소는 열이 아닌 테이블로부터 생성된 요소입니다. 예를 들어 다음 FOR XML 쿼리는 `Person` 데이터베이스에 있는 `AdventureWorks2012` 테이블의 연락처 정보를 반환합니다.  
@@ -159,7 +163,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
 -   <`SalesOrderID`>, <`ProductID`> 및 <`OrderQty`>는 열로 매핑되므로 엔터티 요소가 아닙니다. 열 데이터는 ELEMENTS 지시어로 인해 XML의 요소로 반환됩니다. 이러한 데이터는 엔터티 요소의 복합 유형에 대한 로컬 요소로 매핑됩니다. ELEMENTS 지시어를 지정하지 않으면 `SalesOrderID`, `ProductID` 및 `OrderQty` 값이 해당 엔터티 요소의 복합 유형에 대한 로컬 특성으로 매핑됩니다.  
   
-## 특성 이름 충돌  
+## <a name="attribute-name-clashes"></a>특성 이름 충돌  
  다음 설명에서는 `CustOrder` 및 `CustOrderDetail` 테이블을 기준으로 설명합니다. 다음 예제를 테스트하려면 아래와 같이 테이블을 만들고 자신의 예제 데이터를 추가합니다.  
   
 ```  
@@ -217,10 +221,10 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  `</xsd:schema>`  
   
-## 요소 이름 충돌  
+## <a name="element-name-clashes"></a>요소 이름 충돌  
  FOR XML에서는 동일한 이름을 사용하여 두 개의 하위 요소를 나타낼 수 있습니다. 예를 들어 다음 쿼리는 제품의 ListPrice 및 DealerPrice 값을 검색하지만 두 열에 대해 Price라는 동일한 별칭을 지정합니다. 따라서 결과 행 집합에는 이름이 같은 두 열이 포함됩니다.  
   
-### 사례 1: 두 하위 요소 모두 같은 유형의 키가 아닌 열이며 NULL일 수 있습니다.  
+### <a name="case-1-both-subelements-are-nonkey-columns-of-the-same-type-and-can-be-null"></a>사례 1: 두 하위 요소 모두 같은 유형의 키가 아닌 열이며 NULL일 수 있습니다.  
  다음 쿼리에서 두 하위 요소는 모두 같은 유형의 키가 아닌 열이며 NULL일 수 있습니다.  
   
 ```  
@@ -312,7 +316,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</row>`  
   
-### 사례 2: 유형이 같은 하나의 키 열과 하나의 키가 아닌 열  
+### <a name="case-2-one-key-and-one-nonkey-column-of-the-same-type"></a>사례 2: 유형이 같은 하나의 키 열과 하나의 키가 아닌 열  
  다음 쿼리는 유형이 같은 하나의 키 열과 하나의 키가 아닌 열을 보여 줍니다.  
   
 ```  
@@ -390,7 +394,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  인라인 XSD 스키마에서 Col2에 해당하는 <`Col`> 요소는 minOccurs가 0으로 설정됩니다.  
   
-### 사례 3: 유형이 다른 요소와 해당 열은 모두 NULL일 수 있습니다.  
+### <a name="case-3-both-elements-of-different-types-and-corresponding-columns-can-be-null"></a>사례 3: 유형이 다른 요소와 해당 열은 모두 NULL일 수 있습니다.  
  다음 쿼리는 사례 2에 표시된 예제 테이블에 대해 지정됩니다.  
   
 ```  

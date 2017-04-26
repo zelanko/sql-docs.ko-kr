@@ -1,24 +1,28 @@
 ---
-title: "OLEDB Provider Information 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Provider Information 이벤트 클래스"
+title: "OLEDB Provider Information 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Provider Information event class
 ms.assetid: a0316c4e-4b8c-4754-8a35-222f3c0907d1
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60ff0c896be635089acd38d9ade6ec731d526250
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLEDB Provider Information 이벤트 클래스
+# <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information 이벤트 클래스
   **OLEDB Provider Information** 이벤트 클래스는 분산 쿼리가 실행되어 공급자 연결에 해당하는 정보를 수집할 때 발생합니다.  
   
  이 이벤트 클래스는 원격 공급자로부터 수집한 모든 속성을 다음에 열거한 항목을 포함하여 다수의 속성 집합으로 포함합니다.  
@@ -27,9 +31,9 @@ caps.handback.revision: 22
   
 -   SQLPROPSET_OPTHINTS  
   
--   DBPROPSET_SQLSERVERDATASOURCEINFO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당)  
+-   DBPROPSET_SQLSERVERDATASOURCEINFO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에만 해당)  
   
--   DBPROPSET_SQLSERVERDBINIT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당)  
+-   DBPROPSET_SQLSERVERDBINIT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에만 해당)  
   
 -   DBPROPSET_ROWSET  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 22
   
  이러한 속성은 사용 가능한 메타데이터와 함께 쿼리 최적화 프로그램이 쿼리에 가장 적합한 실행 계획을 선택할 때 사용됩니다. 이 정보는 분산 쿼리 프로파일러 추적에서 실행을 추적하고 OLE DB 호출 및 이벤트를 분석할 때 유용합니다.  
   
-## OLEDB Provider Information 이벤트 클래스 데이터 열  
+## <a name="oledb-provider-information-event-class-data-columns"></a>OLEDB Provider Information 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -63,7 +67,7 @@ caps.handback.revision: 22
 |**TextData**|**ntext**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다.|1|예|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Transact-SQL의 OLE 자동화 개체](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

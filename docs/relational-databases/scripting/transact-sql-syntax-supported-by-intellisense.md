@@ -1,36 +1,40 @@
 ---
-title: "IntelliSense에서 지원되는 Transact-SQL 구문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "Transact-SQL IntelliSense"
-  - "IntelliSense [SQL Server], Transact-SQL 구문"
+title: "IntelliSense에서 지원되는 Transact-SQL 구문 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Transact-SQL IntelliSense
+- IntelliSense [SQL Server], Transact-SQL syntax
 ms.assetid: 194e8f4f-fd7e-4f32-a169-f23531128004
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 328ed60693a51b4bd081b1089e39e4805124f042
+ms.lasthandoff: 04/11/2017
+
 ---
-# IntelliSense에서 지원되는 Transact-SQL 구문
+# <a name="transact-sql-syntax-supported-by-intellisense"></a>IntelliSense에서 지원되는 Transact-SQL 구문
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 의 IntelliSense에서 지원하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]문 및 구문 요소에 대해 설명합니다.  
   
-## IntelliSense에서 지원하는 문  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 IntelliSense는 가장 일반적으로 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 지원합니다. 일부 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 조건으로 인해 IntelliSense가 제대로 작동하지 않을 수 있습니다. 자세한 내용은 [IntelliSense 문제 해결&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense-sql-server-management-studio.md)을 참조하세요.  
+## <a name="statements-supported-by-intellisense"></a>IntelliSense에서 지원하는 문  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 IntelliSense는 가장 일반적으로 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문만 지원합니다. 일부 일반적인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 조건으로 인해 IntelliSense가 제대로 작동하지 않을 수 있습니다. 자세한 내용은 [IntelliSense 문제 해결&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/troubleshooting-intellisense.md)을 참조하세요.  
   
 > [!NOTE]  
 >  암호화된 저장 프로시저 또는 사용자 정의 함수와 같이 암호화된 데이터베이스 개체에 대해 IntelliSense를 사용할 수 없습니다. 확장 저장 프로시저 및 CLR 통합 사용자 정의 유형의 매개 변수에 대해 매개 변수 도움말 및 요약 정보를 사용할 수 없습니다.  
   
-### SELECT 문  
+### <a name="select-statement"></a>SELECT 문  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 SELECT 문의 다음 구문 요소에 대한 IntelliSense 지원을 제공합니다.  
   
 |||  
@@ -41,7 +45,7 @@ caps.handback.revision: 28
 |FOR|GROUP BY|  
 |맨 위로 이동|OPTION (hint)|  
   
-### 지원되는 추가 Transact-SQL 문  
+### <a name="additional-transact-sql-statements-that-are-supported"></a>지원되는 추가 Transact-SQL 문  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서는 다음 표에 표시된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 IntelliSense 지원도 제공합니다.  
   
 |Transact-SQL 문|지원되는 구문|예외|  
@@ -58,7 +62,7 @@ caps.handback.revision: 28
 |[ALTER PROCEDURE](../../t-sql/statements/alter-procedure-transact-sql.md)|모든 구문|EXTERNAL NAME 절에 대한 IntelliSense 지원은 없습니다.<br /><br /> AS 절에서 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다.|  
 |[USE](../../t-sql/language-elements/use-transact-sql.md)|모든 구문|없음|  
   
-## 지원되는 문의 IntelliSense  
+## <a name="intellisense-in-supported-statements"></a>지원되는 문의 IntelliSense  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 지원되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 중 하나에서 사용되는 경우 다음 구문 요소를 지원합니다.  
   
 -   APPLY를 비롯한 모든 조인 유형  
@@ -92,7 +96,7 @@ caps.handback.revision: 28
   
  앞에서 나열된 요소가 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용되는 경우에는 IntelliSense가 제공되지 않습니다. 예를 들어 SELECT 문에서 사용되는 열 이름에 대해서는 IntelliSense가 지원되지만 CREATE FUNCTION 문에서 사용되는 열에 대해서는 IntelliSense가 지원되지 않습니다.  
   
-## 예  
+## <a name="examples"></a>예  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트나 일괄 처리 내에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기의 IntelliSense는 이 항목에 나열된 문과 구문만 지원합니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 예제에서는 IntelliSense에서 지원하는 문 및 구문을 보여 줍니다. 예를 들어 다음 일괄 처리에서 IntelliSense는 `SELECT` 가 `SELECT` 문에 포함되어 있지 않고 자체적으로 코딩된 경우 `CREATE FUNCTION` 문에 대해 사용할 수 있습니다.  
   
 ```  

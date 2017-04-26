@@ -1,29 +1,33 @@
 ---
-title: "파일 및 파일 그룹 백업(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "파일 그룹 백업 [SQL Server]"
-  - "파일 백업 [SQL Server], 방법 도움말 항목"
-  - "파일 백업 [SQL Server]"
-  - "백업 [SQL Server], 만들기"
-  - "파일 그룹 [SQL Server], 백업"
+title: "파일 및 파일 그룹 백업(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up filegroups [SQL Server]
+- file backups [SQL Server], how-to topics
+- backing up files [SQL Server]
+- backups [SQL Server], creating
+- filegroups [SQL Server], backing up
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 34d2c923e509422ee4a45abe2132b06362efa1ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 파일 및 파일 그룹 백업(SQL Server)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파일 및 파일 그룹을 백업하는 방법에 대해 설명합니다. 데이터베이스 크기와 성능 요구 사항으로 인해 전체 데이터베이스 백업이 불가능할 경우 이를 대신하여 파일 백업을 만들 수 있습니다. *파일 백업*에는 하나 이상의 파일(또는 파일 그룹)에 있는 모든 데이터가 포함됩니다. 파일 백업에 대한 자세한 내용은 [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 및 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
+# <a name="back-up-files-and-filegroups-sql-server"></a>파일 및 파일 그룹 백업(SQL Server)
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 파일 및 파일 그룹을 백업하는 방법에 대해 설명합니다. 데이터베이스 크기와 성능 요구 사항으로 인해 전체 데이터베이스 백업이 불가능할 경우 이를 대신하여 파일 백업을 만들 수 있습니다. *파일 백업* 에는 하나 이상의 파일(또는 파일 그룹)에 있는 모든 데이터가 포함됩니다. 파일 백업에 대한 자세한 내용은 [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 및 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
 
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
@@ -34,20 +38,20 @@ caps.handback.revision: 41
   
 -   단순 복구 모델에서 읽기/쓰기 파일은 모두 함께 백업해야 합니다. 이렇게 하면 데이터베이스를 일정한 지정 시간으로 복원할 수 있습니다. 각 읽기/쓰기 파일 또는 파일 그룹을 개별적으로 지정하는 대신 READ_WRITE_FILEGROUPS 옵션을 사용하세요. 이 옵션은 데이터베이스의 모든 읽기/쓰기 파일 그룹을 백업합니다. READ_WRITE_FILEGROUPS를 지정하여 만드는 백업을 *부분 백업*이라고 합니다. 자세한 내용은 [부분 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/partial-backups-sql-server.md)을 참조하세요.  
   
--   제한 사항에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
+-   제한 사항에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)를 참조하세요.  
+-   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
  백업 장치의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 장치의 물리적 파일에서 발생하는 이러한 문제는 백업 또는 복원을 시도할 때 실제 리소스를 액세스하기 전까지는 발생하지 않습니다.  
   
   
-## SSMS를 사용하여 파일 및 파일 그룹 백업   
+## <a name="back-up-files-and-filegroups-using-ssms"></a>SSMS를 사용하여 파일 및 파일 그룹 백업   
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -69,9 +73,9 @@ caps.handback.revision: 41
   
 10. 백업 세트가 만료될 시기를 다음과 같이 지정합니다.  
   
-    -   백업 세트가 특정 일 수 후에 만료되게 하려면 **다음 이후**(기본 옵션)를 클릭합니다. 그런 다음 세트를 만든 후 세트가 만료되는 일 수를 입력합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.  
+    -   백업 세트가 특정 일 수 후에 만료되게 하려면 **다음 이후** (기본 옵션)를 클릭합니다. 그런 다음 세트를 만든 후 세트가 만료되는 일 수를 입력합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.  
   
-         기본값은 **서버 속성** 대화 상자(**데이터베이스 설정** 페이지)의 **백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 옵션에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
+         기본값은 **서버 속성** 대화 상자( **데이터베이스 설정** 페이지)의**백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 옵션에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
   
     -   백업 세트가 특정 일자에 만료되게 하려면 **날짜**를 클릭한 다음 백업 세트가 만료될 날짜를 입력합니다.  
   
@@ -105,7 +109,7 @@ caps.handback.revision: 41
   
 15. **일반** 페이지의 **대상** 섹션에서 지정한 대로 테이프 드라이브에 백업하는 경우 **백업 후 테이프 언로드** 옵션이 활성화됩니다. 이 옵션을 클릭하면 **언로드 전에 테이프 되감기** 옵션이 활성화됩니다.  
   
-    > **참고:** **일반** 페이지의 **백업 유형** 섹션에서 지정한 대로 **트랜잭션 로그**를 백업하지 않으면 트랜잭션 로그 섹션의 옵션이 비활성화됩니다.  
+    > **참고:** **일반** 페이지의 **백업 유형** 섹션에서 지정한 대로 **트랜잭션 로그** 를 백업하지 않으면 트랜잭션 로그 섹션의 옵션이 비활성화됩니다.  
   
 16. [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다. 기본적으로 백업은 **백업-압축 기본값** 서버 구성 옵션의 값에 따라 압축됩니다. 그러나 현재 서버 수준 기본값에 관계없이 **백업 압축**을 선택하여 백업을 압축하고, **백업 압축 안 함**을 선택하여 압축을 방지할 수 있습니다.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 41
     -   [backup compression default 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
   
-## T-SQL을 사용하여 파일 및 파일 그룹 백업
+## <a name="back-up-files-and-filegroups-using-t-sql"></a>T-SQL을 사용하여 파일 및 파일 그룹 백업
   
 1.  파일 또는 파일 그룹 백업을 만들려면 [BACKUP DATABASE <file_or_filegroup>](../../t-sql/statements/backup-transact-sql.md) 문을 사용합니다. 최소한 이 문은 다음 항목을 지정해야 합니다.  
   
@@ -136,14 +140,14 @@ caps.handback.revision: 41
   
     |옵션|설명|  
     |------------|-----------------|  
-    |*데이터베이스*|트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다.|  
+    |*database*|트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다.|  
     |FILE **=***logical_file_name*|파일 백업에 포함할 파일의 논리적 이름을 지정합니다.|  
     |FILEGROUP **=***logical_filegroup_name*|파일 백업에 포함할 파일 그룹의 논리적 이름을 지정합니다. 단순 복구 모델에서 파일 그룹 백업은 읽기 전용 파일 그룹에만 사용할 수 있습니다.|  
     |[ **,**...*f* ]|여러 개의 파일 및 파일 그룹을 지정할 수 있음을 나타내는 자리 표시자입니다. 이때 파일 또는 파일 그룹의 수는 제한이 없습니다.|  
     |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 DIFFERENTIAL과 같은 하나 이상의 추가 옵션을 지정합니다.<br /><br /> 참고: 차등 파일 백업에는 기반으로 전체 파일 백업이 필요합니다. 자세한 내용은 [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)를 참조하세요.|  
   
-2.  전체 복구 모델에서는 트랜잭션 로그도 백업해야 합니다. 전체 파일 백업의 전체 세트를 사용하여 데이터베이스를 복원하려면 첫 번째 파일 백업을 시작할 때부터 모든 파일 백업을 포함할 정도의 충분한 로그 백업이 있어야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 참조하세요.  
+2.  전체 복구 모델에서는 트랜잭션 로그도 백업해야 합니다. 전체 파일 백업의 전체 세트를 사용하여 데이터베이스를 복원하려면 첫 번째 파일 백업을 시작할 때부터 모든 파일 백업을 포함할 정도의 충분한 로그 백업이 있어야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 `Sales` 데이터베이스의 보조 파일 그룹에 있는 하나 이상의 파일을 백업합니다. 이 데이터베이스는 전체 복구 모델을 사용하고 다음과 같은 보조 파일 그룹을 포함합니다.  
@@ -152,7 +156,7 @@ caps.handback.revision: 41
   
 -   `SalesGroup2` 및 `SGrp2Fi1` 파일을 포함하는 `SGrp2Fi2`파일 그룹  
   
-#### 1. 두 파일의 파일 백업 만들기  
+#### <a name="a-create-a-file-backup-of-two-files"></a>1. 두 파일의 파일 백업 만들기  
  다음 예에서는 `SGrp1Fi2` 의 `SalesGroup1` 파일과 `SGrp2Fi2` 파일 그룹의 `SalesGroup2` 파일에 대해서만 차등 파일 백업을 만듭니다.  
   
 ```tsql  
@@ -164,7 +168,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### 2. 보조 파일 그룹의 전체 파일 백업 만들기  
+#### <a name="b-create-a-full-file-backup-of-the-secondary-filegroups"></a>2. 보조 파일 그룹의 전체 파일 백업 만들기  
  다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 전체 파일 백업을 만듭니다.  
   
 ```tsql  
@@ -176,7 +180,7 @@ BACKUP DATABASE Sales
 GO  
 ```  
   
-#### 3. 보조 파일 그룹의 차등 파일 백업 만들기  
+#### <a name="c-create-a-differential-file-backup-of-the-secondary-filegroups"></a>3. 보조 파일 그룹의 차등 파일 백업 만들기  
  다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 차등 파일 백업을 만듭니다.  
   
 ```tsql  
@@ -192,11 +196,11 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-1.  **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **Files**를 지정합니다. 또한 다음 매개 변수 중 하나를 지정합니다.  
+1.  **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **Files** 를 지정합니다. 또한 다음 매개 변수 중 하나를 지정합니다.  
   
-    -   특정 파일을 백업하려면 **-DatabaseFile***String* 매개 변수를 지정합니다. 여기서 *String*은 백업할 하나 이상의 데이터베이스 파일입니다.  
+    -   특정 파일을 백업하려면 **-DatabaseFile***String* 매개 변수를 지정합니다. 여기서 *String* 은 백업할 하나 이상의 데이터베이스 파일입니다.  
   
-    -   지정된 파일 그룹의 모든 파일을 백업하려면 **-DatabaseFileGroup***String* 매개 변수를 지정합니다. 여기서 *String*은 백업할 하나 이상의 데이터베이스 파일 그룹입니다.  
+    -   지정된 파일 그룹의 모든 파일을 백업하려면 **-DatabaseFileGroup***String* 매개 변수를 지정합니다. 여기서 *String* 은 백업할 하나 이상의 데이터베이스 파일 그룹입니다.  
   
      다음 예에서는 `MyDB` 데이터베이스의 보조 파일 그룹 'FileGroup1' 및 'FileGroup2'에 있는 모든 파일의 전체 파일 백업을 만듭니다. 백업은 서버 인스턴스 `Computer\Instance`의 기본 백업 위치에 만들어집니다.  
   
@@ -209,10 +213,10 @@ GO
   
 -   [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [백업 기록 및 헤더 정보&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)   
  [데이터베이스 백업&#40;일반 페이지&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)   
  [데이터베이스 백업&#40;백업 옵션 페이지&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)   
@@ -222,3 +226,4 @@ GO
  [파일 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/file-restores-simple-recovery-model.md)  
   
   
+

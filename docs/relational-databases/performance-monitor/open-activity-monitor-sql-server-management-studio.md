@@ -1,27 +1,31 @@
 ---
-title: "작업 모니터 열기(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "작업 모니터 [SQL Server], 새로 고침 간격 설정"
-  - "작업 모니터의 새로 고침 간격"
-  - "작업 모니터 [SQL Server], 열기"
-  - "opening Activity Monitor"
+title: "작업 모니터 열기(SQL Server Management Studio) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Activity Monitor [SQL Server], setting the refresh interval
+- refresh interval for Activity Monitor
+- Activity Monitor [SQL Server], opening
+- opening Activity Monitor
 ms.assetid: 0a6eeb16-f02b-479d-9a60-543e40ebf46b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 45e63d53b65730136bbc0a4f20ad5d4215020c58
+ms.lasthandoff: 04/11/2017
+
 ---
-# 작업 모니터 열기(SQL Server Management Studio)
+# <a name="open-activity-monitor-sql-server-management-studio"></a>작업 모니터 열기(SQL Server Management Studio)
 
    
  작업 모니터에서는 모니터링 대상 인스턴스에 대해 쿼리를 실행하여 작업 모니터 표시 창에 대한 정보를 가져옵니다. 자동 새로 고침 간격을 10초보다 작게 설정하면 이러한 쿼리를 실행하는 데 사용되는 시간이 서버 성능에 영향을 줄 수 있습니다.  
@@ -33,21 +37,21 @@ caps.handback.revision: 38
  프로세스를 중단하려면 사용자가 sysadmin 또는 processadmin 고정 서버 역할의 멤버여야 합니다.  
   
   
-## 작업 모니터 열기  
+## <a name="open-activity-monitor"></a>작업 모니터 열기  
 
-### 바로 가기 키  
- - 언제든지 **Ctrl+Alt+A**를 입력하여 작업 모니터를 엽니다.
+### <a name="keyboard-shortcut"></a>바로 가기 키  
+ - 언제든지 **Ctrl+Alt+A** 를 입력하여 작업 모니터를 엽니다.
 
  >**힌트** SSMS에서 아이콘 위로 마우스를 움직여 바로 가기 키가 무엇이고, 키보드 바로 가기 키에서 활성화하는 항목이 무엇인지 알아보세요!
 
-### 도구 모음
+### <a name="toolbar"></a>도구 모음
 
 표준 도구 모음에서 **작업 모니터** 아이콘을 클릭합니다. 가운데, 실행 취소/다시 실행 단추 바로 오른쪽에 있습니다.
 ![Activity_Monitor_icon](../../relational-databases/performance-monitor/media/activity-monitor-icon.png)  
   
 모니터링할 SQL Server의 인스턴스에 이미 연결되어 있으면 **서버에 연결** 대화 상자를 닫습니다.
   
-## 시작할 때 작업 모니터 및 개체 탐색기 시작
+## <a name="launch-activity-monitor-and-object-explorer-on-startup"></a>시작할 때 작업 모니터 및 개체 탐색기 시작
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
@@ -60,10 +64,11 @@ caps.handback.revision: 38
 ![open_object_explorer](../../relational-databases/performance-monitor/media/open-object-explorer.png)
   
   
-## 작업 모니터 새로 고침 간격 설정  
+## <a name="set-the-activity-monitor-refresh-interval"></a>작업 모니터 새로 고침 간격 설정  
   
 1.   작업 모니터를 엽니다.  
   
 2.   **개요**를 마우스 오른쪽 단추로 클릭하고 **새로 고침 간격**을 선택한 다음 작업 모니터가 새 인스턴스 정보를 가져와야 하는 간격을 선택합니다.  
   
   
+

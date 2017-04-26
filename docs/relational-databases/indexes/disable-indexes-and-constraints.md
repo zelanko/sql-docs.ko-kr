@@ -1,35 +1,39 @@
 ---
-title: "인덱스 및 제약 조건 비활성화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.disableindexes.f1"
-helpviewer_keywords: 
-  - "해제된 인덱스 [SQL Server], 인덱스 작업"
-  - "비클러스터형 인덱스 [SQL Server], 비활성화"
-  - "해제된 인덱스 [SQL Server], 지침"
-  - "클러스터형 인덱스, 비활성화"
-  - "제약 조건 [SQL Server], 비활성화"
-  - "해제된 인덱스 [SQL Server], 보기"
-  - "FOREIGN KEY 제약 조건, 비활성화"
-  - "통계 정보 [SQL Server], 인덱스"
-  - "인덱스 비활성화 [SQL Server]"
-  - "인덱싱된 뷰 [SQL Server], 비활성 인덱스"
+title: "인덱스 및 제약 조건 비활성화 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.disableindexes.f1
+helpviewer_keywords:
+- disabled indexes [SQL Server], index operations
+- nonclustered indexes [SQL Server], disabling
+- disabled indexes [SQL Server], guidelines
+- clustered indexes, disabling
+- constraints [SQL Server], disabling
+- disabled indexes [SQL Server], viewing
+- FOREIGN KEY constraints, disabling
+- statistical information [SQL Server], indexes
+- index disabling [SQL Server]
+- indexed views [SQL Server], disabled indexes
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 02ec61b5f3342ba8c5abd6e5044cd9f6863f6145
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 및 제약 조건 비활성화
+# <a name="disable-indexes-and-constraints"></a>인덱스 및 제약 조건 비활성화
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스 또는 제약 조건을 비활성화하는 방법에 대해 설명합니다. 인덱스를 비활성화하면 사용자가 인덱스에 액세스할 수 없으며 클러스터형 인덱스의 경우 기본 테이블 데이터에도 액세스할 수 없습니다. 인덱스 정의는 메타데이터에 보관되고 인덱스 통계는 비클러스터형 인덱스에 유지됩니다. 뷰의 비클러스터형 또는 클러스터형 인덱스를 비활성화하면 인덱스 데이터가 물리적으로 삭제됩니다. 테이블의 클러스터형 인덱스를 비활성화하면 테이블 데이터에 액세스할 수 없습니다. 데이터는 테이블에 계속 남아 있지만 인덱스를 삭제하거나 다시 작성할 때까지 DML(데이터 조작 언어) 작업에 데이터를 사용할 수 없습니다.  
@@ -93,7 +97,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 인덱스를 비활성화하려면  
+#### <a name="to-disable-an-index"></a>인덱스를 비활성화하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스를 비활성화할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 28
   
 6.  **인덱스 비활성화** 대화 상자에서 올바른 인덱스가 **비활성화할 인덱스** 표에 있는지 확인한 다음 **확인**을 클릭합니다.  
   
-#### 테이블의 모든 인덱스를 비활성화하려면  
+#### <a name="to-disable-all-indexes-on-a-table"></a>테이블의 모든 인덱스를 비활성화하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스를 비활성화할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -128,7 +132,7 @@ caps.handback.revision: 28
  인덱스가 생성된 테이블 또는 뷰의 이름을 표시합니다.  
   
  **인덱스 유형**  
- 인덱스의 유형(**클러스터형**, **비클러스터형**, **공간** 또는 **XML**)을 표시합니다.  
+ 인덱스의 유형( **클러스터형**, **비클러스터형**, **공간**또는 **XML**)을 표시합니다.  
   
  **상태**  
  비활성화 작업의 상태를 표시합니다. 실행 후에 표시될 수 있는 값은 다음과 같습니다.  
@@ -153,7 +157,7 @@ caps.handback.revision: 28
   
      사용자가 작업을 중지하여 인덱스 비활성화가 완료되지 않았습니다.  
   
- ** 메시지 **  
+ **메시지**  
  비활성화 작업을 실행하는 동안 오류 메시지 텍스트를 제공합니다. 실행 중에는 오류 텍스트가 하이퍼링크로 표시됩니다. 하이퍼링크에는 오류 내용을 설명하는 텍스트가 표시됩니다. 대개의 경우 **메시지** 열에는 전체 메시지 텍스트의 일부만 표시됩니다. 다음과 같은 두 가지 방법으로 전체 텍스트를 볼 수 있습니다.  
   
 -   마우스 포인터를 메시지 셀 위로 이동하여 오류 텍스트가 나타나는 도구 설명을 봅니다.  
@@ -162,7 +166,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 인덱스를 비활성화하려면  
+#### <a name="to-disable-an-index"></a>인덱스를 비활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 28
     DISABLE;  
     ```  
   
-#### 테이블의 모든 인덱스를 비활성화하려면  
+#### <a name="to-disable-all-indexes-on-a-table"></a>테이블의 모든 인덱스를 비활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -198,3 +202,4 @@ caps.handback.revision: 28
  자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
   
+

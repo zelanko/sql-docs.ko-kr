@@ -1,53 +1,57 @@
 ---
-title: "검색 속성 목록을 사용하여 문서 속성 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 텍스트 검색 [SQL Server], 검색 속성 목록"
-  - "전체 텍스트 검색 [SQL Server], 속성"
-  - "검색 속성 목록 [SQL Server]"
-  - "속성 검색 [SQL Server], 정보"
-  - "전체 텍스트 인덱스 [SQL Server], 검색 속성 목록"
-  - "검색 속성 목록 [SQL Server], 정보"
-  - "속성 검색 [SQL Server]"
+title: "검색 속성 목록을 사용하여 문서 속성 검색 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- full-text search [SQL Server], properties
+- search property lists [SQL Server]
+- property searching [SQL Server], about
+- full-text indexes [SQL Server], search property lists
+- search property lists [SQL Server], about
+- property searching [SQL Server]
 ms.assetid: ffae5914-b1b2-4267-b927-37e8382e0a9e
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
+ms.lasthandoff: 04/11/2017
+
 ---
-# 검색 속성 목록을 사용하여 문서 속성 검색
-  이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 **varbinary**, **varbinary(max)**(**FILESTREAM** 포함) 또는 **image** 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 `속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색*이라고 합니다.  
+# <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색
+  이전에는 문서 속성의 내용을 문서 본문의 내용과 구분할 수 없었으므로 전체 문서에서 일반 검색에 대해 전체 텍스트 쿼리를 수행할 수 없었습니다. 그러나 이제 **varbinary**, **varbinary(max)** ( **FILESTREAM**포함) 또는 **image** 이진 데이터 열의 지원되는 문서 유형의 경우 Author 및 Title과 같은 특정 `속성에 대한 속성 범위 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 이러한 형태의 검색을 *속성 검색*이라고 합니다.  
   
- 연결된 [필터](../../relational-databases/search/configure-and-manage-filters-for-search.md)(IFilter)에 따라 특정 문서 유형에서 속성 검색이 가능한지 여부가 결정됩니다. 일부 문서 유형의 경우 연결된 IFilter가 문서 본문의 내용뿐만 아니라 해당 문서 유형에 대해 정의된 속성의 일부 또는 전부를 추출합니다. 전체 텍스트 인덱싱 중 IFilter가 추출한 속성에 대해서만 속성 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 여러 문서 속성을 추출하는 IFilter 중에는 .docx, .xlsx 및 .pptx와 같은 Microsoft Office 문서 유형에 대한 IFilter가 있습니다. 반면에 XML 필터는 속성을 내보내지 않습니다.  
+ 연결된 [필터](../../relational-databases/search/configure-and-manage-filters-for-search.md) (IFilter)에 따라 특정 문서 유형에서 속성 검색이 가능한지 여부가 결정됩니다. 일부 문서 유형의 경우 연결된 IFilter가 문서 본문의 내용뿐만 아니라 해당 문서 유형에 대해 정의된 속성의 일부 또는 전부를 추출합니다. 전체 텍스트 인덱싱 중 IFilter가 추출한 속성에 대해서만 속성 검색을 지원하도록 전체 텍스트 인덱스를 구성할 수 있습니다. 여러 문서 속성을 추출하는 IFilter 중에는 .docx, .xlsx 및 .pptx와 같은 Microsoft Office 문서 유형에 대한 IFilter가 있습니다. 반면에 XML 필터는 속성을 내보내지 않습니다.  
   
 ##  <a name="How_FTS_Works_with_search_properties"></a> 전체 텍스트 검색이 검색 속성을 사용하는 방법  
   
-### 내부 속성 ID  
+### <a name="internal-property-ids"></a>내부 속성 ID  
  전체 텍스트 엔진은 특정 검색 목록에서 속성을 고유하게 식별하고 이 검색 속성 목록에 고유한 내부 속성 ID를 등록된 각 속성에 임의로 할당합니다. 따라서 속성이 여러 검색 속성 목록에 추가되면 목록마다 내부 속성 ID가 다를 수가 있습니다.  
   
- 속성을 검색 목록에 등록하면 전체 텍스트 엔진이 속성에 *내부 속성 ID*를 임의로 할당합니다. 내부 속성 ID는 검색 속성 목록에서 속성을 고유하게 식별하는 정수입니다.  
+ 속성을 검색 목록에 등록하면 전체 텍스트 엔진이 속성에 *내부 속성 ID* 를 임의로 할당합니다. 내부 속성 ID는 검색 속성 목록에서 속성을 고유하게 식별하는 정수입니다.  
   
  다음 설명에서는 Title 및 Keywords라는 두 개의 속성을 지정하는 검색 속성 목록의 논리적 뷰를 보여 줍니다. Keywords의 속성 목록 이름은 "Tags"입니다. 이 속성은 GUID가 F29F85E0-4FF9-1068-AB91-08002B27B3D9인 동일한 속성 집합에 속합니다. 속성 정수 식별자는 Title의 경우 2이고, Tags(Keywords)의 경우 5입니다. 전체 텍스트 엔진은 각 속성을 검색 속성 목록에 고유한 내부 속성 ID로 임의 매핑합니다. Title 속성의 내부 속성 ID는 1이고 Tags 속성의 내부 속성 ID는 2입니다.  
   
- ![내부 테이블에 대한 검색 속성 목록의 매핑](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "내부 테이블에 대한 검색 속성 목록의 매핑")  
+ ![내부 테이블에 대한 검색 속성 목록의 매핑](../../relational-databases/search/media/ifts-spl-w-title-and-keywords.gif "Mapping of search property list to internal table")  
   
  내부 속성 ID는 속성의 속성 정수 식별자와 다를 가능성이 높습니다. 지정된 속성이 여러 검색 속성 목록에 대해 등록된 경우 검색 속성 목록마다 서로 다른 내부 속성 ID가 할당될 수 있습니다. 예를 들어 내부 속성 ID가 한 검색 속성 목록에서는 4이고, 다른 목록에서는 1이고, 또 다른 목록에서는 3일 수 있습니다. 반대로 속성 정수 식별자는 속성에 내재된 것이므로 속성이 사용되는 위치에 관계없이 항상 동일합니다.  
   
-### 등록된 속성 인덱싱  
+### <a name="indexing-of-registered-properties"></a>등록된 속성 인덱싱  
  전체 텍스트 인덱스를 검색 속성 목록과 연결한 후 인덱스를 다시 채워야 속성별 검색 단어를 인덱싱할 수 있습니다. 전체 텍스트 인덱싱 중 모든 속성의 내용은 다른 내용과 함께 전체 텍스트 인덱스에 저장됩니다. 하지만 등록된 속성에 있는 검색 단어를 인덱싱하는 경우 전체 텍스트 인덱서는 단어와 함께 해당 내부 속성 ID도 저장합니다. 반대로 속성이 등록되어 있지 않으면 해당 속성은 문서 본문의 일부이고 내부 속성 ID 값이 0인 것처럼 전체 텍스트 인덱스에 저장됩니다.  
   
  다음 설명에서는 앞의 설명에 표시된 검색 속성 목록과 연결된 전체 텍스트 목록에 검색 단어가 어떻게 나타나는지에 대한 논리적 뷰를 보여 줍니다. 샘플 문서인 Document 1은 문서 본문과 Title, Author 및 Keywords라는 세 개의 속성을 포함합니다. 검색 속성 목록에 지정된 Title 및 Keywords 속성의 경우 검색 단어는 전체 텍스트 인덱스에서 해당 내부 속성 ID와 연결됩니다. 반면 Author 속성의 내용은 문서 본문의 일부인 것처럼 인덱싱됩니다. 즉, 속성을 등록하면 속성에 저장되는 내용의 양에 따라 전체 텍스트 인덱스 크기가 어느 정도 커질 수 있습니다.  
   
- ![검색 속성 목록을 사용하는 전체 텍스트 인덱스](../../relational-databases/search/media/ifts-spl-and-fti.gif "검색 속성 목록을 사용하는 전체 텍스트 인덱스")  
+ ![검색 속성 목록을 사용하는 전체 텍스트 인덱스](../../relational-databases/search/media/ifts-spl-and-fti.gif "Full-text index that uses a search property list")  
   
  Title 속성의 검색 단어("Favorite", "Biking" 및 "Trails")는 이 인덱스에 대해 Title에 할당된 내부 속성 ID 1과 연결되어 있습니다. Keywords 속성의 검색 단어("biking" 및 "mountain")는 이 인덱스에 대해 Tags에 할당된 내부 속성 ID 2와 연결되어 있습니다. Author 속성의 검색 단어("Jane" 및 "Doe")와 문서 본문의 검색 단어의 경우 내부 속성 ID는 0입니다. "biking"이라는 단어는 Title 속성, Keywords(Tags) 속성 및 문서 본문에 나옵니다. Title 또는 Keywords(Tags) 속성에서 "biking"에 대한 속성 검색을 수행하면 결과에 이 문서가 반환됩니다. "biking"에 대한 일반 전체 텍스트 쿼리에서도 속성 검색에 대해 인덱스가 구성되지 않은 것처럼 이 문서가 반환됩니다. Author 속성에서 "biking"에 대한 속성 검색을 수행하면 이 문서가 반환되지 않습니다.  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 49
   
  [CREATE SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md) 문을 사용하고 목록에 이름을 하나 이상 제공합니다.  
   
-##### Management Studio에서 검색 속성 목록을 만들려면  
+##### <a name="to-create-a-search-property-list-in-management-studio"></a>Management Studio에서 검색 속성 목록을 만들려면  
   
 1.  개체 탐색기에서 서버를 확장합니다.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 49
   
     -   **기존 검색 속성 목록에서 만들기**  
   
-     자세한 내용은 [New Search Property List](../Topic/New%20Search%20Property%20List.md)을 참조하세요.  
+     자세한 내용은 [New Search Property List](http://msdn.microsoft.com/library/ffca78e9-8608-4b15-bd38-b2d78da4247a)을 참조하세요.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -151,7 +155,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
  **Management Studio를 사용하여 전체 텍스트 인덱스에 검색 속성 목록을 연결하려면**  
   
- **전체 텍스트 인덱스 속성** 대화 상자의 **일반** 페이지에서 **검색 속성 목록**의 값을 지정합니다.  
+ **전체 텍스트 인덱스 속성** 대화 상자의 **일반** 페이지에서 **검색 속성 목록** 의 값을 지정합니다.  
   
 ##  <a name="Ov_CONTAINS_using_PROPERTY"></a> CONTAINS를 사용하여 검색 속성 쿼리  
  속성 범위 전체 텍스트 쿼리를 위한 기본 [CONTAINS](../../t-sql/queries/contains-transact-sql.md) 구문은 다음과 같습니다.  
@@ -161,7 +165,7 @@ SELECT column_name FROM table_name
   WHERE CONTAINS ( PROPERTY ( column_name, 'property_name' ), '<contains_search_condition>' )  
 ```  
   
- 예를 들어 다음 쿼리는 `Title` 데이터베이스에 있는 `Document` 테이블의 `Production.Document` 열에서 인덱싱된 속성인 `AdventureWorks`을 검색합니다. 쿼리는 `Title` 속성에 `Maintenance` 또는 `Repair`  
+ 예를 들어 다음 쿼리는 `Title`데이터베이스에 있는 `Document` 테이블의 `Production.Document` 열에서 인덱싱된 속성인 `AdventureWorks` 을 검색합니다. 쿼리는 `Title` 속성에 `Maintenance` 또는 `Repair`  
   
 ```  
 USE AdventureWorks  
@@ -180,7 +184,7 @@ GO
   
  [ALTER SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md) 문을 사용하여 검색 속성을 추가 또는 제거합니다.  
   
-##### Management Studio에서 검색 속성 목록을 보고 변경하려면  
+##### <a name="to-view-and-change-a-search-property-list-in-management-studio"></a>Management Studio에서 검색 속성 목록을 보고 변경하려면  
   
 1.  개체 탐색기에서 서버를 확장합니다.  
   
@@ -198,7 +202,7 @@ GO
   
     2.  문서 속성을 추가하려면 **\***오른쪽에 있는 목록 아래쪽에서 빈 행을 클릭하고 새 속성에 대한 값을 입력합니다.  
   
-         이러한 값에 대한 자세한 내용은 [검색 속성 목록 편집기](../Topic/Search%20Property%20List%20Editor.md)를 참조하십시오. Microsoft에서 정의한 속성의 이러한 값을 가져오는 방법은 [검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)를 참조하세요. ISV(Independent Software Vendor)에서 정의한 속성에 대한 자세한 내용은 해당 공급업체의 설명서를 참조하십시오.  
+         이러한 값에 대한 자세한 내용은 [검색 속성 목록 편집기](http://msdn.microsoft.com/library/0f3ced6e-0dfd-49fc-b175-82378c3d668e)를 참조하십시오. Microsoft에서 정의한 속성의 이러한 값을 가져오는 방법은 [검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)를 참조하세요. ISV(Independent Software Vendor)에서 정의한 속성에 대한 자세한 내용은 해당 공급업체의 설명서를 참조하십시오.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -209,7 +213,7 @@ GO
   
  [DROP SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md) 문을 사용합니다.  
   
-##### Management Studio에서 검색 속성 목록을 삭제하려면  
+##### <a name="to-delete-a-search-property-list-in-management-studio"></a>Management Studio에서 검색 속성 목록을 삭제하려면  
   
 1.  개체 탐색기에서 서버를 확장합니다.  
   
@@ -221,8 +225,8 @@ GO
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 참고 항목  
- [검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+## <a name="see-also"></a>참고 항목  
+ [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   
   

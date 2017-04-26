@@ -1,25 +1,29 @@
 ---
-title: "테이블 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "테이블 [SQL Server]"
-  - "테이블 구성 요소 [SQL Server]"
+title: "테이블 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [SQL Server]
+- table components [SQL Server]
 ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7111c0043ebecaa5ca55480eb530ffd665ef4243
+ms.lasthandoff: 04/11/2017
+
 ---
-# 테이블
+# <a name="tables"></a>테이블
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   테이블은 데이터베이스의 모든 데이터를 포함하는 데이터베이스 개체입니다. 테이블에서 데이터는 스프레드시트와 비슷한 논리적인 행 및 열 형식으로 구성됩니다. 각 행은 고유한 레코드를 나타내며 각 열은 레코드 내의 필드를 나타냅니다. 예를 들어 회사 사원 데이터가 들어 있는 테이블은 각 사원에 대한 행과 사원 번호, 이름, 주소, 직책 및 집 전화번호와 같은 자세한 사원 정보를 나타내는 열로 구성할 수 있습니다.  
@@ -30,20 +34,20 @@ caps.handback.revision: 30
   
 -   행별로 또는 페이지별로 테이블의 데이터를 압축할 수 있습니다. 데이터 압축을 사용하면 한 페이지에 더 많은 행을 저장할 수 있습니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
-## 테이블 형식  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 기본 사용자 정의 테이블의 표준 역할 외에도 데이터베이스에서 특수한 용도로 사용되는 다음과 같은 테이블 유형을 제공합니다.  
+## <a name="types-of-tables"></a>테이블 형식  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 기본 사용자 정의 테이블의 표준 역할 외에도 데이터베이스에서 특수한 용도로 사용되는 다음과 같은 테이블 유형을 제공합니다.  
   
  분할된 테이블  
  분할된 테이블은 데이터가 수평 분할된 단위로 되어 데이터베이스의 여러 파일 그룹에 분산될 수 있는 테이블입니다. 분할을 사용하면 데이터 하위 집합을 빠르고 효율적으로 액세스하거나 관리하면서 동시에 전체 컬렉션의 무결성을 유지할 수 있으므로 큰 테이블 또는 인덱스를 더욱 편리하게 관리할 수 있습니다. 기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 은 최대 15,000개의 파티션을 지원합니다. 자세한 내용은 [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md)을 참조하세요.  
   
  임시 테이블  
- 임시 테이블은 **tempdb**에 저장됩니다. 임시 테이블에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 테이블은 이름이 한 개의 숫자 기호(#)로 시작하며 사용자의 현재 연결에만 표시되고 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와의 연결을 끊으면 삭제됩니다. 전역 임시 테이블은 이름이 두 개의 숫자 기호(##)로 시작하며 테이블 작성 후 모든 사용자에게 표시되고 테이블을 참조하는 모든 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다.  
+ 임시 테이블은 **tempdb**에 저장됩니다. 임시 테이블에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 테이블은 이름이 한 개의 숫자 기호(#)로 시작하며 사용자의 현재 연결에만 표시되고 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다. 전역 임시 테이블은 이름이 두 개의 숫자 기호(##)로 시작하며 테이블 작성 후 모든 사용자에게 표시되고 테이블을 참조하는 모든 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와의 연결을 끊으면 삭제됩니다.  
   
  시스템 테이블  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버와 서버의 모든 테이블에 대한 구성을 정의하는 데이터를 시스템 테이블이라고 알려진 특수한 테이블 집합에 저장합니다. 사용자는 시스템 테이블을 직접 쿼리하거나 업데이트할 수 없습니다. 시스템 테이블의 정보는 시스템 뷰를 통해 사용할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](../Topic/System%20Views%20\(Transact-SQL\).md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 서버와 서버의 모든 테이블에 대한 구성을 정의하는 데이터를 시스템 테이블이라고 알려진 특수한 테이블 집합에 저장합니다. 사용자는 시스템 테이블을 직접 쿼리하거나 업데이트할 수 없습니다. 시스템 테이블의 정보는 시스템 뷰를 통해 사용할 수 있습니다. 자세한 내용은 [시스템 뷰&#40;Transact-SQL&#41;](http://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)를 참조하세요.  
   
  넓은 테이블  
- 넓은 테이블에서는 [스파스 열](../../relational-databases/tables/use-sparse-columns.md)을 사용하여 테이블이 포함할 수 있는 전체 열을 최대 30,000개까지 늘립니다. 스파스 열은 Null 값에 대해 최적화된 저장소가 있는 일반 열입니다. 스파스 열을 사용하면 Null 값에 대한 공간 요구 사항이 줄어드는 반면 Null이 아닌 값을 검색하는 데 더 많은 오버헤드가 발생합니다. 넓은 테이블은 테이블의 모든 스파스 열을 구조화된 출력으로 결합하는 형식화되지 않은 XML 표현인 [열 집합](../../relational-databases/tables/use-column-sets.md)을 정의했습니다. 인덱스 및 통계 수도 각각 1,000개와 30,000개로 늘어납니다. 넓은 테이블 행의 최대 크기는 8,019바이트입니다. 따라서 특정 행에 포함된 대부분의 데이터는 NULL이어야 합니다. 넓은 테이블에 있는 비스파스 열과 계산 열을 더한 최대 개수는 1,024개입니다.  
+ 넓은 테이블에서는 [스파스 열](../../relational-databases/tables/use-sparse-columns.md) 을 사용하여 테이블이 포함할 수 있는 전체 열을 최대 30,000개까지 늘립니다. 스파스 열은 Null 값에 대해 최적화된 저장소가 있는 일반 열입니다. 스파스 열을 사용하면 Null 값에 대한 공간 요구 사항이 줄어드는 반면 Null이 아닌 값을 검색하는 데 더 많은 오버헤드가 발생합니다. 넓은 테이블은 테이블의 모든 스파스 열을 구조화된 출력으로 결합하는 형식화되지 않은 XML 표현인 [열 집합](../../relational-databases/tables/use-column-sets.md)을 정의했습니다. 인덱스 및 통계 수도 각각 1,000개와 30,000개로 늘어납니다. 넓은 테이블 행의 최대 크기는 8,019바이트입니다. 따라서 특정 행에 포함된 대부분의 데이터는 NULL이어야 합니다. 넓은 테이블에 있는 비스파스 열과 계산 열을 더한 최대 개수는 1,024개입니다.  
   
  넓은 테이블은 성능에 다음과 같은 영향을 미칠 수 있습니다.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 30
   
 -   넓은 테이블에서 특정 열을 업데이트하는 업데이트 커서는 FOR UPDATE 절에서 열을 명시적으로 나열해야 합니다. 이렇게 하면 커서를 사용할 때 성능을 최적화하는 데 도움이 됩니다.  
   
-## 공통 테이블 태스크  
+## <a name="common-table-tasks"></a>공통 테이블 태스크  
  다음 표에서는 테이블 만들기 또는 수정과 관련된 공통 태스크의 링크를 제공합니다.  
   
 |테이블 태스크|항목|  
@@ -84,7 +88,7 @@ caps.handback.revision: 30
 |테이블에서 계산 열을 만드는 방법을 설명합니다.|[테이블에서 계산 열 지정](../../relational-databases/tables/specify-computed-columns-in-a-table.md)|  
 |열의 기본값을 지정하는 방법을 설명합니다. 다른 값을 제공하지 않으면 이 값이 사용됩니다.|[열의 기본값 지정](../../relational-databases/tables/specify-default-values-for-columns.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [PRIMARY KEY 및 FOREIGN KEY 제약 조건](../../relational-databases/tables/primary-and-foreign-key-constraints.md)   
  [UNIQUE 제약 조건 및 CHECK 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)  
   

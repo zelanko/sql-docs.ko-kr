@@ -1,44 +1,31 @@
 ---
-title: "백업 암호화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "백업 암호화 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 30654c4f7950f188cf08608cf946f4fe42e6d3e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 백업 암호화
+# <a name="backup-encryption"></a>백업 암호화
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 암호화 옵션에 대해 간략하게 설명합니다. 여기에서는 백업 중의 암호화에 대한 사용법, 이점 및 권장 방법을 살펴봅니다.  
   
- **항목 내용**  
-  
--   [개요](../../relational-databases/backup-restore/backup-encryption.md#Overview)  
-  
--   [이점](#Benefits)  
-  
--   [필수 구성 요소](../../relational-databases/backup-restore/backup-encryption.md#Prerequisites)  
-  
--   [제한 사항](#Restrictions)  
-  
--   [사용 권한](../../relational-databases/backup-restore/backup-encryption.md#Permissions)  
-  
--   [백업 암호화 방법](../../relational-databases/backup-restore/backup-encryption.md#Methods)  
-  
--   [권장 방법](../../relational-databases/backup-restore/backup-encryption.md#RecommendedPractices)  
-  
--   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="Overview"></a> 개요  
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SQL Server에는 백업을 만드는 동안 데이터를 암호화하는 기능이 포함됩니다. 백업을 만들 때 암호화 알고리즘과 암호기(인증서 또는 비대칭 키)를 지정하여 암호화된 백업 파일을 만들 수 있습니다. 모든 저장소 대상, 즉 온-프레미스 및 Window Azure Storage가 지원됩니다. 또한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 도입된 새로운 기능인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 작업에 대해 암호화 옵션을 구성할 수 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 SQL Server에는 백업을 만드는 동안 데이터를 암호화하는 기능이 포함됩니다. 백업을 만들 때 암호화 알고리즘과 암호기(인증서 또는 비대칭 키)를 지정하여 암호화된 백업 파일을 만들 수 있습니다. 모든 저장소 대상, 즉 온-프레미스 및 Window Azure Storage가 지원됩니다. 또한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에서 도입된 새로운 기능인 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]작업에 대해 암호화 옵션을 구성할 수 있습니다.  
   
  백업 중에 암호화하려면 암호화 키를 보호할 암호기와 암호화 알고리즘을 지정해야 합니다. 지원되는 암호화 옵션은 다음과 같습니다.  
   
@@ -65,7 +52,6 @@ caps.handback.revision: 16
   
 5.  EKM(확장 키 관리) 공급자와 암호화 키를 통합할 수 있습니다.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> 필수 구성 요소  
  백업을 암호화하기 위한 사전 요구 사항은 다음과 같습니다.  
@@ -88,7 +74,6 @@ caps.handback.revision: 16
   
 -   암호화된 백업의 경우 기존 백업 세트 옵션에 추가는 지원되지 않습니다.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
 ##  <a name="Permissions"></a> 사용 권한  
  **백업을 암호화하거나 암호화된 백업에서 복원하려면:**  
@@ -101,14 +86,14 @@ caps.handback.revision: 16
 ##  <a name="Methods"></a> 백업 암호화 방법  
  아래의 섹션들에서는 백업 중에 데이터를 암호화하는 단계를 간략하게 소개합니다. Transact-SQL을 사용하여 백업을 암호화하는 다른 단계에 대한 전체 연습은 [암호화된 백업 만들기](../../relational-databases/backup-restore/create-an-encrypted-backup.md)를 참조하세요.  
   
-### SQL Server Management Studio 사용  
+### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
  다음 대화 상자에서 데이터베이스의 백업을 만들 때 백업을 암호화할 수 있습니다.  
   
 1.  [데이터베이스 백업&#40;백업 옵션 페이지&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md) **백업 옵션** 페이지에서 **암호화**를 선택하고 암호화 알고리즘과 암호화에 사용할 인증서 또는 비대칭 키를 지정할 수 있습니다.  
   
 2.  [유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) 백업 태스크를 선택할 때 **백업 태스크 정의** 페이지의 **옵션** 탭에서 **백업 암호화**를 선택하고 암호화 알고리즘과 암호화에 사용할 인증서 또는 키를 지정할 수 있습니다.  
   
-### Transact-SQL 사용  
+### <a name="using-transact-sql"></a>Transact-SQL 사용  
  다음은 백업 파일을 암호화하는 예제 Transact-SQL 문입니다.  
   
 ```  
@@ -128,7 +113,7 @@ GO
   
  전체 Transact-SQL 문 구문은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  
   
-### PowerShell 사용  
+### <a name="using-powershell"></a>PowerShell 사용  
  이 예제에서는 암호화 옵션을 만든 다음 **Backup-SqlDatabase** cmdlet에서 매개 변수 값으로 사용하여 암호화된 백업을 만듭니다.  
   
 ```  
@@ -155,7 +140,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |[암호화된 백업 만들기](../../relational-databases/backup-restore/create-an-encrypted-backup.md)|암호화된 백업을 만드는 데 필요한 기본 단계에 대해 설명합니다.|  
 |[Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Azure 키 자격 증명 모음에서 키로 보호하는 암호화된 백업을 만드는 예제를 제공합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)  
   
   

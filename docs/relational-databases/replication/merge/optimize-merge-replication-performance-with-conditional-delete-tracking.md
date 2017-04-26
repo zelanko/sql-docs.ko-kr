@@ -1,26 +1,30 @@
 ---
-title: "조건부 삭제 추적으로 병합 복제 성능 최적화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "조건부 삭제 추적 [SQL Server 복제]"
-  - "병합 복제 [SQL Server 복제], 조건부 삭제 추적"
-  - "아티클 [SQL Server 복제], 조건부 삭제 추적"
+title: "조건부 삭제 추적으로 병합 복제 성능 최적화 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional delete tracking [SQL Server replication]
+- merge replication [SQL Server replication], conditional delete tracking
+- articles [SQL Server replication], conditional delete tracking
 ms.assetid: 58f120a3-ea3a-4e97-93f0-0eb4e580ecf2
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61f3c832be62fb53a82713182dc026d7a6fc3fb5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 조건부 삭제 추적으로 병합 복제 성능 최적화
+# <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>조건부 삭제 추적으로 병합 복제 성능 최적화
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -45,9 +49,9 @@ caps.handback.revision: 23
   
  **삭제가 추적되지 않게 지정하려면**  
   
--   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [를 삭제 해야 하지 수 추적에 대 한 병합 아티클 지정 & #40; 복제 TRANSACT-SQL 프로그래밍 & #41;](../../../relational-databases/replication/publish/specify that deletes should not be tracked for merge articles.md)  
+-   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 프로그래밍: [병합 아티클에 대해 삭제가 추적되지 않도록 지정&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/publish/specify-that-deletes-should-not-be-tracked-for-merge-articles.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [병합 복제를 위한 아티클 옵션](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [다운로드 전용 아티클로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)  
   

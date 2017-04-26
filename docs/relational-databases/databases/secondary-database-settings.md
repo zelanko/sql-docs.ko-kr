@@ -1,29 +1,33 @@
 ---
-title: "보조 데이터베이스 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.dest.f1"
+title: "보조 데이터베이스 설정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.dest.f1
 ms.assetid: f992ffc9-ee42-43fe-acec-512032f0ded1
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ec30a94c58a94d2afad050eab06ecc60432c7b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 보조 데이터베이스 설정
+# <a name="secondary-database-settings"></a>보조 데이터베이스 설정
   이 대화 상자를 사용하여 로그 전달 구성에서 보조 데이터베이스의 속성을 구성하고 수정할 수 있습니다.  
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **보조 서버 인스턴스**  
  로그 전달 구성에서 현재 보조 서버로 구성되어 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 표시합니다.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 32
  다음과 같은 옵션이 있습니다.  
   
  **예, 주 데이터베이스의 전체 백업을 생성하고 보조 데이터베이스에 복원합니다.**  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 주 데이터베이스를 백업하여 보조 서버에 복원하는 방법으로 보조 데이터베이스를 구성하도록 합니다. **보조 데이터베이스** 입력란에 새 데이터베이스 이름을 입력한 경우 복원 작업을 실행하는 과정의 일부로 해당 데이터베이스가 생성됩니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 주 데이터베이스를 백업하여 보조 서버에 복원하는 방법으로 보조 데이터베이스를 구성하도록 합니다. **보조 데이터베이스** 입력란에 새 데이터베이스 이름을 입력한 경우 복원 작업을 실행하는 과정의 일부로 해당 데이터베이스가 생성됩니다.  
   
  **복원 옵션**  
  보조 서버에서 기본 위치 이외의 위치에 보조 데이터베이스의 데이터 및 로그 파일을 복원하려면 클릭합니다.  
@@ -49,10 +53,10 @@ caps.handback.revision: 32
  **복원 옵션** 단추를 클릭했지만 기본 폴더를 사용하려는 경우에는 **복원 옵션** 대화 상자를 취소하는 것이 좋습니다. 이미 다른 위치를 지정한 경우에 다시 기본 위치를 사용하려면 **복원 옵션** 을 다시 클릭하고 입력란의 내용을 지운 다음 확인을 클릭합니다.  
   
  **예, 주 데이터베이스의 기존 백업을 보조 데이터베이스에 복원합니다.**  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 주 데이터베이스의 기존 백업을 사용하여 보조 데이터베이스를 초기화하도록 합니다. **백업 파일** 입력란에 해당 백업 파일이 저장된 위치를 입력합니다. 보조 데이터베이스 입력란에 새 데이터베이스 이름을 입력한 경우 복원 작업을 실행하는 과정의 일부로서 해당 데이터베이스가 만들어집니다.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 주 데이터베이스의 기존 백업을 사용하여 보조 데이터베이스를 초기화하도록 합니다. **백업 파일** 입력란에 해당 백업 파일이 저장된 위치를 입력합니다. 보조 데이터베이스 입력란에 새 데이터베이스 이름을 입력한 경우 복원 작업을 실행하는 과정의 일부로서 해당 데이터베이스가 만들어집니다.  
   
  **백업 파일**  
- **예, 주 데이터베이스의 기존 백업을 보조 데이터베이스에 복원합니다.** 옵션을 선택한 경우에 보조 데이터베이스를 초기화하는 데 사용할 전체 데이터베이스 백업의 경로와 파일 이름을 입력합니다.  
+ **예, 주 데이터베이스의 기존 백업을 보조 데이터베이스에 복원합니다.**옵션을 선택한 경우에 보조 데이터베이스를 초기화하는 데 사용할 전체 데이터베이스 백업의 경로와 파일 이름을 입력합니다.  
   
  **복원 옵션**  
  이 도움말 항목의 앞에서 설명한 내용을 참조하십시오.  
@@ -94,7 +98,7 @@ caps.handback.revision: 32
  보조 데이터베이스를 STANDBY 모드로 유지합니다. 이 모드를 선택하면 데이터베이스에서 읽기 전용 작업을 수행할 수 있습니다.  
   
 > [!IMPORTANT]  
->  기존 보조 데이터베이스의 복구 모드를 변경하면(예: **복구 안 함 모드**에서 **대기 모드**로) 다음 로그 백업이 데이터베이스로 복원된 후에만 변경 내용이 적용됩니다.  
+>  기존 보조 데이터베이스의 복구 모드를 변경하면(예: **복구 안 함 모드** 에서 **대기 모드**로) 다음 로그 백업이 데이터베이스로 복원된 후에만 변경 내용이 적용됩니다.  
   
  **최소 다음 기간 동안 백업 복원 지연**  
  보조 데이터베이스에 트랜잭션 로그 백업(있는 경우)을 복원하기 전에 지연하는 시간을 선택합니다.  
@@ -114,7 +118,7 @@ caps.handback.revision: 32
  **이 작업 비활성화**  
  보조 데이터베이스로의 복원 작업을 일시 중지합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

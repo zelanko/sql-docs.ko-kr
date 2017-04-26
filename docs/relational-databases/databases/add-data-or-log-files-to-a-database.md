@@ -1,30 +1,34 @@
 ---
-title: "데이터베이스에 데이터 또는 로그 파일 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 [SQL Server], 파일"
-  - "데이터 파일 추가"
-  - "파일 추가"
-  - "로그 파일 추가"
-  - "파일 추가 [SQL Server], 단계"
-  - "파일 [SQL Server], 추가"
-  - "데이터 추가 내용 [SQL Server]"
+title: "데이터베이스에 데이터 또는 로그 파일 추가 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- adding data files
+- adding files
+- adding log files
+- file additions [SQL Server], steps
+- files [SQL Server], adding
+- data additions [SQL Server]
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 760d6803511284da837b02f8b1474029edd5830c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스에 데이터 또는 로그 파일 추가
+# <a name="add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일 추가
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터베이스에 데이터 또는 로그 파일을 추가하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스에 데이터 또는 로그 파일을 추가하려면  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일을 추가하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 25
   
 8.  파일의 처음 크기를 지정합니다. 데이터베이스에서 예상되는 최대 데이터 양을 고려하여 데이터 파일의 크기를 최대한 크게 지정합니다.  
   
-9. 파일 증가 방법을 지정하려면 **자동 증가** 열에서 (**…**)를 클릭합니다. 다음 옵션 중에서 선택합니다.  
+9. 파일 증가 방법을 지정하려면**자동 증가**열에서 ( **…** )를 클릭합니다. 다음 옵션 중에서 선택합니다.  
   
     1.  현재 선택한 파일이 데이터 공간이 추가로 필요할 때마다 증가되도록 하려면 **자동 증가 사용** 확인란을 선택하고 다음 옵션 중에서 선택합니다.  
   
@@ -84,14 +88,14 @@ caps.handback.revision: 25
   
 10. 최대 파일 크기를 제한하려면 다음 옵션 중에서 선택합니다.  
   
-    1.  파일이 증가할 수 있는 최대 크기를 지정하려면 **제한된 파일 증가(MB)**를 선택하고 값을 지정합니다.  
+    1.  파일이 증가할 수 있는 최대 크기를 지정하려면 **제한된 파일 증가(MB)** 를 선택하고 값을 지정합니다.  
   
     2.  파일이 필요에 따라 무제한 증가하도록 하려면 **파일 무제한 증가**를 선택합니다.  
   
     3.  파일이 증가되지 않도록 하려면 **자동 증가 사용** 확인란의 선택을 취소합니다. **처음 크기(MB)** 열에 지정된 값에 도달하면 파일 크기가 더 이상 증가하지 않습니다.  
   
     > [!NOTE]  
-    >  데이터베이스 최대 크기는 사용 가능한 디스크 공간 크기에 따라 결정되며 라이선스 제한은 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전에 따라 결정됩니다.  
+    >  데이터베이스 최대 크기는 사용 가능한 디스크 공간 크기에 따라 결정되며 라이선스 제한은 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전에 따라 결정됩니다.  
   
 11. 파일 경로를 지정합니다. 지정한 경로가 있어야 파일을 추가할 수 있습니다.  
   
@@ -102,20 +106,20 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스에 데이터 또는 로그 파일을 추가하려면  
+#### <a name="to-add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일을 추가하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 데이터베이스에 두 개의 파일이 포함된 파일 그룹을 추가합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 `Test1FG1` 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 데이터베이스에 두 개의 파일이 포함된 파일 그룹을 추가합니다. 이 예에서는 `Test1FG1` 데이터베이스에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 파일 그룹을 만들고 이 파일 그룹에 두 개의 5MB 파일을 추가합니다.  
   
  [!code-sql[DatabaseDDL#AlterDatabase2](../../relational-databases/databases/codesnippet/tsql/add-data-or-log-files-to_1.sql)]  
   
- 더 많은 예제를 보려면 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)을 참조하세요.  
+ 더 많은 예제를 보려면 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
-## 참고 항목  
- [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [데이터베이스에서 데이터 또는 로그 파일 삭제](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [데이터베이스의 크기 늘리기](../../relational-databases/databases/increase-the-size-of-a-database.md)  
   

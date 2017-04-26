@@ -1,28 +1,32 @@
 ---
-title: "고유하게 컴파일된 저장 프로시저의 성능 모니터링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "고유하게 컴파일된 저장 프로시저의 성능 모니터링 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 55548cb2-77a8-4953-8b5a-f2778a4f13cf
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01302febd187f0b39221a1443284334b8f961ca8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 고유하게 컴파일된 저장 프로시저의 성능 모니터링
+# <a name="monitoring-performance-of-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저의 성능 모니터링
   이 항목에서는 고유하게 컴파일된 저장 프로시저의 성능을 모니터링하는 방법에 대해 설명합니다.  
   
-## 확장 이벤트 사용  
+## <a name="using-extended-events"></a>확장 이벤트 사용  
  **sp_statement_completed** 확장 이벤트를 사용하여 쿼리 실행을 추적할 수 있습니다. 이 이벤트로 확장 이벤트 세션을 만들면(필요에 따라 고유하게 컴파일된 특정 저장 프로시저의 object_id에 대해 필터 사용) 각 쿼리 실행 후에 확장 이벤트가 발생합니다. 확장 이벤트에 의해 보고되는 CPU 시간 및 기간은 쿼리에 사용된 CPU 양과 실행 시간을 나타냅니다. 많은 CPU 시간을 사용하는 고유하게 컴파일된 저장 프로시저에는 성능 문제가 있을 수 있습니다.  
   
- 확장 이벤트의 **object_id**와 함께 **line_number**를 사용하여 쿼리를 조사할 수 있습니다. 다음 쿼리를 사용하여 프로시저 정의를 검색할 수 있습니다. 줄 번호를 사용하여 정의 내에서 쿼리를 식별할 수 있습니다.  
+ 확장 이벤트의**line_number**와 함께 **line_number** 를 사용하여 쿼리를 조사할 수 있습니다. 다음 쿼리를 사용하여 프로시저 정의를 검색할 수 있습니다. 줄 번호를 사용하여 정의 내에서 쿼리를 식별할 수 있습니다.  
   
 ```tsql  
 select [definition] from sys.sql_modules where object_id=object_id  
@@ -30,7 +34,7 @@ select [definition] from sys.sql_modules where object_id=object_id
   
  **sp_statement_completed** 확장 이벤트에 대한 자세한 내용은 [이벤트를 발생시킨 문을 검색하는 방법](http://blogs.msdn.com/b/extended_events/archive/2010/05/07/making-a-statement-how-to-retrieve-the-t-sql-statement-that-caused-an-event.aspx)을 참조하세요.  
   
-## 데이터 관리 뷰 사용  
+## <a name="using-data-management-views"></a>데이터 관리 뷰 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 프로시저 수준 및 쿼리 수준 모두에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 수집을 지원합니다. 실행 통계 수집은 성능에 미치는 영향 때문에 기본적으로 설정되지 않습니다.  
   
  [sys.sp_xtp_control_proc_exec_stats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql.md)를 사용하여 고유하게 컴파일된 저장 프로시저에 대한 통계 수집을 설정하고 해제할 수 있습니다.  
@@ -44,7 +48,7 @@ select [definition] from sys.sql_modules where object_id=object_id
  통계를 수집한 후 고유하게 컴파일된 저장 프로시저에 대한 실행 통계에서 [sys.dm_exec_procedure_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)를 사용하여 프로시저를 쿼리하고 [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)를 사용하여 쿼리를 쿼리할 수 있습니다.  
   
 > [!NOTE]  
->  고유하게 컴파일된 저장 프로시저에 대해 통계 컬렉션을 설정하면 작업자 시간이 밀리초 단위로 수집됩니다. 쿼리가 밀리초 미만 단위로 실행되는 경우 값은 0이 됩니다. 고유하게 컴파일된 저장 프로시저의 경우 1초 미만이 소요되는 실행이 많으면 **total_worker_time**이 정확하지 않을 수 있습니다.  
+>  고유하게 컴파일된 저장 프로시저에 대해 통계 컬렉션을 설정하면 작업자 시간이 밀리초 단위로 수집됩니다. 쿼리가 밀리초 미만 단위로 실행되는 경우 값은 0이 됩니다. 고유하게 컴파일된 저장 프로시저의 경우 1초 미만이 소요되는 실행이 많으면 **total_worker_time** 이 정확하지 않을 수 있습니다.  
   
  다음 쿼리에서는 통계 컬렉션 후 현재 데이터베이스에서 고유하게 컴파일된 저장 프로시저에 대한 실행 통계 및 프로시저 이름을 반환합니다.  
   
@@ -112,7 +116,7 @@ GO
   
  고유하게 컴파일된 저장 프로시저의 예상 실행 계획은 프로시저의 쿼리에 대한 쿼리 연산자 및 식을 보여 줍니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 고유하게 컴파일된 저장 프로시저에 대한 일부 SHOWPLAN_XML 특성을 지원하지 않습니다. 예를 들어 쿼리 최적화 프로그램 비용 계산과 관련된 특성은 프로시저에 대한 SHOWPLAN_XML의 일부가 아닙니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   

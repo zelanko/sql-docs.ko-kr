@@ -1,36 +1,40 @@
 ---
-title: "Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EKM, 주요 자격 증명 모음 설정"
-  - "SQL Server 커넥터, 설정"
-  - "SQL Server 커넥터"
+title: "Azure Key Vault를 사용한 확장 가능 키 관리 설정 단계 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EKM, with key vault setup
+- SQL Server Connector, setup
+- SQL Server Connector
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8b6ddedabeb826caf903701327b6b103666b2abb
+ms.lasthandoff: 04/11/2017
+
 ---
-# Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계
+# <a name="setup-steps-for-extensible-key-management-using-the-azure-key-vault"></a>Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   다음 단계는 Azure 주요 자격 증명 모음용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치 및 구성을 안내합니다.  
   
-## 시작하기 전에  
+## <a name="before-you-start"></a>시작하기 전에  
  SQL Server에서 Azure 주요 자격 증명 모음을 사용하려면 몇 가지 필수 조건이 있습니다.  
   
 -   Azure 구독이 있어야 합니다.  
   
--   최신 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/)(1.0.1 이상)을 설치하세요.  
+-   최신 [Azure PowerShell](https://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/) (1.0.1 이상)을 설치하세요.  
 
 -   Azure Active Directory 만들기  
 
@@ -44,20 +48,20 @@ SQL Server 버전  |재배포 가능 설치 링크
 2016 | [Visual Studio 2015용 Visual C++ 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=48145)    
  
   
-## 1부: Azure Active Directory 서비스 사용자 설정  
+## <a name="part-i-set-up-an-azure-active-directory-service-principal"></a>1부: Azure Active Directory 서비스 사용자 설정  
  Azure 주요 자격 증명 모음에 SQL Server 액세스 권한을 부여하려면 AAD(Azure Active Directory)의 서비스 사용자 계정이 필요합니다.  
   
 1.  [Azure 클래식 포털](https://manage.windowsazure.com)로 이동하고 로그인합니다.  
   
-2.  Azure Active Directory에 응용 프로그램을 등록합니다. 응용 프로그램 등록에 대한 자세한 단계별 지침은 [Azure 주요 자격 증명 모음 블로그 게시물](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)의 **응용 프로그램의 ID 가져오기** 섹션을 참조하세요.  
+2.  Azure Active Directory에 응용 프로그램을 등록합니다. 응용 프로그램 등록에 대한 자세한 단계별 지침은 **Azure 주요 자격 증명 모음 블로그 게시물** 의 [응용 프로그램의 ID 가져오기](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)섹션을 참조하세요.  
   
-3.  **클라이언트 ID** 및 **클라이언트 암호**를 복사하여 이후 단계에서 주요 자격 증명 모음에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 액세스 권한을 부여하는 데 사용합니다.  
+3.  **클라이언트 ID** 및 **클라이언트 암호** 를 복사하여 이후 단계에서 주요 자격 증명 모음에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 액세스 권한을 부여하는 데 사용합니다.  
   
  ![ekm-client-id](../../../relational-databases/security/encryption/media/ekm-client-id.png "ekm-client-id")  
   
  ![ekm-key-id](../../../relational-databases/security/encryption/media/ekm-key-id.png "ekm-key-id")  
   
-## 2부: 주요 자격 증명 모음 및 키 만들기  
+## <a name="part-ii-create-a-key-vault-and-key"></a>2부: 주요 자격 증명 모음 및 키 만들기  
  여기에서 만드는 주요 자격 증명 모음 및 키는 암호화 키 보호에 대해 SQL Server 데이터베이스 엔진에서 사용됩니다.  
   
 > [!IMPORTANT]  
@@ -65,7 +69,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 1.  **PowerShell 열기 및 로그인**  
   
-     [최신 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)(1.0.1 이상)을 설치하고 시작합니다. 다음 명령을 사용하여 Azure 계정에 로그인합니다.  
+     [최신 Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) (1.0.1 이상)을 설치하고 시작합니다. 다음 명령을 사용하여 Azure 계정에 로그인합니다.  
   
     ```powershell  
     Login-AzureRmAccount  
@@ -82,7 +86,7 @@ SQL Server 버전  |재배포 가능 설치 링크
     ```  
   
     > [!NOTE]  
-    >  구독이 여러 개 있는 상황에서 자격 증명 모음에 특정 구독 하나만 사용하도록 지정하려면 `Get-AzureRmSubscription`을 사용하여 구독을 표시하고, `Select-AzureRmSubscription`을 사용하여 올바른 구독을 선택합니다. 그러지 않으면 PowerShell에서 기본적으로 구독을 하나 선택합니다.  
+    >  구독이 여러 개 있는 상황에서 자격 증명 모음에 특정 구독 하나만 사용하도록 지정하려면 `Get-AzureRmSubscription` 을 사용하여 구독을 표시하고, `Select-AzureRmSubscription` 을 사용하여 올바른 구독을 선택합니다. 그러지 않으면 PowerShell에서 기본적으로 구독을 하나 선택합니다.  
   
 2.  **새 리소스 그룹 만들기**  
   
@@ -149,9 +153,9 @@ SQL Server 버전  |재배포 가능 설치 링크
     이 경우 1부에서 만든 Azure Active Directory 서비스 사용자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 권한을 부여해 봅시다.  
   
     > [!IMPORTANT]  
-    >  Azure Active Directory 서비스 사용자는 주요 자격 증명 모음에 대해 적어도 `get`, `list`, `wrapKey` 및 `unwrapKey` 권한이 있어야 합니다.  
+    >  Azure Active Directory 서비스 사용자는 주요 자격 증명 모음에 대해 적어도 `get`, `list`, `wrapKey`및 `unwrapKey` 권한이 있어야 합니다.  
   
-     아래와 같이 `ServicePrincipalName` 매개 변수에 대해 1부의 **클라이언트 ID**를 사용합니다. 성공적으로 실행되는 경우 `Set-AzureRmKeyVaultAccessPolicy`가 출력 없이 자동으로 실행됩니다.  
+     아래와 같이 **매개 변수에 대해 1부의** 클라이언트 ID `ServicePrincipalName` 를 사용합니다. 성공적으로 실행되는 경우 `Set-AzureRmKeyVaultAccessPolicy` 가 출력 없이 자동으로 실행됩니다.  
   
     ```powershell  
     Set-AzureRmKeyVaultAccessPolicy -VaultName 'ContosoDevKeyVault'`  
@@ -166,7 +170,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
      Azure Key Vault에서 키를 생성하는 방법은 두 가지입니다. 1) 기존 키 가져오기 또는 2) 새 키 만들기  
 
-    ### 최선의 구현 방법:
+    ### <a name="best-practice"></a>최선의 구현 방법:
     
     빠른 키 복구를 보장하고 Azure 외부의 데이터에 액세스하려면 다음 모범 사례를 권장합니다.
  
@@ -178,7 +182,7 @@ SQL Server 버전  |재배포 가능 설치 링크
         > [!NOTE]  
         >  키 백업 작업은 장소에 상관없이 저장할 수 있는 파일을 반환하는 Azure Key Vault 키 작업입니다.
 
-    ### 키의 유형:
+    ### <a name="types-of-keys"></a>키의 유형:
     Azure 주요 자격 증명 모음에서 생성할 수 있는 키는 두 가지 유형입니다. 둘 다 비대칭 2048비트 RSA 키입니다.  
   
     -   **소프트웨어 보호:** 소프트웨어에서 처리되고 안전하게 암호화됩니다. 소프트웨어 보호된 키에 대한 작업은 Azure 가상 컴퓨터에서 발생합니다. 프로덕션 배포에 사용되지 않는 키의 경우 추천됩니다.  
@@ -189,9 +193,9 @@ SQL Server 버전  |재배포 가능 설치 링크
         >  SQL Server 커넥터는 “a-z”, “A-Z”, “0-9” 및 “-” 문자만 키 이름에 사용할 수 있으며, 키 이름은 26자로 제한됩니다.   
         > Azure 주요 자격 증명 모음에서 동일한 키 이름의 여러 키 버전은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터와 함께 작동되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용하는 Azure 주요 자격 증명 모음을 회전하려면 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)에서 키 롤오버 단계를 참조하세요.  
 
-    ### 기존 키 가져오기   
+    ### <a name="import-an-existing-key"></a>기존 키 가져오기   
   
-    기존 2048비트 RSA 소프트웨어 보호된 키가 있는 경우 키를 Azure Key Vault에 업로드할 수 있습니다. 예를 들어 `C:\\` 드라이브에 저장된 .PFX 파일(이름: `softkey.pfx`)이 있고 Azure Key Vault에 업로드하려는 경우에는 다음을 입력하여 .PFX 파일에 `securepfxpwd`의 암호에 대한 `12987553` 변수를 설정합니다.  
+    기존 2048비트 RSA 소프트웨어 보호된 키가 있는 경우 키를 Azure Key Vault에 업로드할 수 있습니다. 예를 들어 `C:\\` 드라이브에 저장된 .PFX 파일(이름: `softkey.pfx` )이 있고 Azure Key Vault에 업로드하려는 경우에는 다음을 입력하여 .PFX 파일에 `securepfxpwd` 의 암호에 대한 `12987553` 변수를 설정합니다.  
   
     ``` powershell  
     $securepfxpwd = ConvertTo-SecureString –String '12987553' `  
@@ -209,13 +213,13 @@ SQL Server 버전  |재배포 가능 설치 링크
     > [!IMPORTANT]  
     > 비대칭 키를 가져오면 관리자가 키 에스크로 시스템에 키를 위탁할 수 있으므로 비대칭 키를 가져오는 것은 프로덕션 시나리오에 매우 좋습니다. 개인 키는 자격 증명 모음을 벗어날 수 없으므로 비대칭 키를 자격 증명 모음에서 만든 경우에는 키를 위탁할 수 없습니다. 중요한 데이터를 보호하는 데 사용되는 키는 위탁해야 합니다. 비대칭 키가 손실되는 경우 데이터를 영구적으로 복구할 수 없습니다.  
 
-    ### 새 키 만들기
+    ### <a name="create-a-new-key"></a>새 키 만들기
 
-    ##### 예:  
-    원하는 경우 Azure Key Vault에 직접 새 암호화 키를 만들고 소프트웨어 보호 또는 HSM 보호를 설정할 수 있습니다. 이 예제에서는 `Add-AzureRmKeyVaultKey cmdlet`을 사용하여 소프트웨어 보호된 키를 만들어 봅시다.  
+    ##### <a name="example"></a>예:  
+    원하는 경우 Azure Key Vault에 직접 새 암호화 키를 만들고 소프트웨어 보호 또는 HSM 보호를 설정할 수 있습니다. 이 예제에서는 `Add-AzureKeyVaultKey cmdlet`을 사용하여 소프트웨어 보호된 키를 만들어 봅시다.  
 
     ``` powershell  
-    Add-AzureRmKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
+    Add-AzureKeyVaultKey -VaultName 'ContosoDevKeyVault' `  
       -Name 'ContosoRSAKey0' -Destination 'Software'  
     ```  
   
@@ -236,7 +240,7 @@ SQL Server 버전  |재배포 가능 설치 링크
     >  주요 자격 증명 모음은 동일한 이름이 지정된 키의 여러 버전을 지원하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에서 사용할 키는 버전이 지정되거나 여기저기 사용해서는 안 됩니다. 관리자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화에 사용된 키를 다른 곳에 사용하려는 경우, 자격 증명 모음에서 다른 이름으로 새 키를 만들어 DEK를 암호화하는 데 사용해야 합니다.  
    
   
-## 3부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치  
+## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>3부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치  
  [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/p/?LinkId=521700)에서 SQL Server 커넥터를 다운로드합니다. 이 작업은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터의 관리자가 수행해야 합니다.  
 
 > [!NOTE]  
@@ -246,25 +250,25 @@ SQL Server 버전  |재배포 가능 설치 링크
   
  기본적으로 커넥터는 C:\Program Files\SQL Server Connector for Microsoft Azure 주요 자격 증명 모음에 설치됩니다. 이 위치는 설치 중 변경할 수 있습니다. (변경할 경우 아래의 스크립트를 조정하세요.)  
   
- 커넥터에 대한 인터페이스가 없는데도 성공적으로 설치되는 경우에는 컴퓨터에 **Microsoft.AzureKeyVaultService.EKM.dll**이 설치되어 있기 때문입니다. 이것은 `CREATE CRYPTOGRAPHIC PROVIDER` 문을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 등록해야 하는 암호화 EKM 공급자 DLL입니다.  
+ 커넥터에 대한 인터페이스가 없는데도 성공적으로 설치되는 경우에는 컴퓨터에 **Microsoft.AzureKeyVaultService.EKM.dll** 이 설치되어 있기 때문입니다. 이것은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문을 사용하여 `CREATE CRYPTOGRAPHIC PROVIDER` 에 등록해야 하는 암호화 EKM 공급자 DLL입니다.  
   
  SQL Server 커넥터를 설치하면 원할 경우 SQL Server 암호화를 위한 샘플 스크립트를 다운로드할 수도 있습니다.  
   
  SQL Server 커넥터에 대한 오류 코드 설명, 구성 설정 또는 유지 관리 작업을 보려면 이 항목의 맨 아래에 있는 부록을 참조하세요.  
   
--   [1. SQL Server 커넥터에 대한 유지 관리 지침](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
+-   [A. SQL Server 커넥터에 대한 유지 관리 지침](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixA)  
   
--   [3. SQL Server 커넥터에 대한 오류 코드 설명](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
+-   [C. SQL Server 커넥터에 대한 오류 코드 설명](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixC)  
   
   
-## 4부: 구성 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- 이 섹션의 각 작업에 필요한 최소 권한 수준에 대한 정보를 보려면 [B. 질문과 대답](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB)을 참조하세요.  
+## <a name="part-iv-configure-includessnoversionincludesssnoversion-mdmd"></a>4부: 구성 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
+ 이 섹션의 각 작업에 필요한 최소 권한 수준에 대한 정보를 보려면 [B. 질문과 대답](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md#AppendixB) 을 참조하세요.  
   
 1.  **sqlcmd.exe 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio 실행**  
   
-2.  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을(를) 구성하여 EKM 사용**  
+2.  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을(를) 구성하여 EKM 사용**  
   
-     다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 실행하여 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을(를) 구성하고 EKM 공급자를 사용합니다.  
+     다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 실행하여 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 을(를) 구성하고 EKM 공급자를 사용합니다.  
   
     ```tsql  
     -- Enable advanced options.  
@@ -285,7 +289,7 @@ SQL Server 버전  |재배포 가능 설치 링크
 3.  **EKM 공급자로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 등록(만들기) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
      -- Azure 주요 자격 증명 모음에 대한 EKM 공급자인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터를 사용하여 암호화 공급자를 만듭니다.    
-    이 예제에서는 `AzureKeyVault_EKM_Prov` 이름을 사용합니다.  
+    이 예제에서는 `AzureKeyVault_EKM_Prov`이름을 사용합니다.  
   
     ```tsql  
     CREATE CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -311,13 +315,13 @@ SQL Server 버전  |재배포 가능 설치 링크
   
     -   Azure Key Vault를 가리키도록 `IDENTITY` 인수(`ContosoDevKeyVault`)를 편집합니다.
         - **공용 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
-        - **사설 Azure 클라우드**(예: Azure Government, Azure China 또는 Azure Germany)를 사용하는 경우는 `IDENTITY` 인수를 파트 2의 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
-    -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID**로 바꿉니다. 이 예제에서 **클라이언트 ID**는 `EF5C8E094D2A4A769998D93440D8115D`입니다.  
+        - **사설 Azure 클라우드** (예: Azure Government, Azure China 또는 Azure Germany)를 사용하는 경우는 `IDENTITY` 인수를 파트 2의 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
+    -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID** 로 바꿉니다. 이 예제에서 **클라이언트 ID** 는 `EF5C8E094D2A4A769998D93440D8115D`입니다.  
   
         > [!IMPORTANT]  
         >  **클라이언트 ID**에서 하이픈을 제거해야 합니다.  
   
-    -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호**를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호**는 `Replace-With-AAD-Client-Secret`입니다. `SECRET` 인수의 최종 문자열은 *하이픈 없는* 문자 및 숫자의 긴 시퀀스가 됩니다.  
+    -   `SECRET` 인수의 두 번째 부분을 파트 1의 **클라이언트 암호** 를 사용하여 완성합니다. 이 예제에서 파트 1의 **클라이언트 암호** 는 `Replace-With-AAD-Client-Secret`입니다. `SECRET` 인수의 최종 문자열은 *하이픈 없는* 문자 및 숫자의 긴 시퀀스가 됩니다.  
   
     ```tsql  
     USE master;  
@@ -340,9 +344,9 @@ SQL Server 버전  |재배포 가능 설치 링크
   
      2부에 설명한 대로 비대칭 키를 가져온 경우 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트에서 키 이름을 제공하여 키를 엽니다.  
   
-    -   `CONTOSO_KEY`를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 키 이름으로 바꿉니다.  
+    -   `CONTOSO_KEY` 를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 키 이름으로 바꿉니다.  
   
-    -   `ContosoRSAKey0`을 Azure 주요 자격 증명 모음의 키 이름으로 바꿉니다.  
+    -   `ContosoRSAKey0` 을 Azure 주요 자격 증명 모음의 키 이름으로 바꿉니다.  
   
     ```tsql  
     CREATE ASYMMETRIC KEY CONTOSO_KEY   
@@ -350,12 +354,13 @@ SQL Server 버전  |재배포 가능 설치 링크
     WITH PROVIDER_KEY_NAME = 'ContosoRSAKey0',  
     CREATION_DISPOSITION = OPEN_EXISTING;  
     ```  
-## 다음 단계  
+## <a name="next-step"></a>다음 단계  
   
-이제 기본 구성을 완료했으므로 [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md) 방법을 참조하세요.   
+이제 기본 구성을 완료했으므로 [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)방법을 참조하세요.   
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)   
 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md)  
   
   
+

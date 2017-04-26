@@ -1,22 +1,26 @@
 ---
-title: "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 38512a22-7e63-436f-9c13-dde7cf5c2202
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
+# <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -30,7 +34,7 @@ caps.handback.revision: 19
 - 메모리 액세스에 최적화된 성능 이점을 강조하는 코드 샘플
   
   
-## 1. 메모리 액세스에 최적화된 테이블 변수 기본 사항  
+## <a name="a-basics-of-memory-optimized-table-variables"></a>1. 메모리 액세스에 최적화된 테이블 변수 기본 사항  
   
 메모리 액세스에 최적화된 테이블 변수는 메모리 액세스에 최적화된 테이블에서 사용하는 동일한 메모리 액세스에 최적화된 알고리즘 및 데이터 구조를 사용하여 훌륭한 효율성을 제공합니다. 테이블 변수가 고유하게 컴파일된 모듈 내에서 액세스될 때 효율성은 최대가 됩니다.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 19
 
   
   
-#### 개체 유형  
+#### <a name="object-types"></a>개체 유형  
   
 메모리 내 OLTP는 메모리 액세스 최적화 임시 테이블 및 테이블 변수에 사용할 수 있는 다음과 같은 개체를 제공합니다.  
   
@@ -55,10 +59,10 @@ caps.handback.revision: 19
 - 메모리 액세스에 최적화된 테이블 변수  
   - 인라인 대신 두 단계로 선언해야 합니다.  
     - `CREATE TYPE my_type AS TABLE ...;` 그런 다음  
-    - `DECLARE @mytablevariable my_type;`.  
+    - `DECLARE @mytablevariable my_type;`를 참조하세요.  
   
   
-## 2. 시나리오: 전역 tempdb &#x23;&#x23;table 바꾸기  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>2. 시나리오: 전역 tempdb &#x23;&#x23;table 바꾸기  
   
 다음과 같은 전역 임시 테이블이 있다고 가정합니다.  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 19
   
   
   
-#### B.1 단계  
+#### <a name="b1-steps"></a>B.1 단계  
   
 전역 임시 테이블에서 SCHEMA_ONLY로 변환하는 단계는 다음과 같습니다.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 19
 3. T-SQL에서 **&#x23;&#x23;tempGlobalB**의 모든 멘션을 **dbo.soGlobalB**로 바꿉니다.  
   
   
-## 3. 시나리오: 세션 tempdb &#x23;table 바꾸기  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>3. 시나리오: 세션 tempdb &#x23;table 바꾸기  
   
 세션 임시 테이블을 바꾸기 위한 준비 작업에는 이전의 전역 임시 테이블 시나리오보다 더 많은 T-SQL이 포함됩니다. 다행히 변환을 수행하는 데에는 추가 T-SQL이 필요하지 않습니다.  
   
@@ -159,7 +163,7 @@ caps.handback.revision: 19
         CONSTRAINT CHK_soSessionC_SpidFilter  
             CHECK ( SpidFilter = @@spid ),  
     ).  
-        WITH  
+        의 모든 멘션을  
             (MEMORY_OPTIMIZED = ON,  
              DURABILITY = SCHEMA_ONLY);  
     go  
@@ -176,14 +180,16 @@ caps.handback.revision: 19
   
 셋째, 일반 T-SQL 코드에서 다음을 수행합니다.  
   
-1. 이전 세션 임시 테이블에 대한 모든 CREATE TABLE 문을 지웁니다.  
-2. 이전 테이블 이름을 새 이름으로 바꿉니다.  
-  - _이전 이름:_ &#x23;tempSessionC  
-  - _새 이름:_ dbo.soSessionC  
+1. 새 메모리 액세스에 최적화된 테이블에 대한 Transact-SQL 문에서 임시 테이블에 대한 모든 참조를 변경합니다.
+    - _이전 이름:_ &#x23;tempSessionC  
+    - _새 이름:_ dbo.soSessionC  
+2. 코드에서 `CREATE TABLE #tempSessionC` 문을 `DELETE FROM dbo.soSessionC`로 바꿔 동일한 session_id로 이전 세션에서 삽입한 테이블 콘텐츠에 세션이 노출되지 않도록 합니다.
+3. 코드에서 `DROP TABLE #tempSessionC` 문을 제거합니다. 메모리 크기가 잠재적 고려 사항인 경우 필요에 따라 `DELETE FROM dbo.soSessionC` 문을 삽입할 수 있습니다.
   
   
   
-## 4. 시나리오: 테이블 변수가 MEMORY_OPTIMIZED=ON일 수 있습니다.  
+  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>4. 시나리오: 테이블 변수가 MEMORY_OPTIMIZED=ON일 수 있습니다.  
   
   
 기존의 테이블 변수는 tempdb 데이터베이스에서 테이블을 나타냅니다. 훨씬 빠른 성능을 위해 테이블 변수를 메모리 액세스에 최적화할 수 있습니다.  
@@ -200,7 +206,7 @@ caps.handback.revision: 19
   
   
   
-#### D.1 명시적으로 인라인 변환  
+#### <a name="d1-convert-inline-to-explicit"></a>D.1 명시적으로 인라인 변환  
   
 위의 구문은 테이블 변수가 *인라인*으로 만들어졌습니다. 인라인 구문은 메모리 액세스에 최적화를 지원하지 않습니다. 그러면 인라인 구문을 TYPE의 명시적 구문으로 변환해 보겠습니다.  
   
@@ -228,7 +234,7 @@ caps.handback.revision: 19
   
   
   
-#### D.2 메모리 액세스에 최적화되도록 디스크상 명시적 변환  
+#### <a name="d2-convert-explicit-on-disk-to-memory-optimized"></a>D.2 메모리 액세스에 최적화되도록 디스크상 명시적 변환  
   
 메모리 액세스에 최적화된 테이블 변수는 tempdb에 상주하지 않습니다. 메모리 액세스 최적화는 종종 속도가 10배 이상 빨라지는 결과를 낳습니다.  
   
@@ -246,7 +252,7 @@ caps.handback.revision: 19
             Column1  INT   NOT NULL   INDEX ix1,  
             Column2  CHAR(10)  
         ).  
-        WITH  
+        의 모든 멘션을  
             (MEMORY_OPTIMIZED = ON);  
   
   
@@ -255,7 +261,7 @@ caps.handback.revision: 19
 완료되었습니다.  
   
   
-## 5. SQL Server에 대한 필수 구성 요소 FILEGROUP  
+## <a name="e-prerequisite-filegroup-for-sql-server"></a>5. SQL Server에 대한 필수 구성 요소 FILEGROUP  
   
 Microsoft SQL Server에서 메모리 액세스에 최적화된 기능을 사용하려면 데이터베이스에 **MEMORY_OPTIMIZED_DATA**로 선언된 FILEGROUP이 있어야 합니다.  
   
@@ -292,13 +298,13 @@ Microsoft SQL Server에서 메모리 액세스에 최적화된 기능을 사용�
   
 다음 스크립트는 파일 그룹을 만들고 권장되는 데이터베이스 설정을 구성합니다. [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
   
-FILE 및 FILEGROUP의 `ALTER DATABASE ... ADD`에 대한 자세한 내용은 다음을 참조하세요.  
+FILE 및 FILEGROUP의 `ALTER DATABASE ... ADD` 에 대한 자세한 내용은 다음을 참조하세요.  
   
-- [ALTER DATABASE 파일 및 파일 그룹 옵션(Transact-SQL)](ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).xml)  
+- [ALTER DATABASE 파일 및 파일 그룹 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
 - [메모리 액세스에 최적화된 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)    
   
   
-## 6. 속도 개선을 보여 주는 빠른 테스트  
+## <a name="f-quick-test-to-prove-speed-improvement"></a>6. 속도 개선을 보여 주는 빠른 테스트  
   
   
 이 섹션에서는 메모리 액세스에 최적화된 테이블 변수를 사용하여 INSERT-DELETE에 대한 속도 향상을 테스트하고 비교하는 데 실행할 수 있는 TRANSACT-SQL 코드를 제공합니다. 코드는 처음 절반에서 테이블 형식이 메모리 액세스에 최적화되었다는 점을 제외하고는 거의 동일한 두 부분으로 구성됩니다.  
@@ -407,7 +413,7 @@ Azure SQL 데이터베이스에서 스크립트를 실행하는 경우 동일한
   
   
   
-## 7. 활성 메모리 사용량 예측  
+## <a name="g-predict-active-memory-consumption"></a>7. 활성 메모리 사용량 예측  
   
 다음 리소스를 사용하면 메모리 액세스에 최적화된 테이블의 활성 메모리 요구량을 예측할 수 있습니다.  
   
@@ -418,43 +424,45 @@ Azure SQL 데이터베이스에서 스크립트를 실행하는 경우 동일한
   
 메모리 액세스에 최적화된 테이블 변수가 액세스당 하나의 정확한 키 값에만 액세스하는 경우 비클러스터형 인덱스보다 해시 인덱스가 더 적합할 수 있습니다. 그러나 적절한 BUCKET_COUNT를 예측할 수 없는 경우 비클러스터형 인덱스가 차선책입니다.  
   
-## 8. 참고 항목  
+## <a name="h-see-also"></a>8. 참고 항목  
   
-- [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
+- [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [메모리 액세스에 최적화된 개체에 대한 내구성 정의](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
   
   
   
 \<!--  
-CAPS Title: "Faster temp table and table variable by using memory optimization"  
+CAPS 제목: "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수"  
   
 https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
   
   
-[ALTER DATABASE File and Filegroup Options (Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
+[ALTER DATABASE 파일 및 파일 그룹 옵션(Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
   
-[The Memory Optimized Filegroup](http://msdn.microsoft.com/library/dn639109.aspx)  
+[메모리 액세스에 최적화된 파일 그룹](http://msdn.microsoft.com/library/dn639109.aspx)  
   
-[Resource Governor Resource Pool](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[Memory Optimization Advisor](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[Estimate Memory Requirements for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[Table and Row Size in Memory-Optimized Tables: Example Calculation](http://msdn.microsoft.com/library/dn205318.aspx)  
+[리소스 관리자 리소스 풀](http://msdn.microsoft.com/library/hh510189.aspx)  
   
   
-[Durability for Memory-Optimized Tables](http://msdn.microsoft.com/library/dn553125.aspx)  
+[메모리 최적화 관리자](http://msdn.microsoft.com/library/dn284308.aspx)  
   
-[Defining Durability for Memory-Optimized Objects](http://msdn.microsoft.com/library/dn553122.aspx)  
+[메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](http://msdn.microsoft.com/library/dn282389.aspx)  
+  
+[메모리 액세스에 최적화된 테이블의 테이블 및 행 크기: 계산 예](http://msdn.microsoft.com/library/dn205318.aspx)  
+  
+  
+[메모리 액세스에 최적화된 테이블에 대한 내구성](http://msdn.microsoft.com/library/dn553125.aspx)  
+  
+[메모리 액세스에 최적화된 개체에 대한 내구성 정의](http://msdn.microsoft.com/library/dn553122.aspx)  
   
 [Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
   
   
-GeneMi , 2016-05-02  Monday  18:40pm  
+GeneMi , 2016-05-02  월요일  18:40pm  
 -->  
   
   
   
+
+

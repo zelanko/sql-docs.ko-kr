@@ -1,34 +1,38 @@
 ---
-title: "복제 에이전트 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스냅숏 에이전트, 관리"
-  - "로그 판독기 에이전트, 관리"
-  - "큐 판독기 에이전트, 관리"
-  - "공유 에이전트 [SQL Server 복제]"
-  - "병합 에이전트, 관리"
-  - "배포 에이전트, 관리"
-  - "에이전트 [SQL Server 복제], 관리"
-  - "복제 정리 작업 [SQL Server]"
-  - "복제 관리, 에이전트"
-  - "복제 [SQL Server], 관리"
-  - "독립 에이전트 [SQL Server 복제]"
+title: "복제 에이전트 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Snapshot Agent, administering
+- Log Reader Agent, administering
+- Queue Reader Agent, administering
+- shared agents [SQL Server replication]
+- Merge Agent, administering
+- Distribution Agent, administering
+- agents [SQL Server replication], administering
+- replication cleanup jobs [SQL Server]
+- administering replication, agents
+- replication [SQL Server], administering
+- independent agents [SQL Server replication]
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0ddd687702068508c54ea60a533fc3c5c75b10
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복제 에이전트 관리
+# <a name="replication-agent-administration"></a>복제 에이전트 관리
   복제 에이전트는 스키마와 데이터의 복사본 만들기, 게시자 또는 구독자에서 업데이트 검색, 서버 간에 변경 내용 전파 등 복제와 관련된 많은 태스크를 수행합니다. 기본적으로 복제 에이전트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업 단계에서 실행됩니다. 에이전트는 단순히 실행 파일이므로 명령줄 및 일괄 처리 스크립트에서 직접 호출할 수도 있습니다. 각 응용 프로그램 에이전트는 실행 방식을 제어하는 데 사용되는 일련의 런타임 매개 변수를 지원합니다. 이러한 매개 변수는 에이전트 프로필 또는 명령줄에서 지정됩니다.  
   
 > [!IMPORTANT]  
@@ -48,16 +52,16 @@ caps.handback.revision: 48
   
  **에이전트 및 유지 관리 작업을 실행하려면**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 복제 모니터: [시작 및 중지 복제 에이전트 & #40; SQL Server Management Studio & #41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 복제 모니터: [복제 에이전트 시작 및 중지&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
 -   복제 프로그래밍: [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
-## 에이전트 프로필  
+## <a name="agent-profiles"></a>에이전트 프로필  
  복제가 구성되면 에이전트 프로필 집합이 배포자에 설치됩니다. 에이전트 프로필에는 에이전트가 실행될 때마다 사용할 매개 변수 집합이 포함됩니다. 각 에이전트는 시작 과정 중에 배포자로 로그인하여 해당 프로필의 매개 변수에 대해 쿼리합니다. 복제는 각 에이전트에 대한 기본 프로필과 로그 판독기 에이전트, 배포 에이전트 및 병합 에이전트에 대한 미리 정의된 추가 프로필을 제공합니다. 제공된 프로필뿐 아니라 응용 프로그램 요구 사항에 찾는 프로필을 만들 수 있습니다. 자세한 내용은 [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
- 명령줄 매개 변수를 직접 지정 하는 방법에 대 한 정보를 참조 하십시오. [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)합니다.  
+ 명령줄 매개 변수를 직접 지정하는 방법은 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
-## 복제 에이전트 모니터링  
+## <a name="monitoring-replication-agents"></a>복제 에이전트 모니터링  
  복제 모니터를 사용하여 복제 에이전트에 대한 정보를 보고 복제 에이전트와 연결된 태스크를 수행할 수 있습니다. 다음 목록에는 각 에이전트, 에이전트를 찾을 수 있는 복제 모니터의 탭 및 이러한 탭에 액세스하는 방법을 설명하는 항목에 대한 링크가 포함되어 있습니다.  
   
 -   다음 에이전트는 복제 모니터에서 게시와 연결됩니다.  
@@ -68,7 +72,7 @@ caps.handback.revision: 48
   
     -   큐 판독기 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** 탭을 통해 액세스할 수 있습니다. 자세한 내용은 참조 [정보 보기 및 에이전트 관련 된는 게시 및 #40;에 대 한 작업 수행 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)합니다.  
+     이러한 에이전트와 연결된 정보 및 태스크는 **에이전트** 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)을 참조하세요.  
   
 -   다음 에이전트는 복제 모니터에서 구독과 연결됩니다.  
   
@@ -76,12 +80,12 @@ caps.handback.revision: 48
   
     -   병합 에이전트  
   
-     탭을 통해 이러한 에이전트와 관련 된 작업 및 정보 액세스: **구독 조사 목록** (각 게시자에 대해 사용 가능) 또는 **모든 구독** 탭 (각 게시에 대해 사용 가능). 자세한 내용은 참조 [정보 보기 및는 에이전트 구독 관련 & #40;에 대 한 작업 수행 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)합니다.  
+     이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록** (각 게시자에 대해 사용 가능) 또는 **모든 구독** (각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
-## 독립 및 공유 에이전트  
+## <a name="independent-and-shared-agents"></a>독립 및 공유 에이전트  
  독립 에이전트는 한 구독에 사용되는 에이전트입니다. 공유 에이전트는 여러 구독을 제공합니다. 동일한 공유 에이전트를 사용하는 여러 구독을 동기화해야 할 경우 기본적으로 여러 구독은 큐에서 대기하고 공유 에이전트가 한 번에 하나씩 구독을 처리합니다. 독립 에이전트는 구독에 동기화가 필요할 때마다 준비가 되어 있기 때문에 이를 사용하면 대기 시간이 줄어듭니다. 병합 복제는 항상 독립 에이전트를 사용하고 트랜잭션 복제는 새 게시 마법사에서 만든 게시에 대해 기본적으로 독립 에이전트를 사용합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 트랜잭션 복제가 기본적으로 공유 에이전트를 사용했습니다.  
   
-## 복제 유지 관리 작업  
+## <a name="replication-maintenance-jobs"></a>복제 유지 관리 작업  
  복제는 다음 작업을 통해 예약 유지 관리와 요청 시 유지 관리를 수행합니다.  
   
 |정리 작업|설명|기본 일정|  
@@ -93,7 +97,8 @@ caps.handback.revision: 48
 |복제 에이전트 점검|기록을 로깅하지 않는 복제 에이전트를 검색합니다. 작업 단계가 실패하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다.|10분마다 실행|  
 |배포에 대한 복제 모니터링 리프레셔|복제 모니터에서 사용한 캐시된 쿼리를 새로 고칩니다.|계속 실행|  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   
+

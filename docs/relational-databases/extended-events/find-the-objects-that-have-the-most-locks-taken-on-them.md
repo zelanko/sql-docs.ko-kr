@@ -1,28 +1,32 @@
 ---
-title: "가장 많은 잠금이 발생한 개체 찾기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "개체 [SQL Server], 확장 이벤트"
-  - "xe"
-  - "확장 이벤트 [SQL Server], 잠금"
-  - "개체 [SQL Server], 잠금"
+title: "가장 많은 잠금이 발생한 개체 찾기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- objects [SQL Server], extended events
+- xe
+- extended events [SQL Server], locks
+- objects [SQL Server], locks
 ms.assetid: fcbadbda-c91c-43f0-a1b5-601e40110e07
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fd171596bf52ebc25887b378103ffe751955fd03
+ms.lasthandoff: 04/11/2017
+
 ---
-# 가장 많은 잠금이 발생한 개체 찾기
+# <a name="find-the-objects-that-have-the-most-locks-taken-on-them"></a>가장 많은 잠금이 발생한 개체 찾기
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   데이터베이스 관리자는 종종 데이터베이스 성능을 저하시키는 잠금의 원인을 파악해야 합니다.  
@@ -31,7 +35,7 @@ caps.handback.revision: 15
   
  이렇게 하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 편집기를 사용합니다.  
   
-### 가장 많은 잠금이 발생한 개체를 찾으려면  
+### <a name="to-find-the-objects-that-have-the-most-locks"></a>가장 많은 잠금이 발생한 개체를 찾으려면  
   
 1.  쿼리 편집기에서 다음 문을 실행합니다.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 15
   
 -   lock_count  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   

@@ -1,29 +1,33 @@
 ---
-title: "대량 가져오기의 최소 로깅을 위한 선행 조건 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "최소 로깅 [SQL Server]"
-  - "기록된 대량 복사 [SQL Server]"
-  - "로그 [SQL Server], 최소 로깅"
-  - "최소 로그 작업 [SQL Server]"
-  - "대량 가져오기 [SQL Server], 최소 로깅"
+title: "대량 가져오기의 최소 로깅을 위한 필수 조건 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- minimal logging [SQL Server]
+- logged bulk copy [SQL Server]
+- logs [SQL Server], minimal logging
+- minimally logged operations [SQL Server]
+- bulk importing [SQL Server], minimal logging
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1f64cc4fc8ab747d137777e7a14c17ac796eb9ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 대량 가져오기의 최소 로깅을 위한 선행 조건
+# <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>대량 가져오기의 최소 로깅을 위한 선행 조건
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   전체 복구 모델을 사용하는 데이터베이스의 경우 대량 가져오기로 수행되는 모든 행 삽입 작업이 트랜잭션 로그에 기록됩니다. 전체 복구 모델을 사용할 경우 많은 양의 데이터를 가져오면 트랜잭션 로그가 빨리 채워질 수 있습니다. 이와 달리 단순 복구 모델 또는 대량 로그 복구 모델에서 대량 가져오기 작업의 로깅을 최소화하면 대량 가져오기 작업에 의해 로그 공간이 채워질 가능성이 줄어듭니다. 또한 최소 로깅은 전체 로깅보다 효율적입니다.  
@@ -31,7 +35,7 @@ caps.handback.revision: 47
 > [!NOTE]  
 >  대량 로그 복구 모델은 대규모의 대량 작업 중에 전체 복구 모델을 임시로 대체하기 위해 고안된 것입니다.  
   
-## 대량 가져오기 작업의 최소 로깅을 위한 테이블 요구 사항  
+## <a name="table-requirements-for-minimally-logging-bulk-import-operations"></a>대량 가져오기 작업의 최소 로깅을 위한 테이블 요구 사항  
  최소 로깅에서 대상 테이블은 다음 조건을 충족해야 합니다.  
   
 -   테이블이 복제되고 있지 않아야 합니다.  
@@ -39,7 +43,7 @@ caps.handback.revision: 47
 -   테이블 잠금이 지정되어야 합니다(TABLOCK 사용). 클러스터형 columnstore 인덱스가 포함된 테이블의 경우에는 최소 로깅에 TABLOCK을 사용할 필요가 없습니다.  또한 압축된 행 그룹으로의 데이터 로드는 최소 로깅되므로 일괄 처리 크기가 102400 이상이어야 합니다.  
   
     > [!NOTE]  
-    >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 익스텐트 할당을 기록합니다.  
+    >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 익스텐트 할당을 기록합니다.  
   
 -   메모리 액세스에 최적화된 테이블이 아닙니다.  
   
@@ -68,16 +72,15 @@ caps.handback.revision: 47
   
 -   [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [&#91;맨 위로 이동&#93;](#Top)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [테이블 힌트&#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)   
+ [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)  
   
   

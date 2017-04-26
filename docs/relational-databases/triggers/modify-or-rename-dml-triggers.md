@@ -1,26 +1,30 @@
 ---
-title: "DML 트리거 수정 또는 이름 바꾸기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "트리거 이름 바꾸기"
-  - "트리거 수정"
-  - "DML 트리거, 수정"
+title: "DML 트리거 수정 또는 이름 바꾸기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming triggers
+- modifying triggers
+- DML triggers, modifying
 ms.assetid: c7317eec-c0e9-479e-a4a7-83b6b6c58d59
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ac7956829213d52669a3408a9a64c597cafa03d
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML 트리거 수정 또는 이름 바꾸기
+# <a name="modify-or-rename-dml-triggers"></a>DML 트리거 수정 또는 이름 바꾸기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 DML 트리거를 수정하거나 이름을 바꾸는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -68,7 +72,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### DML 트리거를 수정하려면  
+#### <a name="to-modify-a-dml-trigger"></a>DML 트리거를 수정하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -78,15 +82,15 @@ caps.handback.revision: 29
   
 4.  트리거를 수정한 다음 **실행**을 클릭합니다.  
   
-#### DML 트리거의 이름을 바꾸려면  
+#### <a name="to-rename-a-dml-trigger"></a>DML 트리거의 이름을 바꾸려면  
   
 1.  이름을 바꿀[트리거를 삭제합니다](../../relational-databases/triggers/delete-or-disable-dml-triggers.md) .  
   
-2.  새 이름을 지정하여 [트리거를 다시 만듭니다](../../relational-databases/triggers/create-dml-triggers.md).  
+2.  새 이름을 지정하여[트리거를 다시 만듭니다](../../relational-databases/triggers/create-dml-triggers.md).  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### ALTER TRIGGER를 사용하여 트리거를 수정하려면  
+#### <a name="to-modify-a-trigger-using-alter-trigger"></a>ALTER TRIGGER를 사용하여 트리거를 수정하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -120,7 +124,7 @@ GO
   
 ```  
   
-#### DROP TRIGGER 및 ALTER TRIGGER를 사용하여 트리거의 이름을 바꾸려면  
+#### <a name="to-rename-a-trigger-using-drop-trigger-and-alter-trigger"></a>DROP TRIGGER 및 ALTER TRIGGER를 사용하여 트리거의 이름을 바꾸려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -143,7 +147,7 @@ GO
   
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

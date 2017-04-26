@@ -1,29 +1,33 @@
 ---
-title: "Errors and Warnings 이벤트 범주(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "오류 및 경고 이벤트 범주 [SQL Server]"
-  - "SQL Server 이벤트 클래스, 오류 및 경고 이벤트 범주"
-  - "이벤트 클래스 [SQL Server], 오류 및 경고 이벤트 범주"
+title: "Errors and Warnings 이벤트 범주(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
+- SQL Server event classes, Errors and Warnings event category
+- event classes [SQL Server], Errors and Warnings event category
 ms.assetid: 249c19b5-af68-4433-80f6-337395176641
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b0c7673b15dec984e81cc7dd8207006a0b278fe7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Errors and Warnings 이벤트 범주(데이터베이스 엔진)
+# <a name="errors-and-warnings-event-category-database-engine"></a>Errors and Warnings 이벤트 범주(데이터베이스 엔진)
   **Errors and Warnings** 이벤트 범주에는 일반적인 오류 및 경고 이벤트가 포함되어 있습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -43,7 +47,7 @@ caps.handback.revision: 28
 |[Sort Warnings 이벤트 클래스](../../relational-databases/event-classes/sort-warnings-event-class.md)|정렬 작업이 메모리에 적합하지 않음을 나타냅니다.|  
 |[User Error Message 이벤트 클래스](../../relational-databases/event-classes/user-error-message-event-class.md)|사용자에게 표시되는 오류 메시지를 보여 줍니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

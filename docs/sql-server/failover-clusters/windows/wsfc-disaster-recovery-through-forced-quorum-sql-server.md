@@ -1,31 +1,35 @@
 ---
-title: "강제 쿼럼을 통해 WSFC 재해 복구(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "가용성 그룹 [SQL Server], WSFC 클러스터"
-  - "쿼럼 [SQL Server], AlwaysOn 및 WSFC 쿼럼"
-  - "장애 조치(Failover) 클러스터링 [SQL Server], AlwaysOn 가용성 그룹"
+title: "쿼럼 강제를 통해 WSFC 재해 복구(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- quorum [SQL Server], AlwaysOn and WSFC quorum
+- failover clustering [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f79077825cabd60fa12cd906ff375d149b29a7d3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
+# <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
   쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
   
--   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
+-   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
   
--   **강제 쿼럼 절차를 통해 WSFC 재해 복구** [강제 쿼럼 절차를 통해 WSFC 재해 복구](#Main)  
+-   **WSFC Disaster Recovery through the Forced Quorum Procedure** [WSFC Disaster Recovery through the Forced Quorum Procedure](#Main)  
   
 -   [관련 태스크](#RelatedTasks)  
   
@@ -37,9 +41,9 @@ caps.handback.revision: 20
  강제 쿼럼 절차는 쿼럼 실패 전에 정상 상태의 쿼럼이 있었다고 가정합니다.  
   
 > [!WARNING]  
->  사용자는 Windows Server 장애 조치(Failover) 클러스터링, WSFC 쿼럼 모델, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 환경의 특정 배포 구성에 대한 개념 및 상호 작용에 대해 잘 알고 있어야 합니다.  
+>  사용자는 Windows Server 장애 조치(Failover) 클러스터링, WSFC 쿼럼 모델, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]및 환경의 특정 배포 구성에 대한 개념 및 상호 작용에 대해 잘 알고 있어야 합니다.  
 >   
->  자세한 내용은 [SQL Server의 WSFC(Windows Server 장애 조치(failover) 클러스터링)](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)을 참조하세요.  
+>  자세한 내용은  [SQL Server의 WSFC(Windows Server 장애 조치(failover) 클러스터링)](http://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](http://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)을 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
  사용자는 WSFC 클러스터의 각 노드에 대한 로컬 Administrators 그룹의 멤버인 도메인 계정이어야 합니다.  
@@ -49,11 +53,11 @@ caps.handback.revision: 20
   
  WSFC 클러스터를 다시 온라인 상태로 전환하려면 기존 구성에서 쿼럼 실패의 근본 원인을 해결하고 필요한 경우 영향을 받은 데이터베이스를 복구해야 하며 실패에서 살아남은 클러스터 토폴로지를 반영하도록 WSFC 클러스터의 나머지 노드를 다시 구성해야 합니다.  
   
- 클러스터를 오프라인 상태로 전환한 보안 장치를 무시하기 위해 WSFC 클러스터 노드에서 *강제 쿼럼* 절차를 수행할 수 있습니다.  이 경우 클러스터에서 쿼럼 투표 검사가 일시 중지되어 클러스터의 모든 노드에서 WSFC 클러스터 리소스 및 SQL Server를 다시 온라인 상태로 전환할 수 있습니다.  
+ 클러스터를 오프라인 상태로 전환한 보안 장치를 무시하기 위해 WSFC 클러스터 노드에서 *강제 쿼럼* 절차를 수행할 수 있습니다.  이 경우 클러스터에서 쿼럼 투표 검사가 일시 중지되어 클러스터의 모든 노드에서 WSFC 클러스터 리소스 및 SQL ServeR을 다시 온라인 상태로 전환할 수 있습니다.  
   
  이 유형의 재해 복구 프로세스에는 다음 단계가 포함됩니다.  
   
-#### 쿼럼 실패에서 복구하려면  
+#### <a name="to-recover-from-quorum-failure"></a>쿼럼 실패에서 복구하려면  
   
 1.  **실패의 범위 확인.** 응답하지 않는 가용성 그룹 또는 SQL Server 인스턴스, 온라인 상태이며 재해 발생 후 사용이 가능한 클러스터 노드를 식별하고 Windows 이벤트 로그와 SQL Server 시스템 로그를 검토합니다.  필요한 경우 향후 분석을 위해 조사한 데이터와 시스템 로그를 보존해야 합니다.  
   
@@ -112,7 +116,7 @@ caps.handback.revision: 20
   
 -   [클러스터 쿼럼 NodeWeight 설정 구성](../../../sql-server/failover-clusters/windows/configure-cluster-quorum-nodeweight-settings.md)  
   
--   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](../Topic/Use%20the%20AlwaysOn%20Dashboard%20\(SQL%20Server%20Management%20Studio\).md)  
+-   [AlwaysOn 대시보드 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
@@ -120,7 +124,7 @@ caps.handback.revision: 20
   
 -   [Get-ClusterLog 장애 조치(Failover) 클러스터 Cmdlet](http://technet.microsoft.com/library/ee461045.aspx)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
   
   

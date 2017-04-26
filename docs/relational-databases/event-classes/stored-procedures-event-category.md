@@ -1,29 +1,33 @@
 ---
-title: "Stored Procedures 이벤트 범주 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Stored Procedures 이벤트 범주 [SQL Server]"
-  - "SQL Server 이벤트 클래스, Stored Procedures 이벤트 범주"
-  - "이벤트 클래스 [SQL Server], Stored Procedures 이벤트 범주"
+title: "Stored Procedures 이벤트 범주 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stored Procedures event category [SQL Server]
+- SQL Server event classes, Stored Procedures event category
+- event classes [SQL Server], Stored Procedures event category
 ms.assetid: 71bebaa3-a05a-4695-b349-078cecd0949a
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f1c72514c72b06b9fea644848df952879619d43c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Stored Procedures 이벤트 범주
+# <a name="stored-procedures-event-category"></a>Stored Procedures 이벤트 범주
   **Stored Procedures** 이벤트 범주는 일반 저장 프로시저 이벤트를 포함합니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  
@@ -42,7 +46,7 @@ caps.handback.revision: 29
 |[SP:StmtCompleted 이벤트 클래스](../../relational-databases/event-classes/sp-stmtcompleted-event-class.md)|저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 완료했음을 나타냅니다.|  
 |[SP:StmtStarting 이벤트 클래스](../../relational-databases/event-classes/sp-stmtstarting-event-class.md)|저장 프로시저 내의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 시작했음을 나타냅니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

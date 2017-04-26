@@ -1,36 +1,40 @@
 ---
-title: "복제 모니터에 임계값 및 경고 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "경고 [SQL Server 복제]"
-  - "병합 에이전트, 임계값 및 경고"
-  - "배포 에이전트, 임계값 및 경고"
-  - "임계값 [SQL Server 복제]"
-  - "복제 모니터, 임계값 및 경고"
-  - "성능 모니터링 [SQL Server 복제], 임계값 및 경고"
+title: "복제 모니터에 임계값 및 경고 설정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- alerts [SQL Server replication]
+- Merge Agent, thresholds and warnings
+- Distribution Agent, thresholds and warnings
+- thresholds [SQL Server replication]
+- Replication Monitor, thresholds and warnings
+- monitoring performance [SQL Server replication], thresholds and warnings
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b47d0b4565cc187ae0746fa7a6c9b5b1f864c3e7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복제 모니터에 임계값 및 경고 설정
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
+# <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions. 기본적으로 복제 모니터는 초기화되지 않은 구독에 대해서만 경고를 표시하지만 다른 조건에 대한 경고를 활성화할 수 있습니다. 토폴로지에 대한 경고를 활성화하여 상태 및 성능 정보를 적시에 받아보는 것이 좋습니다.  
   
  경고를 활성화할 때는 임계값을 지정해야 합니다. 임계값에 도달하거나 임계값이 초과되면 우선 순위가 더 높은 문제점이 표시될 필요가 없는 한 경고가 표시됩니다. 임계값에 도달하면 복제 모니터에 경고가 표시되는 것은 물론 알림 신호가 트리거될 수 있습니다. 다음 상황에 대해 경고를 설정할 수 있습니다.  
   
 -   구독 만료가 임박한 경우  
   
-     모든 복제 유형에 적용됩니다. 지정된 된 임계값에 도달 하거나 초과, 구독 상태도 표시 됩니다 **곧 만료 됨/만료 됨**합니다.  
+     모든 복제 유형에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 구독 상태가 **곧 만료됨/만료됨**으로 표시됩니다.  
   
 -   지정한 대기 시간(게시자에서 트랜잭션이 커밋되는 시점과 구독자에서 해당 트랜잭션이 커밋되는 시점 간의 시간 간격)이 초과된 경우  
   
@@ -38,13 +42,13 @@ caps.handback.revision: 33
   
 -   지정된 동기화 시간이 초과된 경우  
   
-     이 조건은 병합 복제에 적용됩니다. 지정된 된 임계값에 도달 하거나 초과, 상태가으로 표시 됩니다 **장기 실행 트랜잭션 병합**합니다. 전화 접속과 LAN 연결에 대해 서로 다른 임계값을 지정할 수 있습니다.  
+     이 조건은 병합 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **장기 실행 트랜잭션 병합**으로 표시됩니다. 전화 접속과 LAN 연결에 대해 서로 다른 임계값을 지정할 수 있습니다.  
   
 -   지정된 시간 내에 지정된 수의 행을 처리하지 못한 경우  
   
      이 조건은 병합 복제에 적용됩니다. 지정한 임계값에 도달하거나 임계값을 초과하면 상태가 **성능 심각**으로 표시됩니다. 전화 접속과 LAN 연결에 대해 서로 다른 임계값을 지정할 수 있습니다.  
   
- 경고에 대 한 자세한 내용은 **성능 심각** 및 **장기 실행 트랜잭션 병합**, 참조 [복제 모니터로 성능 모니터링](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)합니다.  
+ **성능 심각** 및 **장기 실행 트랜잭션 병합** 경고에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -66,19 +70,19 @@ caps.handback.revision: 33
   
 5.  **변경 내용 저장**을 클릭합니다.  
   
-#### 임계값에 대한 경고를 구성하려면  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>임계값에 대한 경고를 구성하려면  
   
 1.  **경고 구성**을 클릭합니다.  
   
 2.  **복제 경고 구성** 대화 상자에서 경고를 선택한 다음 **구성**을 클릭합니다.  
   
-     이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다. 자세한 내용은 참조 [복제 에이전트 이벤트에 대 한 경고를 사용 하 여](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)합니다.  
+     이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다. 자세한 내용은 [복제 에이전트 이벤트에 대한 경고 사용](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)을 참조하세요.  
   
-3.  옵션 설정의 **\< AlertName> 속성 경고** 대화 상자:  
+3.  **\<AlertName> 경고 속성** 대화 상자에서 다음과 같은 옵션을 설정합니다.  
   
     -   **일반** 페이지에서 **사용**을 클릭하고 경고를 적용할 데이터베이스를 지정합니다.  
   
-    -   에 **응답** 페이지에서 지정 하 고 있는지 여부를 전자 메일을 보낼지 및/또는 작업을 실행 해야 합니다.  
+    -   **응답** 페이지에서 전자 메일의 발송 여부 및/또는 작업의 실행 여부를 지정합니다.  
   
     -   **옵션** 페이지에서 응답 텍스트를 사용자 지정합니다.  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 33
   
 5.  **변경 내용 저장**을 클릭합니다.  
   
-#### 임계값에 대한 경고를 구성하려면  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>임계값에 대한 경고를 구성하려면  
   
 1.  **경고 구성**을 클릭합니다.  
   
@@ -116,11 +120,11 @@ caps.handback.revision: 33
   
      이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다.  
   
-3.  옵션 설정의 **\< AlertName> 속성 경고** 대화 상자:  
+3.  **\<AlertName> 경고 속성** 대화 상자에서 다음과 같은 옵션을 설정합니다.  
   
     -   **일반** 페이지에서 **사용**을 클릭하고 경고를 적용할 데이터베이스를 지정합니다.  
   
-    -   에 **응답** 페이지에서 지정 하 고 있는지 여부를 전자 메일을 보낼지 및/또는 작업을 실행 해야 합니다.  
+    -   **응답** 페이지에서 전자 메일의 발송 여부 및/또는 작업의 실행 여부를 지정합니다.  
   
     -   **옵션** 페이지에서 응답 텍스트를 사용자 지정합니다.  
   
@@ -140,19 +144,19 @@ caps.handback.revision: 33
   
 5.  **변경 내용 저장**을 클릭합니다.  
   
-#### 임계값에 대한 경고를 구성하려면  
+#### <a name="to-configure-an-alert-for-a-threshold"></a>임계값에 대한 경고를 구성하려면  
   
 1.  **경고 구성**을 클릭합니다.  
   
 2.  **복제 경고 구성** 대화 상자에서 경고를 선택한 다음 **구성**을 클릭합니다.  
   
-     이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다. 자세한 내용은 참조 [복제 에이전트 이벤트에 대 한 경고를 사용 하 여](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)합니다.  
+     이 대화 상자에 모니터링 임계값과 관련 없는 경고를 포함하여 모든 게시 유형에 대한 경고가 표시됩니다. 자세한 내용은 [복제 에이전트 이벤트에 대한 경고 사용](../../../relational-databases/replication/agents/use-alerts-for-replication-agent-events.md)을 참조하세요.  
   
-3.  옵션 설정의 **\< AlertName> 속성 경고** 대화 상자:  
+3.  **\<AlertName> 경고 속성** 대화 상자에서 다음과 같은 옵션을 설정합니다.  
   
     -   **일반** 페이지에서 **사용**을 클릭하고 경고를 적용할 데이터베이스를 지정합니다.  
   
-    -   에 **응답** 페이지에서 지정 하 고 있는지 여부를 전자 메일을 보낼지 및/또는 작업을 실행 해야 합니다.  
+    -   **응답** 페이지에서 전자 메일의 발송 여부 및/또는 작업의 실행 여부를 지정합니다.  
   
     -   **옵션** 페이지에서 응답 텍스트를 사용자 지정합니다.  
   
@@ -160,7 +164,7 @@ caps.handback.revision: 33
   
 5.  **닫기**를 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터링](../../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

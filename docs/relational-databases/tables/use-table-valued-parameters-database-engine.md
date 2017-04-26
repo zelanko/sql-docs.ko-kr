@@ -1,27 +1,31 @@
 ---
-title: "테이블 반환 매개 변수 사용(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "테이블 반환 매개 변수"
-  - "테이블 반환 매개 변수, 테이블 반환 매개 변수에 대한 정보"
-  - "매개 변수 [SQL Server], 테이블 반환"
-  - "테이블 반환 매개 변수(TVP) 참조"
+title: "테이블 반환 매개 변수 사용(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table-valued parameters
+- table-valued parameters, about table-valued parameters
+- parameters [SQL Server], table-valued
+- TVP See table-valued parameters
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021177aa350c47474e48453f7d9a5735e1083b04
+ms.lasthandoff: 04/11/2017
+
 ---
-# 테이블 반환 매개 변수 사용(데이터베이스 엔진)
+# <a name="use-table-valued-parameters-database-engine"></a>테이블 반환 매개 변수 사용(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   테이블 반환 매개 변수는 사용자 정의 테이블 형식을 사용하여 선언됩니다. 테이블 반환 매개 변수를 사용하면 임시 테이블이나 많은 매개 변수를 만들지 않고도 저장 프로시저 또는 함수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 루틴에 여러 행의 데이터를 보낼 수 있습니다.  
@@ -78,7 +82,7 @@ caps.handback.revision: 31
  테이블 반환 매개 변수는 동일한 매개 변수 배열 구현 이상의 성능을 제공합니다.  
   
 ##  <a name="Example"></a> 예제  
- 다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하며 테이블 반환 매개 변수 형식을 만들고, 해당 형식을 참조하는 변수를 선언하고, 매개 변수 목록을 채운 다음 저장 프로시저에 값을 전달하는 방법을 보여 줍니다.  
+ 다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하며 테이블 반환 매개 변수 형식을 만들고, 해당 형식을 참조하는 변수를 선언하고, 매개 변수 목록을 채운 다음 저장 프로시저에 값을 전달하는 방법을 보여 줍니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -117,7 +121,7 @@ EXEC usp_InsertProductionLocation @LocationTVP;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [sys.types&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

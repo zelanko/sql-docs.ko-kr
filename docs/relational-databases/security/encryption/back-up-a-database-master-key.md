@@ -1,25 +1,29 @@
 ---
-title: "데이터베이스 마스터 키 백업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 마스터 키 [SQL Server], 내보내기"
+title: "데이터베이스 마스터 키 백업 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], exporting
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52f4f75fe2a48302fb7383ce445f47e23366910d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 마스터 키 백업
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 백업하는 방법에 대해 설명합니다. 데이터베이스 마스터 키는 데이터베이스 내의 다른 키와 인증서를 암호화하는 데 사용됩니다. 데이터베이스 마스터 키가 삭제되거나 손상된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 해당 마스터 키를 해독하지 못할 수 있으며 해당 마스터 키를 사용하여 암호화한 데이터는 사실상 손실됩니다. 그러므로 데이터베이스 마스터 키를 백업하고 이 백업을 안전한 오프 사이트 위치에 저장해야 합니다.  
+# <a name="back-up-a-database-master-key"></a>데이터베이스 마스터 키 백업
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 백업하는 방법에 대해 설명합니다. 데이터베이스 마스터 키는 데이터베이스 내의 다른 키와 인증서를 암호화하는 데 사용됩니다. 데이터베이스 마스터 키가 삭제되거나 손상된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 해당 마스터 키를 해독하지 못할 수 있으며 해당 마스터 키를 사용하여 암호화한 데이터는 사실상 손실됩니다. 그러므로 데이터베이스 마스터 키를 백업하고 이 백업을 안전한 오프 사이트 위치에 저장해야 합니다.  
   
  **항목 내용**  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 20
   
 ##  <a name="Procedure"></a> Transact-SQL과 함께 SQL Server Management Studio 사용  
   
-#### 데이터베이스 마스터 키를 백업하려면  
+#### <a name="to-back-up-the-database-master-key"></a>데이터베이스 마스터 키를 백업하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 백업할 데이터베이스 마스터 키가 들어 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   

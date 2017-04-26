@@ -1,28 +1,32 @@
 ---
-title: "장치에서 백업 복원(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 복원 [SQL Server], 장치 복원"
-  - "백업 장치 [SQL Server], 복원"
-  - "데이터베이스 복원 [SQL Server], 장치 복원"
-  - "장치 [SQL Server]"
+title: "장치에서 백업 복원(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring databases [SQL Server], device restores
+- backup devices [SQL Server], restoring from
+- database restores [SQL Server], device restores
+- devices [SQL Server]
 ms.assetid: 6e139de7-7de2-4d18-9df0-beac31ba7ff1
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1330611f9a861079182566365b7425e7dacbbea3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 장치에서 백업 복원(SQL Server)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 장치에서 백업을 복원하는 방법에 대해 설명합니다.  
+# <a name="restore-a-backup-from-a-device-sql-server"></a>장치에서 백업 복원(SQL Server)
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 장치에서 백업을 복원하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 방법은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
@@ -50,15 +54,15 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 장치에서 백업을 복원하려면  
+#### <a name="to-restore-a-backup-from-a-device"></a>장치에서 백업을 복원하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **복원**을 클릭합니다.  
   
-4.  원하는 복원 작업의 유형(**데이터베이스**, **파일 및 파일 그룹** 또는 **트랜잭션 로그**)을 클릭합니다. 이렇게 하면 해당되는 복원 대화 상자가 열립니다.  
+4.  원하는 복원 작업의 유형(**데이터베이스**, **파일 및 파일 그룹**또는 **트랜잭션 로그**)을 클릭합니다. 이렇게 하면 해당되는 복원 대화 상자가 열립니다.  
   
 5.  **일반** 페이지의 **복원 원본** 섹션에서 **장치**를 클릭합니다.  
   
@@ -70,13 +74,13 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 장치에서 백업을 복원하려면  
+#### <a name="to-restore-a-backup-from-a-device"></a>장치에서 백업을 복원하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 문에서 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다. 이 예에서는 실제 이름이 `Z:\SQLServerBackups\AdventureWorks2012.bak`인 디스크 파일로부터 복원을 수행합니다.  
+3.  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 백업 작업에 사용할 논리적 백업 장치나 물리적 백업 장치를 지정합니다. 이 예에서는 실제 이름이 `Z:\SQLServerBackups\AdventureWorks2012.bak`인 디스크 파일로부터 복원을 수행합니다.  
   
 ```tsql  
 RESTORE DATABASE AdventureWorks2012  
@@ -84,11 +88,11 @@ RESTORE DATABASE AdventureWorks2012
   
 ```  
   
-## 참고 항목  
- [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)   
- [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)   
- [RESTORE LABELONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)   
- [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>참고 항목  
+ [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)   
+ [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)   
+ [RESTORE LABELONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)   
+ [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [단순 복구 모델에서 데이터베이스 백업 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)   
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [차등 데이터베이스 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-differential-database-backup-sql-server.md)   
@@ -98,3 +102,4 @@ RESTORE DATABASE AdventureWorks2012
  [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "Transact-SQL 디버거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 디버거, 소개"
+title: "Transact-SQL 디버거 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, introduction
 ms.assetid: 6e914699-0d85-46c2-aa2d-3e339ac2c4ce
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f9b4dc899901f4306d011838a694381a41fcaf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 디버거
+# <a name="transact-sql-debugger"></a>Transact-SQL 디버거
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 코드의 런타임 동작을 조사하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서 오류를 찾을 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 디버그 모드로 설정한 후 코드의 특정 줄에서 실행을 일시 중지하여 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 사용하거나 반환하는 정보 및 데이터를 검사할 수 있습니다.  
   
-## Transact-SQL 코드 단계별 실행  
+## <a name="stepping-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창이 디버그 모드일 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 코드를 탐색하는 데 사용할 수 있는 다음 옵션을 제공합니다.  
   
 -   개별 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 중단점을 설정합니다.  
@@ -40,10 +44,10 @@ caps.handback.revision: 16
   
  디버거를 사용하여 코드를 탐색하는 방법은 [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)을 참조하세요.  
   
-## 디버거 정보 보기  
+## <a name="viewing-debugger-information"></a>디버거 정보 보기  
  디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지할 때마다 다음 디버거 창을 사용하여 현재 실행 상태를 볼 수 있습니다.  
   
--   **지역** 및 **조사식**. 이 창에서는 현재 할당된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 표시합니다. 식은 단일 스칼라 식으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 또는 이름이 @@로 시작하는 기본 제공 함수를 참조하는 식을 볼 수 있습니다. 이 창에서는 식에 현재 할당된 데이터 값도 표시합니다.  
+-   **Locals** and **Watch.** 이 창에서는 현재 할당된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식을 표시합니다. 식은 단일 스칼라 식으로 계산되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 절입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 변수, 매개 변수 또는 이름이 @@로 시작하는 기본 제공 함수를 참조하는 식을 볼 수 있습니다. 이 창에서는 식에 현재 할당된 데이터 값도 표시합니다.  
   
 -   **간략한 조사식.** 이 창에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식 값을 표시하고 해당 식을 **조사식** 창에 저장합니다.  
   
@@ -53,9 +57,9 @@ caps.handback.revision: 16
   
 -   **출력.** 이 창에서는 디버거의 시스템 메시지와 같은 여러 메시지 및 프로그램 데이터를 표시합니다.  
   
--   **결과** 및 **메시지**. 쿼리 편집기 창의 이러한 탭에서는 이전에 실행한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 결과를 표시합니다.  
+-   **Results** and **Messages.** 쿼리 편집기 창의 이러한 탭에서는 이전에 실행한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 결과를 표시합니다.  
   
-## Transact-SQL 디버거 태스크  
+## <a name="transact-sql-debugger-tasks"></a>Transact-SQL 디버거 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -64,7 +68,7 @@ caps.handback.revision: 16
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 실행하는 방법을 설명합니다.|[Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)|  
 |디버거를 사용하여 매개 변수 및 변수와 같은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터와 시스템 정보를 보는 방법을 설명합니다.|[Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

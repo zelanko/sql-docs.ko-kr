@@ -1,28 +1,32 @@
 ---
-title: "데이터베이스 엔진 오류 이해 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "오류 [SQL Server], 오류 정보"
-  - "오류 [SQL Server], 데이터베이스 엔진"
-  - "오류 [SQL Server]"
-  - "데이터베이스 엔진 [SQL Server], 오류"
+title: "데이터베이스 엔진 오류 이해 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- errors [SQL Server], about errors
+- errors [SQL Server], Database Engine
+- errors [SQL Server]
+- Database Engine [SQL Server], errors
 ms.assetid: ddaca9d3-956f-46a5-8cd3-a7a15ec75878
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fab32eee7823d80a531503a88b9a58dff06c5b89
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 엔진 오류 이해
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 발생한 오류에는 다음 표에 설명된 것과 같은 특성이 있습니다.  
+# <a name="understanding-database-engine-errors"></a>데이터베이스 엔진 오류 이해
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 발생한 오류에는 다음 표에 설명된 것과 같은 특성이 있습니다.  
   
 |Attribute|설명|  
 |---------------|-----------------|  
@@ -39,8 +43,8 @@ caps.handback.revision: 27
   
  TRY...CATCH 구문의 TRY 블록 범위 내에서 발생하는 오류에 대한 정보는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 관련 CATCH 블록 범위 내에서 ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE와 같은 함수를 사용하여 얻을 수 있습니다. 자세한 내용은 [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)를 참조하세요.  
   
-## 예  
- 다음 예에서는 영문(`sys.messages`) 텍스트가 포함된 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 모든 시스템 및 사용자 정의 오류 메시지 목록을 반환하기 위해 `1033` 카탈로그 뷰를 쿼리합니다.  
+## <a name="examples"></a>예  
+ 다음 예에서는 영문( `sys.messages` ) 텍스트가 포함된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 모든 시스템 및 사용자 정의 오류 메시지 목록을 반환하기 위해`1033`카탈로그 뷰를 쿼리합니다.  
   
 ```  
 SELECT  
@@ -53,10 +57,10 @@ SELECT
   WHERE language_id = 1033;  
 ```  
   
- 자세한 내용은 [sys.messages&#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)를 참조하세요.  
+ 자세한 내용은 [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)를 참조하세요.  
   
-## 참고 항목  
- [sys.messages&#40;Transact-SQL&#41;](../Topic/sys.messages%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>참고 항목  
+ [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)   
  [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   

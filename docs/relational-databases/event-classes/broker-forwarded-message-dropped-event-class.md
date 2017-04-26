@@ -1,27 +1,31 @@
 ---
-title: "Broker:Forwarded Message Dropped 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Broker:Forwarded Message Dropped 이벤트 클래스"
+title: "Broker:Forwarded Message Dropped 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Broker:Forwarded Message Dropped event class
 ms.assetid: ec242d0b-77b0-45f5-8b12-186a14b173a8
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d63f05d5f476dcb03398872759b92e21d04c99c
+ms.lasthandoff: 04/11/2017
+
 ---
-# Broker:Forwarded Message Dropped 이벤트 클래스
+# <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 Service Broker가 전달될 메시지를 삭제하면 Broker:Forwarded Message Dropped 이벤트를 생성합니다.  
   
-## Broker:Forwarded Message Dropped 이벤트 클래스 데이터 열  
+## <a name="brokerforwarded-message-dropped-event-class-data-columns"></a>Broker:Forwarded Message Dropped 이벤트 클래스 데이터 열  
   
 |데이터 열|유형|설명|열 번호|필터 가능|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -54,12 +58,12 @@ caps.handback.revision: 26
 |성공|**int**|메시지가 활성 상태인 시간입니다. 이 값이 시간 제한 값보다 크거나 같으면 메시지가 삭제됩니다.|23|아니요|  
 |TargetLoginName|**nvarchar**|메시지가 전달된 네트워크 주소입니다.|42|아니요|  
 |TargetUserName|**nvarchar**|메시지에 대한 시작 서비스의 이름입니다.|39|아니요|  
-|TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메시지를 삭제한 이유에 대한 설명입니다.|1|예|  
+|TextData|**ntext**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메시지를 삭제한 이유에 대한 설명입니다.|1|예|  
 |Transaction ID|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니요|  
   
- 이 이벤트의 TextData 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메시지를 삭제한 이유에 대한 설명이 들어 있습니다.  
+ 이 이벤트의 TextData 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 메시지를 삭제한 이유에 대한 설명이 들어 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

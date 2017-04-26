@@ -1,37 +1,41 @@
 ---
-title: "데이터베이스 복구 모델 보기 또는 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 백업 [SQL Server], 복구 모델"
-  - "복구 [SQL Server], 복구 모델"
-  - "데이터베이스 백업 [SQL Server], 복구 모델"
-  - "복구 모델 [SQL Server], 전환"
-  - "복구 모델 [SQL Server], 보기"
-  - "데이터베이스 복원 [SQL Server], 복구 모델"
-  - "데이터베이스 복구 모델 수정"
+title: "데이터베이스의 복구 모델 보기 또는 변경(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database backups [SQL Server], recovery models
+- recovery [SQL Server], recovery model
+- backing up databases [SQL Server], recovery models
+- recovery models [SQL Server], switching
+- recovery models [SQL Server], viewing
+- database restores [SQL Server], recovery models
+- modifying database recovery models
 ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 caps.latest.revision: 40
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 복구 모델 보기 또는 변경
+# <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스를 보거나 변경하는 방법에 대해 설명합니다. 
   
-  *복구 모델*은 트랜잭션이 로깅되는 방법, 트랜잭션 로그에 백업이 필요하며 허용되는지 여부 및 사용 가능한 복원 작업의 종류를 제어하는 데이터베이스 속성입니다. 사용할 수 있는 복구 모델은 3가지로 단순, 전체 및 대량 로그 복구 모델입니다. 일반적으로 데이터베이스는 전체 복구 모델이나 단순 복구 모델을 사용합니다. 데이터베이스는 언제든지 다른 복구 모델로 전환이 가능합니다. **model** 데이터베이스는 새 데이터베이스의 기본 복구 모델을 설정합니다.  
+  *복구 모델* 은 트랜잭션이 로깅되는 방법, 트랜잭션 로그에 백업이 필요하며 허용되는지 여부 및 사용 가능한 복원 작업의 종류를 제어하는 데이터베이스 속성입니다. 사용할 수 있는 복구 모델은 3가지로 단순, 전체 및 대량 로그 복구 모델입니다. 일반적으로 데이터베이스는 전체 복구 모델이나 단순 복구 모델을 사용합니다. 데이터베이스는 언제든지 다른 복구 모델로 전환이 가능합니다. **model** 데이터베이스는 새 데이터베이스의 기본 복구 모델을 설정합니다.  
   
-  [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)에 대한 자세한 내용은 [MSSQLTips!](https://www.mssqltips.com/)의 동료들이 제공한 [SQL Server 복구 모델](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/)을 참조하세요.
+  [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)에 대한 자세한 내용은 [SQL Server 복구 모델](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 의 동료들이 제공한 [SQL Server 복구 모델](https://www.mssqltips.com/)을 참조하세요.
   
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
@@ -54,7 +58,7 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 복구 모델을 보거나 변경하려면  
+#### <a name="to-view-or-change-the-recovery-model"></a>복구 모델을 보거나 변경하려면  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -66,13 +70,13 @@ caps.handback.revision: 40
   
 5.  현재 복구 모델이 **복구 모델** 목록 상자에 표시됩니다.  
   
-6.  필요에 따라 복구 모델을 변경하려면 다른 모델 목록을 선택합니다. **전체**, **대량 로그** 또는 **단순**을 선택할 수 있습니다.  
+6.  필요에 따라 복구 모델을 변경하려면 다른 모델 목록을 선택합니다. **전체**, **대량 로그**또는 **단순**을 선택할 수 있습니다.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 복구 모델을 보려면  
+#### <a name="to-view-the-recovery-model"></a>복구 모델을 보려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -88,13 +92,13 @@ GO
   
 ```  
   
-#### 복구 모델을 변경하려면  
+#### <a name="to-change-the-recovery-model"></a>복구 모델을 변경하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `model` ALTER DATABASE `FULL` 문의 `SET RECOVERY` 옵션을 사용하여 [데이터베이스의 복구 모델을](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 로 변경하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 `model` ALTER DATABASE `FULL` 문의 `SET RECOVERY` 옵션을 사용하여 [데이터베이스의 복구 모델을](../../t-sql/statements/alter-database-transact-sql-set-options.md) 로 변경하는 방법을 보여 줍니다.  
   
 ```tsql  
 USE master ;  
@@ -133,15 +137,15 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   [작업 만들기](../../ssms/agent/create-a-job.md)  
+-   [작업 만들기](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [작업을 사용하지 않거나 사용하도록 설정](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [작업을 사용하지 않거나 사용하도록 설정](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
   
--   [데이터베이스 유지 관리 계획](http://msdn.microsoft.com/library/ms187658.aspx)([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 온라인 설명서)  
+-   [데이터베이스 유지 관리 계획](http://msdn.microsoft.com/library/ms187658.aspx) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 온라인 설명서)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
@@ -149,3 +153,4 @@ ALTER DATABASE model SET RECOVERY FULL ;
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

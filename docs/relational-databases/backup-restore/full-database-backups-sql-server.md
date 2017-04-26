@@ -1,38 +1,42 @@
 ---
-title: "전체 데이터베이스 백업(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 백업 [SQL Server]"
-  - "백업 [SQL Server], 데이터베이스"
-  - "데이터베이스 백업 [SQL Server], 전체 백업"
-  - "데이터베이스 백업 크기 예상"
-  - "백업 [SQL Server], 백업 크기"
-  - "데이터베이스 백업 [SQL Server], 전체 백업"
-  - "크기 [SQL Server], 백업"
-  - "데이터베이스 백업 [SQL Server], 데이터베이스 백업 정보"
+title: "전체 데이터베이스 백업(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full backups [SQL Server]
+- backups [SQL Server], database
+- backing up databases [SQL Server], full backups
+- estimating database backup size
+- backing up [SQL Server], size of backup
+- database backups [SQL Server], full backups
+- size [SQL Server], backups
+- database backups [SQL Server], about backing up databases
 ms.assetid: 4d933d19-8d21-4aa1-8153-d230cb3a3f99
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f5d2d58da7040d54d49ae9f6b3daae5c31024f65
+ms.lasthandoff: 04/11/2017
+
 ---
-# 전체 데이터베이스 백업(SQL Server)
+# <a name="full-database-backups-sql-server"></a>전체 데이터베이스 백업(SQL Server)
   전체 데이터베이스 백업은 전체 데이터베이스를 백업합니다. 이 백업은 전체 데이터베이스 백업이 복원된 후 전체 데이터베이스가 복구될 수 있도록 트랜잭션 로그의 일부를 포함합니다. 전체 데이터베이스 백업은 백업 완료 시점의 데이터베이스를 나타냅니다.  
   
 > [!TIP]  
 >  데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 완료하는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 따라서 큰 데이터베이스의 경우 *차등 데이터베이스 백업*으로 전체 데이터베이스 백업을 보완할 수 있습니다. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  데이터베이스 백업에서 TRUSTWORTHY는 OFF로 설정되어 있습니다. TRUSTWORTHY를 ON으로 설정하는 방법은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)을 참조하세요.  
+>  데이터베이스 백업에서 TRUSTWORTHY는 OFF로 설정되어 있습니다. TRUSTWORTHY를 ON으로 설정하는 방법은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
  **항목 내용:**  
   
@@ -47,9 +51,9 @@ caps.handback.revision: 64
 ##  <a name="DbBuRMs"></a> 단순 복구 모델에서 데이터베이스 백업  
  단순 복구 모델에서는 각 백업 후 재해가 발생할 경우 데이터베이스가 잠재적 작업 손실 위험에 노출될 수 있습니다. 다음 백업이 시작되어 작업 손실 가능성이 다시 0이 되고 새 작업 손실 가능성 주기가 시작될 때까지 작업 손실 가능성은 업데이트를 수행할 때마다 커집니다. 시간의 경과에 따라 백업 사이의 작업 손실 가능성이 증가합니다. 다음 그림에서는 전체 데이터베이스 백업만 사용하는 백업 전략의 작업 손실 가능성을 보여 줍니다.  
   
- ![데이터베이스 백업 간의 작업 손실 가능성 표시](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "데이터베이스 백업 간의 작업 손실 가능성 표시")  
+ ![데이터베이스 백업 간의 작업 손실 가능성 표시](../../relational-databases/backup-restore/media/bnr-rmsimple-1-fulldb-backups.gif "Shows work-loss exposure between database backups")  
   
-### 예([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>예([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  다음 예에서는 기존 백업을 덮어쓰고 새 미디어 세트를 만들기 위해 WITH FORMAT을 사용하여 전체 데이터베이스 백업을 만드는 방법을 보여 줍니다.  
   
 ```  
@@ -63,11 +67,11 @@ GO
 ##  <a name="DbBuRMf"></a> 전체 복구 모델에서 데이터베이스 백업  
  전체 및 대량 로그 복구를 사용하는 데이터베이스의 경우 데이터베이스 백업이 필요하지만 이것만으로 충분하지는 않습니다. 또한 트랜잭션 로그 백업이 필요합니다. 다음 그림에서는 전체 복구 모델에서 사용 가능한 가장 단순한 백업 전략을 보여 줍니다.  
   
- ![일련의 전체 데이터베이스 백업 및 로그 백업](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "일련의 전체 데이터베이스 백업 및 로그 백업")  
+ ![일련의 전체 데이터베이스 백업 및 로그 백업](../../relational-databases/backup-restore/media/bnr-rmfull-1-fulldb-log-backups.gif "Series of full database backups and log backups")  
   
  로그 백업을 만드는 방법은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
-### 예([!INCLUDE[tsql](../../includes/tsql-md.md)])  
+### <a name="example-includetsqlincludestsql-mdmd"></a>예([!INCLUDE[tsql](../../includes/tsql-md.md)])  
  다음 예에서는 기존 백업을 덮어쓰고 새 미디어 세트를 만들기 위해 WITH FORMAT을 사용하여 전체 데이터베이스 백업을 만드는 방법을 보여 줍니다. 그런 다음 트랜잭션 로그를 백업합니다. 실제 상황에서는 일련의 정기적인 로그 백업을 수행해야 합니다. 이 예의 경우 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스는 전체 복구 모델을 사용하도록 설정됩니다.  
   
 ```  
@@ -100,7 +104,7 @@ GO
   
  [유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Analysis Services 데이터베이스 백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  

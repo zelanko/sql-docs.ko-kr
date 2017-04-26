@@ -1,22 +1,26 @@
 ---
-title: "SQL Server 2016용 SQL Server 메모리 내 OLTP 내부 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 2016용 SQL Server 메모리 내 OLTP 내부 | Microsoft 문서"
+ms.custom: 
+ms.date: 09/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b14da361-a6b8-4d85-b196-7f2f13650f44
 caps.latest.revision: 2
-author: "jodebrui"
-ms.author: "jodebrui"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: jodebrui
+ms.author: jodebrui
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d46e84522acf72865028a6308bf15847ac5e9f42
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 2016용 SQL Server 메모리 내 OLTP 내부
+# <a name="sql-server-in-memory-oltp-internals-for-sql-server-2016"></a>SQL Server 2016용 SQL Server 메모리 내 OLTP 내부
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 **요약:** 흔히 코드명 "Hekaton"으로 불리는 메모리 내 OLTP는 SQL Server 2014에서 도입되었습니다.
@@ -30,4 +34,5 @@ caps.handback.revision: 2
   
 **적용 대상:** SQL Server 2016  
   
-문서를 검토하려면 [SQL Server In-Memory OLTP Internals for SQL Server 2016](http://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)(SQL Server 2016용 SQL Server 메모리 내 OLTP 내부) 문서를 다운로드하세요.   
+문서를 검토하려면 [SQL Server In-Memory OLTP Internals for SQL Server 2016](http://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf) (SQL Server 2016용 SQL Server 메모리 내 OLTP 내부) 문서를 다운로드하세요.   
+

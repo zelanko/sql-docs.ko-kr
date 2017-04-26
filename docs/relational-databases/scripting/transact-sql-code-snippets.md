@@ -1,25 +1,29 @@
 ---
-title: "Transact-SQL 코드 조각 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Transact-SQL 코드 조각 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 12834855-535a-4102-8b19-5d18b4080926
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b2d7a1214e91b826c5e307cdacbf58297b5aab5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 코드 조각
+# <a name="transact-sql-code-snippets"></a>Transact-SQL 코드 조각
   [!INCLUDE[tsql](../../includes/tsql-md.md)].code 코드 조각은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록의 기본 구조가 포함된 템플릿입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 문을 추가할 때 코드 조각을 시작 지점으로 사용할 수 있습니다. SQL Server와 함께 제공되는 미리 정의된 코드 조각을 삽입하거나 고유의 코드 조각을 만들 수 있습니다.  
   
-## Transact-SQL 코드 조각 태스크  
+## <a name="transact-sql-code-snippet-tasks"></a>Transact-SQL 코드 조각 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -28,7 +32,7 @@ caps.handback.revision: 5
 |코드 조각을 삽입한 후 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 블록 작성을 완료하는 방법을 설명합니다.|[Transact-SQL 코드 조각 완성](../../relational-databases/scripting/complete-transact-sql-snippets.md)|  
 |고유의 사용자 지정 코드 조각을 작성하여 SQL Server 코드 조각에 추가하는 방법을 설명합니다.|[Transact-SQL 코드 조각 추가](../../relational-databases/scripting/add-transact-sql-snippets.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

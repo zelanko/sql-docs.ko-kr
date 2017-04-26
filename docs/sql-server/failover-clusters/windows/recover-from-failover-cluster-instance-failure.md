@@ -1,27 +1,31 @@
 ---
-title: "장애 조치(failover) 클러스터 인스턴스 오류 복구 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클러스터 [SQL Server], 오류 복구"
-  - "장애 조치(Failover) 클러스터링 [SQL Server], 오류 복구"
-  - "하드웨어 오류 [SQL Server]"
-  - "장애 조치(Failover) 클러스터 오류 복구 [SQL Server]"
+title: "장애 조치(failover) 클러스터 인스턴스 오류 복구 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clusters [SQL Server], recovery from failure
+- failover clustering [SQL Server], recovery from failure
+- hardware failures [SQL Server]
+- recovering failover cluster failures [SQL Server]
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 caps.latest.revision: 31
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b0e95b00a334c4c0391d800f7846e2f431107892
+ms.lasthandoff: 04/11/2017
+
 ---
-# 장애 조치(failover) 클러스터 인스턴스 오류 복구
+# <a name="recover-from-failover-cluster-instance-failure"></a>장애 조치(failover) 클러스터 인스턴스 오류 복구
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 장애 조치(failover)가 발생한 후에 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 클러스터 오류를 복구하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  
   
 -   [복구 불가능 오류 복구](#Scenario1)  

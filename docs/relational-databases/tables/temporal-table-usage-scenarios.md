@@ -1,23 +1,27 @@
 ---
-title: "임시 테이블 사용 시나리오 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "임시 테이블 사용 시나리오 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 caps.latest.revision: 11
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 임시 테이블 사용 시나리오
+# <a name="temporal-table-usage-scenarios"></a>임시 테이블 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   임시 테이블은 일반적으로 데이터 변경 기록을 추적하는 데 필요한 시나리오에서 유용합니다.    
@@ -33,8 +37,8 @@ caps.handback.revision: 10
   
 -   [행 수준 데이터 손상 복구](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
   
-## 데이터 감사  
- 변경된 사항, 시기 및 실행자를 추적하고 지정 시간에 법정 분석을 수행하는 데 필요한 중요 정보가 저장된 테이블에서는 임시 시스템 버전 관리를 사용합니다.    
+## <a name="data-audit"></a>데이터 감사  
+ 변경된 사항 및 시기를 추적하고 지정 시간에 법정 분석을 수행하는 데 필요한 중요 정보가 저장된 테이블에서는 임시 시스템 버전 관리를 사용합니다.    
 임시 시스템 버전 관리 테이블을 사용하면 개발 주기의 초기 단계에서 데이터 감사 시나리오에 대해 계획하고 필요할 때 기존 응용 프로그램이나 솔루션에 데이터 감사를 추가할 수 있습니다.  
   
  다음 다이어그램에서는 현재(파란색으로 표시) 및 기록 행 버전(회색으로 표시)을 포함한 데이터 샘플을 사용하여 Employee 테이블 시나리오를 보여 줍니다.   
@@ -42,7 +46,7 @@ caps.handback.revision: 10
   
  ![TemporalUsageScenario1](../../relational-databases/tables/media/temporalusagescenario1.png "TemporalUsageScenario1")  
   
-### 데이터 감사를 위해 새 테이블에 시스템 버전 관리를 사용하도록 설정  
+### <a name="enabling-system-versioning-on-a-new-table-for-data-audit"></a>데이터 감사를 위해 새 테이블에 시스템 버전 관리를 사용하도록 설정  
  데이터 감사가 필요한 정보를 파악하고 나면 임시 시스템 버전이 관리되는 데이터베이스 테이블을 만듭니다. 다음의 간단한 예제에서는 가상 HR 데이터베이스에서 직원 정보를 사용하는 시나리오를 보여 줍니다.  
   
 ```  
@@ -63,7 +67,7 @@ CREATE TABLE Employee
   
  시스템에서 버전이 관리되는 임시 테이블을 만드는 다양한 옵션은 [시스템 버전 임시 테이블 만들기](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)에 설명되어 있습니다.  
   
-### 데이터 감사를 위해 기존 테이블에 시스템 버전 관리를 사용하도록 설정  
+### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>데이터 감사를 위해 기존 테이블에 시스템 버전 관리를 사용하도록 설정  
  기존 데이터베이스에서 데이터 감사를 수행해야 할 경우 시스템 버전이 관리되도록 ALTER TABLE을 사용하여 임시가 아닌 테이블을 확장합니다. [비임시 테이블을 시스템 버전 임시 테이블로 변경](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)에 설명된 대로 응용 프로그램에서 새로운 변경이 발생하지 않도록 HIDDEN으로 기간 열을 추가합니다. 다음 예제에서는 가상 HR 데이터베이스에 있는 기존 직원 테이블에서 시스템 버전 관리를 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ```  
@@ -87,7 +91,7 @@ ALTER TABLE Employee
  위의 스크립트를 실행하고 나면 모든 데이터 변경 사항이 기록 테이블에 투명하게 수집됩니다.    
 일반적인 데이터 감사 시나리오에서는 관심 있는 기간에 개별 행에 적용된 모든 데이터 변경에 대해 쿼리합니다. 이 사용 사례를 효율적으로 보여줄 수 있도록 기본 기록 테이블은 클러스터형 행-저장소 B-트리로 만들어집니다.  
   
-### 데이터 분석 수행  
+### <a name="performing-data-analysis"></a>데이터 분석 수행  
  위의 방법 중 하나를 사용하여 시스템 버전 관리를 사용하도록 설정하고 나면 데이터 감사에서 한 개의 쿼리가 해결되었습니다. 다음 쿼리는 2014년 1월 1일부터 2015년 1월 1일(포함) 사이에 활성 상태로 있었던 EmployeeID가 1000인 Employee 레코드에 대한 행 버전을 검색합니다.  
   
 ```  
@@ -145,13 +149,13 @@ FROM Employee
   
 > [!TIP]  
 >  FOR SYSTEM_TIME이 포함된 임시 절에 지정된 필터링 조건은 SARG 가능합니다. 예를 들어 SQL Server는 기본 클러스터행 인덱스를 활용하여 검색(scan) 작업 대신 찾기(seek)를 수행할 수 있습니다.   
-> 기록 테이블을 직접 쿼리하는 경우 \<기간 열>  {\< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 형태로 필터를 지정하여 필터링 조건도 SARG 가능하도록 합니다.  
+> 기록 테이블을 직접 쿼리하는 경우 \<기간 열>  {< | > | =, …} date_condition AT TIME ZONE ‘UTC’ 형태로 필터를 지정하여 필터링 조건도 SARG 가능하도록 합니다.  
 > AT TIME ZONE을 기간 열에 적용하면 SQL Server에서는 테이블/인덱스 검색을 수행하지만 이 작업은 비용이 매우 많이 들 수 있습니다. 쿼리에서  
-> \<기간 열>  AT TIME ZONE ‘\<해당 표준 시간대>’  >  {\< | > | =, …} date_condition과 같은 조건 형식은 사용하지 마세요.  
+> \<기간 열>  AT TIME ZONE ‘\<해당 표준 시간대>’  >  {< | > | =, …} date_condition과 같은 조건 형식은 사용하지 마세요.  
   
  참고 항목: [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-## 지정 시간 분석(시간 이동)  
+## <a name="point-in-time-analysis-time-travel"></a>지정 시간 분석(시간 이동)  
  일반적으로 개별 레코드에 발생한 변경에 중점을 두는 데이터 감사와는 달리 시간 이동 시나리오에서 사용자는 시간의 흐름에 따라 전체 데이터 집합이 변경된 방식을 확인할 수 있습니다. 경우에 따라 시간 이동에는 관련 임시 테이블이 여러 개 포함되어 있으며 각 테이블은 개별적으로 변경됩니다. 이 테이블에서 다음을 분석할 수 있습니다.  
   
 -   기록 및 현재 데이터의 중요한 지표에 대한 추세  
@@ -162,7 +166,7 @@ FROM Employee
   
  실제로 시간 이동 분석이 필요한 시나리오는 많습니다. 이 사용 시나리오를 보여줄 수 있도록 자동 생성 기록을 사용하는 OLTP에 대해 살펴보겠습니다.  
   
-### 자동 생성된 데이터 기록을 사용하는 OLTP  
+### <a name="oltp-with-auto-generated-data-history"></a>자동 생성된 데이터 기록을 사용하는 OLTP  
  트랜잭션 처리 시스템에서는 일반적으로 시간의 흐름에 따라 중요한 메트릭이 변경되는 방식을 분석합니다. 이상적으로는 데이터의 최신 상태에 액세스할 때 대기 시간과 데이터 잠금이 최소한으로 발생되어야 하므로 OLTP 응용 프로그램에서는 기록 분석으로 인해 성능이 저하되면 안 됩니다.  시스템 버전 관리된 임시 테이블은 사용자가 전체 변경 내역을 나중에 분석할 수 있도록 현재 데이터와는 별도로 투명하게 유지하여 주 OLTP 작업에 영향이 최소한으로 미칠 수 있도록 디자인되었습니다.  
 부하가 높은 트랜잭션 처리 작업을 위해서는 [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 사용하는 것이 좋습니다. 이렇게 하면 현재 메모리 내 데이터와 디스크의 전체 변경 기록을 비용 효율적인 방식으로 저장할 수 있습니다.  
   
@@ -372,7 +376,7 @@ JOIN vw_ProductInventoryDetails FOR SYSTEM_TIME AS OF @monthAgo AS inventoryMont
     ON inventoryDayAgo.ProductId = inventoryMonthAgo.ProductId AND inventoryDayAgo.LocationId = inventoryMonthAgo.LocationID;  
 ```  
   
-## 변칙 검색  
+## <a name="anomaly-detection"></a>변칙 검색  
  변칙 검색(또는 이상 값 검색)은 예상되는 패턴을 준수하지 않는 항목 또는 데이터 집합의 다른 항목 ID입니다.   
 임시 쿼리를 활용하면 특정 패턴을 쉽게 찾을 수 있으므로 시스템 버전 관리된 임시 테이블을 사용하여 주기적으로 또는 불규칙적으로 발생하는 변칙을 검색할 수 있습니다.  
 변칙은 수집하는 데이터 형식과 비즈니스 논리에 따라 달라집니다.  
@@ -431,7 +435,7 @@ FROM CTE
 > [!NOTE]  
 >  이 예는 의도적으로 단순화되었습니다. 프로덕션 시나리오에서는 고급 통계 방법을 사용하여 공통 패턴을 따르지 않는 샘플을 식별할 수 있습니다.  
   
-## 느린 변경 차원  
+## <a name="slowly-changing-dimensions"></a>느린 변경 차원  
  데이터 웨어하우징에서 차원은 일반적으로 지리 위치, 고객 또는 제품과 같은 엔터티에 대한 비교적 정적 데이터를 포함합니다. 그러나 일부 시나리오의 경우 차원 테이블에서도 데이터 변경 사항을 추적해야 합니다. 예측 가능하지 않은 방법을 사용하고, 팩트 테이블에 적용되는 정기 업데이트 일정에서 벗어난 경우 차원의 수정 발생 빈도가 매우 낮아지는 것을 고려할 때 이러한 차원 테이블 형식을 SCD(느린 변경 차원)라고 합니다.  
   
  변경 기록이 유지되는 방법에 따라 느린 변경 차원 범주가 몇 가지 있습니다.  
@@ -511,7 +515,7 @@ GROUP BY DimProduct_History.ProductId, DimLocation_History.LocationId ;
   
 -   SCD 테이블에 기록 행 수가 상당할 것으로 예상되는 경우 기록 테이블의 주 저장소 옵션으로 클러스터형 columnstore 인덱스를 사용하는 것이 좋습니다. 이렇게 하면 기록 테이블의 공간이 줄어들어 분석 쿼리 속도가 빨라집니다.  
   
-## 행 수준 데이터 손상 복구  
+## <a name="repairing-row-level-data-corruption"></a>행 수준 데이터 손상 복구  
  시스템 버전 관리된 임시 테이블에서 기록 데이터를 사용하여 개별 행을 이전에 캡처된 상태로 빠르게 복구할 수 있습니다. 임시 테이블의 이 속성은 영향을 받는 행을 찾거나 원하지 않는 데이터 변경 시간을 알고 있을 때 백업을 처리하지 않고 효율적으로 복구를 수행할 수 있으므로 매우 유용합니다.  
   
  이 접근 방법에는 여러 가지 이점이 있습니다.  
@@ -549,7 +553,7 @@ UPDATE Employee
   
 ```  
   
- 이 저장 프로시저는 입력 매개 변수로 @EmployeeID 및 @versionNumber를 가져옵니다. 기본적으로 이 프로시저에서는 행 상태를 기록에서 마지막 버전으로 복원합니다(@versionNumber = 1).  
+ 이 저장 프로시저는 @EmployeeID 및 @versionNumber를 입력 매개 변수로 사용합니다. 기본적으로 이 프로시저에서는 행 상태를 기록에서 마지막 버전으로 복원합니다(@versionNumber = 1).  
   
  다음 그림은 프로시저 호출 이전 및 이후 행의 상태를 보여 줍니다. 빨간색 직사각형은 잘못된 현재 행 버전을 표시하고, 녹색 직사각형은 기록에서 올바른 버전을 표시합니다.  
   
@@ -589,7 +593,7 @@ UPDATE Employee
   
  ![TemporalUsageRepair4](../../relational-databases/tables/media/temporalusagerepair4.png "TemporalUsageRepair4")  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [임시 테이블 시스템 일관성 검사](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -600,3 +604,4 @@ UPDATE Employee
  [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

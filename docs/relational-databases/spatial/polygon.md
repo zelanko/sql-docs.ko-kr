@@ -1,36 +1,40 @@
 ---
-title: "다각형 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geometry 하위 유형 [SQL Server]"
-  - "Polygon geometry 하위 유형 [SQL Server]"
+title: "Polygon | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geometry subtypes [SQL Server]
+- Polygon geometry subtype [SQL Server]
 ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08b68a58ad6d835349031de2dcf5c2dea215d188
+ms.lasthandoff: 04/11/2017
+
 ---
-# 다각형
-  **Polygon**은 외부 경계 링과 0개 이상의 내부 링을 정의하는 일련의 점으로 저장되는 2차원 표면입니다.  
+# <a name="polygon"></a>다각형
+  **Polygon** 은 외부 경계 링과 0개 이상의 내부 링을 정의하는 일련의 점으로 저장되는 2차원 표면입니다.  
   
-## Polygon 인스턴스  
+## <a name="polygon-instances"></a>Polygon 인스턴스  
  **Polygon** 인스턴스는 서로 다른 점이 3개 이상 있는 링에서 구성될 수 있습니다. **Polygon** 인스턴스가 비어 있을 수도 있습니다.  
   
  **Polygon** 의 외부 및 내부 링은 해당 경계를 정의합니다. 링 내부 공간은 **Polygon**의 내부를 정의합니다.  
   
  다음 그림에서는 **Polygon** 인스턴스의 예를 보여 줍니다.  
   
- ![기하 도형 Polygon 인스턴스의 예](../../relational-databases/spatial/media/polygon.png "기하 도형 Polygon 인스턴스의 예")  
+ ![기하 도형 Polygon 인스턴스의 예](../../relational-databases/spatial/media/polygon.gif "기하 도형 Polygon 인스턴스의 예")  
   
  그림에 대한 설명:  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 27
   
 3.  그림 3은 **Polygon** 인스턴스의 내부 링이 하나의 탄젠트 점에서 교차하므로 올바른 인스턴스입니다.  
   
-### 허용되는 인스턴스  
+### <a name="accepted-instances"></a>허용되는 인스턴스  
  허용되는 **Polygon** 인스턴스는 예외를 발생시키지 않고 **geometry** 또는 **geography** 변수에 저장할 수 있는 인스턴스입니다. 다음 **Polygon** 인스턴스가 허용됩니다.  
   
 -   빈 **Polygon** 인스턴스  
@@ -65,9 +69,9 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- `@g4` 및 `@g5`가 보여 주듯이 허용된 **Polygon** 인스턴스는 유효한 **Polygon** 인스턴스가 아닐 수 있습니다. `@g5` 도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.  
+ `@g4` 및 `@g5` 가 보여 주듯이 허용된 **Polygon** 인스턴스는 유효한 **Polygon** 인스턴스가 아닐 수 있습니다. `@g5` 도 Polygon 인스턴스가 허용될 4개의 점이 있는 링만 포함해야 함을 보여 줍니다.  
   
- 다음 예에서는 **Polygon** 인스턴스가 허용되지 않으므로 `System.FormatException`이 발생합니다.  
+ 다음 예에서는 `System.FormatException` Polygon **인스턴스가 허용되지 않으므로** 이 발생합니다.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';  
@@ -80,7 +84,7 @@ DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
 ```  
   
-### 유효한 인스턴스  
+### <a name="valid-instances"></a>유효한 인스턴스  
  **Polygon** 의 내부 링은 자신들과 서로 다른 링 모두 하나의 탄젠트 점에서 인접할 수 있지만 **Polygon** 의 내부 링이 교차할 경우 해당 인스턴스가 유효하지 않습니다.  
   
  다음 예에서는 유효한 **Polygon** 인스턴스를 보여 줍니다.  
@@ -106,7 +110,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
  `@g1` 이 유효하지 않습니다. `@g2` 가 유효하지 않습니다. `@g3` 이 두 내부 링이 여러 연속 점에서 접하기 때문에 유효하지 않습니다. `@g4` 가 유효하지 않습니다. `@g5` 가 유효하지 않습니다. `@g6` 이 유효하지 않습니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예에서는 구멍이 있고 SRID가 10인 단순한 `geometry``Polygon` 인스턴스를 만듭니다.  
   
 ```  
@@ -143,9 +147,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- 위에서 반환된 geometry 인스턴스는 `Point(1 3)`입니다.  지정한 `Polygon`이 `POLYGON((1 3, 1 5, 1 3, 1 3))`이면 `MakeValid()`에서 `LINESTRING(1 3, 1 5)`를 반환합니다.  
+ 위에서 반환된 geometry 인스턴스는 `Point(1 3)`입니다.  지정한 `Polygon` 이 `POLYGON((1 3, 1 5, 1 3, 1 3))` 이면 `MakeValid()` 에서 `LINESTRING(1 3, 1 5)`를 반환합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [STArea&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   
  [STExteriorRing&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stexteriorring-geometry-data-type.md)   
  [STNumInteriorRing&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnuminteriorring-geometry-data-type.md)   

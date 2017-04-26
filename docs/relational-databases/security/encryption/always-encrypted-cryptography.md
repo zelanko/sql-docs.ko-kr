@@ -1,48 +1,52 @@
 ---
-title: "상시 암호화되는 암호화 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "02/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "상시 암호화, 암호화 시스템"
+title: "상시 암호화되는 암호화 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 02/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Always Encrypted, cryptography system
 ms.assetid: ae8226ff-0853-4716-be7b-673ce77dd370
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee5419dc374c545daa1249f2e6f76d8d13ac4695
+ms.lasthandoff: 04/11/2017
+
 ---
-# 상시 암호화되는 암호화
+# <a name="always-encrypted-cryptography"></a>상시 암호화되는 암호화
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  이 문서에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]의 [상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 기능에서 사용되는 암호화 관련 자료를 유도하기 위한 암호화 알고리즘 및 메커니즘을 설명합니다.  
+  이 문서에서는 [및](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 상시 암호화 [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)]기능에서 사용되는 암호화 관련 자료를 유도하기 위한 암호화 알고리즘 및 메커니즘을 설명합니다.  
   
-## 키, 키 저장소 및 키 암호화 알고리즘  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>키, 키 저장소 및 키 암호화 알고리즘  
  상시 암호화는 열 마스터 키 및 열 암호화 키의 두 가지 키 유형을 사용합니다.  
   
- 열 마스터 키(CMK)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하기 위해 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리([!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 응용 프로그램(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [Windows 인증서 저장소](https://msdn.microsoft.com/library/windows/desktop/aa388160) 및 하드웨어 보안 모듈(HSM)용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 키 저장소 공급자에 포함됩니다.  공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 응용 프로그램 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
+ 열 마스터 키(CMK)는 항상 클라이언트가 관리하고 외부 키 저장소에 저장되는 키 암호화 키(예: 다른 키를 암호화하기 위해 사용되는 키)입니다. 상시 암호화 활성화 클라이언트 드라이버는 CMK 저장소 공급자를 통해 키 저장소와 상호작용하고 드라이버 라이브러리( [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/시스템 공급자)의 일부 또는 클라이언트 응용 프로그램(사용자 지정 공급자)의 일부가 될 수 있습니다. 클라이언트 드라이버 라이브러리에는 현재 [Windows 인증서 저장소](https://msdn.microsoft.com/library/windows/desktop/aa388160) 및 하드웨어 보안 모듈(HSM)용 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 키 저장소 공급자에 포함됩니다.  공급자의 현재 목록은 [CREATE COLUMN MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)를 참조하세요. 응용 프로그램 개발자는 임의 저장소에 대한 사용자 지정 공급자를 제공할 수 있습니다.  
   
  열 암호화 키(CEK)는 CMK로 보호되는 콘텐츠 암호화 키(예: 데이터를 보호하기 위해 사용되는 키)입니다.  
   
  모든 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] CMK 저장소 공급자는 RFC 3447 섹션 2.1항에 의해 지정된 기본 매개 변수가 있는 최적 비대칭 암호화 패딩(RSA-OAEP)와 RSA를 사용하여 CEK를 암호화합니다. 이러한 기본 매개 변수는 SHA-1의 해시 기능과 SHA-1가 있는 MGF1의 마스크 생성 기능을 사용합니다.  
   
-## 데이터 암호화 알고리즘  
+## <a name="data-encryption-algorithm"></a>데이터 암호화 알고리즘  
  상시 암호화는 **AEAD_AES_256_CBC_HMAC_SHA_256** 알고리즘을 사용하여 데이터베이스에서 데이터를 암호화합니다.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256**은 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)의 사양 초안에서 파생됩니다. 관련 데이터와 인증 암호화 체계를 사용하며 암호화 후 MAC 방식을 따릅니다. 즉, 일반 텍스트를 먼저 암호화한 후 결과 암호 텍스트에 따라 MAC이 생성됩니다.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** 은 [http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05](http://tools.ietf.org/html/draft-mcgrew-aead-aes-cbc-hmac-sha2-05)의 사양 초안에서 파생됩니다. 관련 데이터와 인증 암호화 체계를 사용하며 암호화 후 MAC 방식을 따릅니다. 즉, 일반 텍스트를 먼저 암호화한 후 결과 암호 텍스트에 따라 MAC이 생성됩니다.  
   
- 패턴을 숨기기 위해 **AEAD_AES_256_CBC_HMAC_SHA_256**은 작업의 CBC(암호화 블록 체인) 모드를 사용하고 여기에서 초기 값은 초기화 벡터(IV)라는 이름으로 시스템에 제공됩니다. CBC 모드에 대한 모든 설명은 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)를 참조하세요.  
+ 패턴을 숨기기 위해 **AEAD_AES_256_CBC_HMAC_SHA_256** 은 작업의 CBC(암호화 블록 체인) 모드를 사용하고 여기에서 초기 값은 초기화 벡터(IV)라는 이름으로 시스템에 제공됩니다. CBC 모드에 대한 모든 설명은 [http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf](http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf)를 참조하세요.  
   
- **AEAD_AES_256_CBC_HMAC_SHA_256**은 다음 단계를 통해 지정된 일반 텍스트 값에 대한 암호화 값을 계산합니다.  
+ **AEAD_AES_256_CBC_HMAC_SHA_256** 은 다음 단계를 통해 지정된 일반 텍스트 값에 대한 암호화 값을 계산합니다.  
   
-### 1단계: 초기화 벡터(IV) 생성  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>1단계: 초기화 벡터(IV) 생성  
  상시 암호화가 지원하는 **AEAD_AES_256_CBC_HMAC_SHA_256**의 두 가지 유형:  
   
 -   임의  
@@ -72,7 +76,7 @@ iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_
   
  다른 방식과 비교했을 때 결정적 암호화는 미리 정의된 IV 값을 사용하는 것과 같이 패턴 숨기기에서 더 효과적입니다.  
   
-### 2단계: AES_256_CBC 암호 텍스트 계산  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>2단계: AES_256_CBC 암호 텍스트 계산  
  IV를 계산한 후 **AES_256_CBC** 암호 텍스트가 생성됩니다.  
   
 ```  
@@ -85,7 +89,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### 3단계: MAC 계산  
+### <a name="step-3-computing-mac"></a>3단계: MAC 계산  
  그 후 다음 알고리즘을 사용하여 MAC이 계산됩니다.  
   
 ```  
@@ -99,14 +103,14 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### 4단계: 연결  
+### <a name="step-4-concatenation"></a>4단계: 연결  
  마지막으로, 알고리즘 버전 바이트, MAC, IV 및 AES_256_CBC 암호 텍스트를 단순히 연결하여 암호화된 값이 생성됩니다.  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  
 ```  
   
-## 암호 텍스트 길이  
+## <a name="ciphertext-length"></a>암호 텍스트 길이  
  **AEAD_AES_256_CBC_HMAC_SHA_256** 암호 텍스트 특정 컴포넌트의 길이(바이트 단위)는 다음과 같습니다.  
   
 -   버전 바이트: 1  
@@ -174,11 +178,12 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 |**varchar**|다양함 위의 수식을 사용합니다.|  
 |**xml**|해당 없음(지원되지 않음)|  
   
-## .NET 참조  
- 이 문서에서 설명된 알고리즘에 대한 자세한 내용은 [.NET 참조](http://referencesource.microsoft.com/)에서 **SqlAeadAes256CbcHmac256Algorithm.cs** 및 **SqlColumnEncryptionCertificateStoreProvider.cs** 파일을 참조하세요.  
+## <a name="net-reference"></a>.NET 참조  
+ 이 문서에서 설명된 알고리즘에 대한 자세한 내용은 **.NET 참조** 에서 **SqlAeadAes256CbcHmac256Algorithm.cs** 및 [SqlColumnEncryptionCertificateStoreProvider.cs](http://referencesource.microsoft.com/)파일을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [상시 암호화&#40;클라이언트 개발&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   
   
+

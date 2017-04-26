@@ -1,31 +1,35 @@
 ---
-title: "XML 인덱스 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 제거"
-  - "인덱스 삭제"
-  - "XML 인덱스 [SQL Server], 삭제"
+title: "XML 인덱스 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- dropping indexes
+- XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1508a40b460939fc1aa4ddfa8271d28a10958bb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 인덱스 삭제
+# <a name="drop-xml-indexes"></a>XML 인덱스 삭제
   [DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 기존 기본 또는 보조 XML 인덱스 및 비 XML 인덱스를 삭제할 수 있습니다. 그러나 DROP INDEX의 옵션은 XML 인덱스에 적용되지 않습니다. 기본 XML 인덱스를 삭제하려면 존재하는 보조 인덱스도 모두 삭제됩니다.  
   
  *TableName.IndexName* 이 있는 DROP 구문은 단계적으로 제거하며 XML 인덱스에 대해서는 지원되지 않습니다.  
   
-## 예제: 기본 XML 인덱스 만들기 및 삭제  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>예제: 기본 XML 인덱스 만들기 및 삭제  
  다음 예에서는 XML 인덱스가 **xml** 유형 열에 생성됩니다.  
   
 ```  
@@ -67,8 +71,8 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## 예제: DROP_EXISTING 인덱스 옵션을 사용하여 XML 인덱스 만들기  
- 다음 예에서는 XML 인덱스가 `XmlColx` 열에 생성됩니다. 그런 다음 같은 이름으로 된 다른 XML 인덱스가 다른 열 `XmlColy`에 생성됩니다. `DROP_EXISTING` 옵션이 지정되어 있으므로 (`XmlColx)`)의 기존 XML 인덱스가 삭제되고 (`XmlColy`)의 새 XML 인덱스가 생성됩니다.  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>예제: DROP_EXISTING 인덱스 옵션을 사용하여 XML 인덱스 만들기  
+ 다음 예에서는 XML 인덱스가`XmlColx`열에 생성됩니다. 그런 다음 같은 이름으로 된 다른 XML 인덱스가 다른 열`XmlColy`에 생성됩니다. `DROP_EXISTING` 옵션이 지정되어 있으므로 (`XmlColx)` )의 기존 XML 인덱스가 삭제되고 (`XmlColy`)의 새 XML 인덱스가 생성됩니다.  
   
 ```  
 DROP TABLE T  
@@ -95,7 +99,7 @@ AND    si.object_id=object_id('T')
   
  이 쿼리에서는 지정된 XML 인덱스가 생성된 열 이름을 반환합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

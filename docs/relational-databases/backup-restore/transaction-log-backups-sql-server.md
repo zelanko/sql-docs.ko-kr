@@ -1,27 +1,31 @@
 ---
-title: "트랜잭션 로그 백업(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "백업 [SQL Server], 트랜잭션 로그"
-  - "트랜잭션 로그 백업 [SQL Server], 만들기"
-  - "로그 백업 [SQL Server]"
-  - "트랜잭션 로그 백업 [SQL Server], 시퀀싱"
+title: "트랜잭션 로그 백업(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up [SQL Server], transaction logs
+- transaction log backups [SQL Server], creating
+- log backups [SQL Server[
+- transaction log backups [SQL Server], sequencing
 ms.assetid: f4a44a35-0f44-4a42-91d5-d73ac658a3b0
 caps.latest.revision: 52
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b7bad833291d3ad6b61cb4fac99334284404b97f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 트랜잭션 로그 백업(SQL Server)
+# <a name="transaction-log-backups-sql-server"></a>트랜잭션 로그 백업(SQL Server)
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
   
  로그 백업을 만들려면 최소한 하나의 전체 백업을 만들어야 합니다. 그렇게 해야 로그가 백업 중일 때를 제외하고 언제든지 트랜잭션 로그를 백업할 수 있습니다. 
@@ -33,7 +37,7 @@ caps.handback.revision: 52
 ##  <a name="LogBackupSequence"></a> 로그 백업 시퀀스의 작동 방법  
  트랜잭션 로그 백업 *로그 체인* 시퀀스는 데이터 백업과 독립되어 있습니다. 예를 들어 이벤트가 다음과 같은 순서로 발생한다고 가정합니다.  
   
-| Time |이벤트|  
+|Time|이벤트|  
 |----------|-----------|  
 |8:00 A.M.|데이터베이스를 백업합니다.|  
 |정오|트랜잭션 로그를 백업합니다.|  
@@ -47,9 +51,9 @@ caps.handback.revision: 52
   
 -   트랜잭션 로그가 손상되면 최근의 유효 백업 이후에 수행한 작업이 손실됩니다. 따라서 내결함성이 있는 저장소에 로그 파일을 보관하는 것이 좋습니다.  
   
--   데이터베이스가 손상되었거나 데이터베이스를 복원하려는 경우에는 데이터베이스를 현재의 지정 시간으로 복원할 수 있도록 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 만드는 것이 좋습니다.  
+-   데이터베이스가 손상되었거나 데이터베이스를 복원하려는 경우에는 데이터베이스를 현재의 지정 시간으로 복원할 수 있도록 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 을 만드는 것이 좋습니다.  
   
--   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)를 참조하세요.  
+-   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **트랜잭션 로그 백업을 만들려면**  
@@ -61,10 +65,11 @@ caps.handback.revision: 52
  백업 작업을 예약하려면 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)을 참조하세요.  
   
 
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [비상 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   
+

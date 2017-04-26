@@ -1,36 +1,40 @@
 ---
-title: "데이터 대량 가져오기 중 ID 값 유지(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ID 값 [SQL Server], 대량 가져오기"
-  - "데이터 형식 [SQL Server], ID 값"
-  - "대량 가져오기 [SQL Server], ID 값"
+title: "데이터 대량 가져오기 중 ID 값 유지(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 09/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- identity values [SQL Server], bulk imports
+- data formats [SQL Server], identity values
+- bulk importing [SQL Server], identity values
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 대량 가져오기 중 ID 값 유지(SQL Server)
+# <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)
 ID 값이 들어 있는 데이터 파일을 Microsoft SQL Server 인스턴스로 대량으로 가져올 수 있습니다.  기본적으로 가져온 데이터 파일의 ID 열 값은 무시되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 자동으로 고유 값을 할당합니다.  고유 값은 테이블 작성 중에 지정된 초기 및 증분 값을 기준으로 합니다.
 
-데이터 파일에 테이블의 ID 열에 대한 값이 없으면 서식 파일을 사용하여 데이터를 가져올 때 테이블의 ID 열을 건너뛰어야 함을 지정할 수 있습니다.  자세한 내용은 [서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)를 참조하세요.
+데이터 파일에 테이블의 ID 열에 대한 값이 없으면 서식 파일을 사용하여 데이터를 가져올 때 테이블의 ID 열을 건너뛰어야 함을 지정할 수 있습니다.  자세한 내용은 [서식 파일을 사용하여 테이블 열 건너뛰기(SQL Server)](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md) 를 참조하세요.
 
 |윤곽선|
 |---|
 |[ID 값 유지](#keep_identity)<br />[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)<br />[예](#examples)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 사용 및 ID 값 유지](#bcp_identity)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 사용 및 ID 값 유지](#bcp_identity_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 bcp 및 생성된 ID 값 사용](#bcp_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 bcp 및 생성된 ID 값 사용](#bcp_default_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 사용 및 ID 값 유지](#bulk_identity)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 사용 및 ID 값 유지](#bulk_identity_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 생성된 ID 값 사용](#bulk_default)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 BULK INSERT 및 생성된 ID 값 사용](#bulk_default_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET 사용 및 ID 값 유지](#openrowset_identity_fmt)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일과 함께 OPENROWSET 및 생성된 ID 값 사용](#openrowset_default_fmt)<br /><p>                                                                                                                                                                                                                  </p>|
 
 ## ID 값 유지 <a name="keep_identity"></a>  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 ID 값을 할당하지 않으면서 테이블에 데이터 행을 대량으로 가져오려면 적절한 ID 유지 명령 한정자를 사용합니다.  ID 유지 한정자를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 데이터 파일의 ID 값을 사용합니다.  이러한 한정자는 다음과 같습니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 ID 값을 할당하지 않으면서 테이블에 데이터 행을 대량으로 가져오려면 적절한 ID 유지 명령 한정자를 사용합니다.  ID 유지 한정자를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 데이터 파일의 ID 값을 사용합니다.  이러한 한정자는 다음과 같습니다.
 
 |Command|ID 유지 한정자|한정자 유형|  
 |-------------|------------------------------|--------------------|  
@@ -38,7 +42,7 @@ ID 값이 들어 있는 데이터 파일을 Microsoft SQL Server 인스턴스로
 |BULK INSERT|KEEPIDENTITY|인수|  
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|KEEPIDENTITY|테이블 힌트|  
    
- 자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) 및 [테이블 힌트&#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)를 참조하세요.  
+ 자세한 내용은 [bcp 유틸리티](../../tools/bcp-utility.md), [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md), [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md), [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md), [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md) 및 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
 
 > [!NOTE]
 >  여러 테이블에서 사용할 수 있거나 테이블을 참조하지 않고 응용 프로그램에서 호출할 수 있는 자동으로 증가하는 번호를 만들려면 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.
@@ -46,8 +50,8 @@ ID 값이 들어 있는 데이터 파일을 Microsoft SQL Server 인스턴스로
 ## 예제 테스트 조건<a name="etc"></a>  
 이 항목의 예제는 아래에 정의된 테이블, 데이터 파일 및 서식 파일을 기반으로 합니다.
 
-### **예제 테이블**<a name="sample_table"></a>
-아래 스크립트에서는 테스트 데이터베이스와 `myIdentity`라는 테이블을 만듭니다.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+### **샘플 테이블**<a name="sample_table"></a>
+아래 스크립트에서는 테스트 데이터베이스와 `myIdentity`라는 테이블을 만듭니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -61,8 +65,8 @@ CREATE TABLE dbo.myIdentity (
    );
 ```
  
-### **예제 데이터 파일**<a name="sample_data_file"></a>
-메모장을 사용하여 빈 파일 `D:\BCP\myIdentity.bcp`를 만들고 아래 데이터를 삽입합니다.  
+### **샘플 데이터 파일**<a name="sample_data_file"></a>
+메모장을 사용하여 빈 파일 `D:\BCP\myIdentity.bcp` 를 만들고 아래 데이터를 삽입합니다.  
 ```
 3,Anthony,Grosse,1980-02-23
 2,Alica,Fatnowna,1963-11-14
@@ -100,7 +104,7 @@ Invoke-Item $bcpFile;
 ```
 
 ### **샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
-SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md)를 사용하여 `myIdentity`의 스키마를 기반으로 비 xml 서식 파일 `myIdentity.fmt`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul**을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c**는 문자 데이터를 지정하는 데 사용되고, **t,**는 쉼표를 [필드 종결자](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)로 지정하는 데 사용되며, **T**는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
+SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myIdentity.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myIdentity`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고, **t,** 는 쉼표를 [필드 종결자](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)로 지정하는 데 사용되며, **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
   
 ```
 bcp TestDatabase.dbo.myIdentity format nul -c -f D:\BCP\myIdentity.fmt -t, -T
@@ -131,7 +135,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
 
-### **[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [bcp](../../tools/bcp-utility.md) 사용 및 ID 값 유지**<a name="bcp_identity_fmt"></a>
+### **Using [bcp](../../tools/bcp-utility.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_identity_fmt"></a>
 **-E** 및 **-f** 스위치.  명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 REM Truncate table (for testing)
@@ -157,7 +161,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
-### **[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [bcp](../../tools/bcp-utility.md) 및 생성된 ID 값 사용**<a name="bcp_default_fmt"></a>
+### **Using [bcp](../../tools/bcp-utility.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
 기본값 및 **-f** 스위치 사용.  명령 프롬프트에서 다음 명령을 입력합니다.
 ```
 REM Truncate table (for testing)
@@ -171,7 +175,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myIdentity;"
 ```
   
 ### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 사용 및 ID 값 유지**<a name="bulk_identity"></a>
-**KEEPIDENTITY** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+**KEEPIDENTITY** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 USE TestDatabase;
 GO
@@ -189,8 +193,8 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 사용 및 ID 값 유지**<a name="bulk_identity_fmt"></a>
-**KEEPIDENTITY** 및 **FORMATFILE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_identity_fmt"></a>
+**KEEPIDENTITY** 및 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 USE TestDatabase;
 GO
@@ -208,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
 ### **서식 파일 없이 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 생성된 ID 값 사용**<a name="bulk_default"></a>
-기본값 사용.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+기본값 사용.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 USE TestDatabase;
 GO
@@ -225,8 +229,8 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 생성된 ID 값 사용**<a name="bulk_default_fmt"></a>
-기본값 및 **FORMATFILE** 인수 사용.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+### **Using [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
+기본값 및 **FORMATFILE** 인수 사용.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 USE TestDatabase;
 GO
@@ -242,8 +246,8 @@ BULK INSERT dbo.myIdentity
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
   
-### **[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 사용 및 ID 값 유지**<a name="openrowset_identity_fmt"></a>
-**KEEPIDENTITY** 테이블 힌트 및 **FORMATFILE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Keeping Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_identity_fmt"></a>
+**KEEPIDENTITY** 테이블 힌트 및 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 USE TestDatabase;
 GO
@@ -262,8 +266,8 @@ WITH (KEEPIDENTITY)
 SELECT * FROM TestDatabase.dbo.myIdentity;
 ```
  
-### **[비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)과 함께 [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 생성된 ID 값 사용**<a name="openrowset_default_fmt"></a>
-기본값 및 **FORMATFILE** 인수 사용.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+### **Using [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) and Generated Identity Values with a [Non-XML Format File](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset_default_fmt"></a>
+기본값 및 **FORMATFILE** 인수 사용.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 USE TestDatabase;
 GO
@@ -305,9 +309,9 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 -   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [네이티브 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -319,11 +323,12 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
 3.  [bcp를 사용하여 파일 저장 유형 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
- [테이블 힌트&#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)  
+ [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)  
 [데이터를 가져오거나 내보내기 위한 서식 파일(SQL Server)](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)  
   
+

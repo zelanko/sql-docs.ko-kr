@@ -1,24 +1,28 @@
 ---
-title: "게시자 정보, 에이전트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.commonjobs.f1"
+title: "게시자 정보, 에이전트 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.commonjobs.f1
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78e8493ca92ce2877d5fb6cb29fa46c6287dd56a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 게시자 정보, 에이전트
+# <a name="publisher-information-agents"></a>게시자 정보, 에이전트
   **에이전트** 탭에는 게시자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
   
 -   스냅숏 에이전트 - 모든 게시에 대해 표시됩니다.  
@@ -41,10 +45,10 @@ caps.handback.revision: 26
   
     -   만료된 구독 정리  
   
- 이러한 작업에 대 한 자세한 내용은 참조 [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)합니다.  
+ 이러한 작업에 대한 자세한 내용은 [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)를 참조하세요.  
   
-## 옵션  
- 에이전트 또는 작업에 대 한 정보를 표시 하려면에서 선택 된 **Agent and Job Types** 드롭다운 메뉴. 자세한 내용 및 에이전트 또는 작업과 관련된 태스크를 보려면 해당 에이전트 또는 작업에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
+## <a name="options"></a>옵션  
+ 에이전트 또는 작업에 대한 정보를 표시하려면 **Agent and Job Types** 드롭다운 메뉴에서 해당 정보를 선택합니다. 자세한 내용 및 에이전트 또는 작업과 관련된 태스크를 보려면 해당 에이전트 또는 작업에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
 -   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 정렬합니다.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 26
   
  다음 섹션에서는 이 탭에서 각 에이전트 또는 작업에 대해 표시되는 데이터를 설명합니다.  
   
-### 스냅숏 에이전트  
+### <a name="snapshot-agent"></a>스냅숏 에이전트  
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
@@ -85,13 +89,13 @@ caps.handback.revision: 26
  **배달 속도**  
  가장 최근에 에이전트를 실행할 때 배포 데이터베이스에서 초기화 명령이 커밋된 속도(초당 명령 수)입니다.  
   
- **#트랜잭션**  
+ **#Trans**  
  가장 최근에 에이전트를 실행할 때 배포 데이터베이스에서 커밋된 트랜잭션의 수입니다.  
   
  **#Cmds**  
  가장 최근에 에이전트를 실행할 때 배포 데이터베이스에서 커밋된 명령의 수입니다. 명령은 업데이트와 같은 데이터 변경에 해당합니다.  
   
-### 로그 판독기 에이전트  
+### <a name="log-reader-agent"></a>로그 판독기 에이전트  
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
@@ -121,16 +125,16 @@ caps.handback.revision: 26
  **대기 시간**  
  게시 데이터베이스에서 가장 최근의 변경 내용이 커밋된 후 배포 데이터베이스에서 해당 명령이 커밋될 때까지 경과된 시간(초)입니다.  
   
- **#트랜잭션**  
+ **#Trans**  
  가장 최근에 에이전트를 실행할 때 배포 데이터베이스에서 커밋된 트랜잭션의 수입니다.  
   
  **#Cmds**  
  가장 최근에 에이전트를 실행할 때 배포 데이터베이스에서 커밋된 명령의 수입니다. 명령은 업데이트와 같은 데이터 변경에 해당합니다.  
   
- **Avg. #Cmds**  
+ **평균 명령 수**  
  가장 최근에 에이전트를 실행할 때의 트랜잭션당 평균 명령 수입니다.  
   
-### 큐 판독기 에이전트  
+### <a name="queue-reader-agent"></a>큐 판독기 에이전트  
  **상태**  
  에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
@@ -160,16 +164,16 @@ caps.handback.revision: 26
  **대기 시간**  
  구독 데이터베이스에서 가장 최근의 변경 내용이 커밋된 후 게시 데이터베이스에서 해당 명령이 커밋될 때까지 경과된 시간(초)입니다.  
   
- **#트랜잭션**  
+ **#Trans**  
  가장 최근에 에이전트를 실행할 때 게시 데이터베이스에서 커밋된 트랜잭션의 수입니다.  
   
  **#Cmds**  
  가장 최근에 에이전트를 실행할 때 게시 데이터베이스에서 커밋된 명령의 수입니다. 명령은 업데이트와 같은 데이터 변경에 해당합니다.  
   
- **Avg. #Cmds**  
+ **평균 명령 수**  
  가장 최근에 에이전트를 실행할 때의 트랜잭션당 평균 명령 수입니다.  
   
-### 유리 관리 작업  
+### <a name="maintenance-jobs"></a>유리 관리 작업  
  **상태**  
  각 작업의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
@@ -193,10 +197,10 @@ caps.handback.revision: 26
  **마지막 동작**  
  가장 최근의 작업 실행에서 수행된 마지막 동작입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [정보 보기 및 게시자 및 #40;에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
- [정보 보기 및 게시 & #40;와 관련 된 에이전트에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)   
+ [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

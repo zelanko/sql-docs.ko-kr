@@ -1,34 +1,38 @@
 ---
-title: "온라인 인덱스 작동 방식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "온라인 인덱스 작업"
-  - "원본 인덱스 [SQL Server]"
-  - "기존 인덱스 [SQL Server]"
-  - "대상 인덱스 [SQL Server]"
-  - "임시 매핑 인덱스 [SQL Server]"
-  - "인덱스 임시 매핑 [SQL Server]"
+title: "온라인 인덱스 작동 방식 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online index operations
+- source indexes [SQL Server]
+- preexisting indexes [SQL Server]
+- target indexes [SQL Server]
+- temporary mapping index [SQL Server]
+- index temporary mappings [SQL Server]
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 838a02643b47162d767e8f3b4191e5e3796adf57
+ms.lasthandoff: 04/11/2017
+
 ---
-# 온라인 인덱스 작동 방식
+# <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 온라인 인덱스 작업 중에 존재하는 구조에 대해 설명하고 이러한 구조와 관련된 작업을 보여 줍니다.  
   
-## 온라인 인덱스 구조  
+## <a name="online-index-structures"></a>온라인 인덱스 구조  
  인덱스 DDL(데이터 정의 언어) 작업 중에 동시 사용자 작업이 가능하도록 하려면 온라인 인덱스 작업 중에 원본 및 기존 인덱스, 대상 및 임시 매핑 인덱스(힙을 다시 작성하거나 클러스터형 인덱스를 온라인으로 삭제하는 경우) 구조를 사용합니다.  
   
 -   **원본 및 기존 인덱스**  
@@ -39,7 +43,7 @@ caps.handback.revision: 28
   
 -   **대상**  
   
-     대상은 만들거나 다시 작성하는 새 인덱스(또는 힙)이거나 새 인덱스 집합입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 인덱스 작업을 수행하는 동안 원본에 대한 사용자 삽입, 업데이트 및 삭제 작업을 대상에 적용합니다. 예를 들어 온라인 인덱스 작업이 클러스터형 인덱스를 다시 작성하는 것이라면 대상은 다시 작성되는 클러스터형 인덱스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 클러스터형 인덱스를 다시 작성할 때 비클러스터형 인덱스를 다시 작성하지 않습니다.  
+     대상은 만들거나 다시 작성하는 새 인덱스(또는 힙)이거나 새 인덱스 집합입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 인덱스 작업을 수행하는 동안 원본에 대한 사용자 삽입, 업데이트 및 삭제 작업을 대상에 적용합니다. 예를 들어 온라인 인덱스 작업이 클러스터형 인덱스를 다시 작성하는 것이라면 대상은 다시 작성되는 클러스터형 인덱스입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 클러스터형 인덱스를 다시 작성할 때 비클러스터형 인덱스를 다시 작성하지 않습니다.  
   
      대상 인덱스는 인덱스 작업이 커밋될 때까지 SELECT 문을 처리하는 동안 검색되지 않습니다. 내부적으로 인덱스가 쓰기 전용으로 표시됩니다.  
   
@@ -47,14 +51,14 @@ caps.handback.revision: 28
   
      클러스터형 인덱스를 만들거나 삭제하거나 다시 작성하는 온라인 인덱스 작업에는 임시 매핑 인덱스도 필요합니다. 이러한 임시 인덱스는 동시 트랜잭션이 기본 테이블의 행이 업데이트되거나 삭제될 때 작성되는 새 인덱스에서 삭제할 레코드를 결정하는 데 사용합니다. 이러한 비클러스터형 인덱스는 새 클러스터형 인덱스(또는 힙)와 같은 단계에서 만들어지므로 별도의 정렬 작업이 필요 없습니다. 동시 트랜잭션의 모든 삽입, 업데이트 및 삭제 작업에서도 임시 매핑 인덱스가 유지됩니다.  
   
-## 온라인 인덱스 작업  
+## <a name="online-index-activities"></a>온라인 인덱스 작업  
  비클러스터형 테이블(힙)에서 클러스터형 인덱스를 만드는 것과 같은 단순 온라인 인덱스 작업 중에는 원본 및 대상이 준비, 작성, 최종의 세 단계를 거치게 됩니다.  
   
  다음 그림에서는 온라인 상태에서 초기 클러스터형 인덱스를 만드는 과정을 보여 줍니다. 원본 개체(힙)에는 다른 인덱스가 없습니다. 그림에는 원본 및 대상 구조와 관련된 각 단계의 작업과 동시 사용자 선택, 삽입, 업데이트 및 삭제 작업이 표시되어 있습니다. 준비, 작성 및 최종 단계는 각 단계에 사용되는 잠금 모드와 함께 표시됩니다.  
   
- ![온라인 인덱스 작업 중 수행되는 활동](../../relational-databases/indexes/media/online-index.gif "온라인 인덱스 작업 중 수행되는 활동")  
+ ![온라인 인덱스 작업 중 수행되는 활동](../../relational-databases/indexes/media/online-index.gif "Activities performed during online index operation")  
   
-## 원본 구조 작업  
+## <a name="source-structure-activities"></a>원본 구조 작업  
  다음 표에서는 인덱스 작업의 각 단계에서 원본 구조와 관련된 작업과 해당 잠금 전략에 대해 설명합니다.  
   
 |단계|원본 작업|원본 잠금|  
@@ -69,7 +73,7 @@ caps.handback.revision: 28
   
  위의 표에서는 단일 인덱스를 포함하는 온라인 인덱스 작업의 작성 단계 중에 획득되는 단일 공유(S) 잠금을 보여 줍니다. 하나 이상의 비클러스터형 인덱스를 포함하는 테이블에 대한 초기 클러스터형 인덱스를 만드는 경우와 같이 클러스터형 인덱스와 비클러스터형 인덱스를 작성하거나 다시 작성하는 경우에는 먼저 단기 S 잠금 두 개가 획득된 후 장기 IS(내재된 공유) 잠금이 획득됩니다. 먼저 클러스터형 인덱스 작성에 대한 S 잠금을 획득하고 클러스터형 인덱스 작성이 완료되면 비클러스터형 인덱스 작성을 위한 두 번째 단기 S 잠금을 획득합니다. 비클러스터형 인덱스가 작성된 후 온라인 인덱스 작업의 최종 단계까지 S 잠금이 IS 잠금으로 다운그레이드됩니다.  
   
-### 대상 구조 작업  
+### <a name="target-structure-activities"></a>대상 구조 작업  
  다음 표에서는 인덱스 작업의 각 단계에서 대상 구조와 관련된 작업과 해당 잠금 전략에 대해 설명합니다.  
   
 |단계|대상 작업|대상 잠금|  
@@ -84,9 +88,10 @@ caps.handback.revision: 28
   
  온라인 인덱스 작업과 관련된 테이블에 선언되어 있는 커서의 수명은 온라인 인덱스 단계로 제한됩니다. 각 단계에서 업데이트 커서가 무효화됩니다. 읽기 전용 커서는 최종 단계 이후에만 무효화됩니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)  
   
  [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)  
   
   
+

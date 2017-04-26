@@ -1,29 +1,33 @@
 ---
-title: "1단원: 트랜잭션 복제를 사용하여 데이터 게시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "복제 [SQL Server], 자습서"
+title: "1단원: 트랜잭션 복제를 사용하여 데이터 게시 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- replication [SQL Server], tutorials
 ms.assetid: 9c55aa3c-4664-41fc-943f-e817c31aad5e
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 021ff6838de18ea03a50aae661d543061088ae87
+ms.lasthandoff: 04/11/2017
+
 ---
-# 1단원: 트랜잭션 복제를 사용하여 데이터 게시
-이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 트랜잭션 게시를 만들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 샘플 데이터베이스에 **Product** 테이블의 필터링된 하위 집합을 게시합니다. 또한 배포 에이전트에 사용된 SQL Server 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 시작하려면 이전 자습서인 [복제용 서버 준비](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
+# <a name="lesson-1-publishing-data-using-transactional-replication"></a>1단원: 트랜잭션 복제를 사용하여 데이터 게시
+이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 트랜잭션 게시를 만들어 **샘플 데이터베이스에** Product [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 테이블의 필터링된 하위 집합을 게시합니다. 또한 배포 에이전트에 사용된 SQL Server 로그인을 PAL(게시 액세스 목록)에 추가합니다. 이 자습서를 시작하려면 이전 자습서인 [복제용 서버 준비](../../relational-databases/replication/tutorial-preparing-the-server-for-replication.md)를 완료해야 합니다.  
   
-### 게시를 만들고 아티클을 정의하려면  
+### <a name="to-create-a-publication-and-define-articles"></a>게시를 만들고 아티클을 정의하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 14
   
 4.  게시 유형 페이지에서 **트랜잭션 게시**를 선택하고 **다음**을 클릭합니다.  
   
-5.  아티클 페이지에서 **테이블** 노드를 확장하고 **Product** 확인란을 선택한 다음 **Product**를 확장하고 **ListPrice** 및 **StandardCost** 확인란의 선택을 취소합니다. **다음**을 클릭합니다.  
+5.  아티클 페이지에서 **테이블** 노드를 확장하고 **Product** 확인란을 선택한 다음 **Product** 를 확장하고 **ListPrice** 및 **StandardCost** 확인란의 선택을 취소합니다. **다음**을 클릭합니다.  
   
 6.  테이블 행 필터 페이지에서 **추가**를 클릭합니다.  
   
@@ -55,11 +59,11 @@ caps.handback.revision: 14
   
 12. 이전 단계를 반복하여 repl_logreader를 로그 판독기 에이전트에 대한 프로세스 계정으로 설정한 다음 **마침**을 클릭합니다.  
   
-13. 마법사 완료 페이지에서 **게시 이름** 상자에 **AdvWorksProductTrans**를 입력하고 **마침**을 클릭합니다.  
+13. 마법사 완료 페이지에서 **게시 이름** 상자에 **AdvWorksProductTrans** 를 입력하고 **마침**을 클릭합니다.  
   
-14. 게시를 만든 후 **닫기**를 클릭하여 마법사를 완료합니다.  
+14. 게시를 만든 후 **닫기** 를 클릭하여 마법사를 완료합니다.  
   
-### 스냅숏 생성의 상태를 보려면  
+### <a name="to-view-the-status-of-snapshot-generation"></a>스냅숏 생성의 상태를 보려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음 **복제** 폴더를 확장합니다.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 14
   
 3.  게시에 대한 스냅숏 에이전트 작업의 현재 상태가 표시됩니다. 다음 단원을 진행하기 전에 스냅숏 작업이 성공했는지 확인합니다.  
   
-### PAL에 배포 에이전트 로그인을 추가하려면  
+### <a name="to-add-the-distribution-agent-login-to-the-pal"></a>PAL에 배포 에이전트 로그인을 추가하려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음 **복제** 폴더를 확장합니다.  
   
@@ -79,13 +83,14 @@ caps.handback.revision: 14
   
 4.  **게시 액세스 추가** 대화 상자에서 *<Machine_Name>***\repl_distribution**을 선택한 다음 **확인**을 클릭합니다. **확인**을 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
 트랜잭션 게시를 성공적으로 만들었습니다. 다음 단원에서는 이 게시를 구독합니다. [2단원: 트랜잭션 게시에 구독 만들기](../../relational-databases/replication/lesson-2-creating-a-subscription-to-the-transactional-publication.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
 [게시된 데이터 필터링](../../relational-databases/replication/publish/filter-published-data.md)  
 [아티클 정의](../../relational-databases/replication/publish/define-an-article.md)  
 [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-snapshot.md)  
   
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "인덱스 작업에 필요한 트랜잭션 로그 디스크 공간 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 디스크 공간 [SQL Server]"
-  - "공간 [SQL Server], 인덱스"
-  - "트랜잭션 로그 [SQL Server], 디스크 공간"
-  - "디스크 공간 [SQL Server], 트랜잭션 로그"
-  - "공간 [SQL Server], 트랜잭션 로그"
+title: "인덱스 작업에 필요한 트랜잭션 로그 디스크 공간 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- transaction logs [SQL Server], disk space
+- disk space [SQL Server], transaction logs
+- space [SQL Server], transaction logs
 ms.assetid: 4f8a4922-4507-4072-be67-c690528d5c3b
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 작업에 필요한 트랜잭션 로그 디스크 공간
+# <a name="transaction-log-disk-space-for-index-operations"></a>인덱스 작업에 필요한 트랜잭션 로그 디스크 공간
   대량 인덱스 작업은 트랜잭션 로그를 빠르게 채울 수 있는 대량의 데이터 로드를 생성할 수 있습니다. 트랜잭션 로그는 인덱스 작업의 롤백을 보장하기 위해 인덱스 작업이 완료된 이후에만 잘릴 수 있지만 트랜잭션 로그 백업은 인덱스 작업 중에도 수행할 수 있습니다. 따라서 인덱스 작업 중에는 인덱스 작업 트랜잭션 및 모든 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 트랜잭션 로그 공간이 필요합니다. 이것은 오프라인 인덱스 작업과 온라인 인덱스 작업 모두에 해당합니다. 오프라인 인덱스 작업 중에는 기본 테이블에 액세스할 수 없기 때문에 사용자 트랜잭션이 거의 없고 로그가 빠르게 증가하지 않을 수 있습니다. 온라인 인덱스 작업에서는 동시 사용자 작업이 제한되지 않습니다. 따라서 대량의 온라인 인덱스 작업과 대량의 동시 사용자 트랜잭션이 결합하는 경우에는 자를 수 없을 만큼 지속적으로 트랜잭션 로그가 증가할 수 있습니다.  
   
-## 권장 사항  
+## <a name="recommendations"></a>권장 사항  
  대량 인덱스 작업을 실행할 때는 다음 권장 사항을 고려하십시오.  
   
 1.  온라인으로 대량 인덱스 작업을 실행하기 전에 트랜잭션 로그를 백업하고 잘랐는지 확인하고 예상되는 인덱스 및 사용자 트랜잭션을 저장할 트랜잭션 로그 공간이 충분한지 확인합니다.  
@@ -39,7 +43,7 @@ caps.handback.revision: 17
   
 4.  온라인 인덱스 작업은 명시적 트랜잭션으로 실행하면 안 됩니다. 로그는 명시적 트랜잭션이 종료된 이후에만 잘립니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [인덱스 DDL 작업의 디스크 공간 요구 사항](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)  
   
  [인덱스 디스크 공간 예](../../relational-databases/indexes/index-disk-space-example.md)  

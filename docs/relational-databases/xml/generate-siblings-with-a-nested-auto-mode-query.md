@@ -1,28 +1,32 @@
 ---
-title: "중첩 AUTO 모드 쿼리를 사용하여 형제 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼리 [SQL Server의 XML], 중첩된 AUTO 모드"
-  - "중첩 AUTO 모드 쿼리"
+title: "중첩 AUTO 모드 쿼리를 사용하여 형제 생성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [XML in SQL Server], nested AUTO mode
+- nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
+ms.lasthandoff: 04/11/2017
+
 ---
-# 중첩 AUTO 모드 쿼리를 사용하여 형제 생성
+# <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
   다음 예에서는 중첩된 AUTO 모드 쿼리를 사용하여 형제를 생성하는 방법을 보여 줍니다. 이러한 XML을 생성하는 다른 방법은 EXPLICIT 모드를 사용하는 것 뿐입니다. 하지만 이 방법은 복잡할 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  이 쿼리는 판매 주문 정보를 제공하는 XML을 생성합니다. 여기에는 다음이 포함됩니다.  
   
 -   판매 주문 헤더 정보, `SalesOrderID`, `SalesPersonID`및 `OrderDate`가 포함됩니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 에서는 이 정보를 `SalesOrderHeader` 테이블에 저장합니다.  
@@ -67,11 +71,11 @@ FOR XML AUTO, TYPE
   
 -   `AUTO` 모드 및 `TYPE` 지시어를 지정합니다. `AUTO` 모드는 쿼리 결과를 XML로 변환하고 `TYPE` 지시어는 결과를 **xml** 유형으로 반환합니다.  
   
--   쉼표로 구분된 두 개의 중첩된 `SELECT` 문을 포함합니다. 첫 번째 중첩된 `SELECT`는 판매 주문 정보, 헤더 및 세부 정보를 검색하고 두 번째 중첩된 `SELECT` 문은 판매 직원 정보를 검색합니다.  
+-   쉼표로 구분된 두 개의 중첩된 `SELECT` 문을 포함합니다. 첫 번째 중첩된 `SELECT` 는 판매 주문 정보, 헤더 및 세부 정보를 검색하고 두 번째 중첩된 `SELECT` 문은 판매 직원 정보를 검색합니다.  
   
-    -   `SELECT`, `SalesOrderID` 및 `SalesPersonID`를 검색하는 `CustomerID` 문 자체에 판매 주문 세부 정보를 반환하는 다른 중첩된 `SELECT ... FOR XML` 문(`AUTO` 모드와 `TYPE` 지시어 사용)이 포함됩니다.  
+    -   `SELECT` , `SalesOrderID`및 `SalesPersonID`를 검색하는 `CustomerID` 문 자체에 판매 주문 세부 정보를 반환하는 다른 중첩된 `SELECT ... FOR XML` 문( `AUTO` 모드와 `TYPE` 지시어 사용)이 포함됩니다.  
   
- 판매 직원 정보를 검색하는 `SELECT` 문은 `SalesPerson` 절에서 생성된 `FROM` 행 집합을 쿼리합니다. `FOR XML` 쿼리가 작동하려면 `FROM` 절에서 생성된 익명 행 집합에 이름을 제공해야 합니다. 이 경우에 제공된 이름은 `SalesPerson`입니다.  
+ 판매 직원 정보를 검색하는 `SELECT` 문은 `SalesPerson`절에서 생성된 `FROM` 행 집합을 쿼리합니다. `FOR XML` 쿼리가 작동하려면 `FROM` 절에서 생성된 익명 행 집합에 이름을 제공해야 합니다. 이 경우에 제공된 이름은 `SalesPerson`입니다.  
   
  다음은 결과의 일부입니다.  
   
@@ -143,7 +147,7 @@ FOR XML AUTO, TYPE
   
 -   이전 쿼리가 `FROM` 절에 추가되었습니다. 쿼리 결과는 테이블로 반환됩니다. 추가된 `XmlCol` 별칭에 유의하십시오.  
   
--   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM`에 대해 XQuery를 지정합니다. **xml** 데이터 형식의 **query()** 메서드는 XQuery를 지정하는 데 사용됩니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)를 참조하세요.  
+-   `SELECT` 절은 `XmlCol` 절에 반환된 `FROM` 에 대해 XQuery를 지정합니다. **xml** 데이터 형식의 **query()** 메서드는 XQuery를 지정하는 데 사용됩니다. 자세한 내용은 [query&#40;&#41; 메서드&#40;xml 데이터 형식&#41;](../../t-sql/xml/query-method-xml-data-type.md)를 참조하세요.  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  
@@ -164,7 +168,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [중첩 FOR XML 쿼리 사용](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

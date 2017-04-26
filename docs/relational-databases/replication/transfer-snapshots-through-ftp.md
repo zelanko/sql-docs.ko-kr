@@ -1,26 +1,30 @@
 ---
-title: "FTP를 통해 스냅숏 전송 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스냅숏 [SQL Server 복제], FTP 스냅숏"
-  - "FTP 스냅숏 [SQL Server 복제]"
-  - "스냅숏 복제 [SQL Server], FTP"
+title: "FTP를 통해 스냅숏 전송 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server replication], FTP snapshots
+- FTP snapshots [SQL Server replication]
+- snapshot replication [SQL Server], FTP
 ms.assetid: 55c30791-cd2a-420b-8ba7-5700e005cb45
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c76a4c3b3ad80c46c16ba0c1c200a1a95f9c975
+ms.lasthandoff: 04/11/2017
+
 ---
-# FTP를 통해 스냅숏 전송
+# <a name="transfer-snapshots-through-ftp"></a>FTP를 통해 스냅숏 전송
   기본적으로 스냅숏은 UNC(Universal Naming Convention) 공유로 정의된 폴더에 저장됩니다. 복제 시 UNC 공유 대신 FTP(파일 전송 프로토콜) 공유를 지정할 수도 있습니다. FTP를 사용하려면 FTP 서버를 구성한 다음 FTP를 사용할 하나의 게시와 하나 이상의 구독을 구성합니다. FTP 서버 구성 방법은 인터넷 정보 서비스(IIS) 설명서를 참조하십시오. 게시에 FTP 정보를 지정하면 해당 게시에 대한 구독은 기본적으로 FTP를 사용합니다. FTP는 IIS를 실행하는 컴퓨터가 방화벽에 의해 배포자와 분리되어 있는 경우에만 웹 동기화에 사용됩니다. 이 경우 FTP는 IIS를 실행 중인 컴퓨터와 배포자의 스냅숏을 전송하는 데 사용할 수 있습니다. 스냅숏을 구독자에게 전송할 때는 항상 HTTPS를 사용합니다.  
   
 > [!IMPORTANT]  
@@ -28,9 +32,9 @@ caps.handback.revision: 40
   
  FTP를 통해 스냅숏을 배달하려면 [Deliver a Snapshot Through FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [병합 복제에 대한 웹 동기화](../../relational-databases/replication/web-synchronization-for-merge-replication.md)   
  [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [스냅숏 옵션](../../relational-databases/replication/snapshot-options.md)  
+ [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
   
   

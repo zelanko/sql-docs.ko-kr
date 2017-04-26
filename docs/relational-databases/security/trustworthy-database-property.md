@@ -1,24 +1,28 @@
 ---
-title: "TRUSTWORTHY 데이터베이스 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TRUSTWORTHY 데이터베이스 속성"
+title: "TRUSTWORTHY 데이터베이스 속성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TRUSTWORTHY database property
 ms.assetid: 64b2a53d-4416-4a19-acc0-664a61b45348
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b6ed457ecf38494c5fc333aad53969372764e2c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# TRUSTWORTHY 데이터베이스 속성
+# <a name="trustworthy-database-property"></a>TRUSTWORTHY 데이터베이스 속성
   TRUSTWORTHY 데이터베이스 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 데이터베이스 및 그 내용을 트러스트하는지 여부를 나타내는 데 사용됩니다. 기본적으로 이 설정은 OFF이지만 ALTER DATABASE 문을 사용하여 ON으로 설정할 수 있습니다. `ALTER DATABASE AdventureWorks2012 SET TRUSTWORTHY ON;`)을 입력합니다.  
   
 > [!NOTE]  
@@ -34,7 +38,7 @@ caps.handback.revision: 22
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 데이터베이스는 즉시 트러스트될 수 없으므로 데이터베이스가 명시적으로 신뢰할 수 있는 것으로 표시되지 않는 한 데이터베이스가 해당 범위를 벗어나는 리소스에 액세스할 수 없습니다. 또한 데이터베이스 외부의 리소스를 액세스하도록 디자인된 모듈과 EXTERNAL_ACCESS 또는 UNSAFE 권한이 설정된 어셈블리에는 성공적인 실행을 위한 추가 요구 사항이 있습니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  

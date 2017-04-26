@@ -1,34 +1,37 @@
 ---
-title: "자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 caps.latest.revision: 23
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4ae1e9aef727303d55c79463d822c4f62d3cdae0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob Storage 서비스 사용
 Microsoft Azure Blob Storage 서비스에서 SQL Server 2016 사용 자습서를 시작합니다. 이 자습서는 SQL Server 데이터 파일 및 SQL Server 백업에 Microsoft Azure Blob Storage 서비스를 사용하는 방법을 이해하는 데 도움이 됩니다.  
   
 Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL Server 2012 서비스 팩 1 CU2 향상된 기능으로 시작되었으며, SQL Server 2014 및 SQL Server 2016에서 더욱 개선되었습니다. 이 기능에 대한 개요 및 사용할 경우의 이점은 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. 라이브 데모는 [지정 시간 복원 데모](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)를 참조하세요.  
   
-||  
-|-|  
-|**다운로드**<br /><br />**>>**[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면 **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**로 이동하세요.<br /><br />**>>**Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016ctp3evaluationwindowsserver2012r2/?wt.mc_id=sqL16_vm)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 이 이미 설치된 가상 컴퓨터를 실행해 보세요.|  
   
-## 학습 내용  
+**다운로드**<br /><br />**>>**[!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면 **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**로 이동하세요.<br /><br />**>>**Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
+  
+## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 여러 단원을 통해 Microsoft Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 사용하는 방법을 보여 줍니다. 각 단원은 특정 작업을 중심으로 하며, 단원을 순서대로 완료해야 합니다. 먼저 저장된 액세스 정책과 공유 액세스 서명을 사용하여 Blob Storage에 새 컨테이너를 만드는 방법을 알아봅니다. 그런 다음 SQL Server 자격 증명을 만들어 Azure Blob Storage에 SQL Server를 통합하는 방법을 살펴봅니다. 데이터베이스를 Blob Storage에 백업하고 Azure 가상 컴퓨터에 복원합니다. SQL Server 2016 파일-스냅숏 트랜잭션 로그 백업을 사용하여 특정 시점 및 새 데이터베이스로 복원합니다. 최종적으로, 이 자습서에서는 파일-스냅숏 백업 이해와 작업에 도움이 되도록 메타데이터 시스템 저장 프로시저 및 함수를 사용하는 방법을 보여 줍니다.  
   
 이 문서에서는 다음을 가정합니다.  
@@ -62,19 +65,21 @@ Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL
 **[7단원: 데이터베이스를 특정 시점으로 복원](../relational-databases/lesson-7-restore-a-database-to-a-point-in-time.md)**  
 이 단원에서는 두 개의 파일-스냅숏 로그 백업을 사용하여 데이터베이스를 특정 시점으로 복원합니다.  
   
-**[8단원: 로그 백업에서 새 데이터베이스로 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)**  
+**[8단원. 로그 백업에서 새 데이터베이스로 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)**  
 이 단원에서는 파일-스냅숏 로그 백업에서 다른 가상 컴퓨터의 새 데이터베이스로 복원합니다.  
   
 **[9단원: 백업 세트 및 파일-스냅숏 백업 관리](../relational-databases/lesson-9-manage-backup-sets-and-file-snapshot-backups.md)**  
 이 단원에서는 불필요한 백업 세트를 삭제하고 분리된 파일 스냅숏 백업(있는 경우)을 삭제하는 방법을 알아봅니다.  
   
-## 이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
-어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page)으로 보내 주세요.  
+## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
+어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Tutorial:%20Using%20the%20Microsoft%20Azure%20Blob%20storage%20service%20with%20SQL%20Server%202016%20databases%20page)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [URL에 대한 SQL Server 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   
   
   
+
+

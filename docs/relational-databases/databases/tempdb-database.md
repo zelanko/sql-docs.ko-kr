@@ -1,27 +1,31 @@
 ---
-title: "tempdb 데이터베이스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "임시 테이블 [SQL Server], tempdb 데이터베이스"
-  - "tempdb 데이터베이스 [SQL Server], tempdb 정보"
-  - "임시 저장 프로시저 [SQL Server]"
-  - "tempdb 데이터베이스 [SQL Server]"
+title: "tempdb 데이터베이스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- temporary tables [SQL Server], tempdb database
+- tempdb database [SQL Server], about tempdb
+- temporary stored procedures [SQL Server]
+- tempdb database [SQL Server]
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 caps.latest.revision: 66
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 66
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 003196d8c30ca45c54750587c03c8d7d6e5a358d
+ms.lasthandoff: 04/11/2017
+
 ---
-# tempdb 데이터베이스
+# <a name="tempdb-database"></a>tempdb 데이터베이스
   **tempdb** 시스템 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결된 모든 사용자가 사용할 수 있는 전역 리소스로서 다음 항목을 보관하는 데 사용됩니다.  
   
 -   전역 또는 로컬 임시 테이블, 임시 저장 프로시저, 테이블 변수, 커서 등 명시적으로 생성된 임시 사용자 개체  
@@ -32,9 +36,9 @@ caps.handback.revision: 66
   
 -   온라인 인덱스 작업, MARS(Multiple Active Result Sets) 및 AFTER 트리거 같은 기능에 대한 데이터 수정 트랜잭션에서 생성된 행 버전  
   
- **tempdb** 내의 작업은 최소한으로 기록됩니다. 이렇게 하면 트랜잭션을 롤백할 수 있습니다. 시스템이 항상 깨끗한 데이터베이스 복사본으로 시작되도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 때마다 **tempdb**가 다시 생성됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에 있는 어떠한 내용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 세션에서 다른 세션으로 저장되지 않습니다. **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
+ **tempdb** 내의 작업은 최소한으로 기록됩니다. 이렇게 하면 트랜잭션을 롤백할 수 있습니다. 시스템이 항상 깨끗한 데이터베이스 복사본으로 시작되도록**를 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 생성됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에 있는 어떠한 내용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 세션에서 다른 세션으로 저장되지 않습니다. **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
   
-## tempdb의 물리적 속성  
+## <a name="physical-properties-of-tempdb"></a>tempdb의 물리적 속성  
  다음 표에는 **tempdb** 데이터 및 로그 파일의 초기 구성 값이 나열되어 있습니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
   
 |파일|논리적 이름|물리적 이름|처음 크기|파일 증가|  
@@ -46,7 +50,7 @@ caps.handback.revision: 66
  \* 파일의 수는 컴퓨터의 논리 코어 수에 따라 달라집니다. 값은 코어 수나 8 중에서 더 작은 값입니다.   
 데이터 파일 수의 기본값은 [KB 2154845](https://support.microsoft.com/en-us/kb/2154845/)의 일반 지침을 기준으로 합니다.  
   
-## tempdb의 성능 향상  
+## <a name="performance-improvements-in-tempdb"></a>tempdb의 성능 향상  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 방법으로 **tempdb** 의 성능이 향상됩니다.  
   
 -   임시 테이블과 테이블 변수를 캐시할 수 있습니다. 캐싱을 사용하면 임시 개체를 삭제하고 만드는 작업이 매우 신속하게 실행되며 페이지 할당 경합이 줄어듭니다.  
@@ -63,10 +67,10 @@ caps.handback.revision: 66
   
 -   주 파일 그룹의 경우 AUTOGROW_ALL_FILES 속성이 설정되며 속성을 수정할 수 없습니다.  
   
-### tempdb 데이터 및 로그 파일 이동  
+### <a name="moving-the-tempdb-data-and-log-files"></a>tempdb 데이터 및 로그 파일 이동  
  **tempdb** 데이터 및 로그 파일을 이동하려면 [시스템 데이터베이스 이동](../../relational-databases/databases/move-system-databases.md)을 참조하세요.  
   
-### 데이터베이스 옵션  
+### <a name="database-options"></a>데이터베이스 옵션  
  다음 표에는 **tempdb** 데이터베이스에 있는 각 데이터베이스 옵션의 기본값과 해당 옵션의 수정 가능 여부가 나열되어 있습니다. 이러한 옵션의 현재 설정을 보려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용하세요.  
   
 |데이터베이스 옵션|기본값|수정 가능|  
@@ -86,13 +90,13 @@ caps.handback.revision: 66
 |CONCAT_NULL_YIELDS_NULL|OFF|예|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|예|  
 |CURSOR_DEFAULT|GLOBAL|예|  
-|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니요<br /><br /> 아니요|  
+|데이터베이스 가용성 옵션|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|아니요<br /><br /> 아니오<br /><br /> 아니요|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|예|  
 |DB_CHAINING|ON|아니요|  
 |ENCRYPTION|OFF|아니요|  
 |MIXED_PAGE_ALLOCATION|OFF|아니요|  
 |NUMERIC_ROUNDABORT|OFF|예|  
-|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
+|PAGE_VERIFY|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]새 설치의 경우 CHECKSUM입니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]업그레이드의 경우 NONE입니다.|예|  
 |PARAMETERIZATION|SIMPLE|예|  
 |QUOTED_IDENTIFIER|OFF|예|  
 |READ_COMMITTED_SNAPSHOT|OFF|아니요|  
@@ -101,9 +105,9 @@ caps.handback.revision: 66
 |Service Broker 옵션|ENABLE_BROKER|예|  
 |TRUSTWORTHY|OFF|아니요|  
   
- 이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)을 참조하세요.  
+ 이러한 데이터베이스 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
-## 제한 사항  
+## <a name="restrictions"></a>제한 사항  
  다음 작업은 **tempdb** 데이터베이스에서 수행할 수 없습니다.  
   
 -   파일 그룹 추가  
@@ -136,10 +140,10 @@ caps.handback.revision: 66
   
 -   데이터베이스나 주 파일 그룹을 READ_ONLY로 설정  
   
-## 사용 권한  
+## <a name="permissions"></a>사용 권한  
  모든 사용자가 tempdb에 임시 개체를 만들 수 있습니다. 사용자가 추가 사용 권한을 받는 경우를 제외하고 자신의 고유 개체에만 액세스할 수 있습니다. tempdb 연결 권한을 취소하여 사용자가 tempdb를 사용하지 못하도록 할 수 있지만 일부 일상적인 작업에서 tempdb를 사용해야 하므로 권장하지 않습니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [인덱스에 대한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)  
   
  [시스템 데이터베이스](../../relational-databases/databases/system-databases.md)  
@@ -150,7 +154,8 @@ caps.handback.revision: 66
   
  [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2005에서의 tempdb 사용](http://go.microsoft.com/fwlink/?LinkId=81216)  
   
   
+

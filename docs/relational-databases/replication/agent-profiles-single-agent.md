@@ -1,29 +1,33 @@
 ---
-title: "에이전트 프로필(단일 에이전트) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.profiles.perfprofileagentname.f1"
-helpviewer_keywords: 
-  - "에이전트 프로필 대화 상자"
+title: "에이전트 프로필(단일 에이전트) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.profiles.perfprofileagentname.f1
+helpviewer_keywords:
+- Agent Profile dialog box
 ms.assetid: 22713555-c496-4ce1-8ec7-4ae75cfadca8
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16dd8b8f48927c74afc929f62e13339c23df9b05
+ms.lasthandoff: 04/11/2017
+
 ---
-# 에이전트 프로필(단일 에이전트)
+# <a name="agent-profiles-single-agent"></a>에이전트 프로필(단일 에이전트)
   **에이전트 프로필** 대화 상자를 사용하여 에이전트 프로필을 관리할 수 있습니다. 에이전트 프로필을 사용하면 각 에이전트의 런타임 매개 변수를 편리하게 관리할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 미리 정의된 프로필이 추가된 에이전트도 있습니다. 예를 들어 병합 에이전트에는 느린 대역폭 연결을 위한 "느린 연결" 프로필이 있습니다. 대부분의 응용 프로그램은 미리 정의된 프로필만으로 충분하지만 사용자 정의 프로필을 만들어 에이전트 동작을 사용자 지정할 수도 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **새 에이전트에 대한 기본값**  
  지정한 유형의 에이전트에 대해 작업을 만들 때 사용할 프로필을 선택합니다. 예를 들어 병합 게시에 대한 구독을 여러 개 만들 경우 각 구독의 병합 에이전트 작업은 선택한 프로필을 사용합니다. 기존 작업의 프로필을 변경하려면 프로필을 선택하고 **기존 에이전트 변경**을 클릭합니다.  
   
@@ -31,7 +35,7 @@ caps.handback.revision: 18
  프로필의 이름입니다.  
   
  **형식**  
- 프로필 유형: **사용자** (사용자 정의) 또는 **시스템** (미리 정의 됨).  
+ 프로필 유형: **사용자** (사용자 정의 프로필) 또는 **시스템** (미리 정의된 프로필)입니다.  
   
  **속성 (...)**  
  에이전트 프로필의 각 매개 변수에 사용된 값을 보려면 클릭합니다.  
@@ -40,12 +44,12 @@ caps.handback.revision: 18
  새 프로필을 만들려면 클릭합니다.  
   
  **Delete**  
- 사용자 정의 프로필을 선택 하 고 클릭 한 다음 **삭제** 해당 프로필을 삭제 합니다. 미리 정의된 프로필은 삭제할 수 없습니다.  
+ 사용자 정의 프로필을 선택하고 **삭제** 를 클릭하여 해당 프로필을 삭제합니다. 미리 정의된 프로필은 삭제할 수 없습니다.  
   
  **기존 에이전트 변경**  
- 프로필을 선택 하 고 클릭 한 다음 **기존 에이전트 변경** 에 지정 된 유형의 에이전트에 대 한 모든 기존 작업에서 선택한 프로필을 사용 하도록 지정 합니다. 예를 들어 병합 게시에 대한 구독을 여러 개 만들었는데, 프로필을 변경하여 이러한 각 구독에 대한 병합 에이전트 작업에서 **느린 연결 에이전트 프로필**을 사용하도록 지정하려면 해당 프로필을 선택하고 **기존 에이전트 변경**을 클릭합니다.  
+ 프로필을 선택하고 **기존 에이전트 변경** 을 클릭하여 지정한 유형의 에이전트에 대한 모든 기존 작업에서 선택한 프로필을 사용하도록 지정합니다. 예를 들어 병합 게시에 대한 구독을 여러 개 만들었는데, 프로필을 변경하여 이러한 각 구독에 대한 병합 에이전트 작업에서 **느린 연결 에이전트 프로필**을 사용하도록 지정하려면 해당 프로필을 선택하고 **기존 에이전트 변경**을 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 프로필 작업](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)  

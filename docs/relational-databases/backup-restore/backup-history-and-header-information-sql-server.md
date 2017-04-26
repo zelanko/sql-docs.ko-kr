@@ -1,45 +1,49 @@
 ---
-title: "백업 기록 및 헤더 정보(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "백업 헤더 [SQL Server]"
-  - "기록 테이블 [SQL Server]"
-  - "파일 복원 [SQL Server], 상태 정보"
-  - "백업 세트 [SQL Server], 상태 정보"
-  - "백업한 데이터베이스 나열"
-  - "상태 정보 [SQL Server], 백업"
-  - "백업 [SQL Server], 백업 세트 보기"
-  - "복원 [SQL Server], 기록 테이블"
-  - "데이터베이스 [SQL Server] 복원, 상태 정보"
-  - "백업 [SQL Server], 상태 정보"
-  - "헤더 [SQL Server]"
-  - "미디어 헤더 [SQL Server]"
-  - "백업 기록 테이블 [SQL Server]"
-  - "백업 정보 보기"
-  - "파일 복원 [SQL Server], 백업 정보 보기"
-  - "데이터베이스 복원 [SQL Server], 기록 테이블"
-  - "백업 정보 표시"
-  - "파일 복원 [SQL Server], 상태 정보"
-  - "기록 정보 [SQL Server], 백업"
-  - "데이터베이스 복원 [SQL Server], 기록 테이블"
-  - "복원 기록 테이블 [SQL Server]"
-  - "백업한 파일 나열"
+title: "백업 기록 및 헤더 정보(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backup headers [SQL Server]
+- history tables [SQL Server]
+- file restores [SQL Server], status information
+- backup sets [SQL Server], status information
+- listing backed up databases
+- status information [SQL Server], backups
+- backing up [SQL Server], viewing backup sets
+- restoring [SQL Server], history tables
+- restoring databases [SQL Server], status information
+- backups [SQL Server], status information
+- headers [SQL Server]
+- media headers [SQL Server]
+- backup history tables [SQL Server]
+- viewing backup information
+- restoring files [SQL Server], viewing backup information
+- restoring databases [SQL Server], history tables
+- displaying backup information
+- restoring files [SQL Server], status information
+- historical information [SQL Server], backups
+- database restores [SQL Server], history tables
+- restore history tables [SQL Server]
+- listing backed up files
 ms.assetid: 799b9934-0ec2-4f43-960b-5c9653f18374
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9f48347c218dba37363dd1a983a66abbdc6372
+ms.lasthandoff: 04/11/2017
+
 ---
-# 백업 기록 및 헤더 정보(SQL Server)
+# <a name="backup-history-and-header-information-sql-server"></a>백업 기록 및 헤더 정보(SQL Server)
   서버 인스턴스에서 이루어지는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원 작업에 대한 전체 기록은 **msdb** 데이터베이스에 저장됩니다. 이 항목에서는 백업 및 복원 기록 테이블에 대해 설명하고 백업 기록에 액세스하는 데 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대해서도 설명합니다. 또한 이 항목에서는 데이터베이스와 트랜잭션 로그 파일을 나열하는 것이 유용한 경우에 대해 설명하고, 백업 헤더 정보와 미디어 헤더 정보를 사용하는 경우를 비교하여 설명합니다.  
   
 > [!IMPORTANT]  
@@ -88,9 +92,9 @@ caps.handback.revision: 54
   
 |정보 문|백업 기록 테이블|설명|  
 |---------------------------|--------------------------|-----------------|  
-|[RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|지정한 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 있는 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스와 트랜잭션 로그 파일 목록 만들기"를 참조하세요.|  
-|[RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|특정 백업 장치의 모든 백업 세트에 대한 백업 헤더 정보를 모두 검색합니다. RESTORE HEADERONLY 실행 결과는 결과 집합입니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.|  
-|[RESTORE LABELONLY](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|지정한 백업 장치의 백업 미디어에 대한 정보가 포함된 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "미디어 헤더 정보 보기"를 참조하세요.|  
+|[RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|[backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)|지정한 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 있는 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스와 트랜잭션 로그 파일 목록 만들기"를 참조하세요.|  
+|[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|[backupset](../../relational-databases/system-tables/backupset-transact-sql.md)|특정 백업 장치의 모든 백업 세트에 대한 백업 헤더 정보를 모두 검색합니다. RESTORE HEADERONLY 실행 결과는 결과 집합입니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "백업 헤더 정보 보기"를 참조하세요.|  
+|[RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)|[backupmediaset](../../relational-databases/system-tables/backupmediaset-transact-sql.md)|지정한 백업 장치의 백업 미디어에 대한 정보가 포함된 결과 집합을 반환합니다.<br /><br /> 자세한 내용은 이 항목의 뒷부분에 나오는 "미디어 헤더 정보 보기"를 참조하세요.|  
   
 ##  <a name="ListDbTlogFiles"></a> 데이터베이스 및 트랜잭션 로그 파일  
  백업에서 트랜잭션 로그 파일과 데이터베이스의 목록을 만들 때 표시되는 정보에는 논리적 이름, 물리적 이름, 파일 형식(데이터베이스나 로그), 파일 그룹 멤버, 파일 크기(바이트 단위), 최대 허용 파일 크기, 미리 정의된 파일 증가 크기(바이트 단위) 등이 있습니다. 이 정보는 다음의 경우, 데이터베이스 백업을 복원하기 전에 데이터베이스 백업에서 파일 이름을 결정하는 데 유용합니다.  
@@ -112,14 +116,14 @@ caps.handback.revision: 54
  자세한 내용은 이 항목의 뒷부분에 나오는 [미디어 헤더 정보 및 백업 헤더 정보 비교](#CompareMediaHeaderBackupHeader)를 참조하세요.  
   
 ##  <a name="BackupHeader"></a> 백업 헤더 정보  
- 백업 헤더를 보면 미디어에 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트에 대한 정보가 표시됩니다. 표시된 정보에는 사용한 백업 장치의 유형, 백업 유형(예: 데이터베이스, 트랜잭션, 파일 또는 차등 데이터베이스), 백업 시작과 중지 시간/날짜 정보 등이 포함됩니다. 이 정보는 테이프에서 복원할 백업 세트나 미디어에 포함된 백업을 결정할 때 유용합니다.  
+ 백업 헤더를 보면 미디어에 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트에 대한 정보가 표시됩니다. 표시된 정보에는 사용한 백업 장치의 유형, 백업 유형(예: 데이터베이스, 트랜잭션, 파일 또는 차등 데이터베이스), 백업 시작과 중지 시간/날짜 정보 등이 포함됩니다. 이 정보는 테이프에서 복원할 백업 세트나 미디어에 포함된 백업을 결정할 때 유용합니다.  
   
 > [!NOTE]  
 >  미디어에서 각 백업에 관한 정보를 표시하기 위해 전체 미디어를 검사해야 하기 때문에 고용량 테이프의 경우 백업 헤더 정보를 보는 데 시간이 많이 걸립니다.  
   
  자세한 내용은 이 항목의 뒷부분에 나오는 [미디어 헤더 정보 및 백업 헤더 정보 비교](#CompareMediaHeaderBackupHeader)를 참조하세요.  
   
-### 복원할 백업 세트  
+### <a name="which-backup-set-to-restore"></a>복원할 백업 세트  
  복원할 백업 세트를 식별하는 데 백업 헤더 정보를 사용할 수 있습니다. 데이터베이스 엔진은 백업 미디어에 있는 각 백업 세트에 번호를 매깁니다. 이렇게 하면 미디어에서 백업 세트의 위치를 사용하여 복원할 백업 세트를 식별할 수 있습니다. 예를 들어 다음 미디어에는 3개의 백업 세트가 있습니다.  
   
  ![SQL Server 백업 세트를 포함하는 백업 미디어](../../relational-databases/backup-restore/media/bnr-media-backup-sets.gif "SQL Server 백업 세트를 포함하는 백업 미디어")  
@@ -152,13 +156,13 @@ caps.handback.revision: 54
   
  **백업 세트의 데이터와 로그 파일을 보려면**  
   
--   [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.ReadFileList%2A>(SMO)  
   
  **미디어 헤더 정보를 보려면**  
   
--   [RESTORE LABELONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -168,7 +172,7 @@ caps.handback.revision: 54
   
  **백업 헤더 정보를 보려면**  
   
--   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [백업 테이프 또는 파일의 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -186,7 +190,7 @@ caps.handback.revision: 54
   
  **미디어 헤더 정보를 보려면**  
   
--   [RESTORE LABELONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20LABELONLY%20\(Transact-SQL\).md)  
+-   [RESTORE LABELONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-labelonly-transact-sql.md)  
   
 -   [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -196,7 +200,7 @@ caps.handback.revision: 54
   
  **백업 헤더 정보를 보려면**  
   
--   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
 -   [백업 테이프 또는 파일의 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
@@ -208,15 +212,15 @@ caps.handback.revision: 54
   
 -   [백업 세트의 데이터와 로그 파일 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
--   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
  **백업을 확인하려면**  
   
--   [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)  
+-   [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlVerify%2A>(SMO)  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   
  [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   

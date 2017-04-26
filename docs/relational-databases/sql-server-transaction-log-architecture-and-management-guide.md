@@ -1,24 +1,29 @@
 ---
-title: "SQL Server 트랜잭션 로그 아키텍처 및 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "트랜잭션 로그 아키텍처"
+title: "SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction log architecture guide
+- guide, transaction log architecture
 ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 caps.latest.revision: 3
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5486c08226959ecb96431659ce2b865160d20680
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 트랜잭션 로그 아키텍처 및 관리
+# <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
   각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에는 각 트랜잭션에 의해 적용된 모든 트랜잭션 및 데이터베이스 수정 내용을 기록하는 트랜잭션 로그가 있습니다. 트랜잭션 로그는 데이터베이스의 주요 구성 요소이며 시스템 오류가 발생할 경우 데이터베이스를 다시 일관된 상태로 만들려면 트랜잭션 로그가 필요할 수 있습니다. 이 지침에서는 트랜잭션 로그의 물리적 및 논리적 아키텍처에 대한 정보를 제공합니다. 아키텍처를 이해하면 트랜잭션 로그를 보다 효율적으로 관리할 수 있습니다.  
@@ -60,11 +65,11 @@ caps.handback.revision: 3
 ##  <a name="physical_arch"></a> 트랜잭션 로그 물리 아키텍처  
  데이터베이스의 트랜잭션 로그는 하나 이상의 물리 파일에 매핑됩니다. 개념상으로 로그 파일은 로그 레코드의 문자열입니다. 실제로 로그 레코드의 시퀀스는 트랜잭션 로그를 구현하는 물리적 파일 집합에 효율적으로 저장됩니다. 데이터베이스마다 최소한 하나의 로그 파일이 있어야 합니다.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 내부적으로 각 물리 로그 파일을 여러 개의 가상 로그 파일로 나눕니다. 가상 로그 파일의 크기는 고정되어 있지 않으며 물리 로그 파일에 대해 고정된 수의 가상 로그 파일이 있는 것도 아닙니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 로그 파일을 만들거나 확장할 때 동적으로 가상 로그 파일의 크기를 선택합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 적은 수의 가상 파일을 유지하려고 합니다. 로그 파일 확장 후 가상 파일 크기는 기존 로그 크기와 새 파일 증가 크기를 합한 크기입니다. 관리자가 가상 로그 파일의 크기 또는 수를 구성하거나 설정할 수 없습니다.  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 은 내부적으로 각 물리 로그 파일을 여러 개의 가상 로그 파일로 나눕니다. 가상 로그 파일의 크기는 고정되어 있지 않으며 물리 로그 파일에 대해 고정된 수의 가상 로그 파일이 있는 것도 아닙니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 로그 파일을 만들거나 확장할 때 동적으로 가상 로그 파일의 크기를 선택합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 적은 수의 가상 파일을 유지하려고 합니다. 로그 파일 확장 후 가상 파일 크기는 기존 로그 크기와 새 파일 증가 크기를 합한 크기입니다. 관리자가 가상 로그 파일의 크기 또는 수를 구성하거나 설정할 수 없습니다.  
   
- 작은 *size* 및 *growth_increment* 값으로 물리적 로그 파일을 정의하는 경우에만 가상 로그 파일이 시스템 성능에 영향을 줍니다. *size* 값은 로그 파일의 처음 크기이며 *growth_increment* 값은 공간이 새로 필요할 때마다 파일에 추가되는 공간 크기입니다. 수많은 작은 증가값으로 인해 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. 이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다. 필요한 최종 크기에 가까운 *size* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 이러한 매개 변수에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md)을 참조하세요.  
+ 작은 *size* 및 *growth_increment* 값으로 물리적 로그 파일을 정의하는 경우에만 가상 로그 파일이 시스템 성능에 영향을 줍니다. *size* 값은 로그 파일의 처음 크기이며 *growth_increment* 값은 공간이 새로 필요할 때마다 파일에 추가되는 공간 크기입니다. 수많은 작은 증가값으로 인해 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. 이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다. 필요한 최종 크기에 가까운 *size* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 이러한 매개 변수에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
- 트랜잭션 로그는 순환 파일입니다. 예를 들어 데이터베이스에 4개의 가상 로그 파일로 나뉜 물리 로그 파일이 한 개 있다고 가정합니다. 이 데이터베이스가 생성될 때 물리 로그 파일의 시작 부분에서 논리 로그 파일이 시작됩니다. 새 로그 레코드는 논리 로그의 끝 부분에 추가되며 물리 로그의 끝 방향으로 확장됩니다. 로그 잘림을 수행하면 모든 레코드가 MinLSN(최소 복구 로그 시퀀스 번호) 앞에 있는 가상 로그에 대한 공간이 확보됩니다. *MinLSN*은 성공적인 데이터베이스 차원의 롤백에 필요한 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. 예제 데이터베이스의 트랜잭션 로그는 다음 그림의 로그와 유사합니다.  
+ 트랜잭션 로그는 순환 파일입니다. 예를 들어 데이터베이스에 4개의 가상 로그 파일로 나뉜 물리 로그 파일이 한 개 있다고 가정합니다. 이 데이터베이스가 생성될 때 물리 로그 파일의 시작 부분에서 논리 로그 파일이 시작됩니다. 새 로그 레코드는 논리 로그의 끝 부분에 추가되며 물리 로그의 끝 방향으로 확장됩니다. 로그 잘림을 수행하면 모든 레코드가 MinLSN(최소 복구 로그 시퀀스 번호) 앞에 있는 가상 로그에 대한 공간이 확보됩니다. *MinLSN* 은 성공적인 데이터베이스 차원의 롤백에 필요한 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. 예제 데이터베이스의 트랜잭션 로그는 다음 그림의 로그와 유사합니다.  
   
  ![tranlog3](../relational-databases/media/tranlog3.gif)  
   
@@ -74,13 +79,13 @@ caps.handback.revision: 3
   
  이러한 순환은 논리 로그 끝 부분이 논리 로그의 시작 부분에 도달하지 않는 한 계속 반복됩니다. 다음 검사점까지 생성되는 모든 새 로그 레코드를 위해 항상 충분한 공간이 남을 만큼 기존 로그 레코드가 자주 잘리면 로그는 가득 차지 않습니다. 그러나 논리 로그의 끝 부분이 논리 로그의 시작 부분에 도달하면 다음 두 가지 상황 중 하나가 발생합니다.  
   
--   로그에 대해 FILEGROWTH 설정이 사용하도록 설정되어 있고 디스크에 사용할 수 있는 공간이 있으면 파일은 *growth_increment* 매개 변수에 지정된 크기만큼 확장되며 새 로그 레코드가 확장 부분에 추가됩니다. FILEGROWTH 설정에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20(Transact-SQL).md)을 참조하세요.  
+-   로그에 대해 FILEGROWTH 설정이 사용하도록 설정되어 있고 디스크에 사용할 수 있는 공간이 있으면 파일은 *growth_increment* 매개 변수에 지정된 크기만큼 확장되며 새 로그 레코드가 확장 부분에 추가됩니다. FILEGROWTH 설정에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
 -   FILEGROWTH 설정이 사용하도록 설정되어 있지 않거나 로그 파일이 있는 디스크의 사용 가능한 공간이 *growth_increment*에 지정된 크기보다 적으면 9002 오류가 발생합니다.  
   
  로그에 물리 로그 파일이 여러 개 있으면 논리 로그는 모든 물리 로그 파일을 거친 후 첫 번째 물리 로그 파일의 시작 부분으로 순환됩니다.  
   
-### 로그 잘림  
+### <a name="log-truncation"></a>로그 잘림  
  로그가 가득 차지 않도록 하기 위해 로그 잘림은 필수적입니다. 로그 잘림은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스의 논리 트랜잭션 로그에서 비활성 가상 로그 파일을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 트랜잭션 로그로 채워지게 됩니다. 단, 로그를 자르기 전에 검사점 작업을 수행해야 합니다. 검사점은 현재 메모리 내의 수정된 페이지(더티 페이지라고 함)와 메모리의 트랜잭션 로그 정보를 디스크에 기록합니다. 검사점을 수행하면 트랜잭션 로그의 비활성 부분은 재사용 가능으로 표시됩니다. 그런 후에는 로그 잘림으로 비활성 부분에 대한 공간을 확보할 수 있습니다. 검사점에 대한 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
   
  다음 그림에서는 잘림 전과 후의 트랜잭션 로그를 보여 줍니다. 첫 번째 그림은 잘림이 수행되지 않은 트랜잭션 로그를 보여 줍니다. 현재 논리 로그에서 4개의 가상 로그 파일을 사용하고 있습니다. 논리 로그는 첫 번째 가상 로그 파일의 앞에서 시작하고 가상 로그 4에서 끝납니다. MinLSN 레코드는 가상 로그 3에 있습니다. 가상 로그 1과 가상 로그 2에는 비활성 로그 레코드만 포함되어 있습니다. 이러한 레코드는 자를 수 있습니다. 가상 로그 5는 사용하지 않았으며 현재 논리 로그에 포함되지 않습니다.  
@@ -115,22 +120,22 @@ caps.handback.revision: 3
   
  복원해야 하는 로그 백업의 수를 제한하려면 데이터를 정기적으로 백업해야 합니다. 예를 들어 주별 전체 데이터베이스 백업과 일별 차등 데이터베이스 백업을 예약할 수 있습니다.  
   
-### 로그 체인  
+### <a name="the-log-chain"></a>로그 체인  
  로그 백업의 연속 시퀀스를 *로그 체인*이라고 합니다. 로그 체인은 데이터베이스의 전체 백업으로 시작합니다. 일반적으로 데이터베이스를 처음 백업할 때나 단순 복구 모델에서 전체 또는 대량 로그 복구 모델로 전환한 후에만 새 로그 체인이 시작됩니다. 전체 데이터베이스 백업을 만들 때 기존 백업 집합을 덮어쓰도록 선택하지 않으면 기존 로그 체인이 그대로 유지됩니다. 로그 체인이 그대로 유지되면 미디어 세트의 전체 데이터베이스 백업에서 데이터베이스를 복원한 후 모든 후속 로그 백업을 복구 지점까지 복원할 수 있습니다. 복구 지점은 마지막 로그 백업의 끝이나 로그 백업의 특정 복구 지점일 수 있습니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../relational-databases/backup-restore/transaction-log-backups-sql-server.md)을 참조하세요.  
   
  데이터베이스를 오류 발생 시점까지 복원하려면 로그 체인이 온전해야 합니다. 즉 트랜잭션 로그 백업의 연속적인 시퀀스가 오류 발생 지점까지 이어져야 합니다. 이 로그 시퀀스가 시작되는 위치는 복원 중인 데이터 백업의 유형인 데이터베이스, 부분 또는 파일에 따라 달라집니다. 데이터베이스 또는 부분 백업의 경우 로그 백업의 시퀀스는 데이터베이스 또는 부분 백업의 끝 지점에서 이어져야 합니다. 파일 백업 집합의 경우 로그 백업의 시퀀스는 전체 파일 백업 집합의 시작 지점에서 이어져야 합니다. 자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
   
-### 로그 백업을 복원하려면  
+### <a name="restore-log-backups"></a>로그 백업을 복원하려면  
  로그 백업을 복원하면 현재 데이터베이스를 로그 백업 작업이 시작된 시점의 데이터베이스 상태와 정확히 일치하도록 다시 만들기 위해 트랜잭션 로그에 기록된 변경 내용을 롤포워드합니다. 데이터베이스를 복원하는 경우 복원하는 전체 데이터베이스 백업 이후 또는 복원하는 첫 번째 파일 백업의 시작 부분에서 만든 로그 백업을 복원해야 합니다. 일반적으로 가장 최근의 데이터나 차등 백업을 복원하고 나면 복구 지점에 이를 때까지 일련의 로그 백업을 복원한 다음 데이터베이스를 복구해야 합니다. 이때까지 완료되지 않은 트랜잭션은 모두 롤백되며 복구가 완료되면 데이터베이스는 온라인 상태가 됩니다. 데이터베이스가 복구된 후에는 더 이상의 백업을 복원할 수 없습니다. 자세한 내용은 [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)을 참조하세요.  
 
-## 검사점 및 로그의 활성 부분  
+## <a name="checkpoints-and-the-active-portion-of-the-log"></a>검사점 및 로그의 활성 부분  
 
 검사점은 현재 데이터베이스의 버퍼 캐시에 있는 커밋되지 않은 데이터 페이지를 디스크로 플러시합니다. 따라서 데이터베이스의 전체 복구 중에 처리되어야 하는 로그의 활성 부분이 최소화됩니다. 전체 복구 동안 다음 유형의 동작이 수행됩니다.
 
 * 시스템이 중지되기 전에 디스크로 플러시되지 않은 로그의 수정 레코드가 롤포워드됩니다.
 * 커밋 또는 롤백 로그 레코드가 없는 불완전한 트랜잭션과 관련된 모든 수정 내용이 롤백됩니다.
 
-### 검사점 작업
+### <a name="checkpoint-operation"></a>검사점 작업
 
 데이터베이스에서 검사점이 수행하는 프로세스는 다음과 같습니다.
 
@@ -150,7 +155,7 @@ caps.handback.revision: 3
 * 검사점의 끝을 표시하는 레코드를 로그 파일에 씁니다.
 * 이 체인의 시작 LSN을 데이터베이스 부팅 페이지에 씁니다.
 
-#### 검사점을 발생시키는 작업
+#### <a name="activities-that-cause-a-checkpoint"></a>검사점을 발생시키는 작업
 
 검사점은 다음과 같은 상황에서 발생합니다.
 
@@ -162,7 +167,7 @@ caps.handback.revision: 3
 * 데이터베이스를 백업한 경우
 * 데이터베이스를 종료해야 하는 작업을 수행한 경우. AUTO_CLOSE가 ON이고 데이터베이스에 대한 마지막 사용자 연결이 닫힌 경우 또는 데이터베이스를 다시 시작해야 하는 데이터베이스 옵션 변경을 수행한 경우를 예로 들 수 있습니다.
 
-### 자동 검사점
+### <a name="automatic-checkpoints"></a>자동 검사점
 
 SQL Server 데이터베이스 엔진은 자동 검사점을 생성합니다. 자동 검사점 간의 간격은 마지막 검사점 이후 경과된 시간과 사용된 로그 공간에 따라 결정됩니다. 데이터베이스가 거의 수정되지 않을 경우에는 자동 검사점 간의 시간 간격이 가변적이고 길어질 수 있습니다. 또한 많은 데이터를 수정할 경우에는 자동 검사점이 자주 발생할 수 있습니다.
 
@@ -186,7 +191,7 @@ SQL Server 데이터베이스 엔진은 자동 검사점을 생성합니다. 자
 이제 CHECKPOINT 문에서는 검사점을 완료하는 요청 시간(초)을 지정하는 선택적 checkpoint_duration 인수를 제공합니다. 자세한 내용은 [CHECKPOINT](../t-sql/language-elements/checkpoint-transact-sql.md)를 참조하세요.
 
 
-### 활성 로그
+### <a name="active-log"></a>활성 로그
 
 MinLSN에서 마지막으로 쓰여진 로그 레코드까지의 로그 파일 섹션을 로그의 활성 부분 또는 활성 로그라고 합니다. 로그의 이 섹션은 데이터베이스의 전체 복구를 수행하는 데 필요합니다. 활성 로그는 어떤 부분도 잘라낼 수 없습니다. 모든 로그 레코드는 로그의 MinLSN 앞에서 잘라야 합니다.
 
@@ -196,19 +201,19 @@ MinLSN에서 마지막으로 쓰여진 로그 레코드까지의 로그 파일 �
 
 LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기록된 검사점이 처리되면 Tran 1이 커밋되고 Tran 2만 유일한 활성 트랜잭션이 됩니다. 이 경우 Tran 2에 대한 첫 번째 로그 레코드가 마지막 검사점에서 활성 상태인 트랜잭션에 대한 가장 오래된 로그 레코드가 됩니다. 따라서 Tran 2에 대한 Begin Transaction 레코드인 LSN 142가 MinLSN이 됩니다.
 
-### 장기 실행 트랜잭션
+### <a name="long-running-transactions"></a>장기 실행 트랜잭션
 
 활성 로그에는 커밋되지 않은 모든 트랜잭션의 모든 부분이 포함되어야 합니다. 트랜잭션을 시작했으나 커밋하거나 롤백하지 않은 응용 프로그램이 있으면 데이터베이스 엔진이 MinLSN을 앞당기지 못하게 됩니다. 이로 인해 다음 두 가지 유형의 문제가 발생할 수 있습니다.
 
 * 트랜잭션이 커밋되지 않은 많은 수정 작업을 수행한 후에 시스템이 종료되면 시스템이 다시 시작된 후의 복구 단계 수행 시 **복구 간격** 옵션에 지정된 시간보다 훨씬 더 오래 걸릴 수 있습니다.
 * 로그가 MinLSN을 통과하여 잘릴 수 없으므로 너무 커질 수 있습니다. 이러한 문제는 트랜잭션 로그가 각 자동 검사점에서 일반적으로 잘리게 되는 단순 복구 모델을 데이터베이스에서 사용하는 경우에도 발생합니다.
 
-### 복제 트랜잭션
+### <a name="replication-transactions"></a>복제 트랜잭션
 
 로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사합니다. 활성 로그에는 복제용으로 표시되었지만 아직 배포 데이터베이스로 전달되지 않은 모든 트랜잭션이 포함되어야 합니다. 이러한 트랜잭션이 제때에 복제되지 않으면 로그 잘라내기가 수행되지 않을 수 있습니다. 자세한 내용은 [트랜잭션 복제](../relational-databases/replication/transactional/transactional-replication.md)를 참조하세요.
 
   
-## 더 보기  
+## <a name="additional-reading"></a>더 보기  
  트랜잭션 로그에 대한 자세한 내용은 다음 기사 및 책을 참조하십시오.  
   
  [Paul Randall, "SQL Server의 로깅 및 복구 이해"](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
@@ -216,3 +221,4 @@ LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기�
  [Tony Davis 및 Gail Shaw 공저, "SQL Server 트랜잭션 로그 관리"](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   
+

@@ -1,52 +1,56 @@
 ---
-title: "암호 정책 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/25/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALTER LOGIN 문"
-  - "암호 [SQL Server], 정책 적용"
-  - "로그인 [SQL Server], 암호"
-  - "CHECK_EXPIRATION 옵션"
-  - "복잡한 암호 [SQL Server]"
-  - "암호 [SQL Server], 만료"
-  - "잘못된 암호 수 수동 다시 설정"
-  - "MUST_CHANGE 옵션"
-  - "만료 [SQL Server]"
-  - "만료된 암호 [SQL Server]"
-  - "기호 [SQL Server]"
-  - "NetValidatePasswordPolicy() API"
-  - "암호 [SQL Server]"
-  - "암호 정책 [SQL Server]"
-  - "잘못된 암호 수 다시 설정"
-  - "보안 [SQL Server], 암호"
-  - "CHECK_POLICY 옵션"
-  - "암호 [SQL Server], 기호"
-  - "잘못된 암호 수"
-  - "암호 [SQL Server], 복잡성"
-  - "문자 [SQL Server], 암호 정책"
+title: "암호 정책 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/25/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALTER LOGIN statement
+- passwords [SQL Server], policy enforcement
+- logins [SQL Server], passwords
+- CHECK_EXPIRATION option
+- complex passwords [SQL Server]
+- passwords [SQL Server], expiration
+- manual bad password count resets
+- MUST_CHANGE option
+- expiration [SQL Server]
+- expired password [SQL Server]
+- symbols [SQL Server]
+- NetValidatePasswordPolicy() API
+- passwords [SQL Server]
+- password policy [SQL Server]
+- resetting bad password counts
+- security [SQL Server], passwords
+- CHECK_POLICY option
+- passwords [SQL Server], symbols
+- bad password counts
+- passwords [SQL Server], complexity
+- characters [SQL Server], password policies
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1843956926a6eb59efbc4dc14dc50f1dd3403d07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 암호 정책
+# <a name="password-policy"></a>암호 정책
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows 암호 정책 메커니즘을 사용할 수 있습니다. 암호 정책은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하는 로그인과 암호를 가진 포함된 데이터베이스 사용자에게 적용됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Windows에서 사용되는 것과 동일한 복잡성 및 만료 정책을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]내부에 사용되는 암호에 적용할 수 있습니다. 이 기능은 `NetValidatePasswordPolicy` API 값에 따라 달라집니다.  
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 은 암호 복잡성을 적용합니다. 암호 만료 및 정책 적용 섹션은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 적용되지 않습니다.  
   
-## 암호 복잡성  
+## <a name="password-complexity"></a>암호 복잡성  
  암호 복잡성 정책은 가능한 암호의 수를 늘려 문자 조합을 이용한 공격(brute force attacks)을 방지하도록 설계되었습니다. 암호 복잡성 정책이 강제 적용된 경우 새 암호는 다음 지침을 준수해야 합니다.  
   
 -   암호는 사용자의 계정 이름을 포함하지 않습니다.  
@@ -65,11 +69,11 @@ caps.handback.revision: 41
   
  암호 길이는 128자까지 가능하며 되도록 길고 복잡한 암호를 사용해야 합니다.  
   
-## 암호 만료  
+## <a name="password-expiration"></a>암호 만료  
  암호 만료 정책을 사용하여 암호의 수명을 관리합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 암호 만료 정책을 강제로 적용하면 사용자에게 기존 암호를 변경할 것과 암호가 만료되어 해당 계정을 사용할 수 없게 됨을 알려 줍니다.  
   
-## 정책 적용  
- 암호 정책 적용은 각 SQL Server 로그인마다 별도로 구성할 수 있습니다. [ALTER LOGIN&#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)을 사용하여 SQL Server 로그인의 암호 정책 옵션을 구성할 수 있습니다. 다음 규칙이 암호 정책 적용 구성에 적용됩니다.  
+## <a name="policy-enforcement"></a>정책 적용  
+ 암호 정책 적용은 각 SQL Server 로그인마다 별도로 구성할 수 있습니다. [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md) 을 사용하여 SQL Server 로그인의 암호 정책 옵션을 구성할 수 있습니다. 다음 규칙이 암호 정책 적용 구성에 적용됩니다.  
   
 -   CHECK_POLICY가 ON으로 변경되면 다음 동작이 수행됩니다.  
   
@@ -103,7 +107,7 @@ caps.handback.revision: 41
   
  보안 정책은 Windows에 설정하거나 도메인에서 가져올 수 있습니다. 컴퓨터에 대한 암호 정책을 보려면 로컬 보안 정책 MMC 스냅인(**secpol.msc**)을 사용합니다.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)  
   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)  
@@ -116,7 +120,8 @@ caps.handback.revision: 41
   
  [데이터베이스 사용자 만들기](../../relational-databases/security/authentication-access/create-a-database-user.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [강력한 암호](../../relational-databases/security/strong-passwords.md)  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "복제 유형 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "복제 [SQL Server], 유형"
+title: "복제 유형 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], types
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e73bdd657a12e4eda65ce7cc16f2e9d139ce9913
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복제 유형
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 분산 응용 프로그램에서 사용할 수 있는 다음 유형의 복제를 제공합니다.  
+# <a name="types-of-replication"></a>복제 유형
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
   
--   트랜잭션 복제. 자세한 내용은 참조 [트랜잭션 복제](../../relational-databases/replication/transactional/transactional-replication.md)합니다.  
+-   트랜잭션 복제. 자세한 내용은 [트랜잭션 복제](../../relational-databases/replication/transactional/transactional-replication.md)를 참조하세요.  
   
--   병합 복제. 자세한 내용은 참조 [병합 복제](../../relational-databases/replication/merge/merge-replication.md)합니다.  
+-   병합 복제. 병합 복제에 대한 자세한 내용은 [병합 복제](../../relational-databases/replication/merge/merge-replication.md)를 참조하세요.  
   
--   스냅숏 복제. 자세한 내용은 참조 [스냅숏 복제](../../relational-databases/replication/snapshot-replication.md)합니다.  
+-   스냅숏 복제. 스냅숏 복제에 대한 자세한 내용은 [스냅숏 복제](../../relational-databases/replication/snapshot-replication.md)를 참조하세요.  
   
  응용 프로그램에 대한 복제 유형 선택은 물리적 복제 환경, 복제할 데이터 형식 및 양, 데이터가 구독자에서 업데이트되는지 여부를 포함한 여러 요인에 따라 달라집니다. 물리적 환경에는 복제와 관련된 컴퓨터 수 및 위치와 이러한 컴퓨터가 클라이언트(워크스테이션, 랩톱 또는 핸드헬드 장치)인지 또는 서버인지 여부가 포함됩니다.  
   
@@ -33,7 +37,7 @@ caps.handback.revision: 38
   
  스냅숏 복제에 대한 데이터 변경 내용은 추적되지 않으며 스냅숏이 적용될 때마다 이 스냅숏은 기존 데이터를 완전히 덮어씁니다. 트랜잭션 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 로그를 통해 변경 내용을 추적하고 병합 복제는 트리거 및 메타데이터 테이블을 통해 변경 내용을 추적합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)  
   
   

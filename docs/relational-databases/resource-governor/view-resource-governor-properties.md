@@ -1,26 +1,30 @@
 ---
-title: "리소스 관리자 속성 보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties.f1"
-helpviewer_keywords: 
-  - "리소스 관리자, 속성"
+title: "리소스 관리자 속성 보기 | Microsoft 문서"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties.f1
+helpviewer_keywords:
+- Resource Governor, properties
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e856286b6048e320481b5983685fbfcd4e838c1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 리소스 관리자 속성 보기
+# <a name="view-resource-governor-properties"></a>리소스 관리자 속성 보기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 리소스 관리자 속성 페이지를 사용하여 리소스 풀, 작업 그룹과 같은 리소스 관리자 엔터티를 만들거나 구성할 수 있습니다.  
@@ -56,13 +60,13 @@ caps.handback.revision: 28
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 개체 탐색기를 열고 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
   
-2.  **Resource Governor**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
+2.  **Resource Governor** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **Resource Governor** 페이지가 열립니다.  
   
 3.  이 페이지의 필드에 대한 설명을 보려면 [리소스 관리자 속성](#RGProp)을 참조하세요.  
   
 4.  변경 사항을 저장하려면 **확인**을 클릭합니다.  
   
-##  <a name="RGProp"></a> Resource Governor 속성  
+##  <a name="RGProp"></a> Resource Governor properties  
  **분류자 함수 이름**  
  분류자 함수를 목록에서 선택하여 지정합니다.  
   
@@ -115,18 +119,19 @@ caps.handback.revision: 28
   
  자세한 내용은 [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)를 참조하세요.  
   
-## Transact-SQL을 사용하여 Resource Governor 속성 보기  
+## <a name="view-resource-governor-properties-using-transact-sql"></a>Transact-SQL을 사용하여 Resource Governor 속성 보기  
  **Transact-SQL을 사용하여 리소스 관리자 속성 보기**  
   
 1.  Resource Governor 엔터티의 정의를 보려면 [Resource Governor 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)를 사용하세요.  
   
 2.  Resource Governor 엔터티의 현재 구성을 보려면 [Resource Governor 관련 동적 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)를 사용하세요.  
   
-## 자세한 정보
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
+## <a name="more-information"></a>자세한 정보
+ [관리](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 관리자 작업 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [리소스 관리자 분류자 함수](../../relational-databases/resource-governor/resource-governor-classifier-function.md)  
   
   
+

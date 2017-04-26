@@ -1,25 +1,29 @@
 ---
-title: "SQL Server Audit 레코드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "감사 레코드 [SQL Server]"
+title: "SQL Server Audit 레코드 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- audit records [SQL Server]
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21e4ed91a72a564ec39632899f81131fa4e7caf5
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Audit 레코드
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트와 이벤트 그룹을 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+# <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트와 이벤트 그룹을 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 참조하세요.  
   
  감사는 0개 이상의 감사 동작 항목으로 구성되어 있으며 이들은 감사 *대상*에 기록됩니다. 이진 파일, Windows 응용 프로그램 이벤트 로그 또는 Windows 보안 이벤트 로그가 감사 대상이 될 수 있습니다. 대상에 전달된 레코드에는 다음 표에 설명된 요소가 포함될 수 있습니다.  
   
@@ -27,7 +31,7 @@ caps.handback.revision: 19
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|감사 가능한 동작이 발생한 날짜/시간입니다.|**datetime2**|예|  
 |**sequence_no**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다.|**int**|예|  
-|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id**를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|**varchar(4)**|예|  
+|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](http://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|**varchar(4)**|예|  
 |**succeeded**|이벤트를 발생시킨 동작의 성공 여부를 나타냅니다.|**bit** – 1 = 성공, 0 = 실패|예|  
 |**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|**bigint**|아니요|  
 |**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|**bit** – 1 = True, 0 = False|아니요|  
@@ -52,7 +56,7 @@ caps.handback.revision: 19
 |**statement**|TSQL 문(있는 경우)|**nvarchar(4000)**|아니요|  
 |**additional_information**|이벤트에 대한 추가 정보이며 XML로 저장됩니다.|**nvarchar(4000)**|아니요|  
   
-## 주의  
+## <a name="remarks"></a>주의  
  일부 동작은 적용되지 않을 수 있는 열 값을 채우지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit는 감사 레코드의 문자 필드 하나당 4000자의 데이터를 저장합니다. 감사 가능한 동작에서 반환된 **additional_information** 및 **statement** 값이 4000자를 넘는 경우 **sequence_no** 열을 사용하여 단일 감사 동작에 대한 감사 보고서에 여러 레코드를 작성함으로써 이 데이터를 기록합니다. 프로세스는 다음과 같습니다.  
@@ -67,7 +71,7 @@ caps.handback.revision: 19
   
  **sequence_no** 값을 사용하여 행을 순서대로 읽고 **event_Time**, **action_id** 및 **session_id** 열을 사용하여 동작을 식별함으로써 데이터를 연결할 수 있습니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [CREATE SERVER AUDIT&#40;Transact-SQL&#41;](../../../t-sql/statements/create-server-audit-transact-sql.md)  
   
  [ALTER SERVER AUDIT&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-audit-transact-sql.md)  

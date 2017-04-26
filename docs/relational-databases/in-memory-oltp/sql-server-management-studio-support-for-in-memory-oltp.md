@@ -1,41 +1,45 @@
 ---
-title: "메모리 내 OLTP에 대한 SQL Server Management Studio 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 내 OLTP에 대한 SQL Server Management Studio 지원 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ee847b5f-6a1a-448e-a746-d61a023881ff
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 24436bccfa9fd9c61edff66e630dd439041dd61f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 내 OLTP에 대한 SQL Server Management Studio 지원
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 자세한 내용은 [SQL Server Management Studio](../Topic/SQL%20Server%20Management%20Studio.md)를 참조하세요.  
+# <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Management Studio 지원
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라를 관리하기 위한 통합 환경입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 구성, 모니터링 및 관리하는 도구를 제공합니다. 자세한 내용은 [SQL Server Management Studio](http://msdn.microsoft.com/library/66a6b7b1-de6a-4161-82bd-98ded486947b)를 참조하세요.  
   
- 이 항목의 태스크에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 메모리 액세스에 최적화된 테이블, 메모리 액세스에 최적화된 테이블의 인덱스, 고유하게 컴파일된 저장 프로시저, 사용자 정의 메모리 액세스에 최적화된 테이블 형식을 관리하는 방법을 설명합니다.  
+ 이 항목의 태스크에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 메모리 액세스에 최적화된 테이블, 메모리 액세스에 최적화된 테이블의 인덱스, 고유하게 컴파일된 저장 프로시저, 사용자 정의 메모리 액세스에 최적화된 테이블 형식을 관리하는 방법을 설명합니다.  
   
  프로그래밍 방식으로 메모리 액세스에 최적화된 테이블을 만드는 방법은 [메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.  
   
-### 메모리 액세스에 최적화된 데이터 파일 그룹이 포함된 데이터베이스를 만들려면  
+### <a name="to-create-a-database-with-a-memory-optimized-data-filegroup"></a>메모리 액세스에 최적화된 데이터 파일 그룹이 포함된 데이터베이스를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
 2.  **데이터베이스**를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 클릭합니다.  
   
-3.  새 메모리 액세스에 최적화된 데이터 파일 그룹을 추가하려면 **파일 그룹** 페이지를 클릭합니다. **MEMORY OPTIMIZED DATA** 아래에서 **파일 그룹 추가**를 클릭한 다음 메모리 액세스에 최적화된 데이터 파일 그룹의 이름을 입력합니다.  **FILESTREAM 파일** 이라는 열에는 파일 그룹에 있는 컨테이너 수가 표시됩니다. 컨테이너는 **일반** 페이지에서 추가됩니다.  
+3.  새 메모리 액세스에 최적화된 데이터 파일 그룹을 추가하려면 **파일 그룹** 페이지를 클릭합니다. **MEMORY OPTIMIZED DATA**아래에서 **파일 그룹 추가** 를 클릭한 다음 메모리 액세스에 최적화된 데이터 파일 그룹의 이름을 입력합니다.  **FILESTREAM 파일** 이라는 열에는 파일 그룹에 있는 컨테이너 수가 표시됩니다. 컨테이너는 **일반** 페이지에서 추가됩니다.  
   
-4.  파일(컨테이너)를 파일 그룹에 추가하려면 **일반** 페이지를 클릭합니다. **데이터베이스 파일**아래에서 **추가**를 클릭합니다. **파일 형식**을 **FILESTREAM 데이터**로 선택하고 컨테이너의 논리적 이름을 지정한 다음 메모리 액세스에 최적화된 파일 그룹을 선택하고 **자동 증가/최대 크기**가 **제한 없음**으로 설정되어 있는지 확인합니다.  
+4.  파일(컨테이너)를 파일 그룹에 추가하려면 **일반** 페이지를 클릭합니다. **데이터베이스 파일**아래에서 **추가**를 클릭합니다. **파일 형식** 을 **FILESTREAM 데이터**로 선택하고 컨테이너의 논리적 이름을 지정한 다음 메모리 액세스에 최적화된 파일 그룹을 선택하고 **자동 증가/최대 크기** 가 **제한 없음**으로 설정되어 있는지 확인합니다.  
   
      [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 새 데이터베이스를 만드는 방법은 [데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)를 참조하세요.  
   
-### 메모리 액세스에 최적화된 테이블을 만들려면  
+### <a name="to-create-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블을 만들려면  
   
 1.  **개체 탐색기**에서 데이터베이스의 **테이블** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 클릭한 다음 **메모리 액세스에 최적화된 테이블**을 클릭합니다.  
   
@@ -43,11 +47,11 @@ caps.handback.revision: 31
   
 2.  템플릿 매개 변수를 바꾸려면 **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정** 을 클릭합니다.  
   
-     템플릿을 사용하는 방법은 [Template Explorer](../../ssms/template/template-explorer.md)를 참조하십시오.  
+     템플릿을 사용하는 방법은 [Template Explorer](http://msdn.microsoft.com/library/b9ee55c5-bb44-4f76-90ac-792d8d83b4c8)를 참조하십시오.  
   
 3.  **개체 탐색기**에서 테이블은 먼저 디스크 기반 테이블에 따라 정렬된 다음, 메모리 액세스에 최적화된 테이블에 따라 정렬됩니다. **개체 탐색기 정보** 를 사용하여 모든 테이블을 이름순으로 정렬합니다.  
   
-### 고유하게 컴파일된 저장 프로시저를 만들려면  
+### <a name="to-create-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저를 만들려면  
   
 1.  **개체 탐색기**에서 데이터베이스의 **저장 프로시저** 노드를 마우스 오른쪽 단추로 클릭하고 **새로 만들기**를 클릭한 다음 **고유하게 컴파일된 저장 프로시저**를 클릭합니다.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 31
   
      새 저장 프로시저를 만드는 방법은 [Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)를 참조하십시오.  
   
-### 사용자 정의 메모리 액세스에 최적화된 테이블 형식을 만들려면  
+### <a name="to-create-a-user-defined-memory-optimized-table-type"></a>사용자 정의 메모리 액세스에 최적화된 테이블 형식을 만들려면  
   
 1.  **개체 탐색기**에서 데이터베이스의 **형식** 노드를 확장하고 **사용자 정의 테이블 형식** 노드를 마우스 오른쪽 단추로 클릭한 다음 **새로 만들기**를 클릭하고 **사용자 정의 메모리 액세스에 최적화된 테이블 형식**을 클릭합니다.  
   
@@ -67,15 +71,15 @@ caps.handback.revision: 31
   
      새 저장 프로시저를 만드는 방법은 [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)을 참조하세요.  
   
-## 메모리 모니터링  
+## <a name="memory-monitoring"></a>메모리 모니터링  
   
-#### 메모리 액세스에 최적화된 개체별 메모리 사용량 보고서 보기  
+#### <a name="view-memory-usage-by-memory-optimized-objects-report"></a>메모리 액세스에 최적화된 개체별 메모리 사용량 보고서 보기  
   
 -   **개체 탐색기**에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서**, **표준 보고서**, **메모리 액세스에 최적화된 개체별 메모리 사용량**을 차례로 클릭합니다.  
   
      이 보고서는 데이터베이스에 있는 메모리 액세스에 최적화된 개체의 메모리 공간 사용률에 대한 자세한 데이터를 제공합니다.  
   
-#### 테이블 또는 데이터베이스에 대해 할당되고 사용된 메모리에 대한 속성 보기  
+#### <a name="view-properties-for-allocated-and-used-memory-for-a-table-database"></a>테이블 또는 데이터베이스에 대해 할당되고 사용된 메모리에 대한 속성 보기  
   
 1.  메모리 내 사용량에 대한 정보를 가져오려면 다음과 같이 하십시오.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 31
   
     -   **개체 탐색기**에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭한 다음 **일반** 페이지를 클릭합니다. **메모리 액세스에 최적화된 개체에 할당된 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 액세스에 최적화된 개체에 할당된 메모리를 나타냅니다. **메모리 액세스에 최적화된 개체가 사용하는 메모리** 속성에 대한 값은 데이터베이스에 있는 메모리 액세스에 최적화된 개체가 사용하는 메모리를 나타냅니다.  
   
-## 다음에서 지원되는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>다음에서 지원되는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 메모리 액세스에 최적화된 데이터 파일 그룹, 메모리 액세스에 최적화된 테이블, 인덱스 및 고유하게 컴파일된 저장 프로시저가 포함된 데이터베이스에서 데이터베이스 엔진이 지원하는 기능과 작업을 지원합니다.  
   
  데이터베이스, 테이블, 저장 프로시저, 사용자 정의 테이블 형식 또는 인덱스 개체에 대해 다음 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 기능이 메모리 내 OLTP를 지원하도록 업데이트되었거나 확장되었습니다.  
@@ -109,7 +113,7 @@ caps.handback.revision: 31
              **데이터베이스 연결** 사용자 인터페이스는 메모리 액세스에 최적화된 데이터 파일 그룹을 표시하지 않습니다. 그러나 데이터베이스 연결은 계속 진행할 수 있으며 데이터베이스는 올바르게 연결됩니다.  
   
             > [!NOTE]  
-            >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너가 있는 데이터베이스를 연결하려고 하는데 데이터베이스의 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너가 다른 컴퓨터에서 만든 것이라면 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너의 위치가 두 컴퓨터에서 동일해야 합니다. 데이터베이스의 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너 위치를 새 컴퓨터에서 다르게 지정하려는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스를 연결할 수 있습니다. 다음 예에서 새 컴퓨터의 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너 위치는 C:\Folder2입니다. 그러나 첫 번째 컴퓨터에서 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너가 생성된 위치는 C:\Folder1입니다.  
+            >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너가 있는 데이터베이스를 연결하려고 하는데 데이터베이스의 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너가 다른 컴퓨터에서 만든 것이라면 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너의 위치가 두 컴퓨터에서 동일해야 합니다. 데이터베이스의 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너 위치를 새 컴퓨터에서 다르게 지정하려는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스를 연결할 수 있습니다. 다음 예에서 새 컴퓨터의 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너 위치는 C:\Folder2입니다. 그러나 첫 번째 컴퓨터에서 메모리 액세스에 최적화된 데이터 파일 그룹 컨테이너가 생성된 위치는 C:\Folder1입니다.  
             >   
             >  `CREATE DATABASE[imoltp] ON`  
             >   
@@ -147,14 +151,14 @@ caps.handback.revision: 31
   
 -   개체 탐색기 정보 창  
   
--   템플릿 탐색기  
+-   Template Explorer  
   
-## 다음에서 지원되지 않는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
- 메모리 내 OLTP 개체의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 데이터베이스 엔진이 지원하지 않는 기능과 작업을 지원하지 않습니다.  
+## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>다음에서 지원되지 않는 기능 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+ 메모리 내 OLTP 개체의 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 엔진이 지원하지 않는 기능과 작업을 지원하지 않습니다.  
   
  지원되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 대한 자세한 내용은 [메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

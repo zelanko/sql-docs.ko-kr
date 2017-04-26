@@ -1,32 +1,36 @@
 ---
-title: "Transact-SQL 중단점 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 디버거, 중단점"
+title: "Transact-SQL 중단점 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, breakpoints
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41f54315c2d72e6bd73fd7499aafa94517fa5908
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 중단점
+# <a name="transact-sql-breakpoints"></a>Transact-SQL 중단점
   중단점은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하도록 지정하여 사용자가 해당 지점에 있는 코드 요소의 상태를 확인할 수 있게 해 줍니다.  
   
-## 중단점  
+## <a name="breakpoints"></a>중단점  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 실행하는 경우 특정 문에 대해 중단점을 설정/해제할 수 있습니다. 실행 중에 중단점이 있는 문에 도달하면 디버거는 변수 및 매개 변수 값과 같은 디버깅 정보를 볼 수 있도록 실행을 일시 중지합니다.  
   
  중단점은 편집기 창에서 개별적으로 관리하거나 **중단점** 창을 사용하여 전체적으로 관리할 수 있습니다. 실행을 일시 중지할 특정 조건, 중단점이 실행되는 경우에 수행할 동작 등과 같은 항목을 지정하여 중단점을 편집할 수 있습니다.  
   
-## 중단점 태스크  
+## <a name="breakpoint-tasks"></a>중단점 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -38,7 +42,7 @@ caps.handback.revision: 10
 |중단점 문이 실행될 때 수행되는 사용자 지정 작업인 **적중될 때** 동작을 지정하는 방법에 대해 설명합니다. 예에서는 메시지를 인쇄합니다.|[중단점 동작 지정](../../relational-databases/scripting/specify-a-breakpoint-action.md)|  
 |중단점의 위치를 편집하는 방법에 대해 설명합니다.|[중단점 위치 편집](../../relational-databases/scripting/edit-a-breakpoint-location.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

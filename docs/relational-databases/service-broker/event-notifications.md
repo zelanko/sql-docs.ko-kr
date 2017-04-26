@@ -1,25 +1,29 @@
 ---
-title: "이벤트 알림 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 알림, 정보"
-  - "이벤트 [SQL Server], 알림"
+title: "이벤트 알림 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications, about
+- events [SQL Server], notifications
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01d42e113fabb39353971749462c144374e470fe
+ms.lasthandoff: 04/11/2017
+
 ---
-# 이벤트 알림
+# <a name="event-notifications"></a>이벤트 알림
   이벤트 알림은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스에 이벤트 정보를 보냅니다. 이벤트 알림은 다양한 [!INCLUDE[tsql](../../includes/tsql-md.md)] DDL(데이터 언어 정의) 문과 SQL 추적 이벤트에 대한 응답으로 실행되어 이러한 이벤트에 대한 정보를 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스로 보냅니다.  
   
  이벤트 알림을 사용하여 다음을 수행할 수 있습니다.  
@@ -30,7 +34,7 @@ caps.handback.revision: 18
   
  이벤트 알림은 DDL 트리거 및 SQL 추적에 대한 대체 프로그래밍 기능을 제공합니다.  
   
-## 이벤트 알림의 이점  
+## <a name="event-notifications-benefits"></a>이벤트 알림의 이점  
  이벤트 알림은 트랜잭션 범위 밖에서 비동기적으로 실행됩니다. 따라서 DDL 트리거와 달리 이벤트 알림은 데이터베이스 응용 프로그램 내에서 사용되어 최근 트랜잭션에서 정의한 리소스를 사용하지 않고 이벤트에 응답할 수 있습니다.  
   
  SQL 추적과 달리 이벤트 알림을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 SQL 추적 이벤트에 응답하는 동작을 수행할 수 있습니다.  
@@ -47,12 +51,12 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
     '8140a771-3c4b-4479-8ac0-81008ab17984';  
 ```  
   
-## 이벤트 알림 개념  
+## <a name="event-notifications-concepts"></a>이벤트 알림 개념  
  이벤트 알림이 생성되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스와 지정한 대상 서비스 간에 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대화가 열립니다. 대화는 일반적으로 이벤트 알림이 서버 인스턴스의 개체로 존재하는 한 열린 상태로 유지됩니다. 몇몇 오류가 발생하는 경우에는 이벤트 알림을 삭제하기 전에 대화가 종료될 수 있습니다. 이러한 대화는 이벤트 알림 간에 공유되지 않습니다. 각 이벤트 알림에는 자체적인 배타 대화가 있습니다. 대화를 명시적으로 종료하면 대상 서비스가 더 이상의 메시지를 받지 못하게 되며 이벤트 알림이 다음에 실행될 때 해당 대화가 다시 열리지 않습니다.  
   
  이벤트 정보는 이벤트 발생 시기, 영향을 받는 데이터베이스 개체, 관련된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 일괄 처리 문 및 기타 정보를 제공하는 **xml** 유형의 변수로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서비스에 전달됩니다. 이벤트 알림이 만드는 XML 스키마에 대한 자세한 내용은 [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)를 참조하세요.  
   
-### 이벤트 알림과 트리거  
+### <a name="event-notifications-vs-triggers"></a>이벤트 알림과 트리거  
  다음 표에서는 트리거와 이벤트 알림을 비교 및 대조합니다.  
   
 |트리거|이벤트 알림|  
@@ -69,7 +73,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |DDL 트리거 이벤트 정보는 **xml** 데이터 형식을 반환하는 EVENTDATA 함수를 사용하여 캡처할 수 있습니다.|이벤트 알림은 Service Broker 서비스에 **xml** 이벤트 정보를 보냅니다. 해당 정보는 EVENTDATA 함수와 같은 스키마 형식으로 지정됩니다.|  
 |트리거의 메타데이터는 **sys.triggers** 및 **sys.server_triggers** 카탈로그 뷰에 포함됩니다.|이벤트 알림의 메타데이터는 **sys.event_notifications** 및 **sys.server_event_notifications** 카탈로그 뷰에 포함됩니다.|  
   
-### 이벤트 알림과 SQL 추적  
+### <a name="event-notifications-vs-sql-trace"></a>이벤트 알림과 SQL 추적  
  다음 표에서는 서버 이벤트 모니터링을 위한 이벤트 알림과 SQL 추적을 사용할 때의 차이점을 비교합니다.  
   
 |SQL 추적|이벤트 알림|  
@@ -84,9 +88,9 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |추적을 만드는 데 필요한 최소 사용 권한은 ALTER TRACE입니다. 해당 컴퓨터에 추적 파일을 만드는 데도 사용 권한이 필요합니다.|생성되는 이벤트 알림 유형에 따라 최소 사용 권한이 다릅니다. 해당 큐에 RECEIVE 사용 권한도 필요합니다.|  
 |원격으로 추적을 받을 수 있습니다.|원격으로 이벤트 알림을 받을 수 있습니다.|  
 |시스템 저장 프로시저를 사용하여 추적 이벤트를 구현합니다.|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssSB](../../includes/sssb-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] 문 조합을 사용하여 이벤트 알림을 구현합니다.|  
-|해당 추적 테이블 쿼리, 추적 파일 구문 분석 또는 SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체) TraceReader 클래스 사용을 통해 추적 이벤트 데이터에 프로그래밍 방식으로 액세스할 수 있습니다.|XML 형식 이벤트 데이터에 대한 XQuery 실행이나 SMO Event 클래스 사용을 통해 이벤트 데이터에 프로그래밍 방식으로 액세스할 수 있습니다.|  
+|해당 추적 테이블 쿼리, 추적 파일 구문 분석 또는 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체) TraceReader 클래스 사용을 통해 추적 이벤트 데이터에 프로그래밍 방식으로 액세스할 수 있습니다.|XML 형식 이벤트 데이터에 대한 XQuery 실행이나 SMO Event 클래스 사용을 통해 이벤트 데이터에 프로그래밍 방식으로 액세스할 수 있습니다.|  
   
-## 이벤트 알림 태스크  
+## <a name="event-notification-tasks"></a>이벤트 알림 태스크  
   
 |태스크|항목|  
 |----------|-----------|  
@@ -94,7 +98,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |원격 서버의 Service Broker로 메시지를 보내는 이벤트 알림에 대해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성하는 방법에 대해 설명합니다.|[이벤트 알림에 대한 대화 보안 구성](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |이벤트 알림에 대한 정보를 반환하는 방법에 대해 설명합니다.|[이벤트 알림에 대한 정보 가져오기](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)   
  [DML 트리거](../../relational-databases/triggers/dml-triggers.md)   
  [SQL 추적](../../relational-databases/sql-trace/sql-trace.md)  

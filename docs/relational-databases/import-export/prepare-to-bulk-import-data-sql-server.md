@@ -1,30 +1,34 @@
 ---
-title: "대량 데이터 가져오기 준비(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "대량 가져오기 [SQL Server], 대량 가져오기 정보"
-  - "BULK INSERT 문, 지침"
-  - "BULK INSERT 문, 제한 사항"
-  - "bcp 유틸리티 [SQL Server], 지침"
-  - "bcp 유틸리티 [SQL Server], 제한 사항"
-  - "숨겨진 문자"
-  - "OPENROWSET 함수, BCP 지침"
+title: "대량 데이터 가져오기 준비(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- bulk importing [SQL Server], about bulk importing
+- BULK INSERT statement, guidelines
+- BULK INSERT statement, restrictions
+- bcp utility [SQL Server], guidelines
+- bcp utility [SQL Server], restrictions
+- hidden characters
+- OPENROWSET function, BCP guidelines
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e797c303dff0eef613024752c2788a6480f047ac
+ms.lasthandoff: 04/11/2017
+
 ---
-# 대량 데이터 가져오기 준비(SQL Server)
+# <a name="prepare-to-bulk-import-data-sql-server"></a>대량 데이터 가져오기 준비(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **bcp** 명령, BULK INSERT 문 또는 OPENROWSET(BULK) 함수를 사용하여 데이터 파일의 데이터만 대량으로 가져올 수 있습니다.  
@@ -43,7 +47,7 @@ caps.handback.revision: 34
   
 -   대량 로그 복구 모델 사용  
   
-     이 지침은 전체 복구 모델을 사용하는 데이터베이스에 대한 내용입니다. 대량 로그된 복구 모델은 인덱싱되지 않은 테이블(*힙*)로 대량 작업을 수행할 때 유용합니다. 대량 로그 복구는 로그 행 삽입을 수행하지 않으므로 대량 로그 복구를 사용하면 트랜잭션 로그의 공간 부족 문제를 방지할 수 있습니다. 대량 로그된 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+     이 지침은 전체 복구 모델을 사용하는 데이터베이스에 대한 내용입니다. 대량 로그된 복구 모델은 인덱싱되지 않은 테이블( *힙*)로 대량 작업을 수행할 때 유용합니다. 대량 로그 복구는 로그 행 삽입을 수행하지 않으므로 대량 로그 복구를 사용하면 트랜잭션 로그의 공간 부족 문제를 방지할 수 있습니다. 대량 로그된 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
      대량 가져오기 작업을 수행하기 바로 전에 대량 로그 복구 모델을 사용하여 데이터베이스를 변경하는 것이 좋습니다. 변경한 직후에는 데이터베이스를 전체 복구 모델로 다시 설정해야 합니다. 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 34
   
      주로 데이터 파일의 끝 부분에 있는 숨겨진 문자는 다양한 유틸리티와 텍스트 편집기를 사용하여 표시할 수 있습니다. 대량 가져오기 작업 동안 ASCII 데이터 파일에 있는 숨겨진 문자가 문제를 일으켜 "예기치 않은 Null 발견" 오류가 발생할 수 있습니다. 이 경우 숨겨진 문자를 모두 찾아서 제거하면 이 문제가 해결됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
  [BULK INSERT 또는 OPENROWSET&#40;BULK...&#41;를 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp 유틸리티](../../tools/bcp-utility.md)   

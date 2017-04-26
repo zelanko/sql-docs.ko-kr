@@ -1,31 +1,35 @@
 ---
-title: "SQL Server, Broker Statistics 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Broker Statistics"
-  - "Broker Statistics 개체"
+title: "SQL Server, Broker Statistics 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Broker Statistics
+- Broker Statistics object
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f2372e2cc641919957f14145a1e7ff0c96bb74a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Broker Statistics 개체
+# <a name="sql-server-broker-statistics-object"></a>SQL Server, Broker Statistics 개체
   SQLServer:Broker Statistics 성능 개체는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 인스턴스에 대한 일반 [!INCLUDE[ssDE](../../includes/ssde-md.md)]정보를 보고하는 성능 카운터를 포함합니다. 다음 표에서는 이 개체가 포함하는 카운터를 나열합니다.  
   
 |SQL Server Broker Statistics 카운터|설명|  
 |-------------------------------------------|-----------------|  
 |**Activation Errors Total**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 활성화 저장 프로시저가 오류로 인해 종료된 횟수입니다.|  
-|**Broker Transaction Rollbacks**|DML 문과 관련된 [!INCLUDE[ssSB](../../includes/sssb-md.md)]\(예: SEND 및 RECEIVE)를 포함하는 롤백된 트랜잭션의 수입니다.|  
+|**Broker Transaction Rollbacks**|DML 문과 관련된 [!INCLUDE[ssSB](../../includes/sssb-md.md)](예: SEND 및 RECEIVE)를 포함하는 롤백된 트랜잭션의 수입니다.|  
 |**Corrupted Messages Total**|인스턴스에 의해 수신된 손상된 메시지의 수입니다.|  
 |**Dequeued Transmission Msgs/sec**|[!INCLUDE[ssSB](../../includes/sssb-md.md)] 전송 큐에서 초당 제거된 메시지의 수입니다.|  
 |**Dialog timer event count**|대화 프로토콜 계층에서 활성 상태인 타이머의 수입니다. 이 수는 활성 대화의 수에 해당됩니다.|  
@@ -62,7 +66,7 @@ caps.handback.revision: 32
 |**SQL SEND Total**|실행된 총 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 문의 수입니다.|  
 |**SQL SENDs/sec**|초당 실행된 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 문의 수입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

@@ -1,28 +1,32 @@
 ---
-title: "계산 열에 XML 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "계산 열, XML"
-  - "XML [SQL Server], 계산 열"
+title: "계산 열에 XML 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- computed columns, XML
+- XML [SQL Server], computed columns
 ms.assetid: 1313b889-69b4-4018-9868-0496dd83bf44
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f156afc96d002d1db972fb3060676c7043563a25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 계산 열에 XML 사용
+# <a name="use-xml-in-computed-columns"></a>계산 열에 XML 사용
   XML 인스턴스는 계산 열의 원본이나 계산 열의 유형으로 표시될 수 있습니다. 이 항목의 예에서는 계산 열이 있는 XML을 사용하는 방법을 보여 줍니다.  
   
-## XML 열에서 계산 열 만들기  
+## <a name="creating-computed-columns-from-xml-columns"></a>XML 열에서 계산 열 만들기  
  다음 `CREATE TABLE` 문에서 `xml` 유형 열(`col2`)은 `col1`에서 계산됩니다.  
   
 ```  
@@ -65,7 +69,7 @@ BEGIN
 END  
 ```  
   
- 다음 `CREATE TABLE` 문에서 `Col2`는 함수에서 반환된 XML 데이터(`<Features>` 요소)를 사용하는 계산 열입니다.  
+ 다음 `CREATE TABLE` 문에서 `Col2` 는 함수에서 반환된 XML 데이터(`<Features>` 요소)를 사용하는 계산 열입니다.  
   
 ```  
 CREATE TABLE T (Col1 xml, Col2 as dbo.my_udf(Col1) )  
@@ -82,7 +86,7 @@ SELECT *
 FROM T  
 ```  
   
-### 섹션 내용  
+### <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

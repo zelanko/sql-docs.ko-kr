@@ -1,30 +1,34 @@
 ---
-title: "강력한 암호 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그인 [SQL Server], 암호"
-  - "암호 [SQL Server], 강력한"
-  - "기호 [SQL Server]"
-  - "보안 [SQL Server], 암호"
-  - "암호 [SQL Server], 기호"
-  - "문자 [SQL Server], 암호 정책"
-  - "강력한 암호 [SQL Server]"
+title: "강력한 암호 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logins [SQL Server], passwords
+- passwords [SQL Server], strong
+- symbols [SQL Server]
+- security [SQL Server], passwords
+- passwords [SQL Server], symbols
+- characters [SQL Server], password policies
+- strong passwords [SQL Server]
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e58e590b2b57c96a18b8752b33d7b559b375d028
+ms.lasthandoff: 04/11/2017
+
 ---
-# 강력한 암호
+# <a name="strong-passwords"></a>강력한 암호
   서버 보안 배포에서 암호는 가장 약한 링크가 될 수 있습니다. 암호를 선택할 때는 항상 주의를 기울여야 합니다. 강력한 암호의 특징은 다음과 같습니다.  
   
 -   길이가 적어도 8자 이상입니다.  
@@ -53,7 +57,7 @@ caps.handback.revision: 30
   
  OLE DB 또는 ODBC 연결 문자열에서 사용할 경우 로그인 및 암호는 [] {}() , ; ? * ! @. 문자를 포함할 수 없습니다. 이 문자는 연결을 시작하거나 연결 값을 구분하는 데 사용됩니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [암호 정책](../../relational-databases/security/password-policy.md)  
   
   

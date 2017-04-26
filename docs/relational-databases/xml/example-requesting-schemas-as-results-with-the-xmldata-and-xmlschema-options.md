@@ -1,28 +1,32 @@
 ---
-title: "예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RAW 모드, 스키마 요청 예"
-  - "RAW 모드, XMLDATA 및 XMLSCHEMA"
+title: "예제: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RAW mode, requesting schema example
+- RAW mode, with XMLDATA and XMLSCHEMA
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bca71096e7e34aa6a72c84f065fd7df76eb6462f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
+# <a name="example-requesting-schemas-as-results-with-the-xmldata-and-xmlschema-options"></a>예: XMLDATA 및 XMLSCHEMA 옵션을 사용하여 결과로 스키마 요청
   다음 쿼리는 문서 구조를 설명하는 XMLDATA 스키마를 반환합니다.  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 USE AdventureWorks2012;  
@@ -51,7 +55,7 @@ GO
 ```  
   
 > [!NOTE]  
->  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1`)가 변경됩니다. 네임스페이스 식별자는 **Schema*n***으로 구성됩니다. 여기서 ***n***은 정수입니다.  
+>  <`Schema`>는 네임스페이스로 선언되었습니다. 서로 다른 FOR XML 쿼리에서 여러 XML-Data 스키마를 요청할 때는 네임스페이스 충돌을 피하기 위해 쿼리가 실행될 때마다 네임스페이스 식별자(이 예제에서는 `Schema1` )가 변경됩니다. 네임스페이스 식별자는 **Schema*n***으로 구성됩니다. 여기서 ***n***은 정수입니다.  
   
  `XMLSCHEMA` 옵션을 지정하면 결과에 대해 XSD 스키마를 요청할 수 있습니다.  
   
@@ -122,7 +126,7 @@ GO
 <row xmlns="urn:example.com" ProductModelID="119" Name="Bike Wash" />  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

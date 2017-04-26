@@ -1,33 +1,37 @@
 ---
-title: "변경 내용 추적 사용(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "변경 내용 추적 [SQL Server], 변경"
-  - "변경 내용 추적 [SQL Server], 문제 해결"
-  - "데이터 업데이트 [SQL Server]"
-  - "문제 해결 [SQL Server], 변경 내용 추적"
-  - "데이터 변경 내용 [SQL Server]"
-  - "데이터 변경 내용 추적 [SQL Server]"
-  - "데이터 [SQL Server], 변경"
-  - "변경 내용 추적 [SQL Server], 데이터 복원"
-  - "변경 내용 추적 [SQL Server], 결과의 일관성 유지"
-  - "변경 내용 추적 [SQL Server], 변경 내용 처리"
+title: "변경 내용 추적 사용(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- change tracking [SQL Server], making changes
+- change tracking [SQL Server], troubleshooting
+- updating data [SQL Server]
+- troubleshooting [SQL Server], change tracking
+- data changes [SQL Server]
+- tracking data changes [SQL Server]
+- data [SQL Server], changing
+- change tracking [SQL Server], data restore
+- change tracking [SQL Server], ensuring consistent results
+- change tracking [SQL Server], handling changes
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7440e5f259c45a782066ac311a2f9f42c134c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 변경 내용 추적 사용(SQL Server)
+# <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   변경 내용 추적을 사용하는 응용 프로그램은 추적된 변경 내용을 가져와서 다른 데이터 저장소에 적용하고 원본 데이터베이스를 업데이트할 수 있어야 합니다. 이 항목에서는 이러한 태스크를 수행하는 방법과 장애 조치(Failover)가 발생하여 백업에서 데이터베이스를 복원해야 할 때 변경 내용 추적이 수행하는 역할에 대해 설명합니다.  
@@ -35,7 +39,7 @@ caps.handback.revision: 26
 ##  <a name="Obtain"></a> 변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
  변경 내용 추적 함수를 사용하여 변경 내용과 데이터베이스에 수행된 변경에 대한 정보를 가져오는 방법에 대해 설명합니다.  
   
-### 변경 내용 추적 함수 정보  
+### <a name="about-the-change-tracking-functions"></a>변경 내용 추적 함수 정보  
  응용 프로그램은 다음 함수를 사용하여 데이터베이스에 적용된 변경 내용과 해당 변경 내용에 대한 정보를 가져올 수 있습니다.  
   
  CHANGETABLE(CHANGES …) 함수  
@@ -49,7 +53,7 @@ caps.handback.revision: 26
   
      다음 그림에서는 CHANGETABLE(CHANGES …)를 사용하여 변경 내용을 가져오는 방법을 보여 줍니다.  
   
-     ![변경 내용 추적 쿼리 출력의 예](../../relational-databases/track-changes/media/queryoutput.gif "변경 내용 추적 쿼리 출력의 예")  
+     ![변경 내용 추적 쿼리 출력의 예](../../relational-databases/track-changes/media/queryoutput.gif "Example of change tracking query output")  
   
  CHANGE_TRACKING_CURRENT_VERSION() 함수  
  다음에 변경 내용을 쿼리할 때 사용할 현재 버전을 가져오는 데 사용됩니다. 이 버전은 마지막으로 커밋된 트랜잭션의 버전을 나타냅니다.  
@@ -57,7 +61,7 @@ caps.handback.revision: 26
  CHANGE_TRACKING_MIN_VALID_VERSION() 함수  
  클라이언트에 포함할 수 있는 올바른 최소 버전을 가져오고 CHANGETABLE()에서 올바른 결과를 가져오는 데 계속 사용됩니다. 클라이언트는 이 함수에서 반환된 값에 대해 마지막 동기화 버전을 검사해야 합니다. 마지막 동기화 버전이 이 함수에서 반환된 버전보다 작은 경우 클라이언트는 CHANGETABLE()에서 올바른 결과를 가져올 수 없으며 다시 초기화되어야 합니다.  
   
-### 초기 데이터 가져오기  
+### <a name="obtaining-initial-data"></a>초기 데이터 가져오기  
  응용 프로그램에서 처음으로 변경 내용을 가져오려면 먼저 초기 데이터 및 동기화 버전을 가져오는 쿼리를 보내야 합니다. 응용 프로그램은 테이블에서 적합한 데이터를 직접 가져온 다음 CHANGE_TRACKING_CURRENT_VERSION()을 사용하여 초기 버전을 가져와야 합니다. 처음 변경 내용을 가져오면 이 버전이 CHANGETABLE(CHANGES …)에 전달됩니다.  
   
  다음 예에서는 초기 동기화 버전 및 초기 데이터 집합을 가져오는 방법을 보여 줍니다.  
@@ -73,7 +77,7 @@ caps.handback.revision: 26
         SalesLT.Product AS P  
 ```  
   
-### 변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
+### <a name="using-the-change-tracking-functions-to-obtain-changes"></a>변경 내용 추적 함수를 사용하여 변경 내용 가져오기  
  테이블에 대해 변경된 행과 해당 변경 내용에 대한 정보를 가져오려면 CHANGETABLE(CHANGES…)를 사용합니다. 예를 들어 다음 쿼리에서는 `SalesLT.Product` 테이블에 대한 변경 내용을 가져옵니다.  
   
 ```tsql  
@@ -125,13 +129,13 @@ ON
     P.ProductID = CT.ProductID  
 ```  
   
-### 버전 번호  
+### <a name="version-numbers"></a>버전 번호  
  변경 내용 추적을 사용하도록 설정된 데이터베이스에는 버전 카운터가 있습니다. 이 카운터는 변경 내용 추적이 설정된 테이블에 변경 내용이 적용될 때마다 증가합니다. 변경된 각 행에는 이와 연관된 버전 번호가 있습니다. 변경 내용을 쿼리하기 위해 요청이 응용 프로그램에 전송되면 버전 번호를 제공하는 함수가 호출됩니다. 이 함수는 해당 버전 이후 적용된 모든 변경 내용에 대한 정보를 반환합니다. 여러 가지 측면에서 변경 내용 추적 버전은 개념상 **rowversion** 데이터 형식과 유사합니다.  
   
-### 마지막으로 동기화된 버전의 유효성 검사  
+### <a name="validating-the-last-synchronized-version"></a>마지막으로 동기화된 버전의 유효성 검사  
  변경 내용에 대한 정보는 제한된 시간 동안 유지 관리됩니다. 시간은 ALTER DATABASE의 일부로 지정할 수 있는 CHANGE_RETENTION 매개 변수로 제어됩니다.  
   
- CHANGE_RETENTION에 대해 지정하는 시간에 따라 모든 응용 프로그램이 데이터베이스에서 변경 내용을 요청해야 하는 빈도가 결정됩니다. 응용 프로그램의 *last_synchronization_version* 값이 테이블에 대해 올바른 최소 동기화 버전보다 작으면 해당 응용 프로그램은 올바른 변경 내용 열거를 수행할 수 없습니다. 이는 일부 변경 내용 정보가 정리되었을 수 있기 때문입니다. 응용 프로그램이 CHANGETABLE(CHANGES …)를 사용하여 변경 내용을 가져오려면 먼저 CHANGETABLE(CHANGES …)에 전달하려고 하는 *last_synchronization_version*에 대한 값의 유효성을 검사해야 합니다. *last_synchronization_version*의 값이 잘못된 경우 해당 응용 프로그램은 모든 데이터를 다시 초기화해야 합니다.  
+ CHANGE_RETENTION에 대해 지정하는 시간에 따라 모든 응용 프로그램이 데이터베이스에서 변경 내용을 요청해야 하는 빈도가 결정됩니다. 응용 프로그램의 *last_synchronization_version* 값이 테이블에 대해 올바른 최소 동기화 버전보다 작으면 해당 응용 프로그램은 올바른 변경 내용 열거를 수행할 수 없습니다. 이는 일부 변경 내용 정보가 정리되었을 수 있기 때문입니다. 응용 프로그램이 CHANGETABLE(CHANGES …)를 사용하여 변경 내용을 가져오려면 먼저 CHANGETABLE(CHANGES …)에 전달하려고 하는 *last_synchronization_version* 에 대한 값의 유효성을 검사해야 합니다. *last_synchronization_version* 의 값이 잘못된 경우 해당 응용 프로그램은 모든 데이터를 다시 초기화해야 합니다.  
   
  다음 예에서는 각 테이블에 대한 `last_synchronization_version` 값의 유효성을 확인하는 방법을 보여 줍니다.  
   
@@ -158,14 +162,14 @@ BEGIN
 END  
 ```  
   
-### 열 추적 사용  
+### <a name="using-column-tracking"></a>열 추적 사용  
  응용 프로그램에서 열 추적을 사용하면 전체 행 대신 변경된 열에 대한 데이터만 가져올 수 있습니다. 예를 들어 테이블에 크지만 거의 변경되지 않는 열이 하나 이상 있고 자주 변경되는 다른 열도 있는 시나리오가 있을 경우 열 추적을 사용하지 않으면 응용 프로그램이 행이 변경되었다는 사실만 확인할 수 있으므로 큰 열 데이터를 포함하는 데이터를 모두 동기화해야 합니다. 그러나 열 추적을 사용하면 응용 프로그램이 큰 열 데이터가 변경되었는지 여부를 확인하여 변경된 데이터만 동기화할 수 있습니다.  
   
  열 추적 정보는 CHANGETABLE(CHANGES …) 함수로 반환되는 SYS_CHANGE_COLUMNS 열에 나타납니다.  
   
  변경되지 않은 열에 대해 NULL이 반환되도록 열 추적을 사용할 수 있습니다. 열이 NULL로 변경될 수 있는 경우 해당 열이 변경되었는지 여부를 나타내기 위해 별도의 열을 반환해야 합니다.  
   
- 다음 예에서는 `CT_ThumbnailPhoto` 열이 변경되지 않은 경우 해당 열이 `NULL`이 됩니다. 또한 이 열은 `NULL`로 변경되었으므로 `NULL`이 될 수 있습니다. 응용 프로그램은 `CT_ThumbNailPhoto_Changed` 열을 사용하여 해당 열이 변경되었는지 여부를 확인할 수 있습니다.  
+ 다음 예에서는 `CT_ThumbnailPhoto` 열이 변경되지 않은 경우 해당 열이 `NULL` 이 됩니다. 또한 이 열은 `NULL` 로 변경되었으므로 `NULL` 이 될 수 있습니다. 응용 프로그램은 `CT_ThumbNailPhoto_Changed` 열을 사용하여 해당 열이 변경되었는지 여부를 확인할 수 있습니다.  
   
 ```tsql  
 DECLARE @PhotoColumnId int = COLUMNPROPERTY(  
@@ -193,7 +197,7 @@ ON
      CT.SYS_CHANGE_OPERATION = 'U'  
 ```  
   
-### 일관되고 올바른 결과 가져오기  
+### <a name="obtaining-consistent-and-correct-results"></a>일관되고 올바른 결과 가져오기  
  테이블에 대해 변경된 데이터를 가져오려면 여러 단계를 수행해야 합니다. 특정 문제를 검토하여 처리하지 않으면 일관되지 않거나 잘못된 결과가 반환될 수 있습니다.  
   
  예를 들어 Sales 테이블과 SalesOrders 테이블에 적용된 변경 내용을 가져오려면 응용 프로그램에서 다음 단계를 수행해야 합니다.  
@@ -220,7 +224,7 @@ ON
   
  앞에서 나열된 문제점을 해결하려면 스냅숏 격리를 사용하는 것이 좋습니다. 스냅숏 격리를 사용하면 변경 내용 정보의 일관성을 유지하고 백그라운드 정리 태스크와 관련된 경합 상태를 방지할 수 있습니다. 스냅숏 트랜잭션을 사용하지 않으면 변경 내용 추적을 사용하는 응용 프로그램을 개발할 때 더 많은 노력이 필요할 수 있습니다.  
   
-#### 스냅숏 격리 사용  
+#### <a name="using-snapshot-isolation"></a>스냅숏 격리 사용  
  변경 내용 추적은 스냅숏 격리와 원활하게 작동하도록 디자인되었습니다. 데이터베이스에 스냅숏 격리를 사용하도록 설정해야 합니다. 또한 변경 내용을 가져오는 데 필요한 모든 단계를 스냅숏 트랜잭션 내에 포함해야 합니다. 이렇게 하면 변경 내용을 가져오는 동안 데이터에 적용된 모든 변경 내용이 스냅숏 트랜잭션 내의 쿼리에 표시되지 않습니다.  
   
  스냅숏 트랜잭션 내의 데이터를 가져오려면 다음 단계를 수행합니다.  
@@ -264,12 +268,12 @@ COMMIT TRAN
   
  스냅숏 트랜잭션에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
-#### 스냅숏 격리 사용의 대체 방법  
- 스냅숏 격리 사용의 대체 방법이 있지만 이 경우 모든 응용 프로그램 요구 사항이 충족되려면 더 많은 작업이 필요합니다. *last_synchronization_version*의 유효성을 유지하며 변경 내용을 가져오기 전에 정리 프로세스로 인해 데이터가 제거되지 않도록 하려면 다음을 수행합니다.  
+#### <a name="alternatives-to-using-snapshot-isolation"></a>스냅숏 격리 사용의 대체 방법  
+ 스냅숏 격리 사용의 대체 방법이 있지만 이 경우 모든 응용 프로그램 요구 사항이 충족되려면 더 많은 작업이 필요합니다. *last_synchronization_version* 의 유효성을 유지하며 변경 내용을 가져오기 전에 정리 프로세스로 인해 데이터가 제거되지 않도록 하려면 다음을 수행합니다.  
   
-1.  CHANGETABLE()을 호출한 후 *last_synchronization_version*을 확인합니다.  
+1.  CHANGETABLE()을 호출한 후 *last_synchronization_version* 을 확인합니다.  
   
-2.  CHANGETABLE()을 사용하여 변경 내용을 가져오는 각 쿼리의 일부로 *last_synchronization_version*을 확인합니다.  
+2.  CHANGETABLE()을 사용하여 변경 내용을 가져오는 각 쿼리의 일부로 *last_synchronization_version* 을 확인합니다.  
   
  다음 열거에 대한 동기화 버전을 가져온 후 변경 내용이 발생할 수 있습니다. 이러한 상황은 다음 두 가지 방식으로 처리할 수 있습니다. 사용되는 옵션은 응용 프로그램과 해당 응용 프로그램이 각 접근 방식의 부작용을 처리할 수 있는 방식에 따라 달라집니다.  
   
@@ -309,10 +313,10 @@ COMMIT TRAN
   
      응용 프로그램에서 이 절을 사용하여 컨텍스트 정보를 저장할 수 있습니다.  
   
-### 충돌 확인  
+### <a name="checking-for-conflicts"></a>충돌 확인  
  양방향 동기화 시나리오에서 클라이언트 응용 프로그램은 응용 프로그램이 마지막으로 변경 내용을 가져온 이후 행이 업데이트되지 않았는지 여부를 확인해야 합니다.  
   
- 다음 예에서는 별도의 쿼리 없이 CHANGETABLE(VERSION  ) 함수를 사용하여 가장 효율적인 방법으로 충돌을 확인하는 방법을 보여 줍니다. 이 예에서 `CHANGETABLE(VERSION …)`은 `SYS_CHANGE_VERSION`에서 지정한 행에 대한 `@product id`을 확인합니다. `CHANGETABLE(CHANGES …)` 가 동일한 정보를 가져올 수 있지만 효율성이 떨어집니다. 행에 대한 `SYS_CHANGE_VERSION` 값이 `@last_sync_version`값보다 크면 충돌이 발생합니다. 충돌이 발생하는 경우 행이 업데이트되지 않습니다. 행에 사용할 수 있는 변경 정보가 없을 수 있으므로 `ISNULL()` 검사가 필요합니다. 변경 내용 추적을 설정한 이후 또는 변경 내용 정보를 정리한 이후 행이 업데이트되지 않은 경우 변경 내용 정보가 없습니다.  
+ 다음 예에서는 별도의 쿼리 없이 CHANGETABLE(VERSION  ) 함수를 사용하여 가장 효율적인 방법으로 충돌을 확인하는 방법을 보여 줍니다. 이 예에서 `CHANGETABLE(VERSION …)` 은 `SYS_CHANGE_VERSION` 에서 지정한 행에 대한 `@product id`을 확인합니다. `CHANGETABLE(CHANGES …)` 가 동일한 정보를 가져올 수 있지만 효율성이 떨어집니다. 행에 대한 `SYS_CHANGE_VERSION` 값이 `@last_sync_version`값보다 크면 충돌이 발생합니다. 충돌이 발생하는 경우 행이 업데이트되지 않습니다. 행에 사용할 수 있는 변경 정보가 없을 수 있으므로 `ISNULL()` 검사가 필요합니다. 변경 내용 추적을 설정한 이후 또는 변경 내용 정보를 정리한 이후 행이 업데이트되지 않은 경우 변경 내용 정보가 없습니다.  
   
 ```tsql  
 -- Assumption: @last_sync_version has been validated.  
@@ -355,7 +359,7 @@ BEGIN
 END  
 ```  
   
-### 컨텍스트 정보 설정  
+### <a name="setting-context-information"></a>컨텍스트 정보 설정  
  응용 프로그램은 WITH CHANGE_TRACKING_CONTEXT 절을 사용하여 컨텍스트 정보를 변경 내용 정보와 함께 저장할 수 있습니다. 이 정보는 CHANGETABLE(CHANGES  )에서 반환된 SYS_CHANGE_CONTEXT 열에서 가져올 수 있습니다.  
   
  일반적으로 컨텍스트 정보는 변경 내용의 원본을 식별하는 데 사용됩니다. 변경 내용의 원본을 식별할 수 있는 경우 이 컨텍스트 정보는 데이터 저장소에서 사용되어 데이터 저장소에서 다시 동기화할 때 변경 내용을 가져오지 않도록 할 수 있습니다.  
@@ -377,7 +381,7 @@ END
          0)  
 ```  
   
-### 일관성 있고 올바른 결과 확인  
+### <a name="ensuring-consistent-and-correct-results"></a>일관성 있고 올바른 결과 확인  
  응용 프로그램은 @last_sync_version 값의 유효성을 검사할 때 정리 프로세스를 고려해야 합니다. 그 이유는 CHANGE_TRACKING_MIN_VALID_VERSION()이 호출된 이후 업데이트가 적용되기 전에 데이터가 제거되었을 수도 있기 때문입니다.  
   
 > [!IMPORTANT]  
@@ -432,7 +436,7 @@ COMMIT TRAN
   
 -   클라이언트가 변경 내용에 대해 쿼리할 때 서버의 각 클라이언트에 대한 마지막 동기화 버전을 기록합니다. 데이터에 문제가 있으면 마지막으로 동기화된 버전 번호가 일치하지 않습니다. 이것은 다시 동기화해야 한다는 것을 나타냅니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [변경 내용 추적 관리&#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   
@@ -443,3 +447,4 @@ COMMIT TRAN
  [WITH CHANGE_TRACKING_CONTEXT&#40;Transact-SQL&#41;](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md)  
   
   
+

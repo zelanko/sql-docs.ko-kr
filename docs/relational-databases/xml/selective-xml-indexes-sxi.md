@@ -1,22 +1,26 @@
 ---
-title: "SXI(선택적 XML 인덱스) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SXI(선택적 XML 인덱스) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9c9821e721ce4fdc9187bb69c75cf05c74ff3f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# SXI(선택적 XML 인덱스)
+# <a name="selective-xml-indexes-sxi"></a>SXI(선택적 XML 인덱스)
   선택적 XML 인덱스는 일반 XML 인덱스 외에 추가로 제공되는 또 다른 유형의 XML 인덱스입니다. 선택적 XML 인덱스 기능의 목적은 다음과 같습니다  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 XML 데이터에 대한 쿼리 성능을 향상시킵니다.  
@@ -42,7 +46,6 @@ caps.handback.revision: 8
   
 4.  선택적 XML 인덱스를 사용하기 위해 응용 프로그램을 업데이트할 필요가 없습니다.  
   
- [항목 내용](#top)  
   
 ##  <a name="compare"></a> 선택적 XML 인덱스 및 보조 XML 인덱스  
   
@@ -55,7 +58,6 @@ caps.handback.revision: 8
   
 -   문서 구조에서 알 수 없는 위치에 있는 알 수 없는 요소에 대한 쿼리를 지원하는 경우  
   
- [항목 내용](#top)  
   
 ##  <a name="example"></a> 선택적 XML 인덱스의 간단한 예  
  테이블에 약 500,000개의 행이 있는 XML 문서인 다음 XML 조각을 살펴보십시오.  
@@ -98,12 +100,11 @@ FOR
   
  이러한 요소에 대한 자세한 내용은 [관련 태스크](#reltasks)를 참조하십시오.  
   
- [항목 내용](#top)  
   
-## 지원되는 기능, 사전 요구 사항 및 제한 사항  
+## <a name="supported-features-prerequisites-and-limitations"></a>지원되는 기능, 사전 요구 사항 및 제한 사항  
   
 ###  <a name="features"></a> 지원되는 XML 기능  
- 선택적 XML 인덱스는 exist(), value() 및 nodes() 메서드 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 지원하는 XQuery를 지원합니다.  
+ 선택적 XML 인덱스는 exist(), value() 및 nodes() 메서드 내에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 지원하는 XQuery를 지원합니다.  
   
 -   exist(), value() 및 nodes() 메서드의 경우 선택적 XML 인덱스는 전체 식을 변환할 수 있는 충분한 정보를 포함합니다.  
   
@@ -113,7 +114,6 @@ FOR
   
 -   modify() 메서드의 경우 선택적 XML 인덱스는 XML 문서를 업데이트하는 데 사용되지 않습니다.  
   
- [항목 내용](#top)  
   
 ###  <a name="unsupported"></a> 지원되지 않는 XML 기능  
  선택적 XML 인덱스는 XML의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구현에서 지원되는 다음 기능을 지원하지 않습니다.  
@@ -130,7 +130,6 @@ FOR
   
 -   id() 함수를 사용하여 노드 식별자 지정 및 검색  
   
- [항목 내용](#top)  
   
 ###  <a name="prereq"></a> 필수 구성 요소  
  사용자 테이블의 XML 열에 대해 선택적 XML 인덱스를 만들려면 먼저 다음 사전 요구 사항을 충족해야 합니다.  
@@ -141,7 +140,6 @@ FOR
   
 -   선택적 XML 인덱스와 함께 사용할 경우 사용자 테이블의 클러스터링 키는 15열로 제한됩니다.  
   
- [항목 내용](#top)  
   
 ###  <a name="limits"></a> 제한 사항  
  **일반 요구 사항 및 제한 사항**  
@@ -174,9 +172,9 @@ FOR
   
  지정된 행에서 지원되는 non이 아닌 열의 최대 수는 다음과 같이 열에 있는 데이터의 크기에 따라 달라집니다.  
   
--   최상의 경우에서 모든 열이 **bit** 유형이면 1024개의 null이 아닌 열이 지원됩니다.  
+-   최상의 경우에서 모든 열이 **bit**유형이면 1024개의 null이 아닌 열이 지원됩니다.  
   
--   최악의 경우에서 모든 열이 **varchar** 유형의 큰 개체이면 null이 아닌 열이 236개만 지원됩니다.  
+-   최악의 경우에서 모든 열이 **varchar**유형의 큰 개체이면 null이 아닌 열이 236개만 지원됩니다.  
   
  선택적 XML 인덱스는 인덱싱되는 각 노드에 대해 1-4개의 열을 내부적으로 사용합니다. 인덱싱할 수 있는 총 노드 수는 인덱싱된 경로에 있는 데이터의 실제 크기에 따라 60개부터 수백 개까지 다양합니다.  
   
@@ -194,7 +192,6 @@ FOR
   
 -   선택적 XML 인덱스 및 보조 선택적 XML 인덱스는 데이터베이스 튜닝 관리자에서 지원되지 않습니다.  
   
- [항목 내용](#top)  
   
 ##  <a name="reltasks"></a> 관련 태스크  
   
@@ -205,6 +202,5 @@ FOR
 |선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |보조 선택적 XML 인덱스를 만들고, 변경하고, 삭제합니다.|[보조 선택적 XML 인덱스 만들기, 변경 및 삭제](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  
   
- [항목 내용](#top)  
   
   

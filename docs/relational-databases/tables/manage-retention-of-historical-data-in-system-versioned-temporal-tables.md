@@ -1,23 +1,27 @@
 ---
-title: "시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7925ebef-cdb1-4cfe-b660-a8604b9d2153
 caps.latest.revision: 23
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c8237dfcc25045fb0fec915c942ea7968e02a13
+ms.lasthandoff: 04/11/2017
+
 ---
-# 시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   시스템 버전 관리된 임시 테이블에서 기록 테이블은 특히 다음과 같은 상황에서 일반 테이블보다 데이터베이스 크기를 좀 더 크게 늘릴 수 있습니다.  
@@ -28,7 +32,7 @@ caps.handback.revision: 23
   
  크기가 크고 점점 증가하는 기록 테이블은 기본 저장소 비용과 임시 쿼리에 대한 성능 세금 부과로 인해 문제가 발생할 수 있습니다. 따라서 기록 테이블에서 데이터를 관리하기 위한 데이터 보존 정책을 개발하는 것이 모든 임시 테이블의 수명 주기 계획 및 관리의 중요한 요소입니다.  
   
-## 기록 테이블에 대한 데이터 보존 관리  
+## <a name="data-retention-management-for-history-table"></a>기록 테이블에 대한 데이터 보존 관리  
  임시 테이블 데이터 보존 관리는 각 임시 테이블에 대한 필수 보존 기간을 결정하는 것부터 시작됩니다. 대부분의 경우 보존 정책은 임시 테이블을 사용하는 응용 프로그램의 비즈니스 논리의 일부로 간주해야 합니다. 예를 들어 데이터 감사와 시간 이동 시나리오에서 응용 프로그램은 온라인 쿼리에 사용할 수 있는 기록 데이터의 기간 측면에서 확실하게 요구되는 사항이 있습니다.  
   
  데이터 보존 기간을 결정하고 나면 그 다음으로 기록 데이터 저장 방법과 저장 위치, 그리고 요구되는 보존 기간보다 오래된 기록 데이터를 삭제하는 방법 등 기록 데이터를 관리하기 위한 계획을 개발합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 다음 세 가지 방법으로 임시 기록 테이블에서 기록 데이터를 관리합니다.  
@@ -41,11 +45,11 @@ caps.handback.revision: 23
   
  기록 데이터 문제 완화 또는 정리를 위한 논리는 이 방법 중 한 가지를 사용하며 현재 테이블에서 기간 종료에 해당하는 열을 기반으로 합니다. 각 행에 대해 기간 값의 끝에서는 행 버전이 "닫힌" 상태가 되는, 즉 기록 테이블에서 해당 값이 처음 삽입되는 순간을 결정합니다. 예를 들어 조건 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 은1개월보다 오래된 기록 데이터를 기록 테이블에서 제거하거나 제외해야 한다고 지정합니다.  
   
-> **참고:** 이 항목의 예제에서는 이 [임시 테이블 예제](https://msdn.microsoft.com/library/mt590957.aspx)를 사용합니다.  
+> **참고:**  이 항목의 예제에서는 이 [임시 테이블 예제](https://msdn.microsoft.com/library/mt590957.aspx)를 사용합니다.  
   
-## 스트레치 데이터베이스 접근 방식 사용  
+## <a name="using-stretch-database-approach"></a>스트레치 데이터베이스 접근 방식 사용  
   
-> **참고:** Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.  
+> **참고:**  Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.  
   
  [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.  
   
@@ -62,26 +66,26 @@ caps.handback.revision: 23
   
  스트레치 마법사 또는 TRANSACT-SQL을 사용하여 스트레치를 위해 임시 기록 테이블을 구성할 수 있으며 시스템 버전 관리가 **ON**으로 설정되어 있어도 임시 기록 테이블에 스트레치를 사용하도록 설정할 수 있습니다. 현재 테이블을 스트레치하는 것은 의미가 없으므로 허용되지 않습니다.  
   
-### 스트레치 마법사를 사용하여 전체 기록 테이블 스트레치  
+### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>스트레치 마법사를 사용하여 전체 기록 테이블 스트레치  
  초보자를 위한 가장 쉬운 방법은 스트레치 마법사를 사용하여 전체 데이터베이스에 대해 스트레치를 사용하도록 설정한 다음 스트레치 마법사 내에서 임시 기록 테이블을 선택 하는 것입니다(이 예에서는 다른 빈 데이터베이스에서 Department 테이블을 시스템 버전 관리된 임시 테이블로 구성했다고 가정). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 임시 기록 테이블 자체를 마우스 오른쪽 단추로 클릭하고 스트레치를 클릭할 수 없습니다.  
   
-1.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **스트레치**를 차례로 클릭하고 **사용**을 클릭하여 마법사를 시작합니다.  
+1.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **스트레치**를 차례로 클릭하고 **사용** 을 클릭하여 마법사를 시작합니다.  
   
 2.  **테이블 선택** 창에서 임시 기록 테이블에 대한 확인란을 선택하고 다음을 클릭합니다.  
   
-     ![Selecting the history table on the Select tables page](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "Selecting the history table on the Select tables page")  
+     ![테이블 선택 페이지에서 기록 테이블 선택](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "테이블 선택 페이지에서 기록 테이블 선택")  
   
 3.  **Azure 구성** 창에서 로그인 자격 증명을 제공합니다. Microsoft Azure에 로그인하거나 계정을 등록합니다. 사용할 구독을 선택하고 Azure 지역을 선택합니다. 그런 다음 새 서버를 만들거나 기존 서버를 선택합니다. **다음**을 클릭합니다.  
   
-     ![Create new Azure server - Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-4.png "Create new Azure server - Stretch Database wizard")  
+     ![새 Azure 서버 만들기 - Stretch Database 마법사](../../relational-databases/tables/media/stretch-wizard-4.png "새 Azure 서버 만들기 - Stretch Database 마법사")  
   
 4.  **보안 자격 증명** 창에서 원본 SQL Server 데이터베이스 자격 증명을 보호하기 위해 데이터베이스 마스터 키에 대한 암호를 제공하고 다음을 클릭합니다.  
   
-     ![Secure credentials page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-6.png "Secure credentials page of the Stretch Database wizard")  
+     ![Stretch Database 마법사의 보안 자격 증명 페이지](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 마법사의 보안 자격 증명 페이지")  
   
-5.  **선택 IP 주소** 창에서 Azure 서버가 SQL Server와 통신할 수 있도록 SQL Server에 대한 IP 주소 범위를 제공합니다. 방화벽 규칙이 이미 있는 기존 서버를 선택한 경우 여기서 다음을 클릭하기만 하면 기존 방화벽 규칙을 사용할 수 있습니다. **다음**을 클릭하고 **마침**을 클릭하여 스트레치 데이터베이스를 사용하도록 설정한 다음 임시 기록 테이블을 스트레치합니다.  
+5.  **선택 IP 주소** 창에서 Azure 서버가 SQL Server와 통신할 수 있도록 SQL Server에 대한 IP 주소 범위를 제공합니다. 방화벽 규칙이 이미 있는 기존 서버를 선택한 경우 여기서 다음을 클릭하기만 하면 기존 방화벽 규칙을 사용할 수 있습니다. **다음** 을 클릭하고 **마침** 을 클릭하여 스트레치 데이터베이스를 사용하도록 설정한 다음 임시 기록 테이블을 스트레치합니다.  
   
-     ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")  
+     ![Stretch Database 마법사의 IP 주소 선택 페이지](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 마법사의 IP 주소 선택 페이지")  
   
 6.  마법사가 완료되면 데이터베이스에 스트레치가 사용하도록 설정되었는지 확인합니다. 개체 탐색기에서 데이터베이스가 스트레치되었는지 나타내는 아이콘을 살펴봅니다.  
   
@@ -95,15 +99,15 @@ caps.handback.revision: 23
   
 -   [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
-### Transact-SQL을 사용하여 전체 기록 테이블 스트레치  
- Transact-SQL을 사용하여 로컬 서버에서 스트레치를 사용하도록 설정하고 [데이터베이스에 대해 스트레치 데이터베이스를 사용](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)하도록 설정할 수 있습니다. 그런 다음 [TRANSACT-SQL을 사용하여 테이블에서 스트레치 데이터베이스를 사용하도록 설정](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)할 수 있습니다. 스트레치 데이터베이스에 대해 이전에 사용하도록 설정된 데이터베이스를 사용하여 기존 시스템 버전 관리된 임시 기록 테이블을 스트레치할 수 있도록 다음 Transact-SQL 스크립트를 실행합니다.  
+### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Transact-SQL을 사용하여 전체 기록 테이블 스트레치  
+ Transact-SQL을 사용하여 로컬 서버에서 스트레치를 사용하도록 설정하고 [데이터베이스에 대해 스트레치 데이터베이스를 사용](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)하도록 설정할 수 있습니다. 그런 다음  [TRANSACT-SQL을 사용하여 테이블에서 스트레치 데이터베이스를 사용하도록 설정](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)할 수 있습니다. 스트레치 데이터베이스에 대해 이전에 사용하도록 설정된 데이터베이스를 사용하여 기존 시스템 버전 관리된 임시 기록 테이블을 스트레치할 수 있도록 다음 Transact-SQL 스크립트를 실행합니다.  
   
 ```  
 ALTER TABLE <history table name>   
 SET (REMOTE_DATA_ARCHIVE = ON (MIGRATION_STATE = OUTBOUND));  
 ```  
   
-### Transact-SQL을 사용하여 일부 기록 테이블 스트레치  
+### <a name="using-transact-sql-to-stretch-a-portion-of-the-history-table"></a>Transact-SQL을 사용하여 일부 기록 테이블 스트레치  
  기록 테이블 중 일부만 스트레치하려면 [인라인 조건자 함수](https://msdn.microsoft.com/library/mt613432.aspx)를 만들어 시작합니다. 이 예에서는 2015년 12월 1일에 처음으로 인라인 조건자 함수를 구성하고 2015년 11월 1일보다 오래된 모든 기록 날짜를 Azure로 스트레치한다고 가정합니다. 이 작업 수행을 위해 다음 함수를 만들기 시작합니다.  
   
 ```  
@@ -157,7 +161,7 @@ COMMIT ;
   
  SQL Server 에이전트 또는 일부 다른 예약 메커니즘을 사용하여 조건자 함수 정의가 항상 유효한지 확인합니다.  
   
-## 테이블 분할 접근 방법 사용  
+## <a name="using-table-partitioning-approach"></a>테이블 분할 접근 방법 사용  
  [테이블 분할](https://msdn.microsoft.com/library/ms188730.aspx) 을 사용하면 큰 테이블을 좀 더 관리 및 확장할 수 있습니다. 테이블 분할 방법으로 기록 테이블 파티션을 사용하여 시간 조건을 기반으로 오프라인으로 보관하거나 사용자 지정 데이터를 정리할 수 있습니다. 또한 테이블 분할을 통해 데이터 기록 하위 집합에서 임시 테이블을 쿼리할 때 파티션 제거를 사용하여 성능이 향상될 수도 있습니다.  
   
  테이블 분할 기능을 사용하면 슬라이딩 윈도우 접근 방식을 구현하여 필수 보존 기간에 맞게 데이터를 기록 테이블에서 유지 관리하면서도 기록 테이블에서 가장 오래된 기록 데이터 일부를 이동하여 제외시키고, 기간 측면에서 보관 부분의 크기를 지속적으로 유지할 수 있습니다. SYSTEM_VERSIONING이 ON이더라도 기록 테이블의 데이터를 외부로 전환하는 작업은 지원됩니다. 즉 유지 관리 창을 도입하거나 정기 작업을 차단하지 않고 기록 데이터의 일부를 정리할 수 있습니다.  
@@ -176,7 +180,7 @@ COMMIT ;
   
  다음 그림은 6개월 분량의 데이터 보관을 위한 초기 분할 구성을 보여 줍니다.  
   
- ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")  
+ ![분할](../../relational-databases/tables/media/partitioning.png "분할")  
   
 > **참고:** 분할 구성 시 RANGE LEFT와 RANGE RIGHT를 사용할 때 성능에 미치는 영향에 대한 자세한 내용은 아래의 테이블 분할 시 성능 고려 사항을 참조하세요.  
   
@@ -201,7 +205,7 @@ COMMIT ;
   
 3.  SPLIT RANGE: [ALTER PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)에서 SPLIT RANGE를 사용하여 새 빈 파티션 7을 만듭니다(예 A 참조). 이 함수를 사용하여 새 상한 경계를 추가함으로써 다음 달에 대한 별도의 파티션을 효율적으로 만듭니다.  
   
-### TRANSACT-SQL을 사용하여 기록 테이블에서 파티션 만들기  
+### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>TRANSACT-SQL을 사용하여 기록 테이블에서 파티션 만들기  
  아래 코드 창에서 TRANSACT-SQL 스크립트를 사용하여 파티션 함수, 파티션 스키마를 만들고, 파티션 스키마에 파티션이 정렬되도록 클러스터형 인덱스를 다시 만듭니다. 이 예에서는 2015년 9월부터 시작하는 월별 파티션을 사용하여 6개월의 슬라이딩 윈도우 방식을 만들겠습니다.  
   
 ```  
@@ -243,7 +247,7 @@ COMMIT TRANSACTION;
   
 ```  
   
-### Transact-SQL을 사용하여 슬라이딩 윈도우 시나리오에서 파티션 유지 관리  
+### <a name="using-transact-sql-to-maintain-partitions-in-sliding-window-scenario"></a>Transact-SQL을 사용하여 슬라이딩 윈도우 시나리오에서 파티션 유지 관리  
  아래 코드 창에서 TRANSACT-SQL 스크립트를 사용하여 슬라이딩 윈도우 시나리오에서 파티션을 유지 관리합니다. 이 예에서는 MERGE RANGE를 사용하여 2015년 9월에 해당하는 파티션을 외부로 전환한 다음 SPLIT RANGE를 사용하여 2016년 3월에 해당하는 새 파티션을 추가합니다.  
   
 ```  
@@ -316,17 +320,17 @@ COMMIT TRANSACTION
   
 1.  단계 (1)에서는 제거할 달에 대한 새 준비 테이블을 만듭니다(위 예에서 10월이 그 다음 달에 해당)  
   
-2.  단계 (3)에서는 제거할 데이터의 월에 일치하는 제약 조건을 만들고 검사합니다(10월 파티션에 대해 `[SysEndTime]<=N'2015-10-31T23:59:59.999'`).  
+2.  단계 (3)에서는 제거할 데이터의 월에 일치하는 제약 조건을 만들고 검사합니다(10월 파티션에 대해 `[SysEndTime]<=N'2015-10-31T23:59:59.999'` ).  
   
 3.  단계 (4)에서는 파티션 1을 새로 만든 준비 테이블로 전환합니다.  
   
-4.  단계 (6)에서는 하한 경계를 병합하여 파티션 함수를 변경합니다(10월에 대한 데이터를 이동하여 제외한 후 `MERGE RANGE(N'2015-10-31T23:59:59.999'`).  
+4.  단계 (6)에서는 하한 경계를 병합하여 파티션 함수를 변경합니다(10월에 대한 데이터를 이동하여 제외한 후 `MERGE RANGE(N'2015-10-31T23:59:59.999'` ).  
   
-5.  단계 (7)에서는 새 상한 경계를 만드는 파티션 함수를 분리합니다(10월에 대한 데이터를 이동하여 제외한 후 `SPLIT RANGE (N'2016-04-30T23:59:59.999'`).  
+5.  단계 (7)에서는 새 상한 경계를 만드는 파티션 함수를 분리합니다(10월에 대한 데이터를 이동하여 제외한 후 `SPLIT RANGE (N'2016-04-30T23:59:59.999'` ).  
   
- 그러나 최적의 솔루션은 스크립트를 수정하지 않고 매월 적절한 작업을 수행할 수 있도록 일반 TRANSACT-SQL 스크립트를 정기적으로 실행하는 것입니다. 제공된 매개 변수(병합해야 할 하한 경계와 파티션 분할로 만들어지는 새 경계)로 동작을 수행하도록 위 스크립트를 일반화할 수도 있습니다. 매달 준비 테이블 생성을 방지하기 위해 사전에 미리 테이블을 만들고 전환할 파티션과 일치하도록 확인 제약 조건을 변경하여 다시 사용할 수 있습니다. 다음 페이지를 살펴보고 TRANSACT-SQL 스크립트를 사용하여 [슬라이딩 윈도우를 완전히 자동화할 수 있는 방법](https://msdn.microsoft.com/library/aa964122.aspx)에 대한 아이디어를 얻어보세요.  
+ 그러나 최적의 솔루션은 스크립트를 수정하지 않고 매월 적절한 작업을 수행할 수 있도록 일반 TRANSACT-SQL 스크립트를 정기적으로 실행하는 것입니다. 제공된 매개 변수(병합해야 할 하한 경계와 파티션 분할로 만들어지는 새 경계)로 동작을 수행하도록 위 스크립트를 일반화할 수도 있습니다. 매달 준비 테이블 생성을 방지하기 위해 사전에 미리 테이블을 만들고 전환할 파티션과 일치하도록 확인 제약 조건을 변경하여 다시 사용할 수 있습니다. 다음 페이지를 살펴보고 TRANSACT-SQL 스크립트를 사용하여 [슬라이딩 윈도우를 완전히 자동화할 수 있는 방법](https://msdn.microsoft.com/library/aa964122.aspx) 에 대한 아이디어를 얻어보세요.  
   
-### 테이블 분할 시 성능 고려 사항  
+### <a name="performance-considerations-with-table-partitioning"></a>테이블 분할 시 성능 고려 사항  
  데이터 이동 시 발생되는 성능 오버헤드가 상당할 수 있으므로 데이터 이동을 방지하도록 범위 병합 및 범위 분할 작업을 수행하는 것이 중요합니다. 자세한 내용은 [파티션 함수 수정](../../relational-databases/partitions/modify-a-partition-function.md)을 참조하세요. 이 작업은 [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md) 작업 시 RANGE RIGHT보다는 RANGE LEFT를 사용하여 수행합니다.  
   
  먼저 시각적으로 RANGE LEFT 및 RANGE RIGHT 옵션의 의미에 대해 시각적으로 설명해 보겠습니다.  
@@ -343,7 +347,7 @@ COMMIT TRANSACTION
   
  결론: 슬라이딩 파티션에서 RANGE LEFT를 사용하면 파티션 관리가 훨씬 간단해지고 데이터 이동이 발생하지 않습니다. 하지만 RANGE RIGHT를 사용하여 파티션 경계를 정의하는 것이 datetime 시간 틱 문제를 처리하지 않아도 되므로 좀 더 간단합니다.  
   
-## 사용자 지정 정리 스크립트 방식 사용  
+## <a name="using-custom-cleanup-script-approach"></a>사용자 지정 정리 스크립트 방식 사용  
  스트레치 데이터베이스 및 테이블 분할 방식이 실행 가능한 옵션이 아닐 경우 세 번째로 사용자 지정 정리 스크립트를 사용하여 기록 데이터에서 데이터를 삭제하는 방법이 있습니다. **SYSTEM_VERSIONING = OFF**일 경우에만 기록 테이블에서 데이터를 삭제할 수 있습니다. 데이터 불일치를 방지하기 위해서는 유지 관리 창(데이터 수정 작업이 활성 상태가 아닌 경우) 또는 트랜잭션(효율적으로 다른 작업 차단) 내에서 정리를 수행해야 합니다.  이 작업을 수행하려면 현재 및 기록 테이블에 **CONTROL** 권한이 있어야 합니다.  
   
  일반 응용 프로그램 및 사용자 쿼리를 최소한으로 차단하려면 트랜잭션 내에서 정리 스크립트를 수행할 때 지연을 두고 더 작은 청크로 데이터를 삭제합니다. 모든 시나리오에서 삭제할 각 데이터 청크에 적합한 크기는 없지만 단일 트랜잭션에서 10,000개 이상의 행을 삭제하면 상당한 영향을 미칠 수 있습니다.  
@@ -421,7 +425,7 @@ BEGIN TRAN
 COMMIT;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [임시 테이블 시스템 일관성 검사](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
@@ -432,3 +436,4 @@ COMMIT;
  [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

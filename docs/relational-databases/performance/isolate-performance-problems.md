@@ -1,31 +1,35 @@
 ---
-title: "성능 문제 격리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "성능 문제 격리 [SQL Server]"
-  - "성능 모니터링 [SQL Server], 문제 격리"
-  - "데이터베이스 모니터링 [SQL Server], 문제 격리"
-  - "데이터베이스 튜닝 [SQL Server], 문제 격리"
-  - "서버 성능 모니터링 [SQL Server], 문제 격리"
-  - "데이터베이스 성능 [SQL Server], 문제 격리"
-  - "서버 성능 [SQL Server], 문제 격리"
+title: "성능 문제 격리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- isolating performance problems [SQL Server]
+- monitoring performance [SQL Server], isolating problems
+- database monitoring [SQL Server], isolating problems
+- tuning databases [SQL Server], isolating problems
+- monitoring server performance [SQL Server], isolating problems
+- database performance [SQL Server], isolating problems
+- server performance [SQL Server], isolating problems
 ms.assetid: 2eb425cb-9166-4027-ae08-c8fc2d236f44
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f9ae4ada18ad96ba2675b95610316186c417c986
+ms.lasthandoff: 04/11/2017
+
 ---
-# 성능 문제 격리
-  도구를 하나씩 사용하는 것보다는 여러 개의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 Microsoft Windows 도구를 함께 사용하여 데이터베이스 성능 문제를 격리하는 것이 효과적입니다. 예를 들어 실행 계획이라고도 하는 그래픽 실행 계획 기능을 사용하여 쿼리 하나에 발생한 교착 상태를 즉시 인식할 수 있습니다 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 Windows의 모니터링 기능을 함께 사용하면 다른 성능 문제도 쉽게 인식할 수 있습니다.  
+# <a name="isolate-performance-problems"></a>성능 문제 격리
+  도구를 하나씩 사용하는 것보다는 여러 개의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 Microsoft Windows 도구를 함께 사용하여 데이터베이스 성능 문제를 격리하는 것이 효과적입니다. 예를 들어 실행 계획이라고도 하는 그래픽 실행 계획 기능을 사용하여 쿼리 하나에 발생한 교착 상태를 즉시 인식할 수 있습니다 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 Windows의 모니터링 기능을 함께 사용하면 다른 성능 문제도 쉽게 인식할 수 있습니다.  
   
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 Transact-SQL 및 응용 프로그램 관련 문제를 모니터링하고 해결할 수 있습니다. 시스템 모니터를 사용하면 하드웨어와 그 밖의 시스템 관련 문제를 모니터링할 수 있습니다.  
   
@@ -45,7 +49,7 @@ caps.handback.revision: 16
   
 -   잘못 지정된 데이터베이스로 인한 과도한 차단  
   
-## 일반적인 성능 문제를 위한 도구  
+## <a name="tools-for-common-performance-problems"></a>일반적인 성능 문제를 위한 도구  
  각 도구를 사용하여 모니터링하거나 튜닝할 성능 문제를 신중하게 선택하는 것 역시 중요합니다. 도구와 유틸리티는 해결할 성능 문제의 유형에 따라 달라집니다.  
   
  다음 항목에서는 다양한 모니터링 및 튜닝 도구와 이러한 도구로 해결할 수 있는 문제에 대해 설명합니다.  

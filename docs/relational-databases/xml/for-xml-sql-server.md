@@ -1,31 +1,35 @@
 ---
-title: "FOR XML(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 절, FOR XML 절 정보"
-  - "PATH FOR XML 모드, 생성"
-  - "EXPLICIT FOR XML 모드"
-  - "RAW FOR XML 모드"
-  - "XML 데이터 검색"
-  - "XML [SQL Server], FOR XML 절"
-  - "AUTO FOR XML 모드"
-  - "XML [SQL Server], 생성"
+title: "FOR XML(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, about FOR XML clause
+- PATH FOR XML mode, construction
+- EXPLICIT FOR XML mode
+- RAW FOR XML mode
+- retrieving XML data
+- XML [SQL Server], FOR XML clause
+- AUTO FOR XML mode
+- XML [SQL Server], construction
 ms.assetid: 2b6b5c61-c5bd-49d2-8c0c-b7cf15857906
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f48dc6ebc5af10d1157978a65ceb224041229326
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML(SQL Server)
+# <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
   SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. 또한 대입 문에서도 사용할 수 있습니다.  
   
  FOR XML 절에서 다음 모드 중 하나를 지정합니다.  
@@ -52,7 +56,7 @@ caps.handback.revision: 44
   
  FOR XML은 FOR BROWSE 절과 함께 사용하는 모든 선택에 대해서는 유효하지 않습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 `SELECT` 문은 `Sales.Customer` 데이터베이스의 `Sales.SalesOrderHeader` 및 `AdventureWorks2012` 테이블에서 정보를 검색합니다. 다음 쿼리는 `AUTO` 절에 `FOR XML` 모드를 지정합니다.  
   
 ```  
@@ -68,7 +72,7 @@ ON Cust.CustomerID = OrderHeader.CustomerID
 FOR XML AUTO  
 ```  
   
-## FOR XML 절 및 서버 이름  
+## <a name="the-for-xml-clause-and-server-names"></a>FOR XML 절 및 서버 이름  
  FOR XML 절이 있는 SELECT 명령문이 쿼리에서 네 부분으로 된 이름을 지정할 경우, 로컬 컴퓨터에서 쿼리를 실행하면 서버 이름이 결과 XML 문서에 반환되지 않습니다. 그러나 쿼리를 네트워크 서버에서 실행하면 서버 이름은 네 부분으로 된 이름으로 반환됩니다.  
   
  예를 들어 다음과 같은 쿼리를 고려할 수 있습니다.  
@@ -105,7 +109,7 @@ FOR XML AUTO
 <x LastName="Achong"/>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML 절의 기본 구문](../../relational-databases/xml/basic-syntax-of-the-for-xml-clause.md)   
  [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [FOR XML에서 AUTO 모드 사용](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   

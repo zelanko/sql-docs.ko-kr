@@ -1,36 +1,40 @@
 ---
-title: "메모리 사용량 모니터링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 튜닝 [SQL Server], 메모리"
-  - "서버 성능 모니터링 [SQL Server], 메모리 사용"
-  - "메모리 격리 [SQL Server]"
-  - "페이징 비율 [SQL Server]"
-  - "메모리 [SQL Server], 사용 모니터링"
-  - "모니터링 [SQL Server], 메모리 사용"
-  - "메모리 부족 상태"
-  - "데이터베이스 모니터링 [SQL Server], 메모리 사용"
-  - "사용 가능한 메모리 [SQL Server]"
-  - "페이지 폴트 [SQL Server]"
-  - "성능 모니터링 [SQL Server], 메모리 사용"
-  - "서버 성능 [SQL Server], 메모리"
+title: "메모리 사용량 모니터링 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tuning databases [SQL Server], memory
+- monitoring server performance [SQL Server], memory usage
+- isolating memory [SQL Server]
+- paging rate [SQL Server]
+- memory [SQL Server], monitoring usage
+- monitoring [SQL Server], memory usage
+- low-memory conditions
+- database monitoring [SQL Server], memory usage
+- available memory [SQL Server]
+- page faults [SQL Server]
+- monitoring performance [SQL Server], memory usage
+- server performance [SQL Server], memory
 ms.assetid: 1aee3933-a11c-4b87-91b7-32f5ea38c87f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b69c5082567467771189cb7f9e781d850680bd34
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 사용량 모니터링
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 주기적으로 모니터링하여 메모리 사용이 일반적인 범위를 벗어나지 않는지 확인할 수 있습니다.  
+# <a name="monitor-memory-usage"></a>메모리 사용량 모니터링
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 주기적으로 모니터링하여 메모리 사용이 일반적인 범위를 벗어나지 않는지 확인할 수 있습니다.  
   
  메모리 부족 상태를 모니터링하려면 다음 개체 카운터를 사용하세요.  
   
@@ -42,12 +46,12 @@ caps.handback.revision: 26
   
  **Available Bytes** 카운터 값이 작으면 컴퓨터 전체 메모리가 부족하거나 응용 프로그램이 메모리를 해제하지 않는다는 의미입니다. **Pages/sec** 카운터의 비율이 높으면 페이징이 과도하다는 의미입니다. 디스크 작업의 원인이 페이징이 아닌 것을 확인하려면 **Memory: Page Faults/sec** 카운터를 모니터링하세요.  
   
- 컴퓨터에 사용 가능한 메모리가 충분하더라도 페이징 및 그로 인한 페이지 폴트 비율은 낮은 것이 일반적입니다. Microsoft Windows VMM(Virtual Memory Manager)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 다른 프로세스의 작업 집합 크기를 줄일 때 이러한 프로세스에서 페이지를 가져옵니다. 이 VMM 작업으로 인해 페이지 폴트가 발생할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]나 다른 프로세스가 과도한 페이징의 원인인지 확인하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스 인스턴스의 **Process: Page Faults/sec** 카운터를 모니터링하세요.  
+ 컴퓨터에 사용 가능한 메모리가 충분하더라도 페이징 및 그로 인한 페이지 폴트 비율은 낮은 것이 일반적입니다. Microsoft Windows VMM(Virtual Memory Manager)은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 다른 프로세스의 작업 집합 크기를 줄일 때 이러한 프로세스에서 페이지를 가져옵니다. 이 VMM 작업으로 인해 페이지 폴트가 발생할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 나 다른 프로세스가 과도한 페이징의 원인인지 확인하려면 **프로세스 인스턴스의** Process: Page Faults/sec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카운터를 모니터링하세요.  
   
  과도한 페이징을 해결하는 방법은 Windows 운영 체제 설명서를 참조하세요.  
   
-## SQL Server가 사용하는 메모리 격리  
- 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리가 더 필요할 경우 운영 체제를 쿼리하여 실제 여유 메모리가 사용 가능한지 확인하고 사용 가능한 메모리를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 현재 할당된 메모리가 필요하지 않은 경우 운영 체제에서 사용할 수 있도록 해당 메모리를 해제합니다. 그러나 **minservermemory** 및 **maxservermemory** 서버 구성 옵션을 사용하여 메모리를 동적으로 사용하도록 옵션을 재정의할 수 있습니다. 자세한 내용은 [서버 메모리 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
+## <a name="isolating-memory-used-by-sql-server"></a>SQL Server가 사용하는 메모리 격리  
+ 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리가 더 필요할 경우 운영 체제를 쿼리하여 실제 여유 메모리가 사용 가능한지 확인하고 사용 가능한 메모리를 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 현재 할당된 메모리가 필요하지 않은 경우 운영 체제에서 사용할 수 있도록 해당 메모리를 해제합니다. 그러나 **minservermemory**및 **maxservermemory** 서버 구성 옵션을 사용하여 메모리를 동적으로 사용하도록 옵션을 재정의할 수 있습니다. 자세한 내용은 [서버 메모리 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용하는 메모리의 양을 모니터링하려면 다음 성능 카운터를 검사하세요.  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 26
   
  **TotalServerMemory (KB)** 카운터가 컴퓨터의 실제 메모리 양과 비교하여 계속 높게 나타나면 메모리를 추가해야 합니다.  
   
-## 현재 메모리 할당 확인  
+## <a name="determining-current-memory-allocation"></a>현재 메모리 할당 확인  
  다음 쿼리는 현재 할당된 메모리에 대한 정보를 반환합니다.  
   
 ```  

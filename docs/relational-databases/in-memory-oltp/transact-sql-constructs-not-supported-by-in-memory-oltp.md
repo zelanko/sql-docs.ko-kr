@@ -1,22 +1,26 @@
 ---
-title: "메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문 | Microsoft 문서"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 caps.latest.revision: 51
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
+# <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   메모리 액세스에 최적화된 테이블, 고유하게 컴파일된 저장 프로시저 및 사용자 정의 함수는 디스크 기반 테이블, 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저 및 사용자 정의 함수에서 지원되는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] 노출 영역을 지원하지 않습니다. 지원되지 않는 기능 중 하나를 사용하려고 하면 서버에서 오류가 반환됩니다.  
@@ -51,7 +55,7 @@ caps.handback.revision: 51
 |----------|----------|----------------|  
 |기능|ON|파일 그룹이나 파티션 구성표에는 메모리 액세스에 최적화된 테이블을 배치할 수 없습니다. **CREATE TABLE** 문에서 ON 절을 제거합니다.<br /><br /> 메모리 액세스에 최적화된 모든 테이블은 메모리 액세스에 최적화된 파일 그룹에 매핑됩니다.|  
 |데이터 형식|*데이터 형식 이름*|표시된 데이터 형식이 지원되지 않습니다. 지원되는 데이터 형식 중 하나로 형식을 바꿉니다. 자세한 내용은 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)을 참조하세요.|  
-|기능|계산 열|계산된 열은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. **CREATE TABLE** 문에서 계산된 열을 제거합니다.<br/><br/>**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 액세스에 최적화된 테이블 및 인덱스에서 지원됩니다.|  
+|기능|계산 열|계산된 열은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. **CREATE TABLE** 문에서 계산된 열을 제거합니다.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 액세스에 최적화된 테이블 및 인덱스에서 지원됩니다.|  
 |기능|복제|복제는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.|  
 |기능|FILESTREAM|FILESTREAM 저장소는 메모리 액세스에 최적화된 테이블의 열에 지원되지 않습니다. 열 정의에서 **FILESTREAM** 키워드를 제거합니다.|  
 |기능|SPARSE|메모리 액세스에 최적화된 테이블의 열을 SPARSE로 정의할 수 없습니다. 열 정의에서 **SPARSE** 키워드를 제거합니다.|  
@@ -136,7 +140,7 @@ caps.handback.revision: 51
 |연산자|OFFSET|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **OFFSET** 를 제거합니다.|  
 |연산자|INTERSECT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **INTERSECT** 를 제거합니다. 일부 경우에는 INNER JOIN을 사용하여 동일한 결과를 얻을 수 있습니다.|  
 |연산자|EXCEPT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **EXCEPT** 를 제거합니다.|  
-|연산자|APPLY|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **APPLY** 를 제거합니다.<br/><br/>**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.|  
+|연산자|APPLY|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **APPLY** 를 제거합니다.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.|  
 |연산자|PIVOT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **PIVOT** 를 제거합니다.|  
 |연산자|UNPIVOT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **UNPIVOT** 를 제거합니다.|  
 |연산자|CONTAINS|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **CONTAINS** 를 제거합니다.|  
@@ -152,20 +156,20 @@ caps.handback.revision: 51
 |옵션|FOR XML|이 옵션은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **FOR XML** 를 제거합니다.|  
 |옵션|FOR BROWSE|이 옵션은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **FOR BROWSE** 를 제거합니다.|  
 |조인 힌트|HASH, MERGE|고유하게 컴파일된 저장 프로시저는 중첩 루프 조인만 지원합니다. 해시 및 병합 조인은 지원되지 않습니다. 조인 힌트를 제거합니다.|  
-|쿼리 힌트|*쿼리 힌트*|이 쿼리 힌트는 고유하게 컴파일된 저장 프로시저 내부에 없습니다. 지원되는 쿼리 힌트는 [쿼리 힌트&#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)를 참조하세요.|  
+|쿼리 힌트|*쿼리 힌트*|이 쿼리 힌트는 고유하게 컴파일된 저장 프로시저 내부에 없습니다. 지원되는 쿼리 힌트는 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.|  
 |옵션|PERCENT|이 옵션은 **TOP** 절에 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 **PERCENT** 를 제거합니다.|  
 |옵션|WITH  TIES|이 옵션은 **TOP** 절에 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 쿼리에서 **WITH TIES** 를 제거합니다.|  
 |집계 함수|*Aggregate 함수*|이 절은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저의 집계 함수에 대한 자세한 내용은 [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)를 참조하십시오.|  
 |순위 함수|*순위 함수*|순위 함수는 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 프로시저 정의에서 해당 함수를 제거합니다.|  
 |함수|*함수*|이 함수는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 해당 함수를 제거합니다.|  
-|문|*문*|이 문은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 해당 함수를 제거합니다.|  
+|인수를 제거합니다.|*문*|이 문은 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 해당 함수를 제거합니다.|  
 |기능|문자 및 이진 문자열과 함께 사용되는 MIN 및 MAX|집계 함수 **MIN** 및 **MAX** 는 고유하게 컴파일된 저장 프로시저 내부의 문자와 이진 문자열에 사용할 수 없습니다.|  
 |기능|GROUP BY ALL|ALL은 고유하게 컴파일된 저장 프로시저에서 GROUP BY 절에 사용할 수 없습니다. GROUP BY 절에서 ALL을 제거합니다.|  
 |기능|GROUP BY ()|빈 목록으로 그룹화는 지원되지 않습니다. GROUP BY 절을 제거하거나 그룹화 목록에 열을 포함합니다.|  
 |기능|ROLLUP|**ROLLUP** 은 고유하게 컴파일된 저장 프로시저에서 **GROUP BY** 절에 사용할 수 없습니다. 프로시저 정의에서 **ROLLUP** 을 제거합니다.|  
 |기능|CUBE|**CUBE** 은 고유하게 컴파일된 저장 프로시저에서 **GROUP BY** 절에 사용할 수 없습니다. 프로시저 정의에서 **CUBE** 을 제거합니다.|  
 |기능|GROUPING SETS|**GROUPING SETS** 은 고유하게 컴파일된 저장 프로시저에서 **GROUP BY** 절에 사용할 수 없습니다. 프로시저 정의에서 **GROUPING SETS** 을 제거합니다.|  
-|기능|BEGIN TRANSACTION, COMMIT TRANSACTION 및 ROLLBACK TRANSACTION|ATOMIC 블록을 사용하여 트랜잭션과 오류 처리를 제어합니다. 자세한 내용은 [Atomic Blocks](../../relational-databases/in-memory-oltp/기본-프로시저의-atomic-블록.md)을(를) 참조하십시오.|  
+|기능|BEGIN TRANSACTION, COMMIT TRANSACTION 및 ROLLBACK TRANSACTION|ATOMIC 블록을 사용하여 트랜잭션과 오류 처리를 제어합니다. 자세한 내용은 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)을(를) 참조하십시오.|  
 |기능|인라인 테이블 변수 선언|테이블 변수는 명시적으로 정의된 메모리 액세스에 최적화된 테이블 형식을 참조해야 합니다. 메모리 액세스에 최적화된 테이블 형식을 만들고 이 형식을 인라인으로 지정하는 대신 변수 선언에 이 형식을 사용합니다.|  
 |기능|디스크 기반 테이블|디스크 기반 테이블은 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 고유하게 컴파일된 저장 프로시저에서 디스크 기반 테이블에 대한 참조를 제거합니다. 또는 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션합니다.|  
 |기능|뷰|뷰는 고유하게 컴파일된 저장 프로시저에서 액세스할 수 없습니다. 뷰 대신 기본 테이블을 참조합니다.|  
@@ -187,3 +191,4 @@ caps.handback.revision: 51
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

@@ -1,38 +1,42 @@
 ---
-title: "미러된 백업 미디어 세트(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "복구 [SQL Server], 미러된 백업"
-  - "미러된 미디어 세트 [SQL Server]"
-  - "백업 미러 [SQL Server]"
-  - "중복된 백업 복사본"
-  - "교환 가능한 백업 복사본 [SQL Server]"
-  - "미디어 세트 [SQL Server], 미러된 백업 미디어 세트"
-  - "백업 미디어 [SQL Server], 미러된 미디어"
+title: "미러된 백업 미디어 세트(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recovery [SQL Server], mirrored backups
+- mirrored media sets [SQL Server]
+- backup mirrors [SQL Server]
+- duplicate backup copies
+- interchangeable backup copies [SQL Server]
+- media sets [SQL Server], mirrored backup media sets
+- backup media [SQL Server], mirrored media
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c6bd8f73f549b7869f30576a03f9d90e874398a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 미러된 백업 미디어 세트(SQL Server)
+# <a name="mirrored-backup-media-sets-sql-server"></a>미러된 백업 미디어 세트(SQL Server)
     
 > [!NOTE]  
->  미러된 백업 미디어 세트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition에서만 지원됩니다.  
+>  미러된 백업 미디어 세트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Enterprise Edition에서만 지원됩니다.  
   
  미디어 세트를 미러링하면 백업 장치의 오작동에 따른 영향이 감소되어 백업 안정성이 향상됩니다. 데이터 손실을 방지할 수 있는 최후의 수단이 백업이므로 이러한 오작동은 매우 심각합니다. 데이터베이스가 커지면 백업 장치 또는 미디어의 실패로 복원 불가능한 백업을 만들게 될 가능성이 커집니다. 백업 미디어를 미러링하면 중복이 가능하여 백업의 안정성이 향상됩니다.  
   
 > [!NOTE]  
->  일반적인 미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
+>  일반적인 미디어 세트에 대한 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)Enterprise Edition에서만 지원됩니다.  
   
  **항목 내용**  
   
@@ -43,7 +47,7 @@ caps.handback.revision: 38
 -   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="OverviewofMirroredMediaSets"></a> 미러된 미디어 세트 개요  
- 미디어 미러링은 미디어 세트의 속성입니다. *미러된 미디어 세트*는 미디어 세트의 여러 복사본(*미러*)으로 구성됩니다. 미디어 세트에는 미디어 패밀리가 하나 이상 포함되어 있으며 각각은 백업 장치에 해당합니다. 예를 들어 BACKUP DATABASE 문의 TO 절에 장치가 3개 나열되어 있으면 BACKUP에서는 장치당 하나씩 3개의 미디어 패밀리에 데이터를 분산합니다. 미디어 패밀리 및 미러의 수는 WITH FORMAT을 지정하는 BACKUP DATABASE 문으로 미디어 세트를 만들 때 정의됩니다.  
+ 미디어 미러링은 미디어 세트의 속성입니다. *미러된 미디어 세트* 는 미디어 세트의 여러 복사본(*미러*)으로 구성됩니다. 미디어 세트에는 미디어 패밀리가 하나 이상 포함되어 있으며 각각은 백업 장치에 해당합니다. 예를 들어 BACKUP DATABASE 문의 TO 절에 장치가 3개 나열되어 있으면 BACKUP에서는 장치당 하나씩 3개의 미디어 패밀리에 데이터를 분산합니다. 미디어 패밀리 및 미러의 수는 WITH FORMAT을 지정하는 BACKUP DATABASE 문으로 미디어 세트를 만들 때 정의됩니다.  
   
  미러된 미디어 세트에는 2~4개의 미러가 있습니다. 각 미러는 미디어 세트의 모든 미디어 패밀리를 포함합니다. 미러 수는 미디어 패밀리당 하나씩이며 장치의 수와 같아야 합니다. 각 미러에서는 미디어 패밀리마다 별도의 백업 장치가 있어야 합니다. 예를 들어 3개의 미러가 있는 미디어 패밀리 4개로 구성된 미러된 미디어 세트에는 12개의 백업 장치가 있어야 합니다. 이러한 장치는 모두 같아야 합니다. 예를 들어 테이프 드라이브는 동일한 제조업체에서 만든 장치로 모델 번호가 같아야 합니다.  
   
@@ -70,9 +74,9 @@ caps.handback.revision: 38
   
 -   [미러된 미디어 세트에 백업&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 및 복원 중 발생 가능한 미디어 오류&#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
- [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../Topic/RESTORE%20VERIFYONLY%20\(Transact-SQL\).md)   
+ [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
  [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

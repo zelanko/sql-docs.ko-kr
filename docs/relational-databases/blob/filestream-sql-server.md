@@ -1,36 +1,40 @@
 ---
-title: "FILESTREAM(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server]"
-  - "FILESTREAM [SQL Server], 정보"
-  - "FILESTREAM [SQL Server], 개요"
+title: "FILESTREAM(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server]
+- FILESTREAM [SQL Server], about
+- FILESTREAM [SQL Server], overview
 ms.assetid: 9a5a8166-bcbe-4680-916c-26276253eafa
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb0bdc4185b028693111c74c94a14d74b8c4c583
+ms.lasthandoff: 04/11/2017
+
 ---
-# FILESTREAM(SQL Server)
+# <a name="filestream-sql-server"></a>FILESTREAM(SQL Server)
   FILESTREAM을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 문서 및 이미지와 같은 구조화되지 않은 데이터를 파일 시스템에 저장할 수 있습니다. 응용 프로그램은 풍부한 스트리밍 API 및 파일 시스템의 성능을 활용할 수 있고 동시에 구조화되지 않은 데이터와 해당되는 구조화된 데이터 간에 트랜잭션 일관성을 유지할 수 있습니다.  
   
- FILESTREAM은 **varbinary(max)** BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 NTFS 및 ReFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
+ FILESTREAM은 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] varbinary(max) **BLOB(Binary Large Object) 데이터를 파일 시스템의 파일로 저장하여** 을 NTFS 및 ReFS 파일 시스템과 통합합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 FILESTREAM 데이터를 삽입, 업데이트, 쿼리, 검색 및 백업할 수 있습니다. Win32 파일 시스템 인터페이스에서는 데이터에 대한 스트리밍 액세스를 제공합니다.  
   
  FILESTREAM은 파일 데이터를 캐시하기 위해 NT 시스템 캐시를 사용합니다. 이를 통해 FILESTREAM 데이터가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 성능에 미치는 영향을 줄일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버퍼 풀이 사용되지 않으므로 이 메모리는 쿼리 처리용으로 사용할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하거나 업그레이드할 때 FILESTREAM이 자동으로 사용하도록 설정되지는 않습니다. SQL Server 구성 관리자 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 FILESTREAM을 사용하도록 설정해야 합니다. FILESTREAM을 사용하려면 특수 파일 그룹 유형을 포함하도록 데이터베이스를 만들거나 수정해야 합니다. 그런 다음 FILESTREAM 특성이 있는 **varbinary(max)** 열을 포함하도록 테이블을 만들거나 수정합니다. 이러한 태스크를 완료한 후에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 Win32를 사용하여 FILESTREAM 데이터를 관리할 수 있습니다.  
   
 
-##  FILESTREAM을 사용하는 경우  
+##  <a name="when-to-use-filestream"></a>FILESTREAM을 사용하는 경우  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 BLOB은 테이블에 데이터를 저장하는 표준 **varbinary(max)** 데이터 또는 파일 시스템에 데이터를 저장하는 FILESTREAM **varbinary(max)** 개체가 될 수 있습니다. 데이터베이스 저장소를 사용해야 할지 또는 파일 시스템 저장소를 사용해야 할지 여부는 데이터의 크기와 사용으로 결정됩니다. 다음 조건에 해당될 경우 FILESTREAM을 사용해야 합니다.  
   
 -   저장되는 개체가 평균적으로 1MB를 초과할 경우  
@@ -43,10 +47,10 @@ caps.handback.revision: 13
   
 
   
-##  FILESTREAM 저장소  
+##  <a name="filestream-storage"></a>FILESTREAM 저장소  
  FILESTREAM 저장소는 데이터가 파일 시스템에 BLOB으로 저장된 **varbinary(max)** 열로 구현됩니다. BLOB의 크기는 파일 시스템의 볼륨 크기로만 제한됩니다. 표준 **varbinary(max)** 제한은 2GB의 파일 크기로 파일 시스템에 저장된 BLOB에 적용되지 않습니다.  
   
- 파일 시스템에 열의 데이터를 저장하도록 지정하려면 **varbinary(max)** 열에 FILESTREAM 특성을 지정합니다. 이렇게 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 해당 열의 모든 데이터를 데이터베이스 파일이 아닌 파일 시스템에 저장하게 됩니다.  
+ 파일 시스템에 열의 데이터를 저장하도록 지정하려면 **varbinary(max)** 열에 FILESTREAM 특성을 지정합니다. 이렇게 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 해당 열의 모든 데이터를 데이터베이스 파일이 아닌 파일 시스템에 저장하게 됩니다.  
   
  FILESTREAM 데이터는 FILESTREAM 파일 그룹에 저장되어야 합니다. FILESTREAM 파일 그룹은 파일 자체가 아닌 파일 시스템 디렉터리를 포함하는 특수한 파일 그룹입니다. 이러한 파일 시스템 디렉터리를 *데이터 컨테이너*라고 합니다. 데이터 컨테이너는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 저장소와 파일 시스템 저장소 사이의 인터페이스입니다.  
   
@@ -62,11 +66,11 @@ caps.handback.revision: 13
   
 -   FILESTREAM 파일 그룹은 압축된 볼륨에 있을 수 있습니다.  
   
-### 통합 관리  
+### <a name="integrated-management"></a>통합 관리  
  FILESTREAM이 **varbinary(max)** 열로 구현되어 [!INCLUDE[ssDE](../../includes/ssde-md.md)]으로 바로 통합되었으므로 대부분의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구 및 기능이 FILESTREAM 데이터를 수정하지 않고 수행됩니다. 예를 들어 FILESTREAM 데이터로 모든 백업 및 복구 모델을 사용할 수 있고 FILESTREAM 데이터는 구조화된 데이터와 함께 데이터베이스에 백업됩니다. FILESTREAM 데이터를 관계형 데이터와 함께 백업하지 않으려면 부분 백업을 사용하여 FILESTREAM 파일 그룹을 제외할 수 있습니다.  
   
  
-### Integrated Security  
+### <a name="integrated-security"></a>Integrated Security  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 FILESTREAM 데이터는 다른 데이터와 마찬가지로 테이블 또는 열 수준에서 사용 권한을 부여하여 보안이 설정됩니다. 사용자가 테이블의 FILESTREAM 열에 대한 사용 권한이 있을 경우 이 사용자는 관련 파일을 열 수 있습니다.  
   
 > [!NOTE]  
@@ -80,16 +84,16 @@ caps.handback.revision: 13
 ##  <a name="dual"></a> TRANSACT-SQL 및 파일 시스템 스트리밍 액세스를 사용하여 BLOB 데이터 액세스  
  FILESTREAM 열에 데이터를 저장한 후 [!INCLUDE[tsql](../../includes/tsql-md.md)] 트랜잭션 또는 Win32 API를 사용하여 해당 파일에 액세스할 수 있습니다.  
   
-### Transact-SQL 액세스  
+### <a name="transact-sql-access"></a>Transact-SQL 액세스  
  [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 FILESTREAM 데이터를 삽입, 업데이트 및 삭제할 수 있습니다.  
   
 -   삽입 작업을 통해 FILESTREAM 필드를 Null 값, 비어 있는 값 또는 상대적으로 짧은 인라인 데이터로 미리 채울 수 있습니다. 그러나 크기가 큰 데이터는 Win32 인터페이스를 사용하는 파일로 좀 더 효율적으로 스트리밍됩니다.  
   
--   FILESTREAM 필드를 업데이트할 때 파일 시스템의 기본 BLOB 데이터를 수정합니다. FILESTREAM 필드를 NULL로 설정하면 이 필드와 연결된 BLOB 데이터가 삭제됩니다. 데이터의 부분 업데이트를 수행하기 위해 UPDATE**.**Write()로 구현된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 청크 업데이트를 사용할 수 없습니다.  
+-   FILESTREAM 필드를 업데이트할 때 파일 시스템의 기본 BLOB 데이터를 수정합니다. FILESTREAM 필드를 NULL로 설정하면 이 필드와 연결된 BLOB 데이터가 삭제됩니다. 데이터의 부분 업데이트를 수행하기 위해 UPDATE [!INCLUDE[tsql](../../includes/tsql-md.md)] .**Write()로 구현된**청크 업데이트를 사용할 수 없습니다.  
   
 -   행을 삭제하거나 FILESTREAM 데이터가 들어 있는 테이블을 삭제하거나 잘라내면 파일 시스템의 기본 BLOB 데이터가 삭제됩니다.  
   
-### 파일 시스템 스트리밍 액세스  
+### <a name="file-system-streaming-access"></a>파일 시스템 스트리밍 액세스  
  Win32 스트리밍은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 컨텍스트의 작업을 지원합니다. 트랜잭션 내에서 FILESTREAM 기능을 사용하여 파일의 논리 UNC 파일 시스템 경로를 얻을 수 있습니다. 그런 다음 OpenSqlFilestream API를 사용하여 파일 핸들을 얻습니다. 이 핸들은 파일 시스템의 방식에 따라 파일에 액세스하여 업데이트하기 위해 ReadFile() 및 WriteFile() 같은 Win32 파일 스트리밍 인터페이스에서 사용될 수 있습니다.  
   
  파일 작업이 트랜잭션이므로 파일 시스템을 통해 FILESTREAM 파일을 삭제하거나 이 파일의 이름을 바꿀 수 없습니다.  
@@ -150,7 +154,7 @@ caps.handback.revision: 13
  FILESTREAM 핸들을 사용하여 메모리 매핑된 뷰(메모리 매핑된 I/O)를 만들 수는 없습니다. 메모리 매핑을 FILESTREAM 데이터에 사용할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 데이터의 일관성과 지속성 또는 데이터베이스의 무결성을 보장할 수 없습니다.  
  
   
-##  관련 태스크  
+##  <a name="related-tasks"></a>관련 태스크  
  [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)  
   [FILESTREAM 사용 데이터베이스 만들기](../../relational-databases/blob/create-a-filestream-enabled-database.md)  
   [FILESTREAM 데이터 저장용 테이블 만들기](../../relational-databases/blob/create-a-table-for-storing-filestream-data.md)  
@@ -164,6 +168,7 @@ caps.handback.revision: 13
   [FILESTREAM 액세스를 위한 방화벽 구성](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)  
 
   
-##  관련 내용  
+##  <a name="related-content"></a>관련 내용  
  [FILESTREAM과 기타 SQL Server 기능 간 호환성](../../relational-databases/blob/filestream-compatibility-with-other-sql-server-features.md)  
   
+

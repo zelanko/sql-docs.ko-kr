@@ -1,39 +1,43 @@
 ---
-title: "PolyBase Queries | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "PolyBase"
-helpviewer_keywords: 
-  - "PolyBase, 가져오기 및 내보내기"
-  - "Hadoop, PolyBase를 사용하여 가져오기"
-  - "Hadoop, PolyBase를 사용하여 내보내기"
-  - "Azure Blob 저장소, PolyBase를 사용하여 가져오기"
-  - "Azure Blob 저장소, PolyBase를 사용하여 내보내기"
+title: "PolyBase 쿼리 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- PolyBase
+helpviewer_keywords:
+- PolyBase, import and export
+- Hadoop, import with PolyBase
+- Hadoop, export with PolyBase
+- Azure blob storage, import with PolyBase
+- Azure blob storage, export with PolyBase
 ms.assetid: 2c5aa2bd-af7d-4f57-9a28-9673c2a4c07e
 caps.latest.revision: 18
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d6cc1b4523bdb0b48cfc22b34b205e15613fb290
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase Queries
+# <a name="polybase-queries"></a>PolyBase Queries
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 SQL Server 2016의 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) 기능을 사용하는 예제 쿼리를 제공합니다. 이러한 예제를 사용하기 전에 PolyBase를 설정하는 데 필요한 T-SQL 문을 파악해야 합니다([PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md) 참조).  
+  이 항목에서는 SQL Server 2016의 [PolyBase Guide](../../relational-databases/polybase/polybase-guide.md) 기능을 사용하는 예제 쿼리를 제공합니다. 이러한 예제를 사용하기 전에 PolyBase를 설정하는 데 필요한 T-SQL 문을 파악해야 합니다( [PolyBase T-SQL 개체](../../relational-databases/polybase/polybase-t-sql-objects.md)참조).  
   
-## 쿼리  
+## <a name="queries"></a>쿼리  
  외부 테이블에 대해 Transact-SQL 문을 실행하거나 BI 도구를 사용하여 외부 테이블을 쿼리합니다.  
   
-## SELECT from external table  
+## <a name="select-from-external-table"></a>SELECT from external table  
  정의된 외부 테이블의 데이터를 반환하는 간단한 쿼리입니다.  
   
 ```tsql  
@@ -47,7 +51,7 @@ SELECT * FROM [dbo].[SensorData]
 WHERE Speed > 65;   
 ```  
   
-## JOIN external tables with local tables  
+## <a name="join-external-tables-with-local-tables"></a>JOIN external tables with local tables  
   
 ```  
 SELECT InsuranceCustomers.FirstName,   
@@ -60,13 +64,13 @@ ORDER BY SensorData.Speed DESC
   
 ```  
   
-## Hadoop에 대한 푸시다운 계산  
+## <a name="pushdown-computation-to-hadoop"></a>Hadoop에 대한 푸시다운 계산  
  여기에 푸시다운 변형이 표시됩니다.  
   
-### 행의 하위 집합을 선택하기 위한 푸시다운  
+### <a name="pushdown-for-selecting-a-subset-of-rows"></a>행의 하위 집합을 선택하기 위한 푸시다운  
  조건자 푸시다운을 사용하여 외부 테이블에서 행 하위 집합을 선택하는 쿼리의 성능을 향상시킬 수 있습니다.  
   
- 여기서 SQL Server 2016은 Hadoop에서 customer.account_balance < 200000 조건자와 일치하는 행을 검색하는 맵 감소 작업을 시작합니다. 테이블의 모든 행을 검사하지 않고 쿼리가 성공적으로 완료될 수 있으므로 조건자 조건에 맞는 행만 SQL Server에 복사됩니다. 이렇게 하면 잔액 \< 200000인 고객 수가 계정 잔액 >= 200000인 고객 수에 비해 작은 경우 상당한 시간이 절약되며 필요한 임시 저장소 공간이 줄어듭니다.  
+ 여기서 SQL Server 2016은 Hadoop에서 customer.account_balance < 200000 조건자와 일치하는 행을 검색하는 맵 감소 작업을 시작합니다. 테이블의 모든 행을 검사하지 않고 쿼리가 성공적으로 완료될 수 있으므로 조건자 조건에 맞는 행만 SQL Server에 복사됩니다. 이렇게 하면 잔액 < 200000인 고객 수가 계정 잔액 >= 200000인 고객 수에 비해 작은 경우 상당한 시간이 절약되며 필요한 임시 저장소 공간이 줄어듭니다.  
   ImageCopy 코드 복사   
 SELECT * FROM customer WHERE customer.account_balance < 200000.  
   
@@ -74,7 +78,7 @@ SELECT * FROM customer WHERE customer.account_balance < 200000.
 SELECT * FROM SensorData WHERE Speed > 65;  
 ```  
   
-### 열의 하위 집합을 선택하기 위한 푸시다운  
+### <a name="pushdown-for-selecting-a-subset-of-columns"></a>열의 하위 집합을 선택하기 위한 푸시다운  
  조건자 푸시다운을 사용하여 외부 테이블에서 열 하위 집합을 선택하는 쿼리의 성능을 향상시킬 수 있습니다.  
   
  이 쿼리에서 SQL Server는 맵 감소 작업을 시작하여 customer.name과 customer.zip_code라는 두 열의 데이터만 SQL Server PDW에 복사되도록 Hadoop 구분된 텍스트 파일을 전처리합니다.  
@@ -84,7 +88,7 @@ SELECT customer.name, customer.zip_code FROM customer WHERE customer.account_bal
   
 ```  
   
-### 기본 식과 연산자에 대한 푸시다운  
+### <a name="pushdown-for-basic-expressions-and-operators"></a>기본 식과 연산자에 대한 푸시다운  
  SQL Server는 조건자 푸시다운에 대해 다음과 같은 기본 식과 연산자를 허용합니다.  
   
 -   숫자, 날짜 및 시간 값에 대한 이진 비교 연산자(\<, >, =, !=, <>, >=, <=)  
@@ -106,7 +110,7 @@ SELECT * FROM customer WHERE customer.account_balance <= 200000 AND customer.zip
   
 ```  
   
-### 강제 푸시다운  
+### <a name="force-pushdown"></a>강제 푸시다운  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -114,7 +118,7 @@ WHERE Speed > 65
 OPTION (FORCE EXTERNALPUSHDOWN);   
 ```  
   
-### 푸시다운 사용 안 함  
+### <a name="disable-pushdown"></a>푸시다운 사용 안 함  
   
 ```  
 SELECT * FROM [dbo].[SensorData]   
@@ -122,7 +126,7 @@ WHERE Speed > 65
 OPTION (DISABLE EXTERNALPUSHDOWN);  
 ```  
   
-## 데이터 가져오기  
+## <a name="import-data"></a>데이터 가져오기  
  Hadoop 또는 Azure Storage의 데이터를 영구적으로 저장하기 위해 SQL Server로 가져옵니다. SELECT INTO를 사용하여 외부 테이블이 참조하는 데이터를 SQL Server에 영구적으로 저장하기 위해 가져옵니다. 먼저 대략적인 관계형 테이블을 만든 다음 두 번째 단계에서 테이블 위에 columnstore 인덱스를 만듭니다.  
   
 ```sql  
@@ -143,8 +147,8 @@ ORDER BY YearlyIncome
 CREATE CLUSTERED COLUMNSTORE INDEX CCI_FastCustomers ON Fast_Customers;  
 ```  
   
-## 데이터 내보내기  
-SQL Server에서 Hadoop 또는 Azure Storage로 데이터를 내보냅니다. 먼저, 'allow polybase export'의 sp_configure 값을 1로 설정하여 내보내기 기능을 사용하도록 설정합니다. 그런 다음 대상 디렉터리를 가리키는 외부 테이블을 만듭니다. 그런 다음 INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. INSERT INTO 문은 대상 디렉터리가 없을 경우 새로 만듭니다. SELECT 문의 결과는 지정된 파일 형식으로 생성되어 지정한 위치로 내보내집니다. 외부 파일의 이름은 *QueryID_date_time_ID.format*입니다. 여기서 *ID*는 증분 식별자이고 *형식*은 내보낸된 데이터 형식입니다. 예를 들어 QID776_20160130_182739_0.orc입니다.  
+## <a name="export-data"></a>데이터 내보내기  
+SQL Server에서 Hadoop 또는 Azure Storage로 데이터를 내보냅니다. 먼저, 'allow polybase export'의 sp_configure 값을 1로 설정하여 내보내기 기능을 사용하도록 설정합니다. 그런 다음 대상 디렉터리를 가리키는 외부 테이블을 만듭니다. 그런 다음 INSERT INTO를 사용하여 로컬 SQL Server 테이블에서 외부 데이터 원본으로 데이터를 내보냅니다. INSERT INTO 문은 대상 디렉터리가 없을 경우 새로 만듭니다. SELECT 문의 결과는 지정된 파일 형식으로 생성되어 지정한 위치로 내보내집니다. 외부 파일의 이름은 *QueryID_date_time_ID.format*입니다. 여기서 *ID* 는 증분 식별자이고 *형식* 은 내보낸된 데이터 형식입니다. 예를 들어 QID776_20160130_182739_0.orc입니다.  
   
 ```sql  
 -- PolyBase Scenario 3: Export data from SQL Server to Hadoop.  
@@ -170,7 +174,7 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
   
-## 새 카탈로그 뷰  
+## <a name="new-catalog-views"></a>새 카탈로그 뷰  
  아래의 새 카탈로그 뷰는 외부 리소스를 표시합니다.  
   
 ```sql  
@@ -185,7 +189,8 @@ SELECT * FROM sys.external_tables;
 SELECT name, type, is_external FROM sys.tables WHERE name='myTableName'   
 ```  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  문제 해결에 대한 자세한 내용은 [PolyBase 문제 해결](../../relational-databases/polybase/polybase-troubleshooting.md)을 참조하세요.  
   
   
+

@@ -1,37 +1,41 @@
 ---
-title: "정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "최선의 방법 [데이터베이스 엔진]"
+title: "정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8e343ee942845bda5c874a3a238a4450ec391aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
+# <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
   정책 기반 관리를 통해 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 대한 최선의 방법을 모니터링할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 최선의 방법 정책으로 가져와서 인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 포함하는 대상 집합에 대해 정책을 평가할 수 있는 일련의 정책 파일을 제공합니다. 정책을 수동으로 평가하거나, 일정에 따라 대상 집합을 평가하도록 정책을 설정하거나, 이벤트에 따라 대상 집합을 평가하도록 정책을 설정합니다. 정책 기반 관리에 대한 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.  
   
-## 데이터베이스 엔진에 대한 정책 및 규칙  
+## <a name="policy-and-rules-for-database-engine"></a>데이터베이스 엔진에 대한 정책 및 규칙  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 포함되는 정책 목록을 보여 주고 각 정책이 평가하는 최선의 방법 규칙에 대한 정보를 제공합니다. 정책은 XML 파일로 저장되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 가져와야 합니다. 정책을 가져오는 방법은 [정책 기반 관리 정책 가져오기](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)를 참조하세요.  
   
 |정책 이름|최선의 방법 규칙|  
 |-----------------|------------------------|  
 |비대칭 키 암호화 알고리즘|[비대칭 키 암호화의 강도](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|백업 및 데이터 파일 위치|[백업 파일을 데이터베이스 파일과 별개의 장치에 두어야 함](../Topic/Backup%20Files%20Must%20Be%20on%20Separate%20Devices%20from%20the%20Database%20Files.md)|  
+|백업 및 데이터 파일 위치|[백업 파일을 데이터베이스 파일과 별개의 장치에 두어야 함](http://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |데이터 및 로그 파일 위치|[데이터와 로그 파일을 별개의 드라이브에 배치](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |데이터베이스 자동 닫기|[AUTO_CLOSE 데이터베이스 옵션을 OFF로 설정](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |데이터베이스 자동 축소|[AUTO_SHRINK 데이터베이스 옵션을 OFF로 설정](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
-|데이터베이스 정렬|[master 및 model 데이터베이스와 일치하도록 사용자 정의 데이터베이스의 데이터 정렬 설정](../Topic/Set%20the%20Collation%20of%20User-defined%20Databases%20to%20Match%20Those%20of%20the%20master%20and%20model%20Databases.md)|  
+|데이터베이스 정렬|[master 및 model 데이터베이스와 일치하도록 사용자 정의 데이터베이스의 데이터 정렬 설정](http://msdn.microsoft.com/library/c686446f-dae1-4b05-a3df-837b3422988d)|  
 |데이터베이스 페이지 확인|[PAGE_VERIFY 데이터베이스 옵션을 CHECKSUM으로 설정](../../relational-databases/policy-based-management/set-the-page-verify-database-option-to-checksum.md)|  
 |데이터베이스 페이지 상태|[주의 대상 페이지가 있는 데이터베이스의 무결성 검사](../../relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md)|  
 |게스트 사용 권한|[사용자 데이터베이스에 대한 게스트 사용 권한](../../relational-databases/policy-based-management/guest-permissions-on-user-databases.md)|  
@@ -65,7 +69,7 @@ caps.handback.revision: 27
 |Windows 이벤트 로그 저장 시스템 I/O 제한 시간 오류|[저장소 시스템 입/출력 시간 초과](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Windows 이벤트 로그 시스템 실패 오류|[예기치 않은 시스템 오류](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리 패싯 작업](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)  
   
   

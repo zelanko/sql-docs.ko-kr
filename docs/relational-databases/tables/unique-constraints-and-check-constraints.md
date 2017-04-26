@@ -1,25 +1,29 @@
 ---
-title: "UNIQUE 제약 조건 및 CHECK 제약 조건 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "제약 조건 [SQL Server], Visual Database Tools"
-  - "Visual Database Tools [SQL Server], 제약 조건"
+title: "UNIQUE 제약 조건 및 CHECK 제약 조건 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], Visual Database Tools
+- Visual Database Tools [SQL Server], constraints
 ms.assetid: 637098af-2567-48f8-90f4-b41df059833e
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5596207dc1188bd9830c0993402194954737c6a
+ms.lasthandoff: 04/11/2017
+
 ---
-# UNIQUE 제약 조건 및 CHECK 제약 조건
+# <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 UNIQUE 제약 조건과 CHECK 제약 조건이 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  
@@ -44,15 +48,15 @@ caps.handback.revision: 20
 ##  <a name="Check"></a> CHECK 제약 조건  
  CHECK 제약 조건은 하나 이상의 열에서 허용되는 값을 제한하여 도메인 무결성을 강제 적용합니다. 논리 연산자에 따라 TRUE 또는 FALSE를 반환하는 논리(부울) 식을 사용하여 CHECK 제약 조건을 만들 수 있습니다. 예를 들어 15,000달러부터 100,000달러까지의 데이터만 허용하는 CHECK 제약 조건을 만들어 **salary** 열의 값 범위를 제한할 수 있습니다. 이렇게 하면 정상 월급 범위를 벗어나는 월급은 입력되지 않습니다. 논리 식은 다음과 같습니다. `salary >= 15000 AND salary <= 100000`  
   
- 열 하나에 여러 개의 CHECK 제약 조건을 적용할 수 있습니다. 테이블 수준에서 CHECK 제약 조건을 만들어 여러 열에 적용할 수도 있습니다. 예를 들어 여러 열에 대한 CHECK 제약 조건을 사용하여 **country_region** 열 값이 **USA**인 모든 행이 **state** 열에서 두 문자의 값을 갖도록 할 수 있습니다. 이렇게 한 위치에서 여러 조건을 검사할 수 있습니다.  
+ 열 하나에 여러 개의 CHECK 제약 조건을 적용할 수 있습니다. 테이블 수준에서 CHECK 제약 조건을 만들어 여러 열에 적용할 수도 있습니다. 예를 들어 여러 열에 대한 CHECK 제약 조건을 사용하여 **country_region** 열 값이 **USA** 인 모든 행이 **state** 열에서 두 문자의 값을 갖도록 할 수 있습니다. 이렇게 한 위치에서 여러 조건을 검사할 수 있습니다.  
   
  CHECK 제약 조건은 열에 있는 값을 다룬다는 점에서는 FOREIGN KEY 제약 조건과 비슷합니다. 어떤 값이 유효한지 결정하는 방법은 서로 다릅니다. FOREIGN KEY 제약 조건은 다른 테이블로부터 유효한 값을 가져오는 반면 CHECK 제약 조건은 논리 식으로부터 유효한 값을 결정합니다.  
   
 > [!CAUTION]  
 >  제약 조건에 암시적 또는 명시적 데이터 형식 변환이 포함된 경우 특정 작업이 실패할 수 있습니다. 예를 들어 파티션 전환의 원본인 테이블에 정의된 이러한 제약 조건으로 인해 ALTER TABLE...SWITCH 작업이 실패할 수 있습니다. 제약 조건 정의에서 데이터 형식을 변환하지 마세요.  
   
-### CHECK 제약 조건의 제한 사항  
- CHECK 제약 조건은 FALSE로 평가되는 값을 거부합니다. Null 값은 UNKNOWN으로 평가되므로 식에 Null 값이 있으면 제약 조건이 무시됩니다. 예를 들어 **MyColumn=10**과 같이 **MyColumn**에 값 10만 포함할 수 있도록 **int** 열 **MyColumn**에 대한 제약 조건을 지정한다고 가정합니다. **MyColumn**에 NULL 값을 삽입할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 NULL을 삽입하고 오류를 반환하지 않습니다.  
+### <a name="limitations-of-check-constraints"></a>CHECK 제약 조건의 제한 사항  
+ CHECK 제약 조건은 FALSE로 평가되는 값을 거부합니다. Null 값은 UNKNOWN으로 평가되므로 식에 Null 값이 있으면 제약 조건이 무시됩니다. 예를 들어 **MyColumn=10** 과 같이 **MyColumn** 에 값 10만 포함할 수 있도록 **int** 열**MyColumn**에 대한 제약 조건을 지정한다고 가정합니다. **MyColumn**에 NULL 값을 삽입할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 NULL을 삽입하고 오류를 반환하지 않습니다.  
   
  CHECK 제약 조건은 확인 중인 조건이 테이블의 모든 행에 대해 FALSE가 아니면 TRUE를 반환합니다. CHECK 제약 조건은 행 수준에서 작동합니다. 방금 만든 테이블에 행이 없어도 이 테이블의 CHECK 제약 조건은 유효한 것으로 간주됩니다. 다음 예와 같이 이러한 상황은 예기치 않은 결과를 생성할 수 있습니다.  
   

@@ -1,34 +1,38 @@
 ---
-title: "배포자 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.DistributorSettings.f1"
-helpviewer_keywords: 
-  - "배포자 설정 대화 상자"
+title: "배포자 설정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.DistributorSettings.f1
+helpviewer_keywords:
+- Distributor Settings dialog box
 ms.assetid: 8276a521-bdd1-4783-bdb6-7ab43499c0ca
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f86500a4461bc2da64c7f3a3d8906bb919b28628
+ms.lasthandoff: 04/11/2017
+
 ---
-# 배포자 설정
+# <a name="distributor-settings"></a>배포자 설정
   **배포자 설정** 대화 상자에서는 복제 모니터의 왼쪽 창에 추가된 배포자에 대한 설정을 변경할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **복제 모니터가 시작될 때 자동으로 연결**  
  복제 모니터에서 배포자에 연결하고 상태 정보를 검색하도록 하려면 선택합니다.  
   
  **연결**  
- 표시 하려면 클릭은 **서버에 연결** 대화 상자입니다. 이 대화 상자를 통해 복제 모니터에서 배포자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있습니다.  
+ **서버에 연결** 대화 상자를 표시하려면 클릭합니다. 이 대화 상자를 통해 복제 모니터에서 배포자에 연결하기 위해 사용하는 연결 속성 및 자격 증명을 보고 변경할 수 있습니다.  
   
  **이 배포자 및 해당 게시의 상태를 자동으로 새로 고침**  
  복제 모니터에서 배포자의 상태를 자동으로 새로 고치도록 하려면 선택합니다. 이 옵션을 선택하면 복제 모니터가 **새로 고침 빈도** 옵션에 설정된 폴링 간격에 따라 배포자를 폴링하여 상태 정보를 얻습니다. 복제 모니터에서의 새로 고침에 대한 자세한 내용은 [Caching, Refresh, and Replication Monitor Performance](../../relational-databases/replication/monitor/caching-refresh-and-replication-monitor-performance.md)을 참조하십시오.  
@@ -42,7 +46,7 @@ caps.handback.revision: 10
  **새 그룹**  
  새 게시자 그룹을 만들려면 클릭합니다. 게시자 그룹을 사용하면 복제 모니터 내에서 게시자를 편리하게 구성할 수 있습니다. 그룹은 데이터 복제 또는 복제 토폴로지의 서버 간 관계에 영향을 주지 않습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   

@@ -1,32 +1,36 @@
 ---
-title: "비상 로그 백업(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "백업 [SQL Server], 비상 로그"
-  - "트랜잭션 로그 백업 [SQL Server], 비상 로그 백업"
-  - "NO_TRUNCATE 절"
-  - "백업 [SQL Server], 로그 백업"
-  - "비상 로그 백업"
-  - "백업 [SQL Server], 비상 로그 백업"
+title: "비상 로그 백업(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backing up [SQL Server], tail of log
+- transaction log backups [SQL Server], tail-log backups
+- NO_TRUNCATE clause
+- backups [SQL Server], log backups
+- tail-log backups
+- backups [SQL Server], tail-log backups
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 caps.latest.revision: 55
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b6a1f1ec700325de57742261e5b8911f9c90c27
+ms.lasthandoff: 04/11/2017
+
 ---
-# 비상 로그 백업(SQL Server)
+# <a name="tail-log-backups-sql-server"></a>비상 로그 백업(SQL Server)
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 백업 및 복원과 관련된 내용을 다룹니다.  
   
- *비상 로그 백업*에서는 아직 백업되지 않은 로그 레코드를 캡처하여(*비상 로그*) 캡처하여 작업 손실을 방지하고 로그 체인을 그대로 유지합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 마지막 시점으로 복구하려면 트랜잭션 비상 로그를 백업해야 합니다. 비상 로그 백업은 데이터베이스에 대한 복구 계획의 마지막 백업입니다.  
+ *비상 로그 백업* 에서는 아직 백업되지 않은 로그 레코드를 캡처하여( *비상 로그*) 캡처하여 작업 손실을 방지하고 로그 체인을 그대로 유지합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 마지막 시점으로 복구하려면 트랜잭션 비상 로그를 백업해야 합니다. 비상 로그 백업은 데이터베이스에 대한 복구 계획의 마지막 백업입니다.  
   
 > **참고:** 모든 복원 시나리오에서 비상 로그 백업이 필요한 것은 아닙니다. 복구 시점이 이전 로그 백업에 포함될 경우에는 비상 로그 백업이 필요하지 않습니다. 데이터베이스를 이동 또는 대체(덮어쓰기)하며 가장 최근 백업 이후의 시점으로 이를 복원할 필요가 없을 경우에도 비상 로그 백업이 필요하지 않습니다.  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 55
 ##  <a name="IncompleteMetadata"></a> 완전하지 않은 백업 메타데이터가 포함된 비상 로그 백업  
  비상 로그 백업은 데이터베이스가 오프라인이거나 손상되었거나 데이터 파일이 없는 경우에도 비상 로그를 캡처합니다. 이로 인해 복원 정보 명령과 **msdb**의 메타데이터가 완전하지 않을 수 있습니다. 그러나 메타데이터가 완전하지 않은 경우에도 캡처된 로그는 완전한 상태이며 사용 가능합니다.  
   
- 비상 로그 백업에 완전하지 않은 메타데이터가 있으면 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 테이블의 **has_incomplete_metadata**가 **1**로 설정됩니다. 또한 [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)출력에서 **HasIncompleteMetadata** 는 **1**로 설정됩니다.  
+ 비상 로그 백업에 완전하지 않은 메타데이터가 있으면 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 테이블의 **has_incomplete_metadata** 가 **1**로 설정됩니다. 또한 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)출력에서 **HasIncompleteMetadata** 는 **1**로 설정됩니다.  
   
  비상 로그 백업의 메타데이터가 완전하지 않으면 [backupfilegroup](../../relational-databases/system-tables/backupfilegroup-transact-sql.md) 테이블은 비상 로그 백업 당시 파일 그룹에 대한 대부분의 정보를 잃게 됩니다. 대부분의 **backupfilegroup** 테이블 열은 NULL이 되며 다음 열만 의미를 갖습니다.  
   
@@ -70,12 +74,13 @@ caps.handback.revision: 55
   
  트랜잭션 로그 백업을 복원하려면 [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)을 참조하세요.  
     
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)  
   
   
+

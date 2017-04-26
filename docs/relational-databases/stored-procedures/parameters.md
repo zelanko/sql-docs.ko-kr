@@ -1,25 +1,29 @@
 ---
-title: "매개 변수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "저장 프로시저 [SQL Server], 매개 변수"
-  - "사용자 정의 함수 [SQL Server], 매개 변수"
+title: "매개 변수 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- user-defined functions [SQL Server], parameters
 ms.assetid: c1f9bd93-3271-4098-a23b-7bd7a19ab65b
 caps.latest.revision: 2
-author: "pmasl"
-ms.author: "pelopes"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: pmasl
+ms.author: pelopes
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 64617ddd4922e7217ac905e92e5d9dfd6ffff7e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 매개 변수
+# <a name="parameters"></a>매개 변수
 매개 변수는 저장 프로시저나 함수를 호출하는 도구 또는 응용 프로그램, 함수 및 저장 프로시저 간에 데이터를 교환하는 데 사용됩니다. 
 
 *  입력 매개 변수를 사용하면 호출자가 저장 프로시저나 함수에 데이터 값을 전달할 수 있습니다.

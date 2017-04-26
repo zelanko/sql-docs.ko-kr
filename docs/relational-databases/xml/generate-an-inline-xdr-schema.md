@@ -1,27 +1,31 @@
 ---
-title: "인라인 XDR 스키마 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XDR 스키마 [SQL Server]"
-  - "인라인 XDR 스키마 생성 [SQL Server]"
-  - "XMLDATA 옵션"
-  - "FOR XML 절, 인라인 XDR 스키마 생성"
+title: "인라인 XDR 스키마 생성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XDR schemas [SQL Server]
+- inline XDR schema generation [SQL Server]
+- XMLDATA option
+- FOR XML clause, inline XDR schema generation
 ms.assetid: 2a40d617-9724-4f7d-80a4-a85c702f14d0
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2c996d2aeef58a93da05c217e472f626953a0fe6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인라인 XDR 스키마 생성
+# <a name="generate-an-inline-xdr-schema"></a>인라인 XDR 스키마 생성
   FOR XML의 **XMLDATA** 지시어는 쿼리 결과와 함께 인라인 XDR 스키마를 반환합니다. 하지만 XDR 스키마는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 제공되는 새로운 데이터 형식과 기타 향상된 기능 중 일부를 지원하지 않습니다. 대신 [XMLSCHEMA](../../relational-databases/xml/generate-an-inline-xsd-schema.md)지시어를 사용하여 인라인 XSD 스키마를 요청할 수 있습니다.  
   
 > [!IMPORTANT]  

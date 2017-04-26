@@ -1,37 +1,41 @@
 ---
-title: "SQL Server 데이터베이스 백업 및 복원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "재해 복구 [SQL Server], 복원 참조 [SQL Server]"
-  - "백업 [SQL Server]"
-  - "데이터베이스 복원 [SQL Server]"
-  - "백업 [SQL Server], 백업 참조 [SQL Server]"
-  - "데이터베이스 [SQL Server], 복원"
-  - "데이터베이스 백업 [SQL Server]"
-  - "복원 [SQL Server], 복원 참조 [SQL Server]"
-  - "재해 복구 [SQL Server], 백업 참조 [SQL Server]"
-  - "백업 [SQL Server]"
-  - "데이터베이스 엔진 [SQL Server], 백업"
-  - "데이터베이스 [SQL Server], 백업"
+title: "SQL Server 데이터베이스 백업 및 복원 | Microsoft 문서"
+ms.custom: 
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disaster recovery [SQL Server], see restoring [SQL Server]
+- backups [SQL Server]
+- restoring databases [SQL Server]
+- backup [SQL Server], see backing up [SQL Server]
+- databases [SQL Server], restoring
+- backing up databases [SQL Server]
+- restore [SQL Server], see restoring [SQL Server]
+- disaster recovery [SQL Server], see backing up [SQL Server]
+- backing up [SQL Server]
+- Database Engine [SQL Server], backups
+- databases [SQL Server], backups
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 caps.latest.revision: 91
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 91
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79c3074c9a6e56434fd7241828f02966c31da521
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 데이터베이스 백업 및 복원
+# <a name="back-up-and-restore-of-sql-server-databases"></a>SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업의 이점과 기본 백업 및 복원 용어에 대해 설명하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 백업 및 복원 전략과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원을 위한 보안 고려 사항에 대해 소개합니다. 
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 백업의 이점과 기본 백업 및 복원 용어에 대해 설명하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 백업 및 복원 전략과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 및 복원을 위한 보안 고려 사항에 대해 소개합니다. 
   
 > **단계별 지침을 찾고 있나요?** 이 항목에서는 **백업하는 방법에 대한 특정 단계를 제공하지 않습니다.** 실제로 백업하는 방법을 확인하려면 이 페이지 아래로 스크롤하여 링크 섹션을 확인하세요. 백업 작업별로, SSMS를 사용할지 T-SQL을 사용할지에 따라 구성되어 있습니다.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 91
   
  백업을 저장하기 위한 로컬 저장소 외에도 SQL Server는 Windows Azure Blob 저장소 서비스에 대한 백업과 복원도 지원합니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. Microsoft Azure Blob 저장소 서비스를 사용하여 저장된 데이터베이스 파일의 경우 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 은(는) 거의 즉시 백업 및 빠른 복원에 Azure 스냅숏을 사용하는 옵션을 제공합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
-##  백업 이유  
+##  <a name="why-back-up"></a>백업 이유  
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업하고 백업에 대한 테스트 복원 절차를 실행한 다음 안전한 오프 사이트 위치에 백업을 저장하여 치명적인 데이터 손실을 방지할 수 있습니다. **백업은 데이터를 보호하는 유일한 방법입니다.**
 
      유효한 데이터베이스 백업을 사용하여 다음의 여러 오류로부터 데이터를 복구할 수 있습니다.  
@@ -54,11 +58,11 @@ caps.handback.revision: 91
   
 -   또한 데이터베이스 백업은 서버 간 데이터베이스 복사, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 또는 데이터베이스 미러링 설정, 보관 등의 일상적인 관리 용도로 유용하게 사용할 수 있습니다.  
   
-##  백업 용어 설명
- **백업**[동사]  
+##  <a name="glossary-of-backup-terms"></a>백업 용어 설명
+ **백업** [동사]  
  데이터 또는 로그 레코드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 또는 해당 트랜잭션 로그에서 백업 장치(예: 디스크)로 복사하여 데이터 백업 또는 로그 백업을 만들 수 있습니다.  
   
- **백업**[명사]  
+ **백업** [명사]  
  오류가 발생한 이후에 데이터를 복원 및 복구하는 데 사용할 수 있는 데이터 복사본입니다. 데이터베이스 백업을 사용하여 데이터베이스 복사본을 새 위치에 복원할 수도 있습니다.  
   
 **백업** 장치  
@@ -94,11 +98,11 @@ caps.handback.revision: 91
 **복원(restore)**  
  지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서 지정된 데이터베이스로 모든 데이터 및 로그 페이지를 복사하고 기록된 변경 사항을 적용하여 데이터를 최신 상태로 전환함으로써 백업에 기록된 모든 트랜잭션을 롤포워드하는 다단계 프로세스입니다.  
   
- ##  백업 및 복원 전략  
+ ##  <a name="backup-and-restore-strategies"></a>백업 및 복원 전략  
  데이터 백업 및 복원은 특정 환경에 맞게 사용자 지정되어야 하며 적절한 리소스도 마련되어야 합니다. 따라서 복구를 위해 백업 및 복원을 안정적으로 사용하려면 백업 및 복원 전략이 필요합니다. 잘 디자인된 백업 및 복원 전략은 사용자의 특정 비즈니스 요구 사항을 감안해 데이터 가용성을 극대화하고 데이터 손실을 최소화합니다.  
   
-#### 중요! 
-**데이터베이스와 백업을 서로 다른 장치에 배치하십시오. 그렇지 않으면 데이터베이스가 들어 있는 장치가 실패할 경우 백업을 사용할 수 없습니다. 데이터와 백업을 서로 다른 장치에 배치하면 백업 작성 및 데이터베이스의 프로덕션 사용에 대한 I/O 성능도 향상됩니다.**  
+#### <a name="important"></a>중요! 
+**데이터베이스와 백업을 서로 다른 장치에 배치하세요. 그렇지 않으면 데이터베이스가 들어 있는 장치가 실패할 경우 백업을 사용할 수 없습니다. 데이터와 백업을 서로 다른 장치에 배치하면 백업 작성 및 데이터베이스의 프로덕션 사용에 대한 I/O 성능도 향상됩니다.**  
   
  백업 및 복원 전략은 백업에 관련된 부분과 복원에 관련된 부분으로 이루어집니다. 전략의 백업 관련 부분에서는 백업 유형 및 빈도, 백업에 필요한 하드웨어의 특성 및 속도, 백업 테스트 방법 및 백업 미디어 보관 위치 및 보관 방법(보안 고려 사항 포함)을 정의합니다. 전략의 복원 관련 부분에서는 누가 복원을 담당할 것이며 어떻게 데이터베이스 가용성 목표를 충족시키고 데이터 손실을 최소화할 것인가를 정의합니다. 백업 및 복원 절차를 문서화하고 실행 문서에 사본을 보관하는 것이 좋습니다.  
   
@@ -110,12 +114,12 @@ caps.handback.revision: 91
   
 -   하드웨어, 인력, 백업 미디어 저장 공간, 저장된 미디어의 물리적 보안 등과 같은 리소스의 제약 요건  
 
-### 백업 및 복원에 대한 복구 모델의 영향  
+### <a name="impact-of-the-recovery-model-on-backup-and-restore"></a>백업 및 복원에 대한 복구 모델의 영향  
  백업 및 복원 작업은 복구 모델의 컨텍스트에서 수행됩니다. 복구 모델은 트랜잭션 로그의 관리 방법을 제어하는 데이터베이스 속성입니다. 또한 데이터베이스의 복구 모델은 데이터베이스에 지원되는 복원 시나리오 및 백업 유형을 결정합니다. 일반적으로 데이터베이스는 단순 복구 모델 또는 전체 복구 모델 모두 사용합니다. 전체 복구 모델은 대량 작업 이전에 대량 로그 복구 모델로 전환하여 보완될 수 있습니다. 이러한 복구 모델 및 이러한 복구 모델이 트랜잭션 로그 관리에 미치는 영향에 대한 자세한 내용은 [트랜잭션 로그(SQL Server)](https://msdn.microsoft.com/library/ms190925(SQL.130).aspx)를 참조하세요.  
   
- 데이터베이스에 가장 적합한 복구 모델은 비즈니스 요구 사항에 따라 달라집니다. 트랜잭션 로그 관리를 방지하고 백업 및 복원을 단순화하려면 단순 복구 모델을 사용하십시오. 관리 오버헤드가 증가하더라도 작업 손실 가능성을 최소화하려면 전체 복구 모델을 사용하십시오. 백업 및 복원에 미치는 복구 모델의 영향에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
+ 데이터베이스에 가장 적합한 복구 모델은 비즈니스 요구 사항에 따라 달라집니다. 트랜잭션 로그 관리를 방지하고 백업 및 복원을 단순화하려면 단순 복구 모델을 사용하십시오. 관리 오버헤드가 증가하더라도 작업 손실 가능성을 최소화하려면 전체 복구 모델을 사용하십시오. 백업 및 복원에 미치는 복구 모델의 영향에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
   
-### 백업 전략 디자인  
+### <a name="design-your-backup-strategy"></a>백업 전략 디자인  
  지정한 데이터베이스에 대해 비즈니스 요구 사항에 맞는 복구 모델을 선택한 후에는 해당 백업 전략을 계획 및 구현해야 합니다. 백업 전략을 최적화하는 요소는 다양합니다. 그 중에서도 특히 다음과 같은 요소에 의해 주로 영향을 받습니다.  
   
 -   응용 프로그램이 하루에 몇 시간 데이터베이스에 액세스해야 합니까?  
@@ -136,29 +140,29 @@ caps.handback.revision: 91
   
 -   전체 데이터베이스 백업에 필요한 디스크 공간은 어느 정도입니까?  
   
- ### 전체 데이터베이스 백업의 크기 예측  
+ ### <a name="estimate-the-size-of-a-full-database-backup"></a>전체 데이터베이스 백업의 크기 예측  
  백업 및 복원을 구현하기 전에 전체 데이터베이스 백업에 어느 정도의 디스크 공간이 필요한지 예측해야 합니다. 백업 작업은 데이터베이스의 데이터를 백업 파일로 복사합니다. 백업에는 데이터베이스의 실제 데이터만 포함되고 사용하지 않은 공간은 포함되지 않습니다. 따라서 백업은 일반적으로 데이터베이스 자체의 크기보다 작습니다. **sp_spaceused** 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측할 수 있습니다. 자세한 내용은 [sp_spaceused&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)를 참조하세요.  
   
-### 백업 예약  
+### <a name="schedule-backups"></a>백업 예약  
  백업 작업을 수행해도 실행 중인 트랜잭션에는 큰 영향을 미치지 않으므로 일반 작업을 수행할 때도 백업 작업을 실행할 수 있습니다. 프로덕션 작업에 거의 영향을 주지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 수행할 수 있습니다.  
    
->  백업 중 동시성 제한 사항에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
+>  백업 중 동시성 제한 사항에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
   
  각 경우에 필요한 백업 유형과 수행 빈도를 결정한 후 데이터베이스 유지 관리 계획의 일부로 데이터베이스에 대한 정기 백업을 예약하는 것이 좋습니다. 유지 관리 계획에 대한 정보와 데이터베이스 백업 및 로그 백업에 대한 유지 관리 계획을 만드는 방법은 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)를 참조하십시오.  
   
-### 백업 테스트  
+### <a name="test-your-backups"></a>백업 테스트  
  백업을 테스트해야만 복원 전략을 갖추게 됩니다. 데이터베이스 복사본을 테스트 시스템으로 복원하여 각 데이터베이스에 대한 백업 전략을 철저히 테스트하는 것이 중요합니다. 사용할 모든 유형의 백업 복원을 테스트해야 합니다.  
   
  각 데이터베이스에 대한 작업 매뉴얼을 작성하여 관리하는 것이 좋습니다. 이 작업 매뉴얼에는 백업 위치, 백업 장치 이름(있는 경우) 및 테스트 백업을 복원하는 데 필요한 시간 등이 수록되어야 합니다.  
   
-## 백업 태스크에 대한 자세한 정보  
+## <a name="more-about-backup-tasks"></a>백업 태스크에 대한 자세한 정보  
 -   [유지 관리 계획 만들기](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
--   [작업 만들기](../../ssms/agent/create-a-job.md)  
+-   [작업 만들기](http://msdn.microsoft.com/library/b35af2b6-6594-40d1-9861-4d5dd906048c)  
   
--   [작업 예약](../../ssms/agent/schedule-a-job.md)  
+-   [작업 예약](http://msdn.microsoft.com/library/f626390a-a3df-4970-b7a7-a0529e4a109c)  
   
-## 백업 장치 및 백업 미디어 사용  
+## <a name="working-with-backup-devices-and-backup-media"></a>백업 장치 및 백업 미디어 사용  
 -   [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
 -   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
@@ -177,10 +181,10 @@ caps.handback.revision: 91
   
 -   [장치에서 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## 백업 만들기  
+## <a name="creating-backups"></a>백업 만들기  
 **참고!** 부분 또는 복사 전용 백업의 경우 각각 PARTIAL 또는 COPY_ONLY 옵션과 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](../../t-sql/statements/backup-transact-sql.md) 문을 사용해야 합니다.  
   
- ### SSMS 사용   
+ ### <a name="using-ssms"></a>SSMS 사용   
 -   [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
@@ -189,17 +193,17 @@ caps.handback.revision: 91
   
 -   [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
   
- ### T-SQL 사용  
--   [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+ ### <a name="using-t-sql"></a>T-SQL 사용  
+-   [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   
 -   [백업 또는 복원 중 백업 체크섬 설정 또는 해제&#40;SQL Server&#41;](../../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
--   [오류 발생 후 백업 또는 복원 작업 계속 또는 중지 여부 지정&#40;SQL Server&#41;](../../relational-databases/backup-restore/specify if backup or restore continues or stops after error.md)  
+-   [오류 발생 후 백업 또는 복원 작업 계속 또는 중지 여부 지정&#40;SQL Server&#41;](../../relational-databases/backup-restore/specify-if-backup-or-restore-continues-or-stops-after-error.md)  
   
-## 데이터 백업 복원 
-### SSMS 사용 
+## <a name="restore-data-backups"></a>데이터 백업 복원 
+### <a name="using-ssms"></a>SSMS 사용 
 -   [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
 -   [데이터베이스를 새 위치로 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)  
@@ -208,10 +212,10 @@ caps.handback.revision: 91
   
 -   [파일 및 파일 그룹 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)  
   
-### T-SQL 사용
+### <a name="using-t-sql"></a>T-SQL 사용
 -   [단순 복구 모델에서 데이터베이스 백업 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
--   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [기존 파일에서 파일 및 파일 그룹 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-over-existing-files-sql-server.md)  
   
@@ -219,26 +223,26 @@ caps.handback.revision: 91
   
 -   [master 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-the-master-database-transact-sql.md)  
 
-## 트랜잭션 로그 복원(전체 복구 모델)
-### SSMS 사용  
+## <a name="restore-transaction-logs-full-recovery-model"></a>트랜잭션 로그 복원(전체 복구 모델)
+### <a name="using-ssms"></a>SSMS 사용  
 -   [데이터베이스를 표시된 트랜잭션으로 복원&#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
- ### T-SQL 사용 
+ ### <a name="using-t-sql"></a>T-SQL 사용 
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
  
 -   [중단된 복원 작업 다시 시작&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md)  
   
 -   [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
  
-## 자세한 정보 및 리소스
+## <a name="more-information-and-resources"></a>자세한 정보 및 리소스
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Analysis Services 데이터베이스 백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)   
  [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
@@ -247,3 +251,4 @@ caps.handback.revision: 91
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   
+

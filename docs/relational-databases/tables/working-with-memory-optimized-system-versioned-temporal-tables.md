@@ -1,31 +1,35 @@
 ---
-title: "메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 691d4f80-6754-43f5-8b43-d4facf08f6fc
 caps.latest.revision: 12
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6120bdfcead0939218958888ca3a223a8c1385
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업
+# <a name="working-with-memory-optimized-system-versioned-temporal-tables"></a>메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업하는 방식과 디스크 기반 시스템 버전 임시 테이블로 작업하는 방식의 차이점에 대해 설명합니다.  
   
 > [!NOTE]  
->  메모리 액세스에 최적화된 테이블을 임시로 사용하는 방식은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.  
+>  메모리 액세스에 최적화된 테이블을 임시로 사용하는 방식은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.  
   
-## 메타데이터 검색  
+## <a name="discovering-metadata"></a>메타데이터 검색  
  메모리 액세스에 최적화된 시스템 버전의 임시 테이블과 관련한 메타데이터를 검색하려면 [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md) 및 [sys.internal_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md)의 정보를 결합해야 합니다. 시스템 버전 임시 테이블은 내부 메모리 내 기록 테이블에 parent_object_id로 표시됩니다.  
   
  아래 예에는 이러한 테이블을 쿼리하고 조인하는 방법이 나와 있습니다.  
@@ -46,7 +50,7 @@ WHERE T1.is_memory_optimized  = 1 AND T1.temporal_type = 2
   
 ```  
   
-## 데이터 수정  
+## <a name="modifying-data"></a>데이터 수정  
  시스템 버전 메모리 액세스에 최적화된 임시 테이블은 고유하게 컴파일된 저장 프로시저를 통해 수정할 수 있으므로 메모리 액세스에 최적화된 비임시 테이블을 시스템 버전 관리 테이블로 변환하고 기존의 고유한 저장 프로시저를 유지할 수 있습니다.  
   
  아래 예에는 앞에서 만든 테이블을 고유하게 컴파일된 모듈에서 수정할 수 있는 방법이 나와 있습니다.  
@@ -72,10 +76,10 @@ GO ;
   
 ```  
   
-## 이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)으로 보내 주세요.  
+## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
+ 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Working%20with%20Memory-Optimized%20System-Versioned%20Temporal%20Tables%20page)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
  [메모리 액세스에 최적화된 시스템 버전 임시 테이블 만들기](../../relational-databases/tables/creating-a-memory-optimized-system-versioned-temporal-table.md)   
  [메모리 액세스에 최적화된 시스템 버전 임시 테이블 모니터링](../../relational-databases/tables/monitoring-memory-optimized-system-versioned-temporal-tables.md)   
@@ -86,3 +90,4 @@ GO ;
  [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
+

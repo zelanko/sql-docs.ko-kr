@@ -1,33 +1,37 @@
 ---
-title: "XML 스키마 컬렉션 [SQL Server] | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XSD 스키마 [SQL Server]"
-  - "xml_schema_namespace 함수"
-  - "XML 스키마 컬렉션 [SQL Server], XML 스키마 컬렉션 정보"
-  - "메타데이터 [SQL Server], XML 스키마 컬렉션"
-  - "쿼리 [SQL Server의 XML], XML 스키마 컬렉션"
-  - "스키마 컬렉션 [SQL Server]"
-  - "스키마 [SQL Server], XML"
-  - "XML [SQL Server], 스키마 컬렉션"
-  - "XML 스키마 컬렉션 [SQL Server]"
-  - "스키마 컬렉션 [SQL Server], XML 스키마 컬렉션 정보"
+title: "XML 스키마 컬렉션(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XSD schemas [SQL Server]
+- xml_schema_namespace function
+- XML schema collections [SQL Server], about XML schema collections
+- metadata [SQL Server], XML schema collections
+- queries [XML in SQL Server], XML schema collections
+- schema collections [SQL Server]
+- schemas [SQL Server], XML
+- XML [SQL Server], schema collections
+- XML schema collections [SQL Server]
+- schema collections [SQL Server], about XML schema collections
 ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5368814b9cd123c0e968ecef14fa236d09b3c57d
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 스키마 컬렉션 [SQL Server]
+# <a name="xml-schema-collections-sql-server"></a>XML 스키마 컬렉션 [SQL Server]
   [xml&#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md) 항목에 설명된 것과 같이 SQL Server는 **xml** 데이터 형식을 통해 XML 데이터에 대한 네이티브 저장소를 제공합니다. 선택적으로 XML 스키마 컬렉션을 통해 **xml** 유형의 열 또는 변수와 XSD 스키마를 연결할 수 있습니다. XML 스키마 컬렉션은 가져온 XML 스키마를 저장하고 다음을 수행하는 데 사용됩니다.  
   
 -   XML 인스턴스 유효성 검사  
@@ -97,7 +101,7 @@ caps.handback.revision: 31
   
  이전 스키마는 데이터베이스에 저장할 수 있는 여러 유형의 구성 요소를 보여 줍니다. 여기에는 `SomeAttribute`, `SomeType`, `OrderType`, `CustomerType`, `Customer`, `Order`, `CustomerID`, `OrderID`, `OrderDate`, `RequiredDate`및 `ShippedDate`이(가) 포함됩니다.  
   
-### 구성 요소 범주  
+### <a name="component-categories"></a>구성 요소 범주  
  데이터베이스에 저장되는 스키마 구성 요소는 다음 범주로 구분됩니다.  
   
 -   ELEMENT  
@@ -118,7 +122,7 @@ caps.handback.revision: 31
   
 -   **Customer** 는 ELEMENT 구성 요소입니다.  
   
- 데이터베이스로 스키마를 가져올 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 스키마 자체는 저장하지 않습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 여러 개별 구성 요소를 저장합니다. 즉, \<Schema> 태그는 저장되지 않으며 이 태그 내에 정의된 구성 요소만 보관됩니다. 모든 스키마 요소는 보관되지 않습니다. \<Schema> 태그에 해당 구성 요소의 기본 동작을 지정하는 특성이 포함된 경우 이러한 특성은 다음 표에 설명된 것과 같이 가져오기 프로세스 중에 태그 내에 있는 스키마 구성 요소로 이동됩니다.  
+ 데이터베이스로 스키마를 가져올 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 스키마 자체는 저장하지 않습니다. 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 여러 개별 구성 요소를 저장합니다. 즉, \<Schema> 태그는 저장되지 않으며 이 태그 내에 정의된 구성 요소만 보관됩니다. 모든 스키마 요소는 보관되지 않습니다. \<Schema> 태그에 해당 구성 요소의 기본 동작을 지정하는 특성이 포함된 경우 이러한 특성은 다음 표에 설명된 것과 같이 가져오기 프로세스 중에 태그 내에 있는 스키마 구성 요소로 이동됩니다.  
   
 |특성 이름|동작|  
 |--------------------|--------------|  
@@ -170,7 +174,7 @@ caps.handback.revision: 31
   
  이러한 내용은 다음 예에 설명되어 있습니다.  
   
-### 예: XML 스키마 컬렉션에 XML 네임스페이스 열거  
+### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>예: XML 스키마 컬렉션에 XML 네임스페이스 열거  
  XML 스키마 컬렉션 "myCollection"에 대해 다음 쿼리를 사용합니다.  
   
 ```  
@@ -180,16 +184,16 @@ FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN
 WHERE    XSC.name = 'myCollection'     
 ```  
   
-### 예: XML 스키마 컬렉션의 내용 열거  
+### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>예: XML 스키마 컬렉션의 내용 열거  
  다음 문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"의 내용을 열거합니다.  
   
 ```  
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- 컬렉션 내의 개별 XML 스키마는 **XML_SCHEMA_NAMESPACE()**에 대한 세 번째 인수로 대상 네임스페이스를 지정하여 **xml** 데이터 형식의 인스턴스로 가져올 수 있습니다. 이는 다음 예에서 확인할 수 있습니다.  
+ 컬렉션 내의 개별 XML 스키마는 **XML_SCHEMA_NAMESPACE()** 에 대한 세 번째 인수로 대상 네임스페이스를 지정하여 **xml**데이터 형식의 인스턴스로 가져올 수 있습니다. 이는 다음 예에서 확인할 수 있습니다.  
   
-### 예: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
+### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>예: XML 스키마 컬렉션으로부터 지정된 스키마 출력  
  다음 문은 관계형 스키마 dbo 내에 있는 XML 스키마 컬렉션 "myCollection"으로부터 대상 네임스페이스가 "http://www.microsoft.com/books"인 XML 스키마를 출력합니다.  
   
 ```  
@@ -197,14 +201,14 @@ SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',
 N'http://www.microsoft.com/books')  
 ```  
   
-### XML 스키마 쿼리  
+### <a name="querying-xml-schemas"></a>XML 스키마 쿼리  
  XML 스키마 컬렉션에 로드한 XML 스키마를 다음과 같은 방식으로 쿼리할 수 있습니다.  
   
 -   XML 스키마 네임스페이스에 대한 카탈로그 뷰에서 Transact-SQL 쿼리를 작성합니다.  
   
 -   **xml** 데이터 형식의 열이 포함된 테이블을 만들어서 XML 스키마를 저장하고 이를 XML 유형의 시스템으로 로드합니다. **xml** 데이터 형식의 메서드를 사용하여 XML 열을 쿼리할 수 있습니다. 또한 이 열에서 XML 인덱스를 작성할 수 있습니다. 하지만 이 접근 방식에서는 응용 프로그램이 XML 열에 저장된 XML 스키마와 XML 유형 시스템 간의 일관성을 유지 관리해야 합니다. 예를 들어 XML 유형 시스템으로부터 XML 스키마 네임스페이스를 삭제하면 일관성 유지를 위해 테이블에서도 삭제해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [저장된 XML 스키마 컬렉션 보기](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [포함된 스키마를 병합하기 위해 스키마 전처리](../../relational-databases/xml/preprocess-a-schema-to-merge-included-schemas.md)   
  [서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  

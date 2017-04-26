@@ -1,33 +1,37 @@
 ---
-title: "SQL Server Audit 동작 그룹 및 동작 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "audit"
-helpviewer_keywords: 
-  - "감사 동작 [SQL Server]"
-  - "감사 [SQL Server], 그룹"
-  - "서버 수준 감사 동작 [SQL Server]"
-  - "SQL Server Audit"
-  - "감사 수준 감사 동장 [SQL Server]"
-  - "데이터베이스 수준 감사 동작 [SQL Server]"
-  - "감사 동작 그룹 [SQL Server]"
-  - "감사 [SQL Server], 동작"
+title: "SQL Server 감사 동작 그룹 및 동작 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- audit
+helpviewer_keywords:
+- audit actions [SQL Server]
+- audits [SQL Server], groups
+- server-level audit actions [SQL Server]
+- SQL Server Audit
+- audit-level audit actions [SQL Server]
+- database-level audit actions [SQL Server]
+- audit action groups [SQL Server]
+- audits [SQL Server], actions
 ms.assetid: b7422911-7524-4bcd-9ab9-e460d5897b3d
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d3eb276c9571a168a746e0e422adf426292cfad2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server Audit 동작 그룹 및 동작
+# <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server 감사 동작 그룹 및 동작
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트 그룹과 개별 이벤트를 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit는 0개 이상의 감사 동작 항목으로 구성되어 있습니다. 이러한 감사 동작 항목은 동작 그룹(예: Server_Object_Change_Group) 또는 개별 동작(예: 테이블에 대한 SELECT 작업)일 수 있습니다.  
@@ -65,7 +69,7 @@ caps.handback.revision: 46
   
  모든 감사는 처음 만들어진 상태에서는 비활성화되어 있습니다.  
   
-## 서버 수준 감사 동작 그룹  
+## <a name="server-level-audit-action-groups"></a>서버 수준 감사 동작 그룹  
  서버 수준 감사 동작 그룹은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 감사 이벤트 클래스와 유사한 동작입니다. 자세한 내용은 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하세요.  
   
  다음 표에서는 서버 수준 감사 동작 그룹에 대해 설명하며 해당하는 경우 동일한 SQL Server 이벤트 클래스를 제공합니다.  
@@ -115,12 +119,12 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|ALTER USER 문을 사용하여 포함된 데이터베이스 사용자의 암호를 변경할 때마다 발생하는 이벤트입니다.|  
 |USER_DEFINED_AUDIT_GROUP|이 그룹은 [sp_audit_write&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)를 사용하여 발생하는 이벤트를 모니터링합니다. 일반적으로 트리거 또는 저장 프로시저는 중요한 이벤트를 감사할 수 있도록 **sp_audit_write** 호출을 포함합니다.|  
   
-### 고려 사항  
+### <a name="considerations"></a>고려 사항  
  서버 수준 동작 그룹은 전체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 동작을 포함합니다. 예를 들어 서버 감사 사양에 적절한 동작 그룹이 추가되면 모든 데이터베이스의 모든 스키마 개체 액세스 검사가 기록됩니다. 데이터베이스 감사 사양에서는 해당 데이터베이스의 스키마 개체 액세스만 기록됩니다.  
   
  서버 수준 동작은 데이터베이스 수준 동작에 대한 자세한 필터링을 허용하지 않습니다. 자세한 동작 필터링을 구현하려면 데이터베이스 수준 감사(예: Employee 그룹에서 로그인에 사용할 Customers 테이블 SELECT 동작에 대한 감사)가 필요합니다. 시스템 뷰와 같은 서버 범위 개체는 사용자 데이터베이스 감사 사양에 포함하지 마십시오.  
   
-## 데이터베이스 수준 감사 동작 그룹  
+## <a name="database-level-audit-action-groups"></a>데이터베이스 수준 감사 동작 그룹  
  데이터베이스 수준 감사 동작 그룹은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안 감사 이벤트 클래스와 유사한 동작입니다. 이벤트 클래스에 대한 자세한 내용은 [SQL Server Event Class Reference](../../../relational-databases/event-classes/sql-server-event-class-reference.md)를 참조하십시오.  
   
  다음 표에서는 데이터베이스 수준 감사 동작 그룹에 대해 설명하며 해당하는 경우 동일한 SQL Server 이벤트 클래스를 제공합니다.  
@@ -152,7 +156,7 @@ caps.handback.revision: 46
 |USER_CHANGE_PASSWORD_GROUP|ALTER USER 문을 사용하여 포함된 데이터베이스 사용자의 암호를 변경할 때마다 발생하는 이벤트입니다.|  
 |USER_DEFINED_AUDIT_GROUP|이 그룹은 [sp_audit_write&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)를 사용하여 발생하는 이벤트를 모니터링합니다.|  
   
-## 데이터베이스 수준 감사 동작  
+## <a name="database-level-audit-actions"></a>데이터베이스 수준 감사 동작  
  데이터베이스 수준 동작은 데이터베이스 스키마 및 스키마 개체(예: 테이블, 뷰, 저장 프로시저, 함수, 확장 저장 프로시저, 큐, 동의어)에 대한 특정 동작을 직접 감사할 수 있습니다. 유형, XML 스키마 컬렉션, 데이터베이스 및 스키마는 감사되지 않습니다. 스키마 개체 감사는 스키마 및 데이터베이스에 구성될 수 있습니다. 이 경우 지정된 스키마 또는 데이터베이스에 포함된 모든 스키마 개체의 이벤트가 감사됩니다. 다음 표에서는 데이터베이스 수준 감사 동작에 대해 설명합니다.  
   
 |작업|설명|  
@@ -165,21 +169,21 @@ caps.handback.revision: 46
 |RECEIVE|RECEIVE를 실행할 때마다 발생하는 이벤트입니다.|  
 |REFERENCES|REFERENCES 사용 권한을 확인할 때마다 발생하는 이벤트입니다.|  
   
-### 고려 사항  
+### <a name="considerations"></a>고려 사항  
 *  데이터베이스 수준 감사 동작은 열에 적용되지 않습니다.  
   
 *  쿼리 프로세서에서 쿼리를 매개 변수화하면 쿼리의 열 값 대신 해당 매개 변수가 감사 이벤트 로그에 나타납니다. 
  
 *  RPC 문이 기록되지 않았습니다. 
   
-## 감사 수준 감사 동작 그룹  
+## <a name="audit-level-audit-action-groups"></a>감사 수준 감사 동작 그룹  
  감사 프로세스의 동작을 감사할 수도 있습니다. 이는 서버 범위 또는 데이터베이스 범위일 수 있습니다. 데이터베이스 범위에서는 데이터베이스 감사 사양에 대해서만 발생합니다. 다음 표에서는 감사 수준 감사 동작 그룹에 대해 설명합니다.  
   
 |동작 그룹 이름|설명|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|다음 명령 중 하나를 실행할 때마다 발생하는 이벤트입니다.<br /><br /> CREATE SERVER AUDIT<br /><br /> ALTER SERVER AUDIT<br /><br /> DROP SERVER AUDIT<br /><br /> CREATE SERVER AUDIT SPECIFICATION<br /><br /> ALTER SERVER AUDIT SPECIFICATION<br /><br /> DROP SERVER AUDIT SPECIFICATION<br /><br /> CREATE DATABASE AUDIT SPECIFICATION<br /><br /> ALTER DATABASE AUDIT SPECIFICATION<br /><br /> DROP DATABASE AUDIT SPECIFICATION|  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [서버 감사 및 서버 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md)  
   
  [서버 감사 및 데이터베이스 감사 사양 만들기](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)  
@@ -225,3 +229,4 @@ caps.handback.revision: 46
  [sys.dm_audit_class_type_map&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-audit-class-type-map-transact-sql.md)  
   
   
+

@@ -1,27 +1,31 @@
 ---
-title: "SQL 추적 최적화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "시간 [SQL Server], 추적"
-  - "SQL 추적, 성능"
-  - "추적 [SQL Server], 성능"
-  - "성능 [SQL Server], 추적"
+title: "SQL 추적 최적화 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time [SQL Server], traces
+- SQL Trace, performance
+- traces [SQL Server], performance
+- performance [SQL Server], trace
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2eb701bd4ade246ebaf7b796a49c207b0f89e5e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL 추적 최적화
+# <a name="optimize-sql-trace"></a>SQL 추적 최적화
   SQL 추적을 실행하면 데이터 수집을 위해 시스템 리소스가 사용되기 때문에 성능 비용이 발생하지만 여러 가지 방법으로 이 비용을 최소화할 수 있습니다. 추적으로 인한 성능 비용을 최적화하려면 다음을 시도하십시오.  
   
 -   명령 프롬프트를 사용하여 추적을 실행해 봅니다. 그래픽 사용자 인터페이스를 사용하면 성능이 저하됩니다. 자세한 내용은 [sp_trace_create&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)를 참조하세요.  
@@ -42,7 +46,7 @@ caps.handback.revision: 25
   
 -   반환되는 이벤트의 수를 제한합니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 추적을 테이블에 저장하고 최대 행 개수를 설정하여 반환되는 이벤트의 수를 제한할 수 있습니다. 최대 행 개수에 도달한 후에도 추적 결과가 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 화면에 반환되지만 테이블에 결과를 기록하는 데 필요한 비용이 없어집니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

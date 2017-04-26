@@ -1,29 +1,33 @@
 ---
-title: "메모리 액세스에 최적화된 테이블 소개 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블 소개 | Microsoft 문서"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 caps.latest.revision: 22
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74eceb20d68e928663d35de10d92866c77e6aa25
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블 소개
+# <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   메모리 액세스에 최적화된 테이블은 [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)을 사용하여 만드는 테이블입니다.  
   
  메모리 액세스에 최적화된 테이블은 기본적으로 완전한 영속성을 가지며, 메모리 액세스에 최적화된 테이블의 완전한 영구 트랜잭션은 (기존) 디스크 기반 테이블의 트랜잭션과 같이 완전한 ACID(원자성, 일관성, 격리성 및 영속성)를 가집니다. 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 하위 집합을 지원합니다.
  
-SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되는 [데이터 정렬 또는 코드 페이지](../../relational-databases/collations/collation-and-unicode-support.md)에 대한 제한이 없습니다.
+SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되는 [데이터 정렬 또는 코드 페이지](../../relational-databases/collations/collation-and-unicode-support.md) 에 대한 제한이 없습니다.
   
  메모리 액세스에 최적화된 테이블은 기본적으로 주 메모리에 저장되며, 메모리에 상주합니다. 테이블의 행은 메모리에서 읽고 메모리에 기록합니다. 전체 테이블은 메모리에 상주합니다. 테이블 데이터의 보조 복사본이 디스크에서 유지 관리되는데, 이는 내구성 목적입니다. 내구성이 있는 테이블에 대한 자세한 내용은 [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md) 를 참조하세요. 메모리 액세스에 최적화된 테이블의 데이터는 데이터베이스 복구 중에만 디스크에서 읽습니다. 예를 들면, 서버를 다시 시작한 후입니다.  
   
@@ -37,7 +41,7 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
   
  다음 그림에서는 다중 버전 관리를 보여 줍니다. 이 그림에서는 세 개의 행이 있고 각 행에 서로 다른 버전이 있는 테이블을 보여 줍니다.  
   
-![다중 버전 관리](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.png "다중 버전 관리")  
+![다중 버전 관리](../../relational-databases/in-memory-oltp/media/hekaton-tables-1.gif "다중 버전 관리")  
   
  테이블에 3개의 행 즉, r1, r2, r3이 있습니다. r1에는 세 개의 버전, r2에는 두 개의 버전, r3에는 네 개의 버전이 있습니다. 동일한 행의 서로 다른 버전은 반드시 연속된 메모리 위치에 배치하지 않아도 되며, 테이블 데이터 구조의 여러 위치에 분산하여 배치할 수 있습니다.  
   
@@ -58,7 +62,7 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
 |기능|고유하게 컴파일된 저장 프로시저를 통한 액세스|해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스|CLR 액세스|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |메모리 액세스에 최적화된 테이블|예|예|아니요*|  
-|메모리 액세스에 최적화된 테이블 형식|예|사용자 계정 컨트롤|아니요|  
+|메모리 액세스에 최적화된 테이블 형식|예|예|아니요|  
 |고유하게 컴파일된 저장 프로시저|고유하게 컴파일된 저장 프로시저 중첩은 지원되지 않습니다. 참조되는 프로시저도 고유하게 컴파일된 경우 저장 프로시저 내에서 EXECUTE 구문을 사용할 수 있습니다.|예|아니요*|  
   
  *컨텍스트 연결(CLR 모듈을 실행하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 연결)에서는 메모리 액세스에 최적화된 테이블이나 고유하게 컴파일된 저장 프로시저에 액세스할 수 없습니다. 하지만 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저에 액세스할 수 있는 다른 연결을 만들어서 열 수 있습니다.  
@@ -89,7 +93,7 @@ SQL Server 2016부터 Azure SQL Database에는 메모리 내 OLTP에 한정되�
 |성능<br /><br /> 많은 리소스(CPU, I/O, 네트워크 또는 메모리) 사용량|CPU<br /> 고유하게 컴파일된 저장 프로시저를 사용할 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하는 데 필요한 명령이 해석된 저장 프로시저에 비해 매우 적기 때문에 CPU 사용량도 크게 줄어들 수 있습니다.<br /><br /> 메모리 내 OLTP는 서버 한 대가 서버 5 - 10대의 처리량을 발휘할 수 있기 때문에 확장된 작업에서 하드웨어 투자를 줄일 수 있습니다.<br /><br /> 입력/출력<br /> 데이터 또는 인덱스 페이지 처리에 I/O 병목 현상이 발생하는 경우 메모리 내 OLTP를 사용하면 병목 현상을 줄일 수 있습니다. 또한 메모리 내 OLTP 개체의 검사점은 연속되며 I/O 작업의 갑작스러운 증가를 초래하지 않습니다. 그러나 성능에 중요한 영향을 미치는 테이블의 작업 집합이 메모리에 맞지 않을 경우 데이터가 메모리에 상주할 필요가 없기 때문에 메모리 내 OLTP는 성능을 개선하지 않습니다. 로깅에서 I/O 병목 현상이 발생하는 경우 메모리 내 OLTP를 사용하면 로깅이 적게 수행되므로 병목 현상을 줄일 수 있습니다. 하나 이상의 메모리 액세스에 최적화된 테이블을 비내구성 테이블로 구성한 경우 데이터에 대한 로깅을 제거할 수 있습니다.<br /><br /> 메모리<br /> 메모리 내 OLTP는 성능 이점을 제공하지 않습니다. 개체가 메모리에 상주해야 하기 때문에 메모리 내 OLTP는 메모리에 추가 부담을 줄 수 있습니다.<br /><br /> 네트워크<br /> 메모리 내 OLTP는 성능 이점을 제공하지 않습니다. 데이터는 데이터 계층에서 응용 프로그램 계층으로 통신해야 합니다.|  
 |확장성<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에서 발생하는 대부분의 확장 문제는 잠금, 래치 및 spinlock의 경합 같은 동시성 문제로 인한 것입니다.|래치 경합<br /> 일반적인 시나리오는 키 순서로 행을 동시에 삽입할 때 인덱스의 마지막 페이지에서의 경합입니다. 메모리 내 OLTP는 데이터에 액세스할 때 래치를 수행하지 않으므로 래치 경합과 관련한 확장성 문제가 완전히 제거됩니다.<br /><br /> Spinlock 경합<br /> 메모리 내 OLTP는 데이터에 액세스할 때 래치를 수행하지 않으므로 spinlock 경합과 관련한 확장성 문제가 완전히 제거됩니다.<br /><br /> 잠금 관련 경합<br /> 데이터베이스 응용 프로그램의 읽기와 쓰기 작업 간에 잠금 문제가 발생하는 경우 새로운 형태의 낙관적 동시성 제어를 사용하여 모든 트랜잭션 격리 수준을 구현하기 때문에 메모리 내 OLTP는 차단 문제를 제거합니다. 메모리 내 OLTP는 행 버전을 저장하는 데 TempDB를 사용하지 않습니다.<br /><br /> 같은 행을 업데이트하려는 두 동시 트랜잭션 같이 두 쓰기 작업 간의 충돌로 인해 확장 문제가 발생하는 경우 메모리 내 OLTP를 사용하면 한 트랜잭션은 성공하고 다른 트랜잭션은 실패합니다. 실패한 트랜잭션은 명시적으로 또는 암시적으로 다시 제출해야 하며 트랜잭션을 다시 시도해야 합니다. 어느 경우나 응용 프로그램을 변경해야 합니다.<br /><br /> 응용 프로그램의 두 쓰기 작업 간에 충돌이 자주 발생하는 경우 낙관적 잠금 값이 감소합니다. 응용 프로그램은 메모리 내 OLTP에 적합하지 않습니다. 충돌이 잠금 에스컬레이션으로 인해 발생하지 않는다면 대부분의 OLTP 응용 프로그램에는 쓰기 충돌이 없습니다.|  
   
-##  <a name="a-namerlsa-row-level-security-in-memory-optimized-tables"></a><a name="rls"></a> 메모리 액세스에 최적화된 테이블의 행 수준 보안  
+##  <a name="rls"></a> Row-Level Security in Memory-Optimized Tables  
 
 [행 수준 보안](../../relational-databases/security/row-level-security.md) 은 메모리 액세스에 최적화된 테이블에서 지원됩니다. 메모리 액세스에 최적화된 테이블에 행 수준 보안 정책을 적용하는 작업은 디스크 기반 테이블에서와 기본적으로 동일합니다. 단, 메모리 액세스에 최적화된 테이블의 경우에는 보안 조건자로 사용되는 인라인 테이블 반환 함수를 고유하게 컴파일해야 합니다(WITH NATIVE_COMPILATION 옵션을 사용하여 함수를 작성해야 함). 자세한 내용은 [행 수준 보안](../../relational-databases/security/row-level-security.md#Limitations) 항목의 [기능 간 호환성](../../relational-databases/security/row-level-security.md) 섹션을 참조하세요.  
   
@@ -107,3 +111,4 @@ EXECUTE AS CALLER 사용 시에는 호출자의 권한 확인으로 인해 성�
 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

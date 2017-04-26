@@ -1,26 +1,30 @@
 ---
-title: "자습서: 인증서로 저장 프로시저 서명 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "저장 프로시저 서명 자습서 [SQL Server]"
+title: "자습서: 인증서로 저장 프로시저 서명 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- signing stored procedures tutorial [SQL Server]
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 자습서: 인증서로 저장 프로시저 서명
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
 이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 생성한 인증서를 사용하여 저장 프로시저에 서명하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -48,7 +52,7 @@ master 데이터베이스에서 인증서를 만들어 서버 수준 사용 권�
   
 이 예제의 각 코드 블록에 대한 설명도 함께 나와 있습니다. 전체 예제를 복사하려면 이 자습서 끝에 있는 [전체 예제](#CompleteExample) 를 참조하세요.  
   
-## 1. 환경 구성  
+## <a name="1-configure-the-environment"></a>1. 환경 구성  
 예제의 초기 컨텍스트를 설정하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 새 쿼리를 열고 다음 코드를 실행하여 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스를 엽니다. 이 코드는 데이터베이스 컨텍스트를 `AdventureWorks2012`로 변경하고 암호를 사용하여 새 서버 로그인 및 데이터베이스 사용자 계정(`TestCreditRatingUser`)을 만듭니다.  
   
 ```  
@@ -65,7 +69,7 @@ GO
   
 CREATE USER 문에 대한 자세한 내용은 [CREATE USER&#40;Transact-SQL&#41;](../t-sql/statements/create-user-transact-sql.md)를 참조하세요. CREATE LOGIN 문에 대한 자세한 내용은 [CREATE LOGIN&#40;Transact-SQL&#41;](../t-sql/statements/create-login-transact-sql.md)을 참조하세요.  
   
-## 2. 인증서 만들기  
+## <a name="2-create-a-certificate"></a>2. 인증서 만들기  
 master 데이터베이스를 컨텍스트로 사용하거나, 사용자 데이터베이스를 사용하거나, 두 가지 방법을 모두 사용하여 서버에서 인증서를 만들 수 있습니다. 인증서의 보안을 설정하는 옵션에는 여러 가지가 있습니다. 인증서에 대한 자세한 내용은 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../t-sql/statements/create-certificate-transact-sql.md)를 참조하세요.  
   
 다음 코드를 실행하여 데이터베이스 인증서를 만들고 암호를 사용하여 이 인증서에 보안을 설정합니다.  
@@ -78,7 +82,7 @@ CREATE CERTIFICATE TestCreditRatingCer
 GO  
 ```  
   
-## 3. 저장 프로시저를 만들고 여기에 인증서로 서명  
+## <a name="3-create-and-sign-a-stored-procedure-using-the-certificate"></a>3. 저장 프로시저를 만들고 여기에 인증서로 서명  
 다음 코드를 사용하여 `Vendor` 데이터베이스 스키마의 `Purchasing`테이블에서 데이터를 선택하는 저장 프로시저를 만들어 신용 등급이 1인 회사만 여기에 액세스할 수 있도록 제한할 수 있습니다. 저장 프로시저의 첫 번째 섹션은 저장 프로시저를 실행하는 사용자 계정의 컨텍스트를 표시합니다. 이 섹션은 개념을 보여 주기 위한 것으로, 요구 사항을 만족할 필요는 없습니다.  
   
 ```  
@@ -114,7 +118,7 @@ GO
   
 저장 프로시저에 서명하는 방법에 대한 자세한 내용은 [ADD SIGNATURE&#40;Transact-SQL&#41;](../t-sql/statements/add-signature-transact-sql.md)를 참조하세요.  
   
-## 4. 인증서를 사용하여 인증서 계정 만들기  
+## <a name="4-create-a-certificate-account-using-the-certificate"></a>4. 인증서를 사용하여 인증서 계정 만들기  
 다음 코드를 실행하여 인증서에서 데이터베이스 사용자(`TestCreditRatingcertificateAccount`)를 만듭니다. 이 계정에는 서버 로그인이 없으므로 해당 계정으로 기본 테이블에 대한 액세스가 제어됩니다.  
   
 ```  
@@ -125,7 +129,7 @@ CREATE USER TestCreditRatingcertificateAccount
 GO  
 ```  
   
-## 5. 인증서 계정에 데이터베이스 권한 부여  
+## <a name="5-grant-the-certificate-account-database-rights"></a>5. 인증서 계정에 데이터베이스 권한 부여  
 다음 코드를 실행하여 기본 테이블 및 저장 프로시저에 대한 권한을 `TestCreditRatingcertificateAccount`에 부여합니다.  
   
 ```  
@@ -142,7 +146,7 @@ GO
   
 개체에 사용 권한을 부여하는 방법에 대한 자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../t-sql/statements/grant-transact-sql.md)를 참조하세요.  
   
-## 6. 액세스 컨텍스트 표시  
+## <a name="6-display-the-access-context"></a>6. 액세스 컨텍스트 표시  
 저장 프로시저 액세스와 관련된 권한을 표시하려면 다음 코드를 실행하여 `TestCreditRatingUser` 사용자에게 저장 프로시저를 실행할 수 있는 권한을 부여합니다.  
   
 ```  
@@ -173,7 +177,7 @@ GO
 > [!NOTE]  
 > 데이터베이스 내에서 컨텍스트 전환에 EXECUTE를 사용합니다.  
   
-## 7. 환경 다시 설정  
+## <a name="7-reset-the-environment"></a>7. 환경 다시 설정  
 다음 코드는 `REVERT` 문을 사용하여 현재 계정의 컨텍스트를 dbo로 되돌리고 환경을 다시 설정합니다.  
   
 ```  
@@ -289,8 +293,9 @@ DROP CERTIFICATE TestCreditRatingCer;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
   
+

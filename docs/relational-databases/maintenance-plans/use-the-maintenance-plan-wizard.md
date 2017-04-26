@@ -1,45 +1,49 @@
 ---
-title: "유지 관리 계획 마법사 사용 | Microsoft Docs"
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ag.maintwiz.integrity.f1"
-  - "sql13.ag.maintwiz.order.f1"
-  - "sql13.ag.maintwiz.report.f1"
-  - "sql13.ag.maintwiz.updatestats.f1"
-  - "sql13.ag.maintwiz.indexdefrag.f1"
-  - "sql13.ag.maintwiz.progress.f1"
-  - "sql13.ag.maintwiz.maintcleanup.f1"
-  - "sql13.ag.maintwiz.backupfull.f1"
-  - "sql13.ag.maintwiz.task.f1"
-  - "sql13.ag.maintwiz.server.f1"
-  - "sql13.ag.maintwiz.shrinkdb.f1"
-  - "sql13.ag.maintwiz.execagentjob.f1"
-  - "sql13.ag.maintwiz.summary.f1"
-  - "sql13.ag.maintwiz.welcome.f1"
-  - "sql13.ag.maintwiz.planprop.f1"
-  - "sql13.ag.maintwiz.reindex.f1"
-  - "sql13.ag.maintwiz.histcleanup.f1"
-  - "sql13.ag.maintwiz.backuplog.f1"
-  - "sql13.ag.maintwiz.backupdiff.f1"
-helpviewer_keywords: 
-  - "유지 관리 계획 마법사"
-  - "데이터베이스 유지 관리 계획 마법사"
-  - "데이터베이스 유지 관리 계획 마법사, 시작"
+title: "유지 관리 계획 마법사 사용 | Microsoft 문서"
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ag.maintwiz.integrity.f1
+- sql13.ag.maintwiz.order.f1
+- sql13.ag.maintwiz.report.f1
+- sql13.ag.maintwiz.updatestats.f1
+- sql13.ag.maintwiz.indexdefrag.f1
+- sql13.ag.maintwiz.progress.f1
+- sql13.ag.maintwiz.maintcleanup.f1
+- sql13.ag.maintwiz.backupfull.f1
+- sql13.ag.maintwiz.task.f1
+- sql13.ag.maintwiz.server.f1
+- sql13.ag.maintwiz.shrinkdb.f1
+- sql13.ag.maintwiz.execagentjob.f1
+- sql13.ag.maintwiz.summary.f1
+- sql13.ag.maintwiz.welcome.f1
+- sql13.ag.maintwiz.planprop.f1
+- sql13.ag.maintwiz.reindex.f1
+- sql13.ag.maintwiz.histcleanup.f1
+- sql13.ag.maintwiz.backuplog.f1
+- sql13.ag.maintwiz.backupdiff.f1
+helpviewer_keywords:
+- Maintenance Plan Wizard
+- Database Maintenance Plan Wizard
+- Database Maintenance Plan Wizard, starting
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 유지 관리 계획 마법사 사용
+# <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
     
  
@@ -111,19 +115,19 @@ caps.handback.revision: 43
   
                     -   **매(Day)**를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                    -   **매(The)**를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째** 또는 **네 번째** 및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                    -   **매(The)**를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
             2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   
                 -   **한 번 수행**을 선택하는 경우 **한 번 수행** 상자에 작업 일정을 실행할 특정 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
   
-                -   **되풀이 수행**을 선택하는 경우 **빈도**에 선택한 날 동안 작업 일정을 실행할 빈도를 지정합니다. 예를 들어 작업 일정을 실행하는 날에 2시간마다 작업 일정을 반복하려면 **되풀이 수행**을 선택하고 첫 번째 상자에 "2"를 입력한 다음 목록에서 **시간**을 선택합니다. 이 목록에서 **분**과 **초**도 선택할 수 있습니다. 첫 번째 상자에 허용되는 가장 큰 숫자는 "100"입니다.  
+                -   **되풀이 수행**을 선택하는 경우 **빈도**에 선택한 날 동안 작업 일정을 실행할 빈도를 지정합니다. 예를 들어 작업 일정을 실행하는 날에 2시간마다 작업 일정을 반복하려면 **되풀이 수행**을 선택하고 첫 번째 상자에 "2"를 입력한 다음 목록에서 **시간** 을 선택합니다. 이 목록에서 **분** 과 **초**도 선택할 수 있습니다. 첫 번째 상자에 허용되는 가장 큰 숫자는 "100"입니다.  
   
                      **시작** 상자에 작업 일정 실행을 시작할 시간을 입력합니다. **종료** 상자에 작업 일정 반복을 중지할 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
   
             3.  **기간**아래의 **시작 날짜**에 작업 일정 실행을 시작할 날짜를 입력합니다. **종료 날짜** 또는 **종료 날짜 없음** 을 선택하여 작업 일정 실행을 중지할 시기를 나타냅니다. **종료 날짜**를 선택하는 경우 작업 일정 실행을 중지할 날짜를 입력합니다.  
   
-        5.  **한 번**을 선택하는 경우 **한 번 발생** 아래 **날짜** 상자에 작업 일정을 실행할 날짜를 입력합니다. **시간** 상자에 작업 일정을 실행할 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
+        5.  **한 번**을 선택하는 경우 **한 번 발생**아래 **날짜** 상자에 작업 일정을 실행할 날짜를 입력합니다. **시간** 상자에 작업 일정을 실행할 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
   
         6.  **요약**아래 **설명**에서 모든 작업 일정 설정이 올바른지 확인합니다.  
   
@@ -141,9 +145,9 @@ caps.handback.revision: 43
   
 8.  On the **유지 관리 태스크 순서 선택** 페이지에서 태스크를 선택하고 **위로 이동…** 또는 **아래로 이동…** 을 클릭하여 태스크의 실행 순서를 변경합니다. 완료했거나 현재 태스크 순서에 만족하면 **다음**을 클릭합니다.  
   
-    > **참고:** 위의 **계획 속성 선택** 페이지에서 **각 태스크에 별도의 일정**을 선택한 경우 이 페이지에서 유지 관리 태스크의 순서를 변경할 수 없습니다.  
+    > **참고:** 위의 **계획 속성 선택** 페이지에서 **각 태스크에 별도의 일정** 을 선택한 경우 이 페이지에서 유지 관리 태스크의 순서를 변경할 수 없습니다.  
   
-## 데이터베이스 무결성 검사(CHECKDB) 정의  
+## <a name="define-database-check-integrity-checkdb"></a>데이터베이스 무결성 검사(CHECKDB) 정의  
   
  **데이터베이스 무결성 검사 태스크 정의** 페이지에서 사용자와 시스템 테이블 및 인덱스의 할당 및 구조적 무결성을 검사할 데이터베이스를 선택합니다. 이 태스크에서는 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 데이터베이스의 모든 무결성 문제를 보고하므로 시스템 관리자나 데이터베이스 소유자가 나중에 이러한 문제를 처리할 수 있습니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
@@ -158,7 +162,7 @@ caps.handback.revision: 43
   
 **시스템 데이터베이스**  
   
-  - **tempdb** 및 사용자가 만든 데이터베이스를 제외한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터베이스에 대해 이 태스크를 실행하는 유지 관리 계획을 생성합니다.  
+  - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tempdb **및 사용자가 만든 데이터베이스를 제외한** 시스템 데이터베이스에 대해 이 태스크를 실행하는 유지 관리 계획을 생성합니다.  
   
  **모든 사용자 데이터베이스(master, model, msdb, tempdb 제외)**  
   
@@ -177,7 +181,7 @@ caps.handback.revision: 43
 **TABLOCK**  
  - 내부 데이터베이스 스냅숏을 사용하는 대신 DBCC CHECKDB가 잠금을 가져오도록 합니다. 여기에는 데이터베이스에 대한 단기 배타(X) 잠금이 포함됩니다. 이 옵션을 사용하면 데이터베이스 로드가 많은 상황에서 DBCC CHECKDB가 더 빠르게 실행됩니다. 그러나 DBCC CHECKDB가 실행되는 동안 데이터베이스의 동시 사용 가능성은 줄어듭니다.  
   
-## 데이터베이스 축소 태스크 정의  
+## <a name="define-database-shrink-tasks"></a>데이터베이스 축소 태스크 정의  
   
 1.  **데이터베이스 축소 태스크 정의** 페이지에서 `DBCC SHRINKDATABASE` 또는 `NOTRUNCATE` 옵션과 함께 `TRUNCATEONLY` 문을 사용하여 선택한 데이터베이스의 크기를 축소하는 태스크를 만듭니다. 자세한 내용은 [DBCC SHRINKDATABASE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
@@ -200,7 +204,7 @@ caps.handback.revision: 43
      **해제된 공간을 운영 체제로 반환**  
      데이터베이스가 인접 페이지로 압축되며 다른 프로그램에서 사용할 수 있도록 해당 페이지가 운영 체제로 반환됩니다. 이 데이터베이스 파일은 가능한 한 큰 폭으로 축소됩니다. 이 작업에서는 TRUNCATEONLY 옵션을 사용합니다. 이 옵션이 기본 옵션입니다.  
   
-## 인덱스 태스크 정의  
+## <a name="define-the-index-tasks"></a>인덱스 태스크 정의  
   
 1.  **인덱스 다시 구성 태스크 정의** 페이지에서 인덱스 페이지를 보다 효율적인 검색 순서로 이동할 서버를 선택합니다. 이 태스크에서는 `ALTER INDEX … REORGANIZE` 문을 사용합니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
@@ -254,12 +258,12 @@ caps.handback.revision: 43
   
      이 옵션을 선택하면 `WAIT_AT_LOW_PRIORITY` 옵션을 사용하는 낮은 우선 순위 사용도 활성화됩니다. 이 경우 온라인 인덱스 다시 작성 작업은 `MAX_DURATION` 분 동안 낮은 우선 순위 잠금을 대기하므로 온라인 인덱스 작성 작업이 대기 중인 동안 다른 작업을 진행할 수 있습니다.  
   
-    > **참고:** 온라인 인덱스 작업은 일부 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+    > **참고:** 온라인 인덱스 작업은 일부 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
      **MAXDOP** 확인란  
      DBCC CHECKDB에 대한 sp_configure의 최대 병렬 처리 수준 구성 옵션을 재정의합니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요.  
   
-#### 통계 업데이트 태스크 정의  
+#### <a name="define-the-update-statistics-task"></a>통계 업데이트 태스크 정의  
   
 1.  **통계 업데이트 태스크 정의** 페이지에서 테이블 및 인덱스 통계가 업데이트될 데이터베이스를 정의합니다. 이 태스크에서는 `UPDATE STATISTICS` 문을 사용합니다. 자세한 내용은 [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)를 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
@@ -292,7 +296,7 @@ caps.handback.revision: 43
      **샘플링 기준**  
      보다 큰 테이블이나 뷰에 대한 통계를 수집할 때 샘플링할 행의 수 또는 테이블이나 인덱싱된 뷰의 백분율을 지정합니다.  
   
-#### 기록 정리 태스크 정의  
+#### <a name="define-the-history-cleanup-task"></a>기록 정리 태스크 정의  
   
 1.  **기록 정리 태스크 정의** 페이지에서 오래된 태스크 기록을 삭제할 데이터베이스를 정의합니다. 이 태스크는 `EXEC sp_purge_jobhistory`, `EXEC sp_maintplan_delete_log`및 `EXEC sp_delete_backuphistory` 문을 사용하여 **msdb** 테이블에서 기록 정보를 제거합니다. 완료되면 **다음**을 클릭합니다.  
   
@@ -302,7 +306,7 @@ caps.handback.revision: 43
      삭제할 태스크 데이터의 형식을 선택합니다.  
   
      **백업 및 복원 기록**  
-     최근 백업을 만들었을 당시의 기록을 보존하면 데이터베이스를 복원하려고 할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 복구 계획을 만드는 데 도움이 될 수 있습니다. 보존 기간은 적어도 전체 데이터베이스 백업 빈도만큼 되어야 합니다.  
+     최근 백업을 만들었을 당시의 기록을 보존하면 데이터베이스를 복원하려고 할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 복구 계획을 만드는 데 도움이 될 수 있습니다. 보존 기간은 적어도 전체 데이터베이스 백업 빈도만큼 되어야 합니다.  
   
      **SQL Server 에이전트 작업 기록**  
      이 기록을 사용하면 실패한 작업의 문제를 해결하거나 데이터베이스 동작의 발생 이유를 확인하는 데 도움이 됩니다.  
@@ -311,13 +315,13 @@ caps.handback.revision: 43
      이 기록을 사용하면 실패한 유지 관리 계획 동작의 문제를 해결하거나 데이터베이스 작업의 발생 이유를 확인하는 데 도움이 됩니다.  
   
      **다음보다 오래된 기록 데이터 제거**  
-     삭제할 항목의 보존 기간을 지정합니다. **시**, **일**, **주**(기본값), **월** 또는 **년**을 지정할 수 있습니다.  
+     삭제할 항목의 보존 기간을 지정합니다. **시**, **일**, **주** (기본값), **월**또는 **년**을 지정할 수 있습니다.  
   
-#### 에이전트 작업 실행 태스크 정의  
+#### <a name="define-the-execute-agent-job-task"></a>에이전트 작업 실행 태스크 정의  
   
 1.  **에이전트 작업 실행 태스크 정의** 페이지의 **사용 가능한 SQL Server 에이전트 작업**에서 실행할 작업을 선택합니다. SQL 에이전트 작업이 없으면 이 옵션을 사용할 수 없습니다. 이 태스크에서는 `EXEC sp_start_job` 문을 사용합니다. 자세한 내용은 [sp_start_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)을 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
-#### 백업 태스크 정의  
+#### <a name="define-backup-tasks"></a>백업 태스크 정의  
   
 1.  **데이터베이스 백업(전체) 태스크 정의** 페이지에서 전체 백업을 실행할 데이터베이스를 선택합니다. 이 태스크에서는 `BACKUP DATABASE` 문을 사용합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
@@ -330,7 +334,7 @@ caps.handback.revision: 43
      이 태스크의 영향을 받는 데이터베이스를 지정합니다. 이 목록에서 사용할 수 있는 옵션에 대한 자세한 내용은 위의 9단계를 참조하세요.  
   
      **백업 구성 요소**  
-     전체 데이터베이스를 백업하려면 **데이터베이스**를 선택합니다. 데이터베이스 일부만 백업하려면 **파일 및 파일 그룹** 을 선택합니다. 이 옵션을 선택한 경우 파일 또는 파일 그룹 이름을 제공합니다. **데이터베이스** 상자에서 여러 데이터베이스를 선택한 경우에는 **백업 구성 요소** 에 대해 **데이터베이스**만 지정합니다. 파일 또는 파일 그룹 백업을 수행하려면 각 데이터베이스에 대해 태스크를 만듭니다. 이러한 옵션은 위의 **데이터베이스** 목록에서 단일 데이터베이스를 선택한 경우에만 사용할 수 있습니다.  
+     전체 데이터베이스를 백업하려면 **데이터베이스** 를 선택합니다. 데이터베이스 일부만 백업하려면 **파일 및 파일 그룹** 을 선택합니다. 이 옵션을 선택한 경우 파일 또는 파일 그룹 이름을 제공합니다. **데이터베이스** 상자에서 여러 데이터베이스를 선택한 경우에는 **백업 구성 요소** 에 대해 **데이터베이스**만 지정합니다. 파일 또는 파일 그룹 백업을 수행하려면 각 데이터베이스에 대해 태스크를 만듭니다. 이러한 옵션은 위의 **데이터베이스** 목록에서 단일 데이터베이스를 선택한 경우에만 사용할 수 있습니다.  
   
      **백업 세트 만료 기한** 확인란  
      이 백업에 대한 백업 세트를 덮어쓸 수 있는 날짜를 지정합니다. **다음 이후** 를 선택하고 만료까지의 일 수를 입력하거나 **날짜** 를 선택하고 만료 날짜를 입력합니다. **URL** 이 백업 대상으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
@@ -339,7 +343,7 @@ caps.handback.revision: 43
      데이터베이스를 백업할 미디어를 지정합니다. **디스크**, **테이프**또는 **URL**을 선택합니다. 데이터베이스를 포함하는 컴퓨터에 연결된 테이프 장치만 사용할 수 있습니다.  
   
      **하나 이상의 파일에 데이터베이스 백업**  
-     **추가**를 클릭하여 **백업 대상 선택** 대화 상자를 엽니다. URL을 백업 대상으로 선택한 경우 이 옵션을 사용할 수 없습니다.  
+     **추가** 를 클릭하여 **백업 대상 선택** 대화 상자를 엽니다. URL을 백업 대상으로 선택한 경우 이 옵션을 사용할 수 없습니다.  
   
      대화 상자에서 파일을 제거하려면 **제거** 를 클릭합니다.  
   
@@ -410,20 +414,20 @@ caps.handback.revision: 43
   
      SQL Server와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다.  
   
-     **백업 압축 설정** 목록  
-     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]\(이상 버전)에서 다음 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 값 중 하나를 선택합니다.  
+     **백업 압축 설정**  목록  
+     [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (이상 버전)에서 다음 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 값 중 하나를 선택합니다.  
   
     |||  
     |-|-|  
-    |**기본 서버 설정 사용**|서버 수준 기본값을 사용하려면 클릭합니다. 이 기본값은 **백업 압축 기본값** 서버 구성 옵션으로 설정됩니다. 이 옵션의 현재 설정을 확인하는 방법은 [backup compression default 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.|  
-    |**백업 압축**|서버 수준 기본값에 관계없이 백업을 압축하려면 클릭합니다.<br /><br /> **\*\* 중요 \*\*** 압축 시에는 기본적으로 CPU 사용량이 크게 증가하며, 압축 프로세스에서 CPU를 추가로 사용하므로 동시 작업 성능이 저하될 수 있습니다. 따라서 CPU 사용량이 리소스 관리자에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)을 참조하세요.|  
+    |**기본 서버 설정 사용**|서버 수준 기본값을 사용하려면 클릭합니다. 이 기본값은 **백업 압축 기본값** 서버 구성 옵션으로 설정됩니다. 이 옵션의 현재 설정을 확인하는 방법에 대한 자세한 내용은 [백업 압축 기본값 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.|  
+    |**백업 압축**|서버 수준 기본값에 관계없이 백업을 압축하려면 클릭합니다.<br /><br /> **\*\* 중요 \*\*** 압축 시에는 기본적으로 CPU 사용량이 크게 증가하며, 압축 프로세스에서 CPU를 추가로 사용하므로 동시 작업 성능이 저하될 수 있습니다. 따라서 CPU 사용량이 리소스 관리자에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.|  
     |**백업 압축 안 함**|서버 수준 기본값에 관계없이 압축되지 않은 백업을 만들려면 클릭합니다.|  
   
 2.  **데이터베이스 백업(차등) 태스크 정의** 페이지에서 부분 백업을 실행할 데이터베이스를 선택합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 위의 16단계에 있는 정의 목록을 참조하세요. 이 태스크에서는 `BACKUP DATABASE … WITH DIFFERENTIAL` 문을 사용합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  완료되면 **다음**을 클릭합니다.  
   
 3.  **데이터베이스 백업(트랜잭션 로그) 태스크 정의** 페이지에서 트랜잭션 로그에 대한 백업을 실행할 데이터베이스를 선택합니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 위의 16단계에 있는 정의 목록을 참조하세요. 이 태스크에서는 `BACKUP LOG` 문을 사용합니다. 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
-#### 유지 관리 정리 태스크 정의  
+#### <a name="define-maintenance-cleanup-tasks"></a>유지 관리 정리 태스크 정의  
   
 1.  **유지 관리 정리 태스크 정의** 페이지에서 유지 관리 계획에서 만든 텍스트 보고서와 데이터베이스 백업 파일을 포함하여 유지 관리 계획의 일부로 삭제할 파일의 유형을 지정합니다. 이 태스크에서는 `EXEC xp_delete_file` 문을 사용합니다. 완료되면 **다음**을 클릭합니다.  
   
@@ -440,7 +444,7 @@ caps.handback.revision: 43
      **유지 관리 계획 텍스트 보고서**  
      이전에 실행한 유지 관리 계획의 텍스트 보고서를 삭제합니다.  
   
-     ** 파일 위치 **  
+     **파일 위치**  
      삭제할 파일을 경로를 지정합니다.  
   
      **특정 파일 삭제**  
@@ -456,15 +460,15 @@ caps.handback.revision: 43
      삭제할 파일의 파일 확장명을 제공합니다. Tuesday 폴더에서 확장명이 .bak인 모든 백업 파일과 같은 여러 파일을 삭제하려면 .bak를 지정합니다.  
   
      **첫 번째 수준의 하위 폴더 포함** 확인란  
-     **폴더**에 지정된 폴더 아래의 첫 번째 하위 폴더에서 **파일 확장명**에 지정된 확장명을 갖는 파일을 삭제합니다.  
+     **폴더** 에 지정된 폴더 아래의 첫 번째 하위 폴더에서 **파일 확장명**에 지정된 확장명을 갖는 파일을 삭제합니다.  
   
      **태스크 런타임에 파일의 보존 기간에 따라 파일 삭제** 확인란  
      **다음보다 오래된 파일 삭제** 상자에 숫자와 시간 단위를 제공하여 삭제할 파일의 최소 보존 기간을 지정합니다.  
   
      **다음보다 오래된 파일 삭제**  
-     숫자와 시간 단위(**시**, **일**, **주**, **월** 또는 **년**)를 제공하여 삭제할 파일의 최소 보존 기간을 지정합니다. 지정한 시간대 이전의 파일은 삭제됩니다.  
+     숫자와 시간 단위(**시**, **일**, **주**, **월**또는 **년**)를 제공하여 삭제할 파일의 최소 보존 기간을 지정합니다. 지정한 시간대 이전의 파일은 삭제됩니다.  
   
-#### 보고서 옵션 선택  
+#### <a name="select-report-options"></a>보고서 옵션 선택  
   
 1.  **보고서 옵션 선택** 페이지에서 유지 관리 계획 동작의 보고서를 저장하거나 배포하기 위한 옵션을 선택합니다. 이 태스크에서는 `EXEC sp_notify_operator` 문을 사용합니다. 자세한 내용은 [sp_notify_operator&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-notify-operator-transact-sql.md)을 참조하세요. 완료되면 **다음**을 클릭합니다.  
   
@@ -485,7 +489,7 @@ caps.handback.revision: 43
      **메일 프로필**  
      전자 메일의 보내는 사람을 정의하는 프로필을 지정합니다.  
   
-#### 마법사 완료  
+#### <a name="complete-the-wizard"></a>마법사 완료  
   
 1.  **마법사 완료** 페이지에서 이전 페이지에서 선택한 내용을 확인하고 **마침**을 클릭합니다.  
   
@@ -500,9 +504,9 @@ caps.handback.revision: 43
      각 동작의 이름과 유형을 지정합니다.  
   
      **상태**  
-     마법사 동작 결과 전체적으로 **성공** 값을 반환했는지 또는 **실패** 값을 반환했는지 여부를 나타냅니다.  
+     마법사 동작 결과 전체적으로 **성공** 값을 반환했는지 또는 **실패**값을 반환했는지 여부를 나타냅니다.  
   
-     ** 메시지 **  
+     **메시지**  
      프로세스에서 반환된 모든 오류 또는 경고 메시지를 제공합니다.  
   
      **보고서**  
@@ -521,3 +525,5 @@ caps.handback.revision: 43
      마법사의 진행률 보고서 결과를 전자 메일 메시지로 복사합니다.  
   
   
+
+

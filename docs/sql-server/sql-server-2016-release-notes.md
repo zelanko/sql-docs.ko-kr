@@ -1,43 +1,47 @@
 ---
-title: "SQL Server 2016 릴리스 정보 | Microsoft Docs"
-ms.date: "11/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "server-general"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "빌드 정보"
-  - "릴리스 문제"
+title: "SQL Server 2016 릴리스 정보 | Microsoft 문서"
+ms.date: 11/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- server-general
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- build notes
+- release issues
 ms.assetid: c64077a2-bec8-4c87-9def-3dbfb1ea1fb6
 caps.latest.revision: 276
-author: "craigg-msft"
-ms.author: "craigg"
-manager: "jhubbard"
-caps.handback.revision: 276
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 2016 릴리스 정보
+# <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에 대한 제한 사항과 문제를 설명합니다.    
     
  **사용해 보기:**    
    
 [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**에서 SQL Server 2016 다운로드    
     
-[![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)**로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 컴퓨터를 실행해 보세요.
+[![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 컴퓨터를 실행해 보세요.
     
-[![SSMS 다운로드](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)**를 참조하세요.   
+[![Download SSMS](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** To get the latest version of SQL Server Management Studio, see **[Download SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)**.   
     
- 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](What's%20New%20in%20Report%20Builder%20for%20SQL%20Server%202016.md)을 참조하세요.
+ 새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)을 참조하세요.
     
-##  <a name="a-namebkmktopa-sections-in-this-topic"></a><a name="bkmk_top"></a> 이 항목의 섹션:    
+##  <a name="bkmk_top"></a> Sections In this topic:    
 
 -   [사용 가능한 SQL Server 2016 서비스 팩 1(SP1)](#bkmk_2016sp1)    
 -   [SQL Server 2016 GA(일반 공급)](#bkmk_2016_ga) 
 -   [SQL Server 2016 RC3(릴리스 후보 3)](#bkmk_2016_rc3)     
 
-## <a name="a-namebkmk2016sp1asql-server-2016-service-pack-1-sp1-available"></a><a name="bkmk_2016sp1"></a>사용 가능한 SQL Server 2016 서비스 팩 1(SP1)
+## <a name="bkmk_2016sp1"></a>사용 가능한 SQL Server 2016 서비스 팩 1(SP1)
 ![info_tip](../sql-server/media/info-tip.png) SQL Server 2016 SP1은 SQL Server 2016의 모든 버전 및 서비스 수준을 SQL Server 2016 SP1로 업그레이드합니다. 이 문서에 나열된 수정 사항 외에 SQL Server 2016 SP1에는 SQL Server 2016 누적 업데이트 1(CU1)부터 SQL Server 2016 CU3에 포함된 핫픽스가 들어 있습니다.
     
 - [SQL Server 2016 SP1 다운로드 페이지](https://www.microsoft.com/en-us/download/details.aspx?id=54276)
@@ -45,16 +49,16 @@ caps.handback.revision: 276
  - ![info_tip](../sql-server/media/info-tip.png) [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 서비스 팩을 포함하여 지원되는 모든 버전에 대한 링크 및 자세한 내용은 [SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx)를 참조하세요. 
     
     
-##  <a name="a-namebkmk2016gaa-sql-server-2016-release---general-availability-ga"></a><a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
+##  <a name="bkmk_2016_ga"></a> SQL Server 2016 릴리스 - GA (일반 공급)
 -   [데이터베이스 엔진(GA)](#bkmk_ga_instalpatch) 
 
--   [스트레치 데이터베이스(GA)](#bkmk_ga_stretch)
+-   [Stretch Database(GA)](#bkmk_ga_stretch)
 
 -   [쿼리 저장소(GA)](#bkmk_ga_query_store)
 
 -   [제품 설명서(GA)](#bkmk_ga_docs)
  
-### <a name="repliconwarnimagerepliconwarngif-a-namebkmkgainstalpatcha-install-patch-requirement-ga"></a>![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.png) <a name="bkmk_ga_instalpatch"></a> 패치 설치 요구 사항(GA) 
+### ![repl_icon_warn](../database-engine/availability-groups/windows/media/repl-icon-warn.gif) <a name="bkmk_ga_instalpatch"></a> Install Patch Requirement (GA) 
 **문제 및 고객에게 미치는 영향:** Microsoft는 SQL Server 2016에서 필수 구성 요소로 설치되는 Microsoft VC++ 2013 런타임 이진 파일에 영향을 주는 문제를 확인했습니다. 업데이트로 이 문제를 해결할 수 있습니다. VC 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server 2016의 특정 시나리오에서 안정성 문제를 발생할 수 있습니다. SQL Server 2016을 설치하기 전에 컴퓨터에 [KB 3164398](http://support.microsoft.com/kb/3164398)에서 설명한 패치가 필요한지 확인합니다. 패치는 [SQL Server 2016 RTM용 누적 업데이트 패키지 1(CU1)](https://www.microsoft.com/en-us/download/details.aspx?id=53338)에도 포함되어 있습니다. 
 
 **해결 방법:** 다음 중 하나를 수행합니다.
@@ -73,28 +77,28 @@ caps.handback.revision: 276
  
     **KB 3164398**을 사용하는 경우 Microsoft 업데이트를 통해 또는 Microsoft 다운로드 센터에서 SQL Server 설치 중에 설치할 수 있습니다. 
 
-    - **SQL Server 2016 설치 중:** SQL Server 설치 프로그램을 실행하는 컴퓨터가 인터넷에 액세스하는 경우 전체 SQL Server를 설치할 때 업데이트를 검사합니다. 업데이트를 수락하면 설치 프로그램이 다운로드되고 설치하는 동안 이진 파일을 업데이트합니다.
+    - **SQL Server 2016 설치 중:** SQL Server 설치 프로그램을 실행하는 컴퓨터가 인터넷에 액세스하는 경우 전체 SQL ServeR을 설치할 때 업데이트를 검사합니다. 업데이트를 수락하면 설치 프로그램이 다운로드되고 설치하는 동안 이진 파일을 업데이트합니다.
 
     - **Microsoft 업데이트:** 업데이트는 중요한 비보안 SQL Server 2016 업데이트로 Microsoft 업데이트에서 제공합니다. Microsoft 업데이트를 통해 SQL Server 2016을 설치하면 업데이트를 수행하기 위해 서버를 다시 시작해야 합니다. 
 
     - **다운로드 센터:** 마지막으로 업데이트는 Microsoft 다운로드 센터에서 제공합니다. SQL Server 2016을 설치한 후 업데이트 소프트웨어를 다운로드하고 서버에 설치할 수 있습니다. 
 
 
-### <a name="a-namebkmkgastretchastretch-database"></a><a name="bkmk_ga_stretch"></a>스트레치 데이터베이스
+### <a name="bkmk_ga_stretch"></a>Stretch Database
 
 #### <a name="problem-with-a-specific-character-in-a-database-or-table-name"></a>데이터베이스 또는 테이블 이름의 특정 문자 문제
 
-**문제 및 고객에게 미치는 영향:** 소문자에서 대문자로 변환할 때 다른 문자로 취급되는 문자가 개체 이름에 포함되는 경우 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 사용하도록 설정하려고 하면 오류가 발생합니다. 이 문제를 일으키는 문자의 예는 "ƒ" 문자입니다(ALT+159를 입력하여 생성).
+**문제 및 고객에게 미치는 영향:** 소문자에서 대문자로 변환할 때 다른 문자로 취급되는 문자가 개체 이름에 포함되는 경우 데이터베이스 또는 테이블에서 Stretch Database를 사용하도록 설정하려고 하면 오류가 발생합니다. 이 문제를 일으키는 문자의 예는 "ƒ" 문자입니다(ALT+159를 입력하여 생성).
 
-**해결 방법:** 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 사용하도록 설정하려면 개체 이름을 바꾸고 문제 문자를 제거하는 것이 유일한 옵션입니다.
+**해결 방법:** 데이터베이스 또는 테이블에서 Stretch Database를 사용하도록 설정하려면 개체 이름을 바꾸고 문제 문자를 제거하는 것이 유일한 옵션입니다.
 
 #### <a name="problem-with-an-index-that-uses-the-include-keyword"></a>INCLUDE 키워드를 사용하는 인덱스 문제
 
-**문제 및 고객에게 미치는 영향:** 인덱스에서 추가 열을 포함하기 위해 INCLUDE 키워드를 사용하는 인덱스가 있는 테이블에서 스트레치 데이터베이스를 사용하도록 설정하려고 하면 오류가 발생합니다.
+**문제 및 고객에게 미치는 영향:** 인덱스에서 추가 열을 포함하기 위해 INCLUDE 키워드를 사용하는 인덱스가 있는 테이블에서 Stretch Database를 사용하도록 설정하려고 하면 오류가 발생합니다.
 
-**해결 방법:** INCLUDE 키워드를 사용하는 인덱스를 삭제하고 테이블에서 스트레치 데이터베이스를 사용하도록 설정한 다음 인덱스를 다시 만듭니다. 이 작업을 수행하는 경우 영향을 받는 테이블의 사용자에게 영향을 주지 않거나 최소화하기 위해 조직의 유지 관리 방법 및 정책을 따라야 합니다.
+**해결 방법:** INCLUDE 키워드를 사용하는 인덱스를 삭제하고 테이블에서 Stretch Database를 사용하도록 설정한 다음 인덱스를 다시 만듭니다. 이 작업을 수행하는 경우 영향을 받는 테이블의 사용자에게 영향을 주지 않거나 최소화하기 위해 조직의 유지 관리 방법 및 정책을 따라야 합니다.
 
-### <a name="a-namebkmkgaquerystoreaquery-store"></a><a name="bkmk_ga_query_store"></a>쿼리 저장소
+### <a name="bkmk_ga_query_store"></a>Query Store
 
 #### <a name="problem-with-automatic-data-cleanup-on-editions-other-than-enterprise-and-developer"></a>Enterprise 및 Developer 이외 버전의 자동 데이터 정리 문제
 
@@ -117,16 +121,16 @@ caps.handback.revision: 276
 -    ```sp_query_store_remove_query```
 
 
-###  <a name="a-namebkmkgadocsa-product-documentation-ga"></a><a name="bkmk_ga_docs"></a> 제품 설명서(GA) 
+###  <a name="bkmk_ga_docs"></a> 제품 설명서(GA) 
  **문제 및 고객에게 미치는 영향:** SQL Server 2016 설명서의 다운로드 가능한 버전은 아직 제공되지 않습니다. 도움말 라이브러리 관리자를 사용하여 **온라인에서 콘텐츠를 설치**하려고 하면 SQL Server 2012 및 SQL Sever 2014 설명서가 표시되지만 SQL Server 2016 설명서에 대한 옵션은 없습니다.    
     
  **해결 방법:** 다음 중 하나를 사용하세요.    
     
- ![Manage Help Settings for SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
+ ![SQL Server에 대한 도움말 설정 구성](../sql-server/media/docs-sql2016-managehelpsettings.png "SQL Server에 대한 도움말 설정 구성")    
     
 -   **온라인 또는 로컬 도움말 선택** 옵션을 사용하고 "온라인 도움말 사용"을 적용하도록 도움말을 구성합니다.    
     
--    **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
+-   **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
     
  **F1 도움말:** 기본적으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 F1 키를 누르면 F1 도움말 항목의 온라인 버전이 브라우저에 표시됩니다. 이는 로컬 도움말을 설치한 경우에도 마찬가지입니다.    
      
@@ -140,21 +144,21 @@ SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 �
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ``` 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png "horizontal_bar")  
-##  <a name="a-namebkmk2016rc3a-sql-server-2016-release-candidate-3-rc3"></a><a name="bkmk_2016_rc3"></a> SQL Server 2016 RC3(릴리스 후보 3)    
+##  <a name="bkmk_2016_rc3"></a> SQL Server 2016 RC3(릴리스 후보 3)    
 -   [제품 설명서(RC2)](#bkmk_rc3_docs)    
 -   [PolyBase(RC3)](#bkmk_rc3_polybase) 
 
     
-###  <a name="a-namebkmkrc3docsa-product-documentation-rc3"></a><a name="bkmk_rc3_docs"></a> 제품 설명서(RC3)    
+###  <a name="bkmk_rc3_docs"></a> Product Documentation (RC3)    
  **문제 및 고객에게 미치는 영향:** SQL Server 2016 설명서의 다운로드 가능한 버전은 아직 제공되지 않습니다. 도움말 라이브러리 관리자를 사용하여 **온라인에서 콘텐츠를 설치**하려고 하면 SQL Server 2012 및 SQL Sever 2014 설명서가 표시되지만 SQL Server 2016 설명서에 대한 옵션은 없습니다.    
     
  **해결 방법:** 다음 중 하나를 사용하세요.    
     
- ![Manage Help Settings for SQL Server](../sql-server/media/docs-sql2016-managehelpsettings.png "Manage Help Settings for SQL Server")    
+ ![SQL Server에 대한 도움말 설정 구성](../sql-server/media/docs-sql2016-managehelpsettings.png "SQL Server에 대한 도움말 설정 구성")    
     
 -   **온라인 또는 로컬 도움말 선택** 옵션을 사용하고 "온라인 도움말 사용"을 적용하도록 도움말을 구성합니다.    
     
--    **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
+-   **온라인에서 콘텐츠 설치** 옵션을 사용하고 SQL Server 2014 콘텐츠를 다운로드합니다.    
     
  **F1 도움말:** 기본적으로 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 F1 키를 누르면 F1 도움말 항목의 온라인 버전이 브라우저에 표시됩니다. 이는 로컬 도움말을 설치한 경우에도 마찬가지입니다.    
      
@@ -168,7 +172,7 @@ SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 �
      Cache LastRefreshed="12/31/2017 00:00:00"    
 ```    
     
-###  <a name="a-namebkmkrc3polybasea-polybase-rc3"></a><a name="bkmk_rc3_polybase"></a> PolyBase(RC3)        
+###  <a name="bkmk_rc3_polybase"></a> PolyBase(RC3)        
  RC1 또는 이전 릴리스에서 업그레이드한 후 PolyBase 쿼리가 실패할 수 있습니다.    
     
  **문제 및 고객에게 미치는 영향**: SQL Server 2016 RC1 또는 이전 릴리스에서 업그레이드한 후 PolyBase 쿼리, 가져오기 및 내보내기 작업에 다음 오류가 발생할 수 있습니다. "내부 쿼리 프로세서 오류: 원격 쿼리 단계를 처리하는 중 쿼리 프로세서에서 오류가 발생했습니다."    
@@ -187,3 +191,4 @@ SQL Server Management Studio 및 Visual Studio에서 설명서를 추가하는 �
  ![MS_Logo_X-Small](../sql-server/media/ms-logo-x-small.png "MS_Logo_X-Small")    
     
   
+

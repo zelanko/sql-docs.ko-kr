@@ -1,35 +1,39 @@
 ---
-title: "정규식을 사용한 텍스트 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vsregularexpressionhelp"
-  - "vs.regularexpressionhelp"
-  - "vs.regularexpressionbuilder"
-helpviewer_keywords: 
-  - "정규식 [SQL Server Management Studio]"
-  - "쿼리 편집기 [SQL Server Management Studio], 정규식 검색"
-  - "검색 [SQL Server Management Studio], 정규식"
+title: "정규식을 사용한 텍스트 검색 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vsregularexpressionhelp
+- vs.regularexpressionhelp
+- vs.regularexpressionbuilder
+helpviewer_keywords:
+- regular expressions [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], regular expression searches
+- searches [SQL Server Management Studio], regular expressions
 ms.assetid: a057690c-d118-4159-8e4d-2ed5ccfe79d3
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정규식을 사용한 텍스트 검색
-  정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾기 및 바꾸기** 대화 상자의 **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
+# <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
+  정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **** 찾기 및 바꾸기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
   
-#### 정규식을 사용하여 검색하려면  
+#### <a name="to-find-using-regular-expressions"></a>정규식을 사용하여 검색하려면  
   
-1.  **빠른 찾기** 중에 **파일에서 찾기**, **빠른 바꾸기** 또는 **파일에서 바꾸기** 작업 도중에 **찾을 내용** 필드에서 정규식을 사용하도록 설정하려면 **찾기 옵션** 아래에서 **사용** 옵션을 선택하고 **정규식**을 선택합니다.  
+1.  **빠른 찾기** 중에 **파일에서 찾기**, **빠른 바꾸기**또는 **파일에서 바꾸기**작업 도중에 **찾을 내용** 필드에서 정규식을 사용하도록 설정하려면 **찾기 옵션** 아래에서 **사용**옵션을 선택하고 **정규식**을 선택합니다.  
   
 2.  그러면 **찾을 내용** 필드 옆에 있는 삼각형 **참조 목록** 단추를 사용할 수 있습니다. 이 단추를 클릭하면 가장 일반적으로 사용되는 정규식 목록이 표시됩니다. 식 작성기에서 임의의 항목을 선택하면 해당 항목이 **찾을 내용** 문자열에 삽입됩니다.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 25
   
 |식|구문|설명|  
 |----------------|------------|-----------------|  
-|임의의 문자|.|줄 바꿈을 제외한 임의의 문자 하나와 대응합니다.|  
+|임의의 문자|을 선택합니다.|줄 바꿈을 제외한 임의의 문자 하나와 대응합니다.|  
 |없거나 1개 이상|*|선행 식이 없거나 하나 이상인 경우와 대응하며 일치하는 모든 선행 식을 포함합니다.|  
 |1개 이상|+|적어도 하나 이상의 선행 식과 대응합니다.|  
 |줄의 시작|^|대응 문자열을 줄의 시작 부분에 위치시킵니다.|  
@@ -131,7 +135,7 @@ caps.handback.revision: 25
 |가타카나|:Ka|가타카나 문자와 대응합니다.|  
 |표의/한문/간지|:Id|표의 문자(예: 한문 및 간지)와 대응합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [찾기 및 바꾸기](../../relational-databases/scripting/search-and-replace.md)   
  [와일드카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)  
   

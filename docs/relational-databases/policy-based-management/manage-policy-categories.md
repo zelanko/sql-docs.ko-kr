@@ -1,24 +1,28 @@
 ---
-title: "정책 범주 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.policycategories.f1"
+title: "정책 범주 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.policycategories.f1
 ms.assetid: d188a819-731f-4029-98aa-780d3299a0ce
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 952740a7191b43f61f9cff035b0ad944fe802084
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 범주 관리
+# <a name="manage-policy-categories"></a>정책 범주 관리
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)]인스턴스에 한 범주의 사용 가능한 정책을 임의로 또는 모두 적용하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -50,13 +54,13 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### SQL Server 인스턴스에 범주 정책을 적용하려면  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>SQL Server 인스턴스에 범주 정책을 적용하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 범주 정책을 적용할 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **관리** 폴더를 확장합니다.  
   
-3.  **정책 관리**를 마우스 오른쪽 단추로 클릭하고 **범주 관리**를 선택합니다.  
+3.  **정책 관리** 를 마우스 오른쪽 단추로 클릭하고 **범주 관리**를 선택합니다.  
   
      **정책 범주 관리** 대화 상자에 다음 정보가 표시됩니다.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### SQL Server 인스턴스에 범주 정책을 적용하려면  
+#### <a name="to-apply-category-policies-to-a-sql-server-instance"></a>SQL Server 인스턴스에 범주 정책을 적용하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

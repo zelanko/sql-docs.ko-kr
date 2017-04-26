@@ -1,29 +1,33 @@
 ---
-title: "Audit Database Mirroring Login 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 알림 [SQL Server], 데이터베이스 미러링"
-  - "Audit Database Mirroring Login 이벤트 클래스"
-  - "데이터베이스 미러링 [SQL Server], 이벤트 알림"
+title: "Audit Database Mirroring Login 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], database mirroring
+- Audit Database Mirroring Login event class
+- database mirroring [SQL Server], event notifications
 ms.assetid: d0bd436d-aade-4208-a7e5-75cf3b5d0ce9
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68d56190a6435a36e8ca96e0228aae7f19f133d1
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Database Mirroring Login 이벤트 클래스
+# <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Database Mirroring Login** 이벤트를 만들어 데이터베이스 미러링 전송 보안과 관련된 감사 메시지를 보고합니다.  
   
-## Audit Database Mirroring Login 이벤트 클래스 데이터 열  
+## <a name="audit-database-mirroring-login-event-class-data-columns"></a>Audit Database Mirroring Login 이벤트 클래스 데이터 열  
   
 |데이터 열|유형|설명|열 번호|필터 가능|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -43,7 +47,7 @@ caps.handback.revision: 16
 |**OwnerName**|**nvarchar**|로컬 데이터베이스 미러링 끝점에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 끝점에서 먼저 시도할 메서드를 결정합니다. 가능한 값은<br /><br /> <br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 끝점에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 끝점 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 끝점 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 끝점 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 끝점 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 끝점 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 끝점 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|37|아니요|  
 |**ProviderName**|**nvarchar**|이 연결에 사용된 인증 방법입니다.|46|아니요|  
 |**RoleName**|**nvarchar**|연결의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|아니요|  
-|**ServerName**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |**State**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|아니요|  
@@ -61,7 +65,7 @@ caps.handback.revision: 16
 |5|Authentication Failure|Authentication Failure 이벤트는 데이터베이스 미러링 끝점이 오류로 인해 연결을 인증할 수 없음을 보고합니다. Windows 인증일 경우 이 이벤트는 데이터베이스 미러링 끝점이 Windows 인증을 사용할 수 없음을 보고합니다. 인증서 기반 인증일 경우 이 이벤트는 데이터베이스 미러링 끝점이 인증서에 액세스할 수 없음을 보고합니다.|  
 |6|Authorization Failure|Authorization Failure 이벤트는 데이터베이스 미러링 끝점에서 연결 인증을 거부했음을 보고합니다. Windows 인증일 경우 이 이벤트는 연결의 보안 식별자가 데이터베이스 사용자와 일치하지 않음을 보고합니다. 인증서 기반 인증일 경우 이 이벤트는 메시지에 전달된 공개 키가 **master** 데이터베이스의 인증서와 맞지 않음을 보고합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  

@@ -1,29 +1,33 @@
 ---
-title: "3단원: URL에 데이터베이스 백업 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "3단원: URL에 데이터베이스 백업 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 caps.latest.revision: 16
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 83414948fcd1f8db58f2e6a66f948a5427d0c999
+ms.lasthandoff: 04/11/2017
+
 ---
-# 3단원: URL에 데이터베이스 백업
+# <a name="lesson-3-database-backup-to-url"></a>3단원: URL에 데이터베이스 백업
 이 단원에서는 온-프레미스 SQL Server 2016 인스턴스의 AdventureWorks2014 데이터베이스를 [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)에서 만든 Azure 컨테이너에 백업합니다.  
   
 > [!NOTE]  
-> SQL Server 2012 SP1 CU2 이상 데이터베이스 또는 SQL Server 2014 데이터베이스를 이 Azure 컨테이너에 백업하려는 경우 [여기](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx)에 문서화된 사용되지 않는 구문을 통해 WITH CREDENTIAL 구문을 사용하여 URL에 백업할 수 있습니다.  
+> SQL Server 2012 SP1 CU2 이상 데이터베이스 또는 SQL Server 2014 데이터베이스를 이 Azure 컨테이너에 백업하려는 경우 [여기](https://technet.microsoft.com/en-US/library/dn435916(v=sql.120).aspx) 에 문서화된 사용되지 않는 구문을 통해 WITH CREDENTIAL 구문을 사용하여 URL에 백업할 수 있습니다.  
   
 Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세요.  
   
@@ -50,9 +54,10 @@ Blob Storage에 데이터베이스를 백업하려면 다음 단계를 따르세
   
 5.  컨테이너를 확장하고 1단원에서 만든 컨테이너를 확장한 다음 위 3단계의 백업이 이 컨테이너에 표시되는지 확인합니다.  
   
-    ![On-premises backup file appears as blob in Azure container](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "On-premises backup file appears as blob in Azure container")  
+    ![온-프레미스 백업 파일이 Azure 컨테이너에 blob으로 나타남](../relational-databases/media/0d060e51-012f-4c61-ab8d-16d461d0ffad.JPG "온-프레미스 백업 파일이 Azure 컨테이너에 blob으로 나타남")  
   
 **다음 단원:**  
   
 [4단원: URL에서 가상 컴퓨터로 데이터베이스 복원](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
+

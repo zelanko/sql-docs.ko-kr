@@ -1,26 +1,30 @@
 ---
-title: "동의어(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "동의어 [SQL Server], 동의어 정보"
+title: "동의어(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- synonyms [SQL Server], about synonyms
 ms.assetid: 6210e1d5-075f-47e4-ac8d-f84bcf26fbc0
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09336539a812ddf6c28e81344299750ba3177361
+ms.lasthandoff: 04/11/2017
+
 ---
-# 동의어(데이터베이스 엔진)
+# <a name="synonyms-database-engine"></a>동의어(데이터베이스 엔진)
   동의어란 다음 용도로 사용되는 데이터베이스 개체입니다.  
   
 -   로컬 서버나 원격 서버에 있을 수 있는 기본 개체로 참조되는 다른 데이터베이스 개체의 대체 이름을 제공합니다.  
@@ -53,11 +57,11 @@ caps.handback.revision: 31
   
  동의어에 대한 참조는 스키마에 바인딩되지 않습니다. 따라서 동의어는 언제라도 삭제할 수 있습니다. 그러나 동의어를 삭제하면 삭제된 동의어에 대한 참조가 현수 참조로 남게 될 위험이 있습니다. 이러한 참조는 런타임에만 발견됩니다.  
   
-## 동의어 및 스키마  
- 소유하지 않은 기본 스키마가 있는데 동의어를 만들려면 소유한 스키마 이름을 사용하여 동의어 이름을 적합하게 지정해야 합니다. 예를 들어 **x** 스키마를 소유하지만 **y** 스키마가 기본 스키마이고 CREATE SYNONYM 문을 사용할 경우에는 단일 부분으로 된 이름을 사용하여 동의어 이름을 지정하는 대신 **x** 스키마를 동의어 이름 접두사로 지정해야 합니다. 동의어를 만드는 방법은 [CREATE SYNONYM&#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)을 참조하세요.  
+## <a name="synonyms-and-schemas"></a>동의어 및 스키마  
+ 소유하지 않은 기본 스키마가 있는데 동의어를 만들려면 소유한 스키마 이름을 사용하여 동의어 이름을 적합하게 지정해야 합니다. 예를 들어 **x**스키마를 소유하지만 **y** 스키마가 기본 스키마이고 CREATE SYNONYM 문을 사용할 경우에는 단일 부분으로 된 이름을 사용하여 동의어 이름을 지정하는 대신 **x**스키마를 동의어 이름 접두사로 지정해야 합니다. 동의어를 만드는 방법은 [CREATE SYNONYM&#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)테이블을 검토해 보십시오.  
   
-## 동의어에 대한 권한 부여  
- **db_owner**의 멤버나 **db_ddladmin**의 멤버인 동의어 소유자만 동의어에 대한 권한을 부여 받을 수 있습니다.  
+## <a name="granting-permissions-on-a-synonym"></a>동의어에 대한 권한 부여  
+ **db_owner**의 멤버나 **db_ddladmin** 의 멤버인 동의어 소유자만 동의어에 대한 권한을 부여 받을 수 있습니다.  
   
  동의어에 대한 다음과 같은 모든 권한에 대해 GRANT, DENY 및 REVOKE를 수행할 수 있습니다.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 31
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
   
-## 동의어 사용  
+## <a name="using-synonyms"></a>동의어 사용  
  여러 SQL 문 및 식 컨텍스트에서 동의어를 해당 참조 기준 개체 대신 사용할 수 있습니다. 다음 표에서는 이러한 문 및 식 컨텍스트를 나열합니다.  
   
 |||  
@@ -110,14 +114,14 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
  스키마 바운드 함수에 대한 자세한 내용은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요.  
   
-## 동의어에 대한 정보 가져오기  
+## <a name="getting-information-about-synonyms"></a>동의어에 대한 정보 가져오기  
  sys.synonyms 카탈로그 뷰에는 지정된 데이터베이스의 각 동의어에 대한 항목이 들어 있습니다. 이 카탈로그 뷰는 동의어 이름과 기본 개체 이름과 같은 동의어 메타데이터를 노출합니다. **sys.synonyms** 카탈로그 뷰에 대한 자세한 내용은 [sys.synonyms&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)를 참조하세요.  
   
  확장 속성을 사용하면 설명이나 지시 텍스트, 입력 마스크, 서식 설정 규칙을 동의어 속성으로 추가할 수 있습니다. 속성이 데이터베이스에 저장되기 때문에 속성을 읽는 모든 응용 프로그램은 개체를 같은 방식으로 평가할 수 있습니다. 자세한 내용은 [sp_addextendedproperty&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)를 참조하세요.  
   
  동의어 기본 개체의 기본 유형을 찾으려면 OBJECTPROPERTYEX 함수를 사용합니다. 자세한 내용은 [OBJECTPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)를 참조하세요.  
   
-### 예  
+### <a name="examples"></a>예  
  다음 예에서는 로컬 개체인 동의어 기본 개체의 기본 유형을 반환합니다.  
   
 ```  
@@ -141,7 +145,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID('MyRemoteEmployee'), 'BaseType') AS BaseType;
 GO  
 ```  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [동의어 만들기](../../relational-databases/synonyms/create-synonyms.md)  
   
  [CREATE SYNONYM&#40;Transact-SQL&#41;](../../t-sql/statements/create-synonym-transact-sql.md)  

@@ -1,25 +1,29 @@
 ---
-title: "메모리 액세스에 최적화된 테이블의 해시 인덱스 | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블의 해시 인덱스 | Microsoft 문서"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 caps.latest.revision: 7
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de23d5625c883792f5c99de75dc90ccd1cabe326
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블의 해시 인덱스
+# <a name="hash-indexes-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 해시 인덱스
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -31,7 +35,7 @@ caps.handback.revision: 7
 - 해시 인덱스를 디자인하고 관리하는 방법을 설명합니다.  
   
   
-#### 필수 구성 요소  
+#### <a name="prerequisite"></a>필수 구성 요소  
   
 이 문서를 이해하는 데 중요한 컨텍스트 정보는 다음 항목에서 확인할 수 있습니다.  
   
@@ -39,10 +43,10 @@ caps.handback.revision: 7
   
   
   
-## 1. 메모리 액세스에 최적화된 인덱스 구문  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>1. 메모리 액세스에 최적화된 인덱스 구문  
   
   
-### A.1 구문에 대한 코드 샘플  
+### <a name="a1-code-sample-for-syntax"></a>A.1 구문에 대한 코드 샘플  
   
 이 하위 섹션에는 메모리 액세스에 최적화된 테이블에 해시 인덱스를 만드는 데 사용할 수 있는 구문을 보여 주는 하는 TRANSACT-SQL 코드 블록이 포함되어 있습니다.  
   
@@ -73,23 +77,23 @@ caps.handback.revision: 7
     go  
   
 
-사용 중인 데이터의 `BUCKET_COUNT`가 올바른지 확인하려면 [해시 인덱스 버킷 수 구성](#configuring_bucket_count)을 참조하세요. 
+사용 중인 데이터의 `BUCKET_COUNT` 가 올바른지 확인하려면 [해시 인덱스 버킷 수 구성](#configuring_bucket_count)을 참조하세요. 
   
-## 2. 해시 인덱스  
+## <a name="b-hash-indexes"></a>2. 해시 인덱스  
   
   
-### B.1 성능 기본 사항  
+### <a name="b1-performance-basics"></a>B.1 성능 기본 사항  
   
 해시 인덱스의 성능은 다음과 같습니다.  
   
 - WHERE 절에서 해시 인덱스 키의 각 열에 대한 *정확한* 값을 지정할 때 뛰어납니다.  
-- WHERE 절에서 인덱스 키에 있는 값 *범위*를 찾을 때 저하됩니다.  
+- WHERE 절에서 인덱스 키에 있는 값 *범위* 를 찾을 때 저하됩니다.  
 - WHERE 절에서 두 열로 된 해시 인덱스 키에서 첫 번째 열에 특정 값을 지정하지만 키의 *두 번째* 열에 값을 지정하지 않으면 저하됩니다.  
   
   
 <a name="h3-b2-declaration-limitations"></a>  
   
-### B.2 선언 제한 사항  
+### <a name="b2-declaration-limitations"></a>B.2 선언 제한 사항  
   
 해시 인덱스는 메모리 액세스에 최적화된 테이블에 대해서만 존재할 수 있습니다. 디스크 기반 테이블에는 있을 수 없습니다.  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 7
   
   
   
-### B.3 버킷 및 해시 함수  
+### <a name="b3-buckets-and-hash-function"></a>B.3 버킷 및 해시 함수  
   
 해시 인덱스는 *버킷* 배열이라고 하는 키 값을 앵커합니다.  
   
@@ -138,11 +142,11 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
 해시 인덱스와 버킷의 상호 작용은 다음 그림에 요약되어 있습니다.  
   
   
-![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "Index keys, input into hash function, output is address of a hash bucket, which points to head of chain.")  
+![hekaton_tables_23d](../../relational-databases/in-memory-oltp/media/hekaton-tables-23d.png "인덱스 키, 해시 함수에 입력, 체인의 헤드를 가리키는 해시 버킷의 주소인 출력")  
   
   
   
-### B.4 행 버전 및 가비지 수집  
+### <a name="b4-row-versions-and-garbage-collection"></a>B.4 행 버전 및 가비지 수집  
   
   
 메모리 액세스에 최적화된 테이블에서 행이 SQL UPDATE의 영향을 받을 경우 테이블에서는 행의 업데이트된 버전을 만듭니다. 업데이트 트랜잭션 동안 다른 세션에서는 이전 버전의 행을 읽을 수 있어 행 잠금과 관련 있는 성능 속도가 느려지는 것을 방지할 수 있습니다.  
@@ -153,7 +157,7 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
   
 <a name="configuring_bucket_count"></a>
   
-## 3. 해시 인덱스 버킷 수 구성  
+## <a name="c-configuring-the-hash-index-bucket-count"></a>3. 해시 인덱스 버킷 수 구성  
   
 해시 인덱스 버킷 수는 인덱스를 만들 때 지정되며, ALTER TABLE...ALTER INDEX REBUILD 구문을 사용하여 변경할 수 있습니다.  
   
@@ -174,15 +178,16 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
   - 각 버킷은 8바이트만 사용하지만 빈 버킷도 메모리를 사용합니다.  
     
   
-> [AZURE.NOTE] 버킷을 더 많이 추가한다고 해서 중복 값을 공유하는 항목 연결이 줄어들지는 않습니다. 값 중복 속도는 버킷 수를 계산하기 위함이 아니라 해시가 적절한 인덱스 유형인지 결정하는 데 사용됩니다.  
+> [!NOTE]
+> 버킷을 더 많이 추가한다고 해서 중복 값을 공유하는 항목 연결이 줄어들지는 않습니다. 값 중복 속도는 버킷 수를 계산하기 위함이 아니라 해시가 적절한 인덱스 유형인지 결정하는 데 사용됩니다.  
   
   
   
-### C.1 실제 수  
+### <a name="c1-practical-numbers"></a>C.1 실제 수  
   
-**BUCKET_COUNT**가 기본 범위에서 약간 위에 있거나 약간 아래에 있더라도 해시 인덱스의 성능은 지속할 수 있거나 허용 가능합니다. 문제가 되는 상황은 발생하지 않습니다.  
+**BUCKET_COUNT** 가 기본 범위에서 약간 위에 있거나 약간 아래에 있더라도 해시 인덱스의 성능은 지속할 수 있거나 허용 가능합니다. 문제가 되는 상황은 발생하지 않습니다.  
   
-메모리 액세스에 최적화된 테이블에서 증가할 것으로 예측되는 행 수와 비교적 동일한 **BUCKET_COUNT**를 해시 인덱스에 지정합니다.  
+메모리 액세스에 최적화된 테이블에서 증가할 것으로 예측되는 행 수와 비교적 동일한 **BUCKET_COUNT** 를 해시 인덱스에 지정합니다.  
   
 테이블에서 2백만 개의 행이 있고 계속 증가하고 있다고 가정하면 10배로 수량이 증가할 경우 2천만 개의 행을 예측합니다. 이 경우 테이블의 행 수보다 10배 많은 버킷 수로 시작됩니다. 이렇게 하면 증가하는 행 수를 위한 공간이 확보됩니다.  
   
@@ -193,7 +198,7 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
   
 - 2백만 개의 버킷 수가 허용할 수 있는 최저 수치입니다. 성능 저하도 견딜 수 있는 정도입니다.  
   
-### C.2 인덱스에 중복 값이 너무 많은 경우?  
+### <a name="c2-too-many-duplicate-values-in-the-index"></a>C.2 인덱스에 중복 값이 너무 많은 경우?  
   
 해시 인덱스 값에 중복 비율이 높은 경우에는 해시 버킷은 늘어난 체인을 경험합니다.  
   
@@ -214,11 +219,11 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
   
 - 비율이 10.0 이상이면 해시의 인덱스 유형이 좋지 않다는 것을 의미합니다. 대신 비클러스터형 인덱스를 사용하는 것이 좋습니다.   
   
-## 4. 해시 인덱스 버킷 수 문제 해결  
+## <a name="d-troubleshooting-hash-index-bucket-count"></a>4. 해시 인덱스 버킷 수 문제 해결  
   
 이 섹션에서는 해시 인덱스 버킷 수에 대한 문제를 해결하는 방법을 설명합니다.  
   
-### D.1 체인 및 빈 버킷 통계 모니터링  
+### <a name="d1-monitor-statistics-for-chains-and-empty-buckets"></a>D.1 체인 및 빈 버킷 통계 모니터링  
   
 다음 T-SQL SELECT를 실행하여 해시 인덱스의 통계 상태를 모니터링할 수 있습니다. SELECT는 **sys.dm_db_xtp_hash_index_stats**라는 DMV(Data Management View)를 사용합니다.  
   
@@ -260,7 +265,7 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
   
 
   
-### D.2 체인 및 빈 버킷 데모  
+### <a name="d2-demonstration-of-chains-and-empty-buckets"></a>D.2 체인 및 빈 버킷 데모  
   
   
 다음 T-SQL 코드 블록을 사용하여 `SELECT * FROM sys.dm_db_xtp_hash_index_stats;`을 간편하게 테스트할 수 있습니다. 코드 블록은 1분 내에 완료됩니다. 다음은 아래 코드 블록의 절입니다.  
@@ -268,8 +273,8 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
   
 1. 몇 개의 해시 인덱스가 있는 메모리 액세스에 최적화된 테이블을 만듭니다.  
 2. 수천 개의 행으로 테이블을 채웁니다.  
-    a. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
-    b. 약 1분 내에 루프에서 행을 262144개 삽입합니다.  
+    1. 모듈로 연산자는 StatusCode 열에서 중복 값의 비율을 구성하는 데 사용됩니다.  
+    2. 약 1분 내에 루프에서 행을 262144개 삽입합니다.  
 3. **sys.dm_db_xtp_hash_index_stats**에서 이전 SELECT를 실행하라는 메시지가 인쇄됩니다.  
   
   
@@ -330,7 +335,7 @@ SQL Server에는 모든 해시 인덱스에 사용할 하나의 해시 함수가
 - 기본 키 인덱스 및 IX_OrderSequence에 고유한 값을 삽입합니다.  
 - StatusCode에 대해 8개의 고유 값만 표시하는 수백 만 개의 행을 삽입합니다. 따라서 인덱스 ix_StatusCode에는 값 중복 비율이 높습니다.  
   
-버킷 수가 최적이 아닌 경우 문제 해결을 위해 **sys.dm_db_xtp_hash_index_stats**에서 다음 SELECT 출력을 확인합니다. 이러한 결과에 대해 섹션 D.1에서 복사한 SELECT에 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'`를 추가했습니다.  
+버킷 수가 최적이 아닌 경우 문제 해결을 위해 **sys.dm_db_xtp_hash_index_stats**에서 다음 SELECT 출력을 확인합니다. 이러한 결과에 대해 섹션 D.1에서 복사한 SELECT에 `WHERE Object_Name(h.object_id) = 'SalesOrder_Mem'` 를 추가했습니다.  
   
   
   
@@ -381,7 +386,7 @@ SELECT 결과는 향상된 표시를 위해 보다 좁은 두 개의 결과 테�
 - 평균 체인 길이가 1이면 좋습니다. 변경할 필요가 없습니다.  
   
   
-### D.3 상충 관계 균형 조정  
+### <a name="d3-balancing-the-trade-off"></a>D.3 상충 관계 균형 조정  
   
 OLTP는 작업 시 개별 행에 중점을 둡니다. 일반적으로 전체 테이블 검색은 OLTP 작업에서 성능이 중요한 경로에 두지 않습니다. 따라서 다음 상충 관계에서 서로 균형을 조정해야 합니다.  
   
@@ -405,7 +410,7 @@ OLTP는 작업 시 개별 행에 중점을 둡니다. 일반적으로 전체 테
   
   
   
-## 5. 해시 인덱스의 장점  
+## <a name="e-strengths-of-hash-indexes"></a>5. 해시 인덱스의 장점  
   
   
 해시 인덱스는 다음과 같은 상황에서 비클러스터형 인덱스에서 선호됩니다.  
@@ -419,7 +424,7 @@ OLTP는 작업 시 개별 행에 중점을 둡니다. 일반적으로 전체 테
   
   
   
-### E.1 다중 열 해시 인덱스 키  
+### <a name="e1-multi-column-hash-index-keys"></a>E.1 다중 열 해시 인덱스 키  
   
   
 2열 인덱스는 비클러스터형 인덱스 또는 해시 인덱스일 수 있습니다. 인덱스 열이 col1 및 col2라고 가정해 보겠습니다. 다음 SQL SELECT 문이 주어진 경우 비클러스터형 인덱스만 쿼리 최적화 프로그램에 유용합니다.  
@@ -437,24 +442,26 @@ WHERE 절이 인덱스 키의 두 번째 열만 지정하는 경우에는 두 �
   
   
 \<!--   
-Hash_Indexes_for_Memory-Optimized_Tables.md , which is....  
+Hash_Indexes_for_Memory-Optimized_Tables.md , 즉....  
 CAPS guid: {e922cc3a-3d6e-453b-8d32-f4b176e98488}  
-CAPS guid of parent is: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
+부모의 CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
   
   
   
   
 | IndexName | total_bucket_count | empty_bucket_count | EmptyBucketPercent | avg_chain_length | max_chain_length |  
 | :-------- | -----------------: | -----------------: | -----------------: | ---------------: | ---------------: |  
-| ix_OrderSequence | 32768 | 13 | 0 | 8 | 26 |  
+| IX_OrderSequence | 32768 | 13 | 0 | 8 | 26 |  
 | ix_StatusCode | 8 | 4 | 50 | 65536 | 65536 |  
 | PK_SalesOrd_B14003E308C1A23C | 262144 | 96525 | 36 | 1 | 8 |  
   
   
   
   
-GeneMi  ,  2016-05-05  Thursday  15:01pm  
+GeneMi  ,  2016-05-05  목요일  15:01pm  
 -->  
   
   
   
+
+

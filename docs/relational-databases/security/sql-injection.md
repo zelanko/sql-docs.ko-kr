@@ -1,31 +1,35 @@
 ---
-title: "SQL 인젝션 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-security"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 인젝션"
+title: "SQL 삽입 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-security
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Injection
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d415833c9a51fd9b7fcde0b2515183ecc4dfb235
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL 인젝션
+# <a name="sql-injection"></a>SQL 인젝션
   SQL 삽입은 문자열에 삽입된 악성 코드가 나중에 구문 분석 및 실행용으로 SQL Server에 전달되는 방식의 공격입니다. SQL Server는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 취약성이 있는지 확인해야 합니다. 매개 변수가 있는 데이터도 숙련된 전문 공격자에 의해 조작될 수 있습니다.  
   
-## SQL 삽입의 작동 방식  
+## <a name="how-sql-injection-works"></a>SQL 삽입의 작동 방식  
  기본적으로 SQL 삽입에서는 SQL 명령과 연결되어 실행되는 사용자 입력 변수에 코드를 직접 삽입합니다. 간접적인 공격에서는 테이블에 저장할 문자열에 또는 메타데이터로 악의적인 코드를 주입합니다. 이후에 저장된 문자열이 동적 SQL 명령에 연결되고 악성 코드가 실행됩니다.  
   
- 삽입 프로세스는 텍스트 문자열을 미리 종료하고 새 명령을 덧붙이는 방법으로 수행됩니다. 삽입된 명령에는 실행 전에 덧붙여진 추가 문자열이 있을 수 있으므로 공격자는 주입된 문자열을 주석 표시인 "--"으로 종료합니다.  실행 시 이후 텍스트는 무시됩니다.  
+ 삽입 프로세스는 텍스트 문자열을 미리 종료하고 새 명령을 덧붙이는 방법으로 수행됩니다. 삽입된 명령에는 실행 전에 덧붙여진 추가 문자열이 있을 수 있으므로 공격자는 주입된 문자열을 주석 표시인 "--"으로 종료합니다. 실행 시 이후 텍스트는 무시됩니다.  
   
  다음 스크립트에서는 간단한 SQL 삽입을 보여 줍니다. 이 스크립트는 하드 코딩된 문자열과 사용자가 입력한 문자열을 연결하여 SQL 쿼리를 만듭니다.  
   
@@ -57,7 +61,7 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
   
  삽입된 SQL 코드가 구문상 정확하기만 하면 프로그래밍 방식으로 변조를 감지할 수 없습니다. 따라서 모든 사용자 입력의 유효성을 검사하고 생성된 SQL 명령을 사용 중인 서버에서 실행하는 코드를 주의 깊게 검토해야 합니다. 이 항목의 다음 섹션에서는 가장 적절한 일부 코딩 방법을 설명합니다.  
   
-## 모든 입력에 대한 유효성 검사  
+## <a name="validate-all-input"></a>모든 입력에 대한 유효성 검사  
  형식, 길이, 서식 및 범위를 테스트하여 항상 사용자 입력의 유효성을 검사합니다. 악의적인 입력을 사전에 막는 방법을 구현할 때는 응용 프로그램의 아키텍처 및 배포 시나리오를 고려하십시오. 보안 환경에서 실행하도록 설계된 프로그램을 비보안 환경으로 복사할 수도 있습니다. 가장 적절한 방법을 구현하려면 다음 제안 사항을 고려해야 합니다.  
   
 -   응용 프로그램이 수신한 데이터의 크기, 형식 또는 내용을 정확히 합니다. 예를 들어 다음과 같은 사항을 평가해야 합니다.  
@@ -91,12 +95,12 @@ SELECT * FROM OrdersTable WHERE ShipCity = 'Redmond';drop table OrdersTable--'
 |---------------------|------------------------------|  
 |**;**|쿼리 구분 기호|  
 |**'**|문자 데이터 문자열 구분 기호|  
-|**--**|문자 데이터 문자열 구분 기호<br />.|  
-|**/\*** ... **\*/**|주석 구분 기호. **/\***와 **\*/** 사이의 텍스트는 서버에서 검사되지 않습니다.|  
+|**--**|문자 데이터 문자열 구분 기호<br />인 레코드를 모두 선택합니다.|  
+|**/\*** ... **\*/**|주석 구분 기호. **/\*** 와 **\*/** 사이의 텍스트는 서버에서 검사되지 않습니다.|  
 |**xp_**|`xp_cmdshell`과 같이 카탈로그 확장 저장 프로시저의 이름 첫 자로 사용됩니다.|  
   
-### 형식 안정적 SQL 매개 변수 사용  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 **Parameters** 컬렉션은 형식 검사와 길이 유효성 검사를 제공합니다. **Parameters** 컬렉션을 사용할 경우 입력은 실행 코드가 아닌 리터럴 값으로 처리됩니다. 또한 **Parameters** 컬렉션을 사용하면 형식 및 길이 검사도 강제 실행할 수 있다는 장점이 있습니다. 범위 밖의 값에 대해서는 예외가 발생합니다. 다음 코드 조각에서는 **Parameters** 컬렉션을 사용하는 방법을 보여 줍니다.  
+### <a name="use-type-safe-sql-parameters"></a>형식 안정적 SQL 매개 변수 사용  
+ **의** Parameters [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컬렉션은 형식 검사와 길이 유효성 검사를 제공합니다. **Parameters** 컬렉션을 사용할 경우 입력은 실행 코드가 아닌 리터럴 값으로 처리됩니다. 또한 **Parameters** 컬렉션을 사용하면 형식 및 길이 검사도 강제 실행할 수 있다는 장점이 있습니다. 범위 밖의 값에 대해서는 예외가 발생합니다. 다음 코드 조각에서는 **Parameters** 컬렉션을 사용하는 방법을 보여 줍니다.  
   
 ```  
 SqlDataAdapter myCommand = new SqlDataAdapter("AuthorLogin", conn);  
@@ -108,7 +112,7 @@ parm.Value = Login.Text;
   
  이 예에서는 `@au_id` 매개 변수가 실행 코드 대신 리터럴 값으로 처리됩니다. 이 값의 형식과 길이를 검사합니다. `@au_id` 값이 지정한 형식 및 길이 제약 조건에 부합하지 않을 경우 예외가 발생합니다.  
   
-### 저장 프로시저에서 매개 변수가 있는 입력 사용  
+### <a name="use-parameterized-input-with-stored-procedures"></a>저장 프로시저에서 매개 변수가 있는 입력 사용  
  저장 프로시저가 필터링되지 않은 입력을 사용할 경우 SQL 삽입에 노출되기 쉽습니다. 예를 들면 다음 코드는 취약성이 있습니다.  
   
 ```  
@@ -119,7 +123,7 @@ new SqlDataAdapter("LoginStoredProcedure '" +
   
  저장 프로시저를 사용할 경우 입력으로 매개 변수를 사용합니다.  
   
-### 동적 SQL에서 Parameters 컬렉션 사용  
+### <a name="use-the-parameters-collection-with-dynamic-sql"></a>동적 SQL에서 Parameters 컬렉션 사용  
  저장 프로시저를 사용할 수 없는 경우에도 다음 코드 예와 같이 매개 변수를 사용할 수 있습니다.  
   
 ```  
@@ -130,7 +134,7 @@ SQLParameter parm = myCommand.SelectCommand.Parameters.Add("@au_id",
 Parm.Value = Login.Text;  
 ```  
   
-### 필터링 입력  
+### <a name="filtering-input"></a>필터링 입력  
  필터링 입력은 이스케이프 문자를 제거하므로 SQL 삽입으로부터 시스템을 보호할 수는 있지만 문자 수가 너무 많아 문제를 일으킬 수 있으므로 신뢰할 수 있는 방어책은 아닙니다. 다음 예에서는 문자열 구분 기호를 검색합니다.  
   
 ```  
@@ -140,7 +144,7 @@ private string SafeSqlLiteral(string inputSQL)
 }  
 ```  
   
-### LIKE 절  
+### <a name="like-clauses"></a>LIKE 절  
  `LIKE` 절을 사용할 경우에도 와일드카드 문자를 이스케이프 처리해야 합니다.  
   
 ```  
@@ -149,7 +153,7 @@ s = s.Replace("%", "[%]");
 s = s.Replace("_", "[_]");  
 ```  
   
-## SQL 삽입에 대한 코드 검토  
+## <a name="reviewing-code-for-sql-injection"></a>SQL 삽입에 대한 코드 검토  
  `EXECUTE`, `EXEC`또는 `sp_executesql`을 호출 하는 모든 코드를 검토해야 합니다. 다음과 유사한 쿼리를 사용하여 이러한 문을 포함하는 프로시저를 식별할 수 있습니다. 이 쿼리는 `EXECUTE` 또는 `EXEC`단어 뒤에 오는 1, 2, 3, 4개의 공백을 검사합니다.  
   
 ```  
@@ -165,7 +169,7 @@ OR UPPER(text) LIKE '%EXEC    (%'
 OR UPPER(text) LIKE '%SP_EXECUTESQL%';  
 ```  
   
-### QUOTENAME() 및 REPLACE()에서 매개 변수 래핑  
+### <a name="wrapping-parameters-with-quotename-and-replace"></a>QUOTENAME() 및 REPLACE()에서 매개 변수 래핑  
  선택한 각 저장 프로시저에서 동적 Transact-SQL에 사용된 모든 변수가 제대로 처리되는지 확인합니다. 저장 프로시저의 입력 매개 변수에서 가져온 데이터 또는 테이블에서 읽어 온 데이터는 QUOTENAME() 또는 REPLACE()에서 래핑되어야 합니다. QUOTENAME()에 전달되는 @variable의 값은 sysname이며 최대 길이는 128자입니다.  
   
 |@variable|권장 래퍼|  
@@ -186,7 +190,7 @@ SET @temp = N'SELECT * FROM authors WHERE au_lname = '''
  + REPLACE(@au_lname,'''','''''') + N'''';  
 ```  
   
-### 데이터 잘림으로 활성화되는 삽입  
+### <a name="injection-enabled-by-data-truncation"></a>데이터 잘림으로 활성화되는 삽입  
  변수에 할당되는 모든 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 은 해당 변수에 할당된 버퍼보다 클 경우 잘립니다. 문 잘림을 수행할 수 있는 공격자는 예기치 않게 긴 문자열을 저장 프로시저에 전달하여 결과를 조작할 수 있습니다. 예를 들어 다음 스크립트로 만든 저장 프로시저는 잘림으로 활성화되는 삽입에 취약합니다.  
   
 ```  
@@ -226,7 +230,7 @@ EXEC sp_MySetPassword 'sa', 'dummy',
   
  따라서 명령 변수에 큰 버퍼를 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 내부에서 동적 `EXECUTE` 을 직접 실행해야 합니다.  
   
-### QUOTENAME(@variable, '''') 및 REPLACE() 사용 시 잘림  
+### <a name="truncation-when-quotenamevariable--and-replace-are-used"></a>QUOTENAME(@variable, '''') 및 REPLACE() 사용 시 잘림  
  QUOTENAME() 및 REPLACE()에 의해 반환되는 문자열은 할당된 공간을 초과할 경우 자동으로 잘립니다. 다음 예에서 만든 저장 프로시저는 발생할 수 있는 동작을 보여 줍니다.  
   
 ```  
@@ -307,7 +311,7 @@ EXEC (@command);
 GO  
 ```  
   
- QUOTENAME()과 마찬가지로 REPLACE()로 발생하는 문자열 잘림은 모든 경우에 알맞는 크기의 임시 변수를 선언하여 방지할 수 있습니다. 가능한 경우 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 내부에서 QUOTENAME() 또는 REPLACE()를 직접 호출해야 합니다. 그렇지 않으면 다음과 같이 필요한 버퍼 크기를 계산할 수 있습니다. `@outbuffer = QUOTENAME(@input)`의 경우 `@outbuffer` 의 크기는 `2*(len(@input)+1)`이어야 합니다. 이전 예에서와 같이 `REPLACE()` 와 큰따옴표를 사용하는 경우 `2*len(@input)` 크기의 버퍼를 사용하면 충분합니다.  
+ QUOTENAME()과 마찬가지로 REPLACE()로 발생하는 문자열 잘림은 모든 경우에 알맞는 크기의 임시 변수를 선언하여 방지할 수 있습니다. 가능한 경우 동적 [!INCLUDE[tsql](../../includes/tsql-md.md)]내부에서 QUOTENAME() 또는 REPLACE()를 직접 호출해야 합니다. 그렇지 않으면 다음과 같이 필요한 버퍼 크기를 계산할 수 있습니다. `@outbuffer = QUOTENAME(@input)`의 경우 `@outbuffer` 의 크기는 `2*(len(@input)+1)`이어야 합니다. 이전 예에서와 같이 `REPLACE()` 와 큰따옴표를 사용하는 경우 `2*len(@input)` 크기의 버퍼를 사용하면 충분합니다.  
   
  다음 계산은 모든 경우에 적용됩니다.  
   
@@ -317,8 +321,8 @@ ROUND(LEN(@input)/LEN(@find_string),0) * LEN(@new_string)
  + (LEN(@input) % LEN(@find_string))  
 ```  
   
-### QUOTENAME(@variable, ']') 사용 시 잘림  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체의 이름이 `QUOTENAME(@variable, ']')` 형식을 사용하는 문에 전달되는 경우 잘릴 수 있습니다. 다음 예에서는 이러한 방법을 보여 줍니다.  
+### <a name="truncation-when-quotenamevariable--is-used"></a>QUOTENAME(@variable, ']')을 사용할 때 잘림  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체의 이름이 `QUOTENAME(@variable, ']')`형식을 사용하는 문에 전달되는 경우 잘릴 수 있습니다. 다음 예에서는 이러한 방법을 보여 줍니다.  
   
 ```  
 CREATE PROCEDURE sp_MyProc  
@@ -336,7 +340,7 @@ GO
   
  sysname 형식의 값을 연결할 때는 값당 최대 128자를 포함할 수 있는 크기의 임시 변수를 사용해야 합니다. 가능한 경우 동적 `QUOTENAME()` 내부에서 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 직접 호출합니다. 그렇지 않으면 이전 섹션에서 설명한 대로 필요한 버퍼 크기를 계산할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [REPLACE&#40;Transact-SQL&#41;](../../t-sql/functions/replace-transact-sql.md)   
  [QUOTENAME&#40;Transact-SQL&#41;](../../t-sql/functions/quotename-transact-sql.md)   

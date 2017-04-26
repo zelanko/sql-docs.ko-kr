@@ -1,52 +1,56 @@
 ---
-title: "컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.collectionsetprop.uploads.f1"
-  - "sql13.swb.dc.collectionsetprop.description.f1"
-  - "sql13.swb.dc.collectionsetprop.general.f1"
-helpviewer_keywords: 
-  - "컬렉션 집합 [SQL Server], 일정 변경"
-  - "일정 [SQL Server], 컬렉션 집합 변경"
-  - "컬렉션 집합 [SQL Server], 일정 보기"
-  - "일정 [SQL Server], 컬렉션 집합 보기"
+title: "컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.collectionsetprop.uploads.f1
+- sql13.swb.dc.collectionsetprop.description.f1
+- sql13.swb.dc.collectionsetprop.general.f1
+helpviewer_keywords:
+- collection sets [SQL Server], changing schedules
+- schedules [SQL Server], changing collection set
+- collection sets [SQL Server], viewing schedules
+- schedules [SQL Server], viewing collection set
 ms.assetid: 26336c98-78c5-414f-8d6a-574fc3af60c4
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b882c8e5f82beb7d467d1063695fa032ed562ca0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
+# <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>컬렉션 집합 일정 보기 또는 변경(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 컬렉션 집합 일정을 보거나 변경할 수 있습니다.  
   
  컬렉션 모드가 캐시되거나 캐시되지 않은지에 따라 일정을 변경할 수 있는 방법이 결정됩니다. 캐시된 모드에서는 컬렉션과 업로드에 별도의 일정을 사용합니다. 캐시되지 않은 모드에서는 컬렉션과 업로드에 동일한 일정을 사용합니다. 각 시스템 데이터 컬렉션 집합에 대한 컬렉션 모드의 유형은 다음과 같습니다.  
   
--   **디스크 사용**은 캐시되지 않은 컬렉션 모드를 사용합니다.  
+-   **디스크 사용** 은 캐시되지 않은 컬렉션 모드를 사용합니다.  
   
 -   **쿼리 통계** 는 캐시된 컬렉션 모드를 사용합니다.  
   
 -   **서버 작업** 은 캐시된 컬렉션 모드를 사용합니다.  
   
-### 컬렉션 집합 일정을 보려면  
+### <a name="to-view-collection-set-schedules"></a>컬렉션 집합 일정을 보려면  
   
 1.  개체 탐색기에서 **관리** 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.  
   
-2.  컬렉션 집합 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하여 [데이터 컬렉션 집합 속성](#CollectionSet) 대화 상자를 엽니다.  
+2.  컬렉션 집합 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하여 [데이터 컬렉션 집합 속성](#CollectionSet) 대화 상자를 엽니다.  
   
-### 캐시된 모드 컬렉션 집합의 일정을 변경하려면  
+### <a name="to-change-the-schedules-for-a-cached-mode-collection-set"></a>캐시된 모드 컬렉션 집합의 일정을 변경하려면  
   
 1.  개체 탐색기에서 **관리** 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.  
   
-2.  캐시된 모드를 사용하는 컬렉션 집합(예: **쿼리 통계**)을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하여 [데이터 컬렉션 집합 속성](#CollectionSet) 대화 상자를 엽니다.  
+2.  캐시된 모드를 사용하는 컬렉션 집합(예: **쿼리 통계**)을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하여 [데이터 컬렉션 집합 속성](#CollectionSet) 대화 상자를 엽니다.  
   
 3.  **일반** 페이지에서 컬렉션 빈도를 변경할 수 있습니다. 이렇게 하려면 다음 단계를 수행합니다.  
   
@@ -75,11 +79,11 @@ caps.handback.revision: 26
   
 5.  **확인** 을 클릭하면 컬렉션 빈도 및 업로드 일정에 대한 변경 내용이 저장되고 **데이터 컬렉션 집합 속성** 대화 상자가 닫힙니다.  
   
-### 캐시되지 않은 모드 컬렉션 집합의 일정을 변경하려면  
+### <a name="to-change-the-schedule-for-a-non-cached-mode-collection-set"></a>캐시되지 않은 모드 컬렉션 집합의 일정을 변경하려면  
   
 1.  개체 탐색기에서 **관리** 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.  
   
-2.  캐시되지 않은 모드를 사용하는 컬렉션 집합(예: **디스크 사용**)을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭하여 [데이터 컬렉션 집합 속성](#CollectionSet) 대화 상자를 엽니다.  
+2.  캐시되지 않은 모드를 사용하는 컬렉션 집합(예: **디스크 사용**)을 마우스 오른쪽 단추로 클릭한 다음 **속성** 을 클릭하여 [데이터 컬렉션 집합 속성](#CollectionSet) 대화 상자를 엽니다.  
   
      **데이터 컬렉션 집합 속성** 대화 상자에 컬렉션 집합 속성의 페이지된 뷰가 표시됩니다.  
   
@@ -114,14 +118,14 @@ caps.handback.revision: 26
 |**캐시되지 않음. 동일한 일정에 따라 데이터를 수집 및 업로드합니다.**|이 옵션을 선택할 경우 다음 중 하나를 지정합니다.<br /><br /> **일정**. 일정에 따라 데이터가 수집되고 업로드됩니다. **선택** 을 클릭하여 미리 정의된 일정 목록에서 선택하거나 **새로 만들기** 를 클릭하여 새 일정을 만듭니다.<br /><br /> **요청 시**. 요청 시 데이터가 수집되고 업로드됩니다.|  
 |**캐시됨. 컬렉션 빈도 집합에 따라 데이터를 수집 및 캐시합니다. 캐시된 데이터는 별도의 일정에 따라 업로드합니다.**|지정된 컬렉션 빈도에 따라 데이터를 수집 및 캐시합니다. 수집된 데이터는 별도의 일정에 따라 업로드합니다.|  
   
- **컬렉션 항목**  
+ **컬렉션 빈도(초)**  
  컬렉션 집합에 있는 컬렉션 항목을 표시합니다. 각 컬렉션 항목에 대해 다음과 같은 정보가 제공됩니다.  
   
 -   **이름**  
   
 -   **수집기 유형**  
   
--   **컬렉션 빈도**(초). **데이터 컬렉션 및 업로드** 가 캐시된 것으로 구성되면 이 필드를 편집할 수 있습니다. 컬렉션 빈도를 설정하려면 이 셀을 두 번 클릭합니다.  
+-   **컬렉션 빈도** (초). **데이터 컬렉션 및 업로드** 가 캐시된 것으로 구성되면 이 필드를 편집할 수 있습니다. 컬렉션 빈도를 설정하려면 이 셀을 두 번 클릭합니다.  
   
  **입력 매개 변수**  
  컬렉션 집합에 사용되는 입력 매개 변수를 표시합니다.  
@@ -142,7 +146,7 @@ caps.handback.revision: 26
  이 페이지를 사용하여 이 컬렉션 집합에 의해 수집되는 데이터의 업로드 일정을 구성할 수 있습니다.  
   
 > [!NOTE]  
->  이 탭은 **데이터 컬렉션 및 업로드**에 **캐시됨** 옵션이 구성된 경우에만 사용할 수 있습니다.  
+>  이 탭은 **데이터 컬렉션 및 업로드** 에 **캐시됨**옵션이 구성된 경우에만 사용할 수 있습니다.  
   
  **Server**  
  관리 데이터 웨어하우스를 호스팅하는 서버의 이름을 표시합니다. 자세한 내용은 [관리 데이터 웨어하우스 구성&#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/configure-the-management-data-warehouse-sql-server-management-studio.md)을 참조하세요.  
@@ -160,7 +164,7 @@ caps.handback.revision: 26
   
  이 페이지를 사용하여 이 속성 페이지가 참조하는 컬렉션 집합에 대한 설명을 확인할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 컬렉션 관리](../../relational-databases/data-collection/manage-data-collection.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   

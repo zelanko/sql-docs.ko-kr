@@ -1,25 +1,29 @@
 ---
-title: "메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft 문서"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블의 인덱스
+# <a name="indexes-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   
@@ -33,10 +37,10 @@ caps.handback.revision: 14
 *해시* 인덱스는 [밀접하게 관련된 문서](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)에서 자세히 설명합니다.  
   
   
-*Columnstore* 인덱스에 대해서는 [다른 문서](Columnstore%20Indexes%20Guide.xml)에서 설명합니다.  
+*Columnstore* 인덱스에 대해서는 [다른 문서](~/relational-databases/indexes/columnstore-indexes-overview.md)에서 설명합니다.  
   
   
-## 1. 메모리 액세스에 최적화된 인덱스 구문  
+## <a name="a-syntax-for-memory-optimized-indexes"></a>1. 메모리 액세스에 최적화된 인덱스 구문  
   
 메모리 액세스에 최적화된 테이블의 각 CREATE TABLE 문에는 인덱스 선언을 위해 1-8절이 포함되어야 합니다. 인덱스는 다음 중 하나여야 합니다.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 14
   
   
   
-### A.1 구문에 대한 코드 샘플  
+### <a name="a1-code-sample-for-syntax"></a>A.1 구문에 대한 코드 샘플  
   
 이 하위 섹션에는 메모리 액세스에 최적화된 테이블에 다양한 인덱스를 만드는 구문을 보여 주는 하는 TRANSACT-SQL 코드 블록이 포함되어 있습니다. 코드에서는 다음을 보여 줍니다.  
   
@@ -118,7 +122,7 @@ caps.handback.revision: 14
   
   
   
-## 2. 메모리 액세스에 최적화된 인덱스 특성  
+## <a name="b-nature-of-memory-optimized-indexes"></a>2. 메모리 액세스에 최적화된 인덱스 특성  
   
 메모리 액세스에 최적화된 테이블에서 모든 인덱스 또한 메모리 액세스에 최적화되어 있습니다. 메모리 액세스에 최적화된 테이블의 인덱스와 디스크 기반 테이블의 인덱스는 여러 방식에서 다릅니다.  
   
@@ -139,13 +143,13 @@ SQL UPDATE 문에서 메모리 액세스에 최적화된 테이블의 데이터�
   
 - fillfactor가 없으므로 페이지 내에서 기존 유형의 조각화가 발생하지 않습니다.  
   
-## 3. 중복된 인덱스 키 값
+## <a name="c-duplicate-index-key-values"></a>3. 중복된 인덱스 키 값
 
 중복된 인덱스 키 값은 메모리 액세스에 최적화된 테이블에 대한 작업의 성능에 영향을 줄 수 있습니다. 대부분의 인덱스 작업에서 중복 체인을 순회해야 하므로 중복이 많으면(예: 100 이상) 인덱스 유지 관리 작업이 비효율적입니다. 메모리 액세스에 최적화된 테이블에서 INSERT, UPDATE 및 DELETE 작업에 영향을 줄 수 있습니다. 이 문제는 해시 인덱스에 대한 작업당 적은 비용 및 해시 충돌 체인이 있는 큰 중복 체인의 간섭으로 인해 해시 인덱스의 경우에 더 잘 나타납니다. 인덱스에서 중복을 줄이려면 비클러스터형 인덱스를 사용하고 중복 수를 줄이기 위해 인덱스 키의 끝에 별도 열을 추가합니다(예: 기본 키에서 추가).
 
 CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인덱스가 있는 Customers 테이블을 예로 들어봅시다. 일반적으로 특정 범주에 많은 고객이 있으므로 지정된 키에 대한 중복 값이 CustomerCategoryID의 인덱스에 많습니다. 이 시나리오에서는 (CustomerCategoryID, CustomerId)에 대한 비클러스터형 인덱스를 사용하는 것이 가장 좋습니다. 이 인덱스는 CustomerCategoryID를 포함하는 조건자를 사용하는 쿼리에 사용할 수 있고 중복을 포함하지 않기 때문에 인덱스 유지 관리에서 비효율성을 초래하지 않습니다.
 
-다음 쿼리는 샘플 데이터베이스 [WideWorldImporters](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)의 테이블 `Sales.Customers`에 있는 `CustomerCategoryID`에 대한 인덱스와 관련해 중복 인덱스 키 값의 평균 개수를 보여 줍니다.
+다음 쿼리는 샘플 데이터베이스 `CustomerCategoryID` WideWorldImporters `Sales.Customers`의 테이블 [에 있는](https://msdn.microsoft.com/library/mt734199(v=sql.1).aspx)에 대한 인덱스와 관련해 중복 인덱스 키 값의 평균 개수를 보여 줍니다.
 
 ```Transact-SQL
     SELECT AVG(row_count) FROM
@@ -154,9 +158,9 @@ CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인�
         GROUP BY CustomerCategoryID) a
 ```
 
-고유 테이블 및 인덱스와 관련해 인덱스 키 중복 항목의 평균 개수를 구하려면 `Sales.Customers`를 테이블 이름으로 바꾸고 `CustomerCategoryID`를 인덱스 키 열 목록으로 바꿉니다.
+고유 테이블 및 인덱스와 관련해 인덱스 키 중복 항목의 평균 개수를 구하려면 `Sales.Customers` 를 테이블 이름으로 바꾸고 `CustomerCategoryID` 를 인덱스 키 열 목록으로 바꿉니다.
 
-## 4. 각 인덱스 유형을 사용하는 경우 비교  
+## <a name="d-comparing-when-to-use-each-index-type"></a>4. 각 인덱스 유형을 사용하는 경우 비교  
   
   
 특정 쿼리의 특성에서 인덱스 유형이 적합한 선택인지 결정됩니다.  
@@ -164,7 +168,7 @@ CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인�
 해당 기능은 디스크 기반 테이블에서 기존 클러스터형 및 비클러스터형 인덱스의 기능과 유사하므로 기존 응용 프로그램에서 메모리 액세스에 최적화된 테이블을 구현할 때 일반적으로 비클러스트형 인덱스로 시작하는 것이 좋습니다. 
   
   
-### D.1 비클러스터형 인덱스의 장점  
+### <a name="d1-strengths-of-nonclustered-indexes"></a>D.1 비클러스터형 인덱스의 장점  
   
   
 비클러스터형 인덱스는 다음의 경우 해시 인덱스 전체에서 선호됩니다.  
@@ -196,10 +200,10 @@ CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인�
   
   
   
-### D.2 해시 인덱스의 장점  
+### <a name="d2-strengths-of-hash-indexes"></a>D.2 해시 인덱스의 장점  
   
   
-[해시 인덱스](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)는 다음과 같은 상황에서 비클러스터형 인덱스에서 선호됩니다.  
+[해시 인덱스](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md) 는 다음과 같은 상황에서 비클러스터형 인덱스에서 선호됩니다.  
   
 - 쿼리에서 WHERE 절을 다음과 같이 모든 인덱스 키 열에서 같음으로 사용하여 인덱싱된 열 테스트  
   
@@ -210,7 +214,7 @@ CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인�
   
   
   
-### D.3 인덱스 장점을 비교할 요약 테이블  
+### <a name="d3-summary-table-to-compare-index-strengths"></a>D.3 인덱스 장점을 비교할 요약 테이블  
   
   
 다음 표에서 다른 인덱스 유형에서 지원 되는 모든 작업을 나열 합니다.  
@@ -218,11 +222,11 @@ CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인�
   
 | 연산 | 메모리 액세스에 최적화됨, <br/> 해시 | 메모리 액세스에 최적화됨, <br/> 비클러스터형 | 디스크 기반, <br/> (비)클러스터형 |  
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
-| 색인 검색은 모든 테이블 행을 검색합니다. | 예 | 사용자 계정 컨트롤 | 예 |  
+| 색인 검색은 모든 테이블 행을 검색합니다. | 예 | 예 | 예 |  
 | 같음 조건자(=)에서 인덱스 검색 | 예 <br/> (전체 키는 필수) | 예  | 예 |  
-| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, \<=, > =, BETWEEN). | 아니요 <br/> (인덱스 검색의 결과) | 예 | 예 |  
-| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 사용자 계정 컨트롤 | 예 |  
-| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 아니오 | 예 |  
+| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, \<=, >=, BETWEEN). | 아니요 <br/> (인덱스 검색의 결과) | 예 | 예 |  
+| 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 예 | 예 |  
+| 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 아니요 | 예 |  
   
   
 이 표에서 테이블에서 "예"는 인덱스가 요청을 효율적으로 처리할 수 있음을 의미하며 "아니요"는 인덱스를 사용하여 요청을 효과적으로 충족할 수 없음을 의미합니다.  
@@ -231,7 +235,7 @@ CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인�
   
   
 \<!--   
-Indexes_for_Memory-Optimized_Tables.md , which is....  
+Indexes_for_Memory-Optimized_Tables.md , 즉....  
 CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
 mt670614.aspx  
   
@@ -240,11 +244,14 @@ Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}
 /Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
   
   
-Replaces dn511012.aspx , which is....  
+dn511012.aspx 대체, 즉....  
 CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
   
-GeneMi  ,  2016-05-05  Thursday  17:25pm  (Hash content moved to new child article, e922cc3a-3d6e-453b-8d32-f4b176e98488.)  
+GeneMi  ,  2016-05-05  목요일  17:25pm  (해시 콘텐츠는 새 자식 아티클 e922cc3a-3d6e-453b-8d32-f4b176e98488로 이동되었습니다.)  
 -->  
   
   
   
+
+
+

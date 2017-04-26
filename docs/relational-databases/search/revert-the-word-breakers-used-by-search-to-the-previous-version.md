@@ -1,29 +1,33 @@
 ---
-title: "검색에 사용된 단어 분리기를 이전 버전으로 되돌리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "검색에 사용된 단어 분리기를 이전 버전으로 되돌리기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# 검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
+# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 한국어를 제외하고 전체 텍스트 검색에서 지원되는 모든 언어에 대해 단어 분리기 및 형태소 분석기의 버전을 설치하고 활성화합니다. 이 항목에서는 이러한 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다.  
   
  이 항목에서는 다음 언어에 대해 다루지 않습니다.  
   
 -   **영어**. 영어 구성 요소를 되돌리거나 복원하려면 [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하세요.  
   
--   **덴마크어, 터키어 및 폴란드어**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 릴리스에 포함된 덴마크어, 폴란드어 및 터키어에 대한 타사 단어 분리기는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구성 요소로 대체되었습니다.  
+-   **덴마크어, 터키어 및 폴란드어**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이전 릴리스에 포함된 덴마크어, 폴란드어 및 터키어에 대한 타사 단어 분리기는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구성 요소로 대체되었습니다.  
   
 -   **그리스어와 체코어**. 체코어 및 그리스어에 대한 새로운 단어 분리기가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색의 이전 릴리스에는 이 두 언어에 대한 지원이 포함되지 않았습니다.  
   
@@ -151,7 +155,7 @@ caps.handback.revision: 13
     > [!WARNING]  
     >  이 변경 사항은 현재 버전과 이전 버전의 NaturalLanguage6.dll을 사용하는 모든 언어에 적용됩니다.  
   
-5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** 노드로 이동합니다.  
   
 6.  다음 단계에 따라 선택한 언어의 이전 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -163,7 +167,7 @@ caps.handback.revision: 13
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 이전 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-7.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+7.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 8.  **WBreakerClass** 키 값을 현재 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -180,7 +184,7 @@ caps.handback.revision: 13
     > [!WARNING]  
     >  이 변경 사항은 현재 버전과 이전 버전의 NaturalLanguage6.dll을 사용하는 모든 언어에 적용됩니다.  
   
-3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** 노드로 이동합니다.  
   
 4.  다음 키가 없으면 다음 단계에 따라 선택한 언어의 현재 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -192,7 +196,7 @@ caps.handback.revision: 13
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 현재 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 6.  **WBreakerClass** 키 값을 이전 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -221,7 +225,7 @@ caps.handback.revision: 13
 |이전 CLSID|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|현재 파일 이름|MsWb7.dll|MsWb7.dll|  
+|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
   
  **일본어(jpn), LCID 1041**  
   
@@ -239,7 +243,7 @@ caps.handback.revision: 13
 |이전 CLSID|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|현재 파일 이름|MsWb7.dll|MsWb7.dll|  
+|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
   
  **러시아어(rus), LCID 1049**  
   
@@ -248,7 +252,7 @@ caps.handback.revision: 13
 |이전 CLSID|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |이전 파일 이름|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |현재 CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|현재 파일 이름|MsWb7.dll|MsWb7.dll|  
+|현재 파일 이름|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> 이전 파일 이름과 현재 파일 이름에 대한 언어는 모두 NaturalLanguage6.dll이 아닙니다.  
  다음 표에 나오는 언어의 경우 이전 단어 분리기 및 형태소 분석기의 파일 이름이 새 버전의 파일 이름과 다릅니다. 이전 파일 이름과 현재 파일 이름이 모두 NaturalLanguage6.dll이 아닙니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램이 구성 요소의 현재 버전과 이전 버전을 모두 Binn 폴더에 복사하므로 파일을 대체할 필요는 없습니다. 하지만 레지스트리 항목 집합을 변경하여 구성 요소의 이전 버전 또는 현재 버전을 지정해야 합니다.  
@@ -272,7 +276,7 @@ caps.handback.revision: 13
   
 1.  현재 버전의 구성 요소에 대한 파일을 Binn 폴더에서 제거하지 마세요.  
   
-2.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+2.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** 노드로 이동합니다.  
   
 3.  다음 단계에 따라 선택한 언어의 이전 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -284,7 +288,7 @@ caps.handback.revision: 13
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 이전 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 5.  **WBreakerClass** 키 값을 현재 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -296,7 +300,7 @@ caps.handback.revision: 13
   
 1.  이전 버전의 구성 요소에 대한 파일을 Binn 폴더에서 제거하지 마세요.  
   
-2.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+2.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\CLSID** 노드로 이동합니다.  
   
 3.  다음 키가 없으면 다음 단계에 따라 선택한 언어의 현재 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -308,7 +312,7 @@ caps.handback.revision: 13
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 현재 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\<InstanceRoot>\MSSearch\Language\<language_key>** 노드로 이동합니다. *<language_key>*는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 5.  **WBreakerClass** 키 값을 이전 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -375,8 +379,8 @@ caps.handback.revision: 13
 |현재 CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |현재 파일 이름|MsWb70804.dll|  
   
-## 참고 항목  
- [미국 영어 및 영국 영어에 사용되는 단어 분리기 변경](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
- [전체 텍스트 검색의 동작 변경](../Topic/Behavior%20Changes%20to%20Full-Text%20Search.md)  
+## <a name="see-also"></a>참고 항목  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+ [전체 텍스트 검색의 동작 변경](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   

@@ -1,22 +1,26 @@
 ---
-title: "URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.lasthandoff: 04/11/2017
+
 ---
-# URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
+# <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에는 SQL Server를 백업하고 Windows Azure Blob 서비스로 복원하는 최상의 방법 및 문제 해결 팁이 포함되어 있습니다.  
@@ -25,9 +29,9 @@ caps.handback.revision: 26
   
 -   [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+-   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
-## 백업 관리  
+## <a name="managing-backups"></a>백업 관리  
  다음은 백업 관리 시 일반적으로 권장되는 사항입니다.  
   
 -   blob을 실수로 덮어쓰지 않도록 모든 백업에 고유한 파일 이름을 사용하는 것이 좋습니다.  
@@ -40,13 +44,13 @@ caps.handback.revision: 26
   
 -   백업 중 **WITH COMPRESSION** 옵션을 사용하면 저장소 비용과 저장소 트랜잭션 비용이 최소화됩니다. 백업 프로세스를 완료하는 데 걸리는 시간도 줄어듭니다.  
   
-## 큰 파일 처리  
+## <a name="handling-large-files"></a>큰 파일 처리  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 작업에서는 여러 스레드를 사용하여 Windows Azure Blob 저장소 서비스로 데이터 전송을 최적화합니다.  그러나 성능은 ISV 대역폭과 데이터베이스 크기 등의 다양한 요소에 따라 달라집니다. 온-프레미스 SQL Server 데이터베이스의 대형 데이터베이스나 파일 그룹을 백업하려는 경우 먼저 몇 가지 처리량 테스트를 수행하는 것이 좋습니다. Azure [저장소에 대한 SLA](http://azure.microsoft.com/support/legal/sla/storage/v1_0/) 에서는 Blob에 대해 고려 가능한 최대 처리 시간을 제공합니다.  
   
 -   특히 큰 파일을 백업할 때 **백업 관리** 섹션에서 권장하는 대로 **WITH COMPRESSION** 옵션을 사용해야 합니다.  
   
-## URL 백업 또는 복원 문제 해결  
+## <a name="troubleshooting-backup-to-or-restore-from-url"></a>URL 백업 또는 복원 문제 해결  
  다음은 Windows Azure Blob 스토리지 서비스로 백업하고 복원할 때 발생하는 문제를 해결하는 몇 가지 빠른 방법입니다.  
   
  지원되지 않는 옵션이나 제한 사항으로 인한 오류 발생을 방지하려면 제한 사항 목록과 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 문서의 BACKUP 및 RESTORE 명령 지원 정보를 검토하세요.  
@@ -97,7 +101,7 @@ caps.handback.revision: 26
     -   **SqlException 3284이(가) 발생했습니다. 심각도: 16 상태: 5**  
         **메시지: 장치 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'의 파일 마크가 정렬되지 않았습니다. 백업 세트를 만들 때 사용한 크기와 동일한 블록 크기를 사용하여 Restore 문을 다시 실행하세요. '65536'이(가) 사용할 수 있는 값인 것 같습니다.**  
   
-         이 오류를 해결하려면 **BLOCKSIZE = 65536**을 지정하여 **BACKUP** 문을 다시 실행하세요.  
+         이 오류를 해결하려면 **BLOCKSIZE = 65536** 을 지정하여 **BACKUP** 문을 다시 실행하세요.  
   
 -   Blob에 활성 임대가 있어 백업 중 오류가 발생합니다. 실패한 백업 작업으로 인해 Blob에 활성 임대가 있을 수 있습니다.  
   
@@ -111,7 +115,7 @@ caps.handback.revision: 26
   
      이러한 오류가 발생하면 blob 파일을 삭제해야 합니다. 이 시나리오와 이 문제 해결 방법에 대한 자세한 내용은 [Deleting Backup Blob Files with Active Leases](../../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md)를 참조하십시오.  
   
-## 프록시 오류  
+## <a name="proxy-errors"></a>프록시 오류  
  프록시 서버를 사용하여 인터넷에 액세스할 경우 다음과 같은 문제가 발생할 수 있습니다.  
   
  **프록시 서버에 의한 연결 제한:**  
@@ -141,21 +145,22 @@ caps.handback.revision: 26
 1.  다음 xml을 사용하여 BackuptoURL.exe.config라는 구성 파일을 만듭니다.  
   
     ```  
-    <?xml version ="1.0"?>  
+    \<?xml version ="1.0"?>  
     <configuration>   
-                    <system.net>   
+                    \<system.net>   
                                     <defaultProxy enabled="true" useDefaultCredentials="true">   
                                                     <proxy usesystemdefault="true" />   
                                     </defaultProxy>   
-                    </system.net>  
+                    \</system.net>  
     </configuration>  
   
     ```  
   
 2.  SQL Server 인스턴스의 Binn 폴더에 구성 파일을 배치합니다. 예를 들어 SQL Server가 컴퓨터의 C 드라이브에 설치된 경우 구성 파일을 *C:\Program Files\Microsoft SQL Server\MSSQL13.\<InstanceName>\MSSQL\Binn*에 저장합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft Azure에 저장된 백업에서 복원](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
 [BACKUP(Transact-SQL)](../../t-sql/statements/backup-transact-sql.md)  
-[RESTORE(Transact-SQL)](RESTORE%20\(Transact-SQL\).md)
+[RESTORE(Transact-SQL)](../../t-sql/statements/restore-statements-transact-sql.md)
   
+

@@ -1,32 +1,36 @@
 ---
-title: "중단된 복원 작업 다시 시작(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "중단된 복원 작업"
-  - "데이터베이스 복원 [SQL Server], 중단된 작업 다시 시작"
-  - "백업 후에 변경된 옵션 다시 설정"
-  - "데이터베이스 복원 [SQL Server], 중단된 작업 다시 시작"
-  - "중단된 복원 작업 다시 시작"
-  - "중단된 작업 복원 [SQL Server]"
+title: "중단된 복원 작업 다시 시작(Transact-SQL) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- interrupted restore operation
+- restoring databases [SQL Server], restarting interrupted operation
+- resetting options changed after backup
+- database restores [SQL Server], restarting interrupted operation
+- restarting interrupted restore operation
+- restoring interrupted operation [SQL Server]
 ms.assetid: 6413a07d-fd90-448d-8f29-12c5a1972618
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1a41e345b6122be18ca05186e7bc82d48c566fb9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 중단된 복원 작업 다시 시작(Transact-SQL)
+# <a name="restart-an-interrupted-restore-operation-transact-sql"></a>중단된 복원 작업 다시 시작(Transact-SQL)
   이 항목에서는 인터럽트된 복원 작업을 다시 시작하는 방법에 대해 설명합니다.  
   
-### 중단된 복원 작업을 다시 시작하려면  
+### <a name="to-restart-an-interrupted-restore-operation"></a>중단된 복원 작업을 다시 시작하려면  
   
 1.  인터럽트된 RESTORE 문을 다시 실행합니다. 이때 다음을 지정합니다.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 24
   
     -   RESTART 절  
   
-## 예제  
+## <a name="example"></a>예제  
  다음은 중단된 복원 작업을 다시 시작하는 예제입니다.  
   
 ```tsql  
@@ -50,9 +54,9 @@ RESTORE DATABASE AdventureWorks
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

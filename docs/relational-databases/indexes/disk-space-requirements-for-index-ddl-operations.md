@@ -1,33 +1,37 @@
 ---
-title: "인덱스 DDL 작업의 디스크 공간 요구 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "디스크 공간 [SQL Server], 인덱스"
-  - "인덱스 디스크 공간 [SQL Server]"
-  - "공간 [SQL Server], 인덱스"
-  - "인덱스 [SQL Server], 디스크 공간 요구 사항"
-  - "임시 디스크 공간 [SQL Server]"
+title: "인덱스 DDL 작업의 디스크 공간 요구 사항 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- disk space [SQL Server], indexes
+- index disk space [SQL Server]
+- space [SQL Server], indexes
+- indexes [SQL Server], disk space requirements
+- temporary disk space [SQL Server]
 ms.assetid: 35930826-c870-44c1-a966-a6a4638f62ef
 caps.latest.revision: 39
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e719a7f09c1661573826bb59ccd86e2034bd3f0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 DDL 작업의 디스크 공간 요구 사항
+# <a name="disk-space-requirements-for-index-ddl-operations"></a>인덱스 DDL 작업의 디스크 공간 요구 사항
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   디스크 공간은 인덱스를 생성, 다시 작성 또는 삭제할 때 고려해야 할 주요 사항입니다. 디스크 공간이 부족하면 성능이 저하되거나 인덱스 작업이 실패할 수도 있습니다. 이 항목에서는 인덱스 DDL(데이터 정의 언어) 작업에 필요한 디스크 공간을 결정하는 데 도움이 되는 일반 정보를 제공합니다.  
   
-## 추가 디스크 공간이 필요 없는 인덱스 작업  
+## <a name="index-operations-that-require-no-additional-disk-space"></a>추가 디스크 공간이 필요 없는 인덱스 작업  
  다음 인덱스 작업에는 추가 디스크 공간이 필요 없습니다.  
   
 -   ALTER INDEX REORGANIZE. 로그 공간은 필요합니다.  
@@ -38,7 +42,7 @@ caps.handback.revision: 39
   
 -   CREATE TABLE(PRIMARY KEY 또는 UNIQUE 제약 조건)  
   
-## 추가 디스크 공간이 필요한 인덱스 작업  
+## <a name="index-operations-that-require-additional-disk-space"></a>추가 디스크 공간이 필요한 인덱스 작업  
  이외의 DDL 작업에는 모두 작업 중 사용할 추가 임시 디스크 공간과 새 인덱스 구조를 저장할 영구 디스크 공간이 필요합니다.  
   
  새 인덱스 구조가 생성되면 해당 파일과 파일 그룹에 기존(원본) 구조와 새(대상) 구조를 위한 디스크 공간이 모두 필요합니다. 기존 구조는 인덱스 생성 트랜잭션이 커밋된 후 할당 취소됩니다.  
@@ -57,7 +61,7 @@ caps.handback.revision: 39
   
 -   DROP INDEX MOVE TO(클러스터형 인덱스에만 적용됨)  
   
-## 정렬을 위한 임시 디스크 공간  
+## <a name="temporary-disk-space-for-sorting"></a>정렬을 위한 임시 디스크 공간  
  원본 및 대상 구조에 필요한 디스크 공간 이외에도 쿼리 최적화 프로그램에서 정렬이 필요 없는 실행 계획을 찾지 못할 경우 정렬을 위한 임시 디스크 공간이 필요합니다.  
   
  정렬이 필요할 경우 한 번에 한 인덱스만 정렬됩니다. 예를 들어 단일 문 내에서 클러스터형 인덱스와 관련 비클러스터형 인덱스를 다시 작성할 때 인덱스는 차례로 정렬됩니다. 따라서 정렬에 필요한 추가 임시 디스크 공간은 작업에서 가장 큰 인덱스만큼만 크면 됩니다. 대개 클러스터형 인덱스가 가장 큽니다.  
@@ -68,7 +72,7 @@ caps.handback.revision: 39
   
  디스크 공간을 계산하는 예는 [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)를 참조하십시오.  
   
-## 온라인 인덱스 작업을 위한 임시 디스크 공간  
+## <a name="temporary-disk-space-for-online-index-operations"></a>온라인 인덱스 작업을 위한 임시 디스크 공간  
  온라인으로 인덱스 작업을 수행하면 임시 디스크 공간이 추가로 필요합니다.  
   
  온라인으로 클러스터형 인덱스를 생성, 다시 작성 또는 삭제할 경우 기존 책갈피를 새 책갈피에 매핑하기 위해 임시 비클러스터형 인덱스가 생성됩니다. SORT_IN_TEMPDB 옵션이 ON으로 설정된 경우 **tempdb**에 이 임시 인덱스가 생성됩니다. SORT_IN_TEMPDB가 OFF로 설정된 경우 대상 인덱스와 같은 파일 그룹이나 파티션 구성표가 사용됩니다. 임시 매핑 인덱스에는 테이블의 각 행에 대한 레코드가 하나씩 들어 있고 해당 내용은 기존 책갈피 열과 새 책갈피 행을 합친 것입니다. 여기에는 두 책갈피에 모두 사용되는 열이 한 번만 포함되며 고유 식별자와 레코드 식별자가 포함됩니다. 온라인 인덱스 작업에 대한 자세한 내용은 [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
@@ -76,10 +80,10 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  DROP INDEX 문에는 SORT_IN_TEMPDB 옵션을 설정할 수 없습니다. 임시 매핑 인덱스는 항상 대상 인덱스와 같은 파일 그룹이나 파티션 구성표에 생성됩니다.  
   
- 온라인 인덱스 작업은 행 버전 관리를 사용하여 다른 트랜잭션에서 수정하는 내용의 영향을 받지 않습니다. 따라서 이미 읽은 행에 대한 공유 잠금을 요청할 필요가 없습니다. 온라인 인덱스 작업 중 여러 사용자가 동시에 업데이트 및 삭제 작업을 수행하려면 **tempdb**의 버전 레코드를 위한 공간이 필요합니다. 자세한 내용은 [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
+ 온라인 인덱스 작업은 행 버전 관리를 사용하여 다른 트랜잭션에서 수정하는 내용의 영향을 받지 않습니다. 따라서 이미 읽은 행에 대한 공유 잠금을 요청할 필요가 없습니다. 온라인 인덱스 작업 중 여러 사용자가 동시에 업데이트 및 삭제 작업을 수행하려면 **tempdb**의 버전 레코드를 위한 공간이 필요합니다. 자세한 내용은 [온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md) 을 참조하세요.  
   
-## 관련 태스크  
- [인덱스 디스크 공간 예](../../relational-databases/indexes/index-disk-space-example.md)  
+## <a name="related-tasks"></a>관련 태스크  
+ [Index Disk Space Example](../../relational-databases/indexes/index-disk-space-example.md)  
   
  [인덱스 작업에 필요한 트랜잭션 로그 디스크 공간](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)  
   
@@ -91,7 +95,7 @@ caps.handback.revision: 39
   
  [힙 크기 예측](../../relational-databases/databases/estimate-the-size-of-a-heap.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
@@ -103,3 +107,4 @@ caps.handback.revision: 39
  [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)  
   
   
+

@@ -1,31 +1,35 @@
 ---
-title: "저장 프로시저 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.executeprocedure.general.f1"
-  - "sql13.swb.executeprocedure.f1"
-helpviewer_keywords: 
-  - "저장 프로시저 [SQL Server], 매개 변수"
-  - "확장 저장 프로시저 [SQL Server], 실행"
-  - "시스템 저장 프로시저 [SQL Server], 실행"
-  - "저장 프로시저 [SQL Server], 실행"
-  - "사용자 정의 저장 프로시저 [SQL Server]"
+title: "저장 프로시저 실행 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.executeprocedure.general.f1
+- sql13.swb.executeprocedure.f1
+helpviewer_keywords:
+- stored procedures [SQL Server], parameters
+- extended stored procedures [SQL Server], executing
+- system stored procedures [SQL Server], executing
+- stored procedures [SQL Server], executing
+- user-defined stored procedures [SQL Server]
 ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 저장 프로시저 실행
+# <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
  두 가지 방법으로 저장 프로시저를 실행할 수 있습니다. 가장 일반적인 첫 번째 방법은 응용 프로그램 또는 사용자가 프로시저를 호출하는 것입니다. 두 번째 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 자동 실행되도록 프로시저를 설정하는 것입니다. 응용 프로그램이나 사용자가 프로시저를 호출할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 또는 EXEC 키워드가 호출에서 명시적으로 지정됩니다. 또는 프로시저가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 첫 번째 문이면 키워드를 사용하지 않고 프로시저를 호출하고 실행할 수 있습니다.  
@@ -72,7 +76,7 @@ caps.handback.revision: 38
   
 -   사용자 정의 저장 프로시저 실행  
   
-     사용자 정의 프로시저를 실행할 때 프로시저 이름을 스키마 이름으로 한정하는 것이 좋습니다. 이렇게 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 여러 스키마를 검색할 필요가 없기 때문에 성능이 약간 향상됩니다. 또한 데이터베이스에 여러 스키마에서 이름이 동일한 프로시저가 있는 경우 잘못된 프로시저를 실행하는 문제가 방지됩니다.  
+     사용자 정의 프로시저를 실행할 때 프로시저 이름을 스키마 이름으로 한정하는 것이 좋습니다. 이렇게 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 스키마를 검색할 필요가 없기 때문에 성능이 약간 향상됩니다. 또한 데이터베이스에 여러 스키마에서 이름이 동일한 프로시저가 있는 경우 잘못된 프로시저를 실행하는 문제가 방지됩니다.  
   
      다음 예에서는 권장되는 사용자 정의 프로시저 실행 방법을 보여 줍니다. 프로시저는 하나의 입력 매개 변수를 받아들입니다. 입력 및 출력 매개 변수를 지정하는 방법은 [매개 변수 지정](../../relational-databases/stored-procedures/specify-parameters.md)을 참조하세요.  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 38
     GO  
     ```  
   
-     정규화되지 않은 사용자 정의 프로시저를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다음 순서로 프로시저를 검색합니다.  
+     정규화되지 않은 사용자 정의 프로시저를 지정하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 다음 순서로 프로시저를 검색합니다.  
   
     1.  현재 데이터베이스의 **sys** 스키마  
   
@@ -99,11 +103,11 @@ caps.handback.revision: 38
   
 -   저장 프로시저 자동 실행  
   
-     자동 실행되도록 표시된 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때마다 실행되며 **master** 데이터베이스는 이 시작 프로세스 중에 복구됩니다. 자동 실행되도록 프로시저를 설정하면 데이터베이스 유지 관리 작업을 수행하거나 프로시저가 백그라운드 프로세스로 계속 실행되도록 하는 데 유용할 수 있습니다. 또는 프로시저가 전역 임시 테이블을 만드는 작업처럼 **tempdb**에서 시스템 또는 유지 관리 태스크를 수행하도록 하는 것이 자동 실행을 사용하는 또 다른 방법입니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 중에 **tempdb**가 다시 만들어질 때 이러한 임시 테이블이 항상 존재합니다.  
+     자동 실행되도록 표시된 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작될 때마다 실행되며 **master** 데이터베이스는 이 시작 프로세스 중에 복구됩니다. 자동 실행되도록 프로시저를 설정하면 데이터베이스 유지 관리 작업을 수행하거나 프로시저가 백그라운드 프로세스로 계속 실행되도록 하는 데 유용할 수 있습니다. 또는 프로시저가 전역 임시 테이블을 만드는 작업처럼 **tempdb**에서 시스템 또는 유지 관리 태스크를 수행하도록 하는 것이 자동 실행을 사용하는 또 다른 방법입니다. 이렇게 하면 **시작 중에** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 만들어질 때 이러한 임시 테이블이 항상 존재합니다.  
   
      자동 실행되는 프로시저는 **sysadmin** 고정 서버 역할의 멤버와 같은 권한을 사용하여 작동합니다. 프로시저에서 생성되는 오류 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 기록됩니다.  
   
-     시작 프로시저의 개수에는 제한이 없지만 각 시작 프로시저는 실행하는 동안 하나의 작업자 스레드를 소비합니다. 따라서 시작할 때 여러 프로시저를 실행해야 하지만 동시에 실행할 필요가 없다면 한 프로시저만 시작 프로시저로 지정하고 그 프로시저에서 다른 프로시저를 호출하도록 만듭니다.  이렇게 하면 하나의 작업자 스레드만 사용됩니다.  
+     시작 프로시저의 개수에는 제한이 없지만 각 시작 프로시저는 실행하는 동안 하나의 작업자 스레드를 소비합니다. 따라서 시작할 때 여러 프로시저를 실행해야 하지만 동시에 실행할 필요가 없다면 한 프로시저만 시작 프로시저로 지정하고 그 프로시저에서 다른 프로시저를 호출하도록 만듭니다. 이렇게 하면 하나의 작업자 스레드만 사용됩니다.  
   
     > [!TIP]  
     >  자동 실행되는 프로시저의 결과 집합은 반환하지 마세요. 프로시저는 응용 프로그램이나 사용자가 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 실행되므로 결과 집합을 반환할 대상이 없습니다.  
@@ -112,7 +116,7 @@ caps.handback.revision: 38
   
      시스템 관리자(**sa**)만 프로시저가 자동 실행되도록 표시할 수 있습니다. 또한 프로시저는 **master** 데이터베이스에 있고 **sa**에 의해 소유되어야 하며 입력 또는 출력 매개 변수를 가질 수 없습니다.  
   
-     [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)을 사용하여 다음을 수행할 수 있습니다.  
+     [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 다음을 수행할 수 있습니다.  
   
     1.  기존 프로시저를 시작 프로시저로 지정합니다.  
   
@@ -122,11 +126,11 @@ caps.handback.revision: 38
  자세한 내용은 [EXECUTE AS&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) 및 [EXECUTE AS 절&#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)을 참조하세요.  
   
 ####  <a name="Permissions"></a> 사용 권한  
- 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)의 "사용 권한" 섹션을 참조하세요.  
+ 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 저장 프로시저를 실행하려면  
+#### <a name="to-execute-a-stored-procedure"></a>저장 프로시저를 실행하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장한 다음 **데이터베이스**를 확장합니다.  
   
@@ -155,7 +159,7 @@ caps.handback.revision: 38
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 저장 프로시저를 실행하려면  
+#### <a name="to-execute-a-stored-procedure"></a>저장 프로시저를 실행하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -170,13 +174,13 @@ EXEC dbo.uspGetEmployeeManagers 6;
 GO  
 ```  
   
-#### 자동 실행되도록 프로시저를 설정하거나 해제하려면  
+#### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>자동 실행되도록 프로시저를 설정하거나 해제하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)을 사용하여 자동 실행되도록 프로시저를 설정하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 자동 실행되도록 프로시저를 설정하는 방법을 보여 줍니다.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -186,13 +190,13 @@ EXEC sp_procoption @ProcName = '<procedure name>'
     , @OptionValue = 'on';  
 ```  
   
-#### 프로시저가 자동 실행되는 것을 중지하려면  
+#### <a name="to-stop-a-procedure-from-executing-automatically"></a>프로시저가 자동 실행되는 것을 중지하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)을 사용하여 프로시저가 자동 실행되는 것을 중지하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_procoption](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md) 을 사용하여 프로시저가 자동 실행되는 것을 중지하는 방법을 보여 줍니다.  
   
 ```tsql  
 USE AdventureWorks2012;  
@@ -203,7 +207,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [매개 변수 지정](../../relational-databases/stored-procedures/specify-parameters.md)   
  [scan for startup procs 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)   
  [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

@@ -1,26 +1,30 @@
 ---
-title: "SQL Server, Workload Group Stats 개체 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/04/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Workload Group Stats 개체"
-  - "SQLServer: Workload Group Stats"
+title: "SQL Server, Workload Group Stats 개체 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/04/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Workload Group Stats object
+- 'SQLServer: Workload Group Stats'
 ms.assetid: ca20e4f6-50ec-4456-900d-87d280fde2b3
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668f0f7cf7b38fb18144e58cccbc7e4902a39f75
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Workload Group Stats 개체
+# <a name="sql-server-workload-group-stats-object"></a>SQL Server, Workload Group Stats 개체
   SQLServer:Workload Group Stats 개체는 리소스 관리자 작업 그룹 통계에 대한 정보를 보고하는 성능 카운터를 포함합니다.  
   
  각 활성 작업 그룹은 리소스 관리자 작업 그룹 이름과 동일한 인스턴스 이름으로 SQLServer:Workload Group Stats 성능 개체의 인스턴스를 만듭니다. 다음 표에서는 이 인스턴스에서 지원하는 카운터에 대해 설명합니다.  
@@ -45,9 +49,10 @@ caps.handback.revision: 14
 |**Requests completed/sec**|현재 작업 그룹에서 완료된 요청 수입니다. 이 숫자는 누적됩니다.|  
 |**Suboptimal plans/sec**|현재 작업 그룹에서 초당 생성되는 만족스럽지 못한 계획의 수입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQLServer, Resource Pool Stats 개체](../../relational-databases/performance-monitor/sql-server-resource-pool-stats-object.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
   
   
+

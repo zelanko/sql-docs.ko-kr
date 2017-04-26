@@ -1,36 +1,40 @@
 ---
-title: "유니코드 압축 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "유니코드 데이터 압축"
-  - "압축 [SQL Server], 유니코드 데이터"
+title: "유니코드 압축 구현 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Unicode data compression
+- compression [SQL Server], Unicode data
 ms.assetid: 44e69e60-9b35-43fe-b9c7-8cf34eaea62a
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27117e609effaa3ded124a33d742ac9a0b374d6f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 유니코드 압축 구현
+# <a name="unicode-compression-implementation"></a>유니코드 압축 구현
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SCSU(Standard Compression Scheme for Unicode) 알고리즘 구현을 사용하여 행 또는 페이지 압축 개체에 저장된 유니코드 값을 압축합니다. 이러한 압축 개체의 경우 **nchar(n)** 및 **nvarchar(n)** 열에 유니코드 압축이 자동으로 설정됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 로캘에 관계없이 유니코드 데이터가 2바이트로 저장됩니다. 이 방식을 UCS-2 인코딩이라고 합니다. 일부 로캘의 경우 SQL Server에서 SCSU 압축을 구현하면 저장 공간을 최대 50% 절약할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 SCSU(Standard Compression Scheme for Unicode) 알고리즘 구현을 사용하여 행 또는 페이지 압축 개체에 저장된 유니코드 값을 압축합니다. 이러한 압축 개체의 경우 **nchar(n)** 및 **nvarchar(n)** 열에 유니코드 압축이 자동으로 설정됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 로캘에 관계없이 유니코드 데이터가 2바이트로 저장됩니다. 이 방식을 UCS-2 인코딩이라고 합니다. 일부 로캘의 경우 SQL Server에서 SCSU 압축을 구현하면 저장 공간을 최대 50% 절약할 수 있습니다.  
   
-## 지원되는 데이터 형식  
+## <a name="supported-data-types"></a>지원되는 데이터 형식  
  유니코드 압축은 고정 길이의 **nchar(n)** 및 **nvarchar(n)** 데이터 형식을 지원합니다. 행 외부 또는 **nvarchar(max)** 열에 저장된 데이터 값은 압축되지 않습니다.  
   
 > [!NOTE]  
 >  **nvarchar(max)** 데이터는 행에 저장되어 있더라도 유니코드 압축이 지원되지 않습니다. 하지만 이 데이터 형식에서 페이지 압축을 활용할 수 있습니다.  
   
-## 이전 버전의 SQL Server에서 업그레이드  
+## <a name="upgrading-from-earlier-versions-of-sql-server"></a>이전 버전의 SQL Server에서 업그레이드  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전으로 업그레이드되는 경우 유니코드 압축과 관련된 변경 내용은 모든 데이터베이스 개체에 적용되지 않습니다. 이때 해당 개체의 압축 여부는 관계가 없습니다. 데이터베이스가 업그레이드되면 개체는 다음과 같이 영향을 받습니다.  
   
 -   압축되지 않은 개체의 경우 변경 내용이 적용되지 않고 이전과 같은 방식으로 계속 동작합니다.  
@@ -42,7 +46,7 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  유니코드 압축의 장점을 모두 활용하려면 페이지 또는 행 압축을 사용하여 개체를 다시 작성해야 합니다.  
   
-## 유니코드 압축이 데이터 저장소에 주는 영향  
+## <a name="how-unicode-compression-affects-data-storage"></a>유니코드 압축이 데이터 저장소에 주는 영향  
  인덱스를 만들거나 다시 작성하는 경우 또는 행/페이지 압축을 사용하여 압축된 테이블에서 값을 변경하는 경우 영향을 받는 인덱스나 값은 압축된 크기가 현재 크기보다 작은 경우에만 압축 형식으로 저장됩니다. 이렇게 되면 유니코드 압축 때문에 테이블의 행 또는 인덱스의 크기가 증가하지 않습니다.  
   
  압축을 통해 절약할 수 있는 저장 공간은 압축하고 있는 데이터의 특성과 데이터 로캘에 따라 다릅니다. 다음 표에서는 로캘별로 절약할 수 있는 저장 공간을 보여 줍니다.  
@@ -56,7 +60,7 @@ caps.handback.revision: 7
 |베트남어|39%|  
 |일본어|15%|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 압축](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)   
  [페이지 압축 구현](../../relational-databases/data-compression/page-compression-implementation.md)   

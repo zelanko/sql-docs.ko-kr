@@ -1,28 +1,32 @@
 ---
-title: "스냅숏으로 구독 초기화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스냅숏 [SQL Server 복제], 구독 초기화"
-  - "구독 초기화 [SQL Server 복제], 스냅숏"
+title: "스냅숏으로 구독 초기화 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server replication], initializing subscriptions
+- initializing subscriptions [SQL Server replication], snapshots
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85768c39b282ccfda1df1e68d42a1f6b3985bc46
+ms.lasthandoff: 04/11/2017
+
 ---
-# 스냅숏으로 구독 초기화
+# <a name="initialize-a-subscription-with-a-snapshot"></a>스냅숏으로 구독 초기화
   게시가 생성된 후 일반적으로 초기 스냅숏이 생성되어 스냅숏 폴더로 복사됩니다. 이 작업은 새 게시 마법사에서 만든 병합 게시에 대해 기본적으로 수행됩니다. 스냅숏은 그런 다음 구독의 초기 동기화 중 배포 에이전트(트랜잭션 및 스냅숏 게시의 경우) 또는 병합 에이전트(병합 게시의 경우)에 의해 구독자에 적용됩니다. 스냅숏 프로세스는 게시 유형에 따라 달라집니다.  
   
--   스냅숏이 스냅숏 게시, 트랜잭션 게시 또는 매개 변수가 있는 필터를 사용하지 않는 병합 게시용인 경우 스냅숏에는 제약 조건, 확장 속성, 인덱스, 트리거 및 복제에 필요한 시스템 테이블뿐만 아니라 스키마 및 데이터가 bcp(대량 복사 프로그램) 파일로 포함됩니다. 작성 하 고 스냅숏을 적용 하는 방법에 대 한 자세한 내용은 참조 [의 스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-snapshot.md)합니다.  
+-   스냅숏이 스냅숏 게시, 트랜잭션 게시 또는 매개 변수가 있는 필터를 사용하지 않는 병합 게시용인 경우 스냅숏에는 제약 조건, 확장 속성, 인덱스, 트리거 및 복제에 필요한 시스템 테이블뿐만 아니라 스키마 및 데이터가 bcp(대량 복사 프로그램) 파일로 포함됩니다. 스냅숏을 만들고 적용하는 방법은 [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-snapshot.md)을 참조하세요.  
   
 -   스냅숏이 매개 변수가 있는 필터를 사용하는 병합 게시용인 경우 2단계 프로세스를 통해 스냅숏이 생성됩니다. 먼저 게시된 개체의 데이터를 제외하고 복제 스크립트와 스키마를 포함하는 스키마 스냅숏이 생성됩니다. 그런 후 스키마 스냅숏에서 복사된 스크립트 및 스키마를 포함하는 스냅숏과 구독의 파티션에 속해 있는 데이터를 사용하여 구독이 초기화됩니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
   
@@ -35,18 +39,18 @@ caps.handback.revision: 32
   
  특정 시점에서 중단된 스냅숏 전송은 자동으로 재개되며 전송이 이미 완료된 파일은 다시 보내지 않습니다. 스냅숏 에이전트의 배달 단위는 각 게시 아티클에 대한 bcp 파일이므로 부분적으로 배달된 파일은 완전히 다시 배달되어야 합니다. 그러나 스냅숏 배달을 재개하면 전송되는 데이터 양이 크게 줄어들 수 있으므로 연결이 불안한 경우에도 스냅숏이 늦지 않게 배달될 수 있습니다.  
   
-## 스냅숏 옵션  
+## <a name="snapshot-options"></a>스냅숏 옵션  
  스냅숏으로 구독을 초기화할 때 사용할 수 있는 옵션에는 여러 가지가 있습니다. 다음 작업을 수행할 수 있습니다.  
   
 -   기본 스냅숏 폴더 위치 대신 또는 기본 스냅숏 폴더 위치에 추가로 대체 스냅숏 폴더 위치를 지정합니다. 자세한 내용은 [Alternate Snapshot Folder Locations](../../relational-databases/replication/alternate-snapshot-folder-locations.md)을 참조하세요.  
   
 -   이동식 미디어에 저장하거나 느린 네트워크를 통해 전송하기 위해 스냅숏을 압축합니다. 자세한 내용은 [Compressed Snapshots](../../relational-databases/replication/compressed-snapshots.md)을 참조하세요.  
   
--   스냅숏 적용 전후에 Transact-SQL 스크립트를 실행합니다. 자세한 내용은 참조 [실행 스크립트 전과 후의 스냅숏 적용](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)합니다.  
+-   스냅숏 적용 전후에 Transact-SQL 스크립트를 실행합니다. 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](../../relational-databases/replication/execute-scripts-before-and-after-the-snapshot-is-applied.md)을 참조하세요.  
   
--   FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송합니다. 자세한 내용은 참조 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/transfer-snapshots-through-ftp.md)합니다.  
+-   FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/transfer-snapshots-through-ftp.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)   
  [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   

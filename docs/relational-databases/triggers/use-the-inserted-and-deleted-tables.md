@@ -1,30 +1,34 @@
 ---
-title: "inserted 및 deleted 테이블 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "inserted 테이블"
-  - "UPDATE 문 [SQL Server], DML 트리거"
-  - "DELETE 문 [SQL Server], DML 트리거"
-  - "INSTEAD OF 트리거"
-  - "deleted 테이블"
-  - "INSERT 문 [SQL Server], DML 트리거"
-  - "DML 트리거, 삭제 또는 삽입된 테이블"
+title: "inserted 및 deleted 테이블 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- inserted tables
+- UPDATE statement [SQL Server], DML triggers
+- DELETE statement [SQL Server], DML triggers
+- INSTEAD OF triggers
+- deleted tables
+- INSERT statement [SQL Server], DML triggers
+- DML triggers, deleted or inserted tables
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7b04d0977ceaa1bde5eddf5246be56822517e84
+ms.lasthandoff: 04/11/2017
+
 ---
-# inserted 및 deleted 테이블 사용
+# <a name="use-the-inserted-and-deleted-tables"></a>inserted 및 deleted 테이블 사용
   DML 트리거 문은 두 개의 특수 테이블(inserted 및 deleted 테이블)을 사용합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 테이블을 자동으로 만들고 관리합니다. 메모리에 상주하는 이러한 임시 테이블을 사용하여 특정 데이터의 수정 결과를 테스트하고 DML 트리거 동작에 대한 조건을 설정할 수 있습니다. 이 테이블에서 데이터를 직접 수정하거나 CREATE INDEX와 같은 DDL(데이터 정의 언어) 작업을 수행할 수 없습니다.  
   
  DML 트리거에서 inserted 및 deleted 테이블은 주로 다음 작업을 수행하는 데 사용됩니다.  
@@ -46,9 +50,9 @@ caps.handback.revision: 35
  트리거 조건을 설정할 때는 트리거를 실행한 동작에 적합한 inserted 및 deleted 테이블을 사용합니다. INSERT를 테스트할 때 deleted 테이블을 참조하거나 DELETE를 테스트할 때 inserted 테이블을 참조해도 오류가 발생하지는 않지만 이러한 경우 트리거 테스트 테이블에는 아무 행도 들어 있지 않습니다.  
   
 > [!NOTE]  
->  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문에 기반한 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다.  
+>  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문을 기반으로 하는 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext** 또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 저장하는 경우 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext**또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 저장하는 경우 **varchar(max)**, **nvarchar(max)**및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
  **비즈니스 규칙을 적용하기 위해 트리거의 inserted 테이블을 사용하는 예**  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 35
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../relational-databases/triggers/codesnippet/tsql/use-the-inserted-and-del_1.sql)]  
   
-## INSTEAD OF 트리거에서 inserted 및 deleted 테이블 사용  
+## <a name="using-the-inserted-and-deleted-tables-in-instead-of-triggers"></a>INSTEAD OF 트리거에서 inserted 및 deleted 테이블 사용  
  테이블에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블은 AFTER 트리거로 전달되는inserted 및 deleted 테이블과 같은 규칙을 따릅니다. inserted 및 deleted 테이블의 형식은 INSTEAD OF 트리거가 정의된 테이블의 형식과 같습니다. inserted 및 deleted 테이블의 각 열은 기본 테이블의 열로 직접 매핑됩니다.  
   
  INSTEAD OF 트리거가 있는 테이블을 참조하는 INSERT 또는 UPDATE 문이 열 값을 제공해야 하는 경우와 관련된 다음 규칙은 테이블에 INSTEAD OF 트리거가 없는 경우와 동일합니다.  
@@ -71,7 +75,7 @@ caps.handback.revision: 35
   
 -   계산 열, ID 열 또는 **timestamp** 열을 제외한 모든 열에서 Null을 허용하는 열 또는 DEFAULT 정의가 있는 NOT NULL 열의 경우 값이 선택적입니다.  
   
- INSERT, UPDATE 또는 DELETE 문에서 INSTEAD OF 트리거가 있는 뷰를 참조할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 테이블에 대해 직접 동작을 수행하는 대신 트리거를 호출합니다. 뷰에 대해 작성된 inserted 및 deleted 테이블의 정보 형식이 기본 테이블에 있는 데이터 형식과 다른 경우에도 트리거는 inserted 및 deleted 테이블에 있는 정보를 사용하여 기본 테이블에서 요청된 동작을 구현하는 데 필요한 문을 작성해야 합니다.  
+ INSERT, UPDATE 또는 DELETE 문에서 INSTEAD OF 트리거가 있는 뷰를 참조할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 대해 직접 동작을 수행하는 대신 트리거를 호출합니다. 뷰에 대해 작성된 inserted 및 deleted 테이블의 정보 형식이 기본 테이블에 있는 데이터 형식과 다른 경우에도 트리거는 inserted 및 deleted 테이블에 있는 정보를 사용하여 기본 테이블에서 요청된 동작을 구현하는 데 필요한 문을 작성해야 합니다.  
   
  뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블의 형식은 뷰에 대해 정의된 SELECT 문의 선택 목록과 일치합니다. 예를 들어  
   
@@ -86,7 +90,7 @@ JOIN Person.Person AS p
 ON e.BusinessEntityID = p.BusinessEntityID;  
 ```  
   
- 이 뷰의 결과 집합에는 **int** 열 하나와 **nvarchar** 열 두 개가 있습니다. 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블에는 또한 `BusinessEntityID`라는 **int** 열, `LName`이라는 **nvarchar** 열 및 `FName`이라는 **nvarchar** 열이 있습니다.  
+ 이 뷰의 결과 집합에는 **int** 열 하나와 **nvarchar** 열 두 개가 있습니다. 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블에는 또한 **라는** int `BusinessEntityID`열, **이라는** nvarchar `LName`열 및 **이라는** nvarchar `FName`열이 있습니다.  
   
  뷰의 선택 목록에는 단일 기본 테이블 열에 직접 매핑되지 않는 식이 포함될 수도 있습니다. 상수 또는 함수 호출과 같은 일부 뷰 식은 열을 참조하지 않으므로 무시될 수 있습니다. 복합 식은 여러 개의 열을 참조할 수 있지만 inserted 및 deleted 테이블에는 삽입된 각 행에 대해 하나의 값만 있습니다. 뷰의 단순 식에서 복합 식이 있는 계산 열을 참조하는 경우에도 마찬가지입니다. 뷰의 INSTEAD OF 트리거는 이러한 유형의 식을 처리해야 합니다.  
   

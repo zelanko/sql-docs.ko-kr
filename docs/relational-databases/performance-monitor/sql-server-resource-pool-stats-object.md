@@ -1,25 +1,29 @@
 ---
-title: "SQLServer, Resource Pool Stats 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Resource Pool Stats 개체"
-  - "SQLServer: Resource Pool Stats 개체"
+title: "SQL Server, Resource Pool Stats 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reosurce Pool Stats object
+- 'SQLServer: Resource Pool Stats object'
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccd649e92cd416ff086758005f3b5df728dfe1d
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQLServer, Resource Pool Stats 개체
+# <a name="sql-server-resource-pool-stats-object"></a>SQLServer, Resource Pool Stats 개체
   SQLServer:Resource Pool Stats 개체는 리소스 관리자 리소스 풀 통계에 대한 정보를 보고하는 성능 카운터를 포함합니다.  
   
  각 활성 리소스 풀은 리소스 관리자 리소스 풀 이름과 동일한 인스턴스 이름으로 SQLServer:Resource Pool Stats 성능 개체의 인스턴스를 생성합니다. 다음 표에서는 이 인스턴스에서 지원하는 카운터에 대해 설명합니다.  
@@ -58,7 +62,7 @@ caps.handback.revision: 14
 |**Used memory (KB)**|리소스 풀에 사용되는 최대 메모리 양((KB)입니다.|  
 
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, Workload Group Stats 개체](../../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md)   
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  

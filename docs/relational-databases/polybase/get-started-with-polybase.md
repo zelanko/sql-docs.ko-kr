@@ -1,32 +1,36 @@
 ---
-title: "PolyBase 시작하기 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "10/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-polybase"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "PolyBase"
-  - "PolyBase, 시작"
-  - "Hadoop 가져오기"
-  - "Hadoop 내보내기"
-  - "Azure BLOB 저장소 가져오기"
-  - "Azure BLOB 저장소 내보내기"
-  - "Hadoop 가져오기, PolyBase 시작"
-  - "Hadoop 내보내기, PolyBase 시작"
+title: "PolyBase 시작하기 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 10/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-polybase
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- PolyBase
+- PolyBase, getting started
+- Hadoop import
+- Hadoop export
+- Azure blob storage import
+- Azure blob storage export
+- Hadoop import, PolyBase getting started
+- Hadoop export, Polybase getting started
 ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.lasthandoff: 04/11/2017
+
 ---
-# PolyBase 시작하기
+# <a name="get-started-with-polybase"></a>PolyBase 시작하기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 PolyBase 실행에 대한 기본 사항을 설명합니다. 자세한 내용은 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.  
@@ -42,7 +46,7 @@ caps.handback.revision: 73
 -   PolyBase 개체를 사용하는 쿼리 예제  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
- [SQL Server(64비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 인스턴스입니다.  
+ [SQL Server(64비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)인스턴스입니다.  
   
 -   Microsoft .NET Framework 4.5  
   
@@ -57,14 +61,16 @@ caps.handback.revision: 73
  외부 데이터 원본은 다음 개체 중 하나입니다.  
   
 -   Hadoop 클러스터. 지원되는 버전은 [PolyBase 구성](#supported)을 참조하세요.  
-  
+
 -   Azure Blob Storage 
+
+-   Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce가 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 오류 메시지와 함께 쿼리가 실패합니다. 
 
 > [!NOTE]
 > HDInsight 클러스터는 영구 저장소에 대한 파일 시스템으로 Azure Blob Storage를 사용합니다. PolyBase를 사용하여 HDInsight 클러스터에서 관리하는 파일을 쿼리할 수 있습니다. 이를 위해 HDInsight 클러스터에 대한 저장소로 구성된 blob을 참조할 수 있도록 외부 데이터 원본을 만드세요. 
   
 ## <a name="install-polybase"></a>PolyBase 설치  
- PolyBase는 SQL Server를 설치할 때 함께 설치됩니다. 자세한 내용은 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.  
+ PolyBase를 설치하지 않은 경우 [PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md)을 참조하세요.  
   
 ### <a name="how-to-confirm-installation"></a>설치 확인 방법  
  설치가 끝난 후 PolyBase가 제대로 설치되었는지 확인하려면 다음 명령을 실행합니다. PolyBase가 설치된 경우 1을 반환합니다. 그렇지 않으면 0이 반환됩니다.  
@@ -73,7 +79,7 @@ caps.handback.revision: 73
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="a-namesupporteda-configure-polybase"></a><a name="supported"></a> PolyBase 구성  
+##  <a name="supported"></a> Configure PolyBase  
  설치한 후 SQL Server를 구성해야 Azure Blob 저장소 또는 Hadoop 버전을 사용할 수 있습니다. PolyBase는 두 개의 Hadoop 공급자인 Hortonwork의 Data Platform(HDP) 및 Cloudera의 CDH를 지원합니다. Windows 또는 Linux 컴퓨터에서 Hortonwork을 실행할 수 있고 그것도 구성의 일부입니다.  지원되는 외부 데이터 원본은 다음과 같습니다.  
   
 -   Linux/Windows Server에서 Hortonworks HDP 1.3  
@@ -84,13 +90,16 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Linux에서 Cloudera CDH 4.3  
   
--   Linux에서 Cloudera CDH 5.1~5.5, 5.9  
+-   Linux에서 Cloudera CDH 5.1 – 5.5, 5.9, 5.10  
   
 -   Azure BLOB 저장소  
   
+>  [!NOTE]
+> Azure Data Lake Store 연결은 Azure SQL Data Warehouse에서만 지원됩니다.
+  
 ### <a name="external-data-source-configuration"></a>외부 데이터 원본 구성  
   
-1.  [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity'를 실행하고 적절한 값을 설정합니다.  값을 찾으려면 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
+1.  [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity'를 실행하고 적절한 값을 설정합니다. 기본적으로 hadoop 연결은 7로 설정됩니다. 값을 찾으려면 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
   
     ```tsql  
     -- Values map to various external data sources.  
@@ -108,7 +117,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
     -   SQL Server PolyBase 엔진  
   
- ![stop and start PolyBase services in services.msc](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
+ ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
 ### <a name="pushdown-configuration"></a>푸시다운 구성  
  쿼리 성능을 향상시키려면 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
@@ -125,6 +134,9 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 3.  SQL Server 컴퓨터의 **yarn.site.xml 파일** 에서 **yarn.application.classpath** 속성을 찾은 다음 Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
   
+4. 모든 CDH 5.X 버전에서 mapreduce.application.classpath 구성 매개 변수를 yarn.site.xml 파일의 끝이나 mapred-site.xml 파일에 추가해야 합니다. HortonWorks는 yarn.application.classpath 구성 내에 이러한 구성을 포함하고 있습니다. 예제는 [PolyBase 구성](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.
+
+ 
 ## <a name="scale-out-polybase"></a>PolyBase 확장  
  PolyBase 그룹 기능을 사용하면 SQL Server 인스턴스 클러스터를 만들어 외부 데이터 원본에서 쿼리 성능을 향상하기 위해 스케일 아웃 방식으로 대규모 데이터를 처리할 수 있습니다.  
   
@@ -132,7 +144,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 2.  헤드 노드로 하나의 SQL Server를 선택합니다.  
   
-3.  [sp_polybase_join_group](../Topic/sp_polybase_join_group.md)을 실행하여 다른 인스턴스를 계산 노드로 추가합니다.  
+3.  [sp_polybase_join_group](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-join-group.md)을 실행하여 다른 인스턴스를 계산 노드로 추가합니다.  
   
     ```  
     -- Enter head node details:   
@@ -337,22 +349,23 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ## <a name="managing-polybase-objects-in-ssms"></a>SSMS에서 PolyBase 개체 관리  
  SSMS에서 외부 테이블은 별도 폴더인 **외부 테이블**에 표시됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스**의 하위 폴더에 있습니다.  
   
- ![PolyBase objects in SSMS](../../relational-databases/polybase/media/polybase-management.png "PolyBase objects in SSMS")  
+ ![SSMS에서 PolyBase 개체](../../relational-databases/polybase/media/polybase-management.png "PolyBase objects in SSMS")  
   
 ## <a name="troubleshooting"></a>문제 해결  
  DMV를 사용하여 성능 및 쿼리 문제를 해결합니다. 자세한 내용은 [PolyBase 문제 해결](../../relational-databases/polybase/polybase-troubleshooting.md)을 참조하세요.  
   
- SQL Server 2016 RC1에서 RC2 또는 RC3으로 업그레이드한 후 쿼리가 실패할 수 있습니다. 자세한 내용 및 해결 방법은 [SQL Server 2016 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md)를 참조하고 "PolyBase"를 검색하세요.  
+ SQL Server 2016 RC1에서 RC2 또는 RC3으로 업그레이드한 후 쿼리가 실패할 수 있습니다. 자세한 내용 및 해결 방법은 [SQL Server 2016 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md) 를 참조하고 "PolyBase"를 검색하세요.  
   
 ## <a name="next-steps"></a>다음 단계  
- 확장 기능을 이해하려면 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  PolyBase를 모니터링하려면 [PolyBase 문제 해결](../../relational-databases/polybase/polybase-troubleshooting.md)을 참조하세요. PolyBase 성능 문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](../Topic/PolyBase%20troubleshooting%20with%20dynamic%20management%20views.md)을(를) 참조하십시오.  
+ 확장 기능을 이해하려면 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  PolyBase를 모니터링하려면 [PolyBase 문제 해결](../../relational-databases/polybase/polybase-troubleshooting.md)을 참조하세요. PolyBase 성능 문제를 해결하려면 [PolyBase troubleshooting with dynamic management views](http://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)을(를) 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)   
  [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)   
- [PolyBase 저장 프로시저](../Topic/PolyBase%20stored%20procedures.md)   
+ [PolyBase 저장 프로시저](http://msdn.microsoft.com/library/a522b303-bd1b-410b-92d1-29c950a15ede)   
  [CREATE EXTERNAL DATA SOURCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)  
   
   
+

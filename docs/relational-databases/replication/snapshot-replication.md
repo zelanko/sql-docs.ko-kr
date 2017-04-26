@@ -1,25 +1,29 @@
 ---
-title: "스냅숏 복제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스냅숏 복제 [SQL Server], 스냅숏 복제 정보"
-  - "스냅숏 복제 [SQL Server]"
+title: "스냅숏 복제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshot replication [SQL Server], about snapshot replication
+- snapshot replication [SQL Server]
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
+ms.lasthandoff: 04/11/2017
+
 ---
-# 스냅숏 복제
+# <a name="snapshot-replication"></a>스냅숏 복제
   스냅숏 복제는 특정 시간에 나타나는 그대로 데이터를 배포하고 데이터 업데이트를 모니터링하지 않습니다. 동기화가 일어나면 전체 스냅숏이 생성되어 구독자에게 전송됩니다.  
   
 > [!NOTE]  
@@ -56,10 +60,10 @@ caps.handback.revision: 34
   
  다음 그림에서는 스냅숏 복제의 주요 구성 요소를 보여 줍니다.  
   
- ![스냅숏 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "스냅숏 복제 구성 요소 및 데이터 흐름")  
+ ![스냅숏 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "Snapshot replication components and data flow")  
   
 ##  <a name="SnapshotAgent"></a> 스냅숏 에이전트  
- 병합 복제의 경우 스냅숏 에이전트가 실행될 때마다 스냅숏이 생성됩니다. 트랜잭션 복제에 대 한 스냅숏 생성 게시 속성의 설정에 따라 **immediate_sync**합니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅숏 에이전트가 실행될 때마다 스냅숏이 생성되고 언제든지 스냅숏을 구독자에 적용할 수 있습니다. 속성을 FALSE로 설정 된 경우 (사용 시 기본 **sp_addpublication**), 스냅숏 에이전트가 마지막으로 실행 합니다; 새 구독 추가 된 경우에 스냅숏이 생성 됩니다 동기화 할 수를 완료 하려면 스냅숏 에이전트에 대 한 구독자를 기다려야 합니다.  
+ 병합 복제의 경우 스냅숏 에이전트가 실행될 때마다 스냅숏이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync**의 설정에 따라 스냅숏 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅숏 에이전트가 실행될 때마다 스냅숏이 생성되고 언제든지 스냅숏을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication**사용 시 기본 설정)로 설정하면 스냅숏 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅숏이 생성됩니다. 구독자는 동기화하기 위해 스냅숏 에이전트가 완료될 때까지 기다려야 합니다.  
   
  스냅숏 에이전트는 다음 단계를 수행하세요.  
   
@@ -75,7 +79,7 @@ caps.handback.revision: 34
   
 3.  게시자에서 게시된 테이블의 데이터를 복사하고 이 데이터를 스냅숏 폴더에 기록합니다. 스냅숏은 BCP(대량 복사 프로그램) 파일의 집합으로 생성됩니다.  
   
-4.  스냅숏 및 트랜잭션 게시에 대 한 스냅숏 에이전트 행을 추가 하는 **MSrepl_commands** 및 **MSrepl_transactions** 배포 데이터베이스의 테이블입니다. 항목에는 **MSrepl_commands** 테이블은.sch 및.bcp 파일, 다른 스냅숏 파일 및 모든 사전 및 포스트 스냅숏 스크립트에 대 한 참조의 위치를 나타내는 명령입니다. 항목에는 **MSrepl_transactions** 테이블은 구독자 동기화와 관련 된 명령입니다.  
+4.  스냅숏 및 트랜잭션 게시의 경우 스냅숏 에이전트는 행을 배포 데이터베이스의 **MSrepl_commands** 및 **MSrepl_transactions** 테이블에 추가합니다. **MSrepl_commands** 테이블의 항목은 .sch 및 .bcp 파일, 다른 스냅숏 파일, 프리 스냅숏 및 포스트 스냅숏 스크립트에 대한 참조 위치를 나타내는 명령입니다. **MSrepl_transactions** 테이블의 항목은 구독자 동기화와 관련된 명령입니다.  
   
      병합 게시의 경우 스냅숏 에이전트는 추가 단계를 수행합니다.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 34
   
 1.  배포자에 연결합니다.  
   
-2.  검사 하는 **MSrepl_commands** 및 **MSrepl_transactions** 배포자의 배포 데이터베이스의 테이블입니다. 에이전트는 첫 번째 테이블에서 스냅숏 파일의 위치를 읽고 두 테이블 모두에서 구독자 동기화 명령을 읽습니다.  
+2.  배포자의 배포 데이터베이스에서 **MSrepl_commands** 및 **MSrepl_transactions** 테이블을 검사합니다. 에이전트는 첫 번째 테이블에서 스냅숏 파일의 위치를 읽고 두 테이블 모두에서 구독자 동기화 명령을 읽습니다.  
   
 3.  스키마 및 명령을 구독 데이터베이스로 적용합니다.  
   

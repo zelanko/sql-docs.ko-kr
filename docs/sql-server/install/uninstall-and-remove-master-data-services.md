@@ -1,22 +1,26 @@
 ---
-title: "Master Data Services 제거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Master Data Services 제거 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: efc2431c-588b-42e7-b23b-c875145a33f6
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9d936f9a9726a5d7dd5a214cdc813a8634119600
+ms.lasthandoff: 04/11/2017
+
 ---
-# Master Data Services 제거
+# <a name="uninstall-and-remove-master-data-services"></a>Master Data Services 제거
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 기능을 제거하려면 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)의 단계를 따르고 **기능 선택** 페이지에서 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 제거할 기능으로 지정합니다. 제거 프로세스는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 폴더와 파일을 제거하고 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 로컬 컴퓨터에서 제거합니다.  
   
  데이터 손실을 방지하고 시스템의 다른 컴퓨터에 영향을 주지 않기 위해 일부 항목은 제거 프로세스에서 제거 또는 변경되지 않습니다. 다음 표를 검토하여 항목을 남겨둘지, 아니면 제거할지 여부를 결정합니다.  
@@ -31,7 +35,7 @@ caps.handback.revision: 10
 |**MDS_ServiceAccounts** 그룹|제거 프로세스가 완료된 후 **MDS_ServiceAccounts** Windows 그룹 및 이 그룹에 추가된 모든 서비스 계정은 남아 있습니다. 이 그룹과 계정이 더 이상 필요하지 않은 경우 제거할 수 있습니다.|  
 |레지스트리|제거 프로세스에서는 Windows 레지스트리의 모든 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 레지스트리 키를 제거합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

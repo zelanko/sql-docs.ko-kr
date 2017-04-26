@@ -1,27 +1,31 @@
 ---
-title: "게시자 정보, 게시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.monitor.publisherinfo.publications.f1"
+title: "게시자 정보, 게시 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.monitor.publisherinfo.publications.f1
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58631a593562e6fc04ddf411128111bed5f847c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 게시자 정보, 게시
+# <a name="publisher-information-publications"></a>게시자 정보, 게시
   **게시** 탭은 왼쪽 창에서 선택한 게시자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
 -   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 정렬합니다.  
@@ -45,10 +49,10 @@ caps.handback.revision: 27
   
 -   확인  
   
- 상태 값 **성능 심각** 은 트랜잭션 구독과 병합 구독에 적용되며 트랜잭션 구독의 경우 임계값이 설정된 경우에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대 한 자세한 내용은 참조 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 및 [임계값 설정 및 복제 모니터에서 경고](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)합니다.  
+ 상태 값 **성능 심각** 은 트랜잭션 구독과 병합 구독에 적용되며 트랜잭션 구독의 경우 임계값이 설정된 경우에만 표시할 수 있습니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **게시**  
- 양식에서 각 게시의 이름 *PublicationDatabaseName: PublicationName*합니다.  
+ *PublicationDatabaseName: PublicationName*형식의 각 게시의 이름입니다.  
   
  **구독**  
  각 게시에 대한 구독 수입니다.  
@@ -63,7 +67,7 @@ caps.handback.revision: 27
 -   스냅숏 복제에서 "동기화 중"은 배포 에이전트가 실행 중이며 데이터가 현재 복제되고 있음을 의미합니다.  
   
  **현재 평균 성능** 및 **현재 가장 낮은 성능**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에만 해당됩니다. 게시에 대한 모든 구독의 평균 성능 등급과 가장 낮은 성능 등급입니다. 등급은 복제 모니터에서 측정한 가장 최근 측정값을 기반으로 하며 이전 구독 성능을 반영하지 않습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later versions only. 게시에 대한 모든 구독의 평균 성능 등급과 가장 낮은 성능 등급입니다. 등급은 복제 모니터에서 측정한 가장 최근 측정값을 기반으로 하며 이전 구독 성능을 반영하지 않습니다.  
   
  트랜잭션 복제의 경우 복제 모니터는 성능 임계값이 정의된 게시에 대해서만 값을 표시합니다. 게시에 대해 성능 임계값을 정의하지 않으면 이 열에 **사용 안 함**이 표시됩니다. 병합 복제의 경우 복제 모니터는 같은 유형의 연결(전화 접속 또는 LAN)별로 50개 이상의 변경 사항을 5번 동기화한 후에 값을 표시합니다. 50개 이상의 변경 사항에 대해 동기화가 5번 미만으로 수행되었거나 가장 최근에 동기화가 수행된 변경 사항이 50개 미만인 경우에는 이 열이 비어 있습니다.  
   
@@ -79,11 +83,11 @@ caps.handback.revision: 27
   
 -   심각  
   
- 성능 등급 정의 방법 및 성능 임계값 설정 방법에 대 한 자세한 내용은 참조 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)합니다.  
+ 성능 등급 정의 방법 및 성능 임계값 설정 방법은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
- [정보 보기 및 게시자 및 #40;에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
+ [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)   
  [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md)  
   
   

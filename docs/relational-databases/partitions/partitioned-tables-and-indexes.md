@@ -1,31 +1,35 @@
 ---
-title: "분할된 테이블 및 인덱스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "분할된 테이블 [SQL Server], 분할된 테이블 정보"
-  - "분할된 인덱스 [SQL Server], 아키텍처"
-  - "분할된 테이블 [SQL Server], 아키텍처"
-  - "분할된 인덱스 [SQL Server], 분할된 인덱스 정보"
+title: "분할된 테이블 및 인덱스 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partitioned tables [SQL Server], about partitioned tables
+- partitioned indexes [SQL Server], architecture
+- partitioned tables [SQL Server], architecture
+- partitioned indexes [SQL Server], about partitioned indexes
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 caps.latest.revision: 48
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.lasthandoff: 04/11/2017
+
 ---
-# 분할된 테이블 및 인덱스
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+# <a name="partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 테이블 및 인덱스 분할을 지원합니다. 분할 테이블 및 인덱스의 데이터는 데이터베이스에서 두 개 이상의 파일 그룹으로 분할될 수 있는 단위로 나뉩니다. 행 그룹이 개별 파티션에 매핑되도록 데이터는 수평적으로 분할됩니다. 단일 인덱스나 테이블의 모든 파티션은 동일 데이터베이스에 상주해야 합니다. 데이터에서 쿼리나 업데이트가 수행되면 테이블이나 인덱스는 단일 논리적 엔터티로 처리됩니다. [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1 전에는 분할된 테이블 및 인덱스를 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 기본적으로 최대 15,000개의 파티션을 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전 버전에서는 파티션 수가 기본적으로 1,000개로 제한되었습니다. x86 기반 시스템에서는 파티션 수가 1,000개를 초과하는 테이블 또는 인덱스를 만들 수 있지만 해당 테이블 또는 인덱스는 지원되지 않습니다.  
+>  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기본적으로 최대 15,000개의 파티션을 지원합니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이전 버전에서는 파티션 수가 기본적으로 1,000개로 제한되었습니다. x86 기반 시스템에서는 파티션 수가 1,000개를 초과하는 테이블 또는 인덱스를 만들 수 있지만 해당 테이블 또는 인덱스는 지원되지 않습니다.  
   
 ## <a name="benefits-of-partitioning"></a>분할의 이점  
  큰 테이블 또는 인덱스를 분할하면 관리 효율성과 성능 면에서 다음과 같은 이점이 있습니다.  
@@ -36,7 +40,7 @@ caps.handback.revision: 46
   
 -   자주 실행하는 쿼리 유형과 사용 중인 하드웨어 구성에 따라 쿼리 성능이 향상될 수 있습니다. 예를 들어 쿼리 최적화 프로그램에서는 파티션 자체를 조인할 수 있으므로 테이블의 분할 열이 동일한 경우 두 개 이상의 분할된 테이블 간의 동등 조인 쿼리를 더 빠르게 처리할 수 있습니다.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 I/O 작업을 위해 데이터를 정렬할 때 먼저 파티션을 기준으로 데이터가 정렬됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 한 번에 한 드라이브에 액세스하므로 성능이 저하될 수 있습니다. 데이터 저장 성능을 향상시키려면 RAID를 설정하여 두 개 이상의 디스크 간에 파티션의 데이터 파일을 스트라이프합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 여전히 파티션을 기준으로 데이터를 정렬하지만 동시에 각 파티션의 모든 드라이브에 액세스할 수 있습니다.  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 I/O 작업을 위해 데이터를 정렬할 때 먼저 파티션을 기준으로 데이터가 정렬됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 한 번에 한 드라이브에 액세스하므로 성능이 저하될 수 있습니다. 데이터 저장 성능을 향상시키려면 RAID를 설정하여 두 개 이상의 디스크 간에 파티션의 데이터 파일을 스트라이프합니다. 이렇게 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 여전히 파티션을 기준으로 데이터를 정렬하지만 동시에 각 파티션의 모든 드라이브에 액세스할 수 있습니다.  
   
      또한 전체 테이블이 아니라 파티션 수준에서 잠금 에스컬레이션을 설정하여 성능을 향상시킬 수 있습니다. 따라서 테이블의 잠금 경합을 줄일 수 있습니다.  
   
@@ -117,10 +121,11 @@ caps.handback.revision: 46
   
 -   [분할된 테이블로 대량 로드](http://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Project REAL: 데이터 수명 주기 - 분할](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
+-   [Project REAL: 데이터 수명 주기 - 분할](https://technet.microsoft.com/library/cc966424.aspx)  
   
 -   [분할된 테이블 및 인덱스에서의 향상된 쿼리 처리](http://msdn.microsoft.com/library/ms345599.aspx)  
   
 -   [대규모 관계형 데이터 웨어하우스를 구축하기 위한 상위 10가지 최선의 방법](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   
+

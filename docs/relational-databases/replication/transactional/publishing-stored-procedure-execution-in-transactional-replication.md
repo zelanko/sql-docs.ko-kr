@@ -1,26 +1,30 @@
 ---
-title: "트랜잭션 복제에서 저장 프로시저 실행 게시 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "게시 [SQL Server 복제], 저장 프로시저 실행"
-  - "아티클 [SQL Server 복제], 저장 프로시저 및"
-  - "트랜잭션 복제, 저장 프로시저 실행 게시"
+title: "트랜잭션 복제에서 저장 프로시저 실행 게시 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing [SQL Server replication], stored procedure execution
+- articles [SQL Server replication], stored procedures and
+- transactional replication, publishing stored procedure execution
 ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3417818eb5ff6f9f5afce213457828844d2912a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 트랜잭션 복제에서 저장 프로시저 실행 게시
+# <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>트랜잭션 복제에서 저장 프로시저 실행 게시
   게시자에서 실행되고 게시된 테이블에 영향을 주는 하나 이상의 저장 프로시저가 있는 경우 이러한 저장 프로시저를 저장 프로시저 실행 아티클로 게시에 포함해 보십시오. 프로시저 정의(CREATE PROCEDURE 문)는 구독이 초기화될 때 구독자로 복제되고 게시자에서 프로시저가 실행되면 복제가 구독자에서 해당하는 프로시저를 실행합니다. 이렇게 하면 프로시저 실행만 복제하고 행별 변경 내용은 복제하지 않으므로 대용량 일괄 처리 작업이 수행되는 경우 성능을 크게 향상시킬 수 있습니다. 예를 들어 게시 데이터베이스에서 다음 저장 프로시저를 생성한다고 가정합니다.  
   
 ```  
@@ -49,17 +53,17 @@ EXEC give_raise
   
  **저장 프로시저의 실행을 게시하려면**  
   
--   SQL Server Management Studio: [트랜잭션 게시 및 #40; 저장된 프로시저의 실행을 게시 합니다. SQL Server Management Studio & #41;](../../../relational-databases/replication/publish/publish execution of stored procedure in transactional publication.md)  
+-   SQL Server Management Studio: [저장 프로시저 실행을 트랜잭션 게시로 게시&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   복제 TRANSACT-SQL 프로그래밍: 실행 [sp_addarticle (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) (권장) 하는 ' serializable proc exec' 또는 'proc exec' 매개 변수 값을 지정 하 고 **@type**합니다. 문서를 정의 하는 방법에 대 한 자세한 내용은 참조 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)합니다.  
+-   복제 Transact-SQL 프로그래밍: [sp_addarticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행하고 **@type** 매개 변수의 값을 'serializable proc exec'(권장) 또는 'proc exec'로 지정합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
-## 구독자에서 프로시저 수정  
- 기본적으로 게시자의 저장 프로시저 정의는 각 구독자로 전파됩니다. 그러나 구독자에서 저장 프로시저를 수정할 수도 있습니다. 이는 게시자와 구독자에서 다른 논리를 실행하려고 할 때 유용합니다. 예를 들어 **sp_big_delete**, 저장 프로시저는 두 가지 기능이 게시자: 복제 된 테이블에서 1000000 행을 삭제 **big_table1** 복제 되지 않은 테이블을 업데이트 하 고 **big_table2**합니다. 네트워크 리소스에 대 한 수요를 줄이려면, 전파 해야 1 백만 행 삭제를 저장 프로시저로 게시 하 여 **sp_big_delete**합니다. 구독자에서 수정할 수 있습니다 **sp_big_delete** 1 백만 개의 행만 삭제 하 여 후속 업데이트를 수행 하지 **big_table2**합니다.  
+## <a name="modifying-the-procedure-at-the-subscriber"></a>구독자에서 프로시저 수정  
+ 기본적으로 게시자의 저장 프로시저 정의는 각 구독자로 전파됩니다. 그러나 구독자에서 저장 프로시저를 수정할 수도 있습니다. 이는 게시자와 구독자에서 다른 논리를 실행하려고 할 때 유용합니다. 예를 들어 구독자의 저장 프로시저 **sp_big_delete**에는 두 가지 기능이 있습니다. 복제된 테이블 **big_table1** 에서 1,000,000개의 행을 삭제하고 복제되지 않은 테이블 **big_table2**를 업데이트합니다. 네트워크 리소스에 대한 수요를 줄이려면 **sp_big_delete**를 게시하여 100만 개의 행 삭제를 저장 프로시저로 전파해야 합니다. 구독자에서 100만 개의 행만 삭제하고 **big_table2** 에 대한 후속 업데이트를 수행하지 않도록 **sp_big_delete**를 정의할 수 있습니다.  
   
 > [!NOTE]  
->  기본적으로 게시자에서 ALTER PROCEDURE를 사용하여 적용한 변경 내용은 구독자로 전파됩니다. 이를 방지하려면 ALTER PROCEDURE를 실행하기 전에 스키마 변경 내용을 전파하는 설정을 해제합니다. 스키마 변경에 대 한 정보를 참조 하십시오. [게시 데이터베이스에 스키마 변경을 확인](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)합니다.  
+>  기본적으로 게시자에서 ALTER PROCEDURE를 사용하여 적용한 변경 내용은 구독자로 전파됩니다. 이를 방지하려면 ALTER PROCEDURE를 실행하기 전에 스키마 변경 내용을 전파하는 설정을 해제합니다. 스키마 변경에 대한 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
-## 저장 프로시저 실행 아티클의 유형  
+## <a name="types-of-stored-procedure-execution-articles"></a>저장 프로시저 실행 아티클의 유형  
  직렬화 가능 프로시저 실행 아티클과 프로시저 실행 아티클을 사용하여 저장 프로시저의 실행을 게시할 수 있습니다.  
   
 -   프로시저가 직렬화 가능 트랜잭션의 컨텍스트 내에서 실행되는 경우에만 프로시저 실행을 복제하는 직렬화 가능 옵션을 사용하는 것이 좋습니다. 저장 프로시저가 직렬화 가능 트랜잭션 외부에서 실행되면 게시된 테이블의 데이터 변경 내용이 일련의 DML 문으로 복제됩니다. 이 동작을 통해 구독자의 데이터와 게시자의 데이터의 일관성을 기할 수 있습니다. 이는 대규모 정리 작업과 같은 일괄 처리 작업에 특히 유용합니다.  
@@ -87,12 +91,12 @@ COMMIT TRANSACTION T2
   
  직렬화 가능 트랜잭션 내에서 프로시저를 실행하면 잠금이 더 오래 유지되어 동시성이 줄어들 수 있습니다.  
   
-## XACT_ABORT 설정  
- 저장 프로시저 실행을 복제할 때 저장 프로시저를 실행하는 세션에 대해 XACT_ABORT 설정을 ON으로 지정해야 합니다. XACT_ABORT가 OFF로 설정되면 게시자에서 프로시저 실행 중 오류가 발생하면 구독자에서도 같은 오류가 발생하여 배포 에이전트가 실패합니다. XACT_ABORT를 ON으로 지정하면 게시자에서 실행 중 발생한 모든 오류로 인해 전체 실행이 롤백되므로 배포 에이전트 실패를 막을 수 있습니다. XACT_ABORT 설정에 대 한 자세한 내용은 참조 [set xact_abort 옵션 설정 & #40; TRANSACT-SQL & #41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)합니다.  
+## <a name="the-xactabort-setting"></a>XACT_ABORT 설정  
+ 저장 프로시저 실행을 복제할 때 저장 프로시저를 실행하는 세션에 대해 XACT_ABORT 설정을 ON으로 지정해야 합니다. XACT_ABORT가 OFF로 설정되면 게시자에서 프로시저 실행 중 오류가 발생하면 구독자에서도 같은 오류가 발생하여 배포 에이전트가 실패합니다. XACT_ABORT를 ON으로 지정하면 게시자에서 실행 중 발생한 모든 오류로 인해 전체 실행이 롤백되므로 배포 에이전트 실패를 막을 수 있습니다. XACT_ABORT 설정에 대한 자세한 내용은 [SET XACT_ABORT&#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)를 참조하세요.  
   
- XACT_ABORT를 off 설정은 필요로 하는 경우 지정 된 **-SkipErrors** 배포 에이전트에 대 한 매개 변수입니다. 그러면 오류가 발생해도 에이전트가 구독자에서 변경 내용을 계속 적용할 수 있습니다.  
+ XACT_ABORT를 OFF로 설정해야 하는 경우에는 배포 에이전트에 대해 **-SkipErrors** 매개 변수를 지정합니다. 그러면 오류가 발생해도 에이전트가 구독자에서 변경 내용을 계속 적용할 수 있습니다.  
   
-## 참고 항목  
- [트랜잭션 복제를 위한 아티클 옵션](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

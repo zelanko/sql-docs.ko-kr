@@ -1,26 +1,30 @@
 ---
-title: "통계 이름 바꾸기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "통계 이름 바꾸기"
-  - "통계 [SQL Server], 이름 바꾸기"
+title: "통계 이름 바꾸기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming statistics
+- statistics [SQL Server], renaming
 ms.assetid: a3bed7b7-3dc5-4b33-b1c6-67c27f573764
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00d72d7a3fc3d152cd5b05056812ba93041be67d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 통계 이름 바꾸기
-  다음을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 통계 개체의 이름을 바꾸려면 사용합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+# <a name="rename-statistics"></a>통계 이름 바꾸기
+  다음을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 통계 개체의 이름을 바꾸려면 사용합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **항목 내용**  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 통계 개체의 이름을 바꾸려면  
+#### <a name="to-rename-a-statistics-object"></a>통계 개체의 이름을 바꾸려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

@@ -1,27 +1,31 @@
 ---
-title: "FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], Win32와 Transact-SQL 충돌"
+title: "FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 663627abeb04c63073b43337bfe795ba9bc9cd4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지
-  FILESTREAM BLOB 데이터를 읽거나 쓰기 위해 SqlOpenFilestream()을 사용하여 Win32 파일 핸들을 여는 응용 프로그램은 공통된 트랜잭션에서 관리되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과의 충돌 오류가 발생할 수 있습니다. 여기에는 실행 시간이 오래 걸리는 MARS 쿼리 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]이 포함됩니다. 이러한 유형의 충돌을 방지하도록 응용 프로그램을 신중하게 디자인해야 합니다.  
+# <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>FILESTREAM 응용 프로그램에서 데이터베이스 작업과의 충돌 방지
+  FILESTREAM BLOB 데이터를 읽거나 쓰기 위해 SqlOpenFilestream()을 사용하여 Win32 파일 핸들을 여는 응용 프로그램은 공통된 트랜잭션에서 관리되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과의 충돌 오류가 발생할 수 있습니다. 여기에는 실행 시간이 오래 걸리는 MARS 쿼리 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이 포함됩니다. 이러한 유형의 충돌을 방지하도록 응용 프로그램을 신중하게 디자인해야 합니다.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 응용 프로그램이 FILESTREAM BLOB를 열려고 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 연결된 트랜잭션 컨텍스트를 확인합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 열기 작업이 DDL 문, DML 문, 데이터 검색 또는 트랜잭션 관리 등을 사용하는지에 따라 요청을 허용하거나 거부합니다. 다음 표에서는 트랜잭션에서 열려 있는 파일 유형에 따라 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 허용 또는 거부할지를 결정하는 방법을 보여 줍니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 또는 응용 프로그램이 FILESTREAM BLOB를 열려고 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 연결된 트랜잭션 컨텍스트를 확인합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 열기 작업이 DDL 문, DML 문, 데이터 검색 또는 트랜잭션 관리 등을 사용하는지에 따라 요청을 허용하거나 거부합니다. 다음 표에서는 트랜잭션에서 열려 있는 파일 유형에 따라 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 허용 또는 거부할지를 결정하는 방법을 보여 줍니다.  
   
 |Transact-SQL 문|읽기 권한으로 열림|쓰기 권한으로 열림|  
 |------------------------------|---------------------|----------------------|  
@@ -34,10 +38,10 @@ caps.handback.revision: 16
   
  \* 트랜잭션이 취소되고 트랜잭션 컨텍스트의 열린 핸들이 무효화됩니다. 응용 프로그램은 열려 있는 모든 핸들을 닫아야 합니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 FILESTREAM Win32 액세스 권한이 충돌을 발생시키는 방법을 보여 줍니다.  
   
-### 1. 쓰기 권한으로 FILESTREAM BLOB 열기  
+### <a name="a-opening-a-filestream-blob-for-write-access"></a>1. 쓰기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 쓰기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  
@@ -60,7 +64,7 @@ CloseHandle(dstHandle);
 //is returned with the updateData applied.  
 ```  
   
-### 2. 읽기 권한으로 FILESTREAM BLOB 열기  
+### <a name="b-opening-a-filestream-blob-for-read-access"></a>2. 읽기 권한으로 FILESTREAM BLOB 열기  
  다음 예에서는 읽기 전용 권한으로 파일을 열었을 때 미치는 영향을 보여 줍니다.  
   
 ```  
@@ -78,7 +82,7 @@ CloseHandle(dstHandle);
 //SELECT statements will be allowed.  
 ```  
   
-### 3. 여러 FILESTREAM BLOB 파일 열기 및 닫기  
+### <a name="c-opening-and-closing-multiple-filestream-blob-files"></a>3. 여러 FILESTREAM BLOB 파일 열기 및 닫기  
  여러 파일이 열린 경우 가장 제한적인 규칙이 사용됩니다. 다음 예에서는 두 파일을 엽니다. 첫 번째 파일은 읽기 권한으로 열리고 두 번째 파일은 쓰기 권한으로 열립니다. 두 번째 파일이 열리기 전까지 DML 문은 거부됩니다.  
   
 ```  
@@ -109,8 +113,8 @@ CloseHandle(dstHandle1);
 //SELECT statements will be allowed.  
 ```  
   
-### 4. 커서 닫기 실패  
- 다음 예에서는 닫히지 않은 문 커서가 `OpenSqlFilestream()`에서 쓰기 권한으로 BLOB를 열지 못하게 하는 방법을 보여 줍니다.  
+### <a name="d-failing-to-close-a-cursor"></a>4. 커서 닫기 실패  
+ 다음 예에서는 닫히지 않은 문 커서가 `OpenSqlFilestream()` 에서 쓰기 권한으로 BLOB를 열지 못하게 하는 방법을 보여 줍니다.  
   
 ```  
 TCHAR *sqlDBQuery =  
@@ -139,7 +143,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 //cursor is still open.  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OpenSqlFilestream을 사용하여 FILESTREAM 데이터 액세스](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)   
  [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)  
   

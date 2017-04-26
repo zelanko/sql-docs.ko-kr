@@ -1,30 +1,34 @@
 ---
-title: "ObjectType 추적 이벤트 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server 이벤트 클래스, Object Type 열 값"
-  - "이벤트 [SQL Server], Object Type 열 값"
-  - "이벤트 클래스 [SQL Server], Object Type 열 값"
-  - "Object Type 열 값 [SQL Server]"
+title: "ObjectType 추적 이벤트 열 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server event classes, Object Type column values
+- events [SQL Server], Object Type column values
+- event classes [SQL Server], Object Type column values
+- Object Type column values [SQL Server]
 ms.assetid: 42f85c50-34c9-49ca-955f-af9595e2707f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f4870fdd355f03c7f1e5c4fee15cf410f5794411
+ms.lasthandoff: 04/11/2017
+
 ---
-# ObjectType 추적 이벤트 열
+# <a name="objecttype-trace-event-column"></a>ObjectType 추적 이벤트 열
   Object Type 추적 이벤트 열은 다양한 추적 이벤트에 사용됩니다. 이 항목에서는 이 열에 사용할 수 있는 값과 해당 값의 정의에 대해 설명합니다.  
   
-## Object Type 열 값  
+## <a name="object-type-column-values"></a>Object Type 열 값  
   
 |값|정의|  
 |-----------|----------------|  
@@ -100,7 +104,7 @@ caps.handback.revision: 17
 |22611|XMLSchema|  
 |22868|형식|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "Audit Broker Conversation 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Broker Conversation 이벤트 클래스"
+title: "Audit Broker Conversation 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Broker Conversation event class
 ms.assetid: d58e3577-e297-42e5-b8fe-206665a75d13
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9839fc61788b3bbd3070455fac7ba8d3dcfb5e4a
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Broker Conversation 이벤트 클래스
+# <a name="audit-broker-conversation-event-class"></a>Audit Broker Conversation 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **Audit Broker Conversation** 이벤트를 만들어 Service Broker 대화 보안과 관련된 감사 메시지를 보고합니다.  
   
-## Audit Broker Conversation 이벤트 클래스 데이터 열  
+## <a name="audit-broker-conversation-event-class-data-columns"></a>Audit Broker Conversation 이벤트 클래스 데이터 열  
   
 |데이터 열|유형|설명|열 번호|필터 가능|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -40,7 +44,7 @@ caps.handback.revision: 25
 |**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|예|  
 |**ObjectId**|**int**|대상 서비스의 사용자 ID입니다.|22|아니요|  
 |**RoleName**|**nvarchar**|대화 핸들의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|아니요|  
-|**ServerName**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**Severity**|**int**|이 이벤트에서 오류를 보고하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 심각도입니다.|29|아니요|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
@@ -56,7 +60,7 @@ caps.handback.revision: 25
 |3|Invalid Signature|Broker가 보낸 사람의 인증서에 있는 공개 키를 사용하여 보낸 사람이 제공하는 메시지 서명을 확인할 수 없습니다. 이러한 경우 메시지가 손상되거나, 변조되었거나, 원격 서비스와 로컬 서비스가 같은 사용자 인증서로 구성되지 않았거나, 인증서가 오래되었음을 나타낼 수 있습니다.|  
 |4|Run As Target Failure|대상 사용자에게 대상 큐에 대한 수신 권한이 없습니다. 권한이 없는 사용자가 메시지를 받지 못하도록 하기 위해 Service Broker에서는 시작하는 사용자에게 메시지를 큐에 넣을 수 있는 권한이 있는지 여부에 관계없이 대상 사용자가 큐에서 받을 수 없는 메시지를 큐에 넣지 않습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   
   

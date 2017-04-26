@@ -1,37 +1,41 @@
 ---
-title: "suspect_pages 테이블 관리(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "824(데이터베이스 엔진 오류)"
-  - "페이지 복원 [SQL Server]"
-  - "페이지 [SQL Server], 주의 대상"
-  - "페이지 [SQL Server], 복원"
-  - "suspect_pages 시스템 테이블"
-  - "주의 대상 페이지 [SQL Server]"
-  - "복원 [SQL Server], 페이지"
+title: "Suspect_pages 테이블 관리(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- 824 (Database Engine error)
+- restoring pages [SQL Server]
+- pages [SQL Server], suspect
+- pages [SQL Server], restoring
+- suspect_pages system table
+- suspect pages [SQL Server]
+- restoring [SQL Server], pages
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: f06acec180d12a9cabfff5e35b4f254883111838
+ms.lasthandoff: 04/11/2017
+
 ---
-# suspect_pages 테이블 관리(SQL Server)
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 **suspect_pages** 테이블을 관리하는 방법에 대해 설명합니다. 주의 대상 페이지에 대한 정보를 유지 관리하는 데 사용되는 **suspect_pages** 테이블은 복원이 필요한지 여부를 결정하는 데 사용됩니다. [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블은 [msdb 데이터베이스](../../relational-databases/databases/msdb-database.md)에 상주합니다.  
+# <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
+  이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suspect_pages [!INCLUDE[tsql](../../includes/tsql-md.md)]테이블을 관리하는 방법에 대해 설명합니다. 주의 대상 페이지에 대한 정보를 유지 관리하는 데 사용되는 **suspect_pages** 테이블은 복원이 필요한지 여부를 결정하는 데 사용됩니다. [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블은 [msdb 데이터베이스](../../relational-databases/databases/msdb-database.md)에 상주합니다.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 데이터 페이지를 읽으려고 할 때 다음 오류 중 하나가 발생하면 페이지가 "주의 대상"으로 간주됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서 데이터 페이지를 읽으려고 할 때 다음 오류 중 하나가 발생하면 페이지가 "주의 대상"으로 간주됩니다.  
   
--   디스크 오류(특정 하드웨어 오류)와 같이 운영 체제에서 실행되는 CRC(순환 중복 검사)로 인해 발생하는 [823 오류](../Topic/MSSQLSERVER_823.md)  
+-   디스크 오류(특정 하드웨어 오류)와 같이 운영 체제에서 실행되는 CRC(순환 중복 검사)로 인해 발생하는 823 오류  
   
--   조각난 페이지(논리적 오류)와 같은 [824 오류](../Topic/MSSQLSERVER_824.md)  
+-   조각난 페이지(논리적 오류)와 같은 824 오류  
   
  모든 주의 대상 페이지의 페이지 ID는 **suspect_pages** 테이블에 기록됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 다음과 같은 정상적인 처리 중에 발생하는 모든 주의 대상 페이지를 기록합니다.  
   
@@ -78,7 +82,7 @@ caps.handback.revision: 54
   
 -   **데이터베이스 엔진의 suspect_pages 테이블 업데이트 방법**  
   
-     [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 **suspect_pages** 테이블에 대해 다음 동작을 수행합니다.  
+     [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 **suspect_pages** 테이블에 대해 다음 동작을 수행합니다.  
   
     -   테이블이 꽉 차지 않았다면 824 오류가 발생할 때마다 업데이트되어 오류 발생이 표시되고 오류 카운터가 증가합니다. 페이지를 복구, 복원 또는 할당 취소하여 수정한 후에도 오류가 있으면 **number_of_errors** 수가 증가하고 해당 **last_update** 열이 업데이트됩니다.  
   
@@ -108,7 +112,7 @@ caps.handback.revision: 54
   
 -   **데이터베이스 관리자의 유지 관리 역할**  
   
-     데이터베이스 관리자는 주로 오래된 행을 삭제함으로써 테이블을 관리할 책임이 있습니다. **suspect_pages** 테이블은 크기에 제한이 있으며 모두 채워지면 더 이상 새로운 오류가 기록되지 않습니다. 이 테이블이 꽉 차지 않게 하려면 데이터베이스 관리자나 시스템 관리자가 이 테이블에서 행을 삭제하여 오래된 항목을 수동으로 지워야 합니다. 따라서 **event_type**이 복원됨 또는 복구됨인 행이나 **last_update** 값이 오래된 행을 주기적으로 삭제하거나 보관하는 것이 좋습니다.  
+     데이터베이스 관리자는 주로 오래된 행을 삭제함으로써 테이블을 관리할 책임이 있습니다. **suspect_pages** 테이블은 크기에 제한이 있으며 모두 채워지면 더 이상 새로운 오류가 기록되지 않습니다. 이 테이블이 꽉 차지 않게 하려면 데이터베이스 관리자나 시스템 관리자가 이 테이블에서 행을 삭제하여 오래된 항목을 수동으로 지워야 합니다. 따라서 **event_type** 이 복원됨 또는 복구됨인 행이나 **last_update** 값이 오래된 행을 주기적으로 삭제하거나 보관하는 것이 좋습니다.  
   
      suspect_pages 테이블에서 작업을 모니터링하기 위해 [Database Suspect Data Page 이벤트 클래스](../../relational-databases/event-classes/database-suspect-data-page-event-class.md)를 사용할 수 있습니다. 일시적인 오류로 인해 행이 **suspect_pages** 테이블에 추가되기도 합니다. 그러나 많은 행이 이 테이블에 추가되는 경우 I/O 하위 시스템에 문제가 있을 수도 있습니다. 이 테이블에 추가되는 행 수가 갑자기 증가하는 경우에는 I/O 하위 시스템에 발생한 문제가 있는지 조사해 보는 것이 좋습니다.  
   
@@ -117,23 +121,23 @@ caps.handback.revision: 54
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> 사용 권한  
- **msdb**에 대한 액세스 권한이 있는 사용자는 **suspect_pages** 테이블의 데이터를 읽을 수 있습니다. suspect_pages 테이블에 대한 UPDATE 권한이 있는 사용자는 레코드를 업데이트할 수 있습니다. **msdb**의 **db_owner** 고정 데이터베이스 역할 또는 **sysadmin** 고정 서버 역할의 멤버는 레코드를 삽입, 업데이트 및 삭제할 수 있습니다.  
+ **msdb** 에 대한 액세스 권한이 있는 사용자는 **suspect_pages** 테이블의 데이터를 읽을 수 있습니다. suspect_pages 테이블에 대한 UPDATE 권한이 있는 사용자는 레코드를 업데이트할 수 있습니다. **msdb** 의 **db_owner** 고정 데이터베이스 역할 또는 **sysadmin** 고정 서버 역할의 멤버는 레코드를 삽입, 업데이트 및 삭제할 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### suspect_pages 테이블을 관리하려면  
+#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages 테이블을 관리하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장한 다음 **데이터베이스**를 확장합니다.  
   
 2.  **시스템 데이터베이스**, **msdb**, **테이블**및 **시스템 테이블**을 차례로 확장합니다.  
   
-3.  **dbo.suspect_pages**를 확장하고 **상위 200개 행 편집**을 마우스 오른쪽 단추로 클릭합니다.  
+3.  **dbo.suspect_pages** 를 확장하고 **상위 200개 행 편집**을 마우스 오른쪽 단추로 클릭합니다.  
   
 4.  쿼리 창에서 원하는 행을 편집, 업데이트 또는 삭제합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### suspect_pages 테이블을 관리하려면  
+#### <a name="to-manage-the-suspectpages-table"></a>suspect_pages 테이블을 관리하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -159,14 +163,18 @@ GO
   
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DROP DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [페이지 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [suspect_pages&#40;Transact-SQL&#41;](../../relational-databases/system-tables/suspect-pages-transact-sql.md)   
- [MSSQLSERVER_823](../Topic/MSSQLSERVER_823.md)   
- [MSSQLSERVER_824](../Topic/MSSQLSERVER_824.md)  
+    
+   
   
   
+
+
+
+

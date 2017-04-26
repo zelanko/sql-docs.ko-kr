@@ -1,26 +1,30 @@
 ---
-title: "MSSQL_ENG020574 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "MSSQL_ENG02574 오류"
+title: "MSSQL_ENG020574 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- MSSQL_ENG02574 error
 ms.assetid: 4e98f8de-287c-4090-81ee-dc8f80dfa6a1
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdc5f18e948011ee6a51db949ce9b4f0471638ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# MSSQL_ENG020574
+# <a name="mssqleng020574"></a>MSSQL_ENG020574
     
-## 메시지 정보  
+## <a name="message-details"></a>메시지 정보  
   
 |||  
 |-|-|  
@@ -31,10 +35,10 @@ caps.handback.revision: 11
 |심볼 이름||  
 |메시지 텍스트|게시 '%s'의 아티클 '%s'에 대한 구독자 '%s'의 구독이 데이터 유효성 검사에 실패했습니다.|  
   
-## 설명  
+## <a name="explanation"></a>설명  
  구독자의 데이터를 게시자의 데이터와 비교하여 유효성을 검사했는데 데이터가 일치하지 않아 유효성 검사가 실패했습니다. 유효성 검사에 대한 자세한 내용은 [Validate Replicated Data](../../relational-databases/replication/validate-replicated-data.md)를 참조하십시오.  
   
-## 사용자 동작  
+## <a name="user-action"></a>사용자 동작  
  다음을 수행하는 것이 좋습니다.  
   
 -   유효성 검사 실패 원인을 확인합니다.  
@@ -43,7 +47,7 @@ caps.handback.revision: 11
   
 -   구독을 다시 초기화하거나 다른 메서드를 통해 데이터를 일치시킵니다.  
   
-## 참고 항목  
- [오류 및 이벤트 참조 & #40입니다. 복제 및 #41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
+## <a name="see-also"></a>참고 항목  
+ [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   

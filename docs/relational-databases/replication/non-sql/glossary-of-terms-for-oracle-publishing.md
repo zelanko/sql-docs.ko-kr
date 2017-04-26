@@ -1,28 +1,32 @@
 ---
-title: "Oracle 게시를 위한 용어 설명 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle 게시 [SQL Server 복제], 용어집"
+title: "Oracle 게시를 위한 용어 설명 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], glossary
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b6050bf02c897e14ba643bb170423b1614cf0207
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle 게시를 위한 용어 설명
+# <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 게시를 위한 용어 설명
   Oracle 게시를 구성 및 관리할 때 다음 Oracle 용어에 익숙해야 합니다. 전체 Oracle 용어 목록은 Oracle 온라인 설명서를 참조하십시오.  
   
  IOT(인덱스 구성 테이블)  
- 해당 데이터를 인덱스 순서에서 디스크에 물리적으로 정렬 하는 테이블 비슷합니다는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클러스터형된 인덱스가 있는 테이블입니다. IOT는 클러스터형 인덱스가 있는 테이블로 구독자에 복제됩니다.  
+ 인덱스 순서대로 데이터가 물리적으로 디스크에 저장되는 테이블로, 클러스터형 인덱스가 있는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블과 유사합니다. IOT는 클러스터형 인덱스가 있는 테이블로 구독자에 복제됩니다.  
   
  인스턴스  
  Oracle 데이터베이스는 인스턴스와 연결됩니다. 인스턴스는 데이터베이스를 지원하는 메모리 및 백그라운드 프로세스로 구성됩니다. Oracle 인스턴스는 항상 단일 데이터베이스에 매핑되지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스는 여러 데이터베이스를 포함할 수 있습니다. Oracle 데이터베이스가 다중 인스턴스를 포함할 수 있는 경우도 있습니다.  
@@ -37,10 +41,10 @@ caps.handback.revision: 32
  고유 번호를 생성하는 데 사용되는 데이터베이스 개체입니다. 복제는 시퀀스를 사용하여 게시된 테이블에 대한 변경 내용의 적용 순서를 지정합니다.  
   
  SQL\*Plus  
- Oracle 데이터베이스에 액세스하고 쿼리하는 데 사용되는 응용 프로그램으로  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**와 유사합니다.  
+ Oracle 데이터베이스에 액세스하고 쿼리하는 데 사용되는 응용 프로그램으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**와 유사합니다.  
   
  동의어  
- 개체에 대한 별칭입니다. **MSSQLSERVERDISTRIBUTOR** 특수 공용 동의어는 Oracle 게시자를 구성할 때 자동으로 생성됩니다. 동의어가 참조는 **HREPL_Distributor** 논리 포인터를 제공 하 고 테이블는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 사용 되는 배포자입니다.  
+ 개체에 대한 별칭입니다. **MSSQLSERVERDISTRIBUTOR** 특수 공용 동의어는 Oracle 게시자를 구성할 때 자동으로 생성됩니다. 동의어는 **HREPL_Distributor** 테이블을 참조하고 게시자에 서비스를 제공하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에게 논리 포인터를 제공합니다.  
   
  Oracle 데이터베이스가 게시된 경우 이 공용 동의어는 게시자에 서비스를 제공하도록 이미 구성된 특정 배포자를 식별하므로 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자를 사용하도록 이 게시자를 구성하는 후속 시도가 실패합니다.  
   
@@ -53,10 +57,10 @@ caps.handback.revision: 32
  사용자 스키마  
  사용자 스키마는 특정 데이터베이스 개체 집합을 소유하는 데이터베이스 사용자로 생각할 수 있습니다. 복제 관리 사용자 스키마는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] MSSQLSERVERDISTRIBUTOR **공용 동의어를 제외하고 Oracle 데이터베이스에서** 복제 프로세스로 생성된 모든 개체를 소유합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Oracle 게시자에 생성되는 개체](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [SQL Server 이외 게시자](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   
- [Oracle 게시 개요](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
+ [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   

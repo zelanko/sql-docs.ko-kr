@@ -1,33 +1,37 @@
 ---
-title: "로그 시퀀스 번호로 복구(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 시퀀스 번호 [SQL Server]"
-  - "STOPBEFOREMARK 옵션 [RESTORE 문]"
-  - "STOPATMARK 옵션 [RESTORE 문]"
-  - "지정 시간 복구 [SQL Server]"
-  - "데이터베이스 복원 [SQL Server], 지정 시간"
-  - "복구 [SQL Server], 데이터베이스"
-  - "복원 [SQL Server], 지정 시간"
-  - "LSN"
-  - "데이터베이스 복구 [SQL Server]"
-  - "데이터베이스 복원 [SQL Server], 지정 시간"
+title: "로그 시퀀스 번호로 복구(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log sequence numbers [SQL Server]
+- STOPBEFOREMARK option [RESTORE statement]
+- STOPATMARK option [RESTORE statement]
+- point in time recovery [SQL Server]
+- restoring databases [SQL Server], point in time
+- recovery [SQL Server], databases
+- restoring [SQL Server], point in time
+- LSNs
+- database recovery [SQL Server]
+- database restores [SQL Server], point in time
 ms.assetid: f7b3de5b-198d-448d-8c71-1cdd9239676c
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ef9f98df730801b692eace924e094caa6b078ac6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 로그 시퀀스 번호로 복구(SQL Server)
+# <a name="recover-to-a-log-sequence-number-sql-server"></a>로그 시퀀스 번호로 복구(SQL Server)
   이 항목에서는 전체 또는 대량 로그 복구 모델을 사용하는 데이터베이스와 관련된 내용을 다룹니다.  
   
  LSN(로그 시퀀스 번호)을 사용하여 복원 작업에 대한 복구 지점을 정의할 수 있습니다. 그러나 이 기능은 도구 공급업체를 위해 특별히 제작된 기능으로 일반적으로 유용한 기능은 아닙니다.  
@@ -42,9 +46,8 @@ caps.handback.revision: 37
 > [!NOTE]  
 >  LSN은 **numeric**(25,0) 데이터 형식의 값입니다. 더하기나 빼기와 같은 산술 연산은 의미가 없으며 LSN과 함께 사용하면 안 됩니다.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
-## 백업과 복원에 사용된 LSN 보기  
+## <a name="viewing-lsns-used-by-backup-and-restore"></a>백업과 복원에 사용된 LSN 보기  
  다음 중 하나 이상의 방법을 사용하여 지정된 백업 및 복원 이벤트가 발생했을 때의 로그 레코드 LSN을 볼 수 있습니다.  
   
 -   [backupset](../../relational-databases/system-tables/backupset-transact-sql.md)  
@@ -53,15 +56,15 @@ caps.handback.revision: 37
   
 -   [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md); [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
--   [RESTORE HEADERONLY](../Topic/RESTORE%20HEADERONLY%20\(Transact-SQL\).md)  
+-   [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)  
   
--   [RESTORE FILELISTONLY](../Topic/RESTORE%20FILELISTONLY%20\(Transact-SQL\).md)  
+-   [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)  
   
 > [!NOTE]  
 >  LSN은 일부 메시지 텍스트에도 나타납니다.  
   
-## LSN으로 복원하기 위한 Transact-SQL 구문  
- [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 문을 사용하여 다음과 같은 LSN에서 또는 이전에 즉시 중지할 수 있습니다.  
+## <a name="transact-sql-syntax-for-restoring-to-an-lsn"></a>LSN으로 복원하기 위한 Transact-SQL 구문  
+ [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용하여 다음과 같은 LSN에서 또는 이전에 즉시 중지할 수 있습니다.  
   
 -   WITH STOPATMARK **='**lsn:*<lsn_number>***'** 절을 사용합니다. 여기서 lsn:*\<lsnNumber>*는 지정한 LSN이 포함된 로그 레코드가 복구 지점이 되도록 지정하는 문자열입니다.  
   
@@ -73,7 +76,7 @@ caps.handback.revision: 37
   
  일반적으로 특정 트랜잭션을 포함하거나 제외하도록 선택합니다. 필수는 아니지만 대개 지정된 로그 레코드는 트랜잭션 커밋 레코드입니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예에서는 `AdventureWorks` 데이터베이스가 전체 복구 모델을 사용하도록 변경되었다고 가정합니다.  
   
 ```  
@@ -90,15 +93,15 @@ GO
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
--   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [데이터베이스를 표시된 트랜잭션으로 복원&#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [복원&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [복원&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

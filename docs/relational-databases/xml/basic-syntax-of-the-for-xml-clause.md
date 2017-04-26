@@ -1,34 +1,38 @@
 ---
-title: "FOR XML 절의 기본 구문 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "BINARY BASE64 지시어"
-  - "ROOT 지시어"
-  - "FOR XML 절, BINARY BASE64 지시어"
-  - "FOR XML 절, 구문"
-  - "FOR XML 절, ROOT 지시어"
+title: "FOR XML 절의 기본 구문 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- BINARY BASE64 directive
+- ROOT directive
+- FOR XML clause, BINARY BASE64 directive
+- FOR XML clause, syntax
+- FOR XML clause, ROOT directive
 ms.assetid: df19ecbf-d28e-4e9c-aaa3-700f8bbd3be4
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55ad10ef334f0e5f754060c5abb619db6e837e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML 절의 기본 구문
+# <a name="basic-syntax-of-the-for-xml-clause"></a>FOR XML 절의 기본 구문
   FOR XML 모드는 RAW, AUTO, EXPLICIT 또는 PATH일 수 있습니다. 이 모드는 결과 XML의 셰이프를 결정합니다.  
   
 > [!IMPORTANT]  
 >  XMLDATA 지시어에 FOR XML 옵션은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 다음은 [FOR 절(Transact-SQL)](../Topic/FOR%20Clause%20\(Transact-SQL\).md)에 설명된 기본 구문입니다.  
+ 다음은 [FOR 절(Transact-SQL)](../../t-sql/queries/select-for-clause-transact-sql.md)에 설명된 기본 구문입니다.  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -59,7 +63,7 @@ XML
    [ , ROOT [ ('RootName') ] ]  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  RAW[('*ElementName*')]  
  쿼리 결과를 사용하여 결과 집합의 각 행을 요소 태그로 \<row /> 일반 식별자를 갖는 XML 요소로 변환합니다. 이 지시어를 사용하는 경우 필요에 따라 행 요소에 대한 이름을 지정할 수 있습니다. 결과 XML은 각 행에 대해 행 요소가 생성될 때 지정된 *ElementName* 을 사용합니다. 자세한 내용은 [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)을 참조하세요.  
   
@@ -90,7 +94,7 @@ XML
  ROOT [('*RootName*')]  
  단일 최상위 요소가 결과 XML에 추가되도록 지정합니다. 필요에 따라 생성할 루트 요소 이름을 지정할 수 있습니다. 기본값은 "root"입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [FOR XML에서 AUTO 모드 사용](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [FOR XML에서 EXPLICIT 모드 사용](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)   

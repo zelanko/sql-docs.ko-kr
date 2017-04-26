@@ -1,36 +1,40 @@
 ---
-title: "페이지 및 익스텐트 아키텍처 가이드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/21/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "페이지 및 익스텐트 아키텍처 가이드"
-  - "가이드, 페이지 및 익스텐트 아키텍처"
+title: "페이지 및 익스텐트 아키텍처 가이드 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/21/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page and extent architecture guide
+- guide, page and extent architecture
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 caps.latest.revision: 2
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 페이지 및 익스텐트 아키텍처 가이드
+# <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 페이지는 SQL Server의 기본 데이터 저장 단위입니다. 익스텐트는 물리적인 연속 페이지 8개의 모음입니다. 익스텐트는 효과적인 페이지 관리에 도움이 됩니다. 이 가이드에서는 모든 SQL Server 버전에서 페이지 및 익스텐트를 관리하는 데 사용되는 데이터 구조에 대해 설명합니다. 페이지 및 익스텐트의 아키텍처에 대한 이해는 효율적으로 동작하는 데이터베이스를 디자인하고 개발하는 데 있어 중요합니다.
 
-## 페이지 및 익스텐트
+## <a name="pages-and-extents"></a>페이지 및 익스텐트
 
 SQL Server의 기본 데이터 저장 단위는 페이지입니다. 데이터베이스에서 데이터 파일(.mdf 또는 .ndf)에 할당되는 디스크 공간은 논리적인 페이지로 나뉘어지며 0에서 n 사이의 숫자가 연속으로 페이지에 매겨집니다. 디스크 I/O 작업은 페이지 수준에서 수행됩니다. 즉, SQL Server가 전체 데이터 페이지를 읽거나 씁니다.
 
 익스텐트는 실제로 연속하는 8페이지를 모은 것으로 페이지를 효율적으로 관리하는 데 사용됩니다. 모든 페이지는 익스텐트로 저장됩니다.
 
-### 페이지
+### <a name="pages"></a>페이지
 
 SQL Server에서 페이지 크기는 8KB입니다. 즉, SQL Server 데이터베이스는 메가바이트당 페이지 128개를 저장합니다. 각 페이지는 96바이트 머리글로 시작하는데 이 머리글은 페이지에 대한 시스템 정보를 저장하는 데 사용됩니다. 페이지 번호, 페이지 유형, 해당 페이지의 사용 가능한 공간 크기 그리고 해당 페이지를 소유하고 있는 개체의 할당 단위 ID와 같은 정보를 저장합니다.
 
@@ -59,7 +63,7 @@ SQL Server에서 페이지 크기는 8KB입니다. 즉, SQL Server 데이터베�
 행들이 여러 페이지에 걸쳐 있을 수 없지만 그러한 행 부분들이 해당 행의 페이지를 벗어나서 해당 행이 실제로는 아주 커질 수 있습니다. 한 페이지의 단일 행에 데이터와 오버헤드가 최대 8,060바이트(8KB)까지 저장됩니다. 그러나 텍스트/이미지 페이지 유형에 저장되는 데이터는 여기에 포함되지 않습니다. 이 제한은 varchar, nvarchar, varbinary 또는 sql_variant 열이 있는 테이블에는 제한적으로 적용됩니다. 테이블에 있는 모든 고정 및 변수 열의 전체 행 크기가 8,060바이트 한계를 초과하면 SQL Server는 하나 이상의 가변 길이 열을 가장 너비가 넓은 열부터 시작하여 ROW_OVERFLOW_DATA 할당 단위에 있는 페이지로 동적으로 옮깁니다. 삽입 또는 업데이트 작업으로 행의 전체 크기가 8060바이트 한계를 초과하면 이러한 작업이 수행됩니다. 열이 ROW_OVERFLOW_DATA 할당 단위의 페이지로 이동하면 IN_ROW_DATA 할당 단위에 있는 원래 페이지의 24바이트 포인터가 그대로 유지됩니다. 후속 작업으로 행 크기가 줄면 SQL Server가 동적으로 열을 다시 원래 데이터 페이지로 이동합니다. 
 
 
-### Extents 
+### <a name="extents"></a>Extents 
 
 익스텐트는 공간 관리의 기본 단위입니다. 하나의 익스텐트는 실제로 연속하는 8페이지 또는 64KB입니다. 즉, SQL Server 데이터베이스는 메가바이트당 익스텐트 16개를 저장합니다.
 
@@ -71,9 +75,9 @@ SQL Server은 효율적인 공간 할당을 위해 적은 양의 데이터를 �
 
 일반적으로 새 테이블이나 인덱스에는 혼합 익스텐트의 페이지가 할당됩니다. 테이블이나 인덱스의 페이지가 8페이지로 증가하면 후속 할당을 위해 균일 익스텐트를 사용하도록 전환됩니다. 인덱스에 8개의 페이지를 생성하는 데 충분한 행을 가진 기존 테이블에서 인덱스를 만드는 경우 인덱스에 대한 모든 할당 항목은 균일 익스텐트에 있습니다.
 
-![익스텐트](../relational-databases/media/extents.gif)
+![Extents](../relational-databases/media/extents.gif)
 
-## 익스텐트 할당 및 빈 공간 관리 
+## <a name="managing-extent-allocations-and-free-space"></a>익스텐트 할당 및 빈 공간 관리 
 
 익스텐트 할당을 관리하고 빈 공간을 추적하는 SQL Server 데이터 구조는 비교적 단순합니다. 이 데이터 구조를 사용하면 다음과 같은 이점이 있습니다. 
 
@@ -83,7 +87,7 @@ SQL Server은 효율적인 공간 할당을 위해 적은 양의 데이터를 �
 * 대부분의 할당 정보는 서로 연결되어 있지 않으므로 유지 관리가 간편합니다.    
   각 페이지 할당 또는 할당 취소 작업을 신속하게 수행할 수 있으므로 페이지를 할당 또는 할당 취소해야 하는 동시 태스크 간의 경합이 줄어듭니다. 
 
-### 익스텐트 할당 관리
+### <a name="managing-extent-allocations"></a>익스텐트 할당 관리
 
 SQL Server는 다음의 두 가지 형식의 할당 맵을 사용하여 익스텐트의 할당을 기록합니다. 
 
@@ -103,7 +107,7 @@ SQL Server는 다음의 두 가지 형식의 할당 맵을 사용하여 익스�
  
 이러한 복잡함 때문에 단순한 익스텐트 관리 알고리즘의 필요성이 부각되었습니다. 데이터베이스 엔진은 단일 익스텐트를 할당하기 위해 1비트에 해당하는 GAM을 검색하고 이를 0으로 설정합니다. 또한 빈 페이지가 있는 혼합 익스텐트를 찾기 위해 데이터베이스 엔진은 1비트에 해당하는 SGAM을 검색합니다. 데이터베이스 엔진은 혼합 익스텐트를 할당하기 위해 1비트에 해당하는 GAM을 검색하고 이를 0으로 설정한 다음 SGAM의 해당 비트를 1로 설정합니다. 또한 익스텐트 할당을 취소하기 위해 데이터베이스 엔진은 GAM 비트를 1로 설정하고 SGAM 비트를 0으로 설정합니다. 데이터베이스 엔진은 데이터베이스 내에서 균일하게 데이터를 분산시키므로 실제로 데이터베이스 엔진 내부에서 사용하는 알고리즘은 이 항목에서 설명하는 알고리즘보다 더 복잡합니다. 그러나 실제 알고리즘의 경우 익스텐트 할당 정보 체인을 관리하지 않아도 되므로 이보다 더 단순합니다.
 
-### 빈 공간 추적
+### <a name="tracking-free-space"></a>빈 공간 추적
 
 PFS(Page Free Space) 페이지는 개별 페이지의 할당 여부 및 각 페이지에 있는 빈 공간의 양과 같은 페이지의 할당 상태를 기록합니다. PFS는 각 페이지에 1바이트를 사용하여 페이지의 할당 여부를 기록하고 할당된 경우 페이지의 상태를 비어 있음, 1~50% 채워짐, 51~80% 채워짐, 81~95% 채워짐 또는 96~100% 채워짐으로 기록합니다.
 
@@ -113,7 +117,7 @@ PFS 페이지는 데이터 파일에서 파일 헤더 페이지 뒤의 첫째 �
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
-## 개체에서 사용하는 공간 관리 
+## <a name="managing-space-used-by-objects"></a>개체에서 사용하는 공간 관리 
 
 IAM(Index Allocation Map) 페이지는 할당 단위에 사용되는 데이터베이스 파일의 4GB 부분에 익스텐트를 매핑합니다. 할당 단위의 유형은 다음 3가지가 있습니다.
 
@@ -146,7 +150,7 @@ SQL Server 데이터베이스 엔진에서 새 행을 삽입해야 하는데 현
 데이터베이스 엔진은 삽입되는 행을 보관하기에 충분한 공간을 가진 기존 익스텐트에서 페이지를 빠르게 찾을 수 없을 때만 할당 단위에 새 익스텐트를 할당합니다. 데이터베이스 엔진은 비례 할당 알고리즘을 사용하여 파일 그룹에서 사용할 수 있는 파일의 익스텐트를 할당합니다. 하나의 파일 그룹에 두 개의 파일이 있고 이 중 한 파일이 다른 파일에 비해 2배의 빈 공간을 가지는 경우 빈 공간이 더 많은 파일에서 두 페이지가 할당되고 빈 공간이 적은 다른 파일에서 한 페이지가 할당되는 방식으로 할당이 수행됩니다. 따라서 파일 그룹의 모든 파일이 유사한 공간 비율을 사용하게 됩니다. 
 
  
-## 수정된 익스텐트 추적 
+## <a name="tracking-modified-extents"></a>수정된 익스텐트 추적 
 
 데이터베이스 엔진에서는 두 개의 내부 데이터 구조를 사용하여 대량 복사 작업에 의해 수정된 익스텐트와 마지막 전체 백업 이후에 수정된 익스텐트를 추적할 수 있습니다. 이 두 데이터 구조를 사용하면 차등 백업의 속도가 크게 향상됩니다. 또한 데이터베이스가 대량 로그 복구 모델을 사용할 경우 대량 복사 작업의 로깅 속도도 향상됩니다. 이러한 구조들은 GAM(전역 할당 맵)과 SGAM(공유 전역 할당 맵) 페이지처럼 각 비트가 단일 익스텐트를 표시하는 비트맵에 해당합니다. 
 
@@ -160,3 +164,4 @@ DCM 페이지와 BCM 페이지 사이의 간격은 GAM 페이지와 SGAM 페이�
 
 ![special_page_order](../relational-databases/media/special-page-order.gif)
  
+

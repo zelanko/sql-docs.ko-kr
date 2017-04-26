@@ -1,39 +1,43 @@
 ---
-title: "시스템 데이터베이스 이동 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "시스템 데이터베이스 이동"
-  - "재해 복구 [SQL Server], 데이터베이스 파일 이동"
-  - "데이터베이스 파일 [SQL Server], 이동"
-  - "데이터 파일 [SQL Server], 이동"
-  - "tempdb 데이터베이스 [SQL Server], 이동"
-  - "시스템 데이터베이스 [SQL Server], 이동"
-  - "예약된 디스크 유지 관리 [SQL Server]"
-  - "데이터베이스 이동"
-  - "msdb 데이터베이스 [SQL Server], 이동"
-  - "데이터베이스 파일 이동"
-  - "데이터베이스 파일 재배치"
-  - "계획된 데이터베이스 재배치 [SQL Server]"
-  - "master 데이터베이스 [SQL Server], 이동"
-  - "model 데이터베이스 [SQL Server], 이동"
-  - "Resource 데이터베이스 [SQL Server]"
-  - "데이터베이스 [SQL Server], 이동"
+title: "시스템 데이터베이스 이동 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- moving system databases
+- disaster recovery [SQL Server], moving database files
+- database files [SQL Server], moving
+- data files [SQL Server], moving
+- tempdb database [SQL Server], moving
+- system databases [SQL Server], moving
+- scheduled disk maintenace [SQL Server]
+- moving databases
+- msdb database [SQL Server], moving
+- moving database files
+- relocating database files
+- planned database relocations [SQL Server]
+- master database [SQL Server], moving
+- model database [SQL Server], moving
+- Resource database [SQL Server]
+- databases [SQL Server], moving
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 caps.latest.revision: 62
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 62
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e452cc778a0a677b9cb71e5e60605af436a31d18
+ms.lasthandoff: 04/11/2017
+
 ---
-# 시스템 데이터베이스 이동
+# <a name="move-system-databases"></a>시스템 데이터베이스 이동
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 데이터베이스를 이동하는 방법에 대해 설명합니다. 시스템 데이터베이스 이동은 다음과 같은 경우에 유용할 수 있습니다.  
@@ -64,11 +68,11 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE ( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중지하거나 시스템을 종료하여 유지 관리를 수행합니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)을 참조하세요.  
+2.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중지하거나 시스템을 종료하여 유지 관리를 수행합니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
 3.  파일을 새 위치로 이동합니다.  
 
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스나 서버를 다시 시작합니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)을 참조하세요.  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스나 서버를 다시 시작합니다. 자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
 5.  다음 쿼리를 실행하여 파일 변경 내용을 확인합니다.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 62
         NET START MSSQL$instancename /f /T3608
         ```  
   
-     자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)을 참조하세요.  
+     자세한 내용은 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)을 참조하세요.  
   
 3.  이동할 각 파일에 대해 **sqlcmd** 명령 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 다음 문을 실행합니다.  
   
@@ -122,7 +126,7 @@ caps.handback.revision: 62
     ALTER DATABASE database_name MODIFY FILE( NAME = logical_name , FILENAME = 'new_path\os_file_name' )  
     ```  
   
-     **sqlcmd** 유틸리티 사용에 대한 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/use-the-sqlcmd-utility.md)을 참조하세요.  
+     **sqlcmd** 유틸리티 사용에 대한 자세한 내용은 [sqlcmd 유틸리티 사용](../../relational-databases/scripting/sqlcmd-use-the-utility.md)을 참조하세요.  
   
 4.  **sqlcmd** 유틸리티 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 종료합니다.  
   
@@ -169,11 +173,11 @@ caps.handback.revision: 62
   
      `-lE:\SQLData\mastlog.ldf`  
   
-6.  인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 **중지**를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 중지합니다.  
+6.  인스턴스 이름을 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중지 **를 선택하여**인스턴스를 중지합니다.  
   
 7.  master.mdf 및 mastlog.ldf 파일을 새 위치로 이동합니다.  
   
-8.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작합니다.  
+8.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 다시 시작합니다.  
   
 9. 다음 쿼리를 실행하여 master 데이터베이스에 대한 파일 변경 내용을 확인합니다.  
   
@@ -184,7 +188,7 @@ caps.handback.revision: 62
     GO  
     ```  
 
-10. 이 시점에서 SQL Server는 정상적으로 실행되어야 합니다. 그러나 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`에서 레지스트리 항목을 조정하는 것이 좋습니다. 여기서 *instance_ID*는 `MSSQL13.MSSQLSERVER`와 비슷합니다. 해당 Hive에서 `SQLDataRoot` 값을 새 경로로 변경합니다. 레지스트리 업데이트에 실패하면 패치 및 업그레이드도 실패할 수 있습니다.
+10. 이 시점에서 SQL Server는 정상적으로 실행되어야 합니다. 그러나 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\instance_ID\Setup`에서 레지스트리 항목을 조정하는 것이 좋습니다. 여기서 *instance_ID* 는 `MSSQL13.MSSQLSERVER`와 비슷합니다. 해당 Hive에서 `SQLDataRoot` 값을 새 경로로 변경합니다. 레지스트리 업데이트에 실패하면 패치 및 업그레이드도 실패할 수 있습니다.
 
   
 ##  <a name="Resource"></a> 리소스 데이터베이스 이동  
@@ -197,15 +201,15 @@ caps.handback.revision: 62
   
 -   데이터베이스 기본 위치를 변경합니다. 기본 위치로 지정한 드라이브 문자 및 경로가 존재하지 않을 경우 새 데이터베이스 만들기가 실패할 수 있습니다.  
   
-#### SQL Server 에이전트 로그 경로를 변경합니다.  
+#### <a name="change-the-sql-server-agent-log-path"></a>SQL Server 에이전트 로그 경로를 변경합니다.  
   
 1.  SQL Server Management Studio의 개체 탐색기에서 **SQL Server 에이전트**를 확장합니다.  
   
-2.  **오류 로그**를 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
+2.  **오류 로그** 를 마우스 오른쪽 단추로 클릭한 다음 **구성**을 클릭합니다.  
   
 3.  **SQL Server 에이전트 오류 로그 구성** 대화 상자에서 SQLAGENT.OUT 파일의 새 위치를 지정합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL\<version>.<instance_name>\MSSQL\Log\\입니다.  
   
-#### 데이터베이스 기본 위치 변경  
+#### <a name="change-the-database-default-location"></a>데이터베이스 기본 위치 변경  
   
 1.  SQL Server Management Studio의 개체 탐색기에서 SQL Server 서비스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -217,7 +221,7 @@ caps.handback.revision: 62
   
 ##  <a name="Examples"></a> 예  
   
-### 1. tempdb 데이터베이스 이동  
+### <a name="a-moving-the-tempdb-database"></a>1. tempdb 데이터베이스 이동  
  다음 예에서는 계획된 재배치의 일부로 `tempdb` 데이터와 로그 파일을 새 위치로 이동합니다.  
   
 > [!NOTE]  
@@ -257,7 +261,7 @@ caps.handback.revision: 62
   
 5.  원래 위치에서 `tempdb.mdf` 및 `templog.ldf` 파일을 삭제합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Resource 데이터베이스](../../relational-databases/databases/resource-database.md)   
  [tempdb 데이터베이스](../../relational-databases/databases/tempdb-database.md)   
  [master 데이터베이스](../../relational-databases/databases/master-database.md)   
@@ -265,8 +269,9 @@ caps.handback.revision: 62
  [model 데이터베이스](../../relational-databases/databases/model-database.md)   
  [사용자 데이터베이스 이동](../../relational-databases/databases/move-user-databases.md)   
  [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)   
- [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)   
+ [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [시스템 데이터베이스 다시 작성](../../relational-databases/databases/rebuild-system-databases.md)  
   
   
+

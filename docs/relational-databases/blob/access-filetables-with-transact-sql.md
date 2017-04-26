@@ -1,24 +1,28 @@
 ---
-title: "Transact-SQL을 사용하여 FileTable에 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], T-SQL을 사용하여 파일 액세스"
+title: "Transact-SQL을 사용하여 FileTable에 액세스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with T-SQL
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 33eb3adc0489d8cb904fee0d47d0586a64b81445
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL을 사용하여 FileTable에 액세스
+# <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스
   FileTable에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML(데이터 조작 언어) 명령이 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="BasicsInsert"></a> FileTable에 대한 INSERT 작업  
@@ -35,7 +39,7 @@ caps.handback.revision: 13
   
 -   사용자 정의 데이터를 업데이트할 수 있습니다.  
   
--   INSERT 문이 **name**, **path_locator**, **parent_path_locator** 또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
+-   INSERT 문이 **name**, **path_locator**, **parent_path_locator**또는 파일 특성을 설정하는 경우 시스템 정의 제약 조건이 적용됩니다.  
   
 -   타임스탬프를 포함하여 다른 열에 영향을 주지 않고 **file_stream** 열에서 FILESTREAM 데이터를 업데이트할 수 있습니다.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 13
   
 -   **last_access_time** 값은 **last_write_time** 및 **creation_time**보다 이전일 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)   
  [FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [파일 입/출력 API를 사용하여 FileTable 액세스](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)   

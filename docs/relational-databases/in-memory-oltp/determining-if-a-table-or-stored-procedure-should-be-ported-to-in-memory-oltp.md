@@ -1,29 +1,33 @@
 ---
-title: "메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "분석, 마이그레이션, 보고"
-  - "AMR"
+title: "메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analyze, Migrate, Report
+- AMR
 ms.assetid: c1ef96f1-290d-4952-8369-2f49f27afee2
 caps.latest.revision: 39
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
+# <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다. 또한, 보고서는 응용 프로그램에서 메모리 내 OLTP를 사용하도록 설정하기 위해 수행해야 하는 작업의 양도 나타냅니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다. 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 트랜잭션 성능 분석 보고서를 사용하면 메모리 내 OLTP로 데이터베이스 응용 프로그램의 성능이 향상될지 평가할 수 있습니다. 또한, 보고서는 응용 프로그램에서 메모리 내 OLTP를 사용하도록 설정하기 위해 수행해야 하는 작업의 양도 나타냅니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다. 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
  트랜잭션 성능 분석 보고서는 프로덕션 데이터베이스 또는 프로덕션 작업과 유사한 활성 작업이 있는 테스트 데이터베이스에 대하여 직접 실행됩니다.  
   
@@ -38,10 +42,10 @@ caps.handback.revision: 39
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  
   
- 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 시 **관리 도구-기본** 또는 **관리 도구-고급**을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때SSMS(SQL Server Management Studio)의 일부로 설치됩니다.  
+ 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 **설치 시** 관리 도구-기본 **또는** 관리 도구-고급 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때SSMS(SQL Server Management Studio)의 일부로 설치됩니다.  
   
-## 트랜잭션 성능 분석 보고서  
- 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서**를 선택한 후 **표준 보고서**를 선택하고 **트랜잭션 성능 분석 개요**를 선택하여 **개체 탐색기**에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  
+## <a name="transaction-performance-analysis-reports"></a>트랜잭션 성능 분석 보고서  
+ 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 선택한 후 **표준 보고서**를 선택하고 **트랜잭션 성능 분석 개요**를 선택하여 **개체 탐색기**에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  
   
  테이블에 대한 세부 정보 보고서는 다음 세 개의 섹션으로 구성됩니다.  
   
@@ -97,14 +101,14 @@ caps.handback.revision: 39
   
  저장 프로시저를 고유하게 컴파일된 저장 프로시저로 변환하는 방법을 자세히 알아보려면 네이티브 컴파일 관리자를 사용하십시오.  
   
-## 메모리 내 OLTP 마이그레이션 검사 목록 생성  
+## <a name="generating-in-memory-oltp-migration-checklists"></a>메모리 내 OLTP 마이그레이션 검사 목록 생성  
  마이그레이션 검사 목록은 메모리 액세스에 최적화된 테이블 또는 고유하게 컴파일된 저장 프로시저에서 지원되지 않는 모든 테이블 또는 저장 프로시저를 식별합니다. 메모리 최적화 및 네이티브 컴파일 관리자는 단일 디스크 기반 테이블 또는 해석된 T-SQL 저장 프로시저에 대한 검사 목록을 생성할 수 있습니다. 또한, 데이터베이스의 여러 테이블 및 저장 프로시저에 대한 마이그레이션 검사 목록을 생성하는 것도 가능합니다.  
   
- **메모리 내 OLTP 마이그레이션 검사 목록 생성** 명령 또는 PowerShell을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 내에 마이그레이션 검사 목록을 생성할 수 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 메모리 내 OLTP 마이그레이션 검사 목록 생성 **명령 또는 PowerShell을 사용하여** 내에 마이그레이션 검사 목록을 생성할 수 있습니다.  
   
  **UI 명령을 사용하여 마이그레이션 검사 목록을 생성하려면**  
   
-1.  **개체 탐색기**에서 시스템 데이터베이스가 아닌 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 클릭한 후 **메모리 내 OLTP 마이그레이션 검사 목록 생성**을 클릭합니다.  
+1.  **개체 탐색기**에서 시스템 데이터베이스가 아닌 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**클릭한 후 **메모리 내 OLTP 마이그레이션 검사 목록 생성**을 클릭합니다.  
   
 2.  메모리 내 OLTP 마이그레이션 검사 목록 생성 대화 상자에서 다음을 클릭하여 **검사 목록 생성 옵션 구성** 페이지로 이동합니다. 이 페이지에서 다음을 수행합니다.  
   
@@ -169,7 +173,7 @@ caps.handback.revision: 39
   
     -   <object_name>에 대한 마이그레이션 검사 목록 보고서는 folder_path2의 위치에 저장된 유일한 보고서입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

@@ -1,26 +1,30 @@
 ---
-title: "정책 기반 관리 정책의 속성 보기 또는 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "정책 기반 관리, 정책 수정"
-  - "정책 기반 관리, 정책 보기"
+title: "정책 기반 관리 정책의 속성 보기 또는 수정 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, modify policies
+- Policy-Based Management, view policies
 ms.assetid: ba805504-5db5-4731-a8da-a0e89cb20c37
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 485dca1df0b2d62fb71b1c51b86fe30e449b7ccf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 기반 관리 정책의 속성 보기 또는 수정
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리 정책의 속성을 보거나 수정하는 방법에 대해 설명합니다.  
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>정책 기반 관리 정책의 속성 보기 또는 수정
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리 정책의 속성을 보거나 수정하는 방법에 대해 설명합니다.  
   
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
@@ -31,13 +35,13 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 개체에 있는 모든 정책의 속성을 보려면  
+#### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>개체에 있는 모든 정책의 속성을 보려면  
   
-1.  개체 탐색기에서 서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책**을 가리킨 다음 **보기**를 선택합니다. **정책 보기 – ***object_name* 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [정책 보기 대화 상자](../../relational-databases/policy-based-management/view-policies-dialog-box.md)를 참조하세요.  
+1.  개체 탐색기에서 서버, 서버 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭하고 **정책** 을 가리킨 다음 **보기**를 선택합니다. **정책 보기 –***object_name* 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [정책 보기 대화 상자](../../relational-databases/policy-based-management/view-policies-dialog-box.md)를 참조하세요.  
   
 2.  완료되면 **닫기**를 클릭합니다.  
   
-#### 특정 정책의 속성을 보거나 수정하려면  
+#### <a name="to-view-or-modify-a-specific-policys-properties"></a>특정 정책의 속성을 보거나 수정하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 보거나 수정하려는 정책 기반 관리 정책이 들어 있는 서버를 확장합니다.  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 정책의 속성을 보려면  
+#### <a name="to-view-a-policys-properties"></a>정책의 속성을 보려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -76,3 +80,4 @@ caps.handback.revision: 9
  자세한 내용은 [syspolicy_policies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syspolicy-policies-transact-sql.md)를 참조하세요.  
   
   
+

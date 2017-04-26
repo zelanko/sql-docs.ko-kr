@@ -1,35 +1,39 @@
 ---
-title: "OPENXML(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [SQL Server의 XML]"
-  - "OPENXML 문, OPENXML 문 정보"
-  - "XML 작성, OPENXML 문"
-  - "OPENXML 문, XML 쿼리"
-  - "특성 중심 매핑"
-  - "SELECT 문 [SQL Server], OPENXML 키워드"
-  - "열 패턴 [SQL Server의 XML]"
-  - "행 패턴 [SQL Server의 XML]"
-  - "rowpattern [SQL Server의 XML]"
-  - "쿼리 [SQL Server의 XML], OPENXML 문"
-  - "XML [SQL Server], OPENXML 문"
-  - "요소 중심 매핑 [SQL Server]"
+title: "OPENXML(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- OPENXML statement, about OPENXML statement
+- writing XML, OPENXML statement
+- OPENXML statement, querying XML
+- attribute-centric mapping
+- SELECT statement [SQL Server], OPENXML keyword
+- column patterns [XML in SQL Server]
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- queries [XML in SQL Server], OPENXML statement
+- XML [SQL Server], OPENXML statement
+- element-centric mapping [SQL Server]
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47cd6e281772125ee7d424425fb6185623c0afc8
+ms.lasthandoff: 04/11/2017
+
 ---
-# OPENXML(SQL Server)
+# <a name="openxml-sql-server"></a>OPENXML(SQL Server)
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드인 OPENXML은 테이블 또는 뷰와 비슷한 메모리 내 XML 문서에 대한 행 집합을 제공합니다. OPENXML은 관계형 행 집합인 것처럼 XML 데이터에 대한 액세스를 허용합니다. 이러한 기능은 XML 문서의 내부 표현에 대한 행 집합 뷰를 제공함으로써 제공됩니다. 행 집합의 레코드는 데이터베이스 테이블에 저장할 수 있습니다.  
   
  OPENXML은 행 집합 공급자, 뷰 또는 OPENROWSET이 원본으로 표시될 수 있는 경우 SELECT 및 SELECT INTO에서 사용할 수 있습니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요.  
@@ -37,20 +41,20 @@ caps.handback.revision: 43
  OPENXML을 사용하여 XML 문서에 대해 쿼리를 작성하려면 먼저 **sp_xml_preparedocument**를 호출해야 합니다. 이 메서드는 XML 문서를 구문 분석하고 사용할 준비가 된 구문 분석된 문서에 핸들을 반환합니다. 구문 분석된 문서는 XML 문서의 여러 노드를 DOM(문서 개체 모델) 트리로 표시합니다. 문서 핸들은 OPENXML에 전달됩니다. 그런 다음 OPENXML은 전달된 매개 변수에 따라 문서의 행 집합 뷰를 제공합니다.  
   
 > [!NOTE]  
->  **sp_xml_preparedocument**에서는 MSXML 파서가 SQL로 업데이트된 버전인 Msxmlsql.dll을 사용합니다. 이 버전의 MSXML 파서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 지원하고 MSXML 버전 2.6에 대한 이전 버전과의 호환성을 유지하도록 디자인되었습니다.  
+>  **sp_xml_preparedocument** 에서는 MSXML 파서가 SQL로 업데이트된 버전인 Msxmlsql.dll을 사용합니다. 이 버전의 MSXML 파서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 지원하고 MSXML 버전 2.6에 대한 이전 버전과의 호환성을 유지하도록 디자인되었습니다.  
   
  메모리를 확보하기 위해서는 **sp_xml_removedocument** 시스템 저장 프로시저를 호출하여 메모리에서 XML 문서의 내부 표현을 제거해야 합니다.  
   
  다음 그림은 이 프로세스를 보여 줍니다.  
   
- ![Parsing XML with OPENXML](../../relational-databases/xml/media/xmlsp.gif "Parsing XML with OPENXML")  
+ ![OPENXML을 통한 XML 구문 분석](../../relational-databases/xml/media/xmlsp.gif "OPENXML을 통한 XML 구문 분석")  
   
  OPENXML을 이해하려면 XPath 쿼리에 익숙해야 하며 XML을 이해해야 합니다. SQL Server의 XPath 지원에 대한 자세한 내용은 [SQLXML 4.0의 XPath 쿼리 사용](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)을 참조하세요.  
   
 > [!NOTE]  
 >  OpenXML을 사용하면 행 및 열의 XPath 패턴을 변수로 매개 변수화할 수 있습니다. 프로그래머가 매개 변수화를 외부 사용자에게 제공하는 경우(예를 들어 외부적으로 호출된 저장 프로시저를 통해 매개 변수가 제공되는 경우) 이러한 매개 변수화를 수행하면 XPath 식이 삽입될 수 있습니다. 이러한 잠재적 보안 문제를 방지하려면 XPath 매개 변수를 외부 호출자에게 제공하지 않는 것이 좋습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예에서는 `OPENXML` 및 `INSERT` 문에서 `SELECT` 을 사용하는 방법을 보여 줍니다. 예제 XML 문서에 `<Customers>` 및 `<Orders>` 요소가 들어 있습니다.  
   
  우선 `sp_xml_preparedocument` 저장 프로시저가 XML 문서를 구문 분석합니다. 구문 분석된 문서는 XML 문서의 노드(요소, 특성, 텍스트 및 주석)를 트리로 나타낸 것입니다. `OPENXML` 은 이 구문 분석된 XML 문서를 참조하여 해당 XML 문서의 일부 또는 전체에 대한 행 집합 뷰를 제공합니다. `INSERT` 을 사용하는 `OPENXML` 문은 그러한 행 집합의 데이터를 데이터베이스 테이블에 삽입할 수 있습니다. `OPENXML` 을 여러 번 호출하면 XML 문서의 여러 부분에 대한 행 집합 뷰를 제공하고, XML 문서의 여러 부분을 다른 테이블에 삽입하는 등 다양하게 처리할 수 있습니다. 이 프로세스는 XML을 테이블로 조각화한다라고도 합니다.  
@@ -97,7 +101,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  ![구문 분석된 XML 트리](../../relational-databases/xml/media/xmlparsedtree.gif "구문 분석된 XML 트리")  
   
-## OPENXML 매개 변수  
+## <a name="openxml-parameters"></a>OPENXML 매개 변수  
  OPENXML에 대한 매개 변수는 다음과 같습니다.  
   
 -   XML 문서 핸들(*idoc*)  
@@ -108,18 +112,18 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   행 집합 열과 XML 노드 간의 매핑  
   
-### XML 문서 핸들(idoc)  
+### <a name="xml-document-handle-idoc"></a>XML 문서 핸들(idoc)  
  이 문서 핸들은 **sp_xml_preparedocument** 저장 프로시저에서 반환됩니다.  
   
-### 처리될 노드를 식별하는 XPath 식(rowpattern)  
+### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>처리될 노드를 식별하는 XPath 식(rowpattern)  
  *rowpattern* 으로 지정된 XPath 식은 XML 문서의 노드 집합을 식별합니다. *rowpattern* 에 의해 식별되는 노드는 각각 OPENXML에 의해 생성되는 행 집합의 단일 행에 해당됩니다.  
   
  XPath 식에 의해 식별되는 노드는 XML 문서의 모든 XML 노드일 수 있습니다. *rowpattern* 이 XML 문서의 요소 집합을 식별하는 경우 식별되는 각 요소 노드에 대한 행 집합에는 한 개의 행이 있게 됩니다. 예를 들어 *rowpattern* 이 특성으로 끝나면 *rowpattern*에 의해 선택되는 각 특성 노드에 대해 한 개의 행이 만들어집니다.  
   
-### 생성될 행 집합에 대한 설명  
+### <a name="description-of-the-rowset-to-be-generated"></a>생성될 행 집합에 대한 설명  
  행 집합 스키마는 결과 행 집합을 생성하기 위해 OPENXML에 의해 사용됩니다. 행 집합 스키마를 지정할 때 다음 옵션을 사용할 수 있습니다.  
   
-#### Edge 테이블 형식 사용  
+#### <a name="using-the-edge-table-format"></a>Edge 테이블 형식 사용  
  행 집합 스키마를 지정하려면 Edge 테이블 형식을 사용해야 합니다. WITH 절을 사용하지 마십시오.  
   
  WITH 절을 사용하면 OPENXML이 행 집합을 Edge 테이블 형식으로 반환합니다. 이 테이블은 구문 분석된 XML 문서 트리의 가장 자리에 있는 모든 노드가 행 집합의 행으로 매핑되기 때문에 Edge 테이블이라고 부릅니다.  
@@ -148,17 +152,17 @@ EXEC sp_xml_removedocument @docHandle;
 |**prev**|**bigint**|이전의 형제 요소에 대한 XML ID입니다. 바로 이전의 형제가 없으면 NULL입니다.|  
 |**text**|**ntext**|특성 값 또는 텍스트 형식의 요소 내용이 포함됩니다. 또는 Edge 테이블 항목에 값이 필요하지 않은 경우 NULL입니다.|  
   
-#### WITH 절을 사용하여 기존 테이블 지정  
+#### <a name="using-the-with-clause-to-specify-an-existing-table"></a>WITH 절을 사용하여 기존 테이블 지정  
  WITH 절을 사용하여 기존 테이블의 이름을 지정할 수 있습니다. 이렇게 하려면 행 집합을 생성하기 위해 OPENXML이 사용할 수 있는 스키마의 기존 테이블 이름만 지정하면 됩니다.  
   
-#### WITH 절을 사용하여 스키마 지정  
+#### <a name="using-the-with-clause-to-specify-a-schema"></a>WITH 절을 사용하여 스키마 지정  
  WITH 절을 사용하여 완전한 스키마를 지정할 수 있습니다. 행 집합 스키마를 지정할 때 열 이름과 그에 해당되는 데이터 형식 및 XML 문서에 대한 매핑을 지정합니다.  
   
  SchemaDeclaration에서 ColPattern 매개 변수를 사용하여 열 패턴을 지정할 수 있습니다. 지정된 열 패턴은 행 집합 열을 rowpattern에 의해 식별되는 XML 노드에 매핑할 뿐 아니라 매핑 유형을 결정하기 위해서도 사용됩니다.  
   
  열에 대해 ColPattern이 지정되지 않은 경우에는 *flags* 매개 변수로 지정된 매핑을 기준으로 동일한 이름을 갖는 XML 노드에 행 집합 열이 매핑됩니다. 그러나 ColPattern이 WITH 절에서 스키마 지정의 일부로 지정된 경우에는 *flags* 매개 변수에 지정된 매핑을 덮어씁니다.  
   
-### 행 집합 열과 XML 노드 간의 매핑  
+### <a name="mapping-between-the-rowset-columns-and-the-xml-nodes"></a>행 집합 열과 XML 노드 간의 매핑  
  OPENXML 문에서는 행 집합 열과 *rowpattern*에 의해 식별된 XML 노드 간에 매핑 유형(특성 중심, 요소 중심)을 지정할 수도 있습니다. 이 정보는 XML 노드와 행 집합 열 간의 변환에 사용됩니다.  
   
  매핑은 다음 두 가지 방식으로 지정할 수 있으며 두 방식을 모두 지정할 수도 있습니다.  
@@ -171,7 +175,7 @@ EXEC sp_xml_removedocument @docHandle;
   
      XPath 식인*ColPattern*은 WITH 절에서 *SchemaDeclaration* 의 일부로 지정됩니다. *ColPattern* 에 지정된 매핑은 *flags* 매개 변수로 지정된 매핑에 우선합니다.  
   
-     *ColPattern*을 사용하면 *flags*로 표시된 기본 매핑을 덮어쓰거나 향상시키는 특성 중심이나 요소 중심과 같은 매핑 유형을 지정할 수 있습니다.  
+     *ColPattern* 을 사용하면 *flags*로 표시된 기본 매핑을 덮어쓰거나 향상시키는 특성 중심이나 요소 중심과 같은 매핑 유형을 지정할 수 있습니다.  
   
      *ColPattern* 은 다음 상황에서 지정됩니다.  
   
@@ -181,21 +185,21 @@ EXEC sp_xml_removedocument @docHandle;
   
  *flags* 와 *ColPattern* 매개 변수는 모두 선택 사항입니다. 매핑을 지정하지 않으면 특성 중심 매핑으로 간주됩니다. 특성 중심 매핑은 *flags* 매개 변수의 기본값입니다.  
   
-#### 특성 중심 매핑  
- OPENXML의 *flags* 매개 변수를 1(XML_ATTRIBUTES)로 설정하면 **특성 중심** 매핑이 지정됩니다. *flags*에 XML_ATTRIBUTES가 포함된 경우 제공된 행 집합은 각 XML 요소가 하나의 행으로 표시되는 행을 제공하거나 소비합니다. XML 특성은 이름 일치 여부에 따라 SchemaDeclaration에 정의되어 있거나 WITH 절의 Tablename으로 제공되는 특성에 매핑됩니다. 이름 일치란 특정 이름의 XML 특성이 동일한 이름의 행 집합의 열로 저장되는 것을 의미합니다.  
+#### <a name="attribute-centric-mapping"></a>특성 중심 매핑  
+ OPENXML의 *flags* 매개 변수를 1(XML_ATTRIBUTES)로 설정하면 **특성 중심** 매핑이 지정됩니다. *flags* 에 XML_ATTRIBUTES가 포함된 경우 제공된 행 집합은 각 XML 요소가 하나의 행으로 표시되는 행을 제공하거나 소비합니다. XML 특성은 이름 일치 여부에 따라 SchemaDeclaration에 정의되어 있거나 WITH 절의 Tablename으로 제공되는 특성에 매핑됩니다. 이름 일치란 특정 이름의 XML 특성이 동일한 이름의 행 집합의 열로 저장되는 것을 의미합니다.  
   
  열 이름이 매핑될 특성 이름과 다른 경우에는 *ColPattern* 을 지정해야 합니다.  
   
  XML 특성에 네임스페이스 한정자가 있으면 행 집합의 열 이름에도 한정자가 있어야 합니다.  
   
-#### 요소 중심 매핑  
+#### <a name="element-centric-mapping"></a>요소 중심 매핑  
  OPENXML의 *flags* 매개 변수를 2(XML_ELEMENTS)로 설정하면 **요소 중심** 매핑이 지정됩니다. 요소 중심 매핑은 다음 사항을 제외하고 **특성 중심** 매핑과 비슷합니다.  
   
 -   열 수준 패턴이 지정되지 않은 경우, 매핑 예의 이름 일치(동일한 이름의 XML 요소에 대한 열 매핑)는 복잡하지 않은 하위 요소를 선택합니다. 검색 프로세스에서 하위 요소가 복잡하면(하위 요소가 더 있는 경우) 해당 열이 NULL로 설정됩니다. 하위 요소의 특성 값은 무시됩니다.  
   
 -   동일 이름의 하위 요소가 여러 개 있는 경우 첫 번째 노드가 반환됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_xml_preparedocument&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

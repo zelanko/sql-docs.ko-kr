@@ -1,24 +1,28 @@
 ---
-title: "보안 주체에게 사용 권한 부여 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보안 주체에게 사용 권한 부여"
+title: "보안 주체에게 사용 권한 부여 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Grant permission to a principal
 ms.assetid: 4107389d-05b6-4aa3-9fa8-95b40cdf05dc
 caps.latest.revision: 12
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 969f70df2cdb72c1fa47e645580ae723fb519864
+ms.lasthandoff: 04/11/2017
+
 ---
-# 보안 주체에게 사용 권한 부여
+# <a name="grant-a-permission-to-a-principal"></a>보안 주체에게 사용 권한 부여
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 보안 주체에 권한을 부여하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -51,7 +55,7 @@ caps.handback.revision: 12
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 보안 주체에 사용 권한을 부여하려면  
+#### <a name="to-grant-permission-to-a-principal"></a>보안 주체에 사용 권한을 부여하려면  
   
 1.  개체 탐색기에서 사용 권한을 부여하려는 개체가 포함된 데이터베이스를 확장합니다.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 12
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 보안 주체에 사용 권한을 부여하려면  
+#### <a name="to-grant-permission-to-a-principal"></a>보안 주체에 사용 권한을 부여하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 12
   
  자세한 내용은 [GRANT&#40;Transact-SQL&#41;](../../../t-sql/statements/grant-transact-sql.md) 및 [GRANT 개체 사용 권한&#40;Transact-SQL&#41;](../../../t-sql/statements/grant-object-permissions-transact-sql.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [보안 주체&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)  
   
   

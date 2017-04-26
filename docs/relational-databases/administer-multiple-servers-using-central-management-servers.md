@@ -1,44 +1,49 @@
 ---
-title: "중앙 관리 서버를 사용하여 여러 서버 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "다중 서버 쿼리"
-  - "중앙 관리 서버"
-  - "다중 서버 관리 [SQL Server]"
-  - "마스터 서버 [SQL Server], 중앙 관리 서버"
-  - "대상 구성 [SQL Server]"
-  - "서버 구성 [SQL Server]"
+title: "중앙 관리 서버를 사용하여 여러 서버 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- multiserver queries
+- central management server
+- multiserver administration [SQL Server]
+- master servers [SQL Server], central management servers
+- target configuration [SQL Server]
+- server configuration [SQL Server]
 ms.assetid: 427911a7-57d4-4542-8846-47c3267a5d9c
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fbe8297c459d4513d1b8e45c7d64807e0d73b503
+ms.lasthandoff: 04/11/2017
+
 ---
-# 중앙 관리 서버를 사용하여 여러 서버 관리
+# <a name="administer-multiple-servers-using-central-management-servers"></a>중앙 관리 서버를 사용하여 여러 서버 관리
   중앙 관리 서버를 지정하고 서버 그룹을 만들어 여러 서버를 관리할 수 있습니다.  
   
-## 중앙 관리 서버와 서버 그룹이란?  
+## <a name="what-is-a-central-management-server-and-server-groups"></a>중앙 관리 서버와 서버 그룹이란?  
  중앙 관리 서버로 지정된 SQL Server 인스턴스는 하나 이상의 인스턴스에 대한 연결 정보를 포함하는 서버 그룹을 유지 관리합니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 문과 정책 기반 관리 정책을 서버 그룹에 대해 동시에 실행할 수 있습니다. 중앙 관리 서버를 통해 관리되는 인스턴스에서 로그 파일을 볼 수도 있습니다. 
  
  기본적으로 중앙 관리 서버는 관리되는 서버 목록을 포함하는 중앙 리포지토리입니다. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 이전의 버전은 중앙 관리 서버로 지정할 수 없습니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 문을 실행할 수도 있습니다.  
   
-## 중앙 관리 서버 및 서버 그룹 만들기 
+## <a name="create-central-management-server-and-server-groups"></a>중앙 관리 서버 및 서버 그룹 만들기 
  중앙 관리 서버 및 서버 그룹을 만들려면 **의** 등록된 서버 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]창을 사용합니다. 중앙 관리 서버는 자신이 유지 관리하는 그룹의 멤버가 될 수 없습니다. 
  
  중앙 관리 서버 및 서버 그룹을 만드는 방법에 대한 자세한 내용은 [중앙 관리 서버 및 서버 그룹 만들기&#40;SQL Server Management Studio&#41;](../tools/sql-server-management-studio/create-a-central-management-server-and-server-group.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   
+

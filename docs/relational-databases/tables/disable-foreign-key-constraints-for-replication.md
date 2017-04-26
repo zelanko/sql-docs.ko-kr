@@ -1,26 +1,30 @@
 ---
-title: "복제할 때 FOREIGN KEY 제약 조건 비활성화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "제약 조건 [SQL Server], 외래 키"
-  - "외래 키 [SQL Server], 제약 조건 해제"
-  - "제약 조건 해제"
+title: "복제할 때 FOREIGN KEY 제약 조건 비활성화 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- constraints [SQL Server], foreign keys
+- foreign keys [SQL Server], disabling constraints
+- disabling constraints
 ms.assetid: 4211f2fd-d16a-4081-995c-43f1f0827f0b
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e16bd86b4a8b0d333b9b88752d702d783ba180cc
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복제할 때 FOREIGN KEY 제약 조건 비활성화
+# <a name="disable-foreign-key-constraints-for-replication"></a>복제할 때 FOREIGN KEY 제약 조건 비활성화
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 복제에 대한 FOREIGN KEY 제약 조건을 비활성화할 수 있습니다. 이 기능은 이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 데이터를 게시하는 경우에 유용할 수 있습니다.  
@@ -49,7 +53,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 복제할 때 FOREIGN KEY 제약 조건을 비활성화하려면  
+#### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>복제할 때 FOREIGN KEY 제약 조건을 비활성화하려면  
   
 1.  **개체 탐색기**에서 수정할 FOREIGN KEY 제약 조건을 포함하는 테이블을 확장한 다음 **키** 폴더를 확장합니다.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 복제할 때 FOREIGN KEY 제약 조건을 비활성화하려면  
+#### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>복제할 때 FOREIGN KEY 제약 조건을 비활성화하려면  
   
 1.  [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 이 태스크를 수행하려면 FOREIGN KEY 제약 조건을 삭제합니다. 그런 다음 새 FOREIGN KEY 제약 조건을 추가하고 NOT FOR REPLICATION 옵션을 지정합니다.  
   

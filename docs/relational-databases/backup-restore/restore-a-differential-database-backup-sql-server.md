@@ -1,28 +1,32 @@
 ---
-title: "차등 데이터베이스 백업 복원(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 차등 백업 [SQL Server]"
-  - "데이터베이스 복원 [SQL Server], 전체 차등 백업"
-  - "데이터베이스 백업 [SQL Server], 전체 차등 백업"
-  - "데이터베이스 복원 [SQL Server], 전체 차등 백업"
-  - "데이터베이스 백업 [SQL Server], 전체 차등 백업"
+title: "차등 데이터베이스 백업 복원(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- restoring databases [SQL Server], full differential backups
+- database backups [SQL Server], full differential backups
+- database restores [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
 ms.assetid: 0dd971a4-ee38-4dd3-9f30-ef77fc58dd11
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c0a58f510ec12f0fbf8f635f9700275ce94b24b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 차등 데이터베이스 백업 복원(SQL Server)
+# <a name="restore-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 복원(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 차등 데이터베이스 백업을 복원하는 방법에 대해 설명합니다.  
@@ -57,7 +61,7 @@ caps.handback.revision: 46
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
   
--   전체 복구 모델 또는 대량 로그 복구 모델의 경우 데이터베이스를 복원하려면 먼저 활성 트랜잭션 로그(비상 로그라고도 함)를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 참조하세요.  
+-   전체 복구 모델 또는 대량 로그 복구 모델의 경우 데이터베이스를 복원하려면 먼저 활성 트랜잭션 로그(비상 로그라고도 함)를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)에 미러 데이터베이스를 준비하는 방법에 대해 설명합니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -68,9 +72,9 @@ caps.handback.revision: 46
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 차등 데이터베이스 백업을 복원하려면  
+#### <a name="to-restore-a-differential-database-backup"></a>차등 데이터베이스 백업을 복원하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장합니다. 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스**를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -120,9 +124,9 @@ caps.handback.revision: 46
   
     -   **RESTORE WITH RECOVERY** 는 커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용 준비가 된 상태로 유지하는 기본 동작입니다. 추가 트랜잭션 로그를 복원할 수 없습니다. 필요한 모든 백업을 지금 복원하는 경우 이 옵션을 선택합니다.  
   
-    -   **RESTORE WITH NORECOVERY**는 데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 데이터베이스는 복구할 때까지 사용할 수 없습니다.  
+    -   **RESTORE WITH NORECOVERY** 는 데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 데이터베이스는 복구할 때까지 사용할 수 없습니다.  
   
-    -   **RESTORE WITH STANDBY**는 읽기 전용 모드로 데이터베이스를 유지합니다. 이 옵션은 커밋되지 않은 트랜잭션의 실행을 취소하지만, 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 대기 파일에 저장합니다.  
+    -   **RESTORE WITH STANDBY** 는 읽기 전용 모드로 데이터베이스를 유지합니다. 이 옵션은 커밋되지 않은 트랜잭션의 실행을 취소하지만, 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 대기 파일에 저장합니다.  
   
      옵션에 대한 설명은 [데이터베이스 복원&#40;옵션 페이지&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)을 참조하세요.  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 46
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 차등 데이터베이스 백업을 복원하려면  
+#### <a name="to-restore-a-differential-database-backup"></a>차등 데이터베이스 백업을 복원하려면  
   
 1.  NORECOVERY 절을 지정하고 RESTORE DATABASE 문을 실행하여 차등 데이터베이스 백업에 앞서 전체 데이터베이스 백업을 복원합니다. 자세한 내용은 [방법: 전체 백업 복원](../../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)을 참조하세요.  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 46
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
-#### 1. 차등 데이터베이스 백업 복원  
+#### <a name="a-restoring-a-differential-database-backup"></a>1. 차등 데이터베이스 백업 복원  
  다음은 `MyAdvWorks` 데이터베이스의 데이터베이스 및 차등 데이터베이스 백업을 복원하는 예입니다.  
   
 ```tsql  
@@ -172,7 +176,7 @@ RESTORE DATABASE MyAdvWorks
 GO  
 ```  
   
-#### 2. 데이터베이스, 차등 데이터베이스, 트랜잭션 로그 백업 복원  
+#### <a name="b-restoring-a-database-differential-database-and-transaction-log-backup"></a>2. 데이터베이스, 차등 데이터베이스, 트랜잭션 로그 백업 복원  
  다음은 `MyAdvWorks` 데이터베이스의 데이터베이스, 차등 데이터베이스 및 트랜잭션 로그 백업을 복원하는 예입니다.  
   
 ```tsql  
@@ -208,8 +212,8 @@ GO
   
 -   [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -1,34 +1,38 @@
 ---
-title: "필터 함수를 사용하여 마이그레이션할 행 선택(스트레치 데이터베이스) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "06/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-server-stretch-database"
-ms.suite: ""
-ms.technology: 
-  - "dbe-stretch"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스트레치 데이터베이스, 조건자"
-  - "스트레치 데이터베이스에 대한 조건자"
-  - "스트레치 데이터베이스, 인라인 테이블 반환 함수"
-  - "스트레치 데이터베이스에 대한 인라인 테이블 반환 함수"
+title: "필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database) | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stretch
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Stretch Database, predicates
+- predicates for Stretch Database
+- Stretch Database, inline table-valued functions
+- inline table-valued functions for Stretch Database
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 097d613e8732823d91d660f6e8a0c1f6d749fb39
+ms.lasthandoff: 04/11/2017
+
 ---
-# 필터 함수를 사용하여 마이그레이션할 행 선택(스트레치 데이터베이스)
+# <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  콜드 데이터를 별도 테이블에 저장하는 경우 전체 테이블을 마이그레이션하도록 스트레치 데이터베이스를 구성할 수 있습니다. 반면, 테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 조건자를 지정하여 마이그레이션할 행을 선택할 수 있습니다. 필터 조건자는 인라인 테이블 반환 함수입니다. 이 항목에서는 인라인 테이블 반환 함수를 작성하여 마이그레이션할 행을 선택하는 방법을 설명합니다.  
+  콜드 데이터를 별도 테이블에 저장하는 경우 전체 테이블을 마이그레이션하도록 Stretch Database를 구성할 수 있습니다. 반면, 테이블에 핫 데이터와 콜드 데이터가 모두 포함된 경우 필터 조건자를 지정하여 마이그레이션할 행을 선택할 수 있습니다. 필터 조건자는 인라인 테이블 반환 함수입니다. 이 항목에서는 인라인 테이블 반환 함수를 작성하여 마이그레이션할 행을 선택하는 방법을 설명합니다.  
   
-> [!IMPORTANT] 제대로 수행되지 않는 필터 함수를 제공하면 데이터 마이그레이션 성능도 저하됩니다. 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용합니다.  
+> [!IMPORTANT]
+> 제대로 수행되지 않는 필터 함수를 제공하면 데이터 마이그레이션 성능도 저하됩니다. Stretch Database는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용합니다.  
   
  필터 함수를 지정하지 않으면 전체 테이블이 마이그레이션됩니다.  
   
@@ -40,8 +44,8 @@ caps.handback.revision: 42
   
  함수를 추가하기 위한 ALTER TABLE 구문은 이 항목의 뒷부분에 설명되어 있습니다.  
   
-## 필터 함수에 대한 기본 요구 사항  
- 스트레치 데이터베이스 필터 조건자에 필요한 인라인 테이블 반환 함수는 다음 예제와 유사합니다.  
+## <a name="basic-requirements-for-the-filter-function"></a>필터 함수에 대한 기본 요구 사항  
+ Stretch Database 필터 조건자에 필요한 인라인 테이블 반환 함수는 다음 예제와 유사합니다.  
   
 ```tsql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
@@ -56,11 +60,11 @@ RETURN  SELECT 1 AS is_eligible
   
  스키마 바인딩은 필터 함수에 사용되는 열이 삭제되거나 변경되는 것을 방지하는 데 필요합니다.  
   
-### 반환 값  
+### <a name="return-value"></a>반환 값  
  함수에서 비어 있지 않은 결과가 반환되는 경우 해당 행은 마이그레이션에 적합합니다. 그렇지 않으면, 즉 함수에서 결과가 반환되지 않으면 해당 행은 마이그레이션에 적합하지 않습니다.  
   
-### 조건  
- &lt;*predicate*&gt;는 하나의 조건 또는 AND 논리 연산자로 조인된 여러 조건으로 구성될 수 있습니다.  
+### <a name="conditions"></a>조건  
+ &lt;*predicate*&gt; 는 하나의 조건 또는 AND 논리 연산자로 조인된 여러 조건으로 구성될 수 있습니다.  
   
 ```  
 <predicate> ::= <condition> [ AND <condition> ] [ ...n ]  
@@ -72,7 +76,7 @@ RETURN  SELECT 1 AS is_eligible
 <condition> ::= <primitive_condition> [ OR <primitive_condition> ] [ ...n ]  
 ```  
   
-### 기본 조건  
+### <a name="primitive-conditions"></a>기본 조건  
  기본 조건은 다음 비교 중 하나를 수행할 수 있습니다.  
   
 ```  
@@ -109,7 +113,7 @@ RETURN  SELECT 1 AS is_eligible
   
 -   IN 연산자를 사용하여 함수 매개 변수를 상수 값 목록과 비교할 수 있습니다.  
   
-     다음은 *shipment_status`IN (N'Completed', N'Returned', N'Cancelled')` 열의 값이 *인지 확인하는 예제입니다.  
+     다음은 *shipment_status`IN (N'Completed', N'Returned', N'Cancelled')` 열의 값이* 인지 확인하는 예제입니다.  
   
     ```tsql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
@@ -127,7 +131,7 @@ RETURN  SELECT 1 AS is_eligible
   
     ```  
   
-### 비교 연산자  
+### <a name="comparison-operators"></a>비교 연산자  
  지원되는 비교 연산자는 다음과 같습니다.  
   
  `<, <=, >, >=, =, <>, !=, !<, !>`  
@@ -136,7 +140,7 @@ RETURN  SELECT 1 AS is_eligible
 <comparison_operator> ::= { < | <= | > | >= | = | <> | != | !< | !> }  
 ```  
   
-### 상수 식  
+### <a name="constant-expressions"></a>상수 식  
  필터 함수에 사용하는 상수는 함수를 정의할 때 계산될 수 있는 모든 명확한 식일 수 있습니다. 상수 식은 다음을 포함할 수 있습니다.  
   
 -   리터럴. `N’abc’, 123`)을 입력합니다.  
@@ -147,12 +151,12 @@ RETURN  SELECT 1 AS is_eligible
   
 -   CAST 또는 CONVERT를 사용하는 명확한 변환. `CONVERT(datetime, '1/1/2016', 101)`)을 입력합니다.  
   
-### 다른 식  
+### <a name="other-expressions"></a>다른 식  
  BETWEEN 및 NOT BETWEEN 연산자를 동등한 AND 및 OR 식으로 바꾼 후 결과 함수가 여기에 설명된 규칙을 준수하는 경우 BETWEEN 및 NOT BETWEEN 연산자를 사용할 수 있습니다.  
   
  하위 쿼리 또는 명확하지 않은 함수(예: RAND() 또는 GETDATE())를 사용할 수 없습니다.  
   
-## 테이블에 필터 함수 추가  
+## <a name="add-a-filter-function-to-a-table"></a>테이블에 필터 함수 추가  
  **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 예를 들어  
   
 ```tsql  
@@ -171,9 +175,10 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  테이블에서 해당 함수를 필터 조건자로 사용하는 한 인라인 테이블 반환 함수를 삭제할 수 없습니다. 
 
-> [!TIP] 필터 함수의 성능을 향상시키려면 해당 함수에서 사용되는 열에 인덱스를 만듭니다.
+> [!TIP]
+> 필터 함수의 성능을 향상시키려면 해당 함수에서 사용되는 열에 인덱스를 만듭니다.
 
- ### 필터 함수에 열 이름 전달
+ ### <a name="passing-column-names-to-the-filter-function"></a>필터 함수에 열 이름 전달
  
  테이블에 필터 함수를 할당할 때 한 부분으로 이루어진 이름을 사용하여 필터 함수에 전달되는 열 이름을 지정합니다. 열 이름을 전달할 때 세 부분으로 이루어진 이름을 지정하면 스트레치 사용 테이블에 대한 후속 쿼리가 실패합니다.
 
@@ -208,7 +213,7 @@ ALTER TABLE SensorTelemetry
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
   
-2. 마이그레이션이 완료될 때까지 기다립니다. SQL Server Management Studio의 **스트레치 데이터베이스 모니터**에서 상태를 확인하거나 **sys.dm_db_rda_migration_status** 뷰를 쿼리할 수 있습니다. 자세한 내용은 [데이터 마이그레이션 모니터 및 문제 해결](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 또는 [sys.dm_db_rda_migration_status](sys.dm_db_rda_migration_status%20\(Transact-SQL\).md)를 참조하세요.  
+2. 마이그레이션이 완료될 때까지 기다립니다. SQL Server Management Studio의 **Stretch Database 모니터** 에서 상태를 확인하거나 **sys.dm_db_rda_migration_status** 뷰를 쿼리할 수 있습니다. 자세한 내용은 [데이터 마이그레이션 모니터 및 문제 해결](../../sql-server/stretch-database/monitor-and-troubleshoot-data-migration-stretch-database.md) 또는 [sys.dm_db_rda_migration_status](../../relational-databases/system-dynamic-management-views/stretch-database-sys-dm-db-rda-migration-status.md)를 참조하세요.  
   
 3. 테이블에 적용할 필터 함수를 만듭니다.  
   
@@ -224,7 +229,7 @@ ALTER TABLE SensorTelemetry
             );   
     ```  
   
-## 날짜별로 행 필터링  
+## <a name="filter-rows-by-date"></a>날짜별로 행 필터링  
  다음 예제에서는 **date** 열에 2016년 1월 1일 이전 값이 포함된 행을 마이그레이션합니다.  
   
 ```tsql  
@@ -239,7 +244,7 @@ GO
   
 ```  
   
-## 상태 열의 값으로 행 필터링  
+## <a name="filter-rows-by-the-value-in-a-status-column"></a>상태 열의 값으로 행 필터링  
  다음 예제에서는 **status** 열에 지정된 값 중 하나가 포함된 행을 마이그레이션합니다.  
   
 ```tsql  
@@ -254,12 +259,12 @@ GO
   
 ```  
   
-## 슬라이딩 윈도우를 사용하여 행 필터링  
+## <a name="filter-rows-by-using-a-sliding-window"></a>슬라이딩 윈도우를 사용하여 행 필터링  
  슬라이딩 윈도우를 사용하여 행을 필터링하려면 필터 함수에 대한 다음 같은 요구 사항을 염두에 두어야 합니다.  
   
 -   함수는 명확해야 합니다. 따라서 시간이 지남에 따라 슬라이딩 윈도우를 자동으로 다시 계산하는 함수를 만들 수 없습니다.  
   
--   함수에서 스키마 바인딩을 사용합니다. 따라서 단순히 **ALTER FUNCTION**을 호출하여 슬라이딩 윈도우를 이동하는 방식으로 함수를 매일 “바로” 업데이트할 수 없습니다.  
+-   함수에서 스키마 바인딩을 사용합니다. 따라서 단순히 **ALTER FUNCTION** 을 호출하여 슬라이딩 윈도우를 이동하는 방식으로 함수를 매일 “바로” 업데이트할 수 없습니다.  
   
  다음 예제와 같이 **systemEndTime** 열에 2016년 1월 1일 이전 값이 포함된 행을 마이그레이션하는 필터 함수로 시작합니다.  
   
@@ -322,7 +327,7 @@ COMMIT ;
   
 ```  
   
-## 유효한 필터 함수의 추가 예제  
+## <a name="more-examples-of-valid-filter-functions"></a>유효한 필터 함수의 추가 예제  
   
 -   다음 예제에서는 AND 논리 연산자를 사용하여 두 개의 기본 조건을 결합합니다.  
   
@@ -395,7 +400,7 @@ COMMIT ;
   
     ```  
   
-## 유효하지 않은 필터 함수의 예제  
+## <a name="examples-of-filter-functions-that-arent-valid"></a>유효하지 않은 필터 함수의 예제  
   
 -   다음 함수는 명확하지 않은 변환을 포함하기 때문에 유효하지 않습니다.  
   
@@ -483,8 +488,8 @@ COMMIT ;
   
     ```  
   
-## 스트레치 데이터베이스에서 필터 함수를 적용하는 방법  
- 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어  
+## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database에서 필터 함수를 적용하는 방법  
+ Stretch Database는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어  
   
 ```tsql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -512,9 +517,9 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
 -   연산자 인수의 순서를 변경할 수 없습니다.  
   
--   `<, <=, >, >=` 비교의 일부인 상수 값만 함수를 덜 제한적으로 만드는 방식으로 변경할 수 있습니다.  
+-   `<, <=, >, >=`  비교의 일부인 상수 값만 함수를 덜 제한적으로 만드는 방식으로 변경할 수 있습니다.  
   
-### 유효한 바꾸기의 예제  
+### <a name="example-of-a-valid-replacement"></a>유효한 바꾸기의 예제  
  다음 함수를 현재 필터 함수라고 가정합니다.  
   
 ```tsql  
@@ -543,7 +548,7 @@ GO
   
 ```  
   
-### 유효하지 않은 바꾸기의 예제  
+### <a name="examples-of-replacements-that-arent-valid"></a>유효하지 않은 바꾸기의 예제  
  다음 함수는 새 날짜 상수(이전의 구분 날짜를 지정함)가 함수를 덜 제한적으로 만들지 않으므로 유효한 바꾸기가 아닙니다.  
   
 ```tsql  
@@ -587,8 +592,8 @@ GO
   
 ```  
   
-## 테이블에서 필터 함수 제거  
- 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**를 null로 설정하여 기존 함수를 제거합니다. 예를 들어  
+## <a name="remove-a-filter-function-from-a-table"></a>테이블에서 필터 함수 제거  
+ 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 예를 들어  
   
 ```tsql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -600,17 +605,18 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
   
  필터 함수를 제거한 후에는 테이블의 모든 행이 마이그레이션에 적합합니다. 따라서 나중에 동일한 테이블에 대해 필터 함수를 지정하려면 먼저 Azure에서 테이블에 대한 모든 원격 데이터를 다시 가져와야 합니다. 이 제한 사항은 새 필터 함수를 제공할 때 마이그레이션에 적합하지 않은 행이 Azure로 이미 마이그레이션된 상황을 방지하기 위한 것입니다.  
   
-## 테이블에 적용된 필터 함수 확인  
- 테이블에 적용된 필터 함수를 확인하려면 **sys.remote_data_archive_tables** 카탈로그 뷰를 열고 **filter_predicate** 열의 값을 확인합니다. 값이 null이면 전체 테이블이 보관에 적합합니다. 자세한 내용은 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../Topic/sys.remote_data_archive_tables%20\(Transact-SQL\).md)을 참조하세요.  
+## <a name="check-the-filter-function-applied-to-a-table"></a>테이블에 적용된 필터 함수 확인  
+ 테이블에 적용된 필터 함수를 확인하려면 **sys.remote_data_archive_tables** 카탈로그 뷰를 열고 **filter_predicate** 열의 값을 확인합니다. 값이 null이면 전체 테이블이 보관에 적합합니다. 자세한 내용은 [sys.remote_data_archive_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/stretch-database-catalog-views-sys-remote-data-archive-tables.md)을 참조하세요.  
   
-## 필터 함수에 대한 보안 정보  
+## <a name="security-notes-for-filter-functions"></a>필터 함수에 대한 보안 정보  
 db_owner 권한이 있는 손상된 계정은 다음 작업을 수행할 수 있습니다.  
   
 -   서버 리소스를 많이 사용하거나 장시간 대기하여 서비스 거부가 발생되게 하는 테이블 반환 함수를 만들어 적용합니다.  
   
 -   사용자의 읽기 권한이 명시적으로 거부된 테이블의 내용을 유추할 수 있게 하는 테이블 반환 함수를 만들어 적용합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   
+

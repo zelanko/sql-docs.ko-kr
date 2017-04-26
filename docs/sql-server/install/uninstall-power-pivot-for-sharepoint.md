@@ -1,23 +1,27 @@
 ---
-title: "SharePoint용 Power Pivot 제거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SharePoint용 파워 피벗 제거 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 caps.latest.revision: 27
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 27
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 861d60a66b9dc6d86b31aded956561fcdf1be6ff
+ms.lasthandoff: 04/11/2017
+
 ---
-# SharePoint용 Power Pivot 제거
+# <a name="uninstall-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 제거
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치 제거는 제거를 준비하고, 팜에서 기능과 솔루션을 제거하고, 프로그램 파일과 레지스트리 설정을 제거하는 작업으로 구성된 다단계 작업입니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
@@ -66,7 +70,7 @@ caps.handback.revision: 27
 ##  <a name="bkmk_remove"></a> 2단계: SharePoint에서 기능 및 솔루션 제거  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 SharePoint에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 및 응용 프로그램을 제거합니다.  
   
--   팜 관리자, Analysis Services 인스턴스의 서버 관리자 및 팜의 구성 데이터베이스의 **db_owner**여야 합니다.  
+-   팜 관리자, Analysis Services 인스턴스의 서버 관리자 및 팜의 구성 데이터베이스의 **db_owner** 여야 합니다.  
   
 -   SharePoint 버전에 대한 구성 도구의 해당 버전을 사용하세요. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 설치에는 이러한 도구를 사용하지 마세요.  
   
@@ -84,9 +88,9 @@ caps.handback.revision: 27
   
 4.  태스크 목록의 각 동작을 검토하여 각 동작이 수행하는 작업을 이해합니다.  
   
-     **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 제거**에는 서비스 응용 프로그램과 관련된 응용 프로그램 데이터를 삭제할 수 있는 옵션이 제공됩니다. 응용 프로그램 데이터는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용 데이터 및 기타 데이터를 저장하기 위해 서비스 응용 프로그램에서 만드는 SQL Server 데이터베이스입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 응용 프로그램 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 응용 프로그램 데이터베이스를 삭제할 수 있습니다.  
+     **제거 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 제거**에는 서비스 응용 프로그램과 관련된 응용 프로그램 데이터를 삭제할 수 있는 옵션이 제공됩니다. 응용 프로그램 데이터는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용 데이터 및 기타 데이터를 저장하기 위해 서비스 응용 프로그램에서 만드는 SQL Server 데이터베이스입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 응용 프로그램 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 응용 프로그램 데이터베이스를 삭제할 수 있습니다.  
   
-     데이터베이스를 삭제하려면 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 제거**를 선택한 다음 **이 서비스 응용 프로그램에 연결된 응용 프로그램 데이터를 삭제합니다.**를 선택합니다.  
+     데이터베이스를 삭제하려면 **제거 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 제거** 를 선택한 다음 **이 서비스 응용 프로그램에 연결된 응용 프로그램 데이터를 삭제합니다.**를 제거하려면 Analysis Services 시스템 관리자 및 로컬 Administrators 그룹의 구성원이어야 합니다.  
   
 5.  필요한 경우 **출력** 탭 또는 **스크립트** 탭에서 자세한 정보를 검토합니다.  
   
@@ -112,7 +116,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  큐에 이미 있는 배포 또는 취소 작업을 찾아서 제거하려면 다음을 수행합니다.  
   
-1.  다른 모든 오류에 대해서는 ULS 로그를 확인합니다. 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)를 참조하세요.  
+1.  다른 모든 오류에 대해서는 ULS 로그를 확인합니다. 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)를 참조하세요.  
   
 2.  SharePoint 관리 셸을 관리자 권한으로 시작하고 다음 명령을 실행하여 큐에 있는 작업을 봅니다.  
   
@@ -122,7 +126,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  기존 배포에서 **유형** 이 취소 또는 배포인지, **파일** 이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
   
-4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션에 관련된 배포 또는 취소의 경우 **JobId**의 GUID 값을 복사하여 다음 명령에 붙여넣습니다(셸의 편집 메뉴에서 표시, 복사 및 붙여넣기 명령을 사용하여 GUID 복사).  
+4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션에 관련된 배포 또는 취소의 경우 **JobId** 의 GUID 값을 복사하여 다음 명령에 붙여넣습니다(셸의 편집 메뉴에서 표시, 복사 및 붙여넣기 명령을 사용하여 GUID 복사).  
   
     ```  
     Stsadm –o canceldeployment –id “<GUID>”  
@@ -133,11 +137,11 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
  PowerShell을 사용하여 팜에서 기능과 솔루션을 제거할 수도 있습니다. 자세한 내용은 [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)를 참조하세요.  
   
 ##  <a name="bkmk_uninstall"></a> 3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거  
- 프로그램 파일을 삭제하려면 소프트웨어를 제거하기 위해 SQL Server 설치 프로그램을 실행해야 합니다. 제거하면 설치 프로그램에서 생성된 파일과 레지스트리 항목이 모두 제거됩니다. 프로그램 및 기능 페이지를 사용하여 소프트웨어를 제거할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]은 SQL Server를 설치할 때 함께 설치됩니다.  
+ 프로그램 파일을 삭제하려면 소프트웨어를 제거하기 위해 SQL Server 설치 프로그램을 실행해야 합니다. 제거하면 설치 프로그램에서 생성된 파일과 레지스트리 항목이 모두 제거됩니다. 프로그램 및 기능 페이지를 사용하여 소프트웨어를 제거할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 SQL ServeR을 설치할 때 함께 설치됩니다.  
   
  이미 설치된 다른 SQL Server 인스턴스(또는 동일한 인스턴스의 기능)에 영향을 주지 않고 설치 일부를 제거할 수 있습니다. 예를 들어 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , 데이터베이스 엔진 등의 다른 인스턴스는 설치된 상태로 두고 SharePoint용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 제거할 수 있습니다.  
   
-1.  프로그램 목록에서 **Microsoft SQL Server 2014(64비트)**를 선택합니다.  
+1.  프로그램 목록에서 **Microsoft SQL Server 2014(64비트)** 를 선택합니다.  
   
 2.  **제거/변경**을 클릭합니다.  
   
@@ -146,7 +150,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      설치 프로그램에서 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 인스턴스를 선택한 다음 **Analysis Services** 및 **Analysis Services SharePoint 통합** 을 선택하여 해당 기능만 제거하고 나머지 모든 기능을 그대로 둘 수 있습니다.  
   
 ##  <a name="bkmk_addin"></a> 4단계: SharePoint용 Power Pivot 추가 기능 제거  
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 설치에 대한 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 제거하려면 Analysis Services 시스템 관리자 및 로컬 Administrators 그룹의 구성원이어야 합니다.  
   
 ##  <a name="verify"></a> 5단계: 제거 확인  
   
@@ -179,7 +183,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  보안 저장소 서비스에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에 사용되는 저장된 자격 증명이 있는 모든 대상 응용 프로그램을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 제거할 때 삭제됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정에 대해 만든 대상 응용 프로그램 및 데이터 새로 고침을 위해 만든 모든 대상 응용 프로그램은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
   
-     반면, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스에 의해 자동 생성된 개별 대상 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]을 제거할 때 자동으로 삭제됩니다.  
+     반면, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스에 의해 자동 생성된 개별 대상 응용 프로그램은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 제거할 때 자동으로 삭제됩니다.  
   
 4.  제어판에서 **프로그램**, **프로그램 제거** 를 차례로 클릭합니다. 더 이상 사용되지 않는 모든 Analysis Services 클라이언트 라이브러리를 제거합니다. Analysis Services ADOMD.NET 및 Microsoft SQL Server Analysis Management Objects는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 제거할 때 제거되지 않습니다. 이러한 라이브러리는 Analysis Services 데이터를 사용하는 다른 프로그램에서 사용할 수 있으므로 SQL Server 설치 프로그램이 자동으로 제거하지 않습니다. 더 이상 필요하지 않은 경우 클라이언트 라이브러리를 개별적으로 제거해야 합니다.  
   
@@ -187,8 +191,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      Analysis Services OLE DB 공급자를 제거하지 마세요. SharePoint는 OLE DB 공급자를 Analysis Services 데이터베이스에 연결하는 Excel 통합 문서의 필수 구성 요소로 설치합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에서 최신 버전을 설치하지만 이 버전은 이전 버전과 호환되므로 나중에 데이터 연결 문제를 피하려면 OLE DB 공급자를 시스템에 그대로 두어야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [파워 피벗 구성 도구](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
   
+

@@ -1,35 +1,39 @@
 ---
-title: "인덱스 옵션 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ALLOW_ROW_LOCKS 옵션"
-  - "SORT_IN_TEMPDB 옵션"
-  - "DROP_EXISTING 절"
-  - "큰 데이터, 인덱스"
-  - "PAD_INDEX"
-  - "STATISTICS_NORECOMPUTE"
-  - "MAXDOP 인덱스 옵션, 설정"
-  - "인덱스 옵션 [SQL Server]"
-  - "MAXDOP 인덱스 옵션"
-  - "IGNORE_DUP_KEY 옵션"
-  - "ALLOW_PAGE_LOCKS 옵션"
-  - "ONLINE"
+title: "인덱스 옵션 설정 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ALLOW_ROW_LOCKS option
+- SORT_IN_TEMPDB option
+- DROP_EXISTING clause
+- large data, indexes
+- PAD_INDEX
+- STATISTICS_NORECOMPUTE
+- MAXDOP index option, setting
+- index options [SQL Server]
+- MAXDOP index option
+- IGNORE_DUP_KEY option
+- ALLOW_PAGE_LOCKS option
+- ONLINE
 ms.assetid: 7969af33-e94c-41f7-ab89-9d9a2747cd5c
 caps.latest.revision: 44
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6cd0050887729a84dfa637ce86e51b5edcc8ee45
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 옵션 설정
+# <a name="set-index-options"></a>인덱스 옵션 설정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스 속성을 수정하는 방법에 대해 설명합니다.  
@@ -63,7 +67,7 @@ caps.handback.revision: 44
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 테이블 디자이너에서 인덱스 속성을 수정하려면  
+#### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>테이블 디자이너에서 인덱스 속성을 수정하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스 속성을 수정할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 44
   
 8.  **파일** 메뉴에서 *table_name* **저장**을 선택합니다.  
   
-#### 개체 탐색기에서 인덱스 속성을 수정하려면  
+#### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>개체 탐색기에서 인덱스 속성을 수정하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스 속성을 수정할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -97,11 +101,11 @@ caps.handback.revision: 44
   
 7.  속성의 설정을 변경하여 인덱스를 사용자 지정합니다.  
   
-8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 - ** *index_name* 대화 상자에서 **일반** 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.  
+8.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성 -**  **일반** *일반* 페이지를 선택합니다. 자세한 내용은 [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 테이블에 있는 모든 인덱스의 속성을 보려면  
+#### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>테이블에 있는 모든 인덱스의 속성을 보려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -135,7 +139,7 @@ caps.handback.revision: 44
   
     ```  
   
-#### 인덱스의 속성을 설정하려면  
+#### <a name="to-set-the-properties-of-an-index"></a>인덱스의 속성을 설정하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 44
  자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
   
+

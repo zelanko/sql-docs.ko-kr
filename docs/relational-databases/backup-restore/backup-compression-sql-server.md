@@ -1,29 +1,33 @@
 ---
-title: "백업 압축(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 전달 [SQL Server], 백업 압축"
-  - "백업 압축 [SQL Server], 백업 압축 정보"
-  - "압축 [SQL Server], 백업 압축"
-  - "백업 [SQL Server], 압축"
-  - "백업 [SQL Server], 백업 압축"
-  - "백업 압축 [SQL Server]"
+title: "백업 압축(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], backup compression
+- backup compression [SQL Server], about backup compression
+- compression [SQL Server], backup compression
+- backups [SQL Server], compression
+- backing up [SQL Server], backup compression
+- backup compression [SQL Server]
 ms.assetid: 05bc9c4f-3947-4dd4-b823-db77519bd4d2
 caps.latest.revision: 51
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 08936c44013d5494c72500f3230a1c90da1e4325
+ms.lasthandoff: 04/11/2017
+
 ---
-# 백업 압축(SQL Server)
+# <a name="backup-compression-sql-server"></a>백업 압축(SQL Server)
   이 항목에서는 제한 사항, 백업 압축이 성능에 미치는 영향, 백업 압축의 구성 및 압축 비율을 비롯하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업의 압축에 대해 설명합니다.  백업 압축은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전: Enterprise, Standard 및 Developer에서 지원됩니다.  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 모든 버전에서는 압축된 백업을 복원할 수 있습니다. 
  
   
@@ -39,27 +43,27 @@ caps.handback.revision: 51
   
 -   압축된 백업과 압축되지 않은 백업은 미디어 세트에 동시에 존재할 수 없습니다.  
   
--   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 압축된 백업을 읽을 수 없습니다.  
+-   이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 압축된 백업을 읽을 수 없습니다.  
   
 -   NTbackup은 압축된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업과 테이프를 공유할 수 없습니다.  
   
   
 ##  <a name="PerfImpact"></a> 백업 압축이 성능에 미치는 영향  
- 기본적으로 압축하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 [리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)을 참조하세요.  
+ 기본적으로 압축하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.  
   
  백업 I/O 성능을 손쉽게 확인하려면 다음과 같은 성능 카운터를 평가하여 백업 I/O를 장치로 격리하거나 장치에서 격리하면 됩니다.  
   
 -   물리적 디스크 카운터 등의 Windows I/O 성능 카운터  
   
--   [SQLServer:Backup Device](../../relational-databases/performance-monitor/sql-server-backup-device-object.md) 개체의 **Device Throughput Bytes/sec** 카운터  
+-   **SQLServer:Backup Device** 개체의 [Device Throughput Bytes/sec](../../relational-databases/performance-monitor/sql-server-backup-device-object.md) 카운터  
   
--   [SQLServer:Databases](../../relational-databases/performance-monitor/sql-server-databases-object.md) 개체의 **Backup/Restore Throughput/sec** 카운터  
+-   **SQLServer:Databases** 개체의 [Backup/Restore Throughput/sec](../../relational-databases/performance-monitor/sql-server-databases-object.md) 카운터  
   
  Windows 카운터에 대한 자세한 내용은 Windows 도움말을 참조하십시오. SQL Server 카운터로 작업하는 방법은 [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
   
    
 ##  <a name="CompressionRatio"></a> 압축된 백업의 압축 비율 계산  
- 백업의 압축 비율을 계산하려면 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 기록 테이블의 **backup_size** 및 **compressed_backup_size** 열에서 백업의 값을 다음과 같이 사용합니다.  
+ 백업의 압축 비율을 계산하려면 **backupset** 기록 테이블의 **backup_size** 및 [compressed_backup_size](../../relational-databases/system-tables/backupset-transact-sql.md) 열에서 백업의 값을 다음과 같이 사용합니다.  
   
  **backup_size**:**compressed_backup_size**  
   
@@ -99,14 +103,15 @@ SELECT backup_size/compressed_backup_size FROM msdb..backupset;
   
 -   [backup compression default 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
--   [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
+-   [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
 -   [DBCC TRACEON&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
   
 -   [DBCC TRACEOFF&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
- [추적 플래그&#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)  
+ [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
   
   
+

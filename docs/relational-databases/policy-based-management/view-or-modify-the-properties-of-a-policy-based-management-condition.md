@@ -1,26 +1,30 @@
 ---
-title: "정책 기반 관리 조건의 속성 보기 또는 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "정책 기반 관리, 정책 조건 보기"
-  - "정책 기반 관리, 정책 조건 수정"
+title: "정책 기반 관리 조건의 속성 보기 또는 수정 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, view policy conditions
+- Policy-Based Management, modify policy conditions
 ms.assetid: 890d7384-8444-4767-bb6f-f5debb155747
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cac543a91282a6329e44c297d56a9550b18f4681
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 기반 관리 조건의 속성 보기 또는 수정
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리 조건의 속성을 보거나 수정하는 방법에 대해 설명합니다.  
+# <a name="view-or-modify-the-properties-of-a-policy-based-management-condition"></a>정책 기반 관리 조건의 속성 보기 또는 수정
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리 조건의 속성을 보거나 수정하는 방법에 대해 설명합니다.  
   
 
   
@@ -33,7 +37,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 조건의 속성을 보거나 수정하려면  
+#### <a name="to-view-or-modify-a-conditions-properties"></a>조건의 속성을 보거나 수정하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 보거나 수정하려는 조건이 들어 있는 서버를 확장합니다.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 11
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 조건의 속성을 보려면  
+#### <a name="to-view-a-conditions-properties"></a>조건의 속성을 보려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -74,3 +78,4 @@ caps.handback.revision: 11
  자세한 내용은 [syspolicy_conditions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md)을 참조하세요.  
   
   
+

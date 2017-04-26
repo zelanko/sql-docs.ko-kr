@@ -1,23 +1,27 @@
 ---
-title: "SQL Server에서 확장 이벤트에 대한 대상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server에서 확장 이벤트에 대한 대상 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 caps.latest.revision: 2
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 2
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 66e1984acfa86bea31f2cedbea70dbac5195a090
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server에서 확장 이벤트에 대한 대상
+# <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -27,13 +31,13 @@ caps.handback.revision: 2
 - 매개 변수(쉽게 이해되는 매개 변수는 제외)
 
 
-#### XQuery 예제
+#### <a name="xquery-example"></a>XQuery 예제
 
 
-[ring_buffer 섹션](#h2_target_ring_buffer)에는 XML 문자열을 관계형 행 집합에 복사할 수 있는 [Transact-SQL의 XQuery](../../xquery/xquery-language-reference-sql-server.md)를 사용하는 예제가 포함되어 있습니다.
+[ring_buffer 섹션](#h2_target_ring_buffer) 에는 XML 문자열을 관계형 행 집합에 복사할 수 있는 [Transact-SQL의 XQuery](../../xquery/xquery-language-reference-sql-server.md) 를 사용하는 예제가 포함되어 있습니다.
 
 
-### 필수 구성 요소
+### <a name="prerequisites"></a>필수 구성 요소
 
 
 - [빠른 시작: SQL Server에서 확장 이벤트](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)에서 설명한 대로 확장 이벤트의 기본 사항에 대해 일반적으로 잘 알고 있어야 합니다.
@@ -43,16 +47,16 @@ caps.handback.revision: 2
     - [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)
 
 
-- [출력 데이터를 간편하게 볼 수 있도록](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md) SSMS.exe에서 **개체 탐색기**를 사용하여 이벤트 세션에서 대상 노드를 마우스 오른쪽 단추로 클릭하는 방법을 알고 있어야 합니다.
+- **출력 데이터를 간편하게 볼 수 있도록** SSMS.exe에서 [개체 탐색기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 사용하여 이벤트 세션에서 대상 노드를 마우스 오른쪽 단추로 클릭하는 방법을 알고 있어야 합니다.
     - 이벤트 데이터는 XML 문자열로 캡처됩니다. 하지만 이 문서에서 데이터는 관계형 행으로 표시됩니다. 데이터 확인을 위해 SSMS가 사용되었고 복사되어 이 문서에 붙여 넣었습니다.
     - XML에서 행 집합을 생성하는 데 필요한 다른 T-SQL 기술에 대해서는 [ring_buffer 섹션](#h2_target_ring_buffer)에서 설명합니다. XQuery도 포함됩니다.
 
 
 
-## 매개 변수, 작업 및 필드
+## <a name="parameters-actions-and-fields"></a>매개 변수, 작업 및 필드
 
 
-Transact-SQL에서 [CREATE EVENT SESSION](CREATE EVENT SESSION %28Transact-SQL%29.md) 문은 확장 이벤트의 핵심입니다. 문을 작성하려면 다음 목록과 설명이 필요합니다.
+Transact-SQL에서 [CREATE EVENT SESSION](~/t-sql/statements/create-event-session-transact-sql.md) 문은 확장 이벤트의 핵심입니다. 문을 작성하려면 다음 목록과 설명이 필요합니다.
 
 - 선택한 이벤트와 연결된 필드.
 - 선택한 대상과 연결된 매개 변수.
@@ -71,7 +75,7 @@ Transact-SQL에서 [CREATE EVENT SESSION](CREATE EVENT SESSION %28Transact-SQL%2
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## etw_classic_sync_target 대상
+## <a name="etwclassicsynctarget-target"></a>etw_classic_sync_target 대상
 
 
 SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동하여 시스템 작업을 모니터링할 수 있습니다. 참조 항목:
@@ -80,18 +84,17 @@ SQL Server 확장 이벤트는 ETW(Windows용 이벤트 추적)와 함께 작동
 - [확장 이벤트를 사용하여 시스템 작업 모니터링](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)
 
 
-이 ETW 대상은 수신되는 데이터를 *동기적으로* 처리하는 반면 대부분 대상은 *비동기적으로* 처리합니다.
+이 ETW 대상은 수신되는 데이터를 *동기적으로* 처리하는 반면 대부분 대상은 *비동기적으로*처리합니다.
 
 
-\<!--
-Revisit this ETW section later.
+\<!-- 나중에 이 ETW 섹션을 다시 확인합니다.
 -->
 
 
 
 <a name="h2_target_event_counter"></a>
 
-## event_counter 대상
+## <a name="eventcounter-target"></a>event_counter 대상
 
 
 event_counter 대상은 단순히 지정된 각 이벤트 발생 횟수를 계산합니다.
@@ -104,10 +107,10 @@ event_counter 대상은 단순히 지정된 각 이벤트 발생 횟수를 계�
 
 - 대부분의 대상과 달리 event_counter 대상은 수신되는 데이터를 *동기적으로* 처리합니다.
     - event_counter는 처리와 거의 연관되지 않기 때문에 단순 event_counter에 대해 동기 처리가 허용됩니다.
-    - 데이터베이스 엔진은 속도가 너무 느리고 그로 인해 데이터베이스 엔진의 성능을 저하시키는 대상으로부터 연결이 끊어집니다. 이러한 이유로 대부분의 대상은 *비동기적으로* 처리합니다.
+    - 데이터베이스 엔진은 속도가 너무 느리고 그로 인해 데이터베이스 엔진의 성능을 저하시키는 대상으로부터 연결이 끊어집니다. 이러한 이유로 대부분의 대상은 *비동기적으로*처리합니다.
 
 
-#### event_counter에서 캡처된 출력 예제
+#### <a name="example-output-captured-by-eventcounter"></a>event_counter에서 캡처된 출력 예제
 
 
 ```
@@ -139,20 +142,20 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## event_file 대상
+## <a name="eventfile-target"></a>event_file 대상
 
 
 **event_file** 대상은 버퍼에서 디스크 파일로 이벤트 세션 출력을 작성합니다.
 
 
 - *filename=* 매개 변수는 ADD TARGET 절에 지정합니다.
-    - **.xel**은 파일의 확장명이어야 합니다.
+    - **.xel** 은 파일의 확장명이어야 합니다.
 
 
 - 선택한 파일 이름은 시스템에서 date-time 기반 긴 정수가 추가되는 접두사로 사용되며, 이어서 .xel 확장이 나타납니다.
 
 
-#### **event_file** 대상을 사용하는 CREATE EVENT SESSION
+#### <a name="create-event-session-with-eventfile-target"></a>**event_file** 대상을 사용하는 CREATE EVENT SESSION
 
 
 다음은 테스트에 사용된 CREATE EVENT SESSION입니다. ADD TARGET 절 중 하나는 event_file를 지정합니다.
@@ -204,7 +207,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### sys.fn_xe_file_target_read_file 함수
+#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file 함수
 
 
 event_file 대상은 수신되는 데이터를 사람이 읽을 수 없는 이진 형식으로 저장합니다. Transact-SQL에서는 [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) 기능에서 선택하여 .xel 파일의 내용을 보고할 수 있습니다.
@@ -223,7 +226,7 @@ SELECT f.*
 ```
 
 
-SQL Server **2014** 이상의 경우 다음과 유사한 SELECT에서 데이터를 보고합니다. SQL Server 2014 이후부터 .xem 파일이 더 이상 사용되지 않습니다.
+SQL Server **2014**이상의 경우 다음과 유사한 SELECT에서 데이터를 보고합니다. SQL Server 2014 이후부터 .xem 파일이 더 이상 사용되지 않습니다.
 
 
 ```
@@ -240,7 +243,7 @@ SELECT f.*
 물론 .xel 데이터를 보려면 SSMS UI를 수동으로 사용할 수도 있습니다.
 
 
-#### event_file 대상에 저장된 데이터
+#### <a name="data-stored-in-the-eventfile-target"></a>event_file 대상에 저장된 데이터
 
 
 다음은 SQL Server 2016의 **sys.fn_xe_file_target_read_file**에서 선택한 보고서입니다.
@@ -249,15 +252,15 @@ SELECT f.*
 ```
 module_guid                            package_guid                           object_name     event_data                                                                                                                                                                                                                                                                                          file_name                                                      file_offset
 -----------                            ------------                           -----------     ----------                                                                                                                                                                                                                                                                                          ---------                                                      -----------
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
-D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value><![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_acquired   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-07T20:13:35.827Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
+D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lock_released   <event name="lock_released" package="sqlserver" timestamp="2016-08-07T20:13:35.832Z"><action name="transaction_id" package="sqlserver"><value>39194</value></action><action name="sql_text" package="sqlserver"><value>\<![CDATA[  select top 1 * from dbo.T_Target;  ]]></value></action></event>   C:\junk\locks_acq_rel_eventfile_22-_0_131150744126230000.xel   11776
 ```
 
 
 
 <a name="h2_target_histogram"></a>
 
-## 히스토그램 대상
+## <a name="histogram-target"></a>히스토그램 대상
 
 
 **히스토그램** 대상은 event_counter 대상을 보다 더 세분화됩니다. 히스토그램에서는 다음을 수행할 수 있습니다.
@@ -280,12 +283,12 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   lo
 - 예를 들어 slots= 59이면 반올림되어 최대 64가 됩니다.
 
 
-### 히스토그램에 대한 *작업* 예제
+### <a name="action-example-for-histogram"></a>히스토그램에 대한*작업* 예제
 
 
 TARGET...SET 절에서 다음 Transact-SQL CREATE EVENT SESSION 문은 **source_type = 1**의 대상 매개 변수 할당을 지정합니다. 1은 히스토그램 대상에서 작업을 추적했음을 의미합니다.
 
-현재 예에서 EVENT...ACTION 절이 제공되면 선택하는 대상(**sqlos.system_thread_id**)에 대한 작업 하나만 제공됩니다. TARGET...SET 절에는 **source=N'sqlos.system_thread_id'** 할당이 표시됩니다.
+현재 예에서 EVENT...ACTION 절이 제공되면 선택하는 대상( **sqlos.system_thread_id**)에 대한 작업 하나만 제공됩니다. TARGET...SET 절에는 **source=N'sqlos.system_thread_id'** 할당이 표시됩니다.
 
 - 원본 작업을 하나 이상 추적할 수 있도록 CREATE EVENT SESSION 문에 두 번째 히스토그램 대상을 추가할 수 있습니다.
 
@@ -310,7 +313,7 @@ CREATE EVENT SESSION [histogram_lockacquired]
         )
     WITH
         (
-        <.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
+        \<.... (For brevity, numerous parameter assignments generated by SSMS.exe are not shown here.) ....>
         );
 ```
 
@@ -330,7 +333,7 @@ value   count
 ```
 
 
-#### 사용 가능한 작업을 검색하는 SELECT
+#### <a name="select-to-discover-available-actions"></a>사용 가능한 작업을 검색하는 SELECT
 
 
 [C.3](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_3_select_all_available_objects) SELECT 문에서는 CREATE EVENT SESSION 문에서 지정하는 데 시스템에서 사용할 수 있는 작업을 찾을 수 있습니다. WHERE 절에서 먼저 **o.name LIKE** 필터를 관심 있는 작업과 일치하도록 편집합니다.
@@ -349,10 +352,10 @@ sqlserver      create_dump_single_thread   Create mini dump for the current thre
 ```
 
 
-### 히스토그램에 대한 이벤트 *필드* 예제
+### <a name="event-field-example-for-histogram"></a>히스토그램에 대한 이벤트 *필드* 예제
 
 
-다음 예제에서는 **source_type = 0**을 설정합니다. **source=**에 할당된 값은 이벤트 필드(작업 아님)입니다.
+다음 예제에서는 **source_type = 0**을 설정합니다. **source=** 에 할당된 값은 이벤트 필드(작업 아님)입니다.
 
 
 
@@ -368,7 +371,7 @@ CREATE EVENT SESSION [histogram_checkpoint_dbid]
         source_type          = (0)
     )
     WITH
-    ( <....> );
+    ( \<....> );
 ```
 
 
@@ -384,7 +387,7 @@ value   count
 ```
 
 
-#### 선택한 이벤트에 사용 가능한 필드를 검색하는 SELECT
+#### <a name="select-to-discover-available-fields-on-your-chosen-event"></a>선택한 이벤트에 사용 가능한 필드를 검색하는 SELECT
 
 
 [C.4](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields) SELECT 문은 선택할 수 있는 이벤트 필드를 보여 줍니다. 먼저 **o.name LIKE** 필터를 선택한 이벤트 이름으로 편집합니다.
@@ -403,7 +406,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## pair_matching 대상
+## <a name="pairmatching-target"></a>pair_matching 대상
 
 
 pair_matching 대상에서는 해당 종료 이벤트없이 발생하는 시작 이벤트를 검색할 수 있습니다. 예를 들어, lock_acquired 이벤트가 발생하지만 이와 일치하는 lock_released 이벤트가 그다음에 적절히 수행되지 않으면 문제일 수 있습니다.
@@ -412,10 +415,10 @@ pair_matching 대상에서는 해당 종료 이벤트없이 발생하는 시작 
 시스템은 자동으로 시작 및 종료 이벤트를 일치시키지 않습니다. 대신 CREATE EVENT SESSION 문에서 시스템 일치에 대해 설명합니다. 시작 및 종료 이벤트가 일치하면 일치 하지 않는 시작 이벤트에 집중할 수 있도록 해당 쌍은 삭제됩니다.
 
 
-#### 시작 및 종료 이벤트 쌍에 대해 일치 가능한 필드 찾기
+#### <a name="finding-matchable-fields-for-the-start-and-end-event-pair"></a>시작 및 종료 이벤트 쌍에 대해 일치 가능한 필드 찾기
 
 
-[C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields)를 사용하여 lock_acquired 이벤트에 대한 약 16개 필드가 다음 행 집합으로 표시합니다. 여기에 표시되는 행 집합은 예제에서 일치시킨 필드를 보여주도록 수동으로 분리되었습니다. 일부 필드는 두 이벤트의 **기간**의 경우와 같이 의미없이 일치를 시도했습니다.
+[C.4 SELECT](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md#section_C_4_data_fields)를 사용하여 lock_acquired 이벤트에 대한 약 16개 필드가 다음 행 집합으로 표시합니다. 여기에 표시되는 행 집합은 예제에서 일치시킨 필드를 보여주도록 수동으로 분리되었습니다. 일부 필드는 두 이벤트의 **기간** 의 경우와 같이 의미없이 일치를 시도했습니다.
 
 
 ```
@@ -441,10 +444,10 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### pair_matching 예
+### <a name="example-of-pairmatching"></a>pair_matching 예
 
 
-다음 CREATE EVENT SESSION 문을 두 이벤트와 두 대상을 지정합니다. pair_matching 대상에서는 이벤트가 일치하는 두 필드 집합을 쌍으로 지정합니다. **begin_matching_columns=** 및 **end_matching_columns=**에 할당된 쉼표로 구분된 필드 순서는 동일해야 합니다. 쉼표로 구분된 값에서 언급된 필드 사이에는 탭이나 줄 바꿈이 허용되지 않습니다. 공백은 허용됩니다.
+다음 CREATE EVENT SESSION 문을 두 이벤트와 두 대상을 지정합니다. pair_matching 대상에서는 이벤트가 일치하는 두 필드 집합을 쌍으로 지정합니다. **begin_matching_columns=** 및 **end_matching_columns=** 에 할당된 쉼표로 구분된 필드 순서는 동일해야 합니다. 쉼표로 구분된 값에서 언급된 필드 사이에는 탭이나 줄 바꿈이 허용되지 않습니다. 공백은 허용됩니다.
 
 결과 범위를 좁히기 위해 먼저 테스트 테이블의 object_id를 찾을 수 있도록 sys.objects에서 선택했습니다. EVENT...WHERE 절에 해당하는 ID 하나에 대한 필터를 추가했습니다.
 
@@ -539,7 +542,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 
 <a name="h2_target_ring_buffer"></a>
 
-## ring_buffer 대상
+## <a name="ringbuffer-target"></a>ring_buffer 대상
 
 
 ring_buffer 대상은 빠르고 간단한 이벤트 테스트에 유용합니다. 이벤트 세션을 중지하면 저장된 출력이 삭제됩니다.
@@ -547,7 +550,7 @@ ring_buffer 대상은 빠르고 간단한 이벤트 테스트에 유용합니다
 이 ring_buffer 섹션에서는 XQuery의 Transact-SQL 구현을 사용하여 ring_buffer의 XML 콘텐츠를 보다 읽기 쉬운 관계형 행 집합에 복사하는 방법도 알 수 있습니다.
 
 
-#### ring_buffer를 사용하는 CREATE EVENT SESSION
+#### <a name="create-event-session-with-ringbuffer"></a>ring_buffer를 사용하는 CREATE EVENT SESSION
 
 
 이 CREATE EVENT SESSION 문에서 특별한 것은 없습니다. ring_buffer 대상이 사용됩니다.
@@ -581,7 +584,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### ring_buffer에서 lock_acquired에 대해 수신한 XML 출력
+### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>ring_buffer에서 lock_acquired에 대해 수신한 XML 출력
 
 
 SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩니다. 이 테스트의 경우 ring_buffer 대상에서 저장한 XML 문자열은 다음과 같이 나타납니다. 그러나 다음 XML을 간략하게 표현하기 위해 2개의 &#x3c;event&#x3e; 요소를 제외하고는 모두 지웠습니다. 또한 각 &#x3c;event&#x3e;에서 불필요한 &#x3c;data&#x3e; 요소도 삭제되었습니다.
@@ -593,7 +596,7 @@ SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -617,18 +620,18 @@ SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
   <event name="lock_acquired" package="sqlserver" timestamp="2016-08-05T23:59:56.012Z">
     <data name="mode">
       <type name="lock_mode" package="sqlserver"></type>
       <value>1</value>
-      <text><![CDATA[SCH_S]]></text>
+      <text>\<![CDATA[SCH_S]]></text>
     </data>
     <data name="transaction_id">
       <type name="int64" package="package0"></type>
@@ -652,11 +655,11 @@ SELECT 문에서 검색할 때 콘텐츠는 XML 문자열 형식으로 표시됩
     </data>
     <data name="database_name">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[]]></value>
+      <value>\<![CDATA[]]></value>
     </data>
     <action name="database_name" package="sqlserver">
       <type name="unicode_string" package="package0"></type>
-      <value><![CDATA[InMemTest2]]></value>
+      <value>\<![CDATA[InMemTest2]]></value>
     </action>
   </event>
 </RingBufferTarget>
@@ -692,7 +695,7 @@ SELECT * FROM #XmlAsTable;
 ```
 
 
-### 행 집합으로 XML을 표시하는 XQuery
+### <a name="xquery-to-see-the-xml-as-a-rowset"></a>행 집합으로 XML을 표시하는 XQuery
 
 
 이전 XML을 관계형 행 집합으로 보려면 다음 T-SQL을 실행하여 위의 SELECT 문에서 계속 진행합니다. 주석 처리된 줄은 각각 XQuery 사용에 대해 설명합니다.
@@ -723,7 +726,7 @@ SELECT
 ```
 
 
-#### 이전 SELECT의 XQuery 메모
+#### <a name="xquery-notes-from-preceding-select"></a>이전 SELECT의 XQuery 메모
 
 
 (A)
@@ -749,7 +752,7 @@ SELECT
 - 이전 FROM 절에서 반환된 XML에 적용됩니다.
 
 
-#### XQuery SELECT 출력
+#### <a name="output-from-xquery-select"></a>XQuery SELECT 출력
 
 
 다음은 XQuery가 포함된 이전 T-SQL에서 생성된 행 집합입니다.
@@ -764,7 +767,7 @@ OccurredDtTm              Mode    DatabaseName
 
 
 
-## XEvent.NET 네임스페이스 및 C&#x23;
+## <a name="xevent-net-namespaces-and-cx23"></a>XEvent.NET 네임스페이스 및 C&#x23;
 
 
 Package0에는 대상이 2개이지만 Transact-SQL에서 사용할 수 없습니다.
@@ -773,18 +776,21 @@ Package0에는 대상이 2개이지만 Transact-SQL에서 사용할 수 없습�
 - event_stream
 
 
-T-SQL에서 이러한 두 대상을 사용할 수 없다고 알게 되는 방법 중 한 가지는 열 *sys.dm_xe_objects.capabilities*에서 null이 아닌 값에 비트 0x1이 포함되지 않았다는 것입니다.
+T-SQL에서 이러한 두 대상을 사용할 수 없다고 알게 되는 방법 중 한 가지는 열 *sys.dm_xe_objects.capabilities* 에서 null이 아닌 값에 비트 0x1이 포함되지 않았다는 것입니다.
 
 
 event_stream 대상은 C#과 같은 언어로 작성 된.NET 프로그램에서 사용할 수 있습니다. C# 및 다른.NET 개발자들은 .NET Framework 클래스(예: 네임스페이스 Microsoft.SqlServer.XEvents.Linq)를 통해 이벤트 스트림에 액세스할 수 있습니다.
 
-오류가 발생하는 경우 **25726**은 이벤트 스트림이 클라이언트에서 데이터를 사용하는 것보다 빨리 데이터를 채웠음을 의미합니다. 이로 인해 데이터베이스 엔진은 서버 성능 속도 방지를 위해 이벤트 스트림에서 연결을 끊습니다.
+오류가 발생하는 경우 **25726** 은 이벤트 스트림이 클라이언트에서 데이터를 사용하는 것보다 빨리 데이터를 채웠음을 의미합니다. 이로 인해 데이터베이스 엔진은 서버 성능 속도 방지를 위해 이벤트 스트림에서 연결을 끊습니다.
 
 
-### XEvent 네임스페이스
+### <a name="xevent-namespaces"></a>XEvent 네임스페이스
 
 
 - [Microsoft.SqlServer.Management.XEvent 네임스페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.management.xevent.aspx)
 
 - [Microsoft.SqlServer.XEvent.Linq 네임스페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.xevent.linq.aspx)
+
+
+
 

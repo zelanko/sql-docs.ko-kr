@@ -1,25 +1,29 @@
 ---
-title: "데이터베이스를 데이터베이스 스냅숏으로 되돌리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 스냅숏 [SQL Server], 되돌리기"
-  - "데이터베이스 되돌리기"
+title: "데이터베이스를 데이터베이스 스냅숏으로 되돌리기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], reverting to
+- reverting databases
 ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 caps.latest.revision: 58
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7af090ce5354c1cf7a255a80d8f2f6ca1da48405
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스를 데이터베이스 스냅숏으로 되돌리기
+# <a name="revert-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅숏으로 되돌리기
   온라인 데이터베이스의 데이터가 손상되면 일부 경우 데이터베이스를 손상 발생 이전의 데이터베이스 스냅숏으로 되돌리는 작업이 백업에서 온라인 데이터베이스를 복원하는 방법에 대한 대체 방법이 될 수 있습니다. 예를 들어 데이터베이스 되돌리기 작업은 테이블 삭제와 같은 최근의 심각한 사용자 오류 발생 전의 상황으로 돌아가는 데 유용할 수 있습니다. 그러나 스냅숏을 만든 후의 모든 변경 내용은 손실됩니다.  
   
 -   **시작하기 전에:**  
@@ -30,7 +34,7 @@ caps.handback.revision: 58
   
      [보안](#Security)  
   
--   **데이터베이스를 데이터베이스 스냅숏으로 되돌리려면:** [Transact-SQL](#TsqlProcedure) 사용  
+-   **To Revert a Database to a Database Snapshot, using:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -73,9 +77,9 @@ caps.handback.revision: 58
     > [!NOTE]  
     >  데이터베이스가 손상된 경우 백업에서 해당 데이터베이스를 복원해야 합니다. 자세한 내용은 [전체 데이터베이스 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md) 또는 [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)을 참조하세요.  
   
--   오류가 발생하기 전에 만든 최근 스냅숏을 식별합니다. 자세한 내용은 [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)를 참조하세요.  
+-   오류가 발생하기 전에 만든 최근 스냅숏을 식별합니다. 자세한 내용은 [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md).  
   
--   데이터베이스에 현재 있는 다른 모든 스냅숏을 삭제합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)를 참조하세요.  
+-   데이터베이스에 현재 있는 다른 모든 스냅숏을 삭제합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
 ###  <a name="Security"></a> 보안  
   
@@ -88,11 +92,11 @@ caps.handback.revision: 58
 > [!NOTE]  
 >  이 프로시저의 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
-1.  데이터베이스를 되돌릴 데이터베이스 스냅숏을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅숏을 확인할 수 있습니다([데이터베이스 스냅숏 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **source_database_id** 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
+1.  데이터베이스를 되돌릴 데이터베이스 스냅숏을 식별합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 데이터베이스의 스냅숏을 확인할 수 있습니다([데이터베이스 스냅숏 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md) 참조). 또한 **sys.databases&#40;Transact-SQL&#41;** 카탈로그 뷰의 [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열에서 뷰의 원본 데이터베이스를 식별할 수 있습니다.  
   
 2.  다른 모든 데이터베이스 스냅숏을 삭제합니다.  
   
-     스냅숏 삭제 방법은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)를 참조하세요. 되돌리기 전에 데이터베이스에서 전체 복구 모델을 사용하는 경우 로그를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) 또는 [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)을 참조하세요.  
+     스냅숏 삭제 방법은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md). 되돌리기 전에 데이터베이스에서 전체 복구 모델을 사용하는 경우 로그를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md) 또는 [데이터베이스가 손상된 경우 트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)을 참조하세요.  
   
 3.  되돌리기 작업을 수행합니다.  
   
@@ -100,9 +104,9 @@ caps.handback.revision: 58
   
      RESTORE DATABASE *database_name* FROM DATABASE_SNAPSHOT **=***database_snapshot_name*  
   
-     여기서 *database_name*은 원본 데이터베이스이고 *database_snapshot_name*은 데이터베이스를 되돌리려는 스냅숏의 이름입니다. 이 문에서 백업 장치가 아닌 스냅숏 이름을 지정해야 합니다.  
+     여기서 *database_name* 은 원본 데이터베이스이고 *database_snapshot_name* 은 데이터베이스를 되돌리려는 스냅숏의 이름입니다. 이 문에서 백업 장치가 아닌 스냅숏 이름을 지정해야 합니다.  
   
-     자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)를 참조하세요.  
+     자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
     > [!NOTE]  
     >  되돌리기 작업 동안 스냅숏과 원본 데이터베이스를 모두 사용할 수 없습니다. 원본 데이터베이스와 스냅숏이 모두 "복원 중"으로 표시됩니다. 되돌리기 작업 중에 오류가 발생하면 데이터베이스가 다시 시작될 때 되돌리기를 완료하려고 시도합니다.  
@@ -124,7 +128,7 @@ caps.handback.revision: 58
 -   2. [Sales 데이터베이스에 대한 스냅숏 되돌리기](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅숏 되돌리기  
- 이 예에서는 현재 하나의 스냅숏만 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 것으로 가정합니다. 여기서 데이터베이스가 되돌려지는 스냅숏을 만드는 예는 [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)를 참조하세요.  
+ 이 예에서는 현재 하나의 스냅숏만 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 있는 것으로 가정합니다. 여기서 데이터베이스가 되돌려지는 스냅숏을 만드는 예는 [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
   
 ```  
 USE master;  
@@ -164,9 +168,9 @@ GO
   
 -   [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [데이터베이스 미러링 및 데이터베이스 스냅숏&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   

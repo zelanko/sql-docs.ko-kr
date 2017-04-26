@@ -1,33 +1,37 @@
 ---
-title: "코드 및 텍스트 이동 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "검색 [SQL Server Management Studio], 증분"
-  - "마우스 [SQL Server Management Studio]"
-  - "책갈피 [SQL Server Management Studio]"
-  - "쿼리 편집기 [SQL Server Management Studio], 코드 이동"
-  - "쿼리 편집기 [SQL Server Management Studio], 이동 명령"
-  - "증분 검색 [SQL Server Management Studio]"
-  - "쿼리 편집기 [SQL Server Management Studio], 책갈피"
-  - "쿼리 편집기 [SQL Server Management Studio], 마우스"
-  - "코드 이동"
-  - "이동 명령"
+title: "코드 및 텍스트 이동 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], incremental
+- mouse [SQL Server Management Studio]
+- bookmarks [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], navigating code
+- Query Editor [SQL Server Management Studio], Go To Command
+- incremental searches [SQL Server Management Studio]
+- Query Editor [SQL Server Management Studio], bookmarks
+- Query Editor [SQL Server Management Studio], mouse
+- navigating code
+- Go To command
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e62b052b5d17b5cefb7a2e081cb3b3e5503e9b9f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 코드 및 텍스트 이동
+# <a name="navigate-code-and-text"></a>코드 및 텍스트 이동
   다음을 사용하여 텍스트 간을 이동할 수 있습니다.  
   
 -   책갈피  
@@ -41,13 +45,13 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
   
-## 책갈피로 이동  
+## <a name="navigating-with-bookmarks"></a>책갈피로 이동  
  문서를 편집한 다음 원래 위치로 이동하려면 책갈피를 추가합니다. 책갈피를 설정하고 바로 가기 키를 사용하여 책갈피로 이동합니다. 책갈피 창에서 책갈피를 확인합니다.  
   
-## 증분 검색  
+## <a name="incremental-search"></a>증분 검색  
  증분 검색을 사용하면 검색 문자를 입력할 때 현재 문서의 위치로 이동할 수 있습니다. 바로 가기 키를 사용하여 증분 검색에 액세스할 수 있습니다.  
   
-## 마우스 및 키보드로 이동  
+## <a name="navigating-with-the-mouse-and-keyboard"></a>마우스 및 키보드로 이동  
  텍스트를 이동하는 가장 일반적인 방법은 마우스 및 탐색 키를 사용하는 것입니다.  
   
 -   왼쪽 화살표 및 오른쪽 화살표 키를 사용하여 한 번에 한 자씩 이동하거나 Ctrl 키와 함께 사용하여 한 번에 한 단어씩 이동합니다. 위쪽 및 아래쪽 화살표 키를 사용하여 한 번에 한 줄씩 이동합니다.  
@@ -62,7 +66,7 @@ caps.handback.revision: 24
   
 -   Ctrl+위쪽 화살표 및 Ctrl+아래쪽 화살표를 사용하여 삽입 지점을 이동하지 않고 화면을 스크롤합니다.  
   
-## 이동 명령  
+## <a name="go-to-command"></a>이동 명령  
  **이동** 명령을 사용하여 특정 줄 번호로 이동합니다. 줄 번호를 표시하려면 **옵션** 대화 상자에서 **텍스트 편집기**, **모든 언어**, **일반**을 차례로 클릭한 다음 **줄 번호**를 선택합니다.  
   
  **특정 줄 번호로 이동하려면**  

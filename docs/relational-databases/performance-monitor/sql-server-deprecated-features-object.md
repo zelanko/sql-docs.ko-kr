@@ -1,30 +1,34 @@
 ---
-title: "SQL Server, Deprecated Features 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Deprecated Features"
-  - "성능 카운터 [SQL Server], 사용되지 않는 기능"
-  - "사용 중단 [SQL Server], 성능 카운터"
-  - "Deprecated Features 개체"
+title: "SQL Server, Deprecated Features 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Deprecated Features
+- performance counters [SQL Server], deprecated features
+- deprecation [SQL Server], performance counters
+- Deprecated Features object
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 caps.latest.revision: 61
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1cbdf2dde41142d1b674e71df3a34756e8fcce99
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Deprecated Features 개체
+# <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 SQLServer:Deprecated Features 개체는 사용되지 않는 기능으로 지정된 기능을 모니터링하는 카운터를 제공합니다. 이 카운터는 경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후로 사용되지 않는 기능이 발견된 횟수를 나열하는 사용 카운트를 제공합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 SQLServer:Deprecated Features 개체는 사용되지 않는 기능으로 지정된 기능을 모니터링하는 카운터를 제공합니다. 이 카운터는 경우에 따라 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 마지막으로 시작된 이후로 사용되지 않는 기능이 발견된 횟수를 나열하는 사용 카운트를 제공합니다.  
   
  다음 문을 실행하여 이러한 카운터의 값을 사용할 수도 있습니다.  
   
@@ -60,7 +64,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |CREATE TRIGGER WITH APPEND|WITH APPEND 절이 포함된 CREATE TRIGGER 문이 발견되었습니다. 대신 전체 트리거를 다시 만들어야 합니다. DDL 문에서 사용할 때마다 한 번씩 발생합니다.|  
 |CREATE_DROP_DEFAULT|CREATE DEFAULT 또는 DROP DEFAULT 구문이 발견되었습니다. CREATE TABLE 또는 ALTER TABLE에 DEFAULT 옵션을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |CREATE_DROP_RULE|CREATE RULE 구문이 발견되었습니다. 제약 조건을 사용하여 명령을 다시 작성해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|데이터 형식: text, ntext 또는 image|**text**, **ntext**또는 **image** 데이터 형식이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|데이터 형식: text, ntext 또는 image|**text**, **ntext**또는 **image** 데이터 형식이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 ||데이터베이스가 호환성 수준 80으로 변경된 총 횟수입니다. 다음 릴리스 전에 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다. 또한 호환성 수준이 80인 데이터베이스가 시작될 때도 발생합니다.|  
 |데이터베이스 호환성 수준 100, 110 120|데이터베이스 호환성 수준이 변경된 총 횟수입니다. 이후 릴리스로 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다. 또한 사용되지 않는 호환성 수준의 데이터베이스가 시작될 때도 발생합니다.|  
 |DATABASE_MIRRORING|데이터베이스 미러링 기능에 대한 참조가 발견되었습니다. Always On 가용성 그룹으로 업그레이드하도록 계획하거나 Always On 가용성 그룹을 지원하지 않는 SQL Server 버전을 실행 중인 경우 로그 전달로 마이그레이션하도록 계획하세요.|  
@@ -264,10 +268,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |sysusers|sysusers에 대한 참조가 발견되었습니다. 대신 sys.database_principals를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |WITH가 없는 테이블 힌트|WITH 키워드 없이 테이블 힌트를 사용한 문이 발견되었습니다. WITH 단어를 포함하도록 문을 수정해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |Text in row 테이블 옵션|'text in row' 테이블 옵션에 대한 참조가 발견되었습니다. 대신 sp_tableoption 'large value types out of row'를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
-|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTPTR|TEXTPTR 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|TEXTVALID|TEXTVALID 함수에 대한 참조가 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |TIMESTAMP|사용되지 않는 **timestamp** 데이터 형식이 DDL 문에서 발견된 총 횟수입니다. 대신 **rowversion** 데이터 형식을 사용해야 합니다.|  
-|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext** 및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
+|UPDATETEXT 또는 WRITETEXT|UPDATETEXT 또는 WRITETEXT 문이 발견되었습니다. **varchar(max)** 데이터 형식을 사용하고 **text**, **ntext**및 **image** 데이터 형식 구문을 제거하도록 응용 프로그램을 다시 작성해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |USER_ID|USER_ID 함수에 대한 참조가 발견되었습니다. 대신 DATABASE_PRINCIPAL_ID 함수를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
 |연결된 서버에 OLEDB 사용||  
 |VarDecimal 저장소 형식|**vardecimal** 저장소 형식이 사용되었습니다. 대신 데이터 압축을 사용해야 합니다.|  
@@ -277,13 +281,14 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |xp_loginconfig|xp_loginconfig 프로시저가 발견되었습니다. 대신 SERVERPROPERTY의 IsIntegratedSecurityOnly 인수를 사용해야 합니다. 쿼리마다 한 번씩 발생합니다.|  
 |xp_revokelogin|xp_revokelogin 프로시저가 발견되었습니다. 대신 ALTER LOGIN DISABLE 또는 DROP LOGIN을 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Deprecation Announcement 이벤트 클래스](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   
  [Deprecation Final Support 이벤트 클래스](../../relational-databases/event-classes/deprecation-final-support-event-class.md)   
  [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
- [SQL Server 2016에서 지원되지 않는 전체 텍스트 검색 기능](../Topic/Discontinued%20Full-Text%20Search%20Features%20in%20SQL%20Server%202016.md)   
+ [SQL Server 2016에서 지원되지 않는 전체 텍스트 검색 기능](http://msdn.microsoft.com/library/70587b3c-cc77-4681-924d-a1df7cdf1517)   
  [SQL Server 개체 사용](../../relational-databases/performance-monitor/use-sql-server-objects.md)  
   
   
+

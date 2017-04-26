@@ -1,26 +1,30 @@
 ---
-title: "뷰를 통해 데이터 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/05/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 수정 [SQL Server], 뷰"
-  - "뷰 [SQL Server], 데이터 수정"
-  - "데이터 수정 [SQL Server], 뷰"
+title: "뷰를 통해 데이터 수정 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/05/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data modifications [SQL Server], views
+- views [SQL Server], modifying data through
+- modifying data [SQL Server], views
 ms.assetid: 410e2812-4ebe-48b2-b95f-c7784f1c4336
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 360ab52b8f6f8889311ccbb0fd820493ca01b9a8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 뷰를 통해 데이터 수정
+# <a name="modify-data-through-a-view"></a>뷰를 통해 데이터 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기본 테이블의 데이터를 수정할 수 있습니다.  
   
   
@@ -31,12 +35,12 @@ caps.handback.revision: 35
 -   [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)의 '업데이트할 수 있는 뷰' 섹션을 참조하세요.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  수행하는 동작에 따라 대상 테이블에 대한 UPDATE, INSERT 또는 DELETE 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 뷰를 통해 테이블 데이터를 수정하려면  
+#### <a name="to-modify-table-data-through-a-view"></a>뷰를 통해 테이블 데이터를 수정하려면  
   
 1.  **개체 탐색기**에서 뷰가 포함된 데이터베이스를 확장한 다음 **뷰**를 확장합니다.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 뷰를 통해 테이블 데이터를 업데이트하려면  
+#### <a name="to-update-table-data-through-a-view"></a>뷰를 통해 테이블 데이터를 업데이트하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 35
   
  자세한 내용은 [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)를 참조하세요.  
   
-#### 뷰를 통해 테이블 데이터를 삽입하려면  
+#### <a name="to-insert-table-data-through-a-view"></a>뷰를 통해 테이블 데이터를 삽입하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -92,3 +96,4 @@ caps.handback.revision: 35
  자세한 내용은 [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)를 참조하세요.  
   
   
+

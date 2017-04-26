@@ -1,30 +1,34 @@
 ---
-title: "테이블 복제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "테이블 복사"
-  - "테이블 [SQL Server], 복제"
-  - "테이블 복제"
-  - "테이블 복사 [SQL Server]"
+title: "테이블 복제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying tables
+- tables [SQL Server], duplicating
+- duplicating tables
+- table copying [SQL Server]
 ms.assetid: c6b07423-d1e5-4e5e-8681-5088921f5df3
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a7bbc956b852d4a7af1a8b9e3d26920fa4aeeebe
+ms.lasthandoff: 04/11/2017
+
 ---
-# 테이블 복제
+# <a name="duplicate-tables"></a>테이블 복제
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 새 테이블을 만들고, 기존 테이블에서 열 정보를 복사하여 기존 테이블을 복제할 수 있습니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 새 테이블을 만들고, 기존 테이블에서 열 정보를 복사하여 기존 테이블을 복제할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  이 작업은 테이블의 구조만 복제하며 테이블 행은 복제하지 않습니다.  
@@ -50,11 +54,11 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 테이블을 복제하려면  
+#### <a name="to-duplicate-a-table"></a>테이블을 복제하려면  
   
 1.  테이블을 만들려는 데이터베이스에 연결되어 있는지 확인한 다음 개체 탐색기에서 데이터베이스를 선택했는지 확인합니다.  
   
-2.  개체 탐색기에서 **테이블**을 마우스 오른쪽 단추로 클릭하고 **새 테이블**을 클릭합니다.  
+2.  개체 탐색기에서 **테이블** 을 마우스 오른쪽 단추로 클릭하고 **새 테이블**을 클릭합니다.  
   
 3.  개체 탐색기에서 복사할 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 쿼리 편집기에서 테이블을 복제하려면  
+#### <a name="to-duplicate-a-table-in-query-editor"></a>쿼리 편집기에서 테이블을 복제하려면  
   
 1.  테이블을 만들려는 데이터베이스에 연결되어 있는지 확인한 다음 개체 탐색기에서 데이터베이스를 선택했는지 확인합니다.  
   

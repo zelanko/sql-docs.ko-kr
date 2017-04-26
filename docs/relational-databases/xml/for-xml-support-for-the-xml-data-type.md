@@ -1,28 +1,32 @@
 ---
-title: "xml 데이터 형식에 대한 FOR XML 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용자 정의 함수 [SQL Server], XML"
-  - "xml 데이터 형식 [SQL Server], FOR XML 절"
+title: "xml 데이터 형식에 대한 FOR XML 지원 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- user-defined functions [SQL Server], XML
+- xml data type [SQL Server], FOR XML clause
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9fcd42a40be7da666ed66dc7eb05600b081457ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# xml 데이터 형식에 대한 FOR XML 지원
+# <a name="for-xml-support-for-the-xml-data-type"></a>xml 데이터 형식에 대한 FOR XML 지원
   FOR XML 쿼리가 SELECT 절에서 **xml** 유형의 열을 지정하는 경우 ELEMENTS 지시어를 지정했는지 여부에 관계없이 열 값은 반환된 XML의 요소로 매핑됩니다. **xml** 유형의 열에 있는 XML 선언은 직렬화되지 않습니다.  
   
- 예를 들어 다음 쿼리는 **xml** 유형의 `AdditionalContactInfo` 열에서 `BusinessEntityID`, `FirstName` 및 `LastName` 열과 전화 번호와 같은 고객 연락 정보를 검색합니다.  
+ 예를 들어 다음 쿼리는 `BusinessEntityID`xml `FirstName`유형의 `LastName` 열에서 `AdditionalContactInfo` , **및** 열과 전화 번호와 같은 고객 연락 정보를 검색합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -140,14 +144,14 @@ for xml auto;
 </root>  
 ```  
   
-## 사용자 정의 함수로부터 XML 반환  
+## <a name="returning-xml-from-a-user-defined-function"></a>사용자 정의 함수로부터 XML 반환  
  FOR XML 쿼리를 사용하여 다음 중 하나를 반환하는 사용자 정의 함수로부터 XML을 반환할 수 있습니다.  
   
 -   단일 **xml** 유형 열이 포함된 테이블  
   
 -   **xml** 유형의 인스턴스  
   
- 예를 들어 다음 사용자 정의 함수는 **xml** 유형의 단일 열이 포함된 테이블을 반환합니다.  
+ 예를 들어 다음 사용자 정의 함수는 **xml**유형의 단일 열이 포함된 테이블을 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -202,7 +206,7 @@ SELECT @x= dbo.MyUDF4 (19) ;
 select @x;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [다양한 SQL Server 데이터 형식에 대한 FOR XML 지원](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   

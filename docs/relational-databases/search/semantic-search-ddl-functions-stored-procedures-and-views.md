@@ -1,29 +1,33 @@
 ---
-title: "의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "의미 체계 검색[SQL Server], 데이터베이스 개체"
+title: "의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], database objects
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 326f645ff1c214623b5c46fbaa4f86f08066e64b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
+# <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>의미 체계 검색 DDL, 함수, 저장 프로시저 및 뷰
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통계 의미 체계 검색을 지원하는 Transact-SQL 문 및 데이터베이스 개체를 나열합니다.  
   
  전체 텍스트 검색을 지원하는 문과 데이터베이스 개체의 목록은 [전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/search/full-text-search-ddl-functions-stored-procedures-and-views.md)를 참조하세요.  
   
-##  <a name="ddl"></a> Transact-SQL DDL(데이터 정의 언어) 문  
+##  <a name="ddl"></a> DDL(데이터 정의 언어) 문:  
   
 |개체|자세한 정보|  
 |------------|----------------------|  
@@ -56,7 +60,7 @@ caps.handback.revision: 13
 |[sp_fulltext_semantic_register_language_statistics_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> 시스템 뷰 - 카탈로그 뷰  
+##  <a name="cv"></a> 카탈로그 뷰  
   
 |개체|자세한 정보|  
 |------------|----------------------|  
@@ -64,7 +68,7 @@ caps.handback.revision: 13
 |[sys.fulltext_semantic_language_statistics_database&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md)|[의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> 시스템 뷰 - 동적 관리 뷰  
+##  <a name="dmv"></a> 동적 관리 뷰  
   
 |개체|자세한 정보|  
 |------------|----------------------|  
@@ -72,7 +76,7 @@ caps.handback.revision: 13
 |[sys.dm_fts_index_population&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)|[의미 체계 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
 |[sys.dm_fts_semantic_similarity_population&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)|[의미 체계 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-semantic-search.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [의미 체계 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-semantic-search.md)  
   
   

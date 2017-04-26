@@ -1,24 +1,28 @@
 ---
-title: "게시 속성 - &lt;Publication&gt; | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "게시 속성 대화 상자"
+title: "게시 속성- &lt;Publication&gt; | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Publication Properties dialog box
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31f80253fe7e0fa562e67c9bbf8d685fa72ec37d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 게시 속성 - &lt;Publication&gt;
+# <a name="publication-properties----ltpublicationgt"></a>게시 속성 - &lt;Publication&gt;
   이 섹션에서는 **게시 속성** 대화 상자의 모든 페이지에 대한 정보를 제공합니다.  
   
 -   [게시 속성, 일반](../../relational-databases/replication/publication-properties-general.md)  
@@ -39,10 +43,10 @@ caps.handback.revision: 19
   
 -   [게시 속성, 데이터 파티션](../../relational-databases/replication/publication-properties-data-partitions.md)  
   
-## 참고 항목  
- [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [데이터 및 데이터베이스 개체 게시](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [속성 참조 & #40입니다. 복제 및 #41;](../../relational-databases/replication/properties-reference-replication.md)  
+ [속성 참조&#40;복제&#41;](../../relational-databases/replication/properties-reference-replication.md)  
   
   

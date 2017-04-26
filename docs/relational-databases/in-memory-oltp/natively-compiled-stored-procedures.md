@@ -1,24 +1,28 @@
 ---
-title: "고유하게 컴파일된 저장 프로시저 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "고유하게 컴파일된 저장 프로시저"
+title: "고유하게 컴파일된 저장 프로시저 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- natively compiled stored procedures
 ms.assetid: d5ed432c-10c5-4e4f-883c-ef4d1fa32366
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b718bafa35ae753eba0064db2af168054fd211ca
+ms.lasthandoff: 04/11/2017
+
 ---
-# 고유하게 컴파일된 저장 프로시저
+# <a name="natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   고유하게 컴파일된 저장 프로시저는 메모리 액세스에 최적화된 테이블에 액세스하는 네이티브 코드로 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 고유하게 컴파일된 저장 프로시저는 쿼리 및 비즈니스 논리가 저장 프로시저에서 효율적으로 실행되도록 해 줍니다. 네이티브 컴파일 프로세스에 대한 자세한 내용은 [Native Compilation of Tables and Stored Procedures](../../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md)을 참조하세요. 디스크 기반 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하는 방법은 [고유하게 컴파일된 저장 프로시저의 마이그레이션 문제](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md)를 참조하세요.  
@@ -30,7 +34,7 @@ caps.handback.revision: 54
   
 -   [고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md)  
   
--   [ATOMIC 블록](../../relational-databases/in-memory-oltp/기본-프로시저의-atomic-블록.md)  
+-   [ATOMIC 블록](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)  
   
 -   [고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 54
   
 -   [데이터 액세스 응용 프로그램에서 고유하게 컴파일된 저장 프로시저 호출](../../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

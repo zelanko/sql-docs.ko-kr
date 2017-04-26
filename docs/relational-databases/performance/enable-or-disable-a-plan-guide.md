@@ -1,27 +1,31 @@
 ---
-title: "계획 지침 사용 또는 사용 안 함 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "계획 지침 [SQL Server], 사용 안 함"
-  - "계획 지침 사용"
-  - "계획 지침 [SQL Server], 사용"
-  - "계획 지침 해제"
+title: "계획 지침 사용 또는 사용 안 함 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- plan guides [SQL Server], disabling
+- enabling plan guides
+- plan guides [SQL Server], enabling
+- disabling plan guides
 ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1d76a7087ce1225c2ae3f4f685cb234b53dbf0b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 계획 지침 사용 또는 사용 안 함
+# <a name="enable-or-disable-a-plan-guide"></a>계획 지침 사용 또는 사용 안 함
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 계획 지침을 사용하거나 사용하지 않도록 설정할 수 있습니다. 데이터베이스에 있는 단일 계획 지침 또는 모든 계획 지침을 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   
  **항목 내용**  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 계획 지침을 사용하거나 사용하지 않도록 설정하려면  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>계획 지침을 사용하거나 사용하지 않도록 설정하려면  
   
 1.  더하기 기호를 클릭하여 계획 지침을 사용하거나 사용하지 않도록 설정할 데이터베이스를 확장한 다음 더하기 기호를 클릭하여 **프로그래밍 기능** 폴더를 확장합니다.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 6
   
 4.  **계획 지침 사용 안 함** 또는 **계획 지침 사용** 대화 상자에서 선택한 작업이 성공했는지 확인한 다음 **닫기**를 클릭합니다.  
   
-#### 데이터베이스의 모든 계획 지침을 사용하거나 사용하지 않도록 설정하려면  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>데이터베이스의 모든 계획 지침을 사용하거나 사용하지 않도록 설정하려면  
   
 1.  더하기 기호를 클릭하여 계획 지침을 사용하거나 사용하지 않도록 설정할 데이터베이스를 확장한 다음 더하기 기호를 클릭하여 **프로그래밍 기능** 폴더를 확장합니다.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 6
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 계획 지침을 사용하거나 사용하지 않도록 설정하려면  
+#### <a name="to-disable-or-enable-a-plan-guide"></a>계획 지침을 사용하거나 사용하지 않도록 설정하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 6
   
     ```  
   
-#### 데이터베이스의 모든 계획 지침을 사용하거나 사용하지 않도록 설정하려면  
+#### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>데이터베이스의 모든 계획 지침을 사용하거나 사용하지 않도록 설정하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

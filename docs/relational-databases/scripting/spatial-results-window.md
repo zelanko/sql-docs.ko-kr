@@ -1,28 +1,32 @@
 ---
-title: "공간 데이터 결과 창 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "공간 데이터 결과 창 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c2d5a477-6496-4d01-adee-7322ebdfadf3
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e1a9e14b4a786e6ca45a9ab0e761975563c415
+ms.lasthandoff: 04/11/2017
+
 ---
-# 공간 데이터 결과 창
+# <a name="spatial-results-window"></a>공간 데이터 결과 창
   **공간 데이터 결과** 창에서는 공간 데이터를 볼 수 있는 시각적인 매핑 도구를 제공합니다. 공간 데이터 결과를 보려면 쿼리 결과에 기하 도형 또는 지리 데이터가 포함된 공간 열이 있어야 합니다.  
   
 > [!NOTE]  
 >  **공간 데이터 결과** 창은 결과가 **결과** 창에 표 형식으로 반환되는 경우에만 사용할 수 있습니다. 결과가 텍스트로 반환되도록 지정한 경우에는 이 창을 사용할 수 없습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **공간 열 선택**  
  쿼리 결과의 공간 열 중에서 보려는 공간 열을 지정합니다. 열은 한 번에 하나씩만 선택할 수 있습니다.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  점에는 레이블을 지정할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [개체 탐색기에서 공간 데이터 보기](../../relational-databases/scripting/view-spatial-data-in-object-explorer.md)   
  [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)   
  [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)   

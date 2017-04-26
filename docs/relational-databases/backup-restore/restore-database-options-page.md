@@ -1,65 +1,69 @@
 ---
-title: "데이터베이스 복원(옵션 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restoredb.options.f1"
+title: "데이터베이스 복원(옵션 페이지) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restoredb.options.f1
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 caps.latest.revision: 68
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698c8658d2a3d6779a8800c23e5c508351a05d12
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 복원(옵션 페이지)
+# <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
   **데이터베이스 복원** 대화 상자의 **옵션** 페이지를 사용하여 복원 작업의 동작 및 결과를 수정할 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 백업을 복원하려면**  
   
--   [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 -   [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)  
   
 > [!NOTE]  
->  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복원 태스크를 지정할 때 이 복원 작업에 대해 RESTORE 문을 포함하는 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성할 수 있습니다. 스크립트를 생성하려면 **스크립트** 를 클릭한 다음 스크립트 대상을 선택합니다. RESTORE 구문에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)를 참조하세요.  
+>  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 복원 태스크를 지정할 때 이 복원 작업에 대해 RESTORE 문을 포함하는 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성할 수 있습니다. 스크립트를 생성하려면 **스크립트** 를 클릭한 다음 스크립트 대상을 선택합니다. RESTORE 구문에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>데이터베이스 복원  
   
-### 복원 옵션  
+### <a name="restore-options"></a>복원 옵션  
  복원 작업의 동작 측면을 수정하려면 **복원 옵션** 패널의 옵션을 사용합니다.  
   
  **기존 데이터베이스 덮어쓰기[WITH REPLACE]**  
- **데이터베이스 복원** 대화 상자에 있는 [일반](../../relational-databases/backup-restore/restore-database-general-page.md) 페이지의 **복원 위치** 필드에서 지정하는 데이터베이스 이름을 현재 사용 중인 모든 데이터베이스의 파일을 복원 작업에서 덮어씁니다. 다른 데이터베이스에서 기존 데이터베이스 이름으로 백업을 복원하는 중이더라도 기존 데이터베이스의 파일을 덮어씁니다. 이 옵션을 선택하는 것은 [RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) 문에서 REPLACE 옵션을 사용하는 것과 같습니다.([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
+ **데이터베이스 복원**대화 상자에 있는 [일반](../../relational-databases/backup-restore/restore-database-general-page.md) 페이지의 **복원 위치** 필드에서 지정하는 데이터베이스 이름을 현재 사용 중인 모든 데이터베이스의 파일을 복원 작업에서 덮어씁니다. 다른 데이터베이스에서 기존 데이터베이스 이름으로 백업을 복원하는 중이더라도 기존 데이터베이스의 파일을 덮어씁니다. 이 옵션을 선택하는 것은 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문에서 REPLACE 옵션을 사용하는 것과 같습니다.([!INCLUDE[tsql](../../includes/tsql-md.md)]).  
   
 > [!CAUTION]  
->  이 옵션은 신중하게 고려한 후에만 사용해야 합니다. 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md)를 참조하세요.  
+>  이 옵션은 신중하게 고려한 후에만 사용해야 합니다. 자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
   
  **복제 설정 유지[WITH KEEP_REPLICATION]**  
  게시된 데이터베이스를 해당 데이터베이스가 생성된 서버 이외의 다른 서버로 복원할 경우 복제 설정을 유지합니다. 이 옵션은 백업을 만들 때 데이터베이스가 복제된 경우에만 해당합니다.  
   
  이 옵션은 RECOVERY 옵션을 사용하여 백업을 복원하는 것과 같은 **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다.** 옵션(이 표의 뒷부분에서 설명)과 함께만 사용할 수 있습니다.  
   
- 이 옵션을 선택하는 것은 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md) 문에서 KEEP_REPLICATION 옵션을 사용하는 것과 같습니다.  
+ 이 옵션을 선택하는 것은 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) 문에서 KEEP_REPLICATION 옵션을 사용하는 것과 같습니다.  
   
  자세한 내용은 [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.  
   
  **복원된 데이터베이스에 대한 액세스 제한[WITH RESTRICTED_USER]**  
- **db_owner**, **dbcreator** 또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
+ **db_owner**, **dbcreator**또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
   
  이 옵션을 선택하는 것은 RESTORE 문에서 RESTRICTED_USER 옵션을 사용하는 것과 같습니다.  
   
-### 복구 상태  
+### <a name="recovery-state"></a>복구 상태  
  저장 작업 후에 데이터베이스의 상태를 확인하려면 **복구 상태** 패널의 옵션 중 하나를 선택해야 합니다.  
   
  **RESTORE WITH RECOVERY**  
- [일반 페이지](../../relational-databases/backup-restore/restore-database-general-page.md)의 **복원에 사용할 백업 세트** 표에서 선택된 최종 백업을 복원한 후에 데이터베이스를 복구합니다. 이는 기본 옵션이고 [RESTORE](../Topic/RESTORE%20Arguments%20\(Transact-SQL\).md) 문([!INCLUDE[tsql](../../includes/tsql-md.md)])에서 WITH RECOVERY를 지정하는 것과 같습니다.  
+ **일반 페이지**의 [복원에 사용할 백업 세트](../../relational-databases/backup-restore/restore-database-general-page.md)표에서 선택된 최종 백업을 복원한 후에 데이터베이스를 복구합니다. 이는 기본 옵션이고 [RESTORE](../../t-sql/statements/restore-statements-arguments-transact-sql.md) 문([!INCLUDE[tsql](../../includes/tsql-md.md)])에서 WITH RECOVERY를 지정하는 것과 같습니다.  
   
 > [!NOTE]  
 >  전체 복구 모델 또는 대량 로그 복구 모델에서 모든 로그 파일을 지금 복원하는 경우에만 이 옵션을 선택합니다.  
@@ -79,7 +83,7 @@ caps.handback.revision: 68
  **대기 파일**  
  대기 파일을 지정합니다. 대기 파일을 찾아보거나 입력란에 해당 경로 이름을 직접 입력할 수 있습니다.  
   
-### 비상 로그 백업  
+### <a name="tail-log-backup"></a>비상 로그 백업  
  데이터베이스 복원과 함께 수행할 비상 로그 백업을 지정할 수 있습니다.  
   
  **복원 전에 비상 로그 백업 가져오기**  
@@ -91,13 +95,13 @@ caps.handback.revision: 68
  **백업 파일**  
  비상 로그에 대한 백업 파일을 지정합니다. 백업 파일을 찾아보거나 입력란에 해당 이름을 직접 입력할 수 있습니다.  
   
-### 서버 연결  
+### <a name="server-connections"></a>서버 연결  
  기존 데이터베이스 연결을 닫을 수 있습니다.  
   
  **기존 연결 닫기**  
  데이터베이스에 대한 활성 연결이 있으면 복원 작업이 실패할 수 있습니다. **기존 연결 닫기** 옵션을 선택하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 데이터베이스 간의 모든 활성 연결을 닫습니다. 이 확인란을 선택하면 복원 작업을 수행하기 전에 데이터베이스가 단일 사용자 모드로 설정되고 복원 작업이 완료될 때 데이터베이스가 다중 사용자 모드로 설정됩니다.  
   
-### 프롬프트  
+### <a name="prompt"></a>프롬프트  
  **각 백업 복원 전에 확인**  
  각 백업을 복원한 후 복원 순서를 계속할지 여부를 묻는 **복원 계속** 대화 상자를 표시합니다. 이 대화 상자는 다음 미디어 세트(알려진 경우)의 이름과 다음 백업 세트의 이름 및 설명을 표시합니다.  
   
@@ -109,10 +113,10 @@ caps.handback.revision: 68
   
 -   다음 백업이 파일 백업인 경우 **파일 및 파일 그룹 복원**태스크를 사용합니다. 자세한 내용은 [파일 및 파일 그룹 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)을 참조하세요.  
   
--   다음 백업이 로그 백업인 경우 **트랜잭션 로그 복원** 태스크를 사용합니다. 트랜잭션 로그를 복원하여 복원 순서를 재개하는 방법은 [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)을 참조하세요.  
+-   다음 백업이 로그 백업인 경우 **트랜잭션 로그 복원** 태스크를 사용합니다. 트랜잭션 로그를 복원하여 복원 순서를 재개하는 방법은 [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)를 참조하세요.  
   
-## 참고 항목  
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>참고 항목  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [장치에서 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)   
  [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)   

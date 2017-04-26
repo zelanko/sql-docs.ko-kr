@@ -1,34 +1,38 @@
 ---
-title: "DAC 패키지 유효성 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 계층 응용 프로그램 [SQL Server], 유효성 검사"
-  - "데이터 계층 응용 프로그램 [SQL Server], 비교"
-  - "DAC 유효성 검사"
-  - "DAC 비교"
-  - "데이터 계층 응용 프로그램 [SQL Server], 보기"
-  - "DAC 보기"
+title: "DAC 패키지 유효성 검사 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], validate
+- data-tier application [SQL Server], compare
+- validate DAC
+- compare DACs
+- data-tier application [SQL Server], view
+- view DAC
 ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.lasthandoff: 04/11/2017
+
 ---
-# DAC 패키지 유효성 검사
+# <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
   DAC 패키지를 프로덕션 환경에 배포하기 전에 내용을 검토하고 기존 DAC를 업그레이드하기 전에 업그레이드 동작의 유효성을 검사하는 것이 좋습니다. 사용자의 조직에서 개발되지 않은 패키지를 배포하는 경우에는 더욱 그렇습니다.  
   
-1.  **시작하기 전에:**  [필수 구성 요소](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **DAC를 업그레이드하려면**  [DAC 내용 보기](#ViewDACContents), [데이터베이스 변경 내용 보기](#ViewDBChanges), [업그레이드 동작 보기](#ViewUpgradeActions), [DAC 비교](#CompareDACs)  
+2.  **To upgrade a DAC, using:**  [View the Contents of a DAC](#ViewDACContents), [View Database Changes](#ViewDBChanges), [View Upgrade Actions](#ViewUpgradeActions), [Compare DACs](#CompareDACs)  
   
 ##  <a name="Prerequisites"></a> 필수 구성 요소  
  출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하기 전에 격리된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 테스트 인스턴스에 이를 배포하고, 해당 데이터베이스에 대해 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 실행하며, 저장 프로시저 또는 다른 사용자 정의 코드 같은 데이터베이스의 코드도 검사하세요.  
@@ -48,7 +52,7 @@ caps.handback.revision: 17
   
 5.  **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **데이터 계층 응용 프로그램 가져오기...**를 선택합니다.  
   
-6.  **솔루션 탐색기**를 사용하여 서버 선택 정책과 배포 이전 및 배포 이후 스크립트와 같은 DAC의 모든 파일을 열 수 있습니다.  
+6.  **솔루션 탐색기** 를 사용하여 서버 선택 정책과 배포 이전 및 배포 이후 스크립트와 같은 DAC의 모든 파일을 열 수 있습니다.  
   
 7.  **스키마 뷰** 를 사용하여 스키마 내의 모든 개체를 검토할 수 있으며, 특히 함수나 저장 프로시저와 같은 개체 내의 코드를 검토할 수 있습니다.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 17
   
 4.  **GetDatabaseChanges()** 메서드를 사용하여 **ChangeResults** 개체를 검색하고 개체를 텍스트 파일에 파이핑하여 새 개체, 삭제된 개체 및 변경된 개체에 대한 간단한 보고서를 생성합니다.  
   
-### 데이터베이스 변경 내용 보기 예(PowerShell)  
+### <a name="view-database-changes-example-powershell"></a>데이터베이스 변경 내용 보기 예(PowerShell)  
  **데이터베이스 변경 내용 보기 예(PowerShell)**  
   
  다음 예에서는 MyApplicaiton이라는 배포된 DAC에 대한 데이터베이스 변경 내용을 보고합니다.  
@@ -132,7 +136,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  DAC 패키지 파일을 읽는 데 사용되는 파일 스트림을 닫습니다.  
   
-### 업그레이드 동작 보기 예(PowerShell)  
+### <a name="view-upgrade-actions-example-powershell"></a>업그레이드 동작 보기 예(PowerShell)  
  **업그레이드 동작 보기 예(PowerShell)**  
   
  다음 예에서는 MyApplicaiton이라는 DAC를 MyApplicationVNext.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
@@ -162,14 +166,14 @@ $dacstore.GetIncrementalUpgradeScript($dacName, $dacType) | Out-File -Filepath C
 $fileStream.Close()  
 ```  
   
-##  <a name="CompareDACs"></a> DAC 비교  
+##  <a name="CompareDACs"></a> Compare DACs  
  DAC를 업그레이드하기 전에 데이터베이스와 인스턴스 수준 개체에서 현재와 새 DAC의 차이를 검토하는 것이 좋습니다. 현재 DAC의 패키지 복사본이 없는 경우에는 현재 데이터베이스에서 패키지를 추출할 수 있습니다.  
   
  두 DAC 프로젝트를 SQL Server Developer Tools의 DAC 프로젝트로 가져오면 스키마 비교 도구를 사용하여 두 DAC 간의 차이점을 분석할 수 있습니다.  
   
  또는 별도의 폴더에 DAC의 압축을 풉니다. 그런 다음 WinDiff 유틸리티와 같은 비교 도구를 사용하여 차이를 분석할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터 계층 응용 프로그램 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [데이터 계층 응용 프로그램 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

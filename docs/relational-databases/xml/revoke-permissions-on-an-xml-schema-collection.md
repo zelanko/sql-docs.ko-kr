@@ -1,24 +1,28 @@
 ---
-title: "XML 스키마 컬렉션에 대한 사용 권한 취소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용 권한 취소 [SQL Server]"
+title: "XML 스키마 컬렉션에 대한 사용 권한 취소 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- revoking permissions [SQL Server]
 ms.assetid: 4e542b70-2d56-4a65-8a39-96a1ed477ca6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 스키마 컬렉션에 대한 사용 권한 취소
+# <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 취소
   XML 스키마 컬렉션을 만드는 권한은 다음 중 하나를 사용하여 취소할 수 있습니다.  
   
 -   관계형 스키마에 대한 ALTER 권한을 취소합니다. 그러면 보안 주체가 관계형 스키마에서 XML 스키마 컬렉션을 만들 수 없습니다. 하지만 보안 주체는 동일 데이터베이스의 다른 관계형 스키마에서 여전히 같은 작업을 수행할 수 있습니다.  
@@ -27,7 +31,7 @@ caps.handback.revision: 25
   
 -   데이터베이스에서 보안 주체에 대한 CREATE XML SCHEMA COLLECTION 또는 ALTER XML SCHEMA COLLECTION 권한을 취소합니다. 그러면 보안 주체가 데이터베이스 내에서 XML 스키마 컬렉션을 가져올 수 없습니다. 데이터베이스에서 ALTER 또는 CONTROL 권한을 취소해도 같은 효과가 있습니다.  
   
-## 기존 XML 스키마 컬렉션 개체에 대한 사용 권한 취소  
+## <a name="revoking-permissions-on-an-existing-xml-schema-collection-object"></a>기존 XML 스키마 컬렉션 개체에 대한 사용 권한 취소  
  다음은 XML 스키마 컬렉션 및 결과에서 취소할 수 있는 권한입니다.  
   
 -   ALTER 권한을 취소하면 보안 주체의 XML 스키마 컬렉션 콘텐츠 수정 기능이 취소됩니다.  
@@ -40,10 +44,10 @@ caps.handback.revision: 25
   
 -   EXECUTE 권한을 취소하면 XML 컬렉션에 의해 형식화되었거나 제한된 변수, 매개 변수 및 열에 있는 값을 삽입 또는 업데이트하는 보안 주체의 기능이 취소됩니다. 또한 이러한 **xml** 유형의 열, 변수 또는 매개 변수를 쿼리하는 기능이 취소됩니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  
   
-### 1. XML 스키마 컬렉션을 만드는 권한 취소  
+### <a name="a-revoking-permissions-to-create-an-xml-schema-collection"></a>1. XML 스키마 컬렉션을 만드는 권한 취소  
  이 예에서는 로그인 계정과 예제 데이터베이스를 만듭니다. 또한 데이터베이스에 관계형 스키마를 추가합니다. 초기에 로그인 계정에는 관계형 스키마에 대한 ALTER 권한과 XML 스키마 컬렉션을 만들기 위한 다른 필수 권한이 부여됩니다. 이 예에서는 데이터베이스에 있는 관계형 스키마 중 하나에 대한 ALTER 권한을 취소합니다. 이렇게 하면 로그인 계정이 XML 스키마 컬렉션을 만들 수 없습니다.  
   
 ```  
@@ -140,7 +144,7 @@ DROP LOGIN TestLogin1
 Go  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)   
  [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [XML 스키마 컬렉션&#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   

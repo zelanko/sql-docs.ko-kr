@@ -1,40 +1,44 @@
 ---
-title: "통계 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "통계 정보 [SQL Server], 쿼리 최적화"
-  - "쿼리 성능 [SQL Server], 통계"
-  - "쿼리 최적화 통계 [SQL Server]"
-  - "통계 정보 [SQL Server], 데이터베이스 옵션"
-  - "쿼리 최적화 통계 [SQL Server], 쿼리 최적화 통계 정보"
-  - "통계 정보 [SQL Server], 지침"
-  - "통계 정보 [SQL Server]"
-  - "통계 사용 [SQL Server]"
-  - "통계 정보 [SQL Server], 인덱스"
-  - "인덱스 통계 [SQL Server]"
-  - "쿼리 최적화 프로그램 [SQL Server], 통계"
-  - "통계 [SQL Server]"
+title: "통계 | Microsoft 문서"
+ms.custom: 
+ms.date: 04/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistical information [SQL Server], query optimization
+- query performance [SQL Server], statistics
+- query optimization statistics [SQL Server]
+- statistical information [SQL Server], database options
+- query optimization statistics [SQL Server], about query optimization statistics
+- statistical information [SQL Server], guidelines
+- statistical information [SQL Server]
+- using statistics [SQL Server]
+- statistical information [SQL Server], indexes
+- index statistics [SQL Server]
+- query optimizer [SQL Server], statistics
+- statistics [SQL Server]
 ms.assetid: b86a88ba-4f7c-4e19-9fbd-2f8bcd3be14a
 caps.latest.revision: 70
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 69
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: e098a8f837d216f18bb1310db3164b57f24575ba
+ms.lasthandoff: 04/11/2017
+
 ---
-# 통계
+# <a name="statistics"></a>통계
   쿼리 최적화 프로그램에서는 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 최상의 결과를 위해 추가 통계를 만들거나 쿼리 설계를 수정해야 합니다. 이 항목에서는 통계 개념에 대해 설명하고 쿼리 최적화 통계를 효율적으로 사용하기 위한 지침을 제공합니다.  
   
 ##  <a name="DefinitionQOStatistics"></a> 구성 요소 및 개념  
  통계  
- 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티*또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치*를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 index scan 연산자 대신 index seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
+ 쿼리 최적화 통계는 테이블이나 인덱싱된 뷰에서 하나 이상의 열에 있는 값의 분포에 대한 통계 정보를 포함하는 개체입니다. 쿼리 최적화 프로그램은 이러한 통계를 사용하여 쿼리 결과에서 *카디널리티*또는 행 수를 계산합니다. 쿼리 최적화 프로그램은 이러한 *카디널리티 예상치* 를 통해 고품질의 쿼리 계획을 만듭니다. 예를 들어 쿼리 최적화 프로그램은 카디널리티 예상치를 사용하여 리소스를 많이 사용하는 index scan 연산자 대신 index seek 연산자를 선택할 수 있으며 이렇게 하면 쿼리 성능이 향상됩니다.  
   
  각 통계 개체는 하나 이상의 테이블 열 목록에 대해 작성되며 첫 번째 열의 값 분포를 나타내는 히스토그램을 포함합니다. 여러 열에 대한 통계 개체는 또한 열 사이의 값의 상관 관계에 대한 통계 정보도 저장합니다. 이러한 상관 관계 통계 또는 *밀도*는 열 값의 개별 행 수에서 생성됩니다. 통계 개체에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)를 참조하세요.  
   
@@ -66,7 +70,7 @@ ORDER BY s.name;
   
 -   SQL Server(2016 및 호환성 수준 130부터)는 테이블의 행 수에 따라 조정되는 임계값을 사용합니다. 이러한 변경으로 인해 큰 테이블의 통계 업데이트 빈도가 높아집니다.  
   
- 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
+ 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전과 캐시된 쿼리 계획을 실행하기 전에 최신이 아닌 통계가 있는지를 확인합니다. 쿼리 최적화 프로그램은 쿼리를 컴파일하기 전에 쿼리 조건자의 열, 테이블 및 인덱싱된 뷰를 사용하여 어떤 통계가 최신이 아닌지 결정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 캐시된 쿼리 계획을 실행하기 전에 쿼리 계획에서 최신 통계가 참조되는지 확인합니다.  
   
  AUTO_UPDATE_STATISTICS 옵션은 인덱스에 대해 작성된 통계 개체, 쿼리 조건자의 단일 열 및 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 문으로 작성된 통계에 적용됩니다. 이 옵션은 또한 필터링된 통계에도 적용됩니다.  
   
@@ -84,7 +88,7 @@ ORDER BY s.name;
 -   응용 프로그램에서 통계 업데이트를 기다리는 하나 이상의 쿼리로 인해 클라이언트 요청 제한 시간을 초과하는 경우가 있습니다. 동기 통계를 기다리는 경우 엄격한 시간 제한이 있는 응용 프로그램은 실패할 수 있습니다.  
   
  INCREMENTAL STATS  
- ON으로 설정된 경우 파티션 통계별로 통계가 작성됩니다. OFF로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통계를 다시 계산합니다. 기본값은 OFF입니다. 이 설정은 데이터베이스수준 INCREMENTAL 속성을 재정의합니다.  
+ ON으로 설정된 경우 파티션 통계별로 통계가 작성됩니다. OFF로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 통계를 다시 계산합니다. 기본값은 OFF입니다. 이 설정은 데이터베이스수준 INCREMENTAL 속성을 재정의합니다.  
   
  큰 테이블에 새 파티션이 추가되는 경우 새 파티션을 포함하도록 통계가 업데이트되어야 합니다. 하지만 전체 테이블 검색((FULLSCAN 또는 SAMPLE 옵션)에 걸리는 시간이 꽤 길 수 있습니다. 또한 새 파티션에 대한 통계만 필요한 경우 전체 테이블 검색이 필요하지 않습니다. 증분 옵션은 파티션별로 통계를 작성 및 저장하며 파티션이 업데이트되는 경우 새 통계가 필요한 해당 파티션에 대해서만 통계를 새로 고칩니다.  
   
@@ -108,7 +112,6 @@ ORDER BY s.name;
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
   
 ##  <a name="CreateStatistics"></a> 통계 작성 시기  
  쿼리 최적화 프로그램은 다음과 같은 방법으로 통계를 작성합니다.  
@@ -131,14 +134,14 @@ ORDER BY s.name;
   
 -   쿼리에 통계가 누락된 경우  
   
-### 쿼리 조건자에 관련된 여러 열이 포함된 경우  
+### <a name="query-predicate-contains-multiple-correlated-columns"></a>쿼리 조건자에 관련된 여러 열이 포함된 경우  
  쿼리 조건자에 열 간 관계 및 종속성을 가지는 여러 열이 포함된 경우 여러 열에 대한 통계를 통해 쿼리 계획을 향상시킬 수 있습니다. 여러 열 통계에는 단일 열 통계에서 사용할 수 없는 *밀도*라고 하는 열 간 상호 관계 통계가 포함됩니다. 쿼리 결과가 여러 행 간 데이터 관계에 종속되는 경우 밀도를 사용하여 카디널리티 예상치 정확도를 높일 수 있습니다.  
   
  열이 이미 동일한 인덱스에 있는 경우 여러 열 통계 개체가 이미 존재하므로 여러 열 통계 개체를 직접 만들 필요가 없습니다. 열이 동일한 인덱스에 없는 경우 CREATE STATISTICS 문을 사용하여 열에 대한 인덱스를 만들어서 여러 열 통계를 작성할 수 있습니다. 통계 개체보다는 인덱스를 유지하는 데 더 많은 시스템 리소스가 필요합니다. 응용 프로그램에 여러 열 인덱스가 필요하지 않은 경우 인덱스를 만들지 않고 통계 개체를 만들어서 시스템 리소스를 절약할 수 있습니다.  
   
  여러 열 통계를 작성할 때 통계 개체 정의에서 열 순서는 카디널리티 예상치를 만들기 위한 밀도 효율성에 영향을 줍니다. 통계 개체는 주요 열의 각 접두사에 대한 밀도를 통계 개체 정의에 저장합니다. 밀도에 대한 자세한 내용은 [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)를 참조하세요.  
   
- 카디널리티 예상치에 유용한 밀도를 만들려면 쿼리 조건자의 열이 통계 개체 정의에 있는 열의 접두사 중 하나와 일치해야 합니다. 다음 예에서는 `LastName`, `MiddleName`, 및 `FirstName` 열에 대한 여러 열 통계 개체를 만듭니다.  
+ 카디널리티 예상치에 유용한 밀도를 만들려면 쿼리 조건자의 열이 통계 개체 정의에 있는 열의 접두사 중 하나와 일치해야 합니다. 다음 예에서는 `LastName`, `MiddleName`, 및 `FirstName`열에 대한 여러 열 통계 개체를 만듭니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -152,20 +155,20 @@ CREATE STATISTICS LastFirst ON Person.Person (LastName, MiddleName, FirstName);
 GO  
 ```  
   
- 이 예에서 통계 개체 `LastFirst`는 열 접두사 (`LastName`), (`LastName, MiddleName`) 및 (`LastName, MiddleName, FirstName`)에 대한 밀도를 가집니다. (`LastName, FirstName`)에 대한 밀도는 사용할 수 없습니다. 쿼리에서 `LastName`을 사용하지 않고 `FirstName`과 `MiddleName` 을 사용하는 경우 카디널리티 예상치에 대한 밀도는 사용할 수 없습니다.  
+ 이 예에서 통계 개체 `LastFirst` 는 열 접두사 (`LastName`), (`LastName, MiddleName`) 및 (`LastName, MiddleName, FirstName`)에 대한 밀도를 가집니다. (`LastName, FirstName`)에 대한 밀도는 사용할 수 없습니다. 쿼리에서 `LastName` 을 사용하지 않고 `FirstName` 과 `MiddleName`을 사용하는 경우 카디널리티 예상치에 대한 밀도는 사용할 수 없습니다.  
   
-### 쿼리가 데이터 하위 집합에서 선택하는 경우  
+### <a name="query-selects-from-a-subset-of-data"></a>쿼리가 데이터 하위 집합에서 선택하는 경우  
  쿼리 최적화 프로그램에서 단일 열 및 인덱스에 대한 통계를 만들 때 모든 행의 값에 대해 통계를 작성합니다. 쿼리가 행의 하위 집합에서 선택하고 행의 해당 하위 집합에서 데이터 분포가 고유한 경우 필터링된 통계는 쿼리 계획을 향상시킬 수 있습니다. CREATE STATISTICS 문을 WHERE 절과 함께 사용하여 필터링된 통계를 만들어 필터 조건자 식을 정의할 수 있습니다.  
   
  예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]를 사용하면 Production.Product 테이블의 각 제품이 Production.ProductCategory 테이블의 4가지 범주인 Bikes, Components, Clothing 및 Accessories 중 하나에 속하게 됩니다. 각 범주의 데이터 배포는 서로 다른 가중치를 가집니다. 자전거 가중치는 13.77에서 30.0이고 구성 요소 가중치는 2.12에서 1050.00이면서 일부 NULL 값을 가지며 의류 가중치는 모두 NULL이고 액세서리 가중치 또한 NULL입니다.  
   
  자전거를 예로 사용할 때 모든 자전거 가중치에 대한 필터링된 통계는 쿼리 최적화 프로그램에 보다 정확한 통계를 제공하므로 전체 테이블 통계 또는 Weight 열에 대한 존재하지 않는 통계에 비해 쿼리 계획의 품질을 향상시킬 수 있습니다. 자전거 가중치 열은 필터링된 통계의 경우에는 좋지만 가중치 조회 수가 상대적으로 적을 때 필터링된 인덱스의 경우에는 반드시 좋은 것은 아닙니다. 필터링된 인덱스에서 제공하는 조회 성능의 향상은 장점이지만 필터링된 인덱스를 데이터베이스에 추가하는 것으로 인한 추가 유지 관리 및 저장 비용은 부담이 될 수 있습니다.  
   
- 다음 문에서는 Bikes의 모든 하위 범주에 대해 `BikeWeights` 로 필터링된 통계를 작성합니다. 필터링된 조건자 식에서는 `Production.ProductSubcategoryID IN (1,2,3)` 비교를 통해 모든 자전거 하위 범주를 열거하는 방법으로 자전거를 정의합니다. Bikes 범주 이름은 Production.ProductCategory 테이블에 저장되고 필터 식의 모든 열은 동일한 테이블에 있어야 하므로 조건자에서 해당 이름을 사용할 수 없습니다.  
+ 다음 문에서는 Bikes의 모든 하위 범주에 대해 `BikeWeights` 로 필터링된 통계를 작성합니다. 필터링된 조건자 식에서는 `Production.ProductSubcategoryID IN (1,2,3)`비교를 통해 모든 자전거 하위 범주를 열거하는 방법으로 자전거를 정의합니다. Bikes 범주 이름은 Production.ProductCategory 테이블에 저장되고 필터 식의 모든 열은 동일한 테이블에 있어야 하므로 조건자에서 해당 이름을 사용할 수 없습니다.  
   
  [!code-sql[StatisticsDDL#FilteredStats2](../../relational-databases/statistics/codesnippet/tsql/statistics_1.sql)]  
   
- 쿼리 최적화 프로그램은 `BikeWeights`로 필터링된 통계를 사용하여 `25`보다 가중치가 높은 모든 자전거를 선택하는 다음 쿼리의 쿼리 계획을 향상시킵니다.  
+ 쿼리 최적화 프로그램은 `BikeWeights` 로 필터링된 통계를 사용하여 `25`보다 가중치가 높은 모든 자전거를 선택하는 다음 쿼리의 쿼리 계획을 향상시킵니다.  
   
 ```  
 SELECT P.Weight AS Weight, S.Name AS BikeName  
@@ -177,7 +180,7 @@ ORDER BY P.Weight;
 GO  
 ```  
   
-### 쿼리에서 누락된 통계를 확인한 경우  
+### <a name="query-identifies-missing-statistics"></a>쿼리에서 누락된 통계를 확인한 경우  
  오류 또는 기타 이벤트로 인해 쿼리 최적화 프로그램에서 통계를 작성하지 못하는 경우 쿼리 최적화 프로그램은 통계를 사용하지 않고 쿼리 계획을 만듭니다. 쿼리 최적화 프로그램은 통계가 누락된 것으로 표시하며 다음에 쿼리가 다시 실행될 때 통계를 다시 생성하려고 합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 쿼리 실행 계획을 그래픽으로 표시할 때 누락된 통계는 테이블 이름을 빨간 문자열로 나타내어 경고로 표시합니다. 또한 **를 사용하여** Missing Column Statistics [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 이벤트 클래스를 모니터링하면 통계가 누락되는 시기를 나타냅니다. 자세한 내용은 [오류 및 경고 이벤트 범주&#40;데이터베이스 엔진&#41;](../../relational-databases/event-classes/errors-and-warnings-event-category-database-engine.md)를 참조하세요.  
@@ -190,17 +193,16 @@ GO
   
 -   CREATE STATISTICS 문을 사용하여 누락된 통계를 작성합니다.  
   
- 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 **tempdb**에서 임시 통계를 만들어 유지 관리합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
+ 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 **tempdb**에서 임시 통계를 만들어 유지 관리합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
   
--   [DROP STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md) 문을 사용하여 임시 통계를 삭제합니다.  
+-   [DROP STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md) 문으로 작성된 통계에 적용됩니다.  
   
--   **sys.stats** 및 **sys.stats_columns** 카탈로그 뷰를 사용하여 통계를 모니터링합니다. **sys_stats**에는 영구적 통계와 임시 통계를 나타내는 **is_temporary** 열이 포함되어 있습니다.  
+-   **sys.stats** 및 **sys.stats_columns** 카탈로그 뷰를 사용하여 통계를 모니터링합니다. **sys_stats** 에는 영구적 통계와 임시 통계를 나타내는 **is_temporary** 열이 포함되어 있습니다.  
   
  임시 통계는 **tempdb**에 저장되므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작하면 모든 임시 통계가 사라집니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
   
 ##  <a name="UpdateStatistics"></a> 통계 업데이트 시기  
  쿼리 최적화 프로그램은 통계가 최신이 아닌 통계가 되는 시점을 확인한 다음 쿼리 계획에 필요할 때 통계를 업데이트합니다. 경우에 따라 AUTO_UPDATE_STATISTICS를 ON으로 설정할 때보다 더 자주 통계를 업데이트하여 쿼리 계획을 향상시키고 쿼리 성능을 높일 수 있습니다. UPDATE STATISTICS 문 또는 저장 프로시저 sp_updatestats를 사용하여 통계를 업데이트할 수 있습니다.  
@@ -219,20 +221,19 @@ GO
   
 -   유지 관리 작업 이후  
   
-### 쿼리 실행 시간이 느린 경우  
+### <a name="query-execution-times-are-slow"></a>쿼리 실행 시간이 느린 경우  
  쿼리 응답 시간이 느리거나 예측할 수 없는 경우 추가 문제 해결 단계를 수행하기 전에 쿼리에 최신 통계가 포함되었는지 확인하십시오.  
   
-### 삽입 작업이 오름차순 또는 내림차순 키 열에 대해 발생하는 경우  
+### <a name="insert-operations-occur-on-ascending-or-descending-key-columns"></a>삽입 작업이 오름차순 또는 내림차순 키 열에 대해 발생하는 경우  
  IDENTITY 또는 실시간 타임스탬프 열과 같은 오름차순 또는 내림차순 키 열에 대한 통계의 경우 쿼리 최적화 프로그램이 수행하는 것보다 더 자주 통계를 업데이트해야 할 수도 있습니다. 삽입 작업에서는 새 값을 오름차순 또는 내림차순 열에 추가합니다. 추가된 행 수가 통계 업데이트를 트리거하기에는 너무 작을 수 있습니다. 통계가 최신 통계가 아니고 쿼리가 가장 최근에 추가된 행에서 선택하는 경우 현재 통계는 이러한 새 값에 대한 카디널리티 예상치를 포함하지 않습니다. 이로 인해 카디널리티 예상치가 부정확해지고 쿼리 성능이 저하될 수 있습니다.  
   
  예를 들어 가장 최근의 판매 주문 날짜에 대한 카디널리티 예상치를 포함하도록 통계가 업데이트되지 않은 경우 가장 최근의 판매 주문 날짜에서 선택하는 쿼리는 부정확한 카디널리티 예상치를 포함할 수 있습니다.  
   
-### 유지 관리 작업 이후  
+### <a name="after-maintenance-operations"></a>유지 관리 작업 이후  
  테이블 삭제와 같이 데이터 분포를 변경하는 유지 관리 작업을 수행한 후 또는 많은 양의 행에 대한 대량 삽입을 수행한 후 통계를 업데이트하십시오. 이렇게 하면 이후에 쿼리에서 자동 통계 업데이트를 기다리는 동안 쿼리 처리에 지연이 생기는 것을 방지할 수 있습니다.  
   
  인덱스 다시 작성, 다시 구성, 조각 모음 등의 작업은 데이터 분포를 변경하지 않습니다. 따라서 ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG 또는 ALTER INDEX REORGANIZE 작업을 수행한 후에는 통계를 업데이트할 필요가 없습니다. ALTER INDEX REBUILD 또는 DBCC DBREINDEX를 사용하여 테이블 또는 뷰에 대한 인덱스를 다시 작성하는 경우 쿼리 최적화 프로그램에서 통계를 업데이트하지만 이 통계 업데이트는 인덱스를 다시 만드는 과정에서 생성됩니다. DBCC INDEXDEFRAG 또는 ALTER INDEX REORGANIZE 작업 이후에는 쿼리 최적화 프로그램에서 통계를 업데이트하지 않습니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
   
 ##  <a name="DesignStatistics"></a> 통계를 효율적으로 사용하는 쿼리  
  쿼리 조건자에서 지역 변수, 복잡한 식 등의 일부 쿼리 구현은 만족스럽지 못한 쿼리 계획을 만들 수 있습니다. 이를 방지하려면 효율적인 통계 사용을 위한 쿼리 설계 지침을 따르는 것이 좋습니다. 쿼리 조건자에 대한 자세한 내용은 [검색 조건&#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)을 참조하세요.  
@@ -241,14 +242,14 @@ GO
   
  다음 지침에서는 카디널리티 예상치 정확도를 높여 쿼리 계획을 향상시킬 수 있도록 쿼리를 작성하는 방법에 대해 설명합니다.  
   
-### 식에 대한 카디널리티 예상치 정확도 향상  
+### <a name="improving-cardinality-estimates-for-expressions"></a>식에 대한 카디널리티 예상치 정확도 향상  
  식에 대한 카디널리티 예상치 정확도를 높이려면 다음 지침에 따르십시오.  
   
 -   가능하면 상수가 포함된 단순한 식을 사용하십시오. 쿼리 최적화 프로그램에서는 카디널리티 예상치를 확인하기 전에 상수가 포함된 모든 함수와 식을 평가하지 않습니다. 예를 들어 ABS(`-100) to 100`) 식을 단순화하십시오.  
   
 -   식에서 여러 변수를 사용하는 경우 식에 대해 계산된 열을 만든 다음 계산된 열에 대해 통계 또는 인덱스를 만드십시오. 예를 들어 `WHERE PRICE + Tax > 100` 식에 대해 계산 열을 만드는 경우 쿼리 조건자 `Price + Tax`은 보다 정확한 카디널리티 예상치를 가질 수 있습니다.  
   
-### 변수 및 함수에 대한 카디널리티 예상치 정확도 향상  
+### <a name="improving-cardinality-estimates-for-variables-and-functions"></a>변수 및 함수에 대한 카디널리티 예상치 정확도 향상  
  변수 및 함수에 대한 카디널리티 예상치 정확도를 높이려면 다음 지침에 따르십시오.  
   
 -   쿼리 조건자에서 지역 변수를 사용하는 경우 지역 변수 대신 매개 변수를 사용하여 쿼리를 다시 작성하십시오. 쿼리 최적화 프로그램에서 쿼리 실행 계획을 만들 때 지역 변수 값은 알 수 없습니다. 쿼리에서 매개 변수를 사용할 때 쿼리 최적화 프로그램은 저장 프로시저에 전달되는 첫 번째 실제 매개 변수 값에 대한 카디널리티 예상치를 사용합니다.  
@@ -305,8 +306,8 @@ GO
     GO  
     ```  
   
-### 쿼리 힌트를 사용하여 카디널리티 예상치 정확도 향상  
- 지역 변수에 대한 카디널리티 예상치 정확도를 높이기 위해 RECOMPILE과 함께 OPTIMIZE FOR 또는 OPTIMIZE FOR UNKNOWN 쿼리 힌트를 사용할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../Topic/Query%20Hints%20\(Transact-SQL\).md)를 참조하세요.  
+### <a name="improving-cardinality-estimates-with-query-hints"></a>쿼리 힌트를 사용하여 카디널리티 예상치 정확도 향상  
+ 지역 변수에 대한 카디널리티 예상치 정확도를 높이기 위해 RECOMPILE과 함께 OPTIMIZE FOR 또는 OPTIMIZE FOR UNKNOWN 쿼리 힌트를 사용할 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
  일부 응용 프로그램의 경우 쿼리를 실행할 때마다 다시 컴파일하는 데 너무 많은 시간이 걸릴 수 있습니다. RECOMPILE 옵션을 사용하지 않는 경우에도 OPTIMIZE FOR 쿼리 힌트가 도움이 될 수 있습니다. 예를 들어 특정 날짜를 지정하기 위해 OPTIMIZER FOR 옵션을 저장 프로시저 Sales.GetRecentSales에 추가할 수 있습니다. 다음 예에서는 OPTIMIZER FOR 옵션을 Sales.GetRecentSales 프로시저에 추가합니다.  
   
@@ -328,20 +329,20 @@ END;
 GO  
 ```  
   
-### 계획 지침을 사용하여 카디널리티 예상치 정확도 향상  
+### <a name="improving-cardinality-estimates-with-plan-guides"></a>계획 지침을 사용하여 카디널리티 예상치 정확도 향상  
  일부 응용 프로그램의 경우 쿼리를 변경할 수 없거나 RECOMPILE 쿼리 힌트 사용으로 인해 너무 많은 컴파일이 필요해서 통계 설계 지침이 적용되지 않을 수 있습니다. 응용 프로그램 공급업체와 함께 응용 프로그램 변경 내용을 조사하는 동안 쿼리 동작을 제어할 수 있도록 계획 지침을 사용하여 USE PLAN과 같은 기타 힌트를 지정할 수 있습니다. 계획 지침에 대한 자세한 내용은 [Plan Guides](../../relational-databases/performance/plan-guides.md)를 참조하십시오.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#Top)  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [UPDATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   
  [DBCC SHOW_STATISTICS&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)   
- [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [DROP STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/drop-statistics-transact-sql.md)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)  
   
   
+

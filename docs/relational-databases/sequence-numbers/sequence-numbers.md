@@ -1,37 +1,41 @@
 ---
-title: "시퀀스 번호 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "시퀀스 번호 개체, 개요"
-  - "시퀀스 [데이터베이스 엔진]"
-  - "자동 번호, 순서"
-  - "시퀀스 번호 [SQL Server]"
-  - "시퀀스 번호 개체"
+title: "시퀀스 번호 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence number object, overview
+- sequence [Database Engine]
+- autonumbers, sequences
+- sequence numbers [SQL Server]
+- sequence number object
 ms.assetid: c900e30d-2fd3-4d5f-98ee-7832f37e79d1
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be2100277326fafec2dd32609b977de0f72cb9b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 시퀀스 번호
+# <a name="sequence-numbers"></a>시퀀스 번호
   시퀀스는 시퀀스를 만들 때 지정한 사양에 따라 숫자 값의 시퀀스를 생성하는 사용자 정의 스키마 바인딩된 개체입니다. 숫자 값의 시퀀스는 지정된 간격으로 올림차순 또는 내림차순으로 생성되며 요청된 경우 순환(반복)할 수 있습니다. ID 열과 달리 시퀀스는 테이블에 연결되어 있지 않습니다. 응용 프로그램은 다음 값을 가져오기 위해 시퀀스 개체를 참조합니다. 시퀀스와 테이블 간의 관계는 응용 프로그램에서 제어합니다. 사용자 응용 프로그램에서는 시퀀스 개체를 참조하고 여러 행 및 테이블에 걸쳐 값 키를 조정할 수 있습니다.  
   
  시퀀스는 **CREATE SEQUENCE** 문을 사용하여 테이블과 독립적으로 만들어집니다. 옵션을 통해 증분, 최대값 및 최소값, 시작 지점, 자동 다시 시작 기능, 성능 개선을 위한 캐싱을 제어할 수 있습니다. 옵션에 대한 자세한 내용은 [CREATE SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)를 참조하십시오.  
   
- 행을 삽입하면 생성되는 ID 열 값과는 달리 응용 프로그램에서는 [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) 함수를 호출하여 행을 삽입하기 전에 다음 시퀀스 번호를 가져올 수 있습니다. NEXT VALUE FOR가 호출되면 테이블에 삽입되지 않더라도 시퀀스 번호가 할당됩니다. 테이블 정의에서 행의 기본값으로 NEXT VALUE FOR 함수를 사용할 수 있습니다. 일정 범위의 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)를 사용합니다.  
+ 행을 삽입하면 생성되는 ID 열 값과는 달리 응용 프로그램에서는 [NEXT VALUE FOR](../../t-sql/functions/next-value-for-transact-sql.md) 함수를 호출하여 행을 삽입하기 전에 다음 시퀀스 번호를 가져올 수 있습니다. NEXT VALUE FOR가 호출되면 테이블에 삽입되지 않더라도 시퀀스 번호가 할당됩니다. 테이블 정의에서 행의 기본값으로 NEXT VALUE FOR 함수를 사용할 수 있습니다. 일정 범위의 여러 시퀀스 번호를 한 번에 가져오려면 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 를 사용합니다.  
   
  시퀀스는 임의의 정수 데이터 형식으로 정의할 수 있습니다. 데이터 형식을 지정하지 않으면 시퀀스의 기본값은 **bigint**가 됩니다.  
   
-## 시퀀스 사용  
+## <a name="using-sequences"></a>시퀀스 사용  
  다음 시나리오에서는 ID 열 대신 시퀀스를 사용하십시오.  
   
 -   응용 프로그램에서 테이블에 삽입하기 전에 번호가 필요한 경우  
@@ -46,7 +50,7 @@ caps.handback.revision: 31
   
 -   증분 값 등 시퀀스 사양을 변경해야 하는 경우  
   
-## 제한 사항  
+## <a name="limitations"></a>제한 사항  
  값을 변경할 수 없는 ID 열과 달리 시퀀스 값은 테이블에 삽입된 이후에 자동으로 보호되지 않습니다. 시퀀스 값이 변경되지 않도록 하려면 테이블에서 업데이트 트리거를 사용하여 변경 내용을 롤백합니다.  
   
  시퀀스 값의 경우 고유성이 자동으로 적용되지 않습니다. 시퀀스 값을 다시 사용하는 것은 의도된 것입니다. 테이블의 시퀀스 값이 고유해야 하는 경우 열에 고유 인덱스를 만드십시오. 테이블의 시퀀스 값이 테이블 그룹 전체에서 고유해야 하는 경우 업데이트 문이나 시퀀스 번호 순환으로 인해 중복이 발생하지 않도록 트리거를 만듭니다.  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
  하나의 **NEXT VALUE FOR** 문 내에 동일한 시퀀스 생성기를 지정하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 인스턴스가 여러 개 있는 경우 모든 인스턴스에서 해당 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 테이블과 독립적으로 만들어집니다. 이 동작은 ANSI 표준을 따릅니다.  
   
-## 일반적인 용도  
+## <a name="typical-use"></a>일반적인 용도  
  -2,147,483,648에서 2,147,483,647까지 1씩 증가하는 정수 시퀀스 번호를 만들려면 다음 문을 사용합니다.  
   
 ```  
@@ -74,13 +78,13 @@ CREATE SEQUENCE Schema.SequenceName
   
 ```  
   
-## 시퀀스 관리  
+## <a name="managing-sequences"></a>시퀀스 관리  
  시퀀스에 대한 자세한 내용을 보려면 [sys.sequences](../../relational-databases/system-catalog-views/sys-sequences-transact-sql.md)를 쿼리하십시오.  
   
-## 예  
+## <a name="examples"></a>예  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md), [NEXT VALUE FOR&#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md) 및 [sp_sequence_get_range](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md) 항목에서 또 다른 예제를 찾아볼 수 있습니다.  
   
-### 1. 단일 테이블에서 시퀀스 번호 사용  
+### <a name="a-using-a-sequence-number-in-a-single-table"></a>1. 단일 테이블에서 시퀀스 번호 사용  
  다음 예에서는 Test라는 스키마, Orders라는 테이블, CountBy1이라는 시퀀스를 만든 다음 NEXT VALUE FOR 함수를 사용하여 테이블에 행을 삽입합니다.  
   
 ```  
@@ -125,7 +129,7 @@ GO
   
  `3        Brake   1`  
   
-### 2. 행을 삽입하기 전에 NEXT VALUE FOR 호출  
+### <a name="b-calling-next-value-for-before-inserting-a-row"></a>2. 행을 삽입하기 전에 NEXT VALUE FOR 호출  
  예 1에서 만든 `Orders` 테이블을 사용하여 다음 예에서는 `@nextID`라는 변수를 선언한 다음 NEXT VALUE FOR 함수를 사용하여 변수를 다음으로 사용 가능한 시퀀스 번호로 설정합니다. 응용 프로그램은 고객에게 잠재적 주문에 대한 `OrderID` 번호를 제공하고 주문의 유효성을 검사하는 등 주문에 대한 처리를 수행하고 있는 것으로 가정합니다. 처리에 걸리는 시간이나 처리 중 추가되는 다른 주문 수에 관계없이 이 연결에서 사용하도록 원래 번호가 보관됩니다. 마지막으로 `INSERT` 문은 `Orders` 테이블에 주문을 추가합니다.  
   
 ```  
@@ -138,7 +142,7 @@ GO
   
 ```  
   
-### 3. 여러 테이블에서 시퀀스 사용  
+### <a name="c-using-a-sequence-number-in-multiple-tables"></a>3. 여러 테이블에서 시퀀스 사용  
  이 예에서는 생산 라인의 모니터링 프로세스가 작업장 전체에서 발생하는 이벤트 알림을 받는다고 가정합니다. 각 이벤트는 고유하며 일정 간격으로 증가하는 `EventID` 번호를 받습니다. 모든 이벤트를 조합하는 보고서가 각 이벤트를 고유하게 식별할 수 있도록 모든 이벤트는 같은 `EventID` 시퀀스 번호를 사용합니다. 하지만 이벤트 데이터는 이벤트 유형에 따라 세 개의 다른 테이블에 저장됩니다. 코드 예에서는 `Audit`이라는 스키마, `EventCounter`라는 시퀀스 및 `EventCounter` 시퀀스를 기본값으로 사용하는 세 개의 테이블을 만듭니다. 그런 다음 이 예에서는 세 테이블에 행을 추가하고 결과를 쿼리합니다.  
   
 ```  
@@ -228,7 +232,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### 4. 결과 집합에 반복 시퀀스 번호 생성  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>4. 결과 집합에 반복 시퀀스 번호 생성  
  다음 예에서는 순환 기능 및 SELECT 문에서 `NEXT VALUE FOR` 를 사용하는 기능을 보여 줍니다.  
   
 ```  
@@ -245,7 +249,7 @@ SELECT NEXT VALUE FOR CountBy5 AS SurveyGroup, Name FROM sys.objects ;
 GO  
 ```  
   
-### 5. OVER 절을 사용하여 결과 집합에 대한 시퀀스 번호 생성  
+### <a name="e-generating-sequence-numbers-for-a-result-set-by-using-the-over-clause"></a>5. OVER 절을 사용하여 결과 집합에 대한 시퀀스 번호 생성  
  다음 예에서는 시퀀스 번호 열을 추가하기 전에 `OVER` 절을 사용하여 `Name` 을 기준으로 결과 집합을 정렬합니다.  
   
 ```  
@@ -265,7 +269,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### 6. 시퀀스 번호 다시 설정  
+### <a name="f-resetting-the-sequence-number"></a>6. 시퀀스 번호 다시 설정  
  예 5에서는 `Samples.IDLabel` 시퀀스 번호의 첫 79개를 소비했습니다. `AdventureWorks2012` 버전에 따라 다른 개수의 결과가 반환되었을 수 있습니다. 다음을 실행하여 다음 시퀀스 번호 79개(80 ~ 158)를 소비합니다.  
   
 ```  
@@ -287,7 +291,7 @@ SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, 
 WHERE Name LIKE '%nut%' ;  
 ```  
   
-### 7. ID에서 시퀀스로 테이블 변경  
+### <a name="g-changing-a-table-from-identity-to-sequence"></a>7. ID에서 시퀀스로 테이블 변경  
  다음 예에서는 스키마 한 개와 행을 세 개 포함하는 테이블 한 개를 만듭니다. 그런 다음 새 열을 추가하고 이전 열을 삭제합니다.  
   
 ```  
@@ -386,15 +390,15 @@ GO
   
 ```  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하는 `SELECT *` 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
+ `SELECT *`를 사용하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 새 열을 첫 번째 열이 아니라 마지막 열로 받습니다. 이렇게 되지 않도록 하려면 완전히 새로운 테이블을 만들고 데이터를 이 테이블로 이동한 다음 새 테이블에서 사용 권한을 다시 만들어야 합니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [CREATE SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)  
   
  [ALTER SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)  
   
  [DROP SEQUENCE&#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)  
   
- [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../Topic/IDENTITY%20\(Property\)%20\(Transact-SQL\).md)  
+ [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)  
   
   

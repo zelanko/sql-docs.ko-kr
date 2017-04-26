@@ -1,28 +1,32 @@
 ---
-title: "FOR XML에서 AUTO 모드 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 절, AUTO 모드"
-  - "ELEMENTS 옵션"
-  - "FOR XML AUTO 모드"
-  - "AUTO FOR XML 모드"
+title: "FOR XML에서 AUTO 모드 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, AUTO mode
+- ELEMENTS option
+- FOR XML AUTO mode
+- AUTO FOR XML mode
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dcb415f177d7a7163520c1b4295cadbca5f4cc9
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML에서 AUTO 모드 사용
-  [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)에 설명된 대로 AUTO 모드는 쿼리 결과를 중첩 XML 요소로 반환합니다. 이 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. AUTO 모드 쿼리는 간단한 계층을 생성하려는 경우에 유용합니다. 그러나 [FOR XML에서 EXPLICIT 모드 사용](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) 및 [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
+# <a name="use-auto-mode-with-for-xml"></a>FOR XML에서 AUTO 모드 사용
+  [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)에 설명된 대로 AUTO 모드는 쿼리 결과를 중첩 XML 요소로 반환합니다. 이 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. AUTO 모드 쿼리는 간단한 계층을 생성하려는 경우에 유용합니다. 그러나 [FOR XML에서 EXPLICIT 모드 사용](../../relational-databases/xml/use-explicit-mode-with-for-xml.md) 및 [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md) 에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
   
  최소한 한 개의 해당 열이 SELECT 절에 나열되는 FROM 절의 각 테이블은 XML 요소로 표시됩니다. 선택 항목인 ELEMENTS 옵션이 FOR XML 절에 지정된 경우 SELECT 절에 나열되는 열은 특성이나 하위 요소로 매핑됩니다.  
   
@@ -122,13 +126,13 @@ FOR XML AUTO, ELEMENTS
   
  이 쿼리에서 CustomerID 값은 CustomerID가 테이블의 기본 키이기 때문에 \<Cust> 요소를 만들 때 한 행씩 순서대로 비교됩니다. CustomerID가 테이블의 기본 키로 식별되지 않는 경우 모든 열 값(이 쿼리의 CustomerType인 CustomerID)이 한 행씩 순서대로 비교됩니다. 값이 다르면 새로운 \<Cust> 요소가 XML에 추가됩니다.  
   
- 이러한 열 값을 비교할 때 비교되는 임의의 열 유형이 **text**, **ntext**, **image**또는 **xml**인 경우 값이 같더라도 FOR XML은 값이 다르고 비교되지 않는 것으로 가정합니다. 이러한 이유는 큰 개체에 대한 비교가 지원되지 않기 때문입니다. 선택한 각 행에 대한 결과에 요소가 추가됩니다. **(n)varchar(max)** 및 **varbinary(max)**의 열이 비교되는지 확인합니다.  
+ 이러한 열 값을 비교할 때 비교되는 임의의 열 유형이 **text**, **ntext**, **image**또는 **xml**인 경우 값이 같더라도 FOR XML은 값이 다르고 비교되지 않는 것으로 가정합니다. 이러한 이유는 큰 개체에 대한 비교가 지원되지 않기 때문입니다. 선택한 각 행에 대한 결과에 요소가 추가됩니다. **(n)varchar(max)** 및 **varbinary(max)** 의 열이 비교되는지 확인합니다.  
   
  집계 열 또는 계산 열의 경우와 같이 SELECT 절의 열이 FROM 절에서 식별된 어떤 테이블과도 연결될 수 없는 경우 그 열은 목록에서 나타날 때 XML 문서의 가장 깊은 중첩 수준에 추가됩니다. 그러한 열이 SELECT 절에서 첫 번째 열로 나타나는 경우에는 최상위 요소에 추가됩니다.  
   
  별표(*) 와일드카드 문자를 SELECT 절에 지정하는 경우 위에 설명한 방법과 동일한 방식으로 행이 쿼리 엔진에 의해 반환되는 순서에 따라 중첩이 결정됩니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 AUTO 모드에 대한 자세한 내용을 제공합니다:  
   
 -   [BINARY BASE64 옵션 사용](../../relational-databases/xml/use-the-binary-base64-option.md)  
@@ -137,7 +141,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [예제: AUTO 모드 사용](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

@@ -1,24 +1,28 @@
 ---
-title: "정책 범주에 데이터베이스 구독 또는 구독 취소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.groupsubscription.f1"
+title: "정책 범주에 데이터베이스 구독 또는 구독 취소 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.groupsubscription.f1
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56ad4058339f59a69409ef1c0319f9b41354823c
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 범주에 데이터베이스 구독 또는 구독 취소
+# <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>정책 범주에 데이터베이스 구독 또는 구독 취소
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스에 정책 범주를 구독하거나 구독 취소하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -42,7 +46,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스에 정책 범주를 구독하거나 구독 취소하려면  
+#### <a name="to-subscribe-or-unsubscribe-a-database-to-a-policy-category"></a>데이터베이스에 정책 범주를 구독하거나 구독 취소하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 범주 구독을 관리할 데이터베이스를 포함하는 서버를 확장합니다.  
   
@@ -73,13 +77,13 @@ caps.handback.revision: 20
      **기록**  
      로그 파일 뷰어를 열어 정책 기록을 보려면 기록 보기 하이퍼링크를 클릭합니다.  
   
-4.  정책 기반 관리 범주를 구독하려면 **가입**열 아래의 범주 확인란을 선택합니다. 범주에서 구독을 취소하려면 해당 확인란의 선택을 취소합니다.  
+4.  정책 기반 관리 범주를 구독하려면 **가입** 열 아래의 범주 확인란을 선택합니다. 범주에서 구독을 취소하려면 해당 확인란의 선택을 취소합니다.  
   
 5.  완료되었으면 **확인**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스에 정책 범주를 구독하려면  
+#### <a name="to-subscribe-a-database-to-a-policy-category"></a>데이터베이스에 정책 범주를 구독하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 20
   
  자세한 내용은 [sp_syspolicy_subscribe_to_policy_category&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-subscribe-to-policy-category-transact-sql.md)를 참조하세요.  
   
-#### 데이터베이스에서 정책 범주를 구독 취소하려면  
+#### <a name="to-unsubscribe-a-database-to-a-policy-category"></a>데이터베이스에서 정책 범주를 구독 취소하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

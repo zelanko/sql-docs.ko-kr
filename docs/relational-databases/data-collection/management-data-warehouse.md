@@ -1,26 +1,30 @@
 ---
-title: "관리 데이터 웨어하우스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 수집기 [SQL Server], 관리 데이터 웨어하우스"
-  - "데이터 웨어하우스"
-  - "관리 데이터 웨어하우스"
+title: "관리 데이터 웨어하우스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data collector [SQL Server], management data warehouse
+- data warehouse
+- management data warehouse
 ms.assetid: 9874a8b2-7ccd-494a-944c-ad33b30b5499
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0430b88308cb3ebc07b1addfb2e34575150fa41e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 관리 데이터 웨어하우스
+# <a name="management-data-warehouse"></a>관리 데이터 웨어하우스
   관리 데이터 웨어하우스는 데이터 컬렉션 대상인 서버에서 수집되는 데이터를 포함하는 관계형 데이터베이스입니다. 이 데이터를 사용하여 시스템 데이터 컬렉션 집합의 보고서를 생성하고 사용자 지정 보고서를 만들 수도 있습니다.  
   
  데이터 수집기 인프라는 데이터베이스 관리자가 정의하는 보존 정책을 구현하기 위해 필요한 작업 및 유지 관리 계획을 정의합니다.  
@@ -28,12 +32,12 @@ caps.handback.revision: 43
 > [!IMPORTANT]  
 >  이 릴리스의 데이터 수집기에서는 로깅을 최소화하기 위해 단순 복구 모델을 사용하여 관리 데이터 웨어하우스를 만듭니다. 사용자는 해당 조직에 맞는 복구 모델을 구현해야 합니다.  
   
-## 데이터 웨어하우스 배포 및 사용  
+## <a name="deploying-and-using-the-data-warehouse"></a>데이터 웨어하우스 배포 및 사용  
  데이터 수집기가 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 동일한 인스턴스에 관리 데이터 웨어하우스를 설치할 수 있습니다. 그러나 모니터링 중인 서버에서 서버 리소스 또는 성능이 문제가 될 경우 다른 컴퓨터에 관리 데이터 웨어하우스를 설치할 수 있습니다.  
   
  미리 정의된 시스템 컬렉션 집합에 필요한 스키마와 이들의 개체는 관리 데이터 웨어하우스를 만들 때 생성됩니다. 만들어진 스키마는 핵심이며 스냅숏입니다. 세 번째 스키마인 custom_snapshots는 일반 T-SQL 쿼리 수집기 유형을 사용하는 컬렉션 항목을 포함하는 사용자 정의 컬렉션 집합이 만들어질 때 생성됩니다.  
   
-###### core 스키마  
+###### <a name="core-schema"></a>core 스키마  
  core 스키마는 수집된 데이터를 구성하고 식별하는 데 사용되는 테이블, 저장 프로시저 및 뷰에 대해 설명합니다. 이러한 테이블은 개별 수집기 유형에 대해 생성되는 모든 데이터 테이블에서 공유됩니다. 이 스키마는 잠겨 있으며 관리 데이터 웨어하우스 데이터베이스의 소유자만 수정할 수 있습니다. 이 스키마의 테이블 이름에는 "core"가 접두사로 붙습니다.  
   
  다음 표에서는 core 스키마의 데이터베이스 테이블에 대해 설명합니다. 이러한 데이터베이스 테이블에서는 데이터 수집기를 사용하여 데이터가 있었던 위치, 데이터를 삽입한 사용자 및 데이터가 데이터 웨어하우스에 업로드된 시간을 추적할 수 있습니다.  
@@ -59,7 +63,7 @@ caps.handback.revision: 43
   
 -   snapshots.trace_data  
   
-###### snapshot 스키마  
+###### <a name="snapshots-schema"></a>snapshot 스키마  
  snapshots 스키마는 제공된 수집기 유형에 의해 수집된 데이터를 저장하고 유지 관리하는 데 필요한 개체에 대해 설명합니다. 이 스키마의 테이블은 고정되며 수집기 유형의 수명 동안 변경될 필요가 없습니다. 스키마를 변경해야 할 경우에는 mdw_admin 역할의 멤버만 변경할 수 있습니다. 이러한 테이블은 시스템 데이터 컬렉션 집합에서 수집한 데이터를 저장하기 위해 만듭니다.  
   
  다음 테이블은 서버 작업 및 쿼리 통계 컬렉션 집합에 필요한 관리 데이터 웨어하우스 스키마의 일부를 보여 줍니다.  
@@ -108,7 +112,7 @@ caps.handback.revision: 43
   
  데이터베이스 테이블 열에 대한 자세한 데이터 형식 및 콘텐츠 정보는 각 테이블에 해당되는 데이터 수집기 저장 프로시저에 대한 설명서를 참조하십시오.  
   
-### 최선의 구현 방법  
+### <a name="best-practices"></a>최선의 구현 방법  
  관리 데이터 웨어하우스를 사용할 때는 다음과 같은 최선의 방법을 따르는 것이 좋습니다.  
   
 -   새 수집기 유형을 추가하지 않는 한 관리 데이터 웨어하우스 테이블의 메타데이터를 수정하지 않습니다.  
@@ -117,14 +121,14 @@ caps.handback.revision: 43
   
 -   테이블을 직접 사용하는 대신 데이터 수집기와 함께 제공되는 문서화된 저장 프로시저 및 함수를 사용하여 인스턴스 및 응용 프로그램 데이터에 액세스합니다. 테이블 이름과 정의는 변경될 수 있습니다. 이러한 정보는 응용 프로그램을 업데이트할 때 변경되며 후속 릴리스에서 변경될 수 있습니다.  
   
-## 변경 내역  
+## <a name="change-history"></a>변경 내역  
   
 |업데이트된 내용|  
 |---------------------|  
 |"core 스키마" 섹션에 core.performance_counter_report_group_items 테이블이 추가되었습니다.|  
 |"snapshots 스키마" 섹션의 테이블 목록이 업데이트되었습니다. snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory 및 snapshots.io_virtual_file_stats가 추가되었습니다. snapshots.os_process_memory 및 snapshots.distinct_query_stats가 제거되었습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [관리 데이터 웨어하우스 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [데이터 수집기 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   

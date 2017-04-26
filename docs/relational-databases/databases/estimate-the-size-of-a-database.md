@@ -1,31 +1,35 @@
 ---
-title: "데이터베이스 크기 예측 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "공간 할당 [SQL Server], 데이터베이스 크기"
-  - "데이터베이스 크기 계산"
-  - "데이터베이스 크기 증가"
-  - "데이터베이스 크기 [SQL Server], 예측"
-  - "데이터베이스 크기 예측"
-  - "크기 [SQL Server], 데이터베이스"
-  - "데이터베이스 크기 예측"
-  - "데이터베이스 디자인 [SQL Server], 크기 예측"
+title: "데이터베이스 크기 예측 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], database size
+- calculating database size
+- increasing database size
+- database size [SQL Server], estimating
+- predicting database size
+- size [SQL Server], databases
+- estimating database size
+- designing databases [SQL Server], estimating size
 ms.assetid: 5b240161-eba4-44b0-946c-61a8fc00fc8c
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d2d986d7e899e630429f431f040addb9076f081a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 크기 예측
+# <a name="estimate-the-size-of-a-database"></a>데이터베이스 크기 예측
   데이터베이스를 디자인할 때는 데이터베이스가 데이터로 가득 찰 때 얼마나 커질 수 있는지를 추정해야 합니다. 데이터베이스의 크기를 추정하면 다음을 수행하는 데 필요한 하드웨어 구성을 결정하는 데 도움이 됩니다.  
   
 -   응용 프로그램에서 필요한 성능을 확보합니다.  
@@ -36,7 +40,7 @@ caps.handback.revision: 20
   
  데이터베이스의 크기를 추정하려면 각 테이블의 크기를 따로 추정한 다음 그 값을 더하면 됩니다. 테이블의 크기는 테이블에 인덱스가 있는지 여부와 인덱스 유형에 따라 달라집니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

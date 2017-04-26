@@ -1,26 +1,30 @@
 ---
-title: "SQL Server 확장 이벤트 패키지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "확장 이벤트 [SQL Server], 패키지"
-  - "xe"
+title: "SQL Server 확장 이벤트 패키지 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extended events [SQL Server], packages
+- xe
 ms.assetid: 6bcb04fc-ca04-48f4-b96a-20b604973447
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: afb2140445252ca5b3a27f5ec9bf33219e3eef0c
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 확장 이벤트 패키지
+# <a name="sql-server-extended-events-packages"></a>SQL Server 확장 이벤트 패키지
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트 개체를 위한 컨테이너입니다. 확장 이벤트 패키지에는 다음과 같은 세 가지 종류가 있습니다.  
@@ -29,7 +33,7 @@ caps.handback.revision: 21
   
 -   sqlserver - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 개체입니다.  
   
--   sqlos - SQLOS([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제) 관련 개체입니다.  
+-   sqlos - SQLOS( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제) 관련 개체입니다.  
   
 > [!NOTE]  
 >  SecAudit 패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사에 사용됩니다. 이 패키지의 개체는 확장 이벤트 DDL(데이터 정의 언어)을 통해 사용할 수 없습니다.  
@@ -52,12 +56,12 @@ caps.handback.revision: 21
   
  서로 다른 패키지의 개체를 혼합하여 하나의 이벤트 세션에 사용할 수 있습니다. 자세한 내용은 [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)을 참조하세요.  
   
-## 패키지 내용  
+## <a name="package-contents"></a>패키지 내용  
  다음 그림에서는 패키지에 포함될 수 있는 개체를 보여 줍니다. 패키지는 모듈에 포함되며 모듈은 실행 파일 또는 동적 연결 라이브러리일 수 있습니다.  
   
- ![모듈, 패키지 및 개체의 관계](../../relational-databases/extended-events/media/xepackagesobjects.gif "모듈, 패키지 및 개체의 관계")  
+ ![모듈, 패키지 및 개체의 관계](../../relational-databases/extended-events/media/xepackagesobjects.gif "The relationship of a module, packages, and object")  
   
-### 이벤트  
+### <a name="events"></a>이벤트  
  이벤트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]같은 프로그램의 실행 경로 내에서 특정 지점을 모니터링합니다. 이벤트의 발생은 이러한 관심 지점에 도달했다는 사실을 알림과 동시에 이벤트가 발생한 시점의 상태 정보를 제공하게 됩니다.  
   
  이벤트는 추적이나 동작 트리거를 위해서만 사용할 수 있습니다. 이러한 동작은 동기적이거나 비동기적일 수 있습니다.  
@@ -69,7 +73,7 @@ caps.handback.revision: 21
   
  모든 이벤트에는 내용을 정의하는 버전이 지정된 스키마가 있습니다. 이러한 스키마는 잘 정의된 형식의 이벤트 열로 구성됩니다. 특정 형식의 이벤트는 항상 스키마에 지정된 순서대로 정확하게 데이터를 제공해야 합니다. 하지만 이벤트 대상이 제공된 모든 데이터를 소비할 필요는 없습니다.  
   
-#### 이벤트 범주 분류  
+#### <a name="event-categorization"></a>이벤트 범주 분류  
  확장 이벤트는 ETW(Windows용 이벤트 추적)와 유사한 이벤트 범주 분류 모델을 사용합니다. 범주 분류에는 채널 및 키워드라는 두 가지 이벤트 속성이 사용됩니다. 이러한 속성을 사용하여 확장 이벤트를 ETW 및 그 도구와 통합할 수 있습니다.  
   
  **채널**  
@@ -95,10 +99,10 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  키워드는 SQL 추적 이벤트의 현재 그룹화와 밀접하게 매핑됩니다.  
   
-### 대상  
- 대상은 이벤트의 소비자입니다. 대상은 이벤트가 발생하는 스레드에서 동기적으로 이벤트를 처리하거나 시스템을 통해 제공되는 스레드에서 비동기적으로 이벤트를 처리합니다. 확장 이벤트는 이벤트 출력을 전송하는 데 적합하게 사용할 수 있는 여러 대상을 제공합니다. 자세한 내용은 [SQL Server Extended Events Targets](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)을 참조하세요.  
+### <a name="targets"></a>대상  
+ 대상은 이벤트의 소비자입니다. 대상은 이벤트가 발생하는 스레드에서 동기적으로 이벤트를 처리하거나 시스템을 통해 제공되는 스레드에서 비동기적으로 이벤트를 처리합니다. 확장 이벤트는 이벤트 출력을 전송하는 데 적합하게 사용할 수 있는 여러 대상을 제공합니다. 자세한 내용은 [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)을 참조하세요.  
   
-### 작업  
+### <a name="actions"></a>작업  
  동작은 이벤트에 대한 한 차례 또는 일련의 프로그래밍 방식 응답입니다. 동작은 이벤트에 바인딩되며 각 이벤트에는 일련의 고유한 동작이 있을 수 있습니다.  
   
 > [!NOTE]  
@@ -118,15 +122,15 @@ where name = 'keyword_map'
   
 -   스택 덤퍼  
   
--   실행 계획 감지([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당)  
+-   실행 계획 감지([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에만 해당)  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택 컬렉션([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에만 해당)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택 컬렉션([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에만 해당)  
   
 -   런타임 통계 계산  
   
 -   예외 시 사용자 입력 수집  
   
-### 조건자  
+### <a name="predicates"></a>조건자  
  조건자는 이벤트를 처리할 때 이벤트를 평가하는 데 사용되는 논리적 규칙의 집합입니다. 확장 이벤트 사용자는 조건자를 사용하여 특정 기준에 맞는 이벤트 데이터를 선별적으로 캡처할 수 있습니다.  
   
  조건자는 데이터를 로컬 컨텍스트에 저장하여 이벤트가 발생하는 *n* 분 또는 *n* 번마다 true를 한 번만 반환하는 조건자를 만드는 데 사용할 수 있습니다. 이 로컬 컨텍스트 저장소를 사용하면 조건자를 동적으로 업데이트함으로써 나중에 발생한 이벤트에 전과 유사한 데이터가 있는 경우 이를 생략하는 데 사용할 수 있습니다.  
@@ -136,7 +140,7 @@ where name = 'keyword_map'
 > [!NOTE]  
 >  이전 조건자 검사에 실패한 경우 부작용이 있는 조건자는 평가할 수 없습니다.  
   
-### 유형  
+### <a name="types"></a>유형  
  데이터는 연결된 바이트의 집합이므로 데이터를 해석하려면 바이트 집합의 길이 및 특성이 필요합니다. 이 정보는 Type 개체에 캡슐화됩니다. 패키지 개체에 제공되는 유형은 다음과 같습니다.  
   
 -   이벤트  
@@ -153,7 +157,7 @@ where name = 'keyword_map'
   
  자세한 내용은 [sys.dm_xe_objects&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql.md)를 참조하세요.  
   
-### 맵  
+### <a name="maps"></a>맵  
  맵 테이블은 내부 값을 문자열에 매핑함으로써 값이 무엇을 나타내는지 사용자에게 알려 줍니다. 사용자는 숫자 값뿐만 아니라 내부 값의 의미를 나타내는 설명도 얻을 수 있습니다. 다음 쿼리에서는 맵 값을 가져오는 방법을 보여 줍니다.  
   
 ```  
@@ -215,9 +219,9 @@ where name = 'lock_mode'
   
  이 표의 경우 mode라는 열이 있고 값이 5라고 가정하면 표에서 5가 X에 매핑되므로 잠금 유형은 배타입니다.  
   
-## 참고 항목  
- [SQL Server 확장 이벤트 세션](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server Extended Events Sessions](../../relational-databases/extended-events/sql-server-extended-events-sessions.md)   
  [SQL Server 확장 이벤트 엔진](../../relational-databases/extended-events/sql-server-extended-events-engine.md)   
- [SQL Server 확장 이벤트 대상](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)  
+ [SQL Server Extended Events Targets](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)  
   
   

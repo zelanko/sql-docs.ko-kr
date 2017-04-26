@@ -1,28 +1,32 @@
 ---
-title: "FOR XML 쿼리와 중첩 FOR XML 쿼리 비교 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 쿼리"
-  - "쿼리 [SQL Server의 XML] 쿼리 유형 비교"
+title: "FOR XML 쿼리와 중첩 FOR XML 쿼리 비교 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML query
+- queries [XML in SQL Server], comparing query types
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e83d836d3cf5e736847c5ebbb1934e8cde5374a
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
+# <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
   이 항목에서는 단일 수준 FOR XML 쿼리를 중첩 FOR XML 쿼리와 비교합니다. 중첩 FOR XML 쿼리를 사용할 때의 이점 중 하나는 쿼리 결과에 특성 중심 및 요소 중심의 XML을 조합하여 지정할 수 있다는 점입니다. 다음 예에서는 이러한 이점을 보여 줍니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 `SELECT` 쿼리는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 제품 범주와 하위 범주 정보를 검색합니다. 쿼리에는 중첩 FOR XML이 없습니다.  
   
 ```  
@@ -115,9 +119,9 @@ FOR XML AUTO, TYPE
   
  이전 쿼리에서 다음을 유의하십시오.  
   
--   내부 `FOR XML` 쿼리는 제품 하위 범주 정보를 검색합니다. `ELEMENTS` 지시어는 외부 쿼리에 의해 생성되는 XML에 추가된 요소 중심 XML을 생성하기 위해 내부 `FOR XML`에 추가되어 있습니다. 기본적으로 외부 쿼리는 특성 중심 XML을 생성합니다.  
+-   내부 `FOR XML` 쿼리는 제품 하위 범주 정보를 검색합니다. `ELEMENTS` 지시어는 외부 쿼리에 의해 생성되는 XML에 추가된 요소 중심 XML을 생성하기 위해 내부 `FOR XML` 에 추가되어 있습니다. 기본적으로 외부 쿼리는 특성 중심 XML을 생성합니다.  
   
--   내부 쿼리에서 결과가 `TYPE` xml **유형이 되도록** 지시어를 지정합니다. `TYPE`을 지정하지 않으면 결과가 **nvarchar(max)** 유형으로 반환되고 XML 데이터는 엔터티로 반환됩니다.  
+-   내부 쿼리에서 결과가 `TYPE` xml **유형이 되도록** 지시어를 지정합니다. `TYPE` 을 지정하지 않으면 결과가 **nvarchar(max)** 유형으로 반환되고 XML 데이터는 엔터티로 반환됩니다.  
   
 -   외부 쿼리도 `TYPE` 지시어를 지정합니다. 따라서 이 쿼리의 결과는 클라이언트에 **xml** 유형으로 반환됩니다.  
   
@@ -197,9 +201,9 @@ FOR XML AUTO, TYPE
      …  
 ```  
   
- 제품 하위 범주를 생성하는 중첩된 `ELEMENTS` 쿼리에서 `FOR XML` 지시어를 제거하면 전체 결과가 특성 중심이 됩니다. 그런 다음 중첩 없이 이 쿼리를 작성할 수 있습니다. `ELEMENTS`를 추가하면 부분적으로 특성 중심이고 요소 중심이기도 한 XML이 생성됩니다. 이 결과는 단일 수준의 FOR XML 쿼리에 의해 생성될 수 없습니다.  
+ 제품 하위 범주를 생성하는 중첩된 `ELEMENTS` 쿼리에서 `FOR XML` 지시어를 제거하면 전체 결과가 특성 중심이 됩니다. 그런 다음 중첩 없이 이 쿼리를 작성할 수 있습니다. `ELEMENTS` 를 추가하면 부분적으로 특성 중심이고 요소 중심이기도 한 XML이 생성됩니다. 이 결과는 단일 수준의 FOR XML 쿼리에 의해 생성될 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [중첩 FOR XML 쿼리 사용](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

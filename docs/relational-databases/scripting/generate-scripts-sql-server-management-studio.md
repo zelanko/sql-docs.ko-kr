@@ -1,29 +1,33 @@
 ---
-title: "스크립트 생성(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "스크립트 생성(SQL Server Management Studio) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 스크립트 생성(SQL Server Management Studio)
+# <a name="generate-scripts-sql-server-management-studio"></a>스크립트 생성(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성하는 두 가지 메커니즘을 제공합니다. **스크립트 생성 및 게시 마법사**를 사용하여 여러 개체에 대한 스크립트를 만들 수 있습니다. 또한 **개체 탐색기** 에서 **스크립팅**메뉴를 사용하여 개별 개체 또는 여러 개체에 대한 스크립트를 생성할 수도 있습니다.  
   
-1.  **방법 선택:** [스크립트 생성 및 게시 마법사](#GenPubScriptWiz), [개체 탐색기 스크립팅 메뉴](#OEScriptAsMenu)  
+1.  **Choose a method:**  [Generate and Publish Scripts Wizard](#GenPubScriptWiz), [Object Explorer Script As Menu](#OEScriptAsMenu)  
   
-2.  **스크립트를 메뉴로 사용:**  [단일 개체 스크립팅](#ScriptSingleObject), [개체 탐색기를 사용하여 두 개체 스크립팅](#ScriptTwoObjectsOE), [개체 탐색기 정보를 사용하여 두 개체 스크립팅](#ScriptTwoObjectsOED)  
+2.  **To use the Script As menu:**  [Script a Single Object](#ScriptSingleObject), [Script Two Objects Using Object Explorer](#ScriptTwoObjectsOE), [Script Two Objects Using Object Explorer Details](#ScriptTwoObjectsOED)  
   
-## 시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  요구 사항에 가장 적합한 메커니즘을 선택합니다.  
   
 ###  <a name="GenPubScriptWiz"></a> 스크립트 생성 및 게시 마법사  
@@ -41,7 +45,7 @@ caps.handback.revision: 6
   
 3.  개체의 범주를 확장합니다. 예를 들어 **테이블** 또는 **뷰** 노드를 확장합니다.  
   
-4.  개체를 마우스 오른쪽으로 클릭하여 **스크립트 \<개체 유형>**을 가리키고 예를 들어 **스크립트 테이블**을 가리킵니다.  
+4.  개체를 마우스 오른쪽으로 클릭하여 **\<개체 유형> 스크립팅**을 가리킵니다. 예를 들어 **테이블 스크립팅**을 가리킵니다.  
   
 5.  스크립트 유형을 가리킵니다(예: **CREATE** 또는 **ALTER**).  
   
@@ -56,11 +60,11 @@ caps.handback.revision: 6
   
 2.  **데이터베이스**를 확장한 다음 스크립팅할 개체가 포함된 데이터베이스를 확장합니다.  
   
-3.  스크립팅할 첫 번째 개체를 마우스 오른쪽 단추로 클릭하고 **스크립트 \<개체 유형>**을 가리키고 **다른 이름으로 저장** 선택 항목에서 **새 쿼리 편집기 창**을 출력 대상으로 선택합니다.  
+3.  스크립팅할 첫 번째 개체를 마우스 오른쪽 단추로 클릭하고 **\<개체 유형> 스크립팅**을 가리키고 **다른 이름으로 저장** 선택 항목에서 **새 쿼리 편집기 창**을 출력 대상으로 선택합니다.  
   
 4.  스크립팅할 두 번째 개체를 찾습니다.  
   
-5.  개체를 마우스 오른쪽 단추로 클릭하고 **스크립트 \<개체 유형>**을 가리키고 **다른 이름으로 저장** 선택 항목에서 **클립보드**를 출력 대상으로 선택합니다.  
+5.  개체를 마우스 오른쪽 단추로 클릭하고 **\<개체 유형> 스크립팅**을 가리키고 **다른 이름으로 저장** 선택 항목에서 **클립보드**를 출력 대상으로 선택합니다.  
   
 6.  첫 번째 개체에 대해 열린 쿼리 편집기 창에서 클립보드에 저장된 두 번째 개체에 대한 스크립트를 붙여 넣습니다.  
   
@@ -81,6 +85,6 @@ caps.handback.revision: 6
   
 6.  Crtl 키를 누른 채로 스크립팅할 두 번째 개체를 마우스 왼쪽 단추로 클릭합니다.  
   
-7.  선택된 개체 중 하나를 마우스 오른쪽 단추로 클릭하고 **스크립트 \<개체 유형>**을 선택합니다.  
+7.  선택된 개체 중 하나를 마우스 오른쪽 단추로 클릭하고 **\<개체 유형> 스크립팅**을 선택합니다.  
   
   

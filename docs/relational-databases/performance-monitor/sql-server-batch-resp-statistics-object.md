@@ -1,24 +1,28 @@
 ---
-title: "SQL Server, 일괄 처리 응답 통계 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:Batch Resp Statistics"
+title: "SQL Server, Batch Resp Statistics 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:Batch Resp Statistics
 ms.assetid: a58e8733-6a8d-4b47-b5cb-042e813d808a
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc35f5f03d3b395fc09765fa8ac5ef8158ad8c51
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, 일괄 처리 응답 통계 개체
+# <a name="sql-server-batch-resp-statistics-object"></a>SQL Server, 일괄 처리 응답 통계 개체
 **SQLServer:Batch Resp Statistics** 성능 개체는 SQL Server 일괄 처리 응답 시간을 추적하는 카운터를 제공합니다.
 
 다음 표에서는 SQL Server에 **Batch Resp Statistics** 성능 개체에 대해 설명합니다.
@@ -42,7 +46,7 @@ caps.handback.revision: 3
 |**Batches >=010000ms & \<020000ms**|응답 시간이 10,000ms보다 크거나 같고 20,000ms보다 작은 SQL 일괄 처리 수|
 |**Batches >=020000ms & \<050000ms**|응답 시간이 20,000ms보다 크거나 같고 50,000ms보다 작은 SQL 일괄 처리 수|
 |**Batches >=050000ms & \<100000ms**|응답 시간이 50,000ms보다 크거나 같고 100,000ms보다 작은 SQL 일괄 처리 수| 
-|**Batches >=100000ms**|응답 시간이 100,000ms보다 크거나 같은 SQL 일괄 처리 수| 
+|**Batches &gt;=100000ms**|응답 시간이 100,000ms보다 크거나 같은 SQL 일괄 처리 수| 
 
 개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
@@ -53,6 +57,6 @@ caps.handback.revision: 3
 |**Elapsed Time:Requests**|요청의 경과 시간입니다.|  
 |**Elapsed Time:Total(ms)**|일괄 처리의 경과 시간입니다.|  
 
-## 관련 항목:
+## <a name="see-also"></a>관련 항목:
 [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

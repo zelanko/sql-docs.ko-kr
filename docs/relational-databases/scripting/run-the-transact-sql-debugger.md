@@ -1,37 +1,41 @@
 ---
-title: "Transact-SQL 디버거 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 디버거, sysadmin 요구 사항"
-  - "TRANSACT-SQL 디버거, 지원되는 버전"
-  - "쿼리 편집기 [데이터베이스 엔진], 오른쪽 클릭 메뉴"
-  - "디버깅 [SQL Server], T-SQL 디버거"
-  - "TRANSACT-SQL 디버거, 쿼리 편집기 바로 가기 메뉴"
-  - "Transact-SQL 디버거, 중지"
-  - "Transact-SQL 디버거, 디버그 메뉴"
-  - "디버깅 [SQL Server]"
-  - "Transact-SQL 디버거, 디버그 도구 모음"
-  - "Transact-SQL 디버거, 바로 가기 키"
-  - "Transact-SQL 디버거, 시작"
+title: "Transact-SQL 디버거 실행 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, sysadmin requirement
+- Transact-SQL debugger, supported versions
+- Query Editor [Database Engine], right-click menu
+- debugging [SQL Server], T-SQL debugger
+- Transact-SQL debugger, Query Editor shortcut menu
+- Transact-SQL debugger, stopping
+- Transact-SQL debugger, Debug menu
+- debugging [SQL Server]
+- Transact-SQL debugger, Debug toolbar
+- Transact-SQL debugger, keyboard shortcuts
+- Transact-SQL debugger, starting
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2a9c2a6c57d74122ff0294bdf0bdccd2193447f8
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 디버거 실행
+# <a name="run-the-transact-sql-debugger"></a>Transact-SQL 디버거 실행
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창을 연 후에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버거를 시작할 수 있습니다. 그러면 디버거를 중지할 때까지 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 디버그 모드에서 실행할 수 있습니다. 옵션을 설정하여 디버거 실행 방식을 사용자 지정할 수 있습니다.  
   
-## 디버거 시작 및 중지  
+## <a name="starting-and-stopping-the-debugger"></a>디버거 시작 및 중지  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 시작하기 위한 요구 사항은 다음과 같습니다.  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 다른 컴퓨터의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 원격 디버깅을 사용하도록 디버거가 구성되어 있어야 합니다. 자세한 내용은 [TSQL 디버거를 실행하기 전에 방화벽 규칙 구성](../../relational-databases/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md)을 참조하세요.  
@@ -62,7 +66,7 @@ caps.handback.revision: 8
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버그 **메뉴에서** 모두 분리 **를 클릭하여 디버그 모드를 중지하고 나머지** 문이 실행 완료되도록 할 수도 있습니다.  
   
-## 디버거 제어  
+## <a name="controlling-the-debugger"></a>디버거 제어  
  다음 메뉴 명령, 도구 모음 및 바로 가기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거 작동 방식을 제어할 수 있습니다.  
   
 -   **디버그** 메뉴 및 **디버그** 도구 모음. **디버그** 메뉴와 **디버그** 도구 모음 모두 열려 있는 쿼리 편집기 창에 포커스를 둘 때까지 비활성화되며 현재 프로젝트를 닫을 때까지 활성화된 상태로 유지됩니다.  
@@ -86,10 +90,10 @@ caps.handback.revision: 8
 |**창/호출 스택**|사용할 수 없음|**중단점/호출 스택**|Ctrl+Alt+C|**호출 스택** 창을 표시합니다.|  
 |**창/스레드**|사용할 수 없음|**중단점/스레드**|Ctrl+Alt+H|**스레드** 창을 표시합니다.|  
 |**계속**|사용할 수 없음|**계속**|Alt+F5|다음 중단점까지 실행합니다. **계속** 은 디버그 모드에 있는 쿼리 편집기 창에 포커스를 둘 때까지 활성화되지 않습니다.|  
-|**디버그**|사용할 수 없음|**디버깅 시작**|Alt+F5|쿼리 편집기 창을 디버그 모드로 설정하고 첫 번째 중단점까지 실행합니다. 디버그 모드에 있는 쿼리 편집기 창에 포커스가 있는 경우 **디버깅 시작** 은 **계속**으로 대체됩니다.|  
+|**디버그**|사용할 수 없음|**디버그**|Alt+F5|쿼리 편집기 창을 디버그 모드로 설정하고 첫 번째 중단점까지 실행합니다. 디버그 모드에 있는 쿼리 편집기 창에 포커스가 있는 경우 **디버깅 시작** 은 **계속**으로 대체됩니다.|  
 |**모두 중단**|사용할 수 없음|**모두 중단**|Ctrl+Alt+Break|이 기능은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에 사용되지 않습니다.|  
 |**디버깅 중지**|사용할 수 없음|**디버깅 중지**|Shift+F5|쿼리 편집기 창에서 디버그 모드를 중지하고 일반 모드로 되돌립니다.|  
-|**모두 분리**|사용할 수 없음|사용할 수 없음|사용할 수 없음|쿼리 편집기 창에서 디버그 모드를 중지하지만 나머지 문은 실행합니다.|  
+|**메뉴에서**|사용할 수 없음|사용할 수 없음|사용할 수 없음|쿼리 편집기 창에서 디버그 모드를 중지하지만 나머지 문은 실행합니다.|  
 |**한 단계씩 코드 실행**|사용할 수 없음|**한 단계씩 코드 실행**|F11|다음 문을 실행하고 다음 문이 저장 프로시저, 트리거 또는 함수를 실행하는 경우 디버그 모드에서 새 쿼리 편집기 창을 엽니다.|  
 |**프로시저 단위 실행**|사용할 수 없음|**프로시저 단위 실행**|F10|함수, 저장 프로시저 또는 트리거가 디버깅되지 않는다는 점을 제외하고 **한 단계씩 코드 실행**과 같습니다.|  
 |**프로시저 나가기**|사용할 수 없음|**프로시저 나가기**|Shift+F11|중단점에서 일시 중지하지 않고 트리거, 함수 또는 저장 프로시저의 나머지 코드를 실행합니다. 일반 디버그 모드는 모듈을 호출한 코드로 컨트롤이 반환되면 재개됩니다.|  
@@ -103,7 +107,7 @@ caps.handback.revision: 8
 |**모든 중단점 해제**|사용할 수 없음|사용할 수 없음|사용할 수 없음|모든 중단점을 해제합니다.|  
 |사용할 수 없음|**조사식 추가**|사용할 수 없음|사용할 수 없음|**조사식** 창에 선택한 식을 추가합니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)   

@@ -1,31 +1,35 @@
 ---
-title: "리소스 관리자 리소스 풀 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 관리자, 리소스 풀"
-  - "리소스 풀 [SQL Server], 개요"
-  - "리소스 풀 [SQL Server]"
+title: "리소스 관리자 리소스 풀 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool
+- resource pool [SQL Server], overview
+- resource pool [SQL Server]
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10b74a185e59a6b2973ea17fb4c68b61e781953f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 리소스 관리자 리소스 풀
+# <a name="resource-governor-resource-pool"></a>리소스 관리자 리소스 풀
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자에서 리소스 풀은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 물리적 리소스의 하위 집합을 나타냅니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 리소스 풀에서 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다. 각 리소스 풀에는 하나 이상의 작업 그룹이 포함될 수 있습니다. 세션이 시작되면 리소스 관리자 분류자가 세션을 특정 작업 그룹에 할당하고 세션은 작업 그룹에 할당된 리소스를 사용하여 실행해야 합니다.  
   
-## 리소스 풀 개념  
+## <a name="resource-pool-concepts"></a>리소스 풀 개념  
  리소스 풀 또는 풀은 서버의 물리적 리소스를 나타냅니다. 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내부의 가상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴트로 간주할 수 있습니다. 풀은 두 부분으로 구성되어 있는데, 최소 리소스 예약을 사용하는 한 부분은 다른 풀과 겹치지 않고 가능한 최대 리소스 소비를 지원하는 다른 한 부분은 다른 풀과 공유됩니다. 각 리소스(CPU, 메모리, 물리적 IO)에 대해 다음 설정 중 하나 이상을 지정하여 풀 리소스를 정의합니다.  
   
 -   **MIN_CPU_PERCENT 및 MAX_CPU_PERCENT**  
@@ -113,7 +117,7 @@ caps.handback.revision: 17
   
  사용자 정의 리소스 풀은 환경의 특정 작업에 대해 만드는 풀입니다. 리소스 관리자는 리소스 풀을 생성, 변경, 삭제하는 DDL 문을 제공합니다.  
   
-## 리소스 풀 태스크  
+## <a name="resource-pool-tasks"></a>리소스 풀 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -121,7 +125,7 @@ caps.handback.revision: 17
 |리소스 풀 설정을 변경하는 방법에 대해 설명합니다.|[리소스 풀 설정 변경](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |리소스 풀을 삭제하는 방법에 대해 설명합니다.|[리소스 풀 삭제](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 작업 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [리소스 관리자 분류자 함수](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
  [리소스 관리자 속성 보기](../../relational-databases/resource-governor/view-resource-governor-properties.md)  
   
   
+

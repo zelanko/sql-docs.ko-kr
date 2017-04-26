@@ -1,29 +1,33 @@
 ---
-title: "파일 및 파일 그룹 복원(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.restorefilesandfilegrps.general.f1"
-  - "sql13.swb.bselectfilegrpsfiles.f1"
-  - "sql13.swb.restorefilesandfilegrps.options.f1"
-helpviewer_keywords: 
-  - "SQL Server Management Studio [SQL Server], 파일 및 파일 그룹 복원"
-  - "복원 [SQL Server], 파일"
+title: "파일 및 파일 그룹 복원(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.restorefilesandfilegrps.general.f1
+- sql13.swb.bselectfilegrpsfiles.f1
+- sql13.swb.restorefilesandfilegrps.options.f1
+helpviewer_keywords:
+- SQL Server Management Studio [SQL Server], restoring files and filegroups
+- restoring [SQL Server], files
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0bc8f28aa966b39b9b5c78d681458d6bf25f84f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 파일 및 파일 그룹 복원(SQL Server)
+# <a name="restore-files-and-filegroups-sql-server"></a>파일 및 파일 그룹 복원(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 파일 및 파일 그룹을 복원하는 방법에 대해 설명합니다.  
@@ -52,7 +56,7 @@ caps.handback.revision: 25
   
 -   단순 복구 모델에서 파일은 읽기 전용 파일 그룹에 속해야 합니다.  
   
--   전체 복구 모델 또는 대량 로그 복구 모델의 경우 파일을 복원하려면 먼저 활성 트랜잭션 로그(비상 로그라고도 함)를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 참조하세요.  
+-   전체 복구 모델 또는 대량 로그 복구 모델의 경우 파일을 복원하려면 먼저 활성 트랜잭션 로그(비상 로그라고도 함)를 백업해야 합니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)을 사용하여 파일 및 파일 그룹을 복원하는 방법에 대해 설명합니다.  
   
 -   암호화된 데이터베이스를 복원하려면 데이터베이스를 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한 액세스 권한이 있어야 합니다. 인증서 또는 비대칭 키가 없으면 데이터베이스를 복원할 수 없습니다. 따라서 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서는 백업이 필요한 동안에는 유지되어야 합니다. 자세한 내용은 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)을 참조하세요.  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 파일과 파일 그룹을 복원하려면  
+#### <a name="to-restore-files-and-filegroups"></a>파일과 파일 그룹을 복원하려면  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -123,7 +127,7 @@ caps.handback.revision: 25
      이 옵션은 서버에 하나의 테이프 장치가 있을 때와 같이 여러 미디어 세트의 테이프를 바꿔야 할 경우에 특히 유용합니다.  
   
      **복원된 데이터베이스에 대한 액세스 제한**  
-     **db_owner**, **dbcreator** 또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
+     **db_owner**, **dbcreator**또는 **sysadmin**의 멤버만 복원된 데이터베이스를 사용할 수 있도록 합니다.  
   
      이 옵션을 선택하는 것은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 RESTRICTED_USER 옵션을 사용하는 것과 같습니다.  
   
@@ -137,15 +141,15 @@ caps.handback.revision: 25
   
 11. **복구 상태** 패널에서 복원 작업 이후의 데이터베이스 상태를 확인합니다.  
   
-     **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. 없습니다(RESTORE WITH RECOVERY).**  
+     **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. (RESTORE WITH RECOVERY)**  
      데이터베이스를 복구합니다. 이것이 기본 동작입니다. 필요한 모든 백업을 지금 복원하는 경우에만 이 옵션을 선택합니다. 이 옵션은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 WITH RECOVERY를 지정하는 것과 같습니다.  
   
-     **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 있습니다(RESTORE WITH NORECOVERY).**  
+     **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 (RESTORE WITH NORECOVERY)**  
      데이터베이스를 복원 상태로 유지합니다. 데이터베이스를 복구하려면 앞의 RESTORE WITH RECOVERY 옵션을 사용하여 다른 복원을 수행해야 합니다(위의 내용 참조). 이 옵션은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 WITH NORECOVERY를 지정하는 것과 같습니다.  
   
      이 옵션을 선택하면 **복제 설정 유지** 옵션을 사용할 수 없습니다.  
   
-     **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션을 롤백하지만 복구 결과를 실행 취소할 수 있도록 롤백 작업을 파일에 저장합니다(RESTORE WITH STANDBY).**  
+     **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션을 롤백하지만 복구 결과를 실행 취소할 수 있도록 롤백 작업을 파일에 (RESTORE WITH STANDBY)**  
      데이터베이스를 대기 모드로 유지합니다. 이 옵션은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 WITH STANDBY를 지정하는 것과 같습니다.  
   
      이 옵션을 선택하려면 대기 파일을 지정해야 합니다.  
@@ -155,7 +159,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 파일과 파일 그룹을 복원하려면  
+#### <a name="to-restore-files-and-filegroups"></a>파일과 파일 그룹을 복원하려면  
   
 1.  RESTORE DATABASE 문을 실행하여 파일과 파일 그룹 백업을 복원합니다. 이때 다음을 지정합니다.  
   
@@ -206,12 +210,12 @@ RESTORE LOG MyDatabase
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [트랜잭션 로그 백업 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

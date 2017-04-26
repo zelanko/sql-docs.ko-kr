@@ -1,33 +1,37 @@
 ---
-title: "FOR XML에서 EXPLICIT 모드 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT FOR XML 모드"
-  - "FOR XML 절, EXPLICIT 모드"
-  - "FOR XML EXPLICIT 모드"
+title: "FOR XML에서 EXPLICIT 모드 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT FOR XML mode
+- FOR XML clause, EXPLICIT mode
+- FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4195550f1810bd344c85f2be7110b039ab3f09b2
+ms.lasthandoff: 04/11/2017
+
 ---
-# FOR XML에서 EXPLICIT 모드 사용
+# <a name="use-explicit-mode-with-for-xml"></a>FOR XML에서 EXPLICIT 모드 사용
   [FOR XML을 사용하는 XML 생성](../../relational-databases/xml/for-xml-sql-server.md)항목에 설명된 것과 같이 RAW 및 AUTO 모드에서는 쿼리 결과로 생성되는 XML의 모양을 상세하게 조정할 수 없습니다. 하지만 EXPLICIT 모드에서는 쿼리 결과로 생성되는 XML의 모양을 좀 더 상세하게 조정할 수 있습니다.  
   
  XML에 예상되는 중첩과 같은 필수 XML에 대한 추가 정보는 쿼리의 일부로 명시적으로 지정하는 방식으로 EXPLICIT 모드 쿼리를 작성해야 합니다. 요청한 XML에 따라 EXPLICIT 모드 쿼리를 작성하는 작업은 복잡할 수 있습니다. EXPLICIT 모드 쿼리를 작성하는 것보다는 [PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md) 의 설명에 따라 중첩을 사용하는 것이 더 간단합니다.  
   
  EXPLICIT 모드에서 쿼리의 일부로 원하는 XML을 기술하기 때문에 생성된 XML은 형식이 올바르고 유효해야 합니다.  
   
-## EXPLICIT 모드의 행 집합 처리  
+## <a name="rowset-processing-in-explicit-mode"></a>EXPLICIT 모드의 행 집합 처리  
  EXPLICIT 모드는 쿼리 실행으로부터 만들어지는 행 집합을 XML 문서로 변환합니다. EXPLICIT 모드의 경우 XML문서를 만들기 위해서는 행 집합이 특정 형식을 가져야 합니다. 이를 위해서는 처리 논리에서 원하는 XML을 생성할 수 있도록 특정 형식을 지닌 행 집합인 **범용 테이블**을 생성하는 SELECT 쿼리를 작성해야 합니다.  
   
  먼저 쿼리는 다음 두 메타데이터 열을 생성해야 합니다.  
@@ -40,7 +44,7 @@ caps.handback.revision: 33
   
  쿼리에 의해 생성된 범용 열이 XML 결과를 생성하도록 처리되는 방법을 이해하려면 이 범용 테이블을 생성하는 쿼리를 작성했다고 가정해 보십시오.  
   
- ![예제 범용 테이블](../../relational-databases/xml/media/xmlutable.gif "예제 범용 테이블")  
+ ![예제 범용 테이블](../../relational-databases/xml/media/xmlutable.gif "Sample universal table")  
   
  이 범용 테이블에 대해 다음 사항을 유의하십시오.  
   
@@ -94,10 +98,10 @@ caps.handback.revision: 33
   
  요약하면 EXPLICIT 모드에서는 **Tag** 및 **Parent** 메타 열의 값과 열 이름에 제공된 정보 및 행의 올바른 순서로 원하는 XML이 생성됩니다.  
   
-### 범용 테이블 행 순서 지정  
+### <a name="universal-table-row-ordering"></a>범용 테이블 행 순서 지정  
  XML을 생성할 때 범용 테이블의 행은 순서대로 처리됩니다. 따라서 해당 부모와 연결된 올바른 자식 요소를 검색하려면 각 부모 노드 바로 다음에 해당 자식 노드가 오도록 행 집합의 행 순서를 지정해야 합니다.  
   
-## 범용 테이블에 열 이름 지정  
+## <a name="specifying-column-names-in-a-universal-table"></a>범용 테이블에 열 이름 지정  
  EXPLICIT 모드 쿼리를 작성할 때 결과 행 집합에 있는 열 이름은 다음 형식에 따라 지정되어야 합니다. 이러한 형식은 지시어를 사용하여 지정된 요소 및 특성 이름과 기타 추가 정보를 포함하는 변환 정보를 제공합니다.  
   
  일반 형식은 다음과 같습니다.  
@@ -123,7 +127,7 @@ ElementName!TagNumber!AttributeName!Directive
  *Directive*를 지정하면 *AttributeName* 을 비워 둘 수 있습니다. 예를 들면 ElementName!TagNumber!!Directive와 같습니다. 이 경우 열 값은 *ElementName*에 직접 포함됩니다.  
   
  *Directive*  
- *Directive*는 선택 항목으로서 XML 생성을 위한 추가 정보를 제공하는 데 사용할 수 있습니다. *Directive* 에는 두 가지 용도가 있습니다.  
+ *Directive* 는 선택 항목으로서 XML 생성을 위한 추가 정보를 제공하는 데 사용할 수 있습니다. *Directive* 에는 두 가지 용도가 있습니다.  
   
  하나는 값을 ID, IDREF 및 IDREFS로 인코딩하는 것입니다. **ID**, **IDREF**및 **IDREFS** 키워드를 *Directive*로 지정할 수 있습니다. 이러한 지시어는 특성 유형을 덮어씁니다. 이렇게 하면 문서 간 연결을 만들 수 있습니다.  
   
@@ -137,13 +141,13 @@ ElementName!TagNumber!AttributeName!Directive
   
  이러한 두 그룹 간 지시어 조합은 대부분의 경우 허용되지만 자체 그룹에서 지시어를 조합하는 것은 허용되지 않습니다.  
   
- **Customer!1**과 같은 *Directive* 및 *AttributeName*이 지정되지 않은 경우 **Customer!1!!element**와 같은 **element** 지시어가 내포되고 열 데이터가 *ElementName*에 포함됩니다.  
+ *Customer!1* 과 같은 *Directive* 및 **AttributeName**이 지정되지 않은 경우 **Customer!1!!element** 와 같은 **element**지시어가 내포되고 열 데이터가 *ElementName*에 포함됩니다.  
   
  **xmltext** 지시어가 지정된 경우 열 내용은 문서의 나머지 부분에 통합된 단일 태그로 묶입니다. 이 지시어는 OPENXML에 의해 열에 저장된 사용되지 않은 오버플로 XML 데이터를 인출하는 데 유용합니다. 자세한 내용은 [OPENXML&#40;SQL Server&#41;](../../relational-databases/xml/openxml-sql-server.md)을 참조하세요.  
   
  *AttributeName* 이 지정된 경우 태그 이름이 지정된 이름으로 바뀝니다. 그렇지 않으면 엔터티 인코딩 없이 포함 내용의 시작 위치에 내용을 배치하여 묶는 요소의 현재 특성 목록에 특성이 포함됩니다. 이 지시어가 있는 열은 **varchar**, **nvarchar**, **char**, **nchar**, **text**또는 **ntext**와 같은 텍스트 유형이어야 합니다. 이 지시어와 함께 사용할 수 있는 것은 **hide**뿐입니다. 이 지시어는 열에 저장된 오버플로 데이터를 인출하는 데 유용합니다. 내용이 잘 작성된 XML이 아니면 동작이 정의되지 않습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  다음 예에서는 EXPLICIT 모드를 사용하는 방법을 보여 줍니다.  
   
 -   [예제: 직원 정보 검색](../../relational-databases/xml/example-retrieving-employee-information.md)  
@@ -166,7 +170,7 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [예: XMLTEXT 지시어 지정](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 RAW 모드 사용](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   
  [FOR XML에서 AUTO 모드 사용](../../relational-databases/xml/use-auto-mode-with-for-xml.md)   
  [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)   

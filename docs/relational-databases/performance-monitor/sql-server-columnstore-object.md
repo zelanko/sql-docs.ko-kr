@@ -1,22 +1,26 @@
 ---
-title: "SQL Server, Columnstore 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server, Columnstore 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 04/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ae663a49-012f-4ffe-a332-f03157843052
 caps.latest.revision: 8
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 418dddd9e87b490170b6d07c03d93a6eea912edf
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, Columnstore 개체
+# <a name="sql-server-columnstore-object"></a>SQL Server, Columnstore 개체
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   **SQLServer:Columnstore** 개체는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 columnstore 인덱스 실행을 모니터링하기 위한 카운터를 제공합니다.  
@@ -38,7 +42,8 @@ caps.handback.revision: 8
 |**Total Rowgroups Merge Compressed**|SQL Server를 시작한 이후 MERGE를 사용하여 만든 압축된 대상 행 그룹의 수입니다.|  
 |**Total Source Rowgroups Merged**|SQL Server를 시작한 이후 병합된 원본 행 그룹의 수입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   
+

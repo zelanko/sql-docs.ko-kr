@@ -1,32 +1,36 @@
 ---
-title: "매개 변수 정보(IntelliSense) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "매개 변수 정보 옵션 [IntelliSense]"
-  - "저장된 함수 매개 변수 완성 [Intellisense]"
-  - "언어 참조 [SQL Server]"
-  - "IntelliSense [SQL Server], 매개 변수 정보 옵션"
+title: "매개 변수 정보(IntelliSense) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Parameter Info option [IntelliSense]
+- stored function parameter completion [Intellisense]
+- language references [SQL Server]
+- IntelliSense [SQL Server], Parameter Info option
 ms.assetid: 56c2aac9-c65c-4679-b62c-d9f689876dde
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b76a63705473437b283e104414f3729166ce2338
+ms.lasthandoff: 04/11/2017
+
 ---
-# 매개 변수 정보(IntelliSense)
+# <a name="parameter-info-intellisense"></a>매개 변수 정보(IntelliSense)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense **매개 변수 정보** 옵션은 함수나 저장 프로시저에 필요한 매개 변수의 개수, 이름 및 유형에 대한 정보를 제공하는 매개 변수 목록을 엽니다. 굵게 표시된 매개 변수는 함수나 시스템 저장 프로시저를 입력할 때 필요한 다음 매개 변수를 나타냅니다.  
   
  또한 중첩 함수에 대한 매개 변수 목록이 표시됩니다. 함수를 다른 함수에 대한 매개 변수로 입력할 경우 내부 함수에 대한 매개 변수가 매개 변수 목록에 표시됩니다. 그런 다음 내부 함수 매개 변수 목록이 완료되면 매개 변수 목록은 외부 함수 매개 변수를 표시하도록 원래대로 바뀝니다.  
   
-#### 함수나 저장 프로시저에 대한 매개 변수 정보를 보려면  
+#### <a name="to-view-parameter-info-for-functions-or-stored-procedures"></a>함수나 저장 프로시저에 대한 매개 변수 정보를 보려면  
   
 1.  함수 이름 뒤에 매개 변수 목록을 열기 위해 일반적으로 사용하는 여는 괄호를 입력합니다. 저장 프로시저의 이름을 입력한 후 프로시저 매개 변수에 대한 정보를 가져오기 위해 일반적으로 사용하는 공백을 입력합니다.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 33
   
      함수의 경우 닫는 괄호를 입력하면 매개 변수 목록도 닫힙니다.  
   
-#### 수동으로 매개 변수 정보를 시작하려면  
+#### <a name="to-manually-start-parameter-info"></a>수동으로 매개 변수 정보를 시작하려면  
   
 1.  **편집** 메뉴에서 **IntelliSense** 를 선택한 다음 **매개 변수 정보**를 선택합니다.  
   

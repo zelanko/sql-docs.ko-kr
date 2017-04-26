@@ -1,33 +1,37 @@
 ---
-title: "병목 상태 식별 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 병목 상태 [SQL Server]"
-  - "데이터베이스 모니터링 [SQL Server], 병목 상태"
-  - "성능 [SQL Server], 병목 상태"
-  - "데이터베이스 튜닝 [SQL Server], 병목 상태"
-  - "서버 성능 모니터링 [SQL Server], 병목 상태"
-  - "성능 모니터링 [SQL Server], 병목 상태"
-  - "데이터베이스 성능 [SQL Server], 병목 상태"
-  - "서버 성능 [SQL Server], 병목 상태"
-  - "병목 상태 [SQL Server]"
-  - "병목 상태 식별 [SQL Server]"
+title: "병목 상태 식별 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource bottlenecks [SQL Server]
+- database monitoring [SQL Server], bottlenecks
+- performance [SQL Server], bottlenecks
+- tuning databases [SQL Server], bottlenecks
+- monitoring server performance [SQL Server], bottlenecks
+- monitoring performance [SQL Server], bottlenecks
+- database performance [SQL Server], bottlenecks
+- server performance [SQL Server], bottlenecks
+- bottlenecks [SQL Server]
+- identifying bottlenecks [SQL Server]
 ms.assetid: db079e65-ee80-4105-aec9-f8230d0d6635
 caps.latest.revision: 18
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20ff22698486f5537fc974a91905b9837792aa5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 병목 상태 식별
+# <a name="identify-bottlenecks"></a>병목 상태 식별
   공유 리소스를 동시에 액세스하는 경우 병목 상태가 발생합니다. 일반적으로 병목 상태는 모든 소프트웨어 시스템에서 필연적으로 나타나지만 공유 리소스에 대한 과도한 요구는 응답 시간을 현저히 늦추는 원인이므로 반드시 확인하고 적절하게 튜닝해야 합니다.  
   
  병목 상태의 원인은 다음과 같습니다.  
@@ -40,7 +44,7 @@ caps.handback.revision: 18
   
 -   리소스가 잘못 구성된 경우  
   
-## 병목 상태 분석  
+## <a name="analyzing-bottlenecks"></a>병목 상태 분석  
  다양한 이벤트에서 과도하게 시간이 소요되면 튜닝할 수 있는 병목 상태가 있음을 의미합니다.  
   
  예를 들어  
@@ -59,7 +63,7 @@ caps.handback.revision: 18
 |사용자 연결|너무 많은 사용자가 동시에 서버에 액세스하는 경우 성능이 저하될 수 있습니다.|  
 |차단 잠금|잘못 설계된 응용 프로그램은 잠금을 일으키고 동시성을 제한하여 결과적으로 응답 시간을 길어지고 트랜잭션 처리율이 낮아질 수 있습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CPU 사용량 모니터링](../../relational-databases/performance-monitor/monitor-cpu-usage.md)   
  [디스크 사용량 모니터링](../../relational-databases/performance-monitor/monitor-disk-usage.md)   
  [메모리 사용량 모니터링](../../relational-databases/performance-monitor/monitor-memory-usage.md)   

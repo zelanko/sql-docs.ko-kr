@@ -1,29 +1,33 @@
 ---
-title: "잠금을 보유한 쿼리 파악 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼리 [SQL Server], 확장 이벤트"
-  - "쿼리 [SQL Server], 잠금 보유"
-  - "xe"
-  - "확장 이벤트 [SQL Server], 잠금"
-  - "확장 이벤트 [SQL Server], 잠금 보유"
+title: "잠금을 보유한 쿼리 파악 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [SQL Server], extended events
+- queries [SQL Server], holding locks
+- xe
+- extended events [SQL Server], locks
+- extended events [SQL Server], holding locks
 ms.assetid: bdfce092-3cf1-4b5e-99d5-fd8c6f9ad560
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 291043a0e143f876db5091a18c655bcd78a9857f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 잠금을 보유한 쿼리 파악
+# <a name="determine-which-queries-are-holding-locks"></a>잠금을 보유한 쿼리 파악
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   데이터베이스 관리자는 종종 데이터베이스 성능을 저하시키는 잠금의 원인을 파악해야 합니다.  
@@ -34,12 +38,12 @@ caps.handback.revision: 15
   
  이 예는 잠금이 수행될 때 어떤 쿼리가 잠금, 쿼리 계획 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스택을 가져오는지 확인하는 방법을 보여 줍니다. 이 예에서는 또한 확장 이벤트 세션에서 쌍 대상을 사용하는 방법도 보여 줍니다.  
   
- 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
+ 이 태스크를 수행하려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 쿼리 편집기를 사용하여 다음 절차를 수행해야 합니다.  
   
 > [!NOTE]  
 >  이 예에서는 AdventureWorks 데이터베이스를 사용합니다.  
   
-### 잠금을 보유한 쿼리를 파악하려면  
+### <a name="to-determine-which-queries-are-holding-locks"></a>잠금을 보유한 쿼리를 파악하려면  
   
 1.  쿼리 편집기에서 다음 문을 실행합니다.  
   
@@ -153,7 +157,7 @@ caps.handback.revision: 15
     DROP EVENT SESSION FindBlockers ON SERVER  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

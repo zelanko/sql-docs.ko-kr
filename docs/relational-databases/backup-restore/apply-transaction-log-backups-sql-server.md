@@ -1,28 +1,32 @@
 ---
-title: "트랜잭션 로그 백업 적용(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "복원 [SQL Server], 로그 백업"
-  - "트랜잭션 로그 백업 [SQL Server], 백업 적용"
-  - "온라인 복원 [SQL Server], 로그 백업"
-  - "트랜잭션 로그 백업 [SQL Server], 복원 시퀀스에 필요한 수량"
-  - "백업 [SQL Server], 로그 백업"
+title: "트랜잭션 로그 백업 적용(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- restoring [SQL Server], log backups
+- transaction log backups [SQL Server], applying backups
+- online restores [SQL Server], log backups
+- transaction log backups [SQL Server], quantity needed for restore sequence
+- backups [SQL Server], log backups
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
+ms.lasthandoff: 04/11/2017
+
 ---
-# 트랜잭션 로그 백업 적용(SQL Server)
+# <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)
   이 항목에서는 전체 복구 모델 또는 대량 로그 복구 모델과 관련된 내용을 다룹니다.  
   
  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 복원의 일부로 수행되는 트랜잭션 로그 백업 적용에 대해 설명합니다.  
@@ -31,7 +35,7 @@ caps.handback.revision: 38
 ##  <a name="Requirements"></a> 트랜잭션 로그 백업 복원을 위한 요구 사항  
  트랜잭션 로그 백업을 적용하려면 다음 요구 사항을 충족해야 합니다.  
   
--   **복원 순서를 위한 충분한 로그 백업:** 복원 순서를 완료하려면 백업된 로그 레코드가 충분히 있어야 합니다. 복원 시퀀스를 시작하려면 필요한 로그 백업(필요한 경우 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)을 포함)을 반드시 확보해야 합니다.  
+-   **복원 순서를 위한 충분한 로그 백업:** 복원 순서를 완료하려면 백업된 로그 레코드가 충분히 있어야 합니다. 복원 시퀀스를 시작하려면 필요한 로그 백업(필요한 경우 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) 을 포함)을 반드시 확보해야 합니다.  
   
 -   **올바른 복원 순서:**  바로 이전의 전체 데이터베이스 백업 또는 차등 데이터베이스 백업을 먼저 복원해야 합니다. 그런 후 전체 또는 차등 데이터베이스 백업 후에 생성된 모든 트랜잭션 로그를 시간순으로 복원해야 합니다. 이 로그 체인의 트랜잭션 로그 백업이 손실되거나 손상된 경우 손실된 트랜잭션 로그 이전의 트랜잭션 로그만 복원할 수 있습니다.  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 38
 ##  <a name="PITrestore"></a> 로그 백업을 사용하여 오류 지점까지 복원  
  예를 들어 다음과 같은 순서의 이벤트가 발생한다고 가정합니다.  
   
-| Time |이벤트|  
+|Time|이벤트|  
 |----------|-----------|  
 |8:00 A.M.|데이터베이스를 백업하여 전체 데이터베이스 백업을 만듭니다.|  
 |정오|트랜잭션 로그를 백업합니다.|  
@@ -78,7 +82,7 @@ caps.handback.revision: 38
   
      이 대체 프로세스를 통해 일련의 전체 데이터베이스 백업에서 트랜잭션 로그 백업 체인을 유지함으로써 제공되는 중복 보안을 확인할 수 있습니다.  
   
-> **참고:** 경우에 따라 트랜잭션 로그를 사용하여 데이터베이스를 지정 시간으로 복원할 수도 있습니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
+> **참고:** 경우에 따라 트랜잭션 로그를 사용하여 데이터베이스를 지정 시간으로 복원할 수도 있습니다. 자세한 내용은 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)라고 합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **트랜잭션 로그 백업을 적용하려면**  
@@ -87,7 +91,7 @@ caps.handback.revision: 38
   
  **복구 지점으로 복원하려면**  
   
--   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore database to point of failure - full recovery.md)  
+-   [전체 복구 모델에서 특정 오류 지점으로 데이터베이스 복원&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
 -   [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
@@ -101,7 +105,8 @@ caps.handback.revision: 38
   
 -   [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
   
   
+

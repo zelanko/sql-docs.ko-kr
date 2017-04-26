@@ -1,26 +1,30 @@
 ---
-title: "트랜잭션 로그 백업(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "트랜잭션 로그 백업 [SQL Server], SQL Server Management Studio"
-  - "백업 [SQL Server], 만들기"
-  - "트랜잭션 로그 백업 [SQL Server], SQL Server Management Studio"
+title: "트랜잭션 로그 백업(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 02/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- transaction log backups [SQL Server], SQL Server Management Studio
+- backups [SQL Server], creating
+- backing up transaction logs [SQL Server], SQL Server Management Studio
 ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 caps.latest.revision: 49
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.lasthandoff: 04/11/2017
+
 ---
-# 트랜잭션 로그 백업(SQL Server)
+# <a name="back-up-a-transaction-log-sql-server"></a>트랜잭션 로그 백업(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 트랜잭션 로그를 백업하는 방법에 대해 설명합니다.  
   
    
@@ -28,22 +32,22 @@ caps.handback.revision: 48
   
 -   명시적 또는 [암시적](https://msdn.microsoft.com/library/ms187807.aspx) 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  명시적 트랜잭션은 트랜잭션 시작 및 완료를 모두 명시적으로 정의하는 트랜잭션입니다.
   
-###  <a name="Recommendations"></a> 권장 사항  
+##  <a name="Recommendations"></a> 권장 사항  
   
--   데이터베이스에서 전체 또는 대량 로그 [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)을 사용하는 경우 데이터를 보호하고 [트랜잭션 로그가 채워지지](https://msdn.microsoft.com/library/ms175495.aspx) 않도록 트랜잭션 로그를 정기적으로 백업해야 합니다. 그러면 로그가 잘리고 특정 시점에 데이터베이스를 복원할 수 있습니다. 좋지 않아요!
+-   데이터베이스에서 전체 또는 대량 로그 [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)을 사용하는 경우 데이터를 보호하고 [트랜잭션 로그가 채워지지 않도록](https://msdn.microsoft.com/library/ms175495.aspx) 트랜잭션 로그를 정기적으로 백업해야 합니다. 그러면 로그가 잘리고 특정 시점에 데이터베이스를 복원할 수 있습니다. 
   
--   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 바로 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../Topic/Trace%20Flags%20\(Transact-SQL\).md)를 참조하세요.  
+-   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 빠르게 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
 **시작하기 전에 올바른 사용 권한을 확인하세요.** 
 
 필요한 BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버에 의해 부여됩니다.  
   
- 백업 장치의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 장치의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 [실제 리소스](https://msdn.microsoft.com/library/ms179313.aspx)에 액세스하기 전까지는 표시되지 않을 수 있습니다. 따라서 다시 한 번 시작하기 전에 사용 권한을 확인하세요.
+ 백업 장치의 물리적 파일에서 발생하는 소유권과 사용 권한 문제는 백업 작업에 영향을 미칠 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 않습니다. 백업 장치의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 [실제 리소스](https://msdn.microsoft.com/library/ms179313.aspx) 에 액세스하기 전까지는 표시되지 않을 수 있습니다. 따라서 다시 한 번 시작하기 전에 사용 권한을 확인하세요.
   
   
-## SSMS를 사용하여 트랜잭션 로그 백업  
+## <a name="back-up-using-ssms"></a>SSMS를 사용하여 백업  
   
 1.  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -57,9 +61,9 @@ caps.handback.revision: 48
   
 6.  **백업 유형** 목록 상자에서 **트랜잭션 로그**를 선택합니다.  
   
-7.  필요한 경우 **복사 전용 백업**을 선택하여 복사 전용 백업을 만들 수도 있습니다. *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
+7.  필요한 경우 **복사 전용 백업** 을 선택하여 복사 전용 백업을 만들 수도 있습니다. *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
   
-    >** 참고!** **차등** 옵션을 선택하는 경우 복사 전용 백업을 만들 수 없습니다.  
+    >** 참고!** **차등** 옵션을 선택하면 복사 전용 백업을 만들 수 없습니다.  
   
 8.  **이름** 입력란에 제시된 기본 백업 세트 이름을 사용하거나 다른 이름을 입력합니다.  
   
@@ -67,9 +71,9 @@ caps.handback.revision: 48
   
 10. 백업 세트가 만료될 시기를 다음과 같이 지정합니다.  
   
-    -   백업 세트가 특정 일수가 지난 후에 만료되도록 하려면 **다음 이후**(기본 옵션)를 클릭한 다음 백업 세트를 만든 후 백업 세트가 만료되기까지 경과해야 하는 일수를 입력합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.  
+    -   백업 세트가 특정 일수가 지난 후에 만료되도록 하려면 **다음 이후** (기본 옵션)를 클릭한 다음 백업 세트를 만든 후 백업 세트가 만료되기까지 경과해야 하는 일수를 입력합니다. 이 값은 0일에서 99999일 사이일 수 있습니다. 값 0일은 백업 세트 기간 제한이 없음을 의미합니다.  
   
-         기본값은 **서버 속성** 대화 상자(**데이터베이스 설정** 페이지)의 **백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 대화 상자에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
+         기본값은 **서버 속성** 대화 상자( **데이터베이스 설정** 페이지)의**백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 대화 상자에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
   
     -   백업 세트가 특정 일자에 만료되게 하려면 **날짜**를 클릭한 다음 백업 세트가 만료될 날짜를 입력합니다.  
   
@@ -83,7 +87,7 @@ caps.handback.revision: 48
   
     -   **기존 미디어 세트에 백업**  
   
-         이 옵션에는 **기존 백업 세트에 추가** 또는 **기존 백업 세트 모두 덮어쓰기**를 클릭합니다. 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
+         이 옵션에는 **기존 백업 세트에 추가** 또는 **기존 백업 세트 모두 덮어쓰기**를 클릭합니다. 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)을 참조하세요.  
   
          필요에 따라 **미디어 세트 이름 및 백업 세트 만료 확인** 을 선택하여 백업 작업에서 미디어 세트와 백업 세트가 만료되는 날짜와 시간을 확인하도록 합니다.  
   
@@ -101,7 +105,7 @@ caps.handback.revision: 48
   
     -   **미디어에 쓰기 전에 체크섬 수행**및 필요에 따라 **체크섬 오류 발생 시 계속**. 체크섬에 대한 자세한 내용은 [백업 및 복원 중 발생 가능한 미디어 오류&#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)를 참조하세요.  
   
-15.  **트랜잭션 로그** 섹션에서 다음을 수행합니다.  
+15. **트랜잭션 로그** 섹션에서 다음을 수행합니다.  
   
     -   일상적인 로그 백업의 경우 기본 선택인 **비활성 항목을 제거하여 트랜잭션 로그 잘라내기**를 유지합니다.  
   
@@ -130,7 +134,7 @@ caps.handback.revision: 48
 -   Triple DES  
   
  
-## T-SQL을 사용하여 트랜잭션 로그 백업  
+## <a name="back-up-using-t-sql"></a>T-SQL을 사용하여 백업  
   
 1.  BACKUP LOG 문을 실행하여 트랜잭션 로그를 백업하며 다음을 지정합니다.  
   
@@ -142,7 +146,7 @@ caps.handback.revision: 48
   
 > **중요** 이 예에서는 단순 복구 모델을 사용하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다. 로그 백업을 허용하기 위해 전체 데이터베이스를 백업하기 전에 전체 복구 모델을 사용하도록 데이터베이스를 설정했습니다. 자세한 내용은 [데이터베이스 복구 모델 보기 또는 변경&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md)을 참조하세요.  
   
- 이 예에서는 이전에 만든 명명된 백업 장치 `MyAdvWorks_FullRM_log1`에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 트랜잭션 로그 백업을 만듭니다.  
+ 이 예에서는 이전에 만든 명명된 백업 장치 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 에 `MyAdvWorks_FullRM_log1`데이터베이스의 트랜잭션 로그 백업을 만듭니다.  
   
 ```tsql  
 BACKUP LOG AdventureWorks2012  
@@ -152,7 +156,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-1.  **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **로그**를 지정합니다.  
+1.  **Backup-SqlDatabase** cmdlet을 사용하고 **-BackupAction** 매개 변수의 값으로 **로그** 를 지정합니다.  
   
      다음 예에서는 서버 인스턴스 `MyDB` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 로그 백업을 만듭니다.  
   
@@ -173,10 +177,11 @@ GO
   
 -   [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](../../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## 자세한 정보 
+## <a name="more-information"></a>자세한 정보 
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [전체 파일 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-file-backups-sql-server.md)  
   
   
+

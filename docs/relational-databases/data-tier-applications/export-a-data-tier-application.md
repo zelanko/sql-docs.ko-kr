@@ -1,40 +1,44 @@
 ---
-title: "데이터 계층 응용 프로그램 내보내기 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.exportdac.progress.f1"
-  - "sql13.swb.exportdac.summary.f1"
-  - "sql13.swb.exportdac.results.f1"
-  - "sql13.swb. exportdac.results.f1"
-  - "sql13.swb. exportdac.summary.f1"
-  - "sql13.swb. exportdac.settings.f1"
-  - "sql13.swb.exportdac.welcome.f1"
-  - "sql13.swb.exportdac.settings.f1"
-helpviewer_keywords: 
-  - "방법 [DAC], 내보내기"
-  - "마법사 [DAC], 내보내기"
-  - "DAC 내보내기"
-  - "데이터 계층 응용 프로그램 [SQL Server], 내보내기"
+title: "데이터 계층 응용 프로그램 내보내기 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.exportdac.progress.f1
+- sql13.swb.exportdac.summary.f1
+- sql13.swb.exportdac.results.f1
+- sql13.swb. exportdac.results.f1
+- sql13.swb. exportdac.summary.f1
+- sql13.swb. exportdac.settings.f1
+- sql13.swb.exportdac.welcome.f1
+- sql13.swb.exportdac.settings.f1
+helpviewer_keywords:
+- How to [DAC], export
+- wizard [DAC], export
+- export DAC
+- data-tier application [SQL Server], export
 ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6a68d0e0a9347331c31b6e4d09b1ec7e9856742a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 계층 응용 프로그램 내보내기
+# <a name="export-a-data-tier-application"></a>데이터 계층 응용 프로그램 내보내기
   DAC(데이터 계층 응용 프로그램) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 보관 파일을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
   
-## 시작하기 전 주의 사항  
+## <a name="before-you-begin"></a>시작하기 전 주의 사항  
  내보내기 프로세스에서는 DAC 내보내기 파일을 두 단계로 작성합니다.  
   
 1.  내보내기를 수행하면 DAC 추출 시 DAC 패키지 파일에 DAC 정의가 작성되듯이 내보내기 파일(BACPAC 파일)에 DAC 정의가 작성됩니다. 내보낸 DAC 정의에는 현재 데이터베이스의 모든 개체가 포함됩니다. DAC에서 원래 배포된 데이터베이스에 대해 내보내기 프로세스를 실행할 때 배포 후에 데이터베이스를 직접 변경한 경우 내보낸 정의는 원본 DAC에 정의된 개체 집합이 아니라 데이터베이스의 개체 집합과 일치합니다.  
@@ -43,26 +47,25 @@ caps.handback.revision: 19
   
  내보내기 프로세스에서는 DAC 버전을 1.0.0.0으로 설정하고 내보내기 파일의 DAC 설명을 빈 문자열로 설정합니다. 데이터베이스가 DAC에서 배포된 경우에는 내보내기 파일의 DAC 정의에 원본 DAC에 지정된 것과 동일한 이름이 포함되고, 그렇지 않은 경우에는 DAC 이름이 데이터베이스 이름으로 설정됩니다.  
   
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 랩에는 DAC 및 데이터베이스 가져오기와 내보내기를 테스트하는 데 사용할 수 있는 샘플 응용 프로그램이 있습니다. 샘플을 다운로드하여 사용하는 방법은 [Windows Azure SQL 데이터베이스에 대한 데이터베이스 가져오기 및 내보내기](http://go.microsoft.com/fwlink/?LinkId=219404)를 참조하세요.  
-  
+
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
- [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 또는 데이터베이스를 내보낼 수 있습니다.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상의 데이터베이스에서만 DAC 또는 데이터베이스를 내보낼 수 있습니다.  
   
  DAC 또는 포함된 사용자가 지원하지 않는 개체가 있는 데이터베이스를 내보낼 수 없습니다. DAC에서 지원되는 개체 유형에 대한 자세한 내용은 [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)을 참조하세요.  
   
 ###  <a name="Permissions"></a> 사용 권한  
- DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa**는 DAC를 내보낼 수 있습니다.  
+ DAC를 내보내려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.  
   
 ##  <a name="UsingDeployDACWizard"></a> 데이터 계층 응용 프로그램 내보내기 마법사 사용  
  **마법사를 사용하여 DAC를 내보내려면**  
   
-1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 인스턴스에 연결합니다.  
+1.  온-프레미스 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]인스턴스에 연결합니다.  
   
 2.  **개체 탐색기**에서 DAC를 내보내려는 인스턴스에 대한 노드를 확장합니다.  
   
 3.  데이터베이스 이름을 마우스 오른쪽 단추로 클릭합니다.  
   
-4.  **태스크**를 클릭한 후 **데이터 계층 응용 프로그램 내보내기...**를 선택합니다.  
+4.  **태스크** 를 클릭한 후 **데이터 계층 응용 프로그램 내보내기...**를 선택합니다.  
   
 5.  마법사 대화 상자를 완료합니다.  
   
@@ -99,7 +102,7 @@ caps.handback.revision: 19
  내보낼 테이블 하위 집합을 지정하려면 **고급** 옵션을 사용합니다.  
   
 ##  <a name="Validation"></a> 유효성 검사 페이지  
- 유효성 검사 페이지에서 작업을 차단한 문제를 검토할 수 있습니다. 계속하려면 차단 문제를 해결하고 **유효성 검사 다시 실행**을 클릭하여 유효성 검사에 성공했는지 확인합니다.  
+ 유효성 검사 페이지에서 작업을 차단한 문제를 검토할 수 있습니다. 계속하려면 차단 문제를 해결하고 **유효성 검사 다시 실행** 을 클릭하여 유효성 검사에 성공했는지 확인합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   
@@ -125,7 +128,7 @@ caps.handback.revision: 19
   
 3.  **Export** 형식의 **Microsoft.SqlServer.Management.Dac.DacStore** 메서드를 사용하여 DAC를 내보냅니다. 내보낼 DAC의 이름과 내보내기 파일을 배치할 폴더의 경로를 지정합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터베이스에서 DAC 추출](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

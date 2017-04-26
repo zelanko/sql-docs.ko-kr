@@ -1,43 +1,47 @@
 ---
-title: "쿼리 저장소에 대한 모범 사례 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼리 저장소, 모범 사례"
+title: "쿼리 저장소에 대한 모범 사례 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9cd813b72eda096f780ed7140b6691f528251a30
+ms.lasthandoff: 04/11/2017
+
 ---
-# 쿼리 저장소에 대한 모범 사례
+# <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 작업에 쿼리 저장소를 사용하는 모범 사례에 대해 설명합니다.  
   
-##  <a name="a-namessmsa-use-the-latest-sql-server-management-studio"></a><a name="SSMS"></a> 최신 SQL Server Management Studio 사용  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에는 작업에 대해 수집된 데이터를 사용할 뿐 아니라 쿼리 저장소를 구성하기 위해 디자인된 사용자 인터페이스 집합이 있습니다.  
+##  <a name="SSMS"></a> Use the Latest SQL Server Management Studio  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 작업에 대해 수집된 데이터를 사용할 뿐 아니라 쿼리 저장소를 구성하기 위해 디자인된 사용자 인터페이스 집합이 있습니다.  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 최신 버전은 [https://msdn.microsoft.com/library/mt238290.aspx](https://msdn.microsoft.com/library/mt238290.aspx)에서 다운로드하세요.  
   
  문제 해결 시나리오에서 쿼리 저장소를 사용하는 방법에 대한 빠른 설명은 [@Azure 블로그의 쿼리 저장소](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)를 참조하세요.  
   
-##  <a name="a-nameinsighta-use-query-performance-insight-in-azure-sql-database"></a><a name="Insight"></a> Azure SQL Database에서 Query Performance Insight 사용  
+##  <a name="Insight"></a> Azure SQL Database에서 Query Performance Insight 사용  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 쿼리 저장소를 사용하는 경우 **Query Performance Insight** 를 사용하여 시간의 흐름에 따른 DTU 사용을 분석할 수 있습니다.  
-[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 모든 쿼리(CPU, 메모리, IO 등)에 대한 자세한 리소스 사용을 가져오는 동안 Query Performance Insight에서는 데이터베이스의 전체 DTU 사용에 대한 영향을 빠르고 효율적으로 확인하는 방법을 제공합니다.  
+[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 모든 쿼리(CPU, 메모리, IO 등)에 대한 자세한 리소스 사용을 가져오는 동안 Query Performance Insight에서는 데이터베이스의 전체 DTU 사용에 대한 영향을 빠르고 효율적으로 확인하는 방법을 제공합니다.  
 자세한 내용은 [Azure SQL 데이터베이스 Query Performance Insight](https://azure.microsoft.com/documentation/articles/sql-database-query-performance/)를 참조하세요.    
 
 ##  <a name="using-query-store-with-elastic-pool-databases"></a>탄력적 풀 데이터베이스에서 쿼리 저장소 사용
 더 세부적으로 패키지된 풀에서는 모든 데이터베이스에서 쿼리 저장소를 사용할 수 있습니다. 탄력적 풀에서 많은 데이터베이스에 대해 쿼리 저장소를 사용하도록 설정한 경우 발생할 수 있었던 과도한 리소스 사용과 관련된 모든 문제가 해결되었습니다.
-##  <a name="a-nameconfigurea-keep-query-store-adjusted-to-your-workload"></a><a name="Configure"></a> 쿼리 저장소를 작업에 맞게 조정된 상태로 유지  
+##  <a name="Configure"></a> Keep Query Store Adjusted to your Workload  
  작업 및 성능 문제 해결 요구 사항을 기반으로 쿼리 저장소를 구성합니다.   
 빠른 시작을 위해서는 기본 매개 변수를 사용하는 것이 좋지만 시간이 흐름에 따라 쿼리 저장소가 동작하는 방식을 모니터링하여 구성을 그에 맞게 조정해야 합니다.  
   
@@ -158,7 +162,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   문제가 있는 쿼리를 다시 작성합니다. 예를 들면 쿼리 매개 변수화를 활용하거나 좀 더 최적의 논리를 구현합니다.  
   
-##  <a name="a-nameverifya-verify-query-store-is-collecting-query-data-continuously"></a><a name="Verify"></a> 쿼리 저장소에서 쿼리 데이터가 계속 수집되는지 확인  
+##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
  쿼리 저장소에서 작업 모드가 자동으로 변경될 수 있습니다. 쿼리 저장소의 상태를 정기적으로 모니터링하여 쿼리 저장소가 작동 중인지 확인하고, 예방 가능한 원인으로 인해 오류가 발생하지 않도록 조치를 취해야 합니다. 다음 쿼리를 실행하여 작업 모드를 결정하고 가장 관련성이 높은 매개 변수를 확인합니다.  
   
 ```  
@@ -178,7 +182,7 @@ FROM sys.database_query_store_options;
   
  다음 단계를 수행하여 쿼리 저장소를 읽기-쓰기 모드로 전환하고 데이터 수집을 활성화해 보세요.  
   
--   **ALTER DATABASE**의 **MAX_STORAGE_SIZE_MB** 옵션을 사용하여 최대 저장소 크기를 늘립니다.  
+-   **ALTER DATABASE** 의 **MAX_STORAGE_SIZE_MB**옵션을 사용하여 최대 저장소 크기를 늘립니다.  
   
 -   다음 문을 사용하여 쿼리 저장소 데이터를 정리합니다.  
   
@@ -239,9 +243,9 @@ FROM sys.database_query_store_options;
   
 |쿼리 캡처 모드|시나리오|  
 |------------------------|--------------|  
-|모두|모든 쿼리 셰이프 및 해당 실행 빈도 관점에서 작업과 기타 통계를 철저하게 분석합니다.<br /><br /> 작업에서 새 쿼리를 식별합니다.<br /><br /> 사용자나 자동 매개 변수화에 대한 기회를 식별하는 데 임시 쿼리를 사용하는지 검색합니다.|  
-|자동|관련성이 높고 조치가 가능한 쿼리에 주목합니다. 정기적으로 실행되거나 리소스 사용이 상당히 많은 쿼리가 여기 해당합니다.|  
-|없음|런타임 시 모니터링하고 다른 쿼리에서 발생할 수 있는 방해 요소를 제거할 쿼리 집합을 이미 캡처했습니다.<br /><br /> 이 모드는 환경 테스트 및 벤치마킹에 적합합니다.<br /><br /> 또한 응용 프로그램 작업을 모니터링하도록 구성된 쿼리 저장소 구성을 제공하는 소프트웨어 공급업체에게도 적절합니다.<br /><br /> 이 모드는 주의해서 사용해야 합니다. 중요한 새 쿼리를 추적하고 최적화할 기회를 놓칠 수 있기 때문입니다. 필요한 특정 시나리오가 없으면 사용하지 마세요.|  
+|All|모든 쿼리 셰이프 및 해당 실행 빈도 관점에서 작업과 기타 통계를 철저하게 분석합니다.<br /><br /> 작업에서 새 쿼리를 식별합니다.<br /><br /> 사용자나 자동 매개 변수화에 대한 기회를 식별하는 데 임시 쿼리를 사용하는지 검색합니다.|  
+|Auto|관련성이 높고 조치가 가능한 쿼리에 주목합니다. 정기적으로 실행되거나 리소스 사용이 상당히 많은 쿼리가 여기 해당합니다.|  
+|None|런타임 시 모니터링하고 다른 쿼리에서 발생할 수 있는 방해 요소를 제거할 쿼리 집합을 이미 캡처했습니다.<br /><br /> 이 모드는 환경 테스트 및 벤치마킹에 적합합니다.<br /><br /> 또한 응용 프로그램 작업을 모니터링하도록 구성된 쿼리 저장소 구성을 제공하는 소프트웨어 공급업체에게도 적절합니다.<br /><br /> 이 모드는 주의해서 사용해야 합니다. 중요한 새 쿼리를 추적하고 최적화할 기회를 놓칠 수 있기 때문입니다. 필요한 특정 시나리오가 없으면 사용하지 마세요.|  
   
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>쿼리 저장소에 가장 관련성이 높은 데이터 보관  
  관련된 데이터만 포함하도록 쿼리 저장소를 구성하면 정기 작업에 미치는 영향을 최소화하면서 유용한 문제 해결 경험을 제공하면서 계속 실행됩니다.  
@@ -253,7 +257,7 @@ FROM sys.database_query_store_options;
 |관련 없는 쿼리를 필터링하여 제외합니다.|쿼리 캡처 모드를 자동으로 구성합니다.|  
 |최대 크기에 도달하면 관련성이 적은 쿼리를 삭제합니다.|크기 기반 정리 정책을 활성화합니다.|  
   
-##  <a name="a-nameparameterizea-avoid-using-non-parameterized-queries"></a><a name="Parameterize"></a> 매개 변수화되지 않은 쿼리 사용 방지  
+##  <a name="Parameterize"></a> Avoid Using Non-Parameterized Queries  
  반드시 필요한 경우가 아니면 매개 변수화되지 않은 쿼리를 사용하는 것은 좋은 방법이 아닙니다(예: 임시 분석).  쿼리 최적화 프로그램에서 고유한 쿼리 텍스트 모두에 대해 쿼리를 컴파일하도록 강제로 캐시된 계획은 다시 사용할 수 없습니다.  
   또한 잠재적으로 서로 다른 쿼리 텍스트가 많고 결과적으로 셰이프가 비슷한 서로 다른 실행 계획이 많아져 쿼리 저장소가 갑자기 크기 할당량을 초과할 수도 있습니다.  
 결과적으로 작업 성능이 최적이 아닌 상태가 되고 쿼리 저장소가 읽기 전용 모드로 전환되거나 쿼리 저장소에서 들어오는 쿼리 추적을 위해 지속적으로 데이터를 삭제할 수도 있습니다.  
@@ -272,12 +276,12 @@ FROM sys.database_query_store_options;
   
     -   작업에 다른 쿼리 계획 수가 적으면 데이터베이스에 대해 FORCED PARAMETERIZATION를 구성합니다. 고유한 query_hash의 수와 sys.query_store_query에 있는 총 항목 수의 비율이 1보다 훨씬 작은 경우가 여기에 해당합니다.  
   
--   **쿼리 캡처 모드**를 AUTO로 설정하여 리소스 사용이 작은 임시 쿼리를 자동으로 필터링하여 제외합니다.  
+-   **쿼리 캡처 모드** 를 AUTO로 설정하여 리소스 사용이 작은 임시 쿼리를 자동으로 필터링하여 제외합니다.  
   
-##  <a name="a-namedropa-avoid-a-drop-and-create-pattern-when-maintaining-containing-objects-for-the-queries"></a><a name="Drop"></a> 쿼리에 대해 포함하는 개체를 유지 관리할 경우 DROP 또는 CREATE 패턴 방지  
+##  <a name="Drop"></a> Avoid a DROP and CREATE Pattern When Maintaining Containing Objects for the Queries  
  쿼리 저장소는 쿼리 항목을 포함하는 개체(저장 프로시저, 함수 및 트리거)에 연결합니다.  포함하는 개체를 다시 만들면 같은 쿼리 텍스트에 대해 새 쿼리 항목이 생성됩니다. 시간이 흐름에 따라 해당 쿼리에 대한 성능 통계를 추적하는 작업이 방지되고 강제 적용 메커니즘이 사용됩니다. 이 문제를 방지하려면 `ALTER <object>` 프로세스를 사용하여 가능할 때마다 포함하는 개체 정의를 변경합니다.  
   
-##  <a name="a-namecheckforceda-check-the-status-of-forced-plans-regularly"></a><a name="CheckForced"></a> 강제 계획의 상태를 정기적으로 확인  
+##  <a name="CheckForced"></a> Check the Status of Forced Plans Regularly  
  강제 계획은 중요한 쿼리 성능을 수정하고 쿼리를 좀 더 예측 가능하게 하는 편리한 메커니즘입니다. 그러나 계획 힌트 및 계획 가이드와 마찬가지로 강제 계획은 이후 실행에 사용됨을 보장하지는 않습니다. 일반적으로 실행 계획에서 참조하는 개체가 변경되거나 삭제되는 방식으로 데이터베이스 스키마가 변경하는 경우 강제 계획이 실패하기 시작합니다. 이 경우 실제 강제 실패 이유가 [sys.query_store_plan&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 표시되는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리 재컴파일로 대체합니다. 다음 쿼리는 강제 계획에 대한 정보를 반환합니다.  
   
 ```  
@@ -293,7 +297,7 @@ WHERE is_forced_plan = 1;
   
  전체 이유 목록을 보려면 [sys.query_store_plan&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)을 참조하세요. **query_store_plan_forcing_failed** XEvent를 사용하여 문제 해결 강제 오류를 추적할 수 있습니다.  
   
-##  <a name="a-namerenaminga-avoid-renaming-databases-if-you-have-queries-with-forced-plans"></a><a name="Renaming"></a> 강제 계획이 포함된 쿼리가 있을 경우 데이터베이스 이름 변경 방지  
+##  <a name="Renaming"></a> Avoid Renaming Databases if you have Queries with Forced Plans  
  실행 계획에서는 세 부분으로 이루어진 이름을 참조합니다(`database.schema.object`).   
 데이터베이스의 이름을 바꾸면 계획 강제 적용에 실패하여 모든 후속 쿼리 실행 시 다시 컴파일됩니다.  
   
@@ -304,3 +308,4 @@ WHERE is_forced_plan = 1;
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   
+

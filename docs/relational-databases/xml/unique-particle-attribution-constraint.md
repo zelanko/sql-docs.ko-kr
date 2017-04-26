@@ -1,29 +1,33 @@
 ---
-title: "UNIQUE PARTICLE ATTRIBUTION 제약 조건 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "unique particle attribution"
-helpviewer_keywords: 
-  - "스키마 컬렉션 [SQL Server], Unique Particle Attribution"
-  - "XML 스키마 컬렉션 [SQL Server], Unique Particle Attribution"
-  - "UPA 제약 조건 규칙"
-  - "unique particle attribution 제약 조건 규칙"
+title: "UNIQUE PARTICLE ATTRIBUTION 제약 조건 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- unique particle attribution
+helpviewer_keywords:
+- schema collections [SQL Server], unique particle attribution
+- XML schema collections [SQL Server], unique particle attribution
+- UPA constraint rule
+- unique particle attribution constraint rule
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e8b99a18280070f3960e6e9259e36144e22889c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# UNIQUE PARTICLE ATTRIBUTION 제약 조건
+# <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
   XSD에서 복잡한 콘텐츠 모델은 UPA(Unique Particle Attribution) 제약 조건 규칙에 의해 제한됩니다. 이 규칙에서는 항목 문서의 각 요소가 해당 부모 콘텐츠 모델에 있는 정확히 하나의 `<xsd:element>` 또는 `<xsd:any>` 파티클과 분명하게 일치해야 합니다. 잠재적으로 모호한 콘텐츠 모델이 있는 유형이 포함되는 스키마는 모두 거부됩니다.  
   
  모호성에 대한 가장 일반적인 원인은 minOccurs < maxOccurs와 같은 변수 발생 범위가 있는 `<xsd:any>` 와일드카드 문자 및 파티클입니다. 예를 들어 다음 콘텐츠 모델은 <`e1`> 요소가 `<xsd:element>` 또는 `<xsd:any>` 요소 중 하나와 일치할 수 있기 때문에 모호합니다.  
@@ -76,7 +80,7 @@ caps.handback.revision: 14
   
  `<root><e1/><e3/></root>`와 같은 문서에서 `<e1/><e3/>` 시퀀스는 두 번째 `<xsd:sequence>`와 분명하게 일치합니다. 하지만 `<xsd:element>` 을 검사하지 않고서는 `<e1/>` 에 해당하는 `<e3/>`를 확인할 수 없기 때문에 이 콘텐츠 모델은 UPA 제약 조건 규칙에 위배됩니다.  
   
-## 추가 정보 찾기  
+## <a name="finding-more-information"></a>추가 정보 찾기  
  다음 문서는 W3C(World Wide Web Consortium)에서 발행했으며 UNIQUE PARTICLE ATTRIBUTION 제약 조건에 대한 기술적인 설명이 포함되어 있습니다.  
   
  "XML 스키마 1부: 구조 제2판, W3C 제안 수정 추천":  
@@ -87,7 +91,7 @@ caps.handback.revision: 14
   
  문서를 보려면 [http://www.w3.org/TR/xmlschema-1](http://go.microsoft.com/fwlink/?linkid=48881)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 스키마 컬렉션&#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

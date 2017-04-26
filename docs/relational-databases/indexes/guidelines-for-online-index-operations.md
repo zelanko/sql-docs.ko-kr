@@ -1,29 +1,33 @@
 ---
-title: "온라인 인덱스 작업에 대한 지침 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클러스터형 인덱스, 온라인 작업"
-  - "온라인 인덱스 작업"
-  - "인덱스 [SQL Server], 온라인 작업"
-  - "디스크 공간 [SQL Server], 인덱스"
-  - "비클러스터형 인덱스 [SQL Server], 온라인 작업"
-  - "트랜잭션 로그 [SQL Server], 인덱스"
+title: "온라인 인덱스 작업에 대한 지침 | Microsoft 문서"
+ms.custom: 
+ms.date: 04/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustered indexes, online operations
+- online index operations
+- indexes [SQL Server], online operations
+- disk space [SQL Server], indexes
+- nonclustered indexes [SQL Server], online operations
+- transaction logs [SQL Server], indexes
 ms.assetid: d82942e0-4a86-4b34-a65f-9f143ebe85ce
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 44ef45ea5831186a3b6b7218111444d79ceef128
+ms.lasthandoff: 04/11/2017
+
 ---
-# 온라인 인덱스 작업에 대한 지침
+# <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   온라인 인덱스 작업을 수행할 때 다음 지침이 적용됩니다.  
@@ -32,14 +36,14 @@ caps.handback.revision: 60
   
 -   테이블에 LOB 데이터 형식이 들어 있는 경우 비고유 비클러스터형 인덱스를 온라인 상태로 만들 수 있지만 이러한 열은 인덱스 정의에 키 또는 키가 아닌 포괄 열로 사용되지 않습니다.  
   
--   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.  
-  
+-   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.
+
 > [!NOTE]  
->  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+>  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- 다음 테이블은 온라인으로 수행할 수 있는 인덱스 작업 및 이러한 온라인 작업에서 제외되는 인덱스를 보여 줍니다. 추가 제한 사항도 포함됩니다.  
+ 다음 표는 온라인으로 수행할 수 있는 인덱스 작업, 이러한 온라인 작업에서 제외되는 인덱스 및 다시 시작 가능한 인덱스 제한을 보여 줍니다. 추가 제한 사항도 포함됩니다.  
   
-|온라인 인덱스 작업|제외되는 인덱스|기타 제한 사항|  
+| 온라인 인덱스 작업 | 제외되는 인덱스 | 기타 제한 사항 |  
 |----------------------------|----------------------|------------------------|  
 |ALTER  INDEX  REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 임시 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
 |CREATE  INDEX|XML 인덱스<br /><br /> 뷰의 초기 고유 클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스||  
@@ -61,7 +65,12 @@ caps.handback.revision: 60
  인덱스에 큰 개체 유형의 열이 포함되어 있고 동일한 트랜잭션에서 이 온라인 작업 전에 업데이트 작업이 있는 경우 온라인 작업을 수행할 수 없습니다. 이 문제를 해결하려면 온라인 작업을 트랜잭션 외부에 배치하거나 트랜잭션 내에서 업데이트 전에 배치합니다.  
   
 ## <a name="disk-space-considerations"></a>디스크 공간 고려 사항  
- 일반적으로 온라인 및 오프라인 인덱스 작업에 필요한 디스크 공간 요구 사항은 동일합니다. 한 가지 다른 점은 임시 매핑 인덱스에 추가 디스크 공간이 필요하다는 점입니다. 이 임시 인덱스는 클러스터형 인덱스를 만들거나 다시 작성하거나 삭제하는 온라인 인덱스 작업에 사용됩니다. 온라인 상태에서 클러스터형 인덱스를 삭제하는 작업은 온라인 상태에서 클러스터형 인덱스를 만드는 작업에 필요한 디스크 공간과 동일한 크기가 필요합니다. 자세한 내용은 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  
+ 온라인 인덱스 작업에는 오프라인 인덱스 작업보다 더 많은 디스크 공간 요구 사항이 필요합니다. 
+ - 인덱스 만들기 및 인덱스 다시 빌드 작업 동안 빌드(또는 다시 빌드)할 인덱스에 대해 추가 공간이 필요합니다. 
+ - 또한 임시 매핑 인덱스에 대해서도 디스크 공간이 필요합니다. 이 임시 인덱스는 클러스터형 인덱스를 만들거나 다시 작성하거나 삭제하는 온라인 인덱스 작업에 사용됩니다.
+- 온라인 상태에서 클러스터형 인덱스를 삭제하는 작업은 온라인 상태에서 클러스터형 인덱스를 만드는 작업(또는 다시 빌드)에 필요한 공간과 동일한 크기가 필요합니다. 
+
+자세한 내용은 [Disk Space Requirements for Index DDL Operations](../../relational-databases/indexes/disk-space-requirements-for-index-ddl-operations.md)을 참조하세요.  
   
 ## <a name="performance-considerations"></a>성능 고려 사항  
  온라인 인덱스 작업에서 동시 사용자 업데이트 작업을 할 수 있지만 업데이트 작업이 많은 경우에는 인덱스 작업을 하는 데 많은 시간이 소요됩니다. 일반적으로 온라인 인덱스 작업은 동시 업데이트 작업 수준과 상관없이 같은 양의 오프라인 인덱스 작업보다 느립니다.  
@@ -70,7 +79,7 @@ caps.handback.revision: 60
   
  온라인 작업을 권장하지만 사용 환경 및 특정 요구 사항도 고려해야 합니다. 인덱스 작업을 오프라인 상태에서 실행하는 것이 가장 좋을 수도 있습니다. 이 경우 사용자가 작업 수행 동안 데이터 액세스를 제한하지만 작업은 더욱 빨리 끝나고 보다 적은 리소스를 사용합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 추가 프로세스를 사용하여 인덱스 문과 관련된 검색 및 정렬 작업을 수행할 수 있습니다. MAXDOP 인덱스 옵션을 사용하여 온라인 인덱스 작업에만 사용되는 프로세서 수를 제어할 수 있습니다. 이 방법으로 인덱스 작업에서 사용하는 리소스와 동시 사용자가 사용하는 리소스의 균형을 맞출 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요. 병렬 인덱스 작업을 지원하는 SQL Server에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+ SQL Server 2016을 실행하는 다중 프로세서 컴퓨터에서는 다른 쿼리와 마찬가지로 인덱스 문이 추가 프로세서를 사용하여 인덱스 문과 관련된 검색 및 정렬 작업을 수행할 수 있습니다. MAXDOP 인덱스 옵션을 사용하여 온라인 인덱스 작업에만 사용되는 프로세서 수를 제어할 수 있습니다. 이 방법으로 인덱스 작업에서 사용하는 리소스와 동시 사용자가 사용하는 리소스의 균형을 맞출 수 있습니다. 자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요. 병렬 인덱스 작업을 지원하는 SQL Server에 대한 자세한 내용은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  인덱스 작업의 마지막 단계에 S  잠금 또는 Sch-M  잠금이 보유되므로 BEGIN  TRANSACTION...COMMIT  블록 등의 명시적 사용자 트랜잭션 내에서 온라인 인덱스 작업을 실행할 때는 주의해야 합니다. 이 작업을 실행하면 트랜잭션이 끝날 때까지 잠금이 보유되어 사용자 동시성을 방해할 수 있습니다.  
   
@@ -78,7 +87,7 @@ caps.handback.revision: 60
   
 ## <a name="transaction-log-considerations"></a>트랜잭션 로그 고려 사항  
  오프라인 상태 또는 온라인 상태에서 수행되는 대규모 인덱스 작업은 트랜잭션 로그를 빨리 채워 대용량 데이터 로드를 생성할 수 있습니다. 인덱스 작업을 확실히 롤백하려면 인덱스 작업이 완료될 때까지 트랜잭션 로그를 자를 수 없지만,  인덱스 작업 중에 이 로그를 백업할 수 있습니다. 따라서 트랜잭션 로그에는 인덱스 작업을 수행하는 동안 인덱스 작업 트랜잭션 및 동시 사용자 트랜잭션을 모두 저장할 수 있는 충분한 공간이 있어야 합니다. 자세한 내용은 [Transaction Log Disk Space for Index Operations](../../relational-databases/indexes/transaction-log-disk-space-for-index-operations.md)을 참조하세요.  
-  
+
 ## <a name="related-content"></a>관련 내용  
  [온라인 인덱스 작업 작동 방식](../../relational-databases/indexes/how-online-index-operations-work.md)  
   
@@ -89,3 +98,4 @@ caps.handback.revision: 60
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  
   
   
+

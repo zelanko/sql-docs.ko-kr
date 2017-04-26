@@ -1,25 +1,29 @@
 ---
-title: "문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 형식 [SQL Server], 문자"
-  - "문자 형식 [SQL Server]"
+title: "문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 09/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data formats [SQL Server], character
+- character formats [SQL Server]
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: babd3dc4daaa60af026d8694e0cc69292ab44ce0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
+# <a name="use-character-format-to-import-or-export-data-sql-server"></a>문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 다른 프로그램에서 사용할 텍스트 파일로 데이터를 대량으로 내보내거나 다른 프로그램에서 생성한 텍스트 파일에서 데이터를 대량으로 가져오는 경우 문자 형식을 사용하는 것이 좋습니다.  
 
 문자 형식은 모든 열에 문자 데이터 형식을 사용합니다. 스프레드시트 등의 다른 프로그램에서 데이터를 사용하거나 Oracle 등의 다른 데이터베이스의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 복사할 때는 문자 형식으로 정보를 저장하십시오.  
@@ -33,7 +37,7 @@ caps.handback.revision: 42
 |[문자 형식의 명령 옵션](#command_options)|
 |[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)<br />|
 |[예](#examples)<br />&emsp;&#9679;&emsp;[bcp 및 문자 형식을 사용하여 데이터 내보내기](#bcp_char_export)<br />&emsp;&#9679;&emsp;[bcp 및 문자 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_char_import)<br />&emsp;&#9679;&emsp;[bcp 및 문자 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기](#bcp_char_import_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 문자 형식 사용](#bulk_char)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 BULK INSERT 및 문자 형식 사용하기](#bulk_char_fmt)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 OPENROWSET 및 문자 형식 사용하기](#openrowset_char_fmt)|
-|[관련 작업](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
+|[관련 태스크](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 
   
@@ -51,7 +55,7 @@ caps.handback.revision: 42
   
 -   변환 작업 중에 확장 문자가 손실되는 것을 방지하려면 유니코드 문자 형식을 사용하거나 코드 페이지를 지정하십시오.  
   
--   문자 서식 파일로 저장되는 모든 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값은 암시적 데이터 변환 규칙에 따라 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)로 변환되며 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 열로 데이터를 가져오는 경우 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)로 변환됩니다. [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 이외의 데이터 형식으로 열에 가져오는 경우 해당 데이터는 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 암시적 변환을 거칩니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.  
+-   문자 서식 파일로 저장되는 모든 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 데이터는 메타데이터 없이 저장됩니다. 각 데이터 값은 암시적 데이터 변환 규칙에 따라 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 로 변환되며 [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 열로 데이터를 가져오는 경우 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)로 변환됩니다. [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 이외의 데이터 형식으로 열에 가져오는 경우 해당 데이터는 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 암시적 변환을 거칩니다. 데이터 변환에 대한 자세한 내용은 [데이터 형식 변환&#40;데이터베이스 엔진&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)을 참조하세요.  
   
 -   [bcp 유틸리티](../../tools/bcp-utility.md)가 문자 형식 데이터 파일로서 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 값을 내보낼 때는 소수점 이하 4자리만 표시하며 쉼표 구분자 등 숫자 구분 기호는 사용하지 않습니다. 예를 들어 1,234,567.123456이라는 값을 포함하는 [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) 열을 데이터 파일로 대량 내보내면 1234567.1235라는 문자열이 됩니다.  
   
@@ -69,13 +73,13 @@ caps.handback.revision: 42
  \*문자(**-c**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환되는 형식으로 로드하려면 **-V** 스위치를 사용하세요. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
    
 > [!NOTE]
->  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.
+>  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.
 
 ## 예제 테스트 조건<a name="etc"></a>  
 이 항목의 예제는 아래에 정의된 테이블 및 서식 파일을 기반으로 합니다.
 
-### **예제 테이블**<a name="sample_table"></a>
-아래 스크립트는 테스트 데이터베이스인 `myChar`라는 테이블을 만들고 테이블을 몇 가지 초기 값으로 채웁니다.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+### **샘플 테이블**<a name="sample_table"></a>
+아래 스크립트는 테스트 데이터베이스인 `myChar` 라는 테이블을 만들고 테이블을 몇 가지 초기 값으로 채웁니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -101,7 +105,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
-SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md)를 사용하여 `myChar`의 스키마를 기반으로 비 xml 서식 파일 `myChar.fmt`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul**을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c**는 문자 데이터를 지정하는 데 사용되고 **T**는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
+SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myChar.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myChar`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고 **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```
 bcp TestDatabase.dbo.myChar format nul -f D:\BCP\myChar.fmt -T -c 
@@ -155,7 +159,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myChar;"
 ```
 
 ### **서식 파일 없이 BULK INSERT 및 문자 형식 사용**<a name="bulk_char"></a>
-**DATAFILETYPE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+**DATAFILETYPE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
@@ -169,7 +173,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **XML 이외의 서식 파일과 함께 BULK INSERT 및 문자 형식 사용하기**<a name="bulk_char_fmt"></a>
-**FORMATFILE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+**FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myChar; -- for testing
 BULK INSERT TestDatabase.dbo.myChar
@@ -183,7 +187,7 @@ SELECT * FROM TestDatabase.dbo.myChar;
 ```
 
 ### **XML 이외의 서식 파일과 함께 OPENROWSET 및 문자 형식 사용하기**<a name="openrowset_char_fmt"></a>
-**FORMATFILE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+**FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myChar;  -- for testing
 INSERT INTO TestDatabase.dbo.myChar
@@ -204,15 +208,16 @@ SELECT * FROM TestDatabase.dbo.myChar;
   
 -   [네이티브 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 참고 항목  
- [bcp 유틸리티](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>참고 항목  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
   
+

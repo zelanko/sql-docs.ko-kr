@@ -1,27 +1,31 @@
 ---
-title: "해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스 | Microsoft 문서"
+ms.custom: 
+ms.date: 05/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 caps.latest.revision: 23
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67e5fad803b006dfe1aaf8794c440747db285c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
+# <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>해석된 Transact-SQL을 사용하여 메모리 액세스에 최적화된 테이블에 액세스
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
  단지 몇 가지 예외를 제외하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 또는 DML 작업(SELECT, INSERT, UPDATE 또는 DELETE), 임시 일괄 처리, 테이블 반환 함수, 트리거, 뷰 및 저장 프로시저와 같은 SQL 모듈을 사용하여 메모리 액세스에 최적화된 테이블에 액세스할 수 있습니다.  
   
-해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 고유하게 컴파일된 저장 프로시저가 아닌 저장 프로시저를 의미합니다. 메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 interop 액세스라고 합니다.  
+해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 또는 고유하게 컴파일된 저장 프로시저가 아닌 저장 프로시저를 의미합니다. 메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스를 interop 액세스라고 합니다.  
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 메모리 액세스에 최적화된 테이블을 직렬 모드 대신 병렬로 스캔할 수 있습니다.
 
@@ -31,7 +35,7 @@ caps.handback.revision: 23
   
 - 임시 쿼리 및 관리 태스크  
   
-- 고유하게 컴파일된 저장 프로시저(예: 종종 [OVER](../Topic/OVER%20Clause%20\(Transact-SQL\).md) 함수라고 하는 *window* 함수)에서 사용할 수 없는 구문을 일반적으로 사용하는 보고 쿼리  
+- 고유하게 컴파일된 저장 프로시저(예: 종종 *OVER* 함수라고 하는 [window](../../t-sql/queries/select-over-clause-transact-sql.md) 함수)에서 사용할 수 없는 구문을 일반적으로 사용하는 보고 쿼리  
   
 - 응용 프로그램 코드를 최소한으로 변경하거나 변경하지 않고 응용 프로그램에서 성능이 중요한 부분을 메모리 액세스에 최적화된 테이블로 마이그레이션하려는 경우. 테이블을 마이그레이션하면 성능이 향상될 수 있습니다. 그런 다음 저장 프로시저를 고유하게 컴파일된 저장 프로시저로 마이그레이션하면 성능이 추가로 향상될 수 있습니다.  
   
@@ -44,9 +48,9 @@ caps.handback.revision: 23
 |테이블에 대한 액세스|TRUNCATE TABLE<br /><br /> MERGE(메모리 액세스에 최적화된 테이블을 대상으로 사용)<br /><br /> 동적 및 키 집합 커서(자동으로 정적 커서로 강등됨)<br /><br /> 컨텍스트 연결을 사용하여 CLR 모듈에서 액세스<br /><br /> 인덱싱된 뷰에서 메모리 액세스에 최적화된 테이블 참조|  
 |데이터베이스 간|데이터베이스 간 쿼리<br /><br /> 데이터베이스 간 트랜잭션<br /><br /> 연결된 서버|  
   
-## 테이블 힌트
+## <a name="table-hints"></a>테이블 힌트
 
-테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../Topic/Table%20Hints%20\(Transact-SQL\).md)를 참조하세요. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]를 지원하기 위해 SNAPSHOT이 추가되었습니다.  
+테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]를 지원하기 위해 SNAPSHOT이 추가되었습니다.  
   
 다음 테이블 힌트는 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 메모리 액세스에 최적화된 테이블에 액세스하는 경우 지원되지 않습니다.  
 
@@ -63,12 +67,14 @@ caps.handback.revision: 23
   
 - SNAPSHOT, REPEATABLEREAD, SERIALIZABLE 등 [격리 수준 테이블 힌트](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md) 를 지정합니다.  
   
-- [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 데이터베이스 옵션을 ON으로 설정합니다.  
+- [MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT](../../t-sql/statements/alter-database-transact-sql-set-options.md) 데이터베이스 옵션을 ON으로 설정합니다.  
   
-[자동 커밋 모드](http://msdn.microsoft.com/ko-kr/c8de5b60-d147-492d-b601-2eeae8511d00)에서 실행되는 쿼리에서 액세스하는 메모리 액세스에 최적화된 테이블에는 격리 수준 테이블 힌트가 필요하지 않습니다.  
+[자동 커밋 모드](http://msdn.microsoft.com/en-us/c8de5b60-d147-492d-b601-2eeae8511d00)에서 실행되는 쿼리에서 액세스하는 메모리 액세스에 최적화된 테이블에는 격리 수준 테이블 힌트가 필요하지 않습니다.  
   
-## 참고 항목
+## <a name="see-also"></a>참고 항목
 
 [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 
 [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+
+

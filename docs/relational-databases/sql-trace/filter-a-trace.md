@@ -1,28 +1,32 @@
 ---
-title: "추적 필터링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "필터 [SQL Server], 이벤트"
-  - "이벤트 [SQL Server], 필터"
-  - "필터 [SQL Server]"
-  - "필터 [SQL Server], 추적"
-  - "추적 [SQL Server], 필터"
+title: "추적 필터링 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], events
+- events [SQL Server], filters
+- filters [SQL Server]
+- filters [SQL Server], traces
+- traces [SQL Server], filters
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6315705010a41afb985682e63338cc95237b5e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 추적 필터링
+# <a name="filter-a-trace"></a>추적 필터링
   필터가 설정되면 추적에서 수집하는 이벤트가 제한됩니다. 필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다. 예를 들어 특정 사용자에 대한 추적에서 Windows 사용자 이름을 제한하면 출력 데이터는 해당 사용자만 표시되도록 간략해집니다.  
   
  반드시 추적에 대한 필터를 설정해야 하는 것은 아닙니다. 그러나 필터는 추적하는 동안 발생하는 오버헤드를 최소화합니다. 필터는 포커스가 있는 데이터를 반환하므로 성능 분석과 감사를 편리하게 해 줍니다.  
@@ -30,11 +34,11 @@ caps.handback.revision: 28
  추적 내에 캡처된 이벤트 데이터를 필터링하려면 관련된 데이터만 추적에서 반환하는 추적 이벤트 조건을 선택합니다. 예를 들어 추적에서 특정 응용 프로그램 작업에 대한 모니터링을 포함하거나 제외하도록 할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]가 추적을 생성할 때 기본적으로 자체 작업을 필터링합니다.  
+>  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 추적을 생성할 때 기본적으로 자체 작업을 필터링합니다.  
   
  또 다른 예를 들면 쿼리를 모니터링하여 실행 시간이 가장 오래 걸리는 일괄 처리를 확인하는 경우 실행하는 데 30초(CPU 최소값인 30,000밀리초) 이상 걸리는 일괄 처리만 모니터링하도록 추적 이벤트 조건을 설정할 수 있습니다.  
   
-## 필터 생성 지침  
+## <a name="filter-creation-guidelines"></a>필터 생성 지침  
  일반적으로 추적을 필터링하려면 다음 단계를 따릅니다.  
   
 1.  추적에 포함시킬 이벤트를 확인합니다.  
@@ -61,8 +65,8 @@ caps.handback.revision: 28
   
 |관계형 연산자|연산자 기호|설명|  
 |-------------------------|---------------------|-----------------|  
-|Like|LIKE|추적 이벤트 데이터가 입력한 텍스트와 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
-|유사하지 않음|NOT LIKE|추적 이벤트 데이터가 입력한 텍스트와 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
+|Like|Like|추적 이벤트 데이터가 입력한 텍스트와 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
+|유사하지 않음|유사하지 않음|추적 이벤트 데이터가 입력한 텍스트와 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |같음|=|추적 이벤트 데이터가 입력한 값과 같아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |같지 않음|<>|추적 이벤트 데이터가 입력한 값과 같지 않아야 함을 지정합니다. 다중 값을 허용합니다.|  
 |보다 큼|>|추적 이벤트 데이터가 입력한 값보다 커야 함을 지정합니다.|  
@@ -77,7 +81,7 @@ caps.handback.revision: 28
 |**ApplicationName**|LIKE, NOT LIKE|  
 |**BigintData1**|=, <>, >=, <=|  
 |**BigintData2**|=, <>, >=, <=|  
-|**BinaryData**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
+|**BinaryData**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**ClientProcessID**|=, <>, >=, <=|  
 |**ColumnPermissions**|=, <>, >=, <=|  
 |**CPU**|=, <>, >=, <=|  
@@ -89,7 +93,7 @@ caps.handback.revision: 28
 |**오류**|=, <>, >=, <=|  
 |**EventSubClass**|=, <>, >=, <=|  
 |**FileName**|LIKE, NOT LIKE|  
-|**GUID**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
+|**GUID**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**Handle**|=, <>, >=, <=|  
 |**HostName**|LIKE, NOT LIKE|  
 |**IndexID**|=, <>, >=, <=|  
@@ -99,13 +103,13 @@ caps.handback.revision: 28
 |**LineNumber**|=, <>, >=, <=|  
 |**LinkedServerName**|LIKE, NOT LIKE|  
 |**LoginName**|LIKE, NOT LIKE|  
-|**LoginSid**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
+|**LoginSid**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**MethodName**|LIKE, NOT LIKE|  
 |**모드**|=, <>, >=, <=|  
 |**NestLevel**|=, <>, >=, <=|  
 |**NTDomainName**|LIKE, NOT LIKE|  
 |**NTUserName**|LIKE, NOT LIKE|  
-|**ObjectID**|=, <>, >=, <=|  
+|**Exchange Spill**|=, <>, >=, <=|  
 |**ObjectID2**|=, <>, >=, <=|  
 |**ObjectName**|LIKE, NOT LIKE|  
 |**ObjectType**|=, <>, >=, <=|  
@@ -123,12 +127,12 @@ caps.handback.revision: 28
 |**Severity**|=, <>, >=, <=|  
 |**SourceDatabaseID**|=, <>, >=, <=|  
 |**SPID**|=, <>, >=, \<=|  
-|**SqlHandle**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
+|**SqlHandle**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**StartTime**|>=, <=|  
 |**State**|=, <>, >=, <=|  
 |**성공**|=, <>, >=, <=|  
 |**TargetLoginName**|LIKE, NOT LIKE|  
-|**TargetLoginSid**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
+|**TargetLoginSid**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 이 데이터 열의 이벤트를 필터링할 수 있습니다. 자세한 내용은 [SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)을 참조하세요.|  
 |**TargetUserName**|LIKE, NOT LIKE|  
 |**TextData** *|LIKE, NOT LIKE|  
 |**TransactionID**|=, <>, >=, <=|  
@@ -136,7 +140,7 @@ caps.handback.revision: 28
 |**Writes**|=, <>, >=, <=|  
 |**XactSequence**|=, <>, >=, <=|  
   
- \* **osql** 유틸리티 또는 **sqlcmd** 유틸리티에서 이벤트를 추적하는 경우 항상 **%**를 **TextData** 데이터 열의 필터에 추가합니다.  
+ \***osql** 유틸리티 또는 **sqlcmd** 유틸리티에서 이벤트를 추적하는 경우 항상 **%** 를 **TextData** 데이터 열의 필터에 추가합니다.  
   
  보안 예방 조치로서 SQL 추적은 암호에 영향을 미치는 보안 관련 저장 프로시저의 모든 정보를 자동으로 추적에서 생략합니다. 이 보안 메커니즘은 따로 구성할 수 없고 항상 유효하며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 모든 작업을 추적할 수 있는 권한을 가진 사용자가 암호를 캡처할 수 없도록 합니다.  
   

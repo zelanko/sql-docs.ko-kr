@@ -1,31 +1,35 @@
 ---
-title: "bcp를 사용하여 필드 길이 지정(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "네이티브 데이터 형식 [SQL Server]"
-  - "기본 필드 길이"
-  - "필드 길이 [SQL Server]"
-  - "데이터 형식 [SQL Server], 필드 길이"
-  - "bcp 유틸리티 [SQL Server], 필드 길이"
+title: "bcp를 사용하여 필드 길이 지정(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- default field lengths
+- field length [SQL Server]
+- data formats [SQL Server], field length
+- bcp utility [SQL Server], field length
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 772ed44be6795e676b18fcfc915f851e4ce24e97
+ms.lasthandoff: 04/11/2017
+
 ---
-# bcp를 사용하여 필드 길이 지정(SQL Server)
+# <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp를 사용하여 필드 길이 지정(SQL Server)
   필드 길이는 데이터를 문자 형식으로 표시하는 데 필요한 최대 문자 수를 나타냅니다. 데이터가 네이티브 형식으로 저장된 경우에는 필드 길이를 쉽게 알 수 있습니다. 예를 들어 **int** 데이터 형식의 길이는 4바이트입니다. 접두사 길이로 0을 지정한 경우 **bcp** 명령을 사용하면 필드 길이, 기본 필드 길이, **char** 데이터가 포함된 데이터 파일에서 필드 길이가 데이터 저장소에 미치는 영향을 입력해야 합니다.  
   
-## 필드 길이에 대한 bcp 프롬프트  
+## <a name="the-bcp-prompt-for-field-length"></a>필드 길이에 대한 bcp 프롬프트  
  대화형 **bcp** 명령에 **in** 또는 **out** 옵션이 포함된 경우 서식 파일 스위치(**-f**) 또는 데이터 형식 스위치(**-n**, **-c**, **-w** 또는 **-N**)가 없으면 다음과 같이 각 데이터 필드의 필드 길이를 지정하라는 메시지가 표시됩니다.  
   
  `Enter length of field <field_name> [<default>]:`  
@@ -43,15 +47,15 @@ caps.handback.revision: 27
   
 -   파일 저장 유형이 문자 형식이 아니면 **bcp** 명령은 필드 길이 입력 메시지를 표시하지 않습니다. 데이터는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 표현(네이티브 형식)으로 저장됩니다.  
   
-## 기본 필드 길이 사용  
- 일반적으로는 [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 권장 사항에 따라 **bcp**에서 제시하는 필드 길이의 기본값을 사용하는 것이 좋습니다. 문자 모드 데이터 파일을 만들 때 기본 필드 길이를 사용하면 데이터가 잘리지 않으며 숫자 오버플로 오류도 발생하지 않습니다.  
+## <a name="using-default-field-lengths"></a>기본 필드 길이 사용  
+ 일반적으로는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 권장 사항에 따라 **bcp**에서 제시하는 필드 길이의 기본값을 사용하는 것이 좋습니다. 문자 모드 데이터 파일을 만들 때 기본 필드 길이를 사용하면 데이터가 잘리지 않으며 숫자 오버플로 오류도 발생하지 않습니다.  
   
  필드 길이를 잘못 지정하면 문제가 발생할 수 있습니다. 예를 들어 숫자 데이터를 복사할 때 이 데이터의 필드 길이가 너무 짧으면 **bcp** 유틸리티는 오버플로 메시지를 표시하며 데이터를 복사하지 않습니다. 또한 **datetime** 데이터를 내보낸 후 문자열의 필드 길이를 26바이트 미만으로 지정하면 **bcp** 유틸리티는 오류 메시지를 표시하지 않고 데이터를 자릅니다.  
   
 > [!IMPORTANT]  
->  기본 크기 옵션을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 전체 문자열을 읽습니다. 그러나 기본 필드 길이를 사용해도 "예기치 않은 파일의 끝입니다."라는 오류가 발생할 수도 있습니다. 대개 이 오류는 예상된 필드의 일부만 데이터 파일에 있는 경우 **money** 및 **datetime** 데이터 형식에 발생합니다. 예를 들어 *mm*/*dd*/*yy*의 **datetime** 값이 시간 구성 요소 없이 지정되어 **char** 형식의 **datetime** 값 예상 길이인 24자보다 작을 경우에 발생합니다. 이런 유형의 오류를 방지하려면 필드 종결자 또는 고정 길이 데이터 필드를 사용하거나 다른 값을 지정하여 기본 필드 길이를 변경합니다.  
+>  기본 크기 옵션을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 전체 문자열을 읽습니다. 그러나 기본 필드 길이를 사용해도 "예기치 않은 파일의 끝입니다."라는 오류가 발생할 수도 있습니다. 대개 이 오류는 예상된 필드의 일부만 데이터 파일에 있는 경우 **money** 및 **datetime** 데이터 형식에 발생합니다. 예를 들어 **mm** dd *yy*/*의*/*datetime* 값이 시간 구성 요소 없이 지정되어 **char** 형식의 **datetime** 값 예상 길이인 24자보다 작을 경우에 발생합니다. 이런 유형의 오류를 방지하려면 필드 종결자 또는 고정 길이 데이터 필드를 사용하거나 다른 값을 지정하여 기본 필드 길이를 변경합니다.  
   
-### 문자 파일 저장소의 기본 필드 길이  
+### <a name="default-field-lengths-for-character-file-storage"></a>문자 파일 저장소의 기본 필드 길이  
  다음 표에서는 문자 파일 저장 유형으로 저장할 데이터의 기본 필드 길이를 나열합니다. Null 허용 데이터의 길이는 Null이 아닌 데이터와 같습니다.  
   
 |데이터 형식|기본 길이(문자)|  
@@ -91,7 +95,7 @@ caps.handback.revision: 27
 > [!NOTE]  
 >  **tinyint** 형식의 열은 0부터 255까지의 값을 가질 수 있으며 해당 범위의 수를 나타내는 데 필요한 최대 문자 수는 3개입니다(100부터 255까지를 표현).  
   
-### 네이티브 파일 저장소의 기본 필드 길이  
+### <a name="default-field-lengths-for-native-file-storage"></a>네이티브 파일 저장소의 기본 필드 길이  
  다음 표에서는 네이티브 파일 저장 유형으로 저장할 데이터의 기본 필드 길이를 나열합니다. Null 허용 데이터의 길이는 Null이 아닌 데이터와 같으며 문자 데이터는 항상 문자 형식으로 저장됩니다.  
   
 |데이터 형식|기본 길이(문자)|  
@@ -117,9 +121,9 @@ caps.handback.revision: 27
   
  \***decimal** 및 **numeric** 데이터 형식에 대한 자세한 내용은 [decimal 및 numeric&#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)을 참조하세요.  
   
- 앞의 모든 경우에서 나중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 다시 로드할 데이터 파일을 만들어 최소한의 저장소 공간을 유지하려면 기본 파일 저장 유형의 길이 접두사와 기본 필드 길이를 사용합니다.  
+ 앞의 모든 경우에서 나중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 다시 로드할 데이터 파일을 만들어 최소한의 저장소 공간을 유지하려면 기본 파일 저장 유형의 길이 접두사와 기본 필드 길이를 사용합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [bcp 유틸리티](../../tools/bcp-utility.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [필드 및 행 종결자 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

@@ -1,46 +1,50 @@
 ---
-title: "예제: OPENXML 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ColPattern [SQL Server의 XML]"
-  - "XML [SQL Server], 데이터 매핑"
-  - "OPENXML 문, OPENXML 문 정보"
-  - "XML 문서의 오버플로 [SQL Server]"
-  - "XML 데이터 매핑 [SQL Server]"
-  - "특성 중심 및 요소 중심의 매핑 결합"
-  - "사용되지 않은 데이터"
-  - "특성 중심 매핑"
-  - "열 패턴 [SQL Server의 XML]"
-  - "XML [SQL Server], 오버플로 처리"
-  - "행 패턴 [SQL Server의 XML]"
-  - "rowpattern [SQL Server의 XML]"
-  - "flags 매개 변수"
-  - "요소 중심 매핑 [SQL Server]"
-  - "edge 테이블"
+title: "예제: OPENXML 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ColPattern [XML in SQL Server]
+- XML [SQL Server], mapping data
+- OPENXML statement, about OPENXML statement
+- overflow in XML document [SQL Server]
+- mapping XML data [SQL Server]
+- combining attribute-centric and element centric mapping
+- unconsumed data
+- attribute-centric mapping
+- column patterns [XML in SQL Server]
+- XML [SQL Server], overflow handling
+- row patterns [XML in SQL Server]
+- rowpattern [XML in SQL Server]
+- flags parameter
+- element-centric mapping [SQL Server]
+- edge tables
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a559fe0e900d3c4e0ffd70b454f995292169880
+ms.lasthandoff: 04/11/2017
+
 ---
-# 예제: OPENXML 사용
+# <a name="examples-using-openxml"></a>예제: OPENXML 사용
   이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](../../relational-databases/xml/specify-metaproperties-in-openxml.md)을 참조하세요.  
   
-## 예  
+## <a name="examples"></a>예  
  데이터를 검색할 때 XML 문서에서 행을 결정하는 노드를 식별하는 데 *rowpattern* 이 사용됩니다. 또한 MSXML XPath 구현에 사용된 XPath 패턴 언어에 *rowpattern* 이 표현됩니다. 예를 들어 패턴이 요소나 특성으로 끝나는 경우에는 *rowpattern*에 의해 지정된 각 요소 또는 특성 노드에 대해 한 개의 행이 생성됩니다.  
   
- *flags* 값은 기본 매핑을 제공합니다. *ColPattern* 이 *SchemaDeclaration*에 지정되지 않은 경우 *flags* 에 지정된 매핑이 간주됩니다. *ColPattern* 이 *SchemaDeclaration* 에 지정된 경우에는 *flags*값이 무시됩니다. 지정된 *ColPattern*은 매핑(특성 중심 또는 요소 중심)은 물론, 오버플로와 소비되지 않은 데이터를 처리할 때의 동작도 결정합니다.  
+ *flags* 값은 기본 매핑을 제공합니다. *ColPattern* 이 *SchemaDeclaration*에 지정되지 않은 경우 *flags* 에 지정된 매핑이 간주됩니다. *ColPattern* 이 *SchemaDeclaration* 에 지정된 경우에는 *flags*값이 무시됩니다. 지정된 *ColPattern* 은 매핑(특성 중심 또는 요소 중심)은 물론, 오버플로와 소비되지 않은 데이터를 처리할 때의 동작도 결정합니다.  
   
-### 1. OPENXML에서 단순 SELECT 문 실행  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>1. OPENXML에서 단순 SELECT 문 실행  
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 두 열(**CustomerID** 및 **ContactName**)로 구성된 행 집합의 고객 정보를 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
@@ -137,9 +141,9 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- **sp_xml_preparedocument**에 의해 반환되는 문서 핸들은 세션이 아닌 일괄 처리 기간 동안 유효합니다.  
+ **sp_xml_preparedocument** 에 의해 반환되는 문서 핸들은 세션이 아닌 일괄 처리 기간 동안 유효합니다.  
   
-### 2. 행 집합 열과 XML 특성 및 요소 간의 매핑을 위해 ColPattern 지정  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>2. 행 집합 열과 XML 특성 및 요소 간의 매핑을 위해 ColPattern 지정  
  이 예제에서는 행 집합 열과 XML 특성 및 요소 간에 매핑을 제공하기 위해 선택 사항인 *ColPattern* 매개 변수에 XPath 패턴을 지정하는 방법을 보여 줍니다.  
   
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 고객과 주문 정보를 XML 문서로부터 행 집합(**CustomerID**, **OrderDate**, **ProdID** 및 **Qty**)으로 검색합니다.  
@@ -237,8 +241,8 @@ WITH (CustomerID  varchar(10)   '../CustomerID',
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
-### 3. 특성 중심 및 요소 중심의 매핑 결합  
- 이 예에서 *flags* 매개 변수는 **3**으로 설정되며 특성 중심 및 요소 중심 매핑이 적용됨을 나타냅니다. 이 경우, 특성 중심의 매핑이 먼저 적용된 다음 아직 처리되지 않은 모든 열에 대해 요소 중심의 매핑이 적용됩니다.  
+### <a name="c-combining-attribute-centric-and-element-centric-mapping"></a>3. 특성 중심 및 요소 중심의 매핑 결합  
+ 이 예에서 *flags* 매개 변수는 **3** 으로 설정되며 특성 중심 및 요소 중심 매핑이 적용됨을 나타냅니다. 이 경우, 특성 중심의 매핑이 먼저 적용된 다음 아직 처리되지 않은 모든 열에 대해 요소 중심의 매핑이 적용됩니다.  
   
 ```  
 DECLARE @docHandle int  
@@ -282,7 +286,7 @@ LILAS      Carlos Gonzlez
   
  특성 중심의 매핑은 **CustomerID**에 대해 적용됩니다. <`Customer`> 요소에는 **ContactName** 특성이 없습니다. 따라서 요소 중심 매핑이 적용됩니다.  
   
-### 4. text() XPath 함수를 ColPattern으로 지정  
+### <a name="d-specifying-the-text-xpath-function-as-colpattern"></a>4. text() XPath 함수를 ColPattern으로 지정  
  이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 <`Order`> 요소의 **oid** 특성, *rowpattern*으로 식별된 노드에 대한 부모 노드의 ID 및 요소 콘텐츠의 리프 값 문자열로 구성된 행 집합을 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
@@ -339,7 +343,7 @@ O3    100.0         Happy Customer.
 O4    10000.0       NULL  
 ```  
   
-### 5. WITH 절에 TableName 지정  
+### <a name="e-specifying-tablename-in-the-with-clause"></a>5. WITH 절에 TableName 지정  
  이 예에서는 WITH 절에서 *SchemaDeclaration* 대신 *TableName*을 지정합니다. 이것은 원하는 구조를 가지고 있고 열 패턴 *ColPattern* 매개 변수는 필요하지 않은 테이블을 사용하는 경우에 유용합니다.  
   
  이 예의 XML 문서는 <`Customer`> 및 <`Order`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**oid**, **date** 및 **amount**)의 주문 정보를 검색합니다.  
@@ -352,7 +356,7 @@ O4    10000.0       NULL
   
 -   WITH 절에는 *SchemaDeclaration* 이 없습니다. 그 대신 테이블 이름이 지정됩니다. 따라서 테이블 스키마가 행 집합 스키마로 사용됩니다.  
   
--   *flags* 매개 변수 값은 **1**로 설정되어 특성 중심의 매핑을 나타냅니다. 따라서 *rowpattern*으로 식별되는 요소의 특성은 동일한 이름의 행 집합 열에 매핑됩니다.  
+-   *flags* 매개 변수 값은 **1** 로 설정되어 특성 중심의 매핑을 나타냅니다. 따라서 *rowpattern*으로 식별되는 요소의 특성은 동일한 이름의 행 집합 열에 매핑됩니다.  
   
  그런 다음 SELECT 문은 OPENXML이 제공하는 행 집합의 모든 열을 검색합니다.  
   
@@ -399,7 +403,7 @@ O3    1999-07-14 00:00:00.000     100.0
 O4    1996-01-20 00:00:00.000     10000.0  
 ```  
   
-### 6. Edge 테이블 형식으로 결과 얻기  
+### <a name="f-obtaining-the-result-in-an-edge-table-format"></a>6. Edge 테이블 형식으로 결과 얻기  
  이 예제에서는 OPENXML 문에서 WITH 절이 지정되지 않습니다. 따라서 OPENXML이 생성하는 행 집합은 Edge 테이블 형식이 됩니다. SELECT 문은 Edge 테이블의 열을 모두 반환합니다.  
   
  이 예의 예제 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다.  
@@ -460,14 +464,14 @@ EXEC sp_xml_removedocument @docHandle
     ORDER BY localname  
     ```  
   
-### 7. 특성으로 끝나는 rowpattern 지정  
+### <a name="g-specifying-rowpattern-ending-with-an-attribute"></a>7. 특성으로 끝나는 rowpattern 지정  
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 세 열로 구성된 행 집합(**ProductID**, **Quantity** 및 **OrderID**)의 주문 정보를 검색합니다.  
   
- 먼저 **sp_xml_preparedocument**가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
+ 먼저 **sp_xml_preparedocument** 가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
   
  OPENXML 문에서는 다음을 보여 줍니다.  
   
--   *rowpattern* (/ROOT/Customer/Order/OrderDetail/@ProductID)은 XML 특성 **ProductID**로 끝납니다. 결과 행 집합에서는 XML 문서에서 선택된 각 특성 노드에 대해 행이 만들어집니다.  
+-   *rowpattern*(/ROOT/Customer/Order/OrderDetail/@ProductID)은 XML 특성, **ProductID**로 끝납니다. 결과 행 집합에서는 XML 문서에서 선택된 각 특성 노드에 대해 행이 만들어집니다.  
   
 -   이 예제에는 *flags* 매개 변수가 지정되지 않습니다. 그 대신 *ColPattern* 매개 변수에 의해 매핑이 지정됩니다.  
   
@@ -521,8 +525,8 @@ ProdID      Qty         OID
 72          3           10283  
 ```  
   
-### 8. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
- XML 문서에 텍스트 노드가 여러 개 있는 경우 **text()** *ColPattern*을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들어  
+### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>8. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
+ XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들어  
   
 ```  
 DECLARE @h int  
@@ -541,7 +545,7 @@ EXEC sp_xml_removedocument @h
   
  SELECT 문은 **TaU** 가 아닌 **T**를 결과로 반환합니다.  
   
-### 9. WITH 절에서 xml 데이터 형식 지정  
+### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>9. WITH 절에서 xml 데이터 형식 지정  
  WITH 절에서 형식화된 열 및 형식화되지 않은 열을 모두 포함하여 **xml** 데이터 형식 열로 매핑된 열 패턴은 빈 시퀀스나 요소 시퀀스, 처리 명령, 텍스트 노드 및 주석을 반환해야 합니다. 데이터는 **xml** 데이터 형식으로 캐스팅됩니다.  
   
  다음 예에서 WITH 절에 있는 테이블 스키마 선언에는 **xml** 유형의 열이 포함됩니다.  
@@ -602,18 +606,18 @@ id  lname   xmlname                   OverFlow
   
 -   WITH 절에 있는 열이 형식화된 XML 열이고 XML 인스턴스가 스키마에 맞지 않는 경우 오류가 반환됩니다.  
   
-### 10. 다중 값 특성에서 개별 값 검색  
+### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>10. 다중 값 특성에서 개별 값 검색  
  XML 문서는 다중 값 특성을 가질 수 있습니다. 예를 들어 **IDREFS** 특성은 다중 값일 수 있습니다. XML 문서에서 다중 값 특성 값은 공간으로 값이 구별되는 문자열로 지정됩니다. 다음 XML 문서에서 \<Student> 요소의 **attends** 특성과 \<Class>의 **attendedBy** 특성은 다중 값을 갖고 있습니다. 다중 값 XML 특성에서 개별 값을 검색하고 데이터베이스의 독립된 행에서 각각의 값을 저장하려면 추가 작업이 필요합니다. 다음 예제에서는 처리 과정을 보여 줍니다.  
   
  이 예제 XML 문서는 다음 요소로 구성됩니다.  
   
 -   \<Student>  
   
-     **id**(학생 ID), **name** 및 **attends** 특성입니다. **attends** 특성은 다중 값 특성입니다.  
+     **id** (학생 ID), **name**및 **attends** 특성입니다. **attends** 특성은 다중 값 특성입니다.  
   
 -   \<Class>  
   
-     **id**(학생 ID), **name** 및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
+     **id** (학생 ID), **name**및 **attendedBy** 특성입니다. **attendedBy** 특성은 다중 값 특성입니다.  
   
  \<Student>에 있는 **attends** 특성과 \<Class>에 있는 **attendedBy** 특성은 Student 및 Class 테이블 간의 **m:n** 관계를 나타냅니다. 학생은 여러 개의 수업을 받을 수 있고 한 수업에는 여러 학생이 있을 수 있습니다.  
   
@@ -756,7 +760,7 @@ SELECT * FROM CourseAttendance
 EXECUTE sp_xml_removedocument @h  
 ```  
   
-### 11. XML의 base64로 인코딩된 데이터에서 이진 검색  
+### <a name="k-retrieving-binary-from-base64-encoded-data-in-xml"></a>11. XML의 base64로 인코딩된 데이터에서 이진 검색  
  이진 데이터는 주로 base64 인코딩을 사용하여 XML에 포함됩니다. OPENXML을 사용하여 이 XML을 조각으로 나누면 base64로 인코딩된 데이터를 얻습니다. 이 예에서는 base64로 인코딩된 데이터를 다시 이진으로 변환하는 방법에 대해 설명합니다.  
   
 -   예제 이진 데이터가 포함된 테이블을 만듭니다.  
@@ -799,7 +803,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_xml_preparedocument&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML&#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

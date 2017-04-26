@@ -1,27 +1,31 @@
 ---
-title: "SQL Server 암호화 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "05/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "암호화 [SQL Server], 암호화 정보"
-  - "보안 [SQL Server], 암호화"
-  - "암호화 [SQL Server], 암호화 정보"
+title: "SQL Server 암호화 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 05/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], about encryption
+- security [SQL Server], encryption
+- cryptography [SQL Server], about cryptography
 ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 caps.latest.revision: 21
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 암호화
+# <a name="sql-server-encryption"></a>SQL Server 암호화
   암호화는 키 또는 암호를 사용하여 데이터를 난독 처리하는 프로세스입니다. 이 경우 해당하는 암호 해독 키 또는 암호가 없으면 데이터를 사용할 수 없게 됩니다. 암호화를 통해 액세스 제어 문제를 해결할 수는 없습니다. 그러나 암호화를 사용하면 액세스 제어가 무시되는 경우에도 데이터 손실을 제한하여 보안이 향상됩니다. 예를 들어 데이터베이스 호스트 컴퓨터가 잘못 구성되어 해커가 중요한 데이터를 얻는 경우 해당 정보가 암호화되어 있으면 해킹한 정보를 사용하지 못할 수도 있습니다.  
   
  연결, 데이터 및 저장 프로시저에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 암호화를 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화에 대한 자세한 정보를 제공합니다.  
@@ -32,7 +36,7 @@ caps.handback.revision: 21
 > [!NOTE]  
 >  전송 수준 보안(TSL1.2)에 대한 최신 정보는 [Microsoft SQL Server에 대한 TLS 1.2 지원](https://support.microsoft.com/kb/3135244)에서 확인할 수 있습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [암호화 계층](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 계층에 대한 정보입니다.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 21
  [SQL Server 인증서 및 비대칭 키](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)  
  공개 키 암호화를 사용하는 방법에 대한 정보입니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [SQL Server 보안 설정](../../../relational-databases/security/securing-sql-server.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 플랫폼에 보안을 설정하는 방법 및 사용자 및 보안 개체 작업을 수행하는 방법에 대한 개요입니다.  
   
@@ -73,13 +77,14 @@ caps.handback.revision: 21
  [ENCRYPTBYCERT&#40;Transact-SQL&#41;](../../../t-sql/functions/encryptbycert-transact-sql.md)  
  데이터를 암호화하기 위해 인증서를 사용하는 방법에 대한 정보입니다.  
   
-## 외부 리소스  
+## <a name="external-resources"></a>외부 리소스  
  [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005  보안 및 보호](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 현재 정보입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.key_encryptions&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-key-encryptions-transact-sql.md)   
  [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
- [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
+ [Reporting Services 암호화 키 백업 및 복원](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
+

@@ -1,23 +1,27 @@
 ---
-title: "메모리 내 OLTP에 대한 SQL Server 관리 개체 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 내 OLTP에 대한 SQL Server 관리 개체 지원 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
-  이 항목에서는 메모리 내 OLTP에 대한 SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)의 변경 내용을 설명합니다.  
+# <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
+  이 항목에서는 메모리 내 OLTP에 대한 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)의 변경 내용을 설명합니다.  
   
  메모리 내 OLTP를 지원하는 형식과 멤버는 다음과 같습니다.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 28
   
 -   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
   
-## 코드 예제  
+## <a name="code-sample"></a>코드 예제  
  이 예제에서는 다음을 수행합니다.  
   
 -   메모리 액세스에 최적화된 파일 그룹 및 메모리 액세스에 최적화된 파일이 있는 데이터베이스를 만듭니다.  
@@ -164,7 +168,7 @@ public class A {
 }  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

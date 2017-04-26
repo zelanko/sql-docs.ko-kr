@@ -1,24 +1,28 @@
 ---
-title: "SQL Server, FileTable 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:FileTable"
+title: "SQL Server, FileTable 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:FileTable
 ms.assetid: 325f5e58-1095-450f-9321-dfacfe6fd55f
 caps.latest.revision: 3
-author: "dagiro"
-ms.author: "v-dagir"
-manager: "jhubbard"
-caps.handback.revision: 3
+author: dagiro
+ms.author: v-dagir
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 321ed2db9195a957f10982fe07f1da7b8cb01c25
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, FileTable 개체
+# <a name="sql-server-filetable-object"></a>SQL Server, FileTable 개체
 **SQLServer:FileTable** 성능 개체는 FileTable 및 트랜잭션되지 않은 액세스와 관련된 통계에 대한 카운터를 제공합니다.
 
 다음 표에서는 SQL Server **FileTable** 성능 개체에 대해 설명합니다.
@@ -55,5 +59,6 @@ caps.handback.revision: 3
 |**Time to get FileTable item BASE**|내부용으로만 사용할 수 있습니다.|
 |**Time update FileTable item BASE**|내부용으로만 사용할 수 있습니다.| 
  
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
 [리소스 사용 모니터링(시스템 모니터)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)
+

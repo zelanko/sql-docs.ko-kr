@@ -1,31 +1,35 @@
 ---
-title: "비클러스터형 인덱스의 크기 예측 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "공간 할당 [SQL Server], 인덱스 크기"
-  - "크기 [SQL Server], 테이블"
-  - "테이블 크기 예측 [SQL Server]"
-  - "테이블 크기 [SQL Server]"
-  - "테이블 크기 예측"
-  - "클러스터형 인덱스, 테이블 크기"
-  - "데이터베이스 디자인 [SQL Server], 크기 예측"
-  - "테이블 크기 계산"
+title: "비클러스터형 인덱스의 크기 예측 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- space allocation [SQL Server], index size
+- size [SQL Server], tables
+- predicting table size [SQL Server]
+- table size [SQL Server]
+- estimating table size
+- clustered indexes, table size
+- designing databases [SQL Server], estimating size
+- calculating table size
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 caps.latest.revision: 40
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8302d2481e9fe2f6d47c87e2fbc9accd2e3c560d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 비클러스터형 인덱스의 크기 예측
+# <a name="estimate-the-size-of-a-nonclustered-index"></a>비클러스터형 인덱스의 크기 예측
   다음 단계에 따라 비클러스터형 인덱스를 저장하는 데 필요한 공간을 예측합니다.  
   
 1.  2단계와 3단계에서 사용할 변수를 계산합니다.  
@@ -36,24 +40,24 @@ caps.handback.revision: 40
   
 4.  계산된 값을 더합니다.  
   
-## 1단계. 2단계와 3단계에 사용할 변수 계산  
+## <a name="step-1-calculate-variables-for-use-in-steps-2-and-3"></a>1단계. 2단계와 3단계에 사용할 변수 계산  
  다음 단계를 사용하여 인덱스의 상위 수준 저장에 필요한 공간을 예측하는 데 사용되는 변수를 계산할 수 있습니다.  
   
 1.  테이블의 행 수를 지정합니다.  
   
-     ***Num_Rows*** = 테이블의 행 수  
+     ***Num_Rows***  = 테이블의 행 수  
   
 2.  인덱스 키의 고정 길이 및 가변 길이 열 수를 지정하고 이러한 열을 저장하는 데 필요한 공간을 계산합니다.  
   
      인덱스의 키 열은 고정 길이 및 가변 길이 열을 포함할 수 있습니다. 내부 수준 인덱스 행 크기를 예측하려면 인덱스 행 내에서 이러한 각 열 그룹이 차지하는 공간을 계산합니다. 열 크기는 지정된 데이터 형식과 길이에 따라 달라집니다.  
   
-     ***Num_Key_Cols*** = 키 열의 총 수(고정 길이 및 가변 길이)  
+     ***Num_Key_Cols***  = 키 열의 총 수(고정 길이 및 가변 길이)  
   
-     ***Fixed_Key_Size*** = 모든 고정 길이 키 열의 총 바이트 크기  
+     ***Fixed_Key_Size***  = 모든 고정 길이 키 열의 총 바이트 크기  
   
-     ***Num_Variable_Key_Cols*** = 가변 길이 키 열의 수  
+     ***Num_Variable_Key_Cols***  = 가변 길이 키 열의 수  
   
-     ***Max_Var_Key_Size*** = 모든 가변 길이 키 열의 최대 바이트 크기  
+     ***Max_Var_Key_Size***  = 모든 가변 길이 키 열의 최대 바이트 크기  
   
 3.  인덱스가 고유하지 않은 경우 필요한 데이터 행 로케이터를 다음과 같이 계산합니다.  
   
@@ -81,11 +85,11 @@ caps.handback.revision: 40
   
      인덱스 키에 Null을 허용하는 열이 있으면 1.3단계에서 설명한 것처럼 필요한 모든 클러스터링 키 열을 포함하여 인덱스 행의 일부가 Null 비트맵용으로 예약됩니다.  
   
-     ***Index_Null_Bitmap*** = 2 + ((인덱스 행의 열 수 + 7) / 8)  
+     ***Index_Null_Bitmap***  = 2 + ((인덱스 행의 열 수 + 7) / 8)  
   
      위 식의 정수 부분만 사용하고 나머지는 무시해야 합니다.  
   
-     Null을 허용하는 키 열이 없으면 ***Index_Null_Bitmap***을 0으로 설정합니다.  
+     Null을 허용하는 키 열이 없으면 ***Index_Null_Bitmap*** 을 0으로 설정합니다.  
   
 5.  가변 길이 데이터 크기를 계산합니다.  
   
@@ -93,9 +97,9 @@ caps.handback.revision: 40
   
      ***Variable_Key_Size***  = 2 + (***Num_Variable_Key_Cols*** x 2) + ***Max_Var_Key_Size***  
   
-     ***Max_Var_Key_Size***에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 저장소 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Key_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
+     ***Max_Var_Key_Size*** 에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 저장소 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Key_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
-     가변 길이 열이 없는 경우에는 ***Variable_Key_Size***를 0으로 설정합니다.  
+     가변 길이 열이 없는 경우에는 ***Variable_Key_Size*** 를 0으로 설정합니다.  
   
 6.  인덱스 행 크기를 계산합니다.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 40
   
      인덱스 행이 여러 페이지에 걸쳐 배치되지는 않으므로 페이지당 인덱스 행 수는 가장 근사한 정수 값으로 버림하여 계산해야 합니다. 수식에서 값 2는 페이지의 슬롯 배열에서 행의 입력을 위한 것입니다.  
   
-## 2단계. 리프 수준에 인덱스 정보를 저장하는 데 사용되는 공간 계산  
+## <a name="step-2-calculate-the-space-used-to-store-index-information-in-the-leaf-level"></a>2단계. 리프 수준에 인덱스 정보를 저장하는 데 사용되는 공간 계산  
  다음 단계를 사용하여 인덱스의 리프 수준을 저장하는 데 필요한 공간을 예측할 수 있습니다. 이 단계를 완료하려면 1단계에서 보관된 값이 필요합니다.  
   
 1.  리프 수준의 고정 길이 및 가변 길이 열 수를 지정하고 이러한 열을 저장하는 데 필요한 공간을 계산합니다.  
@@ -116,7 +120,7 @@ caps.handback.revision: 40
     >  인덱스 키 열과 함께 키가 아닌 열을 포함하여 비클러스터형 인덱스를 확장할 수 있습니다. 이러한 추가 열은 비클러스터형 인덱스의 리프 수준에만 저장됩니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  정의된 총 테이블 너비가 8,060바이트를 초과하는 **varchar**, **nvarchar**, **varbinary** 또는 **sql_variant** 열을 결합할 수 있습니다. 이러한 각 열의 길이는 **varchar**, **varbinary** 또는 **sql_variant** 열의 경우 8,000바이트 이내여야 하고 **nvarchar** 열의 경우 4,000바이트 이내여야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다. 이 규정은 포괄 열이 있는 비클러스터형 인덱스 리프 행에도 적용됩니다.  
+    >  정의된 총 테이블 너비가 8,060바이트를 초과하는 **varchar**, **nvarchar**, **varbinary**또는 **sql_variant** 열을 결합할 수 있습니다. 이러한 각 열의 길이는 **varchar**, **varbinary**또는 **sql_variant** 열의 경우 8,000바이트 이내여야 하고 **nvarchar** 열의 경우 4,000바이트 이내여야 합니다. 그러나 결합된 너비는 테이블의 8,060바이트 제한을 초과할 수 있습니다. 이 규정은 포괄 열이 있는 비클러스터형 인덱스 리프 행에도 적용됩니다.  
   
      비클러스터형 인덱스에 포괄 열이 없는 경우 1단계의 값을 사용하되 해당 값에 1.3단계에서 결정된 모든 수정 내용을 적용합니다.  
   
@@ -174,9 +178,9 @@ caps.handback.revision: 40
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   
-     ***Max_Var_Key_Size***에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 저장소 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Leaf_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
+     ***Max_Var_Key_Size*** 에 추가된 바이트는 각 변수 열을 추적하기 위한 것입니다. 이 수식에서는 모든 가변 길이 열이 100% 꽉 찬 것으로 가정합니다. 사용할 가변 길이 열 저장소 공간 비율이 더 적을 것으로 예상되는 경우 해당 비율로 ***Max_Var_Leaf_Size*** 값을 조정하여 전체 테이블 크기를 보다 정확하게 예측할 수 있습니다.  
   
-     가변 길이 열이 없는 경우에는 ***Variable_Leaf_Size***를 0으로 설정합니다.  
+     가변 길이 열이 없는 경우에는 ***Variable_Leaf_Size*** 를 0으로 설정합니다.  
   
 5.  인덱스 행 크기를 계산합니다.  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 40
   
      ***Leaf_Space_Used***  = 8192 x ***Num_Leaf_Pages***  
   
-## 3단계. 리프가 아닌 수준에 인덱스 정보를 저장하는 데 사용되는 공간 계산  
+## <a name="step-3-calculate-the-space-used-to-store-index-information-in-the-non-leaf-levels"></a>3단계. 리프가 아닌 수준에 인덱스 정보를 저장하는 데 사용되는 공간 계산  
  다음 단계에 따라 중간 및 루트 수준의 인덱스를 저장하는 데 필요한 공간을 예측합니다. 이 단계를 완료하려면 2단계 및 3단계에서 보관된 값이 필요합니다.  
   
 1.  인덱스의 리프가 아닌 수준의 수를 계산합니다.  
@@ -227,7 +231,7 @@ caps.handback.revision: 40
   
      ***Index_Space_Used***  = 8192 x ***Num_Index_Pages***  
   
-## 4단계. 계산된 값을 더하기  
+## <a name="step-4-total-the-calculated-values"></a>4단계. 계산된 값을 더하기  
  위의 두 단계에서 얻은 값을 더합니다.  
   
  비클러스터형 인덱스 크기(바이트) = ***Leaf_Space_Used*** + ***Index_Space_used***  
@@ -244,7 +248,7 @@ caps.handback.revision: 40
   
 -   LOB(Large Object) 값  
   
-     LOB 데이터 형식 **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml** 및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 비클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
+     LOB 데이터 형식 **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 비클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
   
 -   압축  
   
@@ -254,7 +258,7 @@ caps.handback.revision: 40
   
      스파스 열의 공간 요구 사항은 [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md)을 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [비클러스터형 인덱스 만들기](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [클러스터형 인덱스 만들기](../../relational-databases/indexes/create-clustered-indexes.md)   

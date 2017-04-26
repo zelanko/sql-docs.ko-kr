@@ -1,25 +1,29 @@
 ---
-title: "SQL Server, SQL Statistics 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQLServer:SQL Statistics"
-  - "SQL Statistics 개체"
+title: "SQL Server, SQL Statistics 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQLServer:SQL Statistics
+- SQL Statistics object
 ms.assetid: da7dbb4b-f632-45a0-b1ab-c35cc2695c86
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 90e7987d1a367ed1c79d34640917cbacebf89ddf
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server, SQL Statistics 개체
+# <a name="sql-server-sql-statistics-object"></a>SQL Server, SQL Statistics 개체
   **의** SQLServer:SQL Statistics [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 보낸 컴파일과 요청 유형을 모니터링하는 카운터를 제공합니다. 쿼리 컴파일 및 다시 컴파일 수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 받은 일괄 처리 수를 모니터링하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 사용자 쿼리를 처리하는 속도와 쿼리 최적화 프로그램이 쿼리를 처리하는 효율을 알 수 있습니다.  
   
  컴파일은 쿼리 반환 시간의 중요한 부분을 차지합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 컴파일 비용을 줄이기 위해 컴파일된 쿼리 계획을 쿼리 캐시에 보관합니다. 캐시의 목적은 컴파일된 쿼리를 다시 사용할 수 있도록 보관하여 컴파일 작업을 줄이고 다음 쿼리를 실행할 때 다시 컴파일할 필요를 없애는 것입니다. 그러나 각각의 고유한 쿼리는 적어도 한 번은 컴파일해야 합니다. 다음 요인이 발생하면 쿼리를 다시 컴파일해야 합니다.  
@@ -46,7 +50,7 @@ caps.handback.revision: 31
 |**SQL Re-Compilations/sec**|초당 문 다시 컴파일 수입니다. 문 다시 컴파일이 트리거된 횟수를 나타냅니다. 일반적으로 다시 컴파일하는 횟수는 적을수록 좋습니다.|  
 |**Unsafe Auto-Params/sec**|안전하지 않은 자동 매개 변수화의 초당 시도 횟수입니다. 예를 들어 쿼리는 캐시된 계획을 공유하지 않고 자동 매개 변수화하는 특성이 있습니다. 이러한 자동 매개 변수화는 안전하지 않은 것으로 지정됩니다. 강제 매개 변수화 수는 여기에 포함되지 않습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)   
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

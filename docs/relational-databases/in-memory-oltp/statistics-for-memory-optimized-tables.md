@@ -1,22 +1,26 @@
 ---
-title: "메모리 액세스에 최적화된 테이블에 대한 통계 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블에 대한 통계 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 caps.latest.revision: 18
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd78478647e468be36959aa201c94720be106d08
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블에 대한 통계
+# <a name="statistics-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   쿼리 최적화 프로그램에서는 열에 대한 통계를 사용하여 쿼리 성능을 향상시키는 쿼리 계획을 만듭니다. 통계는 데이터베이스의 테이블에서 수집되어 데이터베이스 메타데이터에 저장됩니다.  
@@ -27,17 +31,17 @@ caps.handback.revision: 18
   
  메모리 액세스에 최적화된 테이블 통계에 대한 고려 사항:  
   
--   SQL Server 2016 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 130 이상의 데이터베이스 호환성 수준을 사용하는 경우 메모리 액세스에 최적화된 테이블에 대한 통계 자동 업데이트가 지원됩니다. [ALTER DATABASE 호환성 수준(Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md)을 참조하세요. 이전에 낮은 호환성 수준으로 만든 테이블이 데이터베이스에 있는 경우에는 통계를 수동으로 한 번 업데이트해야 이후에 통계가 자동으로 업데이트됩니다.
+-   SQL Server 2016 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 130 이상의 데이터베이스 호환성 수준을 사용하는 경우 메모리 액세스에 최적화된 테이블에 대한 통계 자동 업데이트가 지원됩니다. [ALTER DATABASE 호환성 수준(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. 이전에 낮은 호환성 수준으로 만든 테이블이 데이터베이스에 있는 경우에는 통계를 수동으로 한 번 업데이트해야 이후에 통계가 자동으로 업데이트됩니다.
   
 -   고유하게 컴파일된 저장 프로시저의 경우 프로시저를 컴파일할 때(만든 시간에 발생) 프로시저의 쿼리에 대한 실행 계획이 최적화됩니다. 통계가 업데이트될 때 자동으로 다시 컴파일되지 않습니다. 따라서 테이블에는 프로시저가 생성되기 전에 대표적인 데이터 집합이 포함되어야 합니다.  
   
 -   고유하게 컴파일된 저장 프로시저는 [sp_recompile(TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md)을 사용하여 수동으로 다시 컴파일할 수 있으며, 데이터베이스가 오프라인으로 전환되었다가 다시 온라인으로 전환된 경우 또는 데이터베이스가 장애 조치(failover)되거나 서버가 다시 시작된 경우 자동으로 다시 컴파일됩니다.  
   
-## 기존 테이블의 통계 자동 업데이트 사용
+## <a name="enabling-automatic-update-of-statistics-in-existing-tables"></a>기존 테이블의 통계 자동 업데이트 사용
 
 호환성 수준이 130 이상인 데이터베이스에서 테이블을 만든 경우 해당 테이블의 모든 통계에 대해 자동 업데이트가 적용되며 추가 작업이 필요하지 않습니다.
 
-이전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전 또는 130보다 낮은 호환성 수준에서 만든 메모리 액세스에 최적화된 테이블이 있는 경우에는 통계를 수동으로 한 번 업데이트해야 이후에 자동 업데이트가 적용됩니다.
+이전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이전 버전 또는 130보다 낮은 호환성 수준에서 만든 메모리 액세스에 최적화된 테이블이 있는 경우에는 통계를 수동으로 한 번 업데이트해야 이후에 자동 업데이트가 적용됩니다.
 
 이전 호환성 수준에서 생성된 메모리 액세스에 최적화된 테이블에 대해 통계 자동 업데이트를 사용하려면 다음 단계를 따르세요.
 
@@ -72,7 +76,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*자동 업데이트가 사용하도록 설정되어 있는지 확인:* 다음 스크립트는 메모리 액세스에 최적화된 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `auto-update enabled` 열에 `1`가 반환됩니다.
+*자동 업데이트가 사용하도록 설정되어 있는지 확인:* 다음 스크립트는 메모리 액세스에 최적화된 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `1` 열에 `auto-update enabled` 가 반환됩니다.
 
 ```
 SELECT 
@@ -83,10 +87,10 @@ FROM sys.stats s JOIN sys.tables o ON s.object_id=o.object_id
 WHERE o.is_memory_optimized=1
 ```
 
-## 테이블 및 프로시저 배포 지침  
+## <a name="guidelines-for-deploying-tables-and-procedures"></a>테이블 및 프로시저 배포 지침  
  쿼리 계획을 만들 때 쿼리 최적화 프로그램에 최신 통계가 사용되도록 다음 4단계를 사용하여 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저를 배포합니다.  
   
-1.  데이터베이스의 호환성 수준이 130 이상인지 확인합니다. [ALTER DATABASE 호환성 수준(Transact-SQL)](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20(Transact-SQL).md)을 참조하세요.
+1.  데이터베이스의 호환성 수준이 130 이상인지 확인합니다. [ALTER DATABASE 호환성 수준(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.
 
 2.  테이블과 인덱스를 만듭니다. 인덱스는 **CREATE TABLE** 문에서 인라인으로 지정되어야 합니다.  
   
@@ -96,7 +100,8 @@ WHERE o.is_memory_optimized=1
   
  데이터를 로드한 후 고유하게 컴파일된 저장 프로시저를 만들면 메모리 액세스에 최적화된 테이블에 사용 가능한 통계가 최적화 프로그램에 사용됩니다. 프로시저를 컴파일할 때 효율적인 쿼리 계획을 수행할 수 있습니다.  
 
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

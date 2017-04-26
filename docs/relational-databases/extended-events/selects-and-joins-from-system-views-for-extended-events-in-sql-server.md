@@ -1,23 +1,27 @@
 ---
-title: "SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN | Microsoft 문서"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 caps.latest.revision: 6
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b9a3f027fddc3ab7094b2ca82ae1f9ad3190a886
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
+# <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 
@@ -32,16 +36,16 @@ caps.handback.revision: 6
 
 
 
-## 1. 기본 정보
+## <a name="a-foundational-information"></a>1. 기본 정보
 
 
 확장 이벤트에 대한 다음 두 가지 시스템 뷰 집합이 있습니다.
 
 
-#### 카탈로그 뷰:
+#### <a name="catalog-views"></a>카탈로그 뷰:
 
-- 이러한 뷰는 [CREATE EVENT SESSION](../../t-sql/statements/create-event-session-transact-sql.md) 또는 동등한 SSMS UI에 의해 생성된 각 이벤트 세션의 *정의*에 대한 정보를 저장합니다. 그러나 세션 실행이 시작된 적이 있는지 여부에 대한 정보는 없습니다.
-    - 예를 들어 SSMS **개체 탐색기**에 정의된 이벤트 세션이 없다고 표시되는 경우 *sys.server_event_session_targets* 뷰에서 SELECT를 실행하면 0개 행이 반환됩니다.
+- 이러한 뷰는 *CREATE EVENT SESSION* 또는 동등한 SSMS UI에 의해 생성된 각 이벤트 세션의 [정의](../../t-sql/statements/create-event-session-transact-sql.md)에 대한 정보를 저장합니다. 그러나 세션 실행이 시작된 적이 있는지 여부에 대한 정보는 없습니다.
+    - 예를 들어 SSMS **개체 탐색기** 에 정의된 이벤트 세션이 없다고 표시되는 경우 *sys.server_event_session_targets* 뷰에서 SELECT를 실행하면 0개 행이 반환됩니다.
 
 
 - 이름 접두사는 다음과 같습니다.
@@ -49,19 +53,19 @@ caps.handback.revision: 6
     - SQL 데이터베이스의 이름 접두사는 *sys.database\_event\_session\**입니다.
 
 
-#### DMV(동적 관리 뷰)
+#### <a name="dynamic-management-views-dmvs"></a>DMV(동적 관리 뷰)
 
-- 실행 중인 이벤트 세션의 *현재 활동*에 대한 정보를 저장합니다. 그러나 이러한 DMV에는 세션의 정의에 대한 정보가 거의 없습니다.
+- 실행 중인 이벤트 세션의 *현재 활동* 에 대한 정보를 저장합니다. 그러나 이러한 DMV에는 세션의 정의에 대한 정보가 거의 없습니다.
     - 모든 이벤트 세션이 현재 중지된 경우에도 *sys.dm_xe_packages* 뷰에서 SELECT를 실행하면 다양한 패키지가 서버 시작 시 활성 메모리에 로드되기 때문에 여전히 행이 반환됩니다.
-    - 동일한 이유로 *sys.dm_xe_objects* *sys.dm_xe_object_columns*도 여전히 행을 반환합니다.
+    - 동일한 이유로 *sys.dm_xe_objects* *sys.dm_xe_object_columns* 도 여전히 행을 반환합니다.
 
 
 - 확장 이벤트 DMV에 대한 이름 접두사는 다음과 같습니다.
     - SQL Server의 이름 접두사는 *sys.dm\_xe\_\**입니다.
-    - 일반적으로 SQL 데이터베이스의 이름 접두사는 *sys.dm\_xe\_database\_\**입니다.
+    - 일반적으로 SQL Database의 이름 접두사는 *sys.dm\_xe\_database\_\**입니다.
 
 
-#### 사용 권한:
+#### <a name="permissions"></a>사용 권한:
 
 
 시스템 뷰에서 SELECT를 실행하려면 다음과 같은 사용 권한이 필요합니다.
@@ -72,10 +76,10 @@ caps.handback.revision: 6
 
 <a name="section_B_catalog_views"></a>
 
-## 2. 카탈로그 뷰
+## <a name="b-catalog-views"></a>2. 카탈로그 뷰
 
 
-이 섹션에서는 동일하게 정의된 이벤트 세션에 대한 세 가지 기술적 관점을 일치 및 상호 연결합니다. 세션이 정의되었으며 SQL Server Management Studio(SSMS.exe)의 **개체 탐색기**에 표시되지만 세션이 현재 실행되고 있지 않습니다.
+이 섹션에서는 동일하게 정의된 이벤트 세션에 대한 세 가지 기술적 관점을 일치 및 상호 연결합니다. 세션이 정의되었으며 SQL Server Management Studio(SSMS.exe)의 **개체 탐색기** 에 표시되지만 세션이 현재 실행되고 있지 않습니다.
 
 예기치 않은 오류를 방지하려면 매달 [SSMS의 최신 업데이트를 설치](http://msdn.microsoft.com/library/mt238290.aspx)하는 것이 좋습니다.
 
@@ -87,7 +91,7 @@ caps.handback.revision: 6
 
 
 
-#### 이 섹션 B의 순서
+#### <a name="the-sequence-in-this-section-b"></a>이 섹션 B의 순서
 
 
 - [B.1 SSMS UI 관점](#section_B_1_SSMS_UI_perspective)
@@ -108,24 +112,24 @@ caps.handback.revision: 6
 
 <a name="section_B_1_SSMS_UI_perspective"></a>
 
-### B.1 SSMS UI 관점
+### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI 관점
 
 
-SSMS의 **개체 탐색기**에서 **관리** > **확장 이벤트**를 확장한 다음 **세션** > **새 세션**을 마우스 오른쪽 단추로 클릭하면 **새 세션** 대화 상자를 시작할 수 있습니다.
+SSMS의 **개체 탐색기**에서 **관리** 확장 이벤트 **를 확장한 다음** > **세션**새 세션 **을 마우스 오른쪽 단추로 클릭하면** > **새 세션**대화 상자를 시작할 수 있습니다.
 
 큰 **새 세션** 대화 상자의 첫 번째 섹션인 **일반** 레이블이 지정된 섹션에서 옵션이 **서버 시작 시 이벤트 세션 시작**으로 선택된 것을 확인할 수 있습니다.
 
 ![새 세션 > 일반, 서버 시작 시 이벤트 세션 시작](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-**이벤트** 섹션에서는 **lock_deadlock** 이벤트가 선택되어 있습니다. 해당 이벤트에 대해 세 가지 **작업**이 선택되었습니다. 즉, **구성** 단추가 클릭되었으며, 클릭 후 회색으로 표시됩니다.
+**이벤트** 섹션에서는 **lock_deadlock** 이벤트가 선택되어 있습니다. 해당 이벤트에 대해 세 가지 **작업** 이 선택되었습니다. 즉, **구성** 단추가 클릭되었으며, 클릭 후 회색으로 표시됩니다.
 
 ![새 세션 > 이벤트, 전역 필드(동작)](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-계속 **이벤트** > **구성** 섹션에서 [**resource_type**이 **페이지**](#resource_type_dmv_actual_row)로 설정된 것을 확인할 수 있습니다. 즉, **resource_type** 값이 **페이지**가 아니면 이벤트 데이터가 이벤트 엔진에서 대상으로 전송되지 않습니다.
+계속 **이벤트** > **구성** 섹션에서 [**resource_type** 이 **페이지**](#resource_type_dmv_actual_row)로 설정된 것을 확인할 수 있습니다. 즉, **resource_type** 값이 **페이지**가 아니면 이벤트 데이터가 이벤트 엔진에서 대상으로 전송되지 않습니다.
 
 데이터베이스 이름 및 카운터에 대한 추가 조건자 필터가 표시됩니다.
 
@@ -147,12 +151,12 @@ SSMS의 **개체 탐색기**에서 **관리** > **확장 이벤트**를 확장�
 
 <a name="section_B_2_TSQL_perspective"></a>
 
-### B.2 TRANSACT-SQL 관점
+### <a name="b2-transact-sql-perspective"></a>B.2 TRANSACT-SQL 관점
 
 
 이벤트 세션 정의가 생성된 방식에 관계없이 SSMS UI에서 세션을 완벽하게 일치하는 TRANSACT-SQL 스크립트로 리버스 엔지니어링할 수 있습니다. 앞의 새 세션 스크린샷을 검사하고 해당 표시 사양을 다음 생성된 T-SQL **CREATE EVENT SESSION** 스크립트의 절과 비교할 수 있습니다.
 
-이벤트 세션을 리버스 엔지니어링하려면 **개체 탐색기**에서 사용자 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 스크립팅** > **CREATE** > **클립보드**를 선택합니다.
+이벤트 세션을 리버스 엔지니어링하려면 **개체 탐색기** 에서 사용자 세션 노드를 마우스 오른쪽 단추로 클릭한 다음 **세션 스크립팅** > **CREATE** > **클립보드**를 선택합니다.
 
 다음 T-SQL 스크립트는 SSMS로 리버스 엔지니어링하여 생성되었습니다. 그런 다음 공백만 전략적으로 조작하여 스크립트를 수동으로 수정했습니다.
 
@@ -205,7 +209,7 @@ CREATE EVENT SESSION [event_session_test3]
 
 <a name="section_B_3_Catalog_view_S_J_UNION"></a>
 
-### B.3 카탈로그 뷰 SELECT JOIN UNION 관점
+### <a name="b3-catalog-view-select-join-union-perspective"></a>B.3 카탈로그 뷰 SELECT JOIN UNION 관점
 
 
 염려하지 마세요. 다음 T-SQL SELECT 문은 여러 개의 작은 SELECT를 UNION하기 때문에 긴 것뿐입니다. 작은 SELECT를 모두 개별적으로 실행할 수 있습니다. 작은 SELECT는 다양한 시스템 카탈로그 뷰를 JOIN하는 방법을 보여 줍니다.
@@ -343,7 +347,7 @@ ORDER BY
 ```
 
 
-#### 출력
+#### <a name="output"></a>출력
 
 
 다음은 앞의 SELECT JOIN UNION을 실행하여 얻은 실제 출력입니다. 출력 매개 변수 이름과 값은 앞의 CREATE EVENT SESSION 문에서 명확하게 표시되는 항목에 매핑됩니다.
@@ -373,7 +377,7 @@ event_session_test3   7_WITH_STARTUP_STATE   startup_state                   1
 
 <a name="section_C_DMVs"></a>
 
-## 3. DMV(동적 관리 뷰)
+## <a name="c-dynamic-management-views-dmvs"></a>3. DMV(동적 관리 뷰)
 
 
 이제 DMV로 넘어가겠습니다. 이 섹션에서는 각각 유용한 특정 비즈니스 용도로 맞는 여러 개의 TRANSACT-SQL SELECT 문을 제공합니다. 또한 SELECT는 원하는 새 사용을 위해 DMV를 JOIN할 수 있는 방법을 보여 줍니다.
@@ -400,7 +404,7 @@ DMV 참조 설명서는 [확장 이벤트 동적 관리 뷰](../../relational-da
 
 <a name="section_C_1_list_packages"></a>
 
-### C.1 모든 패키지 목록
+### <a name="c1-list-of-all-packages"></a>C.1 모든 패키지 목록
 
 
 확장 이벤트 영역에서 사용할 수 있는 모든 개체는 시스템에 로드된 패키지에서 제공됩니다. 이 섹션에서는 모든 패키지와 해당 설명을 보여 줍니다.
@@ -417,7 +421,7 @@ SELECT  --C.1
 ```
 
 
-#### 출력
+#### <a name="output"></a>출력
 
 패키지 목록은 다음과 같습니다.
 
@@ -456,7 +460,7 @@ XtpRuntime     Extended events for the XTP Runtime
 
 <a name="section_C_2_count_object_type"></a>
 
-### C.2 각 개체 유형 개수
+### <a name="c2-count-of-every-object-type"></a>C.2 각 개체 유형 개수
 
 
 이 섹션에서는 이벤트 패키지에 포함된 개체 유형에 대해 설명합니다. *sys.dm\_xe\_objects*에 있는 모든 개체 유형의 전체 목록이 각 유형의 개수와 함께 표시됩니다.
@@ -475,7 +479,7 @@ SELECT  --C.2
 ```
 
 
-#### 출력
+#### <a name="output"></a>출력
 
 개체 유형별 개체 개수는 다음과 같습니다. 약 1915개의 개체가 있습니다.
 
@@ -499,7 +503,7 @@ Count-of-Type   object_type
 
 <a name="section_C_3_select_all_available_objects"></a>
 
-### C.3 유형별로 정렬된 사용 가능한 모든 항목 SELECT
+### <a name="c3-select-all-available-items-sorted-by-type"></a>C.3 유형별로 정렬된 사용 가능한 모든 항목 SELECT
 
 
 다음 SELECT는 각 개체에 대해 하나씩, 약 1915개 행을 반환합니다.
@@ -530,7 +534,7 @@ SELECT  --C.3
 ```
 
 
-#### 출력
+#### <a name="output"></a>출력
 
 앞의 SELECT에서 반환된 개체의 임의 샘플링은 다음과 같습니다.
 
@@ -566,7 +570,7 @@ type           package0       xml                           Well formed XML frag
 
 <a name="section_C_4_data_fields"></a>
 
-### C.4 이벤트에 사용 가능한 데이터 필드
+### <a name="c4-data-fields-available-for-your-event"></a>C.4 이벤트에 사용 가능한 데이터 필드
 
 
 다음 SELECT는 해당 이벤트 유형과 관련된 모든 데이터 필드를 반환합니다.
@@ -595,7 +599,7 @@ SELECT  -- C.4
         AND
         o.object_type = 'event'
         AND
-        o.name        = '<EVENT-NAME-HERE!>'  --'lock_deadlock'
+        o.name        = '\<EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Event],
@@ -603,7 +607,7 @@ SELECT  -- C.4
 ```
 
 
-#### 출력
+#### <a name="output"></a>출력
 
 앞의 SELECT, WHERE `o.name = 'lock_deadlock'`에서 반환된 행은 다음과 같습니다.
 
@@ -642,7 +646,7 @@ sqlserver   lock_deadlock   transaction_id
 
 <a name="section_C_5_map_values_fields"></a>
 
-### C.5 *sys.dm_xe_map_values* 및 이벤트 필드
+### <a name="c5-sysdmxemapvalues-and-event-fields"></a>C.5 *sys.dm_xe_map_values* 및 이벤트 필드
 
 
 다음 SELECT는 *sys.dm_xe_map_values*라는 까다로운 뷰에 대한 JOIN을 포함합니다.
@@ -682,7 +686,7 @@ SELECT  --C.5
     WHERE
         do.object_type = 'event'
         AND
-        do.name        = '<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
+        do.name        = '\<YOUR-EVENT-NAME-HERE!>'  --'lock_deadlock'
     ORDER BY
         [Package],
         [Object],
@@ -691,11 +695,11 @@ SELECT  --C.5
 ```
 
 
-#### 출력
+#### <a name="output"></a>출력
 
 <a name="resource_type_dmv_actual_row"></a>
 
-앞의 T-SQL SELECT에서 얻은 출력 중 실제 153개 행의 샘플링은 다음과 같습니다. **resource_type** 행은 이 문서의 **event_session_test3** 예제에서 사용된 조건자 필터링과 [관련](#resource_type_PAGE_cat_view)이 있습니다.
+앞의 T-SQL SELECT에서 얻은 출력 중 실제 153개 행의 샘플링은 다음과 같습니다. **resource_type** 행은 이 문서의 [event_session_test3](#resource_type_PAGE_cat_view) 예제에서 사용된 조건자 필터링과 **관련** 이 있습니다.
 
 
 ```
@@ -719,7 +723,7 @@ you could put:
 
 <a name="section_C_6_parameters_targets"></a>
 
-### C.6 대상에 대한 매개 변수
+### <a name="c6-parameters-for-targets"></a>C.6 대상에 대한 매개 변수
 
 
 다음 SELECT는 대상에 대한 모든 매개 변수를 반환합니다. 각 매개 변수에는 필수 여부를 나타내는 태그가 지정되어 있습니다. 매개 변수에 할당한 값은 대상의 동작에 영향을 줍니다.
@@ -754,7 +758,7 @@ SELECT  --C.6
     WHERE
         o.object_type = 'target'
         AND
-        o.name     LIKE '%'    -- Or '<YOUR-TARGET-NAME-HERE!>'.
+        o.name     LIKE '%'    -- Or '\<YOUR-TARGET-NAME-HERE!>'.
     ORDER BY
         [Package],
         [Target],
@@ -763,7 +767,7 @@ SELECT  --C.6
 ```
 
 
-#### 출력
+#### <a name="output"></a>출력
 
 다음 매개 변수 행은 SQL Server 2016에서 앞의 SELECT에서 반환된 매개 변수 하위 집합입니다.
 
@@ -784,7 +788,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 
 <a name="section_C_7_dmv_select_target_data_column"></a>
 
-### C.7 target_data 열을 XML로 캐스팅하는 DMV SELECT
+### <a name="c7-dmv-select-casting-targetdata-column-to-xml"></a>C.7 target_data 열을 XML로 캐스팅하는 DMV SELECT
 
 
 이 DMV SELECT는 활성 이벤트 세션의 대상에서 데이터 행을 반환합니다. 데이터는 XML로 캐스팅되어 SSMS에서 표시하기 쉽도록 반환된 셀을 클릭 가능하게 합니다.
@@ -804,11 +808,11 @@ SELECT  --C.7
 
             ON s.address = t.event_session_address
     WHERE
-        s.name = '<Your-Session-Name-Here!>';
+        s.name = '\<Your-Session-Name-Here!>';
 ```
 
 
-#### 출력, 유일한 행, 해당 XML 셀 포함
+#### <a name="output-the-only-row-including-its-xml-cell"></a>출력, 유일한 행, 해당 XML 셀 포함
 
 앞의 SELECT에서 얻은 출력인 유일한 행은 다음과 같습니다. *XML-Cast* 열에는 SSMS에서 XML로 인식하는 XML 문자열이 포함되어 있습니다. 따라서 SSMS에서 XML-Cast를 클릭 가능하게 해야 함을 확인합니다.
 
@@ -826,7 +830,7 @@ checkpoint_session_ring_buffer2   ring_buffer   <RingBufferTarget truncated="0" 
 ```
 
 
-#### 출력, 셀을 클릭할 때 멋지게 표시되는 XML
+#### <a name="output-xml-displayed-pretty-when-cell-is-clicked"></a>출력, 셀을 클릭할 때 멋지게 표시되는 XML
 
 
 XML-Cast 셀을 클릭하면 다음과 같은 멋진 표시가 나타납니다.
@@ -852,10 +856,10 @@ XML-Cast 셀을 클릭하면 다음과 같은 멋진 표시가 나타납니다.
 
 <a name="section_C_8_select_function_disk"></a>
 
-### C.8 디스크 드라이브에서 event_file 데이터를 검색하기 위해 함수에서 SELECT
+### <a name="c8-select-from-a-function-to-retrieve-eventfile-data-from-disk-drive"></a>C.8 디스크 드라이브에서 event_file 데이터를 검색하기 위해 함수에서 SELECT
 
 
-이벤트 세션이 일부 데이터를 수집하고 나중에 중지되었다고 가정합니다. 세션이 event_file 대상을 사용하도록 정의된 경우에도 *sys.fn_xe_target_read_file* 함수를 호출하여 데이터를 검색할 수 있습니다.
+이벤트 세션이 일부 데이터를 수집하고 나중에 중지되었다고 가정합니다. 세션이 event_file 대상을 사용하도록 정의된 경우에도 *sys.fn_xe_target_read_file*함수를 호출하여 데이터를 검색할 수 있습니다.
 
 - 이 SELECT를 실행하기 전에 함수 호출의 매개 변수에 사용자 경로와 파일 이름을 편집해야 합니다.
     - 세션을 다시 시작할 때마다 SQL 시스템이 실제 .XEL 파일 이름에 포함하는 추가 자릿수는 무시하고, 기본 루트 이름과 확장명만 지정합니다.
@@ -872,7 +876,7 @@ SELECT  --C.8
     FROM
         sys.fn_xe_file_target_read_file(
 
-            '<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
+            '\<YOUR-PATH-FILE-NAME-ROOT-HERE!>*.xel',
             --'C:\Junk\Checkpoint_Begins_ES*.xel',  -- Example.
 
             NULL, NULL, NULL
@@ -880,7 +884,7 @@ SELECT  --C.8
 ```
 
 
-#### 출력, SELECT FROM 함수에서 반환된 행
+#### <a name="output-rows-returned-by-select-from-the-function"></a>출력, SELECT FROM 함수에서 반환된 행
 
 
 앞의 SELECT FROM 함수에서 반환된 행은 다음과 같습니다. 맨 오른쪽 XML 열에는 이벤트 발생과 관련된 데이터가 포함되어 있습니다.
@@ -896,7 +900,7 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
 ```
 
 
-#### 출력, 하나의 XML 셀
+#### <a name="output-one-xml-cell"></a>출력, 하나의 XML 셀
 
 
 앞의 반환된 행 집합에서 첫 번째 XML 셀의 내용은 다음과 같습니다.
@@ -915,4 +919,6 @@ D5149520-6282-11DE-8A39-0800200C9A66   03FDA7D0-91BA-45F8-9875-8B6DD0B8E9F2   ch
   </action>
 </event>
 ```
+
+
 

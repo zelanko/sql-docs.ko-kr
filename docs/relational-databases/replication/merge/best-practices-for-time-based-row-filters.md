@@ -1,31 +1,35 @@
 ---
-title: "시간 기반 행 필터에 대한 최상의 구현 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "최상의 방법"
+title: "시간 기반 행 필터에 대한 모범 사례 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- best practices
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
+ms.lasthandoff: 04/11/2017
+
 ---
-# 시간 기반 행 필터에 대한 최상의 구현 방법
-  응용 프로그램 사용자가 테이블의 시간 기반 데이터 하위 집합을 필요로 하는 경우가 종종 있습니다. 예를 들어 영업 사원이 지난 주의 주문 데이터를 필요로 하거나, 행사 계획자가 다음 주의 행사 데이터를 필요로 할 수 있습니다. 대부분의 경우에서 응용 프로그램 사용 하 여 포함 된 쿼리는 **getdate ()** 이 작업을 수행 하는 함수입니다. 예를 들어 다음과 같은 행 필터 문을 사용한다고 가정합니다.  
+# <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
+  응용 프로그램 사용자가 테이블의 시간 기반 데이터 하위 집합을 필요로 하는 경우가 종종 있습니다. 예를 들어 영업 사원이 지난 주의 주문 데이터를 필요로 하거나, 행사 계획자가 다음 주의 행사 데이터를 필요로 할 수 있습니다. 대부분의 경우 응용 프로그램에서는 **GETDATE()** 함수가 들어 있는 쿼리를 사용하여 이 작업을 수행합니다. 예를 들어 다음과 같은 행 필터 문을 사용한다고 가정합니다.  
   
 ```  
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- 이 유형의 필터를 사용하면 일반적으로 병합 에이전트가 실행될 때 항상 두 가지 작업이 실행됩니다. 즉, 이 필터를 만족하는 행은 구독자에 복제되고 이 필터를 더 이상 만족하지 않는 행은 구독자에서 정리됩니다. (사용 하 여 필터링 하는 방법에 대 한 자세한 내용은 **Host_name ()**, 참조 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-row-filters.md).) 그러나 병합 복제에서는 데이터에 대한 행 필터 정의 방식에 관계없이 마지막 동기화 이후에 변경된 데이터만 복제되고 정리됩니다.  
+ 이 유형의 필터를 사용하면 일반적으로 병합 에이전트가 실행될 때 항상 두 가지 작업이 실행됩니다. 즉, 이 필터를 만족하는 행은 구독자에 복제되고 이 필터를 더 이상 만족하지 않는 행은 구독자에서 정리됩니다. **HOST_NAME()**을 사용한 필터링에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요. 그러나 병합 복제에서는 데이터에 대한 행 필터 정의 방식에 관계없이 마지막 동기화 이후에 변경된 데이터만 복제되고 정리됩니다.  
   
  행을 처리하는 병합 복제의 경우 행에 있는 데이터는 행 필터를 만족하고 마지막 동기화 이후에 변경된 데이터여야 합니다. **SalesOrderHeader** 테이블의 경우 행이 삽입될 때 **OrderDate** 가 입력됩니다. 행 삽입은 데이터 변경에 해당하므로 해당 행은 구독자에 예상대로 복제됩니다. 그러나 구독자에 필터를 더 이상 만족하지 않는 행(예: 7일 이상 경과된 주문)이 있는 경우 해당 행은 다른 이유로 업데이트되지 않았으면 구독자에서 제거되지 않습니다.  
   
@@ -43,9 +47,9 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   게시에서 사전 계산 파티션을 사용하지 않으면 병합 에이전트가 실행할 때 필터가 평가됩니다.  
   
- 사전 계산된 파티션에 대 한 자세한 내용은 참조 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/optimize-parameterized-filter-performance-with-precomputed-partitions.md)합니다. 필터가 평가되는 시기는 필터를 만족하는 데이터에 영향을 줍니다. 예를 들어 게시에서 사전 계산 파티션을 사용하는 경우 데이터를 2일마다 동기화하면 영업 사원의 데이터 하위 집합에는 예상보다 최대 2일이 더 오래된 행이 포함될 수 있습니다.  
+ 사전 계산 파티션에 대한 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요. 필터가 평가되는 시기는 필터를 만족하는 데이터에 영향을 줍니다. 예를 들어 게시에서 사전 계산 파티션을 사용하는 경우 데이터를 2일마다 동기화하면 영업 사원의 데이터 하위 집합에는 예상보다 최대 2일이 더 오래된 행이 포함될 수 있습니다.  
   
-## 시간 기반 행 필터 사용에 대한 권장 사항  
+## <a name="recommendations-for-using-time-based-row-filters"></a>시간 기반 행 필터 사용에 대한 권장 사항  
  시간을 기반으로 필터링하기 위한 강력하고 간단한 방법은 다음과 같습니다.  
   
 -   **bit**데이터 형식의 테이블에 열을 추가합니다. 이 열은 행이 복제되는지 여부를 나타내는 데 사용합니다.  
@@ -54,7 +58,7 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
 -   병합 에이전트의 예약된 실행 시간 전에 열을 업데이트하는 SQL Server 에이전트 작업(또는 다른 메커니즘을 통해 예약된 작업)을 만듭니다.  
   
- 이 방법을 사용 하는 문제를 해결 **getdate ()** 또는 다른 시간 기반 메서드 파티션에 대 한 필터는 평가 하는 시기를 결정 하는 문제를 방지할 수 있습니다. 예를 들어 다음과 같은 **Events** 테이블이 있다고 가정합니다.  
+ 이 방법을 사용하면 **GETDATE()** 나 다른 시간 기반 메서드를 사용할 때의 문제를 해결할 수 있으며 파티션에 대해 필터가 평가되는 시기를 지정하지 않아도 됩니다. 예를 들어 다음과 같은 **Events** 테이블이 있다고 가정합니다.  
   
 |**EventID**|**EventName**|**EventCoordID**|**EventDate**|**복제**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
@@ -89,9 +93,9 @@ GO
   
  이제 다음 주의 행사가 복제할 행사로 플래그가 지정됩니다. 다음에 행사 코디네이터 112가 사용하는 구독에 대해 병합 에이전트가 실행되면 행 2, 3 및 4는 구독자에 다운로드되고 행 1은 구독자에서 제거됩니다.  
   
-## 참고 항목  
- [GETDATE & #40입니다. TRANSACT-SQL & #41;](../../../t-sql/functions/getdate-transact-sql.md)   
- [작업 구현](../../../ssms/agent/implement-jobs.md)   
- [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-row-filters.md)  
+## <a name="see-also"></a>참고 항목  
+ [GETDATE&#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
+ [작업 구현](http://msdn.microsoft.com/library/69e06724-25c7-4fb3-8a5b-3d4596f21756)   
+ [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

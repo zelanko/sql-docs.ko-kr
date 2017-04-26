@@ -1,35 +1,39 @@
 ---
-title: "DAC 패키지 압축 풀기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "마법사 [DAC], 압축 풀기"
-  - "데이터 계층 응용 프로그램 [SQL Server], 압축 풀기"
-  - "방법 [DAC], 압축 풀기"
-  - "DAC 압축 풀기"
+title: "DAC 패키지 압축 풀기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wizard [DAC], unpack
+- data-tier application [SQL Server], unpack
+- How to [DAC], unpack
+- unpack DAC
 ms.assetid: 697b69b3-f157-4e22-ac4e-f65c5fc2d0ad
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 417a725dfab59a77714f44bee0be19c544a6e284
+ms.lasthandoff: 04/11/2017
+
 ---
-# DAC 패키지 압축 풀기
+# <a name="unpack-a-dac-package"></a>DAC 패키지 압축 풀기
   데이터 계층 응용 프로그램 압축 풀기 대화 상자를 사용하여 DAC(데이터 계층 응용 프로그램) 패키지에서 스크립트와 파일 압축을 해제할 수 있습니다. 스크립트와 파일은 폴더에 저장되며 패키지를 사용하여 DAC를 프로덕션 시스템에 배포하기 전에 폴더에서 검토할 수 있습니다. 한 DAC의 내용을 다른 폴더에 압축을 푼 다른 패키지의 내용과 비교할 수도 있습니다.  
   
-1.  **시작하기 전 주의 사항:**  [보안](#Security)  
+1.  **Before you begin:**  [Security](#Security)  
   
-2.  **DAC 압축을 풀려면:** [데이터 계층 응용 프로그램 압축 풀기 대화 상자](#UnpackDACDial), [DAC 패키지의 내용 검사](#ExamDACPack) 사용  
+2.  **To unpack a DAC, using:**  [Unpack Data-tier Application Dialog](#UnpackDACDial), [Examine the Contents of a DAC Package](#ExamDACPack)  
   
 ##  <a name="Security"></a> 보안  
- 출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하려면 먼저 격리된 테스트 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포하고 DAC 압축을 푼 다음 저장 프로시저나 다른 사용자 정의 코드와 같은 코드를 검사하십시오.  
+ 출처를 알 수 없거나 신뢰할 수 없는 DAC 패키지는 배포하지 않는 것이 좋습니다. 이러한 DAC에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마를 수정하여 오류가 발생할 수 있습니다. 출처를 알 수 없거나 신뢰할 수 없는 DAC를 사용하려면 먼저 격리된 테스트 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 배포하고 DAC 압축을 푼 다음 저장 프로시저나 다른 사용자 정의 코드와 같은 코드를 검사하십시오.  
   
 ##  <a name="UnpackDACDial"></a> 데이터 계층 응용 프로그램 압축 풀기 대화 상자  
  **DAC 패키지 파일을 압축을 풀려면**  
@@ -81,7 +85,7 @@ caps.handback.revision: 11
   
  자세한 내용은 [Validate a DAC Package](../../relational-databases/data-tier-applications/validate-a-dac-package.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터 계층 응용 프로그램 배포](../../relational-databases/data-tier-applications/deploy-a-data-tier-application.md)   
  [데이터 계층 응용 프로그램 업그레이드](../../relational-databases/data-tier-applications/upgrade-a-data-tier-application.md)  

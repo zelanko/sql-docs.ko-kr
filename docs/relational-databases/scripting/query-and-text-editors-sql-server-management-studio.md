@@ -1,46 +1,50 @@
 ---
-title: "쿼리 및 텍스트 편집기(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TextEditor"
-helpviewer_keywords: 
-  - "쿼리 편집기 [SQL Server Management Studio]"
-  - "코드 편집기 [SQL Server Management Studio], 쿼리 편집기 정보"
-  - "쿼리 편집기 [SQL Server Management Studio], 전체 화면 모드"
-  - "쿼리 편집기 [데이터베이스 엔진], 템플릿"
-  - "전체 화면 모드 [SQL Server Management Studio]"
-  - "SQL Server Management Studio [SQL Server], 템플릿"
-  - "스크립트 작성"
-  - "스크립트 수정"
-  - "SQL Server Management Studio [SQL Server], 쿼리 편집기"
-  - "쿼리 편집기 [SQL Server Management Studio], 쿼리 편집기 정보"
-  - "쿼리 작성"
-  - "SQL Server Management Studio [SQL Server], 편집기"
-  - "스크립트 [SQL Server], SQL Server Management Studio"
-  - "쿼리 [SQL Server], SQL Server Management Studio"
+title: "쿼리 및 텍스트 편집기(SQL Server Management Studio) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TextEditor
+helpviewer_keywords:
+- Query Editor [SQL Server Management Studio]
+- Code Editor [SQL Server Management Studio], about Query Editor
+- Query Editor [SQL Server Management Studio], full screen mode
+- Query Editor [Database Engine], templates
+- full screen mode [SQL Server Management Studio]
+- SQL Server Management Studio [SQL Server], templates
+- writing scripts
+- modifying scripts
+- SQL Server Management Studio [SQL Server], query editor
+- Query Editor [SQL Server Management Studio], about Query Editor
+- writing queries
+- SQL Server Management Studio [SQL Server], editor
+- scripts [SQL Server], SQL Server Management Studio
+- queries [SQL Server], SQL Server Management Studio
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 caps.latest.revision: 53
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ff32d77b3e1503bd23e4ac0ecf040653265f141
+ms.lasthandoff: 04/11/2017
+
 ---
-# 쿼리 및 텍스트 편집기(SQL Server Management Studio)
+# <a name="query-and-text-editors-sql-server-management-studio"></a>쿼리 및 텍스트 편집기(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 중 하나를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 또는 XML/A 스크립트를 대화식으로 편집 및 테스트하거나 XML 또는 일반 텍스트 파일을 편집할 수 있습니다. 각 편집기에서는 키워드에 색을 지정하고 구문 및 사용법 오류를 검사하는 언어 관련 서비스가 지원됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 문제를 수정하는 데 도움이 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 포함되어 있습니다.  
   
-## SQL Server Management Studio 편집기  
+## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 편집기  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 네 가지 편집기는 공통 아키텍처를 공유합니다. 텍스트 편집기는 기본 수준의 기능을 구현하며 텍스트 파일의 기본 편집기로 사용될 수 있습니다. 다른 세 개의 편집기인 쿼리 편집기는 SQL Server에서 지원되는 언어 중 하나의 구문을 정의하는 언어 서비스를 포함하여 이 기본 기능을 확장합니다. 또한 쿼리 편집기는 IntelliSense 및 디버깅 같은 편집기 기능을 다양한 수준으로 지원합니다. 쿼리 편집기에는 Transact-SQL 및 XQuery 문을 포함하는 스크립트를 작성하는 데 사용되는 데이터베이스 엔진 쿼리 편집기, MDX 언어용 MDX 편집기, DMX 언어용 DMX 편집기 및 XML for Analysis 언어용 XML/A 편집기가 포함됩니다.  
   
-## 공통 구성 요소  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]의 모든 편집기는 다음 구성 요소를 공유합니다.  
+## <a name="common-components"></a>공통 구성 요소  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 모든 편집기는 다음 구성 요소를 공유합니다.  
   
  **코드 창**  
  쿼리 또는 텍스트를 입력하는 영역입니다. 쿼리 편집기의 코드 창에는 해당 언어에 사용할 수 있는 문 작성기 기능이 포함되어 있습니다. 텍스트 편집기 환경에서는 찾기 및 바꾸기, 대량 주석 달기, 사용자 지정 글꼴 및 색 등을 지원합니다.  
@@ -59,7 +63,7 @@ caps.handback.revision: 53
  **자동 줄 바꿈**  
  긴 줄의 텍스트나 코드를 여러 줄로 표시하여 해당 줄의 모든 텍스트를 볼 수 있게 합니다. 자동 줄 바꿈은 텍스트가 실행 또는 출력 시에 표시되는 방법에는 영향을 주지 않습니다. **도구 옵션**, **옵션** 대화 상자의 텍스트 편집기, 모든 언어, 일반 페이지나 특정 편집기 페이지에서 자동 줄 바꿈을 설정할 수 있습니다.  
   
-## 코드 편집기 구성 요소  
+## <a name="code-editor-components"></a>코드 편집기 구성 요소  
  코드 편집기에는 텍스트 편집기 및 XML 편집기와 공유되는 기능 이외에 다음과 같은 기능이 포함되어 있습니다.  
   
  **결과**  
@@ -83,7 +87,7 @@ caps.handback.revision: 53
  **상태 표시줄**  
  쿼리 편집기가 연결되는 인스턴스와 같이 쿼리 편집기 창과 관련된 시스템 정보를 표시합니다.  
   
-## 데이터베이스 엔진 쿼리 편집기 구성 요소  
+## <a name="database-engine-query-editor-components"></a>데이터베이스 엔진 쿼리 편집기 구성 요소  
  다음은 데이터베이스 엔진 쿼리 편집기에서만 사용할 수 있는 구성 요소입니다.  
   
  **디버거**  
@@ -102,15 +106,15 @@ caps.handback.revision: 53
  데이터베이스 엔진 쿼리 편집기에서 문을 추가할 때 시작 지점으로 사용할 수 있는 템플릿입니다. SQL Server와 함께 제공되는 미리 정의된 코드 조각을 삽입하거나 사용자가 작성한 코드 조각을 추가할 수 있습니다.  
   
  **SQLCMD 모드**  
- sqlcmd 유틸리티에서 지원되는 명령 집합을 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행합니다. 자세한 내용은 [sqlcmd 방법 도움말 항목](../Topic/sqlcmd%20How-to%20Topics.md)을 참조하세요.  
+ sqlcmd 유틸리티에서 지원되는 명령 집합을 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행합니다. 자세한 내용은 [sqlcmd 방법 도움말 항목](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)을 참조하세요.  
   
-## 편집기 태스크  
+## <a name="editor-tasks"></a>편집기 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)|  
-|MDX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[MDX 쿼리 편집기&#40;Analysis Services - 다차원 데이터&#41;](../Topic/MDX%20Query%20Editor%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)|  
-|DMX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[DMX 쿼리 편집기&#40;Analysis Services - 데이터 마이닝&#41;](../Topic/DMX%20Query%20Editor%20\(Analysis%20Services%20-%20Data%20Mining\).md)|  
+|MDX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[MDX 쿼리 편집기&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/777f2c23-1c1c-4b72-9d19-48a4866551f8)|  
+|DMX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[DMX 쿼리 편집기&#40;Analysis Services - 데이터 마이닝&#41;](http://msdn.microsoft.com/library/7ac877a1-0f29-46b9-9a51-73b02172bef1)|  
 |XML/A 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[XML 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/xml-editor-sql-server-management-studio.md)|  
 |줄 번호 매기기 및 IntelliSense 옵션과 같은 다양한 편집기 옵션을 구성하는 방법을 설명합니다.|[편집기 구성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/configure-editors-sql-server-management-studio.md)|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 편집기를 여는 다양한 방법에 대해 설명합니다.|[편집기 열기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/open-an-editor-sql-server-management-studio.md)|  
@@ -127,9 +131,9 @@ caps.handback.revision: 53
 |사용자가 입력하는 개체 이름 자동 완성, 유효한 위치에 중단점 배치 등과 같은 IntelliSense 기능을 사용하는 방법에 대해 설명합니다.|[IntelliSense&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/intellisense-sql-server-management-studio.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 코드 조각을 사용하는 방법에 대해 설명합니다. 코드 조각은 일반적으로 사용되는 문 또는 블록에 대한 템플릿이며, 사이트별 코드 조각을 포함하도록 사용자 지정하거나 확장할 수 있습니다.|[Transact-SQL 코드 조각](../../relational-databases/scripting/transact-sql-code-snippets.md)|  
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 처리하고 변수 및 매개 변수 값과 같은 디버깅 정보를 보는 방법에 대해 설명합니다.|[Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스별로 사용자 지정 색을 설정하고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 상태 표시줄의 배경색을 설정하는 방법에 대해 설명합니다.|[상태 표시줄&#40;데이터베이스 엔진 쿼리 편집기&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스별로 사용자 지정 색을 설정하고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 상태 표시줄의 배경색을 설정하는 방법에 대해 설명합니다.|[상태 표시줄&#40;데이터베이스 엔진 쿼리 편집기&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

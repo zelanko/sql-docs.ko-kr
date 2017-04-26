@@ -1,27 +1,31 @@
 ---
-title: "SQL Server 확장 이벤트 세션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xe"
-  - "세션"
-  - "확장 이벤트 [SQL Server]"
+title: "SQL Server 확장 이벤트 세션 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xe
+- sessions
+- extend events [SQL Server]
 ms.assetid: c3c92544-351a-4bce-a06a-1f2a47e494e9
 caps.latest.revision: 20
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff9ce12cc98171946715d16f18d15885d7098c4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 확장 이벤트 세션
+# <a name="sql-server-extended-events-sessions"></a>SQL Server 확장 이벤트 세션
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트 세션은 확장 이벤트 엔진을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 생성됩니다. 확장 이벤트 세션의 다음과 같은 요소는 확장 이벤트 인프라 및 일반적인 프로세스를 파악할 수 있는 컨텍스트를 제공합니다.  
@@ -30,10 +34,10 @@ caps.handback.revision: 20
   
 -   세션 내용 및 특징. 대상 및 이벤트 같은 확장 이벤트 세션의 내용과 이러한 개체가 단일 세션에서 또는 여러 세션 간에 상호 관련되는 방식입니다.  
   
-## 세션 상태  
+## <a name="session-states"></a>세션 상태  
  다음 그림에서는 확장 이벤트 세션의 다양한 상태를 보여 줍니다.  
   
- ![확장 이벤트 세션 상태](../../relational-databases/extended-events/media/xesessionstate.gif "확장 이벤트 세션 상태")  
+ ![확장 이벤트 세션 상태](../../relational-databases/extended-events/media/xesessionstate.gif "Extended event session state")  
   
  위 그림을 보면 이벤트 세션에 대해 다른 DDL 명령이 실행됨에 따라 세션 상태가 바뀜을 알 수 있습니다. 다음 표에서는 이러한 상태 변경을 설명합니다.  
   
@@ -47,12 +51,12 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  ALTER EVENT SESSION과 DROP EVENT SESSION 두 가지 모두 메타데이터에 적용되거나 활성 세션과 메타데이터에 적용될 수 있습니다.  
   
-## 세션 내용 및 특징  
+## <a name="session-content-and-characteristics"></a>세션 내용 및 특징  
  확장 이벤트 세션에는 암시적인 경계가 있어 한 세션의 구성으로 인해 다른 세션의 구성이 변경되지 않습니다. 그러나 이러한 경계는 이벤트 또는 대상이 두 개 이상의 세션에서 사용되는 것을 차단하지는 않습니다.  
   
  다음 그림에서는 세션 내용, 그리고 패키지와 세션 간의 관계를 보여 줍니다.  
   
- ![세션에서의 개체 공존 및 공유](../../relational-databases/extended-events/media/xesessions.gif "세션에서의 개체 공존 및 공유")  
+ ![세션에서의 개체 공존 및 공유] (../../relational-databases/extended-events/media/xesessions.gif "Object co-existance and sharing in sessions")  
   
  위 그림을 보면 다음과 같은 사실을 알 수 있습니다.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 20
   
  확장 이벤트 아키텍처는 다양한 개체를 함께 사용하여 특정 문제를 처리할 수 있는 유연한 시스템을 제공합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)  
   
   

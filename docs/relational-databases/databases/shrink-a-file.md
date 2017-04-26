@@ -1,31 +1,35 @@
 ---
-title: "파일 축소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.shrinkfile.f1"
-helpviewer_keywords: 
-  - "파일 축소"
-  - "파일 크기 줄이기"
-  - "데이터베이스 [SQL Server], 축소"
-  - "파일 크기 감소"
-  - "크기 [SQL Server], 파일"
-  - "파일 크기 [SQL Server]"
+title: "파일 축소 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.shrinkfile.f1
+helpviewer_keywords:
+- shrinking files
+- decreasing file size
+- databases [SQL Server], shrinking
+- reducing file size
+- size [SQL Server], files
+- file size [SQL Server]
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa485184202b4edb301d3c2429f09625e854771
+ms.lasthandoff: 04/11/2017
+
 ---
-# 파일 축소
+# <a name="shrink-a-file"></a>파일 축소
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터 또는 로그 파일을 축소하는 방법에 대해 설명합니다.  
   
  파일 끝에 있는 데이터 페이지를 파일 앞의 사용되지 않은 공간으로 이동하여 데이터 파일을 축소하면 공간이 복구됩니다. 파일 끝에 사용 가능한 공간을 충분히 확보한 다음 파일 끝에 있는 데이터 페이지를 할당 해제하고 파일 시스템에 반환할 수 있습니다.  
@@ -63,11 +67,11 @@ caps.handback.revision: 25
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터 또는 로그 파일을 축소하려면  
+#### <a name="to-shrink-a-data-or-log-file"></a>데이터 또는 로그 파일을 축소하려면  
   
-1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
+1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.  **데이터베이스**를 확장한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **데이터베이스** 를 확장한 다음 축소할 데이터베이스를 마우스 오른쪽 단추로 클릭합니다.  
   
 3.  **태스크**, **축소**를 차례로 가리킨 다음 **파일**을 클릭합니다.  
   
@@ -78,9 +82,9 @@ caps.handback.revision: 25
      파일의 유형을 선택합니다. **데이터** 와 **로그** 파일 중에 선택할 수 있습니다. 기본 설정은 **데이터**입니다. 다른 파일 그룹 유형을 선택하면 변경 내용에 따라 다른 필드의 선택 내용도 변경됩니다.  
   
      **파일 그룹**  
-     위의 **파일 유형**에서 선택한 내용과 연관된 파일 그룹 목록에서 파일 그룹을 선택합니다. 다른 파일 그룹을 선택하면 변경 내용에 따라 다른 필드의 선택 내용도 변경됩니다.  
+     위의 **파일 유형** 에서 선택한 내용과 연관된 파일 그룹 목록에서 파일 그룹을 선택합니다. 다른 파일 그룹을 선택하면 변경 내용에 따라 다른 필드의 선택 내용도 변경됩니다.  
   
-     ** 파일 이름 **  
+     **파일 이름**  
      선택한 파일 그룹 및 파일 형식의 사용 가능한 파일 목록에서 파일을 선택합니다.  
   
      **위치**  
@@ -124,7 +128,7 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터 또는 로그 파일을 축소하려면  
+#### <a name="to-shrink-a-data-or-log-file"></a>데이터 또는 로그 파일을 축소하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -134,7 +138,7 @@ caps.handback.revision: 25
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DBCC SHRINKDATABASE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [데이터베이스 축소](../../relational-databases/databases/shrink-a-database.md)   
  [데이터베이스에서 데이터 또는 로그 파일 삭제](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

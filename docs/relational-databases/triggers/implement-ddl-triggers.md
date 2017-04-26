@@ -1,27 +1,31 @@
 ---
-title: "DDL 트리거 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DDL 트리거, 구현"
+title: "DDL 트리거 구현 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL triggers, implementing
 ms.assetid: f44e5340-1d18-40e9-828e-0ffcca091ae3
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ebeb270725abbb10a2bcb86c3248d71cdd3f15b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL 트리거 구현
+# <a name="implement-ddl-triggers"></a>DDL 트리거 구현
   이 항목에서는 DDL 트리거 생성, DDL 트리거 수정, DDL 트리거 해제 또는 삭제 방법에 대한 정보를 제공합니다.  
   
-## DDL 트리거 만들기  
+## <a name="creating-ddl-triggers"></a>DDL 트리거 만들기  
  DDL 트리거는 DDL 트리거에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TRIGGER 문을 사용하여 만듭니다.  
   
  **DDL 트리거를 만들려면**  
@@ -31,7 +35,7 @@ caps.handback.revision: 32
 > [!IMPORTANT]  
 >  나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 트리거에서 결과 집합을 반환하는 기능이 제거됩니다. 결과 집합을 반환하는 트리거는 트리거가 작동하지 않는 응용 프로그램에 예기치 않은 동작을 유발할 수도 있습니다. 향후 개발 작업에서는 트리거에서 결과 집합을 반환하지 않도록 하고 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 트리거가 결과 집합을 반환하지 않도록 하려면 [disallow results from triggers](../../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md) 옵션을 1로 설정합니다. 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 옵션이 기본적으로 1로 설정됩니다.  
   
-## DDL 트리거 수정  
+## <a name="modifying-ddl-triggers"></a>DDL 트리거 수정  
  트리거를 삭제하고 다시 만들거나 기존 트리거를 한 단계로 다시 정의하여 DDL 트리거 정의를 수정할 수 있습니다.  
   
  DDL 트리거가 참조하는 개체의 이름을 변경하는 경우 트리거 텍스트에 새 개체 이름이 반영되도록 트리거를 수정해야 합니다. 따라서 개체 이름을 바꾸기 전에는 먼저 개체의 종속성을 표시하여 영향을 받는 트리거가 있는지 확인해야 합니다.  
@@ -50,7 +54,7 @@ caps.handback.revision: 32
   
 -   [sys.dm_sql_referencing_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
-## DDL 트리거 비활성화 및 삭제  
+## <a name="disabling-and-dropping-ddl-triggers"></a>DDL 트리거 비활성화 및 삭제  
  더 이상 필요 없는 DDL 트리거는 비활성화하거나 삭제할 수 있습니다.  
   
  DDL 트리거를 비활성화해도 해당 트리거가 삭제되지 않으며 현재 데이터베이스의 개체로 남아 있습니다. 그러나 해당 트리거가 프로그래밍된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하는 경우에도 트리거는 발생되지 않습니다. DDL 트리거를 해제했다가 다시 설정할 수 있습니다. DDL 트리거를 설정하면 처음 만들었을 때와 동일한 방법으로 트리거가 발생됩니다. DDL 트리거를 만들면 기본적으로 설정됩니다.  

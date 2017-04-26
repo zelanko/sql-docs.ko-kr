@@ -1,30 +1,34 @@
 ---
-title: "메모리 내 OLTP와 쿼리 저장소 사용 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼리 저장소, 메모리 내"
+title: "메모리 내 OLTP와 쿼리 저장소 사용 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, in-memory
 ms.assetid: aae5ae6d-7c90-4661-a1c5-df704319888a
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31483a4450089f194241f19df0bd0072b5026375
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 내 OLTP와 쿼리 저장소 사용
+# <a name="using-the-query-store-with-in-memory-oltp"></a>메모리 내 OLTP와 쿼리 저장소 사용
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소를 사용하면 메모리 내 OLTP에서 실행 중인 작업에 대한 기본 컴파일 코드의 성능을 모니터링할 수 있습니다.  
 컴파일 및 런타임 통계는 디스크 기반 작업과 동일한 방식으로 수집 및 표시됩니다.   
-메모리 내 OLTP로 마이그레이션하는 경우 디스크 기반 작업용으로 개발한 사용자 지정 스크립트뿐만 아니라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 쿼리 저장소 보기를 사용하여 진행한 후 마이그레이션할 수 있습니다. 이를 통해 쿼리 저장소 기술에 대한 학습 시간을 단축하고 모든 유형의 작업에 대한 문제를 해결하기 위해 일반적으로 사용할 수 있습니다.  
+메모리 내 OLTP로 마이그레이션하는 경우 디스크 기반 작업용으로 개발한 사용자 지정 스크립트뿐만 아니라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 쿼리 저장소 보기를 사용하여 진행한 후 마이그레이션할 수 있습니다. 이를 통해 쿼리 저장소 기술에 대한 학습 시간을 단축하고 모든 유형의 작업에 대한 문제를 해결하기 위해 일반적으로 사용할 수 있습니다.  
 쿼리 저장소 사용에 대한 일반 정보는 [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)을(를) 참조하십시오.  
   
  쿼리 저장소와 메모리 내 OLTP를 사용하기 위해 추가 기능을 구성할 필요가 없습니다. 데이터베이스에서 활성화되면 모든 유형의 작업에 대해 작동합니다.   
@@ -52,7 +56,7 @@ caps.handback.revision: 10
   
 -   [sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 내의 메모리 부여 메트릭은 고유하게 컴파일된 쿼리에 대해 채워지지 않습니다. 해당 값은 항상 0입니다. 메모리 부여 열은 avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, 및 stdev_query_max_used_memory입니다.  
   
-## 쿼리 저장소와 메모리 내 OLTP 활성화 및 사용  
+## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>쿼리 저장소와 메모리 내 OLTP 활성화 및 사용  
  다음의 간단한 예제는 종단 간 사용자 시나리오에서 쿼리 저장소와 메모리 내 OLTP를 사용하는 방법을 보여줍니다. 이 예제에서는 메모리 내 OLTP용으로 데이터베이스(`MemoryOLTP`)가 활성화된 것으로 가정되었습니다.  
     메모리 액세스에 최적화된 테이블의 필수 구성 요소에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.  
   
@@ -133,11 +137,12 @@ JOIN sys.query_store_runtime_stats_interval AS rsi
 WHERE q.object_id = OBJECT_ID('dbo.OrderInsert');  
 ```  
   
-## 참고 항목  
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>참고 항목  
+ [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)   
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

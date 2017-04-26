@@ -1,26 +1,30 @@
 ---
-title: "복제 모니터링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "성능 모니터링 [SQL Server 복제], 복제 모니터링"
-  - "복제 모니터, 복제 모니터 정보"
+title: "복제 모니터링 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring performance [SQL Server replication], Replication Monitor
+- Replication Monitor, about Replication Monitor
 ms.assetid: 81f596d2-27a5-489d-bf8d-0f4361decd02
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2dc65ac3d6356ff9c2a69d0a30a8c5a1ecc76782
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복제 모니터링
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터는 복제 토폴로지의 전체적인 상태를 모니터링할 수 있는 그래픽 도구입니다. 복제 모니터는 다음과 같은 일반적인 질문에 대한 답을 제공하는 게시 및 구독의 상태와 성능에 대한 자세한 정보를 제공합니다.  
+# <a name="monitoring-replication-overview"></a>모니터링(복제)
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor is a graphical tool that allows you to monitor the overall health of a replication topology. 복제 모니터는 다음과 같은 일반적인 질문에 대한 답을 제공하는 게시 및 구독의 상태와 성능에 대한 자세한 정보를 제공합니다.  
   
 -   복제 시스템이 정상적으로 작동 중인가?  
   
@@ -36,7 +40,7 @@ caps.handback.revision: 37
   
  복제를 모니터링하려면 사용자가 배포자에서 **sysadmin** 고정 서버 역할의 멤버이거나 배포 데이터베이스에서 **replmonitor** 고정 데이터베이스 역할의 멤버여야 합니다. 시스템 관리자는 사용자를 **replmonitor** 역할에 추가할 수 있으며 이렇게 하면 해당 사용자가 복제 모니터에서 복제 작업을 볼 수 있습니다. 이때 사용자가 복제를 관리할 수는 없습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 복제 모니터 기능에 대한 정보를 제공합니다.  
   
  [복제 모니터 인터페이스 개요](../../../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md)  
@@ -72,19 +76,19 @@ caps.handback.revision: 37
  [복제 모니터에서 게시 및 구독 상태 보기](../../../relational-databases/replication/monitor/view-publication-and-subscription-status-in-replication-monitor.md)  
  복제 모니터를 사용하여 게시 또는 구독 상태 정보를 보는 방법에 대해 설명합니다.  
   
- [정보 보기 및 게시자 및 #40;에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
+ [게시자에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publisher-replication-monitor.md)  
  복제 모니터를 사용하여 게시자에 대한 정보를 보고 태스크를 수행하는 방법에 대해 설명합니다.  
   
- [정보 보기 및 게시 & #40;에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
+ [게시에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-publication-replication-monitor.md)  
  복제 모니터를 사용하여 게시에 대한 정보를 보고 태스크를 수행하는 방법에 대해 설명합니다.  
   
- [정보 보기 및 게시 & #40;와 관련 된 에이전트에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for publication agents.md)  
+ [게시 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-publication-agents.md)  
  복제 모니터를 사용하여 게시와 관련된 에이전트에 대한 정보를 보고 태스크를 수행하는 방법에 대해 설명합니다.  
   
- [정보 보기 및 구독 & #40;에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
+ [구독에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-a-subscription-replication-monitor.md)  
  복제 모니터를 사용하여 구독에 대한 정보를 보고 태스크를 수행하는 방법에 대해 설명합니다.  
   
- [정보 보기 및 구독 & #40;와 관련 된 에이전트에 대 한 작업을 수행 합니다. 복제 모니터 & #41;](../../../relational-databases/replication/monitor/view information and perform tasks for subscription agents.md)  
+ [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)  
  복제 모니터를 사용하여 구독과 관련된 에이전트에 대한 정보를 보고 태스크를 수행하는 방법에 대해 설명합니다.  
   
   

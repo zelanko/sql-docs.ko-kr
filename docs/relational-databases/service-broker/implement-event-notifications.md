@@ -1,33 +1,37 @@
 ---
-title: "이벤트 알림 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 알림 [SQL Server], 대상 서비스"
-  - "대상 서비스 [SQL Server]"
-  - "이벤트 알림 [SQL Server], 만들기"
+title: "이벤트 알림 구현 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event notifications [SQL Server], target service
+- target service [SQL Server]
+- event notifications [SQL Server], creating
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eac9804c15bfcafbb5581875258d4499df130db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 이벤트 알림 구현
+# <a name="implement-event-notifications"></a>이벤트 알림 구현
   이벤트 알림을 구현하려면 먼저 이벤트 알림을 받을 대상 서비스를 만든 다음 이벤트 알림을 만들어야 합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화 보안을 구성해야 합니다. 대화 보안은 전체 보안 모델에 따라 수동으로 구성해야 합니다.  
   
-## 대상 서비스 만들기  
- [!INCLUDE[ssSB](../../includes/sssb-md.md)]에는 다음 특정 메시지 유형과 이벤트 알림에 대한 계약이 포함되어 있으므로 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 시작하는 서비스를 만들지 않아도 됩니다.  
+## <a name="creating-the-target-service"></a>대상 서비스 만들기  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)]에는 다음 특정 메시지 유형과 이벤트 알림에 대한 계약이 포함되어 있으므로 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 를 시작하는 서비스를 만들지 않아도 됩니다.  
   
 ```  
 http://schemas.microsoft.com/SQL/Notifications/PostEventNotification  
@@ -66,10 +70,10 @@ ADDRESS = 'LOCAL';
 GO  
 ```  
   
-## 이벤트 알림 만들기  
+## <a name="creating-the-event-notification"></a>이벤트 알림 만들기  
  이벤트 알림은 [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE EVENT NOTIFICATION 문으로 만들고 DROP EVENT NOTIFICATION 문으로 삭제합니다. 이벤트 알림을 수정하려면 해당 이벤트 알림을 삭제하고 다시 만들어야 합니다.  
   
- 다음 예에서는 `CreateDatabaseNotification` 이벤트 알림을 만듭니다. 이 알림은 서버에서 발생하는 `CREATE_DATABASE` 이벤트에 대한 메시지를 이전에 만든 `NotifyService` 서비스로 보냅니다.  
+ 다음 예에서는 `CreateDatabaseNotification`이벤트 알림을 만듭니다. 이 알림은 서버에서 발생하는 `CREATE_DATABASE` 이벤트에 대한 메시지를 이전에 만든 `NotifyService` 서비스로 보냅니다.  
   
 ```  
 CREATE EVENT NOTIFICATION CreateDatabaseNotification  
@@ -95,7 +99,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
   
 -   [DROP EVENT NOTIFICATION&#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-notification-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [이벤트 알림에 대한 정보 가져오기](../../relational-databases/service-broker/get-information-about-event-notifications.md)   
  [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

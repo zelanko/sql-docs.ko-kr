@@ -1,33 +1,37 @@
 ---
-title: "복제 병합 에이전트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "병합 에이전트, 실행 파일"
-  - "병합 에이전트, 매개 변수 참조"
-  - "에이전트 [SQL Server 복제], 병합 에이전트"
-  - "명령 프롬프트 [SQL Server 복제]"
+title: "복제 병합 에이전트 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Merge Agent, executables
+- Merge Agent, parameter reference
+- agents [SQL Server replication], Merge Agent
+- command prompt [SQL Server replication]
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 caps.latest.revision: 64
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e8d07eaf421703fb57b9682780027f4e909583dd
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복제 병합 에이전트
+# <a name="replication-merge-agent"></a>복제 병합 에이전트
   복제 병합 에이전트는 데이터베이스 테이블에 저장된 초기 스냅숏 파일을 구독자에 적용하는 유틸리티 실행 파일입니다. 또한 이 에이전트는 초기 스냅숏이 만들어진 후 게시자에서 발생한 증분 데이터 변경 내용을 병합하고, 사용자가 구성한 규칙에 따라 또는 사용자가 만든 사용자 지정 해결 프로그램을 사용하여 충돌을 조정합니다.  
   
 > [!NOTE]  
 >  매개 변수는 지정되는 순서에 제한을 받지 않습니다. 선택적 매개 변수가 지정되지 않은 경우 로컬 컴퓨터의 미리 정의된 레지스트리 설정 값이 사용됩니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -106,21 +110,21 @@ replmerg [-?]
 [-ValidateInterval validate_interval]  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  **-?**  
  사용 가능한 모든 매개 변수를 출력합니다.  
   
- **-게시자** *server_name*[**\\***instance_name*]  
- 게시자의 이름입니다. 지정 *server_name* 의 기본 인스턴스에 대 한 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다.  
+ **-Publisher** *server_name*[**\\***instance_name*]  
+ 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-PublisherDB** *publisher_database*  
  게시자 데이터베이스의 이름입니다.  
   
- **-게시** *게시*  
+ **-Publication** *publication*  
  게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
- **-구독자** *server_name*[**\\***instance_name*]  
- 구독자의 이름입니다. 지정 *server_name* 의 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다.  
+ **-Subscriber** *server_name*[**\\***instance_name*]  
+ 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-SubscriberDB** *subscriber_database*  
  구독자 데이터베이스의 이름입니다.  
@@ -137,8 +141,8 @@ replmerg [-?]
  **-DefinitionFile** *def_path_and_file_name*  
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령 프롬프트 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
- **-배포자** *server_name*[**\\***instance_name*]  
- 배포자 이름입니다. 지정 *server_name* 의 기본 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 지정 *server_name***\\***instance_name* 의 명명 된 인스턴스에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 해당 서버에 있습니다. 배포자(밀어넣기) 배포의 경우에는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
+ **-Distributor** *server_name*[**\\***instance_name*]  
+ 배포자 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 명명된 *server_name***\\***instance_name* instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고, 배포자(밀어넣기) 배포의 경우에는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
   
  **-DistributorLogin** *distributor_login*  
  배포자의 로그인 이름입니다.  
@@ -147,7 +151,7 @@ replmerg [-?]
  배포자 암호입니다.  
   
  **-DistributorSecurityMode** [ **0**| **1**]  
- 배포자의 보안 모드를 지정합니다. 값이 **0** 나타냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드 (기본값), 및의 값 **1** Windows 인증 모드를 나타냅니다.  
+ 배포자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 모드(기본값)를 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-DownloadGenerationsPerBatch** *download_generations_per_batch*  
  게시자의 변경 내용을 구독자로 다운로드하는 동안 한 번의 일괄 처리에서 처리할 세대 수입니다. 세대는 아티클 단위의 논리적 변경 내용 그룹으로 정의됩니다. 안정적인 통신 연결의 기본값은 100이고, 안정적이지 않은 통신 연결의 기본값은 10입니다.  
@@ -170,11 +174,11 @@ replmerg [-?]
 |**1**|SSL이 사용되지만 에이전트에서 SSL 서버 인증서가 트러스트된 발급자에 의해 서명된 것인지 확인하지 않음을 지정합니다.|  
 |**2**|SSL이 사용되고 인증서가 확인됨을 지정합니다.|  
   
- 자세한 내용은 참조 [보안 개요 & #40; 복제 및 #41;](../../../relational-databases/replication/security/security-overview-replication.md)합니다.  
+ 자세한 내용은 [보안 개요&#40;복제&#41;](../../../relational-databases/replication/security/security-overview-replication.md)를 참조하세요.  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
  > [!WARNING]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 업로드를 제한 하려면는 **@subscriber_upload_options** 의 **sp_addmergearticle** 대신 합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] 업로드를 제한하려면 **@subscriber_upload_options** 의 **sp_addmergearticle** 를 대신 사용하십시오.  
   
  동기화를 수행할 때의 데이터 교환 유형을 지정하며 값은 다음 중 하나일 수 있습니다.  
   
@@ -184,17 +188,17 @@ replmerg [-?]
 |**2**|에이전트에서 게시자의 데이터 변경 내용을 구독자로 다운로드합니다.|  
 |**3** (기본값)|에이전트에서는 먼저 구독자의 데이터 변경 내용을 게시자로 업로드한 다음 게시자의 데이터 변경 내용을 구독자로 다운로드합니다. 웹 동기화의 경우 이 옵션을 사용해야 합니다.|  
   
- 다운로드 전용 아티클을 사용하면 게시에 있는 개별 아티클의 동기화 동작을 제어할 수 있으며 성능도 향상됩니다. 자세한 내용은 참조 [with Download-Only Articles 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)합니다.  
+ 다운로드 전용 아티클을 사용하면 게시에 있는 개별 아티클의 동기화 동작을 제어할 수 있으며 성능도 향상됩니다. 자세한 내용은 [다운로드 전용 아티클로 병합 복제 성능 최적화](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)를 참조하세요.  
   
  **ExchangeType** 을 사용하여 병합 복제의 업로드 및 다운로드 단계를 별도의 세션으로 분리하는 경우 **ExchangeType** 을 먼저 1로 설정한 상태로 병합 에이전트를 실행한 후 값을 2로 설정하여 병합 에이전트를 다시 실행해야 합니다. 두 매개 변수를 사용하여 병합 에이전트를 실행하는 데 실패하면 메타데이터가 삭제되고 구독을 다시 초기화해야 합니다(업로드 제외).  
   
  **-FastRowCount** [**0**|**1**]  
- 행 개수 유효성 검사에 사용할 행 개수 계산 방법의 유형을 지정합니다. 값이 **1** (기본값)는 빠른 방법을 나타냅니다. 값 **0** 은 전체 행 개수 계산 방법을 나타냅니다.  
+ 행 개수 유효성 검사에 사용할 행 개수 계산 방법의 유형을 지정합니다. 값 **1** (기본값)은 빠른 행 개수 계산 방법을 나타냅니다. 값 **0** 은 전체 행 개수 계산 방법을 나타냅니다.  
   
  **-FileTransferType** [**0**|**1**]  
- 파일 전송 유형을 지정합니다. 값이 **0** UNC (범용 명명 규칙),의 값 **1** FTP (파일 전송 프로토콜)를 나타냅니다.  
+ 파일 전송 유형을 지정합니다. 값 **0** 은 UNC(Universal Naming Convention)를 나타내고, 값 **1** 은 FTP(File Transfer Protocol)를 나타냅니다.  
   
- **-ForceConvergenceLevel** [**0**|**1**|**2** ( **게시자**| **구독자**| **모두**)]  
+ **-ForceConvergenceLevel** [**0**|**1**|**2** ( **Publisher**| **Subscriber**| **Both**)]  
  병합 에이전트에서 사용할 일치성 수준을 지정하며 값은 다음 중 하나가 될 수 있습니다.  
   
 |ForceConvergenceLevel 값|설명|  
@@ -223,7 +227,7 @@ replmerg [-?]
 |**0**|최종 에이전트 상태 메시지, 최종 세션 정보 및 기타 오류를 기록합니다.|  
 |**1**|각 세션 상태의 증분 세션 정보를 기록합니다. 여기에는 최종 에이전트 상태 메시지, 최종 세션 정보 및 오류뿐 아니라 완료율도 포함됩니다.|  
 |**2**|기본. 각 세션 상태의 증분 세션 정보와 아티클 수준 세션 정보를 기록합니다. 여기에는 최종 에이전트 상태 메시지, 최종 세션 정보 및 오류뿐 아니라 완료율도 포함됩니다. 에이전트 상태 메시지도 기록됩니다.|  
-|**3**|동일 **-HistoryVerboseLevel** = **2**, 점을 제외 하 고 에이전트 진행 메시지가 더 기록 됩니다.|  
+|**3**|기록되는 에이전트 진행 메시지가 더 많다는 점만 제외하고 **-HistoryVerboseLevel** = **2**와 동일합니다.|  
   
  **-Hostname** *host_name*  
  로컬 컴퓨터의 네트워크 이름입니다. 기본값은 로컬 컴퓨터 이름입니다.  
@@ -238,18 +242,18 @@ replmerg [-?]
  인증이 필요한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 ISAPI DLL에 연결할 때 사용되는 암호를 지정합니다.  
   
  **-InternetProxyLogin**  *internet_proxy_login*  
- 지정 프록시 서버에 연결할 때 사용 되는 로그인 이름에 정의 된 *internet_proxy_server*, 인증을 요구 하 합니다.  
+ 인증이 필요한 프록시 서버( *internet_proxy_server*에 정의됨)에 연결할 때 사용되는 로그인 이름을 지정합니다.  
   
- **-InternetProxyPassword**  *internet_proxy_password*  
- 에 정의 된 프록시 서버에 연결할 때 사용 되는 암호를 지정 *internet_proxy_server*, 인증을 요구 하 합니다.  
+ **–InternetProxyPassword**  *internet_proxy_password*  
+ 인증이 필요한 프록시 서버( *internet_proxy_server*에 정의됨)에 연결할 때 사용되는 암호를 지정합니다.  
   
  **-InternetProxyServer**  *internet_proxy_server*  
- 에 지정 된 HTTP 리소스에 액세스할 때 사용할 프록시 서버 지정 *internet_url*합니다.  
+ *internet_url*에 지정된 HTTP 리소스에 액세스할 때 사용할 프록시 서버를 지정합니다.  
   
  **-InternetSecurityMode** [**0**|**1**]  
- 웹 동기화를 수행하는 동안 웹 서버에 연결할 때 사용할 IIS 보안 모드를 지정합니다. 값이 **0** 기본 인증을 나타내고 값 **1** Windows 통합 인증 (기본값)를 나타냅니다.  
+ 웹 동기화를 수행하는 동안 웹 서버에 연결할 때 사용할 IIS 보안 모드를 지정합니다. 값 **0** 은 기본 인증을 나타내고, 값 **1** 은 Windows 통합 인증(기본값)을 나타냅니다.  
   
- **면-InternetTimeout** *internet_timeout*  
+ **-InternetTimeout** *internet_timeout*  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 수신기 ISAPI DLL에 대한 연결 제한 시간이 초과되기까지의 시간(초)을 지정합니다.  
   
  **-InternetURL** *internet_url*  
@@ -264,10 +268,10 @@ replmerg [-?]
  **-MakeGenerationInterval** *make_generation_interval_seconds*  
  생성 만들기 또는 클라이언트에 다운로드할 변경 내용의 일괄 처리 간에 대기하는 시간(초)입니다. 기본값은 **1** 초입니다.  
   
- makegeneration은 게시자 변경 내용을 구독자로 다운로드하기 위해 준비하는 프로세스로, 다운로드하는 동안 성능 병목 상태를 일으킬 수 있습니다. Makegeneration 프로세스에서 지정 된 간격 내에서 이미 실행 하는 경우 **-MakeGenerationInterval**, 현재 동기화 세션에 대 한 생략 됩니다. 이는 동기화 동시성에 도움이 되며, 구독자가 변경 내용을 다운로드하지 않으려는 경우 특히 유용합니다.  
+ makegeneration은 게시자 변경 내용을 구독자로 다운로드하기 위해 준비하는 프로세스로, 다운로드하는 동안 성능 병목 상태를 일으킬 수 있습니다. makegeneration 프로세스는 **-MakeGenerationInterval**에 지정된 간격 내에서 이미 실행된 경우 현재 동기화 세션에서 생략됩니다. 이는 동기화 동시성에 도움이 되며, 구독자가 변경 내용을 다운로드하지 않으려는 경우 특히 유용합니다.  
   
  **-MaxBcpThreads** *number_of_threads*  
- 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 게시 데이터베이스의 시스템 테이블 **sysmergeschemachange** 에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 없는 하드 코딩 된 상한값이 하 고 0 보다 큰 값을 가져야 합니다. 기본값은 **1**입니다.  
+ 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 게시 데이터베이스의 시스템 테이블 **sysmergeschemachange** 에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 0보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 **1**입니다.  
   
  **-MaxDownloadChanges** *number_of_download_changes*  
  게시자에서 구독자로 다운로드할 변경된 행의 최대 개수를 지정합니다. 다운로드되는 행 수가 지정된 최대값보다 클 수도 있습니다. 전체 세대가 처리되는 경우나, 병렬 대상 스레드가 실행될 수 있고 각 스레드가 첫 번째 전달에서 100개 이상의 변경 내용을 처리하는 경우가 이러한 경우에 해당됩니다. 기본적으로 다운로드할 수 있는 모든 변경 내용이 보내집니다.  
@@ -276,13 +280,13 @@ replmerg [-?]
  구독자에서 게시자로 업로드할 변경된 행의 최대 개수를 지정합니다. 업로드되는 행 수가 지정된 최대값보다 클 수도 있습니다. 전체 세대가 처리되는 경우나, 병렬 대상 스레드가 실행될 수 있고 각 스레드가 첫 번째 전달에서 100개 이상의 변경 내용을 처리하는 경우가 이러한 경우에 해당됩니다. 기본적으로 업로드할 수 있는 모든 변경 내용이 보내집니다.  
   
  **-MetadataRetentionCleanup** [**0**|**1**]  
- 메타 데이터에서 제거 되 면 지정 [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md), 및 [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 게시 보존 기간에 따라 합니다. 기본값은 **1**로서, 정리를 수행함을 나타냅니다. 값 **0** 은 정리를 자동으로 수행하지 않음을 나타냅니다.  
+ 게시 보존 기간에 따라 [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md), [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md), [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md), [MSmerge_past_partition_mappings](../../../relational-databases/system-tables/msmerge-past-partition-mappings-transact-sql.md)및 [MSmerge_current_partition_mappings](../../../relational-databases/system-tables/msmerge-current-partition-mappings.md) 에서 메타데이터를 제거할지 여부를 지정합니다. 기본값은 **1**로서, 정리를 수행함을 나타냅니다. 값 **0** 은 정리를 자동으로 수행하지 않음을 나타냅니다.  
   
- **-출력** *output_path_and_file_name*  
+ **-Output** *output_path_and_file_name*  
  에이전트 출력 파일의 경로입니다. 파일 이름을 지정하지 않으면 출력이 콘솔로 전달됩니다. 지정된 파일 이름이 존재하면 출력이 파일에 추가됩니다.  
   
  **-OutputVerboseLevel** [**0**|**1**|**2**]  
- 출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 자세한 정보 표시 수준이 **2** (기본값), 모든 오류 메시지와 진행률 보고 메시지가 출력 되며,이 디버깅에 유용 합니다.  
+ 출력이 자세해야 하는지 여부를 지정합니다. 정보 표시 수준이 **0**이면 오류 메시지만 출력됩니다. 정보 표시 수준이 **1**이면 모든 진행률 보고 메시지가 출력됩니다. 정보 표시 수준이 **2** (기본값)이면 디버깅에 유용한 오류 메시지와 진행률 보고 메시지가 모두 출력됩니다.  
   
  **-ParallelUploadDownload** [**0**|**1**]  
  병합 에이전트에서 게시자에 업로드되는 변경 내용과 구독자에 다운로드되는 변경 내용을 병렬로 처리할지 여부를 지정합니다. 병렬 처리는 네트워크 대역폭이 높은 대규모 환경에서 유용합니다. **ParallelUploadDownload** 가 **1**이면 병렬 처리가 사용됩니다.  
@@ -294,19 +298,19 @@ replmerg [-?]
  게시자 또는 구독자에서 데이터 변경 내용을 쿼리하는 빈도(초)입니다. 기본값은 60초입니다.  
   
  **-ProfileName** *profile_name*  
- 에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)합니다.  
+ 에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
  **-PublisherFailoverPartner** *server_name*[**\\***instance_name*]  
- 게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 참조 [데이터베이스 미러링 및 복제 & #40; SQL Server 및 #41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)합니다.  
+ 게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)를 참조하세요.  
   
  **-PublisherLogin** *publisher_login*  
- 게시자 로그인 이름입니다. 경우 **PublisherSecurityMode** 는 **0** (에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증),이 매개 변수를 지정 해야 합니다.  
+ 게시자 로그인 이름입니다. **PublisherSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
  **-PublisherPassword** *publisher_password*  
- 게시자 암호입니다. 경우 **PublisherSecurityMode** 는 **0** (에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증),이 매개 변수를 지정 해야 합니다.  
+ 게시자 암호입니다. **PublisherSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
  **-PublisherSecurityMode** [**0**|**1**]  
- 게시자의 보안 모드를 지정합니다. 값이 **0** 나타냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 (기본값), 및의 값 **1** Windows 인증 모드를 나타냅니다.  
+ 게시자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증(기본값)을 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-QueryTimeOut** *query_time_out_seconds*  
  쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 300초입니다. **QueryTimeout** 값이 1800보다 클 경우 병합 에이전트에서는 이 값을 사용하여 분할된 스냅숏이 생성되기를 기다릴 시간을 결정하기도 합니다.  
@@ -315,10 +319,10 @@ replmerg [-?]
  병합 에이전트에서 원본의 변경 내용을 열거하는 데 사용하는 원본 스레드의 개수를 지정합니다. 업로드 중에는 구독자가 원본이 되고 다운로드 중에는 게시자가 원본이 됩니다. 기본값은 **3**입니다.  
   
  **-StartQueueTimeout** *start_queue_timeout_seconds*  
- 병합 에이전트가 실행 중인 동시 병합 프로세스 수가으로 설정 된 제한 때까지 대기 하는 시간 (초)의 최대 수는 **@max_concurrent_merge** 속성 **sp_addmergepublication**합니다. 최대 시간(초)에 도달한 경우 병합 에이전트가 계속 대기 중이면 해당 병합 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
+ 동시에 실행 중인 병합 프로세스의 수가 **@max_concurrent_merge** 의 **@max_concurrent_merge**을 참조하세요. 최대 시간(초)에 도달한 경우 병합 에이전트가 계속 대기 중이면 해당 병합 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
   
  **-SubscriberDatabasePath** *subscriber_database_path*  
- 이면 Jet 데이터베이스 (.mdb 파일)의 경로를 **SubscriberType** 는 **2** (ODBC 데이터 원본 이름 (DSN) 없이 Jet 데이터베이스에 대 한 연결 수 있음).  
+ **SubscriberType** 이 **2** 로서, ODBC DSN(데이터 원본 이름)이 없는 Jet 데이터베이스에 대한 연결이 허용되는 경우 Jet 데이터베이스(.mdb 파일)의 경로입니다.  
   
  **-SubscriberDBAddOption** [**0**| **1**| **2**| **3**]  
  기존 구독자 데이터베이스가 있는지 여부를 지정합니다.  
@@ -331,27 +335,27 @@ replmerg [-?]
 |**3**|새 데이터베이스를 만들어 연결하고 해당 파일에 있을 수 있는 모든 구독을 사용하도록 설정합니다.|  
   
 > [!NOTE]  
->  값을 사용 하는 경우 **2** 및 **3**, 구독자 데이터베이스 경로에 지정 해야는 **SubscriberDatabasePath** 옵션입니다.  
+>  값 **2** 와 **3**을 사용할 경우에는 **SubscriberDatabasePath** 옵션에서 구독자의 데이터베이스 경로를 지정해야 합니다.  
   
  **-SubscriberLogin** *subscriber_login*  
- 구독자의 로그인 이름입니다. 경우 **SubscriberSecurityMode** 는 **0** (에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증),이 매개 변수를 지정 해야 합니다.  
+ 구독자의 로그인 이름입니다. **SubscriberSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
  **-SubscriberPassword** *subscriber_password*  
- 구독자 암호입니다. 경우 **SubscriberSecurityMode** 는 **0** (에 대 한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증),이 매개 변수를 지정 해야 합니다.  
+ 구독자 암호입니다. **SubscriberSecurityMode** 가 **0** ( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증의 경우)이면 이 매개 변수를 지정해야 합니다.  
   
  **-SubscriberSecurityMode** [ **0**| **1**]  
- 구독자의 보안 모드를 지정합니다. 값이 **0** 나타냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 (기본값), 및의 값 **1** Windows 인증 모드를 나타냅니다.  
+ 구독자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증(기본값)을 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-SubscriberConflictClean** [ **0**| **1**]  
- 하는 경우 충돌 테이블이 정리 구독자에서 동기화 프로세스 중에 값은 **1** 구독자에 충돌 테이블이 정리 함을 나타냅니다. 이 매개 변수는 분산 충돌 로깅을 사용하는 게시자에 대한 구독에만 사용됩니다.  
+ 동기화 프로세스를 수행하는 동안 구독자에서 충돌 테이블을 정리할지 여부를 나타냅니다. 값 **1** 은 구독자의 충돌 테이블이 정리됨을 나타냅니다. 이 매개 변수는 분산 충돌 로깅을 사용하는 게시자에 대한 구독에만 사용됩니다.  
   
  **-SubscriberType** [ **0**| **1**| **3**| **4**| **5**| **6**| **7**| **8**]  
  병합 에이전트에서 사용하는 구독자 연결 유형을 지정합니다. 이 매개 변수에는 기본값 **0** 만 지원됩니다.  
   
  **-SubscriptionType**[ **0**| **1**| **2**]  
- 배포의 구독 유형을 지정합니다. 값이 **0** 은 밀어넣기 구독 (기본값), 값이 **1** 끌어오기 구독을, 값의 **2** 이면 익명 구독을 나타냅니다.  
+ 배포의 구독 유형을 지정합니다. 값 **0** 은 밀어넣기 구독(기본값)을, 값 **1** 은 끌어오기 구독을, 값 **2** 는 익명 구독을 나타냅니다.  
   
- **-SyncToAlternate** [ **0 | 1**]  
+ **-SyncToAlternate** [ **0|1**]  
  병합 에이전트에서 구독자와 대체 게시자 간의 동기화를 수행하는지 여부를 지정합니다. 값 **1** 은 동기화 대상이 대체 게시자임을 나타냅니다. 기본값은 **0**입니다.  
   
  **-UploadGenerationsPerBatch** *upload_generations_per_batch*  
@@ -377,12 +381,12 @@ replmerg [-?]
 |**3**|행 개수 및 이진 체크섬의 유효성을 검사합니다.|  
   
 > [!NOTE]  
->  구독자에서의 데이터 형식과 게시자에서의 데이터 형식이 다른 경우 이진 체크섬 또는 체크섬 유효성 검사가 올바르지 않을 수 있습니다. 자세한 내용은 "고려 사항에 대 한 데이터 유효성 검사" 섹션을 참조 [복제 된 데이터의 유효성을 검사](../../../relational-databases/replication/validate-replicated-data.md)합니다.  
+>  구독자에서의 데이터 형식과 게시자에서의 데이터 형식이 다른 경우 이진 체크섬 또는 체크섬 유효성 검사가 올바르지 않을 수 있습니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-replicated-data.md)의 "데이터 유효성 검사에 대한 고려 사항" 섹션을 참조하세요.  
   
  **-ValidateInterval** *validate_interval*  
  연속 모드에서 구독 유효성 검사가 수행되는 빈도(분)입니다. 기본값은 **60** 분입니다.  
   
-## 주의  
+## <a name="remarks"></a>주의  
   
 > [!IMPORTANT]  
 >  도메인 사용자 계정(기본값)이 아닌 로컬 시스템 계정에서 실행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 설치한 경우 해당 서비스에서는 로컬 컴퓨터에만 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 실행되는 병합 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인할 때 Windows 인증 모드를 사용하도록 구성된 경우 해당 병합 에이전트가 실패합니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증입니다.  
@@ -391,7 +395,8 @@ replmerg [-?]
   
  연속 모드에서 실행하는 동안 현재 세션에 대한 병합 에이전트 기록은 제거되지 않습니다. 장기 실행 에이전트로 인해 성능에 영향을 미칠 수 있는 병합 기록 테이블에 다수의 항목이 발생할 수 있습니다. 이 문제를 해결하려면 예약 모드로 전환하거나, 계속해서 연속 모드를 사용하지만 정기적으로 병합 에이전트를 다시 시작하는 전용 작업을 만들거나, 기록 수준의 자세한 정도를 줄여 행 수를 줄임으로써 성능에 미치는 영향을 줄이십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 에이전트 관리](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   
+

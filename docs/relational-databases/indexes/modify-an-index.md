@@ -1,26 +1,30 @@
 ---
-title: "인덱스 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 [SQL Server], 수정"
-  - "인덱스 수정"
-  - "인덱스 변경 내용 [SQL Server]"
+title: "인덱스 수정 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [SQL Server], modifying
+- modifying indexes
+- index changes [SQL Server]
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: baab89e891a068e358727fd2a8c739ef1b37b400
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 수정
+# <a name="modify-an-index"></a>인덱스 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 인덱스를 수정하는 방법에 대해 설명합니다.  
@@ -38,7 +42,7 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 인덱스를 수정하려면  
+#### <a name="to-modify-an-index"></a>인덱스를 수정하려면  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -50,13 +54,13 @@ caps.handback.revision: 19
   
 5.  **인덱스 속성** 대화 상자에서 원하는 대로 변경합니다. 예를 들어 인덱스 키에서 열을 추가 또는 제거하거나 인덱스 옵션의 설정을 변경할 수 있습니다.  
   
-#### 인덱스 열을 수정하려면  
+#### <a name="to-modify-index-columns"></a>인덱스 열을 수정하려면  
   
 1.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 **인덱스 속성** 대화 상자에서 **일반** 페이지를 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 인덱스를 수정하려면  
+#### <a name="to-modify-an-index"></a>인덱스를 수정하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -70,11 +74,11 @@ caps.handback.revision: 19
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   
-#### 인덱스 열을 수정하려면  
+#### <a name="to-modify-index-columns"></a>인덱스 열을 수정하려면  
   
 1.  인덱스 열을 추가 또는 제거하거나 그 위치를 변경하려면 인덱스를 삭제하고 다시 만들어야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [INDEXPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
@@ -84,3 +88,4 @@ caps.handback.revision: 19
  [인덱스 이름 바꾸기](../../relational-databases/indexes/rename-indexes.md)  
   
   
+

@@ -1,33 +1,37 @@
 ---
-title: "Transact-SQL 코드 단계별 실행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Transact-SQL 디버거, 디버깅 코드"
-  - "Transact-SQL 디버거, 프로시저 단위 실행"
-  - "Transact-SQL 디버거, 프로시저 나가기"
-  - "Transact-SQL 디버거, 한 단계씩 코드 실행"
+title: "Transact-SQL 코드 단계별 실행| Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transact-SQL debugger, debugging code
+- Transact-SQL debugger, step over
+- Transact-SQL debugger, step out
+- Transact-SQL debugger, step into
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 68bc53fbfbe4db76e44042936642ad8541784b36
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transact-SQL 코드 단계별 실행
+# <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기 창에서 실행되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 문을 제어할 수 있습니다. 개별 문에서 디버거를 일시 중지한 다음 해당 지점에서의 코드 요소 상태를 볼 수 있습니다.  
   
-## 중단점  
- 중단점은 디버거에게 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하라는 신호를 보냅니다. 중단점에 대한 자세한 내용은 Transact-SQL 중단점 사용을 참조하십시오.  
+## <a name="breakpoints"></a>중단점  
+ 중단점은 디버거에게 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 실행을 일시 중지하라는 신호를 보냅니다. 중단점에 대한 자세한 내용은 [Transact-SQL 중단점](../../relational-databases/scripting/transact-sql-breakpoints.md)을 참조하세요.  
   
-## 문 실행 제어  
+## <a name="controlling-statement-execution"></a>문 실행 제어  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드의 현재 문에서 실행하기 위해 다음 옵션을 지정할 수 있습니다.  
   
 -   다음 중단점까지 실행합니다.  
@@ -56,7 +60,7 @@ caps.handback.revision: 18
 |모듈 프로시저를 나갑니다.|**디버그** 메뉴에서 **프로시저 나가기** 를 클릭합니다.<br /><br /> **디버그** 도구 모음에서 **프로시저 나가기** 단추를 클릭합니다.<br /><br /> Shift+F11을 누릅니다.|  
 |현재 커서 위치까지 실행합니다.|쿼리 편집기 창에서 마우스 오른쪽을 클릭한 다음 **커서까지 실행**을 클릭합니다.<br /><br /> Ctrl+F10을 누릅니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL 디버거 정보](../../relational-databases/scripting/transact-sql-debugger-information.md)  
   
   

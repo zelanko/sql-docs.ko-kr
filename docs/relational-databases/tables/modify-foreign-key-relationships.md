@@ -1,28 +1,32 @@
 ---
-title: "외래 키 관계 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vdtsql.chm:65538"
-  - "vdt.ppg.relationships"
-helpviewer_keywords: 
-  - "외래 키 [SQL Server], 수정"
-  - "외래 키 수정"
+title: "외래 키 관계 수정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vdtsql.chm:65538
+- vdt.ppg.relationships
+helpviewer_keywords:
+- foreign keys [SQL Server], modifying
+- modifying foreign keys
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d938937ff7d4009ec874ebc9bbd33b2e87960def
+ms.lasthandoff: 04/11/2017
+
 ---
-# 외래 키 관계 수정
+# <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 관계의 외래 키 측을 수정할 수 있습니다. 테이블의 외래 키를 수정하면 주 키 테이블의 열과 관련된 열이 변경됩니다.  
@@ -59,7 +63,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 외래 키를 수정하려면  
+#### <a name="to-modify-a-foreign-key"></a>외래 키를 수정하려면  
   
 1.  **개체 탐색기**에서 외래 키를 포함하는 테이블을 확장하고 **키**를 확장합니다.  
   
@@ -77,9 +81,9 @@ caps.handback.revision: 20
      **선택한 관계** 목록에서 선택한 관계를 삭제합니다. 관계 추가를 취소하려면 이 단추를 사용하여 관계를 제거합니다.  
   
      **일반 범주**  
-     확장하여 **만들거나 다시 활성화할 때 기존 데이터 검사**와 **테이블 및 열 사양**을 표시합니다.  
+     확장하여 **만들거나 다시 활성화할 때 기존 데이터 검사** 와 **테이블 및 열 사양**을 표시합니다.  
   
-     **만들거나 다시 활성화할 때 기존 데이터 검사**  
+     **Check Existing Data on Creation or Re-Enabling**  
      제약 조건을 만들거나 다시 활성화하기 전부터 테이블에 있던 모든 데이터를 제약 조건에 대해 검사합니다.  
   
      **테이블 및 열 사양 범주**  
@@ -104,19 +108,19 @@ caps.handback.revision: 20
      관계의 이름을 표시합니다. 새 관계를 만들면 **테이블 디자이너**의 활성 창에 있는 테이블을 기반으로 한 기본 이름이 새 관계에 지정됩니다. 언제든지 이름을 변경할 수 있습니다.  
   
      **설명**  
-     관계에 대해 설명합니다. 자세한 설명을 기록하려면 **설명**을 클릭한 다음 속성 필드의 오른쪽에 있는 줄임표**(...)**를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
+     관계에 대해 설명합니다. 자세한 설명을 기록하려면 **설명** 을 클릭한 다음 속성 필드의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 이렇게 하면 텍스트를 쓸 수 있는 더 큰 영역이 제공됩니다.  
   
      **테이블 디자이너 범주**  
-     확장하여 **만들거나 다시 활성화할 때 기존 데이터 검사**와 **복제에 적용**에 대한 정보를 표시합니다.  
+     확장하여 **만들거나 다시 활성화할 때 기존 데이터 검사** 와 **복제에 적용**에 대한 정보를 표시합니다.  
   
-     **복제에 적용**  
+     **Enforce For Replication**  
      복제 에이전트가 이 테이블에서 삽입, 업데이트 또는 삭제를 수행할 때 제약 조건을 적용할지 여부를 나타냅니다.  
   
      **외래 키 제약 조건 적용**  
      관계를 맺고 있는 열의 데이터를 변경할 때 외래 키 관계의 무결성 제약 조건을 위반하게 되는 경우 이러한 데이터를 변경할 수 있는지 여부를 지정합니다. 이러한 변경을 허용하지 않으려면 **예** 를 선택하고, 이를 허용하려면 **아니요** 를 선택합니다.  
   
      **INSERT 및 UPDATE 사양 범주**  
-     확장하여 관계의 **삭제 규칙** 및 **업데이트 규칙**에 대한 정보를 표시합니다.  
+     확장하여 관계의 **삭제 규칙** 및 **업데이트 규칙** 에 대한 정보를 표시합니다.  
   
      **삭제 규칙**  
      외래 키 관계를 맺고 있는 데이터가 포함된 행을 사용자가 삭제하려 할 때 적용할 결과를 지정합니다.  
@@ -145,6 +149,6 @@ caps.handback.revision: 20
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  **외래 키를 수정하려면**  
   
- Transact-SQL을 사용하여 FOREIGN KEY 제약 조건을 수정하려면 먼저 기존 FOREIGN KEY 제약 조건을 삭제하고 새로운 정의를 사용하여 다시 만들어야 합니다. 자세한 내용은 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 및 [Create Foreign Key Relationships](../../relational-databases/tables/외래-키-관계-만들기.md)를 참조하세요.  
+ Transact-SQL을 사용하여 FOREIGN KEY 제약 조건을 수정하려면 먼저 기존 FOREIGN KEY 제약 조건을 삭제하고 새로운 정의를 사용하여 다시 만들어야 합니다. 자세한 내용은 [Delete Foreign Key Relationships](../../relational-databases/tables/delete-foreign-key-relationships.md) 및 [Create Foreign Key Relationships](../../relational-databases/tables/create-foreign-key-relationships.md)를 참조하세요.  
   
 ###  <a name="TsqlExample"></a>  

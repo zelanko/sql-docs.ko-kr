@@ -1,22 +1,26 @@
 ---
-title: "메모리 액세스에 최적화된 테이블의 복원 및 복구 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블의 복원 및 복구 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 caps.latest.revision: 10
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56e6ac814b90fdd38f21be32f506846e542be977
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블의 복원 및 복구
+# <a name="restore-and-recovery-of-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 복원 및 복구
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 복구하거나 복원하기 위한 기본 메커니즘은 디스크 기반 테이블만 있는 데이터베이스와 비슷합니다. 하지만 디스크 기반 테이블과 달리, 메모리 액세스에 최적화된 테이블은 먼저 메모리에 로드해야만 사용자가 데이터베이스에 액세스할 수 있습니다. 따라서 데이터베이스 복구에 새로운 단계가 추가됩니다.  
@@ -31,7 +35,7 @@ caps.handback.revision: 10
   
 -   다시 실행해야 할 로그의 활성 부분에 있는 로그 레코드의 양입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다시 시작되면 각 데이터베이스가 다음 세 단계로 구성된 복구 단계를 거칩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 시작되면 각 데이터베이스가 다음 세 단계로 구성된 복구 단계를 거칩니다.  
   
 1.  분석 단계. 이 단계 중에는 커밋된 트랜잭션과 커밋되지 않은 트랜잭션을 감지하기 위한 패스가 활성 트랜잭션 로그에 작성됩니다. 메모리 내 OLTP 엔진은 로드할 검사점을 식별하고 시스템 테이블 로그 항목을 미리 로드합니다. 또한 일부 파일 할당 로그 레코드도 처리합니다.  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 10
   
 -   데이터 파일 스트리밍.  델타 맵 필터가 생성되면 논리적 CPU와 같은 수의 스레드를 사용하여 데이터 파일을 읽습니다. 데이터 파일을 읽는 각 스레드는 데이터 행을 읽고 연결된 델타 맵을 확인한 다음 이 행이 삭제됨으로 표시되지 않은 경우에만 테이블에 행을 삽입합니다. 복구의 이 부분은 아래 설명과 같이 일부 경우에 CPU 바인딩될 수 있습니다.  
   
- ![메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "메모리 액세스에 최적화된 테이블")  
+ ![메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/media/memory-optimized-tables.gif "Memory-optimized tables.")  
   
  메모리 액세스에 최적화된 테이블은 일반적으로 I/O 속도로 메모리에 로드할 수 있지만 데이터 행을 메모리에 로드하는 것이 더 느린 경우가 있습니다. 구체적인 경우는 다음과 같습니다.  
   
@@ -59,7 +63,7 @@ caps.handback.revision: 10
   
 -   하나 이상의 비클러스터형 인덱스가 있는 대규모 메모리 액세스에 최적화된 테이블의 경우 생성 시간에 버킷 수가 조정되는 해시 인덱스와는 달리 비클러스터형 인덱스가 동적으로 증가하여 결과적으로 CPU 사용률이 높아집니다.  
   
-## 참고 항목  
- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

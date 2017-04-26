@@ -1,24 +1,28 @@
 ---
-title: "FileTable의 필수 구성 요소를 사용하도록 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], 필수 구성 요소"
+title: "FileTable의 필수 구성 요소를 사용하도록 설정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], prerequisites
 ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed35c6e65d3c9670ddb59f352451adfde6c37e07
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable의 필수 구성 요소를 사용하도록 설정
+# <a name="enable-the-prerequisites-for-filetable"></a>FileTable의 필수 구성 요소를 사용하도록 설정
   FileTable을 만들고 사용하기 위한 필수 구성 요소를 사용하도록 설정하는 방법에 대해 설명합니다.  
   
 ##  <a name="EnablePrereq"></a> FileTable의 필수 구성 요소를 사용하도록 설정  
@@ -42,7 +46,7 @@ caps.handback.revision: 25
 ###  <a name="HowToFilestream"></a> 방법: 인스턴스 수준에서 FILESTREAM을 사용하도록 설정  
  FILESTREAM을 사용하도록 설정하는 방법은 [FILESTREAM 사용 및 구성](../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   
- **sp_configure**를 호출하여 인스턴스 수준에서 FILESTREAM을 사용하도록 설정하려면 filestream_access_level 옵션을 2로 설정해야 합니다. 자세한 내용은 [FILESTREAM 액세스 수준 서버 구성 옵션](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.  
+ **sp_configure** 를 호출하여 인스턴스 수준에서 FILESTREAM을 사용하도록 설정하려면 filestream_access_level 옵션을 2로 설정해야 합니다. 자세한 내용은 [FILESTREAM 액세스 수준 서버 구성 옵션](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md)을 참조하세요.  
   
 ###  <a name="firewall"></a> 방법: 방화벽을 통해 FILESTREAM 허용  
  방화벽을 통해 FILESTREAM을 허용하는 방법은 [Configure a Firewall for FILESTREAM Access](../../relational-databases/blob/configure-a-firewall-for-filestream-access.md)을 참조하세요.  
@@ -116,7 +120,7 @@ GO
     GO  
     ```  
   
--   **데이터베이스를 복원할 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) 문을 호출합니다.  
+-   **데이터베이스를 복원할 경우** **DIRECTORY_NAME** FILESTREAM 옵션을 사용하여 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 문을 호출합니다.  
   
     ```tsql  
     RESTORE DATABASE database_name  
@@ -138,13 +142,13 @@ GO
   
 ###  <a name="ReqDirectory"></a> 데이터베이스 수준 디렉터리에 대한 요구 사항 및 제한 사항  
   
--   **CREATE DATABASE** 또는 **ALTER DATABASE**를 호출할 때 옵션으로 **DIRECTORY_NAME**을 설정할 수 있습니다. **DIRECTORY_NAME**의 값을 지정하지 않으면 디렉터리 이름은 null로 유지됩니다. 그러나 데이터베이스 수준에서 **DIRECTORY_NAME**의 값을 지정하기 전까지는 데이터베이스에 FileTable을 만들 수 없습니다.  
+-   **CREATE DATABASE** 또는 **ALTER DATABASE** 를 호출할 때 옵션으로 **DIRECTORY_NAME**을 설정할 수 있습니다. **DIRECTORY_NAME**의 값을 지정하지 않으면 디렉터리 이름은 null로 유지됩니다. 그러나 데이터베이스 수준에서 **DIRECTORY_NAME** 의 값을 지정하기 전까지는 데이터베이스에 FileTable을 만들 수 없습니다.  
   
 -   제공하는 디렉터리 이름은 올바른 디렉터리 이름에 대한 파일 시스템 요구 사항을 따라야 합니다.  
   
--   데이터베이스에 FileTable이 포함되어 있으면 **DIRECTORY_NAME**을 다시 null 값으로 설정할 수 없습니다.  
+-   데이터베이스에 FileTable이 포함되어 있으면 **DIRECTORY_NAME** 을 다시 null 값으로 설정할 수 없습니다.  
   
--   데이터베이스를 연결하거나 복원할 때 대상 인스턴스에 이미 있는 **DIRECTORY_NAME** 값이 새 데이터베이스에 있으면 작업이 실패합니다. **CREATE DATABASE FOR ATTACH** 또는 **RESTORE DATABASE**를 호출할 때 **DIRECTORY_NAME**에 고유한 값을 지정해야 합니다.  
+-   데이터베이스를 연결하거나 복원할 때 대상 인스턴스에 이미 있는 **DIRECTORY_NAME** 값이 새 데이터베이스에 있으면 작업이 실패합니다. **CREATE DATABASE FOR ATTACH** 또는 **RESTORE DATABASE** 를 호출할 때 **DIRECTORY_NAME**에 고유한 값을 지정해야 합니다.  
   
 -   기존 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 경우 **DIRECTORY_NAME** 값은 null입니다.  
   

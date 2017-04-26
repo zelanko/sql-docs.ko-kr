@@ -1,33 +1,37 @@
 ---
-title: "뷰 정보 보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.viewproperties.general.f1"
-helpviewer_keywords: 
-  - "뷰 [SQL Server], 상태 정보"
-  - "메타데이터 [SQL Server], 뷰"
-  - "종속성 [SQL Server], 뷰"
-  - "뷰 정보 표시"
-  - "뷰 [SQL Server], 메타데이터"
-  - "뷰 정보 보기"
-  - "상태 정보 [SQL Server], 뷰"
-  - "뷰 종속성"
+title: "뷰 정보 보기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.viewproperties.general.f1
+helpviewer_keywords:
+- views [SQL Server], status information
+- metadata [SQL Server], views
+- dependencies [SQL Server], views
+- displaying view information
+- views [SQL Server], metadata
+- viewing view information
+- status information [SQL Server], views
+- view dependencies
 ms.assetid: 05a73e33-8f85-4fb6-80c1-1b659e753403
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2a981d28720713387dd5b593f037662b9b6b654
+ms.lasthandoff: 04/11/2017
+
 ---
-# 뷰 정보 보기
+# <a name="get-information-about-a-view"></a>뷰 정보 보기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -50,11 +54,11 @@ caps.handback.revision: 30
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> 사용 권한  
- `sp_helptext` 를 사용하여 뷰의 정의를 반환하려면 **공용** 역할의 멤버여야 합니다. `sys.sql_expression_dependencies`를 사용하여 뷰의 모든 종속성을 찾으려면 데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 `sys.sql_expression_dependencies`에 대한 SELECT 권한이 있어야 합니다. SELECT OBJECT_DEFINITION에 반환되는 정의와 같은 시스템 개체 정의는 모두에게 표시됩니다.  
+ `sp_helptext` 를 사용하여 뷰의 정의를 반환하려면 **공용** 역할의 멤버여야 합니다. `sys.sql_expression_dependencies` 를 사용하여 뷰의 모든 종속성을 찾으려면 데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 `sys.sql_expression_dependencies` 에 대한 SELECT 권한이 있어야 합니다. SELECT OBJECT_DEFINITION에 반환되는 정의와 같은 시스템 개체 정의는 모두에게 표시됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 개체 탐색기를 사용하여 뷰 속성 가져오기  
+#### <a name="get-view-properties-by-using-object-explorer"></a>개체 탐색기를 사용하여 뷰 속성 가져오기  
   
 1.  **개체 탐색기**에서 속성을 볼 뷰가 포함된 데이터베이스 옆의 더하기 기호를 클릭한 다음 더하기 기호를 클릭하여 **뷰** 폴더를 확장합니다.  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 30
      **스키마 바운드**  
      뷰가 스키마 바운드 개체인지 여부를 나타냅니다. 사용 가능한 값은 True와 False입니다. 스키마 바운드 뷰에 대한 자세한 내용은 [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)의 SCHEMABINDING 부분을 참조하세요.  
   
-#### 뷰 디자이너 도구를 사용하여 뷰 속성 가져오기  
+#### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>뷰 디자이너 도구를 사용하여 뷰 속성 가져오기  
   
 1.  **개체 탐색기**에서 속성을 볼 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 폴더를 확장합니다.  
   
@@ -136,21 +140,21 @@ caps.handback.revision: 30
      선택한 뷰에서 모든 열이 반환되는지 여부를 표시합니다. 이 옵션은 뷰가 만들어질 때 설정됩니다.  
   
      **SQL 주석**  
-     SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표**(...)**를 클릭합니다. 뷰의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다.  
+     SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집하려면 설명을 클릭한 다음 속성의 오른쪽에 있는 줄임표 **(...)** 를 클릭합니다. 뷰의 사용자나 사용 시기 등과 같은 정보를 주석에 포함할 수 있습니다.  
   
      **Top 사양**  
-     확장하면 **상위**, **식**, **백분율** 및 **동률** 속성이 표시됩니다.  
+     확장하면 **상위**, **식**, **백분율**및 **동률** 속성이 표시됩니다.  
   
      **(Top)**  
      결과 집합에 처음 n개 행 또는 처음 n%에 해당하는 행만 반환하는 TOP 절이 뷰에 포함되도록 지정합니다. 기본값은 뷰가 결과 집합에서 처음 10개 행을 반환하는 것입니다. 이 옵션은 반환할 행 수를 변경하거나 백분율을 다르게 지정하려는 경우에 사용합니다.  
   
      **식**  
-     뷰가 반환할 백분율(**백분율**이 **예**로 설정된 경우) 또는 레코드(**백분율**이 **아니요**로 설정된 경우)를 표시합니다.  
+     뷰가 반환할 백분율( **백분율** 이 **예**로 설정된 경우) 또는 레코드( **백분율** 이 **아니요**로 설정된 경우)를 표시합니다.  
   
      **백분율**  
      결과 집합에서 처음 n%에 해당하는 행만 반환하는 **TOP** 절이 쿼리에 포함되도록 지정합니다.  
   
-     **With Ties**  
+     **동률**  
      뷰에 **WITH TIES** 절이 포함되도록 지정합니다. **WITH TIES** 는 백분율을 기반으로 하는 **TOP** 절 및 **ORDER BY** 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율이 나뉘는 위치가 **ORDER BY** 절에서 동일한 값을 가진 행 집합의 중간에 놓이는 경우 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다.  
   
      **업데이트 사양**  
@@ -164,19 +168,19 @@ caps.handback.revision: 30
      **CHECK 옵션**  
      이 뷰를 열고 **결과** 창을 수정하는 경우 추가되거나 수정된 데이터가 뷰 정의의 **WHERE** 절을 충족하는지 데이터 원본에서 확인하도록 지시합니다. 수정 내용이 **WHERE** 절을 충족하지 않는 경우 자세한 정보와 함께 오류가 표시됩니다.  
   
-#### 뷰의 종속성을 가져오려면  
+#### <a name="to-get-dependencies-on-the-view"></a>뷰의 종속성을 가져오려면  
   
 1.  **개체 탐색기**에서 속성을 볼 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 폴더를 확장합니다.  
   
 2.  속성을 볼 뷰를 마우스 오른쪽 단추로 클릭하고 **종속성 보기**를 선택합니다.  
   
-3.  **[뷰 이름]에 종속된 개체**를 선택하여 뷰를 참조하는 개체를 표시합니다.  
+3.  **[뷰 이름]에 종속된 개체** 를 선택하여 뷰를 참조하는 개체를 표시합니다.  
   
-4.  **[뷰 이름]이(가) 종속된 개체**를 선택하여 뷰가 참조하는 개체를 표시합니다.  
+4.  **[뷰 이름]이(가) 종속된 개체** 를 선택하여 뷰가 참조하는 개체를 표시합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 뷰의 정의 및 속성을 가져오려면  
+#### <a name="to-get-the-definition-and-properties-of-a-view"></a>뷰의 정의 및 속성을 가져오려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 30
   
  자세한 내용은 [sys.sql_modules&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), [OBJECT_DEFINITION&#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md) 및 [sp_helptext&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)를 참조하세요.  
   
-#### 뷰의 종속성을 가져오려면  
+#### <a name="to-get-the-dependencies-of-a-view"></a>뷰의 종속성을 가져오려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

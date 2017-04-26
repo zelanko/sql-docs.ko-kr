@@ -1,1 +1,1 @@
-\<Token xmlns:xlink="http://www.w3.org/1999/xlink">SQL Server Mobile Report Publisher</Token>
+\<Token xmlns:xlink="http://www.w3.org/1999/xlink">SQL Server 모바일 보고서 게시자</Token>

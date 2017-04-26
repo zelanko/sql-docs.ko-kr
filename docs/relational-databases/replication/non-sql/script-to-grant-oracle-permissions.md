@@ -1,30 +1,34 @@
 ---
-title: "Oracle 권한 부여 스크립트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Oracle 게시 [SQL Server 복제], 권한 부여 스크립트"
+title: "Oracle 권한 부여 스크립트 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Oracle publishing [SQL Server replication], script to grant permissions
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 caps.latest.revision: 37
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dd6d7d2d41813cd3a6748aa6e8bb31e2a09363a7
+ms.lasthandoff: 04/11/2017
+
 ---
-# Oracle 권한 부여 스크립트
-  이 항목에서 제공된 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제를 사용하여 데이터를 게시할 Oracle 데이터베이스를 구성할 때 사용됩니다. 설치 후이 스크립트는 다음 디렉터리에서 사용할 수 있는: *\< 드라이브>*:\\files\microsoft SQL Server\\*\< 인스턴스 이름>*\MSSQL\Install\oracleadmin.sql 합니다. Oracle 데이터베이스를 구성 하는 방법에 대 한 자세한 내용은 참조 [Oracle 게시자를 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)합니다.  
+# <a name="script-to-grant-oracle-permissions"></a>Oracle 권한 부여 스크립트
+  이 항목에서 제공된 스크립트는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제를 사용하여 데이터를 게시할 Oracle 데이터베이스를 구성할 때 사용됩니다. 이 스크립트는 설치 후 *\<드라이브>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql 디렉터리에서도 사용할 수 있습니다. Oracle 데이터베이스 구성에 대한 자세한 내용은 [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
   
 > [!NOTE]  
 >  이 스크립트에는 트랜잭션 복제에 사용되는 트리거에 필요한 `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`문이 포함되어 있습니다. 스냅숏 복제만 사용하려면 스크립트에서 이 줄을 제거하십시오.  
   
- **Oracle SQL 스크립트를 실행 하려면\*Plus 유틸리티**  
+ **Oracle SQL\*Plus 유틸리티에서 스크립트를 실행하려면**  
   
 1.  SQL Server 배포자에서 명령 프롬프트 창을 엽니다.  
   
@@ -34,7 +38,7 @@ caps.handback.revision: 37
     sqlplus system/P@$$W0rd@orcl @"c:\Program Files\Microsoft SQL Server\<InstanceName>\MSSQL\Install\oracleadmin.sql"  
     ```  
   
-     이 예제에서는 기본 제공 Oracle 계정 **시스템** "orcl"의 네트워크 이름 사용 하 여 Oracle 데이터베이스에 연결 하는 데 사용 됩니다.  
+     이 예제에서는 네트워크 이름 "orcl"을 사용하여 Oracle 데이터베이스에 연결하기 위해 기본 제공 Oracle 계정 **system** 이 사용됩니다.  
   
 3.  메시지가 표시되면 사용자 이름, 사용자 암호 및 기본 테이블 공간을 지정합니다.  
   
@@ -123,7 +127,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Oracle 게시자 구성](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

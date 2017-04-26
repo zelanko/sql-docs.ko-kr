@@ -1,25 +1,29 @@
 ---
-title: "와일드카드 구성 요소 및 콘텐츠 유효성 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "와일드카드 구성 요소 [XML]"
-  - "콘텐츠 유효성 검사 [XML]"
+title: "와일드카드 구성 요소 및 콘텐츠 유효성 검사 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- wildcard components [XML]
+- content validation [XML]
 ms.assetid: ffa7d974-3645-446c-8425-f0b22b6b060a
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 와일드카드 구성 요소 및 콘텐츠 유효성 검사
+# <a name="wildcard-components-and-content-validation"></a>와일드카드 구성 요소 및 콘텐츠 유효성 검사
   와일드카드 구성 요소는 콘텐츠 모델에 나타나는 형식의 유연성을 향상시키는 데 사용됩니다. 이러한 구성 요소는 XSD 언어에서 다음과 같은 방식으로 지원됩니다.  
   
 -   요소 와일드카드 구성 요소: 이러한 구성 요소는 **\<xsd:any>** 요소로 표시됩니다.  
@@ -34,7 +38,7 @@ caps.handback.revision: 13
   
 -   **lax** 값은 스키마 정의가 사용 가능한 요소와 특성에 대해서만 유효성을 검사하도록 지정합니다.  
   
-## lax 유효성 검사 및 xs:anyType 요소  
+## <a name="lax-validation-and-xsanytype-elements"></a>lax 유효성 검사 및 xs:anyType 요소  
  XML 스키마 사양에서는 **anyType** 유형의 요소에 대해 **lax** 유효성 검사를 실행합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 lax 유효성 검사를 지원하지 않았으므로 **anyType**요소에 엄격한 유효성 검사가 적용되었습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 lax 유효성 검사가 지원되므로 이를 통해 **anyType** 유형 요소의 콘텐츠에 대한 유효성이 검사됩니다.  
   
  다음 예에서는 lax 유효성 검사를 보여 줍니다. 스키마 요소 `e` 는 **anyType** 유형 중 하나입니다. 이 예에서는 형식화된 **xml** 변수를 만들고 **anyType** 유형 요소의 lax 유효성 검사에 대해 보여 줍니다.  
@@ -66,7 +70,7 @@ SET @var = '<e xmlns="http://ns"><a>1</a><c>Wrong</c><b>data</b></e>'
 GO  
 ```  
   
- 다음 예에서 `<a>` 요소의 정의는 문자열 값을 사용할 수 없기 때문에 XML 인스턴스가 거부됩니다.   
+ 다음 예에서 `<a>` 요소의 정의는 문자열 값을 사용할 수 없기 때문에 XML 인스턴스가 거부됩니다.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -75,7 +79,7 @@ SELECT @var
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   

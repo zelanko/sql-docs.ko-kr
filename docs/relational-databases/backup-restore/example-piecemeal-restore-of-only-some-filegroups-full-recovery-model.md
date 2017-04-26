@@ -1,39 +1,43 @@
 ---
-title: "예제: 일부 파일 그룹만 증분 복원(전체 복구 모델) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 복구 모델 [SQL Server], 복원 예제"
-  - "증분 복원 [SQL Server], 전체 복구 모델"
-  - "복원 시퀀스 [SQL Server], 증분"
+title: "예제: 일부 파일 그룹만 증분 복원(전체 복구 모델) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78208b2b401a3acaf194dc1a13e0df8a56457557
+ms.lasthandoff: 04/11/2017
+
 ---
-# 예제: 일부 파일 그룹만 증분 복원(전체 복구 모델)
+# <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>예제: 일부 파일 그룹만 증분 복원(전체 복구 모델)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 여러 개의 파일 또는 파일 그룹이 있는 전체 복구 모델에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 관련된 내용을 다룹니다.  
   
  증분 복원 시퀀스는 주 파일 그룹에서 시작하여 모든 읽기/쓰기 파일 그룹, 보조 파일 그룹의 순서로 파일 그룹 수준에서 데이터베이스를 복원하고 복구합니다.  
   
- 이 예에서는 전체 복구 모델을 사용하는 `adb`라는 데이터베이스에 3개의 파일 그룹이 포함되어 있습니다. 파일 그룹 `A`는 읽기/쓰기가 가능하고 파일 그룹 `B`와 파일 그룹 `C`는 읽기 전용입니다. 처음에는 모든 파일 그룹이 온라인입니다.  
+ 이 예에서는 전체 복구 모델을 사용하는 `adb`라는 데이터베이스에 3개의 파일 그룹이 포함되어 있습니다. 파일 그룹 `A` 는 읽기/쓰기가 가능하고 파일 그룹 `B` 와 파일 그룹 `C` 는 읽기 전용입니다. 처음에는 모든 파일 그룹이 온라인입니다.  
   
  데이터베이스 `B` 의 주 파일 그룹 및 파일 그룹 `adb` 가 손상된 것으로 나타납니다. 주 파일 그룹은 크기가 작으므로 빠르게 복원할 수 있습니다. 데이터베이스 관리자는 증분 복원 시퀀스를 사용하여 이들을 복원하기로 결정합니다. 우선 주 파일 그룹과 다음 트랜잭션 로그를 복원하고 데이터베이스를 복구합니다.  
   
  손상되지 않은 파일 그룹 `A` 와 `C` 에는 중요한 데이터가 들어 있습니다. 그러므로 가능한 빨리 온라인 상태로 만들기 위해 다음으로 이들을 복구합니다. 마지막으로 손상된 보조 파일 그룹 `B`를 복원하고 복구합니다.  
   
-## 복원 시퀀스  
+## <a name="restore-sequences"></a>복원 시퀀스  
   
 > [!NOTE]  
 >  온라인 복원 시퀀스의 구문은 오프라인 복원 시퀀스의 구문과 동일합니다.  
@@ -71,10 +75,10 @@ caps.handback.revision: 31
   
 4.  파일 그룹 `B`를 온라인 복원합니다.  
   
-     파일 그룹 `B`의 파일은 이후 언제든지 복원할 수 있습니다.  
+     파일 그룹 `B` 의 파일은 이후 언제든지 복원할 수 있습니다.  
   
     > [!NOTE]  
-    >  파일 그룹 `B`는 파일 그룹이 읽기 전용이 된 후 백업했으므로 이러한 파일을 롤포워드할 필요가 없습니다.  
+    >  파일 그룹 `B` 는 파일 그룹이 읽기 전용이 된 후 백업했으므로 이러한 파일을 롤포워드할 필요가 없습니다.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
@@ -82,7 +86,7 @@ caps.handback.revision: 31
   
      이제 모든 파일 그룹이 온라인입니다.  
   
-## 추가 예  
+## <a name="additional-examples"></a>추가 예  
   
 -   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ caps.handback.revision: 31
   
 -   [예제: 읽기 전용 파일 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [온라인 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

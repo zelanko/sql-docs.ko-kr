@@ -1,36 +1,40 @@
 ---
-title: "SQL Server PowerShell 공급자에 인스턴스 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server PowerShell 공급자에 인스턴스 지정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9373de68-fd43-45f2-b9a6-149c96610aeb
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 514ea6e1125e1563f9afe16db4db87e5f17ee6c2
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server PowerShell 공급자에 인스턴스 지정
+# <a name="specify-instances-in-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자에 인스턴스 지정
   SQL Server PowerShell 공급자에 대해 지정되는 경로는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스와 해당 인스턴스가 실행 중인 컴퓨터를 식별해야 합니다. 컴퓨터와 인스턴스를 지정하는 구문은 SQL Server 식별자 규칙과 Windows PowerShell 경로 규칙을 모두 준수해야 합니다.  
   
-1.  **시작하기 전에:**  [제한 사항](#LimitationsRestrictions)  
+1.  **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions)  
   
-2.  **인스턴스를 지정하려면**  [예](#Examples)  
+2.  **To specify an instance:**  [Examples](#Examples)  
   
-## 시작하기 전에  
- SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  
+## <a name="before-you-begin"></a>시작하기 전에  
+ SQL Server 공급자 경로에서 SQLSERVER:\SQL 다음에 오는 첫 번째 노드는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터 이름입니다. 예를 들면 다음과 같습니다.  
   
 ```  
 SQLSERVER:\SQL\MyComputer  
 ```  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 동일한 컴퓨터에 Windows PowerShell을 실행하는 경우 컴퓨터 이름 대신 localhost 또는 (local)을 사용할 수 있습니다. localhost 또는 (로컬)을 사용하는 스크립트는 다른 컴퓨터 이름을 반영하도록 변경하지 않고도 모든 컴퓨터에서 실행할 수 있습니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스와 동일한 컴퓨터에 Windows PowerShell을 실행하는 경우 컴퓨터 이름 대신 localhost 또는 (local)을 사용할 수 있습니다. localhost 또는 (로컬)을 사용하는 스크립트는 다른 컴퓨터 이름을 반영하도록 변경하지 않고도 모든 컴퓨터에서 실행할 수 있습니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 실행 프로그램의 여러 인스턴스를 동일한 컴퓨터에서 실행할 수 있습니다. SQL Server 공급자 경로에서 컴퓨터 이름 다음에 오는 노드는 인스턴스를 식별합니다. 예를 들면 다음과 같습니다.  
   
@@ -74,7 +78,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [PowerShell의 SQL Server 식별자](../../relational-databases/scripting/sql-server-identifiers-in-powershell.md)   
  [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)   
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  

@@ -1,32 +1,36 @@
 ---
-title: "행 수준 보안 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/29/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "액세스 제어 조건자"
-  - "행 수준 보안"
-  - "보안 [SQL Server], 조건자 기반 액세스 제어"
-  - "행 수준 보안 설명됨"
-  - "조건자 기반 보안"
+title: "행 수준 보안 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/29/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- access control predicates
+- row level security
+- security [SQL Server], predicate based access control
+- row level security described
+- predicate based security
 ms.assetid: 7221fa4e-ca4a-4d5c-9f93-1b8a4af7b9e8
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0141c681779c12bf63162751f93dcd6495fb1a94
+ms.lasthandoff: 04/11/2017
+
 ---
-# 행 수준 보안
+# <a name="row-level-security"></a>행 수준 보안
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
+  ![행 수준 보안 그래픽](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
   
  행 수준 보안(RLS)을 통해 고객은 쿼리(예: 그룹 멤버십 또는 실행 컨텍스트)를 실행하는 사용자의 특징을 기반으로 데이터베이스 테이블의 행에 대한 액세스를 제어할 수 있습니다.  
   
@@ -36,30 +40,9 @@ caps.handback.revision: 47
   
  [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하고 [인라인 테이블 반환 함수](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)로서 만들어진 조건자에 의해 RLS를 구현합니다.  
   
-||  
-|-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]~[현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]\([이해하기](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))|  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([이해하기](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
   
-##  <a name="Top"></a> 항목 내용  
-  
--   [설명](#Description)  
-  
--   [사용 사례](#UseCases)  
-  
--   [사용 권한](#Permissions)  
-  
--   [최선의 구현 방법](#Best)  
-  
--   [보안 정보: 사이드 채널 공격](#SecNote)  
-  
--   [기능 간 호환성](#Limitations)  
-  
--   [코드 예제](#CodeExamples)  
-  
-    -   [1. 직접 연결된 사용자의 시나리오](#Typical)  
-  
-    -   [2. 중간 계층 응용 프로그램 시나리오](#MidTier)  
-  
+
 ##  <a name="Description"></a> 설명  
  RLS는 두 가지 유형의 보안 조건자를 지원합니다.  
   
@@ -69,7 +52,7 @@ caps.handback.revision: 47
   
  테이블의 행 수준 데이터에 대한 액세스는 인라인 테이블 반환 함수로 정의된 보안 조건자에 의해 제한됩니다. 그런 다음 함수가 호출되고 보안 정책에 의해 적용됩니다. 필터 조건자의 경우 결과 집합으로부터 행이 필터링된 응용 프로그램에 대한 표시가 없습니다. 모든 행이 필터링되었으면 null 집합이 반환됩니다. 차단 조건자의 경우 조건자를 위반하는 모든 작업은 오류와 함께 실패합니다.  
   
- 기본 테이블로부터 데이터를 읽는 동안 필터 조건이 적용되며, 모든 get 연산에 영향을 미칩니다. **SELECT**, **DELETE**(즉, 사용자가 필터링된 행을 삭제할 수 없음) 및 **UPDATE**(즉, 행이 이후 필터링되면서 업데이트될 수는 있어도 사용자가 필터링된 행을 업데이트할 수는 없음). 차단 조건자는 모든 쓰기 작업에 영향을 줍니다.  
+ 기본 테이블로부터 데이터를 읽는 동안 필터 조건이 적용되며, 모든 get 연산에 영향을 미칩니다. **SELECT**, **DELETE** (즉, 사용자가 필터링된 행을 삭제할 수 없음) 및 **UPDATE** (즉, 행이 이후 필터링되면서 업데이트될 수는 있어도 사용자가 필터링된 행을 업데이트할 수는 없음). 차단 조건자는 모든 쓰기 작업에 영향을 줍니다.  
   
 -   AFTER INSERT 및 AFTER UPDATE 조건자는 사용자가 조건자를 위반하는 값으로 행을 업데이트하는 것을 방지할 수 있습니다.  
   
@@ -107,7 +90,6 @@ caps.handback.revision: 47
   
 -   BULK INSERT를 포함하여 대량 API에 적용된 변경 내용은 없습니다. 따라서 일반적인 삽입 작업과 마찬가지로 차단 조건자 AFTER INSERT가 대량 삽입 작업에 적용됩니다.  
   
- [위쪽](#Top)  
   
 ##  <a name="UseCases"></a> 사용 사례  
  RLS 사용 방법에 대한 설계 예는 다음과 같습니다.  
@@ -122,7 +104,6 @@ caps.handback.revision: 47
   
  더 공식적인 용어로는, RLS는 조건자 기반 액세스 제어를 말합니다. 여기에는 유연하고, 중앙 집중적이며, 조건자 기반 평가가 있어 메타데이터 또는 관리자가 적절히 판단한 기타 기준을 고려할 수 있습니다. 조건자는 사용자 특성에 따라 사용자가 데이터에 적절하게 액세스하는지의 여부를 결정하는 기준으로 사용됩니다. 조건자 기반 액세스 제어를 사용하여 레이블 기반 액세스 제어를 구현할 수 있습니다.  
   
- [위쪽](#Top)  
   
 ##  <a name="Permissions"></a> 사용 권한  
  보안 정책을 만들거나, 변경하거나, 삭제하는 데에는 **ALTER ANY SECURITY POLICY** 권한이 필요합니다. 보안 정책을 만들거나 삭제하려면 스키마에 대한 **ALTER** 권한이 필요합니다.  
@@ -137,9 +118,8 @@ caps.handback.revision: 47
   
  보안 정책은 데이터베이스의 dbo 사용자를 포함한 모든 사용자에게 적용됩니다. Dbo 사용자는 보안 정책을 변경하거나 삭제할 수 있지만 해당 변경은 감사를 받을 수 있습니다. 높은 권한이 있는 사용자(예: sysadmin 또는 db_owner)가 문제를 해결하거나 데이터의 유효성을 검사하기 위해 모든 행을 볼 수 있어야 하는 경우 이를 허용하도록 보안 정책을 작성해야 합니다.  
   
- `SCHEMABINDING = OFF`를 사용하여 보안 정책을 만든 경우 대상 테이블을 쿼리하려면 조건자 함수에 대한 **SELECT** 또는 **EXECUTE** 권한과 조건자 함수 내에서 사용되는 추가 테이블, 뷰 또는 함수가 있어야 합니다. `SCHEMABINDING = ON`(기본값)을 사용하여 보안 정책을 만든 경우 사용자가 대상 테이블을 쿼리할 때 이러한 권한 검사는 무시됩니다.  
+ `SCHEMABINDING = OFF`를 사용하여 보안 정책을 만든 경우 대상 테이블을 쿼리하려면 조건자 함수에 대한  **SELECT** 또는 **EXECUTE** 권한과 조건자 함수 내에서 사용되는 추가 테이블, 뷰 또는 함수가 있어야 합니다. `SCHEMABINDING = ON` (기본값)을 사용하여 보안 정책을 만든 경우 사용자가 대상 테이블을 쿼리할 때 이러한 권한 검사는 무시됩니다.  
   
- [위쪽](#Top)  
   
 ##  <a name="Best"></a> 최선의 구현 방법  
   
@@ -162,30 +142,28 @@ caps.handback.revision: 47
 -   조건자 함수는 오류(예: 오버플로 또는 0으로 나누기)가 발생한 경우 **NULL**을 반환하는 산술 또는 집계 식을 사용하지 않아야 합니다. 이 동작은 [SET ANSI_WARNINGS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-warnings-transact-sql.md), [SET NUMERIC_ROUNDABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md) 및 [SET ARITHABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-arithabort-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
   
 -   조건자 함수는 연결된 문자열을 **NULL**과 비교하지 않아야 합니다. 이 동작은 [SET CONCAT_NULL_YIELDS_NULL&#40;Transact-SQL&#41;](../../t-sql/statements/set-concat-null-yields-null-transact-sql.md) 옵션의 영향을 받기 때문입니다.  
-  
- [위쪽](#Top)  
+   
   
 ##  <a name="SecNote"></a> 보안 정보: 사이드 채널 공격  
  **악의적인 보안 정책 관리자:** 중요한 열의 상단에 보안 정책을 만들 수 있는 권한과 인라인 테이블 반환 함수를 만들거나 변경할 수 있는 권한을 가지고, 데이터를 추론하기 위해 부채널 공격을 사용하도록 설계된 인라인 테이블 반환 함수를 악의적으로 만들어 데이터를 유출할 목적으로 테이블의 선택 권한을 가진 다른 사용자와 공모할 수 있는 악의적인 보안 정책 관리자를 관찰하는 것이 중요합니다. 이러한 공격에는 공모(또는 악의적인 사용자에게 부여된 과도한 권한)가 필요하고, 정책(스키마 바인딩을 중단하기 위해 조건자를 제거하는 데 권한 필요) 및 인라인 테이블 반환 함수를 여러 번 수정이 필요하며, 대상 테이블에서 select 문의 반복 실행이 필요합니다. 필요에 따라 권한을 제한하고 자주 변경되는 정책과 행 수준 보안과 관련된 인라인 테이블 반환 함수 등과 같은 의심스러운 활동을 모니터링하는 것을 매우 권장합니다.  
   
- **정교하게 만들어진 쿼리:** 정교하게 만들어진 쿼리를 통해 정보가 누출될 수 있습니다. 예를 들어, 악의적인 사용자가 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'`을(를) 통해 John Doe의 급료가 $100,000임을 알게 됩니다. 악의적인 사용자가 타인의 급여를 직접 쿼리하는 것을 방지하기 위해 보안 조건자가 있더라도, 해당 사용자는 쿼리가 0으로 나누기 예외를 반환할 때 알아낼 수 있습니다.  
-  
- [위쪽](#Top)  
+ **정교하게 만들어진 쿼리:** 정교하게 만들어진 쿼리를 통해 정보가 누출될 수 있습니다. 예를 들어, 악의적인 사용자가 `SELECT 1/(SALARY-100000) FROM PAYROLL WHERE NAME='John Doe'` 을(를) 통해 John Doe의 급료가 $100,000임을 알게 됩니다. 악의적인 사용자가 타인의 급여를 직접 쿼리하는 것을 방지하기 위해 보안 조건자가 있더라도, 해당 사용자는 쿼리가 0으로 나누기 예외를 반환할 때 알아낼 수 있습니다.  
+   
   
 ##  <a name="Limitations"></a> 기능 간 호환성  
  일반적으로 행 수준 보안은 기능 간에 예상대로 작동합니다. 그러나 몇 가지 예외가 있습니다. 이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 특정 다른 기능과 함께 행 수준 보안을 사용할 대의 몇 가지 주의 사항을 설명합니다.  
   
--   **DBCC SHOW_STATISTICS**는 필터링되지 않은 데이터에 대한 통계치를 보고하기 때문에 보안 정책에 의해 보호되더라도 정보가 누출될 수 있습니다. 따라서 행 수준 보안 정책이 적용되는 테이블에 대한 통계 개체를 보려면 테이블의 소유자이거나 sysadmin 고정 서버 역할, db_owner 고정 데이터베이스 역할 또는 db_ddladmin 고정 데이터베이스 역할의 멤버여야 합니다.  
+-   **DBCC SHOW_STATISTICS** 는 필터링되지 않은 데이터에 대한 통계치를 보고하기 때문에 보안 정책에 의해 보호되더라도 정보가 누출될 수 있습니다. 따라서 행 수준 보안 정책이 적용되는 테이블에 대한 통계 개체를 보려면 테이블의 소유자이거나 sysadmin 고정 서버 역할, db_owner 고정 데이터베이스 역할 또는 db_ddladmin 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 -   **Filestream** RLS는 Filestream과 호환되지 않습니다.  
   
 -   **Polybase** RLS는 Polybase와 호환되지 않습니다.  
   
--   **메모리 액세스에 최적화된 테이블** 메모리에 최적화된 테이블에서 보안 조건자로 사용되는 인라인 테이블 반환 함수는 `WITH NATIVE_COMPILATION` 옵션을 사용하여 정의해야 합니다. 이 옵션을 사용하면 메모리에 최적화된 테이블에서 지원되지 않는 언어 기능이 차단되며 만들 때 해당 오류가 발생합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)의 **메모리 액세스에 최적화된 테이블의 행 수준 보안** 섹션을 참조하세요.  
+-   **메모리 액세스에 최적화된 테이블**메모리에 최적화된 테이블에서 보안 조건자로 사용되는 인라인 테이블 반환 함수는 `WITH NATIVE_COMPILATION` 옵션을 사용하여 정의해야 합니다. 이 옵션을 사용하면 메모리에 최적화된 테이블에서 지원되지 않는 언어 기능이 차단되며 만들 때 해당 오류가 발생합니다. 자세한 내용은 **메모리 액세스에 최적화된 테이블 소개** 의 [메모리 액세스에 최적화된 테이블의 행 수준 보안](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)섹션을 참조하세요.  
   
 -   **인덱싱된 뷰** 일반적으로 보안 정책은 뷰를 기반으로 만들 수 있으며 뷰는 보안 정책에 의해 바인딩된 테이블을 기반으로 만들 수 있습니다. 그러나 인덱스를 통한 행 조회는 정책을 무시하기 때문에 보안 정책이 있는 테이블을 기반으로 인덱싱된 뷰를 만들 수는 없습니다.  
   
--   **변경 데이터 캡처** 변경 데이터 캡처는 테이블에 CDC를 사용하도록 설정할 때 지정된 "제어" 역할의 멤버인 사용자 또는 **db_owner**의 멤버로 필터링해야 하는 전체 행을 누출할 수 있습니다(참고: 모든 사용자가 변경 데이터에 액세스할 수 있도록 이를 명시적으로 **NULL**로 설정할 수 있음). 실제로 **db_owner** 및 이 제어 역할의 멤버는 테이블에 대한 보안 정책이 있는 경우에도 테이블의 모든 데이터 변경 내용을 볼 수 있습니다.  
+-   **변경 데이터 캡처** 변경 데이터 캡처는 테이블에 CDC를 사용하도록 설정할 때 지정된 "제어" 역할의 멤버인 사용자 또는 **db_owner** 의 멤버로 필터링해야 하는 전체 행을 누출할 수 있습니다(참고: 모든 사용자가 변경 데이터에 액세스할 수 있도록 이를 명시적으로 **NULL** 로 설정할 수 있음). 실제로 **db_owner** 및 이 제어 역할의 멤버는 테이블에 대한 보안 정책이 있는 경우에도 테이블의 모든 데이터 변경 내용을 볼 수 있습니다.  
   
 -   **변경 내용 추적** 변경 내용 추적은 **SELECT** 및 **VIEW CHANGE TRACKING** 권한이 있는 사용자로 필터링해야 하는 행의 기본 키를 누출할 수 있습니다. 실제 데이터 값은 누출되지 않습니다. 기본 키가 B인 행에 대해 열 A가 업데이트/삽입/삭제되었다는 사실만 누출됩니다. 이는 기본 키에 주민 등록 번호와 같은 기밀 요소가 포함된 경우 문제가 될 수 있습니다. 그러나 실제로 이 **CHANGETABLE** 은 최신 데이터를 가져오기 위해 거의 항상 원래 테이블과 조인됩니다.  
   
@@ -197,7 +175,6 @@ caps.handback.revision: 47
   
 -   **임시 테이블** 은 RLS와 호환됩니다. 그러나 현재 테이블의 보안 조건자는 기록 테이블에 자동으로 복제되지 않습니다. 현재 및 기록 테이블 모두에 보안 정책을 적용하려면 각 테이블에서 개별적으로 보안 조건자를 추가해야 합니다.  
   
- [위쪽](#Top)  
   
 ##  <a name="CodeExamples"></a> 예  
   
@@ -206,7 +183,7 @@ caps.handback.revision: 47
   
  서로 다른 액세스 기능을 보여주는 3개의 사용자 계정을 만듭니다.  
   
-```  
+```sql  
 CREATE USER Manager WITHOUT LOGIN;  
 CREATE USER Sales1 WITHOUT LOGIN;  
 CREATE USER Sales2 WITHOUT LOGIN;  
@@ -296,10 +273,9 @@ WITH (STATE = OFF);
   
  이제 Sales1 및 Sales2 사용자가 6 행 모두를 볼 수 있게 됩니다.  
   
- [위쪽](#Top)  
   
 ###  <a name="MidTier"></a> 2. 중간 계층 응용 프로그램을 통해 데이터베이스에 연결하는 사용자에 대한 시나리오  
- 이 예는 중간 계층 응용 프로그램이 응용 프로그램 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(응용 프로그램)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 응용 프로그램이 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md)에서 현재 응용 프로그램 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
+ 이 예는 중간 계층 응용 프로그램이 응용 프로그램 사용자(또는 테넌트)가 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자(응용 프로그램)을 공유하는 연결 필터링을 구현하는 방법을 보여줍니다. 데이터베이스에 연결한 후 응용 프로그램이 [SESSION_CONTEXT&#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) 에서 현재 응용 프로그램 사용자 ID를 설정하면 보안 정책이 이 ID에 표시되지 않아야 하는 행을 투명하게 필터링하고 사용자가 잘못된 사용자 ID에 대한 행을 삽입하지 못하도록 차단합니다. 다른 응용 프로그램은 변경하지 않아도 됩니다.  
   
  데이터를 보유하는 간단한 테이블을 만듭니다.  
   
@@ -335,7 +311,7 @@ GRANT SELECT, INSERT, UPDATE, DELETE ON Sales TO AppUser;
 DENY UPDATE ON Sales(AppUserId) TO AppUser;  
 ```  
   
- 행을 필터링하는 **SESSION_CONTEXT**에 저장된 응용 프로그램 사용자 ID를 사용할 새로운 스키마 및 조건자 함수를 만듭니다.  
+ 행을 필터링하는 **SESSION_CONTEXT** 에 저장된 응용 프로그램 사용자 ID를 사용할 새로운 스키마 및 조건자 함수를 만듭니다.  
   
 ```  
 CREATE SCHEMA Security;  
@@ -352,7 +328,7 @@ AS
 GO  
 ```  
   
- `Sales`에 대한 필터 조건자 및 차단 조건자로서 이 함수를 추가하는 보안 정책을 만듭니다. 차단 조건자에는 **AFTER INSERT**만 필요합니다. **BEFORE UPDATE** 및 **BEFORE DELETE**는 이미 필터링되었고 **AFTER UPDATE**는 이전에 설정된 열 권한으로 인해 `AppUserId` 열을 다른 값으로 업데이트할 수 없어 필요 없기 때문입니다.  
+ `Sales`에 대한 필터 조건자 및 차단 조건자로서 이 함수를 추가하는 보안 정책을 만듭니다. 차단 조건자에는 **AFTER INSERT**만 필요합니다. **BEFORE UPDATE** 및 **BEFORE DELETE** 는 이미 필터링되었고 **AFTER UPDATE** 는 이전에 설정된 열 권한으로 인해 `AppUserId` 열을 다른 값으로 업데이트할 수 없어 필요 없기 때문입니다.  
   
 ```  
 CREATE SECURITY POLICY Security.SalesFilter  
@@ -363,7 +339,7 @@ CREATE SECURITY POLICY Security.SalesFilter
     WITH (STATE = ON);  
 ```  
   
- 이제 **SESSION_CONTEXT**에서 다른 응용 프로그램 사용자 ID를 설정한 후 `Sales` 테이블에서 선택하여 연결 필터링을 시뮬레이트할 수 있습니다. 실제로 응용 프로그램은 연결을 연 후 **SESSION_CONTEXT**에서 현재 사용자 ID를 설정합니다.  
+ 이제 `Sales` SESSION_CONTEXT **에서 다른 응용 프로그램 사용자 ID를 설정한 후**테이블에서 선택하여 연결 필터링을 시뮬레이트할 수 있습니다. 실제로 응용 프로그램은 연결을 연 후 **SESSION_CONTEXT** 에서 현재 사용자 ID를 설정합니다.  
   
 ```  
 EXECUTE AS USER = 'AppUser';  
@@ -385,7 +361,7 @@ REVERT;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
  [ALTER SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY&#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   
@@ -397,3 +373,4 @@ GO
  [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)  
   
   
+

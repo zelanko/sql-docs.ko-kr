@@ -1,34 +1,38 @@
 ---
-title: "코드 감싸기 Transact-SQL 조각 삽입 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "코드 조각 [Transact-SQL], 코드 감싸기"
-  - "IntelliSense [SQL Server], 코드 감싸기 조각"
-  - "Transact-SQL 코드 조각, 코드 감싸기"
+title: "코드 감싸기 Transact-SQL 조각 삽입 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snippets [Transact-SQL], surround with
+- IntelliSense [SQL Server], surround with snippets
+- Transact-SQL snippets, surround with
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 852836ea43accda6af057b014abbc987f4f14299
+ms.lasthandoff: 04/11/2017
+
 ---
-# 코드 감싸기 Transact-SQL 조각 삽입
+# <a name="insert-surround-with-transact-sql-snippets"></a>코드 감싸기 Transact-SQL 조각 삽입
   코드 감싸기 조각은 일련의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 BEGIN, IF 또는 WHILE 블록으로 묶을 때 시작 지점으로 사용할 수 있는 템플릿입니다.  
   
-## 코드 감싸기 조각 삽입  
+## <a name="inserting-surround-with-snippets"></a>코드 감싸기 조각 삽입  
  코드 감싸기 조각은 바로 가기 키, **편집** 메뉴 및 상황에 맞는 메뉴의 세 가지 방법 중 하나로 시작할 수 있습니다.  
   
  코드 조각을 삽입한 후에는 올바른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 되도록 대체 텍스트를 변경해야 합니다. 자세한 내용은 [Transact-SQL 코드 조각 완성](../../relational-databases/scripting/complete-transact-sql-snippets.md)을 참조하세요.  
   
-#### 코드 감싸기 조각을 삽입하려면  
+#### <a name="to-insert-a-surround-with-snippet"></a>코드 감싸기 조각을 삽입하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 블록에 포함할 일련의 문을 선택합니다.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 6
   
 3.  마우스를 사용하거나 코드 조각 이름을 입력하고 Tab 키 또는 Enter 키를 눌러 목록에서 코드 조각(BEGIN, IF 또는 WHILE)의 이름을 선택합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL 코드 조각 삽입](../../relational-databases/scripting/insert-transact-sql-snippets.md)  
   
   

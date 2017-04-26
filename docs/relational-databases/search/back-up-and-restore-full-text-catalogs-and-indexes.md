@@ -1,40 +1,44 @@
 ---
-title: "전체 텍스트 카탈로그와 인덱스 백업 및 복원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 텍스트 인덱스 [SQL Server], 백업"
-  - "전체 텍스트 검색 [SQL Server], 백업 및 복원"
-  - "복구 [전체 텍스트 검색]"
-  - "백업 [SQL Server], 전체 텍스트 인덱스"
-  - "전체 텍스트 인덱스 [SQL Server], 복원"
-  - "복원 작업 [전체 텍스트 검색]"
+title: "전체 텍스트 카탈로그와 인덱스 백업 및 복원 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text indexes [SQL Server], backing up
+- full-text search [SQL Server], back up and restore
+- recovery [full-text search]
+- backups [SQL Server], full-text indexes
+- full-text indexes [SQL Server], restoring
+- restore operations [full-text search]
 ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 caps.latest.revision: 62
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 36c621b35e944fe536e3a2983113ba7586e6e461
+ms.lasthandoff: 04/11/2017
+
 ---
-# 전체 텍스트 카탈로그와 인덱스 백업 및 복원
+# <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>전체 텍스트 카탈로그와 인덱스 백업 및 복원
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 만든 전체 텍스트 인덱스를 백업 및 복원하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그는 논리적인 개념이며 파일 그룹에 상주하는 것은 아닙니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 카탈로그를 백업하려면 카탈로그에 속한 전체 텍스트 인덱스가 포함된 모든 파일 그룹을 식별해야 합니다. 그런 다음 해당 파일 그룹을 하나씩 백업해야 합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 업그레이드할 때 전체 텍스트 카탈로그를 가져올 수도 있습니다. 가져온 각 전체 텍스트 카탈로그는 고유한 파일 그룹에 있는 데이터베이스 파일입니다. 가져온 카탈로그를 백업하려면 해당 파일 그룹을 백업하기만 하면 됩니다. 자세한 내용은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 온라인 설명서의 [전체 텍스트 카탈로그 백업 및 복원](http://go.microsoft.com/fwlink/?LinkID=121052)을 참조하세요.  
+>  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 업그레이드할 때 전체 텍스트 카탈로그를 가져올 수도 있습니다. 가져온 각 전체 텍스트 카탈로그는 고유한 파일 그룹에 있는 데이터베이스 파일입니다. 가져온 카탈로그를 백업하려면 해당 파일 그룹을 백업하기만 하면 됩니다. 자세한 내용은 [온라인 설명서의](http://go.microsoft.com/fwlink/?LinkID=121052)전체 텍스트 카탈로그 백업 및 복원 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 을 참조하세요.  
   
 ##  <a name="backingup"></a> 전체 텍스트 카탈로그의 전체 텍스트 인덱스 백업  
   
 ###  <a name="Find_FTIs_of_a_Catalog"></a> 전체 텍스트 카탈로그에서 전체 텍스트 인덱스 찾기  
- [sys.fulltext_indexes](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) 및 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 카탈로그 뷰에서 열을 선택하는 다음과 같은 [SELECT](../../t-sql/queries/select-transact-sql.md) 문을 사용하여 전체 텍스트 인덱스의 속성을 검색할 수 있습니다.  
+ [sys.fulltext_indexes](../../t-sql/queries/select-transact-sql.md) 및 [sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md) 카탈로그 뷰에서 열을 선택하는 다음과 같은 [SELECT](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md) 문을 사용하여 전체 텍스트 인덱스의 속성을 검색할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -48,7 +52,6 @@ SELECT object_name(@TableID), i.is_enabled, i.change_tracking_state,
 GO  
 ```  
   
- [항목 내용](#top)  
   
 ###  <a name="Find_FG_of_FTI"></a> 전체 텍스트 인덱스를 포함하는 파일 그룹 또는 파일 찾기  
  전체 텍스트 인덱스가 생성되면 다음 위치 중 하나로 배치됩니다.  
@@ -62,7 +65,7 @@ GO
 > [!NOTE]  
 >  전체 텍스트 인덱스 만들기에 대한 정보는 [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md) 및 [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)를 참조하세요.  
   
- 테이블 또는 뷰에서 전체 텍스트 인덱스의 파일 그룹을 찾으려면 다음 쿼리를 사용합니다. 여기서 *object_name*은 테이블 또는 뷰의 이름입니다.  
+ 테이블 또는 뷰에서 전체 텍스트 인덱스의 파일 그룹을 찾으려면 다음 쿼리를 사용합니다. 여기서 *object_name* 은 테이블 또는 뷰의 이름입니다.  
   
 ```  
 SELECT name FROM sys.filegroups f, sys.fulltext_indexes i   
@@ -72,7 +75,6 @@ GO
   
 ```  
   
- [항목 내용](#top)  
   
 ###  <a name="Back_up_FTIs_of_FTC"></a> 전체 텍스트 인덱스가 포함된 파일 그룹 백업  
  전체 텍스트 카탈로그의 인덱스를 포함하는 파일 그룹을 찾은 후에는 각 파일 그룹을 백업해야 합니다. 백업 프로세스 중에는 전체 텍스트 카탈로그를 삭제하거나 추가할 수 없습니다.  
@@ -85,7 +87,6 @@ GO
   
 -   [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
- [항목 내용](#top)  
   
 ##  <a name="Restore_FTI"></a> 전체 텍스트 인덱스 복원  
  백업된 파일 그룹을 복원하면 전체 텍스트 인덱스 파일과 파일 그룹에 있는 다른 파일들까지 모두 복원됩니다. 기본적으로 파일 그룹은 파일 그룹이 백업된 디스크 위치에 복원됩니다.  
@@ -100,11 +101,10 @@ GO
   
 -   [새 위치로 파일 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-to-a-new-location-sql-server.md)  
   
--   [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+-   [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- [항목 내용](#top)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)  
   

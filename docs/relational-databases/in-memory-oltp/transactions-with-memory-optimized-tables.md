@@ -1,25 +1,29 @@
 ---
-title: "Transactions with Memory-Optimized Tables | Microsoft Docs"
-ms.custom: 
-  - "MSDN content"
-  - "MSDN - SQL DB"
-ms.date: "08/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.service: "sql-database"
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블의 트랜잭션 | Microsoft 문서"
+ms.custom:
+- MSDN content
+- MSDN - SQL DB
+ms.date: 08/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.service: sql-database
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5
 caps.latest.revision: 15
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aaa888f18eae1c5d49eb3bcff13424a4cbfc6ec6
+ms.lasthandoff: 04/11/2017
+
 ---
-# Transactions with Memory-Optimized Tables
+# <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   
@@ -27,13 +31,13 @@ caps.handback.revision: 15
   
 SQL Server의 트랜잭션 격리 수준은 메모리 액세스에 최적화된 테이블과 디스크 기반 테이블에 서로 다르게 적용되며 기본 메커니즘이 서로 다릅니다. 이러한 차이점을 이해하면 프로그래머가 처리량이 높은 시스템을 디자인하는 데 도움이 됩니다. 트랜잭션 무결성의 목표는 모든 경우에서 공유됩니다.  
 
-메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 오류 조건을 보려면 [충돌 검색 및 다시 시도 논리](#confdetretry34ni) 섹션을 참조하세요.
+메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 오류 조건을 보려면 [충돌 검색 및 다시 시도 논리](#confdetretry34ni)섹션을 참조하세요.
   
 일반적인 정보는 [SET TRANSACTION ISOLATION LEVEL(Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
   
   
-#### 이 문서에는 다음과 같은 섹션이 있습니다.  
+#### <a name="sections-in-this-article"></a>이 문서에는 다음과 같은 섹션이 있습니다.  
   
 - [비관적 및 낙관적](#pessvoptim22ni)  
 - [트랜잭션 시작 모드](#txninitmodes24ni)  
@@ -52,7 +56,7 @@ SQL Server의 트랜잭션 격리 수준은 메모리 액세스에 최적화된 
   
 <a name="pessvoptim22ni"/>  
   
-## 비관적 및 낙관적  
+## <a name="pessimistic-versus-optimistic"></a>비관적 및 낙관적  
   
 기능 차이는 트랜잭션 무결성에 대한 비관적 접근 방식과 낙관적 접근 방식으로 인해 발생합니다. 메모리 액세스에 최적화된 테이블은 낙관적 접근 방식을 사용합니다.  
   
@@ -65,7 +69,7 @@ SQL Server의 트랜잭션 격리 수준은 메모리 액세스에 최적화된 
   
 <a name="txninitmodes24ni"/>  
   
-## 트랜잭션 시작 모드  
+## <a name="transaction-initiation-modes"></a>트랜잭션 시작 모드  
   
 SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.  
   
@@ -81,7 +85,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 <a name="codeexamexpmode25ni"/>  
   
-### 명시적 모드의 코드 예제  
+### <a name="code-example-with-explicit-mode"></a>명시적 모드의 코드 예제  
   
 다음 해석된 TRANSACT-SQL 스크립트에서는 아래 항목을 사용합니다.  
   
@@ -110,13 +114,13 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
       
     COMMIT TRANSACTION;  
   
-데이터베이스 옵션 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`을 사용할 경우 `WITH (SNAPSHOT)` 힌트를 사용하지 않아도 됩니다. 이 옵션이 `ON`으로 설정되면 더 낮은 격리 수준에서 메모리 액세스에 최적화된 테이블의 격리 수준이 자동으로 SNAPSHOT 격리로 승격됩니다.  
+데이터베이스 옵션 `WITH (SNAPSHOT)` 을 사용할 경우 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`힌트를 사용하지 않아도 됩니다. 이 옵션이 `ON`으로 설정되면 더 낮은 격리 수준에서 메모리 액세스에 최적화된 테이블의 격리 수준이 자동으로 SNAPSHOT 격리로 승격됩니다.  
   
     ALTER DATABASE CURRENT SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON  
   
 <a name="rowver28ni"/>  
   
-## 행 버전 관리  
+## <a name="row-versioning"></a>행 버전 관리  
   
 메모리 액세스에 최적화된 테이블에서는 가장 엄격한 격리 수준(SERIALIZABLE)에서도 난관적 접근 방식이 효율적인 매우 정교한 행 버전 관리 시스템을 사용합니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블 소개](../../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md)를 참조하세요.  
   
@@ -124,7 +128,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 <a name="confdegreeiso30ni"/>  
   
-## 격리 수준 
+## <a name="isolation-levels"></a>격리 수준 
   
 다음 표에는 가능한 트랜잭션 격리 수준이 오름차순으로 나열되어 있습니다. 발생할 수 있는 충돌 및 이러한 충돌을 처리하는 재시도 논리에 대한 자세한 내용은 [충돌 검색 및 다시 시도 논리](#confdetretry34ni)를 참조하세요. 
   
@@ -134,14 +138,14 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
 | READ COMMITTED | 자동 커밋 모드가 적용되는 경우에만 메모리 액세스에 최적화된 테이블에 지원됩니다. 세션 수준 TRANSACTION ISOLATION LEVEL이 READ COMMITTED로 설정된 경우 WITH (SNAPSHOT) 테이블 힌트를 사용하거나 데이터베이스 설정 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT을 ON으로 설정하여 SNAPSHOT 격리의 메모리 액세스에 최적화된 테이블에 액세스할 수 있습니다. <br/><br/> 데이터베이스 옵션 READ_COMMITTED_SNAPSHOT이 ON으로 설정된 경우 동일한 문에서 READ COMMITTED 격리의 메모리 액세스에 최적화된 테이블 및 디스크 기반 테이블에 액세스할 수 없습니다. |  
 | SNAPSHOT | 메모리 액세스에 최적화된 테이블에 지원됩니다. <br/><br/> 내부적으로 SNAPSHOT은 메모리 액세스에 최적화된 테이블에 가장 덜 까다로운 트랜잭션 격리 수준입니다. <br/><br/> SNAPSHOT은 REPEATABLE READ 또는 SERIALIZABLE보다 더 적은 시스템 리소스를 사용합니다. |  
 | REPEATABLE READ | 메모리 액세스에 최적화된 테이블에 지원됩니다. REPEATABLE READ 격리를 사용하면 커밋 시 동시 트랜잭션이 이 트랜잭션에서 읽은 행을 업데이트하지 않습니다. <br/><br/> 낙관적 모델로 인해 동시 트랜잭션이 이 트랜잭션에서 읽은 행을 업데이트하는 것을 방지할 수 없습니다. 대신, 이 트랜잭션은 커밋 시 REPEATABLE READ 격리를 위반하지 않는지 확인합니다. REPEATABLE READ 격리를 위반하는 경우 이 트랜잭션이 롤백되므로 다시 시도해야 합니다. | 
-| SERIALIZABLE | 메모리 액세스에 최적화된 테이블에 지원됩니다. <br/><br/> *Serializable*이라고 명명된 것은 트랜잭션이 동시에 실행되는 것이 아니라 연속적으로 실행되는 것과 유사할 정도로 격리가 엄격하기 때문입니다. | 
+| SERIALIZABLE | 메모리 액세스에 최적화된 테이블에 지원됩니다. <br/><br/> *Serializable* 이라고 명명된 것은 트랜잭션이 동시에 실행되는 것이 아니라 연속적으로 실행되는 것과 유사할 정도로 격리가 엄격하기 때문입니다. | 
 
 
 
 
 <a name="txnphaslife32ni"/>  
   
-## 트랜잭션 단계 및 수명  
+## <a name="transaction-phases-and-lifetime"></a>트랜잭션 단계 및 수명  
   
 메모리 액세스에 최적화된 테이블이 포함된 경우 트랜잭션 수명은 다음 이미지에 표시된 단계를 거칩니다.  
   
@@ -149,17 +153,17 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 단계에 대한 설명은 다음과 같습니다.  
   
-#### 일반 처리: 1/3단계  
+#### <a name="regular-processing-phase-1-of-3"></a>일반 처리: 1/3단계  
   
 - 이 단계는 모든 쿼리 및 쿼리의 DML 문 실행으로 구성됩니다.  
 - 이 단계에서 문은 메모리 액세스에 최적화된 테이블 버전을 트랜잭션의 논리적 시작 시간으로 간주합니다.  
   
-#### 유효성 검사: 2/3단계  
+#### <a name="validation-phase-2-of-3"></a>유효성 검사: 2/3단계  
   
 - 끝 시간이 지정되어 트랜잭션이 논리적으로 완료된 것으로 표시되면 유효성 검사 단계가 시작됩니다. 이 경우 트랜잭션의 모든 변경을 다른 트랜잭션에서 볼 수 있게 되므로 이 트랜잭션에 종속되며 이 트랜잭션이 커밋될 때까지 커밋할 수 없게 됩니다. 또한 이러한 종속성을 갖는 트랜잭션에서는 결과 집합을 클라이언트로 반환할 수 없어 클라이언트에서는 데이터베이스에 성공적으로 커밋된 데이터만 볼 수 있습니다.  
 - 이 단계는 반복 읽기 및 직렬화 유효성 검사로 구성됩니다. 반복 읽기 유효성 검사에서는 트랜잭션에 의한 행 읽기가 업데이트되었는지 검사합니다. 직렬화 유효성 검사에서는 이 트랜잭션에 의해 스캔된 데이터 범위로 행이 삽입되었는지 검사합니다. 스냅샷 격리를 사용할 경우 [격리 수준 및 충돌](#confdegreeiso30ni)의 테이블당 반복 읽기 및 직렬화 유효성 검사가 발생하여 고유 및 외래 키 제약 조건의 일관성을 검사할 수 있습니다.  
   
-#### 커밋 처리: 3/3단계  
+#### <a name="commit-processing-phase-3-of-3"></a>커밋 처리: 3/3단계  
   
 - 이 커밋 단계 중에는 지속형 테이블의 변경 내용이 로그에 기록되고 로그는 디스크에 기록됩니다. 그런 다음 제어 권한이 클라이언트에 반환됩니다.  
 - 커밋 처리가 완료되면 모든 종속 트랜잭션에 커밋이 가능하다는 알림이 전달됩니다.  
@@ -168,7 +172,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 <a name="confdetretry34ni"/>  
   
-## 충돌 검색 및 다시 시도 논리 
+## <a name="conflict-detection-and-retry-logic"></a>충돌 검색 및 다시 시도 논리 
 
 트랜잭션 실패 및 롤백이 발생할 수 있는 트랜잭션 관련 오류 조건은 두 가지입니다. 대부분의 경우 이러한 오류가 발생하면 교착 상태가 발생할 때와 마찬가지로 트랜잭션을 다시 시도해야 합니다.
 - 동시 트랜잭션 간 충돌. 이는 업데이트 충돌 및 유효성 검사 실패이며 트랜잭션 격리 수준 위반 또는 제약 조건 위반이 원인일 수 있습니다.
@@ -179,13 +183,13 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
 | 오류 코드 | 설명 | 원인 |
 | :-- | :-- | :-- |
 | **41302** | 현재 트랜잭션이 시작된 이후 다른 트랜잭션에서 업데이트된 행을 업데이트하려고 했습니다. | 이 오류 조건은 두 개의 동시 트랜잭션에서 같은 행을 동시에 업데이트 또는 삭제하려고 할 때 발생합니다. 두 개의 트랜잭션 중 하나에 이 오류 메시지가 전달되며 다시 시도해야 합니다. <br/><br/>  | 
-| **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 액세스에 최적화된 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 FOREIGN KEY 제약 조건의 동시 위반은 일반적으로 드물게 발생하며 응용 프로그램 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 액세스에 최적화된 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/)을 참조하세요. |  
+| **41305**| 반복 가능한 읽기 유효성 검사 오류. 메모리 액세스에 최적화된 테이블에서 행을 읽었는데 이 트랜잭션을 커밋하기 전에 커밋된 다른 트랜잭션에 의해 이 트랜잭션이 업데이트되었습니다. | 이 오류는 REPEATABLE READ 또는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 FOREIGN KEY 제약 조건의 위반이 발생하는 경우에도 발생할 수 있습니다. <br/><br/>이러한 FOREIGN KEY 제약 조건의 동시 위반은 일반적으로 드물게 발생하며 응용 프로그램 논리 또는 데이터 입력에 문제가 있다는 것을 나타냅니다. 그러나 FOREIGN KEY 제약 조건과 관련된 열에 인덱스가 없는 경우에도 오류가 발생할 수 있습니다. 따라서 항상 메모리 액세스에 최적화된 테이블의 외래 키 열에 인덱스를 만들어야 합니다. <br/><br/> 외래 키 위반으로 인해 발생한 유효성 검사 오류에 대한 자세한 고려 사항은 SQL Server 고객 자문 팀의 [이 블로그 게시물](https://blogs.msdn.microsoft.com/sqlcat/2016/03/24/considerations-around-validation-errors-41305-and-41325-on-memory-optimized-tables-with-foreign-keys/) 을 참조하세요. |  
 | **41325** | 직렬화 유효성 검사 오류. 현재 트랜잭션에서 이전에 검색한 범위에 새 행을 삽입했습니다. 이를 가상 행이라고 합니다. | 이 오류는 SERIALIZABLE 격리를 사용하거나 동시 트랜잭션의 작업으로 인해 PRIMARY KEY, UNIQUE 또는 FOREIGN KEY 제약 조건의 위반이 발생하는 경우 발생할 수 있습니다. <br/><br/> 이러한 동시 제약 조건의 위반은 일반적으로 드물게 발생하며 응용 프로그램 논리 또는 데이터 입력에 문제가 있다는 것을 의미합니다. 그러나 이 오류는 반복 읽기 유효성 검사 오류와 마찬가지로 관련 열에 인덱스가 없는 FOREIGN KEY 제약 조건이 있는 경우에도 발생할 수 있습니다. |  
 | **41301** | 종속성 오류: 나중에 커밋이 실패한 다른 트랜잭션에 종속되어 있습니다. | 이 트랜잭션(Tx1)은 다른 트랜잭션(Tx2)에 종속되어 있는데 해당 트랜잭션(Tx2)이 Tx2에서 쓰여진 데이터를 읽어 유효성 검사 또는 커밋 처리 단계였습니다. 이후에 Tx2 커밋에 실패했습니다. Tx2가 커밋에 실패하는 가장 일반적인 원인은 반복 읽기(41305) 및 직렬화(41325) 유효성 검사 실패이며 그 외에 로그 IO 실패 등이 있습니다. |
 | **41839** | 트랜잭션이 최대 커밋 종속성 수를 초과했습니다. | 특정 트랜잭션(Tx1)이 종속될 수 있는 트랜잭션 수에는 제한이 있습니다. 이러한 종속성을 나가는 종속성이라고 합니다. 또한 특정 트랜잭션(Tx1)에 종속될 수 있는 트랜잭션 수에도 제한이 있는데 이를 들어오는 종속성이라고 합니다. 두 제한 모두 8입니다. <br/><br/> 이 오류는 일반적으로 단일 쓰기 트랜잭션에서 쓴 데이터에 액세스하는 읽기 트랜잭션 수가 많은 경우 발생합니다. 읽기 트랜잭션이 모두 동일한 데이터의 대량 스캔을 수행하고 쓰기 트랜잭션의 커밋 처리 또는 유효성 검사 시간이 긴 경우 이 조건을 만족시킬 가능성이 높아집니다. 예를 들어 쓰기 트랜잭션이 직렬화 격리에서 많은 스캔을 수행하거나(유효성 검사 단계의 길이가 늘어남) 트랜잭션 로그가 속도가 느린 로그 IO 장치에 저장될 때(커밋 처리 길이가 길어짐) 발생합니다. 읽기 트랜잭션이 대량 스캔을 수행하고 몇 개의 행만 액세스해야 하는 경우 인덱스 누락을 의미할 수 있습니다. 마찬가지로 쓰기 트랜잭션에서 직렬화 격리를 사용하고 대량 스캔을 수행하지만 몇 개의 행만 액세스해야 하는 경우에도 인덱스 누락을 의미할 수 있습니다. <br/><br/> 커밋 종속성 수에 대한 제한은 추적 플래그 **9926**을 사용하여 늘릴 수 있습니다. 위에서 언급한 경우에서 이러한 문제를 마스킹할 수 있으므로 이 추적 플래그는 인덱스 누락이 없는 것을 확인한 후 이 오류 조건을 만족하는 경우에만 사용합니다. 또 다른 주의 사항은 복잡한 종속성 그래프입니다. 각 트랜잭션에 들어오는 종속성과 나가는 종속성이 많고 개별 트랜잭션에 많은 종속성 계층이 있으면 시스템의 효율성이 저하될 수 있습니다.  |
  
   
-### 재시도 논리 
+### <a name="retry-logic"></a>재시도 논리 
 
 위에서 언급한 조건으로 인해 트랜잭션이 실패하면 트랜잭션이 재시도되어야 합니다.
   
@@ -193,7 +197,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 <a name="retrytsqlcodeexam35ni"/>  
   
-#### 다시 시도 T-SQL 코드 예제  
+#### <a name="retry-t-sql-code-example"></a>다시 시도 T-SQL 코드 예제  
   
 재시도할 경우 예상하지 않은 클라이언트로 추가 결과 집합이 반환될 수 있기 때문에 T-SQL을 사용하는 서버 쪽 재시도 논리는 클라이언트로 결과 집합을 반환하지 않는 트랜잭션에만 사용해야 합니다.  
   
@@ -254,7 +258,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 <a name="crossconttxn38ni"/>  
   
-## 크로스 컨테이너 트랜잭션  
+## <a name="cross-container-transaction"></a>크로스 컨테이너 트랜잭션  
   
   
 트랜잭션이 다음을 수행하는 경우 크로스 컨테이너 트랜잭션이라고 합니다.  
@@ -278,7 +282,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
       -- within one explicit transaction.  
   
     SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    go  
+    GO  
   
     BEGIN TRANSACTION;  
   
@@ -296,13 +300,13 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
   
     COMMIT TRANSACTION;  
-    go  
+    GO  
   
   
   
 <a name="limitations40ni"/>  
   
-## 제한 사항  
+## <a name="limitations"></a>제한 사항  
   
   
 - 데이터베이스간 트랜잭션은 메모리 액세스에 최적화된 테이블에 지원되지 않습니다. 트랜잭션이 메모리 액세스에 최적화된 테이블에 액세스하는 경우 다음을 제외하고는 다른 데이터베이스에 액세스할 수 없습니다.  
@@ -314,7 +318,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 <a name="natcompstorprocs42ni"/>  
   
-## 고유하게 컴파일된 저장 프로시저  
+## <a name="natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저  
   
 - 기본 프로시저에서 ATOMIC 블록은 다음과 같이 전체 블록에 대한 트랜잭션 격리 수준을 선언해야 합니다.  
   - `... BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, ...) ...`  
@@ -325,7 +329,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 <a name="othertxnlinks44ni"/>  
   
-## 다른 트랜잭션 링크  
+## <a name="other-transaction-links"></a>다른 트랜잭션 링크  
   
 - [SET IMPLICIT_TRANSACTIONS](../../t-sql/statements/set-implicit-transactions-transact-sql.md)  
   
@@ -336,23 +340,23 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
 - [트랜잭션 내구성 제어](../../relational-databases/logs/control-transaction-durability.md)   
   
 \<!--  
-Link Guids:  
-016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"  
+링크 GUID:  
+016fb05e-a702-484b-bd2a-a6eabd0d76fd , ms173763.aspx , "SET TRANSACTION ISOLATION LEVEL(Transact-SQL)"  
   
-ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "Introduction to Memory-Optimized Tables"  
+ef1cc7de-63be-4fa3-a622-6d93b440e3ac , dn511014(v=sql.130,d=robot).aspx , "메모리 액세스에 최적화된 테이블 소개"  
   
-a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS (Transact-SQL)"  
+a300ac43-e4c0-4329-8b79-a1a05e63370a , ms187807.aspx , "SET IMPLICIT_TRANSACTIONS(Transact-SQL)"  
   
-e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock (Transact-SQL)"  
+e1e85908-9f31-47cf-8af6-88c77e6f24c9 , ms189823.aspx , "sp_getapplock(Transact-SQL)"  
   
-3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "Control Transaction Durability"  
+3ac93b28-cac7-483e-a8ab-ac44e1cc1c76 , dn449490.aspx , "트랜잭션 내구성 제어"  
   
-Image: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
-See also XMetal articles: dn133169.aspx , "Transaction Lifetime"  
+이미지: 'hekaton_transactions' , e9c5eb2f-c9a3-4625-8ae4-ac91447db42f  
+XMetal 아티클 참조: dn133169.aspx , "Transaction Lifetime"  
   
-Transactions with In-Memory Tables and Procedures  
+메모리 내 테이블 및 프로시저와의 트랜잭션  
 {ba6f1a15-8b69-4ca6-9f44-f5e3f2962bc5} , dn479429.aspx  
-Maybe replaces: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "Understanding Transactions on Memory-Optimized Tables"  
+대체 가능: 06075248-705e-4563-9371-b64cd609793c , dn479429.aspx , "메모리 액세스에 최적화된 테이블의 트랜잭션 이해"  
   
 GeneMi , 2016-03-28 11:40am  
 -->  
@@ -360,3 +364,5 @@ GeneMi , 2016-03-28 11:40am
   
   
   
+
+

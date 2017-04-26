@@ -1,29 +1,33 @@
 ---
-title: "FILESTREAM 사용 및 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FILESTREAM [SQL Server], 사용"
+title: "FILESTREAM 사용 및 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FILESTREAM [SQL Server], enabling
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.lasthandoff: 04/11/2017
+
 ---
-# FILESTREAM 사용 및 구성
+# <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
   FILESTREAM을 사용하려면 먼저 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 FILESTREAM을 사용하도록 설정해야 합니다. 이 항목에서는 SQL Server 구성 관리자를 사용하여 FILESTREAM을 사용하도록 설정하는 방법에 대해 설명합니다.  
   
 ##  <a name="enabling"></a> FILESTREAM 설정  
   
-#### FILESTREAM을 사용하도록 설정하고 해당 설정을 변경하려면  
+#### <a name="to-enable-and-change-filestream-settings"></a>FILESTREAM을 사용하도록 설정하고 해당 설정을 변경하려면  
   
 1.  **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
@@ -56,7 +60,6 @@ caps.handback.revision: 24
   
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
   
- [항목 내용](#TOP)  
   
 ##  <a name="best"></a> 최선의 구현 방법  
   
@@ -82,7 +85,6 @@ caps.handback.revision: 24
 |RAID 0|최고|최고|없음||  
 |RAID 5 + 스트라이프|최고|최고|최고|가장 비용이 많이 드는 옵션입니다.|  
   
- [항목 내용](#TOP)  
   
 ###  <a name="database"></a> 물리적 데이터베이스 디자인  
  FILESTREAM 데이터베이스를 디자인할 때 다음 같은 지침을 고려하십시오.  

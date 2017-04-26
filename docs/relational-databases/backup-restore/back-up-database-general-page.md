@@ -1,24 +1,28 @@
 ---
-title: "데이터베이스 백업(일반 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backupdatabase.general.f1"
+title: "데이터베이스 백업(일반 페이지) | Microsoft 문서"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backupdatabase.general.f1
 ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 caps.latest.revision: 64
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 038fa003ad819d89d8739f8cfaac53582f93932a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 백업(일반 페이지)
+# <a name="back-up-database-general-page"></a>데이터베이스 백업(일반 페이지)
   **데이터베이스 백업** 대화 상자의 **일반** 페이지를 사용하여 데이터베이스 백업 작업에 대한 설정을 확인하거나 수정할 수 있습니다.  
   
  기본 백업 개념에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
@@ -39,9 +43,9 @@ caps.handback.revision: 64
   
 -   부분 백업의 경우 PARTIAL 옵션과 함께 [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) 문을 사용해야 합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
-### 원본  
+### <a name="source"></a>원본  
  **원본** 패널의 옵션은 데이터베이스를 식별하고 백업 작업에 대한 구성 요소 및 백업 유형을 지정합니다.  
   
  **데이터베이스**  
@@ -75,7 +79,7 @@ caps.handback.revision: 64
 |**데이터베이스**|전체 데이터베이스를 백업할지를 지정합니다.|  
 |**파일 및 파일 그룹**|선택한 파일 및/또는 파일 그룹을 백업할지를 지정합니다.<br /><br /> 이 옵션을 선택하면 **파일 및 파일 그룹 선택** 대화 상자가 열립니다. 백업하려는 파일 그룹이나 파일을 선택하고 **확인**을 클릭하면 **파일 그룹 및 파일** 상자에 선택한 내용이 나타납니다.|  
   
-### 대상  
+### <a name="destination"></a>대상  
  **대상** 패널의 옵션을 사용하면 백업 작업에 대한 백업 장치 유형을 지정하고 기존 논리적 또는 물리적 백업 장치를 찾을 수 있습니다.  
   
 > [!NOTE]  
@@ -93,7 +97,7 @@ caps.handback.revision: 64
  아래 표시된 다음 옵션 집합은 선택한 대상 유형에 따라 달라집니다. 디스크 또는 테이프를 선택하면 다음 옵션이 표시됩니다.  
   
  **추가**  
- **백업할 위치** 목록에 파일이나 장치를 추가합니다. 로컬 디스크 또는 원격 디스크의 최대 64개의 장치로 동시에 백업할 수 있습니다. 원격 디스크에서 파일을 지정하려면 정규화된 UNC(Universal Naming Convention) 이름을 사용합니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
+ **백업할 위치** 목록에 파일이나 장치를 추가합니다. 로컬 디스크 또는 원격 디스크의 최대 64개의 장치로 동시에 백업할 수 있습니다. 원격 디스크에서 파일을 지정하려면 정규화된 UNC(Universal Naming Convention) 이름을 사용합니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)).  
  
  
   
@@ -101,17 +105,17 @@ caps.handback.revision: 64
  **백업할 위치** 목록에서 현재 선택한 장치를 하나 이상 제거합니다.  
   
  **내용**  
-선택한 장치가 있으면 미디어 내용을 표시합니다.  단추는 **URL**이 지정된 경우 함수를 수행하지 않습니다. 
+선택한 장치가 있으면 미디어 내용을 표시합니다.  단추는 **URL** 이 지정된 경우 함수를 수행하지 않습니다. 
    
-**백업 대상 선택** 대화 상자: **추가**를 선택하면 **백업 대상 선택** 대화 상자가 나타납니다.   아래 표시된 옵션 집합은 선택한 대상 유형에 따라 달라집니다. 
+**백업 대상 선택** 대화 상자: **추가** 를 선택하면 **백업 대상 선택**대화 상자가 나타납니다.   아래 표시된 옵션 집합은 선택한 대상 유형에 따라 달라집니다. 
 
-**디스크** 또는 **테이프**를 백업 대상으로 선택하면 다음 옵션이 표시됩니다.  
+**디스크** 또는 **테이프** 를 백업 대상으로 선택하면 다음 옵션이 표시됩니다.  
 
 *
   **파일 이름**  
     백업 파일의 이름을 지정합니다.
 
-**URL**을 백업 대상으로 선택하면 다음 옵션이 표시됩니다.
+**URL** 을 백업 대상으로 선택하면 다음 옵션이 표시됩니다.
 *
   **Azure Storage 컨테이너**  
   백업 파일을 저장할 Microsoft Azure Storage 컨테이너의 이름입니다. 
@@ -128,7 +132,7 @@ caps.handback.revision: 64
   **새 컨테이너:**  
 공유 액세스 서명이 없는 기존 컨테이너를 등록하는 데 사용됩니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   
  [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
@@ -136,3 +140,4 @@ caps.handback.revision: 64
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)  
   
   
+

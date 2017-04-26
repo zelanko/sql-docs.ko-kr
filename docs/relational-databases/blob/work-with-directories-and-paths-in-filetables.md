@@ -1,24 +1,28 @@
 ---
-title: "FileTable에서 디렉터리 및 경로 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], 디렉터리"
+title: "FileTable에서 디렉터리 및 경로 작업 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], directories
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d41410b3da1f823a29da0c5b7bd706dff4ce4584
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable에서 디렉터리 및 경로 작업
+# <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
   파일이 FileTable에 저장되는 디렉터리 구조에 대해 설명합니다.  
   
 ##  <a name="HowToDirectories"></a> 방법: FileTable에서 디렉터리 및 경로 작업  
@@ -31,7 +35,7 @@ caps.handback.revision: 25
 |경로를 제공하여 FileTable의 지정된 파일 또는 디렉터리에 대한 경로 로케이터 ID 값을 가져옵니다.|[GetPathLocator&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md)|  
   
 ##  <a name="BestPracticeRelativePaths"></a> 방법: 이식 가능한 코드에 상대 경로 사용  
- 코드와 응용 프로그램을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
+ 코드와 응용 프로그램을 현재 컴퓨터 및 데이터베이스 외에서도 사용할 수 있도록 하려면 코드를 작성할 때 절대 파일 경로를 사용하지 않는 것이 좋습니다. 대신 다음 예와 같이 [FileTableRootPath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/filetablerootpath-transact-sql.md) 및 [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md)함수를 함께 사용하여 런타임에 파일의 전체 경로를 가져옵니다. 기본적으로 **GetFileNamespacePath** 함수는 데이터베이스의 루트 경로 아래에 있는 파일의 상대 경로를 반환합니다.  
   
 ```tsql  
 USE database_name;  
@@ -79,7 +83,7 @@ GO
   
 -   인스턴스 수준 FILESTREAM 공유는 관리자에 의해 구성되어 서버 속성으로 저장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 이 공유의 이름을 바꿀 수 있습니다. 이름 바꾸기 작업을 적용하려면 서버를 다시 시작해야 합니다.  
   
--   새 데이터베이스를 만들 때 데이터베이스 수준 **DIRECTORY_NAME**은 기본적으로 null입니다. 관리자는 **ALTER DATABASE** 문을 사용하여 이 이름을 설정하거나 변경할 수 있습니다. 이름은 해당 인스턴스에서 고유해야 하며 대/소문자를 구분하지 않습니다.  
+-   새 데이터베이스를 만들 때 데이터베이스 수준 **DIRECTORY_NAME** 은 기본적으로 null입니다. 관리자는 **ALTER DATABASE** 문을 사용하여 이 이름을 설정하거나 변경할 수 있습니다. 이름은 해당 인스턴스에서 고유해야 하며 대/소문자를 구분하지 않습니다.  
   
 -   일반적으로 FileTable을 만들 때 **FILETABLE_DIRECTORY** 이름을 **CREATE TABLE** 문의 일부로 제공합니다. **ALTER TABLE** 명령을 사용하여 이 이름을 변경할 수 있습니다.  
   
@@ -92,7 +96,7 @@ GO
   
 ||||  
 |-|-|-|  
-|*is_directory* **값**|*file_stream* **값**|**동작**|  
+|*is_directory* **value**|*file_stream* **value**|**동작**|  
 |FALSE|NULL|이는 시스템 정의 제약 조건에 의해 catch되는 잘못된 조합입니다.|  
 |FALSE|\<값>|항목은 파일을 나타냅니다.|  
 |TRUE|NULL|항목은 디렉터리를 나타냅니다.|  
@@ -105,10 +109,11 @@ GO
   
 -   파일 시스템 API를 통한 FILESTREAM 또는 FileTable 데이터에 대한 모든 액세스에는 컴퓨터 이름 대신 VNN이 사용되어야 합니다. 자세한 내용은 [Always On 가용성 그룹의 FILESTREAM 및 FileTable&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [FileTable의 필수 구성 요소를 사용하도록 설정](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)   
  [FileTable 만들기, 변경 및 삭제](../../relational-databases/blob/create-alter-and-drop-filetables.md)   
  [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [파일 입/출력 API를 사용하여 FileTable 액세스](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   
   
+

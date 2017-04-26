@@ -1,29 +1,33 @@
 ---
-title: "&lt;AgentProfileName&gt; 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.profiles.perfprofileprops.f1"
-helpviewer_keywords: 
-  - "에이전트 프로필 속성 대화 상자"
+title: "&lt;AgentProfileName&gt; 속성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.profiles.perfprofileprops.f1
+helpviewer_keywords:
+- Agent Profile Properties dialog box
 ms.assetid: 01a992d2-e4ff-417c-93f0-dc43ab2d1624
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6932152bce33b84877287560d2ec769005c0c20f
+ms.lasthandoff: 04/11/2017
+
 ---
-# &lt;AgentProfileName&gt; 속성
-  사용 하는 **에이전트 프로필 속성** 대화 상자 프로필에서 각 에이전트 매개 변수에 대해 지정 된 값을 보고 사용자 정의 프로필에 대 한 값을 수정 합니다.  
+# <a name="ltagentprofilenamegt-properties"></a>&lt;AgentProfileName&gt; 속성
+  **에이전트 프로필 속성** 대화 상자를 사용하여 프로필의 각 에이전트 매개 변수에 대해 지정된 값을 보고 사용자 정의 프로필의 값을 수정할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **이름**  
  프로필의 이름입니다.  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 17
   
 -   [복제 로그 판독기 에이전트](../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
--   [복제 배포 에이전트](../../relational-databases/replication/agents/replication-distribution-agent.md)  
+-   [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
 -   [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 17
  **이 프로필에서 사용되는 매개 변수만 표시**  
  지정한 에이전트에 유효한 모든 매개 변수를 표시하려면 선택을 취소합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 에이전트 프로필 작업](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
  [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)   
  [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)  

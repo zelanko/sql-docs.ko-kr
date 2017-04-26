@@ -1,22 +1,26 @@
 ---
-title: "메모리 액세스에 최적화된 테이블에 필요한 메모리 예측 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블에 필요한 메모리 예측 | Microsoft 문서"
+ms.custom: 
+ms.date: 12/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea8b5ddea3edfbe5d2521bd30e4a51fd62a2b482
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
+# <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 메모리 액세스에 최적화된 테이블을 사용하려면 모든 행과 인덱스를 메모리 내에 유지하는 데 충분한 메모리가 있어야 합니다. 메모리는 한정된 리소스이므로 시스템에서 메모리 사용량을 파악하고 관리해야 합니다. 이 섹션의 항목에서는 일반적인 메모리 사용 및 관리 시나리오를 다룹니다.
@@ -27,11 +31,11 @@ caps.handback.revision: 32
   
 ## <a name="basic-guidance-for-estimating-memory-requirements"></a>메모리 요구 사항을 예측하기 위한 기본 지침
 
-테이블이 메모리에 적합해야 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 메모리 액세스에 최적화된 테이블의 크기에 제한이 없습니다.  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 SCHEMA_AND_DATA 테이블의 경우 지원되는 데이터 크기는 256GB입니다.
+테이블이 메모리에 적합해야 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 메모리 액세스에 최적화된 테이블의 크기에 제한이 없습니다.  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 SCHEMA_AND_DATA 테이블의 경우 지원되는 데이터 크기는 256GB입니다.
 
 메모리 액세스에 최적화된 테이블의 크기는 데이터 크기에 행 머리글에 대한 약간의 오버헤드를 더한 것에 해당합니다. 디스크 기반 테이블을 메모리 액세스에 최적화되도록 마이그레이션하는 경우 메모리 액세스에 최적화된 테이블의 크기는 대략 원래 디스크 기반 테이블의 힙 또는 클러스터형 인덱스 크기에 해당합니다.
 
-메모리 액세스에 최적화된 테이블의 인덱스는 디스크 기반 테이블의 비클러스터형 인덱스보다 작은 경우가 많습니다. 비클러스터형 인덱스의 크기는 `[primary key size] * [row count]` 순입니다. 해시 인덱스의 크기는 `[bucket count] * 8 bytes`입니다. 
+메모리 액세스에 최적화된 테이블의 인덱스는 디스크 기반 테이블의 비클러스터형 인덱스보다 작은 경우가 많습니다. 비클러스터형 인덱스의 크기는 `[primary key size] * [row count]`순입니다. 해시 인덱스의 크기는 `[bucket count] * 8 bytes`입니다. 
 
 활성 워크로드가 있는 경우 행 버전 관리 및 다양한 작업을 위해 추가 메모리를 고려해야 합니다. 실제로 필요한 메모리 양은 워크로드에 따라 다르지만 안전을 위해 메모리 액세스에 최적화된 테이블 및 인덱스의 예상 크기의 두 배로 시작하여 실제 필요한 메모리 요구 사항을 관측하는 것이 좋습니다. 행 버전 관리에 대한 오버헤드는 항상 워크로드의 특징에 따라 다릅니다. 특히 장기 실행 트랜잭션에서는 오버헤드가 증가합니다. 더 큰 데이터베이스를 사용하는 대부분의 워크로드(예: 100GB 초과)의 경우 오버헤드가 제한됩니다(25% 이하).
 
@@ -50,7 +54,7 @@ caps.handback.revision: 32
   
 - [증가에 대한 메모리](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md#bkmk_MemoryForGrowth)  
   
-###  <a name="a-namebkmkexampletablea-example-memory-optimized-table"></a><a name="bkmk_ExampleTable"></a> 메모리 액세스에 최적화된 테이블의 예  
+###  <a name="bkmk_ExampleTable"></a> 메모리 액세스에 최적화된 테이블의 예  
 
 다음 메모리 액세스에 최적화된 테이블 스키마를 살펴봅니다.
   
@@ -82,7 +86,7 @@ GO
 
 위의 스키마를 사용하여 이 메모리 액세스에 최적화된 테이블에 필요한 최소 메모리를 결정할 것입니다.  
   
-###  <a name="a-namebkmkmemoryfortablea-memory-for-the-table"></a><a name="bkmk_MemoryForTable"></a> 테이블에 대한 메모리  
+###  <a name="bkmk_MemoryForTable"></a> 테이블에 대한 메모리  
 
 메모리 액세스에 최적화된 테이블 행은 다음 세 부분으로 구성되어 있습니다.
   
@@ -101,7 +105,7 @@ GO
   
 위의 계산에서 메모리 액세스에 최적화된 테이블의 각 행 크기는 24 + 32 + 200 또는 256바이트입니다.  행이 5백만 개이므로 테이블은 5,000,000 * 256바이트 또는 1,280,000,000바이트, 즉 1.28GB 정도를 사용합니다.  
   
-###  <a name="a-namebkmkindexmeemorya-memory-for-indexes"></a><a name="bkmk_IndexMeemory"></a> 인덱스에 대한 메모리  
+###  <a name="bkmk_IndexMeemory"></a> 인덱스에 대한 메모리  
 
 #### <a name="memory-for-each-hash-index"></a>각 해시 인덱스에 대한 메모리  
   
@@ -130,11 +134,11 @@ SELECT COUNT(DISTINCT [Col2])
   
 새 테이블을 만드는 경우 배열 크기를 예측하거나 배포 전에 테스트에서 데이터를 수집해야 합니다.  
   
-해시 인덱스가 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 액세스에 최적화된 테이블에서 작동하는 방식에 대한 자세한 내용은 [해시 인덱스](../Topic/Hash%20Indexes.md)를 참조하세요.  
+해시 인덱스가 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 메모리 액세스에 최적화된 테이블에서 작동하는 방식에 대한 자세한 내용은 [해시 인덱스](http://msdn.microsoft.com/library/f4bdc9c1-7922-4fac-8183-d11ec58fec4e)를 참조하세요.  
   
 #### <a name="setting-the-hash-index-array-size"></a>해시 인덱스 배열 크기 설정  
   
-해시 배열 크기는 `(bucket_count= value)`에 의해 설정됩니다. 여기서 `value`는 0보다 큰 정수 값입니다. `value`가 2의 제곱이 아니면 실제 bucket_count는 가장 가까운 다음 2의 제곱으로 반올림됩니다.  예제 테이블, (bucket_count = 5000000)에서 5,000,000은 2의 제곱이 아니므로 실제 버킷 수는 8,388,608(2^23)로 반올림됩니다.  해시 배열에 필요한 메모리를 계산할 때는 5,000,000이 아니라 이 수를 사용해야 합니다.  
+해시 배열 크기는 `(bucket_count= value)` 에 의해 설정됩니다. 여기서 `value` 는 0보다 큰 정수 값입니다. `value` 가 2의 제곱이 아니면 실제 bucket_count는 가장 가까운 다음 2의 제곱으로 반올림됩니다.  예제 테이블, (bucket_count = 5000000)에서 5,000,000은 2의 제곱이 아니므로 실제 버킷 수는 8,388,608(2^23)로 반올림됩니다.  해시 배열에 필요한 메모리를 계산할 때는 5,000,000이 아니라 이 수를 사용해야 합니다.  
   
 따라서 이 예제에서 각 해시 배열에 필요한 메모리는 다음과 같습니다.  
   
@@ -164,7 +168,7 @@ SELECT * FRON t_hk
    WHERE c2 > 5;  
 ```  
   
-###  <a name="a-namebkmkmemoryforrowversionsa-memory-for-row-versioning"></a><a name="bkmk_MemoryForRowVersions"></a> 행 버전 관리에 대한 메모리
+###  <a name="bkmk_MemoryForRowVersions"></a> 행 버전 관리에 대한 메모리
 
 잠금을 방지하기 위해 메모리 내 OLTP는 행을 업데이트하거나 삭제할 때 낙관적 동시성을 사용합니다. 즉, 행이 업데이트될 때 행의 추가 버전이 만들어집니다. 또한 삭제가 논리적으로 수행되어 기존 행이 삭제된 상태로 표시되지만 바로 제거되지는 않습니다. 시스템에서는 해당 버전을 사용할 수 있는 모든 트랜잭션 실행이 완료될 때까지 이전 행 버전(삭제된 행 포함)을 사용할 수 있는 상태로 보관합니다. 
   
@@ -180,16 +184,18 @@ SELECT * FRON t_hk
   
 `memoryForRowVersions = rowVersions * rowSize`  
   
-###  <a name="a-namebkmktablevariablesa-memory-for-table-variables"></a><a name="bkmk_TableVariables"></a> 테이블 변수에 대한 메모리
+###  <a name="bkmk_TableVariables"></a> 테이블 변수에 대한 메모리
   
 테이블 변수에 사용되는 메모리는 테이블 변수가 범위를 벗어날 때만 해제됩니다. 업데이트의 일부로 삭제된 행을 포함하여 테이블 변수에서 삭제된 행은 가비지 수집의 대상이 아닙니다. 테이블 변수가 범위를 벗어날 때까지는 메모리가 해제되지 않습니다.  
   
 프로시저 범위와 반대로 많은 트랜잭션에서 사용되는 큰 SQL 일괄 처리에서 정의된 테이블 변수는 다량의 메모리를 사용할 수 있습니다. 테이블 변수는 가비지 수집되지 않기 때문에 테이블 변수의 삭제된 행은 다량의 메모리를 사용할 수 있으며 읽기 작업이 삭제된 행을 통과하여 검색해야 하므로 성능이 저하될 수 있습니다.  
   
-###  <a name="a-namebkmkmemoryforgrowtha-memory-for-growth"></a><a name="bkmk_MemoryForGrowth"></a> 증가에 대한 메모리
+###  <a name="bkmk_MemoryForGrowth"></a> 증가에 대한 메모리
 
 위의 계산에서는 현재 상태의 테이블에 필요한 메모리를 예측합니다. 이 메모리 외에도 테이블의 증가를 예측하고 이러한 증가를 수용하는 데 충분한 메모리를 제공해야 합니다.  예를 들어 10% 증가를 예상하는 경우 위의 결과에 1.1을 곱하여 테이블에 필요한 총 메모리를 얻어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:
 
 [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
+
+

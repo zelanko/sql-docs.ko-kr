@@ -1,30 +1,34 @@
 ---
-title: "결과 목록을 사용하여 문서 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "검색 [SQL Server Management Studio], 결과 목록"
-  - "결과 목록 검색 [SQL Server Management Studio]"
-  - "검색 [SQL Server Management Studio], 여러 파일"
-  - "쿼리 편집기 [SQL Server Management Studio], 여러 파일 검색"
+title: "결과 목록을 사용하여 문서 검색 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searches [SQL Server Management Studio], result lists
+- result list searches [SQL Server Management Studio]
+- searches [SQL Server Management Studio], multiple files
+- Query Editor [SQL Server Management Studio], search multiple files
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a63ced363f4aee6ece4481f7b89b0ab195b82019
+ms.lasthandoff: 04/11/2017
+
 ---
-# 결과 목록을 사용하여 문서 검색
+# <a name="search-documents-using-results-lists"></a>결과 목록을 사용하여 문서 검색
   **찾기 및 바꾸기** 대화 상자를 사용하면 프로젝트나 솔루션 또는 파일 시스템 폴더의 모든 파일을 검색하여 바꿀 수 있으며 이러한 파일이 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 열려 있지 않은 경우에도 마찬가지입니다. **찾기 및 바꾸기** 대화 상자에서 수행한 검색 조건과 일치하는 항목이 찾기 결과 1 및 찾기 결과 2 창에 나타나며 일치하는 항목이 포함된 줄에서 해당 텍스트를 볼 수 있습니다.  
   
-### 여러 파일을 검색하려면  
+### <a name="to-search-in-multiple-files"></a>여러 파일을 검색하려면  
   
 1.  **편집** 메뉴에서 **찾기 및 바꾸기** 를 가리킨 다음 **파일에서 찾기**를 클릭합니다.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 22
   
  검색 조건과 일치하는 항목이 기본적으로 찾기 결과 1 창에 표시됩니다. 찾기 결과 1 창에서 각 항목을 두 번 클릭하여 검색 조건과 일치하는 항목을 탐색할 수 있습니다. 새 창에서 검색 결과를 보려면 **찾기 2에 표시**를 선택합니다.  
   
-#### 여러 파일이나 폴더에서 바꾸려면  
+#### <a name="to-replace-across-multiple-files-or-folders"></a>여러 파일이나 폴더에서 바꾸려면  
   
 1.  **편집** 메뉴에서 **찾기 및 바꾸기** 를 가리킨 다음 **파일에서 바꾸기**를 클릭합니다.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 22
   
  기본적으로 찾기 결과 1 창에 바꾸기 정보가 표시됩니다. 찾기 결과 1 창에서 각 항목을 두 번 클릭하여 바꾸기 정보를 탐색할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [찾기 및 바꾸기](../../relational-databases/scripting/search-and-replace.md)   
  [대화형으로 문서 검색](../../relational-databases/scripting/search-documents-interactively.md)   
  [와일드카드로 텍스트 검색](../../relational-databases/scripting/search-text-with-wildcards.md)   
