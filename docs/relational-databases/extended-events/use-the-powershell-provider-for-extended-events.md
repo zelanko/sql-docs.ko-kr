@@ -1,27 +1,31 @@
 ---
-title: "확장 이벤트에 PowerShell 공급자 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "PowerShell [SQL Server], xevent"
-  - "확장 이벤트 [SQL Server], PowerShell"
-  - "PowerShell [SQL Server], 확장 이벤트"
+title: "확장 이벤트에 PowerShell 공급자 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- PowerShell [SQL Server], xevent
+- extended events [SQL Server], PowerShell
+- PowerShell [SQL Server], extended events
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 caps.latest.revision: 14
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a89501cc32ec51bd081230ea897058d3956c7a2b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 확장 이벤트에 PowerShell 공급자 사용
+# <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 확장 이벤트를 관리할 수 있습니다. XEvent 하위 폴더는 SQLSERVER 드라이브 아래에 있습니다. 다음 방법 중 하나를 사용하여 이 폴더에 액세스할 수 있습니다.  
@@ -41,7 +45,7 @@ caps.handback.revision: 14
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자는 확장 이벤트 세션을 생성, 변경 및 관리하는 데 사용할 수 있는 강력한 도구입니다. 다음 섹션에서는 확장 이벤트에 PowerShell 스크립트를 사용하는 몇 가지 기본적인 예를 제공합니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예에서 다음 사항에 유의하십시오.  
   
 -   스크립트는 PS SQLSERVER:\\> 프롬프트(명령 프롬프트에서 **sqlps**를 입력하면 사용할 수 있음)에서 실행해야 합니다.  
@@ -108,10 +112,10 @@ $event.SetPredicate($predicate)
 $session.Create()  
 ```  
   
-## 보안  
+## <a name="security"></a>보안  
  확장 이벤트 세션을 생성, 변경 또는 삭제하려면 ALTER ANY EVENT SESSION 권한이 있어야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [system_health 세션 사용](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [확장 이벤트 도구](../../relational-databases/extended-events/extended-events-tools.md)  

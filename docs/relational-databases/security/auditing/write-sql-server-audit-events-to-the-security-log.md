@@ -1,27 +1,31 @@
 ---
-title: "보안 로그에 SQL Server Audit 이벤트 쓰기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 [SQL Server], 보안 로그"
-  - "서버 감사 [SQL Server]"
-  - "감사 [SQL Server], 보안 로그에 쓰기"
-  - "보안 로그 [SQL Server]"
+title: "보안 로그에 SQL Server Audit 이벤트 쓰기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], Security Log
+- server audit [SQL Server]
+- audits [SQL Server], writing to Security Log
+- security logs [SQL Server]
 ms.assetid: 6fabeea3-7a42-4769-a0f3-7e04daada314
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.lasthandoff: 04/11/2017
+
 ---
-# 보안 로그에 SQL Server Audit 이벤트 쓰기
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기
   보안 수준이 높은 환경에서는 Windows 보안 로그에 개체 액세스를 기록하는 이벤트를 쓰는 것이 좋습니다. 다른 감사 위치도 지원되지만 변조될 가능성이 높습니다.  
   
  Windows 보안 로그에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 감사를 쓰려면 두 가지 주요 요구 사항을 충족해야 합니다.  
@@ -57,7 +61,7 @@ caps.handback.revision: 19
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터 관리자는 도메인 정책이 보안 로그에 대한 로컬 설정을 덮어쓸 수 있다는 점을 유의해야 합니다. 이 경우에 도메인 정책은 하위 범주 설정을 덮어쓸 수 있습니다(**auditpol /get /subcategory:"application generated"**). 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 감사하려는 이벤트가 기록되지 않는다는 점을 감지할 필요 없이 이벤트를 로깅할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 기능에 영향을 미칠 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터 관리자는 도메인 정책이 보안 로그에 대한 로컬 설정을 덮어쓸 수 있다는 점을 유의해야 합니다. 이 경우에 도메인 정책은 하위 범주 설정을 덮어쓸 수 있습니다(**auditpol /get /subcategory:"application generated"**). 이는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 감사하려는 이벤트가 기록되지 않는다는 점을 감지할 필요 없이 이벤트를 로깅할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 기능에 영향을 미칠 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -92,7 +96,7 @@ caps.handback.revision: 19
   
 5.  **로컬 보안 설정** 탭에서 **사용자 또는 그룹 추가**를 클릭합니다.  
   
-6.  **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 **domain1\user1**과 같은 사용자 계정의 이름을 입력한 다음 **확인**을 클릭하거나 **고급**을 클릭하여 계정을 검색합니다.  
+6.  **사용자, 컴퓨터 또는 그룹 선택** 대화 상자에서 **domain1\user1** 과 같은 사용자 계정의 이름을 입력한 다음 **확인**을 클릭하거나 **고급** 을 클릭하여 계정을 검색합니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -116,7 +120,7 @@ caps.handback.revision: 19
   
 7.  보안 정책 도구를 닫습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

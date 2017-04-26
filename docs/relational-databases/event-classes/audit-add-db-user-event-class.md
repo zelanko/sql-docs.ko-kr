@@ -1,29 +1,33 @@
 ---
-title: "Audit Add DB User 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Audit Add DB User 이벤트 클래스"
+title: "Audit Add DB User 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Audit Add DB User event class
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a0d088340be4c057b03b2e8d2c04a1fb2922f59
+ms.lasthandoff: 04/11/2017
+
 ---
-# Audit Add DB User 이벤트 클래스
-  **Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** 및 **sp_dropuser** 저장 프로시저에 사용됩니다.  
+# <a name="audit-add-db-user-event-class"></a>Audit Add DB User 이벤트 클래스
+  **Audit Add DB User** 이벤트 클래스는 데이터베이스 사용자 로그인이 데이터베이스에 추가 또는 제거될 때마다 발생합니다. 이 이벤트 클래스는 **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser**및 **sp_dropuser** 저장 프로시저에 사용됩니다.  
   
  이 이벤트 클래스는 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 수 있으므로 **Audit Database Principal Management** 이벤트 클래스를 대신 사용하는 것이 좋습니다.  
   
-## Audit Add DB User 이벤트 클래스 데이터 열  
+## <a name="audit-add-db-user-event-class-data-columns"></a>Audit Add DB User 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -44,8 +48,8 @@ caps.handback.revision: 31
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |**OwnerName**|**nvarchar**|개체 소유자의 데이터베이스 사용자 이름입니다.|37|예|  
 |**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
-|**RoleName**|**nvarchar**|멤버 자격이 수정되는 데이터베이스 역할의 이름입니다(**sp_adduser**와 함께 사용된 경우).|38|예|  
-|**ServerName**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26||  
+|**RoleName**|**nvarchar**|멤버 자격이 수정되는 데이터베이스 역할의 이름입니다( **sp_adduser**와 함께 사용된 경우).|38|예|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26||  
 |**SessionLoginName**|**Nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
@@ -56,7 +60,7 @@ caps.handback.revision: 31
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |**XactSequence**|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_grantdbaccess&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   

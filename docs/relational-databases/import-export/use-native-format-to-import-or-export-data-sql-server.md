@@ -1,29 +1,33 @@
 ---
-title: "네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-bulk-import-export"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "네이티브 데이터 형식 [SQL Server]"
-  - "데이터 형식 [SQL Server], 네이티브"
+title: "네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 09/30/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-bulk-import-export
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- native data format [SQL Server]
+- data formats [SQL Server], native
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
 caps.latest.revision: 43
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4cb08ec44780935a8340d267fd3790af5150659b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
+# <a name="use-native-format-to-import-or-export-data-sql-server"></a>네이티브 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
 확장/DBCS(더블바이트 문자 집합) 문자가 포함되어 있지 않은 데이터 파일을 사용하여 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 데이터를 대량 전송할 때는 네이티브 형식을 사용하는 것이 바람직합니다.  
 
 > [!NOTE]
->  확장 또는 DBCS 문자가 포함되어 있는 데이터 파일을 사용하여 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 데이터를 대량 전송하려면 유니코드 네이티브 형식을 사용해야 합니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.
+>  확장 또는 DBCS 문자가 포함되어 있는 데이터 파일을 사용하여 여러 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 간에 데이터를 대량 전송하려면 유니코드 네이티브 형식을 사용해야 합니다. 자세한 내용은 [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)을 참조하세요.
 
 네이티브 형식은 데이터베이스의 원래 데이터 형식을 유지합니다. 네이티브 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 간에 데이터를 빠르게 전송하기 위한 형식입니다. 서식 파일을 사용할 경우 원본 및 대상 테이블의 형식이 동일할 필요가 없습니다. 데이터 전송은 두 단계로 이루어집니다.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 43
 |[네이티브 형식의 명령 옵션](#command_options)|
 |[예제 테스트 조건](#etc)<br /><br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 비 XML 서식 파일](#nonxml_format_file)|
 |[예](#examples)<br />&emsp;&#9679;&emsp;[bcp 및 원시 형식을 사용하여 데이터 내보내기](#bcp_native_export)<br />&emsp;&#9679;&emsp;[bcp 및 원시 형식을 사용하여 서식 파일 없이 데이터 가져오기](#bcp_native_import)<br />&emsp;&#9679;&emsp;[bcp 및 원시 형식을 사용하여 XML 이외의 서식 파일과 함께 데이터 가져오기](#bcp_native_import_fmt)<br />&emsp;&#9679;&emsp;[서식 파일 없이 BULK INSERT 및 원시 형식 사용](#bulk_native)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 BULK INSERT 및 원시 형식 사용하기](#bulk_native_fmt)<br />&emsp;&#9679;&emsp;[XML 이외의 서식 파일과 함께 OPENROWSET 및 원시 형식 사용하기](#openrowset_native_fmt)|
-|[관련 작업](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
+|[관련 태스크](#RelatedTasks)<p>                                                                                                                                                                                                                  </p>|
 
 ## 제한 사항<a name="restrictions"></a>  
 데이터를 네이티브 형식으로 가져오려면 다음 사항을 확인하십시오.  
@@ -61,14 +65,14 @@ caps.handback.revision: 43
   
 -   문자가 아닌 데이터  
   
-     [bcp 유틸리티](../../tools/bcp-utility.md)는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 이진 데이터 형식을 사용하여 문자가 아닌 테이블의 데이터를 데이터 파일에 기록합니다.  
+     [bcp 유틸리티](../../tools/bcp-utility.md) 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부 이진 데이터 형식을 사용하여 문자가 아닌 테이블의 데이터를 데이터 파일에 기록합니다.  
   
 -   [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 또는 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) 데이터  
   
-     [bcp](../../tools/bcp-utility.md)는 각 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 또는 [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)필드의 처음 부분에 접두사 길이를 추가합니다.  
+     [bcp](../../t-sql/data-types/char-and-varchar-transact-sql.md) 는 각 [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) 또는 [varchar](../../tools/bcp-utility.md) 필드의 처음 부분에 접두사 길이를 추가합니다.  
   
     > [!IMPORTANT]
-    >  기본 모드를 사용하면 기본적으로 [bcp 유틸리티](../../tools/bcp-utility.md)가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 문자를 데이터 파일에 복사하기 전에 OEM 문자로 변환합니다. 반대로 데이터 파일의 문자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져올 때는 [bcp 유틸리티](../../tools/bcp-utility.md)가 문자를 ANSI 문자로 변환합니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.
+    >  기본 모드를 사용하면 기본적으로 [bcp 유틸리티](../../tools/bcp-utility.md) 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 문자를 데이터 파일에 복사하기 전에 OEM 문자로 변환합니다. 반대로 데이터 파일의 문자를 [테이블에 대량으로 가져올 때는](../../tools/bcp-utility.md) bcp 유틸리티 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 문자를 ANSI 문자로 변환합니다. 이러한 변환 과정에서 확장 문자 데이터가 손실될 수 있습니다. 확장 문자의 경우 유니코드 네이티브 형식을 사용하거나 코드 페이지를 지정하십시오.
   
 -   [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) 데이터  
   
@@ -93,14 +97,14 @@ caps.handback.revision: 43
  \*네이티브(**-n**) 데이터를 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트와 호환되는 형식으로 로드하려면 **-V** 스위치를 사용합니다. 자세한 내용은 [SQL Server 이전 버전으로부터 기본 및 문자 형식 데이터 가져오기](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)를 참조하세요.  
   
 > [!NOTE]
->  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)을 참조하세요.
+>  서식 파일에서 필드 단위로 서식을 지정할 수도 있습니다. 자세한 내용은 [데이터를 가져오거나 내보내기 위한 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)를 참조하세요.
   
 
 ## 예제 테스트 조건<a name="etc"></a>  
 이 항목의 예제는 아래에 정의된 테이블 및 서식 파일을 기반으로 합니다.
 
-### **예제 테이블**<a name="sample_table"></a>
-아래 스크립트는 테스트 데이터베이스인 `myNative`라는 테이블을 만들고 테이블을 몇 가지 초기 값으로 채웁니다.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+### **샘플 테이블**<a name="sample_table"></a>
+아래 스크립트는 테스트 데이터베이스인 `myNative` 라는 테이블을 만들고 테이블을 몇 가지 초기 값으로 채웁니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 CREATE DATABASE TestDatabase;
 GO
@@ -126,7 +130,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **샘플 비 XML 서식 파일**<a name="nonxml_format_file"></a>
-SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md)을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md)를 사용하여 `myNative`의 스키마를 기반으로 비 xml 서식 파일 `myNative.fmt`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul**을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c**는 문자 데이터를 지정하는 데 사용되고 **T**는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
+SQL Server는 두 유형의 서식 파일, 즉 비 XML 서식 파일과 XML 서식 파일을 지원합니다.  비 XML 서식 파일은 이전 버전의 SQL Server에서 원래 지원했던 서식 파일입니다.  자세한 내용은 [비 XML 서식 파일(SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) 을 검토하세요.  다음 명령은 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 `myNative.fmt`의 스키마를 기반으로 비 xml 서식 파일 `myNative`를 생성합니다.  [bcp](../../tools/bcp-utility.md) 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **nul** 을 사용합니다.  format 옵션에는 **-f** 옵션도 필요합니다.  또한 이 예제에서 한정자 **c** 는 문자 데이터를 지정하는 데 사용되고 **T** 는 통합된 보안을 사용하여 신뢰할 수 있는 연결을 지정하는 데 사용됩니다.  명령 프롬프트에서 다음 명령을 입력합니다.
 
 ```
 bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
@@ -180,7 +184,7 @@ SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNative;"
 ```
 
 ### **서식 파일 없이 BULK INSERT 및 원시 형식 사용**<a name="bulk_native"></a>
-**DATAFILETYPE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+**DATAFILETYPE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -194,7 +198,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **XML 이외의 서식 파일과 함께 BULK INSERT 및 원시 형식 사용하기**<a name="bulk_native_fmt"></a>
-**FORMATFILE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+**FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative; -- for testing
 BULK INSERT TestDatabase.dbo.myNative
@@ -208,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 ```
 
 ### **XML 이외의 서식 파일과 함께 OPENROWSET 및 원시 형식 사용하기**<a name="openrowset_native_fmt"></a>
-**FORMATFILE** 인수.  Microsoft SSMS([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])에서 다음 Transact-SQL을 실행합니다.
+**FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
 ```tsql
 TRUNCATE TABLE TestDatabase.dbo.myNative;  -- for testing
 INSERT INTO TestDatabase.dbo.myNative
@@ -233,8 +237,8 @@ SELECT * FROM TestDatabase.dbo.myNative;
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## 참고 항목  
- [bcp 유틸리티](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>참고 항목  
+ [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [sql_variant&#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
@@ -243,3 +247,4 @@ SELECT * FROM TestDatabase.dbo.myNative;
  [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
   
+

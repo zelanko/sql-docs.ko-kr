@@ -1,31 +1,35 @@
 ---
-title: "첫 번째 및 마지막 트리거 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "첫 번째 트리거 [SQL Server]"
-  - "마지막 트리거"
-  - "DML 트리거, 첫 번째 또는 마지막 트리거"
-  - "INSTEAD OF 트리거"
-  - "AFTER 트리거"
+title: "첫 번째 및 마지막 트리거 지정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- first triggers [SQL Server]
+- last triggers
+- DML triggers, first or last triggers
+- INSTEAD OF triggers
+- AFTER triggers
 ms.assetid: 9e6c7684-3dd3-46bb-b7be-523b33fae4d5
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 99935796043bf8ea14c32a2f98867ca2c7612a2d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 첫 번째 및 마지막 트리거 지정
+# <a name="specify-first-and-last-triggers"></a>첫 번째 및 마지막 트리거 지정
   테이블과 연결된 AFTER 트리거 중 하나를 각 INSERT, DELETE 및 UPDATE 트리거 동작에 대한 첫 번째 AFTER 트리거나 마지막 AFTER 트리거로 지정할 수 있습니다. 첫 번째 트리거와 마지막 트리거 사이에 실행되는 AFTER 트리거는 정의되지 않은 순서로 실행됩니다.  
   
- AFTER 트리거의 순서를 지정하려면 **sp_settriggerorder** 저장 프로시저를 사용합니다. **sp_settriggerorder**에는 다음과 같은 옵션이 있습니다.  
+ AFTER 트리거의 순서를 지정하려면 **sp_settriggerorder** 저장 프로시저를 사용합니다. **sp_settriggerorder** 에는 다음과 같은 옵션이 있습니다.  
   
 |옵션|설명|  
 |------------|-----------------|  
@@ -52,9 +56,9 @@ sp_settriggerorder @triggername = 'MyTrigger', @order = 'first', @stmttype = 'UP
   
  OBJECTPROPERTY 함수의 **ExecIsFirstTrigger** 및 **ExecIsLastTrigger**속성을 통해 트리거가 첫 번째 트리거인지 또는 마지막 트리거인지 알 수 있습니다.  
   
- 복제 시 즉시 업데이트 구독이나 지연 업데이트 구독에 포함된 테이블에 대해 첫 번째 트리거가 자동으로 생성됩니다. 복제의 트리거는 첫 번째 트리거여야 합니다. 첫 번째 트리거가 있는 테이블을 즉시 업데이트 구독이나 지연 업데이트 구독에 포함시키면 복제 시 오류가 발생합니다. 테이블이 구독에 포함된 후 트리거를 첫 번째 트리거로 만들려고 하면 **sp_settriggerorder**에서 오류가 반환됩니다. 복제 트리거에 ALTER를 사용하거나 **sp_settriggerorder**를 사용하여 복제 트리거를 마지막 트리거나 없음 트리거로 변경하면 구독이 제대로 작동하지 않게 됩니다.  
+ 복제 시 즉시 업데이트 구독이나 지연 업데이트 구독에 포함된 테이블에 대해 첫 번째 트리거가 자동으로 생성됩니다. 복제의 트리거는 첫 번째 트리거여야 합니다. 첫 번째 트리거가 있는 테이블을 즉시 업데이트 구독이나 지연 업데이트 구독에 포함시키면 복제 시 오류가 발생합니다. 테이블이 구독에 포함된 후 트리거를 첫 번째 트리거로 만들려고 하면 **sp_settriggerorder** 에서 오류가 반환됩니다. 복제 트리거에 ALTER를 사용하거나 **sp_settriggerorder** 를 사용하여 복제 트리거를 마지막 트리거나 없음 트리거로 변경하면 구독이 제대로 작동하지 않게 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [OBJECTPROPERTY&#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
  [sp_settriggerorder&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-settriggerorder-transact-sql.md)  
   

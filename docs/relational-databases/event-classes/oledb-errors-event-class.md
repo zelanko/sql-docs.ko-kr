@@ -1,29 +1,33 @@
 ---
-title: "OLEDB Errors 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLEDB Errors 이벤트 클래스"
+title: "OLEDB Errors 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLEDB Errors event class
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 caps.latest.revision: 33
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72ef942bc5dffeaf14275c6e36ce148571b1a576
+ms.lasthandoff: 04/11/2017
+
 ---
-# OLEDB Errors 이벤트 클래스
-  OLEDB Errors 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 OLE DB 공급자에 대한 호출이 오류를 반환하는 경우 발생합니다. OLE DB 공급자의 실패한 HRESULT를 보려면 이 이벤트 클래스를 추적에 포함시킵니다.  
+# <a name="oledb-errors-event-class"></a>OLEDB Errors 이벤트 클래스
+  OLEDB Errors 이벤트 클래스는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 OLE DB 공급자에 대한 호출이 오류를 반환하는 경우 발생합니다. OLE DB 공급자의 실패한 HRESULT를 보려면 이 이벤트 클래스를 추적에 포함시킵니다.  
   
  OLEDB Errors 이벤트 클래스가 추적에 포함되면 추적하는 동안 데이터베이스에 대해 발생하는 OLE DB 공급자 오류 빈도에 따라 오버헤드의 양이 달라집니다. 이런 오류가 자주 발생할 경우 추적으로 인해 성능이 크게 저하될 수 있습니다.  
   
-## OLEDB Errors 이벤트 클래스 데이터 열  
+## <a name="oledb-errors-event-class-data-columns"></a>OLEDB Errors 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -45,13 +49,13 @@ caps.handback.revision: 33
 |NTUserName|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |ProviderName|**nvarchar**|OLE DB Provider의 이름입니다.|46|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
-|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
+|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|**nvarchar**|OLE DB 호출에서 주고 받는 매개 변수입니다.|1|아니요|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Transact-SQL의 OLE 자동화 개체](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   

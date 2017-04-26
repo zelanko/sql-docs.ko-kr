@@ -1,24 +1,28 @@
 ---
-title: "Microsoft 복제 충돌 뷰어(병합 게시) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.replconflictviewer.cvmerge.f1"
+title: "Microsoft 복제 충돌 뷰어(병합 복제) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.replconflictviewer.cvmerge.f1
 ms.assetid: bfef5e21-ac04-4bc5-a55e-595421e34923
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7eb7232103562f5196c7f3f5b83017b8060fdaf4
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft 복제 충돌 뷰어(병합 게시)
+# <a name="microsoft-replication-conflict-viewer-merge-replication"></a>Microsoft 복제 충돌 뷰어(병합 게시)
   복제 충돌 뷰어를 사용하면 복제 동기화를 수행하는 동안 발생한 모든 충돌을 볼 수 있습니다. 충돌은 게시자와 구독자 또는 두 구독자 등 두 위치에서 같은 데이터를 동시에 변경할 때 발생합니다. 복제는 아티클을 만들 때 선택한 충돌 해결 프로그램을 사용하여 충돌을 자동으로 해결합니다. 그러나 필요한 경우 복제 충돌 뷰어를 사용하여 충돌 해결에 다른 해결 방법을 선택할 수 있습니다. 다음과 같은 두 가지 충돌이 일어날 수 있습니다.  
   
 -   업데이트 충돌. 업데이트 충돌은 같은 데이터를 두 위치에서 변경할 때 발생합니다. 이 경우 한 가지 변경 내용만 적용됩니다. 기존 데이터를 유지하거나(이 경우 기존 데이터가 적용되는 데이터임) 기존 데이터와 충돌하는 데이터로 기존 데이터를 덮어쓰거나(이 경우 기존 데이터가 무시되는 데이터임) 두 데이터를 병합하여 기존 데이터를 업데이트할 수 있습니다.  
@@ -30,14 +34,14 @@ caps.handback.revision: 24
  동기화하는 동안 충돌이 해결될 때는 무시되는 행의 데이터가 충돌 테이블에 기록됩니다. 충돌 해결을 위해 원래 해결 방법을 적용하든지, 아니면 다른 해결 방법을 선택하든지에 관계없이 기록된 충돌 행은 충돌 테이블에서 삭제됩니다. 충돌 추적 테이블의 크기를 줄이려면 정기적으로 충돌을 검토해야 합니다.  
   
 > [!NOTE]  
->  논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 참조 [병합 게시 및 #40;에 대 한 충돌 정보 보기 복제 TRANSACT-SQL 프로그래밍 & #41;](../../relational-databases/replication/view conflict information for merge publications.md)합니다.  
+>  논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  복제 충돌 뷰어는 두 개의 섹션으로 나뉘어져 있습니다. 대화 상자의 위쪽 섹션에 선택한 테이블의 충돌 목록이 표시됩니다. 충돌 목록에서 항목을 클릭하면 대화 상자의 아래쪽 섹션에 해당 충돌에 대한 세부 정보가 표시됩니다.  
   
- 충돌이 발생한 원인(예: 게시자 및 구독자 모두에서 같은 행 업데이트)에 대한 정보는 대화 상자의 아래쪽 섹션에 표시됩니다. 아래쪽 섹션에서 충돌 데이터는 해당 하는 열에 표시 됩니다 (**충돌 시 적용 되** 및 **충돌 시 무시 되**). 업데이트된 데이터와 삭제된 데이터 간에 충돌이 있다면 충돌 시 삭제된 쪽을 표시하는 데이터는 없습니다. 이 경우 복제 충돌 뷰어에서는 행이 한 위치에서 삭제되었고 다른 위치에서는 업데이트되었음을 나타내는 메시지를 열 중 하나에 표시합니다. 권장 해결 방법도 표시됩니다.  
+ 충돌이 발생한 원인(예: 게시자 및 구독자 모두에서 같은 행 업데이트)에 대한 정보는 대화 상자의 아래쪽 섹션에 표시됩니다. 아래쪽 섹션에서 충돌 데이터는**충돌 시 적용되는 내용** 및 **충돌 시 변경 내용 무시**중 해당하는 열에 표시됩니다. 업데이트된 데이터와 삭제된 데이터 간에 충돌이 있다면 충돌 시 삭제된 쪽을 표시하는 데이터는 없습니다. 이 경우 복제 충돌 뷰어에서는 행이 한 위치에서 삭제되었고 다른 위치에서는 업데이트되었음을 나타내는 메시지를 열 중 하나에 표시합니다. 권장 해결 방법도 표시됩니다.  
   
- 복제 충돌 뷰어에서 편집할 수 없는 데이터 (예를 들어 **rowguid** 데이터) 회색으로 읽기 전용으로 표시 됩니다.  
+ 복제 충돌 뷰어에서 편집할 수 없는 데이터(예: **rowguid** 데이터)는 회색으로 표시되며 읽기 전용으로 표시됩니다.  
   
  **데이터베이스**  
  충돌이 발생한 게시가 포함된 데이터베이스를 선택합니다.  
@@ -49,10 +53,10 @@ caps.handback.revision: 24
  충돌이 발생한 테이블을 선택합니다.  
   
  **필터 정의**  
- 열려면 클릭은 **필터 정의** 대화 상자입니다.  
+ **필터 정의** 대화 상자를 열려면 클릭합니다.  
   
  **필터 적용 또는 제거**  
- 에 정의 된 필터 적용 또는 제거 하려면 클릭은 **필터 정의** 대화 상자입니다.  
+ **필터 정의** 대화 상자에서 정의한 필터를 적용하거나 제거하려면 클릭합니다.  
   
  **모두 선택**  
  표에 나열된 모든 충돌을 선택하려면 클릭합니다.  
@@ -69,8 +73,8 @@ caps.handback.revision: 24
  **처음 다섯 개의 열 및 충돌하는 데이터를 포함하는 기타 열 표시**  
  처음 5개 열과 충돌이 발생한 기타 모든 열을 표시하려면 선택합니다. 이 옵션은 테이블에 많은 열이 있지만 충돌 해결에 가장 도움이 되는 열만 보려는 경우에 유용합니다. 기본 키 또는 이름 필드와 같이 행을 식별하는 필드가 테이블의 앞쪽 열에 포함되어 있는 경우가 많으므로 처음 5개 열은 항상 이 뷰에 포함됩니다.  
   
- **열 정보를 표시** (**...**)  
- 열 정보를 보려면 **테이블 이름**, **열 이름**, **데이터 형식**및 **열 값**을 클릭합니다. **열 값** 않는 것이 편집 가능한 값은 읽기 전용으로 표시 됩니다.  
+ **열 정보 표시** (**…**)  
+ 열 정보를 보려면 **테이블 이름**, **열 이름**, **데이터 형식**및 **열 값**을 클릭합니다. **열 값** 은 읽기 전용으로 표시되지 않는 경우 편집할 수 있습니다.  
   
  **적용되는 내용 전송**  
  충돌 해결 프로그램에서 적용되는 내용으로 결정한 행을 유지하려면 클릭합니다. 이 단추를 클릭하기 전에 읽기 전용으로 표시되지 않은 모든 열의 값을 변경할 수 있습니다.  
@@ -79,10 +83,10 @@ caps.handback.revision: 24
  충돌 해결 프로그램에서 무시되는 내용으로 결정한 행을 적용하려면 클릭합니다. 이 단추를 클릭하기 전에 읽기 전용으로 표시되지 않은 모든 열의 값을 변경할 수 있습니다.  
   
  **이 충돌 정보 기록**  
- 자세한 충돌 정보를 파일에 기록하려면 이 확인란을 선택합니다. 파일 위치를 지정하려면 **보기** 메뉴를 가리키고 **옵션**을 클릭합니다. 값을 입력 하거나 찾아보기 (**...**) 한 다음 해당 파일로 이동 합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
+ 자세한 충돌 정보를 파일에 기록하려면 이 확인란을 선택합니다. 파일 위치를 지정하려면 **보기** 메뉴를 가리키고 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 (**...**)를 클릭한 다음 해당 파일로 이동합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
   
-## 참고 항목  
- [보기 및 병합 게시 및 #40;에 대 한 데이터 충돌 해결 SQL Server Management Studio & #41;](../../relational-databases/replication/view and resolve data conflicts for merge publications.md)   
- [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
+## <a name="see-also"></a>참고 항목  
+ [병합 게시에 대한 데이터 충돌 보기 및 해결&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/view-and-resolve-data-conflicts-for-merge-publications.md)   
+ [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)  
   
   

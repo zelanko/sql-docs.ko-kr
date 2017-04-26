@@ -1,26 +1,30 @@
 ---
-title: "인덱스 이름 바꾸기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 이름 바꾸기"
-  - "인덱스 이름 [SQL Server]"
-  - "인덱스 [SQL Server], 이름 변경"
+title: "인덱스 이름 바꾸기 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- renaming indexes
+- index names [SQL Server]
+- indexes [SQL Server], renaming
 ms.assetid: d3d612a1-ea1b-4d99-85d2-0a2ad54f4b0e
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59c77e43b02e26626c280f6325cdb67a11021db9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 이름 바꾸기
+# <a name="rename-indexes"></a>인덱스 이름 바꾸기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스 이름을 바꾸는 방법에 대해 설명합니다. 인덱스 이름을 바꾸면 현재 인덱스 이름이 새 이름으로 바뀝니다. 지정된 이름은 테이블 또는 뷰에서 고유해야 합니다. 예를 들어 **XPK_1**이라는 인덱스가 두 테이블에 있을 수는 있지만 동일한 테이블에 **XPK_1**이라는 인덱스가 두 개 있을 수는 없습니다. 기존의 비활성 인덱스와 동일한 이름의 인덱스는 만들 수 없습니다. 인덱스 이름을 바꾼다고 인덱스가 다시 작성되는 것은 아닙니다.  
@@ -51,7 +55,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 테이블 디자이너를 사용하여 인덱스 이름을 바꾸려면  
+#### <a name="to-rename-an-index-by-using-the-table-designer"></a>테이블 디자이너를 사용하여 인덱스 이름을 바꾸려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스 이름을 바꿀 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 8.  **파일** 메뉴에서 *table name* **저장**을 클릭합니다.  
   
-#### 개체 탐색기를 사용하여 인덱스 이름을 바꾸려면  
+#### <a name="to-rename-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스 이름을 바꾸려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 인덱스 이름을 바꿀 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 인덱스 이름을 바꾸려면  
+#### <a name="to-rename-an-index"></a>인덱스 이름을 바꾸려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -105,3 +109,4 @@ caps.handback.revision: 27
  자세한 내용은 [sp_rename&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)을 참조하세요.  
   
   
+

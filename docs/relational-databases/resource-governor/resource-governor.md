@@ -1,28 +1,32 @@
 ---
-title: "리소스 관리자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 관리자, 개요"
-  - "리소스 관리자"
+title: "리소스 관리자 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, overview
+- Resource Governor
 ms.assetid: 2bc89b66-e801-45ba-b30d-8ed197052212
 caps.latest.revision: 41
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7bbd2ba4ed132f3e1a795f72667c34f764c0d30
+ms.lasthandoff: 04/11/2017
+
 ---
-# 리소스 관리자
+# <a name="resource-governor"></a>리소스 관리자
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스 관리자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업 및 시스템 리소스 소비량을 관리하는 데 사용할 수 있는 기능입니다. 리소스 관리자를 사용하면 들어오는 응용 프로그램 요청이 사용할 수 있는 CPU, 물리적 IO 및 메모리 양을 제한할 수 있습니다.  
   
-## 리소스 관리자의 이점  
+## <a name="benefits-of-resource-governor"></a>리소스 관리자의 이점  
  리소스 관리자를 사용하여 리소스 소비량에 대한 제한을 들어오는 요청별로 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 작업과 리소스를 관리할 수 있습니다. 리소스 관리자 컨텍스트에서 작업이란 단일 엔터티로 취급해야 하거나 취급할 수 있는 비슷한 크기의 쿼리 또는 요청 집합입니다. 반드시 그래야 하는 것은 아니지만 작업의 리소스 사용 패턴이 균일할수록 리소스 관리자를 통해 얻을 수 있는 이점이 많아집니다. 리소스 제한은 실행 중인 작업에 미치는 영향을 최소화하면서 실시간으로 다시 구성할 수 있습니다.  
   
  같은 서버에 고유 작업이 여러 개 있는 환경에서 리소스 관리자를 사용하면 이러한 여러 작업을 구별할 수 있으며 지정한 제한에 따라 요청된 공유 리소스를 할당할 수 있습니다. CPU, 물리적 IO 및 메모리가 이러한 리소스에 해당합니다.  
@@ -37,7 +41,7 @@ caps.handback.revision: 41
   
 -   리소스 사용 비용 환불을 위한 세분화된 리소스 추적 기능을 추가하고 서버 리소스 소비자에게 예측 가능한 요금 청구 기능을 제공합니다.  
   
-## 리소스 관리자 제약 사항  
+## <a name="resource-governor-constraints"></a>리소스 관리자 제약 사항  
  이 리소스 관리자 릴리스의 제약 사항은 다음과 같습니다.  
   
 -   리소스 관리가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]으로 제한되며 리소스 관리자를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 사용할 수 없습니다.  
@@ -50,21 +54,21 @@ caps.handback.revision: 41
   
 -   내부 리소스 풀에 대해서는 IO 임계값을 설정할 수 없습니다.  
   
-## 리소스 개념  
+## <a name="resource-concepts"></a>리소스 개념  
  다음은 리소스 관리자를 이해하고 사용하기 위한 세 가지 기본 개념입니다.  
   
--   **리소스 풀.** 리소스 풀은 서버의 물리적 리소스를 나타냅니다. 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내부의 가상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴트로 간주할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 두 개의 리소스 풀(내부 및 기본)이 만들어집니다. 또한 리소스 관리자는 사용자 정의 리소스 풀을 지원합니다. 자세한 내용은 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)을(를) 참조하세요.  
+-   **리소스 풀** 리소스 풀은 서버의 물리적 리소스를 나타냅니다. 풀은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내부의 가상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴트로 간주할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하면 두 개의 리소스 풀(내부 및 기본)이 만들어집니다. 또한 리소스 관리자는 사용자 정의 리소스 풀을 지원합니다. 자세한 내용은 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)을(를) 참조하세요.  
   
--   **작업 그룹.** 작업 그룹은 분류 기준이 유사한 세션 요청에 대한 컨테이너의 역할을 합니다. 작업 그룹을 사용하면 세션의 집계 모니터링이 가능하며 작업 그룹으로 세션의 정책을 정의할 수 있습니다. 각 작업 그룹은 리소스 풀에 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하면 두 개의 작업 그룹(내부 및 기본)이 만들어지고 해당 리소스 풀에 매핑됩니다. 또한 리소스 관리자는 사용자 정의 작업 그룹을 지원합니다. 자세한 내용은 [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)를 참조하세요.  
+-   **작업 그룹** 작업 그룹은 분류 기준이 유사한 세션 요청에 대한 컨테이너의 역할을 합니다. 작업 그룹을 사용하면 세션의 집계 모니터링이 가능하며 작업 그룹으로 세션의 정책을 정의할 수 있습니다. 각 작업 그룹은 리소스 풀에 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하면 두 개의 작업 그룹(내부 및 기본)이 만들어지고 해당 리소스 풀에 매핑됩니다. 또한 리소스 관리자는 사용자 정의 작업 그룹을 지원합니다. 자세한 내용은 [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md)를 참조하세요.  
   
--   **분류.** 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다. 또한 리소스 관리자는 분류 규칙을 구현하는 분류자 사용자 정의 함수를 지원합니다. 자세한 내용은 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md)을(를) 참조하세요.  
+-   **분류** 분류 프로세스는 세션 특징에 기초하여 들어오는 세션을 작업 그룹에 할당합니다. 분류자 함수라고 하는 사용자 정의 함수를 작성하여 원하는 분류 논리를 지정할 수 있습니다. 또한 리소스 관리자는 분류 규칙을 구현하는 분류자 사용자 정의 함수를 지원합니다. 자세한 내용은 [Resource Governor Classifier Function](../../relational-databases/resource-governor/resource-governor-classifier-function.md)을(를) 참조하세요.  
   
 > [!NOTE]  
 >  리소스 관리자는 DAC(관리자 전용 연결)를 제어하지 않습니다. 내부 작업 그룹과 리소스 풀에서 실행되는 DAC 쿼리는 분류할 필요가 없습니다.  
   
  리소스 관리자의 컨텍스트에서는 위의 개념이 구성 요소로 간주될 수 있습니다. 다음 그림에서는 이러한 구성 요소와 이러한 구성 요소가 데이터베이스 엔진 환경에 있을 때 서로 어떤 관계가 있는지를 보여 줍니다. 처리 측면에서 이 흐름은 다음과 같이 요약할 수 있습니다.  
   
--   세션에 대한 들어오는 연결(세션 1/*n*)이 있습니다.  
+-   세션에 대한 들어오는 연결(세션 1/ *n*)이 있습니다.  
   
 -   세션이 분류됩니다(분류).  
   
@@ -74,9 +78,9 @@ caps.handback.revision: 41
   
 -   리소스 풀이 응용 프로그램(예: 응용 프로그램 3)에 필요한 리소스를 제공하고 제한합니다.  
   
- ![리소스 관리자 기능 구성 요소](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "리소스 관리자 기능 구성 요소")  
+ ![리소스 관리자 기능 구성 요소](../../relational-databases/resource-governor/media/rg-basic-funct-components.gif "Resource Governor Functional Components")  
   
-## 리소스 관리자 태스크  
+## <a name="resource-governor-tasks"></a>리소스 관리자 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -88,7 +92,7 @@ caps.handback.revision: 41
 |템플릿을 사용하여 리소스 관리자를 구성하는 방법에 대해 설명합니다.|[템플릿을 사용하여 리소스 관리자 구성](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)|  
 |리소스 관리자의 속성을 보는 방법에 대해 설명합니다.|[리소스 관리자 속성 보기](../../relational-databases/resource-governor/view-resource-governor-properties.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 엔진 인스턴스&#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

@@ -1,30 +1,34 @@
 ---
-title: "쿼리 저장소에서 데이터를 수집하는 방법 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/13/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼리 저장소, 데이터 컬렉션"
+title: "쿼리 저장소에서 데이터를 수집하는 방법 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/13/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Query Store, data collection
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.lasthandoff: 04/11/2017
+
 ---
-# 쿼리 저장소에서 데이터를 수집하는 방법
+# <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   쿼리 저장소는 쿼리 및 계획과 관련된 컴파일 및 런타임 정보를 지속적으로 수집하는 **비행 데이터 레코더** 로 작동합니다. 데이터와 관련된 쿼리는 내부 테이블에 유지되고 뷰 집합을 통해 사용자에게 표시됩니다.  
   
-## 뷰  
+## <a name="views"></a>뷰  
  다음 다이어그램은 파란색 엔터티로 표시된 컴파일 시간 정보와 함께 쿼리 저장소 뷰와 논리적 관계를 보여 줍니다.  
   
  ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
@@ -37,12 +41,12 @@ caps.handback.revision: 10
 |**sys.query_context_settings**|실행되는 쿼리의 설정에 영향을 주는 계획의 고유 조합을 표시합니다. `context_settings_id` 은(는) 쿼리 키의 일부이므로 설정에 영향을 주는 다른 계획으로 실행되는 동일한 쿼리 텍스트는 쿼리 저장소에 별도 쿼리 항목을 생성합니다.|  
 |**sys.query_store_query**|쿼리 저장소에서 개별적으로 추적되고 강제로 적용되는 쿼리 항목입니다. 다른 컨텍스트 설정에서 실행되거나 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈(프로시저, 트리거 등이 저장됨)의 외부 및 내부에서 실행되는 경우 단일 쿼리 텍스트는 여러 쿼리 항목을 생성할 수 있습니다.|  
 |**sys.query_store_plan**|컴파일 시간 통계로 쿼리에 대한 예상 계획을 표시합니다. 저장된 계획은 `SET SHOWPLAN_XML ON`을(를) 사용하여 얻을 수 있는 것과 동일합니다.|  
-|**sys.query_store_runtime_stats_interval**|쿼리 저장소는 시간을 자동으로 생성된 시간 창(간격)으로 분할하고 실행된 모든 계획에 대한 해당 간격에 집계 통계를 저장합니다. 간격의 크기는 통계 수집 간격 구성 옵션([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서) 또는 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)을 사용하여 `INTERVAL_LENGTH_MINUTES`에 의해 제어됩니다.|  
+|**sys.query_store_runtime_stats_interval**|쿼리 저장소는 시간을 자동으로 생성된 시간 창(간격)으로 분할하고 실행된 모든 계획에 대한 해당 간격에 집계 통계를 저장합니다. 간격의 크기는 통계 수집 간격 구성 옵션([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서) 또는 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 `INTERVAL_LENGTH_MINUTES`에 의해 제어됩니다.|  
 |**sys.query_store_runtime_stats**|실행된 계획에 대한 집계된 런타임 통계입니다. 모든 캡처된 메트릭은 4개의 통계 함수 형태인 평균, 최소값, 최대값 및 표준 편차로 표현됩니다.|  
   
  쿼리 저장소 뷰에 대한 자세한 내용은 **쿼리 저장소를 사용하여 성능 모니터링** 의 [관련된 뷰, 함수 및 프로시저](https://msdn.microsoft.com/library/dn817826.aspx)섹션을 참조하세요.  
   
-## 쿼리 처리  
+## <a name="query-processing"></a>쿼리 처리  
  쿼리 저장소는 다음 주요 지점에서 쿼리 처리 파이프라인과 상호 작용합니다.  
   
 1.  쿼리가 처음으로 컴파일될 때 쿼리 텍스트 및 초기 계획이 쿼리 저장소로 전송됩니다.  
@@ -57,7 +61,7 @@ caps.handback.revision: 10
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- I/O 오버헤드를 최소화하기 위해 새 데이터가 메모리 내에 캡처됩니다. 쓰기 작업은 지연되고 나중에 디스크에 플러시됩니다. 쿼리 및 계획 정보(아래 다이어그램의 계획 저장소)가 최소 대기 시간으로 플러시됩니다. 런타임 통계(Runtime Stats)가 `SET QUERY_STORE` 문의 `DATA_FLUSH_INTERVAL_SECONDS` 옵션을 사용하여 정의된 기간 동안 메모리에서 유지됩니다. SSMS 쿼리 저장소 대화 상자를 사용하여 **데이터 플러시 간격(분)**을 입력할 수 있으며 초 단위로 변환됩니다.  
+ I/O 오버헤드를 최소화하기 위해 새 데이터가 메모리 내에 캡처됩니다. 쓰기 작업은 지연되고 나중에 디스크에 플러시됩니다. 쿼리 및 계획 정보(아래 다이어그램의 계획 저장소)가 최소 대기 시간으로 플러시됩니다. 런타임 통계(Runtime Stats)가 `DATA_FLUSH_INTERVAL_SECONDS` 문의 `SET QUERY_STORE` 옵션을 사용하여 정의된 기간 동안 메모리에서 유지됩니다. SSMS 쿼리 저장소 대화 상자를 사용하여 **데이터 플러시 간격(분)**을 입력할 수 있으며 초 단위로 변환됩니다.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
@@ -68,9 +72,10 @@ caps.handback.revision: 10
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## 관련 항목:  
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+## <a name="see-also"></a>참고 항목  
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
   
   
+

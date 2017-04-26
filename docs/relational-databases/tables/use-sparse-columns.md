@@ -1,26 +1,30 @@
 ---
-title: "스파스 열 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스파스 열, 설명"
-  - "Null 열"
-  - "스파스 열"
+title: "스파스 열 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sparse columns, described
+- null columns
+- sparse columns
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73aa2beab814a8cc36400ddd384bb7f5de3b9d5d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 스파스 열 사용
+# <a name="use-sparse-columns"></a>스파스 열 사용
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   스파스 열은 Null 값에 대해 최적화된 저장소가 있는 일반 열입니다. 스파스 열을 사용하면 Null 값에 대한 공간 요구 사항이 줄어드는 반면 Null이 아닌 값을 검색하는 데 더 많은 오버헤드가 발생합니다. 최소 20%에서 40% 사이의 공간이 절약되는 경우에는 스파스 열을 사용하십시오. 스파스 열 및 열 집합은 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 문을 사용하여 정의합니다.  
@@ -37,7 +41,7 @@ caps.handback.revision: 47
   
  스파스 열 및 필터링된 인덱스를 통해 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]와 같은 응용 프로그램에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여 많은 수의 사용자 정의 속성을 효율적으로 저장하고 액세스할 수 있습니다.  
   
-## 스파스 열 속성  
+## <a name="properties-of-sparse-columns"></a>스파스 열 속성  
  스파스 열에는 다음과 같은 특징이 있습니다.  
   
 -   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 열 정의에 SPARSE 키워드를 사용하여 해당 열의 값 저장을 최적화할 수 있습니다. 따라서 테이블에 있는 행에 대해 열 값이 NULL인 경우 값을 저장할 필요가 없습니다.  
@@ -65,7 +69,7 @@ caps.handback.revision: 47
 |**image**|**사용자 정의 데이터 형식**|  
 |**ntext**||  
   
-## 데이터 형식별 예상 공간 절약  
+## <a name="estimated-space-savings-by-data-type"></a>데이터 형식별 예상 공간 절약  
  스파스 열을 사용하면 SPARSE로 표시되지 않은 동일한 데이터에 대해 필요한 공간보다 Null이 아닌 값에 더 많은 저장 공간이 필요합니다. 다음 표에서는 각 데이터 형식에 대한 공간 사용률을 보여 줍니다. **NULL 백분율** 열은 40%의 순 공간 절약을 위해 NULL이어야 하는 데이터 비율을 나타냅니다.  
   
  **고정 길이 데이터 형식**  
@@ -113,15 +117,15 @@ caps.handback.revision: 47
   
  *길이는 형식에 포함된 데이터의 평균에 2바이트 또는 4바이트를 더한 값과 같습니다.  
   
-## 스파스 열을 업데이트하려면 메모리 내 오버헤드가 필요함  
+## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>스파스 열을 업데이트하려면 메모리 내 오버헤드가 필요함  
  스파스 열을 사용하여 테이블을 디자인하는 경우 행이 업데이트될 때 테이블에서 null이 아닌 스파스 열 각각에 대해 2바이트의 추가 오버헤드가 필요함에 유의해야 합니다. 이러한 추가 메모리 요구 사항으로 인해 이 메모리 오버헤드를 포함한 총 행 크기가 8019를 초과하여 열을 행에 밀어넣을 수 없으므로 예기치 않게 576 오류가 발생하여 업데이트가 실패할 수 있습니다.  
   
  bigint 형식의 600개 스파스 열을 가진 테이블의 예를 살펴 보십시오. 571개의 null이 아닌 열이 있는 경우 디스크의 총 크기는 571 * 12 = 6852바이트입니다. 추가 행 오버로드와 스파스 열 머리글을 포함하면 약 6895바이트로 증가합니다. 페이지에는 여전히 디스크에서 사용 가능한 1124바이트가 있습니다. 그러면 추가 열을 업데이트할 수 있는 것처럼 보일 수 있습니다. 하지만 업데이트 중에 메모리에 2\*(null이 아닌 스파스 열의 수)에 해당하는 추가 오버헤드가 발생합니다. 이 예에서 추가 오버헤드(2 \* 571 = 1142바이트)를 포함하면 디스크의 행 크기가 약 8037바이트로 증가합니다. 이는 최대 허용 크기인 8019바이트를 초과합니다. 모든 열은 고정 길이 데이터 형식이므로 행에 밀어넣을 수 없습니다. 따라서 576 오류가 발생하여 업데이트가 실패합니다.  
   
-## 스파스 열 사용에 대한 제한 사항  
+## <a name="restrictions-for-using-sparse-columns"></a>스파스 열 사용에 대한 제한 사항  
  스파스 열은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용할 수 있으며 다른 모든 열처럼 작동하지만 다음과 같은 제한 사항의 적용을 받습니다.  
   
--   스파스 열은 Null을 허용해야 하며 ROWGUIDCOL 또는 IDENTITY 속성을 사용할 수 없습니다. 스파스 열의 데이터 형식은 **text**, **ntext**, **image**, **timestamp**, 사용자 정의 데이터 형식, **geometry** 또는 **geography**일 수 없으며, 스파스 열에 FILESTREAM 특성을 가질 수 없습니다.  
+-   스파스 열은 Null을 허용해야 하며 ROWGUIDCOL 또는 IDENTITY 속성을 사용할 수 없습니다. 스파스 열의 데이터 형식은 **text**, **ntext**, **image**, **timestamp**, 사용자 정의 데이터 형식, **geometry**또는 **geography**일 수 없으며, 스파스 열에 FILESTREAM 특성을 가질 수 없습니다.  
   
 -   스파스 열은 기본값을 사용할 수 없습니다.  
   
@@ -154,14 +158,14 @@ caps.handback.revision: 47
   
 -   스파스가 아닌 열을 스파스 열로 변경하면 스파스 열이 Null이 아닌 값에 대해 더 많은 공간을 사용합니다. 행이 최대 행 크기 제한에 가까우면 작업이 실패할 수 있습니다.  
   
-## 스파스 열을 지원하는 SQL Server 기술  
+## <a name="sql-server-technologies-that-support-sparse-columns"></a>스파스 열을 지원하는 SQL Server 기술  
  이 섹션에서는 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술에서 스파스 열을 지원하는 방법에 대해 설명합니다.  
   
 -   트랜잭션 복제  
   
      트랜잭션 복제는 스파스 열을 지원하지만 스파스 열에서 사용할 수 있는 열 집합은 지원하지 않습니다. 열 집합에 대한 자세한 내용은 [열 집합 사용](../../relational-databases/tables/use-column-sets.md)을 참조하세요.  
   
-     SPARSE 특성 복제는 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 사용하거나 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **아티클 속성** 대화 상자를 사용하여 지정되는 스키마 옵션에 의해 결정됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 스파스 열이 지원되지 않습니다. 데이터를 이전 버전으로 복제해야 하는 경우 SPARSE 특성을 복제하지 않도록 지정합니다.  
+     SPARSE 특성 복제는 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 을 사용하거나 **에서** 아티클 속성 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하여 지정되는 스키마 옵션에 의해 결정됩니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 스파스 열이 지원되지 않습니다. 데이터를 이전 버전으로 복제해야 하는 경우 SPARSE 특성을 복제하지 않도록 지정합니다.  
   
      게시된 테이블의 경우 새 스파스 열을 테이블에 추가하거나 기존 열의 스파스 속성을 변경할 수 없습니다. 이러한 작업이 필요한 경우 게시를 삭제한 다음 다시 만듭니다.  
   
@@ -179,7 +183,7 @@ caps.handback.revision: 47
   
 -   열의 스파스 속성은 테이블을 복사할 때 보존되지 않습니다.  
   
-## 예  
+## <a name="examples"></a>예  
  이 예의 Document 테이블에는 `DocID` 및 `Title`열을 사용하는 공통 집합이 포함되어 있습니다. Production 그룹은 모든 생산 문서에 대한 `ProductionSpecification` 및 `ProductionLocation` 열을 원하며, Marketing 그룹은 마케팅 문서에 대한 `MarketingSurveyGroup` 열을 원합니다. 이 예의 코드에서는 스파스 열을 사용하는 테이블을 만들고, 테이블에 두 개의 행을 삽입한 다음 테이블에서 데이터를 선택합니다.  
   
 > [!NOTE]  
@@ -234,10 +238,11 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [열 집합 사용](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   
+

@@ -1,28 +1,32 @@
 ---
-title: "검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 텍스트 검색 [SQL Server], 검색 속성 목록"
-  - "검색 속성 목록 [SQL Server], 구성"
+title: "검색 속성의 속성 집합 GUID 및 속성 정수 ID 찾기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], search property lists
+- search property lists [SQL Server], configuring
 ms.assetid: 7db79165-8bcc-4be6-8d40-12d44deda79f
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d234dc5d1d44c11c50483505898586ab5e845a77
+ms.lasthandoff: 04/11/2017
+
 ---
-# 검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
+# <a name="find-property-set-guids-and-property-integer-ids-for-search-properties"></a>검색 속성의 속성 집합 GUID 및 속성 정수 ID찾기
   이 항목에서는 검색 속성 목록에 속성을 추가하고 전체 텍스트 검색으로 검색할 수 있도록 설정하기 전에 필요한 값을 가져오는 방법에 대해 설명합니다. 이러한 값에는 문서 속성의 속성 집합 GUID와 속성 정수 식별자가 포함됩니다.  
   
- 이진 데이터에서, 즉 **varbinary**, **varbinary(max)**(**FILESTREAM** 포함) 또는 **image** 데이터 형식 열에 저장된 데이터에서 IFilter를 통해 추출된 문서 속성은 전체 텍스트 검색에 사용할 수 있도록 설정할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
+ 이진 데이터에서, 즉 **varbinary**, **varbinary(max)** ( **FILESTREAM**포함) 또는 **image** 데이터 형식 열에 저장된 데이터에서 IFilter를 통해 추출된 문서 속성은 전체 텍스트 검색에 사용할 수 있도록 설정할 수 있습니다. 추출된 속성을 검색할 수 있도록 설정하려면 속성을 검색 속성 목록에 수동으로 추가해야 합니다. 또한 검색 속성 목록은 하나 이상의 전체 텍스트 인덱스와 연결되어야 합니다. 자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
  사용 가능한 속성을 속성 목록에 추가하려면 먼저 속성에 대한 다음 두 가지 정보를 찾아야 합니다.  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 32
 |형식|**System.PerceivedType**|28636AA6-953D-11D2-B5D6-00C04FD918D0|9|정식 유형을 기반으로 인식되는 파일 유형입니다.|  
 |Title|**System.Title**|F29F85E0-4FF9-1068-AB91-08002B27B3D9|2|항목의 제목입니다. 예를 들어 문서의 제목, 메시지의 제목, 사진의 캡션 또는 음악 트랙의 이름이 여기에 해당합니다.|  
   
- 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](http://go.microsoft.com/fwlink/?LinkId=144336)을 참조하세요.  
+ 파일 형식 간 일관성을 유지하기 위해 Microsoft에서는 몇 가지 문서 범주에 대해 자주 사용되고 우선 순위가 높은 문서 속성의 하위 집합을 식별했습니다. 여기에는 통신, 연락처, 문서, 음악 파일, 그림 및 동영상이 포함됩니다. 각 범주에서 순위가 높은 속성에 대한 자세한 내용은 Windows Search 설명서에서 [사용자 지정 파일 형식에 대한 시스템 정의 속성](http://go.microsoft.com/fwlink/?LinkId=144336) 을 참조하세요.  
   
  특정 파일 형식은 세 가지 유형의 속성을 구현할 수 있습니다.  
   
@@ -66,9 +70,9 @@ caps.handback.revision: 32
 -   32비트 버전의 경우 `C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin`을 찾아봅니다.  
   
 ##  <a name="propdesc"></a> Windows 속성 설명에서 검색 속성 값 찾기  
- 잘 알려진 Windows Search 속성의 경우 속성 설명(**propertyDescription**)의 **formatID** 및 **propID** 특성에서 필요한 정보를 가져올 수 있습니다.  
+ 잘 알려진 Windows Search 속성의 경우 속성 설명( **propertyDescription** )의 **formatID** 및**propID**특성에서 필요한 정보를 가져올 수 있습니다.  
   
- 다음 예에서는 일반적인 Microsoft 속성(이 경우 `System.Author` 속성) 설명의 관련 부분을 보여 줍니다. `formatID` 특성은 속성 집합 GUID로 `F29F85E0-4FF9-1068-AB91-08002B27B3D9`를 지정하고, `propID` 특성은 속성 정수 ID로 `4.`를 지정합니다. `name` 특성은 Windows 정식 속성 이름으로 `System.Author`를 지정합니다. 이 예에서는 관련되지 않은 속성 설명의 부분을 생략합니다.  
+ 다음 예에서는 일반적인 Microsoft 속성(이 경우 `System.Author` 속성) 설명의 관련 부분을 보여 줍니다. `formatID` 특성은 속성 집합 GUID로 `F29F85E0-4FF9-1068-AB91-08002B27B3D9`를 지정하고, `propID` 특성은 속성 정수 ID로 `4.` 를 지정합니다. `name` 특성은 Windows 정식 속성 이름으로 `System.Author`를 지정합니다. 이 예에서는 관련되지 않은 속성 설명의 부분을 생략합니다.  
   
 ```  
 .  
@@ -100,7 +104,7 @@ GO
   
  검색 속성 목록을 만들어 전체 텍스트 인덱스와 연결하는 방법은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)  
   

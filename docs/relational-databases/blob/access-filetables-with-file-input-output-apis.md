@@ -1,24 +1,28 @@
 ---
-title: "파일 입/출력 API를 사용하여 FileTable 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 파일 API를 사용하여 파일 액세스"
+title: "파일 입/출력 API를 사용하여 FileTable 액세스 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], accessing files with file APIs
 ms.assetid: fa504c5a-f131-4781-9a90-46e6c2de27bb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fee941d70d60091034abfd77998616508fedd611
+ms.lasthandoff: 04/11/2017
+
 ---
-# 파일 입/출력 API를 사용하여 FileTable 액세스
+# <a name="access-filetables-with-file-input-output-apis"></a>파일 입/출력 API를 사용하여 FileTable 액세스
   FileTable에서 파일 시스템 I/O가 작동하는 방식에 대해 설명합니다.  
   
 ##  <a name="accessing"></a> FileTable에서 파일 I/O API 사용 시작  
@@ -42,7 +46,7 @@ caps.handback.revision: 16
 -   액세스 공유 및 동시성은 여러 동시 파일 I/O 작업 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 계층 구조 내의 동일한 파일 또는 디렉터리에 영향을 주는 경우에 적용됩니다.  
   
 ##  <a name="read"></a> FileTable의 파일 및 디렉터리 읽기  
- 커밋된 읽기 격리 의미 체계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스트림 및 특성 데이터에 대한 모든 파일 I/O 액세스 작업에 적용됩니다.  
+ 커밋된 읽기 격리 의미 체계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 스트림 및 특성 데이터에 대한 모든 파일 I/O 액세스 작업에 적용됩니다.  
   
 ##  <a name="write"></a> FileTable의 파일 및 디렉터리 쓰기와 업데이트  
   
@@ -80,12 +84,12 @@ caps.handback.revision: 16
  FILESTREAM 또는 FileTable 데이터가 포함된 데이터베이스가 Always On 가용성 그룹에 속하는 경우 파일 시스템 API를 통한 FILESTREAM 또는 FileTable 데이터에 대한 모든 액세스에는 컴퓨터 이름 대신 VNN이 사용됩니다. 자세한 내용은 [Always On 가용성 그룹의 FILESTREAM 및 FileTable&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)을 참조하세요.  
   
 ###  <a name="partial"></a> 부분 업데이트  
- [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 함수를 사용하여 FileTable에서 FILESTREAM용으로 가져온 쓰기 가능한 핸들은 FILESTREAM 내용을 현재 위치에서 부분적으로 업데이트하는 데 사용할 수 있습니다. 이와 달리 트랜잭션된 FILESTREAM 액세스에는 **OpenSQLFILESTREAM()**을 호출하고 명시적 트랜잭션 컨텍스트를 전달하여 가져온 핸들이 사용됩니다.  
+ [GetFileNamespacePath&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getfilenamespacepath-transact-sql.md) 함수를 사용하여 FileTable에서 FILESTREAM용으로 가져온 쓰기 가능한 핸들은 FILESTREAM 내용을 현재 위치에서 부분적으로 업데이트하는 데 사용할 수 있습니다. 이와 달리 트랜잭션된 FILESTREAM 액세스에는 **OpenSQLFILESTREAM()** 을 호출하고 명시적 트랜잭션 컨텍스트를 전달하여 가져온 핸들이 사용됩니다.  
   
 ###  <a name="trans"></a> 트랜잭션 의미 체계  
  파일 I/O API를 사용하여 FileTable의 파일에 액세스할 경우 이러한 작업은 어떤 사용자 트랜잭션과도 연관되지 않으며 다음과 같은 특징도 있습니다.  
   
--   FileTable의 FILESTREAM 데이터에 대한 비트랜잭션 액세스는 어떤 트랜잭션과도 연관되지 않으므로 특정 격리 의미 체계가 없습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 내부 트랜잭션을 사용하여 FileTable 데이터에 대해 잠금/동시성 의미 체계를 적용할 수 있습니다. 이러한 유형의 내부 트랜잭션은 커밋된 읽기 격리 수준으로 수행됩니다.  
+-   FileTable의 FILESTREAM 데이터에 대한 비트랜잭션 액세스는 어떤 트랜잭션과도 연관되지 않으므로 특정 격리 의미 체계가 없습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 내부 트랜잭션을 사용하여 FileTable 데이터에 대해 잠금/동시성 의미 체계를 적용할 수 있습니다. 이러한 유형의 내부 트랜잭션은 커밋된 읽기 격리 수준으로 수행됩니다.  
   
 -   이와 같이 FILESTREAM 데이터에 대한 비트랜잭션 작업에는 ACID가 보장되지 않습니다. 일관성은 파일 시스템에서 파일이 자동으로 업데이트될 때와 유사하게 보장됩니다.  
   
@@ -124,10 +128,11 @@ caps.handback.revision: 16
 |**보안**|아니요|Windows 공유 수준 보안과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 테이블 및 열 수준 보안이 적용됩니다.|  
 |**USN 저널**|아니요|FileTable의 파일 및 디렉터리에 대한 메타데이터 변경은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 DML 작업입니다. 따라서 변경 내용이 해당 데이터베이스 로그 파일에 기록됩니다. 그러나 크기를 변경한 경우를 제외하고 NTFS USN 저널에는 변경 내용이 기록되지 않습니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 내용 추적 기능을 사용할 수 있습니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable로 파일 로드](../../relational-databases/blob/load-files-into-filetables.md)   
- [FileTable에서 디렉터리 및 경로 작업](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)   
  [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

@@ -1,30 +1,34 @@
 ---
-title: "응용 프로그램 코드에서 FOR XML 결과 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FOR XML 절, 응용 프로그램 코드 사용"
-  - "XML [SQL Server], FOR XML 절"
-  - "ASP.NET [SQL Server]"
-  - ".NET Framework [SQL Server], FOR XML 데이터"
-  - "ADO [SQL Server]"
-  - "XML 데이터 아일랜드 [SQL Server]"
-  - "데이터 아일랜드 [SQL Server]"
+title: "응용 프로그램 코드에서 FOR XML 결과 사용 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FOR XML clause, application code usage
+- XML [SQL Server], FOR XML clause
+- ASP.NET [SQL Server]
+- .NET Framework [SQL Server], FOR XML data
+- ADO [SQL Server]
+- XML data islands [SQL Server]
+- data islands [SQL Server]
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f687e8b100ea8810bf92b21b0467932c72d21237
+ms.lasthandoff: 04/11/2017
+
 ---
-# 응용 프로그램 코드에서 FOR XML 결과 사용
+# <a name="use-for-xml-results-in-application-code"></a>응용 프로그램 코드에서 FOR XML 결과 사용
   SQL 쿼리에서 FOR XML 절을 사용하면 쿼리 결과 검색은 물론 XML 데이터로 캐스팅할 수도 있습니다. 이 기능을 사용하면 XML 응용 프로그램 코드에서 FOR XML 쿼리 결과를 사용할 수 있을 때 다음을 수행할 수 있습니다.  
   
 -   SQL 테이블에서 [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md) 값 인스턴스를 쿼리합니다.  
@@ -33,7 +37,7 @@ caps.handback.revision: 23
   
  이 항목에서는 이러한 접근 방식을 보여 주는 예를 제공합니다.  
   
-## ADO 및 XML 데이터 아일랜드로 FOR XML 데이터 검색  
+## <a name="retrieving-for-xml-data-with-ado-and-xml-data-islands"></a>ADO 및 XML 데이터 아일랜드로 FOR XML 데이터 검색  
  ADO **Stream** 개체나 ASP(Active Server Pages) **Request** 및 **Response** 개체와 같이 COM **IStream** 인터페이스를 지원하는 다른 개체를 사용하여 FOR XML 쿼리를 사용할 때 결과를 포함시킬 수 있습니다.  
   
  예를 들어 다음 ASP 코드에서는 AdventureWorks 예제 데이터베이스의 Sales.Store 테이블에서 **xml** 데이터 형식의 열인 Demographics를 쿼리한 결과를 보여 줍니다. 특히 이 쿼리는 이 열의 항목 값에서 CustomerID가 3인 행을 검색합니다.  
@@ -121,7 +125,7 @@ caps.handback.revision: 23
   
  이 ASP 페이지 예에는 ADO를 사용하여 FOR XML 쿼리를 실행하고 XML 데이터 아일랜드인 MyDataIsle로 XML 결과를 반환하는 서버 쪽 VBScript가 포함됩니다. 이 XML 데이터 아일랜드는 추가 클라이언트 쪽 처리를 위해 브라우저에 반환됩니다. 그런 다음 추가 클라이언트 쪽 VBScript 코드를 사용하여 XML 데이터 아일랜드의 콘텐츠를 처리합니다. 이 프로세스는 콘텐츠를 결과 DHTML의 일부로 표시하고 XML 데이터 아일랜드의 처리된 콘텐츠를 표시하는 메시지 상자를 열기 전에 수행됩니다.  
   
-#### 이 예를 테스트하려면  
+#### <a name="to-test-this-example"></a>이 예를 테스트하려면  
   
 1.  IIS가 설치되어 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 AdventureWorks 예제 데이터베이스가 설치되었는지 확인합니다.  
   
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
  생성된 HTML 페이지 결과는 다음 예제 출력과 유사하게 표시됩니다.  
   
-##### 서버 쪽 처리  
+##### <a name="server-side-processing"></a>서버 쪽 처리  
  Page Generated @ 3/11/2006 3:36:02 PM  
   
  Connect String = Provider=SQLOLEDB;Data Source=MyServer;Initial Catalog=AdventureWorks;Integrated Security=SSPI;  
@@ -150,7 +154,7 @@ caps.handback.revision: 23
   
  Pushing XML to client for processing  
   
-##### XML 문서 MyDataIsle의 클라이언트 쪽 처리  
+##### <a name="client-side-processing-of-xml-document-mydataisle"></a>XML 문서 MyDataIsle의 클라이언트 쪽 처리  
   
 -   **AnnualSales:** 1500000  
   
@@ -195,7 +199,7 @@ caps.handback.revision: 23
 </ROOT>  
 ```  
   
-## ASP.NET 및 .NET Framework에서 FOR XML 데이터 검색  
+## <a name="retrieving-for-xml-data-with-aspnet-and-the-net-framework"></a>ASP.NET 및 .NET Framework에서 FOR XML 데이터 검색  
  이전 예에서와 같이 다음 ASP.NET 코드에서는 AdventureWorks 예제 데이터베이스의 Sales.Store 테이블에서 **xml** 데이터 형식의 열인 Demographics를 쿼리한 결과를 보여 줍니다. 이전 예에서와 같이 이 쿼리는 이 열의 항목 값에서 CustomerID가 3인 행을 검색합니다.  
   
  이 예에서는 다음 Microsoft .NET Framework 관리 API를 사용하여 FOR XML 쿼리 결과를 반환 및 렌더링합니다.  
@@ -260,7 +264,7 @@ caps.handback.revision: 23
     </HTML>  
     ```  
   
-#### 이 예를 테스트하려면  
+#### <a name="to-test-this-example"></a>이 예를 테스트하려면  
   
 1.  IIS가 설치되어 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 AdventureWorks 예제 데이터베이스가 설치되었는지 확인합니다.  
   
@@ -276,7 +280,7 @@ caps.handback.revision: 23
   
  생성된 HTML 페이지 결과는 다음 예제 출력과 유사하게 표시됩니다.  
   
-##### 서버 쪽 처리  
+##### <a name="server-side-processing"></a>서버 쪽 처리  
   
 ```  
 Page Generated @ 3/11/2006 3:36:02 PM  
@@ -289,9 +293,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 데이터 형식 지원을 통해 [TYPE 지시어](../../relational-databases/xml/type-directive-in-for-xml-queries.md)를 지정하여 FOR XML 쿼리의 결과가 문자열이나 이미지 형식의 데이터 대신 **xml** 데이터 형식으로 반환되도록 요청할 수 있습니다. FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [응용 프로그램에서 XML 데이터 사용](../../relational-databases/xml/use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** 데이터 형식 지원을 통해 **TYPE 지시어** 를 지정하여 FOR XML 쿼리의 결과가 문자열이나 이미지 형식의 데이터 대신 [xml](../../relational-databases/xml/type-directive-in-for-xml-queries.md)데이터 형식으로 반환되도록 요청할 수 있습니다. FOR XML 쿼리에서 TYPE 지시어가 사용된 경우 이 지시어는 [응용 프로그램에서 XML 데이터 사용](../../relational-databases/xml/use-xml-data-in-applications.md)에 표시된 것과 비슷하게 FOR XML 결과에 대한 프로그래밍 방식의 액세스를 제공합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML&#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

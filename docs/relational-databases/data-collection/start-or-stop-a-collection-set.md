@@ -1,25 +1,29 @@
 ---
-title: "컬렉션 집합 시작 또는 중지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컬렉션 집합 [SQL Server], 중지"
-  - "컬렉션 집합 [SQL Server], 시작"
+title: "컬렉션 집합 시작 또는 중지 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collection sets [SQL Server], stopping
+- collection sets [SQL Server], starting
 ms.assetid: 48a7b2fe-6bc3-4278-a7ec-1babc1290345
 caps.latest.revision: 20
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 91f96d4ac8b7403e0d214625925403950e386dc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 컬렉션 집합 시작 또는 중지
+# <a name="start-or-stop-a-collection-set"></a>컬렉션 집합 시작 또는 중지
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 컬렉션 집합을 시작 또는 중지하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -63,7 +67,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 컬렉션 집합을 시작하려면  
+#### <a name="to-start-a-collection-set"></a>컬렉션 집합을 시작하려면  
   
 1.  개체 탐색기에서 **관리** 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 20
   
      메시지 상자에 이 동작의 결과가 표시되며, 컬렉션 집합의 아이콘에 초록색 화살표가 표시되어 컬렉션 집합이 시작되었음을 나타냅니다.  
   
-#### 컬렉션 집합을 중지하려면  
+#### <a name="to-stop-a-collection-set"></a>컬렉션 집합을 중지하려면  
   
 1.  개체 탐색기에서 **관리** 노드, **데이터 컬렉션**, **시스템 데이터 컬렉션 집합**을 차례로 확장합니다.  
   
@@ -81,13 +85,13 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 컬렉션 집합을 시작하려면  
+#### <a name="to-start-a-collection-set"></a>컬렉션 집합을 시작하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md)를 사용하여 ID가 `1`인 컬렉션 집합을 시작합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-start-collection-set-transact-sql.md) 를 사용하여 ID가 `1`인 컬렉션 집합을 시작합니다.  
   
 ```tsql  
 USE msdb;  
@@ -95,13 +99,13 @@ GO
 EXEC sp_syscollector_start_collection_set @collection_set_id = 1;  
 ```  
   
-#### 컬렉션 집합을 중지하려면  
+#### <a name="to-stop-a-collection-set"></a>컬렉션 집합을 중지하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md)를 사용하여 ID가 `1`인 컬렉션 집합을 중지합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예제에서는 [sp_syscollector_start_collection_set](../../relational-databases/system-stored-procedures/sp-syscollector-stop-collection-set-transact-sql.md) 를 사용하여 ID가 `1`인 컬렉션 집합을 중지합니다.  
   
 ```tsql  
 USE msdb;  
@@ -109,7 +113,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 수집기 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)  
   

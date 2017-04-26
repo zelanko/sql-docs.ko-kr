@@ -1,31 +1,35 @@
 ---
-title: "포함된 스키마를 병합하기 위해 스키마 전처리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전처리기 도구 테스트"
-  - "xsd:include"
-  - "XML 스키마 컬렉션 [SQL Server], 전처리기 도구"
-  - "요소 포함"
-  - "XML 스키마 [SQL Server], 전처리"
-  - "스키마 컬렉션 [SQL Server], 전처리기 도구"
-  - "전처리기 도구 [XML 스키마]"
-  - "XML 스키마 [SQL Server]"
+title: "포함된 스키마를 병합하기 위해 스키마 전처리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing preprocessor tool
+- xsd:include
+- XML schema collections [SQL Server], preprocessor tool
+- include element
+- XML schemas [SQL Server], preprocessing
+- schema collections [SQL Server], preprocessor tool
+- preprocessor tool [XML schemas]
+- XML schemas [SQL Server]
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73bb2043bf3e0cb0d8a076a07b4d9c33366c1cf7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 포함된 스키마를 병합하기 위해 스키마 전처리
+# <a name="preprocess-a-schema-to-merge-included-schemas"></a>포함된 스키마를 병합하기 위해 스키마 전처리
   W3C XSD **include** 요소는 XML 스키마를 두 개 이상의 실제 파일로 분할할 수 있는 스키마 모듈화를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이 요소를 지원하지 않습니다. 이 요소를 포함하는 XML 스키마는 서버에서 거부됩니다.  
   
  이러한 문제를 해결하기 위해 \<xsd:include> 지시어를 포함하고 있는 XML 스키마는 전처리하여 포함된 모든 스키마의 내용을 하나의 스키마로 복사 및 병합해서 서버에 업로드할 수 있습니다. 다음 C# 코드는 전처리에 사용될 수 있습니다. 코드의 초기 부분에 있는 설명은 코드를 사용하는 방법에 대한 정보를 제공합니다.  
@@ -186,10 +190,10 @@ public class XmlSchemaIncludeNormalizer
 }  
 ```  
   
-## 전처리기 도구 테스트  
+## <a name="testing-the-preprocessor-tool"></a>전처리기 도구 테스트  
  다음 XSD 스키마를 사용하여 전처리기 도구를 테스트할 수 있습니다.  
   
-### books_common.xsd  
+### <a name="bookscommonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -199,7 +203,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-### books.xsd  
+### <a name="booksxsd"></a>books.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -211,7 +215,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 스키마 컬렉션&#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   
   

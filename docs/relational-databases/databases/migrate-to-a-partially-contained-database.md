@@ -1,24 +1,28 @@
 ---
-title: "부분적으로 포함된 데이터베이스로 마이그레이션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "포함된 데이터베이스, 마이그레이션"
+title: "부분적으로 포함된 데이터베이스로 마이그레이션 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- contained database, migrating to
 ms.assetid: 90faac38-f79e-496d-b589-e8b2fe01c562
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7d2228b3a1baf08376e1cb5ec862bf89f8a4e2d8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 부분적으로 포함된 데이터베이스로 마이그레이션
+# <a name="migrate-to-a-partially-contained-database"></a>부분적으로 포함된 데이터베이스로 마이그레이션
   이 항목에서는 부분적으로 포함된 데이터베이스 모델 변경을 준비하는 방법에 대해 설명한 다음 마이그레이션 단계를 제공합니다.  
   
  **항목 내용**  
@@ -47,10 +51,10 @@ caps.handback.revision: 17
 -   **database_uncontained_usage** XEvent를 모니터링하여 포함되지 않은 기능이 사용되는 경우를 확인합니다.  
   
 ##  <a name="enable"></a> 포함된 데이터베이스 사용  
- 포함된 데이터베이스를 만들려면 먼저 포함된 데이터베이스가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 사용 가능하도록 설정되어야 합니다.  
+ 포함된 데이터베이스를 만들려면 먼저 포함된 데이터베이스가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 사용 가능하도록 설정되어야 합니다.  
   
-### Transact-SQL을 사용하여 포함된 데이터베이스 설정  
- 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 포함된 데이터베이스를 사용 가능하도록 설정합니다.  
+### <a name="enabling-contained-databases-using-transact-sql"></a>Transact-SQL을 사용하여 포함된 데이터베이스 설정  
+ 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 포함된 데이터베이스를 사용 가능하도록 설정합니다.  
   
 ```tsql  
 sp_configure 'contained database authentication', 1;  
@@ -59,8 +63,8 @@ RECONFIGURE ;
 GO  
 ```  
   
-#### SQL Server Management Studio를 사용하여 포함된 데이터베이스 설정  
- 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에서 포함된 데이터베이스를 사용 가능하도록 설정합니다.  
+#### <a name="enabling-contained-databases-using-management-studio"></a>SQL Server Management Studio를 사용하여 포함된 데이터베이스 설정  
+ 다음 예에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에서 포함된 데이터베이스를 사용 가능하도록 설정합니다.  
   
 1.  개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -71,8 +75,8 @@ GO
 ##  <a name="convert"></a> 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
  **CONTAINMENT** 옵션을 변경하여 데이터베이스를 포함된 데이터베이스로 변환합니다.  
   
-### Transact-SQL을 사용하여 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
- 다음 예에서는 이름이 `Accounting`인 데이터베이스를 부분적으로 포함된 데이터베이스로 변환합니다.  
+### <a name="converting-a-database-to-partially-contained-using-transact-sql"></a>Transact-SQL을 사용하여 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
+ 다음 예에서는 이름이 `Accounting` 인 데이터베이스를 부분적으로 포함된 데이터베이스로 변환합니다.  
   
 ```tsql  
 USE [master]  
@@ -81,7 +85,7 @@ ALTER DATABASE [Accounting] SET CONTAINMENT = PARTIAL
 GO  
 ```  
   
-### Management Studio를 사용하여 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
+### <a name="converting-a-database-to-partially-contained-using-management-studio"></a>Management Studio를 사용하여 데이터베이스를 부분적으로 포함된 데이터베이스로 변환  
  다음 예에서는 데이터베이스를 부분적으로 포함된 데이터베이스로 변환합니다.  
   
 1.  개체 탐색기에서 **데이터베이스**를 확장하고, 변환할 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
@@ -116,8 +120,8 @@ CLOSE user_cursor ;
 DEALLOCATE user_cursor ;  
 ```  
   
-## 참고 항목  
- [포함된 데이터베이스](../../relational-databases/databases/contained-databases.md)   
+## <a name="see-also"></a>참고 항목  
+ [Contained Databases](../../relational-databases/databases/contained-databases.md)   
  [sp_migrate_user_to_contained&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)   
  [sys.dm_db_uncontained_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql.md)  
   

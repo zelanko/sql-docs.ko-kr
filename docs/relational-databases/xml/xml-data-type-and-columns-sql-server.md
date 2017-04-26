@@ -1,25 +1,29 @@
 ---
-title: "XML 데이터 형식 및 열(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "XML 데이터 형식 및 열(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 caps.latest.revision: 6
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 457cf9fb3c207a89467b96e0f1744f9371edb9a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 데이터 형식 및 열(SQL Server)
+# <a name="xml-data-type-and-columns-sql-server"></a>XML 데이터 형식 및 열(SQL Server)
   이 항목에서는 **의** xml [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터 형식을 사용할 때의 장점과 제한 사항을 설명하며, XML 데이터의 저장 방법을 선택할 수 있도록 도와 줍니다.  
   
-## 관계형 데이터 모델 또는 XML 데이터 모델  
+## <a name="relational-or-xml-data-model"></a>관계형 데이터 모델 또는 XML 데이터 모델  
  데이터가 알려진 스키마로 복잡하게 구조화된 경우 관계형 모델이 데이터 저장소에 가장 적합할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용자에게 필요한 기능 및 도구를 제공합니다. 반면에 반구조화되어 있거나 구조화되지 않았거나 구조화 상태를 알 수 없는 경우에는 이러한 데이터의 모델링을 고려해야 합니다.  
   
  구조적 및 의미적 태그를 사용하여 데이터의 이동성을 보장하기 위해 플랫폼 독립적인 모델이 필요한 경우에는 XML이 좋은 대안입니다. 또한 XML은 다음과 같은 상황에서도 적절한 대안이 될 수 있습니다.  
@@ -34,7 +38,7 @@ caps.handback.revision: 6
   
  이러한 상황에 하나도 해당되지 않으면 관계형 데이터 모델을 사용해야 합니다. 예를 들어 데이터가 XML 형식으로 되어 있지만 응용 프로그램에서 데이터의 저장 및 검색을 위해서만 데이터베이스를 사용하는 경우에는 **[n]varchar(max)** 열만 있으면 됩니다. XML 열에 데이터를 저장하면 추가 이점이 있습니다. 이러한 이점에 대한 예로, 엔진에서 데이터가 잘 작성되었거나 유효한지 여부를 확인할 수 있으며, XML 데이터의 세부적 쿼리 및 업데이트가 지원됩니다.  
   
-## SQL Server에서 XML 데이터를 저장하는 이유  
+## <a name="reasons-for-storing-xml-data-in-sql-server"></a>SQL Server에서 XML 데이터를 저장하는 이유  
  다음은 파일 시스템에서 XML 데이터를 관리하는 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 네이티브 XML 기능을 사용하는 몇 가지 이유입니다.  
   
 -   효율적이고 실용적인 방식으로 XML 데이터를 공유, 쿼리 및 수정하고자 합니다. 세부적 데이터 액세스는 응용 프로그램에 중요한 요소입니다. 예를 들어 XML 문서 내에서 일부 섹션을 추출하거나 전체 문서를 바꾸지 않고 새 섹션을 삽입합니다.  
@@ -53,7 +57,7 @@ caps.handback.revision: 6
   
  이러한 상황에 하나도 해당되지 않으면 **[n]varchar(max)** 또는 **varbinary(max)**와 같은 비-XML의 큰 개체 형식으로 데이터를 저장하는 것이 좋습니다.  
   
-## XML 저장소 옵션  
+## <a name="xml-storage-options"></a>XML 저장소 옵션  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 XML 저장소 옵션에는 다음이 포함됩니다.  
   
 -   **xml** 데이터 형식의 네이티브 저장소  
@@ -72,7 +76,7 @@ caps.handback.revision: 6
   
  일반적으로 이러한 접근 방식을 조합해서 사용해야 할 수 있습니다. 예를 들어 **xml** 데이터 형식의 열에 XML 데이터를 저장하고 XML 열에서 관계형 열로 속성을 승격해야 할 수 있습니다. 또는 비-XML 열에 비재귀적인 부분을 저장하고 재귀적인 부분만 **xml** 데이터 형식의 열에 저장하는 매핑 기술을 사용할 수 있습니다.  
   
-### XML 기술 선택  
+### <a name="choice-of-xml-technology"></a>XML 기술 선택  
  네이티브 XML과 XML 뷰 간의 XML 기술 선택은 일반적으로 다음 요소에 따라 달라집니다.  
   
 -   저장소 옵션  
@@ -97,7 +101,7 @@ caps.handback.revision: 6
   
  선택한 옵션에 따라 성능 특성이 달라집니다.  
   
-### 네이티브 XML 저장소  
+### <a name="native-xml-storage"></a>네이티브 XML 저장소  
  서버에서 **xml** 데이터 형식의 열에 XML 데이터를 저장할 수 있습니다. 이 옵션은 다음과 같은 상황에서 적절한 대안이 될 수 있습니다.  
   
 -   서버에 XML 데이터를 저장하고 동시에 문서 순서 및 문서 구조를 보존할 수 있는 직관적인 방식이 필요합니다.  
@@ -112,19 +116,19 @@ caps.handback.revision: 6
   
  네이티브 XML 저장소는 구조 범위가 포함된 XML 문서가 있거나 관계형 구조로 매핑하기 어려운 여러 스키마 또는 복잡한 스키마에 해당하는 XML 문서가 있는 경우에 유용합니다.  
   
-#### 예: xml 데이터 형식을 사용하여 XML 데이터 모델링  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>예: xml 데이터 형식을 사용하여 XML 데이터 모델링  
  각 항목에 대한 별도의 장으로 구성되어 있고 각 장 내에 여러 섹션이 포함된 XML 형식의 제품 설명서를 가정해 보십시오. 하나의 섹션에는 하위 섹션이 포함될 수 있습니다. 따라서 \<section>은 재귀적 요소입니다. 제품 설명서에는 다량의 콘텐츠, 다이어그램 및 기술 자료가 혼합되어 있으며 데이터는 반구조적입니다. 사용자는 "인덱싱" 장에서 "클러스터형 인덱스" 섹션을 검색하는 것과 같이 원하는 항목을 문맥에 따라 검색하고 많은 기술 자료를 쿼리할 수 있습니다.  
   
  XML 문서에 적합한 저장소 모델은 **xml** 데이터 형식의 열입니다. 이 모델은 XML 데이터에 대한 InfoSet 내용을 보존합니다. XML 열을 인덱싱하면 쿼리 성능이 높아집니다.  
   
-#### 예: XML 데이터에 대한 정확한 복사본 유지  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>예: XML 데이터에 대한 정확한 복사본 유지  
  이해를 돕기 위해 정부 규제에 따라 XML 문서에 대한 정확한 텍스트 복사본을 유지해야 한다고 가정해 보십시오. 예를 들어 여기에는 서명된 문서, 법률 문서 또는 상품 거래 주문 내역 등이 포함될 수 있습니다. 문서를 **[n]varchar(max)** 열에 저장할 수 있습니다.  
   
  쿼리를 위해서는 데이터를 런타임에 **xml** 데이터 형식으로 변환하고 여기에서 Xquery를 실행합니다. 런타임 변환은 특히 문서가 큰 경우 비용이 많이 듭니다. 쿼리를 자주 수행하는 경우 **xml** 데이터 형식의 열에 문서를 중복해서 저장하고 **[n]varchar(max)** 열에서 정확한 문서 복사본을 반환하는 동안 이를 인덱싱할 수 있습니다.  
   
  XML 열은 **[n]varchar(max)** 열을 기반으로 계산을 수행하는 계산 열일 수 있습니다. 그러나 XML 계산 열에서는 XML 인덱스를 만들 수 없으며 **[n]varchar(max)** 또는 **varbinary(max)** 열을 기반으로 XML 인덱스를 작성할 수도 없습니다.  
   
-### XML 뷰 기술  
+### <a name="xml-view-technology"></a>XML 뷰 기술  
  데이터베이스에 있는 테이블과 XML 스키마 간의 매핑을 정의하면 영구적 데이터에 대한 "XML 뷰"를 만들 수 있습니다. XML 대량 로드를 사용하면 XML 뷰를 사용하여 기본 테이블을 채울 수 있습니다. XML 뷰는 XPath 버전 1.0을 사용하여 쿼리할 수 있으며, 이 쿼리는 테이블에서 SQL 쿼리로 변환됩니다. 이와 마찬가지로 이들 테이블에 업데이트를 전파할 수도 있습니다.  
   
  이 기술은 다음과 같은 경우 유용합니다.  
@@ -141,31 +145,31 @@ caps.handback.revision: 6
   
  이러한 예로는 데이터 교환 및 웹 서비스에 대해 XML로 제공된 관계형 데이터와 고정 스키마가 포함된 XML 데이터가 있습니다. 자세한 내용은 [MSDN Online Library](http://go.microsoft.com/fwlink/?linkid=31174)를 참조하십시오.  
   
-#### 예: AXSD(주석 지정 XML 스키마)를 사용하여 데이터 모델링  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>예: AXSD(주석 지정 XML 스키마)를 사용하여 데이터 모델링  
  이해를 돕기 위해 고객, 주문 및 라인 항목 등과 같은 기존 관계형 데이터가 있고 이를 XML로 처리하려는 경우를 가정해 보십시오. 관계형 데이터에 대해 AXSD를 사용하여 XML 뷰를 정의합니다. XML 뷰를 사용하면 XML 데이터를 테이블에 대량 로드하고 XML 뷰를 사용하여 관계형 데이터를 쿼리 및 업데이트할 수 있습니다. 이 모델은 XML 태그가 포함된 데이터를 다른 응용 프로그램과 교환하고 SQL 응용 프로그램을 방해 받지 않고 실행해야 하는 경우에 유용합니다.  
   
-### 하이브리드 모델  
+### <a name="hybrid-model"></a>하이브리드 모델  
  관계형 및 **xml** 데이터 형식의 열을 조합하면 데이터 모델링에 적합한 경우가 많습니다. XML 데이터의 일부 값은 관계형 열에 저장하고 나머지 값이나 전체 XML 값은 XML 열에 저장할 수 있습니다. 이렇게 하면 관계형 열에서 만든 인덱스와 잠금 특성을 더욱 자세히 제어할 수 있다는 점에서 성능이 향상됩니다.  
   
  관계형 열에 저장하는 값은 작업에 따라 달라집니다. 예를 들어 경로 식 /Customer/@CustId에 따라 모든 XML 값을 검색하는 경우 **CustId** 특성의 값을 관계형 열로 승격하고 이를 인덱싱하면 쿼리 속도가 빨라집니다. 반면에 XML 데이터가 관계형 열로 포괄적으로 중복되지 않게 분해된 경우 리어셈블리 비용이 상당히 높을 수 있습니다.  
   
  예를 들어 구조화 수준이 높은 XML 데이터의 경우 테이블의 내용이 XML로 변환되어 모든 값을 관계형 열로 매핑하고 XML 뷰 기술을 사용할 수 있습니다.  
   
-## XML 데이터의 세분성  
+## <a name="granularity-of-xml-data"></a>XML 데이터의 세분성  
  XML 열에 저장된 XML 데이터의 세분성은 잠금에 있어서 매우 중요하며, 업데이트에 대해서도 역시 중요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 XML 및 비-XML 데이터에 대해서 모두 같은 잠금 메커니즘을 사용합니다. 따라서 행 수준의 잠금으로 인해 행에 있는 모든 XML 인스턴스가 잠깁니다. 세분성이 큰 경우 업데이트를 위해 큰 XML 인스턴스를 잠그면 다중 사용자 환경에서 처리량이 줄어듭니다. 반면에 심각한 분해 작업을 수행하면 개체 캡슐화가 손실되며 리어셈블리 비용이 증가합니다.  
   
  데이터 모델링 요구 사항과 잠금 및 업데이트 특성 간의 균형은 훌륭한 디자인을 위해 중요한 요소입니다. 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실제 저장된 XML 인스턴스의 크기는 그렇게 중요하지 않습니다.  
   
  예를 들어 XML 인스턴스에 대한 업데이트는 저장된 기존 XML 인스턴스가 해당 업데이트된 버전과 비교되는 부분적 BLOB(Binary Large Object) 업데이트와 부분적 인덱스 업데이트에 대한 새로운 지원을 사용하여 수행됩니다. 부분적 BLOB(Binary Large Object) 업데이트는 두 개의 XML 인스턴스 간의 차등 비교를 수행하고 다른 점만 업데이트합니다. 부분적 인덱스 업데이트는 XML 인덱스에서 변경되어야 하는 행만 수정합니다.  
   
-## xml 데이터 형식의 제한 사항  
+## <a name="limitations-of-the-xml-data-type"></a>xml 데이터 형식의 제한 사항  
  다음의 일반적인 제한 사항이 **xml** 데이터 형식에 적용됩니다.  
   
 -   저장된 **xml** 데이터 형식 인스턴스의 표현은 2GB를 초과할 수 없습니다.  
   
 -   **sql_variant** 인스턴스의 하위 유형으로 사용될 수 없습니다.  
   
--   **text** 또는 **ntext**로의 캐스트 또는 변환을 지원하지 않습니다. 대신 **varchar(max)** 또는 **nvarchar(max)**를 사용합니다.  
+-   **text** 또는 **ntext**로의 캐스트 또는 변환을 지원하지 않습니다. 대신 **varchar(max)** 또는 **nvarchar(max)** 를 사용합니다.  
   
 -   비교 또는 정렬할 수 없습니다. 즉, **xml** 데이터 형식은 GROUP BY 문에서 사용할 수 없습니다.  
   
@@ -173,7 +177,7 @@ caps.handback.revision: 6
   
 -   인덱스에서 키 열로 사용할 수 없습니다. 하지만 클러스터형 인덱스의 데이터로 포함되거나 비클러스터형 인덱스를 만든 경우 INCLUDE 키워드를 사용하여 비클러스터형 인덱스에 명시적으로 추가할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 문서 대량 가져오기 및 내보내기 예제&#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   
   

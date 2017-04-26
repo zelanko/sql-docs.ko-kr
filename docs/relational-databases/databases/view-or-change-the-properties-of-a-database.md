@@ -1,28 +1,32 @@
 ---
-title: "데이터베이스의 속성 보기 또는 변경 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/25/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 표시"
-  - "데이터베이스 보기 [SQL Server]"
-  - "데이터베이스 [SQL Server], 보기"
-  - "데이터베이스 보기"
+title: "데이터베이스의 속성 보기 또는 변경 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/25/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- displaying databases
+- database viewing [SQL Server]
+- databases [SQL Server], viewing
+- viewing databases
 ms.assetid: 9e8ac097-84b7-46c7-85e3-c1e79f94d747
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ead93afe9ce79d5cee37f190f5c2d2707f69b880
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스의 속성 보기 또는 변경
+# <a name="view-or-change-the-properties-of-a-database"></a>데이터베이스의 속성 보기 또는 변경
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]데이터베이스의 속성을 보거나 변경하는 방법에 대해 설명합니다. 데이터베이스 속성을 변경하면 수정 사항이 즉시 반영됩니다.  
@@ -54,7 +58,7 @@ caps.handback.revision: 40
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스의 속성을 보거나 변경하려면  
+#### <a name="to-view-or-change-the-properties-of-a-database"></a>데이터베이스의 속성을 보거나 변경하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -63,9 +67,9 @@ caps.handback.revision: 40
 3.  **데이터베이스 속성** 대화 상자에서 해당 정보를 확인할 페이지를 선택합니다. 예를 들어 데이터 파일 및 로그 파일 정보를 보려면 **파일** 페이지를 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
- Transact-SQL은 데이터베이스의 속성을 확인하고 변경하는 여러 방법을 제공합니다. 데이터베이스의 속성을 보려는 경우 [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수 및 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용할 수 있습니다. 데이터베이스의 속성을 변경하려는 경우에는 사용 중인 환경에 적합한 ALTER DATABASE 문 버전([ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 또는 [ALTER DATABASE&#40;Azure SQL 데이터베이스&#41;](../../t-sql/statements/alter-database-azure-sql-database.md))을 사용할 수 있습니다. 데이터베이스 범위 속성을 보려면 [sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 카탈로그 뷰를 사용하고 데이터베이스 범위 속성을 변경하려면 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 문을 사용합니다.  
+ Transact-SQL은 데이터베이스의 속성을 확인하고 변경하는 여러 방법을 제공합니다. 데이터베이스의 속성을 보려는 경우 [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수 및 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 사용할 수 있습니다. 데이터베이스의 속성을 변경하려는 경우에는 사용 중인 환경에 적합한 ALTER DATABASE 문 버전([ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) 또는 [ALTER DATABASE(Azure SQL Database))](../../t-sql/statements/alter-database-azure-sql-database.md)을 사용할 수 있습니다. 데이터베이스 범위 속성을 보려면 [sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) 카탈로그 뷰를 사용하고 데이터베이스 범위 속성을 변경하려면 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) 문을 사용합니다.  
   
-#### DATABASEPROPERTYEX 함수를 사용하여 데이터베이스의 속성을 보려면  
+#### <a name="to-view-a-property-of-a-database-by-using-the-databasepropertyex-function"></a>DATABASEPROPERTYEX 함수를 사용하여 데이터베이스의 속성을 보려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결한 다음 해당 속성을 보려는 데이터베이스에 연결합니다.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 40
     SELECT DATABASEPROPERTYEX('AdventureWorks2012', 'IsAutoShrink');  
     ```  
   
-#### sys.databases를 쿼리하여 데이터베이스의 속성을 보려면  
+#### <a name="to-view-the-properties-of-a-database-by-querying-sysdatabases"></a>sys.databases를 쿼리하여 데이터베이스의 속성을 보려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결한 다음 해당 속성을 보려는 데이터베이스에 연결합니다.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 40
     FROM sys.databases WHERE name = 'AdventureWorks2012';  
     ```  
   
-#### sys.databases_scoped_configuration를 쿼리하여 데이터베이스 범위 구성의 속성을 보려면  
+#### <a name="to-view-the-properties-of-a-database-scoped-configuration-by-querying-sysdatabasesscopedconfiguration"></a>sys.databases_scoped_configuration를 쿼리하여 데이터베이스 범위 구성의 속성을 보려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결한 다음 해당 속성을 보려는 데이터베이스에 연결합니다.  
   
@@ -103,9 +107,9 @@ caps.handback.revision: 40
     FROM sys.database_scoped_configurations;  
     ```  
   
-     더 많은 예제를 보려면 [sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)를 참조하세요.  
+     더 많은 예제를 보려면 [sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
   
-#### ALTER DATABASE를 사용하여 SQL Server 2016 데이터베이스의 속성을 변경하려면  
+#### <a name="to-change-the-properties-of-a-sql-server-2016-database-using-alter-database"></a>ALTER DATABASE를 사용하여 SQL Server 2016 데이터베이스의 속성을 변경하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -121,7 +125,7 @@ caps.handback.revision: 40
   
      [!code-sql[DatabaseDDL#AlterDatabase9](../../relational-databases/databases/codesnippet/tsql/view-or-change-the-prope_1.sql)]  
   
-#### ALTER DATABASE SCOPED CONFIGURATION을 사용하여 데이터베이스 범위 속성을 변경하려면  
+#### <a name="to-change-the-database-scoped-properties-using-alter-database-scoped-configuration"></a>ALTER DATABASE SCOPED CONFIGURATION을 사용하여 데이터베이스 범위 속성을 변경하려면  
   
 1.  SQL Server 인스턴스에서 데이터베이스에 연결합니다.  
   
@@ -133,13 +137,14 @@ caps.handback.revision: 40
     ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP=PRIMARY   
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE&#40;Azure SQL 데이터베이스&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE(Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)   
  [sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)  
 
   
   
+
