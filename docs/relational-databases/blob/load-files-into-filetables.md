@@ -1,26 +1,30 @@
 ---
-title: "FileTable로 파일 로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], 파일 마이그레이션"
-  - "FileTables [SQL Server], 대량 로드"
-  - "FileTables [SQL Server], 파일 로드"
+title: "FileTable로 파일 로드 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], migrating files
+- FileTables [SQL Server], bulk loading
+- FileTables [SQL Server], loading files
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aea5bf6d2bbdb455735c589d46ac76f0e587cda3
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable로 파일 로드
+# <a name="load-files-into-filetables"></a>FileTable로 파일 로드
   파일을 FileTable로 로드 또는 마이그레이션하는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsLoadNew"></a> FileTable로 파일 로드 또는 마이그레이션  
@@ -43,7 +47,7 @@ caps.handback.revision: 23
 ###  <a name="HowToMigrateFiles"></a> 예: 파일 시스템에서 FileTable로 파일 마이그레이션  
  이 시나리오에서는 파일이 파일 시스템에 저장되어 있고 파일에 대한 포인터가 포함된 메타데이터의 테이블이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 있다고 가정합니다. 파일을 FileTable로 이동한 다음 메타데이터에 있는 각 파일의 원래 UNC 경로를 FileTable UNC 경로로 바꾸려고 합니다. [GetPathLocator&#40;Transact-SQL&#41;](../../relational-databases/system-functions/getpathlocator-transact-sql.md) 함수를 사용하면 이 목표를 쉽게 달성할 수 있습니다.  
   
- 이 예의 경우 사진에 대한 데이터가 들어 있는 **PhotoMetadata**라는 기존 데이터베이스 테이블이 있다고 가정합니다. 이 테이블에는 .jpg 파일의 실제 UNC 경로가 포함되어 있는 **varchar**(512) 형식의 **UNCPath** 열이 있습니다.  
+ 이 예의 경우 사진에 대한 데이터가 들어 있는 **PhotoMetadata**라는 기존 데이터베이스 테이블이 있다고 가정합니다. 이 테이블에는 .jpg 파일의 실제 UNC 경로가 포함되어 있는 **varchar** (512) 형식의 **UNCPath**열이 있습니다.  
   
  파일 시스템의 이미지 파일을 FileTable로 마이그레이션하려면 다음을 수행해야 합니다.  
   
@@ -122,7 +126,7 @@ UPDATE PhotoMetadata
 ###  <a name="disabling"></a> 방법: 대량 로드에 대한 FileTable 제약 조건 사용 안 함  
  시스템 정의 제약 조건을 적용하는 오버헤드 없이 파일을 FileTable로 대량 로드하려면 제약 조건을 일시적으로 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [FileTables 관리](../../relational-databases/blob/manage-filetables.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Transact-SQL을 사용하여 FileTable에 액세스](../../relational-databases/blob/access-filetables-with-transact-sql.md)   
  [파일 입/출력 API를 사용하여 FileTable 액세스](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md)  
   

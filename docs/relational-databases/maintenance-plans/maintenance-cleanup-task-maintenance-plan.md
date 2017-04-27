@@ -1,32 +1,36 @@
 ---
-title: "유지 관리 정리 태스크(유지 관리 계획) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.cleanup.f1"
-helpviewer_keywords: 
-  - "유지 관리 정리 태스크 대화 상자"
+title: "유지 관리 정리 태스크(유지 관리 계획) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.cleanup.f1
+helpviewer_keywords:
+- Maintenance Cleanup Task dialog box
 ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47b569e7d8c486de044d9784af2cb6adbab50b4f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 유지 관리 정리 태스크(유지 관리 계획)
+# <a name="maintenance-cleanup-task-maintenance-plan"></a>유지 관리 정리 태스크(유지 관리 계획)
   **유지 관리 정리 태스크** 를 사용하여 유지 관리 계획에서 만든 텍스트 보고서와 데이터베이스 백업 파일을 포함하여 유지 관리 계획과 관련된 오래된 파일을 제거할 수 있습니다.  
   
 > [!NOTE]  
 >  유지 관리 정리 태스크에서는 지정된 디렉터리의 하위 폴더에 있는 파일을 자동으로 삭제하지 않습니다. 이 기능은 유지 관리 정리 태스크를 사용하여 파일을 삭제하는 악의적 공격의 가능성을 줄여 줍니다. 첫 번째 수준의 하위 폴더를 삭제하려는 경우 **첫 번째 수준의 하위 폴더 포함**을 선택해야 합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **연결**  
  현재 연결을 표시합니다.  
   
@@ -42,7 +46,7 @@ caps.handback.revision: 26
  **특정 파일 삭제**  
  **파일 이름** 상자에 표시되는 특정 파일을 삭제합니다.  
   
- ** 파일 이름 **  
+ **파일 이름**  
  삭제할 파일의 경로와 이름입니다.  
   
  **확장명에 따라 폴더 검색 및 파일 삭제**  
@@ -69,7 +73,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  영향을 받은 개체 수가 많은 경우에는 표시하는 데 시간이 오래 걸릴 수 있습니다.  
   
-## 새 연결 대화 상자  
+## <a name="new-connection-dialog-box"></a>새 연결 대화 상자  
  **연결 이름**  
  새 연결의 이름을 입력합니다.  
   
@@ -94,7 +98,7 @@ caps.handback.revision: 26
  **암호**  
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
-## 참고 항목  
- [유지 관리 계획](../../relational-databases/maintenance-plans/maintenance-plans.md)  
+## <a name="see-also"></a>참고 항목  
+ [개체 탐색기의](../../relational-databases/maintenance-plans/maintenance-plans.md)  
   
   

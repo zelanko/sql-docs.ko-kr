@@ -1,28 +1,32 @@
 ---
-title: "트랜잭션 내구성 제어 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-transaction-log"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "지연된 내구성"
-  - "느린 커밋"
+title: "트랜잭션 내구성 제어 | Microsoft 문서"
+ms.custom: 
+ms.date: 09/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-transaction-log
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- delayed durability
+- Lazy Commit
 ms.assetid: 3ac93b28-cac7-483e-a8ab-ac44e1cc1c76
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 956e9f95b95aa0ecb99477714e70ac61d29c45e0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 트랜잭션 내구성 제어
+# <a name="control-transaction-durability"></a>트랜잭션 내구성 제어
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.    
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 트랜잭션 커밋은 완전 내구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값)이 있거나 지연된 내구성(느린 커밋이라고도 함)이 있습니다.    
     
  완전 내구성이 있는 트랜잭션 커밋은 동기적이므로 트랜잭션에 대한 로그 레코드가 디스크에 기록된 후에만 커밋을 성공으로 보고하고 클라이언트에 컨트롤을 반환합니다. 지연된 내구성이 있는 트랜잭션 커밋은 비동기적이므로 트랜잭션에 대한 로그 레코드가 디스크에 기록되기 전에 커밋을 성공으로 보고합니다. 트랜잭션이 내구성을 가지려면 디스크에 트랜잭션 로그 항목을 기록해야 합니다. 지연된 내구성이 있는 트랜잭션은 트랜잭션 로그 항목을 디스크에 플러시한 경우에 내구성을 가집니다.    
     
@@ -78,17 +82,17 @@ caps.handback.revision: 27
     
     -   동일한 데이터베이스의 완전 내구성이 있는 트랜잭션이 데이터베이스에서 변경되고 성공적으로 커밋된 경우   
     
-    -   사용자가 시스템 저장 프로시저 `sp_flush_log`를 성공적으로 실행한 경우     
+    -   사용자가 시스템 저장 프로시저 `sp_flush_log` 를 성공적으로 실행한 경우     
     
         완전 내구성이 있는 트랜잭션 또는 sp_flush_log가 성공적으로 커밋되면, 이전에 커밋된 지연된 내구성 트랜잭션은 모두 내구성을 가집니다.
         
-    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 모든 트랜잭션이 지연되더라도 로그 생성 및 시간을 모두 기반으로 로그를 디스크에 플러시합니다. 일반적으로 IO 장치가 계속 실행되면 정상으로 처리된 것입니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 내구성 있는 트랜잭션 및 sp_flush_log 외의 어떠한 내구성도 보장하지 않습니다.      
+    - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 모든 트랜잭션이 지연되더라도 로그 생성 및 시간을 모두 기반으로 로그를 디스크에 플러시합니다. 일반적으로 IO 장치가 계속 실행되면 정상으로 처리된 것입니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 내구성 있는 트랜잭션 및 sp_flush_log 외의 어떠한 내구성도 보장하지 않습니다.      
     
   
     
 ## <a name="how-to-control-transaction-durability"></a>트랜잭션 내구성을 제어하는 방법    
     
-###  <a name="a-namebkmkdbcontrola-database-level-control"></a><a name="bkmk_DbControl"></a> 데이터베이스 수준 제어    
+###  <a name="bkmk_DbControl"></a> Database level control    
  DBA는 다음 문을 사용하여 사용자가 데이터베이스에서 지연된 트랜잭션 내구성을 사용할 수 있는지 여부를 제어할 수 있습니다. ALTER DATABASE를 사용하여 지연된 내구성 설정을 지정해야 합니다.    
     
 ```tsql    
@@ -99,12 +103,12 @@ ALTER DATABASE … SET DELAYED_DURABILITY = { DISABLED | ALLOWED | FORCED }
  [기본값] 이 설정을 사용하면 커밋 수준 설정(DELAYED_DURABILITY=[ON | OFF])에 상관없이 데이터베이스에 커밋된 모든 트랜잭션이 완전 내구성을 가집니다. 저장 프로시저를 변경하고 다시 컴파일할 필요가 없습니다. 따라서 지연된 내구성으로 인해 데이터가 위험에 노출되지 않습니다.    
     
  **허용함**    
- 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 및 [COMMIT 수준 제어 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl)을 참조하세요.    
+ 이 설정을 사용하면 각 트랜잭션의 내구성이 트랜잭션 수준에서 결정됩니다. 즉, DELAYED_DURABILITY = { *OFF* | ON }에 의해 결정됩니다. 자세한 내용은 [Atomic 블록 수준 제어 – 고유하게 컴파일된 저장 프로시저](../../relational-databases/logs/control-transaction-durability.md#CompiledProcControl) 및 [COMMIT 수준 제어 – Transact-SQL](../../relational-databases/logs/control-transaction-durability.md#bkmk_T-SQLControl) 을 참조하세요.    
     
  **FORCED**    
  이 설정을 사용하면 데이터베이스에 커밋되는 모든 트랜잭션이 지연된 내구성을 가집니다. 트랜잭션이 완전 내구성(DELAYED_DURABILITY = OFF)을 지정하는지 여부에 상관없이 트랜잭션은 지연된 내구성이 있습니다. 이 설정은 지연된 트랜잭션 내구성이 데이터베이스에 유용하고 응용 프로그램 코드를 변경하지 않으려는 경우에 유용합니다.    
     
-###  <a name="a-namecompiledproccontrola-atomic-block-level-control-natively-compiled-stored-procedures"></a><a name="CompiledProcControl"></a> Atomic 블록 수준 제어 - 고유하게 컴파일된 저장 프로시저    
+###  <a name="CompiledProcControl"></a> Atomic block level control – Natively Compiled Stored Procedures    
  다음 코드는 ATOMIC 블록 내로 이동합니다.    
     
 ```tsql    
@@ -139,7 +143,7 @@ END
 |**DELAYED_DURABILITY = OFF**|ATOMIC 블록은 새로운 완전 내구성이 있는 트랜잭션을 시작합니다.|ATOMIC 블록은 기존 트랜잭션에 저장점을 만든 다음 새 트랜잭션을 시작합니다.|    
 |**DELAYED_DURABILITY = ON**|ATOMIC 블록은 새로운 지연된 내구성이 있는 트랜잭션을 시작합니다.|ATOMIC 블록은 기존 트랜잭션에 저장점을 만든 다음 새 트랜잭션을 시작합니다.|    
     
-###  <a name="a-namebkmkt-sqlcontrola-commit-level-control-includetsqltokentsqlmdmd"></a><a name="bkmk_T-SQLControl"></a> COMMIT 수준 제어 –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
+###  <a name="bkmk_T-SQLControl"></a> COMMIT level control –[!INCLUDE[tsql](../../includes/tsql-md.md)]    
  지연된 트랜잭션 내구성을 강제로 적용할 수 있도록 COMMIT 구문이 확장됩니다. 데이터베이스 수준에서 If DELAYED_DURABILITY가 DISABLED 또는 FORCED인 경우(위 내용 참조) 이 COMMIT 옵션은 무시됩니다.    
     
 ```tsql    
@@ -170,7 +174,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
     
 -   시스템 저장 프로시저 실행 `sp_flush_log`를 실행합니다. 이 프로시저는 모든 이전에 커밋된 지연된 내구성이 있는 트랜잭션의 로그 레코드를 디스크에 강제로 플러시합니다. 자세한 내용은 [sys.sp_flush_log&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql.md)를 참조하세요.    
     
-##  <a name="a-namebkmkothersqlfeaturesa-delayed-durability-and-other-includessnoversiontokenssnoversionmdmd-features"></a><a name="bkmk_OtherSQLFeatures"></a> 지연된 내구성 및 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능    
+##  <a name="bkmk_OtherSQLFeatures"></a> 지연된 내구성 및 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능    
  **변경 추적 및 변경 데이터 캡처**    
  변경 추적을 적용한 모든 트랜잭션은 완전 내구성을 가집니다. 변경 추적을 사용하도록 설정한 테이블에 쓰기 작업을 수행하는 경우 트랜잭션은 변경 추적 속성이 있습니다. 지연된 내구성 사용은 CDC(변경 데이터 캡처)를 사용하는 데이터베이스에 지원되지 않습니다.    
     
@@ -195,16 +199,17 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
  **로그 백업**    
  내구성이 있는 트랜잭션만 백업에 포함됩니다.    
     
-##  <a name="a-namebkmkdatalossa-when-can-i-lose-data"></a><a name="bkmk_DataLoss"></a> 데이터를 손실할 수 있는 경우    
+##  <a name="bkmk_DataLoss"></a> When can I lose data?    
  테이블에 대해 지연된 내구성을 구현하는 경우 특정 상황에서 데이터를 손실할 수 있습니다. 데이터 손실을 허용할 수 없는 경우에는 지연된 트랜잭션 내구성을 사용하지 마세요.    
     
 ### <a name="catastrophic-events"></a>재해    
- 서버 크래시와 같은 재해 발생 시 디스크에 저장되지 않은 커밋된 모든 트랜잭션의 데이터를 손실하게 됩니다. 데이터베이스의 테이블에 대해 완전 내구성이 있는 트랜잭션이 실행되거나 `sp_flush_log`가 호출될 때마다 지연된 내구성 트랜잭션이 디스크에 저장됩니다. 지연된 내구성 트랜잭션을 사용하는 경우 데이터베이스에 정기적으로 `sp_flush_log`를 업데이트하거나 호출할 수 있는 작은 테이블을 만들어 처리되지 않은 커밋된 모든 트랜잭션을 저장할 수 있습니다. 또한 가득 찰 때마다 트랜잭션 로그가 플러시되지만 이는 예측하기 어려워 제어하는 것이 불가능합니다.    
+ 서버 크래시와 같은 재해 발생 시 디스크에 저장되지 않은 커밋된 모든 트랜잭션의 데이터를 손실하게 됩니다. 데이터베이스의 테이블에 대해 완전 내구성이 있는 트랜잭션이 실행되거나 `sp_flush_log` 가 호출될 때마다 지연된 내구성 트랜잭션이 디스크에 저장됩니다. 지연된 내구성 트랜잭션을 사용하는 경우 데이터베이스에 정기적으로 `sp_flush_log` 를 업데이트하거나 호출할 수 있는 작은 테이블을 만들어 처리되지 않은 커밋된 모든 트랜잭션을 저장할 수 있습니다. 또한 가득 찰 때마다 트랜잭션 로그가 플러시되지만 이는 예측하기 어려워 제어하는 것이 불가능합니다.    
     
-### <a name="includessnoversiontokenssnoversionmdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료 및 다시 시작    
+### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료 및 다시 시작    
  지연된 내구성의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 예기치 않은 종료와 예상된 종료/다시 시작 간에는 차이가 없습니다. 재해와 같은 데이터 손실을 대비하여 계획을 세워야 합니다. 예정된 종료/다시 시작에서 디스크에 기록되지 않은 일부 트랜잭션이 먼저 디스크에 저장될 수 있지만 이에 대한 계획을 세우지 않아야 합니다. 예정되었든 예정되지 않았든 종료/다시 시작 시 재해와 동일하게 데이터를 손실할 것처럼 계획을 세우세요.    
     
 ## <a name="see-also"></a>참고 항목    
  [메모리 액세스에 최적화된 테이블의 트랜잭션](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
+

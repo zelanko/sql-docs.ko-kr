@@ -1,24 +1,28 @@
 ---
-title: "DDL 트리거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DDL 트리거, DDL 트리거 정보"
+title: "DDL 트리거 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DDL triggers, about DDL triggers
 ms.assetid: 1a4a6564-9820-4a14-9305-2c0e9ea37454
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f3a47050dc9ba3b157ac37f3fc0646492d231d47
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL 트리거
+# <a name="ddl-triggers"></a>DDL 트리거
   DDL 트리거는 다양한 DDL(데이터 정의 언어) 이벤트에 대한 응답으로 실행됩니다. 이러한 이벤트는 주로 CREATE, ALTER, DROP, GRANT, DENY, REVOKE 또는 UPDATE STATISTICS 키워드로 시작하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 해당합니다. DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에서 DDL 트리거가 발생할 수도 있습니다.  
   
  다음과 같은 경우 DDL 트리거를 사용합니다.  
@@ -32,7 +36,7 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  DDL 트리거를 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인합니다. 예를 들어 CREATE TYPE 문과 **sp_addtype** 저장 프로시저는 모두 CREATE_TYPE 이벤트에서 생성되는 DDL 트리거를 발생시킵니다.  
   
-## DDL 트리거 유형  
+## <a name="types-of-ddl-triggers"></a>DDL 트리거 유형  
  Transact-SQL DDL 트리거  
  서버 범위 또는 데이터베이스 범위 이벤트에 대한 응답으로 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하는 특수 유형의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저입니다. 예를 들어 ALTER SERVER CONFIGURATION과 같은 문을 실행하거나 DROP TABLE을 사용하여 테이블을 삭제하면 DDL 트리거가 실행될 수 있습니다.  
   
@@ -54,10 +58,10 @@ caps.handback.revision: 35
 > [!IMPORTANT]  
 >  사용 권한 수준을 높이고 트리거를 실행하더라도 트리거 내의 악성 코드가 실행될 수 있습니다. 이 위협을 완화하는 방법은 [트리거 보안 관리](../../relational-databases/triggers/manage-trigger-security.md)를 참조하세요.  
   
-## DDL 트리거 범위  
+## <a name="ddl-trigger-scope"></a>DDL 트리거 범위  
  DDL 트리거는 현재 데이터베이스나 서버에서 처리되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이벤트에 응답하여 시작될 수 있습니다. 트리거의 범위는 이벤트에 따라 달라집니다. 예를 들어 CREATE_TABLE 이벤트에 대한 응답으로 시작되도록 만들어진 DDL 트리거는 데이터베이스 또는 서버 인스턴스에서 CREATE_TABLE 이벤트가 발생할 때마다 시작될 수 있습니다. CREATE_LOGIN 이벤트에 대한 응답으로 시작되도록 만들어진 DDL 트리거는 서버 인스턴스에서 CREATE_LOGIN 이벤트가 발생할 경우에만 시작될 수 있습니다.  
   
- 다음 예에서는 데이터베이스에서 `safety` 또는 `DROP_TABLE` 이벤트가 발생할 때마다 DDL 트리거 `ALTER_TABLE`가 시작됩니다.  
+ 다음 예에서는 데이터베이스에서 `safety` 또는 `DROP_TABLE` 이벤트가 발생할 때마다 DDL 트리거 `ALTER_TABLE` 가 시작됩니다.  
   
 ```  
 CREATE TRIGGER safety   
@@ -95,19 +99,19 @@ GO
   
  서버 범위 DDL 트리거는 **master** 데이터베이스에 개체로 저장됩니다. 그러나 서버 범위 DDL 트리거에 대한 정보는 임의의 데이터베이스 컨텍스트에서 **sys.server_triggers** 카탈로그 뷰를 쿼리하여 얻을 수 있습니다.  
   
-## Transact-SQL 문 또는 문 그룹 지정  
+## <a name="specifying-a-transact-sql-statement-or-group-of-statements"></a>Transact-SQL 문 또는 문 그룹 지정  
   
-### DDL 트리거를 시작하기 위한 특정 DDL 문 선택  
+### <a name="selecting-a-particular-ddl-statement-to-fire-a-ddl-trigger"></a>DDL 트리거를 시작하기 위한 특정 DDL 문 선택  
  하나 이상의 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 실행된 이후에 DDL 트리거가 시작되도록 만들 수 있습니다. 이전 예에서 `safety` 트리거는 `DROP_TABLE` 또는 `ALTER_TABLE` 이벤트가 발생한 이후에 시작됩니다. DDL 트리거를 시작하도록 지정할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 목록과 트리거 시작 범위는 [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)를 참조하세요.  
   
-### DDL 트리거를 시작하기 위한 미리 정의된 DDL 문 그룹 선택  
+### <a name="selecting-a-predefined-group-of-ddl-statements-to-fire-a-ddl-trigger"></a>DDL 트리거를 시작하기 위한 미리 정의된 DDL 문 그룹 선택  
  DDL 트리거는 미리 정의된 유사 이벤트 그룹에 속한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 이벤트가 실행된 이후에 시작될 수 있습니다. 예를 들어 CREATE TABLE, ALTER TABLE 또는 DROP TABLE 문이 실행된 이후에 DDL 트리거가 시작되도록 하려면 CREATE TRIGGER 문에 FOR DDL_TABLE_EVENTS를 지정하면 됩니다. CREATE TRIGGER가 실행되면 이벤트 그룹에 속하는 이벤트가 **sys.trigger_events** 카탈로그 뷰에 추가됩니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 트리거가 이벤트 그룹에 만들어지는 경우 **sys.trigger_events**에는 이벤트 그룹에 대한 정보가 포함되지 않고 **sys.trigger_events**에는 이벤트 그룹에 속한 개별 이벤트에 대한 정보만 포함됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 **sys.trigger_events**는 트리거가 만들어진 이벤트 그룹에 대한 메타데이터와 이벤트 그룹에 속한 개별 이벤트에 대한 메타데이터를 보존합니다. 따라서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전의 이벤트 그룹에 속한 이벤트에 대한 변경 사항은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 이벤트 그룹에 만들어진 DDL 트리거에 적용되지 않습니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 트리거가 이벤트 그룹에 만들어지는 경우 **sys.trigger_events** 에는 이벤트 그룹에 대한 정보가 포함되지 않고 **sys.trigger_events** 에는 이벤트 그룹에 속한 개별 이벤트에 대한 정보만 포함됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 **sys.trigger_events** 는 트리거가 만들어진 이벤트 그룹에 대한 메타데이터와 이벤트 그룹에 속한 개별 이벤트에 대한 메타데이터를 보존합니다. 따라서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전의 이벤트 그룹에 속한 이벤트에 대한 변경 사항은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 이벤트 그룹에 만들어진 DDL 트리거에 적용되지 않습니다.  
   
  DDL 트리거에 사용할 수 있는 미리 정의된 DDL 문 그룹 목록, 이벤트 그룹에 포함된 특정 문 및 이러한 이벤트 그룹을 프로그래밍할 수 있는 범위는 [DDL Event Groups](../../relational-databases/triggers/ddl-event-groups.md)을 참조하십시오.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크|항목|  
 |----------|-----------|  
@@ -117,7 +121,7 @@ GO
 |EVENTDATA 함수를 사용하여 DDL 트리거를 발생하는 이벤트에 대한 정보를 반환하는 방법에 대해 설명합니다.|[EVENTDATA 함수 사용](../../relational-databases/triggers/use-the-eventdata-function.md)|  
 |트리거 보안을 관리하는 방법에 대해 설명합니다.|[트리거 보안 관리](../../relational-databases/triggers/manage-trigger-security.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DML 트리거](../../relational-databases/triggers/dml-triggers.md)   
  [LOGON 트리거](../../relational-databases/triggers/logon-triggers.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)  

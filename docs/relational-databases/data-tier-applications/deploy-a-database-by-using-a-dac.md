@@ -1,32 +1,36 @@
 ---
-title: "DAC를 사용 하여 데이터베이스 배포 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbdeployment.settings.f1"
-  - "sql13.swb.dbdeployment.progress.f1"
-  - "sql13.swb.dbdeployment.summary.f1"
-  - "sql13.swb.dbdeployment.results.f1"
-  - "sql13.swb.dbdeployment.welcome.f1"
-helpviewer_keywords: 
-  - "데이터베이스 배포 마법사"
-  - "데이터베이스 배포 [SQL Server]"
+title: "DAC를 사용하여 데이터베이스 배포 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbdeployment.settings.f1
+- sql13.swb.dbdeployment.progress.f1
+- sql13.swb.dbdeployment.summary.f1
+- sql13.swb.dbdeployment.results.f1
+- sql13.swb.dbdeployment.welcome.f1
+helpviewer_keywords:
+- deploy database wizard
+- database deploy [SQL Server]
 ms.assetid: 08c506e8-4ba0-4a19-a066-6e6a5c420539
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 57703923bd142330e2a46e72eb4faaee18fa7285
+ms.lasthandoff: 04/11/2017
+
 ---
-# DAC를 사용 하여 데이터베이스 배포
-  **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버 간에 데이터베이스를 배포합니다.  
+# <a name="deploy-a-database-by-using-a-dac"></a>DAC를 사용 하여 데이터베이스 배포
+  **SQL Azure에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스와 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버 간에 또는 두 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]서버 간에 데이터베이스를 배포합니다.  
   
 ##  <a name="BeforeBegin"></a> 시작하기 전에  
  마법사는 DAC(데이터 계층 응용 프로그램) BACPAC 아카이브 파일을 사용하여 데이터 및 데이터베이스 개체의 데이터 및 정의를 배포합니다. 원본 데이터베이스에서 DAC 내보내기 작업과 대상으로 DAC 가져오기 작업을 수행합니다.  
@@ -39,28 +43,28 @@ caps.handback.revision: 11
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  **데이터베이스 배포** 마법사는 다음과 같은 데이터베이스 배포를 지원합니다.  
   
--   [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에서 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 배포  
+-   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에서 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]로 배포  
   
--   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스로 배포  
+-   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스로 배포  
   
 -   두 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버 간에 배포  
   
  마법사는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 두 인스턴스 간의 배포를 지원하지 않습니다.  
   
- 마법사를 작동하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상을 실행하고 있어야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 데이터베이스에 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 지원되지 않는 개체가 포함되는 경우 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 데이터베이스를 배포하는 데 마법사를 사용할 수 없습니다. [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]의 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되지 않는 개체가 포함되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 데이터베이스를 배포하는 데 마법사를 사용할 수 없습니다.  
+ 마법사를 작동하려면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4(서비스 팩 4) 이상을 실행하고 있어야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 데이터베이스에 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 지원되지 않는 개체가 포함되는 경우 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 데이터베이스를 배포하는 데 마법사를 사용할 수 없습니다. [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 의 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되지 않는 개체가 포함되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 데이터베이스를 배포하는 데 마법사를 사용할 수 없습니다.  
   
 ###  <a name="Security"></a> 보안  
  보안을 개선하기 위해 SQL Server 인증 로그인은 암호 없이 DAC BACPAC 파일에 저장됩니다. BACPAC를 가져오면 생성된 암호와 함께 비활성 로그인이 생성됩니다. 로그인을 활성화하려면 ALTER ANY LOGIN 권한이 있는 로그인을 사용하여 로그인하고 ALTER LOGIN을 사용하여 로그인을 활성화하여 사용자에게 알려 줄 수 있는 새 암호를 할당합니다. Windows 인증 로그인의 경우 암호가 SQL Server에서 관리되지 않으므로 이 과정이 필요 없습니다.  
   
-#### 사용 권한  
- 마법사에 원본 데이터베이스에 대한 DAC 내보내기 권한이 필요합니다. 로그인하려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa**는 DAC를 내보낼 수 있습니다.  
+#### <a name="permissions"></a>사용 권한  
+ 마법사에 원본 데이터베이스에 대한 DAC 내보내기 권한이 필요합니다. 로그인하려면 **sys.sql_expression_dependencies**에 대한 SELECT 권한뿐만 아니라 최소한 ALTER ANY LOGIN 및 데이터베이스 범위 VIEW DEFINITION 권한이 있어야 합니다. DAC를 내보내려면 securityadmin 고정 서버 역할의 멤버이면서 DAC를 내보내는 데이터베이스의 database_owner 고정 데이터베이스 역할의 멤버여야 합니다. sysadmin 고정 서버 역할의 멤버 또는 기본 제공 SQL Server 시스템 관리자 계정인 **sa** 는 DAC를 내보낼 수 있습니다.  
   
- 마법사에 대상 인스턴스 또는 서버에 대한 DAC 가져오기 권한이 필요합니다. 로그인은 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버이거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있어야 합니다. **sa**라는 기본 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
+ 마법사에 대상 인스턴스 또는 서버에 대한 DAC 가져오기 권한이 필요합니다. 로그인은 **sysadmin** 또는 **serveradmin** 고정 서버 역할의 멤버이거나 **dbcreator** 고정 서버 역할에 포함되고 ALTER ANY LOGIN 권한이 있어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sa **라는 기본 제공** 시스템 관리자 계정도 DAC를 가져올 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 있는 DAC를 가져오려면 loginmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 로그인이 없는 DAC를 가져오려면 dbmanager 또는 serveradmin 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="UsingDeployDACWizard"></a> 데이터베이스 배포 마법사 사용  
  **데이터베이스 배포 마법사를 사용하여 데이터베이스를 마이그레이션하려면**  
   
-1.  배포하려는 데이터베이스의 위치에 연결합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]서버를 지정할 수 있습니다.  
+1.  배포하려는 데이터베이스의 위치에 연결합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 또는 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 서버를 지정할 수 있습니다.  
   
 2.  **개체 탐색기**에서 데이터베이스가 있는 인스턴스에 대한 노드를 확장합니다.  
   
@@ -74,10 +78,10 @@ caps.handback.revision: 11
   
     -   [배포 설정](#Deployment_settings)  
   
-    -   [유효성 검사](#Validation)  
-  
     -   [요약 페이지](#Summary)  
   
+    -   [진행률](#Progress)  
+    
     -   [결과](#Results)  
   
 ##  <a name="Introduction"></a> 소개 페이지  
@@ -121,7 +125,7 @@ caps.handback.revision: 11
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
-## .Net Framework 응용 프로그램 사용  
+## <a name="using-a-net-framework-application"></a>.Net Framework 응용 프로그램 사용  
  **.Net Framework 응용 프로그램에서 DacStoreExport() 및 Import() 메서드를 사용하여 데이터베이스를 배포합니다.**  
   
  코드 예제를 보려면 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=219575)에서 DAC 샘플 응용 프로그램을 다운로드합니다.  
@@ -138,7 +142,7 @@ caps.handback.revision: 11
   
 6.  **Import** 형식의 **Microsoft.SqlServer.Management.Dac.DacStore** 메서드를 사용하여 BACPAC를 가져옵니다. 내보내기에 의해 생성되는 BACPAC 파일을 지정합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [데이터 계층 응용 프로그램 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)  

@@ -1,41 +1,45 @@
 ---
-title: "관리 데이터 웨어하우스 구성(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dc.datacollection.wizard_completecfg.f1"
-  - "sql13.swb.dc.datacollection.wizard_config.f1"
-  - "sql13.swb.dc.datacollection.wizard_finish.f1"
-  - "sql13.swb.dc.datacollection.wizard_maploginuser.f1"
-  - "sql13.swb.dc.datacollection.wizard_choosemdw.f1"
-  - "sql13.swb.dc.datacollection.wizard_welcome.f1"
-  - "sql13.swb.dc.datacollection.wizard_createmdw.f1"
-helpviewer_keywords: 
-  - "데이터 웨어하우스 [SQL Server], 여러 인스턴스"
-  - "데이터 웨어하우스 [SQL Server], 구성"
-  - "관리 데이터 웨어하우스 구성 마법사"
-  - "관리 데이터 웨어하우스, 구성"
+title: "관리 데이터 웨어하우스 구성(SQL Server Management Studio) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dc.datacollection.wizard_completecfg.f1
+- sql13.swb.dc.datacollection.wizard_config.f1
+- sql13.swb.dc.datacollection.wizard_finish.f1
+- sql13.swb.dc.datacollection.wizard_maploginuser.f1
+- sql13.swb.dc.datacollection.wizard_choosemdw.f1
+- sql13.swb.dc.datacollection.wizard_welcome.f1
+- sql13.swb.dc.datacollection.wizard_createmdw.f1
+helpviewer_keywords:
+- data warehouse [SQL Server], multiple instances
+- data warehouse [SQL Server], configuring
+- Configure Management Data Warehouse Wizard
+- management data warehouse, configuring
 ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0be7c28ff6d9359ae858902f7b2d07cee6f353f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 관리 데이터 웨어하우스 구성(SQL Server Management Studio)
+# <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>관리 데이터 웨어하우스 구성(SQL Server Management Studio)
   이 항목에서는 데이터 수집기를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 단일 인스턴스 또는 여러 인스턴스에서 데이터 저장소를 지원하도록 관리 데이터 웨어하우스를 구성하는 방법에 대해 설명합니다. 이러한 인스턴스는 같은 서버에 있거나 다른 서버에 있을 수 있습니다. 그리고 [데이터 관리 웨어하우스 구성 마법사](#Wizard) 대화 상자의 사용자 인터페이스에 대해서도 설명합니다. 데이터 수집기 구성에 대한 자세한 내용은 [Configure Properties of a Data Collector](../../relational-databases/data-collection/configure-properties-of-a-data-collector.md)을 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시스템 서비스 계정(로컬 시스템, 네트워크 서비스 또는 로컬 서비스) 중 하나를 사용하여 실행되도록 구성되고 관리 데이터 웨어하우스는 데이터 수집기와 다른 인스턴스에서 생성될 경우 관리 데이터 웨어하우스에 데이터를 업로드하는 데 프록시를 사용하도록 컬렉션 집합을 구성해야 합니다.  
   
-### 다음 단일 인스턴스 또는 여러 인스턴스에서 관리 데이터 웨어하우스 구성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>다음 단일 인스턴스 또는 여러 인스턴스에서 관리 데이터 웨어하우스 구성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중인지 확인합니다.  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  데이터 수집기가 동일한 관리 데이터 웨어하우스를 사용하는 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치되어 있는 배포 환경에서 프록시를 사용하는 것이 최선의 방법입니다.  
   
-5.  다른 인스턴스에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 다음 작업 중 하나를 수행합니다.  
+5.  다른 인스턴스에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 열고 다음 작업 중 하나를 수행합니다.  
   
     -   구성 관리 데이터 웨어하우스 마법사를 사용하여 기존 관리 데이터 웨어하우스의 데이터 컬렉션을 구성합니다.  
   
@@ -132,7 +136,7 @@ caps.handback.revision: 28
  **닫기**  
  마법사를 닫습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_syscollector_enable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [데이터 컬렉션](../../relational-databases/data-collection/data-collection.md)   

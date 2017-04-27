@@ -1,30 +1,34 @@
 ---
-title: "작업 그룹 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "작업 그룹 [SQL Server], 삭제"
-  - "리소스 관리자, 작업 그룹 삭제"
+title: "작업 그룹 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], delete
+- Resource Governor, workload group delete
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 498058e4186851b78bf67795828f1a7562794a72
+ms.lasthandoff: 04/11/2017
+
 ---
-# 작업 그룹 삭제
+# <a name="delete-a-workload-group"></a>작업 그룹 삭제
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 작업 그룹 또는 리소스 풀을 삭제할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **작업 그룹을 삭제하려면:** [개체 탐색기](#DelWGObjEx), [리소스 관리자 속성](#DelWGRGProp), [Transact-SQL](#DelWGTSQL) 사용  
+-   **To delete a workload group, using:**  [Object Explorer](#DelWGObjEx), [Resource Governor Properties](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  활성 세션이 들어 있는 작업 그룹은 삭제할 수 없습니다.  
@@ -34,11 +38,11 @@ caps.handback.revision: 19
   
 -   적용된 그룹에서 모든 세션의 연결이 끊어질 때까지 기다린 후 ALTER RESOURCE GOVERNOR RECONFIGURE 문을 다시 실행합니다.  
   
--   KILL 명령을 사용하여 적용된 그룹의 세션을 명시적으로 중지한 후 ALTER RESOURCE GOVERNOR RECONFIGURE 문을 다시 실행합니다. **삭제**를 사용한 후 활성 세션을 중지하기 전에 세션을 명시적으로 중지하지 않으려는 경우 원래 이름을 사용하여 그룹을 다시 만든 다음 이 그룹을 원래 리소스 풀로 이동합니다.  
+-   KILL 명령을 사용하여 적용된 그룹의 세션을 명시적으로 중지한 후 ALTER RESOURCE GOVERNOR RECONFIGURE 문을 다시 실행합니다. **삭제** 를 사용한 후 활성 세션을 중지하기 전에 세션을 명시적으로 중지하지 않으려는 경우 원래 이름을 사용하여 그룹을 다시 만든 다음 이 그룹을 원래 리소스 풀로 이동합니다.  
   
 -   서버를 다시 시작합니다. 다시 시작 프로세스가 완료되면 삭제한 그룹은 생성되지 않고 이동한 그룹은 새 리소스 풀 할당을 사용합니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  작업 그룹을 삭제하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="DelWGObjEx"></a> 개체 탐색기를 사용하여 작업 그룹 삭제  
@@ -80,7 +84,7 @@ caps.handback.revision: 19
   
 3.  **ALTER RESOURCE GOVERNOR RECONFIGURE** 문을 실행합니다.  
   
-### 예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예(Transact-SQL)  
  다음 예에서는 `groupAdhoc`이라는 작업 그룹을 삭제합니다.  
   
 ```  
@@ -90,7 +94,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [작업 그룹 만들기](../../relational-databases/resource-governor/create-a-workload-group.md)   

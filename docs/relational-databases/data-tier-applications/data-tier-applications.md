@@ -1,33 +1,37 @@
 ---
-title: "데이터 계층 응용 프로그램 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "08/12/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DAC 디자인"
-  - "방법 [DAC]"
-  - "데이터 계층 응용 프로그램 [SQL Server], 디자인"
-  - "마법사 [DAC]"
+title: "데이터 계층 응용 프로그램 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/12/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- designing DACs
+- How to [DAC]
+- data-tier application [SQL Server], designing
+- wizard [DAC]
 ms.assetid: a04a2aba-d07a-4423-ab8a-0a31658f6317
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 319f0adb5f8f537b697caa401efcb3e0054d79ee
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 계층 응용 프로그램
+# <a name="data-tier-applications"></a>데이터 계층 응용 프로그램
   DAC(데이터 계층 응용 프로그램)는 사용자의 데이터베이스와 연결된 로그인을 포함하여 테이블, 뷰 및 인스턴스 개체와 같은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 데이터베이스 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 DAC 패키지(또는 DACPAC)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 자체 포함 배포 단위입니다.  
   
  BACPAC는 데이터베이스에 저장된 데이터뿐만 아니라 데이터베이스 스키마를 캡슐화하는 관련 아티팩트입니다.  
   
-## 데이터 계층 응용 프로그램의 이점  
+## <a name="benefits-of-data-tier-applications"></a>데이터 계층 응용 프로그램의 이점  
  대부분의 데이터베이스 응용 프로그램 수명 주기에는 응용 프로그램 업데이트 및 유지 관리 활동을 위해 개발자 및 DBA의 스크립트 공유 및 교환과 임시 통합 정보가 포함됩니다. 이러한 방식은 데이터베이스 수가 많지 않은 경우에 허용 가능하지만 데이터베이스 수와 크기 및 복잡도가 증가할수록 확장성이 크게 떨어집니다.  
   
  DAC는 선언적인 데이터베이스 개발을 통해 배포 및 관리를 간소화할 수 있게 해주는 데이터베이스 수명 주기 관리 및 생산성 도구입니다. 개발자는 SQL Server Data Tools 데이터베이스 프로젝트에서 데이터베이스를 작성한 후 DBA에게 전달하기 위해 데이터베이스를 DACPAC로 작성할 수 있습니다. DBA는 SQL Server Management Studio를 사용하여 DAC를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 테스트 또는 프로덕션 인스턴스나 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에 배포할 수 있습니다. 또는 DBA가 이전에 SQL Server Management Studio를 사용하여 배포된 데이터베이스를 DACPAC를 통해 업그레이드할 수 있습니다. DBA는 테스트 또는 프로덕션 조정을 반영하거나 응용 프로그램 내 변경 사항에 따라 데이터베이스 설계를 추가로 변경할 수 있도록 데이터베이스를 DACPAC로 추출하고 이를 개발자에게 전달함으로써 수명 주기를 완료합니다.  
@@ -36,7 +40,7 @@ caps.handback.revision: 31
   
  DAC는 또한 개발자와 DBA가 해당 수명 주기 전체에 걸쳐 데이터베이스 계보를 유지 관리할 수 있도록 버전 관리 기능을 지원합니다.  
   
-## DAC 개념  
+## <a name="dac-concepts"></a>DAC 개념  
  DAC를 사용하면 응용 프로그램을 지원하는 데이터 계층 요소를 간편하게 개발, 배포 및 관리할 수 있습니다.  
   
 -   DAC(데이터 계층 응용 프로그램)는 테이블, 뷰 및 인스턴스 개체와 같은 사용자의 데이터베이스와 연결된 모든 SQL Server 개체를 정의하는 논리적인 데이터베이스 관리 엔터티입니다. DAC는 데이터 계층 개발자 및 DBA가 SQL Server 개체를 DAC 패키지(또는 .dacpac 파일)라고 부르는 이식 가능한 아티팩트로 패키징할 수 있게 해주는 SQL Server 데이터베이스의 자체 포함 배포 단위입니다.  
@@ -55,7 +59,7 @@ caps.handback.revision: 31
   
 -   DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 dbmanager 역할의 멤버이거나 사용자에게 CREATE DATABASE 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 dbmanager 역할의 멤버이거나 사용자에게 DROP DATABASE 권한이 할당되어 있어야 합니다.  
   
-## DAC 도구  
+## <a name="dac-tools"></a>DAC 도구  
  DACPAC는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 제공되는 여러 도구 간에 쉽게 사용할 수 있습니다. 이러한 도구는 상호 운용성 단위로 DACPAC를 사용하는 여러 사용자의 요구 사항을 해결해 줍니다.  
   
 -   응용 프로그램 개발자:  
@@ -66,7 +70,7 @@ caps.handback.revision: 31
   
 SQL Server Data Tools는 또한 연결되지 않은 클라이언트 쪽 데이터베이스 응용 프로그램 개발을 위한 로컬 DB를 지원합니다. 개발자는 이 로컬 데이터베이스의 스냅숏을 만들어서 .dacpac 파일에 포함된 DACPAC를 만들 수 있습니다.  
   
-    -   Independently, the developer can publish a database project directly to a database without even generating a DACPAC. The publish operation follows similar behavior as the deploy operation from other tools.  
+    -   개발자는 DACPAC를 생성하지 않고도 독립적으로 데이터베이스 프로젝트를 데이터베이스에 직접 게시할 수 있습니다. 게시 작업은 다른 도구를 사용한 배포 작업과 비슷한 동작을 따릅니다.  
   
 -   데이터베이스 관리자:  
   
@@ -82,7 +86,7 @@ SQL Server Data Tools는 또한 연결되지 않은 클라이언트 쪽 데이�
   
     -   IT 시스템 통합업체 및 관리자는 DAC 작업을 위해 SqlPackage.exe 명령줄 도구를 사용할 수 있습니다.  
   
-## DAC 작업  
+## <a name="dac-operations"></a>DAC 작업  
  DAC는 다음 작업을 지원합니다.  
   
 -   **추출** – 사용자가 데이터베이스를 DACPAC로 추출할 수 있습니다.  
@@ -95,7 +99,7 @@ SQL Server Data Tools는 또한 연결되지 않은 클라이언트 쪽 데이�
   
 -   **업그레이드** - DACPAC를 사용하여 데이터베이스를 업그레이드할 수 있습니다. 이전에 데이터 계층 응용 프로그램으로 등록되지 않은 데이터베이스에서도 업그레이드가 지원되지만 업그레이드할 경우 데이터베이스가 암시적으로 등록됩니다.  
   
-## BACPAC  
+## <a name="bacpac"></a>BACPAC  
  BACPAC는 데이터베이스의 스키마와 데이터를 캡슐화 하는 확장명이 .bacpac인 Windows 파일입니다. BACPAC는 서버 간에 데이터베이스를 이동하거나 [로컬 서버에서 클라우드로 데이터베이스를 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)하고 기존 데이터베이스를 개방 형식으로 보관하는 데 주로 사용됩니다.  
   
  DACPAC와 비슷하게 BACPAC 파일 형식도 개방형 형식이며, BACPAC의 스키마 콘텐츠는 DACPAC의 스키마 콘텐츠와 동일합니다. BACPAC의 데이터는 JSON 형식으로 저장됩니다.  
@@ -110,10 +114,10 @@ SQL Server Data Tools는 또한 연결되지 않은 클라이언트 쪽 데이�
   
  SQL Server Management Studio, Azure 포털 및 DACFx API와 같은 데이터베이스 관리 도구에서는 이 두 기능이 모두 지원됩니다.  
   
-## 사용 권한  
+## <a name="permissions"></a>사용 권한  
  DAC 패키지를 배포하여 데이터베이스를 만드는 작업을 포함하여 데이터베이스를 만들기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **CREATE DATABASE** 권한이 할당되어 있어야 합니다. 데이터베이스를 삭제하기 위해서는 사용자가 **dbmanager** 역할의 멤버이거나 사용자에게 **DROP DATABASE** 권한이 할당되어 있어야 합니다.  
   
-## 데이터 계층 응용 프로그램 태스크  
+## <a name="data-tier-application-tasks"></a>데이터 계층 응용 프로그램 태스크  
   
 |태스크|항목 링크|  
 |----------------------|-----------|  
@@ -127,9 +131,10 @@ SQL Server Data Tools는 또한 연결되지 않은 클라이언트 쪽 데이�
 |기존 데이터베이스를 DAC 인스턴스로 승격하는 방법에 대해 설명합니다. DAC 정의는 작성된 후 시스템 데이터베이스에 저장됩니다.|[DAC로 데이터베이스 등록](../../relational-databases/data-tier-applications/register-a-database-as-a-dac.md)|  
 |프로덕션 시스템에서 DAC 패키지를 사용하기 전에 DAC 패키지의 내용 및 DAC 업그레이드에서 수행할 동작을 검토하는 방법에 대해 설명합니다.|[DAC 패키지 유효성 검사](../../relational-databases/data-tier-applications/validate-a-dac-package.md)|  
 |패키지를 프로덕션 서버에 배포하기 전에 데이터베이스 관리자가 DAC에서 수행하는 작업을 검토할 수 있도록 DAC 패키지 내용을 폴더에 넣는 방법에 대해 설명합니다.|[DAC 패키지 압축 풀기](../../relational-databases/data-tier-applications/unpack-a-dac-package.md)|  
-|마법사를 사용하여 기존 데이터베이스를 배포하는 방법에 대해 설명합니다. 마법사는 DAC를 사용하여 배포를 수행합니다.|[DAC를 사용 하여 데이터베이스 배포](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
+|마법사를 사용하여 기존 데이터베이스를 배포하는 방법에 대해 설명합니다. 마법사는 DAC를 사용하여 배포를 수행합니다.|[DAC를 사용하여 데이터베이스 배포](../../relational-databases/data-tier-applications/deploy-a-database-by-using-a-dac.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 개체 및 버전에 대한 DAC 지원](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)  
   
   
+

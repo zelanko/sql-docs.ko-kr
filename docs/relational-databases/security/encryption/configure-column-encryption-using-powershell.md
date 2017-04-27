@@ -1,22 +1,26 @@
 ---
-title: "PowerShell을 사용하여 열 암호화 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/10/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "powershell"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "PowerShell을 사용하여 열 암호화 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- powershell
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 074c012b-cf14-4230-bf0d-55e23d24f9c8
 caps.latest.revision: 8
-author: "stevestein"
-ms.author: "sstein"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: stevestein
+ms.author: sstein
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 65fa326c931ed4a4bd534e7f70ca4e93811ee44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# PowerShell을 사용하여 열 암호화 구성
+# <a name="configure-column-encryption-using-powershell"></a>PowerShell을 사용하여 열 암호화 구성
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 이 문서에서는 *SqlServer* PowerShell 모듈의 [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx) cmdlet을 사용하여 데이터베이스 열에 대한 대상 상시 암호화 구성을 설정하는 단계를 제공합니다. **Set-SqlColumnEncryption** cmdlet은 대상 데이터베이스의 스키마와 선택한 열에 저장된 데이터를 둘 다 수정합니다. 열에 지정된 대상 암호화 설정과 현재 암호화 구성에 따라 열에 저장된 데이터를 암호화, 다시 암호화 또는 암호 해독할 수 있습니다.
@@ -34,9 +38,9 @@ SqlServer PowerShell 모듈의 Always Encrypted 지원에 대한 자세한 내�
 
 **Set-SqlColumnEncryption** cmdlet은 대상 암호화 구성을 설정하는 두 가지 접근 방식(온라인 및 오프라인)을 지원합니다.
 
-오프라인 접근 방식을 사용하는 경우 대상 테이블(및 대상 테이블과 관련된 모든 테이블, 예: 대상 테이블과 외래 키 관계가 있는 모든 테이블)을 사용하여 전체 작업 기간 동안 트랜잭션을 작성할 수 없습니다.
+오프라인 접근 방식을 사용하는 경우 대상 테이블(및 대상 테이블과 관련된 모든 테이블, 예: 대상 테이블과 외래 키 관계가 있는 모든 테이블)을 사용하여 전체 작업 기간 동안 트랜잭션을 작성할 수 없습니다. 외래 키 제약 조건의 의미 체계(**CHECK** 또는 **NOCHECK**)는 오프라인 방법을 사용하는 경우 항상 유지됩니다.
 
-온라인 접근 방식을 사용하는 경우 데이터를 복사 및 암호화하거나, 암호를 해독하거나, 다시 암호화하는 작업이 증분적으로 수행됩니다. 응용 프로그램이 마지막 반복을 제외하고 전체 데이터 이동 작업에서 대상 테이블에서 데이터를 읽고 쓸 수 있으며, 해당 기간은 사용자가 정의할 수 있는 MaxDownTimeInSeconds 매개 변수에 의해 제한됩니다. 데이터가 복사되는 동안 응용 프로그램에서 적용할 수 있는 변경 내용을 검색하고 처리하기 위해 이 cmdlet은 대상 데이터베이스에서 변경 내용 추적을 지원합니다. 따라서 온라인 접근 방식은 오프라인 접근 방식보다 서버 쪽의 리소스를 더 많이 사용할 가능성이 높습니다. 온라인 접근 방식에서는 특히 쓰기 작업이 많은 워크로드가 데이터베이스에 대해 실행되는 경우 작업이 훨씬 오래 걸릴 수도 있습니다. 온라인 접근 방식은 한 번에 하나의 테이블을 암호화하는 데 사용될 수 있으며, 테이블에는 기본 키가 있어야 합니다.
+SSMS 17.0 이상 버전의 SqlServer PowerShell 모듈이 필요한 온라인 접근 방식을 사용하는 경우 데이터를 복사 및 암호화하거나, 암호를 해독하거나, 다시 암호화하는 작업이 증분적으로 수행됩니다. 응용 프로그램이 마지막 반복을 제외하고 전체 데이터 이동 작업에서 대상 테이블에서 데이터를 읽고 쓸 수 있으며, 해당 기간은 사용자가 정의할 수 있는 **MaxDownTimeInSeconds** 매개 변수에 의해 제한됩니다. 데이터가 복사되는 동안 응용 프로그램에서 적용할 수 있는 변경 내용을 검색하고 처리하기 위해 이 cmdlet은 대상 데이터베이스에서 [변경 내용 추적](https://msdn.microsoft.com/library/bb964713.aspx)을 지원합니다. 따라서 온라인 접근 방식은 오프라인 접근 방식보다 서버 쪽의 리소스를 더 많이 사용할 가능성이 높습니다. 온라인 접근 방식에서는 특히 쓰기 작업이 많은 워크로드가 데이터베이스에 대해 실행되는 경우 작업이 훨씬 오래 걸릴 수도 있습니다. 온라인 접근 방식은 한 번에 하나의 테이블을 암호화하는 데 사용될 수 있으며, 테이블에는 기본 키가 있어야 합니다. 기본적으로 외래 키 제약 조건은 응용 프로그램에 대한 영향을 최소화하기 위해 **NOCHECK** 옵션으로 다시 만들어집니다. **KeepCheckForeignKeyConstraints** 옵션을 지정하여 외래 키 제약 조건의 의미 체계 유지를 적용할 수 있습니다.
 
 다음은 오프라인 접근 방식과 온라인 접근 방식을 선택하는 방법에 대한 지침입니다.
 
@@ -45,8 +49,8 @@ SqlServer PowerShell 모듈의 Always Encrypted 지원에 대한 자세한 내�
 - 여러 테이블의 열을 동시에 암호화/암호 해독/다시 암호화하기 위해
 - 대상 테이블에 기본 키가 없는 경우
 
-오프라인 접근 방식 사용:
-- 데이터베이스를 사용하는 응용 프로그램의 가동 중지 시간/사용 불가를 최소화하기 위해
+온라인 접근 방식 사용:
+- 응용 프로그램에 대한 데이터베이스의 가동 중지 시간/사용 불가를 최소화합니다.
 
 ## <a name="security-considerations"></a>보안 고려 사항
 
@@ -54,10 +58,10 @@ SqlServer PowerShell 모듈의 Always Encrypted 지원에 대한 자세한 내�
 
 태스크  |아티클  |일반 텍스트 키/키 저장소 액세스  |데이터베이스 액세스   
 ---|---|---|---
-1단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 아니오 | 아니요
-2단계. 서버 및 데이터베이스에 연결 | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 아니오 | 예
+1단계. PowerShell 환경을 시작하고 SqlServer 모듈을 가져옵니다. | [SqlServer 모듈 가져오기](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#importsqlservermodule) | 아니요 | 아니요
+2단계. 서버 및 데이터베이스에 연결 | [데이터베이스에 연결](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md#connectingtodatabase) | 아니요 | 예
 3단계. 열 마스터 키(순환할 열 암호화 키 보호)가 Azure 주요 자격 증명 모음에 저장된 경우 Azure에 인증 | [Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx) | 예 | 아니요
-4단계. 암호화, 다시 암호화 또는 암호 해독하려는 각 데이터베이스 열에 대해 하나씩 SqlColumnEncryptionSettings 개체 배열을 생성합니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 열에 대한 대상 암호화 체계를 지정합니다. | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | 아니오 | 아니요
+4단계. 암호화, 다시 암호화 또는 암호 해독하려는 각 데이터베이스 열에 대해 하나씩 SqlColumnEncryptionSettings 개체 배열을 생성합니다. SqlColumnMasterKeySettings는 PowerShell의 메모리에 있는 개체입니다. 열에 대한 대상 암호화 체계를 지정합니다. | [New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx) | 아니요 | 아니요
 5단계. 이전 단계에서 만든 SqlColumnMasterKeySettings 개체 배열에 지정된 원하는 암호화 구성을 설정합니다. 열에 지정된 대상 설정과 현재 암호화 구성에 따라 열이 암호화, 다시 암호화 또는 암호 해독됩니다.| [Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)<br><br>**참고:** 이 단계는 시간이 오래 걸릴 수 있습니다. 선택한 접근 방식(온라인 또는 오프라인)에 따라 응용 프로그램이 전체 작업 또는 그 일부를 통해 테이블에 액세스할 수 없게 됩니다. | 예 | 예
 
 ## <a name="encrypt-columns-using-offline-approach---example"></a>오프라인 접근 방식을 사용한 열 암호화 - 예제
@@ -150,5 +154,7 @@ Set-SqlColumnEncryption -ColumnEncryptionSettings $ces -InputObject $database -L
 ## <a name="additional-resources"></a>추가 리소스
 - [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
 - [Always Encrypted(데이터베이스 엔진)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+
+
 
 

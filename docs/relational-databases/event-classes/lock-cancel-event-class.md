@@ -1,27 +1,31 @@
 ---
-title: "Lock:Cancel 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Cancel 이벤트 클래스"
+title: "Lock:Cancel 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Cancel event class
 ms.assetid: d9203e58-40ba-4712-a918-2c34a5d396d7
 caps.latest.revision: 39
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 07e88997a7b05c0cd8c2e866ea483e088b2d5404
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lock:Cancel 이벤트 클래스
+# <a name="lockcancel-event-class"></a>Lock:Cancel 이벤트 클래스
   **Lock:Cancel** 이벤트 클래스는 쿼리 취소 등의 원인으로 리소스에 대한 잠금 획득이 취소되었음을 나타냅니다.  
   
-## Lock:Cancel 이벤트 클래스 데이터 열  
+## <a name="lockcancel-event-class-data-columns"></a>Lock:Cancel 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -43,19 +47,19 @@ caps.handback.revision: 39
 |**모드**|**int**|잠금이 취소된 다음의 결과 모드입니다.<br /><br /> 0=NULL - 모든 잠금 모드와 호환(LCK_M_NL)<br /><br /> 1=스키마 안정성 잠금(LCK_M_SCH_S)<br /><br /> 2=스키마 수정 잠금(LCK_M_SCH_M)<br /><br /> 3=공유 잠금(LCK_M_S)<br /><br /> 4=업데이트 잠금(LCK_M_U)<br /><br /> 5=배타 잠금(LCK_M_X)<br /><br /> 6=내재된 공유 잠금(LCK_M_IS)<br /><br /> 7=의도 업데이트 잠금(LCK_M_IU)<br /><br /> 8=의도 배타 잠금(LCK_M_IX)<br /><br /> 9=의도 업데이트 공유(LCK_M_SIU)<br /><br /> 10=의도 배타 공유(LCK_M_SIX)<br /><br /> 11=의도 배타 업데이트(LCK_M_UIX)<br /><br /> 12=대량 업데이트 잠금(LCK_M_BU)<br /><br /> 13=키 범위 공유/공유(LCK_M_RS_S)<br /><br /> 14=키 범위 공유/업데이트(LCK_M_RS_U)<br /><br /> 15=키 범위 삽입 NULL(LCK_M_RI_NL)<br /><br /> 16=키 범위 삽입 공유(LCK_M_RI_S)<br /><br /> 17=키 범위 삽입 업데이트(LCK_M_RI_U)<br /><br /> 18=키 범위 삽입 배타(LCK_M_RI_X)<br /><br /> 19=키 범위 배타 공유(LCK_M_RX_S)<br /><br /> 20=키 범위 배타 업데이트(LCK_M_RX_U)<br /><br /> 21=키 범위 배타 배타(LCK_M_RX_X)|32|예|  
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
-|**ObjectID**|**int**|잠금이 취소된 개체의 ID입니다(사용 및 적용 가능한 경우).|22|예|  
+|**Exchange Spill**|**int**|잠금이 취소된 개체의 ID입니다(사용 및 적용 가능한 경우).|22|예|  
 |**ObjectID2**|**bigint**|관련 개체 또는 엔터티의 ID입니다(사용 및 적용 가능한 경우).|56|예|  
 |**OwnerID**|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|예|  
 |**RequestID**|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
-|**ServerName**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |**StartTime**|**datetime**|사용 가능한 경우 이벤트가 시작된 시간입니다.|14|예|  
-|**TextData**|**ntext**|획득한 잠금 유형에 따라 달라지는 텍스트 값입니다. 이 값은 **sys.dm_tran_locks**의 **resource_description** 열과 같습니다.|1|예|  
+|**TextData**|**ntext**|획득한 잠금 유형에 따라 달라지는 텍스트 값입니다. 이 값은 **sys.dm_tran_locks** 의 **resource_description**열과 같습니다.|1|예|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |**형식**|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

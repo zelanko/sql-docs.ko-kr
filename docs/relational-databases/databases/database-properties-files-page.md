@@ -1,27 +1,31 @@
 ---
-title: "데이터베이스 속성(파일 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.files.f1"
+title: "데이터베이스 속성(파일 페이지) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.files.f1
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 caps.latest.revision: 42
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 96e789d47140459475bdd3b6f36500d0d24492ce
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 속성(파일 페이지)
-  이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)**와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)**에 적용됩니다.  
+# <a name="database-properties-files-page"></a>데이터베이스 속성(파일 페이지)
+  이 페이지를 사용하여 새 데이터베이스를 만들 수 있으며 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다. 이 항목은 **새 데이터베이스(일반 페이지)** 와 기존 데이터베이스의 **데이터베이스 속성(파일 페이지)**에 적용됩니다.  
   
-## UIElement 목록  
+## <a name="uielement-list"></a>UIElement 목록  
  **데이터베이스 이름**  
  데이터베이스 이름을 추가하거나 표시합니다.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 42
  **파일 유형**  
  목록에서 파일 유형을 선택합니다. 파일 유형은 **데이터**, **로그**또는 **Filestream 데이터**가 될 수 있습니다. 기존 파일의 파일 유형은 수정할 수 없습니다.  
   
- 메모리 액세스에 최적화된 파일 그룹에 파일(컨테이너)을 추가하려면 **Filestream 데이터**를 선택합니다.  
+ 메모리 액세스에 최적화된 파일 그룹에 파일(컨테이너)을 추가하려면 **Filestream 데이터** 를 선택합니다.  
   
  Filestream 데이터 파일 그룹에 파일 (컨테이너)을 추가하려면 FILESTREAM을 사용해야 합니다. [서버 속성(고급 페이지)](../../database-engine/configure-windows/server-properties-advanced-page.md) 대화 상자를 사용하여 FILESTREAM을 설정할 수 있습니다.  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 42
  **경로**  
  선택한 파일의 경로를 표시합니다. 새 파일의 경로를 지정하려면 파일 경로 옆에 있는 편집 단추를 클릭하고 대상 폴더로 이동합니다. 기존 파일의 경로는 수정할 수 없습니다.  
   
- FILESTREAM 파일의 경우 경로는 폴더입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]은 이 폴더에 기본 파일을 만듭니다.  
+ FILESTREAM 파일의 경우 경로는 폴더입니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 이 폴더에 기본 파일을 만듭니다.  
   
  **파일 이름**  
  파일 이름을 표시합니다.  
@@ -81,7 +85,7 @@ caps.handback.revision: 42
   
  파일에 대한 자세한 내용은 [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)을 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

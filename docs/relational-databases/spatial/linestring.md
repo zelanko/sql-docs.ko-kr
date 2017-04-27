@@ -1,31 +1,35 @@
 ---
-title: "LineString | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "LineString geometry 하위 유형 [SQL Server]"
-  - "geometry 하위 유형 [SQL Server]"
+title: "LineString | Microsoft 문서"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- LineString geometry subtype [SQL Server]
+- geometry subtypes [SQL Server]
 ms.assetid: e50d0b86-8b31-4285-be71-ad05c7712cbd
 caps.latest.revision: 24
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9132c20fb46f36511a781c934026ebf01503375d
+ms.lasthandoff: 04/11/2017
+
 ---
-# LineString
-  **LineString**은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
+# <a name="linestring"></a>LineString
+  **LineString** 은 일련의 점과 이 점을 연결하는 선분을 나타내는 1차원 개체입니다.  
   
-## LineString 인스턴스  
+## <a name="linestring-instances"></a>LineString 인스턴스  
  다음 그림에서는 **LineString** 인스턴스의 예를 보여 줍니다.  
   
- ![geometry LineString 인스턴스의 예](../../relational-databases/spatial/media/linestring.png "geometry LineString 인스턴스의 예")  
+ ![geometry LineString 인스턴스의 예](../../relational-databases/spatial/media/linestring.gif "geometry LineString 인스턴스의 예")  
   
  그림에 대한 설명:  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 24
   
 -   그림 4는 닫혀 있고 단순하지 않은 **LineString** 인스턴스이므로 링이 아닙니다.  
   
-### 허용되는 인스턴스  
+### <a name="accepted-instances"></a>허용되는 인스턴스  
  허용되는 **LineString** 인스턴스는 기하 도형 변수에 입력될 수 있지만 유효한 **LineString** 인스턴스가 아닐 수 있습니다. **LineString** 인스턴스가 허용되려면 다음 조건을 충족해야 합니다. 인스턴스는 2개 이상의 점으로 구성되어야 하거나 비어 있어야 합니다. 다음 LineString 인스턴스가 허용됩니다.  
   
 ```  
@@ -54,7 +58,7 @@ DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 DECLARE @g geometry = 'LINESTRING(1 1)';  
 ```  
   
-### 유효한 인스턴스  
+### <a name="valid-instances"></a>유효한 인스턴스  
  **LineString** 인스턴스는 다음 조건을 충족해야 유효합니다.  
   
 1.  **LineString** 인스턴스가 허용되어야 합니다.  
@@ -83,9 +87,9 @@ SELECT @g1.STIsValid(), @g2.STIsValid();
 ```  
   
 > [!WARNING]  
->  **LineString**의 겹침 여부가 정확하지 않은 부동 소수점 계산을 기준으로 검색됩니다.  
+>  **LineString** 의 겹침 여부가 정확하지 않은 부동 소수점 계산을 기준으로 검색됩니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예에서는 세 점이 있고 SRID가 0인 `geometry``LineString` 인스턴스를 만드는 방법을 보여 줍니다.  
   
 ```  
@@ -100,7 +104,7 @@ DECLARE @g geometry;
 SET @g = geometry::STGeomFromText('LINESTRING(1 1 NULL 0, 2 4 NULL 12.3, 3 9 NULL 24.5)', 0);  
 ```  
   
- 다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. `IsValid`에 대한 호출은 **LineString** 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 **LineString** 인스턴스가 **Point**로 변환됩니다.  
+ 다음 예에서는 동일한 점 두 개로 `geometry LineString` 인스턴스를 만드는 방법을 보여 줍니다. `IsValid` 에 대한 호출은 **LineString** 인스턴스가 유효하지 않음을 나타내며 `MakeValid` 호출 시 **LineString** 인스턴스가 **Point**로 변환됩니다.  
   
 ```tsql  
 DECLARE @g geometry  
@@ -125,7 +129,7 @@ LINESTRING(1 3, 1 3) is not a valid LineString
 POINT(1 3) is a valid Point.  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [STLength&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stlength-geometry-data-type.md)   
  [STStartPoint&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/ststartpoint-geometry-data-type.md)   
  [STEndpoint&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stendpoint-geometry-data-type.md)   

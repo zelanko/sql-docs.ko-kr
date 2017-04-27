@@ -1,40 +1,44 @@
 ---
-title: "데이터 컬렉션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "데이터 컬렉션"
-helpviewer_keywords: 
-  - "데이터 컬렉션 [SQL Server]"
+title: "데이터 컬렉션 | Microsoft 문서"
+ms.custom: 
+ms.date: 07/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- "데이터 컬렉션"
+helpviewer_keywords:
+- data collection [SQL Server]
 ms.assetid: 0cc1f95c-5815-4d78-8868-a900be15e674
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 컬렉션
+# <a name="data-collection"></a>데이터 컬렉션
   데이터 수집기는 다양한 데이터 집합을 수집하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 구성 요소입니다. 데이터 컬렉션은 항상 실행되거나 사용자 정의 일정에 따라 실행됩니다. 데이터 수집기는 관리 데이터 웨어하우스로 알려진 관계형 데이터베이스에 수집한 데이터를 저장합니다.  
   
-## 데이터 수집기란? 
- 데이터 수집기는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 제공하는 도구와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 위한 데이터 컬렉션 플랫폼의 핵심 구성 요소입니다. 데이터 수집기는 데이터베이스 서버 및 응용 프로그램 전체에서 데이터 컬렉션에 대한 단일 중심점을 제공합니다. 이 컬렉션 지점을 통해 SQL 추적과 달리 성능 데이터로만 제한되지 않고 다양한 원본으로부터 데이터를 가져올 수 있습니다.  
+## <a name="what-is-data-collector"></a>데이터 수집기란? 
+ 데이터 수집기는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공하는 도구와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 위한 데이터 컬렉션 플랫폼의 핵심 구성 요소입니다. 데이터 수집기는 데이터베이스 서버 및 응용 프로그램 전체에서 데이터 컬렉션에 대한 단일 중심점을 제공합니다. 이 컬렉션 지점을 통해 SQL 추적과 달리 성능 데이터로만 제한되지 않고 다양한 원본으로부터 데이터를 가져올 수 있습니다.  
   
  데이터 수집기를 사용하면 사용자의 테스트 및 프로덕션 환경에 맞도록 데이터 컬렉션의 범위를 조정할 수도 있습니다. 또한 데이터 수집기는 데이터에 다양한 보존 기간을 설정하여 수집 데이터를 관리할 수 있도록 하는 관련 데이터베이스인 데이터 웨어하우스를 사용합니다.  
   
- 데이터 수집기는 데이터 컬렉션에 대한 동적 튜닝을 지원하며 API를 통해 확장 가능합니다. 자세한 내용은 [Data Collector Programming](../Topic/Data%20Collector%20Programming.md)을 참조하세요.  
+ 데이터 수집기는 데이터 컬렉션에 대한 동적 튜닝을 지원하며 API를 통해 확장 가능합니다. 자세한 내용은 [Data Collector Programming](http://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101)을 참조하세요.  
   
  다음 그림에서는 데이터 수집기가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터 컬렉션 및 데이터 관리를 위한 전반적인 전략에 어떻게 맞추는지를 보여 줍니다.  
   
  ![데이터 관리에서의 데이터 수집기 역할](../../relational-databases/data-collection/media/datacollectorroleindatastrategy.gif "데이터 관리에서의 데이터 수집기 역할")  
   
-## 개념  
+## <a name="concepts"></a>개념  
  데이터 수집기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]와 통합되며 둘 다 광범위하게 사용됩니다. 따라서 데이터 수집기를 사용하려면 먼저 이러한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소 각각과 관련된 특정 개념을 이해해야 합니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 컬렉션 작업을 예약하고 실행하는 데 사용됩니다. 다음 개념을 이해해야 합니다.  
@@ -49,9 +53,9 @@ caps.handback.revision: 46
   
 -   프록시 계정  
   
- 자세한 내용은 [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)를 참조하세요.  
+ 자세한 내용은 [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)를 참조하세요.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 개별 데이터 공급자에서 데이터를 수집하는 패키지를 실행하는 데 사용됩니다. 다음 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 도구 및 개념에 대해 잘 알고 있어야 합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 개별 데이터 공급자에서 데이터를 수집하는 패키지를 실행하는 데 사용됩니다. 다음 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 도구 및 개념에 대해 잘 알고 있어야 합니다.  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지  
   
@@ -59,28 +63,28 @@ caps.handback.revision: 46
   
  자세한 내용은 [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)를 참조하세요.  
   
-## 용어  
- **target**  
- 데이터 컬렉션을 지원하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. 지원되는 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)의 "관리 효율성" 섹션을 참조하세요.  
+## <a name="terminology"></a>용어  
+ **대상**  
+ 데이터 컬렉션을 지원하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스입니다. 지원되는 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)의 "관리 효율성" 섹션을 참조하세요.  
   
- *대상 루트* 는 대상 계층의 하위 트리를 정의합니다. *대상 집합* 은 대상 루트를 통해 정의된 하위 트리에 필터를 적용하여 생성되는 대상 그룹입니다. 대상 루트는 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 컴퓨터 인스턴스가 될 수 있습니다.  
+ *대상 루트* 는 대상 계층의 하위 트리를 정의합니다. *대상 집합* 은 대상 루트를 통해 정의된 하위 트리에 필터를 적용하여 생성되는 대상 그룹입니다. 대상 루트는 데이터베이스, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 또는 컴퓨터 인스턴스가 될 수 있습니다.  
   
-**대상 유형(target type)**  
+**대상 유형**  
  일정한 특징 및 동작을 갖는 대상의 유형입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 대상의 특징은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 대상의 특징과 다릅니다.  
   
- **데이터 공급자(data provider)**  
+ **데이터 공급자**  
  수집기 형식에 데이터를 제공하는 알려진 데이터 원본으로, 대상 유형별로 고유합니다.  
   
-**수집기 유형(collector type)**  
+**수집기 형식**  
  데이터를 수집하고 관리 데이터 웨어하우스에 이를 업로드하는 실제 메커니즘을 제공하는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지에 대한 논리적 래퍼입니다.  
   
- **컬렉션 항목(collection item)**  
+ **컬렉션 항목**  
  수집기 형식의 인스턴스입니다. 컬렉션 항목은 컬렉션 빈도 및 입력 속성의 특정 집합을 사용하여 만듭니다.  
   
- **컬렉션 집합(collection set)**  
+ **컬렉션 집합**  
  컬렉션 항목 그룹입니다. 컬렉션 집합은 사용자가 사용자 인터페이스를 통해 상호 작용할 수 있는 데이터 컬렉션 단위입니다.  
   
- **컬렉션 모드(collection mode)**  
+ **컬렉션 모드**  
  데이터를 수집하고 저장하는 방식입니다. 컬렉션 모드는 캐시되거나 캐시되지 않을 수 있습니다. 캐시된 모드는 연속적인 컬렉션을 지원하지만 캐시되지 않은 모드는 요청 시 컬렉션 또는 컬렉션 스냅숏을 위한 것입니다.  
   
  **관리 데이터 웨어하우스**  
@@ -108,7 +112,7 @@ caps.handback.revision: 46
   
  컬렉션 집합이 활성화된 후 일정 또는 요청에 따라 데이터 컬렉션을 시작할 수 있습니다. 데이터 컬렉션이 시작되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 데이터 수집기의 프로세스를 생성하며 이 프로세스는 컬렉션 집합에 대한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로드합니다. 컬렉션 유형을 나타내는 컬렉션 항목은 지정된 대상의 적절한 데이터 공급자에서 데이터를 수집합니다. 컬렉션 주기가 끝나면 이 데이터가 관리 데이터 웨어하우스에 업로드됩니다.  
   
-## 수행할 수 있는 작업  
+## <a name="things-you-can-do"></a>수행할 수 있는 작업  
   
 |설명|항목|  
 |----------------------|-----------|  
@@ -118,3 +122,5 @@ caps.handback.revision: 46
 |SQL Server Profiler의 서버 쪽 추적 기능을 이용하여 일반 SQL 추적 수집기 형식을 사용하는 컬렉션 집합을 만들기 위한 추적 정의를 내보냅니다.| [SQL Server 프로파일러를 사용하여 SQL 추적 컬렉션 집합 만들기(SQL Server Management Studio)](https://msdn.microsoft.com/library/cc645955(v=sql.130).aspx)
   
   
+
+

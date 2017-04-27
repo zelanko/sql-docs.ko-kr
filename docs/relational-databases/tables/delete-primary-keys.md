@@ -1,29 +1,33 @@
 ---
-title: "기본 키 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "기본 키 제거"
-  - "기본 키 삭제"
-  - "기본 키 [SQL Server], 삭제"
+title: "기본 키 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing primary keys
+- deleting primary keys
+- primary keys [SQL Server], deleting
 ms.assetid: c472e465-7bdd-4d74-8fc9-e47fca007ccb
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1dbc3eb4968f27665df80e414a590f8b4e3df7b4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 기본 키 삭제
+# <a name="delete-primary-keys"></a>기본 키 삭제
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 기본 키를 삭제할 수 있습니다. 기본 키를 삭제하면 해당 인덱스가 삭제됩니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 기본 키를 삭제할 수 있습니다. 기본 키를 삭제하면 해당 인덱스가 삭제됩니다.  
   
  **항목 내용**  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 개체 탐색기를 사용하여 PRIMARY KEY 제약 조건을 삭제하려면  
+#### <a name="to-delete-a-primary-key-constraint-using-object-explorer"></a>개체 탐색기를 사용하여 PRIMARY KEY 제약 조건을 삭제하려면  
   
 1.  개체 탐색기에서 기본 키가 포함된 테이블을 확장한 후 **키**를 확장합니다.  
   
@@ -54,11 +58,11 @@ caps.handback.revision: 15
   
 3.  **개체 삭제** 대화 상자에서 올바른 키가 지정되었는지 확인하고 **확인**을 클릭합니다.  
   
-#### 테이블 디자이너를 사용하여 PRIMARY KEY 제약 조건을 삭제하려면  
+#### <a name="to-delete-a-primary-key-constraint-using-table-designer"></a>테이블 디자이너를 사용하여 PRIMARY KEY 제약 조건을 삭제하려면  
   
 1.  개체 탐색기에서 기본 키가 있는 테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
   
-2.  테이블 표에서 기본 키가 있는 행을 마우스 오른쪽 단추로 클릭하고 **기본 키 제거**를 선택하여 기본 키 설정 또는 해제 여부를 전환할 수 있습니다.  
+2.  테이블 표에서 기본 키가 있는 행을 마우스 오른쪽 단추로 클릭하고 **기본 키 제거** 를 선택하여 기본 키 설정 또는 해제 여부를 전환할 수 있습니다.  
   
     > [!NOTE]  
     >  이 동작을 실행 취소하려면 변경 내용을 저장하지 않은 상태로 테이블을 닫습니다. 기본 키 삭제 작업을 취소하면 테이블에 대한 다른 모든 변경 내용이 손실됩니다.  
@@ -67,7 +71,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### PRIMARY KEY 제약 조건을 삭제하려면  
+#### <a name="to-delete-a-primary-key-constraint"></a>PRIMARY KEY 제약 조건을 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

@@ -1,32 +1,36 @@
 ---
-title: "중첩 트리거 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "재귀 DML 트리거 [SQL Server]"
-  - "DML 트리거, 중첩"
-  - "트리거 [SQL Server], 중첩"
-  - "직접 재귀 [SQL Server]"
-  - "트리거 [SQL Server], 재귀"
-  - "DML 트리거, 재귀"
-  - "RECURSIVE_TRIGGERS 옵션"
-  - "간접 재귀 [SQL Server]"
-  - "중첩 DML 트리거"
+title: "중첩 트리거 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- recursive DML triggers [SQL Server]
+- DML triggers, nested
+- triggers [SQL Server], nested
+- direct recursion [SQL Server]
+- triggers [SQL Server], recursive
+- DML triggers, recursive
+- RECURSIVE_TRIGGERS option
+- indirect recursion [SQL Server]
+- nested DML triggers
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 caps.latest.revision: 32
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ed1505ace274659400d797ae5ba8b27dcdf80557
+ms.lasthandoff: 04/11/2017
+
 ---
-# 중첩 트리거 만들기
+# <a name="create-nested-triggers"></a>중첩 트리거 만들기
   DML 및 DDL 트리거는 트리거가 다른 트리거를 시작하는 동작을 수행할 때 둘 다 중첩됩니다. 이러한 동작이 다른 트리거를 시작할 수도 있습니다. DML 및 DDL 트리거는 최대 32 수준까지 중첩될 수 있습니다. **nested triggers** 서버 구성 옵션을 통해 AFTER 트리거를 중첩할 수 있는지를 제어할 수 있습니다. INSTEAD OF 트리거(DML 트리거만 INSTEAD OF 트리거가 될 수 있음)는 이 설정에 관계없이 중첩될 수 있습니다.  
   
 > [!NOTE]  
@@ -50,7 +54,7 @@ AS
 > [!NOTE]  
 >  트랜잭션 안에서 트리거가 실행되기 때문에 중첩 트리거의 특정 수준에서 작업이 실패하면 전체 트랜잭션이 취소되고 모든 데이터 수정 내용이 롤백됩니다. 트리거에 PRINT 문을 포함시키면 오류가 발생한 위치를 확인할 수 있습니다.  
   
-## 재귀 트리거  
+## <a name="recursive-triggers"></a>재귀 트리거  
  RECURSIVE_TRIGGERS 데이터베이스 옵션을 설정하지 않으면 AFTER 트리거가 자신을 재귀적으로 호출하지 않습니다.  
   
  다음과 같은 두 가지 유형의 재귀가 있습니다.  
@@ -67,7 +71,7 @@ AS
   
  RECURSIVE_TRIGGERS 데이터베이스 옵션을 OFF로 설정하면 AFTER 트리거의 직접 재귀만 금지됩니다. AFTER 트리거의 간접 재귀를 해제하려면 **nested triggers** 서버 옵션도 **0**으로 설정합니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예에서는 재귀 트리거를 사용하여 자체 참조 관계(전이 종료라고도 함)를 해결하는 방법을 보여 줍니다. 예를 들어 `emp_mgr` 테이블은 다음을 정의합니다.  
   
 -   회사 직원(`emp`)  
@@ -181,9 +185,9 @@ Paul                           Alice                          0
   
  **RECURSIVE_TRIGGERS 데이터베이스 옵션을 설정하려면**  
   
--   [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [nested triggers 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

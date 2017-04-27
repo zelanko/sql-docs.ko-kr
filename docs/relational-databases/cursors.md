@@ -1,30 +1,34 @@
 ---
-title: "커서 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "결과 [SQL Server], 커서"
-  - "Transact-SQL 커서, 커서 정보"
-  - "커서 [SQL Server]"
-  - "데이터 액세스 [SQL Server], 커서"
-  - "결과 집합 [SQL Server], 커서"
-  - "커서 요청"
-  - "커서 [SQL Server], 커서 정보"
+title: "커서 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- results [SQL Server], cursors
+- Transact-SQL cursors, about cursors
+- cursors [SQL Server]
+- data access [SQL Server], cursors
+- result sets [SQL Server], cursors
+- requesting cursors
+- cursors [SQL Server], about cursors
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 305a84696e0677ef3058b89e83ba73e96188607a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 커서
+# <a name="cursors"></a>커서
   관계형 데이터베이스에서의 연산은 전체 행 집합에 적용됩니다. 예를 들어 SELECT 문에 의해 반환된 행 집합은 문의 WHERE 절 조건을 만족하는 모든 행으로 구성됩니다. SELECT 문에 의해 반환된 전체 행 집합을 결과 집합이라고 합니다. 응용 프로그램, 특히 대화형 온라인 응용 프로그램에서는 전체 결과 집합을 한 단위로 사용하므로 항상 효과적으로 작업할 수는 없습니다. 이러한 응용 프로그램에는 한 번에 한 행이나 적은 행 블록을 사용하여 작업하는 메커니즘이 필요합니다. 커서는 이러한 메커니즘을 제공하는 결과 집합에 대한 확장입니다.  
   
  커서는 다음과 같이 결과 처리를 확장합니다.  
@@ -39,7 +43,7 @@ caps.handback.revision: 29
   
 -   스크립트, 저장 프로시저 및 트리거의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문에서 결과 집합의 데이터에 액세스할 수 있도록 합니다.  
   
-## 개념  
+## <a name="concepts"></a>개념  
  커서 구현  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 세 가지 커서 구현을 지원합니다.  
   
@@ -58,10 +62,10 @@ caps.handback.revision: 29
   
  이 커서는 뒤로 스크롤할 수 없기 때문에 행이 인출된 후 데이터베이스 행의 변경 내용은 대부분 커서를 통해 표시되지 않습니다. 클러스터형 인덱스가 적용되는 열을 업데이트하는 경우와 같이 결과 집합 내의 행 위치를 결정하는 데 사용되는 값이 수정되면 커서를 통해 수정된 값이 표시됩니다.  
   
- 데이터베이스 API 커서 모델에서는 정방향 전용 커서가 고유한 커서 유형으로 간주되지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 그렇지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 정방향 전용과 스크롤이 모두 정적, 키 집합 및 동적 커서에 적용할 수 있는 옵션으로 간주됩니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 커서는 정방향 전용 정적, 키 집합 및 동적 커서를 지원합니다. 데이터베이스 API 커서 모델은 정적, 키 집합 및 동적 커서가 항상 스크롤 가능하다고 가정합니다. 데이터베이스 API 커서 특성 또는 속성을 정방향 전용으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 이를 정방향 전용 동적 커서로 구현합니다.  
+ 데이터베이스 API 커서 모델에서는 정방향 전용 커서가 고유한 커서 유형으로 간주되지만 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 그렇지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 정방향 전용과 스크롤이 모두 정적, 키 집합 및 동적 커서에 적용할 수 있는 옵션으로 간주됩니다. [!INCLUDE[tsql](../includes/tsql-md.md)] 커서는 정방향 전용 정적, 키 집합 및 동적 커서를 지원합니다. 데이터베이스 API 커서 모델은 정적, 키 집합 및 동적 커서가 항상 스크롤 가능하다고 가정합니다. 데이터베이스 API 커서 특성 또는 속성을 정방향 전용으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 가 이를 정방향 전용 동적 커서로 구현합니다.  
   
  정적  
- 정적 커서의 전체 결과 집합은 커서가 열릴 때 **tempdb**에 작성됩니다. 정적 커서는 항상 커서가 열렸을 당시의 결과 집합을 표시합니다. 정적 커서는 변경 내용을 거의 검색하지 못하는 반면 스크롤 시 리소스를 거의 소비하지 않습니다.  
+ 정적 커서의 전체 결과 집합은 커서가 열릴 때 **tempdb** 에 작성됩니다. 정적 커서는 항상 커서가 열렸을 당시의 결과 집합을 표시합니다. 정적 커서는 변경 내용을 거의 검색하지 못하는 반면 스크롤 시 리소스를 거의 소비하지 않습니다.  
   
  커서는 결과 집합의 멤버 자격이나 결과 집합을 구성하는 행의 열 값 변경에 영향을 주는 데이터베이스 변경 내용을 반영하지 않습니다. 정적 커서는 커서가 열린 후 데이터베이스에 삽입된 새 행이 커서 SELECT 문의 검색 조건과 일치하는 경우에도 이러한 행을 표시하지 않습니다. 또한 결과 집합을 구성하는 행을 다른 사용자가 업데이트할 경우 새 데이터 값이 정적 커서에 표시되지 않습니다. 정적 커서는 커서가 열린 후 데이터베이스에서 삭제된 행을 표시합니다. 커서를 닫았다가 다시 열지 않는 한 UPDATE, INSERT 또는 DELETE 작업은 정적 커서에 반영되지 않으며 이는 커서를 연 동일한 연결을 사용하여 수정한 경우에도 마찬가지입니다.  
   
@@ -72,12 +76,12 @@ caps.handback.revision: 29
  [!INCLUDE[tsql](../includes/tsql-md.md)] 에서는 정적 커서와 무관한 용어를 사용합니다. 일부 데이터베이스 API에서는 정적 커서를 스냅숏 커서로 식별합니다.  
   
  Keyset  
- 키 집합 커서의 멤버 자격과 행 순서는 커서가 열릴 때 고정됩니다. 키 집합 커서는 키 집합이라는 고유 식별자 집합으로 제어되며 키는 결과 집합에서 행을 고유하게 식별하는 열 집합으로 작성됩니다. 키 집합은 커서가 열려 있을 때 SELECT 문의 조건에 맞는 모든 행의 키 값 집합입니다. 키 집합 커서의 키 집합은 커서가 열려 있을 때 **tempdb**에 작성됩니다.  
+ 키 집합 커서의 멤버 자격과 행 순서는 커서가 열릴 때 고정됩니다. 키 집합 커서는 키 집합이라는 고유 식별자 집합으로 제어되며 키는 결과 집합에서 행을 고유하게 식별하는 열 집합으로 작성됩니다. 키 집합은 커서가 열려 있을 때 SELECT 문의 조건에 맞는 모든 행의 키 값 집합입니다. 키 집합 커서의 키 집합은 커서가 열려 있을 때 **tempdb** 에 작성됩니다.  
   
  Dynamic  
  동적 커서는 정적 커서의 반대 개념입니다. 커서를 통해 스크롤할 때 동적 커서는 행의 모든 변경 내용을 결과 집합에 반영합니다. 따라서 인출할 때마다 결과 집합에서 행의 데이터 값, 순서 및 멤버 자격이 변경될 수 있습니다. 모든 사용자가 실행한 모든 UPDATE, INSERT 및 DELETE 문은 커서를 통해 볼 수 있습니다. **SQLSetPos** 와 같은 API 함수 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] WHERE CURRENT OF 절을 사용하여 커서를 통해 업데이트한 경우 즉시 그 결과를 볼 수 있습니다. 커서 트랜잭션 격리 수준을 커밋되지 않은 읽기로 설정한 경우를 제외하고는 커서 외부에서 수행된 업데이트는 커밋될 때까지 볼 수 없습니다. 동적 커서 계획은 공간 인덱스를 사용하지 않습니다.  
   
-## 커서 요청  
+## <a name="requesting-a-cursor"></a>커서 요청  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 두 가지 방법으로 커서를 요청할 수 있습니다.  
   
 -   [!INCLUDE[tsql](../includes/tsql-md.md)]  
@@ -98,7 +102,7 @@ caps.handback.revision: 29
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] 및 API 커서 모두 요청되지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 기본적으로 기본 결과 집합이라고 하는 전체 결과 집합을 응용 프로그램에 반환합니다.  
   
-## 커서 프로세스  
+## <a name="cursor-process"></a>커서 프로세스  
  [!INCLUDE[tsql](../includes/tsql-md.md)] 커서와 API 커서는 구문이 서로 다르지만 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커서에 대해 다음과 같은 일반 프로세스를 사용합니다.  
   
 1.  커서와 [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 결과 집합을 연결하고 커서 행의 업데이트 가능 여부 등 커서의 특성을 정의합니다.  
@@ -111,10 +115,10 @@ caps.handback.revision: 29
   
 5.  커서를 닫습니다.  
   
-## 관련 내용  
- [커서 동작](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [커서 구현 방법](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
+## <a name="related-content"></a>관련 내용  
+ [Cursor Behaviors](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md) [How Cursors Are Implemented](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DECLARE CURSOR&#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [커서&#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
  [커서 함수&#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

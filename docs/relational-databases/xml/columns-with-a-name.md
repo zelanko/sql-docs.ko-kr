@@ -1,24 +1,28 @@
 ---
-title: "이름이 있는 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이름 [SQL Server], 포함하는 열"
+title: "이름이 있는 열 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3cda571a6e30387ccf1764e94fe6e6a3f1625262
+ms.lasthandoff: 04/11/2017
+
 ---
-# 이름이 있는 열
+# <a name="columns-with-a-name"></a>이름이 있는 열
   다음은 이름이 있는 행 집합 열이 대/소문자를 구분하여 결과 XML에 매핑되는 특정 조건입니다.  
   
 -   열 이름이 @ 기호로 시작하는 경우  
@@ -31,7 +35,7 @@ caps.handback.revision: 8
   
 -   하나의 열에 다른 이름이 있는 경우  
   
-## 열 이름이 @ 기호로 시작하는 경우  
+## <a name="column-name-starts-with-an-at-sign-"></a>열 이름이 @ 기호로 시작하는 경우  
  열 이름이 @ 기호로 시작하고 슬래시 기호(/)를 포함하지 않는 경우 해당 열 값을 갖는 <`row`> 요소의 특성이 만들어집니다. 예를 들어 다음 쿼리는 2개의 열(@PmId, Name)로 구성된 행 집합을 반환합니다. 결과 XML에서 **PmId** 특성이 해당 <`row`> 요소에 추가되고 ProductModelID의 값이 여기에 할당됩니다.  
   
 ```  
@@ -64,7 +68,7 @@ FOR XML PATH
 go  
 ```  
   
-## 열 이름이 @ 기호로 시작하지 않는 경우  
+## <a name="column-name-does-not-start-with-an-at-sign-"></a>열 이름이 @ 기호로 시작하지 않는 경우  
  열 이름이 @ 기호로 시작하지 않고 XPath 노드 테스트 중 하나가 아니며 슬래시 기호(/)를 포함하지 않는 경우 기본적으로 <`row`> 행 요소의 하위 요소인 XML 요소가 생성됩니다.  
   
  다음 쿼리는 결과인 열 이름을 지정합니다. 따라서 <`result`> 요소 자식이 <`row`> 요소에 추가됩니다.  
@@ -111,8 +115,8 @@ go
 </row>  
 ```  
   
-## 열 이름이 @ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
- 열 이름이 @ 기호로 시작하지 않지만 슬래시 기호(/)를 포함할 경우 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n***"이면 각 Name***i***는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. Namen***n***이 '@'으로 시작하는 경우 Name***n-1*** 요소의 특성에 매핑됩니다.  
+## <a name="column-name-does-not-start-with-an-at-sign--and-contains-a-slash-mark-"></a>열 이름이 @ 기호로 시작하지 않고 슬래시 기호(/)를 포함하는 경우  
+ 열 이름이 @ 기호로 시작하지 않지만 슬래시 기호(/)를 포함할 경우 열 이름은 XML 계층을 나타냅니다. 예를 들어 열 이름이 "Name1/Name2/Name3.../Name***n*** "이면 각 Name***i*** 는 현재 행 요소(i=1인 경우)에 중첩된 요소 이름을 나타내거나 이름이 Name***i-1***인 요소 아래의 요소 이름을 나타냅니다. Namen***n*** 이 '@'으로 시작하는 경우 Name***n-1*** 요소의 특성에 매핑됩니다.  
   
  예를 들어 다음 쿼리는 이름, 중간 이름 및 성을 포함하는 복잡한 요소 EmpName으로 표현되는 직원 ID와 이름을 반환합니다.  
   
@@ -198,10 +202,10 @@ FOR XML PATH
 </row>  
 ```  
   
-## 여러 열이 같은 경로 접두사를 공유하는 경우  
+## <a name="several-columns-share-the-same-path-prefix"></a>여러 열이 같은 경로 접두사를 공유하는 경우  
  이어지는 여러 열이 같은 경로 접두사를 공유할 경우 같은 이름으로 함께 그룹화됩니다. 다른 네임스페이스 접두사가 사용되면 같은 네임스페이스로 바인딩되더라도 경로가 다르다고 간주됩니다. 이전 쿼리에서 FirstName, MiddleName 및 LastName 열은 동일한 EmpName 접두사를 공유하므로 <`EmpName`> 요소의 자식으로 추가됩니다. 이전 예제에서 <`Address`> 요소를 만들던 것도 이와 같은 경우입니다.  
   
-## 하나의 열에 다른 이름이 있는 경우  
+## <a name="one-column-has-a-different-name"></a>하나의 열에 다른 이름이 있는 경우  
  이름이 다른 열이 중간에 나타나면 다음의 수정된 쿼리에서와 같이 그룹화가 해제됩니다. 쿼리는 FirstName 열과 MiddleName 열 사이에 주소 열을 추가하여 이전 쿼리에 지정된 대로 FirstName, MiddleName 및 LastName의 그룹화를 해제합니다.  
   
 ```  
@@ -238,7 +242,7 @@ FOR XML PATH
 </row>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

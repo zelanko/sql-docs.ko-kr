@@ -1,29 +1,33 @@
 ---
-title: "의미 체계 검색 관리 및 모니터링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "의미 체계 검색 [SQL Server], 관리"
-  - "의미 체계 검색 [SQL Server], 모니터링"
+title: "의미 체계 검색 관리 및 모니터링 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- semantic search [SQL Server], managing
+- semantic search [SQL Server], monitoring
 ms.assetid: eb5c3b29-da70-42aa-aa97-7d35a3f1eb98
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6749d7f7db6e6e76cd940c166180a7ccd206aaf9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 의미 체계 검색 관리 및 모니터링
+# <a name="manage-and-monitor-semantic-search"></a>의미 체계 검색 관리 및 모니터링
   의미 체계 인덱싱의 과정과 인덱스를 모니터링하고 관리하는 데 관련된 태스크에 대해 설명합니다.  
   
-##  <a name="HowToMonitorStatus"></a> 방법: 의미 체계 인덱싱의 상태 확인  
- **의미 체계 인덱싱의 첫 번째 단계가 완료되었는지 확인**  
+##  <a name="HowToMonitorStatus"></a> 의미 체계 인덱싱의 상태 확인  
+### <a name="is-the-first-phase-of-semantic-indexing-complete"></a>의미 체계 인덱싱의 첫 번째 단계가 완료되었는지 확인
  동적 관리 뷰 [sys.dm_fts_index_population&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)을 쿼리하고 **status** 및 **status_description** 열을 확인합니다.  
   
  인덱싱의 첫 번째 단계에는 문서 유사성 데이터의 추출뿐만 아니라 전체 텍스트 키워드 인덱스와 의미 체계 키 구 인덱스의 채우기도 포함됩니다.  
@@ -36,7 +40,7 @@ SELECT * FROM sys.dm_fts_index_population WHERE table_id = OBJECT_ID('table_name
 GO  
 ```  
   
- **의미 체계 인덱싱의 두 번째 단계가 완료되었는지 확인**  
+### <a name="is-the-second-phase-of-semantic-indexing-complete"></a>의미 체계 인덱싱의 두 번째 단계가 완료되었는지 확인
  동적 관리 뷰 [sys.dm_fts_semantic_similarity_population&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)을 쿼리하고 **status** 및 **status_description** 열을 확인합니다.  
   
  인덱싱의 두 번째 단계에는 의미 체계적 문서 유사성 인덱스의 채우기가 포함됩니다.  
@@ -49,8 +53,8 @@ SELECT * FROM sys.dm_fts_semantic_similarity_population WHERE table_id = OBJECT_
 GO  
 ```  
   
-##  <a name="HowToCheckSize"></a> 방법: 의미 체계 인덱스의 크기 확인  
- **의미 체계 키 구 인덱스 또는 의미 체계 문서 유사성 인덱스의 논리적 크기 확인**  
+##  <a name="HowToCheckSize"></a> 의미 체계 인덱스의 크기 확인  
+### <a name="what-is-the-logical-size-of-a-semantic-key-phrase-index-or-a-semantic-document-similarity-index"></a>의미 체계 키 구 인덱스 또는 의미 체계 문서 유사성 인덱스의 논리적 크기 확인
  동적 관리 뷰 [sys.dm_db_fts_index_physical_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-fts-index-physical-stats-transact-sql.md)를 쿼리합니다.  
   
  논리적 크기는 인덱스 페이지의 수로 표시됩니다.  
@@ -63,7 +67,7 @@ SELECT * FROM sys.dm_db_fts_index_physical_stats WHERE object_id = OBJECT_ID('ta
 GO  
 ```  
   
- **전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스의 총 크기 확인**  
+### <a name="what-is-the-total-size-of-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스의 총 크기 확인  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **IndexSize** 속성을 쿼리합니다.  
   
 ```tsql  
@@ -71,7 +75,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'IndexSize')
 GO  
 ```  
   
- **전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스에서 인덱싱된 항목 수 확인**  
+### <a name="how-many-items-are-indexed-in-the-full-text-and-semantic-indexes-for-a-full-text-catalog"></a>전체 텍스트 카탈로그에 대한 전체 텍스트 및 의미 체계 인덱스에서 인덱싱된 항목 수 확인  
  [FULLTEXTCATALOGPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md) 메타데이터 함수의 **ItemCount** 속성을 쿼리합니다.  
   
 ```tsql  
@@ -79,7 +83,7 @@ SELECT FULLTEXTCATALOGPROPERTY('catalog_name', 'ItemCount')
 GO  
 ```  
   
-##  <a name="HowToForcePopulation"></a> 방법: 의미 체계 인덱스의 채우기 적용  
+##  <a name="HowToForcePopulation"></a> 의미 체계 인덱스의 채우기 적용  
  전체 텍스트 인덱스에 대해 설명한 것과 구문 및 동작이 동일한 START/STOP/PAUSE 또는 RESUME POPULATION 절을 사용하여 전체 텍스트 및 의미 체계 인덱스의 채우기를 적용할 수 있습니다. 자세한 내용은 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 및 [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)를 참조하세요.  
   
  의미 체계 인덱싱은 전체 텍스트 인덱싱에 따라 달라지므로 의미 체계 인덱스는 연결된 전체 텍스트 인덱스가 채워진 경우에만 채워집니다.  
@@ -97,7 +101,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-##  <a name="HowToDisableIndexing"></a> 방법: 의미 체계 인덱싱 해제 또는 다시 설정  
+##  <a name="HowToDisableIndexing"></a> 의미 체계 인덱싱 해제 또는 다시 설정  
  전체 텍스트 인덱스에 대해 설명한 것과 구문 및 동작이 동일한 ENABLE/DISABLE 절을 사용하여 전체 텍스트 또는 의미 체계 인덱싱을 사용하거나 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)를 참조하세요.  
   
  의미 체계 인덱싱이 사용하지 않도록 설정되거나 일시 중지된 경우에도 의미 체계 데이터에 대한 쿼리는 계속 작동하여 이전에 인덱싱된 데이터를 반환합니다. 이 동작은 전체 텍스트 검색의 동작과 같지 않습니다.  
@@ -133,13 +137,13 @@ GO
   
 ##  <a name="BestPracticeUnderstand"></a>   
 ##  <a name="ProblemNotPopulated"></a> 문제: 의미 체계 인덱스가 채워지지 않음  
- **연결된 전체 텍스트 인덱스가 채워졌습니까?**  
+### <a name="are-the-associated-full-text-indexes-populated"></a>연결된 전체 텍스트 인덱스가 채워졌습니까?  
  의미 체계 인덱싱은 전체 텍스트 인덱싱에 따라 달라지므로 의미 체계 인덱스는 연결된 전체 텍스트 인덱스가 채워진 경우에만 채워집니다.  
   
- **전체 텍스트 검색 및 의미 체계 검색이 올바르게 설치 및 구성되어 있습니까?**  
+### <a name="are-full-text-search-and-semantic-search-properly-installed-and-configured"></a>전체 텍스트 검색 및 의미 체계 검색이 올바르게 설치 및 구성되어 있습니까?  
  자세한 내용은 [의미 체계 검색 설치 및 구성](../../relational-databases/search/install-and-configure-semantic-search.md)을 참조하세요.  
   
- **FDHOST 서비스를 사용할 수 없거나 전체 텍스트 인덱싱이 실패할 만한 다른 조건이 있습니까?**  
+### <a name="is-the-fdhost-service-not-available-or-is-there-another-condition-that-would-cause-full-text-indexing-to-fail"></a>FDHOST 서비스를 사용할 수 없거나 전체 텍스트 인덱싱이 실패할 만한 다른 조건이 있습니까?  
  자세한 내용은 [전체 텍스트 인덱싱 문제 해결](../../relational-databases/search/troubleshoot-full-text-indexing.md)을 참조하세요.  
   
   

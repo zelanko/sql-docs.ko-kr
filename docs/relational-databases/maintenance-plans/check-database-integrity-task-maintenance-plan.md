@@ -1,32 +1,36 @@
 ---
-title: "데이터베이스 무결성 검사 태스크(유지 관리 계획) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.maint.maintplanproperties.integrity.f1"
-  - "sql13.swb.maint.integrity.f1"
-helpviewer_keywords: 
-  - "데이터베이스 무결성 검사 태스크 대화 상자"
+title: "데이터베이스 무결성 검사 태스크(유지 관리 계획) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.maint.maintplanproperties.integrity.f1
+- sql13.swb.maint.integrity.f1
+helpviewer_keywords:
+- Check Database Integrity Task dialog box
 ms.assetid: 3534494a-5dfe-4738-b49a-e7fabd731c47
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad37935a63e55d949aaad8b3792e3180e78be5c3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 무결성 검사 태스크(유지 관리 계획)
+# <a name="check-database-integrity-task-maintenance-plan"></a>데이터베이스 무결성 검사 태스크(유지 관리 계획)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **데이터베이스 무결성 검사 태스크** 대화 상자를 사용하면 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 사용자 및 시스템 테이블, 데이터베이스 인덱스의 할당 및 구조적 무결성을 검사할 수 있습니다. `DBCC`를 실행하면 데이터베이스의 모든 무결성 문제가 보고되므로 시스템 관리자나 데이터베이스 소유자가 나중에 이 문제들을 처리할 수 있습니다.  
+  **데이터베이스 무결성 검사 태스크** 대화 상자를 사용하면 `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 사용자 및 시스템 테이블, 데이터베이스 인덱스의 할당 및 구조적 무결성을 검사할 수 있습니다. `DBCC` 를 실행하면 데이터베이스의 모든 무결성 문제가 보고되므로 시스템 관리자나 데이터베이스 소유자가 나중에 이 문제들을 처리할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **연결**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 24
   
 -   **모든 데이터베이스**  
   
-     **tempdb**를 제외한 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다.  
+     **tempdb**를 제외한 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다.  
   
 -   **모든 시스템 데이터베이스**  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 24
 > [!NOTE]  
 >  영향을 받은 개체 수가 많은 경우에는 표시하는 데 시간이 오래 걸릴 수 있습니다.  
   
-## 새 연결 대화 상자  
+## <a name="new-connection-dialog-box"></a>새 연결 대화 상자  
  **연결 이름**  
  새 연결의 이름을 입력합니다.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 24
  Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **사용자 이름**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  
@@ -95,7 +99,7 @@ caps.handback.revision: 24
  **암호**  
  인증 시 사용할 암호를 입력합니다. 이 옵션은 사용할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "로그 전달 트랜잭션 로그 백업 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.settings.tlogback.f1"
+title: "로그 전달 트랜잭션 로그 백업 설정 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.settings.tlogback.f1
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50dfac45fd735de24fe432be2b5b833869c34b87
+ms.lasthandoff: 04/11/2017
+
 ---
-# 로그 전달 트랜잭션 로그 백업 설정
+# <a name="log-shipping-transaction-log-backup-settings"></a>로그 전달 트랜잭션 로그 백업 설정
   이 대화 상자를 사용하여 로그 전달 구성에 대한 트랜잭션 로그 백업 설정을 구성하고 수정할 수 있습니다.  
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **백업 폴더의 네트워크 경로**  
  이 상자에 백업 폴더의 네트워크 공유를 입력합니다. 트랜잭션 로그 백업을 저장하는 로컬 폴더를 공유해야 로그 전달 복사 작업을 통해 해당 파일을 보조 서버에 복사할 수 있습니다. 보조 서버 인스턴스에서 복사 작업을 실행하는 데 사용할 프록시 계정에 이 네트워크 공유를 읽을 수 있는 권한을 부여해야 합니다. 기본적으로 이 계정은 보조 서버 인스턴스의 SQLServerAgent 서비스 계정이지만 관리자가 다른 프록시 계정을 선택하여 작업에 사용할 수 있습니다.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 27
  **일정**  
  주 데이터베이스의 트랜잭션 로그를 백업하기 위한 현재 일정을 표시합니다. 백업 작업이 생성되기 전에는 **일정...**을 클릭하여 이 일정을 수정할 수 있고 작업이 생성된 후에는 **작업 편집...**을 클릭하여 이 일정을 수정할 수 있습니다.  
   
-### 백업 작업  
+### <a name="backup-job"></a>백업 작업  
  **일정...**  
  SQL Server 에이전트 작업을 만들 때 생성되는 일정을 수정합니다.  
   
@@ -57,7 +61,7 @@ caps.handback.revision: 27
  **이 작업 비활성화**  
  트랜잭션 로그 백업을 만들지 않도록 SQL Server 에이전트 작업을 비활성화합니다.  
   
-### 압축  
+### <a name="compression"></a>압축  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (이상 버전)에서는 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md)을 지원합니다.  
   
  **백업 압축 설정**  
@@ -65,12 +69,12 @@ caps.handback.revision: 27
   
 |||  
 |-|-|  
-|**기본 서버 설정 사용**|서버 수준 기본값을 사용하려면 클릭합니다.<br /><br /> 이 기본값은 **백업 압축 기본값** 서버 구성 옵션으로 설정됩니다. 이 옵션의 현재 설정을 확인하는 방법은 [backup compression default 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.|  
-|**백업 압축**|서버 수준 기본값에 관계없이 백업을 압축하려면 클릭합니다.<br /><br /> **\*\* 중요 \*\*** 기본적으로 압축하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이 [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 [리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)을 참조하세요.|  
+|**기본 서버 설정 사용**|서버 수준 기본값을 사용하려면 클릭합니다.<br /><br /> 이 기본값은 **백업 압축 기본값** 서버 구성 옵션으로 설정됩니다. 이 옵션의 현재 설정을 확인하는 방법에 대한 자세한 내용은 [백업 압축 기본값 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.|  
+|**백업 압축**|서버 수준 기본값에 관계없이 백업을 압축하려면 클릭합니다.<br /><br /> **\*\* 중요 \*\*** 기본적으로 압축하면 CPU 사용량이 크게 늘어나고 압축 프로세스로 사용되는 추가 CPU는 동시 작업에 악영향을 줄 수 있습니다. 따라서 CPU 사용량이 [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다. 자세한 내용은 이 항목 뒷부분의 [Resource Governor를 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)에 의해 제한되는 세션에서 우선 순위가 낮은 압축 백업을 만들 수 있습니다.|  
 |**백업 압축 안 함**|서버 수준 기본값에 관계없이 압축되지 않은 백업을 만들려면 클릭합니다.|  
   
-## 참고 항목  
- [SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성](http://msdn.microsoft.com/library/67897e3e-b7d0-43dd-a2e2-2840ec4dd1ef)   
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   
   

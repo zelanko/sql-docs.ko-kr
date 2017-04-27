@@ -1,31 +1,35 @@
 ---
-title: "통계 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.stat.properties.f1"
-  - "sql13.swb.statistics.filter.f1"
-  - "sql13.swb.stat.columns.f1"
-  - "sql13.swb.statistics.propertis.f1"
-helpviewer_keywords: 
-  - "통계 만들기"
-  - "통계 [SQL Server], 만들기"
+title: "통계 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.stat.properties.f1
+- sql13.swb.statistics.filter.f1
+- sql13.swb.stat.columns.f1
+- sql13.swb.statistics.propertis.f1
+helpviewer_keywords:
+- creating statistics
+- statistics [SQL Server], creating
 ms.assetid: 95a455fb-664d-4c95-851e-c6b62d7ebe04
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e08b4318e4faa13aba2e242f0458db3572d7884
+ms.lasthandoff: 04/11/2017
+
 ---
-# 통계 만들기
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰의 하나 이상의 열에 대한 쿼리 최적화 통계를 만들 수 있습니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 추가 통계를 만들어야 합니다.  
+# <a name="create-statistics"></a>통계 만들기
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 또는 인덱싱된 뷰의 하나 이상의 열에 대한 쿼리 최적화 통계를 만들 수 있습니다. 대부분의 쿼리에서 쿼리 최적화 프로그램은 고품질의 쿼리 계획에 필요한 통계를 이미 생성하므로 경우에 따라서 추가 통계를 만들어야 합니다.  
   
  **항목 내용**  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 통계를 만들려면  
+#### <a name="to-create-statistics"></a>통계를 만들려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 새 통계를 만들 데이터베이스를 확장합니다.  
   
@@ -68,7 +72,7 @@ caps.handback.revision: 9
   
 4.  **통계** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 통계...**를 선택합니다.  
   
-     **테이블에 대한 새 통계***table_name* 대화 상자의 **일반** 페이지에 다음 속성이 표시됩니다.  
+     **테이블에 대한 새 통계** table_name **대화 상자의***일반* 페이지에 다음 속성이 표시됩니다.  
   
      **테이블 이름**  
      통계에서 설명하는 테이블 이름을 표시합니다.  
@@ -112,7 +116,7 @@ caps.handback.revision: 9
      **이 열에 대한 통계 업데이트**  
      대화 상자를 닫을 때 통계를 업데이트하려면 선택합니다.  
   
-     **테이블에 대한 새 통계***table_name* 대화 상자의 **필터** 페이지에 다음 속성이 표시됩니다.  
+     **테이블에 대한 새 통계** table_name **대화 상자의***필터* 페이지에 다음 속성이 표시됩니다.  
   
      **필터 식**  
      필터링된 통계에 포함할 데이터 행을 정의합니다. 예를 들면 다음과 같습니다. `Production.ProductSubcategoryID IN ( 1,2,3 )`  
@@ -133,7 +137,7 @@ caps.handback.revision: 9
      **ID**  
      선택 시 ID 열을 나타냅니다.  
   
-     **NULL 허용**  
+     **Allow NULLs**  
      열에 NULL 값을 사용할 수 있는지 여부를 나타냅니다.  
   
 6.  **열 선택** 대화 상자에서 통계를 만들려는 각 열의 확인란을 선택한 다음 **확인**을 클릭합니다.  
@@ -142,7 +146,7 @@ caps.handback.revision: 9
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 통계를 만들려면  
+#### <a name="to-create-statistics"></a>통계를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

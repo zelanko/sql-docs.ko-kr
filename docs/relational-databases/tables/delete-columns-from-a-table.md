@@ -1,27 +1,31 @@
 ---
-title: "테이블에서 열 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "열 [SQL Server], 삭제"
-  - "열 제거"
-  - "열 삭제"
-  - "열 삭제"
+title: "테이블에서 열 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [SQL Server], deleting
+- removing columns
+- deleting columns
+- dropping columns
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 테이블에서 열 삭제
+# <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블 열을 삭제하는 방법에 대해 설명합니다.  
@@ -57,7 +61,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 개체 탐색기를 사용하여 열을 삭제하려면  
+#### <a name="to-delete-columns-by-using-object-explorer"></a>개체 탐색기를 사용하여 열을 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -67,17 +71,17 @@ caps.handback.revision: 16
   
  열에 제약 조건 또는 기타 종속성이 포함된 경우 **개체 삭제** 대화 상자에 오류 메시지가 표시됩니다. 참조된 제약 조건을 삭제하여 오류를 해결합니다.  
   
-#### 테이블 디자이너를 사용하여 열을 삭제하려면  
+#### <a name="to-delete-columns-by-using-table-designer"></a>테이블 디자이너를 사용하여 열을 삭제하려면  
   
 1.  **개체 탐색기**에서 열을 삭제하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
   
-2.  삭제하려는 열을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **열 삭제**를 선택합니다.  
+2.  삭제하려는 열을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 **열 삭제** 를 선택합니다.  
   
 3.  관계에 참여하는 열(FOREIGN KEY 또는 PRIMARY KEY)인 경우에는 선택한 열과 해당 관계의 삭제를 확인하는 메시지가 표시됩니다. **예**를 선택합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 열을 삭제하려면  
+#### <a name="to-delete-columns"></a>열을 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

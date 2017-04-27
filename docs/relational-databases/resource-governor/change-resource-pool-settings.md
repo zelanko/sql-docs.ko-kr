@@ -1,32 +1,36 @@
 ---
-title: "리소스 풀 설정 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 관리자, 리소스 풀 변경"
-  - "리소스 풀 [SQL Server], 변경"
+title: "리소스 풀 설정 변경 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool alter
+- resource pools [SQL Server], alter
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27adde47bca4c894d044940d00bc6867e6f8e58f
+ms.lasthandoff: 04/11/2017
+
 ---
-# 리소스 풀 설정 변경
+# <a name="change-resource-pool-settings"></a>리소스 풀 설정 변경
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 리소스 풀 설정을 변경할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **리소스 풀 설정 변경에 사용되는 도구:** [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
+-   **To change the settings for a resource pool, using:**  [SQL Server Management Studio](#ChgRPProp), [Transact-SQL](#ChgRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 15
   
  모든 리소스 풀에 대한 최대 CPU 비율과 최소 CPU 비율의 합은 100을 초과할 수 없습니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  리소스 풀 설정을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="ChgRPProp"></a> SQL Server Management Studio를 사용하여 리소스 풀 설정 변경  
@@ -49,7 +53,7 @@ caps.handback.revision: 15
   
 4.  변경할 행의 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-5.   **확인**을 클릭하여 변경 내용을 저장합니다.  
+5.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="ChgRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 설정 변경  
  **을 사용하여 리소스 풀 설정을 변경하려면(!!) [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -58,7 +62,7 @@ caps.handback.revision: 15
   
 2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** 문을 실행합니다.  
   
-### 예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예(Transact-SQL)  
  다음 예에서는 `poolAdhoc`이라는 리소스 풀에 대한 최대 CPU 비율 설정을 변경합니다.  
   
 ```  
@@ -69,7 +73,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
@@ -82,3 +86,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

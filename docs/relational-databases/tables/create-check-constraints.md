@@ -1,28 +1,32 @@
 ---
-title: "CHECK 제약 조건 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "테이블 제약 조건 [SQL Server]"
-  - "CHECK 제약 조건 첨부"
-  - "열 [SQL Server], 제약 조건"
-  - "제약 조건 [SQL Server], 확인"
-  - "CHECK 제약 조건, 첨부"
+title: "CHECK 제약 조건 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table constraints [SQL Server]
+- attaching check constraints
+- columns [SQL Server], constraints
+- constraints [SQL Server], check
+- CHECK constraints, attaching
 ms.assetid: b8756304-9454-4d39-996a-64516831b7df
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a7d6d12e6a2673fd38c8c7341c4703dd7588501
+ms.lasthandoff: 04/11/2017
+
 ---
-# CHECK 제약 조건 만들기
+# <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 하나 이상의 열에 사용할 수 있는 데이터 값을 지정할 수 있도록 테이블에 CHECK 제약 조건을 만들 수 있습니다.  
@@ -48,11 +52,11 @@ caps.handback.revision: 17
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 새 CHECK 제약 조건을 만들려면  
+#### <a name="to-create-a-new-check-constraint"></a>새 CHECK 제약 조건을 만들려면  
   
-1.  **개체 탐색기**에서 CHECK 제약 조건을 추가하려는 테이블을 확장하고, **제약 조건**을 마우스 오른쪽 단추로 클릭한 후 **새 제약 조건**을 클릭합니다.  
+1.  **개체 탐색기**에서 CHECK 제약 조건을 추가하려는 테이블을 확장하고, **제약 조건** 을 마우스 오른쪽 단추로 클릭한 후 **새 제약 조건**을 클릭합니다.  
   
-2.  **CHECK 제약 조건** 대화 상자에서 **식** 필드를 클릭한 후 줄임표**(…)**를 클릭합니다.  
+2.  **CHECK 제약 조건** 대화 상자에서 **식** 필드를 클릭한 후 줄임표 **(…)**를 클릭합니다.  
   
 3.  **CHECK 제약 조건 식** 대화 상자에서 CHECK 제약 조건에 대한 SQL 식을 입력합니다. 예를 들어 `SellEndDate` 테이블의 `Product` 열에 있는 항목을 `SellStartDate` 열에 있는 날짜보다 크거나 같은 값 또는 NULL 값으로 제한하려면 다음을 입력합니다.  
   
@@ -85,7 +89,7 @@ caps.handback.revision: 17
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 새 CHECK 제약 조건을 만들려면  
+#### <a name="to-create-a-new-check-constraint"></a>새 CHECK 제약 조건을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

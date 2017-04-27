@@ -1,27 +1,31 @@
 ---
-title: "정책 기반 관리의 일반 속성 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.PolicyManagement.f1"
-helpviewer_keywords: 
-  - "정책 기반 관리, 속성 구성"
+title: "정책 기반 관리의 일반 속성 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.PolicyManagement.f1
+helpviewer_keywords:
+- Policy-Based Management, configure properties
 ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7f7103ab22a01f6dcb60c31d7ad7fdcc503746db
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 기반 관리의 일반 속성 구성
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리에 대한 속성을 구성하는 방법에 대해 설명합니다.  
+# <a name="configure-the-general-properties-of-policy-based-management"></a>정책 기반 관리의 일반 속성 구성
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 정책 기반 관리에 대한 속성을 구성하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -44,13 +48,13 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 정책 기반 관리를 구성하려면  
+#### <a name="to-configure-policy-based-management"></a>정책 기반 관리를 구성하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 정책 기반 관리 속성을 구성하려는 서버를 확장합니다.  
   
 2.  더하기 기호를 클릭하여 **관리** 폴더를 확장합니다.  
   
-3.  **정책 관리자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+3.  **정책 관리자** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
      다음 옵션은 **정책 관리 속성** 대화 상자에서 사용할 수 있습니다.  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 정책 기반 관리를 구성하려면  
+#### <a name="to-configure-policy-based-management"></a>정책 기반 관리를 구성하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

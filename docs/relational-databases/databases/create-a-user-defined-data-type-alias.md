@@ -1,28 +1,32 @@
 ---
-title: "사용자 정의 데이터 형식 별칭 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.userdefineddatatype.general.f1"
-  - "sql13.swb.new.datatype.properties.general.f1"
-helpviewer_keywords: 
-  - "별칭 데이터 형식 [SQL Server], 만들기"
+title: "사용자 정의 데이터 형식 별칭 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.userdefineddatatype.general.f1
+- sql13.swb.new.datatype.properties.general.f1
+helpviewer_keywords:
+- alias data types [SQL Server], creating
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.lasthandoff: 04/11/2017
+
 ---
-# 사용자 정의 데이터 형식 별칭 만들기
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
+# <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 새 사용자 정의 데이터 형식 별칭을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -47,11 +51,11 @@ caps.handback.revision: 27
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> 사용 권한  
- 현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name*을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
+ 현재 데이터베이스에 대한 CREATE TYPE 권한 및 *schema_name*에 대한 ALTER 권한이 필요합니다. *schema_name* 을 지정하지 않으면 현재 사용자에 대한 스키마를 결정하는 기본 이름 확인 규칙이 적용됩니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 사용자 정의 데이터 형식을 만들려면  
+#### <a name="to-create-a-user-defined-data-type"></a>사용자 정의 데이터 형식을 만들려면  
   
 1.  개체 탐색기에서 **데이터베이스**를 확장하고 목록에서 원하는 데이터베이스를 확장한 다음, **프로그래밍 기능**과 **유형**을 차례로 확장하고 **사용자 정의 데이터 형식**을 마우스 오른쪽 단추로 클릭한 다음 **새 사용자 정의 데이터 형식**을 클릭합니다.  
   
@@ -65,9 +69,9 @@ caps.handback.revision: 27
      필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 규칙 또는 기본값을 선택합니다.  
   
      **길이/전체 자릿수**  
-     데이터 형식에 적용되는 길이 또는 전체 자릿수를 표시합니다. **길이**는 문자 기반 사용자 정의 데이터 형식에 적용되고 **전체 자릿수**는 숫자 기반 사용자 정의 데이터 형식에 적용됩니다. 이 옵션의 레이블은 이전에 선택한 데이터 형식에 따라 바뀝니다. 선택한 데이터 형식의 길이 또는 전체 자릿수가 고정된 경우에는 이 상자를 편집할 수 없습니다.  
+     데이터 형식에 적용되는 길이 또는 전체 자릿수를 표시합니다. **길이** 는 문자 기반 사용자 정의 데이터 형식에 적용되고 **전체 자릿수** 는 숫자 기반 사용자 정의 데이터 형식에 적용됩니다. 이 옵션의 레이블은 이전에 선택한 데이터 형식에 따라 바뀝니다. 선택한 데이터 형식의 길이 또는 전체 자릿수가 고정된 경우에는 이 상자를 편집할 수 없습니다.  
   
-     **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 길이가 표시되지 않습니다.  
+     **nvarchar(max)**, **varchar(max)**또는 **varbinary(max)** 데이터 형식에 대해서는 길이가 표시되지 않습니다.  
   
      **이름**  
      새 사용자 정의 데이터 형식 별칭을 만드는 경우 데이터베이스에서 사용자 정의 데이터 형식을 나타내는 데 사용할 고유 이름을 입력합니다. 사용할 수 있는 최대 문자 수는 시스템의 **sysname** 데이터 형식과 동일합니다. 기존 사용자 정의 데이터 형식 별칭의 이름은 편집할 수 없습니다.  
@@ -93,7 +97,7 @@ caps.handback.revision: 27
   
      **nchar** 및 **nvarchar** 데이터 형식의 경우 저장소 값이 항상 **길이**값의 두 배입니다.  
   
-     **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 데이터 형식에 대해서는 저장소가 표시되지 않습니다.  
+     **nvarchar(max)**, **varchar(max)**또는 **varbinary(max)** 데이터 형식에 대해서는 저장소가 표시되지 않습니다.  
   
 2.  **새 사용자 정의 데이터 형식** 대화 상자의 **스키마** 상자에 이 데이터 형식 별칭을 소유할 스키마를 입력하거나 찾아보기 단추를 사용하여 스키마를 선택합니다.  
   
@@ -109,7 +113,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 사용자 정의 데이터 형식 별칭을 만들려면  
+#### <a name="to-create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭을 만들려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -122,7 +126,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 식별자](../../relational-databases/databases/database-identifiers.md)   
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   

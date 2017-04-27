@@ -1,28 +1,32 @@
 ---
-title: "XML 데이터 형식 변수 및 열 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xml 데이터 형식 [SQL Server], 변수"
-  - "xml 데이터 형식 [SQL Server], 열"
+title: "XML 데이터 형식 변수 및 열 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- xml data type [SQL Server], columns
 ms.assetid: 8994ab6e-5519-4ba2-97a1-fac8af6f72db
 caps.latest.revision: 13
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 데이터 형식 변수 및 열 만들기
-  **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 [CAST 및 CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md)로 테이블을 만들 때 **xml** 데이터 형식을 열 유형으로 사용할 수 있습니다.  
+# <a name="create-xml-data-type-variables-and-columns"></a>XML 데이터 형식 변수 및 열 만들기
+  **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 유형 또는 **CAST 및 CONVERT** 로 테이블을 만들 때 [xml](../../t-sql/functions/cast-and-convert-transact-sql.md)데이터 형식을 열 유형으로 사용할 수 있습니다.  
   
-## 열 및 변수 만들기  
+## <a name="creating-columns-and-variables"></a>열 및 변수 만들기  
  다음 예에서와 같이 테이블의 일부분으로 `xml` 유형 열을 만들려면 `CREATE TABLE` 문을 사용합니다.  
   
 ```  
@@ -49,7 +53,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
   
  XQuery를 사용하여 열, 매개 변수 또는 변수에 저장된 XML 인스턴스를 쿼리할 수 있습니다. 또한 XML DML(XML 데이터 조작 언어)을 사용하여 XML 인스턴스에 업데이트를 적용할 수도 있습니다. XQuery 표준에서는 개발 당시 XQuery DML을 정의하지 않았으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [XML 데이터 수정 언어](../../t-sql/xml/xml-data-modification-language-xml-dml.md) 확장을 XQuery에 도입합니다. 이러한 확장을 사용하여 작업을 삽입, 업데이트 및 삭제할 수 있습니다.  
   
-## 기본값 할당  
+## <a name="assigning-defaults"></a>기본값 할당  
  테이블에서 **xml** 유형의 열에 기본 XML 인스턴스를 할당할 수 있습니다. 기본 XML을 제공할 수 있는 방법으로는 XML 상수를 사용하거나 **xml** 유형으로 명시적 캐스트를 사용하는 두 가지 방법 중 하나가 있습니다.  
   
  XML 상수로 기본 XML을 제공하려면 다음 예에서와 같이 구문을 사용합니다. 문자열은 **xml** 유형으로 암시적으로 CAST가 수행됩니다.  
@@ -58,7 +62,7 @@ CREATE PROCEDURE SampleProc(@XmlDoc xml) AS ...
 CREATE TABLE T (XmlColumn xml default N'<element1/><element2/>')  
 ```  
   
- 명시적 `CAST`로써 기본 XML을 `xml`에 제공하려면 다음 예에서와 같이 구문을 사용합니다.  
+ 명시적 `CAST` 로써 기본 XML을 `xml`에 제공하려면 다음 예에서와 같이 구문을 사용합니다.  
   
 ```  
 CREATE TABLE T (XmlColumn xml   
@@ -71,7 +75,7 @@ CREATE TABLE T (XmlColumn xml
 CREATE TABLE T (XmlColumn xml NOT NULL)  
 ```  
   
-## 제약 조건 지정  
+## <a name="specifying-constraints"></a>제약 조건 지정  
  **xml** 유형의 열을 만들 때 열 수준이나 테이블 수준 제약 조건을 정의할 수 있습니다. 다음 경우에 제약 조건을 사용합니다.  
   
 -   비즈니스 규칙을 XML 스키마에 표현할 수 없습니다. 예를 들어 꽃 판매점의 배달 주소는 해당 영업소 위치에서 81km 이내에 있어야 합니다. 이러한 사항은 XML 열에 대한 제약 조건으로 작성될 수 있습니다. 제약 조건에는 **xml** 데이터 형식의 메서드가 포함될 수 있습니다.  
@@ -92,7 +96,7 @@ CREATE TABLE T (XmlColumn xml NOT NULL)
   
  대신 다음 예처럼 사용자 정의 함수인 래퍼를 만들어 **xml** 데이터 형식 메서드를 래핑하고 CHECK 제약 조건에 사용자 정의 함수를 지정합니다.  
   
- 다음 예에서 `Col2`의 제약 조건은 이 열에 저장된 각 XML 인스턴스가 `<ProductDescription>` 특성을 포함하는 `ProductID` 요소를 갖도록 지정합니다. 이 제약 조건은 사용자 정의 함수에 의해 적용됩니다.  
+ 다음 예에서 `Col2` 의 제약 조건은 이 열에 저장된 각 XML 인스턴스가 `<ProductDescription>` 특성을 포함하는 `ProductID` 요소를 갖도록 지정합니다. 이 제약 조건은 사용자 정의 함수에 의해 적용됩니다.  
   
 ```  
 CREATE FUNCTION my_udf(@var xml) returns bit  
@@ -102,7 +106,7 @@ END
 GO  
 ```  
   
- 인스턴스의 `exist()` 요소에 `xml` 특성이 있으면 `1` 데이터 형식의 `<ProductDescription>` 메서드가 `ProductID`을 반환합니다. 그렇지 않으면 `0`을 반환합니다.  
+ 인스턴스의 `exist()` 요소에 `xml` 특성이 있으면 `1` 데이터 형식의 `<ProductDescription>` 메서드가 `ProductID` 을 반환합니다. 그렇지 않으면 `0`을 반환합니다.  
   
  이제 다음과 같이 열 수준 제약 조건을 가진 테이블을 만들 수 있습니다.  
   
@@ -125,7 +129,7 @@ INSERT INTO T values(1,'<ProductDescription ProductID="1" />')
 INSERT INTO T values(1,'<Product />')  
 ```  
   
-## 같은 테이블 또는 다른 테이블  
+## <a name="same-or-different-table"></a>같은 테이블 또는 다른 테이블  
  **xml** 데이터 형식의 열을 다른 관계형 열이 포함된 테이블이나 기본 테이블에 대한 외래 키 관계에 있는 별개의 테이블에 만들 수 있습니다.  
   
  다음 조건 중 하나에 해당하면 같은 테이블에 **xml** 데이터 형식의 열을 만듭니다.  

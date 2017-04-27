@@ -1,29 +1,33 @@
 ---
-title: "DML 트리거 삭제 또는 해제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DML 트리거 해제"
-  - "DML 트리거 제거"
-  - "DML 트리거 해제"
-  - "DML 트리거 삭제"
-  - "DML 트리거 삭제"
-  - "DML 트리거 제거"
+title: "DML 트리거 삭제 또는 해제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DML triggers, disabling
+- removing DML triggers
+- disabling DML triggers
+- dropping DML triggers
+- deleting DML triggers
+- DML triggers, removing
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fe807c194c057f2109bb40b13a8f8918c0cc75f
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML 트리거 삭제 또는 해제
+# <a name="delete-or-disable-dml-triggers"></a>DML 트리거 삭제 또는 해제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 DML 트리거를 삭제하거나 비활성화하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -59,7 +63,7 @@ caps.handback.revision: 27
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### DML 트리거를 삭제하려면  
+#### <a name="to-delete-a-dml-trigger"></a>DML 트리거를 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -69,7 +73,7 @@ caps.handback.revision: 27
   
 4.  **개체 삭제** 대화 상자에서 삭제할 트리거를 확인한 다음 **확인**을 클릭합니다.  
   
-#### DML 트리거를 비활성화하거나 활성화하려면  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>DML 트리거를 비활성화하거나 활성화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 27
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### DML 트리거를 삭제하려면  
+#### <a name="to-delete-a-dml-trigger"></a>DML 트리거를 삭제하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -115,7 +119,7 @@ GO
   
 ```  
   
-#### DML 트리거를 비활성화하거나 활성화하려면  
+#### <a name="to-disable-and-enable-a-dml-trigger"></a>DML 트리거를 비활성화하거나 활성화하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -156,7 +160,7 @@ ENABLE TRIGGER Sales.bonus_reminder ON Sales.SalesPersonQuotaHistory;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   

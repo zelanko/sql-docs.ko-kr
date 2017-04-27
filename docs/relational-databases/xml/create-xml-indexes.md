@@ -1,28 +1,32 @@
 ---
-title: "XML 인덱스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 [SQL Server의 XML]"
-  - "XML 인덱스 [SQL Server], 만들기"
+title: "XML 인덱스 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indexes [XML in SQL Server]
+- XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7dbb0a712f1edbe0234a68e2481915b76bec90a
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 인덱스 만들기
+# <a name="create-xml-indexes"></a>XML 인덱스 만들기
   이 항목에서는 기본 및 보조 XML 인덱스를 만드는 방법에 대해 설명합니다.  
   
-## 기본 XML 인덱스 만들기  
+## <a name="creating-a-primary-xml-index"></a>기본 XML 인덱스 만들기  
  기본 XML 인덱스를 만들려면 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문을 사용합니다. 비-XML 인덱스에 대해 사용 가능한 옵션이 XML 인덱스에서 모두 지원되는 것은 아닙니다.  
   
  XML 인덱스를 만들 때는 다음 사항을 알아야 합니다.  
@@ -50,11 +54,11 @@ caps.handback.revision: 19
 -   ARITHABORT 옵션은 XML 인덱스를 만들 때 ON으로 설정되어야 합니다. XML 데이터 형식 메서드를 사용하여 XML 열의 값을 쿼리, 삽입, 삭제 또는 업데이트하려면 같은 옵션을 연결에 설정해야 합니다. 그렇지 않으면 XML 데이터 형식 메서드가 실패합니다.  
   
     > [!NOTE]  
-    >  XML 인덱스에 대한 정보는 카탈로그 뷰에서 찾을 수 있습니다. 그러나 **sp_helpindex**는 지원되지 않습니다. 이 항목의 후반부에 제공된 예에서는 카탈로그 뷰를 쿼리하여 XML 인덱스 정보를 찾는 방법을 보여 줍니다.  
+    >  XML 인덱스에 대한 정보는 카탈로그 뷰에서 찾을 수 있습니다. 그러나 **sp_helpindex** 는 지원되지 않습니다. 이 항목의 후반부에 제공된 예에서는 카탈로그 뷰를 쿼리하여 XML 인덱스 정보를 찾는 방법을 보여 줍니다.  
   
- 1년 미만의 값이 있는 XML 스키마 유형 **xs:date** 또는 **xs:dateTime**이나 그 하위 유형의 값을 포함하는 XML 데이터 형식 열에 기본 XML 인덱스를 만들거나 다시 만들 경우 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 인덱스 만들기에 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 이러한 값이 허용되었으므로 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 생성된 데이터베이스에 인덱스를 만들 경우 이러한 문제가 발생할 수 있습니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
+ 1년 미만의 값이 있는 XML 스키마 유형 **xs:date** 또는 **xs:dateTime** 이나 그 하위 유형의 값을 포함하는 XML 데이터 형식 열에 기본 XML 인덱스를 만들거나 다시 만들 경우 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 인덱스 만들기에 실패합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서는 이러한 값이 허용되었으므로 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 생성된 데이터베이스에 인덱스를 만들 경우 이러한 문제가 발생할 수 있습니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
-### 예제: 기본 XML 인덱스 만들기  
+### <a name="example-creating-a-primary-xml-index"></a>예제: 기본 XML 인덱스 만들기  
  대부분의 예에서는 형식화되지 않은 XML 열이 포함된 테이블 T(pk INT PRIMARY KEY, xCol XML)가 사용됩니다. 이러한 예는 직관적인 방식에 따라 형식화된 XML로 확장될 수 있습니다. 간단한 설명을 위해 쿼리는 다음에 표시된 것과 같이 XML 데이터 인스턴스에 대해 기술됩니다.  
   
 ```  
@@ -78,7 +82,7 @@ caps.handback.revision: 19
 CREATE PRIMARY XML INDEX idx_xCol on T (xCol)  
 ```  
   
-## 보조 XML 인덱스 만들기  
+## <a name="creating-a-secondary-xml-index"></a>보조 XML 인덱스 만들기  
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] DDL 문을 사용하여 보조 XML 인덱스를 만들고 원하는 보조 XML 인덱스의 유형을 지정할 수 있습니다.  
   
  보조 XML 인덱스를 만들 때는 다음 사항을 알아야 합니다.  
@@ -98,7 +102,7 @@ FROM    sys.xml_indexes;
   
  **secondary_type_desc** 열에 반환된 값은 NULL, PATH, VALUE 또는 PROPERTY가 될 수 있습니다. 기본 XML 인덱스의 경우 반환된 값은 NULL입니다.  
   
-### 예제: 보조 XML 인덱스 만들기  
+### <a name="example-creating-secondary-xml-indexes"></a>예제: 보조 XML 인덱스 만들기  
  다음 예에서는 보조 XML 인덱스가 만들어지는 방법을 설명합니다. 또한 만들어진 XML 인덱스에 대한 정보도 보여 줍니다.  
   
 ```  
@@ -198,7 +202,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)   
  [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

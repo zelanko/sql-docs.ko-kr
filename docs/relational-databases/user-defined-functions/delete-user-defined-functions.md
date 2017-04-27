@@ -1,23 +1,27 @@
 ---
-title: "사용자 정의 함수 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용자 정의 함수 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db1d668a-23b7-4757-a9c5-1bd848ba7f6d
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7731c5fd8d7bc5c62cd7ced03f3ebd638e68e58e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 사용자 정의 함수 삭제
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 사용자 정의 함수를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+# <a name="delete-user-defined-functions"></a>사용자 정의 함수 삭제
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 사용자 정의 함수를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **항목 내용**  
   
@@ -48,7 +52,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 사용자 정의 함수를 삭제하려면  
+#### <a name="to-delete-a-user-defined-function"></a>사용자 정의 함수를 삭제하려면  
   
 1.  수정할 함수가 포함된 데이터베이스 옆의 더하기 기호를 클릭합니다.  
   
@@ -67,11 +71,11 @@ caps.handback.revision: 7
 5.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  **개체 삭제** 대화 상자에서 **종속성 표시**를 클릭하여 *function_name***종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
+    >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 *function_name***종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 함수에 종속된 모든 개체와 해당 함수가 종속된 모든 개체가 표시됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 사용자 정의 함수를 삭제하려면  
+#### <a name="to-delete-a-user-defined-function"></a>사용자 정의 함수를 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

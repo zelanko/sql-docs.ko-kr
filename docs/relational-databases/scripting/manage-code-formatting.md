@@ -1,44 +1,48 @@
 ---
-title: "코드 서식 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "코드 들여쓰기 [SQL Server]"
-  - "URL 표시"
-  - "코드 서식 [SQL Server Management Studio]"
-  - "텍스트 축소"
-  - "서식 [SQL Server], SQL Server Management Studio의 코드 서식"
-  - "텍스트 숨기기"
-  - "형식 [SQL Server]"
-  - "텍스트 [SQL Server], 코드 서식"
-  - "자동 들여쓰기"
-  - "텍스트를 소문자로 변환"
-  - "쿼리 편집기 [SQL Server Management Studio], 코드 서식 관리"
-  - "코드에 URL 표시 [SQL Server Management Studio]"
-  - "텍스트를 대문자로 변환"
-  - "텍스트 [SQL Server]"
-  - "코드 내어쓰기"
+title: "코드 서식 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- indenting code [SQL Server]
+- displaying URLs
+- code formatting [SQL Server Management Studio]
+- collapsing text
+- formats [SQL Server], code formatting in SQL Server Management Studio
+- hiding text
+- formats [SQL Server]
+- text [SQL Server], code formats
+- automatic indentation
+- converting text to lower case
+- Query Editor [SQL Server Management Studio], managing code formats
+- URL displayed in code [SQL Server Management Studio]
+- converting text to upper case
+- text [SQL Server]
+- unindenting code
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57fcddb2d5f87d0b03ab1ed504e07072dc41d367
+ms.lasthandoff: 04/11/2017
+
 ---
-# 코드 서식 관리
+# <a name="manage-code-formatting"></a>코드 서식 관리
   편집기를 사용하면 들여쓰기, 숨겨진 텍스트, URL 등으로 코드의 서식을 지정할 수 있습니다. 또한 스마트 들여쓰기를 사용하여 입력 시에 코드의 서식을 자동으로 지정할 수 있습니다.  
   
-## 들여쓰기  
+## <a name="indenting"></a>들여쓰기  
  세 가지 다른 스타일의 텍스트 들여쓰기 중에서 선택할 수 있습니다. 또한 단일 들여쓰기나 탭을 구성하는 공백 수와 들여쓰기 시에 편집기에서 탭이나 공백 문자를 사용하는지 여부를 지정할 수 있습니다.  
   
-#### 들여쓰기 스타일을 선택하려면  
+#### <a name="to-choose-an-indenting-style"></a>들여쓰기 스타일을 선택하려면  
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
@@ -54,12 +58,12 @@ caps.handback.revision: 23
   
     -   **블록**. 커서가 다음 줄을 이전 줄에 맞춥니다.  
   
-    -   **스마트**(기본값). 사용할 적절할 들여쓰기 스타일을 언어 서비스로 결정합니다.  
+    -   **스마트** (기본값). 사용할 적절할 들여쓰기 스타일을 언어 서비스로 결정합니다.  
   
     > [!NOTE]  
     >  모든 언어에서 세 가지 들여쓰기 옵션이 모두 제공되는 것은 아닙니다.  
   
-#### 들여쓰기 탭 설정을 변경하려면  
+#### <a name="to-change-indent-tab-settings"></a>들여쓰기 탭 설정을 변경하려면  
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
@@ -73,19 +77,19 @@ caps.handback.revision: 23
   
      **공백 삽입**을 선택한 경우 각 탭이나 들여쓰기가 나타내는 공백 문자 수를 각각 **탭 크기** 또는 **들여쓰기 크기**아래에 입력합니다.  
   
-#### 코드를 들여쓰려면  
+#### <a name="to-indent-code"></a>코드를 들여쓰려면  
   
 1.  들여쓸 텍스트를 선택합니다.  
   
 2.  Tab 키를 누르거나 표준 도구 모음에서 **들여쓰기** 단추를 클릭합니다.  
   
-#### 코드를 내어쓰려면  
+#### <a name="to-unindent-code"></a>코드를 내어쓰려면  
   
 1.  내어쓸 텍스트를 선택합니다.  
   
 2.  Shift+Tab 키를 누르거나 표준 도구 모음에서 **내어쓰기** 단추를 클릭합니다.  
   
-#### 모든 코드를 자동으로 들여쓰려면  
+#### <a name="to-automatically-indent-all-of-your-code"></a>모든 코드를 자동으로 들여쓰려면  
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
@@ -100,13 +104,13 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  일부 언어에서는 **스마트** 옵션을 사용할 수 없습니다.  
   
-#### 공백을 탭으로 변환하려면  
+#### <a name="to-convert-white-space-to-tabs"></a>공백을 탭으로 변환하려면  
   
 1.  탭으로 변환할 공백이 있는 텍스트를 선택합니다.  
   
 2.  **편집** 메뉴에서 **고급**을 가리킨 다음 **선택 영역의 공백을 탭으로**를 클릭합니다.  
   
-#### 탭을 공백으로 변환하려면  
+#### <a name="to-convert-tabs-to-spaces"></a>탭을 공백으로 변환하려면  
   
 1.  공백으로 변환할 탭이 있는 텍스트를 선택합니다.  
   
@@ -114,21 +118,21 @@ caps.handback.revision: 23
   
  이러한 명령의 동작은 **옵션** 대화 상자의 탭 설정에 따라 달라집니다. 예를 들어 탭 설정이 4이면 **선택 영역의 공백을 탭으로** 는 4개의 연속된 공백마다 탭을 만들고 **선택 영역의 탭을 공백으로** 는 모든 탭마다 4개의 공백을 만듭니다.  
   
-## 텍스트를 대문자 및 소문자로 변환  
+## <a name="converting-text-to-upper-and-lower-case"></a>텍스트를 대문자 및 소문자로 변환  
  명령을 사용하여 텍스트를 모두 대문자나 소문자로 변환할 수 있습니다.  
   
-#### 텍스트를 대문자나 소문자로 변환하려면  
+#### <a name="to-switch-text-to-upper-or-lower-case"></a>텍스트를 대문자나 소문자로 변환하려면  
   
 1.  변환할 텍스트를 선택합니다.  
   
-2.  텍스트를 대문자로 변환하려면 Ctrl+Shift+U를 누르거나 **편집** 메뉴의 **고급** 하위 메뉴에서 **대문자로**를 클릭합니다.  
+2.  텍스트를 대문자로 변환하려면 Ctrl+Shift+U를 누르거나 **편집** 메뉴의 **고급** 하위 메뉴에서 **대문자로** 를 클릭합니다.  
   
-3.  텍스트를 소문자로 변환하려면 Ctrl+Shift+L을 누르거나 **편집** 메뉴의 **고급** 하위 메뉴에서 **소문자로**를 클릭합니다.  
+3.  텍스트를 소문자로 변환하려면 Ctrl+Shift+L을 누르거나 **편집** 메뉴의 **고급** 하위 메뉴에서 **소문자로** 를 클릭합니다.  
   
 > [!NOTE]  
 >  바로 가기 키의 전체 목록을 보려면 [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)를 참조하세요.  
   
-## URL 표시 및 연결  
+## <a name="displaying-and-linking-to-urls"></a>URL 표시 및 연결  
  코드에서 클릭 가능한 URL을 만들고 표시할 수 있습니다. 기본적으로 URL은 다음과 같습니다.  
   
 -   밑줄이 그어집니다.  
@@ -137,7 +141,7 @@ caps.handback.revision: 23
   
 -   클릭하면 URL이 열립니다(URL이 유효한 경우).  
   
-#### 클릭 가능한 URL을 표시하려면  
+#### <a name="to-display-a-clickable-url"></a>클릭 가능한 URL을 표시하려면  
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   

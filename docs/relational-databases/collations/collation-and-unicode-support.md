@@ -1,46 +1,50 @@
 ---
-title: "데이터 정렬 및 유니코드 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이진 데이터 정렬 [SQL Server]"
-  - "식 수준 데이터 정렬 [SQL Server]"
-  - "Windows 데이터 정렬 [SQL Server]"
-  - "세계화 [SQL Server], 세계화 정보"
-  - "보조 문자 지원"
-  - "코드 페이지 [SQL Server], 코드 페이지 정보"
-  - "데이터 정렬 [SQL Server], 데이터 정렬 정보"
-  - "Unicode [SQL Server], 데이터 정렬"
-  - "데이터베이스 수준 데이터 정렬 [SQL Server]"
-  - "읽는 순서"
-  - "열 수준 데이터 정렬"
-  - "로캘 [SQL Server], 로캘 정보"
-  - "로캘 [SQL Server]"
-  - "코드 페이지 [SQL Server]"
-  - "SQL Server 데이터 정렬"
-  - "서버 수준 데이터 정렬 [SQL Server]"
+title: "데이터 정렬 및 유니코드 지원 | Microsoft 문서"
+ms.custom: 
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- binary collations [SQL Server]
+- expression-level collations [SQL Server]
+- Windows collations [SQL Server]
+- globalization [SQL Server], about globalization
+- supplementary character support
+- code pages [SQL Server], about code pages
+- collations [SQL Server], about collations
+- Unicode [SQL Server], collations
+- database-level collations [SQL Server]
+- reading order
+- column-level collations
+- locales [SQL Server], about locales
+- locales [SQL Server]
+- code pages [SQL Server]
+- SQL Server collations
+- server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 caps.latest.revision: 46
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 782e5a9458daf8c820b71d39e27b424c6995dba9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 정렬 및 유니코드 지원
+# <a name="collation-and-unicode-support"></a>Collation and Unicode Support
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터 정렬은 데이터에 대한 정렬 규칙과 대/소문자 및 악센트 구분 속성을 제공합니다. **char** 및 **varchar** 과 같은 문자 데이터 형식과 함께 사용되는 데이터 정렬은 해당 데이터 형식을 나타내는 데 사용할 수 있는 코드 페이지와 해당 문자를 지정합니다. 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치하든 데이터베이스 백업을 복원하든 서버를 클라이언트 데이터베이스에 연결하든 사용할 데이터의 로캘 요구 사항, 정렬 순서, 대/소문자 및 악센트 구분 여부를 파악해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 사용 가능한 데이터 정렬을 나열하려면 [sys를 참조하세요.fn_helpcollations &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)를 참조하세요.    
     
  서버, 데이터베이스, 열 또는 식에 대한 데이터 정렬을 선택하면 데이터에 일정한 특성이 부여되며, 이는 여러 데이터베이스 작업의 결과에 영향을 줍니다. 예를 들어 ORDER BY를 사용하여 쿼리를 작성할 경우 결과 집합의 정렬 순서는 쿼리의 식 수준에서 COLLATE 절에 지정되거나 데이터베이스에 적용된 데이터 정렬에 따라 달라집니다.    
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 정렬 지원을 최대한 활용하려면 이 항목에 정의된 용어와 이러한 용어가 데이터의 특성과 어떻게 관련되는지를 이해해야 합니다.    
     
-##  <a name="a-nametermsa-collation-terms"></a><a name="Terms"></a> 데이터 정렬 용어    
+##  <a name="Terms"></a> Collation Terms    
     
 -   [데이터 정렬](#Collation_Defn)    
     
@@ -50,10 +54,10 @@ caps.handback.revision: 46
     
 -   [정렬 순서](#Sort_Order_Defn)    
     
-###  <a name="a-namecollationdefna-collation"></a><a name="Collation_Defn"></a> 데이터 정렬    
- 데이터 정렬은 데이터 집합의 각 문자를 나타내는 비트 패턴을 지정합니다. 또한 데이터 정렬은 데이터를 정렬하고 비교하는 규칙을 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 여러 다른 데이터 정렬을 갖는 개체를 단일 데이터베이스에 저장하도록 지원합니다. 비유니코드 열의 경우 데이터 정렬 설정은 데이터에 대한 코드 페이지와 나타낼 수 있는 문자를 지정합니다. 유니코드가 아닌 열 간에 데이터를 이동하려면 원본 코드 페이지에서 대상 코드 페이지로 변환해야 합니다.    
+###  <a name="Collation_Defn"></a> 데이터 정렬    
+ 데이터 정렬은 데이터 집합의 각 문자를 나타내는 비트 패턴을 지정합니다. 또한 데이터 정렬은 데이터를 정렬하고 비교하는 규칙을 결정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 여러 다른 데이터 정렬을 갖는 개체를 단일 데이터베이스에 저장하도록 지원합니다. 비유니코드 열의 경우 데이터 정렬 설정은 데이터에 대한 코드 페이지와 나타낼 수 있는 문자를 지정합니다. 유니코드가 아닌 열 간에 데이터를 이동하려면 원본 코드 페이지에서 대상 코드 페이지로 변환해야 합니다.    
     
- 데이터 정렬 설정이 각기 다른 데이터베이스의 컨텍스트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.    
+ 데이터 정렬 설정이 각기 다른 데이터베이스의 컨텍스트에서[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하면 그 결과가 달라질 수 있습니다. 가능한 경우 조직에서 표준화된 데이터 정렬을 사용하세요. 그러면 모든 문자나 유니코드 식에서 명시적으로 데이터 정렬을 지정할 필요가 없습니다. 데이터 정렬 및 코드 페이지 설정이 다른 개체를 사용해야 할 경우 선행 정렬 우선 순위 규칙을 고려하도록 쿼리를 코딩하세요. 자세한 내용은 [선행 정렬 우선 순위(Transact-SQL)](../../t-sql/statements/collation-precedence-transact-sql.md)를 참조하세요.    
     
  데이터 정렬 관련 옵션에는 대/소문자 구분, 악센트 구분, 일본어 가나 구분, 전자/반자 구분, 변형 선택기 구분이 있습니다. 이러한 옵션은 데이터 정렬 이름에 추가하여 지정됩니다. 예를 들어 이 `Japanese_Bushu_Kakusu_100_CS_AS_KS_WS` 데이터 정렬은 대/소문자, 악센트, 일본어 가나 및 전자/반자를 구분합니다. 또 다른 예로 이 `Japanese_Bushu_Kakusu_140_CI_AI_KS_WS_VSS` 데이터 정렬은 대/소문자 구분 및 악센트를 구분하지 않고 일본어 가나, 전자/반자 및 변형 선택기를 구분합니다.  다음 표에서는 이러한 다양한 옵션과 연결된 동작에 대해 설명합니다.    
     
@@ -65,7 +69,7 @@ caps.handback.revision: 46
 |전자/반자 구분(_WS)|전자와 반자 문자를 구분합니다. 이 옵션을 선택하지 않으면 SQL Server에서는 정렬할 때 같은 문자의 전자 표시와 반자 표시를 동일한 문자로 간주합니다. 전자/반자를 구분하지 않도록 지정하는 유일한 방법은 이 옵션을 생략하는 것입니다.|    
 |변형 선택기 구분(_VSS) | [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서 처음 도입된 일본어 데이터 정렬 Japanese_Bushu_Kakusu_140 및 Japanese_XJIS_140에서 다양한 표의 변형 선택기를 구분합니다. 변형 시퀀스는 기본 문자와 추가 변형 선택기로 구성됩니다. 이 _VSS 옵션을 선택하지 않으면 데이터 정렬이 변형 선택기를 구분하지 않고 변형 선택기가 비교에서 고려되지 않습니다. 즉, SQL Server는 정렬할 때 다른 변형 선택기를 사용하여 동일한 기본 문자 위에 구축된 문자를 동일한 것으로 간주합니다. [Unicode Ideographic Variation Database](http://www.unicode.org/reports/tr37/)(유니코드 표의 변형 데이터베이스)도 참조하세요. <br/><br/> 변형 선택기 구분(_VSS) 데이터 정렬은 전체 텍스트 검색 인덱스에서 지원되지 않습니다. 전체 텍스트 검색 인덱스는 악센트 구분(_AS), 일본어 가나 구분(_KS) 및 전자/반자 구분(_WS) 옵션만 지원합니다. SQL Server XML 및 CLR 엔진은 (_VSS) 변형 선택기를 지원하지 않습니다.
     
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 데이터 정렬 집합은 다음과 같습니다.    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 지원하는 데이터 정렬 집합은 다음과 같습니다.    
     
  Windows 데이터 정렬    
  Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 문자 데이터 저장 규칙을 정의합니다. Windows 데이터 정렬의 경우 유니코드 데이터를 비교할 때와 동일한 알고리즘을 사용하여 비유니코드 데이터도 비교합니다. 기본 Windows 데이터 정렬 규칙은 사전 정렬이 적용될 때 사용되는 알파벳이나 언어를 지정하고 유니코드가 아닌 문자 데이터를 저장하는 데 사용되는 코드 페이지를 지정합니다. 유니코드 정렬과 비유니코드 정렬은 모두 특정 버전의 Windows에서 수행되는 문자열 비교와 호환됩니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내의 데이터 형식에서 일관성이 유지되고 개발자는 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 것과 동일한 규칙을 사용하여 문자열을 정렬할 수 있습니다. 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요.    
@@ -96,7 +100,7 @@ caps.handback.revision: 46
     
  서버에 대한 데이터 정렬을 변경하는 경우를 제외하고는 시스템 데이터베이스의 데이터 정렬을 변경할 수 없습니다.    
     
- 데이터베이스 데이터 정렬은 데이터베이스의 모든 메타데이터에 사용되며 데이터베이스에 사용되는 모든 문자열 열, 임시 개체, 변수 이름 및 기타 모든 문자열의 기본값이 됩니다. 사용자 데이터베이스의 데이터 정렬을 변경할 경우 데이터베이스 액세스 임시 테이블에서 쿼리할 때 데이터 정렬 충돌이 발생할 수 있습니다. 임시 테이블은 항상 **tempdb** 시스템 데이터베이스에 저장되므로, 인스턴스에 대한 데이터 정렬을 사용합니다. 사용자 데이터베이스와 **tempdb** 간의 문자 데이터를 비교하는 쿼리를 실행할 경우 문자 데이터를 평가할 때 데이터 정렬이 충돌하면 쿼리가 실패할 수 있습니다. 쿼리에 COLLATE 절을 지정하여 이 문제를 해결할 수 있습니다. 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)를 참조하세요.    
+ 데이터베이스 데이터 정렬은 데이터베이스의 모든 메타데이터에 사용되며 데이터베이스에 사용되는 모든 문자열 열, 임시 개체, 변수 이름 및 기타 모든 문자열의 기본값이 됩니다. 사용자 데이터베이스의 데이터 정렬을 변경할 경우 데이터베이스 액세스 임시 테이블에서 쿼리할 때 데이터 정렬 충돌이 발생할 수 있습니다. 임시 테이블은 항상 **tempdb** 시스템 데이터베이스에 저장되므로, 인스턴스에 대한 데이터 정렬을 사용합니다. 사용자 데이터베이스와 **tempdb** 간의 문자 데이터를 비교하는 쿼리를 실행할 경우 문자 데이터를 평가할 때 데이터 정렬이 충돌하면 쿼리가 실패할 수 있습니다. 쿼리에 COLLATE 절을 지정하여 이 문제를 해결할 수 있습니다. 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)를 참조하세요.    
     
  열 수준 데이터 정렬    
  테이블을 만들거나 변경할 때 COLLATE 절을 사용하여 각 문자열 열에 대한 데이터 정렬을 지정할 수 있습니다. 데이터 정렬을 지정하지 않으면 열에 데이터베이스의 기본 데이터 정렬이 할당됩니다.    
@@ -108,15 +112,15 @@ caps.handback.revision: 46
 SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;    
 ```    
     
-###  <a name="a-namelocaledefna-locale"></a><a name="Locale_Defn"></a> 로캘    
+###  <a name="Locale_Defn"></a> 로캘    
  로캘은 위치나 문화권과 관련된 정보의 모음입니다. 여기에는 통용 언어의 이름과 식별자, 언어를 기록하는 데 사용되는 문자 및 문화권별 표기법 등이 포함될 수 있습니다. 데이터 정렬은 하나 이상의 로캘과 연결될 수 있습니다. 자세한 내용은 참조 [Microsoft에 의해 할당되는 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하세요.    
     
-###  <a name="a-namecodepagedefna-code-page"></a><a name="Code_Page_Defn"></a> 코드 페이지    
+###  <a name="Code_Page_Defn"></a> Code Page    
  코드 페이지는 지정한 스크립트의 각 문자와 연결된 숫자 인덱스 또는 코드 포인트 값을 정렬한 문자 집합입니다. Windows 코드 페이지는 일반적으로 *문자 집합* 또는 *charset*이라고 합니다. 코드 페이지는 여러 다른 Windows 시스템 로캘에 사용되는 문자 집합과 자판 배열을 지원하는 데 사용됩니다.     
-###  <a name="a-namesortorderdefna-sort-order"></a><a name="Sort_Order_Defn"></a> 정렬 순서    
+###  <a name="Sort_Order_Defn"></a> Sort Order    
  정렬 순서는 데이터 값이 정렬되는 방식을 지정합니다. 이는 데이터 비교의 결과에 영향을 줍니다. 데이터는 데이터 정렬을 사용하여 정렬되며 인덱스를 사용하여 데이터 정렬을 최적화할 수 있습니다.    
     
-##  <a name="a-nameunicodedefna-unicode-support"></a><a name="Unicode_Defn"></a> 유니코드 지원    
+##  <a name="Unicode_Defn"></a> Unicode Support    
  유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar**및 **text**) 대신 항상 유니코드 데이터 형식(**nchar**, **nvarchar**및 **ntext**)을 사용하세요.    
     
  비유니코드 데이터 형식에는 여러 가지 제한 사항이 있습니다. 이는 비유니코드 컴퓨터에서는 단일 코드 페이지만 사용할 수 있기 때문입니다. 유니코드를 사용하면 코드 페이지 변환이 별로 필요하지 않으므로 성능이 향상될 수 있습니다. 이러한 경우 유니코드 데이터 정렬이 서버 수준에서 지원되지 않으므로 데이터베이스, 열 또는 식 수준에서 유니코드 데이터 정렬을 개별적으로 선택해야 합니다.    
@@ -146,8 +150,8 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |비유니코드|유니코드|다국어 데이터를 사용할 경우 이상적인 구성이 아닙니다. 유니코드 데이터를 비유니코드 서버에 쓸 수 없습니다. 서버의 코드 페이지를 벗어나는 서버로 데이터를 보낼 때 문제가 발생할 수 있습니다.|    
 |비유니코드|비유니코드|다국어 데이터를 사용할 때 가장 제한이 많은 시나리오입니다. 단일 코드 페이지만 사용할 수 있습니다.|    
     
-##  <a name="a-namesupplementarycharactersa-supplementary-characters"></a><a name="Supplementary_Characters"></a> 보조 문자    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 유니코드 데이터를 저장하기 위해 **nchar** 및 **nvarchar** 같은 데이터 형식을 제공합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.    
+##  <a name="Supplementary_Characters"></a> Supplementary Characters    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 유니코드 데이터를 저장하기 위해 **nchar** 및 **nvarchar** 같은 데이터 형식을 제공합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.    
     
  보조 문자를 사용하는 경우    
     
@@ -183,11 +187,11 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|0 ~ 0x10FFFF 범위의 UTF-16 코드 포인트를 반환합니다.|0 ~ 0xFFFF 범위의 UCS-2 코드 포인트를 반환합니다.|    
 |[와일드카드 - 문자 하나와 일치](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [와일드카드 - 일치하지 않는 문자](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|모든 와일드카드 연산에 보조 문자를 사용할 수 있습니다.|이러한 와일드카드 연산에 보조 문자를 사용할 수 없습니다. 다른 와일드카드 연산자는 사용할 수 있습니다.|    
     
-##  <a name="a-namegb18030a-gb18030-support"></a><a name="GB18030"></a> GB18030 지원    
- GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 서버가 클라이언트 쪽 응용 프로그램으로부터 GB18030으로 인코딩된 문자를 받을 때 해당 문자를 인식하고 유니코드 문자로 기본 변환 및 저장하는 방식으로 GB18030 문자를 지원합니다. 이렇게 변환된 문자는 서버에 저장된 후 모든 후속 작업에서 유니코드 문자로 처리됩니다. 모든 중국어 데이터 정렬(가급적 최신 100 버전)을 사용할 수 있습니다. 모든 _100 수준 데이터 정렬은 GB18030 문자를 사용한 언어적 정렬을 지원합니다. 데이터에 보조 문자(서로게이트 쌍)가 포함되어 있는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공되는 SC 데이터 정렬을 사용하여 검색 및 정렬 성능을 향상시킬 수 있습니다.    
+##  <a name="GB18030"></a> GB18030 Support    
+ GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 서버가 클라이언트 쪽 응용 프로그램으로부터 GB18030으로 인코딩된 문자를 받을 때 해당 문자를 인식하고 유니코드 문자로 기본 변환 및 저장하는 방식으로 GB18030 문자를 지원합니다. 이렇게 변환된 문자는 서버에 저장된 후 모든 후속 작업에서 유니코드 문자로 처리됩니다. 모든 중국어 데이터 정렬(가급적 최신 100 버전)을 사용할 수 있습니다. 모든 _100 수준 데이터 정렬은 GB18030 문자를 사용한 언어적 정렬을 지원합니다. 데이터에 보조 문자(서로게이트 쌍)가 포함되어 있는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공되는 SC 데이터 정렬을 사용하여 검색 및 정렬 성능을 향상시킬 수 있습니다.    
     
-##  <a name="a-namecomplexscripta-complex-script-support"></a><a name="Complex_script"></a> 복합 스크립트 지원    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 복합 스크립트를 입력, 저장, 변경 및 표시할 수 있습니다. 입력, 저장, 변경 및 표시할 수 있습니다.    
+##  <a name="Complex_script"></a> Complex Script Support    
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 복합 스크립트를 입력, 저장, 변경 및 표시할 수 있습니다. 입력, 저장, 변경 및 표시할 수 있습니다.    
     
 -   아랍어 텍스트와 영어 텍스트의 조합과 같은 오른쪽에서 왼쪽으로 쓰는 텍스트와 왼쪽에서 오른쪽으로 쓰는 텍스트의 조합을 포함하는 양방향 텍스트    
     
@@ -197,7 +201,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 상호 작용하는 데이터베이스 응용 프로그램은 복합 스크립트를 지원하는 컨트롤을 사용해야 합니다. 관리 코드로 생성되는 표준 Windows 폼 컨트롤에는 복합 스크립트 기능이 설정되어 있습니다.    
 
-##  <a name="a-namejapanesecollationsa-japanese-collations-added-in--includesssqlv14mdtokensqlv14sssqlv14mdmd"></a><a name="Japanese_Collations"></a> 일본어 데이터 정렬이 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에 추가됨
+##  <a name="Japanese_Collations"></a> Japanese Collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 다양한 옵션(_CS, _AS, _KS, _WS, _VSS 등) 순열을 사용하여 새 일본어 데이터 정렬 패밀리 두 개가 지원됩니다. 
 
@@ -209,7 +213,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 이러한 데이터 정렬은 데이터베이스 엔진 인덱스, 메모리 액세스에 최적화된 테이블, columnstore 인덱스 및 고유하게 컴파일된 모듈에서 지원됩니다.
     
-##  <a name="a-namerelatedtasksa-related-tasks"></a><a name="Related_Tasks"></a> 관련 작업    
+##  <a name="Related_Tasks"></a> Related Tasks    
     
 |태스크|항목|    
 |----------|-----------|    
@@ -220,10 +224,10 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 |특정 언어에서 다른 언어로 이식하거나 여러 언어를 보다 쉽게 지원하도록 Transact-SQL 문을 작성하는 방법에 대해 설명합니다.|[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |날짜, 시간 및 통화 데이터가 사용 및 표시되는 방식에 대한 기본 설정과 오류 메시지 언어를 변경하는 방법에 대해 설명합니다.|[세션 언어 설정](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="a-namerelatedcontenta-related-content"></a><a name="Related_Content"></a> 관련 내용    
- [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)(SQL Server 데이터 정렬을 변경하는 최선의 방법)    
+##  <a name="Related_Content"></a> Related Content    
+ [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)    
     
- ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)("SQL Server를 유니코드로 마이그레이션하는 최선의 방법")    
+ ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)    
     
  [유니코드 컨소시엄 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=48619)    
     
@@ -233,3 +237,5 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
  [sys.fn_helpcollations&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)    
     
   
+
+

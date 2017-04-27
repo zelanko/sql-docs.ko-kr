@@ -1,26 +1,30 @@
 ---
-title: "통계 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-statistics"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "통계 [SQL Server], 삭제"
-  - "통계 삭제"
+title: "통계 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-statistics
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- statistics [SQL Server], deleting
+- deleting statistics
 ms.assetid: eccce0aa-591e-4a1d-bd10-373b022f8749
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51349f58a29f7a0702e719f83e5f60632fb8d7c5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 통계 삭제
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 테이블 및 뷰에서 통계를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+# <a name="delete-statistics"></a>통계 삭제
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 테이블 및 뷰에서 통계를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **항목 내용**  
   
@@ -51,7 +55,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 테이블 또는 뷰에서 통계를 삭제하려면  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>테이블 또는 뷰에서 통계를 삭제하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 통계를 삭제할 데이터베이스를 확장합니다.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 8
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 테이블 또는 뷰에서 통계를 삭제하려면  
+#### <a name="to-drop-statistics-from-a-table-or-view"></a>테이블 또는 뷰에서 통계를 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

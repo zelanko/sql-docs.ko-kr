@@ -1,32 +1,36 @@
 ---
-title: "DDL 이벤트 그룹 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-ddl"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 그룹"
-  - "DDL 이벤트 그룹"
-  - "DDL 트리거, 이벤트 그룹"
+title: "DDL 이벤트 그룹 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-ddl
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event groups
+- DDL event groups
+- DDL triggers, event groups
 ms.assetid: 12b45cc3-2f91-4609-bb8a-3e82e28bf642
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccd63253ce183861e0aef4caafe00179bf00051a
+ms.lasthandoff: 04/11/2017
+
 ---
-# DDL 이벤트 그룹
+# <a name="ddl-event-groups"></a>DDL 이벤트 그룹
   다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트 그룹과 해당 그룹에서 처리하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 나열합니다. 이벤트 그룹 포함 특성에 유의하십시오. 예를 들어 FOR DDL_TABLE_EVENTS(10018)를 지정하는 DDL 트리거 또는 이벤트 알림은 CREATE TABLE, ALTER TABLE 및 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다. FOR DDL_TABLE_VIEW_EVENTS(10017)를 지정하는 DDL 트리거 또는 이벤트 알림은 DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS 및 DDL_STATISTICS_EVENTS 유형 아래의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다.  
   
 > [!NOTE]  
 >  DDL과 같은 작업을 수행하는 특정 시스템 저장 프로시저에서 DDL 트리거 또는 이벤트 알림이 발생할 수도 있습니다. DDL 트리거와 이벤트 알림을 테스트하여 실행된 시스템 저장 프로시저에 대한 응답을 확인하십시오. 예를 들어 CREATE TYPE 문과 **sp_addtype** 저장 프로시저를 사용하면 CREATE_TYPE 이벤트에서 생성되는 DDL 트리거 또는 이벤트 알림이 발생합니다.  
   
-## 이벤트  
+## <a name="events"></a>이벤트  
  DDL_DATABASE_LEVEL_EVENTS에 나열된 이벤트는 서버(인스턴스) 또는 데이터베이스 수준에서 실행합니다. DDL_SERVER_LEVEL_EVENTS에 나열된 이벤트는 서버 수준에서만 실행합니다.  
   
 ||||  
@@ -314,7 +318,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [이벤트 알림](../../relational-databases/service-broker/event-notifications.md)   
  [DDL 트리거](../../relational-databases/triggers/ddl-triggers.md)   
  [DDL 이벤트](../../relational-databases/triggers/ddl-events.md)  

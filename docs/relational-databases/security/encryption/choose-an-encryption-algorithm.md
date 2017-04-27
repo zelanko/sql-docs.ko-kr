@@ -1,28 +1,32 @@
 ---
-title: "암호화 알고리즘 선택 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "암호화 [SQL Server], 알고리즘"
-  - "암호화 [SQL Server], 알고리즘"
-  - "보안 [SQL Server], 암호화"
-  - "알고리즘 [SQL Server 암호화]"
+title: "암호화 알고리즘 선택 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cryptography [SQL Server], algorithms
+- encryption [SQL Server], algorithms
+- security [SQL Server], encryption
+- algorithms [SQL Server encryption]
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
 caps.latest.revision: 36
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a3cb1a59db35025eda9cf6ea68f0897aaecc9caf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 암호화 알고리즘 선택
+# <a name="choose-an-encryption-algorithm"></a>암호화 알고리즘 선택
   암호화는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인터페이스를 보호하려는 관리자가 사용할 수 있는 여러 가지 심층 방어 중 하나입니다.  
   
  암호화 알고리즘은 사용자가 무단으로 쉽게 바꿀 수 없는 데이터 변환을 정의합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 사용하면 관리자와 개발자가 DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, 128비트 RC4, DESX, 128비트 AES, 192비트 AES, 256비트 AES 등의 여러 알고리즘 중에서 원하는 알고리즘을 선택할 수 있습니다.  
@@ -49,7 +53,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  RC4 알고리즘은 이전 버전과의 호환성을 위해서만 지원됩니다. 데이터베이스의 호환성 수준이 90 또는 100인 경우 새 자료는 RC4 또는 RC4_128로만 암호화할 수 있습니다. 이 옵션은 사용하지 않는 것이 좋습니다. 대신 AES 알고리즘 중 하나와 같은 새 알고리즘을 사용하십시오. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 이상에서 RC4 또는 RC4_128을 사용하여 암호화된 자료는 모든 호환성 수준에서 해독할 수 있습니다.  
 >   
->  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 솔트를 자동으로 제공하지 않기 때문에 서로 다른 데이터 블록에서 동일한 RC4 또는 RC4_128 KEY_GUID를 반복해서 사용하면 동일한 RC4 키가 만들어집니다. 동일한 RC4 키를 반복해서 사용하는 것은 암호화를 매우 약하게 만드는 잘 알려진 오류입니다. 따라서 RC4 및 RC4_128 키워드는 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
+>  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 솔트를 자동으로 제공하지 않기 때문에 서로 다른 데이터 블록에서 동일한 RC4 또는 RC4_128 KEY_GUID를 반복해서 사용하면 동일한 RC4 키가 만들어집니다. 동일한 RC4 키를 반복해서 사용하는 것은 암호화를 매우 약하게 만드는 잘 알려진 오류입니다. 따라서 RC4 및 RC4_128 키워드는 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)]  
   
  암호화 알고리즘 및 암호화 기술에 대한 자세한 내용은 MSDN에서 .NET Framework Developer's Guide의 [주요 보안 개념(Key Security Concepts)](http://go.microsoft.com/fwlink/?LinkId=62082) 을 참조하십시오.  
   
@@ -61,7 +65,7 @@ caps.handback.revision: 36
   
 -   ALGORITHM = TRIPLE_DES를 사용하여 만든 대칭 키에 128비트 키를 포함하는 TRIPLE DES가 사용됩니다.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |||  
 |-|-|  
@@ -71,8 +75,9 @@ caps.handback.revision: 36
 |투명한 데이터 암호화를 사용하여 데이터베이스 파일 암호화|[투명한 데이터 암호화&#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)|  
 |테이블의 한 열을 암호화하는 방법|[데이터 열 암호화](../../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 암호화](../../../relational-databases/security/encryption/sql-server-encryption.md)   
  [암호화 계층](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
   
   
+

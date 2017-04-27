@@ -1,31 +1,35 @@
 ---
-title: "클러스터형 인덱스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 작성 [SQL Server], 클러스터형 인덱스"
-  - "클러스터형 인덱스, 만들기"
-  - "클러스터형 인덱스, PRIMARY KEY 제약 조건"
-  - "클러스터형 인덱스, UNIQUE 제약 조건"
-  - "인덱스 [SQL Server], 클러스터형"
+title: "클러스터형 인덱스 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], clustered indexes
+- clustered indexes, creating
+- clustered indexes, PRIMARY KEY constraint
+- clustered indexes, UNIQUE constraint
+- indexes [SQL Server], clustered
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 309d0fa2603bfa14dc305b73036867c084eab683
+ms.lasthandoff: 04/11/2017
+
 ---
-# 클러스터형 인덱스 만들기
+# <a name="create-clustered-indexes"></a>클러스터형 인덱스 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블에 클러스터형 인덱스를 만들 수 있습니다. 몇 가지 경우를 제외하고 모든 테이블에는 클러스터형 인덱스가 있어야 합니다. 쿼리 성능을 향상시키는 것 외에도 요청 시 클러스터형 인덱스를 다시 작성하거나 다시 구성하여 테이블 조각화를 제어할 수 있습니다. 뷰에서 클러스터형 인덱스를 만들 수도 있습니다. 클러스터형된 인덱스는 [클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md) 항목에 정의되어 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 테이블에 클러스터형 인덱스를 만들 수 있습니다. 몇 가지 경우를 제외하고 모든 테이블에는 클러스터형 인덱스가 있어야 합니다. 쿼리 성능을 향상시키는 것 외에도 요청 시 클러스터형 인덱스를 다시 작성하거나 다시 구성하여 테이블 조각화를 제어할 수 있습니다. 뷰에서 클러스터형 인덱스를 만들 수도 있습니다. 클러스터형된 인덱스는 [클러스터형 및 비클러스터형 인덱스 소개](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)항목에 정의되어 있습니다.  
   
  **항목 내용**  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 32
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 개체 탐색기를 사용하여 클러스터형 인덱스를 만들려면  
+#### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 클러스터형 인덱스를 만들려면  
   
 1.  개체 탐색기에서 클러스터형 인덱스를 만들 테이블을 확장합니다.  
   
@@ -87,13 +91,13 @@ caps.handback.revision: 32
   
 4.  **인덱스 키 열**아래에서 **추가...**를 클릭합니다.  
   
-5.  *table_name***에서 열 선택** 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+5.  **table_name***에서 열 선택* 대화 상자에서 클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 6.  **확인**을 클릭합니다.  
   
 7.  **새 인덱스** 대화 상자에서 **확인**을 클릭합니다.  
   
-#### 테이블 디자이너를 사용하여 클러스터형 인덱스를 만들려면  
+#### <a name="to-create-a-clustered-index-by-using-the-table-designer"></a>테이블 디자이너를 사용하여 클러스터형 인덱스를 만들려면  
   
 1.  개체 탐색기에서 클러스터형 인덱스를 사용하여 테이블을 만들 데이터베이스를 확장합니다.  
   
@@ -109,7 +113,7 @@ caps.handback.revision: 32
   
 7.  **선택한 기본/고유 키 또는 인덱스** 입력란에서 새 인덱스를 선택합니다.  
   
-8.  표에서 **CLUSTERED로 만들기**를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **예**를 선택합니다.  
+8.  표에서 **CLUSTERED로 만들기**를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **예** 를 선택합니다.  
   
 9. **닫기**를 클릭합니다.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 클러스터형 인덱스를 만들려면  
+#### <a name="to-create-a-clustered-index"></a>클러스터형 인덱스를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -143,8 +147,9 @@ caps.handback.revision: 32
   
  자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [기본 키 만들기](../../relational-databases/tables/create-primary-keys.md)   
  [UNIQUE 제약 조건 만들기](../../relational-databases/tables/create-unique-constraints.md)  
   
   
+

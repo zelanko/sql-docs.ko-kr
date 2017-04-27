@@ -1,29 +1,33 @@
 ---
-title: "전체 데이터베이스 복원(전체 복구 모델) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 데이터베이스 복원"
-  - "데이터베이스 복원 [SQL Server], 전체 데이터베이스"
-  - "데이터베이스 복원 [SQL Server], 전체 데이터베이스"
-  - "복원 [SQL Server], 데이터베이스"
-  - "전체 복구 모델 [SQL Server], 복원 수행"
-  - "로그 백업 [SQL Server]"
+title: "전체 데이터베이스 복원(전체 복구 모델) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- complete database restores
+- database restores [SQL Server], complete database
+- restoring databases [SQL Server], complete database
+- restoring [SQL Server], database
+- full recovery model [SQL Server], performing restores
+- log backups [SQL Server[
 ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 caps.latest.revision: 77
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b2fe04099e9ec76ea157b1428fa0a4896ad8e78
+ms.lasthandoff: 04/11/2017
+
 ---
-# 전체 데이터베이스 복원(전체 복구 모델)
+# <a name="complete-database-restores-full-recovery-model"></a>전체 데이터베이스 복원(전체 복구 모델)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   전체 데이터베이스 복원의 목적은 전체 데이터베이스를 복원하는 것입니다. 복원하는 동안 전체 데이터베이스는 오프라인 상태가 됩니다. 데이터베이스의 일부를 온라인에 연결하기 전에 데이터베이스의 모든 부분의 지정 시간이 같고 커밋되지 않은 트랜잭션이 없는 일치하는 지점으로 모든 데이터를 복구합니다.  
@@ -33,7 +37,7 @@ caps.handback.revision: 77
  데이터베이스를 복원할 경우, 특히 전체 복구 모델 또는 대량 로그 복구 모델에서는 단일 복원 순서를 사용해야 합니다. *복원 순서* 는 하나 이상의 복원 단계를 통해 데이터를 이동시키는 하나 이상의 복원 작업으로 구성됩니다.  
   
 > [!IMPORTANT]  
->  알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  
+>  알 수 없거나 신뢰할 수 없는 출처의 데이터베이스는 연결 또는 복원하지 않는 것이 좋습니다. 이러한 데이터베이스에 포함된 악성 코드가 의도하지 않은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행하거나 스키마 또는 물리적 데이터베이스 구조를 수정하여 오류가 발생할 수 있습니다. 알 수 없거나 신뢰할 수 없는 소스의 데이터베이스를 사용하기 전에 비프로덕션 서버의 데이터베이스에서 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 를 실행하여 데이터베이스에서 코드(예: 저장 프로시저 또는 다른 사용자 정의 코드)를 시험해 보세요.  
   
  **항목 내용**  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 77
 -   [관련 태스크](#RelatedTasks)  
   
 > [!NOTE]  
->  이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)의 "호환성 지원" 섹션을 참조하세요.  
+>  이전 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 백업 지원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)의 "호환성 지원" 섹션을 참조하세요.  
   
 ##  <a name="PointOfFailure"></a> 오류 지점으로 데이터베이스 복원  
  일반적으로 실패 지점으로 데이터베이스를 복구하는 작업에는 다음의 기본 단계가 포함됩니다.  
@@ -74,7 +78,7 @@ caps.handback.revision: 77
 >  데이터베이스 백업을 다른 서버 인스턴스로 복원할 경우 [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)를 참조하세요.  
   
 ###  <a name="TsqlSyntax"></a> 기본 Transact-SQL RESTORE 구문  
- 이전 그림의 복원 순서에 대한 기본 [RESTORE](../Topic/RESTORE%20\(Transact-SQL\).md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
+ 이전 그림의 복원 순서에 대한 기본 [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
   
 1.  RESTORE DATABASE *database* FROM *full database backup* WITH NORECOVERY;  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 77
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예에서는 복원 순서에서 오류 지점으로 데이터베이스를 복원하는 필수 옵션을 보여 줍니다. 이 예에서는 데이터베이스의 비상 로그 백업을 만듭니다. 다음으로 전체 데이터베이스 백업 및 로그 백업을 복원한 다음 비상 로그 백업을 복원합니다. 이 예의 경우 별도의 마지막 단계에서 데이터베이스를 복구합니다.  
   
 > [!NOTE]  
->  이 예에서는 [전체 데이터베이스 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)의 "전체 복구 모델에서 데이터베이스 백업 사용" 섹션에서 생성된 데이터베이스 백업 및 로그 백업을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스는 데이터베이스 백업 전에 전체 복구 모델을 사용하도록 설정되었습니다.  
+>  이 예에서는 [전체 데이터베이스 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/full-database-backups-sql-server.md)의 "호환성 지원" 섹션을 참조하세요. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스는 데이터베이스 백업 전에 전체 복구 모델을 사용하도록 설정되었습니다.  
   
 ```  
 USE master;  
@@ -125,7 +129,7 @@ GO
 ##  <a name="PointWithinBackup"></a> 데이터베이스를 로그 백업 내 지점으로 복원  
  전체 복구 모델에서, 전체 데이터베이스 복원은 일반적으로 지정 시간, 표시된 트랜잭션 또는 로그 백업 내 LSN으로 복구될 수 있습니다. 그러나 대량 로그 복구 모델에서 로그 백업에 대량 로그 변경 내용이 있을 경우 지정 시간 복구를 사용할 수 없습니다.  
   
-### 예제 지정 시간 복원 시나리오  
+### <a name="sample-point-in-time-restore-scenarios"></a>예제 지정 시간 복원 시나리오  
  다음 예에서는 매일 자정에 전체 데이터베이스 백업을 만들고 월요일부터 토요일까지 정시에 차등 데이터베이스 백업을 만들며 하루 종일 10분마다 트랜잭션 로그 백업을 만드는 업무용 데이터베이스 시스템이 있다고 가정합니다. 데이터베이스를 수요일 5:19 A.M. 상태로 복원하려면 다음을 수행합니다.  
   
 1.  화요일 자정에 만든 전체 데이터베이스 백업을 복원합니다.  
@@ -147,7 +151,7 @@ GO
 4.  목요일 3:04 A.M.에 복구 프로세스를 중지하여 3:10 A.M.에 만든 트랜잭션 로그 백업을 적용합니다.  
   
 > [!NOTE]  
->  지정 시간으로 복원하는 예제를 보려면 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)을 참조하세요.  
+>  지정 시간으로 복원하는 예제를 보려면 [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)의 "호환성 지원" 섹션을 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **전체 데이터베이스 백업을 복원하려면**  
@@ -176,8 +180,8 @@ GO
   
 -   [로그 시퀀스 번호로 복구&#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md)  
   
-## 참고 항목  
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>참고 항목  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

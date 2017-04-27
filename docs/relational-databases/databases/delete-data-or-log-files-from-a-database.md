@@ -1,30 +1,34 @@
 ---
-title: "데이터베이스에서 데이터 또는 로그 파일 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 [SQL Server], 파일"
-  - "파일 삭제"
-  - "파일 제거"
-  - "데이터 제거"
-  - "데이터 삭제 [SQL Server]"
-  - "파일 삭제 [SQL Server]"
-  - "데이터 삭제"
+title: "데이터베이스에서 데이터 또는 로그 파일 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [SQL Server], files
+- deleting files
+- removing files
+- removing data
+- data deletions [SQL Server]
+- file deletion [SQL Server]
+- deleting data
 ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 caps.latest.revision: 33
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 36e392193602317505657a483e9ffa06c3153993
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스에서 데이터 또는 로그 파일 삭제
+# <a name="delete-data-or-log-files-from-a-database"></a>데이터베이스에서 데이터 또는 로그 파일 삭제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]의 데이터 또는 로그 파일을 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -54,7 +58,7 @@ caps.handback.revision: 33
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스에서 데이터 또는 로그 파일을 삭제하려면  
+#### <a name="to-delete-data-or-log-files-from-a-database"></a>데이터베이스에서 데이터 또는 로그 파일을 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -68,19 +72,19 @@ caps.handback.revision: 33
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스에서 데이터 또는 로그 파일을 삭제하려면  
+#### <a name="to-delete-data-or-log-files-from-a-database"></a>데이터베이스에서 데이터 또는 로그 파일을 삭제하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `test1dat4` 파일을 제거합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 다음 예에서는 `test1dat4`파일을 제거합니다.  
   
  [!code-sql[DatabaseDDL#AlterDatabase4](../../relational-databases/databases/codesnippet/tsql/delete-data-or-log-files_1.sql)]  
   
- 더 많은 예제를 보려면 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)을 참조하세요.  
+ 더 많은 예제를 보려면 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 축소](../../relational-databases/databases/shrink-a-database.md)   
  [데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   

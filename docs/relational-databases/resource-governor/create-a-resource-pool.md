@@ -1,32 +1,36 @@
 ---
-title: "리소스 풀 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 풀 [SQL Server], 만들기"
-  - "리소스 관리자, 리소스 풀 만들기"
+title: "리소스 풀 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource pools [SQL Server], create
+- Resource Governor, resource pool create
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3d5262087e05342256bb46c28ea7fd5d2ce1bf54
+ms.lasthandoff: 04/11/2017
+
 ---
-# 리소스 풀 만들기
+# <a name="create-a-resource-pool"></a>리소스 풀 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 리소스 풀을 만들 수 있습니다. 리소스 풀의 보안 주체를 이해하려면 [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)을(를) 참조하세요.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **리소스 풀을 만드는 데 사용되는 도구:** [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **To create a resource pool, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 19
   
  모든 리소스 풀에 대한 최대 CPU 비율과 최소 CPU 비율의 합은 100을 초과할 수 없습니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  리소스 풀을 만들려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 리소스 풀 만들기  
@@ -51,7 +55,7 @@ caps.handback.revision: 19
   
 5.  변경할 행의 다른 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-6.   **확인**을 클릭하여 변경 내용을 저장합니다.  
+6.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="CreRPTSQL"></a> Transact-SQL을 사용하여 리소스 풀 만들기  
  **다음을 사용하여 리소스 풀 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** 문을 실행합니다.  
   
-### 예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예(Transact-SQL)  
  다음 예에서는 `poolAdhoc`이라는 리소스 풀을 만듭니다.  
   
 ```  
@@ -71,10 +75,10 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
- [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 풀 설정 변경](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [리소스 풀 삭제](../../relational-databases/resource-governor/delete-a-resource-pool.md)   
  [템플릿을 사용하여 리소스 관리자 구성](../../relational-databases/resource-governor/configure-resource-governor-using-a-template.md)   
@@ -86,3 +90,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

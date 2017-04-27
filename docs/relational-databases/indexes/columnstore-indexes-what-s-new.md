@@ -1,23 +1,27 @@
 ---
-title: "Columnstore 인덱스 버전형 기능 요약 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Columnstore 인덱스 - 새로운 기능 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 1fe5ea05-5b19-45a4-9b7a-8ae5ca367897
 caps.latest.revision: 28
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8dc55e28462cd04a90274ada860fd418bcc54775
+ms.lasthandoff: 04/11/2017
+
 ---
-# Columnstore 인덱스 버전형 기능 요약
+# <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   각 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 columnstore 기능과 최신 버전의 Azure SQL Database Premium Edition, Azure SQL Data Warehouse 및 Parallel Data Warehouse에 대한 요약입니다.  
@@ -51,7 +55,7 @@ caps.handback.revision: 27
  *읽기 가능한 비클러스터형 columnstore 인덱스를 만들려면 읽기 전용 파일 그룹에 인덱스를 저장합니다.  
   
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]는 columnstore 인덱스의 성능 및 유연성을 개선하기 위해 주요 향상 기능을 추가합니다. 이를 통해 데이터 웨어하우징 시나리오가 향상되며 실시간 운영 분석이 가능합니다.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 columnstore 인덱스의 성능 및 유연성을 개선하기 위해 주요 향상 기능을 추가합니다. 이를 통해 데이터 웨어하우징 시나리오가 향상되며 실시간 운영 분석이 가능합니다.  
   
 ### <a name="functional"></a>기능  
   
@@ -161,11 +165,12 @@ caps.handback.revision: 27
 -   일괄 처리는 2배 이상 더 좋은 쿼리 성능을 제공하지만 병렬 쿼리 실행에 대해서만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Columnstore 인덱스 가이드](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Columnstore 인덱스 데이터 로드](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
+ Columnstore 인덱스 가이드   
+ Columnstore 인덱스 데이터 로드   
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
- [데이터 웨어하우스용 Columnstore 인덱스](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)   
+ 데이터 웨어하우스용 Columnstore 인덱스   
  [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

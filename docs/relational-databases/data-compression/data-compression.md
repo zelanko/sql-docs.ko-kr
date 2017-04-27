@@ -1,35 +1,39 @@
 ---
-title: "데이터 압축 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-compression"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "페이지 압축 [데이터베이스 엔진]"
-  - "인덱스 [SQL Server], 압축됨"
-  - "압축된 인덱스 [SQL Server]"
-  - "저장소 압축 [데이터베이스 엔진]"
-  - "테이블 [SQL Server], 압축됨"
-  - "저장소 [SQL Server], 압축됨"
-  - "압축 [SQL Server]"
-  - "행 압축 [데이터베이스 엔진]"
-  - "압축 [SQL Server], 압축된 테이블 및 인덱스"
-  - "데이터 압축 [데이터베이스 엔진]"
-  - "압축된 테이블 [SQL Server]"
+title: "데이터 압축 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-compression
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- page compression [Database Engine]
+- indexes [SQL Server], compressed
+- compressed indexes [SQL Server]
+- storage compression [Database Engine]
+- tables [SQL Server], compressed
+- storage [SQL Server], compressed
+- compression [SQL Server]
+- row compression [Database Engine]
+- compression [SQL Server], about compressed tables and indexes
+- data compression [Database Engine]
+- compressed tables [SQL Server]
 ms.assetid: 5f33e686-e115-4687-bd39-a00c48646513
 caps.latest.revision: 60
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 686f793e6579b54278a4d43e11e764efda84972e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 압축
+# <a name="data-compression"></a>Data Compression
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 rowstore 테이블 및 인덱스를 위해 행 및 페이지 압축을 지원하며 columnstore 테이블 및 인덱스를 위해 columnstore 및 columnstore 보관 압축을 지원합니다.  
@@ -57,14 +61,14 @@ caps.handback.revision: 60
 > [!NOTE]  
 >  데이터는 GZIP 알고리즘 형식을 사용하여 압축될 수도 있습니다. 이는 추가 단계이며 장기 저장소에 이전 데이터를 보관하는 경우 데이터의 일부를 압축하는 데 가장 적합합니다. COMPRESS 함수를 사용하여 압축된 데이터는 인덱싱할 수 없습니다. 자세한 내용은 [COMPRESS&#40;Transact-SQL&#41;](../../t-sql/functions/compress-transact-sql.md)를 참조하세요.  
   
-## 행 및 페이지 압축 시 고려 사항  
+## <a name="considerations-for-when-you-use-row-and-page-compression"></a>행 및 페이지 압축 시 고려 사항  
  행 및 페이지 압축을 사용할 때 다음 사항을 고려해야 합니다.  
   
 -   데이터 압축의 세부 사항은 서비스 팩이나 후속 릴리스에서 예고 없이 변경될 수 있습니다.
 
--   다음에서 압축을 사용할 수 있습니다. [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]  
+-   [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]에서 압축을 사용할 수 있습니다.  
   
--   일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 압축을 사용할 수 없습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+-   일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 압축을 사용할 수 없습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 -   시스템 테이블에는 압축을 사용할 수 없습니다.  
   
@@ -109,22 +113,22 @@ caps.handback.revision: 60
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 vardecimal 저장소 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 저장소 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 저장소 형식의 상위 집합이므로 vardecimal 저장소 형식을 유지할 필요가 없습니다. vardecimal 저장소 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 저장소 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 저장소 형식 열이 추가로 압축되지는 않습니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 vardecimal 저장소 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 저장소 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## Columnstore 및 Columnstore 보관 압축 사용  
+## <a name="using-columnstore-and-columnstore-archive-compression"></a>Columnstore 및 Columnstore 보관 압축 사용  
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)].|  
   
-### 기본 사항  
+### <a name="basics"></a>기본 사항  
  Columnstore 테이블 및 인덱스는 항상 columnstore 압축으로 저장됩니다. 보관 압축이라고 하는 추가 압축을 구성하여 columnstore 데이터 크기를 더 줄일 수 있습니다.  보관 압축을 수행하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터에 대해 Microsoft XPRESS 압축 알고리즘을 실행합니다. 다음 데이터 압축 유형을 사용하여 보관 압축을 추가하거나 제거합니다.  
   
 -   보관 압축으로 columnstore 데이터를 압축하려면 **COLUMNSTORE_ARCHIVE** 데이터 압축을 사용하세요.  
   
 -   보관 압축을 풀려면 **COLUMNSTORE** 데이터 압축을 사용하십시오. 결과 데이터는 columnstore 압축으로 계속해서 압축됩니다.  
   
- 보관 압축을 추가하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 사용하세요.  
+ 보관 압축을 추가하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 를 사용하세요.  
   
  예:  
   
@@ -140,7 +144,7 @@ REBUILD PARTITION = ALL WITH (DATA_COMPRESSION =  COLUMNSTORE_ARCHIVE ON PARTITI
   
 ```  
   
- 보관 압축을 제거하고 데이터를 columnstore 압축으로 복원하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 사용하세요.  
+ 보관 압축을 제거하고 데이터를 columnst또는e 압축으로 복원하려면 REBUILD 옵션 및 DATA COMPRESSION = COLUMNSTORE와 함께 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) 또는 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) 를 사용하세요.  
   
  예:  
   
@@ -166,12 +170,12 @@ REBUILD PARTITION = ALL WITH (
 ) ;  
 ```  
   
-### 성능  
+### <a name="performance"></a>성능  
  보관 압축으로 columnstore 인덱스를 압축하면 보관 압축을 사용하지 않는 columnstore 인덱스보다 인덱스가 느리게 수행됩니다.  데이터를 압축하고 검색할 추가 시간과 CPU 리소스가 있는 상황에서만 보관 압축을 사용하십시오.  
   
  성능 저하의 이점은 자주 액세스하지 않는 데이터에 대해 유용한 저장소 용량 감소입니다. 예를 들어, 월별 데이터에 대해 파티션이 있고 대부분의 작업이 가장 최근 월에 대한 작업인 경우 저장소 요구 사항을 줄이기 위해 이전 월을 보관할 수 있습니다.  
   
-### 메타데이터  
+### <a name="metadata"></a>메타데이터  
  다음 시스템 뷰에는 클러스터형 인덱스의 데이터 압축 정보가 포함되어 있습니다.  
   
 -   [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type**과 **type_desc** 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE가 포함됩니다.  
@@ -180,7 +184,7 @@ REBUILD PARTITION = ALL WITH (
   
  [sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
   
-## 압축이 분할된 테이블 및 인덱스에 주는 영향  
+## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>압축이 분할된 테이블 및 인덱스에 주는 영향  
  분할된 테이블 및 인덱스에서 데이터 압축을 사용할 때는 다음 사항을 고려해야 합니다.  
   
 -   ALTER PARTITION 문을 사용하여 파티션을 분할할 경우 두 파티션이 모두 원래 파티션의 데이터 압축 특성을 상속합니다.  
@@ -217,10 +221,10 @@ REBUILD PARTITION = ALL WITH (
   
      클러스터형 인덱스를 OFFLINE으로 삭제하면 클러스터형 인덱스의 상위 수준만 제거되므로 작업이 상당히 빠르게 수행됩니다. 클러스터형 인덱스를 ONLINE으로 삭제하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 1단계와 2단계에서 한 번씩, 총 두 번에 걸쳐 힙을 다시 작성해야 합니다.  
   
-## 압축이 복제에 주는 영향 
+## <a name="how-compression-affects-replication"></a>압축이 복제에 주는 영향 
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|   
  데이터 압축과 복제를 함께 사용할 때는 다음 사항을 고려해야 합니다.  
   
 -   스냅숏 에이전트에서 초기 스키마 스크립트를 생성할 때 새 스키마는 테이블과 해당 인덱스 모두에 대해 동일한 압축 설정을 사용합니다. 압축을 인덱스에 사용하지 않고 테이블에만 사용할 수는 없습니다.  
@@ -242,12 +246,12 @@ REBUILD PARTITION = ALL WITH (
 |파티션 구성표를 복제하지 않고 구독자에서 데이터를 압축하지 않음|False|False|파티션이나 압축 설정을 스크립팅하지 않습니다.|  
 |게시자에서 모든 파티션이 압축된 경우 구독자에서 테이블을 압축하지만 파티션 구성표를 복제하지 않음|False|True|모든 파티션에서 압축을 사용할 수 있는지 확인합니다.<br /><br /> 테이블 수준에서 압축을 스크립팅합니다.|  
   
-## 압축이 다른 SQL Server 구성 요소에 주는 영향 
+## <a name="how-compression-affects-other-sql-server-components"></a>압축이 다른 SQL Server 구성 요소에 주는 영향 
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
+|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)).|
    
- 압축은 저장소 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
+ 압축은 저장소 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
   
 -   대량 가져오기 및 내보내기 작업  
   
@@ -265,7 +269,7 @@ REBUILD PARTITION = ALL WITH (
   
 -   데이터는 서로 다른 페이지 수 및 페이지당 행 수를 사용하여 저장되므로 압축을 사용하도록 설정하면 쿼리 계획이 변경될 수도 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [행 압축 구현](../../relational-databases/data-compression/row-compression-implementation.md)   
  [페이지 압축 구현](../../relational-databases/data-compression/page-compression-implementation.md)   
  [유니코드 압축 구현](../../relational-databases/data-compression/unicode-compression-implementation.md)   
@@ -277,3 +281,5 @@ REBUILD PARTITION = ALL WITH (
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)  
   
   
+
+

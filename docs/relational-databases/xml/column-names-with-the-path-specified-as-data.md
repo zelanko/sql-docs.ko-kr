@@ -1,24 +1,28 @@
 ---
-title: "경로가 data()로 지정된 열 이름 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이름 [SQL Server], 포함하는 열"
+title: "경로가 data()로 지정된 열 이름 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: 0b738e44-6108-4417-a9a4-abeb7680d899
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7684de73d40f3ac587f0307d904931c99a9a822a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 경로가 data()로 지정된 열 이름
+# <a name="column-names-with-the-path-specified-as-data"></a>경로가 data()로 지정된 열 이름
   열 이름으로 지정된 경로가 "data()"일 경우 생성된 XML에서 해당 값이 원자 값으로 처리됩니다. 직렬화의 다음 항목도 원자성 값이면 공백 문자가 XML에 추가됩니다. 이 특징은 목록 유형의 요소와 특성 값을 만들 때 유용합니다. 다음 쿼리는 제품 모델 ID, 이름 및 해당 제품 모델에 속한 제품 목록을 검색합니다.  
   
 ```  
@@ -44,7 +48,7 @@ FOR XML PATH('ProductModelData');
   
  `ProductIDs="885 887 888 889 890 891 892 893" />`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

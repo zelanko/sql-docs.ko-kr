@@ -1,34 +1,38 @@
 ---
-title: "데이터베이스 속성(트랜잭션 로그 전달 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.logshipping.f1"
+title: "데이터베이스 속성(트랜잭션 로그 전달 페이지) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.logshipping.f1
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 11d0b9d1cde11ab1f3a0944c313d4d800e5039b0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 속성(트랜잭션 로그 전달 페이지)
+# <a name="database-properties-transaction-log-shipping-page"></a>데이터베이스 속성(트랜잭션 로그 전달 페이지)
   이 페이지를 사용하여 데이터베이스의 로그 전달 속성을 구성하고 수정할 수 있습니다.  
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **이 데이터베이스를 로그 전달 구성의 주 데이터베이스로 사용**  
  이 데이터베이스를 로그 전달 주 데이터베이스로 사용합니다. 이 옵션을 선택한 다음 페이지의 나머지 옵션을 구성합니다. 이 확인란의 선택을 취소하면 이 데이터베이스의 로그 전달 구성이 삭제됩니다.  
   
  **백업 설정**  
- 백업 일정, 위치, 경고 및 보관 매개 변수를 구성하려면 **백업 설정**을 클릭합니다.  
+ 백업 일정, 위치, 경고 및 보관 매개 변수를 구성하려면 **백업 설정** 을 클릭합니다.  
   
  **백업 일정**  
  주 데이터베이스에 대해 현재 선택한 백업 일정을 보여 줍니다. 이러한 설정을 수정하려면 **백업 설정** 을 클릭합니다.  
@@ -40,7 +44,7 @@ caps.handback.revision: 21
  이 주 데이터베이스에 대해 현재 구성된 보조 서버와 데이터베이스를 나열합니다. 해당 보조 데이터베이스와 연결된 매개 변수를 수정하려면 데이터베이스를 강조 표시한 다음 **...** 을 클릭합니다.  
   
  **추가**  
- 이 주 데이터베이스의 로그 전달 구성에 보조 데이터베이스를 추가하려면 **추가**를 클릭합니다.  
+ 이 주 데이터베이스의 로그 전달 구성에 보조 데이터베이스를 추가하려면 **추가** 를 클릭합니다.  
   
  **제거**  
  이 로그 전달 구성에서 선택한 데이터베이스를 제거합니다. 먼저 데이터베이스를 선택한 다음 **제거**를 클릭합니다.  
@@ -60,7 +64,7 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  보조 데이터베이스에 대한 설정을 스크립팅하기 전에 **보조 데이터베이스 설정** 대화 상자를 호출해야 합니다. 이 대화 상자를 호출하면 보조 서버에 연결되며 스크립트 생성에 필요한 보조 데이터베이스의 현재 설정이 검색됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)   
  [로그 전달 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   

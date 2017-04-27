@@ -1,25 +1,29 @@
 ---
-title: "SQL Server 개체 및 버전에 대한 DAC 지원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-data-tier-apps"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 계층 응용 프로그램 [SQL Server], 지원되는 개체"
-  - "개체 [SQL Server], 데이터 계층 응용 프로그램"
+title: "SQL Server 개체 및 버전에 대한 DAC 지원 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-data-tier-apps
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data-tier application [SQL Server], supported objects
+- objects [SQL Server], data-tier applications
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6c6fa912592feefe48ce023f58fbf032d64004e6
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 개체 및 버전에 대한 DAC 지원
+# <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
   DAC(데이터 계층 응용 프로그램)는 가장 일반적으로 사용되는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 개체를 지원합니다.  
   
  **항목 내용**  
@@ -60,7 +64,7 @@ caps.handback.revision: 19
   
 -   내보내기 및 추출은 지원되는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원됩니다.  
   
--   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]와 모든 버전의 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서는 모든 작업이 지원됩니다.  
+-   [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 와 모든 버전의 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]및 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서는 모든 작업이 지원됩니다.  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP2(서비스 팩 2) 이상과 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 이상에서는 모든 작업이 지원됩니다.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 19
 ##  <a name="DeploymentLimitations"></a> 데이터 배포 제한 사항  
  SQL Server 2012 SP1에서 DAC Framework 데이터 배포 엔진의 정확도 제한 사항에 유의하세요. 제한 사항은 .dacpac 파일 배포 또는 게시, .bacpac 파일 가져오기 등의 DAC Framework 작업에 적용됩니다.  
   
-1.  sql_variant 열 내에서 특정 조건 및 기본 형식의 메타데이터 손실 영향을 받는 경우 다음 메시지와 함께 경고가 나타납니다. **DAC Framework에서 배포될 때 sql_variant 열 내에 사용된 특정 데이터 형식의 특정 속성은 유지되지 않습니다.**  
+1.  sql_variant 열 내에서 특정 조건 및 기본 형식의 메타데이터 손실 영향을 받는 경우 다음 메시지와 함께 경고가 나타납니다.  **DAC Framework에서 배포될 때 sql_variant 열 내에 사용된 특정 데이터 형식의 특정 속성은 유지되지 않습니다.**  
   
     -   MONEY, SMALLMONEY, NUMERIC, DECIMAL 기본 형식: 전체 자릿수는 유지되지 않습니다.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 19
 ##  <a name="Considerations"></a> 배포 작업에 대한 추가 고려 사항  
  DAC Framework 데이터 배포 작업에 대한 다음 고려 사항에 유의하세요.  
   
--   **추출/내보내기** - DAC Framework를 사용하여 데이터베이스에서 패키지를 만드는 작업(예: .dacpac 파일 추출, .bacpac 파일 내보내기 등)에서는 이러한 제한이 적용되지 않습니다. 패키지의 데이터는 원본 데이터베이스에서 데이터의 전체 정확도 표현입니다. 패키지에 이러한 조건 중 하나라도 있는 경우 추출/내보내기 로그에는 위에서 설명한 메시지를 통한 문제 요약이 포함됩니다. 이것은 그들이 만든 패키지의 잠재적인 데이터 배포 문제에 대해 사용자에게 경고하기 위한 것입니다. 사용자는 로그에서 다음과 같은 요약 메시지를 확인할 수도 있습니다. **이러한 제한은 데이터 형식 및 DAC Framework에서 만든 DAC 패키지에 저장된 값의 정확도에 영향을 미치지 않고, DAC 패키지를 데이터베이스에 배포한 결과 발생한 데이터 유형 및 값에만 적용됩니다. 영향 받는 데이터 및 이 제한을 해결하는 방법은 **[다음 항목](http://go.microsoft.com/fwlink/?LinkId=267086)을 참조하세요.  
+-   **추출/내보내기** - DAC Framework를 사용하여 데이터베이스에서 패키지를 만드는 작업(예: .dacpac 파일 추출, .bacpac 파일 내보내기 등)에서는 이러한 제한이 적용되지 않습니다. 패키지의 데이터는 원본 데이터베이스에서 데이터의 전체 정확도 표현입니다. 패키지에 이러한 조건 중 하나라도 있는 경우 추출/내보내기 로그에는 위에서 설명한 메시지를 통한 문제 요약이 포함됩니다. 이것은 그들이 만든 패키지의 잠재적인 데이터 배포 문제에 대해 사용자에게 경고하기 위한 것입니다. 사용자는 로그에서 다음과 같은 요약 메시지를 확인할 수도 있습니다. **이러한 제한은 데이터 형식 및 DAC Framework에서 만든 DAC 패키지에 저장된 값의 정확도에 영향을 미치지 않고, DAC 패키지를 데이터베이스에 배포한 결과 발생한 데이터 유형 및 값에만 적용됩니다. 영향 받는 데이터 및 이 제한을 해결하는 방법은** [다음 항목](http://go.microsoft.com/fwlink/?LinkId=267086)을 참조하세요.  
   
 -   **배포/게시/가져오기** - DAC Framework를 사용하여 패키지를 데이터베이스에 배포하는 작업(예: .dacpac 파일 배포 또는 게시, .bacpac 파일 가져오기 등)에서는 이러한 제한이 적용됩니다. 대상 데이터베이스를 만드는 데이터에 패키지에 있는 데이터의 전체 정확도 표현이 포함되지 않을 수 있습니다. 배포/가져오기 로그에는 문제가 발생한 모든 인스턴스에 대해 위에서 언급한 메시지가 포함됩니다. 오류로 인해 작업은 차단되지만(위의 범주 3 참조) 다른 경고와 함께 계속됩니다.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 19
   
 -   **해결 방법** - 추출 및 내보내기 작업에서는 전체 정확도 BCP 데이터 파일을 .dacpac 또는 .bacpac 파일에 기록합니다. 제한 사항을 피하려면 SQL Server BCP.exe 명령 줄 유틸리티를 사용하여 DAC 패키지에서 대상 데이터베이스로 전체 정확도 데이터를 배포합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 계층 응용 프로그램](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

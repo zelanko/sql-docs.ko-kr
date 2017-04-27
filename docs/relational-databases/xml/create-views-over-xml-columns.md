@@ -1,25 +1,29 @@
 ---
-title: "XML 열에서 뷰 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "뷰 [SQL Server의 XML]"
+title: "XML 열에서 뷰 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5f71a5ebacb8af3a58c6eada233c16b955b6ae5
+ms.lasthandoff: 04/11/2017
+
 ---
-# XML 열에서 뷰 만들기
-  **xml** 유형 열을 사용하여 뷰를 만들 수 있습니다. 다음 예에서는 **xml** 데이터 형식의 **value()** 메서드를 사용하여 `xml` 유형 열의 값을 검색하는 뷰를 만듭니다.  
+# <a name="create-views-over-xml-columns"></a>XML 열에서 뷰 만들기
+  **xml** 유형 열을 사용하여 뷰를 만들 수 있습니다. 다음 예에서는 `xml` xml **데이터 형식의** value() **메서드를 사용하여** 유형 열의 값을 검색하는 뷰를 만듭니다.  
   
 ```  
 -- Create the table.  

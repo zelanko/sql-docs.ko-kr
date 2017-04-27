@@ -1,25 +1,29 @@
 ---
-title: "백업 압축 구성(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "백업 압축 구성(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 430905eb-d218-458c-bd48-aeee6fbb7446
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 08c6e1ccb56a08309d2c904a8566884372dc3778
+ms.lasthandoff: 04/11/2017
+
 ---
-# 백업 압축 구성(SQL Server)
+# <a name="configure-backup-compression-sql-server"></a>백업 압축 구성(SQL Server)
   설치 시 백업 압축은 기본적으로 설정되지 않습니다. 백업 압축의 기본 동작은 **백업 압축 기본값** 옵션 서버 수준 구성 옵션에 의해 정의됩니다. 그러나 단일 백업을 만들거나 일련의 일상적인 백업을 예약할 때 서버 수준 기본값을 재정의할 수 있습니다. 서버 수준 기본값을 변경하려면 [백업 압축 기본값 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.  
   
-## 백업 압축 기본값 재정의  
+## <a name="override-the-backup-compression-default"></a>백업 압축 기본값 재정의  
  단일 백업, 백업 작업 또는 로그 전달 구성에 대한 백업 압축 동작을 변경할 수 있습니다.  
   
 -   **[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -32,7 +36,7 @@ caps.handback.revision: 6
   
      [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 백업 압축 기본 옵션을 보거나 구성하는 방법은 [백업 압축 기본값 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)을 참조하세요.  
   
-     다음 대화 상자에서 **백업 압축** 또는 **백업 압축 안 함**을 지정하여 백업을 만들 때 서버 백업 압축 기본값을 재정의할 수 있습니다.  
+     다음 대화 상자에서 **백업 압축** 또는 **백업 압축 안 함** 을 지정하여 백업을 만들 때 서버 백업 압축 기본값을 재정의할 수 있습니다.  
   
     -   [데이터베이스 백업(옵션 페이지)](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)  
   
@@ -50,9 +54,8 @@ caps.handback.revision: 6
   
          로그 백업의 백업 압축 동작을 제어할 수 있습니다.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 압축&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md)  
   
   

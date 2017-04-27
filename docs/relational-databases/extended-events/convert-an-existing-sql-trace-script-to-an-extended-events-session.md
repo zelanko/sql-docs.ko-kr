@@ -1,26 +1,30 @@
 ---
-title: "기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL 추적, 스크립트를 확장된 이벤트로 변환"
-  - "확장된 이벤트 [SQL Server], SQL 추적 스크립트로 변환"
+title: "기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Trace, convert script to extended events
+- extended events [SQL Server], convert SQL Trace script
 ms.assetid: 4c8f29e6-0a37-490f-88b3-33493871b3f9
 caps.latest.revision: 21
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3817f8c3c5b3aaa50770b3734974e457a4e802e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
+# <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>기존 SQL 추적 스크립트를 확장 이벤트 세션으로 변환
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   확장 이벤트 세션으로 변환할 기존 SQL 추적 스크립트가 있는 경우 이 항목의 절차를 따라 해당하는 확장 이벤트 세션을 만들 수 있습니다. trace_xe_action_map 및 trace_xe_event_map 시스템 테이블의 정보를 사용하여 변환을 수행하는 데 필요한 정보를 수집할 수 있습니다.  
@@ -35,7 +39,7 @@ caps.handback.revision: 21
   
 4.  해당하는 확장 이벤트의 이벤트, 동작 및 조건자(필터)를 사용하여 확장 이벤트 세션을 수동으로 만듭니다.  
   
-## 추적 ID를 확인하려면  
+## <a name="to-obtain-the-trace-id"></a>추적 ID를 확인하려면  
   
 1.  쿼리 편집기에서 SQL 추적 스크립트를 연 다음 실행하여 추적 세션을 만듭니다. 이 절차를 완료하기 위해 추적 세션을 실행하고 있을 필요는 없습니다.  
   
@@ -49,9 +53,9 @@ caps.handback.revision: 21
     > [!NOTE]  
     >  추적 ID 1은 일반적으로 기본 추적을 나타냅니다.  
   
-## 확장 이벤트의 해당 항목을 확인하려면  
+## <a name="to-determine-the-extended-events-equivalents"></a>확장 이벤트의 해당 항목을 확인하려면  
   
-1.  해당하는 확장 이벤트의 이벤트 및 동작을 확인하려면 다음 쿼리를 실행합니다. 여기서 *trace_id*는 이전 절차에서 확인한 추적 ID 값으로 설정합니다.  
+1.  해당하는 확장 이벤트의 이벤트 및 동작을 확인하려면 다음 쿼리를 실행합니다. 여기서 *trace_id* 는 이전 절차에서 확인한 추적 ID 값으로 설정합니다.  
   
     > [!NOTE]  
     >  이 예에서는 기본 추적의 추적 ID(1)가 사용됩니다.  
@@ -79,7 +83,7 @@ caps.handback.revision: 21
   
          예를 들어 SP:StmtCompleted 이벤트 클래스를 사용하고 Duration 추적 열 이름(SQL 추적 이벤트 클래스 ID 45 및 SQL 추적 열 ID 13)에 필터를 지정했을 수 있습니다. 이 경우 동작 이름이 쿼리 결과에 NULL로 나타납니다.  
   
-    2.  이전 단계에서 확인한 각 SQL 추적 이벤트 클래스에 대해 해당하는 확장 이벤트의 이벤트 이름을 찾습니다. 해당하는 이벤트 이름을 모르면 [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md) 항목에 나오는 쿼리를 사용합니다.  
+    2.  이전 단계에서 확인한 각 SQL 추적 이벤트 클래스에 대해 해당하는 확장 이벤트의 이벤트 이름을 찾습니다. 해당하는 이벤트 이름을 모르면 [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)항목에 나오는 쿼리를 사용합니다.  
   
     3.  다음 쿼리를 사용하여 이전 단계에서 확인한 이벤트에 사용할 올바른 데이터 필드를 확인합니다. 이 쿼리는 확장 이벤트 데이터 필드를 "event_field" 열에 표시합니다. 쿼리에서 *<event_name>*을 이전 단계에서 지정한 이벤트의 이름으로 바꿉니다.  
   
@@ -99,10 +103,10 @@ caps.handback.revision: 21
   
          예를 들어 SP:StmtCompleted 이벤트 클래스는 확장 이벤트의 sp_statement_completed 이벤트에 매핑됩니다. 쿼리에서 sp_statement_completed를 이벤트 이름으로 지정하면 "event_field" 열에는 기본적으로 이벤트와 함께 포함되는 필드가 표시됩니다. 이러한 필드를 보고 "duration" 필드가 있는지 확인할 수 있습니다. 해당하는 확장 이벤트 세션에 필터를 만들려면 "WHERE duration > 0"과 같은 조건자를 추가합니다. 예를 보려면 이 항목의 "확장 이벤트 세션을 만들려면" 절차를 참조하십시오.  
   
-## 확장 이벤트 세션을 만들려면  
+## <a name="to-create-the-extended-events-session"></a>확장 이벤트 세션을 만들려면  
  쿼리 편집기를 사용하여 확장 이벤트 세션을 만들고 출력을 파일 대상에 씁니다. 다음 단계에서는 단일 쿼리를 설명하고 쿼리 작성 방법을 보여 줍니다. 전체 쿼리 예를 보려면 이 항목의 "예" 섹션을 참조하십시오.  
   
-1.  다음과 같이 이벤트 세션을 만드는 문을 추가합니다. *session_name*을 확장 이벤트 세션에 사용할 이름으로 바꿉니다.  
+1.  다음과 같이 이벤트 세션을 만드는 문을 추가합니다.*session_name* 을 확장 이벤트 세션에 사용할 이름으로 바꿉니다.  
   
     ```  
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -164,7 +168,7 @@ caps.handback.revision: 21
        SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 결과를 보려면  
+## <a name="to-view-the-results"></a>결과를 보려면  
   
 1.  sys.fn_xe_file_target_read_file 함수를 사용하여 출력을 볼 수 있습니다. 이렇게 하려면 다음 쿼리를 실행합니다. 파일 경로는 지정한 경로로 바꿉니다.  
   
@@ -213,7 +217,7 @@ caps.handback.revision: 21
        (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
     ```  
   
-## 예제  
+## <a name="example"></a>예제  
   
 ```  
 IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -249,7 +253,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL 추적 이벤트 클래스에 해당하는 확장 이벤트 항목 확인](../../relational-databases/extended-events/view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

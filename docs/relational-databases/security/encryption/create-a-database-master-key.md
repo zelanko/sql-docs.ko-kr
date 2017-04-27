@@ -1,24 +1,28 @@
 ---
-title: "데이터베이스 마스터 키 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 마스터 키 [SQL Server], 만들기"
+title: "데이터베이스 마스터 키 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database master key [SQL Server], creating
 ms.assetid: 8cb24263-e97d-4e4d-9429-6cf494a4d5eb
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2ea4a853ecc29a2173b9a471cb380fb77ce39c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 마스터 키 만들기
+# <a name="create-a-database-master-key"></a>데이터베이스 마스터 키 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 데이터베이스 마스터 키를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -38,7 +42,7 @@ caps.handback.revision: 16
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스 마스터 키를 만들려면  
+#### <a name="to-create-a-database-master-key"></a>데이터베이스 마스터 키를 만들려면  
   
 1.  데이터베이스에 저장되는 마스터 키의 복사본을 암호화하기 위한 암호를 선택합니다.  
   

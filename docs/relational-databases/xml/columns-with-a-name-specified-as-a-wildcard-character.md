@@ -1,24 +1,28 @@
 ---
-title: "이름이 와일드카드 문자로 지정된 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이름 [SQL Server], 포함하는 열"
+title: "이름이 와일드카드 문자로 지정된 열 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- names [SQL Server], columns with
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 caps.latest.revision: 10
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e03000db7890bd87e22799b6bf525b9a1194c2a4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 이름이 와일드카드 문자로 지정된 열
+# <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>이름이 와일드카드 문자로 지정된 열
   지정된 열 이름이 와일드카드 문자(\*)이면 열 이름이 지정되지 않은 경우처럼 열 내용이 삽입됩니다. 이 열이 비-**xml** 유형 열이면 다음 예에서와 같이 열 내용이 텍스트 노드로 삽입됩니다.  
   
 ```  
@@ -70,7 +74,7 @@ GO
   
  `</row>`  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 PATH 모드 사용](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

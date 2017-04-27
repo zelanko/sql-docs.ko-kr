@@ -1,38 +1,42 @@
 ---
-title: "데이터베이스 속성(옵션 탭) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "04/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.options.f1"
+title: "데이터베이스 속성(옵션 페이지) | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 04/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.options.f1
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 caps.latest.revision: 67
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 속성(옵션 탭)
+# <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 페이지를 사용하여 선택한 데이터베이스의 옵션을 확인하거나 수정할 수 있습니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md) 및 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.  
+  이 페이지를 사용하여 선택한 데이터베이스의 옵션을 확인하거나 수정할 수 있습니다. 이 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) 및 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.  
   
-## 페이지 머리글  
+## <a name="page-header"></a>페이지 머리글  
  **데이터 정렬**  
  목록에서 선택하여 데이터베이스의 데이터 정렬을 지정합니다. 자세한 내용은 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)을 참조하세요.  
   
  **복구 모델**  
- 데이터베이스 복구 모델을 **전체**, **대량 로그** 또는 **단순** 중에서 하나 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+ 데이터베이스 복구 모델을 **전체**, **대량 로그**또는 **단순**중에서 하나 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
- 데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 최신 버전을 지정합니다. 가능한 값은 **SQL Server 2014(120)**, **SQL Server 2012(110)** 및 **SQL Server 2008(100)**입니다. SQL Server 2005 데이터베이스를 SQL Server 2014로 업그레이드하는 경우 데이터베이스의 호환성 수준이 90에서 100으로 변경됩니다.  SQL Server 2014에서는 호환성 수준 90이 지원되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)을 참조하세요.  
+ 데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은  **SQL Server 2014(120)**,  **SQL Server 2012(110)**및 **SQL Server 2008(100)**입니다. SQL Server 2005 데이터베이스를 SQL Server 2014로 업그레이드하는 경우 데이터베이스의 호환성 수준이 90에서 100으로 변경됩니다.  SQL Server 2014에서는 호환성 수준 90이 지원되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
  **포함 유형**  
  없음 또는 부분을 지정하여 데이터베이스가 포함된 데이터베이스인지 여부를 나타냅니다. 포함된 데이터베이스에 대한 자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md)를 참조하십시오. 데이터베이스를 포함된 데이터베이스로 구성하려면 **포함된 데이터베이스 사용** 서버 속성을 **TRUE** 로 설정해야 합니다.  
@@ -40,7 +44,7 @@ caps.handback.revision: 67
 > [!IMPORTANT]  
 >  부분적으로 포함된 데이터베이스를 사용하도록 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 제어 권한이 데이터베이스 소유자에게 위임됩니다. 자세한 내용은 [Security Best Practices with Contained Databases](../../relational-databases/databases/security-best-practices-with-contained-databases.md)를 참조하세요.  
   
-## 자동  
+## <a name="automatic"></a>자동  
  **자동 닫기**  
  마지막 사용자가 끝낸 후 데이터베이스가 완전히 종료되고 리소스가 해제되는지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 마지막 사용자가 로그오프한 후 데이터베이스가 완전히 종료되고 해당 리소스가 해제됩니다.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 67
   
  이때 **통계 자동 업데이트** 도 **True** 로 설정해야 이 옵션을 **True**로 설정했을 때 효과가 있습니다.  
   
-## 포함  
+## <a name="containment"></a>포함  
  포함된 데이터베이스의 경우 일반적으로 서버 수준에서 구성하는 일부 설정을 데이터베이스 수준에서 구성할 수 있습니다.  
   
  **기본 전체 텍스트 언어 LCID**  
@@ -83,14 +87,14 @@ caps.handback.revision: 67
   
  예를 들어, 기본 설정이 2049이면 '49/3/14'로 입력된 날짜는 2049년 3월 14일로 해석되고 '50/3/14'로 입력된 날짜는 1950년 3월 14일로 해석되는 것을 나타냅니다. 자세한 내용은 [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.  
   
-## 커서  
+## <a name="cursor"></a>커서  
  **커밋 시 커서 닫기 설정**  
  커서를 여는 트랜잭션이 커밋된 후 커서가 닫히는지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 트랜잭션이 커밋되거나 롤백될 때 열려 있는 커서가 모두 닫힙니다. **False**로 설정하면 트랜잭션이 커밋될 때 해당 커서가 열린 상태로 남게 됩니다. **False**로 설정한 경우 트랜잭션을 롤백하면 INSENSITIVE 또는 STATIC으로 정의된 것을 제외한 모든 커서가 닫힙니다. 자세한 내용은 [SET CURSOR_CLOSE_ON_COMMIT&#40;Transact-SQL&#41;](../../t-sql/statements/set-cursor-close-on-commit-transact-sql.md)을 참조하세요.  
   
  **기본 커서**  
  기본 커서 동작을 지정합니다. **True**로 설정하면 커서 선언은 기본적으로 LOCAL이 됩니다. **False**로 설정하면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 커서는 기본적으로 GLOBAL이 됩니다.  
   
-## 데이터베이스 범위 구성  
+## <a name="database-scoped-configurations"></a>데이터베이스 범위 구성  
  SQL Server 2016 및 Azure SQL 데이터베이스에는 데이터베이스 수준으로 범위를 지정할 수 있는 여러 구성 속성이 있습니다. 이러한 모든 설정에 대한 자세한 내용은 [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.  
   
  **기존 카디널리티 추정**  
@@ -117,19 +121,19 @@ caps.handback.revision: 67
  **보조 항목에 대한 쿼리 최적화 프로그램 수정**  
  데이터베이스의 호환성 수준에 관계없이 보조 항목(있는 경우)에 대해 쿼리 최적화 핫픽스를 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4199](https://support.microsoft.com/en-us/kb/974006)와 동일합니다.  
   
-## FILESTREAM  
+## <a name="filestream"></a>FILESTREAM  
  **FILESTREAM 디렉터리 이름**  
  선택한 데이터베이스에 연결된 FILESTREAM 데이터에 대한 디렉터리 이름을 지정합니다.  
   
  **FILESTREAM 비트랜잭션 액세스**  
- 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY** 또는 **FULL** 중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
+ 파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY**또는 **FULL**중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
-## 기타  
+## <a name="miscellaneous"></a>기타  
  **ANSI Null 기본값**  
- **CREATE TABLE** 또는 **ALTER TABLE** 문(기본 상태)을 실행하는 동안 **NOT NULL**로 명시적으로 정의되지 않은 모든 사용자 정의 데이터 형식 또는 열에서 Null 값을 허용합니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 및 [SET ANSI_NULL_DFLT_OFF&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)를 참조하세요.  
+ **CREATE TABLE** 또는 **ALTER TABLE** 문(기본 상태)을 실행하는 동안 **NOT NULL** 로 명시적으로 정의되지 않은 모든 사용자 정의 데이터 형식 또는 열에서 Null 값을 허용합니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 및 [SET ANSI_NULL_DFLT_OFF&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)를 참조하세요.  
   
  **ANSI Null 설정**  
- Null 값과 함께 사용할 때 같음(`=`)과 같지 않음(`<>`) 비교 연산자의 동작을 지정합니다. 가능한 값은 **True**(설정) 및 **False**(해제)입니다. **True**로 설정하면 NULL 값에 대한 모든 비교가 UNKNOWN으로 평가됩니다. **False**로 설정하면 NULL 값과 유니코드를 지원하지 않는 값의 비교는 두 값이 모두 NULL인 경우 **True**로 평가됩니다. 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.  
+ Null 값과 함께 사용할 때 같음(`=`)과 같지 않음(`<>`) 비교 연산자의 동작을 지정합니다. 가능한 값은 **True** (설정) 및 **False** (해제)입니다. **True**로 설정하면 NULL 값에 대한 모든 비교가 UNKNOWN으로 평가됩니다. **False**로 설정하면 NULL 값과 유니코드를 지원하지 않는 값의 비교는 두 값이 모두 NULL인 경우 **True**로 평가됩니다. 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.  
   
  **ANSI 패딩 설정**  
  ANSI 패딩을 설정할 것인지 여부를 지정합니다. 가능한 값은 **True**(설정) 및 **False**(해제)입니다. 자세한 내용은 [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
@@ -147,7 +151,7 @@ caps.handback.revision: 67
  이 읽기 전용 값은 데이터베이스 간 소유권 체인이 설정되어 있는지 여부를 나타냅니다. **True**이면 데이터베이스가 데이터베이스 간 소유권 체인의 원본이나 대상이 될 수 있습니다. ALTER DATABASE 문을 사용하여 이 속성을 설정할 수 있습니다.  
   
  **날짜 상관 관계 최적화 설정**  
- **True**로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스 내에서 FOREIGN KEY 제약 조건으로 연결되고 **datetime** 열이 있는 임의의 두 테이블 간에 상관 관계 통계를 유지합니다.  
+ **True**로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 데이터베이스 내에서 FOREIGN KEY 제약 조건으로 연결되고 **datetime** 열이 있는 임의의 두 테이블 간에 상관 관계 통계를 유지합니다.  
   
  **False**로 설정하면 상관 관계 통계가 유지되지 않습니다.  
   
@@ -164,7 +168,7 @@ caps.handback.revision: 67
  다른 트리거가 트리거를 발생시킬 수 있는지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 트리거가 재귀적으로 발생할 수 있습니다. **False**로 설정하면 직접 재귀만 방지됩니다. 간접 재귀를 해제하려면 sp_configure를 사용하여 nested triggers 서버 옵션을 0으로 설정합니다. 자세한 내용은 [중첩 트리거 만들기](../../relational-databases/triggers/create-nested-triggers.md)를 참조하세요.  
   
  **신뢰**  
- 이 읽기 전용 옵션이 **True**를 표시하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 내에 설정된 가장 컨텍스트로 데이터베이스 외부의 리소스에 대한 액세스를 허용함을 나타냅니다. 가장 컨텍스트는 데이터베이스 모듈에 EXECUTE AS 사용자 문이나 EXECUTE AS 절을 사용하여 데이터베이스 내에 설정할 수 있습니다.  
+ 이 읽기 전용 옵션이 **True**를 표시하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 내에 설정된 가장 컨텍스트로 데이터베이스 외부의 리소스에 대한 액세스를 허용함을 나타냅니다. 가장 컨텍스트는 데이터베이스 모듈에 EXECUTE AS 사용자 문이나 EXECUTE AS 절을 사용하여 데이터베이스 내에 설정할 수 있습니다.  
   
  액세스하려면 데이터베이스의 소유자에게도 서버 수준의 AUTHENTICATE SERVER 권한이 있어야 합니다.  
   
@@ -181,14 +185,14 @@ caps.handback.revision: 67
  **VarDecimal 저장소 형식 사용**  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 이 옵션은 읽기 전용입니다. **True**인 경우 이 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 데이터베이스의 테이블 중 VarDecimal 저장소 형식을 사용하는 테이블이 있으면 이 형식을 해제할 수 없습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 모든 데이터베이스에 VarDecimal 저장소 형식을 사용할 수 있습니다. 이 옵션은 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)을 사용합니다.  
   
-## 복구  
+## <a name="recovery"></a>복구  
  **페이지 확인**  
- 디스크 I/O 오류로 인해 발생한 불완전한 I/O 트랜잭션을 검색하여 보고하는 데 사용되는 옵션을 지정합니다. 가능한 값은 **NONE**, **TORN_PAGE_DETECTION**및 **CHECKSUM**입니다. 자세한 내용은 [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)를 참조하세요.  
+ 디스크 I/O 오류로 인해 발생한 불완전한 I/O 트랜잭션을 검색하여 보고하는 데 사용되는 옵션을 지정합니다. 가능한 값은 **NONE**, **TORN_PAGE_DETECTION**및 **CHECKSUM**입니다. 자세한 내용은 [suspect_pages 테이블 관리&#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md)에서 페이지를 복원하는 방법에 대해 설명합니다.  
   
  **대상 복구 시간(초)**  
  충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간(초)을 지정합니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
   
-## State  
+## <a name="state"></a>State  
  **데이터베이스 읽기 전용**  
  데이터베이스가 읽기 전용인지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 사용자가 데이터베이스의 데이터를 읽을 수만 있습니다. 사용자가 데이터나 데이터베이스 개체를 수정할 수는 없지만 DROP DATABASE 문을 사용하여 데이터베이스 자체를 삭제할 수는 있습니다. 데이터베이스를 사용하고 있을 때는 **데이터베이스 읽기 전용** 옵션의 새 값을 지정할 수 없습니다. master 데이터베이스는 예외인데, 이 옵션이 설정되어 있는 동안 시스템 관리자만 master를 사용할 수 있습니다.  
   
@@ -213,8 +217,9 @@ caps.handback.revision: 67
  **암호화 사용**  
  **True**이면 이 데이터베이스에 데이터베이스 암호화를 사용할 수 있습니다. 데이터베이스 암호화 키는 암호화에 필요합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   
+

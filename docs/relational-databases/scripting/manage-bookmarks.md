@@ -1,31 +1,35 @@
 ---
-title: "책갈피 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.BookmarkWindow"
-helpviewer_keywords: 
-  - "책갈피 [SQL Server Management Studio]"
+title: "책갈피 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.BookmarkWindow
+helpviewer_keywords:
+- bookmarks [SQL Server Management Studio]
 ms.assetid: 67cc3fd6-3238-4c58-a3ec-2d3b0438143a
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f77006d812e4ba114f5fc161f3701457f836d62
+ms.lasthandoff: 04/11/2017
+
 ---
-# 책갈피 관리
+# <a name="manage-bookmarks"></a>책갈피 관리
   코드 편집기에서 작업하는 동안 **책갈피** 창을 사용하여 문서 내의 특정 코드 행에 대한 링크를 만들 수 있습니다. 이 창은 **보기** 메뉴에서 표시할 수 있습니다.  
   
  책갈피를 만들고 탐색하려면 **텍스트 편집기** 도구 모음과 **책갈피** 창 상단에 있는 단추를 클릭합니다. 책갈피를 추가하거나 제거하고 책갈피를 활성화하거나 비활성화하며 책갈피를 폴더로 구성할 수 있습니다. 특정 명령은 **책갈피** 창의 바로 가기 메뉴에서도 사용할 수 있습니다. 책갈피를 추가하거나 제거하려면 편집기에서 원하는 행에 삽입 지점을 넣은 다음 **현재 줄에서 책갈피를 설정/해제합니다**를 클릭합니다. 책갈피를 활성화하려면 **책갈피** 창에서 해당 확인란을 선택하고 책갈피를 제거하지 않고 비활성화하려면 해당 확인란의 선택을 취소합니다.  
   
-## 텍스트 편집기 도구 모음  
+## <a name="text-editor-toolbar"></a>텍스트 편집기 도구 모음  
  다음 단추는 편집기에서 텍스트 문서를 열 때 **텍스트 편집기** 도구 모음에서 활성화됩니다. 쿼리 편집기에서 **텍스트 편집기** 도구 모음을 표시하려면 **보기** 메뉴에서 **도구 모음**을 가리킨 다음 **텍스트 편집기**를 클릭합니다.  
   
  **현재 줄에서 책갈피를 설정/해제합니다.**  
@@ -43,7 +47,7 @@ caps.handback.revision: 26
 > [!CAUTION]  
 >  이 절차는 취소할 수 없습니다. 나중에 새 책갈피를 만들려면 **현재 줄에서 책갈피를 설정/해제합니다** 를 사용해야 합니다. 책갈피를 제거하지 않고 비활성화하려면 **책갈피** 창에서 해당 확인란의 선택을 취소합니다.  
   
-## 책갈피 창  
+## <a name="bookmarks-window"></a>책갈피 창  
  책갈피를 구성하려면 **책갈피** 창에서 책갈피 폴더를 만든 다음 이 폴더로 책갈피를 끌어다 놓습니다. 다음 단추는 **책갈피** 창 상단에서 사용할 수 있습니다.  
   
  **현재 줄에서 책갈피를 설정/해제합니다.**  
@@ -76,7 +80,7 @@ caps.handback.revision: 26
  책갈피 확인란  
  책갈피마다 해당 확인란이 있습니다. 기존 책갈피를 활성화하려면 **책갈피** 창에서 해당 확인란을 선택합니다. 기존 책갈피를 제거하지 않고 숨기려면 **책갈피** 창에서 해당 확인란의 선택을 취소합니다.  
   
-## 책갈피 창의 바로 가기 메뉴  
+## <a name="bookmarks-window-shortcut-menu"></a>책갈피 창의 바로 가기 메뉴  
  **책갈피** 창에서 항목을 마우스 오른쪽 단추로 클릭하면 바로 가기 메뉴에서 다음 명령을 사용할 수 있습니다.  
   
  **Delete**  
@@ -91,7 +95,7 @@ caps.handback.revision: 26
  **모든 책갈피 사용/모든 책갈피 사용 안 함**  
  **책갈피** 창의 모든 책갈피에 대한 확인란을 선택하거나 확인란의 선택을 취소합니다. 책갈피를 제거하거나 책갈피가 표시된 코드 행을 변경하지는 않습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

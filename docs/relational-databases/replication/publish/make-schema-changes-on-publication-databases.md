@@ -1,30 +1,34 @@
 ---
-title: "게시 데이터베이스의 스키마 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "복제 [SQL Server], 스키마 변경 내용"
-  - "스냅숏 복제 [SQL Server], 스키마 변경 내용 복제"
-  - "병합 복제 [SQL Server 복제], 스키마 변경 내용 복제"
-  - "트랜잭션 복제, 스키마 변경 내용 복제"
-  - "스키마 [SQL Server 복제], 변경 내용 복제"
-  - "게시 [SQL Server 복제], 스키마 변경"
+title: "게시 데이터베이스의 스키마 변경 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- replication [SQL Server], schema changes
+- snapshot replication [SQL Server], replicating schema changes
+- merge replication [SQL Server replication], replicating schema changes
+- transactional replication, replicating schema changes
+- schemas [SQL Server replication], replicating changes
+- publishing [SQL Server replication], schema changes
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa8ea65ab7ef276791e721f6f1bb5e9da6c6a4ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# 게시 데이터베이스의 스키마 변경
-  복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다.  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
+# <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
+  복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  
   
 -   ALTER TABLE  
   
@@ -39,24 +43,24 @@ caps.handback.revision: 73
      DDL(데이터 정의 언어) 트리거는 복제할 수 없기 때문에 DML(데이터 조작 언어) 트리거에 대해서만 ALTER TRIGGER를 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
->  테이블에 대한 스키마 변경은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 SMO([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects)를 사용하여 수행해야 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 스키마를 변경하면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서는 해당 테이블을 삭제하고 다시 만들려고 합니다. 그러나 게시된 개체는 삭제할 수 없으므로 스키마 변경에 실패합니다.  
+>  테이블에 대한 스키마 변경은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects)를 사용하여 수행해야 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 스키마를 변경하면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서는 해당 테이블을 삭제하고 다시 만들려고 합니다. 그러나 게시된 개체는 삭제할 수 없으므로 스키마 변경에 실패합니다.  
   
  트랜잭션 복제 및 병합 복제의 경우 배포 에이전트 또는 병합 에이전트가 실행될 때 스키마 변경이 증분 방식으로 전파됩니다. 스냅숏 복제의 경우 새 스냅숏을 구독자에서 적용할 때 스키마 변경이 전파됩니다. 스냅숏 복제에서 스키마의 새 복사본은 동기화가 발생할 때마다 구독자로 전달됩니다. 그러므로 이전에 게시된 개체에 대한 모든 스키마 변경(위에서 나열한 것 이외의 스키마 변경도 포함)이 동기화를 수행할 때마다 자동으로 전파됩니다.  
   
- 추가 및 게시에서 문서를 제거 하는 방법에 대 한 정보를 참조 하십시오. [기사를 추가 하 고 기존 게시에서 아티클을 삭제할](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)합니다.  
+ 게시에서 아티클을 추가 및 제거하는 방법에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
  **스키마 변경을 복제하려면**  
   
  위에 나열된 스키마 변경은 기본적으로 복제됩니다. 스키마 변경 복제를 해제하는 방법은 [Replicate Schema Changes](../../../relational-databases/replication/publish/replicate-schema-changes.md)를 참조하십시오.  
   
-## 스키마 변경에 대한 고려 사항  
+## <a name="considerations-for-schema-changes"></a>스키마 변경에 대한 고려 사항  
  스키마 변경 복제 시 다음 사항을 고려하십시오.  
   
-### 일반적인 고려 사항  
+### <a name="general-considerations"></a>일반적인 고려 사항  
   
 -   스키마 변경에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 설정한 제한 사항이 적용됩니다. 예를 들어 ALTER TABLE을 사용하여 기본 키 열을 변경할 수 없습니다.  
   
--   데이터 형식 매핑은 초기 스냅숏에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 경우 문을 `ALTER TABLE ADD datetime2 column` 에 사용 됩니다 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], 데이터 형식이로 변환 되지 않습니다 **nvarchar** 에 대 한 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자입니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
+-   데이터 형식 매핑은 초기 스냅숏에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 `ALTER TABLE ADD datetime2 column` 에서 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]문을 사용하는 경우 데이터 형식이 **ssVersion2005** 구독자에 대한 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 로 변환되지 않습니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
   
 -   게시에서 스키마 변경을 전파할 수 있도록 설정하면 게시의 아티클에 대해 관련 스키마 옵션이 어떻게 설정되었는지에 상관없이 스키마 변경이 전파됩니다. 예를 들어 테이블 아티클에 대해 FOREIGN KEY 제약 조건을 복제하지 않도록 선택하고 게시자의 테이블에 외래 키를 추가하는 ALTER TABLE 명령을 실행하면 구독자의 테이블에 외래 키가 추가됩니다. 이를 방지하려면 ALTER TABLE 명령을 실행하기 전에 스키마 변경 전파를 해제합니다.  
   
@@ -70,7 +74,7 @@ caps.handback.revision: 73
   
 -   명시적인 인덱스 추가, 삭제 및 변경은 지원되지 않습니다. PRIMARY KEY 제약 조건과 같이 제약 조건에 대해 암시적으로 생성된 인덱스는 지원됩니다.  
   
--   복제에서 관리하는 ID 열은 변경 또는 삭제할 수 없습니다. 자동 관리 id 열에 대 한 자세한 내용은 참조 [Id 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.  
+-   복제에서 관리하는 ID 열은 변경 또는 삭제할 수 없습니다. ID 열 자동 관리에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
   
 -   게시자 데이터와 구독자 데이터가 서로 달라질 수 있기 때문에(데이터 불일치성이라고 함) 비결정적 함수를 포함하는 스키마 변경은 지원되지 않습니다. 예를 들어 게시자: `ALTER TABLE SalesOrderDetail ADD OrderDate DATETIME DEFAULT GETDATE()`에서 다음 명령을 실행하는 경우 다른 명령이 구독자에 복제되고 실행되면 값은 달라집니다. 비결정적 함수에 대한 자세한 내용은 [Deterministic and Nondeterministic Functions](../../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md)를 참조하십시오.  
   
@@ -80,25 +84,25 @@ caps.handback.revision: 73
   
 -   커밋되지 않은 읽기는 게시된 테이블에서 DDL을 수행할 때 지원되는 격리 수준이 아닙니다.  
   
--   **SET CONTEXT_INFO** 쓰일 수 없습니다 트랜잭션 컨텍스트 수정에 게시 된 개체에 대 한 스키마 변경 내용이 수행 하는 위치입니다.  
+-   **SET CONTEXT_INFO** 는 게시된 개체에 대해 스키마 변경 내용이 수행된 트랜잭션 컨텍스트 수정에 사용할 수 없습니다.  
   
-#### 열 추가  
+#### <a name="adding-columns"></a>열 추가  
   
--   ALTER TABLE을 실행 하는 테이블에 새 열을 추가 하 고 기존 게시에 해당 열을 포함, \< 테이블> 추가 \< 열>합니다. 기본적으로 이 열은 모든 구독자로 복제됩니다. 이 열에는 NULL 값이 허용되거나 기본 제약 조건이 포함되어야 합니다. 열을 추가하는 방법은 이 항목의 "병합 복제" 섹션을 참조하십시오.  
+-   테이블에 새 열을 추가한 후 이 열을 기존 게시에 포함하려면 ALTER TABLE \<Table> ADD \<Column>을 실행합니다. 기본적으로 이 열은 모든 구독자로 복제됩니다. 이 열에는 NULL 값이 허용되거나 기본 제약 조건이 포함되어야 합니다. 열을 추가하는 방법은 이 항목의 "병합 복제" 섹션을 참조하십시오.  
   
--   테이블에 새 열을 추가 하는 기존 게시에 해당 열을 포함 하지 스키마 변경 복제를 사용 하지 않도록 설정 하 고 ALTER TABLE을 실행 한 다음 \< 테이블> 추가 \< 열>합니다.  
+-   테이블에 새 열을 추가한 후 이 열을 기존 게시에 포함시키지 않으려면 스키마 변경 복제를 해제한 다음 ALTER TABLE \<Table> ADD \<Column>을 실행합니다.  
   
--   기존 게시에 기존 열을 포함 하려면 사용 [sp_articlecolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), 또는 **게시 속성-\< 게시>** 대화 상자입니다.  
+-   기존 게시에 기존 열을 포함시키려면 [sp_articlecolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 또는 **게시 속성 - \<Publication>** 대화 상자를 사용합니다.  
   
      자세한 내용은 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요. 이 작업을 수행하려면 구독을 다시 초기화해야 합니다.  
   
 -   열이 구독자로 복제될 때 데이터가 일치하지 않을 수 있기 때문에 게시된 테이블에 ID 열을 추가할 수 없습니다. 게시자의 ID 열 값은 영향을 받는 테이블 행이 실제로 저장된 순서에 따라 달라집니다. 구독자에서는 행이 다르게 저장될 수 있으므로 ID 열의 값이 같은 행에 대해 다를 수 있습니다.  
   
-#### 열 삭제  
+#### <a name="dropping-columns"></a>열 삭제  
   
--   기존 게시에서 열을 삭제 하 고 게시자에서 테이블에서 열을 삭제 하려면 ALTER TABLE을 실행 합니다 \< 테이블> DROP \< 열>합니다. 기본적으로 해당 열이 모든 구독자의 테이블에서 삭제됩니다.  
+-   기존 게시에서 열을 삭제하고 해당 열을 게시자의 테이블에서 삭제하려면 ALTER TABLE \<Table> DROP \<Column>을 실행합니다. 기본적으로 해당 열이 모든 구독자의 테이블에서 삭제됩니다.  
   
--   기존 게시에서 열을 삭제 하는 게시자에서 테이블의 열을 유지 하려면를 사용 하 여 [sp_articlecolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md), 또는 **게시 속성-\< 게시>** 대화 상자입니다.  
+-   열을 기존 게시에서는 삭제하지만 게시자의 테이블에서는 유지하려면 [sp_articlecolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용합니다.  
   
      자세한 내용은 [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)을 참조하세요. 이 작업을 수행하려면 새 스냅숏을 생성해야 합니다.  
   
@@ -114,11 +118,11 @@ caps.handback.revision: 73
   
     -   삭제가 가능하려면 제약 조건의 이름이 명시적으로 지정되어야 합니다. 자세한 내용은 이 항목의 앞에 나오는 "일반적인 고려 사항" 섹션을 참조하십시오.  
   
-### 트랜잭션 복제  
+### <a name="transactional-replication"></a>트랜잭션 복제  
   
 -   스키마 변경은 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하는 구독자로 전파되지만 DDL 문에는 구독자에서 해당 버전에 지원되는 구문만 포함되어야 합니다.  
   
-     구독자에서 데이터를 다시 게시하면 열을 추가 및 삭제하는 스키마 변경만 지원됩니다. 이러한 변경 내용이 게시자에서 사용 하 여 [sp_repladdcolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) 대신 ALTER DDL 구문입니다.  
+     구독자에서 데이터를 다시 게시하면 열을 추가 및 삭제하는 스키마 변경만 지원됩니다. 이러한 변경은 게시자에서 ALTER TABLE DDL 구문이 아니라 [sp_repladdcolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)을 사용하여 수행해야 합니다.  
   
 -   SQL Server 이외 구독자로는 스키마 변경이 복제되지 않습니다.  
   
@@ -128,15 +132,15 @@ caps.handback.revision: 73
   
 -   게시에서 즉시 업데이트 구독 또는 지연 업데이트 구독을 지원하면 스키마를 변경하기 전에 시스템을 정지해야 합니다. 즉, 게시된 테이블에 대한 모든 작업을 게시자와 구독자에서 중지하고 보류 중인 데이터 변경 내용을 모든 노드에 전파해야 합니다. 스키마 변경을 모든 노드로 전파하면 게시된 테이블에 대한 작업을 재개할 수 있습니다.  
   
--   피어 투 피어 토폴로지의 게시에서는 스키마를 변경하기 전에 시스템을 정지해야 합니다. 자세한 내용은 참조 [정지 복제 토폴로지 및 #40; 복제 TRANSACT-SQL 프로그래밍 & #41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)합니다.  
+-   피어 투 피어 토폴로지의 게시에서는 스키마를 변경하기 전에 시스템을 정지해야 합니다. 자세한 내용은 [복제 토폴로지 정지&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)를 참조하세요.  
   
 -   테이블에 타임스탬프 열을 추가하고 이 타임스탬프를 binary(8)로 매핑하면 아티클이 모든 활성 구독에 대해 다시 초기화됩니다.  
   
-### 병합 복제  
+### <a name="merge-replication"></a>병합 복제  
   
 -   병합 복제에서 스키마 변경을 처리하는 방법은 게시 호환성 수준 및 스냅숏이 기본 모드(기본값) 또는 문자 모드로 설정되었는지에 의해 결정됩니다.  
   
-    -   스키마 변경을 복제하려면 게시의 호환성 수준이 적어도 90RTM 이상이어야 합니다. 구독자의 이전 버전을 실행 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 호환성 수준이 90rtm으로 사용할 수 있습니다 [sp_repladdcolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md) 추가 하 고 열을 삭제 합니다. 그러나 이러한 프로시저는 더 이상 사용되지 않습니다.  
+    -   스키마 변경을 복제하려면 게시의 호환성 수준이 적어도 90RTM 이상이어야 합니다. 구독자에서 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하거나 호환성 수준이 90RTM 이하인 경우에도 [sp_repladdcolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)을 사용하여 열을 추가 및 삭제할 수 있습니다. 그러나 이러한 프로시저는 더 이상 사용되지 않습니다.  
   
     -   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에서 도입된 데이터 형식의 열을 기존 아티클에 추가하려는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 다음과 같이 동작합니다.  
   
@@ -153,15 +157,15 @@ caps.handback.revision: 73
   
 -   조인 필터 또는 매개 변수가 있는 필터와 관련된 열에 스키마 변경을 수행하면 모든 구독을 다시 초기화하고 스냅숏을 다시 생성해야 합니다.  
   
--   병합 복제에서는 문제를 해결하는 동안 스키마 변경을 건너뛸 수 있는 저장 프로시저를 제공합니다. 자세한 내용은 참조 [sp_markpendingschemachange (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) 및 [sp_enumeratependingschemachanges (& a) #40; TRANSACT-SQL & #41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)합니다.  
+-   병합 복제에서는 문제를 해결하는 동안 스키마 변경을 건너뛸 수 있는 저장 프로시저를 제공합니다. 자세한 내용은 [sp_markpendingschemachange&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) 및 [sp_enumeratependingschemachanges&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md)를 참조하세요.  
   
-## 참고 항목  
- [ALTER TABLE & #40입니다. TRANSACT-SQL & #41;](../../../t-sql/statements/alter-table-transact-sql.md)   
- [ALTER VIEW & #40입니다. TRANSACT-SQL & #41;](../../../t-sql/statements/alter-view-transact-sql.md)   
- [ALTER PROCEDURE & #40입니다. TRANSACT-SQL & #41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   
- [ALTER FUNCTION & #40입니다. TRANSACT-SQL & #41;](../../../t-sql/statements/alter-function-transact-sql.md)   
- [ALTER TRIGGER & #40입니다. TRANSACT-SQL & #41;](../../../t-sql/statements/alter-trigger-transact-sql.md)   
+## <a name="see-also"></a>관련 항목:  
+ [ALTER TABLE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
+ [ALTER VIEW&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
+ [ALTER PROCEDURE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   
+ [ALTER FUNCTION&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-function-transact-sql.md)   
+ [ALTER TRIGGER&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-trigger-transact-sql.md)   
  [데이터 및 데이터베이스 개체 게시](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
- [스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성](../../../relational-databases/replication/transactional/regenerate-custom-transactional-procedures-to-reflect-schema-changes.md)  
+ [스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   
   

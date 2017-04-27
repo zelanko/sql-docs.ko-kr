@@ -1,25 +1,29 @@
 ---
-title: "Windows PowerShell에서 SMO 어셈블리 로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Windows PowerShell에서 SMO 어셈블리 로드 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ca42b69-da5a-47f4-9085-34e443f0e389
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 149ba0be18c46dbf2171f7a1fac0641ae81d3515
+ms.lasthandoff: 04/11/2017
+
 ---
-# Windows PowerShell에서 SMO 어셈블리 로드
+# <a name="load-the-smo-assemblies-in-windows-powershell"></a>Windows PowerShell에서 SMO 어셈블리 로드
   이 항목에서는 SQL Server PowerShell 공급자를 사용하지 않는 Windows PowerShell 스크립트에서 SMO(SQL Server Management Object) 어셈블리를 로드하는 방법을 설명합니다.  
   
-## 시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전에  
  SMO 어셈블리를 로드하는 기본 메커니즘은 **sqlps** 모듈을 로드하는 것입니다. 모듈에 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자는 SMO 어셈블리를 자동으로 로드하며 PowerShell 스크립트에서 SMO 개체의 유용성을 확장하는 기능도 구현합니다.  자세한 내용은 [SQLPS 모듈 가져오기](../../relational-databases/scripting/import-the-sqlps-module.md)를 참조하세요.
   
  SMO 어셈블리를 직접 로드해야 할 수 있는 두 가지 경우가 있습니다.  
@@ -28,7 +32,7 @@ caps.handback.revision: 9
   
 -   공급자 또는 cmdlet을 사용하지 않는 C# 또는 Visual Basic과 같은 다른 언어에서 SMO 코드를 이식하려는 경우  
   
-## 예제: SQL Server 관리 개체 로드  
+## <a name="example-loading-the-sql-server-management-objects"></a>예제: SQL Server 관리 개체 로드  
  다음 코드는 SMO 어셈블리를 로드합니다.  
   
 ```  
@@ -84,7 +88,7 @@ update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)  
   
   

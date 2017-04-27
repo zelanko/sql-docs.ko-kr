@@ -1,27 +1,31 @@
 ---
-title: "지연된 트랜잭션(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "I/O [SQL Server], 데이터베이스 복구"
-  - "페이지 복원 [SQL Server]"
-  - "지연된 트랜잭션"
-  - "지연된 트랜잭션 상태 수정"
+title: "지연된 트랜잭션(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- I/O [SQL Server], database recovery
+- restoring pages [SQL Server]
+- deferred transactions
+- modifying transaction deferred state
 ms.assetid: 6fc0f9b6-d3ea-4971-9f27-d0195d1ff718
 caps.latest.revision: 45
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ee31af10105103d0bccb8c1ff7b48a73086f44d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 지연된 트랜잭션(SQL Server)
+# <a name="deferred-transactions-sql-server"></a>지연된 트랜잭션(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise에서는 손상된 트랜잭션이 롤백(실행 취소)에 필요한 데이터가 데이터베이스 시작 시 오프라인 상태인 경우에 지연될 수 있습니다. *지연된 트랜잭션* 은 롤포워드 단계가 완료될 때 커밋되지 않으며, 오류로 인해 롤백할 수 없는 트랜잭션입니다. 트랜잭션을 롤백할 수 없으므로 해당 트랜잭션은 지연됩니다.  
   
 > [!NOTE]  
@@ -45,7 +49,7 @@ caps.handback.revision: 45
 |데이터베이스 미러링의 다시 실행|지연된 트랜잭션|  
 |파일 그룹이 오프라인 상태|지연된 트랜잭션|  
   
-## 지연된 상태 밖으로 트랜잭션 이동  
+## <a name="moving-a-transaction-out-of-the-deferred-state"></a>지연된 상태 밖으로 트랜잭션 이동  
   
 > [!IMPORTANT]  
 >  지연된 트랜잭션은 트랜잭션 로그를 활성 상태로 유지합니다. 지연된 트랜잭션을 포함하는 가상 로그 파일은 이러한 트랜잭션이 지연된 상태에서 벗어날 때까지는 잘릴 수 없습니다. 로그 잘림에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
@@ -83,11 +87,11 @@ caps.handback.revision: 45
   
          응급 모드에 대한 자세한 내용은 [Database States](../../relational-databases/databases/database-states.md)를 참조하십시오.  
   
-    -   그런 후에 DBCC 문인 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md) 또는 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md) 중 하나에 DBCC REPAIR_ALLOW_DATA_LOSS 옵션을 사용하여 데이터베이스를 복구합니다.  
+    -   그런 후에 DBCC 문인 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md), [DBCC CHECKALLOC](../../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md)또는 [DBCC CHECKTABLE](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)중 하나에 DBCC REPAIR_ALLOW_DATA_LOSS 옵션을 사용하여 데이터베이스를 복구합니다.  
   
          DBCC에서 잘못된 페이지가 발생하면 DBCC에서 할당을 취소하고 관련 오류를 모두 복구합니다. 이 방법을 사용하면 물리적으로 일관된 상태로 데이터베이스를 다시 온라인 상태로 만들 수 있습니다. 그러나 추가 데이터가 손실될 수도 있으므로 이 방법은 마지막으로 선택해야 합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [존재하지 않는 파일 그룹 제거&#40;SQL Server&#41;](../../relational-databases/backup-restore/remove-defunct-filegroups-sql-server.md)   
  [파일 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/file-restores-full-recovery-model.md)   
@@ -95,6 +99,6 @@ caps.handback.revision: 45
  [페이지 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)   
  [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)  
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   

@@ -1,29 +1,33 @@
 ---
-title: "Lock:Deadlock Chain 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Deadlock Chain 이벤트 클래스"
+title: "Lock:Deadlock Chain 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Deadlock Chain event class
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3ffd8a4a79300ac64dd3a3e443f5c8a11b3d2f4d
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lock:Deadlock Chain 이벤트 클래스
+# <a name="lockdeadlock-chain-event-class"></a>Lock:Deadlock Chain 이벤트 클래스
   Lock:Deadlock Chain 이벤트 클래스는 교착 상태의 각 참가자에 대해 생성됩니다.  
   
  Lock:Deadlock Chain 이벤트 클래스를 사용하여 교착 상태 조건이 발생하는 시점을 모니터링할 수 있습니다. 이 정보는 교착 상태가 응용 프로그램의 성능에 큰 영향을 미치는지 여부와 어떤 개체가 관련되어 있는지 확인하는 데 유용합니다. 이러한 개체를 수정하는 응용 프로그램 코드를 검사하여 교착 상태를 최소화하도록 변경될 수 있는지 확인할 수 있습니다.  
   
-## Lock:Deadlock Chain 이벤트 클래스 데이터 열  
+## <a name="lockdeadlock-chain-event-class-data-columns"></a>Lock:Deadlock Chain 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -43,14 +47,14 @@ caps.handback.revision: 35
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
 |ServerName|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
-|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인이 모두 표시됩니다.|64|예|  
+|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 로그인이 모두 표시됩니다.|64|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|**ntext**|리소스 유형에 따라 달라지는 텍스트 값입니다.|1|예|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |형식|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

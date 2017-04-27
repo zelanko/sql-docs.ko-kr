@@ -1,26 +1,30 @@
 ---
-title: "FileTable 만들기, 변경 및 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 변경"
-  - "FileTable [SQL Server], 삭제"
-  - "FileTable [SQL Server], 만들기"
+title: "FileTable 만들기, 변경 및 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], altering
+- FileTables [SQL Server], dropping
+- FileTables [SQL Server], creating
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0445d1e3f300031a0154e253009a516364cd4fc3
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable 만들기, 변경 및 삭제
+# <a name="create-alter-and-drop-filetables"></a>FileTable 만들기, 변경 및 삭제
   새 FileTable을 만들거나 기존 FileTable을 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
 ##  <a name="BasicsCreate"></a> FileTable 만들기  
@@ -40,7 +44,7 @@ caps.handback.revision: 25
   
 1.  **FILETABLE_DIRECTORY**. FileTable에 저장된 모든 파일 및 디렉터리에 대한 루트 디렉터리 역할을 하는 디렉터리를 지정합니다. 이 이름은 데이터베이스의 모든 FileTable 디렉터리 이름 중에서 고유해야 합니다. 고유성 비교는 현재 데이터 정렬 설정과 관계없이 대/소문자를 구분하지 않습니다.  
   
-    -   이 값의 데이터 형식은 **nvarchar(255)**이며 **Latin1_General_CI_AS_KS_WS**의 고정된 데이터 정렬을 사용합니다.  
+    -   이 값의 데이터 형식은 **nvarchar(255)** 이며 **Latin1_General_CI_AS_KS_WS**의 고정된 데이터 정렬을 사용합니다.  
   
     -   제공하는 디렉터리 이름은 올바른 디렉터리 이름에 대한 파일 시스템 요구 사항을 따라야 합니다.  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 25
   
     1.  지정한 데이터 정렬은 Windows 파일 이름 의미 체계를 따르도록 **대/소문자를 구분하지 않아야** 합니다.  
   
-    2.  **FILETABLE_COLLATE_FILENAME** 값을 제공하지 않거나 **database_default**를 지정한 경우 열은 현재 데이터베이스의 데이터 정렬을 상속합니다. 현재 데이터베이스 데이터 정렬이 대/소문자를 구분하면 오류가 발생하고 **CREATE TABLE** 작업이 실패합니다.  
+    2.  **FILETABLE_COLLATE_FILENAME**값을 제공하지 않거나 **database_default**를 지정한 경우 열은 현재 데이터베이스의 데이터 정렬을 상속합니다. 현재 데이터베이스 데이터 정렬이 대/소문자를 구분하면 오류가 발생하고 **CREATE TABLE** 작업이 실패합니다.  
   
 3.  자동으로 만들어지는 UNIQUE 제약 조건 및 세 가지 기본 키에 사용할 이름도 지정할 수 있습니다. 이름을 입력하지 않으면 시스템이 이 항목의 뒷부분에 나와 있는 이름을 생성합니다.  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 25
   
  **예**  
   
- 다음 예제에서는 새 FileTable을 만들고 **FILETABLE_DIRECTORY** 및 **FILETABLE_COLLATE_FILENAME** 둘 다에 대해 사용자 정의 값을 지정합니다.  
+ 다음 예제에서는 새 FileTable을 만들고 **FILETABLE_DIRECTORY** 및 **FILETABLE_COLLATE_FILENAME**둘 다에 대해 사용자 정의 값을 지정합니다.  
   
 ```tsql  
 CREATE TABLE DocumentStore AS FileTable  
@@ -119,11 +123,11 @@ GO
 ```  
   
  **SQL Server Management Studio를 사용하여 FileTable의 디렉터리 변경**  
- 개체 탐색기에서 FileTable을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 **테이블 속성** 대화 상자를 엽니다. **FileTable** 페이지에서 **FileTable 디렉터리 이름**의 새 값을 입력합니다.  
+ 개체 탐색기에서 FileTable을 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 **테이블 속성** 대화 상자를 엽니다. **FileTable** 페이지에서 **FileTable 디렉터리 이름**의 새 값을 입력합니다.  
   
 ###  <a name="ReqAlter"></a> FileTable 변경에 대한 요구 사항 및 제한 사항  
   
--   **FILETABLE_COLLATE_FILENAME** 값은 변경할 수 없습니다.  
+-   **FILETABLE_COLLATE_FILENAME**값은 변경할 수 없습니다.  
   
 -   FileTable의 시스템 정의 열은 변경, 삭제하거나 사용하지 않도록 설정할 수 없습니다.  
   
@@ -174,13 +178,13 @@ GO
 |CHECK 제약 조건|시스템 정의 CHECK 제약 조건이 다음 요구 사항을 적용합니다.<br /><br /> 유효한 파일 이름<br /><br /> 유효한 파일 특성<br /><br /> 부모 개체는 디렉터리여야 합니다.<br /><br /> 파일 조작 중에는 네임스페이스 계층 구조가 잠깁니다.|  
   
  **시스템 정의 제약 조건에 대한 명명 규칙**  
- 위에서 설명한 시스템 정의 제약 조건은 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 형식입니다. 여기서  
+ 위에서 설명한 시스템 정의 제약 조건은 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** 형식입니다. 여기서 각 항목은 다음을 나타냅니다.  
   
 -   *<constraint_type>*은 CK(확인 제약 조건), DF(기본 제약 조건), FK(외래 키), PK(기본 키) 또는 UQ(고유 제약 조건)입니다.  
   
 -   *\<uniquifier>*는 이름을 고유하게 만드는 시스템 생성 문자열입니다. 이 문자열은 FileTable 이름 및 고유 식별자를 포함할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable 관리](../../relational-databases/blob/manage-filetables.md)  
   
   

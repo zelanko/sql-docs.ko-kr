@@ -1,26 +1,30 @@
 ---
-title: "외래 키 관계 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "외래 키 [SQL Server], 삭제"
-  - "외래 키 제거"
-  - "외래 키 삭제"
+title: "외래 키 관계 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- foreign keys [SQL Server], deleting
+- removing foreign keys
+- deleting foreign keys
 ms.assetid: 9c9e9ae4-9e03-4137-acb6-b18928a0c4ca
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3187794a4854ed3fa298d8b72d8aae57a8bf21c0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 외래 키 관계 삭제
+# <a name="delete-foreign-key-relationships"></a>외래 키 관계 삭제
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 외래 키 제약 조건을 삭제할 수 있습니다. 외래 키 제약 조건을 삭제하면 참조 무결성을 적용할 필요가 없어집니다.  
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### FOREIGN KEY 제약 조건을 삭제하려면  
+#### <a name="to-delete-a-foreign-key-constraint"></a>FOREIGN KEY 제약 조건을 삭제하려면  
   
 1.  **개체 탐색기**에서 제약 조건을 포함하는 테이블을 확장하고 **키**를 확장합니다.  
   
@@ -56,7 +60,7 @@ caps.handback.revision: 15
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### FOREIGN KEY 제약 조건을 삭제하려면  
+#### <a name="to-delete-a-foreign-key-constraint"></a>FOREIGN KEY 제약 조건을 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

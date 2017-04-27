@@ -1,25 +1,29 @@
 ---
-title: "정책 기반 관리 정책 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "정책 기반 관리, 정책 삭제"
+title: "정책 기반 관리 정책 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, delete policies
 ms.assetid: 488f0305-190c-4223-aa5c-e9bd43b520eb
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0903ac5f3e339bf884b3b5704bfd7ef5e1b02938
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 기반 관리 정책 삭제
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 정책을 삭제하는 방법에 대해 설명합니다.  
+# <a name="delete-a-policy-based-management-policy"></a>정책 기반 관리 정책 삭제
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 정책을 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 8
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 정책을 삭제하려면  
+#### <a name="to-delete-a-policy"></a>정책을 삭제하려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 삭제할 정책 기반 관리 정책이 들어 있는 서버를 확장합니다.  
   
@@ -55,3 +59,4 @@ caps.handback.revision: 8
 6.  **개체 삭제** 대화 상자에서 올바른 조건을 선택했는지 확인한 다음 **확인**을 클릭합니다.  
   
   
+

@@ -1,29 +1,33 @@
 ---
-title: "Lock:Released 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Released 이벤트 클래스"
+title: "Lock:Released 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Released event class
 ms.assetid: a150c300-72fa-4231-8f41-f1abd550a429
 caps.latest.revision: 35
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 103a249e27a7b963d82fa4201787112be0671a55
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lock:Released 이벤트 클래스
+# <a name="lockreleased-event-class"></a>Lock:Released 이벤트 클래스
   Lock:Released 이벤트 클래스는 페이지와 같은 리소스에 대한 잠금이 해제되었음을 나타냅니다.  
   
  Lock:Acquired 및 Lock:Released 이벤트 클래스를 사용하여 개체 잠금 시기, 사용하는 잠금 유형 및 잠금 보유 기간을 모니터링할 수 있습니다. 장기간 보유되는 잠금은 경합 문제를 발생시킬 수 있으므로 면밀히 관찰해야 합니다. 예를 들어 응용 프로그램에서 테이블의 행에 대한 잠금을 획득하고 사용자 입력을 기다릴 수 있습니다. 사용자 입력 대기 시간이 길어지는 경우 이러한 잠금으로 인해 다른 사용자가 차단될 수 있습니다. 이런 경우 필요할 경우에만 잠금 요청을 하고 잠금이 획득된 경우 사용자 입력이 필요하지 않도록 응용 프로그램을 다시 디자인해야 합니다.  
   
-## Lock: Released 이벤트 클래스 데이터 열  
+## <a name="lock-released-event-class-data-columns"></a>Lock: Released 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
@@ -47,14 +51,14 @@ caps.handback.revision: 35
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
 |ServerName|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
-|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
+|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|**ntext**|추적에서 캡처된 이벤트 클래스에 따라 달라지는 텍스트 값입니다.|1|예|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |형식|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Lock:Acquired 이벤트 클래스](../../relational-databases/event-classes/lock-acquired-event-class.md)   
  [sys.dm_tran_locks&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  

@@ -1,59 +1,63 @@
 ---
-title: "데이터베이스 메일 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlimail.profileandaccountmanagement.f1"
-  - "sql13.swb.sqlimail.newaccount.f1"
-  - "sql13.swb.dbmail. manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.manageexistingprofile.f1"
-  - "sql13.swb.sqlimail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.manageexistingaccount.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.profileview.f1"
-  - "sql13.swb.sqlimail.welcome.f1"
-  - "sql13.swb.sqlimail.manageprofilesecurity.principalview.f1"
-  - "sql13.swb.sqlimail.newsqlimailaccount.f1"
-  - "sql13.swb.sqlimail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.completewizard.f1"
-  - "sql13.swb.dbmail.sendtestemail.test.f1"
-  - "sql13.swb.sqlimail.newprofile.f1"
-  - "sql13.swb.dbmail.addaccounttoprofile.f1"
-  - "sql13.swb.dbmail.newprofile.f1"
-  - "sql13.swb.sqlimail.manageexistingaccount.f1"
-  - "sql13.swb.dbmail.welcome.f1"
-  - "sql13.swb.dbmail.newaccount.f1"
-  - "sql13.swb.dbmail.profileandaccountmanagement.f1"
-  - "sql13.swb.dbmail.selectconfiguration.f1"
-  - "sql13.swb.dbmail.sendtestemail.f1"
-  - "sql13.swb.sqlimail.completewizard.f1"
-  - "sql13.swb.dbmail.configuresystem.f1"
-  - "sql13.swb.sqlimail.configuresystem.f1"
-  - "sql13.swb.dbmail.newsqlimailaccount.f1"
-  - "sql13.swb.dbmail.manageexistingprofile.f1"
-  - "sql13.swb.dbmail.manageprofilesecurity.principalview.f1"
+title: "데이터베이스 메일 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlimail.profileandaccountmanagement.f1
+- sql13.swb.sqlimail.newaccount.f1
+- sql13.swb.dbmail. manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.manageexistingprofile.f1
+- sql13.swb.sqlimail.addaccounttoprofile.f1
+- sql13.swb.dbmail.manageexistingaccount.f1
+- sql13.swb.sqlimail.manageprofilesecurity.profileview.f1
+- sql13.swb.sqlimail.welcome.f1
+- sql13.swb.sqlimail.manageprofilesecurity.principalview.f1
+- sql13.swb.sqlimail.newsqlimailaccount.f1
+- sql13.swb.sqlimail.selectconfiguration.f1
+- sql13.swb.dbmail.completewizard.f1
+- sql13.swb.dbmail.sendtestemail.test.f1
+- sql13.swb.sqlimail.newprofile.f1
+- sql13.swb.dbmail.addaccounttoprofile.f1
+- sql13.swb.dbmail.newprofile.f1
+- sql13.swb.sqlimail.manageexistingaccount.f1
+- sql13.swb.dbmail.welcome.f1
+- sql13.swb.dbmail.newaccount.f1
+- sql13.swb.dbmail.profileandaccountmanagement.f1
+- sql13.swb.dbmail.selectconfiguration.f1
+- sql13.swb.dbmail.sendtestemail.f1
+- sql13.swb.sqlimail.completewizard.f1
+- sql13.swb.dbmail.configuresystem.f1
+- sql13.swb.sqlimail.configuresystem.f1
+- sql13.swb.dbmail.newsqlimailaccount.f1
+- sql13.swb.dbmail.manageexistingprofile.f1
+- sql13.swb.dbmail.manageprofilesecurity.principalview.f1
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 74432814fa4cc99c8ef8ec8c3c63f37ec8b8b25a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 메일 구성
+# <a name="configure-database-mail"></a>데이터베이스 메일 구성
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **데이터베이스 메일을 구성하려면:**  [데이터베이스 메일 구성 마법사](#DBWizard), [템플릿 사용](#Template)  
+-   **To configure Database Mail, using:**  [Database Mail Configuration Wizard](#DBWizard), [Using Templates](#Template)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 자세한 내용은 [Database Mail XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)을 참조하세요.  
+ **DatabaseMail XPs** 옵션을 사용하여 서버에서 데이터베이스 메일을 활성화할 수 있습니다. 자세한 내용은 [Database Mail XPs 서버 구성 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 을 참조하세요.  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  어느 데이터베이스에서든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker를 활성화하려면 데이터베이스 잠금이 필요합니다. **msdb**에서 Service Broker가 비활성화되어 있는 경우 데이터베이스 메일을 활성화하려면 Service Broker가 필요한 잠금을 얻을 수 있도록 먼저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 중지합니다.  
@@ -113,7 +117,7 @@ caps.handback.revision: 13
  마법사를 사용할 때마다 **구성 태스크 선택** 페이지를 사용하여 수행할 작업을 지정할 수 있습니다. 마법사를 완료하기 전에 태스크를 취소하고 다른 태스크를 수행하려면 **뒤로** 단추를 눌러 이 페이지로 다시 돌아와 다른 태스크를 선택합니다.  
   
 > [!NOTE]  
->  데이터베이스 메일이 설정되지 않은 경우 **데이터베이스 메일 기능을 사용할 수 없습니다.  이 기능을 설정하시겠습니까?**라는 메시지가 나타납니다. **예**를 선택하면 **sp_configure** 시스템 저장 프로시저의 [Database Mail XPs 옵션](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md)을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
+>  데이터베이스 메일이 설정되지 않은 경우 **데이터베이스 메일 기능을 사용할 수 없습니다.  이 기능을 설정하시겠습니까?**라는 메시지가 나타납니다. **예**를 선택하면 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션** 을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
   
  **다음 태스크를 수행하여 데이터베이스 메일 설치**  
  최초로 데이터베이스 메일을 설정하는 데 필요한 모든 태스크를 수행합니다. 이 옵션에는 다른 세 가지 옵션이 모두 포함됩니다.  
@@ -132,7 +136,7 @@ caps.handback.revision: 13
 ###  <a name="NewAccount"></a> 새 계정 페이지  
  이 페이지를 사용하여 새 데이터베이스 메일 계정을 만들 수 있습니다. 데이터베이스 메일 계정에는 전자 메일을 SMTP 서버로 보내기 위한 정보가 포함되어 있습니다.  
   
- 데이터베이스 메일 계정에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전자 메일 메시지를 SMTP 서버로 보내기 위해 사용하는 정보가 포함되어 있습니다. 각 계정에는 하나의 전자 메일 서버에 대한 정보가 포함되어 있습니다.  
+ 데이터베이스 메일 계정에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 전자 메일 메시지를 SMTP 서버로 보내기 위해 사용하는 정보가 포함되어 있습니다. 각 계정에는 하나의 전자 메일 서버에 대한 정보가 포함되어 있습니다.  
   
  데이터베이스 메일 계정은 데이터베이스 메일에 대해서만 사용됩니다. 데이터베이스 메일 계정은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계정 또는 Microsoft Windows 계정에 해당되지 않습니다. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 자격 증명 또는 사용자가 제공하는 다른 자격 증명을 사용하거나 익명으로 데이터베이스 메일을 보낼 수 있습니다. 기본 인증을 사용하는 경우 데이터베이스 메일 계정의 사용자 이름과 암호는 전자 메일 서버 인증에만 사용됩니다. 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터 사용자에 해당할 필요는 없습니다.  
   
@@ -143,13 +147,13 @@ caps.handback.revision: 13
  계정에 대한 설명을 입력합니다. 설명은 선택 사항입니다.  
   
  **전자 메일 주소**  
- 계정에 대한 전자 메일 주소의 이름을 입력합니다. 이 주소는 전자 메일을 보내는 전자 메일 주소입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정은 SqlAgent@Adventure-Works.com 주소에서 전자 메일을 보낼 수 있습니다.  
+ 계정에 대한 전자 메일 주소의 이름을 입력합니다. 이 주소는 전자 메일을 보내는 전자 메일 주소입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트의 계정은 SqlAgent@Adventure-Works.com 주소에서 메일을 보낼 수 있습니다.  
   
  **표시 이름**  
  이 계정을 사용하여 보낼 전자 메일 메시지에 표시할 이름을 입력합니다. 표시 이름은 선택 사항입니다. 이 이름은 이 계정에서 보내는 메시지에 표시되는 이름입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정은 전자 메일 메시지에 "SQL Server Agent Automated Mailer"라는 이름을 표시할 수 있습니다.  
   
  **회신 전자 메일**  
- 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 입력합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정에 대한 회신은 데이터베이스 관리자인 danw@Adventure-Works.com으로 이동할 수 있습니다.  
+ 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 입력합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정에 대한 회신은 데이터베이스 관리자인 danw@Adventure-Works.com을 클릭합니다.  
   
  **서버 이름**  
  계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 일반적으로 이 주소는 **smtp.***<your_company>***.com**과 유사한 형식으로 구성됩니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
@@ -193,13 +197,13 @@ caps.handback.revision: 13
  계정에 대한 설명을 확인하거나 업데이트합니다. 설명은 선택 사항입니다.  
   
  **전자 메일 주소**  
- 계정에 대한 전자 메일 주소의 이름을 확인하거나 업데이트합니다. 이 주소는 전자 메일을 보내는 전자 메일 주소입니다. 예를 들어 Microsoft SQL Server 에이전트의 계정은 **SqlAgent@Adventure-Works.com** 주소에서 메일을 보낼 수 있습니다.  
+ 계정에 대한 전자 메일 주소의 이름을 확인하거나 업데이트합니다. 이 주소는 전자 메일을 보내는 전자 메일 주소입니다. 예를 들어 Microsoft SQL Server 에이전트의 계정은 **SqlAgent@Adventure-Works.com**을 클릭합니다.  
   
  **표시 이름**  
- 이 계정을 사용하여 보낼 전자 메일 메시지에 표시할 이름을 확인하거나 업데이트합니다. 표시 이름은 선택 사항입니다. 이 이름은 이 계정에서 보내는 메시지에 표시되는 이름입니다. 예를 들어 SQL Server 에이전트의 계정은 메일 메시지에 **SQL Server Agent Automated Mailer**의 이름을 표시할 수 있습니다.  
+ 이 계정을 사용하여 보낼 전자 메일 메시지에 표시할 이름을 확인하거나 업데이트합니다. 표시 이름은 선택 사항입니다. 이 이름은 이 계정에서 보내는 메시지에 표시되는 이름입니다. 예를 들어 SQL Server 에이전트의 계정은 메일 메시지에 **SQL Server Agent Automated Mailer** 의 이름을 표시할 수 있습니다.  
   
  **회신 전자 메일**  
- 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 확인하거나 업데이트합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 SQL Server 에이전트 계정에 대한 회신은 데이터베이스 관리자인 **danw@Adventure-Works.com**으로 전송됩니다.  
+ 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 확인하거나 업데이트합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 SQL Server 에이전트 계정에 대한 회신은 데이터베이스 관리자인 **danw@Adventure-Works.com**을 클릭합니다.  
   
  **서버 이름**  
  계정에서 전자 메일 전송을 위해 사용하는 SMTP 서버의 이름을 확인하거나 업데이트합니다. 일반적으로 이 주소는 **smtp.<your_company>.com**과 유사한 형식으로 구성됩니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
@@ -293,12 +297,12 @@ caps.handback.revision: 13
  **계정 이름**  
  계정의 이름을 봅니다.  
   
- **전자 메일 주소**  
+ **E-mail Address**  
  계정의 전자 메일 주소를 봅니다.  
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="AddAccount"></a> 프로필에 계정 추가 페이지  
+###  <a name="AddAccount"></a> Add Account to Profile Page  
  이 페이지를 사용하여 프로필에 추가할 계정을 선택할 수 있습니다. **계정 이름** 상자에서 기존 계정을 선택하거나 **새 계정**을 클릭합니다.  
   
  **계정 이름**  
@@ -337,12 +341,12 @@ caps.handback.revision: 13
   
  프로필에는 공개 프로필과 개인 프로필이 있습니다. 개인 프로필은 특정 사용자나 역할만 액세스할 수 있습니다. 공개 프로필은 메일 호스트 데이터베이스(**msdb**)에 액세스할 수 있는 모든 사용자나 역할이 사용할 수 있으며 해당 프로필을 사용하여 메일을 보낼 수 있습니다.  
   
- 프로필은 기본 프로필일 수 있습니다. 이 경우 사용자나 역할은 명시적으로 프로필을 지정하지 않고도 프로필을 사용하여 전자 메일을 보낼 수 있습니다. 전자 메일 메시지를 보내는 사용자나 역할에 기본 개인 프로필이 있을 경우 데이터베이스 메일은 해당 프로필을 사용합니다. 사용자나 역할에 기본 개인 프로필이 없을 경우 **sp_send_dbmail**은 **msdb** 데이터베이스의 기본 공개 프로필을 사용합니다. 사용자 또는 역할의 기본 개인 프로필과 데이터베이스의 기본 공개 프로필이 둘 다 없을 경우 **sp_send_dbmail**은 오류를 반환합니다. 하나의 프로필만 기본 프로필로 표시할 수 있습니다.  
+ 프로필은 기본 프로필일 수 있습니다. 이 경우 사용자나 역할은 명시적으로 프로필을 지정하지 않고도 프로필을 사용하여 전자 메일을 보낼 수 있습니다. 전자 메일 메시지를 보내는 사용자나 역할에 기본 개인 프로필이 있을 경우 데이터베이스 메일은 해당 프로필을 사용합니다. 사용자나 역할에 기본 개인 프로필이 없을 경우 **sp_send_dbmail** 은 **msdb** 데이터베이스의 기본 공개 프로필을 사용합니다. 사용자 또는 역할의 기본 개인 프로필과 데이터베이스의 기본 공개 프로필이 둘 다 없을 경우 **sp_send_dbmail** 은 오류를 반환합니다. 하나의 프로필만 기본 프로필로 표시할 수 있습니다.  
   
  **공개**  
  지정된 프로필을 공개 프로필로 지정하려면 이 옵션을 선택합니다.  
   
- **프로필 이름**  
+ **Profile Name**  
  프로필 이름을 표시합니다.  
   
  **기본 프로필**  
@@ -358,7 +362,7 @@ caps.handback.revision: 13
   
  프로필에는 공개 프로필과 개인 프로필이 있습니다. 개인 프로필은 특정 사용자나 역할만 액세스할 수 있습니다. 공개 프로필은 메일 호스트 데이터베이스(**msdb**)에 액세스할 수 있는 모든 사용자나 역할이 사용할 수 있으며 해당 프로필을 사용하여 메일을 보낼 수 있습니다.  
   
- 프로필은 기본 프로필일 수 있습니다. 이 경우 사용자나 역할은 명시적으로 프로필을 지정하지 않고도 프로필을 사용하여 전자 메일을 보낼 수 있습니다. 전자 메일 메시지를 보내는 사용자나 역할에 기본 개인 프로필이 있을 경우 데이터베이스 메일은 해당 프로필을 사용합니다. 사용자나 역할에 기본 개인 프로필이 없을 경우 **sp_send_dbmail**은 **msdb** 데이터베이스의 기본 공개 프로필을 사용합니다. 사용자 또는 역할의 기본 개인 프로필과 데이터베이스의 기본 공개 프로필이 둘 다 없을 경우 **sp_send_dbmail**은 오류를 반환합니다.  
+ 프로필은 기본 프로필일 수 있습니다. 이 경우 사용자나 역할은 명시적으로 프로필을 지정하지 않고도 프로필을 사용하여 전자 메일을 보낼 수 있습니다. 전자 메일 메시지를 보내는 사용자나 역할에 기본 개인 프로필이 있을 경우 데이터베이스 메일은 해당 프로필을 사용합니다. 사용자나 역할에 기본 개인 프로필이 없을 경우 **sp_send_dbmail** 은 **msdb** 데이터베이스의 기본 공개 프로필을 사용합니다. 사용자 또는 역할의 기본 개인 프로필과 데이터베이스의 기본 공개 프로필이 둘 다 없을 경우 **sp_send_dbmail** 은 오류를 반환합니다.  
   
  **사용자 이름**  
  **msdb** 데이터베이스에서 사용자 또는 역할 이름을 선택합니다.  
@@ -377,7 +381,7 @@ caps.handback.revision: 13
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="SystemParameters"></a> 시스템 매개 변수 구성  
+###  <a name="SystemParameters"></a> AccountRetryAttempts  
  이 페이지를 사용하여 데이터베이스 메일 시스템 매개 변수를 지정할 수 있습니다. 이 페이지에서 시스템 매개 변수와 각 매개 변수의 현재 값을 볼 수 있으며 매개 변수를 선택하면 정보 창에 표시되는 짧은 설명도 볼 수 있습니다.  
   
  **계정 다시 시도 횟수**  
@@ -416,7 +420,7 @@ caps.handback.revision: 13
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
-###  <a name="TestEmail"></a> 테스트 전자 메일 보내기 페이지  
+###  <a name="TestEmail"></a> Send Test E-Mail Page  
  *<instance_name>*에서 **테스트 메일 보내기** 페이지를 사용하여 지정된 데이터베이스 메일 프로필을 통해 메일 메시지를 보낼 수 있습니다. **sysadmin** 고정 서버 역할의 멤버만 이 페이지를 사용하여 테스트 메일을 보낼 수 있습니다.  
   
  **데이터베이스 메일 프로필**  
@@ -431,13 +435,13 @@ caps.handback.revision: 13
  **본문**  
  테스트 전자 메일의 본문입니다. 문제 해결을 위해 사용자의 전자 메일을 보다 잘 식별할 수 있도록 기본 제목을 변경하십시오.  
   
- **데이터베이스 메일 테스트 메일** 대화 상자에서 데이터베이스 메일이 메시지 보내기를 시도할 테스트 메시지를 확인하고 테스트 메일 메시지에 대한 **mailitem_id**를 입력합니다. 받는 사람에게 전자 메일이 도착했는지 확인합니다. 전자 메일은 보통 몇 분 안에 도착하지만 네트워크의 낮은 성능, 메일 서버로의 메시지 백로그, 서버의 일시적 사용 불가 상태 등에 따라 지연될 수도 있습니다. 문제 해결을 위해 **mailitem_id**를 사용하세요.  
+ **데이터베이스 메일 테스트 메일** 대화 상자에서 데이터베이스 메일이 메시지 보내기를 시도할 테스트 메시지를 확인하고 테스트 메일 메시지에 대한 **mailitem_id** 를 입력합니다. 받는 사람에게 전자 메일이 도착했는지 확인합니다. 전자 메일은 보통 몇 분 안에 도착하지만 네트워크의 낮은 성능, 메일 서버로의 메시지 백로그, 서버의 일시적 사용 불가 상태 등에 따라 지연될 수도 있습니다. 문제 해결을 위해 **mailitem_id** 를 사용하세요.  
   
  **보낸 전자 메일**  
- 테스트 메일 메시지의 **mailitem_id**입니다.  
+ 테스트 메일 메시지의 **mailitem_id** 입니다.  
   
  **문제 해결**  
- 온라인 설명서의 [데이터베이스 메일 문제 해결](http://msdn.microsoft.com/library/ms188663.aspx) 항목을 열려면 클릭합니다.  
+ 온라인 설명서의 [데이터베이스 메일 문제 해결](http://msdn.microsoft.com/library/ms188663.aspx)항목을 열려면 클릭합니다.  
   
  [데이터베이스 메일 구성 마법사](#DBWizard)  
   
@@ -452,7 +456,7 @@ caps.handback.revision: 13
   
 4.  **쿼리** 메뉴에서 **템플릿 매개 변수 값 지정**을 선택합니다. **템플릿 매개 변수 값 지정** 창이 열립니다.  
   
-5.  **profile_name**, **account_name**, **SMTP_servername**, **email_address** 및 **display_name**에 대한 값을 입력합니다. SQL Server Management Studio는 사용자가 제공한 값으로 템플릿을 채웁니다.  
+5.  **profile_name**, **account_name**, **SMTP_servername**, **email_address**및 **display_name**에 대한 값을 입력합니다. SQL Server Management Studio는 사용자가 제공한 값으로 템플릿을 채웁니다.  
   
 6.  스크립트를 실행하여 구성을 만듭니다.  
   

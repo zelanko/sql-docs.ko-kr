@@ -1,30 +1,34 @@
 ---
-title: "데이터베이스 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 제거 [SQL Server], SQL Server Management Studio"
-  - "데이터베이스 제거"
-  - "데이터베이스 삭제"
-  - "데이터베이스 삭제"
-  - "데이터베이스 [SQL Server], 삭제하는 중"
-  - "데이터베이스 제거 [SQL Server]"
+title: "데이터베이스 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database removal [SQL Server], SQL Server Management Studio
+- removing databases
+- deleting databases
+- dropping databases
+- databases [SQL Server], dropping
+- database removal [SQL Server]
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 17de8249b2c8117114f3bc63d9709f3b94ff048b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 삭제
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 데이터베이스를 삭제하는 방법을 설명합니다.  
+# <a name="delete-a-database"></a>데이터베이스 삭제
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 데이터베이스를 삭제하는 방법을 설명합니다.  
   
  **항목 내용**  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 31
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [데이터베이스를 삭제한 후](#FollowUp)  
+-   **Follow Up:**  [After deleting a database](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
@@ -71,7 +75,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스를 삭제하려면  
+#### <a name="to-delete-a-database"></a>데이터베이스를 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스를 삭제하려면  
+#### <a name="to-delete-a-database"></a>데이터베이스를 삭제하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -99,7 +103,7 @@ GO
 ##  <a name="FollowUp"></a> 후속 작업: 데이터베이스를 삭제한 후  
  **master** 데이터베이스를 백업합니다. **master** 를 복원해야 할 경우 마지막 **master** 백업 이후 삭제된 모든 데이터베이스의 참조가 시스템 카탈로그 뷰에 아직 있어서 오류 메시지가 발생할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   

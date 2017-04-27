@@ -1,26 +1,30 @@
 ---
-title: "복사 전용 백업(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "복사 전용 백업 [SQL Server]"
-  - "COPY_ONLY 옵션 [BACKUP 문]"
-  - "백업 [SQL Server], 복사 전용 백업"
+title: "복사 전용 백업(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copy-only backups [SQL Server]
+- COPY_ONLY option [BACKUP statement]
+- backups [SQL Server], copy-only backups
 ms.assetid: f82d6918-a5a7-4af8-868e-4247f5b00c52
 caps.latest.revision: 48
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 9a63e882e79ec725cca126e80369a70bbc4bc774
+ms.lasthandoff: 04/11/2017
+
 ---
-# 복사 전용 백업(SQL Server)
+# <a name="copy-only-backups-sql-server"></a>복사 전용 백업(SQL Server)
   *복사 전용 백업*은 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업입니다. 일반적으로 백업을 수행하면 데이터베이스가 변경되므로 이후 백업이 복원되는 방식에 영향을 주게 됩니다. 그러나 백업 전체에 영향을 주지 않고 특별한 용도로 백업을 수행한 다음 데이터베이스에 대한 프로시저를 복원하는 것이 유용할 수도 있습니다. 이러한 용도로 복사 전용 백업이 제공됩니다.  
   
  복사 전용 백업의 종류는 다음과 같습니다.  
@@ -37,12 +41,12 @@ caps.handback.revision: 47
   
      복사 전용 백업 이후에는 트랜잭션 로그를 자를 수 없습니다.  
   
- 복사 전용 백업은 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 테이블의 **is_copy_only** 열에 기록됩니다.  
+ 복사 전용 백업은 **backupset** 테이블의 [is_copy_only](../../relational-databases/system-tables/backupset-transact-sql.md) 열에 기록됩니다.  
   
-## 복사 전용 백업을 만들려면  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 복사 전용 백업을 만들 수 있습니다.  
+## <a name="to-create-a-copy-only-backup"></a>복사 전용 백업을 만들려면  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 PowerShell을 사용하여 복사 전용 백업을 만들 수 있습니다.  
 
-### 예  
+### <a name="examples"></a>예  
 ###  <a name="SSMSProcedure"></a> 1.  SQL Server Management Studio 사용  
 이 예제에서는 `Sales` 데이터베이스의 복사 전용 백업이 기본 백업 위치에서 디스크에 백업됩니다.
 
@@ -93,9 +97,8 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
   
 -   [SQL Server PowerShell 공급자](../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)   
  [백업 및 복원으로 데이터베이스 복사](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
@@ -104,3 +107,4 @@ Backup-SqlDatabase -ServerInstance 'SalesServer' -Database 'Sales' -BackupFile '
 [Backup-SqlDatabase](https://technet.microsoft.com/library/mt683378.aspx)
 
   
+

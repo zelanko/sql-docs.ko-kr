@@ -1,24 +1,28 @@
 ---
-title: "뷰 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "뷰 [SQL Server], 만들기"
+title: "뷰 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- views [SQL Server], creating
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f8cf0bdceabcdb5959572ca45406d5c53833c3f2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 뷰 만들기
+# <a name="create-views"></a>뷰 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 뷰를 만들 수 있습니다. 뷰는 다음과 같은 용도로 사용할 수 있습니다.  
   
 -   각 사용자가 데이터베이스를 보는 시각에 초점을 맞추고 데이터 조작을 간소화하며 사용자 지정할 수 있습니다.  
@@ -55,7 +59,7 @@ caps.handback.revision: 16
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 쿼리 및 뷰 디자이너를 사용하여 뷰를 만들려면  
+#### <a name="to-create-a-view-by-using-the-query-and-view-designer"></a>쿼리 및 뷰 디자이너를 사용하여 뷰를 만들려면  
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
@@ -73,11 +77,11 @@ caps.handback.revision: 16
   
 8.  **이름 선택** 대화 상자에서 새 뷰의 이름을 입력하고 **확인**을 클릭합니다.  
   
-     쿼리 및 뷰 디자이너에 대한 자세한 내용은 [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)를 참조하세요.  
+     쿼리 및 뷰 디자이너에 대한 자세한 내용은 [쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](http://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 뷰를 만들려면  
+#### <a name="to-create-a-view"></a>뷰를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

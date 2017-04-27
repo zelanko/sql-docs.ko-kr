@@ -1,27 +1,31 @@
 ---
-title: "데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "메일 메시지 및 첨부 파일 보관 [SQL Server]"
-  - "메일 메시지 및 첨부 파일 제거"
-  - "데이터베이스 메일 [SQL Server], 보관"
-  - "메일 메시지 및 첨부 파일 저장"
+title: "데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- archiving mail messages and attachments [SQL Server]
+- removing mail messages and attachements
+- Database Mail [SQL Server], archiving
+- saving mail messages and attachments
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bfba800ce9266e7a27c6e27e8e3ea9dfc2f2b08e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
+# <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
   데이터베이스 메일 및 첨부 파일의 복사본은 데이터베이스 메일 이벤트 로그와 함께 **msdb** 테이블에 보관됩니다. 정기적으로 테이블의 크기를 축소하고 더 이상 필요하지 않은 메시지와 이벤트를 보관할 수 있습니다. 다음 절차에서는 SQL Server 에이전트 작업을 만들어 이 프로세스를 자동화합니다.  
   
 -   **시작하기 전에:**  , [필수 구성 요소](#Prerequisites), [권장 사항](#Recommendations), [권한](#Permissions)  
@@ -37,7 +41,7 @@ caps.handback.revision: 19
  프로덕션 환경에서 오류 검사를 추가하고 작업이 실패할 경우 운영자에게 전자 메일 메시지를 보낼 수 있습니다.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 권한  
  이 항목에서 설명하는 저장 프로시저를 실행하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
   
@@ -58,7 +62,7 @@ caps.handback.revision: 19
 -   정기적으로 실행되도록 작업을 예약합니다.  
   
   
-## SQL Server 에이전트 작업을 만들려면  
+## <a name="to-create-a-sql-server-agent-job"></a>SQL Server 에이전트 작업을 만들려면  
   
 1.  개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 확장하고 **작업**을 마우스 오른쪽 단추로 클릭한 다음 **새 작업**을 클릭합니다.  
   
@@ -72,7 +76,7 @@ caps.handback.revision: 19
   
  [개요](#Process_Overview)  
   
-## 데이터베이스 메일 메시지 보관 단계를 만들려면  
+## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>데이터베이스 메일 메시지 보관 단계를 만들려면  
   
 1.  **단계** 페이지에서 **새로 만들기**를 클릭합니다.  
   
@@ -98,7 +102,7 @@ caps.handback.revision: 19
   
  [개요](#Process_Overview)  
   
-## 데이터베이스 메일 첨부 파일 보관 단계를 만들려면  
+## <a name="to-create-a-step-to-archive-the-database-mail-attachments"></a>데이터베이스 메일 첨부 파일 보관 단계를 만들려면  
   
 1.  **단계** 페이지에서 **새로 만들기**를 클릭합니다.  
   
@@ -125,7 +129,7 @@ caps.handback.revision: 19
   
  [개요](#Process_Overview)  
   
-## 데이터베이스 메일 로그 보관 단계를 만들려면  
+## <a name="to-create-a-step-to-archive-the-database-mail-log"></a>데이터베이스 메일 로그 보관 단계를 만들려면  
   
 1.  **단계** 페이지에서 **새로 만들기**를 클릭합니다.  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 19
   
  [개요](#Process_Overview)  
   
-## 데이터베이스 메일에서 보관된 행을 제거하는 단계를 만들려면  
+## <a name="to-create-a-step-to-remove-the-archived-rows-from-database-mail"></a>데이터베이스 메일에서 보관된 행을 제거하는 단계를 만들려면  
   
 1.  **단계** 페이지에서 **새로 만들기**를 클릭합니다.  
   
@@ -174,7 +178,7 @@ caps.handback.revision: 19
   
  [개요](#Process_Overview)  
   
-## 데이터베이스 메일 이벤트 로그에서 보관된 항목을 제거하는 단계를 만들려면  
+## <a name="to-create-a-step-to-remove-the-archived-items-from-database-mail-event-log"></a>데이터베이스 메일 이벤트 로그에서 보관된 항목을 제거하는 단계를 만들려면  
   
 1.  **단계** 페이지에서 **새로 만들기**를 클릭합니다.  
   
@@ -194,7 +198,7 @@ caps.handback.revision: 19
   
  [개요](#Process_Overview)  
   
-## 정기적으로 실행되도록 작업을 예약하려면  
+## <a name="to-schedule-the-job-to-run-periodically"></a>정기적으로 실행되도록 작업을 예약하려면  
   
 1.  **새 작업** 대화 상자에서 **일정**을 클릭합니다.  
   
@@ -206,7 +210,7 @@ caps.handback.revision: 19
   
 5.  **빈도** 영역에서 정기적으로 작업을 실행할 옵션을 선택합니다(예: 매월 한 번).  
   
-6.  **일별 빈도** 영역에서 **한 번 수행 - \<time>**을 선택합니다.  
+6.  **일별 빈도** 영역에서 **한 번 수행 - \<시간>**을(를) 선택합니다.  
   
 7.  다른 옵션이 원하는 대로 구성되었는지 확인하고 **확인** 을 눌러 일정을 저장합니다.  
   
@@ -215,3 +219,4 @@ caps.handback.revision: 19
  [개요](#Process_Overview)  
   
   
+

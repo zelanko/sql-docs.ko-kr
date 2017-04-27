@@ -1,30 +1,34 @@
 ---
-title: "데이터베이스 메일 메시징 개체 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 메일 [SQL Server], 호스트 데이터베이스"
-  - "데이터베이스 메일 [SQL Server], 메시징 개체"
-  - "메일 호스트 데이터베이스 [SQL Server]"
-  - "호스트 데이터베이스 [데이터베이스 메일]"
+title: "데이터베이스 메일 메시징 개체 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], host databases
+- Database Mail [SQL Server], messaging objects
+- mail host databases [SQL Server]
+- host databases [Database Mail]
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 caps.latest.revision: 32
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0ac02628b0b385841805994ec17dd121d84d7399
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 메일 메시징 개체
+# <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
   **msdb** 데이터베이스는 데이터베이스 메일 호스트 데이터베이스입니다. 이 데이터베이스에는 데이터베이스 메일 지원을 위한 저장 프로시저와 메시징 개체가 있습니다. Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 데이터베이스 메일을 사용하고 프로필과 계정을 만들어 관리하고 데이터베이스 메일 옵션을 구성하기 위한 데이터베이스 메일 구성 마법사가 포함되어 있습니다.  
   
-##  <a name="ComponentsAndConcepts"></a> **msdb** 데이터베이스의 개체  
+##  <a name="ComponentsAndConcepts"></a>**msdb** 데이터베이스의 개체  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 는 **msdb** 데이터베이스에서 사용할 수 있어야 합니다. 그러나 데이터베이스 메일은 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 네트워킹을 사용하지 않습니다. 따라서 사용자는 데이터베이스 메일을 사용하기 위해 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 끝점을 만들 필요가 없습니다. 외부 데이터베이스 메일 프로세스는 표준 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 통신합니다.  
   
  데이터베이스 메일은 데이터베이스 메일을 설정할 때 **msdb** 데이터베이스에 다음 개체를 표시합니다.  
@@ -46,9 +50,8 @@ caps.handback.revision: 31
 |[sysmail_start_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|**저장 프로시저**|외부 프로그램에서 사용하는 Service Broker 개체를 시작합니다. 이러한 개체는 기본적으로 시작됩니다.|  
 |[sysmail_stop_sp(Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|**저장 프로시저**|외부 프로그램에서 사용하는 Service Broker 개체를 중지합니다.|  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 메일](../../relational-databases/database-mail/database-mail.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)  
   

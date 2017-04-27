@@ -1,30 +1,34 @@
 ---
-title: "데이터베이스 스냅숏(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "정적 데이터베이스 뷰"
-  - "스냅숏 [SQL Server 데이터베이스 스냅숏]"
-  - "원본 데이터베이스 [SQL Server]"
-  - "스냅숏 [SQL Server 데이터베이스 스냅숏], 데이터베이스 스냅숏 정보"
-  - "데이터베이스 스냅숏 [SQL Server]"
-  - "읽기 전용 데이터베이스 뷰"
-  - "데이터베이스 스냅숏에 [SQL Server], 데이터베이스 스냅숏 정보"
+title: "데이터베이스 스냅숏(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- static database views
+- snapshots [SQL Server database snapshots]
+- source databases [SQL Server]
+- snapshots [SQL Server database snapshots], about database snapshots
+- database snapshots [SQL Server]
+- read-only database views
+- database snapshots [SQL Server], about database snapshots
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 caps.latest.revision: 54
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1087898fae9896722e795f2c6c68c5df20d0f3aa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 스냅숏(SQL Server)
+# <a name="database-snapshots-sql-server"></a>데이터베이스 스냅숏(SQL Server)
   데이터베이스 스냅숏은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스(*원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅숏은 스냅숏을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅숏은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅숏도 업데이트됩니다. 따라서 데이터베이스 스냅숏을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  
   
  지정된 원본 데이터베이스에 스냅숏이 여러 개 있을 수 있습니다. 각 데이터베이스 스냅숏은 데이터베이스 소유자가 명시적으로 삭제하기 전까지 유지됩니다.  
@@ -63,7 +67,7 @@ caps.handback.revision: 54
   
 -   가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업 오프로드  
   
-     데이터베이스 스냅숏을 데이터베이스 미러링에 사용하면 보고를 위해 미러 서버의 데이터에 액세스할 수 있습니다. 또한 미러 데이터베이스에서 쿼리를 실행하면 주 데이터베이스의 리소스를 확보할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 및 데이터베이스 스냅숏&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)을 참조하세요.  
+     데이터베이스 스냅숏을 데이터베이스 미러링에 사용하면 보고를 위해 미러 서버의 데이터에 액세스할 수 있습니다. 또한 미러 데이터베이스에서 쿼리를 실행하면 주 데이터베이스의 리소스를 확보할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 및 데이터베이스 스냅숏&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)을 사용합니다.  
   
 -   관리 오류로부터 데이터 보호  
   
@@ -96,7 +100,7 @@ caps.handback.revision: 54
  database snapshot  
  데이터베이스(원본 데이터베이스)의 트랜잭션이 일치하는 읽기 전용 정적 뷰입니다.  
   
- 원본 데이터베이스(source database)  
+ 원본 데이터베이스  
  데이터베이스 스냅숏의 경우 스냅숏이 만들어진 데이터베이스입니다. 데이터베이스 스냅숏은 원본 데이터베이스에 따라 달라집니다. 데이터베이스 스냅숏은 데이터베이스와 동일한 서버 인스턴스에 있어야 합니다. 또한 어떤 이유에서든 데이터베이스를 사용할 수 없게 되면 해당 데이터베이스 스냅숏도 모두 사용할 수 없습니다.  
   
  스파스 파일(sparse file)  
@@ -118,7 +122,7 @@ caps.handback.revision: 54
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
--   서버 인스턴스는 데이터베이스 스냅숏을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+-   서버 인스턴스는 데이터베이스 스냅숏을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 -   데이터베이스 미러링 세션의 미러 데이터베이스가 아닌 경우 원본 데이터베이스는 온라인 상태여야 합니다.  
   
@@ -193,7 +197,7 @@ caps.handback.revision: 54
     > [!NOTE]  
     >  데이터베이스 스냅숏에 대해 실행되는 SELECT 문에는 FILESTREAM 열을 지정하지 말아야 합니다. 그렇지 않으면 다음 오류 메시지가 반환됩니다. `Could not continue scan with NOLOCK due to data movement.`  
   
--   읽기 전용 스냅숏에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 tempdb에서 임시 통계를 만들어 유지 관리합니다. 자세한 내용은 [Statistics](../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
+-   읽기 전용 스냅숏에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 tempdb에서 임시 통계를 만들어 유지 관리합니다. 자세한 내용은 [Statistics](../../relational-databases/statistics/statistics.md)을(를) 참조하세요.  
   
 ###  <a name="DiskSpace"></a> 디스크 공간 요구 사항  
  데이터베이스 스냅숏은 디스크 공간을 사용합니다. 데이터베이스 스냅숏이 디스크 공간을 모두 소모하면 스냅숏이 주의 대상으로 표시되어 삭제해야 합니다. 그러나 원본 데이터베이스는 영향을 받지 않으며 정상적으로 동작이 계속됩니다. 그러나 데이터베이스의 전체 복사본과 비교할 때 스냅숏은 공간을 매우 효율적으로 사용합니다. 스냅숏은 사용 기간 동안 변경되는 페이지를 저장할 수 있는 공간만 필요로 합니다. 일반적으로 스냅숏은 제한된 시간 동안 보관되므로 크기는 중요한 문제가 아닙니다.  
@@ -234,7 +238,9 @@ caps.handback.revision: 54
   
 -   [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 및 데이터베이스 스냅숏&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
+
+

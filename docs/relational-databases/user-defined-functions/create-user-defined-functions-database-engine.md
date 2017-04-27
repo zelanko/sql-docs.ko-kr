@@ -1,28 +1,32 @@
 ---
-title: "사용자 정의 함수 만들기(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-udf"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SCHEMABINDING 절"
-  - "스키마 바운드 함수 [SQL Server]"
-  - "사용자 정의 함수 [SQL Server], 만들기"
-  - "CREATE FUNCTION 문"
-  - "유효한 문 [SQL Server]"
+title: "사용자 정의 함수 만들기(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-udf
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SCHEMABINDING clause
+- schema-bound functions [SQL Server]
+- user-defined functions [SQL Server], creating
+- CREATE FUNCTION statement
+- valid statements [SQL Server]
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 caps.latest.revision: 38
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d4ea2a247e4d8a55cd3467510f19115cc3163bc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 사용자 정의 함수 만들기(데이터베이스 엔진)
+# <a name="create-user-defined-functions-database-engine"></a>사용자 정의 함수 만들기(데이터베이스 엔진)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 사용자 정의 함수를 만드는 방법에 대해 설명합니다.  
 
   
@@ -177,7 +181,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## 추가 예제  
+## <a name="more-examples"></a>추가 예제  
  - [사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
   - [Alter Function(Transact SQL)](https://msdn.microsoft.com/library/ms173799.aspx) 
@@ -185,3 +189,4 @@ FROM dbo.ufn_FindReports(1);
  - [Drop Partition Function(Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - [커뮤니티](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)에 나와 있는 추가 예제
   
+

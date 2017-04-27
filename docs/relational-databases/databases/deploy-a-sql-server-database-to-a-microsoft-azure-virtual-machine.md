@@ -1,46 +1,50 @@
 ---
-title: "Microsoft Azure 가상 컴퓨터에 SQL Server 데이터베이스 배포 | Microsoft Docs"
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.deploymentwizard.deploymentsettings.f1"
-  - "sql13.swb.deploymentwizard.sourcesettings.f1"
-  - "sql13.swb.deploymentwizard.summary.f1"
-  - "sql13.swb.agdashboard.agp9virtualnw.issues.f1"
-  - "sql13.swb.deploymentwizard.f1"
-  - "sql13.swb.deploymentwizard.progress.f1"
-  - "sql13.swb.usevmdialog.f1"
-  - "sql13.swb.newvmdialog.f1"
-  - "sql13.swb.sqlvmdialog.f1"
-  - "sql13.swb.deploymentwizard.results.f1"
-  - "sql13.swb.deploymentwizard.azuresignin.f1"
-helpviewer_keywords: 
-  - "데이터베이스 배포"
-  - "Azure VM에 배포"
-  - "Azure로 마이그레이션"
-  - "Windows Azure 가상 컴퓨터"
-  - "Azure VM으로 마이그레이션"
-  - "클라우드로 마이그레이션"
-  - "SQL Server Management Studio"
-  - "SSMS"
-  - "데이터베이스 배포 마법사"
-  - "Azure에 SQL Server 데이터베이스 배포"
-  - "Azure VM"
+title: "Microsoft Azure 가상 컴퓨터에 SQL Server 데이터베이스 배포 | Microsoft 문서"
+ms.date: 07/29/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.deploymentwizard.deploymentsettings.f1
+- sql13.swb.deploymentwizard.sourcesettings.f1
+- sql13.swb.deploymentwizard.summary.f1
+- sql13.swb.agdashboard.agp9virtualnw.issues.f1
+- sql13.swb.deploymentwizard.f1
+- sql13.swb.deploymentwizard.progress.f1
+- sql13.swb.usevmdialog.f1
+- sql13.swb.newvmdialog.f1
+- sql13.swb.sqlvmdialog.f1
+- sql13.swb.deploymentwizard.results.f1
+- sql13.swb.deploymentwizard.azuresignin.f1
+helpviewer_keywords:
+- Deploy a database
+- Deploy to Azure VM
+- Migrate to Azure
+- Windows Azure virtual machine
+- Migrate to Azure VM
+- Migrate to the cloud
+- SQL Server Management Studio
+- SSMS
+- Deploy database wizard
+- Deploy a SQL Server database to Azure
+- Azure VM
 ms.assetid: 5e82e66a-262e-4d4f-aa89-39cb62696d06
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure 가상 컴퓨터에 SQL Server 데이터베이스 배포
-  **Microsoft Azure VM에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에서 Microsoft Azure VM(가상 컴퓨터)에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 데이터베이스를 배포합니다. 마법사는 전체 데이터베이스 백업 작업을 사용하므로 SQL Server 사용자 데이터베이스에서 전체 데이터베이스 스키마 및 데이터를 항상 복사합니다. 마법사에서는 사용자의 편의를 위해 모든 Azure VM 구성을 실행하므로 VM을 미리 구성할 필요가 없습니다.  
+# <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure 가상 컴퓨터에 SQL Server 데이터베이스 배포
+  **Microsoft Azure VM에 데이터베이스 배포** 마법사를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에서 Microsoft Azure VM(가상 컴퓨터)에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 데이터베이스를 배포합니다. 마법사는 전체 데이터베이스 백업 작업을 사용하므로 SQL Server 사용자 데이터베이스에서 전체 데이터베이스 스키마 및 데이터를 항상 복사합니다. 마법사에서는 사용자의 편의를 위해 모든 Azure VM 구성을 실행하므로 VM을 미리 구성할 필요가 없습니다.  
   
  차등 백업에는 마법사를 사용할 수 없습니다. 마법사는 데이터베이스 이름이 같은 기존 데이터베이스를 덮어쓰지 않습니다. VM에서 기존 데이터베이스를 바꾸려면 먼저 기존 데이터베이스를 삭제하거나 데이터베이스 이름을 변경해야 합니다. 진행 중인 배포 작업의 데이터베이스 이름과 VM의 기존 데이터베이스 간에 이름 충돌이 발생할 경우 마법사에서는 작업을 완료할 수 있도록 진행 중인 데이터베이스에 대해 추가된 데이터베이스 이름을 제안합니다.  
   
@@ -63,7 +67,7 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  이 마법사의 단계별 연습에 대한 자세한 내용은 [Azure VM에서 SQL Server로 SQL Server 데이터베이스 마이그레이션](https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.  
   
-##  <a name="before_you_begin"></a> 시작하기 전에  
+##  <a name="before_you_begin"></a> 시작하기 전 주의 사항  
  이 마법사를 완료하려면 다음 정보를 제공하고 이러한 구성 설정을 마련해야 합니다.  
   
 -   Windows Azure 구독과 관련한 Microsoft 계정 세부 정보.  
@@ -88,11 +92,11 @@ caps.handback.revision: 30
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스가 호스팅되는 컴퓨터에서 사용할 수 있는 임시 저장소 위치가 있어야 합니다. 임시 저장소 위치는 마법사를 실행 중인 컴퓨터에서도 사용할 수 있어야 합니다.  
   
--   데이터베이스를 기존의 VM에 배포하는 경우 TCP/IP 포트를 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 구성해야 합니다.  
+-   데이터베이스를 기존의 VM에 배포하는 경우 TCP/IP 포트를 수신하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 구성해야 합니다.  
   
--   VM을 만드는 데 Microsoft Azure VM 또는 갤러리 이미지를 사용할 계획이면 [SQL Server용 클라우드 어댑터](Cloud%20Adapter%20for%20SQL%20Server.md)를 구성하고 실행해야 합니다.  
+-   VM을 만드는 데 Microsoft Azure VM 또는 갤러리 이미지를 사용할 계획이면 [SQL Server용 클라우드 어댑터](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) 를 구성하고 실행해야 합니다.  
   
--   전용 포트 11435를 사용하여 Microsoft Azure 게이트웨이에 있는 [SQL Server용 클라우드 어댑터](Cloud%20Adapter%20for%20SQL%20Server.md)에 대한 열린 끝점을 구성해야 합니다.  
+-   전용 포트 11435를 사용하여 Microsoft Azure 게이트웨이에 있는 [SQL Server용 클라우드 어댑터](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877) 에 대한 열린 끝점을 구성해야 합니다.  
   
  또한 기존 Windows Azure VM에 데이터베이스를 배포할 계획인 경우에도 다음 정보를 제공할 수 있어야 합니다.  
   
@@ -235,10 +239,10 @@ caps.handback.revision: 30
 마법사에 대한 MSDN 도움말 항목을 시작합니다.  
   
 ##  <a name="Source_settings"></a> 소스 설정  
- 이 페이지를 사용하여 Microsoft Azure VM에 배포하려는 데이터베이스를 호스트하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결합니다. 또한 Microsoft Azure로 전송하기 전에 로컬 컴퓨터에 저장할 파일의 임시 위치도 지정합니다. 이 위치는 공유 네트워크 위치일 수 있습니다.  
+ 이 페이지를 사용하여 Microsoft Azure VM에 배포하려는 데이터베이스를 호스트하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 연결합니다. 또한 Microsoft Azure로 전송하기 전에 로컬 컴퓨터에 저장할 파일의 임시 위치도 지정합니다. 이 위치는 공유 네트워크 위치일 수 있습니다.  
  
 - **SQL Server**    
-**연결**을 클릭한 다음 배포할 데이터베이스를 호스트하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 연결 세부 정보를 지정합니다.  
+**연결** 을 클릭한 다음 배포할 데이터베이스를 호스트하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 연결 세부 정보를 지정합니다.  
   
 -   **데이터베이스 선택**  
 드롭다운 목록을 사용하여 배포할 데이터베이스를 지정합니다.  
@@ -247,7 +251,7 @@ caps.handback.revision: 30
 필드에서 Microsoft Azure VM 서비스에 액세스할 수 있는 공유 폴더를 지정합니다.  
   
 ##  <a name="Azure_sign-in"></a> Microsoft Azure 로그인  
- Microsoft 계정 또는 조직 계정으로 Microsoft Azure에 로그인합니다. Microsoft 또는 조직 계정은 patc@contoso.com와 같은 전자 메일 주소 형식입니다. Azure 자격 증명에 대한 자세한 내용은 [Microsoft 조직 계정 FAQ](http://technet.microsoft.com/jj592903) 및 [문제 해결](https://technet.microsoft.com/dn197220)을 참조하세요.  
+ Microsoft 계정 또는 조직 계정으로 Microsoft Azure에 로그인합니다. Microsoft 또는 조직 계정은 patc@contoso.com과 같은 메일 주소 형식입니다. Azure 자격 증명에 대한 자세한 내용은 [Microsoft 조직 계정 FAQ](http://technet.microsoft.com/jj592903) 및 [문제 해결](https://technet.microsoft.com/dn197220)을 참조하세요.  
   
 ##  <a name="Deployment_settings"></a> 배포 설정
  이 페이지에서는 대상 서버를 지정하고 새 데이터베이스에 대한 세부 정보를 제공할 수 있습니다.  
@@ -274,7 +278,7 @@ VM을 호스트하는 서비스의 이름을 지정합니다. 새 클라우드 �
 새 데이터베이스의 이름을 지정하거나 확인합니다. 데이터베이스 이름이 대상 SQL Server 인스턴스에 이미 있는 경우 수정된 데이터베이스 이름을 지정하는 것이 좋습니다.  
   
 ##  <a name="Summary"></a> 요약
- 이 페이지에서 작업에 대해 지정한 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 배포 작업을 완료하려면 **마침**을 클릭합니다. 배포 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  **마침**을 클릭하면 **배포 진행률** 페이지가 시작됩니다.  `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`에 있는 로그 파일에서 진행률을 볼 수도 있습니다.
+ 이 페이지에서 작업에 대해 지정한 설정을 검토할 수 있습니다. 지정한 설정을 사용하여 배포 작업을 완료하려면 **마침**을 클릭합니다. 배포 작업을 취소하고 마법사를 종료하려면 **취소**를 클릭합니다.  **마침** 을 클릭하면 **배포 진행률** 페이지가 시작됩니다.  `"%LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM"`에 있는 로그 파일에서 진행률을 볼 수도 있습니다.
   
  Windows Azure VM에 SQL Server 데이터베이스에 대한 데이터베이스 세부 정보를 배포하는 데 필요한 수동 단계가 있을 수 있습니다. 이러한 단계를 자세히 설명하겠습니다.  
   
@@ -283,8 +287,8 @@ VM을 호스트하는 서비스의 이름을 지정합니다. 새 클라우드 �
   
  **마침** 을 클릭하여 마법사를 닫습니다.  
   
-## 참고 항목  
- [SQL Server에 대한 클라우드 어댑터](../Topic/Cloud%20Adapter%20for%20SQL%20Server.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server용 클라우드 어댑터](http://msdn.microsoft.com/library/82ed0d0f-952d-4d49-aa36-3855a3ca9877)   
  [데이터베이스 수명 주기 관리](../../relational-databases/database-lifecycle-management.md)   
  [데이터 계층 응용 프로그램 내보내기](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)   
  [BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기](../../relational-databases/data-tier-applications/import-a-bacpac-file-to-create-a-new-user-database.md)   
@@ -293,3 +297,4 @@ VM을 호스트하는 서비스의 이름을 지정합니다. 새 클라우드 �
  [Windows Azure에서 Windows에서 SQL Server로 마이그레이션 준비하기](http://msdn.microsoft.com/library/dn133142.aspx)  
   
   
+

@@ -1,36 +1,40 @@
 ---
-title: "TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "vs.debug.error.sqlde_register_failed"
-  - "vs.debug.error.sqlde_accessdenied"
-  - "vs.debug.error.sqlde_firewall.remotemachines"
-helpviewer_keywords: 
-  - "Transact-SQL 디버거, 원격 연결"
-  - "Windows 방화벽 [데이터베이스 엔진], Transact-SQL 디버거"
-  - "Transact-SQL 디버거, Windows 방화벽"
-  - "Transact-SQL 디버거, 구성"
-  - "포트 [SQL Server], Transact-SQL 디버거"
-  - "TCP/IP [SQL Server], 포트 번호"
+title: "TSQL 디버거를 실행하기 전에 방화벽 규칙 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- vs.debug.error.sqlde_register_failed
+- vs.debug.error.sqlde_accessdenied
+- vs.debug.error.sqlde_firewall.remotemachines
+helpviewer_keywords:
+- Transact-SQL debugger, remote connections
+- Windows Firewall [Database Engine], Transact-SQL debugger
+- Transact-SQL debugger, Windows Firewall
+- Transact-SQL debugger, configuring
+- ports [SQL Server], Transact-SQL debugger
+- TCP/IP [SQL Server], port numbers
 ms.assetid: f50e0b0d-eaf0-4f4a-be83-96f5be63e7ea
 caps.latest.revision: 43
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성
+# <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기와 다른 컴퓨터에서 실행 중인 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 디버깅을 사용하도록 Windows 방화벽 규칙을 구성해야 합니다.  
   
-## Transact-SQL 디버거 구성  
+## <a name="configuring-the-transact-sql-debugger"></a>Transact-SQL 디버거 구성  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거는 서버 쪽 구성 요소와 클라이언트 쪽 구성 요소를 모두 포함합니다. 서버 쪽 디버거 구성 요소는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2(서비스 팩 2) 이상의 각 데이터베이스 엔진 인스턴스와 함께 설치됩니다. 클라이언트 쪽 디버거 구성 요소는 다음과 같은 경우에 설치됩니다.  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서 클라이언트 쪽 도구를 설치할 때  
@@ -46,7 +50,7 @@ caps.handback.revision: 43
 > [!CAUTION]  
 >  Windows 방화벽의 규칙을 사용하도록 설정하면 방화벽에 의해 차단되도록 설계된 컴퓨터가 보안 위협에 노출될 수 있습니다. 원격 디버깅에 대한 규칙을 사용하도록 설정하면 이 항목에 나열된 포트와 프로그램이 차단됩니다.  
   
-## 서버의 방화벽 규칙  
+## <a name="firewall-rules-on-the-server"></a>서버의 방화벽 규칙  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스를 실행하는 컴퓨터에서 **고급 보안이 포함된 Windows 방화벽** 을 사용하여 다음 정보를 지정합니다.  
   
 -   sqlservr.exe에 대한 인바운드 프로그램 규칙을 추가합니다. 원격 디버깅 세션을 지원해야 하는 인스턴스당 하나의 규칙이 있어야 합니다.  
@@ -91,7 +95,7 @@ caps.handback.revision: 43
   
 -   도메인 정책에 따라 IPSec을 통해 네트워크 통신을 수행해야 하는 경우 UDP 포트 4500 및 UDP 포트 500을 여는 인바운드 규칙도 추가해야 합니다.  
   
-## 클라이언트의 방화벽 규칙  
+## <a name="firewall-rules-on-the-client"></a>클라이언트의 방화벽 규칙  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 실행하는 컴퓨터에서는 SQL Server 설치 프로그램이나 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 설치 프로그램이 원격 디버깅을 허용하도록 Windows 방화벽을 구성했을 수 있습니다.  
   
  원격 디버깅 세션을 열려고 하는 동안 오류가 발생하면 다음과 같이 **고급 보안이 포함된 Windows 방화벽** 을 사용하여 방화벽 규칙을 구성함으로써 수동으로 프로그램 및 포트 예외를 구성할 수 있습니다.  
@@ -146,7 +150,7 @@ caps.handback.revision: 43
   
     9. **프로토콜 종류:** 상자에서는 **TCP** 를 선택하고 **로컬 포트:** 상자에서는 **RPC 동적 포트** 를 선택한 후에 **적용**, **확인**을 차례로 클릭합니다.  
   
-## 디버거 시작을 위한 요구 사항  
+## <a name="requirements-for-starting-the-debugger"></a>디버거 시작을 위한 요구 사항  
  다음 요구 사항을 충족해야 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 시작할 수 있습니다.  
   
 * [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 sysadmin 고정 서버 역할의 멤버인 Windows 계정으로 실행해야 합니다.  
@@ -157,7 +161,7 @@ caps.handback.revision: 43
 
 * 서버는 RPC를 통해 클라이언트와 다시 통신해야 합니다. SQL Server 서비스를 실행 중인 계정에 클라이언트에 대한 인증 권한이 있어야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Transact-SQL 디버거 실행](../../relational-databases/scripting/run-the-transact-sql-debugger.md)   
  [Transact-SQL 코드 단계별 실행](../../relational-databases/scripting/step-through-transact-sql-code.md)   
@@ -165,3 +169,4 @@ caps.handback.revision: 43
  [데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/database-engine-query-editor-sql-server-management-studio.md)  
   
   
+

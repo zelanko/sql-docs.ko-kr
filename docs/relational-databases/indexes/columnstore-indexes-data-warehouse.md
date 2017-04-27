@@ -1,28 +1,32 @@
 ---
-title: "데이터 웨어하우스용 Columnstore 인덱스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Columnstore 인덱스 - 데이터 웨어하우스 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21fd153b-116d-47fc-a926-f1528299a391
 caps.latest.revision: 15
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: ba866cdea9d6158affc31e74572bb9610ab94489
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터 웨어하우스용 Columnstore 인덱스
+# <a name="columnstore-indexes---data-warehouse"></a>Columnstore 인덱스 - 데이터 웨어하우스
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Columnstore 인덱스는 분할과 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 웨어하우스를 만들기 위해 필수입니다.  
   
 ## <a name="whats-new"></a>새로운 기능  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 columnstore 성능 향상을 위해 다음 기능이 도입되었습니다.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 columnstore 성능 향상을 위해 다음 기능이 도입되었습니다.  
   
 -   Always On은 읽기 가능 복제본에 대한 columnstore 인덱스 쿼리를 지원합니다.  
   
@@ -137,11 +141,12 @@ END TRAN
  트랜잭션 일관성을 보장하려면 스냅숏 격리(SI)를 사용하고 columnstore 인덱스에 대한 쿼리의 문 수준 일관성을 보장하려면 커밋된 읽기 스냅숏 격리(RCSI)를 사용합니다. 이렇게 하면 데이터 기록기를 차단하지 않고 쿼리를 실행할 수 있습니다. 이 비차단 동작 덕분에 복잡한 트랜잭션에 대한 교착 상태의 가능성이 크게 줄어듭니다. 자세한 내용은 MSDN의 [SQL Server에서의 스냅숏 격리](http://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Columnstore 인덱스 가이드](../Topic/Columnstore%20Indexes%20Guide.md)   
- [Columnstore 인덱스 데이터 로드](../Topic/Columnstore%20Indexes%20Data%20Loading.md)   
- [버전이 지정된 Columnstore 인덱스 기능 요약](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)   
+ Columnstore 인덱스 가이드   
+ Columnstore 인덱스 데이터 로드   
+ Columnstore 인덱스 버전형 기능 요약   
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   
  [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
   
   
+

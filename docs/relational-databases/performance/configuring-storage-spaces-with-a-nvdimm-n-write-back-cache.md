@@ -1,27 +1,31 @@
 ---
-title: "NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 861862fa-9900-4ec0-9494-9874ef52ce65
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a0a115eba3fbd1afe52c211fe0f93362a989fc2
+ms.lasthandoff: 04/11/2017
+
 ---
-# NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성
+# <a name="configuring-storage-spaces-with-a-nvdimm-n-write-back-cache"></a>NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성
   Windows Server 2016은 매우 빠르게 I/O(입출력) 작업을 수행할 수 있는 NVDIMM-N 장치를 지원합니다. 이러한 장치를 사용하는 좋은 방법 중 하나는 쓰기 대기 시간을 짧게 하는 쓰기 저장 캐시입니다. 이 항목에서는 SQL Server 트랜잭션 로그를 저장할 가상 드라이브로 미러된 NVDIMM-N 쓰기 저장 캐시를 사용하여 미러된 저장소 공간을 설정하는 방법을 설명합니다. 또한 데이터 테이블 또는 기타 데이터를 저장하는 데 사용하려는 경우 저장소 풀에 더 많은 디스크를 포함하거나 격리가 중요한 경우 여러 풀을 만들 수 있습니다.  
   
  이 기술을 사용하는 Channel 9 비디오를 보려면 [Using Non-volatile Memory (NVDIMM-N) as Block Storage in Windows Server 2016](https://channel9.msdn.com/Events/Build/2016/P466)(Windows Server 2016에서 블록 저장소로 비휘발성 메모리(NVDIMM-N) 사용)을 참조하세요.  
   
-## 올바른 디스크 식별  
+## <a name="identifying-the-right-disks"></a>올바른 디스크 식별  
  Windows Server 2016에서 저장소 공간 설정, 특히 쓰기 저장 캐시와 같은 고급 기능을 사용한 설정은 PowerShell을 통해 가장 쉽게 수행됩니다. 첫 번째 단계는 가상 디스크가 생성될 저장소 공간 풀이 있어야 하는 디스크를 식별하는 것입니다. NVDIMM-N에는 SCM(저장소 클래스 메모리)의 버스 유형 및 미디어 유형이 있는데 Get-PhysicalDisk PowerShell cmdlet을 통해 쿼리할 수 있습니다.  
   
 ```  
@@ -45,9 +49,9 @@ $pd =  Get-PhysicalDisk | Select FriendlyName, MediaType, BusType | WHere-Object
 $pd | Select FriendlyName, MediaType, BusType  
 ```  
   
- ![Select FriendlyName](../../relational-databases/performance/media/select-friendlyname.png "Select FriendlyName")  
+ ![FriendlyName 선택](../../relational-databases/performance/media/select-friendlyname.png "FriendlyName 선택")  
   
-## 저장소 풀 만들기  
+## <a name="creating-the-storage-pool"></a>저장소 풀 만들기  
  PhysicalDisks를 포함하는 $pd 변수를 사용하면 New-StoragePool PowerShell cmdlet을 사용하여 저장소 풀을 쉽게 빌드할 수 있습니다.  
   
 ```  
@@ -56,7 +60,7 @@ New-StoragePool –StorageSubSystemFriendlyName “Windows Storage*” –Friend
   
  ![New-StoragePool](../../relational-databases/performance/media/new-storagepool.png "New-StoragePool")  
   
-## 가상 디스크 및 볼륨 만들기  
+## <a name="creating-the-virtual-disk-and-volume"></a>가상 디스크 및 볼륨 만들기  
  이제 풀을 만들었으며 다음 단계는 가상 디스크를 지정하고 서식을 지정하는 것입니다. 이 경우 하나의 가상 디스크만 만들어지고 New-Volume PowerShell cmdlet을 사용하여 이 프로세스를 간소화할 수 있습니다.  
   
 ```  
@@ -67,16 +71,16 @@ New-Volume –StoragePool (Get-StoragePool –FriendlyName NVDIMM_Pool) –Frien
   
  가상 디스크가 만들어지고 초기화되며 NTFS로 포맷됩니다. 아래 화면 캡처에서 가상 디스크 크기는 300GB, 쓰기 캐시 크기는 1GB로, NVDIMM-N에서 호스트됩니다.  
   
- ![Get-VirtualDisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-VirtualDisk")  
+ ![Get-virtualdisk](../../relational-databases/performance/media/get-virtualdisk.png "Get-virtualdisk")  
   
  이제 서버에 이 새 볼륨이 표시되는 것을 볼 수 있습니다. 이제 SQL Server 트랜잭션 로그에 이 드라이브를 사용할 수 있습니다.  
   
- ![Log_Space Drive](../../relational-databases/performance/media/log-space-drive.png "Log_Space Drive")  
+ ![Log_Space 드라이브](../../relational-databases/performance/media/log-space-drive.png "Log_Space 드라이브")  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Windows 10에서 Windows 저장소 공간](http://windows.microsoft.com/en-us/windows-10/storage-spaces-windows-10)   
  [Windows 2012 R2에서 Windows 저장소 공간](https://technet.microsoft.com/en-us/library/hh831739.aspx)   
  [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
- [데이터 및 로그 파일의 기본 위치 보기 또는 변경&#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view or change the default locations for data and log files.md)  
+ [데이터 및 로그 파일의 기본 위치 보기 또는 변경&#40;SQL Server Management Studio&#41;](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)  
   
   

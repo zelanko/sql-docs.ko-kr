@@ -1,35 +1,39 @@
 ---
-title: "포괄 열을 사용하여 인덱스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 크기 [SQL Server]"
-  - "인덱스 키 [SQL Server]"
-  - "인덱스 열 [SQL Server]"
-  - "크기 [SQL Server], 인덱스"
-  - "키 열 [SQL Server]"
-  - "포괄 열"
-  - "비클러스터형 인덱스 [SQL Server], 포괄 열"
-  - "인덱스 디자인 [SQL Server], 포괄 열"
-  - "키가 아닌 열"
+title: "포괄 열을 사용하여 인덱스 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index size [SQL Server]
+- index keys [SQL Server]
+- index columns [SQL Server]
+- size [SQL Server], indexes
+- key columns [SQL Server]
+- included columns
+- nonclustered indexes [SQL Server], included columns
+- designing indexes [SQL Server], included columns
+- nonkey columns
 ms.assetid: d198648d-fea5-416d-9f30-f9d4aebbf4ec
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 815756ed3e14540705a1c2cdbab16d5648a6d2ec
+ms.lasthandoff: 04/11/2017
+
 ---
-# 포괄 열을 사용하여 인덱스 만들기
+# <a name="create-indexes-with-included-columns"></a>포괄 열을 사용하여 인덱스 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 비클러스터형 인덱스의 기능을 확장하도록 포괄 열 또는 키가 아닌 열을 추가하는 방법에 대해 설명합니다. 키가 아닌 열을 포함하여 여러 쿼리를 처리하는 비클러스터형 인덱스를 만들 수 있습니다. 이는 키가 아닌 열에 다음과 같은 장점이 있기 때문입니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 비클러스터형 인덱스의 기능을 확장하도록 포괄 열 또는 키가 아닌 열을 추가하는 방법에 대해 설명합니다. 키가 아닌 열을 포함하여 여러 쿼리를 처리하는 비클러스터형 인덱스를 만들 수 있습니다. 이는 키가 아닌 열에 다음과 같은 장점이 있기 때문입니다.  
   
 -   키가 아닌 열은 인덱스 키 열로 사용할 수 없는 데이터 형식입니다.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 28
   
 -   검색 및 조회에 사용된 열만 키 열이 되도록 인덱스 키 크기가 큰 비클러스터형 인덱스를 다시 디자인합니다. 쿼리를 포함한 다른 모든 열을 키가 아닌 열로 만듭니다. 이 방법을 통해 쿼리를 포함하는 데 필요한 모든 열을 가지게 되지만 인덱스 키 자체는 작으며 효과적입니다.  
   
--   비클러스터형 인덱스에 키가 아닌 열을 포함하여 현재 인덱스 크기 제한인 최대 16개의 키 열 및 최대 900바이트의 인덱스 키 크기를 초과하지 않게 할 수 있습니다. 인덱스 키 열의 수 또는 인덱스 키 크기를 계산할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 키가 아닌 열은 계산하지 않습니다.  
+-   비클러스터형 인덱스에 키가 아닌 열을 포함하여 현재 인덱스 크기 제한인 최대 32개의 키 열 및 최대 1,700바이트([!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 이전에는 16개의 키 열 및 900바이트)의 인덱스 키 크기를 초과하지 않도록 할 수 있습니다. 인덱스 키 열의 수 또는 인덱스 키 크기를 계산할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 키가 아닌 열은 계산하지 않습니다.  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 28
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 키가 아닌 열이 있는 인덱스를 만들려면  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>키가 아닌 열이 있는 인덱스를 만들려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 키가 아닌 열이 있는 인덱스를 만들 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -103,13 +107,13 @@ caps.handback.revision: 28
   
 6.  **인덱스 키 열** 탭 아래에서 **추가...**를 클릭합니다.  
   
-7.  *table_name***에서 열 선택** 대화 상자에서 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  **table_name***에서 열 선택* 대화 상자에서 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
 9. **포괄 열** 탭 아래에서 **추가...**를 클릭합니다.  
   
-10. *table_name***에서 열 선택** 대화 상자에서 키가 아닌 열로 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+10. **table_name***에서 열 선택* 대화 상자에서 키가 아닌 열로 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 11. **확인**을 클릭합니다.  
   
@@ -117,7 +121,7 @@ caps.handback.revision: 28
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 키가 아닌 열이 있는 인덱스를 만들려면  
+#### <a name="to-create-an-index-with-nonkey-columns"></a>키가 아닌 열이 있는 인덱스를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -140,3 +144,4 @@ caps.handback.revision: 28
  자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
   
+

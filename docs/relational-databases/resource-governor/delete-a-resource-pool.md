@@ -1,32 +1,36 @@
 ---
-title: "리소스 풀 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 관리자, 리소스 풀 삭제"
-  - "리소스 풀 [SQL Server], 삭제"
+title: "리소스 풀 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, resource pool delete
+- resource pools [SQL Server], delete
 ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 857ce687209066520bb2ec552b93fd46d547b38e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 리소스 풀 삭제
+# <a name="delete-a-resource-pool"></a>리소스 풀 삭제
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 풀을 삭제할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **리소스 풀을 삭제하려면:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL) 사용  
+-   **To delete a resource pool, using:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  작업 그룹이 들어 있는 리소스 풀은 삭제할 수 없습니다.  
@@ -56,7 +60,7 @@ caps.handback.revision: 9
   
 2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** 문을 실행합니다.  
   
-### 예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예(Transact-SQL)  
  다음 예에서는 `poolAdhoc`이라는 작업 그룹을 삭제합니다.  
   
 ```  
@@ -66,9 +70,9 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 참고 항목  
- [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
- [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
+## <a name="see-also"></a>참고 항목  
+ [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [리소스 풀 설정 변경](../../relational-databases/resource-governor/change-resource-pool-settings.md)   
  [리소스 관리자 작업 그룹](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
@@ -81,3 +85,4 @@ GO
  [ALTER EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)  
   
   
+

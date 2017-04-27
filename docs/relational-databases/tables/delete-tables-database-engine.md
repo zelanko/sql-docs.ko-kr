@@ -1,30 +1,34 @@
 ---
-title: "테이블 삭제(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "테이블 삭제 [SQL Server]"
-  - "테이블 삭제"
-  - "테이블 제거"
-  - "테이블 삭제"
+title: "테이블 삭제(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- table deletions [SQL Server]
+- deleting tables
+- removing tables
+- dropping tables
 ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff85fc5a39fbb4c64bd934c98c235c69a2eff514
+ms.lasthandoff: 04/11/2017
+
 ---
-# 테이블 삭제(데이터베이스 엔진)
+# <a name="delete-tables-database-engine"></a>테이블 삭제(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스에서 테이블을 삭제할 수 있습니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스에서 테이블을 삭제할 수 있습니다.  
   
 > [!CAUTION]  
 >  테이블을 삭제할 때는 신중한 검토가 필요합니다. 기존의 쿼리, 뷰, 사용자 정의 함수, 저장 프로시저 또는 프로그램에서 해당 테이블을 참조하는 경우 테이블을 삭제하면 이 개체들은 유효하지 않게 됩니다.  
@@ -64,11 +68,11 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스에서 테이블을 삭제하려면  
+#### <a name="to-delete-a-table-from-the-database"></a>데이터베이스에서 테이블을 삭제하려면  
   
 1.  개체 탐색기에서 삭제하려는 테이블을 선택합니다.  
   
-2.  테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **삭제**를 선택합니다.  
+2.  테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **삭제** 를 선택합니다.  
   
 3.  삭제를 확인하는 메시지 상자가 나타나면 **예**를 클릭합니다.  
   
@@ -77,7 +81,7 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 쿼리 편집기에서 테이블을 삭제하려면  
+#### <a name="to-delete-a-table-in-query-editor"></a>쿼리 편집기에서 테이블을 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

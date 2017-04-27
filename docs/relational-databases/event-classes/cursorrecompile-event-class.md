@@ -1,35 +1,39 @@
 ---
-title: "CursorRecompile 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CursorRecompile 이벤트 클래스"
+title: "CursorRecompile 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CursorRecompile event class
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb8545540abe4396d76f35d9c029f7b4afb3732e
+ms.lasthandoff: 04/11/2017
+
 ---
-# CursorRecompile 이벤트 클래스
-  **CursorRecompile** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 다시 컴파일 이벤트를 나타냅니다. CursorRecompile 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 스키마 변경으로 인해 Transact-SQL 커서를 다시 컴파일할 때 발생합니다.  
+# <a name="cursorrecompile-event-class"></a>CursorRecompile 이벤트 클래스
+  **CursorRecompile** 이벤트 클래스는 API(응용 프로그래밍 인터페이스) 커서에서 발생하는 커서 다시 컴파일 이벤트를 나타냅니다. CursorRecompile 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 스키마 변경으로 인해 Transact-SQL 커서를 다시 컴파일할 때 발생합니다.  
   
  커서의 성능을 기록하는 추적에 **CursorRecompile** 이벤트 클래스를 포함시키십시오. **CursorRecompile** 이벤트 클래스를 추적에 포함하는 경우 발생되는 오버헤드의 양은 추적 중 데이터베이스에 대해 커서가 사용되는 빈도에 따라 달라집니다. 커서를 광범위하게 사용할 경우 추적을 수행하면 성능이 크게 저하될 수 있습니다.  
   
-## CursorRecompile 이벤트 클래스 데이터 열  
+## <a name="cursorrecompile-event-class-data-columns"></a>CursorRecompile 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
 |**ClientProcessID**|**int**|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
-|**DatabaseID**|**int**|USE *database* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 USE *database* 문이 발급되지 않은 경우에 사용되는 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
+|**DatabaseID**|**int**|USE *database* 문으로 지정한 데이터베이스 ID이거나 지정한 인스턴스에 대해 USE *database*문이 발급되지 않은 경우에 사용되는 기본 데이터베이스 ID입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**DatabaseName**|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |**EventClass**|**int**|기록된 이벤트 유형 = 75|27|아니요|  
 |**EventSequence**|**int**|일괄 처리 내의 **CursorRecompile** 이벤트 클래스 순서입니다.|51|아니요|  
@@ -41,14 +45,14 @@ caps.handback.revision: 31
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|Windows 사용자 이름입니다.|6|예|  
 |**RequestID**|**int**|커서를 다시 컴파일한 요청 식별자입니다.|49|예|  
-|**ServerName**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**SessionLoginName**|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 **SessionLoginName** 은 Login1을 표시하고 **LoginName** 은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |**SPID**|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |**XactSequence**|**bigint**|현재 트랜잭션을 설명하는 토큰입니다.|50|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [확장 이벤트](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

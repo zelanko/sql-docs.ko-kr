@@ -1,29 +1,33 @@
 ---
-title: "선택적 XML 인덱스 만들기, 변경 및 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "선택적 XML 인덱스 만들기, 변경 및 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c398f396-f630-4a2d-a264-f243c5346de1
 caps.latest.revision: 8
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: cff16890d58c610a08e7bbe0d5958de2e821b0a5
+ms.lasthandoff: 04/11/2017
+
 ---
-# 선택적 XML 인덱스 만들기, 변경 및 삭제
+# <a name="create-alter-and-drop-selective-xml-indexes"></a>선택적 XML 인덱스 만들기, 변경 및 삭제
   새 선택적 XML 인덱스를 만들거나 기존 선택적 XML 인덱스를 변경 또는 삭제하는 방법에 대해 설명합니다.  
   
  선택적 XML 인덱스에 대한 자세한 내용은 [SXI&#40;선택적 XML 인덱스&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md)를 참조하세요.  
   
 ##  <a name="create"></a> 선택적 XML 인덱스 만들기  
   
-### 방법: 선택적 XML 인덱스 만들기  
+### <a name="how-to-create-a-selective-xml-index"></a>방법: 선택적 XML 인덱스 만들기  
  **Transact-SQL을 사용하여 선택적 XML 인덱스 만들기**  
  CREATE SELECTIVE XML INDEX 문을 호출하여 선택적 XML 인덱스를 만듭니다. 자세한 내용은 [CREATE SELECTIVE XML INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-selective-xml-index-transact-sql.md)를 참조하세요.  
   
@@ -43,11 +47,10 @@ FOR(
 )  
 ```  
   
- [항목 내용](#top)  
   
 ##  <a name="alter"></a> 선택적 XML 인덱스 변경  
   
-### 방법: 선택적 XML 인덱스 변경  
+### <a name="how-to-alter-a-selective-xml-index"></a>방법: 선택적 XML 인덱스 변경  
  **Transact-SQL을 사용하여 선택적 XML 인덱스 변경**  
  ALTER INDEX 문을 호출하여 기존 선택적 XML 인덱스를 변경합니다. 자세한 내용은 [ALTER INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/alter-index-selective-xml-indexes.md)를 참조하세요.  
   
@@ -65,11 +68,10 @@ FOR
 )  
 ```  
   
- [항목 내용](#top)  
   
 ##  <a name="drop"></a> 선택적 XML 인덱스 삭제  
   
-### 방법: 선택적 XML 인덱스 삭제  
+### <a name="how-to-drop-a-selective-xml-index"></a>방법: 선택적 XML 인덱스 삭제  
  **Transact-SQL을 사용하여 선택적 XML 인덱스 삭제**  
  DROP INDEX 문을 호출하여 선택적 XML 인덱스를 삭제합니다. 자세한 내용은 [DROP INDEX&#40;선택적 XML 인덱스&#41;](../../t-sql/statements/drop-index-selective-xml-indexes.md)를 참조하세요.  
   
@@ -81,6 +83,5 @@ FOR
 DROP INDEX sxi_index ON tbl  
 ```  
   
- [항목 내용](#top)  
   
   

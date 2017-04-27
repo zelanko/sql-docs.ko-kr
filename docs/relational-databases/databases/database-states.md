@@ -1,41 +1,45 @@
 ---
-title: "데이터베이스 상태 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/14/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SWB.DATABASESTATES.F1"
-helpviewer_keywords: 
-  - "응급 데이터베이스 상태 [SQL Server]"
-  - "데이터베이스 상태 확인"
-  - "데이터베이스 상태 보기"
-  - "데이터베이스 상태 표시"
-  - "데이터베이스 상태 [SQL Server]"
-  - "현재 데이터베이스 상태"
-  - "오프라인 데이터베이스 상태 [SQL Server]"
-  - "주의 대상 데이터베이스 상태"
-  - "복구 보류 데이터베이스 상태 [SQL Server]"
-  - "상태 [SQL Server], 데이터베이스"
-  - "온라인 데이터베이스 상태"
-  - "상태 [SQL Server]"
-  - "복원 중 데이터베이스 상태 [SQL Server]"
+title: "데이터베이스 상태 | Microsoft 문서"
+ms.custom: 
+ms.date: 07/14/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SWB.DATABASESTATES.F1
+helpviewer_keywords:
+- emergency database state [SQL Server]
+- verifying database states
+- viewing database states
+- displaying database states
+- database states [SQL Server]
+- current database state
+- offline database state [SQL Server]
+- suspect database state
+- recovery pending database state [SQL Server]
+- states [SQL Server], databases
+- online database state
+- states [SQL Server]
+- restoring database state [SQL Server]
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62c469f7504615a361025fd56bb4939e02c4d242
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 상태
-  데이터베이스는 항상 하나의 특정한 상태에 있습니다. 예를 들어 ONLINE, OFFLINE 또는 SUSPECT 상태일 수 있습니다. 데이터베이스의 현재 상태를 확인하려면 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 **state_desc** 열이나 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 **Status** 속성을 선택합니다.  
+# <a name="database-states"></a>데이터베이스 상태
+  데이터베이스는 항상 하나의 특정한 상태에 있습니다. 예를 들어 ONLINE, OFFLINE 또는 SUSPECT 상태일 수 있습니다. 데이터베이스의 현재 상태를 확인하려면 **sys.databases** 카탈로그 뷰의 [state_desc](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 열이나 **DATABASEPROPERTYEX** 함수의 [Status](../../t-sql/functions/databasepropertyex-transact-sql.md) 속성을 선택합니다.  
   
-## 데이터베이스 상태 정의  
+## <a name="database-state-definitions"></a>데이터베이스 상태 정의  
  다음 표에서는 데이터베이스 상태를 정의합니다.  
   
 |State|정의|  
@@ -48,7 +52,7 @@ caps.handback.revision: 20
 |SUSPECT|주 파일 그룹이 주의 대상이거나 손상되었을 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하는 동안에는 데이터베이스를 복구할 수 없습니다. 데이터베이스를 사용할 수 없습니다. 문제를 해결하기 위한 사용자의 추가적인 동작이 필요합니다.|  
 |EMERGENCY|사용자가 데이터베이스를 변경하고 응급 상태로 설정했습니다. 데이터베이스가 단일 사용자 모드에 있고 복구 또는 복원되었을 수 있습니다. 데이터베이스가 READ_ONLY로 표시되고 로깅이 비활성화되며 **sysadmin** 고정 서버 역할의 멤버로 액세스가 제한됩니다. EMERGENCY는 주로 문제 해결을 위해 사용됩니다. 예를 들어 주의 대상으로 표시된 데이터베이스를 응급 상태로 설정할 수 있습니다. 이렇게 하면 시스템 관리자가 데이터베이스에 읽기 전용으로 액세스할 수 있습니다. **sysadmin** 고정 서버 역할의 멤버만 데이터베이스를 응급 상태로 설정할 수 있습니다.|  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
  [미러링 상태&#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md)  
@@ -56,3 +60,4 @@ caps.handback.revision: 20
  [파일 상태](../../relational-databases/databases/file-states.md)  
   
   
+

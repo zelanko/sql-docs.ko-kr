@@ -1,25 +1,29 @@
 ---
-title: "데이터베이스 미러링 Connection 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터베이스 미러링 Connection 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b59dccc9-f40d-4c82-aa35-ac40acea86ff
 caps.latest.revision: 6
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8c831e54b5a0c6115c0f0890d4720d099387d8da
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 미러링 Connection 이벤트 클래스
+# <a name="database-mirroring-connection-event-class"></a>데이터베이스 미러링 Connection 이벤트 클래스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 데이터베이스 미러링에서 관리하는 전송 연결의 상태를 보고하기 위해 **데이터베이스 미러링 Connection** 이벤트를 생성합니다.  
   
-## 데이터베이스 미러링: Connection 이벤트 클래스 데이터 열  
+## <a name="database-mirroringconnection-event-class-data-columns"></a>데이터베이스 미러링: Connection 이벤트 클래스 데이터 열  
   
 |데이터 열|유형|설명|열 번호|필터 가능|  
 |-----------------|----------|-----------------|-------------------|----------------|  
@@ -38,7 +42,7 @@ caps.handback.revision: 6
 |**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
 |**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|예|  
 |**ObjectName**|**nvarchar**|대화 상자의 대화 핸들입니다.|34|아니요|  
-|**ServerName**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
+|**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
 |**SPID**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
 |**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |**TextData**|**ntext**|이벤트와 관련된 오류 메시지의 텍스트입니다. 오류를 보고하지 않는 이벤트의 경우 이 필드가 비어 있습니다. 오류 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지나 Windows 오류 메시지입니다.|1|예|  

@@ -1,31 +1,35 @@
 ---
-title: "인덱스 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 제거"
-  - "인덱스 삭제"
-  - "인덱스 삭제"
-  - "인덱스 [SQL Server], 삭제"
-  - "인덱스 삭제 [SQL Server]"
+title: "인덱스 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing indexes
+- deleting indexes
+- dropping indexes
+- indexes [SQL Server], dropping
+- index deletions [SQL Server]
 ms.assetid: fd38a0ed-26c4-4c76-9ef7-e0a16147329d
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d88bfd9ae9cb742bc9dc18f8baffdd32e5ac3e
+ms.lasthandoff: 04/11/2017
+
 ---
-# 인덱스 삭제
+# <a name="delete-an-index"></a>인덱스 삭제
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스를 삭제하는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱스를 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 개체 탐색기를 사용하여 인덱스를 삭제하려면  
+#### <a name="to-delete-an-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 인덱스를 삭제하려면  
   
 1.  개체 탐색기에서 인덱스를 삭제할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -67,7 +71,7 @@ caps.handback.revision: 29
   
 6.  **개체 삭제** 대화 상자에서 올바른 인덱스가 **삭제할 개체** 에 있는지 확인하고 **확인**을 클릭합니다.  
   
-#### 테이블 디자이너를 사용하여 인덱스를 삭제하려면  
+#### <a name="to-delete-an-index-using-table-designer"></a>테이블 디자이너를 사용하여 인덱스를 삭제하려면  
   
 1.  개체 탐색기에서 인덱스를 삭제할 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -87,7 +91,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 인덱스를 삭제하려면  
+#### <a name="to-delete-an-index"></a>인덱스를 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -108,3 +112,4 @@ caps.handback.revision: 29
  자세한 내용은 [DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)를 참조하세요.  
   
   
+

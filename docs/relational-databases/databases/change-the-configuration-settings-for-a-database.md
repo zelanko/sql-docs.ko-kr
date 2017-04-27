@@ -1,27 +1,31 @@
 ---
-title: "데이터베이스 메일의 구성 설정 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 구성 [SQL Server]"
-  - "구성 옵션 [SQL Server], 데이터베이스"
-  - "데이터베이스 구성 설정 수정"
+title: "데이터베이스 메일의 구성 설정 변경 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database configuration [SQL Server]
+- configuration options [SQL Server], databases
+- modifying database configuration settings
 ms.assetid: c29c3385-5043-400f-bb4e-044a4c9a9a4b
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 858cf7833f497051bbe494308036f3ab76f8befb
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 메일의 구성 설정 변경
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 수준 옵션을 변경하는 방법에 대해 설명합니다. 데이터베이스 수준의 옵션은 각 데이터베이스의 고유한 옵션이므로 다른 데이터베이스에는 영향을 주지 않습니다.  
+# <a name="change-the-configuration-settings-for-a-database"></a>데이터베이스 메일의 구성 설정 변경
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 데이터베이스 수준 옵션을 변경하는 방법에 대해 설명합니다. 데이터베이스 수준의 옵션은 각 데이터베이스의 고유한 옵션이므로 다른 데이터베이스에는 영향을 주지 않습니다.  
   
  **항목 내용**  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 29
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스의 옵션 설정을 변경하려면  
+#### <a name="to-change-the-option-settings-for-a-database"></a>데이터베이스의 옵션 설정을 변경하려면  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결하고 서버와 **데이터베이스**를 차례로 확장한 다음 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
@@ -58,7 +62,7 @@ caps.handback.revision: 29
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스의 옵션 설정을 변경하려면  
+#### <a name="to-change-the-option-settings-for-a-database"></a>데이터베이스의 옵션 설정을 변경하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
@@ -68,12 +72,12 @@ caps.handback.revision: 29
   
  [!code-sql[DatabaseDDL#AlterDatabase7](../../relational-databases/databases/codesnippet/tsql/change-the-configuration_1.sql)]  
   
- 더 많은 예제를 보려면 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)을 참조하세요.  
+ 더 많은 예제를 보려면 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
-## 참고 항목  
- [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)   
- [ALTER DATABASE 데이터베이스 미러링&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
- [ALTER DATABASE SET HADR&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20HADR%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
+ [ALTER DATABASE 데이터베이스 미러링&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
+ [ALTER DATABASE SET HADR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)   
  [데이터베이스 이름 바꾸기](../../relational-databases/databases/rename-a-database.md)   
  [데이터베이스 축소](../../relational-databases/databases/shrink-a-database.md)  
   

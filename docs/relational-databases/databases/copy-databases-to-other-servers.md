@@ -1,30 +1,34 @@
 ---
-title: "데이터베이스를 다른 서버로 복사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "서버 [SQL Server], 데이터베이스 복사"
-  - "대량 내보내기 [SQL Server], 서버 간"
-  - "데이터베이스 복사 [SQL Server]"
-  - "데이터베이스 마이그레이션 [SQL Server]"
-  - "데이터베이스 이동"
-  - "데이터베이스 복사"
-  - "대량 가져오기 [SQL Server], 서버 간"
+title: "데이터베이스를 다른 서버로 복사 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- servers [SQL Server], copying databases between
+- bulk exporting [SQL Server], between servers
+- database copying [SQL Server]
+- migrating databases [SQL Server]
+- moving databases
+- copying databases
+- bulk importing [SQL Server], between servers
 ms.assetid: 978406d6-a3c8-4902-b1f4-4ced75234be5
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스를 다른 서버로 복사
+# <a name="copy-databases-to-other-servers"></a>데이터베이스를 다른 서버로 복사
   데이터베이스를 한 컴퓨터에서 다른 컴퓨터로 복사하는 기능은 경우에 따라 유용하게 사용됩니다(예: 테스트, 일관성 검사, 소프트웨어 개발, 보고서 실행, 미러 데이터베이스 만들기 또는 원격 분기 작업에서 사용할 수 있도록 데이터베이스 설정 등).  
   
  다음과 같은 여러 방법으로 데이터베이스를 복사할 수 있습니다.  

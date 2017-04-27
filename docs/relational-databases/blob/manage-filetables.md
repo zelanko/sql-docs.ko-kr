@@ -1,25 +1,29 @@
 ---
-title: "FileTable 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTable [SQL Server], 보안"
-  - "FileTable [SQL Server], 액세스 관리"
+title: "FileTable 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], security
+- FileTables [SQL Server], managing access
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.lasthandoff: 04/11/2017
+
 ---
-# FileTable 관리
+# <a name="manage-filetables"></a>FileTable 관리
   FileTable을 관리하는 데 사용되는 일반적인 관리 태스크에 대해 설명합니다.  
   
 ##  <a name="HowToEnumerate"></a> 방법: FileTable 및 관련 개체 목록 가져오기  
@@ -79,7 +83,7 @@ GO
 -   인스턴스 수준에서 FILESTREAM을 사용하지 않도록 설정한 경우 인스턴스에 대한 데이터베이스 수준 디렉터리가 표시되지 않습니다.  
   
 ###  <a name="HowToDisable"></a> 방법: 데이터베이스 수준에서 비트랜잭션 액세스 사용 해제 및 다시 설정  
- 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)을 참조하세요.  
+ 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
   
  **전체 비트랜잭션 액세스를 사용하지 않도록 설정하려면**  
  **ALTER DATABASE** 문을 호출하고 **NON_TRANSACTED_ACCESS** 값을 **READ_ONLY** 또는 **OFF**로 설정합니다.  
@@ -169,7 +173,7 @@ GO
 ```  
   
 ###  <a name="HowToKill"></a> 방법: FileTable과 연결된 열려 있는 파일 핸들 중지  
- 적절한 인수로 저장 프로시저 [sp_kill_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../Topic/sp_kill_filestream_non_transacted_handles%20\(Transact-SQL\).md)를 호출하여 데이터베이스 또는 FileTable에 열려 있는 모든 파일 핸들을 중지하거나 특정 핸들을 중지합니다.  
+ 적절한 인수로 저장 프로시저 [sp_kill_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)를 호출하여 데이터베이스 또는 FileTable에 열려 있는 모든 파일 핸들을 중지하거나 특정 핸들을 중지합니다.  
   
 ```  
 USE database_name;  
@@ -230,8 +234,9 @@ GO
 ##  <a name="OtherDBCC"></a> DBCC와 FileTable  
  DBCC CHECKCONSTRAINTS를 사용하여 시스템 정의 제약 조건을 비롯한 FileTable의 제약 조건을 확인할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FileTable과 기타 SQL Server 기능 간 호환성](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
   
   
+

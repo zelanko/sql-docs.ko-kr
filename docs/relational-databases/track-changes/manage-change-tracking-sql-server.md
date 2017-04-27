@@ -1,44 +1,48 @@
 ---
-title: "변경 내용 추적 관리(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 변경 내용 추적 [SQL Server]"
-  - "변경 내용 추적 [SQL Server], 오버헤드"
-  - "변경 내용 추적 [SQL Server]"
-  - "변경 내용 추적 [SQL Server], 관리"
+title: "변경 내용 추적 관리(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tracking data changes [SQL Server]
+- change tracking [SQL Server], overhead
+- change tracking [SQL Server]
+- change tracking [SQL Server], managing
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e6a29f384995058da7b4beef3edc3dac37e3e616
+ms.lasthandoff: 04/11/2017
+
 ---
-# 변경 내용 추적 관리(SQL Server)
+# <a name="manage-change-tracking-sql-server"></a>변경 내용 추적 관리(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 변경 내용 추적을 관리하는 방법에 대해 설명합니다. 또한 보안을 구성하는 방법과 변경 내용 추적을 사용할 때 저장소 및 성능에 미치는 영향을 확인하는 방법에 대해서도 설명합니다.  
   
-## 변경 내용 추적 관리  
+## <a name="managing-change-tracking"></a>변경 내용 추적 관리  
  다음 섹션에서는 변경 내용 추적 관리와 관련된 카탈로그 뷰, 사용 권한 및 설정에 대해 설명합니다.  
   
-### 카탈로그 뷰  
+### <a name="catalog-views"></a>카탈로그 뷰  
  다음 카탈로그 뷰를 사용하여 변경 내용 추적이 설정된 테이블 및 데이터베이스를 확인할 수 있습니다.  
   
--   [sys.change_tracking_databases&#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)  
   
--   [sys.change_tracking_tables&#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)  
+-   [sys.change_tracking_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   
  [sys.internal_tables](../../relational-databases/system-catalog-views/sys-internal-tables-transact-sql.md) 카탈로그 뷰는 사용자 테이블에 대한 변경 내용 추적을 설정할 때 만든 내부 테이블도 나열합니다.  
   
-### 보안  
+### <a name="security"></a>보안  
  [변경 내용 추적 함수](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)를 사용하여 변경 내용 추적 정보에 액세스하려면 보안 주체에 다음 사용 권한이 있어야 합니다.  
   
 -   변경 내용 추적이 설정된 쿼리하는 테이블에 있는 한 개 이상의 기본 키 열에 대한 SELECT 권한  
@@ -49,7 +53,7 @@ caps.handback.revision: 9
   
     -   변경 내용 추적 정보는 업데이트 작업으로 변경된 열에 대한 정보를 저장할 수 있습니다. 보안 주체는 중요한 정보가 포함된 열에 대한 권한이 거부될 수 있습니다. 변경 내용 추적 정보를 사용할 수 있으므로 보안 주체는 열 값이 업데이트되었는지를 확인할 수 있지만 해당 열의 값은 확인할 수 없습니다.  
   
-## 변경 내용 추적 오버헤드 이해  
+## <a name="understanding-change-tracking-overhead"></a>변경 내용 추적 오버헤드 이해  
  테이블에 변경 내용 추적이 설정되면 일부 관리 작업에 영향을 줄 수 있습니다. 다음 표에서는 작업 및 고려해야 하는 영향에 대해 설명합니다.  
   
 |연산|변경 내용 추적이 설정된 경우|  
@@ -65,7 +69,7 @@ caps.handback.revision: 9
   
  변경 내용 추적을 사용하더라도 변경 내용 추적 정보가 작업의 일부로 저장되므로 DML 작업에는 오버헤드가 추가되지 않습니다.  
   
-### DML에 미치는 영향  
+### <a name="effects-on-dml"></a>DML에 미치는 영향  
  변경 내용 추적은 DML 작업에 대한 성능 오버헤드를 최소화하도록 최적화되었습니다. 테이블에 변경 내용 추적을 사용하는 것과 연관된 증분 성능 오버헤드는 테이블에 대해 인덱스가 생성되어 유지 관리가 필요해질 때 발생하는 오버헤드와 비슷합니다.  
   
  DML 작업으로 변경된 각 행의 경우 내부 변경 내용 추적 테이블에 한 개의 행이 추가됩니다. DML 작업과 관련한 이런 영향은 다음과 같은 다양한 요소에 따라 달라집니다.  
@@ -78,7 +82,7 @@ caps.handback.revision: 9
   
  스냅숏 격리를 사용하는 경우에도 변경 내용 추적의 설정 여부와 관계없이 모든 DML 작업에 대한 성능에 영향을 미칩니다.  
   
-### 저장소에 미치는 영향  
+### <a name="effects-on-storage"></a>저장소에 미치는 영향  
  변경 내용 추적 데이터는 다음과 같은 유형의 내부 테이블에 저장됩니다.  
   
 -   내부 변경 테이블  
@@ -102,15 +106,16 @@ sp_spaceused 'sys.change_tracking_309576141'
 sp_spaceused 'sys.syscommittab'  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [데이터베이스 속성&#40;변경 내용 추적 페이지&#41;](../../relational-databases/databases/database-properties-changetracking-page.md)   
- [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20SET%20Options%20\(Transact-SQL\).md)   
- [sys.change_tracking_databases&#40;Transact-SQL&#41;](../Topic/sys.change_tracking_databases%20\(Transact-SQL\).md)   
- [sys.change_tracking_tables&#40;Transact-SQL&#41;](../Topic/sys.change_tracking_tables%20\(Transact-SQL\).md)   
+ [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
+ [sys.change_tracking_databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-databases.md)   
+ [sys.change_tracking_tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)   
  [데이터 변경 내용 추적&#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [변경 내용 추적 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [변경 데이터 작업&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-data-sql-server.md)  
   
   
+

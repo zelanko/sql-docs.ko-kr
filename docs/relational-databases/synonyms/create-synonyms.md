@@ -1,27 +1,31 @@
 ---
-title: "동의어 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-f1_keywords: 
-  - "sql13.swb.synonym.general.f1"
-helpviewer_keywords: 
-  - "동의어 만들기"
-  - "동의어 [SQL Server], 만들기"
+title: "동의어 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+f1_keywords:
+- sql13.swb.synonym.general.f1
+helpviewer_keywords:
+- creating synonyms
+- synonyms [SQL Server], creating
 ms.assetid: fedfa7a5-d0b6-4e2b-90f4-a08122958e33
 caps.latest.revision: 7
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a3180e86333a329e2f86a45f2728630ce6cf526
+ms.lasthandoff: 04/11/2017
+
 ---
-# 동의어 만들기
+# <a name="create-synonyms"></a>동의어 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 동의어를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -45,7 +49,7 @@ caps.handback.revision: 7
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 동의어를 만들려면  
+#### <a name="to-create-a-synonym"></a>동의어를 만들려면  
   
 1.  **개체 탐색기**에서 새 뷰를 만들 데이터베이스를 확장합니다.  
   
@@ -76,7 +80,7 @@ caps.handback.revision: 7
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 동의어를 만들려면  
+#### <a name="to-create-a-synonym"></a>동의어를 만들려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   

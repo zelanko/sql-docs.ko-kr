@@ -1,25 +1,29 @@
 ---
-title: "6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 26aa534a-afe7-4a14-b99f-a9184fc699bd
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 8f3ea59fb612ea692b52ab46bb342d8c4031fb71
+ms.lasthandoff: 04/11/2017
+
 ---
-# 6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성
+# <a name="lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup"></a>6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성
 이 단원에서는 AdventureWorks2014 데이터베이스에 작업을 생성하고 파일-스냅숏 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만듭니다. 파일 스냅숏 백업 사용 방법에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 AdventureWorks2014 데이터베이스에 작업을 생성하고 파일-스냅숏 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만들려면 다음 단계를 따르세요.  
@@ -77,21 +81,21 @@ AdventureWorks2014 데이터베이스에 작업을 생성하고 파일-스냅숏
   
 5.  첫 번째 스크립트의 출력을 검토하여 최종 행 개수가 29,939개인 것을 확인합니다.  
   
-    ![Row count of 29,939 is displayed](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "Row count of 29,939 is displayed")  
+    ![행 개수 29,939가 표시됨](../relational-databases/media/5e2f4229-1970-49c9-89b3-e96b6f7fde83.JPG "행 개수 29,939가 표시됨")  
   
 6.  두 번째 스크립트의 출력을 검토하여 BACKUP LOG 문을 실행할 때마다 두 개의 새 파일 스냅숏이 생성되는 것을 확인합니다.로그 파일의 파일 스냅숏 하나와 데이터 파일의 파일 스냅숏 하나 등 총 두 개의 파일 스냅숏이 각 데이터베이스 파일마다 생성됩니다. 두 번째 스크립트가 완료되면 각 데이터베이스 파일마다 8개씩, 총 16개의 파일 스냅샷이 있습니다. BACKUP DATABASE 문에서 하나가 생성되고 BACKUP LOG 문을 실행할 때마다 하나가 생성되었습니다.  
   
-    ![results pane showing file snapshots of both data and log file when log backup is taken](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "results pane showing file snapshots of both data and log file when log backup is taken")  
+    ![로그 백업이 수행된 경우 데이터와 로그 파일의 파일 스냅숏을 보여 주는 결과 창](../relational-databases/media/acd213b8-895e-425c-bd72-2bf10e65a5ba.JPG "로그 백업이 수행된 경우 데이터와 로그 파일의 파일 스냅숏을 보여 주는 결과 창")  
   
-    ![four file snapshots are displayed](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "four file snapshots are displayed")  
+    ![4개의 파일 스냅숏이 표시됨](../relational-databases/media/e7eff77d-85b9-4e52-abd8-e49952c8118a.JPG "4개의 파일 스냅숏이 표시됨")  
   
-    ![results pane showing a total of 16 file snapshots](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "results pane showing a total of 16 file snapshots")  
+    ![총 16개 파일 스냅숏을 보여 주는 결과 창](../relational-databases/media/c3ddff17-a83c-4bf0-a670-a38834f9c922.JPG "총 16개 파일 스냅숏을 보여 주는 결과 창")  
   
 7.  개체 탐색기에서 Azure Storage에 연결합니다.  
   
 8.  컨테이너를 확장하고, 1단원에서 만든 컨테이너를 확장한 다음 새 백업 파일 7개가 이전 단원의 Blob과 함께 나타나는지 확인합니다(필요에 따라 노드 새로 고침).  
   
-    ![Azure container showing 7 log backup blobs](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "Azure container showing 7 log backup blobs")  
+    ![7개 로그 백업 blob을 보여 주는 Azure 컨테이너](../relational-databases/media/cfa5a326-87a2-4202-9a04-38bf577d2d0b.JPG "7개 로그 백업 blob을 보여 주는 Azure 컨테이너")  
   
 **다음 단원:**  
   
@@ -99,3 +103,4 @@ AdventureWorks2014 데이터베이스에 작업을 생성하고 파일-스냅숏
   
   
   
+

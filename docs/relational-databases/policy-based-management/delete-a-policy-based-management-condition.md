@@ -1,25 +1,29 @@
 ---
-title: "정책 기반 관리 조건 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "정책 기반 관리, 정책 조건 삭제"
+title: "정책 기반 관리 조건 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, delete policy conditions
 ms.assetid: e04148b8-f6dd-4c50-a5ef-c650b71dbf4d
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c4760109e6bd360e008dc962639880091d916ec3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 기반 관리 조건 삭제
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 조건을 삭제하는 방법에 대해 설명합니다.  
+# <a name="delete-a-policy-based-management-condition"></a>정책 기반 관리 조건 삭제
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 조건을 삭제하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 9
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 조건을 삭제하려면  
+#### <a name="to-delete-a-condition"></a>조건을 삭제하려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 삭제하려는 조건이 들어 있는 서버를 확장합니다.  
   

@@ -1,31 +1,35 @@
 ---
-title: "비클러스터형 인덱스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "인덱스 작성 [SQL Server], 비클러스터형 인덱스"
-  - "비클러스터형 인덱스 [SQL Server], 만들기"
-  - "비클러스터형 인덱스 [SQL Server], UNIQUE 제약 조건"
-  - "인덱스 [SQL Server], 비클러스터형"
-  - "비클러스터형 인덱스 [SQL Server], PRIMARY KEY 제약 조건"
+title: "비클러스터형 인덱스 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 02/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- index creation [SQL Server], nonclustered indexes
+- nonclustered indexes [SQL Server], creating
+- nonclustered indexes [SQL Server], UNIQUE constraint
+- indexes [SQL Server], nonclustered
+- nonclustered indexes [SQL Server], PRIMARY KEY constraint
 ms.assetid: 9402029a-1227-46c4-93aa-c2122eb1b943
 caps.latest.revision: 41
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38b54a03706cbb44f0c4001d00d5505201940be6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 비클러스터형 인덱스 만들기
+# <a name="create-nonclustered-indexes"></a>비클러스터형 인덱스 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 비클러스터형 인덱스를 만들 수 있습니다. 비클러스터형 인덱스는 하나 이상의 선택된 열을 다시 정렬하는 테이블에 저장된 데이터와 구별되는 인덱스 구조입니다. 비클러스터형 인덱스는 기본 테이블을 검색할 때보다 빠르게 데이터를 찾는 데 도움이 될 수 있습니다. 비클러스터형 인덱스의 데이터가 쿼리에 대한 완전한 대답이 되는 경우도 있지만, 비클러스터형 인덱스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 기본 테이블의 행으로 연결할 수도 있습니다. 일반적으로 비클러스터형 인덱스는 클러스터형 인덱스를 적용할 수 없고 자주 사용되는 쿼리의 성능을 개선하거나, 클러스터형 인덱스(힙이라고 함) 없이 테이블에서 행을 찾기 위해 만듭니다. 테이블 또는 인덱싱된 뷰에 비클러스터형 인덱스를 여러 개 만들 수 있습니다.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 비클러스터형 인덱스를 만들 수 있습니다. 비클러스터형 인덱스는 하나 이상의 선택된 열을 다시 정렬하는 테이블에 저장된 데이터와 구별되는 인덱스 구조입니다. 비클러스터형 인덱스는 기본 테이블을 검색할 때보다 빠르게 데이터를 찾는 데 도움이 될 수 있습니다. 비클러스터형 인덱스의 데이터가 쿼리에 대한 완전한 대답이 되는 경우도 있지만, 비클러스터형 인덱스에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 기본 테이블의 행으로 연결할 수도 있습니다. 일반적으로 비클러스터형 인덱스는 클러스터형 인덱스를 적용할 수 없고 자주 사용되는 쿼리의 성능을 개선하거나, 클러스터형 인덱스(힙이라고 함) 없이 테이블에서 행을 찾기 위해 만듭니다. 테이블 또는 인덱싱된 뷰에 비클러스터형 인덱스를 여러 개 만들 수 있습니다.  
   
  **항목 내용**  
   
@@ -65,7 +69,7 @@ caps.handback.revision: 41
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 테이블 디자이너를 사용하여 비클러스터형 인덱스를 만들려면  
+#### <a name="to-create-a-nonclustered-index-by-using-the-table-designer"></a>테이블 디자이너를 사용하여 비클러스터형 인덱스를 만들려면  
   
 1.  개체 탐색기에서 비클러스터형 인덱스를 만들 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -79,13 +83,13 @@ caps.handback.revision: 41
   
 6.  **선택한 기본/고유 키 또는 인덱스** 입력란에서 새 인덱스를 선택합니다.  
   
-7.  표에서 **CLUSTERED로 만들기**를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **아니요**를 선택합니다.  
+7.  표에서 **CLUSTERED로 만들기**를 선택하고 속성 오른쪽에 있는 드롭다운 목록에서 **아니요** 를 선택합니다.  
   
 8.  **닫기**를 클릭합니다.  
   
 9. **파일** 메뉴에서 *table name* **저장**을 클릭합니다.  
   
-#### 개체 탐색기를 사용하여 비클러스터형 인덱스를 만들려면  
+#### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>개체 탐색기를 사용하여 비클러스터형 인덱스를 만들려면  
   
 1.  개체 탐색기에서 비클러스터형 인덱스를 만들 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -99,7 +103,7 @@ caps.handback.revision: 41
   
 6.  **인덱스 키 열**아래에서 **추가...**를 클릭합니다.  
   
-7.  *table_name***에서 열 선택** 대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  **table_name***에서 열 선택* 대화 상자에서 비클러스터형 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 41
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 테이블에 비클러스터형 인덱스를 만들려면  
+#### <a name="to-create-a-nonclustered-index-on-a-table"></a>테이블에 비클러스터형 인덱스를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -133,3 +137,4 @@ caps.handback.revision: 41
  자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
   
+

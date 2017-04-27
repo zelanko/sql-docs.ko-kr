@@ -1,36 +1,40 @@
 ---
-title: "DML 트리거 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-dml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "암호화 [SQL Server], DML 트리거"
-  - "지연된 이름 확인, DML 트리거"
-  - "WITH ENCRYPTION 절"
-  - "IF UPDATE"
-  - "SET 문, DML 트리거"
-  - "DML 트리거, 프로그래밍"
-  - "열 변경 테스트"
-  - "결과 [SQL Server], DML 트리거"
+title: "DML 트리거 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-dml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- encryption [SQL Server], DML triggers
+- deferred name resolution, DML triggers
+- WITH ENCRYPTION clause
+- IF UPDATE
+- SET statement, DML triggers
+- DML triggers, programming
+- testing column changes
+- results [SQL Server], DML triggers
 ms.assetid: b2b52258-642b-462e-8e0f-18c09d2eccf4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 21011d77337e517154b4732071253a934984363d
+ms.lasthandoff: 04/11/2017
+
 ---
-# DML 트리거 만들기
+# <a name="create-dml-triggers"></a>DML 트리거 만들기
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] CREATE TRIGGER 문을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거를 만드는 방법에 대해 설명합니다.  
   
 ##  <a name="Top"></a> 시작하기 전 주의 사항  
   
-### 제한 사항  
+### <a name="limitations-and-restrictions"></a>제한 사항  
  DML 트리거 생성과 관련한 제한 사항 목록은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
 ###  <a name="Permissions"></a> 사용 권한  
@@ -95,9 +99,9 @@ caps.handback.revision: 31
   
 9. DML 트리거를 만들려면 **쿼리** 메뉴에서 **실행**을 클릭합니다. DML 트리거가 데이터베이스 개체로 만들어집니다.  
   
-10. 개체 탐색기에 나열된 DML 트리거를 보려면 **트리거**를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
+10. 개체 탐색기에 나열된 DML 트리거를 보려면 **트리거** 를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 선택합니다.  
   
- [시작하기 전에](#Top)  
+ [시작하기 전 주의 사항](#Top)  
   
 ###  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
@@ -136,6 +140,6 @@ caps.handback.revision: 31
     END;  
     ```  
   
-##  <a name="PowerShellProcedure"></a> [시작하기 전에](#Top)  
+##  <a name="PowerShellProcedure"></a> [시작하기 전 주의 사항](#Top)  
   
   

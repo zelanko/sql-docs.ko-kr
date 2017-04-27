@@ -1,29 +1,33 @@
 ---
-title: "템플릿을 사용하여 리소스 관리자 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 관리자, 템플릿"
+title: "템플릿을 사용하여 리소스 관리자 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, templates
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 37a30ac49e0b7af05e0c7fb8e2ac1a32824186f6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 템플릿을 사용하여 리소스 관리자 구성
+# <a name="configure-resource-governor-using-a-template"></a>템플릿을 사용하여 리소스 관리자 구성
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 제공된 템플릿을 사용하여 리소스 관리자를 구성할 수 있습니다.  
   
--   **시작하기 전에:**  [사용 권한](#Permissions)  
+-   **Before you begin:**  [Permissions](#Permissions)  
   
--   **작업 그룹을 만들려면**  [템플릿을 사용합니다.](#ConfRGTemplate)  
+-   **To create a workload group, using:**  [a template](#ConfRGTemplate)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  다음 단계에 따라 리소스 풀과 해당 리소스 풀의 작업 그룹을 만드는 템플릿을 열고 수정할 수 있습니다. 또한 이 템플릿을 사용하여 새 연결을 기본 그룹 또는 만든 작업 그룹으로 라우팅하는 분류자 사용자 정의 함수를 만들 수도 있습니다.  
@@ -46,7 +50,7 @@ caps.handback.revision: 15
   
 6.  쿼리를 실행하려면 **실행**을 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

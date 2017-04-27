@@ -1,29 +1,33 @@
 ---
-title: "압축 스냅숏 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스냅숏 [SQL Server 복제], 압축"
-  - "스냅숏 복제 [SQL Server], 압축 스냅숏"
-  - "압축 스냅숏 [SQL Server 복제]"
+title: "압축 스냅숏 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- snapshots [SQL Server replication], compressed
+- snapshot replication [SQL Server], compressed snapshots
+- compressed snapshots [SQL Server replication]
 ms.assetid: 979ffa7c-3a88-4e70-8cf2-b8d452fd7a7f
 caps.latest.revision: 34
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fceb41e32cbc4a2dbf779cb95827fef639341bea
+ms.lasthandoff: 04/11/2017
+
 ---
-# 압축 스냅숏
+# <a name="compressed-snapshots"></a>압축 스냅숏
   스냅숏을 느린 네트워크를 통해 전송하거나 이동식 미디어에 저장할 때 압축하지 않은 스냅숏이 너무 커서 해당 미디어에 모두 저장할 수 없는 경우 스냅숏 파일을 압축하는 것이 좋습니다. 위와 같은 상황에서는 스냅숏 파일을 압축하는 것이 유용하지만 압축으로 인해 스냅숏 생성과 적용에 더 많은 시간이 걸립니다.  
   
- 압축 스냅숏 파일은 2GB 이하의 파일만 압축할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 파일 형식으로 작성됩니다. 스냅숏 파일이 2GB보다 크면 압축할 수 없습니다. 파일을 압축하려면 해당 파일을 대체 스냅숏 폴더에 기록해야 합니다. 기본 스냅숏 폴더에 기록한 파일은 압축할 수 없습니다. 대체 스냅숏 폴더에 대 한 자세한 내용은 참조 하십시오. [대체 스냅숏 폴더 위치](../../relational-databases/replication/alternate-snapshot-folder-locations.md)합니다.  
+ 압축 스냅숏 파일은 2GB 이하의 파일만 압축할 수 있는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 파일 형식으로 작성됩니다. 스냅숏 파일이 2GB보다 크면 압축할 수 없습니다. 파일을 압축하려면 해당 파일을 대체 스냅숏 폴더에 기록해야 합니다. 기본 스냅숏 폴더에 기록한 파일은 압축할 수 없습니다. 대체 스냅숏 폴더에 대한 자세한 내용은 [대체 스냅숏 폴더 위치](../../relational-databases/replication/alternate-snapshot-folder-locations.md)를 참조하세요.  
   
  압축 파일은 배포 에이전트 또는 병합 에이전트가 실행되는 위치에 풀립니다. 압축 파일이 구독자에 풀리도록 압축 스냅숏에는 일반적으로 끌어오기 구독이 사용됩니다. 구독자가 압축 파일을 받으면 이 파일은 일단 임시 위치에 기록됩니다. 압축 파일을 구독자로 복사하고 나면 CAB 유틸리티에 의해 한 번에 한 파일씩 순서대로 파일의 압축이 해제됩니다. 구독자에 필요한 공간은 압축 스냅숏 파일에 가장 큰 압축 해제 파일의 크기를 더한 값입니다.  
   
@@ -32,12 +36,12 @@ caps.handback.revision: 34
   
  **스냅숏 파일을 압축하여 배달하려면**  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [압축 스냅숏 파일 & #40; SQL Server Management Studio & #41;](../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [스냅숏 파일 압축 &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/publish/compress-snapshot-files-sql-server-management-studio.md)  
   
--   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [스냅숏 속성 구성 및 #40; 복제 TRANSACT-SQL 프로그래밍 & #41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
+-   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [스냅숏 속성 구성&#40;복제 TRANSACT-SQL 프로그래밍&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [스냅숏 옵션](../../relational-databases/replication/snapshot-options.md)  
+ [Snapshot Options](../../relational-databases/replication/snapshot-options.md)  
   
   

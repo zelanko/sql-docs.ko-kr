@@ -1,40 +1,44 @@
 ---
-title: "분할된 테이블 및 인덱스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-partition"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.createpartition.progress.f1"
-  - "sql13.swb.createpartition.partitioncolumn.f1"
-  - "sql13.swb.createpartition.createjob.f1"
-  - "sql13.swb.createpartition.finish.f1"
-  - "sql13.swb.createpartition.selectoutput.f1"
-  - "sql13.swb.createpartition.partitionfunction.f1"
-  - "sql13.swb.createpartition.partitionscheme.f1"
-  - "sql13.swb.createpartition.getstart.f1"
-  - "sql13.swb.createpartition.mappartition.f1"
-  - "sql13.swb.createpartition.summary.f1"
-helpviewer_keywords: 
-  - "분할된 인덱스 [SQL Server], 만들기"
-  - "파티션 구성표 [SQL Server], 만들기"
-  - "파티션 함수 [SQL Server], 만들기"
-  - "분할된 테이블 [SQL Server], 만들기"
-  - "파티션 함수 [SQL Server]"
-  - "파티션 구성표 [SQL Server]"
+title: "분할된 테이블 및 인덱스 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-partition
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.createpartition.progress.f1
+- sql13.swb.createpartition.partitioncolumn.f1
+- sql13.swb.createpartition.createjob.f1
+- sql13.swb.createpartition.finish.f1
+- sql13.swb.createpartition.selectoutput.f1
+- sql13.swb.createpartition.partitionfunction.f1
+- sql13.swb.createpartition.partitionscheme.f1
+- sql13.swb.createpartition.getstart.f1
+- sql13.swb.createpartition.mappartition.f1
+- sql13.swb.createpartition.summary.f1
+helpviewer_keywords:
+- partitioned indexes [SQL Server], creating
+- partition schemes [SQL Server], creating
+- partition functions [SQL Server], creating
+- partitioned tables [SQL Server], creating
+- partition functions [SQL Server]
+- partition schemes [SQL Server]
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 453f7ed733752453c8de05053fb37527c75d6612
+ms.lasthandoff: 04/11/2017
+
 ---
-# 분할된 테이블 및 인덱스 만들기
+# <a name="create-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스 만들기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. 분할된 테이블 및 인덱스에 있는 데이터는 데이터베이스의 여러 파일 그룹에 분산할 수 있는 가로로 구분된 단위로 되어 있습니다. 큰 테이블과 인덱스를 분할하면 더 효율적으로 관리 및 확장할 수 있습니다.  
   
  분할된 테이블 또는 인덱스를 만드는 과정은 대개 다음 네 단계로 진행됩니다.  
@@ -83,11 +87,11 @@ caps.handback.revision: 35
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  이 절차의 단계를 수행하여 하나 이상의 파일 그룹, 해당 파일 및 테이블을 만들 수 있습니다. 다음 절차에서 분할된 테이블을 만들 때 이 개체를 참조하게 됩니다.  
   
-#### 분할된 테이블에 대한 새 파일 그룹을 만들려면  
+#### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>분할된 테이블에 대한 새 파일 그룹을 만들려면  
   
 1.  개체 탐색기에서 분할된 테이블을 만들 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-2.  **데이터베이스 속성 –** *database_name* 대화 상자의 **페이지 선택** 아래에서 **파일 그룹**을 선택합니다.  
+2.  **데이터베이스 속성 –** *database_name* 대화 상자의 **페이지 선택**아래에서 **파일 그룹**을 선택합니다.  
   
 3.  **행**아래에서 **추가**를 클릭합니다. 새 행에 파일 그룹 이름을 입력합니다.  
   
@@ -106,7 +110,7 @@ caps.handback.revision: 35
   
 9. **테이블** 폴더를 확장하고 일반적인 방식으로 테이블을 만듭니다. 자세한 내용은 [테이블 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/tables/create-tables-database-engine.md)를 참조하세요. 또는 다음 절차에서 기존 테이블을 지정할 수도 있습니다.  
   
-#### 분할된 테이블을 만들려면  
+#### <a name="to-create-a-partitioned-table"></a>분할된 테이블을 만들려면  
   
 1.  분할할 테이블을 마우스 오른쪽 단추로 클릭하고 **저장소**를 가리킨 다음 **파티션 만들기...**를 클릭합니다.  
   
@@ -152,7 +156,7 @@ caps.handback.revision: 35
      파티션의 범위 값에 대해 시작 날짜를 선택합니다.  
   
      **종료 날짜**  
-     파티션의 범위 값에 대해 종료 날짜를 선택합니다. **파티션 매핑** 페이지에서 **왼쪽 경계**를 선택한 경우 이 날짜가 각 파일 그룹/파티션의 마지막 값이 됩니다. **파티션 매핑** 페이지에서 **오른쪽 경계**를 선택한 경우 이 날짜가 마지막에서 두 번째 파일 그룹의 첫 번째 값이 됩니다.  
+     파티션의 범위 값에 대해 종료 날짜를 선택합니다. **파티션 매핑** 페이지에서 **왼쪽 경계** 를 선택한 경우 이 날짜가 각 파일 그룹/파티션의 마지막 값이 됩니다. **파티션 매핑** 페이지에서 **오른쪽 경계** 를 선택한 경우 이 날짜가 마지막에서 두 번째 파일 그룹의 첫 번째 값이 됩니다.  
   
      **날짜 범위**  
      각 파티션에 사용할 날짜 세분성이나 범위 값 증분을 선택합니다.  
@@ -200,19 +204,19 @@ caps.handback.revision: 35
   
                 -   **매(Day)**를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매** 를 선택하고 첫 번째 상자에 "15"를, 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                -   **매(The)**를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째** 또는 **네 번째** 및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                -   **매(The)**를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매**를 선택하고 첫 번째 목록에서 **마지막** 을, 두 번째 목록에서 **평일** 을 선택한 다음 마지막 상자에 "2"를 입력합니다. 처음 두 목록에서 **첫 번째**, **두 번째**, **세 번째**또는 **네 번째**및 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
         2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   
             -   **한 번 수행**을 선택하는 경우 **한 번 수행** 상자에 작업 일정을 실행할 특정 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
   
-            -   **되풀이 수행**을 선택하는 경우 **빈도**에 선택한 날 동안 작업 일정을 실행할 빈도를 지정합니다. 예를 들어 작업 일정을 실행하는 날에 2시간마다 작업 일정을 반복하려면 **되풀이 수행**을 선택하고 첫 번째 상자에 "2"를 입력한 다음 목록에서 **시간**을 선택합니다. 이 목록에서 **분**과 **초**도 선택할 수 있습니다. 첫 번째 상자에 허용되는 가장 큰 숫자는 "100"입니다.  
+            -   **되풀이 수행**을 선택하는 경우 **빈도**에 선택한 날 동안 작업 일정을 실행할 빈도를 지정합니다. 예를 들어 작업 일정을 실행하는 날에 2시간마다 작업 일정을 반복하려면 **되풀이 수행**을 선택하고 첫 번째 상자에 "2"를 입력한 다음 목록에서 **시간** 을 선택합니다. 이 목록에서 **분** 과 **초**도 선택할 수 있습니다. 첫 번째 상자에 허용되는 가장 큰 숫자는 "100"입니다.  
   
                  **시작** 상자에 작업 일정 실행을 시작할 시간을 입력합니다. **종료** 상자에 작업 일정 반복을 중지할 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
   
         3.  **기간**아래의 **시작 날짜**에 작업 일정 실행을 시작할 날짜를 입력합니다. **종료 날짜** 또는 **종료 날짜 없음** 을 선택하여 작업 일정 실행을 중지할 시기를 나타냅니다. **종료 날짜**를 선택하는 경우 작업 일정 실행을 중지할 날짜를 입력합니다.  
   
-    5.  **한 번**을 선택하는 경우 **한 번 발생** 아래 **날짜** 상자에 작업 일정을 실행할 날짜를 입력합니다. **시간** 상자에 작업 일정을 실행할 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
+    5.  **한 번**을 선택하는 경우 **한 번 발생**아래 **날짜** 상자에 작업 일정을 실행할 날짜를 입력합니다. **시간** 상자에 작업 일정을 실행할 시간을 입력합니다. 시간, 분, 초와 오전 또는 오후를 입력합니다.  
   
     6.  **요약**아래 **설명**에서 모든 작업 일정 설정이 올바른지 확인합니다.  
   
@@ -233,9 +237,9 @@ caps.handback.revision: 35
      각 동작의 이름과 유형을 지정합니다.  
   
      **상태**  
-     마법사 동작 결과 전체적으로 **성공** 값을 반환했는지 또는 **실패** 값을 반환했는지 여부를 나타냅니다.  
+     마법사 동작 결과 전체적으로 **성공** 값을 반환했는지 또는 **실패**값을 반환했는지 여부를 나타냅니다.  
   
-     ** 메시지 **  
+     **메시지**  
      프로세스에서 반환된 모든 오류 또는 경고 메시지를 제공합니다.  
   
      **보고서**  
@@ -259,7 +263,7 @@ caps.handback.revision: 35
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 분할된 테이블을 만들려면  
+#### <a name="to-create-a-partitioned-table"></a>분할된 테이블을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -342,7 +346,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### 테이블이 분할되었는지 여부를 확인하려면  
+#### <a name="to-determine-if-a-table-is-partitioned"></a>테이블이 분할되었는지 여부를 확인하려면  
   
 1.  다음 쿼리는 `PartitionTable` 테이블이 분할된 경우 하나 이상의 행을 반환합니다. 테이블이 분할되지 않은 경우 행이 반환되지 않습니다.  
   
@@ -358,7 +362,7 @@ caps.handback.revision: 35
     GO  
     ```  
   
-#### 분할된 테이블에 대한 경계 값을 확인하려면  
+#### <a name="to-determine-the-boundary-values-for-a-partitioned-table"></a>분할된 테이블에 대한 경계 값을 확인하려면  
   
 1.  다음 쿼리는 `PartitionTable` 테이블의 각 파티션에 대해 경계 값을 반환합니다.  
   
@@ -379,9 +383,9 @@ caps.handback.revision: 35
     ORDER BY p.partition_number;  
     ```  
   
-#### 분할된 테이블에 대한 파티션 열을 확인하려면  
+#### <a name="to-determine-the-partition-column-for-a-partitioned-table"></a>분할된 테이블에 대한 파티션 열을 확인하려면  
   
-1.  다음 쿼리는 테이블에 대한 분할 열의 이름을 반환합니다. `PartitionTable`.  
+1.  다음 쿼리는 테이블에 대한 분할 열의 이름을 반환합니다. `PartitionTable`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.  
   
     ```  
     SELECT   
@@ -408,7 +412,7 @@ caps.handback.revision: 35
   
  참조 항목:  
   
--   [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20File%20and%20Filegroup%20Options%20\(Transact-SQL\).md)  
+-   [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)  
   
 -   [CREATE PARTITION FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)  
   

@@ -1,30 +1,34 @@
 ---
-title: "geometry 인스턴스 만들기, 구성 및 쿼리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "평면 공간 데이터 [SQL Server], 시작"
-  - "geometry 데이터 형식 [SQL Server], 시작"
+title: "geometry 인스턴스 만들기, 구성 및 쿼리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- planar spatial data [SQL Server], getting started
+- geometry data type [SQL Server], getting started
 ms.assetid: c6b5c852-37d2-48d0-a8ad-e43bb80d6514
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 67afdd066ed1ecff52f4ce7fecb41d344fb6d20a
+ms.lasthandoff: 04/11/2017
+
 ---
-# geometry 인스턴스 만들기, 구성 및 쿼리
+# <a name="create-construct-and-query-geometry-instances"></a>geometry 인스턴스 만들기, 구성 및 쿼리
   평면 공간 데이터 형식 **geometry**는 유클리드(평면) 좌표계의 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다.  
   
  **geometry** 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 CLR 형식을 사용할 때와 동일한 방식으로 **geometry** 형식의 테이블 열을 만들고 **geometry** 데이터에 대한 작업을 수행할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원되는 **geometry** 데이터 형식(평면)은 OGC(Open Geospatial Consortium) Simple Features for SQL Specification 버전 1.1.0을 따릅니다.  
+ **에서 지원되는** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식(평면)은 OGC(Open Geospatial Consortium) Simple Features for SQL Specification 버전 1.1.0을 따릅니다.  
   
  OGC 사양에 대한 자세한 내용은 다음을 참조하십시오.  
   
@@ -65,7 +69,6 @@ caps.handback.revision: 26
  **기존 geometry에 있는 임의의 Point 인스턴스를 만들려면**  
  [STPointOnSurface&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stpointonsurface-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="wkt"></a> WKT 입력에서 geometry 인스턴스 구성  
  **geometry** 데이터 형식은 OGC(Open Geospatial Consortium) WKT 표현에서 기하 도형을 생성하는 여러 가지 기본 메서드를 제공합니다. WKT 표준은 기하 도형 데이터를 텍스트 형식으로 교환할 수 있는 텍스트 문자열입니다.  
@@ -96,7 +99,6 @@ caps.handback.revision: 26
  **WKT 입력에서 기하 도형 GeometryCollection 인스턴스를 생성하려면**  
  [STGeomCollFromText&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stgeomcollfromtext-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="wkb"></a> WKB 입력에서 geometry 인스턴스 구성  
  WKB는 OGC(Open Geospatial Consortium)에서 지정한 이진 형식으로, 클라이언트 응용 프로그램과 SQL 데이터베이스 간에 **geometry** 데이터를 교환하도록 허용합니다. 다음 함수는 WKB 입력을 사용하여 기하 도형을 생성합니다.  
@@ -125,7 +127,6 @@ caps.handback.revision: 26
  **WKB 입력에서 기하 도형 GeometryCollection 인스턴스를 생성하려면**  
  [STGeomCollFromWKB&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stgeomcollfromwkb-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="gml"></a> GML 텍스트 입력에서 geometry 인스턴스 구성  
  **geometry** 데이터 형식은 기하학적 개체의 XML 표현인 GML에서 **geometry** 인스턴스를 생성하는 메서드를 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 GML 하위 집합을 지원합니다.  
@@ -133,7 +134,6 @@ caps.handback.revision: 26
  **GML 입력에서 모든 유형의 geometry 인스턴스를 생성하려면**  
  [GeomFromGml&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/geomfromgml-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ##  <a name="returning"></a> geometry 인스턴스에서 WKT 및 WKB 반환  
  다음 메서드를 사용하여 **geometry** 인스턴스의 WKT 또는 WKB 형식을 반환할 수 있습니다.  
@@ -152,7 +152,6 @@ caps.handback.revision: 26
  **geometry 인스턴스의 GML 표현을 반환하려면**  
  [AsGml&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/asgml-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ##  <a name="querying"></a> geometry 인스턴스의 속성 및 동작 쿼리  
  모든 **geometry** 인스턴스에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 제공하는 메서드를 통해 검색할 수 있는 여러 속성이 있습니다. 다음 항목에서는 기하 도형 형식의 속성과 동작 및 각각을 쿼리하는 메서드를 정의합니다.  
@@ -178,10 +177,9 @@ caps.handback.revision: 26
  기하 도형 컬렉션 인스턴스에서 특정 기하 도형을 반환하려면  
  [STGeometryN&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stgeometryn-geometry-data-type.md)STGeometryN(geometry 데이터 형식)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="number"></a> 점 수  
- 모든 비어 있지 않은 **geometry** 인스턴스는 *점*으로 구성됩니다. 이러한 점은 기하 도형이 그려지는 평면의 X 및 Y 좌표를 나타냅니다. **geometry**는 인스턴스의 점을 쿼리하는 데 필요한 수많은 기본 메서드를 제공합니다.  
+ 모든 비어 있지 않은 **geometry** 인스턴스는 *점*으로 구성됩니다. 이러한 점은 기하 도형이 그려지는 평면의 X 및 Y 좌표를 나타냅니다. **geometry** 는 인스턴스의 점을 쿼리하는 데 필요한 수많은 기본 메서드를 제공합니다.  
   
  **인스턴스를 구성하는 점 개수를 반환하려면**  
  [STNumPoints&#40;geometry 데이터 형식&#41;](../../t-sql/spatial-geometry/stnumpoints-geometry-data-type.md)  
@@ -207,10 +205,9 @@ caps.handback.revision: 26
  **Polygon, CurvePolygon 또는 MultiPolygon 인스턴스의 기하학적 중심점을 반환하려면**  
  [STCentroid](../../t-sql/spatial-geometry/stcentroid-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="dimension"></a> 차원  
- 비어 있지 않은 **geometry** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point** 및 **MultiPoint**와 같은 0차원 **geometry**에는 길이 또는 영역이 없습니다. **LineString, CircularString, CompoundCurve** 및 **MultiLineString**과 같은 1차원 개체에는 길이가 있습니다. **Polygon**, **CurvePolygon** 및 **MultiPolygon**과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection**에서는 해당 내용의 유형에 따라 다른 영역을 보고합니다.  
+ 비어 있지 않은 **geometry** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point**및 **MultiPoint** 와 같은 0차원 **geometry**에는 길이 또는 영역이 없습니다. **LineString, CircularString, CompoundCurve**및 **MultiLineString**과 같은 1차원 개체에는 길이가 있습니다. **Polygon**, **CurvePolygon**및 **MultiPolygon**과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection** 에서는 해당 내용의 유형에 따라 다른 영역을 보고합니다.  
   
  **인스턴스의 차원을 반환하려면**  
  [STDimension](../../t-sql/spatial-geometry/stdimension-geometry-data-type.md)  
@@ -221,7 +218,6 @@ caps.handback.revision: 26
  **인스턴스의 영역을 반환하려면**  
  [STArea](../../t-sql/spatial-geometry/starea-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="empty"></a> 비어 있음  
  *비어 있는***geometry** 인스턴스에는 점이 하나도 없습니다. 비어 있는 **LineString, CircularString**, **CompoundCurve**및 **MultiLineString** 인스턴스의 길이는 0입니다. 비어 있는 **Polygon**, **CurvePolygon**및 **MultiPolygon** 인스턴스의 영역은 0입니다.  
@@ -229,7 +225,6 @@ caps.handback.revision: 26
  **인스턴스가 비어 있는지 확인하려면**  
  [STIsEmpty](../../t-sql/spatial-geometry/stisempty-geometry-data-type.md).  
   
- [항목 내용](#TOP)  
   
 ###  <a name="simple"></a> 간단  
  **geometry** 인스턴스가 *단순*할 경우 다음 요구 사항을 모두 충족해야 합니다.  
@@ -244,7 +239,6 @@ caps.handback.revision: 26
  **인스턴스가 단순한지 확인하려면**  
  [STIsEmpty](../../t-sql/spatial-geometry/stissimple-geometry-data-type.md).  
   
- [항목 내용](#TOP)  
   
 ###  <a name="boundary"></a> 경계, 내부 및 외부  
  *geometry* 인스턴스의 **내부** 는 인스턴스가 차지하는 공간이고 *외부* 는 해당 인스턴스가 차지하지 않는 공간입니다.  
@@ -272,15 +266,13 @@ SELECT @g.STBoundary().ToString();
  **인스턴스의 경계를 반환하려면**  
  [STBoundary](../../t-sql/spatial-geometry/stboundary-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="envelope"></a> 봉투  
- **geometry** 인스턴스의 *봉투*는 *경계 상자*로도 알려져 있으며 해당 인스턴스의 최대 및 최소 (X, Y) 좌표로 구성되는 축에 맞춰진 사각형입니다.  
+ *geometry* 인스턴스의 **봉투** 는 *경계 상자*로도 알려져 있으며 해당 인스턴스의 최대 및 최소 (X, Y) 좌표로 구성되는 축에 맞춰진 사각형입니다.  
   
  **인스턴스의 봉투를 반환하려면**  
  [STEnvelope](../../t-sql/spatial-geometry/stenvelope-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="closure"></a> 닫힘  
  *닫혀 있는***geometry** 인스턴스는 시작점과 끝점이 같은 도형입니다. **Polygon** 인스턴스는 닫혀 있다고 간주되며, **Point** 인스턴스는 닫혀 있지 않습니다.  
@@ -302,7 +294,6 @@ SELECT @g.STBoundary().ToString();
  **Polygon에 지정된 내부 링을 반환하려면**  
  [STInteriorRingN](../../t-sql/spatial-geometry/stinteriorringn-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ###  <a name="srid"></a> SRID(Spatial Reference ID)  
  SRID는 **geometry** 인스턴스를 나타내는 좌표계를 지정하는 식별자입니다. 다른 SRID를 사용하는 두 인스턴스는 서로 비교할 수 없습니다.  
@@ -312,7 +303,6 @@ SELECT @g.STBoundary().ToString();
   
  이 속성은 수정할 수 있습니다.  
   
- [항목 내용](#TOP)  
   
 ##  <a name="rel"></a> geometry 인스턴스 간 관계 확인  
  **geometry** 데이터 형식은 수많은 기본 메서드를 제공합니다. 이러한 메서드를 사용하여 두 개의 **geometry** 인스턴스 간 관계를 확인할 수 있습니다.  
@@ -350,15 +340,14 @@ SELECT @g.STBoundary().ToString();
  **두 geometry의 점 간 최단 길이를 확인하려면**  
  [STDistance](../../t-sql/spatial-geometry/stdistance-geometry-data-type.md)  
   
- [항목 내용](#TOP)  
   
 ##  <a name="defaultsrid"></a> geometry 인스턴스의 기본값을 SRID 0으로 설정  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **geometry** 인스턴스의 기본 SRID는 0입니다. **geometry** 공간 데이터를 사용하면 계산을 수행하는 데 공간 인스턴스의 특정 SRID가 필요하지 않으므로 인스턴스가 정의되지 않은 평면 공간에 존재할 수 있습니다. **geometry** 데이터 형식 메서드의 계산에서 정의되지 않은 평면 공간을 나타내려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서는 SRID 0을 사용합니다.  
+ **에서** geometry [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 SRID는 0입니다. **geometry** 공간 데이터를 사용하면 계산을 수행하는 데 공간 인스턴스의 특정 SRID가 필요하지 않으므로 인스턴스가 정의되지 않은 평면 공간에 존재할 수 있습니다. **geometry** 데이터 형식 메서드의 계산에서 정의되지 않은 평면 공간을 나타내려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 SRID 0을 사용합니다.  
   
 ##  <a name="examples"></a> 예  
  다음 두 예에서는 geometry 데이터를 추가하고 쿼리하는 방법을 보여 줍니다.  
   
--   첫 번째 예에서는 ID 열과 `geometry` 열 `GeomCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geometry` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString`의 `geometry` 인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
+-   첫 번째 예에서는 ID 열과 `geometry` 열 `GeomCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geometry` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geometry`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -392,9 +381,8 @@ SELECT @g.STBoundary().ToString();
     SELECT @result.STAsText();  
     ```  
   
- [항목 내용](#TOP)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "분류자 사용자 정의 함수 만들기 및 테스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 관리자, 분류자 함수 만들기"
-  - "분류자 함수[SQL Server], 테스트"
-  - "분류자 함수[SQL Server], 만들기"
-  - "리소스 관리자, 분류자 함수 테스트"
+title: "분류자 사용자 정의 함수 만들기 및 테스트 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, classifier function create
+- classifier function [SQL Server], test
+- classifier function [SQL Server], create
+- Resource Governor, classifier function test
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.lasthandoff: 04/11/2017
+
 ---
-# 분류자 사용자 정의 함수 만들기 및 테스트
+# <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
   이 항목에서는 분류자 사용자 정의 함수(Transact-UDF)를 만들고 테스트하는 방법을 보여 줍니다. 이 단계에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 문을 실행하는 작업이 포함되어 있습니다.  
   
  아래 절차에 나오는 예에서는 매우 복잡한 분류자 사용자 정의 함수를 만드는 경우에 대해 설명합니다.  
@@ -39,7 +43,7 @@ caps.handback.revision: 25
   
  분류자 함수는 로그인 시간을 확장합니다. 과도하게 복잡한 함수를 사용하면 로그인을 수행할 때 시간이 초과되거나 빠른 연결 속도를 늦출 수 있습니다.  
   
-### 분류자 사용자 정의 함수를 만들려면  
+### <a name="to-create-the-classifier-user-defined-function"></a>분류자 사용자 정의 함수를 만들려면  
   
 1.  새 리소스 풀 및 작업 그룹을 만들고 구성합니다. 각 작업 그룹을 적합한 리소스 풀에 할당합니다.  
   
@@ -150,7 +154,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### 리소스 풀, 작업 그룹 및 분류자 사용자 정의 함수를 확인하려면  
+### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>리소스 풀, 작업 그룹 및 분류자 사용자 정의 함수를 확인하려면  
   
 1.  다음 쿼리를 사용하여 리소스 풀 및 작업 그룹 구성을 가져옵니다.  
   
@@ -228,7 +232,7 @@ caps.handback.revision: 25
     GO  
     ```  
   
-### 분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법  
+### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법  
   
 1.  조회 테이블은 반드시 필요한 경우에만 사용합니다. 조회 테이블을 사용해야 하는 경우에는 함수 자체에 테이블을 하드 코딩할 수 있습니다. 그러나 이 경우에는 분류자 함수의 동적 변경 및 복잡도 간에 균형을 조정해야 합니다.  
   
@@ -246,7 +250,7 @@ caps.handback.revision: 25
   
 3.  조회 테이블에 대한 차단을 방지합니다.  
   
-    1.  `NOLOCK` 힌트를 사용하여 차단을 방지하거나 함수에서 `SET LOCK_TIMEOUT`(최대값 1000밀리초)을 사용합니다.  
+    1.  `NOLOCK` 힌트를 사용하여 차단을 방지하거나 함수에서 `SET LOCK_TIMEOUT` (최대값 1000밀리초)을 사용합니다.  
   
     2.  테이블은 반드시 master 데이터베이스에 있어야 합니다. 클라이언트 컴퓨터가 연결을 시도할 때 복구가 보장되는 데이터베이스는 master 데이터베이스뿐입니다.  
   
@@ -261,7 +265,7 @@ caps.handback.revision: 25
         > [!WARNING]  
         >  이러한 최선의 구현 방법을 따르는 것이 좋습니다. 문제가 발생하여 최선의 구현 방법을 따를 수 없는 경우에는 Microsoft 지원 센터에 문의하여 향후 발생할 수 있는 문제를 예방하는 것이 좋습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 관리자 리소스 풀](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

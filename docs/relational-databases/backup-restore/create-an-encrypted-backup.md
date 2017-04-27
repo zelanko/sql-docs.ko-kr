@@ -1,25 +1,29 @@
 ---
-title: "암호화된 백업 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/04/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "암호화된 백업 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/04/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 42b2038121e0bf9179fefafc89a7b17e3c1585c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 암호화된 백업 만들기
-  이 항목에서는 Transact-SQL을 사용하여 암호화된 백업을 만드는 데 필요한 단계에 대해 설명합니다.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 사용에 대한 예는 [전체 데이터베이스 백업 만들기(SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요. 
+# <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
+  이 항목에서는 Transact-SQL을 사용하여 암호화된 백업을 만드는 데 필요한 단계에 대해 설명합니다.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]사용에 대한 예는 [전체 데이터베이스 백업 만들기(SQL Server)](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요. 
   
-## 암호화하여 디스크에 백업  
+## <a name="backup-to-disk-with-encryption"></a>암호화하여 디스크에 백업  
  **사전 요구 사항:**  
   
 -   데이터베이스의 백업을 만드는 데 적합한 공간이 있는 로컬 디스크나 저장소에 대한 액세스 권한  
@@ -70,12 +74,12 @@ caps.handback.revision: 17
   
  EKM에 의해 보호되는 백업을 암호화하는 예제를 보려면 [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
-### 암호화하여 Windows Azure 저장소에 백업  
- **URL에 대한 SQL Server 백업** 옵션을 사용하여 Windows Azure 저장소에 백업을 만드는 경우 암호화 단계는 동일하지만 URL을 대상으로 사용하고 SQL 자격 증명을 사용하여 Windows Azure 저장소에 인증해야 합니다. 암호화 옵션을 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 구성하려면 [Microsoft Azure로의 SQL Server 관리되는 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
+### <a name="backup-to-windows-azure-storage-with-encryption"></a>암호화하여 Windows Azure 저장소에 백업  
+ **URL에 대한 SQL Server 백업** 옵션을 사용하여 Windows Azure 저장소에 백업을 만드는 경우 암호화 단계는 동일하지만 URL을 대상으로 사용하고 SQL 자격 증명을 사용하여 Windows Azure 저장소에 인증해야 합니다. 암호화 옵션을 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성하려면 [Microsoft Azure로의 SQL Server 관리되는 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
  **사전 요구 사항:**  
   
--   Windows 저장소 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [Lesson 1: Create Windows Azure Storage Objects](../Topic/Lesson%201:%20Create%20Windows%20Azure%20Storage%20Objects.md)입니다.  
+-   Windows 저장소 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [Lesson 1: Create Windows Azure Storage Objects](http://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5)입니다.  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.  
   
@@ -129,3 +133,4 @@ caps.handback.revision: 17
     ```  
   
   
+

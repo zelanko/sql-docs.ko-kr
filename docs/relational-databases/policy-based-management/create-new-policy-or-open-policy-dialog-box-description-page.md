@@ -1,25 +1,29 @@
 ---
-title: "새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6ef76460f1f77ea9622bbc2465857946bf463b96
+ms.lasthandoff: 04/11/2017
+
 ---
-# 새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지
+# <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지
   이 대화 상자를 사용하여 정책 기반 관리 정책에 대한 추가 정보 및 설명을 추가할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **범주**  
  새 정책을 만들 때 정책 범주를 선택합니다.  
   
@@ -47,7 +51,7 @@ caps.handback.revision: 9
  **수정한 사람**  
  정책을 가장 최근에 변경한 사람의 로그인 정보입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

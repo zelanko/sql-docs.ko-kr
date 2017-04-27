@@ -1,31 +1,35 @@
 ---
-title: "열 속성(일반 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.columnproperties.general.f1"
+title: "열 속성(일반 페이지) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.columnproperties.general.f1
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 caps.latest.revision: 27
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 478dc0e10767f9e4e10c5c3ede74aec5ddaddef4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 열 속성(일반 페이지)
+# <a name="column-properties-general-page"></a>열 속성(일반 페이지)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   이 페이지를 사용하여 선택한 열의 속성을 볼 수 있습니다.  
   
  이 페이지의 정보는 읽기 전용입니다. 열을 수정하려면 **열 속성** 대화 상자를 닫고, 개체 탐색기에서 테이블과 열을 확장하고, 열을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **이름**  
  열 이름입니다.  
   
@@ -54,7 +58,7 @@ caps.handback.revision: 27
  ID 열의 초기 행 값을 나타냅니다.  
   
  **ID 증가값**  
- **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기존의 가장 큰 행 ID 값에 추가하는 값을 지정합니다.  
+ **ID 증분** 속성은 새로 삽입되는 행의 ID 값을 생성할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 기존의 가장 큰 행 ID 값에 추가하는 값을 지정합니다.  
   
  **기본 바인딩**  
  열에 바인딩된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값입니다. 기본값이 바인딩되지 않은 경우에 이 옵션은 공백입니다.  

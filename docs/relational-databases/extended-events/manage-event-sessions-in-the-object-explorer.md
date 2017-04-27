@@ -1,23 +1,27 @@
 ---
-title: "개체 탐색기에서 이벤트 세션 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "개체 탐색기에서 이벤트 세션 관리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 16849e38-d3fb-414d-8dcb-797b5ffce6ee
 caps.latest.revision: 10
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1bfecba6078a80485bfcd9448c8be19d0c69328
+ms.lasthandoff: 04/11/2017
+
 ---
-# 개체 탐색기에서 이벤트 세션 관리
+# <a name="manage-event-sessions-in-the-object-explorer"></a>개체 탐색기에서 이벤트 세션 관리
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 **개체 탐색기** 에서 수행할 수 있는 확장 이벤트에 영향을 주는 동작에 대해 설명합니다.  
@@ -34,10 +38,10 @@ caps.handback.revision: 10
   
 -   확장 이벤트 세션 삭제  
   
-## 확장 이벤트 세션 만들기  
- 확장 이벤트 세션을 만드는 방법은 [Create an Extended Events Session](../Topic/Create%20an%20Extended%20Events%20Session.md)를 참조하십시오.  
+## <a name="create-an-extended-events-session"></a>확장 이벤트 세션 만들기  
+ 확장 이벤트 세션을 만드는 방법은 [Create an Extended Events Session](http://msdn.microsoft.com/library/34b1e95a-a80e-4aca-9201-abde47f2ca74)를 참조하십시오.  
   
-## 확장 이벤트 세션 시작 또는 중지  
+## <a name="starting-or-stopping-an-extended-events-session"></a>확장 이벤트 세션 시작 또는 중지  
  **쿼리 편집기** 에서 **ALTER EVENT SESSION** 문을 사용하거나 **개체 탐색기** 의 **확장 이벤트**노드를 사용하여 확장 이벤트 세션을 시작하거나 중지할 수 있습니다.  
   
  이벤트 세션을 중지하면 해당 세션은 sys.dm_xe_sessions DMV(동적 관리 뷰)에서 더 이상 활성 세션으로 표시되지 않습니다. 그러나 세션 정의는 그대로 유지되므로 세션을 다시 시작할 수 있습니다. 세션 정의를 완전히 제거하려면 세션을 삭제해야 합니다.  
@@ -46,8 +50,8 @@ caps.handback.revision: 10
   
  링 버퍼, 버킷팅, 이벤트 쌍 또는 동기 이벤트 카운터 대상 등의 메모리 내 대상을 사용하는 세션을 중지하면 해당 세션의 버퍼(sys.dm_xe_session_targets DMV의 target_data 열)에 저장된 모든 정보가 손실됩니다. 세션을 중지한 후 이벤트 데이터에 액세스하려면 세션을 중지하기 전에 데이터를 저장하거나 파일 대상을 사용하도록 세션을 구성해야 합니다.  
   
-### 쿼리 편집기를 사용하여 확장 이벤트 세션 시작 또는 중지  
- 세션을 시작하려면 다음 문을 실행합니다. *session_name*을 확장 이벤트 세션의 이름으로 바꿉니다.  
+### <a name="start-or-stop-an-extended-events-session-using-query-editor"></a>쿼리 편집기를 사용하여 확장 이벤트 세션 시작 또는 중지  
+ 세션을 시작하려면 다음 문을 실행합니다. *session_name* 을 확장 이벤트 세션의 이름으로 바꿉니다.  
   
 ```  
 ALTER EVENT SESSION [session_name]  
@@ -55,7 +59,7 @@ ON SERVER
 STATE = START  
 ```  
   
- 세션을 중지하려면 다음 문을 실행합니다. *session_name*을 확장 이벤트 세션의 이름으로 바꿉니다.  
+ 세션을 중지하려면 다음 문을 실행합니다. *session_name* 을 확장 이벤트 세션의 이름으로 바꿉니다.  
   
 ```  
 ALTER EVENT SESSION [session_name]  
@@ -63,10 +67,10 @@ ON SERVER
 STATE = STOP  
 ```  
   
-### 개체 탐색기에서 확장 이벤트 세션 시작 또는 중지  
+### <a name="start-or-stop-an-extended-events-session-in-object-explorer"></a>개체 탐색기에서 확장 이벤트 세션 시작 또는 중지  
  **개체 탐색기**에서 확장 이벤트 세션을 시작하거나 중지하려면 **관리**, **확장 이벤트**및 **세션** 노드를 차례로 확장한 다음 세션을 마우스 오른쪽 단추로 클릭하고 **세션 시작** 또는 **세션 중지**를 클릭합니다.  
   
-## 확장 이벤트 세션 템플릿 내보내기  
+## <a name="export-an-extended-events-session-template"></a>확장 이벤트 세션 템플릿 내보내기  
  **개체 탐색기**를 사용하여 확장 이벤트 세션을 내보내고 이 세션을 .xml 템플릿 파일로 저장할 수 있습니다. 예를 들어 세션을 내보낸 다음 **새 세션 마법사** 또는 **새 세션** 마법사를 사용하여 새 이벤트 세션에 템플릿을 적용할 수 있습니다.  
   
  세션을 내보내는 경우 NTFS 파일 시스템을 사용하는 위치에 템플릿 파일을 저장하고, 인증된 사용자만 해당 정보를 볼 수 있도록 액세스를 제한해야 합니다.  
@@ -81,7 +85,7 @@ STATE = STOP
   
      파일을 기본 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 템플릿 위치에 저장하면 **새 세션 마법사** 및 **새 세션** 대화 상자의 미리 정의된 템플릿 드롭다운 목록에 해당 템플릿이 표시됩니다.  
   
-## 확장 이벤트 세션 템플릿 가져오기  
+## <a name="import-an-extended-events-session-template"></a>확장 이벤트 세션 템플릿 가져오기  
  **개체 탐색기**를 사용하여 확장 이벤트 세션 템플릿을 가져올 수 있습니다. 예를 들어 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 내보낸 템플릿을 사용하여 세션을 만들려는 경우 템플릿을 가져옵니다.  
   
  확장 이벤트 세션을 가져오려면 **ALTER ANY EVENT SESSION** 권한이 있어야 합니다.  
@@ -92,7 +96,7 @@ STATE = STOP
   
 1.  **개체 탐색기**에서 **관리**및 **확장 이벤트** 노드를 차례로 확장합니다.  
   
-2.  **세션**을 마우스 오른쪽 단추로 클릭하고 **새 세션**을 선택합니다.  
+2.  **세션** 을 마우스 오른쪽 단추로 클릭하고 **새 세션**을 선택합니다.  
   
 3.  세션의 이름을 지정합니다.  
   
@@ -102,7 +106,7 @@ STATE = STOP
   
  해당 세션이 **세션** 노드에 표시됩니다. 기본적으로 세션은 시작되지 않습니다.  
   
-## 확장 이벤트 세션 편집  
+## <a name="edit-an-extended-events-session"></a>확장 이벤트 세션 편집  
  개체 탐색기에서 확장 이벤트 세션을 편집할 수 있습니다.  
   
  확장 이벤트 세션을 편집하려면  
@@ -115,12 +119,12 @@ STATE = STOP
   
 4.  이벤트 세션을 수정한 후 **확인**을 클릭합니다.  
   
-## 다음을 사용하여 확장 이벤트 세션 스크립팅: [!INCLUDE[tsql](../../includes/tsql-md.md)]  
- 새 세션 마법사와 새 세션 대화 상자에는 확장 이벤트 세션을 정의하는, [!INCLUDE[tsql](../../includes/tsql-md.md)]을 생성하는 스크립트 옵션이 있습니다.  
+## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>다음을 사용하여 확장 이벤트 세션 스크립팅: [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+ 새 세션 마법사와 새 세션 대화 상자에는 확장 이벤트 세션을 정의하는, [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 생성하는 스크립트 옵션이 있습니다.  
   
  세션 이름을 마우스 오른쪽 단추로 클릭하고 [!INCLUDE[tsql](../../includes/tsql-md.md)] 세션 스크립팅 **을 선택한 다음**Create **를 선택하여 기존 확장 이벤트 세션의**에 액세스할 수 있습니다.  
   
-## 확장 이벤트 세션 삭제  
+## <a name="delete-an-extended-events-session"></a>확장 이벤트 세션 삭제  
  다음과 같은 방법으로 확장 이벤트 세션을 삭제할 수 있습니다.  
   
 -   쿼리 편집기에서 **DROP EVENT SESSION**사용  
@@ -144,7 +148,7 @@ STATE = STOP
   
 4.  이벤트 세션을 수정한 후 **확인**을 클릭합니다.  
   
- **쿼리 편집기**에서 확장 이벤트 세션을 삭제하려면 다음 문을 실행합니다. *session_name*을 삭제할 확장 이벤트 세션의 이름으로 바꿉니다.  
+ **쿼리 편집기**에서 확장 이벤트 세션을 삭제하려면 다음 문을 실행합니다. *session_name* 을 삭제할 확장 이벤트 세션의 이름으로 바꿉니다.  
   
 ```  
 DROP EVENT SESSION [session_name]  

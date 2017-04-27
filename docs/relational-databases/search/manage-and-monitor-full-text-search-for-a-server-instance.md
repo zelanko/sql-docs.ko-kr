@@ -1,26 +1,30 @@
 ---
-title: "서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-search"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 텍스트 검색 [SQL Server], 정보"
-  - "전체 텍스트 검색 [SQL Server], 서버 관리"
+title: "서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-search
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full-text search [SQL Server], about
+- full-text search [SQL Server], server management
 ms.assetid: 2733ed78-6d33-4bf9-94da-60c3141b87c8
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 657d78f548e8368ad2ff4c554fc6f731d7fb27fa
+ms.lasthandoff: 04/11/2017
+
 ---
-# 서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
+# <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링
   서버 인스턴스의 전체 텍스트 관리에는 다음이 포함됩니다.  
   
 -   FDHOST Launcher 서비스(MSSQLFDLauncher) 관리, 서비스 계정 자격 증명을 변경하는 경우 필터 데몬 호스트 프로세스 다시 시작, 서버 차원의 전체 텍스트 속성 구성, 전체 텍스트 카탈로그 백업 등의 시스템 관리 태스크. 예를 들어 서버 수준에서 전반적으로 서버 인스턴스의 기본 언어와 다른 기본 전체 텍스트 언어를 지정할 수 있습니다.  
@@ -30,9 +34,9 @@ caps.handback.revision: 19
 -   전체 텍스트 검색에 대한 사용자 데이터베이스 구성. 여기에는 데이터베이스에 대해 하나 이상의 전체 텍스트 카탈로그를 만들고 전체 텍스트 쿼리를 실행할 각 테이블 또는 인덱싱된 뷰에 대한 전체 텍스트 인덱스를 정의하는 작업이 포함됩니다.  
   
 ##  <a name="props"></a> 전체 텍스트 검색의 서버 속성 보기 또는 변경  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스의 전체 텍스트 속성을 볼 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스의 전체 텍스트 속성을 볼 수 있습니다.  
   
-#### 전체 텍스트 검색의 서버 속성을 보고 변경하려면  
+#### <a name="to-view-and-change-server-properties-for-full-text-search"></a>전체 텍스트 검색의 서버 속성을 보고 변경하려면  
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -44,7 +48,7 @@ caps.handback.revision: 19
   
     -   **전체 텍스트 업그레이드 옵션**  
   
-         이 서버 속성은 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 이후 버전으로 업그레이드할 때 전체 텍스트 인덱스를 마이그레이션하는 방법을 제어합니다. 이 속성은 데이터베이스 복사 마법사를 사용하여 데이터베이스를 연결하거나, 데이터베이스 백업 및 파일 백업을 복원하거나, 데이터베이스를 복사하여 업그레이드에 적용됩니다.  
+         이 서버 속성은 데이터베이스를 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 에서 이후 버전으로 업그레이드할 때 전체 텍스트 인덱스를 마이그레이션하는 방법을 제어합니다. 이 속성은 데이터베이스 복사 마법사를 사용하여 데이터베이스를 연결하거나, 데이터베이스 백업 및 파일 백업을 복원하거나, 데이터베이스를 복사하여 업그레이드에 적용됩니다.  
   
          대체 방법은 다음과 같습니다.  
   
@@ -56,13 +60,13 @@ caps.handback.revision: 19
   
          전체 텍스트 카탈로그를 사용할 수 없는 경우 연결된 전체 텍스트 인덱스가 다시 작성됩니다. 이 옵션은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스에 대해서만 사용할 수 있습니다.  
   
-         **Rebuild**  
+         **다시 작성**  
          향상된 새로운 단어 분리기를 사용하여 전체 텍스트 카탈로그를 다시 작성합니다. 인덱스를 다시 작성하면 시간이 오래 걸릴 수 있으며 업그레이드 후 CPU 및 메모리가 많이 필요할 수 있습니다.  
   
          **다시 설정**  
          전체 텍스트 카탈로그를 다시 설정합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 파일이 제거되지만 전체 텍스트 카탈로그 및 전체 텍스트 인덱스의 메타데이터는 유지됩니다. 업그레이드가 끝나면 모든 전체 텍스트 인덱스의 변경 내용 추적이 해제되고 탐색이 자동으로 시작되지 않습니다. 업그레이드가 완료된 후 전체 채우기를 수동으로 실행할 때까지 카탈로그가 비어 있습니다.  
   
-         전체 텍스트 업그레이드 옵션을 선택하는 방법은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
+         전체 텍스트 업그레이드 옵션을 선택하는 방법은[전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
   
         > [!NOTE]  
         >  [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)**upgrade_option** 동작을 사용하여 전체 텍스트 업그레이드 옵션을 설정할 수도 있습니다.  
@@ -74,9 +78,9 @@ caps.handback.revision: 19
   
 |속성|설명|함수|  
 |--------------|-----------------|--------------|  
-|**IsFullTextInstalled**|전체 텍스트 구성 요소가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 설치되어 있는지 여부를 나타냅니다.|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
+|**IsFullTextInstalled**|전체 텍스트 구성 요소가 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 설치되어 있는지 여부를 나타냅니다.|[FULLTEXTSERVICEPROPERTY](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)<br /><br /> [SERVERPROPERTY](../../t-sql/functions/serverproperty-transact-sql.md)|  
 ||||  
-|**LoadOSResources**|운영 체제 단어 분리기 및 필터가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 함께 등록되고 사용되는지 여부를 나타냅니다.|FULLTEXTSERVICEPROPERTY|  
+|**LoadOSResources**|운영 체제 단어 분리기 및 필터가 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스와 함께 등록되고 사용되는지 여부를 나타냅니다.|FULLTEXTSERVICEPROPERTY|  
 |**VerifySignature**|전체 텍스트 엔진이 서명된 이진 파일만 로드할지 여부를 지정합니다.|FULLTEXTSERVICEPROPERTY|  
   
 ##  <a name="monitor"></a> 전체 텍스트 검색 작업 모니터링  

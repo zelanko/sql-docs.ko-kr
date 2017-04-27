@@ -1,28 +1,32 @@
 ---
-title: "데이터베이스 속성(일반 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.databaseproperties.general.f1"
-  - "sql13.swb.databaseproperties.segments.f1"
+title: "데이터베이스 속성(일반 페이지) | Microsoft 문서"
+ms.custom: 
+ms.date: 10/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.databaseproperties.general.f1
+- sql13.swb.databaseproperties.segments.f1
 ms.assetid: 43080d43-8841-4807-baea-34a29b0fe663
 caps.latest.revision: 30
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 1ab703fcc2c29fae271b7484495cacf47bbcfd67
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 속성(일반 페이지)
+# <a name="database-properties-general-page"></a>데이터베이스 속성(일반 페이지)
   이 페이지를 사용하여 선택한 데이터베이스의 속성을 확인하거나 수정할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **마지막 데이터베이스 백업**  
  데이터베이스를 마지막으로 백업한 날짜를 표시합니다.  
   
@@ -53,10 +57,11 @@ caps.handback.revision: 28
  **데이터 정렬 이름**  
  데이터베이스에 사용된 데이터 정렬을 표시합니다. **옵션** 페이지에서 데이터 정렬을 변경할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [ALTER DATABASE&#40;Azure SQL 데이터베이스&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)   
+ [ALTER DATABASE(Azure SQL Database)](../../t-sql/statements/alter-database-azure-sql-database.md)   
  [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [DATABASEPROPERTYEX&#40;Transact-SQL&#41;](../../t-sql/functions/databasepropertyex-transact-sql.md)  
   
   
+

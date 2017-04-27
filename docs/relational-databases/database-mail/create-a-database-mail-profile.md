@@ -1,33 +1,37 @@
 ---
-title: "데이터베이스 메일 프로필 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 메일 [SQL Server], 공용 프로필"
-  - "프로필 [SQL Server], 데이터베이스 메일"
-  - "공개 프로필 [데이터베이스 메일]"
+title: "데이터베이스 메일 프로필 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], public profiles
+- profiles [SQL Server], Database Mail
+- public profiles [Database Mail]
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3dfeb39ffa1bba82e4f5782ef30621c8e57529de
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 메일 프로필 만들기
+# <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
   **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](https://msdn.microsoft.com/library/ms175100.aspx#Anchor_2)을 참조하세요.
   
--   **시작하기 전 주의 사항:** [필수 구성 요소](#Prerequisites), [보안](#Security)  
+-   **Before you Begin:** [Prerequisites](#Prerequisites), , [Security](#Security)  
   
--   **데이터베이스 메일 개인 프로필을 만드는 데 사용되는 도구:** [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **To Create a Database Mail private profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
--   **데이터베이스 메일 공용 프로필을 만드는 데 사용되는 도구:** [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
+-   **To Create a Database Mail public profile using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -81,7 +85,7 @@ caps.handback.revision: 34
   
     -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 프로필 구성을 완료합니다.  
   
-## Transact-SQL 사용  
+## <a name="using-transact-sql"></a>Transact-SQL 사용  
   
 ###  <a name="PrivateProfile"></a> 데이터베이스 메일 개인 프로필을 만들려면  
   
@@ -95,7 +99,7 @@ caps.handback.revision: 34
   
      *@description* = '*설명*'  
   
-     여기서 *@profile_name*은 프로필의 이름이고 *@description*은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
+     여기서 *@profile_name* 은 프로필의 이름이고 *@description* 은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
   
 -   각 계정에 대해 저장 프로시저 [sysmail_add_profileaccount_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
@@ -107,7 +111,7 @@ caps.handback.revision: 34
   
      *@sequence_number* = '*프로필 내 계정의 시퀀스 번호* '  
   
-     여기서 *@profile_name*은 프로필의 이름이고, *@account_name*은 프로필에 추가할 계정의 이름이며, *@sequence_number*는 프로필에서 계정이 사용되는 순서를 결정합니다.  
+     여기서 *@profile_name* 은 프로필의 이름이고 *@account_name* 은 프로필에 추가할 계정의 이름이며, *@sequence_number* 는 프로필에서 계정이 사용되는 순서를 결정합니다.  
   
 -   이 프로필을 사용하여 메일을 보내는 각 데이터베이스 역할 또는 사용자에게 프로필에 대한 액세스 권한을 부여합니다. 이렇게 하려면 저장 프로시저 [sysmail_add_principalprofile_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
@@ -119,7 +123,7 @@ caps.handback.revision: 34
   
      *@is_default* = '*기본 프로필 상태* '  
   
-     여기서 *@profile_name*은 프로필의 이름이고, *@principal_name*은 데이터베이스 사용자 또는 역할의 이름이며, *@is_default*는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
+     여기서 *@profile_name* 은 프로필의 이름이고 *@principal_name* 은 데이터베이스 사용자 또는 역할의 이름이며, *@is_default* 는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
   
  다음 예에서는 데이터베이스 메일 계정을 만들고, 데이터베이스 메일 개인 프로필을 만든 다음 프로필에 계정을 추가하며, **msdb** 데이터베이스의 **DBMailUsers** 데이터베이스 역할에 해당 프로필에 대한 액세스 권한을 부여합니다.  
   
@@ -163,7 +167,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@description* = '*설명*'  
   
-     여기서 *@profile_name*은 프로필의 이름이고 *@description*은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
+     여기서 *@profile_name* 은 프로필의 이름이고 *@description* 은 프로필에 대한 설명입니다. 이 매개 변수는 선택 사항입니다.  
   
 -   각 계정에 대해 저장 프로시저 [sysmail_add_profileaccount_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
@@ -175,7 +179,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@sequence_number* = '*프로필 내 계정의 시퀀스 번호* '  
   
-     여기서 *@profile_name*은 프로필의 이름이고, *@account_name*은 프로필에 추가할 계정의 이름이며, *@sequence_number*는 프로필에서 계정이 사용되는 순서를 결정합니다.  
+     여기서 *@profile_name* 은 프로필의 이름이고 *@account_name* 은 프로필에 추가할 계정의 이름이며, *@sequence_number* 는 프로필에서 계정이 사용되는 순서를 결정합니다.  
   
 -   공용 액세스를 허용하려면 저장 프로시저 [sysmail_add_principalprofile_sp&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)를 다음과 같이 실행합니다.  
   
@@ -187,7 +191,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
   
      *@is_default* = '*기본 프로필 상태* '  
   
-     여기서 *@profile_name*은 프로필의 이름이고, *@principal_name*은 이 프로필이 공용 프로필임을 나타내며, *@is_default*는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
+     여기서 *@profile_name* 은 프로필의 이름이고 *@principal_name* 은 이 프로필이 공용 프로필임을 나타내며, *@is_default* 는 이 프로필이 데이터베이스 사용자 또는 역할에 대한 기본값인지 여부를 결정합니다.  
   
  다음 예에서는 데이터베이스 메일 계정을 만들고, 데이터베이스 메일 개인 프로필을 만든 다음 프로필에 계정을 추가하며, 프로필에 대한 공개 액세스 권한을 부여합니다.  
   
@@ -224,3 +228,4 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
 ```  
   
   
+

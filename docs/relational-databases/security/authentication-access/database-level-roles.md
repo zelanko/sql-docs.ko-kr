@@ -1,57 +1,61 @@
 ---
-title: "데이터베이스 수준 역할 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.roleproperties.database.f1"
-  - "sql13.swb.roleproperties.object.f1"
-  - "SQL13.SWB.DBROLEPROPERTIES.GENERAL.F1"
-  - "sql13.swb.roleproperties.general.f1"
-helpviewer_keywords: 
-  - "db_denydatareader 역할"
-  - "사용자 [SQL Server], 데이터베이스 역할"
-  - "데이터베이스 수준 역할 [SQL Server]"
-  - "db_denydatawriter 역할"
-  - "역할 [SQL Server], 데이터베이스"
-  - "보안 주체 [SQL Server], 데이터베이스 수준"
-  - "db_backupoperator 역할"
-  - "자격 증명 [SQL Server], 역할"
-  - "db_accessadmin 역할"
-  - "스키마 [SQL Server], 역할"
-  - "사용 권한 [SQL Server], 역할"
-  - "데이터베이스 역할 [SQL Server], 나열됨"
-  - "db_datareader 역할"
-  - "db_ddladmin 역할"
-  - "db_datawriter 역할"
-  - "db_securityadmin 역할"
-  - "db_owner 역할"
-  - "데이터베이스 역할 [SQL Server]"
-  - "고정 데이터베이스 역할 [SQL Server]"
-  - "인증 [SQL Server], 역할"
-  - "그룹 [SQL Server], 역할"
+title: "데이터베이스 수준 역할 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 12/16/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.roleproperties.database.f1
+- sql13.swb.roleproperties.object.f1
+- SQL13.SWB.DBROLEPROPERTIES.GENERAL.F1
+- sql13.swb.roleproperties.general.f1
+helpviewer_keywords:
+- db_denydatareader role
+- users [SQL Server], database roles
+- database-level roles [SQL Server]
+- db_denydatawriter role
+- roles [SQL Server], database
+- principals [SQL Server], database-level
+- db_backupoperator role
+- credentials [SQL Server], roles
+- db_accessadmin role
+- schemas [SQL Server], roles
+- permissions [SQL Server], roles
+- database roles [SQL Server], listed
+- db_datareader role
+- db_ddladmin role
+- db_datawriter role
+- db_securityadmin role
+- db_owner role
+- database roles [SQL Server]
+- fixed database roles [SQL Server]
+- authentication [SQL Server], roles
+- groups [SQL Server], roles
 ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 caps.latest.revision: 49
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 수준 역할
+# <a name="database-level-roles"></a>데이터베이스 수준 역할
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스에서 사용 권한을 쉽게 관리하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 다른 보안 주체를 그룹핑하는 보안 주체인 다양한 *역할* 을 제공합니다. 역할은 ***Windows 운영 체제의*** 그룹 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 과 같습니다. 데이터베이스 수준 역할은 데이터베이스 측 사용 권한 범위에 속합니다.  
 
-데이터베이스 역할에 사용자를 추가하고 제거하려면 [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) 문의 `ADD MEMBER` 및 `DROP MEMBER` 옵션을 사용합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)]에서는 이 `ALTER ROLE` 사용을 지원하지 않습니다. 대신 기존의 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 및 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 프로시저를 사용합니다.
+데이터베이스 역할에 사용자를 추가하고 제거하려면 `ADD MEMBER` ALTER ROLE `DROP MEMBER` 문의 [및](../../../t-sql/statements/alter-role-transact-sql.md) 옵션을 사용합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 에서는 이 `ALTER ROLE`사용을 지원하지 않습니다. 대신 기존의 [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 및 [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) 프로시저를 사용합니다.
   
- 데이터베이스 수준 역할로는 데이터베이스에 미리 정의된 *고정 데이터베이스 역할*과 사용자가 만들 수 있는 *사용자 정의 데이터베이스 역할*의 두 가지 유형이 있습니다.  
+ 데이터베이스 수준 역할로는 데이터베이스에 미리 정의된 *고정 데이터베이스 역할* 과 사용자가 만들 수 있는 *사용자 정의 데이터베이스 역할* 의 두 가지 유형이 있습니다.  
   
  고정 데이터베이스 역할은 데이터베이스 수준에서 정의되며 각 데이터베이스에 존재합니다. **db_owner** 데이터베이스 역할의 멤버는 고정 데이터베이스 역할 멤버 자격을 관리할 수 있습니다. msdb 데이터베이스에는 몇 가지 특수한 용도의 데이터베이스 역할도 있습니다.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 49
 
 사용자 정의 데이터베이스 역할에 부여된 권한은 GRANT, DENY 및 REVOKE 문을 사용하여 사용자 지정할 수 있습니다. 자세한 내용은 [사용 권한(데이터베이스 엔진)](../../../relational-databases/security/permissions-database-engine.md)을 참조하세요.
 
-모든 사용 권한 목록을 보려면 [데이터베이스 엔진 권한](http://go.microsoft.com/fwlink/?LinkId=229142) 포스터를 참조하세요. (서버 수준 사용 권한은 데이터베이스 역할에 부여할 수 없습니다. 로그인 및 기타 서버 수준 보안 주체(예: 서버 역할)는 데이터베이스 역할에 추가할 수 없습니다. [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]의 서버 수준 보안을 위해서는 대신 [서버 역할](../../../relational-databases/security/authentication-access/server-level-roles.md)을 사용하세요. 서버 수준 사용 권한은 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]에서 역할을 통해 부여할 수 없습니다.
+모든 사용 권한 목록을 보려면 [데이터베이스 엔진 권한](http://go.microsoft.com/fwlink/?LinkId=229142) 포스터를 참조하세요. (서버 수준 사용 권한은 데이터베이스 역할에 부여할 수 없습니다. 로그인 및 기타 서버 수준 보안 주체(예: 서버 역할)는 데이터베이스 역할에 추가할 수 없습니다. [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]의 서버 수준 보안을 위해서는 대신 [서버 역할](../../../relational-databases/security/authentication-access/server-level-roles.md) 을 사용하세요. 서버 수준 사용 권한은 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]에서 역할을 통해 부여할 수 없습니다.
 
 ## <a name="fixed-database-roles"></a>고정 데이터베이스 역할
   
@@ -84,7 +88,7 @@ caps.handback.revision: 49
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
 
-## <a name="special-roles-for-includesssdsmdtokensssdsmdmd-and-includesssdwmdtokensssdwmdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 특수 역할
+## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 특수 역할
 
 이러한 데이터베이스 역할은 가상 master 데이터베이스에만 존재합니다. 해당 권한은 master에서 수행된 작업으로 제한됩니다. master에서 데이터베이스 사용자만 이러한 역할에 추가할 수 있습니다. 이 역할에는 로그인을 추가할 수 없습니다. 하지만 로그인을 기반으로 사용자를 만들어 해당 사용자를 역할에 추가할 수는 있습니다. 마스터에서 포함된 데이터베이스 사용자도 역할에 추가할 수 있습니다.
 
@@ -94,7 +98,7 @@ caps.handback.revision: 49
 **loginmanager** | 가상 master 데이터베이스에서 로그인을 만들고 삭제할 수 있습니다.  
 
 > [!NOTE]
-> 서버 수준 보안 주체 및 Azure Active Directory 관리자(구성된 경우)는 역할 멤버가 아니더라도 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 모든 권한이 있습니다. 자세한 내용은 [SQL Database 인증 및 권한 부여: 액세스 부여](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)를 참조하세요. 
+> 서버 수준 보안 주체 및 Azure Active Directory 관리자(구성된 경우)는 역할 멤버가 아니더라도 [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] 의 모든 권한이 있습니다. 자세한 내용은 [SQL Database 인증 및 권한 부여: 액세스 부여](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/)를 참조하세요. 
   
 ## <a name="msdb-roles"></a>msdb 역할  
  msdb 데이터베이스에는 다음 표에서 보여 주는 특수한 용도의 역할이 포함되어 있습니다.  
@@ -108,7 +112,7 @@ caps.handback.revision: 49
 |**dbm_monitor**|데이터베이스 미러링 모니터에서 첫 번째 데이터베이스를 등록하면 **msdb** 데이터베이스에서 만들어집니다. **dbm_monitor** 역할은 시스템 관리자가 사용자를 할당할 때까지 멤버를 가지지 않습니다.|  
   
 > [!IMPORTANT]  
->  **db_ssisadmin** 및 **dc_admin** 역할의 멤버는 해당 권한을 sysadmin으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 sysadmin 보안 컨텍스트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 **db_ssisadmin** 및 **dc_admin** 역할에 **sysadmin** 멤버만 추가합니다.  
+>  **db_ssisadmin** 및 **dc_admin** 역할의 멤버는 해당 권한을 sysadmin으로 승격할 수 있습니다. 이러한 권한 승격이 발생할 수 있는 것은 이러한 역할이 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 수정할 수 있고 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트의 sysadmin 보안 컨텍스트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 패키지를 실행할 수 있기 때문입니다. 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 **db_ssisadmin** 및 **dc_admin** 역할에 **sysadmin** 멤버만 추가합니다.  
 
 ## <a name="working-with-r-services"></a>R Services 작업  
 
@@ -139,7 +143,7 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
 |[sp_addrole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|현재 데이터베이스에 새 데이터베이스 역할을 만듭니다.|  
 |[sp_droprole&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|현재 데이터베이스에서 데이터베이스 역할을 제거합니다.|  
 |[sp_addrolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|현재 데이터베이스의 데이터베이스 역할에 데이터베이스 사용자, 데이터베이스 역할, Windows 로그인 또는 Windows 그룹을 추가합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)]를 제외한 모든 플랫폼에서 대신 `ALTER ROLE`을 사용해야 합니다.|  
-|[sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|현재 데이터베이스의 SQL Server 역할에서 보안 계정을 제거합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)]를 제외한 모든 플랫폼에서 대신 `ALTER ROLE`을 사용해야 합니다.|
+|[sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|현재 데이터베이스의 SQL Server 역할에서 보안 계정을 제거합니다. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] 를 제외한 모든 플랫폼에서 대신 `ALTER ROLE` 을 사용해야 합니다.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | 역할에 권한을 추가합니다.
 |[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | 역할에 대한 권한을 거부합니다.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | 이전에 부여하거나 거부한 사용 권한을 제거합니다.
@@ -160,3 +164,4 @@ R Services가 설치된 경우 추가 데이터베이스 역할을 패키지 관
  [sp_helprotect&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helprotect-transact-sql.md)  
   
   
+

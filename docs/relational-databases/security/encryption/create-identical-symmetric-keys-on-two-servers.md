@@ -1,24 +1,28 @@
 ---
-title: "두 서버에서 동일한 대칭 키 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "대칭 키 [SQL Server], 만들기"
+title: "두 서버에서 동일한 대칭 키 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- symmetric keys [SQL Server], creating
 ms.assetid: a13d0b21-a43b-43c0-9c22-7ba8f3d15e80
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4720ac6c86fd531ec4f8b40b14d476dd15511513
+ms.lasthandoff: 04/11/2017
+
 ---
-# 두 서버에서 동일한 대칭 키 만들기
+# <a name="create-identical-symmetric-keys-on-two-servers"></a>두 서버에서 동일한 대칭 키 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 서로 다른 두 서버에서 동일한 대칭 키를 만드는 방법에 대해 설명합니다. ciphertext를 해독하려면 암호화하는 데 사용된 키가 필요합니다. 단일 데이터베이스에서 암호화와 암호 해독이 모두 수행되는 경우 키가 데이터베이스에 저장되며 사용 권한에 따라 암호화와 암호 해독에 모두 사용할 수 있습니다. 그러나 암호화와 암호 해독이 개별 데이터베이스나 개별 서버에서 수행되는 경우 한 데이터베이스에 저장된 키를 다른 데이터베이스에서 사용할 수 없습니다.  
   
  **항목 내용**  
@@ -46,7 +50,7 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 서로 다른 두 서버에 동일한 대칭 키를 만들려면  
+#### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>서로 다른 두 서버에 동일한 대칭 키를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

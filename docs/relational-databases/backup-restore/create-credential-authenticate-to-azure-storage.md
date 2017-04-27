@@ -1,24 +1,28 @@
 ---
-title: "자격 증명 만들기 - Azure 저장소 인증 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2014"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.backuptourl.createcred.f1"
+title: "자격 증명 만들기 - Azure Storage 인증 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2014
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.backuptourl.createcred.f1
 ms.assetid: 0622619d-27c5-4ff0-83e5-cde31648c27a
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3bf85ebdf78e42466474e6c68a43219fbb546bd1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 자격 증명 만들기 - Azure 저장소 인증
+# <a name="create-credential---authenticate-to-azure-storage"></a>자격 증명 만들기 - Azure 저장소 인증
   **URL로 백업 - 자격 증명 만들기** 대화 상자를 사용하여 새 SQL 자격 증명을 만들 수 있습니다.  
   
  이 대화 상자를 사용하여 자격 증명을 만들 때 로컬 인증서 저장소에 추가된 Windows Azure 관리 인증서 또는 컴퓨터에 다운로드된 게시 프로필을 제공하여 구독 및 저장소 계정 정보의 유효성을 검사해야 합니다.  
@@ -26,7 +30,7 @@ caps.handback.revision: 7
  **SQL 자격 증명**  
  만들려는 SQL 자격 증명의 이름을 지정합니다.  
   
-## Windows Azure 자격 증명  
+## <a name="windows-azure-credentials"></a>Windows Azure 자격 증명  
  **관리 인증서**  
  이 옵션을 사용하여 Windows Azure의 관리 인증서와 일치하는 로컬 인증서 저장소의 인증서를 지정합니다. Windows Azure 관리 인증서에 대한 자세한 내용은 [Windows Azure용 관리 인증서 만들기 및 업로드](http://go.microsoft.com/fwlink/?LinkId=320781)를 참조하십시오.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 7
 > [!CAUTION]  
 >  SQL Server는 현재 프로필 버전 2.0 게시를 지원합니다. 게시 프로필의 지원되는 버전을 다운로드하려면 [게시 프로필 2.0 다운로드](http://go.microsoft.com/fwlink/?LinkId=396421)를 참조하세요.  
   
-## 저장소 계정  
+## <a name="storage-account"></a>저장소 계정  
  백업 파일을 저장하는 데 사용할 저장소 계정을 선택합니다.  
   
   

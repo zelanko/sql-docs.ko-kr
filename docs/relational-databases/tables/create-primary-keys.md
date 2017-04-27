@@ -1,24 +1,28 @@
 ---
-title: "기본 키 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "기본 키 [SQL Server], 만들기"
+title: "기본 키 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- primary keys [SQL Server], creating
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f799919f1b0cd1006c144eeb9afbc1d69322423b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 기본 키 만들기
+# <a name="create-primary-keys"></a>기본 키 만들기
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기본 키를 정의할 수 있습니다. 기본 키를 만들면 해당하는 고유 클러스터형 또는 비클러스터형 인덱스가 자동으로 만들어집니다.  
@@ -54,7 +58,7 @@ caps.handback.revision: 18
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 기본 키를 만들려면  
+#### <a name="to-create-a-primary-key"></a>기본 키를 만들려면  
   
 1.  개체 탐색기에서 UNIQUE 제약 조건을 추가하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **디자인**을 선택합니다.  
   
@@ -73,7 +77,7 @@ caps.handback.revision: 18
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 기존 테이블에 고유 키를 만들려면  
+#### <a name="to-create-a-primary-key-in-an-existing-table"></a>기존 테이블에 고유 키를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -90,7 +94,7 @@ caps.handback.revision: 18
   
     ```  
   
-#### 새 테이블에 고유 키를 만들려면  
+#### <a name="to-create-a-primary-key-in-a-new-table"></a>새 테이블에 고유 키를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -110,6 +114,6 @@ caps.handback.revision: 18
   
     ```  
   
-     자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [table_constraint&#40;Transact-SQL&#41;](../Topic/table_constraint%20\(Transact-SQL\).md)를 참조하세요.  
+     자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md), [CREATE TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) 및 [table_constraint&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)를 참조하세요.  
   
 ###  <a name="TsqlExample"></a>  

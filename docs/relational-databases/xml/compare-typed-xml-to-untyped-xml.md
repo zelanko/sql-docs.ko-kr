@@ -1,50 +1,54 @@
 ---
-title: "형식화된 XML과 형식화되지 않은 XML 비교 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "xml 데이터 형식 [SQL Server], 변수"
-  - "매개 변수 [SQL Server의 XML]"
-  - "패싯 [SQL Server의 XML]"
-  - "xml 데이터 형식 [SQL Server], 열"
-  - "형식화되지 않은 XML"
-  - "xml 데이터 형식 [SQL Server], 형식화된 xml"
-  - "XML [SQL Server], 형식화된"
-  - "변수 [SQL Server의 XM], 만들기"
-  - "xml 데이터 형식 [SQL Server], 형식화되지 않은 xml"
-  - "열 [SQL Server의 XM], 만들기"
-  - "형식화된 XML"
-  - "문서 모드 처리 [SQL Server]"
-  - "XML [SQL Server], 형식화되지 않은"
-  - "xml 데이터 형식 [SQL Server], 매개 변수"
+title: "형식화된 XML과 형식화되지 않은 XML 비교 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- xml data type [SQL Server], variables
+- parameters [XML in SQL Server]
+- facets [XML in SQL Server]
+- xml data type [SQL Server], columns
+- untyped XML
+- xml data type [SQL Server], typed xml
+- XML [SQL Server], typed
+- variables [XML in SQL Server], creating
+- xml data type [SQL Server], untyped xml
+- columns [XML in SQL Server], creating
+- typed XML
+- document mode processing [SQL Server]
+- XML [SQL Server], untyped
+- xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
 caps.latest.revision: 57
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27533bcc63a8df64597db4529b16a26f1fb5a009
+ms.lasthandoff: 04/11/2017
+
 ---
-# 형식화된 XML과 형식화되지 않은 XML 비교
+# <a name="compare-typed-xml-to-untyped-xml"></a>형식화된 XML과 형식화되지 않은 XML 비교
   **xml** 유형의 변수, 매개 변수 및 열을 만들 수 있습니다. 선택적으로 XML 스키마 컬렉션을 **xml** 유형의 변수, 매개 변수 또는 열과 연결할 수 있습니다. 이런 경우 **xml** 데이터 형식 인스턴스를 *형식화되었다*고 하고, 그 외의 경우에는 XML 인스턴스를 *형식화되지 않았다*고 합니다.  
   
-## 올바른 형식의 XML 및 xml 데이터 형식  
+## <a name="well-formed-xml-and-the-xml-data-type"></a>올바른 형식의 XML 및 xml 데이터 형식  
  **xml** 데이터 형식은 ISO 표준 **xml** 데이터 형식을 구현합니다. 따라서 올바른 형식의 XML 버전 1.0 문서를 저장할 수 있으며 텍스트 노드 및 형식화되지 않은 XML 열의 최상위 요소가 임의의 개수로 포함된 XML 내용 조각을 저장할 수 있습니다. 시스템은 데이터가 올바른 형식인지 확인하고, 열이 XML 스키마로 바인딩되도록 요구하지 않으며, 넓은 의미에서 올바른 형식이 아닌 데이터를 거부합니다. 형식화되지 않은 XML 변수 및 매개 변수도 여기에 해당됩니다.  
   
-## XML 스키마  
+## <a name="xml-schemas"></a>XML 스키마  
  XML 스키마는 다음을 제공합니다.  
   
 -   **유효성 검사 제약 조건** 형식화된 xml 인스턴스가 할당 또는 수정될 때마다 SQL Sever가 인스턴스의 유효성을 검사합니다.  
   
 -   **데이터 형식 정보** 스키마는 **xml** 데이터 형식 인스턴스에 있는 특성 및 요소의 유형에 대한 정보를 제공합니다. 유형 정보는 인스턴스에 포함되어 있는 값에 대해 형식화되지 않은 **xml**에 있을 수 있는 것보다 정확한 작업 의미를 제공합니다. 예를 들어 숫자 산술 연산은 문자열 값이 10진수 값에서 수행할 수 있습니다. 따라서 형식화된 XML 저장소는 형식화되지 않은 XML보다 더욱 간결하게 만들 수 있습니다.  
   
-## 형식화된 XML 또는 형식화되지 않은 XML 선택  
+## <a name="choosing-typed-or-untyped-xml"></a>형식화된 XML 또는 형식화되지 않은 XML 선택  
  다음 경우에 형식화되지 않은 **xml** 데이터 형식을 사용합니다.  
   
 -   XML 데이터에 대한 스키마가 없습니다.  
@@ -61,19 +65,19 @@ caps.handback.revision: 57
   
  형식화된 XML 열, 매개 변수 및 변수는 XML 문서 또는 내용을 저장할 수 있습니다. 그러나 선언 시 문서를 저장하는지 아니면 내용을 저장하는지에 따라 플래그를 지정해야 합니다. 또한 XML 스키마의 컬렉션을 제공해야 합니다. 각 XML 인스턴스에 정확히 하나의 최상위 요소가 있는 경우 DOCUMENT를 지정합니다. 그렇지 않으면 CONTENT를 사용합니다. 쿼리 컴파일러는 쿼리 컴파일 중에 형식 검사에서 DOCUMENT 플래그를 사용하여 단일 항목인 최상위 요소를 유추합니다.  
   
-## 형식화된 XML 만들기  
+## <a name="creating-typed-xml"></a>형식화된 XML 만들기  
  형식화된 **xml** 변수, 매개 변수 또는 열을 만들려면 먼저 [CREATE XML SCHEMA COLLECTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)에 따라 XML 스키마 컬렉션을 등록해야 합니다. 그런 다음 XML 스키마 컬렉션을 **xml** 데이터 형식의 변수, 매개 변수 또는 열과 연결할 수 있습니다.  
   
  다음 예에서는 XML 스키마 컬렉션 이름을 지정하기 위해 두 부분으로 된 명명 규칙이 사용됩니다. 첫 번째 부분은 스키마 이름이고 두 번째 부분은 XML 스키마 컬렉션 이름입니다.  
   
-### 예제: xml 유형 변수와 스키마 컬렉션 연결  
- 다음 예제에서는 **xml** 형식 변수를 만들고 이를 스키마 컬렉션에 연결합니다. 이 예에서 지정된 스키마 컬렉션은 이미 **AdventureWorks** 데이터베이스로 가져온 상태입니다.  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>예제: xml 유형 변수와 스키마 컬렉션 연결  
+ 다음 예제에서는**xml** 형식 변수를 만들고 이를 스키마 컬렉션에 연결합니다. 이 예에서 지정된 스키마 컬렉션은 이미 **AdventureWorks** 데이터베이스로 가져온 상태입니다.  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### 예제: xml 유형 열에 스키마 지정  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>예제: xml 유형 열에 스키마 지정  
  다음 예에서는 **xml** 유형 열이 포함된 테이블을 만들고 이 열에 대한 스키마를 지정합니다.  
   
 ```  
@@ -82,7 +86,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### 예제: xml 유형 매개 변수를 저장 프로시저에 전달  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>예제: xml 유형 매개 변수를 저장 프로시저에 전달  
  다음 예에서는 **xml** 유형 매개 변수를 저장 프로시저에 전달하고 해당 변수에 대한 스키마를 지정합니다.  
   
 ```  
@@ -104,7 +108,7 @@ AS
   
  데이터 형식 계층에서 **xml** 데이터 형식은 **sql_variant** 및 사용자 정의 형식 아래, 기본 제공 유형 위에 표시됩니다.  
   
-### 예제: 형식화된 xml 열을 제한하기 위한 패싯 지정  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>예제: 형식화된 xml 열을 제한하기 위한 패싯 지정  
  형식화된 **xml** 열의 경우 열에 저장된 각 인스턴스에 대해 최상위의 단일 요소만 허용하도록 열을 제한할 수 있습니다. 이렇게 하려면 다음 예에서와 같이 테이블을 만들 때 선택 항목인 `DOCUMENT` 패싯을 지정합니다.  
   
 ```  
@@ -134,13 +138,13 @@ GO -- Default
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  
 ```  
   
-## DTD(문서 유형 정의)  
+## <a name="document-type-definition-dtd"></a>DTD(문서 유형 정의)  
  **xml** 데이터 형식의 열, 변수 및 매개 변수는 DTD가 아닌 XML 스키마를 사용하여 형식화될 수 있습니다. 하지만 인라인 DTD는 형식화되지 않은 XML 및 형식화된 XML에 모두 사용하여 기본값을 제공하고 엔터티 참조를 해당 확장 형식으로 바꿀 수 있습니다.  
   
  타사 도구를 사용하여 DTD를 XML 스키마 문서로 변환하고 XML 스키마를 데이터베이스에 로드할 수 있습니다.  
   
-## SQL Server 2005에서 형식화된 XML 업그레이드  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에서는 XML 스키마 지원이 여러 가지로 확대되었습니다. 여기에는 lax 유효성 검사에 대한 지원, 향상된 **xs:date**, **xs:time** 및 **xs:dateTime** 인스턴스 데이터 처리, 목록 유형 및 공용 구조체 유형에 대한 추가 지원이 포함됩니다. 대부분의 경우 변경 사항이 업그레이드에 영향을 주지 않습니다. 그러나 **xs:date**, **xs:time** 또는 **xs:dateTime** 형식이나 하위 형식의 값을 사용할 수 있는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]의 XML 스키마 컬렉션을 사용한 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 그 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에 연결하면 다음 업그레이드 단계가 진행됩니다.  
+## <a name="upgrading-typed-xml-from-sql-server-2005"></a>SQL Server 2005에서 형식화된 XML 업그레이드  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 에서는 XML 스키마 지원이 여러 가지로 확대되었습니다. 여기에는 lax 유효성 검사에 대한 지원, 향상된 **xs:date**, **xs:time** 및 **xs:dateTime** 인스턴스 데이터 처리, 목록 유형 및 공용 구조체 유형에 대한 추가 지원이 포함됩니다. 대부분의 경우 변경 사항이 업그레이드에 영향을 주지 않습니다. 그러나 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] xs:date **,**xs:time **또는**xs:dateTime **형식이나 하위 형식의 값을 사용할 수 있는** 의 XML 스키마 컬렉션을 사용한 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 그 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 연결하면 다음 업그레이드 단계가 진행됩니다.  
   
 1.  모든 XML 열의 경우, 이 열이 **xs:anyType**, **xs:anySimpleType**, **xs:date** 또는 해당 하위 유형, **xs:time** 또는 해당 하위 유형, **xs:dateTime** 또는 해당 하위 유형으로 형식화되거나 이러한 유형이 포함된 공용 구조체나 목록 유형으로 형식화된 요소나 특성이 들어 있는 XML 스키마 컬렉션으로 형식화되면 다음과 같은 상황이 발생합니다.  
   
@@ -154,7 +158,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
  간단한 SQL SELECT 문을 계속 사용하면 음수 연도가 포함될 경우에도 전체 XML 데이터 형식을 검색할 수 있습니다. 음수 연도를 새로 지원되는 범위에 있는 연도로 대체하거나 해당 요소나 특성의 유형을 **xs:string**으로 변경하는 것이 좋습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 데이터 인스턴스 만들기](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [xml 데이터 형식 메서드](../../t-sql/xml/xml-data-type-methods.md)   
  [XML DML&#40;XML 데이터 수정 언어&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   

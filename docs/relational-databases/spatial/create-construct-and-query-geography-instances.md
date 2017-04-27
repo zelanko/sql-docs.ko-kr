@@ -1,26 +1,30 @@
 ---
-title: "geography 인스턴스 만들기, 구성 및 쿼리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-spatial"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "geography 데이터 형식 [SQL Server]"
-  - "geography 데이터 형식 [SQL Server]"
-  - "지리 데이터 형식 [SQL Server], 지리 데이터 형식 정보"
+title: "geography 인스턴스 만들기, 구성 및 쿼리 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-spatial
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- geography data type [SQL Server]
+- geodetic data type [SQL Server]
+- geography data type [SQL Server], about geography data type
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13e7519e11e23d73ff22a3f7d420d0fafc132abf
+ms.lasthandoff: 04/11/2017
+
 ---
-# geography 인스턴스 만들기, 구성 및 쿼리
+# <a name="create-construct-and-query-geography-instances"></a>geography 인스턴스 만들기, 구성 및 쿼리
   지리 공간 데이터 형식인 **geography**는 둥근 표면 좌표계로 데이터를 나타냅니다. 이 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 .NET CLR(공용 언어 런타임) 데이터 형식으로 구현됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** 데이터 형식은 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장합니다.  
   
  **geography** 형식은 각 데이터베이스에서 미리 정의되고 사용할 수 있습니다. 다른 시스템 제공 형식을 사용할 때와 동일한 방식으로 **geography** 형식의 테이블 열을 만들고 **geography** 데이터에 대한 작업을 수행할 수 있습니다.  
@@ -160,7 +164,7 @@ caps.handback.revision: 14
  [STEndpoint&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stendpoint-geography-data-type.md)  
   
 ###  <a name="dimension"></a> 차원  
- 비어 있지 않은 **geography** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point** 및 **MultiPoint**와 같은 0차원 **geography** 인스턴스에는 길이 또는 영역이 없습니다. **LineString, CircularString**, **CompoundCurve** 및 **MultiLineString**과 같은 1차원 개체에는 길이가 있습니다. **Polygon, CurvePolygon** 및 **MultiPolygon**과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection**에서는 해당 내용의 최대 차원을 보고합니다.  
+ 비어 있지 않은 **geography** 인스턴스는 0, 1 또는 2차원이 될 수 있습니다. **Point** 및 **MultiPoint** 와 같은 0차원 **geography**인스턴스에는 길이 또는 영역이 없습니다. **LineString, CircularString**, **CompoundCurve**및 **MultiLineString**과 같은 1차원 개체에는 길이가 있습니다. **Polygon, CurvePolygon**및 **MultiPolygon**과 같은 2차원 인스턴스에는 영역과 길이가 있습니다. 비어 있는 인스턴스에서는 -1차원을 보고하고 **GeometryCollection** 에서는 해당 내용의 최대 차원을 보고합니다.  
   
  **인스턴스의 차원을 반환하려면**  
  [STDimension&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stdimension-geography-data-type.md)  
@@ -224,14 +228,14 @@ caps.handback.revision: 14
  [STSymDifference&#40;geography 데이터 형식&#41;](../../t-sql/spatial-geography/stsymdifference-geography-data-type.md)  
   
 ##  <a name="supportedsrid"></a> 지원되는 SRID를 사용해야 하는 geography 인스턴스  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 EPSG 표준을 기준으로 하는 SRID를 지원합니다. 계산을 수행하거나 지리 공간 데이터가 있는 메서드를 사용할 경우 **geography** 인스턴스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 지원 SRID가 사용되어야 합니다. SRID는 **sys.spatial_reference_systems** 카탈로그 뷰에 표시된 SRID 중 하나와 일치해야 합니다. 앞에서 설명한 대로 각 타원면에는 특정 SRID가 지정되므로 **geography** 데이터 형식을 사용하여 공간 데이터에서 계산을 수행할 경우 데이터를 만드는 데 사용된 타원면에 따라 결과가 달라집니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 EPSG 표준을 기준으로 하는 SRID를 지원합니다. 계산을 수행하거나 지리 공간 데이터가 있는 메서드를 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geography **인스턴스에** 지원 SRID가 사용되어야 합니다. SRID는 **sys.spatial_reference_systems** 카탈로그 뷰에 표시된 SRID 중 하나와 일치해야 합니다. 앞에서 설명한 대로 각 타원면에는 특정 SRID가 지정되므로 **geography** 데이터 형식을 사용하여 공간 데이터에서 계산을 수행할 경우 데이터를 만드는 데 사용된 타원면에 따라 결과가 달라집니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 메서드를 사용할 경우 **geography** 인스턴스 간 관계를 확인할 수 있습니다. WGS 84(또는 SRID 4326)가 아닌 공간 참조 시스템의 데이터를 사용할 경우 지리 공간 데이터에 대해 특정 SRID를 결정해야 합니다.  
   
 ##  <a name="examples"></a> 예  
  다음 예에서는 geography 데이터를 추가하고 쿼리하는 방법을 보여 줍니다.  
   
--   첫 번째 예에서는 ID 열과 `geography` 열 `GeogCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geography` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString`의 `geography` 인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
+-   첫 번째 예에서는 ID 열과 `geography` 열 `GeogCol1`이 있는 테이블을 만듭니다. 세 번째 열에서는 `geography` 열을 OGC(Open Geospatial Consortium) WKT(Well-Known Text) 표현으로 렌더링하고 `STAsText()` 메서드를 사용합니다. 그러고 나면 두 개의 행이 삽입됩니다. 이 중 한 행에는 `LineString` 의 `geography`인스턴스가 들어 있고, 다른 행에는 `Polygon` 인스턴스가 들어 있습니다.  
   
     ```  
     IF OBJECT_ID ( 'dbo.SpatialTable', 'U' ) IS NOT NULL   
@@ -265,7 +269,7 @@ caps.handback.revision: 14
     SELECT @result.STAsText();  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   

@@ -1,27 +1,31 @@
 ---
-title: "읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "최선의 방법 [데이터베이스 엔진]"
+title: "디스크 입/출력 하위 시스템에서 읽기 다시 시도 문제 확인 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Best Practices [Database Engine]
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 caps.latest.revision: 8
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c40f4c7e64d8ee022618c2d5d6bc962b1a94b398
+ms.lasthandoff: 04/11/2017
+
 ---
-# 읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사
-  이 규칙은 이벤트 로그에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지 825를 검사합니다. 이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 디스크에서 데이터를 읽으려는 첫 번째 시도가 실패했음을 나타냅니다. 이 메시지는 디스크 I/O 하위 시스템에 중요한 문제가 있음을 나타냅니다. 이 메시지는 현재까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제를 나타내는 것은 아닙니다. 하지만 문제가 해결되지 않을 경우 디스크 문제로 인해 데이터 손실 또는 데이터베이스 손상이 발생할 수 있습니다.  
+# <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사
+  이 규칙은 이벤트 로그에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지 825를 검사합니다. 이 메시지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 디스크에서 데이터를 읽으려는 첫 번째 시도가 실패했음을 나타냅니다. 이 메시지는 디스크 I/O 하위 시스템에 중요한 문제가 있음을 나타냅니다. 이 메시지는 현재까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제를 나타내는 것은 아닙니다. 하지만 문제가 해결되지 않을 경우 디스크 문제로 인해 데이터 손실 또는 데이터베이스 손상이 발생할 수 있습니다.  
   
-## 최선의 구현 방법 권장 사항  
+## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  
  다음은 기본 하드웨어 문제를 확인하고 해결하는 데 도움이 되는 동작입니다.  
   
 -   이 메시지의 오류 로그 및 변수 텍스트를 검토하여 문제를 파악합니다.  
@@ -32,8 +36,8 @@ caps.handback.revision: 8
   
 -   최신 드라이버 업데이트에 대해 디스크 제조업체에 문의합니다.  
   
-## 참조 항목  
- [MSSQLSERVER_825](../Topic/MSSQLSERVER_825.md)  
+## <a name="for-more-information"></a>참조 항목  
+ [MSSQLSERVER_825](http://msdn.microsoft.com/library/f69f8214-5af1-4769-878b-117ad6eaff52)  
   
  [SQL Server I/O 기본 사항, 2장(SQL Server I/O Basics, Chapter 2)](http://go.microsoft.com/fwlink/?linkid=69370)  
   

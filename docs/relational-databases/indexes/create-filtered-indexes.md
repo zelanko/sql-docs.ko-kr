@@ -1,31 +1,35 @@
 ---
-title: "필터링된 인덱스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-indexes"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "필터링된 인덱스 [SQL Server], 필터링된 인덱스 정보"
-  - "인덱스 디자인 [SQL Server], 필터링된"
-  - "필터링된 인덱스 [SQL Server]"
-  - "비클러스터형 인덱스 [SQL Server], 필터링된"
-  - "인덱스 [SQL Server], 필터링된"
+title: "필터링된 인덱스 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-indexes
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filtered indexes [SQL Server], about filtered indexes
+- designing indexes [SQL Server], filtered
+- filtered indexes [SQL Server]
+- nonclustered indexes [SQL Server], filtered
+- indexes [SQL Server], filtered
 ms.assetid: 25e1fcc5-45d7-4c53-8c79-5493dfaa1c74
 caps.latest.revision: 73
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 73
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8d5ce869856d289b70b028ede2bc1009220a38
+ms.lasthandoff: 04/11/2017
+
 ---
-# 필터링된 인덱스 만들기
+# <a name="create-filtered-indexes"></a>필터링된 인덱스 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 필터링된 인덱스를 만드는 방법에 대해 설명합니다. 필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 및 저장소 비용을 줄일 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 필터링된 인덱스를 만드는 방법에 대해 설명합니다. 필터링된 인덱스는 특히 데이터의 잘 정의된 하위 집합에서 선택하는 쿼리를 처리하는 데 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 행을 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 전체 테이블 인덱스에 비해 쿼리 성능을 개선하고 인덱스 유지 관리 및 저장소 비용을 줄일 수 있습니다.  
   
  필터링된 인덱스는 전체 테이블 인덱스에 비해 다음과 같은 이점이 있습니다.  
   
@@ -100,7 +104,7 @@ caps.handback.revision: 73
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 필터링된 인덱스를 만들려면  
+#### <a name="to-create-a-filtered-index"></a>필터링된 인덱스를 만들려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 필터링된 인덱스를 만들 테이블이 포함된 데이터베이스를 확장합니다.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 73
   
 6.  **인덱스 키 열**아래에서 **추가...**를 클릭합니다.  
   
-7.  *table_name***에서 열 선택** 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
+7.  **table_name***에서 열 선택* 대화 상자에서 고유 인덱스에 추가할 테이블 열의 확인란을 선택합니다.  
   
 8.  **확인**을 클릭합니다.  
   
@@ -124,7 +128,7 @@ caps.handback.revision: 73
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 필터링된 인덱스를 만들려면  
+#### <a name="to-create-a-filtered-index"></a>필터링된 인덱스를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -166,7 +170,7 @@ caps.handback.revision: 73
     GO  
     ```  
   
-#### 필터링된 인덱스가 SQL 쿼리에 사용되도록 하려면  
+#### <a name="to-ensure-that-a-filtered-index-is-used-in-a-sql-query"></a>필터링된 인덱스가 SQL 쿼리에 사용되도록 하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -186,3 +190,4 @@ caps.handback.revision: 73
  자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
   
+

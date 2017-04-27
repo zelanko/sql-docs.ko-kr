@@ -1,22 +1,26 @@
 ---
-title: "데모: 메모리 내 OLTP 성능 향상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/19/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데모: 메모리 내 OLTP 성능 향상 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/19/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6a6edd38b5efb5b617308b9359eea8d255daeb8d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데모: 메모리 내 OLTP 성능 향상
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>데모: 메모리 내 OLTP 성능 향상
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   이 항목의 코드 예제는 메모리 액세스에 최적화된 테이블의 빠른 성능 향상을 보여줍니다. 이러한 성능 향상은 메모리 액세스에 최적화된 테이블의 데이터가 기존의 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 액세스될 때 두드러집니다. 이러한 성능 향상은 메모리 액세스에 최적화된 테이블의 데이터가 고유하게 컴파일된 저장 프로시저(NCSProc)에서 액세스될 때 더욱 커집니다.  
@@ -27,10 +31,10 @@ caps.handback.revision: 16
   
  메모리 액세스에 최적화된 테이블로 제공되는 성능 향상은 메모리 액세스에 최적화된 테이블의 데이터가 NCSProc에서 액세스될 때 완벽하게 실현됩니다.  
   
-## 코드 예  
+## <a name="code-example"></a>코드 예  
  다음 하위 섹션에서는 각 단계에 대해 설명합니다.  
   
-### 1a 단계: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="step-1a-prerequisite-if-using-includessnoversionincludesssnoversion-mdmd"></a>1a 단계: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  첫 번째 하위 섹션의 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행 중인 경우에 적용되고 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]에서 실행 중인 경우에는 적용되지 않습니다. 다음을 수행합니다.  
   
 1.  SQL Server Management Studio(SSMS.exe)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하세요. 또는 SSMS.exe와 유사한 도구를 사용해도 됩니다.  
@@ -56,7 +60,7 @@ USE imoltp;
 go  
 ```  
   
-### 1b 단계: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
+### <a name="step-1b-prerequisite-if-using-includesssdsfullincludessssdsfull-mdmd"></a>1b 단계: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
  이 하위 섹션은 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]를 사용하는 경우에만 적용됩니다. 다음을 수행합니다.  
   
 1.  코드 예제로 사용할 기존 테스트 데이터베이스를 결정합니다.  
@@ -65,7 +69,7 @@ go
   
  이를 위해 Azure 포털 사용 지침을 확인하려면 [Azure SQL 데이터베이스 시작](http://azure.microsoft.com/documentation/articles/sql-database-get-started)을 참조하십시오.  
   
-### 2단계: 메모리 액세스에 최적화된 테이블과 NCSProc 만들기  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>2단계: 메모리 액세스에 최적화된 테이블과 NCSProc 만들기  
  이 단계를 통해 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저(NCSProc)를 만들 수 있습니다. 다음을 수행합니다.  
   
 1.  SSMS.exe를 사용하여 새 데이터베이스에 연결합니다.  
@@ -115,7 +119,7 @@ END;
 go  
 ```  
   
-### 3단계: 코드 실행  
+### <a name="step-3-run-the-code"></a>3단계: 코드 실행  
  이제 메모리 액세스에 최적화된 테이블의 성능을 보여주는 쿼리를 실행합니다. 다음을 수행합니다.  
   
 1.  SSMS.exe를 사용하여 데이터베이스에서 다음 T-SQL을 실행합니다.  
@@ -193,7 +197,8 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   
+

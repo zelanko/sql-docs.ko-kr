@@ -1,32 +1,36 @@
 ---
-title: "작업 그룹 설정 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "작업 그룹 [SQL Server], 변경"
-  - "리소스 관리자, 작업 그룹 변경"
+title: "작업 그룹 설정 변경 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- workload groups [SQL Server], alter
+- Resource Governor, workload group alter
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7ee33f07052addb06e1dd2fe56f6153498fdbc9b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 작업 그룹 설정 변경
+# <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 작업 그룹 설정을 변경할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **작업 그룹에 대한 설정을 변경하려면:** [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL) 사용  
+-   **To change the settings for a workload group, using:**  [SQL Server Management Studio](#ChgWGProp), [Transact-SQL](#ChgWGTSQL)  
   
-## 시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  기본 작업 그룹 및 사용자 정의 작업 그룹의 설정을 변경할 수 있습니다.  
@@ -37,7 +41,7 @@ caps.handback.revision: 15
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  작업 그룹 설정을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="ChgWGProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 설정 변경  
@@ -51,7 +55,7 @@ caps.handback.revision: 15
   
 4.  변경할 행의 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-5.   **확인**을 클릭하여 변경 내용을 저장합니다.  
+5.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="ChgWGTSQL"></a> Transact-SQL을 사용하여 작업 그룹 설정 변경  
  **Transact-SQL을 사용하여 작업 그룹 설정을 변경하려면**  
@@ -60,7 +64,7 @@ caps.handback.revision: 15
   
 2.  ALTER RESOURCE GOVERNOR RECONFIGURE 문을 실행합니다.  
   
-### 예(Transact-SQL)  
+### <a name="example-transact-sql"></a>예(Transact-SQL)  
  다음 예에서는 `groupAdhoc`이라는 작업 그룹에 대한 최대 메모리 부여 비율 설정을 변경합니다.  
   
 ```  
@@ -71,7 +75,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [작업 그룹 만들기](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   

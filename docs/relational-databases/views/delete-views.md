@@ -1,28 +1,32 @@
 ---
-title: "뷰 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-views"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "뷰 삭제"
-  - "뷰 삭제"
-  - "뷰 [SQL Server], 삭제"
-  - "뷰 제거"
+title: "뷰 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-views
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dropping views
+- deleting views
+- views [SQL Server], deleting
+- removing views
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 caps.latest.revision: 15
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1c869b1e4ba7cc992687baa3236c96d25b0e63e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 뷰 삭제
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 뷰를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+# <a name="delete-views"></a>뷰 삭제
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 뷰를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **항목 내용**  
   
@@ -53,7 +57,7 @@ caps.handback.revision: 15
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스에서 뷰를 삭제하려면  
+#### <a name="to-delete-a-view-from-a-database"></a>데이터베이스에서 뷰를 삭제하려면  
   
 1.  **개체 탐색기**에서 삭제할 뷰가 포함된 데이터베이스를 확장한 다음 **뷰** 폴더를 확장합니다.  
   
@@ -62,11 +66,11 @@ caps.handback.revision: 15
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
     > [!IMPORTANT]  
-    >  **개체 삭제** 대화 상자에서 **종속성 표시**를 클릭하여 *view_name***종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 뷰에 종속된 모든 개체와 해당 뷰가 종속된 모든 개체가 표시됩니다.  
+    >  **개체 삭제** 대화 상자에서 **종속성 표시** 를 클릭하여 *view_name***종속성** 대화 상자를 엽니다. 이 대화 상자에는 해당 뷰에 종속된 모든 개체와 해당 뷰가 종속된 모든 개체가 표시됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스에서 뷰를 삭제하려면  
+#### <a name="to-delete-a-view-from-a-database"></a>데이터베이스에서 뷰를 삭제하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

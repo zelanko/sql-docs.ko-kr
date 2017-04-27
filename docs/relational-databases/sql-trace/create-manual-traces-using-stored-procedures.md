@@ -1,26 +1,30 @@
 ---
-title: "저장 프로시저를 사용하여 수동 추적 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "저장 프로시저를 사용하여 수동 추적 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f6f47fa2-7c17-41d4-9f69-9be144d56832
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1ee7ef604dc518fb4765ca5bd944c7fe01500035
+ms.lasthandoff: 04/11/2017
+
 ---
-# 저장 프로시저를 사용하여 수동 추적 만들기
+# <a name="create-manual-traces-using-stored-procedures"></a>저장 프로시저를 사용하여 수동 추적 만들기
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 인스턴스에 대한 추적을 만들 수 있는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]시스템 저장 프로시저를 제공합니다. 이 시스템 저장 프로시저를 사용자의 응용 프로그램에서 사용하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하지 않고 추적을 수동으로 만들 수 있습니다. 따라서 각 사용자 조직의 필요에 따라 사용자 지정 응용 프로그램을 쓸 수 있습니다.  
   
-## 섹션 내용  
- 다음 표에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스 추적을 위한 시스템 저장 프로시저를 나열합니다.  
+## <a name="in-this-section"></a>섹션 내용  
+ 다음 표에서는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스 추적을 위한 시스템 저장 프로시저를 나열합니다.  
   
 |저장 프로시저|수행된 태스크|  
 |----------------------|--------------------|  

@@ -1,32 +1,36 @@
 ---
-title: "작업 그룹 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 관리자, 작업 그룹 만들기"
-  - "작업 그룹 [SQL Server], 만들기"
+title: "작업 그룹 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Resource Governor, workload group create
+- workload groups [SQL Server], create
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 510473a5e51a911d4a642dcc78bc3a3408f65b87
+ms.lasthandoff: 04/11/2017
+
 ---
-# 작업 그룹 만들기
+# <a name="create-a-workload-group"></a>작업 그룹 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 작업 그룹을 만들 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **작업 그룹 만들기에 사용되는 도구:** [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
+-   **To create a workload group, using:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -37,7 +41,7 @@ caps.handback.revision: 15
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> 사용 권한  
+###  <a name="Permissions"></a> 권한  
  작업 그룹을 만들려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 만들기  
@@ -55,7 +59,7 @@ caps.handback.revision: 15
   
 6.  기본 설정에서 변경하려는 행의 다른 셀을 클릭 또는 두 번 클릭한 다음 새 값을 입력합니다.  
   
-7.   **확인**을 클릭하여 변경 내용을 저장합니다.  
+7.  **확인**을 클릭하여 변경 내용을 저장합니다.  
   
 ##  <a name="CreRPTSQL"></a> Transact-SQL을 사용하여 작업 그룹 만들기  
  **다음을 사용하여 작업 그룹을 만들기: [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
@@ -64,8 +68,8 @@ caps.handback.revision: 15
   
 2.  ALTER RESOURCE GOVERNOR RECONFIGURE 문을 실행합니다.  
   
-### 예(Transact-SQL)  
- 다음 예에서는 `groupAdhoc`이라는 리소스 풀에 있는 `poolAdhoc`이라는 작업 그룹을 만듭니다.  
+### <a name="example-transact-sql"></a>예(Transact-SQL)  
+ 다음 예에서는 `groupAdhoc` 이라는 리소스 풀에 있는 `poolAdhoc`이라는 작업 그룹을 만듭니다.  
   
 ```  
 CREATE WORKLOAD GROUP groupAdhoc  
@@ -75,7 +79,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   
@@ -86,3 +90,4 @@ GO
  [CREATE EXTERNAL RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)  
   
   
+

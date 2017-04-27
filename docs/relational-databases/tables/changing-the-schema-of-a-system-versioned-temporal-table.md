@@ -1,28 +1,32 @@
 ---
-title: "시스템 버전 임시 테이블의 스키마 변경 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/28/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "시스템 버전 임시 테이블의 스키마 변경 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/28/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9dbe5a21-9335-4f8b-85fd-9da83df79946
 caps.latest.revision: 13
-author: "CarlRabeler"
-ms.author: "carlrab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: CarlRabeler
+ms.author: carlrab
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 97eadf63fb8332ef55d8ccb699241a5e5f0e19d0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 시스템 버전 임시 테이블의 스키마 변경
+# <a name="changing-the-schema-of-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블의 스키마 변경
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   **ALTER TABLE** 문을 사용하여 열을 추가, 변경 또는 제거합니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음은 임시 테이블의 스키마를 변경하는 몇 가지 예입니다.  
   
 ```  
@@ -52,7 +56,7 @@ ALTER TABLE dbo.Department
   
 ```  
   
-### 중요한 주의 사항  
+### <a name="important-remarks"></a>중요한 주의 사항  
   
 -   임시 테이블의 스키마를 변경하려면 현재 및 기록 테이블에 대한**CONTROL** 권한이 필요합니다.  
   
@@ -60,7 +64,7 @@ ALTER TABLE dbo.Department
   
 -   지정된 스키마 변경은 적절한 방식으로 기록 테이블에 전파됩니다(변경 유형에 따라).  
   
--   Null을 허용하지 않는 열을 추가하거나 Null을 허용하지 않게 되도록 기존 열을 변경하는 경우 기존 행에 대한 기본값을 지정해야 합니다. 시스템은 동일한 값으로 추가 기본값을 생성하고 기록 테이블에 적용합니다. **DEFAULT**를 비어 있지 않은 테이블에 추가하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 이외의 모든 버전에서 데이터 작업의 크기입니다(메타데이터 작업임).  
+-   Null을 허용하지 않는 열을 추가하거나 Null을 허용하지 않게 되도록 기존 열을 변경하는 경우 기존 행에 대한 기본값을 지정해야 합니다. 시스템은 동일한 값으로 추가 기본값을 생성하고 기록 테이블에 적용합니다. **DEFAULT** 를 비어 있지 않은 테이블에 추가하는 것은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition 이외의 모든 버전에서 데이터 작업의 크기입니다(메타데이터 작업임).  
   
 -   기본값으로 varchar(max), nvarchar(max), varbinary(max) 또는 XML 열을 추가하는 것은 모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 업데이트 데이터 작업이 됩니다.  
   
@@ -68,7 +72,7 @@ ALTER TABLE dbo.Department
   
 -   새 NOT NULL 열로 테이블을 확장한 후 해당 테이블의 모든 열은 시스템에서 자동으로 채워지므로 기록 테이블에 기본 제약 조건을 삭제하는 것이 좋습니다.  
   
--   시스템 버전 관리 임시 테이블에서는 Online 옵션 (**WITH (ONLINE = ON**)이 **ALTER TABLE ALTER COLUMN**에 영향을 주지 않습니다. ONLINE 옵션에 지정된 값과 관계없이 열 변경은 온라인으로 수행되지 않습니다.  
+-   시스템 버전 관리 임시 테이블에서는 Online 옵션 (**WITH (ONLINE = ON**)이 **ALTER TABLE ALTER COLUMN** 에 영향을 주지 않습니다. ONLINE 옵션에 지정된 값과 관계없이 열 변경은 온라인으로 수행되지 않습니다.  
   
 -   **ALTER COLUMN** 을(를) 사용하여 기간 열에 대한 **IsHidden** 속성을 변경할 수 있습니다.  
   
@@ -80,11 +84,11 @@ ALTER TABLE dbo.Department
   
     -   기록 테이블이 **DATA_COMPRESSION = PAGE** 또는 **DATA_COMPRESSION = ROW**로 설정된 경우 **SPARSE** 열 추가 또는 **SPARSE**가 되도록 기존 열 변경은 기록 테이블에 대한 기본값입니다.  
   
-    -   **COLUMN_SET** 추가  
+    -   **COLUMN_SET**추가  
   
-    -    **ROWGUIDCOL** 열 추가 또는 **ROWGUIDCOL**이(가) 되도록 기존 열 변경  
+    -   **ROWGUIDCOL** 열 추가 또는 **ROWGUIDCOL**이(가) 되도록 기존 열 변경  
   
-         다음 예제에서는 설정 **SYSTEM_VERSIONING = OFF**가 여전히 필요한 스키마 변경을 보여 줍니다(**IDENTITY** 열 추가).   
+         다음 예제에서는 설정 **SYSTEM_VERSIONING = OFF** 가 여전히 필요한 스키마 변경을 보여 줍니다( **IDENTITY** 열 추가).   
         이 예제는 데이터 일관성 검사를 비활성화합니다. 동시 데이터 변경이 발생할 수 없으므로 트랜잭션 내에서 스키마 변경을 수행하는 경우 이 검사는 필요하지 않습니다.  
   
         ```  
@@ -101,10 +105,10 @@ ALTER TABLE dbo.Department
   
         ```  
   
-## 이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
- 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)으로 보내 주세요.  
+## <a name="did-this-article-help-you-were-listening"></a>이 문서가 도움이 되었나요? 여러분의 의견을 환영합니다.  
+ 어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Changing%20the%20Schema%20of%20a%20System-Versioned%20Temporal%20Table%20page)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   
  [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
@@ -116,3 +120,4 @@ ALTER TABLE dbo.Department
  [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
   
+

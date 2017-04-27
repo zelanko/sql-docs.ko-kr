@@ -1,33 +1,37 @@
 ---
-title: "Lock:Acquired 이벤트 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Acquired 이벤트 클래스"
+title: "Lock:Acquired 이벤트 클래스 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Acquired event class
 ms.assetid: a6b1df2a-06ed-4fc3-8a84-f0becd5810d5
 caps.latest.revision: 37
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4aa4b166949b268fedf910fd4c9a7692e339d380
+ms.lasthandoff: 04/11/2017
+
 ---
-# Lock:Acquired 이벤트 클래스
+# <a name="lockacquired-event-class"></a>Lock:Acquired 이벤트 클래스
   Lock:Acquiredevent 클래스는 데이터 페이지와 같은 리소스에 대한 잠금 획득이 이루어졌음을 나타냅니다.  
   
  Lock:Acquired 및 Lock:Released 이벤트 클래스를 사용하여 개체 잠금 시기, 사용하는 잠금 유형 및 잠금 보유 기간을 모니터링할 수 있습니다. 장기간 보유되는 잠금은 경합 문제를 발생시킬 수 있으므로 면밀히 관찰해야 합니다. 예를 들어 응용 프로그램에서 테이블의 행에 대한 잠금을 획득하고 사용자 입력을 기다릴 수 있습니다. 사용자 입력 대기 시간이 길어지는 경우 이러한 잠금으로 인해 다른 사용자가 차단될 수 있습니다. 이런 경우 필요할 경우에만 잠금 요청을 하고 잠금이 획득된 경우 사용자 입력이 필요하지 않도록 응용 프로그램을 다시 디자인해야 합니다.  
   
-## Lock:Acquired 이벤트 클래스 데이터 열  
+## <a name="lockacquired-event-class-data-columns"></a>Lock:Acquired 이벤트 클래스 데이터 열  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|**nvarchar**| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
+|ApplicationName|**nvarchar**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 응용 프로그램에서 전달한 값으로 채워집니다.|10|예|  
 |BigintData1|**bigint**|잠금 리소스가 분할된 경우 파티션 ID입니다.|52|예|  
 |BinaryData|**image**|잠금 리소스 식별자입니다.|2|예|  
 |ClientProcessID|**int**|클라이언트 응용 프로그램이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
@@ -50,14 +54,14 @@ caps.handback.revision: 37
 |OwnerID|**int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|예|  
 |RequestID|**int**|문을 포함하는 요청의 ID입니다.|49|예|  
 |ServerName|**nvarchar**|추적 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|26|아니요|  
-|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
+|SessionLoginName|**nvarchar**|세션을 시작한 사용자의 로그인 이름입니다. 예를 들어 Login1을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하고 Login2로 문을 실행할 경우 SessionLoginName은 Login1을 표시하고 LoginName은 Login2를 표시합니다. 이 열은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Windows 로그인을 모두 표시합니다.|64|예|  
 |SPID|**int**|이벤트가 발생한 세션의 ID입니다.|12|예|  
 |StartTime|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |TextData|**ntext**|획득한 잠금 유형에 따라 달라지는 텍스트 값입니다. 이 값은 sys.dm_tran_locks의 resource_description 열과 같습니다.|1|예|  
 |TransactionID|**bigint**|시스템이 할당한 트랜잭션의 ID입니다.|4|예|  
 |형식|**int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|예|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Lock:Released 이벤트 클래스](../../relational-databases/event-classes/lock-released-event-class.md)   
  [sp_trace_setevent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  

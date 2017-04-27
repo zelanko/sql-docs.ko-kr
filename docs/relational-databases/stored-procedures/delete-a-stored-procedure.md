@@ -1,32 +1,36 @@
 ---
-title: "저장 프로시저 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-stored-Procs"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "저장 프로시저 제거"
-  - "저장 프로시저 [SQL Server], 삭제"
-  - "저장 프로시저 삭제"
+title: "저장 프로시저 삭제 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-stored-Procs
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing stored procedures
+- stored procedures [SQL Server], deleting
+- deleting stored procedures
 ms.assetid: 232dbf4d-392a-406f-af3a-579518cd8e46
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d9f9d65d2521299d34188897fbbf5675b5c9eea4
+ms.lasthandoff: 04/11/2017
+
 ---
-# 저장 프로시저 삭제
+# <a name="delete-a-stored-procedure"></a>저장 프로시저 삭제
     
-##  <a name="Top"></a> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 저장된 프로시저를 삭제하는 방법에 대해 설명합니다.  
+##  <a name="Top"></a>[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에 저장된 프로시저를 삭제하는 방법에 대해 설명합니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [보안](#Security)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  
   
--   **프로시저 삭제에 사용되는 도구:** [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **To delete a procedure, using:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -89,7 +93,7 @@ caps.handback.revision: 26
   
 6.  모든 종속 개체와 스크립트에서 참조 프로시저를 제거합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [저장 프로시저 만들기](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [저장 프로시저 수정](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [저장 프로시저 이름 바꾸기](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   
