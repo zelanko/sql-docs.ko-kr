@@ -1,27 +1,31 @@
 ---
-title: "FailureConditionLevel 속성 설정 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "FailureConditionLevel 속성 설정 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 513dd179-9a46-46da-9fdd-7632cf6d0816
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 46e7f2aca995373d14ce0096a4dba4204cc69ece
+ms.lasthandoff: 04/11/2017
+
 ---
-# FailureConditionLevel 속성 설정 구성
+# <a name="configure-failureconditionlevel-property-settings"></a>FailureConditionLevel 속성 설정 구성
   FailureConditionLevel 속성을 사용하여 Always On FCI(장애 조치(Failover) 클러스터 인스턴스)가 장애 조치(Failover)되거나 다시 시작되는 조건을 설정할 수 있습니다. 이 속성에 대한 변경 내용은 WSFC(Windows Server 장애 조치(Failover) 클러스터) 서비스 또는 FCI 리소스를 다시 시작할 필요 없이 즉시 적용됩니다.  
   
--   **시작하기 전 주의 사항:**  [FailureConditionLevel 속성 설정](#Restrictions), [보안](#Security)  
+-   **Before you begin:**  [FailureConditionLevel Property Settings](#Restrictions), [Security](#Security)  
   
--   **FailureConditionLevel 속성 설정에 사용되는 도구:** [PowerShell](#PowerShellProcedure), [장애 조치(Failover) 클러스터 관리자](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **To configure the FailureConditionLevel property settings using,** [PowerShell](#PowerShellProcedure), [Failover Cluster Manager](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -35,7 +39,7 @@ caps.handback.revision: 29
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-##### FailureConditionLevel 설정을 구성하려면  
+##### <a name="to-configure-failureconditionlevel-settings"></a>FailureConditionLevel 설정을 구성하려면  
   
 1.  **관리자 권한으로 실행**을 통해 승격된 Windows PowerShell을 시작합니다.  
   
@@ -46,7 +50,7 @@ caps.handback.revision: 29
 > [!TIP]  
 >  새 PowerShell 창을 열 때마다 **FailoverClusters** 모듈을 가져와야 합니다.  
   
-### 예제(PowerShell)  
+### <a name="example-powershell"></a>예제(PowerShell)  
  다음 예에서는 심각한 서버 오류 시 장애 조치(failover) 또는 다시 시작이 수행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 리소스 "`SQL Server (INST1)`"의 FailureConditionLevel 설정을 변경합니다.  
   
 ```powershell  
@@ -57,9 +61,9 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 ```  
   
-### 관련 내용(PowerShell)  
+### <a name="related-content-powershell"></a>관련 내용(PowerShell)  
   
--   [클러스터링 및 고가용성](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx)(장애 조치(failover) 클러스터링 및 네트워크 부하 분산 팀 블로그)  
+-   [클러스터링 및 고가용성](http://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (장애 조치(failover) 클러스터링 및 네트워크 부하 분산 팀 블로그)  
   
 -   [장애 조치(Failover) 클러스터에서 Windows PowerShell 시작](http://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -72,7 +76,7 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
   
 2.  **서비스 및 응용 프로그램** 을 확장하고 FCI를 선택합니다.  
   
-3.  **기타 리소스**에서 **SQL Server 리소스 **를 마우스 오른쪽 단추로 클릭한 다음 메뉴에서 **속성**을 선택합니다. SQL Server 리소스 **속성** 대화 상자가 열립니다.  
+3.  **기타 리소스** 에서 **SQL Server 리소스**를 마우스 오른쪽 단추로 클릭한 다음 메뉴에서 **속성** 을 선택합니다. SQL Server 리소스 **속성** 대화 상자가 열립니다.  
   
 4.  **속성** 탭을 선택하고 **FaliureConditionLevel** 속성에 대해 원하는 값을 입력한 다음 **확인** 을 클릭하여 변경 내용을 적용합니다.  
   
@@ -88,8 +92,8 @@ Get-ClusterResource $fci | Set-ClusterParameter FailureConditionLevel 3
 ALTER SERVER CONFIGURATION SET FAILOVER CLUSTER PROPERTY FailureConditionLevel = 0;  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sp_server_diagnostics&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md)   
- [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
+ [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

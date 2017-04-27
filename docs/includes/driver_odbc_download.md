@@ -1,0 +1,1 @@
+![다운로드](../ssdt/media/download.png)[ODBC 드라이버 다운로드](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/10/20/odbc-driver-13-0-for-linux-released/)

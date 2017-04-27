@@ -1,0 +1,7 @@
+# [SQL Server 릴리스 정보](sql-server-release-notes.md)
+# [SQL Server 2008 R2 SP2 릴리스 정보](sql-server-2008-r2-sp2-release-notes.md)
+# [SQL Server 2014 릴리스 정보](sql-server-2014-release-notes.md)
+# [SQL Server 2012 릴리스 정보](sql-server-2012-release-notes.md)
+# [SQL Server 2012 SP1 릴리스 정보](sql-server-2012-sp1-release-notes.md)
+# [SQL Server 2012 SP2 릴리스 정보](sql-server-2012-sp2-release-notes.md)
+# [Microsoft SQL Server](microsoft-sql-server.md)

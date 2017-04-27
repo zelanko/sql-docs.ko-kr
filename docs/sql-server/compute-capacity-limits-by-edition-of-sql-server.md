@@ -1,26 +1,30 @@
 ---
-title: "Compute Capacity Limits by Edition of SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "processors [SQL Server], supported"
-  - "number of processors supported"
-  - "maximum number of processors supported"
+title: "SQL Server의 버전별 계산 용량 제한 | Microsoft 문서"
+ms.custom: 
+ms.date: 06/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- processors [SQL Server], supported
+- number of processors supported
+- maximum number of processors supported
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 60
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 2f32d9ca838e004676a3cccffbe62bbbc0e46a3f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Compute Capacity Limits by Edition of SQL Server
+# <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 의 서로 다른 버전별 계산 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
   
  ![계산 용량 제한에 매핑](../sql-server/media/compute-capacity-limits.gif "계산 용량 제한에 매핑")  
@@ -75,9 +79,9 @@ caps.handback.revision: 60
   
 2.  운영 체제에서 보고한 최대 코어 수  
   
- 이러한 제한은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 단일 인스턴스에 적용됩니다. 또한 단일 인스턴스에서 사용할 최대 계산 용량을 나타냅니다. 한편, 이러한 제한은 인스턴스가 배포될 수 있는 서버를 제한하지 않습니다. 실제로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 인스턴스를 동일한 실제 서버에 배포하는 것은 아래의 용량 제한보다 더 많은 소켓 및/또는 코어가 있는 실제 서버의 계산 용량을 사용할 수 있는 효율적인 방법입니다.  
+ 이러한 제한은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 단일 인스턴스에 적용됩니다. 또한 단일 인스턴스에서 사용할 최대 계산 용량을 나타냅니다. 한편, 이러한 제한은 인스턴스가 배포될 수 있는 서버를 제한하지 않습니다. 실제로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 여러 인스턴스를 동일한 실제 서버에 배포하는 것은 아래의 용량 제한보다 더 많은 소켓 및/또는 코어가 있는 실제 서버의 계산 용량을 사용할 수 있는 효율적인 방법입니다.  
   
- 다음 표에서는 각 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 버전의 단일 인스턴스에 대한 계산 용량 제한을 보여 줍니다.  
+ 다음 표에서는 각 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전의 단일 인스턴스에 대한 계산 용량 제한을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전|단일 인스턴스에서 사용되는 최대 계산 용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|단일 인스턴스에서 사용되는 최대 계산 용량(AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
@@ -91,10 +95,12 @@ caps.handback.revision: 60
   
  가상 프로세서당 성능이 중요한 경우 하이퍼 스레딩을 해제하려 할 수 있습니다. BIOS 설정 중에 프로세서의 BIOS 설정을 사용하여 하이퍼 스레딩을 설정하거나 해제할 수 있지만, 대부분의 경우 이는 서버에서 실행되는 전체 작업에 영향을 주는 서버 범위 작업입니다. 이는 물리적 운영 체제 환경에서 하이퍼 스레딩 성능을 향상시킬 수 있는 가상화된 환경에서 실행되는 별도의 작업을 제안할 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016 버전 및 구성 요소](../sql-server/editions-and-components-of-sql-server-2016.md)   
- [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+ [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md)   
- [SQL Server 2016 빠른 시작 설치](../Topic/Quick-Start%20Installation%20of%20SQL%20Server%202016.md)  
+ [SQL Server 2016 빠른 시작 설치](http://msdn.microsoft.com/library/672afac9-364d-4946-ad5d-8a2d89cf8d81)  
   
   
+
+

@@ -1,0 +1,1 @@
+![다운로드](../ssdt/media/download.png)[pyodbc Python 드라이버 설치](../connect/python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md) ![다운로드](../ssdt/media/download.png)[pymssql Python 드라이버 설치](../connect/python/pymssql/step-1-configure-development-environment-for-pymssql-python-development.md) 

@@ -1,33 +1,37 @@
 ---
-title: "장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "IP 주소 수정"
-  - "장애 조치(failover) 클러스터링 [SQL Server], IP 주소"
-  - "IP 주소 [SQL Server]"
-  - "클러스터 [SQL Server], IP 주소"
+title: "장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying IP addresses
+- failover clustering [SQL Server], IP addresses
+- IP addresses [SQL Server]
+- clusters [SQL Server], IP addresses
 ms.assetid: b685f400-cbfe-4c5d-a070-227a1123dae4
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: d30ca9ae2885d25bd0b62a17501ae7dfe94f26e9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
+# <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>장애 조치(failover) 클러스터 인스턴스의 IP 주소 변경
   이 항목에서는 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 Always On 장애 조치(failover) 클러스터 인스턴스(FCI)에 IP 주소 리소스를 변경하는 방법에 대해 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  
   
--   **시작하기 전 주의 사항:**  [보안](#Security)  
+-   **Before you begin:**  [Security](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 시작하기 전에 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 [장애 조치(failover) 클러스터링을 설치하기 전에](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md) 항목을 검토하세요.  
+ 시작하기 전에 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서의 [장애 조치(failover) 클러스터링을 설치하기 전에](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)항목을 검토하세요.  
   
 ###  <a name="Security"></a> 보안  
   

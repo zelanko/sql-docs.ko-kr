@@ -1,30 +1,34 @@
 ---
-title: "SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "노드 추가"
-  - "노드 [장애 조치(Failover) 클러스터링], 제거"
-  - "노드 [장애 조치(Failover) 클러스터링], 추가"
-  - "장애 조치(failover) 클러스터링 [SQL Server], 노드"
-  - "노드 삭제"
-  - "클러스터 유지 관리 [SQL Server]"
-  - "노드 제거"
+title: "SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding nodes
+- nodes [Faillover Clustering], removing
+- nodes [Faillover Clustering], adding
+- failover clustering [SQL Server], nodes
+- deleting nodes
+- cluster maintenance [SQL Server]
+- removing nodes
 ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0d61da5ddef04a1edacf6f5b8bf98bb04b53fa5a
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치)
+# <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치)
   이 절차에 따라 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에서 노드를 관리할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치 클러스터를 업데이트하거나 제거하려면 장애 조치 클러스터의 모든 노드에 서비스로 로그인할 수 있는 권한을 가진 로컬 관리자여야 합니다. 로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
@@ -44,11 +48,11 @@ caps.handback.revision: 49
   
 ##  <a name="Add"></a> 노드 추가  
   
-#### 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면  
+#### <a name="to-add-a-node-to-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더로 이동한 다음 Setup.exe를 두 번 클릭합니다.  
   
-2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 기존 장애 조치(failover) 클러스터 인스턴스에 노드를 추가하려면 왼쪽 창에서 **설치**를 클릭합니다. 그런 다음 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터에 노드 추가**를 선택합니다.  
+2.  설치 마법사가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 센터를 시작합니다. 기존 장애 조치(failover) 클러스터 인스턴스에 노드를 추가하려면 왼쪽 창에서 **설치**를 클릭합니다. 그런 다음 **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터에 노드 추가**를 선택합니다.  
   
 3.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 49
   
 8.  클러스터 노드 구성 페이지에서 드롭다운 상자를 사용하여 이 설치 작업 중에 수정할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스의 이름을 지정합니다.  
   
-9. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다. 장애 조치(Failover) 클러스터 설치의 경우 계정 이름 및 시작 유형 정보는 액티브 노드에 대해 지정된 설정에 따라 이 페이지에 미리 채워집니다. 암호는 각 계정별로 지정해야 합니다. 자세한 내용은 [서버 구성 - 서비스 계정](../Topic/Server%20Configuration%20-%20Service%20Accounts.md) 및 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
+9. 서버 구성 - 서비스 계정 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스에 대한 로그인 계정을 지정합니다. 이 페이지에 구성된 실제 서비스는 사용자가 설치하도록 선택한 기능에 따라 달라집니다. 장애 조치(Failover) 클러스터 설치의 경우 계정 이름 및 시작 유형 정보는 액티브 노드에 대해 지정된 설정에 따라 이 페이지에 미리 채워집니다. 암호는 각 계정별로 지정해야 합니다. 자세한 내용은 [서버 구성 - 서비스 계정](http://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) 및 [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)을 참조하세요.  
   
      **보안 정보** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -84,7 +88,7 @@ caps.handback.revision: 49
   
 ##  <a name="Remove"></a> 노드 제거  
   
-#### 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 노드를 제거하려면  
+#### <a name="to-remove-a-node-from-an-existing-includessnoversionincludesssnoversion-mdmd-failover-cluster"></a>기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에서 노드를 제거하려면  
   
 1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더로 이동한 다음 Setup.exe를 두 번 클릭합니다.  
   
@@ -102,7 +106,7 @@ caps.handback.revision: 49
   
 8.  노드 제거 작업 및 기타 중요한 참고 사항에 대한 요약 로그 파일을 볼 수 있는 링크가 완료 페이지에 제공됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 노드 제거 작업을 완료하려면 **닫기**를 클릭합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  
   
   

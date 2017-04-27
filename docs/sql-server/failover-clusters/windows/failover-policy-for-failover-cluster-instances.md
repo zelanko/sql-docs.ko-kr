@@ -1,24 +1,28 @@
 ---
-title: "장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "유연한 장애 조치(Failover) 정책"
+title: "장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- flexible failover policy
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 caps.latest.revision: 45
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
+ms.lasthandoff: 04/11/2017
+
 ---
-# 장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
+# <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(failover) 클러스터 인스턴스(FCI)에서는 한 번에 하나의 노드에서만 WSFC(Windows Server Failover Cluster) 클러스터 리소스 그룹을 소유할 수 있습니다. 클라이언트 요청은 FCI에서 이 노드를 통해 제공됩니다. 오류가 발생하여 다시 시작이 실패하면 그룹 소유권이 FCI의 다른 WSFC 노드로 이동합니다. 이 프로세스를 장애 조치(Failover)라고 합니다. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 는 오류 검색의 안정성이 향상되었고 유연한 장애 조치(failover) 정책을 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI는 장애 조치(failover) 탐지에 대한 기본 WSFC 서비스에 따라 달라집니다. 따라서 기본 WSFC 기능과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서 추가한 기능의 두 가지 메커니즘을 통해 장애 조치(failover) 동작이 결정됩니다.  
@@ -107,7 +111,7 @@ caps.handback.revision: 45
   
  쿼럼 상태의 유지 관리에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   

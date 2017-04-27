@@ -1,32 +1,36 @@
 ---
-title: "SQL Server 리소스에 종속성 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리소스 종속성 [SQL Server]"
-  - "장애 조치(failover) 클러스터링 [SQL Server], 종속성"
-  - "클러스터 [SQL Server], 종속성"
-  - "종속성 [SQL Server], 클러스터링"
+title: "SQL Server 리소스에 종속성 추가 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resource dependencies [SQL Server]
+- failover clustering [SQL Server], dependencies
+- clusters [SQL Server], dependencies
+- dependencies [SQL Server], clustering
 ms.assetid: 25dbb751-139b-4c8e-ac62-3ec23110611f
 caps.latest.revision: 33
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: bffe545296432d465fd744092519c9882ccc04c1
+ms.lasthandoff: 04/11/2017
+
 ---
-# SQL Server 리소스에 종속성 추가
+# <a name="add-dependencies-to-a-sql-server-resource"></a>SQL Server 리소스에 종속성 추가
   이 항목에서는 장애 조치(Failover) 클러스터 관리자 스냅인을 사용하여 Always On 장애 조치(Failover) 클러스터 인스턴스(FCI) 리소스에 종속성을 추가하는 방법을 설명합니다. 장애 조치 클러스터 관리자 스냅인은 WSFC(Windows Server 장애 조치(failover) 클러스터링) 서비스용 클러스터 관리 응용 프로그램입니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#Restrictions), [사전 요구 사항](#Prerequisites)  
+-   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Prerequisites](#Prerequisites)  
   
--   **SQL Server 리소스에 종속성을 추가하는 데 사용되는 도구:** [Windows 장애 조치(failover) 클러스터 관리자](#WinClusManager)  
+-   **To add a dependency to a SQL Server resource, using:** [Windows Failover Cluster Manager](#WinClusManager)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 33
   
 -   파일 공유 및 프린터 리소스: 파일 공유 리소스나 프린터 클러스터 리소스를 설치하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 실행되는 컴퓨터와 동일한 물리적 디스크 리소스에 이 리소스를 배치하지 말아야 합니다. 이러한 리소스가 동일한 물리적 디스크 리소스에 추가되면 성능이 저하되거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행 중인 컴퓨터에 대한 서비스가 손실될 수 있습니다  
   
--   MS DTC 고려 사항: 운영 체제를 설치하고 FCI를 구성한 후 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 MS DTC([!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator)가 클러스터에서 작동하도록 구성해야 합니다. MS DTC 클러스터링에 실패해도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에는 문제가 없지만 MS DTC가 올바로 구성되지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 응용 프로그램 기능에 영향을 줄 수 있습니다.  
+-   MS DTC 고려 사항: 운영 체제를 설치하고 FCI를 구성한 후 장애 조치(failover) 클러스터 관리자 스냅인을 사용하여 MS DTC( [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator)가 클러스터에서 작동하도록 구성해야 합니다. MS DTC 클러스터링에 실패해도 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치에는 문제가 없지만 MS DTC가 올바로 구성되지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 응용 프로그램 기능에 영향을 줄 수 있습니다.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 그룹에 MS DTC를 설치하고 MS DTC에 종속된 다른 리소스가 있을 경우 이 그룹이 오프라인 상태가 되거나 장애 조치(failover) 중인 경우 MS DTC를 사용할 수 없습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 가능하면 MS DTC를 자체의 실제 디스크 리소스가 있는 해당 그룹에 추가하는 것이 좋습니다.  
   

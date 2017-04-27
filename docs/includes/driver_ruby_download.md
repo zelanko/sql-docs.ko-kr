@@ -1,0 +1,1 @@
+![다운로드](../ssdt/media/download.png)[Ruby 드라이버 설치](http://msdn.microsoft.com/library/mt711041.aspx)
