@@ -2,7 +2,7 @@
 title: "메모리 내 OLTP를 통해 JSON 처리 최적화 | Microsoft 문서"
 ms.custom: 
 ms.date: 02/03/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:

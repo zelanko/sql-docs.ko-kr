@@ -2,7 +2,7 @@
 title: "Azure Blob Storage의 데이터에 대량 액세스 예제 | Microsoft 문서"
 ms.custom: 
 ms.date: 01/04/2017
-ms.prod: sql-vnext
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
