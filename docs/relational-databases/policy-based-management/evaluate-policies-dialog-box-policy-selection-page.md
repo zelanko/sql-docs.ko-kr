@@ -1,27 +1,31 @@
 ---
-title: "정책 평가 대화 상자, 정책 선택 페이지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dmf.runnow.f1"
+title: "정책 평가 대화 상자, 정책 선택 페이지 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dmf.runnow.f1
 ms.assetid: 20075fbe-0b48-42c8-b747-690f1aa23dcf
 caps.latest.revision: 36
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 54f93115b0663a033fda00e85a2128a58a3db063
+ms.lasthandoff: 04/11/2017
+
 ---
-# 정책 평가 대화 상자, 정책 선택 페이지
+# <a name="evaluate-policies-dialog-box-policy-selection-page"></a>정책 평가 대화 상자, 정책 선택 페이지
   이 대화 상자를 사용하여 정책 기반 관리 정책을 평가합니다. **평가 결과** 페이지를 선택하면 정책을 준수하지 않는 대상 집합의 항목에 정책을 적용할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **원본**  
  정책의 원본을 지정합니다. 원본을 변경하려면 찾아보기 단추 (**...**)를 클릭하여 **원본 선택** 대화 상자를 엽니다.  
   
@@ -41,9 +45,9 @@ caps.handback.revision: 36
  정책에 의해 구현되는 패싯입니다. 이 부분은 읽기 전용입니다.  
   
  **평가**  
- 평가 모드에서 정책을 실행합니다. 이렇게 하면 대상 집합에 대한 준수 보고서가 생성되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 다시 구성되거나 앞으로 정책이 준수되도록 하지는 않습니다.  
+ 평가 모드에서 정책을 실행합니다. 이렇게 하면 대상 집합에 대한 준수 보고서가 생성되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 구성되거나 앞으로 정책이 준수되도록 하지는 않습니다.  
   
-## 가능한 오류  
+## <a name="possible-errors"></a>가능한 오류  
   
 -   **대상이 없습니다.**  
   
@@ -55,11 +59,11 @@ caps.handback.revision: 36
   
     -   정책이 데이터베이스의 개체(예: 테이블, 뷰 또는 사용자)에 있는 경우 데이터베이스는 정책의 범주를 구독하지 않을 수 있습니다.  
   
-    -   대상 집합 필터로 인해 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 대상이 제외되었을 수 있습니다.  
+    -   대상 집합 필터로 인해 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 모든 대상이 제외되었을 수 있습니다.  
   
     -   대상 서버 유형은 정책을 평가하는 서버 유형과 다릅니다. 예를 들어 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 만든 정책을 평가하면 빈 대상 집합을 받게 됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [정책 평가 대화 상자, 평가 결과 페이지](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md)  
   

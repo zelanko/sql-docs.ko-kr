@@ -1,29 +1,33 @@
 ---
-title: "메모리 액세스에 최적화된 테이블 저장소 구성 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블 저장소 구성 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 caps.latest.revision: 7
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블 저장소 구성
+# <a name="configuring-storage-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 저장소 구성
   저장소 용량 및 IOPS(초당 입력/출력 작업)를 구성해야 합니다.  
   
-## 저장소 용량  
- 데이터베이스의 메모리 액세스에 최적화된 내구성 있는 테이블의 메모리 내 크기를 측정하려면 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)의 정보를 사용합니다. 인덱스가 메모리 액세스에 최적화된 테이블에 유지되지 않으므로 인덱스 크기를 포함하지 마십시오. 크기를 결정했으면 내구성이 있는 메모리 내 테이블 크기의 4배에 해당하는 디스크 공간을 제공해야 합니다.  
+## <a name="storage-capacity"></a>저장소 용량  
+ 데이터베이스의 메모리 액세스에 최적화된 내구성 있는 테이블의 메모리 내 크기를 측정하려면 [메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 의 정보를 사용합니다. 인덱스가 메모리 액세스에 최적화된 테이블에 유지되지 않으므로 인덱스 크기를 포함하지 마십시오. 크기를 결정했으면 내구성이 있는 메모리 내 테이블 크기의 4배에 해당하는 디스크 공간을 제공해야 합니다.  
   
-## 저장소 IOPS  
+## <a name="storage-iops"></a>저장소 IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 작업 처리량을 크게 증가시킬 수 있습니다. 따라서 IO가 병목 상태가 아니어야 합니다.  
   
 -   디스크 기반 테이블을 메모리 액세스에 최적화된 테이블에 마이그레이션하는 경우 트랜잭션 로그가 증가된 트랜잭션 로그 작업을 지원할 수 있는 저장소 미디어에 있어야 합니다. 예를 들어 저장소 미디어가 100MB/초로 트랜잭션 로그 작업을 지원하고 메모리 액세스에 최적화된 테이블이 5배 뛰어난 성능을 발휘하는 경우 트랜잭션 로그의 저장소 미디어는 트랜잭션 로그 작업에 성능 병목 상태가 발생하지 않도록 5배의 성능 향상을 지원할 수 있어야 합니다.  
@@ -36,10 +40,10 @@ caps.handback.revision: 7
   
 -   짝수 개의 스핀들이 있으면 SQL Server 2014와 달리 검사점 파일이 모든 스핀들에 균일하게 분산됩니다.  
   
-## 암호화  
+## <a name="encryption"></a>암호화  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 데이터베이스에 TDE를 사용하는 일부로 메모리 액세스에 최적화된 테이블에 대한 저장소를 암호화합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

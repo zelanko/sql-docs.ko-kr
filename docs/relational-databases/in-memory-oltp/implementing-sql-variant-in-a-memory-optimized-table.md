@@ -1,22 +1,26 @@
 ---
-title: "메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f17f21df-959d-4e20-92f3-bd707d555a46
 caps.latest.revision: 9
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3726302ad367aea494b75ec1562732d367800925
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현
+# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   **SQL_VARIANT** 열이 있는 테이블의 예를 살펴봅니다.  
@@ -113,7 +117,7 @@ CLOSE T1_rows_cursor
 DEALLOCATE T1_rows_cursor  
 ```  
   
- 다음과 같이 데이터를 **SQL_VARIANT**로 다시 변환할 수 있습니다.  
+ 다음과 같이 데이터를 **SQL_VARIANT** 로 다시 변환할 수 있습니다.  
   
 ```tsql  
 case [Key_enum] when 1 then convert(sql_variant, [Key_bi])   
@@ -121,7 +125,7 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
                        end  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

@@ -1,37 +1,41 @@
 ---
-title: "데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.tsqlquery.f1"
-dev_langs: 
-  - "TSQL"
-helpviewer_keywords: 
-  - "쿼리 편집기 [데이터베이스 엔진]"
-  - "Transact-SQL 편집기 쿼리 편집기 참조 [데이터베이스 엔진]"
-  - "데이터베이스 엔진 쿼리 편집기 쿼리 편집기 참조 [데이터베이스 엔진]"
-  - "쿼리 편집기 [데이터베이스 엔진], 도구 모음"
-  - "편집기 [SQL Server Management Studio], 데이터베이스 엔진 쿼리 편집기"
-  - "쿼리 편집기 [데이터베이스 엔진], 기능"
-  - "SQL Server Management Studio [SQL Server], 데이터베이스 엔진 쿼리 편집기"
+title: "데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.tsqlquery.f1
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- Query Editor [Database Engine]
+- Transact-SQL Editor See Query Editor [Database Engine]
+- Database Engine Query Editor See Query Editor [Database Engine]
+- Query Editor [Database Engine], Toolbar
+- editors [SQL Server Management Studio], Database Engine Query Editor
+- Query Editor [Database Engine], Features
+- SQL Server Management Studio [SQL Server], Database Engine Query Editor
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc
 caps.latest.revision: 47
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40ac7dd736d0366fe5cb564719a375e2e6a6a43d
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio)
+# <a name="database-engine-query-editor-sql-server-management-studio"></a>데이터베이스 엔진 쿼리 편집기(SQL Server Management Studio)
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하는 스크립트를 만들고 실행할 수 있습니다. 또한 편집기는 **sqlcmd** 명령을 포함하는 스크립트 실행을 지원합니다.  
   
-## Transact-SQL F1 도움말  
+## <a name="transact-sql-f1-help"></a>Transact-SQL F1 도움말  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기는 F1 키를 선택할 때 특정 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대한 참조 항목을 연결할 수 있습니다. 이렇게 하려면 Transact-SQL 문의 이름을 강조 표시하고 F1 키를 선택합니다. 그러면 도움말 검색 엔진에서 강조 표시된 문자열과 일치하는 F1 도움말 특성을 가진 항목을 검색합니다.  
   
  도움말 검색 엔진에서 강조 표시된 문자열과 정확히 일치하는 F1 도움말 키워드를 포함하는 항목을 찾을 수 없을 경우 이 항목이 표시됩니다. 이 경우 다음과 같은 두 가지 방법으로 원하는 도움말을 찾을 수 있습니다.  
@@ -46,10 +50,10 @@ caps.handback.revision: 47
   
     -   sys.data_spaces, sp_tableoption 등의 시스템 저장 프로시저 테이블 또는 뷰 이름  
   
-## 데이터베이스 엔진 쿼리 편집기 작업  
+## <a name="working-with-the-database-engine-query-editor"></a>데이터베이스 엔진 쿼리 편집기 작업  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 구현되는 네 가지 편집기 중 하나입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 구현되는 기능과 이 편집기를 사용하여 수행할 수 있는 주요 태스크에 대한 자세한 내용은 [쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)를 참조하세요.  
   
-## SQL 편집기 도구 모음  
+## <a name="sql-editor-toolbar"></a>SQL 편집기 도구 모음  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기가 열려 있으면 다음 단추를 포함하는 SQL 편집기 도구 모음이 표시됩니다.  
   
  **Connect**  
@@ -120,7 +124,7 @@ caps.handback.revision: 47
   
  **보기** 메뉴를 선택하고 **도구 모음**을 선택한 다음 **SQL 편집기**를 선택하여 SQL 편집기 도구 모음을 추가할 수도 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창이 열려 있지 않을 때 SQL 편집기 도구 모음을 추가하면 일부 단추를 사용하지 못할 수 있습니다.  
   
-## SQL 편집기 도구 모음  
+## <a name="sql-editor-toolbar"></a>SQL 편집기 도구 모음  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창을 열면 **보기** 메뉴, **도구 모음**, **디버그**를 차례로 선택하여 디버그 도구 모음을 추가할 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창이 열려 있지 않을 때 디버그 도구 모음을 추가하면 일부 단추를 사용하지 못할 수 있습니다.  
   
  **계속**  
@@ -147,7 +151,7 @@ caps.handback.revision: 47
  **창**  
  **중단점** 창 또는 **직접 실행** 창을 엽니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
   
   

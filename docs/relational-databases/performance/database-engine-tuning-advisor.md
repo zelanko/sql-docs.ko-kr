@@ -1,24 +1,28 @@
 ---
-title: "데이터베이스 엔진 튜닝 관리자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dta.general.f1"
+title: "데이터베이스 엔진 튜닝 관리자 | Microsoft 문서"
+ms.custom: 
+ms.date: 01/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dta.general.f1
 ms.assetid: 50dd0a0b-a407-4aeb-bc8b-b02a793aa30a
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4f0b031b0c98dd9f7708aebd13984f22403f3de1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 엔진 튜닝 관리자
+# <a name="database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] DTA(데이터베이스 엔진 튜닝 관리자)는 데이터베이스를 분석하고 쿼리 성능을 최적화하는 데 필요한 사항을 권장합니다. 데이터베이스 엔진 튜닝 관리자를 사용하면 데이터베이스 구조나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 내부 구조를 전문적으로 파악하지 못해도 인덱스, 인덱싱된 뷰 또는 테이블 파티션의 최적 집합을 선택 및 작성할 수 있습니다. DTA를 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   특정 문제 쿼리의 성능 문제 해결  
@@ -29,10 +33,10 @@ caps.handback.revision: 13
   
 -   저장소 공간 관리  
   
-## 데이터베이스 엔진 튜닝 관리자의 이점  
+## <a name="database-engine-tuning-advisor-benefits"></a>데이터베이스 엔진 튜닝 관리자의 이점  
  데이터베이스의 구조와 데이터베이스에 대해 실행되는 쿼리를 정확하게 이해하지 못하면 쿼리 성능을 최적화하기 어려울 수 있습니다. 데이터베이스 엔진 튜닝 관리자는 현재 쿼리 계획 캐시를 분석하거나 작성하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 작업량을 분석한 후 적절한 물리적 디자인을 권장해 주므로 이 태스크를 보다 쉽게 수행할 수 있습니다. 고급 데이터베이스 관리자를 위해 DTA는 다른 물리적 디자인 대안에 대한 탐구 가정(what-if) 분석을 수행할 수 있는 강력한 메커니즘을 제공합니다. DTA는 다음 정보를 제공할 수 있습니다.  
   
--   쿼리 최적화 프로그램을 사용하여 작업의 쿼리를 분석하여 데이터베이스에 대한 최상의 인덱스 조합을 권장합니다.  
+-   쿼리 최적화 프로그램을 사용하여 작업의 쿼리를 분석하여 데이터베이스에 대한 최상의 rowstore 및 [columnstore](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md) 인덱스 조합을 권장합니다.  
   
 -   작업에서 참조된 데이터베이스에 대한 정렬된 파티션 또는 정렬되지 않은 파티션을 권장합니다.  
   
@@ -45,6 +49,11 @@ caps.handback.revision: 13
 -   디스크 공간 제약 조건과 같은 고급 옵션을 지정하여 권장 구성을 사용자 지정할 수 있도록 합니다.  
   
 -   특정 작업에 대한 권장 구성 구현의 효과를 요약하는 보고서를 제공합니다.  
+
+-   데이터베이스 엔진 튜닝 관리자에서 평가할 수 있도록 가상 구성의 형태로 디자인 선택 항목을 사용자가 제공하는 대안을 살펴 봅니다.
+
+-  SQL Server 쿼리 저장소, 계획 캐시, SQL Server Profiler 추적 파일 또는 테이블, SQL 파일을 포함하여 다양한 소스에서 워크로드를 튜닝합니다.
+
   
  데이터베이스 엔진 튜닝 관리자는 다음과 같은 쿼리 작업 유형을 처리하도록 설계되었습니다.  
   
@@ -58,7 +67,7 @@ caps.handback.revision: 13
   
 -   업데이트가 많은 작업(데이터 수정이 쿼리보다 많음)  
   
-## DTA 구성 요소 및 개념  
+## <a name="dta-components-and-concepts"></a>DTA 구성 요소 및 개념  
  데이터베이스 엔진 튜닝 관리자 그래픽 사용자 인터페이스  
  작업을 지정하고 다양한 튜닝 옵션을 선택할 수 있는 사용하기 쉬운 인터페이스입니다.  
   
@@ -66,12 +75,12 @@ caps.handback.revision: 13
  데이터베이스 엔진 튜닝 관리자의 명령 프롬프트 버전입니다. **dta** 유틸리티를 통해 응용 프로그램과 스크립트에서 데이터베이스 엔진 튜닝 관리자의 기능을 사용할 수 있습니다.  
   
  작업  
- 튜닝할 데이터베이스의 대표적인 작업이 포함된 Transact-SQL 스크립트 파일, 추적 파일 또는 추적 테이블입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 이상에서는 계획 캐시를 작업으로 지정할 수 있습니다.  
+ 튜닝할 데이터베이스의 대표적인 작업이 포함된 Transact-SQL 스크립트 파일, 추적 파일 또는 추적 테이블입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]이상에서는 계획 캐시를 작업으로 지정할 수 있습니다.  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [쿼리 저장소를 워크로드로 지정](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)할 수 있습니다. 
   
  XML 입력 파일  
  데이터베이스 엔진 튜닝 관리자가 작업 부하를 조정하는 데 사용할 수 있는 XML 형식 파일입니다. XML 입력 파일은 GUI 및 **dta** 유틸리티에서 사용할 수 없는 고급 튜닝 옵션을 지원합니다.  
   
-## 제한 사항  
+## <a name="limitations-and-restrictions"></a>제한 사항  
  데이터베이스 엔진 튜닝 관리자에는 다음의 제한 사항이 있습니다.  
   
 -   PRIMARY KEY 또는 UNIQUE 제약 조건을 강제로 실행하는 고유한 인덱스를 추가하거나 삭제할 수 없습니다.  
@@ -84,7 +93,7 @@ caps.handback.revision: 13
   
 -   **-B** 옵션 또는 **고급 튜닝 옵션** 대화 상자를 사용하여 튜닝 권장 구성에 맞게 최대 디스크 공간을 지정할 때처럼 제약 조건을 설정할 때 데이터베이스 엔진 튜닝 관리자는 기존의 인덱스를 삭제해야 할 수도 있습니다. 이 경우 데이터베이스 엔진 튜닝 관리자 권장 구성의 결과로 인해 예상 향상률에 미치지 못할 수 있습니다.  
   
--   **dta** 유틸리티의 **-A** 옵션을 사용하거나 **튜닝 옵션** 탭에서 **튜닝 시간 제한**을 선택하여 튜닝 시간을 제한하도록 제약 조건을 지정할 때 데이터베이스 엔진 튜닝 관리자는 정확한 예상 향상률이 나타나도록 하고 이제까지 소비된 작업에 대한 분석 보고서를 생성하기 위해 해당 시간 제한을 초과할 수도 있습니다.  
+-   **dta** 유틸리티의 **-A** 옵션을 사용하거나 **튜닝 옵션** 탭에서 **튜닝 시간 제한** 을 선택하여 튜닝 시간을 제한하도록 제약 조건을 지정할 때 데이터베이스 엔진 튜닝 관리자는 정확한 예상 향상률이 나타나도록 하고 이제까지 소비된 작업에 대한 분석 보고서를 생성하기 위해 해당 시간 제한을 초과할 수도 있습니다.  
   
 -   데이터베이스 엔진 튜닝 관리자는 다음 상황에서 권장을 수행할 수 없습니다.  
   
@@ -96,21 +105,21 @@ caps.handback.revision: 13
   
 -   데이터베이스 엔진 튜닝 관리자는 튜닝 세션 데이터 및 기타 정보를 **msdb** 데이터베이스에 저장합니다. **msdb** 데이터베이스를 변경하면 튜닝 세션 데이터가 손실될 수 있습니다. 이 위험을 제거하려면 **msdb** 데이터베이스에 적합한 백업 전략을 구현합니다.  
   
-## 성능 고려 사항  
+## <a name="performance-considerations"></a>성능 고려 사항  
  데이터베이스 엔진 튜닝 관리자는 분석할 때 상당한 양의 프로세서와 메모리 리소스를 사용합니다. 프로덕션 서버의 속도가 느려지는 것을 피하려면 다음 전략 중 하나를 따르십시오.  
   
 -   서버가 사용되고 있지 않을 때 데이터베이스를 튜닝합니다. 데이터베이스 엔진 튜닝 관리자는 유지 관리 태스크의 성능에 영향을 줄 수 있습니다.  
   
--   테스트 서버/프로덕션 서버 기능을 사용합니다. 자세한 내용은 [프로덕션 서버 튜닝 로드 줄이기](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)를 참조하세요.  
+-   테스트 서버/프로덕션 서버 기능을 사용합니다. 자세한 내용은  [프로덕션 서버 튜닝 로드 줄이기](../../relational-databases/performance/reduce-the-production-server-tuning-load.md)를 참조하세요.  
   
 -   데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 설계 구조만 지정합니다. 데이터베이스 엔진 튜닝 관리자는 여러 옵션을 제공하지만 필요한 옵션만 지정합니다.  
   
-## xp_msver 확장 저장 프로시저에 대한 종속성  
- 데이터베이스 엔진 튜닝 관리자는 전체 기능을 제공하기 위해 **xp_msver** 확장 저장 프로시저에 의존합니다. 이 확장 저장 프로시저는 기본적으로 튜닝됩니다. 데이터베이스 엔진 튜닝 관리자는 이 확장 저장 프로시저를 사용하여 튜닝 중인 데이터베이스가 있는 컴퓨터에서 프로세서 개수 및 사용 가능한 메모리를 인출합니다. **xp_msver**을 사용할 수 없는 경우 데이터베이스 엔진 튜닝 관리자는 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 가정합니다. 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 알 수 없는 경우 프로세서는 하나이고 메모리는 1024MB라고 가정합니다.  
+## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>xp_msver 확장 저장 프로시저에 대한 종속성  
+ 데이터베이스 엔진 튜닝 관리자는 전체 기능을 제공하기 위해 **xp_msver** 확장 저장 프로시저에 의존합니다. 이 확장 저장 프로시저는 기본적으로 튜닝됩니다. 데이터베이스 엔진 튜닝 관리자는 이 확장 저장 프로시저를 사용하여 튜닝 중인 데이터베이스가 있는 컴퓨터에서 프로세서 개수 및 사용 가능한 메모리를 인출합니다. **xp_msver** 을 사용할 수 없는 경우 데이터베이스 엔진 튜닝 관리자는 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 가정합니다. 데이터베이스 엔진 튜닝 관리자에서 실행 중인 컴퓨터의 하드웨어 특징을 알 수 없는 경우 프로세서는 하나이고 메모리는 1024MB라고 가정합니다.  
   
- 권장되는 파티션 수는 두 가지 값, 즉, 프로세서 수 및 사용 가능한 메모리에 따라 달라지므로 이 종속성은 분할 권장 구성에 영향을 줍니다. 또한 이 종속성은 테스트 서버를 사용하여 프로덕션 서버를 튜닝할 때 튜닝 결과에 영향을 줍니다. 이 시나리오에서 데이터베이스 엔진 튜닝 관리자는 **xp_msver**을 사용하여 프로덕션 서버에서 하드웨어 속성을 인출합니다. 테스트 서버에 대한 작업을 튜닝한 후에 데이터베이스 엔진 튜닝 관리자는 이러한 하드웨어 속성을 사용하여 권장 구성을 만듭니다. 자세한 내용은 [xp_msver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)을 참조하세요.  
+ 권장되는 파티션 수는 두 가지 값, 즉, 프로세서 수 및 사용 가능한 메모리에 따라 달라지므로 이 종속성은 분할 권장 구성에 영향을 줍니다. 또한 이 종속성은 테스트 서버를 사용하여 프로덕션 서버를 튜닝할 때 튜닝 결과에 영향을 줍니다. 이 시나리오에서 데이터베이스 엔진 튜닝 관리자는 **xp_msver** 을 사용하여 프로덕션 서버에서 하드웨어 속성을 인출합니다. 테스트 서버에 대한 작업을 튜닝한 후에 데이터베이스 엔진 튜닝 관리자는 이러한 하드웨어 속성을 사용하여 권장 구성을 만듭니다. 자세한 내용은 [xp_msver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/xp-msver-transact-sql.md)을 참조하세요.  
   
-## 데이터베이스 엔진 튜닝 관리자 태스크  
+## <a name="database-engine-tuning-advisor-tasks"></a>데이터베이스 엔진 튜닝 관리자 태스크  
  다음 표에는 일반적인 데이터베이스 엔진 튜닝 관리자 태스크 및 이러한 태스크를 수행하는 방법에 대해 설명하는 항목이 나열되어 있습니다.  
   
 |데이터베이스 엔진 튜닝 관리자 태스크|항목|  
@@ -119,3 +128,4 @@ caps.handback.revision: 13
 |데이터베이스 튜닝 작업의 결과를 봅니다.<br /><br /> 튜닝 권장 구성을 선택하고 구현합니다.<br /><br /> 작업에 대해 가정(what-if) 탐구 분석을 수행합니다.<br /><br /> 기존 튜닝 세션을 검토하거나, 기존 튜닝 세션에 따라 세션을 복제하거나, <br />추가적인 평가나 구현을 위해 기존 튜닝 권장 구성을 편집합니다.<br /><br /> 데이터베이스 엔진 튜닝 관리자 사용자 인터페이스 옵션에 대한 설명을 봅니다.|[데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)|  
   
   
+

@@ -1,33 +1,37 @@
 ---
-title: "Columnstore 인덱스 쿼리 성능 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "01/27/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Columnstore 인덱스 - 쿼리 성능 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 01/27/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 caps.latest.revision: 23
-author: "barbkess"
-ms.author: "barbkess"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: barbkess
+ms.author: barbkess
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.lasthandoff: 04/11/2017
+
 ---
-# Columnstore 인덱스 쿼리 성능
+# <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 - 쿼리 성능
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   디자인된 columnstore 인덱스에서 매우 빠른 쿼리 성능을 제공하기 위한 권장 사항에 대해 설명합니다.    
     
  columnstore 인덱스는 일반적인 행 저장소 인덱스의 경우보다 분석 및 데이터 웨어하우징 작업에서는 최대 100배, 데이터 압축 작업에서는 최대 10배까지 성능을 향상시킬 수 있습니다.   이 권장 사항은 쿼리에서 columnstore 인덱스가 제공하는 매우 빠른 성능을 경험하는 데 도움이 됩니다.  끝에 있는 columnstore 성능에 대한 자세한 설명입니다.    
     
-## 쿼리 성능 개선을 위한 권장 사항    
+## <a name="recommendations-for-improving-query-performance"></a>쿼리 성능 개선을 위한 권장 사항    
  다음은 columnstore 인덱스에서 제공하는 고성능 달성을 위한 몇 가지 권장 사항입니다.    
     
-### 1. 전체 테이블 검색에서 더 많은 행 그룹을 제거할 수 있도록 데이터 구성    
+### <a name="1-organize-data-to-eliminate-more-rowgroups-from-a-full-table-scan"></a>1. 전체 테이블 검색에서 더 많은 행 그룹을 제거할 수 있도록 데이터 구성    
     
 -   **삽입 순서 활용** 일반적인 데이터 웨어하우스에서 주로 데이터는 시간 순서에, 분석은 시간 차원에 삽입됩니다. 예를 들어 분기별로 판매를 분석하는 경우 이런 종류의 작업에서는 행 그룹이 자동으로 제거됩니다. SQL Server 2016에서 쿼리 처리의 일부로 건너뛴 숫자 행 그룹을 찾을 수 있습니다.    
     
@@ -35,7 +39,7 @@ caps.handback.revision: 22
     
 -   **테이블 분할 활용** columnstore 인덱스를 분할한 다음 파티션 제거를 사용하여 검색할 행 그룹의 수를 줄일 수 있습니다. 예를 들어 팩트 테이블에 고객 구매 정보가 저장되어 있고, 일반 쿼리 패턴이 특정 고객의 분기별 구매 정보 찾기일 경우 삽입 순서와 고객 열의 분할을 결합할 수 있습니다. 각 파티션에는 특정 고객에 대한 행이 시간 순서로 포함됩니다.    
     
-### 2. 병렬로 columnstore 인덱스를 만들기에 충분한 메모리 계획    
+### <a name="2-plan-for-enough-memory-to-create-columnstore-indexes-in-parallel"></a>2. 병렬로 columnstore 인덱스를 만들기에 충분한 메모리 계획    
  인덱스 만들기는 메모리가 제한되지 않는 한 기본적으로 병렬 작업입니다. 병렬로 인덱스를 만들려면 직렬로 인덱스를 만들 때보다 많은 메모리가 필요합니다. 메모리가 충분하면 동일한 열에 B-트리를 작성할 때보다 1.5배 많은 메모리가 columnstore 인덱스를 만드는 데 사용됩니다.    
     
  columnstore 인덱스를 만드는 데 필요한 메모리는 열 수, 문자열 열 수, DOP(병렬 처리 수준) 및 데이터의 특징에 따라 다릅니다. 예를 들어, 테이블의 행 수가 100만 개 미만일 경우 SQL Server는 한 스레드만 사용하여 columnstore 인덱스를 만듭니다.    
@@ -44,12 +48,12 @@ caps.handback.revision: 22
     
  SQL Server 2016 부터 쿼리는 항상 일괄 처리 모드로 작동합니다. 이전 릴리스에서 일괄 처리는 DOP가 1보다 클 경우에만 실행됩니다.    
     
-## Columnstore 성능 설명    
+## <a name="columnstore-performance-explained"></a>Columnstore 성능 설명    
  sColumnstore 인덱스에서는 고속 메모리 내 일괄 처리 모드를 IO 요구 사항을 크게 줄이는 기술과 결합하여 쿼리 성능이 크게 향상되었습니다.  분석 쿼리에서는 많은 행이 검색되므로 일반적으로 IO 바인딩되며, 이로 인해 쿼리 실행 중 IO를 줄이는 작업은 columnstore 인덱스 디자인에 매우 중요합니다.  데이터를 메모리로 읽어온 후에는 메모리 내 작업 수를 줄이는 것이 중요합니다.    
     
  Columnstore 인덱스는 IO는 줄이고, 높은 데이터 압축, columnstore 제거, 행 그룹 제거 및 일괄 처리를 통해 메모리 내 작업을 최적화합니다.    
     
-### 데이터 압축    
+### <a name="data-compression"></a>데이터 압축    
  Columnstore 인덱스는 rowstore 인덱스보다 최고 10배 높은 데이터 압축률을 보여 줍니다.  이를 통해 분석 쿼리를 실행하는 데 필요한 IO는 크게 줄이고 그에 따라 쿼리 성능이 향상됩니다.    
     
 -   Columnstore 인덱스는 디스크에서 압축된 데이터를 읽습니다. 즉, 메모리로 읽어야 하는 데이터 바이트가 적어집니다.    
@@ -60,14 +64,14 @@ caps.handback.revision: 22
     
 -   예를 들어 팩트 테이블에 고객 주소가 저장되어 있고 국가에 대한 열이 하나 있는 경우 가능한 총 값 수는 200개 미만입니다.  이러한 값 중 일부는 여러 번 반복됩니다.  팩트 테이블에 1억 개의 행이 있는 경우에는 국가 열이 쉽게 압축되므로 요구되는 저장소 크기는 매우 작습니다. 행 단위 압축은 이 방식으로 열 값의 유사성을 활용할 수 없어 국가 열의 값을 압축하는 데 더 많은 바이트를 사용합니다.    
     
-### 열 제거    
+### <a name="column-elimination"></a>열 제거    
  Columnstore 인덱스는 쿼리 결과에 필요 없는 열은 읽기를 건너뜁니다. 열 제거라고 하는 이 기능은 또한 쿼리 실행에 필요한 IO를 줄이므로 쿼리 성능이 향상됩니다.    
     
 -   열 제거는 데이터가 열 단위로 구성되고 압축되기 때문에 가능합니다.   반면, 데이터가 행별로 저장된 경우 각 행의 열 값은 물리적으로 함께 저장되어 쉽게 구분할 수 없습니다. 쿼리 프로세서에서 특정 열 값을 검색하려면 전체 행에서 읽어야 합니다. 이럴 경우 추가 데이터를 불필요하게 메모리로 읽어오게 되어 IO가 늘어납니다.    
     
 -   예를 들어 테이블에 열이 50개 있고, 쿼리에서 그중 5개만 사용할 경우 columnstore 인덱스는 디스크에서 해당 5개 열만 가져옵니다. 나머지 45개 열은 읽기를 건너뜁니다. 이렇게 하면 열 크기가 모두 비슷하다고 가정할 때 90%까지 IO가 줄어듭니다.  동일한 데이터가 rowstore에 저장되면 쿼리 프로세서는 추가로 45개 열을 모두 읽어야 합니다.    
     
-### 행 그룹 제거    
+### <a name="rowgroup-elimination"></a>행 그룹 제거    
  전체 테이블 검색의 경우 대부분의 데이터가 쿼리 조건자의 조건에 맞지 않습니다. 메타데이터를 사용하면 columnstore 인덱스는 쿼리 결과에 필요한 데이터가 없는 rowgroup의 읽기를 실제 IO없이 모두 건너뛸 수 있습니다.  행 그룹 제거라고 하는 이 기능은 전체 테이블 검색에 필요한 IO를 줄이므로 쿼리 성능이 향상됩니다.    
     
  **columnstore 인덱스는 전체 테이블 검색을 언제 수행해야 하나요?**    
@@ -82,9 +86,9 @@ caps.handback.revision: 22
     
  제거할 행 그룹을 결정하려면 columnstore 인덱스는 메타데이터를 사용하여 각 행 그룹에 대한 각 열 세그먼트의 최소값 및 최대값을 저장합니다. 열 세그먼트 범위 중 어떤 것도 쿼리 조건자의 조건에 맞지 않을 경우 실제 IO를 수행하지 않고 행 그룹 전체를 건너뜁니다. 데이터가 주로 정렬된 순서대로 로드되고, 행 정렬이 보장되지 않더라도 유사한 데이터 값이 보통 동일한 행 그룹 또는 인접한 행 그룹에 위치하므로 이 작업이 가능합니다.    
     
- rowgroup에 대한 자세한 내용은 [Columnstore 인덱스 가이드](../Topic/Columnstore%20Indexes%20Guide.md)를 참조하세요.    
+ 행 그룹에 대한 자세한 내용은 Columnstore 인덱스 가이드를 참조하세요.    
     
-### 일괄 처리 모드 실행    
+### <a name="batch-mode-execution"></a>일괄 처리 모드 실행    
  일괄 처리 모드 실행이란 실행 효율성을 위해 일반적으로 최대 900개의 행을 함께 행 집합으로 처리하는 것을 말합니다. 예를 들어 쿼리  `Select SUM (Sales)from SalesData` 가 SalesData 테이블에서의 총 판매액을 집계합니다.    일괄 처리 모드 실행에서 쿼리 실행 엔진은 집계를 900개 값으로 이루어진 그룹으로 계산합니다.  이렇게 하면 각 행에 대한 비용을 부담하지 않고 모든 행에서 메타데이터 액세스 비용과 기타 오버헤드 유형을 일괄 처리로 분산하여 코드 경로가 상당히 줄어듭니다.  일괄 처리 모드는 가능한 경우 압축된 데이터에서 작동하고 행 모드 처리에서 사용하는 교환 연산자 중 일부를 제거합니다.  이렇게 하면 크기 순서대로 정렬되어 분석 쿼리 실행 속도가 향상됩니다.    
     
  일부 쿼리 실행 연산자는 일괄 처리 모드에서 실행할 수 없습니다. 예를 들어 Insert, Delete 또는 Update와 같은 DML 작업은 한 번에 행에서 실행됩니다. 일괄 처리 모드 연산자는 쿼리 성능 속도 향상을 위해 Scan, Join, Aggregate, Sort 등과 같은 연산자를 대상으로 합니다.  Columnstore 인덱스는 SQL Server 2012에서 처음으로 사용되었으므로 일괄 처리 모드로 실행할 수 있는 연산자를 지속적으로 확장하려고 노력합니다. 다음 표에서 제품 버전에 따라 일괄 처리 모드로 실행되는 연산자를 보여 줍니다.    
@@ -110,7 +114,7 @@ caps.handback.revision: 22
     
  ¹SQL Server 2016, SQL 데이터베이스 V12 Premium Edition 및 SQL 데이터 웨어하우스에 적용    
     
-### 집계 푸시 다운    
+### <a name="aggregate-pushdown"></a>집계 푸시 다운    
  SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다.  이러한 실행으로 좋은 성능이 제공되긴 하지만 SQL Server 2016에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다.    
     
 -   지원되는 집계 연산자는 MIN, MAX, SUM, COUNT, AVG입니다.    
@@ -135,8 +139,8 @@ SELECT  SUM(TotalProductCost)
 FROM FactResellerSalesXL_CCI    
 ```    
     
-### 문자열 조건자 푸시다운    
- 동기: 데이터 웨어하우스 스키마를 디자인할 때 하나 이상의 팩트 테이블과 많은 차원 테이블로 구성된 별모양 스키마 또는 눈송이 스키마를 스키마 모델링으로 사용하는 것이 권장됩니다. [팩트 테이블](https://en.wikipedia.org/wiki/Fact_table)에는 비즈니스 측정값 또는 트랜잭션을 저장하고, [차원 테이블](https://en.wikipedia.org/wiki/Dimension_table)에는 분석해야 하는 팩트 전체에 대한 차원을 저장합니다.    
+### <a name="string-predicate-pushdown"></a>문자열 조건자 푸시다운    
+ 동기: 데이터 웨어하우스 스키마를 디자인할 때 하나 이상의 팩트 테이블과 많은 차원 테이블로 구성된 별모양 스키마 또는 눈송이 스키마를 스키마 모델링으로 사용하는 것이 권장됩니다. [팩트 테이블](https://en.wikipedia.org/wiki/Fact_table) 에는 비즈니스 측정값 또는 트랜잭션을 저장하고, [차원 테이블](https://en.wikipedia.org/wiki/Dimension_table) 에는 분석해야 하는 팩트 전체에 대한 차원을 저장합니다.    
     
  예를 들어 팩트는 특정 지역에서 특정 제품의 판매를 나타내는 레코드일 수 있으며, 차원은 지역, 제품 등의 집합을 나타냅니다. 팩트 테이블과 차원 테이블은 기본/외래 키 관계를 통해 연결됩니다. 가장 일반적으로 사용되는 분석 쿼리는 하나 이상의 차원 테이블을 팩트 테이블에 조인하는 것입니다.    
     
@@ -154,13 +158,14 @@ FROM FactResellerSalesXL_CCI
     
 -   Null을 평가하는 식이 지원되지 않습니다.    
     
-## 참고 항목    
- [Columnstore 인덱스 가이드](../Topic/Columnstore%20Indexes%20Guide.md)     
- [Columnstore 인덱스 데이터 로드](../Topic/Columnstore%20Indexes%20Data%20Loading.md)     
- [Columnstore 인덱스 버전형 기능 요약](../Topic/Columnstore%20Indexes%20Versioned%20Feature%20Summary.md)     
+## <a name="see-also"></a>참고 항목    
+ Columnstore 인덱스 가이드     
+ Columnstore 인덱스 데이터 로드     
+ Columnstore 인덱스 버전형 기능 요약     
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
  [Get started with Columnstore for real time operational analytics(실시간 운영 분석을 위한 Columnstore 시작)](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
- [데이터 웨어하우스용 Columnstore 인덱스](../Topic/Columnstore%20Indexes%20for%20Data%20Warehousing.md)     
+ 데이터 웨어하우스용 Columnstore 인덱스     
  [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
     
   
+

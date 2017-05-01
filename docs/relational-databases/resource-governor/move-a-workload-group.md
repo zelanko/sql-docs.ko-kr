@@ -1,32 +1,36 @@
 ---
-title: "작업 그룹 이동 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.rg.properties_moveworkloadgroup.f1"
-helpviewer_keywords: 
-  - "작업 그룹 [SQL Server], 이동"
-  - "리소스 관리자, 작업 그룹 이동"
+title: "작업 그룹 이동 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.rg.properties_moveworkloadgroup.f1
+helpviewer_keywords:
+- workload groups [SQL Server], move
+- Resource Governor, workload group move
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2e74236a254493b554c34b5f7c729e8cb91868a0
+ms.lasthandoff: 04/11/2017
+
 ---
-# 작업 그룹 이동
+# <a name="move-a-workload-group"></a>작업 그룹 이동
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 Transact-SQL을 사용하여 리소스 관리자 작업 그룹을 다른 리소스 풀로 이동할 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [제한 사항](#LimitationsRestrictions), [권한](#Permissions)  
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   **작업 그룹을 이동하려면:** [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL) 사용  
+-   **To move a workload group, using:**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  보류 중인 리소스 관리자 구성 작업이 있으면 작업 그룹을 이동할 수 없습니다.  
@@ -42,7 +46,7 @@ caps.handback.revision: 12
   
 1.  개체 탐색기에서 **리소스 관리자** 까지 **관리**노드를 계속 확장합니다.  
   
-2.  **리소스 관리자**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **리소스 관리자 속성** 페이지가 열립니다.  
+2.  **리소스 관리자** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다. 그러면 **리소스 관리자 속성** 페이지가 열립니다.  
   
 3.  **리소스 풀** 창에서 이동할 작업 그룹이 들어 있는 리소스 풀을 클릭합니다. **작업 그룹** 창에 해당 리소스 풀의 작업 그룹이 나열됩니다.  
   
@@ -61,8 +65,8 @@ caps.handback.revision: 12
   
 2.  **ALTER RESOURCE GOVERNOR RECONFIGURE** 문을 실행합니다.  
   
-### 예(Transact-SQL)  
- 다음 예에서는 `groupAdhoc`이라는 작업 그룹을 기본 리소스 풀로 이동합니다.  
+### <a name="example-transact-sql"></a>예(Transact-SQL)  
+ 다음 예에서는 `groupAdhoc` 이라는 작업 그룹을 기본 리소스 풀로 이동합니다.  
   
 ```  
 ALTER WORKLOAD GROUP groupAdhoc  
@@ -72,7 +76,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [리소스 관리자 사용](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [리소스 풀 만들기](../../relational-databases/resource-governor/create-a-resource-pool.md)   

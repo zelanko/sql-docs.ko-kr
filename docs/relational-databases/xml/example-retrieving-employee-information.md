@@ -1,24 +1,28 @@
 ---
-title: "예제: 직원 정보 검색 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-xml"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "EXPLICIT 모드"
+title: "예제: 직원 정보 검색 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-xml
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
 caps.latest.revision: 9
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01f3d95b92757ba51a7e8466a9c8d9d535a0a773
+ms.lasthandoff: 04/11/2017
+
 ---
-# 예제: 직원 정보 검색
+# <a name="example-retrieving-employee-information"></a>예제: 직원 정보 검색
   이 예에서는 각 직원에 대한 직원 ID와 직원 이름을 검색합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 employeeID는 Employee 테이블의 BusinessEntityID 열로부터 가져올 수 있습니다. 직원 이름은 Person 테이블로부터 가져올 수 있습니다. BusinessEntityID 열을 사용하면 테이블을 조인할 수 있습니다.  
   
  FOR XML EXPLICIT 변환으로 다음과 같이 XML을 생성한다고 가정해 보십시오.  
@@ -128,7 +132,7 @@ FOR XML EXPLICIT;
   
  이러한 프로세스는 행 집합의 남은 열에 대해 반복됩니다. FOR XML EXPLICIT에서 행 집합을 순서대로 처리하고 원하는 XML을 생성하기 위해서는 범용 테이블의 행을 정렬하는 것이 중요합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [FOR XML에서 EXPLICIT 모드 사용](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  
   
   

@@ -1,25 +1,29 @@
 ---
-title: "쿼리 처리 아키텍처 가이드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/26/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "가이드, 쿼리 처리 아키텍처"
-  - "쿼리 처리 아키텍처 가이드"
+title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
+ms.custom: 
+ms.date: 10/26/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- guide, query processing architecture
+- query processing architecture guide
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 caps.latest.revision: 5
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 0f2edc5c0bbf2fba20b26826413ee4f659b379b1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 쿼리 처리 아키텍처 가이드
+# <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
 데이터베이스 엔진은 로컬 테이블, 분할된 테이블 및 여러 서버에 분산된 테이블과 같은 다양한 데이터 저장소 아키텍처의 쿼리를 처리합니다. 다음 항목에서는 SQL Server가 실행 계획 캐싱을 통해 쿼리를 처리하고 쿼리 재사용을 최적화하는 방법에 대해 설명합니다.
@@ -36,19 +40,19 @@ caps.handback.revision: 5
 ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 문은 다음 사항만 정의합니다.  
-* 결과 집합의 서식. 대부분 SELECT 목록에 지정됩니다. 하지만 `ORDER BY` 및 `GROUP BY`와 같은 다른 절도 결과 집합의 최종 서식에 영향을 줍니다.
+* 결과 집합의 서식. 대부분 SELECT 목록에 지정됩니다. 하지만 `ORDER BY` 및 `GROUP BY` 와 같은 다른 절도 결과 집합의 최종 서식에 영향을 줍니다.
 * 원본 데이터를 포함하는 테이블. 테이블은 `FROM` 절에서 지정됩니다.
-* 테이블이 `SELECT` 문의 목적과 논리적으로 관련되는 방식. 조인 사양에 정의되며 `FROM` 뒤에 따라오는 `WHERE` 절이나 `ON` 절에 포함될 수 있습니다.
+* 테이블이 `SELECT` 문의 목적과 논리적으로 관련되는 방식. 조인 사양에 정의되며 `WHERE` 뒤에 따라오는 `ON` 절이나 `FROM`절에 포함될 수 있습니다.
 * 원본 테이블의 행이 `SELECT` 문의 결과에 포함되기 위해 만족시켜야 할 조건. 조건은 `WHERE` 및 `HAVING` 절에 지정됩니다.
 
 
 쿼리 실행 계획은 다음 사항을 정의합니다. 
 
 * 원본 테이블이 액세스되는 순서  
-  일반적으로 데이터베이스 서버는 다양한 방법으로 기본 테이블에 액세스하여 결과 집합을 작성할 수 있습니다. 예를 들어 `SELECT` 문이 세 개의 테이블을 참조하는 경우 데이터베이스 서버는 먼저 `TableA`에 액세스하고, `TableA`의 데이터를 사용하여 `TableB`에서 일치하는 행을 추출한 후 `TableB`의 데이터를 사용하여 `TableC`에서 데이터를 추출합니다. 다음은 데이터베이스 서버가 테이블에 액세스할 수 있는 여러 순서입니다.  
-  `TableC`, `TableB`, `TableA` 또는  
-  `TableB`, `TableA`, `TableC` 또는  
-  `TableB`, `TableC`, `TableA` 또는  
+  일반적으로 데이터베이스 서버는 다양한 방법으로 기본 테이블에 액세스하여 결과 집합을 작성할 수 있습니다. 예를 들어 `SELECT` 문이 세 개의 테이블을 참조하는 경우 데이터베이스 서버는 먼저 `TableA`에 액세스하고, `TableA` 의 데이터를 사용하여 `TableB`에서 일치하는 행을 추출한 후 `TableB` 의 데이터를 사용하여 `TableC`에서 데이터를 추출합니다. 다음은 데이터베이스 서버가 테이블에 액세스할 수 있는 여러 순서입니다.  
+  `TableC`, `TableB`, `TableA`또는  
+  `TableB`, `TableA`, `TableC`또는  
+  `TableB`, `TableC`, `TableA`또는  
   `TableC`, `TableA`, `TableB`  
 
 * 각 테이블에서 데이터를 추출하는 데 사용하는 방법  
@@ -77,13 +81,13 @@ SQL Server가 단일 SELECT 문을 처리하는 데 사용하는 기본 단계�
 
 #### <a name="processing-other-statements"></a>다른 문 처리
 
-`SELECT` 문 처리의 기본 단계는 `INSERT`, `UPDATE`, `DELETE` 같은 다른 SQL 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 SELECT 문을 포함할 수 있습니다.
+`SELECT` 문 처리의 기본 단계는 `INSERT`, `UPDATE`, `DELETE`같은 다른 SQL 문에도 적용됩니다. `UPDATE` 및 `DELETE` 문은 둘 다 수정되거나 삭제될 행 집합을 대상으로 해야 합니다. 이러한 행을 식별하는 프로세스는 `SELECT` 문의 결과 집합을 구하는 데 사용되는 원본 행을 식별하는 방식과 동일합니다. `UPDATE` 및 `INSERT` 문은 모두 업데이트되거나 삽입될 데이터 값을 제공하는 SELECT 문을 포함할 수 있습니다.
 
-`CREATE PROCEDURE` 또는 `ALTER TABL` 같은 DDL(데이터 정의 언어) 문도 결과적으로 시스템 카탈로그 테이블에 대한 관계형 연산으로 해석되며 `ALTER TABLE ADD COLUMN` 문처럼 데이터 테이블에 대한 관계형 연산으로 해석되는 경우도 있습니다.
+`CREATE PROCEDURE` 또는 `ALTER TABL`같은 DDL(데이터 정의 언어) 문도 결과적으로 시스템 카탈로그 테이블에 대한 관계형 연산으로 해석되며 `ALTER TABLE ADD COLUMN`문처럼 데이터 테이블에 대한 관계형 연산으로 해석되는 경우도 있습니다.
 
 ### <a name="worktables"></a>작업 테이블
 
-관계형 엔진은 SQL 문에 지정된 논리 작업을 수행하기 위해 작업 테이블을 작성해야 합니다. 작업 테이블은 중간 결과를 보관하는 데 사용되는 내부 테이블입니다. 특정 `GROUP BY`, `ORDER BY` 또는 `UNION` 쿼리에 대해 작업 테이블이 생성됩니다. 예를 들어 `ORDER BY` 절이 인덱스 범위에 해당하지 않는 열을 참조하는 경우 관계형 엔진은 요청되는 순서로 결과 집합을 정렬하기 위해 작업 테이블을 만들어야 할 수 있습니다. 작업 테이블은 쿼리 계획 일부의 실행 결과를 임시 보관하는 스풀로 사용되기도 합니다. 작업 테이블은 `tempdb`에 작성되며 더 필요 없을 때 자동으로 삭제됩니다.
+관계형 엔진은 SQL 문에 지정된 논리 작업을 수행하기 위해 작업 테이블을 작성해야 합니다. 작업 테이블은 중간 결과를 보관하는 데 사용되는 내부 테이블입니다. 특정 `GROUP BY`, `ORDER BY`또는 `UNION` 쿼리에 대해 작업 테이블이 생성됩니다. 예를 들어 `ORDER BY` 절이 인덱스 범위에 해당하지 않는 열을 참조하는 경우 관계형 엔진은 요청되는 순서로 결과 집합을 정렬하기 위해 작업 테이블을 만들어야 할 수 있습니다. 작업 테이블은 쿼리 계획 일부의 실행 결과를 임시 보관하는 스풀로 사용되기도 합니다. 작업 테이블은 `tempdb` 에 작성되며 더 필요 없을 때 자동으로 삭제됩니다.
 
 ### <a name="view-resolution"></a>뷰 확인
 
@@ -153,11 +157,11 @@ FROM Person.AddrState WITH (SERIALIZABLE)
 WHERE StateProvinceCode = 'WA';
 ```
 
-쿼리의 뷰 `Person.AddrState`에 적용되는 힌트 `SERIALIZABLE`가 뷰 확장 시 뷰의 `Person.Address` 테이블과 `Person.StateProvince` 테이블에 모두 전파되기 때문에 이 쿼리는 실패합니다. 그러나 뷰가 확장될 때 `Person.Address`의 `NOLOCK` 힌트도 나타납니다. `SERIALIZABLE` 힌트와 `NOLOCK` 힌트가 충돌하기 때문에 결과 쿼리가 올바르지 않습니다. 
+쿼리의 뷰 `SERIALIZABLE` 에 적용되는 힌트 `Person.AddrState` 가 뷰 확장 시 뷰의 `Person.Address` 테이블과 `Person.StateProvince` 테이블에 모두 전파되기 때문에 이 쿼리는 실패합니다. 그러나 뷰가 확장될 때 `NOLOCK` 의 `Person.Address`힌트도 나타납니다. `SERIALIZABLE` 힌트와 `NOLOCK` 힌트가 충돌하기 때문에 결과 쿼리가 올바르지 않습니다. 
 
-`PAGLOCK`, `NOLOCK`, `ROWLOCK`, `TABLOCK` 또는 `TABLOCKX` 테이블 힌트도 `HOLDLOCK`, `NOLOCK`, `READCOMMITTED`, `REPEATABLEREAD`, `SERIALIZABLE` 테이블 힌트처럼 서로 충돌합니다.
+`PAGLOCK`, `NOLOCK`, `ROWLOCK`, `TABLOCK`또는 `TABLOCKX` 테이블 힌트도 `HOLDLOCK`, `NOLOCK`, `READCOMMITTED`, `REPEATABLEREAD`, `SERIALIZABLE` 테이블 힌트처럼 서로 충돌합니다.
 
-여러 수준의 중첩된 뷰를 통해 힌트가 전파될 수 있습니다. 예를 들어 뷰 `v1`에 `HOLDLOCK` 힌트를 적용하는 쿼리가 있다고 가정합니다. `v1`이 확장될 때 이 뷰의 정의에 `v2` 뷰가 포함되어 있음을 확인했습니다. `v2` 정의에는 이 뷰의 기본 테이블 중 하나에 대한 `NOLOCK` 힌트가 있습니다. 그러나 이 테이블에는 `v1` 뷰의 쿼리로부터 `HOLDLOCK` 힌트도 상속됩니다. `NOLOCK` 힌트와 `HOLDLOCK` 힌트가 충돌하므로 쿼리가 실패합니다.
+여러 수준의 중첩된 뷰를 통해 힌트가 전파될 수 있습니다. 예를 들어 뷰 `HOLDLOCK` 에 `v1`힌트를 적용하는 쿼리가 있다고 가정합니다. `v1` 이 확장될 때 이 뷰의 정의에 `v2` 뷰가 포함되어 있음을 확인했습니다. `v2`정의에는 이 뷰의 기본 테이블 중 하나에 대한 `NOLOCK` 힌트가 있습니다. 그러나 이 테이블에는 `HOLDLOCK` 뷰의 쿼리로부터 `v1`힌트도 상속됩니다. `NOLOCK` 힌트와 `HOLDLOCK` 힌트가 충돌하므로 쿼리가 실패합니다.
 
 뷰를 포함하는 쿼리에 `FORCE ORDER` 힌트를 사용하면 정렬된 구조체에서의 뷰 위치에 따라 뷰 내의 테이블 조인 순서가 결정됩니다. 예를 들어 다음 쿼리는 세 개의 테이블과 한 개의 뷰에서 선택합니다.
 
@@ -169,7 +173,7 @@ WHERE Table1.Col1 = Table2.Col1
 OPTION (FORCE ORDER);
 ```
 
-`View1`은 다음과 같이 정의됩니다.
+`View1` 은 다음과 같이 정의됩니다.
 
 ```
 CREATE VIEW View1 AS
@@ -177,7 +181,7 @@ SELECT Colx, Coly FROM TableA, TableB
 WHERE TableA.ColZ = TableB.Colz;
 ```
 
-쿼리 계획의 조인 순서는 `Table1`,`Table2`, `TableA`, `TableB`, `Table3`입니다.
+쿼리 계획의 조인 순서는 `Table1`, `Table2`, `TableA`, `TableB`, `Table3`입니다.
 
 ### <a name="resolving-indexes-on-views"></a>뷰의 인덱스 확인
 
@@ -194,7 +198,7 @@ WHERE TableA.ColZ = TableB.Colz;
   * `ARITHABORT`
   * `CONCAT_NULL_YIELDS_NULL`
   * `QUOTED_IDENTIFIER` 
-  * 세션 옵션 `NUMERIC_ROUNDABORT`이 OFF로 설정되어 있습니다.
+  * 세션 옵션 `NUMERIC_ROUNDABORT` 이 OFF로 설정되어 있습니다.
 * 쿼리 최적화 프로그램에서 쿼리의 요소와 뷰 인덱스 열 간의 일치 사항을 찾습니다. 예를 들어 다음과 같은 사항이 일치합니다. 
   * WHERE 절의 검색 조건 조건자
   * 조인 작업
@@ -205,7 +209,7 @@ WHERE TableA.ColZ = TableB.Colz;
 * 인덱싱된 뷰의 테이블 참조에 해당하는 쿼리에서 뷰를 확장하여 기본 테이블에 액세스하는 방식으로 테이블을 참조하거나 직접 테이블을 참조하는 경우 쿼리에서 참조하는 모든 테이블에 같은 힌트 집합이 적용되어 있어야 합니다.
 
 > [!NOTE] 
-항목을 참조하세요. 이 컨텍스트에서 `READCOMMITTED` 힌트와 `READCOMMITTEDLOCK` 힌트는 현재 트랜잭션 격리 수준과 관계없이 항상 다른 힌트로 간주됩니다.
+절에 포함될 수 있습니다. 이 컨텍스트에서 `READCOMMITTED` 힌트와 `READCOMMITTEDLOCK` 힌트는 현재 트랜잭션 격리 수준과 관계없이 항상 다른 힌트로 간주됩니다.
  
 `SET` 옵션 및 테이블 힌트에 대한 요구 사항을 제외하고 위의 사항은 쿼리 최적화 프로그램에서 쿼리가 테이블 인덱스 범위에 해당하는지 즉, 테이블 인덱스로 쿼리를 처리할 수 있는지 여부를 확인하는 데 사용하는 규칙과 동일합니다. 인덱싱된 뷰를 사용하기 위해 쿼리에 아무 것도 추가로 지정할 필요가 없습니다.
 
@@ -215,13 +219,13 @@ WHERE TableA.ColZ = TableB.Colz;
 
 #### <a name="using-hints-with-indexed-views"></a>인덱싱된 뷰에 힌트 사용
 
-`EXPAND VIEWS` 쿼리 힌트를 사용하여 쿼리에 뷰 인덱스가 사용되지 않도록 하거나 `NOEXPAND` 테이블 힌트를 사용하여 쿼리의 `FROM` 절에 지정된 인덱싱된 뷰에 인덱스가 사용되도록 할 수 있습니다. 그러나 쿼리 최적화 프로그램이 각 쿼리에 사용할 최상의 액세스 방법을 동적으로 결정하도록 해야 합니다. `EXPAND`와 `NOEXPAND`는 성능을 크게 향상하는 것으로 확인된 특정 경우에만 사용합니다.
+`EXPAND VIEWS` 쿼리 힌트를 사용하여 쿼리에 뷰 인덱스가 사용되지 않도록 하거나 `NOEXPAND` 테이블 힌트를 사용하여 쿼리의 `FROM` 절에 지정된 인덱싱된 뷰에 인덱스가 사용되도록 할 수 있습니다. 그러나 쿼리 최적화 프로그램이 각 쿼리에 사용할 최상의 액세스 방법을 동적으로 결정하도록 해야 합니다. `EXPAND` 와 `NOEXPAND` 는 성능을 크게 향상하는 것으로 확인된 특정 경우에만 사용합니다.
 
 `EXPAND VIEWS` 옵션은 쿼리 최적화 프로그램이 전체 쿼리에 뷰 인덱스를 사용하지 않도록 지정합니다. 
 
-뷰에 `NOEXPAND`를 지정하면 쿼리 최적화 프로그램은 뷰에 정의된 인덱스의 사용을 고려합니다. 선택적 `INDEX()` 절을 사용하여 `NOEXPAND`를 지정하면 쿼리 최적화 프로그램은 지정된 인덱스를 사용합니다. `NOEXPAND`는 인덱싱된 뷰에만 지정할 수 있고 인덱싱되지 않은 뷰에는 지정할 수 없습니다.
+뷰에 `NOEXPAND` 를 지정하면 쿼리 최적화 프로그램은 뷰에 정의된 인덱스의 사용을 고려합니다. 선택적`NOEXPAND` 절을 사용하여 `INDEX()` 를 지정하면 쿼리 최적화 프로그램은 지정된 인덱스를 사용합니다. `NOEXPAND` 는 인덱싱된 뷰에만 지정할 수 있고 인덱싱되지 않은 뷰에는 지정할 수 없습니다.
 
-뷰를 포함하는 쿼리에서 `NOEXPAND`와 `EXPAND VIEWS`를 지정하지 않으면 뷰가 확장되어 기본 테이블에 액세스합니다. 뷰를 구성하는 쿼리에 테이블 힌트가 포함된 경우 해당 힌트는 기본 테이블로 전파됩니다. 이 프로세스는 뷰 확인에서 자세히 설명합니다. 뷰의 기본 테이블에 있는 힌트 집합이 모두 동일하면 쿼리를 인덱싱된 뷰와 일치시킬 수 있습니다. 대부분의 경우 이러한 힌트는 뷰에서 직접 상속되기 때문에 서로 일치합니다. 그러나 쿼리가 뷰 대신 테이블을 참조하고 이러한 테이블에 직접 적용된 힌트가 동일하지 않으면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다. 뷰 확장 후 쿼리에서 참조하는 테이블에 `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK` 또는 `XLOCK` 힌트가 적용되면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다.
+뷰를 포함하는 쿼리에서 `NOEXPAND` 와 `EXPAND VIEWS` 를 지정하지 않으면 뷰가 확장되어 기본 테이블에 액세스합니다. 뷰를 구성하는 쿼리에 테이블 힌트가 포함된 경우 해당 힌트는 기본 테이블로 전파됩니다. 이 프로세스는 뷰 확인에서 자세히 설명합니다. 뷰의 기본 테이블에 있는 힌트 집합이 모두 동일하면 쿼리를 인덱싱된 뷰와 일치시킬 수 있습니다. 대부분의 경우 이러한 힌트는 뷰에서 직접 상속되기 때문에 서로 일치합니다. 그러나 쿼리가 뷰 대신 테이블을 참조하고 이러한 테이블에 직접 적용된 힌트가 동일하지 않으면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다. 뷰 확장 후 쿼리에서 참조하는 테이블에 `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`또는 `XLOCK` 힌트가 적용되면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다.
 
 `INDEX (index_val[ ,...n] )` 형식의 테이블 힌트가 쿼리의 뷰를 참조하는 경우 `NOEXPAND` 힌트를 지정하지 않으면 인덱스 힌트가 무시됩니다. 특정 인덱스를 사용하도록 지정하려면 `NOEXPAND를 사용합니다. 
 
@@ -238,7 +242,7 @@ SQL Server에서는 분산 쿼리를 효율적으로 사용하여 원격 멤버 
 * 먼저 쿼리 프로세서는 OLE DB를 사용하여 각 멤버 테이블에서 check 제약 조건 정의를 검색합니다. 쿼리 프로세서는 이를 통해 멤버 테이블에 키 값을 분산하여 매핑할 수 있습니다.
 * 쿼리 프로세서는 SQL 문 `WHERE` 절에 지정된 키 범위를 멤버 테이블에 행이 배포되는 방식을 보여 주는 맵과 비교합니다. 그런 다음 쿼리 프로세서는 분산 쿼리를 사용하여 SQL 문을 완료하는 데 필요한 원격 행만 검색하는 쿼리 실행 계획을 작성합니다. 또한 실행 계획은 데이터 또는 메타데이터가 요청될 때까지 이러한 데이터를 얻기 위해 원격 멤버 테이블에 액세스하는 것을 연기하는 방식으로도 작성됩니다.
 
-예를 들어 Server1(1부터 3299999까지의 `CustomerID`), Server2(3300000부터 6599999까지의 `CustomerID`) 및 Server3(6600000부터 9999999까지의 `CustomerID`)에 걸쳐 customers 테이블이 분할된 시스템이 있다고 가정합니다.
+예를 들어 Server1(1부터 3299999까지의`CustomerID` ), Server2(3300000부터 6599999까지의`CustomerID` ) 및 Server3(6600000부터 9999999까지의`CustomerID` )에 걸쳐 customers 테이블이 분할된 시스템이 있다고 가정합니다.
 
 Server1에서 실행되는 다음 쿼리에 대해 작성된 실행 계획을 검토합니다.
 
@@ -315,7 +319,7 @@ SELECT * FROM Person.Person;
 
 데이터베이스 엔진에서는 리소스 모니터와 사용자 스레드를 사용하여 프로시저 캐시에서 메모리를 확보하여 메모리 부족 문제에 대처합니다. 리소스 모니터와 사용자 스레드를 통해 계획의 실행 여부를 동시에 조사하여 사용되지 않는 실행 계획 각각의 현재 비용을 줄일 수 있습니다. 전체적인 메모리 부족 현상이 발생하면 리소스 모니터를 통해 프로시저 캐시에서 실행 계획이 제거됩니다. 리소스 모니터에서는 시스템 메모리, 프로세스 메모리, 리소스 풀 메모리 및 모든 캐시의 최대 크기에 대한 정책을 따르는 방식으로 메모리를 확보합니다. 
 
-모든 캐시의 최대 크기는 버퍼 풀 크기에 따라 결정되며 최대 서버 메모리를 초과할 수 없습니다. 최대 서버 메모리를 구성하는 방법에 대한 자세한 내용은 `sp_configure`에서 `max server memory` 설정을 참조하세요. 
+모든 캐시의 최대 크기는 버퍼 풀 크기에 따라 결정되며 최대 서버 메모리를 초과할 수 없습니다. 최대 서버 메모리를 구성하는 방법에 대한 자세한 내용은 `max server memory` 에서 `sp_configure`설정을 참조하세요. 
 
 단일 캐시 메모리 부족 현상이 발생하면 사용자 스레드를 통해 프로시저 캐시에서 실행 계획이 제거됩니다. 이때는 단일 캐시의 최대 크기와 단일 캐시의 최대 항목 수에 대한 정책을 따릅니다. 
 
@@ -334,7 +338,7 @@ SELECT * FROM Person.Person;
 * 쿼리에서 참조하는 테이블이나 뷰가 변경된 경우(`ALTER TABLE` 및 `ALTER VIEW`).
 * 단일 프로시저가 변경된 경우. 이 경우 해당 프로시저의 모든 계획이 캐시에서 삭제됩니다(`ALTER PROCEDURE`).
 * 실행 계획에 사용되는 인덱스가 변경된 경우
-* `UPDATE STATISTICS` 등의 문에서 명시적으로 생성되거나 자동으로 생성되어 실행 계획에 사용되는 통계가 업데이트된 경우.
+* `UPDATE STATISTICS`등의 문에서 명시적으로 생성되거나 자동으로 생성되어 실행 계획에 사용되는 통계가 업데이트된 경우.
 * 실행 계획에 사용되는 인덱스가 삭제된 경우
 * `sp_recompile`에 대한 명시적 호출.
 * 쿼리에서 참조하는 테이블을 수정하는 다른 사용자가 `INSERT` 또는 `DELETE` 문으로 키를 많이 변경한 경우.
@@ -347,28 +351,28 @@ SQL Server 2000에서는 일괄 처리 내의 문이 다시 컴파일을 발생�
 
 다시 컴파일을 유발하고 이에 따라 CPU 시간 및 잠금과 관련하여 성능 저하를 일으키는 문의 수는 대개 적으므로 문 수준 다시 컴파일이 성능에 유리합니다. 문 수준 다시 컴파일을 사용하면 다시 컴파일하지 않아도 되는 일괄 처리 내의 다른 문의 경우 이러한 성능 저하가 발생하지 않습니다.
 
-SQL Server Profiler `SP:Recompile` 추적 이벤트는 문 수준의 다시 컴파일이 있는지 보고합니다. SQL Server 2000에서는 이 추적 이벤트가 일괄 처리 다시 컴파일만 보고합니다. 또한 이 이벤트의 `TextData` 열이 채워집니다. 따라서 SQL Server 2000에서처럼 다시 컴파일을 발생시킨 Transact-SQL 텍스트를 찾기 위해 `SP:StmtStarting` 또는 `SP:StmtCompleted`를 추적하지 않아도 됩니다.
+SQL Server Profiler `SP:Recompile` 추적 이벤트는 문 수준의 다시 컴파일이 있는지 보고합니다. SQL Server 2000에서는 이 추적 이벤트가 일괄 처리 다시 컴파일만 보고합니다. 또한 이 이벤트의 `TextData` 열이 채워집니다. 따라서 SQL Server 2000에서처럼 다시 컴파일을 발생시킨 Transact-SQL 텍스트를 찾기 위해 `SP:StmtStarting` 또는 `SP:StmtCompleted` 를 추적하지 않아도 됩니다.
 
-`SQL:StmtRecompile` 추적 이벤트는 문 수준의 다시 컴파일이 있는지 보고합니다. 이 추적 이벤트는 다시 컴파일을 추적하고 디버깅하는 데 사용할 수 있습니다. `SP:Recompile`은 저장 프로시저와 트리거에 대해서만 생성되는 반면 `SQL:StmtRecompile`은 `sp_executesql`, 준비된 쿼리 및 동적 SQL을 사용하여 실행되는 저장 프로시저, 트리거, 임시 일괄 처리 및 일괄 처리에 대해 생성됩니다.
+`SQL:StmtRecompile` 추적 이벤트는 문 수준의 다시 컴파일이 있는지 보고합니다. 이 추적 이벤트는 다시 컴파일을 추적하고 디버깅하는 데 사용할 수 있습니다. `SP:Recompile` 은 저장 프로시저와 트리거에 대해서만 생성되는 반면 `SQL:StmtRecompile` 은 `sp_executesql`, 준비된 쿼리 및 동적 SQL을 사용하여 실행되는 저장 프로시저, 트리거, 임시 일괄 처리 및 일괄 처리에 대해 생성됩니다.
 
-`SP:Recompile` 및 `SQL:StmtRecompile`의 `EventSubClass` 열에는 다시 컴파일된 이유를 나타내는 정수 코드가 들어 있습니다. 다음 표에서는 각 코드 번호의 의미를 설명합니다.
+`EventSubClass` 및 `SP:Recompile` 의 `SQL:StmtRecompile` 열에는 다시 컴파일된 이유를 나타내는 정수 코드가 들어 있습니다. 다음 표에서는 각 코드 번호의 의미를 설명합니다.
 
 |EventSubClass 값    |Description    |
 |----|----|
-|1  |스키마가 변경되었습니다.    |
-|2  |통계가 변경되었습니다.    |
-|3  |지연된 컴파일입니다.  |
-|4  |SET 옵션이 변경되었습니다.    |
-|5  |임시 테이블이 변경되었습니다.   |
-|6  |원격 행 집합이 변경되었습니다. |
-|7  |`FOR BROWSE` 권한이 변경되었습니다.   |
-|8  |쿼리 알림 환경이 변경되었습니다.    |
-|9  |분할된 뷰가 변경되었습니다.  |
-|10 |커서 옵션이 변경되었습니다.    |
-|11 |`OPTION (RECOMPILE)`이 요청되었습니다. |
+|1    |스키마가 변경되었습니다.    |
+|2    |통계가 변경되었습니다.    |
+|3    |지연된 컴파일입니다.    |
+|4    |SET 옵션이 변경되었습니다.    |
+|5    |임시 테이블이 변경되었습니다.    |
+|6    |원격 행 집합이 변경되었습니다.    |
+|7    |`FOR BROWSE` 권한이 변경되었습니다.    |
+|8    |쿼리 알림 환경이 변경되었습니다.    |
+|9    |분할된 뷰가 변경되었습니다.    |
+|10    |커서 옵션이 변경되었습니다.    |
+|11    |`OPTION (RECOMPILE)` 이 요청되었습니다.    |
 
 > [!NOTE]
-> `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `ON`으로 `SET`하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `OFF`로 `SET`하면 통계나 카디널리티 변경 내용에 따른 다시 컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. SQL Server 2000에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 사항에 따라 계속하여 쿼리가 다시 컴파일됩니다.
+> `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `SET` 으로 `ON`하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `SET` 로 `OFF`하면 통계나 카디널리티 변경 내용에 따른 다시 컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. SQL Server 2000에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 사항에 따라 계속하여 쿼리가 다시 컴파일됩니다.
  
 
 ### <a name="parameters-and-execution-plan-reuse"></a>매개 변수 및 실행 계획 재사용
@@ -413,7 +417,7 @@ WHERE ProductSubcategoryID = 4;
 
 * ADO, OLE DB 및 ODBC는 매개 변수 표식을 사용합니다. 매개 변수 표식은 SQL 문의 상수를 대신하는 물음표(?)로 프로그램 변수에 바인딩됩니다. 예를 들어 ODBC 응용 프로그램에서는 다음을 수행합니다. 
 
-   * `SQLBindParameter`를 사용하여 SQL 문에서 정수 변수를 첫째 매개 변수 표식에 바인딩합니다.
+   * `SQLBindParameter` 를 사용하여 SQL 문에서 정수 변수를 첫째 매개 변수 표식에 바인딩합니다.
    * 변수에 정수 값을 배치합니다.
    * 매개 변수 표식(?)을 지정하여 문을 실행합니다. 
 
@@ -425,11 +429,11 @@ WHERE ProductSubcategoryID = 4;
      SQL_NTS);
    ```
 
-   응용 프로그램에서 매개 변수 표식을 사용하는 경우 SQL Server에 포함된 SQL Server Native Client OLE DB Provider와 SQL Server Native Client ODBC 드라이버는 `sp_executesql`을 사용하여 문을 SQL Server에 보냅니다. 
+   응용 프로그램에서 매개 변수 표식을 사용하는 경우 SQL Server에 포함된 SQL Server Native Client OLE DB Provider와 SQL Server Native Client ODBC 드라이버는 `sp_executesql` 을 사용하여 문을 SQL Server에 보냅니다. 
 
 * 기본적으로 매개 변수를 사용하는 저장 프로시저를 디자인합니다.
 
-응용 프로그램 디자인 내에 매개 변수를 명시적으로 구축하지 않은 경우에는 단순 매개 변수화의 기본 동작을 사용하여 SQL Server 쿼리 최적화 프로그램에서 특정 쿼리를 자동으로 매개 변수화하도록 할 수 있습니다. 또는 `ALTER DATABASE` 문의 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하여 데이터베이스의 모든 쿼리를 강제 매개 변수화하도록 쿼리 최적화 프로그램을 설정할 수 있습니다.
+응용 프로그램 디자인 내에 매개 변수를 명시적으로 구축하지 않은 경우에는 단순 매개 변수화의 기본 동작을 사용하여 SQL Server 쿼리 최적화 프로그램에서 특정 쿼리를 자동으로 매개 변수화하도록 할 수 있습니다. 또는 `PARAMETERIZATION` 문의 `ALTER DATABASE` 옵션을 `FORCED`로 설정하여 데이터베이스의 모든 쿼리를 강제 매개 변수화하도록 쿼리 최적화 프로그램을 설정할 수 있습니다.
 
 강제 매개 변수화를 설정한 경우에도 단순 매개 변수화가 계속해서 수행될 수 있습니다. 예를 들어 다음 쿼리는 강제 매개 변수화 규칙에 따라 매개 변수화할 수 없습니다.
 
@@ -472,24 +476,24 @@ WHERE ProductSubcategoryID = 4;
 > [!NOTE]
 > +, -, *, / 또는 % 산술 연산자를 사용하여 암시적 또는 명시적으로 int, smallint, tinyint 또는 bigint 상수 값을 float, real, decimal 또는 numeric의 데이터 형식으로 변환할 때 SQL Server는 특정 규칙에 따라 식 결과의 형식과 전체 자릿수를 계산합니다. 그러나 이러한 규칙은 쿼리의 매개 변수화 여부에 따라 다릅니다. 따라서 쿼리에서 유사한 식을 사용해도 다른 결과가 발생하는 경우가 있습니다.
 
-SQL Server는 단순 매개 변수화의 기본 동작에 따라 비교적 작은 클래스의 쿼리를 매개 변수화합니다. 그러나 `ALTER DATABASE` 명령의 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하여 데이터베이스의 모든 쿼리를 특정 제한 사항에 따라 매개 변수화하도록 지정할 수 있습니다. 이렇게 하면 쿼리 컴파일 빈도를 낮추어 대량의 동시 쿼리가 발생하는 데이터베이스의 성능이 향상될 수 있습니다.
+SQL Server는 단순 매개 변수화의 기본 동작에 따라 비교적 작은 클래스의 쿼리를 매개 변수화합니다. 그러나 `PARAMETERIZATION` 명령의 `ALTER DATABASE` 옵션을 `FORCED`로 설정하여 데이터베이스의 모든 쿼리를 특정 제한 사항에 따라 매개 변수화하도록 지정할 수 있습니다. 이렇게 하면 쿼리 컴파일 빈도를 낮추어 대량의 동시 쿼리가 발생하는 데이터베이스의 성능이 향상될 수 있습니다.
 
 또는 구문은 동일하고 매개 변수 값만 다른 쿼리 및 단일 쿼리를 매개 변수화하도록 지정할 수 있습니다. 
 
 
 ### <a name="forced-parameterization"></a>강제 매개 변수화
 
-데이터베이스의 모든 `SELECT`, `INSERT`, `UPDATE`, `DELETE` 문이 특정 제한에 따라 매개 변수화되도록 지정하여 의 기본 단순 매개 변수화 동작을 무시할 수 있습니다. 강제 매개 변수화는 `ALTER DATABASE` 문에서 `PARAMETERIZATION` 옵션을 `FORCED`로 설정하면 적용됩니다. 강제 매개 변수화를 사용하여 쿼리 컴파일 및 재컴파일 빈도를 줄여 특정 데이터베이스의 성능을 향상시킬 수 있습니다. 일반적으로 POS(Point of Sale) 응용 프로그램과 같은 원본으로부터 대량의 동시 쿼리를 처리하는 데이터베이스에서 강제 매개 변수화를 사용하면 도움이 될 수 있습니다.
+데이터베이스의 모든 `SELECT`, `INSERT`, `UPDATE`, `DELETE` 문이 특정 제한에 따라 매개 변수화되도록 지정하여 의 기본 단순 매개 변수화 동작을 무시할 수 있습니다. 강제 매개 변수화는 `PARAMETERIZATION` 문에서 `FORCED` 옵션을 `ALTER DATABASE` 로 설정하면 적용됩니다. 강제 매개 변수화를 사용하여 쿼리 컴파일 및 재컴파일 빈도를 줄여 특정 데이터베이스의 성능을 향상시킬 수 있습니다. 일반적으로 POS(Point of Sale) 응용 프로그램과 같은 원본으로부터 대량의 동시 쿼리를 처리하는 데이터베이스에서 강제 매개 변수화를 사용하면 도움이 될 수 있습니다.
 
-`PARAMETERIZATION` 옵션을 `FORCED`로 설정하면 임의의 형식으로 전송된 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문에 표시되는 리터럴 값이 쿼리 컴파일 중에 매개 변수로 변환됩니다. 그러나 다음 쿼리 구문에 나타나는 리터럴은 예외입니다. 
+`PARAMETERIZATION` 옵션을 `FORCED`로 설정하면 임의의 형식으로 전송된 `SELECT`, `INSERT`, `UPDATE`또는 `DELETE` 문에 표시되는 리터럴 값이 쿼리 컴파일 중에 매개 변수로 변환됩니다. 그러나 다음 쿼리 구문에 나타나는 리터럴은 예외입니다. 
 
 * `INSERT...EXECUTE` 문.
 * 저장 프로시저, 트리거 또는 사용자 정의 함수의 본문 안에 있는 문. SQL Server는 이미 이러한 루틴에 대한 쿼리 계획을 재사용하고 있습니다.
 * 클라이언트 쪽 응용 프로그램에서 이미 매개 변수화된 준비된 문
 * XQuery 메서드 호출이 포함된 문. 이러한 문에서는 `WHERE` 절과 같이 해당 인수가 일반적으로 매개 변수화되는 컨텍스트에서 메서드가 나타납니다. 해당 인수가 매개 변수화되지 않는 컨텍스트에서 메서드가 나타날 경우에는 문의 나머지 부분이 매개 변수화됩니다.
-* Transact-SQL 커서(Transact-SQL cursor) 내의 문. API 커서 내의 `SELECT` 문은 매개 변수화됩니다.
+* Transact-SQL 커서(Transact-SQL cursor) 내의 문. API 커서 내의`SELECT` 문은 매개 변수화됩니다.
 * 사용되지 않는 쿼리 구문
-* `ANSI_PADDING` 또는 `ANSI_NULLS`를 `OFF`로 설정한 컨텍스트에서 실행되는 모든 문.
+* `ANSI_PADDING` 또는 `ANSI_NULLS` 를 `OFF`로 설정한 컨텍스트에서 실행되는 모든 문.
 * 매개 변수화하기에 적합한 리터럴이 2,097개 이상 포함된 문
 * `WHERE T.col2 >= @bb`와 같은 변수를 참조하는 문
 * `RECOMPILE` 쿼리 힌트를 포함하는 문.
@@ -499,9 +503,9 @@ SQL Server는 단순 매개 변수화의 기본 동작에 따라 비교적 작�
 또한 다음 쿼리 절은 매개 변수화되지 않습니다. 이러한 경우 해당 절만 매개 변수화되지 않습니다. 동일한 쿼리 내의 다른 절에는 강제 매개 변수화가 적용될 수 있습니다.
 
 * 모든 `SELECT` 문의 <select_list>. 여기에는 하위 쿼리의 `SELECT` 목록과 `INSERT` 문 내의 `SELECT` 목록도 포함됩니다.
-* `IF` 문에 나타나는 하위 쿼리 `SELECT` 문.
-* 쿼리의 `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO` 또는 `FOR XM`L 절.
-* `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML` 또는 모든 `FULLTEXT` 연산자에 대한 직접 인수 또는 하위 식으로서의 인수.
+* `SELECT` 문에 나타나는 하위 쿼리 `IF` 문.
+* 쿼리의 `TOP`, `TABLESAMPLE`, `HAVING`, `GROUP BY`, `ORDER BY`, `OUTPUT...INTO`또는 `FOR XM`L 절.
+* `OPENROWSET`, `OPENQUERY`, `OPENDATASOURCE`, `OPENXML`또는 모든 `FULLTEXT` 연산자에 대한 직접 인수 또는 하위 식으로서의 인수.
 * `LIKE` 절의 pattern 및 escape_character 인수.
 * `CONVERT` 절의 style 인수.
 * `IDENTITY` 절 내의 정수 상수
@@ -509,10 +513,10 @@ SQL Server는 단순 매개 변수화의 기본 동작에 따라 비교적 작�
 * +, -, *, / 및 % 연산자의 인수인 상수 폴딩 가능 식. SQL Server에서는 식이 강제 매개 변수화에 적합한지 결정할 때 다음 조건 중 하나가 True이면 상수 폴딩 가능 식으로 간주합니다.  
   * 식에 열, 변수 또는 하위 쿼리가 나타나지 않습니다.  
   * 식에 `CASE` 절이 포함됩니다.  
-* 쿼리 힌트 절에 대한 인수. 여기에는 `FAST` 쿼리 힌트의 `number_of_rows` 인수, `MAXDOP` 쿼리 힌트의 `number_of_processors` 인수 및 `MAXRECURSION` 쿼리 힌트의 숫자 인수가 포함됩니다.
+* 쿼리 힌트 절에 대한 인수. 여기에는 `number_of_rows` 쿼리 힌트의 `FAST` 인수, `number_of_processors` 쿼리 힌트의 `MAXDOP` 인수 및 `MAXRECURSION` 쿼리 힌트의 숫자 인수가 포함됩니다.
 
 
-매개 변수화는 개별 Transact-SQL 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 (@1 tinyint와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
+매개 변수화는 개별 Transact-SQL 문 수준에서 수행됩니다. 다시 말해 일괄 처리 내의 개별 문이 매개 변수화됩니다. 컴파일 후 매개 변수가 있는 쿼리는 쿼리가 원래 전송되었던 일괄 처리의 컨텍스트에서 실행됩니다. 쿼리의 실행 계획이 캐시된 경우에는 sys.syscacheobjects 동적 관리 뷰의 sql 열을 참조하여 쿼리가 매개 변수화되었는지 여부를 확인할 수 있습니다. 쿼리가 매개 변수화된 경우 (@1 tinyint)와 같이 이 열에서 매개 변수의 이름 및 데이터 형식은 전송된 일괄 처리 텍스트 앞에 옵니다.
 
 > [!NOTE]
 > 매개 변수 이름은 임의로 지정하므로 사용자나 응용 프로그램에서는 특정 명명 순서를 따를 필요가 없습니다. 또한 매개 변수 이름, 매개 변수화되는 리터럴 선택 항목 및 매개 변수화된 텍스트의 공백도 SQL Server 버전과 서비스 팩이 업그레이드되면서 바뀝니다.
@@ -534,12 +538,12 @@ SQL Server에서 리터럴을 매개 변수화하면 매개 변수가 다음 데
 `PARAMETERIZATION` 옵션을 FORCED로 설정할 때는 다음 사항을 고려해야 합니다.
 
 * 강제 매개 변수화를 적용하면 쿼리 컴파일 시 쿼리의 리터럴 상수가 매개 변수로 변경됩니다. 따라서 쿼리 최적화 프로그램에서는 만족스럽지 못한 쿼리 계획을 선택할 수 있습니다. 특히 쿼리 최적화 프로그램에서는 인덱싱된 뷰 또는 계산 열의 인덱스에 쿼리를 대응시키지 못할 수 있습니다. 또한 분할된 테이블 및 분산형 분할 뷰에 대해 만족스럽지 못한 쿼리 계획을 선택할 수도 있습니다. 계산 열의 인덱스 및 인덱싱된 뷰를 많이 사용하는 환경에서는 강제 매개 변수화를 사용하면 안 됩니다. 일반적으로 `PARAMETERIZATION FORCED` 옵션은 숙련된 데이터베이스 관리자가 성능에 영향을 주지 않는다는 것을 확인한 후에만 사용해야 합니다.
-* 둘 이상의 데이터베이스를 참조하는 분산 쿼리에 강제 매개 변수화를 사용하면 좋습니다. 단, 쿼리가 실행되는 데이터베이스의 컨텍스트에서 `PARAMETERIZATION` 옵션이 `FORCED`로 설정되어 있어야 합니다.
-* `PARAMETERIZATION` 옵션을 `FORCED`로 설정하면 현재 컴파일되거나 다시 컴파일되거나 실행되고 있는 쿼리 계획을 제외한 모든 쿼리 계획이 데이터베이스의 계획 캐시에서 플러시됩니다. 설정을 변경할 때 컴파일 또는 실행 중이었던 쿼리 계획은 다음에 쿼리가 실행될 때 매개 변수화됩니다.
+* 둘 이상의 데이터베이스를 참조하는 분산 쿼리에 강제 매개 변수화를 사용하면 좋습니다. 단, 쿼리가 실행되는 데이터베이스의 컨텍스트에서 `PARAMETERIZATION` 옵션이 `FORCED` 로 설정되어 있어야 합니다.
+* `PARAMETERIZATION` 옵션을 `FORCED` 로 설정하면 현재 컴파일되거나 다시 컴파일되거나 실행되고 있는 쿼리 계획을 제외한 모든 쿼리 계획이 데이터베이스의 계획 캐시에서 플러시됩니다. 설정을 변경할 때 컴파일 또는 실행 중이었던 쿼리 계획은 다음에 쿼리가 실행될 때 매개 변수화됩니다.
 * `PARAMETERIZATION` 옵션을 설정하는 작업은 온라인으로 수행되므로 데이터베이스 수준의 배타적 잠금이 필요하지 않습니다.
 * 현재 `PARAMETERIZATION` 옵션 설정은 데이터베이스를 다시 연결하거나 복원할 때도 그대로 유지됩니다.
 
-단일 쿼리 또는 구문은 동일하고 매개 변수 값만 다른 기타 쿼리는 단순 매개 변수화되지 않도록 지정하여 강제 매개 변수화의 동작을 무시할 수 있습니다. 반대로 데이터베이스에서 강제 매개 변수화가 해제된 경우에도 구문이 동일한 쿼리에 한해 강제 매개 변수화가 수행되도록 지정할 수 있습니다. 이와 같은 작업을 수행할 때 [계획 지침](../relational-databases/performance/plan-guides.md)을 사용합니다.
+단일 쿼리 또는 구문은 동일하고 매개 변수 값만 다른 기타 쿼리는 단순 매개 변수화되지 않도록 지정하여 강제 매개 변수화의 동작을 무시할 수 있습니다. 반대로 데이터베이스에서 강제 매개 변수화가 해제된 경우에도 구문이 동일한 쿼리에 한해 강제 매개 변수화가 수행되도록 지정할 수 있습니다. 이와 같은 작업을 수행할 때[계획 지침](../relational-databases/performance/plan-guides.md) 을 사용합니다.
 
 > [!NOTE]
 > `PARAMETERIZATION` 옵션이 `FORCED`로 설정되어 있으면 오류 메시지 보고가 단순 매개 변수화의 경우와 다를 수 있습니다. 단순 매개 변수화에서 보고되는 메시지보다 많은 오류 메시지가 보고될 수 있으며 오류가 발생한 줄 번호가 잘못 보고될 수 있습니다.
@@ -592,7 +596,7 @@ SQL Server에서는 준비/실행 모델이 직접 실행에 비해 성능상의
 
 SQL Server에서는 마이크로프로세서(CPU)를 두 개 이상 사용하는 컴퓨터에서 쿼리 실행과 인덱스 작업을 최적화하는 병렬 쿼리 기능을 제공합니다. SQL Server는 여러 개의 운영 체제 스레드로 쿼리나 인덱스 작업을 병렬 수행할 수 있으므로 작업을 빠르고 효율적으로 완료할 수 있습니다.
 
-쿼리를 최적화하는 동안 SQL Server는 병렬 실행에 적합한 쿼리나 인덱스 작업을 찾습니다. 이러한 쿼리에 대해 SQL Server는 쿼리 실행 계획에 교환 연산자를 삽입하여 병렬 실행할 쿼리를 준비합니다. 교환 연산자는 프로세스 관리, 데이터 재배포 및 흐름 제어를 제공하는 쿼리 실행 계획의 연산자입니다. 교환 연산자에는 하위 유형으로 `Distribute Streams`, `Repartition Streams` 및 `Gather Streams` 논리 연산자가 포함되며 이 중에서 하나 이상이 병렬 쿼리에 대한 쿼리 계획의 실행 계획 출력에 표시될 수 있습니다. 
+쿼리를 최적화하는 동안 SQL Server는 병렬 실행에 적합한 쿼리나 인덱스 작업을 찾습니다. 이러한 쿼리에 대해 SQL Server는 쿼리 실행 계획에 교환 연산자를 삽입하여 병렬 실행할 쿼리를 준비합니다. 교환 연산자는 프로세스 관리, 데이터 재배포 및 흐름 제어를 제공하는 쿼리 실행 계획의 연산자입니다. 교환 연산자에는 하위 유형으로 `Distribute Streams`, `Repartition Streams`및 `Gather Streams` 논리 연산자가 포함되며 이 중에서 하나 이상이 병렬 쿼리에 대한 쿼리 계획의 실행 계획 출력에 표시될 수 있습니다. 
 
 교환 연산자를 삽입하면 병렬 쿼리 실행 계획이 완성됩니다. 병렬 쿼리 실행 계획은 스레드를 여러 개 사용할 수 있습니다. 병렬이 아닌 쿼리에서 사용하는 직렬 실행 계획은 실행에 한 스레드만 사용합니다. 병렬 쿼리에서 사용하는 실제 스레드 수는 쿼리 계획 실행 초기화 시 결정되며 계획의 복잡성과 병렬 처리 수준에 따라 다릅니다. 병렬 처리 수준에 따라 사용할 최대 CPU 수가 결정됩니다. 사용할 스레드 수를 의미하지는 않습니다. 병렬 처리 수준 값은 서버 수준에서 설정되며 sp_configure 시스템 저장 프로시저를 사용하여 수정할 수 있습니다. 또한 `MAXDOP` 쿼리 힌트나 `MAXDOP` 인덱스 옵션을 지정하여 개별 쿼리나 인덱스 문에 대해 이 값을 재정의할 수 있습니다. 
 
@@ -634,7 +638,7 @@ SQL Server에서는 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 �
 
 #### <a name="overriding-degrees-of-parallelism"></a>병렬 처리 수준 재정의
 
-[max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 서버 구성 옵션([!INCLUDE[ssSDS_md](../includes/sssds-md.md)]에서 [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md))을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. 개별 쿼리 및 인덱스 작업 문에 대한 max degree of parallelism 옵션은 MAXDOP 쿼리 힌트나 MAXDOP 인덱스 옵션을 지정하여 재정의할 수 있습니다. MAXDOP 옵션을 사용하면 개별 쿼리 작업과 인덱스 작업을 보다 상세히 제어할 수 있습니다. 예를 들어 MAXDOP 옵션을 사용하여 온라인 인덱스 작업 전용으로 사용되는 프로세서의 수를 늘리거나 줄일 수 있습니다. 이런 방법으로 인덱스 작업에 사용되는 리소스와 동시 사용자의 리소스 간에 균형을 유지할 수 있습니다. 최대 병렬 처리 수준 옵션을 0으로 설정하면 SQL Server에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행에 사용할 수 있습니다. 쿼리와 인덱스에 대해 MAXDOP를 0으로 설정하면 SQL Server에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행의 지정된 쿼리 또는 인덱스에 대해 사용할 수 있습니다.
+[max degree of parallelism](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 서버 구성 옵션([에서](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) ALTER DATABASE SCOPED CONFIGURATION [!INCLUDE[ssSDS_md](../includes/sssds-md.md)] )을 사용하여 병렬 계획 실행에 사용할 프로세서 수를 제한할 수 있습니다. 개별 쿼리 및 인덱스 작업 문에 대한 max degree of parallelism 옵션은 MAXDOP 쿼리 힌트나 MAXDOP 인덱스 옵션을 지정하여 재정의할 수 있습니다. MAXDOP 옵션을 사용하면 개별 쿼리 작업과 인덱스 작업을 보다 상세히 제어할 수 있습니다. 예를 들어 MAXDOP 옵션을 사용하여 온라인 인덱스 작업 전용으로 사용되는 프로세서의 수를 늘리거나 줄일 수 있습니다. 이런 방법으로 인덱스 작업에 사용되는 리소스와 동시 사용자의 리소스 간에 균형을 유지할 수 있습니다. 최대 병렬 처리 수준 옵션을 0으로 설정하면 SQL Server에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행에 사용할 수 있습니다. 쿼리와 인덱스에 대해 MAXDOP를 0으로 설정하면 SQL Server에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행의 지정된 쿼리 또는 인덱스에 대해 사용할 수 있습니다.
 
 
 ### <a name="parallel-query-example"></a>병렬 쿼리 예제
@@ -712,13 +716,13 @@ CREATE UNIQUE INDEX o_datkeyopr_idx
 
 위 명령에서는 병렬 처리 수준이 4로 실행되고 두 개의 테이블 조인을 포함하는 쿼리 최적화 프로그램 계획을 보여 줍니다.
 
-이 병렬 계획에는 세 개의 `Parallelism` 연산자가 포함됩니다. `o_datkey_ptr` 인덱스의 `Index Seek` 연산자와 `l_order_dates_idx` 인덱스의 `Index Scan` 연산자가 모두 병렬로 처리됩니다. 몇 개의 배타적 스트림이 생성됩니다. 이는 `Index Scan` 및 `Index Seek` 연산자 위에 있는 가장 가까운 Parallelism 연산자에 의해 각각 결정될 수 있습니다. 두 연산자는 모두 교환 유형을 다시 분할합니다. 즉, 입력 스트림 수와 동일한 수의 출력 스트림을 생성하는 스트림 사이에서 단지 데이터의 순서를 섞는 것입니다. 이 스트림 수는 병렬 처리 수준과 같습니다.
+이 병렬 계획에는 세 개의 `Parallelism` 연산자가 포함됩니다. `Index Seek` 인덱스의 `o_datkey_ptr` 연산자와 `Index Scan` 인덱스의 `l_order_dates_idx` 연산자가 모두 병렬로 처리됩니다. 몇 개의 배타적 스트림이 생성됩니다. 이는 `Index Scan` 및 `Index Seek` 연산자 위에 있는 가장 가까운 Parallelism 연산자에 의해 각각 결정될 수 있습니다. 두 연산자는 모두 교환 유형을 다시 분할합니다. 즉, 입력 스트림 수와 동일한 수의 출력 스트림을 생성하는 스트림 사이에서 단지 데이터의 순서를 섞는 것입니다. 이 스트림 수는 병렬 처리 수준과 같습니다.
 
-`l_order_dates_idx` `Index Scan` 연산자 위의 `Parallelism ` 연산자가 `L_ORDERKEY`의 값을 사용하여 입력 스트림을 키로 다시 분할합니다. 이러한 방식으로 동일한 `L_ORDERKEY` 값은 동일한 출력 스트림을 생성합니다. 동시에 출력 스트림은 `L_ORDERKEY` 열에서 그 순서를 유지하여 `Merge Join` 연산자의 입력 요구 사항을 충족시킵니다.
+`Parallelism ` `l_order_dates_idx` `Index Scan` operator is repartitioning its input streams using the value of `L_ORDERKEY` as a key. 이러한 방식으로 동일한 `L_ORDERKEY` 값은 동일한 출력 스트림을 생성합니다. 동시에 출력 스트림은 `L_ORDERKEY` 열에서 그 순서를 유지하여 `Merge Join` 연산자의 입력 요구 사항을 충족시킵니다.
 
-`Index Seek` 연산자 위의 `Parallelism` 연산자가 `O_ORDERKEY`의 값을 사용하여 입력 스트림을 다시 분할합니다. 이 입력은 `O_ORDERKEY` 열 값을 기준으로 정렬되지 않았으며 `Merge Join` 연산자를 통한 조인 열이므로 `Parallelism` 연산자와 `Merge Join` 연산자 사이에 있는 Sort 연산자가 `Merge Join` 연산자에 대한 입력을 조인 열을 기준으로 정렬합니다. `Sort` 연산자는 `Merge Join` 연산자처럼 병렬로 처리됩니다.
+`Parallelism` 연산자 위의 `Index Seek` 연산자가 `O_ORDERKEY`의 값을 사용하여 입력 스트림을 다시 분할합니다. 이 입력은 `O_ORDERKEY` 열 값을 기준으로 정렬되지 않았으며 `Merge Join` 연산자를 통한 조인 열이므로 `Parallelism` 연산자와 `Merge Join` 연산자 사이에 있는 Sort 연산자가 `Merge Join` 연산자에 대한 입력을 조인 열을 기준으로 정렬합니다. `Sort` 연산자는 `Merge Join` 연산자처럼 병렬로 처리됩니다.
 
-최상위 `Parallelism` 연산자는 여러 스트림의 결과를 단일 스트림으로 수집합니다. 그런 다음 `Parallelism` 연산자 아래의 `Stream Aggregate` 연산자가 수행한 부분 집계가 `Parallelism` 연산자 위의 `Stream Aggregate` 연산자를 통해 `O_ORDERPRIORITY`의 각기 서로 다른 값에 대한 단일 `SUM` 값으로 누적됩니다. 이 계획에는 병렬 처리 수준이 4인 두 개의 교환 세그먼트가 있으므로 8개의 스레드가 사용됩니다.
+최상위 `Parallelism` 연산자는 여러 스트림의 결과를 단일 스트림으로 수집합니다. 그런 다음 `Stream Aggregate` 연산자 아래의 `Parallelism` 연산자가 수행한 부분 집계가 `SUM` 연산자 위의 `O_ORDERPRIORITY` 연산자를 통해 `Stream Aggregate` 의 각기 서로 다른 값에 대한 단일 `Parallelism` 값으로 누적됩니다. 이 계획에는 병렬 처리 수준이 4인 두 개의 교환 세그먼트가 있으므로 8개의 스레드가 사용됩니다.
 
 
 ### <a name="parallel-index-operations"></a>병렬 인덱스 작업
@@ -753,7 +757,7 @@ SQL Server는 다른 쿼리에 사용하는 것과 동일한 알고리즘을 사
 Microsoft SQL Server는 Transact-SQL 문에서 다른 유형의 OLE DB 데이터 원본을 참조할 수 있도록 두 가지 메서드를 지원합니다.
 
 * 연결된 서버 이름  
-  시스템 저장 프로시저 `sp_addlinkedserver`와 `sp_addlinkedsrvlogin`은 OLE DB 데이터 원본에 서버 이름을 제공하는 데 사용됩니다. Transact-SQL 문에서는 4부분으로 된 이름을 사용하여 이러한 연결 서버의 개체를 참조할 수 있습니다. 예를 들어 연결된 서버 이름 `DeptSQLSrvr`이 SQL Server의 다른 인스턴스에 대해 정의되는 경우 다음 문은 해당 서버의 테이블을 참조합니다. 
+  시스템 저장 프로시저 `sp_addlinkedserver` 와 `sp_addlinkedsrvlogin` 은 OLE DB 데이터 원본에 서버 이름을 제공하는 데 사용됩니다. Transact-SQL 문에서는 4부분으로 된 이름을 사용하여 이러한 연결 서버의 개체를 참조할 수 있습니다. 예를 들어 연결된 서버 이름 `DeptSQLSrvr` 이 SQL Server의 다른 인스턴스에 대해 정의되는 경우 다음 문은 해당 서버의 테이블을 참조합니다. 
   
   ```
   SELECT JobTitle, HireDate 
@@ -780,7 +784,7 @@ SQL Server는 OLE DB를 사용하여 관계형 엔진과 저장소 엔진 간에
 
 SQL Server의 인스턴스마다 `sysadmin` 고정 서버 역할의 멤버는 SQL Server `DisallowAdhocAccess` 속성을 사용하여 OLE DB 공급자에 대한 임의 커넥터 이름의 사용을 설정 또는 해제할 수 있습니다. 임의 액세스가 활성화되어 있는 경우 해당 인스턴스에 로그온된 모든 사용자는 OLE DB 공급자를 사용하여 액세스할 수 있는 네트워크에서 데이터 원본을 참조하며 임의 커넥터 이름이 있는 SQL 문을 실행할 수 있습니다. 데이터 원본에 대한 액세스를 제어하기 위해 `sysadmin` 역할의 멤버는 해당 OLE DB 공급자에 대한 임의 액세스를 비활성화하고 그에 따라 사용자를 관리자가 정의한 연결된 서버 이름에서 참조한 데이터 원본으로만 제한합니다. 기본적으로 임의 액세스는 SQL Server OLE DB 공급자에 대해 활성화되어 있고 기타 모든 OLE DB 공급자에 대해서는 비활성화되어 있습니다.
 
-분산 쿼리를 사용하면 SQL Server 서비스가 실행 중인 Microsoft Windows 계정의 보안 컨텍스트에서 다른 데이터 원본(예: 파일, Active Directory 같은 비관계형 데이터 원본 등)에 액세스할 수 있습니다. SQL Server는 Windows 로그인에서는 적절하게 로그인을 가장하지만 SQL Server 로그인에서는 그렇지 못합니다. 이렇게 하면 사용 권한이 없는 다른 데이터 원본에 대한 액세스를 분산 쿼리 사용자에게 허용할 수 있지만 SQL Server 서비스가 실행 중인 계정에는 사용 권한이 없습니다. `sp_addlinkedsrvlogin`을 사용하여 연결된 해당 서버에 액세스할 권한이 부여된 특정 로그인을 정의할 수 있습니다. 이 제어는 임의 이름에 대해 사용할 수 없으므로 임의 액세스에 대해 OLE DB 공급자를 활성화할 경우 조심해야 합니다.
+분산 쿼리를 사용하면 SQL Server 서비스가 실행 중인 Microsoft Windows 계정의 보안 컨텍스트에서 다른 데이터 원본(예: 파일, Active Directory 같은 비관계형 데이터 원본 등)에 액세스할 수 있습니다. SQL Server는 Windows 로그인에서는 적절하게 로그인을 가장하지만 SQL Server 로그인에서는 그렇지 못합니다. 이렇게 하면 사용 권한이 없는 다른 데이터 원본에 대한 액세스를 분산 쿼리 사용자에게 허용할 수 있지만 SQL Server 서비스가 실행 중인 계정에는 사용 권한이 없습니다. `sp_addlinkedsrvlogin` 을 사용하여 연결된 해당 서버에 액세스할 권한이 부여된 특정 로그인을 정의할 수 있습니다. 이 제어는 임의 이름에 대해 사용할 수 없으므로 임의 액세스에 대해 OLE DB 공급자를 활성화할 경우 조심해야 합니다.
 
 SQL Server는 가능하면 조인, 제한, 투영, 정렬, 그룹화 같은 관계형 연산을 연산별로 OLE DB 데이터 원본에 푸시합니다. 기본적으로 SQL Server는 기본 테이블을 검색하여 SQL Server에 전송한 후 자체적으로 관계형 연산을 수행하지는 않습니다. SQL Server는 OLE DB 공급자에게 공급자에서 지원하는 SQL 문법 수준을 확인하도록 쿼리하고 이 정보에 따라 가능한 한 많은 관계형 연산을 공급자에게 푸시합니다. 
 
@@ -796,11 +800,11 @@ SQL Server 2008에서는 여러 병렬 계획에 대해 분할된 테이블에�
 
 ### <a name="new-partition-aware-seek-operation"></a>새 파티션 인식 Seek 연산
 
-SQL Server의 분할된 테이블을 나타내는 내부 표현이 변경되어 이제 테이블이 선행 열처럼 `PartitionID`가 있는 다중 열 인덱스로 쿼리 프로세서에 나타납니다. `PartitionID`는 특정 행을 포함하는 파티션의 `ID`를 나타내기 위해 내부에서 사용하는 숨겨진 계산 열입니다. 예를 들어 `T(a, b, c)`로 정의되는 테이블은 a 열에서 분할되고 b 열에 클러스터형 인덱스가 있다고 가정합니다. SQL Server에서 이렇게 분할된 테이블은 내부적으로 스키마 `T(PartitionID, a, b, c)`와 복합 키 `(PartitionID, b)`에 클러스터형 인덱스가 있는 분할되지 않은 테이블로 취급됩니다. 이로 인해 쿼리 최적화 프로그램은 분할된 테이블 또는 인덱스에서 `PartitionID`를 기준으로 seek 연산을 수행할 수 있습니다. 
+SQL Server의 분할된 테이블을 나타내는 내부 표현이 변경되어 이제 테이블이 선행 열처럼 `PartitionID` 가 있는 다중 열 인덱스로 쿼리 프로세서에 나타납니다. `PartitionID` 는 특정 행을 포함하는 파티션의 `ID` 를 나타내기 위해 내부에서 사용하는 숨겨진 계산 열입니다. 예를 들어 `T(a, b, c)`로 정의되는 테이블은 a 열에서 분할되고 b 열에 클러스터형 인덱스가 있다고 가정합니다. SQL Server에서 이렇게 분할된 테이블은 내부적으로 스키마 `T(PartitionID, a, b, c)` 와 복합 키 `(PartitionID, b)`에 클러스터형 인덱스가 있는 분할되지 않은 테이블로 취급됩니다. 이로 인해 쿼리 최적화 프로그램은 분할된 테이블 또는 인덱스에서 `PartitionID` 를 기준으로 seek 연산을 수행할 수 있습니다. 
 
 이제 파티션 제거는 이 seek 연산에서 수행됩니다.
 
-또한 쿼리 최적화 프로그램은 확장되므로 seek 또는 scan 연산이 한 가지 조건을 사용하여 `PartitionID`(논리적 선행 열)과 가능한 다른 인덱스 키 열에서 수행된 후, 두 번째 수준의 seek 연산은 다른 조건을 사용하여 첫 번째 수준의 seek 연산에 대한 제한을 충족시키는 각각의 고유 값에 대해 수행될 수 있습니다. 즉 skip scan이라고 하는 이 연산을 통해 쿼리 최적화 프로그램은 seek 또는 scan 연산을 하나의 조건을 기준으로 수행하여 액세스할 파티션을 결정하고 해당 연산자에서 두 번째 수준 index seek 연산을 수행하여 다른 조건을 충족시키는 이러한 파티션에서 행을 반환할 수 있습니다. 예를 들어 다음 쿼리를 살펴보십시오.
+또한 쿼리 최적화 프로그램은 확장되므로 seek 또는 scan 연산이 한 가지 조건을 사용하여 `PartitionID` (논리적 선행 열)과 가능한 다른 인덱스 키 열에서 수행된 후, 두 번째 수준의 seek 연산은 다른 조건을 사용하여 첫 번째 수준의 seek 연산에 대한 제한을 충족시키는 각각의 고유 값에 대해 수행될 수 있습니다. 즉 skip scan이라고 하는 이 연산을 통해 쿼리 최적화 프로그램은 seek 또는 scan 연산을 하나의 조건을 기준으로 수행하여 액세스할 파티션을 결정하고 해당 연산자에서 두 번째 수준 index seek 연산을 수행하여 다른 조건을 충족시키는 이러한 파티션에서 행을 반환할 수 있습니다. 예를 들어 다음 쿼리를 살펴보십시오.
 
 ```
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -812,15 +816,15 @@ SELECT * FROM T WHERE a < 10 and b = 2;
 CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 ```
 
-쿼리를 해결하려면 쿼리 프로세서는 첫 번째 수준 seek 연산을 수행하여 `T.a < 10` 조건을 충족시키는 행을 포함하는 모든 파티션을 찾습니다. 이 작업을 통해 액세스할 파티션을 식별합니다. 식별된 각 파티션에서 쿼리 프로세서는 열에서 클러스터형 인덱스로 두 번째 수준 seek 연산을 수행하여 `T.b = 2` 및 `T.a < 10` 조건을 충족시키는 행을 찾습니다. 
+쿼리를 해결하려면 쿼리 프로세서는 첫 번째 수준 seek 연산을 수행하여 `T.a < 10`조건을 충족시키는 행을 포함하는 모든 파티션을 찾습니다. 이 작업을 통해 액세스할 파티션을 식별합니다. 식별된 각 파티션에서 쿼리 프로세서는 열에서 클러스터형 인덱스로 두 번째 수준 seek 연산을 수행하여 `T.b = 2` 및 `T.a < 10`조건을 충족시키는 행을 찾습니다. 
 
-다음 그림은 skip scan 연산을 논리적으로 표현한 것으로 a 열과 b 열의 데이터와 함께 T 테이블을 보여 줍니다. 파티션은 세로줄 파선으로 표시되는 파티션 경계와 함께 1에서 4까지 번호가 매겨져 있습니다. 파티션에 대한 첫 번째 수준 seek 연산(그림에는 표시되지 않음)에서는 파티션 1, 2 및 3이 a 열에 테이블 및 조건자에 대해 정의된 분할로 포함된 검색 조건을 충족시키는지 확인했습니다. 즉 `T.a < 10`입니다. skip scan 연산의 두 번째 수준 seek 부분에 의해 이동된 경로는 곡선으로 표시됩니다. 기본적으로 skip scan 연산은 `b = 2` 조건을 충족시키는 행을 이러한 파티션마다 검색합니다. skip scan 연산의 총 비용은 세 가지 개별 index seek 연산의 총 비용과 같습니다.   
+다음 그림은 skip scan 연산을 논리적으로 표현한 것으로 a 열과 b 열의 데이터와 함께 T 테이블을 보여 줍니다. 파티션은 세로줄 파선으로 표시되는 파티션 경계와 함께 1에서 4까지 번호가 매겨져 있습니다. 파티션에 대한 첫 번째 수준 seek 연산(그림에는 표시되지 않음)에서는 파티션 1, 2 및 3이 a 열에 테이블 및 조건자에 대해 정의된 분할로 포함된 검색 조건을 충족시키는지 확인했습니다. 즉 `T.a < 10`입니다. skip scan 연산의 두 번째 수준 seek 부분에 의해 이동된 경로는 곡선으로 표시됩니다. 기본적으로 skip scan 연산은 `b = 2`조건을 충족시키는 행을 이러한 파티션마다 검색합니다. skip scan 연산의 총 비용은 세 가지 개별 index seek 연산의 총 비용과 같습니다.   
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
 
 ### <a name="displaying-partitioning-information-in-query-execution-plans"></a>쿼리 실행 계획의 분할 정보 표시
 
-분할 테이블과 인덱스에서의 쿼리 실행 계획은 `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 SQL Server Management Studio의 그래픽 실행 계획 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시*를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함*을 클릭하여 런타임 계획을 표시할 수 있습니다. 
+분할 테이블과 인덱스에서의 쿼리 실행 계획은 `SET` 문 `SET SHOWPLAN_XML` 또는 `SET STATISTICS XML`을 사용하거나 SQL Server Management Studio의 그래픽 실행 계획 출력을 사용하여 검사할 수 있습니다. 예를 들어 쿼리 편집기 도구 모음에서 *예상 실행 계획 표시* 를 클릭하여 컴파일 시간 실행 계획을 표시할 수 있고 *실제 실행 계획 포함*을 클릭하여 런타임 계획을 표시할 수 있습니다. 
 
 이러한 도구를 사용하여 다음 정보를 확인할 수 있습니다.
 
@@ -832,8 +836,8 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 SQL Server에서는 컴파일 시간과 런타임 실행 계획 모두에 대한 향상된 분할 정보를 제공합니다. 실행 계획은 현재 다음 정보를 제공합니다.
 
-* 분할된 테이블에서 `seek`, `scan`, `insert`, `update`, `merge`, `delete` 같은 연산자가 실행되었음을 나타내는 선택적 `Partitioned` 특성.  
-* `PartitionID`에서 범위 검색을 지정하는 선행 인덱스 키 열 및 필터 조건으로 `PartitionID`를 포함하는 새로운 `SeekPredicateNew` 요소와 `SeekKeys` 하위 요소. `SeekKeys` 하위 요소 두 개의 존재는 `PartitionID`에서 skip scan 연산이 사용되는 것을 나타냅니다.   
+* 분할된 테이블에서 `Partitioned` , `seek`, `scan`, `insert`, `update`, `merge`같은 연산자가 실행되었음을 나타내는 선택적 `delete`특성.  
+* `SeekPredicateNew` 에서 범위 검색을 지정하는 선행 인덱스 키 열 및 필터 조건으로 `SeekKeys` 를 포함하는 새로운 `PartitionID` 요소와 `PartitionID`하위 요소. `SeekKeys` 하위 요소 두 개의 존재는 `PartitionID` 에서 skip scan 연산이 사용되는 것을 나타냅니다.   
 * 액세스한 총 파티션 수를 제공하는 요약 정보. 이 정보는 런타임 계획에서만 사용할 수 있습니다. 
 
 그래픽 실행 계획 출력 및 XML 실행 계획 출력 모두에 이 정보가 표시되는 방법을 보여 주려면 분할된 테이블 `fact_sales`의 다음 쿼리를 살펴봅니다. 이 쿼리는 두 개의 파티션에 있는 데이터를 업데이트합니다. 
@@ -849,7 +853,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 
 #### <a name="partitioned-attribute"></a>Partitioned 특성
 
-`Index Seek`와 같은 연산자가 분할된 테이블 또는 인덱스에서 실행되면 `Partitioned` 특성이 컴파일 시간 및 런타임 계획에 나타나고 이 특성이 `True` (1)로 설정됩니다. 이 특성이 `False`(0)로 설정되면 표시되지 않습니다.
+`Index Seek` 와 같은 연산자가 분할된 테이블 또는 인덱스에서 실행되면 `Partitioned` 특성이 컴파일 시간 및 런타임 계획에 나타나고 이 특성이 `True` (1)로 설정됩니다. 이 특성이 `False` (0)로 설정되면 표시되지 않습니다.
 
 `Partitioned` 특성은 다음 물리적 및 논리적 연산자에서 나타날 수 있습니다.  
 * `Table Scan`  
@@ -860,7 +864,7 @@ WHERE date_id BETWEEN 20080802 AND 20080902;
 * `Delete`  
 * `Merge`  
 
-앞의 그림과 같이 이 특성은 자신이 정의된 연산자의 속성에서 표시됩니다. XML 실행 계획 출력에서 이 특성은 자신이 정의된 연산자의 `RelOp` 노드에서 `Partitioned="1"`로 표시됩니다.
+앞의 그림과 같이 이 특성은 자신이 정의된 연산자의 속성에서 표시됩니다. XML 실행 계획 출력에서 이 특성은 자신이 정의된 연산자의 `Partitioned="1"` 노드에서 `RelOp` 로 표시됩니다.
 
 #### <a name="new-seek-predicate"></a>새 검색 조건자
 
@@ -872,9 +876,9 @@ XML 실행 계획 출력에서 `SeekPredicateNew` 요소는 자신이 정의된 
 
 `Actual Partition Count`와 `Partitions Accessed`에 대한 정보가 제공됩니다. 
 
-`Actual Partition Count`는 쿼리에서 액세스한 총 파티션 개수입니다.
+`Actual Partition Count` 는 쿼리에서 액세스한 총 파티션 개수입니다.
 
-XML 실행 계획 출력에서 `Partitions Accessed`는 새 `RuntimePartitionSummary` 요소 내에 Partitions Accessed가 정의된 연산자의 `RelOp` 노드에 나타나는 파티션 요약 정보입니다. 다음 예에서는 액세스한 총 2개의 파티션(파티션 2와 3)을 나타내는 `RuntimePartitionSummary` 요소의 내용을 보여 줍니다.
+XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSummary` 요소 내에 Partitions Accessed가 정의된 연산자의 `RelOp` 노드에 나타나는 파티션 요약 정보입니다. 다음 예에서는 액세스한 총 2개의 파티션(파티션 2와 3)을 나타내는 `RuntimePartitionSummary` 요소의 내용을 보여 줍니다.
 ```
 <RunTimePartitionSummary>
 
@@ -889,11 +893,11 @@ XML 실행 계획 출력에서 `Partitions Accessed`는 새 `RuntimePartitionSum
 
 #### <a name="displaying-partition-information-by-using-other-showplan-methods"></a>다른 실행 계획 방법을 사용하여 파티션 정보 표시
 
-실행 계획 메서드인 `SHOWPLAN_ALL`, `SHOWPLAN_TEXT`, `STATISTICS PROFILE`은 다음과 같은 경우를 제외하고 이 항목에서 설명한 파티션 정보를 보고하지 않습니다. `SEEK` 조건자의 일부로서 액세스할 파티션이 파티션 ID를 나타내는 계산 열에서 범위 조건자로 식별됩니다. 다음 예제에서는 `Clustered Index Seek` 연산자의 `SEEK` 조건자를 보여 줍니다. 파티션 2와 3에 액세스하고 seek 연산자는 `date_id BETWEEN 20080802 AND 20080902` 조건을 충족시키는 행에 필터를 설정합니다.
+실행 계획 메서드인 `SHOWPLAN_ALL`, `SHOWPLAN_TEXT`, `STATISTICS PROFILE` 은 다음과 같은 경우를 제외하고 이 항목에서 설명한 파티션 정보를 보고하지 않습니다. `SEEK` 조건자의 일부로서 액세스할 파티션이 파티션 ID를 나타내는 계산 열에서 범위 조건자로 식별됩니다. 다음 예제에서는 `SEEK` 연산자의 `Clustered Index Seek` 조건자를 보여 줍니다. 파티션 2와 3에 액세스하고 seek 연산자는 `date_id BETWEEN 20080802 AND 20080902`조건을 충족시키는 행에 필터를 설정합니다.
 ```
 |--Clustered Index Seek(OBJECT:([db_sales_test].[dbo].[fact_sales].[ci]), 
 
-        SEEK:([PtnId1000] >= (2) AND [PtnId1000] <= (3) 
+        SEEK:([PtnId1000] >= (2) AND [PtnId1000] \<= (3) 
 
                 AND [db_sales_test].[dbo].[fact_sales].[date_id] >= (20080802) 
 
@@ -915,7 +919,7 @@ XML 실행 계획 출력에서 `Partitions Accessed`는 새 `RuntimePartitionSum
 
 배치된 계획에서 `Nested Loops` 조인은 내부 측면에서 조인된 테이블 또는 인덱스 파티션을 하나 이상 읽습니다. `Constant Scan` 연산자의 숫자는 파티션 번호를 나타냅니다. 
 
-배치된 조인에 대한 병렬 계획을 분할된 테이블 또는 인덱스에 대해 생성하면 `Constant Scan`과 `Nested Loops` 조인 연산자 사이에 Parallelism 연산자가 표시됩니다. 이 경우 조인 외부 측면의 여러 스레드가 각각 서로 다른 파티션을 읽고 작업합니다. 
+배치된 조인에 대한 병렬 계획을 분할된 테이블 또는 인덱스에 대해 생성하면 `Constant Scan` 과 `Nested Loops` 조인 연산자 사이에 Parallelism 연산자가 표시됩니다. 이 경우 조인 외부 측면의 여러 스레드가 각각 서로 다른 파티션을 읽고 작업합니다. 
 
 다음 그림은 배치된 조인에 대한 병렬 쿼리 계획을 보여 줍니다.   
 ![colocated_join](../relational-databases/media/colocated-join.gif)
@@ -933,12 +937,12 @@ XML 실행 계획 출력에서 `Partitions Accessed`는 새 `RuntimePartitionSum
 
 또 다른 예로, 경계 포인트(10, 20, 30)가 있는 열 A에는 파티션 4개가 있고 열 B에는 인덱스가 있는 테이블과 조건자 절 `WHERE B IN (50, 100, 150)`을 갖는 쿼리가 있다고 가정합니다. 테이블 파티션은 A 값이 기준이기 때문에 B 값은 어느 테이블 파티션에서도 나타날 수 있습니다. 따라서 쿼리 프로세서는 4개의 각 테이블 파티션에서 3개의 B 값(50, 100, 150)을 각각 검색합니다. 쿼리 프로세서는 이러한 12개의 각 쿼리 검색을 병렬로 실행할 수 있도록 스레드를 균형 있게 할당합니다.
 
-|A 열을 기반으로 하는 테이블 파티션 |각 테이블 파티션에서 B 열 검색 |
+|A 열을 기반으로 하는 테이블 파티션    |각 테이블 파티션에서 B 열 검색 |
 |----|----|
-|테이블 파티션 1: A \< 10   |B=50, B=100, B=150 |
-|테이블 파티션 2: A >= 10 AND A \< 20   |B=50, B=100, B=150 |
-|테이블 파티션 3: A >= 20 AND A \< 30   |B=50, B=100, B=150 |
-|테이블 파티션 4: A >= 30  |B=50, B=100, B=150 |
+|테이블 파티션 1: A < 10     |B=50, B=100, B=150 |
+|테이블 파티션 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
+|테이블 파티션 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
+|테이블 파티션 4: A >= 30     |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>최선의 구현 방법
 
@@ -1021,3 +1025,4 @@ GO
 SET STATISTICS XML OFF;
 GO
 ```
+

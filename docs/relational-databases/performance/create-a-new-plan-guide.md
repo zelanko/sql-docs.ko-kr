@@ -1,34 +1,38 @@
 ---
-title: "새 계획 지침 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-plan-guides"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.designer.newplanguide.f1"
-helpviewer_keywords: 
-  - "계획 지침 만들기"
-  - "계획 지침 [SQL Server]. 만들기"
+title: "새 계획 지침 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-plan-guides
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.designer.newplanguide.f1
+helpviewer_keywords:
+- creating plan guides
+- plan guides [SQL Server]. creating
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c0cc530e59007070fba228c06a4f8f2983faa3f3
+ms.lasthandoff: 04/11/2017
+
 ---
-# 새 계획 지침 만들기
+# <a name="create-a-new-plan-guide"></a>새 계획 지침 만들기
 계획 지침은 쿼리 힌트나 정해진 쿼리 계획을 쿼리에 연결하여 쿼리 최적화에 영향을 미칩니다. 계획 지침에서 최적화하려는 문을 지정하고 사용할 쿼리 힌트가 들어 있는 OPTION 절이나 쿼리를 최적화하는 데 사용할 특정 쿼리 계획을 지정합니다. 쿼리가 실행하면 쿼리 최적화 프로그램이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 계획 지침과 비교하여 런타임에 쿼리에 OPTION 절을 추가하거나 지정된 쿼리 계획을 사용합니다.  
 
 계획 지침에서는 해결된 쿼리 계획 및/또는 쿼리 힌트를 쿼리에 적용합니다.
   
 ##  <a name="Restrictions"></a> 제한 사항  
   
--   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide** 매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 **@name =**을 지정한 경우 **@stmt =**, **@type =** 등도 지정해야 합니다. 마찬가지로 **@name =**을 생략하고 매개 변수 값만 제공한 경우 나머지 매개 변수 이름도 생략하고 해당 값만 제공해야 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
+-   sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide**매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 **@name =**을 지정한 경우 **@stmt =** , **@type =** 등도 지정해야 합니다. 마찬가지로 **@name =**을 생략하고 매개 변수 값만 제공한 경우 나머지 매개 변수 이름도 생략하고 해당 값만 제공해야 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
   
 -   같은 쿼리 및 일괄 처리나 모듈에 대해 두 개 이상의 OBJECT 또는 SQL 계획 지침을 만들 수 있습니다. 그러나 지정된 시간에 한 개의 계획 지침만 사용할 수 있습니다.  
   
@@ -66,7 +70,7 @@ caps.handback.revision: 17
   
     -   범위 유형이 **SQL** 또는 **TEMPLATE**인 경우. **TEMPLATE**일 경우 매개 변수는 NULL일 수 없습니다.  
   
-    -   sp_executesql을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 전송되고 매개 변수에 대한 값이 지정된 경우 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 문을 매개 변수화한 후에 내부에서 전송하는 경우.  
+    -   sp_executesql을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 전송되고 매개 변수에 대한 값이 지정된 경우 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 문을 매개 변수화한 후에 내부에서 전송하는 경우.  
   
 10. **힌트** 입력란에 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 적용되는 쿼리 힌트 또는 쿼리 계획을 입력합니다. 하나 이상의 쿼리 힌트를 지정하려면 유효한 OPTION 절을 입력합니다.  
   
@@ -100,3 +104,4 @@ caps.handback.revision: 17
  자세한 내용은 [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)를 참조하세요.  
   
   
+

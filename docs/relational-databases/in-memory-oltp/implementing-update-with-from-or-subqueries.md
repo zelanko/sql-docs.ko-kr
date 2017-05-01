@@ -1,23 +1,27 @@
 ---
-title: "FROM 또는 하위 쿼리를 사용하여 UPDATE 구현 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "FROM 또는 하위 쿼리를 사용하여 UPDATE 구현 | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 138f5b0e-f8a4-400f-b581-8062aebc62b6
 caps.latest.revision: 4
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 4
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c9f044bbde8edd542e3a2a1017a726b8d939654a
+ms.lasthandoff: 04/11/2017
+
 ---
-# FROM 또는 하위 쿼리를 사용하여 UPDATE 구현
+# <a name="implementing-update-with-from-or-subqueries"></a>FROM 또는 하위 쿼리를 사용하여 UPDATE 구현
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
 고유하게 컴파일된 T-SQL 모듈은 FROM 절을 지원하지 않으며 UPDATE 문에서 하위 쿼리를 지원하지 않습니다(SELECT에서 지원됨). FROM 절이 있는 UPDATE 문은 일반적으로 TVP(테이블 반환 매개 변수)에 따라 테이블의 정보를 업데이트하거나 AFTER 트리거에서 테이블의 열을 업데이트하는 데 사용됩니다. 
@@ -157,3 +161,4 @@ TVP에 따라 업데이트하는 시나리오의 경우 [고유하게 컴파일�
   
   
   
+

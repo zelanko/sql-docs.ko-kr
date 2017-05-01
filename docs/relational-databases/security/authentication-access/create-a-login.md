@@ -1,34 +1,38 @@
 ---
-title: "로그인 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.login.status.f1"
-  - "sql13.swb.login.effectivepermissions.f1"
-  - "sql13.swb.login.general.f1"
-  - "sql13.swb.login.databaseaccess.f1"
-  - "sql13.swb.login.serverroles.f1"
-helpviewer_keywords: 
-  - "인증 [SQL Server], 로그인"
-  - "로그인 [SQL Server], 만들기"
-  - "Management Studio로 로그인 만들기"
-  - "로그인 만들기 [SQL Server]"
-  - "SQL Server 로그인"
+title: "로그인 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.login.status.f1
+- sql13.swb.login.effectivepermissions.f1
+- sql13.swb.login.general.f1
+- sql13.swb.login.databaseaccess.f1
+- sql13.swb.login.serverroles.f1
+helpviewer_keywords:
+- authentication [SQL Server], logins
+- logins [SQL Server], creating
+- creating logins with Management Studio
+- Create login [SQL Server]
+- SQL Server logins
 ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 caps.latest.revision: 29
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 297b1f20843f16a1885676e4428331f75ced8cd6
+ms.lasthandoff: 04/11/2017
+
 ---
-# 로그인 만들기
+# <a name="create-a-login"></a>로그인 만들기
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 로그인을 만드는 방법에 대해 설명합니다. 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 연결하는 사용자 또는 프로세스의 ID입니다.  
@@ -36,11 +40,11 @@ caps.handback.revision: 29
 ##  <a name="Background"></a> 배경  
  로그인은 보안 시스템에서 인증을 수행할 수 있는 보안 주체 또는 엔터티입니다. 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하려면 로그인이 필요합니다. 도메인 사용자 또는 Windows 도메인 그룹 등의 Windows 주체에 기반한 로그인을 만들거나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인과 같은 Windows 주체에 기반한 로그인을 만들 수 있습니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
+> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하려면 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 혼합 모드 인증을 사용해야 합니다. 자세한 내용은 [인증 모드 선택](../../../relational-databases/security/choose-an-authentication-mode.md)을 참조하세요.  
   
- 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 전체 인스턴스에 속하는 사용 권한(예: **CREATE ENDPOINT** 권한)을 로그인에 부여할 수 있습니다.  
+ 보안 주체는 사용 권한을 로그인에 부여할 수 있습니다. 로그인의 범위는 전체 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다. 범위가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 전체 인스턴스에 속하는 사용 권한(예: **CREATE ENDPOINT** 권한)을 로그인에 부여할 수 있습니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하는 경우 ID는 master 데이터베이스에서 유효성을 검사합니다. 포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스 사용자를 사용할 때는 로그인이 필요하지 않습니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)]\(및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
+> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결하는 경우 ID는 master 데이터베이스에서 유효성을 검사합니다. 포함된 데이터베이스 사용자를 사용하여 데이터베이스 수준에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]및 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] 연결을 인증합니다. 포함된 데이터베이스 사용자를 사용할 때는 로그인이 필요하지 않습니다. 포함된 데이터베이스는 다른 데이터베이스 및 해당 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] (및 master 데이터베이스) 인스턴스에서 격리된 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 Windows 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 위해 포함된 데이터베이스 사용자를 지원합니다. [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]을(를) 사용하는 경우, 포함된 데이터베이스 사용자와 데이터베이스 수준 방화벽 규칙을 조합합니다. 자세한 내용은 [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../../relational-databases/security/contained-database-users-making-your-database-portable.md)를 참조하세요.  
   
 ##  <a name="Security"></a> 보안  
 
@@ -59,7 +63,7 @@ caps.handback.revision: 29
   
      **검색...**을 클릭한 경우:  
   
-    1.  **개체 유형 선택**에서 **개체 유형...**을 클릭하여 **개체 유형** 대화 상자를 열고 **기본 제공 보안 주체**, **그룹** 및 **사용자** 중에서 일부 또는 모두를 선택합니다. **기본 제공 보안 주체** 및 **사용자**는 기본적으로 선택됩니다. 완료되었으면 **확인**을 클릭합니다.  
+    1.  **개체 유형 선택**에서 **개체 유형...**을 클릭하여 **개체 유형** 대화 상자를 열고 **기본 제공 보안 주체**, **그룹**및 **사용자**중에서 일부 또는 모두를 선택합니다. **기본 제공 보안 주체** 및 **사용자** 는 기본적으로 선택됩니다. 완료되었으면 **확인**을 클릭합니다.  
   
     2.  **찾을 위치 선택**에서 **위치...** 를 클릭하여 **위치** 대화 상자를 열고 사용 가능한 서버 위치 중 하나를 선택합니다. 완료되었으면 **확인**을 클릭합니다.  
   
@@ -83,9 +87,9 @@ caps.handback.revision: 29
   
     5.  사용자가 처음 로그인을 사용한 후 새 암호를 만들도록 하려면 **다음 로그인할 때 반드시 암호 변경**을 선택합니다. 이 확인란은**암호 만료 강제 적용** 을 선택한 경우에만 사용할 수 있습니다. 이 옵션은 **SQL Server 인증** 을 선택한 경우 기본 옵션입니다.  
   
-6.  로그인을 독립형 보안 인증서와 연결하려면 **인증서로 매핑**을 선택한 후 목록에서 기존 인증서의 이름을 선택합니다.  
+6.  로그인을 독립형 보안 인증서와 연결하려면 **인증서로 매핑** 을 선택한 후 목록에서 기존 인증서의 이름을 선택합니다.  
   
-7.  로그인을 독립형 비대칭 키와 연결하려면 **비대칭 키로 매핑**을 선택한 후 목록에서 기존 키의 이름을 선택합니다.  
+7.  로그인을 독립형 비대칭 키와 연결하려면 **비대칭 키로 매핑** 을 선택한 후 목록에서 기존 키의 이름을 선택합니다.  
   
 8.  로그인을 보안 인증서와 연결하려면 **인증서로 매핑** 확인란을 선택한 후 목록에서 기존 인증서를 선택하거나 **추가** 를 클릭하여 새 인증서를 만듭니다. 로그인에서 보안 인증서에 대한 매핑을 제거하려면 **인증서로 매핑** 에서 인증서를 선택하고 **제거**를 클릭합니다. 일반적으로 인증서에 대한 자세한 내용은 [자격 증명&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/credentials-database-engine.md)을 참조하세요.  
   
@@ -95,10 +99,10 @@ caps.handback.revision: 29
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 추가 옵션  
+### <a name="additional-options"></a>추가 옵션  
  **로그인 - 신규** 대화 상자에는 또한 **서버 역할**, **사용자 매핑**, **보안 개체**및 **상태**의 추가 페이지에 대한 옵션이 제공됩니다.  
   
-### 서버 역할  
+### <a name="server-roles"></a>서버 역할  
  **서버 역할** 페이지에는 새 로그인에 할당할 수 있는 모든 사용 가능한 역할이 나열됩니다. 사용할 수 있는 옵션은 다음과 같습니다.  
   
  **bulkadmin** 확인란  
@@ -117,7 +121,7 @@ caps.handback.revision: 29
  모든 SQL Server 사용자, 그룹 및 역할은 기본적으로 **public** 고정 서버 역할에 속합니다.  
   
  **securityadmin** 확인란  
- **securityadmin** 고정 서버 역할의 멤버는 로그인 및 해당 속성을 관리합니다. 이러한 멤버는 서버 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수 있습니다. 또한 데이터베이스 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수 있습니다. 또한 이 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로그인 암호를 다시 설정할 수 있습니다.  
+ **securityadmin** 고정 서버 역할의 멤버는 로그인 및 해당 속성을 관리합니다. 이러한 멤버는 서버 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수 있습니다. 또한 데이터베이스 수준의 사용 권한을 부여(GRANT), 거부(DENY) 및 취소(REVOKE)할 수 있습니다. 또한 이 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로그인 암호를 다시 설정할 수 있습니다.  
   
  **serveradmin** 확인란  
  **serveradmin** 고정 서버 역할의 멤버는 서버 차원의 구성 옵션을 변경하고 서버를 종료할 수 있습니다.  
@@ -126,9 +130,9 @@ caps.handback.revision: 29
  **setupadmin** 고정 서버 역할의 멤버는 연결된 서버를 추가하거나 제거하고 일부 시스템 저장 프로시저를 실행할 수 있습니다.  
   
  **sysadmin** 확인란  
- **sysadmin** 고정 서버 역할의 멤버는 모든 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 작업을 수행할 수 있습니다.  
+ **sysadmin** 고정 서버 역할의 멤버는 모든 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]작업을 수행할 수 있습니다.  
   
-### 사용자 매핑  
+### <a name="user-mapping"></a>사용자 매핑  
  **사용자 매핑** 페이지에는 사용 가능한 모든 데이터베이스와 이러한 데이터베이스에서 해당 로그인에 적용할 수 있는 데이터베이스 역할이 나열됩니다. 선택한 데이터베이스에 따라 로그인에 사용할 수 있는 역할 멤버 자격이 결정됩니다. 이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
  **이 로그인으로 매핑된 사용자**  
@@ -146,13 +150,13 @@ caps.handback.revision: 29
  **기본 스키마**  
  사용자의 기본 스키마를 지정합니다. 사용자를 처음 만들 경우 기본 스키마는 **dbo**입니다. 아직 존재하지 않는 기본 스키마를 지정할 수도 있습니다. Windows 그룹, 인증서 또는 비대칭 키에 매핑된 사용자에 대해서는 기본 스키마를 지정할 수 없습니다.  
   
- **게스트 계정 설정: ** *database name*  
+ **Guest account enabled for:**  *database_name*  
  선택한 데이터베이스에 게스트 계정이 설정되어 있는지 여부를 나타내는 읽기 전용 특성입니다. 게스트 계정에 대한 **로그인 속성** 대화 상자의 **상태** 페이지를 사용하여 게스트 계정을 설정하거나 해제할 수 있습니다.  
   
- **데이터베이스 역할 멤버 자격: ** *database name*  
+ **Database role membership for:**  *database_name*  
  지정한 데이터베이스 사용자에 대한 역할을 선택합니다. 모든 사용자는 모든 데이터베이스에서 **public** 역할의 멤버이며 제거할 수 없습니다. 데이터베이스 역할에 대한 자세한 내용은 [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  
   
-### 보안 개체  
+### <a name="securables"></a>보안 개체  
  **보안 개체** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다. 이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
   
  **상단 표**  
@@ -162,9 +166,9 @@ caps.handback.revision: 29
   
 1.  **검색**을 클릭합니다.  
   
-2.  **개체 추가** 대화 상자에서 **특정 개체...**, **선택한 유형의 모든 개체...** 또는 **서버***server_name* 옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  **개체 추가** 대화 상자에서 **특정 개체...**, **선택한 유형의 모든 개체...**또는 **서버***server_name*옵션 중 하나를 선택합니다. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    > **참고:** **서버***server_name*을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
+    > **참고:** **서버***server_name* 을 선택하면 상단 표에 해당 서버의 모든 보안 개체가 자동으로 채워집니다.  
   
 3.  **특정 개체...**를 선택한 경우:  
   
@@ -204,7 +208,7 @@ caps.handback.revision: 29
  **거부**  
  로그인에 이 사용 권한을 거부하려면 선택하고 사용 권한을 해제하려면 선택을 취소합니다.  
   
-### 상태  
+### <a name="status"></a>상태  
  **상태** 페이지에는 선택한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인에 대해 구성할 수 있는 몇 가지 인증 및 권한 부여 옵션이 나열됩니다.  
   
  이 페이지에서는 다음과 같은 옵션을 사용할 수 있습니다.  
@@ -221,7 +225,7 @@ caps.handback.revision: 29
   
  이 로그인을 사용하거나 사용하지 않도록 선택합니다. 이 옵션은 ALTER LOGIN 문에 ENABLE 또는 DISABLE 옵션을 사용합니다.  
   
- **SQL Server 인증(SQL Server Authentication)**  
+ **SQL Server Authentication**  
  **로그인 잠겨 있음** 확인란은 선택한 로그인을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하고 로그인이 잠겨 있는 경우에만 사용할 수 있습니다. 이 설정은 읽기 전용입니다. 잠긴 로그인을 잠금 해제하려면 UNLOCK 옵션을 사용하여 ALTER LOGIN을 실행합니다.  
   
 ##  <a name="TsqlProcedure"></a> T-SQL에서 Windows 인증을 사용하여 로그인 만들기  
@@ -241,7 +245,7 @@ caps.handback.revision: 29
   
     ```  
   
-## SSMS에서 SQL Server 인증을 사용하여 로그인 만들기  
+## <a name="create-a-login-using-sql-server-authentication-with-ssms"></a>SSMS에서 SQL Server 인증을 사용하여 로그인 만들기  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -270,7 +274,8 @@ caps.handback.revision: 29
   
 -   로그인에 사용 권한을 부여하려면 [보안 주체에 사용 권한 부여](../../../relational-databases/security/authentication-access/grant-a-permission-to-a-principal.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터](../../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   
+

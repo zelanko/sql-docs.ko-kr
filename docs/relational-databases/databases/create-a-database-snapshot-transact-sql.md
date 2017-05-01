@@ -1,24 +1,28 @@
 ---
-title: "데이터베이스 스냅숏 만들기(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/10/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 스냅숏 [SQL Server], 만들기"
+title: "데이터베이스 스냅숏 만들기(Transact-SQL) | Microsoft 문서"
+ms.custom: 
+ms.date: 08/10/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database snapshots [SQL Server], creating
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 caps.latest.revision: 56
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b3f980ff1cdf0dd08b0970887988eafa245e9622
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 스냅숏 만들기(Transact-SQL)
+# <a name="create-a-database-snapshot-transact-sql"></a>데이터베이스 스냅숏 만들기(Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅숏은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅숏 만들기를 지원하지 않습니다.  
   
   
@@ -27,7 +31,7 @@ caps.handback.revision: 56
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
--   서버 인스턴스는 데이터베이스 스냅숏을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 스냅숏 지원에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+-   서버 인스턴스는 데이터베이스 스냅숏을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 스냅숏 지원에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 -   데이터베이스 미러링 세션의 미러 데이터베이스가 아닌 경우 원본 데이터베이스는 온라인 상태여야 합니다.  
   
@@ -38,7 +42,7 @@ caps.handback.revision: 56
 - 원본 데이터베이스에는 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함될 수 없습니다. 자세한 내용은 [메모리 내 OLTP에 대한 지원되지 않는 SQL Server 기능](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)을 참조하세요.
 
 >  [!IMPORTANT]
-> 다른 주요 고려 사항에 대한 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
+> 다른 주요 고려 사항에 대한 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 사용해서만 만들 수 있습니다.  
   
 ##  <a name="Recommendations"></a> 권장 사항  
  이 섹션에서는 다음과 같은 최상의 방법에 대해 설명합니다.  
@@ -113,12 +117,12 @@ AdventureWorks_snapshot_evening
   
      [;]  
   
-     여기서 *source_**database_name*은 원본 데이터베이스이고, *logical_file_name*은 SQL Server에서 파일을 참조할 때 사용되는 논리적 이름이고, *os_file_name*은 운영 체제에서 파일을 만드는 데 사용되는 경로 및 파일 이름이고, *database_snapshot_name*은 데이터베이스를 되돌릴 스냅숏의 이름입니다. 이 구문에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)를 참조하세요.  
+     여기서 *source_**database_name* 은 원본 데이터베이스이고, *logical_file_name*은 SQL Server에서 파일을 참조할 때 사용되는 논리적 이름이고, *os_file_name* 은 운영 체제에서 파일을 만드는 데 사용되는 경로 및 파일 이름이고, *database_snapshot_name* 은 데이터베이스를 되돌릴 스냅숏의 이름입니다. 이 구문에 대한 자세한 내용은 [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)을 사용해서만 만들 수 있습니다.  
   
     > [!NOTE]  
     >  데이터베이스 스냅숏을 만들 때 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일은 CREATE DATABASE 문에 사용할 수 없습니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
   
 > [!NOTE]  
 >  이 예에서 사용된 `.ss` 확장명은 임의로 지정됩니다.  
@@ -130,7 +134,7 @@ AdventureWorks_snapshot_evening
 -   2. [Sales 데이터베이스에 대한 스냅숏 만들기](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅숏 만들기  
- 이 예에서는 `AdventureWorks` 데이터베이스에 대한 데이터베이스 스냅숏을 만듭니다. 스냅숏 이름 `AdventureWorks_dbss_1800` 및 스파스 파일의 파일 이름 `AdventureWorks_data_1800.ss`는 생성 시간이 오후 6시(18:00시)임을 나타냅니다.  
+ 이 예에서는 `AdventureWorks` 데이터베이스에 대한 데이터베이스 스냅숏을 만듭니다. 스냅숏 이름 `AdventureWorks_dbss_1800`및 스파스 파일의 파일 이름 `AdventureWorks_data_1800.ss`는 생성 시간이 오후 6시(18:00시)임을 나타냅니다.  
   
 ```  
 CREATE DATABASE AdventureWorks_dbss1800 ON  
@@ -141,7 +145,7 @@ GO
 ```  
   
 ####  <a name="Creating_on_Sales"></a> 2. Sales 데이터베이스에 대한 스냅숏 만들기  
- 이 예에서는 `sales_snapshot1200` 데이터베이스에 대한 데이터베이스 스냅숏 `Sales`을 만듭니다. 이 데이터베이스는 [CREATE DATABASE(SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)의 "파일 그룹을 가진 데이터베이스 만들기" 예제에서 만들었습니다.  
+ 이 예에서는 `sales_snapshot1200`데이터베이스에 대한 데이터베이스 스냅숏 `Sales` 을 만듭니다. 이 데이터베이스는 [CREATE DATABASE(SQL Server Transact-SQL)](../../t-sql/statements/create-database-sql-server-transact-sql.md)의 "파일 그룹을 가진 데이터베이스 만들기" 예제에서 만들었습니다.  
   
 ```  
 --Creating sales_snapshot1200 as snapshot of the  
@@ -171,8 +175,10 @@ GO
   
 -   [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
+
+

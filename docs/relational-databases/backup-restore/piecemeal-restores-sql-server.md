@@ -1,27 +1,31 @@
 ---
-title: "증분 복원(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "부분 업데이트 [SQL Server]"
-  - "단계별 복원 [SQL Server]"
-  - "증분 복원 [SQL Server]"
-  - "복원 [SQL Server], 증분 복원 시나리오"
+title: "증분 복원(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- partial updates [SQL Server]
+- staged restores [SQL Server]
+- piecemeal restores [SQL Server]
+- restoring [SQL Server], piecemeal restore scenario
 ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 caps.latest.revision: 74
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 74
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c653a1facffa0c6f6422645f3336120e8864f1
+ms.lasthandoff: 04/11/2017
+
 ---
-# 증분 복원(SQL Server)
+# <a name="piecemeal-restores-sql-server"></a>증분 복원(SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔터프라이즈 버전의 데이터베이스에 여러 개의 파일 또는 파일 그룹이 있는 경우, 그리고 단순 모델에서 파일 그룹이 읽기 전용인 경우에 대해서만 다룹니다.  
   
  증분 복원과 메모리 액세스에 최적화된 테이블에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)을 참조하세요.  
@@ -38,7 +42,7 @@ caps.handback.revision: 74
   
  증분 복원을 수행하기 위한 정확한 요구 사항은 데이터베이스의 복구 모델에 따라 달라집니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "단순 복구 모델에서의 증분 복원" 및 "전체 복구 모델에서의 증분 복원"을 참조하십시오.  
   
-## 증분 복원 시나리오  
+## <a name="piecemeal-restore-scenarios"></a>증분 복원 시나리오  
  모든 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 오프라인 증분 복원을 지원합니다. 엔터프라이즈 버전에서는 온라인 또는 오프라인 상태에서 증분 복원을 수행할 수 있습니다. 오프라인 및 온라인 증분 복원의 의미는 다음과 같습니다.  
   
 -   오프라인 증분 복원 시나리오  
@@ -49,16 +53,16 @@ caps.handback.revision: 74
   
      온라인 증분 복원 시에는 부분 복원 순서 후 데이터베이스가 온라인 상태가 되고 주 파일 그룹과 복구된 모든 보조 파일 그룹을 사용할 수 있습니다. 복원되지 않은 파일 그룹은 오프라인 상태로 남지만 필요한 경우 데이터베이스를 온라인으로 유지한 상태에서 해당 파일을 복원할 수 있습니다.  
   
-     온라인 증분 복원에는 지연된 트랜잭션이 사용될 수 있습니다. 파일 그룹의 하위 집합만 복원된 경우 온라인 파일 그룹에 종속된 데이터베이스의 트랜잭션이 지연될 수 있습니다. 이것은 전체 데이터베이스가 일치해야 하므로 정상적인 현상입니다. 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)을 참조하세요.  
+     온라인 증분 복원에는 지연된 트랜잭션이 사용될 수 있습니다. 파일 그룹의 하위 집합만 복원된 경우 온라인 파일 그룹에 종속된 데이터베이스의 트랜잭션이 지연될 수 있습니다. 이것은 전체 데이터베이스가 일치해야 하므로 정상적인 현상입니다. 자세한 내용은 [지연된 트랜잭션&#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)에서 존재하지 않는 파일 그룹을 제거하는 방법에 대해 설명합니다.  
   
 -   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] 증분 복원 시나리오  
   
      메모리 내 OLTP 데이터베이스의 증분 복원에 대한 자세한 내용은 [메모리 액세스에 최적화된 테이블이 포함된 데이터베이스의 증분 백업 및 복원](../../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md)을 참조하세요.  
   
-## 제한 사항  
+## <a name="restrictions"></a>제한 사항  
  부분 복원 순서에서 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md) 파일 그룹이 제외될 경우 지정 시간 복원은 지원되지 않습니다. 복원 순서를 강제로 계속할 수 있지만 RESTORE 문에서 누락된 FILESTREAM 파일 그룹은 복원되지 않습니다. 지정 시간 복원을 강제로 수행하려면 후속 RESTORE LOG 문에도 지정해야 하는 STOPAT, STOPATMARK 또는 STOPBEFOREMARK 옵션과 함께 CONTINUE_AFTER_ERROR 옵션을 지정합니다. CONTINUE_AFTER_ERROR를 지정하면 부분 복원 순서가 성공하고 FILESTREAM 파일 그룹이 복구 불가능한 상태가 됩니다.  
   
-## 단순 복구 모델에서의 증분 복원  
+## <a name="piecemeal-restore-under-the-simple-recovery-model"></a>단순 복구 모델에서의 증분 복원  
  단순 복구 모델에서 증분 복원 순서는 전체 데이터베이스 백업 또는 부분 백업으로 시작해야 합니다. 그런 다음 복원된 백업이 차등 기반일 경우 최근의 차등 백업을 복원합니다.  
   
  첫 번째 부분 복원 순서 중에 읽기/쓰기 파일 그룹의 하위 집합만 복원할 경우 복원되지 않은 파일 그룹은 부분 복원된 데이터베이스를 복구할 때 존재하지 않는 상태가 됩니다. 다음과 같은 경우에만 부분 복원 순서에서 읽기/쓰기 파일 그룹을 제외할 수 있습니다.  
@@ -69,7 +73,7 @@ caps.handback.revision: 74
   
 -   데이터베이스가 단순 복구 모델을 사용하는 동안 전체 백업이 수행되었으나 복구 지점은 데이터베이스가 전체 복구 모델을 사용 중인 시점에 있는 경우. 자세한 내용은 이 항목의 뒷부분에 있는 "단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원 수행"을 참조하십시오.  
   
-### 단순 복구 모델에서의 증분 복원에 대한 요구 사항  
+### <a name="requirements-for-piecemeal-restore-under-the-simple-recovery-model"></a>단순 복구 모델에서의 증분 복원에 대한 요구 사항  
  단순 복구 모델에서 초기 단계는 주 파일 그룹과 모든 읽기/쓰기 보조 파일 그룹을 복원 및 복구합니다. 초기 단계가 완료되었을 때 복구된 파일이 유효하고 데이터베이스와 일치하는 경우 이 파일을 온라인 상태로 직접 연결할 수 있습니다.  
   
  그 후에 하나 이상의 추가 단계로 읽기 전용 파일 그룹을 복원할 수 있습니다.  
@@ -90,7 +94,7 @@ caps.handback.revision: 74
   
 -   읽기 전용 파일의 백업이 주 파일 그룹의 백업과 일치하려면 보조 파일 그룹은 백업된 당시부터 주 파일 그룹을 포함하는 백업이 완료될 때까지 읽기 전용 상태여야 합니다. 파일 그룹이 읽기 전용 상태가 된 후 차등 파일 백업을 가져온 경우 차등 파일 백업을 사용할 수 있습니다.  
   
-### 증분 복원 단계(단순 복구 모델)  
+### <a name="piecemeal-restore-stages-simple-recovery-model"></a>증분 복원 단계(단순 복구 모델)  
  증분 복원 시나리오에는 다음 단계가 포함됩니다.  
   
 -   초기 단계(주 파일 그룹과 모든 읽기/쓰기 파일 그룹 복원 및 복구)  
@@ -116,13 +120,13 @@ caps.handback.revision: 74
   
     -   손상되거나 데이터베이스와 일치하지 않는 파일은 복구하기 전에 복원해야 합니다.  
   
-### 예  
+### <a name="examples"></a>예  
   
 -   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
 -   [예제: 일부 파일 그룹만 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md)  
   
-## 전체 복구 모델에서의 증분 복원  
+## <a name="piecemeal-restore-under-the-full-recovery-model"></a>전체 복구 모델에서의 증분 복원  
  전체 복구 모델 또는 대량 로그 복구 모델에서는 여러 파일 그룹이 있는 모든 데이터베이스에 대해 증분 복원을 사용하여 해당 데이터베이스를 임의의 시점으로 복원할 수 있습니다. 증분 복원의 복원 순서는 다음과 같이 동작합니다.  
   
 -   부분 복원 순서  
@@ -141,16 +145,16 @@ caps.handback.revision: 74
   
      엔터프라이즈 버전에서 데이터베이스가 온라인 상태인 동안에는 오프라인 보조 파일 그룹을 복원 및 복구할 수 있습니다. 특정 읽기 전용 파일이 손상되지 않았고 데이터베이스와 일치하면 해당 파일을 복원할 필요가 없습니다. 자세한 내용은 [데이터를 복원하지 않고 데이터베이스 복구&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)를 참조하세요.  
   
-### 로그 백업 적용  
+### <a name="applying-log-backups"></a>로그 백업 적용  
  파일 백업이 생성되기 이전부터 읽기 전용 파일 그룹이 읽기 전용이었으면 로그 백업을 파일 그룹에 적용할 필요가 없으며 파일 복원 시 이 작업은 생략됩니다. 읽기/쓰기가 가능한 파일 그룹의 경우 파일 그룹을 현재 로그 파일로 전달하려면 손상되지 않은 로그 백업 체인을 마지막 전체 복원 또는 차등 복원에 적용해야 합니다.  
   
-### 예  
+### <a name="examples"></a>예  
   
 -   [예제: 데이터베이스의 증분 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-full-recovery-model.md)  
   
 -   [예제: 일부 파일 그룹만 증분 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md)  
   
-## 단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원 수행  
+## <a name="performing-a-piecemeal-restore-of-a-database-whose-recovery-model-has-been-switched-from-simple-to-full"></a>단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원 수행  
  전체 또는 부분 데이터베이스 백업 이후 단순 복구 모델에서 전체 복구 모델로 전환된 데이터베이스의 증분 복원을 수행할 수 있습니다. 예를 들어 다음 단계를 수행할 데이터베이스가 있다고 가정합니다.  
   
 1.  단순 모델 데이터베이스의 부분 백업(backup_1)을 만듭니다.  
@@ -171,9 +175,9 @@ caps.handback.revision: 74
   
 4.  데이터를 원래 복구 지점으로 복원하기 위한 원래 증분 복원으로 다른 모든 백업이 복원된 후 이어지는 차등 백업  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [SQL Server 데이터베이스를 지정 시간으로 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)   
  [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [복원 시퀀스 계획 및 수행&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md)  

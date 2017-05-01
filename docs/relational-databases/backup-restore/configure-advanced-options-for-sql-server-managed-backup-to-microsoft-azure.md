@@ -1,32 +1,36 @@
 ---
-title: "Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffd28159-8de8-4d40-87da-1586bfef3315
 caps.latest.revision: 8
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.lasthandoff: 04/11/2017
+
 ---
-# Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성
+# <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성
   다음 자습서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 옵션 설정 방법을 설명합니다. 이러한 절차는 제공되는 기능에서 필요한 경우에만 필요합니다. 그렇지 않으면 기본 동작에 따라 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 사용할 수 있습니다.  
   
- 각 시나리오에서 백업은 `database_name` 매개 변수를 사용하여 지정됩니다. `database_name`이 NUL 또는 *인 경우 변경하면 인스턴스 수준의 기본 설정에 영향을 줍니다. 또한, 인스턴스 수준 설정은 변경 이후 생성된 새로운 데이터베이스에도 영향을 줍니다.  
+ 각 시나리오에서 백업은 `database_name` 매개 변수를 사용하여 지정됩니다. `database_name` 이 NUL 또는 *인 경우 변경하면 인스턴스 수준의 기본 설정에 영향을 줍니다. 또한, 인스턴스 수준 설정은 변경 이후 생성된 새로운 데이터베이스에도 영향을 줍니다.  
   
- 이러한 설정을 지정하면 시스템 저장 프로시저 [managed_backup.sp_backup_config_basic&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하여 데이터베이스 또는 인스턴스에서 Managed Backup을 사용하도록 설정할 수 있습니다. 자세한 내용은 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을(를) 참조하십시오.  
+ 이러한 설정을 지정하면 시스템 저장 프로시저 [managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하여 데이터베이스 또는 인스턴스에서 Managed Backup을 사용하도록 설정할 수 있습니다. 자세한 내용은 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을(를) 참조하십시오.  
   
 > [!WARNING]  
->  항상 고급 옵션 및 사용자 지정 일정 옵션을 구성한 후에 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]와 [managed_backup.sp_backup_config_basic&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하도록 설정해야 합니다. 그렇지 않은 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 활성화하고 이러한 설정을 구성하는 시간 기간 동안에 예기치 않은 백업 작업이 발생할 수 있습니다.  
+>  항상 고급 옵션 및 사용자 지정 일정 옵션을 구성한 후에 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]와 [managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하도록 설정해야 합니다. 그렇지 않은 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 활성화하고 이러한 설정을 구성하는 시간 기간 동안에 예기치 않은 백업 작업이 발생할 수 있습니다.  
   
-## 암호화 구성  
+## <a name="configure-encryption"></a>암호화 구성  
  다음 단계는 저장 프로시저 [managed_backup.sp_backup_config_advanced&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)를 사용하여 암호화 설정을 지정하는 방법을 설명합니다.  
   
 1.  **암호화 알고리즘 결정:** 먼저 사용할 암호화 알고리즘의 이름을 결정합니다. 다음 알고리즘 중 하나 선택:  
@@ -76,9 +80,9 @@ caps.handback.revision: 7
     ```  
   
     > [!WARNING]  
-    >  이전 예제에서 `@database_name`이 NULL인 경우 설정은 SQL Server 인스턴스에 적용됩니다.  
+    >  이전 예제에서 `@database_name` 이 NULL인 경우 설정은 SQL Server 인스턴스에 적용됩니다.  
   
-## 사용자 지정 백업 일정 구성  
+## <a name="configure-a-custom-backup-schedule"></a>사용자 지정 백업 일정 구성  
  다음 단계는 저장 프로시저 [managed_backup.sp_backup_config_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)을 사용하여 사용자 지정 일정을 설정하는 방법을 설명합니다.  
   
 1.  **전체 백업을 위한 빈도 결정:** 데이터베이스의 전체 백업을 수행하는 빈도를 결정합니다. '매일' 및 '매주' 전체 백업을 선택할 수 있습니다.  
@@ -108,10 +112,10 @@ caps.handback.revision: 7
   
     ```  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  고급 옵션 및 사용자 지정 일정을 구성한 후 대상 데이터베이스 또는 SQL Server 인스턴스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 활성화해야 합니다. 자세한 내용은 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을(를) 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   

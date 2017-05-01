@@ -1,29 +1,33 @@
 ---
-title: "구독 다시 초기화 - 단일 구독 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "replication"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rep.reinit.single.f1"
-helpviewer_keywords: 
-  - "구독 다시 초기화 대화 상자"
+title: "구독 다시 초기화 - 단일 구독 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- replication
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rep.reinit.single.f1
+helpviewer_keywords:
+- Reinitialize Subscription(s) dialog box
 ms.assetid: 9b0cf0be-d1f1-4163-a0ca-d6f095aa707e
 caps.latest.revision: 11
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a8fbb60295103fad2edccc62b19c791407148b91
+ms.lasthandoff: 04/11/2017
+
 ---
-# 구독 다시 초기화 - 단일 구독
-   **구독 다시 초기화** 대화 상자를 사용 하면 구독을 다시 초기화 하도록 표시 하려면 있습니다. 다시 초기화에는 스냅숏을 구독자에 적용하는 작업이 포함됩니다. 이 작업은 트랜잭션 게시의 구독에 대한 배포 에이전트 또는 병합 게시의 구독에 대한 병합 에이전트에서 수행합니다.  
+# <a name="reinitialize-subscriptions---one-subscription"></a>구독 다시 초기화 - 단일 구독
+  **구독 다시 초기화** 대화 상자를 사용하여 구독을 다시 초기화하도록 표시할 수 있습니다. 다시 초기화에는 스냅숏을 구독자에 적용하는 작업이 포함됩니다. 이 작업은 트랜잭션 게시의 구독에 대한 배포 에이전트 또는 병합 게시의 구독에 대한 병합 에이전트에서 수행합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **현재 스냅숏 사용**  
  다음에 배포 에이전트 또는 병합 에이전트가 실행될 때 현재 스냅숏을 구독자에 적용하려면 이 옵션을 선택합니다. 유효한 스냅숏이 없으면 이 옵션을 선택할 수 없습니다.  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 11
  **다시 초기화 표시**  
  구독을 다시 초기화하도록 표시하려면 클릭합니다. 유효한 스냅숏을 사용할 수 있으면 다음에 배포 에이전트 또는 병합 에이전트가 해당 구독에 대해 실행될 때 이 스냅숏이 구독자에 적용됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)  
   
   

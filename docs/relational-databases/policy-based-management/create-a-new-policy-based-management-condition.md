@@ -1,25 +1,29 @@
 ---
-title: "새로운 정책 기반 관리 조건 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "정책 기반 관리, 정책 조건 만들기"
+title: "새로운 정책 기반 관리 조건 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Policy-Based Management, creating policy conditions
 ms.assetid: 8a612f7e-6c70-49db-a4de-48431e097cc5
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 656163a8971e279893bd2e7fa9ec382d4c0c95c7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 새로운 정책 기반 관리 조건 만들기
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 정책 기반 관리 조건을 만드는 방법에 대해 설명합니다.  
+# <a name="create-a-new-policy-based-management-condition"></a>새로운 정책 기반 관리 조건 만들기
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 정책 기반 관리 조건을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -40,7 +44,7 @@ caps.handback.revision: 11
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 조건을 만들려면  
+#### <a name="to-create-a-condition"></a>조건을 만들려면  
   
 1.  **개체 탐색기**에서 더하기 기호를 클릭하여 정책 기반 관리 조건을 만들려는 서버를 확장합니다.  
   
@@ -61,3 +65,4 @@ caps.handback.revision: 11
 9. 완료되었으면 **확인**을 클릭합니다.  
   
   
+

@@ -1,24 +1,28 @@
 ---
-title: "유지 관리 계획 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "유지 관리 계획 [SQL Server], 만들기"
+title: "유지 관리 계획 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- maintenance plans [SQL Server], creating
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 caps.latest.revision: 31
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adab1fc3a3a009a4a6fe74ddbe9ee97f8c128bdf
+ms.lasthandoff: 04/11/2017
+
 ---
-# 유지 관리 계획 만들기
+# <a name="create-a-maintenance-plan"></a>유지 관리 계획 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하면 유지 관리 계획 마법사나 디자인 화면을 통해 이러한 유지 관리 계획을 만들 수 있습니다. 기본 유지 관리 계획을 만들 때는 마법사가 적합한 반면 디자인 화면을 사용하여 계획을 만들면 워크플로의 향상된 기능을 활용할 수 있습니다.  
   
  **항목 내용**  
@@ -43,7 +47,7 @@ caps.handback.revision: 31
  다중 서버 유지 관리 계획을 만들려면 하나의 마스터 서버 및 하나 이상의 대상 서버가 있는 다중 서버 환경을 구성해야 합니다. 다중 서버 유지 관리 계획은 마스터 서버에서 만들고 유지 관리해야 합니다. 이러한 계획을 대상 서버에서 볼 수 있지만 유지 관리할 수는 없습니다. 
  
 ###  <a name="Prerequisite"></a> 사전 요구 사항  
-[에이전트 XPs 서버 구성 옵션](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)을 사용하도록 설정해야 합니다.
+[에이전트 XPs 서버 구성 옵션](../../database-engine/configure-windows/agent-xps-server-configuration-option.md) 을 사용하도록 설정해야 합니다.
   
 ###  <a name="Security"></a> 보안  
   
@@ -52,7 +56,7 @@ caps.handback.revision: 31
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 유지 관리 계획 마법사를 사용하여 유지 관리 계획을 만들려면  
+#### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사를 사용하여 유지 관리 계획을 만들려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 유지 관리 계획을 만들 서버를 확장합니다.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 31
   
 4.  마법사의 단계에 따라 유지 관리 계획을 만듭니다. 자세한 내용은 [Use the Maintenance Plan Wizard](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)을 참조하세요.  
   
-#### 디자인 화면을 사용하여 유지 관리 계획을 만들려면  
+#### <a name="to-create-a-maintenance-plan-using-the-design-surface"></a>디자인 화면을 사용하여 유지 관리 계획을 만들려면  
   
 1.  개체 탐색기에서 더하기 기호를 클릭하여 유지 관리 계획을 만들 서버를 확장합니다.  
   
@@ -74,7 +78,7 @@ caps.handback.revision: 31
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 유지 관리 계획을 만들려면  
+#### <a name="to-create-a-maintenance-plan"></a>유지 관리 계획을 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -150,3 +154,4 @@ caps.handback.revision: 31
 -   [sp_attach_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   
+

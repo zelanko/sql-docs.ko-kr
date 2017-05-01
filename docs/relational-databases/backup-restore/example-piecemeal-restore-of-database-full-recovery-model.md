@@ -1,33 +1,37 @@
 ---
-title: "예제: 데이터베이스의 증분 복원(전체 복구 모델) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 복구 모델 [SQL Server], 복원 예제"
-  - "증분 복원 [SQL Server], 전체 복구 모델"
-  - "복원 시퀀스 [SQL Server], 증분"
+title: "예제: 데이터베이스의 증분 복원(전체 복구 모델) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full recovery model [SQL Server], RESTORE example
+- piecemeal restores [SQL Server], full recovery model
+- restore sequences [SQL Server], piecemeal
 ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a939ad4e9e5313961f681c06f896a9f53a906e8
+ms.lasthandoff: 04/11/2017
+
 ---
-# 예제: 데이터베이스의 증분 복원(전체 복구 모델)
+# <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예제: 데이터베이스의 증분 복원(전체 복구 모델)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   증분 복원 시퀀스는 주 파일 그룹에서 시작하여 모든 읽기/쓰기가 가능한 모든 보조 파일 그룹의 순서로 파일 그룹 수준에서 데이터베이스를 복원하고 복구합니다.  
   
- 이 예에서 `adb` 데이터베이스는 재해 발생 후 새 컴퓨터에 복원됩니다. 데이터베이스에서 전체 복구 모델을 사용하고 있으므로 복원이 시작되기 전에 데이터베이스의 비상 로그 백업을 만들어야 합니다. 재해가 발생하기 전에 모든 파일 그룹은 온라인 상태입니다. 파일 그룹 `B`는 읽기 전용입니다. 모든 보조 파일 그룹이 복원되어야 합니다. 단, 복원은 `A`(가장 중요), `C`, `B`와 같은 중요도 순으로 이루어져야 합니다. 이 예에서는 비상 로그 백업을 포함하여 4개의 로그 백업이 있습니다.  
+ 이 예에서 `adb` 데이터베이스는 재해 발생 후 새 컴퓨터에 복원됩니다. 데이터베이스에서 전체 복구 모델을 사용하고 있으므로 복원이 시작되기 전에 데이터베이스의 비상 로그 백업을 만들어야 합니다. 재해가 발생하기 전에 모든 파일 그룹은 온라인 상태입니다. 파일 그룹 `B` 는 읽기 전용입니다. 모든 보조 파일 그룹이 복원되어야 합니다. 단, 복원은 `A` (가장 중요), `C`, `B`와 같은 중요도 순으로 이루어져야 합니다. 이 예에서는 비상 로그 백업을 포함하여 4개의 로그 백업이 있습니다.  
   
-## 비상 로그 백업  
+## <a name="tail-log-backup"></a>비상 로그 백업  
  데이터베이스를 복원하기 전에 데이터베이스 관리자는 비상 로그 백업을 만들어야 합니다. 데이터베이스가 손상되었으므로 비상 로그 백업을 만들려면 NO_TRUNCATE 옵션을 사용해야 합니다.  
   
 ```  
@@ -36,7 +40,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
  비상 로그 백업은 다음 복원 시퀀스에서 마지막으로 적용되는 백업입니다.  
   
-## 복원 시퀀스  
+## <a name="restore-sequences"></a>복원 시퀀스  
   
 > [!NOTE]  
 >  온라인 복원 시퀀스의 구문은 오프라인 복원 시퀀스의 구문과 동일합니다.  
@@ -74,7 +78,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 3.  파일 그룹 `B`를 온라인 복원합니다.  
   
-     3번째 복원 시퀀스에서 데이터베이스 관리자는 파일 그룹 `B`를 복원합니다. 파일 그룹 `B`는 파일 그룹이 읽기 전용이 된 후 백업했으므로 복구 중에 롤포워드할 필요가 없습니다.  
+     3번째 복원 시퀀스에서 데이터베이스 관리자는 파일 그룹 `B`를 복원합니다. 파일 그룹 `B` 는 파일 그룹이 읽기 전용이 된 후 백업했으므로 복구 중에 롤포워드할 필요가 없습니다.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
@@ -82,7 +86,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
      이제 모든 파일 그룹이 온라인입니다.  
   
-## 추가 예  
+## <a name="additional-examples"></a>추가 예  
   
 -   [예제: 데이터베이스의 증분 복원&#40;단순 복구 모델&#41;](../../relational-databases/backup-restore/example-piecemeal-restore-of-database-simple-recovery-model.md)  
   
@@ -96,11 +100,11 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [예제: 읽기 전용 파일 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [온라인 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [트랜잭션 로그 백업 적용&#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md)   
+ [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)  
   
   

@@ -1,25 +1,29 @@
 ---
-title: "한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-tables"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "열 복사"
-  - "열 [SQL Server], 복사"
+title: "한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진) | Microsoft 문서"
+ms.custom: 
+ms.date: 09/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-tables
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- copying columns
+- columns [SQL Server], copying
 ms.assetid: 5f5e70dc-69f9-44b8-bc48-b5d51ac20d77
 caps.latest.revision: 23
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 27f2f6ae3af99a9c76934ab4c875d3c2c9746f40
+ms.lasthandoff: 04/11/2017
+
 ---
-# 한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진)
+# <a name="copy-columns-from-one-table-to-another-database-engine"></a>한 테이블에서 다른 테이블로 열 복사(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 열 정의만 복사하거나 열 정의와 데이터를 모두 복사하여 테이블 간에 열을 복사하는 방법을 설명합니다.  
@@ -50,7 +54,7 @@ caps.handback.revision: 23
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 한 테이블에서 다른 테이블로 열 정의를 복사하려면  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>한 테이블에서 다른 테이블로 열 정의를 복사하려면  
   
 1.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **디자인**을 클릭하여 복사할 열이 있는 테이블과 이 열을 붙여 넣을 대상 테이블을 엽니다.  
   
@@ -62,7 +66,7 @@ caps.handback.revision: 23
   
 5.  열을 삽입하려는 위치 바로 앞의 열을 선택하고 **편집** 메뉴에서 **붙여넣기**를 클릭합니다.  
   
-#### 테이블 간에 데이터를 복사하려면  
+#### <a name="to-copy-data-from-one-table-to-another"></a>테이블 간에 데이터를 복사하려면  
   
 1.  위에서 설명한 열 정의 복사 지침을 따릅니다.  
   
@@ -88,11 +92,11 @@ caps.handback.revision: 23
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 한 테이블에서 다른 테이블로 열 정의를 복사하려면  
+#### <a name="to-copy-column-definitions-from-one-table-to-another"></a>한 테이블에서 다른 테이블로 열 정의를 복사하려면  
   
-1.  Transact-SQL 문을 사용하여 한 테이블에서 다른 기존 테이블로 개별 열을 복사할 수 없습니다. 하지만 SELECT INTO를 사용하여 기본 파일 그룹에 새 테이블을 만들고 쿼리의 결과 행을 이 테이블에 삽입할 수 있습니다. 자세한 내용은 [INTO 절&#40;Transact-SQL&#41;](../Topic/INTO%20Clause%20\(Transact-SQL\).md)을 참조하세요.  
+1.  Transact-SQL 문을 사용하여 한 테이블에서 다른 기존 테이블로 개별 열을 복사할 수 없습니다. 하지만 SELECT INTO를 사용하여 기본 파일 그룹에 새 테이블을 만들고 쿼리의 결과 행을 이 테이블에 삽입할 수 있습니다. 자세한 내용은 [INTO 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-into-clause-transact-sql.md)을 참조하세요.  
   
-#### 테이블 간에 데이터를 복사하려면  
+#### <a name="to-copy-data-from-one-table-to-another"></a>테이블 간에 데이터를 복사하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
@@ -115,3 +119,4 @@ caps.handback.revision: 23
     ```  
   
   
+

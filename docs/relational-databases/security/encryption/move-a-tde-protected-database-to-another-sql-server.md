@@ -1,26 +1,30 @@
 ---
-title: "다른 SQL Server로 TDE 보호 데이터베이스 이동 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "투명한 데이터 암호화, 이동"
-  - "TDE, 데이터베이스 이동"
+title: "다른 SQL Server로 TDE 보호 데이터베이스 이동 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Transparent Data Encryption, moving
+- TDE, moving a database
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 caps.latest.revision: 18
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 다른 SQL Server로 TDE 보호 데이터베이스 이동
-  이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 사용하여 이 데이터베이스를 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 다른 인스턴스로 이동하기 위한 단계를 설명합니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. DEK는 서버의 **master** 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
+# <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
+  이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 이 데이터베이스를 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 다른 인스턴스로 이동하기 위한 단계를 설명합니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. DEK는 서버의 **master** 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
   
  **항목 내용**  
   
@@ -50,7 +54,7 @@ caps.handback.revision: 18
   
 -   인증서를 복구하려면 인증서 파일 및 개인 키 파일의 사본을 보관해야 합니다. 개인 키의 암호는 데이터베이스 마스터 키 암호와 동일할 필요가 없습니다.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 기본적으로 여기서 생성된 파일을 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA**에 저장합니다. 파일 이름 및 위치는 다를 수 있습니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 기본적으로 여기서 생성된 파일을 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 에 저장합니다. 파일 이름 및 위치는 다를 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -66,15 +70,15 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSCreate"></a> SQL Server Management Studio 사용  
   
-1.  **master** 데이터베이스에서 데이터베이스 마스터 키 및 인증서를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용**을 참조하세요.  
+1.  **master** 데이터베이스에서 데이터베이스 마스터 키 및 인증서를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
-2.  **master** 데이터베이스에서 서버 인증서의 백업을 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용**을 참조하세요.  
+2.  **master** 데이터베이스에서 서버 인증서의 백업을 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
 3.  개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스**를 선택합니다.  
   
 4.  **새 데이터베이스** 대화 상자의 **데이터베이스 이름** 상자에 새 데이터베이스의 이름을 입력합니다.  
   
-5.  **소유자** 상자에 새 데이터베이스의 소유자 이름을 입력합니다. 또는 줄임표 **(…)**를 클릭하여 **데이터베이스 소유자 선택** 대화 상자를 엽니다. 새 데이터베이스를 만드는 방법은 [Create a Database](../../../relational-databases/databases/create-a-database.md)를 참조하세요.  
+5.  **소유자** 상자에 새 데이터베이스의 소유자 이름을 입력합니다. 또는 줄임표 **(…)** 를 클릭하여 **데이터베이스 소유자 선택** 대화 상자를 엽니다. 새 데이터베이스를 만드는 방법은 [Create a Database](../../../relational-databases/databases/create-a-database.md)를 참조하세요.  
   
 6.  개체 탐색기에서 더하기 기호를 클릭하여 **데이터베이스** 폴더를 확장합니다.  
   
@@ -160,14 +164,14 @@ caps.handback.revision: 18
   
 ###  <a name="SSMSMove"></a> SQL Server Management Studio 사용  
   
-1.  개체 탐색기에서 위에서 암호화한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 후 **분리...**를 선택합니다.  
+1.  개체 탐색기에서 위에서 암호화한 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크** 를 가리킨 후 **분리...**를 선택합니다.  
   
      **데이터베이스 분리** 대화 상자에는 다음과 같은 옵션이 제공됩니다.  
   
      **분리할 데이터베이스**  
      분리할 데이터베이스를 나열합니다.  
   
-     **데이터베이스 이름**  
+     **Database Name**  
      분리할 데이터베이스 이름을 표시합니다.  
   
      **연결 삭제**  
@@ -183,9 +187,9 @@ caps.handback.revision: 18
      기본적으로 분리 작업은 데이터베이스와 연결된 모든 전체 텍스트 카탈로그를 유지합니다. 전체 텍스트 카탈로그를 제거하려면 **전체 텍스트 카탈로그 유지** 확인란의 선택을 취소합니다. 이 옵션은 데이터베이스를 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 업그레이드하는 경우에만 표시됩니다.  
   
      **상태**  
-     **준비** 또는 **준비 안 됨** 상태 중 하나를 표시합니다.  
+     **준비** 또는 **준비 안 됨**상태 중 하나를 표시합니다.  
   
-     ** 메시지 **  
+     **메시지**  
      다음과 같이 **메시지** 열에 데이터베이스에 대한 정보가 표시될 수도 있습니다.  
   
     -   데이터베이스가 복제와 관련된 경우 **상태** 는 **준비 안 됨** 이고 **메시지** 열에는 **데이터베이스 복제 완료**가 표시됩니다.  
@@ -200,9 +204,9 @@ caps.handback.revision: 18
   
 4.  Window 탐색기를 사용하여 서버 인증서 및 개인 키 파일의 백업을 원본 서버에서 대상 서버의 동일한 위치로 이동 또는 복사합니다.  
   
-5.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 대상 인스턴스에서 데이터베이스 마스터 키를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용**을 참조하세요.  
+5.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 대상 인스턴스에서 데이터베이스 마스터 키를 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
-6.  원본 서버 인증서 백업 파일을 사용하여 서버 인증서를 다시 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용**을 참조하세요.  
+6.  원본 서버 인증서 백업 파일을 사용하여 서버 인증서를 다시 만듭니다. 자세한 내용은 아래에서 **Transact-SQL 사용** 을 참조하세요.  
   
 7.  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **데이터베이스** 폴더를 마우스 오른쪽 단추로 클릭하고 **연결...**을 선택합니다.  
   
@@ -215,13 +219,13 @@ caps.handback.revision: 18
      **연결할 데이터베이스**  
      선택한 데이터베이스에 대한 정보를 표시합니다.  
   
-     \<no column header>  
-     연결 작업의 상태를 나타내는 아이콘을 표시합니다. 가능한 아이콘은 아래의 **상태**에 대한 설명에 설명되어 있습니다.  
+     \<열 머리글 없음>  
+     연결 작업의 상태를 나타내는 아이콘을 표시합니다. 가능한 아이콘은 아래의 **상태** 에 대한 설명에 설명되어 있습니다.  
   
      **MDF 파일 위치**  
      선택한 MDF 파일의 경로와 파일 이름을 표시합니다.  
   
-     **데이터베이스 이름**  
+     **Database Name**  
      데이터베이스 이름을 표시합니다.  
   
      **다른 이름으로 연결**  
@@ -242,7 +246,7 @@ caps.handback.revision: 18
     |오른쪽과 왼쪽에 두 개의 검정 사분면이 있고 위쪽과 아래쪽에 두 개의 흰색 사분면이 있는 원|중지됨|사용자가 작업을 중지하여 연결 작업이 완료되지 않았습니다.|  
     |시계 반대 방향을 가리키는 곡선 모양의 화살표가 있는 원|롤백됨|연결 작업이 성공적으로 완료되었지만 다른 개체를 연결하는 동안 발생한 오류로 인해 롤백되었습니다.|  
   
-     ** 메시지 **  
+     **메시지**  
      빈 메시지 또는 "파일을 찾을 수 없습니다"라는 하이퍼링크를 표시합니다.  
   
      **추가**  
@@ -261,12 +265,12 @@ caps.handback.revision: 18
      데이터베이스에 속한 연결된 파일의 이름을 표시합니다.  
   
      **파일 유형**  
-     파일의 형식(**데이터** 또는 **로그**)을 나타냅니다.  
+     파일의 형식( **데이터** 또는 **로그**)을 나타냅니다.  
   
      **현재 파일 경로**  
      선택한 데이터베이스 파일의 경로를 표시합니다. 이 경로는 직접 편집할 수 있습니다.  
   
-     ** 메시지 **  
+     **메시지**  
      빈 메시지 또는 "**파일을 찾을 수 없습니다**"라는 하이퍼링크를 표시합니다.  
   
 ###  <a name="TsqlMove"></a> Transact-SQL 사용  
@@ -320,7 +324,7 @@ caps.handback.revision: 18
   
 -   [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
   

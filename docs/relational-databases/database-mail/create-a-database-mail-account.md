@@ -1,32 +1,36 @@
 ---
-title: "데이터베이스 메일 계정 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 메일 [SQL Server], 계정"
-  - "계정 [데이터베이스 메일]"
+title: "데이터베이스 메일 계정 만들기 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Database Mail [SQL Server], accounts
+- accounts [Database Mail]
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 603259e6c6d93d5fa92e2680dcc8939e51365033
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 메일 계정 만들기
+# <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
   **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 계정을 만들 수 있습니다.  
   
--   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
+-   **Before you begin:**  [Prerequisites](#Prerequisites)  
   
--   **데이터베이스 메일 계정을 만들려면:** [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#TsqlProcedure) 사용  
+-   **To Create a Database Mail Account, using:**  [Database Mail Configuration Wizard](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **후속 작업:**  [데이터베이스 메일을 구성하기 위한 다음 단계](#FollowUp)  
+-   **Follow Up:**  [Next Steps to Configure the Database Mail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
@@ -49,7 +53,7 @@ caps.handback.revision: 26
   
 -   **프로필 및 계정 관리** 페이지에서 **새 계정 만들기** 를 선택하고 **다음**을 클릭합니다.  
   
--   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다.  **다음**을 클릭합니다.  
+-   **새 계정** 페이지에서 계정 이름, 설명, 메일 서버 정보 및 인증 유형을 지정합니다. **다음**을 클릭합니다.  
   
 -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 계정 만들기를 완료합니다.  
   

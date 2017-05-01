@@ -1,30 +1,34 @@
 ---
-title: "데이터베이스 엔진 스크립팅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스크립트 [SQL Server], PowerShell"
-  - "스크립트 [SQL Server]"
-  - "스크립팅 [SQL Server 데이터베이스 엔진]"
-  - "스크립팅 [SQL Server 데이터베이스 엔진], PowerShell"
+title: "데이터베이스 엔진 스크립팅 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- scripts [SQL Server], PowerShell
+- scripts [SQL Server]
+- scripting [SQL Server Database Engine]
+- scripting [SQL Server Database Engine], PowerShell
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 caps.latest.revision: 23
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bb56046f675b73ee5c37803490b8f62355447b7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 엔진 스크립팅
+# <a name="database-engine-scripting"></a>데이터베이스 엔진 스크립팅
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스 및 이러한 인스턴스의 개체를 관리하기 위한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] PowerShell 스크립팅 환경을 지원합니다. 또한 스크립팅 환경과 매우 유사한 환경에서는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 XQuery를 포함하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 작성 및 실행할 수 있습니다.  
   
-## SQL Server PowerShell  
+## <a name="sql-server-powershell"></a>SQL Server PowerShell  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 다음을 구현하는 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스냅인이 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 모델 계층을 파일 시스템 경로와 비슷한 PowerShell 경로로 노출하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 공급자. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체 모델 클래스를 사용하여 경로의 각 노드에 표현되는 개체를 관리할 수 있습니다.  
@@ -39,7 +43,7 @@ caps.handback.revision: 23
   
 -   PowerShell을 시작하고 **모듈을 가져오는** sqlps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티. 이를 통해 해당 모듈에서 지원하는 모든 동작을 수행할 수 있습니다. **sqlps** 유틸리티는 명령 프롬프트에서 시작하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio 개체 탐색기 트리의 노드를 마우스 오른쪽 단추로 클릭하고 **PowerShell 시작**을 선택하여 시작할 수 있습니다.  
   
-## 데이터베이스 엔진 쿼리  
+## <a name="database-engine-queries"></a>데이터베이스 엔진 쿼리  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 스크립트에는 다음과 같은 세 가지 유형의 요소가 포함되어 있습니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 언어 문  
@@ -60,22 +64,22 @@ caps.handback.revision: 23
   
 -   **-i***input_file* 매개 변수를 사용하여 **sqlcmd** 유틸리티로 파일을 실행할 수 있습니다.  
   
--   **-QueryFromFile** 매개 변수를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell 스크립트에서 **Invoke-Sqlcmd** cmdlet으로 파일을 실행할 수 있습니다.  
+-   **-QueryFromFile** 매개 변수를 사용하여 **PowerShell 스크립트에서** Invoke-Sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cmdlet으로 파일을 실행할 수 있습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업 단계를 사용하여 예약된 간격이나 시스템 이벤트에 대한 응답으로 스크립트를 실행할 수 있습니다.  
   
  또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트 생성 마법사를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 생성할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기에서 개체를 마우스 오른쪽 단추로 클릭한 후 **스크립트 생성** 메뉴 항목을 선택할 수 있습니다. **스크립트 생성** 은 스크립트를 만드는 과정을 안내하는 마법사를 시작합니다.  
   
-## 데이터베이스 엔진 스크립팅 태스크  
+## <a name="database-engine-scripting-tasks"></a>데이터베이스 엔진 스크립팅 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 코드 및 텍스트 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 대화식으로 개발, 디버그 및 실행하는 방법에 대해 설명합니다.|[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|스크립트를 대화식으로 개발하는 기능을 포함하여 **유틸리티와 함께 실행되도록** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하는 방법에 대해 설명합니다.|[sqlcmd 방법 도움말 항목](../Topic/sqlcmd%20How-to%20Topics.md)|  
+|[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서 코드 및 텍스트 편집기를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 대화식으로 개발, 디버그 및 실행하는 방법에 대해 설명합니다.|[쿼리 및 텍스트 편집기&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|스크립트를 대화식으로 개발하는 기능을 포함하여 **유틸리티와 함께 실행되도록** 유틸리티를 사용하여 명령 프롬프트에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하는 방법에 대해 설명합니다.|[sqlcmd 방법 도움말 항목](http://msdn.microsoft.com/library/dd7a2d2b-6327-4d77-ac5a-580d36073ad4)|  
 |SQL Server 구성 요소를 Windows PowerShell 환경에 통합한 다음 SQL Server 인스턴스 및 개체를 관리하는 PowerShell 스크립트를 작성하는 방법에 대해 설명합니다.|[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)|  
 |**스크립트 생성 및 게시 마법사** 를 사용하여 데이터베이스에서 하나 이상의 개체를 다시 만드는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 작성하는 방법에 대해 설명합니다.|[스크립트 생성&#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
  [자습서: Transact-SQL 문 작성](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

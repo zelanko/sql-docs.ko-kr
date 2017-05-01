@@ -1,27 +1,31 @@
 ---
-title: "차등 데이터베이스 백업 만들기(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-backup-restore"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전체 차등 백업 [SQL Server]"
-  - "데이터베이스 백업 [SQL Server], 전체 차등 백업"
-  - "데이터베이스 백업 [SQL Server], 전체 차등 백업"
-  - "백업 [SQL Server], 만들기"
+title: "차등 데이터베이스 백업 만들기(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-backup-restore
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- full differential backups [SQL Server]
+- database backups [SQL Server], full differential backups
+- backing up databases [SQL Server], full differential backups
+- backups [SQL Server], creating
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 caps.latest.revision: 34
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e15006bdae1d2ae6d33a9780b62f17fd88a69b
+ms.lasthandoff: 04/11/2017
+
 ---
-# 차등 데이터베이스 백업 만들기(SQL Server)
+# <a name="create-a-differential-database-backup-sql-server"></a>차등 데이터베이스 백업 만들기(SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 차등 데이터베이스 백업을 만듭니다.  
   
  **이 항목의 단원**  
@@ -44,13 +48,13 @@ caps.handback.revision: 34
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
-###  <a name="Restrictions"></a> 제한 사항  
+###  <a name="Restrictions"></a> Limitations and restrictions  
   
 -   명시적 또는 암시적 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
   
--   차등 데이터베이스 백업을 만들려면 이전 전체 데이터베이스 백업이 필요합니다. 데이터베이스를 백업한 적이 없으면 차등 백업을 만들기 전에 전체 데이터베이스 백업을 실행합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요.  
+-   차등 데이터베이스 백업을 만들려면 이전 전체 데이터베이스 백업이 필요합니다. 데이터베이스를 백업한 적이 없으면 차등 백업을 만들기 전에 전체 데이터베이스 백업을 실행합니다. 자세한 내용은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)에서 차등 데이터베이스 백업을 만듭니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
@@ -61,13 +65,13 @@ caps.handback.revision: 34
 ####  <a name="Permissions"></a> 먼저 권한을 확인하세요.  
  BACKUP DATABASE 및 BACKUP LOG 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_backupoperator** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
- 백업 장치의 실제 파일에 대한 소유권 및 권한 문제는 백업 작업에 영향을 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 장치에 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 **않습니다**. 백업 장치의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 실제 리소스에 액세스하기 전까지는 표시되지 않습니다.  
+ 백업 장치의 실제 파일에 대한 소유권 및 권한 문제는 백업 작업에 영향을 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 장치를 읽고 장치에 쓸 수 있어야 하므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스가 실행되는 계정에는 쓰기 권한이 있어야 합니다. 그러나 시스템 테이블의 백업 장치에 대한 항목을 추가하는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)는 파일 액세스 권한을 확인하지 **않습니다** . 백업 장치의 실제 파일에서 발생하는 권한 문제는 백업 또는 복원을 시도할 때 실제 리소스에 액세스하기 전까지는 표시되지 않습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
-#### 차등 데이터베이스 백업 만들기  
+#### <a name="create-a-differential-database-backup"></a>차등 데이터베이스 백업 만들기  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 해당 데이터베이스에 따라 사용자 데이터베이스를 선택하거나 **시스템 데이터베이스** 를 확장한 다음 시스템 데이터베이스를 선택합니다.  
   
@@ -80,7 +84,7 @@ caps.handback.revision: 34
 5.  **백업 유형** 목록 상자에서 **차등**을 선택합니다.  
   
     > [!IMPORTANT]  
-    >  **차등**을 선택할 때는 **백업만 복사** 확인란 선택을 취소해야 합니다.  
+    >  **차등** 을 선택할 때는 **백업만 복사** 확인란 선택을 취소해야 합니다.  
   
 6.  **백업 구성 요소**의 경우 **데이터베이스**를 클릭합니다.  
   
@@ -90,9 +94,9 @@ caps.handback.revision: 34
   
 9. 백업 세트가 만료될 시기를 다음과 같이 지정합니다.  
   
-    -   백업 세트가 특정 일수가 지난 후에 만료되도록 하려면 **다음 이후**(기본 옵션)를 클릭한 다음 백업 세트를 만든 후 백업 세트가 만료되기까지 경과해야 하는 일수를 입력합니다. 이 값은 0일에서 99,999일 사이일 수 있습니다. 값이 0일이면 백업 세트는 만료되지 않습니다.  
+    -   백업 세트가 특정 일수가 지난 후에 만료되도록 하려면 **다음 이후** (기본 옵션)를 클릭한 다음 백업 세트를 만든 후 백업 세트가 만료되기까지 경과해야 하는 일수를 입력합니다. 이 값은 0일에서 99,999일 사이일 수 있습니다. 값이 0일이면 백업 세트는 만료되지 않습니다.  
   
-         기본값은 **서버 속성** 대화 상자(**데이터베이스 설정** 페이지)의 **백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
+         기본값은 **서버 속성** 대화 상자( **데이터베이스 설정** 페이지)의**백업 미디어 기본 보존 기간(일)** 옵션에 설정되어 있습니다. 이 페이지에 액세스하려면 개체 탐색기에서 서버 이름을 마우스 오른쪽 단추로 클릭하고 속성을 선택한 다음 **데이터베이스 설정** 페이지를 선택합니다.  
   
     -   백업 세트가 특정 일자에 만료되게 하려면 **날짜**를 클릭한 다음 백업 세트가 만료될 날짜를 입력합니다.  
   
@@ -136,7 +140,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL  
   
-#### 차등 데이터베이스 백업 만들기  
+#### <a name="create-a-differential-database-backup"></a>차등 데이터베이스 백업 만들기  
   
 1.  BACKUP DATABASE 문을 실행하여 차등 데이터베이스 백업을 만듭니다. 이때 다음을 지정합니다.  
   
@@ -168,7 +172,7 @@ BACKUP DATABASE MyAdvWorks
 GO  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md)   
  [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)   
  [파일 및 파일 그룹 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

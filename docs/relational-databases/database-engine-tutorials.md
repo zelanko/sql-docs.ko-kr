@@ -1,29 +1,33 @@
 ---
-title: "데이터베이스 엔진 자습서 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-query-tuning"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터베이스 엔진 자습서 | Microsoft 문서"
+ms.custom: 
+ms.date: 08/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-query-tuning
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 4d54ac6d74c9794acfcc241e56ee6c128c9c50e2
+ms.lasthandoff: 04/11/2017
+
 ---
-# 데이터베이스 엔진 자습서
+# <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
 이 섹션에는 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]에 대한 자습서가 포함되어 있습니다.  
   
 [자습서: 데이터베이스 엔진 시작](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
 이 자습서에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 인스턴스에 연결하는 방법에 대해 설명합니다.  
   
 [자습서: SQL Server Management Studio](../tools/sql-server-management-studio/tutorial-sql-server-management-studio.md)  
-이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인프라 관리를 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 및 데이터 웨어하우스 등 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
+이 자습서에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인프라 관리를 위한 통합 환경을 소개합니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스 구성, 모니터링 및 관리를 위한 그래픽 인터페이스를 제공합니다. 또한 데이터베이스 및 데이터 웨어하우스 등 응용 프로그램에 사용되는 데이터 계층 구성 요소를 배포, 모니터링 및 업그레이드할 수도 있습니다. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 스크립트 편집 및 디버그를 위한 [!INCLUDE[tsql](../includes/tsql-md.md)], MDX, DMX 및 XML 언어 편집기도 제공합니다.  
   
 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)  
 이 자습서에는 [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스의 개체를 만들고 관리하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 문을 작성하는 기본적인 방법에 대해 설명합니다.  
@@ -43,15 +47,17 @@ caps.handback.revision: 14
 [자습서: 정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 이 자습서에서는 사이트 관리 표준을 강화하는 정책을 만드는 방법에 대해 설명합니다.  
   
-[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](../Topic/Tutorial:%20SQL%20Server%20Backup%20and%20Restore%20to%20Windows%20Azure%20Blob%20Storage%20Service.md)  
+[자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 저장소 서비스로 복원하는 방법에 대해 설명합니다.  
   
 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](https://msdn.microsoft.com/library/dn466438.aspx)  
 이 자습서는 Windows Azure BLOB 저장소 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
 [SQL Server 2016 자습서](../sql-server/tutorials-for-sql-server-2016.md)  
 [TechNet WIKI: SQL Server 2012 샘플](http://go.microsoft.com/fwlink/?linkID=220734)  
   
   
   
+
+

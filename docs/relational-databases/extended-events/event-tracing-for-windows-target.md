@@ -1,27 +1,31 @@
 ---
-title: "Windows용 이벤트 추적 대상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-  - "xevents"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows용 이벤트 추적 대상"
-  - "ETW 대상"
-  - "대상 [SQL Server extended events], Windows용 이벤트 추적 대상"
+title: "Windows용 이벤트 추적 대상 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+- xevents
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- event tracing for windows target
+- ETW target
+- targets [SQL Server extended events], event tracing for windows target
 ms.assetid: ca2bb295-b7f6-49c3-91ed-0ad4c39f89d5
 caps.latest.revision: 13
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d69eb01f34774812aeaafbddcaa08b17f22ac097
+ms.lasthandoff: 04/11/2017
+
 ---
-# Windows용 이벤트 추적 대상
+# <a name="event-tracing-for-windows-target"></a>Windows용 이벤트 추적 대상
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   ETW(Windows용 이벤트 추적)를 대상으로 사용하려면 먼저 ETW에 대한 실무 지식을 갖추고 있는 것이 좋습니다. ETW 추적은 확장 이벤트와 함께 사용되거나 확장 이벤트의 이벤트 소비자로 사용됩니다. 다음 외부 링크를 클릭하면 ETW에 대한 배경 지식을 제공하는 항목으로 연결됩니다.  
@@ -46,16 +50,16 @@ caps.handback.revision: 13
  ETW 대상은 Logman.exe와 같은 외부 ETW 컨트롤러를 제어하지 않습니다. ETW 추적을 생성하려면 ETW 대상으로 이벤트 세션을 만들어야 합니다. 자세한 내용은 [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  
->  ETW 대상을 활성화하면 이름이 XE_DEFAULT_ETW_SESSION인 ETW 세션이 생성됩니다. XE_DEFAULT_ETW_SESSION이라는 세션이 이미 있는 경우에는 기존 세션이 속성 수정 없이 그대로 사용됩니다. XE_DEFAULT_ETW_SESSION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 인스턴스 간에 공유됩니다. XE_DEFAULT_ETW_SESSION을 시작한 후에는 ETW 컨트롤러(예: Logman 도구)를 사용하여 중지해야 합니다. 예를 들어 명령 프롬프트에서 **logman stop XE_DEFAULT_ETW_SESSION -ets** 명령을 실행할 수 있습니다.  
+>  ETW 대상을 활성화하면 이름이 XE_DEFAULT_ETW_SESSION인 ETW 세션이 생성됩니다. XE_DEFAULT_ETW_SESSION이라는 세션이 이미 있는 경우에는 기존 세션이 속성 수정 없이 그대로 사용됩니다. XE_DEFAULT_ETW_SESSION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 인스턴스 간에 공유됩니다. XE_DEFAULT_ETW_SESSION을 시작한 후에는 ETW 컨트롤러(예: Logman 도구)를 사용하여 중지해야 합니다. 예를 들어 명령 프롬프트에서 **logman stop XE_DEFAULT_ETW_SESSION -ets**명령을 실행할 수 있습니다.  
   
  다음 표에서는 ETW 대상을 구성하는 데 사용할 수 있는 옵션에 대해 설명합니다.  
   
 |옵션|허용된 값|설명|  
 |------------|--------------------|-----------------|  
-|default_xe_session_name|최대 256자까지의 모든 문자열.  이 값은 선택 사항입니다. |확장 이벤트 세션 이름입니다. 기본적으로 이 이름은 XE_DEFAULT_ETW_SESSION입니다.|  
-|default_etw_session_logfile_path|최대 256자까지의 모든 문자열.  이 값은 선택 사항입니다. |확장 이벤트 세션의 로그 파일에 대한 경로입니다. 기본적으로 이 경로는 %TEMP%\ XEEtw.etl입니다.|  
-|default_etw_session_logfile_size_mb|부호 없는 정수  이 값은 선택 사항입니다. |확장 이벤트 세션의 로그 파일 크기(MB)입니다. 기본값은 20MB입니다.|  
-|default_etw_session_buffer_size_kb|부호 없는 정수  이 값은 선택 사항입니다. |확장 이벤트 세션의 메모리 내 버퍼 크기(KB)입니다. 기본값은 128KB입니다.|  
+|default_xe_session_name|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션 이름입니다. 기본적으로 이 이름은 XE_DEFAULT_ETW_SESSION입니다.|  
+|default_etw_session_logfile_path|최대 256자까지의 모든 문자열. 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일에 대한 경로입니다. 기본적으로 이 경로는 %TEMP%\ XEEtw.etl입니다.|  
+|default_etw_session_logfile_size_mb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 로그 파일 크기(MB)입니다. 기본값은 20MB입니다.|  
+|default_etw_session_buffer_size_kb|부호 없는 정수 이 값은 선택 사항입니다.|확장 이벤트 세션의 메모리 내 버퍼 크기(KB)입니다. 기본값은 128KB입니다.|  
 |retries|부호 없는 정수|이벤트가 삭제되기 전에 ETW 하위 시스템에 이벤트 게시를 재시도한 횟수입니다. 기본값은 0입니다.|  
   
  이러한 설정의 구성은 선택 사항입니다. ETW 대상은 이러한 설정에 대해 기본값을 사용합니다.  
@@ -77,9 +81,9 @@ caps.handback.revision: 13
     > [!IMPORTANT]  
     >  첫 번째 세션이 시작되면 파일 경로를 변경할 수 없습니다.  
   
--   MOF(Managed Object Format) 파일은 *\<설치 경로>*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.  
+-   MOF(Managed Object Format) 파일은 *\<설치 경로*\Microsoft SQL Server\Shared에 있습니다. 자세한 내용은 MSDN의 [Managed Object Format](http://go.microsoft.com/fwlink/?LinkId=92851) 을 참조하십시오.  
   
-## 세션에 대상 추가  
+## <a name="adding-the-target-to-a-session"></a>세션에 대상 추가  
  확장 이벤트 세션에 ETW 대상을 추가하려면 이벤트 세션을 만들거나 변경할 때 다음 문을 포함해야 합니다.  
   
 ```  
@@ -88,8 +92,8 @@ ADD TARGET package0.etw_classic_sync_target
   
  데이터를 보는 방법을 비롯한 ETW 대상을 사용하는 방법을 보여 주는 전체 예에 대한 자세한 내용은 [확장 이벤트를 사용하여 시스템 작업 모니터링](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)을 참조하세요.  
   
-## 참고 항목  
- [SQL Server 확장 이벤트 대상](../Topic/SQL%20Server%20Extended%20Events%20Targets.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 확장 이벤트 대상](http://msdn.microsoft.com/library/e281684c-40d1-4cf9-a0d4-7ea1ecffa384)   
  [sys.dm_xe_session_targets&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql.md)   
  [CREATE EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)  

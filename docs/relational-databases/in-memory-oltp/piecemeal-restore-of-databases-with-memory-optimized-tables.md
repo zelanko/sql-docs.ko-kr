@@ -1,23 +1,27 @@
 ---
-title: "메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원 | Microsoft 문서"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 732c9721-8dd4-481d-8ff9-1feaaa63f84f
 caps.latest.revision: 16
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b540d4b491980a57ec88d7a7717821a4e38b76a9
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원
-  증분 복원은 아래에 설명된 한 가지 제한 사항을 제외하고 메모리 액세스에 최적화된 테이블이 있는 데이터베이스에서 지원됩니다. 증분 백업 및 복원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../Topic/RESTORE%20\(Transact-SQL\).md) 및 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
+# <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스의 증분 복원
+  증분 복원은 아래에 설명된 한 가지 제한 사항을 제외하고 메모리 액세스에 최적화된 테이블이 있는 데이터베이스에서 지원됩니다. 증분 백업 및 복원에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md) 및 [증분 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/piecemeal-restores-sql-server.md)을 참조하세요.  
   
  메모리 액세스에 최적화된 파일 그룹은 주 파일 그룹과 함께 백업하고 복원해야 합니다.  
   
@@ -39,7 +43,7 @@ caps.handback.revision: 16
   
     -   페이지 복구를 사용하면 페이지를 특정하게 복원하여 페이지 손상을 수정할 수 있습니다. 자세한 내용은 [페이지 복원&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md)을 참조하세요.  
   
-## 샘플  
+## <a name="samples"></a>샘플  
  다음 예에서는 아래의 스키마를 사용합니다.  
   
 ```  
@@ -61,7 +65,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### 백업  
+### <a name="backup"></a>백업  
  이 예제에서는 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 백업하는 방법을 보여 줍니다. 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 함께 지정해야 합니다.  
   
 ```  
@@ -74,7 +78,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### 복원  
+### <a name="restore"></a>복원  
  다음 예제에서는 주 파일 그룹과 메모리 액세스에 최적화된 파일 그룹을 함께 복원하는 방법을 보여 줍니다.  
   
 ```  
@@ -94,7 +98,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## 참고 항목  
- [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)  
+## <a name="see-also"></a>참고 항목  
+ [메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

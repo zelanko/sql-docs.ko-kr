@@ -1,30 +1,34 @@
 ---
-title: "메모리 내 OLTP(메모리 내 최적화) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/22/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine-imoltp"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "메모리 내 OLTP"
-  - "메모리 액세스에 최적화된 테이블"
+title: "메모리 내 OLTP(메모리 내 최적화) | Microsoft 문서"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 11/22/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine-imoltp
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- In-Memory OLTP
+- memory-optimized tables
 ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 caps.latest.revision: 106
-author: "MightyPen"
-ms.author: "genemi"
-manager: "jhubbard"
-caps.handback.revision: 105
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b377f0c359751a5c970ceef2e1d7fa6bc556e3d7
+ms.lasthandoff: 04/11/2017
+
 ---
-# 메모리 내 OLTP(메모리 내 최적화)
+# <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
- -  [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/quick-start-1-in-memory-oltp-technologies-for-faster-transact-sql-performance.md)  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
+ -  [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)  
  
 메모리 내 OLTP를 설명하고 성능상의 이점을 설명하는 17분 분량의 비디오
 
@@ -38,9 +42,9 @@ caps.handback.revision: 105
 
 - [개요 및 사용 시나리오](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)
  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)]는 트랜잭션 처리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술입니다. 보고 및 분석 쿼리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술은 [Columnstore 인덱스 가이드](../Topic/Columnstore%20Indexes%20Guide.md)를 참조하세요.
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술입니다. 보고 및 분석 쿼리 성능을 향상시키는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기술은 [Columnstore 인덱스 가이드](../../relational-databases/indexes/columnstore-indexes-overview.md)를 참조하세요.
   
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]과 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 메모리 내 OLTP는 다양한 방식으로 개선되었습니다. Transact-SQL 노출 영역이 늘어나 데이터베이스 응용 프로그램을 보다 쉽게 마이그레이션할 수 있습니다. 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저에 대한 ALTER 작업 수행이 추가로 지원되어 응용 프로그램을 보다 쉽게 관리할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 새로운 기능에 대한 자세한 내용은 [데이터베이스 엔진의 새로운 기능](../Topic/What's%20New%20in%20Database%20Engine.md)을 참조하세요.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 과 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 메모리 내 OLTP는 다양한 방식으로 개선되었습니다. Transact-SQL 노출 영역이 늘어나 데이터베이스 응용 프로그램을 보다 쉽게 마이그레이션할 수 있습니다. 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저에 대한 ALTER 작업 수행이 추가로 지원되어 응용 프로그램을 보다 쉽게 관리할 수 있습니다. [!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 새로운 기능에 대한 자세한 내용은 [Columnstore 인덱스 - 새로운 기능](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)을 참조하세요.  
   
 > [!NOTE]  
 >  **사용해 보기**  
@@ -53,23 +57,23 @@ caps.handback.revision: 105
   
 |항목|Description|  
 |-----------|-----------------|  
-|[빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/quick-start-1-in-memory-oltp-technologies-for-faster-transact-sql-performance.md)|메모리 내 OLTP 살펴보기|
+|[빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|메모리 내 OLTP 살펴보기|
 |[개요 및 사용 시나리오](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|메모리 내 OLTP의 정의와 성능 이점을 보여 주는 시나리오에 대한 개요입니다.|
 |[메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|하드웨어 및 소프트웨어 요구 사항과 메모리 액세스에 최적화된 테이블의 사용 지침에 대해 설명합니다.|  
 |[메모리 내 OLTP 코드 예제](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|메모리 액세스에 최적화된 테이블을 만들고 사용하는 방법을 보여 주는 코드 예제가 포함되어 있습니다.|  
 |[메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)|메모리 액세스에 최적화된 테이블을 소개합니다.|  
-|[메모리 액세스에 최적화된 테이블 변수](../Topic/Memory-Optimized%20Table%20Variables.md)|기존의 테이블 변수 대신 메모리 액세스에 최적화된 테이블 변수를 사용하여 tempdb 사용을 줄이는 방법을 보여주는 코드 예제입니다.|  
-|[메모리 액세스에 최적화된 테이블의 인덱스](../Topic/Indexes%20on%20Memory-Optimized%20Tables.md)|메모리 액세스에 최적화된 인덱스를 소개합니다.|  
+|[메모리 액세스에 최적화된 테이블 변수](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|기존의 테이블 변수 대신 메모리 액세스에 최적화된 테이블 변수를 사용하여 tempdb 사용을 줄이는 방법을 보여주는 코드 예제입니다.|  
+|[메모리 액세스에 최적화된 테이블의 인덱스](http://msdn.microsoft.com/library/86805eeb-6972-45d8-8369-16ededc535c7)|메모리 액세스에 최적화된 인덱스를 소개합니다.|  
 |[고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)|고유하게 컴파일된 저장 프로시저를 소개합니다.|  
-|[메모리 내 OLTP의 메모리 관리](../Topic/Managing%20Memory%20for%20In-Memory%20OLTP.md)|시스템의 메모리 사용을 이해하고 관리하는 방법에 대해 설명합니다.|  
+|[메모리 내 OLTP의 메모리 관리](http://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)|시스템의 메모리 사용을 이해하고 관리하는 방법에 대해 설명합니다.|  
 |[메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)|메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 정보를 저장하는 데이터 및 델타 파일에 대해 설명합니다.|  
-|[메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](../Topic/Backup,%20Restore,%20and%20Recovery%20of%20Memory-Optimized%20Tables.md)|메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구를 논의합니다.|  
+|[메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구](http://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)|메모리 액세스에 최적화된 테이블의 백업, 복원 및 복구를 논의합니다.|  
 |[메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대한 [!INCLUDE[hek_2](../../includes/hek-2-md.md)]지원을 논의합니다.|  
 |[메모리 내 OLTP 데이터베이스에 대한 고가용성 지원](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|[!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 가용성 그룹 및 장애 조치(failover) 클러스터링을 논의합니다.|  
 |[메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|메모리 액세스에 최적화된 테이블을 지원하는 새 구문/기능과 업데이트된 구문/기능을 나열합니다.|  
 |[메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 마이그레이션하는 방법에 대해 설명합니다.|  
   
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)]에 대한 자세한 내용은 다음을 참조하세요.  
+ [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대한 자세한 내용은 다음을 참조하세요.  
 
 - [메모리 내 OLTP를 설명하고 성능상의 이점을 보여 주는 비디오](https://www.youtube.com/watch?v=l5l5eophmK4).
 
@@ -89,3 +93,4 @@ caps.handback.revision: 105
  [데이터베이스 기능](../../relational-databases/database-features.md)  
   
   
+

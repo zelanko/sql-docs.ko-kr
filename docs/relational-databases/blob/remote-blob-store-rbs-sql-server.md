@@ -1,25 +1,29 @@
 ---
-title: "RBS(Remote Blob Store)(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-blob"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RBS(Remote Blob Store) [SQL Server]"
-  - "RBS(Remote Blob Store) [SQL Server]"
+title: "RBS(원격 Blob 저장소)(SQL Server) | Microsoft 문서"
+ms.custom: 
+ms.date: 11/03/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-blob
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Remote Blob Store (RBS) [SQL Server]
+- RBS (Remote Blob Store) [SQL Server]
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
 caps.latest.revision: 19
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5dd24af4232914ff6b86e036827364f1cb8c16a1
+ms.lasthandoff: 04/11/2017
+
 ---
-# RBS(Remote Blob Store)(SQL Server)
+# <a name="remote-blob-store-rbs-sql-server"></a>RBS(Remote Blob Store)(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RBS(Remote BLOB Store)는 데이터베이스 관리자가 기본 데이터베이스 서버에 직접 저장하지 않고 상용 저장소 솔루션에 BLOB(Binary Large Object)를 저장할 수 있도록 해 주는 선택적 추가 기능 구성 요소입니다.  
@@ -48,7 +52,7 @@ caps.handback.revision: 19
  많은 타사 저장소 솔루션 공급업체가 이러한 표준 API를 준수하고 다양한 저장소 플랫폼에서 BLOB 저장소를 지원하는 RBS 공급자를 개발했습니다.  
   
 ## <a name="rbs-requirements"></a>RBS 요구 사항  
- RBS를 사용하려면 BLOB 메타데이터가 저장된 기본 데이터베이스 서버용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise가 필요합니다.  그러나 제공된 FILESTREAM 공급자를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard에 BLOB 자체를 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하려면 RBS에는 적어도 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)]용 ODBC 드라이버 버전 11 및 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]용 ODBC 드라이버 버전 13이 필요합니다. 드라이버는 [SQL Server용 ODBC 드라이버 다운로드](https://msdn.microsoft.com/library/mt703139.aspx)에서 제공됩니다.   
+ RBS를 사용하려면 BLOB 메타데이터가 저장된 기본 데이터베이스 서버용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise가 필요합니다.  그러나 제공된 FILESTREAM 공급자를 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard에 BLOB 자체를 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결하려면 RBS에는 적어도 [!INCLUDE[ssSQL14_md](../../includes/sssql14-md.md)] 용 ODBC 드라이버 버전 11 및 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]용 ODBC 드라이버 버전 13이 필요합니다. 드라이버는 [SQL Server용 ODBC 드라이버 다운로드](https://msdn.microsoft.com/library/mt703139.aspx)에서 제공됩니다.   
   
  RBS에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 RBS가 BLOB을 저장할 수 있는 FILESTREAM 공급자가 포함되어 있습니다. 다른 저장소 솔루션에 RBS를 사용하여 BLOB을 저장하려면 해당 저장소 솔루션을 위해 개발된 타사 RBS 공급자를 사용하거나 RBS API를 사용하여 사용자 지정 RBS 공급자를 개발해야 합니다. NTFS 파일 시스템에 BLOB을 저장하는 예제 공급자는 [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)에서 학습 리소스로 사용할 수 있습니다.  
   
@@ -63,28 +67,28 @@ caps.handback.revision: 19
   
 -   RBS 2016은 **AES_128** 대칭 키를 사용합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]은 이전 버전과의 호환성을 위한 경우를 제외하고 새로운 **TRIPLE_DES** 키 생성을 허용하지 않습니다. 자세한 내용은 [CREATE SYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)를 참조하세요.  
   
--   RBS 2014 이전 버전은 오래된 **TRIPLE_DES** 대칭 키 알고리즘을 사용하여 암호화된 암호를 유지하는 자격 증명 저장소를 사용합니다. 현재 **TRIPLE_DES**[!INCLUDE[msCoName](../../includes/msconame-md.md)]을(를) 사용하는 경우, 이 항목에 포함된 단계에 따라 보다 강력한 암호화 방법으로 키를 회전하도록 보안을 향상시키는 것이 좋습니다.  
+-   RBS 2014 이전 버전은 오래된 **TRIPLE_DES** 대칭 키 알고리즘을 사용하여 암호화된 암호를 유지하는 자격 증명 저장소를 사용합니다. 현재 **TRIPLE_DES**[!INCLUDE[msCoName](../../includes/msconame-md.md)] 을(를) 사용하는 경우, 이 항목에 포함된 단계에 따라 보다 강력한 암호화 방법으로 키를 회전하도록 보안을 향상시키는 것이 좋습니다.  
   
  RBS 데이터베이스에서 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 RBS 자격 증명 저장소 대칭 키 속성을 결정할 수 있습니다.   
-`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` 해당 문의 출력에 **TRIPLE_DES**가 아직 사용 중인 것으로 나타나면 이 키를 순환해야 합니다.  
+`SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';` 해당 문의 출력에 **TRIPLE_DES** 가 아직 사용 중인 것으로 나타나면 이 키를 순환해야 합니다.  
   
 ### <a name="rotating-the-symmetric-key"></a>대칭 키 회전  
  RBS를 사용하는 경우, 자격 증명 저장소 대칭 키를 정기적으로 회전해야 합니다. 이것은 조직의 보안 정책을 충족하기 위한 일반적인 보안 모범 사례입니다.  RBS 자격 증명 저장소 대칭 키를 회전하는 한 가지 방법은 RBS 데이터베이스에 [아래 스크립트](#Key_rotation) 를 사용하는 것입니다.  이 스크립트를 사용하여 알고리즘 또는 키 길이와 같은 보다 강력한 암호화 강도 속성으로 마이그레이션할 수 있습니다. 키를 회전하기 전에 데이터베이스를 백업합니다.  스크립트의 결론에 몇 가지 확인 단계가 있습니다.  
 보안 정책에 의해 제공된 것과 다른 키 속성(예: 알고리즘 또는 키 길이)이 요구되면 스크립트가 템플릿으로 사용될 수 있습니다. 두 곳(1) 임시 키 생성 2) 영구적인 키 생성)에서 키 속성을 수정합니다.  
   
-##  <a name="a-namerbsresourcesa-rbs-resources"></a><a name="rbsresources"></a> RBS 리소스  
+##  <a name="rbsresources"></a> RBS resources  
   
  **RBS 예제**  
- [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190)에서 제공하는 RBS 샘플은 RBS 응용 프로그램을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
+ [Codeplex](http://go.microsoft.com/fwlink/?LinkId=210190) 에서 제공하는 RBS 샘플은 RBS 응용 프로그램을 개발하는 방법과 사용자 지정 RBS 공급자를 설치하고 사용자 지정하는 방법을 보여 줍니다.  
   
  **RBS 블로그**  
- [RBS 블로그](http://go.microsoft.com/fwlink/?LinkId=210315)는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  
+ [RBS 블로그](http://go.microsoft.com/fwlink/?LinkId=210315) 는 RBS를 이해하고 배포하고 유지하는 데 도움이 되는 추가 정보를 제공합니다.  
   
-##  <a name="a-namekeyrotationa-key-rotation-script"></a><a name="Key_rotation"></a> 키 회전 스크립트  
- 이 예제는 현재 사용된 RBS 자격 증명 저장소 대칭 키를 선택한 키로 바꾸기 위해 `sp_rotate_rbs_symmetric_credential_key`라는 이름의  
+##  <a name="Key_rotation"></a> Key rotation script  
+ 이 예제는 현재 사용된 RBS 자격 증명 저장소 대칭 키를 선택한 키로 바꾸기 위해 `sp_rotate_rbs_symmetric_credential_key` 라는 이름의  
 저장 프로시저를 만듭니다.  정기적인 키 순환이 요구되는 보안 정책이 있거나   
 특정 알고리즘 요구 사항이 있는 경우에 이 작업을 수행할 수 있습니다.  
- 이 저장 프로시저에서는 **AES_256**을 사용하는 대칭 키가 현재 키를 대체합니다.  대칭 키가  
+ 이 저장 프로시저에서는 **AES_256** 을 사용하는 대칭 키가 현재 키를 대체합니다.  대칭 키가  
 대체되었으므로, 새로운 키로 암호를 다시 암호화해야 합니다.  이 저장   
 프로시저가 암호도 다시 암호화합니다.  키를 회전하기 전에 데이터베이스를 백업해야 합니다.  
   
@@ -232,3 +236,4 @@ SELECT * FROM sys.symmetric_keys WHERE name = 'mssqlrbs_encryption_skey';
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)  
   
   
+
