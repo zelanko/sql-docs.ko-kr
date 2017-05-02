@@ -114,7 +114,7 @@ ms.lasthandoff: 04/11/2017
  자세한 내용은 [Always On 가용성 그룹 개요(SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
 ##  <a name="AlwaysOnWsfcHealth"></a> WSFC 상태 모니터링 및 장애 조치(Failover)  
- Always On 솔루션에 대한 고가용성을 위해서는 물리/논리적 WSFC 클러스터 리소스의 상태를 사전에 모니터링하고 중복 하드웨어를 자동으로 장애 조치하고 다시 구성해야 합니다.  또한 시스템 관리자는 가용성 그룹 또는  인스턴스를 다른 노드로 수동 장애 조치(Failover) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 할 수 있습니다.  
+ Always On 솔루션에 대한 고가용성을 위해서는 물리/논리적 WSFC 클러스터 리소스의 상태를 사전에 모니터링하고 중복 하드웨어를 자동으로 장애 조치하고 다시 구성해야 합니다.  또한 시스템 관리자는 가용성 그룹 또는 ** 인스턴스를 다른 노드로 수동 장애 조치(Failover) [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 할 수 있습니다.  
   
 ### <a name="failover-policies-for-nodes-failover-cluster-instances-and-availability-groups"></a>노드, 장애 조치(Failover) 클러스터 인스턴스 및 가용성 그룹에 대한 장애 조치(Failover) 정책  
  *장애 조치(failover) 정책* 은 WSFC 클러스터 노드, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI(장애 조치(failover) 클러스터 인스턴스) 및 가용성 그룹 수준으로 구성됩니다.  이러한 정책에서는 비정상 클러스터 리소스 상태 및 노드 응답의 심각도, 기간 및 빈도를 기반으로 서비스를 다시 시작하거나 클러스터 리소스를 다른 노드로 *자동 장애 조치(Failover)* 할 수 있습니다. 또는 가용성 그룹 주 복제본을 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동할 수 있습니다.  
