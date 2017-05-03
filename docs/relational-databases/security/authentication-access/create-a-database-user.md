@@ -1,35 +1,40 @@
 ---
 title: "데이터베이스 사용자 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.user.securables.f1"
-  - "SQL13.SWB.DATABASEUSER.GENERAL.F1"
-helpviewer_keywords: 
-  - "데이터베이스 사용자, 만들기"
-  - "Management Studio로 사용자 만들기"
-  - "사용자 매핑"
-  - "사용자 [SQL Server], 만들기"
-  - "데이터베이스 사용자 추가 [SQL Server]"
-  - "데이터베이스 사용자, 매핑\"
-  - "CREATE USER [Management Studio]"
-  - "사용자 [SQL Server], 추가"
-  - "데이터베이스 사용자 매핑"
+ms.custom: 
+ms.date: 04/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.user.securables.f1
+- SQL13.SWB.DATABASEUSER.GENERAL.F1
+helpviewer_keywords:
+- database users, creating
+- creating users with Management Studio
+- mapping users
+- users [SQL Server], creating
+- database user additions [SQL Server]
+- database users, mapping
+- CREATE USER [Management Studio]
+- users [SQL Server], adding
+- mapping database users
 ms.assetid: 782798d3-9552-4514-9f58-e87be4b264e4
 caps.latest.revision: 31
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 31
----
-# 데이터베이스 사용자 만들기
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+translationtype: Human Translation
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 29621ffb4694c725024b6fee7220f6b2e76d305a
+ms.lasthandoff: 05/03/2017
+
+---   
+
+# <a name="create-a-database-user"></a>데이터베이스 사용자 만들기
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   이 항목에서는 가장 일반적인 데이터베이스 사용자 유형을 만드는 방법을 설명합니다. 사용자 유형에는 다음과 같이 11가지가 있습니다. 전체 목록은 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) 항목에서 제공됩니다. 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 변형에서 데이터베이스 사용자를 지원하지만 반드시 모든 사용자 유형을 지원하는 것은 아닙니다.  
@@ -37,11 +42,11 @@ caps.handback.revision: 31
  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 데이터베이스 사용자를 만들 수 있습니다.  
   
 ##  <a name="Understanding"></a> 사용자 유형 이해  
- [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서는 데이터베이스 사용자를 만들 때 6가지 옵션을 표시합니다. 다음 그래픽은 녹색 상자에 6가지 옵션을 보여 주고 나타내는 정보를 표시합니다.  
+ [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서는 데이터베이스 사용자를 만들 때 6가지 옵션을 표시합니다. 다음 그래픽은 녹색 상자에 6가지 옵션을 보여 주고 나타내는 정보를 표시합니다.  
   
  ![TypesOfUsers](../../../relational-databases/security/authentication-access/media/typesofusers.png "TypesOfUsers")  
   
-### 사용자 유형 선택  
+### <a name="selecting-the-type-of-user"></a>사용자 유형 선택  
  **로그인 또는 로그인에 매핑되지 않은 사용자**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 처음 사용하는 경우 만들 사용자 유형을 결정하기 어려울 수 있습니다. 먼저 데이터베이스에 액세스해야 하는 개인 또는 그룹이 로그인을 가지고 있는지 자문해 봅니다. master 데이터베이스의 로그인은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 관리하는 사용자와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 여러 또는 모든 데이터베이스에 액세스해야 하는 사용자에게 일반적입니다. 이런 상황에서는 **로그인을 사용하는 SQL 사용자**를 만듭니다. 데이터베이스 사용자는 데이터베이스 연결 시의 로그인 ID입니다. 데이터베이스 사용자는 원하는 경우 로그인과 같은 이름을 사용할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인이 이미 있다고 가정합니다. 로그인을 만드는 방법은 [로그인 만들기](../../../relational-databases/security/authentication-access/create-a-login.md)를 참조하세요.  
@@ -57,7 +62,7 @@ caps.handback.revision: 31
 ##  <a name="Restrictions"></a> 배경  
  사용자는 데이터베이스 수준의 보안 주체입니다. 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자로 매핑해야 합니다. 로그인을 다른 데이터베이스에 다른 사용자로 매핑할 수 있지만 각 데이터베이스에서 한 명의 사용자로만 매핑할 수 있습니다. 부분적으로 포함된 데이터베이스에서는 로그인을 포함하지 않는 사용자를 만들 수 있습니다. 포함된 데이터베이스 사용자에 대한 자세한 내용은 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요. 데이터베이스에서 게스트 사용자가 설정된 경우 데이터베이스 사용자에 매핑되지 않은 로그인이 게스트 사용자로 데이터베이스에 진입할 수 있습니다.  
   
-> **중요!** 게스트 사용자는 보통 사용하지 않도록 설정됩니다. 반드시 필요한 경우가 아니면 게스트 사용자를 사용하도록 설정하지 마세요.  
+> **중요!** 게스트 사용자는 보통 사용하지 않도록 설정됩니다. 반드시 필요한 경우가 아니면 게스트 사용자를 사용하도록 설정하지 마십시오.  
   
  보안 주체는 사용 권한을 사용자에게 부여할 수 있습니다. 사용자의 범위는 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에서 특정 데이터베이스에 연결하려면 로그인을 데이터베이스 사용자에 매핑해야 합니다. 이 경우 로그인이 아니라 데이터베이스 내의 사용 권한이 데이터베이스 사용자에게 부여되며 거부됩니다.  
   
@@ -112,7 +117,7 @@ caps.handback.revision: 31
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### 추가 옵션  
+### <a name="additional-options"></a>추가 옵션  
  **데이터베이스 사용자 - 신규** 대화 상자에는 또한 **소유한 스키마**, **멤버 자격**, **보안 개체**및 **확장 속성**의 네 가지 추가 페이지에 대한 옵션이 제공됩니다.  
   
 -   **소유한 스키마** 페이지에는 새 데이터베이스 사용자가 소유할 수 있는 모든 가능한 스키마가 나열됩니다. 데이터베이스 사용자로부터 스키마를 추가하거나 제거하려면 **이 사용자가 소유한 스키마**아래에서 스키마 옆에 있는 확인란을 선택하거나 선택을 취소합니다.  
@@ -133,7 +138,7 @@ caps.handback.revision: 31
      개체의 확장 속성을 확인하거나 지정합니다. 각 확장 속성은 개체에 연결된 메타데이터의 이름/값 쌍으로 이루어져 있습니다.  
   
      **줄임표(...)**  
-     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표**(…)**를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하세요.  
+     **확장 속성 값** 대화 상자를 열려면 **값** 뒤에 있는 줄임표 **(...)** 를 클릭합니다. 더 큰 범위에서 확장 속성 값을 입력하거나 확인할 수 있습니다. 자세한 내용은 [확장 속성 값 대화 상자](http://msdn.microsoft.com/library/ms189353.aspx)를 참조하십시오.  
   
      **Delete**  
      선택한 확장 속성을 제거합니다.  
@@ -159,9 +164,10 @@ caps.handback.revision: 31
   
  자세한 내용은 추가 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 예제가 포함된 [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [보안 주체&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [로그인 만들기](../../../relational-databases/security/authentication-access/create-a-login.md)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
+ [CREATE LOGIN&#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  
   
   
+
