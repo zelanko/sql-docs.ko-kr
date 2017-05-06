@@ -26,9 +26,9 @@ ms.lasthandoff: 04/11/2017
 # <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  데이터베이스 응용 프로그램 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 응용 프로그램 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 SQL Server 인덱스 디자인 가이드에서는 응용 프로그램 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 정보와 최선의 구현 방법을 제공합니다.  
+데이터베이스 응용 프로그램 병목 상태는 주로 잘못 디자인된 인덱스와 인덱스의 부족으로 인해 나타납니다. 최적의 데이터베이스와 최상의 응용 프로그램 성능을 위해서는 효율적인 인덱스를 디자인하는 것이 가장 중요합니다. 이 SQL Server 인덱스 디자인 가이드에서는 응용 프로그램 요구 사항을 충족하는 효율적인 인덱스를 디자인하는 데 도움이 되는 정보와 최선의 구현 방법을 제공합니다.  
     
- 이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](http://msdn.microsoft.com/library/ms175049.aspx)을 참조하십시오.  
+이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](http://msdn.microsoft.com/library/ms175049.aspx)을 참조하십시오.  
   
   
 ##  <a name="Basics"></a> 인덱스 디자인 기본 사항  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/11/2017
   
 -   여러 개의 쿼리를 사용하여 동일한 여러 행을 업데이트하는 대신 단일 문에 가능한 많은 행을 삽입하거나 수정하는 쿼리를 작성합니다. 문을 하나만 사용하면 최적화된 인덱스 유지 관리가 수행될 수 있습니다.  
   
--   쿼리 유형 및 쿼리에서 열이 사용되는 방법을 평가합니다. 예를 들어 정확히 일치하는 쿼리 유형에서 사용되는 열은 비클러스터형 또는 클러스터형 인덱스로 만들면 좋습니다.  
+-   쿼리 유형 및 쿼리에서 열이 사용되는 방법을 평가합니다. 예를 들어 정확히 일치하는 쿼리 유형에서 사용되는 열은 비클러스터형 또는 클러스터형 인덱스로 만들면 좋습니다.
   
 ### <a name="column-considerations"></a>열 고려 사항  
  인덱스를 디자인할 때 다음과 같은 열 지침을 고려합니다.  
@@ -588,9 +588,8 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
   
 ##  <a name="Additional_Reading"></a> 더 보기  
- [SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-  
- [Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[SQL Server 2008 인덱싱된 뷰를 통해 성능 향상](http://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   
 
