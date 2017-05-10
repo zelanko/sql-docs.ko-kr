@@ -18,9 +18,10 @@ caps.latest.revision: 46
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2fd833eaeb6d1473f508967f740ad4ba331ae5e8
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/11/2017
   
  자세한 내용은 [관리 태스크 자동화&#40;SQL Server 에이전트&#41;](http://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)를 참조하세요.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 개별 데이터 공급자에서 데이터를 수집하는 패키지를 실행하는 데 사용됩니다. 다음 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 도구 및 개념에 대해 잘 알고 있어야 합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)])는 개별 데이터 공급자에서 데이터를 수집하는 패키지를 실행하는 데 사용됩니다. 다음 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 도구 및 개념에 대해 잘 알고 있어야 합니다.  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지  
   
