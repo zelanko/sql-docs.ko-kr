@@ -18,9 +18,10 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: acbf3b32cdcbe92838532d7711fb2edf0a6238b5
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/11/2017
 이 옵션을 사용하여 현재 파일 이름을 보거나 파일 이름을 변경하거나 표시되는 파일과 폴더를 필터링할 수 있습니다. 표시되는 파일과 폴더를 필터링하려면 필터링할 파일의 전체 이름 또는 일부를 입력합니다. 별표(`*`)를 와일드카드로 사용할 수 있습니다.  
   
 > [!TIP]  
-> 웹 및 네트워크 위치에 있는 파일을 표시하려면 **파일 이름** 상자에 URL이나 네트워크 경로를 입력합니다. 예를 들어 "http://mywebsite"를 입력하면 "mywebsite" 웹 위치에서 사용 가능한 파일이 표시되고 "\\myserver\myshare"를 입력하면 "myserver"의 "myshare" 위치에서 사용 가능한 파일이 표시됩니다.  
+> 웹 및 네트워크 위치에 있는 파일을 표시하려면 **파일 이름** 상자에 URL이나 네트워크 경로를 입력합니다. 예를 들어 "http://mywebsite" 를 입력하면 "mywebsite" 웹 위치에서 사용 가능한 파일이 표시되고 "\\myserver\myshare"를 입력하면 "myserver"의 "myshare" 위치에서 사용 가능한 파일이 표시됩니다.  
   
 **파일 형식**  
 이 옵션을 사용하여 선택한 항목의 파일 형식을 새로 선택할 수 있습니다. 표시되는 파일 형식에는 선택한 항목을 변환할 수 있는 사용 가능한 파일 형식이 모두 포함됩니다.  

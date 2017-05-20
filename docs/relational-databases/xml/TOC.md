@@ -10,7 +10,7 @@
 ## [XML 데이터 검색 및 쿼리](retrieve-and-query-xml-data.md)  
 ## [WITH XMLNAMESPACES를 사용하여 쿼리에 네임스페이스 추가](add-namespaces-to-queries-with-with-xmlnamespaces.md)  
 ## [계산 열을 사용하여 자주 사용되는 XML 값 승격](promote-frequently-used-xml-values-with-computed-columns.md)  
-## se[XML 데이터 직렬화 정의](define-the-serialization-of-xml-data.md)  
+## [XML 데이터 직렬화 정의](define-the-serialization-of-xml-data.md)  
 ## [XML 열에 전체 텍스트 검색 사용](use-full-text-search-with-xml-columns.md)  
 ## [XML 데이터에 비즈니스 논리 추가](add-business-logic-to-xml-data.md)  
 ## [응용 프로그램에서 XML 데이터 사용](use-xml-data-in-applications.md)  
