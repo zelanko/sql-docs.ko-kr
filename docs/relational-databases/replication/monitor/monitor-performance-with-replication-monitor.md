@@ -23,14 +23,15 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae1be084b689f760b6d10db4d7d975b0489048f7
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor allows you to monitor the performance of transactional replication and merge replication in the following ways:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터를 사용하여 다음 방법으로 트랜잭션 복제 및 병합 복제의 성능을 모니터링할 수 있습니다.  
   
 -   경고 및 임계값 설정  
   
