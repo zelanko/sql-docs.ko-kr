@@ -18,9 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 robots: noindex,nofollow
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 594ee4e42f3a2c0646443181ae082bfcf0ad4878
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
