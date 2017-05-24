@@ -14,9 +14,10 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a376ebb734dab193b9cd1118d4c1fe642dc392ab
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
   
--   복원 태스크는 SQL Server Management Studio를 사용하여 데이터베이스를 복원하는 데 사용됩니다. 이제 백업 미디어 페이지에 Windows Azure Blob 저장소 서비스에 저장된 백업 파일을 표시하는 **URL** 옵션이 포함됩니다. 저장소 계정 인증에 사용되는 SQL 자격 증명도 제공해야 합니다. **복원에 사용할 백업 세트** 표가 Windows Azure Blob 저장소의 사용 가능한 백업으로 채워집니다. 자세한 내용은 [Restoring from Windows Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조하세요.  
+-   복원 태스크는 SQL Server Management Studio를 사용하여 데이터베이스를 복원하는 데 사용됩니다. 이제 백업 미디어 페이지에 Windows Azure Blob 저장소 서비스에 저장된 백업 파일을 표시하는 **URL** 옵션이 포함됩니다. 저장소 계정 인증에 사용되는 SQL 자격 증명도 제공해야 합니다. **복원에 사용할 백업 세트** 표가 Windows Azure Blob 저장소의 사용 가능한 백업으로 채워집니다. 자세한 내용은 [SQL Server Management Studio를 사용하여 Windows Azure 저장소에서 복원](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조하세요.  
   
 ### <a name="optimizing-restores"></a>복원 최적화  
  복원 쓰기 시간을 줄이려면 SQL Server 사용자 계정에 **볼륨 유지 관리 작업 수행** 사용자 권한을 추가합니다. 자세한 내용은 [데이터베이스 파일 초기화](http://go.microsoft.com/fwlink/?LinkId=271622)를 참조하세요. 즉시 파일 초기화가 설정되었는데도 복원 속도가 느리면 데이터베이스가 백업된 인스턴스에서 로그 파일의 크기를 확인해야 합니다. 로그 크기가 매우 큰 경우(여러 GB) 복원 속도가 느려질 수 있습니다. 복원 중에 로그 파일이 초기화되어야 하며 여기에는 상당한 시간이 걸립니다.  

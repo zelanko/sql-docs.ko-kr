@@ -18,14 +18,15 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c90dcc58ef2f84d6a2611cda85ef6580df8e174
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="toolbox-component-f1-help"></a>도구 상자 구성 요소 F1 도움말
-  **Toolbox** displays a variety of items for use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects. **도구 상자** 는 **보기** 메뉴에서 열 수 있으며 원하는 경우 이 창을 도킹할 수 있습니다. 창을 도킹하면 **도구 상자** 를 열린 채로 고정하거나 **자동 숨기기** 를 설정하여 사용하지 않을 때 숨길 수 있습니다.  
+  **도구 상자** 에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 프로젝트에 사용할 다양한 항목이 표시됩니다. **도구 상자** 는 **보기** 메뉴에서 열 수 있으며 원하는 경우 이 창을 도킹할 수 있습니다. 창을 도킹하면 **도구 상자** 를 열린 채로 고정하거나 **자동 숨기기** 를 설정하여 사용하지 않을 때 숨길 수 있습니다.  
   
  **도구 상자** 항목은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 코드 편집기 또는 디자인 보기로 끌어 놓거나 복사하여 붙여 넣을 수 있습니다.  
   

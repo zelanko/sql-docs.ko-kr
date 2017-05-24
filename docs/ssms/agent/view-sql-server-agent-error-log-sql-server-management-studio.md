@@ -20,13 +20,14 @@ caps.latest.revision: 6
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 31fbf087c088a0f83471a37b60d5151b9db315b3
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>View SQL Server Agent Error Log (SQL Server Management Studio)
+# <a name="view-sql-server-agent-error-log-sql-server-management-studio"></a>SQL Server 에이전트 오류 로그 보기(SQL Server Management Studio)
 이 항목에서는  [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)]에이전트 오류 로그를 보는 방법에 대해 설명합니다.  
   
 로그 파일 뷰어는 다양한 구성 요소의 로그 정보를 표시합니다. 로그 파일 뷰어를 연 다음 **로그 선택** 창을 사용하여 표시할 로그를 선택할 수 있습니다. 각 로그는 해당 로그 유형에 적합한 열을 표시합니다. 사용 가능한 로그는 로그 파일 뷰어를 여는 방법에 따라 다릅니다.  
