@@ -46,7 +46,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="Security"></a>보안  
   
 #### <a name="Permissions"></a>Permissions  
-**sysadmin** 고정 서버 역할의 멤버가 아닌 경우 자신이 소유한 작업만 수정할 수 있습니다. 자세한 내용은 [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
+**sysadmin** 고정 서버 역할의 멤버가 아닌 경우 자신이 소유한 작업만 수정할 수 있습니다. 자세한 내용은 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)을 참조하세요.  
   
 ## <a name="SSMSProcedure"></a>SQL Server Management Studio 사용  
   
