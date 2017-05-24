@@ -21,7 +21,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>Change the Scheduling Details for a SQL Server Agent Master Job
+# <a name="change-the-scheduling-details-for-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업에 대한 일정 정보 변경
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql_md.md)]에서 작업 정의에 대한 일정 정보를 변경하는 방법에 대해 설명합니다.  
   
 **항목 내용**  

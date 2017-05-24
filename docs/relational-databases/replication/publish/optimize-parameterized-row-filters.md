@@ -19,9 +19,10 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 891399921dc50cc1a5463f9735462c94ce442df4
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -44,7 +45,7 @@ ms.lasthandoff: 04/11/2017
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   매개 변수가 있는 필터를 사용하는 경우 게시를 만들 때 **use partition groups** 옵션 또는 **keep partition changes** 옵션을 지정하여 병합 복제에서 필터가 처리되는 방법을 제어할 수 있습니다. 이러한 옵션은 게시 데이터베이스에 추가 메타데이터를 저장함으로써 필터링된 아티클이 있는 게시의 동기화 성능을 개선합니다. 아티클을 만들 때 **partition options** 를 설정하면 구독자 간에 데이터가 공유되는 방법을 제어할 수 있습니다. 이러한 요구 사항에 대한 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
+-   매개 변수가 있는 필터를 사용하는 경우 게시를 만들 때 **use partition groups** 옵션 또는 **keep partition changes** 옵션을 지정하여 병합 복제에서 필터가 처리되는 방법을 제어할 수 있습니다. 이러한 옵션은 게시 데이터베이스에 추가 메타데이터를 저장함으로써 필터링된 아티클이 있는 게시의 동기화 성능을 개선합니다. 아티클을 만들 때 **partition options** 를 설정하면 구독자 간에 데이터가 공유되는 방법을 제어할 수 있습니다. 이러한 요구 사항에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하세요.  
   
      삭제가 올바르게 전파되도록 보장하려면 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]SQL Server Compact 구독자에서 keep_partition_changes를 true로 설정해야 합니다. false로 설정한 경우 구독자에 예상한 것보다 많은 행이 포함될 수 있습니다.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/11/2017
   
 1.  새 게시 마법사의 **테이블 행 필터** 페이지 또는 **게시 속성 - \<게시>** 대화 상자의 **행 필터** 페이지에서 **추가**를 클릭하고 **필터 추가**를 클릭합니다.  
   
-2.  매개 변수가 있는 필터를 만듭니다. 자세한 내용은 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
+2.  매개 변수가 있는 필터를 만듭니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
 3.  구독자 간에 데이터를 공유하는 방식과 일치하는 옵션을 선택합니다.  
   
@@ -74,7 +75,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **이 테이블의 행을 단일 구독으로 이동**  
   
-     **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서는 보다 작은 메타데이터를 저장하고 처리하여 성능을 최적화할 수 있습니다. 그러나 한 행이 둘 이상의 구독자로 복제될 수 없도록 데이터가 분할되어야 합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
+     **이 테이블의 행을 단일 구독으로 이동**을 선택하면 병합 복제에서는 보다 작은 메타데이터를 저장하고 처리하여 성능을 최적화할 수 있습니다. 그러나 한 행이 둘 이상의 구독자로 복제될 수 없도록 데이터가 분할되어야 합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)항목의 "'partition options' 설정" 섹션을 참조하십시오.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/11/2017
   
     -   **겹치지 않음, 구독 간 공유**  
   
-     이러한 옵션 및 이 옵션이 **필터 추가** 및 **필터 편집** 대화 상자에서 사용 가능한 옵션과 어떻게 관련되어 있는지에 대한 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)의 "'partition options' 설정" 섹션을 참조하십시오.  
+     이러한 옵션 및 이 옵션이 **필터 추가** 및 **필터 편집** 대화 상자에서 사용 가능한 옵션과 어떻게 관련되어 있는지에 대한 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)의 "'partition options' 설정" 섹션을 참조하십시오.  
   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
