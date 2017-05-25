@@ -19,9 +19,10 @@ caps.latest.revision: 48
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -64,16 +65,16 @@ ms.lasthandoff: 04/11/2017
   
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]를 실행하는 구독자와 동기화할 경우에 해당 구독은 익명일 수 없습니다. 구독은 클라이언트 구독 또는 서버 구독(이전 버전에서는 로컬 구독 및 전역 구독)이어야 합니다.  
   
- 밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 및 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
+ 밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../../../relational-databases/replication/synchronize-a-push-subscription.md) 및 [끌어오기 구독 동기화](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   
 ### <a name="reinitializing-all-subscriptions"></a>모든 구독 다시 초기화  
  모든 구독을 다시 초기화하면 모든 구독자가 복원된 게시 데이터베이스와 일관된 상태로 변합니다. 이러한 접근 방법은 토폴로지 전체를 지정된 게시 데이터베이스 백업에 나타난 이전 상태로 되돌리려는 경우 사용합니다. 예를 들어 잘못 수행된 일괄 처리 작업을 복구하기 위한 메커니즘으로 게시 데이터베이스를 이전 시점으로 복원하는 경우 모든 구독을 다시 초기화할 수 있습니다.  
   
  이 방법을 선택하는 경우 게시 데이터베이스를 복원한 다음 다시 초기화된 구독자로 배달할 새 스냅숏을 즉시 만듭니다.  
   
- 구독을 다시 초기화하려면 [Reinitialize a Subscription](../../../relational-databases/replication/reinitialize-a-subscription.md)를 참조하십시오.  
+ 구독을 다시 초기화하려면 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-a-subscription.md)를 참조하십시오.  
   
- 스냅숏을 만들고 적용하려면 [Create 및 Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 및 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
+ 스냅숏을 만들고 적용하려면 [초기 스냅숏 만들기 및 적용](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md) 및 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>배포 데이터베이스 백업 및 복원  
  병합 복제를 사용하는 경우에는 배포 데이터베이스를 정기적으로 백업해야 합니다. 사용하는 백업이 배포자를 사용하는 모든 게시의 최단 보존 기간을 넘기지 않은 한 특별 고려 사항 없이 배포 데이터베이스를 복원할 수 있습니다. 예를 들어 보존 기간이 10일, 20일, 30일인 3개의 게시가 있는 경우 데이터베이스 복원에 사용되는 백업은 10일보다 더 오래된 것이면 안 됩니다. 배포 데이터베이스는 병합 복제에서 제한된 역할을 가집니다. 즉, 변경 추적에 사용된 데이터를 저장하지 않으며 구독 데이터베이스로 전달될 병합 복제 변경 내용에 대해 트랜잭션 복제에서와 같이 임시 저장소를 제공하지 않습니다.  
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/11/2017
   
  게시 보존 기간을 설정하려면 [구독에 대한 만료 기간 설정](../../../relational-databases/replication/publish/set-the-expiration-period-for-subscriptions.md)을 참조하세요.  
   
- 밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../../../relational-databases/replication/synchronize-a-push-subscription.md) 및 [Synchronize a Pull Subscription](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
+ 밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../../../relational-databases/replication/synchronize-a-push-subscription.md) 및 [끌어오기 구독 동기화](../../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>재게시 데이터베이스 백업 및 복원  
  데이터베이스가 게시자에서 데이터를 구독한 다음 같은 데이터를 다른 구독 데이터베이스로 게시하면 이 데이터베이스는 재게시 데이터베이스가 됩니다. 재게시 데이터베이스를 복원하는 경우 이 항목의 "게시 데이터베이스 백업 및 복원"과 "구독 데이터베이스 백업 및 복원"에 설명된 지침을 따르십시오.  
