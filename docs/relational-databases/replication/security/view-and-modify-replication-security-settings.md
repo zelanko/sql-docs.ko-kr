@@ -20,9 +20,10 @@ caps.latest.revision: 47
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4e8eb9804660085223e0845adeb093511871316
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -65,13 +66,13 @@ ms.lasthandoff: 04/11/2017
   
 1.  **의** 복제 **폴더에서 사용할 수 있는** 복제 암호 업데이트 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. 복제 토폴로지의 서버에서 Windows 계정이나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 계정의 암호를 변경할 경우 해당 계정을 사용하는 각 에이전트의 암호를 업데이트하지 말고 이 대화 상자를 사용하세요. 두 개 이상의 서버에 있는 에이전트에서 같은 계정을 사용할 경우 각 서버에 연결하고 암호를 변경해야 합니다. 해당 암호를 사용하는 복제가 있는 모든 위치에서 암호가 업데이트됩니다. 연결된 서버와 같은 다른 위치에서는 암호가 업데이트되지 않습니다.  
   
-2.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+2.  **게시 속성 - \<Publication>** 대화 상자의 **에이전트 보안** 페이지. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
-3.  **구독 속성 - \<Subscription>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [View and Modify Push Subscription Properties](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 [View and Modify Pull Subscription Properties](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
+3.  **구독 속성 - \<Subscription>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [밀어넣기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-push-subscription-properties.md) 및 [끌어오기 구독 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)을 참조하세요.  
   
-4.  **배포자 속성 - \<Distributor>** 및 **배포 데이터베이스 속성 - \<Database>** 대화 상자. 이러한 대화 상자에 액세스하는 방법은 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
+4.  **배포자 속성 - \<Distributor>** 및 **배포 데이터베이스 속성 - \<Database>** 대화 상자. 이러한 대화 상자에 액세스하는 방법은 [View and Modify Distributor and Publisher Properties배포자 및 게시자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
   
-5.  **게시자 속성 - \<Publisher>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [View and Modify Distributor and Publisher Properties](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
+5.  **게시자 속성 - \<Publisher>** 대화 상자. 이 대화 상자에 액세스하는 방법은 [게시자 및 배포자 속성 보기 및 수정](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요.  
   
 #### <a name="to-change-the-password-for-an-account-used-by-one-or-more-agents"></a>하나 이상의 에이전트에서 사용하는 계정의 암호를 변경하려면  
   
