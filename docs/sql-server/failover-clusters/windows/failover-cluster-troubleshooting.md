@@ -19,9 +19,10 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0cc4118a2cfc722ad89ca4b66a6afe403c2967d4
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -92,11 +93,11 @@ ms.lasthandoff: 04/11/2017
  **해결 방법 1**: **/qn** 스위치 대신 **/qb** 스위치를 사용합니다. **/qb** 스위치를 사용하면 오류 메시지를 포함하여 각 단계의 기본 UI가 표시됩니다.  
   
 ### <a name="problem-sql-server-cannot-log-on-to-the-network-after-it-migrates-to-another-node"></a>문제: SQL Server에서 다른 노드로 마이그레이션한 후 네트워크에 로그온할 수 없습니다.  
- **Issue 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service accounts are unable to contact a domain controller.  
+ **문제점 1:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정이 도메인 컨트롤러에 연결할 수 없습니다.  
   
  **해결 방법 1**: 어댑터 오류나 DNS 문제와 같은 네트워킹 문제가 있는지 이벤트 로그를 검사합니다. 도메인 컨트롤러를 ping할 수 있는지 확인합니다.  
   
- **Issue 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service account passwords are not identical on all cluster nodes, or the node does not restart a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service that has migrated from a failed node.  
+ **문제점 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호가 동일하지 않거나 실패한 노드로부터 마이그레이션한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 노드에서 다시 시작되지 않습니다.  
   
  **해결 방법 2:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호를 변경합니다. 그렇지 않고 한 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정 암호를 변경하면 다른 모든 노드의 암호도 변경해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 이 작업을 자동으로 수행합니다.  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/11/2017
   
  **해결 방법 2:** NBTSTAT를 사용하여 중복된 이름을 찾은 다음 문제를 해결합니다.  
   
- **Issue 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] is not connecting using Named Pipes.  
+ **문제점 3:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결되지 않습니다.  
   
  **해결 방법 3:** 명명된 파이프를 사용하여 연결하려면 SQL Server 구성 관리자를 사용하여 별칭을 만들고 이를 통해 적절한 컴퓨터에 연결합니다. 예를 들어 노드가 두 개(**노드 A** 및 **노드 B**)인 클러스터와 기본 인스턴스를 가진 장애 조치(failover) 클러스터 인스턴스(**Virtsql**)가 있으면 다음 단계를 수행하여 네트워크 이름 리소스가 오프라인 상태인 서버에 연결할 수 있습니다.  
   
