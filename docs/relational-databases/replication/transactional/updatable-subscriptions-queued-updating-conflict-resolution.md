@@ -20,9 +20,10 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
--   복제 Transact-SQL 프로그래밍: [Enable Updating Subscriptions for Transactional Publications](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   복제 Transact-SQL 프로그래밍: [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **데이터 충돌을 보려면**  
   
@@ -81,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  구독자 변경 내용 적용 정책에서 충돌 감지는 게시자 변경 내용 적용 항목을 업데이트하는 마지막 구독자 트랜잭션을 의미합니다. 이 경우 충돌이 감지되면 구독자가 보낸 트랜잭션이 계속 사용되고 게시자가 업데이트됩니다. 이 정책은 이러한 변경 내용이 데이터 무결성을 손상하지 않은 응용 프로그램에 적합합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [트랜잭션 복제를 위한 업데이트 가능 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   
