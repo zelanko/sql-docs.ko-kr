@@ -20,9 +20,10 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/11/2017
   
  [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)]라는 회사에 재고를 각 상점으로 배달하는 이동 가능 인력이 있다고 가정합니다. 각 영업 사원은 로그인할 때만 구독을 접수하며 자신이 담당하는 상점에 대한 데이터를 검색합니다. 관리자는 스냅숏을 미리 생성하고 일요일마다 새로 고치도록 선택합니다. 새 사용자가 시스템에 추가되고 현재 사용 가능한 스냅숏이 없는 파티션에 대한 데이터를 요구하는 경우도 가끔 있습니다. 관리자는 스냅숏을 사용할 수 없어서 구독자가 게시를 구독하지 못하는 상황을 피하기 위해 구독자에 의해 시작되는 스냅숏을 허용하도록 선택합니다. 새 구독자가 처음으로 연결할 때 지정된 파티션에 대한 스냅숏이 생성되고 구독자에서 적용됩니다. 스냅숏을 생성하기 위해서는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 게시자에서 실행되고 있어야 합니다.  
   
- 매개 변수가 있는 필터로 게시에 대한 스냅숏을 만들려면 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
+ 매개 변수가 있는 필터로 게시에 대한 스냅숏을 만들려면 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
   
 ## <a name="security-settings-for-the-snapshot-agent"></a>스냅숏 에이전트에 대한 보안 설정  
  스냅숏 에이전트는 각 파티션에 대해 스냅숏을 만듭니다. 미리 생성된 스냅숏과 구독자가 요청한 스냅숏에 대해 게시에 대한 스냅숏 에이전트 작업을 새 게시 마법사 또는 **sp_addpublication_snapshot**을 통해 만들 때 지정한 자격 증명으로 스냅숏 에이전트를 실행 및 연결합니다. 자격 증명을 변경하려면 **sp_changedynamicsnapshot_job**을 사용합니다. 자세한 내용은 [sp_changedynamicsnapshot_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)을 참조하세요.  
