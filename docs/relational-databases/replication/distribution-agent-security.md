@@ -18,9 +18,10 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 44bbfd608ad2511c95a872f07eac657ae7616e6d
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/11/2017
   
  연결을 설정할 때 프로세스 계정을 가장하면 추가 사용 권한이 필요합니다. 아래의 **배포자에 연결** 및 **구독자에 연결** 섹션을 참조하십시오.  
   
- 배포 에이전트가**인스턴스에서 실행되지 않기 때문에**  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], because the Distribution Agent does not run on instances of [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)].  
+ 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에서 실행되지 않기 때문에 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 에 대한 끌어오기 구독에 **프로세스 계정**을 지정할 수 없습니다.  
   
  **암호** 및 **암호 확인**  
  Windows 계정의 암호를 입력합니다.  

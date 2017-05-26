@@ -24,9 +24,10 @@ caps.latest.revision: 69
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/11/2017
   
  매개 변수가 있는 필터는 단일 테이블에서 사용되며 일반적으로 조인 필터와 함께 사용하여 관련 테이블로 필터링을 확장합니다. 자세한 내용은 [Join Filters](../../../relational-databases/replication/merge/join-filters.md)을 참조하세요.  
   
- 매개 변수가 있는 행 필터를 정의하거나 수정하려면 [Define and Modify a Parameterized Row Filter for a Merge Article](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하십시오.  
+ 매개 변수가 있는 행 필터를 정의하거나 수정하려면 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하십시오.  
   
 ## <a name="how-parameterized-filters-work"></a>매개 변수가 있는 필터의 동작 방식  
  매개 변수가 있는 행 필터는 WHERE 절을 사용하여 게시할 데이터를 선택합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 SUSER_SNAME() 및 HOST_NAME() 시스템 함수를 하나 또는 둘 모두 지정합니다. 사용자 정의 함수를 사용할 수도 있지만 사용자 정의 함수는 함수 본문에 SUSER_SNAME() 또는 HOST_NAME()을 포함해야 하거나 `MyUDF(SUSER_SNAME()`과 같은 시스템 함수 중 하나를 평가해야 합니다. 사용자 정의 함수의 본문에 SUSER_SNAME() 또는 HOST_NAME()이 포함되어 있는 경우 함수에 매개 변수를 전달할 수 없습니다.  
