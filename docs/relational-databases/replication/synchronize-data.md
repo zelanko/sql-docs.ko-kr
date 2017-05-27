@@ -25,9 +25,10 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ccda32ba9e85f698a2a642d2dd52773e78ae6d06
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -52,11 +53,11 @@ ms.lasthandoff: 04/11/2017
   
  스냅숏 게시는 동기화가 발생할 때마다 구독자에서 스키마를 완전히 새로 고치므로 모든 스키마 변경 내용이 구독자에 적용됩니다. 트랜잭션 복제 및 병합 복제 또한 가장 일반적인 스키마 변경을 지원합니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
- 밀어넣기 구독을 동기화하려면 [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하십시오.  
+ 밀어넣기 구독을 동기화하려면 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)를 참조하십시오.  
   
- 끌어오기 구독을 동기화하려면 [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
+ 끌어오기 구독을 동기화하려면 [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)를 참조하십시오.  
   
- 동기화 일정을 설정하려면 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하십시오.  
+ 동기화 일정을 설정하려면 [동기화 일정 지정](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하십시오.  
   
  **동기화 충돌을 보고 해결하려면**  
   
