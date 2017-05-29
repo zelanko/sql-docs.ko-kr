@@ -51,7 +51,7 @@ ms.lasthandoff: 04/11/2017
 -   게시에 있는 여러 아티클에 대한 필터링 시 각 구독에 고유하면서도 겹치지 않는 파티션이 생성될 경우 메타데이터는 병합 에이전트가 실행될 때마다 정리됩니다. 따라서 분할된 스냅숏은 더 빨리 만료됩니다. 이 옵션을 사용할 경우 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하는 것을 고려해야 합니다. 필터링 옵션에 대한 자세한 내용은 [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)에서 "'partition options' 설정" 섹션을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 파티션에 대한 스냅숏을 생성합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 구독자가 스냅숏 생성 및 배달을 시작하고 스냅숏을 생성하도록 허용할 수 있습니다.  
+ **게시 속성 - \<게시>** 대화 상자의 **데이터 파티션** 페이지에서 파티션에 대한 스냅숏을 생성합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 구독자가 스냅숏 생성 및 배달을 시작하고 스냅숏을 생성하도록 허용할 수 있습니다.  
   
  하나 이상의 파티션에 대한 스냅숏을 생성하기 전에 다음을 수행해야 합니다.  
   

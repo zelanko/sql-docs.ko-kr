@@ -25,14 +25,15 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6de5f69f5c5d6fefea0fb3dca7f6b11b3c6c7194
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication Monitor displays status information for publications and subscriptions:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제 모니터에는 게시와 구독에 대한 상태 정보가 표시됩니다.  
   
 -   게시 상태는 해당 구독의 가장 높은 우선 순위 상태에 의해 결정됩니다. 예를 들어 게시에 대한 특정 구독에 오류가 있고 다른 구독에 성능 문제가 있으면 해당 게시에 대해 오류 상태가 표시됩니다.  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/11/2017
   
 -   구독 만료  
   
-     이 상태 값은 모든 유형의 복제에 적용됩니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
+     이 상태 값은 모든 유형의 복제에 적용됩니다. 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
   
 -   성능 심각  
   
