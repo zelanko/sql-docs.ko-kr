@@ -37,7 +37,7 @@ ms.lasthandoff: 04/11/2017
   
 -   게시자, 배포자 및 모든 구독자의 **master** 및 **msdb** 시스템 데이터베이스. 이러한 데이터베이스는 각각 그리고 관련 복제 데이터베이스와 동시에 백업되어야 합니다. 예를 들어 게시 데이터베이스를 백업할 때 게시자의 **master** 및 **msdb** 데이터베이스를 동시에 백업합니다. 게시 데이터베이스를 복원한 경우 **master** 및 **msdb** 데이터베이스의 복제 구성 및 설정이 게시 데이터베이스와 일치하는지 확인하십시오.  
   
- 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [Common Actions Requiring an Updated Backup](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)을 참조하세요.  
+ 정기적인 로그 백업을 수행할 경우 모든 복제 관련 변경 내용은 로그 백업에 캡처됩니다. 로그 백업을 수행하지 않는 경우 복제와 관련된 설정이 변경될 때마다 백업을 수행해야 합니다. 자세한 내용은 [업데이트된 백업이 필요한 일반 동작](../../../relational-databases/replication/administration/common-actions-requiring-an-updated-backup.md)을 참조하세요.  
   
  아래 자세히 설명된 게시 데이터베이스 백업 및 복원 접근 방법 중 하나를 선택한 다음 배포 데이터베이스 및 구독 데이터베이스에 대해 나열된 권장 사항을 따릅니다.  
   
