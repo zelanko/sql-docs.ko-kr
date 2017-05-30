@@ -15,9 +15,10 @@ caps.latest.revision: 9
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666dd2f78a6217edd345dd119bcf7e479773203e
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -25,7 +26,7 @@ ms.lasthandoff: 04/11/2017
 
   
 ## <a name="download-the-tools"></a>도구 다운로드
-#### <a name="download-sql-server-management-studio-40ssms41ssmsdownload-sql-server-management-studio-ssmsmd"></a>[SQL Server Management Studio 다운로드 &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
+#### <a name="download-sql-server-management-studio-40ssms41ssmsdownload-sql-server-management-studio-ssmsmd"></a>[SQL Server Management Studio 다운로드 &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
   
 #### <a name="download-sql-server-data-tools-40ssdt41ssdtdownload-sql-server-data-tools-ssdtmd"></a>[SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 
