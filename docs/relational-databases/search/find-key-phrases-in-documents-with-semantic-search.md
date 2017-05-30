@@ -16,9 +16,10 @@ caps.latest.revision: 18
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6c005c3de0b3cd1e8e5562c038321a53e04da38a
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/11/2017
 > [!IMPORTANT]  
 >  대상 열에는 전체 텍스트 및 의미 체계 인덱싱이 사용하도록 설정되어 있어야 합니다.  
   
-###  <a name="HowToTopPhrases"></a> Example 1: Find the top key phrases in a specific document  
+###  <a name="HowToTopPhrases"></a> 예 1: 특정 문서에서 상위 키 구 찾기  
  다음 예제에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 @DocumentId 변수를 통해 지정된 문서에서 상위 10개의 키 구를 검색합니다. @DocumentId 변수는 전체 텍스트 인덱스의 키 열에 있는 값을 나타냅니다.  
   
 ```tsql  
@@ -55,7 +56,7 @@ GO
   
  **SEMANTICKEYPHRASETABLE** 함수는 테이블 검색 대신 인덱스 검색을 사용하여 이러한 결과를 효율적으로 검색합니다.  
   
-###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
+###  <a name="HowToTopDocuments"></a> 예 2: 특정 키 구가 포함된 상위 문서 찾기  
  다음 예에서는 AdventureWorks 예제 데이터베이스에 있는 Production.Document 테이블의 Document 열에서 “Bracket” 키 구가 포함된 상위 25개의 문서를 검색합니다.  
   
 ```tsql  
