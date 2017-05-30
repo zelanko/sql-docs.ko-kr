@@ -23,7 +23,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>Correct Affinity Mask and Affinity Input and Output Mask Overlap
+# <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>올바른 선호도 마스크 및 선호도 입/출력 마스크 겹침
   이 규칙은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 선호도 마스크 및 선호도 I/O 마스크 옵션을 모두 사용하도록 지정된 하나 이상의 프로세서가 있는지 여부를 검사합니다. 프로세서가 두 개 이상인 컴퓨터에서 선호도 마스크 및 선호도 I/O 마스크 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 CPU를 지정하는 데 사용됩니다. 선호도 마스크 및 선호도 I/O 마스크를 모두 사용하도록 CPU를 지정하면 프로세서가 과도하게 사용되어 성능이 저하될 수 있습니다.  
   
 ## <a name="best-practices-recommendations"></a>최선의 구현 방법 권장 사항  

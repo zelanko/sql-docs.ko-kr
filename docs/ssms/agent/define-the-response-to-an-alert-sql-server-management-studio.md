@@ -25,7 +25,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Define the Response to an Alert (SQL Server Management Studio)
+# <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>경고에 대한 응답 정의(SQL Server Management Studio)
 이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 에서 [!INCLUDE[tsql](../../includes/tsql_md.md)]에이전트 경고에 대한 응답을 정의하는 방법에 대해 설명합니다.  
   
 **항목 내용**  

@@ -17,9 +17,10 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3dab64f6d7c2067eea1c2e5249fc3a7089eda6bc
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/11/2017
 
   Stretch Database는 콜드 데이터를 Microsoft Azure 클라우드에 투명하고 안전하게 마이그레이션합니다.  
   
- Stretch Database를 지금 시작하려면 [Get started by running the Enable Database for Stretch Wizard](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)을 참조하세요.  
+ Stretch Database를 지금 시작하려면 [Stretch에 데이터베이스 사용 마법사를 실행하여 시작](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)을 참조하세요.  
   
 ## <a name="what-are-the-benefits-of-stretch-database"></a>Stretch Database의 이점  
  Stretch Database는 다음과 같은 이점을 제공합니다.  

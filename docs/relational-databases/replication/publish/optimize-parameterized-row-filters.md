@@ -146,7 +146,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  게시의 각 아티클에 대해 3단계를 반복합니다.  
   
-5.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [Define and Modify a Join Filter Between Merge Articles](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
+5.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) 를 실행하여 두 아티클 간의 조인 필터를 정의합니다. 자세한 내용은 [병합 아티클 사이에서 조인 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)을 참조하세요.  
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>기존 게시에 대한 병합 필터 동작을 확인 및 수정하려면  
   

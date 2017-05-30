@@ -21,7 +21,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
-# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+# <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>SQL Server 에이전트 마스터 작업과 연관된 대상 서버 수정
 이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent_md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull_md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql_md.md)]에서 SQL Server 에이전트 마스터 작업과 연결된 대상 서버를 수정하는 방법에 대해 설명합니다.  
   
 **항목 내용**  
