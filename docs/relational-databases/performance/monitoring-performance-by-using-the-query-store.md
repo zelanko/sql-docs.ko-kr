@@ -331,7 +331,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **지난&1;시간 내에 평균 실행 시간이 가장 긴 쿼리 수는 몇 개입니까?**  
+ **지난 1 시간 내에 평균 실행 시간이 가장 긴 쿼리 수는 몇 개입니까?**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
