@@ -99,7 +99,7 @@ ms.lasthandoff: 04/11/2017
   
 -   [트리거(서버 수준)](#triggers)  
   
-##  <a name="server_configuration_settings"></a> Server Configuration Settings  
+##  <a name="server_configuration_settings"></a> 서버 구성 설정  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서는 키 서비스 및 기능을 필요에 따라 설치하고 시작합니다. 이를 통해 시스템이 공격 받을 수 있는 노출 영역을 줄일 수 있습니다. 새 설치의 기본 구성에서는 많은 기능이 활성화되지 않습니다. 데이터베이스가 기본적으로 해제된 서비스나 기능을 사용하는 경우 대상 서버 인스턴스에서 이 서비스나 기능을 설정해야 합니다.  
   
  이러한 설정에 대한 자세한 내용과 설정을 지정하거나 해제하는 방법은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)을 참조하세요.  
