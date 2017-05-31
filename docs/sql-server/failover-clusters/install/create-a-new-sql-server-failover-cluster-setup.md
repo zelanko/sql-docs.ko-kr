@@ -21,9 +21,10 @@ caps.latest.revision: 77
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c8b4817b3630562c514ac3593abd80f83d7b0284
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -326,7 +327,7 @@ ms.lasthandoff: 04/11/2017
   
 #### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>고급/엔터프라이즈 장애 조치(Failover) 클러스터 설치 2단계: 완료  
   
-1.  [준비 단계](#prepare)에서 설명하는 대로 모든 노드를 준비했으면 준비된 노드 중 하나에서 설치를 실행합니다. 대부분의 경우 공유 디스크를 소유한 노드에서 설치를 실행합니다. **** 설치 센터의 고급 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 페이지에서 **고급 클러스터 완료**를 클릭합니다.  
+1.  [준비 단계](#prepare)에서 설명하는 대로 모든 노드를 준비했으면 준비된 노드 중 하나에서 설치를 실행합니다. 대부분의 경우 공유 디스크를 소유한 노드에서 설치를 실행합니다.  설치 센터의 고급 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 페이지에서 **고급 클러스터 완료**를 클릭합니다.  
   
 2.  시스템 구성 검사기가 컴퓨터에서 검색 작업을 실행합니다. 계속하려면 [!INCLUDE[clickOK](../../../includes/clickok-md.md)]. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
