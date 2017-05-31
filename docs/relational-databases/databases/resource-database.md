@@ -19,9 +19,10 @@ caps.latest.revision: 71
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-translationtype: Human Translation
+ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efcb8d4f781f634d24c00e0698da746dd3b4efa8
+ms.contentlocale: ko-kr
 ms.lasthandoff: 04/11/2017
 
 ---
@@ -45,14 +46,14 @@ ms.lasthandoff: 04/11/2017
 ## <a name="accessing-the-resource-database"></a>Resource 데이터베이스 액세스  
  Resource 데이터베이스는 Microsoft CSS(고객 지원 서비스) 전문가가 직접 수정하거나 전문가의 지도를 받아 수정해야 합니다. Resource 데이터베이스의 ID는 항상 32767입니다. Resource 데이터베이스와 관련된 다른 중요한 값은 버전 번호 및 데이터베이스가 마지막으로 업데이트된 시간입니다.  
   
- **** Resource **데이터베이스의 버전 번호를 확인하려면 다음 문을 사용합니다.**  
+  Resource **데이터베이스의 버전 번호를 확인하려면 다음 문을 사용합니다.**  
   
 ```  
 SELECT SERVERPROPERTY('ResourceVersion');  
 GO  
 ```  
   
- **** Resource **데이터베이스가 마지막으로 업데이트된 시기를 확인하려면 다음 문을 사용합니다.**  
+  Resource **데이터베이스가 마지막으로 업데이트된 시기를 확인하려면 다음 문을 사용합니다.**  
   
 ```  
 SELECT SERVERPROPERTY('ResourceLastUpdateDateTime');  
