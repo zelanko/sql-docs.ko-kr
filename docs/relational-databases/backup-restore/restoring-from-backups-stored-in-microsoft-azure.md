@@ -42,7 +42,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="optimizing-restores"></a>복원 최적화  
  복원 쓰기 시간을 줄이려면 SQL Server 사용자 계정에 **볼륨 유지 관리 작업 수행** 사용자 권한을 추가합니다. 자세한 내용은 [데이터베이스 파일 초기화](http://go.microsoft.com/fwlink/?LinkId=271622)를 참조하세요. 즉시 파일 초기화가 설정되었는데도 복원 속도가 느리면 데이터베이스가 백업된 인스턴스에서 로그 파일의 크기를 확인해야 합니다. 로그 크기가 매우 큰 경우(여러 GB) 복원 속도가 느려질 수 있습니다. 복원 중에 로그 파일이 초기화되어야 하며 여기에는 상당한 시간이 걸립니다.  
   
- 복원 시간을 단축하기 위해서는 압축된 백업을 사용하는 것이 좋습니다.  25GB를 초과하는 백업 크기에 대해서는 [AzCopy 유틸리티](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) (영문)를 사용하여 로컬 드라이브로 다운로드한 후 복원을 수행하세요. 기타 백업 모범 사례 및 권장 사항에 대해서는 [SQL Server Backup to URL Best Practices and Troubleshooting](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)을 참조하세요.  
+ 복원 시간을 단축하기 위해서는 압축된 백업을 사용하는 것이 좋습니다.  25GB를 초과하는 백업 크기에 대해서는 [AzCopy 유틸리티](http://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx) (영문)를 사용하여 로컬 드라이브로 다운로드한 후 복원을 수행하세요. 기타 백업 모범 사례 및 권장 사항에 대해서는 [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)을 참조하세요.  
   
  추적 플래그 3051을 설정하여 복원을 수행할 때 자세한 로그를 생성할 수도 있습니다. 이 로그 파일은 로그 디렉터리에 배치되며 BackupToUrl-\<instancename>-\<dbname>-action-\<PID>.log 형식을 사용하여 이름이 지정됩니다. 로그 파일에는 문제 진단에 도움이 될 수 있는 시간을 비롯하여 각각의 Windows Azure Storage 왕복에 대한 정보가 포함됩니다.  
   
