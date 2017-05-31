@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **시작하기 전에:**  
   
--   **To view the status of the e-mail sent using Database Mail, using:**  [Transact-SQL](#TsqlProcedure)  
+-   **데이터베이스 메일을 사용하여 보낸 전자 메일의 상태를 보려면:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  데이터베이스 메일은 보내는 전자 메일 메시지의 복사본을 유지하고 **msdb**데이터베이스의 **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems** , **sysmail_faileditems** 뷰에 표시합니다. 데이터베이스 메일 외부 프로그램은 작업을 기록하고 Windows 응용 프로그램 이벤트 로그와 **msdb** 데이터베이스의 **sysmail_event_log** 뷰를 통해 로그를 표시합니다. 전자 메일 메시지의 상태를 확인하려면 이 뷰에 대한 쿼리를 실행하세요. 전자 메일 메시지에는 **sent**, **unsent**, **retrying**및 **failed**의 4가지 가능한 상태 중 하나가 있습니다.  
