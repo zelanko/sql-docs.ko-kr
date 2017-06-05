@@ -49,7 +49,7 @@ ms.lasthandoff: 04/11/2017
 5.  여러 구독자에서 스크립트를 실행하여 필요한 끌어오기 구독을 생성합니다.  
   
 ## <a name="script-replication-objects"></a>복제 개체 스크립팅  
- 복제 마법사 또는  의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 마법사에서 스크립팅하는 경우 개체를 만들고 스크립팅하거나 스크립팅만 하도록 선택할 수 있습니다.  
+ 복제 마법사 또는 **** 의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 마법사에서 스크립팅하는 경우 개체를 만들고 스크립팅하거나 스크립팅만 하도록 선택할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  암호는 모두 NULL로 스크립팅됩니다. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 스크립트 파일에 자격 증명을 저장하는 경우에는 무단으로 액세스하지 못하도록 파일에 보안을 설정해야 합니다.  

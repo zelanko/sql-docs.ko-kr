@@ -205,7 +205,7 @@ snapshot [ -?]
  에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
  **-PublisherDB** *publisher_database*  
- 게시 데이터베이스의 이름입니다. **이 매개 변수는 Oracle 게시자에 대해서는 지원되지 않습니다.  
+ 게시 데이터베이스의 이름입니다. 이 매개 변수는 Oracle 게시자에 대해서는 지원되지 않습니다.  
   
  **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  교착 상태가 발생할 경우 게시자에 대한 스냅숏 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅숏을 생성하는 동안 스냅숏 에이전트와 사용자 응용 프로그램 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  

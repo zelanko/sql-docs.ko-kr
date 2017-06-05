@@ -30,7 +30,7 @@ ms.lasthandoff: 04/11/2017
 
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
-  정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다.  찾기 및 바꾸기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
+  정규식은 텍스트 패턴을 검색 및 대체하기 위한 간결하고 유연한 표기법입니다. **** 찾기 및 바꾸기 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **찾을 내용** 필드에서 특정 정규식 집합을 사용할 수 있습니다.  
   
 #### <a name="to-find-using-regular-expressions"></a>정규식을 사용하여 검색하려면  
   

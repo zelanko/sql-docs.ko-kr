@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 2.  내보내기 파일의 데이터에서 대량 복사본 가져오기  
   
 ## <a name="sql-server-utility"></a>SQL Server 유틸리티  
- DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. 그러면 DAC가  유틸리티 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **배포된 데이터 계층 응용 프로그램** 노드에 표시되고  세부 정보 페이지에 보고됩니다.  
+ DAC를 데이터베이스 엔진의 관리되는 인스턴스로 가져오는 경우 가져온 DAC는 유틸리티 컬렉션 집합이 다음에 인스턴스에서 유틸리티 제어 지점으로 전송될 때 SQL Server 유틸리티로 통합됩니다. 그러면 DAC가 **** 유틸리티 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **배포된 데이터 계층 응용 프로그램** 노드에 표시되고 **** 세부 정보 페이지에 보고됩니다.  
   
 ## <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 가져오기 중에 만들어진 데이터베이스에는 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다. 단, 데이터베이스 데이터 정렬 및 호환성 수준은 DAC 내보내기 파일에 정의된 값으로 설정됩니다. DAC 내보내기 파일은 원본 데이터베이스의 값을 사용합니다.  
