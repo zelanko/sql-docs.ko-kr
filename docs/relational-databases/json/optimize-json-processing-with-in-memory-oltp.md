@@ -29,7 +29,7 @@ SQL Server 및 Azure SQL Database를 통해 JSON으로 서식이 지정된 텍�
 ## <a name="store-json-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 JSON 저장
 다음 예제에서는 `Tags`와 `Data`라는 두 개의 JSON 열이 있는 메모리 액세스에 최적화된 `Product` 테이블을 보여 줍니다.
 
-```tsql
+```sql
 CREATE SCHEMA xtp;
 GO
 CREATE TABLE xtp.Product(
@@ -54,7 +54,7 @@ SQL Server 및 Azure SQL Database에서 사용할 수 있는 새로운 기능을
 ## <a name="validate-json-columns"></a>JSON 열 유효성 검사
 다음 예제와 같이 SQL Server 및 Azure SQL Database를 사용하면 문자열 열에 저장된 JSON 문서 내용의 유효성을 검사하는 고유하게 컴파일된 CHECK 제약 조건을 추가할 수 있습니다.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -72,7 +72,7 @@ CREATE TABLE xtp.Product(
 
 고유하게 컴파일된 CHECK 제약 조건은 JSON 열이 포함된 기존 테이블에 추가할 수 있습니다.
 
-```tsql
+```sql
 ALTER TABLE xtp.Product
     ADD CONSTRAINT [Data should be JSON]
         CHECK (ISJSON(Data)=1)
@@ -87,7 +87,7 @@ ALTER TABLE xtp.Product
 -   제품이 만들어진 국가.
 -   제품 제조 비용.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -108,7 +108,7 @@ CREATE TABLE xtp.Product(
 ## <a name="index-values-in-json-columns"></a>JSON 열의 값 인덱싱
 SQL Server 및 AAzure SQL Database를 통해 메모리 액세스에 최적화된 인덱스를 사용하여 JSON 열의 값을 인덱싱할 수 있습니다. 다음 예제와 같이 인덱싱되는 JSON 값은 계산 열을 사용하여 노출되고 강력하게 형식화되어야 합니다.
 
-```tsql
+```sql
 DROP TABLE IF EXISTS xtp.Product;
 GO
 CREATE TABLE xtp.Product(
@@ -136,7 +136,7 @@ JSON 열의 값은 표준 NONCLUSTERED 및 HASH 인덱스를 사용하여 인덱
 ## <a name="native-compilation-of-json-queries"></a>JSON 쿼리의 네이티브 컴파일
 마지막으로 JSON 함수와 함께 쿼리를 포함하는 Transact-SQL 프로시저, 함수 및 트리거의 네이티브 컴파일은 쿼리의 성능을 향상시키고 프로시저를 실행하는 데 필요한 CPU 주기를 줄입니다. 다음 예제에서는 JSON_VALUE, OPENJSON 및 JSON_MODIFY라는 여러 가지 JSON 함수를 사용하는 고유하게 컴파일된 프로시저를 보여 줍니다.
 
-```tsql
+```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))
 WITH SCHEMABINDING, NATIVE_COMPILATION
 AS BEGIN

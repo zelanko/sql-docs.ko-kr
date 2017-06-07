@@ -48,7 +48,7 @@ JSON 개체의 각 속성 또는 배열의 각 요소가 개별 행으로 반환
 다음은 기본 스키마와 함께 **OPENJSON**을 사용하고 JSON 개체의 각 속성에 대해 행 한 개를 반환하는 빠른 예제입니다.  
  
 **예제**
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
@@ -80,7 +80,7 @@ FROM OPENJSON(@json);
   
 **예제**
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =   
   N'[  

@@ -42,7 +42,7 @@ FOR JSON PATH 절은 열 별칭이나 열 이름을 사용하여 JSON 출력에�
 
  **쿼리**  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -93,7 +93,7 @@ SELECT TOP 5
   
  **쿼리**  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber AS 'Order.Number',  
         OrderDate AS 'Order.Date',  
         UnitPrice AS 'Product.Price',  

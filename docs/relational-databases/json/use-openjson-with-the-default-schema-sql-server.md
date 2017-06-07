@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---return-each-property-of-an-object"></a>예 - 개체의 각 속성 반환  
  **Query**  
   
-```tsql  
+```sql  
 SELECT *
 FROM OPENJSON('{"name":"John","surname":"Doe","age":45}') 
 ```  
@@ -50,7 +50,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
 ## <a name="example---return-each-element-of-an-array"></a>예 - 배열의 각 요소 반환  
  **Query**  
   
-```tsql  
+```sql  
 SELECT [key],value
 FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]') 
 ```  
@@ -68,7 +68,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
 ## <a name="example---convert-json-to-a-temporary-table"></a>예 - JSON을 임시 테이블로 변환  
  다음 쿼리는 **info** 개체의 모든 속성을 반환합니다.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 
 SET @json=N'{  
@@ -99,7 +99,7 @@ FROM OPENJSON(@json,N'lax $.info')
 ## <a name="example---combine-relational-data-and-json-data"></a>예 - 관계형 데이터와 JSON 데이터 결합  
  다음 예에서는 SalesOrderHeader 테이블에 JSON 형식의 SalesOrderReasons 배열을 포함하는 SalesReason 텍스트 열이 있습니다. SalesOrderReasons 개체는 "Manufacturer", "Quality" 등의 속성을 포함합니다. 이 예에서는 판매 이유가 별도의 자식 테이블에 저장된 것처럼 JSON 판매 이유 배열을 확장하여 모든 판매 주문 행을 관련 판매 이유에 연결하는 보고서를 만듭니다.  
   
-```tsql  
+```sql  
 SELECT SalesOrderID,OrderDate,value AS Reason
 FROM Sales.SalesOrderHeader
 CROSS APPLY OPENJSON(SalesReasons)

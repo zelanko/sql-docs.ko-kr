@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
   
 쿼리에서 하나의 테이블만 사용하는 경우 FOR JSON AUTO 절의 결과는 FOR JSON PATH의 결과와 비슷합니다. 이 경우 FOR JSON AUTO는 중첩된 개체를 만들지 않습니다. 유일한 차이점은 FOR JSON AUTO는 점으로 구분된 별칭(예를 들어 다음 예제에서 `Info.MiddleName`)을 중첩된 개체가 아닌 점이 있는 키로 출력한다는 것입니다.  
   
-```tsql  
+```sql  
 SELECT TOP 5   
        BusinessEntityID As Id,  
        FirstName, LastName,  
@@ -88,7 +88,7 @@ SELECT TOP 5
   
  테이블을 조인하면 첫 번째 테이블의 열이 루트 개체의 속성으로 생성됩니다. 두 번째 테이블의 열은 중첩된 개체의 속성으로 생성됩니다. 테이블 이름 또는 두 번째 테이블의 별칭(예를 들어 다음 예제에서 `D`)은 중첩된 배열의 이름으로 사용됩니다.  
   
-```tsql  
+```sql  
 SELECT TOP 2 SalesOrderNumber,  
         OrderDate,  
         UnitPrice,  
@@ -123,7 +123,7 @@ FOR JSON AUTO
  **쿼리 3**  
  FOR JSON AUTO를 사용하는 대신 다음 예제에서처럼 SELECT 문에 FOR JSON PATH 하위 쿼리를 중첩할 수 있습니다. 이 예제는 앞의 예제와 동일한 결과를 출력합니다.  
   
-```tsql  
+```sql  
 SELECT TOP 2  
     SalesOrderNumber,  
     OrderDate,  

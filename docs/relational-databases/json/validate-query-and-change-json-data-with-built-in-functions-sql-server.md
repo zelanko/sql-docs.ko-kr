@@ -63,7 +63,7 @@ SET @jsonInfo=N'{
   
  다음 예는 열에 유효한 JSON이 포함된 경우 JSON을 반환합니다.  
   
-```tsql  
+```sql  
 SELECT id,json_col
 FROM tab1
 WHERE ISJSON(json_col)>0 
@@ -76,7 +76,7 @@ WHERE ISJSON(json_col)>0
   
  다음 예제는 JSON 속성 값을 로컬 변수로 추출합니다.  
   
-```tsql  
+```sql  
 SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
 ```  
   
@@ -87,7 +87,7 @@ SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')
  
  다음 예제는 쿼리 결과에 JSON 조각을 반환하는 방법을 보여줍니다.  
   
-```tsql  
+```sql  
 SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
@@ -126,7 +126,7 @@ ORDER BY LastName
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>예제 1 - 두 표준 열과 JSON 데이터 반환  
  다음 쿼리는 표준 관계형 열과 JSON 열의 값을 모두 반환합니다.  
   
-```tsql  
+```sql  
 SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
@@ -141,7 +141,7 @@ WHERE ISJSON(Info)>0
 ### <a name="example-2--aggregate-and-filter-json-values"></a>예제 2 - JSON 값 집계 및 필터링  
  다음 쿼리는 고객 이름(JSON에 저장)과 상태(일반 열에 저장)를 기준으로 소계를 집계합니다. 그런 다음 시(JSON에 저장) 및 OrderDate(일반 열에 저장)을 기준으로 결과를 필터링합니다.  
   
-```tsql  
+```sql  
 DECLARE @territoryid INT;
 DECLARE @city NVARCHAR(32);
 
@@ -163,7 +163,7 @@ HAVING SUM(SubTotal)>1000
   
  다음 예제에서는 JSON이 포함된 변수에서 속성 값을 업데이트합니다.  
   
-```tsql  
+```sql  
 SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
 ```  
   

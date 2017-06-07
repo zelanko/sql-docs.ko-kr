@@ -34,7 +34,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="example---use-the-with-clause-to-format-the-output"></a>예 - WITH 절을 사용하여 출력의 서식 지정  
  다음 쿼리는 아래 표에 나와 있는 결과를 반환합니다. AS JSON 절을 사용하는 경우 col5 및 array_element에서 스칼라 값이 아닌 JSON 개체로 값이 반환됩니다.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) =
 N'{"someObject":   
     {"someArray":  
@@ -70,7 +70,7 @@ WITH ( k1 int,
 ## <a name="example---load-json-into-a-includessnoversionincludesssnoversion-mdmd-table"></a>예 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 JSON 로드  
  다음 예에는 전체 JSON 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 로드합니다.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX) = '{  
   "id" : 2,  
   "firstName": "John",  
