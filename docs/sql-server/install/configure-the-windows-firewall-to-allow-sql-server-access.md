@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 액세스를 허용하도록 Windows 방화벽 구성 | Microsoft 문서"
 ms.custom: 
-ms.date: 05/13/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,18 +28,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: fb4cb189914d6636b76816490e9d38f9f4240101
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: 5849c0c3d38756795a7aef83b04e95eb0ffcc305
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](https://msdn.microsoft.com/en-US/library/cc646023(SQL.120).aspx)을 참조하세요.
+
+방화벽 시스템은 컴퓨터 리소스에 대한 무단 액세스를 방지합니다. 방화벽을 설정하고 올바르게 구성하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 대한 연결 시도가 차단될 수 있습니다.  
   
- 방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 실행하는 컴퓨터에서 액세스를 허용하도록 방화벽을 구성해야 합니다. 방화벽은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 구성 요소입니다. 다른 회사의 방화벽도 설치할 수 있습니다. 이 항목에서는 Windows 방화벽의 구성 방법에 대해 설명하지만 기본 원칙은 다른 방화벽 프로그램에도 적용됩니다.  
+방화벽을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 액세스하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터에서 방화벽을 구성해야 합니다. 방화벽은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows의 구성 요소입니다. 다른 회사의 방화벽도 설치할 수 있습니다. 이 항목에서는 Windows 방화벽의 구성 방법에 대해 설명하지만 기본 원칙은 다른 방화벽 프로그램에도 적용됩니다.  
   
 > [!NOTE]  
 >  이 항목에서는 방화벽 구성의 개요를 제공하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리자에게 유용한 정보를 요약하여 설명합니다. 방화벽에 대한 자세한 내용과 권위 있는 방화벽 정보를 보려면 [고급 보안이 설정된 Windows 방화벽 및 IPsec](http://go.microsoft.com/fwlink/?LinkID=116904)를 참조하세요.  
@@ -51,35 +53,6 @@ ms.lasthandoff: 04/11/2017
 -   [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)  
   
 -   [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
-  
-## <a name="in-this-topic"></a>항목 내용  
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
-  
- [기본 방화벽 정보](#BKMK_basic)  
-  
- [기본 방화벽 설정](#BKMK_default)  
-  
- [방화벽 구성 프로그램](#BKMK_programs)  
-  
- [데이터베이스 엔진에서 사용하는 포트](#BKMK_ssde)  
-  
- [Analysis Services에서 사용하는 포트](#BKMK_ssas)  
-  
- [Reporting Services에서 사용하는 포트](#BKMK_ssrs)  
-  
- [Integration Services에서 사용하는 포트](#BKMK_ssis)  
-  
- [추가 포트 및 서비스](#BKMK_additional_ports)  
-  
- [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules)  
-  
- [방화벽 프로필 개요](#BKMK_profiles)  
-  
- [제어판의 Windows 방화벽을 사용한 추가 방화벽 설정](#BKMK_additional_settings)  
-  
- [고급 보안이 설정된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc)  
-  
- [방화벽 설정 문제 해결](#BKMK_troubleshooting)  
   
 ##  <a name="BKMK_basic"></a> 기본 방화벽 정보  
  방화벽은 들어오는 패킷을 검사하고 규칙 집합과 이 패킷을 비교합니다. 규칙에서 허용하는 패킷이면 방화벽은 추가 처리를 위한 TCP/IP 프로토콜로 이 패킷을 전달합니다. 규칙에서 허용하지 않는 패킷이면 방화벽은 이 패킷을 삭제하고 로깅이 설정된 경우 방화벽 로깅 파일에 항목을 작성합니다.  
@@ -105,34 +78,9 @@ ms.lasthandoff: 04/11/2017
 >  방화벽을 켜면 파일 및 인쇄 공유와 같이 이 컴퓨터에 액세스하는 다른 프로그램과 원격 데스크톱 연결이 영향을 받습니다. 관리자는 방화벽 설정을 조정하기 전에 컴퓨터에서 실행 중인 모든 응용 프로그램을 고려해야 합니다.  
   
 ##  <a name="BKMK_programs"></a> 방화벽 구성 프로그램  
- Windows 방화벽 설정은 세 가지 방법으로 구성할 수 있습니다.  
-  
--   **제어판의 Windows 방화벽 항목**  
-  
-     제어판에서 **Windows 방화벽** 항목을 열 수 있습니다.  
-  
-    > [!IMPORTANT]  
-    >  제어판의 **Windows 방화벽** 항목에서 변경한 내용은 현재 프로필에만 적용됩니다. 랩톱과 같은 모바일 장치의 경우 다른 구성으로 연결할 때 프로필이 변경될 수 있으므로 제어판의 **Windows 방화벽** 항목을 사용하면 안 됩니다. 프로필이 변경되면 이전에 구성한 프로필이 적용되지 않습니다. 프로필에 대한 자세한 내용은 [고급 보안이 포함된 Windows 방화벽 시작 가이드](http://go.microsoft.com/fwlink/?LinkId=116080)를 참조하세요.  
-  
-     제어판의 **Windows 방화벽** 항목에서는 기본 옵션을 구성할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다.  
-  
-    -   제어판의 **Windows 방화벽** 항목 켜기 또는 끄기  
-  
-    -   규칙 설정 및 해제  
-  
-    -   포트 및 프로그램에 대한 예외 부여  
-  
-    -   일부 범위 제한 설정  
-  
-     제어판의 **Windows 방화벽** 항목은 방화벽 구성에 익숙하지 않은 사용자, 그리고 모바일 형태가 아닌 컴퓨터에 대한 기본 방화벽 옵션을 구성하는 사용자에게 가장 적합합니다. 다음 절차에 따라 **run** 명령을 실행하여 제어판의 **Windows 방화벽** 항목을 열 수도 있습니다.  
-  
-    #### <a name="to-open-the-windows-firewall-item"></a>Windows 방화벽 항목을 열려면  
-  
-    1.  **시작** 메뉴에서 **실행**을 클릭한 다음 `firewall.cpl`을 입력합니다.  
-  
-    2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
--   **MMC(Microsoft Management Console)**  
+**Microsoft Management Console** 또는 **netsh**를 사용하여 Windows 방화벽 설정을 구성합니다.  
+
+-  **MMC(Microsoft Management Console)**  
   
      고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용하면 고급 방화벽 설정을 구성할 수 있습니다. 이 스냅인은 대부분의 방화벽 옵션을 쉽게 사용할 수 있도록 제공하고 모든 방화벽 프로필을 제공합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [고급 보안이 설정된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.  
   
@@ -185,18 +133,29 @@ ms.lasthandoff: 04/11/2017
   
  고정 포트에서 수신하도록 명명된 인스턴스를 구성하는 또 다른 방법은 **sqlservr.exe**와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로그램에 대한 예외를 방화벽에서 만드는 것입니다([!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우). 이 방법은 편리하지만 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용할 경우 **인바운드 규칙** 페이지의 **로컬 포트** 열에 포트 번호가 표시되지 않습니다. 따라서 어떤 포트가 열려 있는지 감사하기가 더 어려워집니다. 또 다른 고려 사항은 서비스 팩 또는 누적 업데이트로 인해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일에 대한 경로가 변경되어 방화벽 규칙이 무효화될 수 있다는 점입니다.  
   
-> [!NOTE]  
->  다음 절차에서는 제어판의 **Windows 방화벽** 항목을 사용합니다. 고급 보안이 설정된 Windows 방화벽 MMC 스냅인을 사용하면 보다 복잡한 규칙을 구성할 수 있습니다. 여기에는 심층적인 방어를 제공하는 데 유용한 서비스 예외 구성이 포함됩니다. 아래의 [고급 보안이 포함된 Windows 방화벽 스냅인 사용](#BKMK_WF_msc) 을 참조하세요.  
+##### <a name="to-add-a-program-exception-to-the-firewall-using-windows-firewall-with-advanced-security"></a>고급 보안이 포함된 Windows 방화벽 항목을 사용하여 방화벽에 프로그램 예외를 추가하려면
   
-###### <a name="to-add-a-program-exception-to-the-firewall-using-the-windows-firewall-item-in-control-panel"></a>제어판의 Windows 방화벽 항목을 사용하여 방화벽에 프로그램 예외를 추가하려면  
-  
-1.  제어판의 **Windows 방화벽** 항목에 있는 **예외** 탭에서 **프로그램 추가**를 클릭합니다.  
-  
-2.  **C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Binn**과 같이 방화벽을 통과하도록 허용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 위치를 찾아 **sqlservr.exe**를 선택한 다음 **열기**를 클릭합니다.  
-  
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
- 끝점에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [끝점 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요.  
+1. 시작 메뉴에서 *wf.msc*를 입력합니다. **고급 보안이 포함된 Windows 방화벽**을 클릭합니다.
+
+1. 왼쪽 창에서 **인바운드 규칙**을 클릭합니다.
+
+1. 오른쪽 창의 **작업**에서 **새 규칙...** 을 클릭합니다. **새 인바운드 규칙 마법사**가 열립니다.
+
+1. **규칙 유형**에서 **프로그램**을 클릭합니다. **다음**을 클릭합니다.
+
+1. **프로그램**에서 **다음 프로그램 경로**를 클릭합니다. **찾아보기**를 클릭하여 SQL Server의 인스턴스를 찾습니다. 이 프로그램을 sqlservr.exe라고 합니다. 파일은 일반적으로 다음 위치에 있습니다.
+
+   `C:\Program Files\Microsoft SQL Server\MSSQL13.<InstanceName>\MSSQL\Binn\sqlservr.exe`
+
+   **다음**을 클릭합니다.
+
+1. **작업**에서 **연결 허용**을 클릭합니다.  
+
+1. 프로필에 세 개의 프로필을 모두 포함합니다. **다음**을 클릭합니다.
+
+1. **이름**에 규칙의 이름을 입력합니다. **마침**을 클릭합니다.
+
+끝점에 대한 자세한 내용은 [여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성](../../database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md) 및 [끝점 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)를 참조하세요. 
   
 ###  <a name="BKMK_ssas"></a> Analysis Services에서 사용하는 포트  
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 자주 사용하는 포트를 보여 줍니다.  
@@ -213,14 +172,14 @@ ms.lasthandoff: 04/11/2017
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services에서 사용하는 포트  
- 다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 자주 사용하는 포트를 보여 줍니다.  
+다음 표에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 자주 사용하는 포트를 보여 줍니다.  
   
 |기능|포트|주석|  
 |-------------|----------|--------------|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 서비스|TCP 포트 80|URL을 통한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] HTTP 연결에 사용됩니다. 미리 구성된 규칙 **World Wide Web 서비스(HTTP)**는 사용하지 않는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - HTTPS를 통해 사용하도록 구성|TCP 포트 443|URL을 통한 HTTPS 연결에 사용됩니다. HTTPS는 SSL(Secure Sockets Layer)을 사용하는 HTTP 연결입니다. 미리 구성된 규칙 **보안 World Wide Web 서비스(HTTPS)**는 사용하지 않는 것이 좋습니다. 자세한 내용은 아래의 [다른 방화벽 규칙과의 상호 작용](#BKMK_other_rules) 섹션을 참조하세요.|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결되는 경우 이러한 서비스에 대해 적절한 포트를 열어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하세요.  
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결되는 경우 이러한 서비스에 대해 적절한 포트를 열어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하세요.  
   
 ###  <a name="BKMK_ssis"></a> Integration Services에서 사용하는 포트  
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스에서 사용하는 포트를 보여 줍니다.  
@@ -229,10 +188,10 @@ ms.lasthandoff: 04/11/2017
 |-------------|----------|--------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] 원격 프로시저 호출(MS RPC)<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 사용됩니다.|TCP 포트 135<br /><br /> [포트 135에 대한 특별 고려 사항](#BKMK_port_135)을 참조하세요.|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 포트 135에서 DCOM을 사용합니다. 서비스 제어 관리자는 포트 135를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 시작 및 중지, 실행 중인 서비스에 대한 제어 요청 전송과 같은 태스크를 수행합니다. 포트 번호는 변경할 수 없습니다.<br /><br /> 이 포트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 사용자 지정 응용 프로그램에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 서비스의 원격 인스턴스에 연결하는 경우에만 열면 됩니다.|  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.  
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.  
   
 ###  <a name="BKMK_additional_ports"></a> 추가 포트 및 서비스  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 포트 및 서비스를 보여 줍니다.  
+다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용할 수 있는 포트 및 서비스를 보여 줍니다.  
   
 |시나리오|포트|주석|  
 |--------------|----------|--------------|  
@@ -289,7 +248,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE]  
 >  제어판의 **Windows 방화벽** 항목을 사용하면 현재 방화벽 프로필만 구성됩니다.  
   
-#### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>제어판의 Windows 방화벽 항목을 사용하여 방화벽 예외 범위를 변경하려면  
+### <a name="to-change-the-scope-of-a-firewall-exception-using-the-windows-firewall-item-in-control-panel"></a>제어판의 Windows 방화벽 항목을 사용하여 방화벽 예외 범위를 변경하려면  
   
 1.  제어판의 **Windows 방화벽** 항목에 있는 **예외** 탭에서 프로그램 또는 포트를 선택한 다음 **속성** 또는 **편집**을 클릭합니다.  
   
@@ -328,7 +287,7 @@ ms.lasthandoff: 04/11/2017
   
 -   들어오는 연결에 IPsec 요구  
   
-#### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>새 규칙 마법사를 사용하여 새 방화벽 규칙을 만들려면  
+### <a name="to-create-a-new-firewall-rule-using-the-new-rule-wizard"></a>새 규칙 마법사를 사용하여 새 방화벽 규칙을 만들려면  
   
 1.  **시작**메뉴에서 **실행**을 클릭한 다음 **WF.msc**를 입력하고 확인을 클릭합니다.  
   
@@ -351,7 +310,7 @@ ms.lasthandoff: 04/11/2017
   
     2.  명령 프롬프트에서 **netstat -n -a**를 입력합니다.  
   
-         **-n** 스위치를 지정하면 **netstat** 에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
+         **-n** 스위치를 지정하면 **netstat**에서 활성 TCP 연결의 주소와 포트 번호를 숫자로 표시합니다. **-a** 스위치를 지정하면 **netstat** 에서 컴퓨터가 수신 대기 중인 TCP 및 UDP 포트를 표시합니다.  
   
 -   **PortQry** 유틸리티를 사용하면 TCP/IP 포트 상태를 수신 대기 중, 수신 대기 중 아님 또는 필터링됨으로 보고할 수 있습니다. 필터링됨(filtered) 상태의 경우 포트가 수신 중일 수도 있고 수신 중이 아닐 수도 있습니다. 이 상태는 유틸리티가 포트로부터 응답을 수신하지 못했음을 나타냅니다. **PortQry** 유틸리티는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=28590)에서 다운로드할 수 있습니다.  
   
