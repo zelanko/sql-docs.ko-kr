@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4b4c95296d12ba08582ecf6929c5c13dd02b2bae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅숏 없이 트랜잭션 구독 초기화
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
  백업으로 구독을 초기화하려면 먼저 게시를 만들 때 해당 옵션을 설정한 다음 구독을 만들 때 여러 옵션에 대한 값을 지정해야 합니다. 새 게시 마법사를 사용하거나 프로그래밍 방식으로 게시를 설정할 수 있습니다. 그러나 구독 옵션에 필요한 값은 프로그래밍 방식으로만 지정할 수 있습니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Enable Initialization with a Backup for Transactional Publications &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [트랜잭션 게시에 대한 백업으로 초기화 설정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   복제 Transact-SQL 프로그래밍: [백업에서 트랜잭션 구독 초기화&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   

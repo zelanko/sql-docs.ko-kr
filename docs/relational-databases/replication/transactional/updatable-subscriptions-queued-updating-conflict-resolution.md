@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>업데이트할 수 있는 구독 - 지연 업데이트 충돌 해결
@@ -58,13 +58,13 @@ ms.lasthandoff: 04/11/2017
   
  **지연 업데이트 충돌 해결 정책을 설정하려면**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Set Queued Updating Conflict Resolution Options &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [지연 업데이트 충돌 해결 옵션 설정&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/publish/set-queued-updating-conflict-resolution-options-sql-server-management-studio.md)  
   
 -   복제 Transact-SQL 프로그래밍: [트랜잭션 게시에 대해 업데이트할 수 있는 구독 설정](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
  **데이터 충돌을 보려면**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [트랜잭션 게시의 데이터 충돌 확인&#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   
 ### <a name="publisher-wins"></a>게시자 내용 적용  
  충돌 해결 시 게시자 내용이 적용되도록 설정하면 게시자에 있는 데이터를 기준으로 트랜잭션 일관성을 유지 관리합니다. 충돌 트랜잭션은 트랜잭션을 처음에 초기화한 구독자로 롤백됩니다.  
@@ -82,6 +82,6 @@ ms.lasthandoff: 04/11/2017
  구독자 변경 내용 적용 정책에서 충돌 감지는 게시자 변경 내용 적용 항목을 업데이트하는 마지막 구독자 트랜잭션을 의미합니다. 이 경우 충돌이 감지되면 구독자가 보낸 트랜잭션이 계속 사용되고 게시자가 업데이트됩니다. 이 정책은 이러한 변경 내용이 데이터 무결성을 손상하지 않은 응용 프로그램에 적합합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [트랜잭션 복제를 위한 업데이트 가능 구독](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
+ [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

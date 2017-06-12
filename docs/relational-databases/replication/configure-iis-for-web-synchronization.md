@@ -19,16 +19,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ac612d72c1a82d49a7cfcf41aa9aa2989ee25b2
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 9555085ef832e4277da89e062aa28872b5eeb4fe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
   이 항목의 절차는 병합 복제를 위해 웹 동기화를 구성하는 두 번째 단계입니다. 게시를 웹 동기화용으로 설정한 다음 이 단계를 수행합니다. 구성 프로세스에 대한 개요는 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)을 참조하십시오. 이 항목의 절차를 완료한 다음에는 구독이 웹 동기화를 사용하도록 구성하는 세 번째 단계를 이어서 수행합니다. 세 번째 단계는 다음 항목에서 설명합니다.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [How to: Configure a Subscription to Use Web Synchronization \(SQL Server Management Studio\)](http://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [방법: 구독에서 웹 동기화를 사용하도록 구성\(SQL Server Management Studio)\)](http://msdn.microsoft.com/library/ms345214.aspx)  
   
 -   복제 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로그래밍: [방법:구독에서 웹 동기화를 사용하도록 구성(복제 Transact-SQL 프로그래밍)](http://msdn.microsoft.com/library/ms345206.aspx)  
   
@@ -133,7 +133,7 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  사용자가 지정하는 웹 사이트를 통해 웹 동기화에서 사용하는 구성 요소에 액세스할 수 있지만 이 웹 사이트를 통해 다른 데이터나 웹 페이지에 액세스하려면 별도의 구성이 필요합니다.  
   
--   가상 디렉터리 및 관련 별칭을 만듭니다. 별칭은 웹 동기화 구성 요소에 액세스할 때 사용됩니다. 예를 들어 IIS 주소가 https://*server.domain.com* 인데 'websync1'이라는 별칭을 지정하면 replisapi.dll 구성 요소에 액세스하기 위한 주소는 https://*server.domain.com*/websync1/replisapi.dll이 됩니다.  
+-   가상 디렉터리 및 관련 별칭을 만듭니다. 별칭은 웹 동기화 구성 요소에 액세스할 때 사용됩니다. 예를 들어 IIS 주소가 `https://server.domain.com`이고 'websync1'이라는 별칭을 지정하면 replisapi.dll 구성 요소에 액세스하기 위한 주소는 `https://server.domain.com/websync1/replisapi.dll` 이 됩니다.  
   
 -   기본 인증을 사용합니다. 기본 인증을 사용하면 Kerberos 위임 없이도 IIS와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자/배포자를 서로 다른 컴퓨터에서 실행(권장 구성)할 수 있으므로 기본 인증을 사용하는 것이 좋습니다. 기본 인증과 함께 SSL을 사용하면 로그인, 암호 및 모든 데이터가 전송 중에 암호화됩니다. 이때 사용하는 인증 유형에 관계없이 SSL이 필요합니다. 최상의 웹 동기화 방법에 대한 자세한 내용은 [웹 동기화 구성](../../relational-databases/replication/configure-web-synchronization.md)에서 "웹 동기화에 대한 최상의 보안 방법"을 참조하세요.  
   
@@ -327,7 +327,7 @@ ms.lasthandoff: 04/11/2017
   
     5.  **확인**을 클릭합니다.  
   
-2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: https://server.domain.com/directory/replisapi.dll?diag)를 추가하여 진단 모드에서 서버에 연결합니다.  
+2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들면 `https://server.domain.com/directory/replisapi.dll?diag`과 같습니다.  
   
 3.  IIS에 대해 지정한 인증서를 Windows 운영 체제에서 인식하지 못할 경우 **보안 경고** 대화 상자가 나타납니다. 이 경고는 인증서가 테스트 인증서이거나 Windows에서 인식할 수 없는 CA(인증 기관)에서 발급한 인증서이기 때문에 발생할 수 있습니다.  
   

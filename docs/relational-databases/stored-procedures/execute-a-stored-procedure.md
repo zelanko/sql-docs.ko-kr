@@ -24,13 +24,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1e76212425f01aba20c8a0d0fdb548415559be1
+ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
+ms.openlocfilehash: 75e4f9647c7d19c82fd74caa15775fc3d8a97b12
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="execute-a-stored-procedure"></a>저장 프로시저 실행
+
+ > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [저장 프로시저를 실행할](https://msdn.microsoft.com/en-US/library/ms189915(SQL.120).aspx)합니다.
+
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 저장 프로시저를 실행하는 방법에 대해 설명합니다.  
   
  두 가지 방법으로 저장 프로시저를 실행할 수 있습니다. 가장 일반적인 첫 번째 방법은 응용 프로그램 또는 사용자가 프로시저를 호출하는 것입니다. 두 번째 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때 자동 실행되도록 프로시저를 설정하는 것입니다. 응용 프로그램이나 사용자가 프로시저를 호출할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE 또는 EXEC 키워드가 호출에서 명시적으로 지정됩니다. 또는 프로시저가 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리의 첫 번째 문이면 키워드를 사용하지 않고 프로시저를 호출하고 실행할 수 있습니다.  
