@@ -1,31 +1,36 @@
 ---
-title: "SharePoint 목록 쿼리 디자이너(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10016"
+title: "SharePoint 목록 쿼리 디자이너 (보고서 작성기) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10016"
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint 목록 쿼리 디자이너(보고서 작성기)
+# <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 목록 쿼리 디자이너(보고서 작성기)
   보고서 작성기 및 보고서 디자이너는 SharePoint 사이트에서 보고서 데이터 집합에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 SharePoint 목록 메타데이터를 탐색하고, 쿼리를 대화형으로 작성하고, 쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정하거나 쿼리 명령을 입력할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
   
 > [!IMPORTANT]  
 >  사용자는 쿼리를 작성하고 실행할 때 데이터 원본에 액세스합니다. 데이터 원본에 대해서는 읽기 전용 권한과 같이 최소한의 사용 권한을 부여해야 합니다.  
   
-## 그래픽 쿼리 디자이너  
+## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
  그래픽 쿼리 디자이너에서는 SharePoint 사이트를 탐색하고 데이터 집합에 대한 SharePoint 목록 데이터를 검색하는 명령을 대화형으로 작성할 수 있습니다. 데이터 집합에 포함할 필드를 선택하고 필요에 따라 데이터 집합의 데이터를 제한할 필터를 지정합니다. 필터를 매개 변수로 사용하여 런타임에 필터의 값을 제공하도록 지정할 수 있습니다.  
   
  SharePoint 목록에는 보고서에 별로 필요하지 않을 수 있는 SharePoint 관련 필드가 많이 포함되어 있습니다. 쿼리 디자이너에서는 사용할 필드를 더 쉽고 빠르게 확인할 수 있도록 이러한 필드를 숨길 수 있는 옵션을 제공합니다.  
@@ -84,7 +89,7 @@ caps.handback.revision: 7
   
  결과 집합의 정렬 순서는 데이터 원본에서 데이터가 검색되는 순서에 따라 결정됩니다. 보고서 데이터를 검색한 후 쿼리를 수정하여 정렬 순서를 변경할 수 있습니다.  
   
-### 그래픽 쿼리 디자이너 도구 모음  
+### <a name="graphical-query-designer-toolbar"></a>그래픽 쿼리 디자이너 도구 모음  
  관계형 쿼리 디자이너 도구 모음은 쿼리 결과를 지정하거나 보는 데 사용할 수 있는 다음 단추를 제공합니다.  
   
 |단추|Description|  
@@ -94,7 +99,7 @@ caps.handback.revision: 7
 |**쿼리 실행**|쿼리를 실행합니다. 쿼리 결과 창에 결과 집합이 표시됩니다.|  
 |**숨겨진 필드 표시**|SharePoint에 의해 자동으로 생성되지만 일반적으로 보고서에서 사용되지 않는 필드(예: SharePoint 연결 항목의 ProgId 및 Level)를 표시하거나 숨깁니다. 이러한 필드를 숨기면 필드 목록이 간단해져서 사용하기가 쉽습니다.|  
   
-## 관련 항목:  
- [쿼리 디자이너&#40;보고서 작성기&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>관련 항목:  
+ [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

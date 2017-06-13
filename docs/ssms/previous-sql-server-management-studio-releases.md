@@ -15,19 +15,57 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0773be32343e4707503b4acb616e5a1c807fe32f
+ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
+ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/27/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>SQL Server Management Studio의 이전 릴리스
   
 SQL Server Management Studio의 다음 이전 릴리스를 사용할 수 있습니다.
-
-
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>[SQL Server Management Studio 16.5 릴리스](http://go.microsoft.com/fwlink/?LinkID=832812) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![다운로드](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 릴리스](http://go.microsoft.com/fwlink/?LinkID=840946)
+
+**버전 정보**  
+  
+*이 SSMS 릴리스는 Visual Studio 2015의 격리 셸을 사용합니다.*  
+릴리스 번호: 16.5.3  
+이 릴리스에 대한 빌드 번호: 13.0.16106.4
+
+## <a name="changelog"></a>Changelog  
+
+16.5.3
+
+이 릴리스에서는 다음과 같은 문제가 해결되었습니다.
+
+* 테이블에 스파스 열이 둘 이상 있을 때 'Table' 노드의 확장을 일으키는 SSMS 16.5.2의 문제를 해결함.
+
+* 사용자가 Microsoft Dynamics AX/CRM Online 리소스에 연결되는 OData 연결 관리자를 포함하는 SSIS 패키지를 SSIS 카탈로그에 배포할 수 있음. 자세한 내용은 [OData 연결 관리자](https://msdn.microsoft.com/library/dn584133.aspx)를 참조하세요.
+
+* 기존 테이블에 대한 Always Encrypted 구성이 관련 없는 개체에 대한 오류와 함께 실패함. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
+
+* 여러 스키마가 포함된 기존 데이터베이스에 대한 Always Encrypted 구성이 작동하지 않음. [Connect ID 3109591](https://connect.microsoft.com/SQLServer/feedback/details/3109591/sql-server-2016-always-encrypted-against-existing-database-with-multiple-schemas-doesnt-work)
+
+* Always Encrypted, 암호화된 열 마법사가 시스템 뷰를 참조하는 뷰를 포함하는 데이터베이스로 인해 실패함. [Connect ID 3111925](https://connect.microsoft.com/SQLServer/feedback/details/3111925/sql-server-2016-always-encrypted-encrypted-column-wizard-failed-task-failed-due-to-following-error-cannot-save-package-to-file-the-model-has-build-blocking-errors)
+
+* Always Encrypted를 사용하여 암호화할 때 암호화가 잘못 처리된 후 모듈을 새로 고치지 못하는 오류가 발생함.
+
+* *최근에 사용한 항목 열기* 메뉴에 최근에 저장한 파일이 표시되지 않음. [Connect ID 3113288](https://connect.microsoft.com/SQLServer/feedback/details/3113288/ssms-2016-open-recent-menu-doesnt-show-recently-saved-files)
+
+* 원격(인터넷) 연결을 통해 테이블의 인덱스를 마우스 오른쪽 단추로 클릭할 경우 SSMS가 느려짐. [Connect ID 3114074](https://connect.microsoft.com/SQLServer/feedback/details/3114074/ssms-slow-when-right-clicking-an-index-for-a-table-over-a-remote-internet-connection)
+ 
+* SQL 디자이너 스크롤 막대 관련 문제를 해결함. [Connect ID 3114856](http://connect.microsoft.com/SQLServer/feedback/details/3114856/bug-in-scrollbar-on-sql-desginer-in-ssms-2016)
+
+* 테이블의 상황에 맞는 메뉴가 잠시 중단됨 
+ 
+* SSMS에서 가끔 [작업 모니터]에서 예외를 발생시키고 작동을 중단함. [Connect ID 697527](https://connect.microsoft.com/SQLServer/feedback/details/697527/)
+
+* SSMS 2016이 "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"(.NET 런타임의 IP 71AF8579(71AE0000)에서 내부 오류로 인해 프로세스가 종료되었습니다(종료 코드 80131506).) 오류와 함께 작동이 중단됨
+
+
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-165-releasehttpgomicrosoftcomfwlinklinkid832812"></a>[SQL Server Management Studio 16.5 릴리스](http://go.microsoft.com/fwlink/?LinkID=832812) ![다운로드](../ssdt/media/download.png)
 
 **버전 정보**  
   
@@ -67,7 +105,7 @@ SQL Server Management Studio의 다음 이전 릴리스를 사용할 수 있습�
 
 
    
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>[SQL Server Management Studio 16.4.1(2016년 9월) 릴리스](http://go.microsoft.com/fwlink/?LinkID=828615) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1641-september-2016-releasehttpgomicrosoftcomfwlinklinkid828615"></a>[SQL Server Management Studio 16.4.1(2016년 9월) 릴리스](http://go.microsoft.com/fwlink/?LinkID=828615) ![다운로드](../ssdt/media/download.png)
 
 **버전 정보**  
   
@@ -179,7 +217,7 @@ SQL Server Management Studio의 다음 이전 릴리스를 사용할 수 있습�
 
 
 
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>[SQL Server Management Studio 16.3(2016년 8월) 릴리스](http://go.microsoft.com/fwlink/?LinkID=824938) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-163-august-2016-releasehttpgomicrosoftcomfwlinklinkid824938"></a>[SQL Server Management Studio 16.3(2016년 8월) 릴리스](http://go.microsoft.com/fwlink/?LinkID=824938) ![다운로드](../ssdt/media/download.png)
  2016년 8월 15일 | 버전 번호:    13.0.15700.28
 
 **기능**  
@@ -245,7 +283,7 @@ SQL Server Management Studio의 다음 이전 릴리스를 사용할 수 있습�
 [SSMS changelog에서 사용할 수 있는 수정 사항에 대한 추가 정보](../ssms/sql-server-management-studio-changelog-ssms.md)
  
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>[SQL Server Management Studio(2016년 7월) 핫픽스 업데이트 릴리스](http://go.microsoft.com/fwlink/?LinkID=822301) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-july-2016-hotfix-update-releasehttpgomicrosoftcomfwlinklinkid822301"></a>[SQL Server Management Studio(2016년 7월) 핫픽스 업데이트 릴리스](http://go.microsoft.com/fwlink/?LinkID=822301) ![다운로드](../ssdt/media/download.png)
 
 2016년 7월 13일 | 버전 번호: 13.0.15600.2
 
@@ -299,7 +337,7 @@ SSMS 7월 릴리스 및 7월 핫픽스 릴리스는 사용자가 백업 또는 �
 [SSMS changelog에서 사용할 수 있는 추가 정보 및 버그 수정](../ssms/sql-server-management-studio-changelog-ssms.md)
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>[SQL Server Management Studio 2016년 6월 릴리스](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-june-2016-releasehttpgomicrosoftcomfwlinklinkid799832"></a>[SQL Server Management Studio 2016년 6월 릴리스](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
 
 2016년 6월 1일 | 버전 번호: 13.0.15000.23
 
@@ -331,7 +369,7 @@ SSMS 7월 릴리스 및 7월 핫픽스 릴리스는 사용자가 백업 또는 �
 6. Always Encrypted 환경의 버그 수정 Stretch 데이터베이스에 대해 Always Encrypted 메뉴 옵션이 사용 가능하도록 올바르게 설정되지 않는 버그가 수정되었습니다. 또한 SafeNet(Luna SA) HSM 공급자가 제대로 사용되지 않던 Always Encrypted 마법사의 버그도 수정되었습니다.
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>[SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe) ![다운로드](../ssdt/media/download.png)
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2014-sp1httpdownloadmicrosoftcomdownload156156992e6-f7c7-4e55-833d-249bd2348138enux86sqlmanagementstudiox86enuexe"></a>[SQL Server Management Studio 2014 SP1](http://download.microsoft.com/download/1/5/6/156992E6-F7C7-4E55-833D-249BD2348138/ENU/x86/SQLManagementStudio_x86_ENU.exe) ![다운로드](../ssdt/media/download.png)
 
 2015년 5월 14일 | 버전 번호: 12.0.4100.1
 
@@ -352,7 +390,7 @@ SSMS 7월 릴리스 및 7월 핫픽스 릴리스는 사용자가 백업 또는 �
 7. 작업 표시줄에서 SSMS 창 아이콘을 새로 고치려고 하면 SSMS가 충돌할 수 있습니다([Microsoft Connect 항목 #799430](https://connect.microsoft.com/SQLServer/feedback/details/799430/ssms-2012-sp-1-cu-5-installed-crash-when-enforce-refresh-on-connect)).
 
 ---
-### <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>[SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe) ![다운로드](../ssdt/media/download.png)  
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-2012-sp3httpdownloadmicrosoftcomdownloadf67f673709c-d371-4a64-8bf9-c1dd73f60990enux86sqlmanagementstudiox86enuexe"></a>[SQL Server Management Studio 2012 SP3](http://download.microsoft.com/download/F/6/7/F673709C-D371-4A64-8BF9-C1DD73F60990/ENU/x86/SQLManagementStudio_x86_ENU.exe) ![다운로드](../ssdt/media/download.png)  
   
 2015년 11월 21일 | 버전 번호: 11.0.6020.0
 
@@ -368,7 +406,7 @@ SSMS Express Edition의 전체 기능 코드 조각 열 저장소 인덱스 등
 2. SSMS에서 차등 백업 복원 시 "LSN 체인 중단으로 인해 복원 계획을 만들 수 없습니다." 오류
 
 ---
-### <a name="additional-downloads"></a>추가 다운로드  
+## <a name="additional-downloads"></a>추가 다운로드  
 모든 SQL Server Management Studio 다운로드의 전체 목록은 [Microsoft 다운로드 센터](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)를 검색하세요.  
   
 최신 SQL Server Management Studio에 대해서는 [SQL Server Management Studio 다운로드&#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  

@@ -1,37 +1,44 @@
 ---
-title: "SQL Server Data Tools의 Reporting Services(SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Business Intelligence Development Studio, Reporting Services"
+title: "SQL Server Data Tools (SSDT)의 reporting Services | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 caps.latest.revision: 76
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 75
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ee41ccb35aef5f0ab94c663a1556aad07bb85faa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server Data Tools의 Reporting Services(SSDT)
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 비즈니스 인텔리전스 솔루션을 만들기 위한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경입니다. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 포함되지 않습니다. [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
+
+# <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools의 Reporting Services(SSDT)
+
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] is a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] environment for creating business intelligence solutions. SSDT에서는 페이지를 매긴 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서 정의, 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 열고 수정하고 미리 보고 저장하고 배포할 수 있는 보고서 디자이너 제작 환경을 사용할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]SQL Server와 함께 포함 되지 않습니다. [SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=616714)를 다운로드합니다. 
   
  이 항목에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에 사용되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]솔루션, 프로젝트, 프로젝트 템플릿 및 구성과 보고서 디자이너에서 사용할 수 있는 뷰, 메뉴, 도구 모음 및 바로 가기에 대해 설명합니다.  
   
- 보고서 디자인을 시작하려면 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md)을 참조하세요.  
+ 보고서 디자인을 시작하려면 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)을 참조하세요.  
   
 ##  <a name="bkmk_SolutionsandProjects"></a> 솔루션 및 프로젝트  
  보고서 프로젝트는 보고서 정의 및 리소스에 대한 컨테이너 역할을 합니다. 보고서 프로젝트의 모든 파일은 프로젝트를 배포할 때 보고서 서버에 게시됩니다. 처음 프로젝트를 만들면 해당 프로젝트의 컨테이너 역할을 하는 솔루션도 만들어집니다. 하나의 솔루션에 여러 프로젝트를 추가할 수 있습니다.  
   
   
 ##  <a name="bkmk_Configurations"></a> 구성  
- 엔터프라이즈 테스트 및 프로덕션 보고서 서버와 같은 배포 변형을 위한 여러 프로젝트 속성 집합을 만들려면 구성 관리자를 사용합니다. 자세한 내용은 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되어 있습니다.  
+ 엔터프라이즈 테스트 및 프로덕션 보고서 서버와 같은 배포 변형을 위한 여러 프로젝트 속성 집합을 만들려면 구성 관리자를 사용합니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
   
 ##  <a name="bkmk_ReportServerProjects"></a> 보고서 서버 프로젝트  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치하면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 다음 프로젝트 템플릿을 사용할 수 있습니다.  
@@ -40,7 +47,7 @@ caps.handback.revision: 75
   
 -   **보고서 서버 프로젝트 마법사** 보고서 서버 마법사 프로젝트를 선택하면 보고서 서버 프로젝트가 자동으로 만들어지고 보고서 마법사가 열립니다. 마법사에서는 각 페이지의 지침을 따라 데이터 원본에 대한 연결 문자열을 만들고, 데이터 원본 자격 증명을 설정하고, 쿼리를 디자인하고, 테이블 또는 행렬 데이터 영역을 추가하고, 보고서 데이터 및 그룹을 지정하고, 글꼴 및 색 스타일을 선택하고, 보고서 서버에 보고서를 게시하고, 보고서를 로컬에서 미리 보는 방법으로 보고서를 만들 수 있습니다. 마법사로 보고서를 만든 후에는 보고서 서버 프로젝트의 보고서 디자이너를 사용하여 보고서 데이터 및 보고서 디자이너를 변경할 수 있습니다.  
   
- ![SSDT의 새 프로젝트 템플릿](../../analysis-services/media/ssdt-biprojects.png "SSDT의 새 프로젝트 템플릿")  
+ ![SSDT에서 새 프로젝트 템플릿이](../../analysis-services/media/ssdt-biprojects.png "SSDT에서 새 프로젝트 템플릿")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> 보고서 디자이너 창 및 하위 창  
@@ -57,7 +64,7 @@ caps.handback.revision: 75
   
 -   **데이터 집합** 각 데이터 집합은 데이터 원본에서 검색할 데이터를 지정하는 쿼리를 포함합니다. 데이터 집합을 확장하여 데이터 집합 쿼리로 지정된 필드 컬렉션을 볼 수 있습니다.  
   
-     다차원 데이터 집합에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 필터 창의 필터를 지정하고 보고서 매개 변수를 만들지 여부를 나타낼 수 있습니다. 보고서 매개 변수 옵션을 지정하면 매개 변수의 유효값 목록을 채우기 위해 특별한 데이터 집합이 자동으로 만들어집니다.  기본적으로 이러한 데이터 집합은 보고서 데이터 창에 나타나지 않습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md)를 참조하세요.  
+     다차원 데이터 집합에 대해 사용할 수 있는 일부 쿼리 디자이너에서는 필터 창의 필터를 지정하고 보고서 매개 변수를 만들지 여부를 나타낼 수 있습니다. 보고서 매개 변수 옵션을 지정하면 매개 변수의 유효값 목록을 채우기 위해 특별한 데이터 집합이 자동으로 만들어집니다.  기본적으로 이러한 데이터 집합은 보고서 데이터 창에 나타나지 않습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)를 참조하세요.  
   
 -   **보고서 매개 변수** 보고서 매개 변수 목록입니다. 매개 변수는 데이터 집합 쿼리에 쿼리 매개 변수가 포함되면 수동이나 자동으로 만들어질 수 있습니다.  
   
@@ -94,7 +101,7 @@ caps.handback.revision: 75
   
  속성 창을 사용하여 다음을 수행할 수 있습니다.  
   
--   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)**으로 표시됩니다. 대부분의 속성에는 식이 허용될 수 있으며 복합 식은 **\<Expression>** 값으로 표시됩니다. **\<Expression>**을 클릭하면 **식** 대화 상자가 열립니다. 자세한 내용은 [Expression Dialog Box](../Topic/Expression%20Dialog%20Box.md)을 참조하세요.  
+-   디자인 화면에서 현재 선택한 항목의 속성을 설정합니다. 일부 속성은 값이 포함된 드롭다운 목록을 제공합니다. 셀에 직접 값을 입력할 수도 있습니다. 일부 속성은 값 컬렉션을 포함하며 이는 값 **(컬렉션)**으로 표시됩니다. 대부분의 속성 식을; 받아들일 수 있습니다. 복잡 한 식은 값으로 표시 된  **\<식 >**합니다. 클릭  **\<식 >** 열려는 **식** 대화 상자. 자세한 내용은 [Expression Dialog Box](http://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb)을 참조하세요.  
   
 -   속성 창의 도구 모음 단추를 사용하여 종류별 보기에서 사전순 보기로 표 형태 창을 변경할 수 있습니다. 종류별 보기에서는 범주 내의 모든 속성을 보기 위해 해당 범주를 확장해야 할 수 있습니다. 항목의 속성 대화 상자를 열려면 도구 모음에서 **속성 페이지** 단추를 클릭하거나 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다.  
   
@@ -247,7 +254,7 @@ caps.handback.revision: 75
   
   
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> SQL Server Data Tools에 대한 명령줄 지원  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 기본 devenv.exe 응용 프로그램을 기반으로 합니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에 따라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 및 기본 devenv.exe 응용 프로그램입니다. 이러한 옵션을 사용하려면 먼저 다음 두 항목에 대한 올바른 값을 설정해야 합니다.  
   
 -   OverwriteDataSources, TargetDataSourceFolder, TargetReportFolder 및 TargetServerURL의 프로젝트 속성  
   
@@ -304,11 +311,12 @@ caps.handback.revision: 75
     |입력란에서 식의 현재 커서 위치에서 끝 부분에 이르는 텍스트 선택|Ctrl+Shift+End|  
     |선택한 보고서 항목에 대한 바로 가기 메뉴를 엽니다.|Shift+F10+속성 키(최신 키보드에 있음)|
   
-## 참고 항목  
+## <a name="next-steps"></a>다음 단계
+
 [SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714)
- [솔루션 탐색기](../../ssms/solution/solution-explorer.md)   
- [Reporting Services 보고서&#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
- [RDL(Report Definition Language)&#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
- [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
-  
-  
+[솔루션 탐색기](http://msdn.microsoft.com/library/0df09843-0d4f-4925-bc6c-99265035a0c1)   
+[Reporting Services 보고서](../../reporting-services/reports/reporting-services-reports-ssrs.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)   
+[SQL Server Data Tools의 배포 및 버전 지원](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

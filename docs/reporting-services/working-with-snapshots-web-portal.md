@@ -1,41 +1,50 @@
 ---
-title: "스냅숏 사용(웹 포털) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "스냅샷 (웹 포털) 작업 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: f158c027acfd2acdf7a745c640babad561ec0d20
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 스냅숏 사용(웹 포털)
-보고서에 대한 스냅숏을 만든 경우 보고서의 **줄임표(...)**, **관리**를 선택하고 **캐싱** 또는 **기록 스냅숏**을 선택하여 제어할 수 있습니다.  
+# <a name="working-with-snapshots-web-portal"></a>스냅숏 사용(웹 포털)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
+선택 하 여 보고서에 대 한 스냅숏을 만듭니다를 제어할 수는 **줄임표 (...)**  보고서 선택 **관리** 선택 하 고 **캐싱** 또는 **기록 스냅숏**합니다.  
   
-> [!NOTE] SQL Server 에이전트 서비스를 시작해야 합니다.  
+> [!NOTE]
+> SQL Server 에이전트 서비스를 시작해야 합니다.  
    
 캐시 스냅숏을 만들어 특정 실행 속성의 더 빠른 로드를 허용할 수 있습니다. 기록 스냅숏을 사용하여 특정 시점을 캡처할 수도 있습니다.  
   
-## 캐시 스냅숏 만들기  
+## <a name="creating-a-cache-snapshot"></a>캐시 스냅숏 만들기  
   
 다음을 수행하여 스냅숏을 만들 수 있습니다.  
   
 ![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
-1.  **캐싱** 페이지에서 **항상 사전 생성된 스냅숏에 대해 이 보고서 실행**을 선택하여 스냅숏을 만들기 위한 옵션을 사용할 수 있습니다.  
+1.  **캐싱** 페이지에서 **항상 사전 생성된 스냅숏에 대해 이 보고서 실행** 을 선택하여 스냅숏을 만들기 위한 옵션을 사용할 수 있습니다.  
   
-2.  되풀이 스냅숏을 예약하려면 **일정에 따라 캐시 스냅숏 만들기**를 선택합니다. 그런 다음 공유 일정을 사용하거나 사용자 지정 일정을 정의하여 스냅숏을 새로 고칠 수 있습니다.  
+2.  되풀이 스냅숏을 예약하려면 **일정에 따라 캐시 스냅숏 만들기** 를 선택합니다. 그런 다음 공유 일정을 사용하거나 사용자 지정 일정을 정의하여 스냅숏을 새로 고칠 수 있습니다.  
   
-3.  지금 바로 캐시 스냅숏을 만들려면 **이 페이지에서 적용을 클릭할 때 캐시 스냅숏 만들기**를 선택합니다. 이 옵션만 선택하는 경우 스냅숏은 새로 고쳐지지 않습니다.  
+3.  지금 바로 캐시 스냅숏을 만들려면 **이 페이지에서 적용을 클릭할 때 캐시 스냅숏 만들기** 를 선택합니다. 이 옵션만 선택하는 경우 스냅숏은 새로 고쳐지지 않습니다.  
   
-## 기록 스냅숏 만들기, 수정 및 삭제  
+## <a name="create-modify-and-delete-history-snapshots"></a>기록 스냅숏 만들기, 수정 및 삭제  
   
 기록 스냅숏으로 작업하려면 보고서를 관리하고 **기록 스냅숏**을 선택합니다.  
   
@@ -53,19 +62,24 @@ caps.handback.revision: 5
   
 3.  기록 스냅숏을 선택하면 이를 볼 수 있습니다. 보고서 기록에 표시되는 스냅숏은 스냅숏이 만들어진 날짜와 시간으로만 구별됩니다. 스냅숏이 예약된 작업에 따라 생성된 것인지 수동 작업으로 생성된 것인지는 시각적으로 구분할 수 없습니다.  
   
-### 일정 및 설정  
+### <a name="schedule-and-settings"></a>일정 및 설정  
   
-**일정 및 설정**을 선택하면 일정에 추가 옵션을 제공하고 생성된 스냅숏의 보존 일정을 제어합니다.  
+**일정 및 설정** 을 선택하면 일정에 추가 옵션을 제공하고 생성된 스냅숏의 보존 일정을 제어합니다.  
   
 ![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
-필요에 따라 스냅숏 생성에 대한 일정을 만들 수 있습니다. 또한 다른 사용자가 새 스냅숏을 만드는 것을 방지할 수 있습니다. **사람들이 스냅숏을 수동으로 만들 수 있도록 허용**을 선택 취소하면 **+ 새 스냅숏 기록 단추**를 사용할 수 없게 됩니다.  
+필요에 따라 스냅숏 생성에 대한 일정을 만들 수 있습니다. 또한 다른 사용자가 새 스냅숏을 만드는 것을 방지할 수 있습니다. **사람들이 스냅숏을 수동으로 만들 수 있도록 허용** 을 선택 취소하면 **+ 새 스냅숏 기록 단추**를 사용할 수 없게 됩니다.  
   
 원하는 스냅숏 보존 방법을 정의할 수도 있습니다.  
   
 **보고서 기록에 캐시 스냅숏도 저장**  
   
-보고서 실행 속성에 따라 생성하는 보고서 스냅숏을 보고서 기록에 복사하려면 이를 선택합니다. 생성된 스냅숏에서 보고서를 실행하도록 보고서 실행 속성을 설정할 수 있습니다. 이 보고서 기록 속성을 설정하면 스냅숏의 복사본을 보고서 기록에 저장하여 시간에 따라 생성되는 모든 보고서 스냅숏에 대한 기록을 보관할 수 있습니다.  
-  
-  
-  
+보고서 실행 속성에 따라 생성하는 보고서 스냅숏을 보고서 기록에 복사하려면 이를 선택합니다. 생성된 스냅숏에서 보고서를 실행하도록 보고서 실행 속성을 설정할 수 있습니다. 이 보고서 기록 속성을 설정하면 스냅숏의 복사본을 보고서 기록에 저장하여 시간에 따라 생성되는 모든 보고서 스냅숏에 대한 기록을 보관할 수 있습니다.
+
+## <a name="next-steps"></a>다음 단계
+
+[웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
+[페이지가 매겨진된 보고서 작업](working-with-paginated-reports-web-portal.md)  
+[공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

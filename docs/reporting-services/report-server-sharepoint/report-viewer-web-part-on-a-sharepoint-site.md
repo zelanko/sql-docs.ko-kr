@@ -1,28 +1,33 @@
 ---
-title: "SharePoint 사이트의 보고서 뷰어 웹 파트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint 통합 [Reporting Services], 보고서 보기"
-  - "웹 파트 [Reporting Services]"
-  - "SharePoint 통합 [Reporting Services], 웹 파트"
-  - "보고서 뷰어 웹 파트 [Reporting Services]"
+title: "SharePoint 사이트에서 보고서 뷰어 웹 파트 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], viewing reports
+- Web Parts [Reporting Services]
+- SharePoint integration [Reporting Services], Web Parts
+- Report Viewer Web Part [Reporting Services]
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0604356dc5bb7bd964679ef2da4f891900183b78
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint 사이트의 보고서 뷰어 웹 파트
+# <a name="report-viewer-web-part-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 뷰어 웹 파트
   보고서 뷰어 웹 파트는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 의해 설치되는 사용자 지정 웹 파트입니다. 웹 파트를 사용하여 SharePoint 통합 모드로 실행되도록 구성된 보고서 서버에서 보고서를 보고 탐색하며 인쇄하고 내보낼 수 있습니다. 보고서 뷰어 웹 파트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 처리하는 보고서 정의 파일(.rdl)과 연결됩니다. 다른 소프트웨어 제품에서 만든 다른 보고서 문서와 함께 이 웹 파트를 사용할 수 없습니다.  
   
  웹 파트를 설치하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 설치 프로그램을 실행해야 합니다. 웹 파트를 독립적으로 설치하거나 제거하지 마십시오. 웹 파트는 추가 기능의 일부이며 추가 기능 설치 패키지를 통해서만 설치할 수 있습니다. 보고서 뷰어 웹 파트의 파일 이름은 ReportViewer.dwp입니다. 이 파일은 Program Files\Common Files\Microsoft Shared\web server extensions\12\template\features\reportserver 폴더에 있으며 다른 폴더로 이동하면 안 됩니다.  
@@ -37,7 +42,7 @@ caps.handback.revision: 13
   
  ![보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/media/rs-sharepointrvwebpart.gif "보고서 뷰어 웹 파트")  
   
-## 웹 파트 구성 요소  
+## <a name="web-part-components"></a>웹 파트 구성 요소  
  보기 영역에는 보고서가 HTML로 표시됩니다. 웹 파트 구성 방법에 따라 보기 영역이 최대화되어 보고서가 전체 페이지 모드로 표시되거나 인접한 창 및 도구 모음과 사용 가능한 공간이 공유될 수 있습니다.  
   
  도구 모음에서는 페이지 탐색, 검색 및 확대/축소 기능을 제공하며 다른 응용 프로그램 형식으로 보고서를 볼 수 있도록 내보내기 기능도 제공합니다. 또한 HTML 보고서로 페이지가 매겨진 인쇄 결과물을 생성하고 페이지 레이아웃 및 여백 설정을 변경하는 기능이 포함된 선택적 인쇄 기능을 제공합니다. **보고서 작성기로 열기, 구독**, **내보내기**및 **인쇄** 는 도구 모음의 **동작** 메뉴에 제공됩니다. 페이지 탐색 및 확대/축소 컨트롤은 도구 모음에 바로 제공됩니다.  
@@ -45,13 +50,13 @@ caps.handback.revision: 13
 > [!NOTE]  
 >  해당 코드를 작성하지 않으면 도구 모음을 사용자 지정할 수 없지만 속성을 설정하여 컨트롤을 모두 또는 일부 숨길 수 있습니다.  
   
-### 보고서 도구 모음의 내보내기 동작  
+### <a name="export-action-on-the-report-toolbar"></a>보고서 도구 모음의 내보내기 동작  
  **동작** 메뉴의 **내보내기** 명령은 보고서 서버에 배포된 렌더링 확장 프로그램과 연결된 응용 프로그램 형식을 표시합니다. 특정 형식을 사용할 수 있는지 확인하려면 보고서 서버에서 렌더링 확장 프로그램을 추가 또는 제거하거나 구성 설정을 수정하여 목록에서 특정 내보내기 형식을 제거해 봅니다. 보고서 서버에서 구성 설정을 지정하여 사용 가능한 형식을 제어할 수도 있습니다. 해당 렌더링 확장 프로그램의 구성 설정을 추가 및 수정하여 특정 형식의 기본 동작을 수정할 수 있습니다.  
   
-### 보고서 도구 모음의 인쇄 동작  
+### <a name="print-action-on-the-report-toolbar"></a>보고서 도구 모음의 인쇄 동작  
  **동작** 메뉴의 **인쇄** 는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 통해 제공되는 사용자 지정 인쇄 기능입니다. **인쇄**를 클릭하면 ActiveX 클라이언트 쪽 인쇄 컨트롤이 클라이언트 컴퓨터에 다운로드됩니다. 대부분의 경우 **인쇄** 를 클릭하는 사용자에게는 로컬 컴퓨터에 대한 관리자 권한이 있어야 합니다. 관리자 권한이 있는 사용자만 ActiveX 컨트롤을 다운로드할 수 있도록 제한하는 것이 일반적입니다. SharePoint 중앙 관리를 사용하여 클라이언트 쪽 인쇄 컨트롤을 설정하거나 해제할 수 있습니다.  
   
-### 보고서 도구 모음의 찾기 동작  
+### <a name="find-action-on-the-report-toolbar"></a>보고서 도구 모음의 찾기 동작  
  **동작** 메뉴의 **찾기** 는 보고서에서 대상 위치로 이동하는 방법을 제공합니다. 찾을 단어나 구를 입력하여 보고서 내용을 검색할 수 있습니다. 검색 단어는 최대 256자까지 입력할 수 있습니다. 검색 중 보고서에서 일치하는 값을 찾으면 해당 값이 포함된 보고서 부분으로 포커스가 이동합니다.  
   
  검색할 값을 입력할 때는 보고서에 표시되는 대로 값을 입력합니다. 문장의 모든 단어가 보고서에 있는 경우가 아니면 "이달의 평균 수익은 얼마입니까" 등의 질문을 사용하지 마십시오.  
@@ -60,16 +65,16 @@ caps.handback.revision: 13
   
  보고서 데이터에 대한 액세스를 제한하는 데이터베이스 및 모델 보안 설정이 검색 작업에 적용됩니다. 모델을 데이터 원본으로 사용하는 클릭 광고 보고서에서 값을 검색 중이며 모델의 일부에 액세스할 수 없는 경우 해당 모델 부분이 나타내는 데이터는 검색에서 제외됩니다.  
   
-### 자격 증명 및 매개 변수 지정 창  
+### <a name="panes-for-specifying-credentials-and-parameters"></a>자격 증명 및 매개 변수 지정 창  
  **자격 증명** 및 **매개 변수** 는 보기 영역 옆에 나타나는 창입니다. **자격 증명** 은 데이터 원본에 대한 액세스 권한이 있는 계정과 암호를 요청하는 메시지를 사용자에게 표시하도록 보고서에 대한 데이터 원본 연결을 구성한 경우 나타납니다. **매개 변수** 는 보고서에 정의된 매개 변수에 대한 사용자 입력을 보고서에서 사용하는 경우 나타납니다.  
   
-### 보고서 뷰어 웹 파트에 속성 설정  
+### <a name="setting-properties-on-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트에 속성 설정  
  웹 파트의 속성에는 보고서 뷰어와 관련된 사용자 지정 속성과 모든 웹 파트에 설정할 수 있는 일반 속성이 포함됩니다. 자세한 내용은 [보고서 뷰어 웹 파트 구성](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)을 참조하세요.  
   
  기본적으로 보고서는 전체 페이지 모드로 열립니다. 전체 페이지 모드에서는 페이지 탐색, 검색 및 기타 기능을 제공하는 도구 모음이 표시됩니다. 웹 파트를 사용자 지정하여 모양이나 기본 동작을 변경할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add the report viewer web part to a web page.md)  
+ [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

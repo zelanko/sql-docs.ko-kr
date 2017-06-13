@@ -1,28 +1,33 @@
 ---
-title: "보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용 권한 [Reporting Services], SharePoint 통합 모드"
-  - "SharePoint 통합 [Reporting Services], 사용 권한"
-  - "보안 [Reporting Services], SharePoint 통합 모드"
-  - "권한 집합 [Reporting Services]"
+title: "SharePoint 사이트 및 목록 사용 권한 참조에 대 한 보고서 서버 항목 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Reporting Services], SharePoint integrated mode
+- SharePoint integration [Reporting Services], permissions
+- security [Reporting Services], SharePoint integrated mode
+- permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 caps.latest.revision: 14
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 14
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
+# <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
   이 항목에서는 SharePoint 통합 모드로 실행되는 보고서 서버에 보고서 서버 작업에 대한 액세스 권한을 부여하는 데 사용할 수 있는 SharePoint의 사용 권한 참조를 제공합니다. 사용자 지정 권한 수준을 만드는 경우 이 항목은 사용할 권한을 선택하는 데 도움이 될 수 있습니다.  
   
  SharePoint는 콘텐츠와 작업에 대한 액세스를 제어하는 데 사용할 수 있는 33개의 사용 권한을 제공합니다. 이러한 사용 권한 중 일부는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 관련된 문서 및 작업에 적용됩니다. 이 문서의 사용 권한 참조 표를 사용하여 특정 보고 태스크를 지원하는 사용 권한을 확인할 수 있습니다.  
@@ -41,7 +46,7 @@ caps.handback.revision: 14
 |-|  
 |[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; SharePoint 2010 및 SharePoint 2013.|  
   
-## 목록 사용 권한  
+## <a name="list-permissions"></a>목록 사용 권한  
  보고서 서버 항목이 포함된 라이브러리에 설정한 사용 권한에 따라 사용자가 이러한 항목에 액세스하는 방법이 결정됩니다.  
   
 |사용 권한|Description|F|C|V|보고서 서버 작업|  
@@ -58,21 +63,21 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  기타 목록 사용 권한에는 체크 아웃 무시, 항목 승인 및 응용 프로그램 페이지 보기가 있습니다. 이러한 사용 권한은 보고서 서버에서 평가되지 않습니다. 보고서 서버는 이러한 작업을 처리하지 않습니다.  
   
-## 사이트 사용 권한  
+## <a name="site-permissions"></a>사이트 사용 권한  
  사이트 사용 권한에 따라 특정 라이브러리에 저장된 항목과 직접 관련이 없는 보고서 서버 작업에 대한 액세스 권한이 결정됩니다. 예를 들어 여러 라이브러리의 항목에서 사용할 수 있는 공유 일정 만들기 및 관리, 사이트 전체에서 사용될 수 있는 보고서 뷰어 웹 파트 구성 등이 여기에 포함됩니다.  
   
 |사용 권한|Description|F|C|V|보고서 서버 작업|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |사용 권한 관리|웹 사이트의 사용 권한 수준을 만들고 변경하며, 사용자와 그룹에 사용 권한을 할당합니다.|X|||모든 보고서 서버 항목과 작업에 대한 사용 권한을 변경할 수 있습니다. 모델 항목 보안을 설정할 수 있습니다.|  
 |웹 사이트 관리|웹 사이트에 대한 모든 관리 태스크를 수행하고 콘텐츠를 관리합니다.|X|||공유 일정을 만들고 변경 및 삭제합니다.|  
-|페이지 추가 및 사용자 지정|HTML 페이지나 웹 파트 페이지를 추가, 변경 또는 삭제하고 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 호환 편집기를 사용하여 웹 사이트를 편집합니다.|X|||보고서 뷰어 웹 파트를 추가하거나 제거합니다.|  
+|페이지 추가 및 사용자 지정|HTML 페이지나 웹 파트 페이지를 추가, 변경 또는 삭제하고 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)]호환 편집기를 사용하여 웹 사이트를 편집합니다.|X|||보고서 뷰어 웹 파트를 추가하거나 제거합니다.|  
 |사용자 정보 찾아보기|웹 사이트의 사용자 정보를 봅니다.|X|X|X|여러 사이트, 라이브러리, 폴더에서 보고서 및 기타 항목을 찾아봅니다. 라이브러리에 보고서 및 기타 항목을 게시합니다.|  
 |사용 권한 열거|웹 사이트, 목록, 폴더, 문서 또는 목록 항목의 사용 권한을 열거합니다.|X|||모든 보고서 서버 항목에 대한 사용 권한을 읽습니다. 모델 항목 보안 설정이 포함된 보고서 모델을 사용하는 클릭 광고 보고서를 봅니다.|  
 |알림 관리|웹 사이트의 모든 사용자에 대해 알림을 관리합니다.|X|||사이트의 모든 구독을 만들고 변경 및 삭제합니다.|  
 |원격 인터페이스 사용|SOAP, Web DAV 또는 SharePoint Designer 인터페이스를 사용하여 웹 사이트에 액세스합니다.|X|X|X|보고서 서버에 대한 URL 프록시 끝점을 호출하는 데 사용됩니다.|  
 |열기|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   

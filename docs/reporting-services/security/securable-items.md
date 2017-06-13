@@ -1,28 +1,33 @@
 ---
 title: "보안 개체 항목 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보안 개체 항목 [Reporting Services]"
-  - "역할 [Reporting Services], 보안 개체 항목"
-  - "보안 [Reporting Services], 나열된 보안 개체 항목"
-  - "역할 기반 보안 [Reporting Services], 보안 개체 항목"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- securable items [Reporting Services]
+- roles [Reporting Services], securable items
+- security [Reporting Services], securable items listed
+- role-based security [Reporting Services], securable items
 ms.assetid: 27f58d4c-5c7b-4947-af5b-0f1fa60faf5f
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1c11b204b5a48e4324f49e05467cc3ac96e7fa4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보안 개체 항목
+# <a name="securable-items"></a>보안 개체 항목
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 역할 기반 보안을 사용하여 보고서 서버에 저장되어 있는 항목에 대한 액세스를 제어합니다. 사용자에게 보고서 서버 액세스 권한을 부여할 때는 일반적으로 다음과 같이 역할 할당 쌍을 만듭니다.  
   
 -   사이트 수준에서 만들기  
@@ -47,7 +52,7 @@ caps.handback.revision: 45
   
  일정 및 구독과 같은 기타 생성자는 보안이 명시적으로 설정되지 않습니다. 일정과 구독은 보고서의 보안 내에서 작동합니다.  
   
-## 항목 설명  
+## <a name="item-descriptions"></a>항목 설명  
  다음 표에서는 보안 개체 항목을 표시하고 각각의 특징에 대해 설명합니다.  
   
 |항목|특징|  
@@ -59,10 +64,10 @@ caps.handback.revision: 45
 |공유 데이터 원본|공유 데이터 원본의 보안을 설정하여 항목과 해당 속성 페이지에 대한 액세스를 제한할 수 있습니다. 자세한 내용은 [공유 데이터 원본 항목 보안 설정](../../reporting-services/security/secure-shared-data-source-items.md)을 참조하세요.|  
 |공유 데이터 집합|공유 데이터 집합은 해당 공유 데이터 집합의 정의 보기 또는 변경, 속성 변경 등 사용자가 수행할 수 있는 동작의 범위를 제어하여 보안을 설정할 수 있습니다.<br /><br /> 자세한 내용은 [공유 데이터 집합 항목 보안 설정](../../reporting-services/security/secure-shared-dataset-items.md)을 참조하세요.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/create-delete-or-modify-a-role-management-studio.md)   
+ [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/modify-or-delete-a-role-assignment-report-manager.md)  
+ [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)  
   
   

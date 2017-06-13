@@ -1,41 +1,46 @@
 ---
-title: "구독 및 배달(Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "구독 [Reporting Services], 보고서 배포"
-  - "보고서 [Reporting Services], 배포"
-  - "보고서 배포 [Reporting Services]"
-  - "게시된 보고서 [Reporting Services], 배포"
-  - "보고서 보내기"
-  - "보고서 공유"
-  - "보고서 배달 [Reporting Services]"
-  - "보고서 배포 [Reporting Services], 구독"
-  - "구독 [Reporting Services], 구독 정보"
-  - "구독 [Reporting Services]"
+title: "구독 및 배달 (Reporting Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], report distribution
+- reports [Reporting Services], distributing
+- distributing reports [Reporting Services]
+- published reports [Reporting Services], distributing
+- sending reports
+- sharing reports
+- delivering reports [Reporting Services]
+- distributing reports [Reporting Services], subscriptions
+- subscriptions [Reporting Services], about subscriptions
+- subscriptions [Reporting Services]
 ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5ecd364a199f122c98471f112e153d98d2778852
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 구독 및 배달(Reporting Services)
+# <a name="subscriptions-and-delivery-reporting-services"></a>구독 및 배달(Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다.  
   
  단일 보고서에 대해 여러 구독을 만들어 구독 옵션을 다양화할 수 있습니다. 예를 들어 서로 다른 매개 변수 값을 지정하여 세 가지 버전의 보고서(예: 서부 지역 판매 보고서, 동부 지역 판매 보고서, 모든 판매 보고서)를 생성할 수 있습니다.  
   
- ![SSRS 구독 흐름 예제](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "SSRS 구독 흐름 예제")  
+ ![ssrs 구독 흐름 예제](../../reporting-services/subscriptions/media/ssrs-subscription-example-flow.png "ssrs 구독 흐름 예제")  
   
- 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 구독을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+ 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 구독을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 56
   
 -   [Reporting Services 구독 모니터링](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
--   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 ##  <a name="bkmk_subscription_scenarios"></a> 구독 및 배달 시나리오  
  각 구독에 대해 배달 옵션을 구성하고, 사용 가능한 옵션은 선택한 배달 확장 프로그램에 의해 결정됩니다. 배달 확장 프로그램은 여러 방식의 배포를 지원하는 모듈입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 여러 가지 배달 확장 프로그램이 포함되며 배달 확장 프로그램은 타사에서 제공할 수 있습니다.  
@@ -88,7 +93,7 @@ caps.handback.revision: 56
 |데이터 기반 보고서|데이터 기반 구독을 사용하여 런타임에 보고서 출력, 배달 옵션 및 보고서 매개 변수 설정을 사용자 지정합니다. 구독에서는 쿼리를 사용하여 런타임에 데이터 원본의 입력된 값을 가져옵니다. 데이터 기반 구독을 사용하여 구독 처리 시 결정되는 구독자 목록으로 보고서를 보낼 메일 병합 작업을 수행할 수 있습니다.|  
   
 ##  <a name="bkmk_standard_and_datadriven"></a> 표준 및 데이터 기반 구독  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 두 가지 구독인 **표준**과 **데이터 기반** 구독을 지원합니다. 표준 구독은 개별 사용자가 만들어 관리합니다. 표준 구독은 구독 처리 시에 변경되지 않는 정적 값으로 구성됩니다. 각 표준 구독에는 보고서 표시 옵션, 배달 옵션 및 보고서 매개 변수 세트가 하나씩 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 두 가지 구독인 **표준** 과 **데이터 기반**구독을 지원합니다. 표준 구독은 개별 사용자가 만들어 관리합니다. 표준 구독은 구독 처리 시에 변경되지 않는 정적 값으로 구성됩니다. 각 표준 구독에는 보고서 표시 옵션, 배달 옵션 및 보고서 매개 변수 세트가 하나씩 있습니다.  
   
  데이터 기반 구독은 받는 사람, 보고서 매개 변수 또는 응용 프로그램 형식을 지정하는 데 사용되는 값을 제공하는 외부 데이터 원본을 쿼리하여 런타임에 구독 정보를 가져옵니다. 받는 사람 목록이 아주 크거나 받는 사람마다 보고서 출력을 다르게 나타내려는 경우 데이터 기반 구독을 사용할 수 있습니다. 데이터 기반 구독을 사용하려면 쿼리 작성에 대한 전문 지식이 필요하며 매개 변수 사용 방법을 잘 알고 있어야 합니다. 일반적으로 보고서 서버 관리자가 이러한 구독을 만들고 관리합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 56
 |요구 사항|Description|  
 |-----------------|-----------------|  
 |Permissions|보고서에 대한 액세스 권한이 있어야 합니다. 보고서를 구독하려면 보고서를 볼 사용 권한이 있어야 합니다.<br /><br /> 기본 모드 보고서 서버의 경우 다음과 같은 역할 할당은 구독에 영향을 줍니다.<br /><br /> - "개별 구독 관리" 태스크를 사용하면 특정 보고서에 대한 구독을 생성, 수정 및 삭제할 수 있습니다. 미리 정의된 역할에서 이 태스크는 브라우저 및 보고서 작성기 역할의 일부입니다. 사용자는 이 태스크를 포함하는 역할 할당을 사용하여 자신이 만든 구독만 관리할 수 있습니다.<br />- "모든 구독 관리" 태스크를 사용하면 모든 구독을 액세스 및 수정할 수 있습니다. 이 태스크는 데이터 기반 구독을 만드는 데 필요합니다. 미리 정의된 역할에서 내용 관리자 역할에만 이 태스크가 포함됩니다.|  
-|저장된 자격 증명|구독을 만들려면 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 현재 사용자의 가장된 자격 증명이나 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하도록 구성된 보고서는 구독할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.<br /><br /> 사용자에게는 보고서를 보고 개별 구독을 만들 수 있는 권한이 있어야 합니다. 또한 보고서 서버에서**예약된 이벤트 및 보고서 배달** 을 설정해야 합니다. 자세한 내용은 [기존_기본 모드 보고서 서버 구독 만들기 및 관리](http://msdn.microsoft.com/ko-kr/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)를 참조하세요.|  
+|저장된 자격 증명|구독을 만들려면 보고서는 런타임에 데이터를 검색하기 위해 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 말아야 합니다. 현재 사용자의 가장된 자격 증명이나 위임된 자격 증명을 사용하여 외부 데이터 원본에 연결하도록 구성된 보고서는 구독할 수 없습니다. 저장된 자격 증명은 Windows 계정이거나 데이터베이스 사용자 계정일 수 있습니다. 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.<br /><br /> 사용자에게는 보고서를 보고 개별 구독을 만들 수 있는 권한이 있어야 합니다. 또한 보고서 서버에서**예약된 이벤트 및 보고서 배달** 을 설정해야 합니다. 자세한 내용은 [기존_기본 모드 보고서 서버 구독 만들기 및 관리](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)를 참조하세요.|  
 |보고서의 사용자 종속 값|표준 구독의 경우에는 사용자 계정 정보를 필터에 통합하거나 보고서에 표시되는 텍스트로 통합하는 보고서에 대한 구독을 만들 수 있습니다. 보고서에서 사용자 계정 이름은 현재 사용자로 확인되는 **User!UserID** 식을 통해 지정됩니다. 구독을 만들 때 구독을 만드는 사용자는 현재 사용자로 간주됩니다.|  
 |모델 항목 보안 불가|모델에 모델 항목 보안 설정이 포함된 경우 모델을 데이터 원본으로 사용하는 보고서 작성기 보고서를 구독할 수 없습니다. 모델 항목 보안을 사용하는 보고서만 이러한 제한을 받습니다.|  
 |매개 변수 값|보고서에서 매개 변수를 사용하는 경우 보고서 자체 또는 정의된 구독에 매개 변수 값을 지정해야 합니다. 보고서에 기본값이 정의된 경우 기본값을 사용하도록 매개 변수 값을 설정할 수 있습니다.|  
@@ -146,15 +151,15 @@ caps.handback.revision: 56
   
  배달 확장 프로그램은 보고서를 구독에 정의된 형식으로 렌더링한 다음 보고서 또는 알림을 지정된 대상에 배달합니다. 보고서를 배달할 수 없으면 보고서 서버 로그 파일에 해당 항목이 기록됩니다. 다시 시도 작업을 지원하려면 첫 번째 시도가 실패할 경우 배달을 다시 시도하도록 보고서 서버를 구성할 수 있습니다.  
   
-### 표준 구독 처리  
+### <a name="processing-a-standard-subscription"></a>표준 구독 처리  
  표준 구독은 보고서 인스턴스를 1개 생성합니다. 보고서는 단일 공유 폴더 또는 구독에 지정된 전자 메일 주소에 배달됩니다. 보고서 레이아웃 및 데이터는 달라지지 않습니다. 보고서에서 매개 변수를 사용하는 경우 표준 구독은 보고서의 각 매개 변수에 대해 단일 값으로 처리됩니다.  
   
-### 데이터 기반 구독 처리  
+### <a name="processing-a-data-driven-subscription"></a>데이터 기반 구독 처리  
  데이터 기반 구독은 여러 대상에 배달되는 많은 보고서 인스턴스를 만들 수 있습니다. 보고서 레이아웃은 달라지지 않지만 매개 변수 값이 구독자 결과 집합으로부터 전달될 경우 보고서의 데이터가 달라질 수 있습니다. 보고서 렌더링 방법에 영향을 주는 배달 옵션 및 보고서가 전자 메일에 첨부되는지 또는 링크되는지 여부도 행 집합에서 값이 전달될 때 구독자에 따라 달라질 수 있습니다.  
   
  데이터 기반 구독은 여러 개의 배달을 만들 수 있습니다. 보고서 서버는 구독 쿼리로부터 반환되는 행 집합의 각 행에 대해 하나의 배달을 만듭니다.  
   
-### 보고서 배달 특징  
+### <a name="report-delivery-characteristics"></a>보고서 배달 특징  
  표준 구독을 통해 배달되는 보고서는 일반적으로 정적 보고서로 렌더링됩니다. 이러한 보고서는 최신 보고서 실행 스냅숏을 기반으로 하거나 배달 완료를 위한 정적 보고서로 생성됩니다. 요청 시 실행되는 보고서에 대한 구독에서 **링크 포함** 옵션을 선택한 경우 사용자가 하이퍼링크를 클릭하면 보고서 서버에서 보고서를 실행합니다.  
   
 > [!NOTE]  
@@ -162,7 +167,7 @@ caps.handback.revision: 56
   
  데이터 기반 구독을 통해 배달되는 보고서는 구독을 처리하는 동안 다시 생성될 수 있습니다. 보고서 서버는 데이터 기반 구독을 완료하기 위해 보고서의 특정 인스턴스 또는 해당 데이터 집합에서 잠그지 않습니다. 구독에서 구독자마다 다른 매개 변수 값을 사용하는 경우 보고서 서버에서는 보고서를 다시 생성하여 필요한 결과를 만듭니다. 첫 번째 보고서 복사본이 작성되어 배달된 후에 기본으로 사용되는 데이터가 업데이트되면 프로세스의 후반에 보고서를 받은 사용자는 다른 결과 집합에 기반한 데이터를 볼 수 있습니다. 스냅숏으로 실행되는 보고서를 사용하여 모든 구독자에게 동일한 보고서 인스턴스가 배달되는지 확인할 수 있습니다. 그러나 구독이 처리되는 동안 스냅숏에 대해 예약된 업데이트가 발생하는 경우에도 사용자의 보고서에 다른 데이터가 표시될 수 있습니다.  
   
-### 구독 처리 트리거  
+### <a name="triggering-subscription-processing"></a>구독 처리 트리거  
  보고서 서버는 일정에 지정된 시간 기반 이벤트나 스냅숏 업데이트 이벤트를 사용하여 구독 처리를 트리거합니다.  
   
  시간 기반 트리거는 보고서별 일정이나 공유 일정을 사용하여 구독 실행 시기를 지정합니다. 요청 시 실행 보고서 및 캐시된 보고서의 경우 일정이 유일한 트리거 옵션입니다.  
@@ -172,7 +177,7 @@ caps.handback.revision: 56
 ##  <a name="bkmk_code"></a> 구독의 프로그래밍 방식 제어  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체 모델을 사용하면 프로그래밍 방식으로 구독 및 구독 처리를 감사하고 제어할 수 있습니다.  예를 들어 다음을 참조하고 시작하세요.  
   
--   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   PowerShell을 사용하여 구독을 활성화 및 비활성화하는 방법의 예제는 [Disable or Pause Report and Subscription Processing](../../reporting-services/subscriptions/disable-or-pause-report-and-subscription-processing.md)을 참조하세요.  
   
@@ -180,10 +185,11 @@ caps.handback.revision: 56
   
 -   **파일 공유 계정**을 사용하도록 구성된 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구독을 나열하는 예제 PowerShell 스크립트는 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 구독 모니터링](../../reporting-services/subscriptions/monitor-reporting-services-subscriptions.md)  
   
   
+

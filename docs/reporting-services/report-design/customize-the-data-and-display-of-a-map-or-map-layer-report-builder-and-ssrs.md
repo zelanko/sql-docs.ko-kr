@@ -1,36 +1,41 @@
 ---
-title: "지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10521"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.filter.f1"
-  - "10515"
-  - "10512"
-  - "10520"
-  - "sql13.rtp.rptdesigner.shared.font.f1"
-  - "10523"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.general.f1"
-  - "sql13.rtp.rptdesigner.shared.number.f1"
-  - "sql13.rtp.rptdesigner.shared.shadowdv.f1"
-  - "sql13.rtp.rptdesigner.mapgroupproperties.variables.f1"
-  - "10507"
+title: "데이터 및 지도 또는 지도 계층 (보고서 작성기 및 SSRS)의 표시를 사용자 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10521"
+- sql13.rtp.rptdesigner.mapgroupproperties.filter.f1
+- "10515"
+- "10512"
+- "10520"
+- sql13.rtp.rptdesigner.shared.font.f1
+- "10523"
+- sql13.rtp.rptdesigner.mapgroupproperties.general.f1
+- sql13.rtp.rptdesigner.shared.number.f1
+- sql13.rtp.rptdesigner.shared.shadowdv.f1
+- sql13.rtp.rptdesigner.mapgroupproperties.variables.f1
+- "10507"
 ms.assetid: fdd9b994-d138-4990-a291-279b0249eb72
 caps.latest.revision: 13
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9751ad1f640181db57e4107ff1debfa510d3b0e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
+# <a name="customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs"></a>지도 또는 지도 계층의 데이터 및 표시 사용자 지정(보고서 작성기 및 SSRS)
   마법사를 사용하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에 지도나 지도 계층을 추가한 후 보고서에 지도가 표시되는 모양을 변경할 수 있습니다. 다음을 고려하여 개선할 수 있습니다.  
   
 -   사용자가 지도의 데이터 표시를 해석하는 방법을 이해하는 데 도움이 되도록 범례 및 색 눈금을 추가하고 레이블 및 도구 설명을 추가할 수 있습니다.  
@@ -88,7 +93,7 @@ caps.handback.revision: 13
   
 -   해상도 및 단순화. 선 및 다각형의 세부 윤곽선과 그리기 시간 간의 균형을 선택합니다.  
   
- 이러한 옵션을 변경하려면 지도 뷰포트를 마우스 오른쪽 단추로 클릭하고 [지도 뷰포트 속성 대화 상자, 일반](../Topic/Map%20Viewport%20Properties%20Dialog%20Box,%20General.md) 페이지 및 관련 페이지를 사용합니다.  
+ 이러한 옵션을 변경하려면 지도 뷰포트를 마우스 오른쪽 단추로 클릭하고 [지도 뷰포트 속성 대화 상자, 일반](http://msdn.microsoft.com/library/6c9c773e-5c56-4571-95ed-8a157cfdfe52) 페이지 및 관련 페이지를 사용합니다.  
   
 ##  <a name="Legends"></a> 범례의 옵션 변경  
  범례는 사용자가 지도의 데이터를 해석하는 데 도움이 됩니다.  
@@ -99,7 +104,7 @@ caps.handback.revision: 13
   
 -   범례의 내용이나 내용 형식을 변경하려면 계층에 대한 해당 규칙의 범례 옵션을 변경합니다.  
   
- 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="Layer"></a> 계층의 옵션 변경  
  지도의 계층을 표시하려면 지도를 클릭하여 선택합니다. 그러면 지도 창이 나타납니다. 계층의 옵션을 변경하려면 계층을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴를 사용합니다.  
@@ -159,9 +164,9 @@ caps.handback.revision: 13
   
 -   계층의 개별 포함된 점, 선 또는 다각형에 대한 옵션을 무시합니다. 변경하는 내용은 영구적입니다. 이러한 변경 내용을 되돌리려면 계층의 데이터를 다시 로드해야 합니다.  
   
- 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)을 참조하세요.  
+ 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

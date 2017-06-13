@@ -1,23 +1,28 @@
 ---
 title: "보안 (보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7e6f09ff050246777e307f73280c764dd6da3ad7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보안 (보고서 작성기)
+# <a name="security-report-builder"></a>보안 (보고서 작성기)
   보고서 작성기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 작동하도록 디자인된 보고서 제작 클라이언트 응용 프로그램입니다. 보고서 서버는 기본 모드에서 독립 실행형 서버로 작동하거나 SharePoint 사이트의 보고서를 지원하는 SharePoint 통합 모드에서 작동하도록 구성할 수 있습니다.  
   
  보고서 작성기에서는 보고서, 공유 데이터 집합 및 다시 사용 가능한 보고서 파트를 작성할 수 있습니다. 보고서 서버 또는 SharePoint 사이트에서 보고서를 편집하고 공유 데이터 원본, 공유 데이터 집합 및 공유 보고서 파트를 추가할 수 있습니다.  
@@ -45,7 +50,7 @@ caps.handback.revision: 10
   
      보고서 서버에서 항목을 보거나 게시하기 위해 보고서 관련 항목 및 작업에 적용되는 권한 집합이 역할로 구성됩니다. 보고서 서버 관리자는 하나 이상의 역할에 사용자를 할당합니다. 예를 들어 미리 정의된 역할인 브라우저를 통해 보고서, 폴더, 모델 및 리소스를 볼 수 있습니다.  
   
-     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md)를 참조하세요.  
+     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [](../../reporting-services/security/reporting-services-security-and-protection.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
 -   SharePoint 통합 모드에서 구성된 보고서 서버  
   
@@ -55,7 +60,6 @@ caps.handback.revision: 10
   
      SharePoint 사이트나 하위 사이트에 연결할 수 없거나 해당 사이트를 찾을 수 없는 경우 SharePoint 사이트 관리자에게 문의하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="Reports"></a> 게시된 보고서 및 보고서 관련 항목에 대한 보안 이해  
  보고서 및 보고서 관련 항목에 대한 보안은 보고서 서버 관리자가 관리합니다. 보고서 관련 항목에는 자격 증명, 공유 데이터 집합, 매개 변수, 보고서 파트 및 모델을 비롯한 포함된 데이터 원본 및 공유 데이터 원본이 포함됩니다.  
@@ -68,13 +72,13 @@ caps.handback.revision: 10
   
  게시한 항목을 다른 사용자가 찾아 공유할 수 있도록 하려면 보고서 서버 관리자와 작업하여 사용자에게 액세스를 제공하는 폴더 구성을 설정해야 합니다. 보고서를 제작하고 게시된 보고서를 실행하는 데 액세스를 사용할 수 있어야 합니다.  
   
- 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 다음 항목을 참조하세요.  
+ 자세한 내용은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)  
   
 -   [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
   
-### 보고서 파트에 대한 업데이트 알림  
+### <a name="update-notifications-for-report-parts"></a>보고서 파트에 대한 업데이트 알림  
  보고서 파트는 다른 사용자가 공유할 수 있도록 보고서 서버에 게시됩니다. 기본적으로 보고서 파트를 게시할 위치를 지정해야 합니다.  
   
  보고서에 보고서 파트를 포함하고 있는 사용자는 업데이트 기능을 사용할 수 있습니다. 이 기능을 사용하면 보고서 서버에서 보고서 파트가 변경될 경우 사용자가 알림을 받을 수 있습니다.  
@@ -83,7 +87,6 @@ caps.handback.revision: 10
   
  자세한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="Data"></a> 보고서 데이터 및 외부 데이터 원본에 대한 보안 이해  
  보고서의 각 외부 데이터 원본 데이터에 액세스하려면 보고서에 포함된 데이터 원본을 만들거나 공유 데이터 원본 또는 공유 데이터 집합에 대한 참조를 추가해야 합니다.  
@@ -92,36 +95,33 @@ caps.handback.revision: 10
   
  자격 증명은 보고서 정의에 저장되지 않으며 보고서 서버 또는 SharePoint 사이트 및 보고서 제작 클라이언트의 보고서와는 별도로 관리됩니다.  
   
- 보고서 디자인 타임에 자격 증명은 데이터 집합 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 집합 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](../Topic/Specify%20Credentials%20in%20Report%20Builder.md)을 참조하세요.  
+ 보고서 디자인 타임에 자격 증명은 데이터 집합 쿼리를 실행하고 보고서를 미리 보는 데 사용됩니다. 런타임에 자격 증명은 보고서를 실행하고 보고서 결과를 캐시하는 데 사용됩니다. 공유 데이터 집합 쿼리 결과를 별도로 캐시할 수도 있습니다. 디자인 타임 자격 증명과 런타임 자격 증명이 다를 수 있습니다. 자세한 내용은 [보고서 작성기에 자격 증명 지정](http://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)을 참조하세요.  
   
- 데이터에 보안을 설정하는 방법은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 다음 항목을 참조하세요.  
+ 데이터에 보안을 설정하는 방법은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312):  
   
 -   [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 보안 센터](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)을 참조하세요.  
+ 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)을 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="Models"></a> 모델 및 보안 필터 이해  
  외부 데이터를 기반으로 하는 보고서 모델에서 데이터를 검색할 때 모델에 보안 필터를 적용할 수 있습니다. 이것은 보고서를 실행하는 각 사용자가 사용 권한을 가진 데이터만 볼 수 있도록 데이터에 보안을 설정할 수 있는 좋은 방법입니다.  
   
  보고서 매개 변수는 행 수준 보안에는 사용되지 않으며 특정 데이터 행을 사용자나 사용자 그룹이 보지 못하도록 방지하지 않습니다. 보고서에 표시된 데이터에 보안을 적용하려면 보안 필터 또는 모델 항목 보안을 사용해야 합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="Interactive"></a> 대화형 기능을 위한 보고서 제작에 대한 보안 이해  
  보고서에서는 일반적으로 매개 변수를 사용하여 사용자가 보고서 보기를 대화형으로 사용자 지정할 수 있도록 합니다. 다음 팁을 사용하면 좋은 방법으로 보고서를 디자인하는 데 도움이 됩니다.  
   
 -   유효한 값을 제공한 경우에만 쿼리 매개 변수를 기반으로 하는 **텍스트** 형식의 매개 변수를 사용하세요. 사용 가능한 값 목록은 사용자가 유효한 값만 선택하는 데 도움이 됩니다. 사용 가능한 값 목록이 없으면 사용자가 입력할 수 있는 값을 제한할 수 없습니다.  
   
--   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에 있는 [URL 액세스 매개 변수 참조](../../reporting-services/url-access-parameter-reference.md)를 참조하세요.  
+-   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에 있는 [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)을 참조하세요.  
+ 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [](../../reporting-services/security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-## 관련 항목:  
- [보고서 작성기 설치 및 제거](../Topic/Install%20and%20Uninstall%20Report%20Builder.md)   
+## <a name="see-also"></a>관련 항목:  
+ [보고서 작성기 설치 및 제거](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

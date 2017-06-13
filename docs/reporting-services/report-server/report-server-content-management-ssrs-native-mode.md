@@ -1,30 +1,35 @@
 ---
-title: "보고서 서버 콘텐츠 관리(SSRS 기본 모드) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services 관리"
-  - "게시된 보고서 [Reporting Services], 관리"
-  - "보고서 서버 [Reporting Services], 내용 관리"
-  - "내용 관리 [Reporting Services]"
+title: "보고서 서버 내용 관리 (SSRS 기본 모드) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- published reports [Reporting Services], managing
+- report servers [Reporting Services], content management
+- content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
 caps.latest.revision: 50
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 50
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 서버 콘텐츠 관리(SSRS 기본 모드)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 사용할 수 있습니다. 이 문서에서는 보고서 관리자 및 새로운 웹 포털 환경에 대해 설명합니다.  
+# <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서 서버 항목의 관리를 의미합니다. 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다. [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] CTP 3.2부터  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털을 사용할 수 있습니다. 이 문서에서는 보고서 관리자 및 새로운 웹 포털 환경에 대해 설명합니다.  
   
 > [!NOTE]  
 >  내용 관리는 보고서 서버 관리와 다릅니다. 보고서 서버가 실행되는 환경을 관리하는 방법에 대한 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
@@ -61,10 +66,10 @@ caps.handback.revision: 50
   
 |아이콘|이동 가능한 항목|  
 |----------|-------------------|  
-|![보고서 아이콘](../../reporting-services/report-server/media/hlp-16doc.png "보고서 아이콘")|보고서|  
-|![링크된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.png "링크된 보고서 아이콘")|링크된 보고서|  
-|![폴더 아이콘](../../reporting-services/report-server/media/hlp-16folder.png "폴더 아이콘")|Folder|  
-|![일반 리소스 아이콘](../../reporting-services/report-server/media/hlp-16file.png "일반 리소스 아이콘")|일반 리소스|  
+|![보고서 아이콘](../../reporting-services/report-server/media/hlp-16doc.gif "보고서 아이콘")|보고서|  
+|![연결 된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "연결 된 보고서 아이콘")|링크된 보고서|  
+|![폴더 아이콘](../../reporting-services/report-server/media/hlp-16folder.gif "폴더 아이콘")|Folder|  
+|![일반 리소스 아이콘](../../reporting-services/report-server/media/hlp-16file.gif "일반 리소스 아이콘")|일반 리소스|  
 |![공유 데이터 원본 아이콘](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
 ||공유 데이터 집합|  
   
@@ -97,7 +102,7 @@ caps.handback.revision: 50
   
 -   기타 폴더  
   
-### 예약된 폴더  
+### <a name="reserved-folders"></a>예약된 폴더  
  미리 정의된 폴더는 Reporting Services에서 예약된 폴더이며 이동하거나, 이름을 바꾸거나, 삭제할 수 없습니다. 사용자 정의 폴더는 항목을 폴더에 추가할 권한이 있는 최종 사용자나 보고서 서버 관리자가 만드는 모든 폴더입니다.  
   
  다음 표에서는 폴더 계층을 고정시키고 몇 가지 기능을 위한 프레임워크를 제공하는 미리 정의된 폴더에 대해 설명합니다.  
@@ -108,15 +113,15 @@ caps.handback.revision: 50
 |사용자|이 폴더는 내 보고서 기능을 설정하면 나타납니다. 이 폴더는 내 보고서 기능을 사용하는 모든 사용자에 대한 하위 폴더를 포함하며 보고서 서버 관리자만 액세스할 수 있습니다. 각 하위 폴더 이름은 사용자의 이름과 일치합니다.|  
 |내 보고서|각 사용자의 개인 작업 영역을 제공합니다.|  
   
-### 폴더 만들기  
+### <a name="creating-folders"></a>폴더 만들기  
  계층에서 사용 가능한 폴더 내에 폴더를 만들 수 있습니다.  
   
  특정 보고서 및 모델에 대한 액세스를 제한하기 위해 폴더를 만드는 경우 사용자가 찾을 수 있는 역할 할당을 지정해야 하지만 폴더 경로에 있는 부모 폴더의 내용은 볼 수 없습니다.  
   
-### 폴더 속성 수정  
+### <a name="modifying-folder-properties"></a>폴더 속성 수정  
  폴더를 만든 다음에는 속성을 수정하여 폴더의 이름을 변경하거나, 설명을 추가 또는 수정하거나, 다른 위치로 폴더를 이동할 수 있습니다. 이러한 속성은 폴더의 일반 속성 페이지에서 사용할 수 있습니다. 폴더에 대한 액세스를 허용하는 속성을 설정하는 방법에 대한 자세한 내용은 [폴더 보안](../../reporting-services/security/secure-folders.md)을 참조하세요.  
   
-### 폴더 및 폴더 내용 삭제  
+### <a name="deleting-folders-and-folder-contents"></a>폴더 및 폴더 내용 삭제  
  폴더를 삭제하면 폴더에 들어 있는 항목이 모두 삭제됩니다. 폴더를 삭제하기 전에 내용을 검토하여 폴더 계층의 다른 부분에 있는 항목에서 참조하거나 사용하는 항목이 있는지 확인해야 합니다. 참조되는 항목에는 링크된 보고서를 지원하는 보고서 정의, 공유 데이터 원본 및 리소스가 포함됩니다.  
   
  링크된 보고서 한 개 이상에서 참조하는 보고서를 삭제하면 보고서를 삭제한 후 링크된 보고서가 유효하지 않게 됩니다. 보고서에는 이를 기반으로 하는 링크된 보고서에 대한 정보가 없으므로 어떤 링크된 보고서가 영향을 받는지는 미리 확인할 수 없습니다. 그러나 링크된 보고서의 속성을 검토하여 기반이 되는 보고서를 찾아볼 수 있습니다. 반대로 공유 데이터 원본 항목에는 해당 항목을 현재 사용 중인 보고서가 모두 표시되므로 연결 정보가 사용 중인지 여부를 쉽게 확인할 수 있습니다. 자세한 내용은 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요. 마지막으로 보고서에서 사용하는 리소스는 해당 보고서를 식별하지 않습니다.  
@@ -128,7 +133,7 @@ caps.handback.revision: 50
 ##  <a name="bkmk_Resources"></a> 리소스  
  리소스는 보고서 서버에 저장되지만 보고서 서버에서 처리되지는 않는 관리되는 항목입니다. 일반적으로 리소스는 보고서 사용자에게 외부 콘텐츠를 제공합니다. .jpg 파일, 공간 데이터를 포함하는 ESRI 셰이프 파일 또는 보고서에 사용되는 비즈니스 규칙을 설명하는 HTML의 이미지를 예로 들 수 있습니다. JPG, SHP 또는 HTML 파일은 보고서 서버에 저장되지만 보고서 서버는 이러한 파일을 먼저 처리하지 않고 브라우저에 직접 전달합니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md) 및 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)의 “지도에 데이터 추가” 섹션을 참조하세요.  
   
-### 리소스 추가 및 보기  
+### <a name="adding-and-viewing-a-resource"></a>리소스 추가 및 보기  
  보고서 서버에 리소스를 추가하려면 다음과 같이 파일을 업로드하거나 게시합니다.  
   
 |연산|파일 유형|  
@@ -140,10 +145,10 @@ caps.handback.revision: 50
   
  보고서 사용자가 리소스를 볼 수 있는지 여부는 브라우저의 보기 기능에 따라 다릅니다. 리소스는 보고서 서버에서 처리되지 않기 때문에 특정 MIME 형식을 렌더링하기 위한 보기 기능을 브라우저에서 제공해야 합니다. 브라우저에서 콘텐츠를 렌더링할 수 없으면 리소스를 보는 사용자에게 리소스의 일반 속성만 표시됩니다.  
   
-### 리소스 보안 설정 및 관리  
+### <a name="securing-and-managing-a-resource"></a>리소스 보안 설정 및 관리  
  리소스는 보고서, 공유 데이터 원본, 공유 일정 및 폴더와 함께 명명된 항목으로 보고서 서버 폴더 계층 구조에 존재합니다. 보고서 서버에 저장되어 있는 여느 항목과 마찬가지로 리소스를 검색하고 확인하며 보안 및 속성을 설정할 수 있습니다. 리소스를 보거나 관리하려면 역할 할당에 리소스 보기 또는 리소스 관리 태스크가 있어야 합니다.  
   
-### 보고서에서 이미지 리소스 참조  
+### <a name="referencing-an-image-resource-from-a-report"></a>보고서에서 이미지 리소스 참조  
  리소스에는 보고서에서 참조하는 이미지가 포함될 수 있습니다. 보고서 요구 사항에 외부 이미지 사용이 포함된 경우 이미지를 리소스로 저장하면 다음과 같은 이점이 있습니다.  
   
 -   보고서 서버 데이터베이스의 중앙 집중식 저장소. 보고서 서버 데이터베이스와 해당 내용을 다른 컴퓨터로 이동하는 경우 외부 이미지는 보고서와 함께 유지됩니다. 다른 컴퓨터의 디스크에 저장된 이미지 파일을 추적할 필요가 없습니다.  
@@ -169,15 +174,15 @@ caps.handback.revision: 50
   
 |문자|이스케이프 값|예제|  
 |---------------|------------------|-------------|  
-|(공백)|[ ]|*Firstname Lastname*은 *Firstname[ ]Lastname*이 됩니다.|  
-|\(백슬래시)|공백 문자 하나로 바뀝니다.|*DomainName\Username*은 *DomainName Username*이 됩니다.|  
-|@(at 기호)|[at]|*username*@hotmail.com은 *username*[at]hotmail.com이 됩니다.|  
-|& (앰퍼샌드)|[amp]|*username*@*company*&*company.com*은 *username*[at]*company*[amp]*company.com*이 됩니다.|  
-|$(달러 기호)|[dollar]|*User* $*Name*은 *User*[ ][dollar]*Name*이 됩니다.|  
+|(공백)|[ ]|*Firstname Lastname* becomes *Firstname[ ]Lastname*|  
+|\(백슬래시)|공백 문자 하나로 바뀝니다.|*DomainName\Username* becomes *DomainName Username*|  
+|@(at 기호)|[at]|*username*@hotmail.com 은 *username*[at]hotmail.com이 됩니다.|  
+|& (앰퍼샌드)|[amp]|*username*@*company*&*company.com* becomes *username*[at]*company*[amp]*company.com*|  
+|$(달러 기호)|[dollar]|*User* $*Name* becomes *User*[ ][dollar]*Name*|  
   
  내 보고서 기능은 선택적입니다. 보고서 서버를 설치하면 내 보고서는 기본적으로 해제되어 있습니다. 이 기능을 사용하도록 설정하는 방법에 대한 자세한 내용은 [내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)를 참조하세요. 자세한 내용은 [내 보고서 보안 설정](../../reporting-services/security/secure-my-reports.md)을 참조하세요.  
   
-## 태스크  
+## <a name="tasks"></a>태스크  
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
  [폴더 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md)  
@@ -186,7 +191,7 @@ caps.handback.revision: 50
   
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
  [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)   
  [Reporting Services 보고서&#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)  

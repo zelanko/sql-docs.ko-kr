@@ -1,30 +1,35 @@
 ---
-title: "RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "구성 옵션 [Reporting Services]"
-  - "DeviceInfo 설정"
-  - "렌더링 확장 프로그램 [Reporting Services], 동작 무시"
-  - "매개 변수 [Reporting Services], 보고서 렌더링"
-  - "보고서 렌더링 동작 무시"
-  - "확장 프로그램 [Reporting Services], 렌더링"
+title: Customize Rendering Extension Parameters in RSReportServer.Config | Microsoft Docs
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- configuration options [Reporting Services]
+- DeviceInfo settings
+- rendering extensions [Reporting Services], overriding behaviors
+- parameters [Reporting Services], report rendering
+- overriding report rendering behavior
+- extensions [Reporting Services], rendering
 ms.assetid: 3bf7ab2b-70bb-41c8-acda-227994d15aed
 caps.latest.revision: 31
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 31
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009b40c83d662b40b3215f701a2eb490ebc4fed1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
+# <a name="customize-rendering-extension-parameters-in-rsreportserverconfig"></a>RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정
   RSReportServer 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하여 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 보고서의 기본 보고서 렌더링 동작을 재정의할 수 있습니다. 다음과 같은 목적으로 렌더링 확장 프로그램 매개 변수를 수정할 수 있습니다.  
   
 -   보고서 도구 모음의 내보내기 목록에 렌더링 확장 프로그램 이름이 표시되는 방식을 변경하거나(예: "웹 보관 파일"을 "MHTML"로 변경) 이 이름을 기본 언어로 지역화합니다.  
@@ -37,7 +42,7 @@ caps.handback.revision: 31
   
  구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하면 렌더링 확장 프로그램에 전체적으로 영향이 미칩니다. 특정 렌더링 확장 프로그램을 사용하는 경우 구성 파일의 설정이 기본값 대신 사용됩니다. 특정 보고서 또는 렌더링 작업에 대한 렌더링 확장 프로그램 매개 변수를 설정하려면 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 사용하여 프로그래밍 방식으로 또는 보고서 URL에 장치 정보 설정을 지정하여 장치 정보를 지정해야 합니다. 렌더링 작업에 대한 장치 정보 설정을 지정하고 전체 장치 정보 설정 목록을 보는 방법에 대한 자세한 내용은 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
-## RSReportServer.config 찾기 및 수정  
+## <a name="finding-and-modifying-rsreportserverconfig"></a>RSReportServer.config 찾기 및 수정  
  보고서 출력 형식에 대한 구성 설정은 RSReportServer.config 파일에서 렌더링 확장 프로그램 매개 변수로 지정됩니다. 구성 파일에서 렌더링 확장 프로그램 매개 변수를 지정하려면 렌더링 매개 변수를 설정하는 XML 구조의 정의 방법을 알고 있어야 합니다. 다음 두 가지 XML 구조를 수정할 수 있습니다.  
   
 -   **OverrideNames** 요소는 렌더링 확장 프로그램의 표시 이름과 언어를 정의합니다.  
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
  이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정하는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
-## 표시 이름 변경  
+## <a name="changing-the-display-name"></a>표시 이름 변경  
  렌더링 확장 프로그램의 표시 이름은 보고서 도구 모음의 내보내기 목록에 나타납니다. 기본 표시 이름의 예로는 웹 보관 파일, TIFF 파일 및 Acrobat(PDF) 파일이 있습니다. 구성 파일에서 **OverrideNames** 요소를 지정하여 기본 표시 이름을 사용자 지정 값으로 바꿀 수 있습니다. 또한 단일 렌더링 확장 프로그램의 인스턴스를 두 개 정의하는 경우 **OverrideNames** 요소를 사용하여 내보내기 목록의 각 인스턴스를 구별할 수 있습니다.  
   
  표시 이름은 지역화되므로 기본 표시 이름을 사용자 지정 값으로 바꿀 경우 **Language** 특성을 설정해야 합니다. 그렇지 않으면 사용자가 지정한 이름이 모두 무시됩니다. 설정하는 언어 값은 보고서 서버 컴퓨터에 유효한 값이어야 합니다. 예를 들어 보고서 서버가 프랑스어 운영 체제에서 실행되고 있으면 "fr-FR"을 특성 값으로 지정해야 합니다.  
@@ -61,7 +66,7 @@ caps.handback.revision: 31
 </Extension>  
 ```  
   
-## 장치 정보 설정 변경  
+## <a name="changing-device-information-settings"></a>장치 정보 설정 변경  
  보고서 서버에 이미 배포된 렌더링 확장 프로그램에서 사용하는 기본 장치 정보 설정을 수정하려면 **DeviceInfo** XML 구조를 구성 파일에 입력해야 합니다. 각 렌더링 확장 프로그램은 해당 확장 프로그램에 고유한 장치 정보 설정을 지원합니다. 장치 정보 설정의 전체 목록을 보려면 [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
  다음 예에서는 이미지 렌더링 확장 프로그램의 기본 설정을 수정하는 XML 구조와 구문을 보여 줍니다.  
@@ -84,7 +89,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## 렌더링 확장 프로그램에 대해 여러 개의 항목 구성  
+## <a name="configuring-multiple-entries-for-a-rendering-extension"></a>렌더링 확장 프로그램에 대해 여러 개의 항목 구성  
  같은 렌더링 확장 프로그램의 인스턴스를 여러 개 만들어 각기 다른 보고서 표시 옵션을 지원할 수 있습니다. 정의한 인스턴스마다 여러 매개 변수 값 조합을 가질 수 있습니다. 기존 렌더링 확장 프로그램의 새 인스턴스를 정의할 때는 다음을 수행해야 합니다.  
   
 -   확장 프로그램에 고유 이름을 지정합니다.  
@@ -128,7 +133,7 @@ caps.handback.revision: 31
 </Render>  
 ```  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [RsReportServer.config 구성 파일](../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [RSReportDesigner 구성 파일](../reporting-services/report-server/rsreportdesigner-configuration-file.md)   
  [CSV 장치 정보 설정](../reporting-services/csv-device-information-settings.md)   

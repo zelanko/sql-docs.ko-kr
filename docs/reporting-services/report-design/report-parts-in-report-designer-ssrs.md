@@ -1,33 +1,40 @@
 ---
-title: "보고서 디자이너의 보고서 파트(SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.components.f1"
+title: "보고서 파트 (SSRS) 보고서 디자이너에서 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 디자이너의 보고서 파트(SSRS)
-  보고서 디자이너에서 프로젝트에 테이블, 차트 및 페이지가 매겨진 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트*로 게시할 수 있습니다.  
+
+# <a name="report-parts-in-report-designer-ssrs"></a>보고서 디자이너의 보고서 파트(SSRS)
+
+  보고서 디자이너에서 프로젝트에 테이블, 차트 및 페이지가 매겨진 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트* 로 게시할 수 있습니다.  
   
  일반적으로 보고서 파트는 보고서 디자이너와 보고서 작성기에서 같은 방식으로 작동합니다. 기본 기능에 대한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
  그러나 보고서 디자이너에서 보고서 파트가 작동하는 방식에는 기본적인 차이점이 있습니다. 가장 큰 차이는 작업 흐름입니다. 보고서 작성기에서는 공동 작성이 가능합니다. 보고서 파트를 만들고 게시합니다. 다시 사용, 수정 및 다시 게시할 수 있습니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시하면 다른 사람이 다시 사용할 수 있습니다. 하지만 보고서 디자이너에서 보고서를 기존 보고서 파트를 다시 사용할 수는 없습니다. 이 항목에서는 보고서 파트에 대해 간략하게 설명한 후 이러한 차이점에 대해 중점적으로 설명합니다.  
   
 ##  <a name="ComponentWorkflow"></a> 보고서 파트 게시 수명 주기  
- ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.png "rs_ComponentCreation")  
+ ![rs_ComponentCreation](../../reporting-services/report-design/media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  보고서 디자이너에서 A라는 사람이 보고서가 포함된 프로젝트를 만듭니다. 이 보고서에는 포함된 데이터 집합을 사용하는 차트가 들어 있습니다.  
   
@@ -35,7 +42,7 @@ caps.handback.revision: 11
   
 3.  B라는 사람이 보고서 작성기에서 빈 보고서를 만들어 이 차트를 추가합니다. 그러면 이 차트는 포함된 데이터 집합과 함께 B가 만든 보고서의 파트가 됩니다. B는 보고서에 있는 차트 및 데이터 집합의 인스턴스를 수정할 수 있습니다. 수정 작업을 수행해도 보고서 서버의 차트 및 데이터 집합 인스턴스에는 아무런 영향이 없으며, 보고서의 인스턴스와 보고서 서버의 인스턴스 간 관계도 제거되지 않습니다.  
   
-     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.png "rs_BIDScomponentupdate")  
+     ![rs_BIDScomponentupdate](../../reporting-services/report-design/media/rs-bidscomponentupdate.gif "rs_BIDScomponentupdate")  
   
 4.  A가 보고서 디자이너에서 원본 보고서의 차트를 수정합니다.  
   
@@ -74,9 +81,8 @@ caps.handback.revision: 11
   
 2.  보고서를 배포합니다.  
   
- 보고서를 배포하면 보고서 파트가 SharePoint 사이트 또는 보고서 서버에 게시되어 다른 사람이 보고서 파트를 다시 사용할 수 있게 됩니다. 보고서 파트를 게시하려면 보고서를 배포할 때 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버에 연결되어 있어야 하며 보고서 서버에 대한 권한이 있어야 합니다.  
+ 보고서를 배포하면 보고서 파트가 SharePoint 사이트 또는 보고서 서버에 게시되어 다른 사람이 보고서 파트를 다시 사용할 수 있게 됩니다. 보고서 파트를 게시 하려면 있어야 연결 하 여 충분 한 권한이 보고서 서버에 보고서를 배포 합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="SearchReuseComponents"></a> 보고서 파트 다시 사용  
  보고서 작성기에서와는 달리 보고서 파트를 만든 프로젝트 외의 다른 프로젝트에서는 보고서 파트를 검색하고 다시 사용할 수 없습니다.  
@@ -89,10 +95,9 @@ caps.handback.revision: 11
  보고서 파트를 수정한 다음 사이트 또는 서버로 다시 게시할 수 있습니다. 보고서 작성기를 사용하여 해당 보고서 파트를 보고서에 추가한 보고서 작성자가 다음 번에 해당 보고서를 열면 변경 내용 알림이 표시됩니다. 그러면 변경 내용 허용 여부를 선택할 수 있습니다.  
   
  또한 이미 게시한 보고서를 새로 게시하도록 선택할 수도 있습니다. 보고서 파트 게시 대화 상자에서 "새 보고서 파트로 게시"를 클릭합니다. 이 새 보고서 파트는 이전 보고서 파트와 관계가 없으며 새로운 고유 ID가 할당됩니다.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
-## 관련 항목:  
- [보고서 파트 관리](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+
+## <a name="next-steps"></a>다음 단계
+
+[보고서 파트 관리](../../reporting-services/report-design/managing-report-parts.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

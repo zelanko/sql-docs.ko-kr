@@ -20,10 +20,10 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 229b4aac242bc8be7e2058bad708f0bdee604796
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: c4f53b76e5f01a639cb15f95f28a8d7118178783
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="sql-server-resources"></a>SQL Server 리소스
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/11/2017
   
  SQL Server의 새로운 기능에 대해 알아보기
  - [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
- - [SQL Server vNext의 새로운 기능](../sql-server/what-s-new-in-sql-server-vnext.md)  
+ - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)  
   
  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 은 실시간 운영 분석, 모바일 장치에서 사용할 수 있는 다양한 시각화 기능, 기본 제공 고급 분석 기능, 새로운 고급 보안 기술 및 새로운 하이브리드 클라우드 시나리오가 포함된 Microsoft 데이터 플랫폼 사상 최고의 제품입니다. 향상된 메모리 내 성능, Microsoft Azure로 OLTP 데이터 스트레치, 관계형/비관계형 데이터의 간편한 관리 등의 기타 이점도 다수 제공됩니다.  
   

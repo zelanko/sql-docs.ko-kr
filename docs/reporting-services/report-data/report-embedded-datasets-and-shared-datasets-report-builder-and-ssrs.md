@@ -1,25 +1,30 @@
 ---
-title: "보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10420"
+title: "보고서 포함 된 데이터 집합 및 공유 데이터 집합 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10420"
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2217e42cf49783db62169ee6d2634d929561ec4c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
+# <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>보고서 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
   데이터 집합은 데이터 연결에서 사용할 데이터를 지정합니다. 데이터 집합은 포함된 데이터 원본 또는 보고서 서버의 공유 데이터 원본에 대한 참조로 보고서에 저장된 데이터 연결을 기반으로 합니다. 데이터 집합은 필드 집합을 지정하는 쿼리를 포함합니다. 이러한 필드를 디자인 화면으로 끌면 보고서를 실행할 때 실제 데이터를 계산하는 식이 만들어집니다.  
   
  데이터 집합에는  
@@ -56,12 +61,12 @@ caps.handback.revision: 16
 ##  <a name="Overview"></a> 보고서 데이터 집합 및 쿼리 이해  
  보고서 데이터 집합에는 외부 데이터 원본에 대해 실행되며 검색할 데이터를 지정하는 쿼리 명령이 들어 있습니다. 쿼리 명령을 작성하려면 외부 데이터 원본용 데이터 확장 프로그램에 연결된 쿼리 디자이너를 사용합니다. 쿼리 디자이너에서 쿼리 명령을 실행하고 결과 집합을 확인할 수 있습니다. 결과 집합은 열 이름이 있으며 각 행에 같은 수의 값이 포함된 사각형 행 집합입니다. *비정형 계층*이라고도 하는 계층적 데이터는 지원되지 않습니다. 열 이름은 데이터 집합 필드 목록으로 보고서 정의에 저장됩니다.  
   
- 보고서에 데이터 집합을 추가하고 나서 보고서 데이터 창의 필드 컬렉션에 있는 필드를 끌어 보고서 레이아웃을 디자인하는 데 사용하는 테이블,  차트 및 기타 보고서 항목에 놓을 수 있습니다. 필드 작업에 대한 자세한 내용은 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
+ 보고서에 데이터 집합을 추가하고 나서 보고서 데이터 창의 필드 컬렉션에 있는 필드를 끌어 보고서 레이아웃을 디자인하는 데 사용하는 테이블,  차트 및 기타 보고서 항목에 놓을 수 있습니다. 필드 작업에 대한 자세한 내용은 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)를 참조하세요.  
   
-### 보고서 데이터 집합의 데이터 이해  
+### <a name="understanding-data-from-a-report-dataset"></a>보고서 데이터 집합의 데이터 이해  
  데이터 확장 프로그램에 따라 보고서 데이터 집합은 다음 데이터 형식으로 구성될 수 있습니다.  
   
--   데이터베이스 명령, 저장 프로시저 또는 사용자 정의 함수를 실행한 결과로 얻어지는 관계형 데이터베이스의 결과 집합. 단일 쿼리를 통해 여러 결과 집합이 검색된 경우 최초의 결과 집합만 처리되며 다른 모든 결과 집합은 무시됩니다. 예를 들어 텍스트 기반 쿼리 디자이너에서 다음 쿼리를 실행하면 `Production.Product`에 대한 결과 집합만 결과 창에 나타납니다.  
+-   데이터베이스 명령, 저장 프로시저 또는 사용자 정의 함수를 실행한 결과로 얻어지는 관계형 데이터베이스의 결과 집합. 단일 쿼리를 통해 여러 결과 집합이 검색된 경우 최초의 결과 집합만 처리되며 다른 모든 결과 집합은 무시됩니다. 예를 들어 텍스트 기반 쿼리 디자이너에서 다음 쿼리를 실행하면 `Production.Product` 에 대한 결과 집합만 결과 창에 나타납니다.  
   
     ```  
     SELECT ProductID FROM Production.Product  
@@ -79,9 +84,9 @@ caps.handback.revision: 16
   
  런타임에 보고서가 처리되면 쿼리에 대해 반환된 실제 결과 집합에는 0개 이상의 행이 있을 수 있습니다. 또한 데이터 원본에 쿼리에서 정의한 열이 없을 수도 있습니다. 데이터 원본의 Null 값은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 값 **System.DBNull.Value**로 매핑됩니다.  
   
- 데이터 집합 필드에 대한 자세한 내용은 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
+ 데이터 집합 필드에 대한 자세한 내용은 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)를 참조하세요.  
   
-### 데이터 집합 쿼리  
+### <a name="dataset-query"></a>데이터 집합 쿼리  
  디자인 타임에 쿼리 디자이너에서 데이터 집합 쿼리를 실행하면 예제 데이터를 보여 주는 데이터 원본의 행 집합이 표시됩니다. 런타임에는 데이터 원본의 데이터가 변경되었으므로 사용자가 보고서를 볼 때 데이터 집합 쿼리에서 다른 값이 생성될 수 있습니다. 보고서가 처리될 때마다 새 데이터가 나타날 수 있습니다.  
   
  각 데이터 집합을 정의할 때 보고서 작성기는 쿼리를 쉽게 디자인할 수 있도록 데이터 원본 유형에 해당하는 쿼리 디자이너를 엽니다. 예를 들어 SQL Server 관계형 데이터베이스의 데이터에 대해 쿼리를 정의하려는 경우 테이블/행렬, 차트 및 지도 마법사가 쿼리를 쉽게 빌드할 수 있도록 하는 간단한 그래픽 인터페이스를 열기 때문에 사용자는 데이터 집합에 사용할 필드만 선택하면 됩니다.  
@@ -106,9 +111,9 @@ caps.handback.revision: 16
   
 -   데이터베이스 필드를 기반으로 새 사용자 지정 필드를 만들고 사용자 지정 형식을 제공합니다.  
   
- 자세한 내용은 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)를 참조하세요.  
   
-### 데이터 집합에 대한 기존 쿼리 가져오기  
+### <a name="importing-existing-queries-for-a-dataset"></a>데이터 집합에 대한 기존 쿼리 가져오기  
  데이터 집합을 만드는 경우 새로운 쿼리를 만들거나 파일 또는 다른 보고서에서 기존 쿼리를 가져올 수 있습니다. 다른 보고서에서 쿼리를 가져오는 경우 보고서의 데이터 집합 목록에서 가져올 쿼리를 선택할 수 있습니다.  
   
  .sql  및 .rdl  파일 유형만 지원됩니다. MDX(Multidimensional  Expression)  쿼리,  DMX(데이터 마이닝 예측)  쿼리 및 모델 쿼리(SMQL)는 연결된 쿼리 디자이너에서만 생성할 수 있습니다.  
@@ -126,11 +131,11 @@ caps.handback.revision: 16
   
 |Description|포함된<br /><br /> 데이터 원본|Shared<br /><br /> 데이터 원본|  
 |-----------------|------------------------------|----------------------------|  
-|데이터 연결이 보고서 정의에 포함되어 있습니다.|![사용 가능](../../reporting-services/report-data/media/greencheck.png "사용 가능")||  
-|보고서 서버의 데이터 연결에 대한 포인터가 보고서 정의에 포함되어 있습니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.png "사용 가능")|  
-|보고서 서버에서 관리됩니다.|![사용 가능](../../reporting-services/report-data/media/greencheck.png "사용 가능")|![사용 가능](../../reporting-services/report-data/media/greencheck.png "사용 가능")|  
-|공유 데이터 집합에 필요합니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.png "사용 가능")|  
-|구성 요소에 필요합니다.||![사용 가능](../../reporting-services/report-data/media/greencheck.png "사용 가능")|  
+|데이터 연결이 보고서 정의에 포함되어 있습니다.|![사용 가능한](../../reporting-services/report-data/media/greencheck.gif "사용할 수")||  
+|보고서 서버의 데이터 연결에 대한 포인터가 보고서 정의에 포함되어 있습니다.||![사용 가능한](../../reporting-services/report-data/media/greencheck.gif "사용할 수")|  
+|보고서 서버에서 관리됩니다.|![사용 가능한](../../reporting-services/report-data/media/greencheck.gif "사용할 수")|![사용 가능한](../../reporting-services/report-data/media/greencheck.gif "사용할 수")|  
+|공유 데이터 집합에 필요합니다.||![사용 가능한](../../reporting-services/report-data/media/greencheck.gif "사용할 수")|  
+|구성 요소에 필요합니다.||![사용 가능한](../../reporting-services/report-data/media/greencheck.gif "사용할 수")|  
   
  보고서 디자이너에서는 보고서 프로젝트의 일부로 공유 데이터 집합을 만들고 이를 보고서 서버에 배포할지 여부를 제어할 수 있습니다. 보고서 서버를 찾을 수 없으며 공유 데이터 집합을 선택하여 보고서에 추가할 수 없습니다.  
   
@@ -158,25 +163,25 @@ caps.handback.revision: 16
   
  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
   
-### 데이터 집합에서 데이터 필터링  
+### <a name="filtering-data-in-a-dataset"></a>데이터 집합에서 데이터 필터링  
  필터는 보고서에서 데이터 정의의 일부입니다. 데이터 집합 필터를 사용해 데이터 집합에서 보고서에 포함할 데이터를 지정합니다. 데이터 집합에 대해 필터를 지정하면 해당 데이터 집합을 기반으로 하는 모든 데이터 영역에 데이터 집합 필터로 걸러진 데이터만 표시됩니다.  
   
  필터는 공유 데이터 집합 정의의 일부입니다. 공유 데이터 집합 필터는 공유 데이터 집합이 포함된 모든 보고서에 적용됩니다. 공유 데이터 집합을 보고서에 추가한 후에 또는 종속 공유 데이터 집합이 있는 구성 요소를 추가한 후에 데이터 집합 필터를 추가로 더 수 있습니다. 사용자가 만드는 필터는 자신의 보고서에만 사용되며 보고서 서버에 있는 공유 데이터 집합 정의에는 포함되지 않습니다.  
   
  데이터 영역 또는 데이터 영역 그룹에 대한 필터를 더 설정할 수 있습니다. 또한 사용자가 보고서에 표시할 데이터를 선택할 수 있도록 매개 변수 및 필터 조합을 사용할 수도 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
-### 데이터 집합에서 데이터 정렬  
+### <a name="sorting-data-in-a-dataset"></a>데이터 집합에서 데이터 정렬  
  데이터 집합에서 데이터의 순서는 외부 데이터 원본에서 검색되는 순서입니다. 이 순서는 쿼리 디자이너에서 쿼리를 실행할 때 표시되는 순서와도 같습니다. 쿼리 명령 구문에서 정렬을 지원하는 경우 쿼리를 편집하여 데이터가 보고서 데이터로 반환되기 전에 원본에서 데이터를 정렬할 수 있습니다. 예를 들어 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 경우 ORDER  BY  문이 정렬 순서를 제어합니다.  
   
  데이터가 보고서로 반환된 후에 정렬하려면 데이터 영역 및 데이터 영역 그룹에 대해 정렬 식을 정의합니다. 자세한 내용은 특정 데이터 영역 유형에 대한 항목(예: [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md))을 참조하세요.  
   
  또한 사용자가 보고서의 데이터 정렬 순서를 선택할 수 있도록 매개 변수 및 정렬 식 조합을 사용할 수도 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
-### 데이터 집합의 데이터 그룹화  
- 데이터 집합의 데이터는 그룹화할 수 없습니다. 데이터 집합의 데이터를 집계하려면 데이터가 보고서에 대해 반환되기 전에 집계를 계산하도록 쿼리 명령을 편집할 수 있습니다. 이를 *서버 집계*라고 합니다. 식에서 이러한 값을 미리 계산된 집계로 식별하려면 Aggregate  함수를 사용합니다. 자세한 내용은 [집계 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/aggregate-function-report-builder-and-ssrs.md)를 참조하세요.  
+### <a name="grouping-data-in-a-dataset"></a>데이터 집합의 데이터 그룹화  
+ 데이터 집합의 데이터는 그룹화할 수 없습니다. 데이터 집합의 데이터를 집계하려면 데이터가 보고서에 대해 반환되기 전에 집계를 계산하도록 쿼리 명령을 편집할 수 있습니다. 이를 *서버 집계*라고 합니다. 식에서 이러한 값을 미리 계산된 집계로 식별하려면 Aggregate  함수를 사용합니다. 자세한 내용은 [집계 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)를 참조하세요.  
   
 ##  <a name="Parameters"></a> 매개 변수 및 데이터 집합 사용  
- 쿼리 변수가 들어 있는 포함된 데이터 집합 쿼리의 경우 쿼리 매개 변수 및 그에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 보고서를 실행하면 보고서 매개 변수의 값이 데이터 집합 쿼리 매개 변수에 연결됩니다. 이러한 방식으로 외부 데이터 원본에 대해 실행되는 쿼리 명령은 보고서 매개 변수에 대해 지정되는 값을 포함합니다. 보고서 매개 변수를 사용하면 보고서에 표시할 데이터를 선택할 수 있습니다. 쿼리 매개 변수와 보고서 매개 변수를 연결하는 방법은 [데이터 집합 속성 대화 상자, 매개 변수&#40;보고서 작성기&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) 페이지에 나와 있습니다.  
+ 쿼리 변수가 들어 있는 포함된 데이터 집합 쿼리의 경우 쿼리 매개 변수 및 그에 해당하는 보고서 매개 변수가 자동으로 만들어집니다. 보고서를 실행하면 보고서 매개 변수의 값이 데이터 집합 쿼리 매개 변수에 연결됩니다. 이러한 방식으로 외부 데이터 원본에 대해 실행되는 쿼리 명령은 보고서 매개 변수에 대해 지정되는 값을 포함합니다. 보고서 매개 변수를 사용하면 보고서에 표시할 데이터를 선택할 수 있습니다. 쿼리 매개 변수와 보고서 매개 변수를 연결하는 방법은 [데이터 집합 속성 대화 상자, 매개 변수&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 페이지에 나와 있습니다.  
   
  공유 데이터 집합의 경우 쿼리 매개 변수는 보고서 서버에서 보고서와 독립적으로 관리할 수 있는 공유 데이터 집합 정의의 일부분입니다. 다음 목록에서는 쿼리 매개 변수 값 지원에 대해 설명합니다.  
   
@@ -188,17 +193,17 @@ caps.handback.revision: 16
   
 -   보고서 매개 변수를 나타내는 기본 제공 컬렉션 매개 변수에 대한 참조는 포함할 수 없습니다.  
   
- 공유 데이터 집합에 대한 쿼리 매개 변수 값을 구성하려면 디자인 모드에서 보고서 서버의 공유 데이터 집합을 찾아 열고 [데이터 집합 속성 대화 상자, 매개 변수&#40;보고서 작성기&#41;](../Topic/Dataset%20Properties%20Dialog%20Box,%20Parameters%20\(Report%20Builder\).md) 페이지에서 옵션을 설정합니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요.  
+ 공유 데이터 집합에 대한 쿼리 매개 변수 값을 구성하려면 디자인 모드에서 보고서 서버의 공유 데이터 집합을 찾아 열고 [데이터 집합 속성 대화 상자, 매개 변수&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda) 페이지에서 옵션을 설정합니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]같은 다차원 데이터 원본의 경우에는 그래픽 쿼리 디자이너를 사용하면 쿼리 필터를 지정하고 해당하는 쿼리 매개 변수를 만드는 옵션을 선택할 수 있습니다. 매개 변수 옵션을 선택하면 데이터 확장 프로그램이 별도의 보고서 데이터 집합을 자동으로 만들어 해당 매개 변수의 드롭다운 목록에 사용 가능한 값을 제공합니다. 기본적으로 이러한 숨겨진 데이터 집합은 보고서 데이터 창에 나타나지 않습니다.  
   
  쿼리 매개 변수에 연결된 보고서 매개 변수를 사용하면 데이터가 외부 데이터 원본에서 반환되기 전에 데이터를 필터링할 수 있습니다. 또한 보고서 정의의 일부분인 필터를 만들어 보고서에서 데이터를 필터링할 수도 있습니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
   
-### 숨겨진 데이터 집합 표시  
- 일부 다차원 데이터 원본에 대해 매개 변수가 있는 쿼리를 작성할 때 해당 매개 변수에 대해 올바른 값을 제공하는 데이터 집합이 자동으로 만들어집니다. 일부 쿼리 디자이너에서는 필터를 지정한 다음 매개 변수 만들기 옵션을 선택하여 이 작업을 수행합니다. 기본적으로 이러한 데이터 집합은 보고서 데이터 창에 나타나지 않지만 표시할 수는 있습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show hidden datasets for parameter values - multidimensional data.md)를 참조하세요.  
+### <a name="displaying-hidden-datasets"></a>숨겨진 데이터 집합 표시  
+ 일부 다차원 데이터 원본에 대해 매개 변수가 있는 쿼리를 작성할 때 해당 매개 변수에 대해 올바른 값을 제공하는 데이터 집합이 자동으로 만들어집니다. 일부 쿼리 디자이너에서는 필터를 지정한 다음 매개 변수 만들기 옵션을 선택하여 이 작업을 수행합니다. 기본적으로 이러한 데이터 집합은 보고서 데이터 창에 나타나지 않지만 표시할 수는 있습니다. 자세한 내용은 [다차원 데이터의 매개 변수 값에 대해 숨겨진 데이터 집합 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/show-hidden-datasets-for-parameter-values-multidimensional-data.md)를 참조하세요.  
   
 ##  <a name="Maps"></a> 지도 및 데이터 집합 사용  
- 보고서에 지도를 포함하는 경우에는 공간 데이터를 제공해야 합니다. 공간 데이터는 보고서 데이터 집합,  지도 갤러리의 지도 또는 ESRI  셰이프 파일에서 가져올 수 있습니다. 보고서 또는 ESRI  셰이프 파일에서 가져온 공간 데이터는 보고서 데이터 창에 데이터 집합으로 표시되지 않습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서에 지도를 포함하는 경우에는 공간 데이터를 제공해야 합니다. 공간 데이터는 보고서 데이터 집합,  지도 갤러리의 지도 또는 ESRI  셰이프 파일에서 가져올 수 있습니다. 보고서 또는 ESRI  셰이프 파일에서 가져온 공간 데이터는 보고서 데이터 창에 데이터 집합으로 표시되지 않습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다.  
   
 ##  <a name="Multiple"></a> 여러 데이터 집합의 데이터 표시  
  보고서에는 일반적으로 두 개 이상의 데이터 집합이 포함되어 있습니다. 다음 목록에서는 보고서에서 데이터 집합을 사용하는 방법을 설명합니다.  
@@ -209,9 +214,9 @@ caps.handback.revision: 16
   
 -   데이터 집합을 사용하여 사용 가능한 값이나 보고서 매개 변수 기본값에 대한 드롭다운 목록을 제공할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
--   드릴스루 보고서 또는 하위 보고서의 매개 변수를 사용하면 여러 데이터 집합의 관련 데이터를 연결할 수 있습니다. 예를 들어 판매 보고서에는 모든 상점에 대한 요약 데이터가 표시되고 드릴스루 링크는 지정된 상점의 개별 판매량을 검색하는 데이터 집합 쿼리를 사용하여 상점 식별자를 보고서의 매개 변수로 지정할 수 있습니다. 자세한 내용은 [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough, drilldown, subreports, and nested data regions.md) 및 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
+-   드릴스루 보고서 또는 하위 보고서의 매개 변수를 사용하면 여러 데이터 집합의 관련 데이터를 연결할 수 있습니다. 예를 들어 판매 보고서에는 모든 상점에 대한 요약 데이터가 표시되고 드릴스루 링크는 지정된 상점의 개별 판매량을 검색하는 데이터 집합 쿼리를 사용하여 상점 식별자를 보고서의 매개 변수로 지정할 수 있습니다. 자세한 내용은 [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md) 및 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
   
--   여러 데이터 집합의 정보 데이터를 단일 데이터 영역에 표시할 수 없습니다. 그러나 여러 데이터 집합에 대한 집계 또는 기본 제공 함수 값은 데이터 영역 내에 표시할 수 있습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md)를 참조하세요. 여러 데이터 집합의 정보 데이터를 하나의 데이터 영역에 결합해야 하는 경우 데이터를 단일 데이터 집합으로 검색하도록 쿼리를 다시 작성해야 합니다.  
+-   여러 데이터 집합의 정보 데이터를 단일 데이터 영역에 표시할 수 없습니다. 그러나 여러 데이터 집합에 대한 집계 또는 기본 제공 함수 값은 데이터 영역 내에 표시할 수 있습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요. 여러 데이터 집합의 정보 데이터를 하나의 데이터 영역에 결합해야 하는 경우 데이터를 단일 데이터 집합으로 검색하도록 쿼리를 다시 작성해야 합니다.  
   
 ##  <a name="NoRows"></a> 데이터 행을 사용할 수 없을 때 메시지 표시  
  보고서를 처리하는 동안 데이터 집합에 대한 쿼리를 실행하면 결과 집합에 행이 없을 수 있습니다. 렌더링된 보고서에서 빈 데이터 집합에 연결된 데이터 영역은 빈 데이터 영역으로 표시됩니다. 렌더링된 보고서에서 빈 데이터 영역을 표시하는 대신 텍스트를 지정하여 표시할 수 있습니다. 모든 데이터 집합에 대한 쿼리에서 런타임에 생성된 데이터가 없는 경우 하위 보고서에 사용할 메시지도 지정할 수 있습니다. 자세한 내용은 [데이터 영역에 대한 데이터 없음 메시지 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)을 참조하세요.  
@@ -219,9 +224,9 @@ caps.handback.revision: 16
 ##  <a name="Options"></a> 데이터 집합 옵션 설정  
  국가별 데이터를 지원하는 데이터 원본의 경우 정렬 순서,  국가별 문자 속성 및 대/소문자 구분에 영향을 주는 데이터 집합의 속성을 조정해야 할 수 있습니다. 이러한 속성에는 대/소문자,  일본어 가나,  전자,  악센트,  데이터 정렬 등이 있습니다. 자세한 내용은 [SQL  Server  온라인 설명서](http://go.microsoft.com/fwlink/?linkid=98335)의 "데이터베이스 및 데이터베이스 엔진 응용 프로그램에 대한 국가별 고려 사항"  및 "데이터 정렬 작업"을 참조하십시오. 이러한 속성을 설정하는 방법은 [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

@@ -1,2 +1,2 @@
-<Token>**이 항목은 다음에 적용됩니다.**![예](media/yes.png)SQL Server Windows(vNext부터 시작) ![예](media/yes.png)SQL Server Linux![아니요](media/no.png)Azure SQL Database![아니요](media/no.png)Azure SQL Data Warehouse ![아니요](media/no.png)병렬 데이터 웨어하우스 </Token>
+<Token>**이 항목 적용 대상:**![예](media/yes.png)SQL Server Windows(starting with 2017) ![예](media/yes.png)SQL Server Linux![없습니다](media/no.png)Azure SQL 데이터베이스![없는](media/no.png)Azure SQL 데이터 웨어하우스 ![없는](media/no.png)병렬 데이터 웨어하우스</Token>
 

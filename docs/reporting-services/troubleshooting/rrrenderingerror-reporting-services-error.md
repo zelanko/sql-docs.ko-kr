@@ -1,27 +1,32 @@
 ---
-title: "rrRenderingError - Reporting Services 오류 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "rrRenderingError"
+title: "rrRenderingError-Reporting Services 오류 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- rrRenderingError
 ms.assetid: 0751efc3-b81b-44ee-8aac-8560f86ca322
 caps.latest.revision: 26
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 26
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1acdcb76215bc8f7a3ae1017649a3e3a2cbcdc94
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# rrRenderingError - Reporting Services 오류
+# <a name="rrrenderingerror---reporting-services-error"></a>rrRenderingError - Reporting Services 오류
     
-## 세부 정보  
+## <a name="details"></a>세부 정보  
   
 |||  
 |-|-|  
@@ -31,7 +36,7 @@ caps.handback.revision: 26
 |구성 요소|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|  
 |메시지 텍스트|보고서를 렌더링하는 동안 오류가 발생했습니다. (rrRenderingError) %1|  
   
-## 설명  
+## <a name="explanation"></a>설명  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 보고서를 렌더링할 수 없거나 내보낼 수 없을 때 이 메시지가 반환됩니다.  
   
  크기가 지원되지 않음을 나타내는 메시지는 지정된 RDL 페이지 크기가 유효하지 않을 때 일반적으로 발생합니다. 유효한 RDL 페이지 크기를 지정한 다음 다시 시도하세요.  
@@ -56,7 +61,7 @@ caps.handback.revision: 26
   
  열 개수가 시트에서 허용되는 최대 열 개수를 초과했음을 나타내는 메시지는 Excel 워크시트의 열 개수를 초과했을 때 일반적으로 발생합니다.  
   
-## 사용자 동작  
+## <a name="user-action"></a>사용자 동작  
   
-## 내부 전용  
+## <a name="internal-only"></a>내부 전용  
   

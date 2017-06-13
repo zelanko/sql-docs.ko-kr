@@ -1,1 +1,1 @@
- SQL Server 2016 데이터베이스 엔진 
+ SQL Server 2017 데이터베이스 엔진 

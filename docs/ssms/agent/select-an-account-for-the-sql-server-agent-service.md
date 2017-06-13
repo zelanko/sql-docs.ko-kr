@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 에이전트 서비스의 계정 선택 | Microsoft 문서"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b8ea899dbbf5b94205ba7cfa0afee4aad262d79a
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
@@ -60,7 +60,7 @@ ms.lasthandoff: 04/11/2017
   
     -   프로세스의 메모리 할당량 조정 권한(SeIncreaseQuotaPrivilege)  
   
-    -   일괄 처리 로그온 유형을 사용하여 로그온할 수 있는 권한(SeBatchLogonRight)  
+    -   이 컴퓨터 (SeNetworkLogonRight) 네트워크에서 액세스할 수 있는 권한이  
   
 > [!NOTE]  
 > 프록시 지원에 필요한 권한이 계정에 없는 경우 **sysadmin** 고정 서버 역할의 멤버만이 작업을 만들 수 있습니다.  

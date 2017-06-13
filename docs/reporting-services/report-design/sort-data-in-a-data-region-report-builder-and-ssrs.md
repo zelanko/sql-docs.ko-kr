@@ -1,23 +1,28 @@
 ---
-title: "데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 영역 (보고서 작성기 및 SSRS)에 데이터를 정렬 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2fcb9be2-1daa-4c92-ad00-5f63cdf39f70
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 01fdabcd4005e5b3b15e6c2656daed1cff499211
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS)
+# <a name="sort-data-in-a-data-region-report-builder-and-ssrs"></a>데이터 영역의 데이터 정렬(보고서 작성기 및 SSRS)
   보고서를 처음 실행할 때 데이터 영역에 있는 데이터의 정렬 순서를 변경하려면 데이터 영역 또는 그룹에서 정렬 식을 설정해야 합니다. 기본적으로 그룹의 정렬 식은 그룹 식과 같은 값으로 자동으로 설정됩니다.  
   
 -   테이블릭스 데이터 영역에서는 세부 정보 그룹을 포함한 데이터 영역 또는 각 그룹에 대한 정렬 식을 설정합니다. 테이블릭스 데이터 영역에 하나의 세부 정보 그룹만 있는 경우 데이터 영역이나 세부 정보 그룹에서 쿼리로 정렬 식을 정의할 수 있으며 모두 동일한 결과를 얻을 수 있습니다.  
@@ -33,7 +38,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 테이블릭스 데이터 영역에서 데이터를 정렬하려면  
+### <a name="to-sort-data-in-a-tablix-data-region"></a>테이블릭스 데이터 영역에서 데이터를 정렬하려면  
   
 1.  디자인 화면에서 행 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 7
   
     2.  데이터를 정렬할 식을 입력하거나 선택합니다.  
   
-    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z**를 선택하면 식이 오름차순으로 정렬되고 **Z-A**를 선택하면 식이 내림차순으로 정렬됩니다.  
+    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z** 를 선택하면 식이 오름차순으로 정렬되고 **Z-A** 를 선택하면 식이 내림차순으로 정렬됩니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 테이블릭스에 대해 세부 정보 그룹을 포함한 그룹 내 값을 정렬하려면  
+### <a name="to-sort-values-in-a-group-including-the-details-group-for-a-tablix"></a>테이블릭스에 대해 세부 정보 그룹을 포함한 그룹 내 값을 정렬하려면  
   
 1.  디자인 화면에서 테이블릭스 데이터 영역을 클릭하여 선택합니다. 그룹화 창에 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹이 표시됩니다.  
   
@@ -63,11 +68,11 @@ caps.handback.revision: 7
   
     2.  데이터를 정렬할 식을 입력하거나 선택합니다.  
   
-    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z**를 선택하면 식이 오름차순으로 정렬되고 **Z-A**를 선택하면 식이 내림차순으로 정렬됩니다.  
+    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z** 를 선택하면 식이 오름차순으로 정렬되고 **Z-A** 를 선택하면 식이 내림차순으로 정렬됩니다.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 차트에서 x축 레이블을 사전순으로 정렬하려면  
+### <a name="to-sort-x-axis-labels-in-alphabetical-order-on-a-chart"></a>차트에서 x축 레이블을 사전순으로 정렬하려면  
   
 1.  범주 필드 끌어 놓기 영역의 필드를 마우스 오른쪽 단추로 클릭하고 **범주 그룹 속성**을 클릭합니다.  
   
@@ -79,11 +84,11 @@ caps.handback.revision: 7
   
     2.  그룹화 필드와 일치하는 식을 선택합니다. **그룹화**를 클릭하여 그룹화 필드에 대한 식을 확인할 수 있습니다.  
   
-    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z**를 선택하면 식이 오름차순 영문자 순서로 정렬되고 **Z-A**를 선택하면 식이 내림차순 영문자 순서로 정렬됩니다.  
+    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z** 를 선택하면 식이 오름차순 영문자 순서로 정렬되고 **Z-A** 를 선택하면 식이 내림차순 영문자 순서로 정렬됩니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 차트에서 데이터 요소를 오름차순 또는 내림차순으로 정렬하려면  
+### <a name="to-sort-the-data-points-in-ascending-or-descending-order-on-a-chart"></a>차트에서 데이터 요소를 오름차순 또는 내림차순으로 정렬하려면  
   
 1.  범주 필드 끌어 놓기 영역의 필드를 마우스 오른쪽 단추로 클릭하고 **범주 그룹 속성**을 클릭합니다.  
   
@@ -95,15 +100,15 @@ caps.handback.revision: 7
   
     2.  데이터 필드와 일치하는 식을 선택합니다. 대부분의 경우 `=Sum(Fields!Quantity.Value)`과 같은 집계 값입니다.  
   
-    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z**를 선택하면 식이 오름차순으로 정렬되고 **Z-A**를 선택하면 식이 내림차순으로 정렬됩니다.  
+    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z** 를 선택하면 식이 오름차순으로 정렬되고 **Z-A** 를 선택하면 식이 내림차순으로 정렬됩니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 계기 화면에서 데이터를 오름차순 또는 내림차순으로 정렬하려면  
+### <a name="to-sort-data-in-ascending-or-descending-order-for-display-on-a-gauge"></a>계기 화면에서 데이터를 오름차순 또는 내림차순으로 정렬하려면  
   
 1.  계기를 마우스 오른쪽 단추로 클릭하고 **데이터 그룹 추가**를 클릭합니다.  
   
-2.  필요한 경우 **계기 패널 그룹 속성** 대화 상자에서 **일반**을 클릭합니다.  
+2.  필요한 경우 **계기 패널 그룹 속성** 대화 상자에서 **일반** 을 클릭합니다.  
   
 3.  **그룹 식**에서 **추가**를 클릭합니다.  
   
@@ -119,14 +124,14 @@ caps.handback.revision: 7
   
     2.  그룹화 필드와 일치하는 식을 선택합니다. **그룹화**를 클릭하여 그룹화 필드에 대한 식을 확인할 수 있습니다.  
   
-    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z**를 선택하면 식이 오름차순으로 정렬되고 **Z-A**를 선택하면 식이 내림차순으로 정렬됩니다.  
+    3.  **순서** 열 드롭다운 목록에서 각 식에 대한 정렬 방향을 선택합니다. **A-Z** 를 선택하면 식이 오름차순으로 정렬되고 **Z-A**를 선택하면 식이 내림차순으로 정렬됩니다.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
  계기에서 데이터를 그룹화하는 방법에 대한 자세한 내용은 [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 관련 항목:  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/ko-kr/2da24891-0b6d-4d3c-8b18-81b98752642f)   
+## <a name="see-also"></a>참고 항목  
+ [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)  

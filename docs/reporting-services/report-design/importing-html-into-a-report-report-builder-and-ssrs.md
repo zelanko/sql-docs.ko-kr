@@ -1,23 +1,28 @@
 ---
-title: "보고서로 HTML 가져오기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(보고서 작성기 및 SSRS) 보고서로 HTML 가져오기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5ccab26863c41430de2987c9c4573cd1ad53b173
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
+# <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>보고서로 HTML 가져오기(보고서 작성기 및 SSRS)
   입력란을 사용하면 데이터 집합의 필드에서 검색한 HTML 서식의 텍스트를 보고서에 삽입할 수 있습니다. 텍스트는 올바른 형식의 HTML로 평가되는 단순 또는 복합 식에서 가져올 수 있습니다. 서식이 지정된 텍스트는 PDF를 비롯한 모든 지원되는 출력 형식으로 렌더링될 수 있습니다.  
   
  ![rs_HTMLFormatting](../../reporting-services/report-design/media/rs-htmlformatting.gif "rs_HTMLFormatting")  
@@ -32,18 +37,18 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 지원되는 HTML 태그  
+## <a name="supported-html-tags"></a>지원되는 HTML 태그  
  다음은 자리 표시자 텍스트로 정의될 때 HTML로 렌더링될 전체 태그 목록입니다.  
   
--   하이퍼링크: \<A HREF>  
+-   하이퍼링크: \<는 HREF >  
   
--   글꼴: \<FONT>  
+-   글꼴: \<글꼴 >  
   
--   머리글, 스타일 및 블록 요소: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<DIV>, \<LI>, \<HN>  
+-   머리글, 스타일 및 블록 요소: \<H {n} >, \<DIV >, \<범위 >,\<P >, \<DIV >, \<l I >, \<H n >  
   
--   텍스트 서식: \<B>, \<I>, \<U>, \<S>  
+-   텍스트 형식: \<B >, \<I >, \<U >, \<S >  
   
--   목록 처리: \<OL>, \<UL>, \<LI>  
+-   목록 처리: \<OL >, \<u L >, \<l I >  
   
  나머지 모든 HTML 태그는 보고서를 처리하는 동안 무시됩니다. 자리 표시자 텍스트에 있는 식이 나타내는 HTML의 형식이 잘못된 경우에는 자리 표시자가 일반 텍스트로 렌더링됩니다. 모든 HTML 태그는 대소문자를 구분하지 않습니다.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 10
   
  자세한 내용은 [보고서에 HTML 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-html-into-a-report-report-builder-and-ssrs.md)를 참조하세요.  
   
-## CSS 특성의 제한  
+## <a name="limitations-of-cascading-style-sheet-attributes"></a>CSS 특성의 제한  
  CSS 특성을 사용할 때는 기본적인 태그 집합만 정의됩니다. 다음은 지원되는 특성의 목록입니다.  
   
 -   text-align, text-indent  
@@ -66,7 +71,7 @@ caps.handback.revision: 10
   
     -   상대 CSS 길이 단위는 무시되고 지원되지 않습니다. 지원되지 않는 단위에는 em, ex, px, %, rem이 있습니다.  
   
-     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx)(http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
+     CSS 단위에 대한 자세한 내용은 [CSS 값 및 단위 참조](http://msdn.microsoft.com/library/ms531211\(VS.85\).aspx) (http://msdn.microsoft.com/library/ms531211(VS.85).aspx)를 참조하세요.  
   
 -   color  
   
@@ -78,11 +83,11 @@ caps.handback.revision: 10
   
 -   형식이 잘못된 CSS 값은 형식이 잘못된 HTML과 마찬가지로 무시됩니다.  
   
--   같은 태그에 특성 및 CSS 스타일 특성이 모두 있는 경우에는 CSS 속성의 우선 순위가 더 높습니다. 예를 들어 텍스트가 **\<p style="text-align: right" align="left">**인 경우에는 text-align 특성만 적용되고 텍스트가 오른쪽에 맞춰집니다.  
+-   같은 태그에 특성 및 CSS 스타일 특성이 모두 있는 경우에는 CSS 속성의 우선 순위가 더 높습니다. 예를 들어, 텍스트가 있는 경우  **\<p 스타일 = "-: 오른쪽" 정렬 "왼쪽" = >**는 text-align 특성만 적용 됩니다 및 텍스트를 오른쪽 맞춤 됩니다.  
   
--   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어 텍스트가 **\<p align="left" align="right">**인 경우에는 텍스트가 오른쪽에 맞춰집니다.  
+-   특성 및 CSS 스타일에 대해 속성이 여러 번 지정된 경우에는 속성의 마지막 인스턴스만 적용됩니다. 예를 들어, 텍스트가 있는 경우  **\<p 맞춤 = "왼쪽" 정렬 "오른쪽" = >**, 텍스트를 오른쪽 맞춤 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

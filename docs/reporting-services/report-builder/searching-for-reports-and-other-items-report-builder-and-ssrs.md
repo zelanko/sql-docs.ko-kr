@@ -1,23 +1,28 @@
 ---
-title: "보고서 및 기타 항목 검색(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "보고서 및 기타 항목 (보고서 작성기 및 SSRS)에 대 한 검색 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6a586659-5c2b-453b-8f40-a3a469277b17
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9663bbf0c11ce1d41f02cc22027f2c69aa07b057
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 및 기타 항목 검색(보고서 작성기 및 SSRS)
+# <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>보고서 및 기타 항목 검색(보고서 작성기 및 SSRS)
   보고서 관리자를 사용하여 보고서 서버에서 이름이나 설명을 기준으로 특정 항목을 검색할 수 있습니다. 게시된 보고서, 보고서 모델, 폴더, 공유 데이터 원본 및 리소스를 검색할 수 있습니다. 일정, 소유자, 역할 할당, 보고서 기록의 특정 스냅숏 또는 구독은 검색할 수 없습니다. 검색은 항목이 저장되는 보고서 서버 데이터베이스에서 수행됩니다.  
   
 > [!NOTE]  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
  [내 보고서 사용&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   

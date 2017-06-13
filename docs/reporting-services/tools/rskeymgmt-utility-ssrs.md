@@ -1,37 +1,42 @@
 ---
-title: "rskeymgmt 유틸리티(SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보고서 서버 [Reporting Services], 암호화"
-  - "보고서 서버 인스턴스 조인 [SQL Server]"
-  - "보고서 서버 확장 배포 [Reporting Services]"
-  - "암호화 [Reporting Services]"
-  - "여러 보고서 서버 인스턴스"
-  - "명령 프롬프트 유틸리티 [Reporting Services]"
-  - "보고서 서버 [Reporting Services], 확장 배포"
-  - "암호화 [Reporting Services]"
-  - "rskeymgmt 유틸리티"
-  - "확장 배포 [Reporting Services]"
+title: "rskeymgmt 유틸리티 (SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- report servers [Reporting Services], encryption
+- joining report server instances [SQL Server]
+- report server scale-out deployments [Reporting Services]
+- cryptography [Reporting Services]
+- multiple report server instances
+- command prompt utilities [Reporting Services]
+- report servers [Reporting Services], scale-out deployments
+- encryption [Reporting Services]
+- rskeymgmt utility
+- scale-out deployments [Reporting Services]
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 caps.latest.revision: 56
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 56
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# rskeymgmt 유틸리티(SSRS)
-  중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 확장(Scale-out) 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 확장 배포*란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
+# <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
+  중요한 보고서 서버 데이터를 무단 액세스로부터 보호하는 데 사용할 대칭 키를 추출, 복원, 생성 및 삭제합니다. 이 유틸리티를 사용하여 수평적 확장(Scale-out) 배포에서 보고서 서버 인스턴스를 결합할 수도 있습니다. *보고서 서버 확장 배포* 란 하나의 보고서 서버 데이터베이스를 공유하는 여러 보고서 서버 인스턴스를 말합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -52,19 +57,19 @@ rskeymgmt {-?}
 {-ttrace}  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  **-?**  
  **rskeymgmt** 인수의 구문을 표시합니다.  
   
  **-e**  
  파일로 복사할 수 있도록 보고서 서버 인스턴스의 데이터를 암호화 및 해독하는 데 사용할 대칭 키를 추출합니다.  
   
- 이 인수는 값을 가지지 않습니다. 그러나 압축 풀기를 완료하려면 명령줄에 추가 인수를 포함해야 합니다. 지정해야 할 인수에는 **-f** 및 **-p** 인수가 있습니다.  
+ 이 인수는 값을 가지지 않습니다. 그러나 압축 풀기를 완료하려면 명령줄에 추가 인수를 포함해야 합니다. 지정해야 할 인수에는 **-f** 및**-p**인수가 있습니다.  
   
  **-a**  
  기존 대칭 키를 암호로 보호된 백업 파일에 제공한 복사본으로 바꿉니다. 대칭 키의 모든 인스턴스가 업데이트됩니다.  
   
- 이 인수는 값을 가지지 않습니다. 그러나 적용된 키가 포함된 파일을 선택하려면 명령줄에 추가 인수를 포함해야 합니다. 지정할 수 있는 인수에는 **-f** 및 **-p** 인수가 있습니다.  
+ 이 인수는 값을 가지지 않습니다. 그러나 적용된 키가 포함된 파일을 선택하려면 명령줄에 추가 인수를 포함해야 합니다. 지정할 수 있는 인수에는 **-f** 및**-p**인수가 있습니다.  
   
  **-d**  
  모든 대칭 키 인스턴스를 삭제하고 보고서 서버 데이터베이스에서 암호화된 모든 데이터를 삭제합니다. 이 인수는 값을 가지지 않습니다.  
@@ -89,13 +94,13 @@ rskeymgmt {-?}
  **-f**의 경우 필수 인수입니다. 대칭 키를 백업하거나 적용하는 데 사용할 암호를 지정합니다. 이 값은 비워 둘 수 없습니다.  
   
  **-i**  
- 로컬 보고서 서버 인스턴스를 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. **-i**의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-i**가 필요합니다.  
+ 로컬 보고서 서버 인스턴스를 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. **-i** 의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-i** 가 필요합니다.  
   
  **-m**  
  보고서 서버 수평적 확장 배포에 결합하는 보고서 서버 인스턴스를 호스팅하는 원격 컴퓨터의 이름을 지정합니다. 네트워크에서 식별할 수 있는 컴퓨터 이름을 사용합니다.  
   
  **-n**  
- 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. **-n**의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-n**이 필요합니다.  
+ 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 이 인수는 선택적 기본 보고서 서버를 설치한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 (기본 값에 대 한  **-n**  는 mssqlserver 임). 보고서 서버를 명명 된 인스턴스로 설치한 경우  **-n**  가 필요 합니다.  
   
  **-u**  *useraccount*  
  수평적 확장 배포에 결합하는 원격 컴퓨터의 관리자 계정을 지정합니다. 계정을 지정하지 않으면 현재 사용자의 자격 증명이 사용됩니다.  
@@ -106,37 +111,37 @@ rskeymgmt {-?}
  **-t**  *trace*  
  추적 로그에 오류 메시지를 출력합니다. 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.  
   
-## Permissions  
+## <a name="permissions"></a>Permissions  
  이 도구를 실행하려면 로컬 관리자 권한이 있어야 하며 보고서 서버를 호스팅하는 컴퓨터에서 로컬로 실행해야 합니다. rskeymgmt 유틸리티는 로컬 보고서 서버 Windows 인스턴스에 사용할 수 있습니다. 이 유틸리티는 보고서 서버 Windows 서비스의 원격 인스턴스에 연결할 수 없으므로 원격 보고서 서버 인스턴스의 암호화 키를 관리하는 데 사용할 수 없습니다.  
   
 > [!NOTE]  
 >  **-u** 및 **-v** 인수를 사용하는 경우 원격 컴퓨터에 대해 관리자 권한이 있는 계정을 지정해야 합니다.  
   
-## 예  
+## <a name="examples"></a>예  
  다음 예에서는 **rskeymgmt**를 사용하는 방법을 보여 줍니다. 다음 예에서는 암호화 키를 추출, 복원 및 삭제하는 방법과 보고서 서버 수평적 확장 배포를 구성하는 방법을 보여 줍니다.  
   
-#### 암호화 키 추출  
+#### <a name="extracting-encryption-keys"></a>암호화 키 추출  
  이 예에서는 암호화 키의 백업 복사본을 만들고 플로피 디스크의 암호로 보호된 파일에 저장하는 방법을 보여 줍니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-i** 인수를 추가합니다.  
   
 ```  
 rskeymgmt -e -f a:\backupkey\keys -p <password>  
 ```  
   
-#### 암호화 키 복원  
+#### <a name="restoring-encryption-keys"></a>암호화 키 복원  
  이 예에서는 암호화 키를 바꾸는 방법을 보여 줍니다. 암호화 키의 백업 복사본 위치와 이 파일의 잠금을 해제하는 암호를 지정해야 합니다.  
   
 ```  
 rskeymgmt -a -f a:\backupkey\keys -p <password>  
 ```  
   
-#### 암호화 키 및 암호화된 내용 삭제  
- 이 예에서는 보고서 서버에 저장된 모든 암호화 키를 삭제하는 방법을 보여 줍니다. 보고서 서버 수평적 확장 배포로 설치한 경우 이 배포에 포함된 모든 보고서 서버 인스턴스의 암호화 키가 삭제됩니다. 암호화 키를 삭제하면 보고서 서버 데이터베이스에서 암호화된 기존 값도 삭제됩니다. 암호화된 내용에 대한 자세한 내용은 [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/store-encrypted-report-server-data-ssrs-configuration-manager.md)을 참조하세요.  
+#### <a name="deleting-encryption-keys-and-encrypted-content"></a>암호화 키 및 암호화된 내용 삭제  
+ 이 예에서는 보고서 서버에 저장된 모든 암호화 키를 삭제하는 방법을 보여 줍니다. 보고서 서버 수평적 확장 배포로 설치한 경우 이 배포에 포함된 모든 보고서 서버 인스턴스의 암호화 키가 삭제됩니다. 암호화 키를 삭제하면 보고서 서버 데이터베이스에서 암호화된 기존 값도 삭제됩니다. 암호화된 내용에 대한 자세한 내용은 [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)을 참조하세요.  
   
 ```  
 rskeymgmt -d  
 ```  
   
-#### 원격 보고서 서버의 명명된 인스턴스를 수평적 확장 배포에 결합  
+#### <a name="joining-a-remote-report-server-named-instance-to-a-scale-out-deployment"></a>원격 보고서 서버의 명명된 인스턴스를 수평적 확장 배포에 결합  
  이 예에서는 원격 컴퓨터에 설치된 보고서 서버 인스턴스를 보고서 서버 수평적 확장 배포에 추가하는 방법을 보여 줍니다. 공유되는 데이터베이스를 사용하도록 이미 구성된 컴퓨터 중 하나에서 명령을 실행해야 합니다. 명령 인수는 수평적 확장 배포에 포함할 원격 보고서 서버 인스턴스를 지정합니다.  
   
 ```  
@@ -146,16 +151,16 @@ rskeymgmt -j -m <remotecomputer> -n <namedreportserverinstance> -u <administrato
 > [!NOTE]  
 >  보고서 서버 수평적 확장 배포란 여러 보고서 서버 인스턴스가 같은 보고서 서버 데이터베이스를 공유하는 배포 모델을 말합니다. 보고서 서버 데이터베이스에 대칭 키를 저장하는 모든 보고서 서버 인스턴스에서 이 데이터베이스를 사용할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에 3개의 보고서 서버 인스턴스에 대한 키 정보가 포함된 경우 세 인스턴스는 모두 같은 수평적 확장 배포의 멤버로 간주됩니다.  
   
-#### 같은 컴퓨터에서 보고서 서버 인스턴스 조인  
+#### <a name="joining-report-server-instances-on-the-same-computer"></a>같은 컴퓨터에서 보고서 서버 인스턴스 조인  
  같은 컴퓨터에 설치된 여러 보고서 서버 인스턴스에서 확장 배포를 만들 수 있습니다. 로컬로 설치된 보고서 서버 인스턴스를 조인하는 경우에는 **-u** 및 **-v** 인수를 설정하지 마세요. **-u** 및 **-v** 인수는 원격 컴퓨터에서 인스턴스를 조인하는 경우에만 사용됩니다. 로컬인 경우 이러한 인수를 지정하면 "로컬 연결에 대해 사용자 자격 증명을 사용할 수 없습니다" 오류가 발생합니다.  
   
- 다음 예에서는 여러 로컬 인스턴스를 사용하여 확장 배포를 만드는 구문을 보여 줍니다. 이 예에서 \<**initializedinstance**>는 보고서 서버 데이터베이스를 사용하도록 이미 초기화된 인스턴스의 이름이고, \<**newinstance**>는 배포에 추가할 인스턴스의 이름입니다.  
+ 다음 예에서는 여러 로컬 인스턴스를 사용하여 확장 배포를 만드는 구문을 보여 줍니다. 이 예제에서는 \< **initializedinstance**>은 보고서 서버 데이터베이스를 사용 하도록 이미 초기화 된 인스턴스 이름 및 \< **newinstance**>은 배포에 추가 하려면 인스턴스 이름:  
   
 ```  
 rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>  
 ```  
   
-#### 수평적 확장 배포에서 단일 보고서 서버의 암호화 키 제거  
+#### <a name="removing-encryption-keys-for-a-single-report-server-in-a-scale-out-deployment"></a>수평적 확장 배포에서 단일 보고서 서버의 암호화 키 제거  
  이 예에서는 보고서 서버 수평적 확장 배포에서 단일 보고서 서버의 암호화 키를 제거하는 방법을 보여 줍니다. 이 키는 보고서 서버 데이터베이스에서 제거됩니다. 보고서 서버 인스턴스의 키가 제거되면 이 보고서 서버 인스턴스에서 데이터베이스의 암호화된 데이터에 더 이상 액세스할 수 없으며 수평적 확장 배포에서 효과적으로 제거됩니다.  
   
  확장 배포에서 보고서 서버 인스턴스를 제거하려면 설치 ID를 지정해야 합니다. 설치 ID는 암호화 키를 제거하려는 보고서 서버 인스턴스의 RSReportserver.config 파일에 저장된 GUID입니다. 수평적 확장 배포에서 제거할 컴퓨터에서 다음 명령을 실행해야 합니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-i** 인수를 사용하여 인스턴스를 지정합니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
@@ -164,20 +169,20 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 rskeymgmt -r <installationID>  
 ```  
   
-## 파일 위치  
- Rskeymgmt.exe는 **\<*드라이브*>:\Program Files\Microsoft SQL Server\110\Tools\Binn** 또는 **\<*드라이브*>:\Program Files (x86)\Microsoft SQL Server\110\Tools\Binn**에 있습니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
+## <a name="file-location"></a>파일 위치  
+ Rskeymgmt.exe는  **\<* 드라이브*>: files\microsoft SQL Server\110\Tools\Binn * * 또는 * * \<* 드라이브*>: \Program 파일 (x86) \Microsoft SQL Server\110\Tools\Binn** 합니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
   
-## 주의  
+## <a name="remarks"></a>주의  
  보고서 서버는 저장된 자격 증명과 연결 정보를 암호화합니다. 데이터를 암호화하는 데 공개 키와 대칭 키가 사용됩니다. 보고서 서버를 실행하려면 보고서 서버 데이터베이스에 유효한 키가 있어야 합니다. **rskeymgmt** 를 사용하여 키를 백업, 삭제 또는 복원할 수 있습니다. 키를 복원할 수 없을 경우 이 도구는 더 이상 사용할 수 없는 암호화된 내용을 삭제하는 방법을 제공합니다.  
   
  **rskeymgmt** 유틸리티를 사용하여 설치하는 동안 또는 초기화하는 동안 정의되는 키 집합을 관리할 수 있습니다. 이 유틸리티는 원격 프로시저 호출(RPC) 끝점을 통해 로컬 보고서 서버 Windows 서비스에 연결합니다. 이 유틸리티가 올바르게 작동하려면 보고서 서버 Windows 서비스가 실행 중이어야 합니다.  
   
- 암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md) 및 [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/initialize-a-report-server-ssrs-configuration-manager.md)를 참조하세요.  
+ 암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
-## 관련 항목:  
- [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](../Topic/Scale-out%20Deployment%20%20-%20Reporting%20Services%20Native%20mode%20\(Configuration%20Manager\).md)   
+## <a name="see-also"></a>참고 항목  
+ [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)  
+ [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

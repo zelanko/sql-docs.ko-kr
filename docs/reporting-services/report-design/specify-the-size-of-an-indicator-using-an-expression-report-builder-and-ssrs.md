@@ -1,23 +1,28 @@
 ---
-title: "식을 사용하여 표시기 크기 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "식 (보고서 작성기 및 SSRS)를 사용 하 여 표시기 크기 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab0b86f1-4882-4258-a2b6-c612faecfa4b
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50bf03c9ad36de5e98451705aaae5c0afa79c70b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 식을 사용하여 표시기 크기 지정(보고서 작성기 및 SSRS)
+# <a name="specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs"></a>식을 사용하여 표시기 크기 지정(보고서 작성기 및 SSRS)
   색, 방향 및 모양 외에 크기도 표시기의 시각적 효과를 최대화하는 데 사용할 수 있습니다.  
   
  표시기에는 IndicatorStates라는 표시기 상태 컬렉션이 있습니다. 일반적으로 IndicatorStates 컬렉션에는 여러 상태가 있습니다. 각 상태는 컬렉션의 멤버이며 아이콘으로 표시됩니다. 이러한 상태가 함께 IndicatorsStates 컬렉션을 구성합니다.  
@@ -34,7 +39,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 식을 사용하여 표시기 아이콘 크기를 지정하려면  
+### <a name="to-specify-the-indicator-icon-size-using-an-expression"></a>식을 사용하여 표시기 아이콘 크기를 지정하려면  
   
 1.  변경할 표시기를 클릭합니다.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 7
   
      속성 창이 범주별로 구성된 경우 IndicatorStates는 **상태** 범주에 있습니다.  
   
-3.  IndicatorStates 옆에 있는 줄임표**(...)** 단추를 클릭합니다. **IndicatorState 컬렉션 편집기** 대화 상자가 열립니다.  
+3.  IndicatorStates 옆에 있는 줄임표 **(...)** 단추를 클릭합니다. **IndicatorState 컬렉션 편집기** 대화 상자가 열립니다.  
   
      컬렉션 멤버를 모두 선택합니다.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

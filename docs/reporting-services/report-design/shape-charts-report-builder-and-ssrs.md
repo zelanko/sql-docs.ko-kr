@@ -1,39 +1,44 @@
 ---
-title: "셰이프 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "셰이프 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 셰이프 차트(보고서 작성기 및 SSRS)
+# <a name="shape-charts-report-builder-and-ssrs"></a>셰이프 차트(보고서 작성기 및 SSRS)
   세이프 차트에서는 값 데이터를 전체의 백분율로 표시합니다. 셰이프 차트는 집합의 서로 다른 값이 차지하는 비율을 비교하여 표시하는 데 주로 사용됩니다. 범주는 셰이프의 개별 세그먼트로 표현됩니다. 세그먼트의 크기는 값에 따라 결정됩니다. 셰이프 차트는 원형 차트와 비슷하지만 범주를 가장 큰 것부터 가장 작은 것 순으로 정렬한다는 점에서 차이가 있습니다.  
   
  깔대기형 차트에서는 값을 점점 감소하는 비율로 표시합니다. 영역의 크기는 모든 값의 합계에 대한 계열 값의 비율로 결정됩니다. 예를 들어 웹 사이트 방문자 추세를 표시하는 데 깔대기형 차트를 사용할 수 있습니다. 이 경우 홈 페이지 방문자 수가 가장 많았던 시점을 나타내는 제일 넓은 영역이 깔대기형 차트의 맨 위에 표시되고 다른 영역은 크기에 비례하여 그 아래 표시됩니다. 깔때기형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 깔대기형 차트의 예를 보여 줍니다.  
   
- ![깔때기형 차트](../../reporting-services/report-design/media/rs-funnelchart.png "깔때기형 차트")  
+ ![깔때기형 차트](../../reporting-services/report-design/media/rs-funnelchart.gif "깔때기형 차트")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 변형  
+## <a name="variations"></a>변형  
   
 -   **피라미드형**. 피라미드형 차트에서는 차트가 피라미드 모양이 되도록 비례 데이터를 표시합니다.  
   
-## 셰이프 차트의 데이터 고려 사항  
+## <a name="data-considerations-for-shape-charts"></a>셰이프 차트의 데이터 고려 사항  
   
 -   셰이프 차트는 시각적 효과가 뛰어나므로 보고서에 자주 사용됩니다. 그러나 셰이프 차트는 매우 단순한 종류의 차트이므로 데이터를 정확하게 표현하는 데 적합하지 않을 수 있습니다. 데이터를 집계하여 생성된 데이터 요소가 일곱 개 이하인 경우에만 셰이프 차트를 사용하는 것이 좋습니다. 일반적으로 셰이프 차트는 데이터 영역별로 범주를 하나만 표시하려는 경우에 사용합니다.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 8
   
 -   원형 및 도넛형 차트에 그리기 스타일을 추가로 적용하여 시각적 효과를 높일 수 있습니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

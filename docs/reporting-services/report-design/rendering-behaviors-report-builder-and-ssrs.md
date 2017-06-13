@@ -1,23 +1,28 @@
 ---
-title: "렌더링 동작(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "렌더링 동작 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 518b74abc3238fcebee1e8b5356315e49f35db01
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 렌더링 동작(보고서 작성기 및 SSRS)
+# <a name="rendering-behaviors-report-builder--and-ssrs"></a>렌더링 동작(보고서 작성기 및 SSRS)
   보고서를 렌더링하는 경우 선택한 렌더러에 따라 보고서 본문 및 해당 내용에 특정 규칙이 적용됩니다. 여러 보고서 항목이 한 페이지에 함께 포함되는 방식은 다음과 같은 요소의 조합에 따라 결정됩니다.  
   
 -   렌더링 규칙  
@@ -35,7 +40,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## HTML, MHTML, Word 및 Excel 등 소프트 페이지 나누기 렌더러의 일반적인 동작  
+## <a name="general-behaviors-for-html-mhtml-word-and-excel-soft-page-break-renderers"></a>HTML, MHTML, Word 및 Excel 등 소프트 페이지 나누기 렌더러의 일반적인 동작  
  HTML 및 MHTML 형식을 사용하여 내보낸 보고서는 다양한 길이의 페이지가 표시되는 컴퓨터 화면 기반 환경에 최적화됩니다. 페이지 나누기는 보고서 본문 내의 근사 위치에서만 세로로 삽입됩니다. 이러한 근사 위치는 속성 창에서 설정하는 대화형 높이를 통해 결정됩니다. 예를 들어 대화형 높이가 5인치로 설정된 경우를 가정해 봅니다. 보고서가 렌더링되면 페이지 높이는 대략 5인치가 됩니다. Word 및 Excel에서는 논리적 페이지 나누기에 기반하여 페이지를 매기며 대화형 높이 설정을 무시합니다.  
   
 > [!NOTE]  
@@ -58,7 +63,7 @@ caps.handback.revision: 7
   
 -   페이지 여백은 적용되지 않습니다.  
   
-## PDF, 이미지 및 인쇄 등 하드 페이지 나누기 렌더러의 일반적인 동작  
+## <a name="general-behaviors-for-pdf-image-and-print-hard-page-break-renderers"></a>PDF, 이미지 및 인쇄 등 하드 페이지 나누기 렌더러의 일반적인 동작  
  PDF 및 이미지를 사용하여 내보낸 보고서는 페이지 크기가 일정한 책 또는 인쇄물 환경에 최적화됩니다. 페이지 나누기는 보고서 본문 내의 특정 위치에 세로 및 가로로 삽입됩니다. 이러한 특정 위치는 페이지 너비 및 페이지 높이 설정을 통해 결정됩니다.  
   
 > [!NOTE]  
@@ -79,12 +84,12 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  대화형 너비 설정은 하드 페이지 나누기 렌더러에서 사용되지 않습니다.  
   
-## 보고서 항목 간의 최소 간격  
+## <a name="minimum-spacing-between-report-items"></a>보고서 항목 간의 최소 간격  
  보고서 항목은 해당 내용을 포함하기 위해 보고서 본문 내에서 크기가 늘어납니다. 예를 들어 행렬 데이터 영역은 일반적으로 보고서 렌더링 시 페이지에서 가로 및 아래쪽으로 확대되고, 입력란의 높이는 식에서 반환하는 데이터에 따라 조정됩니다.  
   
  렌더러에서는 사용자가 보고서 레이아웃에 정의한 보고서 항목 간의 최소 간격을 유지합니다. 보고서 레이아웃에서 특정 보고서 항목을 다른 보고서 항목 근처에 배치하는 경우 두 보고서 항목 간의 거리는 보고서가 가로 또는 세로 방향으로 확장될 때 유지해야 하는 최소 거리가 됩니다. 예를 들어 보고서에 행렬 데이터 영역을 추가한 다음 해당 행렬로부터 .25인치 오른쪽에 사각형을 추가하면 행렬이 확장될 때 행렬과 사각형 간의 간격이 .25인치로 유지됩니다. 각 항목은 오른쪽으로 이동하여 해당 항목과 그 왼쪽에 있는 항목 사이에 최소 거리를 유지합니다.  
   
-## 페이지 머리글 및 바닥글  
+## <a name="page-headers-and-footers"></a>페이지 머리글 및 바닥글  
  페이지 머리글 및 바닥글은 렌더링되는 각 페이지의 맨 위와 맨 아래에 나타납니다. 페이지 머리글 및 바닥글의 서식을 지정하여 테두리 색, 테두리 스타일 및 테두리 두께를 설정할 수 있습니다. 배경색 또는 배경 이미지를 추가할 수도 있습니다. 이러한 서식 옵션은 사용자가 선택한 서식에 따라 모두 렌더링됩니다.  
   
  HTML 또는 MHTML 렌더링 형식으로 렌더링되는 경우 페이지 머리글 및 바닥글에는 다음과 같은 규칙이 적용됩니다.  
@@ -112,7 +117,7 @@ caps.handback.revision: 7
   
 -   하위 보고서로 보고서가 렌더링되는 경우 원본 .rdl 파일에 정의된 머리글 및 바닥글은 렌더링되지 않습니다.  
   
-## 논리적 페이지 나누기  
+## <a name="logical-page-breaks"></a>논리적 페이지 나누기  
  논리적 페이지 나누기는 보고서 항목 또는 그룹의 앞이나 뒤에 사용자가 삽입하는 페이지 나누기입니다. 페이지 나누기는 보고서를 렌더링하거나 내보낼 때 보고서를 최적의 상태로 보기 위해 보고서 내용을 보고서 페이지에 맞추는 방식을 결정하는 데 도움이 됩니다.  
   
  논리적 페이지 나누기를 렌더링하는 경우 다음과 같은 규칙이 적용됩니다.  
@@ -127,8 +132,8 @@ caps.handback.revision: 7
   
 -   테이블 또는 행렬 셀의 항목에 대해 정의한 논리적 페이지 나누기는 유지되지 않습니다. 목록의 항목은 이 규칙에서 예외입니다.  
   
-## 관련 항목:  
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>관련 항목:  
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)  
   

@@ -1,23 +1,28 @@
 ---
-title: "표시기 추가 또는 삭제(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "추가 또는 삭제 (보고서 작성기 및 SSRS) 표시기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a8b1aac1-53ef-47a4-afc0-8fa866c6c480
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 표시기 추가 또는 삭제(보고서 작성기 및 SSRS)
+# <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>표시기 추가 또는 삭제(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 표시기는 단일 데이터 값의 상태를 한눈에 볼 수 있는 최소 계기입니다. 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)를 참조하세요.  
   
  표시기는 일반적으로 테이블이나 행렬의 셀에 배치되지만 계기와 함께 또는 계기에 포함하여 표시기를 독립적으로 사용할 수도 있습니다.  
@@ -39,7 +44,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  열 너비와 데이터 값의 길이에 따라 테이블 또는 행렬 셀의 텍스트가 자동으로 줄이 바뀌고 여러 줄로 표시될 수 있습니다. 이 경우 표시기 아이콘이 늘어나고 모양이 바뀔 수 있습니다. 그러면 표시기 아이콘의 가독성이 떨어질 수 있습니다. 표시기를 사각형 안에 배치하여 아이콘이 늘어나지 않도록 하십시오.  
   
-## 테이블 또는 행렬에 표시기를 추가하려면  
+## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>테이블 또는 행렬에 표시기를 추가하려면  
   
 1.  기존 보고서를 열거나 표시할 데이터가 있는 테이블 및 행렬을 포함하는 새 보고서를 만듭니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) 또는 [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 8
   
      표시기는 기본값을 사용하도록 구성됩니다. 기본적으로 표시기는 백분율을 단위로 사용하도록 구성되며 백분율 범위는 표시기의 멤버 간에 균등하게 분포되고 표시기가 제공하는 값은 가장 가까운 그룹의 범위를 사용합니다.  
   
-## 테이블 또는 행렬에서 표시기를 삭제하려면  
+## <a name="to-delete-an-indicator-to-a-table-or-matrix"></a>테이블 또는 행렬에서 표시기를 삭제하려면  
   
 1.  삭제할 표시기를 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 8
   
 2.  **삭제**를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

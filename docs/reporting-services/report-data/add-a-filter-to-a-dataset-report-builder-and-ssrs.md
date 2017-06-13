@@ -1,23 +1,28 @@
 ---
-title: "데이터 집합에 필터 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 집합 (보고서 작성기 및 SSRS)에 필터 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eed37e74-6a43-4d7c-9959-2d5fa6a6aba9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 데이터 집합에 필터 추가(보고서 작성기 및 SSRS)
+# <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 집합에 필터 추가(보고서 작성기 및 SSRS)
   데이터 집합에 필터를 추가하여 데이터를 외부 데이터 원본에서 검색한 후에 보고서의 데이터를 제한합니다. 필터를 데이터 집합에 추가하면 모든 보고서 파트 또는 데이터 영역은 필터 조건과 일치하는 데이터만 사용합니다.  
   
  공유 데이터 집합의 경우 모든 종속 항목에 적용되는 필터는 보고서 서버에 있는 공유 데이터 집합 정의의 일부여야 합니다. 공유 데이터 집합 인스턴스를 포함하는 보고서 또는 보고서 파트는 해당 인스턴스에만 적용되는 필터를 추가로 만들 수 있습니다.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 공유 데이터 집합에 필터를 추가하려면  
+### <a name="to-add-a-filter-to-a-shared-dataset"></a>공유 데이터 집합에 필터를 추가하려면  
   
 1.  공유 데이터 집합 모드에서 공유 데이터 집합을 엽니다.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 포함된 데이터 집합 또는 공유 데이터 집합 인스턴스에 필터를 추가하려면  
+### <a name="to-add-a-filter-to-an-embedded-dataset-or-a-shared-dataset-instance"></a>포함된 데이터 집합 또는 공유 데이터 집합 인스턴스에 필터를 추가하려면  
   
 1.  보고서 디자인 모드에서 보고서를 엽니다.  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>참고 항목  
+ [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-filter-report-builder-and-ssrs.md)  
   

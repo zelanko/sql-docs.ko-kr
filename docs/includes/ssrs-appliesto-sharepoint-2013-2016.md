@@ -1,1 +1,1 @@
-![예](media/yes.png)SharePoint 2013![예](media/yes.png)SharePoint 2016
+![예](media/yes.png)SharePoint 통합 모드

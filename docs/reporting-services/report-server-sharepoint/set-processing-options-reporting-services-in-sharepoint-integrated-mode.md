@@ -1,26 +1,31 @@
 ---
-title: "처리 옵션 설정(SharePoint 통합 모드의 Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SharePoint 통합 [Reporting Services], 콘텐츠 관리"
-  - "스냅숏 [Reporting Services], 만들기"
+title: "처리 옵션 (SharePoint 통합된 모드의 Reporting Services) 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SharePoint integration [Reporting Services], content management
+- snapshots [Reporting Services], creating
 ms.assetid: 453b19a1-739a-4b67-aeea-2069b52204e1
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리 옵션을 설정하여 데이터 처리 시기를 결정할 수 있습니다. 현재 보고서에 대해 보고서 기록을 사용할지 여부를 결정하는 옵션과 보고서 처리의 제한 시간 값을 설정할 수도 있습니다.  
   
 -   보고서를 보고서 스냅숏으로 실행하면 임의의 시간에(예: 예약된 백업 시간 동안) 보고서가 실행되지 않도록 할 수 있습니다. 보고서 스냅숏은 일반적으로 일정에 따라 생성되고 이후에 새로 고쳐지므로 보고서 및 데이터 처리 시간을 정확하게 예약할 수 있습니다. 실행하는 데 시간이 오래 걸리는 쿼리 또는 특정 시간 동안 누구도 액세스할 수 없는 데이터 원본의 데이터를 사용하는 쿼리를 기반으로 하는 보고서의 경우 보고서를 스냅숏으로 실행해야 합니다.  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
   
  **항목 내용**  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 15
   
 2.  아래쪽 화살표를 클릭하고 **처리 옵션 관리**를 선택합니다.  
   
-3.  보고서 서버 수준에서 지정된 값을 사용하려면 **처리 제한 시간**에서 **사이트 기본 설정 사용**을 선택합니다. 제한 시간 없음이나 다른 제한 시간 값으로 해당 값을 재정의하려면 **보고서 처리 시간 제한 없음** 또는 **보고서 처리 제한 시간(초)**을 선택합니다.  
+3.  보고서 서버 수준에서 지정된 값을 사용하려면 **처리 제한 시간**에서 **사이트 기본 설정 사용** 을 선택합니다. 제한 시간 없음이나 다른 제한 시간 값으로 해당 값을 재정의하려면 **보고서 처리 시간 제한 없음** 또는 **보고서 처리 제한 시간(초)** 을 선택합니다.  
   
 ##  <a name="bkmk_set_report_history"></a> 보고서 기록 옵션 및 제한을 설정하려면  
   
@@ -104,7 +109,7 @@ caps.handback.revision: 15
   
 1.  Windows PowerShell을 사용하여 SharePoint 보고서 서버의 데이터베이스 제한 시간을 설정합니다. 자세한 내용은 [PowerShell cmdlets for Reporting Services SharePoint Mode](../../reporting-services/report-server-sharepoint/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)의 “보고 서비스 응용 프로그램 데이터베이스의 속성 가져오기 및 설정” 섹션을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
  [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
  [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  

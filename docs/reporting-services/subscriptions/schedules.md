@@ -1,31 +1,36 @@
 ---
 title: "일정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "일정 [Reporting Services]"
-  - "일정 [Reporting Services], 일정 정보"
-  - "게시된 보고서 [Reporting Services], 일정"
-  - "보고서 [Reporting Services], 일정 예약"
-  - "구독 [Reporting Services], 일정 예약"
-  - "자동 보고서 처리"
+ms.custom: 
+ms.date: 07/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- schedules [Reporting Services]
+- schedules [Reporting Services], about schedules
+- published reports [Reporting Services], schedules
+- reports [Reporting Services], scheduling
+- subscriptions [Reporting Services], scheduling
+- automatic report processing
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
 caps.latest.revision: 51
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 51
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a49274f347768a1a213c9a0010917e9e1d1376a5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 일정
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서의 처리와 배포를 쉽게 제어할 수 있도록 **공유 일정**과 **보고서별 일정**을 제공합니다. 이 두 일정 유형의 차이점은 일정의 정의, 저장 및 관리 방법에 있습니다. 두 일정 유형의 내부 구조는 동일합니다. 모든 일정은 되풀이 유형을 월별, 주별 또는 일별로 지정할 수 있습니다. 되풀이 유형 내에서 이벤트 발생 빈도에 대한 간격과 범위를 설정하세요. 되풀이 패턴의 유형과 되풀이 패턴이 지정되는 방식은 공유 일정을 만드는지 아니면 보고서별 일정을 만드는지 여부에 관계없이 동일합니다.
+# <a name="schedules"></a>일정
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서의 처리와 배포를 쉽게 제어할 수 있도록 **공유 일정** 과 **보고서별 일정** 을 제공합니다. 이 두 일정 유형의 차이점은 일정의 정의, 저장 및 관리 방법에 있습니다. 두 일정 유형의 내부 구조는 동일합니다. 모든 일정은 되풀이 유형을 월별, 주별 또는 일별로 지정할 수 있습니다. 되풀이 유형 내에서 이벤트 발생 빈도에 대한 간격과 범위를 설정하세요. 되풀이 패턴의 유형과 되풀이 패턴이 지정되는 방식은 공유 일정을 만드는지 아니면 보고서별 일정을 만드는지 여부에 관계없이 동일합니다.
   
   -   공유 일정은 별도의 항목으로 생성됩니다. 구독이나 예약된 다른 작업을 정의할 때 이렇게 생성된 공유 일정을 참조합니다.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 51
   
   
 ##  <a name="bkmk_whatyoucando"></a> 예약으로 수행할 수 있는 작업  
- 기본 모드의 경우 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털 및 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)], SharePoint 모드의 경우 SharePoint 사이트 관리 페이지를 사용하여 예약을 만들고 관리할 수 있습니다. 다음 작업을 수행할 수 있습니다.  
+ 기본 모드의 경우 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털 및 [!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)] , SharePoint 모드의 경우 SharePoint 사이트 관리 페이지를 사용하여 예약을 만들고 관리할 수 있습니다. 다음 작업을 수행할 수 있습니다.  
   
 -   표준 또는 데이터 기반 구독에서 보고서 배달 예약  
   
@@ -56,12 +61,12 @@ caps.handback.revision: 51
  예약을 만들고 관리하는 방법은 [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)를 참조하세요.  
   
 > [!NOTE]  
->  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](Features%20Supported%20by%20Edition%20of%20SQL%20Server_deleted.md)을 참조하세요.  
+>  일정 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](http://msdn.microsoft.com/library/22ad82d7-860c-43d3-b77a-77fb9eec5454)을 참조하세요.  
   
 ##  <a name="bkmk_compare"></a> 공유 일정과 보고서별 일정 비교  
  두 가지 유형의 일정 모두 출력 내용이 같습니다.  
   
--   **공유 일정**은 미리 만들어 놓은 일정 정보가 들어 있는 이식 가능한 다목적 항목입니다. 공유 일정은 시스템 수준 항목이므로 공유 일정을 만들려면 시스템 수준의 사용 권한이 있어야 합니다. 따라서 일반적으로 보고서 서버 관리자나 내용 관리자는 보고서 서버에서 사용할 수 있는 공유 일정을 만듭니다. 공유 일정은 웹 포털 또는 SharePoint 사이트 설정을 사용하여 보고서 서버에서 저장되고 관리됩니다.  
+-   **공유 일정** 은 미리 만들어 놓은 일정 정보가 들어 있는 이식 가능한 다목적 항목입니다. 공유 일정은 시스템 수준 항목이므로 공유 일정을 만들려면 시스템 수준의 사용 권한이 있어야 합니다. 따라서 일반적으로 보고서 서버 관리자나 내용 관리자는 보고서 서버에서 사용할 수 있는 공유 일정을 만듭니다. 공유 일정은 웹 포털 또는 SharePoint 사이트 설정을 사용하여 보고서 서버에서 저장되고 관리됩니다.  
   
      보고서, 공유 데이터 집합 또는 구독 속성을 통해 정의하는 특정 일정과 달리 공유 일정은 다음과 같은 이유로 인해 더 쉽게 관리 및 유지할 수 있습니다.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 51
   
     -   공유 일정만 사용하는 경우 예약된 작업이 발생하는 시기를 정확하게 알 수 있습니다. 이에 따라 성능 문제가 발생하기 전에 보다 쉽게 서버의 부하를 예상하고 이에 맞는 조정 작업을 수행할 수 있습니다. 예를 들어 특정 시간에 컴퓨터 백업을 예약하기로 결정한 경우 공유 일정이 다른 시간에 실행되도록 조정할 수 있습니다.  
   
--   **보고서별 일정**은 개별 보고서, 구독 또는 보고서 실행 작업 컨텍스트에서 정의되어 캐시 만료나 스냅숏 업데이트를 결정합니다. 구독을 정의하거나 보고서 실행 속성을 설정할 때 보고서별 일정이 인라인으로 생성됩니다. 공유 일정에서 원하는 빈도나 반복 패턴을 제공하지 않으면 보고서별 일정을 만들 수 있습니다. 보고서 실행을 중지하려면 보고서별 일정을 수동으로 편집해야 합니다. 보고서별 일정은 개별 사용자가 만들 수 있습니다.  
+-   **보고서별 일정** 은 개별 보고서, 구독 또는 보고서 실행 작업 컨텍스트에서 정의되어 캐시 만료나 스냅숏 업데이트를 결정합니다. 구독을 정의하거나 보고서 실행 속성을 설정할 때 보고서별 일정이 인라인으로 생성됩니다. 공유 일정에서 원하는 빈도나 반복 패턴을 제공하지 않으면 보고서별 일정을 만들 수 있습니다. 보고서 실행을 중지하려면 보고서별 일정을 수동으로 편집해야 합니다. 보고서별 일정은 개별 사용자가 만들 수 있습니다.  
   
 ##  <a name="bkmk_configuredatasources"></a> 데이터 원본 구성  
  보고서에 대해 데이터 또는 구독 처리를 예약하려면 먼저 저장된 자격 증명이나 무인 모드로 실행되는 보고서 처리 계정을 사용하도록 보고서 데이터 원본을 구성해야 합니다. 저장된 자격 증명을 사용하는 경우 하나의 자격 증명 집합만 저장할 수 있으며 이 자격 증명 집합은 보고서를 실행하는 모든 사용자가 사용합니다. 자격 증명은 Windows 사용자 계정이거나 데이터베이스 사용자 계정일 수 있습니다.  
@@ -90,7 +95,7 @@ caps.handback.revision: 51
 |사용자 정의 구독에서 보고서별 일정 만들기, 수정 또는 삭제|개별 구독 관리|브라우저, 보고서 작성기, 내 보고서, 내용 관리자|방문자, 멤버|  
 |예약된 다른 모든 작업의 보고서별 일정 만들기, 수정 또는 삭제|보고서 기록 관리, 모든 구독 관리, 보고서 관리|내용 관리자|소유자|  
   
- 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 보안에 대한 자세한 내용은 [미리 정의된 역할](../../reporting-services/security/predefined-roles.md), [기본 모드 보고서 서버에 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요. SharePoint 모드의 경우 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
+ 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 보안에 대한 자세한 내용은 [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md), [기본 모드 보고서 서버에 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md) 및 [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)을 참조하세요. SharePoint 모드의 경우 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
   
 ##  <a name="bkmk_how_scheduling_works"></a> 일정 예약 및 배달 프로세스 작동 방식  
  일정 예약 및 배달 프로세서는 다음 기능을 제공합니다.  
@@ -132,7 +137,7 @@ caps.handback.revision: 51
 ###  <a name="bkmk_stoppingservice"></a> 보고서 서버 서비스를 중지할 때의 결과  
  보고서 서버 서비스가 중지되더라도 SQL Server 에이전트는 보고서 처리 요청을 큐에 계속 추가합니다. SQL Server 에이전트의 상태 정보는 작업이 성공적으로 수행되었음을 나타냅니다. 그러나 보고서 서버 서비스가 중지되었으므로 실제로 보고서 처리는 발생하지 않습니다. 요청은 보고서 서버 서비스를 다시 시작할 때까지 큐에 계속 누적됩니다. 보고서 서버 서비스를 다시 시작하면 큐에 있는 모든 보고서 처리 요청이 순서대로 처리됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서 기록에서 스냅숏 만들기, 수정 및 삭제](../../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
@@ -141,3 +146,4 @@ caps.handback.revision: 51
  [공유 데이터 집합 캐시&#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)  
   
   
+

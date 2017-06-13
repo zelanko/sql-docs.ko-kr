@@ -1,28 +1,33 @@
 ---
-title: "URL 액세스 매개 변수 참조 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "09/09/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보고서 [Reporting Services], 표시"
-  - "URL 액세스 [Reporting Services], 보고서 표시 매개 변수"
+title: URL Access Parameter Reference | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 09/09/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- reports [Reporting Services], display options
+- URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 caps.latest.revision: 48
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 48
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL 액세스 매개 변수 참조
-  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:*로 시작하고 HTML 뷰어로 전달되는 경우 *rc:*로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
+# <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
+  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]보고서의 모양과 느낌을 구성하는 URL의 일부로 다음 매개 변수를 사용할 수 있습니다. 이 섹션에는 가장 일반적인 매개 변수가 나열됩니다. 매개 변수는 대/소문자를 구분하지 않으며, 매개 변수 접두사는 보고서 서버로 전달되는 경우 *rs:* 로 시작하고 HTML 뷰어로 전달되는 경우 *rc:* 로 시작합니다. 장치 또는 렌더링 확장 프로그램에 특정하는 매개 변수를 지정할 수도 있습니다. 장치별 매개 변수에 대한 자세한 내용은 [URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  SharePoint 모드 보고서 서버의 경우 URL에는 SharePoint를 통해 요청을 라우팅하는 `_vti_bin` 프록시 구문과 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] HTTP 프록시를 포함하는 것이 중요합니다. 프록시는 컨텍스트를 HTTP 요청에 추가하며 SharePoint 모드 보고서 서버에 대한 보고서의 올바른 실행을 보장하는 데 필요합니다. 예를 보려면 [Access Report Server Items Using URL Access](../reporting-services/access-report-server-items-using-url-access.md)를 참조하세요.  
@@ -38,13 +43,13 @@ caps.handback.revision: 48
 -   [보고서 뷰어 웹 파트 명령(rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> HTML 뷰어 명령(rc:)  
- HTML 뷰어 명령은 HTML 뷰어를 대상 지정하는 데 사용되며(예를 들어 보고서 관리자에서) *rc:* 접두사가 붙음:  
+ HTML 뷰어 명령은 HTML 뷰어를 대상 지정하는 데 사용되며(예를 들어 보고서 관리자에서) *rc:*접두사가 붙음:  
   
--   *Toolbar*:  
+-   *Toolbar* :  
                   도구 모음을 표시하거나 숨깁니다. 이 매개 변수 값이 **false**이면 모든 나머지 옵션이 무시됩니다. 이 매개 변수를 생략하면 도구 모음이 지원하는 렌더링 형식에 맞게 자동으로 표시됩니다. 이 매개 변수의 기본값은 **true**입니다.  
   
     > [!IMPORTANT]  
-    >  *rc:Toolbar*=**false**는 도메인 이름 대신 IP 주소를 사용하여 SharePoint 사이트에 호스트된 보고서에 대한 대상을 지정하는 URL 액세스 문자열에는 사용할 수 없습니다.  
+    >  *rc:Toolbar*=**false** 는 도메인 이름 대신 IP 주소를 사용하여 SharePoint 사이트에 호스트된 보고서에 대한 대상을 지정하는 URL 액세스 문자열에는 사용할 수 없습니다.  
   
 -   *Parameters* : 도구 모음의 매개 변수 영역을 표시하거나 숨깁니다. 이 매개 변수를 **true**로 설정하면 도구 모음의 매개 변수 영역이 표시됩니다. 이 매개 변수를 **false**로 설정하면 매개 변수 영역이 표시되지 않고 사용자가 영역을 표시할 수 없습니다. 이 매개 변수를 **Collapsed**값으로 설정하면 매개 변수 영역이 표시되지 않지만 최종 사용자가 영역을 토글할 수 있습니다. 이 매개 변수의 기본값은 **true**입니다.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 48
     http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales&rc:Parameters=Collapsed  
     ```  
   
--   *Zoom* : 보고서 확대/축소 값을 정수 백분율 또는 문자열 상수로 설정합니다. 표준 문자열 값에는 **Page Width** 및 **Whole Page**가 포함됩니다. Internet Explorer 5.0 이전 버전과 모든 비 [!INCLUDE[msCoName](../includes/msconame-md.md)] 브라우저에서는 이 매개 변수가 무시됩니다. 이 매개 변수의 기본값은 **100**입니다.  
+-   *Zoom* : 보고서 확대/축소 값을 정수 백분율 또는 문자열 상수로 설정합니다. 표준 문자열 값에는 **Page Width** 및 **Whole Page**가 포함됩니다. Internet Explorer 5.0 이전 버전과 모든 비[!INCLUDE[msCoName](../includes/msconame-md.md)] 브라우저에서는 이 매개 변수가 무시됩니다. 이 매개 변수의 기본값은 **100**입니다.  
   
      **Native** 모드의 예제:  
   
@@ -120,7 +125,7 @@ caps.handback.revision: 48
   
 -   *Stylesheet*: HTML 뷰어에 적용할 스타일시트를 지정합니다.  
   
--   장치 정보 설정: `rc:tag=value` 형식으로 장치 정보 설정을 지정합니다. 여기서 *tag*는 현재 사용되는 렌더링 확장 프로그램별 장치 정보 설정의 이름입니다(*Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 장치 정보 설정을 사용할 수 있습니다. `…&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 장치 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
+-   장치 정보 설정: `rc:tag=value`형식으로 장치 정보 설정을 지정합니다. 여기서 *tag* 는 현재 사용되는 렌더링 확장 프로그램별 장치 정보 설정의 이름입니다( *Format* 매개 변수에 대한 설명 참조). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 장치 정보 설정을 사용할 수 있습니다. `…&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 장치 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](../reporting-services/device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_reportserver"></a> 보고서 서버 명령(rs:)  
  보고서 서버 명령은 *rs:* 접두사가 추가되며 보고서 서버를 대상 지정하는 데 사용:  
@@ -227,7 +232,7 @@ caps.handback.revision: 48
   
      기본값은 **HTML5**입니다. 자세한 내용은 [Export a Report Using URL Access](../reporting-services/export-a-report-using-url-access.md)를 참조하세요.  
   
-     전체 목록은 보고서 서버 rsreportserver.config 파일의 **\<Render>** 확장 섹션을 참조하세요.  파일을 찾을 위치는 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
+     전체 목록을 보려면를 참조 하십시오.는  **\<렌더링 >** 보고서 서버 rsreportserver.config 파일의 확장명 섹션.  파일을 찾을 위치는 [RsReportServer.config Configuration File](../reporting-services/report-server/rsreportserver-config-configuration-file.md)을 참조하세요.  
   
      예를 들어 **Native** 모드 보고서 서버에서 직접 보고서 PDF 복사본을 가져오는 경우 다음을 사용:  
   
@@ -357,15 +362,15 @@ caps.handback.revision: 48
   
     -   32(0x20): **ATOM 피드** 단추  
   
-    -   64(0x40): **동작**의 **인쇄** 메뉴 옵션  
+    -   64(0x40): **동작** 의 **인쇄**메뉴 옵션  
   
-    -   128(0x80): **동작**의 **내보내기** 하위 메뉴  
+    -   128(0x80): **동작** 의 **내보내기**하위 메뉴  
   
-    -   256(0x100: **동작**의 **보고서 작성기로 열기** 메뉴 옵션  
+    -   256(0x100: **동작** 의 **보고서 작성기로 열기**메뉴 옵션  
   
-    -   512(0x200: **동작**의 **구독** 메뉴 옵션  
+    -   512(0x200: **동작** 의 **구독**메뉴 옵션  
   
-    -   1024(0x400: **동작**의 **새 데이터 경고** 메뉴 옵션  
+    -   1024(0x400: **동작** 의 **새 데이터 경고**메뉴 옵션  
   
      예를 들어 **SharePoint** 모드에서는 **뒤로** 단추, 텍스트 검색 컨트롤, 페이지 탐색 컨트롤 및 **새로 고침** 단추만 표시합니다.  
   
@@ -373,8 +378,9 @@ caps.handback.revision: 48
     http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ToolBarItemsDisplayMode=15  
     ```  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스를 사용하여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
   
   
+

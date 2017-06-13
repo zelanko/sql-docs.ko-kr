@@ -1,24 +1,29 @@
 ---
-title: "여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "여러 셰이프 차트 보고서 작성기 SSRS에서 일관 된 색 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d52f68e9-2ba7-4bff-9053-4089e5164ab4
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 1f8ad4185acdcc86bd93367b23fab8be8ed95d9a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)
-  페이지를 매긴 보고서의 셰이프가 아닌 차트에서 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]는 차트 내 계열의 인덱스를 기반으로 색상표에서 새로운 색을 선택합니다. 예를 들어 차트의 첫 번째 계열은 색상표의 첫 번째 색에 매핑됩니다. 그러나 셰이프 차트의 경우 다르게 동작합니다. 셰이프 차트에서 색상표의 각 색은 데이터 집합의 데이터 요소와 매핑됩니다. 즉 데이터 요소 1은 색상표의 첫 번째 색과 매핑되며 데이터 요소 2는 두 번째 색 등의 형태로 매핑됩니다.  
+# <a name="specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs"></a>여러 셰이프 차트에 일관된 색 지정(보고서 작성기 및 SSRS)
+  페이지를 매긴 보고서의 셰이프가 아닌 차트에서 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 는 차트 내 계열의 인덱스를 기반으로 색상표에서 새로운 색을 선택합니다. 예를 들어 차트의 첫 번째 계열은 색상표의 첫 번째 색에 매핑됩니다. 그러나 셰이프 차트의 경우 다르게 동작합니다. 셰이프 차트에서 색상표의 각 색은 데이터 집합의 데이터 요소와 매핑됩니다. 즉 데이터 요소 1은 색상표의 첫 번째 색과 매핑되며 데이터 요소 2는 두 번째 색 등의 형태로 매핑됩니다.  
   
  데이터 요소에 값이 없는 경우 셰이프 차트에 표시되지 않습니다. 즉, 데이터 요소에 색이 지정되는 과정이 생략됩니다. 예를 들어 요소 2에 값 0이 있는 경우 요소 1은 색상표의 첫 번째 색에 매핑되고 요소 3은 색상표의 두 번째 색에 매핑됩니다. 이러한 방법을 사용하면 원형 차트의 데이터 집합에서 비어 있는 요소에 대해 불필요하게 색상표 색을 사용하지 않아도 되므로 비어 있는 요소를 그리지 않아도 되는 경우 유용합니다.  
   
@@ -29,7 +34,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 테이블 또는 행렬에서 여러 스파크라인 셰이프 차트에 일관된 색을 지정하려면  
+## <a name="to-specify-consistent-colors-across-multiple-sparkline-shape-charts-in-a-table-or-matrix"></a>테이블 또는 행렬에서 여러 스파크라인 셰이프 차트에 일관된 색을 지정하려면  
   
 1.  차트를 클릭하여 차트 데이터 창을 표시합니다.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
   
 3.  일반 탭의 **다음 위치의 그룹 동기화** 상자에서 색을 동기화할 범주의 이름을 클릭하고 **확인**을 클릭합니다.  
   
-## 여러 셰이프 차트에 일관된 색을 지정하려면  
+## <a name="to-specify-consistent-colors-across-multiple-shape-charts"></a>여러 셰이프 차트에 일관된 색을 지정하려면  
   
 1.  보고서 본문 바깥쪽을 마우스 오른쪽 단추로 클릭하고 **보고서 속성**을 선택합니다.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
 4.  셰이프 차트를 마우스 오른쪽 단추로 클릭하고 **계열 속성**을 선택합니다.  
   
-5.  **채우기**에서 **식**(*fx*) 단추를 클릭하여 **색** 속성에 대한 식을 편집합니다.  
+5.  **채우기**에서 **식** (*fx*) 단추를 클릭하여 **색** 속성에 대한 식을 편집합니다.  
   
 6.  다음 식을 입력합니다. 여기서 "MyCategoryField"는 **범주 그룹** 영역에 표시되는 필드입니다.  
   
@@ -73,9 +78,9 @@ caps.handback.revision: 8
     =Code.GetColor(Fields!MyCategoryField)  
     ```  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-bevel-emboss-and-texture-styles-to-a-chart-report-builder-and-ssrs.md)   
+ [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [색상표를 사용하여 차트에 대한 색 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [차트에 빈 요소 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)   
  [셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   

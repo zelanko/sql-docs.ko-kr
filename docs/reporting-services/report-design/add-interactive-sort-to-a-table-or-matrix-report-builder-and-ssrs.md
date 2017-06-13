@@ -1,26 +1,31 @@
 ---
-title: "테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10121"
-  - "sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1"
+title: "테이블 또는 행렬 (보고서 작성기 및 SSRS)에 대화형 정렬 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10121"
+- sql13.rtp.rptdesigner.textboxproperties.intrctvsort.f1
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab2138bdee0abc064ae1fabb06ef04ed3c490170
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
+# <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>테이블 또는 행렬에 대화형 정렬 추가(보고서 작성기 및 SSRS)
   대화형 정렬 단추를 추가하면 사용자가 테이블 및 행렬에서 행 및 열의 정렬 순서를 변경할 수 있습니다. 이 기능은 HTML처럼 사용자 상호 작용을 지원하는 랜더링 형식에서만 지원됩니다.  
   
  대화형 정렬 단추를 만들 때는 정렬 대상, 정렬 기준 및 정렬을 적용할 범위를 지정해야 합니다. 예를 들어 고객의 성을 기준으로 정보 행을 정렬하거나, 판매량을 기준으로 범주 그룹 내 하위 범주 그룹 값을 정렬하거나, 합계로 결합된 범주 및 하위 범주 그룹 값을 정렬할 수 있습니다.  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 ##  <a name="SortingDetailRows"></a> 그룹이 없는 테이블의 정보 행 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 테이블의 해당 열에 표시된 값을 기준으로 정보 행을 정렬할 수 있습니다.  
   
-#### 대화형 정렬 단추를 열 머리글에 추가하여 값을 기준으로 테이블을 정렬하려면  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-the-table-by-value"></a>대화형 정렬 단추를 열 머리글에 추가하여 값을 기준으로 테이블을 정렬하려면  
   
 1.  보고서 디자인 뷰의 그룹이 없는 테이블에서 대화형 정렬 단추를 추가할 열 머리글의 입력란을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
@@ -62,12 +67,12 @@ caps.handback.revision: 7
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="SortingTopLevelParent"></a> 테이블 또는 행렬의 최상위 부모 행 그룹 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 테이블 또는 행렬의 해당 열에 표시된 값을 기준으로 부모 그룹 행을 정렬할 수 있습니다. 자식 그룹의 순서는 변경되지 않고 그대로 유지됩니다.  
   
-#### 대화형 정렬 단추를 열 머리글에 추가하여 그룹을 정렬하려면  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-groups"></a>대화형 정렬 단추를 열 머리글에 추가하여 그룹을 정렬하려면  
   
 1.  보고서 디자인 뷰의 테이블 또는 행렬에서 대화형 정렬 단추를 추가할 그룹의 열 머리글에 있는 입력란을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
@@ -86,12 +91,12 @@ caps.handback.revision: 7
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="SortingChildGroups"></a> 그룹의 자식 그룹 또는 정보 행 정렬  
  대화형 정렬 단추를 그룹 머리글 행에 추가하면 사용자가 부모 그룹의 자식 그룹 값을 정렬하거나 가장 안쪽에 있는 자식 그룹의 정보 행을 정렬할 수 있습니다.  
   
-#### 대화형 정렬 단추를 그룹 행 머리글의 입력란에 추가하여 자식 그룹 또는 정보 행을 정렬하려면  
+#### <a name="to-add-an-interactive-sort-button-to-a-text-box-in-a-group-row-header-to-sort-child-groups-or-detail-rows"></a>대화형 정렬 단추를 그룹 행 머리글의 입력란에 추가하여 자식 그룹 또는 정보 행을 정렬하려면  
   
 1.  보고서 디자인 뷰에서 대화형 정렬 단추를 추가할 그룹 헤더 행의 입력란을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 7
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="SortingMultipleRowGroups"></a> 복잡한 그룹 식을 기준으로 행 정렬  
  대화형 정렬 단추를 열 머리글에 추가하면 사용자가 열 머리글을 클릭하고 결합된 부모 및 자식 그룹을 정렬할 수 있습니다. 이러한 결과를 얻으려면 그룹 식을 두 그룹의 복합 형태로 변경해야 합니다. 예를 들어 상점에 대한 행렬에 색 및 크기로 그룹화된 품목의 총 재고량이 표시된다고 가정하겠습니다. 색 및 크기 각각에 대해 별도의 그룹을 만들지 않고 색 및 크기의 조합을 기준으로 행을 정렬하려면 색 및 크기의 조합을 기준으로 그룹을 정의할 수 있습니다. 그룹 식을 정의하는 방법에 대한 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
@@ -118,7 +123,7 @@ caps.handback.revision: 7
   
  일반적으로 여러 그룹을 기반으로 하는 행을 정렬할 때는 열 그룹에 관계없이 정렬된 행에 대한 합계를 보고자 합니다. 이 절차에서는 열 그룹이 사용되지 않습니다. 먼저 행렬을 추가하고 기본 열 그룹을 제거합니다. 또는 테이블을 추가하고 세부 정보 그룹을 제거할 수 있습니다.  
   
-#### 대화형 정렬 단추를 열 머리글에 추가하여 여러 그룹을 정렬하려면  
+#### <a name="to-add-an-interactive-sort-button-to-a-column-header-to-sort-multiple-groups"></a>대화형 정렬 단추를 열 머리글에 추가하여 여러 그룹을 정렬하려면  
   
 1.  보고서 디자인 뷰에서 행렬을 추가합니다.  
   
@@ -166,14 +171,14 @@ caps.handback.revision: 7
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다. 각 값이 고유의 열로 표시되기는 하지만 그룹 식의 결합된 값을 기준으로 행렬이 정렬됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="SynchronizingSortOrder"></a> 여러 데이터 영역에 대한 정렬 순서 동기화  
  대화형 정렬 단추를 추가하면 사용자가 한 개의 정렬 단추를 클릭하여 여러 데이터 영역을 정렬할 수 있습니다. 대화형 정렬 단추를 만들 때 동일한 보고서 데이터 집합을 기반으로 여러 데이터 영역에 대한 정렬을 동기화할지 여부를 지정할 수 있습니다. 예를 들어 보고서에는 행렬과 그래픽으로 데이터를 표시하는 차트가 포함될 수 있습니다. 사용자가 행렬에서 행의 정렬 순서를 변경하면 차트도 자동으로 동일한 정렬 순서로 표시됩니다.  
   
  정렬 순서를 동기화하려면 정렬할 데이터 영역 또는 그룹에 대해 같은 정렬 식을 사용해야 하며 두 데이터 영역에 대해 상위 항목이 되는 정렬 범위를 정의해야 합니다. 상위 항목은 두 데이터 영역이 연결된 데이터 집합 또는 두 데이터 영역이 들어 있는 포함 데이터 영역일 수 있습니다. 예를 들어 보고서에 같은 데이터 집합의 데이터를 표시하는 동시에 목록에 포함되어 있는 행렬과 차트가 모두 있다고 가정합니다. 정렬 동작을 동기화하려면 행렬의 열에 대화형 정렬을 지정하고 목록에 대한 범위를 설정해야 합니다. 사용자가 행렬을 정렬하면 차트도 함께 정렬됩니다.  
   
-#### 행렬 데이터 영역의 대화형 정렬 단추에 대한 차트와 정렬 순서를 동기화하려면  
+#### <a name="to-synchronize-sort-order-with-a-chart-for-an-interactive-sort-button-on-a-matrix-data-region"></a>행렬 데이터 영역의 대화형 정렬 단추에 대한 차트와 정렬 순서를 동기화하려면  
   
 1.  보고서 디자인 뷰에서 보고서에 행렬을 추가합니다.  
   
@@ -215,9 +220,9 @@ caps.handback.revision: 7
   
  정렬 동작을 확인하려면 **실행** 을 클릭하여 보고서를 미리 본 후 대화형 정렬 단추를 클릭합니다. 각 값이 고유의 열로 표시되기는 하지만 그룹 식의 결합된 값을 기준으로 행렬이 정렬됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
+ ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-## 관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)   
  [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   

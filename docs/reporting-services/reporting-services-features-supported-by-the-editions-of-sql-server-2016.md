@@ -1,34 +1,41 @@
 ---
-title: "SQL Server 2016 버전에서 지원하는 Reporting Services 기능 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
+title: "Reporting Services에서 SQL server 2016 버전에서 지 원하는 기능 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
 ms.assetid: 39f03d2d-6e48-4b34-a9d3-07f86313b937
 caps.latest.revision: 3
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 3
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server 2016 버전에서 지원하는 Reporting Services 기능
-이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다.  
+
+# <a name="reporting-services-features-supported-by-the-editions-of-sql-server-2016"></a>SQL Server 2016 버전에서 지원하는 Reporting Services 기능
+
+이 항목에서는 SQL Server 2016의 다양 한 버전에서 지 원하는 기능에 대 한 세부 정보를 제공 합니다.  
   
  SQL Server 평가 버전은 180일 동안 시험용으로 사용할 수 있습니다.  
   
- 최신 릴리스 정보는 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)를 참조하세요. 새로운 기능에 대한 최신 정보는 [Reporting Services(SSRS)의 새로운 기능](What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)을 참조하세요.
+ 최신 릴리스 정보는 [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md)를 참조하세요. 새로운 기능에 대한 최신 정보는 [Reporting Services(SSRS)의 새로운 기능](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)을 참조하세요.
     
  **SQL Server 2016을 사용해 보세요.**    
     
- > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
+ > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**(평가 센터에서 SQL Server 2016 다운로드)    
     
-> ![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된SQL Server 2016으로 가상 컴퓨터를 스핀업](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)**    
+> ![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)(SQL Server 2016이 이미 설치된 가상 컴퓨터 실행)**    
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterprise Edition을 참조하세요.
 
@@ -70,11 +77,11 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 |경고<sup>2</sup>|예||||||예|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|예||||||예|  
   
- <sup>1</sup> SQL Server 2016 Reporting Services(SSRS)에서 지원하는 데이터 원본에 대한 자세한 내용은 [Reporting Services에서 지원하는 데이터 원본&#40;SSRS&#41;](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
+ <sup>1</sup> 지원 되는 데이터 원본에서 SQL Server 2016 Reporting Services (SSRS)에 대 한 자세한 내용은 참조 하십시오. [Sources Supported by Reporting services&#40; Ssrs&#41; ](../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
  <sup>2</sup> SharePoint 모드의 Reporting Services가 필요합니다. 자세한 내용은 [Reporting Services SharePoint 모드 설치](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조하세요.  
   
-## 보고서 서버 데이터베이스 서버 버전 요구 사항  
+## <a name="report-server-database-server-edition-requirements"></a>보고서 서버 데이터베이스 서버 버전 요구 사항  
  보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 특정 버전에 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Reporting Services 버전|데이터베이스 호스팅에 사용할 데이터베이스 엔진 인스턴스 버전|  
@@ -95,11 +102,14 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 |모바일 장치용 Power BI 앱(iOS, Windows 10, Android)(.rsmobile)|예||||||예|  
   
 > [!NOTE]  
-> 1.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전에서 호스트되는 데이터에 액세스할 수 있습니다.  
-> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] 은 모바일 보고서를 만들기 위한 단일 지점입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 연결하여 데이터 원본에 액세스하고 보고서를 만듭니다. 그런 다음 조직의 다른 사용자가 서버 또는 모바일 장치에 액세스할 수 있도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 게시합니다. 로컬 데이터 원본과 함께 독립적으로 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]를 사용할 수도 있습니다.  
-> 3.  클라우드에서 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 온-프레미스 또는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]를 사용하든 보고서 배달 솔루션으로 둘 다를 사용하든 하나의 모바일 앱만 있으면 모바일 장치의 대시보드 및 모바일 보고서에 액세스할 수 있습니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 앱은 Windows, iOS 또는 Android 앱 스토어에서 다운로드할 수 있습니다.  
+> 1.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 도구는 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스트되는 데이터에 액세스할 수 있습니다.  
+> 2.  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] 은 모바일 보고서를 만들기 위한 단일 지점입니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 연결하여 데이터 원본에 액세스하고 보고서를 만듭니다. 그런 다음 조직의 다른 사용자가 서버 또는 모바일 장치에 액세스할 수 있도록 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 서버에 게시합니다. 로컬 데이터 원본과 함께 독립적으로 [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)] 를 사용할 수도 있습니다.  
+> 3.  클라우드에서  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 온-프레미스 또는 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 를 사용하든 보고서 배달 솔루션으로 둘 다를 사용하든 하나의 모바일 앱만 있으면 모바일 장치의 대시보드 및 모바일 보고서에 액세스할 수 있습니다. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 앱은 Windows, iOS 또는 Android 앱 스토어에서 다운로드할 수 있습니다.  
 
-## 관련 항목:  
- [SQL Server 2016 버전에서 지원하는 기능](Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)  
- [SQL Server 2016 제품 사양](../Topic/Product%20Specifications%20for%20SQL%20Server%202016.md)   
- [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+## <a name="next-steps"></a>다음 단계
+
+[SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+[SQL Server 2016 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)  
+[SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md) 
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

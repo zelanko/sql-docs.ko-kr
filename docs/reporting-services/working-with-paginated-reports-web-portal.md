@@ -1,25 +1,33 @@
 ---
-title: "페이지를 매긴 보고서 사용(웹 포털) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "페이지 매긴된 보고서 (웹 포털) 사용 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 5
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 222b9ae4ca3ff3f1dd1f08205a502473fea07da4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 페이지를 매긴 보고서 사용(웹 포털)
+# <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 웹 포털 내에서 페이지를 매긴 보고서의 속성을 보고 관리할 수 있습니다. 웹 포털에서 페이지를 매긴 보고서를 만들거나 편집할 수 있는 보고서 작성기를 시작할 수 있습니다.  
    
-## 페이지를 매긴 보고서 만들기  
+## <a name="create-a-paginated-report"></a>페이지를 매긴 보고서 만들기  
   
 새 공유 데이터 집합을 만들려면 다음을 수행합니다.  
   
@@ -33,33 +41,34 @@ caps.handback.revision: 5
   
 4.  보고서를 작성한 후 왼쪽 위에 있는 **저장** 아이콘을 선택하여 페이지를 매긴 보고서를 보고서 서버에 다시 저장합니다.  
   
-## 기존 페이지를 매긴 보고서 관리  
+## <a name="manage-an-existing-paginated-report"></a>기존 페이지를 매긴 보고서 관리  
   
 기존 페이지를 매긴 보고서를 관리하려면 다음을 수행합니다.  
   
-> [!NOTE] 페이지를 매긴 보고서가 폴더에 표시되지 않으면 페이지를 매긴 보고서를 보고 있는지 확인합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **페이지를 매긴 보고서**가 선택되어 있는지 확인합니다.  
+> [!NOTE]
+> 페이지를 매긴 보고서가 폴더에 표시되지 않으면 페이지를 매긴 보고서를 보고 있는지 확인합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **페이지를 매긴 보고서** 가 선택되어 있는지 확인합니다.  
   
-1.  관리하려는 데이터 집합의 **줄임표(…)**를 선택합니다.  
+1.  선택 된 **줄임표 (...)**  관리 하려는 데이터 집합에 대 한 합니다.  
       
     ![ssRSWebPortal-manage-report1](../reporting-services/media/ssrswebportal-manage-report1.png)  
   
-2.  **관리**를 선택하여 편집 화면으로 이동합니다.  
+2.  **관리** 를 선택하여 편집 화면으로 이동합니다.  
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## 속성  
+## <a name="properties"></a>속성  
   
-속성 화면에서 페이지를 매긴 보고서의 **이름**과 **설명**을 변경할 수 있습니다. 또한 **삭제**, **이동**, **링크된 보고서 만들기**, **보고서 작성기에서 편집**, **다운로드** 또는 **대체**할 수 있습니다.  
+속성 화면에서 페이지를 매긴 보고서의 **이름** 과 **설명** 을 변경할 수 있습니다. 또한 **삭제**, **이동**, **링크된 보고서 만들기**, **보고서 작성기에서 편집**, **다운로드** 또는 **대체**할 수 있습니다.  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## 매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 페이지를 매긴 보고서의 기존 매개 변수를 수정할 수 있습니다. 새 매개 변수를 추가하려면 보고서 작성기 또는 SQL Server Data Tools에서 보고서를 편집해야 합니다.  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## 데이터 원본  
+## <a name="data-source"></a>데이터 원본  
 공유 데이터 원본을 가리키거나 사용자 지정 데이터 원본에 대한 연결 정보를 입력할 수 있습니다.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -82,7 +91,8 @@ caps.handback.revision: 5
   
 자격 증명을 가져오는 방법을 결정하는 옵션을 지정할 수 있습니다.  
   
-> [!IMPORTANT] 연결 문자열에 자격 증명이 제공된 경우 이 섹션에서 제공한 옵션 및 값은 무시됩니다. 연결 문자열에서 자격 증명을 지정하는 경우 값은 이 페이지를 보는 모든 사용자에게 일반 텍스트로 표시됩니다.  
+> [!IMPORTANT]
+> 연결 문자열에 자격 증명이 제공된 경우 이 섹션에서 제공한 옵션 및 값은 무시됩니다. 연결 문자열에서 자격 증명을 지정하는 경우 값은 이 페이지를 보는 모든 사용자에게 일반 텍스트로 표시됩니다.  
   
 **보고서를 보는 사용자로**  
   
@@ -100,7 +110,7 @@ caps.handback.revision: 5
   
 계정이 Windows 자격 증명인 경우 지정하는 계정에는 보고서에 사용되는 데이터 원본을 호스트하는 컴퓨터에 대한 로컬 로그온 권한이 있어야 합니다.  
   
-**이러한 자격 증명을 사용하여 로그인하지만 보고서를 보는 사용자를 가장하도록 시도합니다.**를 선택하면 데이터 원본이 가장을 지원하는 경우에만 자격 증명의 위임을 허용합니다. SQL Server 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다. Analysis Services의 경우 이 옵션은 EffectiveUserName을 사용합니다.  
+**이러한 자격 증명을 사용하여 로그인하지만 보고서를 보는 사용자를 가장하도록 시도합니다.** 를 선택하면 데이터 원본이 가장을 지원하는 경우에만 자격 증명의 위임을 허용합니다. SQL Server 데이터베이스의 경우 이 옵션은 SETUSER 함수를 설정합니다. Analysis Services의 경우 이 옵션은 EffectiveUserName을 사용합니다.  
   
 **보고서를 보는 사용자에게 자격 증명 요청**  
   
@@ -114,36 +124,39 @@ caps.handback.revision: 5
   
 이 옵션을 사용하려면 보고서 서버를 위한 무인 실행 계정을 먼저 구성해야 합니다. 무인 실행 계정은 다른 자격 증명 과정을 사용할 수 없는 경우 외부 데이터 원본에 연결하는 데 사용됩니다. 이 옵션을 지정하고 계정을 구성하지 않으면 보고서 데이터 원본에 연결하지 못하고 보고서가 처리되지 않습니다. 이 계정에 대한 자세한 내용은 [무인 실행 계정 구성(SSRS 구성 관리자)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
-## 구독  
-Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. [자세히 알아보기]  
+## <a name="subscriptions"></a>구독  
+Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 자세한 내용은 참조 [구독 작업](working-with-subscriptions-web-portal.md)합니다.
   
-![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)  
+![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## 종속 항목  
-종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 각 항목에서 **줄임표(...)**를 선택하여 이러한 항목을 나중에 관리할 수 있습니다.  
+## <a name="dependent-items"></a>종속 항목  
+종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 그런 다음 선택할 수는 **줄임표 (...)**  이러한 항목을 관리 하려면 각 항목에 추가 합니다.  
   
-## 캐싱  
+## <a name="caching"></a>캐싱  
 페이지를 매긴 보고서의 데이터 캐싱에 대한 옵션도 제공됩니다. 간단한 선택부터 시작할 수 있습니다.  
   
-1.  **항상 최신 데이터로 이 보고서 실행**은 보고서를 실행할 때마다 데이터 원본에 대한 쿼리를 실행합니다. 이렇게 하면 가장 최신 데이터를 포함하는 요청 시 실행 보고서가 됩니다. 보고서를 열 때마다 보고서의 새 인스턴스가 생성되고 새 쿼리의 결과를 포함하게 됩니다. 이 방법을 사용하면 10명의 사용자가 동시에 보고서를 여는 경우 10개의 쿼리가 처리되도록 데이터 원본에 보내집니다.  
+1.  **항상 최신 데이터로 이 보고서 실행** 은 보고서를 실행할 때마다 데이터 원본에 대한 쿼리를 실행합니다. 이렇게 하면 가장 최신 데이터를 포함하는 요청 시 실행 보고서가 됩니다. 보고서를 열 때마다 보고서의 새 인스턴스가 생성되고 새 쿼리의 결과를 포함하게 됩니다. 이 방법을 사용하면 10명의 사용자가 동시에 보고서를 여는 경우 10개의 쿼리가 처리되도록 데이터 원본에 보내집니다.  
   
-2.  **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용**은 데이터 임시 사본을 캐시에 보관하여 나중에 사용할 수 있도록 합니다. 캐시를 사용하면 데이터 집합 쿼리를 다시 실행하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다. 이 방법을 사용하는 경우 10명의 사용자가 보고서를 열면 첫 번째로 요청된 보고서만 데이터 원본에 대한 쿼리가 됩니다. 보고서는 나중에 캐시되며 나머지 9명의 사용자는 캐시된 보고서를 볼 수 있습니다.  
+2.  **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 은 데이터 임시 사본을 캐시에 보관하여 나중에 사용할 수 있도록 합니다. 캐시를 사용하면 데이터 집합 쿼리를 다시 실행하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다. 이 방법을 사용하는 경우 10명의 사용자가 보고서를 열면 첫 번째로 요청된 보고서만 데이터 원본에 대한 쿼리가 됩니다. 보고서는 나중에 캐시되며 나머지 9명의 사용자는 캐시된 보고서를 볼 수 있습니다.  
   
-3.  **항상 사전 생성된 스냅숏에 대해 이 보고서 실행**은 지정된 기간 동안 보고서 레이아웃 및 데이터를 캐시합니다. 보고서를 보고서 스냅숏으로 실행하면 임의의 시간에(예: 예약된 백업 시간 동안) 보고서가 실행되지 않도록 할 수 있습니다. 일정에 따라 스냅숏은 새로 고칠 수 있습니다. [자세히 알아보기]  
+3.  **항상 사전 생성된 스냅숏에 대해 이 보고서 실행** 은 지정된 기간 동안 보고서 레이아웃 및 데이터를 캐시합니다. 보고서를 보고서 스냅숏으로 실행하면 임의의 시간에(예: 예약된 백업 시간 동안) 보고서가 실행되지 않도록 할 수 있습니다. 일정에 따라 스냅숏은 새로 고칠 수 있습니다. [자세히 알아보기]  
   
 ![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
-**이 보고서의 복사본을 캐시하고 사용 가능할 때 사용**을 선택하면 몇 가지 옵션이 더 제공됩니다.  
+**이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 을 선택하면 몇 가지 옵션이 더 제공됩니다.  
   
 ![ssRSWebPortal-report-caching2](../reporting-services/media/ssrswebportal-report-caching2.png)  
+
+자세한 내용은 참조 [스냅샷 작업](working-with-snapshots-web-portal.md)합니다.
   
-### 캐시 만료  
+### <a name="cache-expiration"></a>캐시 만료  
   
 일정 시간이 지난 후에 페이지를 매긴 보고서의 캐시를 만료시킬지 또는 예약을 통해 만료시킬지를 제어할 수 있습니다. 공유 일정을 사용할 수 있습니다.  
   
-> [!NOTE] 이 옵션은 캐시를 새로 고치지 않습니다.  
+> [!NOTE]
+> 이 옵션은 캐시를 새로 고치지 않습니다.  
   
-### 캐시 새로 고침 계획  
+### <a name="cache-refresh-plans"></a>캐시 새로 고침 계획  
   
 캐시 새로 고침 계획을 사용하여 페이지를 매긴 보고서의 데이터 임시 사본으로 캐시를 사전에 로드할 일정을 만들 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.  
    
@@ -157,11 +170,12 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 ![ssRSWebPortal-report-caching3](../reporting-services/media/ssrswebportal-report-caching3.png)  
   
-> [!NOTE] 캐시 새로 고침 계획을 만들려면 SQL Server 에이전트를 실행해야 합니다.  
+> [!NOTE]
+> 캐시 새로 고침 계획을 만들려면 SQL Server 에이전트를 실행해야 합니다.  
   
 그런 다음 나열된 계획을 **편집** 또는 **삭제** 할 수 있습니다. **기존 계획에서 새로 만들기** 옵션은 캐시 새로 고침 계획을 하나 선택한 경우에만 설정됩니다. 이 옵션은 원래 계획에서 복사하여 새로운 새로 고침 옵션을 만듭니다. 캐시 새로 고침 계획 페이지의 정보가 선택한 계획의 정보로 채워져서 열립니다. 그런 다음 새로 고침 계획 옵션을 수정하고 새로운 설명과 함께 계획을 저장할 수 있습니다.  
   
-## 기록 스냅숏  
+## <a name="history-snapshots"></a>기록 스냅숏  
   
 기록 스냅숏 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅숏을 볼 수 있습니다. 설정된 옵션에 따라 보고서 기록에 최근 스냅숏만 포함되어 있을 수 있습니다.  
   
@@ -171,13 +185,18 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 보고서 기록 스냅숏을 클릭하면 이 스냅숏을 볼 수 있습니다. 보고서 기록에 표시되는 스냅숏은 스냅숏이 만들어진 날짜와 시간으로만 구별됩니다. 스냅숏이 예약된 작업에 따라 생성된 것인지 수동 작업으로 생성된 것인지는 시각적으로 구분할 수 없습니다.  
   
-## 보안  
+## <a name="security"></a>보안  
 보안 속성 페이지를 사용하여 보고서에 대한 액세스를 지정하는 보안 설정을 보거나 수정할 수 있습니다. 이 페이지는 보안 권한이 있는 항목에 대해 사용할 수 있습니다.  
   
 항목에 대한 액세스는 그룹 또는 사용자가 수행할 수 있는 태스크를 지정하는 역할 할당을 통해 정의됩니다. 역할 할당은 하나의 사용자 또는 그룹 이름과 태스크 모음을 지정하는 하나 이상의 역할 정의로 구성됩니다.  
   
 **항목 보안 편집**  
   
-현재 항목에 대한 보안 정의 방법을 변경하려면 선택합니다.  
-  
-  
+현재 항목에 대한 보안 정의 방법을 변경하려면 선택합니다.
+
+## <a name="next-steps"></a>다음 단계
+
+[웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
+[공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

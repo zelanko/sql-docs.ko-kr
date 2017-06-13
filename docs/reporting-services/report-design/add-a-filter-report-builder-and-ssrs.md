@@ -1,23 +1,28 @@
 ---
-title: "필터 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "추가 필터 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10ae54e7-0e8a-4dff-995d-05516c51d076
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 필터 추가(보고서 작성기 및 SSRS)
+# <a name="add-a-filter-report-builder-and-ssrs"></a>필터 추가(보고서 작성기 및 SSRS)
   계산 또는 표시 내용에 특정 값을 포함하거나 제외하려는 경우 데이터 집합, 데이터 영역 또는 그룹에 필터를 추가할 수 있습니다. 필터는 런타임에 데이터 집합에 대해 가장 먼저 적용된 다음 데이터 영역과 그룹(그룹 계층 구조에 대해 하향식으로)에 차례로 적용됩니다. 테이블, 행렬 또는 목록에서 행 그룹, 열 그룹 및 인접 그룹의 필터는 독립적으로 적용됩니다. 또한 차트에서 범주 그룹 및 계열 그룹의 필터는 독립적으로 적용됩니다.  
   
  필터를 추가하려면 하나 이상의 필터 수식을 지정해야 합니다. 필터 수식은 필터링할 데이터를 식별하는 식, 연산자 및 비교할 값으로 구성됩니다. 필터링된 데이터와 값의 데이터 형식은 일치해야 합니다. 데이터 집합이나 데이터 영역에는 집계 값에 대한 필터링이 지원되지 않습니다.  
@@ -29,11 +34,11 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 데이터 영역에 대해 필터를 설정하려면  
+### <a name="to-set-a-filter-on-a-data-region"></a>데이터 영역에 대해 필터를 설정하려면  
   
 1.  **디자인** 뷰에서 보고서를 엽니다.  
   
-2.  디자인 화면에서 데이터 영역을 선택한 다음 *\<data region>***속성**을 마우스 오른쪽 단추로 클릭합니다. 계기의 경우 **계기 패널 속성**을 선택합니다. *\<data region>***속성** 대화 상자가 열립니다.  
+2.  디자인 화면의 데이터 영역을 선택 하 고 마우스 오른쪽 단추로 클릭 한 다음  *\<데이터 영역 >***속성**합니다. 계기의 경우 **계기 패널 속성**을 선택합니다. *\<데이터 영역 >***속성** 대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  테이블릭스 데이터 영역에서 모퉁이 셀이나 행 또는 열 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 테이블릭스 행 또는 열 그룹에 대해 필터를 설정하려면  
+### <a name="to-set-a-filter-on-a-tablix-row-or-column-group"></a>테이블릭스 행 또는 열 그룹에 대해 필터를 설정하려면  
   
 1.  **디자인** 뷰에서 보고서를 엽니다.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 차트 범주 그룹에 대해 필터를 설정하려면  
+### <a name="to-set-a-filter-on-a-chart-category-group"></a>차트 범주 그룹에 대해 필터를 설정하려면  
   
 1.  **디자인** 뷰에서 보고서를 엽니다.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 차트 계열 그룹에 대해 필터를 설정하려면  
+### <a name="to-set-a-filter-on-a-chart-series-group"></a>차트 계열 그룹에 대해 필터를 설정하려면  
   
 1.  **디자인** 뷰에서 보고서를 엽니다.  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 8
   
 10. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add dataset filters, data region filters, and group filters.md)   
+## <a name="see-also"></a>관련 항목:  
+ [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   

@@ -1,30 +1,35 @@
 ---
-title: "Reporting Services 보고서 서버(기본 모드) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services 관리"
-  - "관리 [Reporting Services]"
-  - "Reporting Services, 관리"
+title: "Reporting Services 보고서 서버 (기본 모드) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- administering Reporting Services
+- administering [Reporting Services]
+- Reporting Services, administration
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 caps.latest.revision: 24
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 24
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 004db2495533a1155b58a49ac0af96943a997181
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 보고서 서버(기본 모드)
+# <a name="reporting-services-report-server-native-mode"></a>Reporting Services 보고서 서버(기본 모드)
   기본 모드에 대해 구성된 보고서 서버는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 요소를 통해 모든 처리 및 관리 기능을 배타적으로 제공하는 응용 프로그램 서버로 실행됩니다.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자 중 하나를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 관리할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 기본 모드에서 보고서 서버를 관리할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 보고서 관리자 중 하나를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 관리할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 기본 모드에서 보고서 서버를 관리할 수 있습니다.  
   
  보고서 서버가 SharePoint 모드용으로 구성된 경우 SharePoint 사이트의 내용 관리 페이지를 사용하여 보고서, 공유 데이터 원본 및 다른 보고서 서버 항목을 관리해야 합니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 24
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 내용 관리는 보고서, 모델, 폴더, 리소스 및 공유 데이터 원본의 관리를 의미합니다. 이러한 모든 항목은 속성 및 보안 설정을 통해 개별적으로 관리할 수 있습니다. 모든 항목을 보고서 서버 폴더 네임스페이스의 다른 위치로 이동할 수 있습니다. 항목을 효과적으로 관리하려면 내용 관리자가 수행하는 태스크에 대한 지식이 필요합니다.  
   
 > [!NOTE]  
->  내용 관리는 보고서 서버 관리와 다릅니다. 보고서 서버가 실행되는 환경을 관리하는 방법은 [보고서 서버 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)를 참조하세요.  
+>  내용 관리는 보고서 서버 관리와 다릅니다. 보고서 서버가 실행되는 환경을 관리하는 방법은 [보고서 서버 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)를 참조하세요.  
   
  내용 관리에는 다음 태스크가 포함됩니다.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 24
   
  보고서에서 이미지 리소스를 사용하려면 해당 이미지 파일을 프로젝트에 추가하고 보고서와 함께 게시합니다. 이미지가 게시되면 보고서의 이미지 참조가 보고서 서버의 리소스를 가리키도록 업데이트한 다음 보고서만 다시 게시하여 변경 내용을 저장할 수 있습니다. 이후에 리소스를 다시 게시하여 보고서와 독립적으로 이미지를 업데이트할 수 있습니다. 보고서는 보고서 서버에서 사용할 수 있는 가장 최신 버전의 이미지를 사용합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

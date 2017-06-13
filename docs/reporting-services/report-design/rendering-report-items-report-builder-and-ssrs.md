@@ -1,29 +1,34 @@
 ---
-title: "보고서 항목 렌더링(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "렌더링 (보고서 작성기 및 SSRS) 보고서 항목 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a254c48e1639c95b1d93f180f1fdd00326a79ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 항목 렌더링(보고서 작성기 및 SSRS)
+# <a name="rendering-report-items-report-builder-and-ssrs"></a>보고서 항목 렌더링(보고서 작성기 및 SSRS)
   보고서 항목의 숫자, 크기 및 위치는 렌더러에서 보고서 본문에 페이지를 매기는 방식에 영향을 줍니다. 아래에는 다양한 보고서 항목이 렌더링되는 방식에 대해 설명되어 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 겹치는 보고서 항목  
+## <a name="overlapping-report-items"></a>겹치는 보고서 항목  
  겹치는 보고서 항목은 HTML, MHTML, Word, Excel에서 미리 보기로 지원되지 않으며 보고서 뷰어에서도 지원되지 않습니다. 겹치는 항목이 있는 경우 해당 항목은 이동됩니다. 겹치는 보고서 항목에는 다음과 같은 규칙이 적용됩니다.  
   
 -   보고서 항목 간에 세로로 겹치는 부분이 더 많은 경우 겹치는 항목 중 하나가 오른쪽으로 이동합니다. 가장 왼쪽에 있는 항목은 원래 위치에 유지됩니다.  
@@ -36,7 +41,7 @@ caps.handback.revision: 7
   
  겹치는 보고서 항목은 인쇄를 비롯한 하드 페이지 나누기 형식에서 지원됩니다.  
   
-## 표시 유형 및 보고서 항목  
+## <a name="visibility-and-report-items"></a>표시 유형 및 보고서 항목  
  보고서 항목이 기본적으로 숨겨지거나 표시되도록 할 수 있으며 식을 사용하는 경우 조건부로 숨겨지거나 표시되도록 할 수 있습니다. 또는 다른 보고서 항목을 클릭하여 표시 유형을 전환할 수도 있습니다.  
   
  보고서 항목을 렌더링하는 경우 다음과 같은 표시 유형 규칙이 적용됩니다.  
@@ -47,7 +52,7 @@ caps.handback.revision: 7
   
 -   다른 보고서 항목을 클릭하여 보고서 항목 및 해당 내용의 표시 유형을 전환할 수 있는 경우 보고서 항목이 처음 표시될 때만 해당 보고서 항목과 내용을 포함하도록 페이지 매김이 변경됩니다.  
   
-## 여러 보고서 항목을 단일 페이지에 함께 유지  
+## <a name="keeping-report-items-together-on-a-single-page"></a>여러 보고서 항목을 단일 페이지에 함께 유지  
  그룹으로 유지 또는 함께 연결 속성을 설정하여 보고서 내의 여러 보고서 항목을 암시적 또는 명시적으로 단일 페이지에 유지할 수 있습니다. 보고서 항목에 논리적 페이지 나누기가 없고 사용 가능한 페이지 영역보다 보고서 항목이 작은 경우 해당 보고서 항목은 항상 동일한 페이지에 렌더링됩니다. 보고서 항목이 시작되는 페이지 안에 보고서 항목의 모든 부분이 포함되지 않는 경우 해당 보고서 항목 앞에 하드 페이지 나누기가 삽입되어 해당 보고서 항목이 다음 페이지에서 시작됩니다. 소프트 페이지 나누기 렌더러의 경우 보고서 항목이 포함되도록 페이지 크기가 증가합니다.  
   
  보고서 항목이 항상 숨겨져 있으면 여러 항목을 같은 페이지에 유지하는 규칙이 무시됩니다.  
@@ -68,7 +73,7 @@ caps.handback.revision: 7
   
 -   테이블릭스 데이터 영역에서 표시 유형을 전환할 수 있는 보고서 항목  
   
-### 우선 순위 순서  
+### <a name="priority-order"></a>우선 순위 순서  
  페이지 크기 제한으로 인해 여러 보고서 항목을 같은 페이지에 유지하려는 규칙 간에 충돌이 발생할 수 있습니다. 충돌이 발생하는 경우 다음과 같은 우선 순위 순서를 사용하여 렌더링되는 여러 항목을 같은 페이지에 유지합니다.  
   
 -   선, 차트 및 이미지  
@@ -85,7 +90,7 @@ caps.handback.revision: 7
   
 -   명시적인 KeepTogether 속성이 **true**로 설정된 테이블릭스 데이터 영역  
   
-### 하위 보고서  
+### <a name="subreports"></a>하위 보고서  
  하위 보고서는 별도의 보고서 .rdl 파일에 정의된 다른 보고서를 포함하는 사각형으로 렌더링됩니다. 하위 보고서 파일을 부모 보고서에서 액세스할 수 있도록 하려면 먼저 해당 파일을 보고서 서버에 게시해야 합니다.  
   
  하위 보고서를 렌더링하는 경우 다음과 같은 규칙이 적용됩니다.  
@@ -104,10 +109,10 @@ caps.handback.revision: 7
   
  하위 보고서에 대한 자세한 내용은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

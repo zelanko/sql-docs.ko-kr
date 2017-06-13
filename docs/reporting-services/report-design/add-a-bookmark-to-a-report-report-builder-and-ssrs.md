@@ -1,35 +1,40 @@
 ---
-title: "보고서에 책갈피 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(보고서 작성기 및 SSRS) 보고서에 책갈피 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8b63dc6993525970f131b89ac6aea79f8a9c6e72
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서에 책갈피 추가(보고서 작성기 및 SSRS)
+# <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>보고서에 책갈피 추가(보고서 작성기 및 SSRS)
   사용자 지정된 목차를 제공하거나 보고서의 사용자 지정된 내부 탐색 링크를 제공하려는 경우 보고서에 책갈피 또는 책갈피 링크를 추가합니다. 일반적으로 각 테이블 또는 차트나 테이블 또는 행렬에 표시된 고유한 그룹 값 등 사용자를 안내하려는 보고서 위치에 책갈피를 추가합니다. 사용자 고유의 문자열을 만들어 책갈피로 사용하거나 그룹의 경우 책갈피를 그룹 식으로 설정할 수 있습니다.  
   
  책갈피를 만든 후에는 사용자가 클릭하면 각 책갈피로 이동되는 보고서 항목을 추가할 수 있습니다. 이러한 항목은 일반적으로 입력란 또는 이미지입니다.  
   
  예를 들어 보고서에 색상별로 그룹화된 테이블이 표시되는 경우 그룹 식을 기반으로 책갈피를 그룹 머리글에 추가합니다. 그런 다음 색 값을 표시한 보고서의 시작 부분에 단일 입력란이 있는 테이블을 추가하고 해당 입력란에 책갈피 링크를 설정합니다. 색을 클릭하면 보고서가 해당 색의 그룹 머리글 행을 표시하는 페이지로 이동합니다.  
   
- 모든 보고서 항목에 책갈피를 추가하고 입력란, 이미지 또는 차트의 계산된 계열과 같이 **동작** 속성이 있는 모든 항목에 책갈피 링크를 추가할 수 있습니다. 자세한 내용은 [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](../Topic/Action%20Properties%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)를 참조하세요.  
+ 모든 보고서 항목에 책갈피를 추가하고 입력란, 이미지 또는 차트의 계산된 계열과 같이 **동작** 속성이 있는 모든 항목에 책갈피 링크를 추가할 수 있습니다. 자세한 내용은 [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 책갈피를 추가하려면  
+### <a name="to-add-a-bookmark"></a>책갈피를 추가하려면  
   
 1.  보고서 디자인 뷰에서 책갈피를 추가할 입력란, 이미지, 차트 또는 기타 보고서 항목을 선택합니다. 선택한 항목의 속성이 속성 창에 나타납니다.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  책갈피는 모든 문자열일 수 있지만 보고서에서 고유해야 합니다. 책갈피가 고유하지 않으면 해당 책갈피 링크 클릭 시 일치하는 첫 번째 책갈피가 사용됩니다.  
   
-### 책갈피 링크를 추가하려면  
+### <a name="to-add-a-bookmark-link"></a>책갈피 링크를 추가하려면  
   
 1.  디자인 뷰에서 링크를 추가할 입력란, 이미지, 차트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 8
   
 7.  링크를 테스트하려면 **실행** 을 클릭하여 보고서를 미리 본 다음, 이 링크를 설정한 보고서 항목을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

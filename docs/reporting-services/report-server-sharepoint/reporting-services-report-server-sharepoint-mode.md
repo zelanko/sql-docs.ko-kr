@@ -1,32 +1,39 @@
 ---
-title: "Reporting Services 보고서 서버(SharePoint 모드) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services 보고서 서버 (SharePoint 모드) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10778ec9-5fe4-4b4e-89b0-ade1f06b781d
 caps.latest.revision: 17
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 17
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services 보고서 서버(SharePoint 모드)
+
+# <a name="reporting-services-report-server-sharepoint-mode"></a>Reporting Services 보고서 서버(SharePoint 모드)
+
   SharePoint 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 대해 구성된 **** 보고서 서버는 SharePoint 제품 배포 내에서 실행할 수 있습니다. SharePoint 모드의 보고서 서버에서는 보고서 및 기타 [!INCLUDE[ssRSnfoversion_md](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 SharePoint의 공동 작업 및 관리 기능을 사용할 수 있습니다. SharePoint 모드를 사용하려면 SharePoint 제품에 대한 적절한 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 SharePoint 웹 프런트 엔드에 설치해야 합니다.  
   
  설치 및 구성하는 방법은 다음 항목을 참조하세요.  
   
--   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/ko-kr/47efa72e-1735-4387-8485-f8994fb08c8c)  
+-   [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)  
   
 -   [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- 이 릴리스의 새로운 기능에 대한 자세한 내용은 [Reporting Services의 새로운 기능&#40;SSRS&#41;](../Topic/What's%20New%20in%20Reporting%20Services%20\(SSRS\).md)의 'SharePoint' 섹션을 참조하세요.  
+ 이 릴리스의 새로운 기능에 대한 자세한 내용은 [Reporting Services의 새로운 기능&#40;SSRS&#41;](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)의 'SharePoint' 섹션을 참조하세요.  
   
  항목 내용  
   
@@ -72,9 +79,9 @@ caps.handback.revision: 17
 -   AAM 영역, 인터넷 연결 배포 및 SharePoint 목록에 대한 SharePoint 사용자 토큰.  
   
 ##  <a name="bkmk_connectedandlocal"></a> 연결된 모드 및 로컬 모드  
- SQL Server 2008 R2 릴리스에는 SharePoint 2010 제품용 Microsoft SQL Server 2008 R2 이상 Reporting Services 추가 기능이 설치되어 있는 SharePoint 2010 서버에서 보고서를 볼 수 있도록 *로컬 모드*라는 새로운 모드가 도입되었습니다.  
+ SQL Server 2008 R2 릴리스에는 SharePoint 2010 제품용 Microsoft SQL Server 2008 R2 이상 Reporting Services 추가 기능이 설치되어 있는 SharePoint 2010 서버에서 보고서를 볼 수 있도록 *로컬 모드* 라는 새로운 모드가 도입되었습니다.  
   
--   *로컬 모드*: 로컬 모드에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합하지 않고도 SharePoint 문서 라이브러리에서 로컬로 보고서를 렌더링할 수 있습니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 필요하지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 아닙니다. 추가 기능은 SharePoint 2010 제품 준비 도구를 비롯한 여러 가지 방법으로 설치할 수 있습니다. 로컬 모드에 대한 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md) 및 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
+-   *로컬 모드*: 로컬 모드에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합하지 않고도 SharePoint 문서 라이브러리에서 로컬로 보고서를 렌더링할 수 있습니다. SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 필요하지만 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버는 아닙니다. 추가 기능은 SharePoint 2010 제품 준비 도구를 비롯한 여러 가지 방법으로 설치할 수 있습니다. 로컬 모드에 대한 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) 및 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
 -   *연결된 모드*: 연결된 모드는 SharePoint 중앙 관리에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 SharePoint 팜에 통합하여 지원할 수 있습니다. 보고서 서버와의 통합을 통해 완전한 보고가 가능해질 뿐만 아니라 SharePoint 2010의 공동 작업 기능과 구독, 스냅숏 및 서버 기반 처리와 같은 보고서 서버의 서버 기반 기능도 사용할 수 있습니다.  
   
@@ -96,7 +103,7 @@ caps.handback.revision: 17
      문서 라이브러리 버전 기록은 “라이브러리 설정”의 ”버전 관리 설정” 페이지에 구성됩니다.  
   
 ##  <a name="bkmk_supportedcombinations"></a> 지원되는 SharePoint 추가 기능과 보고서 서버의 조합  
- 보고서 서버, SharePoint용 Reporting Services 추가 기능 및 SharePoint 제품의 모든 조합에서 모든 기능이 지원되는 것은 아닙니다. 자세한 내용은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported combinations of sharepoint and reporting services server.md)을 참조하세요.  
+ 보고서 서버, SharePoint용 Reporting Services 추가 기능 및 SharePoint 제품의 모든 조합에서 모든 기능이 지원되는 것은 아닙니다. 자세한 내용은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  
   
 > [!NOTE]  
 >  해당 버전의 SharePoint 제품에 올바른 버전의 Reporting Services 추가 기능을 사용해야 합니다.  
@@ -107,7 +114,7 @@ caps.handback.revision: 17
  통합은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능을 통해 제공됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 다운로드한 다음 적절한 버전의 SharePoint를 실행하는 서버에 설치할 수 있는 무료 배포 가능 구성 요소입니다.  
   
 > [!TIP]  
->  보고서 서버, SharePoint용 Reporting Services 추가 기능 및 SharePoint 제품의 모든 조합에서 모든 기능이 지원되는 것은 아닙니다. 자세한 내용은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported combinations of sharepoint and reporting services server.md)을 참조하세요.  
+>  보고서 서버, SharePoint용 Reporting Services 추가 기능 및 SharePoint 제품의 모든 조합에서 모든 기능이 지원되는 것은 아닙니다. 자세한 내용은 [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합&#40;SQL Server 2016&#41;](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)을 참조하세요.  
   
 -   SharePoint에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능은 SharePoint 사이트 또는 팜에서 보고서 서버 내용을 확인, 저장 및 관리할 수 있도록 ReportServer 프록시 끝점, 보고서 뷰어 웹 파트 및 응용 프로그램 페이지를 제공합니다.  
   
@@ -122,7 +129,7 @@ caps.handback.revision: 17
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 모든 응용 프로그램 페이지, 도구, 오류, 경고 및 메시지는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 언어 중 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 사용되는 언어로 표시됩니다.  
   
--   SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 응용 프로그램 페이지를 열면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원되는 언어 목록을 보려면 [SQL Server 다운로드](http://msdn.microsoft.com/sql/downloads/)로 이동하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 다운로드 페이지를 찾으세요.  
+-   SharePoint 사이트, 보고서 뷰어 웹 파트 및 보고서 작성기에서 응용 프로그램 페이지를 열면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대해 지원되는 언어 중 하나로 표시됩니다. 지원 되는 언어 목록을 보려면로 이동 [SQL Server 다운로드](http://msdn.microsoft.com/sql/downloads/) 다운로드 페이지에는 SQL Server 2016 Reporting Services 추가 기능을 찾습니다.  
   
 -   SharePoint 사이트, SharePoint 중앙 관리, 온라인 도움말 및 메시지는 Office Server 제품에서 지원되는 언어로 제공됩니다.  
   
@@ -133,15 +140,16 @@ caps.handback.revision: 17
   
 |**태스크**|**링크**|  
 |--------------|--------------|  
-|SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및 구성을 위한 세부 단계|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/ko-kr/47efa72e-1735-4387-8485-f8994fb08c8c) 및 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)합니다.|  
-|보고서 서버를 추가하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 배포를 확대합니다.|[팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](../Topic/Deployment%20Topologies%20for%20SQL%20Server%20BI%20Features%20in%20SharePoint.md).|  
+|SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및 구성을 위한 세부 단계|[SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) 및 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)합니다.|  
+|보고서 서버를 추가하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 배포를 확대합니다.|[팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [SharePoint의 SQL Server BI 기능에 대한 배포 토폴로지](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |보기용으로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소 및 보고서 항목이 포함된 추가 SharePoint 웹 프런트 엔드를 추가합니다.|[팜에 추가 Reporting Services 웹 프런트 엔드 추가](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 및 구독 기능에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](https://msdn.microsoft.com/library/hh231673.aspx)|  
 |TechNet Wiki에 있는 이 릴리스에 대한 최신 정보|[SQL Server 2012 Reporting Services 팁, 요령 및 문제 해결](http://go.microsoft.com/fwlink/?LinkId=221297)(영문)|  
-  
-## 관련 항목:  
- [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [퀴즈: SharePoint 통합을 위한 SSRS 2012 구성](http://go.microsoft.com/fwlink/?LinkId=306443)  
-  
-  
+
+## <a name="next-steps"></a>다음 단계
+
+[SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+[SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+[퀴즈: SharePoint 통합을 위한 SSRS 2012 구성](http://go.microsoft.com/fwlink/?LinkId=306443)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

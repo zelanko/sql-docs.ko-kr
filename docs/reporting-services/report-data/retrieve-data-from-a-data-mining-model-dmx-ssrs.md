@@ -1,39 +1,44 @@
 ---
-title: "데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보고서 데이터 검색"
-  - "데이터 집합 [Reporting Services], DMX 쿼리 사용"
-  - "데이터 집합 [Reporting Services], Analysis Services"
-  - "쿼리 [Reporting Services], 데이터 마이닝 예측"
+title: "데이터 마이닝 모델 (DMX) (SSRS)에서 데이터를 검색 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- retrieving report data
+- datasets [Reporting Services], with DMX queries
+- datasets [Reporting Services], Analysis Services
+- queries [Reporting Services], data mining prediction
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c12f8637430ef42d794cf2cf54100e0b9c6d58cf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS)
+# <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>데이터 마이닝 모델에서 데이터 검색(DMX)(SSRS)
   보고서에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 모델의 데이터를 사용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 및 하나 이상의 보고서 데이터 집합을 정의해야 합니다. 데이터 원본 정의를 만들 때는 클라이언트 컴퓨터에서 데이터 원본에 액세스할 수 있도록 연결 문자열 및 자격 증명을 지정해야 합니다.  
   
- 단일 보고서에 사용할 포함된 데이터 원본 정의를 만들거나 여러 보고서에 사용할 수 있는 공유 데이터 원본 정의를 만들 수 있습니다. 이 항목의 절차에서는 포함된 데이터 원본을 만드는 방법에 대해 설명합니다. 공유 데이터 원본에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md) 및 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
+ 단일 보고서에 사용할 포함된 데이터 원본 정의를 만들거나 여러 보고서에 사용할 수 있는 공유 데이터 원본 정의를 만들 수 있습니다. 이 항목의 절차에서는 포함된 데이터 원본을 만드는 방법에 대해 설명합니다. 공유 데이터 원본에 대한 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56) 및 [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)를 참조하세요.  
   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 만든 후에는 하나 이상의 데이터 집합을 만들 수 있습니다. 각 데이터 집합에 대해 DMX(Data Mining Prediction Expression) 쿼리 디자이너를 사용하여 필드 컬렉션을 지정하는 DMX 쿼리를 만듭니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본을 만든 후에는 하나 이상의 데이터 집합을 만들 수 있습니다. 각 데이터 집합에 대해 DMX(Data Mining Prediction Expression) 쿼리 디자이너를 사용하여 필드 컬렉션을 지정하는 DMX 쿼리를 만듭니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
  데이터 집합을 만들면 데이터 집합의 이름이 보고서 데이터 창의 해당 데이터 원본 아래에 노드로 나타납니다.  
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
-### 포함된 Microsoft SQL Server Analysis Services 데이터 원본을 만들려면  
+### <a name="to-create-an-embedded-microsoft-sql-server-analysis-services-data-source"></a>포함된 Microsoft SQL Server Analysis Services 데이터 원본을 만들려면  
   
 1.  보고서 데이터 창의 도구 모음에서 **새로 만들기**, **데이터 원본**을 차례로 클릭합니다.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 19
   
      데이터 원본이 보고서 데이터 창에 나타납니다.  
   
-### Microsoft SQL Server Analysis Services에 대한 데이터 집합을 만들려면  
+### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Microsoft SQL Server Analysis Services에 대한 데이터 집합을 만들려면  
   
 1.  **보고서 데이터** 창에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결하는 데이터 원본의 이름을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 추가**를 클릭합니다.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 19
   
 3.  **데이터 원본**상자에서 이름이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결하는 데이터 원본의 이름인지 확인합니다.  
   
-4.  **쿼리 디자이너** 를 클릭하여 열리는 그래픽 쿼리 디자이너에서 쿼리를 대화형으로 작성합니다. 쿼리 디자이너가 MDX 모드로 열리는 경우 도구 모음에서 **DMX 명령 유형**(![DMX 쿼리 언어 뷰로 변경](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.png "DMX 쿼리 언어 뷰로 변경"))을 클릭하여 데이터 마이닝 쿼리 디자이너로 전환합니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
+4.  **쿼리 디자이너** 를 클릭하여 열리는 그래픽 쿼리 디자이너에서 쿼리를 대화형으로 작성합니다. 쿼리 디자이너가 MDX 모드로 열리는, 클릭 **DMX 명령 유형** (![DMX 쿼리 언어 뷰로 변경](../../reporting-services/report-data/media/rsqdicon-commandtypedmx.gif "DMX 쿼리 언어 뷰로 변경")) 데이터 마이닝 쿼리 디자이너로 전환 하려면 도구 모음입니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
      또는 다른 보고서에서 기존 DMX 쿼리를 가져오려면 **가져오기**를 클릭한 다음 DMX 쿼리를 사용하여 .rdl 파일로 이동합니다. .dmx 파일에서 쿼리를 가져올 수는 없습니다.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 19
   
      데이터 집합 및 해당 필드 컬렉션이 데이터 원본 노드 아래의 보고서 데이터 창에 표시됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

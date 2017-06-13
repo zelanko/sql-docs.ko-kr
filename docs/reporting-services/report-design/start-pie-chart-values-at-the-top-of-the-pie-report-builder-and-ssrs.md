@@ -1,23 +1,28 @@
 ---
-title: "원형 차트를 원형의 위쪽에서 시작(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "원형 차트 (보고서 작성기 및 SSRS) 원형의 위쪽에서 시작 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0e6fb59-ca4e-4d70-97cb-0ad183da21d3
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8a12864064849ffc3bb0fa6937833ffee57e0df5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 원형 차트를 원형의 위쪽에서 시작(보고서 작성기 및 SSRS)
+# <a name="start-pie-chart-values-at-the-top-of-the-pie-report-builder-and-ssrs"></a>원형 차트를 원형의 위쪽에서 시작(보고서 작성기 및 SSRS)
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 원형 차트에서는 기본적으로 데이터 집합의 첫 번째 값이 원형의 위쪽으로부터 90도에서 시작합니다. 
 
 ![report-builder-pie-chart-start-at-90](../../reporting-services/media/report-builder-pie-chart-start-at-90.png)
@@ -30,7 +35,7 @@ caps.handback.revision: 7
 
 *차트 값이 차트의 맨 위에서 시작합니다.*
   
-## 원형 차트가 원형의 위쪽에서 시작되게 하려면  
+## <a name="to-start-the-pie-chart-at-the-top-of-the-pie"></a>원형 차트가 원형의 위쪽에서 시작되게 하려면  
   
 1.  원형 자체를 클릭합니다.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 7
   
  이제 첫 번째 값이 원형 차트의 위쪽에서 시작됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [원형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   

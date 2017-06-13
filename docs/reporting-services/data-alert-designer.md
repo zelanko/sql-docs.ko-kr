@@ -1,32 +1,43 @@
 ---
 title: "데이터 경고 디자이너 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "편집, 데이터 경고"
-  - "업데이트, 데이터 경고"
-  - "편집, 경고"
-  - "업데이트, 경고"
-  - "만들기, 데이터 경고"
-  - "만들기, 경고"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- editing, data alerts
+- updating, data alerts
+- editing, alerts
+- updating, alerts
+- creating, data alerts
+- creating, alerts
 ms.assetid: b2018116-cf1a-4e54-b29c-39e0ca2bda77
 caps.latest.revision: 22
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 21
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 38277ce132202ea9f112dce0ec0777598a93d39d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 데이터 경고 디자이너
-  데이터 경고 디자이너에서 데이터 경고 정의를 만들고 편집할 수 있습니다. 경고 정의는 관심 있는 보고서 데이터, 데이터 경고 인스턴스를 만들고 데이터 경고 메시지를 보내기 위해 보고서 데이터가 충족해야 하는 규칙, 경고 메시지를 받는 사람 등을 비롯한 메타데이터의 컬렉션입니다.  
-  
+# <a name="data-alert-designer"></a>데이터 경고 디자이너
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+데이터 경고 디자이너에서 데이터 경고 정의를 만들고 편집할 수 있습니다. 경고 정의는 관심 있는 보고서 데이터, 데이터 경고 인스턴스를 만들고 데이터 경고 메시지를 보내기 위해 보고서 데이터가 충족해야 하는 규칙, 경고 메시지를 받는 사람 등을 비롯한 메타데이터의 컬렉션입니다.  
+
+> [!NOTE]
+> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+
  경고 정의를 만들기 위해서는 다음과 같은 여러 관련 태스크를 수행해야 합니다.  
   
 -   보고서를 선택하고 사용하려는 데이터가 포함된 보고서 데이터 피드를 선택합니다.  
@@ -42,7 +53,7 @@ caps.handback.revision: 21
 -   경고 메시지에 포함할 경고 설명을 제공합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 SharePoint 모드로 설치하는 경우에만 사용할 수 있으므로 경고를 만들려는 보고서가 SharePoint 문서 라이브러리에 저장, 배포 또는 업로드되어 있어야 합니다.  
+>  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고 기능은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치하는 경우에만 사용할 수 있으므로 경고를 만들려는 보고서가 SharePoint 문서 라이브러리에 저장, 배포 또는 업로드되어 있어야 합니다.  
 >   
 >  Windows 통합 인증 또는 자격 증명 프롬프트를 사용하는 보고서에 대해서는 데이터 경고를 만들 수 없습니다. 보고서는 저장된 자격 증명을 사용해야 합니다. 자세한 내용은 [Specify Credential and Connection Information for Report Data Sources](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
@@ -51,11 +62,10 @@ caps.handback.revision: 21
 ##  <a name="AlertDesigner"></a> 데이터 경고 디자이너 사용자 인터페이스  
  데이터 경고 디자이너는 각 영역으로 구분됩니다. 이러한 영역에는 보고서 데이터 피드를 선택하는 영역, 조건에 규칙을 추가하여 단순하거나 복잡한 조건을 만드는 영역 등이 있습니다. 다음 그림은 데이터 경고 디자이너의 영역을 보여 줍니다.  
   
- ![경고 디자이너 사용자 인터페이스 내부 영역](../reporting-services/media/rs-alertdesigner.gif "경고 디자이너 사용자 인터페이스 내부 영역")  
+ ![경고 디자이너 사용자 인터페이스 내의 영역](../reporting-services/media/rs-alertdesigner.gif "경고 디자이너 사용자 인터페이스 내의 영역")  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-### 경고 데이터  
+### <a name="alert-data"></a>경고 데이터  
  데이터 경고 디자이너를 열면 보고서에서 모든 데이터 피드가 생성되어 사용할 수 있도록 설정되며 **보고서 데이터 이름** 드롭다운 목록에 피드 이름이 포함됩니다. 데이터 피드는 경고 정의를 만드는 동안 메모리에 캐시되어 사용자가 보고서 데이터 탐색을 위해 다른 데이터 피드로 전환할 때 데이터 피드 데이터를 표시하는 테이블이 빠르게 채워집니다.  
   
  데이터 경고 정의를 만드는 첫 번째 단계는 경고를 통해 모니터링할 데이터가 포함된 보고서 데이터 피드를 선택하는 것입니다. 보고서에는 데이터 피드가 0개 또는 여러 개 포함될 수 있습니다. 보고서에 데이터 피드가 없으면 보고서에 대해 경고를 만들 수 없습니다. 데이터 피드는 테이블, 행렬 및 목록은 물론 모든 유형의 차트, 계기, 표시기를 포함하여 모든 데이터 영역으로 생성할 수 있습니다.  
@@ -68,12 +78,12 @@ caps.handback.revision: 21
   
  일부 보고서에는 수백만 개의 데이터 행이 포함됩니다. 테이블에는 피드에서 처음 100개의 데이터 행만 표시됩니다.  
   
-### 경고 이름  
+### <a name="alert-name"></a>경고 이름  
  기본적으로 경고 정의의 이름은 보고서와 동일합니다. 경고 이름은 보다 의미 있는 이름으로 변경할 수 있습니다. 이렇게 하면 업데이트 또는 삭제 등을 수행할 경고를 식별하여 경고를 보다 쉽게 관리할 수 있습니다.  
   
  경고는 한 보고서에 대해 여러 개 만들 수 있습니다. 경고 정의는 같은 이름을 여러 번 사용할 수도 있지만 경고 이름을 고유하게 지정하는 것이 좋습니다. 이렇게 하면 경고 정의를 보다 쉽게 서로 구분하고 관리할 수 있습니다. 자신이 만든 모든 경고의 목록은 데이터 경고 관리자에서 볼 수 있습니다. 자세한 내용은 [경고 관리자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
-### 규칙 및 절  
+### <a name="rules-and-clauses"></a>규칙 및 절  
  데이터 변경 범위 및 경고 규칙에 따라 경고를 발생시키는 데이터 변경 사항이 정의됩니다. 데이터 변경 범위는 다음과 같습니다.  
   
 -   **데이터가 다음을 포함함**- 데이터에서 하나 이상의 값이 조건으로 지정된 규칙을 만족합니다.  
@@ -144,7 +154,7 @@ caps.handback.revision: 21
   
  규칙 및 절은 데이터 경고 메시지에 포함됩니다.  
   
-### 일정 설정  
+### <a name="schedule-settings"></a>일정 설정  
  데이터 경고에 대해 정의하는 일정에 따라 데이터 경고 메시지를 보내기 위한 되풀이 패턴과 경고 메시지 보내기 시작 및 중지 시간이 정의됩니다. 패턴은 한 번, 분, 매일 및 매주입니다. 경고에는 일정이 하나만 포함되지만 이러한 간격을 사용하여 대부분의 업무 요구 사항을 충족시킬 수 있는 복잡한 되풀이 패턴을 만들 수 있습니다. 다음은 예약에 사용되는 일반적인 되풀이 패턴의 예입니다.  
   
 -   **매일 10일마다** — 10일마다 하루 한 번 경고를 보냅니다.  
@@ -162,10 +172,10 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  업무상 중요한 이유가 있지 않은 한 '매일'보다 간격이 짧은 되풀이 패턴은 사용하지 않는 것이 좋습니다. 실시간 데이터 경고 정의 처리는 지원되지 않는 시나리오입니다. 데이터 경고 정의를 너무 자주 처리하면 보고서 서버 및 전반적인 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 배포의 성능에 영향이 있습니다.  
   
-### 전자 메일 설정  
+### <a name="email-settings"></a>전자 메일 설정  
  **받는 사람** 옵션에서 메일을 통해 데이터 경고 메시지를 받을 사람의 메일 주소를 지정합니다. 전자 메일 주소가 여러 개 있으면 Microsoft Office Outlook 전자 메일 메시지와 마찬가지로 세미콜론으로 구분합니다. 메일 그룹을 받는 사람으로 지정할 수도 있습니다. 이렇게 하면 더 쉽고 효율적인 방식으로 받는 사람 목록을 관리할 수 있습니다. 사용자가 경고 정의를 만들 때 SharePoint에서 사용자의 전자 메일 주소를 확인할 수 있으면 해당 전자 메일 주소가 받는 사람 목록에 자동으로 추가되고, 그렇지 않으면 자신을 받는 사람으로 명시적으로 추가해야 합니다.  
   
- 메일의 기본 제목은 **\<경고 이름>에 대한 데이터 경고**입니다. 제목은 필요에 따라 변경할 수 있습니다.  
+ 전자 메일의 기본 제목은 **데이터에 대 한 경고 \<경고 이름 >**합니다. 제목은 필요에 따라 변경할 수 있습니다.  
   
  **설명** 옵션에서 데이터 경고 메시지에 포함할 설명을 입력할 수도 있습니다. 유사한 여러 데이터 경고가 있는 경우 등에 설명을 포함하면 경고 메시지를 빠르게 구분하고 이해하는 데 도움이 됩니다. 보고서 데이터가 지정된 규칙을 만족하는 경우 전송되는 경고 메시지 외에, 오류 발생 시 모든 받는 사람에게 전송되는 경고 메시지도 있습니다. 자세한 내용은 [Data Alert Messages](../reporting-services/data-alert-messages.md)을 참조하세요.  
   
@@ -174,11 +184,10 @@ caps.handback.revision: 21
 ##  <a name="CreateAlert"></a> 데이터 경고 정의 만들기  
  SharePoint 항목 보기 및 경고 만들기 권한이 부여된 경우 보기 권한이 있는 모든 보고서에 대해 데이터 경고 정의를 만들 수 있습니다. 단, 해당 보고서에 저장된 자격 증명이 사용되거나 자격 증명이 아예 사용되지 않아야 합니다. SharePoint 라이브러리에서 보고서를 실행합니다. 데이터 경고 디자이너에서 사용할 수 있는 데이터는 보고서에서 제공됩니다. 보고서에 매개 변수가 있는 경우 관심이 있는 데이터가 보고서에 표시될 수 있도록 다른 매개 변수 값을 사용하여 보고서를 실행해야 할 수 있습니다. 보고서를 연 후 보고서 도구 모음의 **동작** 메뉴에서 **새 데이터 경고** 옵션을 클릭하여 데이터 경고 디자이너를 엽니다. 다음 그림은 데이터 경고 디자이너를 여는 방법을 보여 줍니다.  
   
- ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+ ![SharePoint 라이브러리에서 경고 디자이너 열기](../reporting-services/media/rs-openalertdesigneriw.gif "SharePoint 라이브러리에서 경고 디자이너 열기")  
   
  자세한 내용은 [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)를 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="SaveAlert"></a> 데이터 경고 정의 저장  
  데이터 경고 디자이너에는 데이터 경고 정의가 저장되는 사이트의 URL이 표시됩니다. 데이터 경고 정의는 항상 보고서와 같은 사이트에 저장됩니다.  
@@ -188,18 +197,16 @@ caps.handback.revision: 21
   
  경고 정의는 유효성 검사 후에 저장됩니다. 경고 정의를 저장하려면 먼저 오류를 수정해야 합니다. 자세한 내용은 [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)를 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="EditAlert"></a> 데이터 경고 정의 편집  
  데이터 경고 정의를 저장한 후 다시 데이터 경고 디자이너에서 열어 편집할 수 있습니다. 규칙 및 절을 추가, 변경 또는 삭제하고 일정 및 전자 메일 설정을 변경할 수 있습니다. 경고에 사용되는 보고서 데이터 피드가 변경되어 경고 규칙이 참조하는 필드가 더 이상 제공되지 않거나 필드의 데이터 형식 또는 다른 메타데이터가 변경된 경우 경고 정의가 더 이상 유효하지 않으며 다시 저장하기 위해서는 경고 정의를 수정해야 합니다. 다른 데이터 피드를 사용하려면 새 경고 정의를 만들어야 합니다.  
   
  데이터 경고 정의를 편집하려면 데이터 경고 관리자에서 해당 정의를 마우스 오른쪽 단추로 클릭하고 **편집**을 클릭합니다. 다음 그림은 데이터 경고 관리자에 있는 데이터 경고의 상황에 맞는 메뉴를 보여 줍니다.  
   
- ![편집을 클릭하여 데이터 경고 디자이너 열기](../reporting-services/media/rs-alertmanageriwopendesigner.gif "편집을 클릭하여 데이터 경고 디자이너 열기")  
+ ![편집을 클릭 하 여 데이터 경고 디자이너 열기](../reporting-services/media/rs-alertmanageriwopendesigner.gif "편집을 클릭 하 여 데이터 경고 디자이너 열기")  
   
  자세한 내용은 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="HowTo"></a> 관련 작업  
  이 섹션에는 경고를 만들고 편집하는 방법을 보여 주는 절차가 나와 있습니다.  
@@ -207,11 +214,10 @@ caps.handback.revision: 21
 -   [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
   
 -   [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
-## 관련 항목:  
- [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)   
- [경고 담당자를 위한 데이터 경고 관리자입니다.](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
-  
-  
+
+## <a name="see-also"></a>관련 항목:
+
+[Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)   
+[경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

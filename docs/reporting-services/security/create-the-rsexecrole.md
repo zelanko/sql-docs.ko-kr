@@ -1,41 +1,48 @@
 ---
 title: "RSExecRole 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "RSExecRole"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- RSExecRole
 ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c5830b59420268d58f6425f8a2ce52fc4a3be12e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# RSExecRole 만들기
+
+# <a name="create-the-rsexecrole"></a>RSExecRole 만들기
+
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 **RSExecRole** 이라는 미리 정의된 데이터베이스 역할을 사용하여 보고서 서버 데이터베이스에 대한 보고서 서버 사용 권한을 부여합니다. **RSExecRole** 역할은 보고서 서버 데이터베이스와 함께 자동으로 만들어집니다. 일반적으로 이 역할을 수정하거나 다른 사용자를 이 역할에 할당해서는 안 됩니다. 그러나 보고서 서버 데이터베이스를 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]또는 다른 설치로 이동하는 경우에는 Master 및 MSDB 시스템 데이터베이스에서 해당 역할을 다시 만들어야 합니다.  
   
  아래 지침에 따라 다음 단계를 수행합니다.  
   
--   Master 시스템 데이터베이스에서 **RSExecRole**을 만들고 제공합니다.  
+-   Master 시스템 데이터베이스에서 **RSExecRole** 을 만들고 제공합니다.  
   
--   MSDB 시스템 데이터베이스에서 **RSExecRole**을 만들고 제공합니다.  
+-   MSDB 시스템 데이터베이스에서 **RSExecRole** 을 만들고 제공합니다.  
   
 > [!NOTE]  
 >  이 항목의 지침은 보고서 서버 데이터베이스를 제공하기 위해 WMI 코드를 작성하거나 스크립트를 실행하지 않으려는 사용자를 위한 것입니다. 큰 배포를 관리하며 데이터베이스를 정기적으로 이동하는 경우에는 스크립트를 작성하여 이러한 단계를 자동화해야 합니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
   
-## 시작하기 전 주의 사항  
+## <a name="before-you-start"></a>시작하기 전 주의 사항  
   
--   데이터베이스를 이동한 후 암호화 키를 복원할 수 있도록 해당 키를 백업합니다. 이 단계는 **RSExecRole**을 만들고 제공하는 기능에 직접적인 영향을 주지는 않지만 작업을 확인하려면 해당 키의 백업이 있어야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)을 참조하세요.  
+-   데이터베이스를 이동한 후 암호화 키를 복원할 수 있도록 해당 키를 백업합니다. 이 단계는 **RSExecRole**을 만들고 제공하는 기능에 직접적인 영향을 주지는 않지만 작업을 확인하려면 해당 키의 백업이 있어야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 **sysadmin** 권한이 있는 사용자 계정으로 로그온했는지 확인합니다.  
+-   **인스턴스에 대한** sysadmin [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 권한이 있는 사용자 계정으로 로그온했는지 확인합니다.  
   
 -   사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에이전트 서비스가 설치되어 실행되고 있는지 확인합니다.  
   
@@ -43,12 +50,12 @@ caps.handback.revision: 23
   
  **RSExecRole** 을 수동으로 만드는 작업에 대한 지침은 보고서 서버 설치를 마이그레이션하는 컨텍스트 내에서 사용해야 합니다. 보고서 서버 데이터베이스 백업 및 이동과 같은 중요한 태스크는 이 항목에서 다루지 않지만 데이터베이스 엔진 설명서에 문서화되어 있습니다.  
   
-## Master에서 RSExecRole 만들기  
+## <a name="create-rsexecrole-in-master"></a>Master에서 RSExecRole 만들기  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 예약된 작업을 지원하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 대해 확장 저장 프로시저를 사용합니다. 다음 단계에서는 해당 프로시저에 대한 Execute 권한을 **RSExecRole** 역할에 부여하는 방법을 설명합니다.  
   
-#### Management Studio를 사용하여 Master 시스템 데이터베이스에서 RSExecRole을 만들려면  
+#### <a name="to-create-rsexecrole-in-the-master-system-database-using-management-studio"></a>Management Studio를 사용하여 Master 시스템 데이터베이스에서 RSExecRole을 만들려면  
   
-1.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 인스턴스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 인스턴스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
 2.  **데이터베이스**를 엽니다.  
   
@@ -96,10 +103,10 @@ caps.handback.revision: 23
   
  ![데이터베이스 역할 속성 페이지](../../reporting-services/security/media/rsexecroledbproperties.gif "데이터베이스 역할 속성 페이지")  
   
-## MSDB에서 RSExecRole 만들기  
+## <a name="create-rsexecrole-in-msdb"></a>MSDB에서 RSExecRole 만들기  
  Reporting Services는 예약된 작업을 지원하기 위해 SQL Server 에이전트 서비스에 대해 저장 프로시저를 사용하고 시스템 테이블에서 작업 정보를 검색합니다. 다음 단계에서는 해당 프로시저에 대한 Execute 권한과 해당 테이블에 대한 Select 권한을 RSExecRole에 부여하는 방법을 설명합니다.  
   
-#### MSDB 시스템 데이터베이스에서 RSExecRole을 만들려면  
+#### <a name="to-create-rsexecrole-in-the-msdb-system-database"></a>MSDB 시스템 데이터베이스에서 RSExecRole을 만들려면  
   
 1.  MSDB에서 저장 프로시저 및 테이블에 대한 사용 권한을 부여하기 위해 유사한 단계를 반복합니다. 이 단계를 간소화하려면 저장 프로시저와 테이블을 별도로 제공합니다.  
   
@@ -123,7 +130,7 @@ caps.handback.revision: 23
   
 11. **개체 유형**을 클릭합니다.  
   
-12.  **저장 프로시저**를 클릭합니다.  
+12. **저장 프로시저**를 클릭합니다.  
   
 13. **확인**을 클릭합니다.  
   
@@ -165,7 +172,7 @@ caps.handback.revision: 23
   
 22. **개체 유형**을 클릭합니다.  
   
-23.  **테이블**을 클릭합니다.  
+23. **테이블**을 클릭합니다.  
   
 24. **확인**을 클릭합니다.  
   
@@ -185,17 +192,17 @@ caps.handback.revision: 23
   
 30. sysjobs 테이블에 대해 반복합니다. 두 테이블 모두에 대해 RSExecRole에 Select 권한을 부여해야 합니다.  
   
-## 보고서 서버 데이터베이스 이동  
- 역할을 만든 후에는 보고서 서버 데이터베이스를 새 SQL Server 인스턴스로 이동할 수 있습니다. 자세한 내용은 [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)을 참조하세요.  
+## <a name="move-the-report-server-database"></a>보고서 서버 데이터베이스 이동  
+ 역할을 만든 후에는 보고서 서버 데이터베이스를 새 SQL Server 인스턴스로 이동할 수 있습니다. 자세한 내용은 참조 [보고서 서버 데이터베이스를 다른 컴퓨터로 이동](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)합니다.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] 을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하는 경우 데이터베이스를 이동하기 전이나 후에 데이터베이스 엔진을 업그레이드할 수 있습니다.  
+ 업그레이드 하는 경우는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] SQL Server 2016으로 업그레이드할 수 있습니다 하기 전이나 후 데이터베이스를 이동 합니다.  
   
- 보고서 서버 데이터베이스는 보고서 서버를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 연결할 때 해당 버전으로 자동 업그레이드됩니다. 데이터베이스를 업그레이드하는 데 필요한 특별한 단계는 없습니다.  
+ 보고서 서버에 연결 하는 경우 보고서 서버 데이터베이스를 자동으로 업그레이드 됩니다. 데이터베이스를 업그레이드하는 데 필요한 특별한 단계는 없습니다.  
   
-## 암호화 키 복원 및 작업 확인  
+## <a name="restore-encryption-keys-and-verify-your-work"></a>암호화 키 복원 및 작업 확인  
  보고서 서버 데이터베이스를 연결한 후에는 다음 단계를 완료하여 작업을 확인할 수 있습니다.  
   
-#### 데이터베이스 이동 후 보고서 서버가 작동하는지 확인하려면  
+#### <a name="to-verify-report-server-operability-after-a-database-move"></a>데이터베이스 이동 후 보고서 서버가 작동하는지 확인하려면  
   
 1.  Reporting Services 구성 도구를 시작한 후 보고서 서버에 연결합니다.  
   
@@ -205,7 +212,7 @@ caps.handback.revision: 23
   
 4.  **기존 보고서 서버 데이터베이스 선택**을 클릭합니다.  
   
-5.  데이터베이스 엔진의 서버 이름을 입력합니다. 보고서 서버 데이터베이스를 명명된 인스턴스에 연결한 경우 인스턴스 이름을 \<servername>\\<instancename\> 형식으로 입력해야 합니다.  
+5.  데이터베이스 엔진의 서버 이름을 입력합니다. 이 형식으로 인스턴스 이름을 입력 해야 보고서 서버 데이터베이스를 명명 된 인스턴스에 연결할 경우: \<서버 이름 >\\< instancename\>합니다.  
   
 6.  **연결 테스트**를 클릭합니다.  
   
@@ -226,11 +233,12 @@ caps.handback.revision: 23
 14. **보고서 관리자 URL**을 클릭합니다.  
   
 15. 링크를 클릭하여 보고서 관리자를 엽니다. 보고서 서버 데이터베이스의 보고서 서버 항목이 표시되어야 합니다.  
-  
-## 관련 항목:  
- [다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
- [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/create-a-native-mode-report-server-database-ssrs-configuration-manager.md)   
- [Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/back-up-and-restore-reporting-services-encryption-keys.md)  
-  
-  
+
+## <a name="next-steps"></a>다음 단계
+
+[다른 컴퓨터로 보고서 서버 데이터베이스 이동&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md)   
+[Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[기본 모드 보고서 서버 데이터베이스 &#40; 만들기 SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+[Reporting Services 암호화 키 백업 및 복원](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

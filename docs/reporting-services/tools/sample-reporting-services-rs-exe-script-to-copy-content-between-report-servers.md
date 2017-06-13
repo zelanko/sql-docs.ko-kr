@@ -1,30 +1,34 @@
 ---
-title: "보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/27/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Sample Reporting Services rs.exe Script to 보고서 서버 간 콘텐츠 복사 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/27/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b46f26baae77ec3c18e0a4291e5c5cbfa8e672e1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
-  이 항목에는 **RS.exe** 유틸리티를 사용해서 하나의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 다른 보고서 서버로 콘텐츠 항목 및 설정을 복사하는 샘플 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RSS 스크립트를 보여 주고 설명합니다. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
+# <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
+  이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] RS.exe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report server to another report server, using the **RS.exe** utility. RS.exe는 기본 및 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치됩니다. 이 스크립트는 보고서 및 구독과 같은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 항목을 한 서버에서 다른 서버로 복사합니다. 스크립트에서는 SharePoint 모드 및 기본 모드 보고서 서버가 모두 지원됩니다.  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
   
-## 항목 내용  
+> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 
+  
+## <a name="in-this-topic"></a>항목 내용  
   
 -   [ssrs_migration.rss 스크립트를 다운로드하려면](#bkmk_download_script)  
   
@@ -236,7 +240,7 @@ caps.handback.revision: 15
   
     -   `http://servername/_vti_bin/reportserver`  
   
--   SharePoint에서 사용자에게 제공되는 가상 폴더 구조는 기본 구조와 다를 수 있습니다. 가상이 아닌 폴더 구조를 보려면 브라우저에서 `http://servername/_vti_bin/reportserver` 또는 `http://servername/sites/site_name/_vti_bin/reportserver`를 엽니다. 이렇게 하면 SharePoint 모드의 서버에 대해 원본 폴더 및 대상 폴더를 "/" 이외의 다른 위치로 설정하는 데 유용합니다.  
+-   SharePoint에서 사용자에게 제공되는 가상 폴더 구조는 기본 구조와 다를 수 있습니다. 가상이 아닌 폴더 구조를 보려면 브라우저에서 `http://servername/_vti_bin/reportserver` 또는 `http://servername/sites/site_name/_vti_bin/reportserver` 를 엽니다. 이렇게 하면 SharePoint 모드의 서버에 대해 원본 폴더 및 대상 폴더를 "/" 이외의 다른 위치로 설정하는 데 유용합니다.  
   
 -   저장된 자격 증명이 포함된 데이터 원본과 같은 경우 암호가 마이그레이션되지 않으며 다시 입력해야 합니다.  
   
@@ -288,7 +292,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ###  <a name="bkmk_sharepoint_2_sharepoint"></a> SharePoint 모드에서 SharePoint 모드로 - ‘bi’ 사이트 모음  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
--   "sites/bi" 사이트 모음 및 공유 문서 라이브러리가 포함된 SharePoint 서버 **SourceServer**에서  
+-   "sites/bi" 사이트 모음 및 공유 문서 라이브러리가 포함된 SharePoint 서버 **SourceServer** 에서  
   
 -   "sites/bi"의 사이트 모음 및 공유 문서 라이브러리가 포함된 **TargetServer** SharePoint 서버로  
   
@@ -313,7 +317,7 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://SourceServer/ReportServer -u 
 ##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 모드 – ‘bi’ 사이트 모음에서 Windows Azure 가상 컴퓨터의 기본 모드로 서버로  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
--   "sites/bi" 사이트 모음 및 공유 라이브러리가 포함된 SharePoint 모드 보고서 서버 **SourceServer**에서  
+-   "sites/bi" 사이트 모음 및 공유 라이브러리가 포함된 SharePoint 모드 보고서 서버 **SourceServer** 에서  
   
 -   Windows Azure 가상 컴퓨터에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer** 는 **SourceServer** 의 도메인에 가입하지 않으며, **User2** 는 Windows Azure 가상 컴퓨터 **TargetServer**의 관리자입니다.  
   
@@ -324,10 +328,10 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_verification"></a> 확인  
  이 섹션에서는 콘텐츠 및 정책이 마이그레이션되었는지 확인하기 위해 대상 서버에서 수행할 몇 가지 단계를 요약해서 보여 줍니다.  
   
-### 일정  
+### <a name="schedules"></a>일정  
  대상 서버의 일정을 확인하려면  
   
- **기본 모드**  
+ **Native Mode**  
   
 1.  대상 서버에서 보고서 관리자를 찾습니다.  
   
@@ -341,8 +345,8 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
   
 2.  **Reporting Services** 그룹에서 **공유 일정 관리**를 클릭합니다.  
   
-### 역할 및 그룹  
- **기본 모드**  
+### <a name="roles-and-groups"></a>역할 및 그룹  
+ **Native Mode**  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 열고 기본 모드 보고서 서버에 연결합니다.  
   
@@ -353,14 +357,15 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s http://uetesta02/_vti_bin/reportserv
 ##  <a name="bkmk_troubleshoot"></a> 문제 해결  
  추적 플래그 **–t** 를 사용해서 추가 정보를 확인합니다. 예를 들어 스크립트를 실행하면 다음과 비슷한 메시지가 표시됩니다.  
   
--   서버에 연결하지 못했습니다. http://\<servername>/ReportServer/ReportService2010.asmx  
+-   서버에 연결 하지 못했습니다: http://\<서버 이름 > /ReportServer/ReportService2010.asmx  
   
  **–t** 플래그를 사용해서 스크립트를 다시 실행하면 다음과 비슷한 메시지가 표시됩니다.  
   
--   System.Exception: 서버에 연결하지 못했습니다. http://\<servername>/ReportServer/ReportService2010.asmx ---> System.Net.WebException: **HTTP 상태 401 때문에 요청이 실패했습니다. 권한 없음**.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters) at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout) at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity() --- End of inner exception stack trace ---  
+-   System.Exception: 서버에 연결 하지 못했습니다: http://\<서버 이름 > /ReportServer/ReportService2010.asmx System.Net.WebException--->: **HTTP 상태 401 때문에 요청이 실패 했습니다: 무단**합니다.   at System.Web.Services.Protocols.SoapHttpClientProtocol.ReadResponse(SoapClientMessage message, WebResponse response, Stream responseStream, Boolean asyncCall) at System.Web.Services.Protocols.SoapHttpClientProtocol.Invoke(String methodName, Object[] parameters) at Microsoft.SqlServer.ReportingServices2010.ReportingService2010.IsSSLRequired() at Microsoft.ReportingServices.ScriptHost.Management2010Endpoint.PingService(String url, String userName, String password, String domain, Int32 timeout) at Microsoft.ReportingServices.ScriptHost.ScriptHost.DetermineServerUrlSecurity() --- End of inner exception stack trace ---  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)   
- [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
+ [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
   
   
+

@@ -1,28 +1,33 @@
 ---
-title: "보고서에 사용되는 식(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "식 [Reporting Services], 식 정보"
+title: "식 (보고서 작성기 및 SSRS) 보고서에서 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- expressions [Reporting Services], about expressions
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 caps.latest.revision: 59
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 59
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 546817a006d06b1acbea5962cc1a3230867e111e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서에 사용되는 식(보고서 작성기 및 SSRS)
-페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서는 매개 변수, 쿼리, 필터, 보고서 항목 속성, 그룹 및 정렬 정의, 입력란 속성, 책갈피, 문서 구조, 동적 페이지 머리글 및 바닥글 내용, 이미지, 동적 데이터 원본 정의에 대한 값을 지정하거나 계산하기 위해 보고서 정의 전체에서 식이 사용됩니다. 이 항목에서는 식을 사용하여 보고서의 내용 또는 모양을 수정할 수 있는 많은 경우에 대한 예를 제공합니다. 이 목록에는 일부만 나와 있습니다. 식 단추(**fx**)를 표시하는 대화 상자 또는 **\<Expression...>**을 표시하는 드롭다운 목록에서 속성 식을 설정할 수 있습니다.  
+# <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>보고서에 사용되는 식(보고서 작성기 및 SSRS)
+페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서는 매개 변수, 쿼리, 필터, 보고서 항목 속성, 그룹 및 정렬 정의, 입력란 속성, 책갈피, 문서 구조, 동적 페이지 머리글 및 바닥글 내용, 이미지, 동적 데이터 원본 정의에 대한 값을 지정하거나 계산하기 위해 보고서 정의 전체에서 식이 사용됩니다. 이 항목에서는 식을 사용하여 보고서의 내용 또는 모양을 수정할 수 있는 많은 경우에 대한 예를 제공합니다. 이 목록에는 일부만 나와 있습니다. 식을 표시 하는 대화 상자에서 모든 속성에 대 한 식을 설정할 수 있습니다 (**fx**) 단추를 표시 하는 드롭다운 목록에서 하거나  **\<식... >**합니다.  
   
- 식은 간단하거나 복잡할 수 있습니다. *단순 식*에는 단일 데이터 집합 필드, 매개 변수 또는 기본 제공 필드에 대한 참조가 포함됩니다. 복잡한 식에는 여러 개의 기본 제공 참조, 연산자 및 함수 호출이 포함될 수 있습니다. 예를 들어 복잡한 식에는 Sales 필드에 적용되는 Sum 함수가 포함될 수 있습니다.  
+ 식은 간단하거나 복잡할 수 있습니다. *단순 식* 에는 단일 데이터 집합 필드, 매개 변수 또는 기본 제공 필드에 대한 참조가 포함됩니다. 복잡한 식에는 여러 개의 기본 제공 참조, 연산자 및 함수 호출이 포함될 수 있습니다. 예를 들어 복잡한 식에는 Sales 필드에 적용되는 Sum 함수가 포함될 수 있습니다.  
   
  식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성됩니다. 식은 등호(=)로 시작하고 뒤에 데이터 집합 필드 및 매개 변수, 상수, 함수 및 연산자와 같은 기본 제공 컬렉션에 대한 참조의 조합이 표시됩니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 59
 |값에 따라 입력란에 있는 데이터의 서식을 지정합니다.|테이블릭스의 정보 행에서 입력란 내에 있는 자리 표시자에 대한 Color입니다. **입력란 속성 대화 상자, 글꼴**을 사용합니다.|`=IIF(Fields!TotalDue.Value < 10000,"Red","Black")`|  
 |보고서 전체에서 참조할 값을 한 번 계산합니다.|보고서 변수에 대한 Value입니다. **보고서 속성 대화 상자, 변수**를 사용합니다.|`=Variables!MyCalculation.Value`|  
 |데이터 집합에서 두 개 이상의 필드에 대한 특정 값을 포함합니다.|테이블릭스의 그룹에 대한 필터 수식입니다. **테이블릭스 속성 대화 상자, 필터**를 사용합니다.|데이터 형식에 대해 **부울**을 선택합니다.<br /><br /> `=IIF(InStr(Fields!Subcat.Value,"Shorts")=0 AND (Fields!Size.Value="M" OR Fields!Size.Value="S"),TRUE, FALSE)`<br /><br /> `=`<br /><br /> `TRUE`|  
-|*Show*라는 부울 매개 변수를 사용하여 사용자가 전환할 수 있는 디자인 화면의 입력란을 숨깁니다.|입력란의 Hidden 속성입니다. **입력란 속성 대화 상자, 표시 유형**을 사용합니다.|`=Not Parameters!` *Show\<부울 매개 변수>* `.Value`|  
+|*Show*라는 부울 매개 변수를 사용하여 사용자가 전환할 수 있는 디자인 화면의 입력란을 숨깁니다.|입력란의 Hidden 속성입니다. **입력란 속성 대화 상자, 표시 유형**을 사용합니다.|`=Not Parameters!`*표시\<부울 매개 변수 >*`.Value`|  
 |동적 페이지 머리글 또는 바닥글 내용을 지정합니다.|페이지 머리글 또는 페이지 바닥글에 위치한 입력란 내의 자리 표시자에 대한 Value입니다.|`="Page " & Globals!PageNumber & " of "  & Globals!TotalPages`|  
 |매개 변수를 사용하여 동적으로 데이터 원본을 지정합니다.|데이터 원본에 대한 연결 문자열입니다. **데이터 원본 속성 대화 상자, 일반**을 사용합니다.|`="Data Source=" & Parameters!ServerName.Value & ";initial catalog=AdventureWorks2012"`|  
 |사용자가 선택한 다중값 매개 변수의 모든 값을 식별합니다.|입력란 내의 자리 표시자에 대한 Value입니다. **테이블릭스 속성 대화 상자, 필터**를 사용합니다.|`=Join(Parameters!MyMultivalueParameter.Value,", ")`|  
@@ -68,7 +73,7 @@ caps.handback.revision: 59
 |특정 culture에 대해 서식이 지정된 날짜를 지정합니다.|데이터 영역의 입력란 내에 있는 자리 표시자에 대한 Value입니다. **입력란 속성 대화 상자, 일반**을 사용합니다.|`=Fields!OrderDate.Value.ToString(System.Globalization.CultureInfo.CreateSpecificCulture("de-DE"))`|  
 |문자열과 두 소수 자릿수의 백분율로 서식이 지정된 숫자를 연결합니다.|데이터 영역의 입력란 내에 있는 자리 표시자에 대한 Value입니다. **입력란 속성 대화 상자, 일반**을 사용합니다.|`="Growth Percent: " & Format(Fields!Growth.Value,"p2")`|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   

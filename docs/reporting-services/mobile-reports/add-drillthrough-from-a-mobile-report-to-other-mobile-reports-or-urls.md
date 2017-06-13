@@ -1,25 +1,30 @@
 ---
-title: "모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "다른 모바일 보고서 또는 Url로 모바일 보고서에서 드릴스루를 추가할 | Microsoft Docs"
+ms.custom: 
+ms.date: 09/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
+# <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>모바일 보고서에서 다른 모바일 보고서나 URL로 드릴스루 추가
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서의 계기, 차트 또는 데이터 표에서 다른 모바일 보고서 또는 사용자 지정 URL로의 드릴스루를 추가할 수 있습니다. 
 
-*드릴스루*는 다른 대상 보고서나 URL을 여는 원본 보고서의 링크입니다. 대체로 대상 드릴스루 보고서에는 요약 보고서의 일부 항목에 대한 세부 정보가 포함되어 있습니다. 원본 모바일 보고서에 따라 하나 이상의 매개 변수를 대상 모바일 보고서에 전달하거나 사용자 지정 URL에 통합할 수 있습니다.  
+*드릴스루*  는 다른 대상 보고서나 URL을 여는 원본 보고서의 링크입니다. 대체로 대상 드릴스루 보고서에는 요약 보고서의 일부 항목에 대한 세부 정보가 포함되어 있습니다. 원본 모바일 보고서에 따라 하나 이상의 매개 변수를 대상 모바일 보고서에 전달하거나 사용자 지정 URL에 통합할 수 있습니다.  
   
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에서 원본 모바일 보고서를 보고 드릴스루 대상이 있는 요소를 선택하면 다른 모바일 보고서나 URL인 해당 대상으로 이동합니다.  
 
@@ -29,7 +34,7 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
 
 >**팁**: 먼저 대상 보고서를 만들고 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 웹 포털에 저장합니다. 원본 보고서에서 매개 변수를 전달하려는 경우 대상 보고서에도 매개 변수를 추가합니다. 그런 다음 원본 보고서에서 대상 보고서로의 드릴스루를 설정할 수 있습니다. [모바일 보고서에 매개 변수를 추가](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)합니다.
  
-## 모바일 보고서에 드릴스루 설정  
+## <a name="set-up-drillthrough-to-a-mobile-report"></a>모바일 보고서에 드릴스루 설정  
 
 1. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]의 레이아웃 뷰에서 드릴스루를 지원하는 시각화를 선택합니다.   
 
@@ -48,7 +53,7 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
   
 5. 일치하는 데이터 형식의 속성을 원본 모바일 보고서의 사용 가능한 출력 속성에 연결하려면 각 속성의 오른쪽에 있는 화살표를 선택합니다. 보고서 사용자가 대상 모바일 보고서로 드릴스루하기 전에 원본 모바일 보고서를 조작하지 않은 경우 여기서 각 출력에 대한 기본값을 설정할 수도 있습니다.  
   
-## 사용자 지정 URL에 대한 드릴스루 설정  
+## <a name="set-up-a-drillthrough-to-a-custom-url"></a>사용자 지정 URL에 대한 드릴스루 설정  
   
 1. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]의 레이아웃 뷰에서 드릴스루 대상을 지원하는 시각화를 선택합니다.    
 2. **Visual 속성** 창에서 **드릴스루 대상** > **사용자 지정 URL**을 선택합니다.  드릴스루 구성 대화 상자가 열립니다.  
@@ -64,7 +69,7 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
   
 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)]에서 모바일 보고서를 미리 볼 때 드릴스루가 있는 시각화를 클릭하면 드릴스루를 사용할 수 없다는 메시지가 표시됩니다. [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 레이아웃 또는 미리 보기 모드 내에서가 아니라 모바일 보고서를 저장하거나 게시한 다음 본 후에만 실제로 대상에 드릴스루할 수 있습니다.  
 
-## 웹 포털에서 대상 모바일 보고서 숨기기
+## <a name="hide-a-target-mobile-report-on-the-web-portal"></a>웹 포털에서 대상 모바일 보고서 숨기기
 대상 보고서에 대한 기본값을 설정하지 않으려는 경우 웹 포털에서 숨기는 것이 좋습니다. 숨기지 않으면 사용자가 원본 보고서를 통해 이동하지 않고 웹 포털에서 직접 보려고 할 경우 대상 보고서가 비어 있습니다.
 
 1. 웹 포털에서 숨기려는 대상 보고서의 줄임표(...)를 선택한 다음 관리를 선택합니다.
@@ -77,8 +82,10 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
 
 숨겨진 항목은 더 밝은 색으로 표시됩니다.
     
-### 참고 항목  
+### <a name="see-also"></a>참고 항목  
  
 * [Reporting Services 모바일 보고서에 매개 변수 추가](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [Reporting Services 웹 포털](../../reporting-services/web-portal-ssrs-native-mode.md)
+* [웹 포털 (SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)
+
+

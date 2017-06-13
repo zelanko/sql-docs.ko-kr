@@ -1,28 +1,36 @@
 ---
 title: "보고서 작성기 자습서 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 caps.latest.revision: 11
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 0db221b65dff8a531893657c47c776dc350c4aef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 작성기 자습서
+# <a name="report-builder-tutorials"></a>보고서 작성기 자습서
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 다음 보고서 작성기 자습서를 사용하여 페이지가 매겨진 기본 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만드는 방법을 알아볼 수 있습니다.  
   
 [자습서의 사전 요구 사항&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)  
-이 자습서를 사용하려면 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에 대한 읽기 전용 액세스 권한과 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버에 액세스할 수 있는 권한이 있어야 합니다.  
+이 자습서를 사용 하려면 읽기 전용 액세스는 SQL Server 데이터베이스 및 액세스할 수 있는 권한이 있어야는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서 서버.  
   
 이러한 선행 조건과 관련하여 도움을 얻으려면 보고서 서버 관리자에게 문의하십시오.  
   
@@ -67,11 +75,11 @@ caps.handback.revision: 11
   
 [자습서: 식 소개](../reporting-services/tutorial-introducing-expressions.md)  
 이 자습서의 단계를 따라 식을 사용하여 필드 값의 연결, 계산 및 조회를 수행하고 그 결과를 보고서에 표시하는 방법을 배울 수 있습니다. 또한 식을 사용하여 서로 다른 이미지와 표시기 상태를 조건부로 표시하는 방법도 배울 수 있습니다.  
-  
-## 참고 항목  
-[보고서 디자인 뷰&#40;보고서 작성기&#41;](../reporting-services/report-builder/report-design-view-report-builder.md)  
+
+## <a name="next-steps"></a>다음 단계
+
+[보고서 디자인 보기](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
-  
-  
-  
+[자습서: 오프 라인에서 빠른 차트 보고서 만들기](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

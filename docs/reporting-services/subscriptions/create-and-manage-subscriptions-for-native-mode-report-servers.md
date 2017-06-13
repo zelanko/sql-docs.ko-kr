@@ -1,26 +1,31 @@
 ---
-title: "기본 모드 보고서 서버 구독 만들기 및 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "표준 구독 [Reporting Services]"
-  - "구독 [Reporting Services], 표준"
+title: "기본 모드 보고서 서버에 대 한 구독 만들기 및 관리 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- standard subscriptions [Reporting Services]
+- subscriptions [Reporting Services], standard
 ms.assetid: 5ab1c661-9bfa-434a-b315-faac34ed12b1
 caps.latest.revision: 52
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 52
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7983325b1036809058e4866dd217c72c97c8238b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 기본 모드 보고서 서버 구독 만들기 및 관리
+# <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>기본 모드 보고서 서버 구독 만들기 및 관리
   표준 구독은 전자 메일을 통해 또는 공유 폴더로 보고서를 배달하려는 개인이 만든 구독입니다. 이 항목에서는 개별 사용자가 만들고 관리하는 표준 구독에 대한 정보를 제공합니다. 데이터 기반 구독의 경우 다른 요구 사항과 단계가 필요하며 이에 대해서는 별도의 항목에 설명되어 있습니다. 자세한 내용은 [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)를 참조하세요.  
   
  **항목 내용**  
@@ -38,11 +43,11 @@ caps.handback.revision: 52
 ##  <a name="bkmk_create_subscription"></a> 구독에 대한 일반 요구 사항  
  이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 관리자를 사용하여 기본 모드 보고서 서버에서 구독을 만드는 방법에 대해 설명합니다. 구독을 정의한 후에는 보고서 관리자의 내 구독 페이지 또는 특정 보고서의 **구독** 탭을 통해 구독에 액세스할 수 있습니다.  
   
- [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)에서는 SharePoint 사이트에서 응용 프로그램 페이지를 사용하여 SharePoint 모드 보고서 서버의 보고서를 구독하는 방법을 설명합니다.  
+ [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) 에서는 SharePoint 사이트에서 응용 프로그램 페이지를 사용하여 SharePoint 모드 보고서 서버의 보고서를 구독하는 방법을 설명합니다.  
   
 -   전자 메일 배달을 사용하려면 구독을 만들기 전에 SMTP 서버 또는 게이트웨이 연결에 대해 보고서 서버를 구성해야 합니다.  
   
--   파일 공유 배달을 이용하려면 먼저 대상 폴더를 정의해야 합니다. 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/ko-kr/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+-   파일 공유 배달을 이용하려면 먼저 대상 폴더를 정의해야 합니다. 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
   
  보고서를 구독하려면 먼저 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않도록 보고서 데이터 원본을 구성해야 합니다. 자세한 내용은 [Reporting Services 데이터 원본에 자격 증명 저장](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)을 참조하세요. 그렇지 않으면 **새 구독** 단추를 사용할 수 없습니다.  
   
@@ -50,11 +55,11 @@ caps.handback.revision: 52
   
 ###  <a name="bkmk_create_fileshare_subscription"></a> 파일 공유 구독을 만들려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  구독하려는 보고서로 이동합니다. 보고서 메뉴를 클릭하고 **구독**을 클릭합니다.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![보고서 메뉴](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "보고서 메뉴")  
   
 3.  **설명**: 보고서에 대한 설명을 최대 512자로 입력합니다.  
   
@@ -66,13 +71,13 @@ caps.handback.revision: 52
   
 7.  **파일을 만들 때 파일 확장명 추가**: 이 옵션은 파일 이름에 3자로 된 파일 확장명을 추가합니다. 파일 확장명은 선택하는 보고서 출력 형식에 따라 결정됩니다.  
   
-8.  **경로**: 보고서를 배달할 기존 폴더에 대한 UNC(범용 명명 규칙) 경로를 입력합니다(예: \\\\<servername\>\\<myreports\>). 경로의 시작 부분에는 백슬래시 문자를 두 번 넣고 뒷부분에는 백슬래시를 지정하지 마세요.  
+8.  **경로**: 보고서를 배달할 기존 폴더를 범용 명명 규칙 (UNC) 경로 입력 (예를 들어 \\ \\< 서버 이름\>\\< myreports\>). 경로의 시작 부분에는 백슬래시 문자를 두 번 넣고 뒷부분에는 백슬래시를 지정하지 마세요.  
   
-     ![file share subscription](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
+     ![파일 공유 구독](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "파일 공유 구독")  
   
 9. **렌더링 형식**: 파일 배달에 대한 보고서 출력 형식을 선택합니다. 보고서를 열 때 사용할 데스크톱 응용 프로그램에 맞는 형식을 선택합니다. 보고서를 단일 스트림으로 렌더링하지 않거나 정적 파일(예: HTML 4.0)에서 지원될 수 없는 대화형 작업을 발생시키는 형식은 사용하지 마세요.  
   
-10. **자격 증명**: 파일 공유 계정과 특정 Windows 사용자 자격 증명 중 사용할 자격 증명을 선택합니다. 보고서 관리자가 파일 공유 계정을 구성하지 않은 경우 **파일 공유 계정 사용** 이 비활성화됩니다. 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;연결 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. **사용자 이름** 및 **암호** 입력란에서 파일 공유에 액세스하는 데 필요한 자격 증명을 지정합니다. 사용자 이름에는 *\<domain>*\\*\<user name>* 형식을 사용합니다.  
+10. **자격 증명**: 파일 공유 계정과 특정 Windows 사용자 자격 증명 중 사용할 자격 증명을 선택합니다. 보고서 관리자가 파일 공유 계정을 구성하지 않은 경우 **파일 공유 계정 사용** 이 비활성화됩니다. 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;연결 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 에 **사용자 이름** 및 **암호** 형식을 사용 하는 파일 공유에 액세스 하는 데 필요한 자격 증명을 지정 하는 텍스트 상자  *\<도메인 >*\\*\<사용자 이름 >* 사용자 이름에 대 한 합니다.  
   
 11. **덮어쓰기 옵션**:  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 52
   
     -   사용할 날짜, 시간 및 되풀이 정보가 이미 있는 미리 정의된 공유 일정을 선택하려면 **공유 일정**을 클릭한 다음 사용할 일정을 선택합니다.  
   
-    -   보고서 스냅숏이 최신 버전으로 업데이트된 경우 보고서를 배달하려면 **보고서 내용을 새로 고쳤을 때**를 클릭합니다. 예약된 간격으로 데이터를 검색하는 보고서를 구독하는 경우 데이터를 새로 고치는 데 사용되는 일정에 따라 구독이 처리되는 시기가 결정됩니다.  
+    -   보고서 스냅숏이 최신 버전으로 업데이트된 경우 보고서를 배달하려면**보고서 내용을 새로 고쳤을 때**를 클릭합니다. 예약된 간격으로 데이터를 검색하는 보고서를 구독하는 경우 데이터를 새로 고치는 데 사용되는 일정에 따라 구독이 처리되는 시기가 결정됩니다.  
   
         > [!NOTE]  
         >  이 옵션은 업데이트 일정과 이미 연결되어 있는 스냅숏에만 사용할 수 있습니다.  
@@ -97,24 +102,24 @@ caps.handback.revision: 52
   
 ###  <a name="bkmk_create_email_subscription"></a> 전자 메일 구독을 만들려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  구독하려는 보고서로 이동합니다. 보고서 메뉴를 클릭하고 **구독**을 클릭합니다.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![보고서 메뉴](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "보고서 메뉴")  
   
 3.  **설명**: 보고서에 대한 설명을 최대 512자로 입력합니다.  
   
 4.  **소유자**: 소유자 필드는 기본적으로 현재 사용자로 채워지며 구독을 만들 때 편집할 수 없습니다. 하지만 구독을 저장한 이후 소유자와 설명을 포함한 구독 속성을 변경할 수 있습니다.  
   
-5.  **배달 방법**: **메일**을 선택합니다. **메일**을 사용할 수 없는 경우 보고서 서버가 메일 구독에 대해 구성되지 않은 것입니다. [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/ko-kr/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+5.  **배달 방법**: **메일**을 선택합니다. **메일** 을 사용할 수 없는 경우 보고서 서버가 메일 구독에 대해 구성되지 않은 것입니다. [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
   
-6.  **받는 사람**: 받는 사람: 필드의 수신자 이름은 도메인 사용자 계정을 사용하여 자동으로 지정됩니다. 형식이 [user name]@[domain.com]인지 확인합니다. 보고서 서버 구성 설정에 따라 **받는 사람** 필드가 사용자 계정을 사용하여 자동으로 지정되는지 여부가 결정됩니다. 구성 설정 메일 주소를 변경하는 방법에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/ko-kr/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
+6.  **받는 사람**: 받는 사람: 필드의 수신자 이름은 도메인 사용자 계정을 사용하여 자동으로 지정됩니다. 형식이 [user name]@[domain.com]인지 확인합니다. 보고서 서버 구성 설정에 따라 **받는 사람** 필드가 사용자 계정을 사용하여 자동으로 지정되는지 여부가 결정됩니다. 구성 설정 메일 주소를 변경하는 방법에 대한 자세한 내용은 [메일 배달을 위한 보고서 서버 구성(SSRS 구성 관리자)](http://msdn.microsoft.com/en-us/b838f970-d11a-4239-b164-8d11f4581d83)을 참조하세요.  
   
     > [!NOTE]  
-    >  사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조** 및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  
+    >  사용 권한에 따라 보고서를 배달할 전자 메일 주소를 입력할 수 있습니다. 전자 메일 주소를 여러 개 지정하려면 세미콜론(;)으로 구분합니다. **참조**, **숨은 참조**및 **회신** 입력란에 메일 주소를 추가로 입력할 수도 있습니다. 이 작업을 수행하려면 모든 구독을 관리할 수 있는 권한이 있어야 합니다.  
   
-7.  **제목**: 기본적으로 "@ReportName was executed at @ExecutionTime"으로 설정됩니다. 제목을 편집할 수는 있지만 @ReportName 및 @ExecutionTime은 **제목** 필드에 지원되는 유일한 전역 변수입니다.  
+7.  **제목**: 기본적으로 "@ReportName 에서 실행 된 @ExecutionTime"입니다. 제목을 편집할 수 있지만는 @ReportName 및 @ExecutionTime 에서 지원 되는 유일한 전역 변수는는 **주체** 필드입니다.  
   
 8.  다음과 같이 배달 옵션을 선택합니다.  
   
@@ -139,7 +144,7 @@ caps.handback.revision: 52
   
     -   사용할 날짜, 시간 및 되풀이 정보가 이미 있는 미리 정의된 공유 일정을 선택하려면 **공유 일정**을 클릭한 다음 사용할 일정을 선택합니다.  
   
-    -   보고서 스냅숏이 최신 버전으로 업데이트된 경우 보고서를 배달하려면 **보고서 내용을 새로 고쳤을 때**를 클릭합니다. 예약된 간격으로 데이터를 검색하는 보고서를 구독하는 경우 데이터를 새로 고치는 데 사용되는 일정에 따라 구독이 처리되는 시기가 결정됩니다.  
+    -   보고서 스냅숏이 최신 버전으로 업데이트된 경우 보고서를 배달하려면**보고서 내용을 새로 고쳤을 때**를 클릭합니다. 예약된 간격으로 데이터를 검색하는 보고서를 구독하는 경우 데이터를 새로 고치는 데 사용되는 일정에 따라 구독이 처리되는 시기가 결정됩니다.  
   
     > [!NOTE]  
     >  이 옵션은 업데이트 일정과 이미 연결되어 있는 스냅숏에만 사용할 수 있습니다.  
@@ -151,7 +156,7 @@ caps.handback.revision: 52
   
  구독을 만드는 사용자가 해당 구독을 소유합니다. 각 사용자는 자신이 소유한 구독을 수정하거나 삭제할 수 있습니다. 구독 속성 페이지에서 보고서 소유자를 변경하거나 소유권을 프로그래밍 방식으로 변경할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)  
+-   [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
   
 -   <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
   
@@ -165,13 +170,13 @@ caps.handback.revision: 52
 ##  <a name="bkmk_delete_subscription"></a> 구독을 삭제하려면  
  구독을 삭제하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자의 도구 모음에서 **내 구독** 을 클릭하고 수정하거나 삭제할 구독으로 이동합니다.  
   
 3.  보고서 메뉴를 열고 **삭제**를 클릭합니다.  
   
-     ![report menu](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "report menu")  
+     ![보고서 메뉴](../../reporting-services/subscriptions/media/ssrs-report-menu-report-manager.png "보고서 메뉴")  
   
  보고서 서버에서 현재 처리 중인 구독을 취소하는 방법에 대한 자세한 내용은 [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)를 참조하세요.  
   
@@ -179,12 +184,12 @@ caps.handback.revision: 52
   
  기본 보고서가 삭제되면 구독이 자동으로 삭제됩니다. 처리 중인 구독을 삭제하는 경우 배달 확장 프로그램에서 구독 데이터를 받기 전에 삭제 작업을 수행하면 구독이 중지됩니다. 그렇지 않으면 구독이 계속해서 처리됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage subscription owners and run subscription - powershell.md)   
+ [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [내 구독 사용&#40;기본 모드 보고서 서버&#41;](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
   
   

@@ -1,46 +1,51 @@
 ---
-title: "지도 범례, 색 눈금 및 관련 규칙 변경(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1"
-  - "sql13.rtp.rptdesigner.shared.maprulesdistribution.f1"
-  - "10512"
-  - "10539"
-  - "10533"
-  - "sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1"
-  - "10534"
-  - "10516"
-  - "sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1"
-  - "sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1"
-  - "10514"
-  - "sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1"
-  - "10513"
-  - "sql13.rtp.rptdesigner.shared.mapruleslegend.f1"
-  - "sql13.rtp.rptdesigner.shared.embeddedlabels.f1"
-  - "10510"
-  - "10509"
-  - "sql13.rtp.rptdesigner.maplegendproperties.general.f1"
-  - "10540"
-  - "10517"
+title: "보고서 작성기 SSRS에서 지도 범례 색 눈금 관련 규칙 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.labels.f1
+- sql13.rtp.rptdesigner.mappointlayerproperties.typerules.f1
+- sql13.rtp.rptdesigner.shared.maprulesdistribution.f1
+- "10512"
+- "10539"
+- "10533"
+- sql13.rtp.rptdesigner.maplegendtitleproperties.general.f1
+- "10534"
+- "10516"
+- sql13.rtp.rptdesigner.mapdistancescaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaleproperties.general.f1
+- sql13.rtp.rptdesigner.mapcolorscaletitleproperties.general.f1
+- "10514"
+- sql13.rtp.rptdesigner.mappointlayerproperties.sizerules.f1
+- "10513"
+- sql13.rtp.rptdesigner.shared.mapruleslegend.f1
+- sql13.rtp.rptdesigner.shared.embeddedlabels.f1
+- "10510"
+- "10509"
+- sql13.rtp.rptdesigner.maplegendproperties.general.f1
+- "10540"
+- "10517"
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 12
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: aee605482e4de390b545f63ac96bfc123cee568a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 지도 범례, 색 눈금 및 관련 규칙 변경(보고서 작성기 및 SSRS)
+# <a name="change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs"></a>지도 범례, 색 눈금 및 관련 규칙 변경(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 지도에는 지도 범례, 색 눈금 및 거리 눈금이 포함될 수 있습니다. 이러한 지도 부분은 지도에서 데이터 시각화를 해석하는 데 도움이 됩니다.  
   
  범례에는 다음과 같은 지도 부분이 포함됩니다.  
@@ -55,13 +60,13 @@ caps.handback.revision: 12
   
 ##  <a name="Viewport"></a> 뷰포트에 상대적인 범례의 위치를 변경하려면  
   
-#### 뷰포트에 상대적인 범례의 위치를 변경하려면  
+#### <a name="to-change-the-position-of-a-legend-relative-to-the-viewport"></a>뷰포트에 상대적인 범례의 위치를 변경하려면  
   
-1.  디자인 뷰에서 범례를 마우스 오른쪽 단추로 클릭하고 *\<보고서 항목>***속성** 페이지를 엽니다.  
+1.  디자인 뷰에서 범례를 마우스 오른쪽 단추로 클릭 하 고 열은  *\<보고서 항목 >***속성** 페이지.  
   
 2.  **위치**에서 뷰포트에 상대적인 범례를 표시할 곳을 지정하는 위치를 클릭합니다.  
   
-3.  뷰포트 외부에 범례를 표시하려면 **뷰포트 외부에 \<보고서 항목> 표시**를 선택합니다.  
+3.  뷰포트 외부에 범례를 표시 하려면 선택한 **표시 \<보고서 항목 > 뷰포트 외부**합니다.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegend"></a> 지도 범례의 레이아웃을 변경하려면  
   
-#### 지도 범례의 레이아웃을 변경하려면  
+#### <a name="to-change-the-layout-of-a-map-legend"></a>지도 범례의 레이아웃을 변경하려면  
   
 1.  디자인 뷰에서 범례를 마우스 오른쪽 단추로 클릭하고 **범례 속성** 페이지를 엽니다.  
   
@@ -80,30 +85,30 @@ caps.handback.revision: 12
   
 ##  <a name="MapLegendTitle"></a> 지도 범례 제목을 표시하거나 숨기려면  
   
-#### 지도 범례 제목을 표시하거나 숨기려면  
+#### <a name="to-show-or-hide-a-map-legend-title"></a>지도 범례 제목을 표시하거나 숨기려면  
   
 -   디자인 화면에서 지도 범례를 마우스 오른쪽 단추로 클릭한 다음 **범례 제목 표시**를 클릭합니다.  
   
 ##  <a name="ColorScaleTitle"></a> 색 눈금 제목을 표시하거나 숨기려면  
   
-#### 색 눈금 제목을 표시하거나 숨기려면  
+#### <a name="to-show-or-hide-a-color-scale-title"></a>색 눈금 제목을 표시하거나 숨기려면  
   
 -   디자인 화면에서 색 눈금을 마우스 오른쪽 단추로 클릭한 다음 **색 눈금 제목 표시**를 클릭합니다.  
   
 ##  <a name="MoveItems"></a> 첫 번째 범례에서 항목을 제외하려면  
  필요한 만큼 범례를 추가로 만들고 규칙 결과를 표시할 범례를 지정하는 각 지도 계층에 대한 규칙을 업데이트합니다.  
   
-#### 새 범례를 만들려면  
+#### <a name="to-create-a-new-legend"></a>새 범례를 만들려면  
   
 -   디자인 뷰에서 지도 뷰포트 외부의 지도를 마우스 오른쪽 단추로 클릭한 다음 **범례 추가**를 클릭합니다.  
   
      지도에 새 범례가 나타납니다.  
   
-#### 범례에 규칙 집합을 표시하려면  
+#### <a name="to-display-rule-results-in-a-legend"></a>범례에 규칙 집합을 표시하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***색 규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***색 규칙**합니다.  
   
 3.  **범례**를 클릭합니다.  
   
@@ -113,11 +118,11 @@ caps.handback.revision: 12
   
 ##  <a name="TemplateStyle"></a> 템플릿 스타일에 따라 지도 요소 색을 변경하려면  
   
-#### 템플릿 스타일에 따라 지도 요소 색을 변경하려면  
+#### <a name="to-vary-map-element-colors-based-on-a-template-style"></a>템플릿 스타일에 따라 지도 요소 색을 변경하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***색 규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***색 규칙**합니다.  
   
 3.  **템플릿 스타일 적용**을 클릭합니다.  
   
@@ -127,11 +132,11 @@ caps.handback.revision: 12
   
 ##  <a name="ColorPalette"></a> 색상표에 따라 지도 요소 색을 변경하려면  
   
-#### 색상표에 따라 지도 요소 색을 변경하려면  
+#### <a name="to-vary-map-element-colors-based-on-color-palette"></a>색상표에 따라 지도 요소 색을 변경하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***색 규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***색 규칙**합니다.  
   
 3.  **색상표를 사용하여 데이터 시각화**를 클릭합니다.  
   
@@ -145,11 +150,11 @@ caps.handback.revision: 12
   
 ##  <a name="ColorRanges"></a> 색 범위에 따라 지도 요소 색을 변경하려면  
   
-#### 색 범위에 따라 지도 요소 색을 변경하려면  
+#### <a name="to-vary-map-element-colors-based-on-color-ranges"></a>색 범위에 따라 지도 요소 색을 변경하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***색 규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***색 규칙**합니다.  
   
 3.  **색 범위를 사용하여 데이터 시각화**를 클릭합니다.  
   
@@ -167,11 +172,11 @@ caps.handback.revision: 12
   
 ##  <a name="CustomColors"></a> 사용자 지정 색에 따라 지도 요소 색을 변경하려면  
   
-#### 사용자 지정 색에 따라 지도 요소 색을 변경하려면  
+#### <a name="to-vary-map-element-colors-based-on-custom-colors"></a>사용자 지정 색에 따라 지도 요소 색을 변경하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***색 규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***색 규칙**합니다.  
   
 3.  **사용자 지정 색을 사용하여 데이터 시각화**를 클릭합니다.  
   
@@ -185,13 +190,13 @@ caps.handback.revision: 12
   
 ##  <a name="DistributionOptions"></a> 범례의 분포 옵션을 설정하려면  
   
-#### 범례의 분포 옵션을 설정하려면  
+#### <a name="to-set-distribution-options-for-a-legend"></a>범례의 분포 옵션을 설정하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***색 규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***색 규칙**합니다.  
   
-3.  **\<규칙 유형> 옵션을 사용하여 데이터 시각화** 옵션을 선택합니다. 배포 옵션을 사용하려면 계층과 연결된 분석 데이터에 따라 **분포** 페이지에서 범위를 만들어야 합니다.  
+3.  선택 된 **사용 하 여 데이터 시각화** \<규칙 유형 > 옵션입니다. 배포 옵션을 사용하려면 계층과 연결된 분석 데이터에 따라 **분포** 페이지에서 범위를 만들어야 합니다.  
   
 4.  **분포**를 클릭합니다.  
   
@@ -205,7 +210,7 @@ caps.handback.revision: 12
   
     -   **사용자 지정**. 값의 분포를 제어하기 위해 범위 수를 지정합니다.  
   
-     배포 옵션에 대한 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)을 참조하세요.  
+     배포 옵션에 대한 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)을 참조하세요.  
   
 6.  **하위 범위 수**에 사용할 하위 범위 수를 입력합니다. 분포 유형이 **최적**이면 하위 범위의 수가 자동으로 계산됩니다.  
   
@@ -217,18 +222,18 @@ caps.handback.revision: 12
   
 ##  <a name="RuleLegend"></a> 규칙 범례의 내용을 변경하려면  
   
-#### 색, 크기, 두께 또는 표식 유형 범례의 내용을 변경하려면  
+#### <a name="to-change-the-contents-of-a-color-size-width-or-marker-type-legend"></a>색, 크기, 두께 또는 표식 유형 범례의 내용을 변경하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***규칙**합니다.  
   
-3.   \<*규칙 유형*>**을 사용하여 데이터 시각화**가 선택되어 있는지 확인합니다.  
+3.  확인 **사용 하 여 데이터 시각화** \< *규칙 유형*>을 선택 합니다.  
   
 4.  **데이터 필드**에서 계층에서 시각화할 분석 데이터가 선택되어 있는지 확인합니다.  
   
     > [!NOTE]  
-    >  드롭다운 목록에 필드가 나타나지 않으면 계층을 마우스 오른쪽 단추로 클릭한 다음 **계층 데이터**를 클릭하여 지도 계층 데이터 속성 대화 상자, 분석 데이터 페이지를 열고 이 계층의 분석 데이터를 지정했는지 확인합니다.  
+    >  드롭다운 목록에 필드가 나타나지 않으면 계층을 마우스 오른쪽 단추로 클릭한 다음 **계층 데이터** 를 클릭하여 지도 계층 데이터 속성 대화 상자, 분석 데이터 페이지를 열고 이 계층의 분석 데이터를 지정했는지 확인합니다.  
   
 5.  **범례**를 클릭합니다.  
   
@@ -238,18 +243,18 @@ caps.handback.revision: 12
   
 ##  <a name="ColorScale"></a> 색 눈금의 내용을 변경하려면  
   
-#### 색 눈금 또는 색 범례의 내용을 변경하려면  
+#### <a name="to-change-the-contents-of-the-color-scale-or-a-color-legend"></a>색 눈금 또는 색 범례의 내용을 변경하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***색 규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***색 규칙**합니다.  
   
-3.  사용할 색 규칙 옵션을 선택합니다. 지도 범례나 색 눈금에 항목을 표시하려면 **\<규칙 유형>을 사용하여 데이터 시각화** 옵션 중 하나를 선택해야 합니다.  
+3.  사용할 색 규칙 옵션을 선택합니다. 지도 범례나 색 눈금에 항목을 표시 하려면 선택 해야 중 하나는 **사용 하 여 데이터 시각화** \<규칙 유형 > 옵션입니다.  
   
 4.  **데이터 필드**에서 계층에서 시각화할 분석 데이터가 선택되어 있는지 확인합니다.  
   
     > [!NOTE]  
-    >  드롭다운 목록에 필드가 나타나지 않으면 계층을 마우스 오른쪽 단추로 클릭한 다음 **계층 데이터**를 클릭하여 지도 계층 데이터 속성 대화 상자, 분석 데이터 페이지를 열고 이 계층의 분석 데이터를 지정했는지 확인합니다.  
+    >  드롭다운 목록에 필드가 나타나지 않으면 계층을 마우스 오른쪽 단추로 클릭한 다음 **계층 데이터** 를 클릭하여 지도 계층 데이터 속성 대화 상자, 분석 데이터 페이지를 열고 이 계층의 분석 데이터를 지정했는지 확인합니다.  
   
 5.  **범례**를 클릭합니다.  
   
@@ -259,11 +264,11 @@ caps.handback.revision: 12
   
 ##  <a name="HideItems"></a> 범례에서 모든 항목을 제거하려면  
   
-#### 규칙에 따라 항목을 숨기려면  
+#### <a name="to-hide-items-based-on-a-rule"></a>규칙에 따라 항목을 숨기려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***규칙**합니다.  
   
 3.  **범례**를 클릭합니다.  
   
@@ -272,19 +277,19 @@ caps.handback.revision: 12
 ##  <a name="ChangeFormatItems"></a> 범례의 내용 형식을 변경하려면  
  지도 범례와 연결된 규칙의 범례 옵션을 설정합니다.  
   
-#### 범례의 내용 형식을 변경하려면  
+#### <a name="to-change-the-format-of-content-in-a-legend"></a>범례의 내용 형식을 변경하려면  
   
 1.  디자인 뷰에서 지도 창이 나타날 때까지 지도를 클릭합니다.  
   
-2.  원하는 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭한 다음 *\<맵 요소 유형>***규칙**을 클릭합니다.  
+2.  선택한 다음 데이터가 있는 계층을 마우스 오른쪽 단추로 클릭  *\<맵 요소 유형 >***규칙**합니다.  
   
 3.  **범례**를 클릭합니다.  
   
-4.  **범례 텍스트** 에 범례에 표시할 데이터를 지정하는 키워드가 표시됩니다. 범례 키워드와 사용자 지정 형식을 사용하여 범례 텍스트의 형식을 제어할 수 있습니다. 예를 들어 #FROMVALUE {C2}는 소수 자릿수가 두 자리인 통화를 지정합니다. 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)을 참조하세요.  
+4.  **범례 텍스트** 에 범례에 표시할 데이터를 지정하는 키워드가 표시됩니다. 범례 키워드와 사용자 지정 형식을 사용하여 범례 텍스트의 형식을 제어할 수 있습니다. 예를 들어 #FROMVALUE {C2}는 소수 자릿수가 두 자리인 통화를 지정합니다. 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)을 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)   
  [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   

@@ -1,30 +1,35 @@
 ---
-title: "서버 속성(고급 페이지) - Reporting Services | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.serverproperties.advanced.f1"
+title: "서버 속성 (고급 페이지)-Reporting Services | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.serverproperties.advanced.f1
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 caps.latest.revision: 18
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 서버 속성(고급 페이지) - Reporting Services
+# <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
   이 페이지를 사용하여 보고서 서버의 시스템 속성을 설정할 수 있습니다. 시스템 속성을 설정하는 데에는 여러 가지 방법이 있습니다. 이 도구는 그래픽 사용자 인터페이스를 제공하므로 코드를 작성하지 않고도 속성을 설정할 수 있습니다.  
   
  이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 시작하고 보고서 서버 인스턴스에 연결한 다음 보고서 서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **고급** 을 클릭하여 이 페이지를 엽니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **EnableMyReports**  
  내 보고서 기능이 설정되어 있는지 여부를 나타냅니다. **true** 값은 이 기능이 설정되어 있음을 나타냅니다.  
   
@@ -38,7 +43,10 @@ caps.handback.revision: 16
  보고서 실행 로깅이 설정되어 있는지 여부를 나타냅니다. 기본값은 **true**입니다. 보고서 서버 실행 로그에 대한 자세한 내용은 [보고서 서버 ExecutionLog 및 ExecutionLog3 뷰](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)를 참조하세요.  
   
  **ExecutionLogDaysKept**  
- 실행 로그에 보고서 실행 정보를 보관하는 일 수입니다. 이 속성에 유효한 값은 **-1** 부터 **2**,**147**,**483**,**647**입니다. 값이 **-1**이면 실행 로그 테이블에서 항목이 삭제되지 않습니다. 기본값은 **60**입니다.  
+ 실행 로그에 보고서 실행 정보를 보관하는 일 수입니다. 이 속성에 유효한 값은 **-1** 부터 **2**,**147**,**483**,**647**입니다. 값이 **-1** 이면 실행 로그 테이블에서 항목이 삭제되지 않습니다. 기본값은 **60**입니다.  
+ 
+> [!NOTE] 
+> 값으로 설정 **0** 됩니다 *삭제* 실행 로그에서 모든 항목입니다. 값이 **-1** 실행 로그의 항목으로 유지 됩니다 중 이며 삭제할 수 없습니다.
   
  **SessionTimeout**  
  세션이 활성 상태로 유지되는 시간(초)입니다. 기본값은 **600**입니다.  
@@ -50,10 +58,10 @@ caps.handback.revision: 16
  웹 포털의 페이지 제목에 표시되는 보고서 서버 사이트의 이름입니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 이 속성은 빈 문자열일 수 있습니다. 최대 길이는 8,000자입니다.  
   
  **StoredParametersLifetime**  
- 저장된 매개 변수를 저장할 수 있는 최대 일 수를 지정합니다. 유효한 값은 **-1**, **+1**에서 **2,147,483,647**까지입니다. 기본값은 **180** 일입니다.  
+ 저장된 매개 변수를 저장할 수 있는 최대 일 수를 지정합니다. 유효한 값은 **-1**, **+1** 에서 **2,147,483,647**까지입니다. 기본값은 **180** 일입니다.  
   
  **StoredParametersThreshold**  
- 보고서 서버에서 저장할 수 있는 매개 변수 값의 최대 일 수를 지정합니다. 유효한 값은 **-1**, **+1**에서 **2,147,483,647**까지입니다. 기본값은 **1500**입니다.  
+ 보고서 서버에서 저장할 수 있는 매개 변수 값의 최대 일 수를 지정합니다. 유효한 값은 **-1**, **+1** 에서 **2,147,483,647**까지입니다. 기본값은 **1500**입니다.  
   
  **UseSessionCookies**  
  보고서 서버에서 클라이언트 브라우저와 통신할 때 세션 쿠키를 사용해야 하는지 여부를 나타냅니다. 기본값은 **true**입니다.  
@@ -71,10 +79,10 @@ caps.handback.revision: 16
  **All =** 보고서 서버 데이터베이스, 파일 시스템을 포함한 모든 저장소 옵션에 대해 스냅숏이 압축됩니다.  
   
  **SystemReportTimeout**  
- 보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 **-1**에서 **2**까지, **147**, **483**, **647**입니다. 값이 **-1**이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 **1800**입니다.  
+ 보고서 서버 네임스페이스에서 관리되는 모든 보고서에 대한 기본 보고서 처리 제한 시간 값(초)입니다. 이 값은 보고서 수준에서 무시할 수 있습니다. 이 속성을 설정하면 지정된 시간이 만료될 경우 보고서 서버가 보고서 처리를 중지합니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 네임스페이스의 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 기본값은 **1800**입니다.  
   
  **SystemSnapshotLimit**  
- 하나의 보고서에 대해 저장되는 최대 스냅숏 수입니다. 유효한 값은 **-1**에서 **2**까지, **147**, **483**, **647**입니다. 값이 **-1**이면 스냅숏 제한이 없습니다.  
+ 하나의 보고서에 대해 저장되는 최대 스냅숏 수입니다. 유효한 값은 **-1** 에서 **2**까지,**147**,**483**,**647**입니다. 값이 **-1**이면 스냅숏 제한이 없습니다.  
   
  **EnableIntegratedSecurity**  
  보고서 데이터 원본 연결에 Windows 통합 보안이 지원되는지 여부를 지정합니다. 기본값은 **True**입니다. 유효한 값은 다음과 같습니다.  
@@ -105,13 +113,14 @@ caps.handback.revision: 16
  **EnableTestConnectionDetailedErrors**  
  사용자가 보고서 서버를 사용하여 데이터 원본 연결을 테스트할 때 클라이언트 컴퓨터로 자세한 오류 메시지를 보낼지 여부를 나타냅니다. 기본값은 **true**입니다. 이 옵션이 **false**로 설정되어 있으면 일반 오류 메시지만 보냅니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties.md)   
  [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [보고서 서버 시스템 속성](../Topic/Report%20Server%20System%20Properties.md)   
+ [보고서 서버 시스템 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
   
   
+
