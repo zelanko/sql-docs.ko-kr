@@ -1,28 +1,33 @@
 ---
-title: "주체 대체 이름을 사용하도록 Reporting Services 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "주체 대체 이름을 사용 하도록 Reporting Services 구성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ce458f9f-4b4f-4a58-aa75-9a90dda1e622
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c4d975e93e77f43c481b44644faaa310963527b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 주체 대체 이름을 사용하도록 Reporting Services 구성
-  이 항목에서는 rsreportserver.config 파일을 수정하고 Netsh.exe 도구를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]\(SSRS)를 구성하고 SAN(주체 대체 이름)을 사용하는 방법에 대해 설명합니다.  
+# <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>주체 대체 이름을 사용하도록 Reporting Services 구성
+  이 항목에서는 rsreportserver.config 파일을 수정하고 Netsh.exe 도구를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)를 구성하고 SAN(주체 대체 이름)을 사용하는 방법에 대해 설명합니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode|  
   
  이 지침은 보고 서비스 URL과 웹 서비스 URL에 적용됩니다.  
   
@@ -32,11 +37,11 @@ caps.handback.revision: 6
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 SSL 설정에 대한 자세한 내용은 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)을 참조하세요.  
   
-### 웹 서비스 URL에 대해 주체 대체 이름을 사용하도록 SSRS 구성  
+### <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>웹 서비스 URL에 대해 주체 대체 이름을 사용하도록 SSRS 구성  
   
 1.  Reporting Services 구성 관리자를 시작합니다.  
   
-     자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.  
+     자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
 2.  **웹 서비스 URL** 페이지에서 SSL 포트 및 SSL 인증서를 선택합니다.  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 6
   
 10. Reporting Services 구성 관리자의 **보고서 서버 상태** 페이지에서 **중지** 를 클릭한 다음 **시작** 을 클릭하여 보고서 서버를 다시 시작합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   

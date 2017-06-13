@@ -1,7 +1,7 @@
 ---
 title: "테이블에서 열 삭제 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 04/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 20aa31c62de21e9718f504538ae4199395a5dab0
+ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
+ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/12/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
@@ -66,7 +66,9 @@ ms.lasthandoff: 04/11/2017
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**에서 열을 삭제하려는 테이블을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
+2.  **개체 탐색기**를 테이블 열을 삭제 하려고 하 고 있는 열 이름을 표시 하도록 확장을 찾습니다. 
+
+3.  삭제 하 고 선택 하려는 열을 마우스 오른쪽 단추로 클릭 **삭제**합니다.  
   
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
@@ -101,3 +103,4 @@ ms.lasthandoff: 04/11/2017
  추가 예제를 보려면 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ##  <a name="FollowUp"></a>  
+

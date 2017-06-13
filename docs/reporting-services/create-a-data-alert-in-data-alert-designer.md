@@ -1,27 +1,38 @@
 ---
 title: "데이터 경고 디자이너에서 데이터 경고 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/30/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 05/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 caps.latest.revision: 13
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 13
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 5203aab062888ca40ee83ee3f00521d6661defba
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 데이터 경고 디자이너에서 데이터 경고 만들기
-  데이터 경고 디자이너에서 데이터 경고 정의를 만들 수 있습니다. 경고 정의를 저장한 후 데이터 경고 디자이너에서 해당 정의를 다시 열어 편집한 후 다시 저장할 수 있습니다. 경고 정의 편집에 대한 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 및 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.  
-  
-### 데이터 경고 정의를 만들려면  
-  
+# <a name="create-a-data-alert-in-data-alert-designer"></a>데이터 경고 디자이너에서 데이터 경고 만들기
+
+[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+
+데이터 경고 디자이너에서 데이터 경고 정의를 만들 수 있습니다. 경고 정의를 저장한 후 데이터 경고 디자이너에서 해당 정의를 다시 열어 편집한 후 다시 저장할 수 있습니다. 경고 정의 편집에 대한 자세한 내용은 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md) 및 [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)을 참조하세요.
+
+> [!NOTE]
+> SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
+
+## <a name="create-a-data-alert-definition"></a>데이터 경고 정의 만들기
+ 
 1.  데이터 경고 정의를 만들 보고서가 포함된 SharePoint 라이브러리를 찾습니다.  
   
 2.  보고서를 클릭합니다.  
@@ -35,7 +46,7 @@ caps.handback.revision: 13
   
      다음 그림에서는 **동작** 메뉴를 보여 줍니다.  
   
-     ![Open Alert Designer from SharePoint library](../reporting-services/media/rs-openalertdesigneriw.gif "Open Alert Designer from SharePoint library")  
+     ![SharePoint 라이브러리에서 경고 디자이너 열기](../reporting-services/media/rs-openalertdesigneriw.gif "SharePoint 라이브러리에서 경고 디자이너 열기")  
   
      데이터 경고 디자이너가 열리고 보고서가 생성하는 첫 번째 데이터 피드의 처음 100개 행이 테이블에 표시됩니다.  
   
@@ -70,15 +81,15 @@ caps.handback.revision: 13
   
 10. 비교 값을 입력합니다.  
   
-11. 필요에 따라 줄임표**(…)**를 다시 클릭합니다.  
+11. 필요에 따라 줄임표 **(…)** 를 다시 클릭합니다.  
   
-     줄임표**(…)**는 첫 번째 절을 포함하는 줄에 나타납니다.  
+     줄임표 **(…)** 는 첫 번째 절을 포함하는 줄에 나타납니다.  
   
      OR 절은 AND 규칙 아래와 해당 규칙 내에 추가됩니다.  
   
 12. 필요에 따라 아래쪽 화살표를 클릭하고 **필드 선택 모드**를 선택한 다음 목록에서 열을 선택합니다.  
   
-     OR 절을 추가하기 위해 클릭한 줄임표**(…)**가 사라집니다.  
+     OR 절을 추가하기 위해 클릭한 줄임표 **(…)** 가 사라집니다.  
   
 13. 필요에 따라 **규칙 추가** 를 다시 클릭하여 규칙을 더 추가합니다.  
   
@@ -109,15 +120,16 @@ caps.handback.revision: 13
   
 20. 필요에 따라 **제목** 입력란에서 경고 메시지의 제목 줄을 업데이트합니다.  
   
-     기본 제목은 **\<데이터 경고 이름>에 대한 데이터 경고**입니다.  
+     기본 제목은 **데이터에 대 한 경고 \<데이터 경고 이름 >**합니다.  
   
 21. 필요에 따라 **설명** 입력란에 경고 메시지에 대한 설명을 입력합니다.  
   
 22. **저장**을 클릭합니다.  
-  
-## 관련 항목:  
- [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
- [경고 담당자를 위한 데이터 경고 관리자입니다.](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
- [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
-  
-  
+
+## <a name="see-also"></a>관련 항목:
+
+[데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
+[경고 담당자를 위한 데이터 경고 관리자입니다.](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
+[Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

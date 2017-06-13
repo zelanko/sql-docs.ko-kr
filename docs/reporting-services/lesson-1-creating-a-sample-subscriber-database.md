@@ -1,31 +1,38 @@
 ---
-title: "1단원: 샘플 구독자 데이터베이스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "1 단원: 예제 구독자 데이터베이스 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 caps.latest.revision: 45
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 45
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 1단원: 샘플 구독자 데이터베이스 만들기
+
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>1단원: 샘플 구독자 데이터베이스 만들기
+
 이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 작은 "구독자" 데이터베이스를 만들어 데이터 기반 구독에서 사용할 구독 데이터를 저장합니다. 구독을 처리할 때 보고서 서버에서는 이 데이터를 검색하여 보고서 출력을 사용자 지정하는 데 사용합니다. 예를 들어 데이터 행에 필터에서 사용할 특정 주문 번호가 있고 보고서를 생성한 파일 형식이 보고서를 만들 때 포함됩니다.  
   
-이 단원에서는 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스를 만든다고 가정합니다.  
+이 단원에서는 사용 하는 가정 [!INCLUDE[ssManStudioFull_md](../includes/ssmanstudiofull-md.md)] SQL Server 데이터베이스를 만들 수 있습니다.  
   
-### 예제 구독자 데이터베이스를 만들려면  
+### <a name="to-create-a-sample-subscriber-database"></a>예제 구독자 데이터베이스를 만들려면  
   
-1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 시작한 다음 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
+1.  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]를 시작한 다음 [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)]인스턴스에 대한 연결을 엽니다.  
   
 2.  데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **새 데이터베이스...**를 선택합니다.  
   
@@ -61,15 +68,15 @@ caps.handback.revision: 45
   
 8.  SELECT 문을 사용하여 세 개의 데이터 행이 있는지 확인합니다. 예를 들어 `select * from OrderInfo`  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
 + 보고서 배포를 추진하고 구독자마다 보고서 출력을 다르게 할 구독 데이터를 만들었습니다. 
 + 다음에는 저장된 자격 증명을 사용하도록 보고서의 데이터 원본 속성을 수정합니다. 
 + 또한 구독에서 구독자 데이터와 함께 사용할 매개 변수를 포함하도록 보고서 디자인을 수정합니다. [2단원: 보고서 데이터 원본 속성 수정](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
-  
-## 참고 항목  
-[데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
+
+## <a name="next-steps"></a>다음 단계
+
+[데이터 기반 구독 만들기](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  
 [데이터베이스 만들기](../relational-databases/databases/create-a-database.md)  
-[기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
-  
-  
-  
+[기본 테이블 보고서 만들기](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

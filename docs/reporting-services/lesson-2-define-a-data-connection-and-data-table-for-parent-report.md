@@ -1,31 +1,36 @@
 ---
-title: "2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "2 단원: 부모 보고서에 대 한 데이터 연결 및 데이터 테이블 정의 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: adc2cc7d329586bae6fb85edb08d71fe51aaaef8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의
+# <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의
 Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 프로젝트를 만든 후에는 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 만듭니다. 이 자습서에서 데이터 연결은 AdventureWorks2014 데이터베이스에 대한 연결입니다.  
   
-## DataSet을 추가하여 자식 보고서에 대한 데이터 연결 및 데이터 테이블을 정의하려면  
+## <a name="to-define-a-data-connection-and-data-table-by-adding-a-dataset-for-parent-report"></a>DataSet을 추가하여 자식 보고서에 대한 데이터 연결 및 데이터 테이블을 정의하려면  
   
 1.  **웹 사이트** 메뉴에서 **새 항목 추가**를 선택합니다.  
   
-2.  **새 항목 추가** 대화 상자에서 **DataSet**을 선택한 다음 **추가**를 선택합니다. 메시지가 표시되면 **예**를 선택하여 **App_Code** 폴더에 항목을 추가해야 합니다.  
+2.  **새 항목 추가** 대화 상자에서 **DataSet** 을 선택한 다음 **추가**를 선택합니다. 메시지가 표시되면 **예** 를 선택하여 **App_Code**폴더에 항목을 추가해야 합니다.  
   
     그러면 프로젝트에 새 XSD 파일 **DataSet1.xsd** 가 추가되고 데이터 집합 디자이너가 열립니다.  
   
@@ -45,9 +50,9 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
     3.  **데이터베이스 이름 선택 또는 입력** 드롭다운 목록에서 **AdventureWorks2014**를 선택합니다.  
   
-    4.  **확인** 선택하고 **다음**을 선택합니다.  
+    4.  **확인**선택하고 **다음**을 선택합니다.  
   
-7.  6단계 (b)에서 **SQL Server 인증 사용**을 선택한 경우 문자열에 중요한 데이터를 포함할지 응용 프로그램 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
+7.  6단계 (b)에서 **SQL Server 인증 사용** 을 선택한 경우 문자열에 중요한 데이터를 포함할지 응용 프로그램 코드에 정보를 설정할지 여부에 대한 옵션을 선택합니다.  
   
 8.  **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 연결 문자열의 이름을 입력하거나 기본값 **AdventureWorks2014ConnectionString**을 적용합니다. **다음**을 선택합니다.  
   
@@ -70,8 +75,10 @@ Visual C#용 ASP.NET 웹 사이트 템플릿을 사용하여 새 웹 사이트 �
   
 12. 파일을 저장합니다.  
   
-13. 데이터를 미리 보려면 **데이터** 메뉴에서 **데이터 미리 보기**를 선택한 다음 **미리 보기**를 선택합니다.  
+13. 데이터를 미리 보려면 **데이터** 메뉴에서 **데이터 미리 보기** 를 선택한 다음 **미리 보기**를 선택합니다.  
   
-## 다음 태스크  
+## <a name="next-task"></a>다음 태스크  
 부모 보고서에 대한 데이터 연결 및 데이터 테이블을 성공적으로 만들었습니다. 이제 보고서 마법사를 사용하여 부모 보고서를 디자인합니다. [3단원: 보고서 마법사를 사용하여 부모 보고서 디자인](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)을 참조하세요.  
   
+
+

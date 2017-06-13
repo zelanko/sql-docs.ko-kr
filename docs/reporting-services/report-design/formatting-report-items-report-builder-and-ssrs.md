@@ -1,25 +1,30 @@
 ---
-title: "보고서 항목 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10444"
+title: "(보고서 작성기 및 SSRS) 보고서 항목 서식 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 항목 서식 지정(보고서 작성기 및 SSRS)
+# <a name="formatting-report-items-report-builder-and-ssrs"></a>보고서 항목 서식 지정(보고서 작성기 및 SSRS)
   보고서의 항목에 서식을 지정하여 보고서를 더 보기 좋게 만들고 가독성을 높일 수 있습니다. 보고서 디자인 모드에서 데이터, 식, 이미지, 입력란 내에 있는 개별 항목 및 입력란의 서식을 지정할 수 있습니다.  
   
  ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
@@ -37,7 +42,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  텍스트의 서식을 지정하고 입력란 내의 다양한 텍스트 블록에 대한 서식 옵션을 사용자 지정하는 방법에 대해 설명합니다.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 7
  [보고서 또는 입력란에 대한 로캘 설정&#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  날짜, 통화 및 숫자 값과 같이 언어와 지역에 따라 달라지는 데이터 표시 형식의 설정을 변경하는 방법에 대해 설명합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   

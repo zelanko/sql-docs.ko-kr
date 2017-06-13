@@ -1,33 +1,38 @@
 ---
-title: "극좌표형 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "극좌표 형 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9402d8f-202a-4cdf-949e-50f5b1d2b885
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 369ab4b047ef4f9b9f73265f974a52c2c0197a79
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 극좌표형 차트(보고서 작성기 및 SSRS)
+# <a name="polar-charts-report-builder-and-ssrs"></a>극좌표형 차트(보고서 작성기 및 SSRS)
   극좌표형 차트에서는 360도 원에서 범주별로 그룹화된 점의 집합으로 계열이 표시됩니다. 값은 원의 중심에서 측정한 점까지의 거리로 표현됩니다. 점이 중심에서 멀수록 더 큰 값을 의미합니다. 범주 레이블은 차트의 주위에 표시됩니다. 극좌표형 차트에 데이터를 추가하는 방법은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 변형  
+## <a name="variations"></a>변형  
   
 -   **방사형 차트**. 방사형 차트에서는 계열이 원을 이루는 선이나 영역으로 표시됩니다. 극좌표형 차트와 달리 방사형 차트에서는 데이터를 표시하는 데 극좌표를 사용하지 않습니다.  
   
-## 극좌표형 차트의 데이터 고려 사항  
+## <a name="data-considerations-for-polar-charts"></a>극좌표형 차트의 데이터 고려 사항  
   
 -   방사형 차트는 여러 계열에 속하는 범주 데이터를 서로 비교하는 데 유용합니다.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   극좌표형 차트는 동일한 차트 영역의 다른 어떠한 차트 종류와도 결합할 수 없습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예에서는 방사형 차트를 사용하는 방법을 보여 줍니다. 아래 표에는 이 차트에 사용한 데이터가 나와 있습니다.  
   
 |이름|Sales|  
@@ -52,7 +57,7 @@ caps.handback.revision: 7
   
  ![방사형 차트](../../reporting-services/report-design/media/rs-radarchart.gif "방사형 차트")  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   

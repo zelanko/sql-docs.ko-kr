@@ -1,24 +1,29 @@
 ---
-title: "자습서: 지도 보고서(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "자습서: 지도 보고서 (보고서 작성기) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/31/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 caps.latest.revision: 18
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 18
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 자습서: 지도 보고서(보고서 작성기)
+# <a name="tutorial-map-report-report-builder"></a>자습서: 지도 보고서(보고서 작성기)
 이 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 지리적 배경 데이터를 표시하는 데 사용할 수 있는 지도 기능에 대해 알아봅니다. 
   
 지도는 일반적으로 점, 선 및 다각형으로 구성된 공간 데이터를 기반으로 합니다. 예를 들어 다각형으로는 군의 경계를 나타내고, 선으로는 도로를 나타내며, 점으로는 도시의 위치를 나타낼 수 있습니다. 각 공간 데이터 형식은 별도의 지도 계층에 지도 요소 집합으로 표시됩니다.  
@@ -34,17 +39,17 @@ caps.handback.revision: 18
   
 이 자습서에 소요되는 예상 시간: 30분  
   
-## 요구 사항  
-이 자습서에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](http://msdn.microsoft.com/ko-kr/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요. 
+## <a name="requirements"></a>요구 사항  
+이 자습서에서는 Bing 지도를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](http://msdn.microsoft.com/en-us/5ddc97a7-7ee5-475d-bc49-3b814dce7e19)을 참조하세요. 
 
 기타 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="Map"></a>1. 지도 마법사에서 다각형 계층을 사용하여 지도 만들기  
 이 섹션에서는 지도 갤러리에서 보고서에 지도를 추가합니다. 뉴욕 주의 군을 표시하는 계층이 하나 있는 지도를 추가합니다. 각 군의 모양은 지도 갤러리의 지도에 포함된 공간 데이터를 기반으로 하는 다각형으로 되어 있습니다.  
   
-### 새 보고서에서 지도 마법사를 사용하여 지도를 추가하려면  
+### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>새 보고서에서 지도 마법사를 사용하여 지도를 추가하려면  
   
-1.  컴퓨터, [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드에서 [보고서 작성기를 시작](../reporting-services/report-builder/start-report-builder.md)합니다.  
+1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
     **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 18
   
 3.  오른쪽 창에서 **지도 마법사**를 클릭합니다.  
   
-4.  **공간 데이터의 원본 선택** 페이지에서 **지도 갤러리**가 선택되어 있는지 확인합니다.  
+4.  **공간 데이터의 원본 선택** 페이지에서 **지도 갤러리** 가 선택되어 있는지 확인합니다.  
   
-6.  지도 갤러리 상자의 **USA**에서 **States by County**를 확장하고 **New York**을 클릭합니다.  
+6.  지도 갤러리 상자의 **USA** 에서 **States by County**를 확장하고 **New York**을 클릭합니다.  
   
     지도 미리 보기 창에 뉴욕 주 지도가 표시됩니다.  
     
@@ -68,7 +73,7 @@ caps.handback.revision: 18
  
     기본적으로 지도 갤러리의 지도 요소는 보고서 정의에 자동으로 포함됩니다.  
   
-9. **지도 시각화 선택** 페이지에서 **기본 지도**가 선택되어 있는지 확인하고 **다음**을 클릭합니다.  
+9. **지도 시각화 선택** 페이지에서 **기본 지도** 가 선택되어 있는지 확인하고 **다음**을 클릭합니다.  
   
 11. **색 테마 및 데이터 시각화 선택** 페이지에서 **레이블 표시** 옵션을 선택합니다.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 18
   
 13. **데이터 필드** 드롭다운 목록에서 **#COUNTYNAME**을 클릭합니다. 마법사의 지도 미리 보기 창에 다음 항목이 표시됩니다.  
   
-    -   **지도 제목** 텍스트가 포함된 제목  
+    -   **지도 제목**텍스트가 포함된 제목  
   
     -   뉴욕의 군을 표시하는 지도. 각 군이 다른 색이고 군 이름이 군 지역 위의 적절한 곳에 나타납니다.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 18
   
 13. "지도 제목" 텍스트를 선택하고 **Sales by Store** > Enter 키를 입력합니다.  
 
-15. 지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. **지도 계층** 창에는 **포함** 계층 유형의 다각형 계층인 PolygonLayer1이 표시됩니다. 각 군은 이 계층의 포함된 지도 요소입니다.  
+15. 지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. **지도 계층** 창에는 **포함**계층 유형의 다각형 계층인 PolygonLayer1이 표시됩니다. 각 군은 이 계층의 포함된 지도 요소입니다.  
   
     > [!NOTE]  
     > **지도 계층** 창이 보이지 않는 경우 현재 보기의 외부에 표시되어 있을 수 있습니다. 디자인 뷰 창의 아래쪽에 있는 스크롤 막대를 사용하여 뷰를 변경합니다. 또는 **보기** 탭에서 **보고서 데이터** 옵션의 선택을 취소하여 디자인 화면 영역을 더 제공합니다.   
@@ -117,11 +122,11 @@ caps.handback.revision: 18
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
-### SQL Server 공간 쿼리에 따라 점 계층을 추가하려면  
+### <a name="to-add-a-point-layer-based-on-a-sql-server-spatial-query"></a>SQL Server 공간 쿼리에 따라 점 계층을 추가하려면  
   
 1.  **실행** 탭 > **디자인**을 선택하여 디자인 뷰로 다시 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")를 클릭합니다. 
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음을 클릭 하 고 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")합니다. 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -169,7 +174,7 @@ caps.handback.revision: 18
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. 쿼리 디자이너 도구 모음에서 **실행**(**!**)을 클릭합니다.  
+9. 쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다.  
   
     결과 집합에는 소비재를 판매하는 뉴욕 주의 상점 집합을 나타내는 7개의 열이 포함됩니다. 명확하지 않은 열에 대한 설명을 포함하는 목록은 다음과 같습니다. 
     *   **StoreKey**: 상점 식별자입니다.  
@@ -186,19 +191,19 @@ caps.handback.revision: 18
   
     DataSet1이라는 보고서 데이터 집합이 만들어집니다. 마법사를 완료하면 보고서 데이터 창에서 해당 필드 컬렉션을 볼 수 있습니다.  
   
-11. **공간 데이터 및 지도 보기 옵션 선택** 페이지에서 **공간 필드**가 **SpatialLocation**이고 **계층 유형**이 **점**인지 확인합니다. 이 페이지의 다른 기본값을 적용합니다.  
+11. **공간 데이터 및 지도 보기 옵션 선택** 페이지에서 **공간 필드** 가 **SpatialLocation** 이고 **계층 유형** 이 **점**인지 확인합니다. 이 페이지의 다른 기본값을 적용합니다.  
   
     지도 보기에 각 상점의 위치를 표시하는 원이 표시됩니다.  
   
 12. **다음**을 클릭합니다.  
   
-13. 지도 시각화 선택 페이지에서 데이터에 따라 크기가 달라지는 표식을 표시하는 **거품형 지도**를 지도 유형으로 클릭합니다. **다음**을 클릭합니다.  
+13. 지도 시각화 선택 페이지에서 데이터에 따라 크기가 달라지는 표식을 표시하는 **거품형 지도** 를 지도 유형으로 클릭합니다. **다음**을 클릭합니다.  
   
 14. **분석 데이터 집합 선택** 페이지에서 DataSet1을 클릭한 후 **다음**을 클릭합니다. 이 데이터 집합에는 새 점 계층에 표시될 분석 데이터와 공간 데이터가 모두 들어 있습니다.   
   
 16. **색 테마 및 데이터 시각화 선택** 페이지에서 **거품 크기를 사용하여 데이터 시각화**를 선택합니다.  
   
-17. **데이터 필드**에서 `[Sum(SellingArea)]`을 선택하고 제품을 전시하기 위해 따로 설정한 영역의 크기에 맞춰 거품 크기를 변경합니다.  
+17. **데이터 필드**에서 `[Sum(SellingArea)]` 을 선택하고 제품을 전시하기 위해 따로 설정한 영역의 크기에 맞춰 거품 크기를 변경합니다.  
   
 18. **레이블 표시**를 선택한 다음 **데이터 필드**서 `[City]`를 선택합니다.
 
@@ -208,17 +213,17 @@ caps.handback.revision: 18
   
  19. 지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. **지도 계층** 창에 공간 데이터 원본 유형이 **DataRegion**인 새 계층 PointLayer1이 표시됩니다.  
   
-19. 범례 제목을 추가합니다. 범례에서 **제목** 텍스트를 선택하고 **표시 영역(평방피트)**을 입력한 다음 Enter 키를 누릅니다.  
+19. 범례 제목을 추가합니다. 범례에서 **제목**텍스트를 선택하고 **표시 영역(평방피트)** 을 입력한 다음 Enter 키를 누릅니다.  
   
 21. **지도 계층 창**에서 PointLayer1 옆의 화살표를 클릭한 다음 **점 속성**을 클릭합니다.  
 
     ![report-builder-map-point-properties](../reporting-services/media/report-builder-map-point-properties.png)
   
-22. **글꼴** 탭에서 스타일을 **굵게**, 크기를 **10pt**로 지정합니다.
+22. **글꼴** 탭에서 스타일을 **굵게** , 크기를 **10pt**로 지정합니다.
 
     ![report-builder-map-point-properties-font](../reporting-services/media/report-builder-map-point-properties-font.png)
   
-23. **일반** 탭에서 **배치**로 **아래쪽**을 선택합니다.
+23. **일반** 탭에서 **배치** 로 **아래쪽**을 선택합니다.
 
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -233,15 +238,15 @@ caps.handback.revision: 18
 ## <a name="LineLayer"></a>3. 지도 선 계층을 추가하여 경로 표시  
 지도 계층 마법사를 사용하여 두 상점 간의 경로를 표시하는 지도 계층을 추가할 수 있습니다. 이 자습서에서는 세 개의 상점 위치를 연결하는 경로를 만듭니다. 비즈니스 응용 프로그램에서 이 경로는 상점 간 최적 경로일 수 있습니다.  
   
-### 선 계층을 지도에 추가하려면  
+### <a name="to-add-a-line-layer-to-map"></a>선 계층을 지도에 추가하려면  
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.png "rs_IconMapLayerWizard")를 클릭합니다.  
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음을 클릭 하 고 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")합니다.  
   
-3.  **공간 데이터의 원본 선택** 페이지에서 **SQL Server 공간 쿼리**를 선택하고 **다음**을 클릭합니다.  
+3.  **공간 데이터의 원본 선택** 페이지에서 **SQL Server 공간 쿼리** 를 선택하고 **다음**을 클릭합니다.  
   
-4.  **SQL Server 공간 데이터가 있는 데이터 집합을 선택하십시오.** 페이지에서 **SQL Server 공간 데이터가 있는 새 데이터 집합 추가**를 클릭하고 **다음**을 클릭합니다.  
+4.  **SQL Server 공간 데이터가 있는 데이터 집합을 선택하십시오.** 페이지에서 **SQL Server 공간 데이터가 있는 새 데이터 집합 추가** 를 클릭하고 **다음**을 클릭합니다.  
   
 5.  **SQL Server 공간 데이터 원본에 대한 연결을 선택하십시오.**에서 첫 번째 절차에서 사용한 데이터 원본을 선택합니다.  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 18
   
     지도에 세 개의 상점을 연결하는 경로가 표시됩니다.  
   
-10. **공간 데이터 및 지도 보기 옵션 선택** 페이지에서 **공간 필드**가 **Route**이고 **계층 유형**이 **선**인지 확인합니다. 다른 기본값을 적용합니다.  
+10. **공간 데이터 및 지도 보기 옵션 선택** 페이지에서 **공간 필드** 가 **Route** 이고 **계층 유형** 이 **선**인지 확인합니다. 다른 기본값을 적용합니다.  
   
     지도 보기에 뉴욕 주 북부에 있는 한 상점에서 뉴욕 주 남부에 있는 한 상점까지의 경로가 표시됩니다.  
   
@@ -270,7 +275,7 @@ caps.handback.revision: 18
   
 12. **지도 시각화 선택** 페이지에서 **기본 선 지도**를 클릭하고 **다음**을 클릭합니다.  
   
-13. **색 테마 및 데이터 시각화 선택**에서 **단색 지도** 옵션을 선택합니다. 경로가 선택한 테마에 따라 단색으로 표시됩니다.  
+13. **색 테마 및 데이터 시각화 선택**에서 **단색 지도**옵션을 선택합니다. 경로가 선택한 테마에 따라 단색으로 표시됩니다.  
   
 14. **마침**을 클릭합니다.  
 
@@ -278,10 +283,10 @@ caps.handback.revision: 18
   
      지도에 공간 데이터 원본 유형이 **DataRegion**인 새 선 계층이 표시됩니다. 이 예제에서 공간 데이터는 데이터 집합에서 제공되지만 분석 데이터가 선과 연결되어 있지 않습니다.  
 
-## 확대/축소 조정
+## <a name="adjust-the-zoom"></a>확대/축소 조정
 1. 뉴욕 주 전체를 볼 수 없는 경우 확대/축소를 조정할 수 있습니다. 맵을 선택한 상태로 속성 창에서 **MapViewport** 속성을 확인합니다. 
 
-15. **보기** 섹션을 확장한 다음 **확대/축소** 속성을 볼 수 있도록 **보기**를 확장합니다. **125**로 설정합니다. 
+15. **보기** 섹션을 확장한 다음 **확대/축소** 속성을 볼 수 있도록 **보기** 를 확장합니다. **125**로 설정합니다. 
 
     ![report-builder-map-zoom](../reporting-services/media/report-builder-map-zoom.png)
 
@@ -292,7 +297,7 @@ caps.handback.revision: 18
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")를 클릭합니다.  
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 클릭 **계층 추가** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")합니다.  
   
 3.  드롭다운 목록에서 **타일 계층**을 클릭합니다.  
   
@@ -361,11 +366,11 @@ caps.handback.revision: 18
 ### <a name="ColorRules"></a>6b. 다각형에 대한 색 규칙 지정  
 상점 판매량을 기반으로 각 군의 색을 변경하는 규칙을 만들려면 범위 값, 표시할 범위 내의 하위 범위 수 및 사용할 색을 지정해야 합니다.  
   
-#### 연결된 데이터가 있는 모든 다각형에 대한 색 규칙을 지정하려면  
+#### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>연결된 데이터가 있는 모든 다각형에 대한 색 규칙을 지정하려면  
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  PolygonLayer1 옆의 화살표를 클릭하고 **다각형 색 규칙**을 클릭합니다. **지도 색 규칙 속성** 대화 상자가 열립니다. 색 규칙 옵션 **색상표를 사용하여 데이터 시각화**가 선택되어 있습니다. 이 옵션은 마법사에서 설정된 것입니다.  
+2.  PolygonLayer1 옆의 화살표를 클릭하고 **다각형 색 규칙**을 클릭합니다. **지도 색 규칙 속성** 대화 상자가 열립니다. 색 규칙 옵션 **색상표를 사용하여 데이터 시각화** 가 선택되어 있습니다. 이 옵션은 마법사에서 설정된 것입니다.  
   
 3.  **색 범위를 사용하여 데이터 시각화**를 선택합니다. 색상표 옵션이 시작 색, 중간 색 및 마지막 색 옵션으로 바뀝니다.  
   
@@ -373,11 +378,11 @@ caps.handback.revision: 18
   
 5.  통화가 천 단위로 표시되도록 형식을 변경하려면 식을 다음과 같이 변경합니다. `=Sum(Fields!Sales.Value)/1000`  
   
-6.  **시작 색**을 **빨강**으로 변경합니다.  
+6.  **시작 색** 을 **빨강**으로 변경합니다.  
   
-7.  **마지막 색**을 **녹색**으로 변경합니다.  
+7.  **마지막 색** 을 **녹색**으로 변경합니다.  
   
-    **빨강**은 낮은 판매량 값을 나타내고, **노랑**은 중간 판매량 값을 나타내며, **녹색**은 높은 판매량 값을 나타냅니다. 보고서 처리기는 이러한 값과 **분포** 페이지에서 선택한 옵션에 따라 색의 범위를 계산합니다.  
+    **빨강** 은 낮은 판매량 값을 나타내고, **노랑** 은 중간 판매량 값을 나타내며, **녹색** 은 높은 판매량 값을 나타냅니다. 보고서 처리기는 이러한 값과 **분포** 페이지에서 선택한 옵션에 따라 색의 범위를 계산합니다.  
     
     ![report-builder-map-county-color-rules](../reporting-services/media/report-builder-map-county-color-rules.png)
   
@@ -389,7 +394,7 @@ caps.handback.revision: 18
   
 11. **범례**를 클릭합니다.  
   
-12. **색 눈금 옵션**에서 **색 눈금에 표시**가 선택되어 있는지 확인합니다.  
+12. **색 눈금 옵션**에서 **색 눈금에 표시** 가 선택되어 있는지 확인합니다.  
   
 13. **이 범례에 표시**의 드롭다운 목록에서 빈 줄을 선택합니다. 이제부터 색 눈금에서만 색 범위가 표시됩니다.  
   
@@ -414,7 +419,7 @@ caps.handback.revision: 18
   
 ### <a name="NewLegend"></a>6d. 범례 제목 추가   
   
-1.  색 눈금을 선택한 상태로 속성 창에서 **MapColorScale** 속성을 확인합니다. 
+1.  색 눈금을 선택한 상태로 속성 창에서 **MapColorScale**속성을 확인합니다. 
   
 2. 제목 섹션을 확장하고 Caption 속성에 **Sales (Thousands)**를 입력합니다.
 
@@ -429,7 +434,7 @@ caps.handback.revision: 18
 ### <a name="NoData"></a>6f. 데이터가 없는 군의 색 변경  
 계층에 있는 모든 지도 요소의 기본 표시 옵션을 설정할 수 있습니다. 색 규칙은 이러한 표시 옵션보다 우선합니다.  
   
-#### 계층의 모든 요소에 대한 표시 속성을 설정하려면  
+#### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>계층의 모든 요소에 대한 표시 속성을 설정하려면  
   
 1.  디자인 뷰로 전환합니다.  
   
@@ -449,14 +454,14 @@ caps.handback.revision: 18
   
 8.  보고서를 미리 봅니다.  
   
-연결된 데이터가 없는 군은 회색-파란색으로 표시됩니다. 연결된 분석 데이터가 있는 군만 지정한 색 규칙에 따라 **빨강** ~ **녹색**으로 표시됩니다.  
+연결된 데이터가 없는 군은 회색-파란색으로 표시됩니다. 연결된 분석 데이터가 있는 군만 지정한 색 규칙에 따라 **빨강** ~ **녹색** 으로 표시됩니다.  
   
 ## <a name="CustomPoint"></a>7. 사용자 지정 점 추가  
 아직 건설되지 않은 새 상점을 나타내기 위해 이 섹션에서는 **별 모양** 표식 유형으로 점을 지정합니다.  
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.png "rs_IconMapAddLayer")를 클릭한 다음 **점 계층**을 클릭합니다.  
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 클릭 **계층 추가**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), 클릭 **점 계층**합니다.    
   
     새 점 계층이 지도에 추가됩니다. 기본적으로 점 계층의 공간 데이터 형식은 **포함**입니다.  
   
@@ -476,13 +481,13 @@ caps.handback.revision: 18
   
 8.  **표식** 탭에서 **표식 유형**으로 **별 모양**을 선택합니다.  
 
-10. **표식 크기**를 **18pt**로 변경합니다.
+10. **표식 크기** 를 **18pt**로 변경합니다.
   
 3.  **레이블** 탭의 **레이블 텍스트**에 **New Store**를 입력합니다.  
   
 5.  **배치**에서 **위쪽**을 클릭합니다.  
 
-13. **글꼴** 탭에서 글꼴 크기를 **10pt**, 스타일을 **굵게**로 지정합니다.
+13. **글꼴** 탭에서 글꼴 크기를 **10pt** , 스타일을 **굵게**로 지정합니다.
 
     ![report-builder-map-custom-point-font](../reporting-services/media/report-builder-map-custom-point-font.png)
   
@@ -503,7 +508,7 @@ caps.handback.revision: 18
   
 2.  **중심 및 확대/축소** 탭에서 **보기 중심 및 확대/축소 수준 설정** 선택되어 있는지 확인합니다.  
 
-4. **확대/축소 수준(백분율)**을 **125**로 설정합니다.
+4. **확대/축소 수준(백분율)** 을 **125**로 설정합니다.
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -521,7 +526,7 @@ caps.handback.revision: 18
   
 1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
   
-2.  **Sales in New York Stores**를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
+2.  **Sales in New York Stores** 를 입력한 다음 입력란 바깥쪽을 클릭합니다.  
   
 이 제목은 보고서 맨 위에 나타납니다. 페이지 머리글이 정의되지 않았을 때 보고서 본문의 맨 위에 있는 항목은 보고서 머리글에 해당합니다.  
   
@@ -539,14 +544,16 @@ caps.handback.revision: 18
 
 ![report-builder-map-in-portal](../reporting-services/media/report-builder-map-in-portal.png) 
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
 보고서에 지도를 추가하는 방법에 대한 연습을 완료했습니다.  
   
 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 [지도 마법사 및 지도 계층 마법사&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
-[규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)  
+[규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
+
+

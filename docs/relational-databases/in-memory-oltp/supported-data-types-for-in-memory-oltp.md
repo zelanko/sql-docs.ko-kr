@@ -1,7 +1,7 @@
 ---
 title: "메모리 내 OLTP에 지원되는 데이터 형식 | Microsoft 문서"
 ms.custom: 
-ms.date: 05/27/2016
+ms.date: 06/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a928c1f77586198fd0d33cafa445ea406a437c6b
+ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
+ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
@@ -28,7 +28,7 @@ ms.lasthandoff: 04/11/2017
   
 -   메모리 액세스에 최적화된 테이블  
   
--   고유하게 컴파일된 저장 프로시저  
+-   고유 하 게 컴파일된 T-SQL 모듈  
   
 ## <a name="unsupported-data-types"></a>지원되지 않는 데이터 형식  
  다음 데이터 형식은 지원되지 않습니다.  
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/11/2017
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>LOB 및 기타 행 외부 열 식별
 
-다음 Transact-SQL SELECT 문은 메모리 액세스에 최적화된 테이블에 대한 모든 행 외부 열을 보고합니다. 다음을 참고하십시오.
+SQL Server 2016부터 메모리 액세스에 최적화 된 테이블 단일 테이블 행이 8060 바이트 보다 큰 수 있도록 하는 행 외부 열을 지원 합니다. 다음 Transact-SQL SELECT 문은 메모리 액세스에 최적화된 테이블에 대한 모든 행 외부 열을 보고합니다. 다음을 참고하십시오.
 
 - 모든 인덱스 키 열은 행에 저장됩니다.
   - 이제 메모리 액세스에 최적화된 테이블에서 고유하지 않은 인덱스 키에 NULLable 열을 포함할 수 있습니다.
@@ -81,24 +81,15 @@ SELECT
 ```
 
 
-#### <a name="natively-compiled-modules-support-for-lobs"></a>LOB에 대해 고유하게 컴파일된 모듈 지원
-
-
-고유하게 컴파일된 모듈에서 기본 프로시저 등의 기본 제공 문자열 함수를 사용할 경우 함수에서 LOB 형식을 사용할 수 있습니다. 예를 들어 기본 프로시저 LTrim 함수는 nvarchar(max) 또는 varbinary(max) 형식의 매개 변수를 입력할 수 있습니다.
-
-또한 이러한 LOB는 고유하게 컴파일된 스칼라 UDF(사용자 정의 함수)의 반환 형식이 될 수 있습니다.
-
-
 ### <a name="other-data-types"></a>기타 데이터 형식
 
 
 |기타 유형|참조 항목|  
 |-----------------|--------------------------|  
-|테이블 형식|[메모리 액세스에 최적화된 테이블 변수](http://msdn.microsoft.com/library/bd102e95-53e2-4da6-9b8b-0e4f02d286d3)|  
+|테이블 형식|[메모리 액세스에 최적화된 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [메모리 액세스에 최적화된 테이블에서 LOB 열 구현](http://msdn.microsoft.com/en-us/bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e)   
  [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
   
   

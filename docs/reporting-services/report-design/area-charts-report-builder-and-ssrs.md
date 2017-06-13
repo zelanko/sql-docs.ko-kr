@@ -1,23 +1,28 @@
 ---
-title: "영역형 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "영역형 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 245b236d-1d55-4744-b752-80bd133502aa
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbb5e600306a5d107f7cbd542fb2c66abe96b35a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 영역형 차트(보고서 작성기 및 SSRS)
+# <a name="area-charts-report-builder-and-ssrs"></a>영역형 차트(보고서 작성기 및 SSRS)
   영역형 차트에서 계열은 선으로 연결된 일련의 점(선 아래 영역이 모두 채워짐)으로 표시됩니다. 영역형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 누적 영역형 차트의 예를 보여 줍니다. 누적 영역형 차트에서는 모든 계열의 합계를 비롯하여 각 계열이 합계에서 차지하는 비율을 표시할 수 있으므로 이 차트에는 이 예에서와 같은 데이터를 표시하는 것이 적합합니다.  
@@ -27,7 +32,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 변형  
+## <a name="variations"></a>변형  
   
 -   **누적 영역형**. 여러 계열이 세로로 누적되는 영역형 차트입니다. 차트의 계열이 한 개뿐이면 누적 영역형 차트가 영역형 차트와 같은 모양으로 표시됩니다.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 -   **곡선 영역형**. 일반적인 직선 대신 매끄러운 곡선을 사용하여 데이터 요소를 연결하는 영역형 차트입니다. 개별 데이터 요소의 값을 표시하는 것보다 추세를 표시하는 것이 더 중요한 경우 영역형 차트 대신 곡선 영역형 차트를 사용합니다.  
   
-## 영역형 차트의 데이터 고려 사항  
+## <a name="data-considerations-for-area-charts"></a>영역형 차트의 데이터 고려 사항  
   
 -   꺾은선형 차트 이외에 데이터를 연속적으로 표시할 수 있는 유일한 차트 종류는 영역형 차트입니다. 따라서 영역형 차트는 연속적인 기간 동안 발생하는 데이터를 나타내는 데 주로 사용됩니다.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 6
   
 -   영역형 차트 종류의 동작 방식은 세로 막대형 및 꺾은선형 차트와 매우 비슷합니다. 여러 계열을 서로 비교하려는 경우에는 세로 막대형 차트를 대신 사용하는 것이 좋습니다. 일정 기간 동안의 추세를 분석하려는 경우에는 꺾은선형 차트를 사용하는 것이 좋습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
  [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
  [꺾은선형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/line-charts-report-builder-and-ssrs.md)   

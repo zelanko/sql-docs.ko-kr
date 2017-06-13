@@ -1,23 +1,28 @@
 ---
-title: "SQL Server Data Tools의 배포 및 버전 지원(SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "배포 및 SQL Server Data Tools (SSRS)의 버전 지원 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 36f5686d-7e40-4f31-be81-bd197ca33a02
 caps.latest.revision: 19
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 19
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# SQL Server Data Tools의 배포 및 버전 지원(SSRS)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server Data Tools의 배포 및 버전 지원(SSRS)
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 다음과 같은 시나리오를 지원합니다.  
   
 -   보고서 정의(*.rdl) 및 보고서 서버 프로젝트(\*.rptproj) 열기  
@@ -35,13 +40,13 @@ caps.handback.revision: 19
   
  보고서는 보고서 디자이너에서 미리 보기로 렌더링되거나 보고서 서버에 배포되기 전에 빌드됩니다.  
   
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **프로젝트 속성** 대화 상자에서 구성 속성을 설정합니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] **프로젝트 속성** 대화 상자에서 구성 속성을 설정합니다.  
   
  빌드 및 배포 속성에는 다음이 포함됩니다.  
   
 -   OutputPath는 보고서의 빌드 확인, 배포 및 미리 보기에 사용되는 보고서 정의를 저장할 폴더의 경로를 식별하는 빌드 속성입니다.  
   
--   ErrorLevel은 오류로 보고되는 빌드 문제의 심각도를 식별하는 빌드 속성입니다. ErrorLevel 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reports-with-report-designer-ssrs.md)에서 "보고서 유효성 검사 및 오류 수준" 섹션을 참조하세요.  
+-   ErrorLevel은 오류로 보고되는 빌드 문제의 심각도를 식별하는 빌드 속성입니다. ErrorLevel 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)에서 "보고서 유효성 검사 및 오류 수준" 섹션을 참조하세요.  
   
 -   TargetServerVersion은 TargetServerURL 속성에 지정된 대상 보고서 서버에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 예상 버전을 식별하는 배포 속성입니다.  
   
@@ -52,12 +57,12 @@ caps.handback.revision: 19
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 보고서 서버 프로젝트를 위한 32비트 개발 환경으로, [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 기반 컴퓨터에서 실행되도록 디자인되지 않았으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 기반 서버에 설치되지 않습니다. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]가 지원됩니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 보고서 서버 프로젝트를 위한 32비트 개발 환경으로, [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 컴퓨터에서 실행되도록 디자인되지 않았으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 서버에 설치되지 않습니다. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  
   
  다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서를 작성 및 게시할 때 지원되는 버전을 설명합니다.  
   
 > [!NOTE]  
->  스키마는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이후 변경되지 않았습니다.  
+>  스키마는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]이후 변경되지 않았습니다.  
   
 |프로젝트 또는 파일 유형|버전|보고서 작성|보고서 게시|참고|  
 |--------------------------|-------------|--------------------|---------------------|-----------|  
@@ -69,7 +74,7 @@ caps.handback.revision: 19
   
  이전 버전의 보고서 정의 스키마에서 보고서를 여는 방법에 대한 자세한 내용은 [업그레이드 보고서](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요. 특정 보고서 정의 스키마에 대한 자세한 내용은 [Report Definition Language 사양(Report Definition Language Specification)](http://go.microsoft.com/fwlink/?linkid=116865)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 원본 및 보고서 게시](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   

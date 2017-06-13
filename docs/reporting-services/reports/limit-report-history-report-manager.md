@@ -1,34 +1,39 @@
 ---
-title: "보고서 기록 제한(보고서 관리자) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보고서 기록 보기"
-  - "보고서 기록 [Reporting Services], 기록 보기"
-  - "보고서 기록 [Reporting Services], 기록 구성"
-  - "기록 데이터 [Reporting Services]"
-  - "보고서 기록 표시"
+title: "보고서 기록을 (보고서 관리자) 제한 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing report history
+- report history [Reporting Services], viewing history
+- report history [Reporting Services], configuring history
+- historical data [Reporting Services]
+- displaying report history
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8e1925f7527202ea251a6949a18e2f03af4f5952
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 기록 제한(보고서 관리자)
+# <a name="limit-report-history-report-manager"></a>보고서 기록 제한(보고서 관리자)
   보고서 기록은 시간에 따라 만든 보고서 스냅숏의 모음입니다. 요청 시 보고서 기록을 만들거나 스냅숏이 만들어져 보고서 기록에 추가되는 빈도를 예약할 수 있습니다.  
   
  보고서 기록은 보고서 서버 데이터베이스에 저장됩니다. 보고서 스냅숏에 많은 양의 데이터가 포함된 경우 데이터베이스 크기에 영향을 주는 스냅숏 보존이 최소화되도록 보고서 기록을 제한해야 합니다.  
   
-### 보고서 서버에 대한 보고서 기록을 구성하려면  
+### <a name="to-configure-report-history-for-a-report-server"></a>보고서 서버에 대한 보고서 기록을 구성하려면  
   
 1.  보고서 관리자의 일반 도구 모음에서 **사이트 설정** 을 클릭합니다.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 36
   
 3.  **적용**을 클릭합니다.  
   
-### 특정 보고서에 대한 보고서 기록을 구성하려면  
+### <a name="to-configure-report-history-for-a-specific-report"></a>특정 보고서에 대한 보고서 기록을 구성하려면  
   
 1.  보고서 관리자에서 기록을 구성하려는 보고서로 이동한 후 보고서를 클릭하여 엽니다.  
   
@@ -44,10 +49,10 @@ caps.handback.revision: 36
   
 3.  **기록** 탭을 클릭합니다.  
   
-4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](../Topic/Snapshot%20Options%20Properties%20Page%20\(Report%20Manager\).md)를 참조하세요.  
+4.  보고서에 대한 옵션을 선택하고 **적용**을 클릭합니다. 각 옵션에 대한 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

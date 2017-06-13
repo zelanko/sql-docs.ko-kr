@@ -1,23 +1,28 @@
 ---
-title: "계기에서 범위 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "계기 (보고서 작성기 및 SSRS)에서 범위 서식 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ffdec8ca-3e95-41cd-850b-9e8c83be4b49
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4c28739a1b35655f74a16a6757958e0e1bc6e47
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 계기에서 범위 서식 지정(보고서 작성기 및 SSRS)
+# <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>계기에서 범위 서식 지정(보고서 작성기 및 SSRS)
  [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서는 계기 범위가 계기에서 값의 중요한 하위 섹션을 나타내는 계기 눈금의 영역입니다. 계기 범위를 사용하여 포인터 값이 특정 값 범위에 속하는지를 시각적으로 나타낼 수 있습니다. 범위는 시작 값과 끝 값으로 정의됩니다.  
   
  또한 범위를 사용하여 계기의 다양한 섹션도 정의할 수 있습니다. 예를 들어 값이 0에서 10까지인 계기에서는 값 0~3에 대해 빨간색 범위, 값 4~7에 대해 노란색 범위, 값 8~10에 대해 녹색 범위를 정의할 수 있습니다. 지정한 시작 값이 지정한 끝 값보다 크면 값이 서로 바뀌어서 시작 값이 끝 값이 되고 끝 값이 시작 값이 됩니다.  
@@ -27,7 +32,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [계기의 최소값 또는 최대값 설정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   

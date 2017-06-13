@@ -1,30 +1,35 @@
 ---
-title: "보고서 작성기에 대한 기본 옵션 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10427"
+title: "보고서 작성기에 대 한 기본 옵션 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 caps.latest.revision: 15
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 작성기에 대한 기본 옵션 설정
+# <a name="set-default-options-for-report-builder"></a>보고서 작성기에 대한 기본 옵션 설정
   보고서 작성기에서 다양한 유용한 기본값을 설정하여 보고서 작성을 쉽고 빠르게 할 수 있습니다.  예를 들어 기본 보고서 서버를 설정하거나 변경할 수 있는 경우 보고서 작성기는 별도로 지정하지 않는 한 보고서를 동일한 보고서 서버에 자동으로 저장합니다.  
   
 -   보고서 작성기에서 **파일** > **옵션**을 클릭합니다.  
   
-## UIElement 목록  
+## <a name="uielement-list"></a>UIElement 목록  
  **기본적으로 이 보고서 서버 또는 SharePoint 사이트 사용**  
  관리자가 이 옵션을 구성했을 수 있습니다. 값은 http:// 또는 https://로 시작되는 올바른 형식의 URL일 수 있습니다. 이 설정은 테이블/행렬 및 차트 마법사에 기본적으로 나타나는 데이터 원본 연결을 결정합니다. 또한 보고서는 이 서버에서 처리되며 이 서버의 리소스를 참조할 수 있습니다.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 15
  **최근에 사용한 모든 항목 목록 지우기**  
  최근 사이트 및 서버, 공유 데이터 집합, 공유 데이터 원본 연결 및 문서의 현재 목록을 지웁니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)  
   
   

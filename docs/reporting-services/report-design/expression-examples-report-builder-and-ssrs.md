@@ -1,44 +1,49 @@
 ---
-title: "식 예(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-helpviewer_keywords: 
-  - "페이지 나누기 [Reporting Services], 식"
-  - "녹색 막대 보고서 [Reporting Services]"
-  - "Visual Basic [Reporting Services]"
-  - "함수 [Reporting Services], 예제"
-  - "사용자 지정 코드 [Reporting Services]"
-  - "보고서 모양"
-  - "보고서 서식 지정 [Reporting Services], 식"
-  - "표시/숨기기 [Reporting Services]"
-  - "매개 변수 [Reporting Services], 식"
-  - "표시 유형 [Reporting Services], 식"
-  - "페이지 머리글 [Reporting Services]"
-  - "페이지 바닥글 [Reporting Services]"
-  - "날짜 [Reporting Services], 식"
-  - "식 [Reporting Services], 예제"
+title: "식 예 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 04/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+helpviewer_keywords:
+- page breaks [Reporting Services], expressions
+- green-bar reports [Reporting Services]
+- Visual Basic [Reporting Services]
+- functions [Reporting Services], examples
+- custom code [Reporting Services]
+- appearance of reports
+- formatting reports [Reporting Services], expressions
+- show/hide [Reporting Services]
+- parameters [Reporting Services], expressions
+- visibility [Reporting Services], expressions
+- page headers [Reporting Services]
+- page footers [Reporting Services]
+- dates [Reporting Services], expressions
+- expressions [Reporting Services], examples
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 caps.latest.revision: 101
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 101
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 식 예(보고서 작성기 및 SSRS)
+# <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 유형에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  RDL 샌드박싱 기능이 설정되면 보고서를 게시할 때 특정 형식 및 멤버만 식 텍스트에서 사용할 수 있습니다. 자세한 내용은 [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)을 참조하세요.  
   
- 이 항목에서는 보고서의 일반적인 태스크에 사용할 수 있는 식 예를 제공합니다.  
+이 항목에서는 보고서의 일반적인 태스크에 사용할 수 있는 식 예를 제공합니다.  
   
 -   [Visual Basic 함수](#VisualBasicFunctions) 날짜, 문자열, 변환 및 조건부 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 예  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 101
   
 -   [사용자 지정 코드](#CustomCode) 포함된 사용자 지정 코드 예  
   
- 특정 용도에 맞는 식 예는 다음 항목을 참조하십시오.  
+특정 용도에 맞는 식 예는 다음 항목을 참조하십시오.  
   
 -   [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)  
   
@@ -60,26 +65,22 @@ caps.handback.revision: 101
   
 -   [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
--   [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)  
+-   [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- 간단한 식과 복잡한 식, 식을 사용할 수 있는 위치 및 식에 포함할 수 있는 참조 유형에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)의 항목을 참조하세요. 집계 계산을 위해 식이 계산되는 컨텍스트에 대한 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression scope for totals, aggregates, and built-in collections.md)를 참조하세요.  
+간단한 식과 복잡한 식, 식을 사용할 수 있는 위치 및 식에 포함할 수 있는 참조 유형에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)를 참조하세요. 집계 계산을 위해 식이 계산되는 컨텍스트에 대한 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
- 이 항목의 식 예에서도 사용하는 함수와 연산자 중 상당수를 사용하는 식을 작성하는 방법을 보고서 작성의 맥락에서 배우려면 [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md)를 참조하십시오.  
+이 항목의 식 예에서도 사용하는 함수와 연산자 중 상당수를 사용하는 식을 작성하는 방법을 보고서 작성의 맥락에서 배우려면 [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md)를 참조하십시오.  
+
   
- 보고서 모델 쿼리 디자이너를 사용하여 보고서 모델을 데이터 원본으로 사용하는 데이터 집합 쿼리를 디자인할 경우 식 대신 수식을 사용합니다. 이러한 수식을 사용하면 보고서 모델 데이터 원본에서 반환할 데이터를 지정하는 쿼리에 사용자 지정 계산을 통합하여 보고서 데이터를 쉽게 지정할 수 있습니다. 자세한 내용은 [보고서 모델 쿼리의 수식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formulas-in-report-model-queries-report-builder-and-ssrs.md)을 참조하세요.  
+## <a name="functions"></a>함수  
+ 보고서의 여러 식에는 함수가 포함됩니다. 이러한 함수를 사용하여 데이터의 형식을 지정하고, 논리를 적용하고, 보고서 메타데이터에 액세스할 수 있습니다. 함수에서 사용 하는 식을 작성할 수 있습니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리에서는 <xref:System.Convert> 및 <xref:System.Math> 네임 스페이스입니다. 다른 어셈블리 또는 사용자 지정 코드에서 함수에 대한 참조를 추가할 수 있습니다. 클래스를 사용할 수도 있습니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 포함 하 여 <xref:System.Text.RegularExpressions>합니다.  
   
-> [!NOTE]  
->  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
-  
-## 함수  
- 보고서의 여러 식에는 함수가 포함됩니다. 이러한 함수를 사용하여 데이터의 형식을 지정하고, 논리를 적용하고, 보고서 메타데이터에 액세스할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리와 <xref:System.Convert> 및 <xref:System.Math> 네임스페이스에서 함수를 사용하는 식을 작성할 수 있습니다. 다른 어셈블리 또는 사용자 지정 코드에서 함수에 대한 참조를 추가할 수 있습니다. <xref:System.Text.RegularExpressions>를 포함하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]에서 클래스를 사용할 수도 있습니다.  
-  
-###  <a name="VisualBasicFunctions"></a> Visual Basic 함수  
+##  <a name="VisualBasicFunctions"></a> Visual Basic 함수  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용하여 입력란에 표시되는 데이터나 매개 변수, 속성 또는 보고서의 다른 영역에 사용되는 데이터를 조작할 수 있습니다. 이 섹션에서는 이러한 함수 중 몇 가지를 보여 주는 예를 제공합니다. 자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 에서는 특정 데이터 형식 등에 대한 다양한 사용자 지정 형식 옵션을 제공합니다. 자세한 내용은 MSDN의 [형식 지정](http://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오.  
   
-#### 수치 연산 함수  
+### <a name="math-functions"></a>수치 연산 함수  
   
 -   **Round** 함수는 숫자를 가장 가까운 정수로 반올림하거나 내림하려는 경우 유용합니다. 다음 식에서는 1.3을 1로 반내림합니다.  
   
@@ -93,12 +94,31 @@ caps.handback.revision: 101
     = Round(1.3*5)/5  
     ```  
   
-####  <a name="DateFunctions"></a> 날짜 함수  
+###  <a name="DateFunctions"></a> 날짜 함수  
   
 -   **Today** 함수는 현재 날짜를 제공합니다. 이 식은 보고서에 날짜를 표시할 경우 입력란에 사용하거나 현재 날짜를 기반으로 데이터를 필터링할 경우 매개 변수에 사용할 수 있습니다.  
   
     ```  
     =Today()  
+    ```  
+  
+-   사용 하 여는 **DateInterval** 날짜의 특정 부분을 추출 하는 함수입니다. 다음 몇 가지 유효한은 **DateInterval** 매개 변수:
+
+    -   DateInterval.Second
+    -   DateInterval.Minute
+    -   DateInterval.Hour
+    -   DateInterval.Weekday
+    -   DateInterval.Day
+    -   DateInterval.DayOfYear
+    -   DateInterval.WeekOfYear
+    -   DateInterval.Month
+    -   고작
+    -   뿐인
+
+    예를 들어이 식은 현재 날짜에 대 한 현재 연도에 주 수가 표시 됩니다.
+  
+    ```  
+    =DatePart(DateInterval.WeekOfYear, today()) 
     ```  
   
 -   **DateAdd** 함수는 단일 매개 변수를 기반으로 날짜 범위를 제공하는 데 유용합니다. 다음 식에서는 *StartDate*라는 매개 변수로부터 6개월 후의 날짜를 제공합니다.  
@@ -149,7 +169,7 @@ caps.handback.revision: 101
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 집합 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [First 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/first-function-report-builder-and-ssrs.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
+-   다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 집합 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [First 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -179,7 +199,7 @@ caps.handback.revision: 101
 |1년 전|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |2년 전|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
   
-####  <a name="StringFunctions"></a> 문자열 함수  
+###  <a name="StringFunctions"></a> 문자열 함수  
   
 -   연결 연산자와 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 상수를 사용하여 둘 이상의 필드를 결합합니다. 다음 식에서는 두 필드를 같은 입력란에서 별도의 줄에 반환합니다.  
   
@@ -195,13 +215,13 @@ caps.handback.revision: 101
   
      입력란에 날짜 또는 숫자만 있는 경우 입력란 내에서 **Format** 함수 대신 서식을 적용하려면 입력란의 Format 속성을 사용해야 합니다.  
   
--   **Right**, **Len** 및 **InStr** 함수는 하위 문자열을 반환하는 데 유용합니다. 예를 들어 *DOMAIN*\\*username*에서 사용자 이름만 잘라서 반환할 수 있습니다. 다음 식에서는 *User*라는 매개 변수에서 백슬래시(\\) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
+-   **Right**, **Len**및 **InStr** 함수는 하위 문자열을 반환하는 데 유용합니다. 예를 들어 *DOMAIN*\\*username* 에서 사용자 이름만 잘라서 반환할 수 있습니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(*) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
   
     ```  
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     다음 식에서는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수 대신 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> 클래스의 멤버를 사용하여 위의 값과 동일한 값을 반환합니다.  
+     다음 식의 멤버를 사용 하는 이전 쿼리에서와 같은 값의 결과 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> 클래스 대신 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수:  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -220,16 +240,16 @@ caps.handback.revision: 101
   
     ```  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>의 **Regex** 함수는 전화 번호 서식을 지정하는 등 기존 문자열의 서식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화 번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
+-   **Regex** 에서 함수는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 서식을 변경 하면 기존 문자열의 예를 들어, 전화 번호 형식을 지정 하는 데 유용 합니다. The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
     ```  
   
     > [!NOTE]  
-    >  Fields!Phone.Value의 값에 추가 공백이 없고 <xref:System.String> 형식인지 확인합니다.  
+    >  Fields!Phone.Value에 추가 공백이 없고 <xref:System.String> 형식인지 확인합니다.  
   
-#### 조회  
+### <a name="lookup"></a>조회  
   
 -   키 필드를 지정하면 **Lookup** 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 집합에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 집합에서 제품 이름(“Product”)을 표시합니다.  
   
@@ -237,7 +257,7 @@ caps.handback.revision: 101
     =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
     ```  
   
-#### LookupSet  
+### <a name="lookupset"></a>LookupSet  
   
 -   키 필드를 지정하면 **LookupSet** 함수를 사용하여 일 대 다 관계가 있는 데이터 집합에서 값 집합을 검색할 수 있습니다. 예를 들어 한 사람이 전화 번호를 여러 개 가질 수 있습니다. 다음 예에서는 PhoneList 데이터 집합의 각 행에 개인 식별자와 전화 번호가 포함되어 있다고 가정합니다. **LookupSet** 은 값 배열을 반환합니다. 다음 식은 반환 값을 단일 문자열로 결합하고 ContactID로 지정된 사람의 전화 번호 목록을 표시합니다.  
   
@@ -245,7 +265,7 @@ caps.handback.revision: 101
     =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
     ```  
   
-####  <a name="ConversionFunctions"></a> 변환 함수  
+###  <a name="ConversionFunctions"></a> 변환 함수  
  [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수를 사용하여 필드를 한 데이터 형식에서 다른 데이터 형식으로 변환할 수 있습니다. 필드의 기본 데이터 형식을 계산이나 텍스트 결합에 필요한 다른 데이터 형식으로 변환하는 데에 변환 함수를 사용할 수 있습니다.  
   
 -   다음 식에서는 상수 500을 필터 식의 값 필드에 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] money 데이터 형식과 비교하기 위해 10진수 형식으로 변환합니다.  
@@ -260,9 +280,9 @@ caps.handback.revision: 101
     =CStr(Parameters!MySelection.Count)  
     ```  
   
-####  <a name="DecisionFunctions"></a> 의사 결정 함수  
+###  <a name="DecisionFunctions"></a> 의사 결정 함수  
   
--   **Iif** 함수는 식이 True인지 여부에 따라 두 값 중 하나를 반환합니다. 다음 식에서는 **Iif** 함수를 사용하여 `LineTotal`의 값이 100을 초과하면 부울 값 **True**를 반환하고, 그렇지 않으면 **False**를 반환합니다.  
+-   **Iif** 함수는 식이 True인지 여부에 따라 두 값 중 하나를 반환합니다. 다음 식에서는 **Iif** 함수를 사용하여 **의 값이 100을 초과하면 부울 값** True `LineTotal` 를 반환하고, 그렇지 않으면 **False**를 반환합니다.  
   
     ```  
     =IIF(Fields!LineTotal.Value > 100, True, False)  
@@ -279,7 +299,7 @@ caps.handback.revision: 101
 -   같은 기능을 구현하는 다른 방법으로 **Switch** 함수를 사용하는 방법이 있습니다. **Switch** 함수는 테스트할 조건이 3개 이상인 경우에 유용합니다. **Switch** 함수는 계열에서 True로 계산되는 첫 번째 식과 연결된 값을 반환합니다.  
   
     ```  
-    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red",)  
+    =Switch(Fields!PctComplete.Value >= 10, "Green", Fields!PctComplete.Value >= 1, "Blue", Fields!PctComplete.Value = 1, "Yellow", Fields!PctComplete.Value <= 0, "Red")  
     ```  
   
      값이 10 이상이면 녹색 배경을 표시하고 1에서 9 사이면 파란색 배경을 표시하고 1이면 노란색 배경을 표시하고 0 이하면 빨간색 배경을 표시합니다.  
@@ -290,13 +310,13 @@ caps.handback.revision: 101
     =IIF(DateDiff("d",Fields!ImportantDate.Value, Now())>7,"Red","Blue")  
     ```  
   
--   `PhoneNumber` 필드의 값을 테스트하여 **null**([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)이면 "No Value"를 반환하고, 그렇지 않으면 전화 번호 값을 반환합니다. 이 식은 보고서 항목에 있는 입력란의 값을 제어하는 데 사용할 수 있습니다.  
+-   `PhoneNumber` 필드의 값을 테스트하여 **null** (**의** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])이면 "No Value"를 반환하고, 그렇지 않으면 전화 번호 값을 반환합니다. 이 식은 보고서 항목에 있는 입력란의 값을 제어하는 데 사용할 수 있습니다.  
   
     ```  
     =IIF(Fields!PhoneNumber.Value Is Nothing,"No Value",Fields!PhoneNumber.Value)  
     ```  
   
--   `Department` 필드의 값을 테스트하여 하위 보고서의 이름 또는 **null**([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)을 반환합니다. 이 식은 포함된 조건부 드릴스루 하위 보고서에 사용할 수 있습니다.  
+-   `Department` 필드의 값을 테스트하여 하위 보고서의 이름 또는 **null** (**의** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])을 반환합니다. 이 식은 포함된 조건부 드릴스루 하위 보고서에 사용할 수 있습니다.  
   
     ```  
     =IIF(Fields!Department.Value = "Development", "EmployeeReport", Nothing)  
@@ -315,10 +335,10 @@ caps.handback.revision: 101
   
     ```  
   
-###  <a name="ReportFunctions"></a> 보고서 함수  
- 식에서 보고서의 데이터를 조작하는 데 사용할 수 있는 추가 보고서 함수에 대한 참조를 추가할 수 있습니다. 이 섹션에서는 이러한 함수 중 두 가지 예를 제공합니다. 집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;보고서 함수 및 예제에 대한 자세한 내용은 [집계 함수 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/aggregate-functions-reference-report-builder-and-ssrs.md)를 참조하세요.  
+##  <a name="ReportFunctions"></a> 보고서 함수  
+ 식에서 보고서의 데이터를 조작하는 데 사용할 수 있는 추가 보고서 함수에 대한 참조를 추가할 수 있습니다. 이 섹션에서는 이러한 함수 중 두 가지 예를 제공합니다. 집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;보고서 함수 및 예제에 대한 자세한 내용은 [집계 함수 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
-#####  <a name="Sum"></a> 합계  
+###  <a name="Sum"></a> 합계  
   
 -   **Sum** 함수는 그룹 또는 데이터 영역에서 값의 합계를 구합니다. 이 함수는 그룹의 머리글 또는 바닥글에서 유용하게 사용됩니다. 다음 식에서는 Order 그룹 또는 데이터 영역에 데이터의 합계를 표시합니다.  
   
@@ -332,7 +352,7 @@ caps.handback.revision: 101
     =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
     ```  
   
-#####  <a name="RowNumber"></a> RowNumber  
+###  <a name="RowNumber"></a> RowNumber  
   
 -   **RowNumber** 함수는 데이터 영역의 입력란에 사용될 경우 식이 나타나는 입력란의 각 인스턴스에 대한 행 번호를 표시합니다. 이 함수는 테이블에서 행 번호를 지정하는 데 유용합니다. 또한 행 수에 따라 페이지를 나누는 등 더욱 복잡한 태스크에 유용합니다. 자세한 내용은 이 항목에서 [페이지 나누기](#PageBreaks) 를 참조하십시오.  
   
@@ -432,7 +452,7 @@ caps.handback.revision: 101
 > [!NOTE]  
 >  사용 가능한 색은 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] KnownColor 열거형에서 제공됩니다.  
   
-### 차트 색  
+### <a name="chart-colors"></a>차트 색  
  셰이프 차트의 색을 지정하려면 사용자 지정 코드를 사용하여 색이 데이터 요소 값에 매핑되는 순서를 제어할 수 있습니다. 이렇게 하면 범주 그룹이 동일한 여러 차트에 일관된 색을 사용할 수 있습니다. 자세한 내용은 [여러 셰이프 차트에 일관된 색 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-consistent-colors-across-multiple-shape-charts-report-builder-and-ssrs.md)을 참조하세요.  
   
 ###  <a name="Visibility"></a> 표시 유형  
@@ -500,13 +520,13 @@ caps.handback.revision: 101
 ##  <a name="CustomCode"></a> 사용자 지정 코드  
  보고서에 사용자 지정 코드를 사용할 수 있습니다. 사용자 지정 코드는 보고서에 포함되거나 보고서에서 사용되는 사용자 지정 어셈블리에 저장됩니다. 사용자 지정 코드에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
-### 사용자 지정 집계를 위해 그룹 변수 사용  
+### <a name="using-group-variables-for-custom-aggregation"></a>사용자 지정 집계를 위해 그룹 변수 사용  
  특정 그룹 범위에 대해 로컬인 그룹 변수의 값을 초기화한 다음 해당 변수에 대한 참조를 식에 포함할 수 있습니다. 사용자 지정 코드가 있는 그룹 변수를 사용하려면 사용자 지정 집계를 구현합니다. 자세한 내용은 [사용자 지정 집계를 위해 Reporting Services 2008의 그룹 변수 사용(Using Group Variables in Reporting Services 2008 for Custom Aggregation)](http://go.microsoft.com/fwlink/?LinkId=128714)을 참조하십시오.  
   
- 변수에 대한 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-and-group-variables-collections-references-report-builder-and-ssrs.md)를 참조하세요.  
+ 변수에 대한 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)를 참조하세요.  
   
-## 런타임에 Null 또는 0 값 표시하지 않기  
- 식의 일부 값은 보고서를 처리할 때 Null이나 정의되지 않은 값으로 계산될 수 있습니다. 이 경우 런타임 오류가 발생하여 입력란에 계산된 식이 아닌 **#Error**가 표시될 수 있습니다. **IIF** 함수는 이러한 동작에 특히 민감합니다. If-Then-Else 문과 달리 **IIF** 문의 각 부분(함수 호출 포함)이 **true** 또는 **false**를 테스트하는 루틴에 전달되기 전에 계산되기 때문입니다. `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 문은 `Fields!Sales.Value`가 NOTHING인 경우 렌더링된 보고서에서 **#Error**를 생성합니다.  
+## <a name="suppressing-null-or-zero-values-at-run-time"></a>런타임에 Null 또는 0 값 표시하지 않기  
+ 식의 일부 값은 보고서를 처리할 때 Null이나 정의되지 않은 값으로 계산될 수 있습니다. 이 경우 런타임 오류가 발생하여 입력란에 계산된 식이 아닌 **#Error** 가 표시될 수 있습니다. **IIF** 함수는 이러한 동작에 특히 민감합니다. If-Then-Else 문과 달리 **IIF** 문의 각 부분(함수 호출 포함)이 **true** 또는 **false**를 테스트하는 루틴에 전달되기 전에 계산되기 때문입니다. `=IIF(Fields!Sales.Value is NOTHING, 0, Fields!Sales.Value)` 문은 **가 NOTHING인 경우 렌더링된 보고서에서** #Error `Fields!Sales.Value` 를 생성합니다.  
   
  이러한 상황을 방지하려면 다음 전략 중 하나를 사용합니다.  
   
@@ -516,7 +536,7 @@ caps.handback.revision: 101
     =IIF(Field!B.Value=0, 0, Field!A.Value / IIF(Field!B.Value =0, 1, Field!B.Value))  
     ```  
   
--   사용자 지정 코드 함수를 사용하여 식의 값을 반환합니다. 다음 예에서는 현재 값과 이전 값의 차이를 백분율로 반환합니다. 이 식은 연속하는 두 값의 차이를 계산하는 데에 사용할 수 있으며 경계 사례인 첫 번째 비교(이전 값이 없는 경우)와 이전 값이나 현재 값이 **null**([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 **Nothing**)인 경우도 처리할 수 있습니다.  
+-   사용자 지정 코드 함수를 사용하여 식의 값을 반환합니다. 다음 예에서는 현재 값과 이전 값의 차이를 백분율로 반환합니다. 이 식은 연속하는 두 값의 차이를 계산하는 데에 사용할 수 있으며 경계 사례인 첫 번째 비교(이전 값이 없는 경우)와 이전 값이나 현재 값이 **null** (**의** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])인 경우도 처리할 수 있습니다.  
   
     ```  
     Public Function GetDeltaPercentage(ByVal PreviousValue, ByVal CurrentValue) As Object  
@@ -536,9 +556,9 @@ caps.handback.revision: 101
     =Code.GetDeltaPercentage(Previous(Sum(Fields!Sales.Value),"ColumnGroupByYear"), Sum(Fields!Sales.Value))  
     ```  
   
-     이 방법으로 런타임 예외를 방지할 수 있습니다. 이제 입력란의 **Color** 속성에서 `=IIF(Me.Value < 0, "red", "black")` 같은 식을 사용하여 값이 0보다 큰지 작은지에 따라 조건부로 텍스트를 표시할 수 있습니다.  
+     이 방법으로 런타임 예외를 방지할 수 있습니다. 이제 입력란의 `=IIF(Me.Value < 0, "red", "black")` Color **속성에서** 같은 식을 사용하여 값이 0보다 큰지 작은지에 따라 조건부로 텍스트를 표시할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
@@ -546,3 +566,4 @@ caps.handback.revision: 101
  [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   
+

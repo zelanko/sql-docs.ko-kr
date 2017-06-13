@@ -1,23 +1,28 @@
 ---
-title: "페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "페이지 레이아웃 및 렌더링 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d688ed124a419017e97d405d7f5bd80e6e3bf530
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
+# <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>페이지 레이아웃 및 렌더링(보고서 작성기 및 SSRS)
 페이지 레이아웃, 페이지 나누기 및 페이지 크기를 비롯하여 원하는 방식으로 보고서를 작성해야 하므로 페이지를 매긴 보고서에 대한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 렌더링 확장을 읽어보세요. 
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 또는 보고서 작성기나 보고서 디자이너의 미리 보기 창에서 보고서를 보면 보고서가 HTML 렌더러에 의해 처음 렌더링됩니다. 그런 다음 Excel 또는 쉼표로 분리된(CSV) 파일과 같은 여러 가지 형식으로 보고서를 내보낼 수 있습니다. 내보낸 보고서는 Excel에서 자세히 분석하기 위해 사용하거나 CSV 파일을 가져오고 사용할 수 있는 응용 프로그램의 데이터 원본으로 사용할 수 있습니다.  
@@ -38,7 +43,7 @@ caps.handback.revision: 8
 
 보고서에는 하위 보고서가 포함될 수도 있습니다.  
   
-## 페이지 레이아웃
+## <a name="page-layout"></a>페이지 레이아웃
 
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용하면 보고서 항목을 디자인 화면의 어느 위치에든 자유롭게 배치할 수 있습니다. 맞춤 선 및 크기 조정 핸들을 사용하여 보고서 항목의 초기 모양을 대화형으로 배치, 확장 및 축소할 수 있습니다. 여러 데이터 집합(또는 서로 다른 형식의 동일한 데이터인 경우)이 나란히 위치하도록 데이터 영역을 배치할 수 있습니다. 디자인 화면에 보고서 항목을 배치할 때 보고서 항목의 크기와 모양은 기본값으로 적용되며 해당 보고서 항목은 다른 모든 보고서 항목과 초기 관계를 형성합니다. 
  
@@ -65,7 +70,7 @@ caps.handback.revision: 8
   
 -   **하드 페이지 나누기 렌더러** 하드 페이지 나누기 렌더러에서는 보고서 레이아웃과 서식이 유지됩니다. 생성되는 파일은 인쇄 환경을 일정하게 유지하거나 온라인에서 책 형태로 보고서를 볼 수 있도록 최적화됩니다. 사용할 수 있는 하드 페이지 나누기 렌더러는 TIFF 및 PDF입니다.  
   
- 보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 보고서를 실행하면 보고서는 항상 먼저 HTML로 렌더링됩니다. 보고서를 실행한 후에는 다른 파일 형식으로 내보낼 수 있습니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서 작성기 또는 보고서 디자이너에서 보고서를 미리 보거나 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 보고서를 실행하면 보고서는 항상 먼저 HTML로 렌더링됩니다. 보고서를 실행한 후에는 다른 파일 형식으로 내보낼 수 있습니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해해야 합니다.  
   
 ##  <a name="RenderingBehaviors"></a> 렌더링 동작  
  선택한 렌더러에 따라 보고서를 렌더링할 때 특정 규칙이 적용됩니다. 여러 보고서 항목이 한 페이지에 함께 포함되는 방식은 다음과 같은 요소의 조합에 따라 결정됩니다.  
@@ -81,9 +86,9 @@ caps.handback.revision: 8
  자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
    
 ##  <a name="Pagination"></a> 페이지 매김  
- 페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서의 페이지 매김은 보고서를 보거나 배달하는 데 사용하는 렌더링 확장 프로그램과 보고서에서 사용하도록 구성하는 페이지 나누기 및 한 페이지에 표시 옵션에 따라 다릅니다.  
+ 페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서의 페이지 매김은 보고서를 보거나 배달하는 데 사용하는 렌더링 확장 프로그램과 보고서에서 사용하도록 구성하는 페이지 나누기 및 한 페이지에 표시 옵션에 따라 다릅니다.  
   
- 보고서를 배달하는 데 사용할 렌더러에 최적화되고 사용자가 쉽게 읽을 수 있는 보고서를 성공적으로 디자인하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해할 필요가 있습니다. **데이터**와 **소프트 페이지** 렌더링 확장 프로그램을 사용하여 내보낸 보고서는 일반적으로 페이지 매김의 영향을 받지 않습니다. 데이터 렌더링 확장 프로그램을 사용하는 경우 보고서가 XML 또는 CSV 형식의 테이블 형식 행 집합으로 렌더링됩니다. 내보낸 보고서 데이터를 사용할 수 있도록 하려면 보고서에서 평면화된 표 형식 행 집합을 렌더링하기 위해 규칙이 적용되는 방식을 이해해야 합니다.  
+ 보고서를 배달하는 데 사용할 렌더러에 최적화되고 사용자가 쉽게 읽을 수 있는 보고서를 성공적으로 디자인하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해할 필요가 있습니다. **데이터** 와 **소프트 페이지** 렌더링 확장 프로그램을 사용하여 내보낸 보고서는 일반적으로 페이지 매김의 영향을 받지 않습니다. 데이터 렌더링 확장 프로그램을 사용하는 경우 보고서가 XML 또는 CSV 형식의 테이블 형식 행 집합으로 렌더링됩니다. 내보낸 보고서 데이터를 사용할 수 있도록 하려면 보고서에서 평면화된 표 형식 행 집합을 렌더링하기 위해 규칙이 적용되는 방식을 이해해야 합니다.  
   
  HTML 렌더링 확장 프로그램과 같은 **소프트 페이지** 렌더링 확장 프로그램을 사용하는 경우 보고서가 인쇄되는 모양과 PDF와 같은 하드 페이지 렌더러를 사용하여 보고서가 얼마나 효과적으로 렌더링되는지도 알아보고 싶을 수 있습니다. 보고서를 만들거나 업데이트하는 동안 보고서 작성기 및 보고서 디자이너에서 보고서를 미리 보고 내보낼 수 있습니다.  
   
@@ -113,8 +118,8 @@ caps.handback.revision: 8
  [페이지 나누기, 머리글, 열 및 행 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  페이지 나누기를 사용하는 방법에 대해 설명합니다.  
   
-## 관련 항목:  
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+## <a name="see-also"></a>관련 항목:  
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3daaaa3dc2fb53344b009a5b3ab3d1cfbdd19350
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-data-sql-server"></a>JSON 데이터(SQL Server)
@@ -70,15 +70,15 @@ JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환�
 
 **예제**
   
- 다음 예제에서 쿼리는 테이블의 관계형 및 JSON 데이터(jsonCol 열에 저장됨)를 사용합니다.  
+ 다음 예제에서는 쿼리에서 사용 하 여 관계형 및 JSON 데이터 (라는 열에 저장 된 `jsonCol`) 테이블에서:  
   
-```tsql  
+```sql  
 SELECT Name,Surname,
  JSON_VALUE(jsonCol,'$.info.address.PostCode') AS PostCode,
  JSON_VALUE(jsonCol,'$.info.address."Address Line 1"')+' '
   +JSON_VALUE(jsonCol,'$.info.address."Address Line 2"') AS Address,
  JSON_QUERY(jsonCol,'$.info.skills') AS Skills
-FROM PeopleCollection
+FROM People
 WHERE ISJSON(jsonCol)>0
  AND JSON_VALUE(jsonCol,'$.info.address.Town')='Belgrade'
  AND Status='Active'
@@ -92,7 +92,7 @@ ORDER BY JSON_VALUE(jsonCol,'$.info.address.PostCode')
 ### <a name="change-json-values"></a>JSON 값 변경
 JSON 텍스트의 일부를 수정해야 하는 경우 **JSON_MODIFY** 함수를 사용하여 JSON 문자열에서 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환할 수 있습니다. 다음 예제에서는 JSON이 포함된 변수에서 속성 값을 업데이트합니다.  
   
-```tsql  
+```sql  
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=JSON_MODIFY(@jsonInfo,'$.info.address[0].town','London') 
@@ -103,7 +103,7 @@ SQL Server의 JSON 쿼리에는 사용자 지정 쿼리 언어가 필요 없습�
   
  다음 예제에서는 **OPENJSON**을 호출하고 `@json` 변수에 저장된 개체 배열을 표준 SQL **SELECT** 문을 사용하여 쿼리할 수 있는 행 집합으로 변환합니다.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json =  
 N'[  
@@ -140,7 +140,7 @@ FROM OPENJSON(@json)
   
  다음 예제에서는 FOR JSON 절에서 PATH 모드를 사용합니다.  
   
-```tsql  
+```sql  
 SELECT id, firstName AS "info.name", lastName AS "info.surname", age, dateOfBirth as dob  
 FROM People  
 FOR JSON PATH  
@@ -190,7 +190,7 @@ JSON 문서를 처리하기 위해 사용자 지정된 쿼리 언어를 사용�
   
  다음 OData URL은 ProductID 및 ProductName 열에서 ID가 1인 제품에 대한 요청을 나타냅니다. **FOR JSON**을 사용하여 SQL Server에 필요한 형식으로 출력 형식을 지정할 수 있습니다.  
   
-```tsql  
+```sql  
 SELECT 'http://services.odata.org/V4/Northwind/Northwind.svc/$metadata#Products(ProductID,ProductName)/$entity'
  AS '@odata.context',   
  ProductID, Name as ProductName   
@@ -204,7 +204,7 @@ FOR JSON AUTO
 ## <a name="analyze-json-data-with-sql-queries"></a>SQL 쿼리를 사용하여 JSON 데이터 분석  
  보고를 위해 JSON 데이터를 필터링하거나 집계해야 하는 경우 **OPENJSON**을 사용하여 JSON을 관계형 형식으로 변환할 수 있습니다. 그런 다음 표준 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 기본 제공 함수를 사용하여 보고서를 작성합니다.  
   
-```tsql  
+```sql  
 SELECT Tab.Id, SalesOrderJsonData.Customer, SalesOrderJsonData.Date  
 FROM   SalesOrderRecord AS Tab  
           CROSS APPLY  
@@ -225,7 +225,7 @@ ORDER BY JSON_VALUE(Tab.json, '$.Group'), Tab.DateModified
 ## <a name="import-json-data-into-sql-server-tables"></a>SQL Server 테이블로 JSON 데이터 가져오기  
  외부 서비스에서 SQL Server로 JSON 데이터를 로드해야 하는 경우 응용 프로그램 계층에서 데이터를 구문 분석하는 대신 **OPENJSON**을 사용하여 데이터를 SQL Server로 가져올 수 있습니다.  
   
-```tsql  
+```sql  
 DECLARE @jsonVariable NVARCHAR(MAX)
 
 SET @jsonVariable = N'[  
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
   
--   [Microsoft 프로그램 관리자인 Jovan Popovic의 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)  
+-   특정 솔루션에 많이 사용 사례 및 권장 사항, 참조는 [기본 제공 JSON 지원에 대 한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) SQL Server와 Microsoft 프로그램 관리자 인 Jovan popovic의 Azure SQL 데이터베이스에 있습니다.  
   
 ### <a name="reference-topics"></a>참조 항목  
   

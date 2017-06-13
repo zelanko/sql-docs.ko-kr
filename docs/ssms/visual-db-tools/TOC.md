@@ -1,3 +1,4 @@
+# [Visual Database Tools](visual-database-tools.md)
 # [테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)](add-table-dialog-box-query-and-view-designers-visual-database-tools.md)
 # [변경 스크립트 저장 대화 상자(Visual Database Tools)](save-change-script-dialog-box-visual-database-tools.md)
 # [여러 사용자가 변경한 내용 조정(Visual Database Tools)](reconcile-changes-made-by-multiple-users-visual-database-tools.md)
@@ -155,7 +156,6 @@
 # [동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)](use-having-and-where-clauses-in-the-same-query-visual-database-tools.md)
 # [쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)](navigate-in-the-query-and-view-designer-visual-database-tools.md)
 # [집계 쿼리에서 열 작업(Visual Database Tools)](work-with-columns-in-aggregate-queries-visual-database-tools.md)
-# [Visual Database Tools](visual-database-tools.md)
 # [값이 일치하지 않는 행 선택(Visual Database Tools)](select-rows-that-do-not-match-a-value-visual-database-tools.md)
 # [사후 저장 알림 대화 상자(Visual Database Tools)](post-save-notifications-dialog-box-visual-database-tools.md)
 # [쿼리 저장(Visual Database Tools)](save-queries-visual-database-tools.md)

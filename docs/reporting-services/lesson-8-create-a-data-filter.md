@@ -1,38 +1,43 @@
 ---
-title: "8단원: 데이터 필터 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/18/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-applies_to: 
-  - "SQL Server 2016"
+title: "8 단원: 데이터 필터 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/18/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+applies_to:
+- SQL Server 2016
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 caps.latest.revision: 9
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 9
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea0e116101c9599268b3fc2f3cd556d2149433c8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 8단원: 데이터 필터 만들기
+# <a name="lesson-8-create-a-data-filter"></a>8단원: 데이터 필터 만들기
 부모 보고서에 드릴스루 동작을 추가한 후에는 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 만듭니다.  
   
 드릴스루 보고서에 대한 테이블 기반 필터 **또는** 쿼리 필터를 만들 수 있습니다. 이 단원에서는 두 옵션에 대한 지침을 제공합니다.  
   
-## 테이블 기반 필터  
+## <a name="table-based-filter"></a>테이블 기반 필터  
 테이블 기반 필터를 구현하려면 다음 태스크를 완료해야 합니다.  
   
 -   자식 보고서의 테이블릭스에 필터 식을 추가합니다.  
   
 -   **PurchaseOrderDetail** 테이블에서 필터링되지 않은 데이터를 선택하는 함수를 만듭니다.  
   
--   자식 보고서에 **PurchaseOrderDetail DataTable**을 바인딩하는 이벤트 처리기를 추가합니다.  
+-   자식 보고서에 **PurchaseOrderDetail DataTable** 을 바인딩하는 이벤트 처리기를 추가합니다.  
   
-### 자식 보고서의 테이블릭스에 필터 식을 추가하려면  
+### <a name="to-add-a-filter-expression-to-the-tablix-in-the-child-report"></a>자식 보고서의 테이블릭스에 필터 식을 추가하려면  
   
 1.  자식 보고서를 엽니다.  
   
@@ -40,23 +45,23 @@ caps.handback.revision: 9
   
 3.  **필터** 페이지를 선택한 다음 **추가**를 선택합니다.  
   
-4.  **식** 필드의 드롭다운 목록에서 **ProductID**를 선택합니다. 이는 필터를 적용할 열입니다.  
+4.  **식** 필드의 드롭다운 목록에서 **ProductID** 를 선택합니다. 이는 필터를 적용할 열입니다.  
   
-5.  **연산자** 드롭다운 목록에서 같음 연산자(**=**)를 선택합니다.  
+5.  **=**연산자 **드롭다운 목록에서 같음 연산자(** )를 선택합니다.  
   
-6.  **값** 필드 옆의 식 단추를 선택하고 **범주** 영역에서 **매개 변수**를 선택한 다음 **값** 영역에서 **productid**를 두 번 클릭합니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
+6.  **값** 필드 옆의 식 단추를 선택하고 **범주** 영역에서 **매개 변수** 를 선택한 다음 **값** 영역에서 **productid** 를 두 번 클릭합니다. 이제 **다음에 대한 식 설정: 값** 필드에 **=Parameters!productid.Value**와 비슷한 식이 포함됩니다.  
   
-7.  **확인**을 선택하고 **테이블릭스 속성** 대화 상자에서 **확인**을 다시 선택합니다.  
+7.  **확인** 을 선택하고 **테이블릭스 속성** 대화 상자에서 **확인** 을 다시 선택합니다.  
   
 8.  .rdlc 파일을 저장합니다.  
   
-### PurchaseOrdeDetail 테이블에서 필터링되지 않은 데이터를 선택하는 함수를 만들려면  
+### <a name="to-create-a-function-that-selects-unfiltered-data-from-the-purchaseordedetail-table"></a>PurchaseOrdeDetail 테이블에서 필터링되지 않은 데이터를 선택하는 함수를 만들려면  
   
 1.  솔루션 탐색기에서 Default.aspx를 확장하고 Default.aspx.cs를 두 번 클릭합니다.  
   
-2.  정수 형식의 **productid** 매개 변수를 허용하며 **datatable** 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
+2.  정수 형식의 **productid**매개 변수를 허용하며 **datatable** 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  [4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)의 2단계에서 만든 데이터 집합 **DataSet2** 인스턴스를 만듭니다.  
+    1.  **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**의 2단계에서 만든 데이터 집합 [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)인스턴스를 만듭니다.  
   
     2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 9
             }  
         ```  
   
-### 자식 보고서에 PurchaseOrderDetail DataTable을 바인딩하는 이벤트 처리기를 추가하려면  
+### <a name="to-add-an-event-handler-that-binds-the-purchaseorderdetail-datatable-to-the-child-report"></a>자식 보고서에 PurchaseOrderDetail DataTable을 바인딩하는 이벤트 처리기를 추가하려면  
   
 1.  디자이너 보기에서 Default.aspx를 엽니다.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 9
   
     1.  *DrillthroughEventArgs* 매개 변수에서 자식 보고서 개체 참조를 인출합니다.  
   
-    2.  **GetPurchaseOrderDetail** 함수를 호출합니다.  
+    2.  **GetPurchaseOrderDetail**함수를 호출합니다.  
   
     3.  **PurchaseOrderDetail** DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
@@ -153,20 +158,20 @@ caps.handback.revision: 9
   
 6.  파일을 저장합니다.  
   
-## 쿼리 필터  
+## <a name="query-filter"></a>쿼리 필터  
 쿼리 필터를 구현하려면 다음 태스크를 완료해야 합니다.  
   
 -   **PurchaseOrderDetail** 테이블에서 필터링된 데이터를 선택하는 함수를 만듭니다.  
   
--   매개 변수 값을 검색하고 자식 보고서에 **PurchaseOrdeDetail DataTable**을 바인딩하는 이벤트 처리기를 추가합니다.  
+-   매개 변수 값을 검색하고 자식 보고서에 **PurchaseOrdeDetail DataTable** 을 바인딩하는 이벤트 처리기를 추가합니다.  
   
-### PurchaseOrderDetail 테이블에서 필터링된 데이터를 선택하는 함수를 만들려면  
+### <a name="to-create-a-function-that-selects-filtered-data-from-the-purchaseorderdetail-table"></a>PurchaseOrderDetail 테이블에서 필터링된 데이터를 선택하는 함수를 만들려면  
   
 1.  솔루션 탐색기에서 Default.aspx를 확장하고 Default.aspx.cs를 두 번 클릭합니다.  
   
-2.  정수 형식의 **productid** 매개 변수를 허용하며 **datatable** 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
+2.  정수 형식의 **productid**매개 변수를 허용하며 **datatable** 개체를 반환하고 다음을 수행하는 새 함수를 만듭니다.  
   
-    1.  [4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)의 2단계에서 만든 데이터 집합 **DataSet2** 인스턴스를 만듭니다.  
+    1.  **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**의 2단계에서 만든 데이터 집합 [DataSet2](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)인스턴스를 만듭니다.  
   
     2.  SqlServer 데이터베이스에 대한 연결을 만들어 **4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의**에서 정의된 쿼리를 실행합니다.  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 9
             }  
         ```  
   
-### 매개 변수 값을 검색하고 자식 보고서에 PurchaseOrdeDetail DataTable을 바인딩하는 이벤트 처리기를 추가하려면  
+### <a name="to-add-an-event-handler-that-retrieves-parameter-values-and-binds-the-purchaseordedetail-datatable-to-the-child-report"></a>매개 변수 값을 검색하고 자식 보고서에 PurchaseOrdeDetail DataTable을 바인딩하는 이벤트 처리기를 추가하려면  
   
 1.  디자이너 보기에서 Default.aspx를 엽니다.  
   
@@ -242,9 +247,9 @@ caps.handback.revision: 9
   
     2.  인출한 자식 보고서 개체에서 자식 보고서 매개 변수 목록을 가져옵니다.  
   
-    3.  매개 변수 컬렉션을 반복 처리하고 부모 보고서에서 전달되는 **ProductID** 매개 변수 값을 검색합니다.  
+    3.  매개 변수 컬렉션을 반복 처리하고 부모 보고서에서 전달되는 **ProductID**매개 변수 값을 검색합니다.  
   
-    4.  **GetPurchaseOrderDetail** 함수를 호출하고 **ProductID** 매개 변수 값을 전달합니다.  
+    4.  **GetPurchaseOrderDetail**함수를 호출하고 **ProductID**매개 변수 값을 전달합니다.  
   
     5.  **PurchaseOrderDetail** DataTable을 보고서의 해당 데이터 원본과 바인딩합니다.  
   
@@ -289,8 +294,10 @@ caps.handback.revision: 9
   
 6.  파일을 저장합니다.  
   
-## 다음 태스크  
+## <a name="next-task"></a>다음 태스크  
 자식 보고서에 대해 정의한 데이터 테이블에 대한 데이터 필터를 성공적으로 만들었습니다. 이제 웹 사이트 응용 프로그램을 빌드하고 실행합니다. [9단원: 응용 프로그램 빌드 및 실행](../reporting-services/lesson-9-build-and-run-the-application.md)을 참조하세요.  
   
   
   
+
+

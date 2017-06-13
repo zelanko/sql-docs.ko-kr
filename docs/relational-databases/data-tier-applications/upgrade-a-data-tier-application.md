@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7989f6c7fa8ff85ceb5cb5ed06d989343edb46a2
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 2a55f2852f3146cd20ace9448040c1f96d328f07
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="upgrade-a-data-tier-application"></a>데이터 계층 응용 프로그램 업그레이드
@@ -251,7 +251,7 @@ ms.lasthandoff: 04/11/2017
 7.  DAC 패키지 파일을 읽는 데 사용되는 파일 스트림을 닫습니다.  
   
 ### <a name="example-powershell"></a>예제(PowerShell)  
- 다음 예에서는 MyApplicationVNext.dacpac 패키지의 새 DAC 버전을 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 기본 인스턴스에서 MyApplicaiton이라는 DAC를 업그레이드합니다.  
+ 다음 예에서는 업그레이드의 기본 인스턴스에서 MyApplication 이라는 DAC는 [!INCLUDE[ssDE](../../includes/ssde-md.md)], MyApplication2017.dacpac 패키지에서 새 DAC 버전을 사용 하 여 합니다.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -264,7 +264,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

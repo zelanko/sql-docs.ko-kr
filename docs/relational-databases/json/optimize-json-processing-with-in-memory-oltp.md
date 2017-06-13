@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4e0331c288665fd9f69444d0d14366dfa69a668f
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>메모리 내 OLTP를 통해 JSON 처리 최적화
@@ -161,18 +161,6 @@ AS BEGIN
 END
 ```
 
-## <a name="next-steps"></a>다음 단계
-메모리 내 OLTP 네이티브 모듈의 JSON은 SQL Server 및 Azure SQL Database에서 사용할 수 있는 기본 제공 JSON 기능의 성능을 향상시킵니다.
-
-JSON 사용에 대한 핵심 시나리오에 대해 자세히 알아보려면 다음 리소스 중 일부를 확인하세요.
-
--   [TechNet 블로그](https://blogs.technet.microsoft.com/dataplatforminsider/2016/01/05/json-in-sql-server-2016-part-1-of-4/)
--   [MSDN 설명서](https://msdn.microsoft.com/library/dn921897.aspx)
--   [Channel 9 비디오](https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-2016-and-JSON-Support)
-
-응용 프로그램과 JSON 통합에 대한 다양한 시나리오에 대해 알아보려면 다음 리소스를 확인하세요.
--   이 [Channel 9 비디오](https://channel9.msdn.com/Events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)의 데모를 참조하세요.
--   [JSON 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)의 사용 사례와 일치하는 시나리오를 찾아보세요.
--   [GitHub 리포지토리](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/json/)에서 예제를 찾아보세요.
-
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>기본 제공 SQL Server에서 JSON 지원에 대 한 자세한 정보  
+특정 솔루션에 많이 사용 사례 및 권장 사항, 참조는 [기본 제공 JSON 지원에 대 한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) SQL Server와 Microsoft 프로그램 관리자 인 Jovan popovic의 Azure SQL 데이터베이스에 있습니다.
 

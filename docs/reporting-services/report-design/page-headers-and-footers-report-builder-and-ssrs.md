@@ -1,36 +1,41 @@
 ---
-title: "페이지 머리글 및 바닥글(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10125"
-  - "sql13.rtp.rptdesigner.pagefooter.border.f1"
-  - "10121"
-  - "10120"
-  - "10122"
-  - "sql13.rtp.rptdesigner.pageheader.general.f1"
-  - "10123"
-  - "sql13.rtp.rptdesigner.pageheader.fill.f1"
-  - "sql13.rtp.rptdesigner.pageheader.border.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.fill.f1"
-  - "sql13.rtp.rptdesigner.pagefooter.general.f1"
-  - "10124"
+title: "페이지 머리글 및 바닥글 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10125"
+- sql13.rtp.rptdesigner.pagefooter.border.f1
+- "10121"
+- "10120"
+- "10122"
+- sql13.rtp.rptdesigner.pageheader.general.f1
+- "10123"
+- sql13.rtp.rptdesigner.pageheader.fill.f1
+- sql13.rtp.rptdesigner.pageheader.border.f1
+- sql13.rtp.rptdesigner.pagefooter.fill.f1
+- sql13.rtp.rptdesigner.pagefooter.general.f1
+- "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f89d2e283daf9b9ac107c098d38db4feab17a736
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
+# <a name="page-headers-and-footers-report-builder-and-ssrs"></a>페이지 머리글 및 바닥글(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에서 각기 실행되는 머리글과 바닥글을 포함할 수 있습니다. 머리글과 바닥글에는 정적 텍스트, 이미지, 선, 사각형, 테두리, 배경색, 배경 이미지 및 식이 들어갈 수 있습니다. 식에는 단 하나의 데이터 집합과 데이터 집합을 범위로 포함하는 집계 함수 호출이 있는 보고서용 데이터 집합 필드 참조가 포함됩니다.  
   
 > [!NOTE]  
@@ -45,10 +50,10 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 보고서 머리글 및 바닥글  
+## <a name="report-headers-and-footers"></a>보고서 머리글 및 바닥글  
  페이지 머리글 및 바닥글은 보고서 머리글 및 바닥글과 다릅니다. 보고서에는 특별한 보고서 머리글 또는 보고서 바닥글 영역이 없습니다. 보고서 머리글은 보고서 디자인 화면에서 보고서 본문의 맨 위에 입력되는 보고서 항목으로 구성됩니다. 따라서 보고서의 첫 내용으로 한 번만 나타납니다. 보고서 바닥글은 보고서 본문의 맨 아래에 입력되는 보고서 항목으로 구성됩니다. 따라서 보고서의 마지막 내용으로 한 번만 나타납니다.  
   
-## 페이지 머리글 또는 바닥글에 변수 데이터 표시  
+## <a name="displaying-variable-data-in-a-page-header-or-footer"></a>페이지 머리글 또는 바닥글에 변수 데이터 표시  
  페이지 머리글 및 바닥글은 정적인 내용을 표시하는 데도 사용할 수 있지만 일반적으로 페이지 내용에 대한 정보 또는 페이지 번호 등의 변화하는 내용을 표시하는 데 사용합니다. 페이지마다 달라지는 변수 데이터를 표시하려면 식을 사용해야 합니다.  
   
  보고서에 한 데이터 집합만 정의되어 있는 경우에는 `[FieldName]` 같은 간단한 식을 페이지 머리글 또는 바닥글에 추가할 수 있습니다. 보고서 데이터 창 데이터 집합 필드 컬렉션 또는 기본 제공 필드 컬렉션에서 페이지 머리글이나 페이지 바닥글로 필드를 끄십시오. 적절한 식이 있는 입력란이 자동으로 추가됩니다.  
@@ -66,7 +71,7 @@ caps.handback.revision: 6
   
  이 항목의 다음 섹션에서는 머리글 및 바닥글에 일반적으로 사용하는 변수 데이터를 가져오는 미리 만들어 놓은 식을 보여 줍니다. Excel 렌더링 확장 프로그램에서 머리글 및 바닥글을 처리하는 방법에 대한 섹션도 있습니다. 식에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
-### 머리글 또는 바닥글에 계산된 페이지 합계 추가  
+### <a name="adding-calculated-page-totals-to-a-header-or-footer"></a>머리글 또는 바닥글에 계산된 페이지 합계 추가  
  일부 보고서의 경우 각 보고서의 머리글 또는 바닥글에 계산된 값(예: 페이지에 숫자 값이 있는 경우 페이지당 총 합계)을 포함하면 유용합니다. 필드를 직접 참조할 수 없으므로 머리글 또는 바닥글에 삽입하는 식은 데이터 필드 대신 입력란과 같은 보고서 항목의 이름을 참조해야 합니다.  
   
  `=Sum(ReportItems!Textbox1.Value)`  
@@ -75,7 +80,7 @@ caps.handback.revision: 6
   
  페이지 합계를 계산할 때 다른 렌더링 확장 프로그램을 사용하여 보고서를 보면 합계가 서로 다를 수 있습니다. 각 렌더링 확장 프로그램마다 페이지가 매겨진 출력을 다르게 계산합니다. HTML로 본 페이지를 PDF로 보면 PDF 페이지의 데이터 양이 다른 경우 합계가 다를 수 있습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
-### 데이터 집합이 여러 개인 보고서의 경우  
+### <a name="for-reports-with-multiple-datasets"></a>데이터 집합이 여러 개인 보고서의 경우  
  데이터 집합이 여러 개인 보고서의 경우에는 머리글 또는 바닥글에 필드 또는 데이터 바인딩된 이미지를 직접 추가할 수 없습니다. 그러나 머리글 또는 바닥글에 사용할 데이터 바인딩된 필드나 이미지를 간접적으로 참조하는 식은 작성할 수 있습니다.  
   
  머리글 또는 바닥글에 변수 데이터를 삽입하려면  
@@ -90,7 +95,7 @@ caps.handback.revision: 6
   
  페이지 머리글 또는 바닥글의 필드에는 집계 함수를 사용할 수 없습니다. 보고서 본문에 있는 보고서 항목에만 집계 함수를 사용할 수 있습니다. 페이지 머리글 및 바닥글에 일반적으로 사용하는 식에 대한 자세한 내용은 [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
-#### 머리글 또는 바닥글에 데이터 바인딩된 이미지 추가  
+#### <a name="adding-a-data-bound-image-to-a-header-or-footer"></a>머리글 또는 바닥글에 데이터 바인딩된 이미지 추가  
  데이터베이스에 저장된 이미지 데이터를 머리글 또는 바닥글에 사용할 수 있습니다. 그러나 이미지 보고서 항목에서 직접 데이터베이스 필드를 참조할 수는 없습니다. 대신 보고서 본문에 입력란을 추가한 다음 해당 입력란을 이미지를 포함하는 데이터 필드로 설정해야 합니다. 이때 값은 base64로 인코딩되어야 합니다. 보고서 본문에서 입력란을 숨겨 base64로 인코딩된 이미지를 표시하지 않을 수 있습니다. 그런 다음 페이지 머리글 또는 바닥글의 이미지 보고서 항목에서 숨겨진 입력란의 값을 참조할 수 있습니다.  
   
  예를 들어 제품 정보 페이지로 구성된 보고서의 각 페이지에 있는 머리글에 제품의 사진을 표시하려는 경우를 가정합니다. 보고서 머리글에 저장된 이미지를 인쇄하려면 보고서 본문에 데이터베이스에서 이미지를 검색하는 `TXT_Photo` 라는 숨겨진 입력란을 정의하고 식을 사용하여 이 입력란에 값을 제공합니다.  
@@ -101,17 +106,17 @@ caps.handback.revision: 6
   
  `=Convert.FromBase64String(ReportItems!TXT_Photo.Value)`  
   
-## 머리글 및 바닥글을 사용하여 텍스트 배치  
+## <a name="using-headers-and-footers-to-position-text"></a>머리글 및 바닥글을 사용하여 텍스트 배치  
  머리글 및 바닥글을 사용하여 페이지에 텍스트를 배치할 수 있습니다. 예를 들어 고객에게 우편으로 전송할 보고서를 만드는 경우 머리글 또는 바닥글을 사용하여 봉투를 접었을 때 고객 주소가 봉투 창의 주소 부분에 나타나도록 배치할 수 있습니다.  
   
  머리글 또는 바닥글을 입력란으로만 채우는 경우 보고서 본문에서 입력란을 숨길 수 있습니다. 보고서 본문에 입력란을 배치하면 값이 보고서 첫 페이지의 머리글 또는 바닥글에 나타나는지, 아니면 마지막 페이지의 머리글 또는 바닥글에 나타나는지에 영향을 줄 수 있습니다. 예를 들어 보고서가 여러 페이지로 확장되도록 하는 테이블, 행렬 또는 목록이 있는 경우 숨겨진 입력란 값은 마지막 페이지에 나타납니다. 첫 페이지에 나타나도록 하려면 숨겨진 입력란을 보고서 본문의 위쪽에 배치합니다.  
   
-## 특정 렌더러에 대해 페이지 머리글 및 바닥글로 보고서 디자인  
+## <a name="designing-reports-with-page-headers-and-footers-for-specific-renderers"></a>특정 렌더러에 대해 페이지 머리글 및 바닥글로 보고서 디자인  
  보고서가 처리될 때 데이터와 레이아웃 정보가 결합됩니다. 보고서를 볼 때는 결합된 정보가 각 보고서 페이지에 어느 정도의 보고서 데이터가 맞는지를 결정하는 렌더러에 전달됩니다.  
   
  브라우저를 사용하여 보고서 서버에서 보고서를 보는 경우 표시되는 보고서 페이지의 콘텐츠를 HTML 렌더러가 제어합니다. 현재 보고 있는 형식과 다른 형식으로 보고서를 제공할 계획이거나 특정 형식으로 보고서를 인쇄할 계획이면 최종 보고서 형식에 사용할 렌더러에 맞게 보고서 레이아웃을 최적화할 수 있습니다. 보고서 페이지 매김에 대한 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
-### Excel에서의 페이지 머리글 및 바닥글 작업  
+### <a name="working-with-page-headers-and-footers-in-excel"></a>Excel에서의 페이지 머리글 및 바닥글 작업  
  Excel 렌더링 확장 프로그램을 대상으로 하는 보고서에 대해 페이지 머리글 및 바닥글을 정의하는 경우 다음 지침을 따르면 가장 좋은 결과를 얻을 수 있습니다.  
   
 -   페이지 바닥글을 사용하여 페이지 번호를 표시합니다.  
@@ -126,7 +131,7 @@ caps.handback.revision: 6
   
  자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보고서에 이미지 포함&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
   

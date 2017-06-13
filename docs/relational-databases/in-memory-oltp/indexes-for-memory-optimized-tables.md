@@ -3,7 +3,7 @@ title: "메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft �
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 10/24/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f55708bc9eaf8e94cf33ead19cf62cbc319e8e63
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: b468f44444a9c6cc031ea892f44849db401e0ab7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="indexes-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
@@ -225,34 +225,10 @@ CustomerId에 대한 기본 키가 있고 CustomerCategoryID 열에 대한 인�
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | 색인 검색은 모든 테이블 행을 검색합니다. | 예 | 예 | 예 |  
 | 같음 조건자(=)에서 인덱스 검색 | 예 <br/> (전체 키는 필수) | 예  | 예 |  
-| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, \<=, >=, BETWEEN). | 아니요 <br/> (인덱스 검색의 결과) | 예 | 예 |  
+| 같지 않음 및 범위 조건자에서 인덱스 검색 <br/> (>, <, <=, > =, BETWEEN). | 아니요 <br/> (인덱스 검색의 결과) | 예 | 예 |  
 | 인덱스 정의와 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 예 | 예 |  
 | 인덱스 정의의 역순과 일치하는 정렬 순서로 행을 검색합니다. | 아니요 | 아니요 | 예 |  
   
   
 이 표에서 테이블에서 "예"는 인덱스가 요청을 효율적으로 처리할 수 있음을 의미하며 "아니요"는 인덱스를 사용하여 요청을 효과적으로 충족할 수 없음을 의미합니다.  
-
-
-  
-  
-\<!--   
-Indexes_for_Memory-Optimized_Tables.md , 즉....  
-CAPS guid: {eecc5821-152b-4ed5-888f-7c0e6beffed9}  
-mt670614.aspx  
-  
-Application-Level%20Partitioning.xml , {162d1392-39d2-4436-a4d9-ee5c47864c5a}  
-  
-/Image/hekaton_tables_23d.png , fbc511a0-304c-42f7-807d-d59f3193748f  
-  
-  
-dn511012.aspx 대체, 즉....  
-CAPS guid: {86805eeb-6972-45d8-8369-16ededc535c7}  
-  
-GeneMi  ,  2016-05-05  목요일  17:25pm  (해시 콘텐츠는 새 자식 아티클 e922cc3a-3d6e-453b-8d32-f4b176e98488로 이동되었습니다.)  
--->  
-  
-  
-  
-
-
 

@@ -1,28 +1,33 @@
 ---
-title: "표시기 아이콘 및 표시기 집합 변경(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "표시기 아이콘 및 표시기 집합 (보고서 작성기 및 SSRS) 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8a056adf-4473-473d-9b0c-314675af7bfd
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 표시기 아이콘 및 표시기 집합 변경(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 제공하는 미리 구성된 표시기 집합이 항상 데이터를 효율적으로 나타내고 전달된 보고서에서 제대로 작동하는 것은 아닙니다. 이 항목에서는 표시기 아이콘 모양을 변경하고 더 많거나 더 적은 표시기 아이콘 또는 다른 표시기 아이콘을 포함하도록 표시기 집합을 변경하는 절차에 대해 설명합니다.  
+# <a name="change-indicator-icons-and-indicator-sets-report-builder-and-ssrs"></a>표시기 아이콘 및 표시기 집합 변경(보고서 작성기 및 SSRS)
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 제공하는 미리 구성된 표시기 집합이 항상 데이터를 효율적으로 나타내고 전달된 보고서에서 제대로 작동하는 것은 아닙니다. 이 항목에서는 표시기 아이콘 모양을 변경하고 더 많거나 더 적은 표시기 아이콘 또는 다른 표시기 아이콘을 포함하도록 표시기 집합을 변경하는 절차에 대해 설명합니다.  
   
  식을 사용하여 색 등의 옵션을 설정할 수 있습니다. 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)을 참조하세요.  
   
-## 표시기 아이콘의 색을 변경하려면  
+## <a name="to-change-the-color-of-an-indicator-icon"></a>표시기 아이콘의 색을 변경하려면  
   
 1.  변경할 표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성**을 클릭합니다.  
   
@@ -32,11 +37,11 @@ caps.handback.revision: 8
   
      필요한 경우 **식** 단추(*fx*)를 클릭하여 **색** 옵션의 값을 설정하는 식을 편집합니다.  
   
-     **다른 색**을 클릭한 경우 **색 선택** 대화 상자가 열리고 여기서 여러 색 중 원하는 색을 선택할 수 있습니다. 해당 옵션에 대한 자세한 내용은 [색 선택 대화 상자&#40;보고서 작성기 및 SSRS&#41;](../Topic/Select%20Color%20Dialog%20Box%20\(Report%20Builder%20and%20SSRS\).md)를 참조하세요. **확인** 을 클릭하여 **색 선택** 대화 상자를 닫습니다.  
+     **다른 색**을 클릭한 경우 **색 선택** 대화 상자가 열리고 여기서 여러 색 중 원하는 색을 선택할 수 있습니다. 해당 옵션에 대한 자세한 내용은 [색 선택 대화 상자&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/ac7089a3-5c7b-4f53-8348-180610e86da2)를 참조하세요. **확인** 을 클릭하여 **색 선택** 대화 상자를 닫습니다.  
   
 4.  **확인**을 클릭합니다.  
   
-## 아이콘을 변경하려면  
+## <a name="to-change-the-icon"></a>아이콘을 변경하려면  
   
 1.  변경할 표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성**을 클릭합니다.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 8
   
 4.  **확인**을 클릭합니다.  
   
-## 사용자 지정 이미지를 표시기 아이콘으로 사용하려면  
+## <a name="to-use-a-custom-image-as-an-indicator-icon"></a>사용자 지정 이미지를 표시기 아이콘으로 사용하려면  
   
 1.  변경할 표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성**을 클릭합니다.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 6.  **확인**을 클릭합니다.  
   
-## 표시기 집합에 아이콘을 추가하려면  
+## <a name="to-add-an-icon-to-the-indicator-set"></a>표시기 집합에 아이콘을 추가하려면  
   
 1.  변경할 표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성**을 클릭합니다.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 8
   
 4.  **확인**을 클릭합니다.  
   
-## 표시기 집합에서 아이콘을 삭제하려면  
+## <a name="to-delete-an-icon-to-the-indicator-set"></a>표시기 집합에서 아이콘을 삭제하려면  
   
 1.  변경할 표시기를 마우스 오른쪽 단추로 클릭하고 **표시기 속성**을 클릭합니다.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 8
   
 4.  **확인**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7d93dd0a6eae5fead834526e86455717c6ed97e6
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
@@ -166,7 +166,7 @@ ms.lasthandoff: 04/11/2017
  주요 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 공개 부분만 자격 증명 모음을 떠나고 비공개 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure 주요 자격 증명 모음 서비스 내에서 수행되며, 서비스의 보안에 의해 보호됩니다.  
   
  **키 URI는 무엇인가요?**  
- Azure 주요 자격 증명 모음의 모든 키에는 응용 프로그램에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey** 형식을 사용하여 현재 버전을 가져오고 **https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87** 형식을 사용하여 특정 버전을 가져옵니다.  
+ Azure 주요 자격 증명 모음의 모든 키에는 응용 프로그램에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 형식을 사용 하 여 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 을 현재 버전을 가져오고 형식을 사용 하 여 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 특정 버전을 가져옵니다.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>구성에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 

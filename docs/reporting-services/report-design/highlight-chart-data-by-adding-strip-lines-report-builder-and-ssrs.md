@@ -1,23 +1,28 @@
 ---
-title: "줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "줄무늬 선 (보고서 작성기 및 SSRS)를 추가 하 여 차트 데이터 강조 표시 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04bc46bc61a1091d715e348e44ac7ee22e4a891d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS)
+# <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>줄무늬 선을 추가하여 차트 데이터 강조 표시(보고서 작성기 및 SSRS)
   간단히 줄무늬라고도 하는 줄무늬 선은 차트의 배경에 일정한 간격 또는 사용자 지정 간격으로 음영을 적용하는 수평 또는 수직 범위입니다. 다음과 같은 용도에 줄무늬 선을 사용할 수 있습니다.  
   
 -   차트에서 개별 값을 조회하기 위한 가독성을 개선합니다. 일정한 간격으로 줄무늬 선을 지정하면 차트를 볼 때 데이터 요소를 구분하는 데 도움이 됩니다.  
@@ -31,7 +36,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 차트에 인터레이스된 줄무늬 선을 일정한 간격으로 표시하려면  
+### <a name="to-display-interlaced-strip-lines-at-regular-intervals-on-a-chart"></a>차트에 인터레이스된 줄무늬 선을 일정한 간격으로 표시하려면  
   
 1.  가로 줄무늬 선을 표시하려면 세로 차트 축을 마우스 오른쪽 단추로 클릭하고 **세로 축 속성**을 클릭합니다.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 6
   
 3.  (옵션) 인접한 **색** 드롭다운 목록을 사용하여 줄무늬 선의 색을 지정합니다.  
   
-### 차트에 인터레이스된 줄무늬 선을 사용자 지정 간격으로 표시하려면  
+### <a name="to-display-interlaced-strip-lines-at-custom-intervals-on-a-chart"></a>차트에 인터레이스된 줄무늬 선을 사용자 지정 간격으로 표시하려면  
   
 1.  가로 줄무늬 선을 표시하려면 세로 차트 축을 마우스 오른쪽 단추로 클릭하고 **세로 축 속성**을 클릭합니다.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  기본적으로 Interval은 Auto로 설정되며 이는 차트가 사용자 지정 줄무늬 선에 대한 간격을 계산하지 않음을 의미합니다. 차트는 간격 값이 설정된 경우에만 줄무늬 선의 간격을 계산합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트에 이동 평균 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

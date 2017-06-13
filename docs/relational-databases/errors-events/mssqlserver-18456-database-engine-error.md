@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_18456 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 06/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8985dc2e2715758797eb253aee8382d68f0f2dd6
+ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
+ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -76,6 +76,11 @@ ms.lasthandoff: 04/11/2017
 |11|올바른 로그인이지만 서버 액세스에 실패했습니다. 예를 들어 Windows 사용자에게 로컬 Administrators 그룹의 멤버로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 액세스할 수 있는 권한이 있지만 Windows에서 관리자 자격 증명을 제공하지 않는 경우에 이 오류가 발생할 수 있습니다. 연결하려면 **관리자 권한으로 실행** 옵션을 사용하여 연결 프로그램을 시작하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 특정 로그인으로 Windows 사용자를 추가합니다.|  
 |12|올바른 로그인이지만 서버 액세스에 실패했습니다.|  
 |18|암호를 변경해야 합니다.|  
+|38, 46|사용자가 요청한 데이터베이스를 찾을 수 없습니다.|
+|102 - 111|AAD에 오류가 발생 했습니다.|
+|122 - 124|빈 사용자 이름 또는 암호로 인해 오류가 발생 했습니다.|
+|126|사용자가 요청한 데이터베이스는 존재 하지 않습니다.|
+|132 - 133|AAD에 오류가 발생 했습니다.|
   
 다른 오류 상태가 있으며 예기치 않은 내부 처리 오류를 나타냅니다.  
   

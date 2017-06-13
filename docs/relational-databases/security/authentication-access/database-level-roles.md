@@ -2,7 +2,7 @@
 title: "데이터베이스 수준 역할 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/16/2016
+ms.date: 05/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -43,10 +43,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1ccfe7ee55e50f0530b33855f4ad57549a1da712
+ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
+ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/25/2017
 
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
@@ -71,7 +71,7 @@ ms.lasthandoff: 04/11/2017
 
 ## <a name="fixed-database-roles"></a>고정 데이터베이스 역할
   
- 다음 표에서는 고정 데이터베이스 역할과 기능을 보여 줍니다. 이러한 역할은 모든 데이터베이스에 있습니다. 고정 데이터베이스 역할에 할당된 권한은 변경할 수 없습니다.   
+ 다음 표에서는 고정 데이터베이스 역할과 기능을 보여 줍니다. 이러한 역할은 모든 데이터베이스에 있습니다. 제외 하 고는 **공용** 고정 데이터베이스 역할에 할당 된 사용 권한을 데이터베이스 역할을 변경할 수 없습니다.   
   
 |고정 데이터베이스 역할 이름|Description|  
 |-------------------------------|-----------------|  
@@ -87,7 +87,7 @@ ms.lasthandoff: 04/11/2017
 
 고정 데이터베이스 역할에 할당된 권한은 변경할 수 없습니다. 다음 그림에서는 고정 데이터베이스 역할에 할당된 사용 권한을 보여 줍니다.
 
-![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/fixed-database-role-permissions.jpg)
+![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 특수 역할
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
 |msdb 역할 이름|Description|  
 |--------------------|-----------------|  
-|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|이러한 데이터베이스 역할의 멤버는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 관리 및 사용할 수 있습니다. 이전 버전에서 업그레이드된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 대신 DTS(데이터 변환 서비스)를 사용하여 명명된 이전 버전의 역할이 포함될 수 있습니다. 자세한 내용은 [Integration Services 역할&#40;SSIS Service&#41;](../../../integration-services/service/integration-services-roles-ssis-service.md)을 참조하세요.|  
+|**db_ssisadmin**<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|이러한 데이터베이스 역할의 멤버는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 관리 및 사용할 수 있습니다. 이전 버전에서 업그레이드된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에는 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 대신 DTS(데이터 변환 서비스)를 사용하여 명명된 이전 버전의 역할이 포함될 수 있습니다. 자세한 내용은 [Integration Services 역할&#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md)을 참조하세요.|  
 |**dc_admin**<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|이러한 데이터베이스 역할의 멤버는 데이터 수집기를 관리 및 사용할 수 있습니다. 자세한 내용은 [Data Collection](../../../relational-databases/data-collection/data-collection.md)을 참조하세요.|  
 |**PolicyAdministratorRole**|**db_ PolicyAdministratorRole** 데이터베이스 역할의 멤버는 정책 기반 관리 정책 및 조건의 모든 구성 및 유지 관리 작업을 수행할 수 있습니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)를 참조하세요.|  
 |**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|이러한 데이터베이스 역할의 멤버는 등록된 서버 그룹을 관리 및 사용할 수 있습니다.|  

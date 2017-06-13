@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 구성 | Microsoft 문서"
 ms.custom: 
-ms.date: 11/08/2016
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8486b55e306c7463551184cdd2334d629f5df135
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 구성
@@ -30,6 +30,8 @@ ms.lasthandoff: 04/11/2017
  SQL Server에서 외부 데이터 원본에 대한 연결을 확인해야 합니다. 연결 형식에 따라 필요한 쿼리 성능이 크게 달라집니다. 예를 들어 PolyBase 쿼리에서 10Gbit 이더넷 링크를 사용하는 경우 1Gbit 이더넷 링크보다 쿼리 응답 속도가 빨라집니다.  
   
  **sp_configure**를 사용하여 SQL Server가 사용 중인 Hadoop 버전 또는 Azure Blob 저장소에 연결하도록 구성해야 합니다. PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 배포를 지원합니다.  지원되는 외부 데이터 원본의 전체 목록은 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
+ 
+ 참고: PolyBase Cloudera 암호화 영역을 지원 하지 않습니다. 
   
 ### <a name="run-spconfigure"></a>sp_configure 실행  
   
@@ -52,7 +54,7 @@ ms.lasthandoff: 04/11/2017
     -   SQL Server PolyBase 엔진  
   
 ## <a name="pushdown-configuration"></a>푸시다운 구성  
- 쿼리 성능을 향상시키려면 Hadoop 환경에 맞는 일부 SQL Server 구성 매개 변수를 제공해야 하는 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
+ 쿼리 성능을 향상 시키기 위해 SQL Server Hadoop 사용 환경에 맞는 일부 구성 매개 변수를 제공 해야 합니다는 Hadoop 클러스터에 대 한 푸시 다운 계산을 사용 하도록 설정:  
   
 1.  SQL Server 설치 경로에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
   
@@ -66,15 +68,15 @@ ms.lasthandoff: 04/11/2017
 
 4. 모든 CDH 5.X 버전에서 **mapreduce.application.classpath** 구성 매개 변수를 **yarn.site.xml 파일**의 끝이나 **mapred-site.xml 파일**에 추가해야 합니다. HortonWorks는 **yarn.application.classpath** 구성 내에 이러한 구성을 포함하고 있습니다.
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>CDH 5.X 클러스터의 yarn-site.xml 및 mapred-site.xml 파일의 예
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>예제 yarn-site.xml 및 mapred-site.xml 파일 CDH 5.X 클러스터입니다.
 
 
 
-yarn.application.classpath 및 Mapreduce.application.classpath 구성이 포함된 Yarn-site.xml입니다.
+Yarn-site.xml yarn.application.classpath 및 mapreduce.application.classpath 구성 사용 합니다.
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -84,11 +86,11 @@ yarn.application.classpath 및 Mapreduce.application.classpath 구성이 포함�
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/,$HADOOP_MAPRED_HOME/*,$HADOOP_MAPRED_HOME/lib/*,$MR2_CLASSPATH*</value>
   </property>
@@ -106,9 +108,9 @@ mapred-site.xml 및 yarn-site.xml로 두 가지 구성 설정을 분리하도록
 
 **yarn-site.xml**
 ```
-\<?xml version="1.0" encoding="utf-8"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
  <configuration>
   <property>
      <name>yarn.resourcemanager.connect.max-wait.ms</name>
@@ -118,11 +120,11 @@ mapred-site.xml 및 yarn-site.xml로 두 가지 구성 설정을 분리하도록
      <name>yarn.resourcemanager.connect.retry-interval.ms</name>
      <value>30000</value>
   </property>
-\<!-- Applications' Configuration-->
+<!-- Applications' Configuration-->
   <property>
     <description>CLASSPATH for YARN applications. A comma-separated list of CLASSPATH entries</description>
-     \<!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
-     \<!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
+     <!-- Please set this value to the correct yarn.application.classpath that matches your server side configuration -->
+     <!-- For example: $HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/share/hadoop/common/*,$HADOOP_COMMON_HOME/share/hadoop/common/lib/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/*,$HADOOP_HDFS_HOME/share/hadoop/hdfs/lib/*,$HADOOP_YARN_HOME/share/hadoop/yarn/*,$HADOOP_YARN_HOME/share/hadoop/yarn/lib/* -->
      <name>yarn.application.classpath</name>
      <value>$HADOOP_CLIENT_CONF_DIR,$HADOOP_CONF_DIR,$HADOOP_COMMON_HOME/*,$HADOOP_COMMON_HOME/lib/*,$HADOOP_HDFS_HOME/*,$HADOOP_HDFS_HOME/lib/*,$HADOOP_YARN_HOME/*,$HADOOP_YARN_HOME/lib/*</value>
   </property>
@@ -140,11 +142,11 @@ mapred-site.xml 및 yarn-site.xml로 두 가지 구성 설정을 분리하도록
 
 mapreduce.application.classpath 속성이 추가되었습니다. CDH 5.x에서 Ambari의 동일한 명명 규칙에서 구성 값을 찾을 수 있습니다.
 
-  ```
-  \<?xml version="1.0"?>
-\<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
-\<!-- Put site-specific property overrides in this file. -->
-\<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
+```
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!-- Put site-specific property overrides in this file. -->
+<configuration xmlns:xi="http://www.w3.org/2001/XInclude">
   <property>
     <name>mapred.min.split.size</name>
       <value>1073741824</value>
@@ -171,7 +173,7 @@ mapreduce.application.classpath 속성이 추가되었습니다. CDH 5.x에서 A
 -->
 </configuration>
   
-  ```
+```
   
 ## <a name="kerberos-configuration"></a>Kerberos 구성  
 PolyBase가 Kerberos로 보호되는 클러스터에 인증하는 경우 hadoop.rpc.protection 설정을 인증으로 설정해야 합니다. 이렇게 하면 암호화되지 않은 Hadoop 노드 간의 데이터 통신이 유지됩니다. 

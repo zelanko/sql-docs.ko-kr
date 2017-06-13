@@ -1,26 +1,31 @@
 ---
 title: "URL에 보고서 매개 변수 전달 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "URL 액세스 [Reporting Services], 매개 변수 전달"
-  - "매개 변수 전달 [Reporting Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- URL access [Reporting Services], passing parameters
+- passing parameters [Reporting Services]
 ms.assetid: f93a94cc-27b5-435a-aa85-69e6ec6459ad
 caps.latest.revision: 36
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 36
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3b076b74a6082e34dc9c489c0383fd6a5c3bd4f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# URL에 보고서 매개 변수 전달
+# <a name="pass-a-report-parameter-within-a-url"></a>URL에 보고서 매개 변수 전달
   보고서 매개 변수를 보고서 URL에 포함시켜 보고서에 전달할 수 있습니다. 이러한 URL 매개 변수는 보고서 처리 엔진에 직접 전달되기 때문에 접두사가 붙지 않습니다.  
   
 > [!IMPORTANT]  
@@ -78,7 +83,7 @@ SalesOrderNumber:isnull=true
  **Boolean** 값을 전달하려면 False에 0을 사용하고 True에 1을 사용합니다. **Float** 값을 전달하려면 서버 로캘의 소수 구분 기호를 포함합니다.  
   
 > [!NOTE]  
->  보고서에 기본값을 가진 보고서 매개 변수가 포함되어 있고 **Prompt** 속성의 값이 **false**이면(즉, 보고서 관리자에서 사용자에게 확인 속성이 선택되지 않음) URL 내에서 해당 보고서 매개 변수에 대한 값을 전달할 수 없습니다. 이러한 기능을 통해 관리자는 최종 사용자가 특정 보고서 매개 변수의 값을 추가하거나 수정하지 못하도록 설정할 수 있습니다.  
+>  보고서에 기본값을 가진 보고서 매개 변수가 포함되어 있고 **Prompt** 속성의 값이 **false** 이면(즉, 보고서 관리자에서 사용자에게 확인 속성이 선택되지 않음) URL 내에서 해당 보고서 매개 변수에 대한 값을 전달할 수 없습니다. 이러한 기능을 통해 관리자는 최종 사용자가 특정 보고서 매개 변수의 값을 추가하거나 수정하지 못하도록 설정할 수 있습니다.  
   
 ##  <a name="bkmk_examples"></a> 추가 예  
  다음 URL 예제에는 공백 및 여러 매개 변수가 포함됩니다.  
@@ -99,13 +104,13 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- 다음 URL 예제는 기본 모드 보고서 서버에 대해 “7/1/2005” 값이 포함된 *SellStartDate*의 단일 매개 변수를 전달합니다.  
+ 다음 URL 예제는 기본 모드 보고서 서버에 대해 “7/1/2005” 값이 포함된 *SellStartDate* 의 단일 매개 변수를 전달합니다.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   

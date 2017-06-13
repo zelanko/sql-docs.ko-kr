@@ -1,24 +1,29 @@
 ---
-title: "Lesson 6: Adding Grouping and Totals (Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/23/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "6 단원: 그룹화 및 합계 (Reporting Services) 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/23/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 caps.latest.revision: 56
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 56
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
 이 자습서 단원에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 그룹화 및 합계를 추가하여 데이터를 구성하고 요약합니다.  
   
   
@@ -26,23 +31,23 @@ caps.handback.revision: 56
   
 1.  **디자인** 탭을 클릭합니다.  
   
-2.  **행 그룹** 창이 표시되지 않는 경우 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **보기**를 클릭한 후 **그룹화**를 클릭합니다.  
+2.  **행 그룹** 창이 표시되지 않는 경우 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **보기** 를 클릭한 후 **그룹화**를 클릭합니다.  
   
 3.  **보고서 데이터** 창에서 **Date** 필드를 **행 그룹** 창으로 끌어다 **(자세히)**라는 행 위에 놓습니다.
   
     행 핸들 안에 대괄호가 표시되어 그룹임을 나타냅니다. 이제 테이블에 세로 점선의 양쪽에 하나씩 두 개의 Date 열이 있습니다.  
   
-    ![](../reporting-services/media/rs-basictablegroups1design.gif "rs_BasicTableGroups1Design")  
+    ![추가 날짜 그룹](../reporting-services/media/rs-basictablegroups1design.png "날짜 그룹이 추가 됨")  
   
-4.  **보고서 데이터** 창에서 **Order** 필드를 **행 그룹** 창으로 끌어다 Date 아래, **(자세히)** 위에 놓습니다.
+4.  **보고서 데이터** 창에서 **Order** 필드를 **행 그룹** 창으로 끌어다 Date 아래, **(자세히)**위에 놓습니다.
 
 ![ssrs_ssdt_addorderfield](../reporting-services/media/ssrs-ssdt-addorderfield.png)   
   
     Note that the row handle now has two brackets in it ![ssrs_ssdt_rowgroupdoublehandles](../reporting-services/media/ssrs-ssdt-rowgroupdoublehandles.png), to show two groups. The table now has two **Order** columns, too.  
   
-5.  이중선 **오른쪽**에서 원래 **Date** 및 **Order** 열을 삭제합니다. 그러면 이 개인 레코드 값이 제거되고 그룹 값만 표시됩니다. 두 열의 열 핸들을 선택하고 마우스 오른쪽 단추로 클릭한 다음 **열 삭제**를 클릭합니다.  
+5.  이중선 **오른쪽** 에서 원래 **Date** 및 **Order** 열을 삭제합니다. 그러면 이 개인 레코드 값이 제거되고 그룹 값만 표시됩니다. 두 열의 열 핸들을 선택하고 마우스 오른쪽 단추로 클릭한 다음 **열 삭제**를 클릭합니다.  
   
-    ![삭제할 열 선택](../reporting-services/media/rs-basictablegroupsdeletecols.gif "삭제할 열 선택")  
+    ![삭제할 열 선택](../reporting-services/media/rs-basictablegroupsdeletecols.gif "삭제할 열을 선택 합니다.")  
   
 6.  새 날짜 열에 서식을 지정하려면 `[Date]` 필드 식이 있는 셀을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
@@ -50,20 +55,20 @@ caps.handback.revision: 56
   
 8.  **형식** 상자에서 **January 31, 2000**을 선택합니다.  
   
-9.  [!INCLUDE[clickOK](../includes/clickok-md.md)].  
+9.  [!INCLUDE[clickOK](../includes/clickok-md.md)]를 클릭합니다.  
   
 10.  **미리 보기** 탭으로 전환하여 보고서를 미리 봅니다. 다음 그림과 비슷해야 합니다.  
-    ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.gif) 
+    ![rs_BasicTableGroupsPreview](../reporting-services/media/rs-basictablegroupspreview.png) 
   
 ## <a name="bkmk_addtotals"></a>보고서에 합계를 추가하려면  
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  `[LineTotal]` 필드가 들어 있는 데이터 영역 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
+2.  `[LineTotal]`필드가 들어 있는 데이터 영역 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
   
     그러면 각 주문의 금액 합계가 표시되는 행이 추가됩니다.  
   
-3.  `[Qty]` 필드가 들어 있는 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
+3.  `[Qty]`필드가 들어 있는 셀을 마우스 오른쪽 단추로 클릭하고 **합계 추가**를 클릭합니다.  
   
     그러면 각 주문의 수량 합계가 합계 행에 추가됩니다.  
   
@@ -115,14 +120,14 @@ caps.handback.revision: 56
   
 2.  **프로젝트** 메뉴를 클릭한 다음 **자습서 속성...**을 클릭합니다.  
   
-3.  **TargetServerURL**에 보고서 서버의 이름을 입력합니다. 예를 들면 다음과 같습니다.   
+3.  **TargetServerURL** 에 보고서 서버의 이름을 입력합니다. 예를 들면 다음과 같습니다.   
 - `http:/<servername>/reportserver`  
    
 - `http://localhost/reportserver` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
   
 4. TargetReportFolder는 프로젝트 이름인 tutorial이며,  다음 단계에서 보고서를 배포할 폴더의 이름입니다.  
-5.  **확인**을 클릭합니다.  
+5. **확인**을 클릭합니다.  
   
 6.  **빌드** 메뉴를 클릭한 다음 **자습서 배포**를 클릭합니다.  
   
@@ -146,18 +151,20 @@ caps.handback.revision: 56
   
     [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 URL로 이동합니다.   
     **참고:** *포털* URL은 Report *Server* URL인 "Reportserver"가 아니라 "Reports"입니다.  예를 들어   
-    - `http://<server name>/reports`.  
+    - `http://<server name>/reports`를 클릭합니다.  
      - `http://localhost/reports` 은(는) 보고서 서버에서 보고서를 디자인하는 경우에만 작동합니다.  
   
-8.  보고서가 포함된 폴더로 이동합니다. 기본 이름은 프로젝트 이름인 *tutorial* 또는 프로젝트 속성의 TargetReportFolder 필드에 입력한 이름입니다.   
+8.  보고서가 포함된 폴더로 이동합니다. 기본 이름은 프로젝트 이름인 *tutorial*또는 프로젝트 속성의 TargetReportFolder 필드에 입력한 이름입니다.   
 **Sales Orders** 보고서의 이름을 클릭하여 브라우저에서 렌더링된 보고서를 봅니다.  
   
     ![ssrs_tutorial_tutorialfolder](../reporting-services/media/ssrs-tutorial-tutorialfolder.png)  
  
-** 기본 테이블 보고서 만들기 자습서를 성공적으로 완료했습니다.**  
+* * 완료 했습니다. 만들기 기본 테이블 보고서 tutorial.* *  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   
   
+
+

@@ -1,30 +1,35 @@
 ---
-title: "관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "10012"
-helpviewer_keywords: 
-  - "쿼리 디자이너"
-  - "데이터 액세스, 쿼리 디자이너"
-  - "관계형 쿼리 디자이너"
+title: "관계형 쿼리 디자이너 사용자 인터페이스 (보고서 작성기) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- "10012"
+helpviewer_keywords:
+- query designers
+- accessing data, query designer
+- relational query designer
 ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 caps.latest.revision: 23
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 23
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd44bb279b61785784ce6ebe443ad78d30b4fc82
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
-  보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 집합에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관계형 데이터베이스와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)]에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
+# <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
+  보고서 작성기 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 보고서 데이터 집합에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] relational databases 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
   
 > [!NOTE]  
 >  보고서 작성기에서 Oracle, OLE DB, ODBC, Teradata 등의 데이터 원본 유형에 대한 쿼리를 지정하려면 텍스트 기반 쿼리 디자이너를 사용해야 합니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
@@ -32,7 +37,7 @@ caps.handback.revision: 23
 > [!IMPORTANT]  
 >  사용자는 쿼리를 작성하고 실행할 때 데이터 원본에 액세스합니다. 데이터 원본에 대해서는 읽기 전용 권한과 같이 최소한의 사용 권한을 부여해야 합니다.  
   
-## 그래픽 쿼리 디자이너  
+## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
  그래픽 쿼리 디자이너에서는 데이터베이스 테이블 및 뷰를 탐색하고,  데이터 집합의 데이터를 검색할 데이터베이스 테이블과 열을 지정하는 SQL  SELECT  문을 대화형으로 작성할 수 있습니다. 데이터 집합에 포함할 필드를 선택하고 필요에 따라 데이터 집합의 데이터를 제한할 필터를 지정합니다. 필터를 매개 변수로 사용하여 런타임에 필터의 값을 제공하도록 지정할 수 있습니다. 여러 개의 관련 테이블을 선택할 경우 쿼리 디자이너는 두 테이블 집합 간의 관계를 설명합니다.  
   
  그래픽 쿼리 디자이너는 3개의 영역으로 구분됩니다. 쿼리가 테이블/뷰 또는 저장 프로시저/테이블 반환 함수를 사용하는지에 따라 쿼리 디자이너의 레이아웃이 달라집니다.  
@@ -46,7 +51,7 @@ caps.handback.revision: 23
   
  다음 그림에서는 저장 프로시저 또는 테이블 반환 함수와 함께 사용할 때의 그래픽 쿼리 디자이너를 보여 줍니다.  
   
- ![그래픽 쿼리 디자이너의 저장 프로시저](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "그래픽 쿼리 디자이너의 저장 프로시저")  
+ ![그래픽 쿼리 디자이너에서 저장 프로시저](../../reporting-services/report-data/media/rs-relational-graphical-sp.gif "그래픽 쿼리 디자이너에서 저장 프로시저")  
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   
@@ -80,16 +85,16 @@ caps.handback.revision: 23
   
      보고서 데이터 창을 사용하여 보고서 데이터 집합에 대한 필드 컬렉션을 볼 수 있습니다. 이러한 필드는 보고서를 볼 때 테이블,  차트 및 기타 보고서 항목에 표시할 수 있는 데이터를 나타냅니다.  
   
--   **그룹 및 집계** 쿼리의 그룹화 및 집계 사용을 설정/해제합니다. 그룹화 및 집계를 추가한 후 그룹화 및 집계 기능을 해제하면 그룹화 및 집계가 제거됩니다. **(없음)** 텍스트는 그룹화 및 집계가 사용되지 않음을 나타냅니다. 그룹화 및 집계 기능을 다시 설정하면 이전의 그룹화 및 집계가 복원됩니다.  
+-   **그룹 및 집계** 쿼리의 그룹화 및 집계 사용을 설정/해제합니다. 그룹화 및 집계를 추가한 후 그룹화 및 집계 기능을 해제하면 그룹화 및 집계가 제거됩니다. **(없음)**텍스트는 그룹화 및 집계가 사용되지 않음을 나타냅니다. 그룹화 및 집계 기능을 다시 설정하면 이전의 그룹화 및 집계가 복원됩니다.  
   
 -   **필드 삭제** 선택한 필드를 삭제합니다.  
   
-#### 그룹 및 집계  
+#### <a name="group-and-aggregate"></a>그룹 및 집계  
  대형 테이블이 포함된 데이터베이스에 대해 쿼리를 수행하면 반환되는 데이터 행이 너무 많아서 보고서에 유용하게 사용할 수 없으며 대량의 데이터를 전송하는 네트워크 및 보고서를 처리하는 보고서 서버의 성능에 영향을 줄 수 있습니다. 데이터베이스 서버의 데이터를 요약하는 SQL  집계를 쿼리에 포함하여 데이터 행 수를 제한할 수 있습니다. SQL  집계는 보고서를 렌더링할 때 적용되는 클라이언트 쪽 집계와 다릅니다.  
   
  집계는 데이터에 대한 요약을 제공하며 데이터는 요약 데이터를 전달하는 집계를 지원하도록 그룹화됩니다. 쿼리에 집계를 사용하는 경우 쿼리에서 반환되는 다른 필드는 모두 자동으로 그룹화되며 쿼리에는 SQL  GROUP  BY  절이 포함됩니다. **그룹화 및 집계** 목록에서 **그룹화 기준** 옵션만 사용하면 집계를 추가하지 않고 데이터를 요약할 수 있습니다. 대부분의 집계에는 DISTINCT  키워드를 사용하는 버전이 포함됩니다. DISTINCT를 포함하면 중복 값이 제거됩니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] 에서는 [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses [!INCLUDE[tsql](../../includes/tsql-md.md)] and [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../includes/ssdwcurrentfull-md.md)] uses [!INCLUDE[DWsql](../../includes/dwsql-md.md)]. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](../../t-sql/transact-sql-reference-database-engine.md)를 참조하세요.  
   
@@ -181,7 +186,7 @@ caps.handback.revision: 23
   
  결과 집합의 정렬 순서는 데이터 원본에서 데이터가 검색되는 순서에 따라 결정됩니다. 보고서 데이터를 검색한 후 쿼리를 수정하여 정렬 순서를 변경할 수 있습니다.  
   
-### 그래픽 쿼리 디자이너 도구 모음  
+### <a name="graphical-query-designer-toolbar"></a>그래픽 쿼리 디자이너 도구 모음  
  관계형 쿼리 디자이너 도구 모음은 쿼리 결과를 지정하거나 보는 데 사용할 수 있는 다음 단추를 제공합니다.  
   
 |단추|Description|  
@@ -190,13 +195,13 @@ caps.handback.revision: 23
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. .sql  및 .rdl  파일 형식이 지원됩니다.|  
 |**쿼리 실행**|쿼리를 실행합니다. 쿼리 결과 창에 결과 집합이 표시됩니다.|  
   
-## 자동으로 생성된 쿼리 이해  
+## <a name="understanding-automatically-generated-queries"></a>자동으로 생성된 쿼리 이해  
  데이터베이스 뷰 창에서 테이블과 열 또는 저장 프로시저와 뷰를 선택할 때 쿼리 디자이너는 데이터베이스 스키마에서 기본 키 및 외래 키 관계를 검색합니다. 쿼리 디자이너는 이러한 관계를 분석하여 두 테이블 간 관계를 검색하고 쿼리에 조인을 추가합니다. 그러면 그룹과 집계를 추가하고 관계를 추가하거나 변경하고 필터를 추가하여 쿼리를 수정할 수 있습니다. 데이터,  두 테이블 간 조인 및 모든 그룹이나 집계를 검색할 열을 표시하는 쿼리 텍스트를 보려면 **텍스트로 편집**을 클릭합니다.  
   
-## 텍스트 기반 쿼리 디자이너  
+## <a name="text-based-query-designer"></a>텍스트 기반 쿼리 디자이너  
  쿼리를 최대한 제어하려면 텍스트 기반 쿼리 디자이너를 사용합니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집**을 클릭합니다. 텍스트 기반 쿼리 디자이너에서 쿼리를 편집한 후에는 관계형 쿼리 디자이너를 더 이상 사용할 수 없습니다. 이후에는 해당 쿼리가 항상 텍스트 기반 쿼리 디자이너에서 열립니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
-## 관련 항목:  
- [쿼리 디자이너&#40;보고서 작성기&#41;](../Topic/Query%20Designers%20\(Report%20Builder\).md)  
+## <a name="see-also"></a>참고 항목  
+ [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

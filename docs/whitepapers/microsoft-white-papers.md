@@ -15,15 +15,13 @@ author: sabotta
 ms.author: carlasab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fd0753457b002558f164f1e5f1c16730463ca25f
+ms.sourcegitcommit: a8ed3f4dd6f3f7b3ec8b6b8679cd78cacfea10a4
+ms.openlocfilehash: 1bac5ba2fc3158d0b84e7e7015cf19e86927bc7f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/05/2017
 
 ---
-# <a name="microsoft-white-papers"></a>Microsoft 백서
-[데이터 저장, 이동 및 변환을 위한 Microsoft 기술 소개](https://msdn.microsoft.com/library/mt639326.aspx)  
-[AlwaysOn 환경에 Master Data Services 설치](https://msdn.microsoft.com/library/mt761778.aspx)  
+# <a name="microsoft-white-papers"></a>Microsoft 백서 
 [SQL Server 2016용 SQL Server 메모리 내 OLTP 내부](https://msdn.microsoft.com/library/mt764316.aspx)
   
   

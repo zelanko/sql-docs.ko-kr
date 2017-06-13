@@ -1,23 +1,28 @@
 ---
-title: "공유 데이터 집합 캐시(SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "공유 데이터 집합 (SSRS) 캐시 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 caps.latest.revision: 6
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 6
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 공유 데이터 집합 캐시(SSRS)
+# <a name="cache-shared-datasets-ssrs"></a>공유 데이터 집합 캐시(SSRS)
   공유 데이터 집합에 대한 쿼리 결과를 캐시로 복사하여 여러 보고서에 일관성 있는 데이터를 제공하고 데이터 집합 쿼리에 대한 응답 시간을 향상시킬 수 있습니다. 보고서와 마찬가지로 공유 데이터 집합을 처음 사용할 때 또는 일정을 지정하여 공유 데이터 집합이 캐시되도록 구성할 수 있습니다.  
   
  공유 데이터 집합을 여러 보고서에 포함하거나 구성 요소 정의의 일부로 포함할 수 있습니다. 공유 데이터 집합을 캐시하여 이를 사용하는 모든 보고서에 대해 일관성 있는 데이터 집합을 제공하고 외부 데이터 원본에 대해 데이터 집합 쿼리가 실행되는 시간을 줄일 수도 있습니다.  
@@ -48,14 +53,14 @@ caps.handback.revision: 6
   
  사용자가 캐시된 결과 집합에 대해 지정된 기본값과 다른 보고서 매개 변수 값을 선택하는 경우 현재 데이터 집합 쿼리가 실행되고 해당 쿼리에 캐시된 결과 집합이 사용되지 않습니다.  
   
-## 공유 데이터 집합 캐싱  
+## <a name="caching-shared-datasets"></a>공유 데이터 집합 캐싱  
  공유 데이터 집합에 대해 캐싱을 설정하려면 공유 데이터 집합에서 캐시 옵션을 선택해야 합니다. 캐싱을 설정한 후에는 공유 데이터 집합에 대한 쿼리 결과가 처음 쿼리 사용 시 캐시에 복사됩니다. 공유 데이터 집합에 매개 변수가 있는 경우 각 매개 변수 조합이 캐시에 새 항목을 만듭니다.  
   
  특정 매개 변수 조합에 대한 쿼리 결과가 캐시에 있는 동안 처리를 위해 실행되는 각 보고서에 해당 매개 변수 값이 지정되어 있는 공유 데이터 집합에 대한 참조가 포함되어 있는 경우 이 보고서는 캐시된 데이터를 사용합니다.  
   
- 캐시에 있는 데이터가 만료되기 전까지의 보관 기간을 지정할 수 있습니다. 자세한 내용은 [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](../Topic/Caching%20Page,%20Shared%20Datasets%20\(Report%20Manager\).md)을 참조하세요.  
+ 캐시에 있는 데이터가 만료되기 전까지의 보관 기간을 지정할 수 있습니다. 자세한 내용은 [캐싱 페이지, 공유 데이터 집합&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea)을 참조하세요.  
   
-## 캐시 미리 로드  
+## <a name="preloading-the-cache"></a>캐시 미리 로드  
  캐시 새로 고침 계획을 만들어 캐시를 미리 로드할 수 있습니다. 새로 고침 계획을 만들면 항목별 일정 또는 공유 일정을 사용하여 캐시를 새로 고칠 빈도를 지정할 수 있습니다. 동일한 항목에 대해 여러 캐시 항목이 생성되는 것을 방지하려면 지정하는 일정에서 외부 데이터 원본에 대한 쿼리 처리 시간이 충분해야 합니다. 예를 들어 쿼리 실행에 20분이 걸리는 경우 새로 고침 일정은 20분보다 커야 합니다. 자세한 내용은 [Schedules](../../reporting-services/subscriptions/schedules.md)을(를) 참조하세요.  
   
  공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들려는 경우 다음 조건이 적용됩니다.  
@@ -70,9 +75,9 @@ caps.handback.revision: 6
   
 -   공유 데이터 집합에 대해 ReadPolicy 및 UpdatePolicy 권한이 있어야 합니다.  
   
- 캐시 새로 고침 계획은 공유 데이터 집합 및 보고서에 모두 적용됩니다. 자세한 내용은 [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](../Topic/Cache%20Refresh%20Options%20\(Report%20Manager\).md)을 참조하세요.  
+ 캐시 새로 고침 계획은 공유 데이터 집합 및 보고서에 모두 적용됩니다. 자세한 내용은 [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)을 참조하세요.  
   
-## 캐시 만료 조건  
+## <a name="conditions-that-cause-cache-expiration"></a>캐시 만료 조건  
  다음 조건에서는 공유 데이터 집합 캐시가 유효하지 않게 될 수 있습니다.  
   
 -   일정 조건이 만료되는 경우. 캐시 시간이 초과되거나 만료 시간이 됩니다.  
@@ -95,7 +100,7 @@ caps.handback.revision: 6
   
  공유 데이터 집합에 대한 캐시 새로 고침 계획을 업데이트해도 이미 처리된 보고서에는 영향을 주지 않습니다. 캐시 새로 고침 계획을 업데이트하는 경우 나중에 해당 공유 데이터 집합을 참조하는 보고서를 실행하는 경우에만 영향이 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   

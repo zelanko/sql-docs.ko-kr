@@ -2,7 +2,7 @@
 title: "SQL Server 암호화 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/03/2016
+ms.date: 05/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,24 +20,24 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 441968f81086a875ee526d31dcaf753c1e103868
+ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
+ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/16/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
   암호화는 키 또는 암호를 사용하여 데이터를 난독 처리하는 프로세스입니다. 이 경우 해당하는 암호 해독 키 또는 암호가 없으면 데이터를 사용할 수 없게 됩니다. 암호화를 통해 액세스 제어 문제를 해결할 수는 없습니다. 그러나 암호화를 사용하면 액세스 제어가 무시되는 경우에도 데이터 손실을 제한하여 보안이 향상됩니다. 예를 들어 데이터베이스 호스트 컴퓨터가 잘못 구성되어 해커가 중요한 데이터를 얻는 경우 해당 정보가 암호화되어 있으면 해킹한 정보를 사용하지 못할 수도 있습니다.  
   
- 연결, 데이터 및 저장 프로시저에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 암호화를 사용할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화에 대한 자세한 정보를 제공합니다.  
-  
+
 > [!IMPORTANT]  
 >  암호화가 보안을 유지해 주는 유용한 도구지만 모든 데이터나 연결에 대해 고려해야 하는 것은 아닙니다. 암호화 구현 여부를 결정할 때는 사용자가 데이터에 액세스하는 방법을 고려해야 합니다. 사용자가 공용 네트워크를 통해 데이터에 액세스할 경우 보안을 높이기 위한 데이터 암호화가 필요할 수도 있습니다. 그러나 모든 액세스가 보안 인트라넷 구성과 관련된 경우 암호화가 필요하지 않을 수도 있습니다. 암호화를 사용하려면 암호, 키 및 인증서에 대한 유지 관리 전략도 고려해야 합니다.  
   
 > [!NOTE]  
 >  전송 수준 보안(TSL1.2)에 대한 최신 정보는 [Microsoft SQL Server에 대한 TLS 1.2 지원](https://support.microsoft.com/kb/3135244)에서 확인할 수 있습니다.  
-  
-## <a name="in-this-section"></a>섹션 내용  
+
+연결, 데이터 및 저장 프로시저에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 암호화를 사용할 수 있습니다. 암호화에 대 한 자세한 정보를 포함 하는 다음 항목 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+
  [암호화 계층](../../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 암호화 계층에 대한 정보입니다.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
  데이터를 암호화하기 위해 인증서를 사용하는 방법에 대한 정보입니다.  
   
 ## <a name="external-resources"></a>외부 리소스  
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005  보안 및 보호](https://msdn.microsoft.com/sqlserver/bb895847.aspx)  
+ [Microsoft TechNet: SQL Server TechCenter: SQL Server 2012 보안 및 보호](http://download.microsoft.com/download/8/F/A/8FABACD7-803E-40FC-ADF8-355E7D218F4C/SQL_Server_2012_Security_Best_Practice_Whitepaper_Apr2012.docx)  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 보안에 대한 현재 정보입니다.  
   
 ## <a name="see-also"></a>참고 항목  

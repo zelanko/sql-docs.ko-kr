@@ -2,7 +2,7 @@
 title: "PolyBase 시작하기 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 13d43201a92c729dd3405d2d436942316ebad0e4
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 시작하기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 PolyBase 실행에 대한 기본 사항을 설명합니다. 자세한 내용은 [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)를 참조하세요.  
+  이 항목에서는 SQL Server 인스턴스에 PolyBase를 실행 하는 방법에 대 한 기본 사항입니다.
   
  아래 단계를 실행하면 다음이 수행됩니다.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 04/11/2017
 -   PolyBase 개체를 사용하는 쿼리 예제  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
- [SQL Server(64비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)인스턴스입니다.  
+ 인스턴스 [SQL Server (64 비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 다음:  
   
 -   Microsoft .NET Framework 4.5  
   
@@ -55,23 +55,21 @@ ms.lasthandoff: 04/11/2017
   
 -   최소 메모리: 4GB  
   
--   최소 하드 디스크 공간: 2GB  
-  
+-   최소 하드 디스크 공간: 2GB    
 -   TCP/IP 연결을 사용할 수 있어야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.  
   
+ 
  외부 데이터 원본은 다음 개체 중 하나입니다.  
   
 -   Hadoop 클러스터. 지원되는 버전은 [PolyBase 구성](#supported)을 참조하세요.  
 
--   Azure Blob Storage 
-
--   Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce가 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 오류 메시지와 함께 쿼리가 실패합니다. 
+-   Azure Blob 저장소
 
 > [!NOTE]
-> HDInsight 클러스터는 영구 저장소에 대한 파일 시스템으로 Azure Blob Storage를 사용합니다. PolyBase를 사용하여 HDInsight 클러스터에서 관리하는 파일을 쿼리할 수 있습니다. 이를 위해 HDInsight 클러스터에 대한 저장소로 구성된 blob을 참조할 수 있도록 외부 데이터 원본을 만드세요. 
-  
+>   Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce가 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소 없이 쿼리가 실패 합니다. 
+
 ## <a name="install-polybase"></a>PolyBase 설치  
- PolyBase를 설치하지 않은 경우 [PolyBaseinstallation](../../relational-databases/polybase/polybase-installation.md)을 참조하세요.  
+ PolyBase를 설치 하지 않은 경우 참조 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)합니다.  
   
 ### <a name="how-to-confirm-installation"></a>설치 확인 방법  
  설치가 끝난 후 PolyBase가 제대로 설치되었는지 확인하려면 다음 명령을 실행합니다. PolyBase가 설치된 경우 1을 반환합니다. 그렇지 않으면 0이 반환됩니다.  
@@ -81,17 +79,17 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ```  
   
 ##  <a name="supported"></a> Configure PolyBase  
- 설치한 후 SQL Server를 구성해야 Azure Blob 저장소 또는 Hadoop 버전을 사용할 수 있습니다. PolyBase는 두 개의 Hadoop 공급자인 Hortonwork의 Data Platform(HDP) 및 Cloudera의 CDH를 지원합니다. Windows 또는 Linux 컴퓨터에서 Hortonwork을 실행할 수 있고 그것도 구성의 일부입니다.  지원되는 외부 데이터 원본은 다음과 같습니다.  
+ 를 설치한 후 사용자의 Hadoop 버전을 사용 하도록 SQL Server 또는 Azure Blob 저장소를 구성 해야 합니다. PolyBase는 두 명의 Hadoop 공급자 인 Hortonworks Data Platform (HDP) 및 CDH Cloudera Distributed Hadoop ()를 지원합니다.  지원되는 외부 데이터 원본은 다음과 같습니다.  
   
 -   Linux/Windows Server에서 Hortonworks HDP 1.3  
   
--   Linux에서 Hortonworks HDP 2.1 – 2.5
+-   Linux에서 Hortonworks HDP 2.1-2.6
 
 -   Windows Server에서 Hortonworks HDP 2.1 - 2.3  
   
 -   Linux에서 Cloudera CDH 4.3  
   
--   Linux에서 Cloudera CDH 5.1 – 5.5, 5.9, 5.10  
+-   Cloudera CDH 5.1 – 5.5, linux 5.9 5.11  
   
 -   Azure BLOB 저장소  
   
@@ -101,8 +99,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
 ### <a name="external-data-source-configuration"></a>외부 데이터 원본 구성  
   
 1.  [sp_configure&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 'hadoop connectivity'를 실행하고 적절한 값을 설정합니다. 기본적으로 hadoop 연결은 7로 설정됩니다. 값을 찾으려면 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
-  
-    ```tsql  
+      ```tsql  
     -- Values map to various external data sources.  
     -- Example: value 7 stands for Azure blob storage and Hortonworks HDP 2.3 on Linux.  
     sp_configure @configname = 'hadoop connectivity', @configvalue = 7;   
@@ -159,7 +156,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  자세한 내용은 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  
   
 ## <a name="create-t-sql-objects"></a>T-SQL 개체 만들기  
- 외부 데이터 원본, Hadoop 또는 Azure Storage에 따라 개체를 만듭니다.  
+ 외부 데이터 원본, Hadoop 또는 Azure 저장소에 따라 개체를 만듭니다.  
   
 ### <a name="hadoop"></a>Hadoop  
   
@@ -189,8 +186,7 @@ CREATE EXTERNAL DATA SOURCE MyHadoopCluster WITH (
 );  
   
 -- 4: Create an external file format.  
--- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
-  
+-- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).    
 CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
         FORMAT_TYPE = DELIMITEDTEXT,   
         FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   

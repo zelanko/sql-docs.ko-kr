@@ -15,10 +15,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 06e3118f67db6f01dad0344b42024534081433fb
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
@@ -99,8 +99,8 @@ ms.lasthandoff: 04/11/2017
   
 -   압축된 백업에서 복원할 때 다음과 같은 오류가 표시될 수 있습니다.  
   
-    -   **SqlException 3284이(가) 발생했습니다. 심각도: 16 상태: 5**  
-        **메시지: 장치 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'의 파일 마크가 정렬되지 않았습니다. 백업 세트를 만들 때 사용한 크기와 동일한 블록 크기를 사용하여 Restore 문을 다시 실행하세요. '65536'이(가) 사용할 수 있는 값인 것 같습니다.**  
+    -   `SqlException 3284 occurred. Severity: 16 State: 5`  
+        **장치에서 메시지 `'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak'` 정렬 되지 않습니다. 백업 세트를 만들 때 사용한 크기와 동일한 블록 크기를 사용하여 Restore 문을 다시 실행하세요. '65536'이(가) 사용할 수 있는 값인 것 같습니다.**  
   
          이 오류를 해결하려면 **BLOCKSIZE = 65536** 을 지정하여 **BACKUP** 문을 다시 실행하세요.  
   
@@ -125,7 +125,7 @@ ms.lasthandoff: 04/11/2017
   
 -   "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak"에 쓰지 못했습니다. URL 백업 수행 시 원격 끝점에서 예외를 수신했습니다. 예외 메시지: 전송 연결에서 데이터를 읽을 수 없습니다: 연결이 끊어졌습니다.  
   
--   파일 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 에서 복구할 수 없는 I/O 오류가 발생했습니다. 원격 끝점에서 오류를 수집할 수 없습니다.  
+-   파일에서 복구할 수 없는 I/O 오류가 발생 했습니다. "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" 원격 끝점에서 오류를 수집할 수 없습니다.  
   
      메시지 3013, 수준 16, 상태 1, 줄 2  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 04/11/2017
   
  **기본 프록시 설정이 선택되지 않음:**  
   
- 경우에 따라 기본 설정이 선택되지 않아서 다음과 같은 프록시 인증 오류가 발생합니다.*파일 "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" 에서 복구할 수 없는 I/O 오류가 발생했습니다. URL 백업 수행 시 원격 끝점에서 예외를 수신했습니다. 예외 메시지: 원격 서버에서 오류를 반환했습니다. (407)* **프록시 인증 필요**  
+ 경우에 따라 기본 설정이 선택 되지 않습니다. 프록시 인증 오류가 아래에 나와 있는 것과 같은 발생:*파일에서 복구할 수 없는 I/O 오류가 발생 했습니다. "`http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:`" URL 백업 수행 시 원격 끝점에서 예외를 수신 합니다. 예외 메시지: 원격 서버에서 오류를 반환했습니다. (407)* **프록시 인증 필요**  
   
  이 문제를 해결하려면 다음 단계를 사용하여 URL에 대한 백업 프로세스에서 기본 프록시 설정을 사용하도록 허용하는 구성 파일을 만듭니다.  
   

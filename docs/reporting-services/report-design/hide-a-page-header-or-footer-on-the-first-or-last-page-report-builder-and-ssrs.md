@@ -1,29 +1,34 @@
 ---
-title: "첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "첫 번째 또는 마지막 페이지 보고서 작성기 SSRS에서 페이지 머리글 또는 바닥글 숨기기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 17c9a8c854fad691b864ff1b0aba4e91b5d7b64d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기(보고서 작성기 및 SSRS)
+# <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>첫 페이지 또는 마지막 페이지에서 페이지 머리글 또는 바닥글 숨기기(보고서 작성기 및 SSRS)
   보고서는 각 페이지의 위쪽과 아래쪽에 각각 표시되는 페이지 머리글과 페이지 바닥글을 포함할 수 있습니다. 머리글 또는 바닥글을 추가한 후에는 보고서의 첫 페이지 및 마지막 페이지에서 선택적으로 머리글과 바닥글을 숨길 수도 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 첫 페이지나 마지막 페이지에서 페이지 머리글을 숨기려면  
+### <a name="to-hide-a-page-header-on-the-first-or-last-page"></a>첫 페이지나 마지막 페이지에서 페이지 머리글을 숨기려면  
   
 1.  디자인 뷰에서 보고서를 엽니다.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 첫 페이지나 마지막 페이지에서 페이지 바닥글을 숨기려면  
+### <a name="to-hide-a-page-footer-on-the-first-or-last-page"></a>첫 페이지나 마지막 페이지에서 페이지 바닥글을 숨기려면  
   
 1.  디자인 뷰에서 보고서를 엽니다.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 6
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [페이지 머리글/바닥글 추가 또는 제거&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  

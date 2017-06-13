@@ -1,24 +1,31 @@
 ---
-title: "Microsoft Word로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(보고서 작성기 및 SSRS) Microsoft Word로 내보내기 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 caps.latest.revision: 23
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 23
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
-  Word 렌더링 확장 프로그램은 페이지가 매겨진 보고서를 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 형식(.docx)으로 렌더링합니다. 형식은 Office Open XML입니다.  
+
+# <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Microsoft Word로 내보내기(보고서 작성기 및 SSRS)
+
+  Word 렌더링 확장 프로그램은 페이지가 매겨진 보고서를  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 형식(.docx)으로 렌더링합니다. 형식은 Office Open XML입니다.  
   
  이 렌더러에 의해 생성된 파일의 콘텐츠 형식은 **application/vnd.openxmlformats-officedocument.wordprocessingml.document**이고 파일 확장명은 .docx입니다.  
   
@@ -41,10 +48,10 @@ caps.handback.revision: 23
   
  이 렌더러에서는 논리적 페이지 나누기만 지원합니다.  
   
-### 페이지 크기 조정  
+### <a name="page-sizing"></a>페이지 크기 조정  
  보고서가 렌더링될 때 Word 페이지 높이 및 너비는 페이지 크기 높이와 너비, 왼쪽과 오른쪽 페이지 여백, 위쪽과 아래쪽 페이지 여백과 같은 RDL 속성으로 설정됩니다.  
   
-### 페이지 너비  
+### <a name="page-width"></a>페이지 너비  
  Word에서 지원하는 페이지 너비는 최대 55.87cm입니다. 보고서가 55.87cm보다 더 넓더라도 렌더러를 통해 보고서가 렌더링되지만 Word의 인쇄 모양 보기나 읽기 모드 보기에서는 보고서 내용이 표시되지 않습니다. 데이터를 보려면 기본 보기나 웹 모양 보기로 전환해야 합니다. Word의 이러한 보기에서는 공백의 크기를 줄여 보고서 내용을 더 많이 표시할 수 있습니다.  
   
  렌더링된 보고서는 내용을 표시하기 위해 필요한 경우 너비가 22인치까지 늘어납니다. 보고서의 최소 너비는 속성 창의 RDL Width 속성을 기준으로 합니다.  
@@ -80,28 +87,28 @@ caps.handback.revision: 23
 ##  <a name="Interactivity"></a> 상호 작용  
  Word에서는 일부 대화형 요소가 지원됩니다. 다음은 특정 동작에 대한 설명입니다.  
   
-### 표시 및 숨기기  
+### <a name="show-and-hide"></a>표시 및 숨기기  
  Word 렌더러에서는 렌더링되는 보고서 항목의 상태에 따라 보고서 항목을 렌더링합니다. 보고서 항목이 숨김 상태이면 해당 보고서 항목이 Word 문서에 렌더링되지 않습니다. 보고서 항목이 표시됨 상태이면 해당 보고서 항목이 Word 문서에 렌더링됩니다. 보고서 항목의 상태를 전환하는 기능은 Word에서 지원되지 않습니다.  
   
-### 문서 구조  
+### <a name="document-map"></a>문서 구조  
  보고서에 문서 구조 레이블이 있으면 해당 레이블이 관련 보고서 항목 및 그룹의 Word TOC(목차) 레이블로 렌더링됩니다. 문서 구조 레이블은 TOC 레이블의 레이블 텍스트로 사용됩니다. 대상 링크는 레이블이 설정되어 있는 항목 근처에 배치됩니다. Word 문서에서 TOC가 자동으로 만들어지지는 않지만 보고서에 렌더링된 문서 구조 레이블을 사용하여 TOC를 직접 작성할 수 있습니다.  
   
-### 하이퍼링크 및 드릴스루 링크  
+### <a name="hyperlink-and-drillthrough-links"></a>하이퍼링크 및 드릴스루 링크  
  입력란 및 이미지 보고서 항목에 대한 하이퍼링크와 드릴스루 링크는 Word 문서에서 하이퍼링크로 렌더링됩니다. 하이퍼링크를 클릭하면 기본 웹 브라우저가 열리고 지정된 URL로 이동합니다. 드릴스루 하이퍼링크를 클릭하면 원본 보고서 서버에 액세스할 수 있습니다.  
   
-### 대화형 정렬  
+### <a name="interactive-sorting"></a>대화형 정렬  
  보고서 내용은 보고서 데이터 영역 내에 현재 정렬되어 있는 방식을 기준으로 렌더링됩니다. Word에서는 대화형 정렬을 지원하지 않습니다. 보고서를 렌더링한 다음 Word 내에서 표 정렬을 적용할 수 있습니다.  
   
-### 책갈피  
+### <a name="bookmarks"></a>책갈피  
  보고서의 책갈피는 Word 책갈피로 렌더링됩니다. 책갈피 링크는 문서 내에서 책갈피 레이블로 연결되는 하이퍼링크로 렌더링됩니다. 책갈피 레이블은 길이가 40자 미만이어야 합니다. 밑줄(_) 이외의 특수 문자는 책갈피 레이블에 사용할 수 없습니다. 지원되지 않는 특수 문자는 책갈피 레이블 이름에서 제거되며, 이름이 40자보다 길면 이름의 뒷부분이 잘립니다. 보고서에 중복된 책갈피 이름이 있으면 Word에서 책갈피가 렌더링되지 않습니다.  
   
 ##  <a name="WordStyleRendering"></a> Word 스타일 렌더링  
  다음은 Word에서 스타일이 렌더링되는 방식에 대한 간략한 설명입니다.  
   
-### 색상표  
+### <a name="color-palette"></a>색상표  
  보고서에서 렌더링한 색은 Word 문서에서도 렌더링됩니다.  
   
-### 테두리  
+### <a name="border"></a>테두리  
  페이지 테두리를 제외한 보고서 항목의 테두리는 Word 표 셀 테두리로 렌더링됩니다.  
   
 ##  <a name="SquigglyLines"></a> 내보낸 보고서의 구불구불한 선  
@@ -140,7 +147,7 @@ caps.handback.revision: 23
 ##  <a name="WordBenefits"></a> Word 렌더러 사용 이점  
  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 파일의 새로운 기능을 내보낸 보고서에서 사용할 수 있을 뿐만 아니라 보고서를 *.docx 파일로 내보낼 경우 크기를 줄일 수 있습니다. Word 렌더러를 사용하여 내보낸 보고서는 일반적으로 동일한 보고서를 Word 2003 렌더러를 사용하여 내보낼 때보다 매우 작습니다.  
   
-## 내보낸 보고서의 이전 버전 호환성  
+## <a name="backward-compatibility-of-exported-reports"></a>내보낸 보고서의 이전 버전 호환성  
  Word 호환성 모드를 선택하고 호환성 옵션을 설정할 수 있습니다. Word 렌더러에서는 호환성 모드가 설정된 상태로 문서를 만듭니다. 호환성 모드를 해제한 상태로 문서를 다시 저장하면 문서의 레이아웃에 영향을 줄 수 있습니다.  
   
  호환성 모드를 해제하고 보고서를 다시 저장할 경우 보고서 레이아웃이 예기치 않게 변경될 수 있습니다.  
@@ -148,19 +155,19 @@ caps.handback.revision: 23
 ##  <a name="AvailabilityWord"></a> Word 2003 렌더러  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003(.doc) 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](../Topic/Deprecated%20Features%20in%20SQL%20Server%20Reporting%20Services%20in%20SQL%20Server%202016.md)을 참조하세요.  
+>  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003(.doc) 렌더링 확장 프로그램은 더 이상 사용되지 않습니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](~/reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
   
- Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](http://go.microsoft.com/fwlink/?LinkID=205622)을 참조하세요.  
+ Word 렌더러는 Word, Excel 및 PowerPoint용 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] Office 호환 기능 팩이 설치된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2003과도 호환됩니다. 자세한 내용은 [Word, Excel 및 PowerPoint용 Microsoft Office 호환 기능 팩](http://go.microsoft.com/fwlink/?LinkID=205622)을 참조하세요.  
   
- [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과 호환되는 이전 버전의 Word 렌더링 확장 프로그램은 Word 2003으로 이름이 변경되었습니다. 기본적으로 Word 렌더링 확장 프로그램만 사용할 수 있습니다. Word 2003 렌더링 확장 프로그램을 사용할 수 있도록 하려면 Reporting Services 구성 파일을 업데이트해야 합니다. Word 2003 렌더러를 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-word**이고 파일 이름 확장명은 .doc입니다.  
+ [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과 호환되는 이전 버전의 Word 렌더링 확장 프로그램은 Word 2003으로 이름이 변경되었습니다. 기본적으로 Word 렌더링 확장 프로그램만 사용할 수 있습니다. Word 2003 렌더링 확장 프로그램을 사용할 수 있도록 하려면 Reporting Services 구성 파일을 업데이트해야 합니다. Word 2003 렌더러를 통해 생성되는 파일의 콘텐츠 형식은 **application/vnd.ms-word** 이고 파일 이름 확장명은 .doc입니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 기본 Word 렌더러는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 형식(.docx)으로 렌더링하는 버전입니다. 이 옵션은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]웹 포털 및 SharePoint의 **내보내기** 메뉴에 나열되는 **Word** 옵션입니다. [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과만 호환되는 이전 버전은 이제 이름이 Word 2003으로 지정되며 이 이름으로 메뉴에 나열됩니다. **Word 2003** 메뉴 옵션은 기본적으로 표시되지 않지만 관리자가 RSReportServer 구성 파일을 업데이트하여 표시할 수 있습니다. Word 2003 렌더러를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 내보내려면 RSReportDesigner 구성 파일을 업데이트합니다. 하지만 일부 경우에는 Word 2003 렌더러를 표시할 수 없습니다. RSReportServer 구성 파일이 보고서 서버에 존재하기 때문에 구성 파일을 읽으려면 보고서를 내보내는 위치의 도구 또는 제품이 보고서 서버에 연결되어 있어야 합니다. 연결되어 있지 않거나 로컬 모드에 있는 도구 또는 제품을 사용할 경우 Word 2003 렌더러가 표시되도록 해도 효과가 없습니다. **Word 2003** 메뉴 옵션은 사용할 수 없는 상태로 유지됩니다. RSReportDesigner 구성 파일에서 Word 2003 렌더러를 표시하도록 설정하면 **보고서 미리 보기에서** Word 2003 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 메뉴 옵션을 항상 사용할 수 있습니다.  
+ SQL Server Reporting Services에서 기본 Word 렌더러는 버전을 렌더링 하는 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] (.docx) 형식입니다. 이 옵션은 **웹 포털 및 SharePoint의** 내보내기 **메뉴에 나열되는** Word [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 옵션입니다. [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003과만 호환되는 이전 버전은 이제 이름이 Word 2003으로 지정되며 이 이름으로 메뉴에 나열됩니다. **Word 2003** 메뉴 옵션은 기본적으로 표시되지 않지만 관리자가 RSReportServer 구성 파일을 업데이트하여 표시할 수 있습니다. Word 2003 렌더러를 사용하여 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 보고서를 내보내려면 RSReportDesigner 구성 파일을 업데이트합니다. 하지만 일부 경우에는 Word 2003 렌더러를 표시할 수 없습니다. RSReportServer 구성 파일이 보고서 서버에 존재하기 때문에 구성 파일을 읽으려면 보고서를 내보내는 위치의 도구 또는 제품이 보고서 서버에 연결되어 있어야 합니다. 연결되어 있지 않거나 로컬 모드에 있는 도구 또는 제품을 사용할 경우 Word 2003 렌더러가 표시되도록 해도 효과가 없습니다. **Word 2003** 메뉴 옵션은 사용할 수 없는 상태로 유지됩니다. RSReportDesigner 구성 파일에서 Word 2003 렌더러를 표시하도록 설정하면 **보고서 미리 보기에서** Word 2003 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 메뉴 옵션을 항상 사용할 수 있습니다.  
   
  다음과 같은 시나리오에서는 **Word 2003의** 메뉴 옵션이 표시되지 않습니다.  
   
 -   보고서 작성기가 연결되지 않은 모드이고 보고서 작성기에서 보고서를 미리 보는 경우.  
   
--   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local mode vs. connected mode reports in the report viewer.md)를 참조하세요.  
+-   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)를 참조하세요.  
   
  **Word 2003** 렌더러가 표시되도록 구성된 경우 다음과 같은 시나리오에서 **Word** 및 **Word 2003** 메뉴 옵션을 사용할 수 있습니다.  
   
@@ -182,17 +189,18 @@ caps.handback.revision: 23
   
  WORDOPENXML 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] .docx 파일에 대한 Word 렌더러를 정의합니다. WORD 확장은 [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 버전을 정의합니다. `Visible = “false”` 는 Word 2003 렌더러가 숨겨져 있음을 나타냅니다. 자세한 내용은 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md) 및 [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)을 참조하세요.  
   
-### Word와 Word 2003 렌더러의 차이점  
+### <a name="differences-between-the-word-and-word-2003-renderers"></a>Word와 Word 2003 렌더러의 차이점  
  Word 또는 Word 2003 렌더러를 사용하여 렌더링된 보고서는 대개 시각적으로는 구분되지 않습니다. 그러나 Word 형식과 Word 2003 형식에는 약간의 차이점이 있습니다.  
   
 ##  <a name="DeviceInfo"></a> 장치 정보 설정  
  장치 정보 설정을 변경하여 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 예를 들어 하이퍼링크 및 드릴스루 링크를 생략할 수 있고 렌더링 시 항목의 원래 상태와 상관없이 설정/해제 전환이 가능한 모든 항목을 확장할 수 있습니다. 자세한 내용은 [Word Device Information Settings](../../reporting-services/word-device-information-settings.md)을 참조하세요.  
-  
-## 관련 항목:  
- [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
- [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>다음 단계
+
+[Reporting Services의 페이지 매김](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+[렌더링 동작](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+[여러 보고서 렌더링 확장 프로그램의 대화형 기능](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+[보고서 항목 렌더링](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+[테이블, 행렬 및 목록](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

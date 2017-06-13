@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7fbfb58c3cadb58914371a4947426dad5756be9c
+ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
+ms.openlocfilehash: 36e98253c0445c07280734c18262cf4a0908736e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/10/2017
 
 ---
 # <a name="microsoft-sql-documentation"></a>Microsoft SQL 설명서
@@ -25,5 +25,6 @@ ms.lasthandoff: 04/11/2017
 
 - 왼쪽에는 SQL Server 및 여러 관련 기술에 대한 목차가 있습니다.
 - Azure SQL을 포함하여 더 큰 SQL 기술 집합에 대한 목차는 [SQL 허브 페이지](sql-hub-menu.md)에 있습니다.
+-  이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [SQL Server 2014 제품 설명서](http://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)합니다. 
 
 **참고 항목**: [DocumentDB 및 Data Factory](/azure/#pivot=services&panel=databases)와 같은 추가적인 Azure 데이터베이스 기술.  

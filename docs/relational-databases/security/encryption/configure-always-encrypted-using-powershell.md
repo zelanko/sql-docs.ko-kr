@@ -1,7 +1,7 @@
 ---
 title: "PowerShell을 사용하여 상시 암호화 구성 | Microsoft 문서"
 ms.custom: 
-ms.date: 09/29/2016
+ms.date: 05/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7e3971933bb32cc47f761d18ba8c0dd57b139636
+ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
+ms.openlocfilehash: dcd6c2dc9c489a888c647a77c27ce9694d154699
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/18/2017
 
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>PowerShell을 사용하여 상시 암호화 구성
@@ -26,18 +26,16 @@ ms.lasthandoff: 04/11/2017
 
 SqlServer PowerShell 모듈은 Azure SQL Database와 SQL Server 2016 둘 다에서 [상시 암호화](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) 를 구성하기 위한 cmdlet을 제공합니다.
 
-SqlServer 모듈의 상시 암호화 키용 cmdlet은 대부분 암호화된 열에 저장된 중요한 데이터 또는 상시 암호화 키로 작업하기 때문에 보안 컴퓨터에서 cmdlet을 실행하는 것이 중요합니다. 상시 암호화를 관리하는 경우 SQL Server 인스턴스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 cmdlet을 실행합니다. 
+항상 암호화 모듈의 cmdlet은 sql Server 사용 키 또는 중요 한 데이터를이 보안 컴퓨터에서 cmdlet을 실행 하는 중요 합니다. 상시 암호화를 관리할 때는 SQL Server 인스턴스를 호스팅하는 컴퓨터와 다른 컴퓨터에서 cmdlet을 실행 합니다.
 
-상시 암호화의 주요 목표는 데이터베이스 시스템이 손상된 경우에도 암호화된 중요한 데이터를 안전하게 보호하는 것이므로 SQL Server 컴퓨터에서 키 또는 중요한 데이터를 처리하는 PowerShell 스크립트를 실행하면 기능의 이점이 감소하거나 무효화될 수 있습니다. 보안과 관련된 추가 권장 사항을 보려면 [키 관리에 대한 보안 고려 사항](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)을 참조하세요.
+상시 암호화의 주요 목표는 되도록 하기 때문에 데이터베이스 시스템이 손상 된, 키를 처리 하는 PowerShell 스크립트를 실행 또는 SQL Server 컴퓨터에 중요 한 데이터를 줄이거나 기능의 이점을 무력화 수 하는 경우에 암호화 된 중요 한 데이터를 안전 합니다. 보안과 관련된 추가 권장 사항을 보려면 [키 관리에 대한 보안 고려 사항](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)을 참조하세요.
 
 개별 cmdlet 문서로 연결되는 링크는 [이 페이지 맨 아래](#aecmdletreference)에 있습니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-SQL Server 인스턴스를 호스트하는 컴퓨터가 아닌 보안 컴퓨터에 [SqlServer 모듈](https://msdn.microsoft.com/library/mt740629.aspx) 을 설치합니다. 
+SQL Server 인스턴스를 호스트하는 컴퓨터가 아닌 보안 컴퓨터에 [SqlServer 모듈](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/sqlserver) 을 설치합니다. PowerShell 갤러리에서 직접 모듈을 설치할 수 있습니다.  참조는 [다운로드](../../../ssms/download-sql-server-ps-module.md) 자세한 세부 정보에 대 한 지침입니다.
 
-최신 버전의 [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx)을 SqlServer 모듈을 설치합니다.
-*SqlServer* 모듈은 상시 암호화를 지원하지 않는 *sqlps* 모듈과 다릅니다. 자세한 내용은 팀의 [SQL PowerShell - 2016년 7월 업데이트](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 블로그 게시물을 참조하세요.
 
 ## <a name="importsqlservermodule"></a> SqlServer 모듈 가져오기 
 
@@ -63,7 +61,7 @@ Import-Module "SqlServer"
 
 이 방법은 SQL Server에서만 작동합니다(Azure SQL 데이터베이스에서는 지원되지 않음).
 
-SQL Server PowerShell에서 파일 시스템 경로를 탐색하는 데 일반적으로 사용되는 명령과 비슷한 Windows PowerShell 별칭을 사용하여 경로를 탐색할 수 있습니다. 대상 인스턴스와 데이터베이스로 이동하면 이후 cmdlet은 다음 예제와 같이 해당 데이터베이스를 대상으로 합니다.
+SQL Server PowerShell에서 파일 시스템 경로를 탐색하는 데 일반적으로 사용되는 명령과 비슷한 Windows PowerShell 별칭을 사용하여 경로를 탐색할 수 있습니다. 대상 인스턴스 및 데이터베이스를 이동 되 면 후속 cmdlet은 다음 예에서 같이 해당 데이터베이스를 대상:
 
 ```
 # Import the SqlServer module.
@@ -130,24 +128,24 @@ $database | Get-SqlColumnMasterKey
 
 |CMDLET    |설명
 |:---|:---
-|**[Add-SqlAzureAuthenticationContext](https://msdn.microsoft.com/library/mt759815.aspx)**    |Azure에 인증을 수행하고 인증 토큰을 획득합니다.
-|**[Add-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759817.aspx)**    |데이터베이스의 기존 열 암호화 키 개체에 대한 새 암호화된 값을 추가합니다.
-|**[Complete-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759791.aspx)**    |열 마스터 키 순환을 완료합니다.
-|**[Get-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759814.aspx)**    |데이터베이스에서 정의된 모든 열 암호화 키 개체를 반환하거나 지정된 이름을 가진 열 암호화 키 개체 하나를 반환합니다.
-|**[Get-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759782.aspx)**    |데이터베이스에서 정의된 열 마스터 키 개체를 반환하거나 지정된 이름을 가진 열 마스터 키 개체 하나를 반환합니다.
-|**[Invoke-SqlColumnMasterKeyRotation](https://msdn.microsoft.com/library/mt759810.aspx)**    |열 마스터 키 순환을 시작합니다.
-|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759795.aspx)**    |Azure 주요 자격 증명 모음에 저장된 비대칭 키를 설명하는 SqlColumnMasterKeySettings 개체를 만듭니다.
-|**[New-SqlCngColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759818.aspx)**    |CNG(Cryptography Next Generation) API를 지원하는 키 저장소에 저장된 비대칭 키를 설명하는 SqlColumnMasterKeySettings 개체를 만듭니다.
-|**[New-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759808.aspx)**    |데이터베이스에 새 열 암호화 키 개체를 만듭니다.
-|**[New-SqlColumnEncryptionKeyEncryptedValue](https://msdn.microsoft.com/library/mt759794.aspx)**    |열 암호화 키의 암호화된 값을 생성합니다.
-|**[New-SqlColumnEncryptionSettings](https://msdn.microsoft.com/library/mt759825.aspx)**    |CEK 및 암호화 유형을 포함하여 단일 열의 암호화에 대한 정보를 캡슐화하는 새 SqlColumnEncryptionSettings 개체를 만듭니다.
-|**[New-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759813.aspx)**    |데이터베이스에 새 열 마스터 키 개체를 만듭니다.
-|**New-SqlColumnMasterKeySettings**|지정된 공급자 및 키 경로를 사용하여 열 마스터 키에 대한 SqlColumnMasterKeySettings 개체를 만듭니다.
-|**[New-SqlCspColumnMasterKeySettings](https://msdn.microsoft.com/library/mt759784.aspx)**    |CAPI(Cryptography API)를 지원하는 CSP(암호화 서비스 공급자)의 키 저장소에 저장된 비대칭 키를 설명하는 SqlColumnMasterKeySettings 개체를 만듭니다.
-|**[Remove-SqlColumnEncryptionKey](https://msdn.microsoft.com/library/mt759786.aspx)**    |데이터베이스에서 열 암호화 키 개체를 제거합니다.
-|**[Remove-SqlColumnEncryptionKeyValue](https://msdn.microsoft.com/library/mt759783.aspx)**    |데이터베이스의 기존 열 암호화 키 개체에서 암호화된 값을 제거합니다.
-|**[Remove-SqlColumnMasterKey](https://msdn.microsoft.com/library/mt759800.aspx)**    |데이터베이스에서 열 마스터 키 개체를 제거합니다.
-|**[Set-SqlColumnEncryption](https://msdn.microsoft.com/library/mt759790.aspx)**    |데이터베이스의 지정된 열을 암호화, 해독 또는 다시 암호화합니다.
+|**[Add-SqlAzureAuthenticationContext](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlazureauthenticationcontext)**    |Azure에 인증을 수행하고 인증 토큰을 획득합니다.
+|**[Add-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/add-sqlcolumnencryptionkeyvalue)**    |데이터베이스의 기존 열 암호화 키 개체에 대한 새 암호화된 값을 추가합니다.
+|**[Complete-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/complete-sqlcolumnmasterkeyrotation)**    |열 마스터 키 순환을 완료합니다.
+|**[Get-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnencryptionkey)**    |데이터베이스에서 정의된 모든 열 암호화 키 개체를 반환하거나 지정된 이름을 가진 열 암호화 키 개체 하나를 반환합니다.
+|**[Get-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/get-sqlcolumnmasterkey)**    |데이터베이스에서 정의된 열 마스터 키 개체를 반환하거나 지정된 이름을 가진 열 마스터 키 개체 하나를 반환합니다.
+|**[Invoke-SqlColumnMasterKeyRotation](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/invoke-sqlcolumnmasterkeyrotation)**    |열 마스터 키 순환을 시작합니다.
+|**[New-SqlAzureKeyVaultColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlazurekeyvaultcolumnmasterkeysettings)**    |Azure 주요 자격 증명 모음에 저장된 비대칭 키를 설명하는 SqlColumnMasterKeySettings 개체를 만듭니다.
+|**[New-SqlCngColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcngcolumnmasterkeysettings)**    |CNG(Cryptography Next Generation) API를 지원하는 키 저장소에 저장된 비대칭 키를 설명하는 SqlColumnMasterKeySettings 개체를 만듭니다.
+|**[New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)**    |데이터베이스에 열 암호화 키 개체를 만듭니다.
+|**[New-SqlColumnEncryptionKeyEncryptedValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkeyencryptedvalue)**    |열 암호화 키의 암호화된 값을 생성합니다.
+|**[New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings)**    |CEK 및 암호화 유형을 포함 하는 단일 열의 암호화에 대 한 정보를 캡슐화 하 SqlColumnEncryptionSettings 개체를 만듭니다.
+|**[New-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkey)**    |데이터베이스에 열 마스터 키 개체를 만듭니다.
+|**[새 SqlColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnmasterkeysettings)**|지정된 공급자 및 키 경로를 사용하여 열 마스터 키에 대한 SqlColumnMasterKeySettings 개체를 만듭니다.
+|**[New-SqlCspColumnMasterKeySettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcspcolumnmasterkeysettings)**    |CAPI(Cryptography API)를 지원하는 CSP(암호화 서비스 공급자)의 키 저장소에 저장된 비대칭 키를 설명하는 SqlColumnMasterKeySettings 개체를 만듭니다.
+|**[Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey)**    |데이터베이스에서 열 암호화 키 개체를 제거합니다.
+|**[Remove-SqlColumnEncryptionKeyValue](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkeyvalue)**    |데이터베이스의 기존 열 암호화 키 개체에서 암호화된 값을 제거합니다.
+|**[Remove-SqlColumnMasterKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnmasterkey)**    |데이터베이스에서 열 마스터 키 개체를 제거합니다.
+|**[Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)**    |데이터베이스의 지정된 열을 암호화, 해독 또는 다시 암호화합니다.
 
 
 

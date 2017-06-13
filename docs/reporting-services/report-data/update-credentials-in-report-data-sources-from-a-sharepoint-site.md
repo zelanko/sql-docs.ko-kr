@@ -1,30 +1,35 @@
 ---
-title: "SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SharePoint 사이트에서 보고서 데이터 원본에서 자격 증명 업데이트 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e0c50b6e-89e7-4b4d-8fe5-c90682c5d1b1
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 85652be59a369ff3b571f8858a744962b5b3f619
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
+# <a name="update-credentials-in-report-data-sources-from-a-sharepoint-site"></a>SharePoint 사이트의 보고서 데이터 원본에서 자격 증명 업데이트
   이 항목에서는 SharePoint 문서 라이브러리에 저장된 공유 데이터 원본 및 보고서에 포함된 데이터 원본을 업데이트하는 방법에 대해 설명합니다.  
   
  보고서 중 상당수에 데이터 원본이 포함되어 있거나 Windows 인증을 사용하도록 구성된 공유 데이터 원본이 사용되고 있을 수 있습니다. SharePoint 문서 라이브러리에 저장된 보고서에 대해 데이터 경고를 만드는 것과 같은 일부 상황에서는 데이터 원본 자격 증명을 저장된 자격 증명으로 업데이트하거나 자격 증명을 필요로 하지 않도록 업데이트해야 합니다.  
   
  보고서에서 저장된 자격 증명을 사용하기 위해 새 SQL Server 로그인을 만들어 사용할 수도 있습니다. 자세한 내용은 [로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)를 참조하세요.  
   
-### 저장된 자격 증명을 사용하도록 포함된 데이터 원본을 업데이트하려면  
+### <a name="to-update-an-embedded-data-source-to-use-stored-credentials"></a>저장된 자격 증명을 사용하도록 포함된 데이터 원본을 업데이트하려면  
   
 1.  보고서를 저장한 SharePoint 문서 라이브러리로 이동합니다.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 12
   
 7.  사용자 이름 및 암호를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정을 경우이 형식 지정: \<도메인 >\\< 계정\>를 선택한 후 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용 하 여**합니다.  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 12
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 저장된 자격 증명을 사용하도록 공유 데이터 원본을 업데이트하려면  
+### <a name="to-update-a-shared-data-source-to-use-stored-credentials"></a>저장된 자격 증명을 사용하도록 공유 데이터 원본을 업데이트하려면  
   
 1.  공유 데이터 원본을 저장한 SharePoint 문서 라이브러리로 이동합니다.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 12
   
 5.  사용자 이름 및 암호를 입력합니다.  
   
-    -   계정이 Windows 도메인 사용자 계정인 경우 \<도메인>\\<계정\> 형식으로 지정한 다음 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택합니다.  
+    -   계정이 Windows 도메인 사용자 계정을 경우이 형식 지정: \<도메인 >\\< 계정\>를 선택한 후 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용 합니다.**  
   
     -   사용자 이름과 암호가 데이터베이스 자격 증명인 경우 **데이터 원본에 연결할 때 Windows 자격 증명으로 사용**을 선택하지 않습니다. 데이터베이스 서버에서 가장 또는 위임이 지원되는 경우 **실행 컨텍스트를 이 계정으로 설정**을 선택할 수 있습니다.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint 라이브러리에 문서 업로드&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md)  
   
   

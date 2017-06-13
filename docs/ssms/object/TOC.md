@@ -1,3 +1,4 @@
+# [개체 탐색기](object-explorer.md)
 # [SQL Server 에이전트 마스터 작업에 단계 추가](add-steps-to-a-sql-server-agent-master-job.md)
 # [개체 탐색기를 사용하여 개체 관리](manage-objects-by-using-object-explorer.md)
 # [개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용](use-custom-reports-with-object-explorer-node-properties.md)
@@ -13,7 +14,6 @@
 # [옵션(SQL Server 개체 탐색기 - 스크립팅 페이지)](options-sql-server-object-explorer-scripting-page.md)
 # [필터 설정(개체 탐색기 및 유틸리티 탐색기)](filter-settings-object-explorer-and-utility-explorer.md)
 # [개체 삭제](delete-objects.md)
-# [개체 탐색기](object-explorer.md)
 # [Management Studio에 사용자 지정 보고서 추가](add-a-custom-report-to-management-studio.md)
 # [Management Studio의 사용자 지정 보고서](custom-reports-in-management-studio.md)
 # [개체 추가](add-objects.md)

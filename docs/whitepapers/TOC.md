@@ -1,4 +1,4 @@
 # [Microsoft 백서](microsoft-white-papers.md)
-# [SQL Server 2016용 SQL Server 메모리 내 OLTP 내부](sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
-# [데이터 저장, 이동 및 변환을 위한 Microsoft 기술 소개](introducing-microsoft-technologies-for-data-storage-movement-and-transformation.md)
-# [AlwaysOn 환경에 Master Data Services 설치](installing-master-data-services-in-an-alwayson-environment.md)
+# [개인 정보 보호를 향상 시키고 GDPR 요구 사항을 해결 가이드](../relational-databases/security/microsoft-sql-and-the-gdpr-requirements.md) 
+# [SQL Server 2016용 SQL Server 메모리 내 OLTP 내부](../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
+# [AlwaysOn 환경에 Master Data Services 설치](../master-data-services/installing-mds-in-an-alwayson-group-environment/installing-mds-in-an-alwayson-group-environment.md)

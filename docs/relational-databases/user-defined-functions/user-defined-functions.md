@@ -18,10 +18,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4c8c44b4c07b26676fd424acb36ea7ccce19df3
+ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
+ms.openlocfilehash: 12297570eae81459949b6c910fba26525e27d9ed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/05/2017
 
 ---
 # <a name="user-defined-functions"></a>사용자 정의 함수
@@ -44,7 +44,8 @@ ms.lasthandoff: 04/11/2017
   
      단일 스칼라 식으로 표현할 수 없는 일부 복잡한 제약 조건을 기반으로 데이터를 필터링하는 작업을 함수로 표현할 수 있습니다. 그런 다음 WHERE 절에서 이 함수를 호출하여 클라이언트에 전송되는 행 수를 줄일 수 있습니다.  
   
-> **참고:** [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리에 포함된 사용자 정의 함수는 단일 스레드(직렬 실행 계획)에서만 실행할 수 있습니다.  
+> [!NOTE]
+> 쿼리에 포함된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수는 단일 스레드(직렬 실행 계획)에서만 실행할 수 있습니다.  
   
 ##  <a name="FunctionTypes"></a> 함수 유형  
 **스칼라 함수**  
@@ -62,12 +63,13 @@ ms.lasthandoff: 04/11/2017
   
  BEGIN...END 블록 내에 있는 문은 어떠한 부작용도 유발하지 않습니다. 함수의 부작용으로는 데이터베이스 테이블 수정과 같은 함수 외부 범위를 갖는 리소스 상태의 영구적인 변경을 들 수 있습니다. 함수의 문에서 변경할 수 있는 것은 로컬 커서나 변수와 같은 함수의 로컬 개체뿐입니다. 함수에서 수행할 수 없는 동작의 예로는 데이터베이스 테이블의 수정, 함수에서 로컬로 사용되지 않는 커서 작업, 전자 메일 보내기, 카탈로그 수정 시도 및 사용자에게 반환되는 결과 집합 생성 등이 있습니다.  
   
-> **참고:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CREATE FUNCTION 문이 실행될 때 존재하지 않는 리소스에 대해 부작용이 생기는 경우에는 이 문을 실행하지만 이 문이 호출되는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 이 함수가 실행되지 않습니다.  
+> [!NOTE]
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CREATE FUNCTION 문이 실행될 때 존재하지 않는 리소스에 대해 부작용이 생기는 경우에는 이 문을 실행하지만 이 문이 호출되는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 이 함수가 실행되지 않습니다.  
   
  쿼리에 지정된 함수가 실제로 실행되는 횟수는 최적화 프로그램에서 작성한 실행 계획마다 다릅니다. 예를 들면 WHERE 절의 하위 쿼리에서 호출하는 함수가 있습니다. 하위 쿼리 및 그 함수가 실행되는 횟수는 최적화 프로그램에서 선택한 액세스 경로에 따라 다릅니다.  
   
 ##  <a name="ValidStatements"></a> 함수의 유효한 문  
- 함수에서 사용할 수 있는 문의 유형은 다음과 같습니다.  
+함수에서 사용할 수 있는 문의 유형은 다음과 같습니다.  
   
 -   함수에서 로컬로 사용되는 데이터 변수와 커서를 정의하는 데 사용되는 DECLARE 문  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 04/11/2017
 ##  <a name="SchemaBound"></a> 스키마 바운드 함수  
  CREATE FUNCTION에서는 테이블, 뷰, 다른 사용자 정의 함수와 같은 참조하는 개체의 스키마에 함수를 바인드하는 SCHEMABINDING 절을 지원합니다. 스키마 바운드 함수에서 참조하는 개체는 변경하거나 삭제할 수 없습니다.  
   
- [CREATE FUNCTION](https://msdn.microsoft.com/library/ms186755.aspx)에서 SCHEMABINDING 절을 지정하려면 먼저 다음 조건이 만족되어야 합니다.  
+ [CREATE FUNCTION](../../t-sql/statements/create-function-transact-sql.md)에서 SCHEMABINDING 절을 지정하려면 먼저 다음 조건이 만족되어야 합니다.  
   
 -   함수에서 참조하는 모든 뷰와 사용자 정의 함수도 스키마 바운드이어야 합니다.  
   
@@ -138,7 +140,4 @@ ms.lasthandoff: 04/11/2017
 |사용자 정의 함수의 정의를 보는 방법에 대해 설명합니다.|[사용자 정의 함수 보기](../../relational-databases/user-defined-functions/view-user-defined-functions.md)|  
   
   
-
-
-
 

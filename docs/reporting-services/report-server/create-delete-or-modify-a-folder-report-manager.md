@@ -1,41 +1,46 @@
 ---
-title: "폴더 만들기, 삭제 또는 수정(보고서 관리자) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "폴더 제거"
-  - "폴더 수정"
-  - "폴더 삭제"
-  - "폴더 [Reporting Services], 만들기"
-  - "폴더 [Reporting Services], 삭제"
-  - "폴더 [Reporting Services], 수정"
+title: "만들기, 삭제 또는 수정 (보고서 관리자) 폴더 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- removing folders
+- modifying folders
+- deleting folders
+- folders [Reporting Services], creating
+- folders [Reporting Services], deleting
+- folders [Reporting Services], modifying
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 caps.latest.revision: 49
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 49
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: ad8509d26a0ad1cac7efb75bed728b8501b0545e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 폴더 만들기, 삭제 또는 수정(보고서 관리자)
+# <a name="create-delete-or-modify-a-folder-report-manager"></a>폴더 만들기, 삭제 또는 수정(보고서 관리자)
   폴더를 만들어 보고서 서버에 게시하는 항목을 구성하고 관리할 수 있습니다. 폴더를 만들면 관심 있는 보고서를 찾는 데 도움이 될 수 있습니다. 내용 관리자의 경우 폴더는 사용 권한을 적용하는 프레임워크를 제공합니다. 개발 중인 보고서나 배포되면 안 되는 보고서에 대한 액세스를 제한하기 위해 특정 폴더에 역할 할당을 만들 수 있습니다.  
   
-### 폴더를 만들려면  
+### <a name="to-create-a-folder"></a>폴더를 만들려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 홈 폴더를 선택하고 **새 폴더**를 클릭합니다. 또는 기존 폴더 아래에 폴더를 만들려면 **내용** 페이지에서 해당 폴더로 이동한 후 폴더를 클릭하여 엽니다. 그런 후 **새 폴더**를 클릭합니다.  
   
      **새 폴더** 페이지가 열립니다.  
   
-3.  폴더 이름을 입력합니다. 폴더 이름에 공백을 사용할 수 있지만 다음과 같은 URL 인코딩용으로 예약된 문자는 사용할 수 없습니다. ; ? : @ & = + , $ / * \< > |. 한 번에 여러 개의 폴더 이름을 입력하여 여러 폴더를 만들 수는 없습니다.  
+3.  폴더 이름을 입력합니다. 폴더 이름에 공백을 사용할 수 있지만 다음과 같은 URL 인코딩용으로 예약된 문자는 사용할 수 없습니다. ; ? : @ & = + , $ / * < > |. 한 번에 여러 개의 폴더 이름을 입력하여 여러 폴더를 만들 수는 없습니다.  
   
 4.  설명을 입력합니다(옵션).  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 49
   
 6.  **확인**을 클릭합니다.  
   
-### 폴더를 삭제하려면  
+### <a name="to-delete-a-folder"></a>폴더를 삭제하려면  
   
 1.  보고서 관리자에서 **내용** 페이지로 이동한 다음 수정할 항목을 찾습니다.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 49
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 폴더를 수정하거나 삭제하려면  
+### <a name="to-modify-or-delete-a-folder"></a>폴더를 수정하거나 삭제하려면  
   
 1.  보고서 관리자에서 **내용** 페이지로 이동한 다음 수정할 항목을 찾습니다.  
   
@@ -73,9 +78,10 @@ caps.handback.revision: 49
   
 7.  **적용** 을 클릭하여 변경 내용을 저장합니다.  
   
-## 관련 항목:  
- [새 폴더 페이지&#40;보고서 관리자&#41;](../Topic/New%20Folder%20Page%20\(Report%20Manager\).md)   
- [내용 페이지&#40;보고서 관리자&#41;](../Topic/Contents%20Page%20\(Report%20Manager\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [새 폴더 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/9212fc68-f0a6-4f79-83c1-84baf4d1957e)   
+ [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
+

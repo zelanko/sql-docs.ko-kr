@@ -1,7 +1,7 @@
 ---
 title: "메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문 | Microsoft 문서"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a3539b07a27be375ebfe58e16a4792d9095fce0c
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/11/2017
 |연산|기본 키 열의 업데이트|메모리 액세스에 최적화된 테이블의 기본 키 열과 테이블 형식을 업데이트할 수 없습니다. 기본 키를 업데이트해야 하는 경우 기존 열을 삭제하고 업데이트된 기본 키가 있는 새 열을 삽입합니다.|  
 |연산|CREATE  INDEX|**CREATE TABLE** 문 또는 **ALTER TABLE** 문을 사용하여 메모리 액세스에 최적화된 테이블의 인덱스를 인라인으로 지정해야 합니다.|  
 |연산|CREATE FULLTEXT INDEX|전체 텍스트 인덱스는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.|  
-|연산|스키마 변경|메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 **sp_rename**과 같은 스키마 변경을 지원하지 않습니다.<br /><br /> 특정 스키마를 변경하려는 경우 오류 12320이 발생합니다. 이름을 바꾸는 등 스키마 버전을 변경해야 하는 작업은 메모리에 액세스에 최적화된 테이블에서 지원되지 않습니다.<br /><br /> ALTER TABLE 및 ALTER PROCEDURE를 사용하면 특정 스키마를 변경할 수 있습니다.|  
+|연산|스키마 변경|메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 **sp_rename**과 같은 스키마 변경을 지원하지 않습니다.<br /><br /> 특정 스키마를 변경하려는 경우 오류 12320이 발생합니다. 이름을 바꾸는 등 스키마 버전을 변경해야 하는 작업은 메모리에 액세스에 최적화된 테이블에서 지원되지 않습니다.<br /><br /> ALTER TABLE 및 ALTER PROCEDURE를 사용하면 특정 스키마를 변경할 수 있습니다.<br/><br/>**적용 대상:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]합니다.<br/>부터는 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename 지원 됩니다.| 
 |연산|TRUNCATE TABLE|TRUNCATE 작업은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 테이블에서 모든 행을 제거하려면 **DELETE FROM***table* 을 사용하여 모든 행을 삭제하거나 테이블을 삭제하고 다시 만듭니다.|  
 |연산|ALTER AUTHORIZATION|메모리 액세스에 최적화된 테이블이나 고유하게 컴파일된 저장 프로시저의 소유자 변경은 지원되지 않습니다. 테이블이나 프로시저를 삭제하고 다시 만들어 소유권을 변경합니다.|  
 |연산|ALTER SCHEMA|스키마 간에 보안 개체를 이동합니다.|  

@@ -1,7 +1,7 @@
 ---
 title: "빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft 문서"
 ms.custom: 
-ms.date: 12/02/2016
+ms.date: 06/12/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 82286b0d52ff37697ad9197b88c45935137a8dae
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 82d13af37ad323a642ae84fab6973429a0a084c2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
@@ -516,107 +516,5 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 메모리 내 OLTP를 사용하여 얻을 수 있는 성능 향상을 보여 주는 코드를 제공하는 문서는 다음과 같습니다.  
   
 - [Demonstration: Performance Improvement of In-Memory OLTP](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md) (데모: 메모리 내 OLTP의 성능 향상)에서는 더 큰 잠재적 성능 향상에 대한 소규모 데모를 제공합니다.  
-- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md) (메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
-  
-  
-  
-\<!--  
-  
-e1328615-6b59-4473-8a8d-4f360f73187d , dn817827.aspx , "실시간 운영 분석을 위한 Columnstore 시작"  
-  
-f98af4a5-4523-43b1-be8d-1b03c3217839 , gg492088.aspx , "Columnstore 인덱스 가이드"  
-  
-14dddf81-b502-49dc-a6b6-d18b1ae32d2b , dn133165.aspx , "메모리 액세스에 최적화된 테이블"  
-  
-d5ed432c-10c5-4e4f-883c-ef4d1fa32366 , dn133184.aspx , "고유하게 컴파일된 저장 프로시저"  
-  
-14106cc9-816b-493a-bcb9-fe66a1cd4630 , dn639109.aspx , "메모리 액세스에 최적화된 파일 그룹"  
-  
-f222b1d5-d2fa-4269-8294-4575a0e78636, dn465873.aspx , "메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩"  
-  
-86805eeb-6972-45d8-8369-16ededc535c7, dn511012.aspx , "메모리 액세스에 최적화된 테이블의 인덱스"  
-  
-16ef63a4-367a-46ac-917d-9eebc81ab29b, dn133166.aspx , "메모리 액세스에 최적화된 테이블의 인덱스 사용 지침"  
-  
-e3f8009c-319d-4d7b-8993-828e55ccde11, dn246937.aspx , "메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문"  
-  
-2cd07d26-a1f1-4034-8d6f-f196eed1b763, dn133169.aspx , "메모리 액세스에 최적화된 테이블의 트랜잭션"  
-참고: mt668425.aspx "메모리 액세스에 최적화된 테이블의 트랜잭션을 위한 동작 및 지침"을 참조하세요.  
-f2a35c37-4449-49ee-8bba-928028f1de66, dn169141.aspx , "메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 재시도 논리 지침"  
-  
-7a458b9c-3423-4e24-823d-99573544c877, dn465869.aspx , "메모리 사용 모니터링 및 문제 해결"  
-  
-5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8, dn282389.aspx , "메모리 액세스에 최적화된 테이블에 필요한 메모리 예측"  
-  
-b0a248a4-4488-4cc8-89fc-46906a8c24a1, dn205318.aspx , "메모리 액세스에 최적화된 테이블의 테이블 및 행 크기"  
-  
-162d1392-39d2-4436-a4d9-ee5c47864c5a, dn296452.aspx , "응용 프로그램 수준 분할"  
-  
-3f867763-a8e6-413a-b015-20e9672cc4d1, dn133171.aspx , "메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴"  
-  
-86805eeb-6972-45d8-8369-16ededc535c7, dn511012.aspx , "메모리 액세스에 최적화된 테이블의 인덱스"  
-  
-d82f21fa-6be1-4723-a72e-f2526fafd1b6, dn465872.aspx , "메모리 액세스에 최적화된 OLTP의 메모리 관리"  
-  
-622aabe6-95c7-42cc-8768-ac2e679c5089, dn133174.aspx , "메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리"  
-  
-bd102e95-53e2-4da6-9b8b-0e4f02d286d3, dn535766.aspx , "메모리 액세스에 최적화된 테이블 변수"; "메모리 액세스에 최적화된 테이블의 테이블 변수"  
-사용되지 않습니다. 대신 38512a22-7e63-436f-9c13-dde7cf5c2202, mt718711.aspx , "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수"  
-  
-  
-f0d5dd10-73fd-4e05-9177-07f56552bdf7, ms191320.aspx , "사용자 정의 함수 만들기(데이터베이스 엔진)"; "테이블 반환 함수"  
-  
-d2546e40-fdfc-414b-8196-76ed1f124bf5, dn935012.aspx , "메모리 내 OLTP에 대한 사용자 정의 스칼라 함수"; "스칼라 사용자 정의 함수"  
-  
-405cdac5-a0d4-47a4-9180-82876b773b82, dn247639.aspx , "메모리 내 OLTP로 마이그레이션"  
-  
-3f083347-0fbb-4b19-a6fb-1818d545e281, dn624160.aspx , "메모리 액세스에 최적화된 테이블 백업, 복원 및 복구"  
-  
-690b70b7-5be1-4014-af97-54e531997839, dn269114.aspx , "메모리 액세스에 최적화된 테이블 변경"  
-  
-  
-b1cc7c30-1747-4c21-88ac-e95a5e58baac, dn133080.aspx , "메모리 내 OLTP에서 업데이트되거나 새로운 속성, 시스템 뷰, 저장 프로시저, 대기 유형 및 DMV"  
-와 다른 방법으로 더 많은 메모리를 사용합니다. 이라고도 합니다. 이라고도 합니다. 이라고도 합니다. 와 다른 방법으로 더 많은 메모리를 사용합니다.  
-“메모리 내 OLTP에 대한 Transact-SQL 지원”도 참조하세요.  
-  
-  
-c1ef96f1-290d-4952-8369-2f49f27afee2, dn205133.aspx, "메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인"  
-  
-181989c2-9636-415a-bd1d-d304fc920b8a, dn284308.aspx, "메모리 최적화 관리자"  
-  
-55548cb2-77a8-4953-8b5a-f2778a4f13cf, dn452282.aspx, "고유하게 컴파일된 저장 프로시저의 모니터링 성능"  
-  
-d3898a47-2985-4a08-bc70-fd8331a01b7b, dn358355.aspx, "네이티브 컴파일 관리자"  
-  
-f43faad4-2182-4b43-a76a-0e3b405816d1, dn296678.aspx, "고유하게 컴파일된 저장 프로시저의 마이그레이션 문제"  
-  
-e1d03d74-2572-4a55-afd6-7edf0bc28bdb, dn133186.aspx, "메모리 내 OLTP(메모리 내 최적화)"  
-  
-c6def45d-d2d4-4d24-8068-fab4cd94d8cc, dn530757.aspx, "데모: 메모리 내 OLTP 성능 향상"  
-  
-405cdac5-a0d4-47a4-9180-82876b773b82, dn247639.aspx , "메모리 내 OLTP로 마이그레이션"  
-  
-f76fbd84-df59-4404-806b-8ecb4497c9cc, bb522682.aspx, "ALTER DATABASE SET 옵션(Transact-SQL)"  
-  
-e6b34010-cf62-4f65-bbdf-117f291cde7b, dn452286.aspx, "고유하게 컴파일된 저장 프로시저 만들기"  
-  
-df347f9b-b950-4e3a-85f4-b9f21735eae3, mt465764.aspx, "메모리 내 OLTP에 대한 예제 데이터베이스"  
-  
-38512a22-7e63-436f-9c13-dde7cf5c2202, mt718711.aspx, "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수"  
-  
-38512a22-7e63-436f-9c13-dde7cf5c2202, mt718711.aspx, "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수"  
-  
-  
-  
-  
-H1 # 빠른 시작 1: 더 빠른 트랜잭션 작업을 위한 메모리 내 기술  
-대문자로 {1c25a164-547d-43c4-8484-6b5ee3cbaf3a}  
-MSDN에서 mt718711.aspx  
-  
-GeneMi , 2016-05-07  00:07am  
--->  
-  
-  
-  
-
+- [Sample Database for In-Memory OLTP](../../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md)(메모리 내 OLTP에 대한 샘플 데이터베이스)에서는 규모가 더 큰 데모를 제공합니다.  
 

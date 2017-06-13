@@ -1,23 +1,28 @@
 ---
-title: "사각형 및 선(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사각형 및 선 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 사각형 및 선(보고서 작성기 및 SSRS)
+# <a name="rectangles-and-lines-report-builder-and-ssrs"></a>사각형 및 선(보고서 작성기 및 SSRS)
   사각형과 선을 사용하여 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 시각 효과를 만들 수 있습니다. 이러한 보고서 항목에 대한 디스플레이 속성은 홈 탭의 테두리 섹션에서 설정할 수 있으며 다른 속성은 속성 창에서 설정할 수 있습니다. 사각형에는 배경색, 이미지, 도구 설명 또는 책갈피와 같은 기능을 추가할 수 있습니다.  
   
 ##  <a name="RectanglesLinesReportParts"></a> 보고서 파트인 사각형 및 선  
@@ -34,7 +39,7 @@ caps.handback.revision: 9
  사각형을 사용하여 보고서 항목을 포함할 때는 보고서 렌더링이 전체적으로 항목에 미치는 영향을 고려해야 합니다. 테이블과 같이 반복되는 데이터 행을 포함하는 보고서 항목은 쿼리에서 반환한 데이터를 수용하도록 확장되며 이는 사각형 내 다른 항목의 위치에 영향을 미칩니다. 항목이 데이터 영역 아래에 배치되어 있는 경우 테이블에서는 해당 항목을 아래로 밀어냅니다. 항목을 제자리에 고정하려면 테이블의 아래쪽 가장자리 위에 위쪽 가장자리가 있는 사각형의 내부에 보고서 항목을 배치합니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="ReportBorder"></a> 보고서 테두리 추가  
- 선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 보고서에 테두리를 추가할 수 있습니다. 자세한 내용은 [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md)를 참조하세요.  
+ 선이나 사각형을 추가하지 않고 머리글, 바닥글 및 보고서 본문 자체에 테두리를 추가하여 보고서에 테두리를 추가할 수 있습니다. 자세한 내용은 [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
 ##  <a name="HowTo"></a> 방법 도움말 항목  
  [보고서에 테두리 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-border-to-a-report-report-builder-and-ssrs.md)  
@@ -43,7 +48,7 @@ caps.handback.revision: 9
   
  [선 추가 및 수정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-and-modify-a-line-report-builder-and-ssrs.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [사각형 또는 컨테이너 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

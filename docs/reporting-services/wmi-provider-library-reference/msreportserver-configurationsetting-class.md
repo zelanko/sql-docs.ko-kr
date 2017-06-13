@@ -1,36 +1,41 @@
 ---
 title: "MSReportServer_ConfigurationSetting 클래스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-apiname: 
-  - "MSReportServer_ConfigurationSetting Class"
-apilocation: 
-  - "reportingservices.mof"
-apitype: "MOFDef"
-helpviewer_keywords: 
-  - "WMI 공급자 [Reporting Services], MSReportServer_ConfigurationSetting 클래스"
-  - "MSReportServer_ConfigurationSetting 클래스"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- MSReportServer_ConfigurationSetting Class
+apilocation:
+- reportingservices.mof
+apitype: MOFDef
+helpviewer_keywords:
+- WMI provider [Reporting Services], MSReportServer_ConfigurationSetting class
+- MSReportServer_ConfigurationSetting class
 ms.assetid: 874be718-54b9-49e8-a3d6-b83a0ba13dc3
 caps.latest.revision: 39
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 39
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9a364ca856fef827afee604f64893ce20d21a1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# MSReportServer_ConfigurationSetting 클래스
+# <a name="msreportserverconfigurationsetting-class"></a>MSReportServer_ConfigurationSetting 클래스
   보고서 서버 인스턴스의 설치 및 런타임 매개 변수를 나타냅니다. 이러한 매개 변수는 보고서 서버의 구성 파일에 저장됩니다.  
   
  이 유형의 모든 멤버 목록은 [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```vb  
 Public Class MSReportServer_ConfigurationSetting  
@@ -40,11 +45,11 @@ Public Class MSReportServer_ConfigurationSetting
 public class MSReportServer_ConfigurationSetting  
 ```  
   
-## 스레드 보안  
- 이 유형의 모든 public static([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]의 경우 **공유**) 멤버는 다중 스레드 작업에 안전합니다. 인스턴스 멤버는 스레드로부터의 안전성이 보장되지 않습니다.  
+## <a name="thread-safety"></a>스레드 보안  
+ 이 유형의 모든 public static(**의 경우** 공유 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) 멤버는 다중 스레드 작업에 안전합니다. 인스턴스 멤버는 스레드로부터의 안전성이 보장되지 않습니다.  
   
-## 예제  
- 다음 코드를 실행하려면 각 \<*servername*> 대신 서버 이름을 추가합니다. 경로가 기본값이 아니면 설치 위치를 가리키도록 경로를 업데이트합니다. 다음 코드 예제에서는 *MSReportServer_ConfigurationSetting* 클래스의 각 속성을 반복하여 각 속성 이름 및 값을 콘솔에 인쇄합니다.  
+## <a name="example"></a>예제  
+ 다음 코드를 실행 하려면 각 대신 서버 이름을 추가 \< *servername*> 합니다. 경로가 기본값이 아니면 설치 위치를 가리키도록 경로를 업데이트합니다. 다음 코드 예제에서는 *MSReportServer_ConfigurationSetting* 클래스의 각 속성을 반복하여 각 속성 이름 및 값을 콘솔에 인쇄합니다.  
   
 ```vb  
 Imports System  
@@ -168,12 +173,12 @@ class Class1
 }  
 ```  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
  **플랫폼:** [!INCLUDE[ssRSWMIPlatform](../../includes/ssrswmiplatform-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "보고서 문제 해결: 보고서 (보고서 작성기 및 SSRS) 지도 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 9
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
     
-   ## 도움이 더 필요하세요?  
+   ## <a name="need-more-help"></a>도움이 더 필요하세요?  
    
   다음을 사용해 보세요.  
  *  [SQL Server 2016](https://social.msdn.microsoft.com/forums/sqlserver/en-us/home?forum=sqlserver2016)에 대한 MSDN 포럼  
- * Stack Overflow의 [SQL Server 2016](http://stackoverflow.com/questions/tagged/sql-server-2016)  
+ * Stack Overflow의[SQL Server 2016](http://stackoverflow.com/questions/tagged/sql-server-2016)   
  * [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)에서 문제 기록 또는 제안  
   
 ##  <a name="Embedded"></a> 보고서 정의 크기 문제  
  이 섹션에서는 보고서 정의 크기와 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
-## 보고서 정의 크기를 줄이는 방법  
+## <a name="how-do-i-reduce-the-report-definition-size"></a>보고서 정의 크기를 줄이는 방법  
  지도 계층에는 공간 데이터에서 만들어진 지도 요소가 포함됩니다. 경우에 따라 지도 요소가 보고서 정의에 포함됩니다. 지도 요소는 다음과 같은 방식으로 보고서 정의에 포함됩니다.  
   
 -   공간 데이터의 원본이 지도 갤러리의 지도나 로컬 컴퓨터의 ESRI 셰이프 파일에서 제공된 경우 지도 요소가 보고서 정의에 자동으로 포함됩니다.  
@@ -54,7 +59,7 @@ caps.handback.revision: 9
 ##  <a name="Spatial"></a> 공간 데이터 문제  
  이 섹션에서는 공간 데이터와 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
-## 디자인 화면에서 예제 공간 데이터가 표시됨  
+## <a name="on-the-design-surface-i-see-sample-spatial-data"></a>디자인 화면에서 예제 공간 데이터가 표시됨  
  다음과 같은 이유로 디자인 타임에 디자인 화면에 예제 공간 데이터에 대한 메시지가 표시될 수 있습니다.  
   
 -   공간 데이터가 ESRI .shp 파일에서 제공되지만 해당 .dbf 파일을 사용할 수 없습니다. 일반적으로 ESRI 셰이프 파일에는 공간 데이터가 있는 .shp 파일과 지원 파일 .dbf가 모두 포함되어 있습니다. .dbf 파일이 .shp 파일과 같은 디렉터리에 있는지 확인합니다.  
@@ -65,7 +70,7 @@ caps.handback.revision: 9
   
 -   공간 데이터가 특정 범위가 있는 데이터 집합에서 제공됩니다. 예를 들어 지도가 테이블릭스 데이터 영역에 중첩되어 있거나 지도에서 분석 데이터와 공간 데이터에 동일한 데이터 집합 범위를 사용하는 경우 보고서가 실행될 때까지 데이터 범위가 계산되지 않습니다.  
   
-## 개별 지도 요소에 대한 오프셋을 설정하는 경우 지도 요소의 클러스터가 이동함  
+## <a name="when-i-set-an-offset-for-an-individual-map-element-a-cluster-of-map-elements-move"></a>개별 지도 요소에 대한 오프셋을 설정하는 경우 지도 요소의 클러스터가 이동함  
  공간 데이터는 각 지도 계층에서 표시되는 지도 요소를 정의합니다. 지도 요소는 한 점, 점 집합, 한 선, 선 집합, 한 다각형 또는 다각형 집합인 공간 데이터를 기반으로 할 수 있습니다. 각 지도 요소는 하나의 단위입니다. 지도 요소에 여러 점이 포함된 경우 요소를 이동하면 해당 지도 요소의 모든 점이 이동합니다.  
   
  각 지도 요소의 데이터는 외부 원본의 공간 데이터 형식에 따라 결정됩니다. 예를 들어 쿼리에서 SQL Server 데이터베이스의 공간 데이터를 지정하는 경우 결과 집합의 각 행에는 점 또는 선 또는 다각형 좌표의 여러 집합이 포함될 수 있습니다. 결과 집합의 단일 행으로 정의되는 모든 지도 요소는 한 단위로 처리됩니다. 특정 좌표 집합의 표시를 변경하려면 다음 중 하나를 수행해야 합니다.  
@@ -74,22 +79,22 @@ caps.handback.revision: 9
   
 -   지도 요소를 선택하여 해당하는 계층 유형에 대한 기본 표시 속성을 무시하여 해당하는 포함된 점, 선 또는 다각형 속성을 변경하고 설정합니다.  
   
-## ESRI 셰이프 파일에서 공간 데이터를 사용하는 계층에 포함된 데이터가 항상 있음  
+## <a name="my-layer-that-uses-spatial-data-from-an-esri-shapefile-always-has-embedded-data"></a>ESRI 셰이프 파일에서 공간 데이터를 사용하는 계층에 포함된 데이터가 항상 있음  
  지도가 포함된 보고서가 보고서 서버에서 실행될 수 있도록 하려면 ESRI 셰이프 파일을 보고서 서버에서 리소스로 사용할 수 있어야 합니다. 지도에 계층을 추가하고 로컬 파일 시스템에 있는 셰이프 파일을 지정하는 경우 공간 데이터가 자동으로 보고서에 포함됩니다.  
   
  포함된 데이터를 ESRI 셰이프 파일에 대한 링크로 바꾸려면 ESRI .shp 파일 및 일치하는 .dbf 파일을 보고서 서버에 업로드한 다음 계층에 대한 공간 데이터의 원본을 변경해야 합니다.  
   
-## 데이터 원본이나 데이터 집합의 이름을 친숙한 이름으로 바꾼 후 지도에 데이터가 나타나지 않음  
+## <a name="i-renamed-a-data-source-or-dataset-to-a-friendly-name-and-now-no-data-appears-in-my-map"></a>데이터 원본이나 데이터 집합의 이름을 친숙한 이름으로 바꾼 후 지도에 데이터가 나타나지 않음  
  보고서 항목의 이름을 수동으로 변경할 때 보고서 정의가 자동으로 업데이트되지 않습니다.  
   
  데이터 집합의 이름을 변경하는 경우 해당 데이터 집합을 참조하는 지도 계층이나 데이터 영역을 모두 수동으로 업데이트해야 합니다. 테이블릭스, 차트 또는 계기를 데이터 집합에 다시 바인딩하려면 디자인 화면에서 항목을 선택하고 데이터 영역 속성을 연 다음 적절한 데이터 집합의 이름을 선택합니다. 지도 계층을 데이터 집합에 다시 바인딩하려면 계층을 선택하고 계층 속성을 연 다음 적절한 데이터 집합의 이름을 선택합니다.  
   
-## 공간 데이터에 null과 빈 문자열이 포함됨  
+## <a name="my-spatial-data-contains-nulls-and-empty-strings"></a>공간 데이터에 null과 빈 문자열이 포함됨  
  지도 보고서 항목에 대한 공간 데이터에서 null은 0으로 설정되고 빈 문자열은 공백("")으로 설정됩니다.  
   
  SQL Server 데이터베이스에서 제공되는 공간 데이터의 경우 이 동작을 변경하려면 공간 데이터를 반환하는 쿼리를 변경해야 합니다.  
   
-## 지도의 최대 공간 요소 수가 초과됨  
+## <a name="my-map-exceeds-the-maximum-number-of-spatial-elements"></a>지도의 최대 공간 요소 수가 초과됨  
  기본적으로 지도에는 20,000개의 지도 요소나 1,000,000개의 점이 있을 수 있습니다. 지도가 이러한 제한을 초과하면 다음 방법 중 하나를 사용할 수 있습니다.  
   
 -   계층을 제거합니다.  
@@ -105,15 +110,15 @@ caps.handback.revision: 9
 ##  <a name="Viewport"></a> 뷰포트 중심 및 보기 문제  
  이 섹션에서는 뷰포트 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
-## 포함된 지도 요소에 대한 중심 및 보기를 설정할 수 없음  
+## <a name="i-cannot-set-the-center-and-view-on-an-embedded-map-element"></a>포함된 지도 요소에 대한 중심 및 보기를 설정할 수 없음  
  특정 지도 요소를 기준으로 뷰포트를 가운데 맞춤하려면 먼저 계층의 공간 데이터를 분석 데이터와 연결해야 합니다.  
   
-## 보고서에서 지도 중심 및 보기를 설정한 후 보고서를 다시 열면 지도 보기가 동일하지 않음  
+## <a name="i-set-the-map-center-and-view-in-my-report-when-i-reopen-the-report-why-isnt-the-map-view-the-same"></a>보고서에서 지도 중심 및 보기를 설정한 후 보고서를 다시 열면 지도 보기가 동일하지 않음  
  보고서를 열 때 공간 데이터를 읽는 데 필요한 사용자 자격 증명을 보고서에서 사용할 수 없는 경우 자리 표시자 공간 데이터가 사용됩니다. 지도 뷰포트에 대해 설정된 중심 및 확대/축소 옵션에 따라 지도 보기가 다른 계층을 기준으로 가운데 맞춤될 수 있습니다.  
   
  공간 데이터를 다시 로드하고 보고서에 저장된 지도 보기 중심을 사용하려면 지도 뷰포트를 마우스 오른쪽 단추로 클릭한 다음 **다시 로드**를 클릭합니다. 공간 데이터 원본에 대한 자격 증명을 입력하면 계층에 공간 데이터가 로드되고 지도 보기가 복원됩니다.  
   
-## 지도 계층의 중심 및 보기 옵션이 작동하지 않음  
+## <a name="the-center-and-view-for-a-map-layer-option-does-not-work"></a>지도 계층의 중심 및 보기 옵션이 작동하지 않음  
  뷰포트가 특정 계층의 공간 데이터를 기준으로 가운데 맞춤되도록 설정되어 있고 보기의 중심이 계층의 중심인 것처럼 보이지 않으면 뷰포트에 표시되기에는 너무 작은 섬이나 지역이 공간 데이터에 포함되어 있을 수 있습니다. 예를 들어 국가에 대한 공간 데이터에는 영토의 일부로 작은 섬이나 다른 작은 지역이 포함될 수 있습니다. 뷰포트는 모든 공간 데이터를 사용하여 계층의 중심을 계산합니다.  
   
  계층에 대한 계산을 무시하려면 다음 중 하나를 수행할 수 있습니다.  
@@ -127,7 +132,7 @@ caps.handback.revision: 9
 ##  <a name="Layers"></a> 계층 문제  
  이 섹션에서는 계층 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
-## 지도에 하나 이상의 계층이 표시되지 않음  
+## <a name="i-do-not-see-one-or-more-layers-in-my-map"></a>지도에 하나 이상의 계층이 표시되지 않음  
  보고서에 지도 계층이 표시되는지 여부는 공간 데이터의 사용 가능성, 공간 데이터와 분석 데이터 간의 관계, 공간 데이터 형식 및 해당 계층 유형, 계층의 표시 유형 및 투명도 옵션, 계층 그리기 순서에 따라 달라집니다. 계층에서 데이터가 표시되지 않으면 다음 옵션을 확인합니다.  
   
 -   **계층 유형 및 공간 데이터 형식.** 계층 유형은 계층 유형과 일치하는 공간 데이터만 표시합니다. 예를 들어 계층 유형이 점이지만 공간 데이터가 선인 경우 데이터가 표시되지 않습니다.  
@@ -143,13 +148,13 @@ caps.handback.revision: 9
     > [!TIP]  
     >  지도 창의 각 계층에 대한 표시 유형을 설정/해제할 수 있습니다. 각 계층을 디자인할 때 개별 계층에 대한 문제인지 아니면 계층 간 투명도 문제인지를 확인하려면 다른 모든 계층을 해제합니다.  
   
-## 지도 계층에 필터를 설정했지만 효과가 없음  
+## <a name="i-set-a-filter-on-the-map-layer-and-it-has-no-effect"></a>지도 계층에 필터를 설정했지만 효과가 없음  
  계층의 데이터를 필터링하려면 필터 식에서 데이터 형식을 지정해야 합니다. 필터 식이 지정된 조건을 제대로 평가하도록 올바른 기본 데이터 형식을 지정했는지 확인합니다. 자세한 내용은 [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="Legend"></a> 범례, 색 눈금 및 규칙 문제  
  이 섹션에서는 규칙, 범례 및 색 눈금 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
-## 지도 범례의 값을 제어하는 방법  
+## <a name="how-do-i-control-the-values-in-the-map-legend"></a>지도 범례의 값을 제어하는 방법  
  범례 값은 각 지도 계층에 대해 지정하는 지도 요소 유형 규칙과 범례에 대해 지정하는 분포 규칙에 의해 자동으로 결정됩니다.  
   
  기본적으로 모든 규칙에서 생성되는 모든 항목은 첫 번째 범례에 표시됩니다. 각 계층에 대한 모든 다각형, 선 및 점 규칙의 값은 결합된 범례 범위에 영향을 미칩니다. 여러 범례에 항목을 표시하려면 먼저 여러 범례를 만든 다음 각 규칙에 대해 관련 항목을 표시할 범례를 지정합니다.  
@@ -160,27 +165,27 @@ caps.handback.revision: 9
   
  자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)을 참조하세요.  
   
-## 설정한 규칙이 예상한 결과를 제공하지 않음  
+## <a name="the-rules-that-i-set-do-not-give-the-results-that-i-expect"></a>설정한 규칙이 예상한 결과를 제공하지 않음  
  규칙은 계층의 지도 요소와 연결된 분석 데이터에 적용됩니다. 다음 목록은 모든 색 규칙, 크기 규칙, 두께 규칙 및 표식 유형 규칙과 관련된 문제를 확인하는 데 도움이 됩니다.  
   
 -   각 지도 요소(다각형, 선, 점)에 스타일을 적용하는 우선 순위를 가장 낮은 우선 순위부터 가장 높은 우선 순위까지 나열하면 계층 속성, 계층의 모든 지도 요소에 대한 지도 요소 속성, 지정한 규칙, 무시 옵션을 선택한 포함된 지도 요소의 경우 지정한 값입니다. 포함된 요소에 대한 무시 옵션을 선택하면 나중에 값을 원래 설정으로 다시 변경하는 경우에도 규칙이 더 이상 적용되지 않습니다.  
   
 -   일치 필드 문제. 일치 필드를 사용하면 지도 요소와 분석 데이터 간의 데이터 바인딩을 수행할 수 있습니다. 일치 필드에 해당하는 공간 데이터 및 분석 데이터 필드의 데이터 형식과 형식은 동일해야 합니다. 일치 필드가 공간 데이터 및 분석 데이터와 정확하게 일치하지 않으면 규칙이 적용되지 않습니다. 예를 들어 분석 데이터의 일치 필드와 비교할 때 공간 데이터의 일치 필드에 추가 공백이나 추가 구두점이 있으면 일치가 발생하지 않습니다.  
   
--   자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary polygon, line, and point display by rules and analytical data.md)을 참조하세요.  
+-   자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)을 참조하세요.  
   
-## 색 범위에 있는 NaN 값의 의미  
+## <a name="what-is-the-value-nan-on-the-color-scale"></a>색 범위에 있는 NaN 값의 의미  
  **NaN** 은 Not a Number(숫자가 아님)의 약어입니다. 색 눈금 값은 숫자로 예상됩니다. 색 눈금과 연결된 규칙의 범례 텍스트 값과 분포 설정을 확인합니다. 사용자 지정 분포 범위를 만든 경우 첫 번째 범위에서 하한을 지정하고 마지막 범위에서 상한을 지정했는지 확인합니다.  
   
-## 보고서를 실행할 때 색 눈금이 표시되지 않음  
+## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>보고서를 실행할 때 색 눈금이 표시되지 않음  
  지도 계층이 전체 계층이나 포함된 지도 요소에 대한 다각형, 선 또는 점의 색 규칙을 지정하는 경우 색 눈금은 사용자에게 정보를 표시합니다. 지도 요소가 색 규칙을 지정하지 않거나 색 규칙이 색 지도 대신 범례를 사용하여 지정되는 경우 색 지도가 렌더링된 보고서에 표시되지 않습니다.  
   
- 색 눈금을 표시하려면 계층이나 포함된 지도 요소에 대한 색 규칙을 지정합니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)을 참조하세요.  
+ 색 눈금을 표시하려면 계층이나 포함된 지도 요소에 대한 색 규칙을 지정합니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="Tile"></a> 타일 문제  
  이 섹션에서는 타일 배경 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
-## Bing Maps 타일 배경이 표시되지 않음  
+## <a name="i-cannot-see-the-bing-maps-tile-background"></a>Bing Maps 타일 배경이 표시되지 않음  
  다음 설정은 Bing Maps 타일 배경이 로컬 미리 보기에 표시되는지 아니면 보고서 서버에서 실행되는 보고서에 표시되는지에 영향을 미칩니다.  
   
 -   지도 타일 계층이 있어야 합니다. 지도 마법사나 계층 마법사에서 **이 지도 보기에 대해 Bing Maps 배경 추가**를 선택합니다. 이렇게 하면 현재 지도 뷰포트 보기 중심 및 확대/축소 수준에 대한 타일 계층이 추가됩니다. 지도 창 도구 모음에서 타일 계층을 추가할 수도 있습니다.  
@@ -193,7 +198,7 @@ caps.handback.revision: 9
   
  타일 계층에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 타일 계층에서 텍스트를 제어하는 방법  
+## <a name="how-do-i-control-the-text-on-a-tile-layer"></a>타일 계층에서 텍스트를 제어하는 방법  
  **도로** 보기와 **혼합** 보기에는 텍스트가 포함됩니다. 텍스트는 Bing Maps 웹 서비스에서 제공되는 타일의 일부입니다.  
   
  텍스트 없이 타일 계층을 포함하려면 **항공** 보기를 선택합니다.  
@@ -201,13 +206,13 @@ caps.handback.revision: 9
 ##  <a name="Tooltip"></a> 도구 설명 및 레이블 문제  
  이 섹션에서는 레이블 또는 도구 설명 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
-## 레이블 또는 도구 설명을 식으로 설정하는 경우 데이터 집합 범위에 대한 식 오류가 발생함  
+## <a name="i-get-an-expression-error-about-dataset-scope-when-i-set-a-label-or-tooltip-to-an-expression"></a>레이블 또는 도구 설명을 식으로 설정하는 경우 데이터 집합 범위에 대한 식 오류가 발생함  
  공간 데이터가 지도 갤러리 또는 ESRI 셰이프 파일에서 제공되는 경우 연결된 데이터는 보고서 데이터 집합의 일부가 아닙니다. 데이터 집합 필드 참조에 대한 식 구문을 사용하여 레이블이나 도구 설명에 대해 이 데이터를 지정할 수 없습니다.  
   
  보고서 데이터 집합의 일부가 아닌 공간 데이터와 관련된 데이터를 지정하려면 # 기호 뒤에 데이터의 이름을 지정하는 레이블을 사용해야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 작성기 문제 해결](http://msdn.microsoft.com/ko-kr/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
+ [보고서 작성기 문제 해결](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

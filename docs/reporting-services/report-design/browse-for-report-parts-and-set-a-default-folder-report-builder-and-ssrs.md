@@ -1,30 +1,35 @@
 ---
-title: "보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "보고서 파트 찾아보기 및 기본 폴더 (보고서 작성기 및 SSRS) 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 645e20dbc98f831a778df0397b42eea096b71dfd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
-페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]보고서를 만드는 가장 쉬운 방법은 테이블, 차트 등의 기존 보고서 파트를 보고서 파트 갤러리에서 보고서에 추가하는 것입니다. 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 보고서 파트는 데이터 집합, 즉 쿼리와 데이터 원본에 대한 연결을 사용합니다. 보고서 파트를 보고서에 추가한 후 필요한 만큼 구성 요소를 수정할 수 있습니다.  
+# <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>보고서 파트 찾아보기 및 기본 폴더 설정(보고서 작성기 및 SSRS)
+페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만드는 가장 쉬운 방법은 테이블, 차트 등의 기존 보고서 파트를 보고서 파트 갤러리에서 보고서에 추가하는 것입니다. 보고서 파트를 보고서에 추가할 때는 해당 파트가 작동하는 데 필요한 모든 항목도 추가하게 됩니다. 예를 들어 데이터를 표시하는 모든 보고서 파트는 데이터 집합, 즉 쿼리와 데이터 원본에 대한 연결을 사용합니다. 보고서 파트를 보고서에 추가한 후 필요한 만큼 구성 요소를 수정할 수 있습니다.  
   
  보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트로 보고서 파트를 게시하기 위한 기본 폴더를 설정할 수 있습니다.  
   
  자세한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 보고서 파트를 찾아보려면  
+## <a name="to-browse-for-report-parts"></a>보고서 파트를 찾아보려면  
   
 1.  **삽입** 메뉴에서 **보고서 파트**를 클릭합니다.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  **만든 사람** 및 **마지막으로 수정한 사람** 값의 경우에는 보고서 서버에 표시되어 있는 사람의 사용자 이름을 검색합니다.  
   
-## 보고서 파트의 기본 폴더를 설정하려면  
+## <a name="to-set-a-default-folder-for-report-parts"></a>보고서 파트의 기본 폴더를 설정하려면  
   
 1.  **보고서 작성기**를 클릭한 다음 **옵션**을 클릭합니다.  
   
@@ -62,11 +67,11 @@ caps.handback.revision: 8
   
  이 설정을 적용하기 위해 보고서 작성기를 다시 시작할 필요는 없습니다.  
   
-## 관련 항목:  
- [업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/ko-kr/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
+## <a name="see-also"></a>관련 항목:  
+ [업데이트 확인 또는 업데이트 해제(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/en-us/9c69792d-d7c4-453b-ae2f-6d2d071d8606)   
  [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)   
  [보고서 작성기의 보고서 파트 및 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/ko-kr/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
+ [보고서 파트 문제 해결(보고서 작성기 및 SSRS)](http://msdn.microsoft.com/en-us/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [보고서 파트 게시 및 다시 게시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   
   

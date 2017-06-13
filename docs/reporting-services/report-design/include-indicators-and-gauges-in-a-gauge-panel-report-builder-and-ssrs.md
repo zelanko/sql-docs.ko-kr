@@ -1,23 +1,28 @@
 ---
-title: "계기 패널에 표시기 및 계기 포함(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(보고서 작성기 및 SSRS) 계기 패널에 표시기 및 계기 포함 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4dff9b67-b483-4c51-a822-6dbe706a6840
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 계기 패널에 표시기 및 계기 포함(보고서 작성기 및 SSRS)
+# <a name="include-indicators-and-gauges-in-a-gauge-panel-report-builder-and-ssrs"></a>계기 패널에 표시기 및 계기 포함(보고서 작성기 및 SSRS)
   계기 패널은 하나 이상의 계기 및 표시기가 포함되는 최상위 컨테이너입니다. 표시기는 계기 패널에서 계기에 포함하거나 계기 옆에 배치할 수 있습니다.  
   
  표시기와 계기가 계기 패널에서 인접해 있으며 서로 다른 필드의 데이터를 표시하는 경우 계기와 표시기가 각각 나타내는 데이터를 명확하게 파악할 수 있도록 레이블을 추가할 수 있습니다.  
@@ -27,7 +32,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 계기에 표시기를 포함하려면  
+### <a name="to-embed-an-indicator-in-a-gauge"></a>계기에 표시기를 포함하려면  
   
 1.  기존 보고서를 열거나 표시할 데이터가 있는 테이블 및 행렬을 포함하는 새 보고서를 만듭니다.   
   
@@ -57,7 +62,7 @@ caps.handback.revision: 8
   
 13. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 표시기와 계기를 나란히 표시하려면  
+### <a name="to-show-an-indicator-and-gauge-side-by-side"></a>표시기와 계기를 나란히 표시하려면  
   
 1.  기존 보고서를 열거나 표시할 데이터가 있는 테이블 및 행렬을 포함하는 새 보고서를 만듭니다.  
   
@@ -95,11 +100,11 @@ caps.handback.revision: 8
   
 16. 계기 근처의 레이블을 마우스 오른쪽 단추로 클릭하고 **레이블 속성**을 클릭한 다음 **텍스트** 상자에 원하는 텍스트를 입력합니다.  
   
-17. 표시기 옆의 레이블을 마우스 오른쪽 단추로 클릭하고 **레이블** 속성을 클릭한 다음 **텍스트** 상자에 원하는 텍스트를 입력합니다.  
+17. 표시기 옆의 레이블을 마우스 오른쪽 단추로 클릭하고 **레이블**속성을 클릭한 다음 **텍스트** 상자에 원하는 텍스트를 입력합니다.  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

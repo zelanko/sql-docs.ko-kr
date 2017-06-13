@@ -1,33 +1,38 @@
 ---
-title: "캐시 사전 로드(보고서 관리자) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "캐시 [Reporting Services]"
-  - "캐시 사전 로드"
+title: "(보고서 관리자) 캐시를 미리 로드 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cache [Reporting Services]
+- preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 caps.latest.revision: 35
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 35
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c5543c648289dee007a2249299ecb006d41f6b98
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 캐시 사전 로드(보고서 관리자)
+# <a name="preload-the-cache-report-manager"></a>캐시 사전 로드(보고서 관리자)
   공유 데이터 집합에 대한 캐시 새로 고침 계획을 만들어 공유 데이터 집합에 대한 캐시를 미리 로드할 수 있습니다.  
   
  다음과 같은 두 가지 방법으로 보고서에 대한 캐시를 미리 로드할 수 있습니다.  
   
 1.  보고서에 대한 캐시 새로 고침 계획을 만듭니다. 이것은 기본적으로 사용되는 방법입니다.  
   
-2.  데이터 기반 구독을 사용하여 매개 변수가 있는 보고서 인스턴스와 함께 캐시를 미리 로드할 수 있습니다. 이것이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이전의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)를 참조하세요.  
+2.  데이터 기반 구독을 사용하여 매개 변수가 있는 보고서 인스턴스와 함께 캐시를 미리 로드할 수 있습니다. 이것이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이전의 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다. 자세한 내용은 [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)버전에서 캐시를 미리 로드할 수 있는 유일한 방법이었습니다.  
   
  보고서 또는 공유 데이터 집합을 캐시하려면 먼저 다음 조건을 충족해야 합니다.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 35
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행되고 있어야 합니다.  
   
-### 캐시 새로 고침 계획을 만들어 캐시를 미리 로드하려면  
+### <a name="to-preload-the-cache-by-creating-a-cache-refresh-plan"></a>캐시 새로 고침 계획을 만들어 캐시를 미리 로드하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 다음 캐시할 항목으로 이동합니다.  
   
@@ -64,9 +69,9 @@ caps.handback.revision: 35
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 데이터 기반 구독을 사용하여 사용자별 보고서와 함께 캐시를 미리 로드하려면  
+### <a name="to-preload-the-cache-with-a-user-specific-report-by-using-a-data-driven-subscription"></a>데이터 기반 구독을 사용하여 사용자별 보고서와 함께 캐시를 미리 로드하려면  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동한 후 구독을 만들 보고서로 이동합니다.  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 35
      그렇지 않고 사용자 지정 일정을 만들려면 **이 구독에 대해 생성된 일정** 을 클릭한 후 **다음**을 클릭합니다. 일정을 구성하고 **마침**을 클릭합니다.  
   
     > [!NOTE]  
-    >  구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 내용은 [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 참조하세요.  
+    >  구독자가 최신 보고서를 받도록 하려면 구성하는 일정이 구독자에 대해 정의한 보고서 배달 일정과 일치해야 합니다. 자세한 내용은 [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 참조하세요.  
   
 14. 다음과 같이 보고서에 대한 실행 옵션을 구성합니다. 보고서 페이지에서 **속성** 탭을 클릭합니다.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 35
   
 18. **적용**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
  [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](../../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)   

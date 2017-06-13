@@ -18,13 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02f8701f04f1f19c12c6ed31e9fd0e2f0f8f6e83
+ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
+ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/12/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
+
+ > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [저장 프로시저에서 데이터 반환](https://msdn.microsoft.com/en-US/library/ms188655(SQL.120).aspx)합니다.
+
   결과 집합 또는 데이터를 프로시저에서 호출 프로그램으로 반환하는 두 가지 방법인 출력 매개 변수 및 반환 코드가 있습니다. 이 항목은 두 방법에 대한 자세한 정보를 제공합니다.  
   
 ## <a name="returning-data-using-an-output-parameter"></a>출력 매개 변수를 사용하여 데이터 반환  

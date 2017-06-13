@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b66cd3d05632792b851f039aa653c15de18c78b
+ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
+ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
@@ -51,7 +51,6 @@ affinity mask 옵션은 [ALTER SERVER CONFIGURATION](../t-sql/statements/alter-s
 이러한 시스템의 경우 lightweight pooling 값을 1로 설정하면 성능이 조금 향상됩니다.
 
 일상 작업을 예약하는 데에는 파이버 모드를 사용하지 않는 것이 좋습니다. 파이버 모드를 사용하면 컨텍스트 전환을 활용하지 못해 성능이 저하될 수 있으며 SQL Server의 일부 구성 요소가 파이버 모드에서 제대로 작동하지 않을 수 있습니다. 자세한 내용은 lightweight pooling을 참조하세요.
-
 
 ## <a name="thread-and-fiber-execution"></a>스레드 및 파이버 실행
 
@@ -94,15 +93,14 @@ SQL Server는 CPU가 추가된 후에 CPU 사용을 자동으로 시작하지 �
 
 CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임시로 대량 로그 또는 단순 복구 모델로 설정하여 인덱스 만들기 또는 다시 작성과 같은 인덱스 작업의 성능을 향상시킬 수 있습니다. 이러한 인덱스 작업으로 인해 상당한 로그 작업이 수행될 수 있으며 로그 경합으로 인해 SQL Server에서 선택하는 최상의 DOP(병렬 처리 수준)에 영향이 있을 수 있습니다.
 
-또한 이러한 작업에 맞게 MAXDOP(최대 병렬 처리 수준) 설정을 조정하는 것이 좋습니다. 다음 지침은 내부 테스트를 기반으로 하며 일반적인 권장 사항입니다. 몇 가지 MAXDOP 설정을 사용해 보고 사용 환경에 최적인 설정을 확인해야 합니다.
+또한 조정 하는 것이 좋습니다는 **최대 병렬 처리 수준 (MAXDOP)** 이러한 작업에 대 한 서버 구성 옵션입니다. 다음 지침은 내부 테스트를 기반으로 하며 일반적인 권장 사항입니다. 몇 가지 MAXDOP 설정을 사용해 보고 사용 환경에 최적인 설정을 확인해야 합니다.
 
 * 전체 복구 모델의 경우 max degree of parallelism 옵션 값은 8 이하로 설정해야 합니다.   
 * 대량 로그 모델 또는 단순 복구 모델의 경우에는 max degree of parallelism 옵션 값을 8보다 크게 설정하는 것이 좋습니다.   
 * NUMA가 구성된 서버에서는 최대 병렬 처리 수준이 각 NUMA 노드에 할당된 CPU 수를 초과하면 안 됩니다. 이는 쿼리가 1개의 NUMA 노드에서 로컬 메모리를 사용할 가능성이 높고 이 경우 메모리 액세스 시간을 개선할 수 있기 때문입니다.  
-* 하이퍼스레딩을 사용하며 2009년 이전에 제조된 서버의 경우 MAXDOP 값이 실제 프로세서 수를 초과하면 안 됩니다.  
+* 에 대 한 MAXDOP 값 논리 프로세서 보다는 실제 프로세서의 수를 초과 하지 않아야, 하이퍼 스레딩 가진 서버에 사용 하도록 설정 되었고 2009 년에 제조 또는 (하이퍼 스레딩 기능 향상 되었습니다) 전에 이전 버전입니다.
 
-
-최대 병렬 처리 수준 옵션에 대한 자세한 내용은 [Set the Max Degree of Parallelism Option for Optimal Performance](../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)(최적 성능을 위해 최대 병렬 처리 수준 옵션 설정)를 참조하세요.
+Max degree of parallelism 옵션에 대 한 자세한 내용은 참조 [max degree of parallelism 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)합니다.
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>최대 작업자 스레드 수 설정
 
@@ -120,17 +118,17 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 
 다음 표에서는 SQL Server 구성 요소를 나열하고 이들 구성 요소가 64개를 초과하는 CPU를 사용할 수 있는지를 보여 줍니다.
 
-|프로세스 이름    |실행 프로그램    |64개를 초과하는 CPU 사용 |  
+|프로세스 이름   |실행 프로그램 |64개를 초과하는 CPU 사용 |  
 |----------|----------|----------|  
-|SQL Server 데이터베이스 엔진    |Sqlserver.exe    |예 |  
-|Reporting Services    |Rs.exe    |아니오 |  
-|Analysis Services    |As.exe    |아니오 |  
-|Integration Services    |Is.exe    |아니오 |  
-|Service Broker    |Sb.exe    |아니오 |  
-|전체 텍스트 검색    |Fts.exe    |아니오 |  
-|SQL Server 에이전트    |Sqlagent.exe    |아니오 |  
-|SQL Server Management Studio    |Ssms.exe    |아니오 |  
-|SQL Server 설치    |Setup.exe    |아니오 |  
+|SQL Server 데이터베이스 엔진 |Sqlserver.exe  |예 |  
+|Reporting Services |Rs.exe |아니오 |  
+|Analysis Services  |As.exe |아니오 |  
+|Integration Services   |Is.exe |아니오 |  
+|Service Broker |Sb.exe |아니오 |  
+|전체 텍스트 검색   |Fts.exe    |아니오 |  
+|SQL Server 에이전트   |Sqlagent.exe   |아니오 |  
+|SQL Server Management Studio   |Ssms.exe   |아니오 |  
+|SQL Server 설치   |Setup.exe  |아니오 |  
 
 
 

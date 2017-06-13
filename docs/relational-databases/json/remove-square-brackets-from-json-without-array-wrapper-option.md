@@ -18,25 +18,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ea60d5a74c680e9c2aba571a76815f77913da471
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 36e612b6c3759d968687d8ba35286c399de02a74
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="remove-square-brackets-from-json---withoutarraywrapper-option"></a>JSON에서 대괄호 제거 - WITHOUT_ARRAY_WRAPPER 옵션
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  기본적으로 **FOR JSON** 절의 JSON 출력을 둘러싸고 있는 대괄호를 제거하려면 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 이 옵션을 사용하여 단일 JSON 개체를 배열 대신 출력으로 생성합니다.  
+기본적으로 **FOR JSON** 절의 JSON 출력을 둘러싸고 있는 대괄호를 제거하려면 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 단일 요소가 있는 배열 대신 출력으로 단일 JSON 개체를 생성 하는 단일 행 결과 함께이 옵션을 사용 합니다.
+
+다중 행 결과 함께이 옵션을 사용 하는 경우 결과 출력 유효한 JSON으로 인해 않습니다 여러 요소와 누락 된 대괄호입니다.  
   
- 이 옵션을 지정하지 않으면 JSON 출력은 대괄호로 묶입니다.  
-  
-## <a name="examples"></a>예  
- 다음 예제에는 **WITHOUT_ARRAY_WRAPPER** 옵션을 사용한 경우와 사용하지 않은 경우 **FOR JSON** 절의 출력이 나와 있습니다.  
+## <a name="example-single-row-result"></a>예 (단일 행 결과)  
+다음 예제에는 **WITHOUT_ARRAY_WRAPPER** 옵션을 사용한 경우와 사용하지 않은 경우 **FOR JSON** 절의 출력이 나와 있습니다.  
   
  **쿼리**  
   
-```tsql  
+```sql  
 SELECT 2015 as year, 12 as month, 15 as day  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
 ```  
@@ -51,7 +51,7 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
 } 
 ```  
   
- **WITHOUT_ARRAY_WRAPPER** 옵션을 사용하지 않을 때의 **결과**  
+ **결과** (기본값) 없이 **WITHOUT_ARRAY_WRAPPER** 옵션  
   
 ```json  
 [{
@@ -60,13 +60,14 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
     "day": 15
 }]
 ```  
-  
- 아래에는 **FOR JSON** 옵션을 사용한 경우와 사용하지 않은 경우 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다.  
+
+## <a name="example-multiple-row-result"></a>예 (여러 행 결과)
+아래에는 **FOR JSON** 옵션을 사용한 경우와 사용하지 않은 경우 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 이 예에서는 다중 행 결과 생성 합니다. 여러 요소와 대괄호 누락으로 인해 출력은 유효한 JSON 하지 않습니다.
   
  **쿼리**  
   
-```tsql  
-SELECT TOP 1 SalesOrderNumber, OrderDate, Status  
+```sql  
+SELECT TOP 3 SalesOrderNumber, OrderDate, Status  
 FROM Sales.SalesOrderHeader  
 ORDER BY ModifiedDate  
 FOR JSON PATH, WITHOUT_ARRAY_WRAPPER 
@@ -76,21 +77,40 @@ FOR JSON PATH, WITHOUT_ARRAY_WRAPPER
   
 ```json  
 {
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
     "SalesOrderNumber": "SO43660",
     "OrderDate": "2011-05-31T00:00:00",
     "Status": 5
 } 
 ```  
   
- **WITHOUT_ARRAY_WRAPPER** 옵션을 사용하지 않을 때의 **결과**  
+ **결과** (기본값) 없이 **WITHOUT_ARRAY_WRAPPER** 옵션  
   
 ```json  
 [{
+    "SalesOrderNumber": "SO43662",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
+    "SalesOrderNumber": "SO43661",
+    "OrderDate": "2011-05-31T00:00:00",
+    "Status": 5
+}, {
     "SalesOrderNumber": "SO43660",
     "OrderDate": "2011-05-31T00:00:00",
     "Status": 5
 }]
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>기본 제공 SQL Server에서 JSON 지원에 대 한 자세한 정보  
+특정 솔루션에 많이 사용 사례 및 권장 사항, 참조는 [기본 제공 JSON 지원에 대 한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) SQL Server와 Microsoft 프로그램 관리자 인 Jovan popovic의 Azure SQL 데이터베이스에 있습니다.
   
 ## <a name="see-also"></a>참고 항목  
  [FOR 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

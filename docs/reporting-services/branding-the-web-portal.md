@@ -1,38 +1,36 @@
 ---
 title: "웹 포털 브랜딩 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/29/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 05/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6dac97f7-02a6-4711-81a3-e850a6b40bf1
 caps.latest.revision: 8
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 8
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 19742f59b104d18633a954dc2f8bc9824b58ef21
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 웹 포털 브랜딩
+
+# <a name="branding-the-web-portal"></a>웹 포털 브랜딩
+
+[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+
 웹 포털을 비즈니스로 브랜딩하여 모양을 변경할 수 있습니다. 이 작업은 브랜드 패키지를 통해 수행합니다. 브랜드 패키지는 사용자가 CSS 스타일 시트에 대한 깊은 지식이 없어도 웹 포털을 만들 수 있도록 설계되었습니다.  
   
-항목 내용  
-  
--   [브랜드 패키지 만들기](#create)  
-  
--   [웹 포털에 브랜드 패키지 적용](#apply)  
-  
--   [metadata.xml 예제](#metadata)  
-  
--   [colors.json 예제](#colors)  
-  
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-  
-<a name="create">  
-## 브랜드 패키지 만들기  
+   
+## <a name="creating-the-brand-package"></a>브랜드 패키지 만들기  
   
 Reporting Services의 브랜드 패키지는 3개 항목으로 구성되어 있으며 zip 파일로 패키지화되어 있습니다.   
   
@@ -42,7 +40,7 @@ Reporting Services의 브랜드 패키지는 3개 항목으로 구성되어 있�
   
 파일 이름은 위와 동일해야 하며 zip 파일은 원하는 대로 정할 수 있습니다.  
   
-### metadata.xml  
+### <a name="metadataxml"></a>metadata.xml  
   
 metadata.xml 파일을 사용하면 브랜드 패키지의 이름을 설정할 수 있으며 이 파일에는 colors.json 및 logo.png 파일에 대한 참조 항목이 있습니다.  
   
@@ -65,7 +63,7 @@ metadata.xml 파일을 사용하면 브랜드 패키지의 이름을 설정할 �
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### Colors.json  
+### <a name="colorsjson"></a>Colors.json  
   
 브랜드 패키지가 업로드되면 서버가 colors.json에서 적절한 이름/값 쌍을 추출하고 마스터 LESS 스타일시트인 brand.less로 병합합니다. 그런 다음 이 LESS 파일이 처리되고 결과 CSS 파일이 클라이언트에 제공됩니다. 스타일시트의 모든 색은 16진수의 6자 색 표현을 따릅니다.  
   
@@ -77,7 +75,7 @@ LESS 스타일시트에는 다음과 같이 사전 정의된 LESS 변수를 참�
         background-color:@primaryButtonBg;   
     }  
   
-이 스타일시트가 CSS 구문과 유사하긴 하지만 @기호의 접두사가 포함된 색 값은 LESS에만 해당합니다. 이러한 색 값은 json 파일에서 해당 값을 설정하는 변수입니다.  
+색 값을 접두사로 CSS 구문과 유사이 @symbol에 있습니다. 이러한 색 값은 json 파일에서 해당 값을 설정하는 변수입니다.  
   
 예를 들어 colors.json 파일의 값이 다음과 같은 경우  
   
@@ -116,14 +114,13 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
   
 그러면 테마를 배포한 서버와 동일한 서버용이 아닐 경우에도 사용자가 작성하는 모바일 보고서에 해당 테마를 사용할 수 있습니다.   
   
-### 로고 사용  
+### <a name="using-a-logo"></a>로고 사용  
   
 브랜드 패키지를 사용하여 로고를 포함할 경우 사이트 설정 메뉴에서 웹 포털에 대해 설정한 이름 위치 대신 웹 포털에 표시됩니다.  
   
 로고에 포함하는 파일은 PNG 파일 형식을 사용해야 합니다. 파일을 서버에 업로드하면 크기가 조정되며 약 290px x 60px로 조정됩니다.  
-  
-<a name="apply">  
-## 웹 포털에 브랜드 패키지 적용  
+   
+## <a name="applying-the-brand-package-to-the-web-portal"></a>웹 포털에 브랜드 패키지 적용  
   
 브랜드 패키지를 추가, 다운로드, 제거하려면 다음을 수행할 수 있습니다.  
   
@@ -143,8 +140,7 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
   
 패키지를 **다운로드** 또는 **제거** 할 수도 있습니다. 패키지를 제거하면 웹 포털이 즉시 기본 브랜드로 재설정됩니다.  
   
-<a name="metadata">  
-## metadata.xml 예제  
+## <a name="metadataxml-example"></a>metadata.xml 예제  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -157,9 +153,8 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
             <Item key="logo" path="logo.png" />  
         </Contents>  
     </SystemResourcePackage>  
-  
-<a name="colors">  
-## Colors.json 예제  
+   
+## <a name="colorsjson-example"></a>colors.json 예제  
   
     {  
         "name":"Multicolored example brand",  
@@ -252,12 +247,5 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
             "altTableAccent":"#fdc336"  
         }  
     }  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

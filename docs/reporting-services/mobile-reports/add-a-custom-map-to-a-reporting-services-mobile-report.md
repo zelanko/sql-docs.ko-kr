@@ -1,22 +1,27 @@
 ---
-title: "Add a custom map to a Reporting Services mobile report | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Reporting Services 모바일 보고서에 사용자 지정 지도 추가할 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd259b95-bb58-4eb1-a436-6aa12fc6f5f2
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e38a8b7a03c79a596d2c795b3ee992e974f604cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Add a custom map to a Reporting Services mobile report
+# <a name="add-a-custom-map-to-a-reporting-services-mobile-report"></a>Add a custom map to a Reporting Services mobile report
 사용자 지정 지도에는 다음과 같은 두 개의 파일이 필요합니다.  
 * 셰이프 기하 도형용 .SHP 파일  
 * 메타데이터용 .DBF 파일  
@@ -25,7 +30,7 @@ caps.handback.revision: 6
   
 두 파일은 같은 폴더에 저장합니다. canada.shp 및 canada.dbf와 같이 두 파일의 이름이 같아야 합니다. 메타데이터(DBF 파일)에는 지도에 데이터를 입력할 때 사용할 해당 셰이프의 이름(키) 값이 들어 있는 "“NAME" 필드가 포함되어 있어야 합니다.   
   
-## 사용자 지정 지도 로드  
+## <a name="load-a-custom-map"></a>사용자 지정 지도 로드  
   
 1. **레이아웃** 탭에서 지도 유형을 **그라데이션 열 지도**, **범위 중지 열 지도**또는 **거품형 지도**중에서 선택하고 디자인 화면으로 끌어서 원하는 크기로 만듭니다.  
   
@@ -39,18 +44,19 @@ caps.handback.revision: 6
   
    ![SSMRP_SelectDBFandSHP](../../reporting-services/mobile-reports/media/ssmrp-selectdbfandshp.png)  
   
-## 사용자 지정 지도에 데이터 연결  
+## <a name="connect-data-to-a-custom-map"></a>사용자 지정 지도에 데이터 연결  
 보고서에 사용자 지정 지도를 처음 추가할 때 [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)] 에서는 시뮬레이트된 지리 데이터를 지도에 입력합니다.  
   
 ![SSMRP_MapsData](../../reporting-services/mobile-reports/media/ssmrp-mapsdata.png)  
   
-사용자 지정 지도에서 실제 데이터를 표시하는 것은 기본 제공 지도에서 데이터를 표시하는 것과 같습니다. [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)에 나와 있는 단계에 따라 데이터를 표시합니다.  
+사용자 지정 지도에서 실제 데이터를 표시하는 것은 기본 제공 지도에서 데이터를 표시하는 것과 같습니다. [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md) 에 나와 있는 단계에 따라 데이터를 표시합니다.  
   
-### 참고 항목  
-- [Reporting Services 모바일 보고서의 사용자 지정 맵](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
-- [Maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
+### <a name="see-also"></a>참고 항목  
+- [Custom maps in Reporting Services mobile reports](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md)  
+- [Reporting Services 모바일 보고서의 지도](../../reporting-services/mobile-reports/maps-in-reporting-services-mobile-reports.md)  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)   
   
   
   
   
+

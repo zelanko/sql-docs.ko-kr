@@ -1,23 +1,28 @@
 ---
-title: "포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "포함 된 데이터 원본과 공유 데이터 집합 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: adc95cc0-d15a-413d-bc5a-302eab37a069
 caps.latest.revision: 7
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 7
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fb2ff6fdeb8f4d05866c09e87cd899a5dd2bb7ad
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
+# <a name="embedded-and-shared-datasets-report-builder-and-ssrs"></a>포함된 데이터 집합 및 공유 데이터 집합(보고서 작성기 및 SSRS)
   보고서에서 데이터 집합은 외부 데이터 원본에 대해 쿼리를 실행할 때 반환되는 보고서 데이터를 나타냅니다. 데이터 집합은 외부 데이터 원본에 대한 정보를 포함하는 데이터 연결에 따라 달라집니다. 이때 데이터 자체가 보고서 정의에 포함되지는 않습니다. 데이터 집합에는 쿼리 명령, 필드 컬렉션, 매개 변수, 필터 및 대/소문자 구분, 데이터 정렬 등의 데이터 옵션이 포함됩니다. 데이터 집합에는  
   
 -   **공유 데이터 집합** 공유 데이터 집합은 보고서 서버에 게시되며 여러 보고서에서 사용할 수 있습니다. 공유 데이터 집합은 공유 데이터 원본을 기반으로 해야 합니다. 공유 데이터 집합은 캐시 새로 고침 계획을 만들어 캐시하고 예약할 수 있습니다.  
@@ -29,7 +34,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 공유 데이터 집합  
+## <a name="shared-datasets"></a>공유 데이터 집합  
  공유 데이터 집합을 사용하여 둘 이상의 보고서에서 사용할 수 있는 쿼리를 제공할 수 있습니다. 공유 데이터 집합은 보고서 서버에 저장되며 보고서나 공유 데이터 원본과는 별도로 관리됩니다. 예를 들어 보고서 서버 관리자가 향상된 인덱싱이나 기타 쿼리 성능 최적화를 사용하도록 쿼리를 업데이트할 수 있습니다.  
   
  가능한 한 공유 데이터 집합을 많이 사용하는 것이 좋습니다. 그러면 쿼리를 최적화하거나 쿼리 결과를 캐시하여 보고서 성능을 향상시킬 수 있습니다. 공유 데이터 집합을 사용하면 데이터 액세스 관리가 더 쉬울 뿐만 아니라 보고서 및 보고서에서 액세스하는 데이터 집합을 더욱 안전하고 향상된 성능으로 유지할 수 있습니다.  
@@ -53,17 +58,17 @@ caps.handback.revision: 7
     |필드|쿼리 명령의 필드<br /><br /> 데이터 집합 정의의 일부가 아닌 계산 필드|필드를 볼 수 있지만 변경할 수는 없음<br /><br /> 필드 컬렉션은 보고서에 공유 데이터 집합을 추가할 때의 쿼리를 기반으로 정적입니다. 업데이트하려면 **데이터 집합 속성** 대화 상자에서 **필드 새로 고침** 을 클릭합니다. 실제 필드 컬렉션은 정의의 현재 쿼리가 반환하는 필드 컬렉션입니다.<br /><br /> 계산 필드 추가|  
     |데이터 집합|대/소문자 구분과 같은 데이터 옵션|인스턴스의 데이터 옵션 무시|  
   
-## 포함된 데이터 집합  
+## <a name="embedded-datasets"></a>포함된 데이터 집합  
  외부 데이터 원본에서 하나의 보고서에서만 사용할 데이터를 가져오려는 경우 포함된 데이터 집합을 사용합니다. 포함된 데이터 집합은 다른 종속성이 없고 여러 보고서에 사용할 필요가 없는 쿼리를 만들려는 경우에 유용합니다.  
   
  포함된 데이터 집합을 만들거나 편집하려면 보고서 데이터 창을 사용합니다. 데이터 집합을 만든 후에 **데이터 집합 속성** 대화 상자에서 속성을 구성할 수 있습니다.  
   
-## 관련 항목:  
- [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
  [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](../Topic/Data%20Connections,%20Data%20Sources,%20and%20Connection%20Strings%20in%20Report%20Builder.md)   
+ [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](http://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
   

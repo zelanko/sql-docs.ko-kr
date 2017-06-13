@@ -1,36 +1,41 @@
 ---
-title: "데이터에 연결하는 다른 방법(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "데이터 연결 (보고서 작성기)에 다른 방법 | Microsoft Docs"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: aebc5f3d-97d5-4d54-b525-753fed073a9a
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d485cf494efedfc0fe7f6a47f11d3ca0825b3654
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 데이터에 연결하는 다른 방법(보고서 작성기)
+# <a name="alternative-ways-to-get-a-data-connection-report-builder"></a>데이터에 연결하는 다른 방법(보고서 작성기)
 데이터 연결은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 일반적으로 데이터 원본 소유자로부터 사용할 자격 증명 유형과 연결 정보를 가져옵니다.  
   
 데이터 연결을 지정하기 위해 보고서 서버의 공유 데이터 원본을 사용하거나 특정 보고서에만 사용되는 포함된 데이터 원본을 만들 수 있습니다.  
   
 대부분의 자습서에서 포함된 데이터 원본을 사용하지만 공유 데이터 원본에 액세스할 수 있는 경우 공유 데이터 원본을 사용할 수 있습니다.  
   
-## 공유 데이터 원본에서 데이터 연결 가져오기  
+## <a name="getting-a-data-connection-from-a-shared-data-source"></a>공유 데이터 원본에서 데이터 연결 가져오기  
 보고서 서버에 사용할 권한이 있는 사용 가능한 공유 데이터 원본이 있는 경우 포함된 데이터 원본 대신 이 데이터 원본을 사용할 수 있습니다. 다음 절차에서는 공유 데이터 원본을 찾고 이 원본을 사용하는 데 필요한 자격 증명을 제공하는 방법을 설명합니다.  
   
 공유 데이터 원본을 사용하려면 보고서 서버를 찾아 선택합니다. 일반적으로 보고서 서버 관리자가 보고서 서버 URL을 제공합니다.  
   
-### 공유 데이터 원본 목록을 사용하여 데이터 연결을 지정하려면  
+### <a name="to-specify-a-data-connection-from-a-list-of-shared-data-sources"></a>공유 데이터 원본 목록을 사용하여 데이터 연결을 지정하려면  
   
 1.  새 테이블 또는 행렬 또는 새 차트 마법사의 **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 선택하고 **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 7
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 보고서 서버에서 공유 데이터 원본을 찾아 데이터 연결을 지정하려면  
+### <a name="to-specify-a-data-connection-by-browsing-to-a-shared-data-source-on-a-report-server"></a>보고서 서버에서 공유 데이터 원본을 찾아 데이터 연결을 지정하려면  
   
 1.  새 테이블 또는 행렬 또는 새 차트 마법사의 **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 선택하고 **다음**을 클릭합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
@@ -72,7 +77,9 @@ caps.handback.revision: 7
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
 [보고서 데이터 집합&#40;SSRS&#41;](../reporting-services/report-data/report-datasets-ssrs.md)  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
   
+
+

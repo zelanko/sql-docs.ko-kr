@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5785d0283be2fe40b5010f6f9373f9a2ea81554a
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: 19da2d9b81da6ec2886d7da3c5189607b0a60b16
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
@@ -127,7 +127,10 @@ JOIN sys.query_store_query_text AS Txt
   
  max_plans_per_query  
  각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.  
-  
+ 
+ WAIT_STATS_CAPTURE_MODE  
+ 쿼리 저장소를 캡처하는 경우 컨트롤 통계 정보를 대기 합니다. 있습니다 수 해제 = 0 또는 1 (기본값) =  
+ 
  **sys.database_query_store_options** 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다. 값에 대한 자세한 내용은 [sys을 참조하세요.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)을 참조하세요.  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.  
@@ -152,7 +155,9 @@ JOIN sys.query_store_query_text AS Txt
 -   [sys.query_store_query_text&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)  
   
 -   [sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)  
-  
+
+-   [sys.query_store_wait_stats &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md) 
+
 -   [sys.query_store_runtime_stats_interval&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)  
   
 ### <a name="query-store-stored-procedures"></a>쿼리 저장소 저장 프로시저  

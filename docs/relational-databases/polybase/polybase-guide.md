@@ -1,6 +1,6 @@
 ---
 title: "PolyBase 가이드 | Microsoft 문서"
-ms.date: 12/08/2016
+ms.date: 5/30/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,18 +24,17 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 627fdce2e1c294343680b119e9b0c36fc3d8665d
+ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
+ms.openlocfilehash: f9fe99ddd630b8444819c94111f6a363e96105f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/31/2017
 
 ---
 # <a name="polybase-guide"></a>PolyBase 가이드
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  PolyBase는 SQL Server 내에서 비관계형 및 관계형 데이터에 액세스하고 결합하는 기술입니다.  SQL Server 2016에서 Hadoop 또는 Azure Blob Storage에서 외부 데이터에 대한 쿼리를 실행할 수 있습니다. 쿼리는 Hadoop에 계산을 푸시하도록 최적화됩니다. Azure SQL Data Warehouse에서 Azure Blob Storage 및 Azure Data Lake Store의 데이터를 가져올 수 있습니다.
+  PolyBase는 t-sql 언어를 통해 데이터베이스 외부의 데이터에 액세스 하는 기술입니다.  SQL Server 2016에서 있습니다 Hadoop에 외부 데이터에서 쿼리를 실행 또는 Azure Blob 저장소에서 데이터 가져오기/내보내기. 쿼리는 Hadoop에 계산을 푸시하도록 최적화됩니다. Azure SQL 데이터 웨어하우스에서 있습니다 수 가져오기/내보내기 Azure Blob 저장소에서 데이터와 Azure 데이터 레이크 저장소입니다.
   
-Transact-SQL(T-SQL) 문을 사용하여 Hadoop 또는 Azure Blob Storage에 저장된 비관계형 데이터와 SQL Server의 관계형 테이블 간에 데이터를 가져오고 내보낼 수 있습니다. T-SQL 쿼리 내에서 외부 데이터를 쿼리하고 관계형 데이터를 사용하여 조인할 수도 있습니다.  
   
  PolyBase를 사용하려면 [PolyBase 시작](../../relational-databases/polybase/get-started-with-polybase.md)을 참조하세요.  
   
@@ -44,17 +43,16 @@ Transact-SQL(T-SQL) 문을 사용하여 Hadoop 또는 Azure Blob Storage에 저�
 ## <a name="why-use-polybase"></a>PolyBase를 사용하는 이유는?  
 올바른 결정을 위해 관계형 데이터 및 테이블에 구조화되어 있지 않은 기타 데이터(특히 Hadoop)를 분석하려고 합니다. 다양한 유형의 데이터 저장소 간에 데이터를 전송할 수 있는 방법이 없다면 작업을 수행하는 것이 어렵습니다. PolyBase는 SQL Server의 외부 데이터에 대해 작동하여 이를 수행합니다.  
   
-단순함을 유지하기 위해 PolyBase는 사용자의 Hadoop 또는 Azure 환경에 추가 소프트웨어가 필요하지 않습니다. 외부 데이터 쿼리 작업에는 데이터베이스 테이블 쿼리와 동일한 구문을 사용합니다. 이 작업은 모두 투명하게 수행됩니다. PolyBase는 모든 세부 정보를 백그라운드에서 처리하고 PolyBase를 성공적으로 사용하는 데 Hadoop 또는 Azure에 대해 알 필요가 없습니다. 
+간단한 설명을 위해 PolyBase는 Hadoop 환경에 추가 소프트웨어를 설치 필요 하지 않습니다. 외부 데이터 쿼리 작업에는 데이터베이스 테이블 쿼리와 동일한 구문을 사용합니다. 이 작업은 모두 투명하게 수행됩니다. PolyBase 핸들 백그라운드, 모든 세부 정보 및 Hadoop에 대 한 지식이 없는 외부 테이블을 쿼리 하는 최종 사용자가 필요 합니다. 
   
  PolyBase는 다음 작업을 수행할 수 있습니다.  
   
--   **Hadoop에 저장된 데이터를 쿼리합니다.** 사용자는 Hadoop과 같이 비용 효율적으로 분산되고 확장 가능한 시스템에 데이터 집합을 저장하고 있습니다. PolyBase를 사용하면 쉽게 T-SQL을 사용하여 데이터를 쿼리할 수 있습니다.  
+-   **SQL Server 또는 PDW에서 Hadoop에 저장 된 데이터를 쿼리 합니다.** 사용자는 Hadoop과 같이 비용 효율적으로 분산되고 확장 가능한 시스템에 데이터 집합을 저장하고 있습니다. PolyBase를 사용하면 쉽게 T-SQL을 사용하여 데이터를 쿼리할 수 있습니다.  
   
--   **Azure blob 저장소에 저장된 데이터를 쿼리합니다.** Azure blob 저장소는 Azure 서비스에서 사용 하기 위해 데이터를 저장하는 편리한 장소입니다.  PolyBase는 T-SQL을 사용하여 쉽게 데이터에 액세스할 수 있습니다.  
+-   **Azure Blob 저장소에 저장 된 데이터를 쿼리 합니다.** Azure blob 저장소는 Azure 서비스에서 사용 하기 위해 데이터를 저장하는 편리한 장소입니다.  PolyBase는 T-SQL을 사용하여 쉽게 데이터에 액세스할 수 있습니다.  
   
--   **Hadoop, Azure Blob Storage 또는 Azure Data Lake Store에서 데이터 가져오기** Microsoft SQL columnstore 기술 및 분석 기능의 속도를 활용하여 Hadoop 또는 Azure Blob Storage 또는 Azure Data Lake Store에서 관계형 테이블로 데이터를 가져옵니다. 별도 ETL 또는 가져오기 도구에 대한 요구 사항이 없습니다.  
+-   **Hadoop, Azure Blob 저장소 또는 Azure 데이터 레이크 저장소에서 데이터를 가져올** Hadoop, Azure Blob 저장소 또는 Azure 데이터 레이크 저장소에서 관계형 테이블에 데이터를 가져오기 하 여 Microsoft SQL columnstore 기술 및 분석 기능의 속도 활용 합니다. 별도 ETL 또는 가져오기 도구에 대한 요구 사항이 없습니다.  
 
-  
 -   **Hadoop, Azure Blob Storage 또는 Azure Data Lake Store로 데이터 내보내기** Hadoop, Azure Blob Storage 또는 Azure Data Lake Store에 데이터를 보관하여 비용 효율적인 저장소를 구현하고 손쉽게 액세스할 수 있도록 온라인 상태로 유지합니다.  
   
 -   **BI 도구와 통합.** PolyBase는 Microsoft의 비즈니스 인텔리전스 및 분석 스택에서 사용하거나 SQL Server와 호환되는 타사 도구를 사용합니다.  

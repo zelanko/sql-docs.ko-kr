@@ -1,29 +1,34 @@
 ---
 title: "보고서 서버 ExecutionLog 및 ExecutionLog3 뷰 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 [Reporting Services], 실행"
-  - "실행 로그 [Reporting Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Reporting Services], execution
+- execution logs [Reporting Services]
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 caps.latest.revision: 41
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 41
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버 실행 로그에는 단일 서버나 기본 모드 확장 배포 또는 SharePoint 팜의 여러 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 집합 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 집합 또는 처리)에 대한 사항을 제안할 수 있습니다.  
+# <a name="report-server-executionlog-and-the-executionlog3-view"></a>보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]보고서 서버 실행 로그에는 단일 서버나 기본 모드 확장 배포 또는 SharePoint 팜의 여러 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 집합 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 집합 또는 처리)에 대한 사항을 제안할 수 있습니다.  
   
- SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)을 참조하세요.  
+ SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
 ##  <a name="bkmk_top"></a> 로그 정보 보기  
  보고서 서버 실행은 내부 데이터베이스 테이블에 보고서 실행에 대한 데이터를 기록합니다. 테이블의 정보는 SQL Server 뷰에서 확인할 수 있습니다.  
@@ -67,7 +72,7 @@ caps.handback.revision: 41
   
  이전 단계에 설명된 대로 로깅을 설정한 후 다음을 완료해야 합니다.  
   
-1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 **시스템 설정** 페이지에서 **사용자 정의** 섹션을 찾습니다.  
+1.  **서비스 응용 프로그램의** 시스템 설정 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지에서 **사용자 정의** 섹션을 찾습니다.  
   
 2.  **ExecutionLogLevel** 을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 41
   
 1.  **서버 속성** 대화 상자에서 **고급** 페이지를 클릭합니다.  
   
-2.  **사용자 정의** 섹션에서 **ExecutionLogLevel**을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
+2.  **사용자 정의** 섹션에서 **ExecutionLogLevel** 을 **자세히**로 변경합니다. 이 필드는 텍스트 입력 필드이며 **자세히** 및 **보통**중에서 값을 선택할 수 있습니다.  
   
 ##  <a name="bkmk_executionlog3"></a> 로그 필드(ExecutionLog3)  
  이 뷰에는 XML 기반 **AdditionalInfo** 열 안에 추가 성능 진단 노드가 추가되었습니다. AdditionalInfo 열에는 여러 추가 정보 필드에 대한 1의 XML 구조가 포함되어 있습니다. 다음은 ExecutionLog3 뷰에서 행을 검색하는 샘플 Transact SQL 문입니다. 이 샘플에서는 보고서 서버 데이터베이스 이름이 **ReportServer**라고 가정합니다.  
@@ -360,7 +365,7 @@ select * from ExecutionLog order by TimeStart DESC
 |InstanceName|요청을 처리한 보고서 서버 인스턴스 이름|  
 |ReportID|보고서 식별자|  
 |UserName|사용자 식별자|  
-|RequestType|가능한 값:<br /><br /> True = 구독 요청<br /><br /> False= 대화형 요청|  
+|RequestType|가능한 값은 다음과 같습니다.<br /><br /> True = 구독 요청<br /><br /> False= 대화형 요청|  
 |형식|렌더링 형식|  
 |매개 변수|보고서 실행에 사용된 매개 변수 값|  
 |TimeStart|보고서 처리 기간을 나타내는 시작 및 중지 시간|  
@@ -373,7 +378,7 @@ select * from ExecutionLog order by TimeStart DESC
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  

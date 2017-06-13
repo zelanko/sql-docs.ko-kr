@@ -1,30 +1,37 @@
 ---
-title: "보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 피드 생성 (보고서 작성기 및 SSRS) 보고서에서 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 caps.latest.revision: 12
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 11
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 190c45d5ec0deeff6d71ce06e4c66872ca3253d2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS)
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 렌더링 확장 프로그램은 페이지가 매겨진 보고서에서 사용할 수 있는 데이터 피드와 보고서의 데이터 영역에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서를 생성합니다. 이 확장 프로그램을 사용하면 보고서에서 생성된 데이터 피드를 사용할 수 있는 응용 프로그램을 사용하여 읽을 수 있고 교환할 수 있는 Atom 규격 데이터 피드를 생성할 수 있습니다. 예를 들어 Atom 렌더링 확장 프로그램을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트에서 사용할 수 있는 데이터 피드를 생성할 수 있습니다.  
+
+# <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>보고서에서 데이터 피드 만들기(보고서 작성기 및 SSRS)
+
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Atom 렌더링 확장 프로그램은 페이지가 매겨진 보고서에서 사용할 수 있는 데이터 피드와 보고서의 데이터 영역에서 사용할 수 있는 데이터 피드를 나열하는 Atom 서비스 문서를 생성합니다. 이 확장 프로그램을 사용하면 보고서에서 생성된 데이터 피드를 사용할 수 있는 응용 프로그램을 사용하여 읽을 수 있고 교환할 수 있는 Atom 규격 데이터 피드를 생성할 수 있습니다. 예를 들어 파워 피벗 또는 Power BI에서 사용할 수 있는 데이터 피드를 생성할 Atom 렌더링 확장 프로그램을 사용할 수 있습니다.  
   
  Atom 서비스 문서는 보고서의 각 데이터 영역에 대해 데이터 피드를 하나 이상 나열합니다. 데이터 영역의 유형과 데이터 영역에 표시되는 데이터에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 데이터 영역에서 여러 데이터 피드를 생성할 수 있습니다. 예를 들어 행렬이나 차트는 여러 데이터 피드를 제공할 수 있습니다. Atom 렌더링 확장 프로그램이 Atom 서비스 문서를 만드는 경우 고유 식별자가 각 데이터 피드에 대해 만들어지며 URL에서 이 식별자를 사용하여 데이터 피드의 내용에 액세스할 수 있습니다.  
   
  Atom 렌더링 확장 프로그램이 데이터 피드에 대한 데이터를 생성하는 방식은 CSV(쉼표로 구분된 값) 렌더링 확장이 CSV 파일에 데이터를 렌더링하는 방식과 유사합니다. CSV 파일과 마찬가지로 데이터 피드는 보고서 데이터의 일반 표현입니다. 예를 들어 그룹 내의 판매량 합계를 계산하는 행 그룹이 있는 테이블은 각 데이터 행에서 합계를 계산하는 작업을 반복하며 별도의 행에 합계만 포함되지는 않습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트를 사용하여 Atom 서비스 문서와 데이터 피드를 생성할 수 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , 보고서 서버 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 사이트를 사용하여 Atom 서비스 문서와 데이터 피드를 생성할 수 있습니다.  
   
  Atom은 관련 표준의 쌍에 적용됩니다. Atom 서비스 문서는 RFC 5023 Atom 게시 프로토콜 사양을 따르며 데이터 피드는 RFC 4287 Atom 배포 형식 프로토콜 사양을 따릅니다.  
   
@@ -39,7 +46,6 @@ caps.handback.revision: 11
   
  자세한 내용은 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="AtomServiceDocument"></a> Atom 서비스 문서(.atomsvc 파일)  
  Atom 서비스 문서는 하나 이상의 데이터 피드에 대한 연결을 지정합니다. 최소한 연결은 피드를 생성하는 데이터 서비스에 대한 간단한 URL입니다.  
@@ -60,14 +66,13 @@ caps.handback.revision: 11
   
  ![RS_Atom_PeerDynamicDataFeeds](../../reporting-services/report-builder/media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="DataFeeds"></a> 데이터 피드  
  데이터 피드는 보고서가 실행될 때마다 다를 수 있는 변수 데이터와 시간이 흐름에 따라 변경되지 않는 일관성 있는 표 형식이 있는 XML 파일입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 생성하는 데이터 피드는 ADO.NET Data Services에서 생성하는 데이터 피드와 동일한 형식으로 되어 있습니다.  
   
  데이터 피드에는 헤더 섹션과 데이터 섹션이 포함되어 있습니다. Atom 사양은 각 섹션에서 요소를 정의합니다. 헤더에는 데이터 피드에서 사용할 문자 인코딩 스키마와 같은 정보가 포함됩니다.  
   
-### 헤더 섹션  
+### <a name="header-section"></a>헤더 섹션  
  다음 XML 코드에서는 데이터 피드의 헤더 섹션을 보여 줍니다.  
   
  `<?xml version="1.0" encoding="utf-8" standalone="yes"?><feed xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns="http://www.w3.org/2005/Atom">`  
@@ -78,14 +83,14 @@ caps.handback.revision: 11
   
  `<updated>2009-05-08T23:09:58Z</updated>`  
   
-### 데이터 섹션  
- 데이터 피드의 데이터 섹션에는 Atom 렌더링 확장 프로그램에서 생성하는 일반 행 집합의 각 행에 대한 \<**entry**> 요소가 하나 포함되어 있습니다.  
+### <a name="data-section"></a>데이터 섹션  
+ 데이터 피드는 데이터 섹션에는 하나 포함 \< **항목**> Atom 렌더링 확장 프로그램에 의해 생성 된 일반된 행 집합의 각 행에 대 한 요소입니다.  
   
  다음 다이어그램에서는 그룹과 합계를 사용하는 보고서를 보여 줍니다.  
   
  ![RS_Atom_ProductSalesSummaryCircledValues](../../reporting-services/report-builder/media/rs-atom-productsalessummarycircledvalues.gif "RS_Atom_ProductSalesSummaryCircledValues")  
   
- 다음 XML에서는 데이터 피드에 있는 해당 보고서의 \<**entry**> 요소를 보여 줍니다. \<**entry**> 요소에는 그룹의 판매량 및 주문량 합계와 모든 그룹의 판매량 및 주문량 합계가 포함되어 있습니다. \<**entry**> 요소에는 보고서의 모든 값이 포함되어 있습니다.  
+ XML은 다음 프로그램 \< **항목**> 해당 보고서는 데이터 피드의 요소입니다. 에 \< **항목**> 요소에는 판매량 및 주문량 그룹의 전체 및의 판매량 및 주문량 모든 그룹에 대 한 합계가 포함 됩니다. \< **항목**> 요소에는 보고서의 모든 값이 포함 됩니다.  
   
  `<entry><id>uuid:1795992c-a6f3-40ec-9243-fbfd0b1a5be3;id=166322</id><title type="text"></title><updated>2009-05-08T23:09:58Z</updated><author /><content type="application/xml"><m:properties>`  
   
@@ -107,24 +112,23 @@ caps.handback.revision: 11
   
  `</entry>`  
   
-### 데이터 피드 작업  
- 보고서에서 생성하는 모든 데이터 피드에는 데이터 피드를 생성하는 데이터 영역의 부모 범위에 있는 보고서 항목이 포함되어 있습니다. . 예를 들어 몇 가지 테이블과 차트가 있는 보고서의 경우 보고서 본문의 입력란에서는 각 데이터 영역을 설명하는 텍스트를 제공하고, 보고서에서 생성하는 모든 데이터 피드의 각 항목에는 이 입력란 값이 포함됩니다. 예를 들어 텍스트가 "Chart displays monthly sales averages by sales region"인 경우 세 데이터 피드는 모두 각 행에서 이 텍스트를 포함합니다.  
+### <a name="working-with-data-feeds"></a>데이터 피드 작업  
+ 보고서에서 생성하는 모든 데이터 피드에는 데이터 피드를 생성하는 데이터 영역의 부모 범위에 있는 보고서 항목이 포함되어 있습니다. 와 통합된 SharePoint 사이트를 사용하여 Atom 서비스 문서와 데이터 피드를 생성할 수 있습니다. 예를 들어 몇 가지 테이블과 차트가 있는 보고서의 경우 보고서 본문의 입력란에서는 각 데이터 영역을 설명하는 텍스트를 제공하고, 보고서에서 생성하는 모든 데이터 피드의 각 항목에는 이 입력란 값이 포함됩니다. 예를 들어 텍스트가 "Chart displays monthly sales averages by sales region"인 경우 세 데이터 피드는 모두 각 행에서 이 텍스트를 포함합니다.  
   
  보고서 레이아웃에 중첩 데이터 영역과 같은 계층적 데이터 관계가 포함된 경우 해당 관계가 보고서 데이터의 일반화된 행 집합에 포함됩니다.  
   
  일반적으로 중첩 데이터 영역의 데이터 행은 특히 중첩 테이블과 행렬에 그룹 및 합계가 포함되는 경우 너비가 넓습니다. 보고서를 데이터 피드로 내보내고 데이터 피드를 검토하여 생성된 데이터가 기대한 것인지 확인하는 것이 유용할 수 있습니다.  
   
- Atom 렌더링 확장 프로그램이 Atom 서비스 문서를 만드는 경우 고유 식별자가 데이터 피드에 대해 만들어지며 URL에서 이 식별자를 사용하여 데이터 피드의 내용을 볼 수 있습니다. 위에서 보여 준 샘플 Atom 서비스 문서에는 URL http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1"이 포함되어 있습니다. 이 URL은 보고서(Product Sales Summary), Atom 렌더링 형식(ATOM) 및 데이터 피드의 이름(xAx0x1)을 식별합니다.  
+ Atom 렌더링 확장 프로그램이 Atom 서비스 문서를 만드는 경우 고유 식별자가 데이터 피드에 대해 만들어지며 URL에서 이 식별자를 사용하여 데이터 피드의 내용을 볼 수 있습니다. 위에 표시 된 샘플 Atom 서비스 문서 URL 포함 `http://ServerName/ReportServer?%2fProduct+Sales+Summary&rs%3aCommand=Render&rs%3aFormat=ATOM&rc%3aDataFeed=xAx0x1`합니다. 이 URL은 보고서(Product Sales Summary), Atom 렌더링 형식(ATOM) 및 데이터 피드의 이름(xAx0x1)을 식별합니다.  
   
  보고서 항목 이름은 기본적으로 보고서 항목의 RDL(Report Definition Language) 요소 이름으로 설정되며 간단하지 않거나 기억하기 쉽지 않은 경우가 많습니다. 예를 들어 보고서에 배치된 첫 번째 행렬의 기본 이름은 Tablix 1입니다. 데이터 피드는 이러한 이름을 사용합니다.  
   
- 데이터 피드를 사용하기 쉽게 만들려면 데이터 영역의 DataElementName 속성을 사용하여 친숙한 이름을 제공할 수 있습니다. DataElementName의 값을 제공하는 경우 데이터 피드 하위 요소 \<**d**>는 기본 데이터 영역 이름 대신 이 값을 사용합니다. 예를 들어 데이터 영역의 기본 이름이 Tablix1인 경우 DataElementName이 SalesByTerritoryYear로 설정되면 데이터 피드의 \<**d**>는 SalesByTerritoryYear를 사용합니다. 데이터 영역에 위에서 설명한 행렬 보고서와 같은 두 가지 데이터 피드가 있는 경우 데이터 피드에서 사용되는 이름은 SalesByTerritoryYear _Territory 및 SalesByTerritoryYear _Year입니다.  
+ 데이터 피드를 사용하기 쉽게 만들려면 데이터 영역의 DataElementName 속성을 사용하여 친숙한 이름을 제공할 수 있습니다. 데이터 피드 하위 요소 DataElementName에 대 한 값을 제공 하는 경우 \< **d**>는 사용 하는 기본 데이터 영역 이름 대신 합니다. 예를 들어 데이터 영역에 대해 기본 이름인 Tablix1 및 DataElementName SalesByTerritoryYear로 설정 하면 \< **d**> 데이터에서 피드는 SalesByTerritoryYear를 사용 합니다. 데이터 영역에 위에서 설명한 행렬 보고서와 같은 두 가지 데이터 피드가 있는 경우 데이터 피드에서 사용되는 이름은 SalesByTerritoryYear _Territory 및 SalesByTerritoryYear _Year입니다.  
   
  보고서에 표시된 데이터와 데이터 피드의 데이터를 비교하는 경우 몇 가지 차이점을 확인할 수 있습니다. 보고서에는 형식이 지정된 숫자 및 시간/날짜 데이터가 표시되는 경우가 많지만 데이터 피드에는 형식이 지정되지 않은 데이터가 포함됩니다.  
   
  데이터 피드는 .atom 파일 이름 확장명으로 저장됩니다. 메모장 또는 XML 편집기와 같은 텍스트 또는 XML 편집기를 사용하여 파일 구조와 내용을 볼 수 있습니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="FlatteningReportData"></a> 보고서 데이터 일반화  
  Atom 렌더러는 XML 형식의 일반화된 행 집합으로 보고서 데이터를 제공합니다. 데이터 테이블을 일반화하기 위한 규칙은 몇 가지 예외를 제외하고 CSV 렌더러의 규칙과 동일합니다.  
@@ -145,9 +149,8 @@ caps.handback.revision: 11
   
 -   피어 데이터 영역은 공통 데이터 영역 또는 동적 상위 항목을 공유하는 데이터 영역 또는 동적 그룹입니다. 피어 데이터는 결합된 트리의 분기에 의해 식별됩니다.  
   
- 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)MIME 형식을 반환합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="AtomRendering"></a> Atom 렌더링 규칙  
  Atom 렌더링 확장 프로그램은 데이터 피드를 렌더링할 때 다음 정보를 무시합니다.  
@@ -185,15 +188,13 @@ caps.handback.revision: 11
 |표시기|활성 상태 이름, 사용 가능한 상태 및 데이터 값을 포함하는 단일 레코드로 렌더링합니다.|  
 |지도|각 지도 데이터 영역에 대한 데이터 피드를 생성합니다. 여러 지도 계층에서 동일한 데이터 영역을 사용하는 경우 데이터 피드에는 모든 지도 계층이 포함됩니다. 데이터 피드에는 지도 계층의 각 지도 멤버에 대한 레이블과 값이 있는 레코드가 포함됩니다.|  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> 장치 정보 설정  
  사용할 인코딩 스키마를 비롯하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [ATOM Device Information Settings](../../reporting-services/atom-device-information-settings.md)을 참조하세요.  
-  
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
-  
-## 관련 항목:  
- [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
- [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>다음 단계
+
+[CSV 파일로 내보내기](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)   
+[보고서 내보내기](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

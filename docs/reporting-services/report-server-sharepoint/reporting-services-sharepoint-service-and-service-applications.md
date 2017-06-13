@@ -1,23 +1,28 @@
 ---
 title: "Reporting Services SharePoint Service 및 서비스 응용 프로그램 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d34dfcd5c6c4ecb6ef91dc57cb7e98ee71512393
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services SharePoint Service 및 서비스 응용 프로그램
+# <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 응용 프로그램
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 서비스 아키텍처에 맞게 구축되었으며 SharePoint 서비스와 일대다 서비스 응용 프로그램을 활용합니다. 서비스 응용 프로그램을 만들면 서비스를 사용할 수 있게 되며 서비스 응용 프로그램 데이터베이스가 생성됩니다. Reporting Services 서비스 응용 프로그램은 여러 개 만들 수 있지만 대부분의 배포 시나리오에서 서비스 응용 프로그램은 하나면 충분합니다.  
   
  이 항목에는 다음과 같은 정보가 포함되어 있습니다.  
@@ -33,7 +38,7 @@ caps.handback.revision: 10
 -   [관련 작업](#bkmk_related)  
   
 ##  <a name="bkmk_createapp"></a> Reporting Services 서비스 응용 프로그램 만들기  
- SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/ko-kr/47efa72e-1735-4387-8485-f8994fb08c8c)에서 "Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조하세요. 서비스 응용 프로그램을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
+ SharePoint 중앙 관리 또는 PowerShell 스크립트를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만들 수 있습니다. SharePoint 중앙 관리를 사용하는 방법은 [SharePoint 2010용 Reporting Services SharePoint 모드 설치](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c)에서 "Reporting Services 서비스 응용 프로그램 만들기" 섹션을 참조하세요. 서비스 응용 프로그램을 만들기 위한 예제 PowerShell 스크립트는 이 항목의 뒷부분에 나오는 PowerShell 섹션을 참조하세요.  
   
 ##  <a name="bkmk_associations"></a> 프록시 그룹과 서비스 응용 프로그램의 연결 수정  
  서비스 응용 프로그램을 만들기 위한 새 페이지에는 **웹 응용 프로그램 연결**섹션이 있습니다. 이 섹션에서 만들어지는 서비스 응용 프로그램에 연결할 수 있습니다. 다음 단계를 사용하여 연결을 변경하고 사용자 구성을 서비스 응용 프로그램에 할당합니다. 사용자 지정 그룹에 대한 서비스 응용 프로그램의 연결을 변경하지 않고 동일한 일반 프로세스를 사용하여 기본 그룹에 프록시를 추가할 수도 있습니다.  

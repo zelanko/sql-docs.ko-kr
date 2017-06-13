@@ -1,26 +1,31 @@
 ---
-title: "성능, 스냅숏, 캐시(Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "성능 [Reporting Services]"
-  - "Reporting Services, 성능 "
+title: "성능, 스냅숏, 캐싱 (Reporting Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- performance [Reporting Services]
+- Reporting Services, performance
 ms.assetid: 85afd00f-e8d7-4ef7-9174-2ff84d82f960
 caps.latest.revision: 20
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 20
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c752ea8a5f05a1dc861b0297b7a1c0eaca5cfc88
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 성능, 스냅숏, 캐시(Reporting Services)
+# <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅숏, 캐시(Reporting Services)
   보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](http://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 및 [Visual Studio 2005를 사용한 SQL Server 2005 Reporting Services 보고서 서버의 부하 테스트 수행](http://go.microsoft.com/fwlink/?LinkID=77519)을 참조하세요.  
   
  고려해야 할 일반 원칙은 다음과 같습니다.  
@@ -39,7 +44,7 @@ caps.handback.revision: 20
   
 -   메모리 관리 구성 설정을 조정하여 성능 문제를 완화하는 방법에 대한 자세한 내용은 [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)을 참조하세요.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [보고서 서버 성능 모니터링](../../reporting-services/report-server/monitoring-report-server-performance.md)  
  서버의 처리 부하를 추적하는 데 사용할 수 있는 성능 개체에 대해 설명합니다.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 20
  [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
  쿼리 및 보고서 처리에 대한 제한 시간을 설정하는 방법에 대해 설명합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)   
  [보고서 실행 확인](../../reporting-services/report-server/verifying-a-report-run.md)  
   

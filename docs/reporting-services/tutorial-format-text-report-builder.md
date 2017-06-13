@@ -1,24 +1,31 @@
 ---
-title: "자습서: 텍스트 서식 지정(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "자습서: 텍스트 (보고서 작성기) 서식을 지정할 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 caps.latest.revision: 16
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 15
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 자습서: 텍스트 서식 지정(보고서 작성기)
+
+# <a name="tutorial-format-text-report-builder"></a>자습서: 텍스트 서식 지정(보고서 작성기)
+
 이 자습서에서는 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서의 텍스트에 서식을 지정하는 다양한 방법을 연습합니다. 다양한 서식을 실험할 수 있습니다. 
 
 빈 보고서와 함께 데이터 원본 및 데이터 집합을 설정한 후 탐색할 서식을 선택할 수 있습니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
@@ -26,37 +33,17 @@ caps.handback.revision: 15
 ![report-build-format-report](../reporting-services/media/report-build-format-report.png) 
   
 한 단계에서는 고의적으로 작업을 잘못 수행하므로 해당 작업이 잘못인 이유를 확인할 수 있습니다. 그런 다음 이를 올바르게 수정하여 원하는 결과를 얻을 수 있습니다.  
-   
-## <a name="BackToTop"></a>학습 내용  
-  
-### 보고서 설정  
-1. [빈 보고서와 함께 데이터 원본 및 데이터 집합 만들기](#CreateReport)  
-  
-2. [보고서 디자인 화면에 필드 추가(잘못 추가한 후 올바르게 추가)](#AddField)  
-  
-3. [보고서 디자인 화면에 테이블 추가](#AddTable)  
-  
-### 선택  
-* [보고서에 하이퍼링크 추가](#AddHyperlink)  
-  
-* [보고서의 텍스트 회전](#RotateText)  
-  
-* [통화 서식 지정](#FormatCurrency)  
-  
-* [HTML 서식을 사용하여 텍스트 표시](#FormatHTML)  
-  
-* [보고서 저장](#Save)  
-  
+    
 이 자습서에 소요되는 예상 시간: 20분  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="CreateReport"></a>빈 보고서와 함께 데이터 원본 및 데이터 집합 만들기  
   
-### 빈 보고서를 만들려면  
+### <a name="to-create-a-blank-report"></a>빈 보고서를 만들려면  
   
-1.  컴퓨터, [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드에서 [보고서 작성기를 시작](../reporting-services/report-builder/start-report-builder.md)합니다.  
+1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
     **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
   
@@ -66,7 +53,7 @@ caps.handback.revision: 15
   
 3.  오른쪽 창에서 **빈 보고서**를 클릭합니다.  
   
-### 데이터 원본을 만들려면  
+### <a name="to-create-a-data-source"></a>데이터 원본을 만들려면  
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
 
@@ -79,11 +66,11 @@ caps.handback.revision: 15
 4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. `Data Source = <servername>`  
   
     > [!NOTE]  
-    > `<servername>` 식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 집합을 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > `<servername>`식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 자습서에서는 특정 데이터; 필요 하지 않습니다. SQL Server 데이터베이스에 연결을 하기만 합니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 집합을 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 데이터 집합을 만들려면  
+### <a name="to-create-a-dataset"></a>데이터 집합을 만들려면  
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 집합**을 클릭합니다.  
   
@@ -144,7 +131,7 @@ caps.handback.revision: 15
 ## <a name="AddField"></a>보고서 디자인 화면에 필드 추가  
 데이터 집합의 필드가 보고서에 나타나도록 하려는 경우 먼저 해당 필드를 디자인 화면으로 직접 끌 수 있습니다. 이 연습에서는 이러한 방법이 올바르지 않은 이유와 대신 사용할 수 있는 방법을 보여 줍니다.  
   
-### 보고서에 필드를 추가하려면(잘못된 결과)  
+### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>보고서에 필드를 추가하려면(잘못된 결과)  
   
 1.  보고서 데이터 창의 **FullName** 필드를 디자인 화면으로 끌어옵니다.  
   
@@ -152,11 +139,11 @@ caps.handback.revision: 15
   
 2.  **실행**을 클릭합니다.  
   
-    쿼리에서 사전순으로 첫 번째 레코드인 **Fernando Ross** 레코드 하나만 표시됩니다. 즉, 이 필드가 반복되어 해당 필드의 다른 레코드가 표시되지 않습니다.  
+    쿼리에서 사전순으로 첫 번째 레코드인 **Fernando Ross**레코드 하나만 표시됩니다. 즉, 이 필드가 반복되어 해당 필드의 다른 레코드가 표시되지 않습니다.  
   
 3.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-4.  입력란에서 `<Expr>`식을 선택합니다.  
+4.  입력란에서 `<Expr>` 식을 선택합니다.  
   
 5.  **값** 속성에 대한 속성 창에서 다음을 확인합니다. 속성 창이 표시되지 않으면 **보기** 탭에서 **속성**을 선택합니다.  
   
@@ -170,7 +157,7 @@ caps.handback.revision: 15
   
 6.  입력란을 선택하고 Delete 키를 누릅니다. 식이 선택된 경우 입력란을 선택하려면 Esc 키를 누릅니다.  
   
-### 보고서에 필드를 추가하려면(올바른 결과)  
+### <a name="to-add-a-field-to-the-report-and-get-the-right-result"></a>보고서에 필드를 추가하려면(올바른 결과)  
   
 1.  리본의 **삽입** 탭에 있는 **데이터 영역** 영역에서 **목록**을 클릭합니다. 디자인 화면을 클릭한 다음 끌어서 약 2인치 너비와 1인치 높이의 상자를 만듭니다.  
   
@@ -203,7 +190,7 @@ caps.handback.revision: 15
   
 2.  새 테이블 또는 행렬 마법사의 **데이터 집합 선택** 페이지에서 **이 보고서의 기존 데이터 집합 또는 공유 데이터 집합 선택** > **TextDataset(이 보고서)** > **다음**을 클릭합니다.  
   
-3.  **필드 정렬** 페이지에서 **Territory**, **LinkText** 및 **Product** 필드를 **행 그룹**으로 끌고 **Sales** 필드를 **값**으로 끈 후 **다음**을 클릭합니다.  
+3.  **필드 정렬** 페이지에서 **Territory**, **LinkText**및 **Product** 필드를 **행 그룹**으로 끌고 **Sales** 필드를 **값**으로 끈 후 **다음**을 클릭합니다.  
 
     ![report-builder-text-arrange-fields](../reporting-services/media/report-builder-text-arrange-fields.png)
   
@@ -219,7 +206,7 @@ caps.handback.revision: 15
   
 8.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-9. **LinkText** 열의 **Total** 셀을 선택한 다음 Shift 키를 누른 상태로 오른쪽에 있는 두 셀, 즉 **Product** 열의 빈 셀과 **Sales** 열의 `[Sum(Sales)]` 셀을 선택합니다.  
+9. **LinkText** 열의 **Total** 셀을 선택한 다음 Shift 키를 누른 상태로 오른쪽에 있는 두 셀, 즉 **Product** 열의 빈 셀과 `[Sum(Sales)]` Sales **열의** 셀을 선택합니다.  
   
 11. 이 세 개의 셀을 선택한 상태에서 이 셀 중 하나를 마우스 오른쪽 단추로 클릭한 다음 **행 삭제**를 클릭합니다.  
 
@@ -267,7 +254,7 @@ caps.handback.revision: 15
   
 4.  속성 창이 열려 있지 않으면 **보기** 탭에서 **속성** 확인란을 선택합니다.  
   
-5.  속성 창에서 WritingMode 속성을 찾은 다음 **기본값**에서 **Rotate270**으로 변경합니다.  
+5.  속성 창에서 WritingMode 속성을 찾은 다음 **기본값** 에서 **Rotate270**으로 변경합니다.  
  
     > [!NOTE]  
     > 속성 창의 속성이 범주로 구성되어 있는 경우 WritingMode는 **지역화** 범주에 있습니다. 셀만 선택하고 텍스트는 선택하지 말아야 합니다. WritingMode는 텍스트가 아니라 입력란의 속성입니다.  
@@ -349,7 +336,7 @@ caps.handback.revision: 15
   
 이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  
   
-### 보고서를 보고서 서버에 저장하려면  
+### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
@@ -365,7 +352,7 @@ caps.handback.revision: 15
   
 보고서가 보고서 서버에 저장됩니다. 연결된 보고서 서버의 이름이 창 아래쪽에 있는 상태 표시줄에 나타납니다.  
   
-### 컴퓨터에 보고서를 저장하려면  
+### <a name="to-save-the-report-on-your-computer"></a>컴퓨터에 보고서를 저장하려면  
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
@@ -374,12 +361,13 @@ caps.handback.revision: 15
 3.  **이름**에서 기본 이름을 선택한 이름으로 대체합니다. 
   
 4.  **저장**을 클릭합니다.  
-  
-## 다음 단계  
-보고서 작성기에서는 여러 가지 방법으로 텍스트 서식을 지정할 수 있습니다. [자습서: 자유 형식 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)에 더 많은 예제가 포함되어 있습니다.  
-  
-## 관련 항목:  
--   [보고서 작성기 자습서 ](../reporting-services/report-builder-tutorials.md) 
--   [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
--   [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+## <a name="next-steps"></a>다음 단계
+
+보고서 작성기에서는 여러 가지 방법으로 텍스트 서식을 지정할 수 있습니다. [자습서: 자유 형식 보고서 만들기](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) 더 많은 예제를 포함 합니다.  
+
+[보고서 작성기 자습서 ](../reporting-services/report-builder-tutorials.md)  
+ [보고서 항목 서식 지정](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

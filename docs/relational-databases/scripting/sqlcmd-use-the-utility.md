@@ -1,7 +1,7 @@
 ---
 title: "sqlcmd 유틸리티 사용 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/05/2016
+ms.date: 06/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,18 +22,18 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0da3877ee499ec318f386b875f6e3caa7ff3d4ea
+ms.sourcegitcommit: 0c1e5939ddf08692998f26ccbb2c2fa699342c55
+ms.openlocfilehash: 4ff24dabc28ae25ec38a546ed8f119979eef4e60
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/07/2017
 
 ---
-# <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
+# <a name="sqlcmd---use-the-utility"></a>sqlcmd-유틸리티 사용
   **sqlcmd** 유틸리티는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 스크립트의 임시 대화형 실행과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립팅 태스크의 자동화를 위한 명령줄 유틸리티입니다. **sqlcmd** 를 대화형으로 사용하거나 **sqlcmd**를 사용하여 실행할 스크립트 파일을 작성하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 이해해야 합니다. 일반적으로 **sqlcmd** 유틸리티는 다음과 같은 방법으로 사용됩니다.  
   
--   명령 프롬프트에서와 비슷한 방법으로 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 대화형으로 입력합니다. 결과는 명령 프롬프트에 표시됩니다. 명령 프롬프트 창을 열려면 **시작**, **모든 프로그램**을 차례로 클릭하고 **보조프로그램**을 가리킨 다음 **명령 프롬프트**를 클릭합니다. 명령 프롬프트에서 **sqlcmd** 를 입력한 뒤 원하는 옵션을 입력합니다. **sqlcmd**에서 지원하는 옵션의 전체 목록은 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 참조하세요.  
+-   사용자가 입력 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령 프롬프트에서와 비슷한 방식으로 문입니다. 결과는 명령 프롬프트에 표시됩니다. 명령 프롬프트 창을 열려면 클릭 확인 하 고 Windows 검색 상자에 "cmd"를 입력 **명령 프롬프트** 를 엽니다. 명령 프롬프트에서 **sqlcmd** 를 입력한 뒤 원하는 옵션을 입력합니다. **sqlcmd**에서 지원하는 옵션의 전체 목록은 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 참조하세요.  
   
--   실행할 단일 **문을 지정하거나 실행할** 문이 포함된 텍스트 파일을 유틸리티에 알려 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업을 제출합니다. 결과는 일반적으로 텍스트 파일로 전송되지만 명령 프롬프트에 표시될 수도 있습니다.  
+-   실행할 단일 **문을 지정하거나 실행할** 문이 포함된 텍스트 파일을 유틸리티에 알려 [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업을 제출합니다. 출력은 일반적으로 텍스트 파일로 전송 되지만 명령 프롬프트에 표시 될 수도 있습니다.  
   
 -   [쿼리 편집기의](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md) SQLCMD 모드 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
@@ -41,21 +41,17 @@ ms.lasthandoff: 04/11/2017
   
 -   SQL Server 에이전트 CmdExec 작업  
   
-## <a name="typically-used-sqlcmd-options"></a>일반적으로 사용되는 sqlcmd 옵션  
- 가장 일반적으로 사용되는 옵션은 다음과 같습니다.  
+## <a name="typically-used-sqlcmd-options"></a>일반적으로 사용 되는 sqlcmd 옵션  
   
--   **-S**가 연결하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 식별하는 서버 옵션( **-S** )  
+-   서버 옵션 (**-S**)의 인스턴스를 식별 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 있는 **sqlcmd** 연결 합니다.  
   
--   **sqlcmd**가 **인스턴스에 연결하기 위해 사용하는 자격 증명을 지정하는 인증 옵션(**-E **,**-U **및** -P [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+-   인증 옵션 (**-E**, **-U**, 및 **-P**) 자격 증명을 지정 하는 **sqlcmd** 의 인스턴스에 연결 하는 데 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. **참고:** 옵션 **-E** 기본값이 며 지정할 필요가 없습니다.  
   
-    > **참고:** **-E** 옵션은 기본값이므로 따로 지정하지 않아도 됩니다.  
+-   입력 옵션 (**-Q**, **-q**, 및 **-i**)에 대 한 입력의 위치를 식별 **sqlcmd**합니다.  
   
--   **sqlcmd**에 입력될 내용의 위치를 식별하는 입력 옵션( **-Q**, **-q**및 **-i**)  
+-   출력 옵션 (**-o**) 파일 지정 **sqlcmd** 해당 출력을 배치 하는 것입니다.  
   
--   **sqlcmd**가 출력 내용을 저장할 파일을 지정하는 출력 옵션( **-o** )  
-  
-## <a name="connecting-to-the-sqlcmd-utility"></a>sqlcmd 유틸리티에 연결  
- **sqlcmd** 유틸리티의 일반적인 용도는 다음과 같습니다.  
+## <a name="connect-to-the-sqlcmd-utility"></a>Sqlcmd 유틸리티에 연결  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 대화형으로 실행하기 위해 Windows 인증을 사용하여 기본 인스턴스에 연결  
   
@@ -103,7 +99,7 @@ ms.lasthandoff: 04/11/2017
   
     > **힌트** **sqlcmd** 유틸리티에서 지원하는 옵션 목록을 보려면 `sqlcmd -?`를 실행하세요.  
   
-## <a name="running-transact-sql-statements-interactively-by-using-sqlcmd"></a>sqlcmd를 사용하여 대화형으로 Transact-SQL 문 실행  
+## <a name="run-transact-sql-statements-interactively-by-using-sqlcmd"></a>Sqlcmd를 사용 하 여 TRANSACT-SQL 문을 대화형으로 실행  
  **sqlcmd** 유틸리티를 대화형으로 사용하여 명령 프롬프트 창에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] sqlcmd **를 사용하여**문을 대화형으로 실행하려면 입력 파일이나 쿼리를 지정하는 **-Q**, **-q**, **-Z**또는 **-i** 옵션을 사용하지 않고 유틸리티를 실행합니다. 예를 들어  
   
  `sqlcmd -S <ComputerName>\<InstanceName>`  
@@ -131,7 +127,7 @@ ms.lasthandoff: 04/11/2017
   
  `Length: 5" 7'`  
   
-## <a name="strings-that-span-multiple-lines"></a>여러 줄로 구성된 문자열  
+## <a name="strings-that-span-multiple-lines"></a>여러 줄으로 구성 하는 문자열  
  **sqlcmd** 는 스크립트에서 문자열을 여러 줄로 나누어 입력할 수 있도록 지원합니다. 예를 들어 다음 `SELECT` 문은 여러 줄로 나누어져 있으나 `GO`를 입력한 후 Enter 키를 누르면 단일 문자열로 실행됩니다.  
   
  `SELECT First line`  
@@ -207,7 +203,7 @@ ms.lasthandoff: 04/11/2017
   
  `3> GO` 줄 다음에 표시된 줄은 `SELECT` 문의 출력입니다. 출력이 생성된 후 `sqlcmd` 는 `sqlcmd` 프롬프트를 다시 설정하고 `1>`을 표시합니다. `EXIT` 줄에 `1>`를 입력하면 명령 프롬프트 창을 처음 열었을 때와 동일한 줄이 표시됩니다. 이는 `sqlcmd` 가 해당 세션을 종료했음을 나타냅니다. 이제 다시 `EXIT` 명령을 입력하여 명령 프롬프트 창을 닫을 수 있습니다.  
   
-## <a name="running-transact-sql-script-files-by-using-sqlcmd"></a>sqlcmd를 사용하여 Transact-SQL 스크립트 파일 실행  
+## <a name="running-transact-sql-script-files-using-sqlcmd"></a>Sqlcmd를 사용 하 여 Transact SQL 스크립트 파일 실행  
  **sqlcmd** 를 사용하여 데이터베이스 스크립트 파일을 실행할 수 있습니다. 스크립트 파일은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, **sqlcmd** 명령 및 스크립팅 변수를 포함하는 텍스트 파일입니다. 변수를 스크립팅하는 방법은 [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)을 참조하세요. **sqlcmd** 는 대화형으로 입력된 문과 명령을 사용하는 방식과 유사한 방식으로 스크립트 파일의 문, 명령 및 스크립팅 변수를 사용합니다. 주된 차이점은 **sqlcmd** 가 사용자의 문, 명령 및 스크립팅 변수 입력 작업을 기다리지 않고 일시 중지 없이 입력 파일을 읽는다는 점입니다.  
   
  다음과 같이 데이터베이스 스크립트 파일을 만드는 다른 방법도 있습니다.  
@@ -561,7 +557,7 @@ SQLCMD –E –N –C
   
  공급자가 `ForceProtocolEncryption = True` 를 지정하는 경우 연결 문자열에 `Encrypt=No` 가 있어도 암호화가 설정됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="more-about-sqlcmd"></a>Sqlcmd 대 한 자세한 정보  
  [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)   
  [스크립팅 변수와 함께 sqlcmd 사용](../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md)   
  [쿼리 편집기로 SQLCMD 스크립트 편집](../../relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)   

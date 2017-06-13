@@ -2,7 +2,7 @@
 title: "임시 테이블 사용 시나리오 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/13/2017
+ms.date: 05/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,27 +16,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6a2865838df1d66119f68c6d8cd19809a8f86c
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>임시 테이블 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   임시 테이블은 일반적으로 데이터 변경 기록을 추적하는 데 필요한 시나리오에서 유용합니다.    
-생산성이 상당히 높으므로 다음 사용 사례에서 임시 테이블을 사용을 고려하는 것이 좋습니다.  
-  
--   [데이터 감사](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_0)  
-  
--   [지정 시간 분석(시간 이동)](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_1)  
-  
--   [변칙 검색](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_2)  
-  
--   [느린 변경 차원](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_3)  
-  
--   [행 수준 데이터 손상 복구](https://msdn.microsoft.com/library/mt631669.aspx#Anchor_4)  
+에 대 한 주요 생산성이 높으므로 다음 사용 사례에서 임시 테이블을 고려 하는 것이 좋습니다.  
   
 ## <a name="data-audit"></a>데이터 감사  
  변경된 사항 및 시기를 추적하고 지정 시간에 법정 분석을 수행하는 데 필요한 중요 정보가 저장된 테이블에서는 임시 시스템 버전 관리를 사용합니다.    

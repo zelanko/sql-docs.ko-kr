@@ -1,23 +1,28 @@
 ---
-title: "보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(보고서 작성기 및 SSRS) 보고서를 스크롤할 때 머리글 계속 표시 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6d9192a4-fd5c-41ad-b9ef-f88f9496afed
 caps.latest.revision: 10
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 10
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f2fac57fe0e898a1ccbfbe33fb271eae76da1389
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
+# <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>보고서를 스크롤할 때 머리글 계속 표시(보고서 작성기 및 SSRS)
   보고서를 렌더링한 다음 스크롤할 때 행 및 열 레이블이 화면에서 사라지지 않도록 하려면 행 또는 열 머리글을 고정할 수 있습니다.  
   
  행과 열을 제어하는 방법은 테이블 또는 행렬이 있는지 여부에 따라 다릅니다. 테이블이 있는 경우 정적 멤버(행 및 열 머리글)가 계속 표시되도록 구성합니다. 행렬이 있는 경우 행 및 열 그룹 머리글이 계속 표시되도록 구성합니다.  
@@ -33,12 +38,12 @@ caps.handback.revision: 10
   
  다음 이미지에서는 행렬을 보여 줍니다.  
   
- ![행렬](../../reporting-services/report-design/media/matrix.png "행렬")  
+ ![행렬](../../reporting-services/report-design/media/matrix.png "매트릭스")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 스크롤하는 동안 행렬 그룹 머리글을 계속 표시하려면  
+### <a name="to-keep-matrix-group-headers-visible-while-scrolling"></a>스크롤하는 동안 행렬 그룹 머리글을 계속 표시하려면  
   
 1.  테이블릭스 데이터 영역에서 행, 열 또는 모퉁이 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 10
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 스크롤하는 동안 정적 테이블릭스 멤버(행 또는 열)를 계속 표시하려면  
+### <a name="to-keep-a-static-tablix-member-row-or-column-visible-while-scrolling"></a>스크롤하는 동안 정적 테이블릭스 멤버(행 또는 열)를 계속 표시하려면  
   
 1.  디자인 화면에서 테이블의 아무 곳이나 클릭하여 그룹 창에 그룹과 함께 정적 멤버를 표시합니다.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 10
   
 3.  스크롤하는 동안 계속 표시할 정적 멤버(행 또는 열)를 클릭합니다. 속성 창에 **테이블릭스 멤버** 속성이 표시됩니다.  
   
-     ![테이블릭스 구성원 속성](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "테이블릭스 구성원 속성")  
+     ![테이블 릭 스 멤버 속성](../../reporting-services/report-design/media/grouppane-tablixmember-updated.png "테이블 릭 스 멤버 속성")  
   
 4.  속성 창에서 **FixedData** 를 **True**로 설정합니다.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 10
   
  보고서 페이지를 아래로 또는 옆으로 이동할 때 정적 테이블릭스 멤버가 계속 표시됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
  [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

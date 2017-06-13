@@ -1,7 +1,7 @@
 ---
 title: "고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능 | Microsoft 문서"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 04/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 16f09bada7bbf3ae964ecfa09aa33208aa2f3acf
+ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
+ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/17/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
@@ -51,19 +51,29 @@ ms.lasthandoff: 04/11/2017
 
 다음과 같은 쿼리 구문이 지원됩니다.  
 
+CASE 식: 모든 문이나 절 유효한 식을 허용 하는 대/소문자를 사용할 수 있습니다.
+   - **적용 대상:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]합니다.  
+    부터는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE 문은 고유 하 게 컴파일된 T-SQL 모듈에 대 한 이제 지원 됩니다.
+
 SELECT 절:  
 
 -   열 및 이름 별칭(AS 또는 = 구문 사용)  
 
--   스칼라 하위 쿼리  
+-   스칼라 하위 쿼리
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
+      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 스칼라 하위 쿼리는 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
+      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], DISTINCT 연산자 고유 하 게 컴파일된 모듈에서 지원 됩니다.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 및 UNION ALL
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
+      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION 및 UNION ALL 연산자가 이제 고유 하 게 컴파일된 모듈에서 지원 됩니다.
 
 -   변수 할당  
 
@@ -73,15 +83,22 @@ FROM 절:
 
 -   FROM \<고유하게 컴파일된 인라인 TVF>  
 
--   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN 및 INNER JOIN  
+-   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN 및 INNER JOIN
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
+      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 조인 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
 
--   하위 쿼리 `[AS] table_alias`. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요.  
+-   하위 쿼리 `[AS] table_alias`. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요. 
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
+      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 하위 쿼리는 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
 
 WHERE 절:  
 
 -   필터 조건자 IS [NOT] NULL  
 
--   AND, OR, NOT, IN, EXISTS, BETWEEN  
+-   및 사이  
+-   OR, NOT, EXISTS,
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
+      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS 연산자는 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 절:

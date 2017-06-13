@@ -1,30 +1,35 @@
 ---
 title: "데이터 집합 속성 대화 상자, 필터 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.datasetproperties.filters.f1"
-  - "10170"
-  - "10025"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: reference
+f1_keywords:
+- sql13.rtp.rptdesigner.datasetproperties.filters.f1
+- "10170"
+- "10025"
 ms.assetid: 53ac304f-7f7c-4f00-9b3b-9b563ec97917
 caps.latest.revision: 38
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 38
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6388e815e67edcb764a02f9c15d7f7dfdc12a6c5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 데이터 집합 속성 대화 상자, 필터
+# <a name="dataset-properties-dialog-box-filters"></a>데이터 집합 속성 대화 상자, 필터
   **데이터 집합 속성** 대화 상자에서 **필터** 를 선택하여 데이터 집합에 대한 필터를 만들 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **추가**  
  새 필터 절을 목록에 추가합니다.  
   
@@ -46,10 +51,10 @@ caps.handback.revision: 38
  **연산자**  
  식과 값을 비교하는 데 사용할 연산자를 선택합니다.  
   
- **Value**  
+ **값**  
  **식** 상자에 지정된 식을 계산할 때 사용할 값이나 식을 입력합니다. 식을 편집하려면 식(**fx**) 단추를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   

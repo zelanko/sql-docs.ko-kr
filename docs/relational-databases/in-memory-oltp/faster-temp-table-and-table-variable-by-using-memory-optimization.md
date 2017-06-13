@@ -1,7 +1,7 @@
 ---
 title: "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수 | Microsoft 문서"
 ms.custom: 
-ms.date: 01/17/2017
+ms.date: 06/12/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 98f4cf9519987f458c1f053ffe9368776b28cda9
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/13/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수
@@ -430,40 +430,4 @@ Azure SQL 데이터베이스에서 스크립트를 실행하는 경우 동일한
 - [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)
 - [메모리 액세스에 최적화된 개체에 대한 내구성 정의](../../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md)  
   
-  
-  
-  
-\<!--  
-CAPS 제목: "메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수"  
-  
-https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/  
-  
-  
-[ALTER DATABASE 파일 및 파일 그룹 옵션(Transact-SQL)](http://msdn.microsoft.com/library/bb522469.aspx)  
-  
-[메모리 액세스에 최적화된 파일 그룹](http://msdn.microsoft.com/library/dn639109.aspx)  
-  
-[리소스 관리자 리소스 풀](http://msdn.microsoft.com/library/hh510189.aspx)  
-  
-  
-[메모리 최적화 관리자](http://msdn.microsoft.com/library/dn284308.aspx)  
-  
-[메모리 액세스에 최적화된 테이블에 필요한 메모리 예측](http://msdn.microsoft.com/library/dn282389.aspx)  
-  
-[메모리 액세스에 최적화된 테이블의 테이블 및 행 크기: 계산 예](http://msdn.microsoft.com/library/dn205318.aspx)  
-  
-  
-[메모리 액세스에 최적화된 테이블에 대한 내구성](http://msdn.microsoft.com/library/dn553125.aspx)  
-  
-[메모리 액세스에 최적화된 개체에 대한 내구성 정의](http://msdn.microsoft.com/library/dn553122.aspx)  
-  
-[Memory-Optimized Table Variables](http://msdn.microsoft.com/library/dn535766.aspx)  
-  
-  
-GeneMi , 2016-05-02  월요일  18:40pm  
--->  
-  
-  
-  
-
 

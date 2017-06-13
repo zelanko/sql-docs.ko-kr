@@ -2,7 +2,7 @@
 title: "고유하게 컴파일된 저장 프로시저에서 CASE 식 구현 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 04/24/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,13 +16,37 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89227fade8bab98e8c7de4f1119acf16bd28df76
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저에서 CASE 식 구현
+[!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
+
+  CASE 식은 고유 하 게 컴파일된 저장된 프로시저에서 사용할 수 있습니다. 다음 예제 쿼리에서 CASE 식을 사용 하는 방법을 보여 줍니다. CASE 식은 고유 하 게 컴파일된 모듈에 대 한 설명 된 해결 방법은 더 이상 필요 합니다.
+
+``` 
+-- Query using a CASE expression in a natively compiled stored procedure.
+CREATE PROCEDURE dbo.usp_SOHOnlineOrderResult  
+   WITH NATIVE_COMPILATION, SCHEMABINDING, EXECUTE AS OWNER  
+   AS BEGIN ATOMIC WITH  (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE=N'us_english')  
+   SELECT   
+      SalesOrderID,   
+      CASE (OnlineOrderFlag)   
+      WHEN 1 THEN N'Order placed online by customer'  
+      ELSE N'Order placed by sales person'  
+      END  
+   FROM Sales.SalesOrderHeader_inmem
+END  
+GO  
+  
+EXEC dbo.usp_SOHOnlineOrderResult  
+GO  
+```  
+
+
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   CASE 식은 고유하게 컴파일된 저장 프로시저에서 지원되지 *않습니다* . 다음 예제에서는 고유하게 컴파일된 저장 프로시저에서 CASE 식의 기능을 구현하는 방법을 보여 줍니다.  
@@ -85,3 +109,4 @@ GO
  [메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   
+

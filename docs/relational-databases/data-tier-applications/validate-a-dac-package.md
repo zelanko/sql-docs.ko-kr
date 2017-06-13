@@ -22,10 +22,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036df2b92a90337202eb84adb6284169a8f54f76
+ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
+ms.openlocfilehash: b821b7c7aa037467bfe2607267faa6aed0a47859
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/29/2017
 
 ---
 # <a name="validate-a-dac-package"></a>DAC 패키지 유효성 검사
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>업그레이드 동작 보기 예(PowerShell)  
  **업그레이드 동작 보기 예(PowerShell)**  
   
- 다음 예에서는 MyApplicaiton이라는 DAC를 MyApplicationVNext.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
+ 다음 예제에서는 MyApplication2017.dacpac 파일에 정의 된 스키마 MyApplicaiton 이라는 DAC를 업그레이드 하기 위해 실행 되는 TRANSACT-SQL 문을 보고 합니다.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  
@@ -153,7 +153,7 @@ $serverconnection.Connect()
 $dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
   
 ## Load the DAC package file.  
-$dacpacPath = "C:\MyDACs\MyApplicationVNext.dacpac"  
+$dacpacPath = "C:\MyDACs\MyApplication2017.dacpac"  
 $fileStream = [System.IO.File]::Open($dacpacPath,[System.IO.FileMode]::OpenOrCreate)  
 $dacType = [Microsoft.SqlServer.Management.Dac.DacType]::Load($fileStream)  
   

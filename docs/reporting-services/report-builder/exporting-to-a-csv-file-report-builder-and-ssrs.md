@@ -1,26 +1,31 @@
 ---
-title: "CSV 파일로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(보고서 작성기 및 SSRS) CSV 파일로 내보내기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 60c8d93cd6901e6a18337212f8906ccbbf0f5522
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# CSV 파일로 내보내기(보고서 작성기 및 SSRS)
+# <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>CSV 파일로 내보내기(보고서 작성기 및 SSRS)
   CSV(쉼표로 구분된 값) 렌더링 확장 프로그램은 페이지가 매겨진 보고서의 데이터를 결합하여 읽기 쉽고 많은 응용 프로그램과 교환할 수 있는 표준화된 일반 텍스트 형식으로 렌더링합니다.  
   
- CSV 렌더링 확장 프로그램에서는 필드와 행을 구분하기 위해 문자열 구분 기호를 사용하는데 이 문자열 구분 기호는 쉼표 이외의 문자로 구성 가능합니다. 결과 파일은 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 과 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. 내보낸 보고서는 .csv 파일이 되며 **text/csv** MIME 형식을 반환합니다.  
+ CSV 렌더링 확장 프로그램에서는 필드와 행을 구분하기 위해 문자열 구분 기호를 사용하는데 이 문자열 구분 기호는 쉼표 이외의 문자로 구성 가능합니다. 결과 파일은 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 과 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. 내보낸 보고서는 .csv 파일이 되며 **text/csv**MIME 형식을 반환합니다.  
   
  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]의 차트, 데이터 막대, 스파크라인, 계기 및 표시기와 관련된 데이터를 사용하려면 보고서를 CSV 파일로 내보낸 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel에서 이 파일을 엽니다.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 8
     > [!NOTE]  
     >  장치 정보 설정을 변경하여 필드 구분 기호를 TAB을 비롯한 임의의 문자로 변경할 수 있습니다. 자세한 내용은 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)을 참조하세요.  
   
--   레코드 구분 기호 문자열은 캐리지 리턴 및 줄 바꿈(\<cr>\<lf>)입니다.  
+-   레코드 구분 기호 문자열은 캐리지 리턴 및 줄 바꿈 (\<cr >\<lf >).  
   
 -   텍스트 한정자 문자열은 인용 부호(")입니다.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 8
 |표시기|활성 상태 이름, 사용 가능한 상태 및 데이터 값을 포함하는 단일 레코드로 렌더링합니다.|  
 |지도|지도 계층의 각 지도 멤버에 대한 레이블과 값을 사용하여 행을 렌더링합니다.<br /><br /> 지도에 여러 계층이 있는 경우 행의 값은 지도 계층에서 사용하는 지도 데이터 영역이 동일한지 여부에 따라 달라집니다. 여러 지도 계층에서 동일한 데이터 영역을 사용하는 경우 행에는 모든 계층의 데이터가 포함됩니다.|  
   
-### 계층적 데이터 및 그룹화된 데이터  
+### <a name="hierarchical-and-grouped-data"></a>계층적 데이터 및 그룹화된 데이터  
  계층적 데이터와 그룹화된 데이터를 CSV 형식으로 표현하려면 결합해야 합니다.  
   
  렌더링 확장 프로그램은 보고서를 데이터 영역 내부의 중첩된 그룹을 표현하는 트리 구조로 결합합니다. 보고서는 다음과 같이 결합됩니다.  
@@ -94,14 +99,13 @@ caps.handback.revision: 8
   
 -   피어 데이터 영역은 공통 데이터 영역 또는 동적 상위 항목을 공유하는 데이터 영역 또는 동적 그룹입니다. 피어 데이터는 결합된 트리의 분기에 의해 식별됩니다.  
   
- 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)MIME 형식을 반환합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="RenderingModes"></a> 렌더러 모드  
  CSV 렌더링 확장 프로그램은 두 가지 모드로 작동할 수 있습니다. 하나는 Excel에 대해 최적화된 모드이고, 다른 하나는 RFC 4180에 지정된 CSV 사양의 엄격한 준수를 요구하는 타사 응용 프로그램에 최적화되어 있습니다. 사용하는 모드에 따라 피어 데이터 영역은 다르게 처리됩니다.  
   
-### 기본 모드  
+### <a name="default-mode"></a>기본 모드  
  기본 모드는 Excel용으로 최적화되어 있습니다. 기본 모드로 렌더링되는 경우 보고서는 여러 섹션의 CSV로 렌더링된 데이터가 있는 CSV 파일로 렌더링됩니다. 각 피어 데이터 영역은 빈 줄에 의해 구분됩니다. 보고서 본문 내부의 피어 데이터 영역은 CSV 파일 내의 별도 데이터 블록으로 렌더링됩니다. 그 결과 다음과 같은 CSV 파일이 렌더링됩니다.  
   
 -   보고서 본문의 개별 입력란은 CSV 파일 내부의 첫 번째 데이터 블록으로 한 번 렌더링됩니다.  
@@ -110,16 +114,16 @@ caps.handback.revision: 8
   
 -   중첩된 데이터 영역은 동일한 데이터 블록에 대각선 방향으로 렌더링됩니다.  
   
-#### 서식  
+#### <a name="formatting"></a>서식  
  숫자 값은 지정된 서식 상태로 렌더링됩니다. Excel은 통화, 백분율, 날짜 등 서식이 지정된 숫자 값을 인식하여 CSV 파일을 가져올 때 각 셀에 적절하게 서식을 지정합니다.  
   
-### 규격 모드  
+### <a name="compliant-mode"></a>규격 모드  
  규격 모드는 타사 응용 프로그램에 사용할 수 있도록 최적화되어 있습니다.  
   
-#### 데이터 영역  
+#### <a name="data-regions"></a>데이터 영역  
  파일의 첫 번째 행에만 열 머리글이 들어 있으며 각 행에는 동일한 개수의 열이 있습니다.  
   
-#### 서식  
+#### <a name="formatting"></a>서식  
  값에는 서식이 지정되지 않습니다.  
   
 ##  <a name="Interactivity"></a> 상호 작용  
@@ -139,17 +143,15 @@ caps.handback.revision: 8
   
 -   책갈피  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="DeviceInfo"></a> 장치 정보 설정  
  장치 정보 설정을 변경하여 렌더링할 모드, 구분 기호로 사용할 문자, 텍스트 한정자 기본 문자열로 사용할 문자 등 이 렌더러의 일부 기본 설정을 변경할 수 있습니다. 자세한 내용은 [CSV Device Information Settings](../../reporting-services/csv-device-information-settings.md)을 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

@@ -1,23 +1,28 @@
 ---
-title: "페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "페이지 번호 또는 기타 보고서 속성 (보고서 작성기 및 SSRS) 표시 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
+# <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)
   보고서의 페이지 머리글이나 바닥글에 페이지 번호, 보고서 제목, 파일 이름 및 기타 보고서 속성을 간단히 추가할 수 있습니다. 다음은 보고서 데이터 창의 기본 제공 필드 폴더에 필드로 저장되는 속성입니다.  
   
 -   실행 시간  
@@ -44,7 +49,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 페이지 번호 또는 기타 보고서 속성을 추가하려면  
+### <a name="to-add-a-page-number-or-other-report-properties"></a>페이지 번호 또는 기타 보고서 속성을 추가하려면  
   
 1.  보고서 데이터 창에서 기본 제공 필드 폴더를 확장합니다.  
   
@@ -58,7 +63,7 @@ caps.handback.revision: 7
     >   
     >  간단한 식 [&PageNumber]가 포함된 입력란이 추가됩니다.  
   
-### 페이지 번호 뒤에 "페이지"라는 단어를 추가하려면  
+### <a name="to-add-the-word-page-before-the-page-number"></a>페이지 번호 뒤에 "페이지"라는 단어를 추가하려면  
   
 1.  [&PageNumber]가 들어 있는 입력란을 마우스 오른쪽 단추로 클릭한 다음 **식**을 클릭합니다.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 7
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-### 페이지 번호 뒤에 총 페이지 수를 추가하려면  
+### <a name="to-add-total-number-of-pages-after-the-page-number"></a>페이지 번호 뒤에 총 페이지 수를 추가하려면  
   
 1.  식이 들어 있는 입력란을 마우스 오른쪽 단추로 클릭한 다음 **식**을 클릭합니다.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 7
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)  
   

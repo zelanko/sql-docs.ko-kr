@@ -1,24 +1,29 @@
 ---
-title: "자습서: 자유 형식 보고서 만들기(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "자습서: 자유 형식 보고서 (보고서 작성기) 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 356d795aec5249ecf4f990d549c8eacb70e25f03
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 자습서: 자유 형식 보고서 만들기(보고서 작성기)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>자습서: 자유 형식 보고서 만들기(보고서 작성기)
 이 자습서에서는 뉴스레터 역할을 하는 페이지가 매겨진 보고서를 만듭니다. 각 페이지에는 정적 텍스트, 요약 시각적 개체 및 자세한 샘플 판매 데이터가 표시됩니다.
 
 ![report-builder-free-form-report-complete](../reporting-services/media/report-builder-free-form-report-complete.png)
@@ -27,7 +32,7 @@ caps.handback.revision: 16
   
 이 자습서에 소요되는 예상 시간: 20분  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="BlankReport"></a>1. 빈 보고서, 데이터 원본 및 데이터 집합 만들기  
@@ -35,9 +40,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
-### 빈 보고서를 만들려면  
+### <a name="to-create-a-blank-report"></a>빈 보고서를 만들려면  
   
-1.  컴퓨터, [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드에서 [보고서 작성기를 시작](../reporting-services/report-builder/start-report-builder.md)합니다.  
+1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
     **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
   
@@ -47,11 +52,11 @@ caps.handback.revision: 16
  
 3.  오른쪽 창에서 **빈 보고서**를 클릭합니다.  
   
-### 새 데이터 원본을 만들려면  
+### <a name="to-create-a-new-data-source"></a>새 데이터 원본을 만들려면  
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
   
-2.   **이름** 상자에 **ListDataSource**를 입력합니다.  
+2.  **이름** 상자에 **ListDataSource**를 입력합니다.  
   
 3.  **내 보고서에 포함된 연결 사용**을 클릭합니다.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 16
   
 6.  **확인**을 클릭합니다.  
   
-### 새 데이터 집합을 만들려면  
+### <a name="to-create-a-new-dataset"></a>새 데이터 집합을 만들려면  
   
 1.  보고서 데이터 창에서 **새로 만들기** > **데이터 집합**을 클릭합니다.  
   
@@ -123,7 +128,7 @@ caps.handback.revision: 16
   
 목록을 사용하여 뉴스레터와 유사한 형식의 보고서에 판매 지역에 대한 판매 정보를 표시합니다. 이 정보는 지역별로 그룹화됩니다. 데이터를 지역별로 그룹화하는 새 행 그룹을 추가한 다음 기본 제공된 세부 정보 행 그룹을 삭제합니다.  
   
-### 목록을 추가하려면  
+### <a name="to-add-a-list"></a>목록을 추가하려면  
   
 1.  **삽입** 탭 > **데이터 영역** > **목록**을 클릭합니다. 
 
@@ -146,7 +151,7 @@ caps.handback.revision: 16
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-### 새 행 그룹을 추가하고 세부 정보 그룹을 삭제하려면  
+### <a name="to-add-a-new-row-group-and-to-delete-the-details-group"></a>새 행 그룹을 추가하고 세부 정보 그룹을 삭제하려면  
   
 1.  행 그룹 창에서 세부 정보 그룹을 마우스 오른쪽 단추로 클릭하고 **그룹 추가**를 가리킨 다음 **부모 그룹**을 클릭합니다.  
   
@@ -156,7 +161,7 @@ caps.handback.revision: 16
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    `[Territory]`셀을 포함하는 열이 목록에 추가됩니다.
+    `[Territory]` 셀을 포함하는 열이 목록에 추가됩니다.
   
 4.  목록에서 Territory 열을 마우스 오른쪽 단추로 클릭한 다음 **열 삭제**를 클릭합니다.  
   
@@ -173,7 +178,7 @@ caps.handback.revision: 16
 ## <a name="Graphics"></a>3. 그래픽 요소 추가  
 목록 데이터 영역의 장점 중 하나는 테이블 형식 레이아웃으로 제한하지 않고 사각형 및 입력란과 같은 보고서 항목을 어느 곳에나 추가할 수 있다는 점입니다. 색으로 채워진 사각형과 같은 그래픽을 추가하여 보고서의 모양을 돋보이게 할 수 있습니다.  
   
-### 보고서에 그래픽 요소를 추가하려면  
+### <a name="to-add-graphic-elements-to-the-report"></a>보고서에 그래픽 요소를 추가하려면  
   
 1.  **삽입** 탭에서 **사각형**을 선택합니다. 
 
@@ -196,13 +201,13 @@ caps.handback.revision: 16
 ## <a name="Text"></a>4. 자유 형식 텍스트 추가  
 입력란을 추가하여 각 보고서 페이지와 데이터 필드에서 반복되는 정적 텍스트를 표시할 수 있습니다.  
   
-### 보고서에 텍스트를 추가하려면  
+### <a name="to-add-text-to-the-report"></a>보고서에 텍스트를 추가하려면  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
 2.  **삽입** 탭 > **입력란**을 클릭합니다. 이전에 추가한 사각형 안에 있는 목록의 왼쪽 위를 클릭하고 마우스를 끌어 입력란의 너비와 높이를 각각 3.45인치와 5인치로 조정합니다.  
   
-3.  입력란에 커서를 놓고 **Newsletter for**를 입력합니다. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
+3.  입력란에 커서를 놓고 **Newsletter for** 를 입력합니다. 다음 단계에서 추가할 필드의 텍스트를 구분하기 위해 "for" 단어 뒤에 공백을 포함합니다.   
   
     ![뉴스레터 머리글 텍스트 추가](../reporting-services/media/tutorial-newsletterfor.png "뉴스레터 머리글 텍스트 추가")  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 16
     *  **20pt**.
     *  **토마토**.  
   
-9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello**를 입력한 후 단어 뒤에 공백을 추가하여 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  
+9. 3단계에서 입력한 텍스트 아래에 커서를 놓고 **Hello** 를 입력한 후 단어 뒤에 공백을 추가하여 텍스트와 다음 단계에서 추가할 필드를 구분합니다.  
  
 10. 보고서 데이터 창의 ListDataSet에서 `[FullName]` 필드를 입력란으로 끌어 "Hello" 뒤에 놓은 다음 쉼표(,)를 입력합니다.  
    
@@ -288,13 +293,13 @@ caps.handback.revision: 16
 ## <a name="Table"></a>5. 테이블을 추가하여 Sales 세부 정보 표시  
 새 테이블 및 행렬 마법사를 사용하여 자유 형식 보고서에 테이블을 추가합니다. 마법사를 완료한 후에는 합계를 표시할 행을 수동으로 추가합니다.  
   
-### 테이블을 추가하려면  
+### <a name="to-add-a-table"></a>테이블을 추가하려면  
   
 1.  **삽입** 탭 > **데이터 영역** 영역 > **테이블** > **테이블 마법사**를 클릭합니다.  
   
 2.  **데이터 집합 선택** 페이지에서 **ListDataset** > **다음**을 클릭합니다.  
   
-4.  **필드 정렬** 페이지에서 **사용 가능한 필드**의 Product 필드를 **값**으로 끌어옵니다.  
+4.  **필드 정렬** 페이지에서 **사용 가능한 필드** 의 Product 필드를 **값**으로 끌어옵니다.  
   
 5.  SalesDate, Quantity 및 Sales에 대해 3단계를 반복합니다. SalesDate는 Product 아래에 배치하고, Quantity는 SalesDate 아래에 배치하고, Sales는SalesDate 아래에 배치합니다.  
   
@@ -336,7 +341,7 @@ caps.handback.revision: 16
   
 이 자습서에서는 보고서를 보고서 서버에 저장합니다. 보고서 서버에 액세스할 수 없는 경우에는 보고서를 컴퓨터에 저장하십시오.  
   
-### 보고서를 보고서 서버에 저장하려면  
+### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
@@ -352,7 +357,7 @@ caps.handback.revision: 16
   
 보고서가 보고서 서버에 저장됩니다. 연결된 보고서 서버의 이름이 창 아래쪽에 있는 상태 표시줄에 나타납니다.  
   
-### 컴퓨터에 보고서를 저장하려면  
+### <a name="to-save-the-report-on-your-computer"></a>컴퓨터에 보고서를 저장하려면  
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
@@ -365,32 +370,32 @@ caps.handback.revision: 16
 ## <a name="Line"></a>7. (선택 사항) 선을 추가하여 보고서 영역 구분  
 선을 추가하여 보고서의 편집 영역과 세부 정보 영역을 구분합니다.  
   
-### 선을 추가하려면  
+### <a name="to-add-a-line"></a>선을 추가하려면  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  **삽입** 탭 > **보고서 항목** > **선**을 클릭합니다.  
+2.  에 **삽입** 탭 > **보고서 항목** > **선입니다.**  
   
 3.  4단원에서 추가한 자유 형식 입력란 아래에 선을 그립니다.  
   
 4.  선을 클릭하고 **홈** 탭 > **테두리**에서 다음을 선택합니다.
      * **너비**를 선택한 다음 **3**pt를 선택합니다.
-     * **색**을 선택한 다음 **토마토**를 선택합니다.  
+     * **색** 을 선택한 다음 **토마토**를 선택합니다.  
   
 ## <a name="Visualization"></a>8. (옵션) 요약 데이터 시각화 추가  
 사각형은 보고서가 렌더링되는 방식을 제어하는 데 유용합니다. 원형 및 세로 막대형 차트를 사각형 내에 배치하여 보고서가 원하는 방식으로 렌더링되도록 합니다.  
   
-### 사각형을 추가하려면  
+### <a name="to-add-a-rectangle"></a>사각형을 추가하려면  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
-2.  **삽입** 탭 > **보고서 항목** >  **사각형**을 클릭합니다. 테이블 오른쪽의 목록 상자 안에서 사각형을 끌어 사각형의 너비와 높이를 각각 약 2.25인치와 7.9인치로 조정합니다.  
+2.  에 **삽입** 탭 > **보고서 항목** >  **사각형**합니다. 테이블 오른쪽의 목록 상자 안에서 사각형을 끌어 사각형의 너비와 높이를 각각 약 2.25인치와 7.9인치로 조정합니다.  
   
 3.  새 사각형을 선택한 상태로 속성 창에서 **BorderColor LightGrey**, **BorderStyle 실선**, **BorderWidth 2pt**로 지정합니다. 
 
 4. 사각형과 테이블의 위쪽을 맞춥니다.  
   
-## 원형 차트를 추가하려면  
+## <a name="to-add-a-pie-chart"></a>원형 차트를 추가하려면  
   
 1.  **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**를 클릭합니다.  
   
@@ -412,7 +417,7 @@ caps.handback.revision: 16
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **Segoe UI Semibold**.
-    * **크기** **12pt**.
+    * **Size** **12 pt**.
     * **색** **검정**.  
 
 13. 범례를 마우스 오른쪽 단추로 클릭 > **범례 속성**을 클릭합니다.
@@ -425,7 +430,7 @@ caps.handback.revision: 16
 
      ![report-builder-free-form-pie](../reporting-services/media/report-builder-free-form-pie.png)
   
-## 세로 막대형 차트를 추가하려면  
+## <a name="to-add-a-column-chart"></a>세로 막대형 차트를 추가하려면  
   
 1.  **삽입** 탭 > **데이터 시각화** > **차트** > **차트 마법사**를 클릭합니다.  
   
@@ -435,7 +440,7 @@ caps.handback.revision: 16
   
 4.  **차트 필드 정렬** 페이지에서 Product 필드를 **범주**로 끌어옵니다.  
   
-5.  Sales를 **값**으로 끌어온 후 **다음**을 클릭합니다.  
+5.  Sales를 **값** 으로 끌어온 후 **다음**을 클릭합니다.  
   
     세로 축에 값이 표시됩니다.  
   
@@ -451,8 +456,8 @@ caps.handback.revision: 16
   
 12. **홈** 탭 > **글꼴**에서 제목을 다음과 같이 조정합니다.
     * **글꼴** **Segoe UI Semibold**.
-    * **크기** **12pt**.
-    * **색** **검정**.  
+    * **Size** **12 pt**.
+    * **Color** **Black**.  
   
 15. 범례를 마우스 오른쪽 단추로 클릭한 다음 **범례 삭제**를 클릭합니다.  
   
@@ -461,10 +466,10 @@ caps.handback.revision: 16
   
     ![report-builder-free-form-column](../reporting-services/media/report-builder-free-form-column.png)
 
-12. 차트 축을 선택하고 *홈** 탭 > **숫자** > **통화**를 클릭합니다.
+12. 차트 축 선택 및는 *홈** 탭 > **번호** > **통화**합니다.
 
-13. 숫자에 달러만 표시되고 센트는 표시되지 않도록 **소수 자릿수 줄이기**를 두 번 선택합니다.      
-### 차트가 사각형 내에 있는지 확인하려면  
+13. 숫자에 달러만 표시되고 센트는 표시되지 않도록 **소수 자릿수 줄이기** 를 두 번 선택합니다.      
+### <a name="to-verify-the-charts-are-inside-the-rectangle"></a>차트가 사각형 내에 있는지 확인하려면  
 
 사각형을 보고서 페이지에 있는 다른 항목의 컨테이너로 사용할 수 있습니다. 자세한 내용은 [사각형을 컨테이너로 사용](../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)을 참조하세요.
   
@@ -485,7 +490,7 @@ caps.handback.revision: 16
     > [!NOTE]  
     > 차트가 사각형 내에 없으면 렌더링된 보고서에 차트가 함께 표시되지 않습니다.  
   
-### 차트의 크기를 동일하게 하려면  
+### <a name="to-make-the-charts-the-same-size"></a>차트의 크기를 동일하게 하려면  
   
 1.  원형 차트를 선택하고 Ctrl 키를 누른 다음 세로 막대형 차트를 선택합니다.  
   
@@ -500,7 +505,7 @@ caps.handback.revision: 16
   
 
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
 자유 형식 보고서를 만드는 방법에 대한 자습서를 마쳤습니다.  
   
 목록에 대한 자세한 내용은 다음을 참조하세요. 
@@ -508,8 +513,10 @@ caps.handback.revision: 16
 * [목록을 사용하여 송장 및 양식 만들기](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기&#41; 및 SSRS](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-쿼리 디자이너에 대한 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](../Topic/Query%20Designers%20(Report%20Builder).md) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
+쿼리 디자이너에 대한 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9) 및 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
   
+
+

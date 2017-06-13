@@ -1,7 +1,7 @@
 ---
 title: "데이터 열 암호화 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/18/2016
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1451071485e8994dd90ea447e28d9b32e511dd1a
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
@@ -55,7 +55,14 @@ ms.lasthandoff: 04/11/2017
 -   키에 대한 일부 사용 권한이며 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
-  
+
+다음 예제를 사용 하려면 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스에 아직 없는 경우 데이터베이스 마스터 키를 암호를 제공 하는 다음 문을 실행 하 여 새로 만듭니다.   
+```  
+CREATE MASTER KEY ENCRYPTION BY   
+PASSWORD = '<some strong password>';  
+```  
+항상 데이터베이스 마스터 키를 백업 합니다. 데이터베이스 마스터 키에 대 한 자세한 내용은 참조 하세요. [CREATE MASTER key&#40; Transact SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>간단한 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
@@ -66,11 +73,7 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL95QYV4369#ghf0%lekjg5k3fd117r$$#1946kcj$n44ncjhdlj'  
+    
     GO  
   
     CREATE CERTIFICATE Sales09  
@@ -129,13 +132,6 @@ ms.lasthandoff: 04/11/2017
   
     ```  
     USE AdventureWorks2012;  
-    GO  
-  
-    --If there is no master key, create one now.   
-    IF NOT EXISTS   
-        (SELECT * FROM sys.symmetric_keys WHERE symmetric_key_id = 101)  
-        CREATE MASTER KEY ENCRYPTION BY   
-        PASSWORD = '23987hxJKL969#ghf0%94467GRkjg5k3fd117r$$#1946kcj$n44nhdlj'  
     GO  
   
     CREATE CERTIFICATE HumanResources037  

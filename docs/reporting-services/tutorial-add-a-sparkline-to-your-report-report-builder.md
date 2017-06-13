@@ -1,55 +1,40 @@
 ---
-title: "자습서: 보고서에 스파크라인 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "자습서: 보고서 (보고서 작성기)에 스파크 라인 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 자습서: 보고서에 스파크라인 추가(보고서 작성기)
+
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>자습서: 보고서에 스파크라인 추가(보고서 작성기)
+
 이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 스파크라인 차트와 함께 기본 테이블을 만듭니다.   
   
 스파크라인과 데이터 막대는 작은 공간에 많은 정보가 포함되어 있는 작고 간단한 차트로, 대개 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에서 테이블과 행렬로 표시됩니다. 다음 그림에서는 만들려는 보고서와 비슷한 보고서를 보여 줍니다.  
   
 ![report-builder-sparkline-final](../reporting-services/media/report-builder-sparkline-final.png)  
-   
-## <a name="BackToTop"></a>학습 내용  
-이 자습서에서는 다음 작업 방법을 배웁니다.  
-  
-1. [테이블이 있는 보고서 만들기](#CreateTable)  
-  
-2. [테이블 또는 행렬 마법사에서 쿼리 및 테이블 레이아웃 만들기](#Query)
- 
-    2a. (옵션) [데이터 형식을 통화로 지정](#FormatCurrency)  
-  
-    2b. (옵션) [데이터 형식을 날짜로 지정](#FormatDates)  
-  
-3. [테이블에 스파크라인 추가](#Sparkline)  
-  
-4. [세로 및 가로로 스파크라인 맞추기](#AlignSparklines)  
-  
-### 기타 선택적 단계  
-7. [열 너비 변경](#Width)  
-  
-8. [보고서 제목 추가](#Title)  
-  
-9. [보고서 저장](#Save)  
-  
+     
 이 자습서에 소요되는 예상 시간: 30분  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="CreateTable"></a>1. 테이블이 있는 보고서 만들기  
@@ -67,7 +52,7 @@ caps.handback.revision: 16
 4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기** > **다음**을 선택합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
     > [!NOTE]  
-    > 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 10단계로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > 이 자습서에는 특정 데이터에 필요 하지 않습니다. SQL Server 데이터베이스에 연결을 하기만 합니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 10단계로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
   
 5.  **새로 만들기**를 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
   
@@ -79,7 +64,7 @@ caps.handback.revision: 16
   
     `Data Source\=<servername>`  
   
-    `<servername>` 식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 보고서 데이터는 SQL Server 데이터베이스에서 추출되지 않았으므로 데이터베이스 이름을 포함하지 않아야 합니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데 사용됩니다.  
+    `<servername>`식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 보고서 데이터는 SQL Server 데이터베이스에서 추출되지 않았으므로 데이터베이스 이름을 포함하지 않아야 합니다. 지정된 서버의 기본 데이터베이스는 쿼리를 구문 분석하는 데 사용됩니다.  
   
 9. **자격 증명**을 클릭합니다. 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 입력합니다.  
   
@@ -101,7 +86,7 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
-### 테이블 마법사에서 쿼리 및 테이블 레이아웃을 만들려면 
+### <a name="to-create-a-query-and-table-layout-in-the-table-wizard"></a>테이블 마법사에서 쿼리 및 테이블 레이아웃을 만들려면 
   
 1.  **쿼리 디자인** 페이지에 관계형 쿼리 디자이너가 열립니다. 이 자습서에서는 텍스트 기반 쿼리 디자이너를 사용합니다.  
   
@@ -184,7 +169,7 @@ caps.handback.revision: 16
   
 15. **실행** 을 클릭하여 보고서를 미리 봅니다.  
 
-### <a name="FormatCurrency"></a>2a. 데이터 서식을 통화로 지정  
+### <a name="FormatCurrency"></a>2a. 데이터 형식을 통화로 지정  
 기본적으로 **Sales** 필드의 요약 데이터에는 일반 숫자가 표시됩니다. 서식을 지정하여 숫자가 통화로 표시되도록 합니다. **자리 표시자 스타일** 을 설정/해제하여 서식 있는 입력란 및 자리 표시자 텍스트를 보기 값으로 표시합니다.  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 전환합니다.  
@@ -212,7 +197,7 @@ caps.handback.revision: 16
      
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-**SalesDate** 값은 기본 날짜 형식으로 표시되고 **Sales**의 요약 값은 통화로 표시됩니다.   
+**SalesDate** 값은 기본 날짜 형식으로 표시되고 **Sales** 의 요약 값은 통화로 표시됩니다.   
   
 ## <a name="Sparkline"></a>3. 스파크라인 추가    
   
@@ -280,7 +265,7 @@ caps.handback.revision: 16
   
 각 행의 세로 크기를 줄이려면 열 입력란에 들어갈 예상 내용이 한 줄에 수용되는 범위에서 열 너비를 확장합니다.  
   
-### 열의 너비를 변경하려면  
+### <a name="to-change-the-width-of-columns"></a>열의 너비를 변경하려면  
   
 1.  **디자인** 을 클릭하여 디자인 뷰로 돌아갑니다.  
   
@@ -288,14 +273,14 @@ caps.handback.revision: 16
   
 3.  열 핸들 사이의 선에 커서를 두면 커서가 양방향 화살표로 바뀝니다. **Product** 열을 끌어 제품 이름이 한 줄에 표시되도록 합니다.  
   
-4.  **실행**을 클릭하여 보고서를 미리 보고 너비가 충분한지 확인합니다.  
+4.  **실행** 을 클릭하여 보고서를 미리 보고 너비가 충분한지 확인합니다.  
   
 ## <a name="Title"></a>8. (선택 사항) 보고서 제목 추가  
 보고서 제목은 보고서 맨 위에 나타납니다. 보고서 제목을 보고서 머리글에 배치하거나, 보고서 머리글이 사용되지 않을 경우 보고서 본문의 맨 위에 있는 입력란에 배치할 수 있습니다. 이 자습서에서는 보고서 본문의 맨 위에 자동으로 표시되는 입력란을 사용합니다.  
   
 글꼴 스타일, 크기 및 색을 텍스트의 각 문자나 구 단위로 다르게 적용하여 더 보기 좋게 꾸밀 수 있습니다. 자세한 내용은 [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)을 참조하세요.  
   
-### 보고서 제목을 추가하려면  
+### <a name="to-add-a-report-title"></a>보고서 제목을 추가하려면  
   
 1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.**를 클릭합니다.  
   
@@ -312,7 +297,7 @@ caps.handback.revision: 16
 ## <a name="Save"></a>9. 보고서 저장  
 보고서 서버 또는 컴퓨터에 보고서를 저장합니다. 보고서를 보고서 서버에 저장하지 않을 경우 보고서 파트 및 하위 보고서와 같은 여러 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기능을 사용할 수 없습니다.  
   
-### 보고서를 보고서 서버에 저장하려면  
+### <a name="to-save-the-report-on-a-report-server"></a>보고서를 보고서 서버에 저장하려면  
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
@@ -328,7 +313,7 @@ caps.handback.revision: 16
   
 보고서가 보고서 서버에 저장됩니다. 연결된 보고서 서버의 이름이 창 아래쪽에 있는 상태 표시줄에 나타납니다.  
   
-### 컴퓨터에 보고서를 저장하려면  
+### <a name="to-save-the-report-on-your-computer"></a>컴퓨터에 보고서를 저장하려면  
   
 1.  **보고서 작성기** 단추에서 **다른 이름으로 저장**을 클릭합니다.  
   
@@ -338,10 +323,11 @@ caps.handback.revision: 16
   
 4.  **저장**을 클릭합니다.  
   
-## 다음 단계  
-이것으로 스파크라인 차트가 있는 테이블 보고서를 만드는 자습서를 마칩니다. 스파크라인에 대한 자세한 내용은 [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
+## <a name="next-steps"></a>다음 단계  
+
+이것으로 스파크라인 차트가 있는 테이블 보고서를 만드는 자습서를 마칩니다. 스파크 라인에 대 한 자세한 내용은 참조 [스파크 라인과 데이터 막대](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)합니다.  
   
-## 참고 항목  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

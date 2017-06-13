@@ -1,26 +1,33 @@
 ---
-title: "다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "다른 컴퓨터 (SSRS 기본 모드) 보고서 서버 데이터베이스 이동 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 caps.latest.revision: 10
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 10
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: bb803f632f9c325430c811082e5e2cebdfa29df8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
+
+# <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
+
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
  데이터베이스를 이동해도 보고서 서버 항목에 대해 현재 정의되어 있는 예약된 작업에는 영향을 주지 않습니다.  
   
@@ -28,7 +35,7 @@ caps.handback.revision: 10
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 새 데이터베이스 인스턴스에서 다시 만들어집니다. 해당 작업을 새 컴퓨터로 이동하지 않아도 되지만 더 이상 사용되지 않을 컴퓨터 작업은 삭제할 수 있습니다.  
   
--   구독, 캐시된 보고서 및 스냅숏은 이동된 데이터베이스에 그대로 유지됩니다. 데이터베이스를 이동한 후 스냅숏이 새로 고친 데이터를 가져오지 않은 경우 보고서 관리자에서 스냅숏 옵션의 선택을 취소하고 **적용**을 클릭하여 변경 내용을 저장합니다. 그런 다음 일정을 다시 만들고 **적용**을 클릭하여 변경 내용을 저장합니다.  
+-   구독, 캐시된 보고서 및 스냅숏은 이동된 데이터베이스에 그대로 유지됩니다. 데이터베이스를 이동한 후 스냅숏이 새로 고친 데이터를 가져오지 않은 경우 보고서 관리자에서 스냅숏 옵션의 선택을 취소하고 **적용** 을 클릭하여 변경 내용을 저장합니다. 그런 다음 일정을 다시 만들고 **적용** 을 클릭하여 변경 내용을 저장합니다.  
   
 -   reportservertempdb에 저장된 임시 보고서 및 사용자 세션 데이터는 해당 데이터베이스를 이동해도 그대로 유지됩니다.  
   
@@ -37,8 +44,8 @@ caps.handback.revision: 10
 > [!IMPORTANT]  
 >  이 항목에 설명된 단계는 기존 설치에서 보고서 서버 데이터베이스를 재배치하는 작업만 수행하려는 경우에 사용하는 것이 좋습니다. 전체 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 마이그레이션하려면, 즉 데이터베이스를 이동하고 해당 데이터베이스를 사용하는 보고서 서버 Windows 서비스의 ID를 변경하려면 연결을 다시 구성하고 암호화 키를 다시 설정해야 합니다.  
   
-## 보고서 서버 데이터베이스 분리 및 연결  
- 보고서 서버를 오프라인 상태로 만들 수 있는 경우 데이터베이스를 분리한 후 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 이동할 수 있습니다. 이 방법을 사용하면 데이터베이스의 사용 권한이 유지됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 사용하는 경우 이를 다른 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 인스턴스로 이동해야 합니다. 데이터베이스를 이동한 후에는 보고서 서버와 보고서 서버 데이터베이스의 연결을 다시 구성해야 합니다. 확장 배포를 실행하려면 배포 환경의 각 보고서 서버에 대한 보고서 서버 데이터베이스 연결을 다시 구성해야 합니다.  
+## <a name="detaching-and-attaching-the-report-server-databases"></a>보고서 서버 데이터베이스 분리 및 연결  
+ 보고서 서버를 오프라인 상태로 만들 수 있는 경우 데이터베이스를 분리한 후 사용하려는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 이동할 수 있습니다. 이 방법을 사용하면 데이터베이스의 사용 권한이 유지됩니다. SQL Server 데이터베이스를 사용 하는 경우 다른 SQL Server 인스턴스로 이동 해야 합니다. 데이터베이스를 이동한 후에는 보고서 서버와 보고서 서버 데이터베이스의 연결을 다시 구성해야 합니다. 확장 배포를 실행하려면 배포 환경의 각 보고서 서버에 대한 보고서 서버 데이터베이스 연결을 다시 구성해야 합니다.  
   
  다음 단계에 따라 데이터베이스를 이동하십시오.  
   
@@ -46,7 +53,7 @@ caps.handback.revision: 10
   
 2.  보고서 서버 서비스를 중지합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 서비스를 중지할 수 있습니다.  
   
-3.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
   
 4.  보고서 서버 데이터베이스를 마우스 오른쪽 단추로 클릭하고 태스크를 가리킨 다음 **분리**를 클릭합니다. 보고서 서버 임시 데이터베이스에 대해 이 단계를 반복합니다.  
   
@@ -70,10 +77,10 @@ caps.handback.revision: 10
   
 14. 보고서 서버 서비스를 다시 시작합니다.  
   
-## 보고서 서버 데이터베이스 백업 및 복원  
+## <a name="backing-up-and-restoring-the-report-server-databases"></a>보고서 서버 데이터베이스 백업 및 복원  
  보고서 서버를 오프라인으로 설정할 수 없는 경우 백업 후 복원 방법을 사용하여 보고서 서버 데이터베이스 위치를 다시 지정할 수 있습니다. 백업 및 복원을 수행하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용해야 합니다. 데이터베이스를 복원한 후에 새 서버 인스턴스의 데이터베이스를 사용하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 이 항목의 마지막 부분에 있는 지침을 참조하십시오.  
   
-### BACKUP 및 COPY_ALL을 사용하여 보고서 서버 데이터베이스 백업  
+### <a name="using-backup-and-copyonly-to-backup-the-report-server-databases"></a>BACKUP 및 COPY_ALL을 사용하여 보고서 서버 데이터베이스 백업  
  데이터베이스를 백업할 때는 COPY_ONLY 인수를 설정합니다. 두 데이터베이스와 로그 파일을 모두 백업해야 합니다.  
   
 ```  
@@ -136,7 +143,7 @@ BACKUP LOG ReportServerTempDB
    WITH COPY_ONLY  
 ```  
   
-### RESTORE 및 MOVE를 사용하여 보고서 서버 데이터베이스 위치 다시 지정  
+### <a name="using-restore-and-move-to-relocate-the-report-server-databases"></a>RESTORE 및 MOVE를 사용하여 보고서 서버 데이터베이스 위치 다시 지정  
  데이터베이스를 복원할 때는 경로를 지정할 수 있도록 MOVE 인수를 포함해야 합니다. NORECOVERY 인수를 사용하여 초기 복원을 수행합니다. 이렇게 하면 데이터베이스의 상태가 RESTORING으로 유지되므로 로그 백업을 검토하여 복원할 사항을 결정할 수 있습니다. 마지막 단계는 RECOVERY 인수를 사용하여 RESTORE 작업을 반복하는 것입니다.  
   
  MOVE 인수에는 데이터 파일의 논리적 이름을 사용합니다. 논리적 이름을 찾으려면 `RESTORE FILELISTONLY FROM DISK='C:\ReportServerData.bak';`  
@@ -197,7 +204,7 @@ RESTORE DATABASE ReportServerTempDB
 GO  
 ```  
   
-### 보고서 서버 데이터베이스 연결을 구성하는 방법  
+### <a name="how-to-configure-the-report-server-database-connection"></a>보고서 서버 데이터베이스 연결을 구성하는 방법  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 시작하고 보고서 서버에 대한 연결을 엽니다.  
   
@@ -214,16 +221,17 @@ GO
 7.  **다음** , **마침**을 차례로 클릭합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 설치하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 **RSExecRole** 역할을 포함해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 보고서 서버 데이터베이스 연결을 설정하면 역할 만들기, 로그인 등록 및 역할 할당이 발생합니다. rsconfig.exe 명령 프롬프트 유틸리티를 사용하는 등 다른 방법을 사용하여 연결을 구성하면 보고서 서버가 작동 상태에 있지 않게 됩니다. 이 경우 WMI 코드를 작성하여 보고서 서버를 사용할 수 있게 만들어야 할 수 있습니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
-  
-## 관련 항목:  
- [RSExecRole 만들기](../../reporting-services/security/create-the-rsexecrole.md)   
- [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
- [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-and-manage-encryption-keys-ssrs-configuration-manager.md)   
- [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
-  
-  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 **RSExecRole** 역할을 포함해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 통해 보고서 서버 데이터베이스 연결을 설정하면 역할 만들기, 로그인 등록 및 역할 할당이 발생합니다. rsconfig.exe 명령 프롬프트 유틸리티를 사용하는 등 다른 방법을 사용하여 연결을 구성하면 보고서 서버가 작동 상태에 있지 않게 됩니다. 이 경우 WMI 코드를 작성하여 보고서 서버를 사용할 수 있게 만들어야 할 수 있습니다. 자세한 내용은 [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
+
+## <a name="next-steps"></a>다음 단계
+
+[RSExecRole 만들기](../../reporting-services/security/create-the-rsexecrole.md)   
+[보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)   
+[보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+[무인된 실행 계정 구성](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+[Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+[rsconfig 유틸리티](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+[암호화 키 구성 및 관리](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+[보고서 서버 데이터베이스](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,25 +1,30 @@
 ---
-title: "카탈로그 항목 삭제(Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.reportserver.deleteitems.f1"
+title: "카탈로그 항목 삭제 (Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.reportserver.deleteitems.f1
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 caps.latest.revision: 16
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 16
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 카탈로그 항목 삭제(Management Studio)
+# <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
   이 페이지를 사용하여 공유 일정 및 역할 정의를 삭제할 수 있습니다.  
   
  여러 보고서 및 구독에 사용되는 공유 일정을 삭제하면 보고서 서버는 공유 일정을 사용하던 각 보고서 및 구독에 대해 개별적인 일정을 만듭니다. 각 개별 일정에는 공유 일정에 지정되었던 날짜, 시간 및 되풀이 패턴이 포함됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 개별 일정을 중앙에서 관리하지 않습니다. 공유 일정을 삭제하면 개별 항목에 대한 일정 정보를 관리해야 합니다. 공유 일정을 삭제하기 전에 [일정 속성(보고서 페이지)](../../reporting-services/tools/schedule-properties-reports-page.md) 을 사용하여 현재 공유 일정을 사용하고 있는 보고서를 확인합니다.  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  삭제 작업은 실행 취소할 수 없습니다. 삭제한 항목을 복구하려면 해당 항목을 다시 만들거나 보고서 서버 데이터베이스의 백업 복사본을 복원해야 합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **이름**  
  삭제할 항목의 이름을 지정합니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 16
  **오류**  
  항목을 삭제하는 동안 오류가 발생할 경우 오류 코드를 표시합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [항목 삭제&#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
  [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  

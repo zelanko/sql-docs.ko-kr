@@ -1,23 +1,28 @@
 ---
-title: "그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "머리글 및 바닥글 (보고서 작성기 및 SSRS) 그룹과 표시 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 22c9592550b79fa5fa25e31f023a6d53c5b002f5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS)
+# <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS)
   그룹 머리글 또는 바닥글 같은 정적 행을 테이블릭스 데이터 영역의 그룹과 연결된 동적 행과 함께 렌더링할지 여부를 제어할 수 있습니다.  
   
  모든 열 머리글 또는 행 머리글을 여러 페이지에서 반복하려면 테이블릭스 데이터 영역에 대해 속성을 설정할 수 있습니다. 자세한 내용은 [여러 페이지에 행 및 열 머리글 표시(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd207045.aspx)를 참조하세요.  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-### 정적 행을 행 그룹과 연결된 동적 행 집합과 함께 표시하려면  
+### <a name="to-keep-a-static-row-with-a-set-of-dynamic-rows-associated-with-a-row-group"></a>정적 행을 행 그룹과 연결된 동적 행 집합과 함께 표시하려면  
   
 1.  디자인 화면에서 테이블릭스 데이터 영역의 아무 곳이나 클릭하여 선택합니다. 그룹화 창에 데이터 영역에 대한 행 및 열 그룹이 표시됩니다.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 8
   
 5.  (옵션) 보고서를 미리 봅니다. 가능한 경우, 보고서는 이 멤버를 지정된 행 그룹 멤버와 함께 렌더링합니다.  
   
-### 정적 열을 열 그룹과 연결된 동적 열 집합과 함께 표시하려면  
+### <a name="to-keep-a-static-column-with-a-set-of-dynamic-columns-associated-with-a-column-group"></a>정적 열을 열 그룹과 연결된 동적 열 집합과 함께 표시하려면  
   
 1.  디자인 화면에서 테이블릭스 데이터 영역의 아무 곳이나 클릭하여 선택합니다. 그룹화 창에 데이터 영역에 대한 행 및 열 그룹이 표시됩니다.  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 8
   
 5.  (옵션) 보고서를 미리 봅니다. 가능한 경우, 보고서는 이 멤버를 지정된 열 그룹 멤버와 함께 렌더링합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
  
   

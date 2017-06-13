@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 829f7d57569e55eed5bc50634c5a9baad6f7d8ee
+ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
+ms.openlocfilehash: 44bfd54aa494dd52174eeed8479e14a99d810af3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/09/2017
 
 ---
 # <a name="json-path-expressions-sql-server"></a>JSON 경로 식(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  JSON 경로를 사용하여 JSON 개체의 속성을 참조합니다. JSON 경로는 Javascript와 유사한 구문을 사용합니다.  
+ JSON 경로 식을 사용 하 여 JSON 개체의 속성을 참조 합니다.  
   
  다음 함수를 호출하는 경우 경로 식을 제공해야 합니다.  
   
@@ -43,16 +43,25 @@ ms.lasthandoff: 04/11/2017
 ## <a name="parts-of-a-path-expression"></a>경로 식의 요소
  경로 식에는 두 가지 구성 요소가 있습니다.  
   
-1.  선택적인 [경로 모드](#PATHMODE)인 **lax** 또는 **strict**.  
+1.  선택적 [path 모드](#PATHMODE), 값이 **lax** 또는 **엄격한**합니다.  
   
 2.  [PATH](#PATH) 자체.  
-  
+
 ##  <a name="PATHMODE"></a> Path mode  
  경로 식의 시작 부분에서 키워드 **lax** 또는 **strict**을(를) 지정하여 PATH 모드를 선택적으로 선언합니다. 기본값은 **lax**입니다.  
   
--   **lax** 모드에서, 경로 식에 오류가 포함되어 있으면 함수는 빈 값을 반환합니다. 예를 들어 **$.name**값을 요청했는데 JSON 텍스트에 **name** 키가 포함되어 있지 않으면 함수는 null을 반환합니다.  
+-   **lax** 모드에서는 함수 반환 값이 비어 경로 식에 오류가 있습니다. 예를 들어, 값을 요청 하는 경우 **$.name**, JSON 텍스트가 포함 되어 있지는 **이름** 키, 함수가 null을 반환 되었지만 오류가 발생 하지 않습니다.  
   
--   **strict** 모드에서 경로 식에 오류가 있으면 함수는 오류를 발생시킵니다.  
+-   **엄격한** 모드에서는 함수에서 오류가 발생 경로 식에 오류가 포함 되어 있습니다.  
+
+다음 쿼리를 명시적으로 지정 `lax` 경로 식의 모드입니다.
+
+```sql  
+DECLARE @json NVARCHAR(MAX)
+SET @json=N'{ ... }'
+
+SELECT * FROM OPENJSON(@json, N'lax $.info')
+```  
   
 ##  <a name="PATH"></a> Path  
  선택적인 PATH 모드 선언 후, PATH를 지정합니다.  
@@ -65,7 +74,7 @@ ms.lasthandoff: 04/11/2017
   
     -   배열 요소 `$.product[3]`)을 입력합니다. 배열은 0부터 시작됩니다.  
   
-    -   점 연산자(`.`)는 개체의 멤버를 나타냅니다.  
+    -   점 연산자(`.`)는 개체의 멤버를 나타냅니다. 예를 들어 `$.people[1].surname`, `surname` 의 자식인 `people`합니다.
   
 ## <a name="examples"></a>예  
  이 섹션의 예는 다음 JSON 텍스트를 참조합니다.  
@@ -93,17 +102,20 @@ ms.lasthandoff: 04/11/2017
 |$|{ "people": [ { "name": "John",  "surname": "Doe" },<br />   { "name": "Jane",  "surname": null, "active": true } ] }|  
   
 ## <a name="how-built-in-functions-handle-duplicate-paths"></a>기본 제공 함수에서 중복 경로를 처리하는 방법  
- JSON 텍스트에 중복된 속성(예: 수준과 이름이 같은 두 개의 키)이 포함되는 경우 JSON_VALUE 및 JSON_QUERY 함수는 경로와 일치하는 첫 번째 값을 반환합니다. 중복 키를 포함하는 JSON 개체의 구문을 분석하려면 다음 예제와 같이 OPENJSON을 사용합니다.  
+ -동일한 수준에 같은 이름의 키 두는 예를 들어-JSON 텍스트에 중복 된 속성이 포함 하는 경우는 **JSON_VALUE** 및 **JSON_QUERY** 함수는 경로 일치 하는 첫 번째 값만 반환 합니다. 중복 키를 포함 하는 JSON 개체를 구문 분석 하 고 모든 값을 반환 하려면 사용 **OPENJSON**다음 예제에 나온 것 처럼 합니다.  
   
-```tsql  
+```sql  
 DECLARE @json NVARCHAR(MAX)
 SET @json=N'{"person":{"info":{"name":"John", "name":"Jack"}}}'
 
 SELECT value
 FROM OPENJSON(@json,'$.person.info') 
 ```  
+
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>기본 제공 SQL Server에서 JSON 지원에 대 한 자세한 정보  
+특정 솔루션에 많이 사용 사례 및 권장 사항, 참조는 [기본 제공 JSON 지원에 대 한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) SQL Server와 Microsoft 프로그램 관리자 인 Jovan popovic의 Azure SQL 데이터베이스에 있습니다.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [OPENJSON&#40;Transact-SQL&#41;](../../t-sql/functions/openjson-transact-sql.md)   
  [JSON_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)   
  [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)  

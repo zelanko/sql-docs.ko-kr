@@ -1,23 +1,28 @@
 ---
-title: "XML로 내보내기(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "(보고서 작성기 및 SSRS) XML로 내보내기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 caps.latest.revision: 9
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# XML로 내보내기(보고서 작성기 및 SSRS)
+# <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML로 내보내기(보고서 작성기 및 SSRS)
   XML 렌더링 확장 프로그램은 페이지가 매겨진 보고서를 XML 형식으로 반환합니다. 보고서의 XML 스키마는 보고서마다 고유하며 데이터만 포함합니다. 레이아웃 정보는 렌더링되지 않으며 페이지 번호는 XML 렌더링 확장 프로그램을 통해 유지되지 않습니다. 이 확장 프로그램에서 생성된 XML은 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램으로 전송할 수 있습니다.  
   
 > [!NOTE]  
@@ -53,7 +58,6 @@ caps.handback.revision: 8
   
 -   이미지, 줄 및 사용자 지정 보고서 항목**Images, lines, and custom report items** 은 무시됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="DataTypes"></a> 데이터 형식  
  입력란 요소 또는 특성은 입력란에 표시되는 값에 따라 XSD 데이터 형식이 지정됩니다.  
@@ -61,26 +65,25 @@ caps.handback.revision: 8
 |입력란 값|지정되는 데이터 형식|  
 |--------------------------------|---------------------------|  
 |**Int16**, **Int32**, **Int64**, **UInt16**, **UInt32**, **UInt64**, **Byte**, **SByte**|**xsd:integer**|  
-|**Decimal**(또는 **Decimal** 및 정수 또는 바이트 데이터 형식)|**xsd:decimal**|  
-|**Float**(또는 **Decimal** 및 정수 또는 바이트 데이터 형식)|**xsd:float**|  
-|**Double**(또는 **Decimal** 및 정수 또는 바이트 데이터 형식)|**xsd:double**|  
+|**Decimal** (또는 **Decimal** 및 정수 또는 바이트 데이터 형식)|**xsd:decimal**|  
+|**Float** (또는 **Decimal** 및 정수 또는 바이트 데이터 형식)|**xsd:float**|  
+|**Double** (또는 **Decimal** 및 정수 또는 바이트 데이터 형식)|**xsd:double**|  
 |**DateTime 또는 DateTime Offset**|**xsd:dateTime**|  
-|** Time **|**xsd:string**|  
+|**Time**|**xsd:string**|  
 |**Boolean**|**xsd:boolean**|  
 |**String**, **Char**|**xsd:string**|  
 |기타|**xsd:string**|  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="XMLSpecificRenderingRules"></a> XML 관련 렌더링 규칙  
  다음 섹션에서는 XML 렌더링 확장 프로그램을 통해 보고서 내의 항목이 어떻게 해석되는지 설명합니다.  
   
-### 보고서 본문  
+### <a name="report-body"></a>보고서 본문  
  보고서는 XML 문서의 루트 요소로 렌더링됩니다. 요소의 이름은 속성 창에 설정된 DataElementName 속성을 따릅니다.  
   
  XML 네임스페이스 정의와 스키마 참조 특성도 보고서 요소에 포함됩니다. 변수는 굵은 글꼴로 표시됩니다.  
   
- \<**Report** xmlns=”**SchemaName**” xmlns:xsi=”http://www.w3.org/2001/XMLSchema-instance” xsi:**schemaLocation**=”**SchemaNameReportURL**&amp;rc%3aSchema=true” Name=”ReportName”>  
+ <**보고서** xmlns = "**SchemaName**" xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:**schemaLocation**= "**SchemaNameReportURL**&amp;rc %3aSchema = true" Name = "ReportName" >  
   
  변수의 값은 다음과 같습니다.  
   
@@ -91,48 +94,47 @@ caps.handback.revision: 8
 |SchemaName|Report.SchemaName. Null인 경우 Report.Name입니다. Report.Name이 사용되는 경우 먼저 XmlConvert.EncodeLocalName으로 인코딩됩니다.|  
 |ReportName|보고서의 이름|  
   
-### 입력란  
+### <a name="text-boxes"></a>입력란  
  입력란은 DataElementStyle RDL 속성에 따라 요소나 특성으로 렌더링됩니다. 요소 또는 특성의 이름은 TextBox.DataElementName RDL 속성을 따릅니다.  
   
-### 차트, 데이터 막대 및 스파크라인  
+### <a name="charts-data-bars-and-sparklines"></a>차트, 데이터 막대 및 스파크라인  
  차트, 데이터 막대 및 스파크라인은 XML로 렌더링됩니다. 데이터는 구조화됩니다.  
   
-### 계기 및 표시기  
+### <a name="gauges-and-indicators"></a>계기 및 표시기  
  계기 및 표시기는 XML로 렌더링됩니다. 데이터는 구조화됩니다.  
   
-### 하위 보고서  
+### <a name="subreports"></a>하위 보고서  
  하위 보고서는 요소로 렌더링됩니다. 요소의 이름은 DataElementName RDL 속성을 따릅니다. 하위 보고서의 TextBoxesAsElements 속성 설정 대신 보고서의 해당 속성 설정이 적용됩니다. 네임스페이스 및 XSLT 특성은 하위 보고서 요소에 추가되지 않습니다.  
   
-### 사각형  
+### <a name="rectangles"></a>사각형  
  사각형은 요소로 렌더링됩니다. 요소의 이름은 DataElementName RDL 속성을 따릅니다.  
   
-### 사용자 지정 보고서 항목  
+### <a name="custom-report-items"></a>사용자 지정 보고서 항목  
  CustomReportItems(CRI)는 렌더링 확장 프로그램에 표시되지 않습니다. 보고서에 사용자 지정 보고서 항목이 있는 경우 렌더링 확장 프로그램에서는 이를 일반적인 보고서 항목으로 렌더링합니다.  
   
-### 이미지  
+### <a name="images"></a>이미지  
  이미지는 렌더링되지 않습니다.  
   
-### 선  
+### <a name="lines"></a>선  
  선은 렌더링되지 않습니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-### 테이블, 행렬 및 목록  
+### <a name="tables-matrices-and-lists"></a>테이블, 행렬 및 목록  
  테이블, 행렬 및 목록은 요소로 렌더링됩니다. 요소의 이름은 테이블릭스 DataElementName RDL 속성을 따릅니다.  
   
-#### 행 및 열  
+#### <a name="rows-and-columns"></a>행 및 열  
  열은 행 안에 렌더링됩니다.  
   
-#### 테이블릭스 모퉁이  
+#### <a name="tablix-corner"></a>테이블릭스 모퉁이  
  모퉁이는 렌더링되지 않습니다. 모퉁이의 내용만 렌더링됩니다.  
   
-#### 테이블릭스 셀  
+#### <a name="tablix-cells"></a>테이블릭스 셀  
  테이블릭스 셀은 요소로 렌더링됩니다. 요소의 이름은 셀의 DataElementName RDL 속성을 따릅니다.  
   
-#### 자동 부분합  
+#### <a name="automatic-subtotals"></a>자동 부분합  
  테이블릭스 자동 부분합은 렌더링되지 않습니다.  
   
-#### 그룹과 함께 반복되지 않는 행 및 열 항목  
+#### <a name="row-and-column-items-that-do-not-repeat-with-a-group"></a>그룹과 함께 반복되지 않는 행 및 열 항목  
  그룹과 함께 반복되지 않는 레이블, 부분합, 합계 등의 항목은 요소로 렌더링됩니다. 요소의 이름은 TablixMember.DataElementName RDL 속성을 따릅니다.  
   
  TablixMember.DataElementOutput RDL 속성은 반복되지 않는 항목을 렌더링할지 여부를 제어합니다.  
@@ -147,24 +149,21 @@ caps.handback.revision: 8
   
  반복되지 않는 멤버에 상응하는 테이블릭스 셀이 없으면 해당 멤버가 렌더링되지 않습니다. 테이블릭스 셀이 여러 개의 열에 걸쳐 있는 경우 등이 여기에 해당할 수 있습니다.  
   
-#### 그룹과 함께 반복되는 행 및 열  
+#### <a name="rows-and-columns-that-repeat-with-a-group"></a>그룹과 함께 반복되는 행 및 열  
  그룹 내에서 반복되는 행과 열은 Tablix.DataElementOutput 규칙에 따라 렌더링됩니다. 요소의 이름은 DataElementName 속성을 따릅니다.  
   
  그룹 내의 고유한 값은 각각 그룹의 자식 요소로 렌더링됩니다. 요소의 이름은 Group.DataElementName 속성을 따릅니다.  
   
  DataElementOutput 속성 값이 Output이면 반복되는 항목의 머리글이 세부 정보 요소의 자식으로 렌더링됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="CustomFormatsXSLTransformations"></a> 사용자 지정 형식 및 XSL 변환  
  XML 렌더링 확장 프로그램에서 만든 XML 파일은 XSLT(XSL 변환)를 사용하여 거의 모든 형식으로 변환할 수 있습니다. 이 기능을 사용하면 기존 렌더링 확장 프로그램에서 지원하지 않는 형식으로도 데이터를 만들 수 있습니다. 사용자 고유의 렌더링 확장 프로그램을 만들기 전에 XML 렌더링 확장 프로그램과 XSLT 사용을 고려해 보십시오.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="DuplicateName"></a> 중복 이름  
  동일한 범위 내에 데이터 요소 이름이 중복되어 있으면 렌더러를 실행할 때 오류 메시지가 나타납니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> XSLT 변환  
  XML 렌더러로 서버 쪽 XSLT 변환을 원래 XML 데이터에 적용할 수 있습니다. XSLT를 적용하는 경우 렌더러에서는 원래 XML 데이터 대신 변환된 내용을 출력합니다. 변환은 클라이언트가 아니라 서버 쪽에서 진행됩니다.  
@@ -173,7 +172,6 @@ caps.handback.revision: 8
   
  DataTransform 정의 속성과 장치 정보 설정을 모두 사용하여 XSLT 파일을 지정한 경우에는 DataTransform에 지정한 XSLT가 먼저 진행된 다음 장치 정보 설정을 통해 설정한 XSLT가 적용됩니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> 장치 정보 설정  
  장치 정보 설정을 변경하여 이 렌더러의 다음과 같은 일부 기본 설정을 변경할 수 있습니다.  
@@ -194,12 +192,11 @@ caps.handback.revision: 8
   
  자세한 내용은 [XML Device Information Settings](../../reporting-services/xml-device-information-settings.md)을 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.png "맨 위 링크와 함께 사용되는 화살표 아이콘") [맨 위로 이동](#BackToTop)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive functionality - different report rendering extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

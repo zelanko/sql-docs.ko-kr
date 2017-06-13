@@ -1,23 +1,28 @@
 ---
-title: "행 및 열 머리글 제어(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "행 및 열 머리글 (보고서 작성기 및 SSRS) 제어 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4be6e836-158e-4bc9-8870-7f394d7c7e11
 caps.latest.revision: 8
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 8
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f83ece6730c623a8c710d9b3aef3f8b4786b83ca
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 행 및 열 머리글 제어(보고서 작성기 및 SSRS)
+# <a name="controlling-row-and-column-headings-report-builder-and-ssrs"></a>행 및 열 머리글 제어(보고서 작성기 및 SSRS)
   테이블, 행렬 또는 목록 데이터 영역이 가로 또는 세로로 여러 페이지에 걸쳐 있는 경우 각 페이지에 행 또는 열 머리글을 반복 표시할지 여부를 지정할 수 있습니다. 보고서 관리자나 보고서 미리 보기와 같은 대화형 렌더러에서 보고서를 스크롤할 때 행 또는 열 머리글이 항상 화면에 표시되도록 고정시킬 수 있습니다. 테이블이나 행렬의 첫 번째 행에는 각 열의 데이터에 대한 레이블이 있는 열 머리글이 있고, 첫 번째 열에는 각 행의 데이터에 대한 레이블이 있는 행 머리글이 있습니다. 중첩된 그룹의 경우 그룹 레이블이 있는 열 머리글과 처음 몇 개의 행을 반복 표시할 수 있습니다. 기본적으로 목록 데이터 영역에는 머리글이 포함되지 않습니다.  
   
  머리글을 반복 표시하거나 고정하는 방법은 다음에 따라 달라집니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 테이블릭스 데이터 영역의 행 및 열 이해  
+## <a name="understanding-rows-and-columns-in-a-tablix-data-region"></a>테이블릭스 데이터 영역의 행 및 열 이해  
  테이블이나 행렬은 기본 테이블릭스 데이터 영역의 템플릿입니다. 테이블릭스 데이터 영역에는 보고서 아래쪽으로 확장되는 행을 제어하는 행 그룹 영역, 보고서 양쪽으로 확장되는 열을 제어하는 열 그룹 영역, 데이터를 표시하는 본문 및 모퉁이와 같이 4개의 영역이 있습니다. 반복 또는 고정 머리글을 제어하는 속성을 설정하려면 테이블릭스 데이터 영역을 표시하는 두 가지 방법을 이해해야 합니다.  
   
 -   **보고서 정의에서** 테이블릭스 데이터 영역 정의에 있는 각 행이나 열은 특정 행이나 열 그룹의 테이블릭스 멤버입니다. 테이블릭스 멤버는 정적 또는 동적입니다. 정적 테이블릭스 멤버는 그룹당 한 번씩 반복되며 일반적으로 레이블 또는 부분합을 포함합니다. 동적 테이블릭스 멤버는 그룹 값을 포함하며 그룹 인스턴스라고도 하는 그룹의 고유 값마다 한 번씩 반복됩니다.  
@@ -66,7 +71,7 @@ caps.handback.revision: 8
   
  점선은 4개의 테이블릭스 영역을 보여 줍니다. 행 그룹 영역에는 첫 번째 열의 범주 레이블을 제어하는 행 그룹 머리글이 있습니다. 마찬가지로, 열 그룹 영역에는 첫 번째 행의 지리 레이블을 제어하는 열 그룹 머리글이 있습니다. 미리 보기에서 행렬이 여러 페이지에 걸쳐 있으면 다음 그림과 같이 첫 번째 행에 열 머리글이 나타납니다.  
   
- ![확장 그룹이 있는 렌더링된 행렬 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장 그룹이 있는 렌더링된 행렬 미리 보기")  
+ ![확장된 그룹이 있는 렌더링 된 행렬 미리 보기](../../reporting-services/report-design/media/rs-basicmatrixpreview.gif "확장된 그룹이 있는 렌더링 된 행렬 미리 보기")  
   
  첫 번째 행의 열 머리글을 반복하거나 고정하려면 테이블릭스 데이터 영역의 열 머리글 속성을 설정합니다. 중첩된 열 그룹의 열 머리글은 자동으로 포함됩니다.  
   
@@ -77,19 +82,19 @@ caps.handback.revision: 8
 ###  <a name="TableNoGroups"></a> 행 그룹이 없는 테이블  
  기본적으로 그룹이 없는 간단한 테이블에는 세부 정보 그룹이 포함되어 있습니다. 다음 그림에서는 범주, 주문 번호 및 판매 데이터를 표시하는 테이블을 보여 줍니다.  
   
- ![디자인, 1개의 정적 행과 1개의 동적 행이 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "디자인, 1개의 정적 행과 1개의 동적 행이 있는 테이블")  
+ ![디자인, 1 개의 정적 행에 있는 테이블, 1 개의 동적 행](../../reporting-services/report-design/media/rs-tableheaderstaticdesign.gif "디자인, 1 개의 정적 행에 있는 테이블, 1 개의 동적 행")  
   
  이 테이블은 테이블릭스 본문 영역으로만 구성되어 있기 때문에 점선이 없습니다. 첫 번째 행에는 그룹과 연결되지 않은 정적 테이블릭스 멤버를 나타내는 열 머리글이 표시됩니다. 두 번째 행에는 세부 정보 그룹과 연결된 동적 테이블릭스 멤버를 나타내는 세부 정보 데이터가 표시됩니다. 다음 그림에서는 이러한 테이블의 미리 보기를 보여 줍니다.  
   
- ![미리 보기, 1개의 정적 행과 1개의 동적 행이 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "미리 보기, 1개의 정적 행과 1개의 동적 행이 있는 테이블")  
+ ![미리 보기, 1 개의 정적 행에 있는 테이블, 1 개의 동적 행](../../reporting-services/report-design/media/rs-tableheaderstaticpreview.gif "미리 보기, 1 개의 정적 행에 있는 테이블, 1 개의 동적 행")  
   
  열 머리글을 반복하거나 고정하려면 테이블릭스 데이터 영역 정의의 일부인 정적 행의 테이블릭스 멤버 속성을 설정합니다. 정적 행을 선택하려면 그룹화 창의 고급 모드를 사용해야 합니다. 다음 그림에서는 행 그룹 창을 보여 줍니다.  
   
- ![행 그룹, 1개의 정적 행과 1개의 동적 행이 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "행 그룹, 1개의 정적 행과 1개의 동적 행이 있는 테이블")  
+ ![행 그룹, 1 개의 정적 포함 된 테이블, 1 개의 동적 행](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpanedefault.gif "행 그룹, 1 개의 정적 포함 된 테이블, 1 개의 동적 행")  
   
  다음 그림은 고급 모드에서 테이블의 행 그룹에 대한 정적 및 동적 테이블릭스 멤버를 보여 줍니다.  
   
- ![행 그룹, 기본 테이블용 고급](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "행 그룹, 기본 테이블용 고급")  
+ ![행 그룹, 기본 테이블에 대 한 고급](../../reporting-services/report-design/media/rs-tableheaderstaticgroupingpaneadvanced.gif "기본 테이블에 대 한 행 그룹, 고급")  
   
  테이블릭스 멤버의 열 제목을 반복 또는 고정하려면 (**정적**)이라는 레이블이 있는 정적 행을 선택합니다. 선택한 테이블릭스 멤버의 속성이 속성 창에 표시됩니다. 이 테이블릭스 멤버의 속성을 설정하여 첫 번째 행을 반복할지 아니면 계속 표시할지 여부를 제어할 수 있습니다.  
   
@@ -98,19 +103,19 @@ caps.handback.revision: 8
 ###  <a name="TableRowGroupsGroupHeader"></a> 행 그룹과 행 그룹 영역이 있는 테이블  
  간단한 테이블에 행 그룹을 추가하면 디자인 화면에서 행 그룹 영역이 테이블에 추가됩니다. 다음 그림에서는 범주 기반의 행 그룹이 있는 테이블을 보여 줍니다.  
   
- ![디자인, 1개의 행 그룹과 세부 정보가 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "디자인, 1개의 행 그룹과 세부 정보가 있는 테이블")  
+ ![디자인, 한 행 그룹과 세부 정보가 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelldesign.gif "디자인, 한 행 그룹과 세부 정보가 있는 테이블")  
   
  점선은 테이블릭스 행 그룹 영역과 테이블릭스 본문 영역을 보여 줍니다. 행 그룹 영역에는 행 그룹 머리글만 있고 열 그룹 머리글은 없습니다. 다음 그림에서는 이러한 테이블의 미리 보기를 보여 줍니다.  
   
- ![미리 보기, 1개의 행 그룹과 세부 정보가 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "미리 보기, 1개의 행 그룹과 세부 정보가 있는 테이블")  
+ ![미리 보기, 한 행 그룹과 세부 정보가 있는 테이블](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercellpreview.gif "미리 보기, 한 행 그룹과 세부 정보가 있는 테이블")  
   
  열 머리글을 반복 또는 고정하려면 이전 예와 같은 방법을 사용합니다. 다음 그림에서는 행 그룹 창의 기본 보기를 보여 줍니다.  
   
- ![행 그룹, 동적 구성원으로 구성된 기본 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "행 그룹, 동적 구성원으로 구성된 기본 모드")  
+ ![행 그룹, 동적 멤버와 함께 기본](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "동적 멤버와 행 그룹, 기본")  
   
  다음 그림과 같이 행 그룹 창의 **고급** 모드를 사용하여 테이블릭스 멤버를 표시합니다.  
   
- ![행 그룹, 정적 구성원으로 구성된 고급 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "행 그룹, 정적 구성원으로 구성된 고급 모드")  
+ ![행 그룹, 정적 멤버와 고급 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicwithgroupheadercelladvanced.gif "행 그룹, 정적 멤버와 고급 모드")  
   
  **정적**, (**정적**), 범주 및 (**세부 정보**) 테이블릭스 멤버가 나열됩니다. 괄호()가 포함된 테이블릭스 멤버는 해당 그룹 머리글이 없음을 나타냅니다. 열 머리글을 반복 또는 고정하려면 정적 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
   
@@ -133,17 +138,17 @@ caps.handback.revision: 8
   
  행을 반복할지 계속 표시할지 여부를 제어하려면 각 행의 테이블릭스 멤버에 대한 속성을 설정해야 합니다. 기본 모드에서 보면 이 예와 행 그룹과 그룹 머리글이 있는 이전 예와 차이가 없어 보입니다. 다음 그림에서는 이 테이블을 기본 모드로 표시한 그룹화 창을 보여 줍니다.  
   
- ![행 그룹, 동적 구성원으로 구성된 기본 모드](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "행 그룹, 동적 구성원으로 구성된 기본 모드")  
+ ![행 그룹, 동적 멤버와 함께 기본](../../reporting-services/report-design/media/rs-tableheaderdynamicgroupingpanedefault.gif "동적 멤버와 행 그룹, 기본")  
   
  그러나 고급 모드에서는 레이아웃 구조의 테이블릭스 멤버가 조금 다르게 표시됩니다. 다음 그림에서는 이 테이블을 고급 모드로 표시한 그룹화 창을 보여 줍니다.  
   
- ![행 그룹, 고급, 그룹 머리글 없음](../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "행 그룹, 고급, 그룹 머리글 없음")  
+ ![행 그룹, 고급, 그룹 머리글은 없습니다. ] (../../reporting-services/report-design/media/rs-tableheaderdynamicwithnogroupheadercelladvanced.gif "행 그룹, 고급, 그룹 머리글은 없습니다.")  
   
  행 그룹 창에 (**정적**), (범주), (**정적**) 및 (**세부 정보**) 테이블릭스 멤버가 나열됩니다. 열 제목을 반복 또는 고정하려면 맨 위의 (**정적**) 테이블릭스 멤버를 선택하고 속성 창에서 속성을 설정합니다.  
   
  [맨 위로 이동](#Top)  
   
-## 렌더러의 반복 또는 고정 머리글 지원  
+## <a name="renderer-support-for-repeating-or-freezing-headers"></a>렌더러의 반복 또는 고정 머리글 지원  
  렌더러마다 반복 또는 고정 머리글에 대한 지원이 달라집니다.  
   
  물리적 페이지를 사용하는 렌더러(PDF, 이미지, 인쇄)는 다음 기능을 제공합니다.  
@@ -160,7 +165,7 @@ caps.handback.revision: 8
   
  자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   

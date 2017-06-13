@@ -1,23 +1,28 @@
 ---
-title: "꺾은선형 차트(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "꺾은선형 차트 (보고서 작성기 및 SSRS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 194e6679-890d-4a3e-a756-130d32ef7e29
 caps.latest.revision: 7
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 7
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b309753291bfae573be58b124c033d021adb254c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 꺾은선형 차트(보고서 작성기 및 SSRS)
+# <a name="line-charts-report-builder-and-ssrs"></a>꺾은선형 차트(보고서 작성기 및 SSRS)
   꺾은선형 차트에서 계열은 단일 선으로 연결된 일련의 점으로 표시됩니다. 꺾은선형 차트는 연속적인 일정 기간 동안 발생하는 많은 양의 데이터를 표시하는 데 사용됩니다. 꺾은선형 차트에 데이터를 추가하는 방법에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 계열이 세 개 포함된 꺾은선형 차트를 보여 줍니다.  
@@ -27,7 +32,7 @@ caps.handback.revision: 7
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 변형  
+## <a name="variations"></a>변형  
   
 -   **곡선형**. 일반적인 선 대신 곡선을 사용하는 꺾은선형 차트입니다.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 7
   
 -   **스파크라인 차트**. 테이블 또는 테이블릭스 셀에 선 계열만 표시하는 꺾은선형 차트의 변형입니다. 자세한 내용은 [스파크라인 및 데이터 막대 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 꺾은선형 차트의 데이터 고려 사항  
+## <a name="data-considerations-for-line-charts"></a>꺾은선형 차트의 데이터 고려 사항  
   
 -   기본 꺾은선형 차트의 시각적 효과를 높이기 위해 계열 테두리의 두께를 3으로 변경하고 그림자 오프셋 값으로 1을 추가하는 것도 좋은 방법입니다. 이렇게 하면 훨씬 더 강조된 꺾은선형 차트를 만들 수 있습니다. 단, 차트 종류를 꺾은선형에서 다른 종류로 변경하려면 이러한 속성을 원래 값으로 되돌려야 합니다.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 7
   
 -   선으로 그려진 계열은 차트 영역 내에서 공간을 많이 차지하지 않습니다.  따라서 꺾은선형 차트는 세로 막대형 차트 같은 다른 차트 종류와 자주 결합하여 사용됩니다. 그러나 가로 막대형, 극좌표형, 원형 또는 셰이프 차트 종류와는 꺾은선형 차트를 결합할 수 없습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [가로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)   
  [세로 막대형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/column-charts-report-builder-and-ssrs.md)   
  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   

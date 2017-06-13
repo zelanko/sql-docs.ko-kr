@@ -15,3 +15,4 @@
 # [SQL Server 2016 BI 기능 설치](install-sql-server-business-intelligence-features.md)
 # [SQL Server 액세스를 허용하도록 Windows 방화벽 구성](configure-the-windows-firewall-to-allow-sql-server-access.md)  
 ## [SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성](configure-a-multi-homed-computer-for-sql-server-access.md)  
+# [설치 마법사 도움말](instance-configuration.md)

@@ -15,18 +15,150 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8798c5319cdce7b68f71868722aacfbf4cb34d9f
+ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
+ms.openlocfilehash: 243d2e6187a58554cee80066912de7dfcc0c52fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/20/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
-다음은 [SQL Server 2016](https://msdn.microsoft.com/library/ms130214.aspx)과 함께 출시된 [Visual Studio 2015용 SSDT(SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx)에 대한 변경 로그입니다.  
+에 대 한 변경 로그입니다 [SQL Server 데이터 도구 () Visual Studio 2015 용 SSDT](https://msdn.microsoft.com/library/mt204009.aspx)합니다.  
   
-새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.  
+새로운 기능과 변경 된 기능에 대 한 자세한 게시물을 방문 하세요 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)
 
-## <a name="ssdt-165-for-sql-server-2016"></a>SSDT 16.5(SQL Server 2016용)
+## <a name="ssdt-171"></a>SSDT 17.1
+빌드 번호: 14.0.61705.170
+
+### <a name="whats-new"></a>새 소식
+**AS 프로젝트:**
+- 사용자가 UI 1400 모델에서의 열에 대 한 힌트를 인코딩을 설정할 수 있습니다.
+- IntelliSense 모델과 관련 된 오프 라인 모드에서 출시 되었습니다.
+- 테이블 형식 모델 탐색기에는 이제 모델 (1400 호환성 수준의 테이블 형식 모델)에서 사용할 수 있는 명명 된 M 식을 나타내는 노드가 포함
+- Azure Active Directory 사용자 선택 테이블 형식 모델의 역할 멤버를 설정할 때 이제 사용할 수 있는 Microsoft Azure 포털의 IAM 비슷합니다
+
+**데이터베이스 프로젝트:**
+- 17.1 DacFx에 대 한 업데이트
+
+### <a name="bug-fixes"></a>버그 수정
+- 여기서 비즈니스 인텔리전스 디자이너 그룹 이름을 잘못 표시 VS2017에서 Visual Studio 옵션에서 문제 해결
+- 보고서 프로젝트를 솔루션에 대 한 코드 맵을 생성 충돌이 발생할 수 위치나 프로젝트으로 문제가 해결 되었습니다.
+- Analysis Services 1400 compat 수준 테이블 형식 모델에 대 한 PowerQuery 통합 있는 여러 가지 문제 해결
+- 문제가 해결 되었습니다. 새 DAX 편집기에서 대입 연산자 수 없는 별도 줄에는 측정값을 정의할 때 도구 창
+- 테이블 형식 측정값 표시 관점에서 측정값 이름을 바꿀 때 업데이트 하지 못하는 문제가 해결 되었습니다.
+- SQL Server 2016 Analysis Services 서버에 배포 하는 업데이트 된 Analysis Services 통합된 작업 영역 엔진 및 테이블 형식 개체 모델을 1200에 오류가 발생 하는 번역을 포함 하는 테이블 형식 프로젝트를 발생 시킨 회귀 수정
+- 새 1400 테이블 형식 데이터 원본의 매우 느리고 creation\deletion 변경한 성능 문제를 수정
+- 다차원 모델에 DSV 다이어그램 다른 Dsv 간에 신속 하 게 뷰를 변경 하는 경우 렌더링을 중지할 수 문제 해결
+
+## <a name="dacfx-171"></a>DacFx 17.1
+- 문제가 해결 되었습니다. 다른 id 열이 있는 메모리 액세스에 최적화 된 테이블이 포함 된 열을 암호화 하는 경우
+- CREATE DATABASE에 대 한 CATALOG_COLLATION 옵션에 대 한 SQLDOM 지원
+
+## <a name="dacfx-1701"></a>DacFx 17.0.1 
+- EKM 공급자의 데이터베이스와 함께 문제에 대 한 HSM에서 비대칭 키로 해결 [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
+
+## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0 (SQL Server 2017 최대 지원)
+빌드 번호: 14.0.61704.140
+
+### <a name="whats-new"></a>새 소식
+**데이터베이스 프로젝트:**
+- 배포를 더 이상 프로그램이 되돌아옵니다 뷰에 클러스터형된 인덱스
+- 열 암호화와 관련된 스키마 비교 문자열에서 인스턴스 이름 대신 적절한 이름을 사용함.   
+- SqlPackage에 새 명령줄 옵션 ModelFilePath를 추가함.  가져오기, 게시 및 스크립팅 작업에 대 한 외부 model.xml 파일을 지정 하는 고급 사용자를 위한 옵션 제공   
+- DacFx API는 Azure AD 유니버설 인증 및 multi-factor authentication (MFA)를 지원 하도록 확장 되었습니다.
+
+**IS 프로젝트:**
+- 이제 SSIS OData 원본 및 OData 연결 관리자가 Microsoft Dynamics AX Online 및 Microsoft Dynamics CRM Online의 OData 피드에 연결할 수 있음
+- SSIS 프로젝트는 이제 대상 서버 버전의 "SQL Server 2017" 지원 
+- CDC 분할자 및 SQL Server 2017을 대상으로 할 때 CDC 원본을 CDC 제어 태스크에 대 한 지원. 
+
+**AS 프로젝트:**
+- Analysis Services PowerQuery 통합 (1400 호환성 수준의 테이블 형식 모델):
+    - DirectQuery는 SQL Oracle 및 Teradata 사용자가 타사 드라이버가 설치 하는 경우에 사용할 수 있는
+    - PowerQuery의 예제에서 열을 추가 합니다.
+    - 데이터 액세스 옵션 1400 모델 (M 엔진에서 사용 되는 모델 수준 속성)
+        - 빠른 결합을 사용 하도록 설정 (기본값은 false-매시업 true로 설정 된 경우 무시 합니다 데이터 원본 개인 정보 수준을 데이터를 결합 하는 경우)
+        - 레거시 리디렉션합니다 (기본값은 false – 잠재적으로 안전 하지 않은 HTTP 리디렉션 매시업 엔진 true로 설정 될 예정 사용 하도록 설정입니다.  예를 들어 리디렉션을 HTTPS에서 HTTP URI로)  
+        - Null로 오류 값을 반환 (기본값은 false-null로 반환 됩니다 셀 수준 오류를 true로 설정입니다. False 인 경우 예외가 발생 합니다 셀 오류가 포함 되어 있습니다.)  
+    - PowerQuery를 사용 하 여 추가 데이터 원본 (파일 데이터 원본의 경우)
+        - Excel 
+        - Text/CSV 
+        - Xml 
+        - Json 
+        - Folder 
+        - Access 데이터베이스 
+        - Azure BLOB 저장소 
+    - 지역화 된 PowerQuery 사용자 인터페이스
+- DAX 편집기 도구 창
+    - 개선 된 DAX 측정값, 계산된 열 및 다른 창 메뉴 SSDT에서 보기를 통해 사용할 수 있는 정보 행 식을 대 한 환경 편집
+    - DAX parser\Intellisense의 향상 된 기능
+
+
+**RS 프로젝트:**
+- 포함 가능한 RVC 제어를 SSRS 2016을 지원하는 데 사용할 수 있음
+
+### <a name="bug-fixes"></a>버그 수정
+**AS 프로젝트:**
+- BI 프로젝트가 VS에서 [New Projects](새 프로젝트) 범주 맨 위에 표시되지 않도록 템플릿 우선 순위를 수정함
+- SSIS, SSAS 또는 SSRS 솔루션을 열 때 간혹 발생할 수 있는 VS 충돌 문제를 해결함
+- 테이블 형식: DAX 구문 분석 및 수식 입력줄에 대한 여러 개선 사항 및 성능 수정.
+- 테이블 형식: SSAS 테이블 형식 프로젝트가 열려 있지 않은 경우 테이블 형식 모델 탐색기가 더 이상 표시되지 않음.
+- 다차원: 고해상도(High-DPI) 컴퓨터에서 처리 대화 상자를 사용할 수 없는 문제를 해결함.
+- 테이블 형식: SSMS가 이미 열려 있을 때 BI 프로젝트를 여는 경우 SSDT 오류가 발생하는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- 테이블 형식: 1103 모델에서 계층이 bim 파일로 올바르게 저장되지 않는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
+- 테이블 형식: 통합 작업 영역 모드가 지원되지 않는데도 32비트 컴퓨터에서 허용되는 문제를 해결함.
+- 테이블 형식: 부분 선택 모드에서 항목을 클릭하는 경우(예를 들어, DAX 식을 입력하지만 측정값을 클릭함) 작동이 중단될 수 있는 문제를 해결함.
+- 테이블 형식: 배포 마법사에서 모델의 .Name 속성을 "Model"로 다시 설정하는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- 테이블 형식: [다이어그램 뷰]를 선택하지 않았는데도 TME에서 계층을 선택할 때 속성이 표시되는 문제를 해결함.
+- 테이블 형식: 특정 응용 프로그램에서 붙여넣을 때 DAX 수식 입력줄에 붙여넣으면 텍스트 대신 이미지나 기타 콘텐츠를 붙여넣는 문제를 해결함.
+- 테이블 형식: 특정 정의가 포함된 측정값이 있어서 1103의 일부 이전 모델을 열 수 없는 문제를 해결함.
+- 테이블 형식: XEvent 세션을 삭제할 수 없는 문제를 해결함.
+- Devenv.com이 포함된 AS "smproj" 파일을 빌드하지 못하는 문제를 해결함
+- AS 테이블 형식 모델 시트 탭 제목에서 한국어 IME를 사용할 경우 텍스트 변경 내용을 너무 자주 종료하는 문제를 해결함
+- DAX Related() 함수에 대한 Intellisense가 제대로 작동하지 않아 다른 테이블의 열을 표시하는 문제를 해결함
+- 데이터베이스 대화 상자에서 AS 데이터베이스 목록을 정렬하여 AS 테이블 형식 프로젝트 가져오기를 개선함
+- AS 테이블 형식 모델에서 계산된 테이블을 만들 때 테이블이 식에서 제안된 개체로 나열되지 않는 문제를 해결함
+- 미리 보기 1400 AS 모델에서 코드를 본 후 통합 작업 영역 서버를 사용하여 열려고 할 때 발생하는 문제를 해결함
+- 특정 상황에서 초기 카탈로그를 지원하지 않는 일부 데이터 원본이 제대로 작동하지 않는 문제를 해결함 
+- 파티션을 유지하는 옵션을 사용하도록 설정한 경우에도 배포 마법사에서 계산된 테이블에 변경 내용을 적용해야 함
+- 기존 AC 연결에 대한 [고급 속성] 대화 상자에 다시 선택할 때까지 전체 목록이 표시되지 않는 문제를 해결함
+- 일부 지역화 된 빌드에 표시 되었던 잘린된 UI 문자열 있는 몇 가지 문제 해결
+- 테이블 형식 모델로 PowerQuery 통합 1400 compat 수준에 있는 다양 한 문제가 해결
+- 보고서 마법사 스타일 템플릿 표시 되지 올바르게 관련 문제 해결
+- 보고서 마법사에서 SQL AS로 변경 하면 잘못 된 데이터 원본 설정으로 발생할 수 있는 관련 문제 해결
+- 명령줄 (devenv.com\exe)에서 Analysis Services (테이블 형식만) 프로젝트 빌드 오류를 발생 시키는 문제가 해결 되었습니다.
+- 시작 하기 전에 문자로 때 강조 표시 하 고 정확한 텍스트 색을 표시 하도록 DAX 측정값 파서 관련 문제 해결: =
+- 경로 내용이 너무 긴 작업 영역 통합된 모드에서 테이블 형식 프로젝트에 대 한 모든 파일 표시 하려고 하는 경우는 ObjectRefException 트리거 문제가 해결 되었습니다.
+- 표시 된 위치 사용할 수 없는 Compact 4.0 클라이언트 데이터 공급자에 대 한 데이터 원본 디자이너 관련 문제 해결
+- VS2017에서 마이닝 모델을 검색 하는 동안 오류가 발생 시킨 문제가 해결 되었습니다.
+- VS2017 DSV 다이어그램 뷰를 변경한 후 렌더링을 중지 하 고 다음 예외를 적중 위치에서 다차원 모델로 문제 해결
+- 연결 된 동안 AS VS2017에서 실패 한 보고서를 미리 보기 문제가 해결 되었습니다.
+ 
+
+**RS 프로젝트:**
+- SSDT에서 보고서를 디자인할 때 대부분의 변경 작업 중 매개 변수, 데이터 원본 및 데이터 집합의 트리 뷰가 축소되는 문제를 해결함 
+- [저장]을 누를 때 최신 버전이 아니라 RDL 버전이 저장되는 문제를 해결함.
+- 백업이 꺼져 있을 때 SSDT RS가 파일을 백업하는 문제와 여러 다른 문제를 해결함.
+- "셀 분할"을 클릭할 때 오류가 표시되는 보고서 작성기의 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- 캐싱으로 인해 보고서의 데이터가 잘못될 수 있는 문제를 해결함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+
+**IS 프로젝트:**
+- run64bitruntime 설정이 유지되지 않는 문제를 해결함.
+- DataViewer에서 표시된 열을 저장하지 않는 문제를 해결함.
+- 패키지 파트에서 주석을 숨기는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- 패키지 파트에서 데이터 흐름 레이아웃 및 주석을 무시하는 문제를 해결함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- SQL Server에서 프로젝트를 가져올 때 SSDT 작동이 중단되는 문제를 해결함
+- SSIS 패키지를 저장 된 연 후와 런타임에 Hadoop 파일 시스템 태스크 TimeoutInMinutes 기본값 10 관련 문제를 해결 합니다.
+
+**데이터베이스 프로젝트:**
+- SSDT DACPAC 배포에서 IgnoreColumnOrder에 대한 설정 다시 추가. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
+- STRING_SPLIT를 사용하는 경우 SSDT가 컴파일하지 못함. [Connect 항목](http://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
+- DeploymentContributors에서 공개 모델에 액세스할 수 있지만 지원 스키마가 초기화되지 않는 문제를 해결함. [Github 문제](https://github.com/Microsoft/DACExtensions/issues/8)
+- 파일 그룹 배치에 대한 DacFx 임시 수정
+- 외부 동의어에 대한 "확인되지 않은 참조" 오류에 대한 수정 
+- Always Encrypted: 온라인 암호화가 취소 시 변경 내용 추적을 사용하지 않도록 설정하지 않으며 암호화 시작 전에 변경 내용 추적이 정리되지 않은 경우 올바로 작동하지 않음
+
+
+## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5 (SQL Server 2016 최대 지원)
 릴리스됨: 2016년 10월 20일
 
 빌드 번호: 14.0.61021.0

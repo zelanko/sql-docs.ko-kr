@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 에이전트 프록시 만들기 | Microsoft 문서"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 05/04/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: dc46da89f0cc905c743da8900e0a1b58feb478fc
+ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
+ms.openlocfilehash: 2853583d3902f9b0da32e2b0e1c5a55b696d34e0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/06/2017
 
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시 만들기
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
   
 -   사용 가능한 자격 증명이 없는 경우 프록시를 만들기 전에 먼저 자격 증명을 만들어야 합니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다. 자격 증명에 지정된 사용자에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 실행 중인 컴퓨터에 대한 "일괄 작업으로 로그온" 권한이 있어야 합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 프록시는 자격 증명을 사용하여 Windows 사용자 계정에 대한 정보를 저장합니다. 자격 증명에 지정 된 사용자 권한이 있어야 "네트워크에서이 컴퓨터 액세스" (SeNetworkLogonRight) 되는 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 실행 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 프록시에 대한 하위 시스템 액세스 권한을 확인하고 작업 단계가 실행될 때마다 프록시에 대한 액세스 권한을 부여합니다. 프록시에 하위 시스템에 대한 액세스 권한이 없으면 작업 단계가 실패합니다. 그렇지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 프록시에 지정된 사용자를 가장하여 작업 단계를 실행합니다.  
   

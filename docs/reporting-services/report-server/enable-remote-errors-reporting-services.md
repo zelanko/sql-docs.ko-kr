@@ -1,27 +1,32 @@
 ---
-title: "원격 오류 활성화(Reporting Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "원격 데이터 원본 [Reporting Services]"
-  - "EnableRemoteError 서버 속성"
+title: "원격 오류 (Reporting Services) 사용 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- remote data source [Reporting Services]
+- EnableRemoteError server property
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 12
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 원격 오류 활성화(Reporting Services)
-  원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 "이 오류에 대한 자세한 내용을 보려면 로컬 서버 컴퓨터의 보고서 서버를 탐색하거나 원격 오류를 활성화하십시오"라는 텍스트가 포함되어 있으면 문제 해결에 도움이 되는 추가 정보에 액세스할 수 있도록 **EnableRemoteErrors** 속성을 설정할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [보고서 서버 시스템 속성](../Topic/Report%20Server%20System%20Properties.md)을 참조하세요.  
+# <a name="enable-remote-errors-reporting-services"></a>원격 오류 활성화(Reporting Services)
+  원격 서버에서 발생되는 오류 조건에 대한 추가 정보를 반환하도록 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에 대한 서버 속성을 설정할 수 있습니다. 오류 메시지에 "이 오류에 대한 자세한 내용을 보려면 로컬 서버 컴퓨터의 보고서 서버를 탐색하거나 원격 오류를 활성화하십시오"라는 텍스트가 포함되어 있으면 문제 해결에 도움이 되는 추가 정보에 액세스할 수 있도록 **EnableRemoteErrors** 속성을 설정할 수 있습니다. 자세한 내용은 [온라인 설명서에서](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) 보고서 서버 시스템 속성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
  항목 내용  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 12
 ##  <a name="bkmk_sharepoint"></a> SharePoint 모드에 대한 원격 오류 사용  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에 대한 원격 오류 사용에는 두 가지 다른 프로시저가 있습니다. 서로 다른 두 보고서 서버 아키텍처에 따라 프로시저가 달라집니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 릴리스에서 도입된 새 SharePoint 서비스 기반 아키텍처는 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 구성될 수 있는 설정을 활용합니다. 이전 아키텍처는 단일 사이트 수준 설정을 활용합니다.  
   
-#### Reporting Services 서비스 응용 프로그램에 대한 원격 오류 사용  
+#### <a name="enable-remote-errors-for-a-reporting-services-service-application"></a>Reporting Services 서비스 응용 프로그램에 대한 원격 오류 사용  
   
 1.  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 새 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 함께 설치되는 SharePoint 모드 보고서 서버의 경우 서비스 응용 프로그램 설정 **원격 오류 사용**을 설정합니다. 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 이 설정을 구성할 수 있습니다.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 12
   
 6.  **확인**을 클릭합니다.  
   
-#### SharePoint 사이트에 대한 원격 오류 사용  
+#### <a name="enable-remote-errors-for-a-sharepoint-site"></a>SharePoint 사이트에 대한 원격 오류 사용  
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 이전의 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]버전과 함께 설치되는 SharePoint 모드 보고서 서버의 경우 사이트 설정 **로컬 모드에서 원격 오류 사용**을 설정합니다.  
   
@@ -60,11 +65,11 @@ caps.handback.revision: 12
   
 4.  **로컬 모드에서 원격 오류 사용**을 클릭합니다.  
   
-5.   **확인**을 클릭합니다.  
+5.  **확인**을 클릭합니다.  
   
 ##  <a name="bkmk_mgtStudio"></a> SQL Server Management Studio를 통한 원격 오류 사용(기본 모드)  
   
-1.  Management Studio를 시작하여 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)을 참조하세요.  
+1.  Management Studio를 시작하여 보고서 서버 인스턴스에 연결합니다. 자세한 내용은 [온라인 설명서에서](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md) Management Studio에서 보고서 서버에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 참조하세요.  
   
 2.  보고서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   

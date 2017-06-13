@@ -1,36 +1,41 @@
 ---
-title: "공유 데이터 원본 만들기, 수정 및 삭제(SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 원본 속성 수정"
-  - "공유 데이터 원본 [Reporting Services]"
-  - "공유 데이터 원본 제거"
-  - "역할 [Reporting Services], 공유 데이터 원본"
-  - "데이터 원본 [Reporting Services], 공유"
-  - "데이터 원본 [Reporting Services], 속성 수정"
-  - "공유 데이터 원본 삭제"
+title: "만들기, 수정 및 공유 데이터 원본 (SSRS)를 삭제 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data source properties
+- shared data sources [Reporting Services]
+- removing shared data sources
+- roles [Reporting Services], shared data sources
+- data sources [Reporting Services], shared
+- data sources [Reporting Services], modifying properties
+- deleting shared data sources
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 caps.latest.revision: 53
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 53
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 3d4025539369dcc955e8675a92def39e356cb86d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
+# <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>공유 데이터 원본 만들기, 수정 및 삭제(SSRS)
   공유 데이터 원본은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버에서 실행되는 여러 보고서, 모델 및 데이터 기반 구독에서 참조할 수 있는 데이터 원본 연결 속성의 집합입니다.  공유 데이터 원본을 사용하면 시간이 지나면서 자주 변경되는 데이터 원본 속성을 쉽게 관리할 수 있습니다. 사용자 계정 또는 암호가 변경되거나 데이터베이스를 다른 서버로 이동하는 경우 한 위치에서 연결 정보를 업데이트할 수 있습니다.  
   
  다음 아이콘은 보고서 관리자 폴더 계층의 공유 데이터 원본을 나타냅니다.  
   
- ![공유 데이터 원본 아이콘](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")  
+ ![Shared data source icon](../../reporting-services/report-data/media/hlp-16datasource.png "Shared data source icon")  
 공유 데이터 원본 아이콘  
   
  공유 데이터 원본은 보고서 및 데이터 기반 구독에서는 선택 사항이지만 보고서 모델에서는 필수 사항입니다. 임시 보고를 위해 보고서 모델을 사용하려는 경우 공유 데이터 원본 항목을 만들고 유지 관리하여 모델에 연결 정보를 제공해야 합니다.  
@@ -47,7 +52,7 @@ caps.handback.revision: 53
   
  공유 데이터 원본에는 데이터를 검색하는 데 사용되는 쿼리 정보가 포함되지 않습니다. 쿼리는 항상 보고서 정의 안에 보관됩니다.  
   
-## 공유 데이터 원본 만들기 및 수정  
+## <a name="creating-and-modifying-shared-data-sources"></a>공유 데이터 원본 만들기 및 수정  
  공유 데이터 원본을 만들거나 속성을 수정하려면 보고서 서버에서 **데이터 원본 관리** 권한이 있어야 합니다. 보고서 서버가 기본 모드로 실행되는 경우에는 보고서 관리자를 사용하여 공유 데이터 원본을 만들고 구성할 수 있으며 보고서 서버가 SharePoint 통합 모드로 실행되는 경우에는 SharePoint 사이트의 응용 프로그램 페이지를 사용할 수 있습니다. 보고서 디자이너에서는 보고서 서버의 모드에 관계없이 공유 데이터 원본을 만든 다음 대상 서버에 게시할 수 있습니다.  
   
  보고서 서버에서 공유 데이터 원본을 만든 후 역할 할당을 만들어 공유 데이터 원본에 대한 액세스를 제어하거나, 다른 위치로 이동하거나, 이름을 바꾸거나, 외부 데이터 원본에서 유지 관리 작업이 수행되는 동안 보고서가 처리되지 않도록 오프라인 상태로 만들 수 있습니다. 공유 데이터 원본 항목의 이름을 변경하거나 보고서 서버 폴더 계층의 다른 위치로 이동하면 공유 데이터 원본을 참조하는 모든 보고서나 구독의 경로 정보도 함께 업데이트됩니다. 공유 데이터 원본을 오프라인 상태로 만들면 데이터 원본을 다시 활성화할 때까지 모든 보고서, 모델 및 구독이 실행되지 않습니다.  
@@ -59,7 +64,7 @@ caps.handback.revision: 53
 1.  보고서 데이터 창의 도구 모음에서 **새로 만들기** , **데이터 원본**을 차례로 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
   
     > [!NOTE]  
-    >  보고서 데이터 창이 표시되지 않는 경우 **보기** 메뉴에서 **보고서 데이터**를 클릭합니다.  
+    >  보고서 데이터 창이 표시되지 않는 경우 **보기** 메뉴에서 **보고서 데이터** 를 클릭합니다.  
   
 2.  **이름** 입력란에 데이터 원본 이름을 입력하거나 기본값을 적용합니다. 데이터 원본 이름은 보고서 내부에서만 사용됩니다. 의미를 명확하게 전달하려면 연결 문자열에서 지정된 데이터베이스의 이름을 데이터 원본 이름에 포함하는 것이 좋습니다.  
   
@@ -77,13 +82,13 @@ caps.handback.revision: 53
   
  **보고서 관리자에서 공유 데이터 원본을 만들려면**  
   
-1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)를 시작합니다.  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
 2.  보고서 관리자에서 **내용** 페이지로 이동합니다.  
   
 3.  **새 데이터 원본**을 클릭합니다. **새 데이터 원본** 페이지가 열립니다.  
   
-4.  항목의 이름을 입력합니다. 이름은 한 글자 이상이어야 하며 문자로 시작되어야 합니다. 특정 기호도 포함할 수 있지만 공백 또는 ; ? : @ & = + , $ / * \< > | " / 기호는 포함할 수 없습니다.  
+4.  항목의 이름을 입력합니다. 이름은 한 글자 이상이어야 하며 문자로 시작되어야 합니다. 특정 기호도 포함할 수 있지만 공백 또는 ; ? : @ & = + , $ / * < > | " / 기호는 포함할 수 없습니다.  
   
 5.  연결 정보를 제공하는 설명을 입력합니다(옵션). 이 설명은 보고서 관리자의 **내용** 페이지에 나타납니다.  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 53
     > [!NOTE]  
     >  XML 데이터 원본 유형에서는 연결 테스트 단추를 지원하지 않습니다.  
   
-10.  **확인**을 클릭합니다.  
+10. **확인**을 클릭합니다.  
   
  **보고서 관리자에서 공유 데이터 원본을 수정하려면**  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 53
   
 3.  데이터 원본을 수정한 후 **적용**을 클릭합니다.  
   
-## 공유 데이터 원본 삭제  
+## <a name="deleting-shared-data-sources"></a>공유 데이터 원본 삭제  
  보고서 서버에서 다른 항목을 삭제하는 것과 동일한 방법으로 공유 데이터 원본을 삭제할 수 있습니다.  
   
  **공유 데이터 원본을 삭제하려면**  
@@ -151,7 +156,7 @@ caps.handback.revision: 53
   
  공유 데이터 원본 삭제 작업은 실행 취소할 수 없습니다. 하지만 공유 데이터 원본을 실수로 삭제한 경우에는 삭제된 것과 동일한 속성 값을 사용하여 새 공유 데이터 원본을 만들 수 있습니다. 각 보고서, 모델 및 데이터 기반 구독을 열어 공유 데이터 원본을 이 원본을 사용하는 항목에 다시 바인딩해야 하지만 데이터 원본 속성이 이전과 동일하기만 하면 보고서, 모델 및 구독은 이전과 동일하게 작동하게 됩니다.  
   
-## 공유 데이터 원본 가져오기  
+## <a name="importing-shared-data-sources"></a>공유 데이터 원본 가져오기  
  **보고서 디자이너에서 기존 데이터 원본을 가져오려면**  
   
 1.  솔루션 탐색기의 보고서 서버 프로젝트에서 **공유 데이터 원본** 폴더를 마우스 오른쪽 단추로 클릭한 다음 **기존 항목 추가**를 클릭합니다. **기존 항목 추가** 대화 상자가 열립니다.  
@@ -160,7 +165,7 @@ caps.handback.revision: 53
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## SharePoint의 공유 데이터 원본  
+## <a name="shared-data-sources-in-sharepoint"></a>SharePoint의 공유 데이터 원본  
  SharePoint 라이브러리에서 보고서를 실행하는 경우 연결 정보는 보고서에 링크된 외부 파일에 또는 보고서 내에 정의될 수 있습니다. 연결 정보가 보고서 내에 포함되어 있는 경우 사용자 지정 데이터 원본이라고 하며 연결 정보가 외부 파일에 정의되어 있는 경우 공유 데이터 원본이라고 합니다. 외부 파일은 보고서 서버 데이터 원본 파일(.rsds)이나 Office 데이터 연결 파일(.odc)이 될 수 있습니다.  
   
  .rsds 파일은 .rds 파일과 비슷하지만 다른 스키마를 포함합니다. .rsds 파일을 만들기 위해 보고서 디자이너 또는 모델 디자이너에서 SharePoint 라이브러리로 .rds를 게시할 수 있습니다. 새 .rsds 파일은 원래 .rds 파일에서 생성됩니다. 또는 SharePoint 사이트에서 라이브러리에 새 파일을 만들 수 있습니다.  
@@ -186,7 +191,7 @@ caps.handback.revision: 53
   
 6.  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다. 자격 증명은 저장 및 통합하거나 무인 보고서 처리를 위해 구성할 수 있으며 입력 메시지가 표시되도록 구성할 수도 있습니다.  
   
-    -   보고서를 연 사용자의 자격 증명을 사용하여 데이터에 액세스하려면 **Windows 인증(통합)**을 선택합니다. SharePoint 사이트 또는 팜에서 폼 인증을 사용하거나 트러스트된 계정을 통해 보고서 서버에 연결하는 경우 이 옵션을 선택하지 마십시오. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오. 이 옵션은 도메인에 Kerberos 인증을 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos 인증을 해제하면 Windows 자격 증명이 하나의 다른 컴퓨터로만 전달될 수 있습니다. 따라서 추가 연결이 필요한 다른 컴퓨터에 외부 데이터 원본이 있는 경우 원하는 데이터 대신 오류가 표시됩니다.  
+    -   보고서를 연 사용자의 자격 증명을 사용하여 데이터에 액세스하려면 **Windows 인증(통합)** 을 선택합니다. SharePoint 사이트 또는 팜에서 폼 인증을 사용하거나 트러스트된 계정을 통해 보고서 서버에 연결하는 경우 이 옵션을 선택하지 마십시오. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오. 이 옵션은 도메인에 Kerberos 인증을 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos 인증을 해제하면 Windows 자격 증명이 하나의 다른 컴퓨터로만 전달될 수 있습니다. 따라서 추가 연결이 필요한 다른 컴퓨터에 외부 데이터 원본이 있는 경우 원하는 데이터 대신 오류가 표시됩니다.  
   
     -   사용자가 보고서를 실행할 때마다 자격 증명을 입력하도록 하려면 **자격 증명 확인** 을 선택합니다. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오.  
   
@@ -215,7 +220,7 @@ caps.handback.revision: 53
   
  보고서 모델을 삭제할 때는 주의해야 합니다. 모델을 삭제하면 해당 모델을 기반으로 하는 보고서를 보고서 작성기에서 더 이상 열고 수정할 수 없습니다. 기존 보고서에 사용되는 모델을 실수로 삭제한 경우 해당 모델을 다시 생성하고 이 모델을 사용하는 보고서를 다시 만들어 저장한 다음 사용할 모델 항목 보안을 다시 지정해야 합니다. 단순히 모델을 다시 생성한 다음 기존 보고서에 연결할 수는 없습니다.  
   
-## 종속 항목  
+## <a name="dependent-items"></a>종속 항목  
  데이터 원본을 사용하는 보고서 및 모델 목록을 보려면 해당 공유 데이터 원본에 대한 종속 항목 페이지를 엽니다. 보고서 관리자 또는 SharePoint 응용 프로그램 페이지에서 데이터 원본을 열면 이 페이지에 액세스할 수 있습니다. 종속 항목 페이지에는 데이터 기반 구독이 표시되지 않는다는 점에 주의하십시오. 구독에서 공유 데이터 원본을 사용하는 경우 해당 구독은 종속 항목 목록에 표시되지 않습니다.  
   
  **SharePoint에서 종속 항목을 보려면**  
@@ -228,14 +233,15 @@ caps.handback.revision: 53
   
      보고서 모델의 경우 종속 항목 목록에 보고서 작성기에서 만든 보고서가 표시됩니다. 공유 데이터 원본의 경우에는 종속 항목 목록에 보고서와 보고서 모델이 모두 포함될 수 있습니다.  
   
-## 관련 항목:  
- [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../Topic/Create%20and%20Manage%20Shared%20Data%20Sources%20\(Reporting%20Services%20in%20SharePoint%20Integrated%20Mode\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](http://msdn.microsoft.com/library/2d3428e4-a810-4e66-a287-ff18e57fad76)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
- [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../Topic/Embedded%20and%20Shared%20Data%20Connections%20or%20Data%20Sources%20\(Report%20Builder%20and%20SSRS\).md)   
- [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](../Topic/Data%20Sources%20Properties%20Page%20\(Report%20Manager\).md)   
- [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../Topic/Create,%20Delete,%20or%20Modify%20a%20Shared%20Data%20Source%20\(Report%20Manager\).md)   
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/f417782c-b85a-4c4d-8a40-839176daba56)   
+ [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
  [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   
+

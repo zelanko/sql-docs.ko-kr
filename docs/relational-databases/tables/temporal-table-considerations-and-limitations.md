@@ -2,7 +2,7 @@
 title: "임시 테이블 고려 사항 및 제한 사항 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 01/24/2017
+ms.date: 05/22/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22bab0bc2c039e68a336ac827a3e2d028ca77c78
+ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
+ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 05/23/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
@@ -57,7 +57,9 @@ ms.lasthandoff: 04/11/2017
   
 -   기록 테이블의 데이터를 직접 수정하는 것은 허용되지 않습니다.  
   
--   **ON DELETE CASCADE** 및 **ON UPDATE CASCADE** 은 현재 테이블에서 허용되지 않습니다. 즉, 임시 테이블이 외래 키 관계(sys.foreign_keys의 *parent_object_id* 에 해당)인 경우 CASCADE 옵션은 허용되지 않습니다. 이러한 제약 조건으로 작업하려면 응용 프로그램 논리를 사용하거나 트리거 후에 기본 키 테이블(sys.foreign_keys의  *referenced_object_id* 에 해당)에서 삭제 시 일관성을 유지하세요. 기본 키 테이블이 임시이고 참조 테이블이 비임시인 경우 그러한 제한 사항이 없습니다.  
+-   **ON DELETE CASCADE** 및 **ON UPDATE CASCADE** 은 현재 테이블에서 허용되지 않습니다. 즉, 임시 테이블이 외래 키 관계(sys.foreign_keys의 *parent_object_id* 에 해당)인 경우 CASCADE 옵션은 허용되지 않습니다. 이러한 제약 조건으로 작업하려면 응용 프로그램 논리를 사용하거나 트리거 후에 기본 키 테이블(sys.foreign_keys의  *referenced_object_id* 에 해당)에서 삭제 시 일관성을 유지하세요. 기본 키 테이블이 임시이고 참조 테이블이 비임시인 경우 그러한 제한 사항이 없습니다. 
+
+    **참고:** 이 제한 사항은 SQL Server 2016에만 적용 합니다. CASCADE 옵션에서 사용할 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 2.0에서 시작 합니다.  
   
 -   DML 논리 무효화를 방지하기 위해**INSTEAD OF** 트리거가 현재 또는 기록 테이블에서 허용되지 않습니다. **AFTER** 트리거는 현재 테이블에서만 허용됩니다. DML 논리 무효화를 방지하기 위해 기록 테이블에서 차단됩니다.  
   

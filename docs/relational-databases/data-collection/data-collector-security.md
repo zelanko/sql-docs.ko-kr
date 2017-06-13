@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5b90faa09f6185ffe5e273e43707bc9dc2dc1c0
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 62b958f5a1c032e11b5aaef37692b5de21a0bec4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/25/2017
 
 ---
 # <a name="data-collector-security"></a>데이터 수집기 보안
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)를 참조하세요.  
+ 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.  
   
 ### <a name="dcproxy-role"></a>dc_proxy 역할  
  **dc_proxy** 역할의 멤버는 데이터 수집기 컬렉션 집합 및 수집기 수준 속성에 대한 읽기 권한을 갖습니다. 이 역할의 멤버는 자신이 소유하는 작업을 실행할 수 있으며 기존 프록시 계정으로 실행되는 작업 단계를 만들 수도 있습니다.  
@@ -115,7 +115,7 @@ ms.lasthandoff: 04/11/2017
   
 -   **db_ssisoperator**  
   
- 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../integration-services/service/integration-services-roles-ssis-service.md)를 참조하세요.  
+ 자세한 내용은 [Integration Services 경로&#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md)를 참조하세요.  
   
 ## <a name="permissions-for-configuring-and-using-the-management-data-warehouse"></a>관리 데이터 웨어하우스 구성 및 사용 권한  
  태스크에 따라 사용자는 관리 데이터 웨어하우스에 액세스하기 위해 제공된 하나 이상의 고정 데이터베이스 역할의 멤버여야 합니다. 역할은 액세스 권한이 많은 것부터 적은 순서대로 다음과 같습니다.  

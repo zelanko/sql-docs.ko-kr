@@ -73,7 +73,7 @@
 ### [구독자에서 데이터 유효성 검사](validate-data-at-the-subscriber.md)  
 ## [복제 스크립팅](scripting-replication.md)  
 
-# [개발자 개념](concepts/index.md)
+# [개발자 개념](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [기술 참조](technical-reference-replication.md)  
 ## [속성 참조](properties-reference-replication.md)  

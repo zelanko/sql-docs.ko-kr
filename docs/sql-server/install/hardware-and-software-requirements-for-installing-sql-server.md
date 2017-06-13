@@ -51,14 +51,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2fd9cc456c7cb71108eced3328583a004deb171c
+ms.sourcegitcommit: 70bdaa29578874c6a795199347cb082606e14c5c
+ms.openlocfilehash: 6aa732f1ab8633af453e6b12d45285bbc94233ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/21/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 2008 R2 설치를 위한 하드웨어 및 소프트웨어 요구 사항
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을(를) 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을(를) 설치 및 실행하기 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다.
+
+ > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)합니다. 
   
  **사용해보기:**  
   

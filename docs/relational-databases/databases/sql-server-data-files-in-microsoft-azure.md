@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f04f47c6230a65140c405db039ce737ad3aa7762
+ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
+ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 04/15/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
@@ -126,7 +126,7 @@ ON
  이 섹션에서는 Azure Storage에 SQL Server 데이터 파일을 저장할 때 사용할 수 있는 도구 및 프로그래밍 참조 라이브러리에 대해 설명합니다.  
   
 ### <a name="powershell-support"></a>PowerShell 지원  
- PowerShell cmdlet을 통해 파일 경로 대신 Blob Storage URL을 참조하여 Azure Blob Storage 서비스에 SQL Server 데이터 파일을 저장합니다. 다음 URL 형식을 사용하여 BLOB에 액세스합니다.`: http://storageaccount.blob.core.windows.net/<container>/<blob>`  
+ PowerShell cmdlet을 통해 파일 경로 대신 Blob Storage URL을 참조하여 Azure Blob Storage 서비스에 SQL Server 데이터 파일을 저장합니다. 다음 URL 형식을 사용 하 여 Blob에 액세스: `http://storageaccount.blob.core.windows.net/<container>/<blob>` 합니다.  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 개체 및 성능 카운터 지원  
  SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  

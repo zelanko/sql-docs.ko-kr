@@ -1,23 +1,28 @@
 ---
-title: "Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "백업 및 Reporting Services SharePoint 서비스 응용 프로그램 복원 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 caps.latest.revision: 12
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 11
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원
+# <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원
   이 항목에서는 SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 백업하고 복원하는 방법에 대해 설명합니다. 이 항목에는 다음과 같은 내용이 포함되어 있습니다.  
   
 -   [제한 사항](#bkmk_Restrictions)  
@@ -33,7 +38,7 @@ caps.handback.revision: 11
 ###  <a name="bkmk_Restrictions"></a> 제한 사항  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 백업 및 복원 기능을 사용하여 부분적으로 백업 및 복원할 수 있습니다. **추가 단계를 수행해야 하며** 단계는 이 항목에 설명되어 있습니다. 현재는 백업 프로세스를 진행해도 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터베이스에 대한 Windows 인증 또는 UEA(무인 실행 계정)를 위한 암호화 키 및 자격 증명이 백업되지 **않습니다**.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 백업 및 복원 기능을 사용하여 부분적으로 백업 및 복원할 수 있습니다. **추가 단계를 수행해야 하며** 단계는 이 항목에 설명되어 있습니다. 현재는 백업 프로세스를 진행해도 **데이터베이스에 대한 Windows 인증 또는 UEA(무인 실행 계정)를 위한 암호화 키 및 자격 증명이 백업되지** 않습니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> 권장 사항  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 11
   
 3.  서비스 응용 프로그램에 데이터베이스 액세스를 위해 UEA 또는 Windows 인증이 사용되고 있는지 확인합니다. 둘 중 하나가 사용되고 있는 경우 복원 후에 서비스 응용 프로그램을 구성하는 데 사용할 수 있도록 자격 증명을 기록해 둡니다.  
   
-### 중앙 관리를 사용하여 암호화 키 백업  
+### <a name="backup-the-encryption-keys-using-central-administration"></a>중앙 관리를 사용하여 암호화 키 백업  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키 백업에 대한 자세한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "암호화 키" 섹션을 참조하세요.  
   
 ###  <a name="bkmk_centraladmin"></a> SharePoint 중앙 관리를 사용하여 서비스 응용 프로그램 백업  
@@ -64,7 +69,7 @@ caps.handback.revision: 11
   
 3.  **다음**을 클릭합니다.  
   
-4.   **백업 위치:** 에 대한 경로를 입력하고 **백업 시작**을 클릭합니다.  
+4.  **백업 위치:** 에 대한 경로를 입력하고 **백업 시작**을 클릭합니다.  
   
 5.  위 프로세스를 반복하되 서비스 응용 프로그램을 선택하는 대신 **공유 서비스 프록시** 노드를 확장하고 서비스 응용 프로그램 프록시를 선택합니다. 유형은 **SQL Server Reporting Services 서비스 응용 프로그램 프록시**입니다.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 11
   
  [서비스 응용 프로그램 백업(SharePoint Server 2010)](http://technet.microsoft.com/library/ee428318.aspx)  
   
-### 실행 계정 및 데이터베이스 인증 확인  
+### <a name="verify-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 확인  
  **실행 계정:** 서비스 응용 프로그램에 실행 계정이 사용되고 있는지 확인하려면  
   
 1.  SharePoint 중앙 관리의 **응용 프로그램 관리** 그룹에서 **서비스 응용 프로그램 관리** 를 클릭합니다.  
@@ -104,7 +109,7 @@ caps.handback.revision: 11
   
 3.  서비스 응용 프로그램에 데이터베이스 액세스를 위해 실행 계정 또는 Windows 인증이 사용되고 있었던 경우 자격 증명을 구성합니다.  
   
-### SharePoint 중앙 관리를 사용하여 서비스 응용 프로그램 복원  
+### <a name="restore-the-service-application-using-sharepoint-central-administration"></a>SharePoint 중앙 관리를 사용하여 서비스 응용 프로그램 복원  
   
 1.  SharePoint 중앙 관리의 **백업 및 복원** 그룹에서 **백업에서 복원** 을 클릭합니다.  
   
@@ -124,12 +129,12 @@ caps.handback.revision: 11
   
  [서비스 응용 프로그램 복원(SharePoint Foundation 2010)](http://msdn.microsoft.com/library/ee748615.aspx)  
   
- [서비스 응용 프로그램 복원(SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx)  
+ [서비스 응용 프로그램 복원(SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
   
-### 중앙 관리를 사용하여 암호화 키 복원  
+### <a name="restore-the-encryption-keys-using-central-administration"></a>중앙 관리를 사용하여 암호화 키 복원  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키 복원에 대한 자세한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "암호화 키" 섹션을 참조하세요.  
   
-### 실행 계정 및 데이터베이스 인증 구성  
+### <a name="configure-the-execution-account-and-database-authentication"></a>실행 계정 및 데이터베이스 인증 구성  
  **실행 계정:** 서비스 응용 프로그램에 실행 계정이 사용되고 있었던 경우 다음 단계를 수행하여 구성하세요.  
   
 1.  SharePoint 중앙 관리의 **응용 프로그램 관리** 그룹에서 **서비스 응용 프로그램 관리** 를 클릭합니다.  
@@ -154,6 +159,6 @@ caps.handback.revision: 11
   
 5.  계정 및 암호를 입력합니다. 해당되는 경우 **Windows 자격 증명으로 사용** 을 선택합니다.  
   
-6.   **확인**을 클릭합니다.  
+6.  **확인**을 클릭합니다.  
   
   

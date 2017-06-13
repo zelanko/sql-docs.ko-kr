@@ -1,26 +1,31 @@
 ---
-title: "바로 가기 키(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "바로 가기 키"
-  - "바로 가기"
+title: "바로 가기 키 (보고서 작성기) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- keyboard shortcuts
+- shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 caps.latest.revision: 20
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 20
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 바로 가기 키(보고서 작성기)
+# <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
   보고서 작성기에서 페이지가 매겨진 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 만들고 편집하는 경우 Windows 환경에서 제공하는 모든 바로 가기 키를 탐색에 사용할 수 있습니다. 여러 표준 키보드 매핑 구성표 중에서 선택할 수 있습니다.  
   
  마우스를 사용하지 않고도 보고서 작성기 창을 탐색하거나 대화 상자에서 옵션을 선택 및 변경할 수 있습니다.  
@@ -30,7 +35,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  바로 가기 키에는 Shift, Alt, Ctrl 키와 문자의 조합이 포함될 수 있으며 기능 키를 사용할 수도 있습니다. 예를 들어 F1 키를 누르면 보고서 작성기 도움말 파일이 열립니다.  
   
-## 보고서 작성기의 바로 가기 키  
+## <a name="keyboard-shortcuts-in-report-builder"></a>보고서 작성기의 바로 가기 키  
   
 |Description|키 조합|  
 |-----------------|---------------------|  
@@ -91,7 +96,7 @@ caps.handback.revision: 20
 |지도 뷰포트가 선택된 경우 지도 보기 영역을 축소합니다.|Ctrl+빼기 기호(-)|  
 |지도 뷰포트가 선택된 경우 지도 보기 영역을 이동 및 확대하기 위한 액셀러레이터 모드입니다.|Ctrl+마우스 왼쪽 단추 클릭|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
  [용어 설명&#40;보고서 작성기&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  

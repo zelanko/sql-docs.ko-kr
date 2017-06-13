@@ -1,6 +1,7 @@
 # [개요](in-memory-oltp-in-memory-optimization.md)  
 # [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](survey-of-initial-areas-in-in-memory-oltp.md)  
-# [개요 및 사용 시나리오](overview-and-usage-scenarios.md)  
+# [개요 및 사용 시나리오](overview-and-usage-scenarios.md)
+# [SQL Server 2016 백서에 대 한 내부 기능](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [SQL Server에 메모리 내 OLTP 기능 채택 계획](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
 # [메모리 액세스에 최적화된 테이블 사용을 위한 요구 사항](requirements-for-using-memory-optimized-tables.md)  
 # [메모리 내 OLTP 코드 예제](in-memory-oltp-code-samples.md)  
@@ -74,4 +75,5 @@
 ## [계산 열 마이그레이션](migrating-computed-columns.md)  
 ## [트리거 마이그레이션](migrating-triggers.md)  
 ## [데이터베이스 간 쿼리](cross-database-queries.md)  
-## [메모리 액세스에 최적화된 테이블에서 IDENTITY 구현](implementing-identity-in-a-memory-optimized-table.md)  
+## [메모리 액세스에 최적화된 테이블에서 IDENTITY 구현](implementing-identity-in-a-memory-optimized-table.md)
+  

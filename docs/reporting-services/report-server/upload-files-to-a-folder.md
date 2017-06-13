@@ -1,31 +1,36 @@
 ---
 title: "폴더에 파일 업로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보고서 게시 [Reporting Services], 파일 업로드"
-  - "보고서 [Reporting Services], 게시"
-  - "보고서 업로드 [Reporting Services]"
-  - "파일 업로드 [Reporting Services]"
-  - "파일 [Reporting Services], 업로드"
-  - "파일 [Reporting Services]"
-  - "폴더 [Reporting Services], 파일 업로드"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- publishing reports [Reporting Services], uploading files
+- reports [Reporting Services], publishing
+- uploading reports [Reporting Services]
+- uploading files [Reporting Services]
+- files [Reporting Services], uploading
+- files [Reporting Services]
+- folders [Reporting Services], uploading files to
 ms.assetid: 2f99a288-d4aa-4c64-b310-e457a2aef2c5
 caps.latest.revision: 42
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 42
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b4a7d4a5babf6789baa551f808b840c469dfa31a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 폴더에 파일 업로드
+# <a name="upload-files-to-a-folder"></a>폴더에 파일 업로드
   파일 시스템에서 파일을 업로드하여 보고서 서버 데이터베이스에 관리되는 항목으로 저장할 수 있습니다. 파일을 업로드할 때 발생하는 상황은 파일 형식에 따라 다릅니다.  
   
 -   .rdl 파일을 업로드하는 것은 보고서를 게시하는 것과 같습니다.  
@@ -39,13 +44,13 @@ caps.handback.revision: 42
   
  보고서 서버 데이터베이스에 업로드한 파일은 폴더 계층에 다음 아이콘으로 표시됩니다.  
   
- ![보고서 아이콘](../../reporting-services/report-server/media/hlp-16doc.png "보고서 아이콘")  
+ ![Report icon](../../reporting-services/report-server/media/hlp-16doc.gif "Report icon")  
 보고서 아이콘  
   
- ![모델 아이콘](../../reporting-services/report-server/media/model-icon.png "모델 아이콘")  
+ ![모델 아이콘](../../reporting-services/report-server/media/model-icon.gif "Model icon")  
 보고서 모델 아이콘  
   
- ![일반 리소스 아이콘](../../reporting-services/report-server/media/hlp-16file.png "일반 리소스 아이콘")  
+ ![일반 리소스 아이콘](../../reporting-services/report-server/media/hlp-16file.gif "generic resource icon")  
 일반 리소스 아이콘  
   
  파일을 업로드하는 경우 파일은 항상 현재 선택된 폴더에 놓입니다. 처음에 항목을 포함시킬 폴더로 이동하거나 파일을 업로드한 다음 나중에 최종 위치로 이동할 수 있습니다.  
@@ -58,8 +63,8 @@ caps.handback.revision: 42
 |파일을 이진 개체로 업로드|리소스 관리|  
 |폴더의 내용 보기|리소스 보기, 보고서 보기|  
   
-## 관련 항목:  
- [보고서 관리자&#40;SSRS 기본 모드&#41;](../Topic/Report%20Manager%20%20\(SSRS%20Native%20Mode\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
  [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
  [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)  

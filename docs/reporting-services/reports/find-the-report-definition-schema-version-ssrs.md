@@ -1,30 +1,37 @@
 ---
-title: "보고서 정의 스키마 버전 찾기(SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "XML 스키마 [Reporting Services]"
-  - "RDL(Report Definition Language), XML 스키마"
-  - "스키마 [Reporting Services]"
+title: "보고서 정의 스키마 버전 (SSRS) 찾기 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/30/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- XML schemas [Reporting Services]
+- Report Definition Language, XML schema
+- schemas [Reporting Services]
 ms.assetid: 67954419-1b61-4481-a3b9-23b4ba7a5624
 caps.latest.revision: 15
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 15
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: 354f69ea0d63502a66db541f968f0efe2e690a6e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 보고서 정의 스키마 버전 찾기(SSRS)
-  보고서 정의 파일은 rdl 파일의 유효성을 검사하는 데 사용되는 보고서 정의 스키마의 버전에 대한 RDL 네임스페이스를 지정합니다. 보고서가 이전 네임스페이스용으로 작성된 경우 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 보고서 디자이너 또는 보고서 작성기와 같은 보고서 제작 환경에서 .rdl 파일을 열면 백업 파일이 자동으로 만들어지고 보고서가 현재 네임스페이스로 업그레이드됩니다. 업그레이드된 보고서 정의를 저장하면 변환된 .rdl 파일이 저장됩니다. 이 방법은 보고서 정의를 업그레이드할 수 있는 유일한 방법입니다. 보고서 정의 자체는 보고서 서버에서 업그레이드되지 않습니다. 컴파일된 보고서는 보고서 서버에서 업그레이드됩니다. 자세한 내용은 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)을(를) 참조하세요.  
+
+# <a name="find-the-report-definition-schema-version-ssrs"></a>보고서 정의 스키마 버전 찾기(SSRS)
+
+보고서 정의 파일은 rdl 파일의 유효성을 검사하는 데 사용되는 보고서 정의 스키마의 버전에 대한 RDL 네임스페이스를 지정합니다. 보고서가 이전 네임스페이스용으로 작성된 경우 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 보고서 디자이너 또는 보고서 작성기와 같은 보고서 제작 환경에서 .rdl 파일을 열면 백업 파일이 자동으로 만들어지고 보고서가 현재 네임스페이스로 업그레이드됩니다. 업그레이드된 보고서 정의를 저장하면 변환된 .rdl 파일이 저장됩니다. 이 방법은 보고서 정의를 업그레이드할 수 있는 유일한 방법입니다. 보고서 정의 자체는 보고서 서버에서 업그레이드되지 않습니다. 컴파일된 보고서는 보고서 서버에서 업그레이드됩니다. 자세한 내용은 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)을(를) 참조하세요.  
   
-### 방법: 보고서의 RDL 스키마 버전 확인  
+### <a name="how-to-identify-the-rdl-schema-version-of-a-report"></a>방법: 보고서의 RDL 스키마 버전 확인  
   
 1.  xml을 볼 수 있는 메모장이나 XML 메모장 2007과 같은 응용 프로그램에서 보고서 .rdl 파일을 엽니다.  
   
@@ -37,9 +44,9 @@ caps.handback.revision: 15
   
      보고서 정의 네임스페이스는 다음 URL `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`(으)로 지정됩니다.  
   
-### 방법: 보고서 디자이너의 RDL 스키마 버전 확인  
+### <a name="how-to-identify-the-rdl-schema-version-of-report-designer"></a>방법: 보고서 디자이너의 RDL 스키마 버전 확인  
   
-1.  새 프로젝트를 엽니다. 선택한 프로젝트의 버전에 따라 RDL 스키마 버전이 결정됩니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 둘 이상의 스키마 버전이 지원됩니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)을 참조하세요.  
+1.  새 프로젝트를 엽니다. 선택한 프로젝트의 버전에 따라 RDL 스키마 버전이 결정됩니다. SQL Server에서 둘 이상의 스키마 버전이 지원 됩니다. 자세한 내용은 참조 [배포 및 SQL Server Data Tools의 버전 지원](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)합니다.  
   
 2.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **새 항목 추가** 대화 상자가 열립니다.  
   
@@ -60,7 +67,7 @@ caps.handback.revision: 15
   
      보고서 정의 네임스페이스는 다음 URL `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
   
-### 방법: 보고서 서버의 RDL 스키마 버전 확인  
+### <a name="how-to-identify-the-rdl-schema-version-on-the-report-server"></a>방법: 보고서 서버의 RDL 스키마 버전 확인  
   
 -   보고서 관리자에서 보고서 서버의 URL을 입력합니다. 예를 들어 다음 URL은 로컬 컴퓨터의 보고서 서버를 지정합니다.  
   
@@ -79,9 +86,10 @@ caps.handback.revision: 15
     ```  
   
      보고서 정의 네임스페이스는 다음 URL `http://schemas.microsoft.com/sqlserver/reporting/2009/01/reportdefinition`  
-  
-## 관련 항목:  
- [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)   
- [RDL(Report Definition Language)&#40;SSRS&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)  
-  
-  
+
+## <a name="next-steps"></a>다음 단계
+
+[보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)   
+[Report Definition Language](../../reporting-services/reports/report-definition-language-ssrs.md)  
+
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -1,3 +1,4 @@
+# [SQL Server Management Studio 메뉴 도움말](sql-server-management-studio-menu-help.md)
 # [속성 창 F1 도움말(Management Studio)](properties-window-f1-help-management-studio.md)
 # [옵션(환경 - 글꼴 및 색 페이지)](options-environment-fonts-and-colors-page.md)
 # [옵션(환경 - 도움말 - 일반 페이지)](options-environment-help-general-page.md)
@@ -14,7 +15,6 @@
 # [창 대화 상자(Microsoft Document Explorer 도움말)](windows-dialog-box-microsoft-document-explorer-help.md)
 # [저장 고급 옵션](advanced-save-options.md)
 # [다른 이름으로 저장](save-as.md)
-# [SQL Server Management Studio 메뉴 도움말](sql-server-management-studio-menu-help.md)
 # [사용자 지정(도구 모음 페이지)](customize-toolbars-page.md)
 # [옵션(디자이너 - 유지 관리 계획 페이지)](options-designers-maintenance-plans-page.md)
 # [검색 폴더 선택 대화 상자(Visual Studio)](choose-search-folders-dialog-box-visual-studio.md)

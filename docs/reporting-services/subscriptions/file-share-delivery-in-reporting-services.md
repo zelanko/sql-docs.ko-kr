@@ -1,27 +1,32 @@
 ---
-title: "Reporting Services의 파일 공유 배달 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "구독 [Reporting Services], 파일 공유 배달"
-  - "파일 공유 배달 [Reporting Services]"
+title: "파일 공유 배달 Reporting Services의 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscriptions [Reporting Services], file share delivery
+- file share delivery [Reporting Services]
 ms.assetid: 9f338dd3-f68a-4355-b9d7-9b25dacf3b5e
 caps.latest.revision: 54
-author: "guyinacube"
-ms.author: "asaxton"
-manager: "erikre"
-caps.handback.revision: 54
+author: guyinacube
+ms.author: asaxton
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5e33585c625c49967304ca36ad91ccc1ebac32f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# Reporting Services의 파일 공유 배달
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 파일 공유 배달 확장 프로그램은 기본적으로 사용 가능하며 추가 구성이 필요하지 않습니다. 파일을 성공적으로 배달하려면 공유 폴더에 쓰기 권한을 설정해야 합니다. 작성자 권한이 있어야 하는 계정은 구독에 구성되어 있는 자격 증명일 수도 있고 보고서 서버용으로 구성된 **파일 공유 계정** 일 수도 있습니다. 파일 공유 계정에 대한 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;연결 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 또한 보고서에 액세스해야 하는 사용자에게 공유 폴더에 대한 읽기 권한이 있어야 합니다.  
+# <a name="file-share-delivery-in-reporting-services"></a>Reporting Services의 파일 공유 배달
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서를 폴더에 배달할 수 있도록 파일 공유 배달 확장 프로그램이 포함되어 있습니다. 파일 공유 배달 확장 프로그램은 기본적으로 사용 가능하며 추가 구성이 필요하지 않습니다. 파일을 성공적으로 배달하려면 공유 폴더에 쓰기 권한을 설정해야 합니다. 작성자 권한이 있어야 하는 계정은 구독에 구성되어 있는 자격 증명일 수도 있고 보고서 서버용으로 구성된 **파일 공유 계정** 일 수도 있습니다. 파일 공유 계정에 대한 자세한 내용은 [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)을 참조하세요. 또한 보고서에 액세스해야 하는 사용자에게 공유 폴더에 대한 읽기 권한이 있어야 합니다.  
   
  파일 공유에 보고서를 배포하려면 표준 구독 또는 데이터 기반 구독을 정의합니다. 데이터 기반 구독에서 파일 공유 배달을 사용하는 방법을 알아보려면 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요. 또한 원격 파일 공유 구독을 실행하는 계정의 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 컴퓨터에 로컬로 로그온할 수 있는 권한이 필요합니다.  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 54
   
  다음 이미지에는 파일 공유 배달에 대해 구성된 구독의 파일 설정 예가 나와 있습니다.  
   
- ![file share subscription](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "file share subscription")  
+ ![파일 공유 구독](../../reporting-services/subscriptions/media/ssrs-file-share-subscription.png "파일 공유 구독")  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [구독 설정 및 파일 공유 계정&#40;구성 관리자&#41;](../../reporting-services/install-windows/subscription-settings-and-a-file-share-account-configuration-manager.md)  
   

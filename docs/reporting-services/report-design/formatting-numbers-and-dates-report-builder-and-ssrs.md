@@ -1,32 +1,37 @@
 ---
-title: "숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-sharepoint"
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.rtp.rptdesigner.placeholderproperties.number.f1"
-  - "10127"
-  - "sql13.rtp.rptdesigner.textboxproperties.number.f1"
-  - "10130"
-  - "10286"
-  - "sql13.rtp.rptdesigner.serieslabelproperties.number.f1"
-  - "10285"
-  - "sql13.rtp.rptdesigner.axisproperties.number.f1"
+title: "숫자 및 날짜 (보고서 작성기 및 SSRS)를 서식 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-sharepoint
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.rtp.rptdesigner.placeholderproperties.number.f1
+- "10127"
+- sql13.rtp.rptdesigner.textboxproperties.number.f1
+- "10130"
+- "10286"
+- sql13.rtp.rptdesigner.serieslabelproperties.number.f1
+- "10285"
+- sql13.rtp.rptdesigner.axisproperties.number.f1
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 caps.latest.revision: 6
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 6
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 186bb0bab4abac91ea95d397f379986cac9d2f0f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
+# <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>숫자 및 날짜 서식 지정(보고서 작성기 및 SSRS)
   해당 데이터 영역 **속성** 대화 상자의 **숫자** 페이지에서 형식을 선택하여 데이터 영역에 있는 숫자와 날짜의 형식을 지정할 수 있습니다.  
   
  입력란 보고서 항목 안에 있는 문자열의 형식을 지정하려면 형식을 지정할 항목을 선택하고 마우스 오른쪽 단추를 클릭한 후 **입력란 속성**을 선택하고 **숫자**를 클릭합니다. 테이블 또는 행렬의 셀은 개별 입력란이기 때문에 테이블이나 행렬 데이터 영역의 개별 셀에 형식을 지정할 때도 이 방법을 사용할 수 있습니다.  
@@ -41,7 +46,7 @@ caps.handback.revision: 6
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-## 숫자 및 날짜 형식 지정 시 고려 사항  
+## <a name="considerations-for-formatting-numbers-and-dates"></a>숫자 및 날짜 형식 지정 시 고려 사항  
  보고서에서 숫자와 날짜의 형식을 지정하기 전에 다음을 고려합니다.  
   
 -   기본적으로 클라이언트 컴퓨터의 culture 설정에 따라 숫자 형식이 지정됩니다. 형식 문자열을 사용하여 숫자 표시 방법을 지정하면 보고서를 보는 사람의 위치에 관계 없이 일관된 형식으로 숫자를 표시할 수 있습니다.  
@@ -52,11 +57,11 @@ caps.handback.revision: 6
   
 -   잘못된 형식 문자열을 지정하면 형식 지정된 텍스트는 형식 지정을 무시하는 리터럴 문자열로 해석됩니다.  
   
--   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)을 참조하세요. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
+-   같은 입력란에 함께 포함된 숫자와 문자의 형식을 지정할 때는 숫자를 나머지 텍스트와 구분하기 위해 자리 표시자를 사용하는 것을 고려하십시오. 자세한 내용은 [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)를 클릭합니다. 입력란의 Format 속성에 잘못된 형식 문자열을 지정하면 형식 문자열이 무시됩니다. 차트나 계기의 Format 속성에 잘못된 형식 문자열을 지정하면 지정한 형식 문자열은 문자열로 해석되고 형식이 적용되지 않습니다.  
   
 -   **범주** 에서 **통화** 를 선택하고 **값 표시 단위**를 선택한 경우 재무 형식을 사용하여 숫자를 표시하는 단위로 **천**, **백만**또는 **10억** 을 선택할 수 있습니다. 예를 들어 필드 값이 1,789,905,394인 경우 값 표시 단위로 **10억** 을 선택하고 소수 자릿수를 두 자리로 지정하면 보고서에는 1.78이 값으로 표시됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)   
  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   

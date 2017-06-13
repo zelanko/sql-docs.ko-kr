@@ -1,24 +1,29 @@
 ---
-title: "자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "자습서: 보고서 (보고서 작성기)에 세로 막대형 차트를 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 09/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
 caps.latest.revision: 17
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 16
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: c231648deb4920a3e36a594271d1c9c199313668
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)
 이 자습서에서는 계열을 범주별로 그룹화된 일련의 세로 막대로 표시하는 세로 막대형 차트가 있는, 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서를 만듭니다. 
 
 세로 막대형 차트는 다음과 같은 경우에 유용합니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
 이 자습서에 소요되는 예상 시간: 15분  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="Chart"></a>1. 차트 마법사에서 차트 보고서 만들기  
@@ -44,9 +49,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
-### 차트 보고서를 만들려면  
+### <a name="to-create-a-chart-report"></a>차트 보고서를 만들려면  
   
-1.  컴퓨터, [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드에서 [보고서 작성기를 시작](../reporting-services/report-builder/start-report-builder.md)합니다.  
+1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
     **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 16
   
 3.  오른쪽 창에서 **차트 마법사**를 클릭합니다.  
   
-4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
+4.  **데이터 집합 선택**페이지에서 **데이터 집합 만들기**를 클릭하고 **다음**을 클릭합니다.  
   
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   
@@ -93,11 +98,11 @@ caps.handback.revision: 16
 ## <a name="ChartType"></a>2. 차트 종류 선택  
 몇 가지 미리 정의된 차트 종류에서 선택한 다음 마법사를 완료한 후 차트를 수정할 수 있습니다.  
   
-### 세로 막대형 차트를 추가하려면  
+### <a name="to-add-a-column-chart"></a>세로 막대형 차트를 추가하려면  
   
 1.  **차트 종류 선택** 페이지에서 기본 차트 종류는 세로 막대형 차트입니다. **다음**을 클릭합니다.  
   
-2.  **차트 필드 정렬** 페이지에서 SalesDate 필드를 **범주** 창으로 끌어옵니다. 가로 축에 범주가 표시됩니다.  
+2.  **차트 필드 정렬** 페이지에서 SalesDate 필드를 **범주**창으로 끌어옵니다. 가로 축에 범주가 표시됩니다.  
   
 3.  Sales 필드를 **값**으로 끌어옵니다. 매출 합계 값의 합은 각 날짜에 대해 집계되기 때문에 **값** 상자에는 Sum(Sales)가 표시됩니다. 세로 축에 값이 표시됩니다.  
   
@@ -130,7 +135,7 @@ caps.handback.revision: 16
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  홈 탭에서 **실행**을 클릭하여 보고서를 미리 봅니다.  
+7.  홈 탭에서 **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
 선택한 날짜 형식으로 날짜가 표시됩니다. 차트에서 가로 축의 범주 중 일부에는 여전히 레이블이 지정되지 않습니다. 
 
@@ -138,11 +143,11 @@ caps.handback.revision: 16
   
 레이블을 회전하고 간격을 지정하여 레이블 표시를 사용자 지정할 수 있습니다.  
   
-## 4. 가로 축에서 축 레이블을 회전합니다.  
+## <a name="4-rotate-the-axis-labels-on-the-horizontal-axis"></a>4. 가로 축에서 축 레이블을 회전합니다.  
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  가로 축 제목을 마우스 오른쪽 단추로 클릭한 다음 **축 제목 표시**를 클릭하여 제목을 제거합니다. 가로 축에는 날짜가 표시되므로 제목이 필요하지 않습니다.  
+2.  가로 축 제목을 마우스 오른쪽 단추로 클릭한 다음 **축 제목 표시** 를 클릭하여 제목을 제거합니다. 가로 축에는 날짜가 표시되므로 제목이 필요하지 않습니다.  
   
 3.  가로 축을 마우스 오른쪽 단추로 클릭 > **가로 축 속성**을 선택합니다.  
   
@@ -218,7 +223,7 @@ caps.handback.revision: 16
 
     ![report-builder-column-chart-format-y-axis](../reporting-services/media/report-builder-column-chart-format-y-axis.png)
     
-## 8. 가로(x) 축에 있는 모든 레이블 표시
+## <a name="8-show-all-the-labels-on-the-horizontal-x-axis"></a>8. 가로(x) 축에 있는 모든 레이블 표시
 
 x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 이 섹션에서는 속성 창의 속성을 설정하여 모두 표시합니다.
 
@@ -250,7 +255,7 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
 
      ![report-builder-column-chart-add-calculated-series](../reporting-services/media/report-builder-column-chart-add-calculated-series.png)
   
-4.  **수식**에서 **이동 평균**이 선택되어 있는지 확인합니다.  
+4.  **수식**에서 **이동 평균** 이 선택되어 있는지 확인합니다.  
   
 5.  **수식 매개 변수 설정**의 **기간**에서 **4**를 선택합니다.  
   
@@ -288,7 +293,7 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
   
 ## <a name="Save"></a>11. 보고서 저장  
   
-### 보고서를 저장하려면  
+### <a name="to-save-the-report"></a>보고서를 저장하려면  
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
@@ -300,10 +305,12 @@ x축의 레이블 중 일부만 표시되는 것을 확인할 수 있습니다. 
   
 4.  **저장**을 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
 보고서에 세로 막대형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>참고 항목  
 -    [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
 -    [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+

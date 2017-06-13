@@ -1,25 +1,30 @@
 ---
-title: "자습서: 보고서에 막대형 차트 추가(보고서 작성기) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/15/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "reporting-services-native"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "자습서: 보고서 (보고서 작성기)에 가로 막대형 차트를 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 06/15/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- reporting-services-native
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 caps.latest.revision: 14
-author: "maggiesMSFT"
-ms.author: "maggies"
-manager: "erikre"
-caps.handback.revision: 13
+author: maggiesMSFT
+ms.author: maggies
+manager: erikre
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
+ms.openlocfilehash: af11d5fdee9122663431f4f00ef5e40fb765c7b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 06/13/2017
+
 ---
-# 자습서: 보고서에 막대형 차트 추가(보고서 작성기)
-이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)]의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>자습서: 보고서에 막대형 차트 추가(보고서 작성기)
+이 자습서에서는 [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion-md.md)] 의 마법사를 사용하여 페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 보고서에 가로 막대형 차트를 만듭니다. 그런 다음 필터를 추가하고 차트를 향상시킵니다. 
 
 가로 막대형 차트는 범주 데이터를 가로로 표시합니다. 이렇게 하면 다음 작업에 도움이 됩니다.  
   
@@ -31,35 +36,13 @@ caps.handback.revision: 13
   
 ![report-builder-bar-chart](../reporting-services/media/report-builder-bar-chart.png) 
   
-## <a name="BackToTop"></a>학습 내용  
-이 자습서에서는 다음 작업 방법을 알아봅니다.  
-  
-1.  [차트 마법사에서 차트 만들기](#Chart)  
-  
-2.  [차트 종류 선택](#ChartType)  
-  
-3.  [세로 축에 모든 범주 값 표시](#AllValues)  
-  
-4.  [세로 축의 정렬 순서 변경](#Sort)  
-  
-5.  [범례 이동](#Legend)  
-  
-6.  [차트 제목 지정](#ChartTitle)  
-  
-7.  [가로 축의 서식 및 레이블 지정](#Horizontal)  
-  
-8.  [상위 5개 값을 표시하는 필터 추가](#Filter)  
-  
-9. [보고서 제목 추가](#Title)  
-  
-10. [보고서 저장](#Save)  
-  
+ 
 > [!NOTE]  
 > 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 집합을 만들고, 데이터 원본을 선택하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 15분  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md)을 참조하세요.  
   
 ## <a name="Chart"></a>1. 차트 마법사에서 차트 보고서 만들기  
@@ -68,11 +51,11 @@ caps.handback.revision: 13
 > [!NOTE]  
 > 이 자습서의 쿼리에는 데이터 값이 포함되어 있으므로 외부 데이터 원본이 필요하지 않습니다. 따라서 쿼리가 상당히 길어집니다. 비즈니스 환경에서는 쿼리에 데이터가 포함되지 않을 것입니다. 이 자습서의 쿼리는 학습용으로만 제공됩니다.  
   
-1.  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털, SharePoint 통합 모드의 보고서 서버 또는 컴퓨터에서 [보고서 작성기를 시작](../reporting-services/report-builder/start-report-builder.md)합니다.  
+1.  [웹 포털, SharePoint 통합 모드의 보고서 서버 또는 컴퓨터에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 합니다.  
   
      **시작** 대화 상자가 나타납니다.  
   
-     ![Report Builder Get Started](../reporting-services/media/rb-getstarted.png "Report Builder Get Started")  
+     ![보고서 작성기 시작](../reporting-services/media/rb-getstarted.png "보고서 작성기 시작")  
   
      **시작** 대화 상자가 나타나지 않을 경우 **파일** >**새로 만들기**를 클릭합니다. **새 보고서 또는 데이터 집합** 대화 상자에 **시작** 대화 상자와 같은 내용이 가장 많이 들어 있습니다. 
       
@@ -122,7 +105,7 @@ caps.handback.revision: 13
   
 3.  LastName을 범주 창으로 끌어 옵니다.  
   
-4.  SalesYear2015를 값 창으로 끌어옵니다. SalesYear2015는 각 영업 사원의 2015년도 판매액을 나타냅니다. 차트에 각 제품의 집계가 표시되기 때문에 값 창에는 `[Sum(SalesYear2015)]`가 표시됩니다.  
+4.  SalesYear2015를 값 창으로 끌어옵니다. SalesYear2015는 각 영업 사원의 2015년도 판매액을 나타냅니다. 차트에 각 제품의 집계가 표시되기 때문에 값 창에는 `[Sum(SalesYear2015)]` 가 표시됩니다.  
   
 5.  SalesYear2014를 SalesYear2015 아래의 값 창으로 끌어옵니다. SalesYear2014는 각 영업 사원의 2014년도 판매액을 나타냅니다.  
   
@@ -193,18 +176,18 @@ caps.handback.revision: 13
   
 5.  **정렬 기준**에서 **[SalesYear2015]**를 클릭합니다.  
   
-6.  **순서** 목록에서 **내림차순**을 선택하여 2015년 판매량이 가장 큰 값부터 가장 작은 값 순서로 이름이 표시되도록 합니다.
+6.  **순서** 목록에서 **내림차순** 을 선택하여 2015년 판매량이 가장 큰 값부터 가장 작은 값 순서로 이름이 표시되도록 합니다.
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
-가로 축의 이름은 2015년 판매량이 가장 큰 값부터 가장 작은 값 순서로 정렬되며 **Zeng**이 맨 위에 있습니다.  
+가로 축의 이름은 2015년 판매량이 가장 큰 값부터 가장 작은 값 순서로 정렬되며 **Zeng** 이 맨 위에 있습니다.  
   
 ## <a name="Legend"></a>5. 범례 이동  
 차트 값을 더 쉽게 읽을 수 있도록 차트 범례를 이동할 수 있습니다. 예를 들어 막대가 가로로 표시되는 가로 막대형 차트에서는 범례가 차트 영역의 위나 아래에 표시되도록 범례 위치를 변경할 수 있습니다. 이렇게 하면 막대의 가로 공간을 늘릴 수 있습니다.  
   
-#### 가로 막대형 차트의 차트 영역 아래쪽에 범례를 표시하려면  
+#### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>가로 막대형 차트의 차트 영역 아래쪽에 범례를 표시하려면  
   
 1.  보고서 디자인 뷰로 전환합니다.  
   
@@ -226,7 +209,7 @@ caps.handback.revision: 13
   
 2.  차트 맨 위의 **차트 제목** 단어를 선택하고 **Sales for 2014 and 2015**를 입력합니다.  
   
-3.  속성 창에서 제목이 선택된 상태로 **색**을 **검정**으로, **FontSize**를 **12pt**로 설정합니다. 
+3.  속성 창에서 제목이 선택된 상태로 **색** 을 **검정** 으로, **FontSize** 를 **12pt**로 설정합니다. 
   
 4.  **실행** 을 클릭하여 보고서를 미리 봅니다.  
   
@@ -249,7 +232,7 @@ caps.handback.revision: 13
 
 8.  가로 축을 마우스 오른쪽 단추로 클릭하고 **축 제목 표시**를 선택합니다.
   
-7.  **축 제목** 상자에 **Sales in thousands**를 입력하고 Enter 키를 누릅니다.  
+7.  **축 제목** 상자에 **Sales in thousands** 를 입력하고 Enter 키를 누릅니다.  
 
     >**참고:** 입력하는 동안에는 축 제목 상자가 세로 축에 있는 것처럼 표시됩니다. 하지만 Enter 키를 누르면 가로 축으로 이동합니다.
   
@@ -274,9 +257,9 @@ caps.handback.revision: 13
   
 7.  데이터 형식이 **Text**인지 확인합니다.  
   
-8.  **연산자**의 드롭다운 목록에서 **Top N**을 선택합니다.  
+8.  **연산자**의 드롭다운 목록에서 **Top N** 을 선택합니다.  
   
-9. **값**에 **=5** 식을 입력합니다.  
+9. **값**에 **=5**식을 입력합니다.  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,10 +301,12 @@ caps.handback.revision: 13
   
 4.  **저장**을 클릭합니다.   
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
 보고서에 가로 막대형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대한 자세한 내용은 [차트](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [가로 막대형 차트](../reporting-services/report-design/bar-charts-report-builder-and-ssrs.md)를 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md)  
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
   
+
+
