@@ -21,6 +21,7 @@
 ## [SQL Server 2012 릴리스 정보](../release-notes/sql-server-2012-release-notes.md)
 ## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
 ## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP3 릴리스 정보](../release-notes/sql-server-2012-sp3-release-notes.md)
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
@@ -37,5 +38,4 @@
 
 # 문서 정보
 ## [SQL Server 리소스](sql-server-resources.md)
-## [SQL Server 설명서 오프라인 액세스](sql-server-documentation-offline-access.md)
 ## [도움말 뷰어](../release-notes/sql-server-help-installation.md)
