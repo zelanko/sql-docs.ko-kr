@@ -25,10 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: b03d9514e39fad101a305784b6852e012e3e4aad
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/12/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
@@ -140,14 +140,14 @@ ms.lasthandoff: 05/12/2017
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication 개체||최대 크기/개수 SQL Server(64비트)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
-|아티클 수(병합 게시)||256|  
+|아티클 수(병합 게시)||2048|  
 |아티클 수(스냅숏 또는 트랜잭션 게시)||32,767|  
 |테이블의 열 수*(병합 게시)||246|  
 |테이블의 열 수**([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅숏 또는 트랜잭션 게시)||1,000|  
 |테이블의 열 수**(Oracle 스냅숏 또는 트랜잭션 게시)||995|  
 |행 필터에 사용되는 열의 바이트 수(병합 게시)||1,024|  
 |행 필터에 사용되는 열의 바이트 수(스냅숏 또는 트랜잭션 게시)||8,000|  
-  
+
  *충돌 검색에 행 추적이 사용될 경우(기본값) 기본 테이블은 최대 1,024개의 열을 포함할 수 있지만 최대 246개의 열이 게시되도록 아티클에서 열을 필터링해야 합니다. 열 추적을 사용하면 기본 테이블은 최대 246개의 열을 포함할 수 있습니다.  
   
  **기본 테이블은 게시 데이터베이스에 허용되는 최대 열 수( [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 경우 1,024개)를 포함할 수 있지만 열이 게시 유형에 지정된 최대 열 수를 초과하는 경우 아티클에서 열을 필터링해야 합니다.  

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server에 대 한 자습서 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/24/2017
+ms.date: 06/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: erikre
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: f1220e70a98fd38ac2f38f892a42ff88c3f64555
+ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
+ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 05/25/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server에 대 한 자습서
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/25/2017
 |[Integration Services 자습서](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 만들고 배포하는 방법에 대해 알아봅니다.|  
 |[복제 자습서](../relational-databases/replication/replication-tutorials.md)|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 복제 토폴로지를 설정 및 실행하는 방법에 대해 알아봅니다.|  
 |[Reporting Services&#40;SSRS&#41; 자습서](../reporting-services/reporting-services-tutorials-ssrs.md)|기본 보고서와 구독을 만드는 방법에 대해 알아봅니다.|  
-|[SQL Server R Services 자습서](../advanced-analytics/r-services/sql-server-r-services-tutorials.md)|R 언어를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터로 작업하고 [!INCLUDE[tsql](../includes/tsql-md.md)]에서 R 스크립트를 실행하는 방법을 알아봅니다.|  
+|[SQL Server R Services 자습서](../advanced-analytics/tutorials/machine-learning-services-tutorials.md)|R 언어를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터로 작업하고 [!INCLUDE[tsql](../includes/tsql-md.md)]에서 R 스크립트를 실행하는 방법을 알아봅니다.|  
   
  ## <a name="previously-published-tutorials"></a>이전에 게시된 자습서:  
   

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 03f81b7010fdba70cccc916406b70131dd24cb8d
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -35,24 +35,6 @@ SQL Server의 트랜잭션 격리 수준은 메모리 액세스에 최적화된 
 메모리 액세스에 최적화된 테이블의 트랜잭션에 대한 오류 조건을 보려면 [충돌 검색 및 다시 시도 논리](#confdetretry34ni)섹션을 참조하세요.
   
 일반적인 정보는 [SET TRANSACTION ISOLATION LEVEL(Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
-  
-  
-  
-#### <a name="sections-in-this-article"></a>이 문서에는 다음과 같은 섹션이 있습니다.  
-  
-- [비관적 및 낙관적](#pessvoptim22ni)  
-- [트랜잭션 시작 모드](#txninitmodes24ni)  
-  - [명시적 모드의 코드 예제](#codeexamexpmode25ni)  
-- [행 버전 관리](#rowver28ni)  
-- [트랜잭션 격리 수준](#confdegreeiso30ni)  
-- [트랜잭션 단계 및 수명](#txnphaslife32ni)  
-- [충돌 검색 및 다시 시도 논리](#confdetretry34ni)  
-  - [다시 시도 T-SQL 코드 예제](#retrytsqlcodeexam35ni)  
-- [크로스 컨테이너 트랜잭션](#crossconttxn38ni)  
-- [제한 사항](#limitations40ni)  
-- [고유하게 컴파일된 저장 프로시저](#natcompstorprocs42ni)  
-- [다른 트랜잭션 링크](#othertxnlinks44ni)  
-  
   
   
 <a name="pessvoptim22ni"/>  

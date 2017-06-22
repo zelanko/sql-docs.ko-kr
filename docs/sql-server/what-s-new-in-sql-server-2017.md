@@ -1,7 +1,7 @@
 ---
 title: "기능 &#39;의 새로운 SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/23/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 25d81efe1b915f0e4ddc5eab2feb4142ad2ceb8f
+ms.sourcegitcommit: aa08b5e7de9bb317fd781a98ee5d829431b92df6
+ms.openlocfilehash: 66c9bc4f2cba20076c357d27fdfacbc767a94c5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017"></a>기능 &#39;의 새로운 SQL Server 2017
@@ -32,7 +32,7 @@ SQL Server 2017 Linux, Linux 기반 Docker 컨테이너와 창에 SQL Server의 
 
 
 **사용해보기:**    
-   -   [![평가 센터에서 다운로드](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) ** [SQL Server 2017 Community Technology Preview 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![평가 센터에서 다운로드](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[SQL Server 2017 Community Technology Preview 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>SQL Server 2017 CTP 2.1 (2017 년 5 월)의 새로운 기능
 ### <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진  
@@ -67,8 +67,8 @@ SQL Server 2017 Linux, Linux 기반 Docker 컨테이너와 창에 SQL Server의 
 - CLR 보안 경계로 더 이상 지원 되지 않는.NET Framework의 코드 액세스 보안 (CA)를 사용 합니다. 사용 하 여 만든 CLR 어셈블리 `PERMISSION_SET = SAFE` 외부 시스템 리소스에 액세스, 비관리 코드를 호출 및 시스템 관리자 권한을 얻을 수 있습니다. 부터는 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)], `sp_configure` 이라는 옵션 `clr strict security` 는 CLR 어셈블리의 보안을 강화 하기 위해 도입 되었습니다. `clr strict security`기본적으로 사용 하며 처리 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리도 표시 된 것 처럼 경우 `UNSAFE`합니다. `clr strict security` 이전 버전과 호환성에 대 한 옵션을 사용할 수 있지만 권장 되지 않습니다. 인증서 또는 비대칭 키에 부여 된 해당 로그인으로 모든 어셈블리를 서명 하는 것이 좋습니다 `UNSAFE ASSEMBLY` master 데이터베이스에 대 한 사용 권한입니다. 자세한 내용은 참조 [CLR 엄격한 보안](../database-engine/configure-windows/clr-strict-security.md)합니다.  
 - 그래프 모델 다 대 다 관계를 설정할 데이터베이스 기능입니다. 여기에 새로운 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 노드 및 가장자리 테이블과 키워드를 만들기 위한 구문을 [일치](../t-sql/queries/match-sql-graph.md) 쿼리에 대 한 합니다. 자세한 내용은 참조 [그래프 SQL Server 2017을 사용 하 여 처리](../relational-databases/graphs/sql-graph-overview.md)합니다.   
 - 성능 문제 잠재적 쿼리에 대 한 정보를 제공 하는 데이터베이스 기능 자동 튜닝이, 솔루션을 권장할 수 있습니다 및 수정 프로그램 문제를 식별 하는 자동으로 합니다. 자동 조정 [!INCLUDE[ssnoversion](../includes/ssnoversion.md)], 잠재적인 성능 문제를 발견 하 고 수정 동작을 적용할 수 있습니다 때마다 공지 또는 수는 [!INCLUDE[ssde](../includes/ssde-md.md)] 자동으로 성능 문제를 해결 합니다. 자세한 내용은 참조 [자동 튜닝](../relational-databases/automatic-tuning/automatic-tuning.md)합니다.  
--    일괄 처리 모드 적응에 조인 (아래에서 데이터베이스 호환성 140) 계획의 품질을 개선 합니다.
--    데이터베이스 호환성 140) (아래 계획의 품질을 개선 하기 위해 다중 문 T-SQL Tvf에 대 한 인터리브 방식된으로 실행 합니다.
+-   일괄 처리 모드 적응에 조인 (아래에서 데이터베이스 호환성 140) 계획의 품질을 개선 합니다.
+-   데이터베이스 호환성 140) (아래 계획의 품질을 개선 하기 위해 다중 문 T-SQL Tvf에 대 한 인터리브 방식된으로 실행 합니다.
 - 쿼리 저장소 이제 추적 대기 통계에 대 한 요약 정보입니다. 추적 쿼리 저장소에 대 한 쿼리당 대기 통계 범주는 다음 문제 해결 환경을, 더욱, 워크 로드 성능 및 쿼리 저장소 장점이 계속 사용 하면서 해당 병목 상태에 대 한 정보를 제공 하는 성능 수준의 수 있습니다.
 - DTC 동일한 인스턴스에 포함 된 데이터베이스에 대 한 포함 하 여 가용성 그룹의 일부인 데이터베이스 간의 모든 데이터베이스 간 트랜잭션에 대 한 Always On 가용성 그룹에 대 한 지원. 자세한 내용은 참조 [트랜잭션-Always On 가용성 그룹 및 데이터베이스 미러링](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)
 - 새 열 **modified_extent_page_count** 에 도입 된 [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) 데이터베이스의 각 데이터베이스 파일에 차등 변경 내용을 추적 하도록 합니다.
@@ -76,7 +76,6 @@ SQL Server 2017 Linux, Linux 기반 Docker 컨테이너와 창에 SQL Server의 
 - SQL Server 설치 프로그램에서는 초기 tempdb 파일 크기를 지정할 수 있으므로 최대 **256GB (262, 144 MB)** 파일 크기 보다 큰 값으로 설정 되 면 경고와 함께 파일당 **1GB** IFI을 해제 하 고 합니다.
 - 새로운 동적 관리 뷰 (DMV) [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) 데이터베이스당 버전 저장소 사용량을 추적 하는 도입 되었습니다.
 - 새로운 DMV [sys.dm_db_log_info](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md) DBCC LOGINFO 비슷합니다 VLF 정보를 표시 하는 도입 되었습니다.
-- DBCC CLONEDATABASE 데이터베이스 복제본에서 쿼리 저장소 런타임 통계 누락 되지 않도록 하기 위해 복제 하는 동안 런타임 통계를 플러시합니다. 이외에 DBCC CLONEDATABASE가 더 보기 좋게 꾸밀 지원 하 고 전체 텍스트 인덱스를 복제 합니다.
 - 이제 시스템 버전 임시 테이블 모두 삭제 하 고 모두 업데이트를 지원합니다.
 - 이 CTP에는 데이터베이스 엔진에 대한 버그 수정이 포함되어 있습니다.
 - 2017의 세부 목록을 참조 하는 이전 CTP 릴리스에서 향상 된 기능 CTP [SQL Server 2017 (데이터베이스 엔진)의 새로운](../database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)합니다.   
