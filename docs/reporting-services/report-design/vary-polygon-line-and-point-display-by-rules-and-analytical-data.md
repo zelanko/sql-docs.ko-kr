@@ -29,7 +29,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 00778c0861d701aee22b366e202c25f8be60871e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data"></a>규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경

@@ -31,7 +31,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b50fb9b56d11e1ff911c0781e9cda52df168b82f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)

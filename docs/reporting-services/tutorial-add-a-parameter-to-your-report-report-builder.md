@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)

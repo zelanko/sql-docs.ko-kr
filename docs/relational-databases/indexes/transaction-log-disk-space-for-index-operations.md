@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a1d06fd19479d11e1705e6c21ed7e1698a89896a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="transaction-log-disk-space-for-index-operations"></a>인덱스 작업에 필요한 트랜잭션 로그 디스크 공간

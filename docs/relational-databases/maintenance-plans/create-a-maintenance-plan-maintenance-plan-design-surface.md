@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 616b2d7d823d8a273b3ac260339bb76fba65dd00
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>유지 관리 계획 만들기(유지 관리 계획 디자인 화면)

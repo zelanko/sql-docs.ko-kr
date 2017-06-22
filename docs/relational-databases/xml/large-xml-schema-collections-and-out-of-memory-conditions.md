@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 61ed00e41622ed19c9707974921e68a12d66e020
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="large-xml-schema-collections-and-out-of-memory-conditions"></a>대형 XML 스키마 컬렉션 및 메모리 부족 상태

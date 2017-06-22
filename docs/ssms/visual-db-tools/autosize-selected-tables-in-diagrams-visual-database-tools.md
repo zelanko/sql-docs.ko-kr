@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 85956b6ed09b3ba2e68880a8704dc3a545a3176e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 선택한 테이블 크기 자동 조정(Visual Database Tools)

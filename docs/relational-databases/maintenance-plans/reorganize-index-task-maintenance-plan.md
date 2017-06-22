@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>인덱스 다시 구성 태스크(유지 관리 계획)

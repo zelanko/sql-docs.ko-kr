@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5023aeceed2edd6170b58500edafb7342c21ba28
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리

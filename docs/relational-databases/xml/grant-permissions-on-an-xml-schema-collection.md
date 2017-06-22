@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7c89c6a8322e8922a7d0a2d59ea686a2d703947a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여

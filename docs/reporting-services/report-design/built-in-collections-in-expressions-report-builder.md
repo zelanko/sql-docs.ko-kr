@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ff834d00c915ae81179ff9b0bebed19e7c9ec6c1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>식 (보고서 작성기)에서 기본 제공 컬렉션

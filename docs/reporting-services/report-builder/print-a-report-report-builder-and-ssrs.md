@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 26fe5c7d510e186258b006659d565935f4dd73d0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>보고서 인쇄(보고서 작성기 및 SSRS)

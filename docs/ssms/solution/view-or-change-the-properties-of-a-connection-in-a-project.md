@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 87382ace072e21384546b8785a9aa61cb71f20f4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-or-change-the-properties-of-a-connection-in-a-project"></a>프로젝트의 연결 속성 보기 및 변경

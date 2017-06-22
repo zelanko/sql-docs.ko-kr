@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동

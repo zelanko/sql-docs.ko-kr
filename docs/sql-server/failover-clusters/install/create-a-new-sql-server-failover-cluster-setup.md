@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c8b4817b3630562c514ac3593abd80f83d7b0284
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)

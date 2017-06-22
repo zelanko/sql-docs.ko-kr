@@ -28,7 +28,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 99b5b8ec78220064b79795e51b37b22f18a60886
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="built-in-collections---report-and-group-variables-references-report-builder"></a>기본 제공 컬렉션-보고서 및 그룹 변수 참조 (보고서 작성기)

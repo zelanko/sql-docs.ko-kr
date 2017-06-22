@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6c1e49cf402cf944e912e4297f6a315a570f27e8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="credentials-database-engine"></a>자격 증명(데이터베이스 엔진)

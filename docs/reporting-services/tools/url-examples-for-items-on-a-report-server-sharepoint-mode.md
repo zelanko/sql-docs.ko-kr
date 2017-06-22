@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>SharePoint 모드 보고서 서버에 있는 항목에 대 한 URL 예

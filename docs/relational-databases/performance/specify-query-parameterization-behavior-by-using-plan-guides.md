@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 416a4e54d2b5ff881102b42e136a088e00e2d324
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>계획 지침을 사용하여 쿼리 매개 변수화 동작 지정

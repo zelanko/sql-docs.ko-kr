@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 88ccc09da5973beffdfa8b2595b1354c95b4cbb1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="advanced-merge-replication-conflict---com-based-custom-resolvers"></a>고급 병합 복제 충돌 - COM 기반 사용자 지정 해결 프로그램

@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e6f3bc834b6381285ba48dcbfdb3f12b9df3d6a9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-replicated-commands-and-information-in-distribution-database"></a>배포 데이터베이스에서 복제된 명령 및 정보 보기

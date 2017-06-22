@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f71e743730968231015410177f9bea2d6f00228
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책

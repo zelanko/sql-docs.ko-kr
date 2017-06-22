@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a9790c4afc44e66c521005a3556f8082527d260
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>7단원: 부모 보고서에 드릴스루 동작 추가

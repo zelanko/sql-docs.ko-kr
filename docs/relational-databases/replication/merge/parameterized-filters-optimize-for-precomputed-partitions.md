@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 36f6331a6196e7c7c4bd9e476ae98c56418fad4f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>매개 변수가 있는 필터 - 사전 계산된 파티션에 최적화

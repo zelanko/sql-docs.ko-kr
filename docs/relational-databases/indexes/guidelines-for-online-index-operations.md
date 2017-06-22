@@ -25,7 +25,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
 ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/29/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/29/2017
 >
 
 다시 시작 가능한 온라인 인덱스 다시 작성을 수행할 때 다음 지침이 적용 됩니다.
--    관리 하 고 계획 및 인덱스 유지 관리 기간의 확장 합니다. 일시 중지 하 고 유지 관리 기간에 맞게 인덱스 다시 작성 작업이 여러 번 다시 시작 수 있습니다.
+-   관리 하 고 계획 및 인덱스 유지 관리 기간의 확장 합니다. 일시 중지 하 고 유지 관리 기간에 맞게 인덱스 다시 작성 작업이 여러 번 다시 시작 수 있습니다.
 - 인덱스 다시 작성 오류 (예: 데이터베이스 장애 조치 나 디스크 공간 부족과)를에서 복구합니다.
 - 인덱스 작업이 일시 중지 된 경우, 원래 인덱스와 새로 만든된 한 디스크 공간 및 DML 작업 하는 동안 업데이트 해야 할 필요 합니다.
 

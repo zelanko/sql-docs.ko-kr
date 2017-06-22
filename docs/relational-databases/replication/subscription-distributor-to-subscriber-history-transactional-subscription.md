@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e14832b1b0fa335eadd80b65e1d01c727132b53
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-distributor-to-subscriber-history-transactional-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(트랜잭션 구독)

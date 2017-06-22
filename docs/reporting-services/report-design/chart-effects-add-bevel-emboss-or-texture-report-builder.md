@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2081d22c9e0aefd82cda5dff97b8ece503fdd9b0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="chart-effects---add-bevel-emboss-or-texture-report-builder"></a>차트 효과-추가 빗면 효과, 볼록 효과 또는 질감 (보고서 작성기)

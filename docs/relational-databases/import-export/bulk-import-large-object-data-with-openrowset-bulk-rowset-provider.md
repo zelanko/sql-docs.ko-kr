@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f2e2d3cb37032842ca391d4762a990b2808f2c0e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="bulk-import-large-object-data-with-openrowset-bulk-rowset-provider"></a>OPENROWSET 대량 행 집합 공급자를 사용하여 대형 개체 데이터 대량 가져오기

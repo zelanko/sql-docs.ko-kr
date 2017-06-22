@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: aa5ed1fce3b03b601618e1b74b37b8d81895eccc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>트랜잭션 복제에 대해 통합 백업 사용

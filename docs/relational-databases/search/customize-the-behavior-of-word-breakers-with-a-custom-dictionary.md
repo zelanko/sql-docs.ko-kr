@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9325fc9817b8c0f57ebeb9c6a0e9ae8f29b899cc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="customize-the-behavior-of-word-breakers-with-a-custom-dictionary"></a>사용자 지정 사전을 사용하여 단어 분리기의 동작 사용자 지정

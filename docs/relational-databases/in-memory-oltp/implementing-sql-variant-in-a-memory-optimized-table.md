@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3726302ad367aea494b75ec1562732d367800925
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현

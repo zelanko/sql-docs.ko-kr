@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사

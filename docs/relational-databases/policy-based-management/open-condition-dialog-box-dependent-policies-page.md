@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0261d3c48f434eeeb8a494939a058cb83f817bb5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="open-condition-dialog-box-dependent-policies-page"></a>조건 열기 대화 상자, 종속 정책 페이지

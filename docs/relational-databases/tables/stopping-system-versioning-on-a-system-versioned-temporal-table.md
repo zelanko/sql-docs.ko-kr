@@ -19,7 +19,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bf65c939ca66fa2805e23b98570223f5fb703bc6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="stopping-system-versioning-on-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블에서 시스템 버전 관리 중지

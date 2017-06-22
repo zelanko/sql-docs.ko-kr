@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 64aee66141249bc2a1848f6a65ec9683c73dc429
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="work-with-columns-in-aggregate-queries-visual-database-tools"></a>집계 쿼리에서 열 작업(Visual Database Tools)

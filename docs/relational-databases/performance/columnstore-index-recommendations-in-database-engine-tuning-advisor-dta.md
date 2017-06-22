@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e465c19541d7577b19eef3b875697ba843cba000
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항

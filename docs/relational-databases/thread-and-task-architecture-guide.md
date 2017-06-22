@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/07/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드

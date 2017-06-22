@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: cbcbfedbd5b2296da2cb266bf78ca3f7db9760ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>병합 게시에서 데이터를 테이블로 대량 로드

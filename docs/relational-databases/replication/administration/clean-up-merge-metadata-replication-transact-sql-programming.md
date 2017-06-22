@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 847a42192c396dcda29ed214e279f00d991a4eb0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>병합 메타데이터 정리(복제 Transact-SQL 프로그래밍)

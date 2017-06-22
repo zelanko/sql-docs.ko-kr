@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>행 높이 또는 열 너비 변경(보고서 작성기 및 SSRS)

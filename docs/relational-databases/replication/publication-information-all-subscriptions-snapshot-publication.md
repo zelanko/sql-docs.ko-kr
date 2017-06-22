@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bb16d09a04e082148579c409c0353deed3aeb8ea
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publication-information-all-subscriptions-snapshot-publication"></a>게시 정보, 모든 구독(스냅숏 게시)

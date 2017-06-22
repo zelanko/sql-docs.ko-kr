@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e053294a414ae2baefc90f20ff3fc80adf78a0e7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-new-condition-or-open-condition-dialog-box-description-page"></a>새 조건 만들기 또는 조건 열기 대화 상자, 설명 페이지

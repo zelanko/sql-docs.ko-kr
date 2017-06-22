@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3bb44cd4e105c09fc84822cb75222a14ce39af5f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자 시작 및 사용

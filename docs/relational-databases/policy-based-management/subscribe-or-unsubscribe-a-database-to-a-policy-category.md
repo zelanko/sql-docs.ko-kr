@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 56ad4058339f59a69409ef1c0319f9b41354823c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>정책 범주에 데이터베이스 구독 또는 구독 취소

@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b9200dd4152625e0dce4c0c77b10fa2f3ad196ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성

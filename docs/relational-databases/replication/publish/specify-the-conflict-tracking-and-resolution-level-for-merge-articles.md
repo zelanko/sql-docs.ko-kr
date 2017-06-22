@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 18b5650ce77b40deb101a16ebd1379600394dcbf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-the-conflict-tracking-and-resolution-level-for-merge-articles"></a>병합 아티클의 충돌 추적 및 해결 수준 지정

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 40a1d0874909c787b69300821d05e22a701d657a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리

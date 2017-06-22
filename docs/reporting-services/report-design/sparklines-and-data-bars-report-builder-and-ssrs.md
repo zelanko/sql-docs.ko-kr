@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6021dec1c7d072041710c62a533d4e19ead4aa53
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>스파크라인 및 데이터 막대(보고서 작성기 및 SSRS)

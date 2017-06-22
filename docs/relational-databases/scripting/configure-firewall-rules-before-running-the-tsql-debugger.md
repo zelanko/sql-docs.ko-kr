@@ -29,7 +29,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1aec49f13a7e4c37fd9d8212393c5bdc3a5694d0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-firewall-rules-before-running-the-tsql-debugger"></a>TSQL 디버거를 실행 하기 전에 방화벽 규칙 구성

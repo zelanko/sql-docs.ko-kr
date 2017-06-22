@@ -27,7 +27,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3c024efb9f8531ed9b87b0e2b7d7b22489a76dcf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="using-strong-named-custom-assemblies"></a>강력한 이름의 사용자 지정 어셈블리 사용

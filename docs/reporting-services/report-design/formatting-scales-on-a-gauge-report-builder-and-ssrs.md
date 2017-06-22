@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4a25ea1cb8702758096118371c4261e8189c2e91
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="formatting-scales-on-a-gauge-report-builder-and-ssrs"></a>계기의 눈금 서식 지정(보고서 작성기 및 SSRS)

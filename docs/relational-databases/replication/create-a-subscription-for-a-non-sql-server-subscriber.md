@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 602fe4a40a45b404ec56386548f6fae36c1098b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기

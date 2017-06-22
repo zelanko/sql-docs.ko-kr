@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d4edfc347b8ad4bb90d807f4f0c9ecc602ca3f2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>보고서의 데이터 원본 속성 구성(보고서 관리자)

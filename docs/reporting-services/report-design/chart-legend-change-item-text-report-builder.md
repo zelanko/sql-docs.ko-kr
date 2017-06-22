@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>차트 범례-변경 항목 텍스트 (보고서 작성기)

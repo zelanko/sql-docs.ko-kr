@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a23a522ebf0c1d506cc55ef5923a583a19b64434
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Windows 응용 프로그램 로그에 작업 상태 쓰기

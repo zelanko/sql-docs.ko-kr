@@ -51,5 +51,5 @@
     > [!NOTE]
     > **admin_addr**는 초기 단일 노드 클러스터 설정 중에 구성된 가상 IP 클러스터 리소스입니다.
 
-7.    **제거 절차**. 클러스터에서 노드를 제거해야 할 경우 **ha-cluster-remove** 부트스트랩 스크립트를 사용합니다. 자세한 내용은 [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap)(부트스트랩 스크립트 개요)를 참조하세요.  
+7.  **제거 절차**. 클러스터에서 노드를 제거해야 할 경우 **ha-cluster-remove** 부트스트랩 스크립트를 사용합니다. 자세한 내용은 [Overview of the Bootstrap Scripts](https://www.suse.com/documentation/sle-ha-12/singlehtml/install-quick/install-quick.html#sec.ha.inst.quick.bootstrap)(부트스트랩 스크립트 개요)를 참조하세요.  
 

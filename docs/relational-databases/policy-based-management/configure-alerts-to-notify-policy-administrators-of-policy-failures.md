@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 44565d371ca75d4d707274b90d52794473f63a72
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>정책 관리자에서 정책 실패를 알리도록 경고 구성

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 39bb4179c7869d9a9fe0cbbb26263f9e3a91f1ec
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="execute-sql-server-agent-job-task-maintenance-plan"></a>SQL Server 에이전트 작업 실행 태스크(유지 관리 계획)

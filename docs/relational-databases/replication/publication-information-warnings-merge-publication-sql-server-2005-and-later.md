@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 943f84af82aca8829571243927adf6dc4799ad96
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publication-information-warnings-merge-publication-sql-server-2005-and-later"></a>게시 정보, 경고(병합 게시, SQL Server 2005 이상)

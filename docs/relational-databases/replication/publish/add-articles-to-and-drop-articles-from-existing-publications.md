@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0acd4302b7f996b5eae1fa4d0bd728f135e3591a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제

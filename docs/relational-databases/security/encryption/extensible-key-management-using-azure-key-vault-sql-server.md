@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bbb8b979ba447263a450a9ac4e617977619298a3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Azure 키 자격 증명 모음(SQL Server)을 사용한 확장 가능 키 관리

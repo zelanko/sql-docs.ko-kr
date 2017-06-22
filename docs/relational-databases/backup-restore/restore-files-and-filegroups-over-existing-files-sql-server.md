@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97826d94662c704199c48929d0be00a09e478b09
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>기존 파일에서 파일 및 파일 그룹 복원(SQL Server)

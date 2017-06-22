@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2abba76ac65025fe1f2c2d23a9d5b094eafb8980
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정

@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>기본 제공 컬렉션-ReportItems 컬렉션 참조 (보고서 작성기)

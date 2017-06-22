@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 4569fb3f5bc56d04624756eb3fccba8da1d4ad2f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-2---populating-a-table-with-existing-hierarchical-data"></a>1-2단원 - 기존 계층적 데이터로 테이블 채우기

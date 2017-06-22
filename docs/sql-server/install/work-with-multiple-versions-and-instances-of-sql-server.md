@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a5a66deec44b0d3d2b6b25c08f32cc34301ad0fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>여러 버전 및 인스턴스의 SQL Server 작업

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 26f0c86b4726bf4f0e11cb200180e0352695bc27
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>게시자 정보, 구독 조사 목록(스냅숏)

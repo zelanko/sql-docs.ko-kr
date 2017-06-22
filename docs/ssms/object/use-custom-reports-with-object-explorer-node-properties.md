@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9e99d307624e968284409f779dec6eb9a8731a4e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>개체 탐색기 노드 속성과 함께 사용자 지정 보고서 사용

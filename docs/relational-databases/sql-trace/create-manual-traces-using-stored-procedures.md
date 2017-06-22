@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1ee7ef604dc518fb4765ca5bd944c7fe01500035
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-manual-traces-using-stored-procedures"></a>저장 프로시저를 사용하여 수동 추적 만들기

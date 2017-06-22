@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경

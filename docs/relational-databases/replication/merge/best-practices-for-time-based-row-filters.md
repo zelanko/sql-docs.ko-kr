@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20d358387ae5eb342519c3f6e388fe77279bbe26
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법

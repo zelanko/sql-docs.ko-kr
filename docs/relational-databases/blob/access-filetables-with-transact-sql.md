@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33eb3adc0489d8cb904fee0d47d0586a64b81445
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="access-filetables-with-transact-sql"></a>Transact-SQL을 사용하여 FileTable에 액세스

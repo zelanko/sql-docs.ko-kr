@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21f15afcea2904a88e8e9bdb71b2cccc677ff43d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성

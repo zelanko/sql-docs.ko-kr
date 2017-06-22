@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 271b9ff4060284d50e66130f8bbd4b8d5b288912
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>업데이트 가능한 트랜잭션 구독에 대한 업데이트 모드 전환

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기

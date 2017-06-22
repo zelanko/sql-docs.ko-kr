@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17f350c10f32dbd230d7c372820178a3dde081d2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)

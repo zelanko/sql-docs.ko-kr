@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 디자인(Visual Database Tools)

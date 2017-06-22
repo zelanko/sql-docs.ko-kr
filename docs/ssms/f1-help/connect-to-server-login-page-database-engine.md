@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1556c7facc4a671767fe2d6c061b4f6655ba521b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="connect-to-server-login-page-database-engine"></a>서버에 연결(로그인 페이지) 데이터베이스 엔진

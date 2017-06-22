@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ea5906fa0b1afa7a5276dcce4fbef605794af190
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>복제 모니터에서 게시자 추가 및 제거

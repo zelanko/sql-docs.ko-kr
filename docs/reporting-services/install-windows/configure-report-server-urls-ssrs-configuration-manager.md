@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9e69b9e38fde1183d4bd77b7759faf25b6a4ec50
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>보고서 서버 URL 구성(SSRS 구성 관리자)

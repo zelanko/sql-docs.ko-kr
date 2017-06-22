@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e408a414ec070cdef39b69bf535ceb0d45f73435
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>검색 속성 목록을 사용하여 문서 속성 검색

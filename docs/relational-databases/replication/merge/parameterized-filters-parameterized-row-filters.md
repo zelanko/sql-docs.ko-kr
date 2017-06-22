@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16383cadde524f23f8a6b94a14c282666856780
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>매개 변수가 있는 필터 - 매개 변수가 있는 행 필터

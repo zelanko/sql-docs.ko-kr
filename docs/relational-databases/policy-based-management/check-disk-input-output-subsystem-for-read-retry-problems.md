@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c40f4c7e64d8ee022618c2d5d6bc962b1a94b398
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="check-disk-input-output-subsystem-for-read-retry-problems"></a>읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사

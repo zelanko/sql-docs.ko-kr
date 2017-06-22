@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b518488e5ac42e28487f984bfd65ca196dfbe723
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>병합 복제 백업 및 복원 전략

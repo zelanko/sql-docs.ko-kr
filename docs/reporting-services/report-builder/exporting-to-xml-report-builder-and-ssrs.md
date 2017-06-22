@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3bbe7d68c378bd74e70ceb0c6d219da427db099
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>XML로 내보내기(보고서 작성기 및 SSRS)

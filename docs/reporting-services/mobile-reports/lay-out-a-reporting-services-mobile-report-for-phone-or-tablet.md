@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 283c93958b4cb8bedc890e8af942db3bc3c13a41
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lay-out-a-reporting-services-mobile-report-for-phone-or-tablet"></a>휴대폰 또는 태블릿용 Reporting Services 모바일 보고서 레이아웃

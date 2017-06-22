@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8f8eac1d05b8bdd034879cb2eba1c4fc867fce66
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tasks-and-permissions---system-level-tasks"></a>작업 및 사용 권한-시스템 수준 태스크

@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cdd63f41c8a567bde4fcadab2802a2c0b6f468cd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-unicode-native-format-to-import-or-export-data-sql-server"></a>데이터를 가져오거나 내보내기 위해 유니코드 네이티브 형식 사용(SQL Server)

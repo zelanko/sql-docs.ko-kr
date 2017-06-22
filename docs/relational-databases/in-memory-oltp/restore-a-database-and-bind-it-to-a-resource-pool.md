@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd9e0ff8de0d4c7099200dfbb329709db437bb53
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-and-bind-it-to-a-resource-pool"></a>데이터베이스를 복원하여 리소스 풀에 바인딩

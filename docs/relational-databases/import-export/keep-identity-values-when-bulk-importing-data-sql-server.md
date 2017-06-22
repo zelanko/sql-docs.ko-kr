@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 484b11226fbf523d7d2ba1dac47a12b04ef6eec9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>데이터 대량 가져오기 중 ID 값 유지(SQL Server)

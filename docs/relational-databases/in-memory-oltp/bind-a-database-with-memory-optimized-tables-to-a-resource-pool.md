@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca8ec6e27aebf60ba155580e505f0c338ff61348
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩

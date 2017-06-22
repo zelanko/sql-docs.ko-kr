@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c18a425db4969c7ca75a02737c8b64e3360557c5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>저장 프로시저에 대한 사용 권한 부여

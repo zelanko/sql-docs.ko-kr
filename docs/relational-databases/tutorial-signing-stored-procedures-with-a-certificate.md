@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0ccfcccf5fbed9a2b0e4f09fdd80e7f3e5dcda9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명

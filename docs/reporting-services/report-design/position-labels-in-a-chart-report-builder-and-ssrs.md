@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53f0d4b0c6aed30746af82de7d5f1caf5e42721c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="position-labels-in-a-chart-report-builder-and-ssrs"></a>차트의 레이블 위치 지정(보고서 작성기 및 SSRS)

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a3f0db25e7283b594357638bd832c982de0569e0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="revoke-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 취소

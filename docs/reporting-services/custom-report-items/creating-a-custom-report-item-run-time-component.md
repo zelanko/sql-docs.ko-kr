@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5ff245d02fd83794ac61f82e90ff2b48b96259d8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>사용자 지정 보고서 항목 런타임 구성 요소 만들기

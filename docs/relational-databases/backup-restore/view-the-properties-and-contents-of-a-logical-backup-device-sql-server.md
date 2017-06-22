@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e0a3fad1cc54f9367d95ac36c903deeede0814b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-the-properties-and-contents-of-a-logical-backup-device-sql-server"></a>논리적 백업 장치의 속성 및 내용 보기(SQL Server)

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발
@@ -262,7 +262,7 @@ cmd.ExecuteNonQuery();
 
 열 암호화 키를 받는 프로세스는 다음과 같습니다.
 
-1.    Always Encrypted가 쿼리에 대해 사용하도록 설정된 경우 .NET Framework Data Provider for SQL Server는 쿼리에 매개 변수가 있으면 매개 변수 대상이 암호화된 열에 대한 암호화 메타데이터를 검색하도록 **sys.sp_describe_parameter_encryption** 을 호출합니다. 쿼리 결과에 암호화된 데이터가 포함된 경우 SQL Server는 암호화 메타데이터를 자동으로 연결합니다. 열 마스터 키 정보에는 다음이 포함됩니다.
+1.  Always Encrypted가 쿼리에 대해 사용하도록 설정된 경우 .NET Framework Data Provider for SQL Server는 쿼리에 매개 변수가 있으면 매개 변수 대상이 암호화된 열에 대한 암호화 메타데이터를 검색하도록 **sys.sp_describe_parameter_encryption** 을 호출합니다. 쿼리 결과에 암호화된 데이터가 포함된 경우 SQL Server는 암호화 메타데이터를 자동으로 연결합니다. 열 마스터 키 정보에는 다음이 포함됩니다.
     - 열 마스터 키를 포함하는 키 저장소를 캡슐화하는 키 저장소 공급자의 이름. 
     - 키 저장소에서 열 마스터 키의 위치를 지정하는 키 경로.
     
@@ -270,8 +270,8 @@ cmd.ExecuteNonQuery();
 
     - 열 암호화 키의 암호화된 값.
     - 열 암호화 키를 암호화하는 데 사용된 알고리즘의 이름
-2.    .NET Framework Data Provider for SQL Server는 열 마스터 키 저장소 공급자 이름을 사용하여 내부 데이터 구조에서 공급자 개체(SqlColumnEncryptionKeyStoreProvider 클래스에서 파생된 클래스 인스턴스)를 조회합니다.
-3.    열 암호화 키를 해독하기 위해.NET Framework Data Provider for SQL Server는 암호화된 열 암호화 키를 생성하는 데 사용된 열 마스터 키 경로, 열 암호화 키의 암호화된 값 및 암호화 알고리즘 이름을 통과하여 SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey 메서드를 호출합니다.
+2.  .NET Framework Data Provider for SQL Server는 열 마스터 키 저장소 공급자 이름을 사용하여 내부 데이터 구조에서 공급자 개체(SqlColumnEncryptionKeyStoreProvider 클래스에서 파생된 클래스 인스턴스)를 조회합니다.
+3.  열 암호화 키를 해독하기 위해.NET Framework Data Provider for SQL Server는 암호화된 열 암호화 키를 생성하는 데 사용된 열 마스터 키 경로, 열 암호화 키의 암호화된 값 및 암호화 알고리즘 이름을 통과하여 SqlColumnEncryptionKeyStoreProvider.DecryptColumnEncryptionKey 메서드를 호출합니다.
 
 
 

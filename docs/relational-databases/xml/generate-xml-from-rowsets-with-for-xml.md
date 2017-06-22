@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c20af7439c5a73c90931d7a61d375b19cc279917
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="generate-xml-from-rowsets-with-for-xml"></a>행 집합으로부터 XML을 생성하기 위해 FOR XML 사용

@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 123e24637af841b90398d707d36abbbc457098d1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2000"></a>구독, 동기화 기록(병합 구독, SQL Server 2000)

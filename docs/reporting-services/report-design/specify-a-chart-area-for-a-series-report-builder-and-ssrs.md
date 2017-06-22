@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d88358516e05214b230ec57b6243168ef9aac048
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>계열에 대한 차트 영역 지정(보고서 작성기 및 SSRS)

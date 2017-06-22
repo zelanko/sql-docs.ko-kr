@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 5f74f31531f0b3c966235396d91ce12b00428d5c
 ms.openlocfilehash: 922e6a4a0df86f82012670874d49b65e1338b53c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/21/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>테이블과 저장 프로시저의 네이티브 컴파일

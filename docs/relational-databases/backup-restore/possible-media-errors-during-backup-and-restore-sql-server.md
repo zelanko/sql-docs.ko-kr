@@ -31,7 +31,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 750aa24dcfae82a4e44a32de345299a964df0de8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>백업 및 복원 중 발생 가능한 미디어 오류(SQL Server)

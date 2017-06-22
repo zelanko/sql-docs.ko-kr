@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: dcbc50e4c1bb576d4956b569dc7644d8e6f23abf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-invoices-and-forms-with-lists-report-builder-and-ssrs"></a>목록을 사용하여 송장 및 양식 만들기(보고서 작성기 및 SSRS)

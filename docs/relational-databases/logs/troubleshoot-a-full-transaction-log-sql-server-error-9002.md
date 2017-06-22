@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)

@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2cb994a0cb4dde6b6ea5f671238272e574e7721b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기

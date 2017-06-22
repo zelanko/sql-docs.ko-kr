@@ -30,7 +30,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 944b81ceb8f0fd07284364818b58366099ba19f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-search-criteria-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)

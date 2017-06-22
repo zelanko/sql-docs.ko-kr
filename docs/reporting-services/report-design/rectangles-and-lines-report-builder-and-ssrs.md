@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bc6c8bc8ddf4e23afe15c533a49a30c96702294c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>사각형 및 선(보고서 작성기 및 SSRS)

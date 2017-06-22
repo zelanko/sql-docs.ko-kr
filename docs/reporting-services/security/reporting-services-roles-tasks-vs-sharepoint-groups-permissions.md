@@ -27,7 +27,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 역할 작업 vs. SharePoint 그룹 사용 권한

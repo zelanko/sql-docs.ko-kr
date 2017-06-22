@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7428fd46c73c7e32814928ae95085a704167544d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="what39s-new-in-sql-server-reporting-services-ssrs"></a>어떤 &#39; 새로운에서 SQL Server Reporting Services (SSRS)

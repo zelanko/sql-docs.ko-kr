@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c6485a4d7020bf63b4650ec70d6eb20c9ccf714f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>테이블 삭제 대화 상자(Visual Database Tools)

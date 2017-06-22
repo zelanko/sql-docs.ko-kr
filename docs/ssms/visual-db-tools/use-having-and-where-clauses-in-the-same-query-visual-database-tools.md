@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7a08a632df3d4f6b054f4b60cae2d4befc8c8745
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="use-having-and-where-clauses-in-the-same-query-visual-database-tools"></a>동일한 쿼리에서 HAVING 및 WHERE 절 사용(Visual Database Tools)

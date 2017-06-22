@@ -22,7 +22,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>항목 숨기기(보고서 작성기 및 SSRS)

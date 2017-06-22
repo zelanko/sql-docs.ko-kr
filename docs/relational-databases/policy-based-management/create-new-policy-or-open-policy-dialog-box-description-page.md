@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ef76460f1f77ea9622bbc2465857946bf463b96
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>새 정책 만들기 또는 정책 열기 대화 상자, 설명 페이지

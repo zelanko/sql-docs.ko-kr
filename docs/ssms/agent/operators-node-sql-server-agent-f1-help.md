@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 30cbb7fdfa42c543187fadea82785261801ef7cc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>운영자 노드(SQL Server 에이전트 F1 도움말)

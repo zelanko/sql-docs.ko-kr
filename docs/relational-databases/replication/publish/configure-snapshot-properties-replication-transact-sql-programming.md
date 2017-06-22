@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 696e717afbf46a23987d1cd611e5b57d5c935c4e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>스냅숏 속성 구성(복제 Transact-SQL 프로그래밍)

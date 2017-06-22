@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2c0a85b70906a7784093ba1fb6905c27278176fa
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>SQL Server 에이전트 작업을 만들고 관리하도록 사용자 구성

@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0af5c400a4973f711b2b3162f6fa05ca0371adeb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-and-run-traces-using-transact-sql-stored-procedures"></a>TRANSACT-SQL 저장 프로시저를 사용하여 추적 만들기 및 실행

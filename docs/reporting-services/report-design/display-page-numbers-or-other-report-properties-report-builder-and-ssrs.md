@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0f2fc7a28d8c8b0a66e706a9518290d0ca56c876
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>페이지 번호 또는 기타 보고서 속성 표시(보고서 작성기 및 SSRS)

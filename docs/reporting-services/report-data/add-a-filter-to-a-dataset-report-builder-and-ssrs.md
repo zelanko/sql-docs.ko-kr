@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68838748a77567747cd7f44f7924738d87b68450
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-a-filter-to-a-dataset-report-builder-and-ssrs"></a>데이터 집합에 필터 추가(보고서 작성기 및 SSRS)

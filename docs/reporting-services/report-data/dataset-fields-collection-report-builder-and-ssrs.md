@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="dataset-fields-collection-report-builder-and-ssrs"></a>데이터 집합 필드 컬렉션(보고서 작성기 및 SSRS)

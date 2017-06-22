@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9643dbca781cb469fd3895e1de265948bfbc873e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 대화 상자(Visual Database Tools)

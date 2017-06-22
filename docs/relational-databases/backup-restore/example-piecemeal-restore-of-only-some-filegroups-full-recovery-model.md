@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78208b2b401a3acaf194dc1a13e0df8a56457557
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>예제: 일부 파일 그룹만 증분 복원(전체 복구 모델)

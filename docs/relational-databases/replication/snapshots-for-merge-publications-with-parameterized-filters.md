@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 246e2e5db5c3e64973c165be8b03e03b7c8226a5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="snapshots-for-merge-publications-with-parameterized-filters"></a>매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏

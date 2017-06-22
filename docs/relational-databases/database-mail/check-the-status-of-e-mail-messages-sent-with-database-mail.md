@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 691f6b69f1921d6710eba29d85b9120f39a686c4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>데이터베이스 메일을 통해 보낸 전자 메일 메시지의 상태 확인

@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1f8fd216f5e23f958e2913ffd35f091844cac3f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="disable-check-constraints-with-insert-and-update-statements"></a>INSERT 및 UPDATE 문에서 CHECK 제약 조건 해제

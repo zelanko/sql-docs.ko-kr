@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원

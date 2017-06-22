@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조

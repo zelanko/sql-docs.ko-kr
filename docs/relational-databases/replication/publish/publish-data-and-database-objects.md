@@ -49,7 +49,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d909e573f9e04728b8d31973108ed7499e61172d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="publish-data-and-database-objects"></a>데이터 및 데이터베이스 개체 게시

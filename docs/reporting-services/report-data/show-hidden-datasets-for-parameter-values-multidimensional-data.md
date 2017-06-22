@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 55e44a7468fb08372e5f718fe8fc4bbd1846cb84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>매개 변수 값-다차원 데이터에 대해 숨겨진된 데이터 집합 표시

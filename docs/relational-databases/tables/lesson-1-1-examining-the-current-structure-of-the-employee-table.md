@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e4f881ca9ee3cf85edbbb4d474406e94fe1658ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-1-1---examining-the-current-structure-of-the-employee-table"></a>1-1단원 - Employee 테이블의 현재 구조 검사

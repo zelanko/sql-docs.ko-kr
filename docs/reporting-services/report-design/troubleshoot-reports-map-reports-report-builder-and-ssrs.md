@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)

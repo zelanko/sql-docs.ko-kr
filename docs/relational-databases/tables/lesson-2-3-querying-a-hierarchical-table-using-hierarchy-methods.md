@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: af8bdce0dd68fbf33d364757cbb07d60054b1100
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="lesson-2-3---querying-a-hierarchical-table-using-hierarchy-methods"></a>2-3단원 - 계층적 메서드를 사용하여 계층적 테이블 쿼리

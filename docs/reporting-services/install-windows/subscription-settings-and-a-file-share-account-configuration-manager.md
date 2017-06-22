@@ -20,7 +20,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 804f6b3bb0ee6b5d65c7990fb3eb92fc0b369446
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="subscription-settings-and-a-file-share-account-configuration-manager"></a>구독 설정 및 파일 공유 계정(구성 관리자)

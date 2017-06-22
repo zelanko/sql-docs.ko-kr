@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 38ef2e93566791eeb1963b02792942ec5450031d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>수정된 데이터베이스와 데이터베이스 다이어그램 일치(Visual Database Tools)

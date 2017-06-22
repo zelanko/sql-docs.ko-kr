@@ -25,7 +25,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현

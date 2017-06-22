@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: df3ba2fe80e7e6cb2f1a9a7834dc6d64b2e0cf42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="modify-a-resource-health-policy-definition-sql-server-utility"></a>리소스 상태 정책 정의 수정(SQL Server 유틸리티)

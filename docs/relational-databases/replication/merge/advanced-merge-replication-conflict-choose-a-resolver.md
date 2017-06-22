@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c16dc6676e37261ea4c5ae8cd76ea767a513c13a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>고급 병합 복제 충돌 - 해결 프로그램 선택

@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abc61a3002a87583c6b297917ff8f7665472c423
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>SQL Server 인스턴스에서 데이터베이스의 목록 보기

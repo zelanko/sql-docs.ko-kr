@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f12c61a883c8a0c190a13e4b2ae35ff7188156ff
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)

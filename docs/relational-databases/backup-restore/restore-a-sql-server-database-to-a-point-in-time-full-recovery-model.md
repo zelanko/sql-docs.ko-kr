@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d20f1dbfd5cb21920ff323f8a09f33a9650c16a4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)

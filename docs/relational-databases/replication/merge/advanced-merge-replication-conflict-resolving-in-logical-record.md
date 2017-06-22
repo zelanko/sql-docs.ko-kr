@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6e8b64c8196394624e142d04609e014afcc17dd9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="advanced-merge-replication-conflict---resolving-in-logical-record"></a>고급 병합 복제 충돌 - 논리적 레코드에서 해결

@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3630c769c33d4888f384d00ec341503fc47c89cd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>병합 테이블 아티클 간의 논리적 레코드 관계 정의

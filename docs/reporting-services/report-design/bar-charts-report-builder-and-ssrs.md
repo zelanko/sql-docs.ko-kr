@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4b3521ce8485561df5fec6a9cd468732cfbc52b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="bar-charts-report-builder-and-ssrs"></a>가로 막대형 차트(보고서 작성기 및 SSRS)

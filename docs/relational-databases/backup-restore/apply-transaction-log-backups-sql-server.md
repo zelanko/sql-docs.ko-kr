@@ -24,7 +24,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 60f9ef5bcf12be3b4a16f6ed56a21da2a2b54501
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)

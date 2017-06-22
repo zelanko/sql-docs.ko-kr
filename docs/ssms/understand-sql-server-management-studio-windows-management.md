@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 010413d849d1d3bdab0c1d72c6bd6375c340a753
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>SQL Server Management Studio의 창 관리 이해

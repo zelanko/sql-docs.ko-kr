@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbdaac162ec2866af23803583a1ed195cbaaeb29
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="distributor-info-subscription-watch-list-merge-pub-sql-2005"></a>배포자 정보, 구독 조사 목록(병합 게시, SQL 2005+)

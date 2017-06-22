@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ebc9102f493258b8f6773a81b1cd875f7764fd9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>로그인, 사용자 및 스키마 관리 방법 도움말 항목

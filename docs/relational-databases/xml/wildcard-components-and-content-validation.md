@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3eac26ac7add89b64c19672ae9fd34e224c6e7e1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="wildcard-components-and-content-validation"></a>와일드카드 구성 요소 및 콘텐츠 유효성 검사

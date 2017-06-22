@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 600766dbf1449ead6dce5d1e9d4c33d808ef4567
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="set-a-database-to-single-user-mode"></a>단일 사용자 모드로 데이터베이스 설정

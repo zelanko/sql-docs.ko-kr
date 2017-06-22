@@ -32,7 +32,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f1cf19211d774242d0f4b88bc089fb8ece06b511
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항

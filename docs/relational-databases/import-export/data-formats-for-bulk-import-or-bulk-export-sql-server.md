@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 248ff4e6c29eb8412898d964cfac1cb85ef338d3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>대량 가져오기 또는 대량 내보내기를 위한 데이터 형식(SQL Server)

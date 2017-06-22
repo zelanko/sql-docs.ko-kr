@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b29b195a3bff00b3c277767df4d18a0d001eb9ed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>예제: FOR XML로 생성된 XML에 대한 루트 요소 지정

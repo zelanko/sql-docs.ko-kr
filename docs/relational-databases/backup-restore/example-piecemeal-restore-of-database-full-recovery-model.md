@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5a939ad4e9e5313961f681c06f896a9f53a906e8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>예제: 데이터베이스의 증분 복원(전체 복구 모델)

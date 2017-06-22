@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 711b648b41294d6c32530407b31aec8401db389c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>차트에서 계열 색 서식 지정(보고서 작성기 및 SSRS)

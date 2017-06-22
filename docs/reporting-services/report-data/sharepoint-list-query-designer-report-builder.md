@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>SharePoint 목록 쿼리 디자이너(보고서 작성기)

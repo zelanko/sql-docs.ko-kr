@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c2b248262e1344a7dc4652ed5d48aefa081a2f40
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 - 피어 투 피어 복제에서 충돌 검색

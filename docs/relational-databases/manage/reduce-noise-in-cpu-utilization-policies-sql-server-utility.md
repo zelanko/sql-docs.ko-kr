@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2dec1429dd1b3a49048e50d55dc0c314531b355a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="reduce-noise-in-cpu-utilization-policies-sql-server-utility"></a>CPU 사용 정책에서 노이즈 줄이기(SQL Server 유틸리티)

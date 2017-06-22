@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="limit-search-results-with-rank"></a>RANK를 사용하여 검색 결과 제한

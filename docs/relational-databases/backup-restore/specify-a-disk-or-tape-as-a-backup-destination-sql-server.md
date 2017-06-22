@@ -28,7 +28,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f82d446fbbe47be4698ae458704e28fa8ac95c15
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>디스크 또는 테이프를 백업 대상으로 지정(SQL Server)

@@ -26,7 +26,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1521035e49494a2e183ea35a6ad981a710ff52ff
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services에서 외부 데이터 집합 사용

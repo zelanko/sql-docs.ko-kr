@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: b76a0f262fd12e53797c0ad86c991a6e4423927a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/15/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결

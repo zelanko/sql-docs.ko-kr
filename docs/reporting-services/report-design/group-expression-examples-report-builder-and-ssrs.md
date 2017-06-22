@@ -24,7 +24,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cbb4f5f3af2a8986fdc7384ad4da1740f2be6638
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="group-expression-examples-report-builder-and-ssrs"></a>그룹 식 예(보고서 작성기 및 SSRS)

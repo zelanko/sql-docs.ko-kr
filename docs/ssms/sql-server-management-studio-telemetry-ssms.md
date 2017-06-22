@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="local-audit-for-ssms-usage-feedback-collection"></a>SSMS 사용 현황 피드백 수집에 대한 로컬 감사
@@ -28,9 +28,9 @@ SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 데이터�
 ## <a name="audit-feature-usage-data"></a>기능 사용 현황 데이터 감사
 
 SSMS를 통해 수집된 기능 사용 현황 데이터를 확인하려면 다음을 수행합니다.
-1.    SSMS를 시작합니다.
-2.    **보기**를 클릭하고 기본 메뉴에서 **출력**을 클릭하여 **출력** 창을 표시합니다. 
-3.    **출력** 창이 표시되면 **출력 보기 선택:** 메뉴에서 **원격 분석**을 선택합니다.
+1.  SSMS를 시작합니다.
+2.  **보기**를 클릭하고 기본 메뉴에서 **출력**을 클릭하여 **출력** 창을 표시합니다. 
+3.  **출력** 창이 표시되면 **출력 보기 선택:** 메뉴에서 **원격 분석**을 선택합니다.
 
 SSMS를 통해 데이터베이스와 상호 작용할 경우 **출력** 창에 수집된 데이터가 표시됩니다.
 

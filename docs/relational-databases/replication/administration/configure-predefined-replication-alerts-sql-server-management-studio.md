@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fdd1352c4f7f6c62c8adfc5fcf9b2932568c12d1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>미리 정의된 복제 경고 구성(SQL Server Management Studio)

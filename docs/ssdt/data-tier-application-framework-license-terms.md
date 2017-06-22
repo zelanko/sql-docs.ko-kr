@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 20cd5814a6855e7a576642d23d83166c48603a8a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="data-tier-application-framework---license-terms"></a>데이터 계층 응용 프로그램 프레임워크 - 사용 조건

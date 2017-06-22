@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f4a345f97fc3b414f6d804b127b625faa8e1204
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="change-an-item-within-a-cell-report-builder-and-ssrs"></a>셀 내 항목 변경(보고서 작성기 및 SSRS)

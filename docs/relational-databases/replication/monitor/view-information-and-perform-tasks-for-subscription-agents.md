@@ -22,7 +22,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e6d7c3133037182042e365e852d7dc8381705e1c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="view-information-and-perform-tasks-for-subscription-agents"></a>구독 에이전트에 대한 정보 보기 및 태스크 수행

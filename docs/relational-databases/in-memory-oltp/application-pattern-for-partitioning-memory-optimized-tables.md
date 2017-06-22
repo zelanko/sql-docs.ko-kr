@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30bcdf16b27cf4f85fca86c8daeeeec210798c07
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 분할을 위한 응용 프로그램 패턴

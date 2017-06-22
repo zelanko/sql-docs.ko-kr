@@ -31,7 +31,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f052253295b400bbbbe9d0db25349916e19c2ad2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2016"></a>SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용

@@ -23,7 +23,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: aca61d548532fcb6f61c23130e34bf426c8672c9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="add-change-or-delete-default-values-for-a-report-parameter"></a>보고서 매개 변수의 기본값 추가, 변경 또는 삭제

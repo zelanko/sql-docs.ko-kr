@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ab1c264ec07230bd81769ab2886177552095e636
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="format-text-in-a-text-box-report-builder-and-ssrs"></a>입력란의 텍스트 서식 지정(보고서 작성기 및 SSRS)

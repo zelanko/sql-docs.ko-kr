@@ -23,7 +23,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 95cd6dd3a8b04134ea6b2d08252429eac2b80299
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="show-query-properties-visual-database-tools"></a>쿼리 속성 표시(Visual Database Tools)

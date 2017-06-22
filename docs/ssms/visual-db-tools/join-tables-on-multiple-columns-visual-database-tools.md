@@ -21,7 +21,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 906e92dee8d00b2c63463a5aa09234bafc92b102
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="join-tables-on-multiple-columns-visual-database-tools"></a>여러 열에 대해 테이블 조인(Visual Database Tools)
