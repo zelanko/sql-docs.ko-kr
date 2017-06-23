@@ -10,7 +10,7 @@
 ## [XQuery](xquery/xquery-language-reference-sql-server.md)
         
 # [샘플](sample/microsoft-sql-server-samples.md)
-# [도구](tools/command-prompt-utility-reference-database-engine.md)
+# [도구](tools/overview-sql-tools.md)
         
 # 개발자     
 ## [SSDT(SQL Server Data Tools)](ssdt/download-sql-server-data-tools-ssdt.md)

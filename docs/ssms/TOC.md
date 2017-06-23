@@ -7,6 +7,8 @@
 # [솔루션 탐색기 +](../ssms/solution/solution-explorer.md)
 # [템플릿 +](../ssms/template/template-explorer.md)
 # [Visual Database Tools +](../ssms/visual-db-tools/visual-database-tools.md)
+# [서버 등록 +](../ssms/register-servers/register-servers.md)
+# [자습서 +](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 
 # [SSMS란 무엇인가요?](sql-server-management-studio-ssms.md)
 # [SSMS 변경 로그](sql-server-management-studio-changelog-ssms.md)
@@ -42,3 +44,7 @@
 # [도구 메뉴에 외부 도구 추가(SSMS)](add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md)
 # [로그인 감사 구성(SSMS)](configure-login-auditing-sql-server-management-studio.md)
 # [도구 상자 사용](use-the-toolbox.md)
+
+# [Ssms 유틸리티](ssms-utility.md)  
+# [SQL Server Management Studio 바로 가기 키](sql-server-management-studio-keyboard-shortcuts.md)  
+

@@ -1,3 +1,4 @@
+# [적응 쿼리 처리](adaptive-query-processing.md)
 # [자동 튜닝](../automatic-tuning/automatic-tuning.md)
 # [카디널리티 추정](cardinality-estimation-sql-server.md)  
 
