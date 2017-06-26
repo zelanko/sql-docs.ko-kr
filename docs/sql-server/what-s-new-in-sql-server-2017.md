@@ -1,5 +1,5 @@
 ---
-title: "기능 &#39;의 새로운 SQL Server 2017 | Microsoft Docs"
+title: "SQL Server 2017의에서 새로운 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/19/2017
 ms.prod: sql-server-2017
@@ -21,7 +21,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2017"></a>기능 &#39;의 새로운 SQL Server 2017
+# <a name="what39s-new-in-sql-server-2017"></a>SQL Server 2017의에서 새로운 기능
 SQL Server 2017 Linux, Linux 기반 Docker 컨테이너와 창에 SQL Server의 기능을 전환 하 여 개발 언어, 데이터 형식, 온-프레미스 및 클라우드 및 운영 체제에서 선택 사항을 제공 하는 플랫폼 때문에 SQL Server 하기 위한 주요 단계를 나타냅니다.
 
 이 항목은 가장 최근의 커뮤니티 기술 미리 보기 (CTP) 릴리스 및 자세한 특정 기능 영역에 대 한 새로운 정보에 대 한 링크의 새로운 기능을 요약 합니다.
