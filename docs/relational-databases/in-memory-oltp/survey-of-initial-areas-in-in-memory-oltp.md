@@ -1,5 +1,5 @@
 ---
-title: "빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft 문서"
+title: "빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/12/2017"
 ms.prod: sql-server-2016
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82d13af37ad323a642ae84fab6973429a0a084c2
+ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
+ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
@@ -503,8 +503,10 @@ TRANSACT-SQL을 통해 사용할 수 있는 네이티브 컴파일 모듈 형식
 <a name="documentation-guide-for-native-procs-42b"></a>  
   
 ## <a name="documentation-guide-for-native-procs"></a>기본 프로시저에 대한 설명서 가이드  
-  
-  
+
+다음 문서 및 그 목차에 나오는 하위 문서에서는 네이티브 컴파일 저장 프로시저에 대해 자세히 설명합니다.
+
+- [네이티브 컴파일 저장 프로시저](natively-compiled-stored-procedures.md)
   
 <a name="related-links-43f"></a>  
   

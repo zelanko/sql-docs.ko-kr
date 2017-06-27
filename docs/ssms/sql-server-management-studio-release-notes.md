@@ -1,7 +1,7 @@
 ---
-title: "SQL Server Management Studio - 릴리스 정보 | Microsoft 문서"
+title: "SQL Server Management Studio - 릴리스 정보 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 06/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: 1733a789fb2dc17eea82ab22d4a50614d1fffc3b
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - 릴리스 정보
@@ -57,6 +57,9 @@ SQL Server Management Studio의 일반 공급 릴리스를 시작합니다.  이
     
 5. **영어 이외의 SSMS 설치에는 추가 보안 패키지를 설치해야 합니다.**  
 영어 이외의 지역화된 SSMS 릴리스는 Windows 8, Windows 7, Windows Server 2012 및 Windows Server 2008 R2에 설치하는 경우 [KB 2862966 보안 업데이트 패키지가 필요](https://support.microsoft.com/en-us/kb/2862966) 합니다.
+
+5. **도움말을 클릭하거나 F1 키를 눌러도 도움말이 열리지 않음**  
+일부 환경에서는 도움말을 클릭하거나 F1 키를 누르면 **이 ms xhelp을(를) 열려면 새 앱이 필요합니다.**라는 메시지가 나타납니다. 이 오류는 알려진 문제이며 향후 릴리스에서 수정될 예정입니다.
   
 ## <a name="feedback"></a>피드백  
   

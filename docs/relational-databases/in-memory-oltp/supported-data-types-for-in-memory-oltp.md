@@ -1,7 +1,7 @@
 ---
-title: "메모리 내 OLTP에 지원되는 데이터 형식 | Microsoft 문서"
+title: "메모리 내 OLTP에 지원되는 데이터 형식 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/05/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 1d363db8e8bd0e1460cdea3c3a7add68e48714c9
-ms.openlocfilehash: 0095d4e8ab9f3dc48e9414dc888213b79b3c34c6
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>LOB 및 기타 행 외부 열 식별
 
-SQL Server 2016부터 메모리 액세스에 최적화 된 테이블 단일 테이블 행이 8060 바이트 보다 큰 수 있도록 하는 행 외부 열을 지원 합니다. 다음 Transact-SQL SELECT 문은 메모리 액세스에 최적화된 테이블에 대한 모든 행 외부 열을 보고합니다. 다음을 참고하십시오.
+SQL Server 2016부터는 메모리 액세스에 최적화된 테이블이 [행 외부 열을 지원](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)하여, 단일 테이블 행이 8060바이트보다 클 수 있습니다. 다음 Transact-SQL SELECT 문은 메모리 액세스에 최적화된 테이블에 대한 모든 행 외부 열을 보고합니다. 다음을 참고하십시오.
 
 - 모든 인덱스 키 열은 행에 저장됩니다.
   - 이제 메모리 액세스에 최적화된 테이블에서 고유하지 않은 인덱스 키에 NULLable 열을 포함할 수 있습니다.
@@ -91,6 +91,7 @@ SELECT
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

@@ -1,7 +1,7 @@
 ---
-title: "전체 데이터베이스 백업 만들기(SQL Server) | Microsoft 문서"
+title: "전체 데이터베이스 백업 만들기(SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2016
+ms.date: 06/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,19 +20,19 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: fb2aa3981cd5107cf3ea6f6dc0408acfe3292701
+ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
+ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [전체 데이터베이스 백업 만들기(SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)합니다..
+ > SQL Server 2014의 경우 [전체 데이터베이스 백업 만들기(SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)로 이동하세요.
 
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 전체 데이터베이스 백업을 만드는 방법을 설명합니다.  
   
->  Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 방법에 대한 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL로 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
+>  Azure Blob Storage 서비스로 SQL Server 백업 방법에 대한 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL로 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항 
   
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 완료하는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 큰 데이터베이스의 경우 *차등 데이터베이스 백업*으로 전체 데이터베이스 백업을 보완할 수 있습니다. 자세한 내용은 [차등 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md) 및 [URL로 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
+-   데이터베이스가 커짐에 따라 전체 데이터베이스 백업은 마치는 데 시간이 오래 걸리고 저장 공간도 더 많이 필요하게 됩니다. 대규모 데이터베이스의 경우 일련의 [differential database backups](../../relational-databases/backup-restore/differential-backups-sql-server.md)로 전체 데이터베이스 백업을 보충해 보세요. 자세한 내용은 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
 -   [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 저장 프로시저를 사용하여 전체 데이터베이스 백업의 크기를 예측합니다.  
   
@@ -198,9 +198,9 @@ ms.lasthandoff: 06/05/2017
 
 7.  **확인**을 클릭합니다.
 
-#### <a name="d--backing-up-to-the-microsoft-azure-blob-storage-service"></a>**D.  Microsoft Azure Blob Storage 서비스에 백업**
+#### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Azure Blob Storage 서비스에 백업**
 #### <a name="common-steps"></a>**공통 단계**  
-아래 세 가지 예제에서는 Microsoft Azure Blob 저장소 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
+아래 세 가지 예제에서는 Microsoft Azure Blob Storage 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
 2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...**을 클릭합니다.
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/05/2017
     **D1.  URL로 스트라이프 백업 및 SQL Server 자격 증명에 이미 있는 경우**  
 읽기, 쓰기 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  
 *
-    5.    `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure 저장소 컨테이너: **텍스트 상자에서** 를 선택합니다.
+    5.  `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure 저장소 컨테이너: **텍스트 상자에서** 를 선택합니다.
 
     6.  **백업 파일:** 텍스트 상자에 `Sales_stripe1of2_20160601.bak`를 입력합니다.
 
@@ -247,7 +247,7 @@ ms.lasthandoff: 06/05/2017
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-### <a name="to-create-a-full-database-backup"></a>전체 데이터베이스 백업을 만들려면  
+### <a name="create-a-full-database-backup"></a>전체 데이터베이스 백업 만들기  
   
 1.  BACKUP DATABASE 문을 실행하여 전체 데이터베이스 백업을 만듭니다. 이때 다음을 지정합니다.  
   
@@ -299,7 +299,7 @@ ms.lasthandoff: 06/05/2017
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
-#### <a name="a-backing-up-to-a-disk-device"></a>**A. 디스크 장치에 백업**  
+#### <a name="a-back-up-to-a-disk-device"></a>**A. 디스크 장치에 백업**  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 을 사용하여 새 미디어 세트를 만들어 `FORMAT` 데이터베이스 전체를 디스크에 백업합니다.  
   
 ```tsql  
@@ -313,7 +313,7 @@ TO DISK = 'Z:\SQLServerBackups\AdventureWorks2012.Bak'
 GO  
 ```  
   
-#### <a name="b-backing-up-to-a-tape-device"></a>**B. 테이프 장치에 백업**  
+#### <a name="b-back-up-to-a-tape-device"></a>**B. 테이프 장치에 백업**  
  다음 예제에서는 이전 백업에 백업을 추가하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스 전체를 테이프에 백업합니다.  
   
 ```tsql  
@@ -326,7 +326,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-#### <a name="c-backing-up-to-a-logical-tape-device"></a>**C. 논리적 테이프 장치에 백업**  
+#### <a name="c-back-up-to-a-logical-tape-device"></a>**C. 논리적 테이프 장치에 백업**  
  다음 예에서는 테이프 드라이브에 대한 논리적 백업 장치를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스 전체를 이 장치에 백업합니다.  
   
 ```tsql  
@@ -356,7 +356,7 @@ Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupActio
 ```
  
 #### <a name="b--full-backup-to-microsoft-azure"></a>**B.  Microsoft Azure로 전체 백업**  
-다음 예제에서는 Microsoft Azure Blob 저장소 서비스로 `Sales` 인스턴스의 `MyServer` 데이터베이스 전체 백업을 만듭니다.  읽기, 쓰기 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  PowerShell 명령은 **BackupFile** 매개 변수를 사용하여 위치(URL)와 백업 파일 이름을 지정합니다.
+다음 예제에서는 Microsoft Azure Blob Storage 서비스로 `Sales` 인스턴스의 `MyServer` 데이터베이스 전체 백업을 만듭니다.  읽기, 쓰기 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책에 연결된 공유 액세스 서명을 사용하여 SQL Server 자격 증명인 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 만들었습니다.  PowerShell 명령은 **BackupFile** 매개 변수를 사용하여 위치(URL)와 백업 파일 이름을 지정합니다.
 
 ```powershell  
 import-module sqlps;
