@@ -1,7 +1,7 @@
 ---
 title: "UNIQUE 제약 조건 및 CHECK 제약 조건 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 UNIQUE 제약 조건과 CHECK 제약 조건이 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  
   
@@ -107,3 +107,4 @@ DELETE CheckTbl WHERE col1 = 10;
 |CHECK 제약 조건의 속성을 보는 방법에 대해 설명합니다.|[UNIQUE 제약 조건 및 CHECK 제약 조건](../../relational-databases/tables/unique-constraints-and-check-constraints.md)|  
   
   
+
