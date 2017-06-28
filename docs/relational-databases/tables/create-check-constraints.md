@@ -1,7 +1,7 @@
 ---
 title: "CHECK 제약 조건 만들기 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-check-constraints"></a>CHECK 제약 조건 만들기
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 하나 이상의 열에 사용할 수 있는 데이터 값을 지정할 수 있도록 테이블에 CHECK 제약 조건을 만들 수 있습니다.  
   
@@ -116,3 +116,4 @@ ms.lasthandoff: 06/22/2017
  자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a>  
+
