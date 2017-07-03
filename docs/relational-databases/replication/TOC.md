@@ -3,9 +3,22 @@
 # [복제의 이전 버전과의 호환성](replication-backward-compatibility.md)  
 ## [SQL Server 복제에서 사용되지 않는 기능](deprecated-features-in-sql-server-replication.md)  
 ## [SQL Server 복제의 주요 변경 내용](breaking-changes-in-sql-server-replication.md)  
+
+# 복제 영역
+## [복제 관리](./administration/administration-replication.md)
+## [Replication Agents](./agents/replication-agents.md)
+## [개발자 개념](../../relational-databases/replication/concepts/replication-developer-documentation.md)
+## [복제 모니터링](./monitor/monitoring-replication.md)
+## [SQL이 아닌 다른 유형의 데이터베이스 복제](./non-sql/heterogeneous-database-replication.md)
+## [데이터 및 데이터베이스 개체 게시](./publish/publish-data-and-database-objects.md)
+## [복제에 대한 보안](./security/security-overview-replication.md)
+
 # [복제 기능 및 태스크](replication-features-and-tasks.md)  
 ## [복제 유형](types-of-replication.md)  
 ### [스냅숏 복제](snapshot-replication.md)  
+### [병합 복제](./merge/merge-replication.md)
+### [트랜잭션 복제](./transactional/transactional-replication.md) 
+
 ## [메모리 액세스에 최적화된 테이블 구독자로 복제](replication-to-memory-optimized-table-subscribers.md)  
 ## [SQL Database에 복제](replication-to-sql-database.md)  
 ## [데이터 다시 게시](republish-data.md)  
@@ -72,8 +85,6 @@
 ### [병합 구독자의 파티션 정보 유효성 검사](validate-partition-information-for-a-merge-subscriber.md)  
 ### [구독자에서 데이터 유효성 검사](validate-data-at-the-subscriber.md)  
 ## [복제 스크립팅](scripting-replication.md)  
-
-# [개발자 개념](../../relational-databases/replication/concepts/developer-s-guide-how-to-topics-replication.md)
 
 # [기술 참조](technical-reference-replication.md)  
 ## [속성 참조](properties-reference-replication.md)  

@@ -1,4 +1,6 @@
 # [정책 기반 관리를 사용하여 서버 관리](administer-servers-by-using-policy-based-management.md)  
+
+# 정책 기반 관리
 ## [정책 기반 관리 저장소](policy-based-management-storage.md)  
 ## [정책 기반 관리의 일반 속성 구성](configure-the-general-properties-of-policy-based-management.md)  
 ## [정책 관리자에서 정책 실패를 알리도록 경고 구성](configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
@@ -71,6 +73,8 @@
 ### [원본 선택 대화 상자](select-source-dialog-box.md)  
 ### [정책으로 내보내기 대화 상자](export-as-policy-dialog-box.md)  
 ### [정책 가져오기 대화 상자](import-policies-dialog-box.md)  
+
+
 # [자습서: 정책 기반 관리를 사용하여 서버 관리](tutorial-administering-servers-by-using-policy-based-management.md)  
 ## [1단원: Off By Default 정책 만들기 및 적용](lesson-1-create-and-apply-an-off-by-default-policy.md)  
 ### [1-1단원 - Off By Default 정책 만들기](lesson-1-1-create-the-off-by-default-policy.md)  
