@@ -1,4 +1,6 @@
 # [자습서: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  
+
+# 단원
 ## [1단원: SQL Server Management Studio의 기본 탐색](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
 ### [1-1단원 - SQL Server Management Studio 시작](lesson-1-1-start-sql-server-management-studio.md)  
 ### [1-2단원 - 등록된 서버 및 개체 탐색기와 연결](lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  

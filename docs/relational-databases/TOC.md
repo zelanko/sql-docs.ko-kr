@@ -1,4 +1,6 @@
-# [개요](database-features.md)
+# [데이터베이스 기능](database-features.md)
+
+# 개요
 ## [데이터베이스 엔진 인스턴스 간 기능](database-engine-cross-instance-features.md)
 ## [기술 참조](technical-reference-database-engine.md)  
 ## [기능 참조](feature-reference-database-engine.md)   
@@ -31,18 +33,18 @@
 # [데이터베이스](../relational-databases/databases/databases.md)
 
 # 클라이언트 개발
-## [CLR 통합](../relational-databases/clr-integration/assemblies-database-engine.md)
-## [확장 저장 프로시저 프로그래밍](../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)
+## [CLR 통합](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
+## [확장 저장 프로시저 프로그래밍](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
 ## [확장 저장 프로시저 참조](../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)
-## [Express Localdb 오류 메시지](../relational-databases/express-localdb-error-messages/localdb-error-admin-rights-required.md)
-## [Express Localdb 인스턴스 API](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)
-## [Native Client](../relational-databases/native-client/finding-more-sql-server-native-client-information.md)
-## [SMO(Server 관리 개체)](../relational-databases/server-management-objects-smo/backward-compatibility-in-smo.md)
+## [Express Localdb 오류 메시지](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
+## [Express Localdb 인스턴스 API](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)
+## [Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)
+## [SMO(Server 관리 개체)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
 ## [SQLXML](../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)
 ## WMI(Windows Management Instrumentation) 공급자
-### [WMI 공급자 구성](../relational-databases/wmi-provider-configuration/access-wmi-provider-for-configuration-management-using-vbscript.md)
-### [WMI 공급자 구성 클래스](../relational-databases/wmi-provider-configuration-classes/cinstance-class-instancename-property.md)
-### [WMI 공급자 서버 이벤트](../relational-databases/wmi-provider-server-events/sample-creating-a-sql-server-agent-alert-with-the-wmi-provider.md)
+### [WMI 공급자 구성](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)
+### [WMI 공급자 구성 클래스](../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)
+### [WMI 공급자 서버 이벤트](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)
 
 # [오류 및 이벤트](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
 # [이벤트 클래스](../relational-databases/event-classes/sql-server-event-class-reference.md)

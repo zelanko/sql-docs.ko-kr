@@ -1,4 +1,6 @@
-# [전체 텍스트 검색](full-text-search.md)  
+# [개요](full-text-search.md)
+
+# 전체 텍스트 검색
 ## [전체 텍스트 검색 시작](get-started-with-full-text-search.md)  
 ## [전체 텍스트 검색을 사용한 쿼리](query-with-full-text-search.md)  
 ## [NEAR를 사용하여 근접 단어 검색](search-for-words-close-to-another-word-with-near.md)  
@@ -27,6 +29,7 @@
 ## [전체 텍스트 검색 DDL, 함수, 저장 프로시저 및 뷰](full-text-search-ddl-functions-stored-procedures-and-views.md)  
 ## [전체 텍스트 인덱싱 마법사 사용](use-the-full-text-indexing-wizard.md)  
 ## [SQL Server 2016에서 사용되지 않는 전체 텍스트 검색 기능](deprecated-full-text-search-features-in-sql-server-2016.md)  
+
 # [의미 체계 검색](semantic-search-sql-server.md)  
 ## [의미 체계 검색 설치 및 구성](install-and-configure-semantic-search.md)  
 ## [테이블 및 열에 대한 의미 체계 검색 사용](enable-semantic-search-on-tables-and-columns.md)  

@@ -2,7 +2,7 @@
 # [Reporting Services 인증에 대 한 확장 된 보호](extended-protection-for-authentication-with-reporting-services.md)  
 # [보고서 서버 인증](authentication-with-the-report-server.md)  
 ## [보고서 서버에서 Windows 인증을 구성 합니다.](configure-windows-authentication-on-the-report-server.md)  
-## [보고서 서버에서 기본 인증 구성](configure-basic-authentication-on-the-report-server.md)  
+## [보고서 서버의 기본 인증 구성](configure-basic-authentication-on-the-report-server.md)  
 ## [보고서 서버에서 사용자 지정 또는 폼 인증 구성](configure-custom-or-forms-authentication-on-the-report-server.md)  
 ## [사용자 지정 인증 쿠키를 전달 하려면 웹 포털 구성](configure-the-web-portal-to-pass-custom-authentication-cookies.md)  
 # [역할 및 사용 권한](roles-and-permissions-reporting-services.md)  

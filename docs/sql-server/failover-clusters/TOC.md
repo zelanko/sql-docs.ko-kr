@@ -1,4 +1,6 @@
 # [SQL Server 장애 조치(Failover) 클러스터 설치](install/sql-server-failover-cluster-installation.md)  
+
+# 디자인
 ## [장애 조치(Failover) 클러스터링을 설치하기 전에](install/before-installing-failover-clustering.md)  
 ## [새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)](install/create-a-new-sql-server-failover-cluster-setup.md)  
 ## [SQL Server 장애 조치(Failover) 클러스터에서 노드 추가 또는 제거(설치)](install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)  

@@ -1,4 +1,6 @@
 # [서버 등록](register-servers.md)  
+
+# 작업
 ## [연결된 서버 등록(SQL Server Management Studio)](register-a-connected-server-sql-server-management-studio.md)  
 ## [새 등록된 서버 만들기(SQL Server Management Studio)](create-a-new-registered-server-sql-server-management-studio.md)  
 ## [SQL Server Management Studio에서 등록된 서버 보기](view-registered-servers-in-sql-server-management-studio.md)  

@@ -1,3 +1,7 @@
+
+# [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
+# [NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
+
 # [적응 쿼리 처리](adaptive-query-processing.md)
 # [자동 튜닝](../automatic-tuning/automatic-tuning.md)
 # [카디널리티 추정](cardinality-estimation-sql-server.md)  
@@ -50,8 +54,5 @@
 ## [업그레이드 후 계획 지침의 유효성 검사](validate-plan-guides-after-upgrade.md)  
 ## [계획 지침 삭제](delete-a-plan-guide.md)  
 ## [계획 지침 사용 또는 사용 안 함](enable-or-disable-a-plan-guide.md)  
-
-# [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](performance-center-for-sql-server-database-engine-and-azure-sql-database.md)  
-## [NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 #[리소스 사용 모니터링(시스템 모니터)](../performance-monitor/monitor-resource-usage-system-monitor.md) 

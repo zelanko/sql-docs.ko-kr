@@ -27,7 +27,7 @@
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [데이터베이스 엔진](../database-engine/configure-windows/sql-server-database-engine.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
-# [장애 조치(Failover) 클러스터](../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)
+# [장애 조치(Failover) 클러스터](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [설치](../sql-server/install/planning-a-sql-server-installation.md)
 # [Integration Services](../integration-services/sql-server-integration-services.md)
 # [MDS(Master Data Services)](../master-data-services/master-data-services-installation-and-configuration.md)

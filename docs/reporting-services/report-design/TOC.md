@@ -1,5 +1,5 @@
 # [보고서 계획](planning-a-report-report-builder.md)  
-## [보고서 디자인 팁](report-design-tips-report-builder-and-ssrs.md)  
+# [보고서 디자인 팁](report-design-tips-report-builder-and-ssrs.md)  
 # [보고서 제작 개념](report-authoring-concepts-report-builder-and-ssrs.md)  
 ## [보고서, 보고서 파트 및 보고서 정의](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
 ## [데이터 영역 및 지도](data-regions-and-maps-report-builder-and-ssrs.md)  
