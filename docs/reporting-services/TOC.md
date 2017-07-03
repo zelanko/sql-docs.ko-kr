@@ -1,4 +1,6 @@
-# [개요](create-deploy-and-manage-mobile-and-paginated-reports.md)
+# [SSRS(SQL Server Reporting Services)란?](create-deploy-and-manage-mobile-and-paginated-reports.md)
+
+# 개요
 ## [Reporting Services의 새로운 기능](what-s-new-in-sql-server-reporting-services-ssrs.md) 
 ## [Reporting Services 개념 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services 기능 및 태스크](reporting-services-features-and-tasks-ssrs.md)   
@@ -69,7 +71,7 @@
 
 # 개발자
 ## [응용 프로그램 통합](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
-## [보고서 서버 웹 서비스](../reporting-services/report-server-web-service/accessing-the-soap-api.md)
+## [보고서 서버 웹 서비스](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [확장](../reporting-services/extensions/reporting-services-extension-library.md)
 ## [사용자 지정 보고서 항목](../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)
 ## [사용자 지정 어셈블리](../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md)
@@ -82,7 +84,7 @@
 ### [CSV 장치 정보 설정](csv-device-information-settings.md)  
 ### [Excel 장치 정보 설정](excel-device-information-settings.md)  
 ### [HTML 장치 정보 설정](html-device-information-settings.md)  
-### [이미지 장치 정보 설정](image-device-information-settings.md)  ### [MHTML 장치 정보 설정](mhtml-device-information-settings.md)  
+### [이미지 장치 정보 설정](image-device-information-settings.md)###[MHTML 장치 정보 설정](mhtml-device-information-settings.md)  
 ### [PDF 장치 정보 설정](pdf-device-information-settings.md)  
 ### [PPTX 장치 정보 설정](pptx-device-information-settings.md)  
 ### [XML 장치 정보 설정](xml-device-information-settings.md)  
@@ -107,13 +109,13 @@
 
 ## [ReportViewer (SSRS 자습서)를 사용 하 여 매개 변수가 있는 드릴스루 (RDLC) 보고서 만들기](create-drillthrough-rdlc-report-with-parameters-reportviewer.md)  
 ### [1 단원: 새 웹 사이트 만들기](lesson-1-create-a-new-web-site.md)  
-### [2 단원: 부모 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-### [보고서 마법사를 사용 하 여 부모 보고서를 디자인 하는 3 단원:](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-### [4 단원: 자식 보고서에 대 한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-### [5 단원: 보고서 마법사를 사용 하 여 자식 보고서 디자인](lesson-5-design-the-child-report-using-the-report-wizard.md)  
-### [6 단원: 응용 프로그램에 ReportViewer 컨트롤 추가](lesson-6-add-a-reportviewer-control-to-the-application.md)  
-### [7 단원: 부모 보고서에 드릴스루 동작 추가](lesson-7-add-drillthrough-action-on-parent-report.md)  
-### [8 단원: 데이터 필터 만들기](lesson-8-create-a-data-filter.md)  
+### [2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+### [3단원: 보고서 마법사를 사용하여 부모 보고서 디자인](lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+### [4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의](lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+### [5단원: 보고서 마법사를 사용하여 자식 보고서 디자인](lesson-5-design-the-child-report-using-the-report-wizard.md)  
+### [6단원: 응용 프로그램에 ReportViewer 컨트롤 추가](lesson-6-add-a-reportviewer-control-to-the-application.md)  
+### [7단원: 부모 보고서에 드릴스루 동작 추가](lesson-7-add-drillthrough-action-on-parent-report.md)  
+### [8단원: 데이터 필터 만들기](lesson-8-create-a-data-filter.md)  
 ### [9 단원: 빌드 및 응용 프로그램 실행](lesson-9-build-and-run-the-application.md)  
 
 ## [보고서 작성기 자습서](report-builder-tutorials.md)  
