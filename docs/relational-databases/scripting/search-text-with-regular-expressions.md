@@ -26,7 +26,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 530e940d95c3375b58b494e165cf5a193fdec720
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="search-text-with-regular-expressions"></a>정규식을 사용한 텍스트 검색
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/11/2017
 |Bell|\g|유니코드 U+0007입니다.|  
 |백스페이스|\h|유니코드 U+0008입니다.|  
 |탭|\t|탭 문자와 대응하며 유니코드 U+0009입니다.|  
-|유니코드 문자|\x####또는 \u####|유니코드 값에 의해 제공된 문자와 대응합니다. 여기서 ####은 16진수입니다. ISO 10646 코드 포인트 또는 서로게이트 쌍의 값을 제공하는 두 개의 유니코드 코드 포인트를 사용하여 Basic Multilingual Plane(즉, 서로게이트) 외부에 있는 문자를 지정할 수 있습니다.|  
+|유니코드 문자|\x#### 또는 \u####|유니코드 값에 의해 제공된 문자와 대응합니다. 여기서 ####은 16진수입니다. ISO 10646 코드 포인트 또는 서로게이트 쌍의 값을 제공하는 두 개의 유니코드 코드 포인트를 사용하여 Basic Multilingual Plane(즉, 서로게이트) 외부에 있는 문자를 지정할 수 있습니다.|  
   
  다음 표에서는 표준 유니코드 문자 속성으로 대응시키기 위한 구문을 나열합니다. 두 자로 된 약어는 유니코드 문자 속성 데이터베이스에 나열된 것과 동일합니다. 이러한 약어는 문자 집합의 일부로 지정할 수 있습니다. 예를 들어 [:Nd:Nl:No] 식은 모든 종류의 숫자와 대응합니다.  
   

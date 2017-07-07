@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2360e69486a82a375c038135616753bf0ed19c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="creating-a-non-xml-format-file"></a>비 XML 서식 파일 만들기  
  **bcp** 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다. **format** 옵션에는 다음과 같이 **-f** 옵션도 필요합니다.  
   
- **bcp** *table_or_view* **format** nul **-f***format_file_name*  
+ **bcp** *table_or_view* **format** NUL **-f***format_file_name*  
   
 > [!NOTE]  
 >  비 XML 서식 파일을 구분하기 위해 파일 이름 확장명으로 .fmt를 사용하는 것이 좋습니다(예: MyTable.fmt).  

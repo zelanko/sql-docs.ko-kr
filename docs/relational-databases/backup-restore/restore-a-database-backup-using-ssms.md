@@ -27,7 +27,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -218,61 +218,61 @@ Microsoft Azure Blob 저장소 서비스에서 SQL Server 복원 방법에 대�
 ### <a name="e--restore-a-backup-from-the-microsoft-azure-storage-service"></a>**E.  Microsoft Azure Storage 서비스에서 백업 복원**
 #### <a name="common-steps"></a>**공통 단계**
 아래의 두 예제에서는 Microsoft Azure Storage 서비스에 있는 백업에서 `Sales` 복원을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 6단계는 여기에 한 번 나열되며 모든 예제는 **7단계**에서 시작됩니다.
-1.    **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
+1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.    **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.
 
-3.    **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
 
-4.    찾아보기(...) 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다.  
-5.    **백업 미디어 유형:** 드롭다운 목록에서 **URL** 을 선택합니다.
+4.  찾아보기(...) 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다.  
+5.  **백업 미디어 유형:** 드롭다운 목록에서 **URL** 을 선택합니다.
 
-6.    **추가** 를 클릭하면 **백업 파일 위치 선택** 대화 상자가 열립니다.
+6.  **추가** 를 클릭하면 **백업 파일 위치 선택** 대화 상자가 열립니다.
 
     #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>**E1.   기존 데이터베이스에 스트라이프 백업을 복원하고 공유 액세스 서명이 있습니다.**
     읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책과 연결된 공유 액세스 서명을 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`컨테이너에 대해 만들었습니다.  SQL Server 자격 증명이 이미 있는 경우 단계는 대부분 동일합니다.  `Sales` 데이터베이스가 현재 서버에 있습니다.  백업 파일은 `Sales_stripe1of2_20160601.bak` 및 `Sales_stripe2of2_20160601.bak`입니다.  
 *  
-    7.    SQL Server 자격 증명이 이미 있으면 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure Storage 컨테이너: **드롭다운 목록에서** 를 선택하고, 없으면 컨테이너 이름 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 수동으로 입력합니다.
+    7.  SQL Server 자격 증명이 이미 있으면 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure Storage 컨테이너: **드롭다운 목록에서** 를 선택하고, 없으면 컨테이너 이름 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 수동으로 입력합니다.
     
-    8.    **공유 액세스 서명:** 서식 있는 텍스트 상자에 공유 액세스 서명을 입력합니다.
-       9.    **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
-    10.    **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
+    8.  **공유 액세스 서명:** 서식 있는 텍스트 상자에 공유 액세스 서명을 입력합니다.
+       9.   **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
+    10. **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
     
-    11.    Ctrl 키를 누른 채 `Sales_stripe1of2_20160601.bak` 및 `Sales_stripe2of2_20160601.bak`파일을 선택합니다.
-    12.    **확인**을 클릭합니다.
-    13.    **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
-    14.    **페이지 선택** 창에서 **옵션** 을 클릭합니다.
-    15.    **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)**를 선택합니다.
-    16.    **비상 로그 백업** 섹션에서 **복원 전 비상 로그 백업 수행**의 선택을 취소합니다.
-    17.    **서버 연결** 섹션에서 **대상 데이터베이스에 대한 기존 연결 닫기**를 선택합니다.
-    18.    **확인**을 클릭합니다.
+    11. Ctrl 키를 누른 채 `Sales_stripe1of2_20160601.bak` 및 `Sales_stripe2of2_20160601.bak`파일을 선택합니다.
+    12. **확인**을 클릭합니다.
+    13. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
+    14. **페이지 선택** 창에서 **옵션** 을 클릭합니다.
+    15. **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)**를 선택합니다.
+    16. **비상 로그 백업** 섹션에서 **복원 전 비상 로그 백업 수행**의 선택을 취소합니다.
+    17. **서버 연결** 섹션에서 **대상 데이터베이스에 대한 기존 연결 닫기**를 선택합니다.
+    18. **확인**을 클릭합니다.
 
     #### <a name="e2---a-shared-access-signature-does-not-exist"></a>**E2.   공유 액세스 서명이 없는 경우**
     이 예제에서는 `Sales` 데이터베이스가 현재 서버에 없습니다.
-    7.    **추가** 를 클릭하면 **Microsoft 구독에 연결** 대화 상자가 열립니다.  
+    7.  **추가** 를 클릭하면 **Microsoft 구독에 연결** 대화 상자가 열립니다.  
     
-    8.    **Microsoft 구독에 연결** 대화 상자를 완성하고 **확인** 을 클릭하여 **백업 파일 위치 선택** 대화 상자로 돌아갑니다.  자세한 내용은 [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 을 참조하세요.
-    9.    **백업 파일 위치 선택** 대화 상자에서 **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
-    10.    **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
-    11.    백업 파일을 선택한 다음 **확인**을 클릭합니다.
-    12.    **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
-    13.    **확인**을 클릭합니다.
+    8.  **Microsoft 구독에 연결** 대화 상자를 완성하고 **확인** 을 클릭하여 **백업 파일 위치 선택** 대화 상자로 돌아갑니다.  자세한 내용은 [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 을 참조하세요.
+    9.  **백업 파일 위치 선택** 대화 상자에서 **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
+    10. **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
+    11. 백업 파일을 선택한 다음 **확인**을 클릭합니다.
+    12. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
+    13. **확인**을 클릭합니다.
 
-#### <a name="f----restore-local-backup-to-microsoft-azure-storage-url"></a>**F.    Microsoft Azure Storage(URL)에 로컬 백업 복원**
+#### <a name="f---restore-local-backup-to-microsoft-azure-storage-url"></a>**F.   Microsoft Azure Storage(URL)에 로컬 백업 복원**
 `Sales` 데이터베이스가 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 에 있는 백업에서 Microsoft Azure Storage 컨테이너 `E:\MSSQL\BAK`로 복원됩니다.  Azure 컨테이너에 대한 SQL Server 자격 증명이 이미 생성되었습니다.  **복원** 태스크를 통해 만들 수 없으므로 대상 컨테이너에 대한 SQL Server 자격 증명이 이미 있어야 합니다.  `Sales` 데이터베이스가 현재 서버에 없습니다.
-1.    **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
+1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
-2.    **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.
-3.    **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
-4.    찾아보기(...) 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다.  
-5.    **백업 미디어 유형:** 드롭다운 목록에서 **파일** 을 선택합니다.
-6.    **추가** 를 클릭하면 **백업 파일 찾기** 대화 상자가 열립니다.
-7.    `E:\MSSQL\BAK`로 이동하고 백업 파일을 선택한 다음 **확인**을 클릭합니다.
-8.    **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
-9.    **페이지 선택** 창에서 **파일** 을 클릭합니다.
-10.    **모든 폴더를 파일에 다시 배치**확인란을 선택합니다.
-11.    `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`데이터 파일 폴더: **및** 로그 파일 폴더: **텍스트 상자에**컨테이너를 입력합니다.
-12.    **확인**을 클릭합니다.
+2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...**을 선택합니다.
+3.  **일반** 페이지의 **원본** 섹션에서 **장치** 를 선택합니다.
+4.  찾아보기(...) 단추를 클릭하여 **백업 장치 선택** 대화 상자를 엽니다.  
+5.  **백업 미디어 유형:** 드롭다운 목록에서 **파일** 을 선택합니다.
+6.  **추가** 를 클릭하면 **백업 파일 찾기** 대화 상자가 열립니다.
+7.  `E:\MSSQL\BAK`로 이동하고 백업 파일을 선택한 다음 **확인**을 클릭합니다.
+8.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
+9.  **페이지 선택** 창에서 **파일** 을 클릭합니다.
+10. **모든 폴더를 파일에 다시 배치**확인란을 선택합니다.
+11. `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`데이터 파일 폴더: **및** 로그 파일 폴더: **텍스트 상자에**컨테이너를 입력합니다.
+12. **확인**을 클릭합니다.
 
 
 ## <a name="see-also"></a>참고 항목    

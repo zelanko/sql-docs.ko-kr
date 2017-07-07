@@ -20,7 +20,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/11/2017
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [복제 기능 및 태스크](../../relational-databases/replication/replication-features-and-tasks.md)   
  [보안 및 보호&#40;복제&#41;](../../relational-databases/replication/security/security-and-protection-replication.md)  
   

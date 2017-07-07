@@ -18,7 +18,7 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7b520a605648e8619f8462ae9125842fdeb37ebc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
@@ -143,7 +143,7 @@ ms.lasthandoff: 04/11/2017
 |DESCRIPTION|√|||  
 |NAME|√|||  
 |EXPIREDATE &#124; RETAINDAYS|−|||  
-|NOINIT &#124; INIT|−||Blob에 추가는 불가능합니다. 백업을 덮어쓰려면 **WITH FORMAT** 인수를 사용하세요. 그러나 파일-스냅숏 백업을 사용(**WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.|  
+|NOINIT &#124; INIT|−||Blob에 추가는 불가능합니다. 백업을 덮어쓰려면 **WITH FORMAT** 인수를 사용하세요. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.|  
 |NOSKIP &#124; SKIP|−|||  
 |NOFORMAT &#124; FORMAT|√||**WITH FORMAT** 을 지정하지 않으면 기존 blob으로 백업이 실패합니다. **WITH FORMAT** 을 지정하면 기존 blob을 덮어씁니다. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 파일-스냅숏 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 FORMAT 인수는 허용되지 않습니다. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.|  
 |MEDIADESCRIPTION|√|||  
@@ -255,7 +255,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
       
     3.  **추가:**  공유 액세스 서명이 없는 기존 컨테이너를 등록하는 데 사용됩니다.  [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md)을 참조하세요.
       
-    4.  **확인:**    SQL Server가 제공된 SQL 자격 증명 정보를 사용하여 Microsoft Azure Storage에 연결하고 **Microsoft Azure에서 백업 파일 찾기** 대화 상자를 엽니다. 저장소 컨테이너에 있는 백업 파일이 이 페이지에 표시됩니다. 복원하는 데 사용할 파일을 선택하고 **확인**을 클릭합니다. **백업 장치 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 **확인** 을 클릭하면 복원을 완료할 수 있는 기본 **복원** 대화 상자가 표시됩니다. 
+    4.  **확인:** SQL Server가 제공된 SQL 자격 증명 정보를 사용하여 Microsoft Azure Storage에 연결하고 **Microsoft Azure에서 백업 파일 찾기** 대화 상자를 엽니다. 저장소 컨테이너에 있는 백업 파일이 이 페이지에 표시됩니다. 복원하는 데 사용할 파일을 선택하고 **확인**을 클릭합니다. **백업 장치 선택** 대화 상자가 표시됩니다. 이 대화 상자에서 **확인** 을 클릭하면 복원을 완료할 수 있는 기본 **복원** 대화 상자가 표시됩니다. 
   
      [데이터베이스 복원&#40;일반 페이지&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   

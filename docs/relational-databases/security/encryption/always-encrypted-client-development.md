@@ -17,10 +17,10 @@ caps.latest.revision: 33
 author: stevestein
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 091625c7e502ac131bd045546ca4c587b754e366
+ms.sourcegitcommit: 8cb39d4ae3ff02fffe83e7f0e4646ade1545ce72
+ms.openlocfilehash: f1ad5de594493c65688d5c1ca2d69ac421661770
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/23/2017
 
 ---
 # <a name="always-encrypted-client-development"></a>상시 암호화(클라이언트 개발)
@@ -31,8 +31,8 @@ ms.lasthandoff: 06/22/2017
 상시 암호화로 보호된 데이터베이스를 사용하는 응용 프로그램을 개발하는 방법과 상시 암호화를 지원하는 클라이언트 드라이버 및 드라이버 버전에 대한 자세한 내용은 다음을 참조하세요.
 
 - [.NET Framework Data Provider for SQL Server와 Always Encrypted 사용](../../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [상시 암호화와 JDBC 드라이버 사용](https://msdn.microsoft.com/library/mt591987.aspx)
-- [상시 암호화와 Windows ODBC 드라이버 사용](https://msdn.microsoft.com/library/mt637351.aspx)
+- [상시 암호화와 JDBC 드라이버 사용](../../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)
+- [상시 암호화와 Windows ODBC 드라이버 사용](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 
 
 
