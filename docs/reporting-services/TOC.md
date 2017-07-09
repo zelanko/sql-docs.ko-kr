@@ -2,6 +2,7 @@
 
 # 개요
 ## [Reporting Services의 새로운 기능](what-s-new-in-sql-server-reporting-services-ssrs.md) 
+## [새로 추가되거나 최근에 업데이트된 문서](new-updated-reporting-services.md)
 ## [Reporting Services 개념 (SSRS)](reporting-services-concepts-ssrs.md)
 ## [Reporting Services 기능 및 태스크](reporting-services-features-and-tasks-ssrs.md)   
 ## [이전 버전과의 호환성](reporting-services-backward-compatibility.md)  
