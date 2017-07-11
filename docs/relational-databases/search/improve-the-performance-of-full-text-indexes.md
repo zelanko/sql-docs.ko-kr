@@ -25,14 +25,18 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43c8168aa5dc9cfb55c117f8a25ead5e8f2a9a4f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
+<a id="improve-the-performance-of-full-text-indexes" class="xliff"></a>
+
+# 전체 텍스트 인덱스 성능 향상
 이 항목에서는 전체 텍스트 인덱스 및 쿼리 성능 저하의 몇 가지 일반적인 원인에 대해 설명합니다. 또한 이러한 문제를 완화하고 성능을 향상시킬 수 있는 몇 가지 제안 사항도 제공합니다.
   
 ##  <a name="causes"></a> Common causes of performance issues
-### <a name="hardware-resource-issues"></a>하드웨어 리소스 문제
+<a id="hardware-resource-issues" class="xliff"></a>
+
+### 하드웨어 리소스 문제
 전체 텍스트 인덱싱 및 전체 텍스트 쿼리의 성능은 메모리, 디스크 속도, CPU 속도 및 컴퓨터 아키텍처와 같은 하드웨어 리소스의 영향을 받습니다.  
 
 전체 텍스트 인덱싱 성능이 저하되는 주요 원인으로는 다음과 같은 하드웨어 리소스 제한을 들 수 있습니다.  
@@ -46,14 +50,18 @@ ms.lasthandoff: 04/11/2017
     > [!NOTE]  
     >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 전체 텍스트 엔진이 sqlservr.exe 프로세스에 속하기 때문에 AWE 메모리가 사용됩니다.  
 
-### <a name="full-text-batching-issues"></a>전체 텍스트 일괄 처리 문제
+<a id="full-text-batching-issues" class="xliff"></a>
+
+### 전체 텍스트 일괄 처리 문제
  시스템에 하드웨어 병목 상태가 존재하지 않을 경우 전체 텍스트 검색의 인덱싱 성능은 주로 다음 사항에 따라 달라집니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 전체 텍스트 일괄 처리를 만드는 데 걸리는 시간  
   
 -   필터 데몬에서 이러한 일괄 처리를 완료할 수 있는 시간  
 
-### <a name="full-text-index-population-issues"></a>전체 텍스트 인덱스 채우기 문제
+<a id="full-text-index-population-issues" class="xliff"></a>
+
+### 전체 텍스트 인덱스 채우기 문제
 -   **채우기 유형**. 전체 채우기와 달리 증분, 수동 및 자동 변경 내용 추적 채우기는 하드웨어 리소스를 극대화하여 더 빠른 속도를 낼 수 없습니다. 따라서 이 항목의 튜닝 제안이 증분, 수동 또는 자동 변경 내용 추적 채우기를 사용하는 경우 전체 텍스트 인덱싱 성능을 향상시키지 않을 수 있습니다.  
   
 -   **마스터 병합**. 채우기가 완료되면 인덱스 조각을 하나의 마스터 전체 텍스트 인덱스로 병합하는 최종 병합 프로세스가 실행됩니다. 이렇게 하면 많은 인덱스 조각 대신 마스터 인덱스만 쿼리하면 되기 때문에 쿼리 성능이 향상되며 개선된 평가 통계를 사용하여 관련성 등급을 지정할 수 있습니다. 그러나 인덱스 조각을 병합할 때 많은 양의 데이터를 읽고 써야 하기 때문에 마스터 병합에 많은 I/O 사용량이 필요할 수 있지만 이로 인해 들어오는 쿼리가 차단되지는 않습니다.  
@@ -74,7 +82,9 @@ ms.lasthandoff: 04/11/2017
 -   타임스탬프 열 기반의 증분 채우기를 사용할 경우 증분 채우기의 성능을 향상시키려면 **timestamp** 열에 보조 인덱스를 빌드합니다.  
   
 ##  <a name="full"></a> 전체 채우기 성능 문제 해결  
-### <a name="review-the-full-text-crawl-logs"></a>전체 텍스트 크롤링 로그 검토
+<a id="review-the-full-text-crawl-logs" class="xliff"></a>
+
+### 전체 텍스트 크롤링 로그 검토
  성능 문제를 진단하려면 전체 텍스트 탐색 로그를 검토합니다.
  
 탐색 중에 오류가 발생하면 전체 텍스트 검색 탐색 로깅 기능은 일반 텍스트 파일인 탐색 로그를 만들고 유지 관리합니다. 각 탐색 로그는 특정 전체 텍스트 카탈로그에 해당합니다. 기본적으로 지정된 인스턴스(이 예제에서는 기본 인스턴스)에 대한 크롤링 로그는 `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` 폴더에 있습니다.
@@ -90,7 +100,9 @@ ms.lasthandoff: 04/11/2017
   
  예를 들어 `SQLFT0000500008.2`는 데이터베이스 ID = 5, 전체 텍스트 카탈로그 ID = 8인 데이터베이스의 탐색 로그 파일입니다. 파일 이름 끝에 있는 2는 이 데이터베이스/카탈로그 쌍의 탐색 로그 파일이 두 개 있음을 나타냅니다.  
 
-### <a name="check-physical-memory-usage"></a>실제 메모리 사용률 확인  
+<a id="check-physical-memory-usage" class="xliff"></a>
+
+### 실제 메모리 사용률 확인  
  전체 텍스트 채우기를 수행하는 동안 fdhost.exe 또는 sqlservr.exe의 메모리가 부족하거나 아예 없을 수 있습니다.
 -   전체 텍스트 탐색 로그에 fdhost.exe가 자주 다시 시작되는 것으로 나타나거나 오류 코드 8007008이 반환된 것으로 나타날 경우 이러한 프로세스 중 하나에 메모리 부족 문제가 발생한 것입니다.
 -   fdhost.exe가 특히 대형 다중 CPU 컴퓨터에서 덤프를 생성하는 경우 이는 메모리 부족 때문일 수 있습니다.  
@@ -108,7 +120,9 @@ ms.lasthandoff: 04/11/2017
 
 -   **페이징 문제**. 페이지 파일 크기가 충분하지 않은 경우(예: 증가가 제한된 소형 페이지 파일이 있는 시스템에서)에도 fdhost.exe 또는 sqlservr.exe 실행 시 메모리 부족이 발생할 수 있습니다. 탐색 로그에 메모리 관련 오류가 표시되지 않은 경우 과도한 페이징으로 인한 성능 저하 상태일 수 있습니다.  
   
-### <a name="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe"></a>필터 데몬 호스트 프로세스(fdhost.exe)의 메모리 요구 사항 예상  
+<a id="estimate-the-memory-requirements-of-the-filter-daemon-host-process-fdhostexe" class="xliff"></a>
+
+### 필터 데몬 호스트 프로세스(fdhost.exe)의 메모리 요구 사항 예상  
  채우기용으로 fdhost.exe 프로세스에서 필요로 하는 메모리 양은 사용되는 전체 텍스트 탐색 범위 수, ISM(인바운드 공유 메모리) 크기, 최대 ISM 인스턴스 수 등에 따라 다릅니다.  
   
  필터 데몬 호스트에서 사용되는 메모리(바이트)는 다음 수식을 사용하여 대략적으로 계산할 수 있습니다.  
@@ -143,7 +157,9 @@ ms.lasthandoff: 04/11/2017
 2.  500MB는 시스템의 다른 프로세스에 필요한 예상 메모리 양입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
 3.  를 참조하세요.*ism_size* 는 x64 플랫폼의 경우 8MB로 가정합니다.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>예제: fdhost.exe에 필요한 예상 메모리  
+<a id="example-estimate-the-memory-requirements-of-fdhostexe" class="xliff"></a>
+
+ #### 예제: fdhost.exe에 필요한 예상 메모리  
   
  이 예제는 8GB RAM과 4개의 듀얼 코어 프로세서가 장착된 64비트 컴퓨터에 해당합니다. 첫 번째 계산에서는 fdhost.exe에 필요한 메모리인*F*를 계산합니다. 탐색 범위 수는 `8`입니다.  
   
@@ -153,7 +169,9 @@ ms.lasthandoff: 04/11/2017
   
  `M = 8192-640-500=7052`  
   
- #### <a name="example-setting-max-server-memory"></a>예: 최대 서버 메모리 설정  
+<a id="example-setting-max-server-memory" class="xliff"></a>
+
+ #### 예: 최대 서버 메모리 설정  
   
  이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 및 [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 **max server memory** 를 위의 예에서 *M* 에 대한 계산한 값 `7052`로 설정합니다.  
   
@@ -168,7 +186,9 @@ GO
   
 서버 메모리 옵션에 대한 자세한 내용은 [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)을 참조하세요.
   
-### <a name="check-cpu-usage"></a>CPU 사용량 확인  
+<a id="check-cpu-usage" class="xliff"></a>
+
+### CPU 사용량 확인  
 평균 CPU 사용량이 30% 미만이면 전체 채우기 성능이 최적의 상태가 아닙니다. CPU 사용량에 영향을 주는 몇 가지 요소는 다음과 같습니다.  
   
 -   긴 페이지 대기 시간  
@@ -211,7 +231,9 @@ GO
   
 이 문제를 해결하려면 컨테이너 문서(이 예제의 경우 Word 문서)의 필터를 단일 스레드 필터로 표시합니다. 필터를 단일 스레드 필터로 표시하려면 필터의 **ThreadingModel** 레지스트리 값을 **Apartment Threaded**로 설정합니다. 단일 스레드 아파트에 대한 자세한 내용은 [COM 스레딩 모델 이해 및 사용](http://go.microsoft.com/fwlink/?LinkId=209159)백서를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목  
  [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [max full-text crawl range 서버 구성 옵션](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [전체 텍스트 인덱스 채우기](../../relational-databases/search/populate-full-text-indexes.md)   

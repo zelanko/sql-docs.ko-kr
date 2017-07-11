@@ -21,10 +21,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7fdc75559ffafea97e9ad3f4ef4b5e0788d7fb3d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="create-and-apply-the-snapshot"></a>스냅숏 만들기 및 적용
+<a id="create-and-apply-the-snapshot" class="xliff"></a>
+
+# 스냅숏 만들기 및 적용
   스냅숏은 복제가 생성된 후 스냅숏 에이전트에서 생성됩니다. 생성 방법은 다음과 같습니다.  
   
 -   즉시. 기본적으로 병합 게시의 스냅숏은 새 게시 마법사에서 게시가 생성된 후 즉시 생성됩니다.  
@@ -47,11 +49,13 @@ ms.lasthandoff: 04/11/2017
   
  기본 스냅숏 폴더 위치를 보거나 수정하려면 다음을 참조하십시오.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Specify the Default Snapshot Location &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [기본 스냅숏 위치 지정&#40;SQL Server Management Studio&#41;](../../relational-databases/replication/specify-the-default-snapshot-location-sql-server-management-studio.md)  
   
 -   복제 프로그래밍 및 RMO 프로그래밍: [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)  
   
-## <a name="see-also"></a>참고 항목  
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목  
  [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)   
  [sp_addpublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)  

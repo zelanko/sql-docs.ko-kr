@@ -1,7 +1,7 @@
 ---
 title: "메모리 액세스에 최적화된 테이블의 테이블 및 행 크기 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 06/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,22 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 57d2a22fc535f3613ce680156a0a6bb55ec62fa1
+ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
+ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
+<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
+
+# 메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  메모리 액세스에 최적화된 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 메모리 액세스에 최적화된 테이블에서 행 내부 데이터는 8,060바이트를 초과할 수 없습니다. 그러나 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 여러 큰 열(예: 여러 varbinary(8000) 열) 및 LOB 열(즉, varbinary(max), varchar(max) 및 nvarchar(max))이 있는 테이블을 만들 수 있습니다. 특별한 내부 테이블에서 행 내부 데이터의 최대 크기를 초과하는 열은 행 외부에 배치됩니다. 이러한 내부 테이블에 대한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조하세요.
+  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전에는 메모리 최적화 테이블의 행 내부 데이터 크기가 [8,060바이트](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)를 초과할 수 없었습니다. 그러나 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 및 Azure SQL Database에서는 이제 여러 큰 열(예: 여러 varbinary(8000) 열) 및 LOB 열(즉, varbinary(max), varchar(max) 및 nvarchar(max))이 있는 메모리 최적화 테이블을 만들고 네이티브 컴파일된 T-SQL 모듈 및 테이블 형식을 사용하여 테이블에 대한 작업을 수행할 수 있습니다. 
   
- 테이블과 행 크기를 계산하는 이유는 두 가지입니다.  
+  8060바이트 행 크기 제한에 맞지 않는 열은 행 외부의 별도 내부 테이블에 배치됩니다. 각 행 외부 열에는 해당 내부 테이블이 있으며 단일 비클러스터형 인덱스가 있습니다. 행 외부 열에 사용되는 이러한 내부 테이블에 대한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조하세요. 
+ 
+  행 및 테이블의 크기를 계산하는 것이 유용한 특정 시나리오도 있습니다.
   
 -   테이블에서 사용하는 메모리의 양  
   
@@ -38,13 +42,12 @@ ms.lasthandoff: 06/22/2017
   
 -   행의 데이터 크기 및 8,060바이트 행 크기 제한에 맞는지 여부. 이 질문에 답변하려면 아래 설명된 [row body size] 계산을 사용합니다.  
 
-8060바이트 행 크기 제한에 맞지 않는 열은 행 외부의 별도 내부 테이블에 배치됩니다. 각 행 외부 열에는 해당 내부 테이블이 있으며 단일 비클러스터형 인덱스가 있습니다. 행 외부 열에 사용되는 내부 테이블에 대한 자세한 내용은 [sys.memory_optimized_tables_internal_attributes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md)를 참조하세요. 
-  
- 다음 그림에서는 인덱스 및 행을 포함하며 차례로 행 헤더와 본문을 가지는 테이블을 보여줍니다.  
+  메모리 액세스에 최적화된 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 다음 그림에서는 인덱스 및 행을 포함하며 차례로 행 헤더와 본문을 가지는 테이블을 보여줍니다.  
   
  ![메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
 인덱스와 행으로 구성된 메모리 액세스에 최적화된 테이블  
-  
+
+##  <a name="bkmk_TableSize"></a> 테이블 크기 계산
  테이블의 메모리 내 크기(바이트)는 다음과 같이 계산됩니다.  
   
 ```  
@@ -65,34 +68,10 @@ ms.lasthandoff: 06/22/2017
 [row size] = [row header size] + [actual row body size]  
 [row header size] = 24 + 8 * [number of indices]  
 ```  
-  
- **행 본문 크기**  
-  
- [row body size] 계산은 다음 표에서 설명합니다.  
-  
- 행 본문 크기는 계산된 크기 및 실제 크기의 두 가지 방식으로 계산할 수 있습니다.  
-  
--   [computed row body size]로 표시되는 계산 크기는 행 크기 제한인 8,060바이트를 초과하는지 여부를 확인하기 위해 사용됩니다.  
-  
--   [actual row body size]로 표시되는 실제 크기는 메모리 및 검사점 파일에서 행 본문의 실제 저장소 크기입니다.  
-  
- [computed row body size] 및 [actual row body size]는 모두 비슷하게 계산됩니다. 유일한 차이점은 다음 표의 하단에 표시된 것처럼 (n)varchar(i) 및 varbinary(i) 열의 크기에 대한 계산입니다. 계산된 행 본문 크기는 선언된 크기인 *i* 를 열 크기로 사용하고, 실제 행 본문 크기는 데이터의 실제 크기를 사용합니다.  
-  
- 다음 표에서는 [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns]와 같이 행 본문 크기의 계산에 대해 설명합니다.  
-  
-|섹션|크기|설명|  
-|-------------|----------|--------------|  
-|단순 형식 열|SUM([단순 형식의 크기]) 개별 형식의 바이트 크기는 다음과 같습니다.<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **숫자**(전체 자릿수<=18): 8<br /><br /> **Time**: 8<br /><br /> **숫자**(전체 자릿수>18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|단순 열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|전체 형식 열의 오프셋 배열|가능한 값은<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|NULL 배열|[number of nullable columns]/8, 전체 바이트로 반올림|null 허용 열당 1비트가 배열에 포함됩니다. 전체 바이트로 반올림됩니다.|  
-|NULL 배열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|패딩|전체 형식 열이 없으면 0입니다.<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
-|고정 길이 전체 형식 열|SUM([size of fixed length deep type columns])<br /><br /> 각 열의 크기는 다음과 같습니다.<br /><br /> char(i) 및 binary(i)의 경우 i<br /><br /> nchar(i)의 경우 2 * i|고정 길이 전체 형식 열은 char(i), nchar(i) 또는 binary(i) 유형의 열입니다.|  
-|가변 길이 전체 형식 열 [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 [computed row body size]에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
-|가변 길이 전체 형식 열 [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 [actual row body size]에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|  
-  
-##  <a name="bkmk_RowStructure"></a> 행 구조  
+##  <a name="bkmk_RowBodySize"></a> 행 본문 크기 계산
+
+**행 구조**
+    
  메모리 액세스에 최적화된 테이블의 행에는 다음과 같은 구성 요소가 있습니다.  
   
 -   행 머리글에는 행 버전 관리를 구현하는 데 필요한 타임스탬프가 포함됩니다. 행 머리글에는 위에서 설명한 해시 버킷의 행 체인을 구현하는 인덱스 포인터도 포함됩니다.  
@@ -139,6 +118,32 @@ ms.lasthandoff: 06/22/2017
 |John|파리|  
 |Jane|프라하|  
 |Susan|보고타|  
+  
+ 
+  
+ [row body size] 계산은 다음 표에서 설명합니다.  
+  
+ 행 본문 크기는 계산된 크기 및 실제 크기의 두 가지 방식으로 계산할 수 있습니다.  
+  
+-   [computed row body size]로 표시되는 계산 크기는 행 크기 제한인 8,060바이트를 초과하는지 여부를 확인하기 위해 사용됩니다.  
+  
+-   [actual row body size]로 표시되는 실제 크기는 메모리 및 검사점 파일에서 행 본문의 실제 저장소 크기입니다.  
+  
+ [computed row body size] 및 [actual row body size]는 모두 비슷하게 계산됩니다. 유일한 차이점은 다음 표의 하단에 표시된 것처럼 (n)varchar(i) 및 varbinary(i) 열의 크기에 대한 계산입니다. 계산된 행 본문 크기는 선언된 크기인 *i* 를 열 크기로 사용하고, 실제 행 본문 크기는 데이터의 실제 크기를 사용합니다.  
+  
+ 다음 표에서는 [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns]와 같이 행 본문 크기의 계산에 대해 설명합니다.  
+  
+|섹션|크기|설명|  
+|-------------|----------|--------------|  
+|단순 형식 열|SUM([단순 형식의 크기]) 개별 형식의 바이트 크기는 다음과 같습니다.<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **숫자**(전체 자릿수<=18): 8<br /><br /> **Time**: 8<br /><br /> **숫자**(전체 자릿수>18): 16<br /><br /> **Uniqueidentifier**: 16||  
+|단순 열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|전체 형식 열의 오프셋 배열|가능한 값은<br /><br /> 전체 형식 열이 없으면 0입니다.<br /><br /> 그렇지 않으면 2 + 2 * [number of deep type columns]입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|NULL 배열|[number of nullable columns]/8, 전체 바이트로 반올림|null 허용 열당 1비트가 배열에 포함됩니다. 전체 바이트로 반올림됩니다.|  
+|NULL 배열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 NULL 배열의 크기가 홀수 바이트인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|패딩|전체 형식 열이 없으면 0입니다.<br /><br /> 전체 형식 열이 있는 경우, 단순 열에 필요한 최대 맞춤에 따라 0-7바이트의 패딩이 추가됩니다. 각 단순 열에는 위에 설명한 대로 해당 크기와 동일한 맞춤이 필요하지만, GUID 열은 16바이트가 아니라 1바이트의 맞춤이 필요하고, 숫자 열에는 항상 16이 아닌 8바이트의 맞춤이 필요합니다. 모든 단순 열 사이에 가장 높은 맞춤 요구 사항이 사용되며, 지금까지의 총 크기(전체 형식 열 없음)가 필요한 맞춤의 배수가 되도록 0-7바이트의 패딩이 추가됩니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+|고정 길이 전체 형식 열|SUM([size of fixed length deep type columns])<br /><br /> 각 열의 크기는 다음과 같습니다.<br /><br /> char(i) 및 binary(i)의 경우 i<br /><br /> nchar(i)의 경우 2 * i|고정 길이 전체 형식 열은 char(i), nchar(i) 또는 binary(i) 유형의 열입니다.|  
+|가변 길이 전체 형식 열 [computed size]|SUM([computed size of variable length deep type columns])<br /><br /> 각 열에 대해 계산된 크기는 다음과 같습니다.<br /><br /> varchar(i) 및 varbinary(i)의 경우 i<br /><br /> nvarchar(i)의 경우 2 * i|이 행은 [computed row body size]에만 적용되었습니다.<br /><br /> 가변 길이 전체 형식 열은 varchar(i), nvarchar(i) 또는 varbinary(i) 유형의 열입니다. 계산된 크기는 열의 최대 길이(i)에 의해 결정됩니다.|  
+|가변 길이 전체 형식 열 [actual size]|SUM([actual size of variable length deep type columns])<br /><br /> 각 열의 실제 크기는 다음과 같습니다.<br /><br /> n, 여기서 n은 varchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> 2 * n, 여기서 n은 nvarchar(i)에 대해 열에 저장된 문자 수입니다.<br /><br /> n, 여기서 n은 varbinary(i)에 대해 열에 저장된 바이트 수입니다.|이 행은 [actual row body size]에만 적용되었습니다.<br /><br /> 실제 크기는 행의 열에 저장된 데이터에 의해 결정됩니다.|   
   
 ##  <a name="bkmk_ExampleComputation"></a> 예제: 테이블 및 행 크기 계산  
  해시 인덱스의 경우 실제 버킷 수는 가장 가까운 2의 제곱으로 반올림됩니다. 예를 들어, 지정된 bucket_count가 100000인 경우 인덱스의 실제 버킷 수는 131072입니다.  
@@ -231,8 +236,22 @@ GO
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  
+
+##  <a name="bkmk_OffRowLimitations"></a> 행 외부 열 제한 사항
+  메모리 최적화 테이블에 행 외부 열을 사용할 경우의 특정 제한 사항 및 유의 사항은 다음과 같습니다.
   
-## <a name="see-also"></a>참고 항목  
+-   메모리 최적화 테이블에 대한 columnstore 인덱스가 있는 경우 모든 열이 행 내부에 맞아야 합니다. 
+-   모든 인덱스 키 열은 행 내부에 저장되어야 합니다. 인덱스 키 열이 행 내부에 맞지 않을 경우 인덱스를 추가하지 못합니다. 
+-   [행 외부 열이 있는 메모리 최적화 테이블을 변경](../../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md)할 경우의 유의 사항입니다.
+-   LOB에 대한 크기 제한 사항은 디스크 기반 테이블의 크기 제한 사항을 미러링합니다(LOB 값에 대한 2GB 제한). 
+-   성능을 최적화하려면 대부분의 열을 8060바이트 이내로 설정하는 것이 좋습니다. 
+
+[What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)(CTP3 이후 SQL Server 2016의 메모리 내 OLTP에 대한 새로운 기능) 블로그 게시물에서 이러한 몇 가지 복잡한 사항을 자세히 설명합니다.   
+ 
+<a id="see-also" class="xliff"></a>
+
+## 관련 항목:  
  [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   
+

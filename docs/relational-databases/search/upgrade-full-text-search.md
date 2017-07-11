@@ -24,10 +24,12 @@ ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
+<a id="upgrade-full-text-search" class="xliff"></a>
+
+# 전체 텍스트 검색 업그레이드
   설치 프로그램을 실행하거나 데이터베이스 복사 마법사를 사용하여 이전 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 만든 데이터베이스 파일 및 전체 텍스트 카탈로그를 연결, 복원 또는 복사하면 전체 텍스트 검색이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 업그레이드됩니다.  
   
   
@@ -83,7 +85,9 @@ ms.lasthandoff: 04/11/2017
   
      업그레이드 도중 가져오기나 다시 작성을 수행할 경우 CPU 리소스가 많이 사용되어 서버 인스턴스의 나머지 부분을 업그레이드하고 온라인 상태로 만드는 작업이 지연됩니다. 서버 인스턴스를 최대한 빨리 온라인 상태로 만들어야 하며 업그레이드 후 수동 채우기를 실행할 수 있는 경우 **다시 설정** 옵션이 적합합니다.  
   
-## <a name="ensure-consistent-query-results-after-importing-a-full-text-index"></a>전체 텍스트 인덱스를 가져온 후 일관된 쿼리 결과 보장  
+<a id="ensure-consistent-query-results-after-importing-a-full-text-index" class="xliff"></a>
+
+## 전체 텍스트 인덱스를 가져온 후 일관된 쿼리 결과 보장  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드할 때 전체 텍스트 카탈로그를 가져온 경우 이전 단어 분리기와 새 단어 분리기의 동작이 약간 다르므로 쿼리와 전체 텍스트 인덱스 내용이 일치하지 않을 수 있습니다. 이러한 경우 쿼리와 전체 텍스트 인덱스 내용이 완전히 일치하게 하려면 다음 옵션 중 하나를 선택합니다.  
   
 -   전체 텍스트 인덱스가 들어 있는 전체 텍스트 카탈로그를 다시 작성([ALTER FULLTEXT CATALOG](../../t-sql/statements/alter-fulltext-catalog-transact-sql.md)*catalog_name* REBUILD)  
@@ -92,7 +96,9 @@ ms.lasthandoff: 04/11/2017
   
  단어 분리기에 대한 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
-## <a name="upgrade-noise-word-files-to-stoplists"></a>의미 없는 단어 파일을 중지 목록으로 업그레이드  
+<a id="upgrade-noise-word-files-to-stoplists" class="xliff"></a>
+
+## 의미 없는 단어 파일을 중지 목록으로 업그레이드  
 데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]로 업그레이드하면 의미 없는 단어 파일이 더 이상 사용되지 않습니다. 그러나 이전에 사용된 의미 없는 단어 파일이 FTDATA\ FTNoiseThesaurusBak 폴더에 저장되므로 나중에 해당 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 중지 목록을 업데이트하거나 새로 작성할 때 사용할 수 있습니다.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 업그레이드한 후  
@@ -112,7 +118,9 @@ ms.lasthandoff: 04/11/2017
   
      STOPLIST OFF 절은 중지 단어 필터링을 제거하고, 의미가 없는 것으로 간주되는 단어를 필터링하지 않고 테이블 채우기를 트리거합니다.  
   
-## <a name="backup-and-imported-full-text-catalogs"></a>전체 텍스트 카탈로그 백업 및 가져오기  
+<a id="backup-and-imported-full-text-catalogs" class="xliff"></a>
+
+## 전체 텍스트 카탈로그 백업 및 가져오기  
  업그레이드 도중 다시 작성되거나 다시 설정된 전체 텍스트 카탈로그 및 새로 작성된 전체 텍스트 카탈로그는 논리적인 개념이며 파일 그룹에 존재하지 않습니다. 따라서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 전체 텍스트 카탈로그를 백업하려면 카탈로그의 전체 텍스트 인덱스가 들어 있는 파일 그룹을 모두 확인하여 하나씩 백업해야 합니다. 자세한 내용은 [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)을 참조하세요.  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 가져온 전체 텍스트 카탈로그는 여전히 자체 파일 그룹의 데이터베이스 파일입니다. 전체 텍스트 카탈로그에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 의 백업 프로세스가 여전히 적용되지만 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 MSFTESQL 서비스가 없습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 프로세스에 대한 자세한 내용은 SQL Server 2005 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](http://go.microsoft.com/fwlink/?LinkId=209154) 을 참조하세요.  
@@ -124,7 +132,7 @@ ms.lasthandoff: 04/11/2017
   
  **서버 인스턴스의 전체 텍스트 업그레이드 동작을 변경하려면**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Use the **upgrade\_option** action of [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)의 **upgrade\_option** 동작을 사용합니다.  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** **서버 속성** 대화 상자의 **전체 텍스트 업그레이드 옵션** 을 사용합니다. 자세한 내용은 [서버 인스턴스의 전체 텍스트 검색 관리 및 모니터링](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)을 참조하세요.  
   
@@ -155,7 +163,9 @@ ms.lasthandoff: 04/11/2017
   
 -   [전체 데이터베이스 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)  
   
-### <a name="example"></a>예제  
+<a id="example" class="xliff"></a>
+
+### 예제  
  [이라는](../../t-sql/statements/restore-statements-transact-sql.md) 데이터베이스를 복원하는 다음 예의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] RESTORE `ftdb1`문에는 MOVE 절이 사용됩니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스, 로그 및 카탈로그 파일이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 서버 인스턴스에서 다음과 같은 새 위치로 이동합니다.  
   
 -   데이터베이스 파일인 `ftdb1.mdf`는 `C:\Program Files\Microsoft SQL Server\MSSQL.1MSSQL13.MSSQLSERVER\MSSQL\DATA\ftdb1.mdf`로 이동합니다.  
@@ -180,7 +190,9 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
   
  데이터베이스를 연결 및 분리하는 방법은 [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md), [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) 및 [sp_detach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목  
  [전체 텍스트 검색 시작](../../relational-databases/search/get-started-with-full-text-search.md)   
  [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [검색 필터 구성 및 관리](../../relational-databases/search/configure-and-manage-filters-for-search.md)  

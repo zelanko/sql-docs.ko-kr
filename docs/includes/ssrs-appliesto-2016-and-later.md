@@ -1,0 +1,1 @@
+![예](media/yes.png)SQL Server Reporting Services(2016 이상)

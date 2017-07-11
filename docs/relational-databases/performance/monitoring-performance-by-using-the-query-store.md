@@ -19,23 +19,27 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
-ms.openlocfilehash: 4650cfdda4eef32d1d09f4d4407b61f964832b8d
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
+<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
+
+# 쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소 기능을 통해 사용자는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 사용자 검토를 위해 보관합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 옵션을 사용하여 구성할 수 있습니다. 
   
  Azure SQL 데이터베이스의 쿼리 저장소 작업에 대한 자세한 내용은 [Azure SQL 데이터베이스에서 쿼리 저장소 작업](https://azure.microsoft.com/documentation/articles/sql-database-operate-query-store/)을 참조하세요.  
   
-##  <a name="Enabling"></a> Enabling the Query Store  
+##  <a name="Enabling"></a> 쿼리 저장소 사용  
  새 데이터베이스에서는 기본적으로 쿼리 저장소가 활성 상태가 아닙니다.  
   
-#### <a name="use-the-query-store-page-in-management-studio"></a>Management Studio에서 쿼리 저장소 페이지 사용  
+<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
+
+#### Management Studio에서 쿼리 저장소 페이지 사용  
   
 1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -46,7 +50,9 @@ ms.lasthandoff: 06/23/2017
   
 3.  **작업 모드(요청)** 상자에서 **On**을 선택합니다.  
   
-#### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
+<a id="use-transact-sql-statements" class="xliff"></a>
+
+#### Transact-SQL 문 사용  
   
 1.  **ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어  
   
@@ -63,20 +69,29 @@ ms.lasthandoff: 06/23/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 쿼리에 대한 실행 계획은 일반적으로 통계 변경, 스키마 변경, 인덱스 생성/삭제 등과 같은 여러 이유로 인해 시간에 따라 변경됩니다. 프로시저 캐시(캐시된 쿼리 계획이 저장되는 위치)에는 최신 실행 계획만 저장됩니다. 또한 메모리 부족으로 인해 계획 캐시에서 계획이 제거됩니다. 따라서 실행 계획 변경으로 인한 쿼리 성능 저하는 간단한 문제가 아니며 해결하는 데 시간이 걸릴 수 있습니다.  
   
  쿼리 저장소에서는 쿼리당 여러 실행 계획을 유지하므로 쿼리 프로세서가 쿼리에 대해 특정 실행 계획을 사용하도록 하는 정책을 적용할 수 있습니다. 이를 계획 강제 적용이라고 합니다. 쿼리 저장소의 계획 강제 적용은 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md) 쿼리 힌트와 유사한 메커니즘을 사용하여 제공되지만 사용자 응용 프로그램을 변경할 필요는 없습니다. 계획 강제 적용은 계획 변경으로 인한 쿼리 성능 저하를 짧은 시간 내에 해결할 수 있습니다.  
-  
+
+ **대기 통계**는 SQL Server의 성능 문제 해결에 도움이 되는 다른 정보 소스입니다. 오랫동안 인스턴스 수준에서만 대기 통계를 사용할 수 있었기 때문에 실제 쿼리로 역추적하기 어려웠습니다. SQL Server 2017 및 Azure SQL Database에서는 쿼리 저장소에 대기 통계를 추적하는 다른 차원이 추가되었습니다. 
+
  쿼리 저장소 기능을 사용하는 일반적인 시나리오는 다음과 같습니다.  
   
 -   이전 쿼리 계획을 적용하여 계획 성능 저하를 빠르게 찾고 해결합니다. 실행 계획 변경으로 최근에 성능이 저하된 쿼리를 수정합니다.  
   
 -   지정된 기간 내에 쿼리가 실행된 횟수를 확인하여 DBA의 성능 리소스 문제 해결을 지원합니다.  
   
--   실행 시간, 메모리 사용 등을 기준으로 이전 *x* 시간 동안의 상위 *n*개 쿼리를 식별합니다.  
+-   실행 시간, 메모리 사용 등을 기준으로 이전 *n* 시간 동안의 상위 *n* 개 쿼리를 식별합니다.  
   
 -   지정된 쿼리에 대한 쿼리 계획의 기록을 감사합니다.  
   
 -   특정 데이터베이스에 대한 리소스(CPU, I/O 및 메모리) 사용 패턴을 분석합니다.  
+-   리소스에서 대기 중인 상위 n개 쿼리를 식별합니다. 
+-   특정 쿼리 또는 계획에 대한 대기 특성을 이해합니다.
   
- 쿼리 저장소에는 실행 계획 정보를 유지하는 **계획 저장소** 와 실행 통계 정보를 유지하기 위한 **런타임 통계 저장소** 라는 두 가지 저장소가 포함되어 있습니다. 쿼리 저장소에서 쿼리에 대해 저장할 수 있는 고유한 계획의 수는 **max_plans_per_query** 구성 옵션으로 제한됩니다. 성능 향상을 위해 두 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
+쿼리 저장소에는 다음 3개의 저장소가 있습니다.
+- **계획 저장소** - 실행 계획 정보 유지
+- **런타임 통계 저장소** - 실행 통계 정보 유지 
+- **대기 통계 저장소** - 대기 통계 정보 유지
+ 
+ 쿼리 저장소에서 쿼리에 대해 저장할 수 있는 고유한 계획의 수는 **max_plans_per_query** 구성 옵션으로 제한됩니다. 성능 향상을 위해 두 저장소에 비동기적으로 정보가 기록됩니다. 공간 사용을 최소화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이러한 저장소의 정보는 쿼리 저장소 카탈로그 뷰를 쿼리하여 볼 수 있습니다.  
   
  다음 쿼리는 쿼리 저장소의 쿼리 및 계획에 대한 정보를 반환합니다.  
   
@@ -89,7 +104,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
  
-##  <a name="Regressed"></a> Use the Regressed Queries Feature  
+##  <a name="Regressed"></a> 재발된 쿼리 기능 사용  
  쿼리 저장소를 사용하도록 설정한 후 개체 탐색기 창의 데이터베이스 부분을 새로 고쳐 **쿼리 저장소** 섹션을 추가합니다.  
   
  ![개체 탐색기의 쿼리 저장소 트리](../../relational-databases/performance/media/objectexplorerquerystore.PNG "개체 탐색기의 쿼리 저장소 트리")  
@@ -99,8 +114,22 @@ JOIN sys.query_store_query_text AS Txt
  ![개체 탐색기에서 이전 상태로 되돌려진 쿼리](../../relational-databases/performance/media/objectexplorerregressedqueries.PNG "개체 탐색기에서 이전 상태로 되돌려진 쿼리")  
   
  계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용**을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.  
- 
-##  <a name="Options"></a> Configuration Options 
+##  <a name="Waiting"></a> 대기 쿼리 찾기
+
+SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고객에 대한 시간별 쿼리당 대기 통계를 확인할 수 있습니다. 쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 전체 매핑은 [sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)에서 확인할 수 있습니다.
+
+**대기 범주**는 다양한 대기 유형을 본질적으로 유사한 버킷으로 결합합니다. 대기 범주마다 문제 해결을 위해 다른 후속 분석이 필요하지만 동일한 범주의 대기 유형은 매우 유사한 문제 해결 경험을 생성하므로 대기를 기반으로 해서 영향을 받는 쿼리를 제공하면 대부분의 조사를 성공적으로 완료할 수 있습니다.
+
+쿼리 저장소에 대기 범주를 도입하기 전후에 워크로드에 추가 정보를 가져오는 방법의 몇 가지 예는 다음과 같습니다.
+
+|||| 
+|-|-|-|  
+|이전 경험|새로운 경험|동작|
+|데이터베이스당 높은 RESOURCE_SEMAPHORE 대기|특정 쿼리에 대한 쿼리 저장소의 높은 메모리 대기|쿼리 저장소에서 상위 메모리 소비 쿼리를 찾습니다. 이러한 쿼리는 영향을 받는 쿼리의 추가 진행을 지연합니다. 해당 쿼리 또는 영향을 받는 쿼리에 대해 MAX_GRANT_PERCENT 쿼리 힌트를 사용하는 것이 좋습니다.|
+|데이터베이스당 높은 LCK_M_X 대기|특정 쿼리에 대한 쿼리 저장소의 높은 잠금 대기|영향을 받는 쿼리에 대한 쿼리 텍스트를 확인하고 대상 엔터티를 식별합니다. 자주 실행되며 기간이 높은, 동일한 엔터티를 수정하는 다른 쿼리를 쿼리 저장소에서 찾습니다. 이러한 쿼리를 식별한 후 응용 프로그램 논리를 변경하여 동시성을 개선하거나 덜 제한적인 격리 수준을 사용하는 것이 좋습니다.|
+|데이터베이스당 높은 PAGEIOLATCH_SH 대기|특정 쿼리에 대한 쿼리 저장소의 높은 버퍼 IO 대기|쿼리 저장소에서 물리적 읽기 수가 높은 쿼리를 찾습니다. IO 대기가 높은 쿼리와 일치하는 경우 검색 대신 찾기를 수행하여 쿼리의 IO 오버헤드를 최소화하기 위해 기본 엔터티에 대한 인덱스를 도입하는 것이 좋습니다.|
+|데이터베이스당 높은 SOS_SCHEDULER_YIELD 대기|특정 쿼리에 대한 쿼리 저장소의 높은 CPU 대기|쿼리 저장소에서 상위 CPU 소비 쿼리를 찾습니다. 그중에서 높은 CPU 추세가 영향을 받는 쿼리에 대한 높은 CPU 대기와 상호 연결하는 쿼리를 식별합니다. 이러한 쿼리 최적화에 집중하세요. 계획 회귀 또는 누락된 인덱스가 있을 수 있습니다.| 
+##  <a name="Options"></a> 구성 옵션 
 
 다음 옵션을 사용하여 쿼리 저장소 매개 변수를 구성할 수 있습니다.
 
@@ -135,14 +164,16 @@ JOIN sys.query_store_query_text AS Txt
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하여 옵션을 설정하는 방법에 대한 자세한 내용은 [옵션 관리](#OptionMgmt)를 참조하세요.  
   
-##  <a name="Related"></a> Related Views, Functions, and Procedures  
+##  <a name="Related"></a> 관련된 뷰, 함수 및 프로시저  
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 을(를) 통해 또는 다음 뷰 및 프로시저를 사용하여 쿼리 저장소를 보고 관리할 수 있습니다.  
 
 ||| 
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-### <a name="query-store-catalog-views"></a>쿼리 저장소 카탈로그 뷰  
+<a id="query-store-catalog-views" class="xliff"></a>
+
+### 쿼리 저장소 카탈로그 뷰  
  카탈로그 뷰에 쿼리 저장소에 대한 정보가 표시됩니다.  
 
 ||| 
@@ -152,7 +183,9 @@ JOIN sys.query_store_query_text AS Txt
 |[sys.query_store_query_text&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
 |[sys.query_store_wait_stats &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-### <a name="query-store-stored-procedures"></a>쿼리 저장소 저장 프로시저  
+<a id="query-store-stored-procedures" class="xliff"></a>
+
+### 쿼리 저장소 저장 프로시저  
  저장 프로시저로 쿼리 저장소를 구성합니다.  
 
 ||| 
@@ -163,7 +196,7 @@ JOIN sys.query_store_query_text AS Txt
  
 ##  <a name="Scenarios"></a> 주요 사용 시나리오  
   
-###  <a name="OptionMgmt"></a> Option Management  
+###  <a name="OptionMgmt"></a> 옵션 관리  
  이 섹션에서는 쿼리 저장소 기능 자체를 관리하는 데 대한 지침을 제공합니다.  
   
  **쿼리 저장소가 현재 활성 상태인가요?**  
@@ -233,7 +266,8 @@ SET QUERY_STORE (
     INTERVAL_LENGTH_MINUTES = 15,  
     SIZE_BASED_CLEANUP_MODE = AUTO,  
     QUERY_CAPTURE_MODE = AUTO,  
-    MAX_PLANS_PER_QUERY = 1000  
+    MAX_PLANS_PER_QUERY = 1000,
+    WAIT_STATS_CAPTURE_MODE = ON 
 );  
 ```  
   
@@ -287,7 +321,7 @@ DEALLOCATE adhoc_queries_cursor;
 -   **sp_query_store_remove_plan** – 단일 계획을 제거합니다.  
  
   
-###  <a name="Peformance"></a> Performance Auditing and Troubleshooting  
+###  <a name="Peformance"></a> 성능 감사 및 문제해결  
  쿼리 저장소는 쿼리 실행 전반에서 컴파일 및 런타임 메트릭 기록을 유지하여 사용자가 작업에 대한 질문을 할 수 있습니다.  
   
  **마지막 *n*개 쿼리가 데이터베이스에서 실행되었나요?**  
@@ -321,7 +355,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **지난 1 시간 내에 평균 실행 시간이 가장 긴 쿼리 수는 몇 개입니까?**  
+ **지난&amp;1;시간 내에 평균 실행 시간이 가장 긴 쿼리 수는 몇 개입니까?**  
   
 ```tsql  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -424,7 +458,24 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
 ```  
   
  계획 선택 변경과 관련된 성능 저하뿐 아니라 성능 저하를 모두 확인하려면 이전 쿼리에서 `AND p1.plan_id <> p2.plan_id` 조건을 제거하면 됩니다.  
-  
+
+ **가장 오래 대기 중인 쿼리는 무엇인가요?**
+ 이 쿼리는 가장 오래 대기 중인 상위 10개의 쿼리를 반환합니다. 
+ 
+ ```tsql 
+  SELECT TOP 10
+    qt.query_text_id,
+    q.query_id,
+    p.plan_id,
+    sum(total_query_wait_time_ms) AS sum_total_wait_ms
+FROM sys.query_store_wait_stats ws
+JOIN sys.query_store_plan p ON ws.plan_id = p.plan_id
+JOIN sys.query_store_query q ON p.query_id = q.query_id
+JOIN sys.query_store_query_text qt ON q.query_text_id = qt.query_text_id
+GROUP BY qt.query_text_id, q.query_id, p.plan_id
+ORDER BY sum_total_wait_ms DESC
+ ```
+ 
  **최근에 성능이 저하된 쿼리(최근 및 기록 실행 비교)는 무엇입니까?** 다음 쿼리는 실행 기간을 기준으로 쿼리 실행을 비교합니다. 이 특정 예제의 쿼리는 최근 기간(1시간) 및 기록 기간(어제)의 실행을 비교하고 `additional_duration_workload`를 초래한 쿼리를 식별합니다. 이 메트릭은 최근 평균 실행 기간과 기록 평균 실행 간의 차이에 최근 실행 수를 곱한 값으로 계산됩니다. 이 값은 실제로 기록에 비해 최근 실행으로 초래된 추가 기간을 나타냅니다.  
   
 ```tsql  
@@ -509,7 +560,7 @@ OPTION (MERGE JOIN);
 ```  
  
   
-###  <a name="Stability"></a> Maintaining Query Performance Stability  
+###  <a name="Stability"></a> 쿼리 성능 안정성 유지 관리  
  여러 번 실행되는 쿼리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 다른 계획을 사용하여 리소스 사용률 및 기간이 달라짐을 알 수 있습니다. 쿼리 저장소를 사용하면 쿼리 성능이 저하되는 시기를 확인하고 관심 있는 기간 내에 최적의 계획을 결정할 수 있습니다. 그런 다음 향후 쿼리 실행에 해당하는 최적의 계획을 적용할 수 있습니다.  
   
  또한 자동으로 매개 변수화되거나 수동으로 매개 변수화되는 매개 변수를 사용하여 일관성이 없는 쿼리 성능도 식별할 수 있습니다. 여러 계획 중에 대부분의 매개 변수 값에 대해 빠르고 최적화된 계획을 식별하고 해당 계획을 강제 적용할 수 있습니다. 이를 통해 다양한 사용자 시나리오에 대해 예측 가능한 성능을 유지할 수 있습니다.  
@@ -528,7 +579,9 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+<a id="see-also" class="xliff"></a>
+
+## 관련 항목:  
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [메모리 내 OLTP와 쿼리 저장소 사용](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)   

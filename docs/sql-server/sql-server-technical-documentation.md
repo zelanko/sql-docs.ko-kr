@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 기술 설명서 | Microsoft Docs"
-ms.date: 03/24/2017
+ms.date: 06/27/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,18 +23,22 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 79e06fb9a4eab8cd067aaa59a448593ca25e314c
+ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
+ms.openlocfilehash: 334c3d130a1d0c8371c1a7810d82d443e1fbecc8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/28/2017
 
 ---
-# <a name="sql-server-technical-documentation"></a>SQL Server 기술 설명서
+<a id="sql-server-technical-documentation" class="xliff"></a>
+
+# SQL Server 기술 설명서
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [SQL Server 2014에 대 한 설치](https://msdn.microsoft.com/en-US/library/bb500469(SQL.120).aspx)합니다.
 
  SQL ServeR을 설치하고, 구성하고, 사용하는 데 도움이 되는 설명서입니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 언어 항목에 대해서는 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
+
+도움말 뷰어를 사용하여 SQL Server 설명서를 오프라인으로 볼 수도 있습니다. 자세한 내용은 [SQL Server용 도움말 뷰어 및 오프라인 콘텐츠](../release-notes/sql-server-help-installation.md)를 참조하세요.
 
 **SQL Server 2017**
 
@@ -46,12 +50,14 @@ ms.lasthandoff: 06/22/2017
 - [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)
 - [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
     
- **SQL ServeR을 사용해 보세요.**    
+ **SQL Server를 사용해 보세요.**    
  - [**Evaluation Center에서 SQL Server 2016 다운로드**](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
  - **[SQL Server 2016이 이미 설치된 가상 컴퓨터 실행](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
  - **[최신 버전의 SQL Server Management Studio 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)**   
       
-## <a name="sql-server-technologies"></a>SQL Server 기술    
+<a id="sql-server-technologies" class="xliff"></a>
+
+## SQL Server 기술    
     
 |||    
 |-|-|    
@@ -65,7 +71,9 @@ ms.lasthandoff: 06/22/2017
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services에서는 다양한 데이터 원본에서 내용을 가져오고 다양한 형식으로 보고서를 게시하며 중앙에서 보안 및 구독을 관리할 수 있게 해 주는 기업형의 웹 사용이 가능한 보고 기능을 제공합니다.|    
 
     
-## <a name="earlier-sql-server-versions"></a>이전 버전의 SQL Server
+<a id="earlier-sql-server-versions" class="xliff"></a>
+
+## 이전 버전의 SQL Server
 - [SQL Server 2014 온라인 설명서에 대 한 온라인 설명서](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 - [SQL Server 2014 Express 및 다른 이전 SQL Server 버전 설치하세요](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx). (**모든 설치 관리자 패키지를 한 곳에 모아 주신 [Scott Hanselman](http://www.hanselman.com/)께 감사드립니다.**)  
 - [SQL Server 2012 기술 문서](https://technet.microsoft.com/library/bb418433(v=sql.10).aspx)  
@@ -78,7 +86,9 @@ ms.lasthandoff: 06/22/2017
 - [SQL Server 2016에 대한 AdventureWorks 예제 데이터베이스 및 스크립트](https://www.microsoft.com/en-us/download/details.aspx?id=49502) 
 - [GitHub의 SQL Server 예제](https://github.com/Microsoft/sql-server-samples) 
    
- ## <a name="more-information"></a>자세한 정보   
+<a id="more-information" class="xliff"></a>
+
+ ## 자세한 정보   
 + [SQL Server 구성 관리자](../relational-databases/sql-server-configuration-manager.md)
 + 지원되는 모든 버전에 대한[SQL Server 업데이트 센터](https://msdn.microsoft.com/library/ff803383.aspx) 링크 및 정보 
 + [SQL Server 데이터베이스 엔진 설치](../database-engine/install-windows/install-sql-server-database-engine.md) 

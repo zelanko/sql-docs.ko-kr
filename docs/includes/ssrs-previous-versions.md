@@ -1,0 +1,1 @@
+> 이전 버전의 SQL Server Reporting Services와 관련된 콘텐츠는 [SQL Server Reporting Services 2014](https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx)를 참조하세요.

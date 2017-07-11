@@ -1,7 +1,7 @@
 ---
 title: "데이터베이스 스키마 만들기 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -22,13 +22,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe54e464e4aabc53eb8645c1fbf20f509f427978
+ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
+ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/05/2017
 
 ---
-# <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
+<a id="create-a-database-schema" class="xliff"></a>
+
+# 데이터베이스 스키마 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -63,7 +65,9 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-##### <a name="to-create-a-schema"></a>스키마를 만들려면  
+<a id="to-create-a-schema" class="xliff"></a>
+
+##### 스키마를 만들려면  
   
 1.  개체 탐색기에서 **데이터베이스** 폴더를 확장합니다.  
   
@@ -77,7 +81,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-### <a name="additional-options"></a>추가 옵션  
+<a id="additional-options" class="xliff"></a>
+
+### 추가 옵션  
  **스키마 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **권한** 및 **확장 속성**을 제공합니다.  
   
 -   **사용 권한** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
@@ -86,27 +92,37 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### <a name="to-create-a-schema"></a>스키마를 만들려면  
+<a id="to-create-a-schema" class="xliff"></a>
+
+#### 스키마를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    -- Creates the schema Sprockets owned by Annik that contains table NineProngs.   
-    -- The statement grants SELECT to Mandar and denies SELECT to Prasanna.  
-  
+3.  다음 예제에서는 `Chains`라는 스키마를 만든 다음 `Sizes`라는 테이블을 만듭니다.  
+    ```sql  
+    CREATE SCHEMA Chains;
+    GO
+    CREATE TABLE Chains.Sizes (ChainID int, width dec(10,2));
+    ```
+
+4.  단일 문에서 추가 옵션을 수행할 수 있습니다. 다음 예제에서는 Annik가 소유하고 `NineProngs` 테이블을 포함하는 `Sprockets` 스키마를 만듭니다. 이 문에서는 Mandar에게 `SELECT` 권한을 부여하고 Prasanna에게는 `SELECT` 권한을 거부합니다.  
+
+    ```sql  
     CREATE SCHEMA Sprockets AUTHORIZATION Annik  
         CREATE TABLE NineProngs (source int, cost int, partnumber int)  
         GRANT SELECT ON SCHEMA::Sprockets TO Mandar  
         DENY SELECT ON SCHEMA::Sprockets TO Prasanna;  
     GO  
     ```  
-  
+5. 이 데이터베이스의 스키마를 보려면 다음 문을 실행합니다.
+
+   ```sql
+   SELECT * FROM sys.schemas;
+   ```
+
  자세한 내용은 [CREATE SCHEMA&#40;Transact-SQL&#41;](../../../t-sql/statements/create-schema-transact-sql.md)를 참조하세요.  
   
   
+

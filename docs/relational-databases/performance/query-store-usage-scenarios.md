@@ -18,13 +18,15 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ce278d494e2d5ab7dfc82e244a9d6b8821099cc0
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
+<a id="query-store-usage-scenarios" class="xliff"></a>
+
+# 쿼리 저장소 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   쿼리 저장소는 예측 가능한 워크로드 성능을 추적하고 보장하는 것이 중요한 광범위한 시나리오에서 사용될 수 있습니다. 다음은 고려할 수 있는 몇 가지 예입니다.  
@@ -35,29 +37,33 @@ ms.lasthandoff: 04/11/2017
   
 -   A/B 테스트  
   
--   다음으로 업그레이드하는 동안 성능 안정성 유지 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+-   최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 동안 성능 안정성 유지  
   
 -   임시 워크로드 식별 및 개선  
   
-## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>계획 선택 재발이 있는 쿼리 식별 및 수정  
+<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
+
+## 계획 선택 재발이 있는 쿼리 식별 및 수정  
  일반 쿼리 실행 중 데이터 카디널리티가 변경되거나, 인덱스가 생성, 변경 또는 삭제되거나, 통계가 업데이트되는 등 중요한 입력이 달라졌기 때문에 쿼리 최적화 프로그램에서 다른 계획을 사용하도록 결정하는 경우가 있을 수 있습니다.  선택하는 대부분의 새 계획은 이전에 사용된 것보다 더 낫거나 거의 동일합니다. 그러나 새 계획이 훨씬 나쁜 경우도 있습니다. 이러한 상황을 계획 선택 변경 재발이라고 합니다. 쿼리 저장소 이전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자가 시간이 지남에 따라 사용된 실행 계획을 확인할 수 있는 기본 제공 데이터 저장소를 제공하지 않았기 때문에 이는 식별하고 수정하기 매우 어려운 문제였습니다.  
   
- 이제 쿼리 저장소를 사용하여 다음을 신속하게 수행할 수 있습니다.  
+ 쿼리 저장소를 사용하여 다음을 신속하게 수행할 수 있습니다.  
   
 -   관심 기간(지난 시간, 일, 주 등) 동안 실행 메트릭이 저하된 모든 쿼리를 식별할 수 있습니다. **에서** 재발된 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 분석을 가속화할 수 있습니다.  
   
 -   재발된 쿼리 중에서 여러 계획이 있고 잘못된 계획 선택으로 인해 저하된 쿼리를 매우 쉽게 찾을 수 있습니다. **재발된 쿼리** 에서 **계획 요약** 창을 사용하여 재발된 쿼리에 대한 모든 계획과 시간에 따른 쿼리 성능을 시각화할 수 있습니다.  
   
--   기록에서 이전 계획이 더 나은 것으로 증명된 경우 이를 적용합니다. **재발된 쿼리** 에서 **계획 적용** 단추를 사용하여 쿼리에 대해 선택한 계획을 적용합니다.  
+-   기록에서 이전 계획이 더 나은 것으로 증명된 경우 이를 적용합니다. **회귀된 쿼리**의 **계획 강제 적용** 단추를 사용하여 쿼리에 대해 선택한 계획을 강제 적용합니다.  
   
  ![query-store-usage-1](../../relational-databases/performance/media/query-store-usage-1.png "query-store-usage-1")  
   
  이 시나리오에 대한 자세한 설명은 [쿼리 저장소: 데이터베이스를 위한 항공 데이터 레코더](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) 블로그를 참조하세요.  
   
-## <a name="identify-and-tune-top-resource-consuming-queries"></a>상위 리소스 소비 쿼리 식별 및 조정  
+<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
+
+## 상위 리소스 소비 쿼리 식별 및 조정  
  워크로드에서 수천 개의 쿼리를 생성할 수 있지만 일반적으로 그 중 소수의 쿼리만 대부분의 시스템 리소스를 사용하므로 주의가 필요합니다. 리소스를 많이 사용하는 상위 쿼리 중에서 추가 조정을 통해 개선할 수 있는 쿼리 또는 재발된 쿼리를 찾습니다.  
   
- 탐색을 시작하는 가장 쉬운 방법은 **에서** 상위 리소스 소비 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 여는 것입니다.  사용자 인터페이스는 상위 리소스 소비 쿼리를 나타내는 막대 그래프(왼쪽), 선택한 쿼리에 대한 계획 요약(오른쪽) 및 선택한 계획에 대한 시각적 쿼리 계획(아래쪽), 이렇게 세 개의 창으로 구분되어 있습니다. **구성** 을 클릭하여 분석할 쿼리 수 및 관심 있는 시간 간격을 제어할 수 있습니다. 또한 다양한 리소스 소비 차원(기간, CPU, 메모리, IO, 실행 횟수)과 기준선(평균, 최소값, 최대값, 합계, 표준 편차) 간에 선택할 수 있습니다.  
+ 탐색을 시작하는 가장 쉬운 방법은 **에서** 상위 리소스 소비 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 여는 것입니다. 사용자 인터페이스는 상위 리소스 소비 쿼리를 나타내는 막대 그래프(왼쪽), 선택한 쿼리에 대한 계획 요약(오른쪽) 및 선택한 계획에 대한 시각적 쿼리 계획(아래쪽), 이렇게 세 개의 창으로 구분되어 있습니다. **구성** 을 클릭하여 분석할 쿼리 수 및 관심 있는 시간 간격을 제어할 수 있습니다. 또한 다양한 리소스 소비 차원(기간, CPU, 메모리, IO, 실행 횟수)과 기준선(평균, 최소값, 최대값, 합계, 표준 편차) 간에 선택할 수 있습니다.  
   
  ![query-store-usage-2](../../relational-databases/performance/media/query-store-usage-2.png "query-store-usage-2")  
   
@@ -75,8 +81,10 @@ ms.lasthandoff: 04/11/2017
   
 5.  부담이 큰 쿼리는 다시 작성하는 것이 좋습니다. 예를 들어 쿼리 매개 변수화를 활용하고 동적 SQL의 사용을 줄입니다. 데이터를 읽을 때의 최적 논리를 구현합니다(응용 프로그램 쪽이 아니라 데이터베이스 쪽에서 데이터 필터링 적용).  
   
-## <a name="ab-testing"></a>A/B 테스트  
- 쿼리 저장소를 사용하여 예정된 응용 프로그램 변경 이전과 이후의 워크로드 성능을 비교할 수 있습니다.  다음 목록에는 쿼리 저장소를 사용하여 환경 또는 응용 프로그램 변경이 워크로드 성능에 미치는 영향을 평가할 수 있는 몇 가지 예제가 포함되어 있습니다.  
+<a id="ab-testing" class="xliff"></a>
+
+## A/B 테스트  
+ 쿼리 저장소를 사용하여 예정된 응용 프로그램 변경 이전과 이후의 워크로드 성능을 비교할 수 있습니다. 다음 목록에는 쿼리 저장소를 사용하여 환경 또는 응용 프로그램 변경이 워크로드 성능에 미치는 영향을 평가할 수 있는 몇 가지 예제가 포함되어 있습니다.  
   
 -   새 응용 프로그램 버전 출시  
   
@@ -98,7 +106,7 @@ ms.lasthandoff: 04/11/2017
   
 4.  1과 3의 결과를 비교합니다.  
   
-    1.  	**전체 데이터베이스 사용량** 을 열어 전체 데이터베이스에 대한 영향을 확인합니다.  
+    1.  **전체 데이터베이스 사용량**을 열어 전체 데이터베이스에 대한 영향을 확인합니다.  
   
     2.  **상위 리소스 소비 쿼리** 를 열거나 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용한 사용자 고유 분석을 실행하여 가장 중요한 쿼리에 미치는 변경의 영향을 분석합니다.  
   
@@ -118,23 +126,27 @@ ms.lasthandoff: 04/11/2017
   
  분석에 따라, 쿼리 성능이 향상되었으므로 인덱스를 유지할 수 있습니다.  
   
-## <a name="keep-performance-stability-during-the-upgrade-to-sql-server-2016"></a>SQL Server 2016로 업그레이드하는 동안 성능 안정성 유지  
+## <a name="CEUpgrade"></a> 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드하는 동안 성능 안정성 유지  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]이전에는 사용자가 최신 플랫폼 버전으로 업그레이드하는 동안 성능 회귀 위험에 노출되었습니다. 이러한 이유로 새 비트가 설치되는 즉시 최신 버전의 쿼리 최적화 프로그램이 활성화되었습니다.  
   
- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 쿼리 최적화 프로그램의 모든 변경 내용이 최신 `COMPATIBILITY_LEVEL`에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL` 을 최신 상태로 변경하는 경우에 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 아래 그림에 권장 업그레이드 워크플로가 표시되어 있습니다.  
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터는 쿼리 최적화 프로그램의 모든 변경 내용이 최신 [데이터베이스 호환성 수준](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL`을 최신 상태로 변경할 때 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 아래 그림에 권장 업그레이드 워크플로가 표시되어 있습니다.  
   
  ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5")  
   
-1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 변경하지 않고 `COMPATIBILITY_LEVEL`을 업그레이드합니다. 최신 쿼리 최적화 프로그램에 노출되는 것이 아니라 쿼리 저장소를 포함하는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 기능을 제공합니다.  
+1.  데이터베이스 호환성 수준을 변경하지 않고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 업그레이드합니다. 최신 쿼리 최적화 프로그램 변경 내용을 노출하지 않고 쿼리 저장소를 포함하는 최신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 제공합니다.  
   
-2.  쿼리 저장소 사용: 쿼리 및 계획을 캡처하고 이전 `COMPATIBILITY_LEVEL`을 사용하여 성능 기준선을 설정합니다. 모든 계획을 캡처하고 안정적인 기준선을 얻을 때까지 이 단계를 계속 유지합니다.  
+2.  쿼리 저장소를 사용하도록 설정합니다. 이 항목에 대한 자세한 내용은 [쿼리 저장소를 워크로드에 맞게 조정된 상태로 유지](../../relational-databases/performance/best-practice-with-the-query-store.md#Configure)를 참조하세요.
+
+3.  쿼리 저장소가 쿼리 및 계획을 캡처할 수 있도록 하고 원본/이전 데이터베이스 호환성 수준으로 성능 기준선을 설정합니다. 모든 계획을 캡처하고 안정적인 기준선을 얻을 때까지 이 단계를 계속 유지합니다. 프로덕션 워크로드에 대한 일반적인 비즈니스 주기 기간일 수 있습니다.  
   
-3.  최신 호환성 수준으로 이동: 워크로드를 최신 쿼리 최적화 프로그램에 노출하여 잠재적으로 새 계획을 만들 수 있도록 합니다.  
+4.  최신 데이터베이스 호환성 수준으로 이동: 워크로드를 최신 쿼리 최적화 프로그램 변경 내용에 노출하여 잠재적으로 새 계획을 만들 수 있도록 합니다.  
   
-4.  분석 및 재발 수정에 쿼리 저장소 사용: 대부분의 경우 새 쿼리 최적화 프로그램은 향상된 계획을 생성합니다. 그러나 쿼리 저장소는 계획 선택 재발을 식별하고 계획 적용 메커니즘을 사용하여 이를 수정하는 간편한 방법을 제공합니다.  
+5.  분석 및 회귀 수정에 쿼리 저장소 사용: 대부분의 경우 새 쿼리 최적화 프로그램 변경 내용은 향상된 계획을 생성합니다. 그러나 쿼리 저장소는 계획 선택 회귀를 식별하고 계획 강제 적용 메커니즘을 사용하여 수정하는 간편한 방법을 제공합니다.  
   
-## <a name="identify-and-improve-ad-hoc-workloads"></a>임시 워크로드 식별 및 개선  
- 일부 워크로드에는 전체 응용 프로그램 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드에는 일반적으로 각각 시스템 리소스의 일부를 소비하는 비교적 많은 수의 여러 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 응용 프로그램이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데[매우 권장됨](https://msdn.microsoft.com/library/mt604821.aspx) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  
+<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
+
+## 임시 워크로드 식별 및 개선  
+ 일부 워크로드에는 전체 응용 프로그램 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드는 일반적으로 각각 시스템 리소스의 일부를 사용하는 비교적 다수의 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 응용 프로그램이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데[매우 권장됨](https://msdn.microsoft.com/library/mt604821.aspx) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  
   
  **상위 리소스 소비 쿼리** 뷰는 워크로드의 임시 특성에 대한 첫 번째 표시를 제공합니다.  
   
@@ -144,7 +156,7 @@ ms.lasthandoff: 04/11/2017
   
  또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트를 실행하여 시스템의 총 쿼리 텍스트 수, 쿼리 수 및 계획 수를 파악하고 query_hash와 plan_hash를 비교하여 차이점을 확인할 수 있습니다.  
   
-```  
+```tsql  
 /*Do cardinality analysis when suspect on ad-hoc workloads*/  
 SELECT COUNT(*) AS CountQueryTextRows FROM sys.query_store_query_text;  
 SELECT COUNT(*) AS CountQueryRows FROM sys.query_store_query;  
@@ -165,8 +177,7 @@ SELECT COUNT(DISTINCT query_plan_hash) AS  CountDifferentPlanRows FROM  sys.quer
   
  개별 쿼리 템플릿을 사용하는 접근 방식에서는 계획 지침을 만들어야 합니다.  
   
-```  
-  
+```tsql  
 /*Apply plan guide for the selected query template*/  
 DECLARE @stmt nvarchar(max);  
 DECLARE @params nvarchar(max);  
@@ -188,21 +199,23 @@ EXEC sp_create_plan_guide
   
  모든 쿼리(또는 대부분의 쿼리)가 자동 매개 변수화에 적합한 경우 전체 데이터베이스에 대해 `FORCED PARAMETERIZATION` 을 변경하는 것이 더 나은 옵션일 수 있습니다.  
   
-```  
-  
+```tsql  
 /*Apply forced parameterization for entire database*/  
 ALTER DATABASE <database name> SET PARAMETERIZATION  FORCED;  
 ```  
-  
+
+ > [!NOTE]
+ > 이 항목에 대한 자세한 내용은 [강제 매개 변수화 사용 지침](../../relational-databases/query-processing-architecture-guide.md#ForcedParamGuide)을 참조하세요.
+
  이 단계 중 하나를 적용하면 **상위 리소스 소비 쿼리** 에 워크로드의 다른 그림이 표시됩니다.  
   
  ![query-store-usage-8](../../relational-databases/performance/media/query-store-usage-8.png "query-store-usage-8")  
   
- 경우에 따라 응용 프로그램이 자동 매개 변수화에 적합하지 않은 많은 쿼리를 생성할 수 있습니다. 이 경우 시스템에 많은 쿼리가 표시되지만 고유한 쿼리와 고유한 query_hash 간의 비율은 1에 가까울 수 있습니다.  
+ 경우에 따라 응용 프로그램이 자동 매개 변수화에 적합하지 않은 많은 쿼리를 생성할 수 있습니다. 이 경우 시스템에 많은 쿼리가 표시되지만 고유한 쿼리와 고유한 `query_hash` 간의 비율은 1에 가까울 수 있습니다.  
   
- 이 경우 ‘optimize for ad hoc workloads’를 설정하여 다시 실행되지 않을 가능성이 큰 쿼리에서 캐시 메모리가 낭비되는 것을 방지할 수 있습니다. 쿼리 저장소에서 이러한 쿼리의 캡처를 방지하려면 `QUERY_CAPTURE_MODE` 를 `AUTO`로 설정합니다.  
+ 이 경우 [**임시 작업을 위해 최적화**](../../database-engine/configure-windows/optimize-for-ad-hoc-workloads-server-configuration-option.md) 서버 옵션을 설정하여 다시 실행될 가능성이 낮은 쿼리에서 캐시 메모리가 낭비되는 것을 방지하는 것이 좋습니다. 쿼리 저장소에서 이러한 쿼리의 캡처를 방지하려면 `QUERY_CAPTURE_MODE` 를 `AUTO`로 설정합니다.  
   
-```  
+```tsql  
 sp_configure 'show advanced options', 1;  
 GO  
 RECONFIGURE;  
@@ -218,7 +231,9 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목  
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

@@ -1,0 +1,1 @@
+![예](media/yes.png)Power BI 보고서 서버

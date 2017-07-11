@@ -2,7 +2,7 @@
 title: "SQL Server 2016의 새로운 기능 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 12/15/2016
+ms.date: 06/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,34 +23,35 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a702ff8995bc7d4ad7b67c1e7a9d12299afb068f
+ms.sourcegitcommit: a59a02db0054f3fe1a7e571ad97f23c65b021a77
+ms.openlocfilehash: 331f6b68bb4cdd4803dd0fd634c3584f3b809064
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 06/29/2017
 
 ---
-# <a name="what39s-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
- [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] 은 가장 많이 발전한 Microsoft 데이터 플랫폼입니다. 뛰어난 메모리 내 성능, 새로운 보안 기능 및 고가용성부터 중요 업무용 응용 프로그램을 지능적으로 만드는 고급 분석까지 모든 기능을 기본 제공하는 확장 가능한 데이터베이스 플랫폼을 사용하여 트랜잭션 및 분석 데이터를 실시간으로 파악합니다.
+<a id="whats-new-in-sql-server-2016" class="xliff"></a>
+
+# SQL Server 2016의 새로운 기능
+ SQL Server 2016 - 메모리 내 성능 및 고급 보안부터 데이터베이스 내 분석에 이르기까지 모든 기능이 기본 제공된 확장 가능한 하이브리드 데이터베이스 플랫폼을 사용하여 지능형 중요 업무용 응용 프로그램을 빌드하세요.
  
- 이 항목에는 자세한 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] 구성 요소 수준의 새로운 정보에 대한 링크가 요약되어 있습니다.   
+ 이 페이지에서는 각 구성 요소에 대한 자세한 SQL Server 2016 새로운 기능 정보의 링크를 제공합니다.   
  
   ![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
  
 [SQL Server 2016 버전 데이터시트 읽기](http://download.microsoft.com/download/8/A/2/8A2BC8C5-BBA0-4A9C-90BC-AC957D3454D9/SQL_Server_2016_Editions_datasheet.pdf)
  
     
- **SQL ServeR을 지금 사용해 보세요.**    
- - **무료** [**SQL Server 2016 Developer edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 받으세요.
- 
- 
-[![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**에서 SQL Server 2016을 다운로드하세요. 
+ **SQL Server를 지금 사용해 보세요.**    
+ - **무료** [**SQL Server 2016 Developer Edition**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
     
-[![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 컴퓨터를 실행해 보세요.  
+[![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까? [SQL Server 2016이 이미 설치된 가상 컴퓨터](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)를 설정하세요.
 
- [![Download from Evaluation Center](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) [**최신 버전의 SSMS(SQL Server Management Studio)를 다운로드하세요**](https://msdn.microsoft.com/library/mt238290.aspx).   
+ [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) 최신 버전의 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx)를 다운로드하세요.   
 
     
- ## <a name="whats-new-in-sql-server"></a>SQL Server의 새로운 기능
+<a id="whats-new-in-sql-server" class="xliff"></a>
+
+ ## SQL Server의 새로운 기능
 각 항목에 대한 링크:
  
  - [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)   
@@ -61,17 +62,19 @@ ms.lasthandoff: 06/22/2017
 
  - [새 SQL PowerShell 모듈](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
  
- - [Integration Services](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
+ - [Integration Services(SSIS)](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)    
   
  - [Reporting Services(SSRS)](https://msdn.microsoft.com/library/ms170438.aspx)   
   
- - [MDS&#40;Master Data Services&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)    
+ - [MDS(Master Data Services)](../master-data-services/what-s-new-in-master-data-services-mds.md)    
        
  - [SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)    
       
   
     
-## <a name="see-also"></a>참고 항목    
+<a id="more-links" class="xliff"></a>
+
+## 기타 링크   
  +   [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md). 
 + [SQL Server 2016 데이터시트](http://download.microsoft.com/download/C/5/3/C53C3AEF-653C-4598-8721-D522E8AC6A3A/SQL_Server_2016_Everything_Built-In_Datasheet_EN_US.pdf)
 + [SQL Server 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)
