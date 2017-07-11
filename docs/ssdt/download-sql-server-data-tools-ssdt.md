@@ -1,7 +1,7 @@
 ---
 title: "SSDT(SQL Server Data Tools) 다운로드 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/10/2017
+ms.date: 05/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,7 +23,9 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="download-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 다운로드
+<a id="download-sql-server-data-tools-ssdt" class="xliff"></a>
+
+# SSDT(SQL Server Data Tools) 다운로드
 
 **[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)**는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, Integration Services 패키지, Analysis Services 데이터 모델 및 Reporting Services 보고서를 빌드할 수 있는 최신형 개발 도구로, 무료로 다운로드할 수 있습니다. SSDT를 사용하면 Visual Studio에서 응용 프로그램을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다. 이 릴리스에서는 SQL Server 2017에서 SQL Server 2005까지 지원하며 SQL Server 2016의 새로운 기능을 추가하기 위한 디자인 환경을 제공합니다.  
     
@@ -32,7 +34,9 @@ ms.lasthandoff: 06/22/2017
 
 ![다운로드](../ssdt/media/download.png) [데이터 계층 응용 프로그램 프레임워크(DacFx) 17.1 다운로드](https://www.microsoft.com/download/details.aspx?id=55255)
 
-## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
+<a id="sql-server-data-tools" class="xliff"></a>
+
+## SQL Server Data Tools   
 **버전 정보**  
   
 릴리스 번호: 17.1  
@@ -84,17 +88,23 @@ SSDT의 ISO 이미지를 사용해도 SSDT를 설치하거나 관리 설치 지�
 [러시아어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
 [스페인어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
 
-## <a name="download-visual-studio"></a>Visual Studio 다운로드
+<a id="download-visual-studio" class="xliff"></a>
+
+## Visual Studio 다운로드
 
 * [**Visual Studio Community 2015 다운로드**](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)
 
-## <a name="installing-ssdt-without-visual-studio-pre-installed"></a>Visual Studio를 사전 설치하지 않고 SSDT 설치
+<a id="installing-ssdt-without-visual-studio-pre-installed" class="xliff"></a>
+
+## Visual Studio를 사전 설치하지 않고 SSDT 설치
 
 컴퓨터에 Visual Studio를 설치하지 않은 경우 Visual Studio 2015용 SSDT를 설치하면 Visual Studio 2015의 최소 "통합 셸" 버전도 설치됩니다. 이 버전의 Visual Studio는 원하는 만큼 여러 대의 컴퓨터에서 무료로 설치하고 사용할 수 있습니다. 이 버전은 모든 SQL Server 프로젝트 형식과 더불어 SQL Server 개체 탐색기 및 기타 SQL 도구 환경도 제공합니다.
 
 컴퓨터에 [Visual Studio 2015 Community Edition 이상](https://www.visualstudio.com/products/visual-studio-community-vs.aspx)이 설치된 경우 SSDT를 설치하면 모든 SQL Server 도구가 기존 Visual Studio 설치에 추가됩니다. Visual Studio에는 원본 코드 제어 통합, SQL이 아닌 언어 지원 등과 같이 도움이 되는 여러 기능이 포함되어 있습니다. T-SQL을 개발할 때 최상의 환경을 이용하려면 Visual Studio 2015 Community 이상을 사용하는 것이 좋습니다.
 
-## <a name="supported-sql-versions"></a>지원되는 SQL 버전
+<a id="supported-sql-versions" class="xliff"></a>
+
+## 지원되는 SQL 버전
   
 |프로젝트 템플릿|지원 되는 SQL 플랫폼|  
 |-------------------|--------------------|  
@@ -102,7 +112,9 @@ SSDT의 ISO 이미지를 사용해도 SSDT를 설치하거나 관리 설치 지�
   |Analysis Services 모델<br /><br />Reporting Services 보고서 | SQL Server 2008 – SQL Server 2017|
   |Integration Services 패키지| SQL Server 2012 – SQL Server 2017    |
   
-## <a name="next-steps"></a>다음 단계  
+<a id="next-steps" class="xliff"></a>
+
+## 다음 단계  
 SSDT를 설치한 후 데이터베이스, 패키지, 데이터 모델 및 SSDT를 사용하여 보고서를 만드는 방법에 알아보려면 이 자습서를 연습하세요.  
   
 -   [프로젝트 기반 오프라인 데이터베이스 개발](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
@@ -113,7 +125,9 @@ SSDT를 설치한 후 데이터베이스, 패키지, 데이터 모델 및 SSDT�
   
 -   [기본 테이블 보고서 만들기(SSRS 자습서)](https://msdn.microsoft.com/library/ms167305.aspx)  
   
-## <a name="use-ssdt-in-visual-studio-2017"></a>Visual Studio 2017에서 SSDT 사용 
+<a id="use-ssdt-in-visual-studio-2017" class="xliff"></a>
+
+## Visual Studio 2017에서 SSDT 사용 
 
 * [**Visual Studio 2017 다운로드**](https://www.visualstudio.com/) ([버전별 Visual Studio 2017 기능 비교](https://www.visualstudio.com/vs/compare/))
 
@@ -127,7 +141,9 @@ Visual Studio 2017에서 SSDT를 사용하는 경우 AS 및 RS 구성 요소를 
 * [Reporting Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio)
 
 
-## <a name="see-also"></a>관련 항목:  
+<a id="see-also" class="xliff"></a>
+
+## 관련 항목:  
 [Visual Studio의 SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)  
 [SSDT MSDN 포럼](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt)  
 [SSDT 팀 블로그](http://blogs.msdn.com/b/ssdt/)  
