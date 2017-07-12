@@ -21,7 +21,9 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - 릴리스 정보
+<a id="sql-server-management-studio----release-notes" class="xliff"></a>
+
+# SQL Server Management Studio - 릴리스 정보
 SQL Server Management Studio의 일반 공급 릴리스를 시작합니다.  이번 릴리스의 SSMS(SQL Server Management Studio)는 SQL Server 릴리스 외의 독립 실행형 설치입니다. Microsoft는 이 SSMS 릴리스를 새 기능과 픽스뿐만 아니라 SQL Server 및 Azure SQL 데이터베이스의 최신 기능에 대한 지원으로 자주 업데이트하고자 합니다.  
   
 최신 SQL Server Management Studio를 설치하려면 [SQL Server Management Studio 다운로드&#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
@@ -61,11 +63,15 @@ SQL Server Management Studio의 일반 공급 릴리스를 시작합니다.  이
 5. **도움말을 클릭하거나 F1 키를 눌러도 도움말이 열리지 않음**  
 일부 환경에서는 도움말을 클릭하거나 F1 키를 누르면 **이 ms xhelp을(를) 열려면 새 앱이 필요합니다.**라는 메시지가 나타납니다. 이 오류는 알려진 문제이며 향후 릴리스에서 수정될 예정입니다.
   
-## <a name="feedback"></a>피드백  
+<a id="feedback" class="xliff"></a>
+
+## 피드백  
   
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect에 문제 또는 제안을 기록하세요](https://connect.microsoft.com/SQLServer/Feedback).  
   
-## <a name="see-also"></a>참고 항목  
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목  
 [SQL Server Management Studio 자습서](../ssms/use-sql-server-management-studio.md)  
 [SQL Server Management Studio 다운로드 &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL Server Management Studio의 이전 릴리스](../ssms/previous-sql-server-management-studio-releases.md)  
