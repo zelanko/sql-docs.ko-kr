@@ -32,7 +32,9 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/23/2017
 
 ---
-# <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
+<a id="select-an-account-for-the-sql-server-agent-service" class="xliff"></a>
+
+# SQL Server 에이전트 서비스의 계정 선택
 서비스 시작 계정은 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 에이전트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구성 관리자에서 다음 옵션 중 하나를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스의 계정을 선택하십시오.  
   
 -   **기본 제공 계정**. 다음 기본 제공 Windows 서비스 계정 목록에서 선택할 수 있습니다.  
@@ -44,7 +46,9 @@ ms.lasthandoff: 06/23/2017
   
 -   **계정 지정**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스가 실행되는 Windows 도메인 계정을 지정할 수 있습니다. Windows **Administrators** 그룹의 멤버가 아닌 Windows 사용자 계정을 선택하는 것이 좋습니다. 그러나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스 계정이 로컬 **Administrators** 그룹의 멤버가 아니면 다중 서버 관리 작업 시 제한 사항이 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 '지원되는 서비스 계정 유형'을 참조하십시오.  
   
-## <a name="windows-domain-account-permissions"></a>Windows 도메인 계정의 권한  
+<a id="windows-domain-account-permissions" class="xliff"></a>
+
+## Windows 도메인 계정의 권한  
 보안 향상을 위해 Windows 도메인 계정을 지정하는 **계정 지정**을 선택합니다. 지정한 Windows 도메인 계정에는 다음 권한이 있어야 합니다.  
   
 -   모든 Windows 버전에서 서비스로 로그온할 수 있는 권한(SeServiceLogonRight)  
@@ -68,14 +72,18 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 > WMI 경고 알림을 받으려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트의 서비스 계정에 WMI 이벤트를 포함하는 네임스페이스와 ALTER ANY EVENT NOTIFICATION에 대한 권한이 있어야 합니다.  
   
-## <a name="sql-server-role-membership"></a>SQL Server 역할 멤버 자격  
+<a id="sql-server-role-membership" class="xliff"></a>
+
+## SQL Server 역할 멤버 자격  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스를 실행하는 계정은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 역할의 멤버여야 합니다.  
   
 -   계정은 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 -   다중 서버 작업 처리를 사용하려면 계정이 마스터 서버의 **msdb** 데이터베이스 역할인 **TargetServersRole** 의 멤버여야 합니다.  
   
-## <a name="supported-service-account-types"></a>지원되는 서비스 계정 유형  
+<a id="supported-service-account-types" class="xliff"></a>
+
+## 지원되는 서비스 계정 유형  
 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스에 사용할 수 있는 Windows 계정 유형을 나열합니다.  
   
 |서비스 계정 유형|비클러스터형 서버|클러스터형 서버|도메인 컨트롤러(비클러스터형)|  
@@ -87,29 +95,39 @@ ms.lasthandoff: 06/23/2017
 |로컬 시스템 계정(NT AUTHORITY\System)|지원됨<br /><br />아래의 제한 사항 2를 참조하세요.|지원되지 않음|지원됨<br /><br />아래의 제한 사항 2를 참조하세요.|  
 |로컬 서비스 계정(NT AUTHORITY\LocalService)|지원되지 않음|지원되지 않음|지원되지 않음|  
   
-### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>제한 사항 1: 다중 서버 관리에 비관리자 계정 사용  
+<a id="limitation-1-using-non-administrative-accounts-for-multiserver-administration" class="xliff"></a>
+
+### 제한 사항 1: 다중 서버 관리에 비관리자 계정 사용  
 대상 서버를 마스터 서버에 참여시키면 실패하고 "참여 작업이 실패했습니다."라는 오류 메시지가 표시될 수 있습니다.  
   
 이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스를 모두 다시 시작합니다. 자세한 내용은 [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](http://msdn.microsoft.com/en-us/32660a02-e5a1-411a-9e57-7066ca459df6)을 참조하세요.  
   
-### <a name="limitation-2-using-the-local-system-account-for-multiserver-administration"></a>제한 사항 2: 다중 서버 관리에 로컬 시스템 계정 사용  
+<a id="limitation-2-using-the-local-system-account-for-multiserver-administration" class="xliff"></a>
+
+### 제한 사항 2: 다중 서버 관리에 로컬 시스템 계정 사용  
 마스터 서버와 대상 서버가 같은 컴퓨터에 있을 경우에만 로컬 시스템 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스를 실행할 때 다중 서버 관리가 지원됩니다. 이 구성을 사용하면 대상 서버를 마스터 서버에 참여시킬 때 다음 메시지가 반환됩니다.  
   
 "*<target_server_computer_name>*의 에이전트 시작 계정에 대상 서버로 로그인할 권한이 있는지 확인하세요."  
   
 이 정보 메시지는 무시해도 됩니다. 참여 작업이 성공적으로 완료됩니다. 자세한 내용은 [다중 서버 환경 만들기](../../ssms/agent/create-a-multiserver-environment.md)를 참조하세요.  
   
-### <a name="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user"></a>제한 사항 3: SQL Server 사용자인 경우 네트워크 서비스 계정 사용  
+<a id="limitation-3-using-the-network-service-account-when-it-is-a-sql-server-user" class="xliff"></a>
+
+### 제한 사항 3: SQL Server 사용자인 경우 네트워크 서비스 계정 사용  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 네트워크 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스를 실행하고 해당 네트워크 서비스 계정에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 사용자로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스에 로그인할 수 있는 액세스 권한이 명시적으로 부여된 경우 에이전트가 시작되지 않을 수 있습니다.  
   
 이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 실행되고 있는 컴퓨터를 다시 부팅합니다. 이 작업은 한 번만 수행해야 합니다.  
   
-### <a name="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer"></a>제한 사항 4: 같은 컴퓨터에서 SQL Server Reporting Services가 실행되고 있을 때 네트워크 서비스 계정 사용  
+<a id="limitation-4-using-the-network-service-account-when-sql-server-reporting-services-is-running-on-the-same-computer" class="xliff"></a>
+
+### 제한 사항 4: 같은 컴퓨터에서 SQL Server Reporting Services가 실행되고 있을 때 네트워크 서비스 계정 사용  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 네트워크 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트를 실행하고 같은 컴퓨터에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion_md.md)] 도 실행되고 있으면 에이전트가 시작되지 않을 수 있습니다.  
   
 이 오류를 해결하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 실행되고 있는 컴퓨터를 다시 부팅하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 서비스를 모두 다시 시작합니다. 이 작업은 한 번만 수행해야 합니다.  
   
-## <a name="common-tasks"></a>일반 태스크  
+<a id="common-tasks" class="xliff"></a>
+
+## 일반 태스크  
 **SQL Server 에이전트 서비스의 시작 계정을 지정하려면**  
   
 -   [SQL Server 에이전트의 서비스 시작 계정 설정&amp;#40;SQL Server 구성 관리자&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
@@ -121,7 +139,9 @@ ms.lasthandoff: 06/23/2017
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 구성 관리자를 사용하여 운영 체제가 시작될 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트가 시작되도록 지정할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+<a id="see-also" class="xliff"></a>
+
+## 관련 항목:  
 [Windows 서비스 계정 설정](http://msdn.microsoft.com/en-us/309b9dac-0b3a-4617-85ef-c4519ce9d014)  
 [SQL 컴퓨터 관리자를 사용하여 서비스 관리](http://msdn.microsoft.com/en-us/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
 [SQL Server 에이전트 보안 구현](../../ssms/agent/implement-sql-server-agent-security.md)  
