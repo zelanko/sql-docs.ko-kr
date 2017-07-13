@@ -14,19 +14,21 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2549481c3e09e4b052e0eea40c993ccf191f38ba
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/10/2017
 
 ---
-# <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
+<a id="revert-the-word-breakers-used-by-search-to-the-previous-version" class="xliff"></a>
+
+# 검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 한국어를 제외하고 전체 텍스트 검색에서 지원되는 모든 언어에 대해 단어 분리기 및 형태소 분석기의 버전을 설치하고 활성화합니다. 이 항목에서는 이러한 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다.  
   
  이 항목에서는 다음 언어에 대해 다루지 않습니다.  
   
--   **영어**. 영어 구성 요소를 되돌리거나 복원하려면 [미국 영어 및 영국 영어에 사용되는 단어 분리기 변경](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하세요.  
+-   **영어**. 영어 구성 요소를 되돌리거나 복원하려면 [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)을 참조하세요.  
   
 -   **덴마크어, 터키어 및 폴란드어**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이전 릴리스에 포함된 덴마크어, 폴란드어 및 터키어에 대한 타사 단어 분리기는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구성 요소로 대체되었습니다.  
   
@@ -380,8 +382,10 @@ ms.lasthandoff: 06/22/2017
 |현재 CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |현재 파일 이름|MsWb70804.dll|  
   
-## <a name="see-also"></a>참고 항목  
- [미국 영어 및 영국 영어에 사용되는 단어 분리기 변경](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
+<a id="see-also" class="xliff"></a>
+
+## 참고 항목  
+ [Change the Word Breaker Used for US English and UK English](../../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [전체 텍스트 검색의 동작 변경](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   
   
