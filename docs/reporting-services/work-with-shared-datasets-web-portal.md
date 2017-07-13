@@ -1,7 +1,7 @@
 ---
 title: "공유 데이터 집합 작업 (웹 포털) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/15/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,23 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6dfbc134c0f0e351648d19cf8c485fe25a58eb99
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 집합-웹 포털 작업
+# 공유 데이터 집합-웹 포털 작업
+<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 공유 데이터 집합을 사용하면 데이터 집합의 설정을, 해당 설정을 사용하는 보고서 및 기타 카탈로그 항목과 별도로 관리할 수 있습니다. 공유 데이터 집합은 KPI와 함께 페이지가 매겨진 모바일 보고서에 사용할 수 있습니다.
 
 웹 포털 내에서 공유 데이터 집합의 속성을 보고 관리할 수 있습니다. 웹 포털에서 공유 데이터집합을 만들거나 편집하도록 보고서 작성기를 시작할 수 있습니다.
 
-## <a name="create-a-shared-dataset"></a>공유 데이터 집합 만들기
+## 공유 데이터 집합 만들기
+<a id="create-a-shared-dataset" class="xliff"></a>
   
 새 공유 데이터 집합을 만들려면 다음을 수행합니다.  
   
@@ -47,7 +49,8 @@ ms.lasthandoff: 06/22/2017
   
 6.  데이터 집합을 작성한 후 왼쪽 위에 있는 **저장** 아이콘을 선택하여 데이터 집합을 보고서 서버에 다시 저장합니다.  
   
-## <a name="manage-an-existing-shared-dataset"></a>기존 공유 데이터 집합 관리
+## 기존 공유 데이터 집합 관리
+<a id="manage-an-existing-shared-dataset" class="xliff"></a>
   
 기존 공유 데이터 집합을 관리하려면, 다음을 수행합니다.  
   
@@ -62,13 +65,15 @@ ms.lasthandoff: 06/22/2017
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## <a name="properties"></a>속성
+## 속성
+<a id="properties" class="xliff"></a>
   
 속성 화면에서 데이터 집합의 **이름** 과 **설명** 을 변경할 수 있습니다. **삭제**, **이동**, **보고서 작성기에서 편집**, **다운로드** 또는 **대체**도 가능합니다.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## <a name="caching"></a>캐싱
+## 캐싱
+<a id="caching" class="xliff"></a>
   
 데이터 집합의 데이터 캐싱에 대한 옵션도 제공됩니다. 간단한 선택부터 시작할 수 있습니다.  
   
@@ -82,7 +87,8 @@ ms.lasthandoff: 06/22/2017
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### <a name="cache-expiration"></a>캐시 만료  
+### 캐시 만료
+<a id="cache-expiration" class="xliff"></a>  
   
 일정 시간이 지난 후에 공유 데이터 집합의 캐시를 만료시킬지 또는 예약을 통해 만료시킬지를 제어할 수 있습니다. 공유 일정을 사용할 수 있습니다.  
   
@@ -91,7 +97,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > 만료를 설정하더라도 캐시가 새로 고쳐지지는 않습니다. 캐시 새로 고침 계획이 없는 경우, 데이터 집합을 다음에 실행할 때 데이터가 새로 고쳐집니다.  
   
-### <a name="cache-refresh-plans"></a>캐시 새로 고침 계획  
+### 캐시 새로 고침 계획
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 캐시 새로 고침 계획을 사용하여 공유 데이터 집합의 데이터 임시 사본으로 캐시를 사전에 로드할 일정을 만들 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.   
   

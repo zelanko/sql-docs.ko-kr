@@ -2,7 +2,7 @@
 title: Reporting Services (SSRS) | Microsoft Docs
 description: "도구 및 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 온-프레미스에서 Power BI 보고서에 대 한 서비스에 알아봅니다."
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 07/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,22 +23,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 053323f96e489f264e50b2db4e120f19ccbd4dcd
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 49f990d30564a2c4fc38a527e7da1e97f9a21ca1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
 
-# <a name="what-is-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)란?
+# SSRS(SQL Server Reporting Services)란?
+<a id="what-is-sql-server-reporting-services-ssrs" class="xliff"></a>
 
-> 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Reporting Services (SSRS)](https://msdn.microsoft.com/en-US/library/ms159106(SQL.120).aspx)합니다.
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
 
 만들기, 배포 및 모바일 및 페이지가 매겨진 Reporting Services 보고서 및 온-프레미스 즉시 사용할 도구 및 SQL Server Reporting Services (SSRS)와 Power BI에서 제공 하는 서비스의 범위와 Power BI 보고서를 관리 합니다.
 
 ![SQL Server Reporting Services 모두 함께](../reporting-services/media/ss-reporting-services-all-together.png "SQL Server Reporting Services 모두 함께")
 
-## <a name="create-deploy-and-manage-mobile-and-paginated-reports"></a>만들기, 배포 및 관리할 모바일 및 페이지가 매겨진 보고서
+## 만들기, 배포 및 관리할 모바일 및 페이지가 매겨진 보고서
+<a id="create-deploy-and-manage-mobile-and-paginated-reports" class="xliff"></a>
 
 SQL Server Reporting Services는 고객이 보고서를 만들고, 게시하고, 관리한 다음 웹 브라우저에서 보거나, 모바일 장치에서 보거나, 받은 편지함에서 메일로 보는지에 관계없이 다양한 방식으로 적절한 사용자에게 제공하기 위해 자신의 프레미스에 배포하는 솔루션입니다.
 
@@ -53,7 +57,8 @@ SQL Server 2016의 Reporting Services에서는 업데이트된 제품군을 제�
 > [!NOTE]
 > Power BI 보고서 서버를 찾고 있나요? 참조 [Power BI 보고서 서버와 함께 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)합니다.
 
-### <a name="whats-new-in-reporting-services"></a>Reporting Services의 새로운 기능
+### Reporting Services의 새로운 기능
+<a id="whats-new-in-reporting-services" class="xliff"></a>
 
 SQL Server 2016 Reporting Services의 새로운 기능에서는 다음 원본이 최신 상태로 유지됩니다.
 
@@ -61,7 +66,8 @@ SQL Server 2016 Reporting Services의 새로운 기능에서는 다음 원본이
 * [SQL Server Reporting Services 팀 블로그](https://blogs.msdn.microsoft.com/sqlrsteamblog/)
 * [Guy in a Cube YouTube 채널](https://www.youtube.com/channel/UCFp1vaKzpfvoGai0vE5VJ0w)
 
-## <a name="paginated-reports"></a>페이지를 매긴 보고서
+## 페이지를 매긴 보고서
+<a id="paginated-reports" class="xliff"></a>
 
 ![ssrs-paginated-reports](../reporting-services/media/ssrs-paginated-reports.png)
 
@@ -74,7 +80,8 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 * PowerPoint 같은 새로운 형식으로 내보낼 수 있습니다. PowerPoint의 Reporting Services 시각화는 스크린샷이 아니라 라이브이고 편집 가능합니다.
 * 하이브리드 Power BI/Reporting Services 환경을 만들 수 있습니다. Power BI에서 온-프레미스 Reporting Services 보고서를 다시 만들지 않고 해당 보고서의 시각적 개체를 Power BI 대시보드에 고정할 수 있습니다. 그런 다음 Power BI 대시보드의 한 곳에서 모든 항목을 모니터링할 수 있습니다.
 
-## <a name="mobile-reports"></a>모바일 보고서
+## 모바일 보고서
+<a id="mobile-reports" class="xliff"></a>
 
 ![ssrs-mobile-reports](../reporting-services/media/ssrs-mobile-reports.png)
 
@@ -84,7 +91,8 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 새로운 [모바일 보고서 게시자](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 앱에서 이러한 모바일 보고서를 만듭니다. 그런 다음 Windows 10, iOS, Android 및 HTML5에 대한 기본 [모바일 장치용 Power BI 앱](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/) 에서 Power BI 클라우드에 있는 데이터 및 온-프레미스 SQL Server 2016 Reporting Services 데이터에 액세스할 수 있습니다. 시각화를 만들면 모바일 보고서 게시자가 각각에 대한 샘플 데이터를 자동으로 생성하므로 시각화에 데이터가 어떻게 표시되는지, 각 시각화에서 어떤 종류의 데이터가 제대로 작동하는지 확인할 수 있습니다.
 
-## <a name="web-portal"></a>웹 포털
+## 웹 포털
+<a id="web-portal" class="xliff"></a>
 
 ![ssrs-web-portal](../reporting-services/media/ssrs-web-portal.png)
 
@@ -100,19 +108,22 @@ Reporting Services는 "기존"의 페이지를 매긴 문서 스타일 보고서
 
 에 대해 더 알아봅니다는 [웹 포털 (SSRS 기본 모드)](../reporting-services/web-portal-ssrs-native-mode.md)합니다.
 
-## <a name="reporting-services-in-sharepoint-integrated-mode"></a>SharePoint 통합 모드의 Reporting Services
+## SharePoint 통합 모드의 Reporting Services
+<a id="reporting-services-in-sharepoint-integrated-mode" class="xliff"></a>
 
 SharePoint 통합 모드의 Repoorting Services에 보고서를 게시합니다. 보고서 처리를 예약하고, 필요할 때 보고서에 액세스하며, 게시된 보고서를 구독하고, 보고서를 Microsoft Excel과 같은 다른 응용 프로그램으로 내보낼 수 있습니다. 또한 SharePoint 사이트에 게시된 보고서에 대한 데이터 경고를 만들고 보고서 데이터가 변경되면 전자 메일 메시지를 수신할 수 있습니다.  
 
 [SharePoint 통합 모드의 Reporting Services 보고서 서버](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)에 대해 자세히 알아보세요.
 
-## <a name="includessrsnoversionincludesssrsnoversion-mdmd-programming-features"></a>[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 프로그래밍 기능
+## [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 프로그래밍 기능
+<a id="includessrsnoversionincludesssrsnoversion-mdmd-programming-features" class="xliff"></a>
 
 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 프로그래밍 기능을 활용하면 사용자 지정 응용 프로그램에서 데이터 및 보고서 처리 기능을 통합하거나 확장하는 API를 통해 보고 기능을 확장하고 사용자 지정할 수 있습니다.
 
 [Reporting Services 개발자 설명서](../reporting-services/reporting-services-developer-documentation.md)를 참조하세요. 
 
-## <a name="next-steps"></a>다음 단계
+## 다음 단계
+<a id="next-steps" class="xliff"></a>
 
 * [Reporting Services 설치](../reporting-services/install-windows/install-reporting-services.md)  
 * [보고서 작성기 설치](../reporting-services/install-windows/install-report-builder.md)   

@@ -2,7 +2,7 @@
 title: "Reporting Services 설치 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 4f54a27cbe1553291095e8124bac55941d4eb326
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 9d336624d3a9468757363bc468e5cd85d607cbfd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="install-reporting-services"></a>Reporting Services 설치
+# Reporting Services 설치
+<a id="install-reporting-services" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에는 보고서 항목을 저장하고 보고서를 렌더링하며 구독 및 기타 보고서 서비스를 처리하기 위한 서버 구성 요소가 포함됩니다.  서버 설치 단계는 기본 모드 보고서 서버와 SharePoint 모드 보고서 서버가 서로 다릅니다. 이 섹션에는 핵심 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 시나리오를 설치 및 확인하는 자세한 항목이 포함됩니다.
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
+
+SQL Server Reporting Services 설치에는 보고서 항목을 저장 하면 보고서를 렌더링 하 고 구독 및 기타 보고서 서비스 처리를 위한 서버 구성 요소가 포함 됩니다.  서버 설치 단계는 기본 모드 보고서 서버와 SharePoint 모드 보고서 서버가 서로 다릅니다. 이 섹션에는 핵심 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 시나리오를 설치 및 확인하는 자세한 항목이 포함됩니다.
 
 > [!NOTE]
 > Power BI 보고서 서버를 찾고 있나요? 참조 [Power BI 보고서 서버 설치](https://powerbi.microsoft.com/documentation/reportserver-install-report-server/)합니다.
@@ -47,7 +50,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]
 > SSDT(SQL Server Data Tools)는 SQL Server 2016에 포함되지 않습니다. [SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714).
 
-## <a name="next-steps"></a>다음 단계
+## 다음 단계
+<a id="next-steps" class="xliff"></a>
 
 [SharePoint 및 Reporting Services 서버 및 추가 기능에서 지원 되는 조합](../../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  

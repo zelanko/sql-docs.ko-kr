@@ -1,7 +1,7 @@
 ---
 title: "경고 관리자에 대 한 데이터 경고 관리자 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c9d88d14b1f67a6d8da584349062de51e75ebf02
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 4690c2cc9c6f9cbf9d9591993e1c2483489e6114
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-alerting-administrators"></a>경고 담당자를 위한 데이터 경고 관리자입니다.
+# 경고 담당자를 위한 데이터 경고 관리자입니다.
+<a id="data-alert-manager-for-alerting-administrators" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 데이터 경고를 관리할 수 있도록 SharePoint 경고 담당자를 위한 데이터 경고 관리자가 제공됩니다. 경고 담당자는 사이트에 저장된 모든 경고에 대한 정보를 보고, 경고를 삭제할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 SharePoint 경고 담당자가 사용할 수 있는 기능을 보여 줍니다.
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services 데이터 경고를 관리 하려면 SharePoint 경고 관리자에 대 한 데이터 경고 관리자를 제공 합니다. 경고 담당자는 사이트에 저장된 모든 경고에 대한 정보를 보고, 경고를 삭제할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 SharePoint 경고 담당자가 사용할 수 있는 기능을 보여 줍니다.
 
 ![경고 관리자 SharePoin 경고 관리자에 대 한](../reporting-services/media/rs-alertmanagersite.gif "SharePoint 사이트 관리자에 대 한 경고 관리자")
 
@@ -79,7 +82,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [Manage All Data Alerts on a SharePoint Site in Data Alert Manager](../reporting-services/manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager.md)  
 
-## <a name="see-also"></a>관련 항목:
+## 관련 항목:
+<a id="see-also" class="xliff"></a>
 
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 

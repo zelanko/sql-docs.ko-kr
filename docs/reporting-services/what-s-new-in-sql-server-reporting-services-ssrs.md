@@ -1,6 +1,6 @@
 ---
-title: "어떤 &#39; Reporting Services (SSRS)의 새로운 | Microsoft Docs"
-ms.date: 05/30/2017
+title: "Reporting Services (SSRS)의 새로운 소식 | Microsoft Docs"
+ms.date: 07/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,13 +20,18 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7428fd46c73c7e32814928ae95085a704167544d
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="what39s-new-in-sql-server-reporting-services-ssrs"></a>어떤 &#39; 새로운에서 SQL Server Reporting Services (SSRS)
+
+# SSRS(SQL Server Reporting Services)의 새로운 기능
+<a id="whats-new-in-sql-server-reporting-services-ssrs" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
+
 SQL Server의 새로운 기능에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다. 여기에서는 주요 기능 영역에 설명하고 출시된 새 항목에 맞게 업데이트되었습니다.
   
   SQL Server의 다른 영역의 새로운 기능에 대 한 자세한 내용은 참조 [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) 또는 [SQL Server 2016의 새로운](../sql-server/what-s-new-in-sql-server-2016.md)합니다.
@@ -43,7 +48,8 @@ SQL Server의 새로운 기능에 대 한 자세한 내용은 [!INCLUDE[ssRSnove
 
 Power BI 보고서 서버에 대 한 정보를 참조 하십시오. [Power BI 보고서 서버와 함께 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)합니다.
 
-## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>보고서 작성기 및 SQL Server Data Tools에서 이제 DAX에 대 한 디자이너 지원을 쿼리합니다
+## 보고서 작성기 및 SQL Server Data Tools에서 이제 DAX에 대 한 디자이너 지원을 쿼리합니다
+<a id="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools" class="xliff"></a>
 
 최신 버전의 보고서 작성기와 SQL Server Data Tools-릴리스 후보에서 이제 지원 되는 SQL Server Analysis Services 표 형식 데이터 모델에 대 한 네이티브 DAX 쿼리를 만들 수 있습니다. DAX 쿼리를 직접 작성 하는 대신 자동으로 생성 원하는 필드 끌어서 두 도구 모두에 쿼리 디자이너를 사용할 수 있습니다.  
  
@@ -54,9 +60,11 @@ Power BI 보고서 서버에 대 한 정보를 참조 하십시오. [Power BI �
 
 > **참고**: 기본 제공 SQL Server 2016 +의 SSAS 테이블 형식 데이터 원본과 DAX에 대 한 쿼리 디자이너를만 사용할 수 있습니다.
  
-## <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
+## SQL Server 2016의 새로운 기능
+<a id="whats-new-in-sql-server-2016" class="xliff"></a>
   
-### <a name="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]  
+### Reporting Services [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
+<a id="reporting-services-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a>  
  새 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 을 사용할 수 있습니다. 이는 KPI, 모바일 보고서, 페이지를 매긴 보고서 및 Excel과 Power BI Desktop 파일을 통합하는 업데이트된 최신 포털입니다. [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 은 이전 릴리스의 보고서 관리자를 대체한 것입니다. ClickOnce 기술 없이 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 에서 모바일 보고서 게시자 및 보고서 작성기를 다운로드할 수도 있습니다.
  
  모바일 보고서를 만들려면 [!INCLUDE[SS_MobileReptPub_Short](../includes/ss-mobilereptpub-short-md.md)]가 필요합니다.  
@@ -65,40 +73,46 @@ Power BI 보고서 서버에 대 한 정보를 참조 하십시오. [Power BI �
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 대한 사용자 지정 브랜딩 
-  브랜딩 팩을 사용하여 조직의 로고 및 색상으로 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]을 사용자 지정할 수 있습니다.  
+ #### [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 대한 사용자 지정 브랜딩
+<a id="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
+  브랜딩 팩을 사용하여 조직의 로고 및 색상으로 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 을 사용자 지정할 수 있습니다.  
   
   사용자 지정 브랜딩에 대한 자세한 내용은 [웹 포털 브랜딩](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)을 참조하세요.
  
- #### <a name="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]의 KPI(핵심 성과 지표) 
+ #### [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]
+<a id="key-performance-indicators-kpi-in-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd" class="xliff"></a> 
 
-현재 폴더 상황에 맞는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에서 직접 KPI를 만들 수 있습니다. KPI를 만들 때 데이터 집합 필드를 선택하고 이러한 값을 요약할 수 있습니다. 관련 콘텐츠를 선택하여 더 세부적으로 드릴스루할 수 있습니다.
+현재 폴더 상황에 맞는 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 에서 직접 KPI를 만들 수 있습니다. KPI를 만들 때 데이터 집합 필드를 선택하고 이러한 값을 요약할 수 있습니다. 관련 콘텐츠를 선택하여 더 세부적으로 드릴스루할 수 있습니다.
   
  ![ssrs-webportal-kpi](../reporting-services/media/ssrs-webportal-kpi.png)
  
  자세한 내용은 [웹 포털에서 KPI 사용](http://msdn.microsoft.com/en-us/a28cf500-6d47-4268-a248-04837e7a09eb)을 참조하세요.
   
  
- ### <a name="mobile-reports"></a>모바일 보고서
+ ### 모바일 보고서
+<a id="mobile-reports" class="xliff"></a>
  
 Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 전용 보고서로서, 모바일 장치에서 보고서에 액세스하는 사용자에게 최적의 환경을 제공합니다. 모바일 보고서는 시간, 범주 및 비교 차트부터 트리맵 및 사용자 지정 맵까지의 다양한 시각화 기능을 사용합니다. 온-프레미스 SQL Server Analysis Services 다차원 및 테이블 형식 데이터를 포함하여 모바일 보고서를 다양한 데이터 원본에 연결합니다. 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 모바일 보고서를 만듭니다. 그런 다음 Reporting Service 서버에 이러한 모바일 보고서를 저장하고, 브라우저 또는 iPad, iPhone, Android 휴대폰 및 Windows 10 장치의 Power BI 모바일 앱에서 이를 보고 조작합니다.
   
-#### <a name="mobile-report-publisher"></a>모바일 보고서 게시자  
+#### 모바일 보고서 게시자
+<a id="mobile-report-publisher" class="xliff"></a>  
  [!INCLUDE[SS_MobileReptPub_Long](../includes/ss-mobilereptpub-long-md.md)]를 사용하여 SQL Server 모바일 보고서를 만들고 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 게시할 수 있습니다.  
   
  ![SS_MRP_LayoutTabSmall](../reporting-services/media/ss-mrp-layouttabsm.png "SS_MRP_LayoutTabSmall")  
   
  자세한 내용은 [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)를 참조하세요.  
   
-#### <a name="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app"></a>Power BI 모바일 앱에서 사용할 수 있는 Reporting Services에서 호스트되는 SQL Server 모바일 보고서  
+#### Power BI 모바일 앱에서 사용할 수 있는 Reporting Services에서 호스트되는 SQL Server 모바일 보고서
+<a id="sql-server-mobile-reports-hosted-in-reporting-services-available-in-power-bi-mobile-app" class="xliff"></a>  
  이제 iPad 및 iPhone의 iOS용 Power BI 모바일 앱에서 로컬 보고서 서버에서 호스트되는 SQL Server 모바일 보고서를 표시할 수 있습니다.  
   
  ![SS_MRP_iPad_HomeSm](../reporting-services/media/ss-mrp-ipad-homesm.png "SS_MRP_iPad_HomeSm")  
   
  일부 구성 변경 없이는 기본적으로 연결할 수 없습니다. Power BI 모바일 앱을 보고서 서버에 연결하는 방법에 대한 자세한 내용은 [Enable a report server for Power BI Mobile access](../reporting-services/report-server/enable-a-report-server-for-power-bi-mobile-access.md)을 참조하세요.
   
-### <a name="support-of-sharepoint-mode-and-sharepoint-2016"></a>SharePoint 모드 및 SharePoint 2016 지원  
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] supports integration with SharePoint 2013 and SharePoint 2016.
+### SharePoint 모드 및 SharePoint 2016 지원
+<a id="support-of-sharepoint-mode-and-sharepoint-2016" class="xliff"></a>  
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 SharePoint 2013 및 SharePoint 2016과의 통합을 지원합니다.
  
 참조 항목:  
   
@@ -108,10 +122,12 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
   
 -   [Reporting Services SharePoint 모드 설치](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)  
 
-### <a name="microsoft-net-framework-4-support"></a>Microsoft .NET Framework 4 지원  
+### Microsoft .NET Framework 4 지원
+<a id="microsoft-net-framework-4-support" class="xliff"></a>  
  [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 는 현재 버전의 Microsoft .NET Framework 4를 지원합니다. 여기에는 버전 4.0 및 4.5.1이 포함됩니다. 설치된 .Net Framework 4.x 버전이 없는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서 기능 설치 단계 중에 .NET 4.0을 설치합니다.  
 
-### <a name="report-improvements"></a>보고서 고급 기능
+### 보고서 고급 기능
+<a id="report-improvements" class="xliff"></a>
 
 **HTML 5 렌더링 엔진:** 최신 웹 "완전" 표준 모드 및 최신 브라우저를 대상으로 하는 새로운 HTML5 렌더링 엔진이 제공됩니다.  새 렌더링 엔진은 몇몇 이전 브라우저에서 사용하는 쿼크 모드에 더 이상 의존하지 않습니다.
   
@@ -145,7 +161,8 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 
 ![ssrs-pdf-printing](../reporting-services/media/ssrs-pdf-printing.png)
 
-### <a name="subscription-improvements"></a>구독 개선 사항  
+### 구독 개선 사항
+<a id="subscription-improvements" class="xliff"></a>  
  
 |기능|지원되는 서버 모드|  
 |-------------|---------------------------|  
@@ -154,10 +171,12 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 |**구독 소유자 변경**. 구독 소유자를 신속하게 변경할 수 있도록 사용자 인터페이스가 향상되었습니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에서는 관리자가 스크립트를 사용하여 구독 소유자를 변경할 수 있습니다. [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 릴리스부터 사용자 인터페이스 또는 스크립트를 사용하여 구독 소유자를 변경할 수 있습니다. 구독 소유자 변경은 사용자가 퇴사하거나 조직에서 역할이 변경된 경우에 수행되는 일반적인 관리 작업입니다.|SharePoint 모드 및 기본 모드|  
 |**파일 공유 구독에 대한 공유 자격 증명**. 이제 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 파일 공유 구독에서 사용할 수 있는 두 가지 워크플로가 있습니다.<br /><br /> 이 릴리스의 새로운 기능으로, [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 관리자는 일대다 구독에서 사용할 수 있는 단일 파일 공유 계정을 구성할 수 있습니다. 파일 공유 계정은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 구성 관리자 **파일 공유 계정 지정**에서 구성됩니다. 그러면 사용자는 구독 구성 페이지에서 **파일 공유 계정 사용**을 선택합니다.<br /><br /> 개별 구독을 대상 파일 공유에 대한 특정 자격 증명으로 구성합니다.<br /><br /> 또한, 두 가지 방법을 혼용하여 일부 파일 공유 구독은 중앙식 파일 공유 계정을 사용하고 다른 구독은 특정 자격 증명을 사용하도록 할 수 있습니다.|기본 모드|  
 
-### <a name="sql-server-data-tools-ssdt"></a>SQL  Server  Data  Tools(SSDT)  
+### SQL  Server  Data  Tools(SSDT)
+<a id="sql-server-data-tools-ssdt" class="xliff"></a>  
  SSDT의 새 릴리스에는 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]용 프로젝트 템플릿(보고서 서버 프로젝트 마법사 및 보고서 서버 프로젝트)이 포함되어 있습니다. SSDT를 다운로드하는 방법에 대한 자세한 내용은 [Visual Studio 2015용 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkId=827542)를 참조하세요.  
 
-### <a name="report-builder-improvements"></a>보고서 작성기 고급 기능
+### 보고서 작성기 고급 기능
+<a id="report-builder-improvements" class="xliff"></a>
 
 **새 보고서 작성기 사용자 인터페이스:** 핵심 [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 사용자 인터페이스가 이제 간소화된 UI 요소가 포함된 세련된 디자인으로 바뀌었습니다.  
   
@@ -177,7 +196,8 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
   
 -   [높은 DPI 및 Windows 8.1](http://technet.microsoft.com/library/dn528848.aspx)  
 
-## <a name="next-steps"></a>다음 단계
+## 다음 단계
+<a id="next-steps" class="xliff"></a>
 
 [Analysis Services의 새로운 기능](http://msdn.microsoft.com/en-us/aa69c299-b8f4-4969-86d8-b3292fe13f08)  
 [SSRS의 Power BI 기술 미리 보기 보고서 - 릴리스 정보](../reporting-services/reporting-services-release-notes.md)  

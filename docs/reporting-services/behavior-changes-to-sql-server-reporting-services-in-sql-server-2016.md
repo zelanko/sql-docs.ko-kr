@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 | Microsoft Docs"
-ms.date: 05/30/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -28,22 +28,30 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f052253295b400bbbbe9d0db25349916e19c2ad2
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2016"></a>SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용
-  이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용 기능 작동 또는 이전 버전의 SQL Server와 비교해 서 SQL Server 2016에서 상호 작용 방식에 영향을 줍니다.  
-  
- 동작 변경 내용이 없습니다.
 
-## <a name="next-steps"></a>다음 단계
+# SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
+<a id="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+이 항목에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 동작 변경 내용에 대해 설명합니다. 동작 변경 내용 기능 작동 또는 이전 버전의 SQL Server와 비교해 서 SQL Server 2016에서 상호 작용 방식에 영향을 줍니다.  
+
+동작 변경 내용이 없습니다.
+
+## 다음 단계
+<a id="next-steps" class="xliff"></a>
 
 [Reporting Services의 새로운 기능](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
 [SQL Server 2016의 SQL Server Reporting Services에서 사용되지 않는 기능](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  
-[SQL Server 2016에서 SQL Server Reporting Services에 지원 되지 않는 기능](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
+[SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md)   
 [SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

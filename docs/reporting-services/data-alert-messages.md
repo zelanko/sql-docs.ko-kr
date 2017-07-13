@@ -1,7 +1,7 @@
 ---
 title: "데이터 경고 메시지는 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,17 +16,20 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1182111ce441c5a02417532cf4344ceb4ce7e44e
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-messages"></a>데이터 경고 메시지
+# 데이터 경고 메시지
+<a id="data-alert-messages" class="xliff"></a>
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고는 데이터 경고 결과가 포함된 메시지와 오류 설명이 포함된 메시지의 두 가지 종류의 데이터 경고 메시지를 전자 메일로 제공합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+SQL Server Reporting Services 데이터 경고 전자 메일을 통해 두 종류의 데이터 경고 메시지를 제공: 경고 메시지와 데이터 결과 전자 메일로 제공 합니다. 결과가 포함된 메시지는 모든 받는 사람에게 유용하고 비즈니스 의사 결정을 내리는 데 중요한 보고서 데이터 변경 사항에 대해 알려줍니다. 오류가 발생하여 결과를 사용할 수 없는 경우 오류 메시지를 대신 보냅니다.
 
 또한 데이터 경고 정의 소유자는 데이터 경고 관리자에서 데이터 경고 인스턴스에 대한 정보를 볼 수 있습니다. 자세한 내용은 [Data Alert Manager for SharePoint Users](../reporting-services/data-alert-manager-for-sharepoint-users.md)을 참조하세요.  
 
@@ -70,7 +73,8 @@ ms.lasthandoff: 06/22/2017
   
 -   [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
-## <a name="see-also"></a>관련 항목:
+## 관련 항목:
+<a id="see-also" class="xliff"></a>
 
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  

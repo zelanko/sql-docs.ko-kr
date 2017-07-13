@@ -1,7 +1,7 @@
 ---
 title: "SharePoint 사용자 용 데이터 경고 관리자 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 07/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,21 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f8d31181dd32ab6d48bdc3452986c6ed1c51f9f8
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="data-alert-manager-for-sharepoint-users"></a>SharePoint 사용자용 데이터 경고 관리자
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../includes/ssrs-appliesto-sql2016-xpreview.md)][!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+# SharePoint 사용자용 데이터 경고 관리자
+<a id="data-alert-manager-for-sharepoint-users" class="xliff"></a>
 
-[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 데이터 경고를 관리할 수 있도록 SharePoint 정보 근로자를 위한 데이터 경고 관리자가 제공됩니다. SharePoint 정보 근로자는 자신이 만든 경고에 대한 정보를 보고, 경고를 삭제하고, 경고 정의를 열어서 편집하고, 요청 시 경고를 실행할 수 있습니다. 또한 단일 보고서에 대한 경고만 보거나 모든 보고서에 대한 경고를 보도록 선택할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 정보 근로자에게 제공되는 기능들을 보여 줍니다.
+[!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
+
+[!INCLUDE [ssrs-previous-versions](../includes/ssrs-previous-versions.md)]
+
+[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]데이터 경고를 관리 하는 SharePoint 정보 근로자를 위한 데이터 경고 관리자를 제공 합니다. SharePoint 정보 근로자는 자신이 만든 경고에 대한 정보를 보고, 경고를 삭제하고, 경고 정의를 열어서 편집하고, 요청 시 경고를 실행할 수 있습니다. 또한 단일 보고서에 대한 경고만 보거나 모든 보고서에 대한 경고를 보도록 선택할 수 있습니다. 다음 그림에서는 데이터 경고 관리자에서 정보 근로자에게 제공되는 기능들을 보여 줍니다.
 
 ![SharePoint 사용자 용 경고 관리자 기능](../reporting-services/media/rs-alertmanageriw.gif "SharePoint 사용자를 위한 경고 관리자 기능")  
 
@@ -86,7 +90,8 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
 -   [경고 디자이너에서 데이터 경고 편집](../reporting-services/edit-a-data-alert-in-alert-designer.md)  
 
 
-## <a name="see-also"></a>관련 항목:
+## 관련 항목:
+<a id="see-also" class="xliff"></a>
 
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
 [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)   

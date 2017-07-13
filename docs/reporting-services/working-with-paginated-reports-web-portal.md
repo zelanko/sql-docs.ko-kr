@@ -1,7 +1,7 @@
 ---
 title: "페이지 매긴된 보고서 (웹 포털) 사용 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 07/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,19 +15,22 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 222b9ae4ca3ff3f1dd1f08205a502473fea07da4
+ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
+ms.openlocfilehash: c6dcc44b05633004bd525d337c8303c1a8180121
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/03/2017
 
 ---
-# <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../includes/ssrs-appliesto-sql2016-preview.md)]
+# 페이지를 매긴 보고서 사용(웹 포털)
+<a id="working-with-paginated-reports-web-portal" class="xliff"></a>
+
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
 웹 포털 내에서 페이지를 매긴 보고서의 속성을 보고 관리할 수 있습니다. 웹 포털에서 페이지를 매긴 보고서를 만들거나 편집할 수 있는 보고서 작성기를 시작할 수 있습니다.  
    
-## <a name="create-a-paginated-report"></a>페이지를 매긴 보고서 만들기  
+## 페이지를 매긴 보고서 만들기
+<a id="create-a-paginated-report" class="xliff"></a>  
   
 새 공유 데이터 집합을 만들려면 다음을 수행합니다.  
   
@@ -41,7 +44,8 @@ ms.lasthandoff: 06/22/2017
   
 4.  보고서를 작성한 후 왼쪽 위에 있는 **저장** 아이콘을 선택하여 페이지를 매긴 보고서를 보고서 서버에 다시 저장합니다.  
   
-## <a name="manage-an-existing-paginated-report"></a>기존 페이지를 매긴 보고서 관리  
+## 기존 페이지를 매긴 보고서 관리
+<a id="manage-an-existing-paginated-report" class="xliff"></a>  
   
 기존 페이지를 매긴 보고서를 관리하려면 다음을 수행합니다.  
   
@@ -56,19 +60,22 @@ ms.lasthandoff: 06/22/2017
     
     ![ssRSWebPortal-manage-report2](../reporting-services/media/ssrswebportal-manage-report2.png)  
   
-## <a name="properties"></a>속성  
+## 속성
+<a id="properties" class="xliff"></a>  
   
 속성 화면에서 페이지를 매긴 보고서의 **이름** 과 **설명** 을 변경할 수 있습니다. 또한 **삭제**, **이동**, **링크된 보고서 만들기**, **보고서 작성기에서 편집**, **다운로드** 또는 **대체**할 수 있습니다.  
     
 ![ssRSWebPortal-report-properties](../reporting-services/media/ssrswebportal-report-properties.png)  
    
-## <a name="parameters"></a>매개 변수  
+## 매개 변수
+<a id="parameters" class="xliff"></a>  
   
 페이지를 매긴 보고서의 기존 매개 변수를 수정할 수 있습니다. 새 매개 변수를 추가하려면 보고서 작성기 또는 SQL Server Data Tools에서 보고서를 편집해야 합니다.  
   
 ![ssRSWebPortal-report-parameters](../reporting-services/media/ssrswebportal-report-parameters.png)  
    
-## <a name="data-source"></a>데이터 원본  
+## 데이터 원본
+<a id="data-source" class="xliff"></a>  
 공유 데이터 원본을 가리키거나 사용자 지정 데이터 원본에 대한 연결 정보를 입력할 수 있습니다.  
   
 ![ssRSWebPortal-report-datasource](../reporting-services/media/ssrswebportal-report-datasource.png)  
@@ -124,15 +131,18 @@ ms.lasthandoff: 06/22/2017
   
 이 옵션을 사용하려면 보고서 서버를 위한 무인 실행 계정을 먼저 구성해야 합니다. 무인 실행 계정은 다른 자격 증명 과정을 사용할 수 없는 경우 외부 데이터 원본에 연결하는 데 사용됩니다. 이 옵션을 지정하고 계정을 구성하지 않으면 보고서 데이터 원본에 연결하지 못하고 보고서가 처리되지 않습니다. 이 계정에 대한 자세한 내용은 [무인 실행 계정 구성(SSRS 구성 관리자)](../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.  
   
-## <a name="subscriptions"></a>구독  
+## 구독
+<a id="subscriptions" class="xliff"></a>  
 Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으로 보고서를 지정하는 파일 형식으로 배달하는 구성입니다. 예를 들어 수요일마다 MonthlySales.rdl 보고서를 Microsoft Word 문서로 파일 공유에 저장합니다. 구독을 사용하면 특정 보고서 매개 변수 값 집합을 사용하여 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 자세한 내용은 참조 [구독 작업](working-with-subscriptions-web-portal.md)합니다.
   
 ![ssRSWebPortal-report-subscription1](../reporting-services/media/ssrswebportal-report-subscription1.png)
    
-## <a name="dependent-items"></a>종속 항목  
+## 종속 항목
+<a id="dependent-items" class="xliff"></a>  
 종속 항목 페이지를 사용하여 이 보고서를 참조하는 항목의 목록을 볼 수 있습니다. 각 항목 유형에 대한 아이콘을 통해 무엇인지 구분할 수 있습니다. 그런 다음 선택할 수는 **줄임표 (...)**  이러한 항목을 관리 하려면 각 항목에 추가 합니다.  
   
-## <a name="caching"></a>캐싱  
+## 캐싱
+<a id="caching" class="xliff"></a>  
 페이지를 매긴 보고서의 데이터 캐싱에 대한 옵션도 제공됩니다. 간단한 선택부터 시작할 수 있습니다.  
   
 1.  **항상 최신 데이터로 이 보고서 실행** 은 보고서를 실행할 때마다 데이터 원본에 대한 쿼리를 실행합니다. 이렇게 하면 가장 최신 데이터를 포함하는 요청 시 실행 보고서가 됩니다. 보고서를 열 때마다 보고서의 새 인스턴스가 생성되고 새 쿼리의 결과를 포함하게 됩니다. 이 방법을 사용하면 10명의 사용자가 동시에 보고서를 여는 경우 10개의 쿼리가 처리되도록 데이터 원본에 보내집니다.  
@@ -149,14 +159,16 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
 
 자세한 내용은 참조 [스냅샷 작업](working-with-snapshots-web-portal.md)합니다.
   
-### <a name="cache-expiration"></a>캐시 만료  
+### 캐시 만료
+<a id="cache-expiration" class="xliff"></a>  
   
 일정 시간이 지난 후에 페이지를 매긴 보고서의 캐시를 만료시킬지 또는 예약을 통해 만료시킬지를 제어할 수 있습니다. 공유 일정을 사용할 수 있습니다.  
   
 > [!NOTE]
 > 이 옵션은 캐시를 새로 고치지 않습니다.  
   
-### <a name="cache-refresh-plans"></a>캐시 새로 고침 계획  
+### 캐시 새로 고침 계획
+<a id="cache-refresh-plans" class="xliff"></a>  
   
 캐시 새로 고침 계획을 사용하여 페이지를 매긴 보고서의 데이터 임시 사본으로 캐시를 사전에 로드할 일정을 만들 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.  
    
@@ -175,7 +187,8 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 그런 다음 나열된 계획을 **편집** 또는 **삭제** 할 수 있습니다. **기존 계획에서 새로 만들기** 옵션은 캐시 새로 고침 계획을 하나 선택한 경우에만 설정됩니다. 이 옵션은 원래 계획에서 복사하여 새로운 새로 고침 옵션을 만듭니다. 캐시 새로 고침 계획 페이지의 정보가 선택한 계획의 정보로 채워져서 열립니다. 그런 다음 새로 고침 계획 옵션을 수정하고 새로운 설명과 함께 계획을 저장할 수 있습니다.  
   
-## <a name="history-snapshots"></a>기록 스냅숏  
+## 기록 스냅숏
+<a id="history-snapshots" class="xliff"></a>  
   
 기록 스냅숏 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅숏을 볼 수 있습니다. 설정된 옵션에 따라 보고서 기록에 최근 스냅숏만 포함되어 있을 수 있습니다.  
   
@@ -185,7 +198,8 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 보고서 기록 스냅숏을 클릭하면 이 스냅숏을 볼 수 있습니다. 보고서 기록에 표시되는 스냅숏은 스냅숏이 만들어진 날짜와 시간으로만 구별됩니다. 스냅숏이 예약된 작업에 따라 생성된 것인지 수동 작업으로 생성된 것인지는 시각적으로 구분할 수 없습니다.  
   
-## <a name="security"></a>보안  
+## 보안
+<a id="security" class="xliff"></a>  
 보안 속성 페이지를 사용하여 보고서에 대한 액세스를 지정하는 보안 설정을 보거나 수정할 수 있습니다. 이 페이지는 보안 권한이 있는 항목에 대해 사용할 수 있습니다.  
   
 항목에 대한 액세스는 그룹 또는 사용자가 수행할 수 있는 태스크를 지정하는 역할 할당을 통해 정의됩니다. 역할 할당은 하나의 사용자 또는 그룹 이름과 태스크 모음을 지정하는 하나 이상의 역할 정의로 구성됩니다.  
@@ -194,7 +208,8 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 현재 항목에 대한 보안 정의 방법을 변경하려면 선택합니다.
 
-## <a name="next-steps"></a>다음 단계
+## 다음 단계
+<a id="next-steps" class="xliff"></a>
 
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
