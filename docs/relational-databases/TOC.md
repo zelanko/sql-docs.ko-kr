@@ -1,117 +1,322 @@
+
+
 # [데이터베이스 기능](database-features.md)
 
+
+# [새로 추가되거나 최근에 업데이트된 문서](new-updated-relational-databases.md)
+
+
+
 # 개요
+
+
 ## [데이터베이스 엔진 인스턴스 간 기능](database-engine-cross-instance-features.md)
+
+
 ## [기술 참조](technical-reference-database-engine.md)  
+
+
 ## [기능 참조](feature-reference-database-engine.md)   
 
-# [관계형 데이터베이스에 대 한 문서를 최근에 업데이트](relational-databases-new-updated-sql-docs-pr.md)
+
 
 # [SQL Server 지침](sql-server-guides.md)
+
+
 ## Always On 가용성 그룹 문제 해결 및 모니터링 가이드
+
+
 ## [인덱스 디자인](sql-server-index-design-guide.md)
+
+
 ## [메모리 관리 아키텍처](memory-management-architecture-guide.md)
+
+
 ### [페이지 읽기](reading-pages.md)  
+
+
 ### [페이지 쓰기](writing-pages.md)
+
+
 ## [페이지 및 익스텐트 아키텍처](pages-and-extents-architecture-guide.md)
+
+
 ## [마이그레이션 후 유효성 검사 및 최적화](post-migration-validation-and-optimization-guide.md)
+
+
 ## [쿼리 처리 아키텍처](query-processing-architecture-guide.md)
+
+
 ## [스레드 및 태스크 아키텍처](thread-and-task-architecture-guide.md)
+
+
 ## [트랜잭션 로그 아키텍처 및 관리](sql-server-transaction-log-architecture-and-management-guide.md)
+
+
 ## 트랜잭션 잠금 및 행 버전 관리 지침
 
+
+
 # [백업 및 복원](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
+
+
 # [Blob](../relational-databases/blob/binary-large-object-blob-data-sql-server.md)
 
+
+
 # [데이터 정렬](../relational-databases/collations/collation-and-unicode-support.md)
+
+
 # [구성 관리자](sql-server-configuration-manager.md)  
+
+
 # [커서](cursors.md)  
+
+
 # [데이터 컬렉션](../relational-databases/data-collection/data-collection.md)
+
+
 # [데이터 압축](../relational-databases/data-compression/data-compression.md)
+
+
 # [데이터 계층 응용 프로그램](../relational-databases/data-tier-applications/data-tier-applications.md)
+
+
 # [데이터베이스 메일](../relational-databases/database-mail/database-mail.md)
+
+
 # [데이터베이스](../relational-databases/databases/databases.md)
 
+
+
 # 클라이언트 개발
+
+
 ## [CLR 통합](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)
+
+
 ## [확장 저장 프로시저 프로그래밍](../relational-databases/extended-stored-procedures-programming/database-engine-extended-stored-procedures-programming.md)
+
+
 ## [확장 저장 프로시저 참조](../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)
+
+
 ## [Express Localdb 오류 메시지](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)
+
+
 ## [Express Localdb 인스턴스 API](../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md)
+
+
 ## [Native Client](../relational-databases/native-client/sql-server-native-client-programming.md)
+
+
 ## [SMO(Server 관리 개체)](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)
+
+
 ## [SQLXML](../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)
+
+
 ## WMI(Windows Management Instrumentation) 공급자
+
+
 ### [WMI 공급자 구성](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)
+
+
 ### [WMI 공급자 구성 클래스](../relational-databases/wmi-provider-configuration-classes/wmi-provider-for-configuration-management-classes.md)
+
+
 ### [WMI 공급자 서버 이벤트](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)
 
+
+
 # [오류 및 이벤트](../relational-databases/errors-events/errors-and-events-reference-database-engine.md)
+
+
 # [이벤트 클래스](../relational-databases/event-classes/sql-server-event-class-reference.md)
+
+
 # [확장 이벤트](../relational-databases/extended-events/extended-events.md)
+
+
 # [그래프](../relational-databases/graphs/sql-graph-overview.md)
+
+
 # [계층적 데이터](hierarchical-data-sql-server.md)  
+
+
 # [가져오기 및 내보내기](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+
+
 # [메모리 내 OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+
+
 # [인덱스](../relational-databases/indexes/indexes.md)
+
+
 # [JSON](../relational-databases/json/json-data-sql-server.md)
+
+
 # [연결된 서버](../relational-databases/linked-servers/linked-servers-database-engine.md)
+
+
 # [유지 관리 계획](../relational-databases/maintenance-plans/maintenance-plans.md)
+
+
 # [관리](../relational-databases/manage/sql-server-utility-features-and-tasks.md)
+
+
 ## [데이터베이스 수명 주기 관리](database-lifecycle-management.md)  
+
+
 ## [중앙 관리 서버를 사용하여 여러 서버 관리](administer-multiple-servers-using-central-management-servers.md)  
 
+
+
 # [파티션](../relational-databases/partitions/partitioned-tables-and-indexes.md)
+
+
 # [성능](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+
 # [정책 기반 관리](../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)
+
+
 # [PolyBase](../relational-databases/polybase/polybase-guide.md)
+
+
 # [복제](../relational-databases/replication/sql-server-replication.md)
+
+
 # [리소스 관리자](../relational-databases/resource-governor/resource-governor.md)
+
+
 # [스크립팅](../relational-databases/scripting/database-engine-scripting.md)
+
+
 # [검색](../relational-databases/search/full-text-search.md)
+
+
 # [보안](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)
+
+
 # [시퀀스 번호](../relational-databases/sequence-numbers/sequence-numbers.md)
+
+
 # [Service Broker](../relational-databases/service-broker/event-notifications.md)
+
+
 # [실행 계획 연산자](showplan-logical-and-physical-operators-reference.md)  
+
+
 # [공간](../relational-databases/spatial/spatial-data-sql-server.md)
+
+
 # [SQL 추적](../relational-databases/sql-trace/sql-trace.md)
+
+
 # [통계](../relational-databases/statistics/statistics.md)
+
+
 # [저장 프로시저](../relational-databases/stored-procedures/stored-procedures-database-engine.md)
+
+
 # [동의어](../relational-databases/synonyms/synonyms-database-engine.md)
+
+
 # [시스템 카탈로그 뷰](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)
+
+
 # [시스템 호환성 뷰](../relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)
+
+
 # [시스템 동적 관리 뷰](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
+
+
 # [시스템 함수](../relational-databases/system-functions/system-functions-for-transact-sql.md)
+
+
 # [시스템 정보 스키마 뷰](../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)
+
+
 # [시스템 저장 프로시저](../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)
+
+
 # [시스템 테이블](../relational-databases/system-tables/system-tables-transact-sql.md)
+
+
 # [시스템 뷰](../relational-databases/system-views/replication-views-transact-sql.md)
+
+
 # [테이블](../relational-databases/tables/tables.md)
+
+
 # [변경 내용 추적](../relational-databases/track-changes/track-data-changes-sql-server.md)
+
+
 # [트리거](../relational-databases/triggers/logon-triggers.md)
+
+
 # [사용자 정의 함수](../relational-databases/user-defined-functions/user-defined-functions.md)
+
+
 # [뷰](../relational-databases/views/views.md)
+
+
 # [xml](../relational-databases/xml/xml-data-sql-server.md)
+
+
 
 # [자습서](database-engine-tutorials.md)  
 
+
+
 ## [데이터베이스 엔진 시작](tutorial-getting-started-with-the-database-engine.md)  
+
+
 ### [1단원: 데이터베이스 엔진에 연결](lesson-1-connecting-to-the-database-engine.md)  
+
+
 ### [2단원: 다른 컴퓨터에서 연결](lesson-2-connecting-from-another-computer.md)  
+
+
 
 ## [Azure Blob Storage Service로 SQL Server 백업 및 복원](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 
+
+
 ## [인증서로 저장 프로시저 서명](tutorial-signing-stored-procedures-with-a-certificate.md)  
+
+
 
 ## [소유권 체인 및 컨텍스트 전환](tutorial-ownership-chains-and-context-switching.md)  
 
+
+
 ## [SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+
+
 ### [1단원: Azure 컨테이너에 저장된 액세스 정책 및 공유 액세스 서명 만들기](lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+
+
 ### [2단원: 공유 액세스 서명을 사용하여 SQL Server 자격 증명 만들기](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+
+
 ### [3단원: URL에 데이터베이스 백업](lesson-3-database-backup-to-url.md)  
+
+
 ### [4단원: URL에서 가상 컴퓨터로 데이터베이스 복원](lesson-4-restore-database-to-virtual-machine-from-url.md)  
+
+
 ### [5단원: 파일-스냅숏 백업을 사용하여 데이터베이스 백업](lesson-5-backup-database-using-file-snapshot-backup.md)  
+
+
 ### [6단원: 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성](lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+
+
 ### [7단원: 데이터베이스를 특정 시점으로 복원](lesson-7-restore-a-database-to-a-point-in-time.md)  
+
+
 ### [8단원. 로그 백업에서 새 데이터베이스로 복원](lesson-8-restore-as-new-database-from-log-backup.md)  
+
+
 ### [9단원: 백업 세트 및 파일-스냅숏 백업 관리](lesson-9-manage-backup-sets-and-file-snapshot-backups.md)  
