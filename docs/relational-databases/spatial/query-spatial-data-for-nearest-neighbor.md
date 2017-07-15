@@ -21,14 +21,16 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/22/2017
 
 ---
-# <a name="query-spatial-data-for-nearest-neighbor"></a>가장 인접한 항목의 공간 데이터 쿼리
+# 가장 인접한 항목의 공간 데이터 쿼리
+<a id="query-spatial-data-for-nearest-neighbor" class="xliff"></a>
   공간 데이터에 사용되는 일반적인 쿼리는 가장 인접한 항목 쿼리입니다. 가장 인접한 항목 쿼리는 특정 공간 개체에 가장 가까운 공간 개체를 찾는 데 사용됩니다. 예를 들어 웹 사이트에 대한 상점 로케이터는 고객 위치와 가장 가까운 상점 위치를 찾아야 하는 경우가 많습니다.  
   
  가장 인접한 항목 쿼리는 여러 가지의 유효한 쿼리 형식으로 작성할 수 있지만 가장 인접한 항목 쿼리에서 공간 인덱스를 사용하는 경우 다음 구문을 사용해야 합니다.  
   
-## <a name="syntax"></a>구문  
+## 구문
+<a id="syntax" class="xliff"></a>  
   
-```vb  
+```  
 SELECT TOP ( number )  
         [ WITH TIES ]  
         [ * | expression ]   
@@ -54,7 +56,8 @@ SELECT TOP ( number )
   
 ```  
   
-## <a name="nearest-neighbor-query-and-spatial-indexes"></a>가장 인접한 항목 쿼리 및 공간 인덱스  
+## 가장 인접한 항목 쿼리 및 공간 인덱스
+<a id="nearest-neighbor-query-and-spatial-indexes" class="xliff"></a>  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 **TOP** 및 **ORDER BY** 절은 공간 데이터 열에서 가장 인접한 항목 쿼리를 수행하는 데 사용됩니다. **ORDER BY** 절은 공간 열 데이터 형식의 `STDistance()` 메서드에 대한 호출을 포함합니다. **TOP** 절은 쿼리에 대해 반환하는 개체 수를 나타냅니다.  
   
  가장 인접한 항목 쿼리에서 공간 인덱스를 사용하려면 다음 요구 사항을 충족해야 합니다.  
@@ -78,10 +81,11 @@ SELECT TOP ( number )
   
  가장 인접한 항목 쿼리에 사용되는 인덱스에는 새 공간 인덱스 공간 분할(tessellation)을 사용하는 것이 좋습니다. 공간 인덱스 공간 분할(tessellation)에 대한 자세한 내용은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)여야 합니다.  
   
-## <a name="example"></a>예제  
+## 예제
+<a id="example" class="xliff"></a>  
  다음 코드 예에서는 공간 인덱스를 사용할 수 있는 가장 인접한 항목 쿼리를 보여 줍니다. 이 예에서는 `Person.Address` 데이터베이스의 `AdventureWorks2012` 테이블을 사용합니다.  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -93,10 +97,11 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  가장 인접한 항목 쿼리에서 공간 인덱스를 사용하는 방법을 확인하기 위해 SpatialLocation 열에 대한 공간 인덱스를 만듭니다. 공간 인덱스를 만드는 방법은 [Create, Modify, and Drop Spatial Indexes](../../relational-databases/spatial/create-modify-and-drop-spatial-indexes.md)를 참조하십시오.  
   
-## <a name="example"></a>예제  
+## 예제
+<a id="example" class="xliff"></a>  
  다음 코드 예에서는 공간 인덱스를 사용할 수 없는 가장 인접한 항목 쿼리를 보여 줍니다.  
   
-```  
+```tsql  
 USE AdventureWorks2012  
 GO  
 DECLARE @g geography = 'POINT(-121.626 47.8315)';  
@@ -107,7 +112,9 @@ ORDER BY SpatialLocation.STDistance(@g);
   
  이 쿼리에는 구문 섹션에서 지정한 형식의 **를 사용하는** WHERE `STDistance()` 절이 부족하므로 쿼리에서 공간 인덱스를 사용할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## 참고 항목
+<a id="see-also" class="xliff"></a>  
  [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)  
   
   
+
