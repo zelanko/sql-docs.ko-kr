@@ -32,7 +32,7 @@ SQL Server 2017 Linux, Linux 기반 Docker 컨테이너와 창에 SQL Server의 
 
 
 **사용해보기:**    
-   -   [![평가 센터에서 다운로드](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[SQL Server 2017 Community Technology Preview 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)**
+   -   [![평가 센터에서 다운로드](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **[SQL Server 2017 Community Technology Preview 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)**
 
 ## <a name="whats-new-in-sql-server-2017-ctp-21-may-2017"></a>SQL Server 2017 CTP 2.1 (2017 년 5 월)의 새로운 기능
 ### <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진  
