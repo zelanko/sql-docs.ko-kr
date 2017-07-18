@@ -1,5 +1,5 @@
 ---
-title: "쿼리 저장소에서 데이터를 수집하는 방법 | Microsoft 문서"
+title: "쿼리 저장소에서 데이터를 수집하는 방법 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 09/13/2016
@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 58db786512aa1ed167df55831c6a7cc3c53224bd
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
@@ -32,7 +32,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="views"></a>뷰  
  다음 다이어그램은 파란색 엔터티로 표시된 컴파일 시간 정보와 함께 쿼리 저장소 뷰와 논리적 관계를 보여 줍니다.  
   
- ![query-store-process-1views](../../relational-databases/performance/media/query-store-process-1views.png "query-store-process-1views")  
+ ![query-store-process-2views](../../relational-databases/performance/media/query-store-process-2views.png "query-store-process-2views")  
   
  **보기 설명**  
   
@@ -68,7 +68,8 @@ ms.lasthandoff: 04/11/2017
   
  시스템 충돌이 발생할 경우 쿼리 저장소는 `DATA_FLUSH_INTERVAL_SECONDS`(으)로 정의된 양까지 런타임 데이터를 손실할 수 있습니다. 900초(15분)의 기본값은 쿼리 캡처 성능과 데이터 가용성 사이의 최적의 균형입니다.  
 메모리 부족 시 런타임 통계는 `DATA_FLUSH_INTERVAL_SECONDS`(으)로 정의된 것보다 먼저 디스크에 플러시될 수 있습니다.  
-쿼리 저장소 데이터를 읽는 동안 메모리 내 및 디스크의 데이터는 투명하게 통합됩니다.  
+쿼리 저장소 데이터를 읽는 동안 메모리 내 및 디스크의 데이터는 투명하게 통합됩니다.
+세션 종료 또는 클라이언트 응용 프로그램 다시 시작/크래시의 경우 쿼리 통계는 기록되지 않습니다.  
   
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 

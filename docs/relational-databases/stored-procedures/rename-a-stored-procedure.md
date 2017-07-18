@@ -1,7 +1,7 @@
 ---
 title: "저장 프로시저 이름 바꾸기 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/06/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 23
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8082b0cdf5788bd4b96c14ff60dbd9103c27bd74
+ms.translationtype: HT
+ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
+ms.openlocfilehash: 1d0ddb568fd162f4be42234607b5b8484cb89f60
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="rename-a-stored-procedure"></a>저장 프로시저 이름 바꾸기
@@ -47,8 +47,10 @@ ms.lasthandoff: 06/22/2017
   
 -   프로시저 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
--   저장 프로시저의 이름을 변경해도 **sys.sql_modules** 카탈로그 뷰의 정의 열에 있는 해당 개체 이름은 변경되지 않습니다. 따라서 이 개체 유형의 이름을 바꾸지 않는 것이 좋습니다. 대신 저장 프로시저를 삭제하고 새로운 이름으로 다시 만듭니다.  
-  
+-   저장 프로시저 이름을 바꾸어도 `object_id` 및 해당 프로시저에 명시적으로 할당된 모든 사용 권한은 유지됩니다. 개체를 삭제한 후 다시 만들면 새 `object_id`가 생성되고 프로시저에 명시적으로 할당된 모든 사용 권한이 제거됩니다.
+
+-   저장 프로시저의 이름을 변경해도 **sys.sql_modules** 카탈로그 뷰의 정의 열에 있는 해당 개체 이름은 변경되지 않습니다. 이를 수행하려면 저장 프로시저를 삭제하고 새로운 이름으로 다시 만들어야 합니다.  
+
 -   프로시저의 이름 또는 정의를 변경할 때 프로시저의 변경 내용이 적용되도록 개체를 업데이트하지 않으면 종속 개체가 실패할 수 있습니다. 자세한 내용은 [저장 프로시저의 종속성 보기](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)를 참조하세요.  
   
 ###  <a name="Security"></a> 보안  
@@ -65,15 +67,10 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>저장 프로시저의 이름을 바꾸려면  
   
 1.  개체 탐색기에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
-  
 2.  **데이터베이스**를 확장하고 해당 프로시저가 속한 데이터베이스를 확장한 다음 **프로그래밍 기능**을 확장합니다.  
-  
 3.  [저장 프로시저의 종속성을 결정합니다](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md).  
-  
 4.  **저장 프로시저**를 확장하고 이름을 바꿀 프로시저를 마우스 오른쪽 단추로 클릭한 다음 **이름 바꾸기**를 클릭합니다.  
-  
 5.  프로시저 이름을 수정합니다.  
-  
 6.  종속 개체 또는 스크립트에서 참조된 프로시저 이름을 수정합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
@@ -81,18 +78,14 @@ ms.lasthandoff: 06/22/2017
 #### <a name="to-rename-a-stored-procedure"></a>저장 프로시저의 이름을 바꾸려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
-  
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
-  
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 프로시저를 삭제하고 새 이름으로 다시 만들어 프로시저의 이름을 바꾸는 방법을 보여 줍니다. 첫 번째 예에서는 `'HumanResources.uspGetAllEmployeesTest`저장 프로시저를 만듭니다. 두 번째 예에서는 `HumanResources.uspEveryEmployeeTest`저장 프로시저의 이름을 바꿉니다.  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
+
 CREATE PROCEDURE HumanResources.uspGetAllEmployeesTest  
 AS  
     SET NOCOUNT ON;  
@@ -101,17 +94,7 @@ AS
 GO  
   
 --Rename the stored procedure.  
-USE AdventureWorks2012;  
-GO  
-IF OBJECT_ID ( 'HumanResources.uspGetAllEmployeesTest', 'P' ) IS NOT NULL   
-    DROP PROCEDURE HumanResources.uspGetAllEmployeesTest;  
-GO  
-CREATE PROCEDURE HumanResources.uspEveryEmployeeTest  
-AS  
-    SET NOCOUNT ON;  
-    SELECT LastName, FirstName, Department  
-    FROM HumanResources.vEmployeeDepartmentHistory;  
-GO  
+EXEC sp_rename 'HumanResources.uspGetAllEmployeesTest', 'HumanResources.uspEveryEmployeeTest'; 
 ```  
   
 ## <a name="see-also"></a>참고 항목  
@@ -124,3 +107,4 @@ GO
  [저장 프로시저의 종속성 보기](../../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md)  
   
   
+

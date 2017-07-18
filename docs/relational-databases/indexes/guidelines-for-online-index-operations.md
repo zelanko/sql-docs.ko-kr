@@ -1,7 +1,7 @@
 ---
 title: "온라인 인덱스 작업에 대한 지침 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 07/10/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,11 +21,11 @@ caps.latest.revision: 64
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: cf2d74e423ab96af582d5f420065f9756e671ec2
-ms.openlocfilehash: 508440b3e6cd15d4fb70f933c380e958dad74d56
+ms.translationtype: HT
+ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
+ms.openlocfilehash: 9b6d3aabe451c35c25822a2114e825e980ad01d3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/11/2017
 
 ---
 # <a name="guidelines-for-online-index-operations"></a>온라인 인덱스 작업에 대한 지침
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/23/2017
 -   테이블에 LOB 데이터 형식이 들어 있는 경우 비고유 비클러스터형 인덱스를 온라인 상태로 만들 수 있지만 이러한 열은 인덱스 정의에 키 또는 키가 아닌 포괄 열로 사용되지 않습니다.  
   
 -   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.
-- 예기치 않은 오류 데이터베이스 장애 조치 후 중지 된 곳에서 인덱스를 다시 시작할 수 있습니다 또는 **일시 중지** 명령입니다. 참조 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)합니다. 이 기능은 SQL Server 2017에 대 한 공개 미리 보기입니다.
+- 예기치 않은 오류 데이터베이스 장애 조치 후 중지 된 곳에서 인덱스를 다시 시작할 수 있습니다 또는 **일시 중지** 명령입니다. 참조 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)합니다. 이 기능은 SQL Server 2017 및 Azure SQL Database에 대한 공용 미리 보기입니다.
 
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="resumable-index-rebuild-considerations"></a>다시 시작 가능한 인덱스 다시 작성 시 고려 사항
 
 > [!NOTE]
-> 참조 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)합니다. 이 기능은 SQL Server 2017에 대 한 공개 미리 보기입니다.
+> 참조 [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)합니다. 이 기능은 SQL Server 2017 및 Azure SQL Database에 대한 공용 미리 보기입니다.
 >
 
 다시 시작 가능한 온라인 인덱스 다시 작성을 수행할 때 다음 지침이 적용 됩니다.

@@ -17,11 +17,11 @@ caps.latest.revision: 25
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f5b029907f25811131e08d2f7ade1f050e3a18d5
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase 설치
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 -   최소 하드 디스크 공간: 2GB  
   
--   TCP/IP 연결을 사용할 수 있어야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.  
+-   TCP/IP 연결을 사용할 수 있어야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.  TCP/IP 연결은 SQL Server Developer 및 Express Edition에서 기본적으로 사용되지 않도록 설정됩니다. PolyBase가 작동하려면 수동으로 사용하도록 설정해야 합니다.
   
  **참고**  
   
@@ -65,7 +65,7 @@ PolyBase를 독립 실행형으로 또는 확장 그룹에 설치한 후에는 �
   
 4.  서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 SQL Server PolyBase 데이터 이동 서비스를 구성하여 동일한 계정 하에서 실행합니다.  
   
-    > **중요!!** PolyBase 규모 확장 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스를 동일한 도메인 계정 하에서 실행해야 합니다.  
+    > **중요!** PolyBase 규모 확장 그룹에서 모든 노드의 PolyBase 엔진 및 PolyBase 데이터 이동 서비스를 동일한 도메인 계정 하에서 실행해야 합니다.  
     > PolyBase 규모 확장 참조  
   
 5.  **PolyBase 구성 페이지**에서 다음 옵션 중 하나를 선택합니다. 자세한 내용은 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md) 을 참조하세요.  

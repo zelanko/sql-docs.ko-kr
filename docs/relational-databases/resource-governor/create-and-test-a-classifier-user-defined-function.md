@@ -1,7 +1,7 @@
 ---
 title: "분류자 사용자 정의 함수 만들기 및 테스트 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,11 +19,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 097b7e93a82b8f1cc20767c57788eebe8162729a
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 95cb4a61a662dae4168e1b67900cce9c16de315f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>분류자 사용자 정의 함수 만들기 및 테스트
@@ -44,21 +44,21 @@ ms.lasthandoff: 06/22/2017
   
  분류자 함수는 로그인 시간을 확장합니다. 과도하게 복잡한 함수를 사용하면 로그인을 수행할 때 시간이 초과되거나 빠른 연결 속도를 늦출 수 있습니다.  
   
-### <a name="to-create-the-classifier-user-defined-function"></a>분류자 사용자 정의 함수를 만들려면  
+## <a name="to-create-the-classifier-user-defined-function"></a>분류자 사용자 정의 함수를 만들려면  
   
 1.  새 리소스 풀 및 작업 그룹을 만들고 구성합니다. 각 작업 그룹을 적합한 리소스 풀에 할당합니다.  
   
     ```  
     --- Create a resource pool for production processing  
     --- and set limits.  
-    USE master  
+    USE master;  
     GO  
     CREATE RESOURCE POOL pProductionProcessing  
     WITH  
     (  
          MAX_CPU_PERCENT = 100,  
          MIN_CPU_PERCENT = 50  
-    )  
+    );  
     GO  
     --- Create a workload group for production processing  
     --- and configure the relative importance.  
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
     WITH  
     (  
          IMPORTANCE = MEDIUM  
-    )  
+    );  
     --- Assign the workload group to the production processing  
     --- resource pool.  
     USING pProductionProcessing  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
     (  
          MAX_CPU_PERCENT = 50,  
          MIN_CPU_PERCENT = 0  
-    )  
+    );  
     GO  
     --- Create a workload group for off-hours processing  
     --- and configure the relative importance.  
@@ -90,32 +90,32 @@ ms.lasthandoff: 06/22/2017
     )  
     --- Assign the workload group to the off-hours processing  
     --- resource pool.  
-    USING pOffHoursProcessing  
+    USING pOffHoursProcessing;  
     GO  
     ```  
   
 2.  메모리 내 구성을 업데이트합니다.  
   
     ```  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
 3.  테이블을 만들고 프로덕션 처리 시간 범위의 시작 시간과 종료 시간을 정의합니다.  
   
     ```  
-    USE master  
+    USE master;  
     GO  
     CREATE TABLE tblClassificationTimeTable  
     (  
          strGroupName     sysname          not null,  
          tStartTime       time              not null,  
          tEndTime         time              not null  
-    )  
+    );  
     GO  
     --- Add time values that the classifier will use to  
     --- determine the workload group for a session.  
-    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM')  
+    INSERT into tblClassificationTimeTable VALUES('gProductionProcessing', '6:35 AM', '6:15 PM');  
     go  
     ```  
   
@@ -130,11 +130,14 @@ ms.lasthandoff: 06/22/2017
     WITH SCHEMABINDING  
     AS  
     BEGIN  
+    /* We recommend running the classifier function code under 
+    snapshot isolation level OR using NOLOCK hint to avoid blocking on 
+    lookup table. In this example, we are using NOLOCK hint. */
          DECLARE @strGroup sysname  
          DECLARE @loginTime time  
          SET @loginTime = CONVERT(time,GETDATE())  
          SELECT TOP 1 @strGroup = strGroupName  
-              FROM dbo.tblClassificationTimeTable  
+              FROM dbo.tblClassificationTimeTable WITH(NOLOCK)
               WHERE tStartTime <= @loginTime and tEndTime >= @loginTime  
          IF(@strGroup is not null)  
          BEGIN  
@@ -143,26 +146,26 @@ ms.lasthandoff: 06/22/2017
     --- Use the default workload group if there is no match  
     --- on the lookup.  
          RETURN N'gOffHoursProcessing'  
-    END  
+    END;  
     GO  
     ```  
   
 5.  분류자 함수를 등록하고 메모리 내 구성을 업데이트합니다.  
   
     ```  
-    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier)  
-    ALTER RESOURCE GOVERNOR RECONFIGURE  
+    ALTER RESOURCE GOVERNOR with (CLASSIFIER_FUNCTION = dbo.fnTimeClassifier);  
+    ALTER RESOURCE GOVERNOR RECONFIGURE;  
     GO  
     ```  
   
-### <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>리소스 풀, 작업 그룹 및 분류자 사용자 정의 함수를 확인하려면  
+## <a name="to-verify-the-resource-pools-workload-groups-and-the-classifier-user-defined-function"></a>리소스 풀, 작업 그룹 및 분류자 사용자 정의 함수를 확인하려면  
   
 1.  다음 쿼리를 사용하여 리소스 풀 및 작업 그룹 구성을 가져옵니다.  
   
     ```  
-    USE master  
-    SELECT * FROM sys.resource_governor_resource_pools  
-    SELECT * FROM sys.resource_governor_workload_groups  
+    USE master;  
+    SELECT * FROM sys.resource_governor_resource_pools;  
+    SELECT * FROM sys.resource_governor_workload_groups;  
     GO  
     ```  
   
@@ -170,45 +173,46 @@ ms.lasthandoff: 06/22/2017
   
     ```  
     --- Get the classifier function Id and state (enabled).  
-    SELECT * FROM sys.resource_governor_configuration  
+    SELECT * FROM sys.resource_governor_configuration;  
     GO  
     --- Get the classifer function name and the name of the schema  
     --- that it is bound to.  
     SELECT   
           object_schema_name(classifier_function_id) AS [schema_name],  
           object_name(classifier_function_id) AS [function_name]  
-    FROM sys.dm_resource_governor_configuration  
-  
+    FROM sys.dm_resource_governor_configuration;  
     ```  
   
 3.  다음 쿼리를 사용하여 리소스 풀 및 작업 그룹에 대한 현재 런타임 데이터를 가져옵니다.  
   
     ```  
-    SELECT * FROM sys.dm_resource_governor_resource_pools  
-    SELECT * FROM sys.dm_resource_governor_workload_groups  
+    SELECT * FROM sys.dm_resource_governor_resource_pools;  
+    SELECT * FROM sys.dm_resource_governor_workload_groups;  
     GO  
     ```  
   
 4.  다음 쿼리를 사용하여 각 그룹에 있는 세션을 확인합니다.  
   
     ```  
-    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
-              FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-              ON g.group_id = s.group_id  
-    ORDER BY g.name  
+    SELECT s.group_id, CAST(g.name as nvarchar(20)), s.session_id, s.login_time, 
+        CAST(s.host_name as nvarchar(20)), CAST(s.program_name AS nvarchar(20))  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+    ORDER BY g.name;  
     GO  
     ```  
   
 5.  다음 쿼리를 사용하여 각 그룹에 있는 요청을 확인합니다.  
   
     ```  
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-                ON g.group_id = r.group_id  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, 
+        r.start_time, r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+    CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
@@ -216,24 +220,25 @@ ms.lasthandoff: 06/22/2017
   
     ```  
     SELECT s.group_id, g.name, s.session_id, s.login_time, s.host_name, s.program_name   
-               FROM sys.dm_exec_sessions s  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = s.group_id  
-                     AND 'preconnect' = s.status  
-    ORDER BY g.name  
+    FROM sys.dm_exec_sessions AS s  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = s.group_id  
+           AND 'preconnect' = s.status  
+    ORDER BY g.name;  
     GO  
   
-    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, r.command, r.sql_handle, t.text   
-               FROM sys.dm_exec_requests r  
-         INNER JOIN sys.dm_resource_governor_workload_groups g  
-               ON g.group_id = r.group_id  
-                     AND 'preconnect' = r.status  
-         CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
-    ORDER BY g.name  
+    SELECT r.group_id, g.name, r.status, r.session_id, r.request_id, r.start_time, 
+        r.command, r.sql_handle, t.text   
+    FROM sys.dm_exec_requests AS r  
+    INNER JOIN sys.dm_resource_governor_workload_groups AS g  
+        ON g.group_id = r.group_id  
+           AND 'preconnect' = r.status  
+     CROSS APPLY sys.dm_exec_sql_text(r.sql_handle) AS t  
+    ORDER BY g.name;  
     GO  
     ```  
   
-### <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법  
+## <a name="best-practices-for-using-lookup-tables-in-a-classifier-function"></a>분류자 함수에서 조회 테이블을 사용하는 최선의 구현 방법  
   
 1.  조회 테이블은 반드시 필요한 경우에만 사용합니다. 조회 테이블을 사용해야 하는 경우에는 함수 자체에 테이블을 하드 코딩할 수 있습니다. 그러나 이 경우에는 분류자 함수의 동적 변경 및 복잡도 간에 균형을 조정해야 합니다.  
   
@@ -259,7 +264,7 @@ ms.lasthandoff: 06/22/2017
   
     4.  테이블에 트리거를 사용하지 않습니다.  
   
-    5.  테이블 콘텐츠를 업데이트하는 경우에는 기록기가 판독기를 차단하지 않도록 스냅숏 격리 수준 트랜잭션을 사용합니다. `NOLOCK` 힌트를 사용해도 차단을 완화할 수 있습니다.  
+    5.  테이블 콘텐츠를 업데이트하는 경우에는 기록기가 판독기를 차단하지 않도록 분류자 함수에서 스냅숏 격리 수준 트랜잭션을 사용합니다. `NOLOCK` 힌트를 사용해도 차단을 완화할 수 있습니다.  
   
     6.  가능한 경우 테이블 콘텐츠 변경 시 분류자 함수를 사용하지 않도록 설정합니다.  
   
@@ -280,3 +285,4 @@ ms.lasthandoff: 06/22/2017
  [ALTER RESOURCE GOVERNOR&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   
+

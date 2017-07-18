@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 구성 | Microsoft 문서"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 17
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 7ac4f40e66a0bb82f811aa75a3d69e14a3a97188
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 구성
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/23/2017
   PolyBase를 구성하려면 다음 절차를 수행합니다.  
   
 ## <a name="external-data-source-configuration"></a>외부 데이터 원본 구성  
- SQL Server에서 외부 데이터 원본에 대한 연결을 확인해야 합니다. 연결 형식에 따라 필요한 쿼리 성능이 크게 달라집니다. 예를 들어 PolyBase 쿼리에서 10Gbit 이더넷 링크를 사용하는 경우 1Gbit 이더넷 링크보다 쿼리 응답 속도가 빨라집니다.  
+ SQL Server에서 외부 데이터 원본에 대한 연결을 확인해야 합니다. 연결 형식에 따라 쿼리 성능이 크게 달라집니다. 예를 들어 PolyBase 쿼리에서 10Gbit 이더넷 링크를 사용하는 경우 1Gbit 이더넷 링크보다 쿼리 응답 속도가 빨라집니다.  
   
  **sp_configure**를 사용하여 SQL Server가 사용 중인 Hadoop 버전 또는 Azure Blob 저장소에 연결하도록 구성해야 합니다. PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 배포를 지원합니다.  지원되는 외부 데이터 원본의 전체 목록은 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
  

@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_2814 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 07/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f2408e7a6e34e903ecd9c24d93db222de69f6398
+ms.translationtype: HT
+ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
+ms.openlocfilehash: 3bca883d9f5b13b81e021014193df43fc3f5f6e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/12/2017
 
 ---
 # <a name="mssqlserver2814"></a>MSSQLSERVER_2814
@@ -59,27 +59,22 @@ ms.lasthandoff: 06/22/2017
   
 1.  다음 쿼리를 실행하여 재컴파일을 발생시키는 문을 봅니다. *sql_handle*, *starting_offset*, *ending_offset* 및 *plan_handle* 자리 표시자를 오류 메시지에 지정된 값으로 바꿉니다. 임시 및 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 경우 **database_name** 및 **object_name** 열은 NULL입니다.  
   
-    SELECT DB_NAME(st.dbid) AS database_name  
-  
-    , OBJECT_NAME(st.objectid) AS object_name  
-  
-    , st.text  
-  
+    ```sql   
+    SELECT DB_NAME(st.dbid) AS database_name,  
+        OBJECT_NAME(st.objectid) AS object_name,  
+        st.text  
     FROM sys.dm_exec_query_stats AS qs  
-  
     CROSS APPLY sys.dm_exec_sql_text (*sql_handle*) AS st  
-  
     WHERE qs.statement_start_offset = *starting_offset*  
-  
     AND qs.statement_end_offset = *ending_offset*  
-  
-    AND qs.plan_handle = *plan_handle*;  
+    AND qs.plan_handle = *plan_handle*;
+    ```
   
 2.  이유 코드 설명에 따라 문, 일괄 처리 또는 프로시저를 수정하여 재컴파일을 방지합니다. 예를 들어 저장 프로시저에는 하나 이상의 SET 문이 포함되어 있을 수 있는데, 이러한 문을 프로시저에서 제거해야 합니다. 재컴파일의 원인 및 해결 방법에 대한 추가 예는 [Batch Compilation, Recompilation, and Plan Caching Issues in SQL Server 2005](http://go.microsoft.com/fwlink/?LinkId=69175)(SQL Server 2005에서의 일괄 컴파일, 다시 컴파일 및 계획 캐싱 문제)를 참조하세요.  
   
 3.  문제가 지속되면 Microsoft 고객 지원 서비스에 문의하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
-[SQL:StmtRecompile 이벤트 클래스](../Topic/SQL:StmtRecompile%20Event%20Class.md)  
+[SQL:StmtRecompile 이벤트 클래스](../event-classes/sql-stmtrecompile-event-class.md)  
   
 

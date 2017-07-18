@@ -2,7 +2,7 @@
 title: "PolyBase 시작하기 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 5/30/2017
+ms.date: 7/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,11 +24,11 @@ caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 3fc2a681f001906cf9e819084679db097bca62c7
-ms.openlocfilehash: 59bf4021617603f0720c23ca192f4ddb65aa6834
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 시작하기
@@ -56,7 +56,8 @@ ms.lasthandoff: 06/23/2017
 -   최소 메모리: 4GB  
   
 -   최소 하드 디스크 공간: 2GB    
--   TCP/IP 연결을 사용할 수 있어야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.  
+
+-   TCP/IP 연결을 사용할 수 있어야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요. SQL Server Developer 및 Express Edition에서는 기본적으로 TCP/IP가 사용되지 않도록 설정되어 있습니다. PolyBase를 설치할 수 있지만 TCP/IP를 사용되도록 설정할 때까지 완전하게 시작되지 못합니다. PolyBase 기능을 사용하려면 수동으로 TCP/IP를 사용되도록 설정해야 합니다. 
   
  
  외부 데이터 원본은 다음 개체 중 하나입니다.  
@@ -156,7 +157,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  자세한 내용은 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  
   
 ## <a name="create-t-sql-objects"></a>T-SQL 개체 만들기  
- 외부 데이터 원본, Hadoop 또는 Azure 저장소에 따라 개체를 만듭니다.  
+ 외부 데이터 원본, Hadoop 또는 Azure Storage에 따라 개체를 만듭니다.  
   
 ### <a name="hadoop"></a>Hadoop  
   
