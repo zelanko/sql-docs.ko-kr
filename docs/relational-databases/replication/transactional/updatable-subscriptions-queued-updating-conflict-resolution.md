@@ -20,11 +20,11 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 666ad0200e8429c470772fc68110d14a7809d12a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>업데이트할 수 있는 구독 - 지연 업데이트 충돌 해결
