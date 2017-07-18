@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio의 이전 릴리스 | Microsoft 문서"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,29 @@ caps.latest.revision: 18
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 0927784589c1f7227b432ff49f81f29de20083ec
-ms.openlocfilehash: 200753bf64d92043171788852227c6199b64711d
+ms.translationtype: HT
+ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
+ms.openlocfilehash: f55f56b31aec2e094a35200e6fe08b28c93affb0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/14/2017
 
 ---
 # <a name="previous-sql-server-management-studio-releases"></a>SQL Server Management Studio의 이전 릴리스
   
 SQL Server Management Studio의 다음 이전 릴리스를 사용할 수 있습니다.
+
+## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-170-releasehttpgomicrosoftcomfwlinklinkid847722"></a>![다운로드](../ssdt/media/download.png) [SQL Server Management Studio 17.0 릴리스](http://go.microsoft.com/fwlink/?LinkID=847722)
+
+**버전 정보**  
+  
+*이 SSMS 릴리스는 Visual Studio 2015의 격리 셸을 사용합니다.*  
+릴리스 번호: 17.0  
+이 릴리스에 대한 빌드 번호: 14.0.17099.0
+
+## <a name="changelog"></a>Changelog  
+
+[17.0](sql-server-management-studio-changelog-ssms.md#ssms-170-release)을 참조하세요.
+
    
 ## <a name="downloadssdtmediadownloadpng-sql-server-management-studio-1653-releasehttpgomicrosoftcomfwlinklinkid840946"></a>![다운로드](../ssdt/media/download.png) [SQL Server Management Studio 16.5.3 릴리스](http://go.microsoft.com/fwlink/?LinkID=840946)
 

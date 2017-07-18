@@ -1,0 +1,1 @@
+**적용 대상:**![예](media/yes.png)SQL Server 2016 Analysis Services![없는](media/no.png)Azure Analysis Services
