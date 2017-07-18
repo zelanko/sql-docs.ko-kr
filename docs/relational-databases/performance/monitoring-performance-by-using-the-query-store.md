@@ -25,9 +25,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/28/2017
 
 ---
-<a id="monitoring-performance-by-using-the-query-store" class="xliff"></a>
-
-# 쿼리 저장소를 사용하여 성능 모니터링
+# <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 저장소 기능을 통해 사용자는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 쿼리 저장소는 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 사용자 검토를 위해 보관합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) 옵션을 사용하여 구성할 수 있습니다. 
@@ -37,9 +35,7 @@ ms.lasthandoff: 06/28/2017
 ##  <a name="Enabling"></a> 쿼리 저장소 사용  
  새 데이터베이스에서는 기본적으로 쿼리 저장소가 활성 상태가 아닙니다.  
   
-<a id="use-the-query-store-page-in-management-studio" class="xliff"></a>
-
-#### Management Studio에서 쿼리 저장소 페이지 사용  
+#### <a name="use-the-query-store-page-in-management-studio"></a>Management Studio에서 쿼리 저장소 페이지 사용  
   
 1.  개체 탐색기에서 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -50,9 +46,7 @@ ms.lasthandoff: 06/28/2017
   
 3.  **작업 모드(요청)** 상자에서 **On**을 선택합니다.  
   
-<a id="use-transact-sql-statements" class="xliff"></a>
-
-#### Transact-SQL 문 사용  
+#### <a name="use-transact-sql-statements"></a>Transact-SQL 문 사용  
   
 1.  **ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어  
   
@@ -171,9 +165,7 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
 |-|-|  
 |[sys.fn_stmt_sql_handle_from_sql_stmt&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)|| 
   
-<a id="query-store-catalog-views" class="xliff"></a>
-
-### 쿼리 저장소 카탈로그 뷰  
+### <a name="query-store-catalog-views"></a>쿼리 저장소 카탈로그 뷰  
  카탈로그 뷰에 쿼리 저장소에 대한 정보가 표시됩니다.  
 
 ||| 
@@ -183,9 +175,7 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
 |[sys.query_store_query_text&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
 |[sys.query_store_wait_stats &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
-<a id="query-store-stored-procedures" class="xliff"></a>
-
-### 쿼리 저장소 저장 프로시저  
+### <a name="query-store-stored-procedures"></a>쿼리 저장소 저장 프로시저  
  저장 프로시저로 쿼리 저장소를 구성합니다.  
 
 ||| 
@@ -579,9 +569,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [메모리 내 OLTP와 쿼리 저장소 사용](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [쿼리 저장소 사용 시나리오](../../relational-databases/performance/query-store-usage-scenarios.md)   
