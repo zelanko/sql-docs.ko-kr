@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
-ms.openlocfilehash: bb13d94c5ef1eb36c3d50d3217f259a09c39e832
+ms.translationtype: HT
+ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
+ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/05/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/05/2017
 
 `SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 계획이라고도 합니다. 쿼리 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
 
-![query_processor_io](../relational-databases/media/query-processor-io.gif) 도표는 다음 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다.
+The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다. ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 문은 다음 사항만 정의합니다.  
 * 결과 집합의 서식. 대부분 SELECT 목록에 지정됩니다. 하지만 `ORDER BY` 및 `GROUP BY` 와 같은 다른 절도 결과 집합의 최종 서식에 영향을 줍니다.
@@ -92,7 +92,7 @@ ms.lasthandoff: 06/05/2017
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 프로세서에서는 인덱싱된 뷰와 인덱싱되지 않은 뷰가 다르게 처리됩니다. 
 
-* 인덱싱된 뷰의 행은 테이블과 동일한 형식으로 데이터베이스에 저장됩니다. 쿼리 최적화 프로그램에서 쿼리 계획에 사용하기로 결정한 인덱싱된 뷰는 기본 테이블과 동일한 방법으로 처리됩니다.
+* 인덱싱된 뷰의 행은 테이블과 동일한 형식으로 데이터베이스에 저장됩니다. 쿼리 프로세서에서 쿼리 계획에 인덱싱된 뷰를 사용하기로 결정하면 인덱싱된 뷰는 기본 테이블과 동일한 방법으로 처리됩니다.
 * 인덱싱되지 않은 뷰의 정의만 저장되고 뷰의 행은 저장되지 않습니다. 쿼리 최적화 프로그램은 인덱싱되지 않은 뷰를 참조하는 SQL 문에 대해 작성하는 실행 계획에 뷰 정의의 논리를 추가합니다. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 인덱싱된 뷰의 사용 시기를 결정하는 데 사용되는 논리는 테이블 인덱스의 사용 시기를 결정하는 데 사용되는 논리와 유사합니다. 인덱싱된 뷰의 데이터가 SQL 문의 전체나 일부를 포괄하고 해당 뷰의 인덱스가 저렴한 비용의 액세스 경로로 확인되면, 쿼리에서 이름별로 뷰가 참조되는지 여부와 관계없이 인덱스가 선택됩니다.
@@ -210,19 +210,19 @@ WHERE TableA.ColZ = TableB.Colz;
 > [!NOTE] 
 > 이 컨텍스트에서 `READCOMMITTED` 힌트와 `READCOMMITTEDLOCK` 힌트는 현재 트랜잭션 격리 수준과 관계없이 항상 다른 힌트로 간주됩니다.
  
-`SET` 옵션 및 테이블 힌트에 대한 요구 사항을 제외하고 위의 사항은 쿼리 최적화 프로그램에서 쿼리가 테이블 인덱스 범위에 해당하는지 즉, 테이블 인덱스로 쿼리를 처리할 수 있는지 여부를 확인하는 데 사용하는 규칙과 동일합니다. 인덱싱된 뷰를 사용하기 위해 쿼리에 아무 것도 추가로 지정할 필요가 없습니다.
+`SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. 인덱싱된 뷰를 사용하기 위해 쿼리에 아무 것도 추가로 지정할 필요가 없습니다.
 
-쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하도록 쿼리의 `FROM` 절에서 인덱싱된 뷰를 명시적으로 참조할 필요가 없습니다. 쿼리가 인덱싱된 뷰에도 있는 기본 테이블의 열에 대한 참조를 포함하고 쿼리 최적화 프로그램에서 해당 인덱싱된 뷰를 사용할 때 비용이 가장 저렴한 액세스 메커니즘을 제공할 수 있을 것으로 예상하는 경우 쿼리 최적화 프로그램은 기본 테이블 인덱스가 쿼리에서 직접 참조되지 않을 때 이러한 기본 테이블 인덱스를 선택하는 것과 유사한 방법으로 인덱싱된 뷰를 선택합니다. 쿼리에서 참조하지 않는 열을 포함하는 뷰의 경우 뷰가 쿼리에 지정된 하나 이상의 열을 포괄하기 위한 가장 저렴한 비용 옵션을 제공하면 쿼리 최적화 프로그램에서 이 뷰를 선택할 수 있습니다.
+쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하도록 쿼리의 `FROM` clause for the Query Optimizer to use the indexed view. 쿼리가 인덱싱된 뷰에도 있는 기본 테이블의 열에 대한 참조를 포함하고 쿼리 최적화 프로그램에서 해당 인덱싱된 뷰를 사용할 때 비용이 가장 저렴한 액세스 메커니즘을 제공할 수 있을 것으로 예상하는 경우 쿼리 최적화 프로그램은 기본 테이블 인덱스가 쿼리에서 직접 참조되지 않을 때 이러한 기본 테이블 인덱스를 선택하는 것과 유사한 방법으로 인덱싱된 뷰를 선택합니다. 쿼리에서 참조하지 않는 열을 포함하는 뷰의 경우 뷰가 쿼리에 지정된 하나 이상의 열을 포괄하기 위한 가장 저렴한 비용 옵션을 제공하면 쿼리 최적화 프로그램에서 이 뷰를 선택할 수 있습니다.
 
-쿼리 최적화 프로그램은 `FROM` 절에서 참조하는 인덱싱된 뷰를 표준 뷰로 간주하고 처리합니다. 쿼리 최적화 프로그램은 최적화 프로세스 시작 시 뷰의 정의를 쿼리로 확장합니다. 그런 다음 인덱싱된 뷰 일치가 수행됩니다. 쿼리 최적화 프로그램에서 선택하는 최종 실행 계획에 인덱싱된 뷰가 사용될 수 있습니다. 또는 계획이 뷰에서 참조하는 기본 테이블에 액세스하여 뷰에서 필요한 데이터를 구체화할 수 있습니다. 쿼리 최적화 프로그램에서는 이 중 가장 저렴한 비용의 방법이 선택됩니다.
+The Query Optimizer treats an indexed view referenced in the `FROM` 절에서 참조하는 인덱싱된 뷰를 표준 뷰로 간주하고 처리합니다. 쿼리 최적화 프로그램은 최적화 프로세스 시작 시 뷰의 정의를 쿼리로 확장합니다. 그런 다음 인덱싱된 뷰 일치가 수행됩니다. 쿼리 최적화 프로그램에서 선택하는 최종 실행 계획에 인덱싱된 뷰가 사용될 수 있습니다. 또는 계획이 뷰에서 참조하는 기본 테이블에 액세스하여 뷰에서 필요한 데이터를 구체화할 수 있습니다. 쿼리 최적화 프로그램에서는 이 중 가장 저렴한 비용의 방법이 선택됩니다.
 
 #### <a name="using-hints-with-indexed-views"></a>인덱싱된 뷰에 힌트 사용
 
 `EXPAND VIEWS` 쿼리 힌트를 사용하여 쿼리에 뷰 인덱스가 사용되지 않도록 하거나 `NOEXPAND` 테이블 힌트를 사용하여 쿼리의 `FROM` 절에 지정된 인덱싱된 뷰에 인덱스가 사용되도록 할 수 있습니다. 그러나 쿼리 최적화 프로그램이 각 쿼리에 사용할 최상의 액세스 방법을 동적으로 결정하도록 해야 합니다. `EXPAND` 와 `NOEXPAND` 는 성능을 크게 향상하는 것으로 확인된 특정 경우에만 사용합니다.
 
-`EXPAND VIEWS` 옵션은 쿼리 최적화 프로그램이 전체 쿼리에 뷰 인덱스를 사용하지 않도록 지정합니다. 
+`EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
 
-뷰에 `NOEXPAND`를 지정하면 쿼리 최적화 프로그램은 뷰에 정의된 인덱스의 사용을 고려합니다. 선택적 `INDEX()` 절을 사용하여 `NOEXPAND`를 지정하면 쿼리 최적화 프로그램은 지정된 인덱스를 사용합니다. `NOEXPAND` 는 인덱싱된 뷰에만 지정할 수 있고 인덱싱되지 않은 뷰에는 지정할 수 없습니다.
+뷰에 `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. 선택적`NOEXPAND` 절을 사용하여 `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` 는 인덱싱된 뷰에만 지정할 수 있고 인덱싱되지 않은 뷰에는 지정할 수 없습니다.
 
 뷰를 포함하는 쿼리에서 `NOEXPAND` 와 `EXPAND VIEWS` 를 지정하지 않으면 뷰가 확장되어 기본 테이블에 액세스합니다. 뷰를 구성하는 쿼리에 테이블 힌트가 포함된 경우 해당 힌트는 기본 테이블로 전파됩니다. 이 프로세스는 뷰 확인에서 자세히 설명합니다. 뷰의 기본 테이블에 있는 힌트 집합이 모두 동일하면 쿼리를 인덱싱된 뷰와 일치시킬 수 있습니다. 대부분의 경우 이러한 힌트는 뷰에서 직접 상속되기 때문에 서로 일치합니다. 그러나 쿼리가 뷰 대신 테이블을 참조하고 이러한 테이블에 직접 적용된 힌트가 동일하지 않으면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다. 뷰 확장 후 쿼리에서 참조하는 테이블에 `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`또는 `XLOCK` 힌트가 적용되면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다.
 
@@ -239,7 +239,7 @@ WHERE TableA.ColZ = TableB.Colz;
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 분산 쿼리를 효율적으로 사용하여 원격 멤버 테이블의 데이터에 액세스하는 지능적이고 동적인 계획을 작성합니다. 
 
 * 먼저 쿼리 프로세서는 OLE DB를 사용하여 각 멤버 테이블에서 check 제약 조건 정의를 검색합니다. 쿼리 프로세서는 이를 통해 멤버 테이블에 키 값을 분산하여 매핑할 수 있습니다.
-* 쿼리 프로세서는 SQL 문 `WHERE` 절에 지정된 키 범위를 멤버 테이블에 행이 배포되는 방식을 보여 주는 맵과 비교합니다. 그런 다음 쿼리 프로세서는 분산 쿼리를 사용하여 SQL 문을 완료하는 데 필요한 원격 행만 검색하는 쿼리 실행 계획을 작성합니다. 또한 실행 계획은 데이터 또는 메타데이터가 요청될 때까지 이러한 데이터를 얻기 위해 원격 멤버 테이블에 액세스하는 것을 연기하는 방식으로도 작성됩니다.
+* The Query Processor compares the key ranges specified in an SQL statement `WHERE` 절에 지정된 키 범위를 멤버 테이블에 행이 배포되는 방식을 보여 주는 맵과 비교합니다. 그런 다음 쿼리 프로세서는 분산 쿼리를 사용하여 SQL 문을 완료하는 데 필요한 원격 행만 검색하는 쿼리 실행 계획을 작성합니다. 또한 실행 계획은 데이터 또는 메타데이터가 요청될 때까지 이러한 데이터를 얻기 위해 원격 멤버 테이블에 액세스하는 것을 연기하는 방식으로도 작성됩니다.
 
 예를 들어 Server1(1부터 3299999까지의`CustomerID` ), Server2(3300000부터 6599999까지의`CustomerID` ) 및 Server3(6600000부터 9999999까지의`CustomerID` )에 걸쳐 customers 테이블이 분할된 시스템이 있다고 가정합니다.
 
@@ -370,7 +370,7 @@ SELECT * FROM Person.Person;
 > [!NOTE]
 > `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `ON`으로 설정하면 마지막 실행 이후 통계가 업데이트되거나 카디널리티가 크게 변경된 테이블이나 인덱싱된 뷰를 대상으로 하는 쿼리가 모두 다시 컴파일됩니다. 이러한 동작은 일반 사용자 정의 테이블, 임시 테이블 및 DML 트리거로 생성된 삽입 테이블과 삭제 테이블에 적용됩니다. 과도한 재컴파일로 인해 쿼리 성능이 저하되면 이 설정을 `OFF`로 변경하세요. `AUTO_UPDATE_STATISTICS` 데이터베이스 옵션을 `OFF`로 설정하면 통계나 카디널리티 변경 내용에 따른 재컴파일은 발생하지 않습니다. 단, DML `INSTEAD OF` 트리거에 의해 생성되는 삽입 테이블과 삭제 테이블은 예외입니다. 두 테이블은 tempdb에 생성되므로 두 테이블에 액세스하는 쿼리의 다시 컴파일은 tempdb의 `AUTO_UPDATE_STATISTICS` 설정에 따라 결정됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000에서는 이 설정이 `OFF`인 경우에도 DML 트리거에 의한 삽입 테이블과 삭제 테이블의 카디널리티 변경 사항에 따라 계속하여 쿼리가 다시 컴파일됩니다.
 
-### <a name="parameters-and-execution-plan-reuse"></a>매개 변수 및 실행 계획 재사용
+### <a name="PlanReuse"></a> 매개 변수 및 실행 계획 재사용
 
 ADO, OLE DB 및 ODBC 응용 프로그램의 매개 변수 표식을 포함하여 매개 변수를 사용하면 실행 계획을 좀 더 많이 재사용할 수 있습니다. 
 
@@ -438,7 +438,7 @@ WHERE AddressID = 1 + 2;
 
 그러나 단순 매개 변수화 규칙에 따르면 매개 변수화할 수 있습니다. 강제 매개 변수화를 시도한 후 실패하면 그 다음으로는 단순 매개 변수화를 시도합니다.
 
-### <a name="simple-parameterization"></a>단순 매개 변수화
+### <a name="SimpleParam"></a> 단순 매개 변수화
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 Transact-SQL 문에 매개 변수 또는 매개 변수 표식을 사용하여 새 SQL 문을 이전에 컴파일된 기존의 실행 계획과 일치시키는 관계형 엔진의 성능을 향상시킵니다.
 
@@ -474,7 +474,7 @@ WHERE ProductSubcategoryID = 4;
 
 또는 구문은 동일하고 매개 변수 값만 다른 쿼리 및 단일 쿼리를 매개 변수화하도록 지정할 수 있습니다. 
 
-### <a name="forced-parameterization"></a>강제 매개 변수화
+### <a name="ForcedParam"></a> 강제 매개 변수화
 
 데이터베이스의 모든 `SELECT`, `INSERT`, `UPDATE` 및 `DELETE` 문이 특정 제한에 따라 매개 변수화되도록 지정하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 단순 매개 변수화 동작을 재정의할 수 있습니다. 강제 매개 변수화는 `PARAMETERIZATION` 문에서 `FORCED` 옵션을 `ALTER DATABASE` 로 설정하면 적용됩니다. 강제 매개 변수화를 사용하여 쿼리 컴파일 및 재컴파일 빈도를 줄여 특정 데이터베이스의 성능을 향상시킬 수 있습니다. 일반적으로 POS(Point of Sale) 응용 프로그램과 같은 원본으로부터 대량의 동시 쿼리를 처리하는 데이터베이스에서 강제 매개 변수화를 사용하면 도움이 될 수 있습니다.
 
@@ -525,7 +525,7 @@ WHERE ProductSubcategoryID = 4;
 * 이진 리터럴은 리터럴 크기가 8,000바이트 내일 때는 varbinary(8000)로 매개 변수화되고 8,000바이트보다 클 때는 varbinary(max)로 변환됩니다.
 * 통화 유형 리터럴은 money로 매개 변수화됩니다.
 
-#### <a name="guidelines-for-using-forced-parameterization"></a>강제 매개 변수화 사용 지침
+#### <a name="ForcedParamGuide"></a> 강제 매개 변수화 사용 지침
 
 `PARAMETERIZATION` 옵션을 FORCED로 설정할 때는 다음 사항을 고려해야 합니다.
 
@@ -538,7 +538,7 @@ WHERE ProductSubcategoryID = 4;
 단일 쿼리 또는 구문은 동일하고 매개 변수 값만 다른 기타 쿼리는 단순 매개 변수화되지 않도록 지정하여 강제 매개 변수화의 동작을 무시할 수 있습니다. 반대로 데이터베이스에서 강제 매개 변수화가 해제된 경우에도 구문이 동일한 쿼리에 한해 강제 매개 변수화가 수행되도록 지정할 수 있습니다. 이와 같은 작업을 수행할 때[계획 지침](../relational-databases/performance/plan-guides.md) 을 사용합니다.
 
 > [!NOTE]
-> `PARAMETERIZATION` 옵션이 `FORCED`로 설정되어 있으면 오류 메시지 보고가 단순 매개 변수화의 경우와 다를 수 있습니다. 단순 매개 변수화에서 보고되는 메시지보다 많은 오류 메시지가 보고될 수 있으며 오류가 발생한 줄 번호가 잘못 보고될 수 있습니다.
+> `PARAMETERIZATION` 옵션이 `FORCED`로 설정되어 있으면 `PARAMETERIZATION` 옵션이 `SIMPLE`로 설정되어 있는 경우와 오류 메시지 보고가 다를 수 있습니다. 강제 매개 변수화에서는 여러 오류 메시지가 보고될 수 있지만 단순 매개 변수화에서는 더 적은 메시지가 보고되며, 오류가 발생한 줄 번호가 잘못 보고될 수 있습니다.
 
 ### <a name="preparing-sql-statements"></a>SQL 문 준비
 
@@ -580,7 +580,7 @@ WHERE ProductID = 63;
 * 준비/실행 모델은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 비롯한 다른 데이터베이스로 이식 가능합니다.
 
  
-### <a name="parameter-sniffing"></a>매개 변수 검색
+### <a name="ParamSniffing"></a> 매개 변수 검색
 “매개 변수 검사”는 컴파일 또는 재컴파일을 수행하는 동안 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 현재 매개 변수 값을 “검사”하고 쿼리 최적화 프로그램에 전달하여 해당 값이 더욱 효율적인 쿼리 실행 계획을 생성하는 데 사용될 수 있도록 하는 프로세스를 나타냅니다.
 
 컴파일 또는 재컴파일을 수행하는 동안 다음 유형의 일괄 처리에 대해 매개 변수 값을 검사합니다.
@@ -606,7 +606,7 @@ WHERE ProductID = 63;
 * 직렬 실행 계획이 특정 쿼리에 사용 가능한 병렬 실행 계획보다 더 빠릅니다.
 * 쿼리에 병렬로 실행할 수 없는 스칼라 또는 관계형 연산자가 포함되어 있습니다. 특정 연산자는 쿼리 계획의 한 섹션이 직렬 모드로 실행되도록 하거나 전체 계획이 직렬 모드로 실행되도록 할 수 있습니다.
 
-### <a name="degree-of-parallelism"></a>병렬 처리 수준
+### <a name="DOP"></a> 병렬 처리 수준
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 병렬 쿼리 실행 또는 인덱스 DDL(데이터 정의 언어) 작업 각각의 인스턴스에 대해 가장 적합한 병렬 처리 수준이 자동으로 검색됩니다. 이것은 다음과 조건을 기준으로 수행됩니다. 
 
@@ -614,7 +614,7 @@ WHERE ProductID = 63;
   두 개 이상의 CPU가 있는 컴퓨터에서만 병렬 쿼리를 사용할 수 있습니다. 
 
 2. 사용할 수 있는 작업자 스레드 수가 충분한지 여부  
-  각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
+  각 쿼리 또는 인덱스 작업을 실행하려면 일정 수의 작업자 스레드가 필요합니다. 병렬 계획을 실행하려면 직렬 계획보다 많은 작업자 스레드가 필요하고, 필요한 작업자 스레드의 수는 병렬 처리 수준에 따라 증가합니다. 특정 병렬 처리 수준에 대한 병렬 계획의 작업자 스레드 요구 사항이 충족되지 않는 경우에는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 병렬 처리 수준을 자동으로 낮추거나 지정된 작업 컨텍스트의 병렬 계획을 완전히 중단합니다. 그런 다음 하나의 작업자 스레드만 사용되는 직렬 계획을 실행합니다. 
 
 3. 실행한 쿼리 또는 인덱스 작업의 유형  
   병렬 계획은 인덱스를 새로 작성 또는 다시 작성하거나 클러스터형 인덱스 및 CPU 주기 사용량이 큰 쿼리를 삭제하는 등의 인덱스 작업에 적합합니다. 예를 들어 대형 테이블의 조인, 대규모 집계 및 대형 결과 집합의 정렬이 병렬 쿼리에 적절합니다. 주로 트랜잭션 처리 응용 프로그램에서 사용되는 단순 쿼리의 경우 이 쿼리를 병렬로 실행하는 데 필요한 추가 조정 작업은 성능을 향상시키기보다는 부담이 됩니다. 병렬 처리로 유용한 쿼리와 그렇지 않은 쿼리를 구분하기 위해, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 쿼리 또는 인덱스 작업 실행 시 예상 비용을 [병렬 처리에 대한 비용 임계값](../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md) 값과 비교합니다. 권장되지는 않지만 사용자들은 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용하여 기본값 5를 변경할 수 있습니다. 
@@ -641,7 +641,7 @@ MAXDOP([최대 병렬 처리 수준](../database-engine/configure-windows/config
 
 최대 병렬 처리 수준 옵션을 0(기본값)으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행에 사용할 수 있습니다. MAXDOP 옵션을 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 64개 논리적 프로세서의 런타임 대상을 설정해도 필요한 경우 다른 값을 수동으로 설정할 수 있습니다. 쿼리와 인덱스에 대해 MAXDOP를 0으로 설정하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용 가능한 모든 프로세서(최대 64개)를 병렬 계획 실행의 지정된 쿼리 또는 인덱스에 대해 사용할 수 있습니다. MAXDOP는 일부 병렬 쿼리에만 적용되는 값이나 병렬 처리에 적합한 모든 쿼리의 미정 대상입니다. 즉, 런타임에 사용할 수 있는 작업자 스레드가 충분하지 않은 경우 MAXDOP 서버 구성 옵션보다 낮은 병렬 처리 수준으로 쿼리를 실행할 수 있습니다.
 
-MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](https://support.microsoft.com/en-us/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)를 참조하십시오.
+MAXDOP 구성에 대한 모범 사례는 이 [Microsoft 지원 문서](http://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-configuration-option-in-sql-server)를 참조하십시오.
 
 ### <a name="parallel-query-example"></a>병렬 쿼리 예제
 
@@ -665,7 +665,7 @@ WHERE o_orderdate >= '2000/04/01'
    ORDER BY o_orderpriority
 ```
 
-lineitem 및 orders 표에 다음 인덱스가 정의된다고 가정합니다.
+다음 인덱스가 `lineitem` 및 `orders` 테이블에서 정의된다고 가정합니다.
 
 ```tsql
 CREATE INDEX l_order_dates_idx 
@@ -751,7 +751,7 @@ Index Seek 연산자 위의 Parallelism 연산자는 `O_ORDERKEY` 값을 사용�
 
 개별 `CREATE TABLE` 또는 `ALTER TABLE` 문에는 인덱스를 생성해야 하는 여러 제약 조건이 있을 수 있습니다. 각 개별 인덱스 만들기 작업은 여러 CPU가 있는 컴퓨터에서 병렬로 수행될 수 있지만 이러한 여러 인덱스 만들기 작업은 연속해서 수행됩니다.
 
-## <a name="distributted-query-architecture"></a>분산 쿼리 아키텍처
+## <a name="distributed-query-architecture"></a>분산 쿼리 아키텍처
 
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL 문에서 다른 유형의 OLE DB 데이터 원본을 참조할 수 있도록 두 가지 메서드를 지원합니다.
 
@@ -791,7 +791,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 
 ## <a name="query-processing-enhancements-on-partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스에서의 향상된 쿼리 처리
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2008에서는 여러 병렬 계획에 대해 분할된 테이블에서의 쿼리 처리 성능을 향상시키고, 병렬 및 직렬 계획이 표시되는 방식을 변경하고, 컴파일 시간 및 런타임 실행 계획에 제공되는 분할 정보를 개선했습니다. 이 항목에서는 이러한 향상된 기능에 대해 설명하고, 분할된 테이블 및 인덱스의 쿼리 실행 계획을 해석하는 방법에 대해 안내하며, 분할된 개체에서의 쿼리 성능 향상을 위한 최선의 방법을 알려 줍니다. 
+[!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)]에서는 여러 병렬 계획에 대해 분할된 테이블에서의 쿼리 처리 성능이 향상되었고, 병렬 및 직렬 계획이 표시되는 방식이 변경되었으며 컴파일 시간 및 런타임 실행 계획에 제공되는 분할 정보가 개선되었습니다. 이 항목에서는 이러한 향상된 기능에 대해 설명하고, 분할된 테이블 및 인덱스의 쿼리 실행 계획을 해석하는 방법에 대해 안내하며, 분할된 개체에서의 쿼리 성능 향상을 위한 최선의 방법을 알려 줍니다. 
 
 > [!NOTE]
 > 분할된 테이블 및 인덱스는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise, Developer 및 Evaluation Edition에서만 지원됩니다.
@@ -802,7 +802,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 Transact-SQL
 
 이제 파티션 제거는 이 seek 연산에서 수행됩니다.
 
-또한 쿼리 최적화 프로그램은 확장되므로 seek 또는 scan 연산이 한 가지 조건을 사용하여 `PartitionID`(논리적 선행 열) 및 가능한 다른 인덱스 키 열에서 수행된 후, 두 번째 수준의 seek 연산은 다른 조건을 사용하여 첫 번째 수준의 seek 연산에 대한 제한을 충족시키는 각각의 고유 값에 대해 수행될 수 있습니다. 즉 skip scan이라고 하는 이 연산을 통해 쿼리 최적화 프로그램은 seek 또는 scan 연산을 하나의 조건을 기준으로 수행하여 액세스할 파티션을 결정하고 해당 연산자에서 두 번째 수준 index seek 연산을 수행하여 다른 조건을 충족시키는 이러한 파티션에서 행을 반환할 수 있습니다. 예를 들어 다음 쿼리를 살펴보십시오.
+In addition, the Query Optimizer is extended so that a seek or scan operation with one condition can be done on `PartitionID` (논리적 선행 열)과 가능한 다른 인덱스 키 열에서 수행된 후, 두 번째 수준의 seek 연산은 다른 조건을 사용하여 첫 번째 수준의 seek 연산에 대한 제한을 충족시키는 각각의 고유 값에 대해 수행될 수 있습니다. 즉 skip scan이라고 하는 이 연산을 통해 쿼리 최적화 프로그램은 seek 또는 scan 연산을 하나의 조건을 기준으로 수행하여 액세스할 파티션을 결정하고 해당 연산자에서 두 번째 수준 index seek 연산을 수행하여 다른 조건을 충족시키는 이러한 파티션에서 행을 반환할 수 있습니다. 예를 들어 다음 쿼리를 살펴보십시오.
 
 ```tsql
 SELECT * FROM T WHERE a < 10 and b = 2;
@@ -816,7 +816,7 @@ CREATE PARTITION FUNCTION myRangePF1 (int) AS RANGE LEFT FOR VALUES (3, 7, 10);
 
 쿼리를 해결하려면 쿼리 프로세서는 첫 번째 수준 seek 연산을 수행하여 `T.a < 10`조건을 충족시키는 행을 포함하는 모든 파티션을 찾습니다. 이 작업을 통해 액세스할 파티션을 식별합니다. 식별된 각 파티션에서 쿼리 프로세서는 열에서 클러스터형 인덱스로 두 번째 수준 seek 연산을 수행하여 `T.b = 2` 및 `T.a < 10`조건을 충족시키는 행을 찾습니다. 
 
-다음 그림은 skip scan 연산을 논리적으로 표현한 것으로 a 열과 b 열의 데이터와 함께 T 테이블을 보여 줍니다. 파티션은 세로줄 파선으로 표시되는 파티션 경계와 함께 1에서 4까지 번호가 매겨져 있습니다. 파티션에 대한 첫 번째 수준 seek 연산(그림에는 표시되지 않음)에서는 파티션 1, 2 및 3이 a 열에 테이블 및 조건자에 대해 정의된 분할로 포함된 검색 조건을 충족시키는지 확인했습니다. 즉 `T.a < 10`입니다. skip scan 연산의 두 번째 수준 seek 부분에 의해 이동된 경로는 곡선으로 표시됩니다. 기본적으로 skip scan 연산은 `b = 2`조건을 충족시키는 행을 이러한 파티션마다 검색합니다. skip scan 연산의 총 비용은 세 가지 개별 index seek 연산의 총 비용과 같습니다.   
+다음 그림은 skip scan 연산을 논리적으로 표현한 것으로 `T` 및 `a` 열의 데이터와 함께 `b` 테이블을 보여 줍니다. 파티션은 세로줄 파선으로 표시되는 파티션 경계와 함께 1에서 4까지 번호가 매겨져 있습니다. 파티션에 대한 첫 번째 수준 seek 연산(그림에는 표시되지 않음)에서는 파티션 1, 2 및 3이 `a` 열에 테이블 및 조건자에 대해 정의된 분할로 포함된 검색 조건을 충족시키는지 확인했습니다. 즉 `T.a < 10`입니다. skip scan 연산의 두 번째 수준 seek 부분에 의해 이동된 경로는 곡선으로 표시됩니다. 기본적으로 skip scan 연산은 `b = 2`조건을 충족시키는 행을 이러한 파티션마다 검색합니다. skip scan 연산의 총 비용은 세 가지 개별 index seek 연산의 총 비용과 같습니다.   
 
 ![skip_scan](../relational-databases/media/skip-scan.gif)
 
@@ -943,24 +943,24 @@ XML 실행 계획 출력에서`Partitions Accessed`는 새 `RuntimePartitionSumm
 
 또 다른 예로, 경계 포인트(10, 20, 30)가 있는 열 A에는 파티션 4개가 있고 열 B에는 인덱스가 있는 테이블과 조건자 절 `WHERE B IN (50, 100, 150)`을 갖는 쿼리가 있다고 가정합니다. 테이블 파티션은 A 값이 기준이기 때문에 B 값은 어느 테이블 파티션에서도 나타날 수 있습니다. 따라서 쿼리 프로세서는 4개의 각 테이블 파티션에서 3개의 B 값(50, 100, 150)을 각각 검색합니다. 쿼리 프로세서는 이러한 12개의 각 쿼리 검색을 병렬로 실행할 수 있도록 작업자 스레드를 균형 있게 할당합니다.
 
-|A 열을 기반으로 하는 테이블 파티션    |각 테이블 파티션에서 B 열 검색 |
+|A 열을 기반으로 하는 테이블 파티션 |각 테이블 파티션에서 B 열 검색 |
 |----|----|
-|테이블 파티션 1: A < 10     |B=50, B=100, B=150 |
-|테이블 파티션 2: A >= 10 AND A < 20     |B=50, B=100, B=150 |
-|테이블 파티션 3: A >= 20 AND A < 30     |B=50, B=100, B=150 |
-|테이블 파티션 4: A >= 30     |B=50, B=100, B=150 |
+|테이블 파티션 1: A < 10   |B=50, B=100, B=150 |
+|테이블 파티션 2: A >= 10 AND A < 20   |B=50, B=100, B=150 |
+|테이블 파티션 3: A >= 20 AND A < 30   |B=50, B=100, B=150 |
+|테이블 파티션 4: A >= 30  |B=50, B=100, B=150 |
 
 ### <a name="best-practices"></a>최선의 구현 방법
 
 분할된 대형 테이블과 인덱스에서 많은 양의 데이터에 액세스하는 쿼리의 성능을 향상시키려면 다음과 같은 최선의 구현 방법을 권장합니다.
 
-* 여러 디스크 간에 각 파티션을 스트라이프합니다.
+* 여러 디스크 간에 각 파티션을 스트라이프합니다. 특히 이 작업은 회전 디스크를 사용할 때 적합합니다.
 * 가능하면 충분한 주 메모리가 있는 서버를 사용하여 자주 액세스하는 파티션이나 모든 파티션을 메모리 크기에 맞춰서 I/O 비용을 줄입니다.
 * 쿼리한 데이터가 메모리 크기에 맞지 않을 경우 해당 테이블과 인덱스를 압축합니다. 이렇게 하면 I/O 비용이 줄어듭니다.
 * 빠른 프로세서와 가능한 많은 프로세서 코어가 장착된 서버를 사용하여 병렬 쿼리 처리 기능을 이용합니다.
 * 서버에 충분한 I/O 컨트롤러 대역폭이 있는지 확인합니다. 
 * 모든 분할된 대형 테이블에 클러스터형 인덱스를 만들어 B-트리 검색 최적화를 이용합니다.
-* 분할된 데이터로 데이터를 대량 로드할 경우 백서에서 최상의 권장 방법인 [Loading Bulk Data into a Partitioned Table](http://go.microsoft.com/fwlink/?LinkId=154561)(분할된 테이블에 대량 데이터 로드)을 따르세요.
+* 데이터를 분할된 테이블에 대량으로 로드하는 경우에는 [데이터 로드 성능 가이드](http://msdn.microsoft.com/en-us/library/dd425070.aspx) 백서의 모범 사례 권장 사항을 따르세요.
 
 ### <a name="example"></a>예제
 
@@ -1034,5 +1034,6 @@ GO
 
 ##  <a name="Additional_Reading"></a> 더 보기  
  [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
- [확장 이벤트](../relational-databases/extended-events/extended-events.md)
+ [확장 이벤트](../relational-databases/extended-events/extended-events.md)  
+ [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)
 
