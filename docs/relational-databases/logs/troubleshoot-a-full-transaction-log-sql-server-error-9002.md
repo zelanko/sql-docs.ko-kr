@@ -22,11 +22,11 @@ caps.latest.revision: 59
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/21/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
@@ -68,7 +68,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)  
   
--   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A>(SMO)  
+-   <xref:Microsoft.SqlServer.Management.Smo.Backup.SqlBackup%2A> (SMO)  
   
 ### <a name="freeing-disk-space"></a>디스크 공간 늘리기  
  다른 파일을 삭제하거나 이동하여 데이터베이스의 트랜잭션 로그 파일이 들어 있는 디스크 드라이브의 디스크 공간을 늘릴 수 있습니다. 디스크 공간에 여유가 있으면 복구 시스템이 자동으로 로그 파일을 확장할 수 있습니다.  
@@ -114,8 +114,7 @@ ms.lasthandoff: 06/22/2017
 프로세스를 종료해야 할 때 [KILL](https://msdn.microsoft.com/library/ms173730.aspx) 문을 사용해야 하는 경우도 있습니다. 특히 중지하지 않을 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하세요. 자세한 내용은 [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
-[KB 지원 문서 - A transaction log grows unexpectedly or becomes full in SQL Server(트랜잭션 로그가 예기치 않게 커지거나 SQL Server에 가득 참)](https://support.microsoft.com/en-us/kb/317375)
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+[KB 지원 문서 - A transaction log grows unexpectedly or becomes full in SQL Server(트랜잭션 로그가 예기치 않게 커지거나 SQL Server에 가득 참)](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
  [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
  [sp_add_log_file_recover_suspect_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)  
