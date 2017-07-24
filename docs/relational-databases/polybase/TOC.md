@@ -6,4 +6,5 @@
 # [구성](polybase-configuration.md)  
 # [T-SQL 개체](polybase-t-sql-objects.md)  
 # [쿼리](polybase-queries.md)  
-# [문제 해결](polybase-troubleshooting.md)  
+# [문제 해결](polybase-troubleshooting.md) 
+## [PolyBase Kerberos 연결 문제 해결](polybase-troubleshoot-connectivity.md)   
