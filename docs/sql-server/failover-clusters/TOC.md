@@ -3,7 +3,7 @@
 # [역할 전환 후 로그인 및 작업 관리](management-of-logins-and-jobs-after-role-switching-sql-server.md)  
 # [분리된 사용자 문제 해결](troubleshoot-orphaned-users-sql-server.md)  
 
-# [장애 조치(failover) 클러스터 설치(문서)](install/TOC.md)  
+# [장애 조치 클러스터 설치](install/sql-server-failover-cluster-installation.md)  
 
 # [WSFC(Windows Server 장애 조치(Failover) 클러스터링), SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)  
 ## [WSFC 쿼럼 모드 및 투표 구성](windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)  
