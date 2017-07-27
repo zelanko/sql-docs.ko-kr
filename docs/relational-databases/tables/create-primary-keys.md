@@ -24,7 +24,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="create-primary-keys"></a>기본 키 만들기
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Create Primary Keys](https://msdn.microsoft.com/en-US/library/ms189039(SQL.120).aspx)합니다.
 
