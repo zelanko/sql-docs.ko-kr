@@ -1,7 +1,7 @@
 ---
 title: "메모리 내 OLTP를 통해 JSON 처리 최적화 | Microsoft 문서"
 ms.custom: 
-ms.date: 02/03/2017
+ms.date: 07/18/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 3
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: 12ef08a1f90e0346828a9dafb4052864254954d7
+ms.translationtype: HT
+ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
+ms.openlocfilehash: a0118939a71b06d7c3258efdfbe291a910358c37
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>메모리 내 OLTP를 통해 JSON 처리 최적화
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-SQL Server 및 Azure SQL Database를 통해 JSON으로 서식이 지정된 텍스트로 작업할 수 있습니다. JSON 데이터를 처리하는 OLTP 쿼리의 성능을 향상하기 위해 표준 문자열 열(NVARCHAR 형식)을 사용하여 메모리 액세스에 최적화된 테이블에 JSON 문서를 저장할 수 있습니다.
+SQL Server 및 Azure SQL Database를 통해 JSON으로 서식이 지정된 텍스트로 작업할 수 있습니다. JSON 데이터를 처리하는 쿼리의 성능을 향상하려면 표준 문자열 열(NVARCHAR 형식)을 사용하여 메모리 액세스에 최적화된 테이블에 JSON 문서를 저장할 수 있습니다. 메모리 액세스에 최적화된 테이블에 JSON 데이터를 저장하면 잠금 해제된 메모리 내 데이터 액세스를 활용하여 쿼리 성능이 향상됩니다.
 
 ## <a name="store-json-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 JSON 저장
 다음 예제에서는 `Tags`와 `Data`라는 두 개의 JSON 열이 있는 메모리 액세스에 최적화된 `Product` 테이블을 보여 줍니다.
@@ -42,17 +42,18 @@ CREATE TABLE xtp.Product(
 
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
-메모리 액세스에 최적화된 테이블에 JSON 데이터를 저장하면 잠금 해제된 메모리 내 데이터 액세스를 활용하여 쿼리 성능이 향상됩니다.
 
-## <a name="optimize-json-with-additional-in-memory-features"></a>추가 메모리 내 기능을 통해 JSON 최적화
-SQL Server 및 Azure SQL Database에서 사용할 수 있는 새로운 기능을 통해 기존의 메모리 내 OLTP 기술과 JSON 기능을 완벽하게 통합할 수 있습니다. 예를 들어 다음과 같은 작업을 수행할 수 있습니다.
- - 고유하게 컴파일된 CHECK 제약 조건을 사용하여 메모리 액세스에 최적화된 테이블에 저장된 JSON 문서 구조의 유효성을 검사합니다.
- - 계산 열을 사용하여 JSON 문서에 저장된 값을 노출하고 강력하게 형식화합니다.
- - 메모리 액세스에 최적화된 인덱스를 사용하여 JSON 문서의 값을 인덱싱합니다.
- - JSON 문서의 값을 사용하는 SQL 쿼리를 고유하게 컴파일하고 JSON 텍스트로 결과의 서식을 지정합니다.
+## <a name="optimize-json-processing-with-additional-in-memory-features"></a>추가 메모리 내 기능을 통해 JSON 처리 최적화
+SQL Server 및 Azure SQL Database에서 사용할 수 있는 기능을 통해 기존의 메모리 내 OLTP 기술과 JSON 기능을 완벽하게 통합할 수 있습니다. 예를 들어 다음과 같은 작업을 수행할 수 있습니다.
+ - 고유하게 컴파일된 CHECK 제약 조건을 사용하여 메모리 액세스에 최적화된 테이블에 저장된 [JSON 문서 구조의 유효성을 검사](#validate)합니다.
+ - 계산 열을 사용하여 JSON 문서에 저장된 [값을 노출하고 강력하게 형식화](#computedcol)합니다.
+ - 메모리 액세스에 최적화된 인덱스를 사용하여 JSON 문서의 [값을 인덱싱](#index)합니다.
+ - JSON 문서의 값을 사용하거나 JSON 텍스트로 결과의 서식을 지정하는 [SQL 쿼리를 고유하게 컴파일](#compile)합니다.
 
-## <a name="validate-json-columns"></a>JSON 열 유효성 검사
-다음 예제와 같이 SQL Server 및 Azure SQL Database를 사용하면 문자열 열에 저장된 JSON 문서 내용의 유효성을 검사하는 고유하게 컴파일된 CHECK 제약 조건을 추가할 수 있습니다.
+## <a name="validate"></a> JSON 열의 유효성 검사
+SQL Server 및 Azure SQL Database를 사용하면 문자열 열에 저장된 JSON 문서 내용의 유효성을 검사하는 고유하게 컴파일된 CHECK 제약 조건을 추가할 수 있습니다. 고유하게 컴파일된 JSON CHECK 제약 조건을 사용하여 메모리 액세스에 최적화된 테이블에 저장된 JSON 텍스트의 서식이 올바르게 지정되었는지 확인할 수 있습니다.
+
+다음 예에서는 JSON 열 `Tags`가 있는 `Product` 테이블을 만듭니다. `Tags` 열에는 `ISJSON` 함수를 사용하여 열에 있는 JSON 텍스트의 유효성을 검사하는 CHECK 제약 조건이 있습니다.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -70,7 +71,7 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-고유하게 컴파일된 CHECK 제약 조건은 JSON 열이 포함된 기존 테이블에 추가할 수 있습니다.
+JSON 열이 포함된 기존 테이블에 고유하게 컴파일된 CHECK 제약 조건을 추가할 수도 있습니다.
 
 ```sql
 ALTER TABLE xtp.Product
@@ -78,14 +79,14 @@ ALTER TABLE xtp.Product
         CHECK (ISJSON(Data)=1)
 ```
 
-고유하게 컴파일된 JSON CHECK 제약 조건을 사용하여 메모리 액세스에 최적화된 테이블에 저장된 JSON 텍스트의 서식이 올바르게 지정되었는지 확인할 수 있습니다.
-
-## <a name="expose-json-values-using-computed-columns"></a>계산 열을 사용하여 JSON 값 노출
-계산 열을 사용하면 JSON 텍스트에서 값을 노출할 수 있으며 JSON 텍스트에서 값을 가져오는 식을 다시 계산하지 않고 JSON 구조를 다시 구문 분석하지 않고도 해당 값에 액세스할 수 있습니다. 노출된 값은 강력한 형식이며 실제로 계산 열에 유지됩니다. 지속형 계산 열을 사용하여 JSON 값에 액세스하면 JSON 문서의 값에 액세스하는 것보다 더 빠릅니다.
+## <a name="computedcol"></a> 계산 열을 사용하여 JSON 값 노출
+계산 열을 사용하면 JSON 텍스트에서 값을 노출할 수 있으며 JSON 텍스트에서 값을 가져오거나 JSON 구조를 다시 구문 분석하지 않고도 해당 값에 액세스할 수 있습니다. 이 방식으로 노출된 값은 강력한 형식이며 실제로 계산 열에 유지됩니다. 지속형 계산 열을 사용하여 JSON 값에 액세스하면 JSON 문서의 값에 직접 액세스하는 것보다 더 빠릅니다.
 
 다음 예제에서는 JSON `Data` 열에서 다음과 같은 두 값을 노출하는 방법을 보여 줍니다.
 -   제품이 만들어진 국가.
 -   제품 제조 비용.
+
+이 예에서 계산 열 `MadeIn` 및 `Cost`는 `Data` 열에 저장된 JSON 문서가 변경될 때마다 업데이트됩니다.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -103,10 +104,14 @@ CREATE TABLE xtp.Product(
 ) WITH (MEMORY_OPTIMIZED=ON);
 ```
 
-계산 열 `MadeIn` 및 `Cost`는 `Data` 열에 저장된 JSON 문서가 변경될 때마다 업데이트됩니다.
+## <a name="index"></a> JSON 열의 값 인덱싱
+SQL Server 및 Azure SQL Database를 사용하면 메모리 액세스에 최적화된 인덱스를 사용하여 JSON 열의 값을 인덱싱할 수 있습니다. 이전 예제에서 설명한 대로 인덱싱되는 JSON 값은 계산 열을 사용하여 노출되고 강력하게 형식화되어야 합니다.
 
-## <a name="index-values-in-json-columns"></a>JSON 열의 값 인덱싱
-SQL Server 및 AAzure SQL Database를 통해 메모리 액세스에 최적화된 인덱스를 사용하여 JSON 열의 값을 인덱싱할 수 있습니다. 다음 예제와 같이 인덱싱되는 JSON 값은 계산 열을 사용하여 노출되고 강력하게 형식화되어야 합니다.
+JSON 열의 값은 표준 NONCLUSTERED 및 HASH 인덱스를 사용하여 인덱싱할 수 있습니다.
+-   NONCLUSTERED 인덱스는 일부 JSON 값에 따라 행 범위를 선택하고 JSON 값에 따라 결과를 정렬하는 쿼리를 최적화합니다.
+-   HASH 인덱스는 찾을 값을 정확히 지정하여 단일 행 또는 몇 개 행을 선택하는 쿼리를 최적화합니다.
+
+다음 예제에서는 두 개의 계산 열을 사용하여 JSON 값을 노출하는 테이블을 만듭니다. 이 예제에서는 하나의 JSON 값에는 NONCLUSTERED 인덱스, 다른 값에는 HASH 인덱스를 만듭니다.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -129,12 +134,11 @@ ALTER TABLE Product
     ADD INDEX [idx_Product_Cost] NONCLUSTERED HASH(Cost)
         WITH (BUCKET_COUNT=20000)
 ```
-JSON 열의 값은 표준 NONCLUSTERED 및 HASH 인덱스를 사용하여 인덱싱할 수 있습니다.
--   NONCLUSTERED 인덱스는 일부 JSON 값에 따라 행 범위를 선택하고 JSON 값에 따라 결과를 정렬하는 쿼리를 최적화합니다.
--   HASH 인덱스는 찾으려는 정확한 값을 지정하여 단일 행이나 몇 개의 행을 가져올 때 최적의 성능을 제공합니다.
 
-## <a name="native-compilation-of-json-queries"></a>JSON 쿼리의 네이티브 컴파일
-마지막으로 JSON 함수와 함께 쿼리를 포함하는 Transact-SQL 프로시저, 함수 및 트리거의 네이티브 컴파일은 쿼리의 성능을 향상시키고 프로시저를 실행하는 데 필요한 CPU 주기를 줄입니다. 다음 예제에서는 JSON_VALUE, OPENJSON 및 JSON_MODIFY라는 여러 가지 JSON 함수를 사용하는 고유하게 컴파일된 프로시저를 보여 줍니다.
+## <a name="compile"></a> JSON 쿼리의 네이티브 컴파일
+프로시저, 함수 및 트리거에 기본 제공 JSON 함수를 사용하는 쿼리가 포함되어 있는 경우 네이티브 컴파일은 이러한 쿼리의 성능을 향상하고 쿼리를 실행하는 데 필요한 CPU 주기를 줄입니다.
+
+다음 예제에서는 **JSON_VALUE**, **OPENJSON** 및 **JSON_MODIFY**라는 여러 가지 JSON 함수를 사용하는 고유하게 컴파일된 프로시저를 보여 줍니다.
 
 ```sql
 CREATE PROCEDURE xtp.ProductList(@ProductIds nvarchar(100))

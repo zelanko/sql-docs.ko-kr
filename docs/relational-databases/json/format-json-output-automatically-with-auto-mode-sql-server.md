@@ -2,7 +2,7 @@
 title: "AUTO 모드를 사용하여 JSON 출력 형식 자동 지정(SQL Server) | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: cba250a399bb3de87c9713ac600c9807527a1cd9
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 09e81a8bbc77e9bbf9f76bb669ab53bd549bef85
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="format-json-output-automatically-with-auto-mode-sql-server"></a>AUTO 모드를 사용하여 JSON 출력 형식 자동 지정(SQL Server)
@@ -29,20 +29,22 @@ ms.lasthandoff: 06/23/2017
 
 **SELECT** 문의 구조에 따라 **FOR JSON** 절 출력 형식을 자동으로 지정하려면 **AUTO** 옵션을 지정합니다.  
   
-**AUTO** 옵션을 포함하면 SELECT 목록의 열 순서와 해당 원본 테이블에 따라 JSON 출력의 형식이 자동으로 결정됩니다. 이 형식은 변경할 수 없습니다.
+**AUTO** 옵션을 지정하면 SELECT 목록의 열 순서와 해당 원본 테이블에 따라 JSON 출력의 형식이 자동으로 결정됩니다. 이 형식은 변경할 수 없습니다.
  
- 대신 **PATH** 옵션을 사용하여 출력에 대한 제어를 관리합니다.
- -   **PATH** 옵션에 대한 자세한 내용은 [PATH 모드로 중첩 JSON 출력 서식 지정](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)을 참조하세요.
- -   두 옵션의 개요는 [FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.
+대신 **PATH** 옵션을 사용하여 출력에 대한 제어를 관리합니다.
+-   **PATH** 옵션에 대한 자세한 내용은 [PATH 모드로 중첩 JSON 출력 서식 지정](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)을 참조하세요.
+-   두 옵션의 개요는 [FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)을 참조하세요.
+
+**FOR JSON AUTO** 옵션을 사용하는 쿼리에는 **FROM** 절이 있어야 합니다.  
   
- **FOR JSON AUTO** 옵션을 사용하는 쿼리에는 **FROM** 절이 있어야 합니다.  
+아래에는 **AUTO** 옵션에서 **FOR JSON** 절을 사용하는 몇 가지 예가 나와 있습니다.  
   
- 아래에는 **AUTO** 옵션에서 **FOR JSON** 절을 사용하는 몇 가지 예가 나와 있습니다.  
+## <a name="examples"></a>예
+
+### <a name="example-1"></a>예제 1
+ **Query**  
   
-## <a name="examples"></a>예  
- **쿼리 1**  
-  
-쿼리에서 하나의 테이블만 사용하는 경우 FOR JSON AUTO 절의 결과는 FOR JSON PATH의 결과와 비슷합니다. 이 경우 FOR JSON AUTO는 중첩된 개체를 만들지 않습니다. 유일한 차이점은 FOR JSON AUTO는 점으로 구분된 별칭(예를 들어 다음 예제에서 `Info.MiddleName`)을 중첩된 개체가 아닌 점이 있는 키로 출력한다는 것입니다.  
+쿼리에서 하나의 테이블만 참조하는 경우 FOR JSON AUTO 절의 결과는 FOR JSON PATH의 결과와 비슷합니다. 이 경우 FOR JSON AUTO는 중첩된 개체를 만들지 않습니다. 유일한 차이점은 FOR JSON AUTO는 점으로 구분된 별칭(예를 들어 다음 예제에서 `Info.MiddleName`)을 중첩된 개체가 아닌 점이 있는 키로 출력한다는 것입니다.  
   
 ```sql  
 SELECT TOP 5   
@@ -54,7 +56,7 @@ SELECT TOP 5
    FOR JSON AUTO  
 ```  
   
- **결과 1**  
+ **결과**  
   
 ```json  
 [{
@@ -83,10 +85,12 @@ SELECT TOP 5
     "Info.MiddleName": "A"
 }]
 ```  
+
+### <a name="example-2"></a>예제 2
+
+**Query**  
   
- **쿼리 2**  
-  
- 테이블을 조인하면 첫 번째 테이블의 열이 루트 개체의 속성으로 생성됩니다. 두 번째 테이블의 열은 중첩된 개체의 속성으로 생성됩니다. 테이블 이름 또는 두 번째 테이블의 별칭(예를 들어 다음 예제에서 `D`)은 중첩된 배열의 이름으로 사용됩니다.  
+테이블을 조인하면 첫 번째 테이블의 열이 루트 개체의 속성으로 생성됩니다. 두 번째 테이블의 열은 중첩된 개체의 속성으로 생성됩니다. 테이블 이름 또는 두 번째 테이블의 별칭(예를 들어 다음 예제에서 `D`)은 중첩된 배열의 이름으로 사용됩니다.  
   
 ```sql  
 SELECT TOP 2 SalesOrderNumber,  
@@ -99,7 +103,7 @@ FROM Sales.SalesOrderHeader H
 FOR JSON AUTO   
 ```  
   
- **결과 2**  
+**결과**  
   
 ```json  
 [{
@@ -119,9 +123,11 @@ FOR JSON AUTO
     }]
 }]
 ```  
+
+### <a name="example-3"></a>예 3
  
- **쿼리 3**  
- FOR JSON AUTO를 사용하는 대신 다음 예제에서처럼 SELECT 문에 FOR JSON PATH 하위 쿼리를 중첩할 수 있습니다. 이 예제는 앞의 예제와 동일한 결과를 출력합니다.  
+**Query**  
+FOR JSON AUTO를 사용하는 대신 다음 예제에서처럼 SELECT 문에 FOR JSON PATH 하위 쿼리를 중첩할 수 있습니다. 이 예제는 앞의 예제와 동일한 결과를 출력합니다.  
   
 ```sql  
 SELECT TOP 2  
@@ -135,7 +141,7 @@ FROM Sales.SalesOrderHeader AS H
 FOR JSON PATH  
 ```  
   
- **결과 3**  
+**결과**  
   
 ```json  
 [{

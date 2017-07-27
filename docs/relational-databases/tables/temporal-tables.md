@@ -15,17 +15,17 @@ caps.latest.revision: 47
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a4cdbe630a64ce01c6319dcc5791c0f3f9b3176b
+ms.translationtype: HT
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 시스템 버전 임시 테이블에 대한 지원이 데이터베이스 기능으로 도입되었습니다. 이 기능은 현재 시점에 올바른 데이터에 대한 정보만 제공하는 것이 아니라 임의 시점에 테이블에 저장된 데이터에 대한 정보를 제공하는 것을 기본적으로 지원합니다. 임시 테이블은 ANSI SQL 2011에서 도입되었으며 현재 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 데이터베이스 기능입니다.  
+  SQL Server 2016에는 시스템 버전 임시 테이블에 대한 지원이 데이터베이스 기능으로 도입되었습니다. 이 기능은 현재 시점에 적절한 데이터에 대한 정보만 제공하는 것이 아니라 임의 시점에 테이블에 저장된 데이터에 대한 정보를 제공하는 것을 기본적으로 지원합니다. 임시 테이블은 ANSI SQL 2011에서 도입되었으며 현재 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 데이터베이스 기능입니다.  
   
  **빠른 시작**  
   

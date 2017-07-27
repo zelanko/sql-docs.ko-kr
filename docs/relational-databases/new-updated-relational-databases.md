@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 19b664245f45ad45a4c7d1eba249858030fad718
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-relational-databases-docs" class="xliff"></a>
-
-# 신규 / 최근에 업데이트: 관계형 데이터베이스 docs
+# <a name="new-and-recently-updated-relational-databases-docs"></a>신규 / 최근에 업데이트: 관계형 데이터베이스 docs
 
 
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *업데이트 날짜 범위:* &nbsp; **2017-05-17** &nbsp; ~ &nbsp; **2017-06-30**
+- *업데이트 날짜 범위:* &nbsp; **2017-05-23** &nbsp; ~ &nbsp; **2017-07-17**
 - *주제 영역:* &nbsp; **관계형 데이터베이스**합니다.
 
 
@@ -44,9 +42,7 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## 최근에 만든 새로운 문서
+## <a name="new-articles-created-recently"></a>최근에 만든 새로운 문서
 
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
@@ -54,16 +50,28 @@ ms.lasthandoff: 07/03/2017
 1. [SQL Server 2016용 SQL Server 메모리 내 OLTP 내부](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
 2. [SQL 데이터베이스의 적응 쿼리 처리](performance/adaptive-query-processing.md)
 3. [Microsoft SQL 플랫폼을 사용한 개인 정보 보호 향상 및 GDPR 요구 사항 해결 가이드](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.dm_db_log_stats(Transact-SQL)](system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
-5. [sys.dm_exec_query_parallel_workers(Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+4. [sys.pdw_replicated_table_cache_state(Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
+5. [sys.trusted_assemblies(Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
+6. [sys.dm_exec_query_parallel_workers(Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
+7. [sys.sp_add_trusted_assembly(Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
+8. [sys.sp_drop_trusted_assembly(Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## 부분 업데이트 되는 문서
+## <a name="compact-list-of-articles-updated-recently"></a>Compact를 최근에 업데이트 하는 문서 목록
+
+이 간결한 목록에는 인용 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>부분 업데이트 되는 문서
 
 이 섹션에는 최근에 발견 된 대규모 업데이트를 문서에서 수집 하는 업데이트의 발췌 한 내용 표시 됩니다.
 
@@ -79,9 +87,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd" class="xliff"></a>
-
-### 1. &nbsp; [메모리 최적화 테이블 변경](in-memory-oltp/altering-memory-optimized-tables.md)
+### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1. &nbsp; [메모리 최적화 테이블 변경](in-memory-oltp/altering-memory-optimized-tables.md)
 
 *업데이트됨: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
 
@@ -126,9 +132,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_2"/>
 
-<a id="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd" class="xliff"></a>
-
-### 2. &nbsp; [메모리 최적화 테이블의 테이블 및 행 크기](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2. &nbsp; [메모리 최적화 테이블의 테이블 및 행 크기](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
 
 *업데이트됨: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_1) | [다음](#TitleNum_3))
 
@@ -171,9 +175,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_3"/>
 
-<a id="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd" class="xliff"></a>
-
-### 3. &nbsp; [마이그레이션 후 유효성 검사 및 최적화 가이드](post-migration-validation-and-optimization-guide.md)
+### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3. &nbsp; [마이그레이션 후 유효성 검사 및 최적화 가이드](post-migration-validation-and-optimization-guide.md)
 
 *업데이트됨: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_2) | [다음](#TitleNum_4))
 
@@ -210,11 +212,9 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_4"/>
 
-<a id="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd" class="xliff"></a>
+### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan(Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
 
-### 4. &nbsp; [sys.query_store_plan(Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-*업데이트됨: 2017-06-05* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_3) | [다음](#TitleNum_5))
+*업데이트됨: 2017-06-05* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([이전](#TitleNum_3))
 
 <!-- Source markdown line 58.  ms.author= "rickbyh".  -->
 
@@ -250,116 +250,45 @@ ms.lasthandoff: 07/03/2017
 
 
 
-&nbsp;
+
+<a name="similars2"/>
 
 &nbsp;
 
----
-
-<a name="TitleNum_5"/>
-
-<a id="5-nbsp-manage-retention-of-historical-data-in-system-versioned-temporal-tablestablesmanage-retention-of-historical-data-in-system-versioned-temporal-tablesmd" class="xliff"></a>
-
-### 5. &nbsp;[시스템 버전 임시 테이블에서 기록 데이터의 보존 관리](tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)
-
-*Updated: 2017-05-19* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([Previous](#TitleNum_4))
-
-<!-- Source markdown line 425.  ms.author= "carlrab".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 ee69beb6a46913934d4a322f5d95343cc86f2ec4 94da98fec4ab16636a4581c16eb4456e2d1ff66b  (PR=1777  ,  Filename=manage-retention-of-historical-data-in-system-versioned-temporal-tables.md  ,  Dirpath=docs\relational-databases\tables\  ,  MergeCommitSha40=5bd0e1d3955d898824d285d28979089e2de6f322) -->
-
-
-
-**임시 기록 보존 정책 접근 방식 사용**
-
-> **참고:** 임시 기록 보존 정책을 사용 하 여 접근 방식을 적용 [! INCLUDE [sqldbesa... /.. /includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3에서 시작 합니다.  
-
-임시 기록 보존 될 수 있습니다 정책은 사용자가을 유연한 에이징을 만들 수 있는 개별 테이블 수준에서 구성 합니다. 임시 보존이 적용 하는 것은 간단: 테이블 스키마를 만들거나 변경 하는 동안 설정 하려면 매개 변수는 하나만 필요 합니다.
-
-보존 정책을 정의 하 고 나면 Azure SQL 데이터베이스는 자동 데이터 정리에 사용할 수 있는 기록 행이 있는 경우 정기적으로 검사를 시작 합니다. 일치 하는 행 식별 하 고 기록 테이블에서 해당 제거 예약 되 고 시스템에서 실행 하는 백그라운드 태스크에서 투명 하 게 발생 합니다. 기록 테이블의 행에 대 한 나이 조건은 나타내는 SYSTEM_TIME 기간 종료 열에 따라 확인 됩니다. 예를 들어 보존 기간 이후 6 개월으로 설정 된, 경우 테이블의 정리에 대 한 적격 행 다음 조건을 만족 합니다.
-```
-ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
-```
-앞의 예제에서 ValidTo 열 SYSTEM_TIME 기간 종료에 해당 하는지을 가정 합니다.
-**보존 정책을 구성 하려면 어떻게 하나요?**
-
-데이터베이스 수준에서 임시 기록 보존이 사용 되는지 여부를 임시 테이블에 대 한 보존 정책을 구성 하기 전에 먼저 검사.
-```
-SELECT is_temporal_history_retention_enabled, name
-FROM sys.databases
-```
-플래그 데이터베이스 **is_temporal_history_retention_enabled** 기본적으로 ON으로 설정 되어 사용자가 ALTER DATABASE 문을 사용 하 여 변경할 수 있습니다. 시간 복원 작업에서 이후에 자동으로 OFF로 설정 됩니다. 데이터베이스에 대 한 임시 기록 보존 정리를 활성화 하려면 다음 문을 실행 합니다.
-
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Compact를 최근에 업데이트 하는 문서 목록
-
-이 압축 목록 이전 섹션에 나열 된 모든 업데이트 된 문서에 대 한 링크를 제공 합니다.
-
-1. [메모리 액세스에 최적화된 테이블 변경](#TitleNum_1)
-2. [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](#TitleNum_2)
-3. [마이그레이션 후 유효성 검사 및 최적화 가이드](#TitleNum_3)
-4. [sys.query_store_plan(Transact-SQL)](#TitleNum_4)
-5. [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](#TitleNum_5)
-
-
-
-
-<a name="sisters2"/>
-
-&nbsp;
-
-<a id="sister-articles" class="xliff"></a>
-
-## 대체 문서
+## <a name="similar-articles"></a>유사한 문서
 
 이 섹션에는 동일한 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-#### 새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
-
-- [새로 추가되었거나 업데이트됨(12+2): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새로 추가되었거나 업데이트됨(0+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(3+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(1+2): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (2 + 8): **SQL용 Linux** docs](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(4+4) : **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(13+2): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
 - [새로 추가되었거나 업데이트됨(1+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
-- [새로 추가되었거나 업데이트됨(5+5): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(0+4): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(1+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
+- [새로 추가되었거나 업데이트됨(8+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(2+2): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
 - [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(1+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 - [새로 추가되었거나 업데이트됨(1+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### 새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
 

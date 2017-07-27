@@ -2,7 +2,7 @@
 title: "기본 제공 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server) | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/02/2016
+ms.date: 07/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,17 +18,17 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2b7d75694080b52e9c31e58ffd1e1f738b1035c
+ms.translationtype: HT
+ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
+ms.openlocfilehash: 017f0c1a33ea00e675115d91e6654ec7730b4bd3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/18/2017
 
 ---
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  JSON의 기본 지원에는 이 항목에서 설명하는 다음의 기본 제공 함수가 포함됩니다.  
+JSON의 기본 지원에는 이 항목에서 간단히 설명하는 다음과 같은 기본 제공 함수가 포함됩니다.  
   
 -   [ISJSON](#ISJSON) 은 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.  
   
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="json-text-for-the-examples-on-this-page"></a>이 페이지의 예제에 대한 JSON 텍스트
 이 페이지의 예제에서는 복잡한 요소가 포함된 다음 JSON 텍스트를 사용합니다.
 
-```json  
+```sql 
 DECLARE @jsonInfo NVARCHAR(MAX)
 
 SET @jsonInfo=N'{  
@@ -61,44 +61,44 @@ SET @jsonInfo=N'{
 ##  <a name="ISJSON"></a> ISJSON 함수를 사용하여 JSON 텍스트의 유효성을 검사합니다.  
  **ISJSON** 함수는 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.  
   
- 다음 예는 열에 유효한 JSON이 포함된 경우 JSON을 반환합니다.  
+다음 예제는 `json_col` 열에 유효한 JSON이 포함된 행을 반환합니다.  
   
 ```sql  
-SELECT id,json_col
+SELECT id, json_col
 FROM tab1
-WHERE ISJSON(json_col)>0 
+WHERE ISJSON(json_col) > 0 
 ```  
-  
- 자세한 내용은 [ISJSON&#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)을 참조하세요.  
+
+자세한 내용은 [ISJSON&#40;Transact-SQL&#41;](../../t-sql/functions/isjson-transact-sql.md)을 참조하세요.  
   
 ##  <a name="VALUE"></a> JSON_VALUE 함수를 사용하여 JSON 텍스트에서 값을 추출합니다.  
- **JSON_VALUE** 함수는 JSON 문자열에서 스칼라 값을 추출합니다.  
+**JSON_VALUE** 함수는 JSON 문자열에서 스칼라 값을 추출합니다.  
   
- 다음 예제는 JSON 속성 값을 로컬 변수로 추출합니다.  
+다음 예제는 중첩된 JSON 속성 `town`의 값을 지역 변수로 추출합니다.  
   
 ```sql  
-SET @town=JSON_VALUE(@jsonInfo,'$.info.address.town')  
+SET @town = JSON_VALUE(@jsonInfo, '$.info.address.town')  
 ```  
   
- 자세한 내용은 [JSON_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)을 참조하세요.  
+자세한 내용은 [JSON_VALUE&#40;Transact-SQL&#41;](../../t-sql/functions/json-value-transact-sql.md)을 참조하세요.  
   
 ##  <a name="QUERY"></a> JSON_QUERY 함수를 사용하여 JSON 텍스트에서 개체 또는 배열 추출  
- **JSON_QUERY** 함수는 JSON 문자열에서 개체 또는 배열을 추출합니다.  
+**JSON_QUERY** 함수는 JSON 문자열에서 개체 또는 배열을 추출합니다.  
  
- 다음 예제는 쿼리 결과에 JSON 조각을 반환하는 방법을 보여줍니다.  
+다음 예제는 쿼리 결과에 JSON 조각을 반환하는 방법을 보여줍니다.  
   
 ```sql  
-SELECT FirstName,LastName,JSON_QUERY(jsonInfo,'$.info.address') AS Address
+SELECT FirstName, LastName, JSON_QUERY(jsonInfo,'$.info.address') AS Address
 FROM Person.Person
 ORDER BY LastName
 ```  
   
- 자세한 내용은 [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)을 참조하세요.  
+자세한 내용은 [JSON_QUERY&#40;Transact-SQL&#41;](../../t-sql/functions/json-query-transact-sql.md)을 참조하세요.  
   
 ##  <a name="JSONCompare"></a> JSON_VALUE 및 JSON_QUERY 비교  
- **JSON_VALUE** 와 **JSON_QUERY** 간의 주요 차이점은 **JSON_VALUE** 는 스칼라 값을 반환하고 **JSON_QUERY** 는 개체 또는 배열을 반환한다는 점입니다.  
+**JSON_VALUE** 와 **JSON_QUERY** 간의 주요 차이점은 **JSON_VALUE** 는 스칼라 값을 반환하고 **JSON_QUERY** 는 개체 또는 배열을 반환한다는 점입니다.  
   
- 다음 예제의 JSON 쿼리를 살펴보십시오.  
+다음 예제의 JSON 쿼리를 살펴보십시오.  
   
 ```json  
 {
@@ -108,9 +108,9 @@ ORDER BY LastName
 }  
 ```  
   
- 이 예제 JSON 텍스트에서 데이터 멤버 "a"와 "c"는 문자열 값이며 데이터 멤버 "b"는 배열입니다. **JSON_VALUE** 및 **JSON_QUERY** 는 다음 결과를 반환합니다.  
+이 예제 JSON 텍스트에서 데이터 멤버 "a"와 "c"는 문자열 값이며 데이터 멤버 "b"는 배열입니다. **JSON_VALUE** 및 **JSON_QUERY** 는 다음 결과를 반환합니다.  
   
-|Query|**JSON_VALUE** 는 다음을 반환합니다.|**JSON_QUERY** 는 다음을 반환합니다.|  
+|경로|**JSON_VALUE** 는 다음을 반환합니다.|**JSON_QUERY** 는 다음을 반환합니다.|  
 |-----------|-----------------------------|-----------------------------|  
 |**$**|NULL 또는 오류|`{ "a": "[1,2]", "b": [1,2], "c":"hi"}`|  
 |**$.a**|[1,2]|NULL 또는 오류|  
@@ -119,15 +119,15 @@ ORDER BY LastName
 |**$.c**|hi|NULL 또는 오류|  
   
 ## <a name="test-jsonvalue-and-jsonquery-with-the-adventureworks-sample-database"></a>AdventureWorks 예제 데이터베이스로 JSON_VALUE 및 JSON_QUERY 테스트  
- JSON 데이터가 포함된 AdventureWorks 예제 데이터베이스로 다음 예제를 실행하여 이 항목에서 설명하는 기본 제공 함수를 테스트합니다. AdventureWorks 예제 데이터베이스를 가져오려면 [여기를 클릭](http://www.microsoft.com/en-us/download/details.aspx?id=49502)하십시오.  
+JSON 데이터가 포함된 AdventureWorks 예제 데이터베이스로 다음 예제를 실행하여 이 항목에서 설명하는 기본 제공 함수를 테스트합니다. AdventureWorks 예제 데이터베이스를 가져오려면 [여기를 클릭](http://www.microsoft.com/en-us/download/details.aspx?id=49502)하십시오.  
   
- 다음 예제에서 SalesOrder_json 테이블의 정보 예에는 JSON 텍스트가 포함되어 있습니다.  
+다음 예제에서 `SalesOrder_json` 테이블의 `Info` 열에는 JSON 텍스트가 포함되어 있습니다.  
   
 ### <a name="example-1---return-both-standard-columns-and-json-data"></a>예제 1 - 두 표준 열과 JSON 데이터 반환  
- 다음 쿼리는 표준 관계형 열과 JSON 열의 값을 모두 반환합니다.  
+다음 쿼리는 표준 관계형 열과 JSON 열의 값을 모두 반환합니다.  
   
 ```sql  
-SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
+SELECT SalesOrderNumber, OrderDate, Status, ShipDate, Status, AccountNumber, TotalDue,
  JSON_QUERY(Info,'$.ShippingInfo') ShippingInfo,
  JSON_QUERY(Info,'$.BillingInfo') BillingInfo,
  JSON_VALUE(Info,'$.SalesPerson.Name') SalesPerson,
@@ -135,11 +135,11 @@ SELECT SalesOrderNumber,OrderDate,Status,ShipDate,Status,AccountNumber,TotalDue,
  JSON_VALUE(Info,'$.Customer.Name') Customer,
  JSON_QUERY(OrderItems,'$') OrderItems
 FROM Sales.SalesOrder_json
-WHERE ISJSON(Info)>0
+WHERE ISJSON(Info) > 0
 ```  
   
 ### <a name="example-2--aggregate-and-filter-json-values"></a>예제 2 - JSON 값 집계 및 필터링  
- 다음 쿼리는 고객 이름(JSON에 저장)과 상태(일반 열에 저장)를 기준으로 소계를 집계합니다. 그런 다음 시(JSON에 저장) 및 OrderDate(일반 열에 저장)을 기준으로 결과를 필터링합니다.  
+다음 쿼리는 고객 이름(JSON에 저장)과 상태(일반 열에 저장)를 기준으로 소계를 집계합니다. 그런 다음 시(JSON에 저장) 및 OrderDate(일반 열에 저장)를 기준으로 결과를 필터링합니다.  
   
 ```sql  
 DECLARE @territoryid INT;
@@ -149,22 +149,22 @@ SET @territoryid=3;
 
 SET @city=N'Seattle';
 
-SELECT JSON_VALUE(Info,'$.Customer.Name') AS Customer,Status,SUM(SubTotal) AS Total
+SELECT JSON_VALUE(Info, '$.Customer.Name') AS Customer, Status, SUM(SubTotal) AS Total
 FROM Sales.SalesOrder_json
 WHERE TerritoryID=@territoryid
- AND JSON_VALUE(Info,'$.ShippingInfo.City')=@city
- AND OrderDate>'1/1/2015'
-GROUP BY JSON_VALUE(Info,'$.Customer.Name'),Status
+ AND JSON_VALUE(Info, '$.ShippingInfo.City') = @city
+ AND OrderDate > '1/1/2015'
+GROUP BY JSON_VALUE(Info, '$.Customer.Name'), Status
 HAVING SUM(SubTotal)>1000
 ```  
   
 ##  <a name="MODIFY"></a> JSON_MODIFY 함수를 사용하여 JSON 텍스트의 속성 값을 업데이트합니다.  
- **JSON_MODIFY**  함수는 JSON 문자열의 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환합니다.  
+**JSON_MODIFY** 함수는 JSON 문자열의 속성 값을 업데이트하고 업데이트된 JSON 문자열을 반환합니다.  
   
- 다음 예제에서는 JSON이 포함된 변수에서 속성 값을 업데이트합니다.  
+다음 예제에서는 JSON이 포함된 변수에서 JSON 속성 값을 업데이트합니다.  
   
 ```sql  
-SET @info=JSON_MODIFY(@jsonInfo,"$.info.address[0].town",'London')    
+SET @info = JSON_MODIFY(@jsonInfo, "$.info.address[0].town", 'London')    
 ```  
   
  자세한 내용은 [JSON_MODIFY&#40;Transact-SQL&#41;](../../t-sql/functions/json-modify-transact-sql.md)을 참조하세요.  

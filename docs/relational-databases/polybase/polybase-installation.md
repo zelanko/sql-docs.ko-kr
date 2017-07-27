@@ -18,10 +18,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: 0c39bbf997fb5041a1fc4ea55699fbb3a40e3d75
+ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
+ms.openlocfilehash: 9a4f230e8c25a24f85f36f3a1aaf82fbf247cd9a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/17/2017
 
 ---
 # <a name="polybase-installation"></a>PolyBase 설치
@@ -41,7 +41,7 @@ ms.lasthandoff: 07/14/2017
   
 -   최소 하드 디스크 공간: 2GB  
   
--   TCP/IP 연결을 사용할 수 있어야 합니다. [서버 네트워크 프로토콜 설정 또는 해제](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)를 참조하세요.  TCP/IP 연결은 SQL Server Developer 및 Express Edition에서 기본적으로 사용되지 않도록 설정됩니다. PolyBase가 작동하려면 수동으로 사용하도록 설정해야 합니다.
+-   PolyBase가 제대로 작동하려면 TCP/IP를 사용하도록 설정해야 합니다. Developer 및 Express SQL Server 버전을 제외하고 모든 버전의 SQL Server에서 TCP/IP는 기본적으로 사용하도록 설정되어 있습니다. Developer 및 Express 버전에서 PolyBase가 제대로 작동하기 위해서는 TCP/IP 연결을 사용하도록 설정해야 합니다([서버 네트워크 프로토콜 사용 또는 사용 안 함](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md) 참조).
   
  **참고**  
   
