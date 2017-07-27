@@ -13,18 +13,16 @@ ms.custom: UpdArt.exe
 ms.workload: powershell
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 95bb4d58c6885a2f48b21b1b8f19dd4cc1de1751
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 4deafa319e6eaf801bc23527c73078b61094039c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-powershell-docs" class="xliff"></a>
-
-# 새로 추가되었거나 최근에 업데이트됨: PowerShell 문서
+# <a name="new-and-recently-updated-powershell-docs"></a>새로 추가되었거나 최근에 업데이트됨: PowerShell 문서
 
 
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *업데이트 날짜 범위:* &nbsp; **2017-05-17** &nbsp; ~ &nbsp; **2017-06-30**
+- *업데이트 날짜 범위:* &nbsp; **2017-05-23** &nbsp; ~ &nbsp; **2017-07-17**
 - *주제 영역:* &nbsp; **PowerShell**.
 
 
@@ -44,22 +42,29 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## 최근에 만든 새로운 문서
+## <a name="new-articles-created-recently"></a>최근에 만든 새로운 문서
 
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-*지금은 나열할 새 문서가 없습니다.*
+***지금은 나열할 새 문서가 없습니다.***
+
 
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## 부분 업데이트 되는 문서
+## <a name="compact-list-of-articles-updated-recently"></a>Compact를 최근에 업데이트 하는 문서 목록
+
+이 간결한 목록에는 인용 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>부분 업데이트 되는 문서
 
 이 섹션에는 최근에 발견 된 대규모 업데이트를 문서에서 수집 하는 업데이트의 발췌 한 내용 표시 됩니다.
 
@@ -71,68 +76,48 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-*지금은 최근에 업데이트된 이 영역의 문서가 없습니다.*
+***지금은 최근에 업데이트된 이 영역의 문서가 없습니다.***
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Compact를 최근에 업데이트 하는 문서 목록
-
-이 압축 목록 이전 섹션에 나열 된 모든 업데이트 된 문서에 대 한 링크를 제공 합니다.
-
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
-<a id="sister-articles" class="xliff"></a>
-
-## 대체 문서
+## <a name="similar-articles"></a>유사한 문서
 
 이 섹션에는 동일한 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-#### 새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
-
-- [새로 추가되었거나 업데이트됨(12+2): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새로 추가되었거나 업데이트됨(0+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(3+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(1+2): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (2 + 8): **SQL용 Linux** docs](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(4+4) : **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(13+2): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
 - [새로 추가되었거나 업데이트됨(1+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
-- [새로 추가되었거나 업데이트됨(5+5): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(0+4): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(1+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
+- [새로 추가되었거나 업데이트됨(8+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(2+2): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
 - [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(1+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 - [새로 추가되었거나 업데이트됨(1+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### 새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
 

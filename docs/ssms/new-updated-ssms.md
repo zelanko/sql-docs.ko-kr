@@ -12,19 +12,17 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 06/30/2017
+ms.date: 07/17/2017
 ms.author: genemi
 ms.workload: ssms-sql-server-management-studio
-ms.translationtype: Human Translation
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 96e9fe438082ae1909076e9667a98d11b0cecea2
+ms.translationtype: HT
+ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
+ms.openlocfilehash: 4938dd27bf3f42cc85f22de99fef01adbad08ace
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 07/19/2017
 
 ---
-<a id="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server" class="xliff"></a>
-
-# 새로 추가되었거나 최근에 업데이트됨: SQL Server용 SSMS(SQL Server Management Studio)
+# <a name="new-and-recently-updated-sql-server-management-studio-ssms-for-sql-server"></a>새로 추가되었거나 최근에 업데이트됨: SQL Server용 SSMS(SQL Server Management Studio)
 
 
 
@@ -36,7 +34,7 @@ ms.lasthandoff: 07/03/2017
 
 
 
-- *업데이트 날짜 범위:* &nbsp; **2017-05-17** &nbsp; ~ &nbsp; **2017-06-30**
+- *업데이트 날짜 범위:* &nbsp; **2017-05-23** &nbsp; ~ &nbsp; **2017-07-17**
 - *주제 영역:* &nbsp; **SSMS(SQL Server Management Studio)**.
 
 
@@ -44,66 +42,70 @@ ms.lasthandoff: 07/03/2017
 
 &nbsp;
 
-<a id="new-articles-created-recently" class="xliff"></a>
-
-## 최근에 만든 새로운 문서
+## <a name="new-articles-created-recently"></a>최근에 만든 새로운 문서
 
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
-*지금은 새로 추가된 문서가 없습니다.*
 
-<!--  GeneMi:  These are all merely phystical relocations and consolidations, not genuinely new content.
+1. [서버 등록 변경(SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
+2. [등록된 서버 또는 등록된 서버 그룹 이름 변경](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
+3. [등록된 서버에 연결(SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
+4. [중앙 관리 서버 및 서버 그룹 만들기](register-servers/create-a-central-management-server-and-server-group.md)
+5. [새 등록된 서버 만들기(SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
+6. [서버 그룹 만들기 또는 편집(SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
+7. [등록된 서버에서 연결 끊기(SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
+8. [여러 서버에 대해 동시에 문 실행](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
+9. [등록된 서버 정보 내보내기(SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
+10. [등록된 서버 정보 가져오기(SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
+11. [등록된 서버 또는 등록된 서버 그룹 이동](register-servers/move-a-registered-server-or-registered-server-group.md)
+12. [연결된 서버 등록(SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
+13. [등록된 서버 F1 도움말](register-servers/registered-servers-f1-help.md)
+14. [서버 등록](register-servers/register-servers.md)
+15. [등록된 서버 제거(SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
+16. [서버 그룹 제거(SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
+17. [SQL Server Management Studio에서 등록된 서버 보기](register-servers/view-registered-servers-in-sql-server-management-studio.md)
+18. [SQL Server Management Studio 바로 가기 키](sql-server-management-studio-keyboard-shortcuts.md)
+19. [Ssms 유틸리티](ssms-utility.md)
+20. [1-1단원 - SQL Server Management Studio 시작](tutorials/lesson-1-1-start-sql-server-management-studio.md)
+21. [1-2단원 - 등록된 서버 및 개체 탐색기와 연결](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
+22. [1-3단원 - 환경 레이아웃 변경](tutorials/lesson-1-3-change-the-environment-layout.md)
+23. [1-4단원 - 쿼리 창 표시](tutorials/lesson-1-4-display-the-query-window.md)
+24. [1-5단원 - 개체 탐색기 정보 페이지 표시](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
+25. [1-6단원 - 바로 가기 키 구성표 선택](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
+26. [1-7단원 - 시작 옵션 설정](tutorials/lesson-1-7-set-the-startup-options.md)
+27. [1-8단원 - 기본 SQL Server Management Studio 구성 복원](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
+28. [1-9단원 - 요약 - 기본 탐색](tutorials/lesson-1-9-summary-basic-navigation.md)
+29. [1단원: SQL Server Management Studio의 기본 탐색](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
+30. [2-1단원: 쿼리 편집기와 연결](tutorials/lesson-2-1-connecting-with-query-editor.md)
+31. [2-2단원 - 들여쓰기 추가](tutorials/lesson-2-2-adding-indentation.md)
+32. [2-3단원 - 쿼리 편집기 화면 크기](tutorials/lesson-2-3-maximizing-query-editor.md)
+33. [2-4단원 - 주석 사용](tutorials/lesson-2-4-using-comments.md)
+34. [2-5단원 - 코드 창을 표시하는 다른 방법](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
+35. [2-6단원 - 테이블 스크립팅](tutorials/lesson-2-6-script-a-table.md)
+36. [2단원: Transact-SQL 작성](tutorials/lesson-2-writing-transact-sql.md)
+37. [3-1단원 - 템플릿을 사용하여 스크립트 만들기](tutorials/lesson-3-1-create-scripts-using-templates.md)
+38. [3-2단원 - 사용자 지정 템플릿 만들기](tutorials/lesson-3-2-create-custom-templates.md)
+39. [3-3단원 - 스크립트를 프로젝트 또는 솔루션으로 저장](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
+40. [3-4단원 - 요약 - 솔루션 및 스크립트 프로젝트](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
+41. [3단원: 템플릿, 솔루션 및 스크립트 프로젝트 작업](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
+42. [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 
-1. [Change a Server&#39;s Registration (SQL Server Management Studio)](register-servers/change-a-server-s-registration-sql-server-management-studio.md)
-2. [Change the Name of Registered Server or Registered Server Group](register-servers/change-the-name-of-registered-server-or-registered-server-group.md)
-3. [Connect to a Registered Server (SQL Server Management Studio)](register-servers/connect-to-a-registered-server-sql-server-management-studio.md)
-4. [Create a Central Management Server and Server Group](register-servers/create-a-central-management-server-and-server-group.md)
-5. [Create a New Registered Server (SQL Server Management Studio)](register-servers/create-a-new-registered-server-sql-server-management-studio.md)
-6. [Create or Edit a Server Group (SQL Server Management Studio)](register-servers/create-or-edit-a-server-group-sql-server-management-studio.md)
-7. [Disconnect from a Registered Server (SQL Server Management Studio)](register-servers/disconnect-from-a-registered-server-sql-server-management-studio.md)
-8. [Execute Statements Against Multiple Servers Simultaneously](register-servers/execute-statements-against-multiple-servers-simultaneously.md)
-9. [Export Registered Server Information (SQL Server Management Studio)](register-servers/export-registered-server-information-sql-server-management-studio.md)
-10. [Import Registered Server Information (SQL Server Management Studio)](register-servers/import-registered-server-information-sql-server-management-studio.md)
-11. [Move a Registered Server or Registered Server Group](register-servers/move-a-registered-server-or-registered-server-group.md)
-12. [Register a Connected Server (SQL Server Management Studio)](register-servers/register-a-connected-server-sql-server-management-studio.md)
-13. [Registered Servers F1 Help](register-servers/registered-servers-f1-help.md)
-14. [Register Servers](register-servers/register-servers.md)
-15. [Remove a Registered Server (SQL Server Management Studio)](register-servers/remove-a-registered-server-sql-server-management-studio.md)
-16. [Remove a Server Group (SQL Server Management Studio)](register-servers/remove-a-server-group-sql-server-management-studio.md)
-17. [View Registered Servers in SQL Server Management Studio](register-servers/view-registered-servers-in-sql-server-management-studio.md)
-18. [SQL Server Management Studio Keyboard Shortcuts](sql-server-management-studio-keyboard-shortcuts.md)
-19. [Ssms Utility](ssms-utility.md)
-20. [Lesson 1-1 - Start SQL Server Management Studio](tutorials/lesson-1-1-start-sql-server-management-studio.md)
-21. [Lesson 1-2 - Connect with Registered Servers and Object Explorer](tutorials/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)
-22. [Lesson 1-3 - Change the Environment Layout](tutorials/lesson-1-3-change-the-environment-layout.md)
-23. [Lesson 1-4 - Display the Query Window](tutorials/lesson-1-4-display-the-query-window.md)
-24. [Lesson 1-5 - Show the Object Explorer Details Page](tutorials/lesson-1-5-show-the-object-explorer-details-page.md)
-25. [Lesson 1-6 - Select the Keyboard Shortcut Scheme](tutorials/lesson-1-6-select-the-keyboard-shortcut-scheme.md)
-26. [Lesson 1-7 - Set the Startup Options](tutorials/lesson-1-7-set-the-startup-options.md)
-27. [Lesson 1-8 - Restore the Default SQL Server Management Studio Configuration](tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md)
-28. [Lesson 1-9 - Summary - Basic Navigation](tutorials/lesson-1-9-summary-basic-navigation.md)
-29. [Lesson 1: Basic Navigation in SQL Server Management Studio](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
-30. [Lesson 2-1 - Connecting with Query Editor](tutorials/lesson-2-1-connecting-with-query-editor.md)
-31. [Lesson 2-2 - Adding Indentation](tutorials/lesson-2-2-adding-indentation.md)
-32. [Lesson 2-3 - Maximizing Query Editor](tutorials/lesson-2-3-maximizing-query-editor.md)
-33. [Lesson 2-4 - Using Comments](tutorials/lesson-2-4-using-comments.md)
-34. [Lesson 2-5 - Other Ways of Viewing the Code Window](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
-35. [Lesson 2-6 - Script a Table](tutorials/lesson-2-6-script-a-table.md)
-36. [Lesson 2: Writing Transact-SQL](tutorials/lesson-2-writing-transact-sql.md)
-37. [Lesson 3-1 - Create Scripts Using Templates](tutorials/lesson-3-1-create-scripts-using-templates.md)
-38. [Lesson 3-2 - Create Custom Templates](tutorials/lesson-3-2-create-custom-templates.md)
-39. [Lesson 3-3 - Save Scripts as Projects or Solutions](tutorials/lesson-3-3-save-scripts-as-projects-or-solutions.md)
-40. [Lesson 3-4 - Summary - Solutions and Script Projects](tutorials/lesson-3-4-summary-solutions-and-script-projects.md)
-41. [Lesson 3: Working with Templates, Solutions, and Script Projects](tutorials/lesson-3-working-with-templates-solutions-and-script-projects.md)
-42. [Tutorial: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
--->
+
 
 
 &nbsp;
 
-<a id="updated-articles-with-excerpts" class="xliff"></a>
+<a name="compactupdatedlist"/>
 
-## 부분 업데이트 되는 문서
+## <a name="compact-list-of-articles-updated-recently"></a>Compact를 최근에 업데이트 하는 문서 목록
+
+이 간결한 목록에는 인용 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
+
+
+
+&nbsp;
+
+## <a name="updated-articles-with-excerpts"></a>부분 업데이트 되는 문서
 
 이 섹션에는 최근에 발견 된 대규모 업데이트를 문서에서 수집 하는 업데이트의 발췌 한 내용 표시 됩니다.
 
@@ -119,9 +121,7 @@ ms.lasthandoff: 07/03/2017
 
 <a name="TitleNum_1"/>
 
-<a id="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd" class="xliff"></a>
-
-### 1. &nbsp; [SQL Server Management Studio - 변경 로그(SSMS)](sql-server-management-studio-changelog-ssms.md)
+### <a name="1-nbsp-sql-server-management-studio---changelog-ssmssql-server-management-studio-changelog-ssmsmd"></a>1. &nbsp; [SQL Server Management Studio - 변경 로그(SSMS)](sql-server-management-studio-changelog-ssms.md)
 
 *업데이트됨: 2017-06-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
@@ -167,65 +167,44 @@ ms.lasthandoff: 07/03/2017
 
 
 
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-<a id="compact-list-of-articles-updated-recently" class="xliff"></a>
-
-## Compact를 최근에 업데이트 하는 문서 목록
-
-이 압축 목록 이전 섹션에 나열 된 모든 업데이트 된 문서에 대 한 링크를 제공 합니다.
-
-1. [SQL Server Management Studio - 변경 로그(SSMS)](#TitleNum_1)를 참조하세요.
-
-
-
-
-<a name="sisters2"/>
+<a name="similars2"/>
 
 &nbsp;
 
-<a id="sister-articles" class="xliff"></a>
-
-## 대체 문서
+## <a name="similar-articles"></a>유사한 문서
 
 이 섹션에는 동일한 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
 
-<!--  20170630-1150  -->
+<!--  20170717-1101  -->
 
-<a id="subject-areas-which-do-have-new-or-recently-updated-articles" class="xliff"></a>
+#### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-#### 새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
-
-- [새로 추가되었거나 업데이트됨(12+2): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새로 추가되었거나 업데이트됨(0+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(3+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(1+2): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (2 + 8): **SQL용 Linux** docs](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(4+4) : **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(13+2): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
 - [새로 추가되었거나 업데이트됨(1+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
-- [새로 추가되었거나 업데이트됨(5+5): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(0+4): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(1+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
+- [새로 추가되었거나 업데이트됨(8+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(2+2): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
 - [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(1+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 - [새로 추가되었거나 업데이트됨(1+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 
-<a id="subject-areas-which-have-no-new-or-recently-updated-articles" class="xliff"></a>
-
-#### 새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
+#### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(0+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
 

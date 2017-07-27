@@ -41,29 +41,30 @@
    sudo vi /etc/hosts
    ```
 
-   다음 예제와 `/etc/hosts` 에 **node1** 추가 대 한 내용은 **node1** 및 **node2**합니다. 이 문서에서 **node1** 기본 SQL Server 복제 데이터베이스를 가리킵니다. **node2** 보조 SQL Server를 가리킵니다.;
+   다음 예제에서는 **node1**, **node2** 및 **node3**에 대한 항목이 추가된 **node1**의 `/etc/hosts`를 보여 줍니다. 이 문서에서 **node1**은 주 복제본을 호스트하는 서버를 나타냅니다. **node2** 및 **node3**은 보조 복제본을 호스트하는 서버를 나타냅니다.
 
 
    ```
    127.0.0.1   localhost localhost4 localhost4.localdomain4
    ::1       localhost localhost6 localhost6.localdomain6
-   10.128.18.128 node1
+   10.128.18.12 node1
    10.128.16.77 node2
+   10.128.15.33 node3
    ```
 
 ### <a name="install-sql-server"></a>SQL Server 설치
 
 SQL Server를 설치 합니다. 다음 링크는 다양 한 분포에 대 한 SQL Server 설치 지침을 가리킵니다. 
 
-- [Red Hat Enterprise Linux](..\linux\sql-server-linux-setup-red-hat.md)
+- [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
-- [SUSE Linux Enterprise Server](..\linux\sql-server-linux-setup-suse-linux-enterprise-server.md)
+- [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md)
 
-- [Ubuntu](..\linux\sql-server-linux-setup-ubuntu.md)
+- [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
 ## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Always On 가용성 그룹을 사용 하도록 설정 하 고 sql server를 다시 시작
 
-SQL Server 서비스를 호스팅하는 각 노드에서 Always On 가용성 그룹을 설정한 다음 다시 시작 `mssql-server`합니다.  다음 스크립트를 실행합니다.
+SQL Server 인스턴스를 호스트하는 각 노드에서 Always On 가용성 그룹을 사용하도록 설정한 다음, `mssql-server`를 다시 시작합니다.  다음 스크립트를 실행합니다.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
@@ -72,7 +73,7 @@ sudo systemctl restart mssql-server
 
 ##  <a name="enable-alwaysonhealth-event-session"></a>AlwaysOn_health 이벤트 세션을 사용 하도록 설정 
 
-Optionaly enable Always On 가용성 그룹 특정 확장 이벤트는 가용성 그룹의 문제를 해결할 때 근본 원인을 진단에 도움이 되도록 할 수 있습니다.
+Always On 가용성 그룹 확장 이벤트를 사용하도록 설정하여 가용성 그룹 문제를 해결할 때 근본적인 원인 진단에 도움을 줄 수도 있습니다. SQL Server의 각 인스턴스에서 다음 명령을 실행합니다. 
 
 ```Transact-SQL
 ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
@@ -83,7 +84,7 @@ GO
 
 ## <a name="create-db-mirroring-endpoint-user"></a>끝점 사용자 미러링 db 만들기
 
-다음 TRANSACT-SQL 스크립트 이라는 로그인을 만듭니다 `dbm_login`, 및 라는 사용자 `dbm_user`합니다. 강력한 암호를 가진 스크립트를 업데이트 합니다. 모든 SQL server 데이터베이스 미러링 끝점 사용자를 만들려면 다음 명령을 실행 합니다.
+다음 TRANSACT-SQL 스크립트 이라는 로그인을 만듭니다 `dbm_login`, 및 라는 사용자 `dbm_user`합니다. 강력한 암호를 가진 스크립트를 업데이트 합니다. 모든 SQL Server 인스턴스에서 다음 명령을 실행하여 데이터베이스 미러링 끝점 사용자를 만듭니다.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -92,9 +93,9 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 ## <a name="create-a-certificate"></a>인증서 만들기
 
-Linux에서 SQL Server 서비스를 미러링 끝점 간 통신을 인증 인증서를 사용 합니다. 
+Linux의 SQL Server 서비스는 인증서를 사용하여 미러링 끝점 간의 통신을 인증합니다. 
 
-다음 TRANSACT-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음 인증서를 백업 하 고 개인 키가 있는 파일을 보호 합니다. 강력한 암호를 가진 스크립트를 업데이트 합니다. 기본 SQL Server에 연결 하 고 인증서를 만드는 다음 Transact SQL을 실행 합니다.
+다음 TRANSACT-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음 인증서를 백업 하 고 개인 키가 있는 파일을 보호 합니다. 강력한 암호를 가진 스크립트를 업데이트 합니다. 기본 SQL Server 인스턴스에 연결하고 다음 Transact-SQL을 실행하여 인증서를 만듭니다.
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -116,7 +117,7 @@ cd /var/opt/mssql/data
 scp dbm_certificate.* root@**<node2>**:/var/opt/mssql/data/
 ```
 
-대상 서버에서 인증서에 액세스할 mssql 사용자에 게 권한을 부여 합니다.
+각 대상 서버에서 mssql 사용자에게 인증서에 액세스할 수 있는 권한을 부여합니다.
 
 ```bash
 cd /var/opt/mssql/data
@@ -144,7 +145,6 @@ CREATE CERTIFICATE dbm_certificate
 
 다음 TRANSACT-SQL 라는 수신 대기 끝점을 만듭니다 `Hadr_endpoint` 가용성 그룹에 대 한 합니다. 끝점을 시작한 연결 권한이 만든 사용자에 게 제공 합니다. 스크립트를 실행 하기 전에 사이의 값을 대체 `**< ... >**`합니다.
 
-
 >[!NOTE]
 >이 릴리스에 대 한 수신기 IP에 대 한 다른 IP 주소를 사용 하지 마십시오. 이 문제에 대 한 수정 작업 하지만 지금은 사용 가능한 값은 '0.0.0.0'.
 
@@ -164,5 +164,8 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 
 >[!IMPORTANT]
 >방화벽에서 TCP 포트에 대 한 수신기 포트가 열려 있어야 합니다.
+
+>[!IMPORTANT]
+>SQL Server 2017 릴리스의 경우 데이터베이스 미러링 끝점에 지원되는 인증 방법은 `CERTIFICATE`뿐입니다. `WINDOWS` 옵션은 향후 릴리스에서 사용할 수 있습니다.
 
 자세한 내용은 참조 [데이터베이스 미러링 끝점 (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)합니다.

@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
-ms.openlocfilehash: 8c43f57c6d40d3f2c29f220581dddcf74bf96287
+ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
+ms.openlocfilehash: e14166437e035c347fec8f50a1248eeb0d0e5597
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/20/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
@@ -126,9 +126,6 @@ SQL Server Management Studio 17.1 업그레이드 패키지 다운로드(17.0에
 ## <a name="see-also"></a>관련 항목:  
 [자습서: SQL Server Management Studio](http://msdn.microsoft.com/en-us/d2bade70-07cf-4d94-b5d2-88aecb538ed1)  
 [SQL Server Management Studio 설명서](https://msdn.microsoft.com/library/hh213248(v=sql.130).aspx)  
-[Microsoft SQL Server](https://msdn.microsoft.com/library/bb545450.aspx)  
 [추가 업데이트 및 서비스 팩](https://technet.microsoft.com/sqlserver/ff803383.aspx)  
 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)  
-
-
 
