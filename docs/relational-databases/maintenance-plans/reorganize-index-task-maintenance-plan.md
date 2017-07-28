@@ -1,7 +1,7 @@
 ---
 title: "인덱스 다시 구성 태스크(유지 관리 계획) | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 07/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Reorganize Index Task dialog box
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 caps.latest.revision: 33
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b9be64710acf299e601582127fa2e326061c5e2
+author: MightyPen
+ms.author: genemi
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: c07ca6e5a69f368d916c700dbc949726f198af50
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>인덱스 다시 구성 태스크(유지 관리 계획)
@@ -62,12 +62,17 @@ ms.lasthandoff: 06/22/2017
   
  **큰 개체 압축**  
  가능한 경우에 테이블 및 뷰에 대한 공간 할당을 취소합니다. 이 옵션에서는 `ALTER INDEX LOB_COMPACTION = ON`을 사용합니다.  
+
+
+[!INCLUDE[index-stats-options-reorg-5589131-2999104](../../includes/paragraph-content/index-stats-options-reorganize-maintenance-plan-include.md)]
+
   
  **T-SQL 보기**  
  선택한 옵션을 기반으로 서버에 대해 수행한 이 태스크의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 표시합니다.  
   
 > [!NOTE]  
 >  영향을 받은 개체 수가 많은 경우에는 표시하는 데 시간이 오래 걸릴 수 있습니다.  
+
   
 ## <a name="new-connection-dialog-box"></a>새 연결 대화 상자  
  **연결 이름**  
