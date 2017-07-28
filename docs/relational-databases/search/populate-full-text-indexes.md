@@ -35,9 +35,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/22/2017
 
 ---
-<a id="populate-full-text-indexes" class="xliff"></a>
-
-# 전체 텍스트 인덱스 채우기
+# <a name="populate-full-text-indexes"></a>전체 텍스트 인덱스 채우기
   전체 텍스트 인덱스를 만들고 유지 관리하려면 *채우기* ( *탐색*이라고도 함)라는 프로세스를 사용하여 인덱스를 채워야 합니다.  
   
 ##  <a name="types"></a> Types of population  
@@ -46,9 +44,7 @@ ms.lasthandoff: 06/22/2017
 -   **변경 내용 추적** 기반 자동 또는 수동 채우기
 -   **타임스탬프** 기반 증분 채우기
   
-<a id="full-population" class="xliff"></a>
-
-## 전체 채우기  
+## <a name="full-population"></a>전체 채우기  
  전체 채우기 중에는 테이블 또는 인덱싱된 뷰의 모든 행에 대해 인덱스 항목이 작성됩니다. 전체 텍스트 인덱스의 전체 채우기는 기본 테이블 또는 인덱싱된 뷰의 모든 행에 대해 인덱스 항목을 작성합니다.  
   
 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 새 전체 텍스트 인덱스를 만드는 즉시 채웁니다.
@@ -57,9 +53,7 @@ ms.lasthandoff: 06/22/2017
 
 전체 텍스트 인덱스를 즉시 채우지 않고 만들려면 `CREATE FULLTEXT INDEX` 문에서 `CHANGE_TRACKING OFF, NO POPULATION` 절을 지정합니다. `CHANGE_TRACKING MANUAL`을 지정하는 경우 전체 텍스트 엔진은 `START FULL POPULATION` 또는 `START INCREMENTAL POPULATION` 절을 사용하는 `ALTER FULLTEXT INDEX` 문을 실행한 다음에야 새 전체 텍스트 인덱스를 채웁니다. 
 
-<a id="example---create-a-full-text-index-without-running-a-full-population" class="xliff"></a>
-
-### 예제 - 전체 채우기를 실행하지 않고 전체 텍스트 인덱스 만들기  
+### <a name="example---create-a-full-text-index-without-running-a-full-population"></a>예제 - 전체 채우기를 실행하지 않고 전체 텍스트 인덱스 만들기  
  다음 예에서는 `Production.Document` 예제 데이터베이스의 `AdventureWorks` 테이블에서 전체 텍스트 인덱스를 만듭니다. 이 예제에서는 `WITH CHANGE_TRACKING OFF, NO POPULATION`을 사용하여 초기 전체 채우기를 지연합니다.  
   
 ```tsql
@@ -78,9 +72,7 @@ GO
   
 ```  
   
-<a id="example---run-a-full-population-on-a-table" class="xliff"></a>
-
-### 예제 - 테이블에서 전체 채우기 실행  
+### <a name="example---run-a-full-population-on-a-table"></a>예제 - 테이블에서 전체 채우기 실행  
  다음 예에서는 `Production.Document` 예제 데이터베이스의 `AdventureWorks` 테이블에 대해 전체 채우기를 실행합니다.  
   
 ```tsql
@@ -88,9 +80,7 @@ ALTER FULLTEXT INDEX ON Production.Document
    START FULL POPULATION;  
 ```  
    
-<a id="population-based-on-change-tracking" class="xliff"></a>
-
-## 변경 내용 추적 기반 채우기
+## <a name="population-based-on-change-tracking"></a>변경 내용 추적 기반 채우기
  경우에 따라 초기 전체 채우기 후에 변경 내용 추적을 사용하여 전체 텍스트 인덱스를 유지 관리할 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 마지막 채우기 후에 기본 테이블의 변경 내용을 추적하는 테이블을 유지 관리하기 때문에 변경 내용 추적을 사용할 경우 약간의 오버헤드가 발생합니다. 변경 내용 추적을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 업데이트, 삭제 또는 삽입에 의해 수정된 기본 테이블 또는 인덱싱된 뷰의 행 레코드를 유지 관리합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
   
 > [!NOTE]  
@@ -98,9 +88,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  인덱스를 만드는 동안 변경 내용 추적을 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 전체 텍스트 인덱스를 만드는 즉시 완전히 채웁니다. 그 이후에는 변경 내용이 추적되고 전체 텍스트 인덱스로 전파됩니다.
 
-<a id="enable-change-tracking" class="xliff"></a>
-
-### 변경 내용 추적 설정
+### <a name="enable-change-tracking"></a>변경 내용 추적 설정
 다음과 같은 두 가지 유형의 변경 내용 추적이 있습니다.
 -   자동(`CHANGE_TRACKING AUTO` 옵션). 자동 변경 내용 추적이 기본 동작입니다.
 -   수동(`CHANGE_TRACKING MANUAL` 옵션).   
@@ -161,18 +149,14 @@ ALTER FULLTEXT INDEX ON Production.Document
     GO  
     ```
    
-<a id="disable-change-tracking" class="xliff"></a>
-
-### 변경 내용 추적 해제 
+### <a name="disable-change-tracking"></a>변경 내용 추적 해제 
   
 -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) … WITH CHANGE_TRACKING OFF  
   
 -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) … SET CHANGE_TRACKING OFF  
    
   
-<a id="incremental-population-based-on-a-timestamp" class="xliff"></a>
-
-## 타임스탬프 기반 증분 채우기  
+## <a name="incremental-population-based-on-a-timestamp"></a>타임스탬프 기반 증분 채우기  
  증분 채우기는 전체 텍스트 인덱스를 수동으로 채우는 대체 메커니즘으로, 테이블에서 대량 삽입이 발생하는 경우 증분 채우기를 사용하는 것이 수동 채우기를 사용하는 것보다 효율적일 수 있습니다.
  
  CHANGE_TRACKING이 MANUAL 또는 OFF로 설정된 전체 텍스트 인덱스에 대해 실행할 수 있습니다. 
@@ -186,9 +170,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 -   전체 텍스트 인덱스에 대해 처음으로 실행하는 채우기가 증분 채우기이면 모든 행이 인덱싱되므로 그 결과가 전체 채우기의 경우와 같습니다. 
 -   테이블의 전체 텍스트 인덱스에 영향을 주는 메타데이터가 마지막 채우기 후에 변경된 경우 증분 채우기 요청은 전체 채우기로 구현됩니다. 여기에는 열, 인덱스 또는 전체 텍스트 인덱스 정의의 변경으로 인한 메타데이터 변경 내용이 포함됩니다. 
 
-<a id="run-an-incremental-population" class="xliff"></a>
-
-### 증분 채우기 실행
+### <a name="run-an-incremental-population"></a>증분 채우기 실행
   
  증분 채우기를 실행하려면 `START INCREMENTAL POPULATION` 절을 사용하는 `ALTER FULLTEXT INDEX` 문을 실행합니다.  
   
@@ -243,9 +225,7 @@ ALTER FULLTEXT INDEX ON Production.Document
   
  예를 들어 `SQLFT0000500008.2`는 데이터베이스 ID = 5, 전체 텍스트 카탈로그 ID = 8인 데이터베이스의 탐색 로그 파일입니다. 파일 이름 끝에 있는 2는 이 데이터베이스/카탈로그 쌍의 탐색 로그 파일이 두 개 있음을 나타냅니다.  
 
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.dm_fts_index_population&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql.md)   
  [전체 텍스트 검색 시작](../../relational-databases/search/get-started-with-full-text-search.md)   
  [전체 텍스트 인덱스 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-indexes.md)   

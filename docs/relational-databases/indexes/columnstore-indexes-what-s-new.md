@@ -22,9 +22,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 06/29/2017
 
 ---
-<a id="columnstore-indexes---what39s-new" class="xliff"></a>
-
-# Columnstore 인덱스 - 새로운 기능
+# <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2012-all_md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   각 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 수 있는 columnstore 기능과 최신 버전의 Azure SQL Database Premium Edition, Azure SQL Data Warehouse 및 Parallel Data Warehouse에 대한 요약입니다.  
@@ -32,9 +30,7 @@ ms.lasthandoff: 06/29/2017
  >[!NOTE]
  > Azure SQL Database의 경우 Premium Edition에서만 columnstore 인덱스를 사용할 수 있습니다.
  
-<a id="feature-summary-for-product-releases" class="xliff"></a>
-
-## 제품 릴리스에 대한 기능 요약  
+## <a name="feature-summary-for-product-releases"></a>제품 릴리스에 대한 기능 요약  
  이 테이블은 Columnstore 인덱스 및 이를 사용할 수 있는 제품에 대한 주요 기능을 요약합니다.  
 
   
@@ -63,17 +59,13 @@ ms.lasthandoff: 06/29/2017
 ## [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 
  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 이러한 새 기능을 추가합니다.
 
-<a id="functional" class="xliff"></a>
-
-### 기능
+### <a name="functional"></a>기능
 - [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]에서는 클러스터형 columnstore 인덱스에서 비지속형 계산 열을 지원합니다. 지속형 열은 클러스터형 columnstore 인덱스에서 지원되지 않습니다. 계산 열이 있는 columnstore 인덱스에는 비클러스터형 인덱스를 만들 수 없습니다. 
 
 ## [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 는 columnstore 인덱스의 성능 및 유연성을 개선하기 위해 주요 향상 기능을 추가합니다. 이러한 향상된 기능을 통해 데이터 웨어하우징 시나리오가 향상되며 실시간 운영 분석이 가능합니다.  
   
-<a id="functional" class="xliff"></a>
-
-### 기능  
+### <a name="functional"></a>기능  
   
 -   Rowstore 테이블에는 업데이트할 수 있는 비클러스터형 columnstore 인덱스 한 개가 있을 수 있습니다. 이전에는 비클러스터형 columnstore 인덱스가 읽기 전용이었습니다.  
   
@@ -87,9 +79,7 @@ ms.lasthandoff: 06/29/2017
   
 -   Columnstore 인덱스에는 트랜잭션 워크로드가 실시간 운영 분석에 미치는 영향을 최소화하는 압축 지연 옵션이 있습니다.  이 옵션을 사용하여 자주 변하는 행을 columnstore로 압축하기 전에 안정화할 수 있습니다. 자세한 내용은 [CREATE COLUMNSTORE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md) 및 [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
-<a id="performance-for-database-compatibility-level-120-or-130" class="xliff"></a>
-
-### 데이터베이스 호환성 수준 120 또는 130에 대한 성능  
+### <a name="performance-for-database-compatibility-level-120-or-130"></a>데이터베이스 호환성 수준 120 또는 130에 대한 성능  
   
 -   Columnstore 인덱스는 읽기 커밋된 스냅숏 격리 수준(RCSI) 및 스냅숏 격리(SI)를 지원합니다. 이를 통해 트랜잭션을 잠금이 없는 분석 쿼리와 일관성을 유지할 수 있습니다.  
   
@@ -101,9 +91,7 @@ ms.lasthandoff: 06/29/2017
   
 -   조건자 푸시다운은 [v]char 또는 n[v]char 형식의 문자열을 비교하는 쿼리의 속도를 향상시킵니다. 이는 일반적인 비교 연산자에 적용되며 비트맵 필터를 사용하는 LIKE와 같은 연산자를 포함합니다. 이는 SQL Server가 지원하는 모든 데이터 정렬에서 작동합니다.  
   
-<a id="performance-for-database-compatibility-level-130" class="xliff"></a>
-
-### 데이터베이스 호환성 수준 130에 대한 성능  
+### <a name="performance-for-database-compatibility-level-130"></a>데이터베이스 호환성 수준 130에 대한 성능  
   
 -   다음 연산 중 하나 이상을 사용하는 쿼리에 대한 새 일괄 처리 모드 실행 지원:  
   
@@ -121,9 +109,7 @@ ms.lasthandoff: 06/29/2017
   
 -   메모리 액세스에 최적화된 테이블 쿼리는 rowstore 또는 columnstore 인덱스의 데이터에 액세스하는 경우 SQL InterOp에 병렬 계획을 가질 수 있습니다.  
   
-<a id="supportability" class="xliff"></a>
-
-### 지원 가능성  
+### <a name="supportability"></a>지원 가능성  
  이러한 시스템 뷰는 columnstore의 새로운 특징임:  
   
 -   [sys.column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-row-groups-transact-sql.md)  
@@ -154,9 +140,7 @@ ms.lasthandoff: 06/29/2017
   
 -   [sys.dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md)  
   
-<a id="limitations" class="xliff"></a>
-
-### 제한 사항  
+### <a name="limitations"></a>제한 사항  
   
 -   MERGE는 클러스터형 columnstore 인덱스에 대해 btree 인덱스가 정의된 경우 비활성화됩니다.  
   
@@ -164,9 +148,7 @@ ms.lasthandoff: 06/29/2017
   
 -   메모리 내 테이블의 경우 columnstore 인덱스에 대한 쿼리는 InterOP 모드에서만 실행되며 메모리 내 고유 모드에서는 실행되지 않습니다. 병렬 실행은 지원됩니다.  
   
-<a id="sql-server-2014" class="xliff"></a>
-
-## SQL Server 2014  
+## <a name="sql-server-2014"></a>SQL Server 2014  
  SQL Server 2014에서는 클러스터형 columnstore 인덱스를 기본 저장 형식으로 도입하였습니다. 이를 통해 일반 부하뿐만 아니라 업데이트, 삭제 및 삽입 작업도 사용할 수 있습니다.  
   
 -   테이블에서 클러스터형 columnstore 인덱스를 기본 테이블 저장소로 사용할 수 있습니다. 테이블에 다른 인덱스는 허용되지 않지만 클러스터형 columnstore 인덱스는 업데이트가 가능하므로 일반 부하를 수행하고 개별 행을 변경할 수 있습니다.  
@@ -179,9 +161,7 @@ ms.lasthandoff: 06/29/2017
   
 -   이러한 연산자는 다중 스레드 쿼리, 즉 검색, 필터, 프로젝트, 조인, GROUP BY 및 UNION ALL에 대해 일괄 처리 모드에서 실행됩니다.  
   
-<a id="sql-server-2012" class="xliff"></a>
-
-## SQL Server 2012  
+## <a name="sql-server-2012"></a>SQL Server 2012  
  SQL Server 2012는 columnstore 데이터에 대한 쿼리의 경우 rowstore 테이블 및 일괄 처리에 대한 또 다른 인덱스 형식으로 비클러스터형 columnstore 인덱스를 도입하였습니다.  
   
 -   Rowstore 테이블에는 비클러스터형 columnstore 인덱스 한 개가 있을 수 있습니다.  
@@ -192,9 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   일괄 처리는 2배 이상의 쿼리 성능을 제공하지만 병렬 쿼리 실행에만 사용할 수 있습니다.  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  Columnstore 인덱스 가이드   
  Columnstore 인덱스 데이터 로드   
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
