@@ -1,6 +1,6 @@
 ---
 title: "유지 관리 계획 마법사 사용 | Microsoft 문서"
-ms.date: 08/19/2016
+ms.date: 06/20/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -37,11 +37,11 @@ caps.latest.revision: 43
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: f4fa73a78b9f6e32edcf8395b344f1bcb7e8f5cc
+ms.translationtype: HT
+ms.sourcegitcommit: c51503eae95459aa4530032ef551d0eedf60caa4
+ms.openlocfilehash: 29245ecd82ef8f4401869008bcdb883880eec0bd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/28/2017
 
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
@@ -56,7 +56,7 @@ ms.lasthandoff: 04/11/2017
 
 유지 관리 계획, 데이터 컬렉션 집합 및 기타 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 때 이러한 권한 상승이 발생하지 않도록 하려면 패키지를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 제한된 권한을 갖는 프록시 계정을 사용하도록 구성하거나 **db_ssisadmin** 및 **dc_admin** 역할에 **sysadmin** 멤버만 추가합니다.  
 
-##  <a name="Prerequisite"></a> 사전 요구 사항 
+##  <a name="Prerequisite"></a> 필수 구성 요소 
 [에이전트 XPs 서버 구성 옵션](../../database-engine/configure-windows/agent-xps-server-configuration-option.md)을 사용하도록 설정해야 합니다.
   
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 04/11/2017
   
  -  **모든 데이터베이스**  
   
-**tempdb**를 제외한 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 이 태스크를 실행하는 유지 관리 계획을 생성합니다.  
+[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 제외한 모든 **[!INCLUDE[ssNoVersion](../Token/ssNoVersion_md.md)]**에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다.  
   
 **시스템 데이터베이스**  
   
@@ -203,7 +203,7 @@ ms.lasthandoff: 04/11/2017
      데이터베이스가 인접 페이지로 압축되지만 해당 페이지의 할당이 취소되지 않으므로 데이터베이스 파일이 축소되지 않습니다. 공간을 다시 할당하지 않고 데이터베이스를 다시 확장하려면 이 옵션을 사용합니다. 이 옵션을 사용하면 데이터베이스 파일이 가능한 한 축소되지 않습니다. 이 작업에서는 NOTRUNCATE 옵션을 사용합니다.  
   
      **해제된 공간을 운영 체제로 반환**  
-     데이터베이스가 인접 페이지로 압축되며 다른 프로그램에서 사용할 수 있도록 해당 페이지가 운영 체제로 반환됩니다. 이 데이터베이스 파일은 가능한 한 큰 폭으로 축소됩니다. 이 작업에서는 TRUNCATEONLY 옵션을 사용합니다. 이 옵션이 기본 옵션입니다.  
+     데이터베이스가 인접 페이지로 압축되며 다른 프로그램에서 사용할 수 있도록 해당 페이지가 운영 체제로 반환됩니다. 이 작업에서는 TRUNCATEONLY 옵션을 사용합니다. 이 옵션이 기본 옵션입니다.  
   
 ## <a name="define-the-index-tasks"></a>인덱스 태스크 정의  
   
@@ -262,7 +262,7 @@ ms.lasthandoff: 04/11/2017
     > **참고:** 온라인 인덱스 작업은 일부 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
      **MAXDOP** 확인란  
-     DBCC CHECKDB에 대한 sp_configure의 최대 병렬 처리 수준 구성 옵션을 재정의합니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요.  
+     DBCC CHECKDB에 대한 sp_configure의 최대 병렬 처리 수준 구성 옵션을 재정의합니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요  
   
 #### <a name="define-the-update-statistics-task"></a>통계 업데이트 태스크 정의  
   
@@ -362,7 +362,7 @@ ms.lasthandoff: 04/11/2017
      **각 데이터베이스에 대한 하위 디렉터리 만들기** 확인란  
      지정한 디스크 디렉터리 아래에 유지 관리 계획의 일부로 백업 중인 각 데이터베이스에 대한 데이터베이스 백업이 있는 하위 디렉터리를 만듭니다.  
   
-    > **중요!!** 하위 디렉터리는 부모 디렉터리에서 사용 권한을 상속받습니다. 무단으로 액세스하지 못하도록 하려면 사용 권한을 제한하세요.  
+    > **중요!** 하위 디렉터리는 부모 디렉터리에서 사용 권한을 상속받습니다. 무단으로 액세스하지 못하도록 하려면 사용 권한을 제한하세요.  
   
      **폴더** 상자  
      자동으로 생성된 데이터베이스 파일을 포함할 폴더를 지정합니다. URL을 백업 대상으로 선택한 경우 이 옵션을 사용할 수 없습니다.  
@@ -370,7 +370,7 @@ ms.lasthandoff: 04/11/2017
      **SQL 자격 증명**  
      Windows Azure 저장소에 인증하는 데 사용되는 SQL 자격 증명을 선택합니다. 사용할 수 있는 기존 SQL 자격 증명이 없는 경우 **만들기** 단추를 클릭하여 새 SQL 자격 증명을 만듭니다.  
   
-    > **중요!!** **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 저장소 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. [자격 증명 만들기](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 항목의 예제 코드를 보고 Transact-SQL을 사용하여 자격 증명을 만듭니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
+    > **중요!** **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 저장소 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. [자격 증명 만들기](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 항목의 예제 코드를 보고 Transact-SQL을 사용하여 자격 증명을 만듭니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
      **Azure 저장소 컨테이너**  
      Windows Azure 저장소 컨테이너의 이름을 지정합니다.  
