@@ -26,6 +26,7 @@
 ## [서식 파일을 사용하여 데이터 대량 가져오기](use-a-format-file-to-bulk-import-data-sql-server.md)  
 ## [서식 파일을 사용하여 테이블 열 건너뛰기](use-a-format-file-to-skip-a-table-column-sql-server.md)  
 ## [서식 파일을 사용하여 데이터 필드 건너뛰기](use-a-format-file-to-skip-a-data-field-sql-server.md)  
-## [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
+## [서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑](use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)
+# [Excel에서 SQL로 데이터 가져오기](import-data-from-excel-to-sql.md)  
 # [XML 문서 대량 가져오기 및 내보내기 예](examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
 # [Azure Blob Storage의 데이터에 대량 액세스 예제](examples-of-bulk-access-to-data-in-azure-blob-storage.md)  
