@@ -13,7 +13,7 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
+manager: craigg
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 1c842fde925e89901971a525c3e171ffce050269
@@ -79,13 +79,13 @@ END
 
     명령 구문은 다음과 같습니다.
 
-    ```
+    ```dos
     net use [drive letter] \\[storage name].file.core.windows.net\[share name] /u:[storage account name] [storage account access key]
     ```
 
     다음은 로컬 드라이브 문자를 할당 하는 예제 `T:` Azure 파일 저장소 공유에:
 
-    ```
+    ```dos
     net use t: \\mystorage.file.core.windows.net\sharejson /u:myaccount hb5qy6eXLqIdBj0LvGMHdrTiygkjhHDvWjUZg3Gu7bubKLg==
     ```
 
@@ -141,7 +141,7 @@ SELECT value
 ### <a name="example-2"></a>예 2
 OPENROWSET는 파일에서 단일 텍스트 값을 읽어 BulkColumn으로 반환하고 OPENJSON 함수에 전달합니다. OPENJSON은 BulkColumn 배열에 대 한 JSON 개체의 배열에서 반복 하 고 JSON으로 서식이 지정 된 각 행에 한 권의 책을 반환 합니다.
 
-```
+```json
 {"id":"978-0641723445″, "cat":["book","hardcover"], "name":"The Lightning Thief", … 
 {"id":"978-1423103349″, "cat":["book","paperback"], "name":"The Sea of Monsters", … 
 {"id":"978-1857995879″, "cat":["book","paperback"], "name":"Sophie’s World : The Greek … 
@@ -166,7 +166,8 @@ SELECT book.*
 978-0641723445|번개 도둑|12.5|384|Rick Riordan| 
 978-1423103349|몬스터 바다|6.49|304|Rick Riordan| 
 978-1857995879|소피의 세계: 그리스 철학자|3.07|64|Jostein Gaarder| 
-978-1933988177|루씬 인 액션(개정판)|30.5|475|Michael McCandless| 
+978-1933988177|루씬 인 액션(개정판)|30.5|475|Michael McCandless|
+||||||
 
 이제 사용자에게 이 테이블을 반환하거나 다른 테이블로 데이터를 로드할 수 있습니다.
 
