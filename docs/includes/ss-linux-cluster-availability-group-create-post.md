@@ -7,7 +7,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1] 
-   TO DISK = N'var/opt/mssql/data/db1.bak';
+   TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
 기본 SQL Server 복제 데이터베이스 라는 데이터베이스를 추가 하려면 다음 TRANSACT-SQL 실행 `db1` 라는 가용성 그룹에 `ag1`합니다.

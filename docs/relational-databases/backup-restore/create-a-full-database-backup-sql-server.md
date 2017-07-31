@@ -19,18 +19,18 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
 ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
 
  > SQL Server 2014의 경우 [전체 데이터베이스 백업 만들기(SQL Server)](https://msdn.microsoft.com/en-US/library/ms187510(SQL.120).aspx)로 이동하세요.
 
-  이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 전체 데이터베이스 백업을 만드는 방법을 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법을 설명합니다.  
   
 >  Azure Blob Storage 서비스로 SQL Server 백업 방법에 대한 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [URL로 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
@@ -200,7 +200,7 @@ ms.lasthandoff: 06/23/2017
 
 #### <a name="d--back-up-to-the-azure-blob-storage-service"></a>**D.  Azure Blob Storage 서비스에 백업**
 #### <a name="common-steps"></a>**공통 단계**  
-아래 세 가지 예제에서는 Microsoft Azure Blob Storage 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
+아래 세 가지 예제에서는 Microsoft Azure Blob 저장소 서비스로 `Sales` 의 전체 데이터베이스 백업을 수행합니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  간단히 말해 처음 네 단계는 여기에 한 번 나열되며 모든 예제는 **5단계**에서 시작됩니다.
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
 2.  **데이터베이스**를 확장하고 `Sales`를 마우스 오른쪽 단추로 클릭한 다음 **태스크**를 가리키고 **백업...**을 클릭합니다.
@@ -259,14 +259,14 @@ ms.lasthandoff: 06/23/2017
   
      BACKUP DATABASE *database*  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **또는 PowerShell을 사용하여**...*n* ]  
   
      [ WITH *with_options* [ **,**...*o* ] ] ;  
   
     |옵션|설명|  
     |------------|-----------------|  
     |*database*|백업할 데이터베이스입니다.|  
-    |*backup_device* [ **,**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|  
+    |*backup_device* [ **또는 PowerShell을 사용하여**...*n* ]|백업 작업에 사용할 1-64개의 백업 장치 목록을 지정합니다. 물리적 백업 장치를 지정하거나, 이미 정의된 경우 해당 논리적 백업 장치를 지정할 수 있습니다. 물리적 백업 장치를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.<br /><br /> { DISK &#124; TAPE } **=***physical_backup_device_name*<br /><br /> 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.|  
     |WITH *with_options* [ **,**...*o* ]|필요에 따라 *o*등과 같은 하나 이상의 추가 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션에 대한 자세한 내용은 2단계를 참조하세요.|  
   
 2.  필요에 따라 한 개 이상의 WITH 옵션을 지정합니다. 몇 가지 WITH의 기본 옵션은 이 페이지에 설명되어 있습니다. 모든 WITH 옵션에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하세요.  

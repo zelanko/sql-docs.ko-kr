@@ -14,11 +14,11 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4e2fb53cbb1d9a8999a9260b6907f5319c0fe203
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수

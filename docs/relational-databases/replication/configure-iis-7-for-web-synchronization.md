@@ -17,11 +17,11 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: ecc4752f5bf52931df9c7af62b5828b92f8f0123
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>웹 동기화를 위한 IIS 7 구성
@@ -286,7 +286,7 @@ ms.lasthandoff: 06/23/2017
   
     4.  프록시 서버가 사용되는 경우 **사용자 LAN에 프록시 서버 사용** 및 **로컬 주소에 프록시 서버 사용 안 함**을 클릭한 다음 **확인**을 클릭합니다.  
   
-2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들면 `https://server.domain.com/directory/replisapi.dll?diag`과 같습니다.  
+2.  구독자에서는 Internet Explorer에서 replisapi.dll에 대한 주소에 `?diag` (예: 예를 들어 `https://server.domain.com/directory/replisapi.dll?diag`을 참조하십시오.  
   
     > [!NOTE]  
     >  위 예에서 **server.domain.com** 은 IIS 관리자의 **서버 인증서** 섹션 아래에 나열된 정확한 **발급 대상** 이름으로 대체되어야 합니다.  

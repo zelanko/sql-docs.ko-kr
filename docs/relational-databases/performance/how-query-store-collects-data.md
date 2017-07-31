@@ -21,7 +21,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
 ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/11/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
@@ -74,7 +74,7 @@ ms.lasthandoff: 07/11/2017
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  
