@@ -16,24 +16,20 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 caps.latest.revision: 8
 author: sabotta
 ms.author: carlasab
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: ca52d53cf25fa0ead6abd9b870f4d8dab424d11a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="help-viewer-and-offline-content-for-sql-server" class="xliff"></a>
-
-# SQL Server용 도움말 뷰어 및 오프라인 콘텐츠
+# <a name="help-viewer-and-offline-content-for-sql-server"></a>SQL Server용 도움말 뷰어 및 오프라인 콘텐츠
   
   
   
 이 문서에서는 도움말 뷰어를 설치하고 오프라인에서 SQL Server 문서를 보는 방법을 보여 줍니다. 문서에서는 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 및 SQL Server 2017에 대한 설명서를 다룹니다. 
 
-<a id="install-help-viewer" class="xliff"></a>
-
-## 도움말 뷰어 설치
+## <a name="install-help-viewer"></a>도움말 뷰어 설치
 다음 표에서는 사용 중인 SQL Server 버전에 따라 도움말 뷰어를 설치하는 도구를 보여 줍니다. 도움말 뷰어를 설치하려면 나열된 도구 중 하나를 설치합니다.
 
 
@@ -56,9 +52,7 @@ ms.lasthandoff: 06/28/2017
 > **디스크에서 콘텐츠를 설치**하는 경우에만 도움말 뷰어 2.x를 사용하여 [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]에 대한 로컬 도움말을 볼 수 있습니다. 
 
 
-<a id="sql-server-2016-sql-server-2017-offline-content" class="xliff"></a>
-
-## SQL Server 2016, SQL Server 2017 오프라인 콘텐츠  
+## <a name="sql-server-2016-sql-server-2017-offline-content"></a>SQL Server 2016, SQL Server 2017 오프라인 콘텐츠  
  
 **오프라인 콘텐츠를 설치하려면**  
 1. SQL Server Management Studio 또는 Visual Studio를 시작하고 **도움말** 메뉴에서 **도움말 콘텐츠 추가 및 제거**를 클릭하여 도움말 뷰어를 엽니다.  
@@ -85,9 +79,7 @@ ms.lasthandoff: 06/28/2017
    >[!IMPORTANT]
    > 이동 작업이 실패했음을 나타내는 메시지가 표시되면 메시지 상자를 닫고, 도움말 뷰어를 닫고 나서, 도움말 뷰어를 다시 엽니다. 이제 콘텐츠의 새 위치가 **로컬 저장소 경로**에 표시됩니다.   
  
-<a id="includesssql14mdincludessssql14-mdmd-offline-content" class="xliff"></a>
-
-## [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 오프라인 콘텐츠 
+## <a name="includesssql14mdincludessssql14-mdmd-offline-content"></a>[!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] 오프라인 콘텐츠 
  
   
 **오프라인 콘텐츠를 설치하려면**  
@@ -118,9 +110,7 @@ ms.lasthandoff: 06/28/2017
   
     ![HelpViewer1_withContentInstalled_ZoomedIn](../release-notes/media/helpviewer1-withcontentinstalled-zoomedin.png)  
   
-<a id="view-online-content-in-help-viewer" class="xliff"></a>
-
-## 도움말 뷰어에서 온라인 콘텐츠 보기
+## <a name="view-online-content-in-help-viewer"></a>도움말 뷰어에서 온라인 콘텐츠 보기
 
 도움말 뷰어 v2.x에서 다음 중 하나를 수행하여 온라인 콘텐츠를 볼 수 있습니다.
 
@@ -140,17 +130,13 @@ ms.lasthandoff: 06/28/2017
 
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../release-notes/media/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-<a id="f1-help-and-other-tips" class="xliff"></a>
-
-## F1 도움말 및 기타 팁
+## <a name="f1-help-and-other-tips"></a>F1 도움말 및 기타 팁
 
 F1 키를 누르면 해당 항목이 온라인으로 표시됩니다. 이 항목은 로컬 도움말로 표시할 수 없습니다.
 
 또한 도움말 뷰어는 프록시 설정을 지원하지 않고 ISO 형식을 지원하지 않습니다. 
 
 
-<a id="additional-information" class="xliff"></a>
-
-## 추가 정보
+## <a name="additional-information"></a>추가 정보
 [Microsoft 도움말 뷰어 - Visual Studio 2015](https://msdn.microsoft.com/library/hh580782.aspx)
 
