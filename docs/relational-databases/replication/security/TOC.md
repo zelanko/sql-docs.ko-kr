@@ -5,7 +5,7 @@
 ## [복제의 로그인 및 암호 관리](manage-logins-and-passwords-in-replication.md)  
 ## [안전한 개발](secure-development-replication.md)  
 ## [복제 에이전트 보안 모델](replication-agent-security-model.md)  
-## [복제용 보안 역할 요구 사항](security-role-requirements-for-replication.md)  
+## [Security Role Requirements for Replication](security-role-requirements-for-replication.md)  
 ## [복제 보안을 위한 최선의 구현 방법](replication-security-best-practices.md)  
 # [안전한 배포](secure-deployment-replication.md)  
 ## [배포자 보안 설정](secure-the-distributor.md)  

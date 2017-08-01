@@ -26,7 +26,7 @@
 ## [SQL Server Management Studio를 사용하여 Always Encrypted 구성](configure-always-encrypted-using-sql-server-management-studio.md)  
 ## [PowerShell을 사용하여 Always Encrypted 구성](configure-always-encrypted-using-powershell.md)  
 ### [PowerShell을 사용하여 Always Encrypted 키 구성](configure-always-encrypted-keys-using-powershell.md)  
-### [PowerShell을 사용하여 Always Encrypted 키 순환](rotate-always-encrypted-keys-using-powershell.md)  
+### [PowerShell을 사용하여 상시 암호화 키 순환](rotate-always-encrypted-keys-using-powershell.md)  
 ### [PowerShell을 사용하여 열 암호화 구성](configure-column-encryption-using-powershell.md)  
 ## [Always Encrypted(클라이언트 개발)](always-encrypted-client-development.md)  
 ### [.NET Framework Data Provider for SQL Server와 Always Encrypted를 사용하여 응용 프로그램 개발](develop-using-always-encrypted-with-net-framework-data-provider.md)  

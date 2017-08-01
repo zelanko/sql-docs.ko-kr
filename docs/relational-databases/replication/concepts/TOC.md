@@ -1,6 +1,6 @@
 # [복제 개발자 설명서](replication-developer-documentation.md)
 # [개발자 가이드: 방법 도움말 항목(복제)](developer-s-guide-how-to-topics-replication.md)
-# [Replication Agent Executables Concepts](replication-agent-executables-concepts.md)
+# [복제 에이전트 실행 파일 개념](replication-agent-executables-concepts.md)
 # [복제 관리 개체 개념](replication-management-objects-concepts.md)
 # [복제 프로그래밍 개념](replication-programming-concepts.md)
 # [복제 시스템 저장 프로시저 개념](replication-system-stored-procedures-concepts.md)

@@ -4,7 +4,7 @@
 # [LineString](linestring.md)  
 # [CircularString](circularstring.md)  
 # [CompoundCurve](compoundcurve.md)  
-# [Polygon](polygon.md)  
+# [다각형](polygon.md)  
 # [CurvePolygon](curvepolygon.md)  
 # [MultiPoint](multipoint.md)  
 # [MultiLineString](multilinestring.md)  
