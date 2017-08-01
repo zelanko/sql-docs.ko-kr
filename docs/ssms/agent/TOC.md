@@ -3,7 +3,7 @@
 # [SQL Server 에이전트 오류 로그](sql-server-agent-error-log.md)
 ## [SQL Server 에이전트 오류 로그 보기(SQL Server Management Studio)](view-sql-server-agent-error-log-sql-server-management-studio.md)
 ## [SQL Server 에이전트 오류 로그 이름 바꾸기(SSMS)](rename-a-sql-server-agent-error-log-sql-server-management-studio.md)
-## [(SSMS) SQL Server 에이전트 오류 로그에 실행 추적 메시지 작성](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
+## [실행 추적 메시지를 SQL Server 에이전트 오류 로그에 쓰려면](write-execution-trace-messages-to-sql-server-agent-log-ssms.md)
 
 # [관리 태스크 자동화(SQL Server 에이전트)](automated-administration-tasks-sql-server-agent.md)
 ## [SQL Server 에이전트 보안 구현](implement-sql-server-agent-security.md)
@@ -139,7 +139,7 @@
 ## [CPU 유휴 시간 및 기간 설정(SSMS)](set-cpu-idle-time-and-duration-sql-server-management-studio.md)
 ## [대상 서버의 암호화 옵션 설정](set-encryption-options-on-target-servers.md)
 ## [작업 실행 종료 설정(SSMS)](set-job-execution-shutdown-sql-server-management-studio.md)
-## [Set Job Step Success or Failure Flow](set-job-step-success-or-failure-flow.md)
+## [작업 단계 성공 또는 실패 흐름 설정](set-job-step-success-or-failure-flow.md)
 ## [대상 서버의 폴링 간격 설정](set-the-polling-interval-for-target-servers.md)
 ## [SQL Server 에이전트의 서비스 시작 계정 설정(SQL Server 구성 관리자)](set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)
 ## [에이전트 서비스에 대한 SQL Server 연결 설정](set-sql-server-connection-for-sql-server-agent-service-ssms.md)

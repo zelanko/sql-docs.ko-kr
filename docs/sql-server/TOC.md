@@ -2,7 +2,7 @@
 
 # 개요
 ## [SQL Server 2016의 새로운 기능](what-s-new-in-sql-server-2016.md)
-## [SQL Server 2017의에서 새로운 기능](what-s-new-in-sql-server-2017.md)
+## [SQL Server 2017의 새로운 기능](what-s-new-in-sql-server-2017.md)
 ## [버전 및 SQL Server 2016 의 지원 되는 기능](editions-and-components-of-sql-server-2016.md)
 ## [버전 및 SQL Server 2017 의 지원 되는 기능](editions-and-components-of-sql-server-2017.md)
 ## [SQL Server의 최대 용량 사양](maximum-capacity-specifications-for-sql-server.md)
@@ -36,7 +36,7 @@
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
-# [SQL Server에 대 한 자습서](tutorials-for-sql-server-2016.md)
+# [SQL Server 자습서](tutorials-for-sql-server-2016.md)
 
 # 문서 정보
 ## [SQL Server 리소스](sql-server-resources.md)
