@@ -25,29 +25,23 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 441ae5e2f835146f3d25bda645c44b33fa0146d2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="enhance-transactional-replication-performance" class="xliff"></a>
-
-# 트랜잭션 복제 성능 향상
+# <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
   [일반적인 복제 성능 향상](../../../relational-databases/replication/administration/enhance-general-replication-performance.md)에 설명된 일반 성능 팁을 살펴본 후에 트랜잭션 복제에 해당하는 이러한 추가 영역을 살펴보십시오.  
   
-<a id="database-design" class="xliff"></a>
-
-## 데이터베이스 디자인  
+## <a name="database-design"></a>데이터베이스 디자인  
   
 -   응용 프로그램 디자인에서 트랜잭션 크기를 최소화합니다.  
   
      기본적으로 트랜잭션 복제는 트랜잭션 경계에 따라 변경 내용을 전파합니다. 트랜잭션이 작을수록 배포 에이전트가 네트워크 문제로 인해 트랜잭션을 다시 전송해야 할 확률이 낮아집니다. 에이전트가 트랜잭션을 다시 전송해야 할 경우 보내는 데이터 양은 적어집니다.  
   
-<a id="distributor-configuration" class="xliff"></a>
-
-## 배포자 구성  
+## <a name="distributor-configuration"></a>배포자 구성  
   
 -   전용 서버에서 배포자를 구성합니다.  
   
@@ -57,9 +51,7 @@ ms.lasthandoff: 06/22/2017
   
      시스템에서 명령 저장에 필요한 공간을 결정할 수 있도록 일반적인 로드 상태에서 복제를 테스트합니다. 데이터베이스는 자주 자동 증가되지 않고도 명령을 저장할 수 있을 만큼 충분히 커야 합니다. 데이터베이스의 크기 변경에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
-<a id="publication-design" class="xliff"></a>
-
-## 게시 디자인  
+## <a name="publication-design"></a>게시 디자인  
   
 -   게시된 테이블을 일괄로 업데이트할 때 저장 프로시저 실행을 복제합니다.  
   
@@ -69,9 +61,7 @@ ms.lasthandoff: 06/22/2017
   
      **-SubscriptionStreams** 매개 변수(이 항목의 뒷부분에 설명됨)를 사용할 수 없는 경우 여러 게시를 만들어 보십시오. 이러한 게시에 아티클을 분산시키면 복제가 구독자에게 변경 내용을 병렬로 적용할 수 있습니다.  
   
-<a id="subscription-considerations" class="xliff"></a>
-
-## 구독 고려 사항  
+## <a name="subscription-considerations"></a>구독 고려 사항  
   
 -   같은 게시자에 여러 게시가 있을 경우 공유 에이전트가 아닌 독립 에이전트를 사용합니다. 새 게시 마법사에서는 이것이 기본값입니다.  
   
@@ -81,9 +71,7 @@ ms.lasthandoff: 06/22/2017
   
     -   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [동기화 일정 지정](../../../relational-databases/replication/specify-synchronization-schedules.md)  
   
-<a id="distribution-agent-and-log-reader-agent-parameters" class="xliff"></a>
-
-## 배포 에이전트 및 로그 판독기 에이전트 매개 변수  
+## <a name="distribution-agent-and-log-reader-agent-parameters"></a>배포 에이전트 및 로그 판독기 에이전트 매개 변수  
   
 -   의도치 않게 발생하는 일회성 병목 현상을 해결하려면 로그 판독기 에이전트에 **–MaxCmdsInTran** 매개 변수를 사용하세요.  
   

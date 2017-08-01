@@ -15,23 +15,19 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7
 ms.openlocfilehash: bd27f9755945abf7c09118a5997bb3745e66ab57
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="altering-memory-optimized-tables" class="xliff"></a>
-
-# 메모리 액세스에 최적화된 테이블 변경
+# <a name="altering-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 변경
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   ALTER TABLE 문을 사용하여 메모리 액세스에 최적화된 테이블에서 스미카 및 인덱스를 변경할 수 있습니다. 메모리 최적화 테이블에 대한 SQL Server 2016 및 Azure SQL Database ALTER TABLE 작업은 오프라인이므로 작업이 진행되는 동안 테이블을 쿼리할 수 없습니다. 데이터베이스 응용 프로그램을 계속 실행할 수 있으며, 수정 프로세스가 완료될 때까지 테이블에 액세스 중인 작업이 차단됩니다. 여러 ADD, DROP 또는 ALTER 작업을 단일 ALTER TABLE 문에 결합할 수 없습니다.
   
-<a id="alter-table" class="xliff"></a>
-
-## ALTER TABLE  
+## <a name="alter-table"></a>ALTER TABLE  
  
 ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가, 삭제, 다시 빌드하는 데 사용할 수 있습니다. 색인은 테이블 정의의 일부로 간주됩니다.  
   
@@ -84,16 +80,12 @@ ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가
   
  ALTER TABLE 기능과 전체 구문에 대한 자세한 내용은 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.  
   
-<a id="schema-bound-dependency" class="xliff"></a>
-
-## 스키마 바운드 종속성  
+## <a name="schema-bound-dependency"></a>스키마 바운드 종속성  
  고유하게 컴파일된 저장 프로시저는 스키마 바운드 형식이어야 합니다. 즉, 액세스하는 메모리 액세스에 최적화된 테이블과 참조하는 열에서 스키마 바운드 종속성을 가져야 합니다. 스키마 바운드 종속성은 참조 엔터티가 존재하는 한 참조된 엔터티가 삭제되거나 호환되지 않는 방식으로 수정되지 않도록 방지하는 두 엔터티 간 관계입니다.  
   
  예를 들어 고유하게 컴파일된 스키마 바운드 저장 프로시저가 *mytable* 테이블의 *c1*열을 참조하는 경우 *c1* 열을 삭제할 수 없습니다. 마찬가지로, 열 목록 없이 INSERT 문(예: `INSERT INTO dbo.mytable VALUES (...)`)을 사용하는 프로시저가 있는 경우 테이블에서 열을 삭제할 수 없습니다.  
  
-<a id="logging-of-alter-table-on-memory-optimized-tables" class="xliff"></a>
-
-## 메모리 액세스에 최적화된 테이블에 대한 ALTER TABLE 로깅
+## <a name="logging-of-alter-table-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 ALTER TABLE 로깅
 대부분 ALTER TABLE 시나리오는 이제 병렬로 실행되고 이를 통해 트랜잭션 로그에 대한 쓰기가 최적화됩니다. 최적화는 메타데이터 변경 내용을 트랜잭션 로그에 기록해야만 가능합니다. 그러나 다음 ALTER TABLE 작업은 단일 스레드를 실행하고 로그에 최적화되지 않습니다.
 
 이 경우 단일 스레드 작업은 변경된 테이블의 전체 내용을 트랜잭션 로그에 기록합니다. 단일 스레드 작업 목록은 다음과 같습니다.
@@ -112,9 +104,7 @@ ALTER TABLE 구문은 테이블 스키마를 변경하거나 인덱스를 추가
 
     - *예외:* 이미 행 외부 형식인 열을 늘리면 최적화된 방식으로 기록됩니다. 
   
-<a id="examples" class="xliff"></a>
-
-## 예  
+## <a name="examples"></a>예  
  다음 예는 기존 해시 인덱스의 버킷 수를 수정합니다. 여기서 해시 인덱스가 새 버킷 수로 다시 빌드되며 해시 인덱스의 다른 속성은 그대로 유지됩니다.  
   
 ```tsql
@@ -180,9 +170,7 @@ GO
 <a name="logging-of-alter-table-on-memory-optimized-tables-124"></a>
 
 
-<a id="see-also" class="xliff"></a>
-
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
 
 [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   

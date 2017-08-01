@@ -20,17 +20,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8df15a6d8f9875fbecf9e14fcdae51d37c7154fe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="full-text-search" class="xliff"></a>
-
-# 전체 텍스트 검색
+# <a name="full-text-search"></a>전체 텍스트 검색
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] 의 전체 텍스트 검색을 사용하면 사용자와 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 문자 기반 데이터에 대해 전체 텍스트 쿼리를 실행할 수 있습니다.
   
-<a id="basic-tasks" class="xliff"></a>
-
-## 기본 태스크
+## <a name="basic-tasks"></a>기본 태스크
 이 항목에서는 전체 텍스트 검색의 개요를 제공하고 해당 구성 요소 및 아키텍처에 대해 설명합니다. 지금 바로 시작하려면 기본 태스크는 다음과 같습니다.
 -   [전체 텍스트 검색 시작](../../relational-databases/search/get-started-with-full-text-search.md)
 -   [전체 텍스트 카탈로그 만들기 및 관리](../../relational-databases/search/create-and-manage-full-text-catalogs.md)
@@ -41,9 +37,7 @@ ms.lasthandoff: 07/10/2017
 > [!NOTE]
 > Full-Text Search is an optional component of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진의 선택적 구성 요소입니다. SQL Server를 설치할 때 전체 텍스트 검색을 선택하지 않은 경우 SQL Server 설치 프로그램을 다시 실행하여 검색을 추가합니다.
 
-<a id="overview" class="xliff"></a>
-
-## 개요
+## <a name="overview"></a>개요
 전체 텍스트 인덱스에는 테이블에 있는 하나 이상의 문자 기반 열이 포함됩니다. 이러한 열의 데이터 형식은 **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml** 또는 **varbinary(max)** 및 **FILESTREAM** 중 하나일 수 있습니다. 각 전체 텍스트 인덱스는 테이블의 열을 하나 이상 인덱싱하며, 각 열은 특정 언어를 사용할 수 있습니다.  
   
  전체 텍스트 쿼리는 영어와 일본어 같은 특정 언어의 규칙을 기준으로 단어와 구에 적용되어 전체 텍스트 인덱스의 텍스트 데이터에 대해 언어 검색을 수행합니다. 전체 텍스트 쿼리에는 간단한 단어와 구 또는 여러 형식의 단어나 구가 포함될 수 있습니다. 전체 텍스트 쿼리는 일치 항목( *적중*이라고도 함)이 하나 이상 있는 문서를 모두 반환합니다. 대상 문서가 전체 텍스트 쿼리에 지정된 모든 용어를 포함하며 일치하는 용어 사이의 거리와 같이 다른 모든 검색 조건과 일치할 때 일치 항목이 발생합니다.    
@@ -152,9 +146,7 @@ ms.lasthandoff: 07/10/2017
 ###  <a name="querying"></a> 전체 텍스트 쿼리 프로세스  
  쿼리 프로세서는 쿼리의 전체 텍스트 부분을 처리하기 위해 전체 텍스트 엔진에 전달합니다. 전체 텍스트 엔진은 단어 분리를 수행하고 필요에 따라 동의어 사전 확장, 형태소 분석 및 중지 단어(의미 없는 단어) 처리도 수행합니다. 그러면 쿼리의 전체 텍스트 부분은 SQL 연산자 형식, 주로 STVF(스트리밍 테이블 반환 함수)로 표시됩니다. 쿼리를 실행하는 동안 이러한 STVF는 반전된 인덱스에 액세스하여 올바른 결과를 검색합니다. 결과는 이 시점에서 클라이언트에 반환되거나 추가로 처리된 후 클라이언트에 반환됩니다.  
 
-<a id="full-text-index-architecture" class="xliff"></a>
-
-## 전체 텍스트 인덱스 아키텍처
+## <a name="full-text-index-architecture"></a>전체 텍스트 인덱스 아키텍처
   전체 텍스트 인덱스의 정보는 전체 텍스트 엔진이 테이블에서 특정 단어나 단어 조합을 빠르게 검색할 수 있는 전체 텍스트 쿼리를 컴파일하는 데 사용됩니다. 전체 텍스트 인덱스는 하나 이상의 데이터베이스 테이블 열에 중요한 단어와 그 위치에 대한 정보를 저장합니다. 전체 텍스트 인덱스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 전체 텍스트 엔진이 작성하고 유지 관리하는 특수한 유형의 토큰 기반 인덱스입니다. 전체 텍스트 인덱스의 작성 과정은 다른 유형의 인덱스를 작성하는 것과 다릅니다. 특정 행에 저장된 값을 기준으로 B-트리 구조를 생성하는 대신 전체 텍스트 엔진은 인덱싱되는 텍스트의 개별 토큰을 기준으로 반전된 누적 압축 인덱스 구조를 작성합니다.  전체 텍스트 인덱스 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 컴퓨터의 사용 가능한 메모리 리소스에 의해서만 제한됩니다.  
   
  전체 텍스트 인덱스는 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]에서 파일 시스템에 있었던 것과는 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]부터는 데이터베이스 엔진과 통합됩니다. 새 데이터베이스에서 전체 텍스트 카탈로그는 어떤 파일 그룹에도 속하지 않는 가상 개체이며, 전체 텍스트 인덱스의 그룹을 나타내는 논리적인 개념일 뿐입니다. 그러나 데이터 파일이 들어 있는 전체 텍스트 카탈로그인 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스를 업그레이드하는 동안에는 새 파일 그룹이 만들어집니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
@@ -240,9 +232,7 @@ ms.lasthandoff: 07/10/2017
 |어셈블리|1|2|6|  
 |3|1|2|7|  
 
-<a id="differences-between-full-text-indexes-and-regular-sql-server-indexes" class="xliff"></a>
-
-### 전체 텍스트 인덱스와 일반 SQL Server 인덱스 간의 차이점:  
+### <a name="differences-between-full-text-indexes-and-regular-sql-server-indexes"></a>전체 텍스트 인덱스와 일반 SQL Server 인덱스 간의 차이점:  
   
 |전체 텍스트 인덱스|일반 SQL Server 인덱스|  
 |------------------------|--------------------------------|  

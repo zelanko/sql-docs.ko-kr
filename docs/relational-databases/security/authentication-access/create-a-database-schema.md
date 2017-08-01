@@ -21,16 +21,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 3a224f5be40f6f7a68a28cb4c8f741c24527e8bd
 ms.openlocfilehash: b164e70bf4b1e7586d8e70ab8edb7baa1dfcaade
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/05/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="create-a-database-schema" class="xliff"></a>
-
-# 데이터베이스 스키마 만들기
+# <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마를 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -65,9 +63,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-##### 스키마를 만들려면  
+##### <a name="to-create-a-schema"></a>스키마를 만들려면  
   
 1.  개체 탐색기에서 **데이터베이스** 폴더를 확장합니다.  
   
@@ -81,9 +77,7 @@ ms.lasthandoff: 07/05/2017
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-<a id="additional-options" class="xliff"></a>
-
-### 추가 옵션  
+### <a name="additional-options"></a>추가 옵션  
  **스키마 – 신규** 대화 상자는 또한 두 개의 추가 페이지인 **권한** 및 **확장 속성**을 제공합니다.  
   
 -   **사용 권한** 페이지에는 사용 가능한 모든 보안 개체와 이러한 보안 개체에서 로그인에 부여할 수 있는 권한이 나열됩니다.  
@@ -92,9 +86,7 @@ ms.lasthandoff: 07/05/2017
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-<a id="to-create-a-schema" class="xliff"></a>
-
-#### 스키마를 만들려면  
+#### <a name="to-create-a-schema"></a>스키마를 만들려면  
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   

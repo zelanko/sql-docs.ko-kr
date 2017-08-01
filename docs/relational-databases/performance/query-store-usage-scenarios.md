@@ -17,16 +17,14 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: 171f33aa7ff745b8a66efe2cd5f3879d78b1c9f4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="query-store-usage-scenarios" class="xliff"></a>
-
-# 쿼리 저장소 사용 시나리오
+# <a name="query-store-usage-scenarios"></a>쿼리 저장소 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   쿼리 저장소는 예측 가능한 워크로드 성능을 추적하고 보장하는 것이 중요한 광범위한 시나리오에서 사용될 수 있습니다. 다음은 고려할 수 있는 몇 가지 예입니다.  
@@ -41,9 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   임시 워크로드 식별 및 개선  
   
-<a id="pinpoint-and-fix-queries-with-plan-choice-regressions" class="xliff"></a>
-
-## 계획 선택 재발이 있는 쿼리 식별 및 수정  
+## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>계획 선택 재발이 있는 쿼리 식별 및 수정  
  일반 쿼리 실행 중 데이터 카디널리티가 변경되거나, 인덱스가 생성, 변경 또는 삭제되거나, 통계가 업데이트되는 등 중요한 입력이 달라졌기 때문에 쿼리 최적화 프로그램에서 다른 계획을 사용하도록 결정하는 경우가 있을 수 있습니다.  선택하는 대부분의 새 계획은 이전에 사용된 것보다 더 낫거나 거의 동일합니다. 그러나 새 계획이 훨씬 나쁜 경우도 있습니다. 이러한 상황을 계획 선택 변경 재발이라고 합니다. 쿼리 저장소 이전에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 사용자가 시간이 지남에 따라 사용된 실행 계획을 확인할 수 있는 기본 제공 데이터 저장소를 제공하지 않았기 때문에 이는 식별하고 수정하기 매우 어려운 문제였습니다.  
   
  쿼리 저장소를 사용하여 다음을 신속하게 수행할 수 있습니다.  
@@ -58,9 +54,7 @@ ms.lasthandoff: 06/22/2017
   
  이 시나리오에 대한 자세한 설명은 [쿼리 저장소: 데이터베이스를 위한 항공 데이터 레코더](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/) 블로그를 참조하세요.  
   
-<a id="identify-and-tune-top-resource-consuming-queries" class="xliff"></a>
-
-## 상위 리소스 소비 쿼리 식별 및 조정  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>상위 리소스 소비 쿼리 식별 및 조정  
  워크로드에서 수천 개의 쿼리를 생성할 수 있지만 일반적으로 그 중 소수의 쿼리만 대부분의 시스템 리소스를 사용하므로 주의가 필요합니다. 리소스를 많이 사용하는 상위 쿼리 중에서 추가 조정을 통해 개선할 수 있는 쿼리 또는 재발된 쿼리를 찾습니다.  
   
  탐색을 시작하는 가장 쉬운 방법은 **에서** 상위 리소스 소비 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 여는 것입니다. 사용자 인터페이스는 상위 리소스 소비 쿼리를 나타내는 막대 그래프(왼쪽), 선택한 쿼리에 대한 계획 요약(오른쪽) 및 선택한 계획에 대한 시각적 쿼리 계획(아래쪽), 이렇게 세 개의 창으로 구분되어 있습니다. **구성** 을 클릭하여 분석할 쿼리 수 및 관심 있는 시간 간격을 제어할 수 있습니다. 또한 다양한 리소스 소비 차원(기간, CPU, 메모리, IO, 실행 횟수)과 기준선(평균, 최소값, 최대값, 합계, 표준 편차) 간에 선택할 수 있습니다.  
@@ -81,9 +75,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  부담이 큰 쿼리는 다시 작성하는 것이 좋습니다. 예를 들어 쿼리 매개 변수화를 활용하고 동적 SQL의 사용을 줄입니다. 데이터를 읽을 때의 최적 논리를 구현합니다(응용 프로그램 쪽이 아니라 데이터베이스 쪽에서 데이터 필터링 적용).  
   
-<a id="ab-testing" class="xliff"></a>
-
-## A/B 테스트  
+## <a name="ab-testing"></a>A/B 테스트  
  쿼리 저장소를 사용하여 예정된 응용 프로그램 변경 이전과 이후의 워크로드 성능을 비교할 수 있습니다. 다음 목록에는 쿼리 저장소를 사용하여 환경 또는 응용 프로그램 변경이 워크로드 성능에 미치는 영향을 평가할 수 있는 몇 가지 예제가 포함되어 있습니다.  
   
 -   새 응용 프로그램 버전 출시  
@@ -143,9 +135,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  분석 및 회귀 수정에 쿼리 저장소 사용: 대부분의 경우 새 쿼리 최적화 프로그램 변경 내용은 향상된 계획을 생성합니다. 그러나 쿼리 저장소는 계획 선택 회귀를 식별하고 계획 강제 적용 메커니즘을 사용하여 수정하는 간편한 방법을 제공합니다.  
   
-<a id="identify-and-improve-ad-hoc-workloads" class="xliff"></a>
-
-## 임시 워크로드 식별 및 개선  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>임시 워크로드 식별 및 개선  
  일부 워크로드에는 전체 응용 프로그램 성능을 개선하기 위해 조정할 수 있는 주요 쿼리가 없습니다. 이러한 워크로드는 일반적으로 각각 시스템 리소스의 일부를 사용하는 비교적 다수의 쿼리가 있는 것이 특징입니다. 이러한 쿼리는 거의 실행되지 않으므로(일반적으로 한 번만 실행되므로 임시 쿼리라고 함) 해당 런타임 소비는 중요하지 않습니다. 반면, 응용 프로그램이 항상 완전히 새로운 쿼리를 생성하는 경우에는 시스템 리소스의 상당 부분이 최적화되지 않은 쿼리 컴파일에 소비됩니다. 이는 많은 수의 쿼리와 계획이 예약된 공간을 차지하는 경우 쿼리 저장소에 이상적인 상황이 아닙니다. 즉, 쿼리 저장소가 매우 빠르게 읽기 전용 모드로 전환될 수 있습니다. **크기 기반 정리 정책** (쿼리 저장소를 항상 실행되도록 유지하는 데[매우 권장됨](https://msdn.microsoft.com/library/mt604821.aspx) )을 활성화한 경우 백그라운드 프로세스에서 쿼리 저장소 구조를 정리하므로 대부분의 시간 동안 상당한 시스템 리소스가 소비됩니다.  
   
  **상위 리소스 소비 쿼리** 뷰는 워크로드의 임시 특성에 대한 첫 번째 표시를 제공합니다.  
@@ -231,9 +221,7 @@ ALTER DATABASE  [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)  
   

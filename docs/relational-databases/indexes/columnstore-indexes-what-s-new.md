@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
 ms.openlocfilehash: 0a63e3e5641ce513e0d3c30705ac8a7523cbc053
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/29/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="columnstore-indexes---what39s-new"></a>Columnstore 인덱스 - 새로운 기능
@@ -172,7 +172,7 @@ ms.lasthandoff: 06/29/2017
   
 -   일괄 처리는 2배 이상의 쿼리 성능을 제공하지만 병렬 쿼리 실행에만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  Columnstore 인덱스 가이드   
  Columnstore 인덱스 데이터 로드   
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

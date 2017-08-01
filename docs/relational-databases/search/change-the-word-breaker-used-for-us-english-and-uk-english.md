@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be3d7e956f6ed89f14fc63c36d97974cc9218933
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="change-the-word-breaker-used-for-us-english-and-uk-english" class="xliff"></a>
-
-# 미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
+# <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>미국 영어 및 영국 영어에 사용되는 단어 분리기 변경
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 영어용 단어 분리기 및 형태소 분석기의 새 버전(버전 14.0.4999.1038)을 설치하여 이전 버전(버전 12.0.6828.0)의 해당 구성 요소를 대체합니다. 새 구성 요소의 변경된 동작에 대한 자세한 내용은 [전체 텍스트 검색의 동작 변경](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)을 참조하세요. 이 항목에서는 이러한 새 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다. 클러스터 설치의 경우 이러한 변경은 모든 주 노드 및 패시브 노드에서 수행해야 합니다.  
   
  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 미국 영어(LCID 1033은)와 영국 영어(LCID 2057)에 대해 각기 다른 CLSID로 표시되는 서로 다른 단어 분리기가 사용되었습니다. 이번 릴리스에서는 다음 표와 같이 두 LCID 모두 동일한 CLSID를 갖는 동일한 구성 요소를 사용합니다.  
@@ -37,13 +35,9 @@ ms.lasthandoff: 07/10/2017
   
  단어 분리기 및 형태소 분석기에 대한 자세한 내용은 [검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)를 참조하세요.  
   
-<a id="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers" class="xliff"></a>
-
-## 현재 영어 단어 분리기를 이전 영어 단어 분리기로 전환  
+## <a name="switching-from-the-current-english-word-breaker-to-the-previous-english-word-breakers"></a>현재 영어 단어 분리기를 이전 영어 단어 분리기로 전환  
   
-<a id="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version" class="xliff"></a>
-
-#### 현재 버전의 미국 영어 단어 분리기를 이전 버전으로 전환하려면  
+#### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>현재 버전의 미국 영어 단어 분리기를 이전 버전으로 전환하려면  
   
 1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
@@ -65,9 +59,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-<a id="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version" class="xliff"></a>
-
-#### 현재 버전의 영국 영어 단어 분리기에서 이전 버전으로 전환하려면  
+#### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>현재 버전의 영국 영어 단어 분리기에서 이전 버전으로 전환하려면  
   
 1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
@@ -89,13 +81,9 @@ ms.lasthandoff: 07/10/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-<a id="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker" class="xliff"></a>
-
-## 이전 영어 단어 분리기에서 다시 현재 영어 단어 분리기로 전환  
+## <a name="switching-back-from-the-previous-english-word-breakers-to-the-current-english-word-breaker"></a>이전 영어 단어 분리기에서 다시 현재 영어 단어 분리기로 전환  
   
-<a id="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version" class="xliff"></a>
-
-#### 이전 버전의 미국 영어 단어 분리기에서 현재 버전으로 전환하려면  
+#### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>이전 버전의 미국 영어 단어 분리기에서 현재 버전으로 전환하려면  
   
 1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
@@ -117,9 +105,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-<a id="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version" class="xliff"></a>
-
-#### 이전 버전의 영국 영어 단어 분리기에서 현재 버전으로 전환하려면  
+#### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>이전 버전의 영국 영어 단어 분리기에서 현재 버전으로 전환하려면  
   
 1.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
@@ -141,9 +127,7 @@ ms.lasthandoff: 07/10/2017
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작합니다.  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [검색에 사용된 단어 분리기를 이전 버전으로 되돌리기](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
  [전체 텍스트 검색의 동작 변경](http://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
   

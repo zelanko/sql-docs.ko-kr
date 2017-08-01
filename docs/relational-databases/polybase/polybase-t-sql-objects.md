@@ -19,15 +19,14 @@ caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 722e026f8b8e8f1e04a93ba58f78aa7135b528de
-ms.openlocfilehash: b8b90960e312ed5e26d5379dac1312849818022d
+ms.translationtype: HT
+ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
+ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# PolyBase T-SQL 개체
-<a id="polybase-t-sql-objects" class="xliff"></a>
+# <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 개체
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase를 사용하려면 외부 데이터를 참조하는 외부 테이블을 만들어야 합니다.  
@@ -45,12 +44,10 @@ ms.lasthandoff: 06/30/2017
 > [!NOTE]
 >  SQL Server 2016의 PolyBase는 Windows 사용자만 지원합니다. SQL 사용자를 사용하여 PolyBase 외부 테이블을 쿼리하려고 하면 쿼리에 실패합니다.
 
-## 필수 구성 요소
-<a id="prerequisites" class="xliff"></a>  
+## <a name="prerequisites"></a>필수 구성 요소  
  PolyBase를 구성합니다. [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.  
   
-## Hadoop에 대한 외부 테이블 만들기
-<a id="create-external-tables-for-hadoop" class="xliff"></a>  
+## <a name="create-external-tables-for-hadoop"></a>Hadoop에 대한 외부 테이블 만들기  
  **1. 데이터베이스 범위 자격 증명 만들기**  
   
  이 단계는 Kerberos 보안 Hadoop 클러스터에만 필요합니다.  
@@ -128,8 +125,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
   
-## Azure blob 저장소에 대한 외부 테이블 만들기
-<a id="create-external-tables-for-azure-blob-storage" class="xliff"></a>  
+## <a name="create-external-tables-for-azure-blob-storage"></a>Azure blob 저장소에 대한 외부 테이블 만들기  
  **1. 데이터베이스 범위 자격 증명 만들기**  
   
 ```sql  
@@ -204,8 +200,7 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
   
 ```  
  
-## Azure Data Lake Store의 외부 테이블 만들기
-<a id="create-external-tables-for-azure-data-lake-store" class="xliff"></a>
+## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store의 외부 테이블 만들기
 Azure Data Lake Store는 SQL Data Warehouse의 PolyBase에서만 지원됩니다.
 Azure SQL Data Warehouse 및 ADLS에 대한 자세한 내용은 [Azure Data Lake Store를 사용하여 로드](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)를 참조하세요.
  
@@ -297,12 +292,10 @@ WITH
 CREATE STATISTICS StatsForProduct on DimProduct_external(ProductKey)  
 ```  
 
-## 다음 단계
-<a id="next-steps" class="xliff"></a>  
+## <a name="next-steps"></a>다음 단계  
  쿼리의 예제를 보려면 [PolyBase 쿼리](../../relational-databases/polybase/polybase-queries.md)를 참조하세요.  
   
-## 참고 항목
-<a id="see-also" class="xliff"></a>  
+## <a name="see-also"></a>참고 항목  
  [PolyBase 시작하기](../../relational-databases/polybase/get-started-with-polybase.md)   
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)  
   

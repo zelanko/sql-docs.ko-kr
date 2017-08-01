@@ -22,16 +22,14 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1e8b91f880f5cc4f5db69f09fb0bded2b51aaa3c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="implement-a-business-logic-handler-for-a-merge-article" class="xliff"></a>
-
-# 병합 아티클에 대한 비즈니스 논리 처리기 구현
+# <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
   이 항목에서는 복제 프로그래밍 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 의 병합 아티클에 대한 비즈니스 논리 처리기를 구현하는 방법에 대해 설명합니다.  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 네임스페이스는 병합 복제 동기화 프로세스 중에 발생하는 이벤트를 처리하는 복잡한 비즈니스 논리를 작성할 수 있게 해주는 인터페이스를 구현합니다. 비즈니스 논리 처리기의 메서드는 동기화 중에 복제되는 각 변경된 행에 대해 복제 프로세스에서 호출할 수 있습니다.  
@@ -58,9 +56,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="ReplProg"></a> 복제 프로그래밍 사용  
   
-<a id="to-create-and-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### 비즈니스 논리 처리기를 만들고 배포하려면  
+#### <a name="to-create-and-deploy-a-business-logic-handler"></a>비즈니스 논리 처리기를 만들고 배포하려면  
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 비즈니스 논리 처리기를 구현하는 코드를 포함하는 .NET 어셈블리에 대한 새 프로젝트를 만듭니다.  
   
@@ -103,9 +99,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  비즈니스 논리 처리기는 병합 에이전트가 실행되는 모든 서버에 배포해야 합니다. 여기에는 웹 동기화를 사용할 때 replisapi.dll을 호스팅하는 IIS 서버도 포함됩니다.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### 비즈니스 논리 처리기를 등록하려면  
+#### <a name="to-register-a-business-logic-handler"></a>비즈니스 논리 처리기를 등록하려면  
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행하여 어셈블리가 이미 비즈니스 논리 처리기로 등록되어 있지 않은지 확인합니다.  
   
@@ -114,15 +108,11 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name**을 참조하세요. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### 새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
 1.  **@article_resolver**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### 기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
 1.  **@publication**, **@article**, **@property**에 **article_resolver** 값, **@value**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_changemergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
@@ -139,9 +129,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
   
-<a id="to-create-a-business-logic-handler" class="xliff"></a>
-
-#### 비즈니스 논리 처리기를 만들려면  
+#### <a name="to-create-a-business-logic-handler"></a>비즈니스 논리 처리기를 만들려면  
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio에서 비즈니스 논리 처리기를 구현하는 코드를 포함하는 .NET 어셈블리에 대한 새 프로젝트를 만듭니다.  
   
@@ -182,9 +170,7 @@ ms.lasthandoff: 06/22/2017
   
 6.  프로젝트를 빌드하여 비즈니스 논리 처리기 어셈블리를 만듭니다.  
   
-<a id="to-register-a-business-logic-handler" class="xliff"></a>
-
-#### 비즈니스 논리 처리기를 등록하려면  
+#### <a name="to-register-a-business-logic-handler"></a>비즈니스 논리 처리기를 등록하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 배포자 연결을 만듭니다.  
   
@@ -202,15 +188,11 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **@is_dotnet_assembly**을 참조하세요.  
   
-<a id="to-deploy-a-business-logic-handler" class="xliff"></a>
-
-#### 비즈니스 논리 처리기를 배포하려면  
+#### <a name="to-deploy-a-business-logic-handler"></a>비즈니스 논리 처리기를 배포하려면  
   
 1.  병합 에이전트가 실행되는 서버에서 비즈니스 논리 처리기가 배포자에 등록될 때 지정된 파일 위치에 어셈블리를 배포합니다. 끌어오기 구독의 경우 에이전트가 구독자에서 실행되고 밀어넣기 구독의 경우에는 배포자에서 실행됩니다. 웹 동기화를 사용할 경우 에이전트는 웹 서버에서 실행됩니다. 비즈니스 논리 처리기가 등록될 때 어셈블리 이름에 전체 경로를 포함하지 않은 경우 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리에 어셈블리를 배포합니다. 동일한 어셈블리를 사용하는 응용 프로그램이 여러 개인 경우 GAC에 어셈블리를 설치할 수 있습니다.  
   
-<a id="to-use-a-business-logic-handler-with-a-new-table-article" class="xliff"></a>
-
-#### 새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
+#### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
@@ -226,9 +208,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  <xref:Microsoft.SqlServer.Replication.Article.Create%2A> 메서드를 호출합니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-<a id="to-use-a-business-logic-handler-with-an-existing-table-article" class="xliff"></a>
-
-#### 기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
+#### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
@@ -261,9 +241,7 @@ ms.lasthandoff: 06/22/2017
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-<a id="see-also" class="xliff"></a>
-
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [병합 아티클용 사용자 지정 충돌 해결 프로그램 구현](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [비즈니스 논리 처리기 디버깅&#40;복제 프로그래밍&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)   

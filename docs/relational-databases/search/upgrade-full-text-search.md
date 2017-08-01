@@ -20,11 +20,11 @@ caps.latest.revision: 106
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 33b11df8c6894b8acd24da6afd4e2f825fc93445
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="upgrade-full-text-search"></a>전체 텍스트 검색 업그레이드
@@ -137,7 +137,7 @@ ms.lasthandoff: 06/22/2017
   
 -   전체 텍스트 카탈로그가 오프라인 상태이면 백업이 실패합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](http://go.microsoft.com/fwlink/?LinkId=121052) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](http://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 전체 텍스트 카탈로그 백업 및 복원에 대한 자세한 내용은 온라인 설명서에서 [전체 텍스트 카탈로그 백업 및 복원](http://go.microsoft.com/fwlink/?LinkId=121052) 및 [파일 백업과 복원 및 전체 텍스트 카탈로그](http://go.microsoft.com/fwlink/?LinkId=121053)[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 를 참조하세요.  
   
  데이터베이스를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 복원하면 전체 텍스트 카탈로그에 대한 새 데이터베이스 파일이 만들어집니다. 이 파일의 기본 이름은 ftrow_*catalog-name*.ndf입니다. 예를 들어 *catalog-name* 이 `cat1`이면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 파일의 기본 이름은 `ftrow_cat1.ndf`입니다. 대상 디렉터리에서 이 기본 이름이 이미 사용되고 있으면 새 데이터베이스 파일의 이름이 `ftrow_`*catalog-name*`{`*GUID*`}.ndf`로 지정됩니다. 여기에서 *GUID* 는 새 파일의 전역 고유 식별자입니다.  
   
