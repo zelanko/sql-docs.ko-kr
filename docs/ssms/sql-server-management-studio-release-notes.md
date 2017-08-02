@@ -14,26 +14,25 @@ caps.latest.revision: 51
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
-ms.openlocfilehash: f593303a681e2f52161777fc48f0fb1b479d20d9
+ms.translationtype: HT
+ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
+ms.openlocfilehash: 7fb0aa5f5d8b78a4783efdbb4e1f064eb025538a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-management-studio----release-notes"></a>SQL Server Management Studio - 릴리스 정보
 SQL Server Management Studio의 일반 공급 릴리스를 시작합니다.  이번 릴리스의 SSMS(SQL Server Management Studio)는 SQL Server 릴리스 외의 독립 실행형 설치입니다. Microsoft는 이 SSMS 릴리스를 새 기능과 픽스뿐만 아니라 SQL Server 및 Azure SQL 데이터베이스의 최신 기능에 대한 지원으로 자주 업데이트하고자 합니다.  
   
-최신 SQL Server Management Studio를 설치하려면 [SQL Server Management Studio 다운로드&#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
+최신 SQL Server Management Studio를 설치하려면 [SQL Server Management Studio 다운로드 &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
   
 다음은 이번 SQL Server Management Studio 릴리스의 문제점과 제한 사항입니다.  
 
-1. **대상 데이터베이스 파일 위치에 대 한 잘못 된 경로 패턴에서는 발생 하는 복원 데이터베이스 마법사** 
-    SSMS Linux 서버에 연결 되어 있을 때 알려진된 문제입니다. 경로 잘못 된/홀수 보이지만, 서버 쪽에서 올바르게 처리, 즉,는 기능적 문제가 없습니다.
+1. **복원 데이터베이스 마법사가 대상 데이터베이스 파일 위치에 잘못된 경로 패턴을 생성합니다.** SSMS가 Linux 서버에 연결되어 있을 때 알려진 문제입니다. 경로가 잘못된 것처럼 보이지만 서버측에서 올바르게 처리되었습니다. 즉, 기능적인 문제가 없습니다.
 
 2. **파일 브라우저 문제**
-    - Windows 기반 SQL Server 2017 CTP 2.0 인스턴스를 사용할 때는 ssms에서 UI 파일 브라우저는 서버에는 빈 플로피 드라이브 또는 고정된 디스크를 설치 하는 Bitlocker로 보호 되는 경우이를 열려면 실패할 수 있습니다. 
-    - 파일 탐색기 UI는 더 이상 SQL Server 2017 CTP 2.0 이전 버전의 버전을 지원합니다.
+    - Windows 기반 SQL Server 2017 CTP 2.0 인스턴스를 사용할 때 설치된 Bitlocker로 보호되는 빈 플로피 드라이브 또는 고정된 디스크가 있으면 SSMS의 파일 브라우저 UI가 열리지 않을 수 있습니다. 
+    - 파일 브라우저 UI는 CTP 2.0 이전의 SQL Server 2017 버전을 더 이상 지원하지 않습니다.
     
 
 
@@ -47,7 +46,7 @@ SQL Server Management Studio의 일반 공급 릴리스를 시작합니다.  이
     
     해결 방법으로, SSMS에 제공되는 다른 형식의 인증인 Active Directory 암호 인증, Active Directory 통합 인증 또는 SQL Server 인증을 사용할 수 있습니다.
 
-5. **SSMS는 SSIS 2016(SQL Server 2016 Integrated Services) 인스턴스에만 연결할 수 있습니다.**  
+5. **SSMS 17.x는 SQL Server 2017 통합 서비스(SSIS 2017) 인스턴스에만 연결할 수 있습니다.**  
     SQL Server Integration Services의 알려진 호환성 제한 때문에 이전 버전에는 연결할 수 없습니다.
     
     이 문제에 대한 해결 방법으로, [SSIS 인스턴스에 맞게 조정된 SSMS 릴리스](../ssms/previous-sql-server-management-studio-releases.md)를 사용하여 SQL Server Integration Service 인스턴스에 연결할 수 있습니다. 
@@ -63,11 +62,11 @@ SQL Server Management Studio의 일반 공급 릴리스를 시작합니다.  이
   
 ## <a name="feedback"></a>피드백  
   
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect에 문제 또는 제안을 기록하세요](https://connect.microsoft.com/SQLServer/Feedback).  
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL 클라이언트 도구 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqltools) |  [Microsoft Connect에 문제 또는 제안을 기록하세요](https://connect.microsoft.com/SQLServer/Feedback)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server Management Studio 자습서](../ssms/use-sql-server-management-studio.md)  
-[SQL Server Management Studio 다운로드 &amp;#40;SSMS&amp;#41;](../ssms/download-sql-server-management-studio-ssms.md)  
+[SQL Server Management Studio 다운로드 &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
 [SQL Server Management Studio의 이전 릴리스](../ssms/previous-sql-server-management-studio-releases.md)  
 
   

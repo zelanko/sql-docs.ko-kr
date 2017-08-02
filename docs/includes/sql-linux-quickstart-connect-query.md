@@ -19,7 +19,7 @@
 1. 연결 오류가 발생하는 경우 먼저 오류 메시지에서 문제를 진단합니다. 그런 다음 [connection troubleshooting recommendations](../linux/sql-server-linux-troubleshooting-guide.md#connection)(연결 문제 해결 권장 사항)를 검토합니다.
 
 ## <a name="create-and-query-data"></a>데이터 만들기 및 쿼리
-다음 섹션에서는 **sqlcmd** 및 Transact-SQL을 사용하여 새 데이터베이스를 만들고, 데이터를 추가하고, 간단한 쿼리를 실행하는 단계를 안내합니다.
+다음 섹션에서는 **sqlcmd**를 사용하여 새 데이터베이스를 만들고, 데이터를 추가하고, 간단한 쿼리를 실행하는 단계를 안내합니다.
 
 ### <a name="create-a-new-database"></a>새 데이터베이스 만들기
 
@@ -109,6 +109,15 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 
 ## <a name="next-steps"></a>다음 단계
 
-T-SQL을 처음 사용하는 경우 [Tutorial: Writing Transact-SQL Statements](../t-sql/tutorial-writing-transact-sql-statements.md)(자습서: Transact-SQL 문 작성) 및 [Transact-SQL Reference (Database Engine)](../t-sql/language-reference.md)(Transact-SQL 참조(데이터베이스 엔진))를 참조하세요.
+다른 설치 시나리오의 경우 다음 리소스를 참조하세요.
+
+|||
+|---|---|
+| [업그레이드](../linux/sql-server-linux-setup.md#upgrade) | Linux에서 SQL Server의 기존 설치 및 업그레이드 방법을 알아봅니다. |
+| [제거](../linux/sql-server-linux-setup.md#uninstall) | Linux에서 SQL Server 제거 |
+| [무인 설치](../linux/sql-server-linux-setup.md#unattended) | 확인 메시지를 표시하지 않고 설치를 스크립팅하는 방법을 알아봅니다. |
+| [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |
 
 SQL Server를 연결하고 관리하는 다른 방법을 살펴보려면 [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) 및 [SQL Server Management Studio](../linux/sql-server-linux-develop-use-ssms.md)를 참조하세요.
+
+Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
