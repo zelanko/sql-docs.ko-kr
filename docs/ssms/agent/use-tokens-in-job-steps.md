@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bc46faf06a34a41f94ee9eb4fa05c2a9ce3a5cec
+ms.translationtype: HT
+ms.sourcegitcommit: 8ec830912e034436d2de0613c793c08ce961c031
+ms.openlocfilehash: bc10ed9c7b6ea1a240b9274c9880c44fa3e8f3ab
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/25/2017
 
 ---
 # <a name="use-tokens-in-job-steps"></a>작업 단계에서 토큰 사용
@@ -70,10 +70,10 @@ ms.lasthandoff: 06/22/2017
 |**(A-ERR)**|오류 번호입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 오류 번호 값으로 대체됩니다.|  
 |**(A-SEV)**|오류 심각도입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 오류 심각도 값으로 대체됩니다.|  
 |**(A-MSG)**|메시지 내용입니다. 작업이 경고로 실행되면 이 토큰은 작업 단계에서 자동으로 메시지 텍스트 값으로 대체됩니다.|  
-|**(AGENT_JOB_NAME)**|작업의 이름입니다.|  
-|**(AGENT_STEP_NAME)**|단계 이름입니다.|  
+|**(JOBNAME)**|작업의 이름입니다.|  
+|**(STEPNAME)**|단계 이름입니다.|  
 |**(DATE)**|현재 날짜(YYYYMMDD 형식)입니다.|  
-|**(INST)**|인스턴스 이름입니다. 기본 인스턴스의 경우 이 토큰에는 기본 인스턴스 이름인 MSSQLSERVER을 가집니다.|  
+|**(INST)**|인스턴스 이름입니다. 기본 인스턴스의 경우 이 토큰에는 기본 인스턴스 이름인 MSSQLSERVER를 가집니다.|  
 |**(JOBID)**|작업 ID입니다.|  
 |**(MACH)**|컴퓨터 이름입니다.|  
 |**(MSSA)**|마스터 SQLServerAgent 서비스 이름입니다.|  
