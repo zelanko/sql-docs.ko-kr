@@ -14,11 +14,11 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 002507c03a66bd262e7d5dfa44283d2e3e0a901a
+ms.translationtype: HT
+ms.sourcegitcommit: f0ebadeaa959c6eb148cdd9a9d6e0a1019d858ab
+ms.openlocfilehash: 413be658a429308744b303d2d3ef82892c964c5a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
@@ -30,7 +30,7 @@ ms.lasthandoff: 06/22/2017
   
 -   ATOMIC 블록 자세한 내용은 [Atomic Blocks](../../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md)을 참조하세요.  
   
--   고유하게 컴파일된 저장 프로시저에서 매개 변수와 변수에 대한**NOT NULL** 제약 조건. **NULL** 값을 **NOT NULL**로 선언된 매개 변수 또는 변수에 할당할 수 없습니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.  
+-   매개 변수 및 변수에 대한 **NOT NULL** 제약 조건입니다. **NULL** 값을 **NOT NULL**로 선언된 매개 변수 또는 변수에 할당할 수 없습니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.  
   
     -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
   
@@ -74,3 +74,4 @@ go
  [고유하게 컴파일된 저장 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)  
   
   
+

@@ -1,7 +1,7 @@
 ---
-title: "데이터베이스 기능 | Microsoft 문서"
+title: "Microsoft SQL 관계형 데이터베이스 - 지침 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/02/2017
+ms.date: 07/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,17 +14,17 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 137216ed7cf120a8a53fe00b5f1111c9b013c2c9
-ms.openlocfilehash: 54aaac5cb67f00547ea785df9371fb2395f297e7
+ms.translationtype: HT
+ms.sourcegitcommit: c527b6a7feafc3647535dc498fa9eab213876594
+ms.openlocfilehash: f5113541de0deb1ba42519da8e0ec5fff33dfe4d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/27/2017
 
 ---
-# <a name="database-features"></a>데이터베이스 기능  
+# <a name="guidance-for-using-microsoft-sql-relational-databases"></a>Microsoft SQL 관계형 데이터베이스를 사용하기 위한 지침
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-  이 섹션에서는 데이터베이스, 데이터베이스 개체, 데이터 형식, 그리고 데이터 작업 및 관리에 사용되는 메커니즘과 관련된 기능 및 태스크를 다룹니다. 이 정보는 대부분의 버전에 공통적으로 적용 된 [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]합니다. 개별 항목을 일부 기능은 일부 플랫폼으로 제한 됩니다 나타낼 수 있습니다. 특정 플랫폼에 대 한 자세한 내용은 다음 링크를 참조 합니다: 
+  이 섹션에서는 Microsoft SQL 관계형 데이터베이스, 데이터베이스 개체, 데이터 형식, 그리고 데이터 작업 및 관리에 사용되는 메커니즘과 관련된 기능 및 태스크를 다룹니다. 이 정보는 대부분의 버전에 공통적으로 적용 된 [!INCLUDE[ssdenoversion_md](../includes/ssdenoversion_md.md)]합니다. 개별 항목을 일부 기능은 일부 플랫폼으로 제한 됩니다 나타낼 수 있습니다. 특정 플랫폼에 대 한 자세한 내용은 다음 링크를 참조 합니다: 
   
 - [온-프레미스 SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md) 및 [SQL Server 구성](../database-engine/configure-windows/sql-server-database-engine.md)  
 - [SQL Server on Linux Documentation](../linux/sql-server-linux-overview.md)  
