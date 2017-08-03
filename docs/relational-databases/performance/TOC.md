@@ -3,7 +3,7 @@
 # [NVDIMM-N 쓰기 저장 캐시를 사용하여 저장소 공간 구성](configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md)  
 
 # [적응 쿼리 처리](adaptive-query-processing.md)
-# [자동 튜닝](../automatic-tuning/automatic-tuning.md)
+# [자동 조정](../automatic-tuning/automatic-tuning.md)
 # [카디널리티 추정](cardinality-estimation-sql-server.md)  
 
 # [성능 모니터링 및 튜닝](monitor-and-tune-for-performance.md)  

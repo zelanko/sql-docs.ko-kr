@@ -10,7 +10,7 @@
 ## [페이지 및 익스텐트 아키텍처](pages-and-extents-architecture-guide.md)
 ## [마이그레이션 후 유효성 검사 및 최적화](post-migration-validation-and-optimization-guide.md)
 ## [쿼리 처리 아키텍처](query-processing-architecture-guide.md)
-## [스레드 및 태스크 아키텍처](thread-and-task-architecture-guide.md)
+## [스레드 및 작업 아키텍처](thread-and-task-architecture-guide.md)
 ## [트랜잭션 로그 아키텍처 및 관리](sql-server-transaction-log-architecture-and-management-guide.md)
 ## 트랜잭션 잠금 및 행 버전 관리 지침
 
