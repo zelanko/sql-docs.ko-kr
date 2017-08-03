@@ -19,11 +19,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b0c9adb0d7fa110c08f280706d17706f4af07b07
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
@@ -132,7 +132,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 배포자 연결을 만듭니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
   
 3.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> 속성에서 현재 연결된 서버가 배포자인지 확인합니다.  
   
@@ -140,19 +140,19 @@ ms.lasthandoff: 06/22/2017
   
 5.  (옵션) 속성을 변경하려면 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 개체에 설정할 수 있는 하나 이상의 배포자 속성에 새 값을 설정합니다.  
   
-6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationServer> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
+6.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationServer> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
   
 #### <a name="to-view-and-modify-distribution-database-properties"></a>배포 데이터베이스 속성을 보고 수정하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 배포자 연결을 만듭니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다. 이름 속성을 지정하고 1단계의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 클래스의 인스턴스를 만듭니다. 이름 속성을 지정하고 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 서버에서 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 지정된 이름의 데이터베이스가 서버에 없는 것입니다.  
   
 4.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 속성 중 하나에 대해 새 값을 설정합니다.  
   
-5.  (옵션) <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
+5.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.DistributionDatabase> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
   
 #### <a name="to-view-and-modify-publisher-properties"></a>게시자 속성을 보고 수정하려면  
   
@@ -162,7 +162,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  (옵션) 속성을 변경하려면 설정할 수 있는 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 속성 중 하나에 대해 새 값을 설정합니다.  
   
-4.  (옵션) <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 개체의 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
+4.  (옵션) <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> 개체의 <xref:Microsoft.SqlServer.Replication.DistributionPublisher> 속성이 **true**로 설정되면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 메서드를 호출하여 서버의 변경 내용을 커밋합니다.  
   
 #### <a name="to-change-the-password-for-the-administrative-connection-from-the-publisher-to-the-distributor"></a>관리 연결의 암호를 게시자에서 배포자로 변경하려면  
   

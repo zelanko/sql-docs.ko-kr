@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>임시 테이블을 사용하여 분할
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
     -   현재 테이블에 대한**SWITCH IN** 은 **SYSTEM_VERSIONING** 이 **ON**인 동안 데이터 로드 및 쿼리를 용이하게 하는 데 사용할 수 있습니다.  
   
-    -   **SWITCH OUT** is not permitted while **SYSTEM_VERSIONING** is **ON**  
+    -   **SYSTEM_VERSIONING** 이 **SYSTEM_VERSIONING** 이 **ON**  
   
 -   **기록 테이블:**  
   

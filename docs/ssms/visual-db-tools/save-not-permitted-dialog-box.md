@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f478b87102174266ff23733b20777df253240317
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="save-not-permitted-dialog-box"></a>저장(허용되지 않음) 대화 상자
-**저장**(허용되지 않음) 대화 상자는 변경한 내용을 적용하려면 나열된 테이블을 삭제한 다음 다시 만들어야 하므로 변경 내용 저장이 허용되지 않음을 경고합니다.  
+**저장** (허용되지 않음) 대화 상자는 변경한 내용을 적용하려면 나열된 테이블을 삭제한 다음 다시 만들어야 하므로 변경 내용 저장이 허용되지 않음을 경고합니다.  
   
 다음 동작을 수행하려면 테이블을 다시 만들어야 할 수 있습니다.  
   

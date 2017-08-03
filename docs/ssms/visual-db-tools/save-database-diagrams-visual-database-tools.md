@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8e5689586f18c72f6657af5a68a3d63483d3fa78
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="save-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 저장(Visual Database Tools)
@@ -39,6 +39,6 @@ ms.lasthandoff: 06/22/2017
 3.  **예** 를 클릭하여 다이어그램에 일치하도록 데이터베이스를 업데이트합니다. 새 다이어그램을 처음 저장하는 경우 **확인** 이 대신 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

@@ -16,11 +16,11 @@ caps.latest.revision: 44
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 553e8aece3969407a818d98cf69c20bf922d3601
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="advanced-edit-condition-dialog-box"></a>고급 편집(조건) 대화 상자
@@ -72,9 +72,10 @@ ms.lasthandoff: 06/22/2017
 |**Avg()**|Numeric Avg(*VarArgs*)|인수 목록에 있는 값의 평균을 반환합니다.|*VarArgs* - **bit** 데이터 형식을 제외한 정확한 수치 또는 근사치 데이터 형식 범주의 변형 식 목록입니다.|반환 형식은 계산된 식 결과의 형식에 의해 결정됩니다.<br /><br /> 식 결과가 **integer**, **decimal**, **money** 및 **smallmoney**, **float** 및 **real** 범주이면 반환 형식은 각각 **int**, **decimal**, **money**및 **float**입니다.|`Avg(1.0, 2.0, 3.0, 4.0, 5.0)``3.0` 를 반환합니다.|  
 |**BitwiseAnd()**|Numeric BitwiseAnd(Numeric *expression 1*, Numeric *expression2*)|두 정수 값 간에 비트 논리 AND 연산을 수행합니다.|*expression1* 및 *expression2* - 정수 데이터 형식 범주의 데이터 형식에 대한 올바른 식입니다.|정수 데이터 형식 범주의 값을 반환합니다.|`BitwiseAnd(Property1, Property2)`|  
 |**BitwiseOr()**|Numeric BitwiseOr(Numeric *expression1*, Numeric *expression2*)|지정된 두 정수 값 간에 비트 논리적 AND 연산을 수행합니다.|*expression1* 및 *expression2* - 정수 데이터 형식 범주의 데이터 형식에 대한 올바른 식입니다.|정수 데이터 형식 범주의 값을 반환합니다.|`BitwiseOr(Property1, Property2)`|  
-|**Concatenate()**|String Concatenate(String *string1*, String *string2*)|두 문자열을 연결합니다.|*string1* 및 *string2* - 연결할 두 문자열로, null이 아닌 유효한 모든 문자열일 수 있습니다.|*string1* 과 *string2*가 차례로 연결된 문자열|`Concatenate("Hello", " World` `")` "`Hello World`"를 반환합니다.|  
+|**Concatenate()**|String Concatenate(String *string1*, String *string2*)|두 문자열을 연결합니다.|*string1* 및 *string2* - 연결할 두 문자열로, null이 아닌 유효한 모든 문자열일 수 있습니다.|
+                 *string1* 과 *string2*가 차례로 연결된 문자열|`Concatenate("Hello", " World` `")` "`Hello World`"를 반환합니다.|  
 |**Count()**|Numeric Count(*VarArgs*)|인수 목록에 있는 항목의 수를 반환합니다.|*VarArgs* - **text**, **image**및 **ntext**를 제외한 유형의 식입니다.|정수 데이터 형식 범주의 값을 반환합니다.|`Count(1.0, 2.0, 3.0, 4.0, 5.0)``5` 를 반환합니다.|  
-|**DateAdd()**|DateTime DateAdd(String *datepart*, Numeric *number*, DateTime *date*)|지정한 날짜에 일정 간격을 더한 값을 더해서 새 **datetime** 값을 반환합니다.|*datepart* - 새 값을 반환할 날짜 부분에 대해 지정할 매개 변수입니다. 연도(yy, yyyy), 월(mm, m) 및 dayofyear(dy, y) 등의 형식이 지원됩니다. 자세한 내용은 [DATEADD&#40;Transact-SQL&#41;](../../t-sql/functions/dateadd-transact-sql.md)를 참조하세요.<br /><br /> *number* - *datepart*를 늘리는 데 사용되는 값입니다.<br /><br /> *date* - **datetime** 값을 반환하거나 날짜 형식의 문자열을 반환하는 식입니다.|지정한 날짜에 일정 간격을 더한 값을 기준으로 한 새 **datetime** 값입니다.|**Example:** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` returns `'2007-08-27 14:21:50'` in this example.<br /><br /> 다음은 이 함수에서 지원하는 *dateparts* 및 약어입니다.<br /><br /> **년**: yy, yyyy<br /><br /> **월**: mm, m<br /><br /> **dayofyear**: dy, y<br /><br /> **일**: dd, d<br /><br /> **주**: wk, ww<br /><br /> **평일**: dw, w<br /><br /> **시간**: hh<br /><br /> **분**: mi, n<br /><br /> **초**: ss, s<br /><br /> **밀리초**: ms|  
+|**DateAdd()**|DateTime DateAdd(String *datepart*, Numeric *number*, DateTime *date*)|지정한 날짜에 일정 간격을 더한 값을 더해서 새 **datetime** 값을 반환합니다.|*datepart* - 새 값을 반환할 날짜 부분에 대해 지정할 매개 변수입니다. 연도(yy, yyyy), 월(mm, m) 및 dayofyear(dy, y) 등의 형식이 지원됩니다. 자세한 내용은 [DATEADD&#40;Transact-SQL&#41;](../../t-sql/functions/dateadd-transact-sql.md)를 참조하세요.<br /><br /> *number* - *datepart*를 늘리는 데 사용되는 값입니다.<br /><br /> *date* - **datetime** 값을 반환하거나 날짜 형식의 문자열을 반환하는 식입니다.|지정한 날짜에 일정 간격을 더한 값을 기준으로 한 새 **datetime** 값입니다.|**예제:** `DateAdd('day', 21, DateTime('2007-08-06 14:21:50'))` 는 `'2007-08-27 14:21:50'` 를 반환합니다.<br /><br /> 다음은 이 함수에서 지원하는 *dateparts* 및 약어입니다.<br /><br /> **년**: yy, yyyy<br /><br /> **월**: mm, m<br /><br /> **dayofyear**: dy, y<br /><br /> **일**: dd, d<br /><br /> **주**: wk, ww<br /><br /> **평일**: dw, w<br /><br /> **시간**: hh<br /><br /> **분**: mi, n<br /><br /> **초**: ss, s<br /><br /> **밀리초**: ms|  
 |**DatePart()**|Numeric DatePart(String *datepart*, DateTime *date*)|지정한 날짜에서 특정 *datepart* 를 나타내는 정수를 반환합니다.|*datepart* - 반환할 날짜 부분을 지정하는 매개 변수입니다. year(yy, yyyy), month(mm, m) 및 dayofyear(dy, y) 등의 형식이 지원됩니다. 자세한 내용은 [DATEPART&#40;Transact-SQL&#41;](../../t-sql/functions/datepart-transact-sql.md)를 참조하세요.<br /><br /> *date* - **datetime** 값을 반환하거나 날짜 형식의 문자열을 반환하는 식입니다.|지정한 날짜에서 특정 *datepart* 를 나타내는 정수 데이터 형식 범주의 값을 반환합니다.|`DatePart('month', DateTime('2007-08-06 14:21:50.620'))``8` 를 반환합니다.|  
 |**DateTime()**|DateTime DateTime(String *dateString*)|문자열에서 날짜/시간 값을 만듭니다.|*dateString* - 날짜/시간의 문자열 값입니다.|입력 문자열에서 만든 날짜/시간 값을 반환합니다.|`DateTime('3/12/2006')`|  
 |**Divide()**|Numeric Divide(Numeric *expression_dividend*, Numeric *expression_divisor*)|한 숫자를 다른 숫자로 나눕니다.|*expression_dividend* - 나눌 숫자 식입니다. 피제수는 숫자 데이터 형식 범주에서 **datetime** 데이터 형식을 제외한 모든 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.<br /><br /> *expression_divisor* - 피제수를 나눌 숫자 식입니다. 제수는 **datetime** 데이터 형식을 제외한 숫자 데이터 형식 범주의 데이터 형식 중 하나에 대한 올바른 식일 수 있습니다.|우선 순위가 높은 인수의 데이터 형식을 반환합니다.|**예제:** `Divide(Property1, 2)`<br /><br /> 참고: double 연산이 됩니다. 정수를 비교하려면 결과를 `Round()`와 결합해야 합니다. 예를 들면 `Round(Divide(10, 3), 0) = 3`과 같습니다.|  

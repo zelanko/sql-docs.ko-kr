@@ -20,11 +20,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b2ef601ab4c3dca3b524805e9cce7798213deab9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>트랜잭션 복제에 대한 대기 시간 측정 및 연결 유효성 검사
@@ -156,11 +156,11 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 클래스의 인스턴스를 만듭니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 및 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 게시 모니터 속성이 올바르게 정의되지 않았거나 해당 게시가 없는 것입니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 메서드를 호출합니다. 반환된 <xref:System.Collections.ArrayList> 개체를 <xref:Microsoft.SqlServer.Replication.TracerToken> 개체의 배열로 캐스트합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 메서드를 호출합니다. 반환된 <xref:System.Collections.ArrayList> 개체를 <xref:Microsoft.SqlServer.Replication.TracerToken> 개체의 배열로 캐스팅합니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokenHistory%2A> 메서드를 호출합니다. 5단계에서 삽입한 추적 프로그램 토큰에 대한 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 값을 전달합니다. 그러면 선택한 추적 프로그램 토큰에 대한 대기 시간 정보가 <xref:System.Data.DataSet> 개체로 반환됩니다. 모든 추적 프로그램 토큰 정보가 반환되면 게시자와 배포자 간의 연결 및 배포자와 구독자 간의 연결이 모두 있으며 복제 토폴로지가 작동하고 있는 것입니다.  
   
@@ -170,16 +170,16 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor> 클래스의 인스턴스를 만듭니다.  
   
-3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A> 및 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
+3.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.Name%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.DistributionDBName%2A>, <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublisherName%2A>및 <xref:Microsoft.SqlServer.Replication.PublicationMonitor.PublicationDBName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 연결로 설정합니다.  
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 3단계에서 게시 모니터 속성이 올바르게 정의되지 않았거나 해당 게시가 없는 것입니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 메서드를 호출합니다. 반환된 <xref:System.Collections.ArrayList> 개체를 <xref:Microsoft.SqlServer.Replication.TracerToken> 개체의 배열로 캐스트합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.EnumTracerTokens%2A> 메서드를 호출합니다. 반환된 <xref:System.Collections.ArrayList> 개체를 <xref:Microsoft.SqlServer.Replication.TracerToken> 개체의 배열로 캐스팅합니다.  
   
 6.  <xref:Microsoft.SqlServer.Replication.PublicationMonitor.CleanUpTracerTokenHistory%2A> 메서드를 호출합니다. 다음 값 중 하나를 전달합니다.  
   
-    -   5단계에서 삽입한 추적 프로그램 토큰에 대한 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A>. 그러면 선택한 토큰에 대한 정보가 삭제됩니다.  
+    -   5단계에서 삽입한 추적 프로그램 토큰에 대한 <xref:Microsoft.SqlServer.Replication.TracerToken.TracerTokenId%2A> 입니다. 그러면 선택한 토큰에 대한 정보가 삭제됩니다.  
   
-    -   <xref:System.DateTime> 개체. 그러면 지정한 날짜보다 오래된 모든 토큰에 대한 정보가 삭제됩니다.  
+    -   <xref:System.DateTime> 개체입니다. 그러면 지정한 날짜보다 오래된 모든 토큰에 대한 정보가 삭제됩니다.  
   
   

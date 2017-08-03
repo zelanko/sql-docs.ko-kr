@@ -19,11 +19,11 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d131e8e7aee66186245b0d69acb1b5c10285cf3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="specify-synchronization-schedules"></a>동기화 일정 지정
@@ -203,17 +203,17 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(매일 또는 매주)입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(예: 매일 또는 매주)입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행되는 요일입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행하는 요일입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 에이전트가 월별로 실행되도록 예약된 경우 지정된 월의 주입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 지정된 월에서 에이전트가 월별로 실행되도록 예약된 주입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 빈도 유형 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 frequency-type 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 실행 간의 빈도 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 지정된 날짜에서 에이전트가 실행되는 시작 시간입니다.  
   
@@ -221,7 +221,7 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 에이전트 예약이 처음 적용되는 날짜입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 적용되는 마지막 날입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 마지막으로 적용되는 날짜입니다.  
   
     > [!NOTE]  
     >  이러한 속성 중 하나를 지정하지 않으면 기본값이 설정됩니다.  
@@ -230,21 +230,21 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.TransPullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(매일 또는 매주)입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(예: 매일 또는 매주)입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행되는 요일입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행하는 요일입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 에이전트가 월별로 실행되도록 예약된 지정된 월의 주입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 지정된 월에서 에이전트가 월별로 실행되도록 예약된 주입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 빈도 유형 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 frequency-type 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 실행 간의 빈도 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 지정된 날짜에서 에이전트가 실행되는 시작 시간입니다.  
   
@@ -252,7 +252,7 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 에이전트 예약이 처음 적용되는 날짜입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 적용되는 마지막 날입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 마지막으로 적용되는 날짜입니다.  
   
     > [!NOTE]  
     >  이러한 속성 중 하나를 지정하지 않으면 기본값이 설정됩니다.  
@@ -261,21 +261,21 @@ ms.lasthandoff: 06/22/2017
   
 #### <a name="to-define-a-replication-agent-schedule-when-you-create-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 만들 때 복제 에이전트 일정을 정의하려면  
   
-1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)를 참조하세요.  
+1.  만들려는 구독에 대해 <xref:Microsoft.SqlServer.Replication.MergePullSubscription> 클래스의 인스턴스를 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)을 참조하세요.  
   
 2.  <xref:Microsoft.SqlServer.Replication.PullSubscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.PullSubscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(매일 또는 매주)입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(예: 매일 또는 매주)입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행되는 요일입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행하는 요일입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 에이전트가 월별로 실행되도록 예약된 지정된 월의 주입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 지정된 월에서 에이전트가 월별로 실행되도록 예약된 주입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 빈도 유형 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 frequency-type 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 실행 간의 빈도 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 지정된 날짜에서 에이전트가 실행되는 시작 시간입니다.  
   
@@ -283,7 +283,7 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 에이전트 예약이 처음 적용되는 날짜입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 적용되는 마지막 날입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 마지막으로 적용되는 날짜입니다.  
   
     > [!NOTE]  
     >  이러한 속성 중 하나를 지정하지 않으면 기본값이 설정됩니다.  
@@ -296,17 +296,17 @@ ms.lasthandoff: 06/22/2017
   
 2.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A>를 호출하기 전에 <xref:Microsoft.SqlServer.Replication.Subscription.AgentSchedule%2A> 속성의 다음 필드 중 하나 이상을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(매일 또는 매주)입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyType%2A> - 에이전트를 예약할 때 사용하는 빈도 유형(예: 매일 또는 매주)입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행되는 요일입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyInterval%2A> - 에이전트가 실행하는 요일입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 에이전트가 월별로 실행되도록 예약된 지정된 월의 주입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRelativeInterval%2A> - 지정된 월에서 에이전트가 월별로 실행되도록 예약된 주입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 빈도 유형 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencyRecurrenceFactor%2A> - 동기화 사이에 발생하는 frequency-type 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDay%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 빈도 단위 수입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.FrequencySubDayInterval%2A> - 에이전트가 하루에 두 번 이상 실행할 경우 실행 간의 빈도 단위 수입니다.  
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartTime%2A> - 지정된 날짜에서 에이전트가 실행되는 시작 시간입니다.  
   
@@ -314,7 +314,7 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveStartDate%2A> - 에이전트 예약이 처음 적용되는 날짜입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 적용되는 마지막 날입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationAgentSchedule.ActiveEndDate%2A> - 에이전트 예약이 마지막으로 적용되는 날짜입니다.  
   
     > [!NOTE]  
     >  이러한 속성 중 하나를 지정하지 않으면 기본값이 설정됩니다.  

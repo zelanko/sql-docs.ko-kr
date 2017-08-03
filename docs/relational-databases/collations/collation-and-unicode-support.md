@@ -31,11 +31,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 782e5a9458daf8c820b71d39e27b424c6995dba9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 정렬 지원을 최대한 활용하려면 이 항목에 정의된 용어와 이러한 용어가 데이터의 특성과 어떻게 관련되는지를 이해해야 합니다.    
     
-##  <a name="Terms"></a> Collation Terms    
+##  <a name="Terms"></a> 데이터 정렬 용어    
     
 -   [데이터 정렬](#Collation_Defn)    
     
@@ -121,7 +121,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  정렬 순서는 데이터 값이 정렬되는 방식을 지정합니다. 이는 데이터 비교의 결과에 영향을 줍니다. 데이터는 데이터 정렬을 사용하여 정렬되며 인덱스를 사용하여 데이터 정렬을 최적화할 수 있습니다.    
     
-##  <a name="Unicode_Defn"></a> Unicode Support    
+##  <a name="Unicode_Defn"></a> 유니코드 지원    
  유니코드는 코드 포인트를 문자에 매핑하기 위한 표준입니다. 유니코드는 전 세계 모든 언어의 모든 문자를 지원하기 때문에 각 문자 집합을 처리하는 데 서로 다른 코드 페이지가 필요하지 않습니다. 여러 언어를 반영하는 문자 데이터를 저장할 경우에는 유니코드를 지원하지 않는 데이터 형식(**char**, **varchar**및 **text**) 대신 항상 유니코드 데이터 형식(**nchar**, **nvarchar**및 **ntext**)을 사용하세요.    
     
  비유니코드 데이터 형식에는 여러 가지 제한 사항이 있습니다. 이는 비유니코드 컴퓨터에서는 단일 코드 페이지만 사용할 수 있기 때문입니다. 유니코드를 사용하면 코드 페이지 변환이 별로 필요하지 않으므로 성능이 향상될 수 있습니다. 이러한 경우 유니코드 데이터 정렬이 서버 수준에서 지원되지 않으므로 데이터베이스, 열 또는 식 수준에서 유니코드 데이터 정렬을 개별적으로 선택해야 합니다.    
@@ -151,7 +151,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |비유니코드|유니코드|다국어 데이터를 사용할 경우 이상적인 구성이 아닙니다. 유니코드 데이터를 비유니코드 서버에 쓸 수 없습니다. 서버의 코드 페이지를 벗어나는 서버로 데이터를 보낼 때 문제가 발생할 수 있습니다.|    
 |비유니코드|비유니코드|다국어 데이터를 사용할 때 가장 제한이 많은 시나리오입니다. 단일 코드 페이지만 사용할 수 있습니다.|    
     
-##  <a name="Supplementary_Characters"></a> Supplementary Characters    
+##  <a name="Supplementary_Characters"></a> 보조 문자    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 유니코드 데이터를 저장하기 위해 **nchar** 및 **nvarchar** 같은 데이터 형식을 제공합니다. 이러한 데이터 형식은 텍스트를 *UTF-16*이라고 하는 형식으로 인코딩합니다. 유니코드 컨소시엄에서는 각 문자에 0x0000 ~ 0x10FFFF 범위의 값인 고유한 코드 포인트를 할당합니다. 가장 자주 사용되는 문자에는 메모리 및 디스크에서 16비트 단어로 나타날 수 있는 코드 포인트 값이 할당되지만 코드 포인트 값이 0xFFFF보다 큰 문자에는 두 개의 연속적인 16비트 단어가 필요합니다. 이러한 문자를 *보조 문자*라고 하며 두 개의 연속적인 16비트 단어는 *서로게이트 쌍*이라고 합니다.    
     
  보조 문자를 사용하는 경우    
@@ -188,10 +188,10 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|0 ~ 0x10FFFF 범위의 UTF-16 코드 포인트를 반환합니다.|0 ~ 0xFFFF 범위의 UCS-2 코드 포인트를 반환합니다.|    
 |[와일드카드 - 문자 하나와 일치](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [와일드카드 - 일치하지 않는 문자](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|모든 와일드카드 연산에 보조 문자를 사용할 수 있습니다.|이러한 와일드카드 연산에 보조 문자를 사용할 수 없습니다. 다른 와일드카드 연산자는 사용할 수 있습니다.|    
     
-##  <a name="GB18030"></a> GB18030 Support    
+##  <a name="GB18030"></a> GB18030 지원    
  GB18030은 중국에서 사용하는 별개의 중국어 인코딩 표준입니다. GB18030에서 문자 길이는 1바이트, 2바이트 또는 4바이트일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 서버가 클라이언트 쪽 응용 프로그램으로부터 GB18030으로 인코딩된 문자를 받을 때 해당 문자를 인식하고 유니코드 문자로 기본 변환 및 저장하는 방식으로 GB18030 문자를 지원합니다. 이렇게 변환된 문자는 서버에 저장된 후 모든 후속 작업에서 유니코드 문자로 처리됩니다. 모든 중국어 데이터 정렬(가급적 최신 100 버전)을 사용할 수 있습니다. 모든 _100 수준 데이터 정렬은 GB18030 문자를 사용한 언어적 정렬을 지원합니다. 데이터에 보조 문자(서로게이트 쌍)가 포함되어 있는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 제공되는 SC 데이터 정렬을 사용하여 검색 및 정렬 성능을 향상시킬 수 있습니다.    
     
-##  <a name="Complex_script"></a> Complex Script Support    
+##  <a name="Complex_script"></a> 복합 스크립트 지원    
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 복합 스크립트를 입력, 저장, 변경 및 표시할 수 있습니다. 입력, 저장, 변경 및 표시할 수 있습니다.    
     
 -   아랍어 텍스트와 영어 텍스트의 조합과 같은 오른쪽에서 왼쪽으로 쓰는 텍스트와 왼쪽에서 오른쪽으로 쓰는 텍스트의 조합을 포함하는 양방향 텍스트    
@@ -202,7 +202,7 @@ SELECT name FROM customer ORDER BY name COLLATE Latin1_General_CS_AI;
     
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 상호 작용하는 데이터베이스 응용 프로그램은 복합 스크립트를 지원하는 컨트롤을 사용해야 합니다. 관리 코드로 생성되는 표준 Windows 폼 컨트롤에는 복합 스크립트 기능이 설정되어 있습니다.    
 
-##  <a name="Japanese_Collations"></a> Japanese Collations added in  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+##  <a name="Japanese_Collations"></a> 일본어 데이터 정렬이  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]부터 다양한 옵션(_CS, _AS, _KS, _WS, _VSS 등) 순열을 사용하여 새 일본어 데이터 정렬 패밀리 두 개가 지원됩니다. 
 
@@ -214,7 +214,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 
 이러한 데이터 정렬은 데이터베이스 엔진 인덱스, 메모리 액세스에 최적화된 테이블, columnstore 인덱스 및 고유하게 컴파일된 모듈에서 지원됩니다.
     
-##  <a name="Related_Tasks"></a> Related Tasks    
+##  <a name="Related_Tasks"></a> 관련 작업    
     
 |태스크|항목|    
 |----------|-----------|    
@@ -225,7 +225,7 @@ WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 |특정 언어에서 다른 언어로 이식하거나 여러 언어를 보다 쉽게 지원하도록 Transact-SQL 문을 작성하는 방법에 대해 설명합니다.|[국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)|    
 |날짜, 시간 및 통화 데이터가 사용 및 표시되는 방식에 대한 기본 설정과 오류 메시지 언어를 변경하는 방법에 대해 설명합니다.|[세션 언어 설정](../../relational-databases/collations/set-a-session-language.md)|    
     
-##  <a name="Related_Content"></a> Related Content    
+##  <a name="Related_Content"></a> 관련 내용    
  [SQL Server Best Practices Collation Change](http://go.microsoft.com/fwlink/?LinkId=113891)    
     
  ["SQL Server Best Practices Migration to Unicode"](http://go.microsoft.com/fwlink/?LinkId=113890)    

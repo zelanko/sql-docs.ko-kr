@@ -18,11 +18,11 @@ caps.latest.revision: 22
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5718198b2cbfc99a1658a703199bb943fcd73aeb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
     -   **@host_name** - 매개 변수가 있는 필터가 [HOST_NAME&#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
   
-2.  이 새 파티션에 대해 매개 변수가 있는 스냅숏을 만들고 초기화합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+2.  이 새 파티션에 대해 매개 변수가 있는 스냅숏을 만들고 초기화합니다. 자세한 내용은 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 #### <a name="to-delete-a-partition"></a>파티션을 삭제하려면  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 06/22/2017
      이 경우 파티션에 대한 스냅숏 작업과 스냅숏 파일도 제거됩니다.  
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
- 매개 변수가 있는 필터를 사용하여 게시를 보다 잘 관리하려면 RMO(복제 관리 개체)를 사용하여 새 구독자 파티션을 프로그래밍 방식으로 만들고, 기존 구독자 파티션을 열거하고, 프로그래밍 방식으로 열거합니다. 구독자 파티션을 만드는 방법은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요. 기존 파티션에 대한 다음 정보를 가져올 수 있습니다.  
+ 매개 변수가 있는 필터를 사용하여 게시를 보다 잘 관리하려면 RMO(복제 관리 개체)를 사용하여 새 구독자 파티션을 프로그래밍 방식으로 만들고, 기존 구독자 파티션을 열거하고, 프로그래밍 방식으로 열거합니다. 구독자 파티션을 만드는 방법은 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요. 기존 파티션에 대한 다음 정보를 가져올 수 있습니다.  
   
 -   파티션에서 기반으로 사용하는 값 및 필터링 기능  
   
@@ -139,7 +139,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>으로 설정합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시의 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
@@ -151,7 +151,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시에 대해 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>으로 설정합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. 게시의 <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 속성을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> 속성을 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 으로 설정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체 속성을 가져옵니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
@@ -159,7 +159,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  배열의 각 <xref:Microsoft.SqlServer.Replication.MergePartition> 개체에 대해 파티션을 삭제할지 여부를 결정합니다. 이를 결정할 때는 일반적으로 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterLogin%2A> 속성이나 <xref:Microsoft.SqlServer.Replication.MergePartition.DynamicFilterHostName%2A> 속성의 값을 기준으로 합니다.  
   
-6.  2단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergePublication> 개체에서 <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> 메서드를 호출합니다. 5단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergePartition> 개체를 전달합니다.  
+6.  2단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergePublication.RemoveMergePartition%2A> 의 개체에서 <xref:Microsoft.SqlServer.Replication.MergePublication> 메서드를 호출합니다. 5단계에서 만든 <xref:Microsoft.SqlServer.Replication.MergePartition> 개체를 전달합니다.  
   
 7.  삭제된 각 파티션에 대해 6단계를 반복합니다.  
   

@@ -23,11 +23,11 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be8f8a4e1df903cc70191dc582ce2aef19e7e7aa
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>고급 병합 복제 - 충돌 감지 및 해결
@@ -85,9 +85,9 @@ ms.lasthandoff: 06/22/2017
   
 -   COM 기반 사용자 지정 해결 프로그램  
   
-     병합 복제는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]과 같은 언어를 사용하여 해결 프로그램을 COM 개체로 작성하기 위한 API를 제공합니다. 자세한 내용은 [COM 기반 사용자 지정 해결 프로그램](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)을(를) 참조하세요.  
+     병합 복제는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]과 같은 언어를 사용하여 해결 프로그램을 COM 개체로 작성하기 위한 API를 제공합니다. 자세한 내용은 [COM-Based Custom Resolvers](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)을(를) 참조하세요.  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]에서 제공하는 COM 기반 해결 프로그램  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)]  
   
      [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에는 많은 COM 기반 해결 프로그램이 포함되어 있습니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
 -   복제 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 복제 프로그래밍 및 RMO(복제 관리 개체) 프로그래밍: [끌어오기 구독 만들기](../../../relational-databases/replication/create-a-pull-subscription.md) 및 [밀어넣기 구독 만들기](../../../relational-databases/replication/create-a-push-subscription.md)  
   
 ### <a name="interactive-resolver"></a>대화형 해결 프로그램  
- 복제는 기본 우선 순위 기반 충돌 해결 프로그램이나 아티클 해결 프로그램과 함께 사용할 수 있는 대화형 해결 프로그램 사용자 인터페이스를 제공합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 요청 시 동기화를 수행할 때 대화형 해결 프로그램은 런타임 시 충돌 데이터를 표시하고 충돌 해결 방법을 선택할 수 있습니다. 대화형 해결 기능 설정 방법 및 대화형 해결 프로그램 시작 방법은 [대화형 충돌 해결](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하십시오.  
+ 복제는 기본 우선 순위 기반 충돌 해결 프로그램이나 아티클 해결 프로그램과 함께 사용할 수 있는 대화형 해결 프로그램 사용자 인터페이스를 제공합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 동기화 관리자를 통해 요청 시 동기화를 수행할 때 대화형 해결 프로그램은 런타임 시 충돌 데이터를 표시하고 충돌 해결 방법을 선택할 수 있습니다. 대화형 해결 기능 설정 방법 및 대화형 해결 프로그램 시작 방법은 [Interactive Conflict Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하십시오.  
   
 ## <a name="viewing-conflicts"></a>충돌 보기  
  가장 간단한 방법으로 충돌을 보려면 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 에서 제공하는 복제 충돌 뷰어를 사용합니다.[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 충돌 테이블을 쿼리할 저장 프로시저도 제공합니다. 충돌 뷰어와 대화형 해결 프로그램은 유사한 도구이지만, 대화형 해결 프로그램은 동기화가 이루어지는 동안 충돌을 해결하는데 사용하는 반면 충돌 뷰어는 충돌이 해결된 후 충돌을 보는 데 사용합니다. 시스템 테이블에서 충돌 메타데이터를 사용할 수 있는 경우(충돌 메타데이터는 기본적으로 14일 동안 유지됨) 충돌 뷰어에서 충돌 해결 결과를 무시할 수 있지만 정기적으로 직접적인 사용자 작업이 필요한 경우 대화형 해결 프로그램을 사용합니다.  

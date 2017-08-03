@@ -16,15 +16,15 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5114c8b5fba96020c07758e8c0143c33540a8ad5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>공간 인덱스 대화 상자(Visual Database Tools)
-**공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는 **지리** 데이터 형식의 열(*공간 열*)에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
+**공간 인덱스** 대화 상자를 사용하면 **인덱스/키** 대화 상자를 통해 인덱싱할 수 없는 **기하 도형** 또는*지리*데이터 형식의 열( **공간 열** )에 대한 인덱스를 만들 수 없습니다. 각 공간 열에는 둘 이상의 공간 인덱스가 있을 수 있으며, 이러한 공간 인덱스는 한 번에 하나씩 만들어야 합니다.  
   
 공간 인덱스 만들기의 제한 사항에 대한 자세한 내용은 [공간 인덱스 개요](http://msdn.microsoft.com/en-us/b1ae7b78-182a-459e-ab28-f743e43f8293)를 참조하세요.  
   
