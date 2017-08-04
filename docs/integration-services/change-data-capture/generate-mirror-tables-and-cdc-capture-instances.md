@@ -1,24 +1,29 @@
 ---
-title: "미러 테이블 및 CDC 캡처 인스턴스 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "mirTab"
+title: Generate Mirror Tables and CDC Capture Instances | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- mirTab
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9c6a29a7c5ec5b42dfa8d0e923563c3b21fa0c51
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 미러 테이블 및 CDC 캡처 인스턴스 생성
+# <a name="generate-mirror-tables-and-cdc-capture-instances"></a>미러 테이블 및 CDC 캡처 인스턴스 생성
   미러 테이블 생성 페이지를 사용하여 CDC 인스턴스에 포함된 테이블에 대한 미러 테이블 생성  
   
  **실행** 을 클릭하여 미러 테이블을 만듭니다. 각 테이블 만들기의 진행률이 표시되고 각 미러 테이블이 성공적으로 완료되었는지 오류가 발생했는지 알려주는 메시지가 표시됩니다. 오류가 발생한 경우 **자세히** 를 클릭하면 오류에 대한 설명이 표시된 대화 상자가 표시됩니다.  
@@ -27,7 +32,7 @@ caps.handback.revision: 5
   
  **다음** 을 클릭하여 [Finish](../../integration-services/change-data-capture/finish.md) 페이지를 엽니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)  
   
   

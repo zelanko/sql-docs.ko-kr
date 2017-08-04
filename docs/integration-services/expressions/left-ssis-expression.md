@@ -1,45 +1,50 @@
 ---
-title: "LEFT(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "LEFT (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
 caps.latest.revision: 12
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aad5c2de4903b5ad79fd5087be7801a8195e943f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# LEFT(SSIS 식)
+# <a name="left-ssis-expression"></a>LEFT(SSIS 식)
   지정한 문자 식의 왼쪽에서부터 지정한 개수의 문자를 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 LEFT(character_expression,number)  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *character_expression*  
  문자를 추출할 문자 식입니다.  
   
  *number*  
  반환할 문자 수를 나타내는 정수 식입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## 주의  
- *number*가 *character_expression*의 길이보다 큰 경우 함수는 *character_expression*을 반환합니다.  
+## <a name="remarks"></a>주의  
+ *number* 가 *character_expression*의 길이보다 큰 경우 함수는 *character_expression*을 반환합니다.  
   
- *number*가 0이면 함수는 길이가 0인 문자열을 반환합니다.  
+ *number* 가 0이면 함수는 길이가 0인 문자열을 반환합니다.  
   
  *number* 가 음수이면 오류가 반환됩니다.  
   
@@ -49,15 +54,15 @@ LEFT(character_expression,number)
   
  두 인수 중 하나가 Null이면 LEFT 결과도 Null입니다.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  다음 예에서는 문자열 리터럴을 사용합니다. 반환 결과는 `"Mountain"`입니다.  
   
 ```  
 LEFT("Mountain Bike", 8)  
 ```  
   
-## 관련 항목:  
- [RIGHT&#40;SSIS 식&#41;](../../integration-services/expressions/right-ssis-expression.md)   
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [오른쪽 &#40; SSIS 식 &#41;](../../integration-services/expressions/right-ssis-expression.md)   
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

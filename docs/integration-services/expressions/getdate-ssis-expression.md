@@ -1,45 +1,50 @@
 ---
-title: "GETDATE(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "현재 날짜"
-  - "GETDATE 함수"
-  - "날짜 [Integration Services], GETDATE"
+title: "GETDATE (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- current date
+- GETDATE function
+- dates [Integration Services], GETDATE
 ms.assetid: 6d20ec93-3244-4d63-baf6-70eff7bd598c
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e792dc04b4bb115dc3e9dff840da1690395862e9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# GETDATE(SSIS 식)
+# <a name="getdate-ssis-expression"></a>GETDATE(SSIS 식)
   시스템의 현재 날짜를 DT_DBTIMESTAMP 형식으로 반환합니다. GETDATE 함수는 인수가 필요 없습니다.  
   
 > [!NOTE]  
 >  GETDATE 함수의 반환 결과 길이는 29자입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 GETDATE()  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  InclusionThresholdSetting  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_DBTIMESTAMP  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 현재 날짜의 연도를 반환합니다.  
   
 ```  
@@ -58,8 +63,8 @@ DATEDIFF("dd",ModifiedDate,GETDATE())
 DATEADD("Month",3,GETDATE())  
 ```  
   
-## 관련 항목:  
- [GETUTCDATE&#40;SSIS 식&#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [GETUTCDATE &#40; SSIS 식 &#41;](../../integration-services/expressions/getutcdate-ssis-expression.md)   
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

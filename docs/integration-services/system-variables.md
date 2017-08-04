@@ -1,33 +1,38 @@
 ---
 title: "시스템 변수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컨테이너 [Integration Services], 변수"
-  - "태스크 [Integration Services], 변수"
-  - "시스템 변수 [Integration Services]"
-  - "이벤트 처리기 [Integration Services], 변수"
-  - "변수 [Integration Services], 시스템"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- containers [Integration Services], variables
+- tasks [Integration Services], variables
+- system variables [Integration Services]
+- event handlers [Integration Services], variables
+- variables [Integration Services], system
 ms.assetid: efecd0d4-1489-4eba-a8fe-275d647058b8
 caps.latest.revision: 54
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c472b50d9bf7f208a474c14bd5576767842a56c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 시스템 변수
+# <a name="system-variables"></a>시스템 변수
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 런타임 패키지 및 해당 개체에 대한 정보가 저장되는 일련의 시스템 변수가 제공됩니다. 이러한 변수를 식 및 속성 식에서 사용하여 패키지, 컨테이너, 태스크 및 이벤트 처리기를 사용자 지정할 수 있습니다.  
   
  SQL 실행 태스크에서 변수를 매개 변수에 매핑하는 데 사용되는 매개 변수 바인딩에는 시스템 변수와 사용자 정의 변수를 포함한 모든 변수를 사용할 수 있습니다.  
   
-## 패키지의 시스템 변수  
+## <a name="system-variables-for-packages"></a>패키지의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 패키지에 대해 제공하는 시스템 변수에 대해 설명합니다.  
   
 |시스템 변수|데이터 형식|Description|  
@@ -55,14 +60,14 @@ caps.handback.revision: 54
 |**VersionMajor**|Int32|패키지의 주 버전입니다.|  
 |**VersionMinor**|Int32|패키지의 부 버전입니다.|  
   
-## 컨테이너의 시스템 변수  
+## <a name="system-variables-for-containers"></a>컨테이너의 시스템 변수  
  다음 표에서는 For 루프, Foreach 루프 및 시퀀스 컨테이너에 대해 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 시스템 변수에 대해 설명합니다.  
   
 |시스템 변수|데이터 형식|Description|컨테이너|  
 |---------------------|---------------|-----------------|---------------|  
 |**LocaleId**|Int32|컨테이너에서 사용되는 로캘입니다.|For 루프 컨테이너<br /><br /> Foreach 루프 컨테이너<br /><br /> 시퀀스 컨테이너|  
   
-## 태스크의 시스템 변수  
+## <a name="system-variables-for-tasks"></a>태스크의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 태스크에 대해 제공하는 시스템 변수에 대해 설명합니다.  
   
 |시스템 변수|데이터 형식|Description|  
@@ -73,7 +78,7 @@ caps.handback.revision: 54
 |**TaskName**|문자열|태스크의 이름입니다.|  
 |**TaskTransactionOption**|Int32|태스크에서 사용되는 트랜잭션 옵션입니다.|  
   
-## 이벤트 처리기의 시스템 변수  
+## <a name="system-variables-for-event-handlers"></a>이벤트 처리기의 시스템 변수  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 이벤트 처리기에 대해 제공하는 시스템 변수에 대해 설명합니다. 일부 변수는 특정 이벤트 처리기에서만 사용할 수 있습니다.  
   
 |시스템 변수|데이터 형식|Description|이벤트 처리기|  
@@ -95,14 +100,14 @@ caps.handback.revision: 54
 |**VariableDescription**|문자열|변수 설명입니다.|OnVariableValueChanged 이벤트 처리기|  
 |**VariableID**|문자열|변수의 고유 식별자입니다.|OnVariableValueChanged 이벤트 처리기|  
   
-## 매개 변수 바인딩의 시스템 변수  
+## <a name="system-variables-in-parameter-bindings"></a>매개 변수 바인딩의 시스템 변수  
  패키지 실행 시 테이블의 시스템 변수 값을 저장하면 유용합니다. 예를 들어 테이블을 동적으로 만들고 이 테이블을 만든 패키지 실행 인스턴스의 GUID를 테이블 열에 쓰는 패키지가 있을 수 있습니다.  
   
  시스템 변수를 사용하여 SQL 실행 태스크에서 사용되는 SQL 문의 매개 변수에 매핑하는 경우 각 매개 변수 바인딩의 데이터 형식을 시스템 변수의 데이터 형식으로 설정해야 합니다. 그렇게 하지 않으면 시스템 변수 값이 올바르게 번역되지 않을 수 있습니다. 예를 들어 패키지의 실행 인스턴스에 대한 GUID를 나타내는 문자열을 포함하는 문자열 데이터 형식의 **ExecutionInstanceGUID** 시스템 변수를 GUID 데이터 형식의 매개 변수 바인딩에 사용하면 패키지 인스턴스의 GUID가 올바르게 번역되지 않습니다.  
   
  이 규칙은 사용자 정의 변수에도 적용됩니다. 그러나 시스템 변수 데이터 형식의 경우 변경할 수 없으므로 데이터 형식에 맞게 적절하게 사용해야 하는 반면 사용자 정의 데이터 형식은 보다 융통성이 높습니다. 매개 변수 바인딩에 사용되는 사용자 정의 변수는 일반적으로 매핑되는 매개 변수의 데이터 형식과 호환 가능한 데이터 형식으로 정의됩니다.  
   
-## 관련 작업  
- [쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑](../Topic/Map%20Query%20Parameters%20to%20Variables%20in%20an%20Execute%20SQL%20Task.md)  
+## <a name="related-tasks"></a>관련 작업  
+ [쿼리 매개 변수를 SQL 실행 태스크의 변수에 매핑](http://msdn.microsoft.com/library/6a164349-dfcf-4995-80bc-d4e7aee52a83)  
   
   

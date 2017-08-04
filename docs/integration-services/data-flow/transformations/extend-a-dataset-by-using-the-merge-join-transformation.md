@@ -1,32 +1,37 @@
 ---
-title: "병합 조인 변환을 사용하여 데이터 집합 확장 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "병합 조인 변환"
-  - "데이터 집합 [Integration Services], 조인"
-  - "데이터 집합 [Integration Services], 확장"
-  - "데이터 집합 조인 [Integration Services]"
+title: "병합 조인 변환을 사용 하 여 데이터 집합을 확장 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Merge Join transformation
+- datasets [Integration Services], joining
+- datasets [Integration Services], extending
+- joining datasets [Integration Services]
 ms.assetid: 9e512c3c-f89b-45f3-8281-cdb8f35a2b1f
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a7d7b4a2af89c855a6269d90d94f79465bfad8a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 병합 조인 변환을 사용하여 데이터 집합 확장
+# <a name="extend-a-dataset-by-using-the-merge-join-transformation"></a>병합 조인 변환을 사용하여 데이터 집합 확장
   병합 조인 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 병합 조인 변환에 입력을 제공하는 두 개의 데이터 흐름 구성 요소가 이미 들어 있어야 합니다.  
   
  병합 조인 변환에는 두 개의 정렬된 입력이 필요합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.  
   
-### 데이터 집합을 확장하려면  
+### <a name="to-extend-a-dataset"></a>데이터 집합을 확장하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 27
 6.  **병합 조인 변환 편집기** 대화 상자의 **조인 유형** 목록에서 사용할 조인 유형을 선택합니다.  
   
     > [!NOTE]  
-    >  **왼쪽 우선 외부 조인** 유형을 선택한 경우 **입력 바꾸기**를 클릭하여 입력을 전환하고 왼쪽 우선 외부 조인을 오른쪽 우선 외부 조인으로 변환할 수 있습니다.  
+    >  **왼쪽 우선 외부 조인** 유형을 선택한 경우 **입력 바꾸기** 를 클릭하여 입력을 전환하고 왼쪽 우선 외부 조인을 오른쪽 우선 외부 조인으로 변환할 수 있습니다.  
   
 7.  왼쪽 입력의 열을 오른쪽 입력의 열로 끌어서 조인 열을 지정합니다. 열 이름이 같은 경우 **조인 키** 확인란을 선택하면 병합 조인 변환이 조인을 자동으로 만듭니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 27
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [병합 조인 변환](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 경로](../../../integration-services/data-flow/integration-services-paths.md)   

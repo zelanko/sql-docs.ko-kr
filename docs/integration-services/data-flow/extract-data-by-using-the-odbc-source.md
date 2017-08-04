@@ -1,25 +1,30 @@
 ---
-title: "ODBC 원본을 사용하여 데이터 추출 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 원본을 사용 하 여 데이터를 추출 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 236c2b7caf1ec3ade0a140bfabfc32f3a21a9ea1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 원본을 사용하여 데이터 추출
+# <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
   이 절차에서는 ODBC 원본을 사용하여 데이터를 추출하는 방법을 설명합니다. ODBC 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  
   
-### ODBC 원본을 사용하여 데이터를 추출하려면  
+### <a name="to-extract-data-using-an-odbc-source"></a>ODBC 원본을 사용하여 데이터를 추출하려면  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 원하는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 패키지를 엽니다.  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 8
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
- [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
- [ODBC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ODBC 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)   
+ [ODBC 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [ODBC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

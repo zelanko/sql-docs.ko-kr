@@ -1,25 +1,30 @@
 ---
 title: "SQL Server 변경 데이터베이스 인스턴스를 만드는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
+# <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC 인스턴스를 만드는 방법에 대해 설명합니다.  
   
-### CDC 인스턴스를 만들려면  
+### <a name="to-create-cdc-instances"></a>CDC 인스턴스를 만들려면  
   
 1.  **시작** 메뉴에서 **CDC Designer 콘솔**을 선택합니다.  
   

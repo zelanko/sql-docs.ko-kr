@@ -1,29 +1,34 @@
 ---
-title: "SQL Server Browser 속성(로그온 탭) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Browser 속성 (로그온 탭) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c77871ec-c2f4-4e4a-9a10-5aeb4ae70507
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac257d9a9044be9d1d7003fe066337fff116dcf0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Browser 속성(로그온 탭)
+# <a name="sql-server-browser-properties-log-on-tab"></a>SQL Server Browser 속성(로그온 탭)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 프로그램은 서버에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 UDP 포트에서 수신하고 SSRP([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol)를 사용하여 인증되지 않은 요청을 허용합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 UDP 포트에서 수신하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol(SSRP)을 사용하여 인증되지 않은 요청을 허용합니다.  
   
  계정의 암호를 변경하면 서비스를 다시 시작하지 않고 즉시 적용됩니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **로컬 시스템 계정**  
  로컬 시스템 계정의 보안 컨텍스트에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 실행합니다. 가능하면 이보다 낮은 권한의 계정을 사용하십시오.  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 20
  **재개**  
  일시 중지한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스를 재개합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Browser 서비스](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "로컬 CDC Service를 관리하는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "로컬 CDC Service를 관리 하는 방법 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f9be649-cd93-40c1-bc48-0480106f207c
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40678ff92e4513354db09cca42d48ed0302369ac
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 로컬 CDC Service를 관리하는 방법
+# <a name="how-to-manage-a-local-cdc-service"></a>로컬 CDC Service를 관리하는 방법
   이 절차에서는 CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리하는 방법에 대해 설명합니다.  
   
-### 특정 CDC Service를 관리 하려면  
+### <a name="to-manage-a-specific-cdc-service"></a>특정 CDC Service를 관리 하려면  
   
 1.  **시작** 메뉴에서 **Oracle CDC Service 구성**을 선택합니다.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 6
   
          속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Oracle CDC Service 관리](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md)  
   
   

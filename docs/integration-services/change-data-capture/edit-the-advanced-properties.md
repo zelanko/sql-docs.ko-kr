@@ -1,27 +1,32 @@
 ---
 title: "고급 속성 편집 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "advanced"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- advanced
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 469785d1add7db3382852938d3a798f7a6666e3e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 고급 속성 편집
+# <a name="edit-the-advanced-properties"></a>고급 속성 편집
   **고급** 탭을 사용하여 CDC 인스턴스에 특별 속성을 추가할 수 있습니다.  
   
-#### CDC 인스턴스에 고급 속성을 추가하려면  
+#### <a name="to-add-advanced-properties-to-the-cdc-instance"></a>CDC 인스턴스에 고급 속성을 추가하려면  
   
 1.  **이름** 열에 속성의 이름을 입력합니다.  
   
@@ -32,8 +37,8 @@ caps.handback.revision: 7
   
  입력할 수 있는 속성에 대한 자세한 내용은 [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config)에서 사용 가능한 옵션 테이블을 참조하십시오.  
   
-## 관련 항목:  
- [CDC 인스턴스 관리 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
- [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
+## <a name="see-also"></a>관련 항목:  
+ [CDC 인스턴스를 관리 하는 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+ [CDC 인스턴스 속성을 편집 하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   
   

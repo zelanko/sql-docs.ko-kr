@@ -1,22 +1,27 @@
 ---
 title: "패키지 실행을 위한 덤프 파일 생성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 패키지 실행을 위한 덤프 파일 생성
+# <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 패키지 실행에 대한 정보를 제공하는 디버그 덤프 파일을 만들 수 있습니다. 이러한 파일의 정보는 패키지 실행 문제를 해결하는 데 도움이 됩니다.  
   
 > **참고!** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. 중요한 정보를 보호하려면 ACL(액세스 제어 목록)을 통해 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  
@@ -33,24 +38,25 @@ caps.handback.revision: 15
   
  패키지 배포 모델을 사용하는 경우 명령줄에서 디버그 덤프 옵션을 지정하기 위해 **dtexec** 유틸리티 또는 **dtutil** 유틸리티를 사용하여 디버그 덤프 파일을 만듭니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md) 및 [dtutil Utility](../../integration-services/dtutil-utility.md)를 참조하세요. 패키지 배포 모델에 대한 자세한 내용은 [SSIS(Integration Services) 프로젝트 및 패키지 배포](https://msdn.microsoft.com/library/hh213290.aspx) 및 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.  
   
-## 디버그 덤프 파일 형식  
+## <a name="debug-dump-file-format"></a>디버그 덤프 파일 형식  
  디버그 덤프 옵션을 지정하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 다음과 같은 디버그 덤프 파일을 만듭니다.  
   
 -   .mdmp 디버그 덤프 파일. 이진 파일입니다.  
   
 -   .tmp 디버그 덤프 파일. 텍스트 형식 파일입니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 이러한 파일을 *\<drive>:*\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
+ 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 폴더에 이러한 파일을 저장  *\<드라이브 >:*files\microsoft SQL Server\110\Shared\ErrorDumps 합니다.  
   
  다음 표에서는 .tmp 파일의 특정 섹션에 대해서만 설명합니다. .tmp 파일에는 이 표에 나열되지 않은 추가 데이터가 포함되어 있습니다.  
   
 |정보 유형|Description|예제|  
 |-------------------------|-----------------|-------------|  
-|환경|운영 체제 버전, 메모리 사용 데이터, 프로세스 ID 및 프로세스 이미지 이름. 환경 정보는 .tmp 파일의 시작 부분에 있습니다.|# # SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
+|환경|운영 체제 버전, 메모리 사용 데이터, 프로세스 ID 및 프로세스 이미지 이름. 환경 정보는 .tmp 파일의 시작 부분에 있습니다.|# SSIS Textual Dump taken at 9/13/2007 1:50:34 PM<br /><br /> #PID 4120<br /><br /> #Image Name [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Running on 2 amd64 processors under WOW64<br /><br /> # Memory: 58% in use. Physical: 845M/2044M  Paging: 2404M/4095M (avail/total)|  
 |DLL(동적 연결 라이브러리) 경로 및 버전|패키지 처리 시 시스템에서 로드하는 각 DLL의 경로 및 버전 번호|# Loaded Module: c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Loaded Module: C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Loaded Module: C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|최근 메시지|시스템에서 표시한 최근 메시지. 각 메시지의 시간, 유형, 설명 및 스레드 ID가 포함됩니다.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( @ 0282F1A8 )<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         설명: 구성 요소가 없거나, 등록되지 않았거나, 업그레이드할 수 없거나, 필수 인터페이스가 없습니다. 이 구성 요소에 대한 연락처 정보는 ""입니다.|  
+|최근 메시지|시스템에서 표시한 최근 메시지. 각 메시지의 시간, 유형, 설명 및 스레드 ID가 포함됩니다.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2] <<\<CRingBufferLogging::RingBufferLoggingRecord >>> (@ 0282F1A8)<br /><br /> [E:3]         Time Stamp: 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         Thread ID: 2368           (ThreadID)<br /><br /> [E:3]         Event Name: OnError                        (EventName)<br /><br /> [E:3]         Source Name:                (SourceName)<br /><br /> [E:3]         Source ID:                        (SourceID)<br /><br /> [E:3]         Execution ID:                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         설명: 구성 요소가 없거나, 등록되지 않았거나, 업그레이드할 수 없거나, 필수 인터페이스가 없습니다. 이 구성 요소에 대한 연락처 정보는 ""입니다.|  
   
-## 관련 정보  
- [패키지 실행 대화 상자](../../integration-services/packages/execute-package-dialog-box.md)  
+## <a name="related-information"></a>관련 정보  
+ [패키지 실행 대화 상자](../../integration-services/packages/run-integration-services-ssis-packages.md#execute_package_dialog)  
   
   
+

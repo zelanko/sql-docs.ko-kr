@@ -1,43 +1,48 @@
 ---
-title: "HEX(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "16진수 데이터"
-  - "HEX 함수"
+title: "HEX (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hexadecimal data
+- HEX function
 ms.assetid: f5d471ee-aeef-421c-b6e1-55b9676c3842
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44919fb8992a26ce5adddfabba9f3b1164ee7be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# HEX(SSIS 식)
+# <a name="hex-ssis-expression"></a>HEX(SSIS 식)
   정수의 16진수 값을 나타내는 문자열을 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 HEX(integer_expression)  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *integer_expression*  
  부호 있는 정수 또는 부호 없는 정수입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## 주의  
- *integer_expression*이 null이면 HEX는 null을 반환합니다.  
+## <a name="remarks"></a>주의  
+ *integer_expression* 이 null이면 HEX는 null을 반환합니다.  
   
  *integer_expression* 인수는 정수여야 합니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
@@ -55,7 +60,7 @@ HEX(integer_expression)
   
 -   DT_I8과 DT_UI8은 최대 길이가 16인 문자열을 반환합니다.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 숫자 리터럴을 사용합니다. 이 함수는 값 190을 반환합니다.  
   
 ```  
@@ -74,7 +79,7 @@ HEX(ReorderPoint)
 HEX(@LocaleID)  
 ```  
   
-## 관련 항목:  
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "패키지 워크플로에 데이터 프로파일링 태스크 포함 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 프로파일링 태스크 [Integration Services], 워크플로에서 출력 사용"
+title: "프로 파일링 태스크를 패키지 워크플로에 데이터를 통합 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], using output in workflow
 ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ea3c68e0320216c81ce2a47f426112dd4a25f22f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 패키지 워크플로에 데이터 프로파일링 태스크 포함
-  데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
+# <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>패키지 워크플로에 데이터 프로파일링 태스크 포함
+  데이터 프로파일링과 정리는 초기 단계의 자동 처리 대상이 아닙니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 데이터 프로파일링 태스크의 출력을 통해 보고된 위반이 의미 있거나 과도한지 확인하려면 일반적으로 시각적 분석과 사람의 판단이 필요합니다. 데이터 품질 문제를 인지한 이후에도 정리를 위한 최선의 방법을 찾기 위한 신중한 계획이 필요합니다.  
   
  일단 데이터 품질에 대한 조건을 정립하고 나면 데이터 원본에 대한 주기적인 분석과 정리를 자동화할 수 있습니다. 다음과 같은 시나리오를 고려해 보십시오.  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 24
   
  데이터 흐름 태스크를 통합할 수 있는 워크플로를 확보한 후에는 이 태스크를 추가하는 데 필요한 단계를 파악해야 합니다. 다음 섹션에서는 데이터 흐름 태스크를 통합하는 일반적인 프로세스에 대해 설명합니다. 마지막 두 개의 섹션에서는 데이터 흐름 태스크를 데이터 원본에 직접 연결하거나 데이터 흐름의 변환된 데이터에 연결하는 방법에 대해 설명합니다.  
   
-## 데이터 흐름 태스크의 일반적인 워크플로 정의  
+## <a name="defining-a-general-workflow-for-the-data-flow-task"></a>데이터 흐름 태스크의 일반적인 워크플로 정의  
  다음 절차에서는 패키지의 워크플로에서 데이터 프로파일링 태스크의 출력을 사용하기 위한 일반적인 방법을 간단히 설명합니다.  
   
-#### 패키지에서 프로그래밍 방식으로 데이터 프로파일링 태스크의 출력을 사용하려면  
+#### <a name="to-use-the-output-of-the-data-profiling-task-programmatically-in-a-package"></a>패키지에서 프로그래밍 방식으로 데이터 프로파일링 태스크의 출력을 사용하려면  
   
 1.  패키지에 데이터 프로파일링 태스크를 추가하고 구성합니다.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 24
   
  다음 섹션에서는 외부 데이터 원본으로부터 직접 가져오거나 데이터 흐름 태스크에서 변환된 프로파일링 데이터에 이 일반 워크플로를 적용합니다. 또한 데이터 흐름 태스크의 입력 및 출력 요구 사항을 처리하는 방법을 보여 줍니다.  
   
-## 데이터 프로파일링 태스크를 외부 데이터 원본에 직접 연결  
+## <a name="connecting-the-data-profiling-task-directly-to-an-external-data-source"></a>데이터 프로파일링 태스크를 외부 데이터 원본에 직접 연결  
  데이터 프로파일링 태스크는 데이터 원본에서 직접 가져온 데이터를 프로파일링할 수 있습니다.  다음 예에서는 이 기능을 설명하기 위해 데이터 프로파일링 태스크를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 Person.Address 테이블의 열에서 열 Null 비율 프로필을 계산합니다. 그런 다음 스크립트 태스크를 사용하여 출력 파일에서 결과를 검색하고, 워크플로를 제어하는 데 사용할 수 있는 패키지 변수를 채웁니다.  
   
 > [!NOTE]  
@@ -71,33 +76,33 @@ caps.handback.revision: 24
   
 -   데이터 프로파일링 태스크의 결과를 바탕으로 실행할 워크플로의 다운스트림 분기를 제어하는 선행 제약 조건을 구성합니다.  
   
-### 연결 관리자 구성  
+### <a name="configure-the-connection-managers"></a>연결 관리자 구성  
  이 예에서는 다음과 같은 두 개의 연결 관리자가 사용됩니다.  
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 데이터베이스에 연결되는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 연결 관리자  
   
 -   데이터 프로파일링 태스크의 결과를 보유할 출력 파일을 만드는 파일 연결 관리자  
   
-##### 연결 관리자를 구성하려면  
+##### <a name="to-configure-the-connection-managers"></a>연결 관리자를 구성하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만듭니다.  
   
-2.  패키지에 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 추가합니다. .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)를 사용하고, 가용한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 인스턴스에 연결하도록 이 연결 관리자를 구성합니다.  
+2.  패키지에 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 추가합니다. .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient)를 사용하고, 가용한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스 인스턴스에 연결하도록 이 연결 관리자를 구성합니다.  
   
-     기본적으로 연결 관리자의 이름은 \<server name>.AdventureWorks1입니다.  
+     기본적으로 연결 관리자의 이름은: \<서버 이름 >. AdventureWorks1 합니다.  
   
 3.  패키지에 파일 연결 관리자를 추가합니다. 데이터 프로파일링 태스크를 위한 출력 파일을 만들도록 이 연결 관리자를 구성합니다.  
   
      이 예에서는 파일 이름으로 DataProfile1.xml을 사용합니다. 기본적으로 연결 관리자의 이름은 파일과 동일합니다.  
   
-### 패키지 변수 구성  
+### <a name="configure-the-package-variables"></a>패키지 변수 구성  
  이 예에서는 다음과 같은 두 개의 패키지 변수를 사용합니다.  
   
 -   ProfileConnectionName 변수는 파일 연결 관리자의 이름을 스크립트 태스크에 전달합니다.  
   
 -   AddressLine2NullRatio 변수는 이 열에 대해 계산된 Null 비율을 스크립트 태스크에서 패키지로 전달합니다.  
   
-##### 프로필 결과를 보유할 패키지 변수를 구성하려면  
+##### <a name="to-configure-the-package-variables-that-will-hold-profile-results"></a>프로필 결과를 보유할 패키지 변수를 구성하려면  
   
 -   **변수** 창에서 다음 두 개의 패키지 변수를 추가하고 구성합니다.  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 24
   
     -   다른 변수의 이름으로 **AddressLine2NullRatio**을 입력하고 이 변수의 유형을 **Double**로 설정합니다.  
   
-### 데이터 프로파일링 태스크 구성  
+### <a name="configure-the-data-profiling-task"></a>데이터 프로파일링 태스크 구성  
  데이터 프로파일링 태스크는 다음과 같이 구성해야 합니다.  
   
 -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자가 입력으로 제공하는 데이터를 사용하도록 구성  
@@ -114,7 +119,7 @@ caps.handback.revision: 24
   
 -   파일 연결 관리자와 연관된 파일에 프로필 결과를 저장하도록 구성  
   
-##### 데이터 프로파일링 태스크를 구성하려면  
+##### <a name="to-configure-the-data-profiling-task"></a>데이터 프로파일링 태스크를 구성하려면  
   
 1.  제어 흐름에 데이터 프로파일링 태스크를 추가합니다.  
   
@@ -128,10 +133,10 @@ caps.handback.revision: 24
   
 6.  데이터 프로파일링 태스크 편집기를 닫습니다.  
   
-### 스크립트 태스크 구성  
+### <a name="configure-the-script-task"></a>스크립트 태스크 구성  
  스크립트 태스크는 출력 파일에서 결과를 검색하고 이전에 구성된 패키지 변수를 채우도록 구성되어야 합니다.  
   
-##### 스크립트 태스크를 구성하려면  
+##### <a name="to-configure-the-script-task"></a>스크립트 태스크를 구성하려면  
   
 1.  제어 흐름에 스크립트 태스크를 추가합니다.  
   
@@ -262,7 +267,7 @@ caps.handback.revision: 24
   
 8.  스크립트 개발 환경과 스크립트 태스크 편집기를 차례로 닫습니다.  
   
-#### 대체 코드 - 변수에서 프로필 출력 읽기  
+#### <a name="alternative-codereading-the-profile-output-from-a-variable"></a>대체 코드 - 변수에서 프로필 출력 읽기  
  앞의 절차는 파일에서 데이터 프로파일링 태스크의 출력을 로드하는 방법을 보여 줍니다. 대체 방법을 사용하여 패키지 변수에서 이 출력을 로드할 수 있습니다. 변수에서 출력을 로드하려면 예제 코드를 다음과 같이 변경해야 합니다.  
   
 -   **LoadXml** 메서드 대신 **XmlDocument** 클래스의 **Load** 메서드를 호출합니다.  
@@ -285,16 +290,16 @@ caps.handback.revision: 24
     profileOutput.LoadXml(outputString);  
     ```  
   
-### 선행 제약 조건 구성  
+### <a name="configure-the-precedence-constraints"></a>선행 제약 조건 구성  
  선행 제약 조건은 데이터 프로파일링 태스크의 결과를 바탕으로 실행할 워크플로의 다운스트림 분기를 제어하도록 구성되어야 합니다.  
   
-##### 선행 제약 조건을 구성하려면  
+##### <a name="to-configure-the-precedence-constraints"></a>선행 제약 조건을 구성하려면  
   
 -   워크플로의 다운스트림 분기에 스크립트 태스크를 연결하는 선행 제약 조건에서 변수의 값을 사용하여 워크플로를 제어하는 식을 작성합니다.  
   
      예를 들어 선행 제약 조건의 **식 연산** 을 **식 및 제약 조건**으로 설정할 수 있습니다. 그런 다음 `@AddressLine2NullRatio < .90` 을 식의 값으로 사용할 수 있습니다. 이렇게 하면 워크플로는 이전 태스크가 성공한 경우와 선택된 열의 Null 값 비율이 90% 미만인 경우 지정된 경로를 따릅니다.  
   
-## 데이터 흐름의 변환된 데이터에 데이터 프로파일링 태스크 연결  
+## <a name="connecting-the-data-profiling-task-to-transformed-data-from-the-data-flow"></a>데이터 흐름의 변환된 데이터에 데이터 프로파일링 태스크 연결  
  데이터 원본으로부터 직접 데이터를 프로파일링하는 대신 이미 로드되어 데이터 흐름에서 변환된 데이터를 프로파일링할 수 있습니다. 단, 데이터 프로파일링 태스크는 영구 데이터에 대해서만 작동하며 메모리 내 데이터에 대해서는 작동하지 않습니다. 따라서 먼저 대상 구성 요소를 사용하여 준비 테이블에 변환된 데이터를 저장해야 합니다.  
   
 > [!NOTE]  
@@ -310,7 +315,7 @@ caps.handback.revision: 24
   
  다음 절차에서는 데이터 흐름에 의해 변환된 데이터를 데이터 프로파일링 태스크를 사용하여 프로파일링하기 위한 일반적인 방법을 보여 줍니다. 이 단계는 앞에서 설명한 외부 데이터 원본에서 직접 가져온 데이터를 프로파일링하는 단계와 많이 비슷합니다. 다양한 구성 요소를 구성하는 방법은 앞의 단계를 참조하십시오.  
   
-#### 데이터 흐름에서 데이터 프로파일링 태스크를 사용하려면  
+#### <a name="to-use-the-data-profiling-task-in-the-data-flow"></a>데이터 흐름에서 데이터 프로파일링 태스크를 사용하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 만듭니다.  
   
@@ -326,8 +331,8 @@ caps.handback.revision: 24
   
 7.  워크플로의 다운스트림 분기에 스크립트 태스크를 연결하는 선행 제약 조건에서 변수의 값을 사용하여 워크플로를 제어하는 식을 작성합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)   
- [데이터 프로필 뷰어(Data Profile Viewer)](../../integration-services/control-flow/data-profile-viewer.md)  
+ [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)  
   
   

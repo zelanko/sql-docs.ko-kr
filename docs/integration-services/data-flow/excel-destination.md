@@ -1,30 +1,35 @@
 ---
 title: "Excel 대상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exceldest.f1"
-helpviewer_keywords: 
-  - "대상 [Integration Services], Excel"
-  - "Excel [Integration Services]"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exceldest.f1
+helpviewer_keywords:
+- destinations [Integration Services], Excel
+- Excel [Integration Services]
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 62feb48c0b05d6f7c8d6b3342b49d9b050113ac3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 대상
+# <a name="excel-destination"></a>Excel 대상
   Excel 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 통합 문서의 워크시트 또는 범위로 데이터를 로드합니다.  
   
-## 액세스 모드  
+## <a name="access-modes"></a>액세스 모드  
  Excel 대상은 데이터 로드를 위한 3가지 데이터 액세스 모델을 제공합니다.  
   
 -   테이블 또는 뷰  
@@ -36,7 +41,7 @@ caps.handback.revision: 49
 > [!IMPORTANT]  
 >  Excel에서 워크시트나 범위는 테이블 또는 뷰에 해당합니다. Excel 원본 및 대상 편집기의 사용 가능한 테이블 목록은 기존 워크시트(Sheet1$와 같이 워크시트 이름에 $ 기호가 붙음)와 명명된 범위(MyRange와 같이 $ 기호가 없음)만 표시합니다.  
   
-## 사용 시 고려 사항  
+## <a name="usage-considerations"></a>사용 시 고려 사항  
  Excel 연결 관리자는 Jet 4.0용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider와 공급자에서 지원하는 Excel ISAM(Indexed Sequential Access Method) 드라이버를 사용하여 Excel 데이터 원본에 연결하고 데이터를 읽고 씁니다.  
   
  이 공급자와 드라이버의 동작에 대해 다루는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 기술 자료 문서가 많이 있습니다. 이러한 문서가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 또는 이전 기능인 데이터 변환 서비스와 반드시 관련된 것은 아니지만 예기치 않은 결과를 발생시킬 수 있는 특정 동작에 대해 살펴보는 것이 좋습니다. Excel 드라이버의 사용 방법과 동작에 대한 일반 정보는 [Visual Basic 또는 VBA에서 Excel 데이터에 ADO를 사용하는 방법](http://support.microsoft.com/kb/257819)을 참조하십시오.  
@@ -57,7 +62,7 @@ caps.handback.revision: 49
   
     -   부울    Boolean(DT_BOOL)  
   
-    -   날짜/시간     **datetime**(DT_DATE)  
+    -   날짜/시간     **datetime** (DT_DATE)  
   
     -   문자열    길이가 255인 유니코드 문자열(DT_WSTR)  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 49
   
     -   배정밀도 Excel 숫자 열과 다른 유형의 숫자 열 간 변환  
   
-## Excel 집합 대상 구성  
+## <a name="configuration-of-the-excel-destination"></a>Excel 집합 대상 구성  
  Excel 대상은 Excel 연결 관리자를 사용하여 데이터 원본에 연결하며 연결 관리자가 사용할 통합 문서 파일을 지정합니다. 자세한 내용은 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)를 참조하세요.  
   
  Excel 대상에는 하나의 일반 입력 및 하나의 오류 출력이 있습니다.  
@@ -88,13 +93,13 @@ caps.handback.revision: 49
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 모든 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [Excel 사용자 지정 속성](../../integration-services/data-flow/excel-custom-properties.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
   
 -   [Excel 통합 문서에 연결](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 49
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
 -   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 1부: 연결 및 구성 요소](http://go.microsoft.com/fwlink/?LinkId=217674)  
   
@@ -110,10 +115,10 @@ caps.handback.revision: 49
   
 -   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 3부: 문제 및 대안](http://go.microsoft.com/fwlink/?LinkId=217676)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Excel 원본](../../integration-services/data-flow/excel-source.md)   
- [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40; Ssis&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)   
- [스크립트 태스크를 사용한 Excel 파일 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [스크립트 태스크와 Excel 파일 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

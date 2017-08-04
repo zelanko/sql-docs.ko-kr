@@ -1,35 +1,40 @@
 ---
-title: "엔터티 편집(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "엔터티 [Master Data Services], 이름 변경"
+title: "엔터티 (Master Data Services) 편집 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], changing name
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1364db68abbbff7ff13899180af78dc87478737d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 엔터티 편집(Master Data Services)
+# <a name="edit-an-entity-master-data-services"></a>엔터티 편집(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 엔터티를 편집할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
-### 엔터티를 편집하려면  
+### <a name="to-edit-an-entity"></a>엔터티를 편집하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
@@ -55,22 +60,22 @@ caps.handback.revision: 8
   
      자세한 내용은 [Data Compression](../relational-databases/data-compression/data-compression.md)를 참조하세요.  
   
-## 상태  
+## <a name="status"></a>상태  
  표의 상태 열에는 엔터티에 대한 작업의 상태가 표시됩니다. **엔터티 저장**을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.  
   
- ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status")  
+ ![상태 업데이트에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘")  
   
  엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.  
   
- ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status")  
+ ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘")  
   
  엔터티가 정상 상태이면 다음 이미지가 표시됩니다.  
   
- ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status")  
+ ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘")  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [엔터티 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
+ [엔터티 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-an-entity-master-data-services.md)   
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

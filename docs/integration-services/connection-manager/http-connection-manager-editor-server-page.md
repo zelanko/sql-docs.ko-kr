@@ -1,26 +1,31 @@
 ---
-title: "HTTP 연결 관리자 편집기(서버 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.httpconnection.server.f1"
-helpviewer_keywords: 
-  - "HTTP 연결 관리자 편집기"
+title: "HTTP 연결 관리자 편집기 (서버 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.httpconnection.server.f1
+helpviewer_keywords:
+- HTTP Connection Manager Editor
 ms.assetid: 774778a0-ece6-4971-b93f-b121d8fc1fc1
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b11802c5d90948df8ce7e6ef41f3a3ef3ea2fed6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# HTTP 연결 관리자 편집기(서버 페이지)
+# <a name="http-connection-manager-editor-server-page"></a>HTTP 연결 관리자 편집기(서버 페이지)
   **HTTP 연결 관리자 편집기** 대화 상자의 **서버** 탭에서 URL이나 보안 자격 증명 등의 속성을 지정하여 HTTP 연결 관리자를 구성할 수 있습니다. HTTP 연결을 사용하면 패키지에서 HTTP를 통해 웹 서버에 액세스하고 파일을 보내거나 받을 수 있습니다. HTTP 연결 관리자를 구성했으면 연결을 테스트할 수도 있습니다.  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 32
   
  HTTP 연결 관리자에 대한 자세한 내용은 [HTTP Connection Manager](../../integration-services/connection-manager/http-connection-manager.md)를 참조하십시오. HTTP 연결 관리자의 일반적인 사용 시나리오에 대한 자세한 내용은 [Web Service Task](../../integration-services/control-flow/web-service-task.md)를 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **서버 URL**  
  서버의 URL을 입력합니다.  
   
@@ -61,8 +66,8 @@ caps.handback.revision: 32
  **연결 테스트**  
  HTTP 연결 관리자를 구성했으면 **연결 테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [HTTP 연결 관리자 편집기&#40;프록시 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
+ [HTTP 연결 관리자 편집기 &#40; 프록시 페이지 &#41;](../../integration-services/connection-manager/http-connection-manager-editor-proxy-page.md)  
   
   

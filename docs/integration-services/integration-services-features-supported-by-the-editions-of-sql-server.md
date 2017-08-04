@@ -1,30 +1,35 @@
 ---
-title: "SQL Server 버전에서 지원하는 Integration Services 기능 | Microsoft Docs"
-ms.custom: ""
-ms.date: "12/16/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Integration Services의 SQL Server 버전에서 지 원하는 기능 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/26/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 caps.latest.revision: 15
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
----
-# SQL Server 버전에서 지원하는 Integration Services 기능
- 이 항목은 다른 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원되는 SSIS(SQL Server Integration Services) 기능에 대한 세부 정보를 제공합니다.  
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
 
-Evaluation 및 Developer 버전에서 지원하는 기능은 SQL Server Enterprise Edition을 참조하세요. 
+---
+# <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지 원하는 integration Services 기능
+ 이 항목은 다른 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)]버전에서 지원되는 SSIS(SQL Server Integration Services) 기능에 대한 세부 정보를 제공합니다.  
+
+Evaluation 및 Developer 버전에서 지 원하는 기능, Enterprise Edition에 대 한 다음 표에 나열 된 기능을 참조 하세요.
   
-최신 릴리스 정보 및 새로운 기능 정보는 다음을 참조하세요.
+최신 릴리스 정보 및 새로운 정보에 대 한 다음 문서를 참조 합니다.
 -   [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)
 -   [SQL Server 2016 Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [SQL Server vNext Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-vnext.md)
+-   [2017 SQL Server에서 Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
 **SQL Server 2016 사용해보기**    
 
@@ -32,50 +37,54 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
     
 > [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**    
     
-> ![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)(SQL Server 2016이 이미 설치된 가상 컴퓨터 실행)**    
+## <a name="ISNew"></a>SQL Server 2017의 새로운 Integration Services 기능
+  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|마스터 확장|예|||||
+|작업자 확장|예|예 <sup>1</sup>|TBD|TBD|TBD|
+|OData 구성 요소에서 Microsoft Dynamics AX 및 Microsoft Dynamics CRM에 대 한 지원 <sup>2</sup>|예|예||||
 
-##  <a name="a-nameisanew-integration-services-features-in-sql-server-vnext"></a><a name="IS"></a>SQL Server vNext의 새로운 Integration Services 기능
-  
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|규모 확장|예||||||예|
-|OData 구성 요소에서 Microsoft Dynamics AX 및 Microsoft Dynamics CRM 지원 <sup>1</sup>|예|사용자 계정 컨트롤|||||예|
+<sup>1</sup> 스케일 아웃 작업자 SQL Server Enterprise의 인스턴스에서 실행 해야 범위 확장의 엔터프라이즈 전용 기능을 필요로 하는 패키지를 실행 합니다.
 
-<sup>1</sup> 이 기능은 SQL Server 2016 서비스 팩 1에서도 지원됩니다.
+<sup>2</sup> 이 기능은 SQL Server 2016 서비스 팩 1 에서도 지원 됩니다.
 
-##  <a name="a-nameisa-integration-services"></a><a name="IS"></a> Integration Services  
-  
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|기본 제공 데이터 원본 커넥터|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예|  
-|Azure 데이터 원본 커넥터 및 태스크|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예|  
-|SQL Server 가져오기 및 내보내기 마법사|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예|  
-|Hadoop / HDFS 커넥터 및 태스크|예|사용자 계정 컨트롤|사용자 계정 컨트롤||||예|  
-|SSIS 디자이너 및 런타임|예|사용자 계정 컨트롤|||||예|  
-|기본 제공 태스크 및 변환|예|사용자 계정 컨트롤|||||예|  
-|기본 데이터 프로파일링 도구|예|사용자 계정 컨트롤|||||예|  
-|Attunity Oracle CDC Service|예||||||예|  
-|Change Data Capture Designer for Oracle by Attunity|예||||||예| 
+## <a name="IEWiz"></a>SQL Server 가져오기 및 내보내기 마법사
 
-##  <a name="a-nameisaaa-integration-services---advanced-adapters"></a><a name="ISAA">Integration Services - 고급 어댑터</a>  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|SQL Server 가져오기 및 내보내기 마법사|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예|  
+
+## <a name="IS"></a> Integration Services  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|성능 우선 Oracle 대상|예||||||예|  
-|성능 우선 Teradata 대상|예||||||예|  
-|SAP BW 원본 및 대상|예||||||예|  
-|데이터 마이닝 모델 학습 대상 어댑터|예||||||예|  
-|차원 처리 대상 어댑터|예||||||예|  
-|파티션 처리 대상 어댑터|예||||||예|  
-|Attunity의 변경 데이터 캡처 구성 요소|예||||||예|  
-|Attunity의 Connector for ODBC(Open Database Connectivity)|예||||||예|  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|기본 제공 데이터 원본 커넥터|예|예|||| 
+|기본 제공 태스크 및 변환|예|예||||  
+|ODBC 원본 및 대상 by Attunity|예|예|||| 
+|Azure 데이터 원본 커넥터 및 태스크|예|예||||  
+|Hadoop/HDFS 커넥터 및 태스크|예|예||||  
+|기본 데이터 프로파일링 도구|예|예|||| 
+
+## <a name="ISAA"></a>Integration Services-고급 원본 및 대상  
   
-##  <a name="a-nameisata-integration-services---advanced-transforms"></a><a name="ISAT"></a> Integration Services - 고급 변환  
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|Attunity의 성능 우선 Oracle 대상|예|||||  
+|Attunity의 성능 우선 Teradata 대상|예|||||  
+|SAP BW 원본 및 대상|예|||||  
+|데이터 마이닝 모델 학습 대상|예|||||  
+|차원 처리 대상|예|||||  
+|파티션 처리 대상|예|||||  
   
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|개발자|  
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|지속성(성능 우선) 조회|예||||||예|  
-|데이터 마이닝 쿼리 변환|예||||||예|  
-|유사 항목 그룹화 및 조회 변환|예||||||예|  
-|용어 추출 및 조회 변환|예||||||예|  
+## <a name="ISAT"></a>Integration Services-고급 태스크 및 변환  
   
+|기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
+|-------------|----------------|--------------|---------|------------------------------------|------------------------|  
+|영구 (성능 우선) 조회|예|||||  
+|변경 데이터 캡처 구성 요소 attunity <sup>1</sup>|예|||||  
+|데이터 마이닝 쿼리 변환|예|||||  
+|유사 항목 그룹화 및 유사 항목 조회 변환|예|||||  
+|용어 추출 및 용어 조회 변환|예|||||  
+
+<sup>1</sup> by Attunity의 변경 데이터 캡처 구성 요소에는 Enterprise edition 필요 합니다. 그러나 Change Data Capture Service 및 Change Data Capture Designer 필요 하지 않습니다 Enterprise edition. 사용할 수 있습니다는 디자이너와 서비스는 컴퓨터에서 SSIS 설치 되어 있지 않습니다.

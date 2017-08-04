@@ -1,22 +1,27 @@
 ---
 title: "미리 보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 551494c4-9e27-4592-9200-c6bf19e80c9a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f51bbd1d818a8ffd20e5124180947846c58f98c3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 미리 보기
+# <a name="preview"></a>미리 보기
   **미리 보기** 대화 상자를 사용하여 SAP BW 원본이 추출할 데이터를 미리 볼 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -45,12 +50,12 @@ caps.handback.revision: 10
     > [!NOTE]  
     >  **미리 보기** 를 클릭하면 **요청 로그** 대화 상자도 열립니다. 이 대화 상자에 대한 자세한 내용은 [Request Log](../../integration-services/data-flow/request-log.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **미리 보기** 대화 상자에는 SAP Netweaver BW 시스템에서 요청된 행이 표시됩니다. 표시되는 열은 원본 데이터에 정의된 열입니다.  
   
  이 대화 상자에 다른 옵션은 없습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

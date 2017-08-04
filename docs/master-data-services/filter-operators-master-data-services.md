@@ -1,28 +1,33 @@
 ---
-title: "필터 연산자(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "필터 연산자 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 95f2b4fea6effb3260648717a1e50c4e390ff3f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 필터 연산자(Master Data Services)
+# <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
   멤버 목록을 필터링할 때 다음과 같은 연산자를 사용할 수 있습니다.  
   
 > [!NOTE]  
->  여러 조건을 기준으로 필터링하는 경우 모든 조건이 true여야 결과가 반환됩니다. 예를 들면 다음과 같습니다. SquareFeet = 2000 **AND** Division <> 123.  
+>  여러 조건을 기준으로 필터링하는 경우 모든 조건이 true여야 결과가 반환됩니다. 예를 들면 SquareFeet = 2000 **AND** Division <> 123 같은 경우입니다.  
   
-## 필터 연산자  
+## <a name="filter-operators"></a>필터 연산자  
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  

@@ -1,36 +1,41 @@
 ---
-title: "계층 멤버 권한 삭제(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "멤버 권한 삭제 [Master Data Services]"
-  - "멤버 [Master Data Services], 사용 권한 삭제"
-  - "사용 권한 [Master Data Services], 멤버 권한 삭제"
+title: "계층 멤버 권한 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting member permissions [Master Data Services]
+- members [Master Data Services], deleting permissions
+- permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3c06cb0309491e9663e4b130b9a641bbbc3a07be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 계층 멤버 권한 삭제(Master Data Services)
+# <a name="delete-hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체 사용 권한을 삭제하여 모든 할당을 제거합니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
-### 계층 멤버 권한을 삭제하려면  
+### <a name="to-delete-hierarchy-member-permissions"></a>계층 멤버 권한을 삭제하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
   
@@ -55,8 +60,8 @@ caps.handback.revision: 6
   
 10. **저장**을 클릭합니다.  
   
-## 관련 항목:  
- [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [계층 멤버 권한 &#40; Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [계층 멤버 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

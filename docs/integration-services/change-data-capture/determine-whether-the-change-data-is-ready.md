@@ -1,30 +1,35 @@
 ---
-title: "변경 데이터의 준비 여부 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "증분 로드 [Integration Services], 준비 상태 확정"
+title: "변경 데이터가 준비 되었는지 여부를 확인 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],determining readiness
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 91c0f342c63df8d3a1376850615c5b68745ab4c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 변경 데이터의 준비 여부 확인
+# <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 비동기 캡처 프로세스에서 선택한 끝점까지 변경 내용을 아직 다 처리하지 않았을 수 있기 때문에 이 단계가 필요합니다.  
   
 > [!NOTE]  
 >  제어 흐름에 대한 첫 번째 태스크는 변경 간격의 끝점을 계산하는 것입니다. 이 태스크에 대한 자세한 내용은 [변경 데이터의 간격 지정](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)을 참조하세요. 제어 흐름 디자인의 전체 프로세스에 대한 설명은 [데이터 캡처 변경&#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)을 참조하세요.  
   
-## 솔루션의 구성 요소 이해  
+## <a name="understanding-the-components-of-the-solution"></a>솔루션의 구성 요소 이해  
  이 항목에 설명된 솔루션에서는 다음과 같은 4개의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소를 사용합니다.  
   
 -   SQL 실행 태스크의 출력을 반복적으로 평가하는 For 루프 컨테이너  
@@ -37,7 +42,7 @@ caps.handback.revision: 26
   
  이러한 구성 요소에서는 여러 패키지 변수의 값을 설정하거나 읽어 루프 내에서 그리고 나중에는 패키지에서 실행의 흐름을 제어합니다.  
   
-#### 패키지 변수를 설정하려면  
+#### <a name="to-set-up-package-variables"></a>패키지 변수를 설정하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **변수** 창에서 다음 변수를 만듭니다.  
   
@@ -61,10 +66,10 @@ caps.handback.revision: 26
   
          이 예에서는 변수 이름으로 IntervalID를 사용하고 값 0만 검사하여 초기 로드를 나타냅니다.  
   
-## For 루프 컨테이너 구성  
+## <a name="configuring-a-for-loop-container"></a>For 루프 컨테이너 구성  
  변수가 설정되면 For 루프 컨테이너를 첫 번째 구성 요소로 추가합니다.  
   
-#### 변경 데이터가 준비될 때까지 대기하도록 For 루프 컨테이너를 구성하려면  
+#### <a name="to-configure-a-for-loop-container-to-wait-until-change-data-is-ready"></a>변경 데이터가 준비될 때까지 대기하도록 For 루프 컨테이너를 구성하려면  
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 제어 흐름에 For 루프 컨테이너를 추가합니다.  
   
@@ -80,7 +85,7 @@ caps.handback.revision: 26
   
          이 식이 **False**로 평가되면 실행이 루프 밖으로 전달되고 증분 로드가 시작됩니다.  
   
-## 변경 데이터를 쿼리하는 SQL 실행 태스크 구성  
+## <a name="configuring-the-execute-sql-task-that-queries-for-change-data"></a>변경 데이터를 쿼리하는 SQL 실행 태스크 구성  
  For 루프 컨테이너 내에서 SQL 실행 태스크를 추가합니다. 이 태스크는 변경 데이터 캡처 프로세스에서 데이터베이스에 유지하는 테이블을 쿼리합니다. 이 쿼리의 결과는 변경 데이터가 준비되었는지 여부를 나타내는 상태 값입니다.  
   
  다음 표에서 첫 번째 열은 샘플 Transact-SQL 쿼리에 의해 SQL 실행 태스크에서 반환되는 값을 보여 줍니다. 두 번째 열은 다른 구성 요소에서 이러한 값에 응답하는 방식을 보여 줍니다.  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
 |3|사용 가능한 모든 변경 데이터의 초기 로드를 나타냅니다.<br /><br /> 조건부 논리는 이 용도로만 사용되는 특수 패키지 변수에서 이 값을 가져옵니다.|실행이 For 루프 밖으로 전달되고 증분 로드가 시작됩니다.|  
 |5|TimeoutCeiling에 도달했음을 나타냅니다.<br /><br /> 루프에서 지정한 횟수만큼 데이터를 테스트했으며 데이터를 여전히 사용할 수 없습니다. 이 테스트나 유사한 테스트를 사용하지 않으면 패키지가 무기한 실행될 수 있습니다.|시간 초과를 기록하는 선택적 구성 요소에서 실행이 계속됩니다.|  
   
-#### 변경 데이터가 준비되었는지 여부를 쿼리하는 SQL 실행 태스크를 구성하려면  
+#### <a name="to-configure-an-execute-sql-task-to-query-whether-change-data-is-ready"></a>변경 데이터가 준비되었는지 여부를 쿼리하는 SQL 실행 태스크를 구성하려면  
   
 1.  For 루프 컨테이너 내에서 SQL 실행 태스크를 추가합니다.  
   
@@ -150,13 +155,13 @@ caps.handback.revision: 26
   
 4.  **SQL 실행 태스크 편집기** 의 **결과 집합**페이지에서 DataReady 결과를 DataReady 변수에 매핑하고 TimeoutCount 결과를 TimeoutCount 변수에 매핑합니다.  
   
-## 변경 데이터가 준비될 때까지 대기  
+## <a name="waiting-until-the-change-data-is-ready"></a>변경 데이터가 준비될 때까지 대기  
  변경 데이터가 준비되지 않은 경우 지연을 구현하는 여러 가지 방법 중 하나를 사용할 수 있습니다. 다음 두 절차에서는 스크립트 태스크나 SQL 실행 태스크를 사용하여 지연을 구현하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
 >  미리 컴파일된 스크립트는 SQL 실행 태스크보다 적은 오버헤드를 발생시킵니다.  
   
-#### 스크립트 태스크를 사용하여 지연을 구현하려면  
+#### <a name="to-implement-a-delay-by-using-a-script-task"></a>스크립트 태스크를 사용하여 지연을 구현하려면  
   
 1.  For 루프 컨테이너 내에서 스크립트 태스크를 추가합니다.  
   
@@ -202,7 +207,7 @@ caps.handback.revision: 26
   
 8.  스크립트 개발 환경 및 **스크립트 태스크 편집기**를 닫습니다.  
   
-#### SQL 실행 태스크를 사용하여 지연을 구현하려면  
+#### <a name="to-implement-a-delay-by-using-an-execute-sql-task"></a>SQL 실행 태스크를 사용하여 지연을 구현하려면  
   
 1.  For 루프 컨테이너 내에서 SQL 실행 태스크를 추가합니다.  
   
@@ -239,16 +244,16 @@ caps.handback.revision: 26
   
 5.  편집기의 **매개 변수 매핑** 페이지에서 DelaySeconds 문자열 변수를 매개 변수 0에 매핑합니다.  
   
-## 오류 상태 처리  
+## <a name="handling-an-error-condition"></a>오류 상태 처리  
  루프 내에 추가 구성 요소를 구성하여 오류 또는 시간 초과 상태를 기록할 수도 있습니다.  
   
 -   DataReady 변수 값이 1인 경우 이 구성 요소가 오류 상태를 기록할 수 있습니다. 이 값은 선택한 간격 시작 전에 사용 가능한 변경 데이터가 없음을 나타냅니다.  
   
 -   TimeoutCeiling 변수 값에 도달할 경우 이 구성 요소는 시간 초과 상태를 기록할 수도 있습니다. 이 값은 루프에서 지정한 횟수만큼 데이터를 테스트했으며 데이터를 여전히 사용할 수 없음을 나타냅니다. 이 테스트나 유사한 테스트를 사용하지 않으면 패키지가 무기한 실행될 수 있습니다.  
   
-#### 오류 상태를 기록하는 선택적 스크립트 태스크를 구성하려면  
+#### <a name="to-configure-an-optional-script-task-to-log-an-error-condition"></a>오류 상태를 기록하는 선택적 스크립트 태스크를 구성하려면  
   
-1.  로그에 메시지를 기록하여 오류 또는 시간 초과를 보고하려는 경우 패키지에 대한 로깅을 구성합니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](../../integration-services/performance/enable-package-logging-in-sql-server-data-tools.md)을 참조하세요.  
+1.  로그에 메시지를 기록하여 오류 또는 시간 초과를 보고하려는 경우 패키지에 대한 로깅을 구성합니다. 자세한 내용은 [SQL Server Data Tools에서 패키지 로깅 사용](../../integration-services/performance/integration-services-ssis-logging.md#ssdt)을 참조하세요.  
   
 2.  For 루프 컨테이너 내에서 스크립트 태스크를 추가합니다.  
   
@@ -330,7 +335,7 @@ caps.handback.revision: 26
   
 8.  스크립트 개발 환경 및 **스크립트 태스크 편집기**를 닫습니다.  
   
-## 다음 단계  
+## <a name="next-step"></a>다음 단계  
  변경 데이터가 준비되었는지 확인한 후 다음 단계는 변경 데이터에 대한 쿼리를 준비하는 것입니다.  
   
  **다음 항목:** [변경 데이터에 대한 쿼리 준비](../../integration-services/change-data-capture/prepare-to-query-for-the-change-data.md)  

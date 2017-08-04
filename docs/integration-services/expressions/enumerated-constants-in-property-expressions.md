@@ -1,29 +1,34 @@
 ---
-title: "속성 식의 열거 상수 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "열거자 [Integration Services]"
-  - "패키지 [Integration Services], 식"
-  - "동적 속성"
-  - "패키지 속성 업데이트"
-  - "열거 상수 [Integration Services]"
-  - "속성 식 [Integration Services]"
+title: "속성 식의 상수를 열거 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- enumerators [Integration Services]
+- packages [Integration Services], expressions
+- dynamic properties
+- updating package properties
+- enumerated constants [Integration Services]
+- property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8483c36dca5a24485e865b1115e766aa579635b9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 속성 식의 열거 상수
+# <a name="enumerated-constants-in-property-expressions"></a>속성 식의 열거 상수
   속성 식에 열거자 멤버 목록의 값이 포함된 경우 식에 멤버 이름 대신 열거자 멤버의 숫자 값을 사용해야 합니다. 예를 들어 식에 **LoggingMode** 속성을 설정한 경우 이름인 Disabled 대신 숫자 값 2를 사용해야 합니다.  
   
  이 항목에서는 해당 멤버가 속성 식에서 일반적으로 사용되는 열거자의 이름에 해당하는 숫자 값만 나열합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 개체 모델에는 프로그래밍 방식으로 패키지를 작성하거나 태스크 및 데이터 흐름 구성 요소와 같은 사용자 지정 패키지 요소를 코딩하기 위해 개체 모델을 프로그래밍할 때 사용하는 여러 개의 추가 열거자가 포함되어 있습니다.  
@@ -107,7 +112,7 @@ caps.handback.revision: 34
 ##  <a name="Foreach"></a> Foreach 루프 열거자  
  Foreach 루프에는 속성 식으로 설정할 수 있는 속성을 가지는 열거자 집합이 포함되어 있습니다.  
   
-### Foreach ADO 열거자  
+### <a name="foreach-ado-enumerator"></a>Foreach ADO 열거자  
  **Type** 속성 - **ADOEnumerationType** 열거 값을 사용하여 설정합니다.  
   
 |ADOEnumerationType의 이름|숫자 값|  
@@ -116,7 +121,7 @@ caps.handback.revision: 34
 |EnumerateAllRows|1.|  
 |EnumerateRowsInFirstTable|2|  
   
-### Foreach Nodelist 열거자  
+### <a name="foreach-nodelist-enumerator"></a>Foreach Nodelist 열거자  
  **SourceDocumentType**, **InnerXPathStringSourceType**및 **OuterXPathStringSourceType** 속성 - **SourceType** 열거의 값을 사용하여 설정합니다.  
   
 |SourceType의 이름|숫자 값|  
@@ -142,10 +147,10 @@ caps.handback.revision: 34
 |노드|1.|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> 태스크  
+##  <a name="Tasks"></a> 작업  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 속성 식으로 설정할 수 있는 속성을 가지는 여러 태스크가 포함되어 있습니다.  
   
-### Analysis Services DDL 실행 태스크  
+### <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크  
  **SourceType** 속성 - **DDLSourceType** 열거 값을 사용하여 설정합니다.  
   
 |DDLSourceType의 이름|숫자 값|  
@@ -154,8 +159,8 @@ caps.handback.revision: 34
 |FileConnection|1.|  
 |변수|2|  
   
-### 대량 삽입 태스크  
- **DataFileType** 속성—**DTSBulkInsert_DataFileType** 열거형의 값을 사용하여 설정합니다.  
+### <a name="bulk-insert-task"></a>대량 삽입 태스크  
+ **DataFileType** 속성— **DTSBulkInsert_DataFileType** 열거형의 값을 사용하여 설정합니다.  
   
 |DTSBulkInsert_DataFileType의 이름|숫자 값|  
 |--------------------------------------------------|-------------------|  
@@ -164,7 +169,7 @@ caps.handback.revision: 34
 |DTSBulkInsert_DataFileType_WideChar|2|  
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
-### SQL 실행 태스크  
+### <a name="execute-sql-task"></a>SQL 실행 태스크  
  **ResultSetType** 속성 - **ResultSetType** 열거 값을 사용하여 설정합니다.  
   
 |ResultSetType의 이름|숫자 값|  
@@ -182,7 +187,7 @@ caps.handback.revision: 34
 |FileConnection|2|  
 |변수|3|  
   
-### 파일 시스템 태스크  
+### <a name="file-system-task"></a>파일 시스템 태스크  
  **Operation** 속성 - **DTSFileSystemOperation** 열거 값을 사용하여 설정합니다.  
   
 |DTSFileSystemOperation의 이름|숫자 값|  
@@ -208,7 +213,7 @@ caps.handback.revision: 34
 |읽기 전용|4|  
 |시스템|8|  
   
-### FTP 태스크  
+### <a name="ftp-task"></a>FTP 태스크  
  **Operation** 속성 - **DTSFTPOp** 열거 값을 사용하여 설정합니다.  
   
 |DTSFTPOp의 이름|숫자 값|  
@@ -222,7 +227,7 @@ caps.handback.revision: 34
 |RemoveDirLocal|6|  
 |RemoveDirRemote|7|  
   
-### 메시지 큐 태스크  
+### <a name="message-queue-task"></a>메시지 큐 태스크  
  **MessageType** 속성 - **MQMessageType** 열거 값을 사용하여 설정합니다.  
   
 |MQMessageType의 이름|숫자 값|  
@@ -248,7 +253,7 @@ caps.handback.revision: 34
 |DTSMQType_Sender|0|  
 |DTSMQType_Receiver|1.|  
   
-### 메일 보내기 태스크  
+### <a name="send-mail-task"></a>메일 보내기 태스크  
  **MessageSourceType** 속성 - **SendMailMessageSourceType** 열거 값을 사용하여 설정합니다.  
   
 |SendMailMessageSourceType의 이름|숫자 값|  
@@ -265,7 +270,7 @@ caps.handback.revision: 34
 |보통|3|  
 |낮음|5|  
   
-### 데이터베이스 전송 태스크  
+### <a name="transfer-database-task"></a>데이터베이스 전송 태스크  
  **Action** 속성 - **TransferAction** 열거 값을 사용하여 설정합니다.  
   
 |TransferAction의 이름|숫자 값|  
@@ -280,7 +285,7 @@ caps.handback.revision: 34
 |DatabaseOffline|0|  
 |DatabaseOnline|1.|  
   
-### 오류 메시지 전송 태스크  
+### <a name="transfer-error-messages-task"></a>오류 메시지 전송 태스크  
  **IfObjectExists** 속성 - **IfObjectExists** 열거 값을 사용하여 설정합니다.  
   
 |IfObjectExists의 이름|숫자 값|  
@@ -289,7 +294,7 @@ caps.handback.revision: 34
 |Overwrite|1.|  
 |Skip|2|  
   
-### 작업 전송 태스크  
+### <a name="transfer-jobs-task"></a>작업 전송 태스크  
  **IfObjectExists** 속성 - **IfObjectExists** 열거 값을 사용하여 설정합니다.  
   
 |IfObjectExists의 이름|숫자 값|  
@@ -298,7 +303,7 @@ caps.handback.revision: 34
 |Overwrite|1.|  
 |Skip|2|  
   
-### 로그인 전송 태스크  
+### <a name="transfer-logins-task"></a>로그인 전송 태스크  
  **IfObjectExists** 속성 - **IfObjectExists** 열거 값을 사용하여 설정합니다.  
   
 |IfObjectExists의 이름|숫자 값|  
@@ -315,7 +320,7 @@ caps.handback.revision: 34
 |SelectedLogins|1.|  
 |AllLoginsFromSelectedDatabases|2|  
   
-### Master 저장 프로시저 전송 태스크  
+### <a name="transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크  
  **IfObjectExists** 속성 - **IfObjectExists** 열거 값을 사용하여 설정합니다.  
   
 |IfObjectExists의 이름|숫자 값|  
@@ -324,7 +329,7 @@ caps.handback.revision: 34
 |Overwrite|1.|  
 |Skip|2|  
   
-### SQL Server 개체 전송 태스크  
+### <a name="transfer-sql-server-objects-task"></a>SQL Server 개체 전송 태스크  
  **ExistingData** 속성 - **ExistingData** 열거 값을 사용하여 설정합니다.  
   
 |ExistingData의 이름|숫자 값|  
@@ -332,7 +337,7 @@ caps.handback.revision: 34
 |바꾸기|0|  
 |추가|1.|  
   
-### 웹 서비스 태스크  
+### <a name="web-service-task"></a>웹 서비스 태스크  
  **OutputType** 속성 - **DTSOutputType** 열거 값을 사용하여 설정합니다.  
   
 |DTSOutputType의 이름|숫자 값|  
@@ -340,7 +345,7 @@ caps.handback.revision: 34
 |파일|0|  
 |변수|1.|  
   
-### WMI 데이터 판독기 태스크  
+### <a name="wmi-data-reader-task"></a>WMI 데이터 판독기 태스크  
  **OverwriteDestination** 속성 - **OverwriteDestination** 열거 값을 사용하여 설정합니다.  
   
 |OverwriteDestination의 이름|숫자 값|  
@@ -410,7 +415,7 @@ caps.handback.revision: 34
 |DirectInput|1.|  
 |변수|2|  
   
-### XML 태스크  
+### <a name="xml-task"></a>XML 태스크  
  **OperationType** 속성 - **DTSXMLOperation** 열거 값을 사용하여 설정합니다.  
   
 |DTSXMLOperation의 이름|숫자 값|  
@@ -479,7 +484,7 @@ caps.handback.revision: 34
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 이러한 태스크를 프로그래밍 방식으로 수행할 수 없으므로 프로그래밍 참조 설명서에 이러한 태스크 및 해당 열거자에 대한 API 설명서가 포함되지 않습니다.  
   
-### 모든 유지 관리 태스크  
+### <a name="all-maintenance-tasks"></a>모든 유지 관리 태스크  
  모든 유지 관리 태스크에서는 다음 열거를 사용하여 지정된 속성을 설정합니다.  
   
  **DatabaseSelectionType** 속성 - **DatabaseSelection** 열거 값을 사용하여 설정합니다.  
@@ -508,7 +513,7 @@ caps.handback.revision: 34
 |보기|1.|  
 |TableView|2|  
   
-### 데이터베이스 백업 태스크  
+### <a name="back-up-database-task"></a>데이터베이스 백업 태스크  
  **DestinationCreationType** 속성 - **DestinationType** 열거 값을 사용하여 설정합니다.  
   
 |DestinationType의 이름|숫자 값|  
@@ -531,7 +536,7 @@ caps.handback.revision: 34
 |파일|1.|  
 |Log|2|  
   
- **BackupDevice** 속성—SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **DeviceType** 열거형의 값을 사용하여 설정합니다.  
+ **BackupDevice** 속성—SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **DeviceType** 열거형의 값을 사용하여 설정합니다.  
   
 |DeviceType의 이름|숫자 값|  
 |---------------------------------|-------------------|  
@@ -541,7 +546,7 @@ caps.handback.revision: 34
 |Pipe|3|  
 |VirtualDevice|4|  
   
-### 유지 관리 정리 태스크  
+### <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크  
  **FileTypeSelected** 속성 - **FileType** 열거 값을 사용하여 설정합니다.  
   
 |FileType의 이름|숫자 값|  
@@ -558,8 +563,8 @@ caps.handback.revision: 34
 |Month|2|  
 |Year|3|  
   
-### 통계 업데이트 태스크  
- **UpdateType** 속성—SMO([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **StatisticsTarget** 열거형의 값을 사용하여 설정합니다.  
+### <a name="update-statistics-task"></a>통계 업데이트 태스크  
+ **UpdateType** 속성—SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects) **StatisticsTarget** 열거형의 값을 사용하여 설정합니다.  
   
 |StatisticsTarget의 이름|숫자 값|  
 |---------------------------------------|-------------------|  
@@ -597,12 +602,12 @@ caps.handback.revision: 34
 |지원됨|1.|  
 |필수임|2|  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md)   
- [Integration Services&#40;SSIS&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
+ [Integration Services &#40; Ssis&#41; 패키지](../../integration-services/integration-services-ssis-packages.md)   
  [Integration Services 컨테이너](../../integration-services/control-flow/integration-services-containers.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [선행 제약 조건](../../integration-services/control-flow/precedence-constraints.md)  

@@ -1,24 +1,29 @@
 ---
 title: "Oracle 데이터베이스 속성 편집 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraProp"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c310a25fe5098cd5edc845c3a29d024182f6361c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle 데이터베이스 속성 편집
+# <a name="edit-the-oracle-database-properties"></a>Oracle 데이터베이스 속성 편집
   속성 편집기에서 Oracle 탭을 사용하여 새 인스턴스 마법사의 CDC 데이터베이스 만들기 페이지에 제공한 설명을 변경하고 Oracle 로그 마이닝 데이터베이스 연결 정보를 변경할 수 있습니다.  
   
  다음 표에서는 **Oracle** 탭에 표시되는 정보를 설명합니다.  
@@ -41,8 +46,8 @@ caps.handback.revision: 7
   
  뷰어에서 Oracle 데이터베이스 속성을 볼 수 있습니다. 뷰어를 사용할 때 정보는 읽기 전용입니다. 또한 뷰어에는 테이블에서 캡처된 열 목록이 포함되어 있습니다. 뷰어에 액세스하는 방법은 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)을 참조하십시오.  
   
-## 관련 항목:  
- [CDC Designer 콘솔에서 CDC Service를 관리하는 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
+## <a name="see-also"></a>관련 항목:  
+ [CDC Designer 콘솔에서 CDC Service를 관리 하는 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
  [Oracle 원본 데이터베이스에 연결](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
  [Oracle에 연결](../../integration-services/change-data-capture/connect-to-oracle.md)  
   

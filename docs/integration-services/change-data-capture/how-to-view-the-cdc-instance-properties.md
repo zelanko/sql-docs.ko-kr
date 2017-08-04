@@ -1,25 +1,30 @@
 ---
 title: "CDC 인스턴스 속성을 보는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4bce9b82-7bbd-41df-b3f4-4b40b8bad474
 caps.latest.revision: 5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 인스턴스 속성을 보는 방법
+# <a name="how-to-view-the-cdc-instance-properties"></a>CDC 인스턴스 속성을 보는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 인스턴스 작업을 쉽게 관리하기 위해 만든 인스턴스에 대한 정보를 보는 방법에 대해 설명합니다.  
   
-### 특정 인스턴스에 대한 정보를 보려면  
+### <a name="to-view-information-about-a-specific-instance"></a>특정 인스턴스에 대한 정보를 보려면  
   
 1.  **시작** 메뉴에서 **CDC Designer 콘솔**을 선택합니다.  
   

@@ -1,26 +1,31 @@
 ---
-title: "명시적 캡이 포함된 파생 계층(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "계층 [Master Data Services], 명시적 캡이 포함된 파생 계층"
-  - "명시적 계층, 명시적 캡이 포함된 파생 계층"
-  - "파생 계층, 명시적 캡이 포함된 파생 계층"
+title: "파생 계층 (Master Data Services) 명시적 캡이 포함 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- hierarchies [Master Data Services], derived hierarchies with explicit caps
+- explicit hierarchies, derived hierarchies with explicit caps
+- derived hierarchies, derived hierarchies with explicit caps
 ms.assetid: 6a82ff66-c137-4757-99bb-787d189b4295
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4fa0dead921e15ff158bde0e6d41db23511613c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 명시적 캡이 포함된 파생 계층(Master Data Services)
+# <a name="derived-hierarchies-with-explicit-caps-master-data-services"></a>명시적 캡이 포함된 파생 계층(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 명시적 계층의 수준이 파생 계층의 최상위 수준으로 사용되는 경우 이를 명시적 캡이 포함된 파생 계층이라고 합니다.  
   
  명시적 계층은 파생 계층의 최상위 엔터티와 동일한 엔터티를 기반으로 해야 합니다.  
@@ -29,14 +34,14 @@ caps.handback.revision: 7
   
  ![mds_conc_explicit_cap_UI_structure](../master-data-services/media/mds-conc-explicit-cap-ui-structure.gif "mds_conc_explicit_cap_UI_structure")  
   
-## 명시적 캡이 포함된 파생 계층 예제  
+## <a name="derived-hierarchy-with-explicit-cap-example"></a>명시적 캡이 포함된 파생 계층 예제  
  이 예에서는 명시적 계층의 멤버를 Subcategory 엔터티에서 가져옵니다. 파생 계층의 최상위 멤버 역시 Subcategory 엔터티에서 가져옵니다.  
   
  ![mds_conc_explicit_cap_UI_example](../master-data-services/media/mds-conc-explicit-cap-ui-example.gif "mds_conc_explicit_cap_UI_example")  
   
  파생 계층의 맨 위에 명시적 계층을 사용하므로 파생 계층이 비정형 계층이 됩니다.  
   
-## 규칙  
+## <a name="rules"></a>규칙  
   
 -   명시적 캡을 포함한 파생 계층에 두 개 이상의 명시적 계층이 있을 수 없습니다.  
   
@@ -44,19 +49,19 @@ caps.handback.revision: 7
   
 -   명시적 캡이 포함된 파생 계층에 계층 멤버 권한을 할당할 수 없습니다. 명시적 계층이나 파생 계층에 개별적으로 사용 권한을 할당할 경우 해당 권한이 두 계층에 모두 적용됩니다.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|파생 계층을 만듭니다.|[파생 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
-|명시적 계층을 만듭니다.|[명시적 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|기존 파생 계층을 삭제합니다.|[파생 계층 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
+|파생 계층을 만듭니다.|[파생된 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)|  
+|명시적 계층을 만듭니다.|[명시적 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|기존 파생 계층을 삭제합니다.|[파생된 계층 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-a-derived-hierarchy-master-data-services.md)|  
 |||  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
--   [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [파생된 계층 &#40; Master Data services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+-   [명시적 계층 &#40; Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   

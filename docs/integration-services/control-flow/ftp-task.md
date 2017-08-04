@@ -1,26 +1,31 @@
 ---
 title: "FTP 태스크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftptask.f1"
-helpviewer_keywords: 
-  - "FTP 태스크 [Integration Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftptask.f1
+helpviewer_keywords:
+- FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 14cfb9dafee9b12bac8864e15cc1a46ac5762680
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# FTP 태스크
+# <a name="ftp-task"></a>FTP 태스크
   FTP 태스크는 데이터 파일을 다운로드 및 업로드하고 서버의 디렉터리를 관리합니다. 예를 들어 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 워크플로의 일부로 원격 서버 또는 인터넷 위치에서 데이터 파일을 다운로드할 수 있습니다. FTP 태스크는 다음 용도로 사용할 수 있습니다.  
   
 -   데이터를 이동하고 변환을 데이터에 적용하기 전이나 후에 디렉터리 및 데이터 파일을 다른 디렉터리로 복사합니다.  
@@ -44,7 +49,7 @@ caps.handback.revision: 52
   
  작업 실패 시 파일 시스템 태스크를 중지하거나 ASCII 모드로 파일을 전송하도록 FTP 작업을 구성할 수 있습니다. 파일 복사본을 보내고 받는 작업은 대상 파일과 디렉터리를 덮어쓰도록 구성할 수 있습니다.  
   
-## 미리 정의된 FTP 작업  
+## <a name="predefined-ftp-operations"></a>미리 정의된 FTP 작업  
  FTP 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
 |연산|Description|  
@@ -58,24 +63,24 @@ caps.handback.revision: 52
 |로컬 파일 삭제|로컬 컴퓨터의 파일을 삭제합니다.|  
 |원격 파일 삭제|FTP 서버의 파일을 삭제합니다.|  
   
-## FTP 태스크에 사용할 수 있는 사용자 지정 로그 항목  
- 다음 표에서는 FTP 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../../integration-services/performance/custom-messages-for-logging.md)을 참조하세요.  
+## <a name="custom-log-entries-available-on-the-ftp-task"></a>FTP 태스크에 사용할 수 있는 사용자 지정 로그 항목  
+ 다음 표에서는 FTP 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|태스크에서 FTP 서버에 대한 연결을 시작했음을 나타냅니다.|  
 |**FTPOperation**|태스크에서 수행하는 FTP 작업의 시작 부분과 유형을 보고합니다.|  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)을 참조하세요.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
   
  이러한 속성을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Tasks.FtpTask.FtpTask>를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [FTP 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/ftp-task-editor-general-page.md)   
- [FTP 태스크 편집기&#40;파일 전송 페이지&#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
+ [FTP 태스크 편집기 &#40; 파일 전송 페이지 &#41;](../../integration-services/control-flow/ftp-task-editor-file-transfer-page.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   

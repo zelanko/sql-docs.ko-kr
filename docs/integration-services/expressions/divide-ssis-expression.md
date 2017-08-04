@@ -1,28 +1,33 @@
 ---
-title: "나누기(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "/(나누기)"
-  - "나누기 연산자(/)"
+title: "나누기 (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- / (divide)
+- divide operator (/)
 ms.assetid: 5bde9223-872d-443e-8a27-57735e1d8f3d
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bf7ca9400837b33ed016c03408028b0102c7418f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 나누기(SSIS 식)
+# <a name="divide-ssis-expression"></a>Divide (SSIS Expression)
   첫 번째 숫자 식을 두 번째 숫자 식으로 나눕니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -30,17 +35,17 @@ dividend / divisor
   
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *dividend*  
  나눌 숫자 식입니다. *dividend* 는 임의의 유효한 숫자 식일 수 있습니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
  *divisor*  
  피제수를 나눌 숫자 식입니다. *divisor* 는 0을 제외한 임의의 유효한 숫자 식일 수 있습니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## 주의  
+## <a name="remarks"></a>주의  
  두 피연산자 중 하나가 Null이면 결과도 Null입니다.  
   
  0으로 나눌 수는 없습니다. *divisor* 하위 식의 계산 방법에 따라 다음 오류 중 하나가 발생합니다.  
@@ -51,7 +56,7 @@ dividend / divisor
   
 -   계산 결과가 0인 *divisor* 하위 식에 입력 열이 포함되어 있으면 런타임에 오류가 표시되고 데이터 흐름 구성 요소의 오류 흐름 규칙에 따라 처리됩니다.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 두 개의 숫자 리터럴을 나눕니다.  
   
 ```  
@@ -64,8 +69,8 @@ dividend / divisor
 ListPrice / StandardCost  
 ```  
   
-## 관련 항목:  
- [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

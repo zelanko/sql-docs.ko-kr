@@ -1,32 +1,37 @@
 ---
-title: "고급 Integration Services 식의 예 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "함수 [Integration Services]"
-  - "연산자 [Integration Services]"
-  - "식 [Integration Services], 예"
-  - "예 [Integration Services]"
+title: "몇 가지 고급 Integration Services 식 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- functions [Integration Services]
+- operators [Integration Services]
+- expressions [Integration Services], examples
+- examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 819cf75cbfe7dba1bbd0c81d18ecc8db138b01f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 고급 Integration Services 식의 예
+# <a name="examples-of-advanced-integration-services-expressions"></a>고급 Integration Services 식의 예
   이 섹션에서는 여러 개의 연산자와 함수가 결합된 고급 식의 예를 제공합니다. 선행 제약 조건이나 조건부 분할 변환에 사용된 식은 부울로 계산되어야 합니다. 그러나 속성 식, 변수, 파생 열 변환 또는 For 루프 컨테이너에 사용된 식에는 이 제한이 적용되지 않습니다.  
   
  다음 예에서는 **AdventureWorks** 및 [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)][!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 사용합니다. 각 예에서 사용되는 테이블이 식별됩니다.  
   
-## 부울 식  
+## <a name="boolean-expressions"></a>부울 식  
   
 -   이 예에서는 **Product** 테이블을 사용합니다. 이 식은 **SellStartDate** 열의 월 부분을 계산하고 월이 6월 이후이면 TRUE를 반환합니다.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 34
     UPPER(SUBSTRING(Name,1,1)) != "A"  
     ```  
   
-## 부울이 아닌 식  
+## <a name="non-boolean-expressions"></a>부울이 아닌 식  
  부울이 아닌 식은 파생 열 변환, 속성 식 및 For 루프 컨테이너에 사용됩니다.  
   
 -   이 예에서는 **Contact** 테이블을 사용합니다. 이 식은 **FirstName**, **MiddleName**및 **LastName** 열에서 선행 및 후행 공백을 제거합니다. **MiddleName** 열이 Null이 아니면 첫 문자를 추출하여 중간 이니셜과 **FirstName** 및 **LastName**열의 값을 연결하고 값 사이에 공백을 삽입합니다.  
@@ -98,10 +103,10 @@ caps.handback.revision: 34
     ROUND(ListPrice / StandardCost,2) * 100  
     ```  
   
-## 관련 작업  
- [ 데이터 흐름 구성 요소에서 식 사용](../Topic/Use%20an%20Expression%20in%20a%20Data%20Flow%20Component.md)  
+## <a name="related-tasks"></a>관련 작업  
+ [데이터 흐름 구성 요소에서 식 사용](http://msdn.microsoft.com/library/9181b998-d24a-41fb-bb3c-14eee34f910d)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  pragmaticworks.com의 기술 문서 - [SSIS 식 치트 시트](http://go.microsoft.com/fwlink/?LinkId=746575)  
   
   

@@ -1,29 +1,34 @@
 ---
 title: "플랫 파일 대상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfiledest.f1"
-helpviewer_keywords: 
-  - "플랫 파일"
-  - "플랫 파일 대상"
-  - "텍스트 파일 기록 [Integration Services]"
-  - "대상 [Integration Services], 플랫 파일"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfiledest.f1
+helpviewer_keywords:
+- flat files
+- Flat File destination
+- text file writing [Integration Services]
+- destinations [Integration Services], Flat File
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 78a0ec526f83dcab8d7358ef5a51f1f6ccfd0a04
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 플랫 파일 대상
+# <a name="flat-file-destination"></a>플랫 파일 대상
   플랫 파일 대상은 데이터를 텍스트 파일에 기록합니다. 텍스트 파일은 구분 기호로 분리된 형식, 고정 폭 형식, 행 구분 기호가 있는 고정 폭 형식 또는 왼쪽 정렬 형식일 수 있습니다.  
   
  다음과 같은 방법으로 플랫 파일 대상을 구성할 수 있습니다.  
@@ -38,7 +43,7 @@ caps.handback.revision: 49
   
  이 대상은 하나의 출력을 갖습니다. 오류 출력은 지원하지 않습니다.  
   
-## 플랫 파일 대상 구성  
+## <a name="configuration-of-the-flat-file-destination"></a>플랫 파일 대상 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  **플랫 파일 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
@@ -49,14 +54,14 @@ caps.handback.revision: 49
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [플랫 파일 사용자 지정 속성](../../integration-services/data-flow/flat-file-custom-properties.md)  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  데이터 흐름 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [플랫 파일 원본](../../integration-services/data-flow/flat-file-source.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   

@@ -1,31 +1,36 @@
 ---
-title: "차원 처리 대상 편집기(고급 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dimprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "차원 처리 대상 편집기"
+title: "차원 처리 대상 편집기 (고급 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dimprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Dimension Processing Destination Editor
 ms.assetid: 2b30835a-2680-4d98-89a4-4f17e29e3818
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 81e97a5a5e653fb02f0e8a1ccc5741bb3e86acf1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 차원 처리 대상 편집기(고급 페이지)
+# <a name="dimension-processing-destination-editor-advanced-page"></a>차원 처리 대상 편집기(고급 페이지)
   **차원 처리 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 오류 처리 방법을 구성할 수 있습니다.  
   
  차원 처리 대상에 대한 자세한 내용은 [Dimension Processing Destination](../../integration-services/data-flow/dimension-processing-destination.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **기본 오류 구성 사용**  
  기본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 오류 처리를 사용할지 여부를 지정합니다. 기본적으로 이 값은 **True**입니다.  
   
@@ -96,9 +101,9 @@ caps.handback.revision: 27
  **찾아보기(...)**  
  오류 로그의 경로를 선택합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [차원 처리 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
- [차원 처리 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
+ [차원 처리 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-connection-manager-page.md)   
+ [차원 처리 대상 편집기 &#40; 매핑 페이지 &#41;](../../integration-services/data-flow/dimension-processing-destination-editor-mappings-page.md)  
   
   

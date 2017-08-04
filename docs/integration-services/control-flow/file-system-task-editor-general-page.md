@@ -1,31 +1,36 @@
 ---
-title: "파일 시스템 태스크 편집기(일반 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.general.f1"
-helpviewer_keywords: 
-  - "파일 시스템 태스크 편집기"
+title: "파일 시스템 태스크 편집기 (일반 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.filesystemtask.general.f1
+helpviewer_keywords:
+- File System Task Editor
 ms.assetid: 51fe6614-3418-4eff-a28d-02ea31cc9aa9
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ab4f38b627ab6fdc566e9ba452d3bf83f9630bb9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 파일 시스템 태스크 편집기(일반 페이지)
+# <a name="file-system-task-editor-general-page"></a>파일 시스템 태스크 편집기(일반 페이지)
   **파일 시스템 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 태스크가 수행하는 파일 시스템 작업을 구성할 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [File System Task](../../integration-services/control-flow/file-system-task.md)를 참조하십시오.  
   
- SourceConnection 및 DestinationConnection 속성을 설정하여 원본 및 대상 연결 관리자를 지정해야 합니다. 태스크에서 원본 또는 대상으로 사용하는 파일을 가리키는 파일 연결 관리자의 이름을 입력하거나 파일 경로가 변수에 저장되어 있는 경우 변수 이름을 입력할 수 있습니다. 변수를 사용하여 파일 경로를 저장하려면 먼저 원본 연결을 위한 IsSourcePathVariable 옵션 및 대상 연결을 위한 IsDestinationPatheVariable 옵션을 **True**로 설정해야 합니다. 그런 다음 기존 시스템 또는 사용자 정의 변수를 사용하도록 선택하거나 새로운 변수를 만들 수 있습니다. **변수 추가** 대화 상자에서 변수의 범위를 구성하고 지정할 수 있습니다. 변수의 범위는 파일 시스템 태스크 또는 부모 컨테이너여야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](../Topic/Use%20Variables%20in%20Packages.md)을 참조하세요.  
+ SourceConnection 및 DestinationConnection 속성을 설정하여 원본 및 대상 연결 관리자를 지정해야 합니다. 태스크에서 원본 또는 대상으로 사용하는 파일을 가리키는 파일 연결 관리자의 이름을 입력하거나 파일 경로가 변수에 저장되어 있는 경우 변수 이름을 입력할 수 있습니다. 변수를 사용하여 파일 경로를 저장하려면 먼저 원본 연결을 위한 IsSourcePathVariable 옵션 및 대상 연결을 위한 IsDestinationPatheVariable 옵션을 **True**로 설정해야 합니다. 그런 다음 기존 시스템 또는 사용자 정의 변수를 사용하도록 선택하거나 새로운 변수를 만들 수 있습니다. **변수 추가** 대화 상자에서 변수의 범위를 구성하고 지정할 수 있습니다. 변수의 범위는 파일 시스템 태스크 또는 부모 컨테이너여야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md) 및 [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)을 참조하세요.  
   
 > [!NOTE]  
 >  **SourceConnection** 및 **DestinationConnection** 속성에 대해 선택한 변수를 재정의하려면 **Source** 및 **Destination** 속성에 대한 식을 입력합니다. **파일 시스템 태스크 편집기** 의 **식**페이지에 식을 입력합니다. 예를 들어 태스크에서 대상으로 사용하는 파일 경로를 설정하기 위해 특정 조건에서 변수 A를 사용하고 다른 조건에서는 변수 B를 사용할 수 있습니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 43
   
  식을 사용하여 다른 변수를 사용할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **IsDestinationPathVariable**  
  대상 경로가 변수에 저장되는지 여부를 나타냅니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
@@ -80,37 +85,37 @@ caps.handback.revision: 43
 |**True**|대상 경로가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **SourceVariable**이 표시됩니다.|  
 |**False**|파일 연결 관리자에서 대상 경로를 지정합니다. 이 값을 선택하면 동적 옵션 **DestinationVariable**이 표시됩니다.|  
   
-## IsDestinationPathVariable 동적 옵션  
+## <a name="isdestinationpathvariable-dynamic-options"></a>IsDestinationPathVariable 동적 옵션  
   
-### IsDestinationPathVariable = True  
+### <a name="isdestinationpathvariable--true"></a>IsDestinationPathVariable = True  
  **DestinationVariable**  
- 목록에서 변수 이름을 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 변수 이름을 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../Topic/Add%20Variable.md)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### IsDestinationPathVariable = False  
+### <a name="isdestinationpathvariable--false"></a>IsDestinationPathVariable = False  
  **DestinationConnection**  
- 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
-## IsSourcePathVariable 동적 옵션  
+## <a name="issourcepathvariable-dynamic-options"></a>IsSourcePathVariable 동적 옵션  
   
-### IsSourcePathVariable = True  
+### <a name="issourcepathvariable--true"></a>IsSourcePathVariable = True  
  **SourceVariable**  
- 목록에서 변수 이름을 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 변수 이름을 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
   
- **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](../Topic/Add%20Variable.md)  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
-### IsSourcePathVariable = False  
+### <a name="issourcepathvariable--false"></a>IsSourcePathVariable = False  
  **SourceConnection**  
- 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
-## Operation 동적 옵션  
+## <a name="operation-dynamic-options"></a>Operation 동적 옵션  
   
-### Operation = 특성 설정  
+### <a name="operation--set-attributes"></a>Operation = 특성 설정  
  **숨김**  
  파일 또는 디렉터리의 표시 여부를 나타냅니다.  
   
@@ -123,11 +128,11 @@ caps.handback.revision: 43
  **시스템**  
  파일이 운영 체제 파일인지 여부를 나타냅니다.  
   
-### Operation = 디렉터리 만들기  
+### <a name="operation--create-directory"></a>Operation = 디렉터리 만들기  
  **UseDirectoryIfExists**  
  **디렉터리 만들기** 작업이 새 디렉터리를 만들지 않고 지정된 이름의 기존 디렉터리를 사용하는지 여부를 나타냅니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
  [식 페이지](../../integration-services/expressions/expressions-page.md)  
   

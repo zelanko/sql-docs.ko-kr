@@ -1,25 +1,30 @@
 ---
-title: "엔터티 권한(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "엔터티 [Master Data Services], 권한"
-  - "권한 [Master Data Services], 엔터티"
+title: "엔터티 권한 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- entities [Master Data Services], permissions
+- permissions [Master Data Services], entities
 ms.assetid: 22785062-4faf-46ee-bffa-01cbd6d5a5b3
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 981c150415bed3470b33c29d34ab8e30e0dbf37e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 엔터티 권한(Master Data Services)
+# <a name="entity-permissions-master-data-services"></a>엔터티 권한(Master Data Services)
   엔터티 권한은 다음에 적용됩니다.  
   
 -   리프 멤버 및 통합 멤버 둘 다의 **이름** 및 **코드**를 포함하여 엔터티의 모든 특성  
@@ -43,9 +48,9 @@ caps.handback.revision: 6
   
  읽기, 만들기, 업데이트 및 삭제 권한을 결합할 수도 있습니다. 만들기, 업데이트 및 삭제 권한이 할당될 때 읽기 권한은 자동으로 할당됩니다.  
   
-## 참고 항목  
- [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
- [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [모델 개체 사용 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [모델 개체 사용 권한 &#40; Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
   

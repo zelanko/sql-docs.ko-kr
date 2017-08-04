@@ -1,40 +1,45 @@
 ---
-title: "SQL Server 개체 전송 태스크 편집기(개체 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transfersqlserverobjects.objects.f1"
-helpviewer_keywords: 
-  - "SQL Server 개체 전송 태스크 편집기"
+title: "SQL Server 개체 전송 태스크 편집기 (개체 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transfersqlserverobjects.objects.f1
+helpviewer_keywords:
+- Transfer SQL Server Objects Task Editor
 ms.assetid: 8cc09118-70ac-4013-8308-d87f8411ca0c
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67557562dd3f2efbe3c40673a835dd557f617604
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server 개체 전송 태스크 편집기(개체 페이지)
+# <a name="transfer-sql-server-objects-task-editor-objects-page"></a>SQL Server 개체 전송 태스크 편집기(개체 페이지)
   **SQL Server 개체 전송 태스크 편집기** 대화 상자의 **개체** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다. 테이블, 뷰, 저장 프로시저 및 사용자 정의 함수와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 복사할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer SQL Server Objects Task](../../integration-services/control-flow/transfer-sql-server-objects-task.md)를 참조하십시오.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 전송 태스크를 만드는 사용자에게는 원본 서버 개체를 복사용으로 선택하기 위한 충분한 권한이 있어야 하며 해당 개체를 전송할 대상 서버 데이터베이스에 대한 액세스 권한도 있어야 합니다.  
   
-## 정적 옵션  
+## <a name="static-options"></a>정적 옵션  
  **SourceConnection**  
- 목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>**을 클릭하여 원본 서버에 대한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 원본 서버에 새 연결을 만듭니다.  
   
  **SourceDatabase**  
  복사할 개체를 가져올 원본 서버의 데이터베이스를 선택합니다.  
   
  **DestinationConnection**  
- 목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>**을 클릭하여 대상 서버에 대한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 대상 서버에 새 연결을 만듭니다.  
   
  **DestinationDatabase**  
  개체를 복사해 넣을 대상 서버의 데이터베이스를 선택합니다.  
@@ -57,13 +62,13 @@ caps.handback.revision: 30
 |**추가**|원본 서버에서 복사한 데이터를 대상 서버의 기존 데이터에 추가합니다.|  
   
 > [!NOTE]  
->  **ExistingData** 옵션은 **CopyData**를 **True**로 설정한 경우에만 사용할 수 있습니다.  
+>  **ExistingData** 옵션은 **CopyData** 를 **True**로 설정한 경우에만 사용할 수 있습니다.  
   
  **CopySchema**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 전송 태스크를 수행하는 동안 스키마를 복사할지 여부를 선택합니다.  
   
 > [!NOTE]  
->  **CopySchema**는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다.  
+>  **CopySchema** 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다.  
   
  **UseCollation**  
  개체 전송에 원본 서버에서 지정한 데이터 정렬을 포함시킬지 여부를 선택합니다.  
@@ -75,10 +80,10 @@ caps.handback.revision: 30
  지정한 원본 데이터베이스의 모든 개체를 복사할지, 아니면 선택한 개체만 복사할지를 선택합니다.  이 옵션을 False로 설정하면 전송할 개체를 선택할 수 있고 **CopyAllObjects**섹션에 동적 옵션이 표시됩니다.  
   
  **ObjectsToCopy**  
- 원본 데이터베이스에서 대상 데이터베이스로 복사할 개체를 지정하려면 **ObjectsToCopy**를 확장합니다.  
+ 원본 데이터베이스에서 대상 데이터베이스로 복사할 개체를 지정하려면 **ObjectsToCopy** 를 확장합니다.  
   
 > [!NOTE]  
->  **ObjectsToCopy**는 **CopyAllObjects**를 **False**로 설정한 경우에만 사용할 수 있습니다.  
+>  **ObjectsToCopy** 는 **CopyAllObjects** 를 **False**로 설정한 경우에만 사용할 수 있습니다.  
   
  다음 유형의 개체를 복사하는 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 지원됩니다.  
   
@@ -126,9 +131,9 @@ caps.handback.revision: 30
  **GenerateScriptsInUnicode**  
  생성된 전송 스크립트가 유니코드 형식인지 여부를 지정합니다.  
   
-## 동적 옵션  
+## <a name="dynamic-options"></a>동적 옵션  
   
-### CopyAllObjects = False  
+### <a name="copyallobjects--false"></a>CopyAllObjects = False  
  **CopyAllTables**  
  지정한 원본 데이터베이스의 모든 테이블을 복사할지, 아니면 선택한 테이블만 복사할지를 선택합니다.  
   
@@ -207,10 +212,10 @@ caps.handback.revision: 30
  **XmlSchemaCollectionsList**  
  **XML 스키마 컬렉션 선택** 대화 상자를 열려면 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
- [SQL Server 개체 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
+ [SQL Server 개체 태스크 편집기 &#40; 전송 일반 페이지 &#41;](../../integration-services/control-flow/transfer-sql-server-objects-task-editor-general-page.md)   
  [식 페이지](../../integration-services/expressions/expressions-page.md)   
  [대량 가져오기 또는 대량 내보내기를 위한 데이터 형식&#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   
  [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  

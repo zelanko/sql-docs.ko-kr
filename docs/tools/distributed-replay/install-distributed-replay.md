@@ -1,22 +1,27 @@
 ---
 title: "Distributed Replay 설치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 caps.latest.revision: 21
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f12949316171843274bc70aefc3ed8ff2b236e45
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Distributed Replay 설치
+# <a name="install-distributed-replay"></a>Distributed Replay 설치
   Distributed Replay는 다음 세 가지 방법 중 하나로 설치할 수 있습니다.  
   
 -   [설치 마법사에서 Distributed Replay 설치](#bkmk_wizard)  
@@ -26,7 +31,7 @@ caps.handback.revision: 21
 -   [구성 파일을 사용하여 Distributed Replay 설치](#bkmk_configuration_file)  
   
 ##  <a name="bkmk_wizard"></a> 설치 마법사에서 Distributed Replay 설치  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치합니다. 기능 설치 위치를 계획할 때는 다음 사항을 고려하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Distributed Replay 기능을 설치합니다. 기능 설치 위치를 계획할 때는 다음 사항을 고려하십시오.  
   
 -   관리 도구는 Distributed Replay Controller와 동일한 컴퓨터 또는 다른 컴퓨터에 설치할 수 있습니다.  
   
@@ -60,19 +65,19 @@ caps.handback.revision: 21
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools  
   
-     \- 또는  
+     \- OR-  
   
-     \<공유 기능 디렉터리>\Tools\\(사용자가 입력한 대체 공유 기능 디렉터리)  
+     \<공유 기능 디렉터리 > \Tools\\(사용자가 입력 한 대체 공유 기능 디렉터리)  
   
 -   64비트 시스템:  
   
      C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (x86)\130\Tools  
   
-     \- 또는  
+     \- OR-  
   
-     \<공유 기능 디렉터리 (x86)>\Tools\\(사용자가 입력한 공유 기능 대체(x86) 디렉터리)  
+     \<공유 기능 디렉터리 (x86) > \Tools\\(사용자가 입력 한 대체 공유 기능 (x86) 디렉터리)  
   
-#### Distributed Replay 기능을 설치하려면  
+#### <a name="to-install-distributed-replay-features"></a>Distributed Replay 기능을 설치하려면  
   
 1.  Distributed Replay 기능 설치를 시작하려면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사를 시작합니다.  
   
@@ -110,9 +115,9 @@ caps.handback.revision: 21
   
 8.  필요에 따라 줄임표(...) 단추를 클릭하여 공유 기능 디렉터리 경로를 변경합니다.  
   
-    1.  32비트 컴퓨터의 기본 설치 경로는 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**입니다.  
+    1.  32비트 컴퓨터의 기본 설치 경로는 **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
-    2.  64비트 컴퓨터의 기본 설치 경로는 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**입니다.  
+    2.  64 비트 컴퓨터의 기본 설치 경로 **C:\Program Files (x86)\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
 9. 작업이 완료되면 **다음**을 클릭합니다.  
   
@@ -129,17 +134,17 @@ caps.handback.revision: 21
     > [!IMPORTANT]  
     >  Distributed Replay를 설치한 후에는 컨트롤러 및 클라이언트 컴퓨터에서 방화벽 규칙을 만들고 각 클라이언트 컴퓨터에 대상 서버에 대한 권한을 부여해야 합니다. 자세한 내용은 [설치 후 단계 완료](../../tools/distributed-replay/complete-the-post-installation-steps.md)를 참조하세요.  
   
-### .NET Framework 보안  
+### <a name="net-framework-security"></a>.NET Framework 보안  
  Distributed Replay 기능을 설치하려면 관리 권한이 있어야 합니다. sysadmin 권한을 가진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인만 테스트 서버의 sysadmin 서버 역할에 클라이언트 서비스 계정을 추가할 수 있습니다. Distributed Replay 보안 고려 사항에 대한 자세한 내용은 [Distributed Replay Security](../../tools/distributed-replay/distributed-replay-security.md)을 참조하십시오.  
   
 ##  <a name="bkmk_command_prompt"></a> 명령 프롬프트에서 Distributed Replay 설치  
- 명령 프롬프트에서 Distributed Replay의 새 인스턴스를 설치할 경우 어떤 기능을 설치할지 지정하고 그 기능을 어떻게 구성할지 지정할 수 있습니다. 명령 프롬프트에서 설치하면 Distributed Replay 구성 요소를 설치, 복원, 업그레이드 및 제거할 수 있습니다. 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 /Q 매개 변수를 사용하는 완전 자동 모드를 지원합니다.  
+ 명령 프롬프트에서 Distributed Replay의 새 인스턴스를 설치할 경우 어떤 기능을 설치할지 지정하고 그 기능을 어떻게 구성할지 지정할 수 있습니다. 명령 프롬프트에서 설치하면 Distributed Replay 구성 요소를 설치, 복원, 업그레이드 및 제거할 수 있습니다. 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 /Q 매개 변수를 사용하는 완전 자동 모드를 지원합니다.  
   
 > [!NOTE]  
 >  로컬 설치의 경우 관리자로 설치 프로그램을 실행해야 합니다. 원격 공유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 경우 원격 공유에 대한 읽기 및 실행 권한이 있는 도메인 계정을 사용해야 합니다.  
   
-### 설치 매개 변수  
- 최상위 기능 목록에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 도구가 포함됩니다. 도구 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 기타 공유 구성 요소를 설치합니다. Distributed Replay 구성 요소를 설치하려면 다음 매개 변수를 지정합니다.  
+### <a name="installation-parameters"></a>설치 매개 변수  
+ 최상위 기능 목록에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]및 도구가 포함됩니다. 도구 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 도구, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]및 기타 공유 구성 요소를 설치합니다. Distributed Replay 구성 요소를 설치하려면 다음 매개 변수를 지정합니다.  
   
 |구성 요소|매개 변수|  
 |---------------|---------------|  
@@ -165,7 +170,7 @@ caps.handback.revision: 21
 |/CLTWORKINGDIR<br /><br /> **선택 사항**|Distributed Replay Client 서비스의 작업 디렉터리|올바른 경로|  
 |/CLTRESULTDIR<br /><br /> **선택 사항**|Distributed Replay Client 서비스의 결과 디렉터리|올바른 경로|  
   
-### 예제 구문:  
+### <a name="sample-syntax"></a>예제 구문:  
  **Distributed Replay Controller 구성 요소를 설치하려면**  
   
 ```  
@@ -192,13 +197,13 @@ setup /q /ACTION=Install /FEATURES=DREPLAY_CLT /IAcceptSQLServerLicenseTerms /CL
 > [!IMPORTANT]  
 >  Distributed Replay를 설치한 후에는 컨트롤러 및 클라이언트 컴퓨터에서 방화벽 규칙을 만들고 각 클라이언트 컴퓨터에 대상 서버에 대한 권한을 부여해야 합니다. 자세한 내용은 [설치 후 단계 완료](../../tools/distributed-replay/complete-the-post-installation-steps.md)를 참조하세요.  
   
-#### 구성 파일을 생성하려면  
+#### <a name="to-generate-a-configuration-file"></a>구성 파일을 생성하려면  
   
 1.  설치 마법사의 안내에 따르면 **설치 준비 완료** 페이지가 표시됩니다. 구성 파일의 경로는 **설치 준비 완료** 페이지의 구성 파일 경로 섹션에 지정됩니다.  
   
 2.  설치를 실제로 완료하지는 않고 INI 파일을 생성하기 위해 설치를 취소합니다.  
   
-#### 구성 파일을 사용하여 Distributed Replay를 설치하려면  
+#### <a name="to-install-distributed-replay-using-the-configuration-file"></a>구성 파일을 사용하여 Distributed Replay를 설치하려면  
   
 -   명령 프롬프트에서 설치를 실행하고 ConfigurationFile 매개 변수를 사용하여 ConfigurationFile.ini를 입력합니다.  
   
@@ -213,11 +218,12 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  구성 파일에서는 암호를 구성할 수 없으므로 명령줄에서 두 암호를 모두 지정해야 합니다.  
   
-## 참고 항목  
- [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)   
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [관리 도구 명령줄 옵션 &#40; Distributed Replay utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   
+

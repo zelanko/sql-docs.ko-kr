@@ -1,30 +1,35 @@
 ---
-title: "MDS(Master Data Services)의 새로운 기능 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "07/08/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "기능 &#39; Master Data Services (MDS)의 새로운 s | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/08/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 caps.latest.revision: 85
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 85
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e341e5b15e33af6338447f5422138aea1b94240a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# MDS(Master Data Services)의 새로운 기능
+# <a name="what39s-new-in-master-data-services-mds"></a>기능 &#39;의 새로운 Master Data Services (MDS)
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]릴리스의 변경 내용 및 업데이트 내용을 요약합니다. 
   
  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에서 데이터를 구성하는 방법에 대한 개요는 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md)를 참조하세요. 
   
- **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면 **MDS(Master Data Services) 개요[](../master-data-services/master-data-services-overview-mds.md "Master Data Services Overview (MDS)")를 참조하세요.  
+ **Master Data Services를 설치하고, 데이터베이스 및 웹 사이트를 설정하고, 샘플 모델을 배포하려면** MDS(Master Data Services) 개요[](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
  **다운로드**  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 85
   
     ```  
     <configuration>  
-       <system.webServer>  
+       \<system.webServer>  
           <urlCompression doStaticCompression="true" doDynamicCompression="false " />  
-       </system.webServer>  
+       \</system.webServer>  
     </configuration>  
   
     ```  
@@ -150,7 +155,7 @@ caps.handback.revision: 85
 
  **새로운 비즈니스 규칙 조건**  
   
- 전체 조건 집합을 제공하기 위해&7;개의 새로운 비즈니스 규칙 조건이 추가되었습니다. 자세한 내용은 [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)을 참조하세요.  
+ 전체 조건 집합을 제공하기 위해 7개의 새로운 비즈니스 규칙 조건이 추가되었습니다. 자세한 내용은 [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)을 참조하세요.  
 
 ## <a name="derived-hierarchy-improvements"></a>파생 계층 개선 사항
 
@@ -227,9 +232,11 @@ caps.handback.revision: 85
  샘플 패키지가 새로운 시나리오를 지원하도록 업데이트되었습니다. 자세한 내용은 [SQL Server 예제: 모델 배포 패키지(MDS)](../master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master data services and data quality services features support.md)  
+ [SQL Server 2016 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)  
  [사용되지 않는 Master Data Services 기능](../master-data-services/deprecated-master-data-services-features.md)   
  [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)  
   
   
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
+
+

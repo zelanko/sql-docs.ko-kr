@@ -1,29 +1,34 @@
 ---
 title: "플랫 파일 연결 관리자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "연결 관리자 [Integration Services], 플랫 파일"
-  - "연결 [Integration Services], 플랫 파일"
-  - "파일 [Integration Services], 연결"
-  - "플랫 파일 연결 관리자"
-  - "플랫 파일"
-  - "플랫 파일 연결 [Integration Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection managers [Integration Services], Flat File
+- connections [Integration Services], flat files
+- files [Integration Services], connections
+- Flat File connection manager
+- flat files
+- flat file connections [Integration Services]
 ms.assetid: 7830f80d-af32-4e8f-a6fc-f03af6bc1946
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f3e174427f1aa92c14952571b0e81070ffe69d2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 플랫 파일 연결 관리자
+# <a name="flat-file-connection-manager"></a>플랫 파일 연결 관리자
   플랫 파일 연결 관리자를 사용하면 패키지에서 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 플랫 파일 원본 및 대상은 플랫 파일 연결 관리자를 사용하여 데이터를 추출 및 로드할 수 있습니다.  
   
  플랫 파일 연결 관리자는 하나의 파일만 액세스할 수 있습니다. 파일을 여러 개 참조하려면 플랫 파일 연결 관리자 대신 다중 플랫 파일 연결 관리자를 사용하십시오. 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)을 참조하세요.  
@@ -78,6 +83,6 @@ caps.handback.revision: 49
   
 -   [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
- 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)를 참조하세요.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
   

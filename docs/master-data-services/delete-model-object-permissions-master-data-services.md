@@ -1,36 +1,41 @@
 ---
-title: "모델 개체 사용 권한 삭제(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "모델 개체 사용 권한 삭제 [Master Data Services]"
-  - "사용 권한 [Master Data Services], 모델 개체 사용 권한 삭제"
-  - "모델 [Master Data Services], 개체 사용 권한 삭제"
+title: "모델 개체 사용 권한 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting model object permissions [Master Data Services]
+- permissions [Master Data Services], deleting model object permissions
+- models [Master Data Services], deleting object permissions
 ms.assetid: 859c5952-f600-4940-8064-1afd13f7f6dc
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a5bf923fa19030df4beebcd560de8fe7b8b5be21
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 모델 개체 사용 권한 삭제(Master Data Services)
+# <a name="delete-model-object-permissions-master-data-services"></a>모델 개체 사용 권한 삭제(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 모델 개체 사용 권한을 삭제하여 모든 할당을 제거합니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
-### 모델 개체 사용 권한을 삭제하려면  
+### <a name="to-delete-model-object-permissions"></a>모델 개체 사용 권한을 삭제하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
   
@@ -52,8 +57,8 @@ caps.handback.revision: 7
   
 9. **저장**을 클릭합니다.  
   
-## 참고 항목  
- [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [모델 개체 사용 권한 &#40; Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [모델 개체 사용 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
   

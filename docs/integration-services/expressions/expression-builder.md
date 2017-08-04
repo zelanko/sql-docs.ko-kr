@@ -1,26 +1,31 @@
 ---
 title: "식 작성기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.expressionbuilder.f1"
-helpviewer_keywords: 
-  - "식 작성기 대화 상자"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.expressionbuilder.f1
+helpviewer_keywords:
+- Expression Builder dialog box
 ms.assetid: 4717ce33-bd4e-44bc-81e0-002de075b4d1
 caps.latest.revision: 18
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 820179477a33b18a634c509d2793d8f0bac79ddd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 식 작성기
+# <a name="expression-builder"></a>식 작성기
   **식 작성기** 대화 상자를 사용하여 변수를 나열하고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 식 언어에 포함된 함수, 유형 변환 및 연산자에 대한 참조를 기본적으로 제공하는 그래픽 사용자 인터페이스로 변수 값을 설정하는 식을 작성하거나 속성 식을 생성 및 편집할 수 있습니다.  
   
  속성 식은 속성에 할당된 식입니다. 식을 평가하면 속성이 식의 평가 결과를 사용하도록 동적으로 업데이트됩니다. 마찬가지로 변수에 사용된 식을 통해 식의 평가 결과로 변수 값을 업데이트할 수 있습니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 18
   
  속성 식에 대한 자세한 내용과 식을 작성하는 방법에 대한 자세한 내용은 [패키지에서 속성 식 사용](../../integration-services/expressions/use-property-expressions-in-packages.md) 및 [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
 |용어|정의|  
 |----------|----------------|  
@@ -45,10 +50,10 @@ caps.handback.revision: 18
 |**평가 값**|식의 평가 결과를 나열합니다.|  
 |**식 계산**|식의 계산 결과를 보려면 **식 계산** 을 클릭합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [식 페이지](../../integration-services/expressions/expressions-page.md)   
  [속성 식 편집기](../../integration-services/expressions/property-expressions-editor.md)   
- [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
+ [Integration Services &#40; Ssis&#41; 변수](../../integration-services/integration-services-ssis-variables.md)   
  [시스템 변수](../../integration-services/system-variables.md)  
   
   

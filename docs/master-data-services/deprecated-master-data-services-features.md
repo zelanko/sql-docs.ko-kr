@@ -1,25 +1,30 @@
 ---
-title: "사용되지 않는 Master Data Services 기능 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용 되지 않는 Master Data Services 기능 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 18
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4d9b433e72c916ae6611520498b0eb8fa85c8f6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 사용되지 않는 Master Data Services 기능
+# <a name="deprecated-master-data-services-features"></a>사용되지 않는 Master Data Services 기능
   이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
   
-## 명시적 계층, 컬렉션 및 관련 구성 요소  
+## <a name="explicit-hierarchies-collections-and-related-components"></a>명시적 계층, 컬렉션 및 관련 구성 요소  
  명시적 계층, 컬렉션 및 관련 구성 요소는 사용되지 않습니다. 이전에는 통합 멤버 유형(명시적 계층 부모) 및 컬렉션 멤버 유형으로 모델링되었던 멤버는 파생 계층의 리프 멤버로 모델링됩니다. 아래의 새로운 기능을 통해 파생 계층을 명시적 계층 대신 사용할 수 있습니다.  
   
 -   이제는 재귀 파생 계층을 사용하여 멤버 보안 권한을 할당할 수 있습니다.  
@@ -42,15 +47,15 @@ caps.handback.revision: 18
   
 -   [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
-## 특성 엔터티 트랜잭션 로그 유형  
+## <a name="attribute-entity-transaction-log-type"></a>특성 엔터티 트랜잭션 로그 유형  
 엔터티 트랜잭션 로그 유형 "특성"은 더 이상 사용되지 않습니다. "멤버" 엔터티 트랜잭션 로그 유형으로 마이그레이션하세요. 엔터티 트랜잭션 로그 유형에 대한 자세한 내용은 다음 항목을 참조하세요.
 * [엔터티 트랜잭션 로그 유형 변경(Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [멤버 수정 기록](../master-data-services/member-revision-history-master-data-services.md)
   
-## 외부 리소스  
+## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [사용되지 않음: 명시적 계층 및 컬렉션](http://go.microsoft.com/fwlink/p/?LinkId=615373)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [지원되지 않는 MDS(Master Data Services) 기능](../master-data-services/discontinued-master-data-services-features.md)  
   
   

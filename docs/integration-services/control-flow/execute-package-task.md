@@ -1,28 +1,33 @@
 ---
 title: "패키지 실행 태스크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.executepackagetask.f1"
-helpviewer_keywords: 
-  - "패키지 실행 태스크 [Integration Services]"
-  - "자식 패키지"
-  - "부모 패키지 [Integration Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.executepackagetask.f1
+helpviewer_keywords:
+- Execution Package task [Integration Services]
+- child packages
+- parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c78071650af34e9dc4baf5754781700921f5d293
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 패키지 실행 태스크
+# <a name="execute-package-task"></a>패키지 실행 태스크
   패키지 실행 태스크는 패키지가 다른 패키지를 워크플로의 일부로 실행할 수 있도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 엔터프라이즈 기능을 확장했습니다.  
   
  패키지 실행 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -39,11 +44,11 @@ caps.handback.revision: 63
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 실행 파일 및 배치 파일 실행과 같은 워크플로 작업을 수행하는 태스크가 포함되어 있습니다. 자세한 내용은 [Execute Process Task](../../integration-services/control-flow/execute-process-task.md)을 참조하세요.  
   
-## 패키지 실행  
+## <a name="running-packages"></a>패키지 실행  
  패키지 실행 태스크는 부모 패키지와 동일한 프로젝트에 포함된 자식 프로젝트를 실행할 수 있습니다. **ReferenceType** 속성을 **Project Reference**로 설정하고 **PackageNameFromProjectReference** 속성을 설정하여 프로젝트에서 자식 패키지를 선택할 수 있습니다.  
   
 > [!NOTE]  
->  **ReferenceType** 옵션은 읽기 전용이며 패키지가 포함된 프로젝트가 프로젝트 배포 모델로 전환되지 않은 경우에는 **외부 참조**로 설정됩니다. 변환에 대한 자세한 내용은 [Integration Services 서버에 프로젝트 배포](../../integration-services/packages/deploy-projects-to-integration-services-server.md)를 참조하세요.  
+>  **ReferenceType** 옵션은 읽기 전용이며 패키지가 포함된 프로젝트가 프로젝트 배포 모델로 전환되지 않은 경우에는 **외부 참조** 로 설정됩니다. [배포할 Integration Services (SSIS) 프로젝트 및 패키지](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)합니다.  
   
  패키지 실행 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb 데이터베이스에 저장된 패키지와 파일 시스템에 저장된 패키지도 실행할 수 있습니다. 이 태스크는 OLE DB 연결 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결하거나 파일 연결 관리자를 사용하여 파일 시스템에 액세스합니다. 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md) 및 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)를 참조하세요.  
   
@@ -57,13 +62,13 @@ caps.handback.revision: 63
   
  기본적으로 패키지 실행 태스크의 ExecuteOutOfProcess 속성은 **False**로 설정되고 자식 패키지는 부모 패키지와 같은 프로세스에서 실행됩니다. 이 속성을 **True**로 설정하면 하위 패키지가 개별 프로세스로 실행됩니다. 이렇게 하면 하위 패키지의 실행 속도가 느려집니다. 또한 속성을 **True**로 설정하면 도구만 설치로 패키지를 디버그할 수 없습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치해야 합니다. 자세한 내용은 [Integration Services 설치](../../integration-services/install-windows/install-integration-services.md)를 참조하세요.  
   
-## 트랜잭션 확장  
- 부모 패키지가 사용하는 트랜잭션은 자식 패키지로 확장될 수 있으므로 두 패키지가 수행한 작업을 모두 커밋하거나 롤백할 수 있습니다. 예를 들어 자식 패키지가 수행한 데이터베이스 삽입에 따라 부모 패키지가 수행한 데이터베이스 삽입을 커밋하거나 롤백할 수 있고 그 반대의 경우도 마찬가지로 적용됩니다. 자세한 내용은 [Inherited Transactions](../Topic/Inherited%20Transactions.md)을 참조하세요.  
+## <a name="extending-transactions"></a>트랜잭션 확장  
+ 부모 패키지가 사용하는 트랜잭션은 자식 패키지로 확장될 수 있으므로 두 패키지가 수행한 작업을 모두 커밋하거나 롤백할 수 있습니다. 예를 들어 자식 패키지가 수행한 데이터베이스 삽입에 따라 부모 패키지가 수행한 데이터베이스 삽입을 커밋하거나 롤백할 수 있고 그 반대의 경우도 마찬가지로 적용됩니다. 자세한 내용은 [Inherited Transactions](http://msdn.microsoft.com/library/90db5564-d41e-4cfe-8c9e-4e68d41eff1c)을 참조하세요.  
   
-## 로깅 세부 정보 전달  
+## <a name="propagating-logging-details"></a>로깅 세부 정보 전달  
  패키지 실행 태스크에서 실행하는 자식 패키지가 로깅을 사용하도록 구성될 수도 있고 그렇지 않을 수도 있지만 자식 패키지는 항상 로그 세부 정보를 부모 패키지로 전달합니다. 로깅을 사용하도록 패키지 실행 태스크를 구성하면 자식 패키지에서 전달된 로그 세부 정보가 기록됩니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
-## 자식 패키지에 값 전달  
+## <a name="passing-values-to-child-packages"></a>자식 패키지에 값 전달  
  자식 패키지는 자신을 호출한 다른 패키지, 일반적으로 부모 패키지에서 전달된 값을 사용하는 경우가 많습니다. 부모 패키지에서 전달된 값을 사용할 경우 다음과 같은 시나리오에서 도움이 됩니다.  
   
 -   큰 워크플로의 각 부분이 서로 다른 패키지에 할당됩니다. 예를 들어 한 패키지에서는 매일 데이터를 다운로드하고, 데이터를 요약하고, 요약 데이터 값을 변수에 할당하고, 데이터 추가 처리를 위해 다른 패키지로 값을 전달합니다.  
@@ -95,25 +100,25 @@ caps.handback.revision: 63
   
  부모 패키지 변수는 패키지 실행 태스크 범위나 패키지 등의 부모 컨테이너에서 정의할 수 있습니다. 동일한 이름을 가진 변수가 여러 개이면 패키지 실행 태스크 범위에서 정의된 변수나 범위에서 해당 태스크에 가장 가까운 변수가 사용됩니다.  
   
- 자세한 내용은 [자식 패키지에서 변수 및 매개 변수의 값 사용](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md)을 참조하세요.  
+ 자세한 내용은 [자식 패키지에서 변수 및 매개 변수의 값 사용](../../integration-services/packages/legacy-package-deployment-ssis.md#child)을 참조하세요.  
   
-### 부모 패키지 변수 액세스  
+### <a name="accessing-parent-package-variables"></a>부모 패키지 변수 액세스  
  자식 패키지는 스크립트 태스크를 사용하여 부모 패키지 변수에 액세스할 수 있습니다. **스크립트 태스크 편집기** 의 **스크립트**페이지에서 부모 패키지 변수의 이름을 입력하는 경우 변수 이름에 **User:** 를 포함하지 마십시오. 그렇지 않으면 부모 패키지를 실행할 때 자식 패키지에서 변수를 찾을 수 없습니다.  
   
-## 패키지 실행 태스크 구성  
+## <a name="configuring-the-execute-package-task"></a>패키지 실행 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
--   [패키지 실행 태스크 편집기](../../integration-services/control-flow/execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../../integration-services/control-flow/execute-package-task-editor.md)  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 프로그래밍 방식으로 패키지 실행 태스크 구성  
+## <a name="configuring-the-execute-package-task-programmatically"></a>프로그래밍 방식으로 패키지 실행 태스크 구성  
  이러한 속성을 프로그래밍 방식으로 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [N:Microsoft.SqlServer.Dts.Tasks.ExecutePackageTask](https://technet.microsoft.com/library/microsoft.sqlserver.dts.tasks.executepackagetask\(v=sql.110\).aspx)  

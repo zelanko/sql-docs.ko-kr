@@ -1,31 +1,36 @@
 ---
-title: "유사 항목 그룹화 변환 편집기(열 탭) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtransformation.columns.f1"
-helpviewer_keywords: 
-  - "유사 항목 그룹화 변환 편집기"
+title: "유사 항목 그룹화 변환 편집기 (열 탭) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+helpviewer_keywords:
+- Fuzzy Grouping Transformation Editor
 ms.assetid: 24f4539f-2a9f-4acd-acc7-06228a07f7df
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6040dde176f4f92674fd267388ff28a08499137b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 유사 항목 그룹화 변환 편집기(열 탭)
+# <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>유사 항목 그룹화 변환 편집기(열 탭)
   **유사 항목 그룹화 변환 편집기** 대화 상자의 **열** 탭을 사용하여 중복 값을 가진 행을 그룹화하는 데 사용할 열을 지정할 수 있습니다.  
   
  유사 항목 그룹화 변환에 대한 자세한 내용은 [Fuzzy Grouping Transformation](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  중복 값을 가진 행을 그룹화하는 데 사용할 입력 열을 이 목록에서 선택합니다.  
   
@@ -66,8 +71,8 @@ caps.handback.revision: 30
  **비교 플래그**  
  문자열 비교 옵션에 대한 자세한 내용은 [문자열 데이터 비교](../../../integration-services/data-flow/comparing-string-data.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../../integration-services/integration-services-error-and-message-reference.md)   
- [유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
+ [유사 항목 그룹화 변환을 사용 하 여 유사한 데이터 행 식별](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
   

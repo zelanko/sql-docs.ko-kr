@@ -1,29 +1,34 @@
 ---
-title: "추적 중 값 또는 데이터 열 찾기(SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "추적 실행 중 검색"
-  - "추적 [SQL Server], 실행"
-  - "추적 [SQL Server], 추적 실행 중 검색"
+title: "(SQL Server Profiler)를 추적 중 값 또는 데이터 열 찾기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- searching while trace running
+- traces [SQL Server], running
+- traces [SQL Server], searching while trace running
 ms.assetid: fa5212af-1f49-4227-9d80-58003062146f
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 83cd1c1c674ec14926a2d11e8e4469b59ee4e6b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 추적 중 값 또는 데이터 열 찾기(SQL Server Profiler)
+# <a name="find-a-value-or-data-column-while-tracing-sql-server-profiler"></a>추적 중 값 또는 데이터 열 찾기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적 실행 중에 추적 출력에서 특정 값이나 데이터 열을 검색하는 방법에 대해 설명합니다.  
   
-### 추적 실행 중에 값 또는 데이터 열을 찾으려면  
+### <a name="to-find-a-value-or-data-column-while-running-a-trace"></a>추적 실행 중에 값 또는 데이터 열을 찾으려면  
   
 1.  추적 실행 중에 추적 결과의 행을 클릭합니다.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 21
   
      1단계에서 선택한 행에서 검색이 시작됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   

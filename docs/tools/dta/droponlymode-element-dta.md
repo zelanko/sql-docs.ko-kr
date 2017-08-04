@@ -1,29 +1,34 @@
 ---
-title: "DropOnlyMode 요소(DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "DropOnlyMode 요소"
+title: "DropOnlyMode 요소 (DTA) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- DropOnlyMode element
 ms.assetid: 80960676-7581-4074-889b-80ee665963dd
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fac9ba968a7288b7bb7b9a31f93aeb1b597b7ba7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# DropOnlyMode 요소(DTA)
+# <a name="droponlymode-element-dta"></a>DropOnlyMode 요소(DTA)
   데이터베이스 엔진 튜닝 관리자가 튜닝 세션 동안에 기존 인덱스, 인덱싱된 뷰 또는 파티션을 삭제하는 것만 고려해야 하도록 지정합니다. 이 튜닝 옵션을 지정하면 새 물리적인 디자인 구조는 고려되지 않습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -33,7 +38,7 @@ caps.handback.revision: 14
       <DropOnlyMode>...</DropOnlyMode>  
 ```  
   
-## 요소 특징  
+## <a name="element-characteristics"></a>요소 특징  
  **데이터 형식 및 길이**  
   
  **기본값**  
@@ -42,16 +47,16 @@ caps.handback.revision: 14
   
 -   [FeatureSet 요소&#40;DTA&#41;](../../tools/dta/featureset-element-dta.md)  
   
--   [Partitioning 요소&#40;DTA&#41;](../../tools/dta/partitioning-element-dta.md)  
+-   [분할 요소 &#40; DTA &#41;](../../tools/dta/partitioning-element-dta.md)  
   
 -   [KeepExisting 요소&#40;DTA&#41;](../../tools/dta/keepexisting-element-dta.md)는 **ALL**로 설정됨  
   
-## 요소 관계  
+## <a name="element-relationships"></a>요소 관계  
  **부모 요소**: [TuningOptions 요소&#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)  
   
  **자식 요소**  
   
-## 예제  
+## <a name="example"></a>예제  
  다음 예에서는 **TuningOptions** 가 지정된 데이터베이스 엔진 튜닝 관리자 XML 입력 파일의 **DropOnlyMode** 섹션을 보여 줍니다. 이 예에서 튜닝 시간은 24시간(1440분)으로 제한되며 기존의 모든 클러스터형 인덱스 및 비클러스터형 인덱스는 삭제 처리됩니다.  
   
 ```xml  
@@ -62,7 +67,7 @@ caps.handback.revision: 14
 </TuningOptions>  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

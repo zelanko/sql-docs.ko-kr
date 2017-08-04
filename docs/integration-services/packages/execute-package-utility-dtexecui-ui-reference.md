@@ -1,44 +1,49 @@
 ---
-title: "패키지 실행 유틸리티(DtExecUI) UI 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.dtexecui.setvalues.f1"
-  - "sql13.dts.dtexecui.reporting.f1"
-  - "sql13.dts.dtexecui.datasources.f1"
-  - "sql13.dts.dtexecui.commandfiles.f1"
-  - "sql13.dts.dtexecui.logging.f1"
-  - "sql13.dts.dtexecui.general.f1"
-  - "sql13.dts.dtexecui.verification.f1"
-  - "sql13.dts.dtexecui.executionoptions.f1"
-  - "sql13.dts.dtexecui.commandline.f1"
-  - "sql13.dts.dtexecui.configuration.f1"
-helpviewer_keywords: 
-  - "DTExecUI 유틸리티"
+title: "실행 패키지 유틸리티 (dtexecui) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.dtexecui.setvalues.f1
+- sql13.dts.dtexecui.reporting.f1
+- sql13.dts.dtexecui.datasources.f1
+- sql13.dts.dtexecui.commandfiles.f1
+- sql13.dts.dtexecui.logging.f1
+- sql13.dts.dtexecui.general.f1
+- sql13.dts.dtexecui.verification.f1
+- sql13.dts.dtexecui.executionoptions.f1
+- sql13.dts.dtexecui.commandline.f1
+- sql13.dts.dtexecui.configuration.f1
+helpviewer_keywords:
+- DTExecUI utility
 ms.assetid: 3d71df39-126b-4c8e-bd77-128bbd5b0887
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 2be36b0dcc8c6c87b1765607ecdb337c24ba83cd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 패키지 실행 유틸리티(DtExecUI) UI 참조
-  **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 열거나 명령 프롬프트에서 **dtexecui**를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
+# <a name="execute-package-utility-dtexecui"></a>실행 패키지 유틸리티 (dtexecui)
+  **패키지 실행 유틸리티** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 이 유틸리티는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 및 파일 시스템의 세 위치 중 하나에 저장된 패키지를 실행합니다. 이 사용자 인터페이스는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 열거나 명령 프롬프트에서 **dtexecui** 를 입력하여 열 수 있으며 **DTExec** 명령 프롬프트 도구를 사용하여 패키지를 실행하는 방법 대신 사용할 수 있습니다.  
   
- 패키지는 **dtexecui.exe** 유틸리티와 같은 프로세스로 실행됩니다. 이 유틸리티는 32비트 도구이므로 패키지는 WOW(Windows on Win32)에서 실행되는 64비트 환경에서 **dtexecui.exe**를 사용하여 실행됩니다. 64비트 컴퓨터에서 dtexecui.exe 유틸리티를 사용하여 명령을 개발하고 테스트하는 경우에는 프로덕션 서버에서 명령을 배포하거나 예약하기 전에 64비트 버전의 **dtexec.exe**를 사용하여 64비트 모드에서 명령을 테스트해야 합니다.  
+ 패키지는 **dtexecui.exe** 유틸리티와 같은 프로세스로 실행됩니다. 이 유틸리티는 32비트 도구이므로 패키지는 WOW(Windows on Win32)에서 실행되는 64비트 환경에서 **dtexecui.exe** 를 사용하여 실행됩니다. 64비트 컴퓨터에서 dtexecui.exe 유틸리티를 사용하여 명령을 개발하고 테스트하는 경우에는 프로덕션 서버에서 명령을 배포하거나 예약하기 전에 64비트 버전의 **dtexec.exe** 를 사용하여 64비트 모드에서 명령을 테스트해야 합니다.  
   
  **패키지 실행 유틸리티** 는 **DTExec** 명령 프롬프트 도구용 그래픽 사용자 인터페이스입니다. 이 사용자 인터페이스를 사용하면 옵션을 쉽게 구성할 수 있으며 지정한 옵션으로 패키지 실행 시 **DTExec** 명령 프롬프트 도구에 전달되는 명령줄이 자동으로 조합됩니다.  
   
  **패키지 실행 유틸리티** 를 사용하여 **DTExec** 직접 실행 시 사용하는 명령줄을 조합할 수도 있습니다.  
   
-### SQL Server Management Studio에서 패키지 실행 유틸리티를 열려면  
+### <a name="to-open-execute-package-utility-in-sql-server-management-studio"></a>SQL Server Management Studio에서 패키지 실행 유틸리티를 열려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다.  
   
@@ -46,27 +51,27 @@ caps.handback.revision: 39
   
 3.  **서버에 연결** 대화 상자의 **서버 이름** 목록에 서버 이름을 입력하고 **연결**을 클릭합니다.  
   
-4.  **저장된 패키지** 폴더 및 하위 폴더를 확장하고 실행할 패키지를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
+4.  **저장된 패키지**폴더 및 하위 폴더를 확장하고 실행할 패키지를 마우스 오른쪽 단추로 클릭한 다음 **패키지 실행**을 클릭합니다.  
   
-### 명령 프롬프트에서 패키지 실행 유틸리티를 열려면  
+### <a name="to-open-the-execute-package-utility-at-the-command-prompt"></a>명령 프롬프트에서 패키지 실행 유틸리티를 열려면  
   
 -   명령 프롬프트 창에서 **dtexecui**를 실행합니다.  
   
  다음 섹션에서는 **패키지 실행 유틸리티** 대화 상자의 페이지에 대해 설명합니다.  
   
-## 일반 페이지  
+## <a name="general-page"></a>일반 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **일반** 페이지를 사용하여 패키지 이름과 위치를 지정할 수 있습니다.  
   
  패키지 실행 유틸리티(dtexecui.exe)는 패키지가 원격 서버에 저장되어 있어도 항상 로컬 컴퓨터에서 패키지를 실행합니다. 원격 패키지가 원격 서버에 저장된 구성 파일을 사용하면 패키지 실행 유틸리티에서 해당 구성을 찾을 수 없으므로 패키지가 실패합니다. 이 문제를 방지하려면 \\\myserver\myfile과 같은 UNC(범용 명명 규칙) 공유 이름을 사용하여 구성을 참조해야 합니다.  
   
-### 정적 옵션  
+### <a name="static-options"></a>정적 옵션  
  **패키지 원본**  
  다음 옵션을 사용하여 실행할 패키지의 위치를 지정합니다.  
   
 |||  
 |-|-|  
 |Value|Description|  
-|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** *username* 및 **/PASSWORD** *password* 옵션이 추가됩니다.|  
+|**SQL Server**|패키지가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있으면 이 옵션을 선택합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 지정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증의 사용자 이름과 암호를 입력합니다. 사용자 이름과 암호를 입력할 때마다 명령 프롬프트에 **/USER** *username* 및 **/PASSWORD** *password* options to the comm및 prompt.|  
 |**파일 시스템**|패키지가 파일 시스템에 있으면 이 옵션을 선택합니다.|  
 |**SSIS 패키지 저장소**|패키지가 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소에 있으면 이 옵션을 선택합니다.|  
   
@@ -78,9 +83,9 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-### 동적 옵션  
+### <a name="dynamic-options"></a>동적 옵션  
   
-#### 패키지 원본 = SQL Server  
+#### <a name="package-source--sql-server"></a>패키지 원본 = SQL Server  
  **Server**  
  패키지가 있는 서버 이름을 입력하거나 목록에서 서버를 선택합니다.  
   
@@ -91,19 +96,19 @@ caps.handback.revision: 39
  Windows 인증을 사용하고 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 계정으로 로그온하려면 이 옵션을 선택합니다.  
   
  **SQL Server 인증 사용**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 이 옵션을 선택합니다. 사용자가 지정한 로그인 이름과 암호를 사용하여 트러스트되지 않은 연결로부터 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 계정이 설정되었는지 및 지정한 암호가 전에 기록한 암호와 일치하는지를 확인하여 인증을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 로그인 계정을 찾을 수 없으면 인증이 실패하고 오류 메시지가 나타납니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 이 옵션을 선택합니다. 사용자가 지정한 로그인 이름과 암호를 사용하여 트러스트되지 않은 연결로부터 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 계정이 설정되었는지 및 지정한 암호가 전에 기록한 암호와 일치하는지를 확인하여 인증을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 로그인 계정을 찾을 수 없으면 인증이 실패하고 오류 메시지가 나타납니다.  
   
 > [!IMPORTANT]  
 >  가능하면 Windows 인증을 사용하세요.  
   
  **패키지**  
- 패키지 이름을 입력하거나 줄임표 단추**(...)**를 클릭하여 **SSIS 패키지 선택** 대화 상자에서 패키지를 찾습니다.  
+ 패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 **SSIS 패키지 선택** 대화 상자에서 패키지를 찾습니다.  
   
-#### 패키지 원본 = 파일 시스템  
+#### <a name="package-source--file-system"></a>패키지 원본 = 파일 시스템  
  **패키지**  
- 패키지 이름을 입력하거나 줄임표 단추**(...)**를 클릭하여 열기 대화 상자에서 패키지를 찾습니다. 기본적으로 이 대화 상자는 .dtsx 확장명을 가진 파일만 표시합니다.  
+ 패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 열기 대화 상자에서 패키지를 찾습니다. 기본적으로 이 대화 상자는 .dtsx 확장명을 가진 파일만 표시합니다.  
   
-#### 패키지 원본 = SSIS 패키지 저장소  
+#### <a name="package-source--ssis-package-store"></a>패키지 원본 = SSIS 패키지 저장소  
  **Server**  
  패키지가 있는 컴퓨터 이름을 입력하거나 목록에서 컴퓨터를 선택합니다.  
   
@@ -117,12 +122,12 @@ caps.handback.revision: 39
  **SSIS 패키지 저장소**에 저장된 패키지를 실행하는 경우 이 옵션을 사용할 수 없습니다.  
   
  **패키지**  
- 패키지 이름을 입력하거나 줄임표 단추**(...)**를 클릭하여 **SSIS 패키지 선택** 대화 상자에서 패키지를 찾습니다.  
+ 패키지 이름을 입력하거나 줄임표 단추 **(...)** 를 클릭하여 **SSIS 패키지 선택** 대화 상자에서 패키지를 찾습니다.  
   
-## 구성 페이지  
+## <a name="configurations-page"></a>구성 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **구성** 페이지를 사용하여 런타임에 로드할 구성 파일을 선택하고 이러한 파일의 로드 순서를 지정할 수 있습니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **구성 파일**  
  패키지가 사용하는 구성을 나열합니다. 구성 파일을 사용할 때마다 명령 프롬프트에 **/CONFIGFILE filename** 옵션이 추가됩니다.  
   
@@ -144,11 +149,11 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 명령 파일 페이지  
+## <a name="command-files-page"></a>명령 파일 페이지  
  	**패키지 실행 유틸리티** 대화 상자의 **명령 파일** 페이지를 사용하여 런타임에 로드할 명령 파일을 선택할 수 있습니다.  
   
-### 옵션  
- **명령 파일**  
+### <a name="options"></a>옵션  
+ **Command files**  
  패키지에서 사용하는 명령 파일을 나열합니다. 패키지는 여러 파일을 사용하여 명령줄 옵션을 설정할 수 있습니다.  
   
  **화살표 키**  
@@ -166,10 +171,10 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 연결 관리자 페이지  
+## <a name="connection-managers-page"></a>연결 관리자 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **연결 관리자** 페이지를 사용하여 패키지가 사용하는 연결 관리자의 연결 문자열을 편집할 수 있습니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **연결 관리자**  
  **연결 문자열** 열을 편집할 수 있도록 하려면 확인란을 선택합니다.  
   
@@ -185,10 +190,10 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 실행 옵션 페이지  
+## <a name="execution-options-page"></a>실행 옵션 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **실행 옵션** 페이지를 사용하여 패키지에 대한 런타임 옵션을 지정할 수 있습니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **유효성 검사 경고 발생 시 패키지 실패**  
  유효성 검사 경고가 발생할 경우 패키지가 실패하는지 여부를 나타냅니다.  
   
@@ -205,7 +210,7 @@ caps.handback.revision: 39
  패키지 검사점을 사용하는 경우 패키지가 사용하는 검사점 파일을 나열합니다.  
   
  **찾아보기**  
- 패키지 검사점을 사용하는 경우 **열기** 대화 상자에서 찾아보기 단추**(...)**를 클릭하여 검사점 파일을 찾습니다. 검사점 파일이 이미 지정되어 있는 경우에는 선택한 파일로 바뀝니다.  
+ 패키지 검사점을 사용하는 경우 **열기** 대화 상자에서 찾아보기 단추 **(...)** 를 클릭하여 검사점 파일을 찾습니다. 검사점 파일이 이미 지정되어 있는 경우에는 선택한 파일로 바뀝니다.  
   
  **다시 시작 옵션 무시**  
  패키지 검사점을 사용하는 경우 다시 시작 옵션을 무시할 것인지 여부를 나타납니다.  
@@ -219,10 +224,10 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 보고 페이지  
+## <a name="reporting-page"></a>보고 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **보고** 페이지를 사용하여 패키지 실행 시 콘솔에 기록할 패키지 정보 및 이벤트를 지정할 수 있습니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **콘솔 이벤트**  
  보고할 이벤트와 메시지 유형을 나타냅니다.  
   
@@ -268,7 +273,7 @@ caps.handback.revision: 39
  **실행 GUID**  
  패키지 실행 인스턴스의 GUID를 보고하려면 선택합니다.  
   
- ** 메시지 **  
+ **메시지**  
  메시지를 보고하려면 선택합니다.  
   
  **시작/종료 시간**  
@@ -280,10 +285,10 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 로깅 페이지  
+## <a name="logging-page"></a>로깅 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **로깅** 페이지를 사용하여 런타임에 로그 공급자를 패키지에서 사용 가능하게 만들 수 있습니다. 로그에 연결하는 데 사용할 패키지 로그 공급자 유형 및 연결 문자열을 입력합니다. 로그 공급자를 입력할 때마다 명령 프롬프트에 **/LOGGER***classid* 옵션이 추가됩니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **로그 공급자**  
  목록에서 로그 공급자를 선택합니다.  
   
@@ -299,10 +304,10 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 값 설정 페이지  
+## <a name="set-values-page"></a>값 설정 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **값 설정** 페이지에서 속성의 경로 및 해당 속성 값을 입력하여 패키지, 실행 파일, 연결, 변수 및 로그 공급자의 속성 값을 설정할 수 있습니다. 경로를 입력할 때마다 명령 프롬프트에 **/SET***propertypath;value* 옵션이 추가됩니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **속성 경로**  
  속성의 경로를 입력합니다. 경로 구문에서는 백슬래시(\\)를 사용하여 다음 항목이 컨테이너임을 나타내고, 마침표(.)를 사용하여 다음 항목이 속성임을 나타내고, 대괄호를 사용하여 컬렉션 멤버임을 나타냅니다. 멤버는 해당 멤버의 인덱스 또는 이름으로 식별할 수 있습니다. 예를 들어 패키지 변수의 속성 경로는 \Package.Variables[MyVariable].Value입니다.  
   
@@ -318,10 +323,10 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 확인 페이지  
+## <a name="verification-page"></a>확인 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **확인** 페이지를 사용하여 패키지 확인 조건을 설정할 수 있습니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **서명된 패키지만 실행**  
  서명된 패키지만 실행하려면 선택합니다.  
   
@@ -349,17 +354,17 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 명령줄 페이지  
+## <a name="command-line-page"></a>명령줄 페이지  
  **패키지 실행 유틸리티** 대화 상자의 **명령줄** 노드를 사용하여 여러 대화 상자에서 만든 옵션으로 생성한 명령줄을 편집할 수 있습니다.  
   
-### 옵션  
+### <a name="options"></a>옵션  
  **원래 옵션 복원**  
  명령줄을 원래 상태로 복원하려면 클릭합니다. **수동으로 명령줄 편집** 옵션을 사용하여 수정했는데 원래 명령줄 옵션을 복원하려는 경우 이 옵션을 사용합니다.  
   
  **수동으로 명령줄 편집**  
  **명령줄** 입력란에서 명령줄을 편집하려면 클릭합니다.  
   
- **명령줄**  
+ **Command line**  
  현재 명령줄을 표시합니다. 명령줄을 수동으로 편집하는 옵션을 선택한 경우 편집할 수 있습니다.  
   
  **Execute**  
@@ -368,7 +373,7 @@ caps.handback.revision: 39
  **닫기**  
  **패키지 실행 유틸리티** 대화 상자를 닫으려면 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [dtexec 유틸리티](../../integration-services/packages/dtexec-utility.md)  
   
   

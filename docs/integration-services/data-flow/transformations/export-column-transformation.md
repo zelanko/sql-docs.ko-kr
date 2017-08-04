@@ -1,34 +1,39 @@
 ---
 title: "열 내보내기 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.exportcolumntrans.f1"
-helpviewer_keywords: 
-  - "데이터 내보내기"
-  - "추가 옵션 [Integration Services]"
-  - "열 내보내기 변환 [Integration Services]"
-  - "열 [Integration Services], 내보내기"
-  - "데이터 삽입"
-  - "잘림 옵션 [Integration Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.exportcolumntrans.f1
+helpviewer_keywords:
+- exporting data
+- append options [Integration Services]
+- Export Column transformation [Integration Services]
+- columns [Integration Services], exporting
+- inserting data
+- truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
 caps.latest.revision: 45
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 45
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 열 내보내기 변환
+# <a name="export-column-transformation"></a>열 내보내기 변환
   열 내보내기 변환은 데이터 흐름에서 데이터를 읽어 파일에 삽입합니다. 예를 들어 데이터 흐름에 각 제품 사진과 같은 제품 정보가 포함되어 있으면 열 내보내기 변환을 사용하여 이미지를 파일에 저장할 수 있습니다.  
   
-## 추가 및 잘림 옵션  
+## <a name="append-and-truncate-options"></a>추가 및 잘림 옵션  
  다음 표에서는 추가 및 잘림 옵션 설정이 결과에 미치는 영향을 설명합니다.  
   
 |추가|잘라내기|파일 존재 여부|결과|  
@@ -42,7 +47,7 @@ caps.handback.revision: 45
 |True|False|예|이 변환은 파일을 열고 해당 파일의 끝에 데이터를 씁니다.|  
 |True|True|예|이 변환은 디자인 타임 유효성 검사에 실패합니다. 두 속성을 모두 **true**로 설정하면 안 됩니다.|  
   
-## 열 내보내기 변환 구성  
+## <a name="configuration-of-the-export-column-transformation"></a>열 내보내기 변환 구성  
  다음과 같은 방법으로 열 내보내기 변환을 구성할 수 있습니다.  
   
 -   데이터를 쓸 파일 경로가 포함된 열과 데이터 열을 지정합니다.  
@@ -64,7 +69,7 @@ caps.handback.revision: 45
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

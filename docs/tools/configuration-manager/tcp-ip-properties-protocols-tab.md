@@ -1,25 +1,30 @@
 ---
-title: "TCP/IP 속성(프로토콜 탭) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TCP/IP [SQL Server], 구성 옵션"
+title: "TCP/IP 속성 (프로토콜 탭) | Microsoft Docs"
+ms.custom: 
+ms.date: 08/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TCP/IP [SQL Server], configuration options
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 caps.latest.revision: 38
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c1a3d4995d3cc79f9a31533b918268f14204d511
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # TCP/IP 속성(프로토콜 탭)
-  **TCP/IP 속성** 대화 상자를 사용하여 TCP/IP 프로토콜 옵션을 구성합니다. 세부 정보 창에 개별 IP 주소 구성을 표시하려면 왼쪽 창에서 **TCP/IP**를 클릭합니다.  
+  **TCP/IP 속성** 대화 상자를 사용하여 TCP/IP 프로토콜 옵션을 구성합니다. 세부 정보 창에 개별 IP 주소 구성을 표시하려면 왼쪽 창에서 **TCP/IP** 를 클릭합니다.  
   
  변경 내용을 적용하려면 Microsoft SQL Server를 다시 시작해야 합니다.  
   
@@ -38,6 +43,7 @@ caps.handback.revision: 38
   
 ## 관련 항목:  
  [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [TCP/IP를 사용하여 유효한 연결 문자열 만들기](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [TCP IP를 사용 하 여 유효한 연결 문자열 만들기](https://msdn.microsoft.com/library/ms191260.aspx)  
   
   
+

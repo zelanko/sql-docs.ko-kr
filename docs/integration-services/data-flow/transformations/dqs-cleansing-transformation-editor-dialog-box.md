@@ -1,25 +1,30 @@
 ---
 title: "DQS 정리 변환 편집기 대화 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssdqs.designer.cleansing.f1"
-  - "sql13.SSDQS.DESIGNER.DQCONNECTION.F1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssdqs.designer.cleansing.f1
+- sql13.SSDQS.DESIGNER.DQCONNECTION.F1
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee0247e25e5ada17f3d79ce9ba63576a5b866b42
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# DQS 정리 변환 편집기 대화 상자
+# <a name="dqs-cleansing-transformation-editor-dialog-box"></a>DQS 정리 변환 편집기 대화 상자
   **DQS 정리 변환 편집기** 대화 상자를 통해 DQS(Data Quality Services)를 사용하여 데이터를 수정할 수 있습니다. 자세한 내용은 [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md)을(를) 참조하세요.  
   
  변환에 대한 자세한 내용은 [DQS Cleansing Transformation](../../../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)을 참조하십시오.  
@@ -53,7 +58,7 @@ caps.handback.revision: 16
  연결된 데이터 원본에 대한 기존 DQS 기술 자료를 선택합니다. DQS 기술 자료에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하십시오.  
   
  **연결 암호화**  
- DQS 서버와 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 간 데이터 전송을 암호화하기 위해 연결을 암호화할지 여부를 지정합니다.  
+ DQS 서버와 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]간 데이터 전송을 암호화하기 위해 연결을 암호화할지 여부를 지정합니다.  
   
  **사용 가능한 도메인**  
  선택한 기술 자료에 사용 가능한 도메인을 나열합니다. 단일 도메인과 둘 이상의 단일 도메인을 포함하는 복합 도메인의 두 가지 도메인 유형이 있습니다.  
@@ -127,7 +132,7 @@ caps.handback.revision: 16
   
 3.  **추가**를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 원본에 데이터 품질 규칙 적용](../../../integration-services/data-flow/transformations/apply-data-quality-rules-to-data-source.md)  
   
   

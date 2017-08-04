@@ -1,0 +1,73 @@
+---
+title: "전역 설정 (테스터) (OracleToSQL) | Microsoft Docs"
+ms.prod: sql-non-specified
+ms.custom: 
+ms.date: 01/19/2017
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- sql-ssma
+ms.tgt_pltfrm: 
+ms.topic: article
+ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
+caps.latest.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: v-thobro
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 20c2dcbf26307c99830909447eb23679ffd3ac96
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
+---
+# <a name="global-settings-tester-oracletosql"></a>전역 설정 (테스터) (OracleToSQL)
+테스터 페이지를 사용 하 여 **전역 설정** SSMA 테스터에 대 한 설정을 지정 하려면 대화 상자.  
+  
+테스터 설정에 액세스 하려면는 **도구** 메뉴 선택 **전역 설정**, 클릭 하 고 **테스터** 왼쪽 창의 맨 아래에 있습니다.  
+  
+## <a name="options"></a>옵션  
+**테스트 가능한 개체 분석**  
+이 설정은 테스트 가능한 개체의 분석을 수행할 것인지를 지정 합니다. 선택 **예** SSMA 테스터를 분석 하 고 자동으로 종속 개체를 확인 하려는 경우. 기본 옵션 집합이 **예**합니다.  
+  
+다음 옵션은이 설정에 대해 사용할 수 있습니다.  
+  
+1.  예  
+  
+2.  아니요  
+  
+**보조 테이블 절약 모드**  
+이 설정은 테스트 사례 실행 하는 동안 만든 내부 보조 테이블을 저장 하는 방법을 지정 합니다. 이 특정 설정에 대해 다음 옵션을 설정할 수 있습니다.  
+  
+1.  항상 삭제  
+  
+2.  항상 저장  
+  
+3.  테이블 비교에 실패 한 경우 저장  
+  
+4.  테이블 비교에 실패 한 경우 사용자에 게 확인  
+  
+기본 옵션 집합이: **항상 삭제**합니다.  
+  
+**데이터 롤백을 수행합니다**  
+이 설정은 각 테스트 사례를 실행 한 후에 롤백 작업을 수행할 것인지 여부를 지정 합니다. 기본 옵션 집합이 **아니요**합니다.  
+  
+다음 옵션은이 설정에 대해 사용할 수 있습니다.  
+  
+1.  예  
+  
+2.  아니요  
+  
+**첫 번째 실패 후 테스트 실행을 중지**  
+이 설정은 실행 하는 동안 오류가 발생 한 경우를 현재 실행 중인 테스트 사례를 중지할지 여부를 지정 합니다. 기본 옵션 집합이 **예**합니다.  
+  
+다음 옵션은이 설정에 대해 사용할 수 있습니다.  
+  
+1.  예  
+  
+2.  아니요  
+  
+## <a name="see-also"></a>참고 항목  
+[완료 테스트 사례 준비 &#40; OracleToSQL &#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+  
+

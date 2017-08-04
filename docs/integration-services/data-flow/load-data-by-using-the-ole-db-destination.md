@@ -1,29 +1,34 @@
 ---
-title: "OLE DB 대상을 사용하여 데이터 로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 로드"
-  - "OLE DB 대상 [Integration Services]"
-  - "대상 [Integration Services], OLE DB"
+title: "OLE DB 대상을 사용 하 여 데이터 로드 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- loading data
+- OLE DB destination [Integration Services]
+- destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: eada84a10a9163c3a5bf0757def7948e18bf35da
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB 대상을 사용하여 데이터 로드
+# <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 대상을 사용하여 데이터 로드
   OLE DB 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 원본이 이미 들어 있어야 합니다.  
   
-### OLE DB 대상을 사용하여 데이터를 로드하려면  
+### <a name="to-load-data-using-an-ole-db-destination"></a>OLE DB 대상을 사용하여 데이터를 로드하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 28
   
     -   **테이블 또는 뷰** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택합니다.  
   
-    -   **테이블 또는 뷰 - 빠른 로드** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택한 후에 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건**, **일괄 처리당 행 수** 또는 **최대 삽입 커밋 크기** 중에서 빠른 로드 옵션을 설정합니다.  
+    -   **테이블 또는 뷰 - 빠른 로드** 데이터베이스에서 데이터가 포함된 테이블 또는 뷰를 선택한 후에 **ID 유지**, **Null 유지**, **테이블 잠금**, **CHECK 제약 조건**, **일괄 처리당 행 수**또는 **최대 삽입 커밋 크기**중에서 빠른 로드 옵션을 설정합니다.  
   
     -   **테이블 이름 또는 뷰 이름 변수** 데이터베이스의 테이블 또는 뷰 이름이 포함된 사용자 정의 변수를 선택합니다.  
   
@@ -54,13 +59,13 @@ caps.handback.revision: 28
     > [!NOTE]  
     >  OLE DB 대상은 같은 이름의 열로 자동으로 매핑됩니다.  
   
-9. 오류 출력을 구성하려면 **오류 출력**을 클릭합니다. 자세한 내용은 [데이터 흐름 구성 요소에서 오류 출력 구성](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)을 참조하세요.  
+9. 오류 출력을 구성하려면 **오류 출력**을 클릭합니다. 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
 10. **확인**을 클릭합니다.  
   
 11. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [OLE DB 대상](../../integration-services/data-flow/ole-db-destination.md)   
  [Integration Services 변환](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 경로](../../integration-services/data-flow/integration-services-paths.md)   

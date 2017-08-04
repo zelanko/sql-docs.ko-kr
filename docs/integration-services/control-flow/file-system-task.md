@@ -1,33 +1,38 @@
 ---
 title: "파일 시스템 태스크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.filesystemtask.f1"
-helpviewer_keywords: 
-  - "파일 시스템 태스크 [Integration Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.filesystemtask.f1
+helpviewer_keywords:
+- File System task [Integration Services]
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 0c10a9020fe4fd03e9d71df19a9b16223e3031ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 파일 시스템 태스크
+# <a name="file-system-task"></a>파일 시스템 태스크
   파일 시스템 태스크는 파일 시스템의 파일 및 디렉터리에 대해 작업을 수행합니다. 예를 들어 파일 시스템 태스크를 사용하면 패키지가 디렉터리와 파일을 만들거나 이동 또는 삭제할 수 있습니다. 파일 시스템 태스크를 사용하여 파일과 디렉터리의 특성을 설정할 수도 있습니다. 예를 들어 파일 시스템 태스크는 파일에 숨김 또는 읽기 전용 특성을 설정할 수 있습니다.  
   
  모든 파일 시스템 태스크는 파일이나 디렉터리일 수 있는 원본을 사용합니다. 예를 들어 태스크에서 복사한 파일이나 삭제한 디렉터리가 원본입니다. 파일 연결 관리자를 사용하여 디렉터리 또는 파일을 가리키거나 원본 경로가 포함된 변수 이름을 제공하여 원본을 지정할 수 있습니다. 자세한 내용은 [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md) 및 [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
   
  파일과 디렉터리를 복사 및 이동하는 작업과 파일 이름을 바꾸는 작업은 대상과 원본을 사용합니다. 대상은 파일 연결 관리자나 변수를 사용하여 지정합니다. 대상 파일과 디렉터리의 덮어쓰기를 허용하도록 파일 시스템 태스크를 구성할 수 있습니다. 지정된 이름을 가진 디렉터리가 이미 존재할 경우 실패하는 대신에 해당 디렉터리를 사용하도록 새 디렉터리를 만드는 작업을 구성할 수 있습니다.  
   
-## 미리 정의된 파일 시스템 작업  
+## <a name="predefined-file-system-operations"></a>미리 정의된 파일 시스템 작업  
  파일 시스템 태스크에는 미리 정의된 작업 집합이 포함되어 있습니다. 다음 표에서는 이러한 작업을 설명합니다.  
   
 |연산|Description|  
@@ -49,14 +54,14 @@ caps.handback.revision: 58
   
 -   **파일 시스템 태스크 추가 및 구성** 파일 시스템 태스크를 Foreach 루프 컨테이너에 추가합니다. 파일 시스템 태스크 편집기의 **일반** 페이지에서 **SourceVariable** 또는 **DestinationVariable** 속성을 Foreach 루프 컨테이너에 정의된 변수로 설정합니다.  
   
-## 파일 시스템 태스크에 사용할 수 있는 사용자 지정 로그 항목  
- 다음 표에서는 파일 시스템 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../../integration-services/performance/custom-messages-for-logging.md)을 참조하세요.  
+## <a name="custom-log-entries-available-on-the-file-system-task"></a>파일 시스템 태스크에 사용할 수 있는 사용자 지정 로그 항목  
+ 다음 표에서는 파일 시스템 태스크에 대한 사용자 지정 로그 항목을 설명합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
 |**FileSystemOperation**|태스크에서 수행하는 작업을 보고합니다. 이 로그 항목은 파일 시스템 작업이 시작될 때 기록되며 원본 및 대상에 대한 정보를 포함합니다.|  
   
-## 파일 시스템 태스크 구성  
+## <a name="configuring-the-file-system-task"></a>파일 시스템 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
@@ -67,16 +72,16 @@ caps.handback.revision: 58
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법은 다음 항목을 참조하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
  프로그래밍 방식으로 이러한 속성을 설정하는 방법은 다음 항목을 참조하십시오.  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.FileSystemTask.FileSystemTask>  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 파일을 다운로드 및 업로드하고 서버의 디렉터리를 관리하는 태스크가 있습니다. 자세한 내용은 [FTP Task](../../integration-services/control-flow/ftp-task.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   

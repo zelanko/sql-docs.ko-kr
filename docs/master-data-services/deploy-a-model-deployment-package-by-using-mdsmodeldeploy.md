@@ -1,23 +1,28 @@
 ---
-title: "MDSModelDeploy를 사용하여 모델 배포 패키지 배포 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "MDSModelDeploy를 사용 하 여 모델 배포 패키지 배포 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fb2a4df4-5e0d-4b34-818f-383dbde1b15c
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a678aee3bb185cf8dd44cb69d3c0027c090a81d3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# MDSModelDeploy를 사용하여 모델 배포 패키지 배포
+# <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>MDSModelDeploy를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 MDSModelDeploy 도구를 사용하여 다음 중 하나를 포함하는 패키지를 배포합니다.  
   
 -   모델 개체만  
@@ -29,7 +34,7 @@ caps.handback.revision: 16
 > [!IMPORTANT]  
 >  패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 배포할 수 있습니다. 따라서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에서 만든 패키지는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 이상에 배포할 수 없습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   대상 **환경의** 시스템 관리 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -40,7 +45,7 @@ caps.handback.revision: 16
   
 -   데이터로 모델을 업데이트하려는 경우 배포하려는 버전을 **잠금** 또는 **커밋됨**상태로 만들 수 없습니다.  
   
-### 모델 배포 패키지를 배포하려면  
+### <a name="to-deploy-a-model-deployment-package"></a>모델 배포 패키지를 배포하려면  
   
 1.  새 모델 또는 모델 복제를 배포할지 이전에 복제된 모델을 업데이트할지 여부를 결정합니다. 자세한 내용은 [모델 배포 옵션&#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)을 참조하세요.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 16
   
     -   모든 사용 가능한 옵션을 표시하려면 `MDSModelDeploy` 를 입력하고 Enter 키를 누릅니다.  
   
-    -   옵션에 대한 도움말을 표시하려면 `MDSModelDeploy help OptionName`과 같이 입력합니다. 여기서 *OptionName*은 옵션의 이름입니다.  
+    -   옵션에 대한 도움말을 표시하려면 *과 같이 입력합니다. 여기서* OptionName `MDSModelDeploy help OptionName`은 옵션의 이름입니다.  
   
 4.  (선택 사항) 여러 웹 응용 프로그램이 있는 경우 이 명령을 입력하고 Enter 키를 눌러 배포할 서비스의 이름을 결정합니다.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 16
     > [!IMPORTANT]  
     >  MDSModelDeploy 도구를 사용하여 기존 모델 및 해당 데이터를 업데이트하고 패키지에 엔터티, 특성 또는 대상 모델에 있는 멤버를 포함하지 않는 경우 MDSModelDeploy는 모델에서 해당 엔터티, 특성 또는 멤버를 삭제하지 않습니다.  
   
-     여기서 *PackageName*은 패키지 파일(.pkg)의 이름이고, *ModelName*은 새 모델의 이름이고, *VersionName*은 버전 이름이고, *ServiceName*은 이전 단계에서 반환된 서비스의 이름입니다. 모델 및 버전 이름이 대/소문자가 구분되는 이름과 정확하게 일치하는지 확인합니다.  
+     여기서 *PackageName* 은 패키지 파일(.pkg)의 이름이고, *ModelName* 은 새 모델의 이름이고, *VersionName* 은 버전 이름이고, *ServiceName* 은 이전 단계에서 반환된 서비스의 이름입니다. 모델 및 버전 이름이 대/소문자가 구분되는 이름과 정확하게 일치하는지 확인합니다.  
   
 6.  패키지가 성공적으로 배포되면 "MDSModelDeploy 작업이 성공적으로 완료되었습니다."라는 메시지가 표시됩니다.  
   
@@ -109,12 +114,12 @@ caps.handback.revision: 16
   
      모델을 업데이트할 때 처음 3단계 동안 프로세스가 실패하면 진행되지 않습니다. 그러나 이미 수행한 변경 내용은 롤백되지 않습니다. 4단계에서 프로세스가 실패하면 업데이트 가능한 멤버가 업데이트됩니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  파일 특성, 사용자 및 그룹 권한은 모델 배포 패키지에 포함되지 않습니다. 모델을 배포한 후에 이러한 항목을 수동으로 업데이트해야 합니다. 참조 항목:  
   
 -   [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
-## 관련 항목:  
- [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [모델 &#40; 배포 Master Data services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

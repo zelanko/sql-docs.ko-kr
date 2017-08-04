@@ -1,26 +1,31 @@
 ---
 title: "FTP 연결 관리자 편집기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ftpconnectionmanager.f1"
-helpviewer_keywords: 
-  - "FTP 연결 관리자 편집기"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ftpconnectionmanager.f1
+helpviewer_keywords:
+- FTP Connection Manager Editor
 ms.assetid: 874b6585-255b-4a43-8396-bb08c3e8ac2b
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2028a460ac0e7b56a3ad733150ff20029d72fd97
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# FTP 연결 관리자 편집기
+# <a name="ftp-connection-manager-editor"></a>FTP 연결 관리자 편집기
   **FTP 연결 관리자 편집기** 대화 상자를 사용하여 FTP 서버 연결 속성을 지정할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 26
   
  FTP 연결 관리자에 대한 자세한 내용은 [FTP Connection Manager](../../integration-services/connection-manager/ftp-connection-manager.md)를 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **서버 이름**  
  FTP 서버의 이름을 제공합니다.  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 26
  **연결 테스트**  
  FTP 연결 관리자를 구성했으면 **연결 테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

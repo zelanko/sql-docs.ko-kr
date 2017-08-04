@@ -1,27 +1,32 @@
 ---
 title: "테이블 속성 편집 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "editTabProps"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5213e0c5757afd3a74c8b76f43bf1a2c88ced7e4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 테이블 속성 편집
+# <a name="edit-the-table-properties"></a>테이블 속성 편집
   이 대화 상자를 사용하여 변경을 캡처 중인 선택된 테이블에서 특정 열을 편집할 수 있습니다. 또한 **보안 역할** 및 **캡처 인스턴스** 정보를 편집할 수 있습니다.  
   
-### CDC 인스턴스에 포함할 열을 편집하려면  
+### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>CDC 인스턴스에 포함할 열을 편집하려면  
   
 1.  다음 중 하나 또는 모두를 수행합니다.  
   
@@ -29,13 +34,13 @@ caps.handback.revision: 8
   
     -   더 이상 포함하지 않을 열의 옆에 있는 확인란을 선택 취소합니다.  
   
-### 보안 역할을 편집하려면  
+### <a name="to-edit-the-security-role"></a>보안 역할을 편집하려면  
   
 1.  **보안 역할** 필드에서 새 이름을 입력하거나 보안 역할의 이름을 편집합니다.  
   
-### 새 캡처 인스턴스를 만들려면  
+### <a name="to-create-a-new-capture-instance"></a>새 캡처 인스턴스를 만들려면  
   
-1.  **보안 역할** 섹션의 **이름** 필드에 캡처 인스턴스의 이름을 입력합니다. 기본적으로 이 필드에 입력된 이름의 끝에 **_NEW**를 추가하면 현재 캡처 인스턴스의 이름이 됩니다(예: **old_instance_NEW**).  
+1.  **보안 역할** 섹션의 **이름** 필드에 캡처 인스턴스의 이름을 입력합니다. 기본적으로 이 필드에 입력된 이름의 끝에 **_NEW** 를 추가하면 현재 캡처 인스턴스의 이름이 됩니다(예: **old_instance_NEW**).  
   
 2.  캡처 인스턴스를 다음 중 하나로 저장합니다.  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 8
   
  이 대화 상자에 정보를 입력한 후 **확인** 을 클릭하여 변경 내용을 적용할 수 있습니다.  
   
-## 관련 항목:  
- [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [변경 캡처를 위해 선택된 테이블 변경](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
+## <a name="see-also"></a>관련 항목:  
+ [CDC 인스턴스 속성을 편집 하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [변경을 캡처하도록 선택한 테이블에 변경 내용 확인](../../integration-services/change-data-capture/make-changes-to-the-tables-selected-for-capturing-changes.md)  
   
   

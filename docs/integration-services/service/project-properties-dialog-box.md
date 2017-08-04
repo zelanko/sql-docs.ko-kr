@@ -1,25 +1,30 @@
 ---
 title: "프로젝트 속성 대화 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.isprojectprop.general.f1"
-  - "sql13.ssis.ssms.isprojectprop.permissions.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.isprojectprop.general.f1
+- sql13.ssis.ssms.isprojectprop.permissions.f1
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 106987c75957ab90773e49e22b65fd89d3e417e4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 프로젝트 속성 대화 상자
+# <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 하나의 배포 단위입니다. 각 프로젝트는 패키지, 매개 변수 및 환경 참조를 포함할 수 있습니다. 프로젝트는 검색 가능한 개체이며 데이터베이스 보안 주체의 사용 권한을 정의할 수 있습니다. 프로젝트를 다시 배포하는 경우 이전 버전의 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 저장할 수 있습니다.  
   
  프로젝트 매개 변수와 패키지 매개 변수는 실행 시 패키지 내의 속성에 값을 할당하는 데 사용됩니다. 일부 매개 변수 값은 패키지를 실행하는 데 필요합니다. 환경 변수를 참조하는 매개 변수 값이 있는 경우 프로젝트에 해당 환경 참조가 있어야 프로젝트가 실행됩니다.  
@@ -68,7 +73,7 @@ caps.handback.revision: 9
  **권한** 페이지를 사용하여 프로젝트에 대한 명시적 권한을 보고 설정합니다.  
   
  찾아보기  
- **찾아보기**를 클릭하여 **모든 보안 주체 찾아보기** 대화 상자를 사용하여 권한을 설정하려는 사용자 및 역할을 선택합니다.  
+ **찾아보기** 를 클릭하여 **모든 보안 주체 찾아보기** 대화 상자를 사용하여 권한을 설정하려는 사용자 및 역할을 선택합니다.  
   
  **이름**  
  사용자 또는 역할의 이름을 나열합니다.  
@@ -83,9 +88,9 @@ caps.handback.revision: 9
  사용 권한을 부여하는 사용자 또는 역할을 나열합니다.  
   
  **허용**  
- **권한 부여**를 선택하면 선택한 사용자 또는 역할에 사용 권한이 부여됩니다.  
+ **권한 부여** 를 선택하면 선택한 사용자 또는 역할에 사용 권한이 부여됩니다.  
   
  **거부**  
- **거부**를 선택하면 선택한 사용자 또는 역할에 대해 사용 권한이 거부됩니다.  
+ **거부** 를 선택하면 선택한 사용자 또는 역할에 대해 사용 권한이 거부됩니다.  
   
   

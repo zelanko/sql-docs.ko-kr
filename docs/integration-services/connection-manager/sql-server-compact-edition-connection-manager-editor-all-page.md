@@ -1,31 +1,36 @@
 ---
-title: "SQL Server Compact Edition 연결 관리자 편집기(모든 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sqlmobileconnection.all.f1"
-helpviewer_keywords: 
-  - "SQL Server Compact Connection Manager Editor"
+title: "SQL Server Compact Edition 연결 관리자 편집기 (모든 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.all.f1
+helpviewer_keywords:
+- SQL Server Compact Connection Manager Editor
 ms.assetid: f9fbff4b-c502-44b3-8e7b-398d66e82206
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c55d48a878bfee46c823303ce662baca0d34bfbd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server Compact Edition 연결 관리자 편집기(모든 페이지)
+# <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 연결 관리자 편집기(모든 페이지)
   **SQL Server Compact Edition 연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결하기 위한 속성을 지정할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 연결 관리자에 대한 자세한 내용은 [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **자동 축소 임계값**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에서 자동 축소 프로세스를 실행하기 전에 허용되는 사용 가능한 공간(%)을 지정합니다.  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 26
  **암호**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 암호를 입력합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
+ [SQL Server Compact Edition 연결 관리자 편집기 &#40; 연결 페이지 &#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
   
   

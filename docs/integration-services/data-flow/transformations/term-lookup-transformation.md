@@ -1,32 +1,37 @@
 ---
 title: "용어 조회 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.termlookuptrans.f1"
-helpviewer_keywords: 
-  - "데이터 추출 [Integration Services]"
-  - "추출된 용어와 정확히 일치 [Integration Services]"
-  - "텍스트 추출 [Integration Services]"
-  - "용어 추출 [Integration Services]"
-  - "조회 [Integration Services]"
-  - "추출된 항목 개수"
-  - "용어 조회 변환"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.termlookuptrans.f1
+helpviewer_keywords:
+- extracting data [Integration Services]
+- match extracted terms [Integration Services]
+- text extraction [Integration Services]
+- term extractions [Integration Services]
+- lookups [Integration Services]
+- counting extracted items
+- Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
 caps.latest.revision: 56
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 56
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 용어 조회 변환
+# <a name="term-lookup-transformation"></a>용어 조회 변환
   용어 조회 변환은 변환 입력 열의 텍스트에서 추출된 용어와 참조 테이블에 있는 용어가 일치하는지 확인합니다. 그런 다음 조회 테이블의 용어가 입력 데이터 집합에서 발생한 횟수를 계산하고 해당 개수를 참조 테이블의 용어와 함께 변환 출력의 열에 기록합니다. 이러한 변환은 입력 텍스트를 기준으로 단어 빈도 통계가 모두 포함된 사용자 지정 단어 목록을 만들 때 유용합니다.  
   
  용어 조회 변환은 조회를 수행하기 전에 용어 추출 변환과 동일한 다음과 같은 방식을 사용하여 입력 열의 텍스트에서 단어를 추출합니다.  
@@ -39,7 +44,7 @@ caps.handback.revision: 56
   
  용어 조회 변환에서 대/소문자를 구분하여 일치하는 용어를 검색할 수 있도록 구성하여 용어 검색 방법의 사용자 지정 수위를 높일 수 있습니다.  
   
-## 일치  
+## <a name="matches"></a>일치  
  용어 조회에서는 조회를 수행하고 다음 규칙에 따라 값을 반환합니다.  
   
 -   대/소문자 구분 검색을 수행하도록 변환이 구성된 경우 대/소문자가 다른 일치 항목은 무시됩니다. 예를 들어 *student* 와 *STUDENT* 는 별개의 단어로 취급됩니다.  
@@ -61,12 +66,12 @@ caps.handback.revision: 56
 |참조 용어|Windows, Windows 7 Professional|  
 |출력|Windows|  
   
- 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. %, @, &, $, #, \*, :, ;, ., **,** , !, ?, \<, >, +, =, ^, ~, |, \\, /, (, ), [, ], {, }, “, ‘가 특수 문자에 해당합니다.  
+ 용어 조회 변환에서는 특수 문자가 포함된 명사 및 명사구를 검색할 수 있으며 참조 테이블의 데이터에는 이러한 문자가 포함될 수 있습니다. 특수 문자는 다음과 같습니다: %, @, &, $, #, \*,:,., **,** ,!,?, \<, >, +, =, ^, ~, |, \\, /, (,), [,], {,}, ", 및 '.  
   
-## 데이터 형식  
+## <a name="data-types"></a>데이터 형식  
  용어 조회 변환에서는 데이터 형식이 DT_WSTR 또는 DT_NTEXT인 열만 사용할 수 있습니다. 열에 텍스트가 있지만 데이터 형식이 다른 경우 데이터 변환으로 데이터 흐름에 DT_WSTR 또는 DT_NTEXT 데이터 형식의 열을 추가하고 열 값을 새 열로 복사할 수 있습니다. 그런 다음 데이터 변환의 출력을 용어 조회 변환에 대한 입력으로 사용할 수 있습니다. 자세한 내용은 [Data Conversion Transformation](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)을 참조하세요.  
   
-## 용어 조회 변환 구성  
+## <a name="configuration-the-term-lookup-transformation"></a>용어 조회 변환 구성  
  용어 조회 변환 입력 열에는 열의 용도를 나타내는 InputColumnType 속성이 포함됩니다. InputColumnType에는 다음 값이 포함될 수 있습니다.  
   
 -   값 0은 열이 출력에만 전달되며 조회에서 사용되지 않음을 나타냅니다.  
@@ -101,7 +106,7 @@ caps.handback.revision: 56
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

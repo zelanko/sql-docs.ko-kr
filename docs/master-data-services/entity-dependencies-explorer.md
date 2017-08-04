@@ -1,24 +1,29 @@
 ---
 title: "엔터티 종속성 탐색기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "04/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-keywords: 
-  - "Master Data Services"
+ms.custom: 
+ms.date: 04/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+keywords:
+- Master Data Services
 ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccac7deb9d40896082cddda7c438ebe5f6e53a83
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 엔터티 종속성 탐색기
+# <a name="entity-dependencies-explorer"></a>엔터티 종속성 탐색기
   
 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 2016은 파생 계층을 먼저 정의할 필요 없이 해당 도메인 기반 특성(DBA) 값에 지정된 대로 모델 내의 엔터티 멤버 간의 관계를 시각화하는 대체 방법을 제공하는 새 탐색기 페이지, 엔터티 종속성을 추가합니다.   
   
@@ -43,3 +48,5 @@ caps.handback.revision: 5
   
   
   
+
+

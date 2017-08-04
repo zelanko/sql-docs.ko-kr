@@ -1,34 +1,39 @@
 ---
-title: "데이터베이스 전송 태스크 편집기(데이터베이스 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferdatabasetask.database.f1"
-helpviewer_keywords: 
-  - "데이터베이스 전송 태스크 편집기"
+title: "데이터베이스 전송 태스크 편집기 (데이터베이스 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferdatabasetask.database.f1
+helpviewer_keywords:
+- Transfer Database Task Editor
 ms.assetid: ccdb74d0-4bea-420c-a726-2e0eb8957e0a
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b104103ab5fdde0084cfcadcc82897d71d9a5c11
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터베이스 전송 태스크 편집기(데이터베이스 페이지)
+# <a name="transfer-database-task-editor-databases-page"></a>데이터베이스 전송 태스크 편집기(데이터베이스 페이지)
   **데이터베이스 전송 태스크 편집기** 대화 상자의 **데이터베이스** 페이지를 사용하여 데이터베이스 전송 태스크와 관련된 원본 및 대상 데이터베이스의 속성을 지정할 수 있습니다. 데이터베이스 전송 태스크에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 두 인스턴스 간에 복사 또는 이동합니다. 동일한 서버 내에서 데이터베이스를 복사하는 데도 전송 태스크를 사용할 수 있습니다. 이 태스크에 대한 자세한 내용은 [데이터베이스 전송 태스크](../../integration-services/control-flow/transfer-database-task.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **SourceConnection**  
- 목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>**을 클릭하여 원본 서버에 대한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 원본 서버에 새 연결을 만듭니다.  
   
  **DestinationConnection**  
- 목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>**을 클릭하여 대상 서버에 대한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 대상 서버에 새 연결을 만듭니다.  
   
  **DestinationDatabaseName**  
  대상 서버에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 이름을 지정합니다.  
@@ -52,7 +57,7 @@ caps.handback.revision: 26
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**True**|대상 서버 데이터베이스를 덮어씁니다.|  
 |**False**|대상 서버 데이터베이스를 덮어쓰지 않습니다.|  
@@ -61,7 +66,7 @@ caps.handback.revision: 26
 >  **DestinationOverwrite** 에 대해 **True**를 지정하면 대상 서버 데이터베이스의 데이터를 덮어쓰며 이로 인해 데이터가 손실될 수 있습니다. 이를 방지하려면 데이터베이스 전송 태스크를 실행하기 전에 대상 서버 데이터베이스를 다른 위치에 백업합니다.  
   
  **동작**  
- 데이터베이스를 대상 서버로 복사하려면 **Copy**, 이동하려면 **Move**를 지정합니다.  
+ 데이터베이스를 대상 서버로 복사하려면 **Copy** , 이동하려면 **Move** 를 지정합니다.  
   
  **메서드**  
  원본 서버의 데이터베이스가 온라인 모드에 있을 때 태스크를 실행할지, 아니면 오프라인 모드에 있을 때 실행할지를 지정합니다.  
@@ -81,15 +86,15 @@ caps.handback.revision: 26
   
  이 속성의 옵션은 다음 표에 나열되어 있습니다.  
   
-|값|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**True**|원본 데이터베이스를 다시 연결합니다.|  
 |**False**|원본 데이터베이스를 다시 연결하지 않습니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
- [데이터베이스 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
+ [데이터베이스 전송 태스크 편집기 &#40; 일반 페이지 &#41;](../../integration-services/control-flow/transfer-database-task-editor-general-page.md)   
  [식 페이지](../../integration-services/expressions/expressions-page.md)   
  [SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)  
   

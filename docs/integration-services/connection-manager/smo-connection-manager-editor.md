@@ -1,31 +1,36 @@
 ---
 title: "SMO 연결 관리자 편집기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.smoconnection.f1"
-helpviewer_keywords: 
-  - "SMO 연결 관리자 편집기"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
+helpviewer_keywords:
+- SMO Connection Manager Editor
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d1821b95dc528a4bb61f1efc92458f11f9b92340
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SMO 연결 관리자 편집기
+# <a name="smo-connection-manager-editor"></a>SMO 연결 관리자 편집기
   **SMO 연결 관리자 편집기** 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 전송하는 여러 태스크에 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 구성할 수 있습니다.  
   
  SMO 연결 관리자에 대한 자세한 내용은 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)를 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **서버 이름**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 입력하거나 목록에서 서버 이름을 선택합니다.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 14
  **연결 테스트**  
  구성한 연결을 테스트합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

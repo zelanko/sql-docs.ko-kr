@@ -1,24 +1,29 @@
 ---
-title: "4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "4 단원: SSIS와 오류 흐름 리디렉션 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
 caps.latest.revision: 24
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cfe3634566a7ede28e3c1f5640cfe6e4caa1c351
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가
+# <a name="lesson-4-add-error-flow-redirection-with-ssis"></a>4단원: SSIS를 사용하여 오류 흐름 리디렉션 추가
 변환 프로세스에서 발생할 수 있는 오류를 처리하기 위해 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 변환할 수 없는 데이터를 처리하는 방법을 구성 요소 단위 및 열 단위로 결정할 수 있습니다. 특정 열의 오류를 무시하거나 오류가 발생한 전체 행을 리디렉션하거나 또는 구성 요소 작동이 실패하도록 선택할 수 있습니다. 기본적으로 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 모든 구성 요소는 오류 발생 시 작동이 실패하도록 구성되어 있습니다. 구성 요소 작동이 실패하면 이에 따라 패키지 실행이 실패하고 모든 후속 처리가 중지됩니다.  
   
 변환 중에 처리 오류가 발생할 수 있으므로 오류로 인해 패키지 실행이 중지되지 않도록 발생 가능한 처리 오류를 구성하고 해결하는 것이 좋습니다. 패키지가 성공적으로 실행되도록 오류를 무시할 수 있지만 대부분의 경우 데이터와 오류를 유지하여 나중에 조사하고 재처리할 수 있는 다른 처리 경로로 오류가 발생한 행을 리디렉션하는 것이 좋습니다.  
@@ -30,23 +35,24 @@ caps.handback.revision: 24
 파일에 오류 데이터가 기록되기 전에 스크립트를 사용하여 오류 설명을 가져오는 스크립트 구성 요소를 포함합니다. 그런 다음 처리하지 못한 모든 데이터를 스크립트 변환으로 리디렉션하도록 Lookup Currency Key 변환을 다시 구성합니다.  
   
 > [!IMPORTANT]  
-> 이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**의 설치 및 배포 방법에 대한 자세한 내용은 [CodePlex의 Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하세요.  
+> 이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**, [CodePlex의 Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하세요.  
   
-## 단원의 태스크  
+## <a name="tasks-in-lesson"></a>단원의 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1단계: 3단원 패키지 복사](../integration-services/step-1-copying-the-lesson-3-package.md)  
+-   [1 단계: 3 단원 패키지 복사](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [2단계: 손상된 파일 만들기](../integration-services/step-2-creating-a-corrupted-file.md)  
+-   [2 단계: 손상된 된 파일 만들기](../integration-services/lesson-4-2-creating-a-corrupted-file.md)  
   
--   [3단계: 오류 흐름 리디렉션 추가](../integration-services/step-3-adding-error-flow-redirection.md)  
+-   [3 단계: 오류 흐름 리디렉션 추가](../integration-services/lesson-4-3-adding-error-flow-redirection.md)  
   
--   [4단계: 플랫 파일 대상 추가](../integration-services/step-4-adding-a-flat-file-destination.md)  
+-   [4 단계: 플랫 파일 대상 추가](../integration-services/lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [5단계: 4단원 자습서 패키지 테스트](../integration-services/step-5-testing-the-lesson-4-tutorial-package.md)  
+-   [5 단계: 4 단원 자습서 패키지 테스트](../integration-services/lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
-## 단원 시작  
-[1단계: 3단원 패키지 복사](../integration-services/step-1-copying-the-lesson-3-package.md)  
+## <a name="start-the-lesson"></a>단원 시작  
+[1 단계: 3 단원 패키지 복사](../integration-services/lesson-4-1-copying-the-lesson-3-package.md)  
   
   
   
+

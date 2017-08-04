@@ -1,35 +1,40 @@
 ---
-title: "SUBSTRING(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SUBSTRING 함수"
-  - "식의 일부 반환 [Integration Services]"
+title: "SUBSTRING (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SUBSTRING function
+- part of expression returned [Integration Services]
 ms.assetid: 3a46748a-f5f8-4a6c-9108-673666754068
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 47f7ac32826faacd2ad38c0a09750012222fde7e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SUBSTRING(SSIS 식)
+# <a name="substring-ssis-expression"></a>SUBSTRING(SSIS 식)
   문자 식에서 지정된 위치부터 시작하여 지정된 길이만큼 반환합니다. *position* 매개 변수와 *length* 매개 변수는 정수여야 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 SUBSTRING(character_expression, position, length)  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *character_expression*  
  문자를 추출할 문자 식입니다.  
   
@@ -39,11 +44,11 @@ SUBSTRING(character_expression, position, length)
  *length*  
  부분 문자열의 길이를 문자 수로 지정하는 정수입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## 주의  
- SUBSTRING은 1부터 시작하는 인덱스를 사용합니다. *position*이 1이면 부분 문자열은 *character_expression*의 첫 번째 문자로 시작합니다.  
+## <a name="remarks"></a>주의  
+ SUBSTRING은 1부터 시작하는 인덱스를 사용합니다. *position* 이 1이면 부분 문자열은 *character_expression*의 첫 번째 문자로 시작합니다.  
   
  SUBSTRING은 DT_WSTR 데이터 형식에서만 실행됩니다. 문자열 리터럴이나 DT_STR 데이터 형식의 데이터 열인 *character_expression* 인수는 SUBSTRING이 연산을 수행하기 전에 DT_WSTR 데이터 형식으로 암시적으로 캐스팅됩니다. 다른 데이터 형식은 DT_WSTR 데이터 형식으로 명시적으로 캐스팅되어야 합니다. 자세한 내용은 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md) 및 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
   
@@ -53,7 +58,7 @@ SUBSTRING(character_expression, position, length)
   
  *length* 인수는 문자열 길이를 초과할 수 있습니다. 이 경우 문자열의 나머지가 반환됩니다.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 문자 4부터 시작하여 문자열 리터럴의 두 문자가 반환됩니다. 반환 결과는 "ph"입니다.  
   
 ```  
@@ -90,7 +95,7 @@ SUBSTRING (@PostalCode,6,4)
 SUBSTRING ("Redmond",4,0)  
 ```  
   
-## 관련 항목:  
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

@@ -1,23 +1,28 @@
 ---
 title: "dtexec 유틸리티 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/26/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/26/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 caps.latest.revision: 30
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
+ms.openlocfilehash: 0f9706a6faa2743091db5f65853a173a7215aaf7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# dtexec 유틸리티
-   **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다.  **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
+# <a name="dtexec-utility"></a>dtexec 유틸리티
+  **dtexec** 명령 프롬프트 유틸리티는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. **dtexec** 유틸리티에서는 매개 변수, 연결, 속성, 변수, 로깅, 진행률 표시기 등의 모든 패키지 구성 및 실행 기능에 액세스할 수 있습니다. **dtexec** 유틸리를 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버, .ispac 프로젝트 파일, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스, [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소, 파일 시스템의 원본에서 패키지를 로드할 수 있습니다.  
   
 > **참고:** 최신 버전의 **dtexec** 유틸리티를 사용하여 이전 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]로 만든 패키지를 실행하면 유틸리티가 패키지를 최신 패키지 형식으로 일시적으로 업그레이드합니다. 그러나 **dtexec** 유틸리티를 사용하여 업그레이드된 패키지를 저장할 수는 없습니다. 패키지를 영구적으로 최신 버전으로 업그레이드하는 방법은 [Upgrade Integration Services Packages](../../integration-services/install-windows/upgrade-integration-services-packages.md)를 참조하십시오.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 30
 -   [예](#example)  
   
 ##  <a name="server"></a> Integration Services 서버 및 프로젝트 파일  
- **dtexec**를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지를 실행하는 경우 **dtexec**는 [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) 저장 프로시저를 호출하여 실행을 만들고, 매개 변수 값을 설정하고, 실행을 시작합니다. 실행 로그는 관련 뷰의 서버에서 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용 가능한 표준 보고서를 사용하여 볼 수 있습니다. 보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](../../integration-services/performance/reports-for-the-integration-services-server.md)를 참조하세요.  
+ **dtexec**를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 패키지를 실행하는 경우 **dtexec**는 [catalog.create_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database.md), [catalog.set_execution_parameter_value&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database.md) and [catalog.start_execution&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) 저장 프로시저를 호출하여 실행을 만들고, 매개 변수 값을 설정하고, 실행을 시작합니다. 실행 로그는 관련 뷰의 서버에서 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용 가능한 표준 보고서를 사용하여 볼 수 있습니다. 보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)를 참조하세요.  
   
  다음은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서의 패키지 실행 예입니다.  
   
@@ -54,36 +59,36 @@ caps.handback.revision: 30
 DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /SERVER "." /Envreference 2 /Par "$Project::ProjectParameter(Int32)";1 /Par "Parameter(Int32)";21 /Par "CM.sqlcldb2.SSIS_repro.InitialCatalog";ssisdb /Par "$ServerOption::SYNCHRONIZED(Boolean)";True  
 ```  
   
- **dtexec**를 사용하여 .ispac 프로젝트 파일에서 패키지를 실행할 경우 이와 관련하여 프로젝트 경로와 프로젝트 스트림 이름을 지정하는 데 사용하는 /Proj[ect] 및 /Pack[age] 옵션이 있습니다. **에서** Integration Services 프로젝트 변환 마법사 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 실행하여 프로젝트를 프로젝트 배포 모델로 변환할 경우 마법사가 .ispac 프로젝트 파일을 생성합니다. 자세한 내용은 [Deploy Projects to Integration Services Server](../../integration-services/packages/deploy-projects-to-integration-services-server.md)을 참조하세요.  
+ **dtexec** 를 사용하여 .ispac 프로젝트 파일에서 패키지를 실행할 경우 이와 관련하여 프로젝트 경로와 프로젝트 스트림 이름을 지정하는 데 사용하는 /Proj[ect] 및 /Pack[age] 옵션이 있습니다. **에서** Integration Services 프로젝트 변환 마법사 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 실행하여 프로젝트를 프로젝트 배포 모델로 변환할 경우 마법사가 .ispac 프로젝트 파일을 생성합니다. 자세한 내용은 참조 [배포할 Integration Services (SSIS) 프로젝트 및 패키지](../../integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md)합니다.  
   
- 타사 일정 도구와 함께 **dtexec**를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되는 패키지를 예약할 수 있습니다.  
+ 타사 일정 도구와 함께 **dtexec** 를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되는 패키지를 예약할 수 있습니다.  
   
 ##  <a name="bit"></a> 64비트 컴퓨터에서의 설치 고려 사항  
- 64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 64비트 버전의 **dtexec** 유틸리티(dtexec.exe)를 설치합니다. 특정 패키지를 32비트 모드로 실행해야 하는 경우 **dtexec** 유틸리티의 32비트 버전을 설치해야 합니다. 32비트 버전의 **dtexec** 유틸리티를 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 선택해야 합니다.  
+ 64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 64비트 버전의 **dtexec** 유틸리티(dtexec.exe)를 설치합니다. 특정 패키지를 32비트 모드로 실행해야 하는 경우 **dtexec** 유틸리티의 32비트 버전을 설치해야 합니다. 32비트 버전의 **dtexec** 유틸리티를 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 선택해야 합니다.  
   
- 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. 일반적으로 32비트 디렉터리 경로는 *\<drive>*:\Program Files(x86)\Microsoft SQL Server\110\DTS\Binn이고, 64비트 디렉터리 경로는 *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn입니다.  
+ 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32 비트 디렉터리 경로  *\<드라이브 >*: 파일 (x86) server\110\dts\binn 이며 64 비트 디렉터리 경로 \Program  *\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn입니다.)  
   
 > **참고:** SQL Server 에이전트를 사용하여 유틸리티를 실행하는 경우 SQL Server 에이전트는 64비트 버전의 유틸리티를 자동으로 사용합니다. SQL Server 에이전트는 PATH 환경 변수가 아닌 레지스트리를 사용하여 유틸리티에 대한 올바른 실행 파일을 찾습니다.  
   
  명령 프롬프트에서 64비트 버전의 유틸리티를 실행하기 위해 다음 동작 중 하나를 수행할 수 있습니다.  
   
--   명령 프롬프트 창을 열고 64비트 버전의 유틸리티가 포함되어 있는 디렉터리(*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn)로 변경한 다음 해당 위치에서 유틸리티를 실행합니다.  
+-   명령 프롬프트 창을 열고 64 비트 버전의 유틸리티가 포함 되어 있는 디렉터리로 변경 합니다 (*\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn)를 다음 해당 위치에서 유틸리티를 실행 합니다.  
   
--   명령 프롬프트에서 64비트 버전의 유틸리티에 대한 전체 경로(*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn)를 입력하여 유틸리티를 실행합니다.  
+-   전체 경로 입력 하 여 명령 프롬프트 유틸리티를 실행 (*\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn)를 64 비트 버전의 유틸리티가 있습니다.  
   
--   변수에서 32비트 경로(*\<drive>*:\ Program Files(x86)\Microsoft SQL Server\110\DTS\Binn) 앞에 64비트 경로(*\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Binn)를 배치하여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경합니다.  
+-   64 비트 경로 배치 하 여 PATH 환경 변수에서의 경로 순서를 영구적으로 변경 (*\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn) 앞의 32 비트 경로 (*\<드라이브 >*: \ \ 프로그램 파일 (x86) \Microsoft SQL Server\110\DTS\Binn) 변수에 합니다.  
   
 ##  <a name="side"></a> 병렬 설치 컴퓨터에 대한 고려 사항  
- [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 또는 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)]가 설치된 컴퓨터에 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]를 설치하면 여러 버전의 **dtexec** 유틸리티가 설치됩니다.  
+ [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 또는 [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] 가 설치된 컴퓨터에 [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] 를 설치하면 여러 버전의 **dtexec** 유틸리티가 설치됩니다.  
   
- 올바른 버전의 유틸리티가 실행되도록 하려면 명령 프롬프트에서 전체 경로(*\<drive>*:\Program Files\Microsoft SQL Server\\<version\>\DTS\Binn)를 입력하는 방식으로 유틸리티를 실행합니다.  
+ 명령 프롬프트 유틸리티의 전체 경로 입력 하 여 실행에 올바른 버전의 유틸리티를 실행 하려면 (*\<드라이브 >*: files\microsoft SQL Server\\< 버전\>\DTS\Binn).  
   
 ##  <a name="phases"></a> 실행 단계  
  이 유틸리티를 실행하면 다음 4단계가 수행됩니다.  
   
 1.  명령을 읽어들이는 단계: 명령 프롬프트는 지정된 옵션 및 인수 목록을 읽습니다. **/?** 또는 **/HELP** 옵션이 있으면 이후의 모든 단계를 건너뜁니다.  
   
-2.  패키지 로드 단계: **/SQL**, **/FILE** 또는 **/DTS** 옵션으로 지정된 패키지가 로드됩니다.  
+2.  패키지 로드 단계: **/SQL**, **/FILE**또는 **/DTS** 옵션으로 지정된 패키지가 로드됩니다.  
   
 3.  구성 단계: 옵션은 다음 순서로 처리됩니다.  
   
@@ -146,15 +151,15 @@ dtexec /option [value] [/option [value]]...
   
 ##  <a name="parameter"></a> 매개 변수  
   
--   **/?** [*option_name*]: (옵션). 지정된 *option_name*에 대한 명령 프롬프트 옵션 또는 도움말을 표시하고 유틸리티를 닫습니다.  
+-   **/?** [*option_name*]: (옵션). 지정된 *option_name* 에 대한 명령 프롬프트 옵션 또는 도움말을 표시하고 유틸리티를 닫습니다.  
   
-     *option_name* 인수를 지정하면 **dtexec**에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 시작하고 dtexec 유틸리티 항목을 표시합니다.  
+     *option_name* 인수를 지정하면 **dtexec** 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 시작하고 dtexec 유틸리티 항목을 표시합니다.  
   
 -   **/Ca[llerInfo]**: (옵션). 패키지 실행에 대한 추가 정보를 지정합니다. SQL Server 에이전트를 사용하여 패키지를 실행할 때 에이전트는 패키지 실행이 SQL Server 에이전트로 호출되었음을 나타내도록 이 인수를 설정합니다. **dtexec** 유틸리티를 명령줄에서 실행할 경우에는 이 매개 변수가 무시됩니다.  
   
 -   **/CheckF[ile]** *filespec*: (옵션). 패키지의 **CheckpointFileName** 속성을 *filespec*에 지정된 경로와 파일로 설정합니다. 이 파일은 패키지를 다시 시작할 때 사용됩니다. 이 옵션을 지정하고 파일 이름 값을 제공하지 않으면 패키지의 **CheckpointFileName** 이 빈 문자열로 설정됩니다. 이 옵션을 지정하지 않으면 패키지의 값이 유지됩니다.  
   
--   **/CheckP[ointing]** *{on\off}*: (옵션). 패키지 실행 중 패키지에서 검사점을 사용하는지 여부를 결정하는 값을 설정합니다. **on** 값에서는 실패한 패키지를 다시 실행합니다. 실패한 패키지가 다시 실행되면 런타임 엔진에서 검사점 파일을 사용하여 실패한 지점에서 패키지를 다시 시작합니다.  
+-   **/CheckP[ointing]** *{on\off}* : (옵션). 패키지 실행 중 패키지에서 검사점을 사용하는지 여부를 결정하는 값을 설정합니다. **on** 값에서는 실패한 패키지를 다시 실행합니다. 실패한 패키지가 다시 실행되면 런타임 엔진에서 검사점 파일을 사용하여 실패한 지점에서 패키지를 다시 시작합니다.  
   
      값을 지정하지 않고 이 옵션을 선언할 경우 기본값은 on입니다. 값을 on으로 설정한 경우 검사점 파일을 찾을 수 없으면 패키지를 실행할 수 없습니다. 이 옵션을 지정하지 않으면 패키지에 설정된 값이 유지됩니다. 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
@@ -170,11 +175,11 @@ dtexec /option [value] [/option [value]]...
   
      이 옵션을 사용하려면 두 매개 변수 모두를 지정해야 합니다. 즉, *id_or_name* 인수에 연결 관리자 이름 또는 GUID를 제공하고 *connection_string* 인수에 올바른 연결 문자열을 지정해야 합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)을 참조하세요.  
   
-     런타임에 **/Connection** 옵션을 사용하면 디자인 타임에 지정한 위치와 다른 위치에서 패키지 구성을 로드할 수 있습니다. 그러면 원래 지정된 값이 이러한 구성 값으로 바뀝니다. 그러나 연결 관리자를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성과 같은 구성에만 **/Connection** 옵션을 사용할 수 있습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](../Topic/Behavior%20Changes%20to%20Integration%20Services%20Features%20in%20SQL%20Server%202016.md)을 참조하세요.  
+     런타임에 **/Connection** 옵션을 사용하면 디자인 타임에 지정한 위치와 다른 위치에서 패키지 구성을 로드할 수 있습니다. 그러면 원래 지정된 값이 이러한 구성 값으로 바뀝니다. 그러나 연결 관리자를 사용하는 **구성과 같은 구성에만** /Connection [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 옵션을 사용할 수 있습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
   
 -   **/Cons[oleLog]** [[*displayoptions*];[*list_options*;*src_name_or_guid*]...]: (옵션). 패키지 실행 중 지정된 로그 항목을 콘솔에 표시합니다. 이 옵션을 생략하면 콘솔에 로그 항목이 표시되지 않습니다. 표시를 제한하는 매개 변수 없이 이 옵션을 지정하면 모든 로그 항목이 표시됩니다. 콘솔에 표시되는 항목을 제한하려면 *displayoptions* 매개 변수를 사용하여 표시할 열을 지정하고 *list_options* 매개 변수를 사용하여 로그 항목 유형을 제한합니다.  
   
-    > **참고:** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 **/ISSERVER** 매개 변수를 사용하여 패키지를 실행할 경우 콘솔 출력이 제한되며 대부분의 **/Cons[oleLog]** 옵션이 적용되지 않습니다. 실행 로그는 관련 뷰의 서버에서 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용 가능한 표준 보고서를 사용하여 볼 수 있습니다. 보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](../../integration-services/performance/reports-for-the-integration-services-server.md)를 참조하세요.  
+    > **참고:** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 **/ISSERVER** 매개 변수를 사용하여 패키지를 실행할 경우 콘솔 출력이 제한되며 대부분의 **/Cons[oleLog]** 옵션이 적용되지 않습니다. 실행 로그는 관련 뷰의 서버에서 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용 가능한 표준 보고서를 사용하여 볼 수 있습니다. 보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports)를 참조하세요.  
   
      *displayoptions* 값은 다음과 같습니다.  
   
@@ -228,7 +233,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** *error code*: 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 디버그 덤프 파일을 *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
+     **/Dump** *오류 코드*: 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장  *\<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 합니다.  
   
     > **참고:** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 Microsoft 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  
   
@@ -240,7 +245,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (옵션) 패키지가 실행되는 동안 오류가 발생할 때 디버그 덤프 파일(.mdmp 및 .tmp)을 만듭니다.  
   
-     기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 디버그 덤프 파일을 *\<drive>*:\Program Files\Microsoft SQL Server\110\Shared\ErrorDumps 폴더에 저장합니다.  
+     기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장  *\<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 폴더입니다.  
   
     > **참고:** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 Microsoft 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  
   
@@ -264,9 +269,9 @@ dtexec /option [value] [/option [value]]...
   
      **/File** 옵션은 **/DTS** 또는 **/SQL** 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 **dtexec** 는 실패합니다.  
   
--   **/H[elp]** [*option_name*]: (옵션). 옵션에 대한 도움말 또는 지정된 *option_name*에 대한 도움말을 표시하고 유틸리티를 닫습니다.  
+-   **/H[elp]** [*option_name*]: (옵션). 옵션에 대한 도움말 또는 지정된 *option_name* 에 대한 도움말을 표시하고 유틸리티를 닫습니다.  
   
-     *option_name* 인수를 지정하면 **dtexec**에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 시작하고 dtexec 유틸리티 항목을 표시합니다.  
+     *option_name* 인수를 지정하면 **dtexec** 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 시작하고 dtexec 유틸리티 항목을 표시합니다.  
   
 -   **/ISServer** *packagepath*: (옵션). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행합니다. *PackagePath* 인수는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지의 전체 경로 및 파일 이름을 지정합니다. *PackagePath* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *PackagePath* 인수를 따옴표로 묶어야 합니다.  
   
@@ -276,7 +281,7 @@ dtexec /option [value] [/option [value]]...
     \<catalog name>\<folder name>\<project name>\package file name  
     ```  
   
-     **/Server** 옵션은 **/ISSERVER** 옵션과 함께 사용합니다. Windows 인증만 SSIS 서버에서 패키지를 실행할 수 있습니다. 현재 Windows 사용자는 패키지에 액세스하는 데 사용됩니다. /Server 옵션을 생략할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 로컬 인스턴스가 사용됩니다.  
+     **/Server** 옵션은 **/ISSERVER** 옵션과 함께 사용합니다. Windows 인증만 SSIS 서버에서 패키지를 실행할 수 있습니다. 현재 Windows 사용자는 패키지에 액세스하는 데 사용됩니다. /Server 옵션을 생략할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 로컬 인스턴스가 사용됩니다.  
   
      **/ISSERVER** 옵션은 **/DTS**, **/SQL** 또는 **/File** 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 dtexec는 실패합니다.  
   
@@ -316,7 +321,7 @@ dtexec /option [value] [/option [value]]...
   
         -   ClassID: {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
--   **/M[axConcurrent]** *concurrent_executables*: (옵션). 패키지에서 동시에 실행할 수 있는 실행 파일 수를 지정합니다. 값은 음수가 아닌 정수 또는 -1로 지정해야 합니다. -1 값은 [!INCLUDE[ssIS](../../includes/ssis-md.md)]에서 패키지를 실행하는 컴퓨터의 총 프로세서 수에 2를 더한 값과 같은 동시에 실행 가능한 최대 실행 파일 수를 허용함을 의미합니다.  
+-   **/M[axConcurrent]** *concurrent_executables*: (옵션). 패키지에서 동시에 실행할 수 있는 실행 파일 수를 지정합니다. 값은 음수가 아닌 정수 또는 -1로 지정해야 합니다. -1 값은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 패키지를 실행하는 컴퓨터의 총 프로세서 수에 2를 더한 값과 같은 동시에 실행 가능한 최대 실행 파일 수를 허용함을 의미합니다.  
   
 -   **/Pack[age]** *PackageName*: (옵션). 실행되는 패키지를 지정합니다. 이 매개 변수는 주로 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에서 패키지를 실행할 때 사용됩니다.  
   
@@ -370,27 +375,27 @@ dtexec /option [value] [/option [value]]...
   
      **V** - 자세한 사항을 보고합니다.  
   
-     V 및 N 인수는 다른 인수와 함께 사용할 수 없으므로 단독으로 지정해야 합니다. **/Reporting** 옵션을 지정하지 않을 경우 기본 수준은 **E**(오류), **W**(경고) 및 **P**(진행 상황)입니다.  
+     V 및 N 인수는 다른 인수와 함께 사용할 수 없으므로 단독으로 지정해야 합니다. **/Reporting** 옵션을 지정하지 않을 경우 기본 수준은 **E** (오류), **W** (경고) 및 **P** (진행 상황)입니다.  
   
      모든 이벤트 앞에는 "YY/MM/DD HH:MM:SS" 형식의 타임스탬프가 있으며 GUID 또는 이름이 옵니다(사용 가능한 경우).  
   
-     선택적 매개 변수 *event_guid_or_name*은 로그 공급자에 대한 예외 목록입니다. 예외는 정상적인 상황에서는 기록되어야 하지만 기록되지 않는 이벤트를 지정합니다.  
+     선택적 매개 변수 *event_guid_or_name* 은 로그 공급자에 대한 예외 목록입니다. 예외는 정상적인 상황에서는 기록되어야 하지만 기록되지 않는 이벤트를 지정합니다.  
   
      기본적으로 기록되지 않는 경우에는 이벤트를 제외시킬 필요가 없습니다.  
   
 -   **/Res[tart]** {*deny | force | ifPossible*}: (옵션). 패키지에서 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성의 새 값을 지정합니다. 매개 변수의 의미는 다음과 같습니다.  
   
-     *Deny* <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_NEVER>로 설정합니다.  
+     *거부* 집합 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_NEVER>합니다.  
   
-     *Force* <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_ALWAYS>로 설정합니다.  
+     *Force* 집합 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_ALWAYS>합니다.  
   
-     *ifPossible* <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_IFEXISTS>로 설정합니다.  
+     *ifPossible* 집합 <xref:Microsoft.SqlServer.Dts.Runtime.Package.CheckpointUsage%2A> 속성을 <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.DTSCheckpointUsage.DTSCU_IFEXISTS>합니다.  
   
      값을 지정하지 않으면 기본값인 **force** 가 사용됩니다.  
   
--   **/Set** [$Sensitive::]*propertyPath;value*: (옵션). 패키지에서 매개 변수, 변수, 속성, 컨테이너, 로그 공급자, Foreach 열거자 또는 연결의 구성을 재지정합니다. 이 옵션을 사용하면 **/Set**는 *propertyPath* 인수를 지정된 값으로 변경합니다. 여러 **/Set** 옵션을 지정할 수 있습니다.  
+-   **/Set** [$Sensitive::]*propertyPath;value*: (옵션). 패키지에서 매개 변수, 변수, 속성, 컨테이너, 로그 공급자, Foreach 열거자 또는 연결의 구성을 재지정합니다. 이 옵션을 사용하면 **/Set** 는 *propertyPath* 인수를 지정된 값으로 변경합니다. 여러 **/Set** 옵션을 지정할 수 있습니다.  
   
-     **/Set** 옵션을 **/F[ile]** 옵션과 함께 사용하는 것 외에도 **/Set** 옵션을 **/ISServer** 옵션 또는 **/Project** 옵션과 함께 사용할 수 있습니다. **/Set**를 **/Project**와 함께 사용할 경우 **/Set**는 매개 변수 값을 설정합니다. **/Set**를 **/ISServer**와 함께 사용할 경우에는 **/Set**가 속성 재정의를 설정합니다. 또한 **/Set**를 **/ISServer**와 함께 사용하는 경우 선택적인 $Sensitive 접두사를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 이 속성을 중요한 속성으로 처리하도록 표시할 수 있습니다.  
+     **/Set** 옵션을 **/F[ile]** 옵션과 함께 사용하는 것 외에도 **/Set** 옵션을 **/ISServer** 옵션 또는 **/Project** 옵션과 함께 사용할 수 있습니다. **/Set** 를 **/Project**와 함께 사용할 경우 **/Set** 는 매개 변수 값을 설정합니다. **/Set** 를 **/ISServer**와 함께 사용할 경우에는 **/Set** 가 속성 재정의를 설정합니다. 또한 **/Set** 를 **/ISServer**와 함께 사용하는 경우 선택적인 $Sensitive 접두사를 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 이 속성을 중요한 속성으로 처리하도록 표시할 수 있습니다.  
   
      패키지 구성 마법사를 실행하여 *propertyPath* 의 값을 확인할 수 있습니다. 선택한 항목의 경로는 마지막 **마법사 완료** 페이지에 표시되며 복사하여 붙여넣을 수 있습니다. 이러한 용도로만 마법사를 사용하는 경우에는 경로를 복사한 다음 마법사를 취소할 수 있습니다.  
   
@@ -402,7 +407,7 @@ dtexec /option [value] [/option [value]]...
   
      `/Project c:\project.ispac /Package Package1.dtsx /SET \Package.Variables[$Package::Parameter];1 /SET \Package.Variables[$Project::Parameter];1`  
   
-     **/Set** 옵션을 사용하면 패키지 구성이 로드되는 위치를 변경할 수 있습니다. 그러나 디자인 타임에 구성으로 지정한 값은 **/Set** 옵션을 사용하여 재정의할 수 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](../Topic/Behavior%20Changes%20to%20Integration%20Services%20Features%20in%20SQL%20Server%202016.md)을 참조하세요.  
+     **/Set** 옵션을 사용하면 패키지 구성이 로드되는 위치를 변경할 수 있습니다. 그러나 디자인 타임에 구성으로 지정한 값은 **/Set** 옵션을 사용하여 재정의할 수 없습니다. 패키지 구성이 적용되는 방법을 이해하려면 [패키지 구성](../../integration-services/packages/package-configurations.md) 및 [SQL Server 2016 Integration Services 기능의 동작 변경](http://msdn.microsoft.com/library/611d22fa-5ac7-485e-9a40-7131e852f794)을 참조하세요.  
   
 -   **/Ser[ver]** *server*: (옵션). **/SQL** 또는 **/DTS** 옵션을 지정한 경우 이 옵션은 패키지를 검색할 서버의 이름을 지정합니다. **/Server** 옵션을 생략하고 **/SQL** 또는 **/DTS** 옵션을 지정하면 로컬 서버에 대해 패키지가 실행됩니다. *server_instance* 값은 따옴표로 묶을 수 있습니다.  
   
@@ -412,7 +417,7 @@ dtexec /option [value] [/option [value]]...
   
      *package_path* 인수는 검색할 패키지의 이름을 지정합니다. 경로에 폴더가 포함된 경우 백슬래시("\\")로 끝납니다. *package_path* 값은 따옴표로 묶을 수 있습니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
   
-     **/SQL** 옵션과 함께 **/User**, **/Password**, **/Server** 옵션을 사용할 수 있습니다.  
+     **/SQL**옵션과 함께 **/User**, **/Password** , **/Server** 옵션을 사용할 수 있습니다.  
   
      **/User** 옵션을 생략하면 패키지에 액세스하는 데 Windows 인증이 사용됩니다. **/User** 옵션을 사용하면 지정된 **/User** 로그인 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 연결됩니다.  
   
@@ -420,7 +425,7 @@ dtexec /option [value] [/option [value]]...
   
     > **중요!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     **/Server** 옵션을 생략할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 로컬 인스턴스가 사용됩니다.  
+     **/Server** 옵션을 생략할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 로컬 인스턴스가 사용됩니다.  
   
      **/SQL** 옵션은 **/DTS** 또는 **/File** 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 **dtexec** 는 실패합니다.  
   
@@ -430,7 +435,7 @@ dtexec /option [value] [/option [value]]...
   
     > **중요!!**  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
--   **/Va[lidate]**: (옵션). 유효성 검사 단계 후에 실제로 패키지를 실행하지 않고 패키지 실행을 중지합니다. **/WarnAsError** 옵션을 사용하면 유효성 검사 중 **dtexec**에서 경고를 오류로 간주하므로 유효성 검사 중 경고가 발생하면 패키지가 실패합니다.  
+-   **/Va[lidate]**: (옵션). 유효성 검사 단계 후에 실제로 패키지를 실행하지 않고 패키지 실행을 중지합니다. **/WarnAsError** 옵션을 사용하면 유효성 검사 중 **dtexec** 에서 경고를 오류로 간주하므로 유효성 검사 중 경고가 발생하면 패키지가 실패합니다.  
   
 -   **/VerifyB[uild]** *major*[*;minor*[*;build*]]: (옵션). 확인 단계 동안 *major*, *minor*및 *build* 인수에 지정된 빌드 번호에 대해 패키지의 빌드 번호를 확인합니다. 일치하지 않을 경우 패키지가 실행되지 않습니다.  
   
@@ -444,7 +449,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/VerifyP[ackageID]** *packageID*: (옵션). 실행할 패키지의 GUID를 *package_id* 인수에 지정된 값과 비교하여 확인합니다.  
   
--   **/VerifyS[igned]**: (옵션). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 패키지의 디지털 서명을 확인하도록 합니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](../../integration-services/packages/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
+-   **/VerifyS[igned]**: (옵션). [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 패키지의 디지털 서명을 확인하도록 합니다. 패키지가 서명되지 않았거나 서명이 잘못된 경우 패키지가 실패합니다. 자세한 내용은 [디지털 서명을 사용하여 패키지 원본 확인](../../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md)을 참조하세요.  
   
     > **중요!!** 패키지의 서명을 확인하도록 구성된 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 디지털 서명이 있는지, 유효한지, 그리고 신뢰할 수 있는 원본에서 제공된 것인지만 확인합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지가 변경되었는지 여부는 확인하지 않습니다.  
   
@@ -628,10 +633,8 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
   
 ```  
   
-## 관련 작업  
- [SQL Server Data Tools에서 패키지 실행](../../integration-services/packages/run-a-package-in-sql-server-data-tools.md)  
-  
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  www.mattmasson.com의 [종료 코드, DTEXEC 및 SSIS 카탈로그](http://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/)블로그 항목  
   
   
+

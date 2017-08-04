@@ -1,25 +1,30 @@
 ---
-title: "ODBC 대상을 사용하여 데이터 로드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "ODBC 대상을 사용 하 여 데이터를 로드 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 668cf193758a8dfaba90e598ccbdb7d0d84351fc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 대상을 사용하여 데이터 로드
+# <a name="load-data-by-using-the-odbc-destination"></a>ODBC 대상을 사용하여 데이터 로드
   이 절차에서는 ODBC 대상을 사용하여 데이터를 로드하는 방법을 보여 줍니다. ODBC 대상을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 원본이 이미 들어 있어야 합니다.  
   
-### ODBC 대상을 사용하여 데이터를 로드하려면  
+### <a name="to-load-data-using-an-odbc-destination"></a>ODBC 대상을 사용하여 데이터를 로드하려면  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 원하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 엽니다.  
   
@@ -49,9 +54,9 @@ caps.handback.revision: 9
   
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
- [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
- [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ODBC 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 대상 편집기 &#40; 매핑 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)   
+ [ODBC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

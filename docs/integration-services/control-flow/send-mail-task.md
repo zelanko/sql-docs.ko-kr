@@ -1,30 +1,35 @@
 ---
 title: "메일 보내기 태스크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sendmailtask.f1"
-helpviewer_keywords: 
-  - "메일 [Integration Services]"
-  - "메일 보내기 태스크"
-  - "전자 메일 [Integration Services]"
-  - "메시지 [Integration Services]"
-  - "메시지 보내기"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sendmailtask.f1
+helpviewer_keywords:
+- mail [Integration Services]
+- Send Mail task
+- e-mail [Integration Services]
+- messages [Integration Services]
+- sending messages
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 caps.latest.revision: 51
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: fd6f7a19c1b553ee06013a4a24fbbf26a759a6cd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 메일 보내기 태스크
+# <a name="send-mail-task"></a>메일 보내기 태스크
   메일 보내기 태스크는 전자 메일 메시지를 보냅니다. 메일 보내기 태스크를 사용하면 패키지 워크플로의 태스크 성공 여부에 관계없이 패키지가 메시지를 보낼 수 있거나 런타임 시 패키지에서 발생한 이벤트에 응답하여 메시지를 보낼 수 있습니다. 예를 들어 이 태스크는 데이터베이스 백업 태스크의 성공 또는 실패에 대해 데이터베이스 관리자에게 알릴 수 있습니다.  
   
  다음과 같은 방법으로 메일 보내기 태스크를 구성할 수 있습니다.  
@@ -54,8 +59,8 @@ caps.handback.revision: 51
   
  이 태스크는 SMTP 연결 관리자를 사용하여 메일 서버에 연결합니다. 자세한 내용은 [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)을 참조하세요.  
   
-## 메일 보내기 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
- 다음 표에서는 메일 보내기 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../../integration-services/performance/custom-messages-for-logging.md)을 참조하세요.  
+## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>메일 보내기 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
+ 다음 표에서는 메일 보내기 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
@@ -63,7 +68,7 @@ caps.handback.revision: 51
 |**SendMailTaskEnd**|태스크에서 전자 메일 메시지 보내기를 완료했음을 나타냅니다.|  
 |**SendMailTaskInfo**|태스크에 대한 설명 정보를 제공합니다.|  
   
-## 메일 보내기 태스크 구성  
+## <a name="configuring-the-send-mail-task"></a>메일 보내기 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
@@ -78,14 +83,14 @@ caps.handback.revision: 51
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.SendMailTask.SendMailTask>  
   
-## 관련 작업  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)을 클릭합니다.  
+## <a name="related-tasks"></a>관련 작업  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 클릭합니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
 -   shareourideas.com의 기술 문서 - [C#의 배달 알림으로 메일을 보내는 방법](http://go.microsoft.com/fwlink/?LinkId=237625)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   

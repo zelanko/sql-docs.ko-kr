@@ -1,31 +1,36 @@
 ---
-title: "변환을 사용하여 데이터 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 흐름 [Integration Services], 변환"
-  - "변환 [Integration Services], 변환 정보"
-  - "데이터 변환 [Integration Services]"
+title: "변환으로 데이터를 변환할 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data flow [Integration Services], transformations
+- transformations [Integration Services], about transformations
+- transforming data [Integration Services]
 ms.assetid: e1340b6f-ef75-4b14-af6f-823586eff0ed
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0d7feb12fd7b258fb876ff1ed554159e54a7ac33
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 변환을 사용하여 데이터 변환
+# <a name="transform-data-with-transformations"></a>변환을 사용하여 데이터 변환
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 에는 원본, 변환 및 대상 등 3가지 유형의 데이터 흐름 구성 요소가 있습니다.  
   
  다음 다이어그램에서는 원본 하나, 변환 두 가지, 대상 하나를 포함하는 간단한 데이터 흐름을 보여 줍니다.  
   
- ![데이터 흐름](../../../integration-services/data-flow/transformations/media/mw-dts-08.gif "데이터 흐름")  
+ ![Data flow](../../../integration-services/data-flow/media/mw-dts-08.gif "Data flow")  
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 변환은 다음과 같은 기능을 제공합니다.  
   
@@ -43,24 +48,24 @@ caps.handback.revision: 43
   
  사용자 지정 변환을 작성할 수도 있습니다. 자세한 내용은 [사용자 지정 데이터 흐름 구성 요소 개발](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) 및 [특정 유형의 데이터 흐름 구성 요소 개발](../../../integration-services/extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)을 참조하세요.  
   
- 데이터 흐름 디자이너에 변환을 추가한 다음 변환을 구성하기 전에 다른 변환 또는 데이터 흐름의 원본을 이 변환의 입력에 연결하여 데이터 흐름에 변환을 연결합니다. 두 데이터 흐름 구성 요소 간 연결선을 경로라고 합니다. 구성 요소 연결 및 경로 사용 방법은 [경로에 구성 요소 연결](../Topic/Connect%20Components%20with%20Paths.md)을 참조하세요.  
+ 데이터 흐름 디자이너에 변환을 추가한 다음 변환을 구성하기 전에 다른 변환 또는 데이터 흐름의 원본을 이 변환의 입력에 연결하여 데이터 흐름에 변환을 연결합니다. 두 데이터 흐름 구성 요소 간 연결선을 경로라고 합니다. 구성 요소 연결 및 경로 사용 방법은 [경로에 구성 요소 연결](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)을 참조하세요.  
   
-### 데이터 흐름에 변환을 추가하려면  
+### <a name="to-add-a-transformation-to-a-data-flow"></a>데이터 흐름에 변환을 추가하려면  
   
 -   [데이터 흐름에서 구성 요소 추가 또는 삭제](../../../integration-services/data-flow/add-or-delete-a-component-in-a-data-flow.md)  
   
-### 데이터 흐름에서 변환을 연결하려면  
+### <a name="to-connect-a-transformation-to-a-data-flow"></a>데이터 흐름에서 변환을 연결하려면  
   
 -   [데이터 흐름의 구성 요소 연결](../../../integration-services/data-flow/connect-components-in-a-data-flow.md)  
   
-### 변환의 속성을 설정하려면  
+### <a name="to-set-the-properties-of-a-transformation"></a>변환의 속성을 설정하려면  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 흐름 태스크](../../../integration-services/control-flow/data-flow-task.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
- [경로에 구성 요소 연결](../Topic/Connect%20Components%20with%20Paths.md)   
+ [경로에 구성 요소 연결](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)   
  [데이터 오류 처리](../../../integration-services/data-flow/error-handling-in-data.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)  
   

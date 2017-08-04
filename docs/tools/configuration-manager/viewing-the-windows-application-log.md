@@ -1,31 +1,36 @@
 ---
 title: "Windows 응용 프로그램 로그 보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "응용 프로그램 로그 [SQL Server]"
-  - "Windows 응용 프로그램 로그 [SQL Server]"
-  - "Windows 응용 프로그램 로그 보기"
-  - "오류 [SQL Server], 로그"
-  - "시스템 로그 [SQL Server]"
-  - "보안 로그 [SQL Server]"
-  - "Windows 응용 프로그램 로그 표시"
-  - "로그 [SQL Server], Windows 응용 프로그램 로그"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- application logs [SQL Server]
+- Windows application logs [SQL Server]
+- viewing Windows application logs
+- errors [SQL Server], logs
+- system logs [SQL Server]
+- security logs [SQL Server]
+- displaying Windows application logs
+- logs [SQL Server], Windows application logs
 ms.assetid: f9853b74-7db7-47cc-b957-e49ed5bc0a1a
 caps.latest.revision: 20
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 833f71530a08ad5648b35719f9fd636213c61595
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Windows 응용 프로그램 로그 보기
+# <a name="viewing-the-windows-application-log"></a>Windows 응용 프로그램 로그 보기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Microsoft Windows 응용 프로그램 로그를 사용하도록 구성된 경우 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션은 이 로그에 새 이벤트를 씁니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와는 달리 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 시작할 때마다 새 응용 프로그램 로그가 생성되지는 않습니다.  
   
  Windows 이벤트 뷰어 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 로그 뷰어를 사용하여 Windows 응용 프로그램 로그를 보고 관리하십시오.  
@@ -42,6 +47,6 @@ caps.handback.revision: 20
   
  **Windows 응용 프로그램 로그를 보려면**  
   
- [Windows 응용 프로그램 로그 보기&#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows.md)  
+ [Windows 응용 프로그램 로그 보기&#40;Windows&#41;](../../relational-databases/performance/view-the-windows-application-log-windows-10.md)  
   
   

@@ -1,25 +1,30 @@
 ---
-title: "&lt;(보다 작음)(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보다 작음(<)"
-  - "<(보다 작음 연산자)"
+title: "&lt;(보다 작음) (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- less than (<)
+- < (less than operator)
 ms.assetid: 8674afdc-4276-46cb-be08-5aadfe8b9624
 caps.latest.revision: 48
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb12a0ff651cf50c5208bae6ba0229d1e6be85f6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# &lt;(보다 작음)(SSIS 식)
+# <a name="lt-less-than-ssis-expression"></a>&lt;(보다 작음) (SSIS 식)
   첫 번째 식이 두 번째 식보다 작은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다.  
   
 > [!NOTE]  
@@ -27,7 +32,7 @@ caps.handback.revision: 48
   
  그러나 일부 데이터 형식을 사용할 경우 식이 성공적으로 계산되려면 식에 명시적 캐스트가 포함되어야 합니다. 데이터 형식 간 올바른 캐스트에 대한 자세한 내용은 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,14 +40,14 @@ expression1 < expression2
   
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *expression1, expression2*  
  유효한 식입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_BOOL  
   
-## 주의  
+## <a name="remarks"></a>주의  
  비교하는 두 식 중 하나가 Null이면 비교 결과도 Null입니다. 두 식이 모두 Null이면 결과도 Null입니다.  
   
  식 집합 *expression1* 및 *expression2*는 다음 규칙 중 하나를 따라야 합니다.  
@@ -79,7 +84,7 @@ expression1 < expression2
   
  데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 현재 날짜가 2003년 7월 4일 이후이면 TRUE가 됩니다. 자세한 내용은 [GETDATE&#40;SSIS 식&#41;](../../integration-services/expressions/getdate-ssis-expression.md)를 참조하세요.  
   
 ```  
@@ -98,11 +103,11 @@ ListPrice < 500
 @LPrice < 500  
 ```  
   
-## 관련 항목:  
- [&#62;&#40;보다 큼&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
- [&#62;=&#40;크거나 같음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
- [&#60;=&#40;작거나 같음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
- [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [&#62; &#40; 보다 큰 &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
+ [&#62; = &#40; 보다 큼 또는 같음 &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#60; = &#40; 보다 작거나 같으면 &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/less-than-or-equal-to-ssis-expression.md)   
+ [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "NS$&lt;service name&gt; 속성(탭의 로그) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "NS$&lt;서비스 이름&gt; 속성 (탭의 로그) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5e6816ec-d4c5-4429-8033-b97427584890
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 46e784c7a83044249dcaf9ddc696be51f5b383a0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# NS$&lt;service name&gt; 속성(탭의 로그)
+# <a name="nsltservice-namegt-properties-log-on-tab"></a>NS$&lt;서비스 이름&gt; 속성 (로그 탭)
   **Notification Services 속성** 대화 상자의 **로그온** 탭을 사용하여 [!INCLUDE[ssNS](../../includes/ssns-md.md)] 서비스에서 사용할 계정을 지정할 수 있으며 서비스를 시작 및 중지할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **로컬 시스템 계정**  
  암호를 요구하지 않는 로컬 시스템 계정을 지정합니다. 그러나 로컬 시스템 계정은 계정에 부여된 권한에 따라 다른 서버와 상호 작용하지 못하도록 서비스를 제한할 수 있습니다.  
   
  **계정 지정**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하는 로컬 또는 도메인 사용자 계정을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 서비스에 대해 최소의 권한을 가진 도메인 사용자 계정을 사용할 것을 권장합니다. 계정 선택 방법은 온라인 설명서에서 "Windows 서비스 계정 설정" 항목을 참조하십시오.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증을 사용하는 로컬 또는 도메인 사용자 계정을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]최소의 권한을 가진 도메인 사용자 계정을 사용 하 여 서비스에 대 한 것을 권장 합니다. 계정 선택 방법은 온라인 설명서에서 "Windows 서비스 계정 설정" 항목을 참조하십시오.  
   
  **계정 이름**  
  로컬 또는 도메인 사용자 계정 이름을 지정합니다.  

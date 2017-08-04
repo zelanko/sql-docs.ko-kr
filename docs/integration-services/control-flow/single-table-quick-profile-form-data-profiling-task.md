@@ -1,33 +1,38 @@
 ---
-title: "단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.quickprofile.f1"
-helpviewer_keywords: 
-  - "데이터 프로파일링 태스크 편집기"
+title: "단일 테이블 빠른 프로필 형식 (데이터 프로 파일링 태스크) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.quickprofile.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 76de0987bec5d7886b41d2d415af2bd00e187f87
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
+# <a name="single-table-quick-profile-form-data-profiling-task"></a>단일 테이블 빠른 프로필 형식(데이터 프로파일링 태스크)
   **단일 테이블 빠른 프로필 형식** 을 사용하여 데이터 프로파일링 태스크를 구성하고 기본 설정으로 단일 테이블이나 뷰를 빠르게 프로파일링할 수 있습니다.  
   
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **연결**  
- .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
+ .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자를 선택합니다.  
   
  **테이블 또는 뷰**  
  선택한 연결 관리자에서 연결할 데이터베이스의 기존 테이블 또는 뷰를 선택합니다.  
@@ -50,8 +55,8 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  값 포함 프로필 형식은 **단일 테이블 빠른 프로필 형식**에서 사용할 수 없습니다.  
   
-## 관련 항목:  
- [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [데이터 작업 편집기 &#40; 프로 파일링 일반 페이지 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [데이터 작업 편집기 &#40; 프로 파일링 프로필 요청 페이지 &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   

@@ -1,29 +1,34 @@
 ---
 title: "느린 변경 차원 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.slowlychangingdimtrans.f1"
-helpviewer_keywords: 
-  - "느린 변경 차원 변환"
-  - "느린 변경 차원"
-  - "SCD 변환"
-  - "느린 변경 차원 업데이트"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.slowlychangingdimtrans.f1
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- SCD transformation
+- updating slowly changing dimensions
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 caps.latest.revision: 55
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 59f467f9aee0637bc9463c39b51b30e47eeaff47
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 느린 변경 차원 변환
+# <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
   느린 변경 차원 변환은 데이터 웨어하우스 차원 테이블의 레코드 업데이트 및 삽입을 조정합니다. 예를 들어 이 변환을 사용하면 AdventureWorks OLTP 데이터베이스의 Production.Products 테이블의 데이터로 [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] 데이터베이스의 DimProduct 테이블의 레코드를 삽입 및 업데이트하는 변환 출력을 구성할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -58,7 +63,7 @@ caps.handback.revision: 55
   
  일치 항목이 있으면 느린 변경 차원 변환은 행에 변경 내용이 들어 있는지 검색합니다. 행에 변경 내용이 있으면, 느린 변경 차원은 각 열에 대한 업데이트 유형을 확인하고 행을 **변경 특성 업데이트 내용 출력**, **고정 특성 출력**, **기록 특성 삽입 내용 출력**또는 **유추 멤버 업데이트 내용 출력**으로 보냅니다. 행이 변경되지 않았으면 느린 변경 차원 변환은 행을 **변경되지 않은 출력**으로 보냅니다.  
   
-## 느린 변경 차원 변환 출력  
+## <a name="slowly-changing-dimension-transformation-outputs"></a>느린 변경 차원 변환 출력  
  느린 변경 차원 변환에는 하나의 입력과 최대 6개의 출력이 포함됩니다. 출력은 행의 업데이트 및 삽입 요구 사항과 일치하는 데이터 흐름의 하위 집합으로 행을 보냅니다. 이 변환은 오류 출력을 지원하지 않습니다.  
   
  다음 표에서는 변환 출력과 이후의 데이터 흐름 요구 사항에 대해 설명합니다. 요구 사항은 느린 변경 차원 마법사에서 만드는 데이터 흐름을 설명합니다.  
@@ -72,39 +77,39 @@ caps.handback.revision: 55
 |**새 출력**|조회 테이블에 일치하는 행이 없습니다. 차원 테이블에 행이 추가됩니다. 이 출력은 새 행에 대해 사용되며 기록 특성 행으로 변경됩니다.|파생 열 변환은 현재 행 표시를 설정하고 OLE DB 대상이 행을 삽입합니다.|  
 |**변경되지 않은 출력**|조회 테이블의 값이 행 값과 일치합니다. 이 출력은 변경되지 않은 출력에 대해 사용됩니다.|느린 변경 차원 변환에서 아무 작업도 실행되지 않기 때문에 기본 데이터 흐름이 생성되지 않습니다. 이러한 행을 캡처하려면 이 출력에 대한 데이터 흐름을 만들어야 합니다.|  
   
-## 비즈니스 키  
+## <a name="business-keys"></a>비즈니스 키  
  느린 변경 차원 변환에는 적어도 하나 이상의 비즈니스 키 열이 필요합니다.  
   
  느린 변경 차원 변환은 Null 비즈니스 키를 지원하지 않습니다. 데이터에 비즈니스 키가 Null인 행이 있으면 해당 행을 데이터 흐름에서 제거해야 합니다. 조건부 분할 변환을 사용하면 비즈니스 키 열에 Null 값이 포함된 행을 필터링할 수 있습니다. 자세한 내용은 [Conditional Split Transformation](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)을 참조하세요.  
   
-## 느린 변경 차원 변환의 성능 최적화  
+## <a name="optimizing-the-performance-of-the-slowly-changing-dimension-transformation"></a>느린 변경 차원 변환의 성능 최적화  
  느린 변경 차원 변환의 성능을 향상하는 방법은 [데이터 흐름 성능 기능](../../../integration-services/data-flow/data-flow-performance-features.md)을 참조하세요.  
   
-## 느린 변경 차원 변환 문제 해결  
+## <a name="troubleshooting-the-slowly-changing-dimension-transformation"></a>느린 변경 차원 변환 문제 해결  
  느린 변경 차원 변환이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 느린 변경 차원 변환이 수행하는 외부 데이터 원본에 대한 연결, 명령 및 쿼리 문제를 해결할 수 있습니다. 느린 변경 차원 변환이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
-## 느린 변경 차원 변환 구성  
+## <a name="configuring-the-slowly-changing-dimension-transformation"></a>느린 변경 차원 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## 느린 변경 차원 변환 출력 구성  
+## <a name="configuring-the-slowly-changing-dimension-transformation-outputs"></a>느린 변경 차원 변환 출력 구성  
  특히 Type 1 및 Type 2 변경 내용이 사용되는 경우에는 차원 테이블의 행 업데이트 및 삽입을 조정하는 태스크가 복잡할 수 있습니다. [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너는 느린 변경 차원에 대한 지원을 구성하기 위한 두 가지 방법을 제공합니다.  
   
 -   **고급 편집기** 대화 상자에서는 연결을 선택하고, 공용 및 사용자 지정 구성 요소 속성을 설정하고, 입력 열을 선택하고, 6개의 출력에 열 속성을 설정할 수 있습니다. 느린 변경 차원에 대한 지원 구성 태스크를 완료하려면 느린 변경 차원 변환에서 사용되는 출력에 대한 데이터 흐름을 수동으로 만들어야 합니다. 자세한 내용은 [Data Flow](../../../integration-services/data-flow/data-flow.md)을 참조하세요.  
   
 -   차원 로드 마법사에서는 단계별 안내에 따라 느린 변경 차원 변환을 구성하고 변환 출력에 대한 데이터 흐름을 작성할 수 있습니다. 느린 변경 차원에 대한 구성을 변경하려면 차원 로드 마법사를 다시 실행하십시오. 자세한 내용은 [느린 변경 차원 마법사를 사용하여 출력 구성](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)을 참조하세요.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
 -   blogs.msdn.com의 블로그 항목 - [느린 변경 차원 마법사 최적화](http://go.microsoft.com/fwlink/?LinkId=199481)  
   

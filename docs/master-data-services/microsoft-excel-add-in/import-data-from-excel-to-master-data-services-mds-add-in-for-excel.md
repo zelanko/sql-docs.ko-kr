@@ -1,29 +1,34 @@
 ---
-title: "Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Excel에서 Master Data Services (MDS 추가 기능에 Excel 용)로 데이터 가져오기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 89fce454-a816-4b33-a26a-d1b9741d269b
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 443c12be36c61db7b23dfd01123e1d9c9a22d93b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능)
+# <a name="import-data-from-excel-to-master-data-services-mds-add-in-for-excel"></a>Excel에서 Master Data Services로 데이터 가져오기(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 Excel에서 작업을 마치고 다른 사용자가 데이터 액세스할 수 있도록 변경 내용을 저장하려는 경우 데이터를 MDS 리포지토리에 게시합니다.  
   
 > [!NOTE]  
 >  -   변경 내용을 게시하면 MDS 관리 셀에 대한 주석이 삭제됩니다.  
 > -   MDS 관리 셀에서는 수식을 사용할 수 없습니다. MDS 관리 셀의 수식은 텍스트 값으로 처리됩니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -32,7 +37,7 @@ caps.handback.revision: 10
   
 -   멤버를 추가하는 경우 엔터티에 대한 코드를 자동으로 생성하는 경우 **코드** 값을 지정할 필요가 없습니다. 자세한 내용은 [코드 자동 생성&#40;Master Data Services&#41;](../../master-data-services/automatic-code-creation-master-data-services.md)을 참조하세요.  
   
-### MDS 저장소에 데이터를 게시하려면  
+### <a name="to-publish-data-to-the-mds-repository"></a>MDS 저장소에 데이터를 게시하려면  
   
 1.  **게시 및 유효성 검사** 그룹에서 **게시**를 클릭합니다.  
   
@@ -45,10 +50,10 @@ caps.handback.revision: 10
 > [!NOTE]  
 >  워크시트에 새 멤버(행)를 추가하는 중이고 MDS 리포지토리에 성공적으로 게시할 수 없으면 사용자에게 워크시트에 있는 모든 특성에 대한 **업데이트** 권한이 없을 수 있습니다. **검토** 탭의 **변경 내용** 그룹에서 **시트 보호 해제** 를 클릭하여 다시 게시합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  [비즈니스 규칙 적용&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/apply-business-rules-mds-add-in-for-excel.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [개요: Excel에서 데이터 가져오기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)   
  [데이터 유효성 검사&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)  
   

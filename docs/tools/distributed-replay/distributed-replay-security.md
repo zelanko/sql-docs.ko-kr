@@ -1,25 +1,30 @@
 ---
 title: "Distributed Replay 보안 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71e00ff0a5ea435715c5895fa2ec212ad5a8f056
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Distributed Replay 보안
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
+# <a name="distributed-replay-security"></a>Distributed Replay 보안
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능을 설치 및 사용하기 전에 이 항목에 나오는 중요 보안 정보를 검토해야 합니다. 이 항목에서는 Distributed Replay를 사용하기 전에 수행해야 하는 설치 후 보안 구성 단계에 대해 설명합니다. 또한 데이터 보호 및 중요한 제거 단계와 관련하여 고려해야 할 주요 사항도 설명합니다.  
   
-## 사용자 및 서비스 계정  
+## <a name="user-and-service-accounts"></a>사용자 및 서비스 계정  
  다음 표에서는 Distributed Replay에 사용되는 계정에 대해 설명합니다. Distributed Replay를 설치한 후 컨트롤러 및 클라이언트 서비스 계정이 실행될 보안 주체를 할당해야 합니다. 따라서 Distributed Replay 기능을 설치하기 전에 해당 도메인 사용자 계정을 구성하는 것이 좋습니다.  
   
 |사용자 계정|요구 사항|  
@@ -56,7 +61,7 @@ caps.handback.revision: 29
   
 4.  사용할 사용자 계정을 구성합니다.  
   
-## 파일 및 폴더 권한  
+## <a name="file-and-folder-permissions"></a>파일 및 폴더 권한  
  서비스 계정을 지정한 후에는 해당 서비스 계정에 필요한 파일 및 폴더 사용 권한을 부여해야 합니다. 다음 표에 따라 파일 및 폴더 사용 권한을 구성합니다.  
   
 |계정|폴더 권한|  
@@ -64,7 +69,7 @@ caps.handback.revision: 29
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스 계정|`<Controller_Installation_Path>\DReplayController` (읽기, 쓰기, 삭제)<br /><br /> `DReplayServer.xml` 파일(읽기, 쓰기)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정|`<Client_Installation_Path>\DReplayClient` (읽기, 쓰기, 삭제)<br /><br /> `DReplayClient.xml` 파일(읽기, 쓰기)<br /><br /> 클라이언트 구성 파일의 `WorkingDirectory` 및 `ResultDirectory` 요소에 각각 지정된 작업 디렉터리 및 결과 디렉터리(읽기, 쓰기)|  
   
-## DCOM 권한  
+## <a name="dcom-permissions"></a>DCOM 권한  
  DCOM은 컨트롤러와 관리 도구 간 및 컨트롤러와 모든 클라이언트 간 RPC(원격 프로시저 호출) 통신에 사용됩니다. Distributed Replay 기능을 설치한 후 컴퓨터 차원에서 그리고 응용 프로그램별로 컨트롤러에 대한 DCOM 권한을 구성해야 합니다.  
   
  컨트롤러 DCOM 권한을 구성하려면 다음 단계에 따르십시오.  
@@ -91,12 +96,12 @@ caps.handback.revision: 29
 > [!IMPORTANT]  
 >  악의적인 쿼리나 서비스 거부 공격으로부터 보호하려면 신뢰할 수 있는 사용자 계정만 클라이언트 서비스 계정으로 사용해야 합니다. 이 계정은 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하여 작업을 재생할 수 있습니다.  
   
-## SQL Server 사용 권한  
+## <a name="sql-server-permissions"></a>SQL Server 사용 권한  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스 계정은 작업의 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결하는 데 사용됩니다. 이러한 연결에는 Windows 인증 모드만 지원됩니다.  
   
  일련의 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client 서비스를 설치한 후 추적 작업을 재생할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 sysadmin 서버 역할을 해당 서비스 계정에 사용되는 보안 주체에 부여해야 합니다. 이 단계는 Distributed Replay 설치 중 자동으로 수행되지 않습니다.  
   
-## 데이터 보호  
+## <a name="data-protection"></a>데이터 보호  
  Distributed Replay 환경에서 다음 사용자 계정에는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서버 인스턴스, 입력 추적 데이터 및 결과 추적 파일에 대한 모든 액세스 권한이 부여됩니다.  
   
 -   관리 도구를 실행하는 데 사용되는 대화형 사용자 계정  
@@ -120,15 +125,15 @@ caps.handback.revision: 29
   
 -   SSL(Secure Sockets Layer)을 사용하여 네트워크 전송에 대해 보안을 설정합니다.  
   
-## 중요한 제거 단계  
+## <a name="important-removal-steps"></a>중요한 제거 단계  
  테스트 환경에서만 Distributed Replay를 사용하는 것이 좋습니다. 테스트를 완료한 후 다른 태스크를 위해 해당 컴퓨터를 프로비전하기 전에 다음 작업을 수행하십시오.  
   
 -   Distributed Replay 기능을 제거하고 관련 구성 파일을 컨트롤러 및 모든 클라이언트에서 제거합니다.  
   
 -   테스트에 사용된 추적 파일, 중간 파일, 디스패치 파일 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일을 모두 삭제합니다. 중간 파일 및 디스패치 파일은 각각 컨트롤러와 클라이언트의 작업 디렉터리에 저장됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
- [Install Distributed Replay - Overview](../../tools/distributed-replay/install-distributed-replay-overview.md)  
+ [Distributed Replay 설치 - 개요](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   
   

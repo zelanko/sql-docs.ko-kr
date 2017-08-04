@@ -1,27 +1,32 @@
 ---
-title: "2단원: SSIS를 사용하여 루핑 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
+title: "2 단원: SSIS를 사용 하 여 반복 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8559dc3afb5f347555b9b21b61abc50765fd92c4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 2단원: SSIS를 사용하여 루핑 추가
+# <a name="lesson-2-adding-looping-with-ssis"></a>2단원: SSIS를 사용하여 루핑 추가
 [1단원: SSIS를 사용하여 프로젝트 및 기본 패키지 만들기](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)에서는 단일 플랫 파일 원본에서 데이터를 추출하고 조회 변환을 사용하여 변환한 다음 **AdventureWorksDW2012** 샘플 데이터베이스의 **FactCurrency** 팩트 테이블로 로드한 패키지를 만들었습니다.  
   
-그러나 ETL(추출, 변환 및 로드) 프로세스에서 플랫 파일을 하나만 사용하는 경우는 거의 없습니다. 일반적인 ETL 프로세스는 여러 플랫 파일 원본에서 데이터를 추출합니다. 여러 원본에서 데이터를 추출하려면 반복적인 제어 흐름이 필요합니다.  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 가장 기대되는 기능 중 하나는 패키지에 반복이나 루핑을 쉽게 추가할 수 있는 기능입니다.  
+그러나 ETL(추출, 변환 및 로드) 프로세스에서 플랫 파일을 하나만 사용하는 경우는 거의 없습니다. 일반적인 ETL 프로세스는 여러 플랫 파일 원본에서 데이터를 추출합니다. 여러 원본에서 데이터를 추출하려면 반복적인 제어 흐름이 필요합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 의 가장 기대되는 기능 중 하나는 패키지에 반복이나 루핑을 쉽게 추가할 수 있는 기능입니다.  
   
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서는 Foreach Loop 컨테이너와 For Loop 컨테이너라는 패키지 루핑을 위한 두 가지 유형의 컨테이너를 제공합니다. Foreach 루프 컨테이너는 열거자를 사용하여 루핑을 수행하지만 For 루프 컨테이너는 대개 변수 식을 사용합니다. 이 단원에서는 Foreach 루프 컨테이너를 사용합니다.  
   
@@ -50,22 +55,23 @@ Foreach 루프 컨테이너를 사용하면 패키지에서 지정한 열거자�
 > [!IMPORTANT]  
 > 이 자습서를 실행하려면 **AdventureWorksDW2012** 예제 데이터베이스가 필요합니다. **AdventureWorksDW2012**의 설치 및 배포 방법에 대한 자세한 내용은 [CodePlex의 Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/p/?LinkID=526910)을 참조하십시오.  
   
-## 단원 태스크  
+## <a name="lesson-tasks"></a>단원 태스크  
 이 단원에서는 다음 태스크를 다룹니다.  
   
--   [1단계: 1단원 패키지 복사](../integration-services/step-1-copying-the-lesson-1-package.md)  
+-   [1단계: 1단원 패키지 복사](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [2단계: Foreach 루프 컨테이너 추가 및 구성](../integration-services/step-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [2단계: Foreach 루프 컨테이너 추가 및 구성](../integration-services/lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [3단계: 플랫 파일 연결 관리자 수정](../integration-services/step-3-modifying-the-flat-file-connection-manager.md)  
+-   [3단계: 플랫 파일 연결 관리자 수정](../integration-services/lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [4단계: 2단원 자습서 패키지 테스트](../integration-services/step-4-testing-the-lesson-2-tutorial-package.md)  
+-   [4단계: 2단원 자습서 패키지 테스트](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
-## 단원 시작  
-[1단계: 1단원 패키지 복사](../integration-services/step-1-copying-the-lesson-1-package.md)  
+## <a name="start-the-lesson"></a>단원 시작  
+[1단계: 1단원 패키지 복사](../integration-services/lesson-2-1-copying-the-lesson-1-package.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
 [For 루프 컨테이너](../integration-services/control-flow/for-loop-container.md)  
   
   
   
+

@@ -1,37 +1,42 @@
 ---
-title: "로그인 전송 태스크 편집기(로그인 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.transferloginstask.logins.f1"
-helpviewer_keywords: 
-  - "로그인 전송 태스크 편집기"
+title: "로그인 전송 태스크 편집기 (로그인 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.transferloginstask.logins.f1
+helpviewer_keywords:
+- Transfer Logins Task Editor
 ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cdae4242ff131376f8aba2bd4a1ec4fc08170ecd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 로그인 전송 태스크 편집기(로그인 페이지)
+# <a name="transfer-logins-task-editor-logins-page"></a>로그인 전송 태스크 편집기(로그인 페이지)
   **로그인 전송 태스크 편집기** 대화 상자의 **로그인** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하는 속성을 지정할 수 있습니다. 이 태스크에 대한 자세한 내용은 [Transfer Logins Task](../../integration-services/control-flow/transfer-logins-task.md)를 참조하십시오.  
   
 > [!IMPORTANT]  
 >  로그인 전송 태스크를 실행하면 대상 서버에 임의의 암호로 로그인이 생성되고 해당 암호는 해제됩니다. 이러한 로그인을 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 해당 암호를 변경한 다음 다시 설정해야 합니다. **sa** 로그인은 전송될 수 없습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **SourceConnection**  
- 목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>**을 클릭하여 원본 서버에 대한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 원본 서버에 새 연결을 만듭니다.  
   
  **DestinationConnection**  
- 목록에서 SMO 연결 관리자를 선택하거나 **\<새 연결...>**을 클릭하여 대상 서버에 대한 새 연결을 만듭니다.  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 대상 서버에 새 연결을 만듭니다.  
   
  **LoginsToTransfer**  
  원본 서버에서 대상 서버로 복사할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
@@ -62,10 +67,10 @@ caps.handback.revision: 23
  **CopySids**  
  로그인에 연결된 보안 식별자를 대상 서버로 복사할지 여부를 선택합니다. 로그인 전송 태스크를 데이터베이스 전송 동작과 함께 사용하는 경우에는**CopySids** 를 **True** 로 설정해야 합니다. 그렇게 하지 않으면 복사된 로그인을 전송된 데이터베이스에서 인식하지 않습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
- [로그인 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)   
+ [전송 로그인 태스크 편집기 &#40; 일반 페이지 &#41;](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)   
  [식 페이지](../../integration-services/expressions/expressions-page.md)   
  [SMO 연결 관리자](../../integration-services/connection-manager/smo-connection-manager.md)   
  [강력한 암호](../../relational-databases/security/strong-passwords.md)   

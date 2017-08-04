@@ -1,28 +1,33 @@
 ---
-title: "XML 원본 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.xmlsource.f1"
-helpviewer_keywords: 
-  - "원본 [Integration Services], XML"
-  - "XML 원본 [Integration Services]"
-  - "XML 원본 편집기"
+title: "XML 원본은 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.xmlsource.f1
+helpviewer_keywords:
+- sources [Integration Services], XML
+- XML source [Integration Services]
+- XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 caps.latest.revision: 47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 47
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 원본
+# <a name="xml-source"></a>XML 원본
   XML 원본은 XML 데이터 파일을 읽고 원본 출력의 열을 해당 데이터로 채웁니다.  
   
  XML 파일의 데이터에 계층 관계가 포함되어 있는 경우가 많습니다. 예를 들어 XML 데이터 파일은 카탈로그 및 카탈로그의 항목을 나타낼 수 있습니다. 데이터가 데이터 흐름을 시작할 수 있으려면 먼저 XML 데이터 파일에 있는 각 요소의 관계를 결정하고 파일의 각 요소에 대해 출력을 생성해야 합니다.  
@@ -68,7 +73,7 @@ caps.handback.revision: 47
   
  XML 원본은 여러 개의 일반 출력과 여러 개의 오류 출력을 지원합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 XML 원본 구성을 위한 **XML 원본 편집기** 대화 상자가 있습니다. 이 대화 상자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 사용할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 XML 원본 구성을 위한 **XML 원본 편집기**대화 상자가 있습니다. 이 대화 상자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 사용할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 47
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [XML 원본 사용자 지정 속성](../../integration-services/data-flow/xml-source-custom-properties.md)  
   
@@ -92,3 +97,4 @@ caps.handback.revision: 47
   
 ## <a name="related-tasks"></a>관련 태스크  
  [XML 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
+

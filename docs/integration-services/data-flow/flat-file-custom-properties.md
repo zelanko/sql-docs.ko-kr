@@ -1,22 +1,27 @@
 ---
 title: "플랫 파일 사용자 지정 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7f2caeab-784c-4b0c-9b3e-6a88d1ccdbf9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 097c9a07d738bb1b192095ac91448487fdfa0eb1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 플랫 파일 사용자 지정 속성
+# <a name="flat-file-custom-properties"></a>플랫 파일 사용자 지정 속성
   **원본 사용자 지정 속성**  
   
  플랫 파일 원본에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
@@ -34,7 +39,7 @@ caps.handback.revision: 7
   
 |속성 이름|데이터 형식|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|Boolean|열이 DTS에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 자세한 내용은 [Fast Parse](../Topic/Fast%20Parse.md) 및 [Standard Parse](../Topic/Standard%20Parse.md)를 참조하세요. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
+|FastParse|Boolean|열이 DTS에서 제공하는 더 빠르지만 로캘을 구분하지 않는 빠른 구문 분석 루틴을 사용하는지, 아니면 로캘을 구분하는 표준 구문 분석 루틴을 사용하는지를 나타내는 값입니다. 자세한 내용은 [Fast Parse](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95) 및 [Standard Parse](http://msdn.microsoft.com/library/dfe835b1-ea52-4e18-a23a-5188c5b6f013)를 참조하세요. 이 속성의 기본값은 **False**입니다.<br /><br /> 참고: 이 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다.|  
   
  자세한 내용은 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)을 참조하세요.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 7
   
  자세한 내용은 [Flat File Destination](../../integration-services/data-flow/flat-file-destination.md)을 참조하세요.  
   
-## 관련 항목:  
- [공용 속성](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>관련 항목:  
+ [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

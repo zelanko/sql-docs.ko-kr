@@ -1,30 +1,35 @@
 ---
-title: "==(같음)(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "같음 연산자(==)"
-  - "==(같음 연산자)"
+title: "= = (같음) (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- equal operator (==)
+- == (equal operator)
 ms.assetid: 36fd2354-7b93-4c95-9cf3-51ee24568950
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 53
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2944b2ac0c650f3a7a3d447d20b34bee5fa27e20
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ==(같음)(SSIS 식)
+# <a name="-equal-ssis-expression"></a>==(같음)(SSIS 식)
   두 식이 같은지 비교합니다. 식 계산기는 비교를 수행하기 전에 많은 데이터 형식을 자동으로 변환합니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을(를) 참조하세요.  
   
  그러나 일부 데이터 형식을 사용할 경우 식이 성공적으로 계산되려면 식에 명시적 캐스트가 포함되어야 합니다. 데이터 형식 간 올바른 캐스트에 대한 자세한 내용은 [캐스트&#40;SSIS 식&#41;](../../integration-services/expressions/cast-ssis-expression.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -32,14 +37,14 @@ expression1 == expression2
   
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *expression1, expression2*  
  유효한 식입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_BOOL  
   
-## 주의  
+## <a name="remarks"></a>주의  
  비교하는 두 식 중 하나가 Null이면 비교 결과도 Null입니다. 두 식이 모두 Null이면 결과도 Null입니다.  
   
  식 집합 *expression1* 및 *expression2*는 다음 규칙 중 하나를 따라야 합니다.  
@@ -84,7 +89,7 @@ expression1 == expression2
   
  데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  현재 날짜가 2003년 7월 4일이면 이 예는 TRUE가 됩니다. 자세한 내용은 [GETDATE&#40;SSIS 식&#41;](../../integration-services/expressions/getdate-ssis-expression.md)를 참조하세요.  
   
  "7/4/2003" == GETDATE()  
@@ -101,9 +106,9 @@ ListPrice == 500
 @LPrice == 500  
 ```  
   
-## 관련 항목:  
- [!= &#40;같지 않음&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
- [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [! = &#40; 같지 않음 &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/unequal-ssis-expression.md)   
+ [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

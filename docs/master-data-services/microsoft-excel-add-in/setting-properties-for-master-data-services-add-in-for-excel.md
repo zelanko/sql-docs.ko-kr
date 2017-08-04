@@ -1,28 +1,33 @@
 ---
-title: "Excel용 Master Data Services 추가 기능의 속성 설정 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Master Data Services 추가 기능을 excel에 대 한 속성을 설정 합니다. | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cab1c662-5d40-4c16-9f5c-36ff9608810b
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14b4715ce4acdc48f6425d2343cb45cd8311d982
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Excel용 Master Data Services 추가 기능의 속성 설정
+# <a name="setting-properties-for-master-data-services-add-in-for-excel"></a>Excel용 Master Data Services 추가 기능의 속성 설정
   Excel용 Master Data Services 추가 기능 설정은 MDS에서 Excel 추가 기능으로 데이터가 로드되는 방법 및 Excel 추가 기능에서 MDS로 데이터가 게시되는 방법을 결정합니다.  
   
  Excel 추가 기능에 대한 설정을 지정하려면 **Excel**을 열고 **마스터 데이터** 메뉴를 클릭한 다음 **설정**을 클릭합니다. Excel에 액세스할 수 있는 사용자는 누구나 이러한 설정을 변경할 수 있습니다. 이 설정은 Excel이 열려 있는 컴퓨터에 적용됩니다.  
   
-## Excel 추가 기능 설정  
+## <a name="excel-add-in-settings"></a>Excel 추가 기능 설정  
   
 ||||  
 |-|-|-|  

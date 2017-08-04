@@ -1,47 +1,52 @@
 ---
-title: "SQUARE(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQUARE"
-  - "제곱 값"
+title: "SQUARE (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQUARE
+- square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18be83801a35d9b3512d85f69c91256147fb81a9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQUARE(SSIS 식)
+# <a name="square-ssis-expression"></a>SQUARE(SSIS 식)
   숫자 식의 제곱을 반환합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 SQUARE(numeric_expression)  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *numeric_expression*  
  임의의 숫자 데이터 형식을 갖는 숫자 식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_R8  
   
-## 주의  
+## <a name="remarks"></a>주의  
  인수가 Null이면 SQUARE 결과도 Null입니다.  
   
  인수는 제곱 연산 전에 DT_R8 데이터 형식으로 캐스팅됩니다.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 12의 제곱을 반환합니다. 반환 결과는 144입니다.  
   
 ```  
@@ -63,7 +68,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  식에서 변수 이름에는 항상 @ 접두사가 포함되어 있어야 합니다.  
   
-## 관련 항목:  
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

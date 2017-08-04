@@ -1,23 +1,28 @@
 ---
-title: "SQL Server 속성(Always On 고가용성 탭) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 속성 (Always On 고가용성 탭) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8630923-a600-4f1c-aca1-027453a3ec82
 caps.latest.revision: 13
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 70c8bfca11f0bb57f503d0aa323738753bd59004
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 속성(Always On 고가용성 탭)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 **SQL Server 속성** 대화 상자의 **Always On 고가용성** 탭을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 Always On 가용성 그룹을 사용하도록 설정해야 합니다.  
+# <a name="sql-server-properties-always-on-high-availability-tab"></a>SQL Server 속성(Always On 고가용성 탭)
+  **구성 관리자에서** SQL Server 속성 **대화 상자의** Always On 고가용성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 탭을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 고가용성 및 재해 복구 솔루션으로 가용성 그룹을 사용하려면 먼저 Always On 가용성 그룹을 사용하도록 설정해야 합니다.  
   
 ##  <a name="Prerequisites"></a> 필수 구성 요소  
  Always On 가용성 그룹을 사용하도록 설정하려면 서버 인스턴스가 다음과 같은 사전 요구 사항을 충족해야 합니다.  
@@ -33,12 +38,12 @@ caps.handback.revision: 13
 > [!NOTE]  
 >  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대한 기능 지원과 추가 사전 요구 사항, 제한 사항 및 권장 사항에 대한 자세한 내용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 온라인 설명서를 참조하세요.  
   
-## 대화 상자 옵션  
+## <a name="dialog-options"></a>대화 상자 옵션  
  **Windows 장애 조치(failover) 클러스터 이름**  
  로컬 컴퓨터가 노드인 WSFC 클러스터의 이름을 표시합니다.  
   
  **Always On 가용성 그룹 활성화**  
- 다음과 같이 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 Always On 가용성 그룹을 사용하거나 사용하지 않도록 설정하려면 이 확인란을 사용합니다.  
+ 다음과 같이 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 Always On 가용성 그룹을 사용하거나 사용하지 않도록 설정하려면 이 확인란을 사용합니다.  
   
 -   이 확인란이 비어 있으면 현재 Always On 가용성 그룹을 사용하지 않도록 설정되어 있습니다. Always On 가용성 그룹을 사용하도록 설정하려면 이 확인란을 선택하고 **확인**을 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 수동으로 다시 시작합니다.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 13
     > [!TIP]  
     >  Always On 가용성 그룹을 사용하지 않도록 설정한 후 서버 인스턴스에서 모든 로컬 가용성 복제본을 제거해야 합니다. 지정된 가용성 그룹의 마지막 복제본을 제거하는 경우 그룹도 제거해야 합니다.  
   
-## UIElement 목록  
+## <a name="uielement-list"></a>UIElement 목록  
   
 > [!NOTE]  
 >  Always On 가용성 그룹을 사용하지 않도록 설정한 후의 후속 작업과 가용성 그룹을 만들고 구성하는 방법은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 온라인 설명서를 참조하세요.  

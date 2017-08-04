@@ -1,22 +1,27 @@
 ---
 title: "Oracle CDC 데이터베이스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: de8243fb726a9154222f240c5b032291d454befb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC 데이터베이스
+# <a name="the-oracle-cdc-databases"></a>Oracle CDC 데이터베이스
   Oracle CDC 인스턴스는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동일한 이름으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스와 연결됩니다. 이 데이터베이스를 Oracle CDC 데이터베이스 또는 CDC 데이터베이스라고 합니다.  
   
  CDC 데이터베이스는 Oracle CDC Designer 콘솔을 사용하여 만들고 구성하며 다음과 같은 요소를 포함합니다.  
@@ -44,7 +49,7 @@ caps.handback.revision: 17
  CDC 데이터베이스가 만들어지고 CDC 원본 Oracle 테이블이 설정된 경우 CDC 데이터베이스 소유자는 미러 테이블의 SELECT 권한을 부여하고 SQL Server CDC 제어 역할을 정의하여 변경 데이터에 액세스하는 사용자를 제어할 수 있습니다.  
   
 ## <a name="mirror-tables"></a>미러 테이블  
- Oracle 원본 데이터베이스의 각 캡처된 테이블(\<schema-name>.\<table-name>)에 대해 동일한 스키마와 테이블 이름을 가진 유사한 빈 테이블이 CDC 데이터베이스에 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `cdc` 스키마는 SQL Server CDC용으로 예약되어 있으므로 스키마 이름이 `cdc`(대/소문자 구분 없음)인 Oracle 원본 데이터베이스를 캡처할 수 없습니다.  
+ 각 캡처된 테이블에 대해 \<스키마 이름 >.\< 테이블 이름 >, Oracle 원본 데이터베이스에서 동일한 스키마와 테이블 이름 사용 하 여 CDC 데이터베이스의 유사한 빈 테이블이 만들어집니다. `cdc` 의 `cdc` 스키마는 SQL Server CDC용으로 예약되어 있으므로 스키마 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (대/소문자 구분 없음)인 Oracle 원본 데이터베이스를 캡처할 수 없습니다.  
   
  미러 테이블은 비어 있고 데이터가 저장되어 있지 않습니다. 미러 테이블은 Oracle CDC 인스턴스에 사용되는 표준 SQL Server CDC 인프라를 사용하도록 설정하는 데 사용됩니다. 미러 테이블에서 데이터가 삽입되거나 업데이트되지 않도록 모든 UPDATE, DELETE 및 INSERT 작업이 PUBLIC에 대해 거부됩니다. 따라서 미러 테이블에서 데이터를 수정할 수 없습니다.  
   
@@ -72,23 +77,23 @@ caps.handback.revision: 17
   
 -   [cdc.xdbcdc_staged_transactions](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_staged_transactions)  
   
-###  <a name="a-namebkmkchangetablescta-change-tables-ct"></a><a name="BKMK_Change_Tables_CT"></a> 변경 테이블(_CT)  
+###  <a name="BKMK_Change_Tables_CT"></a> 변경 테이블(_CT)  
  변경 테이블은 미러 테이블에서 만들어집니다. 변경 테이블은 Oracle 데이터베이스에서 캡처되는 변경 데이터를 포함합니다. 테이블은 다음 규칙에 따라 이름이 지정됩니다.  
   
- **[cdc].[\<capture-instance>_CT]**  
+ **[cdc]입니다. [\<캡처 인스턴스 > _CT]**  
   
- `<schema-name>.<table-name>` 테이블에 캡처를 처음 사용하는 경우 기본 캡처 인스턴스 이름은 `<schema-name>_<table-name>`입니다. 예를 들어 Oracle HR.EMPLOYEES 테이블에 대한 기본 캡처 인스턴스 이름은 HR_EMPLOYEES이고 연결된 변경 테이블은 [cdc]입니다. [HR_EMPLOYEES_CT].  
+ `<schema-name>.<table-name>`테이블에 캡처를 처음 사용하는 경우 기본 캡처 인스턴스 이름은 `<schema-name>_<table-name>`입니다. 예를 들어 Oracle HR.EMPLOYEES 테이블에 대한 기본 캡처 인스턴스 이름은 HR_EMPLOYEES이고 연결된 변경 테이블은 [cdc]입니다. [HR_EMPLOYEES_CT].  
   
  캡처 테이블은 Oracle CDC 인스턴스에 의해 기록됩니다. 캡처 인스턴스를 만들 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 의해 생성되는 특수 테이블 반환 함수를 사용하여 캡처 테이블을 읽습니다. `fn_cdc_get_all_changes_HR_EMPLOYEES`)을 입력합니다. 이러한 CDC 함수에 대한 자세한 내용은 [변경 데이터 캡처 함수(Transact-SQL)](http://go.microsoft.com/fwlink/?LinkId=231152)를 참조하세요.  
   
-###  <a name="a-namebkmkcdclsntimemappinga-cdclsntimemapping"></a><a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
+###  <a name="BKMK_cdclsn_time_mapping"></a> cdc.lsn_time_mapping  
  **[cdc].[lsn_time_mapping]** 테이블은 SQL Server CDC 구성 요소에 의해 생성됩니다. Oracle CDC에서의 캡처 테이블 사용은 일반적인 사용과는 다릅니다.  
   
  Oracle CDC의 경우 이 테이블에 저장되는 LSN 값은 변경과 연결된 Oracle SCN(System Change Number) 값을 기반으로 합니다. LSN 값의 처음 6바이트는 원본 Oracle SCN 수입니다.  
   
  또한 Oracle CDC를 사용하는 경우 시간 열(`tran_begin_time` 및 `tran_end_time`)에는 일반 SQL Server CDC에서와 달리 현지 시간이 아닌 변경의 UTC 시간이 저장됩니다. 따라서 일광 절약 시간 변경은 lsn_time_mapping에 저장된 데이터에 영향을 주지 않습니다.  
   
-###  <a name="a-namebkmkcdcxdbcdcconfiga-cdcxdbcdcconfig"></a><a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
+###  <a name="BKMK_cdcxdbcdc_config"></a> cdc.xdbcdc_config  
  이 테이블에는 Oracle CDC 인스턴스에 대한 구성 데이터가 포함되어 있습니다. 이 테이블은 CDC Designer 콘솔을 사용하여 업데이트합니다. 이 테이블에는 행이 하나만 있습니다.  
   
  다음 표에서는 **cdc.xdbcdc_config** 테이블 열에 대해 설명합니다.  
@@ -96,7 +101,7 @@ caps.handback.revision: 17
 |항목|Description|  
 |----------|-----------------|  
 |version|CDC 인스턴스 구성의 버전을 추적합니다. 테이블이 업데이트되거나, 새 캡처 인스턴스가 추가되거나, 기존 캡처 인스턴스가 제거될 때마다 업데이트됩니다.|  
-|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>`(예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) 을 참조하세요.|  
+|connect_string|Oracle 연결 문자열입니다. 기본 예:<br /><br /> `<server>:<port>/<instance>` (예: `erp.contoso.com:1521/orcl`)<br /><br /> 연결 문자열에서 Oracle Net 연결 설명자를 지정할 수도 있습니다(예: `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`)<br /><br /> 디렉터리 서버 또는 tnsnames를 사용하는 경우 연결 문자열이 연결의 이름일 수 있습니다.<br /><br /> Oracle CDC Service에서 사용되는 Oracle Instant Client에 대한 Oracle 데이터베이스 연결 문자열에 대한 자세한 내용은 [http://go.microsoft.com/fwlink/?LinkId=231153](http://go.microsoft.com/fwlink/?LinkId=231153) 을 참조하세요.|  
 |use_windows_authentication|부울 값이며 다음과 같습니다.<br /><br /> **0**: Oracle 사용자 이름 및 암호가 인증을 위해 제공됩니다(기본값).<br /><br /> **1**: Oracle 데이터베이스에 연결하는 데 Windows 인증이 사용됩니다. Windows 인증을 사용하도록 Oracle 데이터베이스를 구성한 경우에만 이 옵션을 사용할 수 있습니다.|  
 |username|로그 마이닝 Oracle 데이터베이스 사용자의 이름입니다. **use_windows_authentication = 0인 경우**에만 필수입니다.|  
 |password|로그 마이닝 Oracle 데이터베이스 사용자의 암호입니다. **use_windows_authentication = 0**인 경우에만 필수입니다.|  
@@ -131,7 +136,7 @@ caps.handback.revision: 17
 |CDC_stop_on_breaking_schema_changes|False|-|-|False|Boolean입니다. **True** 이면 주요 스키마 변경이 감지되는 경우에 중지합니다.<br /><br /> **False** 이면 미러 테이블과 캡처 인스턴스를 삭제합니다.|  
 |source_oracle_home||-|-|False|CDC 인스턴스가 Oracle에 연결하는 데 사용할 특정 Oracle 홈 경로 또는 Oracle 홈 이름으로 설정할 수 있습니다.|  
   
-###  <a name="a-namebkmkcdcxdbcdcstatea-cdcxdbcdcstate"></a><a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
+###  <a name="BKMK_cdcxdbcdc_state"></a> cdc.xdbcdc_state  
  이 테이블에는 Oracle CDC 인스턴스의 지속된 상태에 대한 정보가 포함되어 있습니다. 캡처 상태는 복구 및 장애 조치 시나리오에서 상태 모니터링에 대해 사용됩니다.  
   
  다음 표에서는 **cdc.xdbcdc_state** 테이블 열에 대해 설명합니다.  
@@ -156,7 +161,7 @@ caps.handback.revision: 17
 |read_changes|원본 Oracle 트랜잭션 로그에서 읽은 변경 레코드의 수입니다.|  
 |staged_transactions|**cdc.xdbcdc_staged_transactions** 테이블에서 준비된 현재 활성 트랜잭션 수입니다.|  
   
-###  <a name="a-namebkmkcdcxdbcdctracea-cdcxdbcdctrace"></a><a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
+###  <a name="BKMK_cdcxdbcdc_trace"></a> cdc.xdbcdc_trace  
  이 테이블에는 CDC 인스턴스 작업에 대한 정보가 포함되어 있습니다. 이 테이블에 저장되는 정보에는 오류 레코드, 주목할 만한 상태 변경 및 추적 레코드가 포함됩니다. **cdc.xcbcdc_trace** 테이블을 사용할 수 없는 경우에도 정보를 사용할 수 있도록 오류 정보는 Windows 이벤트 로그에도 기록됩니다.  
   
  다음 표에서는 cdc.xdbcdc_trace 테이블 열에 대해 설명합니다.  
@@ -171,7 +176,7 @@ caps.handback.revision: 17
 |status_message|상태 테이블에서 사용되는 상태 메시지입니다.|  
 |데이터|오류 또는 추적 레코드에 페이로드가 포함되는 사례에 대한 추가 데이터입니다(예: 손상된 로그 레코드).|  
   
-###  <a name="a-namebkmkcdcxdbcdcstagedtransactionsa-cdcxdbcdcstagedtransactions"></a><a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
+###  <a name="BKMK_cdcxdbcdc_staged_transactions"></a> cdc.xdbcdc_staged_transactions  
  이 테이블에는 큰 트랜잭션 또는 장기 실행 트랜잭션에 대한 변경 레코드가 트랜잭션 커밋 또는 롤백 이벤트가 캡처될 때까지 저장됩니다. Oracle CDC Service는 캡처된 로그 레코드를 트랜잭션 커밋 시간을 기준으로 정렬한 다음 각 트랜잭션에 대한 시간순으로 정렬합니다. 동일한 트랜잭션에 대한 로그 레코드는 트랜잭션이 종료될 때까지 메모리에 저장되었다가 대상 변경 테이블에 기록되거나 삭제(롤백의 경우)됩니다. 사용 가능한 메모리 양이 제한되므로 대형 트랜잭션은 트랜잭션이 완료될 때까지 **cdc.xdbcdc_staged_transactions** 테이블에 기록됩니다. 트랜잭션은 오래 동안 실행될 경우 준비 테이블에도 기록됩니다. 따라서 Oracle CDC 인스턴스를 다시 시작할 때 Oracle 트랜잭션 로그에서 이전 변경 사항을 다시 읽을 필요가 없습니다.  
   
  다음 표에서는 **cdc.xdbcdc_staged_transactions** 테이블 열에 대해 설명합니다.  

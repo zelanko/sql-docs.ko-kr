@@ -1,26 +1,31 @@
 ---
-title: "플랫 파일 원본 편집기(연결 관리자 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.flatfilesourceadapter.connection.f1"
-helpviewer_keywords: 
-  - "플랫 파일 원본 편집기"
+title: "플랫 파일 원본 편집기 (연결 관리자 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+helpviewer_keywords:
+- Flat File Source Editor
 ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b1eabce2627126b883d0d246c0306a6efdfaa3b8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 플랫 파일 원본 편집기(연결 관리자 페이지)
+# <a name="flat-file-source-editor-connection-manager-page"></a>플랫 파일 원본 편집기(연결 관리자 페이지)
   **플랫 파일 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 플랫 파일 원본이 사용할 연결 관리자를 선택할 수 있습니다. 플랫 파일 원본은 구분 기호로 분리된 텍스트 파일, 고정 폭 텍스트 파일 또는 혼합 형식의 텍스트 파일에서 데이터를 읽을 수 있습니다.  
   
  플랫 파일 원본은 다음과 같은 연결 관리자 유형 중 하나를 사용할 수 있습니다.  
@@ -31,8 +36,8 @@ caps.handback.revision: 29
   
  플랫 파일 원본에 대한 자세한 내용은 [Flat File Source](../../integration-services/data-flow/flat-file-source.md)을 참조하십시오.  
   
-## 옵션  
- **플랫 파일 연결 관리자**  
+## <a name="options"></a>옵션  
+ **Flat file connection manager**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **새로 만들기**  
@@ -44,10 +49,10 @@ caps.handback.revision: 29
  **미리 보기**  
  **데이터 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 미리 보기에는 최대 200개의 행이 표시될 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [플랫 파일 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
- [플랫 파일 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
+ [플랫 파일 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)   
+ [플랫 파일 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)   
  [플랫 파일 연결 관리자](../../integration-services/connection-manager/flat-file-connection-manager.md)  
   
   

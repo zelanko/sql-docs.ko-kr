@@ -1,25 +1,30 @@
 ---
-title: "CDC 인스턴스 관리 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC 인스턴스를 관리 하는 방법 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5d9e677f-b872-497d-9cde-472184a214ab
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 인스턴스 관리 방법
+# <a name="how-to-manage-a-cdc-instance"></a>CDC 인스턴스 관리 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 런타임에 CDC 인스턴스 작업을 관리하는 방법에 대해 설명합니다.  
   
-### CDC 인스턴스 작업을 관리하려면  
+### <a name="to-manage-cdc-instance-operations"></a>CDC 인스턴스 작업을 관리하려면  
   
 1.  **시작** 메뉴에서 **CDC Designer 콘솔**을 선택합니다.  
   
@@ -37,11 +42,11 @@ caps.handback.revision: 6
   
     -   **중지**: 변경 캡처를 중지합니다.  
   
-    -   **다시 설정**: **다시 설정**을 클릭하여 CDC 인스턴스를 초기(비어 있음) 상태로 다시 설정합니다. 이 옵션은 CDC 인스턴스가 중지된 경우에 사용할 수 있습니다. 변경 테이블의 모든 변경 사항과 CDC 인스턴스 내부 상태가 삭제됩니다. CDC 인스턴스를 나중에 시작하면 변경 캡처가 해당 시점에서 시작되고 CDC 인스턴스가 시작된 후에 시작된 트랜잭션만 포함됩니다.  
+    -   **다시 설정**: **다시 설정** 을 클릭하여 CDC 인스턴스를 초기(비어 있음) 상태로 다시 설정합니다. 이 옵션은 CDC 인스턴스가 중지된 경우에 사용할 수 있습니다. 변경 테이블의 모든 변경 사항과 CDC 인스턴스 내부 상태가 삭제됩니다. CDC 인스턴스를 나중에 시작하면 변경 캡처가 해당 시점에서 시작되고 CDC 인스턴스가 시작된 후에 시작된 트랜잭션만 포함됩니다.  
   
     -   **삭제**: CDC 인스턴스를 삭제합니다.  
   
-    -   **Oracle 로깅 스크립트**: **Oracle 로깅 스크립트**를 클릭하여 Oracle 로깅 스크립트 대화 상자를 Oracle 보완 로깅 스크립트와 함께 표시할 수 있습니다. 이 대화 상자에서 수행할 수 있는 작업에 대한 자세한 내용은 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)를 참조하십시오.  
+    -   **Oracle 로깅 스크립트**: **Oracle 로깅 스크립트** 를 클릭하여 Oracle 로깅 스크립트 대화 상자를 Oracle 보완 로깅 스크립트와 함께 표시할 수 있습니다. 이 대화 상자에서 수행할 수 있는 작업에 대한 자세한 내용은 [Oracle Supplemental Logging Script](../../integration-services/change-data-capture/oracle-supplemental-logging-script.md)를 참조하십시오.  
   
          **참고**: 보완 로깅 스크립트를 실행하면 유효한 Oracle 사용자 이름과 암호를 입력할 수 있는 스크립트 실행을 위한 Oracle 자격 증명 대화 상자가 열립니다. 적절한 Oracle 자격 증명을 제공하는 방법은 [Oracle Credentials for Running Script](../../integration-services/change-data-capture/oracle-credentials-for-running-script.md)을 참조하십시오.  
   

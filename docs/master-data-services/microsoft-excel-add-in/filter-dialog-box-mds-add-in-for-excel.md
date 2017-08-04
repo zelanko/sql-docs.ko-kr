@@ -1,27 +1,32 @@
 ---
-title: "필터 대화 상자(Excel용 MDS 추가 기능) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "필터 대화 상자 (MDS 추가 기능 Excel 용) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bc882d5ae5a53577ac1c6aedb1fdf20e2d31d6e6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 필터 대화 상자(Excel용 MDS 추가 기능)
+# <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 **필터** 대화 상자를 사용하여 Excel로 로드하기 전에 MDS 관리 데이터 목록의 범위를 좁힐 수 있습니다.  
   
  이 대화 상자에는 **열**, **행**및 **요약**의 세 가지 섹션이 포함됩니다.  
   
-## 열  
+## <a name="columns"></a>열  
  **열** 섹션에서는 Excel에 표시할 특성(열)을 확인할 수 있습니다.  
   
 |컨트롤 이름|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 8
 |모두 지우기|목록에 표시된 선택한 특성을 지우려면 클릭합니다.<br /><br /> **이름** 및 **코드**특성은 지울 수 없습니다.|  
 |위쪽 화살표/아래쪽 화살표|선택한 특성을 목록에서 위아래로 이동하려면 클릭합니다. 열이 워크시트에 왼쪽에서 오른쪽으로 표시된 순서에 따라 위에서 아래쪽의 순서로 표시됩니다.|  
   
-## 행  
+## <a name="rows"></a>행  
  **행** 섹션에서는 Excel에 표시할 멤버(행)를 확인할 수 있습니다. 이렇게 하려면 표시되는 행을 필터링할 조건을 정의합니다.  
   
 |컨트롤 이름|Description|  
@@ -46,7 +51,7 @@ caps.handback.revision: 8
 |모두 제거|목록에서 모든 필터를 제거합니다.|  
 |제거|목록에서 선택한 필터를 제거합니다.|  
   
-## 요약  
+## <a name="summary"></a>요약  
  **요약** 섹션을 사용하여 데이터를 로드하기 전에 로드할 데이터 양에 대한 세부 정보를 표시합니다.  
   
 |컨트롤 이름|Description|  
@@ -57,7 +62,7 @@ caps.handback.revision: 8
 |행|**행** 섹션에 따라 Excel에 로드되는 행 수입니다.|  
 |열|**열** 섹션에서 선택한 특성에 따라 Excel에 로드되는 열 수입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [내보내기 전 데이터 필터링&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-data-before-exporting-mds-add-in-for-excel.md)   
  [개요: Excel로 데이터 내보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   

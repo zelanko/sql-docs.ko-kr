@@ -1,27 +1,32 @@
 ---
-title: "사용자 또는 그룹 삭제(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "그룹 삭제 [Master Data Services]"
-  - "그룹 [Master Data Services], 삭제"
-  - "사용자 [Master Data Services], 삭제"
-  - "사용자 삭제 [Master Data Services]"
+title: "사용자 또는 그룹 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting groups [Master Data Services]
+- groups [Master Data Services], deleting
+- users [Master Data Services], deleting
+- deleting users [Master Data Services]
 ms.assetid: 0bbf9d2c-b826-48bb-8aa9-9905db6e717f
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c0a5934afc97b24d884738aa1d6f8c2cc1c80cf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 사용자 또는 그룹 삭제(Master Data Services)
+# <a name="delete-users-or-groups-master-data-services"></a>사용자 또는 그룹 삭제(Master Data Services)
   사용자나 그룹이 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 없게 하려면 해당 사용자나 그룹을 삭제합니다.  
   
  사용자와 그룹을 삭제할 때 다음 동작에 유의하십시오.  
@@ -32,12 +37,12 @@ caps.handback.revision: 7
   
 -   보안에 대한 변경 내용은 20분 동안 MDS [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 에 전파되지 않습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
-### 사용자나 그룹을 삭제하려면  
+### <a name="to-delete-users-or-groups"></a>사용자나 그룹을 삭제하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 7
   
 5.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

@@ -1,28 +1,33 @@
 ---
 title: "Hadoop 연결 관리자 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.hadoopconn.f1"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 79b0782d0d01733f10310f1eaac611fc688dbf21
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Hadoop 연결 관리자
+# <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
   SSIS 패키지는 Hadoop 연결 관리자를 통해 속성에 대해 지정된 값을 사용하여 Hadoop 클러스터에 연결할 수 있습니다.  
   
-## Hadoop 연결 관리자 구성  
+## <a name="configure-the-hadoop-connection-manager"></a>Hadoop 연결 관리자 구성  
   
 1.  **SSIS 연결 관리자 추가** 대화 상자에서 **Hadoop**을 선택하고 **추가**를 클릭합니다. **Hadoop 연결 관리자 편집기** 대화 상자가 열립니다.  
   
@@ -36,9 +41,9 @@ caps.handback.revision: 7
   
     3.  WebHCat 서비스에 액세스하는 데 사용할 **인증** 방법을 선택합니다. 사용 가능한 값은 **기본** 및 **Kerberos**입니다.  
   
-         ![Hadoop connection manager editor with basic authentication](../../integration-services/connection-manager/media/hadoop-cm-basic.png "Hadoop connection manager editor with basic authentication")  
+         ![Hadoop 연결 관리자 편집기는 기본 인증으로](../../integration-services/connection-manager/media/hadoop-cm-basic.png "기본 인증과 함께 Hadoop 연결 관리자 편집기")  
   
-         ![Hadoop connection manager editor with Kerberos authentication](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Hadoop connection manager editor with Kerberos authentication")  
+         ![Kerberos 인증 Hadoop 연결 관리자 편집기](../../integration-services/connection-manager/media/hadoop-cm-kerberos.png "Kerberos 인증 Hadoop 연결 관리자 편집기")  
   
     4.  **WebHCat 사용자**에는 WebHCat 액세스 권한이 있는 **사용자** 를 입력합니다.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 7
   
 6.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Hadoop 하이브 태스크](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Hadoop Pig 작업](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Hadoop 파일 시스템 태스크](../../integration-services/control-flow/hadoop-file-system-task.md)  

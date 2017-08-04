@@ -1,27 +1,32 @@
 ---
 title: "캐시 없음 또는 부분 캐시 모드로 조회 구현 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "조회 변환"
-  - "정확히 일치 [Integration Services]"
-  - "조회 [Integration Services]"
-  - "정확히 일치 [Integration Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lookup transformation
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
 caps.latest.revision: 67
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 67
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb81f969cc30366489df367016c8096ea2ac1168
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 캐시 없음 또는 부분 캐시 모드로 조회 구현
+# <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
   부분 캐시 또는 캐시 없음 모드를 사용하여 조회 변환을 구성할 수 있습니다.  
   
 -   부분 캐시  
@@ -34,7 +39,7 @@ caps.handback.revision: 67
   
  부분 캐시를 선택하든 캐시 없음을 선택하든 OLE DB 연결 관리자를 사용하여 참조 데이터 집합에 연결합니다. 참조 데이터 집합은 조회 변환을 실행하는 동안 테이블, 뷰 또는 SQL 쿼리를 사용하여 생성됩니다.  
   
-### 캐시 없음 또는 부분 캐시 모드로 조회 변환을 구현하려면  
+### <a name="to-implement-a-lookup-transformation-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 변환을 구현하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 열고 패키지를 엽니다.  
   
@@ -106,7 +111,7 @@ caps.handback.revision: 67
   
 14. 조회 변환의 변경 내용을 저장한 다음 패키지를 실행하려면 **확인** 을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
   

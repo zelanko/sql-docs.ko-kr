@@ -1,29 +1,34 @@
 ---
-title: "OLE DB 원본을 사용하여 데이터 추출 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 추출 [Integration Services]"
-  - "원본 [Integration Services], OLE DB"
-  - "OLE DB 원본 [Integration Services]"
+title: "OLE DB 원본을 사용 하 여 데이터 추출 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- extracting data [Integration Services]
+- sources [Integration Services], OLE DB
+- OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
 caps.latest.revision: 23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 23
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: c80e5fef4855cf5066dfa00bf527e452aa616d33
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB 원본을 사용하여 데이터 추출
+# <a name="extract-data-by-using-the-ole-db-source"></a>OLE DB 원본을 사용하여 데이터 추출
   OLE DB 원본을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크가 이미 들어 있어야 합니다.  
   
-### OLE DB 원본을 사용하여 데이터를 추출하려면  
+### <a name="to-extract-data-using-an-ole-db-source"></a>OLE DB 원본을 사용하여 데이터를 추출하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -55,7 +60,7 @@ caps.handback.revision: 23
   
 8.  필요에 따라 **출력 열** 목록에서 값을 편집하여 출력 열의 이름을 업데이트합니다.  
   
-9. 오류 출력을 구성하려면 **오류 출력**을 클릭합니다. 자세한 내용은 [데이터 흐름 구성 요소에서 오류 출력 구성](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)을 참조하세요.  
+9. 오류 출력을 구성하려면 **오류 출력**을 클릭합니다. 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
 10. **미리 보기** 를 클릭하면 OLE DB 원본에서 추출된 최대 200개의 데이터 행을 볼 수 있습니다.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 23
   
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [OLE DB 원본](../../integration-services/data-flow/ole-db-source.md)   
  [Integration Services 변환](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 경로](../../integration-services/data-flow/integration-services-paths.md)   

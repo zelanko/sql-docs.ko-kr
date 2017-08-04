@@ -1,62 +1,67 @@
 ---
-title: "SQL Server 프로파일러 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/24/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "프로파일러 [SQL Server Profiler], SQL Server Profiler"
-  - "추적 [SQL Server], SQL Server Profiler"
-  - "데이터베이스 모니터링 [SQL Server], SQL Server Profiler"
-  - "데이터베이스 튜닝 [SQL Server], SQL Server Profiler"
-  - "SQL Server 프로파일러"
-  - "서버 성능 [SQL Server], SQL Server Profiler"
-  - "프로파일러 [SQL Server 프로파일러]"
-  - "추적 [SQL Server]"
-  - "성능 모니터링 [SQL Server], SQL Server Profiler"
-  - "이벤트 [SQL Server], SQL Server Profiler"
-  - "SQL Server Profiler, SQL Server Profiler 정보"
-  - "도구 [SQL Server], SQL Server Profiler"
-  - "데이터베이스 성능 [SQL Server], SQL Server Profiler"
-  - "trace [SQL Server]"
+title: SQL Server Profiler | Microsoft Docs
+ms.custom: 
+ms.date: 10/24/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Profiler [SQL Server Profiler], about SQL Server Profiler
+- traces [SQL Server], SQL Server Profiler
+- database monitoring [SQL Server], SQL Server Profiler
+- tuning databases [SQL Server], SQL Server Profiler
+- SQL Server Profiler
+- server performance [SQL Server], SQL Server Profiler
+- Profiler [SQL Server Profiler]
+- tracing [SQL Server]
+- monitoring performance [SQL Server], SQL Server Profiler
+- events [SQL Server], SQL Server Profiler
+- SQL Server Profiler, about SQL Server Profiler
+- tools [SQL Server], SQL Server Profiler
+- database performance [SQL Server], SQL Server Profiler
+- trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 caps.latest.revision: 46
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55fa14d4d8e28f602c49613cf81e981c12856177
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 프로파일러
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 추적을 작성 및 관리하고 추적 결과를 분석 및 재생하기 위한 인터페이스입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
+# <a name="sql-server-profiler"></a>SQL Server 프로파일러
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]작성 하 고 추적을 관리 하 고 분석 및 추적 결과 재생 인터페이스가입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다.  
   
 >**중요!!**  
-> Microsoft는 향후 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 캡처 및 추적 재생에 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 를 사용하지 않을 것임을 발표하고 있습니다. 이러한 **기능은** SQL Server 2016에서 사용할 수 있지만 이후 버전에서 제거됩니다.
+> Microsoft는 향후 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 캡처 및 추적 재생에 [!INCLUDE[ssDE](../../includes/ssde-md.md)]를 사용하지 않을 것임을 발표하고 있습니다. 이러한 **기능은** SQL Server 2016에서 사용할 수 있지만 이후 버전에서 제거됩니다.
 >   
 >  Microsoft SQL Server 추적 및 재생 개체를 포함하는 *Microsoft.SqlServer.Management.Trace* 네임스페이스도 더 이상 사용되지 않을 예정입니다.                     
 **참고** Analysis Services 작업에는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 가 계속 사용되며 지원됩니다.
 >
->  **[연결 페이지](https://connect.microsoft.com/SQLServer/Feedback)**
+> **[연결 페이지](https://connect.microsoft.com/SQLServer/Feedback)**
 
- ## 프로파일러는 어디에 있나요?
+ ## <a name="where-is-the-profiler"></a>프로파일러는 어디에 있나요?
  
- 다양한 방법으로 SSMS에서 프로파일러를 시작할 수 있습니다. [다음 항목에서는 프로파일러를 시작할 수 있는 방법을 나열했습니다.](https://msdn.microsoft.com/library/ms173799.aspx)
+ 다양한 방법으로 SSMS에서 프로파일러를 시작할 수 있습니다. [다음은 프로파일러를 시작 하는 방법을 나열 하는 항목입니다.](https://msdn.microsoft.com/library/ms173799.aspx)
   
-## 추적 데이터 캡처 및 재생 
+## <a name="capture-and-replay-trace-data"></a>추적 데이터 캡처 및 재생 
 다음 표에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 추적 데이터를 캡처하고 재생하는 데 사용할 수 있는 권장 기능을 보여 줍니다.
   
 ||||  
 |-|-|-|  
-|**기능\대상 작업**|**관계형 엔진**|**Analysis Services**|  
+|**기능 \ 대상 작업**|**관계형 엔진**|**Analysis Services**|  
 |**추적 캡처**|SQL Server Management Studio의[확장 이벤트](https://msdn.microsoft.com/library/bb630282.aspx) 그래픽 사용자 인터페이스|SQL Server 프로파일러|  
 |**추적 재생**|[Distributed Replay](https://msdn.microsoft.com/library/ff878183.aspx)|SQL Server 프로파일러|  
   
-## SQL Server 프로파일러  
- Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 Analysis Services의 인스턴스를 모니터링하기 위한 SQL 추적에 대한 그래픽 사용자 인터페이스입니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 저장 프로시저가 너무 늦게 실행되어 성능을 떨어뜨리고 있는지 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 은 다음과 같은 작업에 사용됩니다.  
+## <a name="sql-server-profiler"></a>SQL Server 프로파일러  
+ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 Analysis Services의 인스턴스를 모니터링하기 위한 SQL 추적에 대한 그래픽 사용자 인터페이스입니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 저장 프로시저가 너무 늦게 실행되어 성능을 떨어뜨리고 있는지 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이 활동에 대 한 다음과 같은 사용  
   
 -   문제가 발생한 원인을 찾기 위해 문제 쿼리 실행  
   
@@ -68,9 +73,9 @@ caps.handback.revision: 46
   
 -   문제 진단을 위해 성능 카운터의 상관 관계 지정  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 수행되는 동작을 감사하는 기능도 지원합니다. 감사는 보안 관리자가 나중에 검토할 수 있도록 보안 관련 동작을 기록합니다.  
+ 또한 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 수행되는 동작을 감사하는 기능을 지원합니다. 감사는 보안 관리자가 나중에 검토할 수 있도록 보안 관련 동작을 기록합니다.  
   
-## SQL Server Profiler 개념  
+## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler 개념  
  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]도구를 사용하려면 도구가 작동하는 방식을 설명하는 용어를 알고 있어야 합니다.  
   
 >**참고!** SQL 추적을 이해하면 SQL Server Profiler로 작업할 때 큰 도움이 됩니다. 자세한 내용은 [SQL Trace](../../relational-databases/sql-trace/sql-trace.md)을(를) 참조하세요.  
@@ -109,9 +114,9 @@ caps.handback.revision: 46
   
 -   **Audit Logout**  
   
--   **Lock:Acquired**  
+-   **Lock: Acquired**  
   
--   **Lock:Released**  
+-   **Lock: 출시**  
   
  **EventCategory**  
  이벤트 범주는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]내에서 이벤트를 그룹화하는 방법을 정의합니다. 예를 들어 모든 잠금 이벤트 클래스는 **Locks** 이벤트 범주 내에서 그룹화됩니다. 그러나 이벤트 범주는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]내에서만 존재합니다. 이 용어는 엔진 이벤트를 그룹화하는 방법과 관계가 없습니다.  
@@ -132,7 +137,7 @@ caps.handback.revision: 46
   
  필터가 설정되어 있지 않으면 선택된 이벤트 클래스의 모든 이벤트가 추적 출력에서 반환됩니다.  
   
-## SQL Server Profiler 태스크  
+## <a name="sql-server-profiler-tasks"></a>SQL Server Profiler 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -182,16 +187,16 @@ caps.handback.revision: 46
 |SQL Server Profiler를 시작하는 방법에 대해 설명합니다.|[SQL Server Profiler 시작](../../tools/sql-server-profiler/start-sql-server-profiler.md)|  
 |추적 및 추적 템플릿을 저장하는 방법에 대해 설명합니다.|[추적 및 추적 템플릿 저장](../../tools/sql-server-profiler/save-traces-and-trace-templates.md)|  
 |추적 템플릿을 수정하는 방법에 대해 설명합니다.|[추적 템플릿 수정](../../tools/sql-server-profiler/modify-trace-templates.md)|  
-|추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[Windows 성능 로그 데이터와 추적의 상관 관계 지정](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
+|추적과 Windows 성능 로그 데이터의 상관 관계를 지정하는 방법에 대해 설명합니다.|[추적과 Windows 성능 로그 데이터](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
 |SQL Server Profiler를 사용하여 추적을 보고 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
 |SQL Server Profiler를 사용하여 교착 상태를 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler를 사용하여 교착 상태 분석](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |SQL Server Profiler에서 SHOWPLAN 결과로 쿼리를 분석하는 방법에 대해 설명합니다.|[SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
 |SQL Server Profiler로 추적을 필터링하는 방법에 대해 설명합니다.|[SQL Server Profiler로 추적 필터링](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
 |SQL Server Profiler의 재생 기능을 사용하는 방법에 대해 설명합니다.|[추적 재생](../../tools/sql-server-profiler/replay-traces.md)|  
-|SQL Server Profiler에 대한 상황에 맞는 도움말 항목을 보여 줍니다.|[SQL Server 프로파일러 F1 도움말](../../tools/sql-server-profiler/sql-server-프로파일러-f1-도움말.md)|  
+|SQL Server Profiler에 대한 상황에 맞는 도움말 항목을 보여 줍니다.|[SQL Server 프로파일러 F1 도움말](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 성능 및 작업을 모니터링하는 데 사용하는 시스템 저장 프로시저를 보여 줍니다.|[SQL Server Profiler 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [잠금 이벤트 범주](../../relational-databases/event-classes/locks-event-category.md)   
  [Sessions 이벤트 범주](../../relational-databases/event-classes/sessions-event-category.md)   
  [Stored Procedures 이벤트 범주](../../relational-databases/event-classes/stored-procedures-event-category.md)   
@@ -199,3 +204,4 @@ caps.handback.revision: 46
  [서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   
+

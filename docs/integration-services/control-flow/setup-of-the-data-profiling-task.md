@@ -1,32 +1,37 @@
 ---
-title: "데이터 프로파일링 태스크 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 프로파일링 태스크 [Integration Services], 구성"
+title: "데이터 프로 파일링 태스크 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling task [Integration Services], configuring
 ms.assetid: fe050ca4-fe45-43d7-afa9-99478041f9a8
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: 757bee96609bf389100076434cc733ff7ad46d25
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터 프로파일링 태스크 설정
+# <a name="setup-of-the-data-profiling-task"></a>데이터 프로파일링 태스크 설정
   원본 데이터의 프로필을 검토하기 전에 수행해야 하는 첫 번째 단계는 데이터 프로파일링 태스크를 설정하고 실행하는 것입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 이 태스크를 만듭니다. 데이터 프로파일링 태스크를 구성하려면 데이터 프로파일링 태스크 편집기를 사용합니다. 이 편집기를 사용하면 프로필을 출력할 위치와 계산할 프로필을 선택할 수 있습니다. 태스크를 설정한 후 패키지를 실행하여 데이터 프로필을 계산합니다.  
   
-## 요구 사항 및 제한 사항  
+## <a name="requirements-and-limitations"></a>요구 사항 및 제한 사항  
  데이터 프로파일링 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 저장된 데이터만 사용할 수 있습니다. 이 태스크는 타사 또는 파일 기반 데이터 원본을 사용할 수 없습니다.  
   
  또한 데이터 프로파일링 태스크가 포함된 패키지를 실행하려면 tempdb 데이터베이스에 대해 CREATE TABLE 권한을 비롯한 읽기/쓰기 권한이 있는 계정을 사용해야 합니다.  
   
-## 패키지의 데이터 프로파일링 태스크  
+## <a name="data-profiling-task-in-a-package"></a>패키지의 데이터 프로파일링 태스크  
  데이터 프로파일링 태스크는 프로필만 구성하고 계산된 프로필이 포함된 출력 파일을 만듭니다. 이 출력 파일을 검토하려면 독립 실행형 뷰어 프로그램인 데이터 프로필 뷰어를 사용해야 합니다. 출력을 별도로 검토해야 하기 때문에 다른 태스크가 포함되어 있지 않은 패키지에서 데이터 프로파일링 태스크를 사용합니다.  
   
  그러나 데이터 프로파일링 태스크를 패키지의 유일한 태스크로 사용할 필요는 없습니다. 더 복잡한 패키지의 워크플로 또는 데이터 흐름에서 데이터 프로파일링을 수행하려면 다음 방법 중 하나를 선택합니다.  
@@ -37,15 +42,15 @@ caps.handback.revision: 34
   
  자세한 내용은 [패키지 워크플로에 데이터 프로파일링 태스크 포함](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md)을 참조하세요.  
   
-## 태스크 출력 설정  
+## <a name="setup-of-the-task-output"></a>태스크 출력 설정  
  패키지에 데이터 프로파일링 태스크를 삽입한 후에는 태스크에서 계산할 프로필의 출력을 설정해야 합니다. 프로필의 출력을 설정하려면 데이터 프로파일링 태스크 편집기의 **일반** 페이지를 사용합니다. **일반** 페이지는 출력의 대상을 지정하는 기능뿐만 아니라 빠른 데이터 프로파일링을 수행하는 기능을 제공합니다. **빠른 프로필**을 선택하면 데이터 프로파일링 태스크가 일부 또는 전체 기본 프로필과 해당 기본 설정을 사용하여 테이블 또는 뷰를 프로파일링합니다.  
   
  자세한 내용은 [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md) 및 [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)을 참조하세요.  
   
 > [!IMPORTANT]  
->  출력 파일에는 데이터베이스와 해당 데이터베이스에 포함된 데이터에 대한 중요 데이터가 포함될 수 있습니다. 이 파일을 보다 안전하게 보호하는 방법에 대한 제안 사항은 [패키지에서 사용되는 파일 액세스](../../integration-services/security/access-to-files-used-by-packages.md)를 참조하세요.  
+>  출력 파일에는 데이터베이스와 해당 데이터베이스에 포함된 데이터에 대한 중요 데이터가 포함될 수 있습니다. 이 파일을 보다 안전하게 보호하는 방법에 대한 제안 사항은 [패키지에서 사용되는 파일 액세스](../../integration-services/security/security-overview-integration-services.md#files)를 참조하세요.  
   
-## 계산할 프로필 선택 및 구성  
+## <a name="selection-and-configuration-of-the-profiles-to-be-computed"></a>계산할 프로필 선택 및 구성  
  출력 파일을 설정한 후에는 계산할 데이터 프로필을 선택해야 합니다. 데이터 프로파일링 태스크는 8가지 데이터 프로필을 계산할 수 있습니다. 이 중 5개는 개별 열을 분석하며, 나머지 3개는 여러 열 또는 열과 테이블 간의 관계를 분석합니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 계산할 수 있습니다.  
   
  다음 표에서는 이러한 각 프로필이 계산하는 보고서와 해당 프로필이 유효한 데이터 형식을 설명합니다.  
@@ -89,8 +94,8 @@ caps.handback.revision: 34
   
 -   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## 데이터 프로파일링 태스크가 포함된 패키지 실행  
- 데이터 프로파일링 태스크를 설정한 후 이 태스크를 실행할 수 있습니다. 그러면 이 태스크에서 데이터 프로필을 계산하여 이 정보를 XML 형식으로 파일 또는 패키지 변수에 출력합니다. 이 XML의 구조는 DataProfile.xsd 스키마를 따릅니다.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기, 메모장과 같은 텍스트 편집기에서 이 스키마를 열 수 있습니다. 데이터 품질 정보에 대한 이 스키마는 다음과 같은 용도로 사용할 경우 유용할 수 있습니다.  
+## <a name="execution-of-the-package-that-contains-the-data-profiling-task"></a>데이터 프로파일링 태스크가 포함된 패키지 실행  
+ 데이터 프로파일링 태스크를 설정한 후 이 태스크를 실행할 수 있습니다. 그러면 이 태스크에서 데이터 프로필을 계산하여 이 정보를 XML 형식으로 파일 또는 패키지 변수에 출력합니다. 이 XML의 구조는 DataProfile.xsd 스키마를 따릅니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 또는 다른 스키마 편집기, XML 편집기, 메모장과 같은 텍스트 편집기에서 이 스키마를 열 수 있습니다. 데이터 품질 정보에 대한 이 스키마는 다음과 같은 용도로 사용할 경우 유용할 수 있습니다.  
   
 -   조직 내부 또는 조직 간의 데이터 품질 정보 교환  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 34
   
  대상 네임스페이스는 스키마에서 [http://schemas.microsoft.com/sqlserver/2008/DataDebugger/](http://schemas.microsoft.com/sqlserver/2008/DataDebugger/)와 같이 식별됩니다.  
   
-## 다음 단계  
+## <a name="next-step"></a>다음 단계  
  [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)  
   
   

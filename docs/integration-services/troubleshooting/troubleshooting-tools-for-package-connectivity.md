@@ -1,39 +1,44 @@
 ---
 title: "패키지 연결 문제 해결 도구 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Integration Services 패키지, 문제 해결"
-  - "SSIS 패키지, 문제 해결"
-  - "Integration Services, 문제 해결"
-  - "연결 [Integration Services], 문제 해결"
-  - "오류 [Integration Services], 문제 해결"
-  - "패키지 [Integration Services], 문제 해결"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Integration Services packages, troubleshooting
+- SSIS packages, troubleshooting
+- Integration Services, troubleshooting
+- connectivity [Integration Services], troubleshooting
+- errors [Integration Services], troubleshooting
+- packages [Integration Services], troubleshooting
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
 caps.latest.revision: 13
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e3799e224930806445bc1c27f37c05b95a0bbbae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 패키지 연결 문제 해결 도구
-[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 패키지와 패키지가 데이터를 추출 및 로드하는 데이터 원본 간 연결 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
+# <a name="troubleshooting-tools-for-package-connectivity"></a>패키지 연결 문제 해결 도구
+[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 패키지와 패키지가 데이터를 추출 및 로드하는 데이터 원본 간 연결 문제를 해결하는 데 사용할 수 있는 기능 및 도구를 제공합니다.  
   
-## 외부 데이터 공급자와의 문제 해결  
+## <a name="troubleshooting-issues-with-external-data-providers"></a>외부 데이터 공급자와의 문제 해결  
  다수의 패키지 오류가 외부 데이터 공급자와 상호 작용하는 동안 발생합니다. 하지만 이러한 공급자가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 로 반환하는 메시지에서 상호 작용 문제 해결을 시작하기에 충분한 정보를 제공하지 않는 경우가 많습니다. 이 문제 해결 요구를 다루기 위해 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 사용할 수 있는 로깅 메시지가 포함되어 있습니다.  
   
 -   **로깅을 설정하고 패키지의 Diagnostic 이벤트를 선택하여 문제 해결 메시지를 표시합니다**. 다음 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소는 외부 데이터 공급자 호출 전후에 메시지를 로그에 기록할 수 있습니다.  
   
     -   OLE DB 연결 관리자, OLE DB 원본 및 OLE DB 대상  
   
-    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자 및 ADO.NET 원본  
+    -   [!INCLUDE[vstecado](../../includes/vstecado-md.md)]연결 관리자 및 Ado.net 원본  
   
     -   SQL 실행 태스크  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 13
     ExternalRequest_post: 'IDbConnection.Close finished'. The external request has completed."  
     ```  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [패키지 배포 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)   
  [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)  
   

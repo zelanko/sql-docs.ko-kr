@@ -1,27 +1,32 @@
 ---
-title: "오류 및 이벤트 참조(Integration Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services 패키지, 이벤트"
-  - "이벤트 [Integration Services]"
-  - "오류 [Integration Services]"
-  - "Integration Services, 오류"
+title: "오류 및 이벤트 참조 (Integration Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, events
+- events [Integration Services]
+- errors [Integration Services]
+- Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
 caps.latest.revision: 20
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c98113795981fb4c080fac83f3f69a6242c1e86b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 오류 및 이벤트 참조(Integration Services)
+# <a name="errors-and-events-reference-integration-services"></a>오류 및 이벤트 참조(Integration Services)
   설명서의 이 섹션에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]와 관련된 몇 가지 오류와 이벤트에 대한 정보가 포함되어 있습니다. 또한 오류 메시지의 원인 및 해결 방법 정보도 포함되어 있습니다.  
   
  가장 흔히 발생하는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 목록 및 해당 오류에 대한 설명을 비롯하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류 메시지에 대한 자세한 내용은 [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)를 참조하세요. 그러나 현재 목록에는 문제 해결 정보가 포함되어 있지 않습니다.  
@@ -29,7 +34,7 @@ caps.handback.revision: 20
 > [!IMPORTANT]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 작업할 때 볼 수 있는 오류 메시지 중 상당수가 다른 구성 요소의 메시지입니다. 여기에는 OLE DB Provider, 다른 데이터베이스 구성 요소(예: [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ) 또는 다른 서비스나 구성 요소(예: 파일 시스템, SMTP 서버 또는 Microsoft Message Queueing)가 포함됩니다. 이러한 외부 오류 메시지에 대한 자세한 내용은 해당 구성 요소의 설명서를 참조하십시오.  
   
-## 오류 메시지  
+## <a name="error-messages"></a>오류 메시지  
   
 |오류의 심볼 이름|Description|  
 |----------------------------|-----------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 20
 |DTS_E_WRITEWHILECACHEINUSE|조회 변환이 메모리 내 캐시에서 데이터를 읽는 동안 캐시 변환이 메모리 내 캐시에 데이터를 쓰려고 하고 있음을 나타냅니다.|  
 |DTS_W_EXTERNALMETADATACOLUMNSOUTOFSYNC|데이터 원본의 열 메타데이터가 데이터 원본에 연결된 원본 또는 대상 구성 요소의 열 메타데이터와 일치하지 않음을 나타냅니다.|  
   
-## 이벤트(SQLISPackage)  
+## <a name="events-sqlispackage"></a>이벤트(SQLISPackage)  
  자세한 내용은 [Integration Services 패키지에서 기록하는 이벤트](../integration-services/performance/events-logged-by-an-integration-services-package.md)를 참조하세요.  
   
 |이벤트|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 20
 |SQLISPackage_12551|패키지가 작업을 완료하지 못하고 중지되었음을 나타냅니다.|  
 |SQLISPackage_12557|패키지가 실행되었음을 나타냅니다.|  
   
-## 이벤트(SQLISService)  
+## <a name="events-sqlisservice"></a>이벤트(SQLISService)  
  자세한 내용은 [Integration Services 서비스에서 기록하는 이벤트](../integration-services/service/events-logged-by-the-integration-services-service.md)를 참조하세요.  
   
 |이벤트|Description|  
@@ -75,7 +80,7 @@ caps.handback.revision: 20
 |SQLISService_273|구성 파일을 읽을 수 없거나 구성 파일이 유효하지 않음을 나타냅니다.|  
 |SQLISService_274|구성 파일의 위치가 포함된 레지스트리 항목이 없거나 비어 있음을 나타냅니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../integration-services/integration-services-error-and-message-reference.md)  
   
   

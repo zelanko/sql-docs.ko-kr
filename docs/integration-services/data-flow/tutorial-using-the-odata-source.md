@@ -1,25 +1,30 @@
 ---
 title: "자습서: OData 원본 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 2c64cf8b-5edb-48df-8ffe-697096258f71
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38fc17519a5c0450b2a80a4bb0429ea24f34ac64
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 자습서: OData 원본 사용
+# <a name="tutorial-using-the-odata-source"></a>자습서: OData 원본 사용
   이 자습서에서는 샘플 **Northwind** OData 서비스(http://services.odata.org/V3/Northwind/Northwind.svc/)에서 **Employees** 컬렉션을 추출하고 이를 플랫 파일로 로드하는 프로세스에 대해 설명합니다.  
   
-## 1. Integration Services 프로젝트 만들기  
+## <a name="1-create-an-integration-services-project"></a>1. Integration Services 프로젝트 만들기  
   
 1.  **SQL Server Data Tools** 또는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]를 실행합니다.  
   
@@ -31,13 +36,13 @@ caps.handback.revision: 6
   
 5.  **이름** 을 입력하고 프로젝트의 **위치** 를 선택한 후 **확인**을 클릭합니다.  
   
-## 2. OData 원본을 SSIS 패키지에 추가 및 구성  
+## <a name="2-add-and-configure-odata-source-to-the-ssis-package"></a>2. OData 원본을 SSIS 패키지에 추가 및 구성  
   
 1.  **데이터 흐름 태스크**를 **SSIS 도구 상자**에서 SSIS 패키지의 제어 흐름 디자인 화면에 끌어 놓습니다.  
   
 2.  **데이터 흐름** 탭을 클릭하거나 새로 추가된 **데이터 흐름 태스크** 를 두 번 클릭하여 **데이터 흐름 디자인 화면**을 실행합니다.  
   
-3.  **SSIS 도구 상자**의 **공통** 그룹에서 **OData 원본**을 끌어 놓습니다. **OData 원본** 이 처음 설치되면 **SSIS 도구 상자** 의 **공통**그룹에 표시됩니다.  
+3.  **SSIS 도구 상자** 의 **공통** 그룹에서 **OData 원본**을 끌어 놓습니다. **OData 원본** 이 처음 설치되면 **SSIS 도구 상자** 의 **공통**그룹에 표시됩니다.  
   
 4.  **OData 원본** 구성 요소를 두 번 클릭해서 **OData 원본 편집기** 대화 상자를 실행합니다.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 6
   
 15. **확인** 을 클릭해서 **OData 원본 편집기** 대화 상자를 닫습니다.  
   
-## 3. 플랫 파일 대상 추가 및 솔루션 테스트  
+## <a name="3-add-flat-file-destination-and-test-the-solution"></a>3. 플랫 파일 대상 추가 및 솔루션 테스트  
   
 1.  이제 **SSIS 도구 상자**에서 **OData 원본** 구성 요소 아래의 데이터 흐름 디자인 화면으로 **플랫 파일 대상**을 끌어 놓습니다.  
   

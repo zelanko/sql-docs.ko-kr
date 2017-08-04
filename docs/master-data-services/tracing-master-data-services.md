@@ -1,22 +1,27 @@
 ---
-title: "추적(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "추적 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "erikre"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9697bf0ee7df005c5cdd5b12126df2e31c7deca2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 추적(Master Data Services)
+# <a name="tracing-master-data-services"></a>추적(Master Data Services)
   Web.config 파일에는 다음과 같은 추적 섹션이 포함되어 있습니다. 이 섹션은 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)][!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]  
   
 ```  
@@ -57,13 +62,13 @@ caps.handback.revision: 7
   
     |요소|Description|  
     |-------------|-----------------|  
-    | Time |추적 항목이 생성된 시간입니다.|  
+    |Time|추적 항목이 생성된 시간입니다.|  
     |CorrelationID|요청마다 상관 관계 ID 하나가 할당됩니다. 하나의 요청에 의해 트리거되는 모든 추적은 같은 상관 관계 ID를 공유합니다.<br /><br /> UI에서 오류가 발생하면 오류 메시지에 상관 관계 ID가 표시됩니다.|  
     |연산|요청 작업 이름입니다. 웹 UI 요청의 경우 작업 이름은 URL입니다. API 요청의 경우 작업 이름은 서비스 이름입니다.|  
     |Level|이 추적 항목의 수준입니다.|  
-    | 메시지 |추적의 메시지 본문입니다.|  
+    |메시지|추적의 메시지 본문입니다.|  
   
-## 외부 리소스  
+## <a name="external-resources"></a>외부 리소스  
  msdn.com의 블로그 게시물 [로깅 문제 해결 개선](http://go.microsoft.com/fwlink/p/?LinkId=615377)  
   
   

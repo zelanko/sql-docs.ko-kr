@@ -1,22 +1,27 @@
 ---
 title: "XML 원본 사용자 지정 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: eb29b28c-3159-41ec-b3d7-fce5b2f2be55
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9acfe256755294f134decddc31a7cbb9c7966f78
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# XML 원본 사용자 지정 속성
+# <a name="xml-source-custom-properties"></a>XML 원본 사용자 지정 속성
   XML 원본에는 사용자 지정 속성과 모든 데이터 흐름 구성 요소에 공통된 속성이 모두 있습니다.  
   
  다음 표에서는 XML 원본의 사용자 지정 속성에 대해 설명합니다. 모든 속성은 읽기/쓰기가 가능합니다.  
@@ -38,7 +43,7 @@ caps.handback.revision: 6
   
  자세한 내용은 [XML Source](../../integration-services/data-flow/xml-source.md)을 참조하세요.  
   
-## 관련 항목:  
- [공용 속성](../Topic/Common%20Properties.md)  
+## <a name="see-also"></a>관련 항목:  
+ [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

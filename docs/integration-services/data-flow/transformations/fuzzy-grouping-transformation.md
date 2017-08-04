@@ -1,37 +1,42 @@
 ---
 title: "유사 항목 그룹화 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fuzzygroupingtrans.f1"
-helpviewer_keywords: 
-  - "데이터 정리"
-  - "데이터 비교"
-  - "토큰 구분 기호 [Integration Services]"
-  - "임시 인덱스 [Integration Services]"
-  - "유사 항목 그룹화 변환"
-  - "임시 테이블 [Integration Services]"
-  - "데이터 그룹화"
-  - "데이터 표준화 [Integration Services]"
-  - "열 [Integration Services], 표준화"
-  - "유사성 임계값 [Integration Services]"
-  - "데이터 정리 [Integration Services]"
-  - "중복 데이터 [Integration Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fuzzygroupingtrans.f1
+helpviewer_keywords:
+- cleaning data
+- comparing data
+- token delimiters [Integration Services]
+- temporary indexes [Integration Services]
+- Fuzzy Grouping transformation
+- temporary tables [Integration Services]
+- grouping data
+- standardizing data [Integration Services]
+- columns [Integration Services], standardizing
+- similarity thresholds [Integration Services]
+- data cleaning [Integration Services]
+- duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
 caps.latest.revision: 58
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 58
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 유사 항목 그룹화 변환
+# <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
   유사 항목 그룹화 변환에서는 중복되기 쉬운 데이터 행을 식별하고 데이터 표준화에 사용할 데이터의 중복 행을 선택하여 데이터 정리 태스크를 수행합니다.  
   
 > [!NOTE]  
@@ -45,9 +50,9 @@ caps.handback.revision: 58
   
  변환에서는 각 입력 열당 다음 추가 열을 포함하여 한 개의 출력 행을 생성합니다.  
   
--   **_key_in** 열, 각 행을 고유하게 식별합니다.  
+-   **_key_in**열, 각 행을 고유하게 식별합니다.  
   
--   **_key_out** 열, 중복 행의 그룹을 식별합니다. **_key_out** 열은 정식 데이터 행에 **_key_in** 열 값을 가집니다. **_key_out**에 동일한 값을 가진 행은 동일한 그룹의 일부입니다. 그룹의 **_key_out** 값은 정식 데이터 행의 **_key_in** 값에 해당합니다.  
+-   **_key_out**열, 중복 행의 그룹을 식별합니다. **_key_out** 열은 정식 데이터 행에 **_key_in** 열 값을 가집니다. **_key_out** 에 동일한 값을 가진 행은 동일한 그룹의 일부입니다. 그룹의 **_key_out**값은 정식 데이터 행의 **_key_in** 값에 해당합니다.  
   
 -   **_score**, 입력 행 및 정식 행 간의 유사성을 나타내는 0과 1 사이의 값입니다.  
   
@@ -67,17 +72,17 @@ caps.handback.revision: 58
   
  이 변환은 하나의 입력과 하나의 출력을 가지며 오류 출력은 지원하지 않습니다.  
   
-## 행 비교  
- 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 **true**로 설정하면 변환에서는 입력의 모든 각 행을 입력의 다른 행과 비교합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지하려면 패키지 개발 시에만 Exhaustive 속성을 **true**로 설정하는 것이 좋습니다.  
+## <a name="row-comparison"></a>행 비교  
+ 유사 항목 그룹화 변환을 구성하는 경우 변환에서 변환 입력 내의 행을 비교하는 데 사용할 비교 알고리즘을 지정할 수 있습니다. Exhaustive 속성을 **true**로 설정하면 변환에서는 입력의 모든 각 행을 입력의 다른 행과 비교합니다. 이 비교 알고리즘을 사용하면 더 정확한 결과를 얻을 수 있지만 입력 행의 수가 많으면 변환 성능이 느려집니다. 성능 문제를 방지하려면 패키지 개발 시에만 Exhaustive 속성을 **true** 로 설정하는 것이 좋습니다.  
   
-## 임시 테이블 및 인덱스  
+## <a name="temporary-tables-and-indexes"></a>임시 테이블 및 인덱스  
  유사 항목 그룹화 변환에서는 런타임에 변환에서 연결하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 테이블 및 인덱스와 같은 크기가 큰 임시 개체를 만듭니다. 테이블 및 인덱스의 크기는 변환 입력 내 행의 수 및 유사 항목 그룹화 변환에서 만든 토큰의 수에 비례합니다.  
   
  변환은 또한 임시 테이블을 쿼리합니다. 따라서 프로덕션 서버에 사용 가능한 디스크 공간이 제한되는 경우 프로덕션 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 아닌 인스턴스로 유사 항목 그룹화 변환을 연결해야 합니다.  
   
  변환에서 사용하는 테이블 및 인덱스가 로컬 컴퓨터에 있는 경우 변환의 성능이 향상될 수 있습니다.  
   
-## 유사 항목 그룹화 변환 구성  
+## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  **유사 항목 그룹화 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
@@ -90,18 +95,18 @@ caps.handback.revision: 58
   
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  이 태스크의 속성 설정 방법에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [유사 항목 그룹화 변환을 사용하여 유사한 데이터 행 식별](../../../integration-services/data-flow/transformations/identify-similar-data-rows-by-using-the-fuzzy-grouping-transformation.md)  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

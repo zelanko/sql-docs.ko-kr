@@ -1,27 +1,32 @@
 ---
-title: "구성 요소 그룹화 또는 그룹 해제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컨테이너 그룹화"
-  - "태스크 [Integration Services], 그룹화"
-  - "컨테이너 [Integration Services], 그룹화"
-  - "태스크 그룹화"
+title: "구성 요소를 그룹화 하거나 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- grouping containers
+- tasks [Integration Services], grouping
+- containers [Integration Services], grouping
+- grouping tasks
 ms.assetid: 34320838-c271-4f8c-90b3-1254690890bb
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1162e9b3617c16dc057e899515b9125da35e070b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 구성 요소 그룹화 또는 그룹 해제
+# <a name="group-or-ungroup-components"></a>구성 요소 그룹화 또는 그룹 해제
   **디자이너의**제어 흐름 **,**데이터 흐름 **및** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭에서는 축소 가능한 그룹화를 지원합니다. 패키지에 여러 구성 요소가 있는 경우 탭이 복잡해져서 모든 구성 요소를 한 번에 확인하기 어렵고 사용하려는 항목을 쉽게 찾기 어려울 수 있습니다. 축소 가능한 그룹화 기능을 사용하면 작업 공간을 절약하고 큰 패키지를 쉽게 사용할 수 있습니다.  
   
  그룹화하려는 구성 요소를 선택하여 그룹화한 다음 작업에 맞게 그룹을 확장하거나 축소합니다. 그룹을 확장하면 해당 그룹에 들어 있는 구성 요소의 속성을 사용할 수 있습니다. 태스크와 컨테이너를 연결하는 선행 제약 조건은 그룹에 자동으로 포함됩니다.  
@@ -34,7 +39,7 @@ caps.handback.revision: 46
   
 -   패키지가 저장되면 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 그룹화 구성이 저장되지만 그룹화 구성은 패키지 실행에 영향을 주지 않습니다. 구성 요소를 그룹화하는 기능은 디자인 타임 기능이며 패키지의 런타임 동작에는 영향을 주지 않습니다.  
   
-### 구성 요소를 그룹화하려면  
+### <a name="to-group-components"></a>구성 요소를 그룹화하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 46
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-### 구성 요소를 그룹 해제하려면  
+### <a name="to-ungroup-components"></a>구성 요소를 그룹 해제하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -58,8 +63,8 @@ caps.handback.revision: 46
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
- [제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
- [기본 선행 제약 조건을 사용하여 태스크 및 컨테이너 연결](../Topic/Connect%20Tasks%20and%20Containers%20by%20Using%20a%20Default%20Precedence%20Constraint.md)  
+## <a name="see-also"></a>관련 항목:  
+ [태스크 또는 컨테이너는 제어 흐름에 추가 또는 삭제](../integration-services/control-flow/add-or-delete-a-task-or-a-container-in-a-control-flow.md)   
+ [기본 선행 제약 조건을 사용 하 여 태스크 및 컨테이너 연결](http://msdn.microsoft.com/library/8f31f15f-98ff-4c35-b41f-8b8cfd148d75)  
   
   

@@ -1,27 +1,32 @@
 ---
 title: "스크립트 디버깅 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "스크립트 태스크 [Integration Services], 디버깅"
-  - "디버깅 [Integration Services], 스크립트"
-  - "스크립트 [Integration Services], 디버깅"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Script task [Integration Services], debugging
+- debugging [Integration Services], scripts
+- scripts [Integration Services], debugging
 ms.assetid: fddf57d8-8607-4f88-85a0-1b683087b491
 caps.latest.revision: 57
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 338484d5f437833ecdcaffb39ce3b5bc5ec8ea8f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 스크립트 디버깅
-  VSTA([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)에서 스크립트 태스크 및 스크립트 구성 요소에 사용할 스크립트를 작성할 수 있습니다.  
+# <a name="debugging-script"></a>스크립트 디버깅
+  VSTA( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications)에서 스크립트 태스크 및 스크립트 구성 요소에 사용할 스크립트를 작성할 수 있습니다.  
   
  VSTA에서 중단점을 설정하고 스크립팅합니다. VSTA에서 중단점을 관리할 수 있지만 **디자이너에서 제공하는** 중단점 설정 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자를 사용하여 중단점을 관리할 수도 있습니다. 자세한 내용은 [Debugging Control Flow](../../integration-services/troubleshooting/debugging-control-flow.md)을 참조하세요.  
   
@@ -31,11 +36,11 @@ caps.handback.revision: 57
   
  스크립트 태스크 및 스크립트 구성 요소를 디버깅하는 방법은 [Coding and Debugging the Script Task](../../integration-services/extending-packages-scripting/task/coding-and-debugging-the-script-task.md) 및 [Coding and Debugging the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)을 참조하십시오.  
   
-### Visual Studio for Applications에서 중단점을 설정하려면  
+### <a name="to-set-a-breakpoint-in-visual-studio-for-applications"></a>Visual Studio for Applications에서 중단점을 설정하려면  
   
 -   [스크립트 태스크 및 스크립트 구성 요소에서 중단점을 설정하여 스크립트 디버깅](../../integration-services/extending-packages-scripting/debug-a-script-by-setting-breakpoints-in-a-script-task-and-script-component.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [패키지 배포 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-development.md)  
   
   
