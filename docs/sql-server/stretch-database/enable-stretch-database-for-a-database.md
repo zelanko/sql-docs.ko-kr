@@ -17,44 +17,44 @@ ms.assetid: 37854256-8c99-4566-a552-432e3ea7c6da
 caps.latest.revision: 70
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 15d9caa3c474d5cbe2e16e158e6f2fcfe7959ed6
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 189aef1d316d4e8569a48a413ec72cfbc6a6673c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="enable-stretch-database-for-a-database"></a>Enable Stretch Database for a database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Stretch Database에 기존 데이터베이스를 구성하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 사용**을 선택하여 **스트레치에 데이터베이스 사용** 마법사를 엽니다. Transact-SQL을 사용하여 데이터베이스에서 Stretch Database를 활성화할 수도 있습니다.  
+  Stretch Database에 기존 데이터베이스를 구성하려면 SQL Server Management Studio에서 데이터베이스에 대해 **태스크 | 스트레치 | 사용**을 선택하여 **스트레치에 데이터베이스 사용** 마법사를 엽니다. Transact-SQL을 사용하여 데이터베이스에서 스트레치 데이터베이스를 활성화할 수도 있습니다.  
   
- 개별 테이블에 대해 **태스크 | 스트레치 | 사용** 선택하고 Stretch Database에 데이터베이스를 사용하도록 설정하지 않은 경우에는 마법사가 Stretch Database에 데이터베이스를 구성하고 그 과정에서 사용자가 테이블을 선택하도록 합니다. [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)의 단계 대신 이 항목의 단계를 따릅니다.  
+ 개별 테이블에 대해 **태스크 | 스트레치 | 사용** 선택하고 스트레치 데이터베이스에 데이터베이스를 사용하도록 설정하지 않은 경우에는 마법사가 스트레치 데이터베이스에 데이터베이스를 구성하고 그 과정에서 사용자가 테이블을 선택하도록 합니다. [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)의 단계 대신 이 항목의 단계를 따릅니다.  
   
- 데이터베이스 또는 테이블에서 Stretch Database를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 Stretch Database를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
+ 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 스트레치 데이터베이스를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
 
  >   [!NOTE]
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다. 
  
 ## <a name="before-you-get-started"></a>시작하기 전에  
   
--   스트레치에서 데이터베이스를 구성하기 전에 스트레치에 적합한 데이터베이스와 테이블을 식별하기 위해 Stretch Database 관리자를 실행하는 것이 좋습니다. Stretch Database 관리자는 차단 문제도 식별합니다. 자세한 내용은 [Stretch Database 관리자를 실행하여 Stretch Database용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  
+-   스트레치에서 데이터베이스를 구성하기 전에 스트레치에 적합한 데이터베이스와 테이블을 식별하기 위해 스트레치 데이터베이스 관리자를 실행하는 것이 좋습니다. 스트레치 데이터베이스 관리자는 차단 문제도 식별합니다. 자세한 내용은 [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)을 참조하세요.  
   
--   [Stretch Database에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 검토합니다.  
+-   [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 검토합니다.  
   
--   Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 Azure 계정 및 청구를 위한 구독이 있어야 합니다. Azure 계정을 생성하려면 [여기를 클릭하십시오](http://azure.microsoft.com/en-us/pricing/free-trial/).  
+-   스트레치 데이터베이스는 데이터를 Azure로 마이그레이션합니다. 따라서 Azure 계정 및 청구를 위한 구독이 있어야 합니다. Azure 계정을 생성하려면 [여기를 클릭하십시오](http://azure.microsoft.com/en-us/pricing/free-trial/).  
   
 -   새 Azure 서버를 만들거나 기존 Azure 서버를 선택하는 데 필요한 연결 및 로그인 정보를 준비합니다.  
   
-##  <a name="EnableTSQLServer"></a> 필수 조건: 서버에서 Stretch Database 사용  
- 데이터베이스 또는 테이블에서 Stretch Database를 활성화하기 전에 로컬 서버에서 Stretch Database를 먼저 활성화해야 합니다. 이 작업에는 sysadmin 또는 serveradmin 권한이 필요합니다.  
+##  <a name="EnableTSQLServer"></a> 필수 조건: 서버에서 스트레치 데이터베이스 사용  
+ 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하기 전에 로컬 서버에서 스트레치 데이터베이스를 먼저 활성화해야 합니다. 이 작업에는 sysadmin 또는 serveradmin 권한이 필요합니다.  
   
 -   필요한 관리 권한이 있으면 **스트레치에 데이터베이스 사용** 마법사가 스트레치에 사용할 서버를 구성합니다.  
   
 -   필요한 권한이 없는 경우에는 마법사를 실행하기 전에 관리자가 **sp_configure** 를 실행하여 수동으로 옵션을 사용하도록 설정하거나 관리자가 마법사를 실행해야 합니다.  
   
- 서버에서 Stretch Database를 수동으로 사용하도록 설정하려면 **sp_configure** 를 실행하고 **원격 데이터 보관** 옵션을 설정합니다. 다음 예에서는 값을 1로 설정하여 **remote data archive** 옵션을 활성화합니다.  
+ 서버에서 스트레치 데이터베이스를 수동으로 사용하도록 설정하려면 **sp_configure** 를 실행하고 **원격 데이터 보관** 옵션을 설정합니다. 다음 예에서는 값을 1로 설정하여 **remote data archive** 옵션을 활성화합니다.  
   
 ```  
 EXEC sp_configure 'remote data archive' , '1';  
@@ -69,12 +69,12 @@ GO
 ##  <a name="Wizard"></a> 마법사를 사용하여 데이터베이스에서 Stretch Database 활성화  
  입력해야 하는 정보와 선택해야 하는 항목을 포함하여 스트레치에 데이터베이스 사용 마법사에 대한 자세한 내용은 [스트레치에 데이터베이스 사용 마법사를 실행하여 시작](../../sql-server/stretch-database/get-started-by-running-the-enable-database-for-stretch-wizard.md)을 참조하세요.  
   
-##  <a name="EnableTSQLDatabase"></a> Transact-SQL을 사용하여 데이터베이스에서 Stretch Database 활성화  
- 개별 테이블에서 Stretch Database를 활성화할 수 있으려면 데이터베이스에서 Stretch Database를 먼저 활성화해야 합니다.  
+##  <a name="EnableTSQLDatabase"></a> Transact-SQL을 사용하여 데이터베이스에서 스트레치 데이터베이스 활성화  
+ 개별 테이블에서 스트레치 데이터베이스를 활성화할 수 있으려면 데이터베이스에서 스트레치 데이터베이스를 먼저 활성화해야 합니다.  
   
- 데이터베이스 또는 테이블에서 Stretch Database를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 Stretch Database를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
+ 데이터베이스 또는 테이블에서 스트레치 데이터베이스를 활성화하려면 db_owner 사용 권한이 필요합니다. 데이터베이스에서 스트레치 데이터베이스를 활성화하려면 CONTROL DATABASE 사용 권한도 필요합니다.  
   
-1.  시작하기 전에 Stretch Database가 마이그레이션하는 데이터의 기존 Azure 서버를 선택하거나 새 Azure 서버를 만듭니다.  
+1.  시작하기 전에 스트레치 데이터베이스가 마이그레이션하는 데이터의 기존 Azure 서버를 선택하거나 새 Azure 서버를 만듭니다.  
   
 2.  Azure 서버에서 SQL Server가 원격 서버와 통신이 가능하도록 하는 SQL Server의 IP 주소 범위로 방화벽 규칙을 만듭니다.  
 
@@ -82,7 +82,7 @@ GO
     
     ![스트레치용 방화벽 규칙](../../sql-server/stretch-database/media/firewall-rule-for-stretch.png)
   
-3.  Stretch Database용으로 SQL Server 데이터베이스를 구성하려면, 데이터베이스에 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스 마스터 키는 Stretch Database가 원격 데이터베이스에 연결하기 위해 사용하는 자격 증명을 보호합니다. 새 데이터베이스 마스터 키를 만드는 예제는 다음과 같습니다.  
+3.  스트레치 데이터베이스용으로 SQL Server 데이터베이스를 구성하려면, 데이터베이스에 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스 마스터 키는 스트레치 데이터베이스가 원격 데이터베이스에 연결하기 위해 사용하는 자격 증명을 보호합니다. 새 데이터베이스 마스터 키를 만드는 예제는 다음과 같습니다.  
   
     ```tsql  
     USE <database>; 
@@ -97,9 +97,9 @@ GO
   
     -   관리자 자격 증명을 제공할 수 있습니다.  
   
-        -   마법사를 사용하여 Stretch Database를 활성화하면, 그 때 자격 증명을 만들 수 있습니다.  
+        -   마법사를 사용하여 스트레치 데이터베이스를 활성화하면, 그 때 자격 증명을 만들 수 있습니다.  
   
-        -   **ALTER DATABASE**를 실행하여 Stretch Database를 사용하도록 설정하려는 경우 **ALTER DATABASE** 를 실행하여 Stretch Database를 사용하도록 설정하기 전에 수동으로 자격 증명을 만들어야 합니다. 
+        -   **ALTER DATABASE**를 실행하여 스트레치 데이터베이스를 사용하도록 설정하려는 경우 **ALTER DATABASE** 를 실행하여 스트레치 데이터베이스를 사용하도록 설정하기 전에 수동으로 자격 증명을 만들어야 합니다. 
         
         새 자격 증명을 만드는 예제는 다음과 같습니다.
   
@@ -121,7 +121,7 @@ GO
   
         -   SQL Server 인스턴스를 실행하는 서비스 계정은 원격 Azure 서버에서 dbmanager 또는 sysadmin 계정으로 구성되어야 합니다.  
   
-5.  Stretch Database용으로 데이터베이스를 구성하려면 ALTER DATABASE 명령을 실행합니다.  
+5.  스트레치 데이터베이스용으로 데이터베이스를 구성하려면 ALTER DATABASE 명령을 실행합니다.  
   
     1.  SERVER 인수에 대해 기존 Azure 서버의 이름을 이름의 `.database.windows.net` 부분을 포함하여 제공합니다(예: `MyStretchDatabaseServer.database.windows.net`).  
   
@@ -144,14 +144,14 @@ GO
   
 -   [데이터 마이그레이션 일시 중지 및 다시 시작&#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [스트레치 사용 데이터베이스 백업](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   
 -   [스트레치 사용 데이터베이스 복원](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [Stretch Database 관리자를 실행하여 Stretch Database용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
  [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
   

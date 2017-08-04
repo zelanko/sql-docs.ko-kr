@@ -19,12 +19,12 @@ ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd963cc15ac45931d14615323382777970258db7
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 1ca180fe8f74a0b64f341087c324792f8ab0de3d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="limitations-for-stretch-database"></a>Stretch Database에 대한 제한 사항
@@ -93,7 +93,7 @@ ms.lasthandoff: 04/11/2017
 -   테이블을 참조하는 인덱싱된 뷰  
   
 ## <a name="see-also"></a>참고 항목  
- [Stretch Database 관리자를 실행하여 Stretch Database용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
+ [스트레치 데이터베이스 관리자를 실행하여 스트레치 데이터베이스용 데이터베이스 및 테이블 식별](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
  [데이터베이스에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   

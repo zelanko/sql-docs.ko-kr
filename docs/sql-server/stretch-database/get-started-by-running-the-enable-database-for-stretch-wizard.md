@@ -27,12 +27,12 @@ ms.assetid: 855dd9fc-f80c-4dbc-bf46-55a9736bfe15
 caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: a40017c7e70e0af2e38485a26a96cfdcea88a345
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: a3385d76691aa2710dd0d0e1544ee6e4fb5b43d0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 07/29/2017
 
 ---
 # <a name="get-started-by-running-the-enable-database-for-stretch-wizard"></a>Stretch에 데이터베이스 사용 마법사를 실행하여 시작
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/11/2017
 
  Stretch Database에 대한 데이터베이스를 구성하려면 Stretch에 데이터베이스 사용 마법사를 실행합니다.  이 항목에서는 입력해야 하는 정보와 마법사에서 선택 항목에 대해 설명합니다.  
   
- Stretch Database에 대해 자세히 알아보려면 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하세요. 
+ 스트레치 데이터베이스에 대해 자세히 알아보려면 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하세요. 
  
  > [!NOTE] 
  > 나중에 Stretch Database를 사용하지 않도록 설정하려는 경우 테이블 또는 데이터베이스에서 Stretch Database를 사용하지 않도록 설정하면 원격 개체가 삭제되지 않습니다. 원격 테이블 또는 원격 데이터베이스를 삭제하려면 Azure 관리 포털을 사용하여 삭제해야 합니다. 원격 개체는 수동으로 삭제할 때까지 Azure 비용이 계속해서 발생합니다. 
@@ -72,7 +72,7 @@ ms.lasthandoff: 04/11/2017
 |------------|-----------------|  
 |(제목 없음)|선택한 테이블을 스트레치에 사용하려면 이 열에서 확인란을 선택합니다.|  
 |**이름**|데이터베이스에서 테이블 이름을 지정합니다.|  
-|(제목 없음)|이 열의 기호는 경고를 나타내지만 선택한 테이블에서 스트레치를 사용할 수는 있습니다. 또한 예를 들어 지원되지 않는 데이터 형식을 사용하는 등 선택한 테이블에서 스트레치를 사용하지 못하게 하는 차단 문제를 나타낼 수도 있습니다. 기호 위로 마우스를 올려 놓으면 도구 설명에 추가 정보가 표시됩니다. 자세한 내용은 [Stretch Database에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.|  
+|(제목 없음)|이 열의 기호는 경고를 나타내지만 선택한 테이블에서 스트레치를 사용할 수는 있습니다. 또한 예를 들어 지원되지 않는 데이터 형식을 사용하는 등 선택한 테이블에서 스트레치를 사용하지 못하게 하는 차단 문제를 나타낼 수도 있습니다. 기호 위로 마우스를 올려 놓으면 도구 설명에 추가 정보가 표시됩니다. 자세한 내용은 [스트레치 데이터베이스에 대한 제한 사항](../../sql-server/stretch-database/limitations-for-stretch-database.md)을 참조하세요.|  
 |**확대됨**|테이블이 이미 스트레치에 대해 활성화되었는지 여부를 나타냅니다.|  
 |**마이그레이션**|전체 테이블(**전체 테이블**)을 마이그레이션하거나 테이블의 기존 열에 필터를 지정할 수 있습니다. 다른 필터 함수를 사용하여 마이그레이션할 행을 선택하려면 마법사를 종료한 다음 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필터 함수에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요. 함수를 적용하는 방법은 [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) 또는 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하세요.|  
 |**행**|테이블의 행 수를 지정합니다.|  
@@ -104,7 +104,7 @@ ms.lasthandoff: 04/11/2017
 
 다른 유형의 필터 함수를 사용하여 마이그레이션할 행을 선택하려면 다음 중 하나를 수행합니다.  
   
--   마법사를 종료하고 ALTER TABLE 문을 실행하여 테이블에 대해 스트레치를 사용하도록 설정하고 필터 함수를 지정합니다. 자세한 내용은 [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)를 참조하세요.  
+-   마법사를 종료하고 ALTER TABLE 문을 실행하여 테이블에 대해 스트레치를 사용하도록 설정하고 필터 함수를 지정합니다. 자세한 내용은 [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)를 참조하세요.  
   
 -   마법사를 종료한 후 ALTER TABLE 문을 실행하여 필터 함수를 지정합니다. 필수 단계는 [마법사를 실행한 후 필터 함수 추가](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md#addafterwiz)를 참조하세요.  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 04/11/2017
 > [!NOTE] 
 > 데이터베이스에서 Stretch를 사용하도록 설정하려면 사용 중인 구독에 관리자 권한이 있어야 합니다. Stretch Database 마법사는 사용자가 관리자 권한이 있는 구독만 표시합니다.
   
-3.  Stretch Database에 사용할 Azure 지역을 선택합니다.
+3.  스트레치 데이터베이스에 사용할 Azure 지역을 선택합니다.
     -   새 서버를 만들면 서버가 이 지역에 생성됩니다.  
     -   선택한 지역에 기존 서버가 있는 경우 **기존 서버**를 선택할 때 이러한 서버가 나열됩니다.
   
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/11/2017
          ![기존 Azure 서버 선택 - Stretch Database 마법사](../../sql-server/stretch-database/media/stretch-wizard-5.png "기존 Azure 서버 선택 - Stretch Database 마법사")  
   
 ##  <a name="Credentials"></a> 보안 자격 증명  
- Stretch Database가 원격 데이터베이스에 연결하기 위해 사용하는 자격 증명을 보호하기 위해 데이터베이스 마스터 키가 있어야 합니다.  
+ 스트레치 데이터베이스가 원격 데이터베이스에 연결하기 위해 사용하는 자격 증명을 보호하기 위해 데이터베이스 마스터 키가 있어야 합니다.  
   
  데이터베이스 마스터 키가 이미 있는 경우 암호를 입력합니다.  
   
@@ -182,11 +182,11 @@ ms.lasthandoff: 04/11/2017
  ![Stretch Database 마법사의 결과 페이지](../../sql-server/stretch-database/media/stretch-wizard-9.PNG "Stretch Database 마법사의 결과 페이지")  
   
 ##  <a name="KnownIssues"></a> 마법사 문제 해결  
- **Stretch Database 마법사가 실패했습니다.**  
- 서버 수준에서 Stretch Database가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 Stretch Database를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
+ **스트레치 데이터베이스 마법사가 실패했습니다.**  
+ 서버 수준에서 스트레치 데이터베이스가 아직 사용하도록 설정되지 않은 경우 시스템 관리자 권한 없이 마법사를 실행하여 사용하도록 설정하면 마법사가 실패합니다. 시스템 관리자에게 로컬 서버 인스턴스에서 스트레치 데이터베이스를 설정하도록 요청한 후 마법사를 다시 실행합니다. 자세한 내용은 [Prerequisite: Permission to enable Stretch Database on the server](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md#EnableTSQLServer)를 참조하십시오.  
   
 ## <a name="next-steps"></a>다음 단계  
- Stretch Database에 추가 테이블을 사용합니다. 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  
+ 스트레치 데이터베이스에 추가 테이블을 사용합니다. 데이터 마이그레이션을 모니터링하고 스트레치 사용 데이터베이스 및 테이블을 관리합니다.  
   
 -   [Enable Stretch Database for a table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) : 추가 테이블을 사용합니다.  
   
@@ -194,14 +194,14 @@ ms.lasthandoff: 04/11/2017
   
 -   [데이터 마이그레이션 일시 중지 및 다시 시작&#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   
--   [Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
+-   [스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
   
 -   [스트레치 사용 데이터베이스 백업](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
   
 -   [스트레치 사용 데이터베이스 복원](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
+ [데이터베이스에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [테이블에서 Stretch Database 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
   
