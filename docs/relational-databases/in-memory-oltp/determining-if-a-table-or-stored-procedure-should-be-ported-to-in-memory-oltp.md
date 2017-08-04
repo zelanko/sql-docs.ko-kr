@@ -2,7 +2,7 @@
 title: "메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 03/01/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,11 +18,11 @@ caps.latest.revision: 39
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a6f70a5be224219a572df858e37ecbfe5f9fde07
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: b18d5078244bf83d8820bf3f03039ac120287f8a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
@@ -48,6 +48,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="transaction-performance-analysis-reports"></a>트랜잭션 성능 분석 보고서  
  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 선택한 후 **표준 보고서**를 선택하고 **트랜잭션 성능 분석 개요**를 선택하여 **개체 탐색기**에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  
   
+### <a name="tables"></a>테이블
+  
  테이블에 대한 세부 정보 보고서는 다음 세 개의 섹션으로 구성됩니다.  
   
 -   검색 통계 섹션  
@@ -57,9 +59,7 @@ ms.lasthandoff: 06/22/2017
     -   총 액세스의 백분율. 전체 데이터베이스의 작업과 관련되어 이 테이블에서 수행된 검색에 대한 백분율입니다. 이 백분율이 높을수록 데이터베이스의 다른 테이블과 비교하여 해당 테이블이 더 많이 사용된 것입니다.  
   
     -   조회 통계/범위 검색 통계. 이 열은 프로파일링 동안 테이블에 대해 수행된 포인트 조회 및 범위 검색(인덱스 검색 및 테이블 검색) 수를 기록합니다. 트랜잭션당 평균이 예상치입니다.  
-  
-    -   Interop 게인 및 네이티브 게인. 이러한 열을 통해 테이블이 메모리 액세스에 최적화된 테이블로 변환된 경우 포인트 조회 또는 범위 검색으로 얻을 수 있는 성능 이점을 예상할 수 있습니다.  
-  
+    
 -   경합 통계 섹션  
   
      이 섹션에는 데이터베이스 테이블에 대한 경합을 보여 주는 테이블이 있습니다. 데이터베이스 래치 및 잠금에 대한 자세한 내용은 잠금 아키텍처를 참조하십시오. 열은 다음과 같습니다.  
@@ -74,8 +74,10 @@ ms.lasthandoff: 06/22/2017
   
      이 섹션에는 이 데이터베이스 테이블을 메모리 액세스에 최적화된 테이블로 변환할 때 발생한 문제를 보여 주는 테이블이 있습니다. 문제 등급이 높을수록 테이블 변환에 문제가 많은 것입니다. 이 데이터베이스 테이블을 변환하는 방법에 대한 자세한 내용을 보려면 메모리 최적화 관리자를 사용하십시오.  
   
- 테이블 세부 정보 보고서에 대한 검색 및 경합 통계는 sys.dm_db_index_operational_stats(Transact-SQL)에서 수집되고 집계됩니다.  
-  
+테이블 세부 정보 보고서에 대한 검색 및 경합 통계는 sys.dm_db_index_operational_stats(Transact-SQL)에서 수집되고 집계됩니다.  
+
+### <a name="stored-procedures"></a>저장 프로시저
+
  CPU 시간 대 경과 시간 비율이 높은 저장 프로시저는 마이그레이션 대상으로 적합합니다. 고유하게 컴파일된 저장 프로시저는 메모리 액세스에 최적화된 테이블을 참조만 할 수 있기 때문에 보고서에 모든 테이블 참조가 표시되므로 마이그레이션 비용이 추가될 수 있습니다.  
   
  저장 프로시저에 대한 세부 정보 보고서는 다음 두 개의 섹션으로 구성됩니다.  
@@ -107,7 +109,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 메모리 내 OLTP 마이그레이션 검사 목록 생성 **명령 또는 PowerShell을 사용하여** 내에 마이그레이션 검사 목록을 생성할 수 있습니다.  
   
- **UI 명령을 사용하여 마이그레이션 검사 목록을 생성하려면**  
+**UI 명령을 사용하여 마이그레이션 검사 목록을 생성하려면**  
   
 1.  **개체 탐색기**에서 시스템 데이터베이스가 아닌 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**클릭한 후 **메모리 내 OLTP 마이그레이션 검사 목록 생성**을 클릭합니다.  
   
@@ -127,7 +129,7 @@ ms.lasthandoff: 06/22/2017
   
  메모리 최적화 관리자 도구 및 네이티브 컴파일 관리자 도구에서 생성된 보고서와 비교하여 보고서의 정확성을 확인합니다. 자세한 내용은 [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) 및 [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md)를 참조하세요.  
   
- **SQL Server PowerShell을 사용하여 마이그레이션 검사 목록을 생성하려면**  
+**SQL Server PowerShell을 사용하여 마이그레이션 검사 목록을 생성하려면**  
   
 1.  **개체 탐색기**에서 데이터베이스를 클릭한 다음 **PowerShell 시작**을 클릭합니다. 다음과 같은 메시지가 표시되는지 확인합니다.  
   
@@ -147,7 +149,7 @@ ms.lasthandoff: 06/22/2017
   
     -   마이그레이션 검사 목록 보고서는 데이터베이스의 모든 테이블 및 저장 프로시저에 대해 생성되고 보고서는 folder_path의 위치에 저장됩니다.  
   
- **Windows PowerShell을 사용하여 마이그레이션 검사 목록을 생성하려면**  
+**Windows PowerShell을 사용하여 마이그레이션 검사 목록을 생성하려면**  
   
 1.  승격된 Windows PowerShell 세션을 시작합니다.  
   
@@ -178,3 +180,4 @@ ms.lasthandoff: 06/22/2017
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+
