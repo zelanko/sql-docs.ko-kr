@@ -1,25 +1,30 @@
 ---
-title: "모델(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "모델 [Master Data Services], 모델 정보"
-  - "모델 [Master Data Services]"
+title: "모델 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], about models
+- models [Master Data Services]
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 635cb271e49ec96f889fdbba508e0374b186a8c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 모델(Master Data Services)
+# <a name="models-master-data-services"></a>모델(Master Data Services)
   모델은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 최상위 데이터 구성 수준입니다. 모델은 마스터 데이터 관리 솔루션의 데이터 구조를 정의합니다. 모델은 다음 개체를 포함합니다.  
   
 -   엔터티  
@@ -38,21 +43,21 @@ caps.handback.revision: 8
   
  테스트 환경에서 모델을 정의한 경우 해당 데이터를 포함하거나 포함하지 않은 상태로 테스트 환경에서 프로덕션 환경으로 모델을 배포할 수 있습니다. 이렇게 하면 프로덕션 환경에서 모델을 다시 만들 필요가 없습니다.  
   
-## 다른 개체와 모델의 관계  
+## <a name="how-models-relate-to-other-objects"></a>다른 개체와 모델의 관계  
  모델에는 엔터티가 포함됩니다. 엔터티에는 특성, 명시적 계층 및 컬렉션이 포함됩니다. 특성은 특성 그룹에 포함할 수 있습니다. DBA(도메인 기반 특성)는 엔터티를 다른 엔터티의 특성으로 사용할 때 존재합니다.  
   
  이 이미지는 모델 개체 간의 관계를 보여 줍니다.  
   
- ![MDS(Master Data Services) 모델의 개체](../master-data-services/media/mds-conc-model-circles.gif "MDS(Master Data Services) 모델의 개체")  
+ ![Master Data Services 모델의 개체](../master-data-services/media/mds-conc-model-circles.gif "Master Data Services 모델의 개체")  
   
 > [!NOTE]  
->  파생 계층도 모델 개체지만 이미지에 표시되지 않습니다. 파생 계층은 엔터티 간에 존재하는 도메인 기반 특성 관계에서 파생됩니다. 참조 [파생 계층 & #40; Master Data Services & #41;](../master-data-services/derived-hierarchies-master-data-services.md) 자세한 내용은.  
+>  파생 계층도 모델 개체지만 이미지에 표시되지 않습니다. 파생 계층은 엔터티 간에 존재하는 도메인 기반 특성 관계에서 파생됩니다. 참조 [파생 계층 &#40; Master Data services&#41; ](../master-data-services/derived-hierarchies-master-data-services.md) 자세한 정보에 대 한 합니다.  
   
  마스터 데이터는 모델 개체에 포함되는 데이터입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 마스터 데이터가 엔터티의 멤버로 저장됩니다.  
   
  모델 개체는 **사용자 인터페이스의** 시스템 관리 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 기능 영역에서 유지 관리됩니다.  
   
-## 모델 예  
+## <a name="model-example"></a>모델 예  
  다음 예에서 Product 모델의 개체는 제품 관련 데이터를 논리적으로 그룹화합니다.  
   
  ![제품 모델 마스터 데이터 예제](../master-data-services/media/mds-conc-model.gif "제품 모델 마스터 데이터 예제")  
@@ -65,24 +70,24 @@ caps.handback.revision: 8
   
 -   Geography - 우편 번호, 도시, 군, 주, 지방, 지역, 영토, 국가, 대륙 등을 포함할 수 있습니다.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|모델을 만들어 마스터 데이터를 구성합니다.|[모델 및 #40; 만들기 Master Data Services & #41;](../master-data-services/create-a-model-master-data-services.md)|  
-|기존 모델의 이름을 변경합니다.|[모델 및 #40; 편집 Master Data Services & #41;](../master-data-services/edit-model-master-data-services.md)|  
-|기존 모델을 삭제합니다.|[삭제 하는 모델 및 #40입니다. Master Data Services & #41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|모델을 만들어 마스터 데이터를 구성합니다.|[모델 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|기존 모델의 이름을 변경합니다.|[편집 모델 &#40; Master Data services&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|기존 모델을 삭제합니다.|[모델 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
--   [Master Data Services 개요 & #40입니다. MDS & #41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
--   [& #40입니다. Master Data Services & #41;](../master-data-services/entities-master-data-services.md)  
+-   [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [특성 및 #40입니다. Master Data Services & #41;](../master-data-services/attributes-master-data-services.md)  
+-   [특성 &#40; Master Data services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [모델 및 #40; 배포 Master Data Services & #41;](../master-data-services/deploying-models-master-data-services.md)  
+-   [모델 &#40; 배포 Master Data services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [모델 개체 사용 권한 및 #40입니다. Master Data Services & #41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [모델 개체 사용 권한 &#40; Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

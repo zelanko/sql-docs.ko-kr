@@ -1,29 +1,34 @@
 ---
-title: "CDC Service에서 작업하는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC Service에서 작업 하는 방법 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: db5c718a-6e7f-48ec-82a3-9d5b131716e5
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bd4d1ea9deb9451701f84470ed2f35f7aa220df2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC Service에서 작업하는 방법
+# <a name="how-to-work-with-cdc-services"></a>CDC Service에서 작업하는 방법
   이 절차에서는 CDC Service 구성 콘솔을 사용하여 Oracle CDC Service에서 작업하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 새 CDC Service를 만드는 방법에 대해 설명합니다.  
   
-### CDC Service에서 작업하려면  
+### <a name="to-work-with-cdc-services"></a>CDC Service에서 작업하려면  
   
 1.  **시작** 메뉴에서 **Oracle CDC Service 구성**을 선택합니다.  
   
-2.  왼쪽 창에서 **로컬 CDC Service**(루트 수준)를 선택합니다.  
+2.  왼쪽 창에서 **로컬 CDC Service** (루트 수준)를 선택합니다.  
   
 3.  다음 태스크 중 하나 또는 모두 수행합니다.  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 6
   
          CDC Service 구성 콘솔 오른쪽의 **작업** 창에서 이 옵션을 선택합니다.  
   
-         **로컬 CDC Service**를 마우스 오른쪽 단추로 클릭하고 **SQL Server 준비**를 선택할 수도 있습니다.  
+         **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **SQL Server 준비**를 선택할 수도 있습니다.  
   
          Oracle CDC를 위한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 준비 대화 상자가 열립니다.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 6
   
          CDC Service 구성 콘솔 오른쪽의 **작업** 창에서 **새 서비스** 를 선택합니다.  
   
-         **로컬 CDC Service**를 마우스 오른쪽 단추로 클릭하고 **새 서비스**를 선택할 수도 있습니다.  
+         **로컬 CDC Service** 를 마우스 오른쪽 단추로 클릭하고 **새 서비스**를 선택할 수도 있습니다.  
   
          새 Oracle CDC Service 대화 상자가 열립니다.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 6
   
          **db_owner** 데이터베이스 역할과 같이 MSXDBCDC 데이터베이스에 대해 쓰기 권한이 있는 로그인의 자격 증명을 입력하는 방법은 [Oracle CDC Service 만들기 및 편집](../../integration-services/change-data-capture/create-and-edit-an-oracle-cdc-service.md) 및 [SQL Server에 연결](../../integration-services/change-data-capture/connection-to-sql-server.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [CDC Service 작업](../../integration-services/change-data-capture/work-with-cdc-services.md)  
   
   

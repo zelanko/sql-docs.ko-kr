@@ -1,30 +1,35 @@
 ---
 title: "감사 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.audittrans.f1"
-helpviewer_keywords: 
-  - "패키지의 환경 데이터 [Integration Services]"
-  - "감사 변환"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.audittrans.f1
+helpviewer_keywords:
+- environment data in packages [Integration Services]
+- Audit transformation
 ms.assetid: 8c143682-9c81-4150-83d6-1d9678151d37
 caps.latest.revision: 46
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c495bd9c116e10877f79f165f0f582938b0347ad
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 감사 변환
+# <a name="audit-transformation"></a>감사 변환
   감사 변환을 사용하면 패키지가 실행되는 환경에 대한 데이터를 패키지의 데이터 흐름에 포함할 수 있습니다. 예를 들어 패키지, 컴퓨터 및 운영자의 이름을 데이터 흐름에 추가할 수 있습니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 이 정보를 제공하는 시스템 변수를 포함합니다.  
   
-## 시스템 변수  
+## <a name="system-variables"></a>시스템 변수  
  다음 표에서는 감사 변환에 사용할 수 있는 시스템 변수를 설명합니다.  
   
 |시스템 변수|인덱스|Description|  
@@ -39,7 +44,7 @@ caps.handback.revision: 46
 |**TaskName**|7|감사 변환이 연결된 데이터 흐름 태스크 이름입니다.|  
 |**TaskId**|8|데이터 흐름 태스크의 고유 식별자입니다.|  
   
-## 감사 변환 구성  
+## <a name="configuration-of-the-audit-transformation"></a>감사 변환 구성  
  변환 출력에 추가할 새 출력 열의 이름을 지정한 다음 해당 시스템 변수를 출력 열에 매핑하여 감사 변환을 구성합니다. 단일 시스템 변수를 여러 개의 열에 매핑할 수 있습니다.  
   
  이 변환은 하나의 입력과 하나의 출력을 가지며 오류 출력은 지원하지 않습니다.  
@@ -50,7 +55,7 @@ caps.handback.revision: 46
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

@@ -1,23 +1,28 @@
 ---
-title: "비즈니스 규칙 확장(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "비즈니스 규칙 확장 (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 caps.latest.revision: 16
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04d846ca87f96f1b3f08a0add5115968af40a855
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 비즈니스 규칙 확장(Master Data Services)
+# <a name="business-rules-extension-master-data-services"></a>비즈니스 규칙 확장(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 사용자 정의 SQL 스크립트를 미리 정의된 조건과 동작의 확장으로 적용할 수 있습니다.  
   
 > [!NOTE]  
@@ -67,7 +72,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   시스템 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -76,7 +81,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
 -   사용자 정의 스크립트를 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 추가해야 합니다.  
   
-## 사용자 정의 스크립트를 조건이나 동작으로 사용하는 비즈니스 규칙 만들기  
+## <a name="create-a-business-rule-to-take-a-user-defined-script-as-a-condition-or-as-an-action"></a>사용자 정의 스크립트를 조건이나 동작으로 사용하는 비즈니스 규칙 만들기  
   
 1.  마스터 데이터 관리자에서 **시스템 관리자**를 클릭합니다.  
   
@@ -94,7 +99,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     1.  **If** 블록 아래에서 **추가** 단추를 클릭합니다. 그러면 패널이 표시됩니다.  
   
-    2.  **연산자** 드롭다운 목록의 **사용자 정의 스크립트**에서 사용자 정의 함수를 선택합니다.  
+    2.  **연산자** 드롭다운 목록의 **사용자 정의 스크립트** 에서 사용자 정의 함수를 선택합니다.  
   
     3.  사용자 정의 함수의 모든 매개 변수가 표시됩니다.  
   
@@ -106,13 +111,13 @@ CREATE PROCEDURE [usr].[YourAction]
   
     1.  **Then** 블록 아래에서 **추가** 단추를 클릭합니다. 그러면 패널이 표시됩니다.  
   
-    2.  **연산자** 드롭다운 목록의 **사용자 정의 스크립트**에서 사용자 정의 함수를 선택합니다.  
+    2.  **연산자** 드롭다운 목록의 **사용자 정의 스크립트** 에서 사용자 정의 함수를 선택합니다.  
   
     3.  **저장**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [비즈니스 규칙 조건&#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
- [비즈니스 규칙 동작&#40;Master Data Services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
+ [비즈니스 규칙 조건 &#40; Master Data services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
+ [비즈니스 규칙 동작 &#40; Master Data services&#41;](../master-data-services/business-rule-actions-master-data-services.md)  
   
   

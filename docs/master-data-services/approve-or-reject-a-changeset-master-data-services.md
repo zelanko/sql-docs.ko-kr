@@ -1,26 +1,31 @@
 ---
-title: "변경 집합 승인 또는 거부(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "승인 또는 거부할 변경 집합 (Master Data Services) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8fd4aff2b131cb0eb8170b90219431e180943a2a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 변경 집합 승인 또는 거부(Master Data Services)
+# <a name="approve-or-reject-a-changeset-master-data-services"></a>변경 집합 승인 또는 거부(Master Data Services)
   변경 집합은 마스터 데이터에 대해 보류 중인 변경 내용의 컬렉션입니다. 엔터티를 변경할 때 관리자가 승인을 해야 하는 경우 승인을 위해 변경 집합이 제출되면 변경 집합을 검토한 후 승인하거나 거부할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
 -   사용자가 변경 내용을 직접 승인할 수는 없습니다. 엔터티 관리자는 자신의 변경 집합을 승인하도록 할 보조 관리자를 할당해야 합니다.  
   
-## 변경 집합을 승인하거나 거부하려면  
+## <a name="to-approve-or-reject-a-changeset"></a>변경 집합을 승인하거나 거부하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 8
   
 6.  **승인** 을 클릭하여 변경 집합을 승인합니다. 변경 집합이 자동으로 커밋됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [변경 집합 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
- [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
+ [적용 및 변경 집합 &#40; 업데이트 Master Data services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
   

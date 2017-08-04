@@ -1,29 +1,34 @@
 ---
 title: "FTP 연결 관리자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FTP 연결 관리자"
-  - "연결 [Integration Services], FTP"
-  - "연결 관리자 [Integration Services], FTP"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FTP connection manager
+- connections [Integration Services], FTP
+- connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04cc47e64fbbaec3f1e1df9216ead850efa75b90
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# FTP 연결 관리자
-  FTP 연결 관리자를 사용하면 패키지에서 FTP(파일 전송 프로토콜) 서버에 연결할 수 있습니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 FTP 태스크에서는 이 연결 관리자가 사용됩니다.  
+# <a name="ftp-connection-manager"></a>FTP 연결 관리자
+  FTP 연결 관리자를 사용하면 패키지에서 FTP(파일 전송 프로토콜) 서버에 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 포함된 FTP 태스크에서는 이 연결 관리자가 사용됩니다.  
   
- 패키지에 FTP 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 런타임에 FTP 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
+ 패키지에 FTP 연결 관리자를 추가하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 FTP 연결로 확인되는 연결 관리자를 만들고, 연결 관리자 속성을 설정하고, 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
   
  연결 관리자의 **ConnectionManagerType** 속성이 **FTP**로 설정됩니다.  
   
@@ -46,18 +51,18 @@ caps.handback.revision: 41
   
 -   사용자 이름은 "anonymous"로 설정됩니다. FTP 사이트에 필요한 자격 증명을 제공해야 합니다.  
   
-## Active/Passive 모드  
+## <a name="activepassive-modes"></a>Active/Passive 모드  
  FTP 연결 관리자는 Active 모드 또는 Passive 모드를 사용하여 파일을 보내고 받을 수 있습니다. Active 모드에서는 서버가 데이터 연결을 시작하고, Passive 모드에서는 클라이언트가 데이터 연결을 시작합니다.  
   
-## FTP 연결 관리자 구성  
+## <a name="configuration-of-the-ftp-connection-manager"></a>FTP 연결 관리자 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [FTP 연결 관리자 편집기](../../integration-services/connection-manager/ftp-connection-manager-editor.md)를 참조하세요.  
   
- 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)를 참조하세요.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [FTP 태스크](../../integration-services/control-flow/ftp-task.md)   
- [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

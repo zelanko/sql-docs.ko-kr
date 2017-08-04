@@ -1,31 +1,36 @@
 ---
 title: "성능 카운터 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/27/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 [Integration Services], 성능 카운터"
-  - "성능 카운터 [Integration Services]"
-  - "데이터 흐름 [Integration Services], 성능"
-  - "카운터 [Integration Services]"
-  - "데이터 흐름 엔진 [Integration Services]"
+ms.custom: 
+ms.date: 08/27/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- logs [Integration Services], performance counters
+- performance counters [Integration Services]
+- data flow [Integration Services], performance
+- counters [Integration Services]
+- data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
 caps.latest.revision: 63
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 63
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: ffbc5e8238857651cc35014ce3d4d71976e8f73a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 성능 카운터
+# <a name="performance-counters"></a>성능 카운터
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 데이터 흐름 엔진의 성능을 모니터링하는 데 사용할 수 있는 성능 카운터 집합을 설치합니다. 예를 들어 "Buffers spooled" 카운터를 보면 패키지가 실행되는 동안 데이터 버퍼가 디스크에 임시로 기록되는지 여부를 확인할 수 있습니다. 이러한 스와핑은 성능을 저하시키고 컴퓨터에 메모리가 부족함을 나타냅니다.  
   
-> **참고:** [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]을 실행하는 컴퓨터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치한 다음 해당 컴퓨터를 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]로 업그레이드하는 경우 업그레이드 프로세스는 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 제거합니다. 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 복원하려면 복원 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행합니다.  
+> **참고:** [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 을 실행하는 컴퓨터에 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]를 설치한 다음 해당 컴퓨터를 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]로 업그레이드하는 경우 업그레이드 프로세스는 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 제거합니다. 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 복원하려면 복원 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행합니다.  
   
  다음 표에서는 성능 카운터에 대해 설명합니다.  
   
@@ -48,8 +53,8 @@ caps.handback.revision: 63
   
  성능을 향상시키는 방법에 대한 자세한 내용은 [데이터 흐름 성능 기능](../../integration-services/data-flow/data-flow-performance-features.md)을 참조하세요.  
   
-## 성능 카운터 통계 가져오기  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 경우 [dm_execution_performance_counters&#40;SSISDB 데이터베이스&#41;](../Topic/dm_execution_performance_counters%20\(SSISDB%20Database\).md) 함수를 사용하여 성능 카운터 통계를 가져올 수 있습니다.  
+## <a name="obtain-performance-counter-statistics"></a>성능 카운터 통계 가져오기  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트의 경우 [dm_execution_performance_counters&#40;SSISDB 데이터베이스&#41;](../../integration-services/functions-dm-execution-performance-counters.md) 함수를 사용하여 성능 카운터 통계를 가져올 수 있습니다.  
   
  다음 예에서는 이 함수가 ID가 34인 실행 인스턴스에 대한 통계를 반환합니다.  
   
@@ -66,15 +71,55 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 > **중요!!** **ssis_admin** 데이터베이스 역할의 멤버에게는 진행 중인 모든 실행에 대한 성능 통계가 반환됩니다.  **ssis_admin** 데이터베이스 역할이 아닌 멤버에게는 읽기 권한이 있는 진행 중인 실행에 대한 성능 통계가 반환됩니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
 -   codeplex.com의 도구, [SSIS Performance Visualization for Business Intelligence Development Studio(CodePlex 프로젝트)](http://go.microsoft.com/fwlink/?LinkId=146626)  
   
 -   msdn.microsoft.com의 비디오, [기업에서 SSIS 패키지의 성능 측정 및 이해(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=150497)  
   
 -   support.microsoft.com의 지원 문서, [Windows Server 2008로 업그레이드한 후 성능 모니터에서 SSIS 성능 카운터를 더 이상 사용할 수 없다.](http://go.microsoft.com/fwlink/?LinkId=235319)  
+
+## <a name="add-a-log-for-data-flow-performance-counters"></a>데이터 흐름 성능 카운터에 대한 로그 추가
+  이 절차에서는 데이터 엔진에서 제공하는 성능 카운터에 대한 로그를 추가하는 방법을 설명합니다.  
   
-## 관련 항목:  
- [프로젝트 및 패키지 실행](https://msdn.microsoft.com/library/ms141708.aspx)  
+> [!NOTE]  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 을 실행하는 컴퓨터에 [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)]를 설치한 다음 해당 컴퓨터를 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)]로 업그레이드하는 경우 업그레이드 프로세스는 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 제거합니다. 컴퓨터에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 성능 카운터를 복원하려면 복원 모드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램을 실행합니다.  
   
+### <a name="to-add-logging-of-performance-counters"></a>성능 카운터 로깅을 추가하려면  
   
+1.  클래식 보기를 사용하는 경우 **제어판**에서 **관리 도구**를 클릭합니다. 종류별 보기를 사용하는 경우 **성능 및 유지 관리** 를 클릭한 다음 **관리 도구**를 클릭합니다.  
+  
+2.  **성능**을 클릭합니다.  
+  
+3.  **성능** 대화 상자에서 **성능 로그 및 경고**를 확장하고 **카운터 로그**를 마우스 오른쪽 단추로 클릭한 다음 **새 로그 설정**을 클릭합니다. 로그 이름을 입력합니다. 예를 들어 **MyLog**를 입력합니다.  
+  
+4.  **확인**을 클릭합니다.  
+  
+5.  **MyLog** 대화 상자에서 **카운터 추가**를 클릭합니다.  
+  
+6.  **로컬 컴퓨터 카운터 사용** 을 클릭하여 로컬 컴퓨터에 성능 카운터를 로그하거나 **다음 컴퓨터에서 카운터 선택** 을 클릭하고 목록에서 컴퓨터를 선택하여 지정된 컴퓨터에서 성능 카운터를 로그합니다.  
+  
+7.  **카운터 추가** 대화 상자의 **성능 개체** 목록에서 **SQL Server:SSIS Pipeline** 을 선택합니다.  
+  
+8.  다음 중 하나를 수행하여 성능 카운터를 선택합니다.  
+  
+    -   **모든 카운터** 를 선택하여 모든 성능 카운터를 로그합니다.  
+  
+    -   **목록에서 카운터 선택** 을 선택하고 사용할 성능 카운터를 선택합니다.  
+  
+9. **추가**를 클릭합니다.  
+  
+10. **닫기**를 클릭합니다.  
+  
+11. **MyLog** 대화 상자의 **카운터** 목록에서 로깅 성능 카운터 목록을 검토합니다.  
+  
+12. 추가 카운터를 추가하려면 5단계~10단계를 반복합니다.  
+  
+13. **확인**을 클릭합니다.  
+  
+    > [!NOTE]  
+    >  Administrators 그룹의 멤버인 로컬 계정 또는 도메인 계정을 사용하여 성능 로그 및 경고 서비스를 시작해야 합니다.  
+
+## <a name="see-also"></a>관련 항목:  
+ [프로젝트 및 패키지 실행](https://msdn.microsoft.com/library/ms141708.aspx) [Integration Services 패키지에 의해 기록 된 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+

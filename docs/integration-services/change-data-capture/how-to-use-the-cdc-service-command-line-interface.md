@@ -1,25 +1,30 @@
 ---
-title: "CDC Service 명령줄 인터페이스를 사용하는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC Service 명령줄 인터페이스를 사용 하는 방법 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ab87b7da-c3b9-4bc8-a853-798716cbf74b
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9b1f69b32824d88f2e5be131dde2043414c2f9e8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC Service 명령줄 인터페이스를 사용하는 방법
+# <a name="how-to-use-the-cdc-service-command-line-interface"></a>CDC Service 명령줄 인터페이스를 사용하는 방법
   Oracle CDC Service 프로그램인 xdbcdcsvc.exe는 일반적으로 Oracle CDC Windows 서비스를 실행하지만 명령줄에서 직접 이 프로그램을 호출하여 Oracle CDC Windows 서비스를 만들거나 삭제할 수 있습니다.  
   
-### 명령줄을 사용하려면  
+### <a name="to-use-the-command-line"></a>명령줄을 사용하려면  
   
 1.  **시작** 메뉴에서 명령줄 콘솔을 엽니다. 실행 또는 검색 상자에 **cmd** 를 입력하여 콘솔을 엽니다.  
   

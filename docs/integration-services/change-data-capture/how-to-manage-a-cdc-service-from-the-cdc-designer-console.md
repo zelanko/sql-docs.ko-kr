@@ -1,25 +1,30 @@
 ---
-title: "CDC Designer 콘솔에서 CDC Service를 관리하는 방법 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "CDC Designer 콘솔에서 CDC Service를 관리 하는 방법 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c923348d-c6c8-4807-9081-172048e6f5e3
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC Designer 콘솔에서 CDC Service를 관리하는 방법
+# <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC Designer 콘솔에서 CDC Service를 관리하는 방법
   이 절차에서는 CDC Designer 콘솔을 사용하여 CDC Service를 관리하는 방법에 대해 설명합니다.  
   
-### CDC Designer 콘솔에서 CDC Service를 관리하려면  
+### <a name="to-manage-a-cdc-service-from-the-cdc-designer-console"></a>CDC Designer 콘솔에서 CDC Service를 관리하려면  
   
 1.  **시작** 메뉴에서 **CDC Designer 콘솔**을 선택합니다.  
   
@@ -31,11 +36,11 @@ caps.handback.revision: 6
   
 4.  CDC Service에 대해 다음 태스크를 수행할 수 있습니다.  
   
-    -    **새 CDC 인스턴스**만들기  
+    -   **새 CDC 인스턴스**만들기  
   
-    -   선택한 CDC Service에 포함된 **모든 인스턴스 시작**  
+    -   선택한 CDC Service에 포함된**모든 인스턴스 시작**   
   
-    -   선택한 CDC Service에 포함된 **모든 인스턴스 중지**  
+    -   선택한 CDC Service에 포함된**모든 인스턴스 중지**   
   
      위의 태스크에 대한 자세한 내용은 [Manage a CDC Service](../../integration-services/change-data-capture/manage-a-cdc-service.md)를 참조하십시오.  
   

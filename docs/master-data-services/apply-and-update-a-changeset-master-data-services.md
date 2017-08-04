@@ -1,26 +1,31 @@
 ---
-title: "변경 집합 적용 및 업데이트(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "적용 및 변경 집합 (Master Data Services) 업데이트 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a6a3cf2-1e77-43d3-a64a-855ae51258e7
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bd1f16bf28951aa128d1ab218ef12e8affbe1aa
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 변경 집합 적용 및 업데이트(Master Data Services)
+# <a name="apply-and-update-a-changeset-master-data-services"></a>변경 집합 적용 및 업데이트(Master Data Services)
   변경 집합은 마스터 데이터에 대해 보류 중인 변경 내용의 컬렉션입니다. 변경 집합을 로컬로 적용하면 변경 집합에서 보류 중인 변경 내용을 확인, 추가, 업데이트 및 삭제할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
@@ -30,13 +35,13 @@ caps.handback.revision: 10
   
 -   자신이 소유한 변경 집합은 열림 또는 거부됨 상태일 때만 수정할 수 있습니다.  
   
-## 변경 집합을 적용 및 업데이트하려면  
+## <a name="to-apply-and-update-a-changeset"></a>변경 집합을 적용 및 업데이트하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
   
 2.  **엔터티** 메뉴에서 엔터티를 클릭합니다.  
   
-3.  오른쪽 창에서 **변경 집합**을 선택하고 확인 및 변경할 변경 집합을 두 번 클릭합니다.  
+3.  오른쪽 창에서 **변경 집합** 을 선택하고 확인 및 변경할 변경 집합을 두 번 클릭합니다.  
   
 4.  **적용**을 클릭합니다.  
   
@@ -46,10 +51,10 @@ caps.handback.revision: 10
   
 5.  보류 중인 변경 내용을 되돌리려면 **변경 집합** 창에서 표를 마우스 오른쪽 단추로 클릭하고 **되돌리기**를 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  [변경 집합 커밋 또는 제출&#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [변경 집합 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [변경 집합 승인 또는 거부&#40;Master Data Services&#41;](../master-data-services/approve-or-reject-a-changeset-master-data-services.md)  
   

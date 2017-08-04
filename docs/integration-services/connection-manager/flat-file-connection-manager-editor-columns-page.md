@@ -1,44 +1,49 @@
 ---
-title: "플랫 파일 연결 관리자 편집기(열 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.ffileconnection.columns.f1"
-helpviewer_keywords: 
-  - "플랫 파일 연결 관리자 편집기"
+title: "플랫 파일 연결 관리자 편집기 (열 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.ffileconnection.columns.f1
+helpviewer_keywords:
+- Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 791bc8b3edbee92a0154dc03011666a488c19e7a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 플랫 파일 연결 관리자 편집기(열 페이지)
+# <a name="flat-file-connection-manager-editor-columns-page"></a>플랫 파일 연결 관리자 편집기(열 페이지)
   **플랫 파일 연결 관리자 편집기** 대화 상자의 **열** 페이지를 사용하여 행 및 열 정보를 지정하고 파일을 미리 볼 수 있습니다.  
   
  플랫 파일 연결 관리자에 대한 자세한 내용은 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)를 참조하십시오.  
   
-## 정적 옵션  
+## <a name="static-options"></a>정적 옵션  
  **연결 관리자 이름**  
  워크플로의 플랫 파일 연결에 고유한 이름을 지정합니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
   
  **Description**  
  연결에 대한 설명을 입력합니다. 해당 연결의 용도를 설명하여 패키지를 이해하기 쉽고 유지 관리하기 편하도록 만드는 것이 가장 좋습니다.  
   
-## 플랫 파일 형식 동적 옵션  
+## <a name="flat-file-format-dynamic-options"></a>플랫 파일 형식 동적 옵션  
   
-### 형식 = 구분 기호로 분리됨  
+### <a name="format--delimited"></a>형식 = 구분 기호로 분리됨  
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -52,7 +57,7 @@ caps.handback.revision: 21
  **열 구분 기호**  
  사용 가능한 열 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|열이 캐리지 리턴으로 구분됩니다.|  
@@ -72,7 +77,7 @@ caps.handback.revision: 21
  **열 다시 설정**  
  **열 다시 설정**을 클릭하여 원래 열을 제외한 모든 열을 제거합니다.  
   
-### 형식 = 고정 폭  
+### <a name="format--fixed-width"></a>형식 = 고정 폭  
  **글꼴**  
  미리 보기 데이터를 표시할 글꼴을 선택합니다.  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 21
  **열 다시 설정**  
  **열 다시 설정**을 클릭하여 원래 열을 제외한 모든 열을 제거합니다.  
   
-### 형식 = 왼쪽 정렬  
+### <a name="format--ragged-right"></a>형식 = 왼쪽 정렬  
   
 > [!NOTE]  
 >  왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.  
@@ -99,7 +104,7 @@ caps.handback.revision: 21
  **행 구분 기호**  
  사용 가능한 행 구분 기호의 목록에서 선택하거나 구분 기호 텍스트를 입력합니다.  
   
-|Value|Description|  
+|Value|설명|  
 |-----------|-----------------|  
 |**{CR}{LF}**|행이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.|  
 |**{CR}**|행이 캐리지 리턴으로 구분됩니다.|  
@@ -113,10 +118,10 @@ caps.handback.revision: 21
  **열 다시 설정**  
  **열 다시 설정**을 클릭하여 원래 열을 제외한 모든 열을 제거합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
- [플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
+ [플랫 파일 연결 관리자 편집기 &#40; 일반 페이지 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-general-page.md)   
+ [플랫 파일 연결 관리자 편집기 &#40; 고급 페이지 &#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-advanced-page.md)   
  [플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/flat-file-connection-manager-editor-preview-page.md)  
   
   

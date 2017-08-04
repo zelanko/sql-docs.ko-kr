@@ -1,25 +1,30 @@
 ---
-title: "SQL Server Browser 속성(고급 탭) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server Browser 속성 (고급 탭) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ba79137a-cb72-4bf3-a650-e11d02cfce10
 caps.latest.revision: 19
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f4c4d860ae086b8dd649bc74db8ed4ae3cf4fd1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Browser 속성(고급 탭)
+# <a name="sql-server-browser-properties-advanced-tab"></a>SQL Server Browser 속성(고급 탭)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 프로그램은 서버에서 서비스로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스에 대해 들어오는 요청을 수신하고 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 정보를 제공합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **클러스터형**  
  이 서비스가 클러스터형 서버의 리소스로 설치되었는지 여부를 나타냅니다.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 19
  **인스턴스 ID**  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 인스턴스를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 나타냅니다. 기본 인스턴스는 **MSSQL10_50.MSSQLSERVER**입니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Browser 서비스](../../tools/configuration-manager/sql-server-browser-service.md)  
   
   

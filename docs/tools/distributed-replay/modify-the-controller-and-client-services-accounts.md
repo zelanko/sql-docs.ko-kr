@@ -1,31 +1,36 @@
 ---
-title: "컨트롤러 및 클라이언트 서비스 계정 수정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "컨트롤러를 수정 및 클라이언트 서비스 계정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 44a73ddb-18ad-415c-bfbe-126ab2e3290b
 caps.latest.revision: 29
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 94a6df60ae3e1acebb9ff7d75cf65c7efb21d6db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 컨트롤러 및 클라이언트 서비스 계정 수정
+# <a name="modify-the-controller-and-client-services-accounts"></a>컨트롤러 및 클라이언트 서비스 계정 수정
   이 항목에서는 Distributed Replay Controller 및 Distributed Replay Client 서비스 계정을 수정한 후 ACL(액세스 제어 목록)을 다시 적용하는 방법에 대해 설명합니다.  
   
-### 컴퓨터 관리를 사용하여 Distributed Replay 서비스를 시작 또는 중지하려면  
+### <a name="to-start-or-stop-the-distributed-replay-services-using-computer-management"></a>컴퓨터 관리를 사용하여 Distributed Replay 서비스를 시작 또는 중지하려면  
   
 1.  Distributed Replay 서비스가 설치된 컴퓨터에서 명령 프롬프트에 **dcomcnfg**을(를) 입력합니다.  
   
-2.  **서비스**를 두 번 클릭하고 아래로 스크롤한 다음 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<서비스 이름>**을 마우스 오른쪽 단추로 클릭하고 **시작** 또는 **중지**를 클릭합니다.  
+2.  두 번 클릭 **서비스**, 아래로 스크롤하여 마우스 오른쪽 단추로 클릭  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<서비스 이름 >**, 클릭 하 고 **시작** 또는 **중지**합니다.  
   
-### Distributed Replay Controller 서비스를 수정하려면  
+### <a name="to-modify-the-distributed-replay-controller-service"></a>Distributed Replay Controller 서비스를 수정하려면  
   
 1.  컨트롤러 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller 서비스를 중지합니다.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 29
   
 4.  Distributed Replay Controller 서비스를 시작합니다.  
   
-### Distributed Replay Client 서비스를 수정하려면  
+### <a name="to-modify-the-distributed-replay-client-service"></a>Distributed Replay Client 서비스를 수정하려면  
   
 1.  클라이언트 서비스를 수정하기 전에 변경할 Distributed Replay Client 서비스 계정이 설치 중 컨트롤러 컴퓨터의 CTLRUSERS 매개 변수에 지정되어 있는지 확인합니다. 변경하려는 클라이언트 서비스 계정이 설치 중 지정되지 않은 경우 다음 단계를 먼저 수행해야 합니다.  
   
