@@ -1,44 +1,49 @@
 ---
-title: "ODBC 원본 편집기(연결 관리자 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcsource.connection.f1"
+title: "ODBC 원본 편집기 (연결 관리자 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcsource.connection.f1
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93923df833452025772dd0dbf1df2e17a1582fed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 원본 편집기(연결 관리자 페이지)
+# <a name="odbc-source-editor-connection-manager-page"></a>ODBC 원본 편집기(연결 관리자 페이지)
   **ODBC 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 ODBC 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
   
  ODBC 원본에 대한 자세한 내용은 [ODBC Source](../../integration-services/data-flow/odbc-source.md)을 참조하십시오.  
   
-## 작업 목록  
+## <a name="task-list"></a>작업 목록  
  **ODBC 원본 편집기의 연결 관리자 페이지를 열려면**  
   
 -   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 ODBC 원본이 있는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 패키지를 엽니다.  
   
 -   **데이터 흐름** 탭에서 ODBC 원본을 두 번 클릭합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
-### ODBC 원본 편집기  
+### <a name="connection-manager"></a>ODBC 원본 편집기  
  목록에서 기존 ODBC 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
   
-### 새로 만들기  
+### <a name="new"></a>새로 만들기  
  **새로 만들기**를 클릭합니다. 새 ODBC 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
   
-### 데이터 액세스 모드  
+### <a name="data-access-mode"></a>데이터 액세스 모드  
  원본에서 데이터를 선택하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
   
 |옵션|Description|  
@@ -51,12 +56,12 @@ caps.handback.revision: 8
 ||**찾아보기** 를 클릭하여 텍스트 파일에서 SQL 쿼리를 로드합니다.|  
 ||**쿼리 구문 분석** 을 클릭하여 쿼리 텍스트의 구문을 확인합니다.|  
   
-### 미리 보기  
+### <a name="preview"></a>미리 보기  
  **미리 보기** 를 클릭하면 선택한 테이블 또는 뷰에서 추출된 최대 200개의 데이터 행을 볼 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [ODBC 원본 사용자 지정 속성](../../integration-services/data-flow/odbc-source-custom-properties.md)   
- [ODBC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
- [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+ [ODBC 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)   
+ [ODBC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   

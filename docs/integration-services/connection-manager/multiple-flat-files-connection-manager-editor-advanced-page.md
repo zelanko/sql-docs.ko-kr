@@ -1,33 +1,38 @@
 ---
-title: "다중 플랫 파일 연결 관리자 편집기(고급 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.multifile.advanced.f1"
-helpviewer_keywords: 
-  - "다중 플랫 파일 연결 관리자 편집기"
+title: "다중 플랫 파일 연결 관리자 편집기 (고급 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.multifile.advanced.f1
+helpviewer_keywords:
+- Multiple Flat Files Connection Manager Editor
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ca2a47b75c7209fce3d1966ff749396047e550e3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 다중 플랫 파일 연결 관리자 편집기(고급 페이지)
+# <a name="multiple-flat-files-connection-manager-editor-advanced-page"></a>다중 플랫 파일 연결 관리자 편집기(고급 페이지)
   **다중 플랫 파일 연결 관리자 편집기** 대화 상자의 **고급** 페이지를 사용하여 플랫 파일 연결 관리자에서 연결하는 텍스트 파일에 있는 각 열의 데이터 형식 및 구분 기호와 같은 속성을 설정할 수 있습니다.  
   
  기본적으로 문자열 열의 길이는 50자입니다. 샘플 데이터를 평가한 다음 자동으로 이러한 열의 길이를 조정하여 데이터 잘림이나 열 너비 초과를 방지할 수 있습니다. 또한 대상 열과의 호환성을 위해 다른 메타데이터를 업데이트할 수 있습니다. 예를 들어 정수 데이터만 포함하는 열의 데이터 형식을 DT_I2와 같은 숫자 데이터 형식으로 변경할 수 있습니다.  
   
  다중 플랫 파일 연결 관리자에 대한 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)를 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **연결 관리자 이름**  
  워크플로에서의 다중 플랫 파일 연결 관리자에 대한 고유 이름을 지정합니다. 제공한 이름은 **** 디자이너의 연결 관리자 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 영역에 표시됩니다.  
   
@@ -64,10 +69,10 @@ caps.handback.revision: 36
  **유형 제안**  
  **열 유형 제안** 대화 상자를 사용하여 첫 번째로 선택한 파일에 있는 샘플 데이터를 평가하고 각 열의 데이터 형식과 길이에 대한 제안을 가져올 수 있습니다. 자세한 내용은 [열 유형 제안 대화 상자 UI 참조](../../integration-services/connection-manager/suggest-column-types-dialog-box-ui-reference.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
- [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [다중 플랫 파일 연결 관리자 편집기 &#40; 일반 페이지 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)   
+ [다중 플랫 파일 연결 관리자 편집기 &#40; 열 페이지 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [다중 플랫 파일 연결 관리자 편집기 &#40; 미리 보기 페이지 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

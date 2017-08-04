@@ -1,29 +1,34 @@
 ---
 title: "문자표 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.charactertrans.f1"
-helpviewer_keywords: 
-  - "상호 배타적인 매핑 [Integration Services]"
-  - "데이터 매핑 [Integration Services]"
-  - "문자열 함수(string functions)"
-  - "문자표 변환 [Integration Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.charactertrans.f1
+helpviewer_keywords:
+- mutually exclusive mapping [Integration Services]
+- mapping data [Integration Services]
+- string functions
+- Character Map transformation [Integration Services]
 ms.assetid: e0f50eb6-b893-400f-bb8c-fb3072cc2620
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 문자표 변환
+# <a name="character-map-transformation"></a>문자표 변환
   문자표 변환은 소문자에서 대문자로의 변환과 같은 문자열 함수를 문자 데이터에 적용합니다. 이 변환은 문자열 데이터 형식의 열 데이터에서만 실행됩니다.  
   
  문자표 변환은 사용 중인 열 데이터를 변환하거나 열을 변환 출력에 추가하고 변환된 데이터를 새 열에 배치할 수 있습니다. 다양한 매핑 작업 집합을 동일한 입력 열에 적용하고 결과를 다른 열에 배치할 수 있습니다. 예를 들어 동일한 열을 대문자와 소문자로 변환하고 결과를 두 개의 서로 다른 열에 배치할 수 있습니다.  
@@ -32,7 +37,7 @@ caps.handback.revision: 42
   
  이 변환에는 하나의 입력, 하나의 출력 및 하나의 오류 출력이 있습니다.  
   
-## 매핑 작업  
+## <a name="mapping-operations"></a>매핑 작업  
  다음 표에서는 문자표 변환이 지원하는 매핑 작업을 설명합니다.  
   
 |연산|Description|  
@@ -48,7 +53,7 @@ caps.handback.revision: 42
 |중국어(번체)|중국어 간체 문자를 중국어 번체 문자에 매핑합니다.|  
 |대문자|문자를 대문자로 변환합니다.|  
   
-## 상호 배타적인 매핑 작업  
+## <a name="mutually-exclusive-mapping-operations"></a>상호 배타적인 매핑 작업  
  한 변환에서 둘 이상의 작업을 수행할 수 있습니다. 그러나 일부 매핑 작업은 함께 사용할 수 없습니다. 다음 표에서는 동일한 열에 여러 개의 작업을 사용할 때 적용되는 제한을 나열합니다. 작업 A 열과 작업 B 열의 작업은 함께 사용할 수 없습니다.  
   
 |작업 A|작업 B|  
@@ -60,7 +65,7 @@ caps.handback.revision: 42
 |소문자|히라가나, 가타카나, 반자, 전자|  
 |대문자|히라가나, 가타카나, 반자, 전자|  
   
-## 문자표 변환 구성  
+## <a name="configuration-of-the-character-map-transformation"></a>문자표 변환 구성  
  다음과 같은 방법으로 문자표 변환을 구성할 수 있습니다.  
   
 -   변환할 열을 지정합니다.  
@@ -73,7 +78,7 @@ caps.handback.revision: 42
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   

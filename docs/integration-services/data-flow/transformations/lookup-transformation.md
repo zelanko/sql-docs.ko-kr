@@ -1,31 +1,36 @@
 ---
 title: "조회 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptrans.f1"
-helpviewer_keywords: 
-  - "조회 변환"
-  - "열 조인 [Integration Services]"
-  - "캐시 [Integration Services]"
-  - "정확히 일치 [Integration Services]"
-  - "조회 [Integration Services]"
-  - "정확히 일치 [Integration Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptrans.f1
+helpviewer_keywords:
+- Lookup transformation
+- joining columns [Integration Services]
+- cache [Integration Services]
+- match exactly [Integration Services]
+- lookups [Integration Services]
+- exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
 caps.latest.revision: 106
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 106
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14e72d1f2d9790cd74c54eb7e152c0b29d278212
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 조회 변환
+# <a name="lookup-transformation"></a>조회 변환
   조회 변환은 입력 열의 데이터를 참조 데이터 집합의 열과 조인하여 조회합니다. 조회를 사용하면 공통 열의 값을 기반으로 하는 관련 테이블의 추가 정보에 액세스할 수 있습니다.  
   
  참조 데이터 집합은 캐시 파일, 기존 테이블이나 뷰, 새 테이블 또는 SQL 쿼리의 결과일 수 있습니다. 조회 변환은 OLE DB 연결 관리자 또는 캐시 연결 관리자를 사용하여 참조 데이터 집합에 연결합니다. 자세한 내용은 [OLE DB Connection Manager](../../../integration-services/connection-manager/ole-db-connection-manager.md) 및 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)을 참조하세요.  
@@ -74,14 +79,14 @@ caps.handback.revision: 106
   
 -   오류 출력.  
   
-## 참조 데이터 집합 캐싱  
+## <a name="caching-the-reference-dataset"></a>참조 데이터 집합 캐싱  
  메모리 내 캐시는 참조 데이터 집합과 이러한 데이터를 인덱싱하는 해시 테이블을 저장합니다. 캐시는 패키지 실행이 완료될 때까지 메모리에 남아 있습니다. 캐시를 캐시 파일(.caw)로 저장할 수 있습니다.  
   
  캐시를 파일로 저장하면 시스템에서 캐시를 더 빠르게 로드할 수 있습니다. 따라서 조회 변환 및 패키지의 성능도 향상됩니다. 캐시 파일을 사용할 때는 데이터베이스에 있는 현재 데이터가 아닌 다른 데이터를 사용하고 있다는 점을 유념하십시오.  
   
  캐시를 파일로 저장할 경우의 추가 이점은 다음과 같습니다.  
   
--   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은 ***[캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)***을 참조하세요.***  
+-   ***여러 패키지에서 캐시 파일을 공유합니다. 자세한 내용은 ***[캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)***을 참조하세요.***  
   
 -   패키지와 함께 캐시 파일을 배포합니다. ***그러면 데이터를 여러 컴퓨터에서 사용할 수 있습니다.*** 자세한 내용은 [조회 변환에 대한 캐시 만들기 및 배포](../../../integration-services/data-flow/transformations/create-and-deploy-a-cache-for-the-lookup-transformation.md)를 참조하세요.  
   
@@ -112,18 +117,18 @@ caps.handback.revision: 106
   
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 문자열 비교 방식에는 차이가 있습니다. 조회 변환이 실행되기 전에 참조 데이터 집합을 캐시로 로드하도록 조회 변환이 구성된 경우 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 는 캐시에서 조회 비교를 수행합니다. 그렇지 않으면 조회 작업에서 매개 변수가 있는 SQL 문을 사용하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 조회 비교를 수행합니다. 이는 캐시 유형에 따라 조회 변환이 동일한 조회 테이블에서 다른 개수의 일치하는 항목을 반환할 수 있다는 것을 의미합니다.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. 자세한 내용은 다음 항목을 참조하십시오.  
   
 -   [캐시 없음 또는 부분 캐시 모드로 조회 구현](../../../integration-services/data-flow/transformations/implement-a-lookup-in-no-cache-or-partial-cache-mode.md)  
   
--   [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - cache connection manager.md)  
+-   [캐시 연결 관리자 변환을 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-cache-connection-manager.md)  
   
--   [OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup transformation full cache mode - ole db connection manager.md)  
+-   [OLE DB 연결 관리자를 사용하여 전체 캐시 모드에서 조회 변환 구현](../../../integration-services/data-flow/transformations/lookup-transformation-full-cache-mode-ole-db-connection-manager.md)  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
 -   msdn.microsoft.com의 비디오 - [방법: 전체 캐시 모드에서 조회 변환 구현](http://go.microsoft.com/fwlink/?LinkId=131031)  
   
@@ -135,7 +140,7 @@ caps.handback.revision: 106
   
      [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 제품 예제 및 예제 데이터베이스를 설치하는 방법은 [SQL Server Integration Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=267527)를 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [용어 조회 변환](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)   
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   

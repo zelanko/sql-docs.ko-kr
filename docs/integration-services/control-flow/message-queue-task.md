@@ -1,29 +1,34 @@
 ---
 title: "메시지 큐 태스크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.messagequeuetask.f1"
-helpviewer_keywords: 
-  - "메시지 큐 태스크 [Integration Services]"
-  - "메시지 받기"
-  - "메시지 [Integration Services]"
-  - "메시지 보내기"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.messagequeuetask.f1
+helpviewer_keywords:
+- Message Queue task [Integration Services]
+- receiving messages
+- messages [Integration Services]
+- sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 caps.latest.revision: 68
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 68
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: bd765f2943b5bb1eb07a10664b1e9ce56bf01e29
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 메시지 큐 태스크
+# <a name="message-queue-task"></a>메시지 큐 태스크
   메시지 큐 태스크에서는 MSMQ(메시지 큐)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 간에 메시지를 보내고 받거나 사용자 지정 응용 프로그램에서 처리되는 응용 프로그램 큐에 메시지를 보낼 수 있습니다. 이러한 메시지는 단순한 텍스트, 파일 또는 변수와 해당 값의 형태로 사용될 수 있습니다.  
   
  메시지 큐 태스크를 사용하면 회사 전반의 작업을 조정할 수 있습니다. 대상이 없거나 사용 중인 경우에는 메시지를 큐에 저장하고 다음에 배달할 수 있습니다. 예를 들어 네트워크에 연결될 때 메시지를 받는 판매 영업 직원의 랩톱 컴퓨터가 오프라인인 경우 이 태스크는 메시지를 큐에 저장할 수 있습니다. 메시지 큐 태스크는 다음 용도로 사용할 수 있습니다.  
@@ -43,7 +48,7 @@ caps.handback.revision: 68
 > [!NOTE]  
 >  컴퓨터의 운영 체제가 FIPS 모드에서 구성되고 태스크에서 암호화를 사용하는 경우 메시지 큐 태스크는 FIPS(Federal Information Processing Standard) 140-2와 호환되지 않습니다. 메시지 큐 태스크에서 암호화를 사용하지 않는 경우에는 태스크가 성공적으로 실행됩니다.  
   
-## 메시지 유형  
+## <a name="message-types"></a>메시지 유형  
  메시지 큐 태스크에서 제공하는 메시지 유형을 다음과 같은 방법으로 구성할 수 있습니다.  
   
 -   **Data file** 메시지는 파일에 메시지가 포함되도록 지정합니다. 메시지를 받을 때 파일을 저장하고, 기존 파일을 덮어쓰고, 메시지를 받을 수 있는 태스크의 패키지를 지정하도록 태스크를 구성할 수 있습니다.  
@@ -54,10 +59,10 @@ caps.handback.revision: 68
   
 -   **Variable** 은 메시지에 하나 이상의 변수가 포함되도록 지정합니다. 메시지에 포함된 변수 이름을 지정하도록 메시지를 구성할 수 있습니다. 메시지를 받을 때 메시지를 받아올 패키지와 메시지의 대상인 변수를 모두 지정하도록 태스크를 구성할 수 있습니다.  
   
-## 메시지 보내기  
+## <a name="sending-messages"></a>메시지 보내기  
  메시지 큐 태스크에서 메시지를 보내도록 구성할 경우 메시지 큐 기술이 현재 지원하는 RC2 및 RC4 암호화 알고리즘 중 하나를 사용하여 메시지를 암호화할 수 있습니다. 이 두 암호화 알고리즘은 현재 메시지 큐 기술에서 지원하지 않는 최신 알고리즘에 비해 암호화 방식이 취약한 것으로 간주됩니다. 따라서 메시지 큐 태스크를 사용하여 메시지를 전송할 때는 암호화 요구를 신중하게 고려해야 합니다.  
   
-## 메시지 받기  
+## <a name="receiving-messages"></a>메시지 받기  
  메시지를 받을 때는 다음과 같은 방법으로 메시지 큐 태스크를 구성할 수 있습니다.  
   
 -   메시지를 무시하거나 큐에서 메시지를 제거합니다.  
@@ -70,8 +75,8 @@ caps.handback.revision: 68
   
 -   메시지에서 **Data file message** 유형이 사용되는 경우 메시지 파일을 다른 파일 이름으로 저장합니다.  
   
-## 메시지 큐 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
- 다음 표에서는 메시지 큐 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../../integration-services/performance/custom-messages-for-logging.md)을 참조하세요.  
+## <a name="custom-logging-messages-available-on-the-message-queue-task"></a>메시지 큐 태스크에 사용할 수 있는 사용자 지정 로깅 메시지  
+ 다음 표에서는 메시지 큐 태스크에 대한 사용자 지정 로그 항목을 나열합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 68
 |**MSMQTaskInfo**|태스크에 대한 설명 정보를 제공합니다.|  
 |**MSMQTaskTimeOut**|태스크 시간이 초과되었음을 나타냅니다.|  
   
-## 메시지 큐 태스크 구성  
+## <a name="configuration-of-the-message-queue-task"></a>메시지 큐 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [메시지 큐 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)  
@@ -97,10 +102,10 @@ caps.handback.revision: 68
   
  프로그래밍 방식으로 이러한 속성을 설정하는 방법은 개발자 가이드에서 **Microsoft.SqlServer.Dts.Tasks.MessageQueueTask.MessageQueueTask** 클래스에 대한 설명서를 참조하십시오.  
   
-## 관련 작업  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)을 참조하세요.  
+## <a name="related-tasks"></a>관련 작업  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   
  [제어 흐름](../../integration-services/control-flow/control-flow.md)  
   

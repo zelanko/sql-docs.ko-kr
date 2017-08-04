@@ -1,29 +1,34 @@
 ---
-title: "버전 플래그 만들기(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "버전 플래그 만들기 [Master Data Services]"
-  - "버전 플래그 [Master Data Services], 만들기"
-  - "버전 [Master Data Services], 플래그 만들기"
+title: "버전 플래그 (Master Data Services) 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating version flags [Master Data Services]
+- version flags [Master Data Services], creating
+- versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: be3585a40a7ce8312e4e31b13118f6b128e2be13
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 버전 플래그 만들기(Master Data Services)
+# <a name="create-a-version-flag-master-data-services"></a>버전 플래그 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전에 할당할 버전 플래그를 만듭니다. 플래그는 사용자나 구독 시스템에서 사용해야 하는 버전을 나타낼 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
   
 -   버전 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
-### 버전 플래그를 만들려면  
+### <a name="to-create-a-version-flag"></a>버전 플래그를 만들려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **버전 관리**를 클릭합니다.  
   
@@ -50,12 +55,12 @@ caps.handback.revision: 7
   
 8.  **저장**을 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
   
--   [버전에 플래그 할당&#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [버전 &#40;에 플래그 할당 Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
-## 관련 항목:  
- [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [버전 플래그 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [버전 &#40; Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
+ [버전 플래그 이름 &#40; 변경 Master Data services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

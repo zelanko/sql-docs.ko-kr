@@ -1,29 +1,34 @@
 ---
-title: "Index의 Column 요소(DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-dev_langs: 
-  - "XML"
-helpviewer_keywords: 
-  - "Column 요소"
+title: "Column 요소 (DTA) 인덱스에 대 한 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+dev_langs:
+- XML
+helpviewer_keywords:
+- Column element
 ms.assetid: ba9fac20-26bd-4333-940e-842c15241b46
 caps.latest.revision: 14
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7aaf1a73356f2e5a2732e12e49b7e618c3bf1f0e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Index의 Column 요소(DTA)
+# <a name="column-element-for-index-dta"></a>Index의 Column 요소(DTA)
   사용자 지정 구성에서 인덱스가 만들어지는 열을 지정합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 14
      </Column>  
 ```  
   
-## 요소 특성  
+## <a name="element-attributes"></a>요소 특성  
   
  **Type**: 선택 사항입니다. 인덱스 열 유형을 지정합니다. **string** 데이터 형식을 사용하여 허용된 다음 값 중 하나로 이 특성을 지정할 수 있습니다.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 14
 <Column SortOrder="Ascending">  
 ```  
   
-## 요소 특징  
+## <a name="element-characteristics"></a>요소 특징  
   
 |특징|설명|  
 |--------------------|-----------------|  
@@ -73,17 +78,17 @@ caps.handback.revision: 14
 |**기본값**|없음|  
 |**발생 빈도**|**Index** 요소에 최대 1024개의 열을 지정할 수 있습니다.|  
   
-## 요소 관계  
+## <a name="element-relationships"></a>요소 관계  
   
 |관계|요소|  
 |------------------|--------------|  
-|**부모 요소**|[Index 요소&#40;DTA&#41;](../../tools/dta/index-element-dta.md)|  
-|**자식 요소**|[Column의 Name 요소&#40;DTA&#41;](../../tools/dta/name-element-for-column-dta.md)|  
+|**부모 요소**|[Index 요소 &#40; DTA &#41;](../../tools/dta/index-element-dta.md)|  
+|**자식 요소**|[열 &#40; DTA &#41;의 name 요소](../../tools/dta/name-element-for-column-dta.md)|  
   
-## 예제  
- 이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)를 참조하세요.  
+## <a name="example"></a>예제  
+ 이 요소의 사용 예를 보려면 [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

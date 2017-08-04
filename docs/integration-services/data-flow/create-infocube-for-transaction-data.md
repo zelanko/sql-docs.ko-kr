@@ -1,22 +1,27 @@
 ---
 title: "트랜잭션 데이터용 InfoCube 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 673cea01-a260-4fce-a1a0-f73839289805
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3abae6f0ecf09b1b0156bedfb584570ed7bb45cd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 트랜잭션 데이터용 InfoCube 만들기
+# <a name="create-infocube-for-transaction-data"></a>트랜잭션 데이터용 InfoCube 만들기
   **트랜잭션 데이터용 InfoCube 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 트랜잭션 데이터용으로 새 InfoCube를 만들 수 있습니다.  
   
  **SAP BW 대상 편집기** 의 **연결 관리자** 페이지에서 **트랜잭션 데이터용 InfoCube 만들기**대화 상자를 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하십시오.  
@@ -34,7 +39,7 @@ caps.handback.revision: 10
   
 4.  **연결 관리자** 페이지의 **SAP BW 개체 만들기** 그룹 상자에서 **InfoCube**를 선택한 다음 **만들기**를 클릭합니다.  
   
-## 일반 옵션  
+## <a name="general-options"></a>일반 옵션  
  **InfoCube 이름**  
  새 InfoCube의 이름을 입력합니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
  **저장 및 활성화**  
  새 InfoCube를 저장하고 활성화합니다.  
   
-## InfoCube 전송 구조 옵션  
+## <a name="infocube-transfer-structure-options"></a>InfoCube 전송 구조 옵션  
  InfoCube 전송 구조 섹션에서 데이터 흐름 열을 InfoObject에 연결할 수 있습니다.  
   
  **PipelineElement**  
@@ -56,7 +61,7 @@ caps.handback.revision: 10
  **InfoObject**  
  데이터 흐름 열과 연결된 InfoObject의 이름을 표시합니다.  
   
- **형식**  
+ **유형**  
  데이터 흐름 열과 연결된 InfoObject의 유형을 표시합니다. 다음 표에서는 유형에 사용할 수 있는 값을 나열합니다.  
   
 |Value|Description|  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
  **Iobject - 제거**  
  InfoObject와 현재 행의 데이터 흐름 열 간의 연결을 제거합니다. 이 연결을 제거하려면 **제거**를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

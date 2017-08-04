@@ -1,22 +1,27 @@
 ---
 title: "새 InfoObject 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3587a633-1c0b-4d63-a22a-6b2b93923c3a
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0135f5cbbe81cbe8d4a8c530a1d63c84a27f7d2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 새 InfoObject 만들기
+# <a name="create-new-infoobject"></a>새 InfoObject 만들기
   **새 InfoObject 만들기** 대화 상자를 사용하여 SAP Netweaver BW 시스템에서 새 InfoObject를 만들 수 있습니다.  
   
  **InfoObject 만들기** 대화 상자는 **SAP BW 대상 편집기** 의 **연결 관리자**페이지에서 열 수 있습니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을(를) 참조하세요.  
@@ -50,7 +55,7 @@ caps.handback.revision: 10
   
  **새 InfoObject 만들기** 대화 상자의 **특성** 섹션에서 **새로 만들기** 를 클릭하여 **새 InfoObject 만들기** 대화 상자를 열 수도 있습니다.  
   
-## 일반 옵션  
+## <a name="general-options"></a>일반 옵션  
  **특징**  
  차원 데이터를 나타내는 InfoObject를 만듭니다.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 10
  **저장 및 활성화**  
  새 InfoObject를 저장하고 활성화합니다.  
   
-## 데이터 형식 옵션  
+## <a name="data-type-options"></a>데이터 형식 옵션  
  **CHAR - 문자열**  
  InfoObject에 문자 데이터가 포함됨을 나타냅니다.  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 10
  **길이**  
  데이터의 길이를 입력합니다.  
   
-## 텍스트 옵션  
+## <a name="text-options"></a>텍스트 옵션  
  **텍스트 사용**  
  InfoObject에 텍스트가 포함됨을 나타냅니다.  
   
@@ -113,10 +118,10 @@ caps.handback.revision: 10
  **시간 종속적 텍스트**  
  텍스트가 시간에 따라 달라짐을 나타냅니다.  
   
-## 특성 섹션  
+## <a name="attributes-section"></a>특성 섹션  
  **특성** 섹션은 InfoObject의 특성 목록과 이 목록에서 특성을 추가하고 제거할 수 있는 옵션으로 구성되어 있습니다.  
   
-### 특성 목록  
+### <a name="attributes-list"></a>특성 목록  
  **특성** 목록에는 만들고 있는 InfoObject의 특성이 표시됩니다. **특성** 목록에는 다음과 같은 열 머리글이 있습니다.  
   
  **InfoObject**  
@@ -135,7 +140,7 @@ caps.handback.revision: 10
 |UNI|단위|  
 |TIM|시간 특징|  
   
-### 특성 옵션  
+### <a name="attributes-options"></a>특성 옵션  
  다음 옵션을 사용하여 만들고 있는 InfoObject의 특성을 추가하고 제거할 수 있습니다.  
   
  **추가**  
@@ -151,7 +156,7 @@ caps.handback.revision: 10
  **제거**  
  선택한 InfoObject를 **특성** 목록에서 제거합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [트랜잭션 데이터용 InfoCube 만들기](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource 만들기](../../integration-services/data-flow/create-infosource.md)   
  [트랜잭션 데이터용 InfoSource 만들기](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

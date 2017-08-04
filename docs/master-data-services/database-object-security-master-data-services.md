@@ -1,25 +1,30 @@
 ---
-title: "데이터베이스 개체 보안(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 [Master Data Services], 개체 보안"
-  - "보안 [Master Data Services], 데이터베이스 개체"
+title: "데이터베이스 개체 보안 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database [Master Data Services], object security
+- security [Master Data Services], database objects
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8bfccd4e9d3df93dbc6a968a1fc5961400afe234
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 개체 보안(Master Data Services)
+# <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 데이터는 여러 데이터베이스 테이블에 저장되고 뷰에서 볼 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 보안을 설정한 정보는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 액세스할 수 있는 사용자가 볼 수 있습니다.  
   
  특히 직원 급여 정보가 Employee 모델에 포함되거나 회사 재무 정보가 Account 모델에 포함될 수 있습니다. [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 사용자 인터페이스에서 이러한 모델에 대한 사용자 액세스를 거부할 수 있지만 데이터베이스에 액세스할 수 있는 사용자는 이 데이터를 볼 수 있습니다.  
@@ -55,11 +60,11 @@ caps.handback.revision: 10
   
 ##  <a name="rules"></a> 비즈니스 규칙에 대해 데이터 유효성 검사  
   
-|작업|보안 개체|Permissions|  
+|동작|보안 개체|Permissions|  
 |------------|---------------|-----------------|  
 |비즈니스 규칙에 대해 데이터 버전의 유효성을 검사합니다.|mdm.udpValidateModel|EXECUTE|  
   
- 자세한 내용은 [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
+ 자세한 내용은 [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
   
 ##  <a name="Versions"></a> 버전 삭제  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 10
 ##  <a name="SysSettings"></a> 시스템 설정 구성  
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에는 동작을 제어하기 위해 구성할 수 있는 시스템 설정이 있습니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 이러한 설정을 조정할 수 있으며, UPDATE 권한이 있는 경우에는 mdm.tblSystemSetting 데이터베이스 테이블에서 이러한 설정을 직접 조정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

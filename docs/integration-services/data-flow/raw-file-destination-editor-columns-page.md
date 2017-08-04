@@ -1,24 +1,29 @@
 ---
-title: "원시 파일 대상 편집기(열 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledestinationcolumns.f1"
+title: "원시 파일 대상 편집기 (열 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledestinationcolumns.f1
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1b6ce96dc298d446952b185c8eccdfc9a7778a6c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 원시 파일 대상 편집기(열 페이지)
+# <a name="raw-file-destination-editor-columns-page"></a>원시 파일 대상 편집기(열 페이지)
   원시 파일 대상 편집기를 사용하여 원시 데이터를 파일에 기록하도록 원시 파일 대상을 구성합니다.  
   
  **수행 작업**  
@@ -60,7 +65,7 @@ caps.handback.revision: 7
  **출력 별칭**  
  출력 열에 사용할 대체 이름을 지정합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [원시 파일 대상](../../integration-services/data-flow/raw-file-destination.md)  
   
   

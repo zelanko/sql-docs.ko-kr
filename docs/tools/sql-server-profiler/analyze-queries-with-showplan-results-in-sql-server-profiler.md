@@ -1,26 +1,31 @@
 ---
 title: "SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 [SQL Server], Showplan"
-  - "프로파일러 [SQL Server 프로파일러], Showplan 결과"
-  - "SQL Server 프로파일러, Showplan 결과"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- events [SQL Server], Showplan
+- Profiler [SQL Server Profiler], Showplan results
+- SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
 caps.latest.revision: 30
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 03913120309e861eab5bb89523467e8736e5b50b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석
+# <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>SQL Server Profiler에서 SHOWPLAN 결과로 쿼리 분석
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 에서 추적에 쿼리 계획 정보를 수집하고 표시하도록 추적 정의에 Showplan 이벤트 클래스를 추가할 수 있습니다. 추적에 수집된 다른 이벤트에서 Showplan 이벤트를 추출하고 이러한 Showplan 이벤트를 별도의 XML 파일에 저장할 수도 있습니다.  
   
  추적에서 Showplan 이벤트를 추출하는 것은 다음 방법 중 하나로 수행할 수 있습니다.  
@@ -31,7 +36,7 @@ caps.handback.revision: 30
   
 -   특정 이벤트를 마우스 오른쪽 단추로 클릭하고 **이벤트 데이터 추출**을 선택하여 개별 이벤트를 추출 및 저장합니다.  
   
-## Showplan 이벤트  
+## <a name="showplan-events"></a>Showplan 이벤트  
  Showplan 추적 이벤트는 다음 표에 나열 및 설명되어 있습니다.  
   
 |이벤트 이름|설명|  
@@ -46,7 +51,7 @@ caps.handback.revision: 30
 |**Showplan XML For Query Compile**|쿼리가 컴파일될 때 쿼리 계획을 표시합니다. 자세한 내용은 [Showplan XML for Query Compile Event Class](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md)을 참조하세요.|  
 |**Showplan XML Statistics Profile**|전체 런타임 정보와 쿼리 계획을 XML 형식으로 표시합니다. 예를 들어 이 이벤트 클래스는 실행되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 각 연산자를 통해 전달되는 행의 수를 캡처합니다. 자세한 내용은 [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md)을 참조하세요.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Performance 이벤트 범주](../../relational-databases/event-classes/performance-event-category.md)  
   
   

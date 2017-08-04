@@ -1,34 +1,39 @@
 ---
 title: "파일 연결 관리자 추가 대화 상자 UI 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.fileconnection.f1"
-helpviewer_keywords: 
-  - "파일 연결 관리자 추가"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnection.f1
+helpviewer_keywords:
+- Add File Connection Manager
 ms.assetid: 9370bfb5-5993-4ad8-a9cd-2de53f320f34
 caps.latest.revision: 33
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 33
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 파일 연결 관리자 추가 대화 상자 UI 참조
+# <a name="add-file-connection-manager-dialog-box-ui-reference"></a>파일 연결 관리자 추가 대화 상자 UI 참조
   **파일 연결 관리자 추가** 대화 상자를 사용하여 파일 또는 폴더 그룹에 대한 연결을 정의할 수 있습니다.  
   
  다중 파일 연결 관리자에 대한 자세한 내용은 [Multiple Files Connection Manager](../../integration-services/connection-manager/multiple-files-connection-manager.md)를 참조하십시오.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 기본 제공 태스크 및 데이터 흐름 구성 요소는 다중 파일 연결 관리자를 사용하지 않습니다. 그러나 스크립트 태스크와 스크립트 구성 요소에서 이 연결 관리자를 사용할 수 있습니다.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 기본 제공 태스크 및 데이터 흐름 구성 요소는 다중 파일 연결 관리자를 사용하지 않습니다. 그러나 스크립트 태스크와 스크립트 구성 요소에서 이 연결 관리자를 사용할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **사용 유형**  
  다중 파일 연결 관리자에 사용할 파일 형식을 지정합니다.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 33
  **화살표 단추**  
  파일이나 폴더를 선택한 다음 화살표 단추를 통해 위/아래로 이동하여 액세스 순서를 지정합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)  
   
   

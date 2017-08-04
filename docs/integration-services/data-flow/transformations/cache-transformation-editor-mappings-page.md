@@ -1,24 +1,29 @@
 ---
-title: "캐시 변환 편집기(매핑 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.cachetransmap.f1"
+title: "캐시 변환 편집기 (매핑 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.cachetransmap.f1
 ms.assetid: ffd53f18-9646-458a-a84a-f2467d601ea5
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 778b7cbcc861b9bdee2c027e5d7d85220b913072
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 캐시 변환 편집기(매핑 페이지)
+# <a name="cache-transformation-editor-mappings-page"></a>캐시 변환 편집기(매핑 페이지)
   **캐시 변환 편집기** 의 **매핑** 페이지를 사용하여 캐시 변환의 입력 열을 캐시 연결 관리자의 대상 열에 매핑할 수 있습니다.  
   
 > [!NOTE]  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
   
  캐시 연결 관리자에 대한 자세한 내용은 [Cache Connection Manager](../../../integration-services/data-flow/transformations/cache-connection-manager.md)를 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 사용 가능한 입력 열을 대상 열에 매핑할 수 있습니다.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 16
  **대상 열**  
  사용 가능한 각 대상 열을 표시합니다.  
   
-## 관련 항목:  
- [캐시 변환 편집기&#40;연결 관리자 페이지&#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [캐시 변환 편집기 &#40; 연결 관리자 페이지 &#41;](../../../integration-services/data-flow/transformations/cache-transformation-editor-connection-manager-page.md)  
   
   

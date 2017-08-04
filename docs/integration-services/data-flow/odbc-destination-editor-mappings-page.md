@@ -1,44 +1,49 @@
 ---
-title: "ODBC 대상 편집기(매핑 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcdest.columns.f1"
+title: "ODBC 대상 편집기 (매핑 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcdest.columns.f1
 ms.assetid: 8fa05dd4-316c-44ed-8383-e6e9ea1d3994
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f3582f734f2f57bfeadd8cfb3e9ddc7e0418b959
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 대상 편집기(매핑 페이지)
+# <a name="odbc-destination-editor-mappings-page"></a>ODBC 대상 편집기(매핑 페이지)
   **ODBC 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
  ODBC 대상에 대한 자세한 내용은 [ODBC Destination](../../integration-services/data-flow/odbc-destination.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
-### 사용 가능한 입력 열  
+### <a name="available-input-columns"></a>사용 가능한 입력 열  
  사용 가능한 입력 열 목록입니다. 입력 열을 사용 가능한 대상 열에 끌어 놓아 열을 매핑할 수 있습니다.  
   
-### 사용 가능한 대상 열  
+### <a name="available-destination-columns"></a>사용 가능한 대상 열  
  사용 가능한 대상 열 목록입니다. 대상 열을 사용 가능한 입력 열에 끌어 놓아 열을 매핑할 수 있습니다.  
   
-### 입력 열  
- 선택한 입력 열을 표시합니다. 출력에서 열을 제외하는 **\<ignore>**를 선택하여 매핑을 제거할 수 있습니다.  
+### <a name="input-column"></a>입력 열  
+ 선택한 입력 열을 표시합니다. 선택 하 여 매핑을 제거할 수 있습니다  **\<무시 >** 출력에서 열을 제외 합니다.  
   
-### 대상 열  
+### <a name="destination-column"></a>대상 열  
  사용 가능한 모든 대상 열(매핑되거나 매핑되지 않음)을 표시합니다.  
   
-## 관련 항목:  
- [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
- [ODBC 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ODBC 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)   
+ [ODBC 대상 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
   
   

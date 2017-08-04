@@ -1,22 +1,27 @@
 ---
 title: "ODBC 원본 사용자 지정 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15c78bdb8f093b07ce62a7d710ba583aad96548d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 원본 사용자 지정 속성
+# <a name="odbc-source-custom-properties"></a>ODBC 원본 사용자 지정 속성
   다음 표에서는 ODBC 원본의 사용자 지정 속성을 설명합니다. 모든 속성은 SSIS 속성 식에서 설정할 수 있습니다.  
   
 |속성 이름|데이터 형식|Description|  
@@ -35,8 +40,8 @@ caps.handback.revision: 7
 |LobChunckSize|정수|LOB 열에 대한 청크 크기 할당입니다.|  
 ||||  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [ODBC 원본](../../integration-services/data-flow/odbc-source.md)   
- [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+ [ODBC 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
   

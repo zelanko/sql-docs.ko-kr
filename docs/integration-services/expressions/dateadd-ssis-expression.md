@@ -1,36 +1,41 @@
 ---
-title: "DATEADD(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "날짜 [Integration Services], DATEADD"
-  - "날짜 [Integration Services]"
-  - "DATEADD 함수"
+title: "DATEADD (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dates [Integration Services], DATEADD
+- dates [Integration Services]
+- DATEADD function
 ms.assetid: fa5c37b1-2ddc-4857-8f8e-f6d5643b654f
 caps.latest.revision: 36
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77230956969fb2fd2d27a1dec42140dd91a5cbd5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEADD(SSIS 식)
+# <a name="dateadd-ssis-expression"></a>DATEADD(SSIS 식)
   날짜에서 지정한 날짜 부분에 날짜 또는 시간 간격을 나타내는 숫자를 더한 후 새로운 DT_DBTIMESTAMP 값을 반환합니다. 숫자 매개 변수는 정수로 계산되고 날짜 매개 변수는 유효한 날짜여야 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 DATEADD(datepart, number, date)  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *날짜 부분*  
  숫자를 더할 날짜 부분을 지정하는 매개 변수입니다.  
   
@@ -40,10 +45,10 @@ DATEADD(datepart, number, date)
  *date*  
  유효한 날짜 또는 날짜 형식의 문자열을 반환하는 식입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_DBTIMESTAMP  
   
-## 주의  
+## <a name="remarks"></a>주의  
  다음 표에서는 식 계산기가 인식하는 날짜 부분 및 약어를 나열합니다. 날짜 부분 이름은 대/소문자를 구분하지 않습니다.  
   
 |날짜 부분|약어|  
@@ -70,7 +75,7 @@ DATEADD(datepart, number, date)
   
  날짜가 잘못되었거나 날짜 또는 시간 단위가 문자열이 아니거나 증분이 고정 정수가 아니면 오류가 발생합니다.  
   
-## SSIS 식 예  
+## <a name="ssis-expression-examples"></a>SSIS 식 예  
  이 예에서는 현재 날짜에 1개월을 더합니다.  
   
 ```  
@@ -89,12 +94,12 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## 관련 항목:  
- [DATEDIFF&#40;SSIS 식&#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
- [DATEPART&#40;SSIS 식&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY&#40;SSIS 식&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH&#40;SSIS 식&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR&#40;SSIS 식&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [DATEDIFF &#40; SSIS 식 &#41;](../../integration-services/expressions/datediff-ssis-expression.md)   
+ [DATEPART &#40; SSIS 식 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DAY &#40; SSIS 식 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [월 &#40; SSIS 식 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [연도 &#40; SSIS 식 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

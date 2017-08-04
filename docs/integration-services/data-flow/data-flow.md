@@ -1,29 +1,34 @@
 ---
 title: "데이터 흐름 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "출력 데이터 [Integration Services]"
-  - "데이터 흐름 [Integration Services], 요소"
-  - "입력 데이터 [Integration Services]"
-  - "외부 메타데이터 [Integration Services]"
-  - "데이터 흐름 [Integration Services]"
-  - "오류 [Integration Services], 데이터 흐름 출력"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output data [Integration Services]
+- data flow [Integration Services], elements
+- input data [Integration Services]
+- external metadata [Integration Services]
+- data flow [Integration Services]
+- errors [Integration Services], data flow outputs
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 caps.latest.revision: 70
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 70
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0a72cbbc25ba137e96ad792441ea7f30d1d0af14
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터 흐름
+# <a name="data-flow"></a>데이터 흐름
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에는 원본, 변환, 대상 등 3가지 다른 유형의 데이터 흐름 구성 요소가 있습니다. 원본은 관계형 데이터베이스의 테이블과 뷰, 파일 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스와 같은 데이터 저장소로부터 데이터를 추출합니다. 변환은 데이터를 수정, 요약 및 삭제합니다. 대상은 데이터를 데이터 저장소로 로드하거나 메모리 내 데이터 집합을 만듭니다.  
   
 > [!NOTE]  
@@ -31,11 +36,11 @@ caps.handback.revision: 70
   
  또한 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 구성 요소의 출력을 다른 구성 요소의 입력으로 연결하는 경로가 제공됩니다. 경로는 구성 요소의 시퀀스를 정의하고 데이터 흐름에 주석을 추가하거나 열의 원본을 볼 수 있도록 합니다.  
   
- 원본 및 대상의 출력을 변환 및 대상의 입력으로 연결하여 데이터 흐름 구성 요소를 연결합니다. 데이터 흐름을 구성할 때 두 번째 및 이후의 구성 요소는 일반적으로 데이터 흐름에 추가할 때 연결됩니다. 구성 요소를 연결한 다음에는 해당 구성 요소를 구성할 때 입력 열을 사용할 수 있습니다. 입력 열을 사용할 수 없으면 구성 요소가 데이터 흐름에 연결된 다음에 해당 구성 요소의 구성을 완료해야 합니다. 자세한 내용은 [Integration Services 경로](../../integration-services/data-flow/integration-services-paths.md) 및 [경로에 구성 요소 연결](../Topic/Connect%20Components%20with%20Paths.md)을 참조하세요.  
+ 원본 및 대상의 출력을 변환 및 대상의 입력으로 연결하여 데이터 흐름 구성 요소를 연결합니다. 데이터 흐름을 구성할 때 두 번째 및 이후의 구성 요소는 일반적으로 데이터 흐름에 추가할 때 연결됩니다. 구성 요소를 연결한 다음에는 해당 구성 요소를 구성할 때 입력 열을 사용할 수 있습니다. 입력 열을 사용할 수 없으면 구성 요소가 데이터 흐름에 연결된 다음에 해당 구성 요소의 구성을 완료해야 합니다. 자세한 내용은 [Integration Services 경로](../../integration-services/data-flow/integration-services-paths.md) 및 [경로에 구성 요소 연결](http://msdn.microsoft.com/library/05633e4c-1370-4b05-802b-f36b07dd71c8)을 참조하세요.  
   
  다음 다이어그램에서는 원본, 입력과 출력이 각각 하나씩 포함된 변환 및 대상이 들어 있는 데이터 흐름을 보여 줍니다. 다이어그램에는 입력, 출력 및 외부 열 외에도 입력, 출력 및 오류 출력이 포함됩니다.  
   
- ![데이터 흐름 구성 요소 및 해당 입출력](../../integration-services/data-flow/media/mw-dts-dataflow.gif "데이터 흐름 구성 요소 및 해당 입출력")  
+ ![데이터 흐름 구성 요소 및 입 / 출력](../../integration-services/data-flow/media/mw-dts-dataflow.gif "데이터 흐름 구성 요소 및 입 / 출력")  
   
 ## <a name="data-flow-implementation"></a>데이터 흐름 구현  
  패키지의 제어 흐름에 데이터 흐름 태스크를 추가하는 단계는 패키지에서 데이터 흐름을 구현하기 위한 첫 번째 단계입니다. 패키지에는 자체 데이터 흐름이 각각 포함된 여러 데이터 흐름 태스크가 포함될 수 있습니다. 예를 들어 패키지에서 데이터 흐름이 지정된 순서로 실행되어야 하거나 데이터 흐름 사이에 다른 태스크가 수행되어야 하는 경우에는 각 데이터 흐름에 대해 별개의 데이터 흐름 태스크를 사용해야 합니다.  
@@ -166,7 +171,7 @@ caps.handback.revision: 70
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector for Oracle by Attunity의 뛰어난 성능을 활용하는 방법을 보려면 [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkID=210369)을 참조하세요.  
   
 ## <a name="connection-managers"></a>연결 관리자  
- 여러 데이터 흐름 구성 요소는 데이터 원본에 연결되며, 구성 요소를 제대로 구성하려면 구성 요소에 필요한 연결 관리자를 패키지에 추가해야 합니다. 연결 관리자는 데이터 흐름을 구성할 때나 데이터 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](../Topic/Create%20Connection%20Managers.md)를 참조하세요.  
+ 여러 데이터 흐름 구성 요소는 데이터 원본에 연결되며, 구성 요소를 제대로 구성하려면 구성 요소에 필요한 연결 관리자를 패키지에 추가해야 합니다. 연결 관리자는 데이터 흐름을 구성할 때나 데이터 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
   
 ## <a name="external-metadata"></a>외부 메타데이터  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 패키지에 데이터 흐름을 만드는 경우 원본 및 대상의 메타데이터는 원본 및 대상의 외부 열로 복사되어 스키마에 대한 스냅숏으로 사용됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 패키지에 대한 유효성을 검사할 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 이 스냅숏을 원본 또는 대상의 스키마와 비교하고 변경된 내용에 따라 오류 및 경고를 게시합니다.  
@@ -215,3 +220,4 @@ caps.handback.revision: 70
   
 ## <a name="related-content"></a>관련 내용  
  technet.microsoft.com의 비디오, [Microsoft Connector for Oracle by Attunity의 성능(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkID=210369)  
+

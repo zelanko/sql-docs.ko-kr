@@ -1,26 +1,31 @@
 ---
-title: "Analysis Services 처리 태스크 편집기(Analysis Services 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.asprocessingtask.as.f1"
-helpviewer_keywords: 
-  - "Analysis Services 처리 태스크 편집기"
+title: "Analysis Services 처리 태스크 편집기 (Analysis Services 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.asprocessingtask.as.f1
+helpviewer_keywords:
+- Analysis Services Processing Task Editor
 ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 caps.latest.revision: 29
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e5b90a26fb4477243c5a48b87d134ff8129430ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Analysis Services 처리 태스크 편집기(Analysis Services 페이지)
+# <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 처리 태스크 편집기(Analysis Services 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **Analysis Services** 페이지를 사용하여 Analysis Services 연결 관리자를 지정하고, 처리할 분석 개체를 선택하고, 처리 및 오류 처리 옵션을 설정할 수 있습니다.  
   
  테이블 형식 모델을 처리할 때는 다음 사항에 유의해야 합니다.  
@@ -35,14 +40,14 @@ caps.handback.revision: 29
   
  이 태스크에 대한 자세한 내용은 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)를 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **Analysis Services 연결 관리자**  
- 목록에서 기존 Analysis Services 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 기존 Analysis Services 연결 관리자를 선택하거나 **새로 만들기** 를 클릭하여 새 연결 관리자를 만듭니다.  
   
  **새로 만들기**  
  새 Analysis Services 연결 관리자를 만듭니다.  
   
- **관련 항목:** [Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **관련 항목:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
  |속성|Description|  
@@ -61,7 +66,7 @@ caps.handback.revision: 29
  **영향 분석**  
  선택한 개체에 대한 영향 분석을 수행합니다.  
   
- **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../Topic/Impact%20Analysis%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **일괄 처리 설정 요약**  
  |속성|Description|  
@@ -75,11 +80,11 @@ caps.handback.revision: 29
  **설정 변경**  
  처리 옵션 및 차원 키의 오류 처리를 변경합니다.  
   
- **관련 항목:** [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../Topic/Change%20Settings%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ **관련 항목:** [설정 변경 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [Analysis Services 처리 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)   
+ [Analysis Services 처리 태스크 편집기 &#40; 일반 페이지 &#41;](../../integration-services/control-flow/analysis-services-processing-task-editor-general-page.md)   
  [Analysis Services DDL 실행 태스크](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
   

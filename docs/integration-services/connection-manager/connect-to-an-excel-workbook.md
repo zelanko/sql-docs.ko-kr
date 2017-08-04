@@ -1,23 +1,28 @@
 ---
 title: "Excel 통합 문서에 연결 | Microsoft Docs"
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Excel [Integration Services]"
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Excel [Integration Services]
 ms.assetid: d9746318-3669-4ce2-bbb0-4a1bd471c9dd
 caps.latest.revision: 22
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b36b92c9beb840f6a2ea66250a5a025aa587acef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Excel 통합 문서에 연결
+# <a name="connect-to-an-excel-workbook"></a>Excel 통합 문서에 연결
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 Microsoft Office Excel 통합 문서에 연결하려면 Excel 연결 관리자가 필요합니다.  
   
  이러한 연결 관리자는 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 연결 관리자 영역 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사에서 만들 수 있습니다.  
@@ -34,7 +39,7 @@ caps.handback.revision: 22
 |2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=10910)|  
 |2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/en-us/download/details.aspx?id=39358)|  
   
-### 연결 관리자 영역에서 Excel 연결 관리자를 만들려면  
+### <a name="to-create-an-excel-connection-manager-from-the-connection-managers-area"></a>연결 관리자 영역에서 Excel 연결 관리자를 만들려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지를 엽니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 22
   
      이 연결 관리자에 사용할 수 있는 구성 옵션에 대한 자세한 내용은 [Excel Connection Manager Editor](../../integration-services/connection-manager/excel-connection-manager-editor.md)를 참조하십시오.  
   
-### SQL Server 가져오기 및 내보내기 마법사에서 Excel 연결을 만들려면  
+### <a name="to-create-an-excel-connection-from-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사에서 Excel 연결을 만들려면  
   
 1.  32비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 시작합니다.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 22
   
      이 연결 형식에 사용할 수 있는 구성 옵션에 대한 자세한 내용은 [Excel Connection Manager Editor](../../integration-services/connection-manager/excel-connection-manager-editor.md)를 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Access 데이터베이스에 연결](../../integration-services/connection-manager/connect-to-an-access-database.md)  
   
   

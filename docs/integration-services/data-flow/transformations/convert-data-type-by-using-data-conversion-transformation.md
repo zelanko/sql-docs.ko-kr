@@ -1,29 +1,34 @@
 ---
-title: "데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 형식 변환 [Integration Services]"
-  - "데이터 변환"
-  - "데이터 형식 [Integration Services], 변환"
+title: "데이터 변환을 사용 하 여 데이터 형식을 변환 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- converting data types [Integration Services]
+- Data Conversion transformation
+- data types [Integration Services], converting
 ms.assetid: 4aabbe4f-7666-4672-865a-9627bd25fbfd
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 3a6de227fc2fd0e93abfc9e8ac5300dbf0a137ac
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환
+# <a name="convert-data-type-by-using-data-conversion-transformation"></a>데이터 변환을 사용 하 여 데이터 형식을 변환합니다
   데이터 변환을 추가 및 구성하려면 패키지에 적어도 하나 이상의 데이터 흐름 태스크와 하나의 원본이 이미 들어 있어야 합니다.  
   
-### 데이터를 다른 데이터 형식으로 변환하려면  
+### <a name="to-convert-data-to-a-different-data-type"></a>데이터를 다른 데이터 형식으로 변환하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -46,13 +51,13 @@ caps.handback.revision: 41
   
 9. 선택한 데이터 형식에 따라 선택적으로 **길이**, **전체 자릿수**, **소수 자릿수**및 **코드 페이지** 열에서 값을 업데이트합니다.  
   
-10. 오류 출력을 구성하려면 **오류 출력 구성**을 클릭합니다. 자세한 내용은 [데이터 흐름 구성 요소에서 오류 출력 구성](../../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)을 참조하세요.  
+10. 오류 출력을 구성하려면 **오류 출력 구성**을 클릭합니다. 자세한 내용은 [Debugging Data Flow](../../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
 11. **확인**을 클릭합니다.  
   
 12. 업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 변환](../../../integration-services/data-flow/transformations/data-conversion-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Integration Services 경로](../../../integration-services/data-flow/integration-services-paths.md)   

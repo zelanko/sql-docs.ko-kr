@@ -1,27 +1,32 @@
 ---
 title: "SAP BW 연결 관리자 편집기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwconnectionmanager.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwconnectionmanager.f1
 ms.assetid: ec970319-e749-4753-8675-9cf76ed99669
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a9f07a79e630550d7d0599026a91ee53f5b05d05
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 연결 관리자 편집기
+# <a name="sap-bw-connection-manager-editor"></a>SAP BW 연결 관리자 편집기
   **SAP BW 연결 관리자 편집기** 를 사용하여 SAP Netweaver BW 버전 7 시스템에 연결하는 데 사용할 속성을 지정할 수 있습니다.  
   
- SAP BW 연결 관리자는 SAP 원본 또는 대상에서 SAP Netweaver BW 7 시스템에 연결할 수 있도록 해 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 연결 관리자에 대한 자세한 내용은 [SAP BW 연결 관리자](../../integration-services/connection-manager/sap-bw-connection-manager.md)를 참조하세요.  
+ SAP BW 연결 관리자는 SAP 원본 또는 대상에서 SAP Netweaver BW 7 시스템에 연결할 수 있도록 해 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 연결 관리자에 대한 자세한 내용은 [SAP BW 연결 관리자](../../integration-services/connection-manager/sap-bw-connection-manager.md)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  SAP BW용 Microsoft Connector 1.1 설명서는 SAP Netweaver BW 환경에 익숙한 것으로 가정합니다. SAP Netweaver BW 또는 SAP Netweaver BW 개체 및 프로세스 구성 방법에 대한 자세한 내용은 SAP 설명서를 참조하십시오.  
@@ -38,7 +43,7 @@ caps.handback.revision: 10
   
     -   SAP BW 연결 관리자를 마우스 오른쪽 단추로 클릭한 다음 **편집**을 선택합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  연결 관리자를 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
@@ -96,7 +101,7 @@ caps.handback.revision: 10
 >  이 옵션은 **부하 분산 사용** 옵션을 선택한 경우에만 사용할 수 있습니다.  
   
  **로그 디렉터리**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 구성 요소에 대한 로깅을 사용하도록 설정합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 구성 요소에 대한 로깅을 사용하도록 설정합니다.  
   
  로깅을 사용하도록 설정하려면 각 RFC 함수 호출 전후에 생성되는 로그 파일에 대한 디렉터리를 지정합니다. 이 로깅 기능을 사용하면 XML 형식의 로그 파일이 많이 만들어집니다. 로그 파일에는 전송되는 모든 데이터 행도 포함되므로 많은 디스크 공간이 소비될 수 있습니다.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 10
  **연결 테스트**  
  사용자가 제공한 값을 사용하여 연결을 테스트합니다. **연결 테스트**를 클릭하면 메시지 상자가 표시되고 연결이 성공했는지 여부가 표시됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

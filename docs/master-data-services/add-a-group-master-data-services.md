@@ -1,33 +1,38 @@
 ---
-title: "그룹 추가(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "그룹 [Master Data Services], 추가"
-  - "그룹 추가 [Master Data Services]"
+title: "그룹 (Master Data Services) 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- groups [Master Data Services], adding
+- adding groups [Master Data Services]
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f333376223c44056bc8380c705a0289113bcdbd7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 그룹 추가(Master Data Services)
+# <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
   **의** 그룹 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 목록에 그룹을 추가하여 웹 응용 프로그램에 사용 권한을 할당하는 프로세스를 시작합니다. 그룹의 사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있게 하려면 하나 이상의 기능 영역과 모델 개체에 그룹 권한을 부여해야 합니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
-### 그룹을 추가하려면  
+### <a name="to-add-a-group"></a>그룹을 추가하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 7
     > [!NOTE]  
     >  사용자가 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 처음으로 액세스하면 사용자의 이름이 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 사용자 목록에 추가됩니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
   
--   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [기능 영역 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

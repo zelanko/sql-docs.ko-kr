@@ -1,24 +1,29 @@
 ---
 title: "CDC 인스턴스 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "manIns"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 308d7528e516baa755a893bb42c9864c7ef7e3b7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 인스턴스 관리
+# <a name="manage-a-cdc-instance"></a>CDC 인스턴스 관리
   CDC Designer 콘솔을 사용하여 직접 만든 인스턴스에 대한 정보를 보고 인스턴스 작업을 관리할 수 있습니다.  
   
  왼쪽 창에서 인스턴스의 이름을 클릭하여 인스턴스에 대한 정보를 볼 수 있습니다.  
@@ -26,22 +31,22 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  또한 왼쪽 창에서 서비스를 선택하면 사용 가능한 인스턴스의 목록이 CDC Designer 콘솔의 가운데에 표시됩니다. 이 섹션에서 인스턴스 중 하나를 선택한 경우 오른쪽 창에서 태스크를 수행할 수 있지만 속성 탭에서 정보를 볼 수 없습니다.  
   
-## CDC 인스턴스 정보를 표시할 때 수행할 수 있는 작업  
+## <a name="what-you-can-do-when-you-display-the-cdc-instance-information"></a>CDC 인스턴스 정보를 표시할 때 수행할 수 있는 작업  
  오른쪽 창에서 수행되는 동작은 다음과 같습니다.  
   
  **시작**  
- **시작**을 클릭하여 선택한 CDC 인스턴스에 대한 변경 캡처를 시작할 수 있습니다.  
+ **시작** 을 클릭하여 선택한 CDC 인스턴스에 대한 변경 캡처를 시작할 수 있습니다.  
   
  **중지**  
- **중지**를 클릭하여 선택한 CDC 인스턴스에 대한 변경 캡처를 중지할 수 있습니다. CDC 인스턴스를 중지할 경우 해당 시점에 캡처된 변경 사항은 손실되지 않고 CDC 인스턴스를 다시 시작하면 제공됩니다.  
+ **중지** 를 클릭하여 선택한 CDC 인스턴스에 대한 변경 캡처를 중지할 수 있습니다. CDC 인스턴스를 중지할 경우 해당 시점에 캡처된 변경 사항은 손실되지 않고 CDC 인스턴스를 다시 시작하면 제공됩니다.  
   
  **다시 설정**  
- **다시 설정**을 클릭하여 CDC 인스턴스를 초기(비어 있음) 상태로 다시 설정합니다. 이 옵션은 CDC 인스턴스가 중지된 경우에 사용할 수 있습니다. 변경 테이블의 모든 변경 사항과 CDC 인스턴스 내부 상태가 삭제됩니다. CDC 인스턴스를 나중에 시작하면 변경 캡처가 해당 시점부터 시작되고 CDC 인스턴스가 시작된 후에 시작된 트랜잭션만 포함됩니다.  
+ **다시 설정** 을 클릭하여 CDC 인스턴스를 초기(비어 있음) 상태로 다시 설정합니다. 이 옵션은 CDC 인스턴스가 중지된 경우에 사용할 수 있습니다. 변경 테이블의 모든 변경 사항과 CDC 인스턴스 내부 상태가 삭제됩니다. CDC 인스턴스를 나중에 시작하면 변경 캡처가 해당 시점부터 시작되고 CDC 인스턴스가 시작된 후에 시작된 트랜잭션만 포함됩니다.  
   
  확인 대화 상자에서 **확인** 을 클릭하여 CDC 인스턴스를 다시 설정하고 변경 테이블에 기록된 변경 사항을 삭제하도록 확인할 수 있습니다.  
   
  **Delete**  
- **삭제**를 클릭하여 CDC 인스턴스를 영구히 삭제할 수 있습니다. 이 옵션은 CDC 인스턴스가 중지된 경우에만 사용할 수 있습니다.  
+ **삭제** 를 클릭하여 CDC 인스턴스를 영구히 삭제할 수 있습니다. 이 옵션은 CDC 인스턴스가 중지된 경우에만 사용할 수 있습니다.  
   
  확인 대화 상자에서 **확인** 을 클릭하여 CDC 인스턴스를 삭제하도록 확인할 수 있습니다.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 11
   
     |||  
     |-|-|  
-    |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**오류**: 다시 시도할 수 없는 오류가 발생하여 Oracle CDC 인스턴스가 실행되지 않습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **잘못 구성됨**: 수동 작업이 필요한 구성 오류가 발생했습니다.<br /><br /> **암호 필요**: Oracle CDC 인스턴스에 대해 암호를 설정하지 않았거나 암호가 올바르지 않습니다.<br /><br /> **예기치 않은 오류**: 복구할 수 없는 다른 모든 오류입니다.|  
-    |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**실행 중**: CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **유휴 상태**: 모든 변경 레코드가 처리되어 대상 변경 테이블에 저장되었습니다. 활성 트랜잭션이 더 이상 없습니다.<br /><br /> **처리 중**: 변경 테이블에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  
-    |![Stop](../../integration-services/change-data-capture/media/stop.gif "Stop")|**중지됨**: CDC 인스턴스가 실행되고 있지 않습니다. 중지됨 상태는 CDC 인스턴스가 정상적인 방법으로 중지되었음을 나타냅니다.|  
-    |![Paused](../../integration-services/change-data-capture/media/paused.gif "Paused")|**일시 중지됨**: CDC 인스턴스가 실행되고 있지만 다시 실행 가능한 오류로 인해 처리가 일시 중지되었습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **연결 끊김**: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> **저장소**: 저장소가 꽉 찼습니다. 추가 저장소를 사용할 수 있게 되면 처리가 다시 시작됩니다.<br /><br /> **로거**: 로거가 Oracle에 연결되어 있지만 일시적인 문제(예: 필요한 트랜잭션 로그를 사용할 수 없음)로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
+    |![오류](../../integration-services/change-data-capture/media/error.gif "오류")|**오류**: 다시 시도할 수 없는 오류가 발생하여 Oracle CDC 인스턴스가 실행되지 않습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **잘못 구성됨**: 수동 작업이 필요한 구성 오류가 발생했습니다.<br /><br /> **암호 필요**: Oracle CDC 인스턴스에 대해 암호를 설정하지 않았거나 암호가 올바르지 않습니다.<br /><br /> **예기치 않은 오류**: 복구할 수 없는 다른 모든 오류입니다.|  
+    |![알겠습니다](../../integration-services/change-data-capture/media/okay.gif "확인")|**실행 중**: CDC 인스턴스가 실행 중이며 변경 레코드를 처리하고 있습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **유휴 상태**: 모든 변경 레코드가 처리되어 대상 변경 테이블에 저장되었습니다. 활성 트랜잭션이 더 이상 없습니다.<br /><br /> **처리 중**: 변경 테이블에 아직 기록되지 않은 처리 중인 변경 레코드가 있습니다.|  
+    |![중지](../../integration-services/change-data-capture/media/stop.gif "중지")|**중지됨**: CDC 인스턴스가 실행되고 있지 않습니다. 중지됨 상태는 CDC 인스턴스가 정상적인 방법으로 중지되었음을 나타냅니다.|  
+    |![일시 중지됨](../../integration-services/change-data-capture/media/paused.gif "일시 중지됨")|**일시 중지됨**: CDC 인스턴스가 실행되고 있지만 다시 실행 가능한 오류로 인해 처리가 일시 중지되었습니다. 다음과 같은 하위 상태를 사용할 수 있습니다.<br /><br /> **연결 끊김**: 원본 Oracle 데이터베이스에 연결할 수 없습니다. 연결이 복원되면 처리가 다시 시작됩니다.<br /><br /> **저장소**: 저장소가 꽉 찼습니다. 추가 저장소를 사용할 수 있게 되면 처리가 다시 시작됩니다.<br /><br /> **로거**: 로거가 Oracle에 연결되어 있지만 일시적인 문제(예: 필요한 트랜잭션 로그를 사용할 수 없음)로 인해 Oracle 트랜잭션 로그를 읽을 수 없습니다.|  
   
 -   **자세한 상태**: 현재 하위 상태입니다.  
   
@@ -102,24 +107,24 @@ caps.handback.revision: 11
     -   **기록된 변경**: SQL Server 변경 테이블에 기록된 변경 사항의 수입니다.  
   
  **Oracle**  
- CDC 인스턴스 및 Oracle 데이터베이스에 대한 연결 관련 정보를 표시합니다. 이 탭은 읽기 전용입니다. 이 속성을 편집하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 오른쪽 창에서 **속성**을 클릭하여 \<instance> 속성 대화 상자를 엽니다.  
+ CDC 인스턴스 및 Oracle 데이터베이스에 대한 연결 관련 정보를 표시합니다. 이 탭은 읽기 전용입니다. 이러한 속성을 편집 하려면 왼쪽된 창에서 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성** 키를 누르거나 **속성** 열려는 오른쪽 창에는 \<인스턴스 > 속성 대화 상자.  
   
  이러한 속성에 대한 자세한 내용과 속성을 편집하는 방법은 [Edit the Oracle Database Properties](../../integration-services/change-data-capture/edit-the-oracle-database-properties.md)을 참조하십시오.  
   
  **테이블**  
- CDC 인스턴스에 포함된 테이블에 대한 정보를 표시합니다. 여기에서 열 정보도 사용할 수 있습니다. 이 탭은 읽기 전용입니다. 이 속성을 편집하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 오른쪽 창에서 **속성**을 클릭하여 \<instance> 속성 대화 상자를 엽니다.  
+ CDC 인스턴스에 포함된 테이블에 대한 정보를 표시합니다. 여기에서 열 정보도 사용할 수 있습니다. 이 탭은 읽기 전용입니다. 이러한 속성을 편집 하려면 왼쪽된 창에서 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성** 키를 누르거나 **속성** 열려는 오른쪽 창에는 \<인스턴스 > 속성 대화 상자.  
   
  이러한 속성에 대한 자세한 내용과 속성을 편집하는 방법은 [Edit Tables](../../integration-services/change-data-capture/edit-tables.md)을 참조하십시오.  
   
  **고급**  
- CDC 인스턴스에 대한 고급 속성과 속성 값을 표시합니다. 이 탭은 읽기 전용입니다. 이 속성을 편집하려면 왼쪽 창에서 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 오른쪽 창에서 **속성**을 클릭하여 \<instance> 속성 대화 상자를 엽니다.  
+ CDC 인스턴스에 대한 고급 속성과 속성 값을 표시합니다. 이 탭은 읽기 전용입니다. 이러한 속성을 편집 하려면 왼쪽된 창에서 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **속성** 키를 누르거나 **속성** 열려는 오른쪽 창에는 \<인스턴스 > 속성 대화 상자.  
   
  이러한 속성에 대한 자세한 내용과 속성을 편집하는 방법은 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)을 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [CDC 인스턴스 속성을 보는 방법](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
- [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [CDC 인스턴스 속성을 편집 하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [새 인스턴스 마법사 사용](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)  
   
   

@@ -1,37 +1,42 @@
 ---
 title: "집계 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregatetrans.f1"
-helpviewer_keywords: 
-  - "IsBig 속성"
-  - "집계 함수 [Integration Services]"
-  - "집계 변환 [Integration Services]"
-  - "대형 데이터, SSIS 변환"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregatetrans.f1
+helpviewer_keywords:
+- IsBig property
+- aggregate functions [Integration Services]
+- Aggregate transformation [Integration Services]
+- large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9e6bdc92869d16ac47745b04c0a94d9f9c993449
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 집계 변환
+# <a name="aggregate-transformation"></a>집계 변환
   집계 변환은 Average와 같은 집계 함수를 열 값에 적용하고 결과를 변환 출력에 복사합니다. 집계 함수 외에도 변환은 집계할 그룹을 지정하는 데 사용할 수 있는 GROUP BY 절을 제공합니다.  
   
-## 작업  
+## <a name="operations"></a>작업  
  집계 변환은 다음과 같은 연산을 지원합니다.  
   
 |연산|Description|  
 |---------------|-----------------|  
-|Group By|데이터 집합을 그룹으로 나눕니다. 그룹화에는 모든 종류의 데이터 형식의 열을 사용할 수 있습니다. 자세한 내용은 [GROUP BY&#40;Transact-SQL&#41;](../Topic/GROUP%20BY%20\(Transact-SQL\).md)를 참조하세요.|  
+|Group By|데이터 집합을 그룹으로 나눕니다. 그룹화에는 모든 종류의 데이터 형식의 열을 사용할 수 있습니다. 자세한 내용은 [GROUP BY&#40;Transact-SQL&#41;](../../../t-sql/queries/select-group-by-transact-sql.md)를 참조하세요.|  
 |합계|열에 있는 값의 합계를 계산합니다. 숫자 데이터 형식의 열만 합계를 계산할 수 있습니다. 자세한 내용은 [SUM&#40;Transact-SQL&#41;](../../../t-sql/functions/sum-transact-sql.md)을 참조하세요.|  
 |평균|열에 있는 열 값의 평균을 반환합니다. 숫자 데이터 형식의 열만 평균을 계산할 수 있습니다. 자세한 내용은 [AVG&#40;Transact-SQL&#41;](../../../t-sql/functions/avg-transact-sql.md)를 참조하세요.|  
 |개수|그룹의 항목 개수를 반환합니다. 자세한 내용은 [COUNT&#40;Transact-SQL&#41;](../../../t-sql/functions/count-transact-sql.md)를 참조하세요.|  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
 -   COUNT (*) 함수에서는 Null 값이 포함된 행을 비롯한 모든 행의 개수가 계산됩니다.  
   
-## 집계의 큰 숫자  
+## <a name="big-numbers-in-aggregates"></a>집계의 큰 숫자  
  열에는 필요한 값이나 전체 자릿수가 크기 때문에 특별한 고려가 필요한 숫자 값이 포함될 수 있습니다. 집계 변환에는 숫자가 크거나 전체 자릿수가 많은 경우를 특별하게 처리하기 위해 출력 열에 설정할 수 있는 IsBig 속성이 포함됩니다. 열 값이 40억을 넘거나 부동 소수점 데이터 형식보다 큰 전체 자릿수가 필요한 경우에는 IsBig을 1로 설정해야 합니다.  
   
  IsBig 속성을 1로 설정하면 집계 변환의 출력이 다음과 같이 됩니다.  
@@ -61,14 +66,14 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  GROUP BY, Maximum 또는 Minimum 연산에서 사용되는 열에는 IsBig을 1로 설정할 수 없습니다.  
   
-## 성능 고려 사항  
+## <a name="performance-considerations"></a>성능 고려 사항  
  집계 변환에는 변환 성능을 향상시키기 위해 설정할 수 있는 일련의 속성이 포함됩니다.  
   
 -   **Group by** 연산을 수행할 때 구성 요소 및 구성 요소 출력의 Keys 또는 KeysScale 속성을 설정합니다. Keys를 사용하면 변환에서 처리할 정확한 개수의 키를 지정할 수 있습니다. 여기서 말하는 Keys는 **Group by** 연산의 결과로 반환될 그룹 수를 나타냅니다. KeysScale을 사용하면 대략적인 개수의 키를 지정할 수 있습니다. Keys 또는 KeyScale에 대한 적절한 값을 지정하는 경우 변환이 캐시하는 데이터에 대해 적합한 메모리를 할당할 수 있으므로 성능이 향상됩니다.  
   
 -   **고유 카운트** 연산을 수행할 때 구성 요소의 CountDistinctKeys 또는 CountDistinctScale 속성을 설정합니다. CountDistinctKeys를 사용하면 변환에서 Count distinct 연산에 대해 처리할 정확한 개수의 키를 지정할 수 있습니다. 여기서 말하는 CountDistinctKeys는 **고유 카운트** 연산의 결과로 반환될 고유 값 수를 나타냅니다. CountDistinctScale을 사용하면 Count distinct 연산에 대한 대략적인 개수의 키를 지정할 수 있습니다. CountDistinctKeys 또는 CountDistinctScale에 대한 적절한 값을 지정하는 경우 변환이 해당 변환이 캐시하는 데이터에 대해 적합한 메모리를 할당할 수 있으므로 성능이 향상됩니다.  
   
-## 집계 변환 구성  
+## <a name="aggregate-transformation-configuration"></a>집계 변환 구성  
  집계 변환은 변환, 출력 및 열 수준에서 구성됩니다.  
   
 -   변환 수준에서는 다음 값을 지정하여 집계 변환을 성능에 맞게 구성합니다.  
@@ -117,7 +122,7 @@ caps.handback.revision: 59
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
@@ -129,10 +134,10 @@ caps.handback.revision: 59
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  [집계 변환을 사용하여 데이터 집합의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

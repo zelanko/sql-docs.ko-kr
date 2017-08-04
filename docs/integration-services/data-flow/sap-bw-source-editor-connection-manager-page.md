@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 원본 편집기(연결 관리자 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.connection.f1"
+title: "SAP BW 원본 편집기 (연결 관리자 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6f82377abc5fcbbcabed270e8181b1e7bae7b062
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 원본 편집기(연결 관리자 페이지)
+# <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 원본 편집기(연결 관리자 페이지)
   **SAP BW 원본 편집기** 의 **연결 관리자** 페이지를 사용하여 SAP BW 원본의 SAP BW 연결 관리자를 선택할 수 있습니다. 이 페이지에서는 SAP Netweaver BW 시스템에서 데이터를 추출하기 위한 실행 모드와 매개 변수도 선택합니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 원본 구성 요소에 대한 자세한 내용은 [SAP BW 원본](../../integration-services/data-flow/sap-bw-source.md)을 참조하세요.  
@@ -37,7 +42,7 @@ caps.handback.revision: 11
   
 3.  **SAP BW 원본 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
-## 정적 옵션  
+## <a name="static-options"></a>정적 옵션  
   
 > [!NOTE]  
 >  원본을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
@@ -70,21 +75,21 @@ caps.handback.revision: 11
   
  **미리 보기**를 클릭하면 **요청 로그** 대화 상자도 열립니다. 이 대화 상자를 사용하여 샘플 데이터에 대해 SAP Netweaver BW 시스템에 요청하는 동안 기록된 이벤트를 확인할 수 있습니다. 자세한 내용은 [Request Log](../../integration-services/data-flow/request-log.md)을(를) 참조하세요.  
   
-## 실행 모드 동적 옵션  
+## <a name="execution-mode-dynamic-options"></a>실행 모드 동적 옵션  
   
 > [!NOTE]  
 >  원본을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
   
-### 실행 모드 = P - 프로세스 체인 트리거  
+### <a name="execution-mode--p---trigger-process-chain"></a>실행 모드 = P - 프로세스 체인 트리거  
   
-#### RFC 대상 옵션  
+#### <a name="rfc-destination-options"></a>RFC 대상 옵션  
  이러한 값을 미리 알고 입력할 필요는 없습니다. **조회** 단추를 사용하여 적절한 RFC 대상을 찾고 선택합니다. RFC 대상을 선택하면 이러한 옵션의 적절한 값이 입력됩니다.  
   
  **게이트웨이 호스트**  
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 입력합니다. 일반적으로 이름 또는 IP 주소는 SAP 응용 프로그램 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스 이름을 **sapgwNN** 형식으로 입력합니다. 여기서 **NN**은 시스템 번호입니다.  
+ 게이트웨이 서비스 이름을 **sapgwNN**형식으로 입력합니다. 여기서 **NN** 은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 입력합니다.  
@@ -92,7 +97,7 @@ caps.handback.revision: 11
  **조회**  
  **RFC 대상 조회** 대화 상자를 사용하여 RFC 대상을 조회합니다. 이 대화 상자에 대한 자세한 내용은 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)을 참조하십시오.  
   
-#### 프로세스 체인 옵션  
+#### <a name="process-chain-options"></a>프로세스 체인 옵션  
  이러한 값을 미리 알고 입력할 필요는 없습니다. **조회** 단추를 사용하여 적절한 프로세스 체인을 찾고 선택합니다. 프로세스 체인을 선택하면 이 옵션의 적절한 값이 입력됩니다.  
   
  **프로세스 체인**  
@@ -101,16 +106,16 @@ caps.handback.revision: 11
  **조회**  
  **프로세스 체인 조회** 대화 상자를 사용하여 프로세스 체인을 조회합니다. 이 대화 상자에 대한 자세한 내용은 [Look Up Process Chain](../../integration-services/data-flow/look-up-process-chain.md)을 참조하십시오.  
   
-### 실행 모드 = W - 알릴 때까지 대기  
+### <a name="execution-mode--w---wait-for-notify"></a>실행 모드 = W - 알릴 때까지 대기  
   
-#### RFC 대상 옵션  
+#### <a name="rfc-destination-options"></a>RFC 대상 옵션  
  이러한 값을 미리 알고 입력할 필요는 없습니다. **조회** 단추를 사용하여 적절한 RFC 대상을 찾고 선택합니다. RFC 대상을 선택하면 이러한 옵션의 적절한 값이 입력됩니다.  
   
  **게이트웨이 호스트**  
  게이트웨이 호스트의 서버 이름 또는 IP 주소를 입력합니다. 일반적으로 이름 또는 IP 주소는 SAP 응용 프로그램 서버와 동일합니다.  
   
  **게이트웨이 서비스**  
- 게이트웨이 서비스 이름을 **sapgwNN** 형식으로 입력합니다. 여기서 **NN**은 시스템 번호입니다.  
+ 게이트웨이 서비스 이름을 **sapgwNN**형식으로 입력합니다. 여기서 **NN** 은 시스템 번호입니다.  
   
  **프로그램 ID**  
  RFC 대상과 연결된 프로그램 ID를 입력합니다.  
@@ -118,14 +123,14 @@ caps.handback.revision: 11
  **조회**  
  **RFC 대상 조회** 대화 상자를 사용하여 RFC 대상을 조회합니다. 이 대화 상자에 대한 자세한 내용은 [Look Up RFC Destination](../../integration-services/data-flow/look-up-rfc-destination.md)을 참조하십시오.  
   
-### 실행 모드 = E - 추출만  
+### <a name="execution-mode--e---extract-only"></a>실행 모드 = E - 추출만  
  **요청 ID**  
  추출과 연결된 요청 ID를 입력합니다.  
   
-## 관련 항목:  
- [SAP BW 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
- [SAP BW 원본 편집기&#40;고급 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SAP BW 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 원본 편집기 &#40; 고급 페이지 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

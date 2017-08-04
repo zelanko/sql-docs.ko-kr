@@ -1,30 +1,35 @@
 ---
 title: "패키지 개체 복사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "제어 흐름 [Integration Services], 개체 복사"
-  - "패키지 개체 복사 [Integration Services]"
-  - "데이터 흐름 [Integration Services], 개체 복사"
-  - "연결 관리자 [Integration Services], 복사"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- control flow [Integration Services], copying objects
+- copying package objects [Integration Services]
+- data flow [Integration Services], copying objects
+- connection managers [Integration Services], copying
 ms.assetid: 99b85e5c-d6bd-4e7c-afe4-51f6ce151c2f
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 61e0e7c321323bba74e05afe4d28ce7f525843af
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 패키지 개체 복사
+# <a name="copy-package-objects"></a>패키지 개체 복사
   이 항목에서는 한 패키지 내에서 또는 패키지 간에 제어 흐름 항목, 데이터 흐름 항목 및 연결 관리자를 복사하는 방법에 대해 설명합니다.  
   
-### 제어 흐름 항목 및 데이터 흐름 항목을 복사하려면  
+### <a name="to-copy-control-and-data-flow-items"></a>제어 흐름 항목 및 데이터 흐름 항목을 복사하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 14
   
 7.  마우스 오른쪽 단추를 클릭한 다음 **붙여넣기**를 클릭합니다.  
   
-### 연결 관리자를 복사하려면  
+### <a name="to-copy-connection-managers"></a>연결 관리자를 복사하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 작업할 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -60,10 +65,10 @@ caps.handback.revision: 14
   
 6.  **연결 관리자** 영역을 마우스 오른쪽 단추로 클릭한 다음 **붙여넣기**를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [제어 흐름](../integration-services/control-flow/control-flow.md)   
  [데이터 흐름](../integration-services/data-flow/data-flow.md)   
- [Integration Services&#40;SSIS&#41; 연결](../integration-services/connection-manager/integration-services-ssis-connections.md)   
- [프로젝트 항목 복사](../Topic/Copy%20Project%20Items.md)  
+ [Integration Services &#40; Ssis&#41; 연결](../integration-services/connection-manager/integration-services-ssis-connections.md)   
+ [프로젝트 항목 복사](http://msdn.microsoft.com/library/1606c54d-20f9-49f3-a4ef-caad83a772aa)  
   
   

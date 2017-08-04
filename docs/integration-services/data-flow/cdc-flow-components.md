@@ -1,25 +1,30 @@
 ---
 title: "CDC 흐름 구성 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 caps.latest.revision: 21
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
+ms.openlocfilehash: 403fb295b690c0aca09c597dc7d5c0469646ce29
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 흐름 구성 요소
+# <a name="cdc-flow-components"></a>CDC 흐름 구성 요소
   SSIS 개발자는 Attunity for Microsoft [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 의 변경 데이터 캡처 구성 요소를 통해 CDC를 사용하고 CDC 패키지의 복잡성을 줄일 수 있습니다.  
   
- SSIS CDC 구성 요소는 원본 테이블이 동일한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 또는 Oracle 데이터베이스([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]용 Oracle CDC 서비스를 사용하는 경우)인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 기능에서 사용할 수 있도록 디자인되었습니다. 분할된 테이블이 지원됩니다.  
+ SSIS CDC 구성 요소는 원본 테이블이 동일한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스 또는 Oracle 데이터베이스( [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 용 Oracle CDC 서비스를 사용하는 경우)인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]CDC 기능에서 사용할 수 있도록 디자인되었습니다. 분할된 테이블이 지원됩니다.  
   
  이 구성 요소에는 SSIS 패키지에서 변경 데이터를 읽고 처리하는 환경을 간소화하는 제어 흐름 및 데이터 흐름 구성 요소가 포함되어 있습니다. Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 구성 요소 라이브러리에 이러한 구성 요소를 추가할 수는 있지만 이 구성 요소는 별도로 설치됩니다.  
   
@@ -35,12 +40,12 @@ caps.handback.revision: 21
   
  [CDC 분할자](../../integration-services/data-flow/cdc-splitter.md)  
   
-## 설치  
+## <a name="installation"></a>설치  
  이 섹션에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 CDC 구성 요소의 설치 절차에 대해 설명합니다.  
   
  SSIS용 CDC 구성 요소는 Microsoft SQL Server® 2016용 Microsoft® Change Data Capture Designer and Service for Oracle by Attunity에 패키징됩니다. 이 다운로드는 SQL Server 2016 기능 팩의 일부입니다. [SQL Server 2016 기능 팩 웹 페이지](http://go.microsoft.com/fwlink/?LinkId=746297)에서 기능 팩의 구성 요소를 다운로드합니다.  
   
-### 버전 지원  
+### <a name="version-support"></a>버전 지원  
  다음 Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 제품은 SSIS용 CDC 구성 요소에서 지원됩니다.  
   
 -   Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -61,38 +66,38 @@ caps.handback.revision: 21
   
 -   Windows Server 2012  
   
-### 설치 프로그램 실행  
- 설치 마법사를 실행하기 전에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 닫혀 있는지 확인합니다. 그런 다음 설치 마법사의 지시를 따릅니다.  
+### <a name="running-the-installation-program"></a>설치 프로그램 실행  
+ 설치 마법사를 실행 하기 전에 갖추어야 합니다는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 닫혀 있습니다. 그런 다음 설치 마법사의 지시를 따릅니다.  
   
-### SSIS 다시 시작  
+### <a name="restart-ssis"></a>SSIS 다시 시작  
  CDC 구성 요소를 설치한 후 SQL [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 패키지를 개발할 때 구성 요소가 제대로 작동하도록 하려면 SSIS 서비스를 다시 시작해야 합니다.  
   
  구성 요소를 설치하면 메시지가 표시됩니다. 메시지가 표시되면 **예** 를 클릭합니다.  
   
-### Microsoft CDC 구성 요소 제거  
+### <a name="uninstalling-the-microsoft-cdc-components"></a>Microsoft CDC 구성 요소 제거  
  제거 마법사를 사용하여 CDC 원본, CDC 분할자 또는 CDC 제어 태스크를 제거할 수 있습니다. 구성 요소를 제거하기 전에 다음을 확인해야 합니다.  
   
- 패키지를 개발하는 데 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하고 있는 경우 제거 마법사를 실행하기 전에 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 닫혀 있는지 확인합니다.  
+ 사용 하는 경우는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 패키지 개발을 위해 있는지 확인은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 제거 마법사를 실행 하기 전에 종료 됩니다.  
   
-## 이점  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소용 CDC 구성 요소를 사용하면 SSIS 개발자가 변경 데이터를 처리하는 SSIS 패키지를 쉽게 빌드할 수 있습니다. 이러한 구성 요소를 사용하면 SSIS 개발자가 CDC를 처리하는 기능이 향상되고 CDC 패키지의 복잡성이 줄어듭니다.  
+## <a name="benefits"></a>이점  
+ CDC 구성 요소에 대 한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] SSIS 개발자가 변경 데이터를 처리 하는 SSIS 패키지를 쉽게 빌드할 수 있습니다. 이러한 구성 요소를 사용하면 SSIS 개발자가 CDC를 처리하는 기능이 향상되고 CDC 패키지의 복잡성이 줄어듭니다.  
   
  SSIS CDC 구성 요소는 복제, 데이터 웨어하우스 로드, OLAP에 대한 느린 변경 차원 업데이트, 변경 내용 감사 또는 가능한 추가적인 용도를 위해 추가로 처리할 수 있는 쉬운 방법으로 변경 데이터를 제공하는 데 사용됩니다. 사용되는 추가 처리 유형은 SSIS 개발자에 의해 결정됩니다.  
   
  SSIS CDC 구성 요소는 동일한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에 있는 변경 테이블에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 기능을 사용하도록 디자인되었습니다.  
   
-## 변경 데이터 캡처 구성 요소 시작  
+## <a name="getting-started-with-the-change-data-capture-components"></a>변경 데이터 캡처 구성 요소 시작  
  일반적인 CDC 패키지는 테이블 그룹에 대한 변경을 처리합니다. 이 유형의 CDC 패키지의 기본적인 제어 흐름은 아래 그림과 같습니다. 이 패키지를 trickle-feed 처리 패키지라고 합니다.  
   
- ![세 류 피드 처리 패키지 제어 흐름](../../integration-services/data-flow/media/tricklefeedprocessing.gif "세 류 피드 처리 패키지 제어 흐름")  
+ ![Trickle 피드 처리 패키지 제어 흐름](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Trickle 피드 처리 패키지 제어 흐름")  
   
- 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제어 흐름에는 CDC 제어 태스크 및 데이터 흐름 태스크라는 두 가지 태스크가 포함되어 있습니다. **CDC 처리 범위 가져오기**라는 첫 번째 태스크는 **변경 내용 처리**라는 데이터 흐름 태스크에서 처리되는 변경 내용에 대한 LSN 범위를 설정합니다. 이 범위는 마지막 패키지 실행 중에 처리되고 영구 저장소에 저장된 작업에 따라 설정됩니다.  
+ 이 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 제어 흐름 두 CDC 제어 태스크 및 데이터 흐름 태스크가 포함 되어 있습니다. **CDC 처리 범위 가져오기** 라는 첫 번째 태스크는 **변경 내용 처리**라는 데이터 흐름 태스크에서 처리되는 변경 내용에 대한 LSN 범위를 설정합니다. 이 범위는 마지막 패키지 실행 중에 처리되고 영구 저장소에 저장된 작업에 따라 설정됩니다.  
   
  CDC 제어 태스크를 사용하는 방법은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md) 및 [CDC Control Task Editor](../../integration-services/control-flow/cdc-control-task-editor.md)를 참조하십시오.  
   
  다음 그림에서는 변경 내용의 처리 방식을 개념적으로 보여 주는 **변경 내용 처리** 데이터 흐름을 보여 줍니다.  
   
- ![프로세스 변경 내용 데이터 흐름](../../integration-services/data-flow/media/processchangesdataflow.gif "프로세스 변경 내용 데이터 흐름")  
+ ![데이터 흐름을 변경 하는 프로세스](../../integration-services/data-flow/media/processchangesdataflow.gif "프로세스에 데이터 흐름 변경")  
   
  이 그림에 표시된 단계는 다음과 같습니다.  
   
@@ -106,11 +111,11 @@ caps.handback.revision: 21
   
  [CDC 원본](../../integration-services/data-flow/cdc-source.md)  
   
- [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
+ [CDC 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)  
   
- [CDC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+ [CDC 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
- [CDC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
+ [CDC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
  CDC 분할자에 대한 자세한 내용은 다음을 참조하십시오.  
   
@@ -132,7 +137,7 @@ caps.handback.revision: 21
   
  다음 그림에서는 세 번째 시나리오를 처리할 수 있는 SSIS 패키지를 보여 줍니다.  
   
- ![SSIS 패키지 처리 세 번째 시나리오](../../integration-services/data-flow/media/scenario3.gif "SSIS 패키지 처리 세 번째 시나리오")  
+ ![세 번째 시나리오를 처리 하는 SSIS 패키지](../../integration-services/data-flow/media/scenario3.gif "세 번째 시나리오를 처리 하는 SSIS 패키지")  
   
  초기 로드 패키지에 이어 변경 내용을 사용할 수 있는 경우 해당 변경 내용의 처리 일정에 따라 trickle-feed 업데이트 패키지가 반복적으로 실행됩니다.  
   
@@ -140,19 +145,19 @@ caps.handback.revision: 21
   
  CDC 상태 변수 값은 영구 저장소에서 유지 관리해야 하고 시작 CDC 처리 전에 읽어야 하며 처리 완료 후에 현재 상태로 저장해야 합니다. CDC 상태를 로드 및 저장하는 태스크는 SSIS 개발자가 처리할 수 있지만 CDC 제어 구성 요소가 CDC 상태 값을 데이터베이스 테이블에서 유지 관리하여 이 태스크를 자동화할 수 있습니다.  
   
-## 보안 고려 사항  
+## <a name="security-considerations"></a>보안 고려 사항  
  이 섹션에서는 SSIS에서 CDC 구성 요소 사용과 관련된 몇 가지 보안 고려 사항을 보여 줍니다.  
   
-### 변경 데이터에 대한 액세스 권한 부여  
- trickle-feed 업데이트 패키지는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 함수에 액세스할 수 있어야 합니다. 기본적으로 해당 액세스 권한은 **db_owner** 고정 데이터베이스 역할의 멤버에게 부여됩니다. **db_owner**는 강력한 역할이기 때문에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 내에서 캡처 인스턴스를 정의할 때 각 캡처 인스턴스에 보안 제어 역할을 연결하여 SSIS CDC 패키지가 훨씬 더 많은 제한된 사용자를 통해 변경 내용을 처리할 수 있도록 하는 것이 좋습니다.  
+### <a name="access-authorization-to-change-data"></a>변경 데이터에 대한 액세스 권한 부여  
+ trickle-feed 업데이트 패키지는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 함수에 액세스할 수 있어야 합니다. 기본적으로 해당 액세스 권한은 **db_owner** 고정 데이터베이스 역할의 멤버에게 부여됩니다. **db_owner** 는 강력한 역할이기 때문에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 내에서 캡처 인스턴스를 정의할 때 각 캡처 인스턴스에 보안 제어 역할을 연결하여 SSIS CDC 패키지가 훨씬 더 많은 제한된 사용자를 통해 변경 내용을 처리할 수 있도록 하는 것이 좋습니다.  
   
-### CDC 데이터베이스의 현재 LSN에 대한 액세스  
+### <a name="access-to-cdc-database-current-lsn"></a>CDC 데이터베이스의 현재 LSN에 대한 액세스  
  변경 내용 처리를 위해 시작 LSN을 표시하기 위한 CDC 제어 태스크 작업은 CDC 데이터베이스의 현재 LSN을 찾을 수 있어야 합니다. 이 작업은 master 데이터베이스에서 **sp_replincrementlsn** 프로시저를 사용하여 수행됩니다. 이 프로시저에 대한 실행 권한을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 데이터베이스에 연결하는 데 사용되는 로그인에 제공해야 합니다.  
   
-### CDC 상태 테이블에 대한 액세스  
+### <a name="access-to-cdc-states-table"></a>CDC 상태 테이블에 대한 액세스  
  CDC 상태 테이블은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 데이터베이스에 연결하는 데 사용되는 로그인에서 업데이트할 수 있어야 하는 CDC 상태를 자동으로 유지하는 데 사용됩니다. 이 테이블은 SSIS 개발자가 작성하므로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 시스템 관리자를 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 만들고 관리 및 유지 관리 태스크를 수행할 수 있는 권한이 있는 사용자로 설정합니다. 또한 CDC 사용 데이터베이스를 사용하는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 시스템 관리자는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC 기술 및 구현에 대해 잘 알고 있어야 합니다.  
   
-## CDC 처리를 위해 테이블 그룹화  
+## <a name="grouping-tables-for-cdc-processing"></a>CDC 처리를 위해 테이블 그룹화  
  데이터베이스 프로젝트의 범위는 몇 개의 테이블에서 수천 개의 테이블에 이르기까지 크기가 다양합니다. 초기 로드 및 CDC 패키지를 디자인할 때 쉽게 관리하고 효율성을 높일 수 있도록 테이블을 훨씬 더 작은 그룹으로 그룹화하는 것이 좋습니다. 이 섹션에서는 테이블을 작은 그룹으로 정렬하는 데 영향을 주는 다양한 고려 사항을 보여 줍니다. 각 그룹의 테이블은 초기에 로드된 다음 그룹으로 업데이트됩니다.  
   
  CDC 구성 요소에 의해 지원되는 CDC 패턴은 이 그룹화가 이미 결정되어 있는 것으로 가정합니다. 각 그룹은 다른 그룹에서 별도로 관리하는 별도의 CDC 컨텍스트를 정의합니다. 각 그룹에 대한 초기 로드 및 trickle-feed 업데이트 패키지가 생성됩니다. trickle-feed 업데이트는 변경 내용 처리 제약 조건의 비율(예: CPU 및 IO 소모량, 다른 시스템에 미치는 영향) 및 원하는 대기 시간에 따라 주기적으로 실행되도록 예약됩니다.  
@@ -173,7 +178,7 @@ caps.handback.revision: 21
   
 -   원본 테이블에 대한 변경 내용을 읽고 해당 변경 내용을 대상 테이블에 적용하는 trickle-feed 업데이트 패키지. 이 패키지는 예약된 일정에 따라 정기적으로 실행해야 합니다.  
   
-## CDC 상태  
+## <a name="cdc-state"></a>CDC 상태  
  각 CDC 그룹에는 특정 형식의 문자열로 표현된 상태가 연결되어 있습니다. 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)을 참조하세요. 다음 표에서는 가능한 CDC 상태 값을 보여 줍니다.  
   
 |State|Description|  
@@ -195,21 +200,21 @@ caps.handback.revision: 21
   
  초기 로드 패키지가 성공적으로 실행되면 미리 결정된 일정에 따라 Trickle-Feed 업데이트 패키지가 반복적으로 실행되어 원본 테이블에 대한 변경 내용이 처리됩니다. Trickle-Feed 업데이트 패키지의 각 실행은 CDC 실행입니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [CDC 원본](../../integration-services/data-flow/cdc-source.md)  
   
 -   [CDC 분할자](../../integration-services/data-flow/cdc-splitter.md)  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
   
 -   [변경 유형에 따라 CDC 스트림 전송](../../integration-services/data-flow/direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
 -   [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
--   mattmasson.com의 블로그 항목 - [SQL Server 2012용 SSIS의 CDC](http://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)  
+-   mattmasson.com의 블로그 항목 - [SQL Server 2012용 SSIS의 CDC](https://www.mattmasson.com/2011/12/cdc-in-ssis-for-sql-server-2012-2/)  
   
 -   blogs.msdn.com의 CDC Service 설정 관련 블로그 항목, [SQL Server 2012의 Oracle용 CDC](http://go.microsoft.com/fwlink/?LinkId=247827)  
   
@@ -221,7 +226,7 @@ caps.handback.revision: 21
   
 -   technet.microsoft.com의 비디오, [CDC for Oracle Databases using SQL Server Integration Services 2012 (SQL Server Video)](http://technet.microsoft.com/sqlserver/jj218898)(SQL Server Integration Services 2012를 사용하는 Oracle 데이터베이스에 대한 CDC(SQL Server 비디오))  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [CDC 제어 태스크](../../integration-services/control-flow/cdc-control-task.md)  
   
   

@@ -1,34 +1,39 @@
 ---
-title: "dBASE 또는 다른 DBF 파일에 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DBF 파일에 연결"
-  - "dBase 파일"
-  - "DBF 파일"
+title: "DBASE 또는 다른 DBF 파일에 연결 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connecting to DBF files
+- dBase files
+- DBF files
 ms.assetid: b0e8c831-9f96-475c-82a4-4f5b02692752
 caps.latest.revision: 16
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b1ae38e8b7ba0a9e584a80d1c6cacc76938576a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# dBASE 또는 다른 DBF 파일에 연결
+# <a name="connect-to-a-dbase-or-other-dbf-file"></a>dBASE 또는 다른 DBF 파일에 연결
   OLE DB 연결 관리자를 사용하고 Microsoft OLE DB Provider for Jet 4.0을 선택하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 dBASE 또는 다른 .DBF 데이터베이스에 연결할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 SQL Server 가져오기 및 내보내기 마법사에서는 dBASE 또는 다른 DBF 파일에서 데이터를 가져오거나 해당 파일로 데이터를 내보낼 수 없습니다. Microsoft Access 또는 Microsoft Excel을 사용하여 DBF 파일의 데이터를 Access 데이터베이스나 Excel 스프레드시트로 가져온 다음 SQL Server 가져오기 및 내보내기 마법사를 사용할 수 있습니다.  
   
-### dBASE 또는 다른 DBF 파일에 연결하도록 연결 관리자를 구성하려면  
+### <a name="to-configure-a-connection-manager-to-connect-to-a-dbase-or-other-dbf-file"></a>dBASE 또는 다른 DBF 파일에 연결하도록 연결 관리자를 구성하려면  
   
-1.  패키지에 새 OLE DB 연결 관리자를 추가합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md)을 참조하세요.  
+1.  패키지에 새 OLE DB 연결 관리자를 추가합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
   
 2.  **연결 관리자** 대화 상자의 **연결** 페이지에서 **공급자**로 네이티브 OLE DB\Microsoft Jet 4.0 OLE DB 공급자를 선택합니다.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
 7.  패키지의 데이터 흐름에서 연결 관리자를 사용하려면 OLE DB 원본이나 대상을 선택하고 이전 단계를 사용하여 만든 연결 관리자를 사용하도록 구성합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   

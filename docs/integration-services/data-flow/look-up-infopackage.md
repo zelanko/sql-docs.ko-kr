@@ -1,22 +1,27 @@
 ---
 title: "InfoPackage 조회 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7c0cb7a4-cd07-44cc-85cb-eb1ad91f85fd
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 603f32bbcf61ce562b0e8f6645e0384bb4dccdf2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# InfoPackage 조회
+# <a name="look-up-infopackage"></a>InfoPackage 조회
   **InfoPackage 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoPackage를 조회할 수 있습니다. InfoPackage 목록이 표시될 때 원하는 InfoPackage를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 대상은 **프로세스 체인 조회** 대화 상자를 사용합니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하십시오.  
@@ -32,9 +37,9 @@ caps.handback.revision: 10
   
 3.  **SAP BW 대상 편집기**에서 **연결 관리자** 를 클릭하여 편집기의 **연결 관리자** 페이지를 엽니다.  
   
-4.  **연결 관리자** 페이지의 **InfoPackage/InfoSource** 그룹 상자에서 **조회**를 클릭하여 **InfoPackage 조회** 대화 상자를 표시합니다.  
+4.  **연결 관리자** 페이지의 **InfoPackage/InfoSource** 그룹 상자에서 **조회** 를 클릭하여 **InfoPackage 조회** 대화 상자를 표시합니다.  
   
-## 조회 옵션  
+## <a name="lookup-options"></a>조회 옵션  
  조회 필드에 별표 와일드카드 문자(*)를 사용하거나 문자열 일부를 별표 와일드카드 문자와 함께 사용하여 결과를 필터링할 수 있습니다. 조회 필드를 비워 두면 해당 필드에서 빈 문자열만 일치하는 항목으로 필터링됩니다.  
   
  **InfoPackage**  
@@ -49,7 +54,7 @@ caps.handback.revision: 10
  **조회**  
  SAP Netweaver BW 시스템에 정의된 InfoPackage 중 일치하는 InfoPackage를 조회합니다.  
   
-## 조회 결과  
+## <a name="lookup-results"></a>조회 결과  
  조회 단추를 클릭하면 SAP Netweaver BW 시스템의 InfoPackage 목록이 다음 열 머리글과 함께 표에 표시됩니다.  
   
  **InfoPackage**  
@@ -70,12 +75,12 @@ caps.handback.revision: 10
  **InfoSource**  
  InfoPackage와 연결된 InfoSource의 이름을 표시합니다(있는 경우).  
   
- **원본 시스템**  
+ **Source System**  
  원본 시스템의 이름을 표시합니다.  
   
  InfoPackage 목록이 표시될 때 원하는 InfoPackage를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

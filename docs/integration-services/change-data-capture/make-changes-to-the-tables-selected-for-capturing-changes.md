@@ -1,24 +1,29 @@
 ---
-title: "변경 캡처를 위해 선택된 테이블 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "makChanToTab"
+title: "변경을 캡처하도록 선택한 테이블에 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- makChanToTab
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 caps.latest.revision: 6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 962b3a3690bd8a0bf62de762509c4398773578ca
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 변경 캡처를 위해 선택된 테이블 변경
+# <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>변경 캡처를 위해 선택된 테이블 변경
   이 대화 상자에서 변경을 캡처할 선택된 테이블의 특정 열을 선택할 수 있습니다. 또한 **보안 역할** 및 **캡처 인스턴스** 정보를 편집할 수 있습니다.  
   
  이 대화 상자에서 변경을 캡처하도록 선택한 테이블을 다음과 같이 변경할 수 있습니다.  
@@ -48,7 +53,7 @@ caps.handback.revision: 6
   
  **캡처 인스턴스** 필드에 캡처 인스턴스의 이름을 입력합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle 테이블 및 열 선택](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

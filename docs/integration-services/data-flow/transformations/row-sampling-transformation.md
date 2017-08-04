@@ -1,32 +1,37 @@
 ---
 title: "행 샘플링 변환 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rowsamplingtrans.f1"
-helpviewer_keywords: 
-  - "샘플링 초기값 [Integration Services]"
-  - "임의 초기값"
-  - "무작위 샘플링"
-  - "예제 데이터 집합 [Integration Services]"
-  - "행 샘플링 변환"
-  - "패키지 [Integration Services], 샘플"
-  - "데이터 집합 [Integration Services], 샘플"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rowsamplingtrans.f1
+helpviewer_keywords:
+- sampling seeds [Integration Services]
+- random seeds
+- random sampling
+- sample data sets [Integration Services]
+- Row Sampling transformation
+- packages [Integration Services], samples
+- datasets [Integration Services], sample
 ms.assetid: b6caafd3-30b2-4368-82af-a44611d4cd39
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7726faae94381cab80d6f1dc0a01a1cf56d34550
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 행 샘플링 변환
+# <a name="row-sampling-transformation"></a>행 샘플링 변환
   행 샘플링 변환은 임의로 선택된 입력 데이터 집합의 하위 집합을 얻는 데 사용합니다. 출력 샘플의 정확한 크기와 난수 생성기의 초기값을 지정할 수 있습니다.  
   
  무작위 샘플링은 다양한 용도로 응용될 수 있습니다. 예를 들어 복권 당첨 경품을 받을 50명의 직원을 임의로 선택하려는 회사는 직원 데이터베이스에 대해 행 샘플링 변환을 사용하여 정확한 수의 당첨자를 생성할 수 있습니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 43
   
  이 변환은 입력 행의 비율을 선택하여 샘플 데이터 집합을 만드는 비율 샘플링 변환과 유사합니다. [Percentage Sampling Transformation](../../../integration-services/data-flow/transformations/percentage-sampling-transformation.md)을 참조하세요.  
   
-## 행 샘플링 변환 구성  
+## <a name="configuring-the-row-sampling-transformation"></a>행 샘플링 변환 구성  
  행 샘플링 변환은 지정한 수의 변환 입력 행을 선택하여 샘플 데이터 집합을 만듭니다. 변환 입력에서 임의로 행이 선택되기 때문에 결과 샘플은 전체 입력을 대표합니다. 난수 생성기에 사용되는 초기값을 지정하여 변환의 행 선택 방법에 영향을 줄 수도 있습니다.  
   
  동일한 변환 입력에 대해 같은 임의 초기값을 사용하면 항상 동일한 샘플 출력이 만들어집니다. 초기값을 지정하지 않으면 변환에서 운영 체제의 틱 수를 사용하여 난수를 만듭니다. 따라서 패키지 개발 및 테스트 중에 변환 결과를 확인하기 위해 테스트 시에는 동일한 초기값을 사용한 다음 패키지를 프로덕션으로 이동할 때 임의 초기값으로 변경할 수도 있습니다.  
@@ -50,13 +55,13 @@ caps.handback.revision: 43
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  속성을 설정하는 방법은 다음을 참조하십시오.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
   

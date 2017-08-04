@@ -1,29 +1,34 @@
 ---
-title: "특성 그룹 만들기(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "특성 그룹 [Master Data Services], 만들기"
-  - "특성 그룹 만들기 [Master Data Services]"
+title: "특성 그룹 (Master Data Services) 만들기 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attribute groups [Master Data Services], creating
+- creating attribute groups [Master Data Services]
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cd89cee45f9f0973764a2b4f4dc32f32abc6d1c9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 특성 그룹 만들기(Master Data Services)
+# <a name="create-an-attribute-group-master-data-services"></a>특성 그룹 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 **탐색기** 표의 개별 탭에 특성을 표시하려는 경우 특성 그룹을 만듭니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -32,7 +37,7 @@ caps.handback.revision: 7
   
 -   하나 이상의 특성이 있어야 합니다. 자세한 내용은 [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)를 참조하세요.  
   
-### 특성 그룹을 만들려면  
+### <a name="to-create-an-attribute-group"></a>특성 그룹을 만들려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
@@ -44,11 +49,11 @@ caps.handback.revision: 7
   
 5.  특성 관리 페이지에서 다음 작업 중 하나를 수행하고 **추가**를 클릭합니다.  
   
-     리프 멤버용 특성 그룹의 경우 페이지 맨 위의 **멤버 형식** 드롭다운 목록에서 **리프**를 선택합니다.  
+     리프 멤버용 특성 그룹의 경우 페이지 맨 위의 **멤버 형식** 드롭다운 목록에서 **리프** 를 선택합니다.  
   
-     통합 멤버용 특성 그룹의 경우 **멤버 형식** 드롭다운 목록에서 **통합**을 선택합니다.  
+     통합 멤버용 특성 그룹의 경우 **멤버 형식** 드롭다운 목록에서 **통합** 을 선택합니다.  
   
-     컬렉션용 특성 그룹의 경우 **멤버 형식** 드롭다운 목록에서 **컬렉션**을 선택합니다.  
+     컬렉션용 특성 그룹의 경우 **멤버 형식** 드롭다운 목록에서 **컬렉션** 을 선택합니다.  
   
 6.  **리프 그룹**, **통합 그룹**또는 **컬렉션 그룹** 을 클릭하여 각각 리프 멤버, 통합 멤버 또는 컬렉션의 특성 그룹을 만듭니다.  
   
@@ -64,16 +69,17 @@ caps.handback.revision: 7
   
 12. **저장**을 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
   
 -   [특성 그룹을 사용자에게 표시되도록 설정&#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [특성 그룹 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
- [특성 그룹 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
+ [특성 &#40; Master Data services&#41;](../master-data-services/attributes-master-data-services.md)   
+ [특성 그룹 이름 &#40; 변경 Master Data services&#41;](../master-data-services/change-an-attribute-group-name-master-data-services.md)   
+ [특성 그룹 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)   
  [리프 권한&#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)   
- [통합 사용 권한&#40;Master Data Services&#41;](../Topic/Consolidated%20Permissions%20\(Master%20Data%20Services\).md)  
+   
   
   
+

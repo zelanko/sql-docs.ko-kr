@@ -1,23 +1,28 @@
 ---
-title: "Microsoft Excel용 Master Data Services 추가 기능 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/30/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Master Data Services 추가 기능을 Microsoft Excel 용 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
 caps.latest.revision: 30
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4d7a1a96cde8a7423aaa8d202ac7def518152279
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Microsoft Excel용 Master Data Services 추가 기능
+# <a name="master-data-services-add-in-for-microsoft-excel"></a>Microsoft Excel용 Master Data Services 추가 기능
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 사용하면 MDS의 필터링된 데이터 목록을 Excel에 로드하여 다른 데이터와 같은 방식으로 사용할 수 있습니다. 작업이 끝나면 데이터를 다시 중앙 방식으로 저장되는 MDS에 게시할 수 있습니다. 사용자가 보고 업데이트할 수 있는 데이터는 보안에 따라 결정됩니다.  
   
  관리자의 경우 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 을 사용하여 엔터티 및 특성을 만들고 데이터와 함께 이를 로드할 수 있습니다. 이렇게 하면 데이터를 모델에 로드하기 위해 다른 도구를 사용할 필요가 없습니다.  
@@ -25,8 +30,8 @@ caps.handback.revision: 30
  [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 DQS(Data Quality Services)를 사용하여 데이터를 MDS에 로드하기 전에 일치시킬 수 있습니다. 이렇게 하면 MDS에서 데이터가 중복되지 않도록 방지하는 데 도움이 됩니다.  
 
 ## <a name="downloads"></a>다운로드 
->*  [이 Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836866)에서 [!INCLUDE[ssCurrent_md](../../includes/sscurrent-md.md)] SP1용 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]을 다운로드합니다.
->* [이 Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836867)에서 SQL Server vNext CTP1용 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]을 다운로드합니다.
+>*  SQL Server 2016 s p 1에 대 한 Excel 용 Master Data Services에서 추가 기능 다운로드 [Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836866)합니다. 
+>* 다운로드는 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에서 SQL Server 2017 CTP1에 대 한 [Microsoft 다운로드 센터 페이지](https://go.microsoft.com/fwlink/?linkid=836867)합니다. 이 추가 기능에 SQL Server 2017 RC1에 대해서도 작동 합니다.
 
  
   
@@ -83,3 +88,4 @@ caps.handback.revision: 30
 -   [보안&#40;Master Data Services&#41;](../../master-data-services/security-master-data-services.md)  
   
   
+

@@ -1,32 +1,37 @@
 ---
-title: "캐스트(SSIS 식) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "CAST 함수"
-  - "캐스트 연산자"
-  - "데이터 형식 변환 [Integration Services]"
-  - "데이터 형식 [Integration Services], 식"
-  - "데이터 형식 [Integration Services], 변환"
+title: "캐스트 (SSIS 식) | Microsoft Docs"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- CAST function
+- cast operator
+- converting data types [Integration Services]
+- data types [Integration Services], expressions
+- data types [Integration Services], converting
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 caps.latest.revision: 61
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 199dca85523f6ba2f4d53ef89e1b9a73667a6472
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 캐스트(SSIS 식)
+# <a name="cast-ssis-expression"></a>캐스트(SSIS 식)
   식의 데이터 형식을 다른 데이터 형식으로 명시적으로 변환합니다. 캐스트 연산자는 잘라내기 연산자로 실행될 수도 있습니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -34,20 +39,20 @@ caps.handback.revision: 61
   
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *type_spec*  
  유효한 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 데이터 형식입니다.  
   
  *expression*  
  유효한 식입니다.  
   
-## 결과 형식  
- *type_spec* 데이터 형식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
+## <a name="result-types"></a>결과 형식  
+ *type_spec*데이터 형식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## 주의  
+## <a name="remarks"></a>주의  
  다음 다이어그램에서는 유효한 캐스트 연산을 보여 줍니다.  
   
- ![데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트](../../integration-services/expressions/media/data-conversion.gif "데이터 형식 간 유효한 캐스트 및 유효하지 않은 캐스트")  
+ ![데이터 형식 간 캐스트 법률 및 유효 하지 않은](../../integration-services/expressions/media/data-conversion.gif "데이터 형식 간 올바른 및 유효 하지 않은 캐스트")  
   
  일부 데이터 형식으로의 캐스트는 매개 변수가 필요합니다. 다음 표에서는 이러한 데이터 형식과 해당 매개 변수를 보여 줍니다.  
   
@@ -65,11 +70,11 @@ caps.handback.revision: 61
 > [!NOTE]  
 >  문자열을 DT_DATE가 아닌 다른 날짜 데이터 형식으로 변환하려면 [Integration Services 데이터 형식](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
- 코드 페이지가 멀티바이트 문자 코드 페이지이면 바이트 수와 문자 수가 다를 수 있습니다. 동일한 *charcount* 값을 사용하여 DT_WSTR에서 DT_STR로 캐스팅하면 변환된 문자열의 마지막 문자가 잘릴 수 있습니다. 대상 테이블의 열에 사용 가능한 저장 공간이 충분한 경우 멀티바이트 코드 페이지에 필요한 바이트 수를 반영하여 *charcount* 매개 변수의 값을 설정합니다. 예를 들어 936 코드 페이지를 사용하여 문자 데이터를 DT_STR 데이터 형식으로 캐스팅하는 경우 *charcount*를 데이터에 포함될 예상 문자 수보다 최대 2배의 값으로 설정해야 합니다. UTF-8 코드 페이지를 사용하여 문자 데이터를 캐스팅하는 경우에는 *charcount*를 최대 4배의 값으로 설정해야 합니다.  
+ 코드 페이지가 멀티바이트 문자 코드 페이지이면 바이트 수와 문자 수가 다를 수 있습니다. 동일한 *charcount* 값을 사용하여 DT_WSTR에서 DT_STR로 캐스팅하면 변환된 문자열의 마지막 문자가 잘릴 수 있습니다. 대상 테이블의 열에 사용 가능한 저장 공간이 충분한 경우 멀티바이트 코드 페이지에 필요한 바이트 수를 반영하여 *charcount* 매개 변수의 값을 설정합니다. 예를 들어 936 코드 페이지를 사용하여 문자 데이터를 DT_STR 데이터 형식으로 캐스팅하는 경우 *charcount* 를 데이터에 포함될 예상 문자 수보다 최대 2배의 값으로 설정해야 합니다. UTF-8 코드 페이지를 사용하여 문자 데이터를 캐스팅하는 경우에는 *charcount* 를 최대 4배의 값으로 설정해야 합니다.  
   
  날짜 데이터 형식의 구조에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하십시오.  
   
-## SSIS 식 예  
+## <a name="ssis-expression-examples"></a>SSIS 식 예  
  이 예에서는 숫자 값을 정수로 캐스팅합니다.  
   
 ```  
@@ -142,10 +147,10 @@ caps.handback.revision: 61
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## 관련 항목:  
- [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
- [Integration Services&#40;SSIS&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)   
- [식에서의 Integration Services 데이터 형식](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
+## <a name="see-also"></a>관련 항목:  
+ [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)   
+ [Integration Services &#40; Ssis&#41; 식](../../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [Integration Services 식의 데이터 형식](../../integration-services/expressions/integration-services-data-types-in-expressions.md)  
   
   

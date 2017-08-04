@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 원본 편집기(오류 출력 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.erroroutput.f1"
+title: "SAP BW 원본 편집기 (오류 출력 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.erroroutput.f1
 ms.assetid: b6e23b0c-949a-46d1-8424-4dc3d9035e79
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00e596fd1c4b200e4f0fe1342fa56a9a3191f991
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 원본 편집기(오류 출력 페이지)
+# <a name="sap-bw-source-editor-error-output-page"></a>SAP BW 원본 편집기(오류 출력 페이지)
   **SAP BW 원본 편집기** 의 **오류 출력** 페이지에서는 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 원본 구성 요소에 대한 자세한 내용은 [SAP BW 원본](../../integration-services/data-flow/sap-bw-source.md)을 참조하세요.  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 3.  **SAP BW 원본 편집기**에서 **오류 출력** 을 클릭하여 편집기의 **오류 출력** 페이지를 엽니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  원본을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
@@ -46,7 +51,7 @@ caps.handback.revision: 10
  데이터 원본의 이름을 표시합니다.  
   
  **열**  
- **SAP BW 원본 편집기** 대화 상자의 **열** 페이지에서 선택한 외부(원본) 열을 표시합니다. 이 대화 상자에 대한 자세한 내용은 [SAP BW 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)를 참조하세요.  
+ **SAP BW 원본 편집기** 대화 상자의 **열** 페이지에서 선택한 외부(원본) 열을 표시합니다. 이 대화 상자에 대한 자세한 내용은 [SAP BW 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)을 참조하세요.  
   
  **오류**  
  오류가 발생할 경우 수행해야 할 SAP BW 원본을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
@@ -63,10 +68,10 @@ caps.handback.revision: 10
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 원본 편집기&#40;고급 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
+ [SAP BW 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 원본 편집기 &#40; 고급 페이지 &#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

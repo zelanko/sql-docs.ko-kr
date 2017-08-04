@@ -1,28 +1,33 @@
 ---
 title: "데이터베이스 축소 태스크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.shrinkdatabasetask.f1"
-helpviewer_keywords: 
-  - "데이터베이스 축소 태스크"
-  - "데이터베이스 축소 [Integration Services]"
-  - "데이터베이스 축소"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.shrinkdatabasetask.f1
+helpviewer_keywords:
+- Shrink Database task
+- database shrinking [Integration Services]
+- shrinking databases
 ms.assetid: e66286f8-97b1-4e5a-86b4-e56f1932b7d5
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09f100f683f6ecabd697f751fdac39bbabe9598f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터베이스 축소 태스크
+# <a name="shrink-database-task"></a>데이터베이스 축소 태스크
   데이터베이스 축소 태스크는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터와 로그 파일의 크기를 줄입니다.  
   
  데이터베이스 축소 태스크를 사용하면 패키지가 단일 데이터베이스나 여러 데이터베이스의 파일을 축소할 수 있습니다.  
@@ -32,7 +37,7 @@ caps.handback.revision: 42
 > [!WARNING]  
 >  파일 축소를 위해 이동되는 데이터는 파일 내의 모든 사용 가능한 위치로 분산될 수 있습니다. 이로 인해 인덱스 조각화가 발생하여 인덱스 범위를 검색하는 쿼리 성능이 저하될 수 있습니다. 조각화를 방지하려면 축소 후 파일에 대한 인덱스를 다시 작성하는 것이 좋습니다.  
   
-## 명령  
+## <a name="commands"></a>명령  
  데이터베이스 축소 태스크는 다음 인수와 옵션을 포함하여 DBCC SHRINKDATABASE 명령을 캡슐화합니다.  
   
 -   *database_name*  
@@ -43,7 +48,7 @@ caps.handback.revision: 42
   
  데이터베이스 축소 태스크에서 여러 데이터베이스를 축소하는 경우 각 데이터베이스에 대해 하나씩, 여러 개의 SHRINKDATABASE 명령이 실행됩니다. SHRINKDATABASE 명령의 각 인스턴스는 *database_name* 인수를 제외하고 모두 동일한 인수 값을 사용합니다. 자세한 내용은 [DBCC SHRINKDATABASE&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)를 참조하세요.  
   
-## 데이터베이스 축소 태스크 구성  
+## <a name="configuration-of-the-shrink-database-task"></a>데이터베이스 축소 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 속성을 설정할 수 있습니다. 이 태스크는 **디자이너의** 도구 상자 **에 있는** 유지 관리 계획 태스크 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 섹션에서 수행할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목을 클릭하십시오.  
@@ -52,6 +57,6 @@ caps.handback.revision: 42
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
   

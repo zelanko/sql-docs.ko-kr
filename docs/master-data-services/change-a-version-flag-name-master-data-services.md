@@ -1,27 +1,32 @@
 ---
-title: "버전 플래그 이름 변경(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "버전 플래그 [Master Data Services], 이름 변경"
+title: "(Master Data Services) 버전 플래그 이름 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- version flags [Master Data Services], changing name
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f652d292b6b013ad9d5e07007c7544b6528aee75
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 버전 플래그 이름 변경(Master Data Services)
+# <a name="change-a-version-flag-name-master-data-services"></a>버전 플래그 이름 변경(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 버전 플래그의 이름을 변경할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -30,7 +35,7 @@ caps.handback.revision: 8
   
 -   버전 관리 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
-### 버전 플래그 이름을 변경하려면  
+### <a name="to-change-a-version-flag-name"></a>버전 플래그 이름을 변경하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **버전 관리**를 클릭합니다.  
   
@@ -44,8 +49,8 @@ caps.handback.revision: 8
   
 6.  Enter 키를 누릅니다.  
   
-## 참고 항목  
- [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
- [버전에 플래그 할당&#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [버전 &#40; Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
+ [버전 &#40;에 플래그 할당 Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
   

@@ -1,24 +1,29 @@
 ---
 title: "SQL Server 변경 데이터베이스 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraIns"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6934f245f0878e3491a7d1751e764dcf3db7bb46
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SQL Server 변경 데이터베이스 만들기
+# <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
   새 인스턴스 마법사를 시작하면 CDC 데이터베이스 만들기 페이지가 열립니다. CDC 데이터베이스 만들기 페이지를 사용하여 새 CDC 인스턴스에 대한 정보를 제공하고 변경 데이터베이스를 새로 만들 수 있습니다.  
   
  새로 만든 CDC 데이터베이스는 SQL Server CDC에 사용할 수 있도록 설정되며 이를 위해서는 `sysadmin` 고정 서버 역할의 멤버인 로그인이 필요합니다.  
@@ -30,7 +35,7 @@ caps.handback.revision: 8
   
  SQL 서버에 연결 대화 상자에서 데이터를 입력하는 방법은 [SQL Server Connection for Instance Creation](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **Oracle CDC 인스턴스**  
  만들려는 CDC 인스턴스에 대한 다음 정보를 입력합니다.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 8
   
      데이터베이스를 만든 후 **다음** 을 클릭하여 [Connect to an Oracle Source Database](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Oracle CDC Service](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   

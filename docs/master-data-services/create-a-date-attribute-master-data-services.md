@@ -1,32 +1,37 @@
 ---
-title: "날짜 특성 만들기(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "날짜 특성 만들기 [Master Data Services]"
-  - "특성 [Master Data Services], 날짜 특성 만들기"
+title: "날짜 특성 (Master Data Services) 만들기 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- creating date attributes [Master Data Services]
+- attributes [Master Data Services], creating date attributes
 ms.assetid: 22a8f1a3-b4f2-4cfa-8495-7daad5ce9d12
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f44b3b8c577dcb684a386e74df07095c17bc204a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 날짜 특성 만들기(Master Data Services)
+# <a name="create-a-date-attribute-master-data-services"></a>날짜 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 사용자가 날짜를 특성 값으로 입력할 수 있게 하려면 날짜 특성을 만듭니다.  
   
 > [!NOTE]  
 >  이 특성을 DateTime이라고 하지만 시간 값이 지원되지 않습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 13
   
 -   해당 특성을 만들 엔터티가 있어야 합니다. 자세한 내용은 [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)를 참조하세요.  
   
-### 날짜 특성을 만들려면  
+### <a name="to-create-a-date-attribute"></a>날짜 특성을 만들려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
   
 13. **저장**을 클릭합니다.  
   
-## 날짜/시간 값의 시간 부분을 표시하려면  
+## <a name="to-display-the-time-portion-of-a-datetime-value"></a>날짜/시간 값의 시간 부분을 표시하려면  
  사용자 인터페이스에서 날짜/시간 값의 시간 부분을 표시하도록 하려면 특성에 대한 적절한 입력 마스크를 선택해야 합니다. 이를 수행하는 Datetime 특성의 기본 제공 마스크가 없는 경우 시간을 표시할 수 있도록 하는 새 마스크를 추가할 수 있습니다. 이렇게 하려면 기본 제공 마스크가 저장되는 MDS 데이터베이스의 mdm.tblList 테이블에 행을 추가합니다. 행의 값은 다음과 같아야 합니다.  
   
 |||  
@@ -86,10 +91,10 @@ caps.handback.revision: 13
   
  입력 마스크는 사용자 지정 .NET DateTime 형식 문자열입니다. 자세한 내용은 [사용자 지정 날짜 및 시간 형식 문자열](https://msdn.microsoft.com/en-us/library/8kb3ddd4\(v=vs.110\).aspx)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [특성 이름 및 데이터 형식 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [특성 이름 및 데이터 형식 &#40; 변경 Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [도메인 기반 특성 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
  [파일 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

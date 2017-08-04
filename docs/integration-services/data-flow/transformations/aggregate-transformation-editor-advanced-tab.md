@@ -1,26 +1,31 @@
 ---
-title: "집계 변환 편집기(고급 탭) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.aggregationtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "집계 변환 편집기"
+title: "집계 변환 편집기 (고급 탭) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.aggregationtransformation.advanced.f1
+helpviewer_keywords:
+- Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
 caps.latest.revision: 27
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 770920407115e5c8b7fa434ad8499bc801371e5f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 집계 변환 편집기(고급 탭)
+# <a name="aggregate-transformation-editor-advanced-tab"></a>집계 변환 편집기(고급 탭)
   **집계 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 구성 요소 속성을 설정하고, 집계를 지정하고, 입력 및 출력 열의 속성을 설정할 수 있습니다.  
   
 > [!NOTE]  
@@ -30,7 +35,7 @@ caps.handback.revision: 27
   
  집계 변환에 대한 자세한 내용은 [Aggregate Transformation](../../../integration-services/data-flow/transformations/aggregate-transformation.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **키 배율**  
  필요에 따라 집계에 필요한 키 수를 대략적으로 지정합니다. 변환 시 이 정보를 사용하여 최초 캐시 크기를 최적화합니다. 이 옵션의 기본값은 **Unspecified**입니다. **키 배율** 과 **키 수** 를 모두 지정하면 **키 수** 가 우선 적용됩니다.  
   
@@ -60,9 +65,9 @@ caps.handback.revision: 27
  **자동 확장 비율**  
  1에서 100 사이의 값을 사용하여 집계 중에 메모리를 확장할 수 있는 비율을 지정합니다. 이 옵션의 기본값은 **25%**입니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../../integration-services/integration-services-error-and-message-reference.md)   
- [집계 변환 편집기&#40;집계 탭&#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)   
- [집계 변환을 사용하여 데이터 집합의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
+ [집계 변환 편집기 &#40; 집계 탭 &#41;](../../../integration-services/data-flow/transformations/aggregate-transformation-editor-aggregations-tab.md)   
+ [집계 변환을 사용 하 여 데이터 집합의 값 집계](../../../integration-services/data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

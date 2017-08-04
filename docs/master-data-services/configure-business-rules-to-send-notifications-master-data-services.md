@@ -1,30 +1,35 @@
 ---
-title: "알림을 보내도록 비즈니스 규칙 구성(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "비즈니스 규칙 [Master Data Services], 알림 구성"
-  - "전자 메일 [Master Data Services], 비즈니스 규칙 구성"
-  - "알림 [Master Data Services], 비즈니스 규칙 구성"
+title: "알림 (Master Data Services)를 보내도록 비즈니스 규칙 구성 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- business rules [Master Data Services], configuring notifications
+- e-mail [Master Data Services], configuring business rules
+- notifications [Master Data Services], configuring business rules
 ms.assetid: b24f7b11-ab53-4642-999c-e17b543b3558
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 29ff569439e245100befb8e0a515a128aac91f79
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 알림을 보내도록 비즈니스 규칙 구성(Master Data Services)
+# <a name="configure-business-rules-to-send-notifications-master-data-services"></a>알림을 보내도록 비즈니스 규칙 구성(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 특성 값 변경 내용을 사용자에게 알리려는 경우 알림을 보내도록 비즈니스 규칙을 구성할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 와 **사용자 및 그룹 권한** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. **사용자 및 그룹 권한** 기능 영역에 대한 권한이 없으면 알림을 보낼 사용자 및 그룹 목록을 볼 수 없습니다.  
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 -   메일을 그룹에게 보내는 경우에는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에 액세스한 적이 있는 그룹의 멤버만 전자 메일을 받습니다.  
   
-### 알림을 보내도록 비즈니스 규칙을 구성하려면  
+### <a name="to-configure-business-rules-to-send-notifications"></a>알림을 보내도록 비즈니스 규칙을 구성하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 10
   
 10. 확인 대화 상자에서 **확인**을 클릭합니다. **활성** 으로 변경된 **비즈니스 규칙 상태** 열의 값 및 **알림** 열에서는 알림을 보내도록 선택한 사용자 또는 그룹을 표시합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
   
 -   다음 절차 중 하나를 수행하여 비즈니스 규칙을 데이터에 적용합니다.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
     -   [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [메일 알림 구성&#40;Master Data Services&#41;](../master-data-services/configure-email-notifications-master-data-services.md)  
   

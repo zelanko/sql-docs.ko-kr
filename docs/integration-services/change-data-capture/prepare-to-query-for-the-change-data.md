@@ -1,30 +1,35 @@
 ---
-title: "변경 데이터에 대한 쿼리 준비 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "증분 로드 [Integration Services], 쿼리 준비"
+title: "변경 데이터에 대 한 쿼리 준비 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],preparing query
 ms.assetid: 9ea2db7a-3dca-4bbf-9903-cccd2d494b5f
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 변경 데이터에 대한 쿼리 준비
+# <a name="prepare-to-query-for-the-change-data"></a>변경 데이터에 대한 쿼리 준비
   변경 데이터를 증분 로드하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 제어 흐름에서 세 번째이자 마지막 태스크는 변경 데이터 쿼리를 준비하고 데이터 흐름 태스크를 추가하는 것입니다.  
   
 > [!NOTE]  
 >  제어 흐름에 대한 두 번째 태스크는 선택한 간격에 대한 변경 데이터가 준비되었는지 확인하는 것입니다. 이 태스크에 대한 자세한 내용은 [변경 데이터의 준비 여부 확인](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)을 참조하세요. 제어 흐름 디자인의 전체 프로세스에 대한 설명은 [데이터 캡처 변경&#40;SSIS&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)을 참조하세요.  
   
-## 디자인 고려 사항  
+## <a name="design-considerations"></a>디자인 고려 사항  
  변경 데이터를 검색하려면 간격의 끝점을 입력 매개 변수로 받아 지정한 간격에 대한 변경 데이터를 반환하는 Transact-SQL 테이블 반환 함수를 호출합니다. 데이터 흐름의 원본 구성 요소에서 이 함수를 호출합니다. 이 원본 구성 요소에 대한 자세한 내용은 [변경 데이터 검색 및 이해](../../integration-services/change-data-capture/retrieve-and-understand-the-change-data.md)를 참조하세요.  
   
  OLE DB 원본, ADO 원본 및 ADO NET 원본을 비롯하여 가장 자주 사용되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 원본 구성 요소는 테이블 반환 함수에 대한 매개 변수 정보를 파생시킬 수 없습니다. 따라서 대부분의 원본은 매개 변수가 있는 함수를 직접 호출할 수 없습니다.  
@@ -40,10 +45,10 @@ caps.handback.revision: 26
   
  이 항목에서는 첫 번째 디자인 옵션을 사용하여 매개 변수가 있는 쿼리를 문자열로 조합합니다.  
   
-## 쿼리 준비  
+## <a name="preparing-the-query"></a>쿼리 준비  
  입력 매개 변수의 값을 단일 쿼리 문자열로 연결하려면 먼저 쿼리에 필요한 패키지 변수를 설정해야 합니다.  
   
-#### 패키지 변수를 설정하려면  
+#### <a name="to-set-up-package-variables"></a>패키지 변수를 설정하려면  
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **변수** 창에서 SQL 실행 태스크에서 반환하는 쿼리 문자열을 보관할 string 데이터 형식의 변수를 만듭니다.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 26
   
  패키지 변수가 만들어지면 스크립트 태스크나 SQL 실행 태스크를 사용하여 입력 매개 변수의 값을 연결할 수 있습니다. 다음 두 절차에서는 이러한 구성 요소를 구성하는 방법에 대해 설명합니다.  
   
-#### 스크립트 태스크를 사용하여 쿼리 문자열을 연결하려면  
+#### <a name="to-use-a-script-task-to-concatenate-the-query-string"></a>스크립트 태스크를 사용하여 쿼리 문자열을 연결하려면  
   
 1.  **제어 흐름** 탭에서 패키지의 For 루프 컨테이너 뒤에 스크립트 태스크를 추가하고 이 태스크에 For 루프 컨테이너를 연결합니다.  
   
@@ -127,7 +132,7 @@ caps.handback.revision: 26
   
 6.  스크립트 개발 환경 및 **스크립트 태스크 편집기**를 닫습니다.  
   
-#### SQL 실행 태스크를 사용하여 쿼리 문자열을 연결하려면  
+#### <a name="to-use-an-execute-sql-task-to-concatenate-the-query-string"></a>SQL 실행 태스크를 사용하여 쿼리 문자열을 연결하려면  
   
 1.  **제어 흐름** 탭에서 패키지의 For 루프 컨테이너 뒤에 SQL 실행 태스크를 추가하고 이 태스크에 For 루프 컨테이너를 연결합니다.  
   
@@ -187,14 +192,14 @@ caps.handback.revision: 26
   
  `select * from CDCSample. uf_Customer('2007-06-11 14:21:58', '2007-06-12 14:21:58')`  
   
-## 데이터 흐름 태스크 추가  
+## <a name="adding-a-data-flow-task"></a>데이터 흐름 태스크 추가  
  패키지의 제어 흐름을 디자인하는 마지막 단계는 데이터 흐름 태스크를 추가하는 것입니다.  
   
-#### 데이터 흐름 태스크를 추가하고 제어 흐름을 완료하려면  
+#### <a name="to-add-a-data-flow-task-and-complete-the-control-flow"></a>데이터 흐름 태스크를 추가하고 제어 흐름을 완료하려면  
   
 -   **제어 흐름** 탭에서 데이터 흐름 태스크를 추가하고 쿼리 문자열을 연결한 태스크를 연결합니다.  
   
-## 다음 단계  
+## <a name="next-step"></a>다음 단계  
  쿼리 문자열을 준비하고 데이터 흐름 태스크를 구성한 후 다음 단계는 데이터베이스에서 변경 데이터를 검색할 테이블 반환 함수를 만드는 것입니다.  
   
  **다음 항목:** [변경 데이터 검색을 위한 함수 만들기](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  

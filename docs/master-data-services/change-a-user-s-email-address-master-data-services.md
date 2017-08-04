@@ -1,32 +1,37 @@
 ---
-title: "사용자 전자 메일 주소 변경(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용자 [Master Data Services], 전자 메일 주소 변경"
+title: "사용자 변경 &#39; s 전자 메일 주소 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- users [Master Data Services], changing e-mail address
 ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 49bb15d77cbc8dcf86421d76353a0a38f8688b6d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 사용자 전자 메일 주소 변경(Master Data Services)
+# <a name="change-a-user39s-email-address-master-data-services"></a>사용자 변경 &#39; s 전자 메일 주소 (Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 알림이 전송되는 전자 메일 주소와 알림 전자 메일의 기본 형식을 변경할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **사용자 및 그룹** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
-### 사용자의 전자 메일 주소 또는 기본 전자 메일 형식을 변경하려면  
+### <a name="to-change-a-users-email-address-or-default-email-format"></a>사용자의 전자 메일 주소 또는 기본 전자 메일 형식을 변경하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **사용자 및 그룹 권한**을 클릭합니다.  
   
@@ -40,11 +45,11 @@ caps.handback.revision: 7
   
 6.  **저장**을 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
   
--   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [기능 영역 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

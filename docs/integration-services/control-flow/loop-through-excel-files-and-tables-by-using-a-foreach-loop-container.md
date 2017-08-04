@@ -1,45 +1,50 @@
 ---
-title: "Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "연결 [Integration Services], Excel"
-  - "Excel [Integration Services]"
-  - "연결 관리자 [Integration Services], Excel"
+title: "Excel 파일 및 Foreach 루프 컨테이너를 사용 하 여 테이블을 통해 루프 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connections [Integration Services], Excel
+- Excel [Integration Services]
+- connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 caps.latest.revision: 35
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b4b4a69b1712a5b84b49c63aee4242cb6355bc5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
+# <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
   이 항목의 절차에서는 적절한 열거자와 함께 Foreach 루프 컨테이너를 사용하여 폴더 내의 Excel 통합 문서 또는 Excel 통합 문서 내의 테이블을 루핑하는 방법에 대해 설명합니다.  
   
-### Foreach File 열거자를 사용하여 Excel 파일을 루핑하려면  
+### <a name="to-loop-through-excel-files-by-using-the-foreach-file-enumerator"></a>Foreach File 열거자를 사용하여 Excel 파일을 루핑하려면  
   
 1.  루프 반복마다 현재 Excel 경로와 파일 이름을 받을 문자열 변수를 만듭니다. 유효성 검사 문제를 방지하려면 변수의 초기 값으로 유효한 Excel 경로 및 파일 이름을 할당하십시오. 이 절차의 뒷부분에 나오는 예제 식에서는 변수 이름 `ExcelFile`을 사용합니다.  
   
-2.  필요에 따라 Excel 연결 문자열의 확장 속성 인수에 대한 값을 보유하는 다른 문자열 변수를 만듭니다. 이 인수는 Excel 버전을 지정하고 첫 번째 행에 열 이름을 포함할지 여부와 가져오기 모드 사용 여부를 결정하는 일련의 값을 포함합니다. 이 절차의 뒷부분에 나오는 예제 식에서는 초기 값 "`ExtProperties`"와 함께 변수 이름 `Excel 8.0;HDR=Yes`를 사용합니다.  
+2.  필요에 따라 Excel 연결 문자열의 확장 속성 인수에 대한 값을 보유하는 다른 문자열 변수를 만듭니다. 이 인수는 Excel 버전을 지정하고 첫 번째 행에 열 이름을 포함할지 여부와 가져오기 모드 사용 여부를 결정하는 일련의 값을 포함합니다. 이 절차의 뒷부분에 나오는 예제 식에서는 초기 값 " `ExtProperties`"와 함께 변수 이름`Excel 8.0;HDR=Yes`를 사용합니다.  
   
      확장 속성 인수에 대한 변수를 사용하지 않으면 연결 문자열을 포함하는 식에 해당 변수를 수동으로 추가해야 합니다.  
   
-3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](../Topic/Configure%20a%20Foreach%20Loop%20Container.md)을 참조하세요.  
+3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
-4.  **Foreach 루프 편집기**의 **컬렉션** 페이지에서 Foreach File 열거자를 선택하고 Excel 통합 문서가 있는 폴더를 지정한 다음 파일 필터(일반적으로 *.xls)를 지정합니다.  
+4.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach File 열거자를 선택하고 Excel 통합 문서가 있는 폴더를 지정한 다음 파일 필터(일반적으로 *.xls)를 지정합니다.  
   
 5.  **변수 매핑** 페이지에서 루프 반복마다 현재 Excel 경로 및 파일 이름을 받는 사용자 정의 문자열 변수에 인덱스 0을 매핑합니다. 이 절차의 뒷부분에 나오는 샘플 식에서는 변수 이름 `ExcelFile`을 사용합니다.  
   
 6.  **Foreach 루프 편집기**를 닫습니다.  
   
-7.  [패키지에서 연결 관리자 추가, 삭제 또는 공유](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md)에 설명된 대로 패키지에 Excel 연결 관리자를 추가합니다. 연결에 기존 Excel 통합 문서 파일을 선택하면 유효성 검사 오류를 방지할 수 있습니다.  
+7.  [패키지에서 연결 관리자 추가, 삭제 또는 공유](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)에 설명된 대로 패키지에 Excel 연결 관리자를 추가합니다. 연결에 기존 Excel 통합 문서 파일을 선택하면 유효성 검사 오류를 방지할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  이 Excel 연결 관리자 관리자를 사용하는 태스크 및 데이터 흐름 구성 요소를 구성할 때 유효성 검사 오류가 발생하지 않도록 하려면 **Excel 연결 관리자 편집기**에서 기존 Excel 통합 문서를 선택합니다. 다음 단계에서 설명하는 대로 **ConnectionString** 속성에 대한 식을 구성하고 나면 연결 관리자는 런타임에 이 통합 문서를 사용하지 않습니다. 패키지를 만들고 구성한 다음에는 속성 창에서 **ConnectionString** 속성 값을 지울 수 있습니다. 그러나 이 값을 지우면 Foreach 루프가 실행될 때까지는 Excel 연결 관리자의 연결 문자열 속성이 유효하지 않게 됩니다. 따라서 연결 관리자가 사용된 태스크나 패키지에서 **DelayValidation** 속성을 **True** 로 설정하여 유효성 검사 오류를 방지해야 합니다.  
@@ -66,13 +71,13 @@ caps.handback.revision: 35
   
 11. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 파일 위치 및 패턴과 일치하는 각 Excel 통합 문서에 같은 작업을 수행합니다.  
   
-### Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
+### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Foreach ADO.NET 스키마 행 집합 열거자를 사용하여 Excel 테이블을 루핑하려면  
   
-1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](../Topic/Add,%20Delete,%20or%20Share%20a%20Connection%20Manager%20in%20a%20Package.md)을 참조하세요.  
+1.  Microsoft Jet OLE DB 공급자를 사용하는 ADO.NET 연결 관리자를 만들어 Excel 통합 문서에 연결합니다. **연결 관리자** 대화 상자의 모든 페이지에서 Extended Properties 속성의 값으로 Excel 8.0을 입력합니다. 자세한 내용은 [Add, Delete, or Share a Connection Manager in a Package](http://msdn.microsoft.com/library/6f2ba4ea-10be-4c40-9e80-7efcf6ee9655)을 참조하세요.  
   
 2.  루프 반복마다 현재 테이블의 이름을 받을 문자열 변수를 만듭니다.  
   
-3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](../Topic/Configure%20a%20Foreach%20Loop%20Container.md)을 참조하세요.  
+3.  **제어 흐름** 탭에 Foreach 루프 컨테이너를 추가합니다. Foreach 루프 컨테이너를 구성하는 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)을 참조하세요.  
   
 4.  **Foreach 루프 편집기** 의 **컬렉션**페이지에서 Foreach ADO.NET 스키마 행 집합 열거자를 선택합니다.  
   
@@ -89,12 +94,12 @@ caps.handback.revision: 35
   
 9. Excel 연결 관리자를 사용하는 Foreach 루프 컨테이너 내에 태스크를 만들어 지정된 통합 문서의 각 Excel 테이블에 같은 작업을 수행합니다. 스크립트 태스크를 사용하여 열거된 테이블 이름을 검사하거나 각 테이블을 작업할 경우에는 스크립트 태스크의 ReadOnlyVariables 속성에 문자열 변수를 추가해야 합니다.  
   
-## 관련 항목:  
- [Foreach 루프 컨테이너 구성](../Topic/Configure%20a%20Foreach%20Loop%20Container.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Foreach 루프 컨테이너 구성](http://msdn.microsoft.com/library/519c6f96-5e1f-47d2-b96a-d49946948c25)   
  [속성 식 추가 또는 변경](../../integration-services/expressions/add-or-change-a-property-expression.md)   
  [Excel 연결 관리자](../../integration-services/connection-manager/excel-connection-manager.md)   
  [Excel 원본](../../integration-services/data-flow/excel-source.md)   
  [Excel 대상](../../integration-services/data-flow/excel-destination.md)   
- [스크립트 태스크를 사용한 Excel 파일 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
+ [스크립트 태스크와 Excel 파일 작업](../../integration-services/extending-packages-scripting-task-examples/working-with-excel-files-with-the-script-task.md)  
   
   

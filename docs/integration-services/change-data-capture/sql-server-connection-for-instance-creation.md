@@ -1,27 +1,32 @@
 ---
-title: "인스턴스를 만들기 위한 SQL Server 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: SQL Server Connection for Instance Creation | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 81d0e7e2-d8f0-4bd9-9565-218ce996f28e
 caps.latest.revision: 7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 65f20b235b6a3c4bd22ce754467f36a9b03fdaab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 인스턴스를 만들기 위한 SQL Server 연결
+# <a name="sql-server-connection-for-instance-creation"></a>인스턴스를 만들기 위한 SQL Server 연결
   Oracle CDC 인스턴스를 만드는 첫 번째 단계 중 하나는 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 CDC 데이터베이스를 만드는 것입니다. 이 CDC 데이터베이스가 SQL Server CDC에 사용되며 이를 위해서는 `sysadmin` 고정 서버 역할의 멤버인 로그인이 필요합니다.  
   
  **Oracle CDC 인스턴스 만들기** 마법사를 시작하는 사용자가 `sysadmin` 고정 서버 역할의 멤버가 아닌 경우 **SQL Server에 연결** 대화 상자가 열리고 SQL Server CDC에 데이터베이스 사용 태스크를 수행하기 위한 `sysadmin` 역할의 멤버에 대해 자격 증명을 요청합니다. CDC 데이터베이스가 만들어지면 `sysadmin` 로그인은 삭제되고 Oracle Designer 콘솔 시작 시 사용된 원래 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인으로 작업이 다시 시작됩니다.  
   
-## 작업 목록  
+## <a name="task-list"></a>작업 목록  
  **SQL Server에 연결** 대화 상자에 다음 정보를 입력합니다.  
   
  **서버 이름**  
@@ -39,7 +44,7 @@ caps.handback.revision: 7
  **옵션**  
  화살표를 클릭하면 구성할 수 있는 옵션을 볼 수 있습니다. 이러한 옵션을 기본값으로 그대로 둘 수 있습니다. 사용 가능한 옵션은 다음과 같습니다.  
   
--   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15**입니다.  
+-   **연결 제한 시간**: 제한 시간이 초과되기 전에 Oracle용 CDC Service가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **15**입니다.  
   
 -   **실행 제한 시간**: 제한 시간이 초과되기 전에 Oracle CDC Windows 서비스에서 명령이 실행될 때까지 기다리는 시간(초)을 입력합니다. 기본값은 **30**입니다.  
   
@@ -49,8 +54,8 @@ caps.handback.revision: 7
   
      고급 연결 속성 대화 상자에 대한 자세한 내용은 [Advanced Connection Properties](../../integration-services/change-data-capture/advanced-connection-properties.md)을 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 변경 데이터베이스 만들기](../../integration-services/change-data-capture/create-the-sql-server-change-database.md)   
- [SQL Server 연결을 위해 CDC Designer에 대해 필요한 권한](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
+ [SQL Server 연결 CDC 디자이너에 필요한 권한](../../integration-services/change-data-capture/sql-server-connection-required-permissions-for-the-cdc-designer.md)  
   
   

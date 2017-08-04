@@ -1,33 +1,38 @@
 ---
-title: "겹치는 모델 및 멤버 권한(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "모델 [Master Data Services], 유효한 권한"
-  - "권한 [Master Data Services], 모델 및 멤버 겹침"
-  - "멤버 [Master Data Services], 유효한 권한"
+title: "겹치는 모델 및 멤버 권한 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- models [Master Data Services], effective permissions
+- permissions [Master Data Services], model and member overlaps
+- members [Master Data Services], effective permissions
 ms.assetid: 9fd7a555-43bf-4796-a8b6-1ca63a291216
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ffb74e06b9b6bfed579959db993d418599086fef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 겹치는 모델 및 멤버 권한(Master Data Services)
+# <a name="overlapping-model-and-member-permissions-master-data-services"></a>겹치는 모델 및 멤버 권한(Master Data Services)
   멤버에 할당된 사용 권한과 모델 개체에 할당된 사용 권한이 겹칠 수 있습니다. 사용 권한이 겹치면 보다 제한적인 사용 권한이 적용됩니다.  
   
  멤버의 사용 권한이 해당 모델 개체와 다른 경우 다음 규칙이 적용됩니다.  
   
 -   **거부** 는 다른 모든 사용 권한을 무시합니다.  
   
--   **관리자** 모델 수준에 대 한 권한이 다른 모든 사용 권한을 무시 되며 하위 수준에 대 한 액세스 권한이 모든 (CRUD)로 변경 됩니다.  
+-   모델에 대한**관리** 권한은 기타 모든 권한을 재정의하며, 하위 수준에서는 모든 권한(CRUD)으로 변경됩니다.  
   
 -   유효한 액세스 권한은 멤버 및 특성에 대한 권한과 일정 부분 일치합니다.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 7
   
  ![mds_conc_security_member_overlap_table](../master-data-services/media/mds-conc-security-member-overlap-table.gif "mds_conc_security_member_overlap_table")  
   
-## 예 1  
+## <a name="example-1"></a>예제 1  
  ![mds_conc_overlap_model_1](../master-data-services/media/mds-conc-overlap-model-1.gif "mds_conc_overlap_model_1")  
   
  **모델** 탭의 Product 엔터티에는 **업데이트** 권한이 할당되어 있습니다. 엔터티의 모든 특성은 해당 사용 권한을 상속합니다.  
@@ -48,7 +53,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_1](../master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   
-## 예 2  
+## <a name="example-2"></a>예제 2  
  ![mds_conc_overlap_model_2](../master-data-services/media/mds-conc-overlap-model-2.gif "mds_conc_overlap_model_2")  
   
  **모델** 탭의 하위 범주 특성에는 **업데이트** 권한이 할당되어 있습니다.  
@@ -59,7 +64,7 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## 예 3  
+## <a name="example-3"></a>예 3  
  ![mds_conc_overlap_model_3](../master-data-services/media/mds-conc-overlap-model-3.gif "mds_conc_overlap_model_3")  
   
  **모델** 탭의 하위 범주 특성에는 **읽기** 권한이 할당되어 있습니다.  
@@ -70,8 +75,8 @@ caps.handback.revision: 7
   
  ![mds_conc_overlap_model_example_2](../master-data-services/media/mds-conc-overlap-model-example-2.gif "mds_conc_overlap_model_example_2")  
   
-## 참고 항목  
- [사용 권한이 결정 됩니다 어떻게 & #40입니다. Master Data Services & #41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [겹치는 사용자 및 그룹 권한 & #40입니다. Master Data Services & #41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [겹치는 사용자 및 그룹 사용 권한 &#40; Master Data services&#41;](../master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

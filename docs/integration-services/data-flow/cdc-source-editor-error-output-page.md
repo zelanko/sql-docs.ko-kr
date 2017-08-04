@@ -1,29 +1,34 @@
 ---
-title: "CDC 원본 편집기(오류 출력 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.cdcsource.errorhandling.f1"
+title: "CDC 원본 편집기 (오류 출력 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.cdcsource.errorhandling.f1
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 15818f42922d7fe21bdba64d0bf4c5e4a593eada
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 원본 편집기(오류 출력 페이지)
+# <a name="cdc-source-editor-error-output-page"></a>CDC 원본 편집기(오류 출력 페이지)
   **CDC 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  
   
  CDC 원본에 대한 자세한 내용은 [CDC Source](../../integration-services/data-flow/cdc-source.md)을 참조하십시오.  
   
-## 작업 목록  
+## <a name="task-list"></a>작업 목록  
  **CDC 원본 편집기 오류 출력 페이지를 열려면**  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 CDC 원본이 있는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 패키지를 엽니다.  
@@ -32,7 +37,7 @@ caps.handback.revision: 8
   
 3.  **CDC 원본 편집기**에서 **오류 출력**을 클릭합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 8
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
-## 오류 처리 옵션  
+## <a name="error-handling-options"></a>오류 처리 옵션  
  다음 옵션을 사용하여 CDC 원본에서 오류 및 잘림을 처리하는 방법을 구성할 수 있습니다.  
   
  **구성 요소 실패**  
@@ -66,8 +71,8 @@ caps.handback.revision: 8
  **흐름 리디렉션**  
  오류 또는 잘림 데이터 행이 CDC 원본의 오류 출력으로 전달됩니다. 이 경우에는 CDC 원본 오류 처리가 사용됩니다. 자세한 내용은 [CDC Source](../../integration-services/data-flow/cdc-source.md)을 참조하세요.  
   
-## 관련 항목:  
- [CDC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
- [CDC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [CDC 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/cdc-source-editor-connection-manager-page.md)   
+ [CDC 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/cdc-source-editor-columns-page.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "^(배타적 비트 OR)(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "^(배타적 비트 OR 연산자)"
-  - "배타적 비트 OR(^)"
+title: "^ (비트 배타적 OR) (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ^ (bitwise exclusive OR operator)
+- bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4c0a93affde5af98cdeb24fd04bb00d9ac72af7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ^(배타적 비트 OR)(SSIS 식)
+# <a name="-bitwise-exclusive-or-ssis-expression"></a>^(배타적 비트 OR)(SSIS 식)
   두 정수 값의 배타적 비트 OR 연산을 수행합니다. 그런 후 첫 번째 피연산자의 각 비트를 두 번째 피연산자의 해당 비트와 비교합니다. 두 비트 중 하나가 0이고 다른 비트가 1이면 해당 결과 비트는 1로 설정됩니다. 두 비트가 모두 0 또는 1이면 해당 결과 비트는 0으로 설정됩니다.  
   
  두 조건이 모두 부호 있는 정수 데이터 형식이거나 두 조건이 모두 부호 없는 정수 데이터 형식이어야 합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -32,18 +37,18 @@ integer_expression1 ^ integer_expression2
   
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *integer_expression1, integer_expression2*  
  부호가 있거나 부호가 없는 정수 데이터 형식의 유효한 식입니다. 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  두 인수의 데이터 형식에 따라 결정됩니다. 자세한 내용은 [Integration Services Data Types in Expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md)을 참조하세요.  
   
-## 주의  
+## <a name="remarks"></a>주의  
  둘 중 한 조건이 Null이면 식 결과도 Null입니다.  
   
-## 식 예  
- 이 예에서는 변수 **NumberA** 와 **NumberB**사이에 배타적 비트 OR 연산을 수행합니다. **NumberA**에는 3(00000011)이 포함되고 **NumberB**에는 7(00000111)이 포함됩니다.  
+## <a name="expression-examples"></a>식 예  
+ 이 예에서는 변수 **NumberA** 와 **NumberB**사이에 배타적 비트 OR 연산을 수행합니다. **NumberA** 에는 3(00000011)이 포함되고 **NumberB** 에는 7(00000111)이 포함됩니다.  
   
 ```  
 @NumberA ^ @NumberB  
@@ -65,7 +70,7 @@ integer_expression1 ^ integer_expression2
 ReorderPoint ^ SafetyStockLevel  
 ```  
   
- **ReorderPoint**가 10이고 **SafetyStockLevel**이 8이면 식은 2(00000010)로 계산됩니다.  
+ **ReorderPoint** 가 10이고 **SafetyStockLevel** 이 8이면 식은 2(00000010)로 계산됩니다.  
   
  00001010  
   
@@ -91,10 +96,10 @@ ReorderPoint ^ SafetyStockLevel
   
  00000110  
   
-## 관련 항목:  
- [&#124;&#124;&#40;논리적 OR&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
- [&#124;&#40;포괄적 비트 OR&#41;&#40;SSIS 식&#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
- [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [&#124; &#124; &#40; 논리적 OR &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/logical-or-ssis-expression.md)   
+ [&#124; &#40; 비트 포함 OR &#41; &#40; SSIS 식 &#41;](../../integration-services/expressions/bitwise-inclusive-or-ssis-expression.md)   
+ [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "ADO NET 원본 편집기(오류 출력 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetsource.erroroutput.f1"
+title: "ADO NET 원본 편집기 (오류 출력 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetsource.erroroutput.f1
 ms.assetid: 4dd9d129-a95c-4d3a-bbbf-e84a39089950
 caps.latest.revision: 14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7889b092dae9abe613b3c4b2fe8d18500dea69f0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 원본 편집기(오류 출력 페이지)
+# <a name="ado-net-source-editor-error-output-page"></a>ADO NET 원본 편집기(오류 출력 페이지)
   **ADO NET 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
   
  ADO NET 원본에 대한 자세한 내용은 [ADO NET Source](../../integration-services/data-flow/ado-net-source.md)을 참조하십시오.  
@@ -31,7 +36,7 @@ caps.handback.revision: 14
   
 3.  **ADO NET 원본 편집기**에서 **오류 출력**을 클릭합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **입/출력**  
  데이터 원본의 이름을 표시합니다.  
   
@@ -55,9 +60,9 @@ caps.handback.revision: 14
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
-## 관련 항목:  
- [ADO NET 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/ado-net-source-editor-connection-manager-page.md)   
- [ADO NET 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/ado-net-source-editor-columns-page.md)   
+## <a name="see-also"></a>관련 항목:  
+ [ADO NET 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/ado-net-source-editor-connection-manager-page.md)   
+ [ADO NET 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/ado-net-source-editor-columns-page.md)   
  [ADO.NET 연결 관리자](../../integration-services/connection-manager/ado-net-connection-manager.md)  
   
   

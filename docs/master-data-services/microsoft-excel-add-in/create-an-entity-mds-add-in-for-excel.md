@@ -1,25 +1,30 @@
 ---
-title: "엔터티 만들기(Excel용 MDS 추가 기능) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "엔터티 만들기 (MDS 추가 기능 Excel 용) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d354abb3-88fe-4b40-a374-f6256b84ffae
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b77e214a86b07da01010357edeedf09e62234345
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 엔터티 만들기(Excel용 MDS 추가 기능)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 새 엔터티를 만들어 데이터를 저장할 수 있습니다. 엔터티를 만들 때 엔터티에 저장할 데이터의 샘플을 로드해야 합니다.  
+# <a name="create-an-entity-mds-add-in-for-excel"></a>엔터티 만들기(Excel용 MDS 추가 기능)
+  에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 관리자는 데이터를 저장할 새 엔터티를 만들 수 있습니다. 엔터티를 만들 때 엔터티에 저장할 데이터의 샘플을 로드해야 합니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 와 **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -42,7 +47,7 @@ caps.handback.revision: 8
   
     -   시간 값이 포함된 셀이 없어야 합니다. MDS에서 날짜 값은 저장할 수 있지만 시간 값은 저장할 수 없습니다.  
   
-### 엔터티를 만들고 데이터를 로드하려면  
+### <a name="to-create-an-entity-and-load-data"></a>엔터티를 만들고 데이터를 로드하려면  
   
 1.  로드할 데이터가 들어 있는 Excel 워크시트를 열거나 만듭니다.  
   
@@ -68,13 +73,13 @@ caps.handback.revision: 8
   
 12. **확인**을 클릭합니다. 엔터티가 만들어지면 새 머리글 행이 표시되고 셀이 강조 표시되며 엔터티 이름과 일치하도록 시트 이름이 업데이트됩니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
   
 -   발생한 오류를 보려면 **게시 및 유효성 검사** 그룹에서 **상태 표시**를 클릭합니다. ValidationStatus 및 InputStatus 열이 표시됩니다. 자세한 내용은 [데이터 유효성 검사&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/validating-data-mds-add-in-for-excel.md)를 참조하세요.  
   
 -   예상한 데이터 형식으로 특성이 만들어졌는지 확인합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [도메인 기반 특성 만들기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

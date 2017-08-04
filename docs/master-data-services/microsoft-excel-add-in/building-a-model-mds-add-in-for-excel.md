@@ -1,33 +1,38 @@
 ---
-title: "모델 작성(Excel용 MDS 추가 기능) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/15/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "모델 작성 (MDS 추가 기능 Excel 용) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/15/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 caps.latest.revision: 5
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 5
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82a8380ac46097ac88942776b416593d0d3338c8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 모델 작성(Excel용 MDS 추가 기능)
+# <a name="building-a-model-mds-add-in-for-excel"></a>모델 작성(Excel용 MDS 추가 기능)
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 관리자는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에 제공되는 관리 기능 중 일부를 실행할 수 있습니다.  
   
  관리자가 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 에서 수행할 수 있는 모델 작성 태스크는 다음과 같습니다.  
   
 -   엔터티 만들기. 엔터티에 대한 자세한 내용은 [엔터티&#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)를 참조하세요.  
   
--   도메인 기반 특성을 포함한 모든 유형의 특성 만들기. 특성에 대한 자세한 내용은 [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md) 및 [도메인 기반 특성&#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)을 참조하세요.  
+-   도메인 기반 특성을 포함한 모든 유형의 특성 만들기. 특성에 대한 자세한 내용은 [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md) 및 [도메인 기반 특성&#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)를 참조하세요.  
   
- 관리자로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이나 웹 서비스를 사용하여 모델을 만들어야 합니다. 그런 다음 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 를 사용하여 모델 내에 엔터티와 특성을 만들 수 있습니다. 모델 개체에 대한 자세한 내용은 [모델&#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)을 참조하세요.  
+ 관리자로 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이나 웹 서비스를 사용하여 모델을 만들어야 합니다. 그런 다음 [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] 를 사용하여 모델 내에 엔터티와 특성을 만들 수 있습니다. 모델 개체에 대한 자세한 내용은 [모델&#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)를 참조하세요.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  대부분의 관리 태스크는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 수행하거나 웹 서비스를 사용하여 수행해야 합니다. 다음 표에서는 관리자가 MDS에서 태스크를 완료하는 데 사용할 수 있는 도구를 보여 줍니다.  
   
 |태스크 설명|도구|항목|  
@@ -43,15 +48,15 @@ caps.handback.revision: 5
 |데이터의 버전을 만듭니다.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램 또는 웹 서비스|[버전 잠금&#40;Master Data Services&#41;](../../master-data-services/lock-a-version-master-data-services.md)|  
 |모델을 배포합니다.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램, 웹 서비스 또는 MDSModelDeploy 도구|[MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
 -   [모델&#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)  
   
 -   [엔터티&#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md)  
   
--   [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md)  
+-   [특성 &#40; Master Data services&#41;](../../master-data-services/attributes-master-data-services.md)  
   
--   [도메인 기반 특성&#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [도메인 기반 특성 &#40; Master Data services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)  
   
 -   [특성 그룹&#40;Master Data Services&#41;](../../master-data-services/attribute-groups-master-data-services.md)  
   

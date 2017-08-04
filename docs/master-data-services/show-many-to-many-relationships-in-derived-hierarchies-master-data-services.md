@@ -1,26 +1,31 @@
 ---
-title: "파생 계층에서 다 대 다 관계 표시(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "파생된 계층 (Master Data Services)에서 다 대 다 관계 표시 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 caps.latest.revision: 13
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 5653a69d945fda68c197107461f6af0861135505
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 파생 계층에서 다 대 다 관계 표시(Master Data Services)
+# <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>파생 계층에서 다 대 다 관계 표시(Master Data Services)
   파생 계층(DH)은 일 대 다 관계를 표시하며 다 대 다 관계도 보여줄 수 있습니다.  
   
-## 다 대 다(M2M) 관계  
+## <a name="many-to-many-m2m-relationships"></a>다 대 다(M2M) 관계  
  두 엔터티 간의 매핑을 제공하는 세 번째 엔터티를 사용하여 두 엔터티 간의 다 대 다(M2M) 관계를 모델링할 수 있습니다.  
   
  ![mds_hierarchies_manytomany](../master-data-services/media/mds-hierarchies-manytomany.png "mds_hierarchies_manytomany")  
@@ -43,7 +48,7 @@ caps.handback.revision: 13
   
  ![mds_hierarchies_edit_derived_hierarchy_two](../master-data-services/media/mds-hierarchies-edit-derived-hierarchy-two.PNG "mds_hierarchies_edit_derived_hierarchy_two")  
   
- 이제 미리 보기에 등록된 직원이 교육 과정별로 그룹화되어 표시됩니다. M2M 관계이므로 각 자식 구성원은 여러 부모를 가질 수 있습니다. 위의 예제에서 직원 **6 {Hillman, Reinout N}**은 **1 {Master Data Services 101}** 및 **4 {Career-Limiting Moves}**의 두 과정에 학생으로 등록됩니다.  
+ 이제 미리 보기에 등록된 직원이 교육 과정별로 그룹화되어 표시됩니다. M2M 관계이므로 각 자식 구성원은 여러 부모를 가질 수 있습니다. 위의 예제에서 직원 **6 {Hillman, Reinout N}** 은 **1 {Master Data Services 101}** 및 **4 {Career-Limiting Moves}**의 두 과정에 학생으로 등록됩니다.  
   
  이 매핑 관계도 반전되거나 학생별로 그룹화하여 표시될 수 있습니다.  
   
@@ -72,14 +77,14 @@ caps.handback.revision: 13
 ### <a name="M2MSample"></a> 샘플 모델의 M2M 관계  
 M2M 관계의 데모를 보려면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 포함된 Customer 샘플 모델의 Region Climate 파생 계층을 확인합니다.   
   
-다음 그림과 같이 이 관계를 모델링하는 수준 이름은 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate(RegionClimate.Region을 통해 매핑됨)**입니다. ![mds_Number2](../master-data-services/media/mds-number2.png)**미리 보기**에서는 지역이 연결된 기후 유형별로 그룹화되어 표시됩니다. 여러 기후(부모)와 연결된 지역(자식 멤버)이 있기 때문에 M2M 관계입니다. 예를 들어 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}**은 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 및 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**와 연결되어 있습니다.  
+다음 그림과 같이 이 관계를 모델링하는 수준 이름은 ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate(RegionClimate.Region을 통해 매핑됨)**입니다. ![mds_Number2](../master-data-services/media/mds-number2.png)**미리 보기** 에서는 지역이 연결된 기후 유형별로 그룹화되어 표시됩니다. 여러 기후(부모)와 연결된 지역(자식 멤버)이 있기 때문에 M2M 관계입니다. 예를 들어 ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** 은 ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** 및 ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**와 연결되어 있습니다.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
-Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 포함된 기타 샘플 모델을 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](../sql-server/media/master-data-services.png#deploySample)를 참조하세요.   
+Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]에 포함된 기타 샘플 모델을 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](~/master-data-services/sql-server-samples-model-deployment-packages-mds.md)를 참조하세요.   
   
-## 일 대 다 관계  
- DH의 멤버는 여러 자식 멤버의 부모일 수 있지만 일반적으로 둘 이상의 부모를 가질 수 없습니다(예외는 [멤버 보안](#bkmk_member_security) 참조). 예를 들어, Employee 및 Department라는 두 개의 엔터티가 있다고 가정해보겠습니다. 여기서 각 직원은 단일 부서에 속합니다. 이 관계는 Department 엔터티를 참조하는 도메인 기반 특성(DBA)을 Employee 엔터티에 추가하여 모델링합니다.  
+## <a name="one-many-relationship"></a>일 대 다 관계  
+ DH의 멤버는 여러 자식 멤버의 부모일 수 있지만 일반적으로 둘 이상의 부모를 가질 수 없습니다(예외는 [멤버 보안](#bkmk_member_security)참조). 예를 들어, Employee 및 Department라는 두 개의 엔터티가 있다고 가정해보겠습니다. 여기서 각 직원은 단일 부서에 속합니다. 이 관계는 Department 엔터티를 참조하는 도메인 기반 특성(DBA)을 Employee 엔터티에 추가하여 모델링합니다.  
   
  ![mds_hierarchies_onetomany](../master-data-services/media/mds-hierarchies-onetomany.png "mds_hierarchies_onetomany")  
   
@@ -87,7 +92,7 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a> 구성원 보안  
+##  <a name="bkmk_member_security"></a> 멤버 보안  
  구성원 보안 권한을 할당하는 데 구성원 중복을 허용하는 계층(구성원이 둘 이상의 부모를 가질 수 있음)을 사용할 수 없습니다. 예를 들어  
   
 -   null 재귀에 앵커를 지정하지 않는 재귀적 파생 계층(RDH)입니다(재귀 수준에서 각 구성원은 루트와 해당 재귀 부모 아래에 나타남).  
@@ -96,10 +101,11 @@ Customer 샘플 모델 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md
   
 -   M2M 수준의 파생 계층입니다(자식이 여러 부모에 매핑될 수 있음).  
   
-## 컬렉션  
+## <a name="collections"></a>컬렉션  
  컬렉션 및 명시적 계층은 사용되지 않습니다. 변환 저장 프로시저(udpConvertCollectionAndConsolidatedMembersToLeaf)는 컬렉션 구성원을 리프 구성원으로 변환하고 컬렉션 구성원 정보를 캡처하기 위해 다 대 다 파생 계층을 만듭니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   
+

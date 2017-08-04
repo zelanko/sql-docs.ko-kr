@@ -1,36 +1,41 @@
 ---
-title: "구독 뷰를 만들어 데이터 내보내기(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "구독 뷰 [Master Data Services], 만들기"
-  - "구독 뷰 만들기 [Master Data Services]"
+title: "구독 뷰를 만들어 (Master Data Services) 데이터를 내보낼 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- subscription views [Master Data Services], creating
+- creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 구독 뷰를 만들어 데이터 내보내기(Master Data Services)
+# <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
   구독 뷰를 만들어 구독 시스템으로 Master Data Services 데이터를 내보낼 수 있습니다. 그러면 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 데이터의 뷰가 생성됩니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
--   **통합 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 참조 [기능 영역 권한 & #40; Master Data Services & #41;](../master-data-services/functional-area-permissions-master-data-services.md)합니다.  
+-   **통합 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
--   모델 관리자여야 합니다. 자세한 내용은 참조 [관리자 및 #40; Master Data Services & #41;](../master-data-services/administrators-master-data-services.md)합니다.  
+-   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
-### 구독 뷰를 만들고 편집하려면  
+### <a name="to-create-and-edit-a-subscription-view"></a>구독 뷰를 만들고 편집하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **통합 관리**를 클릭합니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 10
   
 5.  **모델** 목록에서 모델을 선택합니다.  
   
-6.  선택 **일시적으로 삭제 된 멤버 포함**, 보기에서 일시적으로 삭제 된 멤버를 포함 합니다.  
+6.  일시 삭제된 멤버를 뷰에 포함하려면 **일시 삭제된 멤버 포함**을 선택합니다.  
   
 7.  **버전 옵션** 에서 **버전** 또는 **버전 플래그**를 선택하고 해당하는 목록에서 옵션을 선택합니다.  
   
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 11. **저장**을 클릭합니다.  
   
-## 뷰 정보  
+## <a name="view-information"></a>뷰 정보  
  생성되는 각 뷰에 대해 열이 10개 포함된 행이 표에 추가됩니다. 다음 표에서는 이러한 열에 대해 설명합니다.  
   
-|열|설명|  
+|열|Description|  
 |------------|-----------------|  
-|상태|보기 상태입니다.<br /><br /> 클릭할 때 **저장**,  ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 디스플레이, 뷰를 업데이트 하는 나타내는 이미지입니다.<br /><br /> 만들거나 보기를 편집할 때 오류가 있는 경우는 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 이미지를 표시 합니다.<br /><br /> 그렇지 않으면 상태는 확인 및 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 이미지를 표시 합니다.|  
+|상태|보기 상태입니다.<br /><br /> 클릭할 때 **저장**, ![상태를 업데이트 하는 것에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘") 이미지가 표시 하면 뷰가 업데이트 되 합니다.<br /><br /> 만들거나 뷰를 편집할 때 오류가 있는 경우는 ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘") 이미지가 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 및 ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘") 이미지가 표시 됩니다.|  
 |이름|구독 뷰 이름입니다.|  
 |모델|모델 이름입니다.|  
 |버전 옵션|버전 이름입니다.|  
@@ -85,9 +90,9 @@ caps.handback.revision: 10
   
 -   **날짜**: 뷰를 마지막으로 업데이트한 날짜와 시간입니다.  
   
-## 참고 항목  
- [개요: 데이터 및 #40; 내보내기 Master Data Services & #41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [구독 뷰 & #40; 삭제 Master Data Services & #41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [버전 플래그 및 #40; 만들기 Master Data Services & #41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
+ [구독 뷰 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [버전 플래그 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

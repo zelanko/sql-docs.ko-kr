@@ -1,29 +1,34 @@
 ---
-title: "? : (조건부)(SSIS 식) | Microsoft Docs"
-ms.custom: 
-  - "ssisdev020617"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "조건부 연산자(?:)"
-  - "?: (조건부 연산자)"
+title: "? : (조건부) (SSIS 식) | Microsoft Docs"
+ms.custom:
+- ssisdev020617
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- conditional operator (?:)
+- '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 caps.latest.revision: 49
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 311168388a44f5a42118a7bd496ead4228338496
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ? : (조건부)(SSIS 식)
+# <a name="--conditional-ssis-expression"></a>? : (조건부)(SSIS 식)
   부울 식의 계산에 따라 두 식 중 하나를 반환합니다. 부울 식이 TRUE이면 첫 번째 식이 계산되고 반환 결과는 식의 결과입니다. 부울 식이 FALSE이면 두 번째 식이 계산되고 반환 결과는 식의 결과입니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -31,7 +36,7 @@ boolean_expression?expression1:expression2
   
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *boolean_expression*  
  TRUE, FALSE 또는 NULL로 계산되는 임의의 유효한 식입니다.  
   
@@ -41,15 +46,15 @@ boolean_expression?expression1:expression2
  *expression2*  
  유효한 식입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  *expression1* 또는 *expression2*의 데이터 형식입니다.  
   
-## 주의  
- *boolean_expression*이 NULL이면 식 결과도 NULL입니다. *expression1* 또는 *expression2* 중에서 선택한 식이 NULL이면 결과도 NULL입니다. 선택한 식은 NULL이 아니지만 선택하지 않은 식이 NULL이면 결과는 선택한 식의 값입니다.  
+## <a name="remarks"></a>주의  
+ *boolean_expression* 이 NULL이면 식 결과도 NULL입니다. *expression1* 또는 *expression2* 중에서 선택한 식이 NULL이면 결과도 NULL입니다. 선택한 식은 NULL이 아니지만 선택하지 않은 식이 NULL이면 결과는 선택한 식의 값입니다.  
   
  *expression1* 및 *expression2* 의 데이터 형식이 같으면 결과도 해당 데이터 형식이 됩니다. 다음은 결과 형식에 적용되는 추가 규칙입니다.  
   
--   DT_TEXT 데이터 형식은 *expression1* 및 *expression2*의 코드 페이지가 같아야 합니다.  
+-   DT_TEXT 데이터 형식은 *expression1* 및 *expression2* 의 코드 페이지가 같아야 합니다.  
   
 -   DT_BYTES 데이터 형식의 결과 길이는 둘 중에서 긴 인수의 길이입니다.  
   
@@ -84,21 +89,21 @@ boolean_expression?expression1:expression2
   
  데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 조건에 따라 `savannah` 또는 `unknown`으로 계산되는 식을 보여 줍니다.  
   
 ```  
 @AnimalName == "Elephant"? "savannah": "unknown"  
 ```  
   
- 이 예에서는 **ListPrice** 열을 참조하는 식을 보여 줍니다. **ListPrice**는 DT_CY 데이터 형식입니다. 이 식은 조건에 따라 **ListPrice** 에 .2 또는 .1을 곱합니다.  
+ 이 예에서는 **ListPrice** 열을 참조하는 식을 보여 줍니다. **ListPrice** 는 DT_CY 데이터 형식입니다. 이 식은 조건에 따라 **ListPrice** 에 .2 또는 .1을 곱합니다.  
   
 ```  
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## 관련 항목:  
- [연산자 우선 순위 및 계산 방향](../../integration-services/expressions/operator-precedence-and-associativity.md)   
- [연산자&#40;SSIS 식&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [연산자 우선순위 및 결합성](../../integration-services/expressions/operator-precedence-and-associativity.md)   
+ [연산자 &#40; SSIS 식 &#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   
   

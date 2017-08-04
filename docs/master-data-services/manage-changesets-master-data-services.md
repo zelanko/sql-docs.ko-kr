@@ -1,26 +1,31 @@
 ---
-title: "변경 집합 관리(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "변경 집합 (Master Data Services) 관리 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 caps.latest.revision: 11
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 52d1e3f97e556a4c17f56e9867adc5cf57554178
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 변경 집합 관리(Master Data Services)
+# <a name="manage-changesets-master-data-services"></a>변경 집합 관리(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서는 모델 및 버전별로 모든 변경 내용을 관리할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다. 자세한 내용은 [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)을 참조하세요.  
   
@@ -30,7 +35,7 @@ caps.handback.revision: 11
   
 -   엔터티 관리자가 아닌 경우에는 직접 생성한 변경 집합만 관리할 수 있습니다.  
   
-## 변경 집합을 관리하려면  
+## <a name="to-manage-the-changesets"></a>변경 집합을 관리하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 모델 및 버전을 선택하고 **탐색기**를 클릭합니다.  
   

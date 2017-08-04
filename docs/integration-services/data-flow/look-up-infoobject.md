@@ -1,22 +1,27 @@
 ---
 title: "InfoObject 조회 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f25c00406ce375a2a7a380859ca0eaa5031b54d3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# InfoObject 조회
+# <a name="look-up-infoobject"></a>InfoObject 조회
   **InfoObject 조회** 대화 상자에서는 SAP Netweaver BW 시스템에 정의된 InfoObject를 조회할 수 있습니다. 사용할 수 있는 InfoObject 목록이 표시될 때 원하는 InfoObject를 선택하면 관련 옵션이 SAP BW 대상의 값으로 채워집니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 대상은 **InfoObject 조회** 대화 상자를 사용합니다. SAP BW 대상에 대한 자세한 내용은 [SAP BW Destination](../../integration-services/data-flow/sap-bw-destination.md)을 참조하십시오.  
@@ -42,7 +47,7 @@ caps.handback.revision: 10
   
  **새 InfoObject 만들기** 대화 상자의 **특성** 섹션에서 **추가** 를 클릭하여 **InfoObject 조회** 대화 상자를 열 수도 있습니다.  
   
-## 조회 옵션  
+## <a name="lookup-options"></a>조회 옵션  
  조회 필드 입력란에서 별표 와일드카드 문자(*)를 사용하거나 문자열 일부를 별표 와일드카드 문자와 함께 사용하여 결과를 필터링할 수 있습니다. 조회 필드를 비워 두면 해당 필드에서 빈 문자열만 일치하는 항목으로 필터링됩니다.  
   
  **특징**  
@@ -66,7 +71,7 @@ caps.handback.revision: 10
  **조회**  
  SAP Netweaver BW 시스템에 정의된 InfoObject 중 일치하는 InfoObject를 조회합니다.  
   
-## 조회 결과  
+## <a name="lookup-results"></a>조회 결과  
  조회 단추를 클릭하면 SAP Netweaver BW 시스템의 InfoObject 목록이 다음 열 머리글과 함께 표에 표시됩니다.  
   
  **InfoObject**  
@@ -77,13 +82,13 @@ caps.handback.revision: 10
   
  사용할 수 있는 InfoObject 목록이 표시될 때 원하는 InfoObject를 선택하면 관련 옵션이 대상의 값으로 채워집니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [트랜잭션 데이터용 InfoCube 만들기](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [InfoSource 만들기](../../integration-services/data-flow/create-infosource.md)   
  [트랜잭션 데이터용 InfoSource 만들기](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   
  [마스터 데이터용 InfoSource 만들기](../../integration-services/data-flow/create-infosource-for-master-data.md)   
  [새 InfoObject 만들기](../../integration-services/data-flow/create-new-infoobject.md)   
- [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

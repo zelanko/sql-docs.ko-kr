@@ -1,34 +1,39 @@
 ---
 title: "ODBC 흐름 구성 요소 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: cf751f1e-2348-4a77-904c-bd92c0d7d0ae
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb47de9a618b4d83e961ff2e032861375b0d6c22
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 흐름 구성 요소
+# <a name="odbc-flow-components"></a>ODBC 흐름 구성 요소
   이 항목에서는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]  
   
- [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 Connector for ODBC(Open Database Connectivity) by Attunity는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
+ [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 용 Connector for ODBC(Open Database Connectivity) by Attunity는 SSIS 개발자가 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 패키지를 쉽게 만드는 데 도움이 됩니다.  
   
  ODBC Connector는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]의 컨텍스트에서 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드할 때 최적의 성능을 얻기 위해 디자인되었습니다.  
   
-## 이점  
- [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]용 ODBC 원본 및 ODBC 대상은 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 프로젝트에서 SSIS를 위한 경쟁 우위를 제공합니다.  
+## <a name="benefits"></a>이점  
+ [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 용 ODBC 원본 및 ODBC 대상은 데이터를 ODBC 지원 데이터베이스로 로드하거나 해당 데이터베이스에서 언로드하는 프로젝트에서 SSIS를 위한 경쟁 우위를 제공합니다.  
   
  ODBC 원본과 ODBC 대상 모두 ODBC 사용 데이터베이스와의 고성능 데이터 통합을 가능하게 만듭니다. 두 구성 요소 모두 이 바인딩 모드를 지원하는 고기능 ODBC 공급자를 위해 행 단위 매개 변수 배열 바인딩과 함께 작동하도록 구성하고 저기능 ODBC 공급자를 위해 단일 행 매개 변수 바인딩과 함께 작동하도록 구성할 수 있습니다.  
   
-## ODBC 원본 및 대상 시작  
+## <a name="getting-started-with-the-odbc-source-and-destination"></a>ODBC 원본 및 대상 시작  
  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]를 사용하는 패키지를 설정하려면 먼저 다음을 사용할 수 있는지 확인해야 합니다.  
   
 -   [ODBC 원본](../../integration-services/data-flow/odbc-source.md)  
@@ -61,10 +66,10 @@ caps.handback.revision: 10
   
  ODBC 대상 편집기(오류 출력 페이지)  
   
-## 운영 시나리오  
+## <a name="operating-scenarios"></a>운영 시나리오  
  이 섹션에서는 ODBC 원본 및 대상 구성 요소의 주된 용도 중 일부를 설명합니다.  
   
-### SQL Server 테이블에서 임의의 ODBC 지원 데이터베이스 테이블로 데이터 대량 복사  
+### <a name="bulk-copy-data-from-sql-server-tables-to-any-odbc-supported-database-table"></a>SQL Server 테이블에서 임의의 ODBC 지원 데이터베이스 테이블로 데이터 대량 복사  
  구성 요소를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 단일 ODBC 지원 데이터베이스 테이블로 데이터를 대량 복사할 수 있습니다.  
   
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터를 추출하여 DB2 테이블로 로드하는 SSIS 데이터 흐름 태스크를 만드는 방법을 보여 줍니다.  
@@ -79,7 +84,7 @@ caps.handback.revision: 10
   
 -   ODBC 대상을 디자인 화면으로 끌어 오고 원본 출력을 ODBC 대상에 연결한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 추출한 데이터가 포함된 DB2 테이블로 데이터를 로드하도록 대상을 구성합니다. 이전에 만든 ODBC 연결 관리자를 사용합니다.  
   
-### SQL 지원 데이터베이스 테이블에서 임의의 SQL Server 테이블로 데이터 대량 복사  
+### <a name="bulk-copy-data-from-odbc-supported-database-tables-to-any-sql-server-table"></a>SQL 지원 데이터베이스 테이블에서 임의의 SQL Server 테이블로 데이터 대량 복사  
  구성 요소를 사용하여 하나 이상의 ODBC 지원 데이터베이스 테이블에서 단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 테이블로 데이터를 대량 복사할 수 있습니다.  
   
  다음 예에서는 Sybase 데이터베이스 테이블에서 데이터를 추출하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 테이블로 로드하는 SSIS 데이터 흐름 태스크를 만드는 방법을 보여 줍니다.  
@@ -94,7 +99,7 @@ caps.handback.revision: 10
   
 -   OLE DB 대상을 디자인 화면으로 끌어 오고 원본 출력을 OLE DB 대상에 연결한 다음 Sybase 데이터베이스에서 추출하는 데이터가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블로 데이터를 로드하도록 대상을 구성합니다. 이전에 만든 OLE DB 연결 관리자를 사용합니다.  
   
-## 지원되는 데이터 형식  
+## <a name="supported-data-types"></a>지원되는 데이터 형식  
  ODBC 대량 SSIS 구성 요소는 큰 개체(CLOB 및 BLOB)에 대한 지원을 포함하여 모든 기본 제공 ODBC 데이터 형식에 대한 지원을 제공합니다.  
   
 ODBC 3.8 사양에 설명된 대로 확장 가능한 C 형식에 대한 데이터 형식 지원은 없습니다. 다음 표에서는 각 ODBC SQL 형식에 사용되는 SSIS 데이터 형식을 설명합니다. SSIS 개발자는 필요한 데이터 변환 작업의 성능에 영향을 주지 않으면서 기본 매핑을 무시하고 입력/출력 열에 다른 SSIS 데이터 형식을 지정할 수 있습니다.  
@@ -128,7 +133,7 @@ ODBC 3.8 사양에 설명된 대로 확장 가능한 C 형식에 대한 데이�
 |SQL_INTERVAL_YEAR<br /><br />SQL_INTERVAL_MONTH<br /><br />SQL_INTERVAL_DAY<br /><br />SQL_INTERVAL_HOUR<br /><br />SQL_INTERVAL_MINUTE<br /><br />SQL_INTERVAL_SECOND<br /><br />SQL_INTERVAL_YEAR_TO_MONTH<br /><br />SQL_INTERVAL_DAY_TO_HOUR<br /><br />SQL_INTERVAL_DAY_TO_MINUTE<br /><br />SQL_INTERVAL_DAY_TO_SECOND<br /><br />SQL_INTERVAL_HOUR_TO_MINUTE<br /><br />SQL_INTERVAL_HOUR_TO_SECOND<br /><br />SQL_INTERVAL_MINUTE_TO_SECOND|DT_WSTR|  
 |공급자별 데이터 형식|DT_BYTES<br /><br />DT_IMAGE|열 길이가 8000보다 작거나 같으면 DT_BYTES가 사용됩니다.<br /><br />열 길이가 0이거나 8000보다 크면 DT_IMAGE가 사용됩니다.|  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [ODBC 원본](../../integration-services/data-flow/odbc-source.md)  
   

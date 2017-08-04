@@ -1,27 +1,32 @@
 ---
-title: "MSSQLSERVER에 대한 프로토콜 속성(인증서 탭) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.computermgr.cert.general.f1"
-helpviewer_keywords: 
-  - "MSSQLSERVER 속성 프로토콜"
+title: "MSSQLSERVER 속성 (인증서 탭)에 대 한 프로토콜 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.computermgr.cert.general.f1
+helpviewer_keywords:
+- MSSQLSERVER property protocols
 ms.assetid: 776addd6-25f3-4875-9a71-064035787090
 caps.latest.revision: 17
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 71fbfe0f85936f3db04c527291e1baa0064dc1f9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
 # MSSQLSERVER에 대한 프로토콜 속성(인증서 탭)
-   **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **인증서** 탭을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 선택하거나 인증서 속성을 확인할 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
+  **MSSQLSERVER에 대한 프로토콜 속성** 대화 상자의 **인증서** 탭을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 선택하거나 인증서 속성을 확인할 수 있습니다. 인증서를 선택하기 전에는 모든 필드가 비어 있습니다.  
   
  인증서는 사용자 컴퓨터에 로컬로 저장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용할 인증서를 로드하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스와 동일한 사용자 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 실행해야 합니다.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 17
  **지우기**  
  선택한 항목을 **인증서** 상자에서 제거합니다.  
   
- **인증서**  
+ **MSSQLSERVER에 대한 프로토콜 속성**  
  보안 공급자가 결정하는 인증서 이름입니다. 속성 표에서 세부 정보를 보려면 인증서를 선택합니다.  
   
 ## 옵션  

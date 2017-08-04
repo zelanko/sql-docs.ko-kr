@@ -1,25 +1,30 @@
 ---
-title: "레코드 집합 대상 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "레코드 집합 대상"
+title: "레코드 집합 대상을 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Recordset destination
 ms.assetid: a7b143dc-8008-404f-83b0-b45ffbca6029
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 레코드 집합 대상 사용
-  레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 레코드 집합 대상은 **Object** 데이터 형식의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
+# <a name="use-a-recordset-destination"></a>레코드 집합 대상 사용
+  레코드 집합 대상은 외부 데이터 원본에 데이터를 저장하지 않습니다. 대신 레코드 집합 대상은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Object **데이터 형식의** 패키지 변수에 저장된 레코드 집합의 데이터를 메모리에 저장합니다. 레코드 집합 대상이 데이터를 저장한 후에는 일반적으로 Foreach 루프 컨테이너를 Foreach ADO 열거자와 함께 사용하여 레코드 집합의 행을 한 번에 하나씩 처리합니다. Foreach ADO 열거자는 현재 행의 각 열 값을 개별 패키지 변수에 저장합니다. 그러면 Foreach 루프 컨테이너 내에 구성한 태스크가 변수에서 이러한 값을 읽어 와서 이를 가지고 몇 가지 동작을 수행합니다.  
   
  레코드 집합 대상은 다양한 시나리오에서 사용할 수 있습니다. 다음은 몇 가지 예입니다.  
   
@@ -29,10 +34,10 @@ caps.handback.revision: 11
   
  다음 섹션에서는 먼저 레코드 집합 대상을 사용하는 일반적인 프로세스에 대해 설명한 다음 대상을 사용하는 방법에 대한 예를 보여 줍니다.  
   
-## 레코드 집합 대상을 사용하는 일반적인 단계  
+## <a name="general-steps-to-using-a-recordset-destination"></a>레코드 집합 대상을 사용하는 일반적인 단계  
  다음 절차에서는 레코드 집합 대상에 데이터를 저장한 다음 Foreach 루프 컨테이너를 사용하여 각 행을 처리하는 데 필요한 단계를 요약합니다.  
   
-#### 레코드 집합 대상에 데이터를 저장하고 Foreach 루프 컨테이너를 사용하여 각 행을 처리하려면  
+#### <a name="to-save-data-to-a-recordset-destination-and-process-each-row-by-using-the-foreach-loop-container"></a>레코드 집합 대상에 데이터를 저장하고 Foreach 루프 컨테이너를 사용하여 각 행을 처리하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 만들거나 엽니다.  
   
@@ -56,10 +61,10 @@ caps.handback.revision: 11
   
 8.  Foreach 루프 컨테이너 내에서 변수의 값을 읽어 와서 레코드 집합의 행을 한 번에 하나씩 처리하는 태스크를 추가하고 구성합니다.  
   
-## 레코드 집합 대상을 사용하는 예  
+## <a name="example-of-using-the-recordset-destination"></a>레코드 집합 대상을 사용하는 예  
  다음 예에서는 데이터 흐름 태스크가 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 직원에 대한 정보를 Sales.SalesPerson 테이블에서 레코드 집합 대상으로 로드합니다. 그러면 Foreach 루프 컨테이너에서 데이터 행을 한 번에 하나씩 읽고 메일 보내기 태스크를 호출합니다. 메일 보내기 태스크는 식을 사용하여 보너스 금액에 관한 사용자 지정 전자 메일 메시지를 각 판매 직원에 보냅니다.  
   
-#### 프로젝트를 만들고 변수를 구성하려면  
+#### <a name="to-create-the-project-and-configure-the-variables"></a>프로젝트를 만들고 변수를 구성하려면  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 새 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 만듭니다.  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 11
   
          **Bonus** 변수는 판매 직원의 보너스를 보유합니다.  
   
-#### 연결 관리자를 구성하려면  
+#### <a name="to-configure-the-connection-managers"></a>연결 관리자를 구성하려면  
   
 1.  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너의 연결 관리자 영역에서 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스에 연결하는 새 OLE DB 연결 관리자를 추가하고 구성합니다.  
   
@@ -93,11 +98,11 @@ caps.handback.revision: 11
   
      Foreach 루프 컨테이너 내의 메일 보내기 태스크는 이 연결 관리자를 사용하여 전자 메일을 보냅니다.  
   
-#### 데이터 흐름 및 레코드 집합 대상을 구성하려면  
+#### <a name="to-configure-the-data-flow-and-the-recordset-destination"></a>데이터 흐름 및 레코드 집합 대상을 구성하려면  
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 디자인 화면에 데이터 흐름 태스크를 추가합니다.  
   
-2.   **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
+2.  **데이터 흐름** tab, add an OLE DB source to the 데이터 흐름 task, and then open the **OLE DB 원본 편집기**를 엽니다.  
   
 3.  OLE DB 원본 편집기의 **연결 관리자** 페이지에서 다음과 같이 원본을 구성합니다.  
   
@@ -124,7 +129,7 @@ caps.handback.revision: 11
   
     2.  **입력 열** 탭에서 사용 가능한 열 세 개를 모두 선택합니다.  
   
-#### Foreach 루프 컨테이너를 구성하고 패키지를 실행하려면  
+#### <a name="to-configure-the-foreach-loop-container-and-run-the-package"></a>Foreach 루프 컨테이너를 구성하고 패키지를 실행하려면  
   
 1.  **디자이너의** 제어 흐름 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 탭에서 Foreach 루프 컨테이너를 추가하고 이 컨테이너를 데이터 흐름 태스크 뒤에 연결합니다.  
   
@@ -152,7 +157,7 @@ caps.handback.revision: 11
   
     5.  **MessageSourceType**에 대해 **직접 입력**을 선택합니다.  
   
-5.  **메일 보내기 태스크 편집기**의 **식** 페이지에서 줄임표 단추(**...**)를 클릭하여 **속성 식 편집기**를 엽니다.  
+5.  **메일 보내기 태스크 편집기** 의 **식**페이지에서 줄임표 단추(**...**)를 클릭하여 **속성 식 편집기**를 엽니다.  
   
 6.  **속성 식 편집기**에서 다음 정보를 입력합니다.  
   

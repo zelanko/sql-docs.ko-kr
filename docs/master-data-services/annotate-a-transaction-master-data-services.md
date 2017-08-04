@@ -1,36 +1,41 @@
 ---
-title: "트랜잭션에 주석 추가(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "주석 [Master Data Services], 트랜잭션"
+title: "(Master Data Services) 트랜잭션에 주석을 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- annotations [Master Data Services], for transactions
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
 caps.latest.revision: 6
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 279808cca74dbbc7c5ca9aa09c4996660fe949dc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 트랜잭션에 주석 추가(Master Data Services)
+# <a name="annotate-a-transaction-master-data-services"></a>트랜잭션에 주석 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 기록 목적으로 트랜잭션에 대한 지원 정보를 제공하려면 트랜잭션에 주석을 추가합니다.  
   
 > [!NOTE]  
 >  주석은 삭제할 수 없습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   만든 트랜잭션에 주석을 추가하려면 **탐색기** 기능 영역에 대한 액세스 권한과 주석을 추가할 모델 개체에 대한 **업데이트** 이상의 사용 권한이 있어야 합니다.  
   
 -   모든 사용자를 위해 트랜잭션에 주석을 추가하려면 **버전 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 하며 모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
-### 탐색기에서 트랜잭션에 주석을 추가하려면  
+### <a name="to-annotate-a-transaction-in-explorer"></a>탐색기에서 트랜잭션에 주석을 추가하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 6
   
 9. **주석 추가**를 클릭합니다. 주석이 **주석** 창에 표시됩니다.  
   
-### 버전 관리에서 트랜잭션에 주석을 추가하려면(관리자에만 해당)  
+### <a name="to-annotate-a-transaction-in-version-management-administrators-only"></a>버전 관리에서 트랜잭션에 주석을 추가하려면(관리자에만 해당)  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지에서 **버전 관리**를 클릭합니다.  
   
@@ -62,8 +67,8 @@ caps.handback.revision: 6
   
 5.  **확인**을 클릭합니다.  
   
-## 참고 항목  
- [주석&#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [주석 &#40; Master Data services&#41;](../master-data-services/annotations-master-data-services.md)   
  [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
   

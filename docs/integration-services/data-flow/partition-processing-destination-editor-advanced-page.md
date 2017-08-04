@@ -1,26 +1,31 @@
 ---
-title: "파티션 처리 대상 편집기(고급 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.partprocessingtransformation.advanced.f1"
-helpviewer_keywords: 
-  - "파티션 처리 대상 편집기"
+title: "파티션 처리 대상 편집기 (고급 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.partprocessingtransformation.advanced.f1
+helpviewer_keywords:
+- Partition Processing Destination Editor
 ms.assetid: 2039ee0f-069d-479d-90b2-2a12481b1162
 caps.latest.revision: 32
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 556e00f1e5e597817ff2c5275a01b9c4ac208e10
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 파티션 처리 대상 편집기(고급 페이지)
+# <a name="partition-processing-destination-editor-advanced-page"></a>파티션 처리 대상 편집기(고급 페이지)
   **파티션 처리 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 오류 처리 방법을 구성할 수 있습니다.  
   
  파티션 처리 대상에 대한 자세한 내용은 [Partition Processing Destination](../../integration-services/data-flow/partition-processing-destination.md)을 참조하세요.  
@@ -28,7 +33,7 @@ caps.handback.revision: 32
 > [!NOTE]  
 >  여기에서 설명하는 태스크는 Analysis Services 테이블 형식 모델에 적용되지 않습니다.  테이블 형식 모델의 경우 입력 열을 파티션 열에 매핑할 수 없습니다. 대신 [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) 를 사용하여 파티션을 처리할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **기본 오류 구성 사용**  
  기본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 오류 처리를 사용할지 여부를 지정합니다. 기본적으로 이 값은 **True**입니다.  
   
@@ -94,13 +99,13 @@ caps.handback.revision: 32
 |**ReportAndStop**|오류를 보고하고 처리를 중지합니다.|  
   
  **오류 로그 경로**  
- 오류 로그의 경로를 입력하거나 찾아보기 단추**(...)**를 사용하여 대상을 선택합니다.  
+ 오류 로그의 경로를 입력하거나 찾아보기 단추 **(...)** 를 사용하여 대상을 선택합니다.  
   
  **찾아보기(...)**  
  오류 로그의 경로를 선택합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [파티션 처리 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
+ [파티션 처리 대상 편집기 &#40; 매핑 페이지 &#41;](../../integration-services/data-flow/partition-processing-destination-editor-mappings-page.md)  
   
   

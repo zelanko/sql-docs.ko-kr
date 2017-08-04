@@ -1,30 +1,35 @@
 ---
 title: "데이터 흐름 태스크 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataflowtask.f1"
-helpviewer_keywords: 
-  - "데이터 흐름 태스크 [Integration Services]"
-  - "성능 [Integration Services]"
-  - "데이터 흐름 [Integration Services], 성능"
-  - "데이터 흐름 [Integration Services], 데이터 흐름 태스크"
-  - "Integration Services, 성능"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataflowtask.f1
+helpviewer_keywords:
+- data flow task [Integration Services]
+- performance [Integration Services]
+- data flow [Integration Services], performance
+- data flow [Integration Services], Data Flow task
+- Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
 caps.latest.revision: 75
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 75
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 8823647eeb74020da575143375d416a03e62d424
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터 흐름 태스크
+# <a name="data-flow-task"></a>데이터 흐름 태스크
   데이터 흐름 태스크는 원본과 대상 사이에 데이터를 이동하는 데이터 흐름 엔진을 캡슐화하며, 이를 통해 사용자는 데이터 이동 시 데이터를 변환, 정리 및 수정할 수 있습니다. 데이터 흐름 태스크를 패키지에 추가하면 패키지에서 데이터를 추출, 변환 및 로드할 수 있습니다.  
   
  데이터 흐름은 적어도 하나 이상의 데이터 흐름 구성 요소로 구성되지만 일반적으로 데이터를 추출하는 원본, 데이터를 수정, 라우팅 또는 요약하는 변환 및 데이터를 로드하는 대상과 같은 일련의 연결된 데이터 흐름 구성 요소로 구성됩니다.  
@@ -33,7 +38,7 @@ caps.handback.revision: 75
   
  텍스트 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대량 삽입하려는 경우 데이터 흐름 태스크 및 데이터 흐름 대신 대량 삽입 태스크를 사용할 수 있습니다. 하지만 대량 삽입 태스크에서는 데이터를 변환할 수 없습니다. 자세한 내용은 [Bulk Insert Task](../../integration-services/control-flow/bulk-insert-task.md)을 참조하세요.  
   
-## 여러 흐름  
+## <a name="multiple-flows"></a>여러 흐름  
  데이터 흐름 태스크에는 여러 데이터 흐름이 포함될 수 있습니다. 태스크에서 여러 데이터가 복사되고, 데이터 복사 순서가 중요하지 않은 경우에는 데이터 흐름 태스크에 여러 데이터 흐름을 포함시키는 것이 편리합니다. 예를 들어 플랫 파일의 데이터를 데이터 웨어하우스의 별모양 스키마에 있는 다른 차원 테이블로 복사하는 5개의 데이터 흐름을 만들 수 있습니다.  
   
  하지만 데이터 흐름 엔진은 하나의 데이터 흐름 태스크 내에 여러 데이터 흐름이 있는 경우 실행 순서를 결정합니다. 따라서 순서가 중요한 경우에는 패키지에서 각각 하나의 데이터 흐름이 포함된 여러 데이터 흐름 태스크를 사용해야 합니다. 그런 다음에는 선행 제약 조건을 적용하여 태스크의 실행 순서를 제어할 수 있습니다.  
@@ -42,8 +47,8 @@ caps.handback.revision: 75
   
  ![데이터 흐름](../../integration-services/control-flow/media/mw-dts-09.gif "데이터 흐름")  
   
-## 로그 항목  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 모든 태스크에서 사용할 수 있는 로그 이벤트 집합을 제공합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 여러 태스크에서 사용할 수 있는 사용자 지정 로그 항목도 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md) 및 [로깅할 메시지 사용자 지정](../../integration-services/performance/custom-messages-for-logging.md)을 참조하세요. 데이터 흐름 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
+## <a name="log-entries"></a>로그 항목  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 모든 태스크에서 사용할 수 있는 로그 이벤트 집합을 제공합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 여러 태스크에서 사용할 수 있는 사용자 지정 로그 항목도 제공합니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요. 데이터 흐름 태스크에는 다음 사용자 지정 로그 항목이 포함됩니다.  
   
 |로그 항목|Description|  
 |---------------|-----------------|  
@@ -67,7 +72,7 @@ caps.handback.revision: 75
   
 -   [데이터 흐름 성능 기능](../../integration-services/data-flow/data-flow-performance-features.md)  
   
-### 데이터 흐름 태스크의 예제 메시지  
+### <a name="sample-messages-from-a-data-flow-task"></a>데이터 흐름 태스크의 예제 메시지  
  다음 표에서는 매우 간단한 패키지의 로그 항목에 대한 예제 메시지를 보여 줍니다. 이 패키지에서는 OLE DB 원본을 사용하여 테이블에서 데이터를 추출하고, 정렬 변환을 사용하여 데이터를 정렬하며, OLE DB 대상을 사용하여 다른 테이블에 데이터를 씁니다.  
   
 |로그 항목|메시지|  
@@ -97,22 +102,22 @@ caps.handback.revision: 75
 |**InputName**|정렬 변환에 대한 입력의 **Name** 속성 값입니다.|정렬 입력|  
 |**RowsSent**|정렬 변환의 입력으로 보내지는 행 수입니다.|76|  
   
-## 데이터 흐름 태스크 구성  
+## <a name="configuration-of-the-data-flow-task"></a>데이터 흐름 태스크 구성  
  **속성** 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  **속성** 창에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
--   [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+-   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 데이터 흐름 태스크의 프로그래밍 방식 구성  
+## <a name="programmatic-configuration-of-the-data-flow-task"></a>데이터 흐름 태스크의 프로그래밍 방식 구성  
  패키지에 데이터 흐름 태스크를 프로그래밍 방식으로 추가하고 데이터 흐름 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [프로그래밍 방식으로 데이터 흐름 태스크 추가](../../integration-services/building-packages-programmatically/adding-the-data-flow-task-programmatically.md)  
   
-## 관련 작업  
- [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)  
+## <a name="related-tasks"></a>관련 작업  
+ [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  technet.microsoft.com의 비디오, [분산 데이터 배포자](http://go.microsoft.com/fwlink/?LinkID=226278&clcid=0x409)  
   
   

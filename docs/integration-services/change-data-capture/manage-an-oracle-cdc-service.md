@@ -1,24 +1,29 @@
 ---
 title: "Oracle CDC Service 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "createSrv"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- createSrv
 ms.assetid: 5972cee3-b1a9-4c56-aed6-bdddf84af283
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ece331cf561da80bf56df914fec6f42159ade23e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle CDC Service 관리
+# <a name="manage-an-oracle-cdc-service"></a>Oracle CDC Service 관리
   CDC Service 구성 콘솔을 사용하여 특정 CDC Service를 관리할 수 있습니다.  
   
  **작업할 CDC Service를 선택하려면**  
@@ -37,10 +42,10 @@ caps.handback.revision: 8
   
      작업할 CDC Service를 마우스 오른쪽 단추로 클릭하고 원하는 동작을 선택할 수도 있습니다. [What can you do with a CDC Service](../../integration-services/change-data-capture/manage-an-oracle-cdc-service.md#BKMK_WhatcandowithCDCService)을 참조하세요.  
   
-##  <a name="BKMK_WhatcandowithCDCService"></a> CDC Service에서 수행할 수 있는 작업  
+##  <a name="BKMK_WhatcandowithCDCService"></a> What can you do with a CDC Service  
  CDC서비스에서 작업할 때 다음과 같은 동작을 수행할 수 있습니다.  
   
-### 서비스 삭제  
+### <a name="delete-the-service"></a>서비스 삭제  
  CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **삭제** 를 클릭하여 서비스를 삭제합니다.  
   
  삭제할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택할 수도 있습니다.  
@@ -51,12 +56,12 @@ caps.handback.revision: 8
   
  SQL Server에 연결 대화 상자에 입력해야 하는 데이터에 대한 자세한 내용은 [Connection to SQL Server for Delete](../../integration-services/change-data-capture/connection-to-sql-server-for-delete.md)을 참조하십시오.  
   
-### CDC Service 속성 편집  
+### <a name="edit-the-cdc-service-properties"></a>CDC Service 속성 편집  
  CDC Service 구성 콘솔 오른쪽의 **동작** 창에서 **속성**을 클릭합니다.  
   
  속성을 편집할 CDC Service를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
   
-## 관련 항목:  
- [로컬 CDC Service를 관리하는 방법](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
+## <a name="see-also"></a>관련 항목:  
+ [로컬 CDC Service를 관리 하는 방법](../../integration-services/change-data-capture/how-to-manage-a-local-cdc-service.md)  
   
   

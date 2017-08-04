@@ -1,22 +1,27 @@
 ---
-title: "마스터 데이터 관리자 웹 응용 프로그램 만들기(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "마스터 데이터 관리자 웹 응용 프로그램 만들기 (Master Data Services) 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 caps.latest.revision: 8
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9f2371c46e3eb0140c26357070e39a2f16d2d8f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 마스터 데이터 관리자 웹 응용 프로그램 만들기(Master Data Services)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>마스터 데이터 관리자 웹 응용 프로그램 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램은 마스터 데이터 작업을 하는 사용자 및 MDS를 구성하고 관리하는 관리자를 위한 인터페이스를 제공합니다.  
   
  웹 응용 프로그램은 항상 웹 사이트에 포함되어야 합니다. 웹 응용 프로그램을 만들려면 다음 중 하나를 수행해야 합니다.  
@@ -29,19 +34,19 @@ caps.handback.revision: 8
   
  웹 응용 프로그램을 만든 후 이를 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스에 연결합니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
   
 -   웹 응용 프로그램을 호스트하는 컴퓨터의 요구 사항에 대한 자세한 내용은 [웹 응용 프로그램 요구 사항&#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)을 참조하세요.  
   
-## 새 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
+## <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>새 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
  새 웹 사이트를 만들면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 루트 웹 응용 프로그램입니다. 또한 웹 응용 프로그램이 새 응용 프로그램 풀에 추가됩니다.  
   
 > [!NOTE]  
 >  이 절차를 따르는 경우 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 가상 경로 및 별칭을 지정할 수 없습니다. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]에 대한 가상 경로 및 별칭을 지정하려면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램으로 이미 구성되지 않은 기존 웹 사이트에서 웹 응용 프로그램을 만들어야 합니다.  
   
- 또한 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]에서는 HTTP 바인딩만 사용하여 사이트를 만드는 것이 지원됩니다. HTTPS 바인딩을 추가하려면 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]에서 새 사이트 및 응용 프로그램을 만듭니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램의 보안 설정](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)을 참조하세요.  
+ 또한 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 에서는 HTTP 바인딩만 사용하여 사이트를 만드는 것이 지원됩니다. HTTPS 바인딩을 추가하려면 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 에서 새 사이트 및 응용 프로그램을 만듭니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램의 보안 설정](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md) 을 참조하세요.  
   
-#### 새 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
+#### <a name="to-create-a-master-data-manager-web-application-in-a-new-website"></a>새 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 8
   
 5.  **확인**을 클릭합니다.  
   
-## 기존 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
+## <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>기존 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
  기존 웹 사이트에서 웹 응용 프로그램을 만드는 경우 웹 응용 프로그램의 가상 경로 및 별칭을 선택할 수 있습니다. 이 웹 응용 프로그램은 새 응용 프로그램 풀에 추가됩니다.  
   
-#### 기존 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
+#### <a name="to-create-a-master-data-manager-web-application-in-an-existing-website"></a>기존 웹 사이트에서 마스터 데이터 관리자 웹 응용 프로그램을 만들려면  
   
 1.  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
@@ -70,13 +75,13 @@ caps.handback.revision: 8
   
 6.  **확인**을 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
   
 -   웹 응용 프로그램을 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스와 연결합니다. 자세한 내용은 [Master Data Services 데이터베이스와 웹 응용 프로그램 연결](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md)을 참조하세요.  
   
 -   필요에 따라 SSL(Secure Sockets Layer)을 사용하여 콘텐츠를 암호화하려는 경우 HTTPS 바인딩을 사용하도록 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 호스트하는 웹 사이트를 구성합니다. IIS 관리자와 같은 IIS(인터넷 정보 서비스) 도구를 사용하여 웹 서버에 대한 서버 인증서를 구성하고 사이트에 대한 HTTPS 바인딩 및 SSL 설정을 구성해야 합니다. 자세한 내용은 [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

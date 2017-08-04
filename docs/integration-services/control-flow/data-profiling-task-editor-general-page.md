@@ -1,26 +1,31 @@
 ---
-title: "데이터 프로파일링 태스크 편집기(일반 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.general.f1"
-helpviewer_keywords: 
-  - "데이터 프로파일링 태스크 편집기"
+title: "데이터 프로 파일링 태스크 편집기 (일반 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.general.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
+ms.openlocfilehash: bed1fa78db9ee0beca66efe57f088d1d74d377f2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터 프로파일링 태스크 편집기(일반 페이지)
+# <a name="data-profiling-task-editor-general-page"></a>데이터 프로파일링 태스크 편집기(일반 페이지)
   **데이터 프로파일링 태스크 편집기** 의 **일반** 페이지를 사용하여 다음 옵션을 구성할 수 있습니다.  
   
 -   프로필 출력의 대상을 지정합니다.  
@@ -37,14 +42,14 @@ caps.handback.revision: 19
   
 3.  **데이터 프로파일링 태스크 편집기**에서 **일반**을 클릭합니다.  
   
-## 데이터 프로파일링 옵션  
+## <a name="data-profiling-options"></a>데이터 프로파일링 옵션  
  **Timeout**  
  데이터 프로파일링 태스크가 시간 초과되어 실행이 중지되는 시간(초)을 지정합니다. 기본값은 0으로 제한 시간이 없음을 나타냅니다.  
   
-## 대상 옵션  
+## <a name="destination-options"></a>대상 옵션  
   
 > [!IMPORTANT]  
->  출력 파일에는 데이터베이스와 해당 데이터베이스에 포함된 데이터에 대한 중요 데이터가 포함될 수 있습니다. 이 파일을 보다 안전하게 보호하는 방법에 대한 제안 사항은 [패키지에서 사용되는 파일 액세스](../../integration-services/security/access-to-files-used-by-packages.md)를 참조하세요.  
+>  출력 파일에는 데이터베이스와 해당 데이터베이스에 포함된 데이터에 대한 중요 데이터가 포함될 수 있습니다. 이 파일을 보다 안전하게 보호하는 방법에 대한 제안 사항은 [패키지에서 사용되는 파일 액세스](../../integration-services/security/security-overview-integration-services.md#files)를 참조하세요.  
   
  **DestinationType**  
  데이터 프로필 출력을 파일이나 변수에 저장할 것인지 여부를 지정합니다.  
@@ -54,12 +59,12 @@ caps.handback.revision: 19
 |**FileConnection**|파일 연결 관리자에서 지정한 위치에 있는 파일에 프로필 출력을 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 파일 연결 관리자를 지정합니다.|  
 |**변수**|프로필 출력을 패키지 변수에 저장합니다.<br /><br /> 참고: **Destination** 옵션에서 사용할 패키지 변수를 지정합니다.|  
   
- **대상**  
+ **Destination**  
  데이터 프로필 출력을 포함할 파일 연결 관리자 또는 패키지 변수를 지정합니다.  
   
--   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택하거나 \<새 파일 연결>을 선택하여 새 파일 연결 관리자를 만듭니다.  
+-   **DestinationType** 옵션이 **FileConnection**으로 설정된 경우 **Destination** 옵션에 사용 가능한 파일 연결 관리자가 표시됩니다. 이러한 연결 관리자 중 하나를 선택 하거나 선택 \<새 파일 연결 > 새 파일 연결 관리자를 만듭니다.  
   
--   **DestinationType** 옵션이 **Variable**로 설정된 경우 **Destination** 옵션에 사용 가능한 패키지 변수가 **Destination** 목록으로 표시합니다. 이러한 변수 중 하나를 선택하거나 \<새 변수>를 선택하여 새 변수를 만듭니다.  
+-   **DestinationType** 옵션이 **Variable**로 설정된 경우 **Destination** 옵션에 사용 가능한 패키지 변수가 **Destination** 목록으로 표시합니다. 이러한 변수 중 하나를 선택 하거나 선택 \<새 변수 > 새 변수를 만듭니다.  
   
  **OverwriteDestination**  
  출력 파일이 이미 있는 경우 덮어쓸 것인지 여부를 지정합니다. 기본값은 **False**입니다. 이 속성의 값은 DestinationType 옵션이 FileConnection으로 설정된 경우에만 사용됩니다. DestinationType 옵션이 Variable로 설정된 경우 태스크에서는 변수의 이전 값을 항상 덮어씁니다.  
@@ -67,7 +72,7 @@ caps.handback.revision: 19
 > [!IMPORTANT]  
 >  출력 파일 이름을 바꾸거나 **OverwriteDestination** 속성의 값을 **True**로 변경하지 않고 데이터 프로파일링 태스크를 두 번 이상 실행하려고 하면 출력 파일이 이미 있다는 메시지와 함께 태스크가 실패합니다.  
   
-## 다른 옵션  
+## <a name="other-options"></a>다른 옵션  
  **빠른 프로필**  
  **단일 테이블 빠른 프로필 형식**을 표시합니다. 이 형식은 기본 설정을 사용하여 단일 테이블 또는 뷰를 프로파일링하는 태스크를 단순화합니다. 자세한 내용은 [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)을 참조하세요.  
   
@@ -75,10 +80,10 @@ caps.handback.revision: 19
  데이터 프로필 뷰어를 엽니다. 독립 실행형 데이터 프로필 뷰어에는 데이터 프로파일링 태스크의 데이터 프로필 출력이 표시됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 내에서 데이터 프로파일링 태스크를 실행하고 데이터 프로필을 계산한 후에 이러한 프로필 출력을 볼 수 있습니다.  
   
 > [!NOTE]  
->  또한 *\<드라이브>*:\Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn 폴더에서 DataProfileViewer.exe를 실행하여 데이터 프로필 뷰어를 열 수도 있습니다.  
+>  폴더에서 DataProfileViewer.exe를 실행 하 여 데이터 프로필 뷰어를 열 수도 있습니다  *\<드라이브 >*: \Program Files (x86) | Program Files\Microsoft SQL Server\110\DTS\Binn입니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)   
- [데이터 프로파일링 태스크 편집기&#40;프로필 요청 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
+ [데이터 작업 편집기 &#40; 프로 파일링 프로필 요청 페이지 &#41;](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
   
   

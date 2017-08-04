@@ -1,32 +1,37 @@
 ---
 title: "OLE DB 대상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbdest.f1"
-helpviewer_keywords: 
-  - "빠른 로드 데이터 액세스 모드 [Integration Services]"
-  - "OLE DB 대상 [Integration Services]"
-  - "빠른 로드 옵션 [Integration Services]"
-  - "빠른 로드 옵션 [Integration Services]"
-  - "대상 [Integration Services], OLE DB"
-  - "빠른 로드 데이터 액세스 모드 [Integration Services]"
-  - "데이터 삽입"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbdest.f1
+helpviewer_keywords:
+- fast-load data access mode [Integration Services]
+- OLE DB destination [Integration Services]
+- fast load options [Integration Services]
+- fast-load options [Integration Services]
+- destinations [Integration Services], OLE DB
+- fast load data access mode [Integration Services]
+- inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
 caps.latest.revision: 79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 79
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a16dc276a0ed875c2343bf0b5de7739e3c2955a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB 대상
+# <a name="ole-db-destination"></a>OLE DB 대상
   OLE DB 대상은 데이터베이스 테이블이나 뷰 또는 SQL 명령을 사용하여 다양한 OLE DB 호환 데이터베이스로 데이터를 로드합니다. 예를 들어 OLE DB 원본은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블로 데이터를 로드할 수 있습니다.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 79
 > [!NOTE]  
 >  OLE DB 대상은 매개 변수를 지원하지 않습니다. 매개 변수가 있는 INSERT 문을 실행해야 하는 경우 OLE DB 명령 변환을 사용하십시오. 자세한 내용은 [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md)을 참조하세요.  
   
- OLE DB 대상에서 DBCS(더블바이트 문자 집합)를 사용하는 문자 집합이 로드되는 경우 데이터 액세스 모드에 빠른 로드 옵션이 사용되지 않고 OLE DB 연결 관리자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLOLEDB(OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])가 사용되는 경우 데이터가 손상될 수 있습니다. DBCS 데이터의 무결성을 보장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하도록 OLE DB 연결 관리자를 구성하거나 **테이블 또는 뷰 - 빠른 로드** 또는 **테이블 이름 또는 뷰 이름 변수 - 빠른 로드**와 같은 빠른 로드 액세스 모드 중 하나를 사용해야 합니다. 두 옵션은 모두 **OLE DB 대상 편집기** 대화 상자에서 사용할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체 모델을 프로그래밍하는 경우 AccessMode 속성을 **FastLoad를 사용한 OpenRowset** 또는 **변수와 FastLoad를 사용한 OpenRowset**으로 설정해야 합니다.  
+ OLE DB 대상에서 DBCS(더블바이트 문자 집합)를 사용하는 문자 집합이 로드되는 경우 데이터 액세스 모드에 빠른 로드 옵션이 사용되지 않고 OLE DB 연결 관리자에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLOLEDB(OLE DB Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )가 사용되는 경우 데이터가 손상될 수 있습니다. DBCS 데이터의 무결성을 보장하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하도록 OLE DB 연결 관리자를 구성하거나 **테이블 또는 뷰 - 빠른 로드** 또는 **테이블 이름 또는 뷰 이름 변수 - 빠른 로드**와 같은 빠른 로드 액세스 모드 중 하나를 사용해야 합니다. 두 옵션은 모두 **OLE DB 대상 편집기** 대화 상자에서 사용할 수 있습니다. [!INCLUDE[ssIS](../../includes/ssis-md.md)] 개체 모델을 프로그래밍하는 경우 AccessMode 속성을 **FastLoad를 사용한 OpenRowset**또는 **변수와 FastLoad를 사용한 OpenRowset**으로 설정해야 합니다.  
   
 > [!NOTE]  
 >  OLE DB 대상에서 데이터를 삽입할 대상 테이블을 만들기 위해 **디자이너에서** OLE DB 대상 편집기 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 대화 상자를 사용하는 경우에는 새로 만든 테이블을 수동으로 선택해야 할 수도 있습니다. DB2용 OLE DB 공급자와 같은 OLE DB 공급자에서 테이블 이름에 스키마 식별자를 자동으로 추가하는 경우에는 이렇게 테이블을 수동으로 선택해야 합니다.  
@@ -65,7 +70,7 @@ caps.handback.revision: 79
   
  데이터 형식에 대한 자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
   
-## 빠른 로드 옵션  
+## <a name="fast-load-options"></a>빠른 로드 옵션  
  OLE DB 대상에서 빠른 로드 데이터 액세스 모드를 사용하는 경우 대상에 대해 사용자 인터페이스 **OLE DB 대상 편집기**에서 다음과 같은 빠른 로드 옵션을 지정할 수 있습니다.  
   
 -   가져온 데이터 파일에서 ID 값을 유지하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 할당된 고유 값을 사용합니다.  
@@ -87,18 +92,18 @@ caps.handback.revision: 79
   
 |빠른 로드 옵션|Description|  
 |----------------------|-----------------|  
-|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 이 옵션은 **KILOBYTES_PER_BATCH** = \<양의 정수 값**>** 형식으로 입력합니다.|  
-|FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS** 형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
-|ORDER|입력 데이터 저장 방식을 지정합니다. 이 옵션은 ORDER \<열 이름> ASC&#124;DESC 형식으로 입력합니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
+|KILOBYTES_PER_BATCH|삽입할 크기(KB)를 지정합니다. 옵션은 폼 **KILOBYTES_PER_BATCH** = \<양의 정수 값**>**합니다.|  
+|FIRE_TRIGGERS|테이블 삽입에 대한 트리거 시작 여부를 지정합니다. 이 옵션은 **FIRE_TRIGGERS**형식으로 입력합니다. 이 옵션이 있으면 트리거가 시작됨을 나타냅니다.|  
+|ORDER|입력 데이터 저장 방식을 지정합니다. 옵션은 폼 순서 \<열 이름 > ASC &#124; DESC입니다. 열 수에 상관없이 나열할 수 있으며 정렬 순서를 포함할 수도 있습니다. 정렬 순서를 생략하면 삽입 작업에서는 데이터가 정렬되지 않은 것으로 간주합니다.<br /><br /> 참고: ORDER 옵션을 사용하여 테이블의 클러스터형 인덱스에 따라 입력 데이터를 정렬하면 성능을 개선할 수 있습니다.|  
   
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 키워드는 일반적으로 대문자를 사용하여 입력하지만 키워드는 대/소문자를 구분하지 않습니다.  
   
  빠른 로드 옵션에 대한 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
   
-## OLE DB 대상 문제 해결  
+## <a name="troubleshooting-the-ole-db-destination"></a>OLE DB 대상 문제 해결  
  OLE DB 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하면 OLE DB 대상이 외부 데이터 원본에 데이터를 저장할 때 발생하는 문제를 해결할 수 있습니다. OLE DB 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   
-## OLE DB 대상 구성  
+## <a name="configuring-the-ole-db-destination"></a>OLE DB 대상 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  **OLE DB 대상 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
@@ -111,7 +116,7 @@ caps.handback.revision: 79
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [OLE DB 사용자 지정 속성](../../integration-services/data-flow/ole-db-custom-properties.md)  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 79
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [OLE DB 원본](../../integration-services/data-flow/ole-db-source.md)  
   
  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)  

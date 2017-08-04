@@ -1,24 +1,29 @@
 ---
-title: "ADO NET 대상 편집기(오류 출력 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.adonetdest.erroroutput.f1"
+title: "ADO NET 대상 편집기 (오류 출력 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
 caps.latest.revision: 17
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1379c364be49a528191910c6af02fff7a5324d81
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ADO NET 대상 편집기(오류 출력 페이지)
+# <a name="ado-net-destination-editor-error-output-page"></a>ADO NET 대상 편집기(오류 출력 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 지정할 수 있습니다.  
   
  ADO NET 대상에 대한 자세한 내용은 [ADO NET Destination](../../integration-services/data-flow/ado-net-destination.md)을 참조하십시오.  
@@ -31,7 +36,7 @@ caps.handback.revision: 17
   
 3.  **ADO NET 대상 편집기**에서 **오류 출력**을 클릭합니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **입력 또는 출력**  
  입력 이름을 표시합니다.  
   
@@ -55,8 +60,8 @@ caps.handback.revision: 17
  **적용**  
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
-## 관련 항목:  
- [ADO NET 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)   
- [ADO NET 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [ADO NET 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/ado-net-destination-editor-connection-manager-page.md)   
+ [ADO NET 대상 편집기 &#40; 매핑 페이지 &#41;](../../integration-services/data-flow/ado-net-destination-editor-mappings-page.md)  
   
   

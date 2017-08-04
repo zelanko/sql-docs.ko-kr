@@ -1,31 +1,36 @@
 ---
-title: "메시지 큐 태스크 편집기(보내기 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.msgqueuetask.send.f1"
-helpviewer_keywords: 
-  - "메시지 큐 태스크 편집기"
+title: "메시지 큐 태스크 편집기 (보내기 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msgqueuetask.send.f1
+helpviewer_keywords:
+- Message Queue Task Editor
 ms.assetid: 565aa079-ac44-4407-8efc-cddab839de30
 caps.latest.revision: 37
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d0914b6ab2222fa91d7db229970b081d4a43314d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 메시지 큐 태스크 편집기(보내기 페이지)
-   **메시지 큐 태스크 편집기** 대화 상자의 **보내기** 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 메시지를 보내도록 메시지 큐 태스크를 구성할 수 있습니다.  
+# <a name="message-queue-task-editor-send-page"></a>메시지 큐 태스크 편집기(보내기 페이지)
+  **메시지 큐 태스크 편집기** 대화 상자의 **보내기** 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 메시지를 보내도록 메시지 큐 태스크를 구성할 수 있습니다.  
   
  이 태스크에 대한 자세한 내용은 [Message Queue Task](../../integration-services/control-flow/message-queue-task.md)를 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **UseEncryption**  
  메시지 암호화 여부를 나타냅니다. 기본값은 **False**입니다.  
   
@@ -47,26 +52,26 @@ caps.handback.revision: 37
 |**변수 메시지**|메시지가 변수에 저장됩니다. 이 값을 선택하면 동적 옵션 **VariableMessage**가 표시됩니다.|  
 |**문자열 메시지**|메시지가 메시지 큐 태스크에 저장됩니다. 이 값을 선택하면 동적 옵션 **StringMessage**가 표시됩니다.|  
   
-## MessageType 동적 옵션  
+## <a name="messagetype-dynamic-options"></a>MessageType 동적 옵션  
   
-### MessageType = 데이터 파일 메시지  
+### <a name="messagetype--data-file-message"></a>MessageType = 데이터 파일 메시지  
  **DataFileMessage**  
- 데이터 파일의 경로를 입력하거나 줄임표**(...)**를 클릭한 다음 파일을 찾습니다.  
+ 데이터 파일의 경로를 입력하거나 줄임표 **(...)** 를 클릭한 다음 파일을 찾습니다.  
   
-### MessageType = 변수 메시지  
+### <a name="messagetype--variable-message"></a>MessageType = 변수 메시지  
  **VariableMessage**  
- 변수 이름을 입력하거나 줄임표**(...)**를 클릭한 다음 변수를 선택합니다. 변수는 쉼표로 구분됩니다.  
+ 변수 이름을 입력하거나 줄임표 **(...)** 를 클릭한 다음 변수를 선택합니다. 변수는 쉼표로 구분됩니다.  
   
  **관련 항목:** 변수 선택  
   
-### MessageType = 문자열 메시지  
+### <a name="messagetype--string-message"></a>MessageType = 문자열 메시지  
  **StringMessage**  
- 문자열 메시지를 입력하거나 줄임표**(...)**를 클릭한 다음 **문자열 메시지 입력** 대화 상자에 메시지를 입력합니다.  
+ 문자열 메시지를 입력하거나 줄임표 **(...)** 를 클릭한 다음 **문자열 메시지 입력** 대화 상자에 메시지를 입력합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [메시지 큐 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
- [메시지 큐 태스크 편집기&#40;받기 페이지&#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
+ [메시지 큐 태스크 편집기 &#40; 일반 페이지 &#41;](../../integration-services/control-flow/message-queue-task-editor-general-page.md)   
+ [메시지 큐 태스크 편집기 &#40; 수신 페이지 &#41;](../../integration-services/control-flow/message-queue-task-editor-receive-page.md)   
  [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
   

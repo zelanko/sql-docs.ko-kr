@@ -1,25 +1,30 @@
 ---
-title: "SAP BW 원본 편집기(고급 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwsource.advanced.f1"
+title: "SAP BW 원본 편집기 (고급 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwsource.advanced.f1
 ms.assetid: 44f3c991-9e8f-4126-a9a2-2d9da779fb11
 caps.latest.revision: 10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac7757987c169f803f3b0adda7f27c94f090d7db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 원본 편집기(고급 페이지)
-  **SAP BW 원본 편집기**의 **고급** 페이지를 사용하여 문자열 변환 규칙과 제한 시간을 지정하고 특정 요청 ID의 상태를 다시 설정할 수 있습니다.  
+# <a name="sap-bw-source-editor-advanced-page"></a>SAP BW 원본 편집기(고급 페이지)
+  **SAP BW 원본 편집기** 의 **고급** 페이지를 사용하여 문자열 변환 규칙과 제한 시간을 지정하고 특정 요청 ID의 상태를 다시 설정할 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 원본 구성 요소에 대한 자세한 내용은 [SAP BW 원본](../../integration-services/data-flow/sap-bw-source.md)을 참조하세요.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 10
   
 3.  **SAP BW 원본 편집기**에서 **고급** 을 클릭하여 편집기의 **고급** 페이지를 엽니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  원본을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
@@ -55,7 +60,7 @@ caps.handback.revision: 10
  원본이 대기해야 하는 최대 시간(초)을 지정합니다.  
   
 > [!NOTE]  
->  이 옵션은 편집기의 **연결 관리자** 페이지에서 **실행 모드**의 값으로 **W - 알릴 때까지 대기**를 선택한 경우에만 유효합니다. 자세한 내용은 [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)를 참조하세요.  
+>  이 옵션은 편집기의 **연결 관리자** 페이지에서 **실행 모드** 의 값으로 **W - 알릴 때까지 대기** 를 선택한 경우에만 유효합니다. 자세한 내용은 [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)을 참조하세요.  
   
  **요청 ID**  
  **다시 설정**을 클릭할 때 "G - 녹색"으로 상태를 다시 설정할 요청 ID를 지정합니다.  
@@ -63,10 +68,10 @@ caps.handback.revision: 10
  **다시 설정**  
  확인 메시지를 표시한 후 지정된 요청 ID의 상태를 "G - 녹색"으로 다시 설정할 수 있습니다. 이 옵션은 문제가 발생하고 SAP Netweaver BW 시스템에서 노란색 또는 빨간색 상태로 요청에 플래그를 지정한 경우에 유용할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SAP BW 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
- [SAP BW 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
- [SAP BW 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
+ [SAP BW 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
+ [SAP BW 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

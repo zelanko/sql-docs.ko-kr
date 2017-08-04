@@ -1,34 +1,39 @@
 ---
 title: "프로파일러 유틸리티 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "명령 프롬프트 유틸리티 [SQL Server], profiler90 유틸리티"
-  - "profiler90 유틸리티"
-  - "프로파일러 [SQL Server 프로파일러], 시작"
-  - "SQL Server 프로파일러, 시작"
-  - "SQL Server 프로파일러 시작"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- command prompt utilities [SQL Server], profiler90 utility
+- profiler90 utility
+- Profiler [SQL Server Profiler], starting
+- SQL Server Profiler, starting
+- starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
 caps.latest.revision: 42
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7387a32510b879e995b998b1a3e9d56a7e691a3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 프로파일러 유틸리티
+# <a name="profiler-utility"></a>프로파일러 유틸리티
   **profiler** 유틸리티는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구를 실행합니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 응용 프로그램 시작 방법을 제어할 수 있습니다.  
   
 > [!NOTE]  
 >  **profiler** 유틸리티는 추적 스크립팅을 위한 유틸리티가 아닙니다. 자세한 내용은 [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)를 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
@@ -51,7 +56,7 @@ profiler
 ]  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  **/?**  
  **profiler** 인수의 구문 요약 정보를 표시합니다.  
   
@@ -59,7 +64,7 @@ profiler
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 사용자 로그인 ID입니다. 로그인 ID는 대/소문자를 구분합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)].  
+>  [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]을 참조하세요.  
   
  **/P** *password*  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증을 위한 암호를 지정합니다. 사용자가 원하는 대로 지정할 수 있습니다.  
@@ -68,10 +73,10 @@ profiler
  현재 사용자의 자격 증명으로 Windows 인증을 사용하는 연결을 지정합니다.  
   
  **/S**  *sql_server_name*  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 **/S** *sql_server_name*\\*instance_name*을 사용합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 **/S** *sql_server_name*\\*instance_name*을 사용합니다.  
   
  **/A**  *analysis_services_server_name*  
- Analysis Services 인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 **/A** *analysis_services_server_name\instance_name*을 사용합니다.  
+ Analysis Services 인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 명명된 인스턴스에 연결하려면 **/A** *analysis_services_server_name\instance_name*을 사용합니다.  
   
  **/D** *database*  
  연결에 사용할 데이터베이스 이름을 지정합니다. 데이터베이스를 지정하지 않으면 이 옵션은 지정된 사용자의 기본 데이터베이스를 선택합니다.  
@@ -104,11 +109,11 @@ profiler
 |DD|두 자릿수 일|  
 |YY|두 자릿수 연도|  
 |hh|24시간제의 두 자릿수 시간|  
-|mm|두 자릿수 분|  
+|MM|두 자릿수 분|  
 |ss|두 자릿수 초|  
   
 > [!NOTE]  
->  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]에서 **날짜 및 시간 값 표시에 국가별 설정 사용** 옵션이 설정되어 있는 경우 "MM-DD-YY hh:mm:ss" 형식만 사용할 수 있습니다. 이 옵션이 설정되어 있지 않은 경우 "YYYY-MM-DD hh:mm:ss" 날짜 및 시간 형식을 사용해야 합니다.  
+>  **에서** 날짜 및 시간 값 표시에 국가별 설정 사용 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]옵션이 설정되어 있는 경우 "MM-DD-YY hh:mm:ss" 형식만 사용할 수 있습니다. 이 옵션이 설정되어 있지 않은 경우 "YYYY-MM-DD hh:mm:ss" 날짜 및 시간 형식을 사용해야 합니다.  
   
  **/R**  
  추적 파일 롤오버를 사용합니다.  
@@ -116,14 +121,14 @@ profiler
  **/Z**  *file_size*  
  추적 파일 크기(MB)를 지정합니다. 기본 크기는 5MB입니다. 롤오버를 사용하는 경우 모든 롤오버 파일이 이 인수에서 지정한 값으로 제한됩니다.  
   
-## 주의  
- 특정 템플릿을 사용하여 추적을 시작하려면 **/S**와 **/T** 옵션을 함께 사용합니다. 예를 들어 MyServer\MyInstance에 있는 Standard 템플릿을 사용하여 추적을 시작하려면 명령 프롬프트에서 다음을 입력합니다.  
+## <a name="remarks"></a>주의  
+ 특정 템플릿을 사용하여 추적을 시작하려면 **/S** 와 **/T** 옵션을 함께 사용합니다. 예를 들어 MyServer\MyInstance에 있는 Standard 템플릿을 사용하여 추적을 시작하려면 명령 프롬프트에서 다음을 입력합니다.  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [명령 프롬프트 유틸리티 참조&#40;데이터베이스 엔진#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

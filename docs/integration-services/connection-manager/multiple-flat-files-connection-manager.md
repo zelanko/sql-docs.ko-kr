@@ -1,32 +1,37 @@
 ---
 title: "다중 플랫 파일 연결 관리자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "다중 플랫 파일 연결 관리자"
-  - "연결 [Integration Services], 플랫 파일"
-  - "플랫 파일"
-  - "플랫 파일 연결 [Integration Services]"
-  - "연결 관리자 [Integration Services], 다중 플랫 파일"
-  - "다중 플랫 파일 연결"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Multiple Flat Files connection manager
+- connections [Integration Services], flat files
+- flat files
+- flat file connections [Integration Services]
+- connection managers [Integration Services], Multiple Flat Files
+- multiple flat file connections
 ms.assetid: 31fc3f7a-d323-44f5-a907-1fa3de66631a
 caps.latest.revision: 41
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04900b28471f2dc4b0eb7d06fcc7f0c5acf69468
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 다중 플랫 파일 연결 관리자
+# <a name="multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자
   다중 플랫 파일 연결 관리자를 사용하면 패키지에서 다중 플랫 파일의 데이터에 액세스할 수 있습니다. 예를 들어 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 플랫 파일 원본에서 다중 플랫 파일 연결 관리자를 사용할 수 있습니다. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다.  
   
- 패키지에 다중 플랫 파일 연결 관리자를 추가하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 런타임에 다중 플랫 파일 연결로 확인되는 연결 관리자를 만들고, 다중 플랫 파일 연결 관리자의 속성을 설정하며, 다중 플랫 파일 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
+ 패키지에 다중 플랫 파일 연결 관리자를 추가하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 런타임에 다중 플랫 파일 연결로 확인되는 연결 관리자를 만들고, 다중 플랫 파일 연결 관리자의 속성을 설정하며, 다중 플랫 파일 연결 관리자를 패키지의 **Connections** 컬렉션에 추가합니다.  
   
  연결 관리자의 **ConnectionManagerType** 속성이 **MULTIFLATFILE**로 설정됩니다.  
   
@@ -56,24 +61,24 @@ caps.handback.revision: 41
   
  연결 관리자를 사용하는 플랫 파일 원본을 추가 및 구성한 후에 다중 플랫 파일 연결 관리자에서 열 길이를 업데이트한 경우에는 플랫 파일 원본에서 출력 열의 크기를 수동으로 조정하지 않아도 됩니다. **플랫 파일 원본** 대화 상자를 열면 플랫 파일 원본에 열 메타데이터를 동기화하는 옵션이 제공됩니다.  
   
-## 다중 플랫 파일 연결 관리자 구성  
+## <a name="configuration-of-the-multiple-flat-files-connection-manager"></a>다중 플랫 파일 연결 관리자 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [다중 플랫 파일 연결 관리자 편집기&#40;일반 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-general-page.md)  
   
--   [다중 플랫 파일 연결 관리자 편집기&#40;열 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
+-   [다중 플랫 파일 연결 관리자 편집기 &#40; 열 페이지 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-columns-page.md)  
   
--   [다중 플랫 파일 연결 관리자 편집기&#40;고급 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+-   [다중 플랫 파일 연결 관리자 편집기 &#40; 고급 페이지 &#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
 -   [다중 플랫 파일 연결 관리자 편집기&#40;미리 보기 페이지&#41;](../../integration-services/connection-manager/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
- 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)를 참조하세요.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [플랫 파일 원본](../../integration-services/data-flow/flat-file-source.md)   
  [플랫 파일 대상](../../integration-services/data-flow/flat-file-destination.md)   
- [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
+ [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

@@ -1,26 +1,31 @@
 ---
-title: "표시된 열 추적으로 구성(SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "표시된 추적 열 구성 [SQL Server]"
-  - "표시된 추적 열 정렬"
-  - "추적 [SQL Server], 데이터 열"
+title: "추적 (SQL Server Profiler)에 표시 된 열 구성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- organizing trace columns displayed [SQL Server]
+- arranging trace columns displayed
+- traces [SQL Server], data columns
 ms.assetid: 6b923f94-0eb1-467e-82f6-ceed43f77017
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f1c097e900a9ed76bb5160ecab37238344d7a33
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 표시된 열 추적으로 구성(SQL Server Profiler)
+# <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>표시된 열 추적으로 구성(SQL Server Profiler)
   추적 테이블이나 **추적 파일 속성** 대화 상자에서 **열 구성** 을 선택하는 방법으로 또는 추적을 정의할 때 추적에서 데이터 열을 그룹화할 수 있습니다. 데이터 열을 그룹화하면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 추적 출력을 더 정확히 분석할 수 있습니다. 자세한 내용은 [SQL Server Profiler를 사용하여 추적 보기 및 분석](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)을 참조하세요.  
   
  **열 구성** 을 사용하여 선택한 데이터 열을 기준으로 추적 이벤트를 그룹화하거나 그룹화한 후 집계할 수 있습니다.  
@@ -36,14 +41,14 @@ caps.handback.revision: 14
   
 -   그룹화하려는 열을 하나만 선택하여 추적 이벤트를 그룹화하고 집계합니다. 그룹화할 데이터 열을 하나만 선택하는 경우 추적 창에는 데이터 열의 값을 기준으로 그룹화된 이벤트가 표시되고 그 아래에서 모든 이벤트가 축소됩니다. 그룹화를 위해 선택한 데이터 열에서 이벤트의 왼쪽에 더하기 기호(**+**)가 나타나고 그 아래에 축소된 이벤트 수가 괄호로 묶여 이벤트의 오른쪽에 나타납니다. 그룹화를 위해 **EventClass** 데이터 열을 선택한 경우 추적 창 표 형태가 나타나는 방법을 보여 줍니다. 모든 이벤트는 **EventClass** 데이터 열 아래에 구성됩니다. 이벤트를 모두 보려면 더하기 기호를 클릭하여 확장하고 해당 유형의 모든 이벤트 클래스를 표시합니다.  
   
-|EventClass|StartTime|기간|ClientProcessID|  
+|EventClass|StartTime|Duration|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
 |+ ExistingConnection(6)||||  
 |+ SQL:BatchStarting(25)||||  
 |+ SQL:StmtCompleted(11)||||  
 |+ SQL:SmtStarting(21)||||  
   
-### 추적에 표시된 데이터 열을 그룹화하려면  
+### <a name="to-group-data-columns-displayed-in-a-trace"></a>추적에 표시된 데이터 열을 그룹화하려면  
   
 1.  기존 추적 파일이나 테이블을 엽니다.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 14
   
 7.  표시된 추적 데이터의 그룹화를 해제하려면 **보기** 메뉴에서 **그룹화 보기** 를 클릭하여 선택을 취소합니다. 그룹화 보기로 되돌리려면 **보기** 메뉴에서 **그룹화 보기** 를 다시 클릭하여 다시 선택합니다.  
   
-### 추적의 데이터 열을 그룹화하고 집계하려면  
+### <a name="to-group-and-aggregate-data-columns-in-a-trace"></a>추적의 데이터 열을 그룹화하고 집계하려면  
   
 1.  기존 추적 파일이나 테이블을 엽니다.  
   
@@ -81,9 +86,9 @@ caps.handback.revision: 14
   
 7.  추적 데이터의 일반 보기로 되돌리려면 **보기** 메뉴에서 **집계 보기** 를 클릭하여 선택을 취소합니다. 집계 보기로 되돌리려면 **보기** 메뉴에서 **집계 보기** 를 다시 클릭하여 다시 선택합니다. **보기** 메뉴에서 **그룹화 보기** 를 클릭해도 그룹화된 추적 이벤트를 축소하지 않고 표시할 수 있습니다.  
   
-## 참고 항목  
- [추적 만들기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
- [추적 테이블 열기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+## <a name="see-also"></a>참고 항목  
+ [추적 &#40; 만들기 SQL Server Profiler &#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [추적 테이블 &#40; 열기 SQL Server Profiler &#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [추적 파일 열기&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  
   
   

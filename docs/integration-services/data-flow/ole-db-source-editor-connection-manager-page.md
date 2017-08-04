@@ -1,26 +1,31 @@
 ---
-title: "OLE DB 원본 편집기(연결 관리자 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.oledbsourceadapter.connection.f1"
-helpviewer_keywords: 
-  - "OLE DB 원본 편집기"
+title: "OLE DB 원본 편집기 (연결 관리자 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbsourceadapter.connection.f1
+helpviewer_keywords:
+- OLE DB Source Editor
 ms.assetid: 53699902-8699-4547-b56b-a5b2079e98b6
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f996b8e5fd5d361959a1c972718b730896a2d805
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# OLE DB 원본 편집기(연결 관리자 페이지)
+# <a name="ole-db-source-editor-connection-manager-page"></a>OLE DB 원본 편집기(연결 관리자 페이지)
   **OLE DB 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 원본의 OLE DB 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
   
 > [!NOTE]  
@@ -33,7 +38,7 @@ caps.handback.revision: 42
   
  OLE DB 원본에 대한 자세한 내용은 [OLE DB Source](../../integration-services/data-flow/ole-db-source.md)을 참조하십시오.  
   
-## OLE DB 원본 편집기 열기(연결 관리자 페이지)  
+## <a name="open-the-ole-db-source-editor-connection-manager-page"></a>OLE DB 원본 편집기 열기(연결 관리자 페이지)  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 OLE DB 원본을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 추가합니다.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 42
   
 3.  **연결 관리자**를 클릭합니다.  
   
-## 정적 옵션  
+## <a name="static-options"></a>정적 옵션  
  **OLE DB 연결 관리자**  
  목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 42
 |옵션|Description|  
 |------------|-----------------|  
 |테이블 또는 뷰|OLE DB 데이터 원본에 있는 테이블이나 뷰에서 데이터를 검색합니다.|  
-|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](../Topic/Use%20Variables%20in%20Packages.md)|  
+|테이블 이름 또는 뷰 이름 변수|변수에 테이블 또는 뷰 이름을 지정합니다.<br /><br /> **관련 정보:** [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |SQL 명령|SQL 쿼리를 사용하여 OLE DB 데이터 원본에서 데이터를 검색합니다.|  
 |변수를 사용한 SQL 명령|변수에 SQL 쿼리 텍스트를 지정합니다.|  
   
@@ -62,26 +67,26 @@ caps.handback.revision: 42
  **데이터 보기** 대화 상자를 사용하여 결과를 미리 봅니다. **미리 보기** 에는 최대 200개의 행이 표시될 수 있습니다.  
   
 > [!NOTE]  
->  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 \<값이 너무 커서 표시할 수 없습니다> 또는 System.Byte[] 값이 표시됩니다. 전자는 SQL OLE DB 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 &lt; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
+>  데이터를 미리 보면 CLR 사용자 정의 형식의 열에 데이터가 포함되지 않습니다. 대신 값 \<너무 커서 표시할 값 > 또는 System.Byte 표시 합니다. 전자는 SQL OLE DB 공급자를 사용하여 데이터 원본에 액세스하는 경우 표시되고 후자는 &lt; [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자를 사용하는 경우 표시됩니다.  
   
-## 데이터 액세스 모드 동적 옵션  
+## <a name="data-access-mode-dynamic-options"></a>데이터 액세스 모드 동적 옵션  
   
-### 데이터 액세스 모드 = 테이블 또는 뷰  
+### <a name="data-access-mode--table-or-view"></a>데이터 액세스 모드 = 테이블 또는 뷰  
  **테이블 또는 뷰 이름**  
  데이터 원본의 사용 가능한 테이블 또는 뷰 목록에서 테이블 또는 뷰 이름을 선택합니다.  
   
-### 데이터 액세스 모드 = 테이블 이름 또는 뷰 이름 변수  
+### <a name="data-access-mode--table-name-or-view-name-variable"></a>데이터 액세스 모드 = 테이블 이름 또는 뷰 이름 변수  
  **변수 이름**  
  테이블 또는 뷰 이름이 포함된 변수를 선택합니다.  
   
-### 데이터 액세스 모드 = SQL 명령  
+### <a name="data-access-mode--sql-command"></a>데이터 액세스 모드 = SQL 명령  
  **SQL 명령 텍스트**  
  SQL 쿼리 텍스트를 입력하고 **쿼리 작성**을 클릭하여 쿼리를 작성하거나 **찾아보기**를 클릭하여 쿼리 텍스트가 포함된 파일을 찾습니다.  
   
  **매개 변수**  
  쿼리 텍스트에 ?를 매개 변수 자리 표시자로 사용하여 매개 변수가 있는 쿼리를 입력한 경우 **쿼리 매개 변수 설정** 대화 상자를 사용하여 쿼리 입력 매개 변수를 패키지 변수에 매핑합니다.  
   
- **쿼리 작성**  
+ **Build query**  
  **쿼리 작성기** 대화 상자를 사용하여 시각적으로 SQL 쿼리를 생성할 수 있습니다.  
   
  **찾아보기**  
@@ -90,15 +95,15 @@ caps.handback.revision: 42
  **쿼리 구문 분석**  
  쿼리 텍스트의 구문을 확인합니다.  
   
-### 데이터 액세스 모드 = 변수를 사용한 SQL 명령  
+### <a name="data-access-mode--sql-command-from-variable"></a>데이터 액세스 모드 = 변수를 사용한 SQL 명령  
  **변수 이름**  
  SQL 쿼리 텍스트가 포함된 변수를 선택합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)   
- [OLE DB 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)   
- [OLE DB 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)   
- [OLE DB 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)   
+ [OLE DB 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/ole-db-source-editor-columns-page.md)   
+ [OLE DB 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/ole-db-source-editor-error-output-page.md)   
+ [OLE DB 원본을 사용 하 여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-ole-db-source.md)   
  [OLE DB 연결 관리자](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
   

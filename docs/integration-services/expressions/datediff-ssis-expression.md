@@ -1,36 +1,41 @@
 ---
-title: "DATEDIFF(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "DATEDIFF 문"
-  - "날짜 [Integration Services], DATEDIFF"
+title: "DATEDIFF (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- DATEDIFF statement
+- dates [Integration Services], DATEDIFF
 ms.assetid: 449b327f-47c7-4709-8bc6-4ee9a35cc330
 caps.latest.revision: 40
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c771f4788199c26fae2cfe46dfd66a18d67fcb6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# DATEDIFF(SSIS 식)
+# <a name="datediff-ssis-expression"></a>DATEDIFF(SSIS 식)
   지정한 두 날짜 간에 교차되는 날짜와 시간 경계값을 반환합니다. *datepart* 매개 변수는 비교할 날짜 및 시간 범위를 식별합니다.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 DATEDIFF(datepart, startdate, endate)  
 ```  
   
-## 인수  
- *날짜 부분*  
+## <a name="arguments"></a>인수  
+ *datepart*  
  비교하여 값을 반환할 날짜 부분을 지정하는 매개 변수입니다.  
   
  *startdate*  
@@ -39,13 +44,13 @@ DATEDIFF(datepart, startdate, endate)
  *endate*  
  간격의 종료 날짜입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_I4  
   
-## 주의  
+## <a name="remarks"></a>주의  
  다음 표에서는 식 계산기가 인식하는 날짜 부분 및 약어를 나열합니다.  
   
-|날짜 부분|약어|  
+|datepart|약어|  
 |--------------|-------------------|  
 |Year|yy, yyyy|  
 |Quarter|qq, q|  
@@ -67,7 +72,7 @@ DATEDIFF(datepart, startdate, endate)
   
  종료 날짜가 시작 날짜보다 빠르면 음수가 반환됩니다. 시작 날짜와 종료 날짜가 같거나 동일한 간격 내에 있으면 0이 반환됩니다.  
   
-## SSIS 식 예  
+## <a name="ssis-expression-examples"></a>SSIS 식 예  
  이 예에서는 두 날짜 리터럴 사이의 일 수를 계산합니다. 날짜 형식이 "mm/dd/yyyy"이면 7이 반환됩니다.  
   
 ```  
@@ -86,12 +91,12 @@ DATEDIFF("mm", (DT_DBTIMESTAMP)"8/1/2003",GETDATE())
 DATEDIFF("Week", ModifiedDate,@YearEndDate)  
 ```  
   
-## 관련 항목:  
- [DATEADD&#40;SSIS 식&#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
- [DATEPART&#40;SSIS 식&#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
- [DAY&#40;SSIS 식&#41;](../../integration-services/expressions/day-ssis-expression.md)   
- [MONTH&#40;SSIS 식&#41;](../../integration-services/expressions/month-ssis-expression.md)   
- [YEAR&#40;SSIS 식&#41;](../../integration-services/expressions/year-ssis-expression.md)   
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [DATEADD &#40; SSIS 식 &#41;](../../integration-services/expressions/dateadd-ssis-expression.md)   
+ [DATEPART &#40; SSIS 식 &#41;](../../integration-services/expressions/datepart-ssis-expression.md)   
+ [DAY &#40; SSIS 식 &#41;](../../integration-services/expressions/day-ssis-expression.md)   
+ [월 &#40; SSIS 식 &#41;](../../integration-services/expressions/month-ssis-expression.md)   
+ [연도 &#40; SSIS 식 &#41;](../../integration-services/expressions/year-ssis-expression.md)   
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

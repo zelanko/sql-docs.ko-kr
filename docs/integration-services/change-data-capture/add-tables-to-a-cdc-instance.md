@@ -1,24 +1,29 @@
 ---
 title: "CDC 인스턴스에 테이블 추가 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "addTabs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee8cd785cdb0facdba880ee0502ec51508bca618
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# CDC 인스턴스에 테이블 추가
+# <a name="add-tables-to-a-cdc-instance"></a>CDC 인스턴스에 테이블 추가
   테이블 선택 대화 상자를 사용하여 Oracle 원본에서 CDC 인스턴스로 다른 테이블을 추가할 수 있습니다. 선택한 테이블이 속성 편집기의 **테이블** 탭에 있는 목록에 추가됩니다.  
   
  기본적으로 이 대화 상자의 테이블 목록에는 테이블이 포함되어 있지 않습니다. **(모두 선택)** 확인란을 선택하거나 특정 테이블을 검색할 수 있습니다.  
@@ -46,9 +51,9 @@ caps.handback.revision: 9
 > [!NOTE]  
 >  뷰어에서 테이블 목록을 볼 수 있습니다. 뷰어를 사용할 때 정보는 읽기 전용입니다. 또한 뷰어에는 테이블에서 캡처된 열 목록이 포함되어 있습니다. 뷰어에 액세스하는 방법은 [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)을 참조하십시오.  
   
-## 관련 항목:  
- [CDC 인스턴스 속성을 편집하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
- [CDC 인스턴스 관리 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
+## <a name="see-also"></a>관련 항목:  
+ [CDC 인스턴스 속성을 편집 하는 방법](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
+ [CDC 인스턴스를 관리 하는 방법](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [변경 내용을 캡처할 Oracle 테이블 선택](../../integration-services/change-data-capture/select-oracle-tables-for-capturing-changes.md)  
   
   

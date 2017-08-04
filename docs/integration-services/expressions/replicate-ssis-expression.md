@@ -1,48 +1,53 @@
 ---
-title: "REPLICATE(SSIS 식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "REPLICATE 함수"
+title: "REPLICATE (SSIS 식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- REPLICATE function
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 caps.latest.revision: 34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c94e5f4221251b3b931ebabc5076620ba6ab0e7e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# REPLICATE(SSIS 식)
+# <a name="replicate-ssis-expression"></a>REPLICATE(SSIS 식)
   지정한 횟수만큼 복제된 문자 식을 반환합니다. *times* 인수는 정수여야 합니다.  
   
 > [!NOTE]  
 >  REPLICATE 함수는 긴 문자열을 사용하므로 식 길이에서 4000자 제한에 걸릴 가능성이 큽니다. 식의 평가 결과에 Integration Services 데이터 형식 DT_WSTR 또는 DT_STR이 있는 경우 식이 4000자에서 잘립니다. 하위 식의 결과 유형이 DT_STR 또는 DT_WSTR인 경우 전체 식 결과 유형에 관계없이 해당 하위 식이 4000자로 잘립니다. 잘림 결과가 적절하게 처리될 수 있지만 경고나 오류를 일으킬 수도 있습니다. 자세한 내용은 [구문&#40;SSIS&#41;](../../integration-services/expressions/syntax-ssis.md)을 참조하세요.  
   
-## 구문  
+## <a name="syntax"></a>구문  
   
 ```  
   
 REPLICATE(character_expression,times)  
 ```  
   
-## 인수  
+## <a name="arguments"></a>인수  
  *character_expression*  
  복제할 문자 식입니다.  
   
- *곱하기*  
- *character_expression*이 복제되는 횟수를 지정하는 정수 식입니다.  
+ *times*  
+ *character_expression* 이 복제되는 횟수를 지정하는 정수 식입니다.  
   
-## 결과 형식  
+## <a name="result-types"></a>결과 형식  
  DT_WSTR  
   
-## 주의  
- *times*가 0이면 빈 문자열이 반환됩니다.  
+## <a name="remarks"></a>주의  
+ *times* 가 0이면 빈 문자열이 반환됩니다.  
   
  *times* 가 음수이면 오류가 반환됩니다.  
   
@@ -52,7 +57,7 @@ REPLICATE(character_expression,times)
   
  두 인수 중 하나가 Null이면 REPLICATE 결과도 Null입니다.  
   
-## 식 예  
+## <a name="expression-examples"></a>식 예  
  이 예에서는 문자열 리터럴을 3번 복제합니다. 반환 결과는 "Mountain BikeMountain BikeMountain Bike"입니다.  
   
 ```  
@@ -71,7 +76,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## 관련 항목:  
- [함수&#40;SSIS 식&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
+## <a name="see-also"></a>관련 항목:  
+ [함수 &#40; SSIS 식 &#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

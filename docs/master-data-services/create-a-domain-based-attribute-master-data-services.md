@@ -1,30 +1,35 @@
 ---
-title: "도메인 기반 특성 만들기(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도메인 기반 특성 [Master Data Services], 만들기"
-  - "도메인 기반 특성 만들기 [Master Data Services]"
-  - "특성 [Master Data Services], 도메인 기반 특성 만들기"
+title: "도메인 기반 특성 (Master Data Services) 만들기 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- domain-based attributes [Master Data Services], creating
+- creating domain-based attributes [Master Data Services]
+- attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 도메인 기반 특성 만들기(Master Data Services)
+# <a name="create-a-domain-based-attribute-master-data-services"></a>도메인 기반 특성 만들기(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 도메인 기반 특성을 만들어서 엔터티의 멤버로 특성 값을 채웁니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **시스템 관리** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -35,12 +40,12 @@ caps.handback.revision: 12
   
 -   해당 특성을 만들 엔터티가 있어야 합니다. 자세한 내용은 [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)를 참조하세요.  
   
-## 특성 정보  
+## <a name="attribute-information"></a>특성 정보  
  생성되는 각 특성에 대해 열이 7개 포함된 행이 표에 추가됩니다. 다음 표에서는 열을 설명합니다.  
   
 |열|Description|  
 |------------|-----------------|  
-|상태|특성 상태입니다.<br /><br /> 저장을 클릭하면 특성이 업데이트되고 있음을 나타내는 ![Icon for updating status](../master-data-services/media/mds-statusicon-updating.png "Icon for updating status") 이미지가 표시됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생하면 ![Icon for error status](../master-data-services/media/mds-statusicon-error.png "Icon for error status") 이미지가 표시됩니다.<br /><br /> 오류가 발생하지 않으면 상태가 정상이며 ![Icon for OK status](../master-data-services/media/mds-statusicon-ok.png "Icon for OK status") 이미지가 표시됩니다.|  
+|상태|특성 상태입니다.<br /><br /> 저장을 클릭할 때는 ![상태를 업데이트 하는 것에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘") 이미지가 특성이 업데이트 되 고 있음을 나타내는 표시 됩니다.<br /><br /> 만들거나 특성을 편집할 때 오류가 있는 경우는 ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘") 이미지가 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 및 ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘") 이미지가 표시 됩니다.|  
 |이름|특성 이름입니다.|  
 |표시 이름|특성 표시 이름입니다.|  
 |Description|특성 설명입니다.|  
@@ -58,7 +63,7 @@ caps.handback.revision: 12
   
 -   **날짜**: 특성을 마지막으로 업데이트한 날짜와 시간입니다.  
   
-### 도메인 기반 특성을 만들려면  
+### <a name="to-create-a-domain-based-attribute"></a>도메인 기반 특성을 만들려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 12
   
 9. **특성 유형** 목록에서 **도메인 기반**을 선택합니다.  
   
-10. **도메인 엔터티** 목록에서 특성 값을 채우는 데 사용할 엔터티를 선택합니다.  
+10. **도메인 엔터티** 목록에서 특성 값을 채우는 데 사용할 엔터티를 선택합니다. 
   
 11. **리프 멤버용 도메인 기반 특성의 경우 수행 가능한 선택적 단계:** 도메인 기반 특성에 허용되는 값을 제한하는 데 사용되는 필터 부모 특성을 선택합니다.  
   
@@ -96,10 +101,10 @@ caps.handback.revision: 12
   
 13. **저장**을 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [파생 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [특성 이름 및 데이터 형식 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [파생된 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [특성 이름 및 데이터 형식 &#40; 변경 Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [특성 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

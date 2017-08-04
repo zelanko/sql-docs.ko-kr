@@ -1,31 +1,36 @@
 ---
-title: "전역 추적 옵션 설정(SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "전역 추적 옵션 [SQL Server]"
+title: "전역 추적 옵션 (SQL Server Profiler) 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global trace options [SQL Server]
 ms.assetid: 2854608a-c3c7-4eb8-b567-034bfec4b1a9
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e243eb89d6006d82191e73577ed18dd9a5840bd9
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 전역 추적 옵션 설정(SQL Server Profiler)
+# <a name="set-global-trace-options-sql-server-profiler"></a>전역 추적 옵션 설정(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]의 특정 인스턴트로 생성되는 모든 추적에 적용되는 옵션을 설정하는 방법에 대해 설명합니다.  
   
-### 전역 추적 옵션을 설정하려면  
+### <a name="to-set-global-trace-options"></a>전역 추적 옵션을 설정하려면  
   
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
   
-2.  **일반 옵션** 대화 상자에서 **글꼴 선택**을 클릭하여 표시 옵션을 수정한 다음 **확인**을 클릭합니다.  
+2.  **일반 옵션**대화 상자에서 **글꼴 선택**을 클릭하여 표시 옵션을 수정한 다음 **확인**을 클릭합니다.  
   
 3.  필요에 따라 **연결한 후 즉시 추적 시작**을 선택합니다.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 24
         |**4**|기본값.|  
         |**255**|최대값. 최대값을 설정하면 다른 프로세스 성능이 저하됩니다.|  
   
-    -   **기본 상태 모니터 대기 간격(초)**은 재생 스레드가 다른 프로세스를 차단할 수 있는 최대 시간(초)을 설정합니다. 다음 표에서는 값을 설명합니다.  
+    -   **기본 상태 모니터 대기 간격(초)** 은 재생 스레드가 다른 프로세스를 차단할 수 있는 최대 시간(초)을 설정합니다. 다음 표에서는 값을 설명합니다.  
   
         |값|설명|  
         |-----------|-----------------|  
@@ -57,7 +62,7 @@ caps.handback.revision: 24
         |**3600**|기본값. **3600** 초 또는 한 시간을 초과하지 않는 차단 프로세스를 허용합니다.|  
         |**86400**|최대값. **86400** 초 또는 하루를 초과하지 않는 차단 프로세스를 허용합니다.|  
   
-    -   **기본 상태 모니터 폴링 간격(초)**은 차단 프로세스용 재생 스레드를 폴링하는 빈도를 설정합니다. 다음 표에서는 값을 설명합니다.  
+    -   **기본 상태 모니터 폴링 간격(초)** 은 차단 프로세스용 재생 스레드를 폴링하는 빈도를 설정합니다. 다음 표에서는 값을 설명합니다.  
   
         |값|설명|  
         |-----------|-----------------|  
@@ -65,8 +70,8 @@ caps.handback.revision: 24
         |**60**|기본값. 차단 프로세스를 _분당 하나만 폴링합니다.|  
         |**86400**|최대값. 차단 프로세스를 **86400** 초당 또는 하루에 하나만 폴링합니다.|  
   
-## 참고 항목  
- [추적 표시 기본값 설정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+## <a name="see-also"></a>참고 항목  
+ [추적 표시 기본값 설정 &#40; SQL Server Profiler &#41;](../../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

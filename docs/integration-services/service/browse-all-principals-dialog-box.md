@@ -1,24 +1,29 @@
 ---
 title: "모든 보안 주체 찾아보기 대화 상자 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.ssms.browseprincipals.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.ssms.browseprincipals.f1
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ebfc25e2f1eae0c926f5597b4c330d8b8b21b93e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 모든 보안 주체 찾아보기 대화 상자
+# <a name="browse-all-principals-dialog-box"></a>모든 보안 주체 찾아보기 대화 상자
   **모든 보안 주체 찾아보기** 대화 상자를 사용하여 데이터베이스 보안 주체를 선택한 후 선택한 프로젝트 또는 선택한 폴더에 포함된 모든 프로젝트에 대해 보안 주체가 가지는 권한을 변경할 수 있습니다.  
   
  **수행 작업**  
@@ -52,12 +57,12 @@ caps.handback.revision: 11
  상위 대화 상자의 **사용 권한** 페이지에 있는 **로그인 또는 역할** 목록에 보안 주체를 추가하려면 선택합니다.  
   
  **아이콘 열**  
- 보안 주체의 **유형**에 해당하는 아이콘입니다.  
+ 보안 주체의 **유형** 에 해당하는 아이콘입니다.  
   
  **이름**  
  보안 주체의 이름입니다.  
   
- **형식**  
+ **유형**  
  보안 주체의 유형입니다. 일반적인 유형은 다음과 같습니다.  
   
 -   SQL 사용자  

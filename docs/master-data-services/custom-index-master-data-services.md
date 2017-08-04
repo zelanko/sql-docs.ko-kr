@@ -1,25 +1,30 @@
 ---
-title: "사용자 지정 인덱스(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용자 지정 인덱스 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 caps.latest.revision: 9
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccb20ed7018a941ccc5e928d7fc9488377e3a125
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 사용자 지정 인덱스(Master Data Services)
+# <a name="custom-index-master-data-services"></a>사용자 지정 인덱스(Master Data Services)
   사용자 지정 인덱스는 엔터티에서 하나의 속성(단일 인덱스) 또는 속성 목록(복합 인덱스)에 대한 비클러스터형 인덱스를 생성합니다. 일반적으로 인덱스는 쿼리 프로세스의 성능을 향상시킵니다. SQL Server 인덱스에 대한 자세한 내용은 [인덱스](../relational-databases/indexes/indexes.md)를 참조하세요.  
   
-## 인덱스 유형  
+## <a name="type-of-indexes"></a>인덱스 유형  
  각 엔터티에 대하여 다음과 같은 여러 사용자 지정 인덱스를 생성할 수 있습니다.  
   
 -   고유 인덱스  
@@ -28,7 +33,7 @@ caps.handback.revision: 9
   
  고유 인덱스는 인덱싱된 열에 중복 값이 포함되어 있는지 확인합니다. 복합 고유 인덱스의 경우 인덱스는 선택한 속성 목록에서 각 값 조합이 고유한지 확인합니다. 선택한 속성에 대하여 중복 값이 존재하는 경우 고유 인덱스가 생성될 수 없습니다.  
   
-## 규칙  
+## <a name="rules"></a>규칙  
  사용자 지정 인덱스(고유 및 비고유)에는 다음 규칙이 적용됩니다.  
   
 -   사용자 지정 인덱스를 만들려면 하나 이상의 속성을 선택해야 합니다.  
@@ -52,7 +57,7 @@ caps.handback.revision: 9
   
 -   사용자 지정 인덱스에 포함된 속성 유형은 변경될 수 없습니다.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

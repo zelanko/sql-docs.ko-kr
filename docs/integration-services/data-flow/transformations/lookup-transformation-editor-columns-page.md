@@ -1,31 +1,36 @@
 ---
-title: "조회 변환 편집기(열 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.lookuptransformation.columns.f1"
-helpviewer_keywords: 
-  - "조회 변환 편집기"
+title: "조회 변환 편집기 (열 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.lookuptransformation.columns.f1
+helpviewer_keywords:
+- Lookup Transformation Editor
 ms.assetid: 690ffef5-fd59-4e95-a27d-4fcf0d6b1c0b
 caps.latest.revision: 39
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1903f316c601a1685d8644d24a2a6eb12116293d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 조회 변환 편집기(열 페이지)
+# <a name="lookup-transformation-editor-columns-page"></a>조회 변환 편집기(열 페이지)
   **조회 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 원본 테이블과 참조 테이블 간의 조인을 지정하고 참조 테이블에서 조회 열을 선택할 수 있습니다.  
   
  조회 변환에 대한 자세한 내용은 [Lookup Transformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **사용 가능한 입력 열**  
  사용 가능한 입력 열 목록을 표시합니다. 입력 열은 연결된 원본에서 데이터 흐름에 있는 열입니다. 입력 열과 조회 열의 데이터 형식은 동일해야 합니다.  
   
@@ -51,11 +56,11 @@ caps.handback.revision: 39
  **출력 별칭**  
  각 조회 열에 대한 출력의 별칭을 입력합니다. 기본값은 조회 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
-## 관련 항목:  
- [조회 변환 편집기&#40;일반 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
- [조회 변환 편집기&#40;연결 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
- [조회 변환 편집기&#40;고급 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
- [조회 변환 편집기&#40;오류 출력 페이지&#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
+## <a name="see-also"></a>관련 항목:  
+ [조회 변환 편집기 &#40; 일반 페이지 &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-general-page.md)   
+ [조회 변환 편집기 &#40; 연결 페이지 &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-connection-page.md)   
+ [조회 변환 편집기 &#40; 고급 페이지 &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-advanced-page.md)   
+ [조회 변환 편집기 &#40; 오류 출력 페이지 &#41;](../../../integration-services/data-flow/transformations/lookup-transformation-editor-error-output-page.md)   
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)  
   
   

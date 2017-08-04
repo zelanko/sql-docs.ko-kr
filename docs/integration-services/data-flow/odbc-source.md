@@ -1,24 +1,29 @@
 ---
 title: "ODBC 원본 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.ssis.designer.odbcsource.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.ssis.designer.odbcsource.f1
 ms.assetid: abcf34eb-9140-4100-82e6-b85bccd22abe
 caps.latest.revision: 9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fa8fcf2545618602bcf9f574a52ba51d0074a850
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# ODBC 원본
+# <a name="odbc-source"></a>ODBC 원본
   ODBC 원본은 데이터베이스 테이블, 뷰 또는 SQL 문을 사용하여 ODBC 지원 데이터베이스에서 데이터를 추출합니다.  
   
  ODBC 원본은 데이터 추출을 위한 다음 데이터 액세스 모드를 제공합니다.  
@@ -33,7 +38,7 @@ caps.handback.revision: 9
   
  ODBC 원본에는 하나의 일반 출력과 하나의 오류 출력이 있습니다.  
   
-## 오류 처리  
+## <a name="error-handling"></a>오류 처리  
  ODBC 원본에는 하나의 오류 출력이 있습니다. 구성 요소 오류 출력에 다음과 같은 출력 열이 포함됩니다.  
   
 -   **오류 코드**: 현재 오류에 해당하는 숫자입니다. 오류 목록은 현재 사용하고 있는 ODBC 지원 데이터베이스에 대한 설명서를 참조하십시오. SSIS 오류 코드 목록은 SSIS 오류 코드 및 메시지 참조를 참조하십시오.  
@@ -44,36 +49,36 @@ caps.handback.revision: 9
   
  오류 동작 설정에 따라 ODBC 원본은 추출 프로세스 중 발생하는 오류(데이터 변환, 잘림)를 오류 출력에 반환하는 작업을 지원합니다. 자세한 내용은 [ODBC 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)를 참조하세요.  
   
-## 데이터 형식 지원  
+## <a name="data-type-support"></a>데이터 형식 지원  
  ODBC 원본이 지원하는 데이터 형식에 대한 자세한 내용은 Connector for ODBC(Open Database Connectivity) by Attunity를 참조하십시오.  
   
-## 추출 옵션  
+## <a name="extract-options"></a>추출 옵션  
  ODBC 원본은 **일괄 처리** 또는 **행 단위** 모드에서 작동합니다. 사용되는 모드는 **FetchMethod** 속성으로 결정됩니다. 다음 목록에서는 이러한 모드를 설명합니다.  
   
--   **일괄 처리**: 구성 요소가 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 인출 메서드를 사용하려고 합니다. 대부분의 최신 ODBC 공급자에게 이는 배열 바인딩을 사용한 SQLFetchScroll입니다(배열 크기는 **BatchSize** 속성으로 결정됨). **일괄 처리**를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
+-   **일괄 처리**: 구성 요소가 인식된 ODBC 공급자 기능을 기반으로 가장 효율적인 인출 메서드를 사용하려고 합니다. 대부분의 최신 ODBC 공급자에게 이는 배열 바인딩을 사용한 SQLFetchScroll입니다(배열 크기는 **BatchSize** 속성으로 결정됨). **일괄 처리** 를 선택했는데 공급자가 이 메서드를 지원하지 않으면 ODBC 대상이 **행 단위** 모드로 자동 전환됩니다.  
   
 -   **행 단위**: 구성 요소가 SQLFetch를 사용하여 한 번에 하나씩 행을 검색합니다.  
   
  **FetchMethod** 속성에 대한 자세한 내용은 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)을 참조하십시오.  
   
-## 병렬 처리  
+## <a name="parallelism"></a>병렬 처리  
  동일한 컴퓨터 또는 서로 다른 컴퓨터에서 동일한 테이블 또는 서로 다른 테이블에 대해 병렬로 실행될 수 있는 ODBC 원본 구성 요소의 수에는 제한이 없습니다(일반적인 전역 세션 제한 제외).  
   
  그러나 이용 중인 ODBC 공급자의 제한으로 인해 공급자를 통한 동시 연결 수가 제한될 수 있습니다. 이러한 제한으로 인해 ODBC 원본에 대해 지원 가능한 병렬 인스턴스 수가 제한됩니다. SSIS 개발자는 이용 중인 모든 ODBC 공급자의 제한을 이해하고 SSIS 패키지를 작성할 때 해당 제한을 고려해야 합니다.  
   
-## ODBC 원본 문제 해결  
+## <a name="troubleshooting-the-odbc-source"></a>ODBC 원본 문제 해결  
  ODBC 원본이 외부 데이터 공급자에 대해 수행하는 호출을 기록할 수 있습니다. 이 로깅 기능을 사용하면 ODBC 원본이 외부 데이터 원본에서 데이터를 로드할 때 발생하는 문제를 해결할 수 있습니다. ODBC 원본이 외부 데이터 공급자에 대해 수행하는 호출을 기록하려면 ODBC 드라이버 관리자 추적을 사용해야 합니다. 자세한 내용은 *ODBC 데이터 원본 관리자를 사용하여 ODBC 추적을 생성하는 방법*에 대한 Microsoft 설명서를 참조하십시오.  
   
-## ODBC 원본 구성  
+## <a name="configuring-the-odbc-source"></a>ODBC 원본 구성  
  SSIS 디자이너를 사용하거나 프로그래밍 방식으로 ODBC 원본을 구성할 수 있습니다.  
   
  자세한 내용은 다음 항목 중 하나를 참조하십시오.  
   
--   [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
+-   [ODBC 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+-   [ODBC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 포함됩니다.  
   
@@ -83,15 +88,15 @@ caps.handback.revision: 9
   
  고급 편집기 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [ODBC Source Custom Properties](../../integration-services/data-flow/odbc-source-custom-properties.md)을 참조하십시오.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
--   [ODBC 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
+-   [ODBC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
--   [ODBC 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
+-   [ODBC 원본 편집기 &#40; 열 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-columns-page.md)  
   
--   [ODBC 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
+-   [ODBC 원본 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md)  
   
--   [ODBC 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
+-   [ODBC 원본을 사용 하 여 데이터를 추출 합니다.](../../integration-services/data-flow/extract-data-by-using-the-odbc-source.md)  
   
 -   [ODBC 원본 사용자 지정 속성](../../integration-services/data-flow/odbc-source-custom-properties.md)  
   

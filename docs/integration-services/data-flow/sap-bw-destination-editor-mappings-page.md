@@ -1,24 +1,29 @@
 ---
-title: "SAP BW 대상 편집기(매핑 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.sapbwdestination.columns.f1"
+title: "SAP BW 대상 편집기 (매핑 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sapbwdestination.columns.f1
 ms.assetid: dfa1f1d6-6b64-4331-bdc5-eaa8b7aa41a1
 caps.latest.revision: 11
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 245ff83f84ff1a60a08f4a73d24ee76179b31e2b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# SAP BW 대상 편집기(매핑 페이지)
+# <a name="sap-bw-destination-editor-mappings-page"></a>SAP BW 대상 편집기(매핑 페이지)
   **SAP BW 대상 편집기** 의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW의 SAP BW 대상에 대한 자세한 내용은 [SAP BW 대상](../../integration-services/data-flow/sap-bw-destination.md)을 참조하세요.  
@@ -34,7 +39,7 @@ caps.handback.revision: 11
   
 3.  **SAP BW 대상 편집기**에서 **매핑** 을 클릭하여 편집기의 **매핑** 페이지를 엽니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
 > [!NOTE]  
 >  대상을 구성하는 데 필요한 값 중 모르는 것이 있으면 SAP 관리자에게 문의하십시오.  
@@ -45,7 +50,7 @@ caps.handback.revision: 11
   
 -   아래쪽 섹션은 입력 열과 출력 열 사이의 매핑을 보여 주는 표입니다.  
   
-### 위쪽 섹션 옵션  
+### <a name="upper-section-options"></a>위쪽 섹션 옵션  
  위쪽 섹션에는 다음과 같은 옵션이 있습니다.  
   
  **사용 가능한 입력 열**  
@@ -66,21 +71,21 @@ caps.handback.revision: 11
   
 -   **일치하는 이름별 항목 매핑**  
   
-### 아래쪽 섹션 열  
+### <a name="lower-section-columns"></a>아래쪽 섹션 열  
  아래쪽 섹션은 매핑 표이며, 다음과 같은 열로 구성되어 있습니다.  
   
  **입력 열**  
  선택한 입력 열을 표시합니다.  
   
- 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거하려면 **\<무시>**를 선택하여 해당 입력 열을 출력에서 제외합니다.  
+ 다른 입력 열을 동일한 대상 열에 매핑하려면 목록에서 다른 입력 열을 선택합니다. 매핑을 제거 하려면 선택  **\<무시 >** 출력에서 입력된 열을 제외 합니다.  
   
  **대상 열**  
  열의 매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  
   
-## 관련 항목:  
- [SAP BW 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
- [SAP BW 대상 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
- [SAP BW 대상 편집기&#40;고급 페이지&#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SAP BW 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-connection-manager-page.md)   
+ [SAP BW 대상 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-error-output-page.md)   
+ [SAP BW 대상 편집기 &#40; 고급 페이지 &#41;](../../integration-services/data-flow/sap-bw-destination-editor-advanced-page.md)   
  [Microsoft Connector for SAP BW F1 도움말](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   
   

@@ -1,24 +1,29 @@
 ---
-title: "후보 키 프로필 요청 옵션(데이터 프로파일링 태스크) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 프로파일링 태스크 편집기"
+title: "후보 키 프로필 요청 옵션 (데이터 프로 파일링 태스크) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c2a94d4e37ee6d120b3a065052313d5a00f37059
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
+# <a name="candidate-key-profile-request-options-data-profiling-task"></a>후보 키 프로필 요청 옵션(데이터 프로파일링 태스크)
   **프로필 요청** 페이지의 **요청 속성** 창을 사용하여 요청 창에서 선택한 **후보 키 프로필 요청** 의 옵션을 설정할 수 있습니다. 후보 키 프로필은 열 또는 열 집합이 선택한 테이블에 대해 키, 아니면 근사 키인지 보고합니다. 또한 이 프로필을 사용하면 잠재적 키 열의 중복 값과 같은 데이터 문제를 식별할 수 있습니다.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 26
   
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요.  
   
-## KeyColumns 속성에 대한 열 선택 이해  
+## <a name="understanding-the-selection-of-columns-for-the-keycolumns-property"></a>KeyColumns 속성에 대한 열 선택 이해  
  각 **후보 키 프로필 요청** 은 단일 열 또는 여러 열로 구성된 단일 키 후보의 키 수준을 계산합니다.  
   
 -   **KeyColumns**에서 한 열만 선택하면 태스크에서는 이 한 열의 키 수준을 계산합니다.  
@@ -37,44 +42,44 @@ caps.handback.revision: 26
   
  예를 들어 열 A, B, C를 포함하는 예제 테이블의 경우 **KeyColumns**에 대해 다음과 같이 선택합니다.  
   
--   **KeyColumns**에서 (\*) 및 열 C를 선택합니다. 태스크에서는 열 C의 키 수준을 계산한 다음 복합 키 후보 (A, C) 및 (B, C)의 키 수준을 계산합니다.  
+-   \*KeyColumns **에서 (**) 및 열 C를 선택합니다. 태스크에서는 열 C의 키 수준을 계산한 다음 복합 키 후보 (A, C) 및 (B, C)의 키 수준을 계산합니다.  
   
--   **KeyColumns**에서 (\*) 및 (\*)를 선택합니다. 태스크에서는 개별 열 A, B, C의 키 수준을 계산한 다음 복합 키 후보 (A, B), (A, C) 및 (B, C)의 키 수준을 계산합니다.  
+-   \*KeyColumns\*에서 ( **) 및 (**)를 선택합니다. 태스크에서는 개별 열 A, B, C의 키 수준을 계산한 다음 복합 키 후보 (A, B), (A, C) 및 (B, C)의 키 수준을 계산합니다.  
   
 > [!NOTE]  
 >  (*)를 선택하는 경우 이 옵션으로 인해 계산이 많이 발생하여 태스크의 성능이 저하될 수 있습니다. 그러나 태스크에서 키의 임계값을 만족하는 하위 집합을 찾으면 추가 조합을 분석하지 않습니다. 예를 들어 위에서 설명한 예제 테이블의 태스크에서 열 C가 키임을 확인하면 복합 키 후보를 더 이상 분석하지 않습니다.  
   
-## 요청 속성 옵션  
+## <a name="request-properties-options"></a>요청 속성 옵션  
  **후보 키 프로필 요청**에 대해 **요청 속성** 창에는 다음 옵션 그룹이 표시됩니다.  
   
 -   **데이터**- **TableOrView** 및 **KeyColumns** 옵션이 포함되어 있습니다.  
   
 -   **일반**  
   
--   **옵션**  
+-   **Options**  
   
-### 데이터 옵션  
+### <a name="data-options"></a>데이터 옵션  
  **ConnectionManager**  
- .NET Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\(SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 선택합니다.  
+ .NET Data Provider for [!INCLUDE[vstecado](../../includes/vstecado-md.md)] (SqlClient)를 사용하여 프로파일링할 테이블이나 뷰가 포함된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결 관리자를 선택합니다.  
   
  **TableOrView**  
  프로파일링할 기존 테이블이나 뷰를 선택합니다.  
   
-  자세한 내용은 이 항목의 "TableorView 옵션" 섹션을 참조하십시오.  
+ 자세한 내용은 이 항목의 "TableorView 옵션" 섹션을 참조하십시오.  
   
  **KeyColumns**  
  프로파일링할 기존 열을 선택합니다. 모든 열을 프로파일링하려면 **(\*)**를 선택합니다.  
   
  자세한 내용은 이 항목의 "KeyColumns 속성에 대한 열 선택 이해" 및 "KeyColumns 옵션" 섹션을 참조하십시오.  
   
-#### TableOrView 옵션  
+#### <a name="tableorview-options"></a>TableOrView 옵션  
  **스키마**  
  선택한 테이블이 속해 있는 스키마를 지정합니다. 이 옵션은 읽기 전용입니다.  
   
  **테이블**  
  선택한 테이블의 이름을 표시합니다. 이 옵션은 읽기 전용입니다.  
   
-#### KeyColumns 옵션  
+#### <a name="keycolumns-options"></a>KeyColumns 옵션  
  **KeyColumns**에서 프로파일링 또는 **(\*)** 옵션을 대상으로 선택한 각 열에 대해 다음 옵션이 제공됩니다.  
   
  자세한 내용은 이 항목의 앞부분에 나오는 "KeyColumns 속성에 대한 열 선택 이해" 섹션을 참조하십시오.  
@@ -85,7 +90,7 @@ caps.handback.revision: 26
  **ColumnName**  
  선택한 열의 이름을 표시합니다. 이 옵션은 모든 열을 프로파일링하도록 **(\*)**를 선택한 경우 비어 있습니다. 이 옵션은 읽기 전용입니다.  
   
- ** StringCompareOptions**  
+ **StringCompareOptions**  
  문자열 값을 비교할 수 있는 옵션을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 옵션의 기본값은 **Default**입니다.  
   
 > [!NOTE]  
@@ -94,7 +99,7 @@ caps.handback.revision: 26
 |Value|Description|  
 |-----------|-----------------|  
 |**Default**|원본 테이블에서 열의 데이터 정렬을 기준으로 데이터를 정렬 및 비교합니다.|  
-|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다.  이진 정렬 순서는 대/소문자와 악센트를 구분합니다.  이진은 가장 빠른 정렬 순서입니다.|  
+|**BinarySort**|각 문자에 대해 정의된 비트 패턴을 기준으로 데이터를 정렬 및 비교합니다. 이진 정렬 순서는 대/소문자와 악센트를 구분합니다. 이진은 가장 빠른 정렬 순서입니다.|  
 |**DictionarySort**|관련된 언어 또는 알파벳에 대해 사전에 정의된 정렬 및 비교 규칙에 따라 데이터를 정렬 및 비교합니다.|  
   
  **DictionarySort**를 선택하는 경우 다음 테이블에 나열된 옵션 조합을 선택할 수도 있습니다. 이러한 추가 옵션은 기본적으로 선택되어 있지 않습니다.  
@@ -106,11 +111,11 @@ caps.handback.revision: 26
 |**IgnoreKanaType**|비교 시 두 가지 형식의 일본어 가나 문자인 히라가나와 가타가나를 구분합니다. 이 옵션을 설정하면 문자열 비교 시 가나 형식이 무시됩니다.|  
 |**IgnoreWidth**|비교 시 싱글바이트 문자와 동일 문자의 더블바이트 문자 표현을 구분할지 여부를 지정합니다. 이 옵션을 설정하면 문자열 비교 시 동일 문자에 대한 싱글바이트 표현과 더블바이트 표현이 동일하게 인식됩니다.|  
   
-### 일반 옵션  
+### <a name="general-options"></a>일반 옵션  
  **RequestID**  
  이 프로필 요청을 식별할 설명이 포함된 이름을 입력합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
-### 옵션  
+### <a name="options"></a>옵션이 포함되어 있습니다.  
  **ThresholdSetting**  
  이 속성의 옵션은 다음 표에 나열되어 있습니다. 이 속성의 기본값은 **Specified**입니다.  
   
@@ -126,8 +131,8 @@ caps.handback.revision: 26
  **MaxNumberOfViolations**  
  출력에 보고할 최대 후보 키 위반 수를 지정합니다. 이 속성의 기본값은 100입니다. **Exact** 가 **KeyStrengthThresholdSetting**으로 선택된 경우 이 옵션을 사용할 수 없습니다.  
   
-## 관련 항목:  
- [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>관련 항목:  
+ [데이터 작업 편집기 &#40; 프로 파일링 일반 페이지 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [단일 테이블 빠른 프로필 형식 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

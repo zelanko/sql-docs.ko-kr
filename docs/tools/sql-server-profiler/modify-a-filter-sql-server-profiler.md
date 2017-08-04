@@ -1,29 +1,34 @@
 ---
-title: "필터 수정(SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "필터 [SQL Server], 수정"
-  - "필터 수정, 수정"
-  - "필터 [SQL Server], 추적"
+title: "(SQL Server Profiler) 필터를 수정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- filters [SQL Server], modifying
+- modifying filters, modifying
+- filters [SQL Server], traces
 ms.assetid: 8b317813-4918-4485-b930-77b1951aa00c
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7e32fafe033340c67f6f0d88c11bb617d8adc79e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 필터 수정(SQL Server Profiler)
+# <a name="modify-a-filter-sql-server-profiler"></a>필터 수정(SQL Server Profiler)
   추적 정의가 포함된 추적 템플릿에 필터를 추가하여 추적에서 수집하는 이벤트의 수를 제한할 수 있습니다. 수집된 이벤트의 수를 제한하면 추적의 성능 효과가 저하될 수 있습니다. 추적 템플릿에 필터를 설정했고 추적에서 필요한 유형의 정보를 수집하고 있지 않는 것을 확인하는 경우 해당 필터를 편집할 수 있습니다.  
   
-### 필터를 수정하려면  
+### <a name="to-modify-a-filter"></a>필터를 수정하려면  
   
 1.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서 수정하려는 추적 필터에 대한 템플릿을 엽니다. **파일** 메뉴에서 **템플릿**을 클릭한 다음 **템플릿 편집**을 선택합니다.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 15
   
 6.  **확인** 을 클릭하여 템플릿을 저장합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

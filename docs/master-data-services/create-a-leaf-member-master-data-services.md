@@ -1,32 +1,37 @@
 ---
-title: "리프 멤버 만들기(Master Data Services) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "리프 멤버 [Master Data Services], 만들기"
-  - "리프 멤버 만들기 [Master Data Services]"
-  - "멤버 [Master Data Services], 리프 멤버 만들기"
+title: "리프 멤버 (Master Data Services) 만들기 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/17/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- leaf members [Master Data Services], creating
+- creating leaf members [Master Data Services]
+- members [Master Data Services], creating leaf members
 ms.assetid: 0499d3b3-d508-4d43-a740-19cf53ade9f1
 caps.latest.revision: 14
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3745604313dde3eda55c3d0f5d8f634bf7187440
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 리프 멤버 만들기(Master Data Services)
+# <a name="create-a-leaf-member-master-data-services"></a>리프 멤버 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 시스템에 마스터 데이터를 추가하려는 경우 리프 멤버를 만듭니다. 데이터를 대량으로 추가하려는 경우에는 준비 테이블을 대신 사용합니다. 자세한 내용은 [테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)를 참조하세요.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]를 사용하여 데이터를 가져올 수도 있습니다.  
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)] 를 사용하여 데이터를 가져올 수도 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 14
   
      자세한 내용은 [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)을 참조하세요.  
   
-### 리프 멤버를 만들려면  
+### <a name="to-create-a-leaf-member"></a>리프 멤버를 만들려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
@@ -57,8 +62,8 @@ caps.handback.revision: 14
   
 8.  **확인**을 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [통합 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)   
- [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+ [멤버 &#40; Master Data services&#41;](../master-data-services/members-master-data-services.md)  
   
   

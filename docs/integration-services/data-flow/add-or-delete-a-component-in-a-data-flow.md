@@ -1,30 +1,35 @@
 ---
-title: "데이터 흐름에서 구성 요소 추가 또는 삭제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "구성 요소 추가"
-  - "구성 요소 [Integration Services], 데이터 흐름"
+title: "추가 또는 삭제는 데이터 흐름 구성 요소 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding components
+- components [Integration Services], data flow
 ms.assetid: d99124f9-0994-4f40-a48e-fdca6a4383e7
 caps.latest.revision: 42
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 229fd23eb82ff7b6a1139bf1bd00554162cfc038
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터 흐름에서 구성 요소 추가 또는 삭제
+# <a name="add-or-delete-a-component-in-a-data-flow"></a>데이터 흐름에서 구성 요소 추가 또는 삭제
   데이터 흐름 구성 요소는 데이터 흐름에 있는 원본, 대상 및 변환입니다. 데이터 흐름에 구성 요소를 추가하려면 패키지의 제어 흐름에 데이터 흐름 태스크 포함되어 있어야 합니다.  
   
  다음 절차에서는 패키지의 데이터 흐름에서 구성 요소를 추가하거나 삭제하는 방법에 대해 설명합니다.  
   
-### 데이터 흐름에 구성 요소를 추가하려면  
+### <a name="to-add-a-component-to-a-data-flow"></a>데이터 흐름에 구성 요소를 추가하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 42
   
 5.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-### 데이터 흐름에서 구성 요소를 삭제하려면  
+### <a name="to-delete-a-component-from-a-data-flow"></a>데이터 흐름에서 구성 요소를 삭제하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -50,9 +55,9 @@ caps.handback.revision: 42
   
 6.  업데이트된 패키지를 저장하려면 **파일** 메뉴에서 **선택한 항목 저장** 을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 흐름의 구성 요소 연결](../../integration-services/data-flow/connect-components-in-a-data-flow.md)   
- [데이터 흐름 구성 요소에서 오류 출력 구성](../../integration-services/troubleshooting/configure-an-error-output-in-a-data-flow-component.md)   
+ [데이터 흐름 디버깅](../../integration-services/troubleshooting/debugging-data-flow.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   
   

@@ -1,27 +1,32 @@
 ---
-title: "컬렉션에 멤버 추가(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "컬렉션 [Master Data Services], 멤버 추가"
+title: "컬렉션 (Master Data Services)에 구성원을 추가 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 56799f639b1ea5833926ee8965c60ba936c90f98
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 컬렉션에 멤버 추가(Master Data Services)
+# <a name="add-members-to-a-collection-master-data-services"></a>컬렉션에 멤버 추가(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 컬렉션에 리프 멤버 및 통합 멤버를 추가할 수 있습니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
@@ -30,7 +35,7 @@ caps.handback.revision: 7
   
 -   컬렉션이 있어야 합니다. 자세한 내용은 [컬렉션 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-collection-master-data-services.md)를 참조하세요.  
   
-### 컬렉션에 멤버를 추가하려면  
+### <a name="to-add-members-to-a-collection"></a>컬렉션에 멤버를 추가하려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 홈 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 7
   
 3.  **탐색기**를 클릭합니다.  
   
-4.  메뉴 모음에서 **컬렉션**을 가리키고 *entity_name*을 클릭합니다.  
+4.  메뉴 모음에서 **컬렉션** 을 가리키고 *entity_name*을 클릭합니다.  
   
 5.  표 형태에서 멤버를 삭제할 컬렉션 행을 클릭합니다.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 7
   
 11. 필요에 따라 **가중치** 열에서 값을 클릭하여 가중치를 설정합니다.  
   
-## 참고 항목  
- [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [컬렉션 &#40; Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

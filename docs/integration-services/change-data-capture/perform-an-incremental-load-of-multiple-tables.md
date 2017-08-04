@@ -1,24 +1,29 @@
 ---
 title: "여러 테이블의 증분 로드 수행 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "증분 로드 [Integration Services], 여러 테이블"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental load [Integration Services],multiple tables
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 여러 테이블의 증분 로드 수행
+# <a name="perform-an-incremental-load-of-multiple-tables"></a>여러 테이블의 증분 로드 수행
   [변경 데이터 캡처를 사용하여 증분 로드 개선](../../integration-services/change-data-capture/change-data-capture-ssis.md)항목의 다이어그램에서는 한 테이블에서만 증분 로드를 수행하는 기본 패키지를 보여 줍니다. 그러나 한 테이블을 로드하는 작업은 여러 테이블을 증분 로드하는 작업만큼 일반적이지 않습니다.  
   
  여러 테이블을 증분 로드할 때 일부 단계는 모든 테이블에 대해 한 번만 수행해야 하며 다른 단계는 각 원본 테이블에 대해 반복해야 합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 이러한 단계를 구현하는 데에는 다음과 같은 여러 옵션이 있습니다.  
@@ -27,10 +32,10 @@ caps.handback.revision: 26
   
 -   단일 패키지에서 여러 데이터 흐름 태스크 사용  
   
-## 부모 패키지 및 여러 자식 패키지를 사용하여 여러 테이블 로드  
+## <a name="loading-multiple-tables-by-using-a-parent-package-and-multiple-child-packages"></a>부모 패키지 및 여러 자식 패키지를 사용하여 여러 테이블 로드  
  부모 패키지를 사용하여 한 번만 수행되어야 하는 단계를 수행할 수 있습니다. 자식 패키지는 각 원본 테이블에 대해 수행되어야 하는 단계를 수행합니다.  
   
-#### 한 번만 수행되어야 하는 단계를 수행하는 부모 패키지를 만들려면  
+#### <a name="to-create-a-parent-package-that-performs-those-steps-that-only-have-to-be-done-once"></a>한 번만 수행되어야 하는 단계를 수행하는 부모 패키지를 만들려면  
   
 1.  부모 패키지를 만듭니다.  
   
@@ -44,9 +49,9 @@ caps.handback.revision: 26
   
 4.  여러 패키지 실행 태스크를 사용하여 로드할 각 테이블에 대해 자식 패키지를 실행합니다. 부모 패키지 변수 구성을 사용하여 부모 패키지에서 계산된 끝점을 각 자식 패키지에 전달합니다.  
   
-     자세한 내용은 [패키지 실행 태스크](../../integration-services/control-flow/execute-package-task.md) 및 [자식 패키지에서 변수 및 매개 변수의 값 사용](../../integration-services/packages/use-the-values-of-variables-and-parameters-in-a-child-package.md)을 참조하세요.  
+     자세한 내용은 [패키지 실행 태스크](../../integration-services/control-flow/execute-package-task.md) 및 [자식 패키지에서 변수 및 매개 변수의 값 사용](../../integration-services/packages/legacy-package-deployment-ssis.md#child)을 참조하세요.  
   
-#### 각 원본 테이블에 대해 수행되어야 하는 단계를 수행하는 자식 패키지를 만들려면  
+#### <a name="to-create-child-packages-to-perform-those-steps-that-have-to-be-done-for-each-source-table"></a>각 원본 테이블에 대해 수행되어야 하는 단계를 수행하는 자식 패키지를 만들려면  
   
 1.  각 원본 테이블에 대해 자식 패키지를 만듭니다.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 26
   
          이 변환을 사용하여 업데이트 및 삭제를 적용하는 방법의 예는 [대상에 변경 내용 적용](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)을 참조하세요.  
   
-## 단일 패키지에서 여러 데이터 흐름 태스크를 사용하여 여러 테이블 로드  
+## <a name="loading-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>단일 패키지에서 여러 데이터 흐름 태스크를 사용하여 여러 테이블 로드  
  로드할 각 원본 테이블에 대한 별도의 데이터 흐름 태스크를 포함하는 단일 패키지를 사용할 수도 있습니다.  
   
-#### 단일 패키지에서 여러 데이터 흐름 태스크를 사용하여 여러 테이블을 로드하려면  
+#### <a name="to-load-multiple-tables-by-using-multiple-data-flow-tasks-in-a-single-package"></a>단일 패키지에서 여러 데이터 흐름 태스크를 사용하여 여러 테이블을 로드하려면  
   
 1.  단일 패키지를 만듭니다.  
   

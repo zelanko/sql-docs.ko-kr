@@ -1,26 +1,31 @@
 ---
-title: "데이터 프로파일링 태스크 편집기(프로필 요청 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.dataprofilingtask.profilerequests.f1"
-helpviewer_keywords: 
-  - "데이터 프로파일링 태스크 편집기"
+title: "데이터 프로 파일링 태스크 편집기 (프로필 요청 페이지) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.dataprofilingtask.profilerequests.f1
+helpviewer_keywords:
+- Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
 caps.latest.revision: 26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ac9d7e62bfad28176582537c59e733f51223a4f0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 데이터 프로파일링 태스크 편집기(프로필 요청 페이지)
+# <a name="data-profiling-task-editor-profile-requests-page"></a>Data Profiling Task Editor (Profile Requests Page)
   **데이터 프로파일링 태스크 편집기** 의 **프로필 요청 페이지** 를 사용하여 계산할 프로필을 선택하고 구성할 수 있습니다. 단일 데이터 프로파일링 태스크에서 여러 테이블 또는 뷰에 있는 여러 열이나 열 조합에 대해 여러 프로필을 계산할 수 있습니다.  
   
  데이터 프로파일링 태스크를 사용하는 방법에 대한 자세한 내용은 [데이터 프로파일링 태스크 설정](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)을 참조하세요. 데이터 프로필 뷰어를 사용하여 데이터 프로파일링 태스크의 출력을 분석하는 방법에 대한 자세한 내용은 [데이터 프로필 뷰어](../../integration-services/control-flow/data-profile-viewer.md)를 참조하세요.  
@@ -33,10 +38,10 @@ caps.handback.revision: 26
   
 3.  **데이터 프로파일링 태스크 편집기**에서 **프로필 요청**을 클릭합니다.  
   
-## 요청 창 사용  
+## <a name="using-the-requests-pane"></a>요청 창 사용  
  요청 창은 페이지의 맨 위에 나타나는 창입니다. 이 창에는 현재 데이터 프로파일링 태스크에 대해 구성된 모든 프로필이 나열됩니다. 구성된 프로필이 없는 경우 요청 창이 비어 있게 됩니다. 새 프로필을 추가하려면 **프로필 유형** 열에서 빈 영역을 클릭하고 목록에서 프로필 유형을 선택합니다. 프로필을 구성하려면 요청 창에서 프로필을 선택한 다음 **요청 속성** 창에서 프로필의 속성을 설정합니다.  
   
-### 요청 창 옵션  
+### <a name="requests-pane-options"></a>요청 창 옵션  
  요청 창에는 다음 옵션이 있습니다.  
   
  **보기**  
@@ -44,14 +49,14 @@ caps.handback.revision: 26
   
  요청 창의 열은 선택하는 **뷰** 에 따라 변경됩니다. 이러한 각 열에 대한 자세한 내용은 다음 섹션인 "요청 창 열"을 참조하세요.  
   
-### 요청 창 열  
+### <a name="requests-pane-columns"></a>요청 창 열  
  요청 창에 표시되는 열은 선택한 **뷰** 에 따라 다음과 같이 달라집니다.  
   
 -   **모든 요청**을 보려고 선택하면 요청 창에 **프로필 유형** 및 **요청 ID**라는 2개의 열이 표시됩니다.  
   
 -   5개의 열 프로필 중 하나를 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**, **열**및 **요청 ID**라는 4개의 열이 표시됩니다.  
   
--   후보 키 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**, **키 열** 및 **요청 ID**라는 4개의 열이 표시됩니다.  
+-   후보 키 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**, **키 열**및 **요청 ID**라는 4개의 열이 표시됩니다.  
   
 -   함수 종속성 프로필을 보려고 선택하면 요청 창에 **프로필 유형**, **테이블 또는 뷰**, **결정 열**, **종속 열**및 **요청 ID**라는 5개의 열이 포함됩니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 26
   
  다음 섹션에서는 이러한 각 열에 대해 설명합니다.  
   
-#### 모든 뷰에 공통된 열  
+#### <a name="columns-common-to-all-views"></a>모든 뷰에 공통된 열  
  **프로필 유형**  
  다음 옵션에서 데이터 프로필을 선택합니다.  
   
@@ -77,38 +82,38 @@ caps.handback.revision: 26
  **RequestID**  
  요청의 식별자를 표시합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
-#### 모든 개별 프로필에 공통된 열  
+#### <a name="columns-common-to-all-individual-profiles"></a>모든 개별 프로필에 공통된 열  
  **연결 관리자**  
  원본 데이터베이스에 연결되는 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자를 표시합니다.  
   
  **요청 ID**  
  요청의 식별자를 표시합니다. 일반적으로 자동 생성된 값은 변경하지 않아도 됩니다.  
   
-#### 5개의 개별 열 프로필에 공통된 열  
+#### <a name="columns-common-to-the-five-individual-column-profiles"></a>5개의 개별 열 프로필에 공통된 열  
  **테이블 또는 뷰**  
  선택한 열이 포함된 테이블 또는 뷰를 표시합니다.  
   
  **열**  
  프로파일링하기 위해 선택한 열을 표시합니다.  
   
-#### 후보 키 프로필 관련 열  
+#### <a name="columns-specific-to-the-candidate-key-profile"></a>후보 키 프로필 관련 열  
  **테이블 또는 뷰**  
  선택한 열이 포함된 테이블 또는 뷰를 표시합니다.  
   
  **키 열**  
  프로파일링하기 위해 선택한 열을 표시합니다.  
   
-#### 함수 종속성 프로필 관련 열  
+#### <a name="columns-specific-to-the-functional-dependency-profile"></a>함수 종속성 프로필 관련 열  
  **테이블 또는 뷰**  
  선택한 열이 포함된 테이블 또는 뷰를 표시합니다.  
   
  **결정 열**  
  프로파일링하기 위해 선택한 열을 결정 열로 표시합니다. 미국 우편 번호가 미국의 주를 결정하는 예에서는 Zip Code 열이 결정 열입니다.  
   
- **종속 열**  
+ **Dependent column**  
  프로파일링하기 위해 선택한 열을 종속 열로 표시합니다. 미국 우편 번호가 미국의 주를 결정하는 예에서는 State 열이 종속 열입니다.  
   
-#### 값 포함 프로필 관련 열  
+#### <a name="columns-specific-to-the-value-inclusion-profile"></a>값 포함 프로필 관련 열  
  **하위 집합측 테이블 또는 뷰**  
  하위 집합측 열로 선택한 열이 포함된 테이블 또는 뷰를 표시합니다.  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 26
  **상위 집합측 열**  
  프로파일링하기 위해 선택한 열을 상위 집합측 열로 표시합니다. US State 열의 값이 두 개의 문자로 구성된 미국 주 코드가 포함된 참조 테이블에 있는지 확인하는 예에서는 참조 테이블의 주 코드 열이 상위 집합 열입니다.  
   
-## 요청 속성 창 사용  
+## <a name="using-the-request-properties-pane"></a>요청 속성 창 사용  
  **요청 속성** 창은 요청 창 아래에 나타납니다. 이 창에는 요청 창에서 선택한 프로필의 옵션이 표시됩니다.  
   
 > [!NOTE]  
@@ -129,24 +134,24 @@ caps.handback.revision: 26
   
  이러한 옵션은 선택한 프로필에 따라 달라집니다. 개별 프로필 유형 옵션에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [후보 키 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
+-   [후보 키 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md)  
   
--   [열 Null 비율 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
+-   [열 Null 비율 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/column-null-ratio-profile-request-options-data-profiling-task.md)  
   
--   [열 통계 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
+-   [열 통계 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/column-statistics-profile-request-options-data-profiling-task.md)  
   
--   [열 값 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 값 분포 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/column-value-distribution-profile-request-options-data-profiling-task.md)  
   
--   [열 길이 분포 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
+-   [열 길이 분포 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/column-length-distribution-profile-request-options-data-profiling-task.md)  
   
--   [열 패턴 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
+-   [열 패턴 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/column-pattern-profile-request-options-data-profiling-task.md)  
   
--   [함수 종속성 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
+-   [함수 종속성 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md)  
   
--   [값 포함 프로필 요청 옵션&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
+-   [값 포함 프로필 요청 옵션 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## 관련 항목:  
- [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
- [단일 테이블 빠른 프로필 형식&#40;데이터 프로파일링 태스크&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
+## <a name="see-also"></a>관련 항목:  
+ [데이터 작업 편집기 &#40; 프로 파일링 일반 페이지 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [단일 테이블 빠른 프로필 형식 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   

@@ -1,30 +1,35 @@
 ---
-title: "원시 파일 대상 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.rawfiledest.f1"
-helpviewer_keywords: 
-  - "추가 옵션 [Integration Services]"
-  - "대상 [Integration Services], 원시 파일"
-  - "원시 데이터 [Integration Services]"
-  - "원시 데이터 기록"
-  - "원시 파일 대상"
+title: "원시 파일 대상을 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.rawfiledest.f1
+helpviewer_keywords:
+- append options [Integration Services]
+- destinations [Integration Services], Raw File
+- raw data [Integration Services]
+- writing raw data
+- Raw File destination
 ms.assetid: d311b458-aefc-4b4d-b1a1-4c0ebbb34214
 caps.latest.revision: 59
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a890502e4db72f00d21ed9656441cc27fa5e532d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 원시 파일 대상
+# <a name="raw-file-destination"></a>원시 파일 대상
   원시 파일 대상은 원시 데이터를 파일에 기록합니다. 대상의 기본 데이터 형식을 사용하므로 데이터를 변환하거나 구문 분석할 필요도 거의 없습니다. 따라서 원시 파일 대상은 플랫 파일 및 OLE DB 대상과 같은 다른 대상보다 빨리 데이터를 기록할 수 있습니다.  
   
  원시 데이터를 파일에 기록하는 것 외에도 패키지를 실행할 필요 없이 원시 파일 대상을 사용하여 열만 포함된 비어 있는 원시 파일(메타데이터 전용 파일)을 생성할 수 있습니다. 원시 파일 원본을 사용하면 대상이 이전에 기록한 원시 데이터를 검색할 수 있습니다. 또한 원시 파일 원본이 메타데이터 전용 파일을 가리키도록 설정할 수 있습니다.  
@@ -47,7 +52,7 @@ caps.handback.revision: 59
   
  이 원본에는 하나의 일반 입력이 있습니다. 오류 출력은 지원하지 않습니다.  
   
-## 추가 및 새 파일 옵션  
+## <a name="append-and-new-file-options"></a>추가 및 새 파일 옵션  
  WriteOption 속성에는 기존 파일에 데이터를 추가하거나 새 파일을 만드는 옵션이 포함됩니다.  
   
  다음 표에서는 WriteOption 속성에서 사용할 수 있는 옵션에 대해 설명합니다.  
@@ -105,33 +110,33 @@ caps.handback.revision: 59
   
 6.  RawFile1을 RawFile2로 바꿉니다.  
   
-### 루프에서 원시 파일 대상 사용  
+### <a name="using-the-raw-file-destination-in-a-loop"></a>루프에서 원시 파일 대상 사용  
  원시 파일 대상을 사용하는 데이터 흐름이 루프에 있는 경우 파일을 한 번만 만들고 루프가 반복되면 파일에 데이터를 추가할 수 있습니다. 파일에 데이터를 추가하려면 추가되는 데이터는 기존 파일의 형식과 일치해야 합니다.  
   
  루프의 첫 번째 반복에서 파일을 만든 다음 루프의 후속 반복에서 행을 추가하려면 디자인 타임에 다음을 수행해야 합니다.  
   
 1.  WriteOption 속성을 **CreateOnce** 또는 **CreateAlways**로 설정하고 루프의 반복 하나를 실행합니다. 파일이 생성됩니다. 이렇게 하면 추가된 데이터와 파일의 메타데이터가 일치하게 됩니다.  
   
-2.  WriteOption 속성을 **Append**로 다시 설정하고 ValidateExternalMetadata 속성을 **False**로 설정합니다.  
+2.  WriteOption 속성을 **Append** 로 다시 설정하고 ValidateExternalMetadata 속성을 **False**로 설정합니다.  
   
  **Append** 옵션 대신에 **TruncateAppend** 옵션을 사용할 경우 이전 반복에서 추가된 행이 잘리고 새 행이 추가됩니다. **TruncateAppend** 옵션을 사용할 경우에도 데이터가 파일 형식과 일치해야 합니다.  
   
-## 원시 파일 대상 구성  
+## <a name="configuration-of-the-raw-file-destination"></a>원시 파일 대상 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
--   [공용 속성](../Topic/Common%20Properties.md)  
+-   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
 -   [원시 파일 사용자 지정 속성](../../integration-services/data-flow/raw-file-custom-properties.md)  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [원시 파일 원본](../../integration-services/data-flow/raw-file-source.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   

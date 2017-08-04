@@ -1,23 +1,28 @@
 ---
 title: "재생 결과 검토 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b5509f22c53e1c285175969964abc4b977f8d9bc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 재생 결과 검토
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
+# <a name="review-the-replay-results"></a>재생 결과 검토
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay 기능이 분산 재생을 완료하면 각 클라이언트에 대한 재생 작업을 캡처하여 각 클라이언트의 결과 추적 파일에 저장할 수 있습니다. 이 작업을 캡처하려면 **replay** 옵션을 사용하여 관리 도구를 실행할 때 **-o** 매개 변수를 사용해야 합니다. 재생 옵션에 대한 자세한 내용은 [재생 옵션&#40;Distributed Replay Administration Tool&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md)을 참조하세요.  
   
  결과 추적 파일이 저장되는 위치는 각 클라이언트에 있는 클라이언트 구성 파일 `<ResultDirectory>`의 `DReplayClient.xml` XML 요소에 지정됩니다. 클라이언트 결과 디렉터리의 추적 파일은 각 재생 시 덮어씁니다.  
   
@@ -25,7 +30,7 @@ caps.handback.revision: 21
   
  이러한 구성 설정에 대한 자세한 내용은 [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)을 참조하세요.  
   
-## 결과 추적 파일에 캡처되는 이벤트 클래스  
+## <a name="event-classes-captured-in-result-trace-files"></a>결과 추적 파일에 캡처되는 이벤트 클래스  
  다음 표에서는 결과 추적 데이터에 캡처되는 이벤트 클래스를 모두 나열합니다.  
   
 |범주|EventClass 이름|캡처 빈도|캡처 시점|  
@@ -47,12 +52,12 @@ caps.handback.revision: 21
   
 -   각 이벤트 실패나 취소의 경우 오류가 여러 개 생성될 수도 있습니다.  
   
-## 이벤트 클래스 열 매핑  
+## <a name="event-class-column-mapping"></a>이벤트 클래스 열 매핑  
  다음 표에서는 재생 중 캡처되는 각 이벤트 클래스 유형에 사용할 수 있는 결과 추적 열을 나열합니다.  
   
- ![이벤트 클래스 열 매핑](../../tools/distributed-replay/media/eventclassmappings.gif "이벤트 클래스 열 매핑")  
+ ![Event class column mapping](../../tools/distributed-replay/media/eventclassmappings.gif "Event class column mapping")  
   
-## 결과 추적의 열에 대한 설명  
+## <a name="column-descriptions-for-result-trace"></a>결과 추적의 열에 대한 설명  
  다음 표에서는 결과 추적 데이터의 열에 대해 설명합니다.  
   
 |데이터 열 이름|데이터 형식|설명|열 ID|  
@@ -65,20 +70,20 @@ caps.handback.revision: 21
 |SubmitTime|**datetime**|이벤트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전송된 시간입니다.|6|  
 |IsSuccessful|**int**|특정 이벤트가 성공적으로 실행되었는지 여부 및 결과 집합이 클라이언트 쪽에 반환되었는지 여부를 나타내는 부울 플래그입니다.<br /><br /> 경고를 생성하는 이벤트(예: Attention 또는 사용자가 지정한 제한 시간으로 인해 이벤트가 취소되는 경우)는 성공한 것으로 간주됩니다.<br /><br /> IsSuccessful은 다음 중 하나일 수 있습니다.<br /><br /> 1 = 성공<br /><br /> 0 = 실패|7|  
 |Duration [microsec]|**bigint**|이벤트의 응답 기간(마이크로초)입니다. 측정은 logon/log off/RPC/Language 이벤트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 전송될 때 시작됩니다.<br /><br /> 이벤트가 이어지는 경우 전체 결과 집합이 모두 사용되었을 때 측정이 끝납니다.<br /><br /> 이벤트가 이어지지 않는 경우 이벤트가 실패하거나 취소될 때 측정이 끝납니다.|8|  
-|RowCount|**bigint**|재생 구성 파일의 `<RecordRowCount>` 값에 따라 채워집니다.<br /><br /> `<RecordRowCount>`가 Yes이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 반환한 결과 집합의 행 수가 이 셀에 포함됩니다.<br /><br /> `<RecordRowCount>`가 No이면 이 셀이 채워지지 않습니다(Null).|9|  
+|RowCount|**bigint**|재생 구성 파일의 `<RecordRowCount>` 값에 따라 채워집니다.<br /><br /> `<RecordRowCount>` 가 Yes이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 반환한 결과 집합의 행 수가 이 셀에 포함됩니다.<br /><br /> `<RecordRowCount>` 가 No이면 이 셀이 채워지지 않습니다(Null).|9|  
 |CaptureSPID|**int**|이벤트 캡처 세션의 ID입니다.|10|  
 |ConnectionID|**int**|이벤트 캡처 연결의 ID입니다.|11|  
 |ReplaySPID|**int**|이벤트 재생 세션의 ID입니다.|12|  
 |DatabaseName|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|13|  
-|LoginName|**nvarchar**|사용자 로그인 이름입니다. *domain_name*\\*user_name* 형식의 Microsoft Windows 로그인 자격 증명 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 로그인일 수 있습니다.|14|  
+|LoginName|**nvarchar**|사용자 로그인 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] domain_name *user_name*\\*형식의 Microsoft Windows 로그인 자격 증명 또는*보안 로그인일 수 있습니다.|14|  
 |CaptureHostName|**nvarchar**|캡처하는 동안 클라이언트 서비스를 실행 중인 컴퓨터의 이름입니다.|15|  
 |ReplayHostName|**nvarchar**|재생하는 동안 클라이언트를 실행 중인 컴퓨터의 이름입니다.|16|  
 |ApplicationName|**nvarchar**|캡처하는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 만든 클라이언트 응용 프로그램의 이름입니다.|17|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay 요구 사항](../../tools/distributed-replay/distributed-replay-requirements.md)   
- [관리 도구 명령줄 옵션&#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
+ [관리 도구 명령줄 옵션 &#40; Distributed Replay utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Distributed Replay 구성](../../tools/distributed-replay/configure-distributed-replay.md)  
   
   

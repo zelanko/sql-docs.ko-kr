@@ -1,26 +1,31 @@
 ---
 title: "병합 변환 편집기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.mergetransformation.f1"
-helpviewer_keywords: 
-  - "병합 변환 편집기"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.mergetransformation.f1
+helpviewer_keywords:
+- Merge Transformation Editor
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
 caps.latest.revision: 28
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5a98fb1dfc878284443a7790403c2b737ac87644
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 병합 변환 편집기
+# <a name="merge-transformation-editor"></a>병합 변환 편집기
   **병합 변환 편집기** 를 사용하여 병합할 두 개의 정렬된 데이터 집합에서 열을 지정할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
   
  병합 변환에 대한 자세한 내용은 [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md)을 참조하십시오.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **출력 열 이름**  
  출력 열 이름을 지정합니다.  
   
@@ -38,10 +43,10 @@ caps.handback.revision: 28
  **병합 입력 2**  
  병합 입력 2로 병합할 열을 선택합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services 오류 및 메시지 참조](../../../integration-services/integration-services-error-and-message-reference.md)   
  [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [병합 조인 변환](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
- [UNION ALL 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md)  
+ [Union All 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md)  
   
   
