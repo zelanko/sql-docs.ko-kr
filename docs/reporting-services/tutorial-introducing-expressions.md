@@ -16,11 +16,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97b19aaffd06a196d3cbd39e44b49c971a146edf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-introducing-expressions"></a>자습서: 식 소개
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
 6.  **데이터 원본에 대한 연결 선택** 페이지에서 **SQL Server**형식의 데이터 원본을 선택합니다. 목록에서 데이터 원본을 선택하거나 보고서 서버를 찾아 선택합니다.  
 
     > [!NOTE]  
-    > 적절한 권한만 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > 적절한 권한만 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 7.  **다음**을 클릭합니다.  
   
@@ -155,7 +155,7 @@ ms.lasthandoff: 06/22/2017
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. 이름 및 성 표시  
-이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate**(**&**) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
+이 섹션에서는 이름과 성을 포함하는 이름으로 계산되는 식에서 **Left** 함수와 **Concatenate** (**&**) 연산자를 사용합니다. 단계별로 식을 작성하거나 절차에서 단계를 건너뛰고 자습서의 식을 복사하여 **식** 대화 상자에 붙여넣을 수 있습니다.   
   
 1.  **StateProvince** 열을 마우스 오른쪽 단추로 클릭하고 **열 삽입**을 가리킨 다음 **왼쪽**을 클릭합니다.  
   
@@ -267,7 +267,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  **사각형 속성** 대화 상자 > **채우기** 탭에서 **채우기 색** 옆에 있는 식 **fx** 단추를 클릭합니다.  
   
-3.  **식** 대화 상자에서 **일반 함수**를 확장하고 **프로그램 흐름**을 클릭합니다.  
+3.  **식** 대화 상자에서 **일반 함수** 를 확장하고 **프로그램 흐름**을 클릭합니다.  
   
 4.  **항목** 목록에서 **Switch**를 두 번 클릭합니다.  
   
@@ -326,7 +326,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  보고서 데이터 창에서 **새로 만들기** 를 클릭하고 **데이터 집합**을 클릭합니다.  
   
-3.  * * 데이터 집합 속성을 클릭 하 여 **내 보고서에 포함 된 데이터 집합을 사용 하 여**합니다.  
+3.  **데이터 집합 속성에서 **내 보고서에 포함된 데이터 집합 사용**을 클릭합니다.  
   
 4.  **데이터 원본** 목록에서 ExpressionsDataSource를 선택합니다.  
   
@@ -410,7 +410,7 @@ ms.lasthandoff: 06/22/2017
   
 9. **범주** 목록에서 **필드(식)**를 클릭하고 **값** 목록에서 **LastPurchase**를 두 번 클릭합니다.  
   
-11. `Fields!LastPurchase.Value` 바로 뒤에 **,**(쉼표)를 입력합니다. 
+11. `Fields!LastPurchase.Value`바로 뒤에 **,** (쉼표)를 입력합니다. 
   
 13. **범주** 목록에서 **날짜 및 시간**을 다시 클릭하고 **항목** 목록에서 **Now**를 두 번 클릭합니다.  
   

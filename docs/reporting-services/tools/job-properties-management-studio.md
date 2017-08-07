@@ -1,5 +1,5 @@
 ---
-title: "작업 속성 (Management Studio) | Microsoft Docs"
+title: "작업 속성(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/22/2017
  보고서의 경우 이 열에서 진행 중인 보고서 실행 프로세스를 표시합니다. 이 값은 항상 **렌더링**입니다.  
   
  **작업 설명**  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본적으로 작업 설명이 제공되지 않습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 기본적으로 작업 설명이 제공되지 않습니다.  
   
  **서버 이름**  
  작업을 처리 중인 보고서 서버의 이름을 표시합니다. 확장 배포를 구성한 경우 이 값은 작업을 처리 중인 서버를 표시합니다.  

@@ -1,5 +1,5 @@
 ---
-title: "서버 속성 (고급 페이지)-Reporting Services | Microsoft Docs"
+title: "서버 속성(고급 페이지) - Reporting Services | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b5cd82621ecd65bb56b8a5a2eb0314935fd3a37a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
  실행 로그에 보고서 실행 정보를 보관하는 일 수입니다. 이 속성에 유효한 값은 **-1** 부터 **2**,**147**,**483**,**647**입니다. 값이 **-1** 이면 실행 로그 테이블에서 항목이 삭제되지 않습니다. 기본값은 **60**입니다.  
  
 > [!NOTE] 
-> 값으로 설정 **0** 됩니다 *삭제* 실행 로그에서 모든 항목입니다. 값이 **-1** 실행 로그의 항목으로 유지 됩니다 중 이며 삭제할 수 없습니다.
+> 값을 **0**으로 설정하면 모든 항목이 실행 로그에서 *삭제*됩니다. 값이 **-1**이면 실행 로그 항목이 유지되며 삭제되지 않습니다.
   
  **SessionTimeout**  
  세션이 활성 상태로 유지되는 시간(초)입니다. 기본값은 **600**입니다.  
@@ -120,7 +120,7 @@ ms.lasthandoff: 06/22/2017
  [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [보고서 서버 시스템 속성](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)   
  [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
- [내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
+ [내 보고서 사용 및 사용 안 함 설정](../../reporting-services/report-server/enable-and-disable-my-reports.md)  
   
   
 

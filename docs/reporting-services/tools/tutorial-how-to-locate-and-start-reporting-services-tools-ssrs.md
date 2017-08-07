@@ -1,5 +1,5 @@
 ---
-title: "자습서: 서비스 도구 (SSRS)를 찾아 보고 시작 하는 방법 | Microsoft Docs"
+title: "자습서: Reporting Services 도구를 찾고 시작하는 방법(SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -25,11 +25,11 @@ caps.latest.revision: 63
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ebec450636a6a0342421da7dff862481bb1da55a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -48,13 +48,13 @@ ms.lasthandoff: 06/22/2017
 -   암호화 키를 관리합니다.  
 -   무인 보고서 처리 및 전자 메일 보고서 배달을 구성합니다.  
   
- **Installation:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager is installed when you install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode. 자세한 내용은 [Reporting Services 기본 모드 보고서 서버 설치](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)를 참조하세요.  
+ **설치:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드를 설치할 때 함께 설치됩니다. 자세한 내용은 [Reporting Services 기본 모드 보고서 서버 설치](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)를 참조하세요.  
   
 ### <a name="to-start-the-reporting-services-configuration-manager"></a>Reporting Services 구성 관리자를 시작하려면  
   
 1.  Windows 시작 화면에서 **reporting** 을 입력하고 **앱** 검색 결과에서 **Reporting Services 구성 관리자**를 클릭합니다.  
   
-     ![reporting services 구성 관리자 시작 시](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "reporting services 구성 관리자 시작")  
+     ![시작 시 reporting services 구성 관리자](../../reporting-services/tools/media/bi-ssrs-configmanager-win8-startscreen.gif "시작 시 reporting services 구성 관리자")  
   
      **Or**  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 06/22/2017
   
      원격 컴퓨터를 지정하는 경우 **찾기** 를 클릭하여 연결을 설정합니다. 미리 보고서 서버를 원격 관리용으로 구성해야 합니다. 자세한 내용은 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)을 참조하세요.  
   
-3.  **stance Name**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. SQL Server 2008 및 이후 보고서 서버 인스턴스는 목록에 나타납니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
+3.  **stance Name**에서 구성할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 선택합니다. SQL Server 2008 이상 보고서 서버 인스턴스만 목록에 표시됩니다. 이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 구성할 수 없습니다.  
   
 4.  **연결**을 클릭합니다.  
   
@@ -79,15 +79,15 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="web-portal-native-mode"></a>웹 포털(기본 모드)  
  [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md) 을 사용하여 권한 설정, 구독 및 일정 관리, 보고서 작업을 수행할 수 있습니다. 또한 웹 포털을 사용하여 보고서를 볼 수 있습니다.  
   
- **설치:** 웹 포털은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드([Reporting Services 기본 모드 보고서 서버 설치](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4))를 설치할 때 설치됩니다.  
+ **설치:** 웹 포털은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드( [Reporting Services 기본 모드 보고서 서버 설치](assetid:///8f25e6dc-b753-400e-9e9a-50f4f35bf6c4)  
   
- 웹 포털을 열려면 먼저 충분한 권한이 있어야 합니다. 처음에는 로컬 관리자 그룹의 멤버만 웹 포털 기능에 액세스할 수 있습니다. 웹 포털은 현재 사용자의 역할 할당에 따라 다양한 페이지와 옵션을 제공합니다. 사용 권한이 없는 사용자에게는 빈 페이지가 나타납니다. 보고서를 볼 권한이 있는 사용자에게는 클릭하여 보고서를 열 수 있는 링크가 나타납니다. 권한에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)을 참조하세요.  
+ 웹 포털을 열려면 먼저 충분한 권한이 있어야 합니다. 처음에는 로컬 관리자 그룹의 멤버만 웹 포털 기능에 액세스할 수 있습니다. 웹 포털은 현재 사용자의 역할 할당에 따라 다양한 페이지와 옵션을 제공합니다. 사용 권한이 없는 사용자에게는 빈 페이지가 나타납니다. 보고서를 볼 권한이 있는 사용자에게는 클릭하여 보고서를 열 수 있는 링크가 나타납니다. 권한에 대한 자세한 내용은 [역할 및 권한&#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md)를 참조하세요.  
   
 ### <a name="to-start-the-web-portal"></a>웹 포털을 시작하려면  
   
 1.  브라우저를 엽니다. 지원되는 브라우저 및 브라우저 버전에 대한 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
   
-2.  웹 브라우저의 주소 표시줄에 웹 포털 URL을 입력합니다. 기본적으로 URL은 `http://<serverName>/reports`입니다. Reporting Services 구성 도구를 사용하여 서버 이름과 URL을 확인할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용되는 URL에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)을 참조하세요.  
+2.  웹 브라우저의 주소 표시줄에 웹 포털 URL을 입력합니다. 기본적으로 이 URL은 `http://<serverName>/reports`사용을 위한 기술을 배울 수 있는 다른 자습서로 이동할 수 있습니다. Reporting Services 구성 도구를 사용하여 서버 이름과 URL을 확인할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 사용되는 URL에 대한 자세한 내용은 [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)를 참조하세요.  
   
 3.  웹 포털이 브라우저 창에서 열립니다. 시작 페이지는 홈 폴더입니다. 사용 권한에 따라 추가 폴더, 보고서에 대한 하이퍼링크 및 시작 페이지 내의 리소스 파일을 볼 수 있습니다. 또한 도구 모음에서 추가적인 단추와 명령을 볼 수 있습니다.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  Windows 시작 화면에서 **sql server** 를 입력한 다음 **앱** 검색 결과에서 **SQL Server Management Studio**를 클릭합니다.  
   
-     ![management studio를 windows 시작 화면](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "management studio를 windows 시작 화면")  
+     ![Windows 시작 화면의 Management Studio](../../reporting-services/tools/media/bi-ssms-win8-startscreen.gif "Windows 시작 화면의 Management Studio")  
   
      **Or**  
   
@@ -179,7 +179,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="next-steps"></a>다음 단계
 
-[SQL Server 모바일 보고서 게시자를 다운로드 합니다.](http://go.microsoft.com/fwlink/?LinkID=733527)   
+[SQL Server 모바일 보고서 게시자를 다운로드](http://go.microsoft.com/fwlink/?LinkID=733527)   
 [보고서 작성기를 다운로드](http://go.microsoft.com/fwlink/?LinkID=219138)  
 [SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714) 
 [Reporting Services SharePoint 모드 설치](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)   
@@ -187,4 +187,4 @@ ms.lasthandoff: 06/22/2017
 [쿼리 디자인 도구](../../reporting-services/report-data/query-design-tools-ssrs.md)   
 [Reporting Services 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

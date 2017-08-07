@@ -1,5 +1,5 @@
 ---
-title: "보고서 서버 내용 관리 (SSRS 기본 모드) | Microsoft Docs"
+title: "보고서 서버 콘텐츠 관리(SSRS 기본 모드) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -21,11 +21,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2289f62499f876cc296d6c939c4d9e70ccfe4c3f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>보고서 서버 콘텐츠 관리(SSRS 기본 모드)
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
 |아이콘|이동 가능한 항목|  
 |----------|-------------------|  
 |![보고서 아이콘](../../reporting-services/report-server/media/hlp-16doc.gif "보고서 아이콘")|보고서|  
-|![연결 된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "연결 된 보고서 아이콘")|링크된 보고서|  
+|![링크된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "링크된 보고서 아이콘")|링크된 보고서|  
 |![폴더 아이콘](../../reporting-services/report-server/media/hlp-16folder.gif "폴더 아이콘")|Folder|  
 |![일반 리소스 아이콘](../../reporting-services/report-server/media/hlp-16file.gif "일반 리소스 아이콘")|일반 리소스|  
 |![공유 데이터 원본 아이콘](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
@@ -174,11 +174,11 @@ ms.lasthandoff: 06/22/2017
   
 |문자|이스케이프 값|예제|  
 |---------------|------------------|-------------|  
-|(공백)|[ ]|*Firstname Lastname* becomes *Firstname[ ]Lastname*|  
-|\(백슬래시)|공백 문자 하나로 바뀝니다.|*DomainName\Username* becomes *DomainName Username*|  
+|(공백)|[ ]|*Firstname Lastname* 은 *Firstname[ ]Lastname*|  
+|\(백슬래시)|공백 문자 하나로 바뀝니다.|*DomainName\Username* 은 *DomainName Username*|  
 |@(at 기호)|[at]|*username*@hotmail.com 은 *username*[at]hotmail.com이 됩니다.|  
-|& (앰퍼샌드)|[amp]|*username*@*company*&*company.com* becomes *username*[at]*company*[amp]*company.com*|  
-|$(달러 기호)|[dollar]|*User* $*Name* becomes *User*[ ][dollar]*Name*|  
+|& (앰퍼샌드)|[amp]|*username*@*company*&*company.com* 은 *username*[at]*company*[amp]*company.com*|  
+|$(달러 기호)|[dollar]|*User* $*Name* 은 *User*[ ][dollar]*Name*|  
   
  내 보고서 기능은 선택적입니다. 보고서 서버를 설치하면 내 보고서는 기본적으로 해제되어 있습니다. 이 기능을 사용하도록 설정하는 방법에 대한 자세한 내용은 [내 보고서 설정 및 해제](../../reporting-services/report-server/enable-and-disable-my-reports.md)를 참조하세요. 자세한 내용은 [내 보고서 보안 설정](../../reporting-services/security/secure-my-reports.md)을 참조하세요.  
   

@@ -19,11 +19,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d47140507a42084ddf60fa9c54ef6abe43c6f8b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="work-with-replication-agent-profiles"></a>복제 에이전트 프로필 작업
@@ -65,7 +65,7 @@ ms.lasthandoff: 06/22/2017
   
     -   프로필 삭제  
   
--   **Follow Up:**  [After Changing Agent Parameters](#FollowUp)  
+-   **후속 작업:**  [에이전트 매개 변수 변경 후](#FollowUp)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
@@ -234,7 +234,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Create_RMO"></a> 새 에이전트 프로필을 만들려면  
   
-1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자 연결을 만듭니다.  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자에 대한 연결을 만듭니다.  
   
 2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> 클래스의 인스턴스를 만듭니다.  
   
@@ -244,9 +244,9 @@ ms.lasthandoff: 06/22/2017
   
     -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AgentType%2A> - 프로필을 만들 복제 에이전트의 유형을 지정하는 <xref:Microsoft.SqlServer.Replication.AgentType> 값입니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> - 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 입니다.  
   
-    -   (옵션) <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> - 프로필에 대한 설명입니다.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.Description%2A> (옵션) - 프로필에 대한 설명입니다.  
   
     -   (옵션) <xref:Microsoft.SqlServer.Replication.AgentProfile.Default%2A> - 이 <xref:Microsoft.SqlServer.Replication.AgentType>의 모든 새 에이전트 작업에서 기본적으로 이 프로필이 사용되는 경우 이 속성을 **true**로 설정합니다.  
   
@@ -258,7 +258,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Modify_RMO"></a> 기존 에이전트 프로필을 수정하려면  
   
-1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자 연결을 만듭니다.  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자에 대한 연결을 만듭니다.  
   
 2.  <xref:Microsoft.SqlServer.Replication.ReplicationServer> 클래스의 인스턴스를 만듭니다. 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 전달합니다.  
   
@@ -266,27 +266,27 @@ ms.lasthandoff: 06/22/2017
   
 4.  <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumAgentProfiles%2A> 메서드를 호출합니다. <xref:Microsoft.SqlServer.Replication.AgentType> 값을 전달하여 반환되는 프로필의 범위를 특정 유형의 복제 에이전트로 좁힙니다.  
   
-5.  반환된 <xref:System.Collections.ArrayList>에서 원하는 <xref:Microsoft.SqlServer.Replication.AgentProfile> 개체를 가져옵니다. 이때 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 속성은 프로필 이름과 일치합니다.  
+5.  반환된 <xref:Microsoft.SqlServer.Replication.AgentProfile> 에서 원하는 <xref:System.Collections.ArrayList>개체를 가져옵니다. 이때 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 속성은 프로필 이름과 일치합니다.  
   
-6.  <xref:Microsoft.SqlServer.Replication.AgentProfile>의 다음 메서드 중 하나를 호출하여 프로필을 변경합니다.  
+6.  <xref:Microsoft.SqlServer.Replication.AgentProfile> 의 다음 메서드 중 하나를 호출하여 프로필을 변경합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - 프로필에 지원되는 매개 변수를 추가합니다. 여기서 *name*은 복제 에이전트 매개 변수의 이름이고 *value*는 지정된 값입니다. 지정된 에이전트 유형에 대해 지원되는 모든 에이전트 매개 변수를 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 메서드를 호출합니다. 이 메서드는 지원되는 모든 매개 변수를 나타내는 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 개체의 <xref:System.Collections.ArrayList>를 반환합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.AddParameter%2A> - 프로필에 지원되는 매개 변수를 추가합니다. 여기서 *name* 은 복제 에이전트 매개 변수의 이름이고 *value* 는 지정된 값입니다. 지정된 에이전트 유형에 대해 지원되는 모든 에이전트 매개 변수를 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 메서드를 호출합니다. 이 메서드는 지원되는 모든 매개 변수를 나타내는 <xref:System.Collections.ArrayList> 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 를 반환합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 프로필에서 기존 매개 변수를 제거합니다. 여기서 *name*은 복제 에이전트 매개 변수의 이름입니다. 프로필에 대해 정의된 현재의 모든 에이전트 매개 변수를 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 메서드를 호출합니다. 이 메서드는 이 프로필의 기존 매개 변수를 나타내는 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 개체의 <xref:System.Collections.ArrayList>를 반환합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.RemoveParameter%2A> - 프로필에서 기존 매개 변수를 제거합니다. 여기서 *name* 은 복제 에이전트 매개 변수의 이름입니다. 프로필에 대해 정의된 현재의 모든 에이전트 매개 변수를 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 메서드를 호출합니다. 이 메서드는 이 프로필의 기존 매개 변수를 나타내는 <xref:System.Collections.ArrayList> 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 를 반환합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 프로필의 기존 매개 변수 설정을 변경합니다. 여기서 *name*은 에이전트 매개 변수의 이름이고 *newValue*는 매개 변수를 변경할 값입니다. 프로필에 대해 정의된 현재의 모든 에이전트 매개 변수를 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 메서드를 호출합니다. 이 메서드는 이 프로필의 기존 매개 변수를 나타내는 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 개체의 <xref:System.Collections.ArrayList>를 반환합니다. 지원되는 모든 에이전트 매개 변수 설정을 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A>메서드를 호출합니다. 이 메서드는 모든 매개 변수에 대해 지원되는 값을 나타내는 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 개체의 <xref:System.Collections.ArrayList>를 반환합니다.  
+    -   <xref:Microsoft.SqlServer.Replication.AgentProfile.ChangeParameter%2A> - 프로필의 기존 매개 변수 설정을 변경합니다. 여기서 *name* 은 에이전트 매개 변수의 이름이고 *newValue* 는 매개 변수를 변경할 값입니다. 프로필에 대해 정의된 현재의 모든 에이전트 매개 변수를 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameters%2A> 메서드를 호출합니다. 이 메서드는 이 프로필의 기존 매개 변수를 나타내는 <xref:System.Collections.ArrayList> 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfileParameter> 를 반환합니다. 지원되는 모든 에이전트 매개 변수 설정을 열거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.EnumParameterInfo%2A> 메서드를 호출합니다. 이 메서드는 모든 매개 변수에 대해 지원되는 값을 나타내는 <xref:System.Collections.ArrayList> 개체의 <xref:Microsoft.SqlServer.Replication.AgentProfileParameterInfo> 를 반환합니다.  
   
 ###  <a name="Delete_RMO"></a> 에이전트 프로필을 삭제하려면  
   
-1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자 연결을 만듭니다.  
+1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스의 인스턴스를 사용하여 배포자에 대한 연결을 만듭니다.  
   
-2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A>에 프로필 이름을 설정하고 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>에 1단계에서 만든 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>을 설정합니다.  
+2.  <xref:Microsoft.SqlServer.Replication.AgentProfile> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.AgentProfile.Name%2A> 에 프로필 이름을 설정하고 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에 1단계에서 만든 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>을 설정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false**를 반환하는 경우 지정한 이름이 올바르지 않거나 해당 프로필이 서버에 없는 것입니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 속성이 고객 프로필을 나타내는 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>로 설정되어 있는지 확인합니다. <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>에 대한 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System>의 값이 있는 프로필은 제거하면 안 됩니다.  
+4.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A> 속성이 고객 프로필을 나타내는 <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.User>로 설정되어 있는지 확인합니다. <xref:Microsoft.SqlServer.Replication.AgentProfileTypeOption.System> 의 값이 <xref:Microsoft.SqlServer.Replication.AgentProfile.Type%2A>인 프로필은 제거하면 안 됩니다.  
   
-5.  이 개체가 나타내는 사용자 정의 프로필을 서버에서 제거하려면 <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 메서드를 호출합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.AgentProfile.Remove%2A> 메서드를 호출하여 이 개체가 나타내는 사용자 정의 프로필을 서버에서 제거합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 에이전트 매개 변수 변경 후  
  에이전트 매개 변수에 대한 변경 사항은 다음에 에이전트가 시작될 때 적용됩니다. 에이전트가 연속적으로 실행되는 경우에는 에이전트를 중단했다가 다시 시작해야 합니다.  

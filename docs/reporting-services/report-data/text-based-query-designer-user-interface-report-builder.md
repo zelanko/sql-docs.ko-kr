@@ -1,5 +1,5 @@
 ---
-title: "텍스트 기반 쿼리 디자이너 사용자 인터페이스 (보고서 작성기) | Microsoft Docs"
+title: "텍스트 기반 쿼리 디자이너 사용자 인터페이스(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1640b0536b6e206afbd2aff5ea8dd11349277f12
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>텍스트 기반 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
@@ -74,7 +74,7 @@ SELECT Name FROM Person.ContactType
   
  다음 그림에서는 저장 프로시저를 실행할 때 쿼리 및 결과 창을 보여 줍니다. 이 경우 입력 매개 변수는 상수입니다.  
   
- ![텍스트 기반 쿼리 디자이너에서 저장 프로시저](../../reporting-services/report-data/media/rs-relational-text-sp.gif "텍스트 기반 쿼리 디자이너에서 저장 프로시저")  
+ ![텍스트 기반 쿼리 디자이너의 저장 프로시저](../../reporting-services/report-data/media/rs-relational-text-sp.gif "텍스트 기반 쿼리 디자이너의 저장 프로시저")  
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   

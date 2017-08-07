@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/25/2017
+ms.date: 07/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 70a1fd4dbec68d22187585de69a1d603c39e259e
-ms.openlocfilehash: 31572214a8276182ce1358fc05979a72b57a2ad6
+ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
+ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
@@ -26,20 +26,10 @@ SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨�
 
 **사용해 보기:** [SQL Server 2017 RC(릴리스 후보) 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
 
->[!TIP]
->**Linux에서 SQL Server 실행!** 자세한 내용은[SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)(Linux의 SQL Server 설명서) 및 [What's new for SQL Server 2017 on Linux](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)(Linux의 SQL Server 2017 새로운 기능)를 참조하세요.
+>**Linux에서 SQL Server 실행!** 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)을 참조하세요.
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc1-july-2017"></a>최신 릴리스: SQL Server 2017 릴리스 후보 (RC1, 2017년 7월)
-
-### <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진    
-- CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 CLR 어셈블리를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다.  
-
-### <a name="sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)
-- RC1에서는 SSIS의 새 **Scale Out** 기능에 다음과 같은 새로운 기능과 변경된 기능이 있습니다. 자세한 내용은 [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)(SQL Server 2017에서 Integration Services의 새로운 기능)을 참조하세요.
-    -   Scale Out Master에서 이제 고가용성을 지원합니다.
-    -   Scale Out Worker에서 실행 로그의 장애 조치(failover) 처리가 향상되었습니다.
-    -   일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]**의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
-    -   SSIS 카탈로그에 SSIS 패키지를 실행하기 위한 기본 모드를 지정하는 새 전역 속성이 있습니다.
+## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>최신 릴리스: SQL Server 2017 릴리스 후보 (RC2, 2017년 8월)
+이 릴리스에는 버그 수정 및 성능 향상 기능이 포함되어 있습니다.
 
 ### <a name="master-data-services-mds"></a>MDS(Master Data Services)
 - 다음과 같은 이전 릴리스의 SQL Server에서 SQL Server 2017 Master Data Services로 업그레이드하는 경우 업그레이드 환경 및 성능이 향상되었습니다.
@@ -47,9 +37,9 @@ SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨�
     - SQL Server 2014
     - SQL Server 2016
 
-
 ## <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진  
 SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 개선 및 성능 개선 사항을 포함하고 있습니다. 
+- CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 **CLR 어셈블리**를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다(RC1).  
 - **다시 시작 가능한 온라인 인덱스 다시 작성**은 오류(예: 복제본으로 장애 조치(failover) 또는 디스크 공간 부족) 발생 후 중지된 위치에서 온라인 인덱스 다시 작성을 재개하거나 일시 중지하고 나중에 온라인 인덱스 다시 작성 작업을 다시 시작합니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요. (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION의 **IDENTITY_CACHE** 옵션을 사용하면 서버가 예기치 않게 다시 시작하거나 보조 서버로 장애 조치(failover)된 후 ID 열의 값이 차이 나지 않도록 할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요. (CTP 2.0)
 - **자동 데이터베이스 튜닝**은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고 솔루션을 추천하며 식별된 문제를 자동으로 해결할 수 있습니다. [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md)(자동 튜닝)을 참조하세요. (CTP 2.0)
@@ -119,13 +109,22 @@ CTP 2.1부터 더 이상 SQL Server 설치 프로그램을 통해 SSRS를 설치
 자세한 내용은 [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)(SSRS(SQL Server Reporting Services)의 새로운 기능)를 참조하세요.
 
 ## <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스
-R 언어와 함께 Python이 새로 지원되는 것을 반영하여 SQL Server R Services 이름이 **SQL Server Machine Learning Services**로 변경되었습니다. Machine Learning Services(데이터베이스 내)를 사용하여 SQL Server에서 R 또는 Python 스크립트를 실행하거나 Microsoft Machine Learning Server(독립 실행형)를 설치하여 SQL Server가 필요 없는 R 및 Python 모델을 배포하고 사용할 수 있습니다. 두 플랫폼 모두에는 분산된 Machine Learning에 대한 새 MicrosoftML 알고리즘 및 최신 버전의 Microsoft R(버전 9.1.0)이 포함되어 있습니다. (CTP 2.0)
-- Python을 사용하는 Machine Learning에는 RevoScaleR에 제공된 분산 알고리즘 및 계산 컨텍스트의 하위 집합을 지원하는 **revoscalepy** 모듈이 포함되어 있습니다. 
-- 새 **rxExecBy** 함수를 사용하여 R에서 여러 모델을 병렬로 쉽게 만들 수 있습니다. 지원되는 계산 컨텍스트에는 RxSpark 및 RxInSQLServer가 포함됩니다. (CTP 2.0)
+R 언어와 함께 Python 지원을 반영하여 SQL Server R Services 이름이 **SQL Server Machine Learning Services**로 변경되었습니다. Machine Learning Services(데이터베이스 내)를 사용하여 SQL Server에서 R 또는 Python 스크립트를 실행할 수 있습니다. 또는 **Microsoft Machine Learning Server(독립형)**를 설치하여 SQL Server가 필요하지 않은 R 및 Python 모델을 배포하고 사용합니다. 
+
+SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오픈 소스 에코 시스템에서 사용할 수 있는 광범위 Python ML 및 AI 라이브러리에 액세스할 수 있습니다. 
+
++ **revoscalepy** - 이 RevoScaleR의 Pythonic 버전에는 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트의 병렬 알고리즘 외에도 데이터 변환 및 데이터 이동, 원격 계산 컨텍스트 및 데이터 소스에 사용할 풍부한 API 집합이 포함되어 있습니다.
+
++ **microsoftml** - Python 바인딩을 사용하는 이 첨단 기계 학습 알고리즘 및 변환 패키지에는 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 고도로 최적화된 선형 및 로지스틱 회귀 알고리즘이 포함되어 있습니다. 이미지 추출 또는 감정 분석에 사용할 수 있는 ResNet 모델을 기반으로 미리 학습된 모델도 가져옵니다.
+
++ **T-SQL로 Python 운영화** - 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 코드를 쉽게 배포합니다. SQL에서 Python 프로세스로 데이터를 스트리밍하고 MPI 링 병렬화를 사용하여 뛰어난 성능을 얻습니다.
+
++ **SQL Server 계산 컨텍스트의 Python** - 데이터 과학자와 개발자는 개발 환경에서 원격으로 Python 코드를 실행하여 데이터를 이동하지 않고 데이터를 탐색하고 모델을 개발할 수 있습니다.
 
 자세한 내용은 [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)를 참조하세요.
+- [SQL Server 2017 on Linux의 새로운 기능](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)을 알아보세요.
 - [SQL Server 2016의 새로운 기능](what-s-new-in-sql-server-2016.md)을 확인하세요.
 

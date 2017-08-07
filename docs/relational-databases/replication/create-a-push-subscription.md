@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
+2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.TransPublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 간에 비트 논리 AND(Visual C#에서는**&**, Visual Basic에서는 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>를 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 및 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 간의 비트 논리 OR(Visual C#에서는 **|**, Visual Basic에서는 **Or**) 결과로 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>를 호출하여 밀어넣기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와**|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   
@@ -175,37 +175,37 @@ ms.lasthandoff: 06/22/2017
   
 7.  다음 구독 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>의 1단계에서 만든 게시자에 대한 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에 대해 1단계에서 만든 게시자에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>  
   
     -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>에 대한 구독 데이터베이스 이름  
   
     -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>에 대한 구독자 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>에 대한 게시 데이터베이스의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>에 대한 게시 데이터베이스 이름  
   
     -   <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>에 대한 게시 이름  
   
-    -   배포자에서 배포 에이전트를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
+    -   배포자의 배포 에이전트가 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
-        > **참고:** **sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때는 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정하지 않아도 되지만 설정하는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
-    -   (선택 사항) 구독을 동기화하는 데 사용되는 에이전트 작업을 만드는 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>의 **true** 값(기본값) **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
+    -   (옵션) **@value** 에 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 값(기본값). **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
   
-    -   (선택 사항) SQL Server 인증을 사용하여 구독자에 연결할 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 필드를 설정합니다.  
+    -   (옵션) SQL Server 인증을 사용하여 구독자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 필드  
   
 8.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출합니다.  
   
-    > **중요!!** 원격 배포자가 있는 게시자에서 밀어넣기 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 이 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+    > **중요!!**원격 배포자가 있는 게시자에서 밀어넣기 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. 이 <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>병합 게시에 밀어넣기 구독을 만들려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
-2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> 및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
+2.  1단계에서 만든 게시자 연결을 사용하여 <xref:Microsoft.SqlServer.Replication.MergePublication> 클래스의 인스턴스를 만듭니다. <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>, <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A>및 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>를 지정합니다.  
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 간에 비트 논리 AND(Visual C#에서는**&**, Visual Basic에서는 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>를 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 및 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 간의 비트 논리 OR(Visual C#에서는 **|**, Visual Basic에서는 **Or**) 결과로 설정합니다. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>를 호출하여 밀어넣기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와**|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   
@@ -213,25 +213,25 @@ ms.lasthandoff: 06/22/2017
   
 7.  다음 구독 속성을 설정합니다.  
   
-    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>의 1단계에서 만든 게시자에 대한 <xref:Microsoft.SqlServer.Management.Common.ServerConnection>  
+    -   <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 에 대해 1단계에서 만든 게시자에 대한 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A>  
   
     -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>에 대한 구독 데이터베이스 이름  
   
     -   <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>에 대한 구독자 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>에 대한 게시 데이터베이스의 이름  
+    -   <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A>에 대한 게시 데이터베이스 이름  
   
     -   <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>에 대한 게시 이름  
   
-    -   배포자에서 병합 에이전트를 실행하는 데 사용되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
+    -   배포자의 배포 에이전트가 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드와 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A> 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 필드. 이 계정은 Windows 인증을 사용하여 배포자에 대한 로컬 연결 및 원격 연결을 만드는 데 사용됩니다.  
   
-        > **참고:** **sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때는 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정하지 않아도 되지만 설정하는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
+        > **참고:****sysadmin** 고정 서버 역할의 멤버가 구독을 만들 때 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 설정할 필요는 없지만 설정해 두는 것이 좋습니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   
-    -   (선택 사항) 구독을 동기화하는 데 사용되는 에이전트 작업을 만드는 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A>의 **true** 값(기본값) **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
+    -   (옵션) **@value** 에 <xref:Microsoft.SqlServer.Replication.Subscription.CreateSyncAgentByDefault%2A> 값(기본값). **false**를 지정한 경우 구독은 프로그래밍 방식으로만 동기화할 수 있습니다.  
   
-    -   (선택 사항) SQL Server 인증을 사용하여 구독자에 연결할 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 필드를 설정합니다.  
+    -   (옵션) SQL Server 인증을 사용하여 구독자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberSecurity%2A> 필드  
   
-    -   (선택 사항) SQL Server 인증을 사용하여 게시자에 연결할 경우 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 필드를 설정합니다.  
+    -   (옵션) SQL Server 인증을 사용하여 게시자에 연결할 때 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> 의 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> 필드와 <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> 또는 <xref:Microsoft.SqlServer.Replication.PullSubscription.PublisherSecurity%2A> 필드  
   
 8.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출합니다.  
   

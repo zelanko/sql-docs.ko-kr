@@ -1,5 +1,5 @@
 ---
-title: "배포 속성 설정 (Reporting Services) | Microsoft Docs"
+title: "배포 속성 설정(Reporting Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -20,11 +20,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 30d542287f81032aa1bc2540d461a8f8c163b2f9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="set-deployment-properties-reporting-services"></a>배포 속성 설정(Reporting Services)
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 2.  해당 프로젝트의 **속성 페이지** 대화 상자에서 **구성 관리자**를 클릭합니다.  
   
-3.  **구성 관리자** 대화 상자에서 편집할 구성을 선택합니다. 현재 활성 구성이으로 표시 됩니다 **활성 (***\<구성 >***)**합니다.  
+3.  **구성 관리자** 대화 상자에서 편집할 구성을 선택합니다. 현재 활성 구성이 **활성(***\<구성>***)**으로 표시됩니다.  
   
 4.  **프로젝트 컨텍스트**에서 솔루션의 각 프로젝트에 대해 **빌드** 또는 **배포**를 선택하거나 선택을 취소합니다.  
   

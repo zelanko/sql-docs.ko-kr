@@ -1,5 +1,5 @@
 ---
-title: "차트 (보고서 작성기 및 SSRS)에 데이터 요소에 서식 지정 | Microsoft Docs"
+title: "차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/03/2017
 ms.prod: sql-server-2016
@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d1514b7ec2a5f1d7d2d5abd3513db47a208a2e24
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>차트의 데이터 요소에 서식 지정(보고서 작성기 및 SSRS)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
  `=Iif(Fields!MyField.Value >= Max(Fields!MyField.Value, "MyDataSet"), "Red", "Green")`  
   
- 이 예에서 `MyField` 에 대해 가장 높은 값은 빨강으로 표시되고 나머지 데이터 요소는 녹색으로 표시됩니다. 계열의 **채우기** 속성을 사용하여 계열에 대한 색을 지정하면 차트에서 색상표에서 지정된 색을 덮어씁니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
+ 이 예에서 `MyField` 에 대해 가장 높은 값은 빨강으로 표시되고 나머지 데이터 요소는 녹색으로 표시됩니다. 계열의 **채우기** 속성을 사용하여 계열에 대한 색을 지정하면 차트에서 색상표에서 지정된 색을 덮어씁니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   
 ## <a name="positioning-data-point-labels-on-a-chart"></a>차트에서 데이터 요소 레이블 위치 지정  
  모든 차트 종류에서 차트를 마우스 오른쪽 단추로 클릭하고 **데이터 레이블 표시**를 선택하면 데이터 요소 레이블을 표시할 수 있습니다. 데이터 요소 레이블의 위치는 다음과 같이 차트 종류에 따라 다른 방법으로 지정됩니다.  
@@ -58,14 +58,14 @@ ms.lasthandoff: 06/22/2017
   
 -   다른 모든 차트 종류의 경우 계열 레이블의 **위치** 속성을 사용하여 데이터 요소 레이블의 위치를 변경할 수 있습니다. 기본적으로 차트는 레이블 겹침을 피하기 위해 데이터 요소 레이블의 위치를 자동으로 계산합니다. **위치**값을 설정하면 모든 데이터 요소 레이블의 위치가 같은 방법으로 지정되어 레이블 겹침이 발생할 수 있습니다. 적은 수의 데이터 요소가 있는 경우에만 이 방법을 사용하는 것이 좋습니다.  
   
- 자세한 내용은 [차트의 레이블 위치 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
+ 자세한 내용은 [차트의 레이블 위치 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/position-labels-in-a-chart-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>데이터 요소 레이블, 도구 설명 및 범례 텍스트의 키워드 추가  
  대/소문자를 구분하는 차트 관련 키워드를 사용하여 차트에 있는 항목을 표현할 수 있습니다. 이러한 키워드는 도구 설명, 사용자 지정 범례 텍스트 및 데이터 요소 레이블 속성에만 적용할 수 있습니다. 대부분의 경우 차트 키워드에도 동일한 단순 식이 있지만 키워드를 입력하는 것이 더 빠르고 간편합니다. 다음은 차트 키워드 목록입니다.  
   
 |차트 키워드|Description|적용 가능한 차트 종류|동일한 단순 식의 예|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
-|#VALY|데이터 요소의 Y 값|All|`=Fields!MyDataField.Value`|  
+|#VALY|데이터 요소의 Y 값|모두|`=Fields!MyDataField.Value`|  
 |#VALY2|데이터 요소의 Y 값 #2|범위, 거품형|없음|  
 |#VALY3|데이터 요소의 Y 값 #3|주식형, 원통형|없음|  
 |#VALY4|데이터 요소 #4의 Y 값|주식형, 원통형|없음|  
@@ -73,20 +73,20 @@ ms.lasthandoff: 06/22/2017
 |#LABEL|데이터 요소 레이블|모두|없음|  
 |#AXISLABEL|축 데이터 요소 레이블|셰이프|`=Fields!MyDataField.Value`|  
 |#INDEX|데이터 요소 인덱스|모두|없음|  
-|#PERCENT|데이터 요소 Y 값의 백분율|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
-|#TOTAL|계열의 모든 Y 값에 대한 합계|All|`=Sum(Fields!MyDataField.Value)`|  
+|#PERCENT|데이터 요소 Y 값의 백분율|모두|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
+|#TOTAL|계열의 모든 Y 값에 대한 합계|모두|`=Sum(Fields!MyDataField.Value)`|  
 |#LEGENDTEXT|범례 항목의 텍스트에 해당하는 텍스트|모두|없음|  
-|#AVG|계열의 모든 Y 값에 대한 평균|All|`=Avg(Fields!MyDataField.Value)`|  
+|#AVG|계열의 모든 Y 값에 대한 평균|모두|`=Avg(Fields!MyDataField.Value)`|  
 |#MIN|계열의 모든 Y 값에 대한 최소값|모두|`=Min(Fields!MyDataField.Value)`|  
-|#MAX|계열의 모든 Y 값에 대한 최대값|All|`=Max(Fields!MyDataField.Value)`|  
+|#MAX|계열의 모든 Y 값에 대한 최대값|모두|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|계열의 모든 Y 값에 대한 첫 번째 값|모두|`=First(Fields!MyDataField.Value)`|  
   
- 키워드 형식을 지정하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 괄호로 묶습니다. 예를 들어 도구 설명에서 데이터 요소의 값을 두 소수 자릿수를 포함하는 숫자로 지정하려면 계열의 **도구 설명** 속성에 대해 "#VALY{N2}"와 같이 형식 문자열 "N2"를 중괄호로 묶습니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열에 대한 자세한 내용은 MSDN의 [형식 지정(Formatting Types)](http://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 숫자 형식을 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 형식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)을 참조하세요.  
+ 키워드 형식을 지정하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열을 괄호로 묶습니다. 예를 들어 도구 설명에서 데이터 요소의 값을 두 소수 자릿수를 포함하는 숫자로 지정하려면 계열의 **도구 설명** 속성에 대해 "#VALY{N2}"와 같이 형식 문자열 "N2"를 중괄호로 묶습니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 형식 문자열에 대한 자세한 내용은 MSDN의 [형식 지정(Formatting Types)](http://go.microsoft.com/fwlink/?LinkId=112024) 을 참조하십시오. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 숫자 형식을 지정하는 방법에 대한 자세한 내용은 [숫자 및 날짜 형식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)를 참조하세요.  
   
- 차트에 키워드를 추가하는 방법에 대한 자세한 내용은 [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md), [범례 항목의 텍스트 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)을 참조하세요.  
+ 차트에 키워드를 추가하는 방법에 대한 자세한 내용은 [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md), [범례 항목의 텍스트 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-change-item-text-report-builder.md)를 참조하세요.  
   
 ## <a name="increasing-readability-in-a-chart-with-multiple-data-points"></a>여러 데이터 요소를 사용하여 차트의 가독성 향상  
- 차트에 여러 계열이 있는 경우 차트 데이터 요소의 가독성이 떨어질 수 있습니다. 차트에 여러 계열을 추가할 때는 차트에서 각 계열을 읽고 이해하기 쉽게 구분해 주는 방법을 고려하는 것이 좋습니다. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
+ 차트에 여러 계열이 있는 경우 차트 데이터 요소의 가독성이 떨어질 수 있습니다. 차트에 여러 계열을 추가할 때는 차트에서 각 계열을 읽고 이해하기 쉽게 구분해 주는 방법을 고려하는 것이 좋습니다. 자세한 내용은 [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md).  
   
  간단히 하기 위해 셰이프 차트를 사용할 때 하나의 데이터 필드와 하나의 범주 필드만 추가하십시오. 자세한 내용은 [셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)를 참조하세요. 차트에 데이터 필드와 범주 필드가 두 개 이상 필요한 경우 차트 종류를 변경하는 것이 좋습니다. 계열을 마우스 오른쪽 단추로 클릭하고 **차트 종류 변경**을 선택할 수 있습니다.  
   

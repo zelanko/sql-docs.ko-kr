@@ -1,5 +1,5 @@
 ---
-title: "자습서: 보고서 (보고서 작성기) 매개 변수를 추가 | Microsoft Docs"
+title: "자습서: 보고서에 매개 변수 추가(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -16,11 +16,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a3e5da225eb8008f74d6fc5aade3e55543d93d91
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>자습서: 보고서에 매개 변수 추가(보고서 작성기)
@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
 보고서 매개 변수는 데이터 집합 쿼리에 포함하는 각 쿼리 매개 변수에 대해 자동으로 만들어집니다. 매개 변수 데이터 형식에 따라 보고서 뷰 도구 모음에 매개 변수가 표시되는 방식이 결정됩니다. 
    
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 선택하고 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 하나의 절차로 통합됩니다. 보고서 서버를 찾고, 데이터 원본을 선택하고, 데이터 집합을 만드는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
 이 자습서에 소요되는 예상 시간: 25분  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
   
     **새 보고서 또는 데이터 집합** 대화 상자가 표시되지 않는 경우 **파일** 메뉴 > **새로 만들기**를 클릭합니다.  
   
-2.  왼쪽 창에서 **새 보고서**가 선택되어 있는지 확인합니다.  
+2.  왼쪽 창에서 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
 3.  오른쪽 창에서 **테이블 또는 행렬 마법사**를 클릭합니다.  
   
@@ -150,9 +150,9 @@ ms.lasthandoff: 06/22/2017
     WHERE StoreID = (@StoreID)  
     ```  
   
-    **여기서** 쿼리 매개 변수로 지정 된 상점 식별자에 검색된 데이터를 제한 하는 절  *@StoreID* 합니다.  
+    **WHERE** 절은 검색된 데이터를 쿼리 매개 변수 *@StoreID*로 지정된 상점 식별자로 제한합니다.  
   
-4.  쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. **쿼리 매개 변수 정의** 대화 상자가 열리고 쿼리 매개 변수에 대해 값을 묻는  *@StoreID* 합니다.  
+4.  쿼리 디자이너 도구 모음에서 **실행** (**!**)을 클릭합니다. **쿼리 매개 변수 정의** 대화 상자가 열리고 쿼리 매개 변수 *@StoreID*의 값을 입력하라는 메시지가 나타납니다.  
   
 5.  **매개 변수 값**에 **200**을 입력합니다.  
   
@@ -387,7 +387,7 @@ For *@StoreID*의 경우 보고서 뷰어에 상점 식별자 **200**를 참조�
   
 5.  보고서 데이터 창에서 **데이터 집합** 폴더를 확장하고 **DataSet1**을 마우스 오른쪽 단추로 클릭한 다음 **쿼리**를 클릭합니다.  
   
-6.  쿼리의 마지막 줄에 있는 **** WHERE **절에서 다음과 같이** 등호 [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** clause 등호 last line 등호 query:  
+6.  쿼리의 마지막 줄에 있는 [!INCLUDE[tsql](../includes/tsql-md.md)] **WHERE** 절에서 다음과 같이 **등호**(=)를 **IN**으로 변경합니다:  
   
     ```  
     WHERE StoreID IN (@StoreID)  

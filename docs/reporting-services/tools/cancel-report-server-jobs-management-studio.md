@@ -1,5 +1,5 @@
 ---
-title: "보고서 서버 작업 취소 (Management Studio) | Microsoft Docs"
+title: "보고서 서버 작업 취소(Management Studio) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5348146e3cce3c1f3f6288797f8a4e2bbd520cab
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="cancel-report-server-jobs-management-studio"></a>보고서 서버 작업 취소(Management Studio)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  이 페이지를 열려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 열고 보고서 서버에 연결한 다음 **작업**을 마우스 오른쪽 단추로 클릭하고 **모든 작업 취소**를 클릭합니다. **작업**을 열고 보고서 서버에서 실행 중인 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 취소**를 선택할 수도 있습니다.  
   
- 작업을 취소하기 전에 해당 작업의 속성을 보면 작업이 시작된 시점을 확인할 수 있습니다. 자세한 내용은 [작업 속성&#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)을 참조하세요.  
+ 작업을 취소하기 전에 해당 작업의 속성을 보면 작업이 시작된 시점을 확인할 수 있습니다. 자세한 내용은 [작업 속성&#40;Management Studio&#41;](../../reporting-services/tools/job-properties-management-studio.md)를 참조하세요.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] with Advanced Services에서는 이 기능을 지원하지 않습니다. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]를 실행하는 경우 페이지가 나타나지 않습니다.  

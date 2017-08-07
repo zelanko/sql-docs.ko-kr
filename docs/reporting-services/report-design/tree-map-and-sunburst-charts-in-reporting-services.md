@@ -1,5 +1,5 @@
 ---
-title: "트리 맵 및 선 버스트 차트 Reporting Services의 | Microsoft Docs"
+title: "Reporting Services의 트리 맵 및 선버스트 차트 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 08/31/2015
@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services의 트리 맵 및 선버스트 차트
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  디자인 화면을 마우스 오른쪽 단추로 클릭하고 **삽입**, **차트** 를 차례로 클릭합니다.  
   
-     트리 맵을 선택 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")합니다.  
+     트리 맵 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")을 선택합니다.  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
 1.  디자인 화면을 마우스 오른쪽 단추로 클릭하고 **삽입**, **차트** 를 차례로 클릭합니다.  
   
-     선 버스트를 선택 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")합니다.  
+     선버스트 ![ssrs_treemap_icon](../../reporting-services/media/ssrs-treemap-icon.png "ssrs_treemap_icon")을 선택합니다.  
   
      ![ssrs_insert_treemap_sunburst](../../reporting-services/report-design/media/ssrs-insert-treemap-sunburst.png "ssrs_insert_treemap_sunburst")  
   

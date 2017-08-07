@@ -1,5 +1,5 @@
 ---
-title: "(보고서 작성기 및 SSRS) URL에 하이퍼링크 추가 | Microsoft Docs"
+title: "URL에 하이퍼링크 추가(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 09/07/2016
 ms.prod: sql-server-2016
@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c4d66e7d74d06cbad20351f80a312be95cc253c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>URL에 하이퍼링크 추가(보고서 작성기 및 SSRS)
@@ -29,9 +29,9 @@ ms.lasthandoff: 06/22/2017
   
 *   지정하는 **URL로 브라우저를 여는 하이퍼링크를 추가** 할 수 있습니다. 하이퍼링크는 정적 URL 및 URL을 반환하는 식이 될 수 있습니다. URL을 포함하는 데이터베이스에 필드가 있는 경우 식에 해당 필드가 포함될 수 있으므로 보고서에 하이퍼링크의 동적 목록이 생깁니다. 지정하는 URL에 보고서를 읽는 사람이 액세스할 수 있도록 합니다.  
    
-*  보고서 서버에 대한 URL 요청을 사용하여 개발자와 사용자가 모두 볼 수 있는 보고서 서버의 보고서에 **드릴스루를 만들 URL을 지정** 할 수도 있습니다. 예를 들어 보고서를 지정한 다음 사용자가 처음으로 해당 보고서를 볼 때 문서 구조를 숨길 수 있습니다. 자세한 내용은 [URL 액세스 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) 및 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.
+*  보고서 서버에 대한 URL 요청을 사용하여 개발자와 사용자가 모두 볼 수 있는 보고서 서버의 보고서에 **드릴스루를 만들 URL을 지정** 할 수도 있습니다. 예를 들어 보고서를 지정한 다음 사용자가 처음으로 해당 보고서를 볼 때 문서 구조를 숨길 수 있습니다. 자세한 내용은 [URL 액세스 &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) 및 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)를 참조하세요.
  
- *  동일한 보고서에서 **특정 위치에 책갈피를 추가**할 수 있습니다. 
+ *  동일한 보고서에서 **특정 위치에 책갈피를 추가** 할 수 있습니다. 
   
 [자습서: 텍스트 서식 지정&#40;보고서 작성기&#41;](../../reporting-services/tutorial-format-text-report-builder.md)에서 샘플 데이터를 사용하여 하이퍼링크를 추가해 보세요.  
   

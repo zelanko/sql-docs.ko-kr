@@ -20,28 +20,28 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 45df97d21abc1ac494592c98e69964a38d7f4d21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="previewing-reports"></a>보고서 미리 보기
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 디자인할 때 프로덕션 환경에 게시하기 전에 보고서를 미리 볼 수 있습니다. 이 작업은 보고서 디자이너에서 미리 보기 모드로 전환하거나, 보고서 디자이너에서 미리 보기 창을 사용하거나, 테스트 환경의 보고서 서버에 보고서를 게시하여 수행할 수 있습니다.  
   
 > [!NOTE]  
->  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일으로 저장 됩니다  *\<reportname >*. 파일과 보고서 정의 파일과 같은 디렉터리에 있습니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
+>  보고서를 미리 보면 보고서의 데이터가 로컬 컴퓨터의 파일에 캐시됩니다. 동일한 쿼리, 매개 변수 및 자격 증명을 사용하여 동일한 보고서를 다시 미리 보면 보고서 디자이너는 쿼리를 다시 실행하지 않고 캐시된 복사본을 검색합니다. 데이터 파일은 보고서 정의 파일과 같은 디렉터리에 *\<reportname>*.rdl.data로 저장됩니다. 이 파일은 보고서 디자이너를 닫아도 삭제되지 않습니다.  
   
 ## <a name="preview-mode"></a>미리 보기 모드  
- 클릭 하 여 보고서 디자이너에서 보고서를 미리 볼 수 있습니다 ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "ssrs_ssdt_preview")합니다. 이때 보고서는 로컬로 실행되며 보고서 서버에 제공되는 동일한 보고서 처리 및 렌더링 기능을 사용합니다. 표시되는 보고서는 대화형 이미지이므로 매개 변수를 선택하고, 링크를 클릭하고, 문서 구조를 보고, 보고서의 숨겨진 영역을 확대 및 축소할 수 있습니다. 또한 설치된 렌더링 형식으로 보고서를 내보낼 수 있습니다.  
+ ![ssrs_ssdt_preview](../../reporting-services/media/ssrs-ssdt-preview.png "ssrs_ssdt_preview")를 클릭하여 보고서 디자이너에서 보고서를 미리 볼 수 있습니다. 이때 보고서는 로컬로 실행되며 보고서 서버에 제공되는 동일한 보고서 처리 및 렌더링 기능을 사용합니다. 표시되는 보고서는 대화형 이미지이므로 매개 변수를 선택하고, 링크를 클릭하고, 문서 구조를 보고, 보고서의 숨겨진 영역을 확대 및 축소할 수 있습니다. 또한 설치된 렌더링 형식으로 보고서를 내보낼 수 있습니다.  
   
 ## <a name="standalone-preview"></a>독립 실행형 미리 보기  
  디버그 구성 등에서 보고서 프로젝트를 실행하여 사용자가 작성하는 사용자 지정 어셈블리를 디버깅하여 보고서를 미리 볼 수도 있습니다. 보고서는 기본 브라우저에서 열립니다. 프로젝트를 실행하는 방법에는 세 가지가 있습니다.  
   
 -   **디버그** 메뉴에서 **디버깅 시작** 을 클릭합니다.  
   
--   클릭 하 여는 **시작** 단추는 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 표준 도구 모음 ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug")합니다.  
+-   [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 표준 도구 모음 ![ssrs_ssdt_startdebug](../../reporting-services/reports/media/ssrs-ssdt-startdebug.png "ssrs_ssdt_startdebug")에서 **시작** 단추를 클릭합니다.  
   
 -   **F5**키를 누릅니다.  
   
