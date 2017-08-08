@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: db9f087684ae73a0a26cbb8ddedbc00a2651339c
+ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
+ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
@@ -123,8 +123,13 @@ SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오�
 
 자세한 내용은 [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
 
+##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) SQL Server 엔지니어링 팀에 문의 
+- [Stack Overflow(태그 sql-server) - 기술 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
+- [MSDN 포럼 - 기술 관련 문의 사항](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+- [Microsoft Connect - 버그 보고 및 기능 요청](https://connect.microsoft.com/SQLServer/Feedback)
+- [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)
+
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)를 참조하세요.
 - [SQL Server 2017 on Linux의 새로운 기능](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)을 알아보세요.
 - [SQL Server 2016의 새로운 기능](what-s-new-in-sql-server-2016.md)을 확인하세요.
-
