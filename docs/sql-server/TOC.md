@@ -37,7 +37,4 @@
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 자습서](tutorials-for-sql-server-2016.md)
-
-# 문서 정보
-## [SQL Server 리소스](sql-server-resources.md)
-## [도움말 뷰어](../release-notes/sql-server-help-installation.md)
+# [도움말 뷰어에서의 로컬 콘텐츠](../release-notes/sql-server-help-installation.md)
