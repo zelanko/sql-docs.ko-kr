@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 대화 상자 항목을 열려면 대화 상자가 열려 있고 포커스가 주어진 상태에서 F1 키를 누릅니다. 속성 창 항목을 열려면 속성 창을 클릭하고 F1 키를 누릅니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[테이블 디자인&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
