@@ -26,11 +26,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 10ec05b662839e5cf2aac0d756d7ae581bdf8de9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 데이터 경고 디자이너
-<a id="data-alert-designer" class="xliff"></a>
+# <a name="data-alert-designer"></a>데이터 경고 디자이너
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -68,8 +67,7 @@ ms.lasthandoff: 07/03/2017
  ![경고 디자이너 사용자 인터페이스 내의 영역](../reporting-services/media/rs-alertdesigner.gif "경고 디자이너 사용자 인터페이스 내의 영역")  
   
   
-### 경고 데이터
-<a id="alert-data" class="xliff"></a>  
+### <a name="alert-data"></a>경고 데이터  
  데이터 경고 디자이너를 열면 보고서에서 모든 데이터 피드가 생성되어 사용할 수 있도록 설정되며 **보고서 데이터 이름** 드롭다운 목록에 피드 이름이 포함됩니다. 데이터 피드는 경고 정의를 만드는 동안 메모리에 캐시되어 사용자가 보고서 데이터 탐색을 위해 다른 데이터 피드로 전환할 때 데이터 피드 데이터를 표시하는 테이블이 빠르게 채워집니다.  
   
  데이터 경고 정의를 만드는 첫 번째 단계는 경고를 통해 모니터링할 데이터가 포함된 보고서 데이터 피드를 선택하는 것입니다. 보고서에는 데이터 피드가 0개 또는 여러 개 포함될 수 있습니다. 보고서에 데이터 피드가 없으면 보고서에 대해 경고를 만들 수 없습니다. 데이터 피드는 테이블, 행렬 및 목록은 물론 모든 유형의 차트, 계기, 표시기를 포함하여 모든 데이터 영역으로 생성할 수 있습니다.  
@@ -82,14 +80,12 @@ ms.lasthandoff: 07/03/2017
   
  일부 보고서에는 수백만 개의 데이터 행이 포함됩니다. 테이블에는 피드에서 처음 100개의 데이터 행만 표시됩니다.  
   
-### 경고 이름
-<a id="alert-name" class="xliff"></a>  
+### <a name="alert-name"></a>경고 이름  
  기본적으로 경고 정의의 이름은 보고서와 동일합니다. 경고 이름은 보다 의미 있는 이름으로 변경할 수 있습니다. 이렇게 하면 업데이트 또는 삭제 등을 수행할 경고를 식별하여 경고를 보다 쉽게 관리할 수 있습니다.  
   
  경고는 한 보고서에 대해 여러 개 만들 수 있습니다. 경고 정의는 같은 이름을 여러 번 사용할 수도 있지만 경고 이름을 고유하게 지정하는 것이 좋습니다. 이렇게 하면 경고 정의를 보다 쉽게 서로 구분하고 관리할 수 있습니다. 자신이 만든 모든 경고의 목록은 데이터 경고 관리자에서 볼 수 있습니다. 자세한 내용은 [경고 관리자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md) 및 [데이터 경고 관리자에서 내 데이터 경고 관리](../reporting-services/manage-my-data-alerts-in-data-alert-manager.md)를 참조하세요.  
   
-### 규칙 및 절
-<a id="rules-and-clauses" class="xliff"></a>  
+### <a name="rules-and-clauses"></a>규칙 및 절  
  데이터 변경 범위 및 경고 규칙에 따라 경고를 발생시키는 데이터 변경 사항이 정의됩니다. 데이터 변경 범위는 다음과 같습니다.  
   
 -   **데이터가 다음을 포함함**- 데이터에서 하나 이상의 값이 조건으로 지정된 규칙을 만족합니다.  
@@ -160,8 +156,7 @@ ms.lasthandoff: 07/03/2017
   
  규칙 및 절은 데이터 경고 메시지에 포함됩니다.  
   
-### 일정 설정
-<a id="schedule-settings" class="xliff"></a>  
+### <a name="schedule-settings"></a>일정 설정  
  데이터 경고에 대해 정의하는 일정에 따라 데이터 경고 메시지를 보내기 위한 되풀이 패턴과 경고 메시지 보내기 시작 및 중지 시간이 정의됩니다. 패턴은 한 번, 분, 매일 및 매주입니다. 경고에는 일정이 하나만 포함되지만 이러한 간격을 사용하여 대부분의 업무 요구 사항을 충족시킬 수 있는 복잡한 되풀이 패턴을 만들 수 있습니다. 다음은 예약에 사용되는 일반적인 되풀이 패턴의 예입니다.  
   
 -   **매일 10일마다** — 10일마다 하루 한 번 경고를 보냅니다.  
@@ -179,8 +174,7 @@ ms.lasthandoff: 07/03/2017
 > [!IMPORTANT]  
 >  업무상 중요한 이유가 있지 않은 한 '매일'보다 간격이 짧은 되풀이 패턴은 사용하지 않는 것이 좋습니다. 실시간 데이터 경고 정의 처리는 지원되지 않는 시나리오입니다. 데이터 경고 정의를 너무 자주 처리하면 보고서 서버 및 전반적인 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 배포의 성능에 영향이 있습니다.  
   
-### 전자 메일 설정
-<a id="email-settings" class="xliff"></a>  
+### <a name="email-settings"></a>전자 메일 설정  
  **받는 사람** 옵션에서 메일을 통해 데이터 경고 메시지를 받을 사람의 메일 주소를 지정합니다. 전자 메일 주소가 여러 개 있으면 Microsoft Office Outlook 전자 메일 메시지와 마찬가지로 세미콜론으로 구분합니다. 메일 그룹을 받는 사람으로 지정할 수도 있습니다. 이렇게 하면 더 쉽고 효율적인 방식으로 받는 사람 목록을 관리할 수 있습니다. 사용자가 경고 정의를 만들 때 SharePoint에서 사용자의 전자 메일 주소를 확인할 수 있으면 해당 전자 메일 주소가 받는 사람 목록에 자동으로 추가되고, 그렇지 않으면 자신을 받는 사람으로 명시적으로 추가해야 합니다.  
   
  전자 메일의 기본 제목은 **데이터에 대 한 경고 \<경고 이름 >**합니다. 제목은 필요에 따라 변경할 수 있습니다.  
@@ -223,8 +217,7 @@ ms.lasthandoff: 07/03/2017
   
 -   [데이터 경고 디자이너에서 데이터 경고 만들기](../reporting-services/create-a-data-alert-in-data-alert-designer.md)  
 
-## 관련 항목:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>관련 항목:
 
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)   
 [경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)  

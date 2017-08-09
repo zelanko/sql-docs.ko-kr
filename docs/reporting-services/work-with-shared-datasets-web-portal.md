@@ -18,11 +18,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 40f29d8cd68a60f88e2077a16f745f8e37bf35f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# 공유 데이터 집합-웹 포털 작업
-<a id="work-with-shared-datasets---web-portal" class="xliff"></a>
+# <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 집합-웹 포털 작업
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -30,8 +29,7 @@ ms.lasthandoff: 07/03/2017
 
 웹 포털 내에서 공유 데이터 집합의 속성을 보고 관리할 수 있습니다. 웹 포털에서 공유 데이터집합을 만들거나 편집하도록 보고서 작성기를 시작할 수 있습니다.
 
-## 공유 데이터 집합 만들기
-<a id="create-a-shared-dataset" class="xliff"></a>
+## <a name="create-a-shared-dataset"></a>공유 데이터 집합 만들기
   
 새 공유 데이터 집합을 만들려면 다음을 수행합니다.  
   
@@ -49,8 +47,7 @@ ms.lasthandoff: 07/03/2017
   
 6.  데이터 집합을 작성한 후 왼쪽 위에 있는 **저장** 아이콘을 선택하여 데이터 집합을 보고서 서버에 다시 저장합니다.  
   
-## 기존 공유 데이터 집합 관리
-<a id="manage-an-existing-shared-dataset" class="xliff"></a>
+## <a name="manage-an-existing-shared-dataset"></a>기존 공유 데이터 집합 관리
   
 기존 공유 데이터 집합을 관리하려면, 다음을 수행합니다.  
   
@@ -65,15 +62,13 @@ ms.lasthandoff: 07/03/2017
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
-## 속성
-<a id="properties" class="xliff"></a>
+## <a name="properties"></a>속성
   
 속성 화면에서 데이터 집합의 **이름** 과 **설명** 을 변경할 수 있습니다. **삭제**, **이동**, **보고서 작성기에서 편집**, **다운로드** 또는 **대체**도 가능합니다.  
   
 ![ssRSdataset-Properties](../reporting-services/media/ssrsdataset-properties.png)  
   
-## 캐싱
-<a id="caching" class="xliff"></a>
+## <a name="caching"></a>캐싱
   
 데이터 집합의 데이터 캐싱에 대한 옵션도 제공됩니다. 간단한 선택부터 시작할 수 있습니다.  
   
@@ -87,8 +82,7 @@ ms.lasthandoff: 07/03/2017
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   
-### 캐시 만료
-<a id="cache-expiration" class="xliff"></a>  
+### <a name="cache-expiration"></a>캐시 만료  
   
 일정 시간이 지난 후에 공유 데이터 집합의 캐시를 만료시킬지 또는 예약을 통해 만료시킬지를 제어할 수 있습니다. 공유 일정을 사용할 수 있습니다.  
   
@@ -97,8 +91,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > 만료를 설정하더라도 캐시가 새로 고쳐지지는 않습니다. 캐시 새로 고침 계획이 없는 경우, 데이터 집합을 다음에 실행할 때 데이터가 새로 고쳐집니다.  
   
-### 캐시 새로 고침 계획
-<a id="cache-refresh-plans" class="xliff"></a>  
+### <a name="cache-refresh-plans"></a>캐시 새로 고침 계획  
   
 캐시 새로 고침 계획을 사용하여 공유 데이터 집합의 데이터 임시 사본으로 캐시를 사전에 로드할 일정을 만들 수 있습니다. 새로 고침 계획에는 일정 및 매개 변수 값을 지정하거나 재정의하는 옵션이 포함됩니다. 읽기 전용으로 표시된 매개 변수의 값은 재정의할 수 없습니다. 새로 고침 계획을 여러 개 만들어 사용할 수 있습니다.   
   

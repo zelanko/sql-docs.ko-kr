@@ -29,11 +29,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fb5790cb0eaf8b160de98b2fa7ff3c327f654336
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Reporting Services 및 파워 뷰에 대한 브라우저 지원
-<a id="browser-support-for-reporting-services-and-power-view" class="xliff"></a>
+# <a name="browser-support-for-reporting-services-and-power-view"></a>Reporting Services 및 파워 뷰에 대한 브라우저 지원
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,8 +41,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
 
-## 웹 포털에 대 한 브라우저 요구 사항
-<a id="browser-requirements-for-the-web-portal" class="xliff"></a>
+## <a name="browser-requirements-for-the-web-portal"></a>웹 포털에 대 한 브라우저 요구 사항
 
 다음은 웹 포털에 대 한 지원 되는 브라우저의 현재 목록입니다.
 
@@ -73,8 +71,7 @@ ms.lasthandoff: 07/03/2017
 
  **(+)** 최신 공개 릴리스 버전
 
-## ReportViewer 웹 컨트롤(2015)에 대한 브라우저 요구 사항
-<a id="browser-requirements-for-the-reportviewer-web-control-2015" class="xliff"></a>
+## <a name="browser-requirements-for-the-reportviewer-web-control-2015"></a>ReportViewer 웹 컨트롤(2015)에 대한 브라우저 요구 사항
 
  다음은 ReportViewer 웹 컨트롤(2015)에 대해 지원되는 브라우저의 현재 목록입니다. 보고서 뷰어에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 포털 및 SharePoint 라이브러리의 보고서를 볼 수 있습니다.  
 
@@ -95,8 +92,7 @@ ms.lasthandoff: 07/03/2017
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]와 통합된 SharePoint 제품을 사용하는 경우에는  [SharePoint 2016의 브라우저 지원 계획](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
 
-### 인증 요구 사항
-<a id="authentication-requirements" class="xliff"></a>
+### <a name="authentication-requirements"></a>인증 요구 사항
 
  브라우저는 클라이언트 요청이 성공하기 위해 보고서 서버에서 처리되어야 하는 특정 인증 체계를 지원합니다. 다음 표에는 Windows 운영 체제에서 실행되는 브라우저가 지원하는 기본 인증 형식이 나와 있습니다.
 
@@ -110,8 +106,7 @@ ms.lasthandoff: 07/03/2017
 
  **(+)** 최신 공개 릴리스 버전
 
-### 보고서 보기를 위한 스크립트 요구 사항
-<a id="script-requirements-for-viewing-reports" class="xliff"></a>
+### <a name="script-requirements-for-viewing-reports"></a>보고서 보기를 위한 스크립트 요구 사항
 
  보고서 뷰어를 사용하려면 스크립트를 실행하도록 브라우저를 구성합니다.
 
@@ -124,8 +119,7 @@ ms.lasthandoff: 07/03/2017
 > [!NOTE]
 > 보고서 도구 모음은 HTML 뷰어 구성 요소의 일부입니다. 기본적으로 브라우저 창에서 렌더링되는 모든 보고서의 상단에 도구 모음이 표시됩니다. 보고서 뷰어는 보고서에서 정보를 검색하는 기능, 특정 페이지로 스크롤하는 기능, 보기 편하게 페이지 크기를 조정하는 기능 등을 제공합니다. 보고서 도구 모음 또는 HTML 뷰어에 대한 자세한 내용은 [HTML Viewer and the Report Toolbar](../reporting-services/html-viewer-and-the-report-toolbar.md)을 참조하세요.
 
-## Visual Studio의 ReportViewer 웹 서버 컨트롤에 대한 브라우저 지원
-<a id="browser-support-for-reportviewer-web-server-controls-in-visual-studio" class="xliff"></a>
+## <a name="browser-support-for-reportviewer-web-server-controls-in-visual-studio"></a>Visual Studio의 ReportViewer 웹 서버 컨트롤에 대한 브라우저 지원
 
  ReportViewer 웹 서버 컨트롤은 ASP.NET 웹 응용 프로그램에 보고 기능을 포함시키는 데 사용됩니다. 컨트롤은 Visual Studio에 포함되어 있으며 이 항목에서 설명하는 기타 구성 요소와 다른 브라우저 및 브라우저 버전을 지원합니다. 응용 프로그램을 보는 데 사용되는 브라우저의 유형은 응용 프로그램에서 사용자가 어떤 종류의 ReportViewer 기능을 제공할 수 있는지를 결정합니다. 이 항목에 제공된 표를 사용하여 지원되는 브라우저 중 어떤 것이 보고 기능 제한 사항의 영향을 받고 어떤 플랫폼이 지원되는지 알아보세요.  
 
@@ -141,8 +135,7 @@ ms.lasthandoff: 07/03/2017
 
  **(+)** 최신 공개 릴리스 버전
 
-## 파워 뷰 브라우저 지원
-<a id="power-view-browser-support" class="xliff"></a>
+## <a name="power-view-browser-support"></a>파워 뷰 브라우저 지원
 
 **Microsoft Windows**  
 *Windows 7, 8.1, 10; Windows Server 2008 R2, 2012, 2012 R2*
@@ -159,8 +152,7 @@ ms.lasthandoff: 07/03/2017
 
  SharePoint 2016 브라우저 지원에 대한 자세한 내용은 [SharePoint 2013의 브라우저 지원 계획](http://technet.microsoft.com//library/cc263526\(v=office.16\).aspx)을 참조하세요.
 
-## 다음 단계
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>다음 단계
 
 [보고서 찾기 및 보기는 웹 포털에서](report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
 [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  

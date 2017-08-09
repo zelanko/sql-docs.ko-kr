@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23cf66b01385b3c0f3e9ddc6ff24ea578cf5eec3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services 서비스 응용 프로그램에 대한 전자 메일 구성

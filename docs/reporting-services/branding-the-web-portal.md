@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: fcca4ace177a9d606a49db485fe6c61c4ef24355
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# 웹 포털 브랜딩
-<a id="branding-the-web-portal" class="xliff"></a>
+# <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -31,8 +30,7 @@ ms.lasthandoff: 07/03/2017
   
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
    
-## 브랜드 패키지 만들기
-<a id="creating-the-brand-package" class="xliff"></a>  
+## <a name="creating-the-brand-package"></a>브랜드 패키지 만들기  
   
 Reporting Services의 브랜드 패키지는 3개 항목으로 구성되어 있으며 zip 파일로 패키지화되어 있습니다.   
   
@@ -42,8 +40,7 @@ Reporting Services의 브랜드 패키지는 3개 항목으로 구성되어 있�
   
 파일 이름은 위와 동일해야 하며 zip 파일은 원하는 대로 정할 수 있습니다.  
   
-### metadata.xml
-<a id="metadataxml" class="xliff"></a>  
+### <a name="metadataxml"></a>metadata.xml  
   
 metadata.xml 파일을 사용하면 브랜드 패키지의 이름을 설정할 수 있으며 이 파일에는 colors.json 및 logo.png 파일에 대한 참조 항목이 있습니다.  
   
@@ -66,8 +63,7 @@ metadata.xml 파일을 사용하면 브랜드 패키지의 이름을 설정할 �
       <Item key="logo" path="logo.png" />  
     </Contents>  
   
-### Colors.json
-<a id="colorsjson" class="xliff"></a>  
+### <a name="colorsjson"></a>Colors.json  
   
 브랜드 패키지가 업로드되면 서버가 colors.json에서 적절한 이름/값 쌍을 추출하고 마스터 LESS 스타일시트인 brand.less로 병합합니다. 그런 다음 이 LESS 파일이 처리되고 결과 CSS 파일이 클라이언트에 제공됩니다. 스타일시트의 모든 색은 16진수의 6자 색 표현을 따릅니다.  
   
@@ -118,15 +114,13 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
   
 그러면 테마를 배포한 서버와 동일한 서버용이 아닐 경우에도 사용자가 작성하는 모바일 보고서에 해당 테마를 사용할 수 있습니다.   
   
-### 로고 사용
-<a id="using-a-logo" class="xliff"></a>  
+### <a name="using-a-logo"></a>로고 사용  
   
 브랜드 패키지를 사용하여 로고를 포함할 경우 사이트 설정 메뉴에서 웹 포털에 대해 설정한 이름 위치 대신 웹 포털에 표시됩니다.  
   
 로고에 포함하는 파일은 PNG 파일 형식을 사용해야 합니다. 파일을 서버에 업로드하면 크기가 조정되며 약 290px x 60px로 조정됩니다.  
    
-## 웹 포털에 브랜드 패키지 적용
-<a id="applying-the-brand-package-to-the-web-portal" class="xliff"></a>  
+## <a name="applying-the-brand-package-to-the-web-portal"></a>웹 포털에 브랜드 패키지 적용  
   
 브랜드 패키지를 추가, 다운로드, 제거하려면 다음을 수행할 수 있습니다.  
   
@@ -146,8 +140,7 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
   
 패키지를 **다운로드** 또는 **제거** 할 수도 있습니다. 패키지를 제거하면 웹 포털이 즉시 기본 브랜드로 재설정됩니다.  
   
-## metadata.xml 예제
-<a id="metadataxml-example" class="xliff"></a>  
+## <a name="metadataxml-example"></a>metadata.xml 예제  
   
     \<?xml version="1.0" encoding="utf-8"?>  
     <SystemResourcePackage xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/systemresourcepackagemetadata"  
@@ -161,8 +154,7 @@ Reporting Services의 colors.json 파일에는 항목이 그룹화되는 두 가
         </Contents>  
     </SystemResourcePackage>  
    
-## colors.json 예제
-<a id="colorsjson-example" class="xliff"></a>  
+## <a name="colorsjson-example"></a>colors.json 예제  
   
     {  
         "name":"Multicolored example brand",  

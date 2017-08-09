@@ -21,7 +21,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f74c464aad45ffad0c1dfc2a40d62944446e63d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>보고서 모델 쿼리의 수식(보고서 작성기 및 SSRS)

@@ -1,5 +1,5 @@
 ---
-title: "SharePoint 목록 연결 형식(SSRS) | Microsoft Docs"
+title: "SharePoint 목록 연결 유형 (SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/10/2017
 ms.prod: sql-server-2016
@@ -15,20 +15,20 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 23799f3c292e7a64ca859d06b570bd8f4657953a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>SharePoint 목록 연결 형식(SSRS)
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE [ssrs-appliesto-sharepoint-2013-2016](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합을 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용하여 SharePoint 2013 이상에 연결하여 목록 데이터를 검색합니다.
+Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microsoft SharePoint 목록 유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합을 추가하거나 만들어야 합니다. 이는 Microsoft SQL Server Reporting Services SharePoint 목록 데이터 확장 프로그램을 기반으로 하는 기본 제공 데이터 원본 유형입니다. 이 데이터 원본 유형을 사용 하 여 연결 하 고 SharePoint 2013에서 이상과 목록 데이터를 검색 합니다.
 
-이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
+이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)유형의 보고서 데이터 원본에 기초하는 데이터 집합이 있어야 합니다.  
 
 ##  <a name="Connection"></a> 연결 문자열  
  SharePoint 목록에 대한 연결 문자열은 SharePoint 사이트 또는 하위 사이트에 대한 URL입니다(예: `http://MySharePointWeb/MySharePointSite` 또는 `http://MySharePointWeb/MySharePointSite/Subsite`).  
@@ -185,13 +185,13 @@ Microsoft SharePoint 목록의 데이터를 보고서에 포함하려면 Microso
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
  쿼리에 의해 생성되는 데이터 집합 필드 컬렉션에 대한 정보를 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
  각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
 
 ## <a name="see-also"></a>관련 항목:
 
 [보고서 매개 변수](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
-[데이터 필터링, 그룹화 및 정렬](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+[필터, 그룹 및 데이터 정렬](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

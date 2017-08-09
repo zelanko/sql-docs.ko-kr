@@ -23,12 +23,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# SharePoint 및 Reporting Services 서버의 지원 되는 조합
-<a id="supported-combinations-of-sharepoint-and-reporting-services-server" class="xliff"></a>
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint 및 Reporting Services 서버의 지원 되는 조합
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -39,13 +38,11 @@ SharePoint 모드로 설치 된 SQL Server Reporting Services 보고서 서버�
 > [!NOTE]
 > SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
 
-## 지원되는 SharePoint와 Reporting Services 구성 요소의 조합
-<a id="supported-combinations-of-sharepoint-and-reporting-services-components" class="xliff"></a>
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>지원되는 SharePoint와 Reporting Services 구성 요소의 조합
 
  다음 표에서는 보고서 서버, SharePoint 제품용 Reporting Services 추가 기능, SharePoint 제품에 대해 지원되는 조합 형태를 요약해서 보여 줍니다. 다음 표에 나열되지 않은 조합은 지원되지 않습니다.
 
-### 지원되는 조합
-<a id="supported-combinations" class="xliff"></a>
+### <a name="supported-combinations"></a>지원되는 조합
 
 ||보고서 서버|추가 기능|SharePoint 버전|
 |-|-------------------|-------------|------------------------|
@@ -83,8 +80,7 @@ SharePoint 모드로 설치 된 SQL Server Reporting Services 보고서 서버�
 
 - **업그레이드:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능이 설치된 SharePoint 2010은 SharePoint 2013으로 해당 위치에서 업그레이드할 수 없습니다. SQL Server 2012 SP1 SharePoint 2013에 필요 이상의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능 및 보고서 서버. 업그레이드에 대한 자세한 내용은 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)을 참조하십시오.
 
-## 다음 단계
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>다음 단계
 
  [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)   
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   

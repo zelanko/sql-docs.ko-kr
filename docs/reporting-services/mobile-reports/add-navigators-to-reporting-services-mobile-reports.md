@@ -18,7 +18,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-navigators-to-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 탐색기 추가

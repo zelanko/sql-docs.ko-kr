@@ -22,7 +22,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: 475435073cef3f748e26a2a71c31a55fa7e6304d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="access-report-server-items-using-url-access"></a>URL 액세스를 사용하여 보고서 서버 항목 액세스

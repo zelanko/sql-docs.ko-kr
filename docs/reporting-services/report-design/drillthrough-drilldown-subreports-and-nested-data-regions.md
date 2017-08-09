@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역

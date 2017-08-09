@@ -17,12 +17,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# Reporting Services에서 KPI 사용
-<a id="working-with-kpis-in-reporting-services" class="xliff"></a>
+# <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -36,19 +35,16 @@ SQL Server 2016 Reporting Services에서 KPI를 사용하여 다음 질문에 �
   
 -   내가 완료한 최소는 무엇인가?  
   
-## 데이터 집합 만들기
-<a id="creating-a-dataset" class="xliff"></a>  
+## <a name="creating-a-dataset"></a>데이터 집합 만들기  
 KPI는 공유된 데이터 집합에서 데이터의 첫 행만 사용합니다. 사용하려는 데이터가 첫 행에 있는지 확인합니다. 공유 데이터 집합을 만들기 위해 보고서 작성기 또는 SQL Server Data Tools를 사용할 수 있습니다.  
   
 > **참고**: 데이터 집합은 KPI와 같은 폴더에 있이 필요가 없습니다.  
   
-## KPI의 배치
-<a id="placement-of-kpis" class="xliff"></a>  
+## <a name="placement-of-kpis"></a>KPI의 배치  
   
 KPI는 보고서 서버의 모든 폴더에서 만들 수 있습니다.  KPI를 만들기 전에 저장할 적합한 위치에 대해 생각해 봐야 할 것입니다. 다른 보고서, KPI에 상대적으로 동시에 다른 사람에게 공개되는 폴더에 놓기를 원할 수 있습니다.  
   
-## KPI 추가
-<a id="adding-a-kpi" class="xliff"></a>  
+## <a name="adding-a-kpi"></a>KPI 추가  
   
 KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서 **New(새로 만들기)** > **KPI** 를 선택합니다.  
   
@@ -96,8 +92,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)  
   
-## KPI 제거
-<a id="removing-a-kpi" class="xliff"></a>  
+## <a name="removing-a-kpi"></a>KPI 제거  
   
 KPI를 제거하기 위해 다음을 수행할 수 있습니다.  
   
@@ -109,13 +104,11 @@ KPI를 제거하기 위해 다음을 수행할 수 있습니다.
   
     ![rsRemoveKPI2](../reporting-services/media/rsremovekpi2.png)  
   
-## KPI 새로 고침
-<a id="refreshing-a-kpi" class="xliff"></a>  
+## <a name="refreshing-a-kpi"></a>KPI 새로 고침  
   
 KPI를 새로 고치려면 공유 데이터 집합에 대 한 캐싱을 구성 해야 합니다. 새로 고침 계획을 캐시에 대 한 자세한 내용은 참조 하십시오. [공유 데이터 집합 작업을](../reporting-services/work-with-shared-datasets-web-portal.md)합니다.  
   
-## 다음 단계
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>다음 단계
   
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)

@@ -31,12 +31,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: b97215eceda641e7478edb659e61298e43b00859
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
-<a id="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016" class="xliff"></a>
+# <a name="behavior-changes-to-sql-server-reporting-services-in-sql-server-2016"></a>SQL Server 2016에서 SQL Server Reporting Services의 동작 변경
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -46,8 +45,7 @@ ms.lasthandoff: 07/03/2017
 
 동작 변경 내용이 없습니다.
 
-## 다음 단계
-<a id="next-steps" class="xliff"></a>
+## <a name="next-steps"></a>다음 단계
 
 [Reporting Services의 새로운 기능](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)    
 [SQL Server 2016의 SQL Server Reporting Services에서 사용되지 않는 기능](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)  

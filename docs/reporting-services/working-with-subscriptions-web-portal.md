@@ -18,12 +18,11 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 4f49f5376344d6c52159c3a4dcff553255c79320
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 
-# 구독 작업(웹 포털)
-<a id="working-with-subscriptions-web-portal" class="xliff"></a>
+# <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
@@ -42,14 +41,12 @@ ms.lasthandoff: 07/03/2017
   
 이 페이지의 **결과** 열에는 구독 실행의 결과 상태도 제공됩니다. 구독에 대한 오류가 발생한 경우 먼저 결과 열을 검사하여 메시지 내용을 확인하는 것이 좋습니다.  
   
-## 구독 만들기 또는 편집
-<a id="creating-or-editing-a-subscription" class="xliff"></a>  
+## <a name="creating-or-editing-a-subscription"></a>구독 만들기 또는 편집  
 새 구독 또는 구독 편집 페이지를 사용하여 보고서에 대한 새 구독을 만들거나 기존 구독을 수정할 수 있습니다. 이 페이지의 옵션은 사용자의 역할 할당에 따라 다릅니다. 고급 권한이 있는 사용자는 추가 옵션으로 작업할 수 있습니다.  
   
 구독은 무인 모드로 실행될 수 있는 보고서에 대해 지원됩니다. 이 보고서는 저장된 자격 증명을 사용하거나 자격 증명을 사용하지 않아야 합니다. 보고서에서 매개 변수를 사용하는 경우에는 기본값을 지정해야 합니다. 보고서 실행 설정을 변경하거나 매개 변수 속성에서 사용하는 기본값을 제거하면 구독이 비활성 상태로 바뀔 수 있습니다. 자세한 내용은 [기본 모드 보고서 서버에 대한 구독 만들기 및 관리]를 참조하세요.  
   
-### 구독 유형
-<a id="type-of-subscription" class="xliff"></a>  
+### <a name="type-of-subscription"></a>구독 유형  
 **표준 구독** 및 **데이터 기반 구독**할 수 있습니다.  
   
 ![ssRSWebPortal-subscriptions3](../reporting-services/media/ssrswebportal-subscriptions3.png)  
@@ -60,8 +57,7 @@ ms.lasthandoff: 07/03/2017
   
 이 옵션은 고급 권한이 있는 사용자가 사용할 수 있습니다. 기본 보안을 사용할 경우 내 보고서 폴더에 있는 보고서에 대해서는 데이터 기반 구독을 사용할 수 없습니다.  
   
-### 대상
-<a id="destination" class="xliff"></a>  
+### <a name="destination"></a>대상  
 보고서를 배포하는 데 사용할 배달 확장 프로그램을 선택합니다.   
   
 배달 확장 프로그램의 가용성은 보고서 서버에 설치 및 구성되었는지 여부에 따라 다릅니다. 보고서 서버 전자 메일은 기본 배달 확장 프로그램이지만 먼저 구성을 해야 사용할 수 있습니다. 파일 공유 배달은 구성이 필요하지 않지만 먼저 공유 폴더를 정의해야 사용할 수 있습니다.  
@@ -74,8 +70,7 @@ ms.lasthandoff: 07/03/2017
   
 -   파일 공유 구독은 대상 위치를 지정할 수 있도록 허용하는 필드를 제공합니다. 모든 보고서를 파일 공유로 배달할 수 있습니다. 그러나 대화형 기능을 지원하는 보고서(관련 행 및 열에 대한 드릴다운을 지원하는 행렬 보고서 포함)는 정적 파일로 렌더링됩니다. 드릴다운 행 및 열은 정적 파일에서 볼 수 없습니다. 파일 공유 이름은 UNC(Uniform Naming Convention) 형식(예: \mycomputer\public\myreportfiles)으로 지정해야 합니다. 경로 이름 뒤에 백슬래시를 사용하지 마십시오. 보고서 파일은 렌더링 형식을 기반으로 하는 파일 형식으로 배달됩니다. 예를 들어 Excel을 선택할 경우 보고서는 .xlsx 파일로 배달됩니다.  
   
-### 데이터 기반 구독 데이터 집합
-<a id="data-driven-subscription-dataset" class="xliff"></a>  
+### <a name="data-driven-subscription-dataset"></a>데이터 기반 구독 데이터 집합  
 데이터 기반 구독의 경우 구독에 사용되는 데이터 집합을 정의해야 합니다. **데이터 집합 편집** 을 선택하여 해당 정보를 제공합니다.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  

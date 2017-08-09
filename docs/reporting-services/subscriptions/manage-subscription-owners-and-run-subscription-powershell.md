@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 103cb28ac4917370c8f116b8de46a27f159261cc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="manage-subscription-owners-and-run-subscription---powershell"></a>구독 소유자를 관리 하 고 구독-PowerShell 실행

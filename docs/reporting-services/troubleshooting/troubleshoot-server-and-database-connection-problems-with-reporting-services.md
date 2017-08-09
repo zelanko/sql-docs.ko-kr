@@ -19,7 +19,7 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1b901ec323ee3aa021d9e581cb8a1aedbde3116b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-server-and-database-connection-problems-with-reporting-services"></a>서버 및 Reporting services 데이터베이스 연결 문제 해결

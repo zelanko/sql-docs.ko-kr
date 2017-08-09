@@ -19,11 +19,10 @@ ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# Reporting Services 데이터 경고
-<a id="reporting-services-data-alerts" class="xliff"></a>
+# <a name="reporting-services-data-alerts"></a>Reporting Services 데이터 경고
 
 [!INCLUDE [ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -58,8 +57,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
  ![Reporting Services 경고의 워크플로](../reporting-services/media/rs-alertingworkflow.gif "Reporting Services 경고의 워크플로")  
   
-### 데이터 경고가 지원되는 보고서
-<a id="reports-supported-by-data-alerts" class="xliff"></a>  
+### <a name="reports-supported-by-data-alerts"></a>데이터 경고가 지원되는 보고서  
  RDL(Report Definition Language)로 작성되고 보고서 디자이너 또는 보고서 작성기에서 만든 모든 전문적인 유형의 보고서에서 데이터 경고를 만들 수 있습니다. 여기에는 테이블 및 차트와 같은 데이터 영역이 포함된 보고서, 하위 보고서가 포함된 보고서, 여러 병렬 열 그룹 및 중첩된 데이터 영역이 들어 있는 복잡한 보고서가 포함됩니다. 단, 보고서에 하나 이상의 데이터 영역 유형을 포함하고 보고서 데이터 원본이 저장된 자격 증명을 사용하거나 자격 증명을 아예 사용하지 않도록 구성해야 합니다. 보고서에 데이터 영역이 없으면 보고서에 대해 경고를 만들 수 없습니다.  
   
  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]로 만든 보고서에서는 데이터 경고를 만들 수 없습니다.  
@@ -74,34 +72,29 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
 -   [보고서 서버 인증](../reporting-services/security/authentication-with-the-report-server.md)  
   
-### 보고서 실행
-<a id="run-reports" class="xliff"></a>  
+### <a name="run-reports"></a>보고서 실행  
  데이터 경고 정의를 만드는 첫 번째 단계는 원하는 보고서를 SharePoint 라이브러리에서 찾은 다음 해당 보고서를 실행하는 것입니다. 실행 중에 보고서에 데이터가 포함되지 않은 경우에는 해당 보고서에 대해 경고를 만들 수 없습니다.  
   
  보고서에 매개 변수가 있으면 보고서 실행 시 사용할 매개 변수 값을 지정해야 합니다. 매개 변수 값은 보고서에 대해 만드는 데이터 경고 정의에 저장됩니다. 이러한 값은 데이터 경고 정의 처리 단계의 일환으로 보고서를 다시 실행할 때 사용됩니다. 매개 변수 값을 변경하려는 경우 해당 매개 변수 값을 사용하여 보고서를 다시 실행하고 해당 보고서 버전에 대해 경고 정의를 만들어야 합니다.  
   
-### 데이터 경고 정의 만들기
-<a id="create-data-alert-definitions" class="xliff"></a>  
+### <a name="create-data-alert-definitions"></a>데이터 경고 정의 만들기  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 데이터 경고 기능에는 데이터 경고 정의를 만드는 데 사용하는 데이터 경고 디자이너가 포함되어 있습니다.  
   
  데이터 경고 정의를 만들려면 보고서를 실행한 다음 SharePoint 보고서 뷰어의 **동작** 메뉴에서 데이터 경고 디자이너를 엽니다. 보고서에 대한 보고서 데이터 피드가 생성되고 데이터 피드의 처음 100개 행이 데이터 경고 디자이너에서 데이터 미리 보기 테이블에 표시됩니다. 보고서의 모든 데이터 피드는 사용자가 데이터 경고 디자이너에서 경고 정의를 작업 중인 한 캐시됩니다. 캐시 기능을 사용하면 데이터 피드 간에 빠르게 전환할 수 있습니다. 경고 정의를 데이터 경고 디자이너에서 다시 열면 데이터 피드가 새로 고쳐집니다.  
   
  데이터 경고 정의는 데이터 경고 메시지를 트리거하기 위해 보고서 데이터가 만족해야 하는 규칙 및 절, 경고 메시지를 보낼 빈도를 정의하는 일정, 경고 메시지 보내기를 시작 및 중지할 날짜(옵션), 경고 메시지에 포함할 제목 줄과 설명 등의 정보, 메시지를 받는 사람으로 구성됩니다. 경고 정의를 만든 후에는 SQL Server 경고 데이터베이스에 저장합니다.  
   
-### 데이터 경고 정의 및 경고 메타데이터 저장
-<a id="save-data-alert-definitions-and-alerting-metadata" class="xliff"></a>  
+### <a name="save-data-alert-definitions-and-alerting-metadata"></a>데이터 경고 정의 및 경고 메타데이터 저장  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 SharePoint 모드로 설치한 경우 SQL Server 경고 데이터베이스가 자동으로 생성됩니다.  
   
  데이터 경고 정의 및 경고 메타데이터는 경고 데이터베이스에 저장됩니다. 기본적으로이 데이터베이스 ReportingServices 이름은\<GUID > _Alerting 합니다.  
   
  데이터 경고 정의를 저장하면 경고 정의에 대한 SQL Server 에이전트 작업이 생성됩니다. 작업에는 작업 일정이 포함됩니다. 일정은 사용자가 경고 정의에 지정하는 되풀이 패턴을 기반으로 합니다. 작업을 실행하면 데이터 경고 정의에 대한 처리가 시작됩니다.  
   
-### 데이터 경고 정의 처리
-<a id="process-data-alert-definitions" class="xliff"></a>  
+### <a name="process-data-alert-definitions"></a>데이터 경고 정의 처리  
  SQL Server 에이전트 작업의 일정에 따라 경고 정의 처리가 시작되면 보고서가 실행되어 보고서 데이터 피드가 새로 고쳐집니다. 경고 서비스는 데이터 피드를 읽고 데이터 경고 정의로 지정되는 규칙을 데이터 값에 적용합니다. 하나 이상의 데이터 값이 규칙을 만족하면 데이터 경고 인스턴스가 생성되고 경고 결과가 포함된 데이터 경고 메시지가 모든 받는 사람에게 전자 메일로 전송됩니다. 결과는 경고 인스턴스가 생성된 시점에 모든 규칙을 만족한 보고서 데이터의 행입니다. 동일한 결과가 포함된 경고 메시지를 여러 번 받지 않으려면 결과가 변경될 때만 메시지가 전송되도록 지정합니다. 이 경우 경고 인스턴스가 생성되어 경고 데이터베이스에 저장되지만 경고 메시지는 생성되지 않습니다. 오류가 발생할 경우에도 경고 인스턴스가 경고 데이터베이스에 저장되고 오류 정보가 포함된 경고 메시지가 받는 사람에게 전송됩니다. 로깅 및 문제 해결에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 진단 및 로깅 섹션을 참조하세요.  
   
-### 데이터 경고 메시지 보내기
-<a id="send-data-alert-messages" class="xliff"></a>  
+### <a name="send-data-alert-messages"></a>데이터 경고 메시지 보내기  
  데이터 경고 메시지는 전자 메일로 전송됩니다.  
   
  **보낸 사람** 줄에는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 전자 메일 배달 구성으로 제공된 값이 포함됩니다. **받는 사람** 줄에는 데이터 경고 디자이너에서 경고를 만들 때 지정한 받는 사람이 나열됩니다.  
@@ -155,8 +148,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
  기본적으로 MaxRetries 및 SecondsBeforeRetry 설정은 데이터 경고가 발생시키는 모든 이벤트에 적용됩니다. 다시 시도 및 다시 시도 간격을 더 세부적으로 제어하려면 다른 MaxRetries 및 SecondsBeforeRetry 값을 지정하는 임의의 이벤트 처리기 및 모든 이벤트 처리기에 대한 요소를 추가합니다.  
   
-### 이벤트 처리기 및 다시 시도
-<a id="event-handlers-and-retry" class="xliff"></a>  
+### <a name="event-handlers-and-retry"></a>이벤트 처리기 및 다시 시도  
  이벤트 처리기는 다음과 같습니다.  
   
 |이벤트 처리기|Description|  
@@ -227,8 +219,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
 ##  <a name="DiagnosticsLogging"></a> 진단 및 로깅  
  데이터 경고를 사용하면 경고 내역 및 경고가 실패한 이유를 확인하고, 관리자가 로그를 사용하여 전송할 경고와 전송 대상자, 경고 인스턴스 수 등을 확인하는 등 여러 가지 방법으로 정보 근로자와 관리자의 업무에 도움을 줄 수 있습니다.  
   
-### 데이터 경고 관리자
-<a id="data-alert-manager" class="xliff"></a>  
+### <a name="data-alert-manager"></a>데이터 경고 관리자  
  데이터 경고 관리자에는 정보 근로자 및 경고 관리자가 오류가 발생한 이유를 확인하는 데 도움이 되는 경고 정의 및 오류 정보가 나열됩니다. 오류에 대한 몇 가지 일반적인 원인은 다음과 같습니다.  
   
 -   변경된 보고서 데이터 피드 및 데이터 경고 정의 규칙에 사용된 열은 더 이상 데이터 피드에 포함되지 않습니다.  
@@ -237,14 +228,12 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
 -   변경된 기본 데이터 원본의 데이터 형식 및 경고 정의는 더 이상 유효하지 않습니다.  
   
-### 로그
-<a id="logs" class="xliff"></a>  
+### <a name="logs"></a>로그  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 데이터 경고 정의를 처리할 때 실행되는 보고서, 생성되는 데이터 경고 인스턴스 등에 대한 정보를 얻을 수 있는 많은 로그를 제공합니다. 경고 실행 로그, 보고서 서버 실행 로그, 보고서 서버 추적 로그라는 세 로그가 특히 유용합니다.  
   
  다른 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 로그에 대한 자세한 내용은 [Reporting Services 로그 파일 및 소스](../reporting-services/report-server/reporting-services-log-files-and-sources.md)를 참조하세요.  
   
-#### 경고 실행 로그
-<a id="alerting-execution-log" class="xliff"></a>  
+#### <a name="alerting-execution-log"></a>경고 실행 로그  
  경고 런타임 서비스는 경고 데이터베이스의 ExecutionLogView 테이블에 항목을 작성합니다. 테이블을 쿼리하거나 다음 저장 프로시저를 실행하여 경고 데이터베이스에 저장된 데이터 경고에 대한 보다 다양한 진단 정보를 얻을 수 있습니다.  
   
 -   ReadAlertData  
@@ -265,12 +254,10 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
  SQL 에이전트를 사용하여 일정에 따라 저장 프로시저를 실행할 수 있습니다. 자세한 내용은 [SQL Server Agent](http://msdn.microsoft.com/library/8d1dc600-aabb-416f-b3af-fbc9fccfd0ec)을 참조하세요.  
   
-#### 보고서 서버 실행 로그
-<a id="report-server-execution-log" class="xliff"></a>  
+#### <a name="report-server-execution-log"></a>보고서 서버 실행 로그  
  보고서는 데이터 경고 정의를 작성하는 데 사용된 데이터 피드를 생성하기 위해 실행됩니다. 보고서 서버 데이터베이스의 보고서 서버 실행 로그는 보고서가 실행될 때마다 정보를 캡처합니다. 자세한 정보가 필요한 경우 데이터베이스에서 ExecutionLog2 뷰를 쿼리할 수 있습니다. 자세한 내용은 [보고서 서버 ExecutionLog 및 ExecutionLog3 뷰](../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)를 참조하세요.  
   
-#### 보고서 서버 추적 로그
-<a id="report-server-trace-log" class="xliff"></a>  
+#### <a name="report-server-trace-log"></a>보고서 서버 추적 로그  
  보고서 서버 추적 로그에는 보고서 서버 웹 서비스 및 백그라운드 처리가 수행하는 작업을 비롯하여 보고서 서버 서비스 작업에 대한 세부 정보가 들어 있습니다. 추적 로그 정보는 보고서 서버가 포함된 응용 프로그램을 디버깅하거나 이벤트 로그 또는 실행 로그에 기록된 특정 문제를 조사하는 경우 유용할 수 있습니다. 자세한 내용은 [Report Server Service Trace Log](../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.  
   
 ##  <a name="PerformanceCounters"></a> 성능 카운터  
@@ -334,8 +321,7 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
   
 -   [사용자 및 경고 담당자에게 권한 부여](../reporting-services/grant-permissions-to-users-and-alerting-administrators.md)  
   
-## 관련 항목:
-<a id="see-also" class="xliff"></a>
+## <a name="see-also"></a>관련 항목:
 
 [데이터 경고 디자이너](../reporting-services/data-alert-designer.md)   
 [경고 담당자를 위한 데이터 경고 관리자](../reporting-services/data-alert-manager-for-alerting-administrators.md)   
