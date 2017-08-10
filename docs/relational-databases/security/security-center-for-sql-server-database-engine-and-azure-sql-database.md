@@ -24,11 +24,11 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: craigg
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
 ms.openlocfilehash: 970ea936f444a1c96d2c05e376905af7e03aef58
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/30/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/30/2017
 |-|-|  
 |**감사 자동화**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사(서버 및 DB 수준)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 감사(데이터베이스 수준)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 위협 검색|[SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL 데이터베이스 감사](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL 데이터베이스 위협 검색 시작](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
 |**사용자 지정 감사**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 트리거|사용자 지정 감사 구현 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) 및 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)만들기|  
-|**호환성**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 호환성|SQL Server:<br />                        [Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL 데이터베이스:<br />                        [Microsoft Azure 보안 센터: 기능별 준수](http://azure.microsoft.com/support/trust-center/services/)|  
+|**호환성**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 준수|SQL Server:<br />                        [Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL 데이터베이스:<br />                        [Microsoft Azure 보안 센터: 기능별 준수](http://azure.microsoft.com/support/trust-center/services/)|  
   
 ##  <a name="SQLInjection"></a> SQL 인젝션  
  SQL 삽입은 문자열에 삽입된 악성 코드가 나중에 구문 분석 및 실행용으로 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 전달되는 방식의 공격입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 구문상 유효한 모든 수신 쿼리를 실행하므로 SQL 문을 생성하는 모든 프로시저에 삽입과 관련한 보안 위험이 있는지 확인해야 합니다. 모든 데이터베이스 시스템에는 어느 정도 SQL 삽입 공격을 받을 위험이 있으며, 대부분의 취약성은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]을 쿼리하는 응용 프로그램에서 발생합니다. 저장 프로시저 및 매개 변수화된 명령을 사용하면 SQL 삽입 공격을 차단하여 동적 SQL을 방지하고 모든 사용자에 대해 권한을 제한할 수 있습니다.  자세한 내용은 [SQL Injection](../../relational-databases/security/sql-injection.md)을 참조하세요.  

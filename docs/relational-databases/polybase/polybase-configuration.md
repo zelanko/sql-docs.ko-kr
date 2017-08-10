@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
 ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/12/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 구성
@@ -31,7 +31,7 @@ ms.lasthandoff: 07/12/2017
   
  **sp_configure**를 사용하여 SQL Server가 사용 중인 Hadoop 버전 또는 Azure Blob 저장소에 연결하도록 구성해야 합니다. PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 배포를 지원합니다.  지원되는 외부 데이터 원본의 전체 목록은 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
  
- 참고: PolyBase Cloudera 암호화 영역을 지원 하지 않습니다. 
+ 참고: PolyBase는 Cloudera 암호화 영역을 지원하지 않습니다. 
   
 ### <a name="run-spconfigure"></a>sp_configure 실행  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 07/12/2017
     -   SQL Server PolyBase 엔진  
   
 ## <a name="pushdown-configuration"></a>푸시다운 구성  
- 쿼리 성능을 향상 시키기 위해 SQL Server Hadoop 사용 환경에 맞는 일부 구성 매개 변수를 제공 해야 합니다는 Hadoop 클러스터에 대 한 푸시 다운 계산을 사용 하도록 설정:  
+ 쿼리 성능을 향상하려면 Hadoop 환경에 맞는 일부 SQL Server 구성 매개 변수를 제공해야 하는 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
   
 1.  SQL Server 설치 경로에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
   
@@ -68,11 +68,11 @@ ms.lasthandoff: 07/12/2017
 
 4. 모든 CDH 5.X 버전에서 **mapreduce.application.classpath** 구성 매개 변수를 **yarn.site.xml 파일**의 끝이나 **mapred-site.xml 파일**에 추가해야 합니다. HortonWorks는 **yarn.application.classpath** 구성 내에 이러한 구성을 포함하고 있습니다.
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>예제 yarn-site.xml 및 mapred-site.xml 파일 CDH 5.X 클러스터입니다.
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>CDH 5.X 클러스터의 yarn-site.xml 및 mapred-site.xml 파일의 예
 
 
 
-Yarn-site.xml yarn.application.classpath 및 mapreduce.application.classpath 구성 사용 합니다.
+yarn.application.classpath 및 mapreduce.application.classpath 구성이 포함된 Yarn-site.xml입니다.
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>

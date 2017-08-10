@@ -18,12 +18,10 @@ ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: 2ef8331a2217c2fd41881b875264dab6ec2bb822
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/10/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-<a id="table-and-row-size-in-memory-optimized-tables" class="xliff"></a>
-
-# 메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
+# <a name="table-and-row-size-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 테이블 및 행 크기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전에는 메모리 최적화 테이블의 행 내부 데이터 크기가 [8,060바이트](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx)를 초과할 수 없었습니다. 그러나 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 및 Azure SQL Database에서는 이제 여러 큰 열(예: 여러 varbinary(8000) 열) 및 LOB 열(즉, varbinary(max), varchar(max) 및 nvarchar(max))이 있는 메모리 최적화 테이블을 만들고 네이티브 컴파일된 T-SQL 모듈 및 테이블 형식을 사용하여 테이블에 대한 작업을 수행할 수 있습니다. 
@@ -44,7 +42,7 @@ ms.lasthandoff: 07/10/2017
 
   메모리 액세스에 최적화된 테이블은 행의 컬렉션과 행에 대한 포인터를 포함하는 인덱스로 구성됩니다. 다음 그림에서는 인덱스 및 행을 포함하며 차례로 행 헤더와 본문을 가지는 테이블을 보여줍니다.  
   
- ![메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Memory optimized table.")  
+ ![메모리 액세스에 최적화된 테이블입니다.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "메모리 액세스에 최적화된 테이블입니다.")  
 인덱스와 행으로 구성된 메모리 액세스에 최적화된 테이블  
 
 ##  <a name="bkmk_TableSize"></a> 테이블 크기 계산
@@ -248,9 +246,7 @@ where object_id = object_id('dbo.Orders')
 
 [What's new for In-Memory OLTP in SQL Server 2016 since CTP3](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/25/whats-new-for-in-memory-oltp-in-sql-server-2016-since-ctp3)(CTP3 이후 SQL Server 2016의 메모리 내 OLTP에 대한 새로운 기능) 블로그 게시물에서 이러한 몇 가지 복잡한 사항을 자세히 설명합니다.   
  
-<a id="see-also" class="xliff"></a>
-
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [메모리 액세스에 최적화된 테이블](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

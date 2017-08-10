@@ -16,21 +16,21 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29ac4abdca7f7b8b3f77091bf91862471bb1066c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="technical-reference-replication"></a>기술 참조(복제)
   이 섹션에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제에 대한 기술 참조 설명서에 연결되는 링크가 들어 있습니다.  
   
- ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **오류 및 이벤트**  
+ ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **오류 및 이벤트**  
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
- ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **기능 참조**  
- [Configure Distribution Wizard](../../relational-databases/replication/configure-distribution-wizard.md)  
+ ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **기능 참조**  
+ [배포 구성 마법사](../../relational-databases/replication/configure-distribution-wizard.md)  
   
  [새 구독 마법사&#40;UI 참조&#41;](../../relational-databases/replication/new-subscription-wizard-ui-reference.md)  
   
@@ -38,14 +38,14 @@ ms.lasthandoff: 06/22/2017
   
  [기타...](../../relational-databases/replication/properties-reference-replication.md)  
   
- ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **복제 에이전트**  
+ ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 에이전트**  
  [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
  [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)  
   
  [기타...](../../relational-databases/replication/agents/replication-agents.md)  
   
- ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **복제 저장 프로시저**  
+ ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 저장 프로시저**  
  [sp_addarticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)  
   
  [sp_adddistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)  
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
   
  [기타...](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
- ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **복제 테이블**  
+ ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 테이블**  
  [MSmerge_conflicts_info&#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md)  
   
  [MSpeer_response&#40;Transact-SQL&#41;](../../relational-databases/system-tables/mspeer-response-transact-sql.md)  
@@ -67,14 +67,14 @@ ms.lasthandoff: 06/22/2017
   
  [기타...](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
- ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **복제 뷰**  
+ ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 뷰**  
  [syspublications&#40;시스템 뷰&#41;&#40;Transact-SQL&#41;](../../relational-databases/system-views/syspublications-system-view-transact-sql.md)  
   
  [syssubscriptions&#40;시스템 뷰&#41;&#40;Transact-SQL&#41;](../../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md)  
   
  [기타...](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
- ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "Small File Folder Icon") **복제 클래스 라이브러리**  
+ ![작은 파일 폴더 아이콘](../../analysis-services/media/filefolder-small.png "작은 파일 폴더 아이콘") **복제 클래스 라이브러리**  
  <xref:Microsoft.SqlServer.Replication>  
   
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>  

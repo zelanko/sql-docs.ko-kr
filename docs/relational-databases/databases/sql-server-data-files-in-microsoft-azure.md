@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
@@ -126,7 +126,7 @@ ON
  이 섹션에서는 Azure Storage에 SQL Server 데이터 파일을 저장할 때 사용할 수 있는 도구 및 프로그래밍 참조 라이브러리에 대해 설명합니다.  
   
 ### <a name="powershell-support"></a>PowerShell 지원  
- PowerShell cmdlet을 통해 파일 경로 대신 Blob Storage URL을 참조하여 Azure Blob Storage 서비스에 SQL Server 데이터 파일을 저장합니다. 다음 URL 형식을 사용 하 여 Blob에 액세스: `http://storageaccount.blob.core.windows.net/<container>/<blob>` 합니다.  
+ PowerShell cmdlet을 통해 파일 경로 대신 Blob Storage URL을 참조하여 Azure Blob Storage 서비스에 SQL Server 데이터 파일을 저장합니다. 다음 URL 형식을 사용하여 BLOB에 액세스합니다. `http://storageaccount.blob.core.windows.net/<container>/<blob>`  
   
 ### <a name="sql-server-object-and-performance-counters-support"></a>SQL Server 개체 및 성능 카운터 지원  
  SQL Server 2014 이상에서는 Azure Storage의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../../relational-databases/performance-monitor/sql-server-http-storage-object.md) 라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
  SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 https://teststorageaccnt.blob.core.windows.net/testcontainer/와 같이 저장소 컨테이너의 URL 경로를 입력할 수 있습니다.
  
- 여러 대화 상자 창(예: **새 데이터베이스**, **데이터베이스 연결** 및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](https://msdn.microsoft.com/library/dn466438.aspx)을 참조하세요.  
+ 여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](https://msdn.microsoft.com/library/dn466438.aspx)을 참조하세요.  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 관리 개체 지원  
  Azure의 SQL Server 데이터 파일 기능을 사용할 경우 모든 SMO(SQL Server 관리 개체)가 지원됩니다. SMO 개체에 파일 경로가 필요한 경우 로컬 파일 경로 대신 BLOB URL 형식을 사용합니다(예: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`). SMO(SQL Server 관리 개체)에 대한 자세한 내용은 SQL Server 온라인 설명서의 [SMO&#40;SQL Server 관리 개체&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조하세요.  

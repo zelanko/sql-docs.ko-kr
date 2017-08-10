@@ -14,11 +14,11 @@ caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 0d87653d1db0ffad098e9cdf914d61a486905647
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-features-for-natively-compiled-t-sql-modules"></a>고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능
@@ -51,29 +51,29 @@ ms.lasthandoff: 06/23/2017
 
 다음과 같은 쿼리 구문이 지원됩니다.  
 
-CASE 식: 모든 문이나 절 유효한 식을 허용 하는 대/소문자를 사용할 수 있습니다.
-   - **적용 대상:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]합니다.  
-    부터는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], CASE 문은 고유 하 게 컴파일된 T-SQL 모듈에 대 한 이제 지원 됩니다.
+CASE 식: CASE는 유효한 식이 허용되는 모든 문 및 절에 사용할 수 있습니다.
+   - **적용 대상:** [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]을 참조하세요.  
+    [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 고유하게 컴파일된 T-SQL 모듈에서 CASE 문이 지원됩니다.
 
 SELECT 절:  
 
 -   열 및 이름 별칭(AS 또는 = 구문 사용)  
 
 -   스칼라 하위 쿼리
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
-      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 스칼라 하위 쿼리는 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 스칼라 하위 쿼리가 지원됩니다.
 
 -   TOP*  
 
 -   SELECT DISTINCT  
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
-      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], DISTINCT 연산자 고유 하 게 컴파일된 모듈에서 지원 됩니다.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 DISTINCT 연산자가 지원됩니다.
 
               DISTINCT aggregates are not supported.  
 
 -   UNION 및 UNION ALL
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
-      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], UNION 및 UNION ALL 연산자가 이제 고유 하 게 컴파일된 모듈에서 지원 됩니다.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 UNION 및 UNION ALL 연산자가 지원됩니다.
 
 -   변수 할당  
 
@@ -84,21 +84,21 @@ FROM 절:
 -   FROM \<고유하게 컴파일된 인라인 TVF>  
 
 -   LEFT OUTER JOIN, RIGHT OUTER JOIN, CROSS JOIN 및 INNER JOIN
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
-      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 조인 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 JOIN이 지원됩니다.
 
 -   하위 쿼리 `[AS] table_alias`. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)을 참조하세요. 
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
-      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], 하위 쿼리는 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 하위 쿼리가 지원됩니다.
 
 WHERE 절:  
 
 -   필터 조건자 IS [NOT] NULL  
 
--   및 사이  
--   OR, NOT, EXISTS,
-    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]합니다.
-      부터는 [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], OR/NOT/IN/EXISTS 연산자는 이제 네이티브 컴파일된 모듈에서 지원 됩니다.
+-   AND, BETWEEN  
+-   OR, NOT, IN, EXISTS
+    - **적용 대상:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]을 참조하세요.
+      [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]부터 고유하게 컴파일된 모듈에서 OR/NOT/IN/EXISTS 연산자가 지원됩니다.
 
 
 [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 절:
@@ -194,7 +194,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   비트 연산자 ~, &, | 및 ^  
 
 -   APPLY 연산자
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.
 
 ##  <a name="bfncsp"></a> 고유하게 컴파일된 모듈의 기본 제공 함수  
@@ -205,7 +205,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   날짜 함수: CURRENT_TIMESTAMP, DATEADD, DATEDIFF, DATEFROMPARTS, DATEPART, DATETIME2FROMPARTS, DATETIMEFROMPARTS, DAY, EOMONTH, GETDATE, GETUTCDATE, MONTH, SMALLDATETIMEFROMPARTS, SYSDATETIME, SYSUTCDATETIME 및 YEAR  
 
 -   문자열 함수: LEN, LTRIM, RTRIM 및 SUBSTRING  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 TRIM, TRANSLATE, CONCAT_WS 등의 기본 제공 함수도 지원됩니다.  
 
 -   ID 함수: SCOPE_IDENTITY  
@@ -215,7 +215,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 -   Uniqueidentifier 함수: NEWID 및 NEWSEQUENTIALID  
 
 -   JSON 함수  
-    - **Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
+    - **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.  
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 JSON 함수는 고유하게 컴파일된 모듈에서 지원됩니다.
 
 -   오류 함수: ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY 및 ERROR_STATE  
@@ -279,7 +279,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```
 
- 8192 행 제한은 `TOP N`에만 적용됩니다. 여기서 `N`은 앞의 예와 같이 상수입니다.  8192보다 큰 `N` 이 필요한 경우 값을 변수에 할당하고 이 변수를 `TOP`과 함께 사용할 수 있습니다.  
+ 8192 행 제한은 `TOP N` 에만 적용됩니다. 여기서 `N` 은 앞의 예와 같이 상수입니다.  8192보다 큰 `N` 이 필요한 경우 값을 변수에 할당하고 이 변수를 `TOP`과 함께 사용할 수 있습니다.  
 
  변수 사용의 예: 컴파일  
 

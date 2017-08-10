@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: fe6de2b16b9792a5399b1c014af72a2a5ee52377
 ms.openlocfilehash: ee8d16f8999f2e3e39d90086993c9a46a30ac21a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>메모리 내 OLTP에 지원되는 데이터 형식
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/23/2017
   
 -   메모리 액세스에 최적화된 테이블  
   
--   고유 하 게 컴파일된 T-SQL 모듈  
+-   고유하게 컴파일된 T-SQL 모듈  
   
 ## <a name="unsupported-data-types"></a>지원되지 않는 데이터 형식  
  다음 데이터 형식은 지원되지 않습니다.  

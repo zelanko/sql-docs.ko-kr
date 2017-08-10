@@ -17,17 +17,17 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: ceddddafe0c052d0477e218955949012818e9a73
 ms.openlocfilehash: f854bc49f1543782f0e92067635c77cf53d0cdd2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-guides"></a>SQL Server 지침
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-다음 가이드를 사용할 수 있습니다. 일반적인 개념에 설명 하며 해당 가이드에서 달리 명시 하지 않는 한 모든 버전의 SQL Server에 적용 합니다. 
+다음 가이드를 사용할 수 있습니다. 이러한 가이드는 해당 가이드에 다른 설명이 없는 한 일반 개념을 다루며 모든 버전의 SQL Server에 적용됩니다. 
 
 [Always On 가용성 그룹 문제 해결 및 모니터링 가이드](http://msdn.microsoft.com/library/dn135328)  
 [인덱스 디자인 가이드](../relational-databases/sql-server-index-design-guide.md)  

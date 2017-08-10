@@ -15,18 +15,18 @@ caps.latest.revision: 11
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 332787256518605b6f91dab6be012889c0b0aa93
 ms.openlocfilehash: 007b40b36317a67c6b9714b89aac0d3324312f30
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-usage-scenarios"></a>임시 테이블 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   임시 테이블은 일반적으로 데이터 변경 기록을 추적하는 데 필요한 시나리오에서 유용합니다.    
-에 대 한 주요 생산성이 높으므로 다음 사용 사례에서 임시 테이블을 고려 하는 것이 좋습니다.  
+생산성이 상당히 높으므로 다음 사용 사례에서 임시 테이블을 사용을 고려하는 것이 좋습니다.  
   
 ## <a name="data-audit"></a>데이터 감사  
  변경된 사항 및 시기를 추적하고 지정 시간에 법정 분석을 수행하는 데 필요한 중요 정보가 저장된 테이블에서는 임시 시스템 버전 관리를 사용합니다.    
@@ -315,9 +315,9 @@ ALTER TABLE Product
 ALTER TABLE [Location]  
 ADD   
     SysStartTime datetime2 (2) GENERATED ALWAYS AS ROW START HIDDEN    
-        constraint DF_ValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
+        constraint DFValidFrom DEFAULT DATEADD(second, -1, SYSUTCDATETIME())  
     , SysEndTime datetime2 (2)  GENERATED ALWAYS AS ROW END HIDDEN     
-        constraint DF_ValidTo DEFAULT '9999.12.31 23:59:59.99'  
+        constraint DFValidTo DEFAULT '9999.12.31 23:59:59.99'  
     , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);  
   
 ALTER TABLE [Location]    

@@ -14,11 +14,11 @@ caps.latest.revision: 51
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 66f9964d94ebcbab021c9dcf69ae50663196a597
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>메모리 내 OLTP에서 지원되지 않는 Transact-SQL 구문
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/23/2017
 |----------|----------|----------------|  
 |기능|ON|파일 그룹이나 파티션 구성표에는 메모리 액세스에 최적화된 테이블을 배치할 수 없습니다. **CREATE TABLE** 문에서 ON 절을 제거합니다.<br /><br /> 메모리 액세스에 최적화된 모든 테이블은 메모리 액세스에 최적화된 파일 그룹에 매핑됩니다.|  
 |데이터 형식|*데이터 형식 이름*|표시된 데이터 형식이 지원되지 않습니다. 지원되는 데이터 형식 중 하나로 형식을 바꿉니다. 자세한 내용은 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)을 참조하세요.|  
-|기능|계산 열|계산된 열은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. **CREATE TABLE** 문에서 계산된 열을 제거합니다.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 액세스에 최적화된 테이블 및 인덱스에서 지원됩니다.|  
+|기능|계산 열|계산된 열은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. **CREATE TABLE** 문에서 계산된 열을 제거합니다.<br/><br/>**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 계산 열이 메모리 액세스에 최적화된 테이블 및 인덱스에서 지원됩니다.|  
 |기능|복제|복제는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.|  
 |기능|FILESTREAM|FILESTREAM 저장소는 메모리 액세스에 최적화된 테이블의 열에 지원되지 않습니다. 열 정의에서 **FILESTREAM** 키워드를 제거합니다.|  
 |기능|SPARSE|메모리 액세스에 최적화된 테이블의 열을 SPARSE로 정의할 수 없습니다. 열 정의에서 **SPARSE** 키워드를 제거합니다.|  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/23/2017
 |연산|기본 키 열의 업데이트|메모리 액세스에 최적화된 테이블의 기본 키 열과 테이블 형식을 업데이트할 수 없습니다. 기본 키를 업데이트해야 하는 경우 기존 열을 삭제하고 업데이트된 기본 키가 있는 새 열을 삽입합니다.|  
 |연산|CREATE  INDEX|**CREATE TABLE** 문 또는 **ALTER TABLE** 문을 사용하여 메모리 액세스에 최적화된 테이블의 인덱스를 인라인으로 지정해야 합니다.|  
 |연산|CREATE FULLTEXT INDEX|전체 텍스트 인덱스는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.|  
-|연산|스키마 변경|메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 **sp_rename**과 같은 스키마 변경을 지원하지 않습니다.<br /><br /> 특정 스키마를 변경하려는 경우 오류 12320이 발생합니다. 이름을 바꾸는 등 스키마 버전을 변경해야 하는 작업은 메모리에 액세스에 최적화된 테이블에서 지원되지 않습니다.<br /><br /> ALTER TABLE 및 ALTER PROCEDURE를 사용하면 특정 스키마를 변경할 수 있습니다.<br/><br/>**적용 대상:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]합니다.<br/>부터는 [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], sp_rename 지원 됩니다.| 
+|연산|스키마 변경|메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저는 **sp_rename**과 같은 스키마 변경을 지원하지 않습니다.<br /><br /> 특정 스키마를 변경하려는 경우 오류 12320이 발생합니다. 이름을 바꾸는 등 스키마 버전을 변경해야 하는 작업은 메모리에 액세스에 최적화된 테이블에서 지원되지 않습니다.<br /><br /> ALTER TABLE 및 ALTER PROCEDURE를 사용하면 특정 스키마를 변경할 수 있습니다.<br/><br/>**적용 대상:** [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]을 참조하세요.<br/>[!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 sp_rename이 지원됩니다.| 
 |연산|TRUNCATE TABLE|TRUNCATE 작업은 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다. 테이블에서 모든 행을 제거하려면 **DELETE FROM***table* 을 사용하여 모든 행을 삭제하거나 테이블을 삭제하고 다시 만듭니다.|  
 |연산|ALTER AUTHORIZATION|메모리 액세스에 최적화된 테이블이나 고유하게 컴파일된 저장 프로시저의 소유자 변경은 지원되지 않습니다. 테이블이나 프로시저를 삭제하고 다시 만들어 소유권을 변경합니다.|  
 |연산|ALTER SCHEMA|스키마 간에 보안 개체를 이동합니다.|  
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/23/2017
 |연산자|OFFSET|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **OFFSET** 를 제거합니다.|  
 |연산자|INTERSECT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **INTERSECT** 를 제거합니다. 일부 경우에는 INNER JOIN을 사용하여 동일한 결과를 얻을 수 있습니다.|  
 |연산자|EXCEPT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **EXCEPT** 를 제거합니다.|  
-|연산자|APPLY|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **APPLY** 를 제거합니다.<br/><br/>**Applies to:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.|  
+|연산자|APPLY|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **APPLY** 를 제거합니다.<br/><br/>**적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.<br/>[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.|  
 |연산자|PIVOT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **PIVOT** 를 제거합니다.|  
 |연산자|UNPIVOT|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **UNPIVOT** 를 제거합니다.|  
 |연산자|CONTAINS|이 연산자는 지원되지 않습니다. 고유하게 컴파일된 저장 프로시저에서 **CONTAINS** 를 제거합니다.|  

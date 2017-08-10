@@ -1,5 +1,5 @@
 ---
-title: "전체 텍스트 인덱싱 마법사 사용 | Microsoft 문서"
+title: "전체 텍스트 인덱싱 마법사 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/19/2016
 ms.prod: sql-server-2016
@@ -27,11 +27,11 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
 ms.openlocfilehash: 204b0e834db9ad1c5fe7d3f08f507629313e3cad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>전체 텍스트 인덱싱 마법사 사용
@@ -99,12 +99,12 @@ ms.lasthandoff: 06/23/2017
      d. **인덱스 파일 그룹 선택**  
      전체 텍스트 인덱스를 만들 파일 그룹을 지정합니다.  
   
-     e. 값 선택:  
+     5. 값 선택:  
       |값|설명|  
       |-----------|-----------------|
-      |**<default>**| 테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할 된 경우 주 파일 그룹이 사용 됩니다.|
+      |**<default>**| 테이블이나 뷰가 분할되지 않은 경우 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용하려면 선택합니다. 테이블 또는 뷰가 분할된 경우 기본 파일 그룹이 사용됩니다.|
       |**PRIMARY**|새 전체 텍스트 인덱스에 주 파일 그룹을 사용하려면 선택합니다.|
-      *사용자가 지정한 기본 파일 그룹*|사용자 정의 기본 중지 목록이 있으면 해당 파일 그룹을 사용 하 여 새 전체 텍스트 인덱스에 대 한 목록에서 해당 이름을 선택 합니다.|   
+      *사용자가 지정한 기본 파일 그룹*|사용자 정의 기본 중지 목록이 있으면 이 목록에서 새 전체 텍스트 인덱스에 사용할 파일 그룹의 이름을 선택합니다.|   
   
      
  11. **전체 텍스트 중지 목록 선택**  

@@ -21,11 +21,11 @@ caps.latest.revision: 58
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: a59eb966ca238f4e1c2acd95f108f7090b136a52
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="always-encrypted-database-engine"></a>상시 암호화(데이터베이스 엔진)
@@ -149,7 +149,7 @@ ms.lasthandoff: 06/23/2017
 - 변경 데이터 캡처를 사용하는 테이블의 열  
 - 변경 내용 추적을 사용하는 테이블의 기본 키 열  
 - 마스킹된 열(동적 데이터 마스킹 사용)  
-- Stretch Database 테이블의 열 상시 암호화로 암호화된 열이 있는 테이블은 스트레치에 사용할 수 있습니다.  
+- 스트레치 데이터베이스 테이블의 열 상시 암호화로 암호화된 열이 있는 테이블은 스트레치에 사용할 수 있습니다.  
 - 외부(PolyBase) 테이블의 열(참고: 암호화된 열이 있는 테이블과 외부 테이블을 같은 쿼리에서 사용할 수 있음)  
 - 암호화된 열을 대상으로 하는 테이블 반환 매개 변수는 지원되지 않습니다.  
 

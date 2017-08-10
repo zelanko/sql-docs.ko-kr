@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
 ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/23/2017
 
 Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 경우 선택한 서비스 계층이 데이터베이스에서 사용할 수 있는 활성 메모리의 양에 영향을 줍니다. 경고를 사용하여 데이터베이스의 메모리 사용량 모니터링을 계획해야 합니다. 자세한 내용은 다음을 참조하세요.
 
-- 메모리 내 OLTP 저장소 제한에 대 한 검토 하 여 [가격 책정 계층](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- [가격 책정 계층](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)에 대한 메모리 내 OLTP 저장소 제한 검토
 - [메모리 내 OLTP 저장소 모니터링](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>메모리 액세스에 최적화된 테이블 변수
@@ -114,7 +114,7 @@ SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현
 
 ### <a name="a4-guidance-for-whether-in-memory-oltp-features-are-right-for-your-application"></a>A.4 메모리 내 OLTP 기능이 응용 프로그램에 적합한지에 대한 지침
 
-메모리 내 OLTP 기능은 특정 응용 프로그램의 성능을 향상 시킬 수 있는지 여부에 대 한 지침을 참조 하세요.
+메모리 내 OLTP 기능이 특정 응용 프로그램의 성능을 향상할 수 있는지에 대한 지침은 다음을 참조하세요.
 
 - [메모리 내 OLTP(메모리 내 최적화)](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
@@ -122,7 +122,7 @@ SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현
 
 ## <a name="b-unsupported-features"></a>2. 지원되지 않는 기능
 
-특정 메모리 내 OLTP 시나리오에서 지원 되지 않는 기능에 설명 합니다.
+특정 메모리 내 OLTP 시나리오에서 지원되지 않는 기능은 다음에 설명되어 있습니다.
 
 - [메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
@@ -159,7 +159,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 - 메모리 액세스에 최적화된 테이블에서는 열에 [RowVersion](../../t-sql/data-types/rowversion-transact-sql.md) 태그를 지정할 수 없습니다.
 
 
-- A [시퀀스](../../t-sql/statements/create-sequence-transact-sql.md) 메모리 액세스에 최적화 된 테이블의 제약 조건으로 사용할 수 없습니다. 예를 들어 NEXT VALUE FOR 절과 함께 DEFAULT 제약 조건을 만들 수 없습니다. 시퀀스는 INSERT 및 UPDATE 문과 함께 사용할 수 있습니다.
+- [SEQUENCE](../../t-sql/statements/create-sequence-transact-sql.md)는 메모리 액세스에 최적화된 테이블의 제약 조건과 함께 사용할 수 없습니다. 예를 들어 NEXT VALUE FOR 절에 DEFAULT 제약 조건을 만들 수 없습니다. SEQUENCE는 INSERT 및 UPDATE 문에서 사용할 수 있습니다.
 
 
 ## <a name="c-administrative-maintenance"></a>3. 유지 관리
@@ -170,7 +170,7 @@ READPAST 힌트는 여러 세션이 각각 큐 처리 등 같은 작은 행 집�
 
 ### <a name="c1-identity-seed-reset-increment--1"></a>C.1 ID 초기값 재설정, 증분 > 1
 
-메모리 액세스에 최적화된 테이블에는 IDENTITY 열을 재설정하는 [DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)를 사용할 수 없습니다.
+메모리 액세스에 최적화된 테이블에는 IDENTITY 열을 재설정하는[DBCC CHECKIDENT](../../t-sql/database-console-commands/dbcc-checkident-transact-sql.md)를 사용할 수 없습니다.
 
 메모리 액세스에 최적화된 테이블에서는 IDENTITY 열의 증분 값이 정확히 1로 제한됩니다.
 

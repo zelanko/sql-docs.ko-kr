@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: bc86472cabd742e83980126dce2cf22d42dfdde2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="developer-guides-for-sql-server"></a>SQL Server용 개발자 가이드
@@ -37,11 +37,11 @@ ms.lasthandoff: 07/20/2017
 ### <a name="programmable-features-and-services"></a>프로그래밍 가능한 기능 및 서비스: 
  - [데이터베이스 엔진 개발자 설명서](../relational-databases/database-engine-developer-documentation.md)  
   
- - [Analysis Services 개발자 설명서](../analysis-services/analysis-services-developer-documentation.md)  
+ - [Analysis Services Developer Documentation](../analysis-services/analysis-services-developer-documentation.md)(Analysis Services 개발자 설명서)  
   
  - [Reporting Services 개발자 설명서](../reporting-services/reporting-services-developer-documentation.md)  
   
- - [Integration Services 개발자 설명서](../integration-services/integration-services-developer-documentation.md)  
+ - [Integration Services Developer Documentation](../integration-services/integration-services-developer-documentation.md)(Integration Services 개발자 설명서)  
   
  - [Master Data Services 개발자 설명서](../master-data-services/develop/master-data-services-developer-documentation.md)  
   

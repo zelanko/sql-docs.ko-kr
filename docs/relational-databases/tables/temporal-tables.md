@@ -1,5 +1,5 @@
 ---
-title: "임시 테이블 | Microsoft 문서"
+title: "임시 테이블 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/11/2016
@@ -19,7 +19,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-tables"></a>임시 테이블
@@ -122,7 +122,7 @@ CREATE TABLE dbo.Employee
 >  시스템 datetime2 열에 기록되는 시작 시간은 트랜잭션 자체의 시간을 기반으로 합니다. 예를 들어 단일 트랜잭션 내에 삽입된 모든 행은 **SYSTEM_TIME** 기간의 시작에 해당하는 열에 기록된 것과 UTC 시간이 동일합니다.  
   
 ## <a name="how-do-i-query-temporal-data"></a>임시 데이터를 쿼리하는 방법  
- **SELECT** 문의 **FROM***\<table>* 절에는 5개의 임시 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 임시 테이블 위의 뷰를 통해 전파됩니다.  
+ **SELECT** 문 **FROM***\<table>* 절은 5개의 임시 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 임시 테이블 위의 뷰를 통해 전파됩니다.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -136,7 +136,7 @@ SELECT * FROM Employee
 ```  
   
 > [!NOTE]  
->  **FOR SYSTEM_TIME** 은 유효 기간(**SysStartTime** = **SysEndTime**)이 0인 행을 필터링합니다.  
+>  **FOR SYSTEM_TIME**은 유효 기간(**SysStartTime** = **SysEndTime**)이 0인 행을 필터링합니다.  
 > 이러한 행은 동일한 트랜잭션 내의 동일한 기본 키에서 여러 업데이트를 수행하는 경우에 생성됩니다.  
 > 이 경우 임시 쿼리는 트랜잭션 이전의 행 버전과 트랜잭션 이후에 실제가 된 행 버전만 표시합니다.  
 > 이러한 행을 분석에 포함해야 하는 경우 기록 테이블을 직접 쿼리합니다.  

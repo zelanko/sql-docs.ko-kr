@@ -1,5 +1,5 @@
 ---
-title: "PolyBase 문제 해결 | Microsoft 문서"
+title: "PolyBase 문제 해결 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 10/25/2016
@@ -24,7 +24,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
 ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 문제 해결
@@ -52,7 +52,7 @@ ms.lasthandoff: 07/20/2017
 |[sys.dm_exec_dms_services&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-services-transact-sql.md)|[sys.dm_exec_dms_workers&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |[sys.dm_exec_external_operations&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-operations-transact-sql.md)|[sys.dm_exec_external_work&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-external-work-transact-sql.md)|  
   
-  PolyBase 쿼리는 sys.dm_exec_distributed_request_steps 내에 일련의 단계로 나뉩니다. 다음 표에서는 단계 이름에서 연결된 DMV로의 매핑을 제공합니다.
+  PolyBase 쿼리는 sys.dm_exec_distributed_request_steps 내에 있는 일련의 단계로 나뉩니다. 다음 표에는 단계 이름과 연결된 DMV 간의 매핑이 나와 있습니다.
   
  |PolyBase 단계|연결된 DMV|  
  |-|-| 
@@ -147,7 +147,7 @@ ms.lasthandoff: 07/20/2017
   
 2.  **실행 계획** 탭을 클릭합니다.  
   
-     ![PolyBase 쿼리 계획](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase query plan")  
+     ![PolyBase 쿼리 계획](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 쿼리 계획")  
   
 3.  **원격 쿼리 연산자** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -227,7 +227,7 @@ ms.lasthandoff: 07/20/2017
  - 가변 길이 열의 전체 길이를 포함하여 행의 최대 가능 크기가 1MB를 초과할 수 없습니다. 
  - PolyBase는 Hive 0.12+ 데이터 유형(즉, Char(), VarChar())을 지원하지 않습니다.   
  - SQL Server 또는 Azure SQL Data Warehouse에서 ORC 파일 형식으로 데이터를 내보낼 때 텍스트가 많은 열은 java 메모리 부족 오류로 인해 50개 이내로 제한될 수 있습니다. 이 문제를 해결하려면 열의 하위 집합만 내보냅니다.
-- [PolyBase는 SQL Server 2016 장애 조치(failover) 클러스터에 노드를 추가하는 경우 설치하지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+- [PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
   
 ## <a name="error-messages-and-possible-solutions"></a>오류 메시지 및 가능한 해결 방법
 

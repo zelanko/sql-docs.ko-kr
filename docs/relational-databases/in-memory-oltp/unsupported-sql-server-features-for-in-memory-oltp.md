@@ -1,5 +1,5 @@
 ---
-title: "메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능 | Microsoft 문서"
+title: "메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/19/2017
 ms.prod: sql-server-2016
@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
 ms.openlocfilehash: 85a720edefe425146e5c54613b0a0f88007765a9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>메모리 내 OLTP에 대해 지원되지 않는 SQL Server 기능
@@ -51,7 +51,7 @@ ms.lasthandoff: 07/20/2017
 
 #### <a name="cross-database-queries-and-transcations"></a>데이터베이스 간 쿼리 및 트랜잭션
 
-몇 가지 예외를 제외하고 데이터베이스 간 트랜잭션은 지원되지 않습니다. 다음 테이블에서는 지원되는 경우 및 해당 제한 사항에 대해 설명합니다. (참고 항목: [데이터베이스 간 쿼리](../../relational-databases/in-memory-oltp/cross-database-queries.md))  
+몇 가지 예외를 제외하고 데이터베이스간 트랜잭션은 지원되지 않습니다. 다음 테이블에서는 지원되는 경우 및 해당 제한 사항에 대해 설명합니다. (참고 항목: [데이터베이스 간 쿼리](../../relational-databases/in-memory-oltp/cross-database-queries.md))  
 
 
 |데이터베이스|허용함|Description|  

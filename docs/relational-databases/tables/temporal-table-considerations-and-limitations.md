@@ -15,11 +15,11 @@ caps.latest.revision: 18
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: 5ee3aa9223ae8ab832eff23a1da1755278e86d0b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>임시 테이블 고려 사항 및 제한 사항
@@ -53,13 +53,13 @@ ms.lasthandoff: 06/23/2017
   
 -   **INSERT** 및 **UPDATE** 문은 SYSTEM_TIME 기간 열을 참조할 수 없습니다. 이러한 열에 직접 값을 삽입하려는 시도는 차단됩니다.  
   
--   **TRUNCATE TABLE** is not supported while **SYSTEM_VERSIONING** is **ON**  
+-   **TRUNCATE TABLE** 은 **SYSTEM_VERSIONING** 이 **ON**  
   
 -   기록 테이블의 데이터를 직접 수정하는 것은 허용되지 않습니다.  
   
 -   **ON DELETE CASCADE** 및 **ON UPDATE CASCADE** 은 현재 테이블에서 허용되지 않습니다. 즉, 임시 테이블이 외래 키 관계(sys.foreign_keys의 *parent_object_id* 에 해당)인 경우 CASCADE 옵션은 허용되지 않습니다. 이러한 제약 조건으로 작업하려면 응용 프로그램 논리를 사용하거나 트리거 후에 기본 키 테이블(sys.foreign_keys의  *referenced_object_id* 에 해당)에서 삭제 시 일관성을 유지하세요. 기본 키 테이블이 임시이고 참조 테이블이 비임시인 경우 그러한 제한 사항이 없습니다. 
 
-    **참고:** 이 제한 사항은 SQL Server 2016에만 적용 합니다. CASCADE 옵션에서 사용할 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 2.0에서 시작 합니다.  
+    **참고:** 이 제한 사항은 SQL Server 2016에만 적용됩니다. CASCADE 옵션은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 2.0 이상에서 지원됩니다.  
   
 -   DML 논리 무효화를 방지하기 위해**INSTEAD OF** 트리거가 현재 또는 기록 테이블에서 허용되지 않습니다. **AFTER** 트리거는 현재 테이블에서만 허용됩니다. DML 논리 무효화를 방지하기 위해 기록 테이블에서 차단됩니다.  
   

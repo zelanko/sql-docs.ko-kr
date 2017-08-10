@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 93be3a22ee517f90e65b8c8ba6dcaa8d90ed8515
 ms.openlocfilehash: 3b835536b4f510021f0d966e3214cf1ec5f71f5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
@@ -93,14 +93,14 @@ SQL Server는 CPU가 추가된 후에 CPU 사용을 자동으로 시작하지 �
 
 CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임시로 대량 로그 또는 단순 복구 모델로 설정하여 인덱스 만들기 또는 다시 작성과 같은 인덱스 작업의 성능을 향상시킬 수 있습니다. 이러한 인덱스 작업으로 인해 상당한 로그 작업이 수행될 수 있으며 로그 경합으로 인해 SQL Server에서 선택하는 최상의 DOP(병렬 처리 수준)에 영향이 있을 수 있습니다.
 
-또한 조정 하는 것이 좋습니다는 **최대 병렬 처리 수준 (MAXDOP)** 이러한 작업에 대 한 서버 구성 옵션입니다. 다음 지침은 내부 테스트를 기반으로 하며 일반적인 권장 사항입니다. 몇 가지 MAXDOP 설정을 사용해 보고 사용 환경에 최적인 설정을 확인해야 합니다.
+또한 이러한 작업에 맞게 **MAXDOP(최대 병렬 처리 수준)** 서버 구성 옵션을 조정하는 것이 좋습니다. 다음 지침은 내부 테스트를 기반으로 하며 일반적인 권장 사항입니다. 몇 가지 MAXDOP 설정을 사용해 보고 사용 환경에 최적인 설정을 확인해야 합니다.
 
 * 전체 복구 모델의 경우 max degree of parallelism 옵션 값은 8 이하로 설정해야 합니다.   
 * 대량 로그 모델 또는 단순 복구 모델의 경우에는 max degree of parallelism 옵션 값을 8보다 크게 설정하는 것이 좋습니다.   
 * NUMA가 구성된 서버에서는 최대 병렬 처리 수준이 각 NUMA 노드에 할당된 CPU 수를 초과하면 안 됩니다. 이는 쿼리가 1개의 NUMA 노드에서 로컬 메모리를 사용할 가능성이 높고 이 경우 메모리 액세스 시간을 개선할 수 있기 때문입니다.  
-* 에 대 한 MAXDOP 값 논리 프로세서 보다는 실제 프로세서의 수를 초과 하지 않아야, 하이퍼 스레딩 가진 서버에 사용 하도록 설정 되었고 2009 년에 제조 또는 (하이퍼 스레딩 기능 향상 되었습니다) 전에 이전 버전입니다.
+* 하이퍼스레딩을 사용하며 2009년 이전(하이퍼스레딩 기능이 개선되기 전)에 제조된 서버의 경우 MAXDOP 값이 논리 프로세서가 아닌 실제 프로세서 수를 초과하면 안 됩니다.
 
-Max degree of parallelism 옵션에 대 한 자세한 내용은 참조 [max degree of parallelism 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)합니다.
+최대 병렬 처리 수준 옵션에 대한 자세한 내용은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 
 ### <a name="setting-the-maximum-number-of-worker-threads"></a>최대 작업자 스레드 수 설정
 

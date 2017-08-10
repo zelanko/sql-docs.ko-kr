@@ -17,11 +17,11 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
 ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/23/2017
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 작업에 대해 수집된 데이터를 사용할 뿐 아니라 쿼리 저장소를 구성하기 위해 디자인된 사용자 인터페이스 집합이 있습니다.  
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 최신 버전은 [여기](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms)에서 다운로드하세요.  
   
- 문제 해결 시나리오에서 쿼리 저장소를 사용하는 방법에 대한 빠른 설명은 [@Azure 블로그의 쿼리 저장소](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)를 참조하세요.  
+ 문제 해결 시나리오에서 쿼리 저장소를 사용하는 방법에 대한 빠른 설명은 [Query Store @Azure Blogs](https://azure.microsoft.com/en-us/blog/query-store-a-flight-data-recorder-for-your-database/)(Azure 블로그의 쿼리 저장소)를 참조하세요.  
   
 ##  <a name="Insight"></a> Azure SQL Database에서 Query Performance Insight 사용  
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에서 쿼리 저장소를 사용하는 경우 **Query Performance Insight** 를 사용하여 시간의 흐름에 따른 DTU 사용을 분석할 수 있습니다.  
@@ -143,27 +143,27 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |재발된 쿼리|최근에 실행 메트릭이 재발된 쿼리를 정확히 파악합니다. <br />응용 프로그램에서 관찰된 성능 문제와 수정하거나 개선해야 할 실제 쿼리의 상관 관계를 지정하려면 이 보기를 사용합니다.|  
 |전체 리소스 사용|실행 메트릭 중 하나에 대한 데이터베이스의 전체 리소스 사용을 분석합니다.<br />리소스 패턴(낮 작업 vs. 밤 작업)을 식별하고 데이터베이스에 대한 전체 사용을 최적화하려면 이 보기를 사용합니다.|  
 |리소스를 최고로 사용 중인 쿼리|관심 있는 메트릭 실행을 선택하고 제공된 시간 간격 동안 가장 값이 높은 쿼리를 식별합니다. <br />데이터베이스 리소스 사용에 가장 큰 영향을 미치는 가장 관련성이 높은 쿼리에 주목하려면 이 보기를 사용합니다.|  
-|강제 계획을 사용 하는 쿼리|이전에 쿼리 저장소를 사용 하 여 계획을 강제로 나열 합니다. <br />이 뷰를 사용 하 여 모든 현재 강제 계획에 빠르게 액세스할 수 있습니다.|  
-|높은 변형 쿼리|원하는 시간 간격에 지속 시간, CPU 시간, IO 및 메모리 사용과 같은 사용 가능한 차원의 관련이 높은 실행 변형 쿼리를 분석 합니다.<br />이 뷰를 사용하여 응용 프로그램 전체에서 사용자 경험에 영향을 줄 수 있는, 성능 변동이 큰 쿼리를 식별합니다.|  
+|강제 계획이 포함된 쿼리|쿼리 저장소를 사용하여 이전 강제 계획을 나열합니다. <br />모든 현재 강제 계획에 빠르게 액세스하려면 이 보기를 사용합니다.|  
+|고변형 쿼리|기간, CPU 시간, IO 및 원하는 시간 간격의 메모리 사용량과 같은 사용 가능한 차원과 관련하여 실행 변형이 높은 쿼리를 분석합니다.<br />이 뷰를 사용하여 응용 프로그램 전체에서 사용자 경험에 영향을 줄 수 있는, 성능 변동이 큰 쿼리를 식별합니다.|  
 |추적된 쿼리|가장 중요한 쿼리 실행을 실시간으로 추적합니다. 일반적으로 강제 계획을 사용하는 쿼리가 있고 해당 쿼리 성능이 안정적인지 확인하려고 할 경우 이 보기를 사용합니다.|
   
 > [!TIP]  
 >  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 리소스를 가장 많이 사용하는 쿼리를 식별하고, 선택한 계획을 변경하여 재발된 쿼리를 수정하는 방법은 [@Azure 블로그의 쿼리 저장소](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/)를 참조하세요.  
   
- 하위 최적의 성능으로는 쿼리를 식별 하는 경우 작업은 문제의 성격에 따라 다릅니다.  
+ 최적 상태가 아닌 성능의 쿼리를 식별한 경우 수행할 작업은 문제의 성격에 따라 다릅니다.  
   
 -   쿼리가 여러 계획으로 실행되고 마지막 계획이 이전 계획보다 훨씬 나쁜 경우 계획 적용 메커니즘을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 향후 실행에 최적 계획을 사용하도록 할 수 있습니다.  
   
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> 위의 그림에는 가능한 각 상태에 대 한 다음과 같은 의미와 특정 쿼리 계획에 대 한 형태도 각기 기능 수 있습니다.:<br />  
+> 위의 그림에서는 쿼리 계획에 따라 셰이프가 다를 수 있으며, 셰이프는 다음과 같이 가능한 각 상태를 의미합니다.<br />  
 > |셰이프|의미|  
 > |-------------------|-------------|
-> |Circle|완료 됨 (성공적으로 완료 된 일반적인 실행)를 쿼리 합니다.|
-> |Square|취소 (클라이언트에서 시작 된 실행이 중단 됨)|
-> |Triangle|실패 (중단 예외 실행)|
-> 또한 도형의 크기 증가 하도록 실행 오류 개수를 높게와 크기 지정 된 시간 간격 내 쿼리 실행 수를 반영 합니다.  
+> |Circle|쿼리 완료됨(정상 실행이 완료됨)|
+> |Square|취소됨(클라이언트 시작으로 실행이 중단됨)|
+> |Triangle|실패(예외로 실행이 중단됨)|
+> 또한 셰이프 크기는 지정된 시간 간격 내의 쿼리 실행 수를 나타내며, 크기가 크면 실행 수가 많은 것입니다.  
 
 -   쿼리에 최적의 실행을 위한 인덱스가 없다는 결론을 내릴 수도 있습니다. 이 정보는 쿼리 실행 계획 내에 표시됩니다. 누락된 인덱스를 만들고 쿼리 저장소를 사용하여 쿼리 성능을 확인합니다.  
   
@@ -175,7 +175,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
   
 -   문제가 있는 쿼리를 다시 작성합니다. 예를 들면 쿼리 매개 변수화를 활용하거나 좀 더 최적의 논리를 구현합니다.  
   
-##  <a name="Verify"></a> Verify Query Store is Collecting Query Data Continuously  
+##  <a name="Verify"></a> 쿼리 저장소에서 쿼리 데이터가 계속 수집되는지 확인  
  쿼리 저장소에서 작업 모드가 자동으로 변경될 수 있습니다. 쿼리 저장소의 상태를 정기적으로 모니터링하여 쿼리 저장소가 작동 중인지 확인하고, 예방 가능한 원인으로 인해 오류가 발생하지 않도록 조치를 취해야 합니다. 다음 쿼리를 실행하여 작업 모드를 결정하고 가장 관련성이 높은 매개 변수를 확인합니다.  
   
 ```tsql
@@ -233,11 +233,11 @@ SELECT actual_state_desc, desired_state_desc, current_storage_size_mb,
 FROM sys.database_query_store_options;  
 ```  
   
- 문제가 지속 되 면 쿼리 저장소는 디스크에 저장 된 데이터의 손상이 있음을 나타냅니다.
+ 문제가 지속되면 쿼리 저장소 데이터의 손상이 디스크에서 지속되고 있음을 나타냅니다.
  
- 쿼리 저장소를 실행 하 여 복구할 수 **sp_query_store_consistency_check** 영향을 받는 데이터베이스 내에서 프로시저를 저장 합니다.
+ 영향을 받는 데이터베이스 내에서 **sp_query_store_consistency_check** 저장 프로시저를 사용하여 쿼리 저장소를 복구할 수 있습니다.
  
- 여기에서 도움이 되지 않는 하는 경우 읽기 / 쓰기 모드를 요청 하기 전에 쿼리 저장소의 선택을 취소를 시도할 수 있습니다.  
+ 그래도 해결되지 않으면 읽기-쓰기 모드를 요청하기 전에 쿼리 저장소를 정리할 수 있습니다.  
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
@@ -325,7 +325,7 @@ WHERE is_forced_plan = 1;
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
  [메모리 내 OLTP와 쿼리 저장소 사용](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
- [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
+ [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)  
   
 

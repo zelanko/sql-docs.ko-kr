@@ -14,17 +14,17 @@ caps.latest.revision: 10
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
 ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 버전 기능 요약
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-SQL Server 제품 및 서비스를 사용할 수 있는 PolyBase 기능 요약입니다.  
+SQL Server 제품 및 서비스에 사용할 수 있는 PolyBase 기능 요약입니다.  
   
 ## <a name="feature-summary-for-product-releases"></a>제품 릴리스에 대한 기능 요약  
  이 표에서는 PolyBase 및 이를 사용할 수 있는 제품에 대한 주요 기능을 요약합니다.  
