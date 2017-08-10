@@ -23,16 +23,16 @@ caps.latest.revision: 44
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 259b31233d4d5000b67c9a07d0be36c230dc00f9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="for-xml-sql-server"></a>FOR XML(SQL Server)
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [FOR XML (SQL Server)](https://msdn.microsoft.com/en-US/library/ms178107(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [FOR XML(SQL Server)](https://msdn.microsoft.com/en-US/library/ms178107(SQL.120).aspx)을 참조하세요.
 
   SELECT 쿼리는 결과를 행 집합으로 반환합니다. 선택적으로 쿼리에서 FOR XML 절을 지정하면 SQL 쿼리의 서식 결과를 XML로 검색할 수 있습니다. FOR XML 절은 최상위 쿼리 및 하위 쿼리에서 사용할 수 있습니다. 최상위 FOR XML 절은 SELECT 문에서만 사용할 수 있습니다. 하위 쿼리에서는 INSERT, UPDATE 및 DELETE 문에서 FOR XML을 사용할 수 있습니다. 또한 대입 문에서도 사용할 수 있습니다.  
   

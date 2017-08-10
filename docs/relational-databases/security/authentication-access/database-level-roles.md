@@ -42,11 +42,11 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 96f6a7eeb03fdc222d0e5b42bcfbf05c25d11db6
-ms.openlocfilehash: 411da6974090c9ccad6aa6184c248537bfdebe79
+ms.translationtype: HT
+ms.sourcegitcommit: 47b0c3fc8aba635dcfd573536b770f13a40956fa
+ms.openlocfilehash: 6510f02e44dfc84c24c19c509a8dd9254845d4a1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/23/2017
 
 ## <a name="fixed-database-roles"></a>고정 데이터베이스 역할
   
- 다음 표에서는 고정 데이터베이스 역할과 기능을 보여 줍니다. 이러한 역할은 모든 데이터베이스에 있습니다. 제외 하 고는 **공용** 고정 데이터베이스 역할에 할당 된 사용 권한을 데이터베이스 역할을 변경할 수 없습니다.   
+ 다음 표에서는 고정 데이터베이스 역할과 기능을 보여 줍니다. 이러한 역할은 모든 데이터베이스에 있습니다. **공용** 데이터베이스 역할을 제외하고 고정 데이터베이스 역할에 할당된 사용 권한은 변경할 수 없습니다.   
   
 |고정 데이터베이스 역할 이름|Description|  
 |-------------------------------|-----------------|  

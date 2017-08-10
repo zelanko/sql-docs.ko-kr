@@ -20,22 +20,22 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: e59b0e12e0ee47a5ac8a68e539144401d80fb649
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-**SELECT** 문에 **FOR JSON** 절을 추가하여 쿼리 결과를 JSON으로 서식 지정하거나 데이터를 SQL Server에서 JSON으로 내보냅니다. **FOR JSON** 절을 사용하면 JSON 출력의 서식 지정을 앱에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 위임하여 클라이언트 응용 프로그램을 간소화할 수 있습니다.
+**SELECT** 문에 **FOR JSON** 절을 추가하여 쿼리 결과를 JSON으로 서식 지정하거나 데이터를 SQL Server에서 JSON으로 내보냅니다. **FOR JSON** 절을 사용하면 JSON 출력 형식 지정을 앱에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 위임하여 클라이언트 응용 프로그램을 간소화할 수 있습니다.
   
  **FOR JSON** 절을 사용하는 경우 JSON 출력의 구조를 명시적으로 지정하거나 SELECT 문의 구조에 따라 출력이 결정되도록 할 수 있습니다.  
   
 -   JSON 출력의 형식을 완전하게 제어하려면 **FOR JSON PATH**를 사용합니다. 래퍼 개체를 만들고 복잡한 속성을 중첩할 수 있습니다.  
   
--   SELECT 문의 구조에 따라 JSON 출력 서식을 자동으로 지정하려면 **FOR JSON AUTO**를 사용합니다.  
+-   SELECT 문의 구조에 따라 JSON 출력 형식을 자동으로 지정하려면 **FOR JSON AUTO**를 사용합니다.  
   
 다음은 **FOR JSON** 절을 사용한 **SELECT** 문 및 해당 출력의 예입니다.
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 07/20/2017
  ![FOR JSON 출력의 흐름 다이어그램](../../relational-databases/json/media/forjson-example1.png "Diagram of flow of FOR JSON output")  
 
 ### <a name="more-info-about-for-json-path"></a>FOR JSON PATH에 대한 추가 정보
-자세한 내용과 예제를 참조 하십시오. [중첩 JSON 출력 형식으로 PATH 모드 &#40; SQL Server &#41; ](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md).
+자세한 내용과 예제는 [PATH 모드로 중첩 JSON 출력 형식 지정&#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)을 참조하세요.
 
 구문 및 사용법은 [FOR 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
 
@@ -80,42 +80,42 @@ FOR JSON AUTO
 ```
  
 ### <a name="more-info-about-for-json-auto"></a>FOR JSON AUTO에 대한 추가 정보
-자세한 내용과 예제를 참조 하십시오. [JSON 출력 형식 자동 AUTO 모드 &#40; SQL Server &#41; ](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md).
+자세한 내용과 예제는 [AUTO 모드를 사용하여 JSON 출력 형식 자동 지정&#40;SQL Server&#41;](../../relational-databases/json/format-json-output-automatically-with-auto-mode-sql-server.md)을 참조하세요.
 
 구문 및 사용법은 [FOR 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md).  
   
 ## <a name="control-other-json-output-options"></a>기타 JSON 출력 옵션 제어  
-출력을 제어는 **FOR JSON** 다음과 같은 추가 옵션을 사용 하 여 절.  
+다음과 같은 추가 옵션을 사용하여 **FOR JSON** 절의 출력을 제어합니다.  
   
--   **루트**합니다. 단일 최상위 요소를 JSON 출력에 추가하려면 **ROOT** 옵션을 사용합니다. 이 옵션을 지정 하지 않으면 JSON 출력에는 루트 요소가 되어 있지 않습니다. 자세한 내용은 [ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가&#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
+-   **ROOT**. 단일 최상위 요소를 JSON 출력에 추가하려면 **ROOT** 옵션을 사용합니다. 이 옵션을 지정하지 않으면 JSON 출력에 루트 요소가 포함되지 않습니다. 자세한 내용은 [ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가&#40;SQL Server&#41;](../../relational-databases/json/add-a-root-node-to-json-output-with-the-root-option-sql-server.md).  
   
--   **INCLUDE_NULL_VALUES**합니다. JSON 출력에 null 값을 포함하려면 **INCLUDE_NULL_VALUES** 옵션을 지정합니다. 이 옵션을 지정 하지 않는 경우 출력은 쿼리 결과에서 NULL 값에 대 한 JSON 속성 포함 되지 않습니다. 자세한 내용은 참조 하세요. [INCLUDE_NULL_VALUES 옵션 &#40;를 사용 하 여 JSON 출력에서 Null 값 포함 SQL Server &#41; ](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md).   
+-   **INCLUDE_NULL_VALUES**. JSON 출력에 null 값을 포함하려면 **INCLUDE_NULL_VALUES** 옵션을 지정합니다. 이 옵션을 지정하지 않으면 쿼리 결과의 NULL 값에 대한 JSON 속성이 출력에 포함되지 않습니다. 자세한 내용은 [INCLUDE_NULL_VALUES 옵션을 사용하여 JSON 출력에 Null 값 포함&#40;SQL Server&#41;](../../relational-databases/json/include-null-values-in-json-include-null-values-option.md)을 참조하세요.   
 
--   **WITHOUT_ARRAY_WRAPPER**합니다. 기본적으로 **FOR JSON** 절의 JSON 출력을 둘러싸고 있는 대괄호를 제거하려면 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 단일 행 결과 출력으로 단일 JSON 개체를 생성 하려면이 옵션을 사용 합니다. 이 옵션을 지정 하지는 배열로 JSON 출력의 형식이-대괄호로 묶어야 즉, 합니다. 자세한 내용은 [WITHOUT_ARRAY_WRAPPER 옵션을 사용하여 JSON 출력에서 대괄호 제거&#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
+-   **WITHOUT_ARRAY_WRAPPER**. 기본적으로 **FOR JSON** 절의 JSON 출력을 둘러싸고 있는 대괄호를 제거하려면 **WITHOUT_ARRAY_WRAPPER** 옵션을 지정합니다. 이 옵션을 사용하면 단일 JSON 개체를 단일 행 결과의 출력으로 생성할 수 있습니다. 이 옵션을 지정하지 않으면 JSON 출력의 형식이 배열로 지정됩니다. 즉, 출력이 대괄호로 묶입니다. 자세한 내용은 [WITHOUT_ARRAY_WRAPPER 옵션을 사용하여 JSON 출력에서 대괄호 제거&#40;SQL Server&#41;](../../relational-databases/json/remove-square-brackets-from-json-without-array-wrapper-option.md). 
    
 ## <a name="output-of-the-for-json-clause"></a>FOR JSON 절의 출력  
 **FOR JSON** 절의 출력은 다음과 같은 특징이 있습니다.  
   
 1.  결과 집합이 단일 열을 포함합니다.
     -   작은 결과 집합은 단일 행을 포함할 수 있습니다.
-    -   큰 결과 집합은 여러 행에서 긴 JSON 문자열을 분할합니다.
-        -   기본적으로 SQL Server Management Studio (SSMS) 결과 연결 단일 행으로 출력 설정이 **표 형태로 결과**합니다. SSMS 상태 표시줄 실제 행 개수를 표시합니다.
-        -   다른 클라이언트 응용 프로그램에는 여러 행의 내용을 연결하여 길이가 긴 결과를 하나의 유효한 JSON 문자열로 다시 결합하는 코드가 필요할 수 있습니다. C# 응용 프로그램에서이 코드 예제를 보려면 [C# 클라이언트 앱에서 사용 하 여 FOR JSON 출력](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)합니다.
+    -   결과 집합이 크면 긴 JSON 문자열이 여러 행으로 분할됩니다.
+        -   기본적으로 SSMS(SQL Server Management Studio)는 출력 설정이 **표 형태로 결과 표시**인 경우 결과를 단일 행으로 연결합니다. SSMS 상태 표시줄에 실제 행 수가 표시됩니다.
+        -   다른 클라이언트 응용 프로그램에는 여러 행의 내용을 연결하여 길이가 긴 결과를 하나의 유효한 JSON 문자열로 다시 결합하는 코드가 필요할 수 있습니다. C# 응용 프로그램에서 이 코드의 예는 [C# 클라이언트 앱에서 FOR JSON 출력 사용](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)을 참조하세요.
   
      ![FOR JSON 출력의 예](../../relational-databases/json/media/forjson-example2.png "Example of FOR JSON output")  
   
 2.  결과는 JSON 개체의 배열로 서식 지정됩니다.  
   
-    -   JSON 배열의 요소 수는 (FOR JSON 절을 적용 하기 전에) SELECT 문의 결과에서 행의 수와 같습니다. 
+    -   JSON 배열의 요소 수는 SELECT 문 결과(FOR JSON 절을 적용하기 전)의 행 수와 같습니다. 
   
-    -   SELECT 문의 (FOR JSON 절을 적용 하기 전에) 결과의 각 행은 배열의 별도 JSON 개체가 됩니다.  
+    -   SELECT 문 결과(FOR JSON 절을 적용하기 전)의 각 행은 배열에서 별개의 JSON 개체가 됩니다.  
   
-    -   FOR JSON 절이 적용 됩니다) (이전 SELECT 문의 결과의 각 열에는 JSON 개체의 속성이 됩니다.  
+    -   SELECT 문 결과(FOR JSON 절을 적용하기 전)의 각 열은 JSON 개체의 속성이 됩니다.  
   
 3.  JSON 구문에 따라 열과 해당 값의 이름이 모두 이스케이프됩니다. 자세한 내용은 [FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법&#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
   
 ### <a name="example"></a>예제
-다음은 보여 주는 예제는 방법을 **FOR JSON** 절의 JSON 출력의 형식을 지정 합니다.  
+다음은 **FOR JSON** 절에서 JSON 출력의 형식을 지정하는 방법을 보여 주는 예제입니다.  
   
 **쿼리 결과**  
   
@@ -154,10 +154,10 @@ FOR JSON AUTO
 -   [FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법&#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
  **FOR JSON** 절은 특수 문자를 이스케이프하고 JSON 출력의 제어 문자를 이 항목에서 설명하는 대로 표시합니다.  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>기본 제공 SQL Server에서 JSON 지원에 대 한 자세한 정보  
-특정 솔루션에 많이 사용 사례 및 권장 사항, 참조는 [기본 제공 JSON 지원에 대 한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) SQL Server와 Microsoft 프로그램 관리자 인 Jovan popovic의 Azure SQL 데이터베이스에 있습니다.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
+많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [FOR 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)   
  [SQL Server 및 클라이언트 앱에서 FOR JSON 출력 사용&#40;SQL Server&#41;](../../relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server.md)  
   

@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 45f30fa7d1153f4ee70a9cfcb7c7e891bc15fec1
 ms.openlocfilehash: 53733118cf5fcf0b2b29544d64ebac6622425d56
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -77,10 +77,10 @@ ms.lasthandoff: 06/23/2017
 |12|올바른 로그인이지만 서버 액세스에 실패했습니다.|  
 |18|암호를 변경해야 합니다.|  
 |38, 46|사용자가 요청한 데이터베이스를 찾을 수 없습니다.|
-|102 - 111|AAD에 오류가 발생 했습니다.|
-|122 - 124|빈 사용자 이름 또는 암호로 인해 오류가 발생 했습니다.|
-|126|사용자가 요청한 데이터베이스는 존재 하지 않습니다.|
-|132 - 133|AAD에 오류가 발생 했습니다.|
+|102 - 111|AAD 오류입니다.|
+|122 - 124|빈 사용자 이름 또는 암호로 인한 오류입니다.|
+|126|사용자가 요청한 데이터베이스가 없습니다.|
+|132 - 133|AAD 오류입니다.|
   
 다른 오류 상태가 있으며 예기치 않은 내부 처리 오류를 나타냅니다.  
   

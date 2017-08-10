@@ -50,11 +50,11 @@ caps.latest.revision: 333
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
 ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 2008 R2 설치를 위한 하드웨어 및 소프트웨어 요구 사항
@@ -63,7 +63,7 @@ ms.lasthandoff: 06/23/2017
 
 [!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]에서는 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] Linux에 대한 지원 기능을 제공합니다. 자세한 내용은 [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] Linux](../../linux/sql-server-linux-overview.md)를 참조하세요. 
 
-> 이 항목은 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에 적용됩니다. 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Hardware and Software Requirements for Installing SQL Server 2014](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)합니다. 
+> 이 항목은 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에 적용됩니다. 이전 버전의 SQL Server과 관련된 콘텐츠는 [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)을 참조하세요. 
   
 **사용해보기:**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 06/23/2017
     > [!WARNING]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에서는 tempdb 파일 설치에 대해서만 로컬 디스크를 지원합니다. tempdb 데이터 및 로그 파일에 대해 지정된 경로가 모든 클러스터 노드에서 올바른지 확인하십시오. 장애 조치(failover) 중에 장애 조치 대상 노드에서 tempdb 디렉터리를 사용할 수 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 리소스가 온라인이 될 수 없습니다.  
   
-##  <a name="DC_support"></a> Installing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Domain Controller  
+##  <a name="DC_support"></a> FAT32 파일 시스템을 사용하는 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치  
  보안상의 이유로 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] 는 도메인 컨트롤러에 설치하지 않는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 도메인 컨트롤러 컴퓨터에 설치하는 것을 차단하지는 않지만 다음과 같은 제한 사항을 적용합니다.  
   
 -   도메인 컨트롤러에서는 로컬 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행할 수 없습니다.  

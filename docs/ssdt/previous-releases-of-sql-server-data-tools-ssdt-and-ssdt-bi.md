@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스 | Microsoft 문서"
+title: "SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/30/2017
 ms.prod: sql-non-specified
@@ -18,7 +18,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
 ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스

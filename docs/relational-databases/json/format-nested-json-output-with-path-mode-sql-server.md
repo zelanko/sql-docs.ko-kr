@@ -16,10 +16,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 1aa87e3d821e6d111948baa0843edf31d087d739
-ms.openlocfilehash: 3fc86f957f4ece3564d8f72558467cdf6c54c935
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 12dfc255364a410de1ad5c75f3abf38155d6d70f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/18/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server)
@@ -126,8 +126,8 @@ FOR JSON PATH
 }]
 ```  
 
-## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>기본 제공 SQL Server에서 JSON 지원에 대 한 자세한 정보  
-특정 솔루션에 많이 사용 사례 및 권장 사항, 참조는 [기본 제공 JSON 지원에 대 한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) SQL Server와 Microsoft 프로그램 관리자 인 Jovan popovic의 Azure SQL 데이터베이스에 있습니다.
+## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
+많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.
 
 ## <a name="see-also"></a>관련 항목:  
  [FOR 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-for-clause-transact-sql.md)  

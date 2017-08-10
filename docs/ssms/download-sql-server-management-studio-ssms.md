@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e14166437e035c347fec8f50a1248eeb0d0e5597
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: dcb3ee622bac9c70a235e1ff124f7041549825c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/20/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
@@ -75,15 +75,15 @@ SSMS 17.1은 SQL Server Management Studio 17.X 세대로의 첫 번째 업데이
   
 ## <a name="supported-operating-systems"></a>지원되는 운영 체제
   
-이 SSMS 릴리스는 사용 가능한 최신 서비스 팩과 함께 사용할 경우 다음과 같은 플랫폼을 지원합니다.   
-- Windows 10
-- Windows 8.1
-- Windows 8
-- Windows 7(SP1)
+이 SSMS 릴리스는 사용 가능한 최신 서비스 팩과 함께 사용할 경우 다음과 같은 64비트 플랫폼을 지원합니다.
+- Windows 10(64비트)
+- Windows 8.1(64비트)
+- Windows 8(64비트)
+- Windows 7(SP1)(64비트)
 - Windows Server 2016
-- Windows Server 2012(64비트) 
-- Windows Server 2012 R2(64비트) 
-- Windows Server 2008 R2(64비트)  
+- Windows Server 2012 R2(64비트)
+- Windows Server 2012(64비트)
+- Windows Server 2008 R2(64비트)
 
 >[!NOTE]
 >SSMS 17.X는 Windows Server 2016 이전에 출시된 Visual Studio 2015 격리 셸을 기반으로 합니다. Microsoft는 앱 호환성을 중요하게 생각하며 이미 제공된 응용 프로그램이 최신 Windows 버전에서 계속 실행되는지 확인합니다. Windows Server 2016에서 SSMS 실행 시 발생하는 문제를 최소화하려면 SSMS에 최신 업데이트가 모두 적용되어 있는지 확인합니다. Windows Server 2016에서 SSMS와 관련된 문제가 발생하는 경우 지원 센터로 문의하세요. 지원 팀에서는 문제가 SSMS, Visual Studio 또는 Windows 호환성과 관련이 있는지 확인합니다. 그런 후 해당 문제를 추가 조사를 위해 해당 팀으로 전송합니다.

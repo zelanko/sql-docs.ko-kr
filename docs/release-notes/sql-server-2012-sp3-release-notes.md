@@ -13,27 +13,27 @@ caps.latest.revision: 0
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c4cd6d86cdcfe778d6b8ba2501ad4a654470bae7
 ms.openlocfilehash: dfe0d48b613c7c4d589fb8bc5f9a5a45be6ba019
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="sql-server-2012-sp3-release-notes"></a>SQL Server 2012 SP3 릴리스 정보
-본 릴리스 정보는 설치 하거나 SQL Server 2012 서비스 팩 3의 문제를 해결 하기 전에 알아두어야 할 문제를 설명 합니다. 릴리스 정보는 설치 미디어가 아닌 온라인으로만 제공됩니다. 릴리스 정보는 문제가 발견될 때마다 정기적으로 업데이트됩니다. 목록은 o 향상 된 기능 및 수정, 참조 [SQL Server 2012 서비스 팩 3 릴리스 정보](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information) 자세한 정보에 대 한 합니다.  
+본 릴리스 정보는 SQL Server 2012 서비스 팩 3을 설치하거나 문제를 해결하기 전에 알아두어야 할 문제를 설명합니다. 릴리스 정보는 설치 미디어가 아닌 온라인으로만 제공됩니다. 릴리스 정보는 문제가 발견될 때마다 정기적으로 업데이트됩니다. 개선 사항 및 수정 목록에 대한 자세한 내용은 [SQL Server 2012 Service Pack 3 release information](http://support.microsoft.com/help/3072779/sql-server-2012-service-pack-3-release-information)(SQL Server 2012 서비스 팩 3 릴리스 정보)을 참조하세요.  
   
 ## <a name="choose-the-correct-file-to-download-and-install"></a>다운로드 및 설치할 올바른 파일 선택  
 아래 표에서 현재 설치된 버전에 따라 다운로드할 파일의 위치와 이름을 확인하세요. 다운로드 페이지에 시스템 요구 사항 및 기본 설치 지침이 나와 있습니다.  
 
 ##<a name="download-pages"></a>다운로드 페이지
-다음 링크의 주를 SQL Server 2012 s p 3에 대 한 패키지를 다운로드 합니다.
-- [SQL Server 2012 s p 3](http://go.microsoft.com/fwlink/?linkid=615935)
+다음은 SQL Server 2012 SP3의 주 다운로드 패키지에 대한 링크입니다.
+- [SQL Server 2012 SP3](http://go.microsoft.com/fwlink/?linkid=615935)
 - [SQL Server 2012 SP3 Express](http://go.microsoft.com/fwlink/?linkid=692144)
-- [Microsoft SQL Server 2012 s p 3 기능 팩](http://go.microsoft.com/fwlink/?linkid=615941)
+- [Microsoft SQL Server 2012 SP3 Feature Pack](http://go.microsoft.com/fwlink/?linkid=615941)
 
-현재 설치 된 버전에 따라 다운로드할 파일의 이름과 위치를 식별 하는 정보 보다 자세한의 "다운로드 하는 올바른 파일 선택" 섹션을 참조 [SQL Server 2012 서비스 팩 3 릴리스 정보](https://support.microsoft.com/en-us/help/3072779/sql-server-2012-service-pack-3-release-information)합니다.
+현재 설치된 버전에 따라 다운로드할 파일의 이름과 위치를 확인하기 위한 자세한 내용은 [SQL Server 2012 Service Pack 3 release information](https://support.microsoft.com/en-us/help/3072779/sql-server-2012-service-pack-3-release-information)(SQL Server 2012 서비스 팩 3 릴리스 정보)에서 “Select the correct file to download”(다운로드할 올바른 파일 선택) 섹션을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 - [SQL Server 2012 서비스 업데이트 설치](https://msdn.microsoft.com/en-us/library/hh479746(v=sql.110).aspx)
-- [SQL Server 버전 및 에디션 확인 방법](https://support.microsoft.com/en-us/help/321185)
+- [How to identify your SQL Server version and edition ](https://support.microsoft.com/en-us/help/321185)(SQL Server 버전 및 에디션 확인 방법)

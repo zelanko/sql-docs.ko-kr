@@ -1,21 +1,21 @@
 ## <a name="prerequisites"></a>필수 구성 요소
 
-전에 가용성 그룹을 만들 필요가 있습니다.
+가용성 그룹을 만들려면 먼저 다음을 수행해야 합니다.
 
-- 가용성 복제본을 호스팅하는 모든 서버에서 통신할 수 있도록 사용자 환경 설정
+- 가용성 복제본을 호스트하는 모든 서버가 통신할 수 있도록 환경 설정
 - SQL Server 설치
 
 >[!NOTE]
->Linux 클러스터에서 관리 되는 클러스터 리소스로 추가 하기 전에 가용성 그룹을 만들어야 합니다. 이 문서에는 가용성 그룹을 만드는 예제를 제공 합니다. 배포에 대 한 구체적인 지침 클러스터를 만들고를 클러스터 리소스로 가용성 그룹을 추가 하는 링크를 참조 [다음 단계](#next-steps)합니다.
+>Linux에서는 가용성 그룹을 먼저 만들어야만 클러스터에서 관리할 클러스터 리소스로 추가할 수 있습니다. 이 문서에는 가용성 그룹을 만드는 예제가 나옵니다. 클러스터를 만들고 가용성 그룹을 클러스터 리소스로 추가하는 배포 관련 지침은 [다음 단계](#next-steps)에 있는 링크를 참조하세요.
 
-1. **각 호스트에 대 한 컴퓨터 이름을 업데이트합니다**
+1. **각 호스트의 컴퓨터 이름 업데이트**
 
-   각 SQL Server 이름 이어야 합니다.
+   각 SQL Server 이름은 다음과 같아야 합니다.
    
-   - 15 자 이하의
+   - 15자 이하
    - 네트워크 내에서 고유
    
-   컴퓨터 이름을 설정 하려면 편집 `/etc/hostname`합니다. 다음 스크립트를 사용 하면 편집할 `/etc/hostname` 와 `vi`합니다.
+   컴퓨터 이름을 설정하려면 `/etc/hostname`을 편집합니다. 다음 스크립트를 사용하면 `/etc/hostname`을 `vi`로 편집할 수 있습니다.
 
    ```bash
    sudo vi /etc/hostname
@@ -24,10 +24,10 @@
 1. **호스트 파일 구성**
 
 >[!NOTE]
->호스트 이름에 등록 된 DNS 서버에 해당 IP를 경우 아래 단계를 수행할 필요가 없습니다. 가용성 그룹 구성의 일부로는 모든 노드 (호스트 이름을 해당 IP 주소와 함께 응답 해야을 ping) 서로 통신할 수 있는지 확인 합니다. 또한 해당 /etc/hosts 파일에 포함 된 노드의 호스트 이름으로 로컬 호스트 IP 주소 127.0.0.1을 매핑하는 레코드를 확인 합니다.
+>호스트 이름이 DNS 서버에 해당 IP로 등록된 경우 아래 단계를 수행할 필요가 없습니다. 가용성 그룹 구성에 포함할 모든 노드가 서로 통신할 수 있는지 확인합니다(호스트 이름을 ping하면 해당 IP 주소로 회신해야 함). 또 /etc/hosts 파일에 localhost IP 주소 127.0.0.1을 노드의 호스트 이름에 매핑하는 레코드가 포함되어 있지 않아야 합니다.
 
 
-   모든 서버에 호스트 파일의 IP 주소 및 가용성 그룹에 참여할 모든 서버 이름을 포함 합니다. 
+   모든 서버의 호스트 파일에는 가용성 그룹에 참여할 모든 서버의 IP 주소 및 이름이 포함됩니다. 
 
    다음 명령은 현재 서버의 IP 주소를 반환합니다.
 
@@ -35,7 +35,7 @@
    sudo ip addr show
    ```
 
-   업데이트 `/etc/hosts`합니다. 다음 스크립트를 사용 하면 편집할 `/etc/hosts` 와 `vi`합니다.
+   `/etc/hosts`를 업데이트합니다. 다음 스크립트를 사용하면 `/etc/hosts`를 `vi`로 편집할 수 있습니다.
 
    ```bash
    sudo vi /etc/hosts
@@ -54,7 +54,7 @@
 
 ### <a name="install-sql-server"></a>SQL Server 설치
 
-SQL Server를 설치 합니다. 다음 링크는 다양 한 분포에 대 한 SQL Server 설치 지침을 가리킵니다. 
+SQL Server를 설치합니다. 다음 링크는 다양한 배포에 대한 SQL Server 설치 지침으로 연결됩니다. 
 
 - [Red Hat Enterprise Linux](../linux/quickstart-install-connect-red-hat.md)
 
@@ -62,7 +62,7 @@ SQL Server를 설치 합니다. 다음 링크는 다양 한 분포에 대 한 SQ
 
 - [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
 
-## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Always On 가용성 그룹을 사용 하도록 설정 하 고 sql server를 다시 시작
+## <a name="enable-always-on-availability-groups-and-restart-sqlserver"></a>Always On 가용성 그룹을 사용하도록 설정하고 sqlserver 다시 시작
 
 SQL Server 인스턴스를 호스트하는 각 노드에서 Always On 가용성 그룹을 사용하도록 설정한 다음, `mssql-server`를 다시 시작합니다.  다음 스크립트를 실행합니다.
 
@@ -71,7 +71,7 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-##  <a name="enable-alwaysonhealth-event-session"></a>AlwaysOn_health 이벤트 세션을 사용 하도록 설정 
+##  <a name="enable-alwaysonhealth-event-session"></a>AlwaysOn_health 이벤트 세션을 사용하도록 설정 
 
 Always On 가용성 그룹 확장 이벤트를 사용하도록 설정하여 가용성 그룹 문제를 해결할 때 근본적인 원인 진단에 도움을 줄 수도 있습니다. SQL Server의 각 인스턴스에서 다음 명령을 실행합니다. 
 
@@ -80,11 +80,11 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-이 XE 세션에 대 한 자세한 내용은 참조 [항상에서 확장 이벤트](http://msdn.microsoft.com/library/dn135324.aspx)합니다.
+이 XE 세션에 대한 자세한 내용은 [Always On Extended Events](http://msdn.microsoft.com/library/dn135324.aspx)(Always On 확장 이벤트)를 참조하세요.
 
-## <a name="create-db-mirroring-endpoint-user"></a>끝점 사용자 미러링 db 만들기
+## <a name="create-db-mirroring-endpoint-user"></a>db 미러링 끝점 사용자 만들기
 
-다음 TRANSACT-SQL 스크립트 이라는 로그인을 만듭니다 `dbm_login`, 및 라는 사용자 `dbm_user`합니다. 강력한 암호를 가진 스크립트를 업데이트 합니다. 모든 SQL Server 인스턴스에서 다음 명령을 실행하여 데이터베이스 미러링 끝점 사용자를 만듭니다.
+다음 Transact-SQL 스크립트는 `dbm_login`이라는 로그인과 `dbm_user`라는 사용자를 만듭니다. 강력한 암호로 스크립트를 업데이트합니다. 모든 SQL Server 인스턴스에서 다음 명령을 실행하여 데이터베이스 미러링 끝점 사용자를 만듭니다.
 
 ```Transact-SQL
 CREATE LOGIN dbm_login WITH PASSWORD = '**<1Sample_Strong_Password!@#>**';
@@ -95,7 +95,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 Linux의 SQL Server 서비스는 인증서를 사용하여 미러링 끝점 간의 통신을 인증합니다. 
 
-다음 TRANSACT-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음 인증서를 백업 하 고 개인 키가 있는 파일을 보호 합니다. 강력한 암호를 가진 스크립트를 업데이트 합니다. 기본 SQL Server 인스턴스에 연결하고 다음 Transact-SQL을 실행하여 인증서를 만듭니다.
+다음 Transact-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음 인증서를 백업하고 개인 키로 파일을 보호합니다. 강력한 암호로 스크립트를 업데이트합니다. 기본 SQL Server 인스턴스에 연결하고 다음 Transact-SQL을 실행하여 인증서를 만듭니다.
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -108,9 +108,9 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-이 시점에서 기본 SQL Server 복제 데이터베이스에 인증서가에서 `/var/opt/mssql/data/dbm_certificate.cer` 및 개인 키 at `var/opt/mssql/data/dbm_certificate.pvk`합니다. 가용성 복제본을 호스팅하는 모든 서버에서 같은 위치에이 두 파일을 복사 합니다. Mssql 사용자를 사용 하거나 이러한 파일에 액세스 하려면 mssql 사용자에 게 권한을 부여 합니다. 
+이제 주 SQL Server 복제본은 `/var/opt/mssql/data/dbm_certificate.cer`에 인증서, `var/opt/mssql/data/dbm_certificate.pvk`에 개인 키가 있습니다. 이러한 두 파일을 모든 서버에서 가용성 복제본을 호스트할 동일한 위치로 복사합니다. mssql 사용자를 사용하거나 mssql 사용자에게 이러한 파일에 액세스할 수 있는 권한을 부여합니다. 
 
-예를 들어 원본 서버에서 다음 명령을 대상 컴퓨터에 파일 복사합니다. 대체는  **<node2>**  는 복제본을 호스팅하는 SQL Server 인스턴스 이름 사용 하 여 값입니다. 
+예를 들어 원본 서버에서 다음 명령은 파일을 대상 컴퓨터에 복사합니다.  **<node2>**  값을 복제본을 호스트할 SQL Server 인스턴스의 이름으로 바꿉니다. 
 
 ```bash
 cd /var/opt/mssql/data
@@ -126,7 +126,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## <a name="create-the-certificate-on-secondary-servers"></a>보조 서버에서 인증서 만들기
 
-다음 TRANSACT-SQL 스크립트 기본 SQL Server 복제 데이터베이스에 만든 백업에서 마스터 키와 인증서를 만듭니다. 명령에는 인증서에 액세스할 사용자 권한을 부여 합니다. 강력한 암호를 가진 스크립트를 업데이트 합니다. 해독 암호는 이전 단계에서 (.pvk) 파일을 만드는 데 사용한 암호와 동일 합니다. 인증서를 만드는 모든 보조 서버에서 다음 스크립트를 실행 합니다.
+다음 Transact-SQL 스크립트는 주 SQL Server 복제본에 대해 만든 백업을 사용하여 마스터 키와 인증서를 만듭니다. 이 명령은 사용자에게 인증서에 액세스할 권한도 부여합니다. 강력한 암호로 스크립트를 업데이트합니다. 해독 암호는 이전 단계에서 .pvk 파일을 만들 때 사용한 암호와 동일합니다. 모든 보조 서버에서 다음 스크립트를 실행하여 인증서를 만듭니다.
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -139,16 +139,16 @@ CREATE CERTIFICATE dbm_certificate
             );
 ```
 
-## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>데이터베이스 미러링 끝점에서 모든 복제본 만들기
+## <a name="create-the-database-mirroring-endpoints-on-all-replicas"></a>모든 복제본에서 데이터베이스 미러링 끝점 만들기
 
 데이터베이스 미러링 끝점은 TCP(전송 제어 프로토콜)를 사용하여 데이터베이스 미러링 세션에 참여하거나 가용성 복제본을 호스팅하는 서버 인스턴스 간에 메시지를 보내고 받습니다. 데이터베이스 미러링 끝점은 고유의 TCP 포트 번호에서 수신합니다. 
 
-다음 TRANSACT-SQL 라는 수신 대기 끝점을 만듭니다 `Hadr_endpoint` 가용성 그룹에 대 한 합니다. 끝점을 시작한 연결 권한이 만든 사용자에 게 제공 합니다. 스크립트를 실행 하기 전에 사이의 값을 대체 `**< ... >**`합니다.
+다음 Transact-SQL은 가용성 그룹에 대해 수신하는 끝점 `Hadr_endpoint`를 만듭니다. 이 스크립트는 끝점을 시작하고 만든 사용자에게 연결 권한을 부여합니다. 스크립트를 실행하기 전에 `**< ... >**` 사이의 값을 바꿉니다.
 
 >[!NOTE]
->이 릴리스에 대 한 수신기 IP에 대 한 다른 IP 주소를 사용 하지 마십시오. 이 문제에 대 한 수정 작업 하지만 지금은 사용 가능한 값은 '0.0.0.0'.
+>이 릴리스의 경우 수신기 IP에 다른 IP 주소를 사용하지 마세요. 이 문제에 대한 수정을 작업하는 중이지만 현재 허용되는 값은 '0.0.0.0'뿐입니다.
 
-모든 SQL Server 인스턴스에서 사용자 환경에 대 한 다음 TRANSACT-SQL을 업데이트 합니다. 
+모든 SQL Server 인스턴스에서 환경에 대한 다음 Transact-SQL을 업데이트합니다. 
 
 ```Transact-SQL
 CREATE ENDPOINT [Hadr_endpoint]
@@ -163,9 +163,9 @@ GRANT CONNECT ON ENDPOINT::[Hadr_endpoint] TO [dbm_login];
 ```
 
 >[!IMPORTANT]
->방화벽에서 TCP 포트에 대 한 수신기 포트가 열려 있어야 합니다.
+>방화벽의 TCP 포트를 수신기 포트용으로 열어 두어야 합니다.
 
 >[!IMPORTANT]
 >SQL Server 2017 릴리스의 경우 데이터베이스 미러링 끝점에 지원되는 인증 방법은 `CERTIFICATE`뿐입니다. `WINDOWS` 옵션은 향후 릴리스에서 사용할 수 있습니다.
 
-자세한 내용은 참조 [데이터베이스 미러링 끝점 (SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)합니다.
+자세한 내용은 [데이터베이스 미러링 끝점(SQL Server)](http://msdn.microsoft.com/library/ms179511.aspx)을 참조하세요.

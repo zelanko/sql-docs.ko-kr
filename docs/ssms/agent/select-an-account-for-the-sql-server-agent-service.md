@@ -25,11 +25,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 43841807dce9cb747c2c5b182174f83f0540b030
 ms.openlocfilehash: 3050dc3fc207f2154a70c68770ca266d2d47ce92
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/23/2017
   
     -   프로세스의 메모리 할당량 조정 권한(SeIncreaseQuotaPrivilege)  
   
-    -   이 컴퓨터 (SeNetworkLogonRight) 네트워크에서 액세스할 수 있는 권한이  
+    -   네트워크에서 이 컴퓨터에 액세스할 수 있는 권한(SeNetworkLogonRight)  
   
 > [!NOTE]  
 > 프록시 지원에 필요한 권한이 계정에 없는 경우 **sysadmin** 고정 서버 역할의 멤버만이 작업을 만들 수 있습니다.  
@@ -112,7 +112,7 @@ ms.lasthandoff: 06/23/2017
 ## <a name="common-tasks"></a>일반 태스크  
 **SQL Server 에이전트 서비스의 시작 계정을 지정하려면**  
   
--   [SQL Server 에이전트의 서비스 시작 계정 설정&amp;#40;SQL Server 구성 관리자&amp;#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
+-   [SQL Server 에이전트의 서비스 시작 계정 설정&#40;SQL Server 구성 관리자&#41;](../../ssms/agent/set-service-startup-account-sql-server-agent-sql-server-configuration-manager.md)  
   
 **SQL Server 에이전트의 메일 프로필을 지정하려면**  
   

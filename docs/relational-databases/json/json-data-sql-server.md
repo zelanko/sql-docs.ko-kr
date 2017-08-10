@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 439b568fb268cdc6e6a817f36ce38aeaeac11fab
-ms.openlocfilehash: e2a427682aebeeccc82a1b7f6521399b8a0b6fe8
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: fed02f20beb9bd84dfd5ac2add3c66daf207e07c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="json-data-sql-server"></a>JSON 데이터(SQL Server)
@@ -70,7 +70,7 @@ JSON은 최신 웹 및 모바일 응용 프로그램에서 데이터를 교환�
 
 **예제**
   
- 다음 예제에서는 쿼리에서 사용 하 여 관계형 및 JSON 데이터 (라는 열에 저장 된 `jsonCol`) 테이블에서:  
+ 다음 예제에서 쿼리는 테이블의 관계형 및 JSON 데이터(`jsonCol` 열에 저장됨)를 사용합니다.  
   
 ```sql  
 SELECT Name,Surname,
@@ -321,7 +321,7 @@ FROM OPENJSON (@jsonVariable, N'$.Orders.OrdersArray')
   
 ### <a name="microsoft-blog-posts"></a>Microsoft 블로그 게시물  
   
--   특정 솔루션에 많이 사용 사례 및 권장 사항, 참조는 [기본 제공 JSON 지원에 대 한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/) SQL Server와 Microsoft 프로그램 관리자 인 Jovan popovic의 Azure SQL 데이터베이스에 있습니다.  
+-   많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.  
   
 ### <a name="reference-topics"></a>참조 항목  
   

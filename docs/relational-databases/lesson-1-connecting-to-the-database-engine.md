@@ -14,17 +14,17 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 87f75b288cdf7da9097350a117cbd2bf94b69758
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [1 단원: 데이터베이스 엔진에 연결](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [1단원: 데이터베이스 엔진에 연결](https://msdn.microsoft.com/en-US/library/ms345332(SQL.120).aspx)을 참조하세요.
 
 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]을 설치할 때 설치되는 도구는 버전 및 설치 선택 사항에 따라 달라집니다. 이 단원에서는 주 도구를 검토하고 이러한 도구에 연결하는 방법을 보여 주며 보다 많은 사용자에게 권한을 부여하는 기본 기능을 수행하는 방법을 보여 줍니다.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 06/23/2017
   
 ##### <a name="to-start-sql-server-configuration-manager"></a>SQL Server 구성 관리자를 시작하려면  
   
-- 현재 버전의 Windows에서는 **시작** 페이지에 **구성 관리자**를 입력하고 **SQL Server *버전* 구성 관리자**를 클릭합니다.   
+- 현재 버전의 Windows에서는 **시작** 페이지에 **구성 관리자**을 차례로 가리킨 다음 **SQL Server *version* 구성 관리자**에서 무료로 다운로드할 수 있습니다.   
 -   이전 버전의 Windows를 사용하는 경우 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
 ## <a name="connect"></a>Management Studio로 연결  

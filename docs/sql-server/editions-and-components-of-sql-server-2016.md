@@ -42,14 +42,14 @@ ms.translationtype: HT
 ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
 ms.openlocfilehash: 97080f5d124b25b12b1f9f019e42753c143174e7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/17/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016의 버전 및 지원하는 기능
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-이 항목에서는 SQL Server 버전에서 지 원하는 기능에 대 한 세부 정보를 제공 합니다.  이 이번에 변경 내용이 없습니다 SQL Server 2017에 대 한 버전에서 지 원하는 기능을 합니다.  
+이 항목에서는 SQL Server 버전에서 지원하는 기능에 대해 자세히 설명합니다.  지금은 SQL Server 2017의 버전에서 지원하는 기능에 대해 변경된 내용이 없습니다.  
   
 설치 요구 사항은 사용자의 응용 프로그램 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
 
@@ -61,9 +61,9 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
 
-### <a name="try-sql-server"></a>SQL Server 보세요!    
+### <a name="try-sql-server"></a>SQL Server를 사용해 보세요.    
     
-> [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[Download SQL Server 2016  from the Evaluation Center](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**(평가 센터에서 SQL Server 2016 다운로드)    
+> [![평가 센터에서 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) **[평가 센터에서 SQL Server 2016 다운로드](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
 > ![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png) **[Spin up a Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/Microsoft.SQL2016SP1-WS2016?tab=Overview?wt.mc_id=sqL16_vm)(SQL Server 2016이 이미 설치된 가상 컴퓨터 실행)**   
   
@@ -86,7 +86,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-clientserver-applications"></a>클라이언트/서버 응용 프로그램으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 직접 연결되는 클라이언트/서버 응용 프로그램 실행 컴퓨터에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]클라이언트 구성 요소만 설치하면 됩니다. 데이터베이스 서버의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 관리하거나 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 응용 프로그램을 개발하려는 경우에는 클라이언트 구성 요소를 설치하는 것도 좋은 방법입니다.  
   
- 클라이언트 도구 옵션은 이전 버전과의 호환성 구성 요소, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , 연결 구성 요소, 관리 도구, 소프트웨어 개발 키트 및 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]온라인 설명서 구성 요소와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 설치합니다. 자세한 내용은 참조 [SQL Server 설치](../database-engine/install-windows/install-sql-server.md)합니다.  
+ 클라이언트 도구 옵션은 이전 버전과의 호환성 구성 요소, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , 연결 구성 요소, 관리 도구, 소프트웨어 개발 키트 및 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]온라인 설명서 구성 요소와 같은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능을 설치합니다. 자세한 내용은 [Install SQL Server](../database-engine/install-windows/install-sql-server.md)(SQL Server 설치)를 참조하세요.  
   
 ## <a name="deciding-among-includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소 결정  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치 마법사의 기능 선택 페이지를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]설치에 포함할 구성 요소를 선택할 수 있습니다. 트리에 있는 기능은 모두 기본적으로 선택되지 않습니다.  
@@ -120,7 +120,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표에서 SQL Server Enterprise Edition에 대해 나열된 기능을 참조하세요.
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1용 Developer Edition에 추가된 기능 목록은 [SQL Server 2016 SP1 버전](https://aka.ms/uw6cw4)을 참조하세요.  
 
-디벨로퍼 버전을 계속 지원에 대 한 1 클라이언트만 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)합니다. 
+Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)에 대해 클라이언트 1개만 계속 지원합니다. 
   
 ##  <a name="Cross-BoxScaleLimits"></a> Scale Limits  
   
@@ -128,9 +128,9 @@ Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표�
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|
 |단일 인스턴스에서 사용되는 최대 계산 용량 - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨| 
 |단일 인스턴스에서 사용되는 최대 계산 용량 - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스별 최대 버퍼 풀 메모리|운영 체제가 지원하는 최대 크기|128GB|64GB|1410MB|1410MB|
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스별 최대 Columnstore 세그먼트 캐시 메모리|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
-|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 데이터베이스별 최대 메모리 최적화 데이터 크기|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스당 최대 버퍼 풀 메모리|운영 체제가 지원하는 최대 크기|128GB|64GB|1410MB|1410MB|
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스당 최대 Columnstore 세그먼트 캐시 메모리|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
+|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 데이터베이스당 메모리 액세스에 최적화된 데이터의 최대 크기|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
 |[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스당 최대 메모리 사용량|운영 체제가 지원하는 최대 크기|테이블 형식: 16GB<br /><br /> MOLAP: 64GB|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 인스턴스당 최대 메모리 사용량|운영 체제가 지원하는 최대 크기|64GB|64GB|4GB|해당 사항 없음|
 |최대 관계형 데이터베이스 크기|524PB|524PB|524PB|10GB|10GB|  
@@ -145,7 +145,7 @@ Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표�
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
 |Server Core 지원 <sup>1</sup>|예|예|예|예|예|  
 |로그 전달|예|예|예|아니오|아니요|  
-|데이터베이스 미러링|예|예<br /><br /> 전체 보안만|미러링 모니터만|미러링 모니터만|미러링 모니터만| 
+|데이터베이스 미러링|예|예<br /><br /> Full 보안만|미러링 모니터만|미러링 모니터만|미러링 모니터만| 
 |백업 압축|예|예|아니오|아니오|아니요| 
 |데이터베이스 스냅숏|예|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup>|예 <sup>3</sup>|
 |Always On 장애 조치(failover) 클러스터 인스턴스|예<br /><br /> 운영 체제가 지원하는 최대 크기의 노드 수|예<br /><br /> 노드 2개 지원|아니요|아니오|아니요|  
@@ -161,7 +161,7 @@ Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표�
 |암호화된 백업|예|예|아니오|아니오|아니요|
 |Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니오|아니요|  
   
- <sup>1</sup> Server Core에 SQL Server를 설치 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Server Core에 SQL Server 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)합니다. 
+ <sup>1</sup> Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md)(Server Core에 SQL Server 설치)를 참조하세요. 
 
 <sup>2</sup> 기본 가용성 그룹에 대한 자세한 내용은 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.  
 
@@ -179,7 +179,7 @@ Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표�
 |테이블 및 인덱스 분할|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|  
 |데이터 압축|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|
 |리소스 관리자|예|아니오|아니오|아니오|아니요|  
-|분할된 테이블 병렬 처리(partitioned table parallelism)|예|아니오|아니오|아니오|아니요|
+|분할된 테이블 병렬 처리|예|아니오|아니오|아니오|아니요|
 |여러 Filestream 컨테이너|예|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|예 <sup>2</sup>|
 |NUMA 인식 및 큰 페이지 메모리 및 버퍼 배열 할당|예|아니오|아니오|아니오|아니요|
 |버퍼 풀 확장|예|예|아니오|아니오|아니요|
@@ -311,7 +311,7 @@ Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표�
 [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] 버전에서 지원되는 SSIS(Integration Services) 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Integration Services 기능](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md)을 참조하세요.
 
 ##  <a name="MDS"></a> Master Data Services  
- 에 대 한 내용은 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 기능과 데이터 품질 서비스의 버전에서 지 원하는 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Master Data Services 및 데이터 품질 서비스에서 지 원하는 기능 SQL Server 버전](../master-data-services/master-data-services-and-data-quality-services-features-support.md)합니다. 
+ [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원되는 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 Data Quality Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Master Data Services 및 Data Quality Services 기능](../master-data-services/master-data-services-and-data-quality-services-features-support.md)을 참조하세요. 
 
   
 ##  <a name="DW"></a> Data Warehouse  
@@ -329,31 +329,31 @@ Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표�
 <sup>1</sup> [!INCLUDE[ssSQL15_md](../includes/sssql15-md.md)] SP1에 적용됩니다.  
 ##  <a name="SSAS"></a> Analysis Services  
   
-버전에서 지 원하는 Analysis Services 기능에 대 한 내용은 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Analysis Services에서 지 원하는 기능 SQL Server 버전](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다. 
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요. 
   
 ##  <a name="BIMD"></a> BI Semantic Model (Multi Dimensional)  
   
-버전에서 지 원하는 Analysis Services 기능에 대 한 내용은 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Analysis Services에서 지 원하는 기능 SQL Server 버전](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다.
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
    
 ##  <a name="BIT"></a> BI Semantic Model (Tabular)  
   
-버전에서 지 원하는 Analysis Services 기능에 대 한 내용은 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Analysis Services에서 지 원하는 기능 SQL Server 버전](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다.
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 Analysis Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
 ##  <a name="PPSP"></a> Power Pivot for SharePoint  
   
-버전에서 지 원하는 SharePoint 기능에 대 한 파워 피벗에 대 한 내용은 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Analysis Services에서 지 원하는 기능 SQL Server 버전](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다.
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 SharePoint용 Power Pivot 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
 ##  <a name="DM"></a> Data Mining  
   
-버전에서 지원 되는 데이터 마이닝 기능에 대 한 내용은 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Analysis Services에서 지 원하는 기능 SQL Server 버전](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다.
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 데이터 마이닝 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
-##  <a name="SSRS"></a> Reporting Services  
+##  <a name="SSRS"></a> Reporting  Services  
   
-버전에서 지원 되는 Reporting Services 기능에 대 한 내용은 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Reporting Services에서 지 원하는 기능 SQL Server 버전](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다.
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원되는 Reporting Services 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
 
-##  <a name="BIC"></a> Business Intelligence Clients  
+##  <a name="BIC"></a> Business Intelligence 클라이언트  
 
-버전에서 지원 되는 비즈니스 인텔리전스 클라이언트 기능에 대 한 내용은 [!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)], 참조 [Analysis Services에서 지 원하는 기능 SQL Server 버전](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 또는 [Reporting Services에서 지 원하는 기능 SQL Server 버전](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다.
+[!INCLUDE[ssNoVersion_md](../includes/ssNoVersion_md.md)] 버전에서 지원하는 비즈니스 인텔리전스 클라이언트 기능에 대한 자세한 내용은 [SQL Server 버전에서 지원하는 Analysis Services 기능](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 또는 [SQL Server 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.
   
 ##  <a name="SLS"></a> Spatial and Location Services  
   
@@ -381,7 +381,7 @@ Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표�
 > [![SSMS 다운로드](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) 최신 버전의 **[SQL Server Management Studio 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)**    
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server에 대 한 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
+ [SQL Server에 대한 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
  [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  
   

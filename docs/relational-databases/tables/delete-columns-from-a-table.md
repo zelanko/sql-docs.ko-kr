@@ -19,11 +19,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 621185759462020bca20985c3133c93814a1f333
 ms.openlocfilehash: ef0c4b8b66af5dfc46c836fc8c18734609b1301a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
@@ -66,9 +66,9 @@ ms.lasthandoff: 06/23/2017
   
 1.  **개체 탐색기**에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스에 연결합니다.  
   
-2.  **개체 탐색기**를 테이블 열을 삭제 하려고 하 고 있는 열 이름을 표시 하도록 확장을 찾습니다. 
+2.  **개체 탐색기**에서 열을 삭제할 테이블을 찾고 확장하여 열 이름을 표시합니다. 
 
-3.  삭제 하 고 선택 하려는 열을 마우스 오른쪽 단추로 클릭 **삭제**합니다.  
+3.  삭제할 열을 마우스 오른쪽 단추로 클릭하고 **삭제**를 선택합니다.  
   
 3.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   

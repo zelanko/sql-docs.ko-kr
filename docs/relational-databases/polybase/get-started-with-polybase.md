@@ -28,13 +28,13 @@ ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/14/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 시작하기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 SQL Server 인스턴스에 PolyBase를 실행 하는 방법에 대 한 기본 사항입니다.
+  이 항목에서는 SQL Server 인스턴스에서 PolyBase 실행에 대한 기본 사항을 설명합니다.
   
  아래 단계를 실행하면 다음이 수행됩니다.  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 07/14/2017
 -   PolyBase 개체를 사용하는 쿼리 예제  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
- 인스턴스 [SQL Server (64 비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) 다음:  
+ 다음이 포함된 [SQL Server(64비트)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)의 인스턴스  
   
 -   Microsoft .NET Framework 4.5  
   
@@ -64,13 +64,13 @@ ms.lasthandoff: 07/14/2017
   
 -   Hadoop 클러스터. 지원되는 버전은 [PolyBase 구성](#supported)을 참조하세요.  
 
--   Azure Blob 저장소
+-   Azure BLOB 저장소
 
 > [!NOTE]
->   Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce가 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소 없이 쿼리가 실패 합니다. 
+>   Hadoop에 대해 계산 푸시 다운 기능을 사용하려면 대상 Hadoop 클러스터에 HDFS의 핵심 구성 요소가 있고 Jobhistory 서버에서 Yarn/MapReduce가 사용하도록 설정되어 있는지 확인해야 합니다. PolyBase는 MapReduce를 통해 푸시다운 쿼리를 제출하고 JobHistory 서버에서 상태를 가져옵니다. 두 구성 요소가 없으면 쿼리가 실패합니다. 
 
 ## <a name="install-polybase"></a>PolyBase 설치  
- PolyBase를 설치 하지 않은 경우 참조 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)합니다.  
+ PolyBase를 설치하지 않은 경우 [PolyBase 설치](../../relational-databases/polybase/polybase-installation.md)를 참조하세요.  
   
 ### <a name="how-to-confirm-installation"></a>설치 확인 방법  
  설치가 끝난 후 PolyBase가 제대로 설치되었는지 확인하려면 다음 명령을 실행합니다. PolyBase가 설치된 경우 1을 반환합니다. 그렇지 않으면 0이 반환됩니다.  
@@ -79,18 +79,18 @@ ms.lasthandoff: 07/14/2017
 SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;  
 ```  
   
-##  <a name="supported"></a> Configure PolyBase  
- 를 설치한 후 사용자의 Hadoop 버전을 사용 하도록 SQL Server 또는 Azure Blob 저장소를 구성 해야 합니다. PolyBase는 두 명의 Hadoop 공급자 인 Hortonworks Data Platform (HDP) 및 CDH Cloudera Distributed Hadoop ()를 지원합니다.  지원되는 외부 데이터 원본은 다음과 같습니다.  
+##  <a name="supported"></a> PolyBase 구성  
+ 설치한 후 Hadoop 버전 또는 Azure Blob Storage를 사용하도록 SQL Server를 구성해야 합니다. PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 공급자를 지원합니다.  지원되는 외부 데이터 원본은 다음과 같습니다.  
   
 -   Linux/Windows Server에서 Hortonworks HDP 1.3  
   
--   Linux에서 Hortonworks HDP 2.1-2.6
+-   Linux에서 Hortonworks HDP 2.1 - 2.6
 
 -   Windows Server에서 Hortonworks HDP 2.1 - 2.3  
   
 -   Linux에서 Cloudera CDH 4.3  
   
--   Cloudera CDH 5.1 – 5.5, linux 5.9 5.11  
+-   Linux에서 Cloudera CDH 5.1 – 5.5, 5.9 - 5.11  
   
 -   Azure BLOB 저장소  
   
@@ -119,7 +119,7 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
  ![services.msc에서 PolyBase 서비스 중지 및 시작](../../relational-databases/polybase/media/polybase-stop-start.png "stop and start PolyBase services in services.msc")  
   
 ### <a name="pushdown-configuration"></a>푸시다운 구성  
- 쿼리 성능을 향상시키려면 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
+ 쿼리 성능을 향상하려면 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
   
 1.  SQL Server 설치 경로에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
   

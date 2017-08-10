@@ -15,17 +15,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 1829f2a3b1d053173145df421ce7d8d35a0e29e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="implementing-a-case-expression-in-a-natively-compiled-stored-procedure"></a>고유하게 컴파일된 저장 프로시저에서 CASE 식 구현
 [!INCLUDE[tsql-appliesto-ssvnxt-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-  CASE 식은 고유 하 게 컴파일된 저장된 프로시저에서 사용할 수 있습니다. 다음 예제 쿼리에서 CASE 식을 사용 하는 방법을 보여 줍니다. CASE 식은 고유 하 게 컴파일된 모듈에 대 한 설명 된 해결 방법은 더 이상 필요 합니다.
+  CASE 식은 고유하게 컴파일된 저장 프로시저에서 지원되지 않습니다. 다음 예제에서는 쿼리에서 CASE 식을 사용하는 방법을 보여 줍니다. 고유하게 컴파일된 모듈의 CASE 식에 대해 설명된 해결 방법은 더 이상 필요하지 않습니다.
 
 ``` 
 -- Query using a CASE expression in a natively compiled stored procedure.

@@ -16,11 +16,11 @@ caps.latest.revision: 21
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
 ms.openlocfilehash: 0218298a95d1e7df242b3ca7cbae657effead719
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
@@ -166,12 +166,11 @@ ms.lasthandoff: 06/23/2017
  주요 자격 증명 모음에 있는 비대칭 키는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 키를 보호하는 데 사용됩니다. 비대칭 키의 공개 부분만 자격 증명 모음을 떠나고 비공개 부분은 자격 증명 모음에서 내보내지 않습니다. 비대칭 키를 사용하는 모든 암호화 작업은 Azure 주요 자격 증명 모음 서비스 내에서 수행되며, 서비스의 보안에 의해 보호됩니다.  
   
  **키 URI는 무엇인가요?**  
- Azure 주요 자격 증명 모음의 모든 키에는 응용 프로그램에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 형식을 사용 하 여 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 을 현재 버전을 가져오고 형식을 사용 하 여 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 특정 버전을 가져옵니다.  
+ Azure 주요 자격 증명 모음의 모든 키에는 응용 프로그램에서 키를 참조하는 데 사용할 수 있는 URI(Uniform Resource Identifier)가 있습니다. 현재 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` 형식을 사용하고, 특정 버전을 가져오려면 `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` 형식을 사용합니다.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>구성에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
-**SQL Server 커넥터에서 액세스해야 하는 끝점은 무엇인가요?** 
- 커넥터는 허용 목록에 포함되어야 하는 두 개의 끝점과 통신합니다. Https의 경우 이러한 다른 서비스에 대한 아웃바운드 통신에 필요한 유일한 포트는 443입니다.
+**SQL Server 커넥터에서 액세스해야 하는 끝점은 무엇인가요?** 커넥터는 허용 목록에 포함되어야 하는 두 개의 끝점과 통신합니다. Https의 경우 이러한 다른 서비스에 대한 아웃바운드 통신에 필요한 유일한 포트는 443입니다.
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
@@ -299,7 +298,7 @@ SQL Server 버전  |재배포 가능 설치 링크
 -   PowerShell [Azure 주요 자격 증명 모음 Cmdlet](https://msdn.microsoft.com/library/dn868052.aspx) 참조  
   
 ## <a name="see-also"></a>참고 항목  
- [Extensible Key Management Using Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [EKM provider enabled 서버 구성 옵션](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   

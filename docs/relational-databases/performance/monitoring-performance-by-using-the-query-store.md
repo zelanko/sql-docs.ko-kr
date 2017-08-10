@@ -18,11 +18,11 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: aad94f116c1a8b668c9a218b32372424897a8b4a
 ms.openlocfilehash: 53e0f5d479d7fc3cdeae2c6ce121734b6fc16f21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/28/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
@@ -118,7 +118,7 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
 
 |||| 
 |-|-|-|  
-|이전 경험|새로운 경험|동작|
+|이전 경험|새로운 경험|작업|
 |데이터베이스당 높은 RESOURCE_SEMAPHORE 대기|특정 쿼리에 대한 쿼리 저장소의 높은 메모리 대기|쿼리 저장소에서 상위 메모리 소비 쿼리를 찾습니다. 이러한 쿼리는 영향을 받는 쿼리의 추가 진행을 지연합니다. 해당 쿼리 또는 영향을 받는 쿼리에 대해 MAX_GRANT_PERCENT 쿼리 힌트를 사용하는 것이 좋습니다.|
 |데이터베이스당 높은 LCK_M_X 대기|특정 쿼리에 대한 쿼리 저장소의 높은 잠금 대기|영향을 받는 쿼리에 대한 쿼리 텍스트를 확인하고 대상 엔터티를 식별합니다. 자주 실행되며 기간이 높은, 동일한 엔터티를 수정하는 다른 쿼리를 쿼리 저장소에서 찾습니다. 이러한 쿼리를 식별한 후 응용 프로그램 논리를 변경하여 동시성을 개선하거나 덜 제한적인 격리 수준을 사용하는 것이 좋습니다.|
 |데이터베이스당 높은 PAGEIOLATCH_SH 대기|특정 쿼리에 대한 쿼리 저장소의 높은 버퍼 IO 대기|쿼리 저장소에서 물리적 읽기 수가 높은 쿼리를 찾습니다. IO 대기가 높은 쿼리와 일치하는 경우 검색 대신 찾기를 수행하여 쿼리의 IO 오버헤드를 최소화하기 위해 기본 엔터티에 대한 인덱스를 도입하는 것이 좋습니다.|
@@ -152,7 +152,7 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
  각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 200입니다.  
  
  `WAIT_STATS_CAPTURE_MODE`  
- 쿼리 저장소를 캡처하는 경우 컨트롤 통계 정보를 대기 합니다. 있습니다 수 해제 = 0 또는 1 (기본값) =  
+ 쿼리 저장소에서 대기 통계 정보를 캡처할지 여부를 제어합니다. OFF = 0 또는 ON = 1(기본값)일 수 있습니다.  
  
  **sys.database_query_store_options** 뷰를 쿼리하여 쿼리 저장소의 현재 옵션을 확인할 수 있습니다. 값에 대한 자세한 내용은 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)를 참조하세요.  
   
@@ -173,7 +173,7 @@ SQL Server 2017 CTP 2.0부터 및 Azure SQL Database에서 쿼리 저장소 고�
 |[sys.database_query_store_options&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|  
 |[sys.query_store_plan&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|  
 |[sys.query_store_query_text&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|  
-|[sys.query_store_wait_stats &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
+|[sys.query_store_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|  
   
 ### <a name="query-store-stored-procedures"></a>쿼리 저장소 저장 프로시저  
  저장 프로시저로 쿼리 저장소를 구성합니다.  
@@ -450,7 +450,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
  계획 선택 변경과 관련된 성능 저하뿐 아니라 성능 저하를 모두 확인하려면 이전 쿼리에서 `AND p1.plan_id <> p2.plan_id` 조건을 제거하면 됩니다.  
 
  **가장 오래 대기 중인 쿼리는 무엇인가요?**
- 이 쿼리는 가장 오래 대기 중인 상위 10개의 쿼리를 반환합니다. 
+이 쿼리는 가장 오래 대기 중인 상위 10개의 쿼리를 반환합니다. 
  
  ```tsql 
   SELECT TOP 10

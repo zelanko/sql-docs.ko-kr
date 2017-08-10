@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 30791ad9733446f664db1592b95d1ffec5fc9a1b
 ms.openlocfilehash: c27f699eb519c1e9a72756c26e8b320869786c6c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="encrypt-a-column-of-data"></a>데이터 열 암호화
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/23/2017
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
 
-다음 예제를 사용 하려면 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스에 아직 없는 경우 데이터베이스 마스터 키를 암호를 제공 하는 다음 문을 실행 하 여 새로 만듭니다.   
+다음 예제를 사용하려면 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스에 데이터베이스 마스터 키가 아직 없는 경우 암호를 입력하고 다음 문을 실행하여 키를 만듭니다.   
 ```  
 CREATE MASTER KEY ENCRYPTION BY   
 PASSWORD = '<some strong password>';  
 ```  
-항상 데이터베이스 마스터 키를 백업 합니다. 데이터베이스 마스터 키에 대 한 자세한 내용은 참조 하세요. [CREATE MASTER key&#40; Transact SQL &#41; ](../../../t-sql/statements/create-master-key-transact-sql.md).
+항상 데이터베이스 마스터 키를 백업하세요. 데이터베이스 마스터 키에 대한 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](../../../t-sql/statements/create-master-key-transact-sql.md)를 참조하세요.
 
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>간단한 대칭 암호화를 사용하여 데이터 열을 암호화하려면  
   
