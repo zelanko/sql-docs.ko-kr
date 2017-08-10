@@ -52,12 +52,12 @@ ms.lasthandoff: 08/02/2017
   
     -   필터를 추가하려면 데이터 열 이름을 클릭하고 **필터 편집** 대화 상자에 필터 조건을 지정합니다. 또한 데이터 열 이름을 마우스 오른쪽 단추로 클릭하고 **열 필터 편집** 을 클릭하여 **필터 편집** 대화 상자를 실행할 수 있습니다. **확인** 을 클릭하여 필터를 추가합니다.  
   
-8.   **저장**을 클릭합니다.  
+8.  **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [추적 파일 & #40;에 대 한 이벤트 및 데이터 열 지정 SQL Server Profiler & #41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
- [실행 중인 추적 & #40;에서 템플릿을 파생합니다 SQL Server Profiler & #41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
- [추적 파일이 나 추적 테이블 & #40;에서 템플릿을 파생합니다 SQL Server Profiler & #41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
+ [추적 파일 &#40;에 대 한 이벤트 및 데이터 열 지정 SQL Server Profiler &#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [실행 중인 추적 &#40;에서 템플릿을 파생합니다 SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
+ [추적 파일이 나 추적 테이블 &#40;에서 템플릿을 파생합니다 SQL Server Profiler &#41;](../../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   

@@ -67,9 +67,9 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [& #40; 설명 & #41; & #40; Mdx& #41;](../mdx/comment-mdx-double-slash.md)   
- [-& #40; 설명 & #41; & #40; Mdx& #41;](../mdx/comment-mdx-operator-reference.md)   
- [MDX 연산자 참조 & #40; Mdx& #41;](../mdx/mdx-operator-reference-mdx.md)  
+ [&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-double-slash.md)   
+ [-&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-operator-reference.md)   
+ [MDX 연산자 참조 &#40; Mdx&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   
 

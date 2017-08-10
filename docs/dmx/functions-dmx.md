@@ -49,7 +49,7 @@ ms.lasthandoff: 08/02/2017
   
  대부분의 DMX 함수는 예측에 대한 지원과 같은 스칼라 값을 반환하지만 일부 함수는 테이블 형식 결과를 반환합니다. 예를 들어 PredictHistogram 함수는 지원 및 지정 된 예측 가능한 열의 각 상태에 대 한 확률을 포함 하는 테이블을 반환 합니다. 그 결과는 새 테이블 형식의 열로 표시됩니다.  
   
- **자세한 내용은:** [일반 예측 함수 & #40; DMX & #41;](../dmx/general-prediction-functions-dmx.md), [Data Mining Extensions & #40; DMX & #41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **자세한 내용은:** [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md), [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>VBA(Visual Basic for Applications) 및 Excel 함수  
  DMX 문에서는 DMX 함수 외에도 다양한 VBA 및 Excel 함수를 호출할 수 있습니다. 예를 들어 TM_Decision_Tree 모델 콘텐츠의 Attribute_Name 열이 표시 되는 방식을 수정 하려면 lCase 함수를 사용할 수 있습니다. 예를 들어 다음과 같은 코드 샘플을 사용할 수 있습니다.  
@@ -67,13 +67,13 @@ FROM [TM_Decision_Tree].CONTENT
  **자세한 내용은:** [다차원 모델 어셈블리 관리](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions & #40; DMX & #41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions & #40; DMX & #41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
- [Data Mining Extensions & #40; DMX & #41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [일반 예측 함수 & #40; DMX & #41;](../dmx/general-prediction-functions-dmx.md)   
+ [Data Mining Extensions &#40; DMX &#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions &#40; DMX &#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Data Mining Extensions &#40; DMX &#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Data Mining Extensions &#40; DMX &#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Data Mining Extensions &#40; DMX &#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [Data Mining Extensions &#40; DMX &#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [일반 예측 함수 &#40; DMX &#41;](../dmx/general-prediction-functions-dmx.md)   
  [구조 및 DMX 예측 쿼리 사용](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   

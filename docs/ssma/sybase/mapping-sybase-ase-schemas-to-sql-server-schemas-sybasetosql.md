@@ -72,6 +72,6 @@ ASE 스키마 간의 매핑을 사용자 지정 하는 경우와 [!INCLUDE[ssNoV
 Sybase ASE 개체를 변환 하는 과정을 분석 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 할 수 있습니다 [변환 보고서를 만들](http://msdn.microsoft.com/en-us/eb996b7c-1eef-4f73-b5e6-2fa6faf7336c)합니다. 수 그렇지 않으면 [ASE 데이터베이스 개체 정의 변환](http://msdn.microsoft.com/en-us/509cb65d-2f54-427a-83d7-37919cc4e3e3) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 또는 SQL Azure 개체를 정의 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[Azure SQL DB & #40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL & #41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Azure SQL DB &#40; SQL Server-Sybase ASE 데이터베이스 마이그레이션 SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   
 
