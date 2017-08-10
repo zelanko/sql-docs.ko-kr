@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e3dff8b613f933caa84522b31bdc862aa9c799f7
 ms.contentlocale: ko-kr
@@ -135,4 +135,4 @@ Power BI Desktop 보고서 및 Excel 통합 문서에 대한 권한을 업로드
 [Reporting Services 브라우저 지원 계획](../reporting-services/browser-support-for-reporting-services-and-power-view.md)  
 [SQL Server 2016 버전에서 지원하는 Reporting Services 기능](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요](http://go.microsoft.com/fwlink/?LinkId=620231).
+추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
