@@ -22,7 +22,7 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
 ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: ko-kr
@@ -148,7 +148,7 @@ ms.lasthandoff: 08/09/2017
   
  `</BODY>`  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [인쇄 컨트롤 &#40;를 사용 하 여 브라우저에서 보고서 인쇄 보고서 작성기 및 SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [보고서 인쇄 &#40; 보고서 작성기 및 SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [이미지 장치 정보 설정](../../../reporting-services/image-device-information-settings.md)  

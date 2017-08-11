@@ -14,7 +14,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c00b90770f259d9782c68eec52ccf860762f43f1
 ms.contentlocale: ko-kr
@@ -86,6 +86,6 @@ URL이나 다른 모바일 보고서에 드릴스루 기능이 있는 보고서 
  
 * [Reporting Services 모바일 보고서에 매개 변수 추가](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md)
 * [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md) 
-* [웹 포털 (SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)
+* [웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)
 
 

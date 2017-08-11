@@ -18,14 +18,14 @@ helpviewer_keywords:
 - custom report items
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2396af94f8c28c41d41c52cd505d12aa8dceee17
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 260b1fbbcac13246da70790ab53cfcbbb07623c2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="custom-report-items"></a>사용자 지정 보고서 항목
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
  [사용자 지정 보고서 항목 클래스 라이브러리](../../reporting-services/custom-report-items/custom-report-item-class-libraries.md)  
  사용자 지정 보고서 항목 인프라 클래스 및 관리 되는 래퍼 클래스에 설명 된 **Microsoft.ReportDesigner** 네임 스페이스입니다.  
   
-## <a name="see-also"></a>참고 항목  
- [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+## <a name="see-also"></a>관련 항목:  
+ [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

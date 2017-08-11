@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d34dfcd5c6c4ecb6ef91dc57cb7e98ee71512393
 ms.contentlocale: ko-kr
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Reporting Services SharePoint Service 및 서비스 응용 프로그램
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드는 SharePoint 서비스 아키텍처에 맞게 구축되었으며 SharePoint 서비스와 일대다 서비스 응용 프로그램을 활용합니다. 서비스 응용 프로그램을 만들면 서비스를 사용할 수 있게 되며 서비스 응용 프로그램 데이터베이스가 생성됩니다. Reporting Services 서비스 응용 프로그램은 여러 개 만들 수 있지만 대부분의 배포 시나리오에서 서비스 응용 프로그램은 하나면 충분합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 모드는 SharePoint 서비스 아키텍처에 맞게 구축 되었으며 SharePoint 서비스와 일대다 서비스 응용 프로그램 하나를 활용 합니다. 서비스 응용 프로그램을 만들면 서비스를 사용할 수 있게 되며 서비스 응용 프로그램 데이터베이스가 생성됩니다. Reporting Services 서비스 응용 프로그램은 여러 개 만들 수 있지만 대부분의 배포 시나리오에서 서비스 응용 프로그램은 하나면 충분합니다.  
   
  이 항목에는 다음과 같은 정보가 포함되어 있습니다.  
   
@@ -88,6 +88,6 @@ ms.lasthandoff: 08/09/2017
 |태스크|링크|  
 |----------|----------|  
 |서비스 응용 프로그램의 설정 관리|[Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)|  
-|서비스 응용 프로그램과 관련 구성 요소(예: 암호화 키 및 프록시) 백업 및 복원|[Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
+|서비스 응용 프로그램과 관련 구성 요소(예: 암호화 키 및 프록시) 백업 및 복원|[백업 및 복원 Reporting Services SharePoint 서비스 응용 프로그램](../../reporting-services/report-server-sharepoint/backup-and-restore-reporting-services-sharepoint-service-applications.md)|  
   
   

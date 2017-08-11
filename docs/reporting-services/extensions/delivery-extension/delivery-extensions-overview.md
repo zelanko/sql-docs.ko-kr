@@ -17,14 +17,14 @@ helpviewer_keywords:
 - delivery extensions [Reporting Services], about extensions
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3b201ef2225d7794b399c79a318627fc978b8b72
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>배달 확장 프로그램 개요
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |보고서 서버 전자 메일|SMTP 서버를 사용하여 개별 사용자나 그룹에 보고서를 전자 메일로 보냅니다.|  
 |보고서 서버 파일 공유|조직 내에서 네트워크 파일 공유 위치로 보고서를 배포하는 데 사용됩니다. 지정된 일정에 따라 파일 공유 위치에 보고서를 자동으로 복사할 수 있는 기능을 제공합니다.|  
   
- ![Reporting Services 배달 확장 프로그램 아키텍처](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services delivery extension architecture")  
+ ![Reporting Services 배달 확장 프로그램 아키텍처](../../../reporting-services/extensions/delivery-extension/media/bk-reportservicedelivery.gif "Reporting Services 배달 확장 프로그램 아키텍처")  
 Reporting Services 배달 확장 프로그램 검토 및 업데이트 프로그램 아키텍처  
   
  배달 확장 프로그램은 구독과 함께 사용됩니다. 사용자는 구독을 만들 때 사용 가능한 배달 확장 프로그램 중 하나를 선택하여 보고서 배달 방법을 결정할 수 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 구독은 보고서 서버 데이터베이스에 있습니다. 이벤트가 발생하면 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서는 보고서 서버 데이터베이스에 포함된 구독에 대해 이벤트를 일치시킵니다. 이벤트와 연결된 각 구독에 대해 보고서 서버에서 알림을 만듭니다. 데이터 기반 구독의 경우 각 받는 사람에 대한 알림이 만들어집니다. 알림이 만들어지면 보고서 서버에서 특정 배달 확장 프로그램을 호출하고 알림에 지정된 확장 프로그램 설정 값을 전달합니다. 배달 확장 프로그램은 선택된 배달 확장 프로그램에서 지정된 대로 사용자에게 알림을 보냅니다.  

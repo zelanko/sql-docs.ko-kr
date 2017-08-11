@@ -15,7 +15,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1545eb448d447b17721e145aaa5942119d17b447
 ms.contentlocale: ko-kr
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
 
 다음 표는 데이터 분석 작업과 이러한 작업에 가장 적합한 Microsoft BI 도구에 대한 보고를 매핑합니다. 제품에 대한 자세한 내용을 보려면 표의 제품 링크를 클릭하세요.  
   
- 사용자에게 적합한 도구를 결정하는 데 도움이 되도록 이러한 도구에 대한 간략한 개요를 알아보려면 [Microsoft BI(비즈니스 인텔리전스) 도구 소개](http://msdn.microsoft.com/library/dn655131.aspx)를 참조하세요.  
+ 사용자에게 적합한 도구를 결정하는 데 도움이 되도록 이러한 도구에 대한 간략한 개요를 알아보려면 [Microsoft BI(Business Intelligence) 도구](http://msdn.microsoft.com/library/dn655131.aspx)를 참조하세요.  
   
 |작업|사용자|||BI 도구|||  
 |---------------|----------|-|-|--------------|-|-|  
@@ -37,12 +37,12 @@ ms.lasthandoff: 08/09/2017
 |강력한 데이터 모델 만들기||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 지원됨)|  
 |데이터 시각화 및 탐색||[파워 뷰](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D 맵](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|자연어 쿼리를 사용하여 질문|||||[질문과 대답](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
+|자연어 쿼리를 사용하여 질문|||||[질문 및 답변](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
 |모바일 장치를 사용하여 보고서 액세스||||[HTML 5(10MB 미만의 파일을 볼 수 있도록 지원)](http://go.microsoft.com/fwlink/?LinkId=391853)|[HTML 5(1GB 미만의 파일을 볼 수 있도록 지원)](http://go.microsoft.com/fwlink/?LinkId=799619)<br /><br /> [모바일 장치용 Power BI 앱](https://powerbi.microsoft.com/documentation/powerbi-power-bi-apps-for-mobile-devices/)|[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)<br/>(모바일 장치용 Power BI 앱 사용)|  
 |공동 작업 및 공유|||[SharePoint 사이트](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint 팀 사이트](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**기업 BI**|IT 전문가||||||  
 |다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](https://msdn.microsoft.com/library/bb522607.aspx)|  
-|임시 데이터 시각화 만들기|||[SharePoint용 파워 뷰](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
+|임시 데이터 시각화 만들기|||[SharePoint 용 power View](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |대시보드 만들기|||[SharePoint 대시보드](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
 |작업 보고서 만들기||||||*[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)|  
 |사용자 지정 및 포함된 보고서 만들기|||||[Power BI Embedded](https://azure.microsoft.com/services/power-bi-embedded/)|*[Reporting Services](https://msdn.microsoft.com/library/ms159106.aspx)|  

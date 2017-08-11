@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5360240569fcffe5f9708f68d7f95403e45c0909
 ms.contentlocale: ko-kr
@@ -61,6 +61,6 @@ ms.lasthandoff: 08/09/2017
 2.  **범주 그룹** 또는 **계열 그룹** 영역에서 해당 그룹을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

@@ -18,7 +18,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 325b7d6f1015b6e5e81565df37d1c02d20e5802f
 ms.contentlocale: ko-kr
@@ -88,6 +88,6 @@ Reporting Services에서는 사용자 지정 또는 폼 기반 인증 모듈을 
 [Reporting Services 사용자 지정 보안 예제 (GitHub)](https://github.com/Microsoft/Reporting-Services/tree/master/CustomSecuritySample)  
 [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[보고서 서버에서 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
-[보고서 서버의 Windows 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+[보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
+[보고서 서버에서 Windows 인증을 구성 합니다.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
 문의: [Reporting Services 포럼을 시도 하십시오.](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Web service [Reporting Services], application integration
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 6837170f3ebe0e92e7914c3f0f863aa9534e0cb8
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: d53edb542a9666f4d5636f362e6689f33dbf9dcc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL 액세스와 SOAP 중 선택
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 응용 프로그램에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 응용 프로그램에 통합하는 데 있어서 중요한 결정이 필요합니다.  
   
- ![Reporting Services 프로그래밍 시나리오](../../reporting-services/application-integration/media/bk-ext-04.gif "Reporting Services programming scenarios")  
+ ![Reporting Services 프로그래밍 시나리오](../../reporting-services/application-integration/media/bk-ext-04.gif "Reporting Services 프로그래밍 시나리오")  
 Reporting Services 프로그래밍에서는 다양한 시나리오를 지원합니다.  
   
  통합 하는 방법은 두 가지가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 사용자 지정 응용 프로그램에: URL 액세스와 Reporting Services SOAP API입니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 응용 프로그램에 통합하려면 URL 액세스와 SOAP 두 가지 모두를 사용해야 할 수 있습니다. 다음과 같은 질문을 고려해야 합니다.  
@@ -58,10 +58,10 @@ Reporting Services 프로그래밍에서는 다양한 시나리오를 지원합�
   
  URL 액세스와 통합 된 보고서를 제공 하는 웹 서비스를 결합 하 여 예제를 보려면 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [응용 프로그램에 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [SOAP를 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   
  [URL 액세스를 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   

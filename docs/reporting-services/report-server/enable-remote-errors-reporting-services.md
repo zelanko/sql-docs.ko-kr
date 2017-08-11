@@ -18,7 +18,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: ko-kr
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  보고서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-3.  **고급** 을 클릭하여 속성 페이지를 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [서버 속성&#40;고급 페이지&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)를 참조하세요.  
+3.  **고급** 을 클릭하여 속성 페이지를 엽니다. 자세한 내용은 참조 [서버 속성 &#40; 고급 페이지 &#41; Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
   
 4.  **EnableRemoteErrors**에서 **True**를 선택합니다.  
   

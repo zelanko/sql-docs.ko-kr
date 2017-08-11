@@ -18,11 +18,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eb1f09f1a23a6e24077357c36a0dbc136a86473f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>URL 예약 및 등록 정보(SSRS 구성 관리자)
@@ -97,7 +97,7 @@ ms.lasthandoff: 06/22/2017
 |SQL Server Express|웹 포털|`http://<servername>/reports_SQLExpress`|`http://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Reporting Services URL에 대한 인증 및 서비스 ID  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] URL 예약은 보고서 서버 서비스의 서비스 계정을 지정합니다. 서비스가 실행되는 계정은 같은 인스턴스에 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램용으로 생성된 모든 URL에 사용됩니다. 보고서 서버 인스턴스의 서비스 ID는 RSReportServer.config 파일에 저장됩니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]URL 예약은 보고서 서버 서비스의 서비스 계정을 지정합니다. 서비스가 실행되는 계정은 같은 인스턴스에 실행되는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 응용 프로그램용으로 생성된 모든 URL에 사용됩니다. 보고서 서버 인스턴스의 서비스 ID는 RSReportServer.config 파일에 저장됩니다.  
   
  서비스 계정에는 기본값이 없습니다. 그러나 설치 중 서비스 계정을 지정해야 하며 서버를 파일만 모드에서 설치한 경우라도 서비스 계정은 RSReportServer.config의 **URLReservation** 에 지정되어 있습니다. 서비스 계정으로 유효한 값은 도메인 사용자 계정, **LocalSystem**또는 **NetworkService**입니다.  
   
@@ -110,9 +110,9 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] 이후에는 실수로 프로그램을 높은 권한으로 실행하는 위험을 최소화하는 새로운 보안 기능이 포함되어 있습니다. 이 운영 체제에서 로컬 관리를 사용하려면 추가 단계가 필요합니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [URL 예약 구문&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
+## <a name="see-also"></a>참고 항목  
+ [URL &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [URL 예약 구문 &#40; SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   
   
 

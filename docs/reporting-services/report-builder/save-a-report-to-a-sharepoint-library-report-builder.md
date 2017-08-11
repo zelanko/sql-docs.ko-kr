@@ -15,7 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6e87cb6c8daa8744b676d5ed78ed8339705f28e
 ms.contentlocale: ko-kr
@@ -42,6 +42,6 @@ ms.lasthandoff: 08/09/2017
     >  변경된 보고서를 저장하지 않은 상태로 10시간 이상 두면 저장되지 않은 상태로 서버에서 연결이 끊어집니다. 그러면 왼쪽 아래의 상태 표시줄에서 **연결 끊기**를 클릭한 다음 **연결**을 클릭합니다. 최신 서버는 사용 가능한 서버 목록에 있습니다. 서버를 선택하면 보고서가 다시 연결됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

@@ -22,7 +22,7 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c18054b5c11569239af51e7c3808bdb9ce05109
 ms.contentlocale: ko-kr
@@ -63,7 +63,7 @@ ms.lasthandoff: 08/09/2017
   
      **rsconfig-e-u\<도메인/사용자 이름 >-p\<암호 >**  
   
- **rsconfig -e** 는 추가 인수를 지원합니다. 구문에 대한 자세한 내용 및 명령 예제를 보려면 SQL Server 온라인 설명서에서 [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)를 참조하세요.  
+ **rsconfig -e** 는 추가 인수를 지원합니다. 명령 예제를 보려면 및 구문에 대 한 자세한 내용은 참조 [rsconfig 유틸리티 &#40; Ssrs&#41; ](../../reporting-services/tools/rsconfig-utility-ssrs.md) SQL Server 온라인 설명서의 합니다.  
   
 ### <a name="how-account-information-is-stored"></a>계정 정보를 저장하는 방법  
  계정을 설정하면 로컬 또는 원격 보고서 서버 인스턴스의 RSreportserver.config 파일에 다음 설정이 암호화된 값으로 지정됩니다.  

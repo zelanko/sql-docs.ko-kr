@@ -20,14 +20,14 @@ helpviewer_keywords:
 - extensions [Reporting Services]
 ms.assetid: 2bf17ae4-2292-4a58-a1f0-56e99abd9b69
 caps.latest.revision: 45
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cd4cd15bf03648329dab8bc7ef55314ece7cf9a2
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 37adf4c09f7f23294572a17631240ad88f51fc9e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-extensions"></a>Reporting Services 확장 프로그램
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
  또 다른 보고서 서버 확장 프로그램인 RDCE(Report Definition Customization Extension)에서는 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다. 사용자나 언어 등의 요소를 기준으로 보고서를 사용자 지정할 수 있습니다. 예를 들어, 관리자나 부서원과 같이 다양한 사용자가 보는 뷰를 서로 다르게 구현하거나 프랑스어 또는 아랍어로 렌더링될 때 레이아웃이 서로 다르도록 보고서를 사용자 지정할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [확장에 대 한 보안 고려 사항](../../reporting-services/extensions/security-considerations-for-extensions.md)  
+ [확장에 대한 보안 고려 사항](../../reporting-services/extensions/security-considerations-for-extensions.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 확장 프로그램 개발 및 배포와 관련된 보안 문제를 설명합니다.  
   
  [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)  

@@ -15,7 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 91700c92ed7f96e00ba05d7ee9ca96590d0a4837
 ms.contentlocale: ko-kr
@@ -59,7 +59,7 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
 
 ## <a name="see-also"></a>관련 항목:
 
-[SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+[SharePoint 사이트 &#40;의 보고서 서버 항목에 대 한 사용 권한 설정 모드 &#41; 통합 SharePoint의 reporting Services](../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

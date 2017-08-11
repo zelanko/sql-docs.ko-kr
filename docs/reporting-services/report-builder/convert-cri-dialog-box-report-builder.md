@@ -20,7 +20,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 37ba742708ded98cd5728a3051a2e7a76b9fa99f
 ms.contentlocale: ko-kr
@@ -48,6 +48,6 @@ ms.lasthandoff: 08/09/2017
  보고서, 보고서 서버 또는 보고서 작성 환경에 대한 현재 보고서 정의 형식을 식별하려면 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

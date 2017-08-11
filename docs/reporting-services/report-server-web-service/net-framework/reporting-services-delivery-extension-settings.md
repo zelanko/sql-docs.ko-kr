@@ -26,14 +26,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
 caps.latest.revision: 36
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 668c3d31af5f287d7d254c2dc666e20a5f6328fa
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: bc52f95cdc038c0074feb10b05fffe916b3d3da1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Reporting Services 배달 확장 프로그램 설정
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
 ## <a name="file-share-delivery-settings"></a>파일 공유 배달 설정  
  다음 표는 구독을 위한 파일 공유 배달 설정을 나열합니다.  
   
-|설정|값|  
+|설정|Value|  
 |-------------|-----------|  
 |**파일 이름**|디스크에 저장되는 파일의 이름입니다.|  
 |**FILEEXTN**|렌더링된 보고서에 대한 파일 확장명을 포함시킬지 여부를 나타냅니다. 값은 **true** 또는 **false**합니다.|  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/13/2017
 |**암호**|네트워크 리소스 또는 디스크에 액세스하는 데 필요한 암호입니다.|  
 |**WRITEMODE**|디스크에 액세스할 때 사용할 쓰기 모드입니다. 유효한 값은 **None**, **덮어쓰기**, 및 **AutoIncrement**합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [기술 참조 &#40; Ssrs&#41;](../../../reporting-services/technical-reference-ssrs.md)   
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   

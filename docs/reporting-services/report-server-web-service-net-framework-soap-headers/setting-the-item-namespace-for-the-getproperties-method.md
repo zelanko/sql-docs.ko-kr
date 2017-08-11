@@ -18,14 +18,14 @@ helpviewer_keywords:
 - GetProperties method
 ms.assetid: b0a08639-3101-40a2-abe2-3a41753826d1
 caps.latest.revision: 38
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8ee3fb56b2b5f631e2959f96ada2be74a7584e4f
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 6c47c200899dbd25c9685817ea81a391364739c6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties 메서드에 대한 항목 네임스페이스 설정
@@ -127,7 +127,7 @@ class Sample
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [보고를 사용 하 여 Services SOAP 헤더](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   
   

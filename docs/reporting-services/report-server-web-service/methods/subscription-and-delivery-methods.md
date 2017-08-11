@@ -19,20 +19,20 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], about subscriptions
 ms.assetid: a8637501-1817-4ccc-b07d-dd9ed5608805
 caps.latest.revision: 42
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 921552783ee102ece55a35c66e5bee607585af5d
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 45e772533354fea94bf0bee7f01219622dc09c4f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="subscription-and-delivery-methods"></a>구독 및 배달 메서드
   다음 메서드를 사용하여 카탈로그 항목의 구독 및 배달을 만들고 관리할 수 있습니다.  
   
-|메서드|작업|  
+|메서드|동작|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>|지정된 항목에 대한 데이터 기반 구독을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.GetDataDrivenSubscriptionProperties%2A>|데이터 기반 구독에 대한 속성을 반환합니다.|  
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/13/2017
 |<xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>|데이터 기반 구독의 속성 값을 설정합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A>|구독의 속성 값을 설정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

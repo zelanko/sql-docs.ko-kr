@@ -14,14 +14,14 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 753cb1a6bc95c854d8a9457f6dc8a70867f2a6bd
 ms.contentlocale: ko-kr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 탐색기 추가
+# <a name="add-navigators-to-reporting-services-mobile-reports"></a>Add navigators to Reporting Services mobile reports
 [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]에서 시각화의 데이터를 시간별 또는 선택 항목별로 필터링하려면 *탐색기* 를 추가합니다. 
 
 탐색기는 Power BI 및 Excel 피벗 테이블의 슬라이서와 비슷하지만 몇 가지 고유한 특성도 가지고 있습니다.

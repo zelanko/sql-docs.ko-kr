@@ -17,7 +17,7 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 01bfda1933bc12672c4959eafd7c95ef9a389139
 ms.contentlocale: ko-kr
@@ -67,7 +67,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  이 메서드를 사용하면 모든 응용 프로그램 도메인이 하드 재활용됩니다. 이 작업이 완료된 후 응용 프로그램 도메인을 다시 시작해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

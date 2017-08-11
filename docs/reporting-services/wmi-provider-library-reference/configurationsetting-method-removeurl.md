@@ -17,7 +17,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b47933be28aae96673ca6c3b28410874c01394dc
 ms.contentlocale: ko-kr
@@ -69,7 +69,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  이 메서드를 사용하면 구성 응용 프로그램 도메인을 제외한 모든 응용 프로그램 도메인이 하드 재활용됩니다. 이 작업이 진행되는 동안 응용 프로그램 도메인이 중지되므로 이 작업이 완료되면 응용 프로그램 도메인을 다시 시작해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

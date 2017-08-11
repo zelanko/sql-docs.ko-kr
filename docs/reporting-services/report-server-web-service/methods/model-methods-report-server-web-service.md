@@ -14,20 +14,20 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
 caps.latest.revision: 4
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 350614f2ba7d522860c15a27456598aeb12c270a
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 6f95a5e6d379d9f0a998cb58cbf32c00be980884
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="model-methods---report-server-web-service"></a>모델 메서드-보고서 서버 웹 서비스
   다음 메서드를 사용하여 모델을 관리할 수 있습니다.  
   
-|메서드|작업|  
+|메서드|동작|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GenerateModel%2A>|공유 데이터 원본을 기반으로 기본 모델을 생성합니다.|  
 |<xref:ReportService2010.ReportingService2010.GetModelItemPermissions%2A>|모델 항목과 연결된 사용자 권한을 검색합니다.|  

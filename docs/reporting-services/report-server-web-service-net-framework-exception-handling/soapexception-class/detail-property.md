@@ -17,14 +17,14 @@ helpviewer_keywords:
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f2359ac68758ba2846c4a9065f6cb1c9c96a7e01
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 51b99212acac0029bf246ce1668cd3a8b474fb84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="detail-property"></a>Detail 속성
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
  제품의 이름입니다. 기본값은 **Microsoft SQL Server Reporting Services**합니다.  
   
  **ProductVersion**  
- 버전의 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]합니다. 최대 길이는 15자입니다. 버전 번호의 형식은 다음과 같아야: 8.00.0xxx.00 합니다.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전입니다. 최대 길이는 15자입니다. 버전 번호의 형식은 다음과 같아야: 8.00.0xxx.00 합니다.  
   
  **ProductLocaleId**  
  응용 프로그램 INTL DLL의 로캘 ID 또는 언어 ID입니다(예: 0x41A).  
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
  **경고**  
  보고서 처리에서 반환된 경고를 포함하는 XML 문자열입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services의 예외 처리 소개](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 클래스](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
  [Detail 속성을 사용 하 여 특정 오류 처리](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  

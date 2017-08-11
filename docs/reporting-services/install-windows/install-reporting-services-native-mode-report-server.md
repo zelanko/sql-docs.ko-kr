@@ -19,7 +19,7 @@ caps.latest.revision: 68
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 65a02d6be519b146f37159dd75f1f51dcfb254cc
 ms.contentlocale: ko-kr
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/09/2017
   
 -   DSN(데이터 원본 이름)이라고도 하는 보고서 서버 데이터베이스에 대한 연결 정보입니다.  
   
- 설치 프로그램은 무인 실행 계정, 보고서 서버 전자 메일, 암호화 키 백업 또는 확장 배포는 구성하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 이러한 속성을 구성할 수 있습니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.
+ 설치 프로그램은 무인 실행 계정, 보고서 서버 전자 메일, 암호화 키 백업 또는 확장 배포는 구성하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 이러한 속성을 구성할 수 있습니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.
   
 ##  <a name="bkmk_whentoinstalldefaultconfig"></a> 기본 모드용 기본 구성을 설치하는 경우  
  기본 구성은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 작동 상태로 설치하므로 설치가 완료되면 보고서 서버를 즉시 사용할 수 있습니다. 필수 구성 태스크를 생략하여 단계를 줄이려는 경우 이 모드를 지정하세요. 그렇지 않을 경우 이 필수 구성 태스크는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 수행해야 합니다.  
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [Hardware and Software Requirements for Installing SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) 을 검토합니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 같은 인스턴스에 함께 설치 해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 설치 프로그램에서 만들어 구성한 보고서 서버 데이터베이스를 호스팅합니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 같은 인스턴스에 함께 설치해야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스는 설치 프로그램에서 만들어 구성한 보고서 서버 데이터베이스를 호스팅합니다.  
   
 -   설치 프로그램을 실행하는 데 사용된 사용자 계정은 로컬 Administrators 그룹에 속해야 하고, 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 데이터베이스에 액세스하고 이러한 데이터베이스를 만들 수 있는 권한이 있어야 합니다.  
   
@@ -186,7 +186,7 @@ ms.lasthandoff: 08/09/2017
 [보고서 서버 서비스 계정 구성](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
 [보고서 서버 Url 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
-[파일만 설치 &#40; Reporting services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
+[파일만 설치&#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)   
 [보고서 서버 초기화](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   

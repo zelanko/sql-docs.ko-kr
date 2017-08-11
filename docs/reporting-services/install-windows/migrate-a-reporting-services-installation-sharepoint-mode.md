@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a401c2af14ba5e530d9efe3ff62eeae3ad9f8e7e
 ms.contentlocale: ko-kr
@@ -69,11 +69,11 @@ ms.lasthandoff: 08/09/2017
   
 |데이터베이스|이름 예||  
 |--------------|------------------|-|  
-|카탈로그 데이터베이스|ReportingService_[service application GUID] **(\*)**|사용자가 마이그레이션합니다.|  
-|임시 데이터베이스|ReportingService_[service application GUID]TempDB **(\*)**|사용자가 마이그레이션합니다.|  
+|카탈로그 데이터베이스|[서비스 응용 프로그램 GUID] ReportingService_ **(\*)**|사용자가 마이그레이션합니다.|  
+|임시 데이터베이스|[서비스 응용 프로그램 GUID] ReportingService_ TempDB **(\*)**|사용자가 마이그레이션합니다.|  
 |경고 데이터베이스|ReportingService_[service application GUID]_Alerting|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 만들 때 만들어집니다.|  
   
- **(\*)** 위의 표에 예로 나와 있는 이름은 새 SSRS 서비스 응용 프로그램을 만들 때 SSRS에서 사용하는 명명 규칙을 따릅니다. 다른 서버에서 마이그레이션하는 경우 카탈로그와 tempDB의 이름은 원래 설치에서와 같습니다.  
+ **(\*)** 표에 표시 된 예로 이름은 새 SSRS 서비스 응용 프로그램을 만들 때 SSRS에서 사용 하는 명명 규칙을 따릅니다. 다른 서버에서 마이그레이션하는 경우 카탈로그와 tempDB의 이름은 원래 설치에서와 같습니다.  
   
 ####  <a name="bkmk_backup_operations"></a> 백업 작업  
  이 섹션에서는 마이그레이션해야 하는 정보 유형과 백업을 완료하는 데 사용하는 도구나 프로세스에 대해 설명합니다.  

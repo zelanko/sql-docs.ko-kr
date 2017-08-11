@@ -16,7 +16,7 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b54af8ae1b0141a0fceb29c8e583d0026d377fdd
 ms.contentlocale: ko-kr
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/09/2017
 |[PPTX 장치 정보 설정](../reporting-services/pptx-device-information-settings.md)|PPTX 렌더링 출력과 연관된 장치 정보 설정을 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
+ [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   
 

@@ -14,7 +14,7 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
 ms.contentlocale: ko-kr
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
   
 -   System32 폴더에 Authz.dll이 있어야 합니다.  
   
- 설치 프로그램은 더 이상 인터넷 정보 서비스(IIS) 또는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]이 설치되어 있는지 확인하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]필요한 MDAC 2.0 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0; 아직 설치 되지 않은 경우 설치 프로그램은 이러한 설치 됩니다.  
+ 설치 프로그램은 더 이상 인터넷 정보 서비스(IIS) 또는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]이 설치되어 있는지 확인하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 MDAC 2.0 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0이 필요하므로 이들이 설치되어 있지 않은 경우 설치 프로그램에서 설치합니다.  
   
 ##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint 모드 설치 관련 문제 해결  
   
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
  ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-###  <a name="bkmk_no_ssrs_service"></a>SharePoint 모드의 SQL Server 2016 SSRS를 설치한 후 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 표시 되지 않으면  
+###  <a name="bkmk_no_ssrs_service"></a> SharePoint 모드에서 SQL Server 2016 SSRS를 설치하면 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 나타나지 않습니다.  
  **설명:** 경우 성공적으로 설치한 후 SQL Server 2016 Reporting Services SharePoint 모드와는 SQL Server 2016 Reporting Services 추가 기능에서 SharePoint 2013/2016에 대 한 표시 되지 않으면 "SQL Server Reporting Services" 다음 두 메뉴에 다음 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 등록 되지 않았습니다.  
   
 -   SharePoint 2013/2016 중앙 관리 -> "응용 프로그램 관리" -> "서버의 서비스 관리" 페이지  
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/09/2017
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet을 사용할 수 없으며 명령이 인식되지 않습니다.  
  **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
--   'Install-SPRSServiceInstall-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다**. 이름의 철자, 경로 포함 여부와 경로가 올바른지 확인한 다음 다시 시도하세요. 줄:1 문자:39+ Install-SPRSServiceInstall-SPRSService <<<<  + CategoryInfo     : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
+-   'Install-SPRSServiceInstall-SPRSService' 용어는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 **인식되지 않습니다** . 이름의 철자, 경로 포함 여부와 경로가 올바른지 확인한 다음 다시 시도하세요. 줄:1 문자:39+ Install-SPRSServiceInstall-SPRSService <<<<  + CategoryInfo     : ObjectNotFound: (Install-SPRSServiceInstall-SPRSService:String) [], CommandNotFoundExcep  
   
  **해결 방법:** 다음 중 하나를 수행합니다.  
   
@@ -212,7 +212,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  명령 창을 열고 프롬프트에 다음 명령을 입력합니다.  
   
-    -   **실행 \< ** *.NET 4.0 Framework 디렉터리* **> \InstallUtil.exe \< ** *보고서 서버 Bin 디렉터리* **> \ReportingServicesLibrary.dll**  
+    -   **실행 \<**  *.NET 4.0 Framework 디렉터리* **> \InstallUtil.exe \<**  *보고서 서버 Bin 디렉터리* **> \ReportingServicesLibrary.dll**  
   
         > [!NOTE]  
         >  대체 \< *.NET 4.0 Framework 디렉터리*> 파일을.NET Framework 4.0의 실제 경로로 바꾸고 \< *보고서 서버 Bin 디렉터리*> 보고서 서버 bin 파일의 실제 경로로 바꿉니다.  

@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a90a566e3e100fff3bb17e838a368a82ac3f4f5
 ms.contentlocale: ko-kr
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/09/2017
   
  SharePoint 모드 보고서 서버는 확장을 위해 SharePoint 제품 인프라를 이용합니다. SharePoint 모드 확장은 SharePoint 팜에 SharePoint 모드 보고서 서버를 추가하여 수행됩니다. SharePoint 모드의 확장에 대한 자세한 내용은 [팜에 추가 보고서 서버 추가&#40;SSRS 확장&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)를 참조하세요.  
  
-  *확장 배포*는 다음과 같은 시나리오에서 사용됩니다.  
+  *확장 배포* 는 다음과 같은 시나리오에서 사용됩니다.  
   
 -   서버 클러스터에 있는 여러 보고서 서버의 부하 분산을 위한 선행 조건. 여러 보고서 서버의 부하를 분산하려면 먼저 같은 보고서 서버 데이터베이스를 공유하도록 구성해야 합니다.  
   
@@ -153,6 +153,6 @@ An error occurred within the report server database.  This may be due to a conne
 [보고서 서버 Url 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
 [보고서 서버 데이터베이스 연결 구성](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
 [추가 하 고 확장 배포에 대 한 암호화 키를 제거 합니다.](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
-[Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+[Reporting Services 기본 모드 보고서 서버를 관리 합니다.](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

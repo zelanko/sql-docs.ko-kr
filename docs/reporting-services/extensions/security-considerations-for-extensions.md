@@ -18,14 +18,14 @@ helpviewer_keywords:
 - permissions [Reporting Services], extensions
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 caps.latest.revision: 30
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c7e953f9beea75f08e6c87a210975172e5768d68
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 1d7c7d5f46e1340de1fca0422ff91f64c910a32d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-considerations-for-extensions"></a>확장 프로그램에 대한 보안 고려 사항
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="initialization-of-extension-assemblies"></a>확장 프로그램 어셈블리 초기화  
  일부 확장 프로그램 어셈블리에서 시스템 리소스 액세스, 구성 파일 읽기 및 다른 종속 어셈블리 로드 작업을 수행하려면 특정 권한이 필요하므로 보고서 서버에서 확장 프로그램이 메모리로 처음 로드될 때 서비스 계정 자격 증명이 사용됩니다. 하지만 어셈블리가 로드되고 초기화된 후 확장 프로그램 어셈블리에 대한 이후의 모든 호출에서는 현재 로그온한 사용자 계정의 자격 증명을 사용합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 확장 프로그램](../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services 확장 프로그램 라이브러리](../../reporting-services/extensions/reporting-services-extension-library.md)  
   

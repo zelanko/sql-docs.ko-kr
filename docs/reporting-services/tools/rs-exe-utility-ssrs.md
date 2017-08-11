@@ -23,14 +23,14 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 70f9afea9e9fe495c66ac98ea8ec4f3e9b1e3a6d
 ms.contentlocale: ko-kr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="rsexe-utility-ssrs"></a>RS.exe 유틸리티(SSRS)
+# <a name="rsexe-utility-ssrs"></a>RS.exe Utility (SSRS)
   RS.exe 유틸리티에서는 입력 파일에 제공된 스크립트를 처리합니다. 이 유틸리티를 사용하여 보고서 서버 배포 및 관리 태스크를 자동화할 수 있습니다.  
   
 > [!NOTE]  
@@ -126,10 +126,10 @@ rs –i c:\scriptfiles\script_copycontent.rss -s http://localhost/reportserver
 > [!TIP]  
 >  자세한 예제는 [보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트](../../reporting-services/tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 - [Reporting Services 스크립트 파일 실행](../../reporting-services/tools/run-a-reporting-services-script-file.md)   
 - [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
-- [Rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
-- [보고서 서버 명령 프롬프트 유틸리티 &#40; Ssrs&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
+- [rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)   
+- [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)  
   
   

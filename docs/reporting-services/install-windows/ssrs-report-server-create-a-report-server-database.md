@@ -18,7 +18,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 526abc46fe3b7fc3f923c29f4b4857b06f55a37c
 ms.contentlocale: ko-kr
@@ -30,9 +30,9 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**기본 모드** 두 개를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 저장할 보고서 서버 메타 데이터 및 개체입니다. 한 데이터베이스는 주 저장소로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하면 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다. 이 두 데이터베이스는 "보고서 서버 데이터베이스" 또는 "보고서 서버 카탈로그"로 통칭됩니다.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **기본 모드** 에서는 보고서 서버 메타데이터 및 개체를 저장하기 위해 두 개의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스를 사용합니다. 한 데이터베이스는 주 저장소로 사용되고 다른 데이터베이스는 임시 데이터를 저장하는 데 사용됩니다. 데이터베이스는 함께 생성되며 이름별로 바인딩됩니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하면 데이터베이스 이름은 각각 **reportserver** 와 **reportservertempdb**입니다. 이 두 데이터베이스는 "보고서 서버 데이터베이스" 또는 "보고서 서버 카탈로그"로 통칭됩니다.
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]**SharePoint 모드** 에 데이터 경고 메타 데이터에 사용 되는 세 번째 데이터베이스를 포함 합니다. 세 개의 데이터베이스가 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 만들어지고 데이터베이스 이름에는 기본적으로 서비스 응용 프로그램을 나타내는 GUID가 포함됩니다. 다음은 세 가지 SharePoint 모드 데이터베이스의 이름 예입니다.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **SharePoint 모드** 에는 데이터 경고 메타데이터에 사용되는 세 번째 데이터베이스를 포함합니다. 세 개의 데이터베이스가 각 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 만들어지고 데이터베이스 이름에는 기본적으로 서비스 응용 프로그램을 나타내는 GUID가 포함됩니다. 다음은 세 가지 SharePoint 모드 데이터베이스의 이름 예입니다.
 
 -   ReportingService_90a9f37075544f22953c4a62e4a9f370  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
 -   자동으로: 기본 구성 설치 옵션을 선택하는 경우 SQL Server 설치 마법사를 사용합니다. SQL Server 설치 마법사에서 이 옵션은 보고서 서버 설치 옵션 페이지의 **설치 및 구성** 입니다. **설치만** 옵션을 선택한 경우 Reporting Services 구성 관리자를 사용하여 데이터베이스를 만들어야 합니다.  
   
--   수동으로: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용합니다. 원격 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 사용하여 데이터베이스를 호스팅하는 경우 보고서 서버 데이터베이스를 수동으로 만들어야 합니다. 자세한 내용은 [기본 모드 보고서 서버 데이터베이스 만들기&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
+-   수동으로: [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용합니다. 원격 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 을 사용하여 데이터베이스를 호스팅하는 경우 보고서 서버 데이터베이스를 수동으로 만들어야 합니다. 자세한 내용은 참조 [기본 모드 보고서 서버 데이터베이스 &#40; 만들기 SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
  **SharePoint 모드:** 보고서 서버 설치 옵션 페이지에는 **설치 전용**인 SharePoint 모드 옵션 하나만 포함됩니다. 이 옵션은 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 및 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스를 설치합니다. 다음 단계에는 다음 방법 중 하나를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램을 하나 이상 만듭니다.  
   
@@ -83,4 +83,4 @@ ms.lasthandoff: 08/09/2017
 
 [Reporting Services 구성 관리자](http://msdn.microsoft.com/en-us/63519ef4-e68a-42fb-9cf7-31228ea4e434)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -16,7 +16,7 @@ caps.latest.revision: 53
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3439962e88c24980615d2f2648b56cc88505fa
 ms.contentlocale: ko-kr
@@ -76,7 +76,7 @@ ms.lasthandoff: 08/09/2017
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>다음 태스크  
-보고서에 대한 데이터를 검색하는 쿼리를 지정했습니다. 다음 단원에서는 보고서 레이아웃을 만듭니다. [4단원: 보고서에 테이블 추가&#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md)를 참조하세요.  
+보고서에 대한 데이터를 검색하는 쿼리를 지정했습니다. 다음 단원에서는 보고서 레이아웃을 만듭니다. 참조 [4 단원: 보고서 &#40;에 테이블 추가 Reporting services&#41; ](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a>관련 항목:  
 [쿼리 디자인 도구&#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  

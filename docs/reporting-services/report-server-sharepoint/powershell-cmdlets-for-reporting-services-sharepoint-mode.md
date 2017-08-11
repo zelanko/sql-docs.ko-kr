@@ -15,7 +15,7 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d68de45f8514de03e9804996da00d5f63d211311
 ms.contentlocale: ko-kr
@@ -33,7 +33,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능(예: 확장 및 암호화 키) 관리  
 
 ##  <a name="bkmk_cmdlet_sum"></a> Cmdlet 요약  
- cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)**를 사용할 수도 있습니다. 자세한 내용은 참조 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx)합니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
+ cmdlet을 실행하려면 SharePoint 관리 셸을 열어야 합니다. Microsoft Windows에 포함된 그래픽 사용자 인터페이스 편집기인 **Windows PowerShell ISE(통합 스크립팅 환경)**를 사용할 수도 있습니다. 자세한 내용은 [Windows Server에서 Windows PowerShell 시작](http://technet.microsoft.com/library/hh847814.aspx)를 사용할 수도 있습니다. 다음 cmdlet 요약에서 서비스 응용 프로그램에 대한 참조인 ‘databases’는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에서 만들고 사용하는 모든 데이터베이스를 말합니다. 여기에는 구성, 경고 및 임시 데이터베이스가 포함됩니다.  
   
  PowerShell 예제를 입력할 때 다음과 비슷한 오류 메시지가 표시됩니다.  
   
@@ -50,7 +50,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치 하면 SharePoint
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 자세한 내용은 참조 [SharePoint 2013 관리에 Windows PowerShell을 사용 하 여](http://technet.microsoft.com/library/ee806878.aspx)합니다.  
+ 자세한 내용은 [Windows PowerShell을 사용하여 SharePoint 2013 관리](http://technet.microsoft.com/library/ee806878.aspx)를 사용할 수도 있습니다.  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 관리 셸을 열고 cmdlet을 실행하려면  
   
@@ -280,8 +280,8 @@ Get-SPRSExtension -identity $app -ExtensionType “Data” | select name,extensi
 ## <a name="next-steps"></a>다음 단계
 
 [PowerShell을 사용하여 Reporting Services 구독 소유자 변경, 나열 및 구독 실행](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)  
-[검사 목록: PowerShell을 사용 하 여 SharePoint 용 파워 피벗을 확인 하려면](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
-[SQL Server powershell 도움말 보기](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
+[검사 목록: PowerShell을 사용하여 SharePoint용 PowerPivot 확인](../../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+[SQL Server PowerShell 도움말 보기](../../relational-databases/scripting/get-help-sql-server-powershell.md)   
 [CodePlex SharePoint 관리 PowerShell 스크립트](http://sharepointpsscripts.codeplex.com/)   
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

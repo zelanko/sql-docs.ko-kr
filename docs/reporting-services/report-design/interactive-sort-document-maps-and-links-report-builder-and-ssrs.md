@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f60696e601bc48d20384d9037f4e5f7a1b35d749
 ms.contentlocale: ko-kr
@@ -42,19 +42,19 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [대화형 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
+ [대화형 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-report-builder-and-ssrs.md)  
  열 머리글에 대화형 정렬 단추를 추가하는 방법을 설명합니다.  
   
- [문서 구조 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
+ [문서 구조 &#40; 만들기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-a-document-map-report-builder-and-ssrs.md)  
  목차를 추가하여 큰 보고서에서 탐색을 지원하는 방법을 설명합니다.  
   
- [보고서에 책갈피 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
+ [보고서 &#40;에 책갈피 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-bookmark-to-a-report-report-builder-and-ssrs.md)  
  책갈피를 추가하여 보고서 내에 링크를 만드는 방법을 설명합니다.  
   
- [URL에 하이퍼링크 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
+ [URL을 &#40;에 하이퍼링크 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)  
  보고서의 링크를 URL에 추가하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [드릴스루, 드릴 다운, 하위 보고서 및 중첩된 데이터 영역 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   

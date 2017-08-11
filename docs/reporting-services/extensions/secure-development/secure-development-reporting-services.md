@@ -18,14 +18,14 @@ helpviewer_keywords:
 - security [Reporting Services], strategies
 ms.assetid: 12161a6c-b93b-4312-9d27-0c922561eb9b
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: cb8a4502531dbe3ee23434ea126457196b56c701
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 335ffb51ba87298181e2907be36694c53c6eb701
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="secure-development-reporting-services"></a>안전한 개발(Reporting Services)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
  [보안 정책 이해](../../../reporting-services/extensions/secure-development/understanding-security-policies.md)  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 다양한 어셈블리 유형 및 코드 액세스 보안이 코드 사용 권한에 미치는 영향에 대해 설명합니다.  
   
- [Reporting Services 보안 정책 파일을 사용 하 여](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
+ [Reporting Services 보안 정책 파일 사용](../../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md)  
  여러 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 요소 및 해당 정책 구성 파일에 대해 설명합니다.  
   
   

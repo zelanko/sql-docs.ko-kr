@@ -18,7 +18,7 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ba05b4727499c702b9f8827de9564aad444c1ebc
 ms.contentlocale: ko-kr
@@ -87,6 +87,6 @@ ms.lasthandoff: 08/09/2017
 7.  **적용**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [SharePoint 사이트와 보고서 서버 항목에 대 한 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
   
   

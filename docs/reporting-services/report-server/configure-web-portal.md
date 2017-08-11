@@ -16,7 +16,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c0c6cc27711140e96bbf4420e8de596af53ddfcd
 ms.contentlocale: ko-kr
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 
 4. **적용**을 클릭합니다.
 
-5. 사용 중인 경우 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 또는 Windows Server 2008 추가 단계가 필요할 수도 웹 포털을 사용할 수 있습니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)를 참조하세요.
+5. 사용 중인 경우 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 또는 Windows Server 2008 추가 단계가 필요할 수도 웹 포털을 사용할 수 있습니다. 자세한 내용은 [로컬 관리에 대해 기본 모드 보고서 서버 구성&#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.
 
 ## <a name="configure-the-web-portal-to-use-a-specific-report-server-url"></a>특정 보고서 서버 URL을 사용 하려면 웹 포털 구성
 
@@ -102,7 +102,7 @@ Url을 구성할 때의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md
 [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   
 [Reporting Services 기능 설정 또는 해제](../../reporting-services/report-server/turn-reporting-services-features-on-or-off.md)   
 [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
-[RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [로컬 관리를 위한 기본 모드 보고서 서버 구성](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)
 
  문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

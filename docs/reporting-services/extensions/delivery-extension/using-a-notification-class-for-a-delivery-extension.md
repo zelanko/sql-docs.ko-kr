@@ -19,20 +19,20 @@ helpviewer_keywords:
 - Nofication class
 ms.assetid: 549c40c4-d33d-46c2-9d6a-7bbb671ac67a
 caps.latest.revision: 33
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 708144d726d97380f32d39ac88901e0f6d57ba0b
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 064d5556dca130324f69dd49d14f3caa76c8eec8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-a-notification-class-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 Notification 클래스 사용
   <xref:Microsoft.ReportingServices.Interfaces.Notification> 클래스는 <xref:Microsoft.ReportingServices.Interfaces> 네임스페이스에 있으며 배달 확장 프로그램에서 보고서 배달을 위해 사용하는 구독 정보를 나타냅니다. <xref:Microsoft.ReportingServices.Interfaces.Notification> 클래스는 배달용 보고서 렌더링, 알림 상태 결정 및 사용자 데이터 설정 작업을 수행하는 데 사용할 수 있는 다수의 속성을 제공합니다.  
   
- ![보고서 알림 프로세스](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "Report notification process")  
+ ![보고서 알림 프로세스](../../../reporting-services/extensions/delivery-extension/media/bk-ext-03.gif "알림 프로세스를 보고 합니다.")  
 배달의 핵심 개체인 알림  
   
  사용자 지정 배달 확장 프로그램을 사용하는 구독과 연결된 이벤트가 발생할 경우 <xref:Microsoft.ReportingServices.Interfaces.Report> 개체가 포함된 알림이 만들어집니다. <xref:Microsoft.ReportingServices.Interfaces.Report> 개체는 주어진 보고서를 지원되는 렌더링 형식으로 렌더링하는 데 필요한 기능을 캡슐화하며 서버에 있는 보고서 URL 및 보고서 이름과 같이 보고서 특정 속성을 포함합니다. 에 대 한 자세한 내용은 <xref:Microsoft.ReportingServices.Interfaces.Report> 클래스를 참조 하십시오. [Report 클래스를 사용 하 여 배달 확장 프로그램에 대 한](../../../reporting-services/extensions/delivery-extension/using-the-report-class-for-a-delivery-extension.md)합니다.  

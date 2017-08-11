@@ -15,7 +15,7 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7c537a08d262bfadf686e1c6555d1ce221f5aef7
 ms.contentlocale: ko-kr
@@ -27,9 +27,9 @@ ms.lasthandoff: 08/09/2017
 
   Word 렌더링 확장 프로그램은 페이지가 매겨진 보고서를  [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 형식(.docx)으로 렌더링합니다. 형식은 Office Open XML입니다.  
   
- 이 렌더러에 의해 생성된 파일의 콘텐츠 형식은 **application/vnd.openxmlformats-officedocument.wordprocessingml.document**이고 파일 확장명은 .docx입니다.  
+ 이 렌더러에 의해 생성된 파일의 콘텐츠 형식은 **application/vnd.openxmlformats-officedocument.wordprocessingml.document** 이고 파일 확장명은 .docx입니다.  
   
- Word로 내보내는 방법에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 참조 [보고서 &#40; 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) Word로 내보내는 방법에 대 한 자세한 내용은 합니다.  
   
  보고서를 Word 문서로 내보낸 후에는 보고서의 내용을 변경하고 우편물 레이블, 구매 주문서 또는 편지 양식과 같은 문서 스타일의 보고서를 디자인할 수 있습니다.  
   
@@ -167,7 +167,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 작성기가 연결되지 않은 모드이고 보고서 작성기에서 보고서를 미리 보는 경우.  
   
--   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)를 참조하세요.  
+-   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 참조 [로컬 모드 및 합니다. 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  **Word 2003** 렌더러가 표시되도록 구성된 경우 다음과 같은 시나리오에서 **Word** 및 **Word 2003** 메뉴 옵션을 사용할 수 있습니다.  
   

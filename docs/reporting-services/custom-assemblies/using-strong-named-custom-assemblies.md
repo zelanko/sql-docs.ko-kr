@@ -20,14 +20,14 @@ helpviewer_keywords:
 - custom assemblies [Reporting Services], strong-named
 ms.assetid: ca9f19d7-6e86-46f2-b9ad-9bf807eaa52e
 caps.latest.revision: 35
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 3c024efb9f8531ed9b87b0e2b7d7b22489a76dcf
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: cf8ee5462bd75ab82ea4296a5b71136cb2eb9ee9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="using-strong-named-custom-assemblies"></a>강력한 이름의 사용자 지정 어셈블리 사용
@@ -50,6 +50,6 @@ ms.lasthandoff: 06/22/2017
 >  때 **AllowPartiallyTrustedCallersAttribute** 가 있으면 기본 **FullTrustLinkDemand** 보안 검사가, 신뢰할 수 있는 어셈블리는 어셈블리를 부분적으로 호출할 수 있는 다른 하도록 합니다. 클래스 수준 또는 메서드 수준의 선언적 보안 특성을 포함한 모든 보안 검사는 명시적으로 지정되어야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서에 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

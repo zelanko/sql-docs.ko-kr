@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
 ms.contentlocale: ko-kr
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  보고서 서버 데이터베이스를 검색할 때 검색 범위에 해당 사용자의 내 보고서 폴더 내용만 포함되고 다른 사용자의 내 보고서 폴더 내용은 포함되지 않습니다. 검색 결과에는 사용자가 액세스할 수 있는 보고서만 나열됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

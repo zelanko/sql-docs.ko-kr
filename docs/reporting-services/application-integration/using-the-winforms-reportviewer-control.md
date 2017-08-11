@@ -19,7 +19,7 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4b6a64a6d5832461e7d1d73597499e6a67e4bc4b
 ms.contentlocale: ko-kr
@@ -33,7 +33,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  중 하나를 사용 하 여 새 Windows 응용 프로그램 만들기 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]합니다.  
   
-     \-또는-  
+     \- 또는-  
   
      기존 Windows 응용 프로그램 프로젝트를 열고 새 폼을 추가합니다.  
   

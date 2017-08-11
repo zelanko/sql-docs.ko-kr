@@ -22,7 +22,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c5e64ee5fa73b98d30797142ed6a3ed8f080bcb0
 ms.contentlocale: ko-kr
@@ -90,7 +90,7 @@ public void BackupEncryptionKey(string Server,
  SetDatabaseConnection 메서드는 지정된 계정에 권한을 부여하지 않습니다. 보고서 서버 데이터베이스에 액세스하고 결과 스크립트를 실행해야 하는 각 계정에 대해 [GenerateDatabaseRightsScript](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-generatedatabaserightsscript.md) 메서드를 호출해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

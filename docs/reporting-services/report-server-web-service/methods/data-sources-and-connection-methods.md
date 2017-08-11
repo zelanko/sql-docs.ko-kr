@@ -18,20 +18,20 @@ helpviewer_keywords:
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
 caps.latest.revision: 38
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 36f0d0867baea5aa6b13c2513c080a0502de496c
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 922c7fbd680a9d82713db30d8df5f0ae5a40401a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-sources-and-connection-methods"></a>데이터 원본 및 연결 메서드
   이러한 메서드를 사용하여 데이터 원본 연결 및 자격 증명을 설정하고 관리할 수 있습니다.  
   
-|메서드|작업|  
+|메서드|동작|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataSource%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에서 새 데이터 원본을 만듭니다.|  
 |<xref:ReportService2010.ReportingService2010.DisableDataSource%2A>|사용하도록 설정된 데이터 원본을 사용하지 않도록 설정합니다.|  

@@ -22,7 +22,7 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 06775389935ba0b9cf072fc8f417cfb52eac7811
 ms.contentlocale: ko-kr
@@ -61,7 +61,7 @@ public void DeleteEncryptionKeys(string InstallationID, out Int32 HRESULT,
  *DeleteEncryptionKey* 메서드는 보고서 서버 데이터베이스의 보안 정보에 대한 액세스 권한이 있는 보고서 서버의 키 테이블에서 항목을 삭제합니다. 지정된 *InstallationID* 매개 변수가 데이터베이스의 설치 ID와 일치하지 않으면 메서드에서 오류가 반환됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

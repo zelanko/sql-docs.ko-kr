@@ -16,7 +16,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8ce79884745b9e2fc9fbddfd7d312e982b2dd61c
 ms.contentlocale: ko-kr
@@ -35,12 +35,12 @@ Visual Studio 2015 및 ASP.NET 웹 응용 프로그램을 사용하여 ReportVie
   
 ## <a name="tasks"></a>태스크  
 [1단원: 새 웹 사이트 만들기](../reporting-services/lesson-1-create-a-new-web-site.md)  
-[2단원: 부모 보고서에 대한 데이터 연결 및 데이터 테이블 정의](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
-[3단원: 보고서 마법사를 사용하여 부모 보고서 디자인](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
-[4단원: 자식 보고서에 대한 데이터 연결 및 데이터 테이블 정의](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
-[5단원: 보고서 마법사를 사용하여 자식 보고서 디자인](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
+[2단원: 상위 보고서에 대한 데이터 연결 및 데이터 테이블 정의](../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)  
+[3단원: 보고서 마법사를 사용하여 상위 보고서 디자인](../reporting-services/lesson-3-design-the-parent-report-using-the-report-wizard.md)  
+[4단원: 하위 보고서에 대한 데이터 연결 및 데이터 테이블 정의](../reporting-services/lesson-4-define-a-data-connection-and-data-table-for-child-report.md)  
+[5단원: 보고서 마법사를 사용하여 하위 보고서 디자인](../reporting-services/lesson-5-design-the-child-report-using-the-report-wizard.md)  
 [6단원: 응용 프로그램에 ReportViewer 컨트롤 추가](../reporting-services/lesson-6-add-a-reportviewer-control-to-the-application.md)  
-[7단원: 부모 보고서에 드릴스루 동작 추가](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
+[7단원: 상위 보고서에 드릴스루 작업 추가](../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md)  
 [8단원: 데이터 필터 만들기](../reporting-services/lesson-8-create-a-data-filter.md)  
 [Lesson 9: Build and Run the Application](../reporting-services/lesson-9-build-and-run-the-application.md)  
   

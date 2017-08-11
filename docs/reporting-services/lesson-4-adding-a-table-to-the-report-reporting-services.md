@@ -16,7 +16,7 @@ caps.latest.revision: 64
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 76224139b629d797735b88bfcc692a1e8abce336
 ms.contentlocale: ko-kr
@@ -72,7 +72,7 @@ ms.lasthandoff: 08/09/2017
 > **파일** 메뉴에서 **모두 저장** 을 클릭하여 보고서를 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
-보고서에 테이블 데이터 영역을 추가하고, 데이터 영역에 필드를 추가하고, 보고서를 미리 보는 방법을 배웠습니다. 다음 단원에서는 열 머리글과 날짜 및 통화 값에 서식을 지정합니다. [5단원: 보고서 서식 지정&#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md)을 참조하세요.  
+보고서에 테이블 데이터 영역을 추가하고, 데이터 영역에 필드를 추가하고, 보고서를 미리 보는 방법을 배웠습니다. 다음 단원에서는 열 머리글과 날짜 및 통화 값에 서식을 지정합니다. 참조 [5 단원: 보고서 &#40; 서식 지정 Reporting services&#41; ](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>관련 항목:  
 [테이블&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

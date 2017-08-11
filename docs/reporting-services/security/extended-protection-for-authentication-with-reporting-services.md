@@ -15,7 +15,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3d0ba0f40d1d93f03a08b762d379cbe1242f0cd1
 ms.contentlocale: ko-kr
@@ -172,11 +172,11 @@ SSRS를 지원 하 고 운영 체제에서 활성화 되어 있는 확장 된 �
 ## <a name="next-steps"></a>다음 단계
 
 [확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)   
-[확장 된 보호에 대 한 인증 개요](http://go.microsoft.com/fwlink/?LinkID=177943)   
-[확장 된 보호와 함께 Windows 통합된 인증](http://go.microsoft.com/fwlink/?LinkId=179922)   
-[Microsoft 보안 공지: 인증에 대 한 확장 된 보호](http://go.microsoft.com/fwlink/?LinkId=179923)   
+[인증에 대한 확장된 보호 개요](http://go.microsoft.com/fwlink/?LinkID=177943)   
+[확장된 보호를 사용하는 Windows 통합 인증(Integrated Windows Authentication with Extended Protection)](http://go.microsoft.com/fwlink/?LinkId=179922)   
+[Microsoft 보안 공지: 인증에 대한 확장된 보호](http://go.microsoft.com/fwlink/?LinkId=179923)   
 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)   
-[RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
-[SetExtendedProtectionSettings 메서드 &#40; WMI msreportserver_configurationsetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
+[RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+[SetExtendedProtectionSettings 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

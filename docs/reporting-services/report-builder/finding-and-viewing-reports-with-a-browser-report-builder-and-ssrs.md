@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a94db96fd785ebaa1ed511f5bf9c6e262d180104
 ms.contentlocale: ko-kr
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
  보고서의 웹 주소를 모르는 경우 보고서 서버의 웹 주소를 연 다음 보고서 서버의 폴더 계층 구조를 탐색하여 원하는 보고서를 선택하고 표시할 수 있습니다. 다음 다이어그램에서는 브라우저 창에 표시되는 폴더 계층을 보여 줍니다.  
   
- ![브라우저의 폴더](../../reporting-services/report-builder/media/rs-browserfolder.GIF "Folders in a browser")  
+ ![브라우저의 폴더](../../reporting-services/report-builder/media/rs-browserfolder.GIF "브라우저의 폴더")  
 브라우저의 폴더  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/09/2017
 -   파일 이름 확장명은 리소스를 나타냅니다. 파일 이름 확장명은 리소스의 MIME 형식을 나타냅니다. 예를 들어 .jpg는 JPEG 형식의 이미지를 나타냅니다.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>보고서의 URL 주소 입력  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 보고서 서버의 특정 항목에 대한 URL 액세스를 지원합니다. 이 URL에는 보고서의 정규화된 경로와 보고서를 렌더링하기 위한 명령이 포함되어야 합니다. 보고서에 매개 변수가 포함되어 있으면 보고서를 여는 데 필요한 값도 모두 지정해야 합니다. 경로, 매개 변수 값 또는 렌더링 확장 프로그램에 공백이 포함된 보고서의 URL을 입력할 경우 원하는 결과를 얻으려면 URL 인코딩된 문자를 URL에 포함해야 합니다. 다음 예에서는 경로 이름, 매개 변수 및 렌더링 확장 프로그램에 공백에 대한 인코딩을 포함하는 보고서 URL을 보여 줍니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 보고서 서버의 특정 항목에 대한 URL 액세스를 지원합니다. 이 URL에는 보고서의 정규화된 경로와 보고서를 렌더링하기 위한 명령이 포함되어야 합니다. 보고서에 매개 변수가 포함되어 있으면 보고서를 여는 데 필요한 값도 모두 지정해야 합니다. 경로, 매개 변수 값 또는 렌더링 확장 프로그램에 공백이 포함된 보고서의 URL을 입력할 경우 원하는 결과를 얻으려면 URL 인코딩된 문자를 URL에 포함해야 합니다. 다음 예에서는 경로 이름, 매개 변수 및 렌더링 확장 프로그램에 공백에 대한 인코딩을 포함하는 보고서 URL을 보여 줍니다.  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   

@@ -14,7 +14,7 @@ caps.latest.revision: 3
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a4da31bb1ed09024c6278193e8011b5c7981922
 ms.contentlocale: ko-kr
@@ -44,5 +44,5 @@ ms.lasthandoff: 08/09/2017
    
 ### <a name="see-also"></a>참고 항목
 
--  [Reporting Services 모바일 보고서에 대 한 데이터](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
+-  [Data for Reporting Services mobile reports](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)
 -  [Prepare data for Reporting Services mobile reports](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md)

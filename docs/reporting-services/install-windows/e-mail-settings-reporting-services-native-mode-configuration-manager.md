@@ -18,7 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45aad2cc5dbdbc23fa28f1f70b138da4ec05f281
 ms.contentlocale: ko-kr
@@ -134,9 +134,9 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
 ## <a name="configuration-options-for-remote-smtp-service"></a>원격 SMTP 서비스를 위한 구성 옵션
 보고서 서버와 SMTP 서버 또는 전달자 간의 연결은 다음과 같은 구성 설정에 의해 결정됩니다.
 
-- `<SendUsing>` 은 메시지를 보내는 방법을 지정합니다. 네트워크 SMTP 서비스나 로컬 SMTP 서비스 선택 디렉터리 중에서 선택할 수 있습니다. 원격 SMTP 서비스를 사용하려면 RSReportServer.config 파일에서 이 값을 **2** 로 설정해야 합니다.
-- `<SMTPServer>` 는 원격 SMTP 서버 또는 전달자를 지정합니다. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.
-- `<From>` 은 메일 메시지의 **보낸 사람:** 줄에 표시할 값을 설정합니다. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.
+- `<SendUsing>`메시지를 보내는 방법을 지정 합니다. 네트워크 SMTP 서비스나 로컬 SMTP 서비스 선택 디렉터리 중에서 선택할 수 있습니다. 원격 SMTP 서비스를 사용하려면 RSReportServer.config 파일에서 이 값을 **2** 로 설정해야 합니다.
+- `<SMTPServer>`원격 SMTP 서버 또는 전달자를 지정 합니다. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.
+- `<From>`에 표시 되는 값을 설정 하는 **에서:** 전자 메일 메시지의 선입니다. 이 값은 원격 SMTP 서버 또는 전달자를 사용할 때 필요합니다.
 
 원격 SMTP 서비스에 사용되는 기타 값은 다음과 같습니다. 기본값을 재설정하지 않으려면 이 값을 지정할 필요가 없습니다.
 
@@ -228,7 +228,7 @@ Reporting Service에는 메일을 통해 보고서를 배포할 수 있는 메�
   
 ## <a name="see-also"></a>참고 항목  
 [Reporting Services 구성 관리자(기본 모드)](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
-[Reporting Services 구성 파일 (rsreportserver.config)를 수정 합니다.](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
+[Modify a Reporting Services Configuration File (rsreportserver.config)](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)  
 [Rsreportserver.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)
   
   

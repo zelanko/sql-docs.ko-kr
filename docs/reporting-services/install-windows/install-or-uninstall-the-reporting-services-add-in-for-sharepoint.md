@@ -14,7 +14,7 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cc931cf057da3d63bd23e7c6ca68ed6d6ec31de9
 ms.contentlocale: ko-kr
@@ -110,7 +110,7 @@ Rssharepoint.msi /?
   
          **CD %temp%**.  
   
-         이 파일은 다음 위치에 있습니다. **/Users\\<사용자 이름\>/AppData/Local/Temp**  
+         파일에 들어 있어야: **\Users\\< 사용자 이름\>\AppData\Local\Temp**  
   
     2.  다음 명령을 입력합니다. 이 구성 단계를 마치는 데 몇 분 정도 걸릴 수 있습니다. 이 프로세스 중 W3SVC 서비스가 다시 시작됩니다. 프로그램이 파일을 복사하고, 구성 요소를 등록하고, SharePoint 제품 구성 마법사를 실행하면서 해당 상태 메시지가 표시됩니다.  
   
@@ -277,6 +277,6 @@ Rssharepoint.msi /?
 ## <a name="see-also"></a>참고 항목
 
 [SharePoint 모드에서 첫 번째 보고서 서버 설치](http://msdn.microsoft.com/en-us/b29d0f45-0068-4c84-bd7e-5b8a9cd1b538)   
-[Reporting Services 보고서 서버 &#40; SharePoint 모드 &#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
+[Reporting Services 보고서 서버&#40;SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

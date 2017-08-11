@@ -21,7 +21,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6d7a1e1b9b0c8fb3fe60022f79ebfd21d6c44a09
 ms.contentlocale: ko-kr
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 서버에서 다른 보고서 서버 데이터베이스를 사용하도록 구성  
   
--   데이터베이스 연결에 사용되는 사용자 계정 또는 암호 변경. 계정 정보가 RSReportServer.config 파일에 저장되어 있는 경우에는 데이터베이스 연결만 업데이트하면 됩니다. 연결 시 Windows 통합 보안을 자격 증명 유형으로 사용하는 서비스 계정을 사용하는 경우에는 암호가 저장되지 않으므로 연결 정보를 업데이트할 필요가 없습니다. 계정 변경에 대한 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  
+-   데이터베이스 연결에 사용되는 사용자 계정 또는 암호 변경. 계정 정보가 RSReportServer.config 파일에 저장되어 있는 경우에는 데이터베이스 연결만 업데이트하면 됩니다. 연결 시 Windows 통합 보안을 자격 증명 유형으로 사용하는 서비스 계정을 사용하는 경우에는 암호가 저장되지 않으므로 연결 정보를 업데이트할 필요가 없습니다. 계정 변경에 대한 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)을 참조하세요.  
   
 -   보고서 서버 확장 배포 구성. 확장 배포를 구성하려면 보고서 서버 데이터베이스에 대해 다중 연결을 만들어야 합니다. 이러한 다중 단계 작업을 수행하는 방법은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
@@ -70,7 +70,7 @@ ms.lasthandoff: 08/09/2017
  제공하는 자격 증명에는 보고서 서버 데이터베이스에 대한 액세스 권한을 부여해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하면 이 단계가 자동으로 수행됩니다. 데이터베이스에 액세스하는 데 필요한 권한에 대한 자세한 내용은 이 항목의 "데이터베이스 권한" 섹션을 참조하십시오.  
   
 ### <a name="storing-database-connection-information"></a>데이터베이스 연결 정보 저장  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 다음 RSreportserver.config 설정에 연결 정보를 저장 및 암호화합니다. 이러한 설정에 대해 암호화된 값을 만들려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구 또는 rsconfig 유틸리티를 사용해야 어야 합니다.  
   
  모든 연결 유형에 대해 모든 값이 설정되는 것은 아닙니다. (즉, 서비스 계정 연결을 만들)에서 기본값을 사용 하 여 연결을 구성 하는 경우 \< **LogonUser**>, \< **LogonDomain**>, 및 \< **LogonCred**>가 비게 됩니다 다음과 같습니다.  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/09/2017
 ##### <a name="using-service-accounts-and-integrated-security"></a>서비스 계정 및 통합 보안 사용  
  Windows 통합 보안을 사용하면 보고서 서버 서비스 계정을 통해 연결할 수 있습니다. 이 계정에는 보고서 서버 데이터베이스에 대한 로그인 권한이 부여됩니다. 이 유형은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 구성으로 설치하는 경우 설치 프로그램에서 선택하는 기본 자격 증명 유형입니다.  
   
- 서비스 계정은 보고서 서버 데이터베이스 연결을 최소한의 수준으로 유지 관리하는 트러스트된 계정입니다. 서비스 계정에서는 Windows 통합 보안을 사용하여 연결을 설정하기 때문에 자격 증명을 저장할 필요가 없습니다. 그러나 기본 제공 계정을 도메인 계정으로 전환하는 등 이후에 서비스 계정 암호나 ID를 변경하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 변경해야 합니다. 이 도구는 데이터베이스 권한을 자동으로 업데이트하여 수정된 계정 정보를 사용합니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)를 참조하세요.  
+ 서비스 계정은 보고서 서버 데이터베이스 연결을 최소한의 수준으로 유지 관리하는 트러스트된 계정입니다. 서비스 계정에서는 Windows 통합 보안을 사용하여 연결을 설정하기 때문에 자격 증명을 저장할 필요가 없습니다. 그러나 기본 제공 계정을 도메인 계정으로 전환하는 등 이후에 서비스 계정 암호나 ID를 변경하는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 변경해야 합니다. 이 도구는 데이터베이스 권한을 자동으로 업데이트하여 수정된 계정 정보를 사용합니다. 자세한 내용은 [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)을 참조하세요.  
   
  데이터베이스 연결에서 서비스 계정을 사용하도록 구성하는 경우 보고서 서버 데이터베이스가 원격 컴퓨터에 있으면 해당 계정에 네트워크 사용 권한이 있어야 합니다. 보고서 서버 데이터베이스가 방화벽 뒤에 있는 다른 도메인에 있거나 도메인 보안 대신 작업 그룹 보안을 사용하는 경우에는 서비스 계정을 사용하지 말고 대신 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용자 계정을 사용하십시오.  
   
@@ -132,7 +132,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계
 
 [보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
-[Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
+[Reporting Services 기본 모드 보고서 서버를 관리 합니다.](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
 [보고서 서버 서비스 계정 구성](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

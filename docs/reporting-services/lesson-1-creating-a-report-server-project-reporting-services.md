@@ -14,7 +14,7 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
 ms.contentlocale: ko-kr
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)]를 엽니다.  
   
-2.  **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 클릭합니다.  
+2.  에 **파일** 메뉴 > **새로** > **프로젝트**합니다.  
 
     ![ssrs-ssdt-file-01-new-project](../reporting-services/media/ssrs-ssdt-file-01-new-project.png)
   
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/09/2017
     **보고서 데이터** 창에서 데이터를 정의합니다. **디자인** 뷰에서는 보고서 레이아웃을 정의합니다. 보고서를 실행하고 **미리 보기** 뷰에서 보고서의 모양을 볼 수 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-"Tutorial" 보고서 프로젝트를 만들고 보고서 정의 파일(.rdl)을 보고서 프로젝트에 추가했습니다. 다음 단원에서는 보고서에 사용할 데이터 원본을 지정합니다. [2단원: 연결 정보 지정&#40;Reporting Services&#41;](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md)을 참조하세요.  
+"Tutorial" 보고서 프로젝트를 만들고 보고서 정의 파일(.rdl)을 보고서 프로젝트에 추가했습니다. 다음 단원에서는 보고서에 사용할 데이터 원본을 지정합니다. 참조 [2 단원: 연결 정보 &#40;를 지정 합니다. Reporting services&#41; ](../reporting-services/lesson-2-specifying-connection-information-reporting-services.md).  
   
 ## <a name="see-also"></a>관련 항목:  
 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  

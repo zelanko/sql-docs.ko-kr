@@ -21,14 +21,14 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a92c37165b8142b7e96a8bb99dee43ea5f12e247
 ms.contentlocale: ko-kr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="grant-user-access-to-a-report-server"></a>보고서 서버에 대 한 사용자 액세스를 부여 합니다.
+# <a name="grant-user-access-to-a-report-server"></a>보고서 서버에 데이터베이스 액세스 권한 부여
 
 [!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
 
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/09/2017
 
 기본 모드 보고서 서버에 사용자를 추가하기 전에 다음 목록을 검토합니다.
 
-- 보고서 서버 컴퓨터에서 로컬 관리자 그룹의 멤버여야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 Windows Server 2008에서 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 를 배포하는 경우 보고서 서버를 로컬로 관리하려면 추가 구성이 필요합니다. 자세한 내용은 참조 [로컬 관리를 위한 기본 모드 보고서 서버 구성](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.
+- 보고서 서버 컴퓨터에서 로컬 관리자 그룹의 멤버여야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 Windows Server 2008에서 [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)] 를 배포하는 경우 보고서 서버를 로컬로 관리하려면 추가 구성이 필요합니다. 자세한 내용은 [로컬 관리용으로 기본 모드 보고서 서버 구성](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.
 
 - 이 태스크를 다른 사용자에게 위임하려면 사용자 계정을 내용 관리자 및 시스템 관리자 역할에 매핑하는 역할 할당을 만듭니다. 내용 관리자 및 시스템 관리자 권한이 있는 사용자는 보고서 서버에 사용자를 추가할 수 있습니다.
 

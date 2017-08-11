@@ -24,7 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
 ms.contentlocale: ko-kr
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  이전 네임스페이스용으로 만든 보고서의 .rdl 파일을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 열면 자동으로 백업 파일이 만들어지고 보고서가 현재 네임스페이스로 업그레이드됩니다. 이 방법은 보고서 정의 파일을 업그레이드할 수 있는 유일한 방법입니다.  
   
- 설정한 배포 속성은 보고서 정의 파일이 저장된 스키마에 영향을 줄 수 있습니다. 자세한 내용은 [Deployment and Version Support in SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)를 참조하세요.  
+ 설정한 배포 속성은 보고서 정의 파일이 저장된 스키마에 영향을 줄 수 있습니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)을 참조하세요.  
   
  이전 버전의에서 만든.rdl 파일을 업로드할 수 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 새 버전은 자동으로 처음 사용할 때 업그레이드 합니다. 보고서 서버는 보고서 정의 파일을 원래 형식으로 저장합니다. 보고서는 처음 볼 때 자동으로 업그레이드되지만 저장된 보고서 정의 파일은 변경되지 않은 상태로 유지됩니다.  
   
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/09/2017
   
      자세한 내용은 이 항목의 뒷부분에 나오는 [보고서 디자이너에서 CRI가 있는 보고서 열기](#OpeningaReport) 를 참조하세요.  
   
- 보고서 서버, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 보고서의 현재 RDL 네임스페이스를 확인하는 방법은 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
+ 보고서 서버에 대 한 현재 RDL 네임 스페이스 확인에 대 한 내용은 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], 또는 참조는 보고서 [보고서 정의 스키마 버전 &#40; 찾기 Ssrs&#41; ](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md).  
   
 ### <a name="upgrading-reports-on-a-report-server"></a>보고서 서버에서 보고서 업그레이드  
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]보고서 서버로 업그레이드된 보고서 서버에서 처음으로 실행하는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 또는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서는 보고서 서버에서 지원하는 현재 보고서 정의 네임스페이스로 자동 업그레이드됩니다. 보고서는 업그레이드 전에 보고서 서버에 있었을 수도 있고, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 보고서 디자이너에서 보고서 서버로 게시되었거나 보고서 관리자를 통해 업로드되었을 수도 있습니다.  
@@ -147,9 +147,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계
 
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016에서에서 SQL Server Reporting Services의 주요 변경 내용](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server 2016에서에서 SQL Server Reporting Services의 동작 변경](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server 2016에서에서 SQL Server Reporting Services에 지원 되지 않는 기능](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
+[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)   
 [보고서 서버 데이터베이스 업그레이드](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 

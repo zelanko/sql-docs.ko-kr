@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8ec3b39a36a6020a6655e7c7e7c2a589266f3fc
 ms.contentlocale: ko-kr
@@ -60,7 +60,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="rendering-extensions"></a>렌더링 확장 프로그램  
  렌더링 확장 프로그램은 보고서 처리기의 데이터 및 레이아웃 정보를 장치 특정 형식으로 변환합니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에는 HTML, Excel, CSV, XML, 이미지, PDF 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 단어의 7개 렌더링 확장 프로그램이 포함되어 입습니다.  
   
--   **HTML 렌더링 확장 프로그램** 웹 브라우저를 통해 보고서 서버에서 보고서를 요청할 때 보고서 서버는 HTML 렌더링 확장 프로그램을 사용하여 보고서를 렌더링합니다. HTML 렌더링 확장 프로그램은 UTF-8 인코딩을 사용하여 모든 HTML을 생성합니다. 자세한 내용은 [HTML로 렌더링&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) 및 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
+-   **HTML 렌더링 확장 프로그램** 웹 브라우저를 통해 보고서 서버에서 보고서를 요청할 때 보고서 서버는 HTML 렌더링 확장 프로그램을 사용하여 보고서를 렌더링합니다. HTML 렌더링 확장 프로그램은 UTF-8 인코딩을 사용하여 모든 HTML을 생성합니다. 자세한 내용은 참조 [HTML &#40;로 렌더링 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md) 및 [Reporting Services 및 Power View 브라우저 지원](../reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.  
   
 -   **Excel 렌더링 확장 프로그램** Excel 렌더링 확장 프로그램은 [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 97 이상에서 보고 수정할 수 있는 보고서를 렌더링합니다. 이 렌더링 확장 프로그램은 BIFF(Binary Interchange File Format) 파일을 만듭니다. BIFF는 Excel 데이터에 대한 네이티브 파일 형식입니다. [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] 에서 렌더링한 보고서는 스프레드시트에서 사용할 수 있는 모든 기능을 지원합니다. 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.  
   

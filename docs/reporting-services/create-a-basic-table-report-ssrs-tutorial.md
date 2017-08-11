@@ -20,7 +20,7 @@ caps.latest.revision: 67
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7cd0ab1950eeaf54da67e7f8dd5bb2da89a26307
 ms.contentlocale: ko-kr
@@ -66,4 +66,4 @@ ms.lasthandoff: 08/09/2017
 
 [Reporting Services 자습서](../reporting-services/reporting-services-tutorials-ssrs.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

@@ -19,7 +19,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4ea69363565456fda2c1adc7d48d60c6a0bef8f7
 ms.contentlocale: ko-kr
@@ -81,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
  다른 컴퓨터에서 보고서 관리자를 시작하여 포트가 제대로 열리는지 확인할 수도 있습니다. 자세한 내용은 참조 [보고서 관리자 &#40; SSRS 기본 모드 &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [보고서 서버 Url &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
  [보고서 서버 데이터베이스 &#40; 만들기 SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   

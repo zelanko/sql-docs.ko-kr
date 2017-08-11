@@ -15,7 +15,7 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c398f3e0b6e3d6eae50fbd9f2bad35c47524c808
 ms.contentlocale: ko-kr
@@ -33,27 +33,27 @@ ms.lasthandoff: 08/09/2017
  이 섹션의 항목에서는 보고서에 간단한 식을 작성하는 방법에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
+ [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)  
   
- [식의 상수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
+ [식 &#40;의 상수 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/constants-in-expressions-report-builder-and-ssrs.md)  
   
- [식의 연산자&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
+ [식 &#40;의 연산자 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/operators-in-expressions-report-builder-and-ssrs.md)  
   
- [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
+ [식 &#40;의 기본 제공 컬렉션 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)  
   
- [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
+ [기본 제공 Globals 및 Users 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)  
   
- [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [매개 변수 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
- [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
+ [데이터 집합 필드 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)  
   
- [DataSources 및 DataSets 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
+ [DataSources 및 DataSets 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)  
   
- [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
+ [보고서 및 그룹 변수 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
- [ReportItems 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
+ [ReportItems 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-reportitems-collection-references-report-builder.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

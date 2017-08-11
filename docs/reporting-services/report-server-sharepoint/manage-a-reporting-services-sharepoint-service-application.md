@@ -15,7 +15,7 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f0930c8f5d3b0af4460c3deac2b8aa780e1f2568
 ms.contentlocale: ko-kr
@@ -98,7 +98,7 @@ ms.lasthandoff: 08/09/2017
 |실행 로깅 사용|기본값은 TRUE입니다.<br /><br /> 보고서 서버에서 추적 로그를 생성할지 여부와 로그를 보관할 일 수를 지정합니다. 를 클릭합니다. 로그는 보고서 서버 컴퓨터의 \Microsoft SQL Server\MSSQL.n\ReportServer\Log 폴더에 저장됩니다. 서비스가 다시 시작될 때마다 새 로그 파일이 시작됩니다. 로그 파일에 대한 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |실행 로그 보관 일 수|기본값은 60일입니다.|  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SharePoint ULS 로깅을 지원합니다.  자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SharePoint ULS 로깅을 지원합니다.  자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)을 참조하세요.  
   
 ###  <a name="bkmk_security_settings_section"></a> 보안 설정  
   

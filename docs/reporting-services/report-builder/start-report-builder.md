@@ -20,7 +20,7 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e99d13a8e80a0ed2a5e584dcc0e20591507f8c92
 ms.contentlocale: ko-kr
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="start-report-builder"></a>보고서 작성기 시작
 
-[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]독립 실행형 보고서 제작 환경입니다. 보고서 작성기를 사용하면 페이지를 매긴 보고서를 만들어 기본 또는 SharePoint 통합 모드에서 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 게시할 수 있습니다.  
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 는 독립 실행형 보고서 제작 환경입니다. 보고서 작성기를 사용하면 페이지를 매긴 보고서를 만들어 기본 또는 SharePoint 통합 모드에서 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 게시할 수 있습니다.  
   
  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 처음으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 시작하면 Microsoft 다운로드 센터에서 다운로드하라는 메시지가 표시됩니다. 
  
@@ -73,6 +73,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
-[보고서 작성기에 대 한 기본 옵션 설정](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
+[보고서 작성기에 대한 기본 옵션 설정](../../reporting-services/report-builder/set-default-options-for-report-builder.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

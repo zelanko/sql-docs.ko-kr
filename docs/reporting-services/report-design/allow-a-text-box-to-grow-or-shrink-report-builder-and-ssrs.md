@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abb928e42a7420b421c91f6b5f78256213cb5df9
 ms.contentlocale: ko-kr
@@ -36,6 +36,6 @@ ms.lasthandoff: 08/09/2017
     -   입력란이 해당 내용에 따라 줄어들 수 있게 하려면 **높이 감소 허용**을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [입력란&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [텍스트 상자 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

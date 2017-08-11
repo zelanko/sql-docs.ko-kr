@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b68204ab4c9a008db7c43d2c568d1c3ccedbcb7a
 ms.contentlocale: ko-kr
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계
 
 [SharePoint에서 보고서 서버 및 파워 뷰 통합 사이트 모음 기능 활성화](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
-[사이트 설정 및 사이트 기능 &#40; reporting Services SharePoint 모드 &#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
+[Reporting Services 사이트 설정 및 사이트 기능&#40;SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/site-settings-and-features-reporting-services.md)   
 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

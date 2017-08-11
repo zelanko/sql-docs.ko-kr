@@ -16,7 +16,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4d862dc34dcbb81ce8d50cfac53d81a80f47d29c
 ms.contentlocale: ko-kr
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
     GO  
     ```  
   
-7.  **! 실행**을 도구 모음에서 클릭합니다.  
+7.  **! 실행** 도구 모음입니다.  
   
 8.  SELECT 문을 사용하여 세 개의 데이터 행이 있는지 확인합니다. 예를 들어 `select * from OrderInfo`  
   

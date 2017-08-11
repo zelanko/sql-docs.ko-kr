@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8533cd39c8a3d5efde78fee3e045eb744d562a97
 ms.contentlocale: ko-kr
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 웹 포털에서 보고서를 엽니다.  
   
-2.  테이블에서 데이터 행을 마우스 오른쪽 단추로 클릭한 다음 **그룹 추가** > **상위 그룹** 을 클릭하여 외부 테이블 그룹을 추가합니다.  
+2.  테이블에서 데이터 행을 마우스 오른쪽 단추로 클릭한 다음 **그룹 추가** > **상위 그룹**을 클릭하여 외부 테이블 그룹을 추가합니다.  
   
      ![부모 그룹 선택](../../reporting-services/report-builder/media/datarow-selectparentgroup.png "부모 그룹 선택")  
   

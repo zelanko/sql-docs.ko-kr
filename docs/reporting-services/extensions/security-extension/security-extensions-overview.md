@@ -16,14 +16,14 @@ helpviewer_keywords:
 - security [Reporting Services], extensions
 ms.assetid: 24ccd795-6506-457c-93ac-6a9dd6bb9a46
 caps.latest.revision: 22
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: df3ae2c8b5ccde0beffeb2f3f18d68bdb4c4a782
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: f7e8c95a478e733722d3c80da4b5e12e992ef4da
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="security-extensions-overview"></a>보안 확장 프로그램 개요
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
   
 -   사용자가 정의한 사용자 및 역할이 있고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 대응하는 권한 부여 체계를 제공해야 하는 경우  
   
-## <a name="see-also"></a>참고 항목  
- [Implementing a Security Extension](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+## <a name="see-also"></a>관련 항목:  
+ [보안 확장 프로그램 구현](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
  [사용자 지정 인증 쿠키를 전달 하도록 보고서 관리자 구성](https://msdn.microsoft.com/library/ms345241(v=sql.110).aspx)  
   
   

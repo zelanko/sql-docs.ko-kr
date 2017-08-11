@@ -18,7 +18,7 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a5a77b4a1dcf646e82658fb61697b82f7e5e807f
 ms.contentlocale: ko-kr
@@ -32,13 +32,13 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
+ [보고서, 보고서 파트 및 보고서 정의 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)  
  사용자에게 표시되는 초기 정의, 게시된 보고서 및 표시된 보고서를 비롯한 여러 상태의 보고서를 설명하는 데 사용되는 다양한 용어에 대해 설명합니다.  
   
  [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
  포함된 데이터 집합을 만들고, 저장하고, 관리하는 방법과 공유 데이터 집합을 만들고, 저장하고, 관리하는 방법의 차이점에 대해 설명합니다.  
   
- [데이터 영역 및 지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
+ [데이터 영역 및 지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  보고서 레이아웃에 추가할 수 있는 데이터 영역 유형에 대해 설명합니다. 데이터 영역에 따라 보고서 모양이 테이블 형식, 행렬, 목록 또는 차트 중 하나로 결정됩니다.  
   
  [보고서 매개 변수 개념(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/ee240844.aspx)  

@@ -15,14 +15,14 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe007313e57ec01c5c456b0623b642555a25bf35
 ms.contentlocale: ko-kr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="data-for-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에 대 한 데이터
+# <a name="data-for-reporting-services-mobile-reports"></a>Data for Reporting Services mobile reports
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 데이터 모델은 간단 합니다. 데이터는 데이터 집합의 컬렉션으로 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] 로 가져옵니다. 데이터 집합 간의 형식 관계는 필요하지 않습니다. 데이터 집합 간의 조회는 키 값이 일치하는 한 작동합니다. 날짜/시간 집계는 모바일 보고서 런타임을 통해 처리되며 데이터 집합 간에 날짜/시간 데이터 세분성이 달라도 데이터 집합 간의 집계 일치 여부를 확인합니다.   
   
 다음과 같은 두 가지 유형의 원본에서 데이터를 가져올 수 있습니다.   

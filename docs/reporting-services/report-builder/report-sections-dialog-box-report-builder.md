@@ -17,7 +17,7 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 77323d7f01b54345cce6354b800808b88e6ab21e
 ms.contentlocale: ko-kr
@@ -34,6 +34,6 @@ ms.lasthandoff: 08/09/2017
  계속하려면 **확인** 을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

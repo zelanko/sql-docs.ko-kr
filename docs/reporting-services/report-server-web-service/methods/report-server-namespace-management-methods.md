@@ -19,20 +19,20 @@ helpviewer_keywords:
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
 caps.latest.revision: 37
-author: sabotta
+author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 1550f5e7c429df8fa6ee660fd00fa79047296e55
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 62bb63d2625e520f4808697677c12f27b4e4ece3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="report-server-namespace-management-methods"></a>보고서 서버 네임스페이스 관리 메서드
   보고서 서버 관리 웹 서비스에는 보고서 서버 데이터베이스에서 보고서, 폴더 및 리소스를 관리하는 데 사용할 수 있는 메서드가 포함됩니다.  
   
-|메서드|작업|  
+|메서드|동작|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|작업 실행을 취소합니다.|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|보고서 서버 데이터베이스 또는 SharePoint 라이브러리에 폴더를 추가합니다.|  

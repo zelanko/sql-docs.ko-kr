@@ -17,7 +17,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 551b909cce14da7e6aeb277234a430cace112ed7
 ms.contentlocale: ko-kr
@@ -38,6 +38,6 @@ ms.lasthandoff: 08/09/2017
  웹 서비스에 로그인할 암호를 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
+ [대화 상자, 창 및 마법사에 대 한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)  
   
   

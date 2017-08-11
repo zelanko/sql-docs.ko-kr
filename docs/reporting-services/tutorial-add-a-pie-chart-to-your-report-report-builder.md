@@ -16,7 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e28719a7ee1f1610e8e673711958592837198046
 ms.contentlocale: ko-kr
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/09/2017
 원형 차트에 데이터 요소가 너무 많으면 데이터 요소 레이블이 복잡해져서 가독성이 떨어질 수 있습니다. 이 경우 여러 개의 작은 조각을 하나의 큰 조각으로 결합하는 것이 좋습니다. 데이터를 몇 개의 데이터 요소로 집계하면 원형 차트를 더 쉽게 읽을 수 있습니다.  
  
 > [!NOTE]  
-> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 보고서 서버를 찾고 데이터 원본을 추가하고 데이터 집합을 추가하는 방법에 대한 단계별 지침은 이 시리즈의 첫 번째 자습서인 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
+> 이 자습서에서 마법사의 단계는 두 개의 절차로 통합됩니다. 데이터 소스를 추가 하 고 데이터 집합을 추가 하는 보고서 서버로 이동 하는 방법에 대 한 단계별 지침은이 시리즈의 첫 번째 자습서를 참조 하십시오: [자습서: 기본 테이블 보고서 &#40; 만들기 보고서 작성기 &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 이 자습서에 소요되는 예상 시간: 10분  
   
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/09/2017
 5.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택하고 **다음**을 클릭합니다. 사용자 이름과 암호를 입력해야 할 수 있습니다.  
   
     > [!NOTE]  
-    > 적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > 적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 6.  **쿼리 디자인** 페이지에서 **텍스트로 편집**을 클릭합니다.  
   
@@ -143,7 +143,7 @@ ms.lasthandoff: 08/09/2017
 
 1.  보고서 디자인 뷰로 전환합니다.  
   
-2.  속성 창이 표시되지 않는 경우 **보기** 탭 > **표시/숨기기** 그룹 > **속성**을 선택합니다.  
+2.  에 속성 창이 표시 되지 않은 경우는 **보기** 탭 > **표시/숨기기** 그룹 > 선택 **속성**합니다.  
   
 3.  디자인 화면에서 원형 차트의 조각을 아무 것이나 클릭합니다. 계열의 속성이 속성 창에 표시됩니다.  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  **Camera and Camcorder Sales**를 선택하고 **홈** 탭 > **글꼴** 섹션에서 > **굵게**를 클릭합니다.  
   
-4.  **As a Percentage of Total Sales**를 선택하고 **홈** 탭 > **글꼴** 섹션에서 > 글꼴 크기를 **10**으로 설정합니다.  
+4.  선택 **으로 a Percentage of Total Sales**, 및는 **홈** 탭 > **글꼴** 섹션 > 글꼴 크기를 설정 **10**합니다.  
   
 5.  (선택 사항) 제목 입력란을 두 줄 텍스트를 포함하도록 크게 만들어야 할 수 있습니다.  
   
@@ -220,7 +220,7 @@ ms.lasthandoff: 08/09/2017
 보고서가 보고서 서버에 저장됩니다.  
   
 ## <a name="next-steps"></a>다음 단계  
-보고서에 원형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대한 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
+보고서에 원형 차트 추가 자습서를 성공적으로 완료했습니다. 차트에 대 한 자세한 참조 [차트 &#40; 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-design/charts-report-builder-and-ssrs.md) 및 [스파크 라인 및 데이터 막대 &#40; 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>관련 항목:  
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md)  

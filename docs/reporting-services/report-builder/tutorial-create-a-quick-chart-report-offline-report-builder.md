@@ -19,7 +19,7 @@ caps.latest.revision: 31
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a09ebdeda6679c80f3eb32602d38068114e7bf36
 ms.contentlocale: ko-kr
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 7.  **연결 유형 선택** 상자에서 **XML**을 클릭합니다.  
   
-8.  **자격 증명** 탭을 클릭하고 **현재 Windows 사용자 사용을 선택하세요. Kerberos 위임이 필요할 수도 있습니다.**를 선택한 후 **확인**을 클릭합니다.  
+8.  클릭는 **자격 증명** 탭에서 **현재 Windows 사용자를 사용 합니다. Kerberos 위임이 필요할 수도**, 클릭 하 고 **확인**합니다.  
   
 9. **데이터 원본에 대한 연결 선택** 페이지에서 **MyPieChart**를 클릭하고 **다음**을 클릭합니다.  
   
@@ -234,11 +234,11 @@ ms.lasthandoff: 08/09/2017
   
  마지막으로, 보고서를 보고서 서버나 보고서 서버와 통합된 SharePoint 사이트에 저장하려면 URL 및 해당 권한이 있어야 합니다. 만든 보고서를 사용자의 컴퓨터에서 직접 실행할 수도 있지만 보고서 서버나 SharePoint 사이트에서 실행하면 더 많은 기능을 사용할 수 있습니다. 자신이 만든 보고서나 다른 사용자의 보고서를 보고서가 게시된 보고서 서버나 SharePoint 사이트에서 실행할 수 있는 권한이 있어야 합니다. 시스템 관리자에게 액세스 권한을 요청하십시오.  
   
- 시작하기 전에 몇 가지 개념이나 용어에 대해 알아 두면 좋습니다. [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41; SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)를 참조하세요. 또한 처음 보고서를 만들 때는 사전에 시간을 들여 계획을 세우는 것이 좋습니다. [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)를 참조하세요.  
+ 시작하기 전에 몇 가지 개념이나 용어에 대해 알아 두면 좋습니다. 참조 [보고서 제작 개념 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). 또한 처음 보고서를 만들 때는 사전에 시간을 들여 계획을 세우는 것이 좋습니다. [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)를 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 
 [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)   
 [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

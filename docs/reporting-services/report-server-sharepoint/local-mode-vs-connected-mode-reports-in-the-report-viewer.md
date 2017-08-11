@@ -15,7 +15,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ca6519365ae81c5a7875825fb976c163dbb588f3
 ms.contentlocale: ko-kr
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/09/2017
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드|  
   
  **항목 내용**  
   
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/09/2017
   
  아래에는 로컬 모드 보고를 지원하는 데이터 처리 확장 프로그램이 나열되어 있습니다.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access 2010 보고서 확장 프로그램. Access Services에 대한 자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)를 참조하세요.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]Access 2010 보고서 확장 프로그램입니다. Access Services에 대한 자세한 내용은 [SQL Reporting Services와 함께 Access Services 사용: SQL Server 2008 R2 Reporting Services 추가 기능 설치(SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=192686)를 참조하세요.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램. SharePoint 목록 데이터 확장 프로그램에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램. SharePoint 목록 데이터 확장 프로그램에 대한 자세한 내용은 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
  로컬 모드를 지원하는 사용자 지정 데이터 처리 확장 프로그램을 개발할 수도 있습니다. 자세한 내용은 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하세요.  
   
@@ -89,6 +89,6 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 연결된 모드에서 ADS 확장 프로그램 사용에 대한 최신 정보는 [데이터 확장 프로그램 'ADS'의 오류를 표시하는 SharePoint 사이트에서 서비스 보고서에 액세스](http://social.technet.microsoft.com/wiki/contents/articles/25298.access-services-report-in-sharepoint-site-shows-error-in-data-extension-ads.aspx)(영문)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
+ [Reporting services&#40;에서 지 원하는 데이터 원본 Ssrs&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)  
   
   

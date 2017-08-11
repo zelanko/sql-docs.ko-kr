@@ -21,7 +21,7 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c38fc293a297544710b77b52d054fae58273340e
 ms.contentlocale: ko-kr
@@ -31,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 
 # <a name="authentication-with-the-report-server"></a>보고서 서버 인증
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램을 인증하는 몇 가지 구성 가능 옵션을 제공합니다. 기본적으로 보고서 서버는 Windows 통합 인증을 사용하며 클라이언트 및 네트워크 리소스가 같은 도메인 또는 트러스트된 도메인에 있는 트러스트된 관계를 가정합니다. 네트워크 토폴로지 및 조직의 요구에 따라 Windows 통합 인증에 사용되는 인증 프로토콜을 사용자 지정하거나, 기본 인증을 사용하거나, 제공된 폼 기반 인증 확장 프로그램을 사용자 지정할 수 있습니다. 각 인증 유형을 개별적으로 설정 또는 해제할 수 있습니다. 보고서 서버에서 여러 유형의 요청을 수락하도록 두 개 이상의 인증 유형을 설정할 수 있습니다.
+SSRS([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)])는 보고서 서버에 대해 사용자 및 클라이언트 응용 프로그램을 인증하는 몇 가지 구성 가능 옵션을 제공합니다. 기본적으로 보고서 서버는 Windows 통합 인증을 사용하며 클라이언트 및 네트워크 리소스가 같은 도메인 또는 트러스트된 도메인에 있는 트러스트된 관계를 가정합니다. 네트워크 토폴로지 및 조직의 요구에 따라 Windows 통합 인증에 사용되는 인증 프로토콜을 사용자 지정하거나, 기본 인증을 사용하거나, 제공된 폼 기반 인증 확장 프로그램을 사용자 지정할 수 있습니다. 각 인증 유형을 개별적으로 설정 또는 해제할 수 있습니다. 보고서 서버에서 여러 유형의 요청을 수락하도록 두 개 이상의 인증 유형을 설정할 수 있습니다.
   
  보고서 서버 내용 또는 작업에 대한 액세스 권한을 요청하는 모든 사용자나 응용 프로그램은 인증을 받아야 액세스 권한을 받을 수 있습니다.  
   
@@ -68,9 +68,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [보고서 서버의 Windows 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
+-   [보고서 서버에서 Windows 인증을 구성 합니다.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)  
   
--   [보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
+-   [보고서 서버에서 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)  
   
 -   [보고서 서버에서 사용자 지정 또는 폼 인증 구성](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)  
   
@@ -78,18 +78,18 @@ ms.lasthandoff: 08/09/2017
   
 |태스크 설명|링크|  
 |-----------------------|-----------|  
-|Windows 통합 인증 유형을 구성합니다.|[보고서 서버의 Windows 인증 구성](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
-|기본 인증 유형을 구성합니다.|[보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
+|Windows 통합 인증 유형을 구성합니다.|[보고서 서버에서 Windows 인증을 구성 합니다.](../../reporting-services/security/configure-windows-authentication-on-the-report-server.md)|  
+|기본 인증 유형을 구성합니다.|[보고서 서버에서 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)|  
 |폼 인증 또는 사용자 지정 인증 유형을 구성합니다.|[보고서 서버에서 사용자 지정 또는 폼 인증 구성](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)|  
 |[!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서 사용자 지정 인증 시나리오를 처리할 수 있도록 합니다.|[웹 포털에서 사용자 지정 인증 쿠키를 전달하도록 구성](http://msdn.microsoft.com/en-us/91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 
 ## <a name="next-steps"></a>다음 단계
 
-[기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+[기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
 [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
 [역할 할당 생성 및 관리](../../reporting-services/security/create-and-manage-role-assignments.md)   
-[보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
-[Implementing a Security Extension](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
+[자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+[보안 확장 프로그램 구현](../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)   
 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md)   
 [보안 확장 프로그램 개요](../../reporting-services/extensions/security-extension/security-extensions-overview.md)   

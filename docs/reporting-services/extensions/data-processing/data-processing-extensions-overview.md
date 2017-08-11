@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], about extensions
 ms.assetid: 1d652605-9313-4c75-98b4-ba4dcbbb222d
 caps.latest.revision: 39
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: c30ea734a30e00fdefeb9b30a1ced9c3f60d5fca
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: 075724639c912f40c3ef7c49227ba653bd086fcd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="data-processing-extensions-overview"></a>데이터 처리 확장 프로그램 개요
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
  고유의 데이터 원본에 맞는 데이터 처리 확장 프로그램을 개발하거나, 인터페이스를 사용하여 공통 데이터베이스 인프라에 데이터 처리 층을 하나 더 추가할 수 있습니다. 사용자 지정 데이터 처리 확장 프로그램을 배포하여 조직의 기존 보고서 서버에 완벽한 데이터 통합을 구현할 수 있습니다. 뿐만 아니라 소비자에게 제공하는 사용자 지정 보고 제품군의 일부로 사용할 수도 있습니다.  
   
- ![데이터 처리 확장 프로그램 아키텍처](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "Data processing extension architecture")  
+ ![데이터 처리 확장 프로그램 아키텍처](../../../reporting-services/extensions/data-processing/media/bk-dataprocess-extensions.gif "데이터 처리 확장 프로그램 아키텍처")  
 Reporting Services 데이터 처리 확장 프로그램 아키텍처  
   
  사용자 지정 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램을 구현하면 다음과 같은 이점이 있습니다.  
@@ -61,7 +61,7 @@ Reporting Services 데이터 처리 확장 프로그램 아키텍처
 ## <a name="data-extension-process-flow"></a>데이터 확장 프로세스 흐름  
  사용자 지정 데이터 확장 프로그램을 개발하기 전에 보고서 서버에서 데이터 확장 프로그램을 사용하여 어떻게 데이터를 처리하는지 이해해야 합니다. 또한 보고서 서버에서 호출되는 생성자와 메서드에 대해서도 잘 알고 있어야 합니다.  
   
- ![데이터 처리 확장 프로그램에 대 한 프로세스 흐름](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "Process flow for data processing extension")  
+ ![데이터 처리 확장 프로그램에 대 한 흐름 처리](../../../reporting-services/extensions/data-processing/media/bk-ext-01.gif "데이터 처리 확장 프로그램에 대 한 흐름을 처리 합니다.")  
 보고서 서버에서 호출되는 데이터 확장 프로그램의 단계별 프로세스 흐름  
   
  이 그림은 다음과 같은 이벤트 시퀀스를 나타냅니다.  
@@ -85,7 +85,7 @@ Reporting Services 데이터 처리 확장 프로그램 아키텍처
   
 -   개발 해 본 경험이 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 과 같은 언어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

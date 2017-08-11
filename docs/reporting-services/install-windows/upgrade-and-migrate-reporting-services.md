@@ -20,7 +20,7 @@ caps.latest.revision: 92
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e7144b243b14ea3f65d912552ce8e6cdd736ab59
 ms.contentlocale: ko-kr
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/09/2017
   
  그러나 다음과 같은 조건에 해당하는 경우 보고서 서버 설치를 수동으로 **마이그레이션** 해야 합니다.  
   
--   배포에 사용되는 보고서 서버의 유형을 변경하려고 합니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드로 업그레이드하거나 변환할 수 없습니다. 자세한 내용은 [기본 모드에서 SharePoint 모드로의 마이그레이션&#40;SSRS&#41;](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md)을 참조하세요.  
+-   배포에 사용되는 보고서 서버의 유형을 변경하려고 합니다. 예를 들어 기본 모드 보고서 서버를 SharePoint 모드로 업그레이드하거나 변환할 수 없습니다. 자세한 내용은 참조 [기본 모드에서 SharePoint 모드로 마이그레이션 &#40; Ssrs&#41; ](../../reporting-services/install-windows/native-to-sharepoint-migration-ssrs.md).  
   
 -   업그레이드 프로세스 중에 보고서 서버가 오프라인 상태가 되는 시간을 최소화해야 합니다. 기존 보고서 서버 설치의 상태를 변경하지 않으면서 콘텐츠 데이터를 새 보고서 서버 인스턴스로 복사하고 설치를 테스트하는 동안 현재 설치는 온라인 상태로 유지됩니다.  
   
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="bkmk_native_scaleout"></a> Reporting Services 기본 모드 확장 배포  
  다음은 둘 이상의 보고서 서버로 확장된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 배포를 업그레이드하는 방법을 요약한 내용입니다. 이 과정에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포의 작동 중지 시간이 필요합니다.  
   
-1.  보고서 서버 데이터베이스 및 암호화 키를 백업합니다. 자세한 내용은 [Reporting Services 백업 및 복원 작업](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) 및 [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)를 참조하세요.  
+1.  보고서 서버 데이터베이스 및 암호화 키를 백업합니다. 자세한 내용은 참조 [Backup and Restore Operations for Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md) 및 [추가 및 확장 배포 &#40;에 대 한 암호화 키 제거 SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md).  
   
 2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여, 확장된 배포에서 모든 보고서 서버를 제거합니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능(SharePoint 제품용). 자세한 내용은 [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)를 참조하세요.  
   
- SharePoint 모드 설치 마이그레이션에 대한 자세한 내용은 [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)을 참조하세요.  
+ SharePoint 모드 설치를 마이그레이션하는 방법에 대 한 자세한 내용은 참조 하세요. [마이그레이션 Reporting Services 설치 &#40; SharePoint 모드 &#41; ](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
   
 > [!IMPORTANT]  
 >  다음 시나리오 중 일부의 경우 업그레이드해야 하는 여러 기술 때문에 SharePoint 환경의 작동 중단이 필요합니다. 작동 중단이 허용되지 않는 상황에서는 내부 업그레이드 대신 마이그레이션을 완료해야 합니다.  
@@ -188,7 +188,7 @@ ms.lasthandoff: 08/09/2017
      [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013/2016 팜으로 마이그레이션할 수 있습니다.  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]SQL server Reporting Services  
- **Starting environment:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
+ **시작 환경:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010  
   
  **종료 환경:** SQL Server Reporting Services, SharePoint 2013 또는 SharePoint 2016.  
  

@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c7fa3b57de4a8b5854951c266168e22ae57ab928
 ms.contentlocale: ko-kr
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 |데이터 집합|예||  
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
 |일정|예|ListSchedules 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
-|구독|예|List Subscriptions 메서드 참조 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 및 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 메서드.|  
+|구독|예|List Subscriptions 메서드 [Subscription and Delivery Methods](../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md) 및 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A> 메서드를 참조하세요.|  
 |스냅숏|||
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

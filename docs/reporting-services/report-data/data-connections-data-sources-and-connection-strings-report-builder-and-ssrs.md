@@ -24,7 +24,7 @@ caps.latest.revision: 118
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 51be2879461864ce67992e12d7cfd95014e03e40
 ms.contentlocale: ko-kr
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/09/2017
   
      시스템 관리자는 추가적인 데이터 처리 확장 프로그램 및 .NET Framework 데이터 공급자를 설치하고 구성할 수 있습니다. 자세한 내용은 [데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자&#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)를 참조하세요.  
   
-     개발자가 사용할 수는 <xref:Microsoft.ReportingServices.DataProcessing> API를 다른 유형의 데이터 원본 지원 하기 위해 데이터 처리 확장 프로그램을 만듭니다.  
+     개발자는 <xref:Microsoft.ReportingServices.DataProcessing> API를 사용하여 다른 유형의 데이터 원본을 지원하는 데이터 처리 확장을 만들 수 있습니다.  
   
 -   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서 보고서 서버 또는 SharePoint 사이트를 찾은 다음 보고서에서 포함된 데이터 원본을 만들거나 공유 데이터 원본을 선택합니다. [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서는 공유 데이터 원본을 만들 수 없습니다. 또한 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]에서는 사용자 지정 데이터 확장 프로그램을 사용할 수 없습니다.  
   
@@ -122,19 +122,19 @@ ms.lasthandoff: 08/09/2017
 |로컬 서버의 SQL Server 데이터베이스|`data source="(local)";initial catalog=AdventureWorks`|데이터 원본 유형을 **Microsoft SQL Server**로 설정합니다. 자세한 내용은 [SQL Server 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)을 참조하세요.|  
 |SQL Server 인스턴스<br /><br /> 데이터베이스|`Data Source=localhost\MSSQL13.<InstanceName>; Initial Catalog=AdventureWorks`|데이터 원본 유형을 **Microsoft SQL Server**로 설정합니다.|  
 |SQL Server Express 데이터베이스|`Data Source=localhost\MSSQL13.SQLEXPRESS; Initial Catalog=AdventureWorks`|데이터 원본 유형을 **Microsoft SQL Server**로 설정합니다.|  
-|Azure SQL 데이터베이스|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|데이터 원본 유형으로 설정 **Microsoft Azure SQL 데이터베이스**합니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.|  
+|Azure SQL Database|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|데이터 원본 유형으로 설정 **Microsoft Azure SQL 데이터베이스**합니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.|  
 |SQL Server 병렬 데이터 웨어하우스|`HOST=<IP address>;database= AdventureWorks; port=<port>`|데이터 원본 유형을 **Microsoft SQL Server Parallel Data Warehouse**로 설정합니다. 자세한 내용은 [SQL Server 병렬 데이터 웨어하우스 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)을 참조하세요.|  
-|로컬 서버의 Analysis Services 데이터베이스|`data source=localhost;initial catalog=Adventure Works DW`|데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 또는 [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)을 참조하세요.|  
+|로컬 서버의 Analysis Services 데이터베이스|`data source=localhost;initial catalog=Adventure Works DW`|데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. 자세한 내용은 참조 [MDX &#40; Analysis Services 연결 유형 Ssrs&#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md) 또는 [Analysis DMX &#40;에 대 한 연결 유형이 Services Ssrs&#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md).|  
 |Sales 큐브 뷰가 있는 Analysis Services 테이블 형식 model 데이터베이스|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales’`|데이터 원본 유형을 **Microsoft SQL Server Analysis Services**로 설정합니다. cube= 설정에 큐브 뷰 이름을 지정합니다. 자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)를 참조하세요.|  
-|기본 모드에서 구성된 보고서 서버의 보고서 모델 데이터 원본|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|보고서 서버 또는 문서 라이브러리 URL과 보고서 서버 폴더 또는 문서 라이브러리 폴더 네임스페이스에 게시된 모델의 경로를 지정합니다. 자세한 내용은 [보고서 모델 연결&#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)을 참조하세요.|  
+|기본 모드에서 구성된 보고서 서버의 보고서 모델 데이터 원본|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|보고서 서버 또는 문서 라이브러리 URL과 보고서 서버 폴더 또는 문서 라이브러리 폴더 네임스페이스에 게시된 모델의 경로를 지정합니다. 자세한 내용은 참조 [보고서 모델 연결 &#40; Ssrs&#41; ](../../reporting-services/report-data/report-model-connection-ssrs.md).|  
 |SharePoint 통합 모드에서 구성된 보고서 서버의 보고서 모델 데이터 원본|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|보고서 서버 또는 문서 라이브러리 URL과 보고서 서버 폴더 또는 문서 라이브러리 폴더 네임스페이스에 게시된 모델의 경로를 지정합니다.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|데이터 원본 유형으로 **OLE DB Provider for OLAP Services 8.0**을 설정합니다.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 속성을 **8.0** 으로 설정하면 **2000**데이터 원본에 보다 빠르게 연결할 수 있습니다. 이 속성을 설정하려면 **연결 속성** 대화 상자의 **고급 속성** 탭을 사용합니다.|  
 |Oracle 서버|`data source=myserver`|데이터 원본 유형을 **Oracle**로 설정합니다. Oracle 클라이언트 도구는 보고서 디자이너 컴퓨터와 보고서 서버에 설치해야 합니다. 자세한 내용은 [Oracle 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/oracle-connection-type-ssrs.md)을 참조하세요.|  
 |SAP NetWeaver BI 데이터 원본|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|데이터 원본 유형을 **SAP NetWeaver BI**로 설정합니다. 자세한 내용은 [SAP NetWeaver BI 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sap-netweaver-bi-connection-type-ssrs.md)을 참조하세요.|  
 |Hyperion Essbase 데이터 원본|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|데이터 원본 유형을 **Hyperion Essbase**로 설정합니다. 자세한 내용은 [Hyperion Essbase 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/hyperion-essbase-connection-type-ssrs.md)을 참조하세요.|  
-|Teradata 데이터 원본|`data source=`\<NNN > 합니다. \<NNN > 합니다. \<NNN > 합니다. \<NNN >`;`|데이터 원본 유형을 **Teradata**로 설정합니다. 연결 문자열은 1자리부터 3자리 숫자까지 허용되는 필드 네 개로 구성된 형식의 IP(인터넷 프로토콜) 주소입니다. 자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)을 참조하세요.|  
+|Teradata 데이터 원본|`data source=`\<NNN > 합니다. \<NNN > 합니다. \<NNN > 합니다. \<NNN >`;`|데이터 원본 유형을 **Teradata**로 설정합니다. 연결 문자열은 1자리부터 3자리 숫자까지 허용되는 필드 네 개로 구성된 형식의 IP(인터넷 프로토콜) 주소입니다. 자세한 내용은 참조 [Teradata 연결 유형 &#40; Ssrs&#41; ](../../reporting-services/report-data/teradata-connection-type-ssrs.md).|  
 |Teradata 데이터 원본|`Database=`*\<database name>* `; data source=` *\<NN*N*>.\< NNN > 합니다. \<NNN>. \<N*NN*>*`;Use X Views=False;Restrict to Default Database=True`|앞의 예와 마찬가지로 데이터 원본 유형을 **Teradata**로 설정합니다. Database 태그에 지정된 기본 데이터베이스만 사용하고 데이터 관계를 자동으로 검색하지 마십시오.|  
-|XML 데이터 원본, 웹 서비스|`data source=http://adventure-works.com/results.aspx`|데이터 원본 유형을 **XML**로 설정합니다. 연결 문자열은 WSDL(Web Services Definition Language)을 지원하는 웹 서비스의 URL입니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요.|  
+|XML 데이터 원본, 웹 서비스|`data source=http://adventure-works.com/results.aspx`|데이터 원본 유형을 **XML**로 설정합니다. 연결 문자열은 WSDL(Web Services Definition Language)을 지원하는 웹 서비스의 URL입니다. 자세한 내용은 참조 [XML 연결 유형 &#40; Ssrs&#41; ](../../reporting-services/report-data/xml-connection-type-ssrs.md).|  
 |XML 데이터 원본, XML 문서|`http://localhost/XML/Customers.xml`|데이터 원본 유형을 **XML**로 설정합니다. 연결 문자열은 XML 문서의 URL입니다.|  
 |XML 데이터 원본, 포함된 XML 문서|*비어 있음*|데이터 원본 유형을 **XML**로 설정합니다. XML 데이터는 보고서 정의에 포함됩니다.|  
 |SharePoint 목록|`data source=http://MySharePointWeb/MySharePointSite/`|데이터 원본 유형을 **SharePoint List**로 설정합니다.|  
@@ -172,7 +172,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="next-steps"></a>다음 단계
 
 [만들기, 수정 및 공유 데이터 원본 삭제](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
-[포함 된 데이터 원본 만들기 및 수정](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
+[포함된 데이터 원본 만들기 및 수정](../../reporting-services/report-data/create-and-modify-embedded-data-sources.md)   
 [배포 속성 설정](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 

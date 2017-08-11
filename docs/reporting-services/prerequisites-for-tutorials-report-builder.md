@@ -16,7 +16,7 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2c2056dccbb2d65e880928e4ec37a70080cfbf53
 ms.contentlocale: ko-kr
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
 보고서 작성기 자습서를 수행하려면 보고서 서버와 통합된 SharePoint 사이트 또는 보고서 서버에서 페이지가 매겨진 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 보고서를 보고 저장할 수 있어야 합니다. 데이터에 대 한 모든 자습서는 SQL Server의 인스턴스에서 처리 해야 하는 리터럴 쿼리를 사용 합니다.  
   
-보고서 서버, SharePoint 사이트 또는 데이터 원본에 대한 액세스 권한이 없는 경우에는 오프라인 보고서 작성을 통해 보고서 작성기에 대해 배울 수 있습니다. [자습서: 오프라인에서 빠른 차트 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)를 참조하세요.  
+보고서 서버, SharePoint 사이트 또는 데이터 원본에 대한 액세스 권한이 없는 경우에는 오프라인 보고서 작성을 통해 보고서 작성기에 대해 배울 수 있습니다. 참조 [자습서: 오프 라인에서 빠른 차트 보고서 &#40; 만들기 보고서 작성기 &#41; ](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
 
 ## <a name="requirements"></a>요구 사항
 

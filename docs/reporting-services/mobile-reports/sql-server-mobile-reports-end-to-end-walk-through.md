@@ -15,7 +15,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: fc9ca2f7181dbda59726b9c38352c349bcf8a472
 ms.contentlocale: ko-kr
@@ -30,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 이 문서에서는 다음 작업을 안내합니다.   
   
 - AdventureWorks 데이터베이스를 예제 데이터 원본으로 사용하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 공유 데이터 원본 및 데이터 집합 만들기  
-- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]에서 Reporting Services 모바일 보고서 만들기  
+- [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)]  
 - [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 모바일 보고서 게시  
 - Power BI 모바일 앱에서 모바일 보고서 보기  
   
@@ -54,7 +54,7 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
   
    ![PBI_SSMRP_NewMenu](../../reporting-services/mobile-reports/media/pbi-ssmrp-newmenu.png)  
-3. 데이터 원본 정보를 입력하고 **확인**을 클릭합니다.  
+3. 데이터 원본 정보를 입력 > **확인**합니다.  
   
     기본적으로 데이터 원본은 포털에 표시되지 않습니다.    
    
@@ -235,9 +235,9 @@ Reporting Services 모바일 보고서를 만들려면 [SQL Server Mobile 보고
   
 마스터 레이아웃에서 시각적 개체를 만들었으므로 이제 특별히 휴대폰 사용자용으로 최적화된 레이아웃의 모바일 보고서를 만들 수 있습니다.    
   
-1. 오른쪽 위에서 캔버스 아이콘 > **전화**를 클릭합니다.  
+1. 오른쪽 위 모서리에서 캔버스 아이콘을 클릭 > **전화**합니다.  
   
-2. 레이아웃 탭의 **제어 인스턴스** 아래에 사용자가 만든 두 개의 차트가 표시됩니다.   
+2. 레이아웃 탭의 **제어 인스턴스**아래에 사용자가 만든 두 개의 차트가 표시됩니다.   
   
 3. 트리 맵을 전화 캔버스로 끌어 4개의 열과 3개의 행으로 만듭니다.  
   

@@ -18,20 +18,20 @@ helpviewer_keywords:
 - IDeliveryExtension interface
 ms.assetid: ab0344db-510b-403f-8dbf-b9831553765d
 caps.latest.revision: 37
-author: sabotta
-ms.author: carlasab
+author: guyinacube
+ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 82bf0172d2ad744d5a34945596814cd584888d95
+ms.translationtype: HT
+ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
+ms.openlocfilehash: ac54345b14ba3ff84a755e0ce4e8b1c4e9acab13
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implementing-the-ideliveryextension-interface-for-a-delivery-extension"></a>배달 확장 프로그램에 대한 IDeliveryExtension 인터페이스 구현
   배달 확장 프로그램 클래스는 알림 내용을 기준으로 사용자에게 보고서 알림을 배달하는 데 사용됩니다. 배달 확장 프로그램 클래스는 배달 확장 프로그램에 전달되는 사용자 설정을 검사하기 위한 인프라도 제공합니다. 또한 배달 확장 프로그램 클래스에는 클라이언트가 확장 프로그램의 이름, 확장 프로그램에서 지원하는 설정, 배달 확장 프로그램에서 사용 가능한 렌더링 형식 등에 대한 정보를 얻는 데 사용할 수 있는 특정 속성이 포함되어야 합니다.  
   
- ![IDeliveryExtension 인터페이스 프로세스](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension interface process")  
+ ![IDeliveryExtension 인터페이스 프로세스](../../../reporting-services/extensions/delivery-extension/media/bk-ext-02.gif "IDeliveryExtension 인터페이스 프로세스")  
 IDeliveryExtension 인터페이스를 통해 사용자 데이터의 검사가 가능하며 클라이언트에서는 필수 배달 설정에 대한 정보를 얻을 수 있습니다.  
   
  배달 확장 프로그램 클래스를 만들려면 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension> 및 <xref:Microsoft.ReportingServices.Interfaces.IExtension>을 구현합니다. **IDeliveryExtension** 인터페이스를 사용 하 여 배달 확장 프로그램을 사용 하 여 보고서 알림을 배달 하는 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.Deliver%2A> 메서드를 사용 하 여 들어오는 확장 프로그램 설정 유효성을 검사 하는 <xref:Microsoft.ReportingServices.Interfaces.IDeliveryExtension.ValidateUserData%2A> 메서드. **IExtension** 인터페이스를 사용 하 여 배달 확장 프로그램에 저장 된 확장 프로그램별 구성 정보를 처리 하 고 지역화 된 확장 프로그램 이름을 구현 하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 파일입니다. 구현 하 여 **IExtension**, 배달 확장 프로그램에 포함 되어는 <xref:Microsoft.ReportingServices.Interfaces.Extension.LocalizedName%2A> 속성입니다. 이 가장 좋습니다는 [!INCLUDE[ssRS](../../../includes/ssrs-md.md)] 배달 확장 프로그램 지원의 **LocalizedName** 속성을 사용자가 보고서 관리자와 같은 사용자 인터페이스에서 확장에 대 한 친숙 한 이름이 표시 되도록 합니다.  
@@ -42,7 +42,7 @@ IDeliveryExtension 인터페이스를 통해 사용자 데이터의 검사가 �
   
  샘플 **IDeliveryExtension** 클래스 구현, 참조 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

@@ -17,7 +17,7 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1388fba5963d5571d293f2d995c73bb3d83d3b
 ms.contentlocale: ko-kr
@@ -58,6 +58,6 @@ ms.lasthandoff: 08/09/2017
 3.  **기록 스냅숏 옵션**에서 **보고서 기록에 모든 보고서 데이터 스냅숏 저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
+ [처리 옵션 &#40; 설정 합니다. 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)  
   
   

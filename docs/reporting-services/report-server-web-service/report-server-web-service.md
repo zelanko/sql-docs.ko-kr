@@ -25,11 +25,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5fd4d415e452549e80aa12b9eb1397bf83ce6557
+ms.translationtype: HT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 10769f49396bcf32d437e4bee9b04cbc2a3c8d9c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-web-service"></a>보고서 서버 웹 서비스
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/13/2017
 -   SOAP 사용 개발 도구를 사용하여 응용 프로그램을 개발합니다. 자세한 내용은 참조 [The Role of SOAP in Reporting Services](../../reporting-services/report-server-web-service/the-role-of-soap-in-reporting-services.md)합니다.  
   
 ## <a name="programming-diagram"></a>프로그래밍 다이어그램  
- ![보고서 서버 웹 서비스 개발 옵션](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "Report Server Web service development options")  
+ ![보고서 서버 웹 서비스 개발 옵션](../../reporting-services/report-server-web-service/media/reportserviceswebserviceprog-01.gif "보고서 서버 웹 서비스 개발 옵션")  
 Reporting Services 사용 가능한 웹 서비스 개발 옵션  
   
 ## <a name="in-this-section"></a>섹션 내용  
