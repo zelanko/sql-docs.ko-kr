@@ -24,16 +24,16 @@ caps.latest.revision: 88
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
-ms.openlocfilehash: b93591eb1d0f34b792adc6f2c998dbfdd9fca4b5
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 8558691157d6a4f2fe705df236c0701f8bc1bf6c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server의 최대 용량 사양
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [Maximum Capacity Specifications for SQL Server](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server의 최대 용량 사양](https://msdn.microsoft.com/en-US/library/ms143432(SQL.120).aspx)을 참조하세요.
 
   다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소에 정의된 다양한 개체의 최대 크기 및 수가 지정되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
   
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/23/2017
 |넓지 않은 테이블당 열 수||1,024||  
 |넓은 테이블당 열 수||30,000||  
 |SELECT 문당 열 수||4,096||  
-|INSERT 문당 열 수||4096||  
+|INSERT 문당 열 수||4,096||  
 |클라이언트당 연결 수||구성된 연결의 최대 값||  
 |데이터베이스 크기||524,272TB||  
 |다음 인스턴스당 데이터베이스 수: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
