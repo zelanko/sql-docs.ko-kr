@@ -17,11 +17,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9ee4dd3c00d9e250fd3c773a917ad3cf90f84c4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="export-a-report-using-url-access"></a>URL 액세스를 사용하여 보고서 내보내기
@@ -50,7 +50,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  *Format* 매개 변수를 URL의 일부로 포함하지 않으면 보고서 서버가 브라우저를 감지하고 적절한 HTML 형식으로 보고서를 렌더링합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   
   

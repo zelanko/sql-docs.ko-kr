@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 9a422c1619ae284ec49643465bd8b84efda1910b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="interactive-functionality---different-report-rendering-extensions"></a>여러 보고서 렌더링 확장 프로그램의 대화형 기능-
@@ -59,7 +59,7 @@ ms.lasthandoff: 06/22/2017
 |-------------------|-------------------------|  
 |미리 보기/보고서 뷰어, HTML|확장 및 축소 아이콘을 클릭하여 보고서의 섹션을 볼 수 있습니다.|  
 |PDF|보고서 서버에서는 보고서의 현재 표시 또는 숨김 상태를 PDF로 내보냅니다. 대화형 설정/해제는 지원되지 않습니다.|  
-|Excel|설정/해제할 수 있는 항목과 드릴다운 링크는 Excel에서 축소 가능한 윤곽선으로 렌더링됩니다. 보고서의 섹션을 확장하고 축소할 수 있습니다. Excel 관련 제한 사항에 대한 자세한 내용은 [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)를 참조하세요.|  
+|Excel|설정/해제할 수 있는 항목과 드릴다운 링크는 Excel에서 축소 가능한 윤곽선으로 렌더링됩니다. 보고서의 섹션을 확장하고 축소할 수 있습니다. Excel 관련 제한 사항에 대 한 자세한 내용은 참조 하세요. [Microsoft Excel &#40; 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).|  
 |Word|보고서 서버에서는 보고서의 현재 표시 또는 숨김 상태를 PDF로 내보냅니다. 대화형 설정/해제는 지원되지 않습니다.|  
 |기타|MHTML, XML 또는 CSV에서는 사용할 수 없습니다. 이미지 형식으로 내보내는 경우 보고서 서버에서는 보고서의 현재 표시 또는 숨김 상태를 PDF로 내보냅니다. 대화형 설정/해제는 지원되지 않습니다.|  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [대화형 정렬, 문서 구조 및 연결 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
     
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
 

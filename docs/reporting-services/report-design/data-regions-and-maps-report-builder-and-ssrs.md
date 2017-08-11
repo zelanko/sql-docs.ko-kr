@@ -17,11 +17,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fe5be4e624ef5a5bc956731819f2b4636dc39799
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>데이터 영역 및 지도(보고서 작성기 및 SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="table"></a>테이블  
- 테이블은 데이터를 행 단위로 표시하는 데이터 영역입니다. 테이블의 열은 고정되어 있습니다. 열의 개수는 보고서를 디자인할 때 결정합니다. 그러나 테이블 행은 고정되지 않고 데이터에 맞게 아래쪽으로 확장됩니다. 테이블에 그룹을 추가하여 선택한 필드나 식으로 데이터를 구성할 수 있습니다. 보고서에 테이블을 추가하는 방법에 대한 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
+ 테이블은 데이터를 행 단위로 표시하는 데이터 영역입니다. 테이블의 열은 고정되어 있습니다. 열의 개수는 보고서를 디자인할 때 결정합니다. 그러나 테이블 행은 고정되지 않고 데이터에 맞게 아래쪽으로 확장됩니다. 테이블에 그룹을 추가하여 선택한 필드나 식으로 데이터를 구성할 수 있습니다. 보고서에 테이블을 추가 하는 방법에 대 한 정보를 참조 하십시오. [테이블 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
   
 ## <a name="matrix"></a>행렬  
  행렬은 크로스탭이라고도 합니다. 행렬 데이터 영역에는 동적 열과 행이 모두 포함되며 데이터에 맞게 확장됩니다. 또한 행렬에는 동적 열과 행 및 정적 열과 행이 있을 수 있습니다. 열이나 행에 다른 열이나 행을 넣을 수 있으며 데이터를 그룹화하는 데 열이나 행을 사용할 수 있습니다. 자세한 내용은 [보고서에 행렬 추가](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)를 참조하세요.  
@@ -54,10 +54,10 @@ ms.lasthandoff: 06/22/2017
  보고서에는 여러 데이터 영역을 추가할 수 있으며, 데이터 영역은 연결된 보고서 데이터 집합의 데이터에 맞게 확장됩니다. 예를 들어 연도별 각 제품의 판매량을 표시하는 행렬에는 제품 이름을 기반으로 하는 행 그룹과 연도를 기반으로 하는 열 그룹이 있습니다. 보고서를 실행하면 행렬은 각 제품에 대해 페이지 아래쪽으로 확장되고, 각 연도에 대해 페이지 가로 방향으로 확장됩니다. 보고서 디자인 화면의 행렬 옆에 있는 차트는 렌더링된 보고서의 확장된 행렬 옆에 표시됩니다. 페이지에서 데이터 영역이 렌더링되는 방식은 보고서 출력 형식을 기반으로 하는 규칙 집합을 따릅니다. 예를 들어 차트 및 행렬이 페이지에서 렌더링되는 방식을 제어하려는 경우 사각형을 컨테이너로 사용하거나 목록에 있는 두 데이터 영역을 중첩할 수 있습니다. 자세한 내용은 [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)로 저장할 수 있습니다.  
   
 ## <a name="nested-data-regions"></a>중첩된 데이터 영역  
- 다른 데이터 영역에 데이터 영역을 중첩할 수 있습니다. 예를 들어 각 영업 사원의 영업 실적을 데이터베이스로 만들려는 경우 입력란과 이미지를 포함하는 목록을 만들어 직원에 대한 정보를 표시하고 테이블과 차트 데이터 영역을 목록에 추가하여 영업 사원의 영업 실적을 표시할 수 있습니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)을 참조하세요.  
+ 다른 데이터 영역에 데이터 영역을 중첩할 수 있습니다. 예를 들어 각 영업 사원의 영업 실적을 데이터베이스로 만들려는 경우 입력란과 이미지를 포함하는 목록을 만들어 직원에 대한 정보를 표시하고 테이블과 차트 데이터 영역을 목록에 추가하여 영업 사원의 영업 실적을 표시할 수 있습니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>동일한 데이터 집합에 연결된 여러 데이터 영역  
- 동일한 데이터 영역에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)을 참조하세요.  
+ 동일한 데이터 영역에 둘 이상의 데이터 영역을 연결하여 동일한 데이터에 대한 다양한 뷰를 제공할 수 있습니다. 예를 들어 테이블과 차트에 동일한 데이터를 표시할 수 있습니다. 테이블을 정렬하면 차트도 자동으로 정렬되도록 하기 위해 테이블에 대화형 정렬 단추를 제공하는 보고서를 작성할 수 있습니다. 자세한 내용은 [동일한 데이터 집합에 여러 데이터 영역 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="data-for-a-data-region"></a>데이터 영역의 데이터  
  각 테이블릭스, 차트 및 계기는 단일 데이터 집합의 데이터를 표시하도록 디자인되었습니다. 지도는 같은 데이터 집합 또는 여러 데이터 집합의 공간 데이터와 분석 데이터를 표시합니다. 그 밖에 다음과 같은 방법으로 데이터 영역에 연결되지 않은 데이터 집합의 값을 포함할 수 있습니다.  
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [보고서 제작 개념&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [페이지 레이아웃 및 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)   
  [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   

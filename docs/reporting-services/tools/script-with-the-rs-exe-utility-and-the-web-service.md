@@ -21,11 +21,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 41e0843d517f4fe24c16c6071ba8a1921be68502
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>rs.exe 유틸리티 및 웹 서비스를 사용한 스크립팅
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [배포 및 관리 태스크 스크립팅](../../reporting-services/tools/script-deployment-and-administrative-tasks.md)   
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)   
- [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
- [RS.exe 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
+ [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [RS.exe 유틸리티 &#40; Ssrs&#41;](../../reporting-services/tools/rs-exe-utility-ssrs.md)  
   
   

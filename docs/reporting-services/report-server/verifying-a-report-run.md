@@ -23,11 +23,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 97015ca82fd8a58c3c5cd351b2f7379711d65aa1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="verifying-a-report-run"></a>보고서 실행 확인
@@ -45,13 +45,13 @@ ms.lasthandoff: 06/22/2017
   
 |보고서 종류|날짜 및 시간 정보 표시 위치|정보 확인 방법|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|보고서 스냅숏으로 실행되는 보고서|내용 페이지. 자세한 내용은 [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)를 참조하세요.|1) 보고서가 포함된 폴더를 찾습니다.<br /><br /> 2) 폴더를 자세히 보기로 설정합니다.<br /><br /> 3) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
-|보고서 기록의 스냅숏|기록 속성 페이지. 자세한 내용은 [스냅숏 옵션 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679)를 참조하세요.|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **기록** 탭을 클릭합니다.<br /><br /> 4) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
+|보고서 스냅숏으로 실행되는 보고서|내용 페이지. 자세한 내용은 참조 [내용 페이지 &#40; 보고서 관리자 &#41; ](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378).|1) 보고서가 포함된 폴더를 찾습니다.<br /><br /> 2) 폴더를 자세히 보기로 설정합니다.<br /><br /> 3) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
+|보고서 기록의 스냅숏|기록 속성 페이지. 자세한 내용은 참조 [스냅숏 옵션 속성 페이지 &#40; 보고서 관리자 &#41; ](http://msdn.microsoft.com/library/f6641f59-5267-4f57-8957-63b93d1a9679).|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **기록** 탭을 클릭합니다.<br /><br /> 4) **실행 날짜** 열에서 날짜 및 시간을 확인합니다.|  
 |캐시된 보고서|캐시된 보고서를 만들고 새로 고치는 데 사용되는 일정|1) 보고서를 엽니다.<br /><br /> 2) **속성** 페이지를 클릭합니다.<br /><br /> 3) **실행** 탭을 클릭합니다.<br /><br /> 4) 일정을 엽니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

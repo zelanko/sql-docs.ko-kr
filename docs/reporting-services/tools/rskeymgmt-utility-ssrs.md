@@ -26,11 +26,11 @@ caps.latest.revision: 56
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95e64239c30aab1a341c281230c887f9668b9277
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt 유틸리티(SSRS)
@@ -100,7 +100,7 @@ rskeymgmt {-?}
  보고서 서버 수평적 확장 배포에 결합하는 보고서 서버 인스턴스를 호스팅하는 원격 컴퓨터의 이름을 지정합니다. 네트워크에서 식별할 수 있는 컴퓨터 이름을 사용합니다.  
   
  **-n**  
- 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 이 인수는 선택적 기본 보고서 서버를 설치한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 (기본 값에 대 한  **-n**  는 mssqlserver 임). 보고서 서버를 명명 된 인스턴스로 설치한 경우  **-n**  가 필요 합니다.  
+ 원격 컴퓨터의 보고서 서버 인스턴스 이름을 지정합니다. 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버를 설치한 경우 이 인수는 옵션입니다. **-n** 의 기본값은 MSSQLSERVER입니다. 보고서 서버를 명명된 인스턴스로 설치한 경우 **-n** 가 필요합니다.  
   
  **-u**  *useraccount*  
  수평적 확장 배포에 결합하는 원격 컴퓨터의 관리자 계정을 지정합니다. 계정을 지정하지 않으면 현재 사용자의 자격 증명이 사용됩니다.  
@@ -170,7 +170,7 @@ rskeymgmt -r <installationID>
 ```  
   
 ## <a name="file-location"></a>파일 위치  
- Rskeymgmt.exe는  **\<* 드라이브*>: files\microsoft SQL Server\110\Tools\Binn * * 또는 * * \<* 드라이브*>: \Program 파일 (x86) \Microsoft SQL Server\110\Tools\Binn** 합니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
+ Rskeymgmt.exe는  **\<* 드라이브*>: files\microsoft SQL Server\110\Tools\Binn * * 또는  **\<* 드라이브*>: \Program 파일 (x86) \Microsoft SQL Server\110\Tools\Binn** 합니다. 파일 시스템의 모든 폴더에서 유틸리티를 실행할 수 있습니다.  
   
 ## <a name="remarks"></a>주의  
  보고서 서버는 저장된 자격 증명과 연결 정보를 암호화합니다. 데이터를 암호화하는 데 공개 키와 대칭 키가 사용됩니다. 보고서 서버를 실행하려면 보고서 서버 데이터베이스에 유효한 키가 있어야 합니다. **rskeymgmt** 를 사용하여 키를 백업, 삭제 또는 복원할 수 있습니다. 키를 복원할 수 없을 경우 이 도구는 더 이상 사용할 수 없는 암호화된 내용을 삭제하는 방법을 제공합니다.  
@@ -179,10 +179,10 @@ rskeymgmt -r <installationID>
   
  암호화 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md) 및 [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)   
- [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [Reporting Services 보고서 서버 &#40; 기본 모드 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [보고서 서버 명령 프롬프트 유틸리티 &#40; Ssrs&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [구성 및 암호화 키 &#40; 관리 SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

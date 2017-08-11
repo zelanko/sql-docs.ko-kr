@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3e1fde5db0ebdf332d82cdb7269342aea036ec61
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>보고서 서버 서비스 계정 구성(SSRS 구성 관리자)
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 -   보고서 서버 데이터베이스 호스팅에 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 대한 로그인 권한을 자동으로 업데이트합니다. 새 계정이 **RSExecRole**에 추가됩니다.  
   
-     이전 계정에 대한 데이터베이스 로그인은 자동으로 제거되지 않습니다. 더 이상 사용하지 않는 계정을 제거해야 합니다. 자세한 내용은 SQL Server 온라인 설명서의 [보고서 서버 데이터베이스 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)를 참조하세요.  
+     이전 계정에 대한 데이터베이스 로그인은 자동으로 제거되지 않습니다. 더 이상 사용하지 않는 계정을 제거해야 합니다. 자세한 내용은 참조 [관리는 보고서 서버 데이터베이스 &#40; SSRS 기본 모드 &#41; ](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md) SQL Server 온라인 설명서의 합니다.  
   
      처음에 서비스 계정을 사용하도록 보고서 서버 데이터베이스 연결을 구성한 경우에만 데이터베이스 권한이 새 서비스 계정에 부여됩니다. 도메인 사용자 계정 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 로그인을 사용하도록 보고서 서버 데이터베이스 연결을 구성한 경우에는 연결 정보는 서비스 계정 업데이트의 영향을 받지 않습니다.  
   
@@ -113,5 +113,5 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [보고서 서버 URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
+ [Reporting Services 구성 관리자 &#40; 기본 모드 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)
 

@@ -163,11 +163,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8e9aa0032e0610b73c28ff50c7c8f616cca6a2fd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>계기(보고서 작성기 및 SSRS)
@@ -197,7 +197,7 @@ ms.lasthandoff: 06/22/2017
   
  선형 계기는 가로 또는 세로 방향의 사각형이며 눈금자와 비슷한 모양입니다. 계기 포인터는 대개 온도계 모양이지만 표식이나 막대인 경우도 있습니다. 이 계기는 이러한 모양으로 인해 테이블 또는 행렬 데이터 영역에 통합되어 진행률 데이터를 보여 주는 데 유용합니다.  
   
- 이러한 차이 외는 두 계기 유형이 유사하므로 서로 바꿔 사용할 수 있습니다. 그러나 보고서에서 단순한 계기를 사용해야 하는 경우에는 계기 대신 표시기 사용을 고려해야 합니다. 자세한 내용은 [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)를 참조하세요.  
+ 이러한 차이 외는 두 계기 유형이 유사하므로 서로 바꿔 사용할 수 있습니다. 그러나 보고서에서 단순한 계기를 사용해야 하는 경우에는 계기 대신 표시기 사용을 고려해야 합니다. 자세한 내용은 참조 [표시기 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md).  
   
  다음 그림에서는 방사형 및 선형 계기를 보여 줍니다. 방사형 계기는 둥근 모양이며 니들 포인터를 사용하고, 선형 계기는 가로 모양이며 온도계 포인터를 사용합니다.  
   
@@ -305,9 +305,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

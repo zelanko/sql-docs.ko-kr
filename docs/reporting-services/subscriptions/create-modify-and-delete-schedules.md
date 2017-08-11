@@ -27,11 +27,11 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66a306d07b8556fe43659d4b078e2d31f3d51900
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-schedules"></a>일정 만들기, 수정 및 삭제
@@ -146,8 +146,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
  [공유 일정 일시 중지 및 다시 시작](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
- [보고서 캐시&#40;보고서 관리자&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
- [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
+ [캐시 된 보고서 &#40; 보고서 관리자 &#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
+ [보고서 기록 &#40;에 스냅숏 추가 보고서 관리자 &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   
   
 

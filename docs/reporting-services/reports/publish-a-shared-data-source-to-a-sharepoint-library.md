@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6fc6dc084a6434a8c0524136ca589a40c4adba41
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>SharePoint 라이브러리에 공유 데이터 원본 게시
@@ -35,17 +35,17 @@ ms.lasthandoff: 06/22/2017
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 기존 또는 새로운 보고서 서버 프로젝트를 엽니다.  
   
-2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. *\<프로젝트 >***속성 페이지** 대화 상자가 열립니다.  
+2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다.  *\<프로젝트 >***속성 페이지** 대화 상자가 열립니다.  
   
 3.  SharePoint 사이트에 게시하는 데 사용할 **구성** 을 선택합니다(예:  
   
 4.  프로젝트의 공유 데이터 원본을 게시하고 이전에 게시된 공유 데이터 원본을 덮어쓰려면 **OverwriteDataSources** 를 **True**로 설정합니다.  
   
-5.  (옵션) **TargetDataSourceFolder**에 SharePoint 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. `http://TestServer/TestSite/Documents/DataSources`)을 입력합니다.  
+5.  (옵션) **TargetDataSourceFolder**에 SharePoint 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. 예를 들어 `http://TestServer/TestSite/Documents/DataSources`를 참조하세요.  
   
      값을 지정하지 않으면 **TargetReportFolder** 값이 사용됩니다.  
   
-6.  **TargetReportFolder**에 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. `http://TestServer/TestSite/Documents/Reports`)을 입력합니다.  
+6.  **TargetReportFolder**에 라이브러리 또는 라이브러리 폴더에 대한 URL을 입력합니다. 예를 들어 `http://TestServer/TestSite/Documents/Reports`를 참조하세요.  
   
 7.  **TargetServerURL**에 SharePoint 최상위 사이트 또는 하위 사이트에 대한 URL을 입력합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. `http://servername`, `http://servername/site` 또는 `http://servername/site/subsite`).  
   
@@ -62,6 +62,6 @@ ms.lasthandoff: 06/22/2017
  [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)   
  [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
  [보고서 서버에 보고서 게시](../../reporting-services/reports/publishing-reports-to-a-report-server.md)   
- [보고서에 Office 데이터 연결&#40;.odc&#41; 사용&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
+ [Office 데이터 연결 &#40;를 사용 합니다. odc &#41; 보고서 &#40; 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

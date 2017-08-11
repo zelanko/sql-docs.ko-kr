@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3676c9e127d69540a634053e37bf21dd8d06024e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-an-axis-interval-report-builder-and-ssrs"></a>축 간격 지정(보고서 작성기 및 SSRS)
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 
     ![report-builder-column-chart-x-axis-labels](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-labels.png)
   
-2.  **가로 축 속성** 대화 상자 > **축 옵션** 탭에서 **간격**을 **1**로 설정하여 모든 범주 그룹 레이블을 표시합니다. x축에 다른 모든 범주 그룹 레이블을 표시하려면 **2**를 입력합니다. 
+2.  에 **가로 축 속성** 대화 상자 > **축 옵션** 탭, 설정 **간격** 를 **1** 모든 범주 그룹 레이블을 표시 합니다. x축에 다른 모든 범주 그룹 레이블을 표시하려면 **2**를 입력합니다. 
 
      ![report-builder-column-chart-x-axis-interval-one](../../reporting-services/report-design/media/report-builder-column-chart-x-axis-interval-one.png)
   
@@ -85,17 +85,17 @@ ms.lasthandoff: 06/22/2017
   
 1.  변경할 차트 축을 마우스 오른쪽 단추로 클릭한 다음 **축 속성**을 클릭합니다. 
   
-2.  **가로 축 속성** 대화 상자 > **축 옵션** 탭에서 **간격**을 **자동**으로 설정합니다. 차트에 축을 따라 배치할 수 있는 최적의 범주 레이블 수가 표시됩니다.  
+2.  에 **가로 축 속성** 대화 상자 > **축 옵션** 탭, 설정 **간격** 를 **자동**합니다. 차트에 축을 따라 배치할 수 있는 최적의 범주 레이블 수가 표시됩니다.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
  [차트 (보고서 작성기 및 SSRS)에 데이터 요소에 서식 지정](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [데이터 영역 (보고서 작성기 및 SSRS)의 데이터 정렬](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [축 속성 대화 상자, 축 옵션&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
- [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [보조 축에 데이터 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
+ [축 속성 대화 상자, 축 옵션 &#40; 보고서 작성기 및 SSRS &#41;](http://msdn.microsoft.com/library/b276e210-7a12-48ae-971b-7dabae51df11)   
+ [로그 눈금 간격 &#40;를 지정 합니다. 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [보조 축 &#40;에 데이터 표시 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)  
   
   
 

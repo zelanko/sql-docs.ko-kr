@@ -24,11 +24,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 422c3efc7f6514efafcfa552ed78658d002a2f42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>데이터 필터링, 그룹화 및 정렬(보고서 작성기 및 SSRS)
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
   
  여러 데이터 집합 필드를 그룹화하려면 각 필드를 그룹 식 집합에 추가합니다. 또한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 그룹 식을 직접 작성할 수도 있습니다. 예를 들어 값의 범위로 그룹화하거나 보고서 매개 변수를 사용하여 그룹화함으로써 데이터 영역의 데이터를 그룹화하는 방법을 사용자가 직접 선택하도록 할 수 있습니다. 자세한 내용은 [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)를 참조하세요.  
   
- 보고서 프레젠테이션을 위해 각 그룹의 전과 후 또는 그룹에 있는 각 인스턴스의 전과 후에 페이지 나누기를 추가하여 각 페이지에서 데이터의 양을 줄이고 보고서 렌더링 성능을 보다 원활하게 관리할 수 있습니다. 자세한 내용은 [페이지 나누기 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서 프레젠테이션을 위해 각 그룹의 전과 후 또는 그룹에 있는 각 인스턴스의 전과 후에 페이지 나누기를 추가하여 각 페이지에서 데이터의 양을 줄이고 보고서 렌더링 성능을 보다 원활하게 관리할 수 있습니다. 자세한 내용은 참조 [에 페이지 나누기 &#40; 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-a-page-break-report-builder-and-ssrs.md).  
   
  데이터 영역 그룹을 만드는 것은 데이터를 보고서에 구성하기 위한 한 방법입니다. 데이터를 구성하는 데는 여러 가지 방법이 있으며 각 방법에는 장점이 있습니다. 자세한 내용은 [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)을 참조하세요.  
   
@@ -213,11 +213,11 @@ FROM Production.Product
   
 ## <a name="see-also"></a>관련 항목:  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [스파크라인 및 데이터 막대&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [스파크 라인 및 데이터 막대 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [계기 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   

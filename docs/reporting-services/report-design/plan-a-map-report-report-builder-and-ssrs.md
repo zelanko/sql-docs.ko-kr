@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78f69746e290ea004d28edf8a0a90aeabfb9151d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>지도 보고서 계획(보고서 작성기 및 SSRS)
@@ -156,9 +156,9 @@ ms.lasthandoff: 06/22/2017
  동적 공간 데이터를 사용하려면 공간 데이터 원본이 보고서 서버에 있어야 합니다. 보고서가 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 디자인되는 경우 공간 데이터 원본을 프로젝트에 추가하고 보고서 정의와 함께 보고서 서버에 게시할 수 있습니다. 보고서 작성기를 사용하여 보고서를 디자인하는 경우 먼저 공간 데이터를 보고서 서버에 업로드한 다음 마법사나 계층 속성에서 지도 계층의 공간 데이터 원본을 지정해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
- [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
- [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [데이터 및 지도 또는 지도 계층 &#40; 표시 사용자 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
+ [자습서: 보고서 &#40; 매핑 보고서 작성기 &#41;](../../reporting-services/tutorial-map-report-report-builder.md)   
+ [지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [보고서 &#40; 지도 보고서 문제 해결: 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

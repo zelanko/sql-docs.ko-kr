@@ -17,11 +17,11 @@ caps.latest.revision: 44
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d4edfc347b8ad4bb90d807f4f0c9ecc602ca3f2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>보고서의 데이터 원본 속성 구성(보고서 관리자)
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [새 데이터 원본 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
- [공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
+ [새 데이터 원본 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)   
+ [만들기, 수정 및 공유 데이터 원본 &#40; 삭제 Ssrs&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
  [보고서 데이터 원본 관리](../../reporting-services/report-data/manage-report-data-sources.md)   
- [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
+ [만들기, 삭제 또는 공유 데이터 원본 &#40; 수정 보고서 관리자 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [데이터 원본 속성 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)  
   
   

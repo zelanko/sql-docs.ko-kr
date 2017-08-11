@@ -20,11 +20,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0fd8adf79a7eeccb66b5efd6fc90e1312020973a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page"></a>웹 페이지에 보고서 뷰어 웹 파트 추가
@@ -62,8 +62,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [보고서 뷰어 웹 파트 사용자 지정](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
- [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [보고서 뷰어 웹 파트를 사용자 지정](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)   
+ [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [SharePoint용 Reporting Services 추가 기능 설치 또는 제거](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

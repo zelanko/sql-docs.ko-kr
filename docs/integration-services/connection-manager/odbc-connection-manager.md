@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.odbcconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], ODBC
 - ODBC connection manager
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a136e71727d1a0b729f7014448dd97d81a7af89d
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: f3e331efe9c6a297ef8d9dc342fb07c83ddafc03
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="odbc-connection-manager"></a>ODBC 연결 관리자
@@ -50,6 +52,23 @@ ms.lasthandoff: 08/03/2017
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
+## <a name="odbc-connection-manager-ui-reference"></a>ODBC 연결 관리자 UI 참조
+  **ODBC 연결 관리자 구성** 대화 상자를 사용하여 ODBC 데이터 원본에 대한 연결을 추가할 수 있습니다.  
+  
+ ODBC 연결 관리자에 대한 자세한 내용은 [ODBC Connection Manager](../../integration-services/connection-manager/odbc-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **데이터 연결**  
+ 목록에서 기존 ODBC 연결 관리자를 선택합니다.  
+  
+ **데이터 연결 속성**  
+ 선택한 ODBC 연결 관리자의 속성과 값을 표시합니다.  
+  
+ **새로 만들기**  
+ **연결 관리자** 대화 상자를 사용하여 ODBC 연결 관리자를 만듭니다. 필요하면 이 대화 상자에서 새 ODBC 데이터 원본을 만들 수도 있습니다.  
+  
+ **Delete**  
+ 연결을 선택한 다음 **삭제** 단추를 사용하여 삭제합니다.  
 ## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   

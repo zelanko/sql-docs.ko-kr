@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smoconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMO
 - SMO connection manager
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 15ed4177b267642f5b6ef7186b5e03e74fa39767
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: d1f03b27dd5dca9e9a2940abf3731a2f5cefe0af
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smo-connection-manager"></a>SMO 연결 관리자
@@ -42,6 +44,33 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [SMO 연결 관리자 편집기](../../integration-services/connection-manager/smo-connection-manager-editor.md)를 참조하세요.  
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
+  
+## <a name="smo-connection-manager-editor"></a>SMO 연결 관리자 편집기
+  **SMO 연결 관리자 편집기** 를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체를 전송하는 여러 태스크에 사용하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 구성할 수 있습니다.  
+  
+ SMO 연결 관리자에 대한 자세한 내용은 [SMO Connection Manager](../../integration-services/connection-manager/smo-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **서버 이름**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 입력하거나 목록에서 서버 이름을 선택합니다.  
+  
+ **새로 고침**  
+ 네트워크에서 검색할 수 있는 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 목록을 새로 고칩니다.  
+  
+ **Windows 인증 사용**  
+ Windows 인증을 사용하여 선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+  
+ **SQL Server 인증 사용**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
+  
+ **사용자 이름**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 이름을 입력합니다.  
+  
+ **암호**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 선택한 경우 암호를 입력합니다.  
+  
+ **연결 테스트**  
+ 구성한 연결을 테스트합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

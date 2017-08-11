@@ -21,11 +21,11 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3aa67165e961e76569daadff1fc610c4d16a1e63
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pptx-device-information-settings"></a>PPTX 장치 정보 설정
@@ -50,8 +50,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [장치 정보 설정을 렌더링 확장 프로그램에 전달](../reporting-services/report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
- [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)  
+ [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수를 사용자 지정](../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [기술 참조 &#40; Ssrs&#41;](../reporting-services/technical-reference-ssrs.md)  
   
   
 

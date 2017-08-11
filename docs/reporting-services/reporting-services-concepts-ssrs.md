@@ -15,29 +15,29 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 522c9f0c5cec7b6966d80c45a890a5be90e60b07
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Reporting Services 개념(SSRS)
   이 항목에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 개념에 대해 간략하게 설명합니다.  
   
- **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint mode   
+ **[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드   
   
 ##  <a name="bkmk_ReportServerConcepts"></a> 보고서 서버 개념  
  보고서 서버는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 인스턴스가 설치된 컴퓨터를 말하며 페이지 매김 처리한 보고서와 모바일 보고서, 보고서 관련 항목 및 리소스, 일정, 구독 등의 항목을 내부적으로 저장합니다. 보고서 서버는 독립 실행형 단일 서버로 구성하거나 확장형 팜으로 구성할 수 있으며 SharePoint Server와 통합할 수도 있습니다. 보고서 서버 항목과의 상호 작용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 웹 서비스, WMI 공급자, URL 액세스를 통해서 수행하거나 프로그래밍 방식으로 스크립트를 통해 수행합니다. 보고서 서버와 상호 작용하는 방식은 배포 토폴로지 및 구성에 따라 다릅니다.  
   
 ### <a name="native-mode-report-servers"></a>기본 모드 보고서 서버
- 기본 모드로 구성된 보고서 서버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 설치되고 독립 실행형 서버로 구성된 컴퓨터를 말합니다. 보고서 서버, 보고서 및 보고서 관련 항목과의 상호 작용은 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]나 URL 액세스 명령을 통해 브라우저를 사용하거나 SQL Server Management Studio에서 수행하거나 프로그래밍 방식으로 스크립트를 통해 수행합니다. 자세한 내용은 [Reporting Services Report Server &#40;Native Mode&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md)을 참조하세요.  
+ 기본 모드로 구성된 보고서 서버는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 설치되고 독립 실행형 서버로 구성된 컴퓨터를 말합니다. 보고서 서버, 보고서 및 보고서 관련 항목과의 상호 작용은 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)] 나 URL 액세스 명령을 통해 브라우저를 사용하거나 SQL Server Management Studio에서 수행하거나 프로그래밍 방식으로 스크립트를 통해 수행합니다. 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../reporting-services/report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
   
 ### <a name="sharepoint-mode-report-servers"></a>SharePoint 모드 보고서 서버  
  SharePoint와 통합된 보고서 서버는 두 가지 구성이 가능합니다. [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 에 SharePoint Server가 SharePoint 공유 서비스로 설치되어 있습니다. 이전 릴리스에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 추가 기능을 설치하여 보고서 서버가 SharePoint Server와 통합됩니다. 두 경우 모두 SharePoint 사이트에서 응용 프로그램 페이지를 사용하여 보고서 서버, 보고서, 보고서 관련 항목과 상호 작용합니다. SharePoint 문서 라이브러리 및 생성한 기타 라이브러리를 사용하여 보고서와 관련된 콘텐츠 형식을 저장합니다. 자세한 내용은 [Reporting Services 보고서 서버&#40;SharePoint 모드&#41;](../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md)를 참조하세요.  
   
 ### <a name="report-server-items"></a>보고서 서버 항목 
- 보고서 서버 항목에는 페이지 매김 처리한 보고서와 모바일 보고서, KPI, 공유 데이터 원본, 공유 데이터 집합뿐 아니라 보고서 서버에 게시하거나 업로드하거나 저장할 수 있는 기타 항목도 포함됩니다. 항목은 기본 보고서 서버에 보고서 서버 계층형 폴더 구조로 구성되거나 SharePoint 사이트의 SharePoint 콘텐츠 라이브러리에 구성됩니다, 자세한 내용은 [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)를 참조하세요.  
+ 보고서 서버 항목에는 페이지 매김 처리한 보고서와 모바일 보고서, KPI, 공유 데이터 원본, 공유 데이터 집합뿐 아니라 보고서 서버에 게시하거나 업로드하거나 저장할 수 있는 기타 항목도 포함됩니다. 항목은 기본 보고서 서버에 보고서 서버 계층형 폴더 구조로 구성되거나 SharePoint 사이트의 SharePoint 콘텐츠 라이브러리에 구성됩니다, 자세한 내용은 참조 [보고서 서버 내용 관리 &#40; SSRS 기본 모드 &#41; ](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md).  
   
 ### <a name="folders"></a>폴더
  기본 보고서 서버의 폴더는 보고서 서버에 저장된 모든 주소 지정 가능 항목의 계층형 탐색 구조와 경로를 제공합니다. 폴더 계층과 사이트 및 폴더 사용 권한을 사용하여 보고서 서버 항목에 대한 액세스를 제어하며, 이를 *항목 수준 보안*이라고 합니다. 기본적으로 특정 폴더에 대해 정의한 역할 할당은 폴더 계층 내의 자식 폴더에 상속됩니다. 특정 역할을 폴더에 할당하는 경우 상속 규칙이 더 이상 적용되지 않습니다. 폴더 구조는 **홈**이라는 루트 노드와 선택적인 **내 보고서** 기능을 지원하는 예약된 폴더로 구성됩니다. 루트 노드는 브라우저에서 보고서 서버 가상 디렉터리의 이름 예를 들어는 `http://myreportserver/reports`합니다. 자세한 내용은 [Folders](../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Folders)을(를) 참조하세요.  
@@ -56,10 +56,10 @@ ms.lasthandoff: 06/22/2017
  구독은 특정 시간이나 이벤트에 대한 응답으로 구독에서 지정하는 응용 프로그램 파일 형식으로 보고서를 배달하라는 요청입니다. 요청 시 보고서를 실행하는 대신 구독할 수 있습니다. 요청 시 실행 보고서는 볼 때마다 사용자가 보고서를 선택해야 합니다. 반면 구독을 사용하면 일정을 예약한 다음 보고서 배달을 자동화할 수 있습니다. 전자 메일 받은 편지함이나 파일 공유 위치에 보고서를 배달할 수 있습니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
 ### <a name="extensions"></a>확장 프로그램
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 솔루션을 사용자 지정하는 데 사용할 수 있는 확장형 아키텍처를 제공합니다. 보고서 서버는 사용자 지정 인증 확장 프로그램, 데이터 처리 확장 프로그램, 보고서 처리 확장 프로그램, 렌더링 확장 프로그램, 배달 확장 프로그램 및 RSReportServer.config 구성 파일에서 사용자가 구성할 수 있는 확장 프로그램을 지원합니다. 예를 들어, 보고서 뷰어에서 사용할 수 있는 내보내기 형식을 제한할 수 있습니다. 배달 및 보고서 처리 확장 프로그램은 선택적이지만 보고서 배포 또는 사용자 지정 컨트롤을 지원하려는 경우에는 반드시 필요합니다. 자세한 내용은 [Reporting Services 확장 프로그램 &#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 는 보고서 솔루션을 사용자 지정하는 데 사용할 수 있는 확장형 아키텍처를 제공합니다. 보고서 서버는 사용자 지정 인증 확장 프로그램, 데이터 처리 확장 프로그램, 보고서 처리 확장 프로그램, 렌더링 확장 프로그램, 배달 확장 프로그램 및 RSReportServer.config 구성 파일에서 사용자가 구성할 수 있는 확장 프로그램을 지원합니다. 예를 들어, 보고서 뷰어에서 사용할 수 있는 내보내기 형식을 제한할 수 있습니다. 배달 및 보고서 처리 확장 프로그램은 선택적이지만 보고서 배포 또는 사용자 지정 컨트롤을 지원하려는 경우에는 반드시 필요합니다. 자세한 내용은 참조 [Reporting Services 확장 프로그램 &#40; Ssrs&#41; ](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="report-access"></a>보고서 액세스 
- 요청 시 액세스 방법을 사용할 경우 보고서 보기 도구에서 보고서를 선택할 수 있습니다. 보고서 서버 구성에 따라 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 웹 파트, SharePoint 라이브러리(SharePoint 통합 모드에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]가 설치된 경우), 포함된 ReportViewer 컨트롤, URL 액세스를 사용한 브라우저 등을 사용할 수 있습니다. 요청 시 보고서 액세스에 대한 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 요청 시 액세스 방법을 사용할 경우 보고서 보기 도구에서 보고서를 선택할 수 있습니다. 보고서 서버 구성에 따라 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)], [!INCLUDE[msCoName](../includes/msconame-md.md)] SharePoint 2.0 웹 파트, SharePoint 라이브러리(SharePoint 통합 모드에서 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 가 설치된 경우), 포함된 ReportViewer 컨트롤, URL 액세스를 사용한 브라우저 등을 사용할 수 있습니다. 보고서에 대 한 요청 시 액세스 하는 방법에 대 한 자세한 내용은 참조 [찾기, 보기 및 보고서 관리 &#40; 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
  요청 시 보고서를 실행하는 대신 구독할 수 있습니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
@@ -159,7 +159,7 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
  드릴다운 보고서는 처음에 복잡한 항목을 숨기고 사용자가 경우에 따라 숨겨진 보고서 항목을 보이거나 숨기는 방식으로 보려는 데이터의 양을 조절할 수 있도록 지원하는 레이아웃 디자인입니다. 드릴다운 보고서는 보고서에 표시할 수 있는 가능한 모든 데이터를 검색해야 합니다. 대량 데이터가 사용되는 보고서의 경우에는 드릴다운 보고서 대신 드릴스루 보고서를 사용하는 것이 좋습니다. 자세한 내용은 [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)을 참조하세요.  
   
 ### <a name="subreports"></a>하위 보고서
- 하위 보고서는 보고서에 레이아웃 요소로 추가하는 보고서 항목입니다. 하위 보고서는 다른 보고서를 가리키며 이를 주 보고서 본문 안에 하위 보고서 인스턴스로 표시합니다. 하위 보고서는 주 보고서 이외에도 여러 데이터 원본을 사용할 수 있습니다. 하위 보고서의 각 인스턴스에서 데이터를 필터링하는 매개 변수를 사용하여 데이터 영역 내에서 하위 보고서를 반복할 수도 있지만 하위 보고서는 일반적으로 주 보고서에서 요약 책 또는 관련 보고서의 모음에 대한 컨테이너로 사용됩니다. 각 하위 보고서 인스턴스는 보고서 처리를 위해 주 보고서와 하위 보고서 간에 컨텍스트를 전환합니다. 하위 보고서 인스턴스가 많은 보고서의 경우 드릴다운 보고서 대신 드릴스루 보고서를 사용하는 것이 좋습니다. 자세한 내용은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
+ 하위 보고서는 보고서에 레이아웃 요소로 추가하는 보고서 항목입니다. 하위 보고서는 다른 보고서를 가리키며 이를 주 보고서 본문 안에 하위 보고서 인스턴스로 표시합니다. 하위 보고서는 주 보고서 이외에도 여러 데이터 원본을 사용할 수 있습니다. 하위 보고서의 각 인스턴스에서 데이터를 필터링하는 매개 변수를 사용하여 데이터 영역 내에서 하위 보고서를 반복할 수도 있지만 하위 보고서는 일반적으로 주 보고서에서 요약 책 또는 관련 보고서의 모음에 대한 컨테이너로 사용됩니다. 각 하위 보고서 인스턴스는 보고서 처리를 위해 주 보고서와 하위 보고서 간에 컨텍스트를 전환합니다. 하위 보고서 인스턴스가 많은 보고서의 경우 드릴다운 보고서 대신 드릴스루 보고서를 사용하는 것이 좋습니다. 자세한 내용은 참조 [하위 보고서 &#40; 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
  ### <a name="maindetail-reports-and-drillthrough-reports"></a>주 보고서/세부 정보 보고서 및 드릴스루 보고서
  주 보고서/세부 정보 보고서 솔루션에는 하나 이상의 세부 정보 보고서로 연결되는 하이퍼링크와 함께 요약 정보를 표시하는 주 보고서가 포함됩니다.  세부 정보 보고서는 보고서를 읽는 사람이 해당 링크를 클릭하는 경우에만 실행됩니다. 드릴스루 보고서는 주 보고서와 별도로 열립니다. 하이퍼링크는 입력란, 자리 표시자 텍스트 또는 차트 계열과 같은 동작 속성이 있는 모든 보고서 항목에 정의할 수 있습니다. 자세한 내용은 [드릴스루 보고서&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md)를 참조하세요.  
@@ -173,9 +173,9 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
  보고서 기록은 보고서 스냅숏의 모음입니다. 보고서 기록을 사용하여 시간에 따른 보고서 기록을 유지 관리할 수 있습니다. 보고서 기록은 기밀이나 개인 데이터가 포함된 보고서에 대해서는 사용할 수 없습니다. 이런 이유로 보고서 기록은 단일 자격 증명 집합을 사용하여 데이터 원본을 쿼리하는 보고서만 포함할 수 있습니다. 또는 내보내기 파일 형식의 보고서를 파일 공유 위치에 배달하도록 일정 및 구독을 정의하여 보고서의 기록을 만들 수 있습니다. 자세한 내용은 [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)을 참조하세요.  
   
 ### <a name="cached-reports"></a>캐시된 보고서 
- 캐시된 보고서는 컴파일된 보고서 및 보고서 데이터의 저장된 복사본입니다. 캐시된 보고서를 사용하면 보고서 처리기에 대한 처리 요청 수를 줄이고 용량이 큰 보고서 데이터 집합을 검색하는 데 필요한 시간을 줄여 성능을 개선할 수 있습니다. 캐시된 보고서에는 필수 만료 기간(대개 분 단위)이 있습니다. 캐시된 보고서를 사용하는 방법은 [보고서 캐시&#40;SSRS&#41;](../reporting-services/report-server/caching-reports-ssrs.md)를 참조하세요.  
+ 캐시된 보고서는 컴파일된 보고서 및 보고서 데이터의 저장된 복사본입니다. 캐시된 보고서를 사용하면 보고서 처리기에 대한 처리 요청 수를 줄이고 용량이 큰 보고서 데이터 집합을 검색하는 데 필요한 시간을 줄여 성능을 개선할 수 있습니다. 캐시된 보고서에는 필수 만료 기간(대개 분 단위)이 있습니다. 캐시 된 보고서를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [보고서 캐싱 &#40; Ssrs&#41; ](../reporting-services/report-server/caching-reports-ssrs.md).  
   
- 공유 데이터 집합 쿼리 결과를 캐시할 수도 있습니다. 자세한 내용은 [공유 데이터 집합 캐시&#40;SSRS&#41;](../reporting-services/report-server/cache-shared-datasets-ssrs.md)를 참조하세요.  
+ 공유 데이터 집합 쿼리 결과를 캐시할 수도 있습니다. 자세한 내용은 참조 [캐시 공유 데이터 집합 &#40; Ssrs&#41; ](../reporting-services/report-server/cache-shared-datasets-ssrs.md).  
   
 ### <a name="snapshots"></a>스냅숏
  보고서 스냅숏은 레이아웃 정보 및 특정 시점에 검색된 쿼리 결과가 들어 있는 보고서입니다. 보고서를 볼 때 최신 쿼리 결과를 가져오는 요청 시 실행 보고서와 달리, 보고서 서버가 스냅숏이 만들어진 시점의 최신 보고서 데이터 및 컴파일된 보고서를 검색합니다. 보고서 스냅숏은 특정 렌더링 형식으로 저장되지 않으며 사용자나 응용 프로그램이 보고서 스냅숏을 요청할 때만 HTML과 같은 최종 보기 형식으로 렌더링됩니다. 자세한 내용은 [성능, 스냅숏, 캐싱&#40;Reporting Services&#41;](../reporting-services/report-server/performance-snapshots-caching-reporting-services.md)을 참조하세요.  
@@ -193,7 +193,7 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
 ##  <a name="bkmk_StagesofReports"></a> Reporting Services에서 보고서에 페이지 매김 처리하는 단계  
  보고서 정의를 만들고, 게시하거나 저장하고, 컴파일하고, 처리하고, 캐시하고, 렌더링하고, 보고, 내보내고, 기록으로 저장할 수 있습니다. 보고서를 실행할 때 보고서 서버는 보고서 처리, 데이터 처리 및 렌더링의 3단계에 따라 보고서를 처리합니다. 데이터 및 보고서 처리는 보고서 정의에서 수행되며 결과는 내부적인 중간 형식으로 만들어집니다. 중간 형식의 보고서는 이후에 특정 보기 형식으로 렌더링됩니다. 다음 다이어그램에서는 보고서 처리의 단계 및 요소를 보여 줍니다.  
   
- ![report processing diagram](../reporting-services/media/report-execution.gif "report processing diagram")  
+ ![보고서 처리 다이어그램](../reporting-services/media/report-execution.gif "보고서 처리 다이어그램")  
 보고서 처리 다이어그램  
   
 ### <a name="report-definition"></a>보고서 정의  
@@ -209,7 +209,7 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
  데이터와 레이아웃 정보가 모두 들어 있는 완전히 처리된 보고서입니다.  
   
 ### <a name="rendered-report"></a>렌더링된 보고서
- 완전히 처리된 보고서는 보고서 렌더러로 전송되어 대상 렌더링 형식의 데이터와 레이아웃을 각 페이지에서 결합합니다. 렌더링 확장 프로그램은 사용자 지정이 가능하며 확장할 수 있습니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 자세한 내용은 [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md) 및 [확장&#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)을 참조하세요.  
+ 완전히 처리된 보고서는 보고서 렌더러로 전송되어 대상 렌더링 형식의 데이터와 레이아웃을 각 페이지에서 결합합니다. 렌더링 확장 프로그램은 사용자 지정이 가능하며 확장할 수 있습니다. 보고서의 기본 렌더링 형식은 HTML 4.0입니다. 자세한 내용은 참조 [페이지 레이아웃 및 렌더링 &#40; 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md) 및 [확장 &#40; Ssrs&#41; ](../reporting-services/extensions-ssrs.md).  
   
 ### <a name="exported-report"></a>내보낸 보고서
  내보낸 보고서는 특정 파일 형식으로 저장되고 완전히 페이지 매김된 보고서입니다. 내보내기 형식은 설치된 렌더링 확장 프로그램에 따라 다르며 사용자 지정할 수 있습니다. 기본적으로 내보내기 형식은 Excel, Word, XML, PDF, TIFF 및 CSV입니다. 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.  
@@ -217,8 +217,8 @@ SQL Server 모바일 보고서 게시자에서 Reporting Services 모바일 보�
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 기능 및 태스크&#40;SSRS&#41;](../reporting-services/reporting-services-features-and-tasks-ssrs.md)   
- [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
- [Reporting Services&#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [기술 참조 &#40; Ssrs&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2f138c5caef261757a4bce22cb84ebeb7a2a68b8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="job-properties-management-studio"></a>작업 속성(Management Studio)
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/03/2017
  사용자가 시작한 프로세스인 경우 이 열에서 사용자 이름을 표시합니다. 시스템 작업의 경우 보고서 서버의 이름입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)  
   

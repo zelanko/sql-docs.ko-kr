@@ -21,11 +21,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8c07e836a48774cbf9c0c5441fde9d5df854fdcb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-and-manage-role-assignments"></a>역할 할당 생성 및 관리
@@ -69,10 +69,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [수정 하거나 삭제할 역할 할당 &#40; 보고서 관리자 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)   
  [역할 정의](../../reporting-services/security/role-definitions.md)   
- [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [미리 정의 된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

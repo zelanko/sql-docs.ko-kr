@@ -20,11 +20,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 5745964338889cd378a109636b2f6ebbdc32db26
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-filter-or-documents-web-part---sharepoint-integrated-mode"></a>필터 또는 문서 웹 파트-SharePoint 통합된 모드로 연결
@@ -81,8 +81,8 @@ ms.lasthandoff: 06/22/2017
 11. 변경 내용을 체크 인하고 페이지를 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
- [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [보고서 뷰어 웹 파트 사용자 지정](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
+ [웹 페이지 &#40; 보고서 뷰어 웹 파트 추가 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)   
+ [SharePoint 사이트에서 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [보고서 뷰어 웹 파트를 사용자 지정](../../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md)  
   
   

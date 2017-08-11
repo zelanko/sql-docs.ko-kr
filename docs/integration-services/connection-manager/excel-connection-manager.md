@@ -8,6 +8,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.excelconnection.f1
 helpviewer_keywords:
 - files [Integration Services], connections
 - connections [Integration Services], Excel
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c817f552e527f0d01ec7638eb5f605da572cf9c0
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 15de3ffdf6b4580918edf3a29d40e856614367fb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="excel-connection-manager"></a>Excel 연결 관리자
@@ -55,6 +57,42 @@ ms.lasthandoff: 08/03/2017
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
  Excel 파일 그룹을 통한 루핑 방법에 대한 자세한 내용은 [Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑](../../integration-services/control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)을 참조하세요.  
+  
+## <a name="excel-connection-manager-editor"></a>Excel 연결 관리자 편집기
+  **Excel 연결 관리자 편집기** 대화 상자를 사용하여 기존 또는 새 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 통합 문서 파일에 대한 연결을 추가할 수 있습니다.  
+  
+ Excel 연결 관리자에 대한 자세한 내용은 [Excel Connection Manager](../../integration-services/connection-manager/excel-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **Excel 파일 경로**  
+ 기존 또는 새 Excel 통합 문서 파일(.xls)의 경로와 파일 이름을 입력합니다.  
+  
+> [!NOTE]  
+>  암호로 보호된 Excel 파일에는 연결할 수 없습니다.  
+  
+> [!WARNING]  
+>  새로 만들거나 존재하지 않는 파일을 가리키는 **Excel 연결** 을 선택한 다음 **Excel 시트의 이름** 에서 **새로 만들기** 를 클릭하면 **Excel 대상 편집기**에서 Excel 파일을 자동으로 만듭니다.  
+  
+ **찾아보기**  
+ **열기** 대화 상자를 사용하여 Excel 파일이 있는 폴더 또는 새 파일을 만들려는 폴더로 이동합니다.  
+  
+ **Excel 버전**  
+ 파일을 만드는 데 사용된 Microsoft Excel 버전을 지정합니다.  
+  
+ **첫 행은 열 이름으로**  
+ 선택한 워크시트의 첫 데이터 행에 열 이름이 포함되는지 여부를 지정합니다. 이 옵션의 기본값은 **True**입니다.  
+  
+### <a name="providers-and-drivers-for-microsoft-excel-and-access-file"></a>Microsoft Excel 및 Access 파일용 공급자 및 드라이버  
+ Microsoft Office 파일용 OLE DB 공급자와 드라이버가 아직 설치되어 있지 않으면 다운로드해야 할 수 있습니다. 최신 버전 공급자는 이전 버전의 Excel에서 만든 파일을 열 수 있습니다.  
+  
+ 컴퓨터에 32비트 버전의 Office가 설치되어 있으면 32비트 버전 드라이버를 설치해야 하며 마법사 또는 마법사에서 생성하는 Integration Services 패키지도 32비트 모드에서 실행해야 합니다.  
+  
+|Microsoft Office 버전|다운로드|  
+|------------------------------|--------------|  
+|2007|[2007 Office System 드라이버: 데이터 연결 구성 요소](https://www.microsoft.com/download/details.aspx?id=23734)|  
+|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
+|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|  
+|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
   
 ## <a name="related-tasks"></a>관련 작업  
   

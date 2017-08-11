@@ -45,11 +45,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 10cbda042d03d5405c136894017418e341665c99
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="drilldown-action-report-builder-and-ssrs"></a>드릴다운 동작(보고서 작성기 및 SSRS)
@@ -68,9 +68,9 @@ ms.lasthandoff: 06/22/2017
 >   
 >  예를 들어 중첩된 그룹에 연결된 행을 숨기려면 입력란이 포함 계층 구조에서 부모 그룹 이상의 그룹과 연결된 행에 있어야 합니다.  
 >   
->  그룹, 열 또는 행의 가시 정보 설정에 대한 자세한 내용은 [항목에 확장 또는 축소 동작 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)를 참조하세요.  
+>  설정 표시 유형 정보는 그룹, 열 또는 행에 대 한 자세한 내용은 참조 [항목 &#40; 확장 또는 축소 동작 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)  
   
- 보고서 항목을 숨기는 방법에 대한 자세한 내용은 [항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서 항목 숨기기에 대 한 자세한 내용은 참조 [항목 &#40; 숨기기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -91,7 +91,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)   
- [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [대화형 정렬, 문서 구조 및 연결 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

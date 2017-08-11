@@ -18,11 +18,11 @@ caps.latest.revision: 20
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5a9b6a8f5eb6238fac6b0588ecf6c79227e9ec7d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>바로 가기 키(보고서 작성기)
@@ -98,7 +98,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [용어 설명&#40;보고서 작성기&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
+ [보고서 디자인 보기 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
+ [용어 설명 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
   
   

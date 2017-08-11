@@ -15,11 +15,11 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-examples-for-items-on-a-report-server---sharepoint-mode"></a>SharePoint 모드 보고서 서버에 있는 항목에 대 한 URL 예
@@ -140,8 +140,8 @@ ms.lasthandoff: 06/22/2017
  보고서 서버가 SharePoint 통합 모드로 실행되는 경우에는 리소스의 개념 정의가 보다 좁아집니다. 여기서 리소스는 외부 이미지를 참조하는 보고서를 저장하기 위한 개념입니다. 이 경우 보고서는 내부 사용을 위해 유지되는 복사본이나 스냅숏입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SharePoint 라이브러리에 보고서 게시](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [SharePoint 라이브러리에 공유 데이터 원본 게시](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [SharePoint 라이브러리에 보고서를 게시 합니다.](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint 라이브러리에 공유 데이터 원본을 게시합니다](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)  
   
   

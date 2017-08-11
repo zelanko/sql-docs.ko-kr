@@ -18,11 +18,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aa3e4553ddeb529ec8565a5599b2ce861f91bc38
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>항목 숨기기(보고서 작성기 및 SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
         > [!NOTE]  
         >  표시 유형에 대한 식을 지정할 때는 다음 이미지와 같이 보고서 항목의 Hidden 속성을 설정하게 됩니다. 평가 식은 값이 False일 때 보고서 항목을 표시하고 값이 True일 때 보고서 항목을 숨깁니다.   
-        > ![Properties_Visibility 대화 상자 및 숨김 속성](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility dialog and Hidden property")  
+        > ![Properties_Visibility 대화 상자 속성이 숨겨집니다](../../reporting-services/report-builder/media/hiddenproperty-propertiesvisibility.png "Properties_Visibility 대화 상자 및 숨김 속성")  
   
 4.  **확인** 을 두 번 클릭합니다.  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [항목에 확장 또는 축소 동작 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [항목 &#40; 확장 또는 축소 동작 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

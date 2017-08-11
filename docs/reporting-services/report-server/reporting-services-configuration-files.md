@@ -20,17 +20,17 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e11b155e7a0f800ea4d62859c9c2c95fa10550e8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-configuration-files"></a>Reporting Services 구성 파일
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 설치 중에 파일 시스템으로 복사되는 구성 파일과 레지스트리에 구성 요소 정보를 저장합니다. 구성 파일에는 내부 전용 값과 사용자 정의 값의 조합이 들어 있습니다. 사용자 정의 값은 설치 프로그램, 구성 도구, 명령줄 유틸리티를 통해 지정하거나 구성 파일을 수동으로 편집하여 지정합니다.  
   
- 고급 설정을 추가하거나 구성하는 경우에만 구성 파일을 수정해야 합니다. 구성 설정은 XML 요소나 특성으로 지정됩니다. XML과 구성 파일에 대해 이해하고 있으면 텍스트나 코드 편집기를 사용하여 사용자 정의 가능한 설정을 수정할 수 있습니다. 구성 파일을 수정하는 방법 또는 보고서 서버가 새 구성 설정/업데이트된 구성 설정을 읽는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
+ 고급 설정을 추가하거나 구성하는 경우에만 구성 파일을 수정해야 합니다. 구성 설정은 XML 요소나 특성으로 지정됩니다. XML과 구성 파일에 대해 이해하고 있으면 텍스트나 코드 편집기를 사용하여 사용자 정의 가능한 설정을 수정할 수 있습니다. 보고서 서버는 새로 추가 되거나 업데이트 된 구성 설정을 읽지 방법에 대 한 자세한 내용을 보려면 하거나 구성 파일을 수정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Reporting Services 구성 파일 수정 &#40; RSreportserver.config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 > [!NOTE]  
 >  이전 버전에서 보고서 관리자에는 RSWebApplication.config라는 자체 구성 파일이 있었습니다. 이 파일은 이제 사용되지 않습니다. 이전 설치에서 업그레이드한 경우 이 파일이 삭제되지 않지만 보고서 서버가 해당 파일에서 설정을 읽지 않습니다. 파일이 컴퓨터에 있는 경우 삭제해야 합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 모든 보고서 관리자 구성 설정은 RSReportServer.config 파일에 저장되고 이 파일에서 읽힙니다. 삭제 또는 이동된 설정 목록을 검토하려면 [SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)을 참조하세요.  
@@ -80,7 +80,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Reporting Services 확장 프로그램](../../reporting-services/extensions/reporting-services-extensions.md)   
- [rsconfig 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
+ [rsconfig 유틸리티 &#40; Ssrs&#41;](../../reporting-services/tools/rsconfig-utility-ssrs.md)   
  [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

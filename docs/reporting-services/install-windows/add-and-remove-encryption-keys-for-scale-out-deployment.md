@@ -21,15 +21,15 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ffe0a7ea7f46ed7b1ae5d1e5070d58afa0540b12
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment"></a>확장 배포의 암호화 키 추가 및 제거
-  여러 보고서 서버에서 공유 보고서 서버 데이터베이스를 사용하도록 구성하여 확장 배포 모델에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 실행할 수 있습니다. 확장 배포의 멤버 자격은 보고서 서버가 암호화 키를 보고서 서버 데이터베이스에 저장하는지 여부에 따라 결정됩니다. 특정 보고서 서버 인스턴스에 대한 암호화 키를 추가 및 제거하여 확장 배포 멤버 자격을 제어할 수 있습니다. 배포에서 노드를 제거하는 경우 순서에 관계없이 제거할 수 있습니다. 배포에 노드를 추가할 경우 이미 배포에 포함되어 있는 보고서 서버로부터 새 인스턴스를 조인해야 합니다.  
+  여러 보고서 서버에서 공유 보고서 서버 데이터베이스를 사용하도록 구성하여 확장 배포 모델에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 실행할 수 있습니다. 확장 배포의 멤버 자격은 보고서 서버가 암호화 키를 보고서 서버 데이터베이스에 저장하는지 여부에 따라 결정됩니다. 특정 보고서 서버 인스턴스에 대한 암호화 키를 추가 및 제거하여 확장 배포 멤버 자격을 제어할 수 있습니다. 배포에서 노드를 제거하는 경우 순서에 관계없이 제거할 수 있습니다. 배포에 노드를 추가할 경우 이미 배포에 포함되어 있는 보고서 서버로부터 새 인스턴스를 조인해야 합니다.  
   
 ## <a name="using-the-reporting-services-configuration-tool-to-configure-scale-out-deployment"></a>Reporting Services 구성 도구를 사용하여 확장 배포 구성  
  확장 배포를 구성하는 가장 쉬운 방법은 Reporting Services 구성 도구를 사용하는 것입니다. 자세한 내용 및 단계별 지침은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
@@ -67,9 +67,9 @@ ms.lasthandoff: 06/22/2017
   
  이 단계를 수행하면 확장 배포에서 보고서 서버가 제거되지만, 보고서 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스의 설치가 제거되지는 않습니다. 확장 배포에서 보고서 서버를 제거한 후 해당 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 더 이상 필요하지 않은 경우 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제거할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [SQL Server의 기존 인스턴스 제거&#40;설치 프로그램&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+## <a name="see-also"></a>참고 항목  
+ [구성 및 암호화 키 &#40; 관리 SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [초기화는 보고서 서버 &#40; SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   
 

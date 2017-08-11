@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d88358516e05214b230ec57b6243168ef9aac048
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>계열에 대한 차트 영역 지정(보고서 작성기 및 SSRS)
@@ -48,11 +48,11 @@ ms.lasthandoff: 06/22/2017
 4.  (옵션) 차트 영역을 세로로 맞춥니다. 이렇게 하려면 차트를 마우스 오른쪽 단추로 클릭하고 **차트 영역 속성**을 선택합니다. **맞춤**에서, 선택한 차트 영역과 맞출 다른 차트 영역을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트의 여러 계열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [색상표를 사용하여 차트에 대한 색 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
- [극좌표형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
- [셰이프 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
- [원형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+ [차트 &#40;의 여러 계열 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/multiple-series-on-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40;의 데이터 요소에 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [색상표 &#40;를 사용 하 여 차트의 색을 정의 합니다. 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [극좌표 형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/polar-charts-report-builder-and-ssrs.md)   
+ [셰이프 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/shape-charts-report-builder-and-ssrs.md)   
+ [원형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

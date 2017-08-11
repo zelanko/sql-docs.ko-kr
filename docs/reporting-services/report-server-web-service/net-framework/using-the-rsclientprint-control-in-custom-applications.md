@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 8afee187160da9d35efd0c7079b649bac7e73740
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 57312a2c4c75a9df1abc55baa833772c9949270c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/13/2017
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint 속성  
   
-|속성|유형|RW|기본값|Description|  
+|속성|형식|RW|기본값|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|보고서 설정|왼쪽 여백을 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서에 지정되지 않은 경우 기본값은 12.2밀리미터입니다.|  
 |MarginRight|Double|RW|보고서 설정|오른쪽 여백을 가져오거나 설정합니다. 개발자가 설정하지 않았거나 보고서에 지정되지 않은 경우 기본값은 12.2밀리미터입니다.|  
@@ -109,7 +109,7 @@ ms.lasthandoff: 06/13/2017
 ### <a name="rsprintclient-support-for-the-print-method"></a>Print 메서드에 대한 RSPrintClient 지원  
  **RSClientPrint** 지원 개체는 **인쇄** 메서드 인쇄 대화 상자를 시작 하는 데 사용 합니다. **인쇄** 메서드는 인수는 다음과 같습니다.  
   
-|인수|입력/출력|유형|Description|  
+|인수|입력/출력|형식|Description|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|입력|문자열|보고서 서버 가상 디렉터리를 지정 합니다 (예를 들어 `https://adventure-works/reportserver`).|  
 |ReportPathParameters|입력|문자열|보고서 서버 폴더 네임스페이스에 있는 보고서의 전체 이름을 매개 변수를 포함하여 지정합니다. 보고서는 URL 액세스를 통해 검색됩니다. 예: "/ AdventureWorks Sample Reports/Employee Sales summary&empid = 1234"|  
@@ -148,9 +148,9 @@ ms.lasthandoff: 06/13/2017
   
  `</BODY>`  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [인쇄 컨트롤 &#40;를 사용 하 여 브라우저에서 보고서 인쇄 보고서 작성기 및 SSRS &#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
- [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [보고서 인쇄 &#40; 보고서 작성기 및 SSRS &#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [이미지 장치 정보 설정](../../../reporting-services/image-device-information-settings.md)  
   
   

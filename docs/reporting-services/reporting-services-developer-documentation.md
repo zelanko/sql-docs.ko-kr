@@ -21,11 +21,11 @@ caps.latest.revision: 21
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3704373a08b29a8f36ce843db5f67a860a04a47b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-developer-documentation"></a>Reporting Services 개발자 설명서
@@ -52,16 +52,16 @@ ms.lasthandoff: 06/22/2017
  [사용자 지정 보고서 항목](../reporting-services/custom-report-items/custom-report-items.md)  
  사용자 지정 보고서 항목을 만들어 RDL에 기능을 추가하거나 기존 컨트롤의 기능을 확장하는 방법을 설명합니다.  
   
- [보고서에 사용자 지정 어셈블리 사용](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
+ [보고서에서 사용자 지정 어셈블리 사용](../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
  보고서 정의 내에 코드 참조를 포함시켜 보고서에 사용자 지정 어셈블리를 사용하는 방법을 설명합니다.  
   
  [Reporting Services WMI 공급자 액세스](../reporting-services/tools/access-the-reporting-services-wmi-provider.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] WMI 공급자를 사용하여 보고서 서버 배포를 관리하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [Reporting Services&#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
+## <a name="see-also"></a>참고 항목  
+ [Reporting services&#40; Ssrs&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [보고서 정의 언어 &#40; Ssrs&#41;](../reporting-services/reports/report-definition-language-ssrs.md)   
- [기술 참조&#40;SSRS&#41;](../reporting-services/technical-reference-ssrs.md)   
+ [기술 참조 &#40; Ssrs&#41;](../reporting-services/technical-reference-ssrs.md)   
  [개발 &#40; 보안 Reporting services&#41;](../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   
   

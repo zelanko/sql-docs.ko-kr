@@ -21,17 +21,17 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ae58ddb9260037fafa37263050e55681944738eb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-code-to-a-report-ssrs"></a>보고서에 코드 추가(SSRS)
   모든 식에서 고유한 사용자 지정 코드를 호출할 수 있습니다. 다음과 같은 두 가지 방법으로 코드를 제공할 수 있습니다.  
   
--   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성된 코드를 보고서에 직접 포함합니다. 코드에서 참조 하는 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 없는 <xref:System.Math> 또는 <xref:System.Convert>, 보고서에 대 한 참조를 추가 해야 합니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요. 코드에서 만들 수 있는 기타 참조에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
+-   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 으로 작성된 코드를 보고서에 직접 포함합니다. 코드가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 또는 <xref:System.Math> 가 아닌 <xref:System.Convert>를 참조하는 경우 보고서에 해당 참조를 추가해야 합니다. 자세한 내용은 [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)를 참조하세요. 코드에서 만들 수 있는 기타 참조에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
   
 -   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 사용자 지정 코드 어셈블리를 제공합니다. 사용자 지정 어셈블리를 제공하는 경우 보고서를 작성하는 컴퓨터와 보고서를 보는 보고서 서버 모두에 해당 어셈블리를 설치해야 합니다. 자세한 내용은 [Using Custom Assemblies with Reports](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)을(를) 참조하세요.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 속성 대화 상자, 코드](http://msdn.microsoft.com/library/955d4b11-17b4-4f1c-9690-6e7af54caea7)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [매개 변수 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0185d35444cdac141cb5d9626d85618b7eaf3358
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>보고서 찾기, 보기 및 관리(보고서 작성기 및 SSRS)
@@ -72,21 +72,21 @@ ms.lasthandoff: 06/22/2017
   
 -   서버에 새 폴더를 만들어 보고서를 원하는 방식으로 구성합니다.  
   
- 이러한 태스크 중 일부는 보고서 서버 관리자가 수행합니다. 보고서 서버에서 수행된 태스크에 대한 자세한 내용은 [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)를 참조하세요.  
+ 이러한 태스크 중 일부는 보고서 서버 관리자가 수행합니다. 보고서 서버에서 수행 하는 작업에 대 한 자세한 참조 [Reporting Services 보고서 서버 &#40; 기본 모드 &#41; ](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
  보고서 관리자에는 보통 폴더, 보고서, 데이터 원본, 보고서 모델과 내 보고서 폴더가 포함됩니다. 내 보고서는 소유한 보고서를 저장하고 작업하는 데 사용할 수 있는 개인 작업 영역입니다. 다른 보고서 서버 폴더는 공용 폴더이며 일반적으로 사용자가 폴더 내용을 추가하거나 수정하려면 고급 사용 권한이 있어야 합니다. 내 보고서 내에 폴더를 만들어 보고서를 더 자세하게 구성할 수 있습니다. 자세한 내용은 [내 보고서 사용&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
  보고서 관리자는 Reporting Services HTML 뷰어에 보고서를 표시합니다. HTML 뷰어는 HTML 형식의 보고서를 보는 데 필요한 프레임워크를 제공하며 보고서 도구 모음, 매개 변수 섹션, 자격 증명 섹션 및 문서 구조를 포함합니다. 보고서 도구 모음은 페이지 탐색, 확대/축소, 새로 고침, 검색, 내보내기, 인쇄 및 데이터 피드 기능을 제공합니다. 보고서 도구 모음은 URL을 통해 보고서에 액세스할 때 보고서 상단의 브라우저 창에도 나타납니다. 인쇄 기능은 선택 사항이며 관리자가 설정해야 합니다. 인쇄 기능을 사용할 수 있는 경우 프린터 아이콘이 보고서 도구 모음에 표시됩니다. 다음 그림에서는 보고서 관리자 창 및 보고서 도구 모음 기능 클로즈업 화면의 보고서 도구 모음을 보여 줍니다.  
   
- ![보고서 관리자에서 보고서 도구 모음](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "Report toolbar in Report Manager")  
+ ![보고서 관리자에서 보고서 도구 모음](../../reporting-services/report-builder/media/hs-reportserver-blowout.gif "보고서 관리자에서 보고서 도구 모음")  
 보고서 관리자 창  
   
- ![보고서 도구 모음](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
+ ![보고서 도구 모음](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "보고서 도구 모음")  
 보고서 도구 모음  
   
- 보고서를 실행한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 응용 프로그램의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [다른 파일 형식으로 보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2)를 참조하세요.  
+ 보고서를 실행한 후 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 또는 PDF와 같은 다른 형식으로 내보낼 수 있습니다. 또한 쉼표로 구분된 값(CSV) 렌더링 확장 프로그램 등의 데이터 렌더링 확장 프로그램을 사용해 보고서를 내보낸 다음 CSV 데이터 파일을 다른 응용 프로그램의 입력으로 사용할 수도 있습니다. 보고서 내보내기에 대 한 자세한 내용은 참조 [보고서 내보내기 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) 및 [&#40; 다른 파일 형식으로 보고서 내보내기 보고서 작성기 및 SSRS &#41; ](http://msdn.microsoft.com/library/b577568b-ecbd-44c3-be88-31dab6fc38a2).  
   
- 보고서를 선택하여 실행하는 가장 쉬운 방법은 보고서 관리자를 연 다음 원하는 보고서를 검색하거나 직접 찾아가는 것입니다. 보고서를 여는 방법에 대한 단계별 지침은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
+ 보고서를 선택하여 실행하는 가장 쉬운 방법은 보고서 관리자를 연 다음 원하는 보고서를 검색하거나 직접 찾아가는 것입니다. 보고서를 여는 방법에 대 한 단계별 지침에 대 한 참조 [열기 및 닫기 보고서 &#40; 보고서 관리자 &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  보고서를 실행한 후 새로 고치면 새 데이터가 표시됩니다.  
   
@@ -107,7 +107,7 @@ ms.lasthandoff: 06/22/2017
   
  응용 프로그램 페이지에 액세스하려면 보고서의 드롭다운 메뉴에서 항목과 관련된 동작을 선택하거나 이전에 SharePoint 라이브러리에 추가했던 기타 보고서 서버 항목을 선택합니다. 항목 및 사용자 권한에 따라 보고서 작성기에서 보고서를 만들고 모델을 생성하며 모델 항목 보안을 설정할 수도 있습니다.  
   
- Reporting Services 및 SharePoint 기술에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888)에서 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)를 참조하세요.  
+ Reporting Services 및 SharePoint 기술에 대 한 자세한 내용은 참조 하십시오. [구성 및 관리는 보고서 서버 &#40; Reporting Services SharePoint 모드 &#41; ](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](http://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
   
 ### <a name="finding-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트에서 보고서 서버 항목 찾기  
  속성을 설정하려면 먼저 항목을 찾아야 합니다. 보고서 서버 항목은 항상 라이브러리나 라이브러리 내의 폴더에 저장됩니다.  
@@ -161,6 +161,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [보고서 저장&#40;보고서 작성기&#41;](../../reporting-services/report-builder/saving-reports-report-builder.md)   
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [보고서 작성기 설치 및 제거](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
+ [설치 및 보고서 작성기 제거](http://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)  
   
   

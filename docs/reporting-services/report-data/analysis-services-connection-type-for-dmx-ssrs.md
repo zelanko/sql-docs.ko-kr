@@ -23,11 +23,11 @@ caps.latest.revision: 64
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e4cb050e8f838eaab2bc215005b167c0dea258fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="analysis-services-connection-type-for-dmx-ssrs"></a>DMX용 Analysis Services 연결 형식(SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="design-mode"></a>디자인 모드  
  DMX 쿼리 디자이너는 디자인 모드에서 열립니다. 디자인 모드에는 단일 데이터 마이닝 모델과 입력 테이블을 선택하는 데 사용하는 그래픽 디자인 화면과 예측 쿼리를 지정하는 데 사용하는 표가 포함되어 있습니다. DMX 쿼리 디자이너에는 쿼리 모드와 결과 모드가 있습니다. 쿼리 모드에서는 디자인 모드의 표가 DMX 쿼리를 입력하는 데 사용할 수 있는 쿼리 창으로 바뀝니다. 결과 모드에서는 쿼리에서 반환된 결과 집합이 데이터 표에 나타납니다.  
   
- DMX 쿼리 디자이너의 모드를 변경하려면 쿼리 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **디자인**, **쿼리** 또는 **결과**를 선택합니다. 자세한 내용은 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md) 및 [데이터 마이닝 모델에서 데이터 검색&#40;DMX&#41;&#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)을 참조하세요.  
+ DMX 쿼리 디자이너의 모드를 변경하려면 쿼리 디자인 화면을 마우스 오른쪽 단추로 클릭하고 **디자인**, **쿼리**또는 **결과**를 선택합니다. 자세한 내용은 참조 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md) 및 [데이터 마이닝 모델 &#40; DMX &#41; &#40;에서 데이터 검색 Ssrs&#41; ](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md).  
   
 ## <a name="designing-a-prediction-query"></a>예측 쿼리 디자인  
  디자인 모드의 쿼리 디자인 창에는 **마이닝 모델** 창과 **입력 테이블 선택**창이 있습니다. **마이닝 모델** 창을 사용하여 쿼리에 사용할 마이닝 모델을 선택하고 **입력 테이블 선택** 창을 사용하여 예측의 기반이 될 테이블을 선택할 수 있습니다. 입력 테이블 대신 단일 쿼리를 사용하려면 쿼리 디자인 창을 마우스 오른쪽 단추로 클릭하고 **단일 쿼리**를 선택합니다. **입력 테이블 선택** 창이 **단일 쿼리 입력** 창으로 바뀝니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="using-parameters"></a>매개 변수 사용  
  DMX 쿼리 매개 변수에 보고서 매개 변수를 전달할 수 있습니다. 이렇게 하려면 DMX 쿼리에 매개 변수를 추가하고 **쿼리 매개 변수** 대화 상자에서 쿼리 매개 변수를 정의한 다음 관련 보고서 매개 변수를 수정해야 합니다. 쿼리 매개 변수를 정의 하려면 클릭는 **쿼리 매개 변수** (![쿼리 매개 변수 대화 상자에 대 한 아이콘](../../reporting-services/report-data/media/iconqueryparameter.gif "쿼리 매개 변수 대화 상자에 대 한 아이콘")) 도구 모음 단추입니다. DMX 쿼리의 매개 변수를 정의하는 방법에 대한 지침을 보려면 [Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/define-parameters-in-the-mdx-query-designer-for-analysis-services.md)를 참조하세요.  
   
- 보고서 매개 변수와 쿼리 매개 변수 간의 관계를 관리하는 방법에 대한 자세한 내용은 [보고서 매개 변수와 쿼리 매개 변수 연결&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)을 참조하세요. 매개 변수에 대한 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
+ 보고서 매개 변수와 쿼리 매개 변수 간의 관계를 관리 하는 방법에 대 한 자세한 내용은 참조 하세요. [쿼리 매개 변수는 보고서 매개 변수 &#40; 연결 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-data/associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md). 매개 변수에 대 한 자세한 내용은 참조 [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)   

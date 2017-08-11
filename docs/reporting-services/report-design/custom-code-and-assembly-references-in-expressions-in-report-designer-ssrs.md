@@ -24,11 +24,11 @@ caps.latest.revision: 77
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc8491006425de79f8e96be1affb10687a1553f9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조(SSRS)
@@ -55,14 +55,14 @@ ms.lasthandoff: 06/22/2017
 2.  로컬 모드에서 사용자 지정 어셈블리에 대한 참조가 포함된 보고서 미리 보기  
   
 ##  <a name="Common"></a> 일반적으로 사용되는 함수에 대한 참조 포함  
- **식** 대화 상자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 기본 제공되는 일반적으로 사용되는 함수 목록을 범주별로 볼 수 있습니다. **일반 함수** 를 확장하고 범주를 클릭하면 식에 포함할 수 있는 함수 목록이 **항목** 창에 표시됩니다. 클래스를 포함 하는 일반 함수는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 및 <xref:System.Convert> 네임 스페이스 및 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리 함수입니다. 편의상 **식** 대화 상자에서 범주별로 나열된 가장 일반적으로 사용되는 함수 목록을 볼 수 있습니다. 범주는 텍스트, 날짜 및 시간, 수치 연산, 검사, 프로그램 흐름, 집계, 재무, 변환 및 기타입니다. 자주 사용되지 않는 함수는 목록에 표시되지 않지만 식에 사용할 수 있습니다.  
+ **식** 대화 상자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 기본 제공되는 일반적으로 사용되는 함수 목록을 범주별로 볼 수 있습니다. **일반 함수** 를 확장하고 범주를 클릭하면 식에 포함할 수 있는 함수 목록이 **항목** 창에 표시됩니다. 일반 함수에는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> 및 <xref:System.Convert> 네임스페이스의 클래스와 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 런타임 라이브러리 함수가 포함됩니다. 편의상 **식** 대화 상자에서 범주별로 나열된 가장 일반적으로 사용되는 함수 목록을 볼 수 있습니다. 범주는 텍스트, 날짜 및 시간, 수치 연산, 검사, 프로그램 흐름, 집계, 재무, 변환 및 기타입니다. 자주 사용되지 않는 함수는 목록에 표시되지 않지만 식에 사용할 수 있습니다.  
   
  기본 제공 함수를 사용하려면 항목 창에서 함수 이름을 두 번 클릭합니다. 함수 설명이 설명 창에 표시되고 함수 호출 예가 예제 창에 표시됩니다. 코드 창에서 함수 이름을 입력하고 왼쪽 괄호 **(**를 입력하면 IntelliSense 도움말을 통해 해당 함수 호출에 적합한 각 구문이 표시됩니다. 예를 들어 테이블의 `Quantity` 라는 필드에 대한 최대값을 계산하려면 코드 창에 `=Max(` 라는 간단한 식을 입력하고 스마트 태그를 사용하여 해당 함수 호출에 대해 유효한 모든 구문 목록을 확인합니다. 이 예를 완료하려면 `=Max(Fields!Quantity.Value)`를 입력합니다.  
   
- 각 함수에 대 한 자세한 내용은 참조 <xref:System.Math>, <xref:System.Convert>, 및 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) msdn 합니다.  
+ 각 함수에 대한 자세한 내용은 <xref:System.Math>, <xref:System.Convert>및 MSDN의 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
 ##  <a name="NotCommon"></a> 일반적으로 사용되지 않는 함수에 대한 참조 포함  
- 덜 자주 사용 되는 CLR 네임 스페이스에 대 한 참조를 포함 하려면 사용 해야 정규화 된 참조 예를 들어 <xref:System.Text.StringBuilder>합니다. 일반적으로 사용되지 않는 이러한 함수의 경우 **식** 대화 상자의 코드 창에서 IntelliSense가 지원되지 않습니다.  
+ 일반적으로 사용되지 않는 다른 CLR 네임스페이스에 대한 참조를 포함하려면 <xref:System.Text.StringBuilder>를 참조하세요. 일반적으로 사용되지 않는 이러한 함수의 경우 **식** 대화 상자의 코드 창에서 IntelliSense가 지원되지 않습니다.  
   
  자세한 내용은 MSDN의 [Visual Basic 런타임 라이브러리 멤버](http://go.microsoft.com/fwlink/?LinkId=198941) 를 참조하세요.  
   
@@ -196,11 +196,11 @@ End Function
  *Fields* 및 *ReportItems* 컬렉션의 내용은 런타임에 동적으로 변경될 수 있으므로 사용자 지정 어셈블리에 대한 호출에서(예: 멤버 변수) 해당 컬렉션을 유지해서는 안 됩니다. 일반적으로 모든 기본 제공 컬렉션에 같은 권장 사항이 적용됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서에 코드 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
- [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
- [보고서에 어셈블리 참조 추가&#40;SSRS&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
- [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [보고서 &#40; 코드를 추가 합니다. Ssrs&#41;](../../reporting-services/report-design/add-code-to-a-report-ssrs.md)   
+ [보고서에 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서 &#40;에 대 한 어셈블리 참조를 추가 합니다. Ssrs&#41;](../../reporting-services/report-design/add-an-assembly-reference-to-a-report-ssrs.md)   
+ [Reporting Services 자습서 및 &#40;입니다. SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서 예제(보고서 작성기 및 SSRS)](http://go.microsoft.com/fwlink/?LinkId=198283)  
   
   

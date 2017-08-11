@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f91b97d1877e365813f3aa2445fabea1a263ab2b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-ssrs"></a>URL 액세스(SSRS)
@@ -115,18 +115,18 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
   
 |태스크 설명|링크|  
 |-----------------------|-----------|  
-|보고서, 공유 데이터 원본 및 리소스와 같은 보고서 서버 항목 액세스|[URL 액세스를 사용하여 보고서 서버 항목 액세스](../reporting-services/access-report-server-items-using-url-access.md)|  
-|보고서 매개 변수를 보고서로 전달|[Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
+|보고서, 공유 데이터 원본 및 리소스와 같은 보고서 서버 항목 액세스|[URL 액세스를 사용 하 여 보고서 서버 항목 액세스](../reporting-services/access-report-server-items-using-url-access.md)|  
+|보고서 매개 변수를 보고서로 전달|[URL에 보고서 매개 변수 전달](../reporting-services/pass-a-report-parameter-within-a-url.md)|  
 |URL 액세스 문자열에서 날짜, 통화 등의 로캘별 해석을 정의하는 보고서 매개 변수의 로캘 설정|[URL에 보고서 매개 변수 언어 설정](../reporting-services/set-the-language-for-report-parameters-in-a-url.md)|  
 |보고서 렌더링 방식을 사용자 지정하는 렌더링 확장자별 설정 보내기|[URL에 장치 정보 설정 지정](../reporting-services/specify-device-information-settings-in-a-url.md)|  
-|보고서를 브라우저에서 보지 않고 파일 형식으로 직접 내보내기|[URL 액세스를 사용하여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)|  
-|보고서를 열고 문자열 위치로 직접 이동|[URL 액세스를 사용하여 보고서 검색](../reporting-services/search-a-report-using-url-access.md)|  
-|특정 보고서 기록 스냅숏 렌더링|[URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
+|보고서를 브라우저에서 보지 않고 파일 형식으로 직접 내보내기|[URL 액세스를 사용 하 여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)|  
+|보고서를 열고 문자열 위치로 직접 이동|[URL 액세스를 사용 하 여 보고서 검색](../reporting-services/search-a-report-using-url-access.md)|  
+|특정 보고서 기록 스냅숏 렌더링|[URL 액세스를 사용 하 여 보고서 기록 스냅숏 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Pass a Report Parameter Within a URL](../reporting-services/pass-a-report-parameter-within-a-url.md)   
+ [URL에 보고서 매개 변수 전달](../reporting-services/pass-a-report-parameter-within-a-url.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)   
- [URL 액세스를 사용하여 Reporting Services 통합](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [URL 액세스를 사용 하 여 Reporting Services 통합](../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

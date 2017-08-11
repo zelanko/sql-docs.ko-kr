@@ -20,11 +20,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 1dd867551f7413e07ac70b290e73e817f34878b9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>XML 보고서 데이터를 위한 XML 쿼리 구문(SSRS)
@@ -61,14 +61,14 @@ ms.lasthandoff: 06/22/2017
   
 |XML 데이터 원본|쿼리 예|  
 |---------------------|-------------------|  
-|웹 서비스 XML 데이터에서 <xref:ReportService2010.ReportingService2010.ListChildren%2A> 메서드.|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
+|웹 서비스 XML 데이터( <xref:ReportService2010.ReportingService2010.ListChildren%2A> 메서드 사용)|`<Query>`<br /><br /> `<Method Name="ListChildren" Namespace="http://schemas.microsoft.com/sqlserver/2005/06/30/reporting/reportingservices" />`<br /><br /> `</Query>`|  
 |웹 서비스 XML 데이터(SoapAction 사용)|`<Query xmlns=namespace>`<br /><br /> `<SoapAction>http://schemas/microsoft.com/sqlserver/2005/03/23/reporting/reportingservices/ListChildren</SoapAction>`<br /><br /> `</Query>`|  
 |네임스페이스를 사용하는 XML 문서 또는 포함 XML 데이터<br /><br /> 요소 경로의 네임스페이스를 지정하는 쿼리 요소|`<Query xmlns:es="http://schemas.microsoft.com/StandardSchemas/ExtendedSales">`<br /><br /> `<ElementPath>/Customers/Customer/Orders/Order/es:LineItems/es:LineItem</ElementPath>`<br /><br /> `</Query>`|  
 |포함 XML 문서|`<Query>`<br /><br /> `<XmlData>`<br /><br /> `<Customers>`<br /><br /> `<Customer ID="1">Bobby</Customer>`<br /><br /> `</Customers>`<br /><br /> `</XmlData>`<br /><br /> `<ElementPath>Customer {@}</ElementPath>`<br /><br /> `</Query>`|  
 |기본값을 사용하는 XML 문서|*No query*입니다.<br /><br /> 요소 경로는 XML 문서 자체에서 파생되며 네임스페이스로부터 독립적입니다.|  
   
 > [!NOTE]  
->  첫 번째 웹 서비스 예에서는 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드를 사용하는 보고서 서버의 내용을 나열합니다. 이 쿼리를 실행 하려면 새 데이터 원본 만들기 및 연결 문자열을 설정 해야 `http://localhost/reportserver/reportservice2006.asmx`합니다. <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드는 두 개의 매개 변수: **항목** 및 **재귀**합니다. **Item** 의 기본값을 **/** 로, **Recursive** 의 기본값을 **1**로 설정합니다.  
+>  첫 번째 웹 서비스 예에서는 <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드 사용) 이 쿼리를 실행 하려면 새 데이터 원본 만들기 및 연결 문자열을 설정 해야 `http://localhost/reportserver/reportservice2006.asmx`합니다. <xref:ReportService2006.ReportingService2006.ListChildren%2A> 메서드는 두 개의 매개 변수: **항목** 및 **재귀**합니다. **Item** 의 기본값을 **/** 로, **Recursive** 의 기본값을 **1**로 설정합니다.  
   
 ## <a name="specifying-namespaces"></a>네임스페이스 지정  
  XML **Query** 요소를 사용하여 데이터 원본의 XML 데이터에 사용된 네임스페이스를 지정할 수 있습니다. 다음 XML 쿼리에서는 **sales**네임스페이스를 사용합니다. **및** 의 XML `sales:LineItems` ElementPath `sales:LineItem` 노드는 **sales**네임스페이스를 사용합니다.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
+ [XML 연결 유형 및 &#40;입니다. SSRS &#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)   
  [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   

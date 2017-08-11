@@ -22,11 +22,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abd69f541a322d5fd82ab2a7940732f820be2365
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>텍스트 및 자리 표시자 서식 지정(보고서 작성기 및 SSRS)
@@ -54,7 +54,7 @@ ms.lasthandoff: 06/22/2017
   
 -   입력란에 단순 또는 복합 식을 입력합니다. 예를 들어 입력란에 **Name: [Name]** 을 입력하면 **[Name]** 텍스트가 `=Fields!Name.Value`식을 나타내는 자리 표시자로 표시됩니다.  
   
--   등호(=)로 시작하는 식을 빈 입력란에 입력합니다. 포커스를 입력란 바깥으로 이동하면 최종 식이 편집 가능한 자리 표시자로 변환됩니다. 입력란이 비어 있지 않거나 입력란에서 등호가 첫 문자가 아닌 곳에 삽입되어 있는 경우에는 등호가 문자열 리터럴로 취급되어 자리 표시자가 생성되지 않습니다. 단순 및 복합 식을 정의하는 방법에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)을 참조하세요.  
+-   등호(=)로 시작하는 식을 빈 입력란에 입력합니다. 포커스를 입력란 바깥으로 이동하면 최종 식이 편집 가능한 자리 표시자로 변환됩니다. 입력란이 비어 있지 않거나 입력란에서 등호가 첫 문자가 아닌 곳에 삽입되어 있는 경우에는 등호가 문자열 리터럴로 취급되어 자리 표시자가 생성되지 않습니다. 단순 및 복합 식을 정의 하는 방법에 대 한 자세한 내용은 참조 [보고서 &#40;에서 식 사용 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>입력란에서 자리 표시자 및 정적 텍스트 서식 지정  
  **자리 표시자 속성** 대화 상자를 사용하여 자리 표시자의 서식을 지정할 수 있습니다. 전체 자리 표시자의 서식만 지정할 수 있고, 자리 표시자의 구역을 서식 지정할 수는 없습니다. 기본 식을 보려면 자리 표시자 위에 포인터를 잠시 올려 놓으면 됩니다. 자리 표시자를 두 번 클릭하거나, 자리 표시자를 마우스 오른쪽 단추로 클릭하고 **자리 표시자 속성**을 선택하여 기본 식을 변경할 수 있습니다. **자리 표시자 속성** 대화 상자의 **일반** 에서 **레이블** 속성을 사용하여 UI 레이블을 지정할 수도 있습니다. 자리 표시자의 디자인 타임에 표시된 텍스트가 이 UI 레이블이 됩니다.  
@@ -70,18 +70,18 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  입력란에 정의된 동작은 입력란의 개별 텍스트에 대해 정의된 동작보다 우선 순위가 높습니다.  
   
- 혼합 서식에 대한 자세한 내용은 [입력란의 텍스트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)을 참조하세요.  
+ 혼합 서식에 대 한 자세한 내용은 참조 [텍스트 상자 &#40;의 텍스트 서식 지정 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
   
 ## <a name="aligning-horizontal-text-using-general"></a>일반을 사용하여 가로 텍스트 맞춤  
  **입력란 속성** 대화 상자의 **맞춤** 에서 텍스트를 가로로 어떻게 맞출 것인지를 지정할 수 있습니다. 맞춤 값을 지정하지 않는 경우 맞춤의 기본값은 **기본값**입니다. 즉, 자리 표시자 값의 필드 유형에 따라 텍스트를 맞춥니다. 문자열이 아닌 값(즉, 숫자가 아닌 값)으로 계산되는 식을 지정하면 텍스트를 오른쪽에 맞춥니다. 식이 문자열 값(예: 숫자)으로 평가되면 텍스트를 왼쪽에 맞춥니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [자리 표시자 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
- [Microsoft Excel로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
- [입력란&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
+ [차트 &#40;의 축 레이블 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [계기 &#40;의 눈금 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [자리 표시자 속성 대화 상자, 일반 &#40; 보고서 작성기 및 SSRS &#41;](http://msdn.microsoft.com/library/7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8)   
+ [Microsoft Excel &#40; 내보내기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [텍스트 상자 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)  
   
   

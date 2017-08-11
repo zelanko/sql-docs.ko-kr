@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6ca8d81025d48af07b5e2ce9336a8e031ea4fb1a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Reporting Services 데이터 원본에 자격 증명 저장
@@ -116,7 +116,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
   
-4.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 연결 문자열에서 자격 증명을 지정하지 않는 것을 권장합니다.  
+4.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]연결 문자열에 자격 증명을 지정 하지 않는 것이 좋습니다.  
   
      다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 연결하는 데 사용되는 연결 문자열을 보여 줍니다.  
   
@@ -144,7 +144,7 @@ ms.lasthandoff: 06/22/2017
   
 4.  **데이터 원본 유형** 목록에서 데이터 원본의 데이터를 처리하는 데 사용할 데이터 처리 확장 프로그램을 지정합니다.  
   
-5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서는 연결 문자열에서 자격 증명을 지정하지 않는 것을 권장합니다.  
+5.  **연결 문자열**에는 보고서 서버가 데이터 원본에 연결하는 데 사용하는 연결 문자열을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]연결 문자열에 자격 증명을 지정 하지 않는 것이 좋습니다.  
   
      다음 예에서는 로컬 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 연결하는 데 사용되는 연결 문자열을 보여 줍니다.  
   
@@ -163,11 +163,11 @@ ms.lasthandoff: 06/22/2017
      ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [저장 된 자격 증명에 대 한 보안 정책 요구 사항](#bkmk_top)  
   
 ## <a name="see-also"></a>참고 항목  
- [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [데이터 원본 속성 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
- [새 데이터 원본 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
+ [자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [보고서 &#40;에 대 한 데이터 원본 속성 구성 보고서 관리자 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)   
+ [만들기, 삭제 또는 공유 데이터 원본 &#40; 수정 보고서 관리자 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [데이터 원본 속성 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/f37edda0-19e6-489e-b544-8751fa6b6cfb)   
+ [새 데이터 원본 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/35563d4c-a3d5-4f95-bf46-605da9dfcbb8)  
   
   
 

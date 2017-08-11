@@ -30,15 +30,15 @@ caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
-식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 유형에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
+식은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 작성되며 기본 제공 함수, 사용자 지정 코드, 보고서와 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 유형에 대 한 자세한 내용은 참조 하십시오. [보고서 &#40;에서 식 사용 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md), 및 [식 &#40; 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md).  
   
 > [!IMPORTANT]  
 >  RDL 샌드박싱 기능이 설정되면 보고서를 게시할 때 특정 형식 및 멤버만 식 텍스트에서 사용할 수 있습니다. 자세한 내용은 [Enable and Disable RDL Sandboxing](../../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md)을 참조하세요.  
@@ -67,7 +67,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)  
   
-간단한 식과 복잡한 식, 식을 사용할 수 있는 위치 및 식에 포함할 수 있는 참조 유형에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)를 참조하세요. 집계 계산을 위해 식이 계산되는 컨텍스트에 대한 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
+간단한 식과 복잡한 식, 식을 사용할 수 있는 위치 및 식에 포함할 수 있는 참조 유형에 대한 자세한 내용은 [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)를 참조하세요. 집계 계산에 대 한 식이 계산 되는 컨텍스트에 대 한 자세한 내용은 참조 [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 이 항목의 식 예에서도 사용하는 함수와 연산자 중 상당수를 사용하는 식을 작성하는 방법을 보고서 작성의 맥락에서 배우려면 [Tutorial: Introducing Expressions](../../reporting-services/tutorial-introducing-expressions.md)를 참조하십시오.  
 
@@ -169,7 +169,7 @@ ms.lasthandoff: 06/22/2017
     =DateAdd(DateInterval.Month,DateDiff(DateInterval.Month,CDate("01/01/1900"),Now())-1,CDate("01/01/1900"))  
     ```  
   
--   다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 집합 즉, DataSet1 및 DataSet2에 있습니다. 집계 함수인 [First 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-first-function.md)는 DataSet1에 있는 SellStartDate의 첫 번째 값과 DataSet2에 있는 LastReceiptDate의 첫 번째 값을 반환합니다.  
+-   다음 식은 SellStartDate와 LastReceiptDate 사이의 간격 연도를 생성합니다. 이러한 필드는 두 가지 다른 데이터 집합 즉, DataSet1 및 DataSet2에 있습니다. [첫 번째 함수 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-first-function.md), DataSet1 및 2에 있는 LastReceiptDate의 첫 번째 값의 SellStartDate의 첫 번째 값을 반환 되는 집계 함수입니다.  
   
     ```  
     =DATEDIFF(“yyyy”, First(Fields!SellStartDate.Value, "DataSet1"), First(Fields!LastReceiptDate.Value, "DataSet2"))  
@@ -221,7 +221,7 @@ ms.lasthandoff: 06/22/2017
     =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
     ```  
   
-     다음 식의 멤버를 사용 하는 이전 쿼리에서와 같은 값의 결과 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> 클래스 대신 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 함수:  
+     다음 식에서는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> System.String [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 클래스의 멤버를 사용하여 위의 값과 동일한 값을 반환합니다.  
   
     ```  
     =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -240,14 +240,14 @@ ms.lasthandoff: 06/22/2017
   
     ```  
   
--   **Regex** 에서 함수는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 서식을 변경 하면 기존 문자열의 예를 들어, 전화 번호 형식을 지정 하는 데 유용 합니다. The following expression uses the **Replace** function to change the format of a ten-digit telephone number in a field from "*nnn*-*nnn*-*nnnn*" to "(*nnn*) *nnn*-*nnnn*":  
+-   날짜 처리에 **[!INCLUDE[dnprdnshort](../Token/dnprdnshort_md.md)]** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 함수는 전화 번호 서식을 지정하는 등 기존 문자열의 서식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화 번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
     ```  
   
     > [!NOTE]  
-    >  Fields!Phone.Value에 추가 공백이 없고 <xref:System.String> 형식인지 확인합니다.  
+    >  Fields!Phone.Value의 값에 추가 공백이 없고 <xref:System.String>를 참조하세요.  
   
 ### <a name="lookup"></a>조회  
   
@@ -485,7 +485,7 @@ ms.lasthandoff: 06/22/2017
     ="http://adventure-works/MyInfo?ID=" & Fields!EmployeeID.Value  
     ```  
   
-     자세한 내용은 [URL에 하이퍼링크 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md)를 참조하세요.  
+     자세한 내용은 참조 [URL &#40;에 하이퍼링크 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-a-hyperlink-to-a-url-report-builder-and-ssrs.md).  
   
 -   다음 식은 입력란에 URL을 추가할지 여부를 조건부로 제어합니다. 이 식은 보고서에 활성 URL을 포함할지 여부를 사용자가 결정하도록 허용하는 `IncludeURLs` 라는 매개 변수를 사용합니다. 이 식은 입력란의 동작으로 설정됩니다. 이 매개 변수를 False로 설정하고 보고서를 보면 하이퍼링크 없이 Microsoft Excel로 보고서를 내보낼 수 있습니다.  
   
@@ -518,7 +518,7 @@ ms.lasthandoff: 06/22/2017
     ```  
   
 ##  <a name="CustomCode"></a> 사용자 지정 코드  
- 보고서에 사용자 지정 코드를 사용할 수 있습니다. 사용자 지정 코드는 보고서에 포함되거나 보고서에서 사용되는 사용자 지정 어셈블리에 저장됩니다. 사용자 지정 코드에 대한 자세한 내용은 [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)를 참조하세요.  
+ 보고서에 사용자 지정 코드를 사용할 수 있습니다. 사용자 지정 코드는 보고서에 포함되거나 보고서에서 사용되는 사용자 지정 어셈블리에 저장됩니다. 사용자 지정 코드에 대 한 자세한 내용은 참조 [사용자 지정 코드 및 보고서 디자이너 &#40;의 식에서 어셈블리 참조 Ssrs&#41; ](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
 ### <a name="using-group-variables-for-custom-aggregation"></a>사용자 지정 집계를 위해 그룹 변수 사용  
  특정 그룹 범위에 대해 로컬인 그룹 변수의 값을 초기화한 다음 해당 변수에 대한 참조를 식에 포함할 수 있습니다. 사용자 지정 코드가 있는 그룹 변수를 사용하려면 사용자 지정 집계를 구현합니다. 자세한 내용은 [사용자 지정 집계를 위해 Reporting Services 2008의 그룹 변수 사용(Using Group Variables in Reporting Services 2008 for Custom Aggregation)](http://go.microsoft.com/fwlink/?LinkId=128714)을 참조하십시오.  
@@ -560,9 +560,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [필터 수식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [그룹 식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [그룹 식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)  
   
   

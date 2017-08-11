@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 2ae4ec5004c6299dc8201daa18ab89b432cab845
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-a-matrix-report-builder-and-ssrs"></a>행렬 만들기(보고서 작성기 및 SSRS)
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  `=SUM(Fields!Linetotal.Value)/SUM(Fields! Linetotal.Value,"Category")`  
   
- 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
+ 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
   
 ##  <a name="AddingAdjacentGroup"></a> 행렬에 인접 그룹 추가  
@@ -97,8 +97,8 @@ ms.lasthandoff: 06/22/2017
  인접 열 그룹에 대해 합계 열을 추가하려면 열 그룹 정의 셀을 클릭하고 **합계 추가** 명령을 사용합니다. 기존 행의 모든 숫자 필드에 대한 기본 집계 합이 들어 있는 새로운 정적 열이 열 그룹 옆에 추가됩니다. 식을 변경하려면 `Avg([Sales])`와 같이 기본 집계 함수를 수동으로 편집합니다. 자세한 내용은 [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
   
-## <a name="see-also"></a>관련 항목:  
- [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [집계 함수 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

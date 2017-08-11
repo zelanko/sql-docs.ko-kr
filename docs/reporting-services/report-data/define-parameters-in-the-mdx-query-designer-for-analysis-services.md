@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f989ec80fe80d85381673cb12a90b8e3cea82da4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services"></a>Analysis Services용 MDX 쿼리 디자이너에서 매개 변수 정의
@@ -87,7 +87,7 @@ ms.lasthandoff: 06/22/2017
      보고서 매개 변수에 대해 사용 가능한 값을 제공하는 데이터 집합을 보려면 보고서 데이터 창의 빈 영역을 마우스 오른쪽 단추로 클릭한 다음 **숨겨진 데이터 집합 표시**를 클릭합니다. 보고서 데이터 창에 보고서의 모든 데이터 집합이 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [MDX용 Analysis Services 연결 형식 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
+ [MDX &#40; analysis Services 연결 유형 Ssrs&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)   
  [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md)  
   
   

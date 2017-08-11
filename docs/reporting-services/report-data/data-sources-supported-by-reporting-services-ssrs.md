@@ -25,11 +25,11 @@ caps.latest.revision: 96
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: d3fc9080d28a3b187478fc02f64bd7b38a99b178
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services에서 지원하는 데이터 원본(SSRS)
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)], and tabular models  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - MDX, DMX, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]및 테이블 형식 모델용  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]  
   
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램이 제공하는 기능 중 일부를 지원하지 않을 수 있습니다. 또한 일부 OLE DB 데이터 공급자 및 ODBC 드라이버의 경우 보고서를 제작하고 미리 보는 데 사용할 수 있지만 보고서 서버에 게시된 보고서를 지원하지 않을 수 있습니다. 예를 들어 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet은 보고서 서버에서 지원되지 않습니다. 자세한 내용은 [데이터 처리 확장 프로그램과 .NET Framework 데이터 공급자&#40;SSRS&#41;](../../reporting-services/report-data/data-processing-extensions-and-net-framework-data-providers-ssrs.md)를 참조하세요.  
   
- 사용자 지정 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하십시오. 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 자세한 내용은 <xref:System.Data> 네임스페이스를 참조하십시오.   
+ 사용자 지정 데이터 처리 확장 프로그램에 대한 자세한 내용은 [Implementing a Data Processing Extension](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하십시오. 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자에 대한 자세한 내용은 <xref:System.Data> 네임스페이스를 참조하세요.   
   
 ## <a name="platform-support-for-report-data-sources"></a>보고서 데이터 원본에 대한 플랫폼 지원  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 배포에서 사용할 수 있는 데이터 원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 버전 및 플랫폼에 따라 달라집니다. 기능에 대 한 자세한 내용은 참조 [Reporting Services에서 지 원하는 기능 SQL Server 2016 버전](../../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md)합니다. 버전 및 플랫폼별로 지원되는 데이터 원본에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 표를 참조하십시오.  
@@ -173,13 +173,13 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services 데이터 처리 확장 프로그램  
  데이터 원본 유형 **Microsoft SQL Server Analysis Services**를 선택하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. 이 데이터 처리 확장 프로그램은 x86 및 x64 기반 플랫폼에 대해 기본적으로 컴파일되고 실행됩니다.  
   
- 이 데이터 공급자는 ADOMD.NET 개체 모델을 사용하여 XMLA(XML for Analysis) 버전 1.1을 사용하는 쿼리를 만듭니다. 결과는 일반 행 집합으로 반환됩니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) 및 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
+ 이 데이터 공급자는 ADOMD.NET 개체 모델을 사용하여 XMLA(XML for Analysis) 버전 1.1을 사용하는 쿼리를 만듭니다. 결과는 일반 행 집합으로 반환됩니다. 자세한 내용은 참조 [MDX &#40; Analysis Services 연결 유형 Ssrs&#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis DMX &#40;에 대 한 연결 유형이 Services Ssrs&#41; ](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md), 및 [Analysis Services DMX 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에 연결할 때 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 처리 확장 프로그램은 다중값 매개 변수를 지원하고 셀 및 멤버 속성을 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 확장 속성에 매핑합니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본의 모델도 만들 수 있습니다.  
   
-###  <a name="OLEDBAll"></a>OLE DB 데이터 처리 확장 프로그램  
+###  <a name="OLEDBAll"></a> OLE DB Data Processing Extension  
  OLE DB 데이터 처리 확장 프로그램을 사용하려면 보고서에 사용할 데이터 원본의 버전을 기반으로 추가 데이터 공급자 계층을 선택해야 합니다. 특정 데이터 공급자를 선택하지 않으면 기본값이 제공됩니다. 통해 특정 데이터 공급자를 선택는 **연결 속성** 대화 상자를 통해 액세스는 **편집** 데이터 원본 또는 공유 데이터 원본 대화 상자에서 단추입니다.  
   
  OLE DB 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)를 참조하세요. 특정 OLE DB 공급자 지원에 대한 자세한 내용은 [기술 자료의](http://support.microsoft.com/default.aspx/kb/811241) 특정 OLE DB 공급자에 대한 Visual Studio .NET 디자이너 도구의 지원(Visual Studio .NET Designer Tool Supports Specific OLE DB Providers) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 을 참조하십시오.  
@@ -275,14 +275,14 @@ Oracle 클라이언트 도구를 설치 하려면 다음을 수행할 수 있습
   
  이 확장 프로그램은 다중값 매개 변수를 지원하지 않습니다. TEXT 쿼리 모드에서 EXECUTE 명령을 사용하여 쿼리에 매크로를 지정할 수 있습니다.  
   
- 자세한 내용은 [Teradata 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)을 참조하세요.  
+ 자세한 내용은 참조 [Teradata 연결 유형 &#40; Ssrs&#41; ](../../reporting-services/report-data/teradata-connection-type-ssrs.md).  
   
  Teradata 데이터베이스를 기반으로 모델을 만들 수도 있습니다. 자세한 내용은 Teradata 사이트의 [Microsoft SQL Server 2012 Reporting Services 및 Teradata Corporation](http://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)백서를 참조하세요.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> SharePoint 목록 데이터 확장 프로그램  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함 되어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램의 보고서에서 데이터 소스로 SharePoint 목록을 사용할 수 있도록 합니다. 다음에서 목록 데이터를 검색할 수 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 목록 데이터 확장 프로그램이 포함되어 있으므로 보고서에서 SharePoint 목록을 데이터 원본으로 사용할 수 있습니다. 다음에서 목록 데이터를 검색할 수 있습니다.  
   
 -   SharePoint Server 2016  
 
@@ -299,7 +299,7 @@ Oracle 클라이언트 도구를 설치 하려면 다음을 수행할 수 있습
  지정할 수 있는 자격 증명은 클라이언트 응용 프로그램에서 사용하는 구현에 따라 다릅니다. 자세한 내용은 [SharePoint 목록 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sharepoint-list-connection-type-ssrs.md)을 참조하세요.  
   
 ###  <a name="XML"></a> XML 데이터 처리 확장 프로그램  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 응용 프로그램, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 [XML 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/xml-connection-type-ssrs.md)을 참조하세요. 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요. 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용(Reporting Services: Using XML and Web Service Data Sources)](http://go.microsoft.com/fwlink/?LinkId=81654)을 참조하십시오.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에 포함된 XML 데이터 처리 확장 프로그램을 사용하여 보고서에 XML 데이터를 사용할 수 있습니다. URL로 액세스할 수 있는 웹 기반의 응용 프로그램, 웹 서비스 또는 XML 문서에서 데이터를 검색할 수 있습니다. 자세한 내용은 참조 [XML 연결 유형 &#40; Ssrs&#41; ](../../reporting-services/report-data/xml-connection-type-ssrs.md). 연결된 쿼리 디자이너에 대한 자세한 내용은 [그래픽 쿼리 디자이너 사용자 인터페이스](../../reporting-services/report-data/graphical-query-designer-user-interface.md)의 텍스트 기반 쿼리 디자이너 섹션을 참조하세요. 예를 보려면 [Reporting Services: XML 및 웹 서비스 데이터 원본 사용(Reporting Services: Using XML and Web Service Data Sources)](http://go.microsoft.com/fwlink/?LinkId=81654)을 참조하십시오.  
   
  [데이터 원본 표로 돌아가기](#DataSourcesTable)  
   

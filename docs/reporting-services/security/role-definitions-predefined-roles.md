@@ -19,11 +19,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 694b2d5d3aeb126ba0c61b42af2ffb5538b14269
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-definitions---predefined-roles"></a>미리 정의 된 역할-역할 정의
@@ -215,11 +215,11 @@ ms.lasthandoff: 06/22/2017
  **시스템 사용자** 역할은 기본 보안을 보완하기 위해 사용할 수 있습니다. 보고서 서버 액세스를 보고서 사용자에게 확대하는 새 역할 할당에 이 역할을 포함할 수 있습니다. 자세한 내용은 [Granting Permissions on a Native Mode Report Server](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)  
+ [만들기, 삭제 또는 role&#40; 수정 Management studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [보고서 서버 &#40; 데이터베이스 액세스 권한 부여 보고서 관리자 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [수정 하거나 삭제할 역할 할당 &#40; 보고서 관리자 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [작업 및 사용 권한](../../reporting-services/security/tasks-and-permissions.md)  
   
   
 

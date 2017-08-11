@@ -28,11 +28,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f05225e97ef14f06444562d0f5c45291d2e6c030
+ms.translationtype: MT
+ms.sourcegitcommit: 727d9ccd8cd1e40d89cfe74291edae92988b407c
+ms.openlocfilehash: 6a5e70f353771fb763029f8fa3306ce04067f3e6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="accessing-the-soap-api"></a>SOAP API 액세스
@@ -66,7 +66,7 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  WSDL 형식에 대한 자세한 내용은 http://www.w3.org/TR/wsdl에서 W3C(World Wide Web 컨소시엄) WSDL 사양을 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   

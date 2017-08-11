@@ -15,11 +15,11 @@ caps.latest.revision: 28
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4f612dc69be670d6a99418fbf8e17f34fb8e9d7c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="exporting-to-microsoft-excel-report-builder-and-ssrs"></a>Microsoft Excel로 내보내기(보고서 작성기 및 SSRS)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  장치 정보 설정을 변경하여 이 렌더러의 기본 설정을 일부 변경할 수 있습니다. 자세한 내용은 [Excel Device Information Settings](../../reporting-services/excel-device-information-settings.md)을 참조하세요.  
   
- Excel로 내보내는 방법에 대한 자세한 내용은 [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)를 참조하세요.  
+ 참조 [보고서 &#40; 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md) Excel로 내보내는 방법에 대 한 자세한 내용은 합니다.  
   
 > [!IMPORTANT]  
 >  **String**유형의 매개 변수를 정의할 경우 모든 값을 사용할 수 있는 입력란이 사용자에게 제공됩니다. 보고서 매개 변수가 쿼리 매개 변수에 연결되지 않고 매개 변수 값이 보고서에 포함된 경우 보고서 사용자는 식 구문, 스크립트 또는 URL을 매개 변수 값에 입력하고 보고서를 Excel로 렌더링할 수 있습니다. 이후 다른 사용자가 보고서를 보면서 렌더링된 매개 변수 내용을 클릭할 경우 악의적인 스크립트나 링크가 실수로 실행될 수 있습니다.  
@@ -148,7 +148,7 @@ ms.lasthandoff: 06/22/2017
   
 -   보고서 작성기가 연결되지 않은 모드이고 보고서 작성기에서 보고서를 미리 보는 경우. RSReportServer 구성 파일이 보고서 서버에 존재하기 때문에 구성 파일을 읽으려면 보고서를 내보내는 위치의 도구 또는 제품이 보고서 서버에 연결되어 있어야 합니다.  
   
--   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 [보고서 뷰어의 로컬 모드와 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)를 참조하세요.  
+-   보고서 뷰어 웹 파트가 로컬 모드이고 SharePoint 팜이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 통합되지 않은 경우. 자세한 내용은 참조 [로컬 모드 및 합니다. 보고서 뷰어의 연결 모드 보고서&#40;SharePoint 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md)  
   
  **Excel 2003** 메뉴 옵션 렌더러가 표시되도록 구성된 경우 다음과 같은 시나리오에서 Excel 및 Excel 2003 옵션을 사용할 수 있습니다.  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  차트, 스파크라인, 데이터 막대, 지도, 계기 및 표시기는 그림으로 내보내집니다. 그림에서 설명하는 데이터(예: 차트의 값 및 멤버 레이블)는 그림과 함께 내보내지지 않으며 보고서 내 데이터 영역의 열이나 행에 포함되어 있지 않은 데이터는 Excel 통합 문서에서 사용할 수 없습니다.  
   
- 차트, 스파크라인, 데이터 막대, 지도, 계기 및 표시기 데이터를 사용하려면 보고서를 .csv 파일로 내보내거나 보고서에서 Atom 규격 데이터 피드를 생성하세요. 자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) 및 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md)을 참조하세요.  
+ 차트, 스파크라인, 데이터 막대, 지도, 계기 및 표시기 데이터를 사용하려면 보고서를 .csv 파일로 내보내거나 보고서에서 Atom 규격 데이터 피드를 생성하세요. 자세한 내용은 참조 [CSV 파일 &#40; 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md) 및 [보고서 &#40;에서 데이터 피드를 생성 합니다. 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md).  
   
 ## <a name="page-sizing"></a>페이지 크기 조정  
  Excel 렌더링 확장 프로그램에서는 페이지 높이 및 너비 설정을 사용하여 Excel 워크시트에 정의할 용지 설정을 결정합니다. Excel에서는 PageHeight 및 PageWidth 속성 설정을 가장 일반적인 용지 크기 중 하나에 맞추려고 시도합니다.  
@@ -273,11 +273,11 @@ ms.lasthandoff: 06/22/2017
  보고서를 여러 형식으로 렌더링해야 하는데 원하는 방식과 필요한 모든 형식으로 렌더링하는 보고서 레이아웃을 만들 수 없는 경우에는 기본 제공 전역 변수인 RenderFormat의 값을 사용하여 런타임에 보고서 모양을 조건부로 변경하는 것이 좋습니다. 이렇게 하면 사용되는 렌더러에 따라 보고서 항목을 숨기거나 표시할 수 있어 각 형식에서 최상의 결과를 얻을 수 있습니다. 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [보고서 항목 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [여러 보고서 렌더링 확장 프로그램 &#40;에 대 한 대화형 기능 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [보고서 항목 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   
 

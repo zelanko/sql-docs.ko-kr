@@ -25,11 +25,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb010d0c545e0ff6031a07ff0d4439f5d9dc8116
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="query-design-tools-ssrs"></a>쿼리 디자인 도구(SSRS)
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
 ##  <a name="Graphical"></a> 그래픽 쿼리 디자이너  
  그래픽 쿼리 디자이너는 관계형 데이터베이스에 대해 실행되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 만들거나 수정하는 데 사용됩니다. 이 쿼리 디자인 도구는 몇 가지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 제품 및 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소에서 사용됩니다. 데이터 원본 유형에 따라 Text, StoredProcedure 및 TableDirect 모드가 지원됩니다. 다음 이미지는 그래픽 쿼리 디자이너를 보여 줍니다.  
   
- ![Sql 쿼리를 위한 그래픽 쿼리 디자이너](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "sql 쿼리를 위한 그래픽 쿼리 디자이너")  
+ ![SQL 쿼리를 위한 그래픽 쿼리 디자이너](../../reporting-services/report-data/media/rsqd-dsaw-sql.gif "SQL 쿼리를 위한 그래픽 쿼리 디자이너")  
   
  도구 모음의 **텍스트로 편집** 단추를 토글하여 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 전환할 수 있습니다. 자세한 내용은 [Graphical Query Designer User Interface](../../reporting-services/report-data/graphical-query-designer-user-interface.md)을 참조하세요.  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 06/22/2017
   
  ![Analysis Services DMX 쿼리 디자이너, 디자인 뷰에서](../../reporting-services/report-data/media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX 쿼리 디자이너, 디자인 뷰")  
   
- DMX 쿼리 디자이너를 사용하려면 유효한 데이터 마이닝 모델이 있는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 집합을 정의할 때 DMX 쿼리 디자이너에서 쿼리를 열 수 있습니다. 필요한 경우 도구 모음의 MDX 및 DMX 단추를 사용하여 MDX와 DMX 모드 사이에서 전환할 수 있습니다. 모델을 선택하고 나면 보고서에 데이터를 제공하는 데이터 마이닝 예측 쿼리를 만들 수 있습니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)을 참조하세요.  
+ DMX 쿼리 디자이너를 사용하려면 유효한 데이터 마이닝 모델이 있는 데이터 원본을 정의해야 합니다. 데이터 원본에 대한 데이터 집합을 정의할 때 DMX 쿼리 디자이너에서 쿼리를 열 수 있습니다. 필요한 경우 도구 모음의 MDX 및 DMX 단추를 사용하여 MDX와 DMX 모드 사이에서 전환할 수 있습니다. 모델을 선택하고 나면 보고서에 데이터를 제공하는 데이터 마이닝 예측 쿼리를 만들 수 있습니다. 자세한 내용은 [Analysis Services DMX Query Designer User Interface](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)를 참조하세요.  
   
 ##  <a name="SAPBW"></a> Sap NetWeaver BI 쿼리 디자이너  
  [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 쿼리 디자이너는 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 데이터베이스에서 데이터를 검색하는 데 사용됩니다. 이 쿼리 디자이너를 사용하려면 하나 이상의 InfoCube, MultiProvider 또는 웹 가능 쿼리가 정의되어 있는 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 데이터 원본이 있어야 합니다. 다음 이미지는 [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] 쿼리 디자이너를 보여줍니다. 자세한 내용은 [SAP NetWeaver BI Query Designer User Interface](../../reporting-services/report-data/sap-netweaver-bi-query-designer-user-interface.md)을 참조하세요.  
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
  [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
- [Reporting Services&#40;SSRS&#41; 자습서](../../reporting-services/reporting-services-tutorials-ssrs.md)   
- [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
- [포함된 데이터 원본 또는 공유 데이터 원본 만들기&#40;SSRS&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
+ [Reporting Services 자습서 및 &#40;입니다. SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
+ [Reporting services&#40;에서 지 원하는 데이터 원본 Ssrs&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
+ [포함 또는 공유 데이터 원본 &#40; 만들기 Ssrs&#41;](http://msdn.microsoft.com/library/b111a8d0-a60d-4c8b-b00a-51644b19c34b)  
   
   

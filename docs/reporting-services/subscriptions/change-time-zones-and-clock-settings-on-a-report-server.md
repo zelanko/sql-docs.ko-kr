@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79f8068d11d707c4b0237d32e1645a80a12cdbbb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-time-zones-and-clock-settings-on-a-report-server"></a>보고서 서버에서 표준 시간대 및 시계 설정 변경

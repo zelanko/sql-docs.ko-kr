@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: df288358b8fd8b209adda5c52af5f23f878541e9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---dataset-fields-collection-references-report-builder"></a>기본 제공 컬렉션-데이터 집합 필드 컬렉션 참조 (보고서 작성기)
@@ -93,7 +93,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>확장 필드 속성 사용  
  확장 필드 속성은 데이터 집합에 대한 데이터 원본 유형에 의해 결정되는 데이터 처리 확장 프로그램에서 필드에 대해 정의하는 추가 속성입니다. 확장 필드 속성은 미리 정의되거나 데이터 원본 유형 관련 속성입니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성&#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
- 해당 필드에 지원되지 않는 속성을 지정하는 경우 식이 **null**([!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 **Nothing**)로 계산됩니다. 데이터 공급자가 확장 필드 속성을 지원하지 않거나 쿼리가 실행될 때 해당 필드가 없으면 속성 값은 **String** 및**Object** 형식 속성의 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(** 에서 **Nothing**)이 되고 **Integer**형식 속성의 경우 0이 됩니다. 데이터 처리 확장 프로그램에서는 이 구문이 포함된 쿼리를 최적화하여 미리 정의된 속성을 이용할 수 있습니다.  
+ 해당 필드에 지원되지 않는 속성을 지정하는 경우 식이 **null** (**에서** Nothing [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)])로 계산됩니다. 데이터 공급자가 확장 필드 속성을 지원하지 않거나 쿼리가 실행될 때 해당 필드가 없으면 속성 값은 **String** 및**Object** 형식 속성의 경우 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]null **(** 에서 **Nothing**)이 되고 **Integer**형식 속성의 경우 0이 됩니다. 데이터 처리 확장 프로그램에서는 이 구문이 포함된 쿼리를 최적화하여 미리 정의된 속성을 이용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   

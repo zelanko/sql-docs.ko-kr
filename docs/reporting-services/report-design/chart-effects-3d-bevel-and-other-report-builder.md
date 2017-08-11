@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f6d149a116c243fba0587afe1dcf969f9356c57f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>차트 효과-3D, 빗면 및 기타 (보고서 작성기)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
   
  3차원 효과는 개별 차트에 적용할 수 있으며, 동일 보고서에서 2차원 및 3차원 차트를 모두 표시할 수 있습니다.  
   
- **3D 사용** 을 선택하면 모든 차트 종류에 대해 **차트 영역 속성**대화 상자의 차트 영역에 3차원 효과를 추가할 수 있습니다. 자세한 내용은 [차트에 3D 효과 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)대화 상자의 차트 영역에 3차원 효과를 추가할 수 있습니다.  
+ **3D 사용** 을 선택하면 모든 차트 종류에 대해 **차트 영역 속성**대화 상자의 차트 영역에 3차원 효과를 추가할 수 있습니다. 자세한 내용은 참조 [차트 &#40;에 3D 효과 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md).  
   
  가로 막대형 차트, 세로 막대형 차트, 원형 차트 및 도넛형 차트에 빗면 효과, 볼록 효과 및 질감 스타일을 추가하여 차트에 시각적 효과를 줄 수도 있습니다. 자세한 내용은 [차트에 빗면 효과, 볼록 효과 및 질감 스타일 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-bevel-emboss-or-texture-report-builder.md)를 참조하세요.  
   
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
  **음영** 속성을 통해 3D 차트에 강조 스타일을 추가할 수 있습니다. 이 속성은 차트 영역을 선택할 때 속성 창에 있는 Area3DStyle 아래에 표시됩니다. 단순 조명 스타일은 차트 영역 요소에 동일한 색상을 적용합니다. 현실적인 스타일은 지정된 조명 각도에 따라 차트 영역 요소의 색상을 바꿉니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [차트에 3D 효과 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
+ [차트 &#40;의 축 레이블 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40;에 3D 효과 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-effects-add-3d-effects-report-builder.md)  
   
   

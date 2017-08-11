@@ -19,11 +19,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e79341b1988e43d27ac35d46fcba482de0ab371
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="url-access-parameter-reference"></a>URL 액세스 매개 변수 참조
@@ -380,7 +380,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
- [URL 액세스를 사용하여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
+ [URL 액세스를 사용 하 여 보고서 내보내기](../reporting-services/export-a-report-using-url-access.md)  
   
   
 

@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.smtpconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], SMTP
 - SMTP connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d350ca1ef990278eb64fc0589787fc5ea9b6125f
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: b952c9427a9bd15b29b806a5afb9f11d75d7393a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="smtp-connection-manager"></a>SMTP 연결 관리자
@@ -52,4 +54,31 @@ ms.lasthandoff: 08/03/2017
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
+## <a name="smtp-connection-manager-editor"></a>SMTP 연결 관리자 편집기
+  **SMTP 연결 관리자 편집기** 대화 상자를 사용하여 SMTP(Simple Mail Transfer Protocol) 서버를 지정할 수 있습니다.  
   
+ SMTP 연결 관리자에 대한 자세한 내용은 [SMTP Connection Manager](../../integration-services/connection-manager/smtp-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **이름**  
+ 연결 관리자의 고유 이름을 제공합니다.  
+  
+ **Description**  
+ 연결 관리자에 대한 설명을 입력합니다. 설명에 해당 연결 관리자의 용도를 정의하면 패키지를 이해하기 쉬우며 유지 관리가 간편합니다.  
+  
+ **SMTP 서버**  
+ SMTP 서버의 이름을 제공합니다.  
+  
+ **Windows 인증 사용**  
+ Windows 인증을 통해 서버에 대한 액세스를 인증하는 SMTP 서버를 사용하여 메일을 보내려면 선택합니다.  
+  
+> [!IMPORTANT]  
+>  SMTP 연결 관리자는 익명 인증과 Windows 인증만 지원하며 기본 인증은 지원하지 않습니다.  
+  
+> [!NOTE]  
+>  Microsoft Exchange를 SMTP 서버로 사용하는 경우 **Windows 인증 사용** 을 **True**로 설정해야 할 수 있습니다. 인증되지 않은 SMTP 연결을 허용하지 않도록 Exchange Server를 구성할 수도 있습니다.  
+  
+ **SSL(Secure Sockets Layer) 사용**  
+ 전자 메일 메시지를 보낼 때 SSL(Secure Sockets Layer)을 사용하여 통신을 암호화하려면 선택합니다.  
+  
+

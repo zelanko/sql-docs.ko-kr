@@ -17,11 +17,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 55aaa75882e5fdad4ffcad603e5edaef86226d48
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-windows-service-mssqlserver-107"></a>Report Server Windows Service (MSSQLServer) 107
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="explanation"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보고서 서버 서비스를 보고서 서버 데이터베이스에 연결할 수 없습니다. 이 오류는 보고서 서버 데이터베이스에 연결할 수 없는 경우 서비스를 다시 시작하면 발생합니다. 이 오류가 발생하는 조건은 다음과 같습니다.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스가 실행되고 있지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] 보고서 서버 서비스가 시작 될 때 서비스가 실행 되지 않습니다.  
   
 -   원격 연결 또는 TCP/IP 프로토콜이 설정되지 않아 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 서비스에 대한 연결이 실패합니다.  
   
@@ -55,8 +55,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="internal-only"></a>내부 전용  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버 서비스 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [보고서 서버 서비스 계정 &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
+ [Reporting Services 구성 관리자 &#40; 기본 모드 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [보고서 서버 서비스 시작 및 중지](../../reporting-services/report-server/start-and-stop-the-report-server-service.md)  
   
   

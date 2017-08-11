@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dcd1af4aee2c0267f1443d87d80be1e3cc2ad8b3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>항목에 확장 또는 축소 동작 추가(보고서 작성기 및 SSRS)
@@ -72,7 +72,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>확장 및 축소 동작을 보고서 항목에 추가하려면  
   
-1.  보고서 디자인 뷰에서 보고서 항목 표시 또는 숨기기 및 클릭을 마우스 오른쪽 단추로 클릭  *\<보고서 항목 >* **속성**합니다. *\<보고서 항목 >* **속성** 보고서 항목에 대 한 대화 상자가 열립니다.  
+1.  보고서 디자인 뷰에서 보고서 항목 표시 또는 숨기기 및 클릭을 마우스 오른쪽 단추로 클릭  *\<보고서 항목 >* **속성**합니다.  *\<보고서 항목 >* **속성** 보고서 항목에 대 한 대화 상자가 열립니다.  
   
 2.  **표시 유형**을 클릭합니다.  
   
@@ -102,6 +102,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
+ [항목 &#40; 숨기기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

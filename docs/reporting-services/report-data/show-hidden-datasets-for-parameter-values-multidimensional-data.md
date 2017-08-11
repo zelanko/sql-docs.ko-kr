@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 55e44a7468fb08372e5f718fe8fc4bbd1846cb84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="show-hidden-datasets-for-parameter-values---multidimensional-data"></a>매개 변수 값-다차원 데이터에 대해 숨겨진된 데이터 집합 표시
@@ -41,9 +41,9 @@ ms.lasthandoff: 06/22/2017
 -   보고서 데이터 창에서 데이터 집합 폴더를 마우스 오른쪽 단추로 클릭한 다음 **숨겨진 데이터 집합 표시**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
+ [쿼리 디자이너 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)   
  [Reporting Services 쿼리 디자이너](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

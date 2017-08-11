@@ -22,11 +22,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d6d0c434fbac82990ad43e0b631cc7e418e47db8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정
@@ -137,9 +137,9 @@ ms.lasthandoff: 06/22/2017
 >  보고서 모델을 편집할 권한은 없습니다. 보고서 모델을 생성하거나 삭제할 수 있지만 SharePoint 사이트 내에서 편집할 수는 없습니다. 보고서 모델을 편집하려면 모델 디자이너가 필요합니다. 모델 디자이너는 SharePoint에서 설정한 사용 권한의 영향을 받지 않는 클라이언트 제작 도구입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Reporting Services to SharePoint Groups and Permissions의 역할 및 태스크와 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [보고서 서버 항목에 대 한 Windows SharePoint Services의 기본 제공 보안 사용](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

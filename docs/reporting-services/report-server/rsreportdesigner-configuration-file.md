@@ -18,11 +18,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08eb8b5f2acf66f9c07c6cf6de647dbc02ce079b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner 구성 파일
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
  렌더링 확장 프로그램 설정을 사용자 지정하는 경우 구성 파일 편집에 대한 특정 지침이 제공됩니다. 자세한 내용은 [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)을 참조하세요.  
   
- 구성 파일을 편집하는 방법에 대한 일반적인 지침은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
+ 구성 파일을 편집 하는 방법에 대 한 일반적인 지침을 참조 하세요. [Reporting Services 구성 파일 수정 &#40; RSreportserver.config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 ## <a name="example-configuration-file"></a>구성 파일 예  
  다음 예에서는 RSReportDesigner.config 파일의 형식을 보여 줍니다.  

@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7d6381f105146c23e0813a37a8ab7acc3562ffe8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs"></a>계기의 최소값 또는 최대값 설정(보고서 작성기 및 SSRS)
@@ -42,8 +42,8 @@ ms.lasthandoff: 08/03/2017
 4.  (옵션) 최소값 및 최대값이 큰 경우 **눈금 레이블 곱하기** 옵션의 값을 지정합니다. 눈금을 줄이는 승수를 지정하려면 10진수를 사용합니다. 예를 들어 눈금이 0에서 1000 사이인 경우 승수 값을 0.01로 지정하면 눈금이 줄어 0에서 10 사이로 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [계기의 눈금 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
- [계기의 포인터 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
- [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [계기 &#40;의 눈금 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
+ [계기 &#40;의 포인터 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [계기 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

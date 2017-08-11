@@ -22,11 +22,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 78bd4357f5e6de5706a536c44bddac7f3e33ade6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="performance-counters-msrs-2011-sharepoint-mode-performance-objects"></a>MSRS 2011 SharePoint 모드 성능 개체 성능 카운터
@@ -142,7 +142,7 @@ CounterSetName     : MSRS 2011 Web Service SharePoint Mode
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 성능 모니터링](../../reporting-services/report-server/monitoring-report-server-performance.md)   
- [MSRS 2011 웹 서비스 및 MSRS 2011 Windows 서비스 성능 개체에 대한 성능 카운터&#40;기본 모드&#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
+ [MSRS 2011 웹 서비스 및 MSRS 2011 Windows Service 성능 개체 &#40;에 대 한 성능 카운터 기본 모드 &#41;](../../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md)   
  [ReportServer:Service 및 ReportServerSharePoint:Service 성능 개체에 대한 성능 카운터](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
   
   

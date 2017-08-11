@@ -17,11 +17,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f1050ecd33c0e56733acdfa1732b9897517e2c43
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="server-properties-logging-page"></a>서버 속성(로깅 페이지)
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/03/2017
  보고서 실행 로그에서 로그 항목을 지우기 전에 경과해야 하는 일 수를 지정합니다. 기본값은 60일입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [보고서 서버 속성 &#40; 설정 합니다. Management studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   

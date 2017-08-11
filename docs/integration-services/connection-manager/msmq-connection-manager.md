@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.msmqconnectionmanager.f1
 helpviewer_keywords:
 - connections [Integration Services], message queues
 - connection managers [Integration Services], MSMQ
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2a3eabde204f3629f903e66da5b4b0204a49ccd7
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 0e028f9f648acc18d56dc05262adccbbc52f8f7e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="msmq-connection-manager"></a>MSMQ 연결 관리자
@@ -52,6 +54,34 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [MSMQ 연결 관리자 편집기](../../integration-services/connection-manager/msmq-connection-manager-editor.md)를 참조하세요.  
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
+  
+## <a name="msmq-connection-manager-editor"></a>MSMQ 연결 관리자 편집기
+  **MSMQ 연결 관리자** 대화 상자를 사용하여 MSMQ(메시지 큐)의 경로를 지정할 수 있습니다.  
+  
+ MSMQ 연결 관리자에 대한 자세한 내용은 [MSMQ Connection Manager](../../integration-services/connection-manager/msmq-connection-manager.md)를 참조하십시오.  
+  
+> [!NOTE]  
+>  MSMQ 연결 관리자는 로컬 공개 큐, 로컬 개인 큐 및 원격 공개 큐를 지원합니다. 원격 개인 큐는 지원하지 않습니다. 스크립트 태스크를 사용하는 해결 방법은 [Sending to a Remote Private Message Queue with the Script Task](../../integration-services/extending-packages-scripting-task-examples/sending-to-a-remote-private-message-queue-with-the-script-task.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **이름**  
+ 워크플로의 MSMQ 연결 관리자에 고유한 이름을 지정합니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
+  
+ **Description**  
+ 연결 관리자에 대한 설명을 입력합니다. 설명에 해당 연결 관리자의 용도를 정의하면 패키지를 이해하기 쉬우며 유지 관리가 간편합니다.  
+  
+ **경로**  
+ 메시지 큐의 전체 경로를 입력합니다. 경로 형식은 큐 유형에 따라 달라집니다.  
+  
+|큐 유형|샘플 경로|  
+|----------------|-----------------|  
+|공개|\<컴퓨터 이름 >\\< 큐 이름\>|  
+|Private|\<컴퓨터 이름 > \Private$\\< 큐 이름\>|  
+  
+ "."를 사용하여 로컬 컴퓨터를 나타낼 수 있습니다.  
+  
+ **테스트**  
+ MSMQ 연결 관리자를 구성했으면 **테스트**를 클릭하여 연결이 실행 가능한지 확인합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [메시지 큐 태스크](../../integration-services/control-flow/message-queue-task.md)   

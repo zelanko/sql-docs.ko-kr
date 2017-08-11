@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc89e2a412163811aca2c8a99bdc3fae574d0926
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>데이터 집합 속성 대화 상자, 쿼리(보고서 작성기)
@@ -31,15 +31,15 @@ ms.lasthandoff: 08/03/2017
   
  **데이터 집합 속성** 대화 상자에는 다음과 같은 항목이 있습니다.  
   
--   [데이터 집합 속성 대화 상자, 매개 변수&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
+-   [데이터 집합 속성 대화 상자, 매개 변수 사용 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/3a0672ad-c969-455b-b952-585164ce1dda)  
   
--   [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
+-   [데이터 집합 속성 대화 상자, 필드 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)  
   
--   [데이터 집합 속성 대화 상자, 옵션&#40;보고서 작성기&#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
+-   [데이터 집합 속성 대화 상자, 옵션 &#40; 보고서 작성기 &#41;](../../reporting-services/report-data/dataset-properties-dialog-box-options-report-builder.md)  
   
--   [데이터 집합 속성 대화 상자, 필터&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
+-   [데이터 집합 속성 대화 상자, 필터 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/933a6f44-4eb7-4e73-9c40-ac0fd17b23d3)  
   
- 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="options"></a>옵션  
  **이름**  
@@ -84,6 +84,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="see-also"></a>관련 항목:  
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
  [대화 상자, 창 및 마법사에 대한 보고서 작성기 도움말](http://msdn.microsoft.com/en-us/2da24891-0b6d-4d3c-8b18-81b98752642f)   
- [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [쿼리 디자이너 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   

@@ -9,6 +9,9 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.sqlmobileconnection.connection.f1
+- sql13.dts.designer.sqlmobileconnection.all.f1
 helpviewer_keywords:
 - SQL Server Compact, connection manager
 - connections [Integration Services], SQL Server Compact
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: dad3c3c379b62863de834386783b595c984c49ed
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6b3f09dad60239f595aaae0cac0162283d84430d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sql-server-compact-edition-connection-manager"></a>SQL Server Compact Edition 연결 관리자
@@ -48,12 +51,72 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [SQL Server Compact Edition 연결 관리자 편집기&#40;연결 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-connection-page.md)  
-  
--   [SQL Server Compact Edition 연결 관리자 편집기&#40;모든 페이지&#41;](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager-editor-all-page.md)  
-  
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
+## <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>SQL Server Compact Edition 연결 관리자 편집기(연결 페이지)
+  **SQL Server Compact Edition 연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결하기 위한 속성을 지정할 수 있습니다.  
   
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 연결 관리자에 대한 자세한 내용은 [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)를 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **데이터베이스 파일 이름 및 경로 입력**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 경로 및 파일 이름을 입력합니다.  
+  
+ **찾아보기**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server Compact Edition 데이터베이스 선택 **대화 상자를 사용하여 원하는** Compact 데이터베이스 파일을 찾습니다.  
+  
+ **데이터베이스 암호 입력**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 암호를 입력합니다.  
+  
+## <a name="sql-server-compact-edition-connection-manager-editor-all-page"></a>SQL Server Compact Edition 연결 관리자 편집기(모든 페이지)
+  **SQL Server Compact Edition 연결 관리자** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에 연결하기 위한 속성을 지정할 수 있습니다.  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact Edition 연결 관리자에 대한 자세한 내용은 [SQL Server Compact Edition 연결 관리자](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)를 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **자동 축소 임계값**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스에서 자동 축소 프로세스를 실행하기 전에 허용되는 사용 가능한 공간(%)을 지정합니다.  
+  
+ **기본 잠금 에스컬레이션**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스가 잠금 에스컬레이션 전에 획득하는 데이터베이스 잠금 수를 지정합니다.  
+  
+ **기본 잠금 제한 시간**  
+ 트랜잭션에서 잠금을 대기할 기본 간격(밀리초)을 지정합니다.  
+  
+ **플러시 간격**  
+ 커밋된 트랜잭션을 디스크에 플러시하는 간격(초)을 지정합니다.  
+  
+ **로캘 ID**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 LCID(로캘 ID)를 지정합니다.  
+  
+ **최대 버퍼 크기**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact에서 데이터를 디스크에 플러시하기 전에 사용하는 최대 메모리 용량(KB)을 지정합니다.  
+  
+ **최대 데이터베이스 크기**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 최대 크기(MB)를 지정합니다.  
+  
+ **모드**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스를 열 파일 모드를 지정합니다. 이 속성의 기본값은 **읽기/쓰기**입니다.  
+  
+ 다음 표에서는 모드 옵션의 4가지 값에 대해 설명합니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**읽기 전용**|데이터베이스에 대한 읽기 전용 액세스 권한을 지정합니다.|  
+|**읽기/쓰기**|데이터베이스에 대한 읽기/쓰기 권한을 지정합니다.|  
+|**단독**|데이터베이스에 대한 단독 액세스 권한을 지정합니다.|  
+|**공유 읽기**|다른 사용자가 데이터베이스를 동시에 읽을 수 있도록 지정합니다.|  
+  
+ **보안 정보 유지**  
+ 보안 정보를 연결 문자열의 일부로 반환할지 여부를 지정합니다. 이 옵션의 기본값은 **False**입니다.  
+  
+ **임시 파일 디렉터리**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 임시 데이터베이스 파일의 위치를 지정합니다.  
+  
+ **데이터 원본**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 이름을 지정합니다.  
+  
+ **암호**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact 데이터베이스의 암호를 입력합니다.  
+  
+

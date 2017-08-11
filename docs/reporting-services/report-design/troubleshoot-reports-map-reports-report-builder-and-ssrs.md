@@ -15,14 +15,14 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 488c17afabc7dc828ccf88ed1e058f1e13c7e0b2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제해결: 지도 보고서(보고서 작성기 및 SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>보고서 문제 해결: 지도 보고서(보고서 작성기 및 SSRS)
   [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 지도 문제는 지도나 지도 계층을 보고서에 추가하거나, 보고서에서 기존 지도 또는 지도 계층을 사용자 지정하거나, 보고서에서 지도를 미리 보거나, 지도가 포함된 보고서를 게시하는 경우 발생할 수 있습니다. 이 항목에서는 이러한 문제를 해결하는 데 유용한 정보를 제공합니다.  
     
    ## <a name="need-more-help"></a>도움이 더 필요하세요?  
@@ -180,7 +180,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="my-color-scale-does-not-appear-when-i-run-the-report"></a>보고서를 실행할 때 색 눈금이 표시되지 않음  
  지도 계층이 전체 계층이나 포함된 지도 요소에 대한 다각형, 선 또는 점의 색 규칙을 지정하는 경우 색 눈금은 사용자에게 정보를 표시합니다. 지도 요소가 색 규칙을 지정하지 않거나 색 규칙이 색 지도 대신 범례를 사용하여 지정되는 경우 색 지도가 렌더링된 보고서에 표시되지 않습니다.  
   
- 색 눈금을 표시하려면 계층이나 포함된 지도 요소에 대한 색 규칙을 지정합니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)를 참조하세요.  
+ 색 눈금을 표시하려면 계층이나 포함된 지도 요소에 대한 색 규칙을 지정합니다. 자세한 내용은 [지도 범례, 색 눈금 및 관련 규칙 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Tile"></a> 타일 문제  
  이 섹션에서는 타일 배경 옵션과 관련된 문제를 해결하는 데 유용한 정보를 제공합니다.  
@@ -212,7 +212,7 @@ ms.lasthandoff: 06/22/2017
  보고서 데이터 집합의 일부가 아닌 공간 데이터와 관련된 데이터를 지정하려면 # 기호 뒤에 데이터의 이름을 지정하는 레이블을 사용해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
+ [지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)   
  [보고서 작성기 문제 해결](http://msdn.microsoft.com/en-us/3806fc48-56f8-44d1-a3c1-df8c33cce0a3)  
   
   

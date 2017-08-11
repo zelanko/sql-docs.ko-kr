@@ -26,11 +26,11 @@ caps.latest.revision: 23
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8302c8f1713adc224c76b3f6dca11d984ff69c32
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-design-view-report-builder"></a>보고서 디자인 뷰(보고서 작성기)
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   보고서 항목을 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭하여 보고서 항목의 속성을 변경할 수 있습니다.  
   
- 키보드를 사용하여 디자인 화면의 항목을 조작하는 방법에 대한 자세한 내용은 [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)를 참조하세요.  
+ 키보드를 사용 하 여 디자인 화면에서 항목을 조작 하는 방법에 대 한 정보를 참조 하십시오. [바로 가기 키 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
 ### <a name="design-surface-size-and-print-area"></a>디자인 화면 크기 및 인쇄 영역  
  디자인 화면의 크기가 보고서 인쇄를 위해 지정한 인쇄 영역의 페이지 크기와 다를 수도 있습니다. 디자인 화면의 크기를 변경해도 보고서의 인쇄 영역은 변경되지 않습니다. 보고서 인쇄 영역으로 설정한 크기에 관계없이 전체 디자인 화면 크기는 변경되지 않습니다. 자세한 내용은 [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)을 참조하세요.  

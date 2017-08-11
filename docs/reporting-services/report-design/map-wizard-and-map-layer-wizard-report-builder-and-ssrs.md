@@ -19,11 +19,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>지도 마법사 및 지도 계층 마법사(보고서 작성기 및 SSRS)
@@ -105,7 +105,7 @@ ms.lasthandoff: 06/22/2017
   
  지도 또는 지도 계층을 추가하고 보고서를 미리 본 후 마법사에서 설정하는 지도 및 지도 계층 옵션을 변경할 수 있습니다. 자세한 내용은 [지도 또는 지도 계층의 데이터 및 표시 사용자 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)을 참조하세요.  
   
- 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 참조하세요. 보고서에 지도를 추가하는 방법에 대한 단계별 지침은 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)를 참조하세요.  
+ 지도에 대한 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다. 보고서에 지도를 추가하는 방법에 대한 단계별 지침은 [자습서: 지도 보고서&#40;보고서 작성기&#41;](../../reporting-services/tutorial-map-report-report-builder.md)를 참조하세요.  
   
 ##  <a name="SpatialDataSource"></a> 공간 데이터의 원본 선택  
  이 페이지에서는 공간 데이터 원본과 포함할 공간 데이터를 지정합니다. 공간 데이터는 지도 갤러리, ESRI 셰이프 파일 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이상 버전 데이터베이스의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 공간 데이터를 지정하는 데이터 집합 쿼리에서 제공될 수 있습니다.  
@@ -117,16 +117,16 @@ ms.lasthandoff: 06/22/2017
   
  자세한 내용은 사용하는 공간 데이터 형식에 대한 설명서를 참조하십시오.  
   
-###  <a name="MapGallery"></a>지도 갤러리 란?  
+###  <a name="MapGallery"></a> What is the map gallery?  
  지도 갤러리에는 보고서 작성 환경에 대한 지도 갤러리 폴더에 있는 보고서의 지도가 포함되어 있습니다. 갤러리의 지도를 사용하면 보고서에 지도를 신속하게 추가할 수 있습니다. 갤러리의 미리 정의된 지도는 지도 공급자가 제공합니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 통계국([http://www.census.gov/](http://www.census.gov/))의 허가에 의해 TIGER/Line Shapefile에서 데이터를 사용합니다. TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)를 참조하세요. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
+>  이 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 지도 제작 기능은 미 Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line Shapefile은 Census MAF/TIGER 데이터베이스에서 선택한 지리 및 지도 정보를 추출한 것입니다. TIGER/Line Shapefile은 미 통계국에 요금을 지불하지 않고 사용할 수 있습니다. TIGER/Line Shapefile에 대한 자세한 내용은 [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger)를 참조하세요. TIGER/Line Shapefile의 경계 정보는 통계 데이터 수집 및 집계 목적으로만 사용되며 통계 목적의 설명 및 지정은 사법권이나 소유권 또는 수급권의 판결에 영향을 미치지 않고 법적인 토지 설명이 아닙니다. Census TIGER 및 TIGER/Line은 미 통계국의 등록 상표입니다.  
   
  지도 갤러리를 확장하려면 지도 갤러리 디렉터리에서 보고서를 추가하거나 제거하고 폴더를 추가하여 지도를 구성할 수 있습니다. 자세한 내용은 [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)를 클릭합니다.  
   
-###  <a name="Shapefile"></a>ESRI 셰이프 파일 이란?  
- ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로는 파일 집합에 포함 됩니다는  *\<파일 이름 >*.shp 파일 공간 데이터와 지원 파일 포함 된 * \<파일 이름 >*.dbf 합니다.  
+###  <a name="Shapefile"></a> What is an ESRI shapefile?  
+ ESRI 셰이프 파일은 ESRI(Environmental Systems Research Institute, Inc.) 셰이프 파일 공간 데이터 형식을 따르는 데이터가 포함된 파일 집합입니다. 일반적으로는 파일 집합에 포함 됩니다는  *\<파일 이름 >*.shp 파일 공간 데이터와 지원 파일 포함 된  *\<파일 이름 >*.dbf 합니다.  
   
  셰이프 파일을 공간 데이터 원본으로 지정하는 경우 셰이프 파일이 로컬 컴퓨터에 있으면 공간 데이터가 자동으로 보고서에 포함됩니다. ESRI 파일에서 공간 데이터를 동적으로 사용하려면 다음을 수행해야 합니다.  
   
@@ -141,7 +141,7 @@ ms.lasthandoff: 06/22/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공간 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스의 SQLGeometry 또는 SQLGeography 데이터 형식인 데이터를 지정하는 데이터 집합 쿼리입니다.  
   
 > [!NOTE]  
->  마법사에서 데이터 원본을 정의하는 경우 연결 중인 데이터 원본의 유형에 따라 쿼리 디자인 페이지에 다른 쿼리 디자이너가 표시됩니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)를 참조하세요.  
+>  마법사에서 데이터 원본을 정의하는 경우 연결 중인 데이터 원본의 유형에 따라 쿼리 디자인 페이지에 다른 쿼리 디자이너가 표시됩니다. 자세한 내용은 참조 [쿼리 디자이너 &#40; 보고서 작성기 &#41; ](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
   
  쿼리 디자이너에서 쿼리를 실행하면 결과 집합에 텍스트로 나타나는 공간 데이터가 포함된 열이 표시됩니다. 예를 들어 한 행에 한 점인 공간 데이터가 포함되고 다음 행에 점 집합을 정의하는 공간 데이터가 포함될 수 있습니다. 각 행은 하나의 지도 요소가 됩니다. 각 지도 요소의 표시를 나눌 수 없는 단위로 변경할 수 있습니다.  
   
@@ -192,7 +192,7 @@ ms.lasthandoff: 06/22/2017
   
  타일에 대한 자세한 내용은 [Bing Maps 타일 시스템(Bing Maps Tiles System)](http://go.microsoft.com/fwlink/?LinkId=147315)을 참조하십시오. 보고서에서 Bing 지도 타일을 사용하는 방법은 [추가 사용 조건(Additional Terms of Use)](http://go.microsoft.com/fwlink/?LinkId=151371)를 클릭합니다.  
   
- 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 [지도 보고서 계획](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)을 참조하세요.  
+ 디자인 뷰에서 타일 배경을 보려면 인터넷에 액세스할 수 있어야 합니다. 보고서 서버에 있는 보고서의 타일 배경을 미리 보기에서 보려면 보고서 서버가 Bing Map 타일을 지원하도록 구성되어 있어야 합니다. 자세한 내용은 [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) 및 [지도 보고서 계획](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)를 클릭합니다.  
   
  타일 계층을 사용자 지정하는 다른 방법에 대한 자세한 내용은 [지도 또는 지도 계층 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -256,7 +256,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
- [지도 보고서 계획&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
- [지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
+ [지도 보고서 &#40; 계획 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
+ [지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   

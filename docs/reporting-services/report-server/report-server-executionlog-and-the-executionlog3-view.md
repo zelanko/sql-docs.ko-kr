@@ -18,17 +18,17 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f54e9b1c9aa0a17634048f91932c4aad2d69888b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-server-executionlog-and-the-executionlog3-view"></a>보고서 서버 ExecutionLog 및 ExecutionLog3 뷰
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]보고서 서버 실행 로그에는 단일 서버나 기본 모드 확장 배포 또는 SharePoint 팜의 여러 서버에서 실행되는 보고서에 대한 정보가 들어 있습니다. 보고서 실행 로그를 사용하여 보고서 요청 빈도, 가장 많이 사용되는 출력 형식 및 각 처리 단계에 소요된 처리 시간(밀리초)을 확인할 수 있습니다. 로그에는 보고서의 데이터 집합 쿼리 실행에 걸린 시간 또는 데이터 처리에 걸린 시간에 대한 정보가 포함됩니다. 보고서 서버 관리자는 로그 정보를 검토하여 오랫동안 실행되는 태스크를 식별하고 보고서 작성자가 보고서에서 기능을 향상시킬 수 있는 부문(데이터 집합 또는 처리)에 대한 사항을 제안할 수 있습니다.  
   
- SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ SharePoint 모드용으로 구성된 보고서 서버는 또한 SharePoint ULS 로그를 활용할 수 있습니다. 자세한 내용은 [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)을 참조하세요.  
   
 ##  <a name="bkmk_top"></a> 로그 정보 보기  
  보고서 서버 실행은 내부 데이터베이스 테이블에 보고서 실행에 대한 데이터를 기록합니다. 테이블의 정보는 SQL Server 뷰에서 확인할 수 있습니다.  
@@ -379,7 +379,7 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|쿼리에서 반환된 행 수|  
   
 ## <a name="see-also"></a>관련 항목:  
- [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [SharePoint 추적 로그 &#40;에 대 한 Reporting Services 이벤트 설정 ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
   

@@ -19,11 +19,11 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 593f339656de155d133534e6776283c8a2e1bd92
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="publishing-data-sources-and-reports"></a>데이터 원본 및 보고서 게시
@@ -40,16 +40,16 @@ ms.lasthandoff: 06/22/2017
  [보고서 서버에 보고서 게시](../../reporting-services/reports/publishing-reports-to-a-report-server.md)  
  보고서를 보고서 서버에 게시하는 방법에 대해 설명합니다.  
   
- [SharePoint 모드의 보고서 서버에 게시된 보고서 항목에 대한 URL 예&#40;SSRS&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [SharePoint 모드 &#40;의 보고서 서버에 게시 된 보고서 항목에 대 한 URL 예 Ssrs&#41;](../../reporting-services/tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  보고서를 SharePoint 사이트에 게시하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [페이지 레이아웃 및 렌더링&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [페이지 레이아웃 및 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
- [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
+ [보고서 인쇄 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  
   
   

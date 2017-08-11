@@ -18,11 +18,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9e594025e0d4451d563f4d1b8b500d7f1ef1b576
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-subreport-and-parameters-report-builder-and-ssrs"></a>하위 보고서 및 매개 변수 추가(보고서 작성기 및 SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 5.  **이 보고서를 하위 보고서로 사용** 상자에서 **찾아보기**를 클릭하거나 보고서의 이름을 입력합니다. 하위 보고서의 경로는 자동으로 지정되므로 **찾아보기** 를 클릭하는 것이 좋습니다. 여러 가지 방법으로 보고서를 지정할 수 있습니다. 자세한 내용은 [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)을 참조하세요.  
   
-6.  (옵션) 하위 보고서가 여러 페이지에 걸쳐 있는 경우 테두리가 렌더링되지 않도록 **페이지 나누기에 테두리 생략**에서 **예**를 클릭합니다.  
+6.  (옵션) 하위 보고서가 여러 페이지에 걸쳐 있는 경우 테두리가 렌더링되지 않도록 **페이지 나누기에 테두리 생략** 에서 **예** 를 클릭합니다.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -78,6 +78,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)   
- [렌더링 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
+ [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a337202cea263001fe810c91a607fa1746219bd6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>구독자 데이터에 외부 데이터 원본 사용(데이터 기반 구독)
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
   
 -   보고서 모델  
   
- 데이터 기반 구독에 사용 하려는 하는 사용자 지정 데이터 처리 확장 프로그램을 사용 하는 경우 구현 해야 합니다는 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 인터페이스입니다. 데이터 처리 확장 프로그램에서는 스키마 전용 쿼리 실행을 지원해야 합니다. 이 쿼리는 사용자가 열을 구독 정의에 있는 배달 옵션 및 보고서 매개 변수에 매핑할 수 있도록 디자인 타임에 열 메타데이터를 검색하는 데 사용됩니다. 사용자가 구독을 정의할 때는 초기 단계에서 스키마 전용 쿼리가 실행됩니다.  
+ 데이터 기반 구독에 사용할 사용자 지정 데이터 처리 확장 프로그램이 있을 경우 해당 프로그램에서는 <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> 및 <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> 인터페이스를 구현해야 합니다. 데이터 처리 확장 프로그램에서는 스키마 전용 쿼리 실행을 지원해야 합니다. 이 쿼리는 사용자가 열을 구독 정의에 있는 배달 옵션 및 보고서 매개 변수에 매핑할 수 있도록 디자인 타임에 열 메타데이터를 검색하는 데 사용됩니다. 사용자가 구독을 정의할 때는 초기 단계에서 스키마 전용 쿼리가 실행됩니다.  
   
 ## <a name="query-requirements"></a>쿼리 요구 사항  
  구독 데이터를 검색하는 쿼리를 만들 때 다음 사항을 유의하십시오.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="passing-parameter-values-from-the-subscriber-database-to-the-report"></a>구독자 데이터베이스에서 보고서로 매개 변수 값 전달  
  매개 변수가 있는 보고서에 대해 데이터 기반 구독을 만드는 경우 변수 매개 변수 값을 사용하여 각 보고서의 출력을 사용자 지정할 수 있습니다. 예를 들어 구독자 데이터베이스에는 보고서 데이터를 필터링하는 데 사용할 수 있는 직원 ID 번호, 채용일, 직함, 사무실 위치 정보 등이 포함될 수 있습니다. 보고서에서 이러한 열 데이터나 기타 사용 가능한 열 데이터를 기반으로 하는 매개 변수를 사용하면 매개 변수를 해당 열로 매핑할 수 있습니다.  
   
- 구독자 필드를 보고서 매개 변수에 매핑할 때 데이터 형식과 열 길이는 호환 가능해야 합니다. 데이터 형식이 일치하지 않으면 구독을 처리하는 동안 오류가 발생합니다. 매개 변수가 있는 보고서에서 구독자 데이터를 사용하는 방법에 대한 자세한 내용은 [데이터 기반 구독 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)를 참조하세요.  
+ 구독자 필드를 보고서 매개 변수에 매핑할 때 데이터 형식과 열 길이는 호환 가능해야 합니다. 데이터 형식이 일치하지 않으면 구독을 처리하는 동안 오류가 발생합니다. 매개 변수가 있는 보고서의 구독자 데이터를 사용 하는 방법에 대 한 자세한 참조 [데이터 기반 구독 &#40; 만들기 SSRS 자습서 &#41; ](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
 ## <a name="modifying-the-subscriber-data-source"></a>구독자 데이터 원본 수정  
  구독자 데이터 원본을 다음과 같이 수정하면 구독이 실행되지 않을 수 있습니다.  
@@ -85,7 +85,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 기반 구독 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
- [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
+ [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

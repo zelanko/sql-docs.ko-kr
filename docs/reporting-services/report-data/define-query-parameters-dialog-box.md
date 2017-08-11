@@ -18,11 +18,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3c4c7a2cf0b04e6b8e6912de1483d276473c63a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="define-query-parameters-dialog-box"></a>쿼리 매개 변수 정의 대화 상자
@@ -36,8 +36,8 @@ ms.lasthandoff: 06/22/2017
  쿼리 매개 변수에 사용하려는 값을 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   
- [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [SQL Server 연결 유형 &#40; Ssrs&#41;](../../reporting-services/report-data/sql-server-connection-type-ssrs.md)   
+ [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [Reporting Services 쿼리 디자이너](http://msdn.microsoft.com/library/07efd3f1-804f-45f7-b62a-3e727a3d9835)  
   
   

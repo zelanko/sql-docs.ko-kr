@@ -4,16 +4,16 @@ description: "이 항목 릴리스 정보를 포함 하 고 SQL Server 2017 Linu
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 1907ef1ae99146fe7cdf2ca124af22aabdc29b35
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
@@ -152,6 +152,8 @@ ms.lasthandoff: 08/04/2017
       sudo systemctl restart mssql-server
       ```
 
+- SQL Server 2014 데이터베이스 메모리 내 OLTP를 사용 하는 창에 SQL Server 2017 linux에서 복원할 수 없습니다. 메모리 내 OLTP를 사용 하는 SQL Server 2014 데이터베이스를 복원 하려면 먼저 데이터베이스를 업그레이드 SQL Server 2016 또는 Windows에서 SQL Server 2017 이동 하기 전에 SQL Server로 Linux에서 백업/복원 또는 분리/연결을 통해.
+
 #### <a name="remote-database-files"></a>원격 데이터베이스 파일
 
 - NFS 서버에서 데이터베이스 파일을 호스팅하는이 릴리스에서 지원 되지 않습니다. NFS를 사용 하 여 공유 디스크 장애 조치 클러스터 되지 않은 인스턴스에서 데이터베이스 뿐만 아니라 클러스터링에 대 한 포함 됩니다. 작업을 이후 릴리스에서 NFS 서버 지원을 사용 하도록 설정 합니다.
@@ -267,6 +269,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | Stretch DB |
 | &nbsp; | Polybase |
 | &nbsp; | Distributed Query |
+| &nbsp; | 기계 학습 서비스 |
 | &nbsp; | 시스템 확장 저장된 프로시저 (XP_CMDSHELL 등). |
 | &nbsp; | Filetable |
 | &nbsp; | CLR 어셈블리 EXTERNAL_ACCESS 또는 UNSAFE 권한 설정 |
@@ -856,7 +859,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
     - 변경 데이터 캡처
 
 #### <a name="in-memory-oltp"></a>메모리 내 OLTP
-- 메모리 내 OLTP 데이터베이스 /var/opt/mssql 디렉터리에만 만들 수 있습니다. 자세한 내용은 참조는 [메모리 내 OLTP 항목](sql-server-linux-performance-get-started.md#use-in-memory-oltp)합니다.  
+- 메모리 내 OLTP 데이터베이스 /var/opt/mssql 디렉터리에만 만들 수 있습니다. 자세한 내용은 참조는 [메모리 내 OLTP 항목](sql-server-linux-performance-get-started.md#use-in-memory-oltp)합니다.
 
 #### <a name="sqlpackage"></a>SqlPackage
 - SqlPackage를 사용 하 여 파일에 대 한 절대 경로 지정 해야 합니다. 상대 경로 사용 하는 "/ tmp/sqlpackage 아래의 파일 매핑됩니다. \<코드 \> /시스템/system32 "폴더입니다. 

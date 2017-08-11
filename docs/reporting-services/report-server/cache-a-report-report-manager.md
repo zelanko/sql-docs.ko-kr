@@ -21,11 +21,11 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: af00978c2afb28937a008f22eebe76f1a3f78eb1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="cache-a-report-report-manager"></a>보고서 캐시(보고서 관리자)
@@ -47,9 +47,9 @@ ms.lasthandoff: 06/22/2017
   
 6.  다음 두 캐시 옵션 중에서 하나를 선택하고 만료 시간을 구성합니다.  
   
-    -   캐시된 복사본이 특정 시간 후에 만료되도록 구성하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 분 후에 만료됩니다.**를 클릭합니다. 보고서 만료 시간(분)을 입력합니다.  
+    -   캐시된 복사본이 특정 시간 후에 만료되도록 구성하려면 **보고서의 임시 복사본을 캐시합니다. 보고서의 복사본 (분)이 지나면 만료**합니다. 보고서 만료 시간(분)을 입력합니다.  
   
-    -   일정에 따라 캐시된 복사본이 만료되도록 구성하려면 **보고서의 임시 복사본을 캐시합니다. 보고서 복사본은 다음 일정으로 만료됩니다.**를 클릭합니다. **구성**을 클릭하거나 공유 일정을 선택하여 보고서 만료를 제어합니다.  
+    -   일정에 따라 만료 되도록 캐시 된 복사본을 구성 하려면 클릭 **보고서의 임시 복사본을 캐시 합니다. 보고서 복사본은 다음 일정으로 만료 됩니다.** **구성**을 클릭하거나 공유 일정을 선택하여 보고서 만료를 제어합니다.  
   
 7.  **적용**을 클릭합니다.  
   

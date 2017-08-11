@@ -15,11 +15,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3b5e30cca2aa3c75ca4d13e89e7af7b181a18916
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services 문제 해결
@@ -29,9 +29,9 @@ ms.lasthandoff: 06/22/2017
 + [Reporting Services 보고서 문제 해결](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Reporting Services 구독 및 배달 문제 해결](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
-+  [Reporting services 보고서 디자인 문제 해결](../../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md)  
++  [Reporting Services의 보고서 디자인 문제 해결](../../reporting-services/troubleshooting/troubleshoot-report-design-issues-with-reporting-services.md)  
 
-+  [Reporting Services 보고서 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
++  [Reporting Services 보고서의 데이터 검색 문제 해결](../../reporting-services/troubleshooting/troubleshoot-data-retrieval-issues-with-reporting-services-reports.md)  
 
 +  [Reporting Services 보고서의 처리 문제 해결](../../reporting-services/troubleshooting/troubleshoot-processing-of-reporting-services-reports.md)  
 
@@ -48,5 +48,5 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 로그 파일 및 소스](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
- [SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정&#40;ULS&#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
+ [SharePoint 추적 로그 &#40;에 대 한 Reporting Services 이벤트 설정 ULS &#41;](../../reporting-services/report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
 

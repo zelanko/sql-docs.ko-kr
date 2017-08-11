@@ -23,11 +23,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0eceb425b1294026a1c82043800c6aaa2ec83972
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pause-and-resume-shared-schedules"></a>공유 일정 일시 중지 및 다시 시작
@@ -69,8 +69,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [일정](../../reporting-services/subscriptions/schedules.md)   
- [Create, Modify, and Delete Schedules](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
- [보고서 서버에서 표준 시간대 및 시계 설정 변경](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [만들기, 수정 및 일정을 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [표준 시간대 및 시계 설정 보고서 서버에서 변경](../../reporting-services/subscriptions/change-time-zones-and-clock-settings-on-a-report-server.md)   
  [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)  
   
   

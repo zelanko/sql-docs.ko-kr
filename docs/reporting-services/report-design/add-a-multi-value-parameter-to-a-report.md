@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0411de7999d497b3198e6864d185cb54a4a5e1f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>보고서에 다중 값 매개 변수 추가
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
      사용 가능한 값 목록은 사용자가 매개 변수에 적합한 값만 선택할 수 있도록 제한합니다. 여러 값의 경우 목록 맨 위가 **모두 선택** 기능으로 시작되어 사용자가 클릭 한 번으로 모든 값을 선택하거나 선택 취소할 수 있습니다. 데이터 집합 쿼리에서 보고서 매개 변수에 사용 가능한 값을 가져오도록 선택하는 경우 동일한 보고서 매개 변수와 관련된 쿼리 변수를 포함하지 않는 데이터 집합을 선택해야 합니다.  
   
-     자세한 내용은 [보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)를 참조하세요.  
+     자세한 내용은 참조 [추가, 변경 또는 보고서 매개 변수 &#40;에 대 한 사용 가능한 값 삭제 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
 ## <a name="to-add-a-multi-value-parameter"></a>다중 값 매개 변수를 추가하려면  
   
@@ -87,9 +87,9 @@ ms.lasthandoff: 06/22/2017
   
      사용 가능한 값 목록은 사용자가 매개 변수에 적합한 값만 선택할 수 있도록 제한합니다. 여러 값의 경우 목록 맨 위가 **모두 선택** 기능으로 시작되어 사용자가 클릭 한 번으로 모든 값을 선택하거나 선택 취소할 수 있습니다. 데이터 집합 쿼리에서 보고서 매개 변수에 사용 가능한 값을 가져오도록 선택하는 경우 동일한 보고서 매개 변수와 관련된 쿼리 변수를 포함하지 않는 데이터 집합을 선택해야 합니다.  
   
-     자세한 내용은 [보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)를 참조하세요.  
+     자세한 내용은 참조 [추가, 변경 또는 보고서 매개 변수 &#40;에 대 한 사용 가능한 값 삭제 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)  
   

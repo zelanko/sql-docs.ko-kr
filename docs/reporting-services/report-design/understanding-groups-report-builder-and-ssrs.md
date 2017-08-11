@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 553bcb01f914c7b63afe3b20f93b790749cc30cf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>그룹 이해(보고서 작성기 및 SSRS)
@@ -84,7 +84,7 @@ ms.lasthandoff: 06/22/2017
   
      데이터 영역에 대한 그룹을 만들 때 보고서 작성기 및 보고서 디자이너는 데이터 영역에 행 또는 열을 자동으로 추가하고 이러한 행 또는 열을 사용하여 그룹 데이터를 표시합니다.  
   
--   **재귀 계층 구조 그룹** 재귀 계층 구조 그룹은 여러 계층 수준을 포함하는 단일 보고서 데이터 집합으로부터 데이터를 구성합니다. 예를 들어 재귀 계층 구조 그룹은 [Employee]에 보고하는 [Employee]와 같은 조직 계층을 표시할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이러한 종류의 보고서 데이터에 대한 그룹을 만들 수 있는 그룹 속성과 기본 제공 함수를 제공합니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
+-   **재귀 계층 구조 그룹** 재귀 계층 구조 그룹은 여러 계층 수준을 포함하는 단일 보고서 데이터 집합으로부터 데이터를 구성합니다. 예를 들어 재귀 계층 구조 그룹은 [Employee]에 보고하는 [Employee]와 같은 조직 계층을 표시할 수 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 이러한 종류의 보고서 데이터에 대한 그룹을 만들 수 있는 그룹 속성과 기본 제공 함수를 제공합니다. 자세한 내용은 [재귀 계층 구조 그룹 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)을 참조하세요.  
   
  다음 목록에는 각 데이터 영역에 대한 그룹의 작업 방법이 요약되어 있습니다.  
   
@@ -104,10 +104,10 @@ ms.lasthandoff: 06/22/2017
  테이블릭스 데이터 영역의 행 또는 열의 셀은 여러 행 및 열 그룹에 속할 수 있습니다. 집계 함수(예: `=Sum(Fields!FieldName.Value`)를 사용하는 셀의 입력란에서 식을 정의할 때 셀에 대한 기본 그룹 범위는 셀이 속한 가장 안쪽에 있는 자식 그룹입니다. 셀이 행 및 열 그룹 모두에 속할 때 기본 그룹 범위는 가장 안쪽에 있는 행 및 열 그룹입니다. 다른 데이터 집합에 대한 그룹으로 범위가 한정된 집계 부분합을 계산하는 식을 작성할 수도 있습니다. 예를 들어 데이터 영역의 열 그룹 또는 모든 데이터에 대한 그룹의 백분율을 계산할 수 있습니다(예: `=Sum(Fields!FieldName.Value)/Sum(Fields!FieldName.Value,"ColumnGroup")`). 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md) 및 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
- [데이터 영역의 데이터 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [드릴다운 동작&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [추가 또는 삭제 하는 데이터 영역 &#40;에 있는 그룹 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
+ [그룹 또는 테이블 릭 스 데이터 영역 &#40;에 합계 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [데이터 영역 &#40;의 데이터 정렬 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/sort-data-in-a-data-region-report-builder-and-ssrs.md)   
+ [드릴 다운 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/drilldown-action-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

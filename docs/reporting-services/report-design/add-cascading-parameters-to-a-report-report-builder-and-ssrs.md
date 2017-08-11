@@ -15,11 +15,11 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d8efc7a0b7120faa53a63bd07c51029a1b379f9e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>보고서에 연계 매개 변수 추가(보고서 작성기 및 SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- 연계 매개 변수를 만들려면 먼저 데이터 집합 쿼리를 정의하고 필요한 각 연계 매개 변수에 대한 쿼리 매개 변수를 추가합니다. 또한 각 연계 매개 변수마다 별도의 데이터 집합을 만들어 사용 가능한 값을 제공해야 합니다. 자세한 내용은 [보고서 매개 변수의 사용 가능한 값 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md)를 참조하세요.  
+ 연계 매개 변수를 만들려면 먼저 데이터 집합 쿼리를 정의하고 필요한 각 연계 매개 변수에 대한 쿼리 매개 변수를 추가합니다. 또한 각 연계 매개 변수마다 별도의 데이터 집합을 만들어 사용 가능한 값을 제공해야 합니다. 자세한 내용은 참조 [추가, 변경 또는 보고서 매개 변수 &#40;에 대 한 사용 가능한 값 삭제 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-change-or-delete-available-values-for-a-report-parameter.md).  
   
  목록 뒷부분의 매개 변수에 대한 데이터 집합 쿼리에는 목록 앞부분의 각 매개 변수에 대한 참조가 포함되므로 연계 매개 변수에서는 순서가 중요합니다. 보고서 데이터 창의 매개 변수 순서에 따라 런타임에 보고서에 매개 변수 쿼리가 나타나는 순서가 결정되며 따라서 사용자가 각각의 연속된 매개 변수 값을 선택하는 순서가 결정됩니다.  
   
@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 6.  **실행** (**!**)을 클릭합니다. 쿼리 매개 변수를 넣은 다음 쿼리를 실행하면 쿼리 매개 변수에 해당하는 보고서 매개 변수가 자동으로 생성됩니다.  
   
     > [!NOTE]  
-    >  처음 쿼리를 실행할 때 쿼리 매개 변수의 순서에 따라 보고서에서 매개 변수가 생성되는 순서가 결정됩니다. 순서를 변경하려면 [보고서 매개 변수의 순서 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)을 참조하세요.  
+    >  처음 쿼리를 실행할 때 쿼리 매개 변수의 순서에 따라 보고서에서 매개 변수가 생성되는 순서가 결정됩니다. 순서를 변경 하려면 참조 [보고서 매개 변수 &#40;의 순서를 변경 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -160,10 +160,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 매개 변수 추가, 변경 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [자습서: 보고서에 매개 변수 추가&#40;보고서 작성기&#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [자습서: 보고서 &#40; 매개 변수 추가 보고서 작성기 &#41;](../../reporting-services/tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

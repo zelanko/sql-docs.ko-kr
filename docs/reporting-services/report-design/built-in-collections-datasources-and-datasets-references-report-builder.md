@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a1e556a8c6ac712d61d262c4d96993a9ab3ecf11
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---datasources-and-datasets-references-report-builder"></a>기본 제공 컬렉션-DataSources 및 DataSets 참조 (보고서 작성기)
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
  식을 사용하여 데이터 집합에 포함된 쿼리를 정의할 수 있습니다. 이 기능을 사용하면 사용자의 입력, 다른 데이터 집합의 데이터 또는 다른 변수를 기반으로 쿼리가 변경되는 보고서를 디자인할 수 있습니다. 쿼리에 대한 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

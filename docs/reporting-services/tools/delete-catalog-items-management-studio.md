@@ -17,11 +17,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7cdd06f5488603b10e788d513c93269b250d8486
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-catalog-items-management-studio"></a>카탈로그 항목 삭제(Management Studio)
@@ -50,8 +50,8 @@ ms.lasthandoff: 06/22/2017
  항목을 삭제하는 동안 오류가 발생할 경우 오류 코드를 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [항목 삭제&#40;Management Studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
- [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
+ [항목 &#40; 삭제 Management studio&#41;](../../reporting-services/tools/delete-an-item-management-studio.md)   
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [만들기, 수정 및 일정을 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)  
   
   

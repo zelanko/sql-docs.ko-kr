@@ -21,11 +21,11 @@ caps.latest.revision: 23
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ce952f1d25529948bbcc3dbae5f1707af9683b11
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="pin-reporting-services-items-to-power-bi-dashboards"></a>Power BI 대시보드에 Reporting Services 항목 고정
@@ -108,7 +108,7 @@ ms.lasthandoff: 06/22/2017
   
 ##  <a name="bkmk-troubleshoot"></a> 문제 해결  
   
--   **보고서 뷰어 도구 모음에 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 단추 없음:** 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않았음을 나타냅니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)을 참조하세요.  
+-   **보고서 뷰어 도구 모음에 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] 단추 없음:** 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않았음을 나타냅니다. 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.  
   
 - **고정할 수 없음**: 항목의 고정을 시도할 때 다음과 같은 오류 메시지가 표시됩니다. [고정할 수 있는 항목](#bkmk_supported_items)섹션을 참조하세요.  
   

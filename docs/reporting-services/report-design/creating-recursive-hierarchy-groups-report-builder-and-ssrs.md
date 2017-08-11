@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b6f587b40c53ff64b484b86a324b92ca5de21b77
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>재귀 계층 구조 그룹 생성(보고서 작성기 및 SSRS)
@@ -35,18 +35,18 @@ ms.lasthandoff: 06/22/2017
   
  재귀 계층 구조로 정의된 그룹, 즉 Parent 속성을 사용하는 그룹에는 그룹 식이 하나만 있을 수 있습니다. 입력란 안쪽 여백에 **Level** 함수를 사용하여 계층에서의 수준을 기준으로 직원 이름을 들여쓸 수 있습니다.  
   
- 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 및 [재귀 계층 구조 그룹 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)를 참조하세요.  
+ 자세한 내용은 참조 [추가 하거나 데이터 영역 &#40;에 있는 그룹 삭제 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) 및 [재귀 계층 구조 그룹 &#40; 만들기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/create-a-recursive-hierarchy-group-report-builder-and-ssrs.md).  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>재귀를 지원하는 집계 함수  
  매개 변수 *Recursive* 를 허용하는 Reporting Services 집계 함수를 사용하여 재귀 계층 구조의 요약 데이터를 계산할 수 있습니다. 다음 함수 **Sum** , [Avg](../../reporting-services/report-design/report-builder-functions-sum-function.md), [Count](../../reporting-services/report-design/report-builder-functions-avg-function.md), [CountDistinct](../../reporting-services/report-design/report-builder-functions-count-function.md), [CountRows](../../reporting-services/report-design/report-builder-functions-countdistinct-function.md), [Max](../../reporting-services/report-design/report-builder-functions-countrows-function.md), [Min](../../reporting-services/report-design/report-builder-functions-max-function.md), [StDev](../../reporting-services/report-design/report-builder-functions-min-function.md), [StDevP](../../reporting-services/report-design/report-builder-functions-stdev-function.md), [Sum](../../reporting-services/report-design/report-builder-functions-stdevp-function.md), [Var](../../reporting-services/report-design/report-builder-functions-sum-function.md)및 [VarP](../../reporting-services/report-design/report-builder-functions-var-function.md)는 매개 변수로 [Recursive](../../reporting-services/report-design/report-builder-functions-varp-function.md)을 허용합니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
- [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [행렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
- [목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)    
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [테이블 릭 스 데이터 영역 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)   
+ [집계 함수 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [테이블 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [행렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)   
+ [목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)    
+ [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

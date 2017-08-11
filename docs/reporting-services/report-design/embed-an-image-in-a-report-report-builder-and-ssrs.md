@@ -18,11 +18,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a1825a28cd9939228a73c1a4a6269c717b691ab2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="embed-an-image-in-a-report-report-builder-and-ssrs"></a>보고서에 이미지 포함(보고서 작성기 및 SSRS)
@@ -68,8 +68,8 @@ ms.lasthandoff: 06/22/2017
 3.  **MIMEType** 속성 옆의 입력란을 클릭하고 드롭다운 목록에서 새 MIME 형식을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
- [데이터 바인딩된 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
+ [이미지 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)   
+ [데이터 바인딩된 이미지 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-data-bound-image-report-builder-and-ssrs.md)   
  [이미지 속성 대화 상자, 일반&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/c2218b93-f7fe-46ef-995f-d7dadf9752ec)  
   
   

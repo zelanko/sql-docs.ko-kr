@@ -26,11 +26,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fc98f8394e637ea9a627cffd8e40887484462df5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>사용자 지정 데이터 처리 확장 프로그램에 대한 연결 지정
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
 >  사용자 지정 데이터 처리 확장 프로그램의 구현 방법을 알아보려면 타사 공급자에게 문의하십시오.  
   
 ## <a name="impersonation-and-custom-data-processing-extensions"></a>가장과 사용자 지정 데이터 처리 확장 프로그램  
- 사용자 지정 데이터 처리 확장 프로그램에 가장을 사용 하 여 데이터 원본에 연결 된 경우에 Open 메서드를 사용 해야 합니다는 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 또는 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 요청을 하는 인터페이스입니다. 또는 사용자 ID 개체(System.Security.Principal.WindowsIdentity)를 저장한 다음 다른 데이터 처리 확장 프로그램 API에서 다시 사용할 수 있습니다.  
+ 사용자 지정 데이터 처리 확장 프로그램이 가장을 사용하여 데이터 원본에 연결하는 경우 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnection> 또는 <xref:Microsoft.ReportingServices.DataProcessing.IDbConnectionExtension> 인터페이스의 Open 메서드를 사용하여 연결을 요청합니다. 또는 사용자 ID 개체(System.Security.Principal.WindowsIdentity)를 저장한 다음 다른 데이터 처리 확장 프로그램 API에서 다시 사용할 수 있습니다.  
   
  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 모든 사용자 지정 데이터 처리 확장 프로그램은 사용자 가장에서 호출되었습니다. 이 버전에서는 Open 메서드만 사용자를 가장하는 동안 호출됩니다. 통합 보안을 요구하는 기존 데이터 처리 확장 프로그램이 있는 경우 Open 메서드를 사용하거나 사용자 ID 개체를 저장하도록 코드를 수정해야 합니다.  
   
@@ -83,11 +83,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
- [보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [만들기, 삭제 또는 공유 데이터 원본 &#40; 수정 보고서 관리자 &#41;](http://msdn.microsoft.com/library/cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2)   
+ [보고서 &#40;에 대 한 데이터 원본 속성 구성 보고서 관리자 &#41;](../../reporting-services/report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

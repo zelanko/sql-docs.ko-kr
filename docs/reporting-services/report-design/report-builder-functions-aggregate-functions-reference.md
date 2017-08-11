@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f7f78e643a5ed5e8874cf2f8dda867c3edac70d0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>보고서 작성기 함수 집계 함수 참조
@@ -78,19 +78,19 @@ ms.lasthandoff: 06/22/2017
   
 |보고서의 위치|필드|매개 변수|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|변수|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
-|페이지 머리글<br /><br /> 페이지 바닥글|예|예|최대 하나<br /><br /> 참고 1|예|예|예|예|  
-|본문|예<br /><br /> 참고 2|예|현재 범위 또는 포함하는 범위의 항목만<br /><br /> 참고 3|아니오|예|예|예|  
+|페이지 머리글<br /><br /> 페이지 바닥글|예|예|최대 하나<br /><br /> 참고 1|예|사용자 계정 컨트롤|사용자 계정 컨트롤|예|  
+|본문|예<br /><br /> 참고 2|예|현재 범위 또는 포함하는 범위의 항목만<br /><br /> 참고 3|아니오|사용자 계정 컨트롤|사용자 계정 컨트롤|예|  
 |보고서 매개 변수|아니오|목록 앞부분의 매개 변수만<br /><br /> 참고 4|아니오|아니오|아니오|아니오|아니오|  
-|필드|예|예|아니오|아니오|아니오|아니오|아니오|  
-|쿼리 매개 변수|아니오|예|아니오|아니오|아니오|아니오|아니오|  
-|그룹 식|예|예|아니오|아니요|예|아니오|아니오|  
-|정렬 식|예|예|아니오|아니요|예|예<br /><br /> 참고 5|아니오|  
-|필터 식|예|예|아니오|아니요|예|예<br /><br /> 참고 6|아니오|  
+|필드|예|사용자 계정 컨트롤|아니요|아니오|아니오|아니오|아니오|  
+|쿼리 매개 변수|아니오|예|아니요|아니오|아니오|아니오|아니오|  
+|그룹 식|예|사용자 계정 컨트롤|아니요|아니오|예|아니요|아니오|  
+|정렬 식|예|사용자 계정 컨트롤|아니요|아니오|사용자 계정 컨트롤|예<br /><br /> 참고 5|아니오|  
+|필터 식|예|사용자 계정 컨트롤|아니요|아니오|사용자 계정 컨트롤|예<br /><br /> 참고 6|아니오|  
 |코드|아니오|예<br /><br /> 참고 7|아니오|아니오|아니오|아니오|아니오|  
-|보고서 언어|아니오|예|아니오|아니오|아니오|아니오|아니오|  
-|변수|예|예|아니오|아니요|예|현재 범위 또는 포함하는 범위|아니오|  
-|집계|예|예|페이지 머리글/페이지 바닥글에서만|보고서 항목 집계에서만|예|아니오|아니오|  
-|조회 함수|예|예|예|아니오|예|아니오|아니오|  
+|보고서 언어|아니오|예|아니요|아니오|아니오|아니오|아니오|  
+|변수|예|사용자 계정 컨트롤|아니요|아니오|예|현재 범위 또는 포함하는 범위|아니오|  
+|집계|예|예|페이지 머리글/페이지 바닥글에서만|보고서 항목 집계에서만|예|아니요|아니오|  
+|조회 함수|예|사용자 계정 컨트롤|사용자 계정 컨트롤|아니오|예|아니요|아니오|  
   
 -   **참고 1.** ReportItems는 렌더링된 보고서 페이지에 있어야 하며, 그렇지 않은 경우 값이 null입니다. 보고서 항목의 표시 유형이 False로 계산되는 식에 따라 달라지는 경우 해당 보고서 항목이 페이지에 없습니다.  
   
@@ -115,10 +115,10 @@ ms.lasthandoff: 06/22/2017
   
 |컨텍스트|RunningValue|RowNumber|첫째<br /><br /> 마지막|Previous|Sum 및 기타 미리 정렬 함수|ReportItem 집계|조회 함수|Aggregate 함수|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Running Value|아니오|아니오|아니오|아니요|예|아니오|예|아니오|  
-|첫째<br /><br /> 마지막|아니오|아니오|아니오|아니요|예|아니오|아니오|아니오|  
-|Previous|예|예|예|아니오|예|아니오|예|아니오|  
-|Sum 및 기타 미리 정렬 함수|아니오|아니오|아니오|아니요|예|아니오|예|아니오|  
+|Running Value|아니오|아니오|아니오|아니오|예|아니오|예|아니오|  
+|첫째<br /><br /> 마지막|아니오|아니오|아니오|아니오|예|아니요|아니오|아니오|  
+|Previous|예|사용자 계정 컨트롤|사용자 계정 컨트롤|아니오|예|아니오|예|아니오|  
+|Sum 및 기타 미리 정렬 함수|아니오|아니오|아니오|아니오|예|아니오|예|아니오|  
 |ReportItem 집계|아니오|아니오|아니오|아니오|아니오|아니오|아니오|아니오|  
 |조회 함수|예|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|예<br /><br /> 참고 1|아니오|아니오|  
 |Aggregate 함수|아니오|아니오|아니오|아니오|아니오|아니오|아니오|아니오|  
@@ -196,8 +196,8 @@ ms.lasthandoff: 06/22/2017
  ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘")맨 위로 이동  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

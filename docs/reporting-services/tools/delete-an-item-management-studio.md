@@ -19,11 +19,11 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 67a2bf743e580ef73204c02b6e6531aa3c08868d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="delete-an-item-management-studio"></a>항목 삭제(Management Studio)
@@ -37,11 +37,11 @@ ms.lasthandoff: 06/22/2017
   
 3.  항목을 마우스 오른쪽 단추로 클릭하고 **삭제**를 클릭합니다.  
   
-4.  삭제할 것인지 확인하는 메시지가 표시되면 [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+4.  대화 상자가 나타나면[!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [카탈로그 항목 삭제&#40;Management Studio&#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
- [SQL Server Management Studio의 Reporting Services&#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [카탈로그 항목 삭제 &#40; Management studio&#41;](../../reporting-services/tools/delete-catalog-items-management-studio.md)   
+ [Reporting Services SQL Server Management Studio에서 &#40; Ssrs&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

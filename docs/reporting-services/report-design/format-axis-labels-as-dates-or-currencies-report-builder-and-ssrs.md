@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b8f82c7824a44d46a282eca8d617fb12ac9ade5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs"></a>축 레이블의 서식을 날짜 또는 통화로 지정(보고서 작성기 및 SSRS)
@@ -28,7 +28,7 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 >  세로 막대형 차트와 분산형 차트에서는 가로 축 또는 X축이 범주 축이고 가로 막대형 차트에서는 세로 축 또는 Y축이 범주 축입니다.  
   
- 시간 간격의 서식을 올바르게 지정하려면 X축에 표시되는 값이 <xref:System.DateTime> 데이터 형식이어야 합니다. 필드의 데이터 형식이 있으면 <xref:System.String>, 차트에서 간격이 날짜 또는 시간으로 계산 하지 것입니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
+ 시간 간격의 서식을 올바르게 지정하려면 X축에 표시되는 값이 <xref:System.DateTime> 데이터 형식이어야 합니다. 필드에 <xref:System.String>데이터 형식이 있는 경우 차트에서 간격이 날짜 또는 시간으로 계산되지 않습니다. 자세한 내용은 [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)를 참조하세요.  
   
  Y축에 숫자 값을 추가하면 기본적으로 차트에 숫자가 표시되기 전에 해당 숫자에 형식이 지정되지 않습니다. 숫자 필드가 매출 수치인 경우 차트의 가독성을 높이기 위해 숫자의 형식을 통화로 지정할 수 있습니다.  
   
@@ -63,9 +63,9 @@ ms.lasthandoff: 06/22/2017
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트의 축 레이블 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [로그 눈금 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
- [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [차트 &#40;의 축 레이블 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [로그 눈금 간격 &#40;를 지정 합니다. 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/specify-a-logarithmic-scale-report-builder-and-ssrs.md)   
+ [축 간격 &#40;를 지정 합니다. 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)  
   
   

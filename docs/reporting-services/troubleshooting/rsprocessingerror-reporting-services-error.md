@@ -17,11 +17,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7065e2f766ec3ce56bed2d9b3bc0e90c5290b6ea
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Reporting Services 오류
@@ -103,7 +103,7 @@ ms.lasthandoff: 06/22/2017
 ### <a name="cannot-compare-data-types-for-a-filter"></a>필터에 대한 데이터 형식을 비교할 수 없음  
  필터 수식에서 필터링 대상을 정의하는 필터 식과 필터 값은 데이터 형식이 같아야 비교할 수 있습니다. 다음 오류가 발생할 경우 데이터 형식이 일치하도록 필드 식 또는 필터 값을 수정하세요.  
   
--   처리  *\<종류의 보고서 항목 >* 에 대 한는 * \<보고서 항목 이름 >* 수행할 수 없습니다. 형식의 데이터를 비교할 수 없습니다  *\<유형 >* 및 * \<유형 >*합니다. 반환 된 데이터 형식을 확인 하십시오는  *\<보고서 항목 이름 >*합니다.  
+-   처리  *\<종류의 보고서 항목 >* 에 대 한는  *\<보고서 항목 이름 >* 수행할 수 없습니다. 형식의 데이터를 비교할 수 없습니다  *\<유형 >* 및  *\<유형 >*합니다. 반환 된 데이터 형식을 확인 하십시오는  *\<보고서 항목 이름 >*합니다.  
   
 -   평가 하지 못했습니다.는  *\<속성 이름 >*합니다.  
   
@@ -116,13 +116,13 @@ ms.lasthandoff: 06/22/2017
   
  집계 함수에 특정 범위의 이름을 전달할 수도 있습니다. 범위는 데이터 영역, 데이터 집합의 이름 또는 데이터 계층에서 높은 범위의 이름을 참조할 수 있습니다. 다음과 같은 메시지가 이에 해당합니다.  
   
--   *\<종류의 보고서 항목 >* '*\<보고서 항목 이름 >*'에 잘못 된 범위 "*\<범위 이름 >*"입니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
+-    *\<종류의 보고서 항목 >* '*\<보고서 항목 이름 >*'에 잘못 된 범위 "*\<범위 이름 >*"입니다. 범위는 현재 범위이거나 현재 범위 내에 포함되어야 합니다.  
   
--   *\<속성 이름 >* 에 대 한 식을 * \<종류의 보고서 항목 >* '*\<보고서 항목 이름 >*' 집계 함수에 대해 유효 하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 집합의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
+-    *\<속성 이름 >* 에 대 한 식을  *\<종류의 보고서 항목 >* '*\<보고서 항목 이름 >*' 집계 함수에 대해 유효 하지 않은 범위 매개 변수가 있습니다. 범위 매개 변수는 포함 그룹의 이름, 포함 데이터 영역의 이름 또는 데이터 집합의 이름 중 하나와 동일한 문자열 상수로 설정되어야 합니다.  
   
  누계를 계산하는 집계 함수의 경우(**Previous**, **RunningValue**또는 **RowNumber**) 행 그룹 이름 또는 열 그룹 이름 중 하나인 범위 매개 변수를 지정할 수 있습니다. 다음과 같은 오류 메시지가 이에 해당합니다.  
   
--   **이전**, **RunningValue** 또는 **RowNumber** 집계의 데이터 셀에 사용 된 함수는  *\<보고서 항목 유형 >* '*\<보고서 항목 이름 >*' 열과 행 모두에 있는 그룹화 범위 참조는 * \<보고서 항목 유형 >*합니다. 모든 범위 매개 변수가 **이전**, **RunningValue** 및 **RowNumber** 집계 함수 내에서 한  *\<종류의 보고서 항목 >* 행 그룹 또는 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
+-   **이전**, **RunningValue** 또는 **RowNumber** 집계의 데이터 셀에 사용 된 함수는  *\<보고서 항목 유형 >* '*\<보고서 항목 이름 >*' 열과 행 모두에 있는 그룹화 범위 참조는  *\<보고서 항목 유형 >*합니다. 모든 범위 매개 변수가 **이전**, **RunningValue** 및 **RowNumber** 집계 함수 내에서 한  *\<종류의 보고서 항목 >* 행 그룹 또는 데이터 열 그룹화 중 하나만 참조할 수 있습니다.  
   
  자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) 및 [기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
@@ -130,13 +130,13 @@ ms.lasthandoff: 06/22/2017
  보고서에 데이터 집합이 두 개 이상인 경우 보고서 디자인 화면에 추가된 입력란에 기본 범위를 사용하지 마세요. 범위로 데이터 집합의 이름을 포함하는 식과 집계 함수를 사용하세요. `=First(Fields!FieldName.Value, "DataSet2")`)을 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [집계 함수 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
  [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [일반적으로 사용되는 필터&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [보고서 디자이너의 식에 포함된 사용자 지정 코드 및 어셈블리 참조&#40;SSRS&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
- [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
+ [일반적으로 사용 되는 필터 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/commonly-used-filters-report-builder-and-ssrs.md)   
+ [데이터 집합 필드 컬렉션 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [사용자 지정 코드 및 보고서 디자이너 &#40;의 식에서 어셈블리 참조 Ssrs&#41;](../../reporting-services/report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [매개 변수 컬렉션 참조 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

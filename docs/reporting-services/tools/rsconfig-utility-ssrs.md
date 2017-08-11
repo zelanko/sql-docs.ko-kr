@@ -21,11 +21,11 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68b5e38f2b4e71298fbf7b6ec6970fc7824c3cde
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig 유틸리티(SSRS)
@@ -60,7 +60,7 @@ rsconfig {-?}
 |**-i**  *instancename*|명명된 인스턴스를 사용하는 경우 필요합니다.|명명된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 사용하여 보고서 서버 데이터베이스를 호스팅하는 경우 이 값은 명명된 인스턴스를 지정합니다.|  
 |**-d**  *databasename*|필수 사항입니다.|보고서 서버 데이터베이스의 이름을 지정합니다.|  
 |**-a**  *authmethod*|필수 사항입니다.|보고서 서버에서 보고서 서버 데이터베이스에 연결할 때 사용하는 인증 방법을 지정합니다. 유효한 값은 **Windows** 또는 **SQL** 입니다. 이 인수는 대/소문자를 구분하지 않습니다.<br /><br /> **Windows** 에서는 보고서 서버가 Windows 인증을 사용하도록 지정합니다.<br /><br /> **SQL** 에서는 보고서 서버가 SQL Server 인증을 사용하도록 지정합니다.|  
-|**-u**  *[domain\\]username*|**-e**에서는 필수이고, **-c**에서는 옵션입니다.|보고서 서버 데이터베이스 연결 또는 무인 계정을 위한 사용자 계정을 지정합니다.<br /><br /> **rsconfig -e**의 경우 이 인수는 필수입니다. 도메인 사용자 계정이어야 합니다.<br /><br /> **rsconfig -c** 및 **-a SQL**의 경우 이 인수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정해야 합니다.<br /><br /> **rsconfig -c** 및 **-a Windows**의 경우 이 인수는 도메인 사용자, 기본 제공 계정 또는 서비스 계정 자격 증명을 지정할 수 있습니다. 도메인 계정을 지정하는 경우 *domain* 및 *username* 을 *domain\username*형식으로 지정합니다. 기본 제공 계정을 사용하는 경우 이 인수는 선택 인수입니다. 서비스 계정 자격 증명을 사용하려면 이 인수를 생략합니다.|  
+|**-u***[도메인\\] 사용자 이름* |**-e** 에서는 필수이고, **-c**에서는 옵션입니다.|보고서 서버 데이터베이스 연결 또는 무인 계정을 위한 사용자 계정을 지정합니다.<br /><br /> **rsconfig -e**의 경우 이 인수는 필수입니다. 도메인 사용자 계정이어야 합니다.<br /><br /> **rsconfig -c** 및 **-a SQL**의 경우 이 인수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정해야 합니다.<br /><br /> **rsconfig -c** 및 **-a Windows**의 경우 이 인수는 도메인 사용자, 기본 제공 계정 또는 서비스 계정 자격 증명을 지정할 수 있습니다. 도메인 계정을 지정하는 경우 *domain* 및 *username* 을 *domain\username*형식으로 지정합니다. 기본 제공 계정을 사용하는 경우 이 인수는 선택 인수입니다. 서비스 계정 자격 증명을 사용하려면 이 인수를 생략합니다.|  
 |**-p**  *password*|**-u** 를 지정하는 경우 필수입니다.|*username* 인수와 함께 사용할 암호를 지정합니다. 계정에 암호가 필요하지 않은 경우에는 이 인수를 비워 둘 수 있습니다. 도메인 계정의 경우 이 값은 대/소문자를 구분합니다.|  
 |**-t**|(선택 사항)|추적 로그에 오류 메시지를 출력합니다. 이 인수는 값을 가지지 않습니다. 자세한 내용은 [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md)을 참조하세요.|  
   
@@ -127,12 +127,12 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [보고서 서버 데이터베이스 연결 &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [무인된 실행 계정을 &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Reporting Services 보고서 서버 &#40; 기본 모드 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [저장소 암호화 된 보고서 서버 데이터 &#40; SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [보고서 서버 명령 프롬프트 유틸리티&#40;SSRS&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
+ [보고서 서버 명령 프롬프트 유틸리티 &#40; Ssrs&#41;](../../reporting-services/tools/report-server-command-prompt-utilities-ssrs.md)   
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)  
   
   

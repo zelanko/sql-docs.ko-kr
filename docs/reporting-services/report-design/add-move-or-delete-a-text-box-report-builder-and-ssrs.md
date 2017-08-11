@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 75444343968c9901a24c1a4d431d4d8cfacb1567
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>입력란 추가, 이동 또는 삭제(보고서 작성기 및 SSRS)
@@ -76,8 +76,8 @@ ms.lasthandoff: 06/22/2017
     >  입력란을 클릭하여 편집 모드에 있는 경우에는 Esc 키를 눌러 입력란을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [입력란&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [바로 가기 키&#40;보고서 작성기&#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
+ [텍스트 상자 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)   
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [바로 가기 키 &#40; 보고서 작성기 &#41;](../../reporting-services/report-builder/keyboard-shortcuts-report-builder.md)  
   
   

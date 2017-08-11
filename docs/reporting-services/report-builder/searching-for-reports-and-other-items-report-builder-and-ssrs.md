@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9663bbf0c11ce1d41f02cc22027f2c69aa07b057
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>보고서 및 기타 항목 검색(보고서 작성기 및 SSRS)
@@ -38,9 +38,9 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
- [내 보고서 사용&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [찾기 및 보고서 관리자 &#40;에서 보고서 보기 보고서 작성기 및 SSRS &#41;](https://msdn.microsoft.com/library/dd255286.aspx)   
+ [내 보고서 &#40;를 사용 하 여 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/using-my-reports-report-builder-and-ssrs.md)   
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [열기 및 닫기 보고서 &#40; 보고서 관리자 &#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
   
   

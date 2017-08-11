@@ -18,11 +18,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c3d0de81994b5a234ead420277718c760f9ddb3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>보고서 기록에서 스냅숏 만들기, 수정 및 삭제
@@ -65,10 +65,10 @@ ms.lasthandoff: 06/22/2017
  보고서를 삭제하면 보고서 기록도 삭제됩니다. 예를 들어 월별 판매 보고서를 새 버전으로 바꾸기 위해 삭제하면 이 보고서와 연결된 보고서 기록도 모두 삭제됩니다. 그러나 보고서를 이동하면 모든 보고서 기록도 함께 이동합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 기록 만들기&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+ [보고서 기록 &#40; 만들기 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [보고서 기록에 스냅숏 추가&#40;보고서 관리자&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [보고서 기록 제한&#40;보고서 관리자&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
+ [보고서 기록 &#40;에 스냅숏 추가 보고서 관리자 &#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [보고서 기록 제한 &#40; 보고서 관리자 &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)  
   
   

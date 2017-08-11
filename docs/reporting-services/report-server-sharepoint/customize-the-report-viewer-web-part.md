@@ -19,11 +19,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e5941044afa950ba41e23ce1c3507a51e6121556
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="customize-the-report-viewer-web-part"></a>보고서 뷰어 웹 파트 사용자 지정
@@ -96,8 +96,8 @@ ms.lasthandoff: 06/22/2017
   
  매개 변수 영역은 보고서를 실행하기 전에 값을 입력하는 필드를 제공합니다. 이 영역은 보고서 정의에 매개 변수가 포함되어 있는 경우에만 사용됩니다. 매개 변수 또는 자격 증명 영역이 표시되는 경우 보고서 보기가 웹 파트의 나머지 너비를 사용하도록 조정됩니다. 웹 파트의 속성을 설정하여 매개 변수의 너비를 사용자 지정할 수 있습니다. 페이지의 개별 매개 변수 옆에 나타나는 레이블을 정의할 수도 있습니다. 매개 변수 레이블을 수정하는 방법에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
- [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+## <a name="see-also"></a>관련 항목:  
+ [SharePoint 사이트에서 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
+ [웹 페이지 &#40; 보고서 뷰어 웹 파트 추가 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   

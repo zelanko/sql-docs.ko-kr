@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e5d4e66fa2de743e7a28dfeba78bb7a753374a5a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters"></a>데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가
@@ -97,14 +97,14 @@ ms.lasthandoff: 06/22/2017
 ### <a name="value"></a>값  
  Value 식은 필터 수식의 최종 부분을 지정합니다. 보고서 처리기는 평가 식을 사용자가 지정한 데이터 형식으로 변환한 다음 필터 수식 전체를 계산하여 식에 지정된 데이터가 필터를 통과하는지 여부를 확인합니다.  
   
- 표준 CLR 데이터 형식이 아닌 데이터 형식을 변환하려면 식을 수정하여 데이터 형식으로 명시적으로 변환해야 합니다. **식** 대화 상자의 **일반 함수**, **변환**에 나열된 변환 함수를 사용할 수 있습니다. 필드에 대 한 예를 들어 `ListPrice` 로 저장 된 데이터를 나타내는 **money** 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본에 데이터 처리 확장 프로그램으로 필드 값을 반환는 <xref:System.Decimal> 데이터 형식입니다. 보고서 통화에 **$50000.00** 보다 큰 값만 사용하도록 필터를 설정하려면 `=CDec(50000.00)`식을 사용하여 값을 10진수로 변환합니다.  
+ 표준 CLR 데이터 형식이 아닌 데이터 형식을 변환하려면 식을 수정하여 데이터 형식으로 명시적으로 변환해야 합니다. **식** 대화 상자의 **일반 함수**, **변환**에 나열된 변환 함수를 사용할 수 있습니다. 예를 들어 `ListPrice` 데이터 원본에 **money** 데이터 형식으로 저장된 데이터를 나타내는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 필드의 경우, 데이터 처리 확장 프로그램에서는 필드 값을 <xref:System.Decimal> 데이터 형식으로 반환합니다. 보고서 통화에 **$50000.00** 보다 큰 값만 사용하도록 필터를 설정하려면 `=CDec(50000.00)`식을 사용하여 값을 10진수로 변환합니다.  
   
  이 값에는 사용자가 필터링할 값을 대화형으로 선택할 수 있게 해 주는 매개 변수 참조도 포함될 수 있습니다.  
   
  맨 위로 이동  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [보고서 &#40;에 사용 되는 식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

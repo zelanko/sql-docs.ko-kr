@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ba2c751b7f851fa9be24ca08cb4ab95f4314258
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>외부 항목에 대한 경로 지정(보고서 작성기 및 SSRS)
@@ -49,8 +49,8 @@ ms.lasthandoff: 06/22/2017
     -   **SharePoint 사이트에서:** 항목의 전체 URL 및 파일 확장명 .rdl과 함께 보고서 이름을 식에 지정해야 합니다. `="http://server/site/library/folder/Report1.rdl"`)을 입력합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [외부 이미지 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
- [하위 보고서 및 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
- [보고서에 드릴스루 동작 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
+ [외부 이미지 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   
+ [하위 보고서 및 매개 변수 사용 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [보고서 &#40;에 드릴스루 동작 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

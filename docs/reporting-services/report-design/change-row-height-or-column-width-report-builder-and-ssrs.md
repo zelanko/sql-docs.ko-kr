@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>행 높이 또는 열 너비 변경(보고서 작성기 및 SSRS)
@@ -71,10 +71,10 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [테이블릭스 데이터 영역(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd220511.aspx)   
- [테이블(보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [행렬(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [목록(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
- [테이블, 행렬 및 목록(보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [테이블 (보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
+ [행렬 (보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
+ [목록 (보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [테이블, 행렬 및 목록 (보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

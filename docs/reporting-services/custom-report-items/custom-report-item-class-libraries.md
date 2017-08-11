@@ -20,11 +20,11 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f216228c01e835e88cd9d4c7d7d4190648a386db
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="custom-report-item-class-libraries"></a>사용자 지정 보고서 항목 클래스 라이브러리
@@ -137,7 +137,7 @@ ms.lasthandoff: 06/22/2017
 |**DataSetName**|삭제할 필드를 포함하는 데이터 집합의 이름입니다.|  
 |**필드**|필드의 컬렉션 (**Microsoft.ReportDesigner.Field**) 삭제 해야 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [보고서 정의 언어 &#40; Ssrs&#41;](../../reporting-services/reports/report-definition-language-ssrs.md)   
  [사용자 지정 보고서 항목 런타임 구성 요소 만들기](../../reporting-services/custom-report-items/creating-a-custom-report-item-run-time-component.md)   
  [사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  

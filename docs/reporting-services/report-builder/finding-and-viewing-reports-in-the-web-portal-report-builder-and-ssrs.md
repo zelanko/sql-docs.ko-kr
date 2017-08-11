@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 85eda9497d17c2e5e7bb7fecf15e1d214d24ca11
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>웹 포털에서 보고서 찾기 및 보기(보고서 작성기 및 SSRS)
@@ -33,7 +33,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="navigating-the-folder-hierarchy-in-report-manager"></a>보고서 관리자에서 폴더 계층 구조 탐색  
  보고서 관리자를 시작하고 폴더 계층 구조에서 임의의 폴더를 열 때 자동으로 표시되는 홈 페이지를 사용하면 실행할 보고서를 쉽게 찾을 수 있습니다. 홈 페이지에는 사용자가 보기 권한을 갖고 있는 항목만 표시됩니다. 폴더 경로는 홈 페이지 위쪽에 링크 행으로 표시됩니다. 폴더 이름은 루트 폴더(홈)부터 순서대로 나열됩니다. 추가 폴더를 열 때마다 해당 폴더 이름이 페이지 위쪽의 폴더 경로에 추가됩니다. 아래 이미지의**(1)** 입니다. 또한 보고서를 열면 해당 보고서 이름이 폴더 경로에 추가됩니다.  
   
- ![보고서 관리자 리본 및 탐색](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "Report Manager Ribbon and Navigation")  
+ ![보고서 관리자 리본 및 탐색](../../reporting-services/report-builder/media/rs-reportmanager-ribbon.gif "보고서 관리자 리본 및 탐색")  
 보고서 관리자 리본  
   
  다음과 같은 방법으로 폴더 계층을 탐색할 수 있습니다.  
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="opening-a-report"></a>보고서 열기  
  보고서를 찾은 다음 보고서 이름을 클릭하면 해당 보고서가 열립니다. 보고서는 HTML로 렌더링되고 보고서 관리자의 내용 페이지에 표시됩니다. 보고서는 항상 브라우저 세션에서 캐시되기 때문에 보고서를 연 경우 **뒤로** 단추를 클릭하여 보고서로 되돌아갈 수 있습니다. 보고서 실행을 위해 사용자 이름과 암호를 입력해야 하는 경우에도 마찬가지입니다. 렌더링된 보고서를 완전히 닫으려면 브라우저를 닫아야 합니다.  
   
- 폴더 계층 구조에 표시되는 보고서 중 일부에는 곧바로 액세스하지 못할 수도 있습니다. 보고서의 데이터 원본에 대한 액세스 권한이 있는지 확인하기 위해 사용자 이름과 암호를 입력해야 하는 경우도 있습니다. 보고서 관리자에서 보고서 열기에 대한 자세한 내용은 [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)를 참조하세요.  
+ 폴더 계층 구조에 표시되는 보고서 중 일부에는 곧바로 액세스하지 못할 수도 있습니다. 보고서의 데이터 원본에 대한 액세스 권한이 있는지 확인하기 위해 사용자 이름과 암호를 입력해야 하는 경우도 있습니다. 보고서 관리자에서 보고서를 여는 방법에 대 한 자세한 내용은 참조 [열기 및 닫기 보고서 &#40; 보고서 관리자 &#41; ](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
   
  보고서 작성기에서 직접 보고서 서버의 보고서를 탐색하거나 열 수도 있습니다. 자세한 내용은 [보고서 및 기타 항목 검색&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -61,6 +61,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 및 기타 항목 검색&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

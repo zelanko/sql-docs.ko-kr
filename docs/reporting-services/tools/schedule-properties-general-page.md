@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: eac0a7b5f1a8da128fc90700be9b91e9a38ad694
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="schedule-properties-general-page"></a>일정 속성(일반 페이지)
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/03/2017
  특정 날짜 및 시간에 한 번만 실행되는 일정을 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)  

@@ -18,15 +18,15 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8134ebc66d9b0d75b3eae53b666eea37dee3df5a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="reporting-services-features-and-tasks-ssrs"></a>Reporting Services 기능 및 태스크(SSRS)
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 기반 콘텐츠는 보고서 및 보고서 기능, 보고서 서버 기능 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 제품 기능별로 구성됩니다.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]기반 콘텐츠는 보고서 및 보고서 기능, 보고서 서버 기능 이끄는 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 제품 기능입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기](../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
@@ -39,19 +39,19 @@ ms.lasthandoff: 06/22/2017
   
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
- [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
+ [보고서 디자이너 &#40;의 보고서 파트 Ssrs&#41;](../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)  
   
  [일정](../reporting-services/subscriptions/schedules.md)  
   
- [구독 및 배달&#40;Reporting Services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [구독 및 배달 &#40; Reporting services&#41;](../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
  [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
   
  [Reporting Services 보안 및 보호](../reporting-services/security/reporting-services-security-and-protection.md)  
   
- [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)  
+ [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)  
   
- [확장 프로그램&#40;SSRS&#41;](../reporting-services/extensions-ssrs.md)  
+ [확장 &#40; Ssrs&#41;](../reporting-services/extensions-ssrs.md)  
   
  [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)  
   

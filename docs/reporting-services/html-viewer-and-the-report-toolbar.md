@@ -17,11 +17,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70ffdb98f998c46946452a2753b63f9f4bd95dfa
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="html-viewer-and-the-report-toolbar"></a>HTML 뷰어 및 보고서 도구 모음
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="report-toolbar"></a>보고서 도구 모음  
  보고서 도구 모음은 HTML 렌더링 확장 프로그램에서 렌더링된 보고서에 대해 페이지 탐색, 확대/축소, 새로 고침, 검색, 내보내기, 인쇄 및 데이터 피드 기능을 제공합니다.  
   
- 인쇄 기능은 선택 사항입니다. 인쇄 기능을 사용할 수 있는 경우 프린터 아이콘이 보고서 도구 모음에 표시됩니다. 인쇄 기능을 처음 사용하는 경우 프린터 아이콘을 클릭하면 반드시 설치해야 하는 ActiveX 컨트롤이 다운로드됩니다. 컨트롤이 설치된 후에 프린터 아이콘을 클릭하면 컴퓨터에 구성된 프린터 중에서 선택할 수 있는 프린터 대화 상자가 열립니다. 인쇄 기능 사용 가능 여부는 서버 설정 및 브라우저 설정에 따라 결정됩니다. 자세한 내용은 [인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) 및 [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)를 참조하세요.  
+ 인쇄 기능은 선택 사항입니다. 인쇄 기능을 사용할 수 있는 경우 프린터 아이콘이 보고서 도구 모음에 표시됩니다. 인쇄 기능을 처음 사용하는 경우 프린터 아이콘을 클릭하면 반드시 설치해야 하는 ActiveX 컨트롤이 다운로드됩니다. 컨트롤이 설치된 후에 프린터 아이콘을 클릭하면 컴퓨터에 구성된 프린터 중에서 선택할 수 있는 프린터 대화 상자가 열립니다. 인쇄 기능 사용 가능 여부는 서버 설정 및 브라우저 설정에 따라 결정됩니다. 자세한 내용은 참조 [인쇄 제어 &#40;를 사용 하 여 브라우저에서 보고서 인쇄 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md) 및 [설정 및 Reporting Services에 대 한 클라이언트 쪽 인쇄 기능 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)합니다.  
   
  보고서 도구 모음은 다음 그림과 같습니다. 그러나 실제 보고서 도구 모음은 사용할 수 있는 보고서 기능이나 렌더링 옵션에 따라 다를 수 있습니다.  
   
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 ||**표시 및 숨기기 아이콘**|매개 변수가 포함된 보고서에서 매개 변수 값 필드와 **보고서 보기** 단추를 표시하거나 숨깁니다.|  
 |![보고서 도구 모음의 브라우저 새로 고침 단추](../reporting-services/media/htmlviewer-refresh.GIF "보고서 도구 모음의 브라우저 새로 고침 단추")|**보고서 새로 고침 아이콘**|보고서를 새로 고칩니다. 활성화된 보고서의 데이터를 새로 고칩니다. 캐시된 보고서는 저장된 위치에서 다시 로드됩니다.|  
 |![htmlviewer_datafeed](../reporting-services/media/htmlviewer-datafeed.gif "htmlviewer_datafeed")|**데이터 피드 아이콘**|보고서에서 생성된 데이터 피드를 나타냅니다.|  
-|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Power BI 대시보드에 고정**|지원 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 고정합니다. 단추가 표시되지 않는 경우 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않은 것입니다.  자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)을 참조하세요.|  
+|![ssrs_powerbi_button_reportwviewer](../reporting-services/media/ssrs-powerbi-button-reportwviewer.png "ssrs_powerbi_button_reportwviewer")|**Power BI 대시보드에 고정**|지원 보고서 항목을 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 고정합니다. 단추가 표시되지 않는 경우 보고서 서버가 [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 통합되지 않은 것입니다.  자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md)과 통합해야 합니다.|  
   
 ### <a name="about-export-formats"></a>내보내기 형식 정보  
  보고서 도구 모음에서 보고서를 다양한 형식으로 볼 수 있습니다. 사용할 수 있는 형식은 보고서 서버에 설치되어 있는 렌더링 확장 프로그램에 따라 다릅니다. 다른 형식을 선택하면 별도의 브라우저 창이 열려 선택한 내보내기 형식과 연결된 뷰어를 사용하여 보고서를 표시합니다. 선택한 형식에 사용할 수 있는 뷰어가 없는 경우 다른 형식을 선택할 수 있습니다.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [보고서 내보내기&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

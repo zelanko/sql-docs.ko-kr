@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.wmiconnection.f1
 helpviewer_keywords:
 - connections [Integration Services], WMI
 - connection managers [Integration Services], WMI
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d8bd256a462a8a0a51441024619f2ed81f6db753
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6e314655d6a230bde897ffceb54fadb8d180d1db
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="wmi-connection-manager"></a>WMI 연결 관리자
@@ -45,8 +47,37 @@ ms.lasthandoff: 08/03/2017
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
   
+## <a name="wmi-connection-manager-editor"></a>WMI 연결 관리자 편집기
+  **WMI 연결 관리자** 대화 상자를 사용하여 서버에 대한 Microsoft WMI(Windows Management Instrumentation) 연결을 지정할 수 있습니다.  
+  
+ WMI 연결 관리자에 대한 자세한 내용은 [WMI Connection Manager](../../integration-services/connection-manager/wmi-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **이름**  
+ 연결 관리자의 고유 이름을 제공합니다.  
+  
+ **Description**  
+ 연결 관리자에 대한 설명을 입력합니다. 설명에 해당 연결 관리자의 용도를 정의하면 패키지를 이해하기 쉬우며 유지 관리가 간편합니다.  
+  
+ **서버 이름**  
+ WMI 연결을 만들 서버의 이름을 제공합니다.  
+  
+ **네임스페이스**  
+ WMI 네임스페이스를 지정합니다.  
+  
+ **Windows 인증 사용**  
+ Windows 인증을 사용하려면 선택합니다. Windows 인증을 사용하면 연결할 때 사용자 이름 또는 암호를 제공할 필요가 없습니다.  
+  
+ **사용자 이름**  
+ Windows 인증을 사용하지 않으면 연결할 때 사용자 이름을 제공해야 합니다.  
+  
+ **암호**  
+ Windows 인증을 사용하지 않으면 연결할 때 암호를 제공해야 합니다.  
+  
+ **테스트**  
+ 연결 관리자 설정을 테스트합니다.  
+  
 ## <a name="see-also"></a>관련 항목:  
  [웹 서비스 태스크](../../integration-services/control-flow/web-service-task.md)   
  [Integration Services &#40; Ssis&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
-  
-  
+

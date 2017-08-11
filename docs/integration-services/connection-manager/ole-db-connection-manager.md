@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.oledbconnection.f1
 helpviewer_keywords:
 - OLE DB connection manager
 - data sources [Integration Services], connections
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 94287024cf1a79384f888406a0c111644d6696fc
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 6a81892e0206775357c7fdf74ef81a7b8c3ae3c7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 연결 관리자
@@ -65,6 +67,29 @@ ms.lasthandoff: 08/03/2017
     
 -   carlprothman.net의 기술 문서 [OLE DB 공급자에 대한 연결 문자열](http://go.microsoft.com/fwlink/?LinkId=220744)    
     
+## <a name="configure-ole-db-connection-manager"></a>OLE DB 연결 관리자 구성
+  **OLE DB 연결 관리자 구성** 대화 상자를 사용하면 새 연결을 만들거나 기존 연결을 복사하여 데이터 원본에 대한 연결을 추가할 수 있습니다.  
+  
+> [!NOTE]  
+>  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Excel 2007인 경우 이 데이터 원본에는 이전 버전의 Excel과 다른 연결 관리자가 필요합니다. 자세한 내용은 [Excel 통합 문서에 연결](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)을 참조하세요.  
+>   
+>  데이터 원본이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access 2007인 경우 이 데이터 원본에는 이전 버전의 Access와 다른 OLE DB 공급자가 필요합니다. 자세한 내용은 [Access 데이터베이스에 연결](../../integration-services/connection-manager/connect-to-an-access-database.md)을 참조하세요.  
+  
+ OLE DB 연결 관리자에 대한 자세한 내용은 [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **데이터 연결**  
+ 목록에서 기존 OLE DB 데이터 연결을 선택합니다.  
+  
+ **데이터 연결 속성**  
+ 선택한 OLE DB 데이터 연결의 속성과 값을 표시합니다.  
+  
+ **새로 만들기**  
+ **연결 관리자** 대화 상자를 사용하여 OLE DB 데이터 연결을 만듭니다.  
+  
+ **Delete**  
+ 데이터 연결을 선택한 다음 **삭제** 단추를 사용하여 삭제합니다.  
+  
 ## <a name="see-also"></a>관련 항목:    
  [OLE DB 원본](../../integration-services/data-flow/ole-db-source.md)     
  [OLE DB 대상](../../integration-services/data-flow/ole-db-destination.md)     

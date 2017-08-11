@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ff834d00c915ae81179ff9b0bebed19e7c9ec6c1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections-in-expressions-report-builder"></a>식 (보고서 작성기)에서 기본 제공 컬렉션
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 |**Globals**|기본 제공 필드|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|보고서 이름이나 페이지 번호를 비롯하여 보고서에 유용한 전역 변수를 나타냅니다. 항상 사용할 수 있습니다.<br /><br /> 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.|  
 |**사용자**|기본 제공 필드|`=User.UserID`<br /><br /> -또는-<br /><br /> `=User.Language`|언어 설정 또는 사용자 ID를 비롯하여 보고서를 실행하는 사용자에 대한 데이터 컬렉션을 나타냅니다. 항상 사용할 수 있습니다.<br /><br /> 자세한 내용은 [기본 제공 Globals 및 Users 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md)를 참조하세요.|  
 |**매개 변수**|매개 변수|`=Parameters("ReportMonth").Value`<br /><br /> -또는-<br /><br /> `=Parameters!ReportYear.Value`|각각 단일 값 또는 다중값일 수 있는 보고서 매개 변수 컬렉션을 나타냅니다. 초기화 처리가 완료된 다음에만 사용할 수 있습니다. 자세한 내용은 [매개 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-parameters-collection-references-report-builder.md)를 참조하세요.|  
-|**Fields(** *\<Dataset>* **)**|필드|`=Fields!Sales.Value`|보고서에 사용할 수 있는 데이터 집합의 필드 컬렉션을 나타냅니다. 데이터 원본에 있는 데이터를 검색하여 데이터 집합으로 가져온 다음 사용할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.|  
+|**필드 (**  *\<데이터 집합 >* **)**|필드|`=Fields!Sales.Value`|보고서에 사용할 수 있는 데이터 집합의 필드 컬렉션을 나타냅니다. 데이터 원본에 있는 데이터를 검색하여 데이터 집합으로 가져온 다음 사용할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.|  
 |**DataSets**|표시되지 않음|`=DataSets("TopEmployees").CommandText`|보고서 정의 본문에서 참조하는 데이터 집합 컬렉션을 나타냅니다. 페이지 머리글이나 페이지 바닥글에만 사용되는 데이터 원본은 포함되지 않습니다. 로컬 미리 보기에서는 사용할 수 없습니다. 자세한 내용은 [DataSources 및 DataSets 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)를 참조하세요.|  
 |**DataSources**|표시되지 않음|`=DataSources("AdventureWorks2012").Type`|보고서 본문에서 참조하는 데이터 원본 컬렉션을 나타냅니다. 페이지 머리글이나 페이지 바닥글에만 사용되는 데이터 원본은 포함되지 않습니다. 로컬 미리 보기에서는 사용할 수 없습니다. 자세한 내용은 [DataSources 및 DataSets 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-datasources-and-datasets-references-report-builder.md)를 참조하세요.|  
 |**변수**|`Variables`|`=Variables!CustomTimeStamp.Value`|보고서 변수 및 그룹 변수의 컬렉션을 나타냅니다. 자세한 내용은 [보고서 및 그룹 변수 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-report-and-group-variables-references-report-builder.md)를 참조하세요.|  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
 |*Collection.Member*|`=User.Language`|  
   
 ## <a name="see-also"></a>관련 항목:  
- [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [식 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

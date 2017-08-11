@@ -20,11 +20,11 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c2a8702fcee392936451e4a55a4b97327de2b97d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-builder-in-sql-server-2016"></a>SQL Server 2016의 보고서 작성기
@@ -80,7 +80,7 @@ ms.lasthandoff: 06/22/2017
 
   [Reporting Services 및 SQL Server 2016용 보고서 작성기의 새로운 기능](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)  
   이 버전의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)]의 새로운 기능에 대해 설명합니다.   
-  [자습서: 오프 라인에서 빠른 차트 보고서 만들기](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+  [자습서: 오프라인에서 빠른 차트 보고서 만들기](../../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  보고서를 만드는 데 사용할 수 있는 [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion-md.md)] 및 마법사를 소개합니다. 사용할 데이터 집합이 제공되므로 데이터 원본에 연결하지 않고도 시작할 수 있습니다.  
   
  [보고서 계획&#40;보고서 작성기&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  

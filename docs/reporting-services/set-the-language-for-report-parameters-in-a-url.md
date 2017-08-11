@@ -22,11 +22,11 @@ caps.latest.revision: 29
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 815af671e5bd26445153b96f68ebcbaf0e972cf7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="set-the-language-for-report-parameters-in-a-url"></a>URL에 보고서 매개 변수 언어 설정
@@ -47,7 +47,7 @@ http://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render
  URL 액세스 매개 변수 **rc:Parameters** 에 대한 **true** 및 *false*값 이외에 이제 **Collapsed**값을 전달할 수 있습니다. URL에서 *rc:Parameters*=**Collapsed** 를 사용할 경우 HTML 뷰어의 매개 변수 프롬프트 영역이 보이지 않도록 축소되지만 사용자가 표시 여부를 선택할 수 있습니다. **false** 값을 사용하면 HTML 뷰어 도구 모음에서 매개 변수 프롬프트 영역이 제거되어 최종 사용자가 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ede41000be34b24f362518e8963cee97db3e4a66
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>항목 이동 또는 삭제(보고서 관리자)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
 |아이콘|이동 가능한 항목|  
 |----------|-------------------|  
 |![보고서 아이콘](../../reporting-services/report-server/media/hlp-16doc.gif "보고서 아이콘")|보고서|  
-|![연결 된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "연결 된 보고서 아이콘")|링크된 보고서|  
+|![링크된 보고서 아이콘](../../reporting-services/report-server/media/hlp-16linked.gif "링크된 보고서 아이콘")|링크된 보고서|  
 |![폴더 아이콘](../../reporting-services/report-server/media/hlp-16folder.gif "폴더 아이콘")|Folder|  
 |![일반 리소스 아이콘](../../reporting-services/report-server/media/hlp-16file.gif "일반 리소스 아이콘")|일반 리소스|  
 |![공유 데이터 원본 아이콘](../../reporting-services/report-data/media/hlp-16datasource.png "공유 데이터 원본 아이콘")|공유 데이터 원본|  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [내용 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

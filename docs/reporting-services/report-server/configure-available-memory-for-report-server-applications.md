@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21f15afcea2904a88e8e9bdb71b2cccc677ff43d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성
@@ -79,7 +79,7 @@ ms.lasthandoff: 06/22/2017
 |**MemorySafetyMargin**|보통 및 낮음 가중 시나리오 간 경계를 정의하는 **WorkingSetMaximum** 의 비율을 지정합니다. 이 값은 시스템용으로 예약된 사용 가능한 메모리 비율이며 보고서 서버 작업에 사용할 수 없습니다. 기본값은 80입니다.|  
   
 > [!NOTE]  
->  **MemoryLimit** 및 **MaximumMemoryLimit** 설정은 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 사용되지 않습니다. 기존 설치를 업그레이드했거나 해당 설정을 포함하는 RSReportServer.config 파일을 사용하는 경우 보고서 서버는 해당 값을 더 이상 읽지 않습니다.  
+>  **MemoryLimit** 및 **MaximumMemoryLimit** 설정에서 사용 되지 않습니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전입니다. 기존 설치를 업그레이드했거나 해당 설정을 포함하는 RSReportServer.config 파일을 사용하는 경우 보고서 서버는 해당 값을 더 이상 읽지 않습니다.  
   
 #### <a name="example-of-memory-configuration-settings"></a>메모리 구성 설정 예  
  다음 예에서는 사용자 지정 메모리 구성 값을 사용하는 보고서 서버 컴퓨터에 대한 구성 설정을 보여 줍니다. **WorkingSetMaximum** 또는 **WorkingSetMinimum**을 추가하려는 경우 RSReportServer.config 파일에 요소와 값을 입력해야 합니다. 두 값 모두 서버 응용 프로그램에 할당하는 RAM을 KB로 표시하는 정수입니다. 다음 예에서는 보고서 서버 응용 프로그램에 대한 총 메모리 할당이 4GB를 초과할 수 없음을 지정합니다. **WorkingSetMinimum** ( **WorkingSetMaximum**의 60%)에 대한 기본값이 허용되는 경우 생략하고 RSReportServer.config 파일에서 **WorkingSetMaximum** 지정할 수 있습니다. 이 예에서는 추가하는 경우 해당 값이 나타나는 방법을 보여 주기 위해 **WorkingSetMinimum** 을 포함합니다.  
@@ -96,8 +96,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [보고서 서버 응용 프로그램에 대 한 응용 프로그램 도메인](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
+ [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [보고 서비스 구성 파일 수정 &#40; RSreportserver.config &#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [보고서 서버 응용 프로그램을 위한 응용 프로그램 도메인](../../reporting-services/report-server/application-domains-for-report-server-applications.md)  
   
   

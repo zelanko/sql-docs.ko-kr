@@ -19,15 +19,15 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
-  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 보고서를 전자 메일로 배포하려면 1) 전자 메일 배달용 보고서 서버를 구성하고 2) 표준 구독 또는 데이터 기반 구독을 정의합니다. 단일 구독에서 전자 메일 메시지 하나에 여러 보고서를 포함해 배달할 수는 없습니다. 그러나 여러 구독을 만들 수는 있습니다.  
+  SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 개별 사용자 또는 그룹에 보고서를 메일로 보낼 수 있는 메일 배달 확장 프로그램이 포함되어 있습니다. 보고서를 전자 메일로 배포하려면 1) 전자 메일 배달용 보고서 서버를 구성하고 2) 표준 구독 또는 데이터 기반 구독을 정의합니다. 단일 구독에서 전자 메일 메시지 하나에 여러 보고서를 포함해 배달할 수는 없습니다. 그러나 여러 구독을 만들 수는 있습니다.  
   
  보고서 서버는 표준 연결을 통해 전자 메일 서버에 연결합니다. SSL(Secure Sockets Layer)을 통해 암호화된 통신은 사용하지 않습니다. 전자 메일 서버는 보고서 서버와 동일한 네트워크에 있는 원격 또는 로컬 SMTP(Simple Mail Transport Protocol) 서버여야 합니다.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [기본 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
--   [SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
+-   [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)  
   
 ||  
 |-|  
@@ -96,7 +96,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
- [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)  
   

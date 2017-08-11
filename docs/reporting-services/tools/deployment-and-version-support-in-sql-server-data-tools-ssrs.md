@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server Data Tools의 배포 및 버전 지원(SSRS)
@@ -46,18 +46,18 @@ ms.lasthandoff: 06/22/2017
   
 -   OutputPath는 보고서의 빌드 확인, 배포 및 미리 보기에 사용되는 보고서 정의를 저장할 폴더의 경로를 식별하는 빌드 속성입니다.  
   
--   ErrorLevel은 오류로 보고되는 빌드 문제의 심각도를 식별하는 빌드 속성입니다. ErrorLevel 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 자세한 내용은 [보고서 디자이너로 보고서 디자인&#40;SSRS&#41;](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md)에서 "보고서 유효성 검사 및 오류 수준" 섹션을 참조하세요.  
+-   ErrorLevel은 오류로 보고되는 빌드 문제의 심각도를 식별하는 빌드 속성입니다. ErrorLevel 값보다 작거나 같은 심각도 수준을 가진 문제는 오류로 보고되고 그렇지 않은 문제는 경고로 보고됩니다. 자세한 내용은의 "보고서 유효성 검사 및 오류 수준" 섹션을 참조 하십시오. [보고서 디자이너 &#40; 보고서 디자인 Ssrs&#41; ](../../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  
   
--   TargetServerVersion은 TargetServerURL 속성에 지정된 대상 보고서 서버에 설치되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 예상 버전을 식별하는 배포 속성입니다.  
+-   TargetServerVersion의 예상된 버전을 식별 하는 배포 속성은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] TargetServerURL 속성에 지정 된 대상 보고서 서버에 설치 된 합니다.  
   
- **프로젝트 속성** 대화 상자에서 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 지정할 경우 보고서는 이전 버전으로 자동으로 되돌아가지 않습니다. 마찬가지로 보고서 서버 프로젝트는 두 가지 다른 버전인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보고서를 포함할 수 있습니다. 보고서 서버 프로젝트가 배포될 경우 프로젝트의 모든 보고서는 TargetServerVersion에 지정된 버전으로 변환됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 대화 상자에서 이전 버전의 **프로젝트 속성** 를 지정할 경우 보고서는 이전 버전으로 자동으로 되돌아가지 않습니다. 마찬가지로 보고서 서버 프로젝트는 두 가지 다른 버전인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보고서를 포함할 수 있습니다. 보고서 서버 프로젝트가 배포될 경우 프로젝트의 모든 보고서는 TargetServerVersion에 지정된 버전으로 변환됩니다.  
   
  둘 이상의 프로젝트 구성을 프로젝트에 추가할 수 있으며 각 구성은 다른 버전의 보고서 서버에 배포하는 것과 같은 다양한 시나리오에 사용됩니다. 자세한 내용은 [배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md) 및 [프로젝트 속성 페이지 대화 상자](../../reporting-services/tools/project-property-pages-dialog-box.md)를 참조하세요.  
   
 ##  <a name="bkmk_SupportedVersions"></a> Supported Versions  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 보고서 서버 프로젝트를 위한 32비트 개발 환경으로, [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 컴퓨터에서 실행되도록 디자인되지 않았으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 서버에 설치되지 않습니다. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]보고서 서버 프로젝트를 위한 32 비트 개발 환경에서 실행 하도록 설계 되지 않았습니다 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-기반 컴퓨터에 설치 되지 않은 및 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-기반 서버. x64 기반 컴퓨터에서는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 가 지원됩니다.  
   
  다음 표에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 보고서를 작성 및 게시할 때 지원되는 버전을 설명합니다.  
   

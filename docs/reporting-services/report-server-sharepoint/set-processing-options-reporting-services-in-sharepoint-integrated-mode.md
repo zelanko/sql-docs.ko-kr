@@ -18,14 +18,14 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f2a5c52f4fa9b04026490c1e66243bf0d660c13
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>처리 옵션 설정(SharePoint 통합 모드의 Reporting Services)
+# <a name="set-processing-options-reporting-services-in-sharepoint-integrated-mode"></a>Set Processing Options (Reporting Services in SharePoint Integrated Mode)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리 옵션을 설정하여 데이터 처리 시기를 결정할 수 있습니다. 현재 보고서에 대해 보고서 기록을 사용할지 여부를 결정하는 옵션과 보고서 처리의 제한 시간 값을 설정할 수도 있습니다.  
   
 -   보고서를 보고서 스냅숏으로 실행하면 임의의 시간에(예: 예약된 백업 시간 동안) 보고서가 실행되지 않도록 할 수 있습니다. 보고서 스냅숏은 일반적으로 일정에 따라 생성되고 이후에 새로 고쳐지므로 보고서 및 데이터 처리 시간을 정확하게 예약할 수 있습니다. 실행하는 데 시간이 오래 걸리는 쿼리 또는 특정 시간 동안 누구도 액세스할 수 없는 데이터 원본의 데이터를 사용하는 쿼리를 기반으로 하는 보고서의 경우 보고서를 스냅숏으로 실행해야 합니다.  
@@ -35,13 +35,13 @@ ms.lasthandoff: 06/22/2017
 -   보고서 기록은 이전에 실행한 보고서 복사본의 모음입니다. 보고서 기록을 사용하여 시간에 따른 보고서 기록을 유지 관리할 수 있습니다. 보고서 기록은 기밀이나 개인 데이터가 포함된 보고서에 대해서는 사용할 수 없습니다. 따라서 보고서 기록에는 보고서를 실행하는 모든 사용자가 사용할 수 있는 단일 자격 증명 집합(저장된 자격 증명 또는 무인 모드의 보고서 실행에 사용되는 자격 증명)을 사용하여 데이터 원본을 쿼리하는 보고서만 포함될 수 있습니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 통합에서는 SharePoint의 체크 아웃 및 체크인 콘텐츠 관리 기능을 사용하여 업데이트를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 저장합니다. 여기에는 보고서 스냅샷 만들기도 포함됩니다. 따라서 문서 라이브러리에 대한 버전 관리를 사용하는 경우 새 보고서 기록 스냅샷이 만들어질 때 보고서 버전이 업데이트되는 것을 볼 수 있습니다. 이것은 스냅샷 업데이트로 인해 파생되는 작업입니다. 스냅샷이 업데이트될 때 보고서의 LastExecution 속성이 변경되므로 보고서 버전이 변경되는 것입니다.  
+    >  SharePoint와의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 통합에서는 SharePoint의 체크 아웃 및 체크인 콘텐츠 관리 기능을 사용하여 업데이트를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 콘텐츠 형식에 저장합니다. 여기에는 보고서 스냅샷 만들기도 포함됩니다. 따라서 문서 라이브러리에 대한 버전 관리를 사용하는 경우 새 보고서 기록 스냅샷이 만들어질 때 보고서 버전이 업데이트되는 것을 볼 수 있습니다. 이것은 스냅샷 업데이트로 인해 파생되는 작업입니다. 스냅샷이 업데이트될 때 보고서의 LastExecution 속성이 변경되므로 보고서 버전이 변경되는 것입니다.  
   
 -   제한 시간 값을 지정하여 시스템 리소스 사용 방식에 대해 제한을 설정할 수 있습니다.  
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드|  
   
  **항목 내용**  
   
@@ -111,7 +111,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
- [보고서 캐시&#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
- [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
+ [보고서 &#40; 캐싱 Ssrs&#41;](../../reporting-services/report-server/caching-reports-ssrs.md)   
+ [보고서 및 공유 데이터 집합 처리 &#40;에 대 한 제한 시간 값 설정 Ssrs&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)  
   
   

@@ -22,11 +22,11 @@ caps.latest.revision: 31
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 08ab050564e74a18d8231701f2355c042efc8685
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-model-query-designer-user-interface"></a>보고서 모델 쿼리 디자이너 사용자 인터페이스
@@ -60,7 +60,7 @@ ms.lasthandoff: 06/22/2017
 |단추|Description|  
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 보고서 서버 모델 데이터 원본에 대한 쿼리는 XML 형식의 SMQL(Semantic Model Query Language) 사양입니다.|  
-|**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)를 참조하세요.|  
+|**가져오기**|파일 시스템의 보고서 정의 파일(.rdl)에서 기존 쿼리를 가져옵니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.|  
 |![작업을 실행 취소](../../reporting-services/report-data/media/rsqdicon-undo.gif "동작 실행 취소")|마지막 동작 실행을 취소합니다.|  
 |![작업을 다시 실행](../../reporting-services/report-data/media/rsqdicon-redo.gif "작업을 다시 실행")|마지막 동작을 다시 실행합니다.|  
 |![쿼리 실행](../../reporting-services/report-data/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 결과 창에 결과 행을 표시합니다.|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)   
  [외부 데이터 원본의 데이터 추가&#40;SSRS&#41;](../../reporting-services/report-data/add-data-from-external-data-sources-ssrs.md)   
- [보고서 모델 연결&#40;SSRS&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
+ [보고서 모델 연결 &#40; Ssrs&#41;](../../reporting-services/report-data/report-model-connection-ssrs.md)   
  [RSReportDesigner 구성 파일](../../reporting-services/report-server/rsreportdesigner-configuration-file.md)  
   
   

@@ -21,11 +21,11 @@ caps.latest.revision: 36
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 388c564367a3eaeb3f7e0f58f07997079322040d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Reporting Services 구독 모니터링
@@ -58,7 +58,7 @@ ms.lasthandoff: 06/22/2017
 |\<*번호*> 처리|일정 예약 및 배달 프로세서에서 성공적으로 배달했거나 더 이상 배달하지 않는 알림의 수입니다. 데이터 기반 배달이 완료되면 처리된 알림 수가 생성된 알림의 총 수와 같아야 합니다.|  
 |\<*번호*> 총|구독의 마지막 배달에 대해 생성된 알림의 총 수입니다.|  
 |\<*번호*> 오류|일정 예약 및 배달 프로세서에서 배달하지 못했거나 더 이상 배달하지 않는 알림의 수입니다.|  
-|메일 전송 실패: 서버에 연결하지 못해 전송하지 못했습니다.|보고서 서버가 메일 서버에 연결하지 못했음을 나타냅니다. 이 메시지는 전자 메일 배달 확장 프로그램에서 제공합니다.|  
+|메일 전송 실패: 서버에 연결하지 못해 전송하지 못했습니다.|보고서 서버가 메일 서버에 연결하지 못했음을 나타냅니다. 이 메시지는 전자 메일 배달 확장 프로그램에서 제공합니다. |  
 |파일 \< *filename*>에 기록 된 \<경로 >.|파일 공유 위치에 성공적으로 배달했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |파일에 쓰는 동안 알 수 없는 오류가 발생했습니다.|파일 공유 위치에 배달하지 못했음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
 |대상 폴더에 연결 하지 못했습니다 \<경로 >. 대상 폴더가 있거나 파일이 공유되어 있는지 확인하십시오.|지정한 폴더를 찾을 수 없음을 나타냅니다. 이 메시지는 파일 공유 배달 확장 프로그램에서 제공합니다.|  
@@ -126,6 +126,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [기존_기본 모드 보고서 서버 구독 만들기 및 관리](http://msdn.microsoft.com/en-us/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
+ [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

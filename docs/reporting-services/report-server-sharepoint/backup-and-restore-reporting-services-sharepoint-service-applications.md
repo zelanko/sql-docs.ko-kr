@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: a4f320a1e806dce3411137abc74f2fe07bab7217
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 ###  <a name="bkmk_Restrictions"></a> 제한 사항  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램은 SharePoint 백업 및 복원 기능을 사용하여 부분적으로 백업 및 복원할 수 있습니다. **추가 단계를 수행해야 하며** 단계는 이 항목에 설명되어 있습니다. 현재는 백업 프로세스를 진행해도 **데이터베이스에 대한 Windows 인증 또는 UEA(무인 실행 계정)를 위한 암호화 키 및 자격 증명이 백업되지** 않습니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]서비스 응용 프로그램 부분적으로 백업 및 복원할 수는 SharePoint를 사용 하 여 백업 및 복원 기능입니다. **추가 단계를 수행해야 하며** 단계는 이 항목에 설명되어 있습니다. 현재는 백업 프로세스를 진행해도 **데이터베이스에 대한 Windows 인증 또는 UEA(무인 실행 계정)를 위한 암호화 키 및 자격 증명이 백업되지** 않습니다 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 ###  <a name="bkmk_recommendations"></a> 권장 사항  
   

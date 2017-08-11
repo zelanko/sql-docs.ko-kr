@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8c253794b7b884a3dd7835409e256245ae0dc5a2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="chart-legend---change-item-text-report-builder"></a>차트 범례-변경 항목 텍스트 (보고서 작성기)
@@ -59,8 +59,8 @@ ms.lasthandoff: 06/22/2017
 2.  **범례** 를 클릭하고 **사용자 지정 범례 텍스트** 상자에서 범례 레이블을 입력합니다. 입력한 텍스트로 계열이 업데이트됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트의 범례 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
- [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [차트에서 범례 항목 숨기기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
+ [차트 &#40;의 범례 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-legend-formatting-report-builder.md)   
+ [차트 &#40;에서 계열 색 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [차트 &#40;에서 범례 항목 숨기기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-legend-hide-items-report-builder.md)  
   
   

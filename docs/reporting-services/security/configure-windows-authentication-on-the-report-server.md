@@ -18,11 +18,11 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b59cdb7f5087ed7cb02300758f593ea952be3778
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>보고서 서버의 Windows 인증 구성
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
     > [!IMPORTANT]  
     >  **RSWindowsNegotiate** 를 사용할 경우 보고서 서버 서비스가 도메인 사용자 계정으로 실행되도록 구성하고 해당 계정의 SPN(서비스 사용자 이름)을 등록하지 않으면 Kerberos 인증 오류가 발생합니다. 자세한 내용은 이 항목의 [보고서 서버에 연결할 때 Kerberos 인증 오류 해결](#proxyfirewallRSWindowsNegotiate) 을 참조하십시오.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 에는 Windows 인증을 구성해야 합니다. 보고서 서버 웹 서비스에 대 한 Web.config 파일에 포함 기본적으로는 \<인증 모드 = "Windows" > 설정 합니다. 변경 하는 경우 \<인증 모드 = "Forms" >에 대 한 Windows 인증 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 실패 합니다.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Windows 인증을 위해 구성 되어야 합니다. 보고서 서버 웹 서비스에 대 한 Web.config 파일에 포함 기본적으로는 \<인증 모드 = "Windows" > 설정 합니다. 변경 하는 경우 \<인증 모드 = "Forms" >에 대 한 Windows 인증 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 실패 합니다.  
   
 -   Web.config 파일에 보고서 서버 웹 서비스 있어야 \<identity impersonate = "true" / >입니다.  
   
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
  다음은 기본 모드 보고서 서버에 대한 지침입니다. 보고서 서버가 SharePoint 통합 모드로 배포된 경우 Windows 통합 보안을 지정하는 기본 인증 설정을 사용해야 합니다. 보고서 서버는 기본 Windows 인증 확장 프로그램의 내부 기능을 사용하여 SharePoint 통합 모드의 보고서 서버를 지원합니다.  
   
 ## <a name="extended-protection-for-authentication"></a>인증에 대한 확장된 보호  
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터는 인증에 대한 확장된 보호가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 채널 바인딩 및 서비스 바인딩을 사용해 인증 보호를 향상시킬 수 있도록 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능은 확장된 보호를 지원하는 운영 체제에서 사용해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성은 RSReportServer.config 파일의 설정에 의해 결정됩니다. 이 파일은 WMI API를 사용하거나 파일을 편집하여 업데이트할 수 있습니다. 자세한 내용은 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)을(를) 참조하세요.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]부터는 인증에 대한 확장된 보호가 지원됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능은 채널 바인딩 및 서비스 바인딩을 사용해 인증 보호를 향상시킬 수 있도록 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기능은 확장된 보호를 지원하는 운영 체제에서 사용해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]확장 된 보호에 대 한 구성 설정은 RSReportServer.config 파일에 의해 결정 됩니다. 이 파일은 WMI API를 사용하거나 파일을 편집하여 업데이트할 수 있습니다. 자세한 내용은 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)을(를) 참조하세요.  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>Windows 통합 보안을 사용하도록 보고서 서버를 구성하려면  
   
@@ -131,7 +131,7 @@ ms.lasthandoff: 06/22/2017
   
  Kerberos 로깅을 사용하는 경우 오류를 감지할 수 있습니다. 자격 증명을 요청하는 메시지가 여러 번 표시된 다음 빈 브라우저 창이 표시되는 것도 오류의 다른 증상입니다.  
   
- 구성 파일에서 <**RSWindowsNegotiate** />를 제거하고 연결을 다시 시도하여 Kerberos 인증 오류가 발생하는 것인지 확인할 수 있습니다.  
+ 제거 하 여 Kerberos 인증 오류를 발생 하는 있는지 확인할 수 있습니다 < **RSWindowsNegotiate** / >에서 구성 파일 및 연결을 다시 시도 합니다.  
   
  문제를 확인한 후에는 다음과 같은 방법으로 해결할 수 있습니다.  
   
@@ -213,11 +213,11 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 인증](../../reporting-services/security/authentication-with-the-report-server.md)   
- [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
- [RsReportServer.config 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
- [보고서 서버의 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
+ [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)   
+ [RSReportServer 구성 파일](../../reporting-services/report-server/rsreportserver-config-configuration-file.md)   
+ [보고서 서버에서 기본 인증 구성](../../reporting-services/security/configure-basic-authentication-on-the-report-server.md)   
  [보고서 서버에서 사용자 지정 또는 폼 인증 구성](../../reporting-services/security/configure-custom-or-forms-authentication-on-the-report-server.md)   
- [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
+ [Reporting Services 인증에 대 한 확장 된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
 

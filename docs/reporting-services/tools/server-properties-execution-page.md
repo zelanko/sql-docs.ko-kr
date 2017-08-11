@@ -17,11 +17,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 933f3287d8e02df8aeadf93bbd7ce39f20aff268
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="server-properties-execution-page"></a>서버 속성(실행 페이지)
@@ -37,10 +37,10 @@ ms.lasthandoff: 06/22/2017
  보고서 실행에 대한 시간 제약을 설정합니다. 시간은 보고서 요청 시점부터 계산됩니다. 보고서가 완전히 처리되기 전에 제한 시간에 도달하면 보고서 서버에서는 해당 프로세스 및 외부 데이터 원본에 대한 in-process 쿼리를 취소합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
+ [보고서 서버 속성 &#40; 설정 합니다. Management studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
- [보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정&#40;SSRS&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [보고서 및 공유 데이터 집합 처리 &#40;에 대 한 제한 시간 값 설정 Ssrs&#41;](../../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md)   
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   

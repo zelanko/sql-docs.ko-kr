@@ -18,11 +18,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d0650fb86cd929d67170f54adec1424c36467dcc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="update-a-resource-report-manager"></a>리소스 업데이트(보고서 관리자)
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [파일 업로드 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [업로드 파일 페이지 &#40; 보고서 관리자 &#41;](http://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
  [폴더에 파일 업로드](../../reporting-services/report-server/upload-files-to-a-folder.md)   
  [보고서 관리자 F1 도움말](http://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
   

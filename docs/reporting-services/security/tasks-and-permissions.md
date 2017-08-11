@@ -23,11 +23,11 @@ caps.latest.revision: 40
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c1e2822182d644b90aa419986f75a6fdc6fd3296
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tasks-and-permissions"></a>태스크 및 권한
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
   
  태스크는 역할의 일부이고 해당 역할이 역할 할당에 포함되어 있는 경우에만 수행할 수 있습니다. 따라서 모델 보기 태스크가 역할에 포함되어 있지 않거나 해당 역할이 역할 할당에 포함되어 있지 않은 경우 사용자는 보고서 모델을 볼 수 없습니다. 다음 다이어그램에서는 사용 권한이 태스크에 결합되는 방법과 특정 역할 할당에 사용할 수 있는 역할에 태스크가 결합되는 방법을 보여 줍니다.  
   
- ![사용 권한 및 태스크 다이어그램](../../reporting-services/security/media/report-securityobjects.gif "Permissions and task diagram")  
+ ![사용 권한 및 태스크 다이어그램](../../reporting-services/security/media/report-securityobjects.gif "사용 권한 및 태스크 다이어그램")  
 사용 권한 및 태스크 다이어그램  
   
 ## <a name="system-and-item-level-tasks"></a>시스템 및 항목 수준 태스크  
@@ -50,7 +50,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [역할 정의](../../reporting-services/security/role-definitions.md)   
- [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
- [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [미리 정의 된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)   
+ [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

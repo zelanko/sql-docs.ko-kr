@@ -15,11 +15,11 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3674bb697d86ac79906aa4ee5172ad24030a22fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>인쇄 컨트롤을 사용하여 브라우저에서 보고서 인쇄(보고서 작성기 및 SSRS)
@@ -42,10 +42,10 @@ ms.lasthandoff: 06/22/2017
  보고서를 미리 보려면 **인쇄** 대화 상자에서 **미리 보기** 단추를 클릭합니다. 미리 보기를 클릭하면 보고서의 첫 페이지가 별도의 미리 보기 창에서 열립니다. 보고서 서버에서 보고서가 렌더링됨에 따라 추가 페이지도 표시됩니다. 미리 보는 보고서는 EMF 형식으로 렌더링됩니다. 이전 페이지나 다음 페이지로 이동할 수 있으며 마지막 페이지에서는 **다음** 단추가 비활성화됩니다.  
   
 ### <a name="adjusting-print-margins"></a>인쇄 여백 조정  
- 보고서를 인쇄하기 전에 렌더링된 EMF 보고서에서 인쇄 여백을 수정할 수 있습니다. 이렇게 하려면 **인쇄** 대화 상자에서 **미리 보기** 단추를 클릭합니다. 미리 보기 페이지의 위쪽에서 **여백** 단추를 클릭합니다. 그러면 여백 대화 상자가 표시됩니다. 원하는 대로 위쪽, 아래쪽, 오른쪽 및 왼쪽 여백을 구성합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 대화 상자가 닫히고 미리 보기 및 인쇄 렌더링 설정이 저장됩니다.  
+ 보고서를 인쇄하기 전에 렌더링된 EMF 보고서에서 인쇄 여백을 수정할 수 있습니다. 이렇게 하려면 **인쇄** 대화 상자에서 **미리 보기** 단추를 클릭합니다. 미리 보기 페이지의 위쪽에서 **여백** 단추를 클릭합니다. 그러면 여백 대화 상자가 표시됩니다. 원하는 대로 위쪽, 아래쪽, 오른쪽 및 왼쪽 여백을 구성합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]대화 상자가 닫히고 렌더링 미리 보기 및 인쇄에 대 한 설정이 저장 됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
- [보고서 인쇄&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
+ [보고서 인쇄 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
+ [보고서 &#40; 인쇄 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
   
   

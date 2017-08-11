@@ -20,11 +20,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ee30a42b69f4bd3079fe6345df619abde413e588
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>입력란(보고서 작성기 및 SSRS)
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
   
  자유 형식 레이아웃으로 반복 텍스트를 표시하려면 목록 데이터 영역을 만든 다음 입력란을 배치합니다. 여러 값에 대해 이 형식을 반복하려면 목록을 사용합니다. 예를 들어 고객 송장 양식은 각 고객에 대해 한 번씩 반복됩니다. [목록을 사용하여 송장 및 양식 만들기](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)에 대해 자세히 알아봅니다.  
   
- 입력란 레이아웃 및 마지막 입력란 아래 공백을 제어하려면 사각형 컨테이너를 사용합니다. 자세한 내용은 [사각형 및 선&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)을 참조하세요.  
+ 입력란 레이아웃 및 마지막 입력란 아래 공백을 제어하려면 사각형 컨테이너를 사용합니다. 자세한 내용은 참조 [사각형 및 선 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md).  
   
  입력란의 식은 리터럴 텍스트를 포함하거나, 데이터베이스의 필드를 가리키거나, 데이터를 계산할 수 있습니다. 모든 식은 자리 표시자 텍스트로 표시되므로 숫자, 색 및 기타 모양 속성 서식을 지정할 수 있습니다. 또한 같은 입력란에서 자리 표시자와 리터럴 텍스트를 조합하여 사용할 수도 있습니다.  
   
@@ -71,6 +71,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [숫자 및 날짜 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
   
   

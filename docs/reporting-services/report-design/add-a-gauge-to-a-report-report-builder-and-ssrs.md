@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: de434ef80732d2a845fb41c972f0118fee357d14
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>보고서에 계기 추가(보고서 작성기 및 SSRS)
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
     > [!NOTE]  
     >  차트와 달리 계기에는 선형과 방사형이라는 두 가지 유형만 있습니다. **계기 유형 선택** 대화 상자의 사용 가능한 계기는 이 두 유형의 계기에 대한 템플릿입니다. 따라서 보고서에 계기를 추가한 후에는 계기 유형을 변경할 수 없습니다. 계기 유형을 변경하려면 계기를 삭제한 다음 다시 추가해야 합니다.  
   
-     보고서에 데이터 원본 및 데이터 집합이 없으면 **데이터 원본 속성** 대화 상자가 열려 데이터 원본과 데이터 집합을 만드는 단계를 안내합니다. 자세한 내용은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
+     보고서에 데이터 원본 및 데이터 집합이 없으면 **데이터 원본 속성** 대화 상자가 열려 데이터 원본과 데이터 집합을 만드는 단계를 안내합니다. 자세한 내용은 참조 하십시오 [추가 하 고 데이터 연결 &#40; 확인 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
      보고서에 데이터 원본은 있지만 데이터 집합이 없는 경우에는 **데이터 집합 속성** 대화 상자가 열려 데이터 집합을 만드는 단계를 안내합니다. 자세한 내용은 [공유 데이터 집합 또는 포함된 데이터 집합 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -48,6 +48,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)   
- [계기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
+ [계기 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
   

@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 11e5762b794060577704a31cf59836839b464d76
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="power-pivot-connection-type-ssrs"></a>파워 피벗 연결 형식(SSRS)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 데이터는 고도로 압축되지만 보고서용으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 검색되는 데이터는 압축되지 않습니다. 쿼리 디자이너를 사용하여 보고서에 필요한 데이터만 포함되도록 제한할 필터 및 매개 변수를 지정합니다.  
   
- Analysis Services 큐브에 연결할 때와는 달리, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모델에는 계층이 없습니다. 통합 문서의 관련 슬라이서에 유사한 기능을 제공하려면 보고서에서 연계된 매개 변수를 만들어야 합니다. 자세한 내용은 [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)를 참조하세요.  
+ Analysis Services 큐브에 연결할 때와는 달리, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모델에는 계층이 없습니다. 통합 문서의 관련 슬라이서에 유사한 기능을 제공하려면 보고서에서 연계된 매개 변수를 만들어야 합니다. 자세한 내용은 [보고서에 연계 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)에서 만드는 모바일 보고서에서 보고서 매개 변수를 사용할 수 있습니다.  
   
  경우에 따라서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모델의 기본 데이터 값을 사용할 수 있도록 식을 조정해야 할 수도 있습니다. 데이터를 올바른 데이터 형식으로 변환하거나 집계 함수를 추가 또는 제거하도록 식을 수정해야 할 수도 있습니다. 예를 들어 데이터 형식을 String에서 Integer로 변환하려면 `=CInt`를 사용합니다. 보고서를 게시하기 전에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모델의 데이터에서 필요한 값이 보고서에 표시되는지 항상 확인하세요.  
   
@@ -69,6 +69,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Analysis Services MDX 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/7e288eee-2d37-485e-a6a0-dbba5e041e26)   
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
   
   

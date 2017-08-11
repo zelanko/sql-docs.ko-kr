@@ -20,11 +20,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b64cfa425784e7e495b510f960a50109175537b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>보고서 및 공유 데이터 집합 처리에 대한 제한 시간 값 설정(SSRS)
@@ -60,9 +60,9 @@ ms.lasthandoff: 06/22/2017
 >  RSReportServer.config 파일에서 **RunningRequestsDbCycle** 을 설정하여 실행 작업의 평가 빈도를 변경할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
+ [처리 옵션 &#40; 설정 합니다. 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Reporting Services 보고서 서버 &#40; 기본 모드 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [실행 중인 프로세스 관리](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

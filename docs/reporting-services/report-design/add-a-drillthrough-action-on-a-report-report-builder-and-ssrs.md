@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f1e5c7c678cb3c38d9e0225ce47bc2dca91ab326
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>보고서에 드릴스루 동작 추가(보고서 작성기 및 SSRS)
@@ -65,8 +65,8 @@ ms.lasthandoff: 06/22/2017
 7.  링크를 테스트하려면 보고서를 실행하고 이 링크를 설정한 보고서 항목을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [동작 속성 대화 상자&#40;보고서 작성기 및 SSRS&#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
- [차트의 데이터 요소에 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [계열에 도구 설명 표시&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
+ [동작 속성 대화 상자 &#40; 보고서 작성기 및 SSRS &#41;](http://msdn.microsoft.com/library/2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9)   
+ [차트 &#40;의 데이터 요소에 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [일련 &#40;에 도구 설명 표시 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

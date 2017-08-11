@@ -19,11 +19,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 440fe0b9ff8468546cf7e8cfadf2533a3bdf82d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="open-and-close-a-report-report-manager"></a>보고서 열기 및 닫기(보고서 관리자)
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
      보고서를 닫아도 브라우저 캐시에서 보고서가 제거되지 않습니다. 보고서와의 연결을 끊으려면 브라우저를 닫아야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [보고서 및 기타 항목 검색&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [보고서 및 기타 항목 &#40;에 대 한 검색 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [내용 페이지&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [보고서 서버 콘텐츠 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
+ [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [보고서 서버 내용 관리 &#40; SSRS 기본 모드 &#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

@@ -18,11 +18,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 09e1655e7945a459cf9d606d24cf7479ee4fc568
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="specify-device-information-settings-in-a-url"></a>URL에 장치 정보 설정 지정
@@ -38,7 +38,7 @@ Command=Render&rs:Format=IMAGE&rc:OutputFormat=JPEG
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [URL 액세스&#40;SSRS&#41;](../reporting-services/url-access-ssrs.md)   
+ [URL 액세스 &#40; Ssrs&#41;](../reporting-services/url-access-ssrs.md)   
  [URL 액세스 매개 변수 참조](../reporting-services/url-access-parameter-reference.md)  
   
   

@@ -21,11 +21,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cca3d552a0e1ffb7fdfc09e98a334f8f4d196d84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---initialize-a-report-server"></a>SSRS 암호화 키-보고서 서버를 초기화 합니다.
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 5.  보고서 서버 서비스는 보고서 서버 데이터베이스에 다시 연결한 후 3단계에서 저장한 공개 키 및 설치 식별자 값에 대칭 키를 추가합니다. 보고서 서버 서비스는 대칭 키를 저장하기 전에 해당 공개 키를 사용하여 대칭 키를 암호화합니다. 대칭 키가 저장되면 보고서 서버는 초기화되어 사용 가능한 상태가 된 것입니다.  
   
 ## <a name="initializing-a-report-server-for-scale-out-deployment"></a>확장 배포를 위해 보고서 서버 초기화  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 여러 보고서 서버 인스턴스 간에 단일 보고서 서버 데이터베이스를 공유하는 확장 배포 모델을 지원합니다. 확장 배포에 참여하기 위해 보고서 서버는 대칭 키 복사본을 만들어 공유 데이터베이스에 저장해야 합니다. 해당 데이터베이스를 사용하는 서버에서는 단일 대칭 키를 사용해도 각 보고서 서버는 키의 자체 복사본을 보유합니다. 각 복사본은 공개 키를 사용하여 해당 소유자로 고유하게 암호화되므로 서로 다릅니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]여러 보고서 서버 인스턴스 간에 단일 보고서 서버 데이터베이스를 공유 하는 확장 배포 모델을 지원 합니다. 확장 배포에 참여하기 위해 보고서 서버는 대칭 키 복사본을 만들어 공유 데이터베이스에 저장해야 합니다. 해당 데이터베이스를 사용하는 서버에서는 단일 대칭 키를 사용해도 각 보고서 서버는 키의 자체 복사본을 보유합니다. 각 복사본은 공개 키를 사용하여 해당 소유자로 고유하게 암호화되므로 서로 다릅니다.  
   
  확장 배포를 위해 보고서 서버를 초기화하는 처음 몇 단계는 단일 서버 및 데이터베이스 조합에 대한 초기화를 설명하는 처음 3단계와 동일합니다.  
   

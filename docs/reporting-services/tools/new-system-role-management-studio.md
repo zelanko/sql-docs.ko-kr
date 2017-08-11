@@ -17,11 +17,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f4917fea7fbaa0f652287a08e0a3a5727feaad9e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="new-system-role-management-studio"></a>새 시스템 역할(Management Studio)
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/03/2017
  작업에서 지원하는 작업 또는 사용 권한을 열거하는 태스크에 대한 설명을 표시합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [역할 정의](../../reporting-services/security/role-definitions.md)  
   
   

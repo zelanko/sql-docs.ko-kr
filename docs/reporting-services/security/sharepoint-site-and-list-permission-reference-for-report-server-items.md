@@ -20,11 +20,11 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ca45a9fc4c37798983c4cc8956fbb27828a5ff01
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 ||  
 |-|  
-|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 &#124; SharePoint 2010 및 SharePoint 2013.|  
+|[!INCLUDE[applies](../../includes/applies-md.md)]<br /><br /> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint 모드 &#124; SharePoint 2010 및 SharePoint 2013.|  
   
 ## <a name="list-permissions"></a>목록 사용 권한  
  보고서 서버 항목이 포함된 라이브러리에 설정한 사용 권한에 따라 사용자가 이러한 항목에 액세스하는 방법이 결정됩니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
 |열기|웹 사이트, 목록 또는 폴더를 열어 해당 컨테이너 내부 항목에 액세스합니다.|X|X|X|일정 및 항목 속성을 읽습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting Services의 역할 및 태스크와 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Reporting Services to SharePoint Groups and Permissions의 역할 및 태스크와 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
+ [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

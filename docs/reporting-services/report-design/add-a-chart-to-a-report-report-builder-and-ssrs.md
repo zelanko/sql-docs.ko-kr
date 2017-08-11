@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a2d2ad7ae37e0f787709fb79afbf80ef3e584b5e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-chart-to-a-report-report-builder-and-ssrs"></a>보고서에 차트 추가(보고서 작성기 및 SSRS)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="to-add-a-chart-to-a-report"></a>보고서에 차트를 추가하려면  
   
-1.  보고서를 만들고 데이터 집합을 정의합니다. 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)을 참조하세요.  
+1.  보고서를 만들고 데이터 집합을 정의합니다. 자세한 내용은 참조 [보고서 데이터 집합 &#40; Ssrs&#41; ](../../reporting-services/report-data/report-datasets-ssrs.md).  
   
 2.  **삽입** 탭에서 **차트**를 클릭한 다음 **차트 삽입**을 클릭합니다.  
   
@@ -69,15 +69,15 @@ ms.lasthandoff: 06/22/2017
   
 10. **실행** 탭에서 **디자인** 을 클릭하여 보고서에 대한 작업을 진행합니다.  
   
- 가로 막대형 차트 및 세로 막대형 차트와 같이 축이 있는 차트에서 범주 축에는 일부 범주 레이블이 표시되지 않을 수 있습니다. 축 레이블을 변경하는 방법에 대한 자세한 내용은 [축 간격 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md)을 참조하세요.  
+ 가로 막대형 차트 및 세로 막대형 차트와 같이 축이 있는 차트에서 범주 축에는 일부 범주 레이블이 표시되지 않을 수 있습니다. 축 레이블을 변경 하는 방법에 대 한 자세한 내용은 참조 하세요. [축 간격 &#40;를 지정 합니다. 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 종류&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
- [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [자습서: 보고서에 가로 막대형 차트 추가(보고서 작성기)](http://go.microsoft.com/fwlink/?LinkId=198052)   
- [자습서: 보고서에 가로 막대형 차트 추가(보고서 디자이너)](http://go.microsoft.com/fwlink/?LinkId=198042)   
- [자습서: 보고서에 원형 차트 추가(보고서 작성기)](http://go.microsoft.com/fwlink/?LinkId=198051)   
- [자습서: 보고서에 원형 차트 추가(보고서 디자이너)](http://go.microsoft.com/fwlink/?LinkId=198041)  
+ [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트 종류 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/chart-types-report-builder-and-ssrs.md)   
+ [빈 데이터 요소 및 Null 데이터 요소에 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [자습서: 보고서 (보고서 작성기)에 가로 막대형 차트 추가](http://go.microsoft.com/fwlink/?LinkId=198052)   
+ [자습서: 보고서 (보고서 디자이너)에 가로 막대형 차트 추가](http://go.microsoft.com/fwlink/?LinkId=198042)   
+ [자습서: 보고서 (보고서 작성기)에 원형 차트 추가](http://go.microsoft.com/fwlink/?LinkId=198051)   
+ [자습서: 보고서 (보고서 디자이너)에 원형 차트 추가](http://go.microsoft.com/fwlink/?LinkId=198041)  
   
   

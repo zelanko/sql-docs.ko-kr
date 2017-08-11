@@ -19,11 +19,11 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 18312b5d8222cc79b07eb3a33eaf3fb60454b861
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>Reporting Services의 SharePoint 라이브러리 배달
@@ -90,9 +90,9 @@ ms.lasthandoff: 06/22/2017
  자동 복사 기능을 사용하여 파일의 최신 버전을 자동으로 여러 위치에 복사하는 경우 **덮어쓰기** 가 설정되어 있으면 파일이 복사됩니다. **자동 증가** 또는 **없음**을 사용하는 경우에는 배달이 실패하고 **rsDeliveryError** 오류가 발생합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [SharePoint 모드 보고서 서버 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
+ [SharePoint 모드 보고서 서버에 대 한 구독 만들기 및 관리](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [자격 증명 및 보고서 데이터 원본에 대 한 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
 

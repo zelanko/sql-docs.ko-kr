@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2a73370c0ae9f3d405a185d53754aa0620d593e3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Analysis Services 데이터베이스에 대한 확장 필드 속성(SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 06/22/2017
   
  확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통되는 속성으로, 특정 필드 속성 이름에 매핑되고 기본 제공 **Fields** 컬렉션을 통해 이름으로 액세스될 수 있습니다. 사용자 지정 속성은 각 데이터 공급자별로 정의되며 확장 속성 이름을 문자열로 사용하는 구문에 의해서만 기본 제공 **Fields** 컬렉션을 통해 액세스될 수 있습니다.  
   
- 그래픽 모드에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 디자이너를 사용하여 쿼리를 정의하면 미리 정의된 셀 속성 및 차원 속성 집합이 자동으로 MDX 쿼리에 추가됩니다. 보고서의 MDX 쿼리에 구체적으로 나열된 확장 속성만 사용할 수 있습니다. 보고서에 따라 기본 MDX 명령 텍스트를 수정하여 큐브에 정의된 다른 차원 속성이나 사용자 지정 속성을 포함할 수도 있습니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본에서 사용할 수 있는 확장 필드에 대한 자세한 내용은 [속성 값 만들기 및 사용&#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)을 참조하세요.  
+ 그래픽 모드에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리 디자이너를 사용하여 쿼리를 정의하면 미리 정의된 셀 속성 및 차원 속성 집합이 자동으로 MDX 쿼리에 추가됩니다. 보고서의 MDX 쿼리에 구체적으로 나열된 확장 속성만 사용할 수 있습니다. 보고서에 따라 기본 MDX 명령 텍스트를 수정하여 큐브에 정의된 다른 차원 속성이나 사용자 지정 속성을 포함할 수도 있습니다. 사용할 수 있는 확장된 필드에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 원본 참조 [만들기 및 사용 하 여 속성 값 &#40; Mdx&#41; ](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>보고서에서 필드 속성 사용  
  확장 필드 속성에는 미리 정의된 속성과 데이터 공급자 관련 속성이 포함됩니다. 필드 속성은 데이터 집합에 대해 작성된 쿼리에 포함되어 있어도 **보고서 데이터** 창의 필드 목록에 나타나지 않습니다. 따라서 필드 속성을 보고서 디자인 화면으로 끌 수 없습니다. 대신 필드를 보고서로 끈 다음 필드의 **Value** 속성을 사용하려는 속성으로 변경해야 합니다. 예를 들어 큐브의 셀 데이터 형식이 이미 지정되어 있는 경우 `=Fields!FieldName.FormattedValue`식을 통해 FormattedValue 필드 속성을 사용할 수 있습니다.  
@@ -155,7 +155,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>관련 항목:  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
+ [식 &#40;의 기본 제공 컬렉션 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [데이터 집합 필드 컬렉션 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.fileconnectionmanager.f1
 helpviewer_keywords:
 - folders [Integration Services], connections
 - files [Integration Services], connections
@@ -22,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9737d90041d9916bf4a1fae892391d2255cc55ab
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 25e93783e4d7d7b6cdaeab98937dee1da2ebef0b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="file-connection-manager"></a>파일 연결 관리자
@@ -63,6 +65,33 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용은 [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)를 참조하세요.  
   
- 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)값을 나열합니다.  
+ 연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
+  
+## <a name="file-connection-manager-editor"></a>파일 연결 관리자 편집기
+  **파일 연결 관리자 편집기** 대화 상자를 사용하여 파일이나 폴더에 연결할 때 사용할 속성을 지정할 수 있습니다.  
+  
+> [!NOTE]  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 속성 창에 식을 지정하여 파일 연결 관리자에 대한 ConnectionString 속성을 설정할 수 있습니다. 그러나 식을 사용하여 파일 또는 폴더를 지정할 때 유효성 검사 오류가 발생하지 않도록 하려면 **파일 연결 관리자 편집기**에서 **파일/폴더**에 대해 파일 또는 폴더 경로를 추가합니다.  
+  
+ 파일 연결 관리자에 대한 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **사용 유형**  
+ **파일 연결 관리자** 가 기존 파일 또는 폴더에 연결하는지 또는 새 파일 또는 폴더에 연결하는지 여부를 지정합니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|파일 만들기|런타임에 새 파일을 만듭니다.|  
+|기존 파일|기존 파일을 사용합니다.|  
+|폴더 만들기|런타임에 새 폴더를 만듭니다.|  
+|기존 폴더|기존 폴더를 사용합니다.|  
+  
+ **파일/폴더**  
+ **파일**을 선택한 경우 사용할 파일을 지정합니다.  
+  
+ **폴더**를 선택한 경우 사용할 폴더를 지정합니다.  
+  
+ **찾아보기**  
+ **파일 선택** 이나 **폴더 찾아보기** 대화 상자를 사용하여 파일이나 폴더를 선택합니다.  
   
   

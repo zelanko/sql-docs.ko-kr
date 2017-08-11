@@ -19,11 +19,11 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 51cf021c47749367bba6fcc08081dfeed688298f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>SharePoint 라이브러리에 문서 업로드(SharePoint 모드의 Reporting Services)
@@ -52,9 +52,9 @@ ms.lasthandoff: 06/22/2017
   
  사용자가 데이터를 필터링할 수 있도록 보고서에 매개 변수를 포함할 수 있으며 이러한 매개 변수에 특정 값을 지정하거나 사용자에게 매개 변수가 표시되는 방식을 변경할 수 있습니다. 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [SharePoint 라이브러리에 보고서 게시](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
- [SharePoint 라이브러리에 공유 데이터 원본 게시](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+## <a name="see-also"></a>관련 항목:  
+ [SharePoint 라이브러리에 보고서를 게시 합니다.](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
+ [SharePoint 라이브러리에 공유 데이터 원본을 게시합니다](../../reporting-services/reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

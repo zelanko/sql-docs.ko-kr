@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfa69eca6201980d4449c28a8a7018846fd4e4a0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>기본 제공 컬렉션-ReportItems 컬렉션 참조 (보고서 작성기)
@@ -33,11 +33,11 @@ ms.lasthandoff: 06/22/2017
   
  예를 들어  
   
--   이 식을 입력란에 배치하면 `Textbox1`이라는 **ReportItem** 입력란의 값이 표시됩니다.  
+-   이 식을 입력란에 배치하면 **이라는** ReportItem `Textbox1`입력란의 값이 표시됩니다.  
   
      `=ReportItems!Textbox1.Value`  
   
--   이 식을 **ReportItem** 입력란 Color 속성에 배치하면 값이 > 0인 경우 텍스트가 검정색으로 표시되고 그렇지 않으면 빨간색으로 표시됩니다.  
+-   에 배치 된이 식은 한 **ReportItem** 텍스트 상자 색 속성 값이 > 0 검은색으로 텍스트를 표시, 그렇지 않으면, 값 빨간색으로 표시 됩니다.  
   
      `=IIF(Me.Value > 0,"Black","Red")`  
   
@@ -56,9 +56,9 @@ ms.lasthandoff: 06/22/2017
  예를 들어 부모 그룹에 있는 행의 입력란은 자식 그룹 행에 있는 입력란의 이름을 참조하는 식을 포함하면 안 됩니다. 이러한 식은 자식 행 입력란이 범위를 벗어나기 때문에 보고서의 값으로 확인되지 않습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [식 &#40;의 기본 제공 컬렉션 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

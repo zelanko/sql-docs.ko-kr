@@ -15,11 +15,11 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 03787380e498b82c160583cf1e8391bf643edf7c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tables-report-builder--and-ssrs"></a>테이블(보고서 작성기 및 SSRS)
@@ -71,7 +71,7 @@ ms.lasthandoff: 06/22/2017
  자세한 내용은 [그룹 또는 테이블릭스 데이터 영역에 합계 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
 ##  <a name="AddingRowGroups"></a> 테이블에 행 그룹 추가  
- 필드를 보고서 데이터 창에서 셀로 끌어 와서 정보 데이터를 표시하는 것처럼 그룹화 창으로 필드를 끌어 그룹을 추가할 수 있습니다. 테이블의 경우 필드를 행 그룹 창으로 끌어옵니다. 그룹을 추가하면 테이블에서 그룹 값을 표시할 행 그룹 영역의 새 열로 셀이 자동으로 추가됩니다. 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)을 참조하세요.  
+ 필드를 보고서 데이터 창에서 셀로 끌어 와서 정보 데이터를 표시하는 것처럼 그룹화 창으로 필드를 끌어 그룹을 추가할 수 있습니다. 테이블의 경우 필드를 행 그룹 창으로 끌어옵니다. 그룹을 추가하면 테이블에서 그룹 값을 표시할 행 그룹 영역의 새 열로 셀이 자동으로 추가됩니다. 영역에 대 한 자세한 내용은 참조 [테이블 릭 스 데이터 영역의 영역 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  다음 그림에서는 두 개의 중첩된 행 그룹을 포함하는 테이블을 디자인 뷰에서 보여 줍니다. Order 필드와 Date 필드를 차례로 행 그룹 창으로 끌어 오고 각 그룹을 기존 그룹의 부모로 삽입하여 행 그룹을 만듭니다. 이 그림에서는 날짜 기반의 부모 그룹과 주문 번호 기반의 자식 그룹 및 기본값으로 정의된 세부 정보 그룹을 보여 줍니다.  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 06/22/2017
   
  ![테이블 날짜별으로 그룹화 및 order](../../reporting-services/media/rs-basictablegroupspreview.png "테이블 날짜별으로 그룹화 및 정렬 한 다음")  
   
- 그룹화된 데이터를 표시하는 다른 방법은 각 값을 고유한 열로 표시하지 않고 그룹 계층 구조를 들여쓰기하여 그룹의 중첩 관계를 표시하는 것입니다. 이러한 서식 지정 스타일을 단계별 보고서라고 합니다. 그룹 정보를 단계별 보고서로 서식을 지정하는 방법에 대한 자세한 내용은 [단계별 보고서 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md)를 참조하세요.  
+ 그룹화된 데이터를 표시하는 다른 방법은 각 값을 고유한 열로 표시하지 않고 그룹 계층 구조를 들여쓰기하여 그룹의 중첩 관계를 표시하는 것입니다. 이러한 서식 지정 스타일을 단계별 보고서라고 합니다. 그룹 정보를 단계별된 보고서로 서식을 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [만들기 단계별 보고서 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/create-a-stepped-report-report-builder-and-ssrs.md).  
   
 ### <a name="adding-totals-to-row-groups"></a>행 그룹에 합계 추가  
  그룹에 대한 합계를 표시하려면 상황에 맞게 작동하는 **합계 추가** 명령을 사용합니다. 행 그룹에 대해 합계 추가 명령을 사용하면 그룹 외부에 행이 추가되어 그룹에 대해 합계가 한 번만 반복됩니다. 중첩된 그룹의 경우 자식 그룹에 대한 합계 행은 자식 그룹의 외부에 있는 동시에 부모 그룹의 내부에 있습니다. 이러한 경우 자식 그룹에 대한 합계 행의 배경색을 설정하여 정보 행과 구분해 주는 것이 좋습니다. 다른 배경색을 사용하여 테이블 머리글과 바닥글 행을 구분할 수 있습니다. 다음 그림에서는 주문 번호 기반의 그룹에 대해 추가된 합계 행이 있는 테이블을 보여 줍니다.  
@@ -118,10 +118,10 @@ ms.lasthandoff: 06/22/2017
   
  자세한 내용은 [항목에 확장 또는 축소 동작 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)   
+ [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b9200dd4152625e0dce4c0c77b10fa2f3ad196ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>네트워크 부하 분산 클러스터에서 보고서 서버 구성
@@ -40,7 +40,7 @@ ms.lasthandoff: 06/22/2017
   
 |단계|Description|자세한 정보|  
 |----------|-----------------|----------------------|  
-|1.|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 확장 배포를 위한 요구 사항을 확인합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [확장 배포 - Reporting Services 기본 모드&#40;구성 관리자&#41;](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)|  
+|1.|NLB 클러스터의 서버 노드에서 Reporting Services를 설치하기 전에 확장 배포를 위한 요구 사항을 확인합니다.|[확장 배포-Reporting Services 기본 모드 &#40; 구성 관리자 &#41; ](http://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|  
 |2|NLB 클러스터를 구성하고 제대로 작동하는지 확인합니다.<br /><br /> NLB 클러스터의 가상 서버 IP에 호스트 헤더 이름을 매핑합니다. 호스트 헤더 이름은 보고서 서버 URL에서 사용되며 IP 주소보다 기억하기 쉽고 입력하기도 편리합니다.|자세한 내용은 실행 중인 Windows 운영 체제 버전에 대한 Windows Server 제품 설명서를 참조하십시오.|  
 |3|Windows 레지스트리에 저장된 **BackConnectionHostNames** 목록에 호스트 헤더의 NetBIOS와 FQDN(정규화된 도메인 이름)을 추가합니다. **KB 896861** (http://support.microsoft.com/kb/896861)에 있는 [메서드 2: 호스트 이름 지정](http://support.microsoft.com/kb/896861) 의 단계를 사용하여 다음과 같이 적절하게 조정합니다. 즉, 이 KB 문서의**7단계** 에 설명된 것과 같이 "레지스트리 편집기를 끝낸 다음 IISAdmin 서비스를 다시 시작"하지 않고 컴퓨터를 다시 부팅하여 변경 내용이 적용되도록 합니다.<br /><br /> 예를 들어 경우 호스트 헤더 이름을 \<MyServer > 가상 이름인 "contoso"의 Windows 컴퓨터 이름에 대 한을 참조할 수 있습니다 FQDN 형식 "contoso.domain.com"입니다. **BackConnectionHostNames**의 목록에 호스트 헤더 이름(MyServer)과 FQDN 이름(contoso.domain.com)을 모두 추가해야 합니다.|이 단계는 서버 환경의 로컬 컴퓨터에 NTLM 인증이 사용되어 루프백 연결이 생성되는 경우에 필요합니다.<br /><br /> 이 경우 보고서 관리자와 보고서 서버 간의 요청이 401(권한 없음) 오류와 함께 실패하게 됩니다.|  
 |4|NLB 클러스터에 이미 속해 있는 노드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 파일만 모드로 설치하고 확장 배포를 위한 보고서 서버 인스턴스를 구성합니다.<br /><br /> 구성한 확장은 가상 서버 IP에 전송되는 요청에 응답하지 않을 수 있습니다. 가상 서버 IP를 사용하도록 확장을 구성하는 작업은 뷰 상태 유효성 검사를 구성한 후 그 다음 단계에서 수행됩니다.|[기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] 3.0 또는 [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007과 통합하거나 사용자 지정 웹 응용 프로그램에서 보고서를 호스팅하는 경우 **UrlRoot** 속성만 구성해야 할 수 있습니다. 이 경우 **UrlRoot** 속성을 SharePoint 사이트 또는 웹 응용 프로그램의 URL로 구성합니다. 이렇게 하면 보고 환경의 네트워크 트래픽이 보고서 서버나 NLB 클러스터가 아닌 보고서를 처리하는 응용 프로그램으로 전송됩니다.  
   
- **ReportServerUrl**은 수정하지 마십시오. 이 URL을 수정하면 내부 요청이 처리될 때마다 가상 서버를 통해 별도의 왕복이 발생하게 됩니다. 자세한 내용은 [구성 파일의 URL&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md)을 참조하세요. 구성 파일을 편집하는 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
+ **ReportServerUrl**은 수정하지 마십시오. 이 URL을 수정하면 내부 요청이 처리될 때마다 가상 서버를 통해 별도의 왕복이 발생하게 됩니다. 자세한 내용은 참조 [구성 파일 &#40;의 Url SSRS 구성 관리자 &#41; ](../../reporting-services/install-windows/urls-in-configuration-files-ssrs-configuration-manager.md). 구성 파일을 편집 하는 방법에 대 한 자세한 내용은 참조 [Reporting Services 구성 파일 수정 &#40; RSreportserver.config &#41; ](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
   
 1.  텍스트 편집기에서 RSReportServer.config를 엽니다.  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 06/22/2017
 #### <a name="troubleshooting-failed-requests"></a>실패한 요청 문제 해결  
  요청이 보고서 인스턴스에 도달하지 못한 경우 RSReportServer.config 파일을 확인하여 가상 서버 이름이 보고서 서버 URL의 호스트 이름으로 지정되었는지 살펴보십시오.  
   
-1.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다.  
+1.  텍스트 편집기에서 RSReportServer.config 파일을 엽니다.   
   
 2.  찾을 \< **Hostname**>, \< **ReportServerUrl**>, 및 \< **UrlRoot**>, 각 설정에 대 한 호스트 이름을 확인 하 고 있습니다. 호스트 이름이 올바르지 않은 경우에는 올바른 호스트 이름으로 바꾸십시오.  
   
@@ -118,8 +118,8 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
- [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services 기본 모드 보고서 서버 관리](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
+ [URL &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [기본 모드 보고서 서버 확장 배포 &#40; 구성 합니다. SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Reporting Services 기본 모드 보고서 서버를 관리 합니다.](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   

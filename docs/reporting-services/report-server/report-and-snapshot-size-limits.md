@@ -22,11 +22,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8a101dd362ea9ec71a0d4e75347bea60171cd8d1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-and-snapshot-size-limits"></a>보고서 및 스냅숏 크기 제한
@@ -86,7 +86,7 @@ EXEC sp_spaceused
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 처리 속성 설정](../../reporting-services/report-server/set-report-processing-properties.md)   
- [보고서 서버 데이터베이스&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [보고서 서버 데이터베이스 &#40; SSRS 기본 모드 &#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [큰 보고서 처리](../../reporting-services/report-server/process-large-reports.md)  
   
   

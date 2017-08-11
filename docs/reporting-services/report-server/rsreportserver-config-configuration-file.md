@@ -15,11 +15,11 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 64cab4cc760ee1af2c3777bca88be2663d8039a4
+ms.translationtype: MT
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 967dfebc4add43efb039a3b5eb54f8e5d20f1fab
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="rsreportserverconfig-configuration-file"></a>RsReportServer.config 구성 파일
@@ -77,6 +77,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
 |**DisableSecureFormsAuthenticationCookie**|기본값은 False입니다.<br /><br /> 보안되도록 표시할 폼 및 사용자 지정 인증에 사용된 쿠키를 강제로 적용하지 않도록 설정할지 여부를 지정합니다. SQL Server 2012부터 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 사용자 지정 인증 확장 프로그램에 사용된 폼 인증 쿠키를 클라이언트에 전송할 때 보안 쿠키로 표시합니다. 보고서 서버 관리자 및 사용자 지정 보안 확장 프로그램 작성자는 이 속성을 변경하여, 사용자 지정 보안 확장 프로그램 작성자가 쿠키를 보안 쿠키로 표시할지 여부를 결정할 수 있도록 한 이전 동작으로 되돌릴 수 있습니다. 네트워크 스니핑과 재생 공격을 방지하도록 폼 인증에 보안 쿠키를 사용하는 것이 좋습니다.|N|  
 |**CleanupCycleMinutes**|보고서 서버 데이터베이스에서 기존 세션 및 만료된 스냅숏을 제거할 시간 주기(분)를 지정합니다. 유효한 값은 0에서 최대 정수 사이입니다. 기본값은 10입니다. 이 값을 0으로 설정하면 데이터베이스 정리 프로세스가 해제됩니다.|N,S|  
 |**MaxActiveReqForOneUser**|사용자 한 명이 동시에 처리할 수 있는 보고서의 최대 수를 지정합니다. 최대 수에 도달한 후에는 추가적인 보고서 처리 요청이 모두 거부됩니다. 유효한 값은 1에서 최대 정수 사이입니다. 기본값은 20입니다.<br /><br /> 대부분의 요청은 대단히 빠르게 처리되므로 단일 사용자가 지정된 시간에 연결이 20개 이상 열린 상태에서 작업할 가능성은 없습니다. 사용자가 많은 프로세스가 진행되는 보고서를 15개 이상 열 경우 이 값을 늘려야 할 수 있습니다.<br /><br /> SharePoint 통합 모드에서 실행되는 보고서 서버의 경우에는 이 설정이 무시됩니다.|N,S|  
+|**MaxActiveReqForAnonymous**|동시에 프로세스에 저장할 수 있는 익명 요청의 최대 수를 지정 합니다. 제한에 도달 하면 추가적인 처리 요청이 거부 됩니다. 유효한 값은 1에서 최대 정수 사이입니다. 기본값은 200입니다.
 |**DatabaseQueryTimeout**|보고서 서버 데이터베이스에 대한 연결이 종료되는 시간(초)을 지정합니다. 이 값은 System.Data.SQLClient.SQLCommand.CommandTimeout 속성으로 전달됩니다. 유효한 값은 0에서 2147483647 사이입니다. 기본값은 120입니다. 값 0은 무제한 대기 시간을 지정하므로 사용하지 않는 것이 좋습니다.|N|  
 |**AlertingCleanupCycleMinutes**|기본값은 20입니다.<br /><br /> 경고 데이터베이스에 저장된 임시 데이터의 정리 빈도를 결정합니다.|S|  
 |**AlertingDataCleanupMinutes**|기본값은 360입니다.<br /><br /> 경고 정의에 대한 만들기 또는 편집에 사용된 세션 데이터를 경고 데이터베이스 내에서 유지할 기간을 결정합니다. 기본값은 6시간입니다.|S|  
@@ -846,7 +847,7 @@ x6K1NTC/u8hl9v0MgK+xMQKaiV7BuNYbgGgkaViABcNH0xVzcc5rMTHUkrABbGDFGKyAFniGQ1qu
  [보고서 서버 초기화&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
  [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
- 추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
+ 추가 질문이 있으신가요? [Reporting Services 포럼을 시도 하십시오.](http://go.microsoft.com/fwlink/?LinkId=620231)
   
   
 

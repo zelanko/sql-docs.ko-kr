@@ -22,17 +22,17 @@ caps.latest.revision: 18
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a868e10ae26c69711a7ce3852e0f9ffe56dc3ae8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>표준 .NET Framework 데이터 공급자 등록(SSRS)
   타사 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 데이터 집합에 대한 데이터를 검색하려면 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자 어셈블리를 보고서 제작 클라이언트와 보고서 서버에 배포하고 등록해야 합니다. 보고서 제작 클라이언트에서 데이터 공급자를 데이터 원본 유형으로 등록하고 쿼리 디자이너와 연결해야 합니다. 그러면 보고서 데이터 집합을 만들 때 이 데이터 공급자를 데이터 원본 유형으로 선택할 수 있습니다. 연결된 쿼리 디자이너가 열려 이 데이터 원본 유형에 대한 쿼리 생성을 도와줍니다. 또한 보고서 서버에서 데이터 공급자를 데이터 원본 유형으로 등록해야 합니다. 그러면 이 데이터 공급자를 사용하여 데이터 원본에서 데이터를 검색하는 게시된 보고서를 처리할 수 있습니다.  
   
- 타사 데이터 공급자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에서 사용할 수 있는 모든 기능을 제공하지는 않습니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요. .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자의 기능을 확장하는 방법은 [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하세요.  
+ 타사 데이터 공급자가 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 처리 확장 프로그램에서 사용할 수 있는 모든 기능을 제공하지는 않습니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요. 기능을 확장 하는 방법에 대 한 자세한 내용은 합니다.[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자의 기능을 확장하는 방법은 [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)을 참조하세요.  
   
  데이터 공급자를 설치하고 등록하려면 관리자 자격 증명이 필요합니다.  
   
@@ -201,12 +201,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="platform-considerations"></a>플랫폼 고려 사항  
  64비트(x64) 플랫폼에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 32비트 WOW 모드로 실행됩니다. x64 플랫폼에서 보고서를 작성하는 경우 보고서를 미리 보려면 보고서 제작 클라이언트에 32비트 데이터 공급자가 설치되어 있어야 합니다. 동일한 시스템에 보고서를 게시하는 경우 보고서 관리자를 사용하여 보고서를 보려면 x64 데이터 공급자가 필요합니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]기반 플랫폼에서 지원되지 않습니다.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]는 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 기반 플랫폼에서 지원되지 않습니다.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 함께 설치되는 데이터 처리 확장 프로그램은 각 플랫폼에 대해 기본적으로 컴파일되어야 하며 올바른 위치에 설치되어야 합니다. 또한 사용자 지정 데이터 공급자나 표준 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 데이터 공급자를 등록하는 경우 이러한 공급자는 해당 플랫폼에 대해 기본적으로 컴파일되어야 하며 적절한 위치에 설치되어야 합니다. 32비트 플랫폼에서 실행하는 경우 데이터 공급자는 32비트 플랫폼에 대해 컴파일되어야 합니다. 64비트 플랫폼에서 실행하는 경우에는 데이터 공급자가 64비트 플랫폼에 대해 컴파일되어야 합니다. 64비트 인터페이스로 래핑된 32비트 데이터 공급자를 64비트 플랫폼에서 사용할 수는 없습니다. 설치된 플랫폼에서 데이터 공급자가 작동할지 여부에 대한 자세한 내용은 해당 타사 소프트웨어를 참조하십시오. 데이터 공급자 및 플랫폼 지원에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [보고서 서버 구성 및 관리&#40;SSRS 기본 모드&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
+## <a name="see-also"></a>참고 항목  
+ [구성 및 보고서 서버 &#40; 관리 SSRS 기본 모드 &#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [데이터 처리 확장 프로그램 구현](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   
  [Reporting Services의 코드 액세스 보안](../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)  

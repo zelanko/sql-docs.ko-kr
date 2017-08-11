@@ -19,11 +19,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a3129645fd110b2bddedae0022592a74fb97a9e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="design-view"></a>디자인 뷰
@@ -61,8 +61,8 @@ ms.lasthandoff: 06/22/2017
  속성 창을 사용하여 디자인 화면의 현재 선택된 보고서 항목 또는 그룹화 창의 선택된 그룹에 대한 속성을 볼 수 있습니다. 또는 선택한 보고서 항목 또는 그룹을 마우스 오른쪽 단추로 클릭한 후 **속성** 을 클릭하여 보고서 항목 또는 그룹에 대한 해당 **속성** 대화 상자를 열 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [보고서 디자인 팁&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [페이지 머리글 및 바닥글 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [보고서 디자인 팁 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   
 

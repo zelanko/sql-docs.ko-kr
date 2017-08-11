@@ -21,11 +21,11 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a832dfb9d5e5e3fc57519b8f694bd47fa755852e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-data-pane"></a>보고서 데이터 창
@@ -36,7 +36,7 @@ ms.lasthandoff: 06/22/2017
  보고서 이름이나 페이지 번호와 같이 보고서에서 일반적으로 사용되는 Reporting Services에서 제공하는 필드를 나타냅니다. 자세한 내용은 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
  **매개 변수**  
- 각각 단일값 또는 다중값일 수 있는 보고서 매개 변수 컬렉션을 나타냅니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)유형의 보고서 데이터 원본을 기반으로 하는 데이터 집합이 있어야 합니다.  
+ 각각 단일값 또는 다중값일 수 있는 보고서 매개 변수 컬렉션을 나타냅니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)를 참조하세요.  
   
  **이미지**  
  보고서에 사용되는 이미지 집합을 나타냅니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/images-report-builder-and-ssrs.md)를 참조하세요.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
  포함된 데이터 원본이나 공유 데이터 원본에 대한 단일 데이터 원본 참조를 나타냅니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 공유 데이터 원본은 솔루션 탐색기의 공유 데이터 원본 폴더에 표시됩니다. 데이터 원본은 Reporting Services에서 지원하는 데이터 원본 유형 중 하나를 지정합니다. 데이터 원본은 데이터 집합 컬렉션이 기반을 두는 부모 노드입니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
  **데이터 집합**  
- 단일 데이터 집합을 나타냅니다. 데이터 집합은 쿼리에 의해 지정된 필드 컬렉션의 부모 노드이며 계산 필드를 포함합니다. Reporting Services는 쿼리를 지정할 수 있도록 쿼리 디자이너를 지원합니다. 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [쿼리 디자인 도구&#40;SSRS&#41;](../../reporting-services/report-data/query-design-tools-ssrs.md)를 참조하세요.  
+ 단일 데이터 집합을 나타냅니다. 데이터 집합은 쿼리에 의해 지정된 필드 컬렉션의 부모 노드이며 계산 필드를 포함합니다. Reporting Services는 쿼리를 지정할 수 있도록 쿼리 디자이너를 지원합니다. 자세한 내용은 참조 [보고서 데이터 집합 &#40; Ssrs&#41; ](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [쿼리 디자인 도구 &#40; Ssrs&#41; ](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

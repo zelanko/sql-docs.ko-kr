@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 003d81f131eeeadbf672e63f0c949e4a1a6df2ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="report-definition-language-ssrs"></a>SSRS(Report Definition Language)
@@ -57,7 +57,7 @@ ms.lasthandoff: 06/22/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 RDL 파일을 빌드하는 여러 도구를 제공합니다. 자세한 내용은 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)를 참조하세요.  
   
- 응용 프로그램에서 RDL을 생성 하는 가장 쉬운 방법 중 하나를 사용 하는 것은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 의 클래스는 <xref:System.Xml> 네임 스페이스 및 <xref:System.Linq> 네임 스페이스입니다. 특히 **XmlTextWriter** 클래스는 RDL을 쓰는 데 사용할 수 있습니다. **XmlTextWriter**를 사용하여 전체 보고서 정의를 처음부터 생성하여 임의의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에서 완료할 수 있습니다. 개발자는 또한 사용자 지정 속성이 포함된 사용자 지정 보고서 항목을 추가하여 RDL을 확장할 수도 있습니다. 에 대 한 자세한는 **XmlTextWriter** 클래스 및 <xref:System.Xml> 네임 스페이스 참조는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 개발자 가이드입니다. LINQ(Language-Integrated Query)에 대한 자세한 내용은 MSDN에서 "LINQ to XML"을 참조하십시오.  
+ 응용 프로그램에서 RDL을 생성하는 가장 쉬운 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 네임스페이스 및 <xref:System.Xml> 네임스페이스의 <xref:System.Linq> 클래스를 사용하는 것입니다. 특히 **XmlTextWriter** 클래스는 RDL을 쓰는 데 사용할 수 있습니다. **XmlTextWriter**를 사용하여 전체 보고서 정의를 처음부터 생성하여 임의의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 응용 프로그램에서 완료할 수 있습니다. 개발자는 또한 사용자 지정 속성이 포함된 사용자 지정 보고서 항목을 추가하여 RDL을 확장할 수도 있습니다. 에 대 한 자세한는 **XmlTextWriter** 클래스 및 <xref:System.Xml> 네임 스페이스 참조는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 개발자 가이드입니다. LINQ(Language-Integrated Query)에 대한 자세한 내용은 MSDN에서 "LINQ to XML"을 참조하십시오.  
   
  보고서 정의 파일의 표준 파일 확장명은 .rdl입니다. 확장명이 .rdlc인 클라이언트 보고서 정의 파일을 개발할 수도 있습니다. 두 확장명 모두 MIME 형식은 텍스트/xml입니다. 보고서에 대한 자세한 내용은 [Reporting Services 보고서&#40;SSRS&#41;](../../reporting-services/reports/reporting-services-reports-ssrs.md)를 참조하세요.  
   
@@ -93,7 +93,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)   
- [보고서에서 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
+ [보고서에 사용자 지정 어셈블리 사용](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)   
  [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)  
   
   

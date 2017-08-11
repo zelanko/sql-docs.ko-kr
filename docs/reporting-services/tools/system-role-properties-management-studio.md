@@ -17,17 +17,17 @@ caps.latest.revision: 30
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 68038228fd6fb7b2af8dd6f1bb5ae50b7f63daac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="system-role-properties-management-studio"></a>시스템 역할 속성(Management Studio)
   시스템 역할 페이지를 사용하여 보고서 서버에 현재 정의되어 있는 시스템 역할 정의를 볼 수 있습니다. 시스템 역할 정의에는 개별 항목이 아닌 전체 사이트에 대해 수행되는 태스크의 명명된 모음이 포함됩니다. 역할 정의는 사용자나 그룹에 할당되어 역할 할당을 만듭니다. 역할 정의의 태스크는 사용자나 그룹이 수행할 수 있는 태스크를 지정합니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 **시스템 관리자** 및 **시스템 사용자**로 두 개의 미리 정의된 시스템 역할 정의가 있습니다. 태스크 목록을 변경하여 이러한 역할 정의를 수정하거나 다른 태스크 조합을 지원하는 새 시스템 역할을 만들 수 있습니다. 역할 정의를 편집하면 역할 정의를 포함하는 모든 역할 할당에 영향을 줍니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 두 개의 미리 정의 된 시스템 역할 정의가: **시스템 관리자에 게** 및 **시스템 사용자**합니다. 태스크 목록을 변경하여 이러한 역할 정의를 수정하거나 다른 태스크 조합을 지원하는 새 시스템 역할을 만들 수 있습니다. 역할 정의를 편집하면 역할 정의를 포함하는 모든 역할 할당에 영향을 줍니다.  
   
 > [!NOTE]  
 >  시스템 역할 할당은 기본 모드로 실행되는 보고서 서버에만 사용됩니다. 보고서 서버가 SharePoint 통합 모드로 구성된 경우 이 페이지를 사용할 수 없습니다.  
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
  각 태스크에 대한 정보를 제공합니다. 태스크 설명은 수정할 수 없습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [시스템 수준 태스크](../../reporting-services/security/tasks-and-permissions-system-level-tasks.md)   
- [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
- [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [태스크 및 사용 권한](../../reporting-services/security/tasks-and-permissions.md)   
+ [미리 정의 된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   

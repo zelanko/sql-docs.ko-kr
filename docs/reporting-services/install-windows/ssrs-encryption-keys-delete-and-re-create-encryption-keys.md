@@ -21,11 +21,11 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b042bef86620c773f39f81ea16a62b3d9c4c2a6a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>SSRS 암호화 키-삭제 및 다시 암호화 키를 만들기
@@ -120,8 +120,8 @@ ms.lasthandoff: 06/22/2017
 4.  암호화된 데이터(파일 공유 배달 확장 프로그램과 암호화를 사용하는 타사의 배달 확장 프로그램 포함)를 사용하는 구독의 경우 각 구독을 열고 자격 증명을 다시 입력합니다. 보고서 서버 전자 메일 배달을 사용하는 구독은 암호화된 데이터를 사용하지 않으므로 키가 달라져도 영향을 받지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [암호화된 보고서 서버 데이터 저장&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [구성 및 암호화 키 &#40; 관리 SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [저장소 암호화 된 보고서 서버 데이터 &#40; SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   
 

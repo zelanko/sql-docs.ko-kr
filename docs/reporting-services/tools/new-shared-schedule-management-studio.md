@@ -17,11 +17,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 7d6032fde5bdfba4ba74330d162e25da8e5d8f75
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="new-shared-schedule-management-studio"></a>새 공유 일정(Management Studio)
@@ -69,11 +69,11 @@ ms.lasthandoff: 06/22/2017
  특정 날짜 및 시간에 한 번만 실행되는 일정을 만들려면 이 옵션을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)   
  [Management Studio에서 보고서 서버에 연결](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)   
- [일정 만들기, 수정 및 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
+ [만들기, 수정 및 일정을 삭제](../../reporting-services/subscriptions/create-modify-and-delete-schedules.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)   
- [Management Studio의 보고서 서버 F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
+ [보고서 서버에 Management Studio F1 도움말](../../reporting-services/tools/report-server-in-management-studio-f1-help.md)  
   
   
 

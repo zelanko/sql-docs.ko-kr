@@ -21,11 +21,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="role-assignments"></a>역할 할당
@@ -41,7 +41,7 @@ ms.lasthandoff: 06/22/2017
   
  다음 다이어그램에서는 B 폴더의 **게시자** 역할에 그룹 및 특정 사용자를 매핑하는 역할 할당을 보여 줍니다.  
   
- ![역할 할당 다이어그램](../../reporting-services/security/media/report-securityarch.gif "Role assignments diagram")  
+ ![역할 할당 다이어그램](../../reporting-services/security/media/report-securityarch.gif "역할 할당 다이어그램")  
 역할 할당 다이어그램  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>시스템 수준 및 항목 수준 역할 할당  
@@ -66,10 +66,10 @@ ms.lasthandoff: 06/22/2017
  기본 보안을 제공하는 미리 정의된 역할 할당에 대한 자세한 내용은 [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [역할 만들기, 삭제 또는 수정&#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
- [사용자에게 보고서 서버에 대한 액세스 권한 부여&#40;보고서 관리자&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
- [역할 할당 수정 또는 삭제&#40;보고서 관리자&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [만들기, 삭제 또는 role&#40; 수정 Management studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
+ [보고서 서버 &#40; 데이터베이스 액세스 권한 부여 보고서 관리자 &#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
+ [수정 하거나 삭제할 역할 할당 &#40; 보고서 관리자 &#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
+ [SharePoint 사이트 &#40;의 보고서 서버 항목에 대 한 사용 권한 설정 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

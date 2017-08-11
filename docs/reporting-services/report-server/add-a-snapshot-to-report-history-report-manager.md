@@ -21,11 +21,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5d340621db8dc12cd981d75939babeff40e590f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>보고서 기록에 스냅숏 추가(보고서 관리자)
@@ -79,8 +79,8 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [보고서에 실행 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [보고서 열기 및 닫기&#40;보고서 관리자&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [보고서 기록 제한&#40;보고서 관리자&#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
+ [보고서 기록 제한 &#40; 보고서 관리자 &#41;](../../reporting-services/reports/limit-report-history-report-manager.md)   
  [일정](../../reporting-services/subscriptions/schedules.md)   
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
+ [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
   
   

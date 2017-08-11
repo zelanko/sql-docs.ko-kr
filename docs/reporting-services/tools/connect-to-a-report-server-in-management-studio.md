@@ -25,11 +25,11 @@ caps.latest.revision: 53
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 53ebe2ae1938dc656af351cf922f5d5d85d664b8
+ms.translationtype: MT
+ms.sourcegitcommit: 0bc7925f72d59170a24f4a82d1c1a73e618a97a0
+ms.openlocfilehash: f59854e37e292d03cf7d57443e3aa4b899a21a11
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/13/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Management Studio에서 보고서 서버에 연결
@@ -61,7 +61,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  **연결**을 클릭합니다. 개체 탐색기에 보고서 서버가 나타납니다.  
   
-6.  서버 노드를 마우스 오른쪽 단추로 클릭하여 시스템 속성과 서버 기본값을 설정합니다. 자세한 내용은 [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)을 참조하세요.  
+6.  서버 노드를 마우스 오른쪽 단추로 클릭하여 시스템 속성과 서버 기본값을 설정합니다. 자세한 내용은 참조 [설정할 보고서 서버 속성 &#40; Management studio&#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-connect-to-a-sharepoint-integrated-mode-report-server"></a>SharePoint 통합 모드 보고서 서버에 연결하려면  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 06/13/2017
   
 5.  **연결**을 클릭합니다. 개체 탐색기에 보고서 서버가 나타납니다.  
   
-6.  서버 노드를 마우스 오른쪽 단추로 클릭하여 시스템 속성과 서버 기본값을 설정합니다. 자세한 내용은 [보고서 서버 속성 설정&#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md)을 참조하세요.  
+6.  서버 노드를 마우스 오른쪽 단추로 클릭하여 시스템 속성과 서버 기본값을 설정합니다. 자세한 내용은 참조 [설정할 보고서 서버 속성 &#40; Management studio&#41; ](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
   
 ### <a name="to-register-a-report-server"></a>보고서 서버를 등록하려면  
   
@@ -119,6 +119,6 @@ ms.lasthandoff: 06/13/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [SQL Server Management Studio의 Reporting Services&#40;SSRS&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Reporting Services SQL Server Management Studio에서 &#40; Ssrs&#41;](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

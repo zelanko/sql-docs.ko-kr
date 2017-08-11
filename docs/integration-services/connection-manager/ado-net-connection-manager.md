@@ -9,6 +9,8 @@ ms.technology:
 - integration-services
 ms.tgt_pltfrm: 
 ms.topic: article
+f1_keywords:
+- sql13.dts.designer.adonetconnection.f1
 helpviewer_keywords:
 - connection managers [Integration Services], ADO.NET
 - ADO.NET connection manager [Integration Services]
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 41363d15ebb18431c658c4f990d10a1fa67260ae
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: 17eb520881cb87315dc6c3dd77de7369ed0e5736
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
@@ -65,6 +67,24 @@ ms.lasthandoff: 08/03/2017
 -   [ADO.NET 연결 관리자 구성](../../integration-services/connection-manager/configure-ado-net-connection-manager.md)  
   
  연결 관리자를 프로그래밍 방식으로 구성하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> 및 [프로그래밍 방식으로 연결 추가](../../integration-services/building-packages-programmatically/adding-connections-programmatically.md)로 설정됩니다.  
+  
+## <a name="configure-adonet-connection-manager"></a>ADO.NET 연결 관리자 구성
+  **ADO.NET 연결 관리자 구성** 대화 상자를 사용하여 SqlClient 공급자와 같은 .NET Framework 데이터 공급자를 사용하여 액세스할 수 있는 데이터 원본에 연결을 추가할 수 있습니다. 연결 관리자는 기존 연결을 사용하거나 새 연결을 만들 수 있습니다.  
+  
+ ADO.NET 연결 관리자에 대한 자세한 내용은 [ADO.NET Connection Manager](../../integration-services/connection-manager/ado-net-connection-manager.md)를 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **데이터 연결**  
+ 목록에서 기존 ADO.NET 데이터 연결을 선택합니다.  
+  
+ **데이터 연결 속성**  
+ 선택한 ADO.NET 데이터 연결의 속성과 값을 봅니다.  
+  
+ **새로 만들기**  
+ **연결 관리자** 대화 상자를 사용하여 ADO.NET 데이터 연결을 만듭니다.  
+  
+ **Delete**  
+ 연결을 선택한 다음 **삭제** 단추를 사용하여 삭제합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

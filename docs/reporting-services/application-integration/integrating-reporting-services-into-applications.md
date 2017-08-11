@@ -23,11 +23,11 @@ caps.latest.revision: 57
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8a1cabc088c7c0ec6c69c8290549e035a4cec7bb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="integrating-reporting-services-into-applications"></a>응용 프로그램에 Reporting Services 통합
@@ -45,19 +45,19 @@ ms.lasthandoff: 06/22/2017
  URL 액세스는 ReportViewer 컨트롤을 사용하지 않을 경우 보고서 보기를 응용 프로그램에 통합하기 위한 또 다른 옵션입니다. 그 외에도 URL 액세스는 전자 메일을 통해 사용자에게 보고서에 대한 링크를 보내는 데도 유용합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [SOAP를 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
+ [SOAP를 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)  
  보고서 서버 웹 서비스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리를 기존 비즈니스 응용 프로그램에 통합하는 방법을 설명합니다.  
   
  [ReportViewer 컨트롤을 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  ReportViewer 컨트롤을 사용하여 보고서 보기를 기존 응용 프로그램에 통합하는 방법을 설명합니다.  
   
- [URL 액세스를 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
+ [URL 액세스를 사용하여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)  
  URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색을 기존 비즈니스 응용 프로그램에 통합하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
+## <a name="see-also"></a>참고 항목  
+ [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [URL 액세스와 SOAP 중에서 선택](../../reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
+ [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [보고서 서버 웹 서비스](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

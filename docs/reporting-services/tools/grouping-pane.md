@@ -20,11 +20,11 @@ caps.latest.revision: 22
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed88ddae33151e46c080a8bd747fd8a7f5055eba
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="grouping-pane"></a>그룹화 창
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
   
   ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 그룹화 창이 표시되지 않는 경우 **보고서** 메뉴에서 **그룹화**를 클릭합니다.
   
- 행과 열 그룹 영역에 있는 셀은 그룹의 정적 또는 동적 멤버일 수 있습니다. 정적 멤버는 그룹당 한 번씩 반복되며 일반적으로 레이블 또는 합계를 포함합니다. 동적 멤버는 그룹 인스턴스당 한 번씩 반복되며 일반적으로 그룹 식의 고유한 값을 포함합니다. 행 그룹 영역이나 열 그룹 영역에 있는 테이블릭스 셀을 선택하면 행 그룹 또는 열 그룹 창에서 해당 그룹 멤버가 선택됩니다. 반대로 그룹화 창에서 그룹을 선택하면 디자인 화면에서 이 그룹 멤버와 연결된 해당 셀이 선택됩니다. 테이블릭스 행 및 열 그룹 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)을 참조하세요.  
+ 행과 열 그룹 영역에 있는 셀은 그룹의 정적 또는 동적 멤버일 수 있습니다. 정적 멤버는 그룹당 한 번씩 반복되며 일반적으로 레이블 또는 합계를 포함합니다. 동적 멤버는 그룹 인스턴스당 한 번씩 반복되며 일반적으로 그룹 식의 고유한 값을 포함합니다. 행 그룹 영역이나 열 그룹 영역에 있는 테이블릭스 셀을 선택하면 행 그룹 또는 열 그룹 창에서 해당 그룹 멤버가 선택됩니다. 반대로 그룹화 창에서 그룹을 선택하면 디자인 화면에서 이 그룹 멤버와 연결된 해당 셀이 선택됩니다. 테이블 릭 스 행과 열 그룹 영역에 대 한 자세한 내용은 참조 하십시오. [테이블 릭 스 데이터 영역의 영역 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
  그룹화 창은 다음과 같은 모드를 지원합니다.  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 -   **ToggleItem.** 문자열입니다. 토글 이미지를 추가할 입력란의 이름입니다. 입력란은 동일한 그룹 범위 또는 포함 범위에 있어야 합니다.  
   
- 테이블릭스 데이터 영역에서 이 동작을 제어하는 방법에 대한 자세한 내용은 [보고서 페이지에서 테이블릭스 데이터 영역 표시 제어&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)를 참조하세요.  
+ 테이블 릭 스 데이터 영역에 대해이 동작을 제어 하는 방법에 대 한 자세한 내용은 참조 [보고서 페이지 &#40;에서 테이블 릭 스 데이터 영역 표시 제어 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
  모든 정적 멤버가 디자인 화면의 셀에 해당하는 머리글을 포함하는 것은 아닙니다. 그룹화 창에서 다음 규칙은 정적 멤버에 머리글이 있는지 여부를 나타냅니다.  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

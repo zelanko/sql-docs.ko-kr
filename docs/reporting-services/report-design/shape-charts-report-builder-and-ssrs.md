@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 84ee7a9030bb27725994a33860b26b8754034cd9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>셰이프 차트(보고서 작성기 및 SSRS)
@@ -46,9 +46,9 @@ ms.lasthandoff: 06/22/2017
   
 -   셰이프 차트는 백분율을 비례에 따라 정렬된 순서로 표시하는 데 가장 효과적입니다. 그러나 일관성을 유지하기 위해 이 차트에서는 기본적으로 데이터 집합의 값을 정렬하지 않습니다. 데이터를 깔때기형 또는 피라미드형으로 가장 정확하게 나타내려면 값을 내림차순으로 정렬하는 것이 좋습니다. 자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)을 참조하세요.  
   
--   Null이거나, 비어 있거나, 음수이거나, 0인 값은 비율을 계산하는 데 영향을 주지 않습니다. 따라서 이러한 값은 셰이프 차트에 표시되지 않습니다. 이러한 유형의 값을 차트에서 시각적으로 표현하려면 셰이프 차트가 아닌 다른 차트 종류로 변경해야 합니다. 셰이프 이외의 차트에 빈 요소를 추가하는 방법에 대한 자세한 내용은 [차트에 빈 요소 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)를 참조하세요.  
+-   Null이거나, 비어 있거나, 음수이거나, 0인 값은 비율을 계산하는 데 영향을 주지 않습니다. 따라서 이러한 값은 셰이프 차트에 표시되지 않습니다. 이러한 유형의 값을 차트에서 시각적으로 표현하려면 셰이프 차트가 아닌 다른 차트 종류로 변경해야 합니다. 셰이프 이외의 차트에 빈 요소를 추가 하는 방법에 대 한 자세한 내용은 참조 [차트 &#40; 빈 요소 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
--   사용자 지정 색상표를 사용하여 셰이프 차트의 색을 직접 정의하는 경우에는 쉽게 구분할 수 있는 고유한 색으로 각 데이터 요소를 강조 표시할 수 있도록 색상표에 다양한 색을 준비해야 합니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
+-   사용자 지정 색상표를 사용하여 셰이프 차트의 색을 직접 정의하는 경우에는 쉽게 구분할 수 있는 고유한 색으로 각 데이터 요소를 강조 표시할 수 있도록 색상표에 다양한 색을 준비해야 합니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 클릭합니다.  
   
 -   다른 모든 차트 종류와 달리 셰이프 차트에서는 개별 계열이 아니라 개별 데이터 요소를 범례에 표시합니다.  
   
@@ -56,12 +56,12 @@ ms.lasthandoff: 06/22/2017
   
 -   셰이프 차트 종류는 동일한 차트 영역의 다른 어떠한 차트 종류와도 결합할 수 없습니다. 셰이프 차트에 표시된 데이터를 서로 비교하여 표시하려는 경우 데이터가 다른 종류의 차트에 표시되어 있으면 둘째 차트 영역을 추가해야 합니다.  
   
--   원형 및 도넛형 차트에 그리기 스타일을 추가로 적용하여 시각적 효과를 높일 수 있습니다. 자세한 내용은 [차트에서 계열 색 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)을 참조하세요.  
+-   원형 및 도넛형 차트에 그리기 스타일을 추가로 적용하여 시각적 효과를 높일 수 있습니다. 참조 [차트 &#40;에서 계열 색 서식 지정 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md) 자세한 정보에 대 한 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
- [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
- [차트의 빈 데이터 요소 및 Null 데이터 요소&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [원형 차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>참고 항목  
+ [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
+ [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+ [빈 데이터 요소 및 Null 데이터 요소에 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [원형 차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)  
   
   

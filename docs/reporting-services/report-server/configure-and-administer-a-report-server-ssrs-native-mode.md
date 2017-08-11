@@ -23,11 +23,11 @@ caps.latest.revision: 51
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b3896805cf0fef4e5819aa9b127121e1e812c346
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>보고서 서버 구성 및 관리(SSRS 기본 모드)
@@ -62,9 +62,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [보고서 작성기 액세스 구성](../../reporting-services/report-server/configure-report-builder-access.md)   
- [Reporting Services Configuration Files](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
+ [Reporting Services 구성 파일](../../reporting-services/report-server/reporting-services-configuration-files.md)   
+ [Reporting Services 구성 관리자 &#40; 기본 모드 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)   
  [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md)   
- [Reporting Services 보고서 서버&#40;기본 모드&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
+ [Reporting Services 보고서 서버 &#40; 기본 모드 &#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)  
   
   

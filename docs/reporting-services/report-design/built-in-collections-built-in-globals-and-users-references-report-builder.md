@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 821c2e768a14af3004971ca8f7b8d8ab76e2c762
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>기본 제공 컬렉션-기본 제공 Globals 및 Users 참조 (보고서 작성기)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-globals-collection"></a>전역 컬렉션 사용  
- **Globals** 컬렉션에는 보고서의 전역 변수가 포함됩니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&ReportName]`). 다음 표에서는 **Globals** 컬렉션의 멤버를 설명합니다.  
+ **Globals** 컬렉션에는 보고서의 전역 변수가 포함됩니다. 디자인 화면에서 이러한 변수 접두사가 붙은 상태로 표시는 & (앰퍼샌드), 예를 들어 `[&ReportName]`합니다. 다음 표에서는 **Globals** 컬렉션의 멤버를 설명합니다.  
   
 |**멤버**|**형식**|**Description**|  
 |----------------|--------------|---------------------|  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
 ## <a name="using-the-user-collection"></a>User 컬렉션 사용  
- **User** 컬렉션에는 보고서를 실행하는 사용자에 대한 데이터가 포함됩니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수는 &(앰퍼샌드) 접두사가 붙은 상태로 표시됩니다(예: `[&UserID]`).  
+ **User** 컬렉션에는 보고서를 실행하는 사용자에 대한 데이터가 포함됩니다. 예를 들어 이 컬렉션을 사용하여 보고서에 나타나는 데이터를 필터링함으로써 현재 사용자의 데이터만 표시하거나 보고서 제목 등에 UserID를 표시할 수 있습니다. 디자인 화면에서 이러한 변수 접두사가 붙은 상태로 표시는 & (앰퍼샌드), 예를 들어 `[&UserID]`합니다.  
   
  다음 표에서는 **User** 컬렉션의 멤버를 설명합니다.  
   
@@ -95,9 +95,9 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [식 대화 상자&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
- [식의 데이터 형식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [식 대화 상자 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/e89c4d97-5d41-4b55-8695-79329edac15d)   
+ [식 &#40;의 데이터 형식 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [식 예&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
+ [식 예 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expression-examples-report-builder-and-ssrs.md)  
   
   

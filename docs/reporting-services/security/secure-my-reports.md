@@ -21,18 +21,18 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 162f43fc4f81c228d90839c75d1959d71eff9322
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="secure-my-reports"></a>내 보고서 보안 설정
-  내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  
+  내 보고서 기능은 보고서 작업을 위한 사용자 관리 작업 영역을 제공합니다. 원래 용도대로 사용하려면 내 보고서 폴더는 여러 사용자가 사용할 수 있는 다른 폴더보다 권한 제한이 적어야 합니다. 다른 폴더의 보고서를 보고 실행할 수 있는 권한만 있는 사용자가 내 보고서 폴더와 자신이 소유한 내용을 관리하려면 확장된 권한이 있어야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 이 용도에 맞는 특별한 역할 할당과 역할 정의를 제공합니다.  
   
 > [!NOTE]  
->  내 보고서는 보고서 관리자에서만 사용할 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서는 사용할 수 없습니다.  
+>  내 보고서는 보고서 관리자에서만 사용할 수 있으며 사용할 수 없는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]합니다.  
   
 ## <a name="role-assignment-for-my-reports"></a>내 보고서에 대한 역할 할당  
  내 보고서에 대한 역할 할당에는 미리 설정된 요소가 있으며 내 보고서 폴더를 활성화하는 각 사용자에 대해 자동으로 생성됩니다. 보고서 서버가 자동으로 보안을 할당하도록 하면 관리자가 각각의 내 보고서 사용자에 대해 액세스할 수 있도록 설정하지 않아도 되므로 내 보고서를 광범위하게 사용하는 조직에 특히 유용합니다.  
@@ -62,6 +62,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [보고서 및 리소스 보안](../../reporting-services/security/secure-reports-and-resources.md)   
  [보안 폴더](../../reporting-services/security/secure-folders.md)   
- [기본 모드 보고서 서버에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
+ [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
