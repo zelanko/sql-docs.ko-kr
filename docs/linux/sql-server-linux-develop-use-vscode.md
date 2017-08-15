@@ -254,7 +254,7 @@ T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기] 및
 
 VS Code 사용에 대 한 자세한 내용은 참조는 [Visual Studio Code 설명서](https://code.visualstudio.com/docs)합니다.
 
-[* * mssql * * VS Code에 대 한 확장 합니다.]:https://aka.ms/mssql-marketplace
+[**mssql**  VS Code에 대 한 확장 합니다.]:https://aka.ms/mssql-marketplace
 [다운로드 하 고 VS Code 설치]:https://code.visualstudio.com/Download
 [.NET 지침 핵심]:https://www.microsoft.com/net/core
 [연결 프로필을 관리]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
