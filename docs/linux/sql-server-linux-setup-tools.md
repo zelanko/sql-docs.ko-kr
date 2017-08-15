@@ -186,8 +186,9 @@ Mac El Capitan 및 시에라 도구를 설치 하려면 다음 명령을 사용 
 #brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update
-brew install mssql-tools
-#for silent install ACCEPT_EULA=y brew install mssql-tools
+brew install --no-sandbox mssql-tools
+#for silent install: 
+#ACCEPT_EULA=y brew install --no-sandbox mssql-tools
 ```
 
 ## <a id="docker"></a>Docker
@@ -263,3 +264,4 @@ SQL Server 2017 CTP 2.0 부터는 SQL Server 명령줄 도구는 Docker 이미�
 - [Docker에서 실행](quickstart-install-connect-ubuntu.md)
 
 사용 하는 방법의 예제를 보려면 **bcp** 대량 가져오기 및 내보내기 데이터, 참조 [Linux에서 SQL Server로 대량 복사 데이터](sql-server-linux-migrate-bcp.md)합니다.
+
