@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 연결 구성(Transact-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b60b3ca22932fb4e48a4ae7d47240de073c5c930
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: b57b1e802969995f87d5663e5e7dbdc92700a9b5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
@@ -75,7 +75,7 @@ RECONFIGURE
   
 -   옵션 5: Linux에서 Hortonworks HDP 2.0  
   
--   옵션 6: Linux에서 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10 및 5.11  
+-   옵션 6: Linux에서 Cloudera 5.1, 5.2, 5.3, 5.4, 5.5, 5.9, 5.10, 5.11 및 5.12  
   
 -   옵션 7: Linux에서 Hortonworks 2.1, 2.2, 2.3, 2.4, 2.5 및 2.6  
   

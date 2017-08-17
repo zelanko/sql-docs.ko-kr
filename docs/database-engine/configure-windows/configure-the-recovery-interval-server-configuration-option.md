@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9b07822ce0611d8fdd7de6f1dc4fd369d0128717
+ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
+ms.openlocfilehash: c945263cf63d626798c0d94aa35b9113f78eaaa4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="configure-the-recovery-interval-server-configuration-option"></a>recovery interval 서버 구성 옵션 구성
