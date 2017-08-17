@@ -1,37 +1,42 @@
 ---
 title: "affinity mask 서버 구성 옵션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "기본 affinity mask 옵션"
-  - "프로세서 캐시 다시 로드"
-  - "프로세서 캐시 [SQL Server]"
-  - "CPU [SQL Server], 라이선스"
-  - "지연된 프로세스 호출"
-  - "affinity mask 옵션"
-  - "프로세서 선호도 [SQL Server]"
-  - "SMP"
-  - "DPC"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- default affinity mask option
+- reloading processor cache
+- processor cache [SQL Server]
+- CPU [SQL Server], licensing
+- deferred process call
+- affinity mask option
+- processor affinity [SQL Server]
+- SMP
+- DPC
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 caps.latest.revision: 52
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0aa50b8c593ced9089a939eb5490380872d38472
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# affinity mask 서버 구성 옵션
+# <a name="affinity-mask-server-configuration-option"></a>affinity mask 서버 구성 옵션
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) 을 사용합니다.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)을 대신 사용합니다.  
   
  멀티태스킹을 수행하기 위해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows는 서로 다른 프로세서 간에 프로세스 스레드를 이동하기도 합니다. 이는 운영 체제의 측면에서 볼 때는 효율적이지만 각 프로세서 캐시에 데이터를 반복적으로 다시 로드해야 하므로 시스템 부하가 큰 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능 저하를 초래할 수 있습니다. 프로세서를 특정 스레드에 할당하면 프로세서를 다시 로드할 필요가 없고 프로세서 간에 스레드 마이그레이션이 감소되어 컨텍스트 전환이 줄게 되므로 성능이 향상될 수 있습니다. 스레드와 프로세서의 이러한 관계를 프로세서 선호도라고 합니다.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 52
 > [!CAUTION]  
 >  Windows 운영 체제에서 CPU 선호도를 구성하지 말고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 선호도 마스크를 구성하지 마십시오. 동일한 결과를 얻기 위해 이렇게 설정하는 경우도 있지만 구성이 일치하지 않는 경우 예상치 못한 결과가 나올 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CPU 선호도는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 sp_configure 옵션을 사용하여 구성하는 것이 가장 좋습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  affinity mask 옵션 설정의 예를 들기 위해 비트 1, 2, 5가 1로 설정되어 있고 비트 0, 3, 4, 6, 7이 0으로 설정되어 있는 상태에서 프로세서 1, 2, 5를 선택할 수 있고 16진수 값 0x26이나 이에 해당하는 10진수 값 `38` 이 지정되었다고 가정해 봅시다. 비트의 번호는 오른쪽에서 왼쪽으로 매깁니다. affinity mask 옵션은 프로세서를 0부터 31까지 번호를 매기므로 다음 예에서 카운터 `1` 은 서버의 둘째 프로세서를 나타냅니다.  
   
 ```  
@@ -117,21 +122,21 @@ GO
   
  affinity mask는 고급 옵션입니다. sp_configure 시스템 저장 프로시저를 사용하여 설정을 변경하는 경우 **show advanced options** 를 1로 설정했을 때만 **선호도 마스크** 를 변경할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 명령을 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 다시 시작하지 않더라도 새 설정이 즉시 적용됩니다.  
   
-## NUMA(Non-uniform Memory Access)  
+## <a name="non-uniform-memory-access-numa"></a>NUMA(Non-uniform Memory Access)  
  하드웨어 기반 NUMA(Non-uniform Memory Access)를 사용하고 affinity mask가 설정되어 있으면 노드의 모든 스케줄러에서 선호도가 해당 CPU로 설정됩니다. affinity mask가 설정되어 있지 않으면 각 스케줄러의 선호도는 NUMA 노드 내의 CPU 그룹으로 설정되고 NUMA 노드 N1로 매핑된 스케줄러에서 노드의 모든 CPU 작업을 예약할 수 있지만 다른 노드와 연결된 CPU 작업은 예약할 수 없습니다.  
   
  단일 NUMA 노드에서 실행되는 모든 작업은 해당 노드의 버퍼 페이지만 사용할 수 있습니다. 작업이 여러 노드의 CPU에서 병렬로 실행되는 경우 관련된 모든 노드의 메모리를 사용할 수 있습니다.  
   
-## 라이선스 문제  
+## <a name="licensing-issues"></a>라이선스 문제  
  동적 선호도는 CPU 라이선스에 의해 엄격한 제약을 받습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 라이선스 정책을 위반하는 선호도 마스크 옵션의 구성을 허용하지 않습니다.  
   
-### 시작  
+### <a name="startup"></a>시작  
  지정된 선호도 마스크가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 또는 데이터베이스 연결 시 라이선스 정책을 위반하면 엔진 계층에서는 시작 프로세스나 데이터베이스 연결/복원 작업을 완료한 후에 선호도 마스크의 sp_configure 실행 값을 0으로 되돌리므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 오류 메시지가 보고됩니다.  
   
-### 다시 구성  
+### <a name="reconfigure"></a>다시 구성  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] RECONFIGURE 명령을 실행할 때 지정된 선호도 마스크가 라이선스 정책을 위반하면 클라이언트 세션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 오류 메시지가 보고되므로 데이터베이스 관리자는 해당 선호도 마스크를 다시 구성해야 합니다. 이 경우 RECONFIGURE WITH OVERRIDE 명령은 사용할 수 없습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
@@ -139,3 +144,4 @@ GO
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

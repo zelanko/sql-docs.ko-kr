@@ -1,25 +1,30 @@
 ---
 title: "데이터베이스 미러링 제거(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 [SQL Server], 제거"
-  - "데이터베이스 미러링 제거 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], removing
+- removing database mirroring [SQL Server]
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 00206868e245fce59e3121e52a9a2c855b7f26f4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 제거(SQL Server)
+# <a name="remove-database-mirroring-sql-server"></a>데이터베이스 미러링 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스에서 데이터베이스 미러링을 제거하는 방법에 대해 설명합니다.  데이터베이스 소유자는 언제든지 데이터베이스에서 미러링을 제거하여 수동으로 데이터베이스 미러링 세션을 중지할 수 있습니다.  
   
  **항목 내용**  
@@ -47,7 +52,7 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 데이터베이스 미러링을 제거하려면  
+#### <a name="to-remove-database-mirroring"></a>데이터베이스 미러링을 제거하려면  
   
 1.  데이터베이스 미러링 세션 중에 주 서버 인스턴스에 연결하고 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 42
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  데이터베이스 미러링을 제거하려면 **데이터베이스 속성**을 사용합니다. **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용합니다.  
   
-#### 데이터베이스 미러링을 제거하려면  
+#### <a name="to-remove-database-mirroring"></a>데이터베이스 미러링을 제거하려면  
   
 1.  한 미러링 파트너의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결합니다.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 42
     ALTER DATABASE database_name SET PARTNER OFF  
     ```  
   
-     여기서 *database_name*은 세션을 제거하려는 미러된 데이터베이스입니다.  
+     여기서 *database_name* 은 세션을 제거하려는 미러된 데이터베이스입니다.  
   
      다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에서 데이터베이스 미러링을 제거합니다.  
   
@@ -108,15 +113,16 @@ caps.handback.revision: 42
   
 -   [데이터베이스 미러링 세션에서 미러링 모니터 서버 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
+-   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
 -   [예제: 인증서를 사용하여 데이터베이스 미러링 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
+

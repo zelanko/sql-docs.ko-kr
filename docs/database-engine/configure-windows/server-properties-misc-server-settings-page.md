@@ -1,27 +1,32 @@
 ---
 title: "서버 속성(기타 서버 설정 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.serverproperties.miscserversettings.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.serverproperties.miscserversettings.f1
 ms.assetid: b170c066-30cd-42dd-8d34-aa129ea09551
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 53069a083eff6c49fa5198743eb626ca429b96d1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 서버 속성(기타 서버 설정 페이지)
+# <a name="server-properties---misc-server-settings-page"></a>서버 속성 - 기타 서버 설정 페이지
   이 페이지를 사용하여 서버 설정을 확인하거나 수정할 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **사용자의 기본 언어**  
  새로 생성된 모든 로그인에 대한 기본 언어를 지정합니다.  
   
@@ -37,12 +42,12 @@ caps.handback.revision: 22
  오른쪽 상자에서 끝 연도를 설정합니다. 끝 연도를 저장하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 자동으로 왼쪽 상자에 시작 연도를 채웁니다.  
   
  **구성 값**  
- 이 창의 옵션에 대해 구성된 값을 표시합니다. 이러한 값을 변경한 후에는 **실행 값** 을 클릭하여 변경 사항이 적용되었는지 여부를 확인합니다. 변경 사항이 적용되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 다시 시작해야 합니다.  
+ 이 창의 옵션에 대해 구성된 값을 표시합니다. 이러한 값을 변경한 후에는 **실행 값** 을 클릭하여 변경 사항이 적용되었는지 여부를 확인합니다. 변경 사항이 적용되지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스를 다시 시작해야 합니다.  
   
  **실행 값**  
  이 창의 옵션에 대한 현재 실행 값을 볼 수 있습니다. 이 값은 읽기 전용입니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

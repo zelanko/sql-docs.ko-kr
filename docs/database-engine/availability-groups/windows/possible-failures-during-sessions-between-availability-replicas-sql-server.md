@@ -1,34 +1,39 @@
 ---
 title: "가용성 복제본 간의 세션 동안 발생 가능한 오류(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "문제 해결 [SQL Server, "HADR"]"
-  - "가용성 그룹 [SQL Server], 가용성 복제본"
-  - "가용성 그룹 [SQL Server], 문제해결"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- troubleshooting [SQL Server], HADR
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], troubleshooting
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: fa54c411376a66d133834dc726eb2e25fa885fc8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 복제본 간의 세션 동안 발생 가능한 오류(SQL Server)
-  물리적 문제, 운영 체제 문제 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제로 인해 두 가용성 복제본 사이의 세션에서 오류가 발생할 수 있습니다. 가용성 복제본은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지 아니면 실패했는지 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 자체적으로 세션 제한 시간 메커니즘을 구현합니다. 세션 제한 시간(초)을 지정합니다. 이 제한 시간은 서버 인스턴스가 다른 인스턴스로부터 PING 메시지를 받기까지 기다리는 최대 시간으로, 이 시간이 경과하면 해당 인스턴스의 연결이 끊어진 것으로 간주됩니다. 두 가용성 복제본 사이에서 세션 제한 시간이 발생하면 가용성 복제본은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다.  
+# <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>가용성 복제본 간의 세션 동안 발생 가능한 오류(SQL Server)
+물리적 문제, 운영 체제 문제 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문제로 인해 두 가용성 복제본 사이의 세션에서 오류가 발생할 수 있습니다. 가용성 복제본은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지 아니면 실패했는지 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 자체적으로 세션 제한 시간 메커니즘을 구현합니다. 세션 제한 시간(초)을 지정합니다. 이 제한 시간은 서버 인스턴스가 다른 인스턴스로부터 PING 메시지를 받기까지 기다리는 최대 시간으로, 이 시간이 경과하면 해당 인스턴스의 연결이 끊어진 것으로 간주됩니다. 두 가용성 복제본 사이에서 세션 제한 시간이 발생하면 가용성 복제본은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다.  
   
 > [!IMPORTANT]  
 >  주 데이터베이스가 아닌 다른 데이터베이스의 오류는 감지되지 않습니다. 또한 데이터베이스가 데이터 디스크 오류로 인해 다시 시작되지 않는 한 데이터 디스크 오류도 감지되지 않습니다.  
   
  오류 감지 속도 그리고 이에 따른 오류 반응 속도는 오류가 하드 오류인지 소프트 오류인지에 따라 달라집니다. 네트워크 오류와 같은 일부 하드 오류는 즉시 보고되지만 경우에 따라 구성 요소별 제한 시간으로 인해 일부 하드 오류 보고가 지연될 수 있습니다. 소프트 오류의 경우 세션 제한 시간의 길이가 오류 검색 속도를 결정합니다. 기본적으로 이 시간은 10초( 최소 권장 값)입니다.  
   
-## 하드 오류로 인한 실패  
+## <a name="failures-due-to-hard-errors"></a>하드 오류로 인한 실패  
  하드 오류를 일으킬 수 있는 원인 중에는 다음 조건이 있습니다.  
   
 -   연결 또는 전선의 끊어짐  
@@ -67,9 +72,9 @@ caps.handback.revision: 12
 -   Windows 기반 서버가 다시 부팅된 경우  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] 은 서버에 액세스하는 클라이언트 관련 문제에 대해 보호하지 않습니다. 예를 들어 개인 네트워크 인터페이스 카드가 가용성 그룹 복제본을 호스팅 중인 서버 인스턴스 간의 트래픽을 처리하는 동안 공용 네트워크 어댑터가 주 복제본에 대한 클라이언트 연결을 처리하는 경우 이 경우 공용 네트워크 어댑터의 오류로 인해 클라이언트가 데이터베이스에 액세스하지 못합니다.  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)]은 서버에 액세스하는 클라이언트 관련 문제에 대해 보호하지 않습니다. 예를 들어 개인 네트워크 인터페이스 카드가 가용성 그룹 복제본을 호스팅 중인 서버 인스턴스 간의 트래픽을 처리하는 동안 공용 네트워크 어댑터가 주 복제본에 대한 클라이언트 연결을 처리하는 경우 이 경우 공용 네트워크 어댑터의 오류로 인해 클라이언트가 데이터베이스에 액세스하지 못합니다.  
   
-## 소프트 오류로 인한 오류  
+## <a name="failures-due-to-soft-errors"></a>소프트 오류로 인한 오류  
  세션 제한 시간 초과가 발생할 수 있는 상황은 다음(여기에 한정되지 않음)과 같습니다.  
   
 -   TCP 연결 제한 시간 초과, 삭제되거나 손상된 패킷, 잘못된 순서의 패킷 등의 네트워크 오류  
@@ -80,17 +85,17 @@ caps.handback.revision: 12
   
 -   CPU 또는 디스크 오버로드, 꽉 찬 트랜잭션 로그 또는 시스템의 메모리나 스레드 부족과 같은 컴퓨팅 리소스 부족. 이런 경우에는 제한 시간을 늘이거나, 작업을 줄이거나, 작업을 처리할 수 있도록 하드웨어를 변경해야 합니다.  
   
-### 세션 제한 시간 메커니즘  
- 소프트 오류는 서버 인스턴스에서 직접 감지되지 않으므로 소프트 오류 발생 시 가용성 복제본이 세션 내 다른 가용성 복제본의 응답을 무기한 대기할 수 있습니다. 이를 방지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 연결된 가용성 복제본을 기반으로 열려 있는 각 연결에서 일정한 간격으로 ping을 보내는 제한 시간 메커니즘을 구현합니다. 제한 시간 내에 ping을 받은 경우 연결이 열려 있으며 서버 인스턴스가 해당 연결을 통해 통신하고 있음을 나타냅니다. ping을 받으면 복제본은 해당 연결의 제한 시간 카운터를 다시 설정합니다. 가용성 모드와 세션 시간 초과의 관계에 대한 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요.  
+### <a name="the-session-timeout-mechanism"></a>세션 제한 시간 메커니즘  
+ 소프트 오류는 서버 인스턴스에서 직접 감지되지 않으므로 소프트 오류 발생 시 가용성 복제본이 세션 내 다른 가용성 복제본의 응답을 무기한 대기할 수 있습니다. 이를 방지하기 위해 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 연결된 가용성 복제본을 기반으로 열려 있는 각 연결에서 일정한 간격으로 ping을 보내는 제한 시간 메커니즘을 구현합니다. 제한 시간 내에 ping을 받은 경우 연결이 열려 있으며 서버 인스턴스가 해당 연결을 통해 통신하고 있음을 나타냅니다. ping을 받으면 복제본은 해당 연결의 제한 시간 카운터를 다시 설정합니다. 가용성 모드와 세션 시간 초과의 관계에 대한 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요.  
   
  주 복제본과 보조 복제본은 서로에 대해 ping을 수행하여 자신이 아직 활성 상태임을 나타내며 세션 제한 시간은 이들 복제본이 상대 복제본의 ping을 무기한 수신 대기하지 않도록 합니다. 세션 제한 시간은 사용자가 구성 가능한 복제본 속성이며 기본값은 0초입니다. 제한 시간 내에 ping을 받은 경우 연결이 열려 있으며 서버 인스턴스가 해당 연결을 통해 통신하고 있음을 나타냅니다. ping을 받으면 가용성 복제본은 해당 연결의 제한 시간 카운터를 다시 설정 합니다.  
   
  세션 제한 시간 내에 다른 복제본으로부터 ping을 받지 못하면 연결 시간이 초과됩니다. 그러면 연결이 닫히고 시간 초과된 해당 복제본은 DISCONNECTED 상태로 됩니다. 연결이 끊어진 복제본이 동기 커밋 모드로 구성되어 있더라도 트랜잭션에서는 해당 복제본이 다시 연결되어 다시 동기화될 때까지 대기하지 않습니다.  
   
-## 오류에 대한 응답  
+## <a name="responding-to-an-error"></a>오류에 대한 응답  
  오류 유형에 관계없이 오류를 감지하는 서버 인스턴스는 인스턴스의 역할, 세션의 가용성 모드 및 세션 내 다른 연결의 상태를 기반으로 적절하게 오류에 응답합니다. 파트너 손실로 인해 발생하는 상황에 대한 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
  **제한 시간 값을 변경하려면(동기 커밋 가용성 모드 전용)**  
   
 -   [가용성 복제본에 대한 세션 제한 시간 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
@@ -99,7 +104,8 @@ caps.handback.revision: 12
   
 -   [sys.availability_replicas&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)에서 **session_timeout**을 쿼리합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

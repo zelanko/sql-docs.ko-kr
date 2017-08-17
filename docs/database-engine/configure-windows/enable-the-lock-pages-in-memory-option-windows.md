@@ -1,24 +1,29 @@
 ---
-title: "Lock Pages in Memory 옵션 설정(Windows) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Lock Pages in Memory 옵션"
+title: "메모리에 페이지 잠금 옵션 설정(Windows) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Lock Pages in Memory option
 ms.assetid: cd581fbc-4747-439e-87f9-2f18e39c5bb9
 caps.latest.revision: 35
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f62d2e7f2187433acdaf775d0835b1f5f7d6e5a3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Lock Pages in Memory 옵션 설정(Windows)
+# <a name="enable-the-lock-pages-in-memory-option-windows"></a>Lock Pages in Memory 옵션 설정(Windows)
   이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다.  
   
 > [!NOTE]  
@@ -26,7 +31,7 @@ caps.handback.revision: 35
   
  Windows 그룹 정책 도구(gpedit.msc)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 사용되는 계정에 대해 이 정책을 설정할 수 있습니다. 이 정책을 변경하려면 시스템 관리자여야 합니다.  
   
-### 메모리의 페이지 잠금 옵션을 설정하려면  
+### <a name="to-enable-the-lock-pages-in-memory-option"></a>메모리의 페이지 잠금 옵션을 설정하려면  
   
 1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에 **gpedit.msc**를 입력합니다.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 35
   
 8.  이 변경 사항을 적용하려면 로그아웃한 다음 다시 로그인합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [서버 메모리 서버 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md)  
   
   

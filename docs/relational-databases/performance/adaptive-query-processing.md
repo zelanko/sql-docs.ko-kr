@@ -2,7 +2,7 @@
 title: "Microsoft SQL 데이터베이스의 적응 쿼리 처리 | Microsoft Docs | Microsoft Docs"
 description: "SQL Server 2017 이상 및 Azure SQL Database에서 쿼리 성능을 향상시키는 적응 쿼리 처리 기능입니다."
 ms.custom: 
-ms.date: 07/19/2017
+ms.date: 08/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: joesackmsft
 ms.author: josack;monicar
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf8509cab2424529ca0ed16c936fa63a139dfca4
-ms.openlocfilehash: eff546e84d3f872406136f68a7fdbbd8147175ca
+ms.sourcegitcommit: d6cf5e76f4edac2aed3842870fdb0362b9661802
+ms.openlocfilehash: b609b1895637dd90cc3fc94422012c5bf4b4bd81
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 
@@ -101,10 +101,10 @@ WHERE   [fo].[Quantity] = 360;
 ![쿼리 결과 336개 행](./media/4_AQPStats336Rows.png)
 
 계획에 다음이 표시됩니다.
-- 해시 조인 빌드 단계에 대한 행을 제공하는 데 사용되는 columnstore 인덱스 검색이 있습니다.
-- 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다.  이 예제에서 임계값은 78개 행입니다.  &gt;= 78개 행이면 모두 해시 조인을 사용합니다.  임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
-- 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여 줍니다.
-- 마지막 분기는 임계값을 초과하지 않을 경우 중첩된 루프 조인에서 사용하기 위한 Clustered Index Seek입니다. "0/336"개 행이 표시됩니다(분기가 사용되지 않음).
+1. 해시 조인 빌드 단계에 대한 행을 제공하는 데 사용되는 columnstore 인덱스 검색이 있습니다.
+1. 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다.  이 예제에서 임계값은 78개 행입니다.  &gt;= 78개 행이면 모두 해시 조인을 사용합니다.  임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
+1. 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여 줍니다.
+1. 마지막 분기는 임계값을 초과하지 않을 경우 중첩된 루프 조인에서 사용하기 위한 Clustered Index Seek입니다. "0/336"개 행이 표시됩니다(분기가 사용되지 않음).
  이제 계획과 동일한 쿼리를 비교해 보겠습니다. 하지만 이번에는 테이블에 하나의 행만 있는 Quantity 값에 대해 쿼리합니다.
  
 ```sql

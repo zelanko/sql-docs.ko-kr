@@ -1,29 +1,34 @@
 ---
 title: "가용성 그룹 모니터링(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "가용성 그룹 [SQL Server], 모니터링"
-  - "동적 관리 뷰 [SQL Server], AlwaysOn 가용성 그룹"
-  - "가용성 그룹 [SQL Server], 가용성 복제본"
-  - "가용성 그룹 [SQL Server], 수신기"
-  - "가용성 그룹 [SQL Server], 데이터베이스"
-  - "카탈로그 뷰 [SQL Server], AlwaysOn 가용성 그룹"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], monitoring
+- dynamic management views [SQL Server], AlwaysOn Availability Groups
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], listeners
+- Availability Groups [SQL Server], databases
+- catalog views [SQL Server], AlwaysOn Availability Groups
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 caps.latest.revision: 49
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3eee47f8a0a3a032e9ccf74600769c8f7388bbb1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 그룹 모니터링(Transact-SQL)
+# <a name="monitor-availability-groups-transact-sql"></a>가용성 그룹 모니터링(Transact-SQL)
   [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 가용성 그룹, 복제본 및 연결된 데이터베이스를 모니터링할 수 있도록 여러 카탈로그 및 동적 관리 뷰와 서버 속성을 제공합니다. [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT 문을 사용하여 뷰를 통해 가용성 그룹과 해당 복제본 및 데이터베이스를 모니터링할 수 있습니다. 지정된 가용성 그룹에 대해 반환되는 정보는 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 주 복제본을 호스팅 중인지 아니면 보조 복제본을 호스팅 중인지에 따라 다릅니다.  
   
 > [!TIP]  
@@ -56,7 +61,7 @@ caps.handback.revision: 49
  서버 인스턴스의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능을 모니터링하려면 다음 기본 제공 함수를 사용합니다.  
   
  [SERVERPROPERTY](../../../t-sql/functions/serverproperty-transact-sql.md) 함수  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용할지 여부와 사용할 경우 서버 인스턴스에서 시작되었는지 여부에 대한 서버 속성 정보를 반환합니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용할지 여부와 사용할 경우 서버 인스턴스에서 시작되었는지 여부에 대한 서버 속성 정보를 반환합니다.  
   
  **열 이름:** IsHadrEnabled, HadrManagerStatus  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 49
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 사용되는 로컬 서버 인스턴스를 호스팅하는 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터를 모니터링하려면 다음 뷰를 사용합니다.  
   
  [sys.dm_hadr_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql.md)  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]을 사용하여 SQL Server 인스턴스를 호스트하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에 WSFC 쿼럼이 있는 경우 **sys.dm_hadr_cluster**는 쿼럼에 대한 클러스터 이름과 정보를 표시하는 행을 반환합니다. WSFC 노드에 쿼럼이 없으면 반환되는 행이 없습니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 사용하여 SQL Server 인스턴스를 호스트하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 노드에 WSFC 쿼럼이 있는 경우 **sys.dm_hadr_cluster** 는 쿼럼에 대한 클러스터 이름과 정보를 표시하는 행을 반환합니다. WSFC 노드에 쿼럼이 없으면 반환되는 행이 없습니다.  
   
  **열 이름:** cluster_name, quorum_type, quorum_type_desc, quorum_state, quorum_state_desc  
   
@@ -103,7 +108,7 @@ caps.handback.revision: 49
  서버 인스턴스가 가용성 복제본을 호스팅하는 가용성 그룹을 모니터링하려면 다음 뷰를 사용합니다.  
   
  [sys.availability_groups](../../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로컬 인스턴스에서 가용성 복제본을 호스팅하는 각 가용성 그룹에 대해 하나의 행을 반환합니다. 각 행에는 가용성 그룹 메타데이터의 캐시된 복사본이 포함됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 인스턴스에서 가용성 복제본을 호스팅하는 각 가용성 그룹에 대해 하나의 행을 반환합니다. 각 행에는 가용성 그룹 메타데이터의 캐시된 복사본이 포함됩니다.  
   
  **열 이름:** group_id, name, resource_id, resource_group_id, failure_condition_level, health_check_timeout, automated_backup_preference, automated_backup_preference_desc  
   
@@ -117,26 +122,26 @@ caps.handback.revision: 49
   
  **열 이름:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> 가용성 복제본 모니터링  
+##  <a name="AvReplicas"></a> sys.dm_hadr_availability_replica_cluster_states  
  가용성 복제본을 모니터링하려면 다음 뷰와 시스템 함수를 사용합니다.  
   
  [sys.availability_replicas](../../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로컬 인스턴스에서 가용성 복제본을 호스팅하는 각 가용성 그룹의 모든 가용성 복제본에 대해 하나의 행을 반환합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 인스턴스에서 가용성 복제본을 호스팅하는 각 가용성 그룹의 모든 가용성 복제본에 대해 하나의 행을 반환합니다.  
   
  **열 이름:** replica_id, group_id, replica_metadata_id, replica_server_name, owner_sid, endpoint_url, availability_mode, availability_mode_desc, failover_mode, failover_mode_desc, session_timeout, primary_role_allow_connections, primary_role_allow_connections_desc, secondary_role_allow_connections, secondary_role_allow_connections_desc, create_date, modify_date, backup_priority, read_only_routing_url  
   
  [sys.availability_read_only_routing_lists](../../../relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql.md)  
- WSFC 장애 조치(failover) 클러스터의 Always On 가용성 그룹에서 각각의 가용성 복제본의 읽기 전용 라우팅 목록에 대한 행을 반환합니다.  
+ WSFC 장애 조치(Failover) 클러스터의 Always On 가용성 그룹에서 각각의 가용성 복제본의 읽기 전용 라우팅 목록에 대한 행을 반환합니다.  
   
  **열 이름:** replica_id, routing_priority, read_only_replica_id  
   
  [sys.dm_hadr_availability_replica_cluster_nodes](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql.md)  
- WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터에 있는 Always On 가용성 그룹의 모든 가용성 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
+ WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 Always On 가용성 그룹의 모든 가용성 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
   
  **열 이름:** group_name, replica_server_name, node_name  
   
  [sys.dm_hadr_availability_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql.md)  
- WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터에 있는 모든 Always On 가용성 그룹(복제본 위치에 상관없음)의 각 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
+ WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 모든 Always On 가용성 그룹(복제본 위치에 상관없음)의 각 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
   
  **열 이름:** replica_id, replica_server_name, group_id, join_state, join_state_desc  
   
@@ -149,12 +154,12 @@ caps.handback.revision: 49
  현재 복제본이 기본 백업 복제본인지 여부를 결정합니다.  
   
 > [!NOTE]  
->  가용성 복제본의 성능 카운터(**SQLServer:가용성 복제본** 성능 개체)에 대한 자세한 내용은 [SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)을 참조하세요.  
+>  가용성 복제본의 성능 카운터( **SQLServer:가용성 복제본**  성능 개체)에 대한 자세한 내용은 [SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)을 참조하세요.  
   
-##  <a name="AvDbs"></a> 가용성 데이터베이스 모니터링  
+##  <a name="AvDbs"></a> sys.dm_hadr_database_replica_cluster_states  
  가용성 데이터베이스를 모니터링하려면 다음 뷰를 사용합니다.  
   
- [sys.availability_databases_cluster](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
+ [가용성 데이터베이스 모니터링](../../../relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql.md)  
  로컬 복사본 데이터베이스가 가용성 그룹에 조인되어 있는지 여부에 상관없이 클러스터의 모든 Always On 가용성 그룹의 일부인 SQL Server 인스턴스의 데이터베이스별로 하나의 행을 포함합니다.  
   
 > [!NOTE]  
@@ -163,7 +168,7 @@ caps.handback.revision: 49
  **열 이름:** group_id, group_database_id, database_name  
   
  [sys.databases](../../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 각 데이터베이스당 한 개의 행을 포함합니다. 데이터베이스가 가용성 복제본에 속하는 경우 해당 데이터베이스의 행에 복제본의 GUID와 가용성 그룹 내의 데이터베이스에 대한 고유 식별자가 표시됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스의 각 데이터베이스당 한 개의 행을 포함합니다. 데이터베이스가 가용성 복제본에 속하는 경우 해당 데이터베이스의 행에 복제본의 GUID와 가용성 그룹 내의 데이터베이스에 대한 고유 식별자가 표시됩니다.  
   
  **[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 열 이름:** replica_id, group_database_id  
   
@@ -173,11 +178,11 @@ caps.handback.revision: 49
  **열 이름:** database_id, file_id, page_id, error_type, page_status, modification_time  
   
  [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 로컬 인스턴스가 가용성 복제본을 호스팅 중인 모든 가용성 그룹에 참여하는 각 데이터베이스에 대해 하나의 행을 반환합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 로컬 인스턴스가 가용성 복제본을 호스팅 중인 모든 가용성 그룹에 참여하는 각 데이터베이스에 대해 하나의 행을 반환합니다.  
   
  **열 이름:** database_id, group_id, replica_id, group_database_id, is_local, synchronization_state, synchronization_state_desc, is_commit_participant, synchronization_health, synchronization_health_desc, database_state, database_state_desc, is_suspended, suspend_reason, suspend_reason_desc, recovery_lsn, truncation_lsn, last_sent_lsn, last_sent_time, last_received_lsn, last_received_time, last_hardened_lsn, last_hardened_time, last_redone_lsn, last_redone_time, log_send_queue_size, log_send_rate, redo_queue_size, redo_rate, filestream_send_rate, end_of_log_lsn, last_commit_lsn, last_commit_time, low_water_mark_for_ghosts  
   
- [sys.dm_hadr_database_replica_cluster_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)  
+ [sys.availability_databases_cluster](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql.md)  
  WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 각 가용성 그룹에 있는 가용성 데이터베이스의 상태를 파악하는 데 필요한 정보가 들어 있는 행을 반환합니다. 이 동적 관리 뷰는 장애 조치(failover)를 계획 또는 이에 응답하거나 지정된 주 데이터베이스의 로그 잘림을 보유 중인 가용성 그룹의 보조 복제본을 검색하는 데 유용합니다.  
   
  **열 이름:** replica_id, group_database_id, database_name, is_failover_ready, is_pending_secondary_suspend, is_database_joined, recovery_lsn, truncation_lsn  
@@ -186,7 +191,7 @@ caps.handback.revision: 49
 >  주 복제본 위치는 가용성 그룹의 권한이 있는 원본입니다.  
   
 > [!NOTE]  
->  가용성 데이터베이스의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 성능 카운터(**SQLServer:Database Replica** 성능 개체)에 대한 자세한 내용은 [SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)을 참조하세요. 또한 가용성 데이터베이스에서 트랜잭션 로그 작업을 모니터링하려면 **SQLServer:Databases** 성능 개체의 **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**, **Log Pool Requests/sec** 카운터를 사용합니다. 자세한 내용은 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)을 참조하세요.  
+>  가용성 데이터베이스의 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 성능 카운터( **SQLServer:Database Replica** 성능 개체)에 대한 자세한 내용은 [SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)을 참조하세요. 또한 가용성 데이터베이스에서 트랜잭션 로그 작업을 모니터링하려면 **SQLServer:Databases** 성능 개체의 **Log Flush Write Time (ms)**, **Log Flushes/sec**, **Log Pool Cache Misses/sec**, **Log Pool Disk Reads/sec**, **Log Pool Requests/sec**카운터를 사용합니다. 자세한 내용은 [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)을 참조하세요.  
   
 ##  <a name="AGlisteners"></a> 가용성 그룹 수신기 모니터링  
  WSFC 클러스터의 서브넷에서 가용성 그룹 수신기를 모니터링하려면 다음 뷰를 사용합니다.  
@@ -208,12 +213,12 @@ caps.handback.revision: 49
   
  **기본 키:** listener_id  
   
- 가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)를 참조하세요.  
+ 가용성 그룹 수신기에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)를 참조하세요.  
   
-##  <a name="RelatedTasks"></a> 관련 태스크  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **Always On 가용성 그룹 모니터링 태스크:**  
   
--   [개체 탐색기 정보를 사용하여 가용성 그룹 모니터링&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use object explorer details to monitor availability groups.md)  
+-   [개체 탐색기 정보를 사용하여 가용성 그룹 모니터링&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md)  
   
 -   [가용성 그룹 속성 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)  
   
@@ -279,9 +284,9 @@ caps.handback.revision: 49
   
 -   [SQL Server, 가용성 복제본](../../../relational-databases/performance-monitor/sql-server-availability-replica.md)  
   
--   [SQL Serve, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
+-   [SQL Server, 데이터베이스 복제본](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, Databases 개체](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
+-   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
  **Always On 가용성 그룹에 대한 정책 기반 관리**  
   
@@ -289,9 +294,10 @@ caps.handback.revision: 49
   
 -   [Always On 대시보드 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

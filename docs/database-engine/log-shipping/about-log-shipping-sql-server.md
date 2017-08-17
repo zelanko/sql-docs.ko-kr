@@ -1,37 +1,42 @@
 ---
 title: "로그 전달 정보(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보조 서버 [SQL Server]"
-  - "로그 전달 [SQL Server], 작업"
-  - "복사 작업 [SQL Server]"
-  - "주 데이터베이스 [SQL Server]"
-  - "로그 전달 [SQL Server], 모니터링"
-  - "로그 전달 [SQL Server], 로그 전달 정보"
-  - "경고 작업 [SQL Server]"
-  - "가용성 [SQL Server]"
-  - "작업 [SQL Server], 로그 전달"
-  - "모니터 서버 [SQL Server]"
-  - "복원 작업 [SQL Server]"
-  - "로그 전달 [SQL Server]"
-  - "백업 작업 [SQL Server]"
-  - "주 서버 [SQL Server]"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- log shipping [SQL Server], jobs
+- copy jobs [SQL Server]
+- primary databases [SQL Server]
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], about log shipping
+- alert jobs [SQL Server]
+- availability [SQL Server]
+- jobs [SQL Server], log shipping
+- monitor servers [SQL Server]
+- restore jobs [SQL Server]
+- log shipping [SQL Server]
+- backup jobs [SQL Server]
+- primary servers [SQL Server]
 ms.assetid: 55da6b94-3a4b-4bae-850f-4bf7f6e918ca
 caps.latest.revision: 65
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 65
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: dd5412ff60f00e648452796423fcf715d8e56168
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 로그 전달 정보(SQL Server)
+# <a name="about-log-shipping-sql-server"></a>로그 전달 정보(SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달을 사용하면 *주 서버* 인스턴스의 *주 데이터베이스* 에서 별도의 *보조 서버* 인스턴스에 있는 하나 이상의 *보조 데이터베이스* 로 트랜잭션 로그 백업을 자동으로 보낼 수 있습니다. 트랜잭션 로그 백업은 각 보조 데이터베이스에 개별적으로 적용됩니다. *모니터 서버*라는 선택적인 세 번째 서버 인스턴스는 백업 및 복원 작업의 기록과 상태를 기록하고 예약된 대로 작업이 실행되지 않으면 선택적으로 경고를 발생시킵니다.  
   
  **항목 내용**  
@@ -55,20 +60,20 @@ caps.handback.revision: 65
 -   주 서버가 주 데이터베이스의 로그를 백업하는 시점과 보조 서버가 로그 백업을 복원(적용)해야 할 시점 사이에 사용자 지정 지연을 설정할 수 있습니다. 예를 들어 주 데이터베이스에서 데이터가 실수로 변경된 경우 지연이 더 길면 도움이 될 수 있습니다. 실수로 변경된 내용을 빨리 발견하면 변경 내용이 반영되기 전에 보조 데이터베이스에서 아직 변경되지 않은 데이터를 지연 덕분에 검색할 수 있습니다.  
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
- 주 서버(primary server)  
- 프로덕션 서버인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스입니다.  
-  
  주 데이터베이스  
- 다른 서버에 백업할 주 서버의 데이터베이스입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 통한 로그 전달 구성의 모든 관리는 주 데이터베이스에서 수행됩니다.  
+ 프로덕션 서버인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스입니다.  
   
- 보조 서버(secondary server)  
- 주 데이터베이스의 웜 대기 복사본을 보관할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스입니다.  
+ 주 서버  
+ 다른 서버에 백업할 주 서버의 데이터베이스입니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 통한 로그 전달 구성의 모든 관리는 주 데이터베이스에서 수행됩니다.  
+  
+ 보조 데이터베이스  
+ 주 데이터베이스의 웜 대기 복사본을 보관할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스입니다.  
   
  보조 데이터베이스  
  주 데이터베이스의 웜 대기 복사본입니다. 보조 데이터베이스는 제한된 읽기 전용 액세스에 사용 가능한 데이터베이스를 유지하는 RECOVERING 상태 또는 STANDBY 상태에 있을 수 있습니다.  
   
- 모니터 서버(monitor server)  
- 로그 전달의 자세한 내용을 모두 추적하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 선택적 인스턴스입니다.  
+ 모니터 서버  
+ 로그 전달의 자세한 내용을 모두 추적하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 선택적 인스턴스입니다.  
   
 -   주 데이터베이스의 트랜잭션 로그가 마지막으로 백업된 시간  
   
@@ -111,7 +116,7 @@ caps.handback.revision: 65
   
  또한 로그 전달 구성에 대해 경고를 구성할 수 있습니다.  
   
-### 일반적인 로그 전달 구성  
+### <a name="a-typical-log-shipping-configuration"></a>일반적인 로그 전달 구성  
  다음 그림에서는 주 서버 인스턴스, 보조 서버 인스턴스 3개 및 모니터 서버 인스턴스로 이루어진 로그 전달 구성을 보여 줍니다. 이 그림에서는 백업, 복사 및 복원 작업에서 수행된 단계를 다음과 같이 설명합니다.  
   
 1.  주 서버 인스턴스는 백업 작업을 실행하여 주 데이터베이스의 트랜잭션 로그를 백업합니다. 그런 다음 로그 백업을 주 로그 백업 파일에 저장하고 해당 파일을 백업 폴더로 보냅니다.  이 그림에서 백업 폴더는 공유 디렉터리인 *백업 공유*에 있습니다.  
@@ -122,12 +127,12 @@ caps.handback.revision: 65
   
  주 서버 인스턴스와 보조 서버 인스턴스는 자체 기록 및 상태를 모니터 서버 인스턴스로 보냅니다.  
   
- ![백업, 복사 & 복원 작업을 보여 주는 구성](../../database-engine/log-shipping/media/ls-typical-configuration.gif "백업, 복사 & 복원 작업을 보여 주는 구성")  
+ ![백업, 복사 및 복원 작업을 보여 주는 구성](../../database-engine/log-shipping/media/ls-typical-configuration.gif "백업, 복사 및 복원 작업을 보여 주는 구성")  
   
 ##  <a name="Interoperability"></a> 상호 운용성  
- 로그 전달은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능 또는 구성 요소와 함께 사용할 수 있습니다.  
+ 로그 전달은 다음의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]기능 또는 구성 요소와 함께 사용할 수 있습니다.  
   
--   [로그 전달에서 Always On 가용성 그룹으로 마이그레이션하기 위한 필수 조건&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs migrating log shipping to always on availability groups.md)  
+-   [로그 전달에서 Always On 가용성 그룹으로 마이그레이션하기 위한 필수 조건&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
 -   [데이터베이스 미러링 및 로그 전달&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
@@ -158,7 +163,8 @@ caps.handback.revision: 65
   
 -   [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

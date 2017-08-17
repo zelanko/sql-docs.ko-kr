@@ -1,25 +1,30 @@
 ---
 title: "로그 전달 구성(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 전달 [SQL Server], 활성화"
-  - "로그 전달 [SQL Server], 구성"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], enabling
+- log shipping [SQL Server], configuring
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 caps.latest.revision: 42
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 42
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: a1703b56628ba9c509f66cb3d722e6636bd29486
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 로그 전달 구성(SQL Server)
+# <a name="configure-log-shipping-sql-server"></a>로그 전달 구성(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 로그 전달을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -47,7 +52,7 @@ caps.handback.revision: 42
   
 -   주 데이터베이스는 전체 또는 대량 로그 복구 모델이어야 합니다. 데이터베이스를 단순 복구로 전환하면 로그 전달이 작동하지 않습니다.  
   
--   로그 전달을 구성하려면 먼저 공유를 만들어 트랜잭션 로그 백업을 보조 서버에서 사용할 수 있도록 설정해야 합니다. 이 공유는 트랜잭션 로그 백업이 생성될 디렉터리의 공유입니다. 예를 들어 트랜잭션 로그를 c:\data\tlogs\\ 디렉터리로 백업할 경우 이 디렉터리의 \\\\*primaryserver*\tlogs 공유를 만들 수 있습니다.  
+-   로그 전달을 구성하려면 먼저 공유를 만들어 트랜잭션 로그 백업을 보조 서버에서 사용할 수 있도록 설정해야 합니다. 이 공유는 트랜잭션 로그 백업이 생성될 디렉터리의 공유입니다. 예를 들어 트랜잭션 로그를 c:\data\tlogs\\디렉터리로 백업할 경우 이 디렉터리의 \\\\*primaryserver*\tlogs 공유를 만들 수 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 42
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 로그 전달을 구성하려면  
+#### <a name="to-configure-log-shipping"></a>로그 전달을 구성하려면  
   
 1.  로그 전달 구성에서 주 데이터베이스로 사용하려는 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -125,27 +130,27 @@ caps.handback.revision: 42
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 로그 전달을 구성하려면  
+#### <a name="to-configure-log-shipping"></a>로그 전달을 구성하려면  
   
 1.  보조 서버에서 주 데이터베이스의 전체 백업을 복원하는 방법으로 보조 데이터베이스를 시작합니다.  
   
-2.  주 서버에서 [sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md)를 실행하여 주 데이터베이스를 추가합니다. 저장 프로시저는 백업 작업 ID 및 주 ID를 반환합니다.  
+2.  주 서버에서 [sp_add_log_shipping_primary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md) 를 실행하여 주 데이터베이스를 추가합니다. 저장 프로시저는 백업 작업 ID 및 주 ID를 반환합니다.  
   
-3.  주 서버에서 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)을 실행하여 백업 작업에 대한 일정을 추가합니다.  
+3.  주 서버에서 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) 을 실행하여 백업 작업에 대한 일정을 추가합니다.  
   
-4.  모니터 서버에서 [sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md)을 실행하여 경고 작업을 추가합니다.  
+4.  모니터 서버에서 [sp_add_log_shipping_alert_job](../../relational-databases/system-stored-procedures/sp-add-log-shipping-alert-job-transact-sql.md) 을 실행하여 경고 작업을 추가합니다.  
   
 5.  주 서버에서 백업 작업을 활성화합니다.  
   
-6.  보조 서버에서 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)를 실행하여 주 서버와 데이터베이스에 대한 세부 정보를 제공합니다. 이 저장 프로시저는 보조 ID와 복사 및 복원 작업 ID를 반환합니다.  
+6.  보조 서버에서 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) 를 실행하여 주 서버와 데이터베이스에 대한 세부 정보를 제공합니다. 이 저장 프로시저는 보조 ID와 복사 및 복원 작업 ID를 반환합니다.  
   
-7.  보조 서버에서 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)을 실행하여 복사 및 복원 작업의 일정을 설정합니다.  
+7.  보조 서버에서 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) 을 실행하여 복사 및 복원 작업의 일정을 설정합니다.  
   
-8.  보조 서버에서 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)를 실행하여 보조 데이터베이스를 추가합니다.  
+8.  보조 서버에서 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md) 를 실행하여 보조 데이터베이스를 추가합니다.  
   
-9. 주 서버에서 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)를 실행하여 새 보조 데이터베이스에 대한 필요 정보를 주 서버에 추가합니다.  
+9. 주 서버에서 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) 를 실행하여 새 보조 데이터베이스에 대한 필요 정보를 주 서버에 추가합니다.  
   
-10. 보조 서버에서 복사 및 복원 작업을 활성화합니다. 자세한 내용은 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
+10. 보조 서버에서 복사 및 복원 작업을 활성화합니다. 자세한 내용은 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)을 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
@@ -161,9 +166,9 @@ caps.handback.revision: 42
   
 -   [로그 전달 모니터링&#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
--   [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [로그 전달 테이블 및 저장 프로시저](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

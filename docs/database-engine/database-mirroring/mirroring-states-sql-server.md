@@ -1,32 +1,37 @@
 ---
 title: "미러링 상태(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "상태 [SQL Server], 데이터베이스 미러링"
-  - "PENDING_FAILOVER 상태"
-  - "미러링 상태 [SQL Server]"
-  - "DISCONNECTED 상태"
-  - "SYNCHRONIZING 상태"
-  - "SYNCHRONIZED 상태"
-  - "SUSPENDED 상태"
-  - "데이터베이스 미러링 [SQL Server], 상태"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- states [SQL Server], database mirroring
+- PENDING_FAILOVER state
+- mirroring states [SQL Server]
+- DISCONNECTED state
+- SYNCHRONIZING state
+- SYNCHRONIZED state
+- SUSPENDED state
+- database mirroring [SQL Server], states
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ba32ea70f2a3d04753dd3860a798f8673fad032a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 미러링 상태(SQL Server)
-  데이터베이스 미러링 세션 동안 미러된 데이터베이스는 항상 특정 상태(*미러링 상태*)가 됩니다. 이러한 데이터베이스의 상태는 통신 상태, 데이터 흐름 및 파트너 간의 데이터 차이를 반영합니다. 데이터베이스 미러링 세션은 주 데이터베이스와 같은 상태가 됩니다.  
+# <a name="mirroring-states-sql-server"></a>미러링 상태(SQL Server)
+  데이터베이스 미러링 세션 동안 미러된 데이터베이스는 항상 특정 상태( *미러링 상태*)가 됩니다. 이러한 데이터베이스의 상태는 통신 상태, 데이터 흐름 및 파트너 간의 데이터 차이를 반영합니다. 데이터베이스 미러링 세션은 주 데이터베이스와 같은 상태가 됩니다.  
   
  데이터베이스 미러링 세션 동안 서버 인스턴스는 서로를 모니터링합니다. 파트너는 미러링 상태를 사용하여 데이터베이스를 모니터링합니다. PENDING_FAILOVER 상태를 제외하고 주 데이터베이스와 미러 데이터베이스는 항상 동일한 상태입니다. 세션에 미러링 모니터 서버가 설정되어 있으면 각 파트너는 연결 상태(CONNECTED 또는 DISCONNECTED)를 사용하여 미러링 모니터 서버를 모니터링합니다.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 39
 |PENDING_FAILOVER|이 상태는 장애 조치가 시작되었지만 미러 역할로 전환되지 않은 주 서버에서만 나타납니다.<br /><br /> 장애 조치가 시작되면 주 데이터베이스는 PENDING_FAILOVER 상태가 되고 모든 사용자 연결을 신속하게 종료한 후 즉시 미러 역할을 수행합니다.|  
 |DISCONNECTED|해당 파트너와 다른 파트너의 통신이 끊어진 상태입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

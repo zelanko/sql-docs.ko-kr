@@ -1,25 +1,30 @@
 ---
 title: "ODBC 데이터 원본 관리자 열기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/07/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "ODBC 데이터 원본 관리자"
-  - "ODBC 데이터 원본 관리자 열기"
+ms.custom: 
+ms.date: 11/07/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ODBC Data Source Administrator
+- opening ODBC Data Source Administrator
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 caps.latest.revision: 16
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e1fd0e266e1b233d23f299aa5248fc015d98efb8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# ODBC 데이터 원본 관리자 열기
+# <a name="open-the-odbc-data-source-administrator"></a>ODBC 데이터 원본 관리자 열기
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   이 항목에서는 ODBC 데이터 원본 관리자를 여는 방법에 대해 설명합니다. ODBC 데이터 원본 관리자는 Windows 구성 요소입니다. ODBC 데이터 원본 관리자를 사용하여 ODBC 데이터 원본을 만들고 관리할 수 있습니다.  
@@ -28,7 +33,7 @@ caps.handback.revision: 16
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-10"></a>Windows 10에서 ODBC 데이터 원본 관리자를 열려면   
 
-1.  **시작** 페이지에서 **ODBC 데이터 원본**을 입력합니다. *ODBC 데이터 원본 데스크톱 응용 프로그램*이 선택 항목으로 표시됩니다. 
+1.  **시작** 페이지에서 **ODBC 데이터 원본**을 입력합니다. *ODBC 데이터 원본 데스크톱 응용 프로그램* 이 선택 항목으로 표시됩니다. 
 
   
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-7"></a>Windows 7에서 ODBC 데이터 원본 관리자를 열려면  
@@ -52,3 +57,4 @@ caps.handback.revision: 16
  [ODBC SQL Server 드라이버 버전 검사&#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   
+

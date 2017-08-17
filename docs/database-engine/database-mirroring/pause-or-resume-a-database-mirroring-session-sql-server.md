@@ -1,28 +1,33 @@
 ---
 title: "데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 재개"
-  - "데이터베이스 미러링 [SQL Server], 세션"
-  - "데이터베이스 미러링 [SQL Server], 일시 중지"
-  - "데이터베이스 미러링 [SQL Server], 재개"
-  - "데이터베이스 미러링 일시 중지"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- resuming database mirroring
+- database mirroring [SQL Server], sessions
+- database mirroring [SQL Server], pausing
+- database mirroring [SQL Server], resuming
+- pausing database mirroring
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c8cb7cac464772284682e74d2f8157df190adcef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server)
+# <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션 일시 중지 또는 재개(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 미러링을 일시 중지하거나 재개하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  데이터베이스 미러링 세션을 일시 중지하거나 재개하려면 **데이터베이스 속성 미러링** 페이지를 사용하세요.  
   
-#### 데이터베이스 미러링을 일시 중지 또는 재개하려면  
+#### <a name="to-pause-or-resume-database-mirroring"></a>데이터베이스 미러링을 일시 중지 또는 재개하려면  
   
 1.  데이터베이스 미러링 세션 중에 주 서버 인스턴스에 연결하고 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 34
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 데이터베이스 미러링을 일시 중지하려면  
+#### <a name="to-pause-database-mirroring"></a>데이터베이스 미러링을 일시 중지하려면  
   
 1.  한 파트너에 대한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결합니다.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 34
   
      ALTER DATABASE *database_name* SET PARTNER SUSPEND  
   
-     여기서 *database_name*은 일시 중지할 세션이 있는 미러된 데이터베이스입니다.  
+     여기서 *database_name* 은 일시 중지할 세션이 있는 미러된 데이터베이스입니다.  
   
      다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 일시 중지합니다.  
   
@@ -89,7 +94,7 @@ caps.handback.revision: 34
     ALTER DATABASE AdventureWorks2012 SET PARTNER SUSPEND;  
     ```  
   
-##### 데이터베이스 미러링을 재개하려면  
+##### <a name="to-resume-database-mirroring"></a>데이터베이스 미러링을 재개하려면  
   
 1.  한 파트너에 대한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결합니다.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 34
   
      ALTER DATABASE *database_name* SET PARTNER RESUME  
   
-     여기서 *database_name*은 세션을 재개하려는 미러된 데이터베이스입니다.  
+     여기서 *database_name* 은 세션을 재개하려는 미러된 데이터베이스입니다.  
   
      다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 일시 중지합니다.  
   
@@ -111,7 +116,7 @@ caps.handback.revision: 34
   
 -   **데이터베이스 미러링을 일시 중지한 후**  
   
-     주 데이터베이스에서 전체 트랜잭션 로그를 피하기 위해 예방 조치를 취해야 합니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
+     주 데이터베이스에서 전체 트랜잭션 로그를 피하기 위해 예방 조치를 취해야 합니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
 -   **데이터베이스 미러링을 재개한 후**  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 34
   
 -   [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

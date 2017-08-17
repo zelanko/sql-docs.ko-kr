@@ -1,24 +1,29 @@
 ---
 title: "경고 임계값 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.setwarningthreshold.f1"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.setwarningthreshold.f1
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 caps.latest.revision: 28
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b82e8ee22179c71ef30475ff3ac9d0fd3fdcbe38
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 경고 임계값 설정
+# <a name="set-warning-thresholds"></a>경고 임계값 설정
   이 대화 상자를 사용하여 **데이터베이스 미러링 모니터** 대화 상자의 탐색 트리에서 선택한 데이터베이스에 대한 하나 이상의 경고 임계값을 설정 및 구성할 수 있습니다.  
   
  이 대화 상자는 두 서버 인스턴스에 연결을 시도합니다. 이러한 연결은 비동기적으로 설정됩니다. 이 대화 상자에는 각 파트너의 연결 상태가 표시됩니다. 파트너가 연결되지 않은 경우 **연결**을 클릭할 수 있습니다.  
@@ -27,9 +32,9 @@ caps.handback.revision: 28
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 옵션  
+## <a name="options"></a>옵션  
  *서버 인스턴스 및 서버 인스턴스의 연결 상태*  
- *SYSTEM***\\***INSTANCE_NAME* 형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
+ *SYSTEM***\\***INSTANCE_NAME*형식으로 된 파트너 서버 인스턴스의 이름입니다. 기본 서버 인스턴스의 경우 시스템 이름만 표시됩니다.  
   
  또한 이 필드는 모니터가 이 서버 인스턴스에 현재 연결되어 있는지 여부를 나타냅니다. 가능한 연결 상태는 다음과 같습니다.  
   
@@ -74,22 +79,22 @@ caps.handback.revision: 28
  **'** *\<서버 인스턴스>* **'에서 활성화됨**  
  빈 확인란은 서버 인스턴스에서 경고가 현재 비활성화되었음을 나타냅니다. 경고를 활성화하려면 해당 확인란을 클릭합니다.  
   
- **'** *\<서버 인스턴스>* **' 임계값**  
+ **'** *\<서버 인스턴스>* **'의 임계값**  
  경고가 활성화된 경우 이 열의 왼쪽에서 임계값을 설정합니다. 상태 테이블을 업데이트할 때 지정된 임계값에 도달한 경우 이벤트가 발생합니다. 값을 구성한 후 임계값을 비활성화하면 해당 값은 이 필드에 남아 있으며 경고를 다시 활성화할 경우 사용됩니다.  
   
  경고가 활성화되지 않은 경우 이 필드는 비활성 상태입니다.  
   
  **확인**  
- **확인**을 클릭하면 이 대화 상자가 닫히고 경고 임계값의 현재 지정된 값이 **경고** 탭 페이지의 **임계값** 표에 표시됩니다.  
+ **확인** 을 클릭하면 이 대화 상자가 닫히고 경고 임계값의 현재 지정된 값이 **경고** 탭 페이지의 **임계값**표에 표시됩니다.  
   
-## 주의  
+## <a name="remarks"></a>주의  
  임계값은 한 번에 한 파트너에만 적용할 수 있지만 데이터베이스가 장애 조치될 경우 경고가 유지되도록 두 파트너 모두에 지정된 이벤트에 대한 임계값을 설정하는 것이 좋습니다. 각 파트너에 적합한 임계값은 각 파트너 시스템의 성능 기능에 따라 달라집니다.  
   
  상태 테이블을 업데이트할 때 해당 값이 임계값보다 크거나 같을 경우에만 성능의 이벤트 로그에 이벤트가 기록됩니다. 상태 업데이트 사이에 최대값이 일시적으로 임계값에 도달할 경우 해당 값은 누락됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

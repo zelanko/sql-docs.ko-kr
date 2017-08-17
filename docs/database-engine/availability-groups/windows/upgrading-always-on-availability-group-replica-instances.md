@@ -1,30 +1,35 @@
 ---
 title: "Always On 가용성 그룹 복제본 인스턴스 업그레이드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1783e700e516978e4eded68fa675addd8d31a234
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Always On 가용성 그룹 복제본 인스턴스 업그레이드
+# <a name="upgrading-always-on-availability-group-replica-instances"></a>Always On 가용성 그룹 복제본 인스턴스 업그레이드
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 가용성 그룹을 신규 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 버전, 신규 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 팩 또는 누적 업데이트로 업그레이드하거나 신규 Windows 서비스 팩 또는 누적 업데이트를 설치하려는 경우 롤링 업그레이드를 수행하여 주 복제본을 단일 수동 장애 조치(Failover)에만 적용하여 가동 중지 시간을 단축할 수 있습니다(또는 원본 주 복제본이 실패하는 경우 두 개의 수동 장애 조치(Failover)). 업그레이드 프로세스 동안 읽기 전용 작업 또는 장애 조치(Failover)에서는 보조 복제본을 사용할 수 없고 업그레이드 이후에는 주 복제본 노드에서의 작업 크기에 따라 보조 복제본이 주 복제본 노드를 따라잡기 위해서는 약간의 시간이 걸릴 수 있습니다(이로 인해 높은 네트워크 트래픽이 예상됨).  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On 가용성 그룹을 신규 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 버전, 신규 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]서비스 팩 또는 누적 업데이트로 업그레이드하거나 신규 Windows 서비스 팩 또는 누적 업데이트를 설치하려는 경우 롤링 업그레이드를 수행하여 주 복제본을 단일 수동 장애 조치(Failover)에만 적용하여 가동 중지 시간을 단축할 수 있습니다(또는 원본 주 복제본이 실패하는 경우 두 개의 수동 장애 조치(Failover)). 업그레이드 프로세스 동안 읽기 전용 작업 또는 장애 조치(Failover)에서는 보조 복제본을 사용할 수 없고 업그레이드 이후에는 주 복제본 노드에서의 작업 크기에 따라 보조 복제본이 주 복제본 노드를 따라잡기 위해서는 약간의 시간이 걸릴 수 있습니다(이로 인해 높은 네트워크 트래픽이 예상됨).  
   
 > [!NOTE]  
 >  이 항목은 SQL Server 업그레이드에 대한 설명으로 제한됩니다. WSFC(Windows Server Failover Clusting) 클러스터를 포함하는 운영 체제 업그레이드를 다루지 않습니다. Windows Server 2012 R2 이전의 운영 체제에서는 장애 조치(Failover) 클러스터를 호스팅하는 Windows 운영 체제 업그레이드가 지원되지 않습니다. Windows Server 2012 R2에서 실행되는 클러스터 노드를 업그레이드하려면 [클러스터 운영 체제 롤링 업그레이드](https://technet.microsoft.com/library/dn850430.aspx)를 참조하세요.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  시작하기 전에 다음과 같은 중요한 정보를 검토하십시오.  
   
 -   [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md): 사용자의 Windows 운영 체제 버전 및 SQL Server 버전에서 SQL Server 2016으로 업그레이드할 수 있는지 확인합니다. 예를 들어, SQL Server 2005 인스턴스에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]로 직접 업그레이드할 수 없습니다.  
@@ -33,9 +38,9 @@ caps.handback.revision: 14
   
 -   [데이터베이스 엔진 업그레이드 계획 및 테스트](../../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
--   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화할 수 있도록 업그레이드 프로세스를 시작하기 전에 각 노드에 해당 소프트웨어를 설치하세요.  
+-   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화할 수 있도록 업그레이드 프로세스를 시작하기 전에 각 노드에 해당 소프트웨어를 설치하세요.  
   
-## Always On 가용성 그룹의 롤링 업그레이드를 위한 최상의 방법  
+## <a name="rolling-upgrade-best-practices-for-always-on-availability-groups"></a>Always On 가용성 그룹의 롤링 업그레이드를 위한 최상의 방법  
  서버 업그레이드 도는 업데이트를 수행할 때 가용성 그룹에 대한 가동 중단 시간 및 데이터 손실을 최소화하기 위해 다음과 같은 최상의 방법을 구현해야 합니다.  
   
 -   롤링 업그레이드를 시작하기 전에  
@@ -62,7 +67,7 @@ caps.handback.revision: 14
   
 -   가용성 그룹을 장애 조치(failover)하기 전에 장애 조치(failover) 대상의 동기화 상태가 SYNCHRONIZED인지 확인하십시오.  
   
-## 롤링 업그레이드 프로세스  
+## <a name="rolling-upgrade-process"></a>롤링 업그레이드 프로세스  
  실제로 정확한 프로세스는 가용성 그룹의 배포 토폴로지 및 각 복제본의 커밋 모드와 같은 요소에 따라 달라집니다. 가장 간단한 시나리오는 다음 단계가 포함된 가장 간단한 형식의 다단계 프로세스로 롤링 업그레이드를 수행하는 것입니다.  
   
  ![HADR 시나리오의 가용성 그룹 업그레이드](../../../database-engine/availability-groups/windows/media/alwaysonupgrade-ag-hadr.gif "HADR 시나리오의 가용성 그룹 업그레이드")  
@@ -81,7 +86,7 @@ caps.handback.revision: 14
   
  필요한 경우 추가 수동 장애 조치(failover)를 수행하여 가용성 그룹을 원래 구성으로 되돌릴 수 있습니다.  
   
-## 원격 보조 복제본 하나가 포함된 가용성 그룹  
+## <a name="availability-group-with-one-remote-secondary-replica"></a>원격 보조 복제본 하나가 포함된 가용성 그룹  
  재해 복구용으로만 가용성 그룹을 배포한 경우 가용성 그룹을 비동기-커밋 보조 복제본으로 장애 조치(failover)해야 할 수 있습니다. 다음 그림에서는 이 구성을 보여 줍니다.  
   
  ![DR 시나리오의 가용성 그룹 업그레이드](../../../database-engine/availability-groups/windows/media/agupgrade-ag-dr.gif "DR 시나리오의 가용성 그룹 업그레이드")  
@@ -108,10 +113,10 @@ caps.handback.revision: 14
   
 -   주 사이트에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 을(를) 업그레이드 또는 업데이트하는 동안 가용성 모드를 비동기 커밋으로 변경한 다음 주 사이트에 대한 장애 조치(failover)를 수행할 준비가 되면 동기 커밋으로 되돌립니다.  
   
-## 장애 조치(Failover) 클러스터 인스턴스 노드가 포함된 가용성 그룹  
+## <a name="availability-group-with-failover-cluster-instance-nodes"></a>장애 조치(Failover) 클러스터 인스턴스 노드가 포함된 가용성 그룹  
  가용성 그룹에 FCI(장애 조치(failover) 클러스터 인스턴스) 노드가 포함된 경우 활성 노드를 업그레이드하기 전에 비활성 노드를 업그레이드해야 합니다. 아래 그림에서는 로컬 고가용성을 위한 FCI 및 원격 재해 복구용 FCI 간 비동기 커밋과 함께 일반적인 가용성 그룹 시나리오와 업그레이드 시퀀스를 설명합니다.  
   
- ![FCI가 포함된 가용성 그룹 업그레이드](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI가 포함된 가용성 그룹 업그레이드")  
+ ![FCI를 통한 가용성 그룹 업그레이드](../../../database-engine/availability-groups/windows/media/agupgrade-ag-fci-dr.gif "FCI를 통한 가용성 그룹 업그레이드")  
   
 1.  REMOTE2 업그레이드 또는 업데이트  
   
@@ -125,7 +130,7 @@ caps.handback.revision: 14
   
 6.  PRIMARY1 업그레이드 또는 업데이트  
   
-## 여러 가용성 그룹이 있는 SQL Server 인스턴스 업그레이드/업데이트  
+## <a name="upgrade-update-sql-server-instances-with-multiple-availability-groups"></a>여러 가용성 그룹이 있는 SQL Server 인스턴스 업그레이드/업데이트  
  별도의 서버 노드(활성/비활성 구성)에서 주 복제본이 있는 여러 가용성 그룹을 실행 중인 경우 프로세스 중에 고가용성을 유지하기 위해 업그레이드 경로에 더 많은 장애 조치(failover) 단계가 포함됩니다. 다음 표와 같이 3개의 서버 노드에서 3개의 가용성 그룹을 실행하고 모든 보조 복제본이 동기-커밋 모드에서 실행 중이라고 가정합니다.  
   
 |가용성 그룹|Node1|Node2|Node3|  
@@ -163,8 +168,9 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  대부분의 경우에서 롤링 업그레이드가 완료된 후 원래 주 복제본에 대한 장애 복구가 수행됩니다.  
   
-## 참고 항목  
- [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치&#41;](../../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>참고 항목  
+ [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치&#41;](../../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)  
   
   
+

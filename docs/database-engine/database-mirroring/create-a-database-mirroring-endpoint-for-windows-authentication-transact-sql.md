@@ -1,28 +1,33 @@
 ---
 title: "Windows 인증에 대한 데이터베이스 미러링 끝점 만들기(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 [SQL Server], 배포"
-  - "데이터베이스 미러링 [SQL Server], 끝점"
-  - "끝점 [SQL Server], 데이터베이스 미러링"
-  - "Windows 인증 [SQL Server]"
-  - "데이터베이스 미러링 [SQL Server], 보안"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], database mirroring
+- Windows authentication [SQL Server]
+- database mirroring [SQL Server], security
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 caps.latest.revision: 61
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 61
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cb13a780fbc5c554ae9ed134436fd0738119601b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Windows 인증에 대한 데이터베이스 미러링 끝점 만들기(Transact-SQL)
+# <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Windows 인증에 대한 데이터베이스 미러링 끝점 만들기(Transact-SQL)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 Windows 인증을 사용하는 데이터베이스 미러링 끝점을 만드는 방법에 대해 설명합니다. 데이터베이스 미러링 또는 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 을 지원하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스에 데이터베이스 미러링 끝점이 필요합니다. 서버 인스턴스는 하나의 포트가 있는 데이터베이스 미러링 끝점을 하나만 가질 수 있습니다. 데이터베이스 미러링 끝점은 끝점이 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 서버 인스턴스의 모든 데이터베이스 미러링 세션이 이 포트에서 수신하고 데이터베이스 미러링에 대해 들어오는 모든 연결에 이 포트가 사용됩니다.  
   
 > [!IMPORTANT]  
@@ -32,7 +37,7 @@ caps.handback.revision: 61
   
 -   **시작하기 전 주의 사항:**  [보안](#Security)  
   
--   **데이터베이스 미러링 끝점을 만들려면:** [Transact-SQL](#TsqlProcedure) 사용  
+-   **데이터베이스 미러링 끝점을 만들려면:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 61
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### Windows 인증을 사용하는 데이터베이스 미러링 끝점을 만들려면  
+#### <a name="to-create-a-database-mirroring-endpoint-that-uses-windows-authentication"></a>Windows 인증을 사용하는 데이터베이스 미러링 끝점을 만들려면  
   
 1.  데이터베이스 미러링 끝점을 만들 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
@@ -80,11 +85,11 @@ caps.handback.revision: 61
   
      [ [**,**] ENCRYPTION = **REQUIRED**  
   
-     [ ALGORITHM { *\<algorithm>* } ]  
+     [ ALGORITHM { *\<알고리즘>* } ]  
   
      ]  
   
-     [**,**] ROLE = *\<role>*  
+     [**,**] ROLE = *\<역할>*  
   
      ).  
   
@@ -94,7 +99,7 @@ caps.handback.revision: 61
   
     -   STARTED는 끝점이 시작되어 연결에 대한 수신을 시작하도록 지정합니다. 데이터베이스 미러링 끝점은 일반적으로 STARTED 상태로 생성됩니다. STOPPED 상태(기본값)나 DISABLED 상태로 세션을 시작할 수도 있습니다.  
   
-    -   *\<listenerPortList>*는 서버에서 데이터베이스 미러링 메시지를 수신할 하나의 포트 번호(*nnnn*)입니다. TCP만 허용되기 때문에 다른 프로토콜을 지정하면 오류가 발생합니다.  
+    -   *\<listenerPortList>*는 서버에서 데이터베이스 미러링 메시지를 수신 대기할 단일 포트 번호(*nnnn*)입니다. TCP만 허용되기 때문에 다른 프로토콜을 지정하면 오류가 발생합니다.  
   
          하나의 포트 번호는 컴퓨터 시스템당 한 번만 사용할 수 있습니다. 데이터베이스 미러링 끝점은 끝점이 생성될 때 로컬 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 시스템의 TCP 끝점에서 현재 사용 중인 포트를 식별하려면 다음 Transact-SQL 문을 사용합니다.  
   
@@ -105,7 +110,7 @@ caps.handback.revision: 61
         > [!IMPORTANT]  
         >  각 서버 인스턴스에는 하나의 고유 수신기 포트만 필요합니다.  
   
-    -   끝점에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. *\<authorizationMethod>*는 연결 인증 방법을 NTLM, KERBEROS 또는 NEGOTIATE 중 하나로 지정합니다. 기본값인 NEGOTIATE를 적용하면 끝점이 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 끝점의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
+    -   끝점에서 연결을 인증하는 데 NTLM이나 Kerberos만을 사용하려는 경우가 아니라면 Windows 인증에서 AUTHENTICATION 옵션은 선택 사항입니다. *\<authorizationMethod>*는 연결을 인증하는 데 사용되는 방법을 NTLM, KERBEROS 또는 NEGOTIATE 중 하나로 지정합니다. 기본값인 NEGOTIATE를 적용하면 끝점이 Windows 협상 프로토콜을 사용하여 NTLM이나 Kerberos를 선택합니다. 협상을 사용하면 반대쪽 끝점의 인증 수준에 따라 인증을 사용하여 연결을 설정하거나 인증을 사용하지 않고 연결을 설정할 수 있습니다.  
   
     -   ENCRYPTION은 기본적으로 REQUIRED로 설정되어 있으며 이는 끝점에 대한 모든 연결에 암호화를 사용해야 함을 의미합니다. 그러나 다음과 같이 끝점에 대해 암호화를 해제하거나 선택적으로 사용할 수 있습니다. 대체 방법은 다음과 같습니다.  
   
@@ -117,24 +122,24 @@ caps.handback.revision: 61
   
          한 끝점에 암호화가 필요한 경우 다른 끝점의 ENCRYPTION은 SUPPORTED나 REQUIRED로 설정해야 합니다.  
   
-    -   *\<algorithm>*은 끝점의 암호화 표준을 지정하는 옵션을 제공합니다. *\<algorithm>* 값은 RC4, AES, AES RC4 또는 RC4 AES 중 하나이거나 이들 알고리즘의 조합일 수 있습니다.  
+    -   *\<알고리즘>*은 끝점의 암호화 표준을 지정하는 옵션을 제공합니다. *\<알고리즘>* 값은 RC4, AES, AES RC4 또는 RC4 AES 중 하나이거나 이러한 알고리즘의 조합일 수 있습니다.  
   
          AES RC4는 끝점이 AES 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. RC4 AES는 끝점이 RC4 알고리즘에 우선 순위를 두어 암호화 알고리즘을 협상하도록 지정합니다. 양쪽 끝점이 두 알고리즘을 모두 지정하지만 순서가 다른 경우 연결을 수락하는 끝점의 알고리즘이 적용됩니다.  
   
         > [!NOTE]  
         >  RC4 알고리즘은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] AES를 사용하는 것이 좋습니다.  
   
-    -   *\<role>*은 서버가 수행할 수 있는 역할을 정의합니다. ROLE은 반드시 지정해야 합니다. 그러나 끝점의 역할은 데이터베이스 미러링과만 관련이 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대해서는 끝점의 역할이 무시됩니다.  
+    -   *\<역할>*은 서버에서 수행할 수 있는 역할을 정의합니다. ROLE은 반드시 지정해야 합니다. 그러나 끝점의 역할은 데이터베이스 미러링과만 관련이 있습니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]에 대해서는 끝점의 역할이 무시됩니다.  
   
          서버 인스턴스가 데이터베이스 미러링 세션에 따라 각기 다른 역할을 하도록 하려면 ROLE=ALL을 지정합니다. 서버 인스턴스가 파트너 또는 미러링 모니터 서버가 되도록 제한하려면 ROLE=PARTNER와 ROLE=WITNESS를 각각 지정합니다.  
   
         > [!NOTE]  
-        >  다양한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 데이터베이스 미러링 옵션에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+        >  다양한 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제공하는 데이터베이스 미러링 옵션에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
-     CREATE ENDPOINT 구문에 대한 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
+     CREATE ENDPOINT 구문에 대한 자세한 내용은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)에서 Windows 인증을 사용하는 데이터베이스 미러링 끝점을 만드는 방법에 대해 설명합니다.  
   
     > [!NOTE]  
-    >  기존 끝점을 변경하려면 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)를 사용합니다.  
+    >  기존 끝점을 변경하려면 [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)에서 Windows 인증을 사용하는 데이터베이스 미러링 끝점을 만드는 방법에 대해 설명합니다.  
   
 ###  <a name="TsqlExample"></a> 예: 데이터베이스 미러링 지원을 위한 끝점 만들기(Transact-SQL)  
  다음 예에서는 세 대의 다른 컴퓨터 시스템에 있는 기본 서버 인스턴스에 대한 데이터베이스 미러링 끝점을 만듭니다.  
@@ -179,23 +184,23 @@ GO
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **데이터베이스 미러링 끝점을 구성하려면**  
   
--   [Always On 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기&#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database mirroring - always on availability groups- powershell.md)  
+-   [Always On 가용성 그룹에 대한 데이터베이스 미러링 끝점 만들기&#40;SQL Server PowerShell&#41;](../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
 -   [데이터베이스 미러링 끝점에 대한 인증서 사용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
-    -   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for outbound connections.md)  
+    -   [데이터베이스 미러링 끝점의 아웃바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-outbound-connections.md)  
   
-    -   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database mirroring - use certificates for inbound connections.md)  
+    -   [데이터베이스 미러링 끝점의 인바운드 연결에 대한 인증서 사용 허용&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
 -   [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)  
   
--   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)  
+-   [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **데이터베이스 미러링 끝점에 대한 정보를 보려면**  
   
 -   [sys.database_mirroring_endpoints&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [암호화 알고리즘 선택](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
@@ -204,3 +209,5 @@ GO
  [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   
   
+
+

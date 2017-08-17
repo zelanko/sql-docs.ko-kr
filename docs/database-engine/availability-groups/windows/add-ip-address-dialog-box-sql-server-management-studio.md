@@ -1,27 +1,32 @@
 ---
 title: "IP 주소 추가 대화 상자(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilitygrouplistener.addipaddress.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilitygrouplistener.addipaddress.f1
 ms.assetid: 98c9ad3b-ff3c-4c1d-b344-59a72fca137c
 caps.latest.revision: 10
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d9083c4b210b5de01a7a15b2c7f438a57199e707
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# IP 주소 추가 대화 상자(SQL Server Management Studio)
+# <a name="add-ip-address-dialog-box-sql-server-management-studio"></a>IP 주소 추가 대화 상자(SQL Server Management Studio)
   이 F1 도움말 항목에서는 **IP 주소 추가** 대화 상자의 옵션에 대해 설명합니다. 이 대화 상자는 **새 가용성 그룹 수신기** 대화 상자 및 **의** 또는 **의** 복제본 선택 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 페이지에 있는 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 수신기 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]탭에서 액세스합니다.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  가용성 그룹 수신기에 서브넷을 추가하려면 각 서브넷의 IP 주소와 IPv4 주소의 서브넷 마스크를 알고 있어야 합니다.  
   
 ##  <a name="PageOptions"></a> IP 주소 추가 옵션  
@@ -59,9 +64,10 @@ caps.handback.revision: 10
   
 -   [가용성 그룹에 복제본 추가 마법사 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Always On 클라이언트 연결&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md)  
   
   
+

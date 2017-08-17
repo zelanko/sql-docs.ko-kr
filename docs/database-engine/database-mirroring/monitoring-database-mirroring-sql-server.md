@@ -1,25 +1,30 @@
 ---
 title: "데이터베이스 미러링 모니터링(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "모니터링 [SQL Server], 데이터베이스 미러링"
-  - "데이터베이스 미러링 [SQL Server], 모니터링"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring [SQL Server], database mirroring
+- database mirroring [SQL Server], monitoring
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 caps.latest.revision: 78
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 78
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 882ea4b4fd7c2954ec3586e78db5c22aa0418e54
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 모니터링(SQL Server)
+# <a name="monitoring-database-mirroring-sql-server"></a>데이터베이스 미러링 모니터링(SQL Server)
   이 섹션에서는 데이터베이스 미러링 모니터 및 **sp_dbmmonitor** 시스템 저장 프로시저를 소개하고 **데이터베이스 미러링 모니터 작업**을 포함하는 데이터베이스 미러링 모니터링의 작동 방법에 대해 설명하며 데이터베이스 미러링 세션에 대한 모니터링 정보를 간단하게 설명합니다. 또한 이 섹션에서는 미리 정의된 데이터베이스 미러링 이벤트 집합에 대해 경고 임계값을 정의하는 방법과 데이터베이스 미러링 이벤트에 대해 경고를 설정하는 방법을 소개합니다.  
   
  미러링 세션 중에 미러된 데이터베이스를 모니터링하여 데이터 흐름 여부와 상태를 확인할 수 있습니다. 서버 인스턴스에 있는 하나 이상의 미러된 데이터베이스에 대한 모니터링을 설정하고 관리하려면 데이터베이스 미러링 모니터나 **sp_dbmmonitor** 시스템 저장 프로시저를 사용합니다.  
@@ -91,29 +96,29 @@ caps.handback.revision: 78
   
      데이터베이스 미러링 모니터의 보조 기능으로 이 **dbmmonitor** 시스템 저장 프로시저를 사용할 수 있습니다. 예를 들어 **sp_dbmmonitoraddmonitoring**을 사용하여 모니터링이 구성된 경우 데이터베이스 미러링 모니터를 사용하여 상태를 볼 수 있습니다.  
   
-### 모니터링 작동 방법  
+### <a name="how-monitoring-works"></a>모니터링 작동 방법  
  이 섹션에서는 데이터베이스 미러링 상태 테이블, 데이터베이스 미러링 모니터 작업, 사용자가 데이터베이스 미러링 상태를 모니터링하는 방법, 모니터링 작업을 삭제하는 방법 등에 대해 설명합니다.  
   
-#### 데이터베이스 미러링 상태 테이블  
+#### <a name="database-mirroring-status-table"></a>데이터베이스 미러링 상태 테이블  
  데이터베이스 미러링 상태는 **msdb** 데이터베이스의 문서화되지 않은 내부 데이터베이스 미러링 상태 테이블에 저장됩니다. 이 상태 테이블은 서버 인스턴스에서 미러링 상태가 처음 업데이트될 때 자동으로 생성됩니다.  
   
  상태 테이블은 자동으로 업데이트되거나 시스템 관리자가 수동으로 업데이트할 수 있으며 최소 업데이트 간격은 15초입니다. 최소 간격인 15초는 서버 인스턴스가 상태 요청으로 오버로드되지 않도록 합니다.  
   
- 상태 테이블은 데이터베이스 미러링 모니터와 데이터베이스 미러링 모니터 작업(실행 중인 경우)에 의해 자동으로 업데이트됩니다. **데이터베이스 미러링 모니터 작업**은 기본적으로 1분마다 테이블을 업데이트합니다. 시스템 관리자는 1분에서 120분까지의 업데이트 기간을 지정할 수 있습니다. 반면 데이터베이스 미러링 모니터는 30초마다 자동으로 테이블을 업데이트합니다. 이러한 업데이트에 대해 **데이터베이스 미러링 모니터 작업**과 데이터베이스 미러링 모니터는 **sp_dbmmonitorupdate**를 호출합니다.  
+ 상태 테이블은 데이터베이스 미러링 모니터와 데이터베이스 미러링 모니터 작업(실행 중인 경우)에 의해 자동으로 업데이트됩니다. **데이터베이스 미러링 모니터 작업** 은 기본적으로 1분마다 테이블을 업데이트합니다. 시스템 관리자는 1분에서 120분까지의 업데이트 기간을 지정할 수 있습니다. 반면 데이터베이스 미러링 모니터는 30초마다 자동으로 테이블을 업데이트합니다. 이러한 업데이트에 대해 **데이터베이스 미러링 모니터 작업** 과 데이터베이스 미러링 모니터는 **sp_dbmmonitorupdate**를 호출합니다.  
   
- **sp_dbmmonitorupdate**는 처음 실행될 때 **msdb** 데이터베이스에 **데이터베이스 미러링 상태** 테이블과 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **sp_dbmmonitorupdate**는 일반적으로 서버 인스턴스의 모든 미러된 데이터베이스에 대한 상태 테이블에 새 행을 삽입하여 미러링 상태를 업데이트합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 미러링 상태 테이블"을 참조하세요. 또한 이 프로시저는 새 행의 성능 메트릭을 평가하여 현재 보존 기간(기본값: 7일)보다 오래된 행을 자릅니다. 자세한 내용은 [sp_dbmmonitorupdate&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)를 참조하세요.  
+ **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **데이터베이스 미러링 상태** 테이블과 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **sp_dbmmonitorupdate** 는 일반적으로 서버 인스턴스의 모든 미러된 데이터베이스에 대한 상태 테이블에 새 행을 삽입하여 미러링 상태를 업데이트합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 미러링 상태 테이블"을 참조하세요. 또한 이 프로시저는 새 행의 성능 메트릭을 평가하여 현재 보존 기간(기본값: 7일)보다 오래된 행을 자릅니다. 자세한 내용은 [sp_dbmmonitorupdate&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  
->  **sysadmin** 고정 서버 역할의 멤버가 현재 데이터베이스 미러링 모니터를 사용하고 있지 않으면 **데이터베이스 미러링 모니터 작업**이 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중인 경우에만 상태 테이블이 자동으로 업데이트됩니다.  
+>  **sysadmin** 고정 서버 역할의 멤버가 현재 데이터베이스 미러링 모니터를 사용하고 있지 않으면 **데이터베이스 미러링 모니터 작업** 이 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중인 경우에만 상태 테이블이 자동으로 업데이트됩니다.  
   
-#### 데이터베이스 미러링 모니터 작업  
+#### <a name="database-mirroring-monitor-job"></a>데이터베이스 미러링 모니터 작업  
  데이터베이스 미러링 모니터링 작업인 **데이터베이스 미러링 모니터 작업**은 데이터베이스 미러링 모니터와 독립적으로 작동합니다. **데이터베이스 미러링 모니터 작업** 은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 미러링 세션을 시작하는 경우에만 자동으로 생성됩니다. 항상 ALTER DATABASE *database_name* SET PARTNER 명령을 사용하여 미러링을 시작하면 시스템 관리자가 **sp_dbmmonitoraddmonitoring** 저장 프로시저를 실행하는 경우에만 작업이 있습니다.  
   
  **데이터베이스 미러링 모니터 작업** 이 생성되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행 중일 경우 기본적으로 1분마다 작업이 호출됩니다. 그런 다음 작업에서 **sp_dbmmonitorupdate** 시스템 저장 프로시저를 호출합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 기본적으로 1분마다 **데이터베이스 미러링 모니터 작업**을 호출하고 작업에서 **sp_dbmmonitorupdate**를 호출하여 상태 테이블을 업데이트합니다. 시스템 관리자는 **sp_dbmmonitorchangemonitoring** 시스템 저장 프로시저를 사용하여 업데이트 기간을 변경하고 **sp_dbmmonitorchangemonitoring** 시스템 저장 프로시저를 사용하여 현재 업데이트 기간을 볼 수 있습니다. 자세한 내용은 [sp_dbmmonitoraddmonitoring&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 및 [sp_dbmmonitorchangemonitoring&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 기본적으로 1분마다 **데이터베이스 미러링 모니터 작업** 을 호출하고 작업에서 **sp_dbmmonitorupdate** 를 호출하여 상태 테이블을 업데이트합니다. 시스템 관리자는 **sp_dbmmonitorchangemonitoring** 시스템 저장 프로시저를 사용하여 업데이트 기간을 변경하고 **sp_dbmmonitorchangemonitoring** 시스템 저장 프로시저를 사용하여 현재 업데이트 기간을 볼 수 있습니다. 자세한 내용은 [sp_dbmmonitoraddmonitoring&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql.md) 및 [sp_dbmmonitorchangemonitoring&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql.md)을 참조하세요.  
   
-#### 데이터베이스 미러링 상태 모니터링(시스템 관리자가 사용하는 경우)  
+#### <a name="monitoring-database-mirroring-status-by-system-administrators"></a>데이터베이스 미러링 상태 모니터링(시스템 관리자가 사용하는 경우)  
  **sysadmin** 고정 서버 역할의 멤버는 상태 테이블을 보고 업데이트할 수 있습니다.  
   
 -   데이터베이스 미러링 모니터 사용  
@@ -124,16 +129,16 @@ caps.handback.revision: 78
   
      **상태** 페이지 메트릭에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "데이터베이스 미러링 모니터"에 표시되는 성능 메트릭을 참조하세요.  
   
--   **sp_dbmmonitorresults** 사용  
+-   **sp_dbmmonitorresults**사용  
   
-     시스템 관리자는 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 상태 테이블을 볼 수 있으며 이전 15초 내에 업데이트되지 않은 경우 필요에 따라 업데이트할 수 있습니다. 이 프로시저는 **sp_dbmmonitorupdate** 프로시저를 호출한 다음 프로시저 호출에서 요청된 양에 따라 기록 행을 하나 이상 반환합니다. 결과 집합의 상태에 대한 자세한 내용은 [sp_dbmmonitorresults&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)를 참조하세요.  
+     시스템 관리자는 **sp_dbmmonitorresults** 시스템 저장 프로시저를 사용하여 상태 테이블을 볼 수 있으며 이전 15초 내에 업데이트되지 않은 경우 필요에 따라 업데이트할 수 있습니다. 이 프로시저는 **sp_dbmmonitorupdate** 프로시저를 호출한 다음 프로시저 호출에서 요청된 양에 따라 기록 행을 하나 이상 반환합니다. 결과 집합의 상태에 대한 자세한 내용은 [sp_dbmmonitorresults&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)을 참조하세요.  
   
-#### 데이터베이스 미러링 상태 모니터링(dbm_monitor 멤버가 사용하는 경우)  
- 앞에서 설명한 것처럼 **sp_dbmmonitorupdate**는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. **상태** 페이지의 **주 로그(***\<time>***)** 및 **미러 로그(***\<time>***)** 레이블의 시간을 확인하여 표시된 상태의 기간을 알 수 있습니다.  
+#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>데이터베이스 미러링 상태 모니터링(dbm_monitor 멤버가 사용하는 경우)  
+ 앞에서 설명한 것처럼 **sp_dbmmonitorupdate** 는 처음 실행될 때 **msdb** 데이터베이스에 **dbm_monitor** 고정 데이터베이스 역할을 만듭니다. **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 표시되는 상태의 수명을 알아보려면 사용자가 **상태** 페이지에서 **주 로그 (***\<시간>***)** 및 **미러 로그 (***\<시간>***)** 레이블의 시간을 확인하면 됩니다.  
   
- **dbm_monitor** 고정 데이터베이스 역할의 멤버는 **데이터베이스 미러링 모니터 작업**을 사용하여 정기적으로 상태 테이블을 업데이트합니다. 작업이 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태가 점점 유효하지 않게 되어 미러링 세션의 구성을 더 이상 반영할 수 없습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
+ **dbm_monitor** 고정 데이터베이스 역할의 멤버는 **데이터베이스 미러링 모니터 작업** 을 사용하여 정기적으로 상태 테이블을 업데이트합니다. 작업이 없거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태가 점점 유효하지 않게 되어 미러링 세션의 구성을 더 이상 반영할 수 없습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   
-#### 데이터베이스 미러링 모니터 작업 삭제  
+#### <a name="dropping-the-database-mirroring-monitor-job"></a>데이터베이스 미러링 모니터 작업 삭제  
  데이터베이스 미러링 모니터 작업인 **데이터베이스 미러링 모니터 작업**은 삭제할 때까지 유지됩니다. 시스템 관리자가 모니터링 작업을 관리해야 합니다. **데이터베이스 미러링 모니터 작업**을 삭제하려면 **sp_dbmmonitordropmonitoring**을 사용합니다. 자세한 내용은 [sp_dbmmonitordropmonitoring&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql.md)을 참조하세요.  
   
 ###  <a name="perf_metrics_of_dbm_monitor"></a> 데이터베이스 미러링 모니터에 표시되는 상태  
@@ -144,7 +149,7 @@ caps.handback.revision: 78
   
  다음 섹션에서는 각각에 대해 제공된 내용에 대해 간략하게 설명합니다.  
   
-#### 파트너  
+#### <a name="partners"></a>파트너  
  **상태** 페이지에는 각 파트너에 대해 다음 정보가 표시됩니다.  
   
 -   서버 인스턴스  
@@ -183,7 +188,7 @@ caps.handback.revision: 78
   
     -   연결 끊김  
   
-#### 주 서버의 로그  
+#### <a name="log-on-the-principal-server"></a>주 서버의 로그  
  **상태** 페이지에는 표시된 시간을 기준으로 주 서버의 로그 상태에 대해 다음 정보가 표시됩니다.  
   
 -   보내지 않은 로그  
@@ -206,7 +211,7 @@ caps.handback.revision: 78
   
      들어오는 트랜잭션이 주 서버의 로그에 들어오는 속도(KB/초)입니다. 미러링 속도가 늦는지, 보통인지 또는 빠른지를 확인하려면 이 값을 **로그 전송 예상 시간** 값과 비교합니다.  
   
-#### 미러 서버의 로그  
+#### <a name="log-on-the-mirror-server"></a>미러 서버의 로그  
  **상태** 페이지에는 표시된 시간을 기준으로 미러 서버의 로그 상태에 대해 다음 정보가 표시됩니다.  
   
 -   복원되지 않은 로그  
@@ -221,7 +226,7 @@ caps.handback.revision: 78
   
      트랜잭션이 미러 데이터베이스로 복원되는 속도(KB/초)입니다.  
   
-#### 미러링 세션  
+#### <a name="mirroring-session"></a>미러링 세션  
  또한 **상태** 페이지에는 미러링 세션에 대해 다음 정보가 표시됩니다.  
   
 -   미러 커밋 오버헤드  
@@ -270,13 +275,13 @@ caps.handback.revision: 78
   
 -   **sys.database_mirroring_witnesses**  
   
-     이 카탈로그 뷰는 서버 인스턴스가 미러링 모니터인 각 세션의 데이터베이스 미러링 메타데이터를 표시합니다. 자세한 내용은 [sys.database_mirroring_witnesses&#40;Transact-SQL&#41;](../Topic/sys.database_mirroring_witnesses%20\(Transact-SQL\).md)를 참조하세요.  
+     이 카탈로그 뷰는 서버 인스턴스가 미러링 모니터인 각 세션의 데이터베이스 미러링 메타데이터를 표시합니다. 자세한 내용은 [sys.database_mirroring_witnesses&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/database-mirroring-witness-catalog-views-sys-database-mirroring-witnesses.md)를 참조하세요.  
   
 -   **sys.dm_db_mirroring_connections**  
   
      이 동적 관리 뷰는 각 데이터베이스 미러링 네트워크 연결에 대해 하나의 행을 반환합니다.  
   
-     자세한 내용은 [sys.dm_db_mirroring_connections&#40;Transact-SQL&#41;](../Topic/sys.dm_db_mirroring_connections%20\(Transact-SQL\).md)를 참조하세요.  
+     자세한 내용은 [sys.dm_db_mirroring_connections&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections.md)를 참조하세요.  
   
 ###  <a name="DbmPerfCounters"></a> 데이터베이스 미러링 성능 카운터  
  성능 카운터를 사용하면 데이터베이스 미러링 성능을 모니터링할 수 있습니다. 예를 들어 **Transaction Delay** 카운터를 사용하면 데이터베이스 미러링이 주 서버의 성능에 영향을 주는지 여부를 알 수 있고 **Redo Queue** 와 **Log Send Queue** 카운터를 사용하면 미러 데이터베이스가 주 데이터베이스와 동기화가 제대로 이루어지는지 알 수 있습니다. **Log Bytes Sent/sec** 카운터를 사용하면 초당 보낸 로그의 양을 모니터링할 수 있습니다.  
@@ -328,7 +333,7 @@ caps.handback.revision: 78
   
 -   [sp_dbmmonitorupdate&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [서버 이벤트용 WMI 공급자 개념](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

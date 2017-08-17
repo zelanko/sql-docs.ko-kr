@@ -1,28 +1,33 @@
 ---
 title: "SQL Server 2016으로 로그 전달 업그레이드(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 전달 [SQL Server], 업그레이드"
+ms.custom: 
+ms.date: 02/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log shipping [SQL Server], upgrading
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 05c650a9f5929704a512b28033d6f06f54415a26
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 2016으로 로그 전달 업그레이드(Transact-SQL)
+# <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016으로 로그 전달 업그레이드(Transact-SQL)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에서 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전, 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스 팩, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]누적 업데이트로 업그레이드할 경우 적적한 순서로 로그 전달 서버를 업그레이드하면 로그 전달 재해 복구 솔루션이 보존됩니다.  
   
 > [!NOTE]  
->  [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 은 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]에서 도입되었습니다. 업그레이드된 로그 전달 구성은 **백업 압축 기본값** 서버 수준 구성 옵션을 사용하여 백업 압축을 트랜잭션 로그 백업 파일에 사용할지 여부를 제어합니다. 로그 백업에 대한 백업 압축 동작은 각 로그 전달 구성에 지정할 수 있습니다. 자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)을 참조하세요.  
+>  [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 은 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]에서 도입되었습니다. 업그레이드된 로그 전달 구성은 **백업 압축 기본값** 서버 수준 구성 옵션을 사용하여 백업 압축을 트랜잭션 로그 백업 파일에 사용할지 여부를 제어합니다. 로그 백업에 대한 백업 압축 동작은 각 로그 전달 구성에 지정할 수 있습니다. 자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)에서 도입되었습니다.  
   
  **항목 내용:**  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 59
   
 -   [데이터베이스 엔진 업그레이드 계획 및 테스트](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): 릴리스 정보 및 알려진 업그레이드 문제, 업그레이드 전 검사 목록을 검토한 후 업그레이드 계획을 개발하고 테스트합니다.  
   
--   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server-2016.md): [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화할 수 있도록 업그레이드 프로세스를 시작하기 전에 각 노드에 해당 소프트웨어를 설치하세요.  
+-   [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md): [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치하기 위한 소프트웨어 요구 사항을 검토합니다. 추가 소프트웨어가 필요한 경우 가동 중지 시간을 최소화할 수 있도록 업그레이드 프로세스를 시작하기 전에 각 노드에 해당 소프트웨어를 설치하세요.  
   
 ##  <a name="ProtectData"></a> 업그레이드하기 전에 데이터 보호  
  가능하면 로그 전달 업그레이드 전에 데이터를 보호하는 것이 좋습니다.  
@@ -85,11 +90,12 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  또한 로그 전달은 [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)에 대한 옵션, 그리고 선택적으로 [주 로그 전달 서버와 보조 로그 전달 서버 간 역할 변경&#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md)을 지원합니다. 그러나 로그 전달이 더 이상 고가용성 솔루션으로 구성되는 경우는 거의 없으므로(최신 옵션이 훨씬 더 강력함), 시스템 데이터베이스 개체가 동기화되지 않기 때문에 장애 조치는 일반적으로 가동 중지 시간을 최소화하지 않으며 클라이언트가 승격된 보조 인스턴스를 쉽게 찾아 연결하기는 어려울 수 있습니다.  
   
-## 참고 항목  
- [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-to-sql-server-2016-using-the-installation-wizard-setup.md)   
+## <a name="see-also"></a>참고 항목  
+ [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   
  [로그 전달 모니터링&#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)   
  [로그 전달 테이블 및 저장 프로시저](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   
+

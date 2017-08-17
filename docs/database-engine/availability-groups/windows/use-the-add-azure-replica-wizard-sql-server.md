@@ -1,24 +1,29 @@
 ---
 title: "Azure 복제본 추가 마법사 사용(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.azurereplica.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.azurereplica.f1
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24b3e9ec3cded630a18fef353ccaad3b5a2912b1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Azure 복제본 추가 마법사 사용(SQL Server)
+# <a name="use-the-add-azure-replica-wizard-sql-server"></a>Azure 복제본 추가 마법사 사용(SQL Server)
   Azure 복제본 추가 마법사를 사용하여 하이브리드 IT에서 새 Microsoft Azure VM을 만들고 새로운 또는 기존 Always On 가용성 그룹에 대한 보조 복제본으로 구성할 수 있습니다.  
   
 -   **시작하기 전에:**  
@@ -27,10 +32,10 @@ caps.handback.revision: 12
   
      [보안](#Security)  
   
--   **복제본을 추가하려면:** [Azure 복제본 추가 마법사(SQL Server Management Studio)](#SSMSProcedure) 사용  
+-   **복제본을 추가하려면:**  [Azure 복제본 추가 마법사(SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 가용성 그룹에 가용성 복제본을 추가한 적이 없는 경우 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)의 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조하세요.  
+ 가용성 그룹에 가용성 복제본을 추가한 적이 없는 경우 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조하세요.  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
   
@@ -42,14 +47,14 @@ caps.handback.revision: 12
   
 -   가용성 그룹 수신기의 클라이언트는 가용성 그룹이 Windows Azure 복제본으로 장애 조치될 때 수신기와 연결을 유지하려는 경우 인터넷에 연결해야 합니다.  
   
--   **전체 초기 데이터 동기화를 사용하기 위한 사전 요구 사항** 마법사에서 백업을 만들고 액세스하려면 네트워크 공유를 지정해야 합니다. 주 복제본의 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 시작하는 데 사용되는 계정은 네트워크 공유에 대한 읽기 및 쓰기 파일 시스템 권한이 있어야 합니다. 보조 복제본에 대한 계정은 네트워크 공유에 대한 읽기 권한이 있어야 합니다.  
+-   **전체 초기 데이터 동기화를 사용하기 위한 사전 요구 사항** 마법사에서 백업을 만들고 액세스하려면 네트워크 공유를 지정해야 합니다. 주 복제본의 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 을 시작하는 데 사용되는 계정은 네트워크 공유에 대한 읽기 및 쓰기 파일 시스템 권한이 있어야 합니다. 보조 복제본에 대한 계정은 네트워크 공유에 대한 읽기 권한이 있어야 합니다.  
   
-     마법사를 사용하여 전체 초기 데이터 동기화를 수행할 수 없는 경우에는 보조 데이터베이스를 수동으로 준비해야 합니다. 마법사를 실행하기 전이나 후에 이 작업을 수행할 수 있습니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  
+     마법사를 사용하여 전체 초기 데이터 동기화를 수행할 수 없는 경우에는 보조 데이터베이스를 수동으로 준비해야 합니다. 마법사를 실행하기 전이나 후에 이 작업을 수행할 수 있습니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)에서 AlwaysOn 가용성 그룹을 만들고 구성하는 방법을 설명합니다.  
   
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> 사용 권한  
-  [Security](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)를 참조하세요.  
+ [Security](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)를 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> Azure 복제본 추가 마법사 사용(SQL Server Management Studio)  
  [복제본 페이지 지정](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)에서 Azure 복제본 추가 마법사를 시작할 수 있습니다. 다음 두 가지 방법으로 이 페이지에 도달할 수 있습니다.  
@@ -60,9 +65,9 @@ caps.handback.revision: 12
   
  Azure 복제본 추가 마법사를 시작한 후 아래 단계를 따릅니다.  
   
-1.  먼저 Windows Azure 구독을 위한 관리 인증서를 다운로드합니다. **다운로드**를 클릭하여 로그인 페이지를 엽니다.  
+1.  먼저 Windows Azure 구독을 위한 관리 인증서를 다운로드합니다. **다운로드** 를 클릭하여 로그인 페이지를 엽니다.  
   
-2.  Microsoft 계정 또는 조직 계정으로 Microsoft Azure에 로그인합니다. Microsoft 또는 조직 계정은 HYPERLINK "mailto:patc@contoso.com" patc@contoso.com와 같은 전자 메일 주소 형식입니다. Azure 자격 증명에 대한 자세한 내용은 [Microsoft 조직 계정 FAQ](http://technet.microsoft.com/jj592903) 및 [조직 계정을 사용하는 로그인의 문제 해결](https://support.microsoft.com/kb/2756852)을 참조하세요.  
+2.  Microsoft 계정 또는 조직 계정으로 Microsoft Azure에 로그인합니다. Microsoft 또는 조직 계정은 "mailto:patc@contoso.com" patc@contoso.com 하이퍼링크와 같은 이메일 주소 형식입니다. Azure 자격 증명에 대한 자세한 내용은 [Microsoft 조직 계정 FAQ](http://technet.microsoft.com/jj592903) 및 [조직 계정을 사용하는 로그인의 문제 해결](https://support.microsoft.com/kb/2756852)을 참조하세요.  
   
 3.  다음에는 **연결**을 클릭하여 구독에 연결합니다. 연결되면 드롭다운 목록에 **가상 네트워크** 및 **가상 네트워크 서브넷**과 같은 Microsoft Azure 매개 변수가 채워집니다.  
   
@@ -108,9 +113,10 @@ caps.handback.revision: 12
   
 -   [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

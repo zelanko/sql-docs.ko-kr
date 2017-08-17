@@ -1,29 +1,34 @@
 ---
-title: "활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹) | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/06/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "가용성 복제본에 대한 연결 액세스"
-  - "가용성 그룹 [SQL Server], 가용성 복제본"
-  - "가용성 그룹 [SQL Server], 읽기 가능한 보조 복제본"
-  - "활성 보조 복제본 [SQL Server], 읽기 전용 액세스"
-  - "읽기 가능한 보조 복제본"
-  - "가용성 그룹 [SQL Server], 활성 보조 복제본"
+title: "활성 보조 - 읽기 가능한 보조 복제본 - Always On 가용성 그룹 | Microsoft Docs"
+ms.custom: 
+ms.date: 06/06/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection access to availability replicas
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- readable secondary replicas
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 caps.latest.revision: 80
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 80
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 184067cec6269692f38b92b71cfc208bfab8256d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)
+# <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 활성 보조 기능에는 하나 이상의 보조 복제본(*읽기 가능한 보조 복제본*)에 대한 읽기 전용 액세스 지원이 포함됩니다. 읽기 가능한 보조 복제본은 해당 보조 데이터베이스 모두에 대한 읽기 전용 액세스를 허용합니다. 하지만 읽기 가능한 보조 데이터베이스는 읽기 전용으로 설정되지 않습니다. 이러한 데이터베이스는 동적입니다. 해당 주 데이터베이스에서 변경 내용이 발생하면 보조 데이터베이스도 변경됩니다. 일반적인 보조 복제본의 경우 보조 데이터베이스의 내구성이 있는 메모리 액세스에 최적화된 테이블을 포함한 데이터는 거의 실시간 데이터입니다. 또한 전체 텍스트 인덱스는 보조 데이터베이스와 동기화됩니다. 대부분의 경우 주 데이터베이스와 해당하는 보조 데이터베이스 간의 데이터 대기 시간은 몇 초 이내입니다.  
@@ -33,9 +38,9 @@ caps.handback.revision: 80
 > [!NOTE]  
 >  보조 데이터베이스에 데이터를 쓸 수는 없지만 **tempdb**와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 읽기 전용 연결 요청을 읽기 가능한 보조 복제본으로 다시 라우팅하는 기능(*읽기 전용 라우팅*)도 지원합니다. 읽기 전용 라우팅에 대한 자세한 내용은 [수신기를 사용하여 읽기 전용 보조 복제본(읽기 전용 라우팅)에 연결](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md#ConnectToSecondary)을 참조하세요.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 은 읽기 전용 연결 요청을 읽기 가능한 보조 복제본으로 다시 라우팅하는 기능(*읽기 전용 라우팅*)도 지원합니다. 읽기 전용 라우팅에 대한 자세한 내용은 [수신기를 사용하여 읽기 전용 보조 복제본(읽기 전용 라우팅)에 연결](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md#ConnectToSecondary)을 참조하세요.  
   
- **항목 내용:**  
+ **항목 내용**  
   
 -   [이점](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md#bkmk_Benefits)  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 80
   
 -   디스크 기반 테이블에 대한 읽기 전용 작업에서는 행 버전 관리를 사용하여 보조 데이터베이스에 대한 차단 경합을 제거합니다. 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅숏 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다. 또한 모든 잠금 힌트가 무시됩니다. 따라서 읽기/쓰기 경합이 없어집니다.  
   
--   메모리 액세스에 최적화된 지속성 테이블에 대한 읽기 전용 작업은 동일한 트랜잭션 격리 수준 제한이 있는 네이티브 저장 프로시저 또는 SQL 상호 운용성을 사용하여 주 데이터베이스에서 액세스하는 것과 정확히 동일한 방법으로 데이터에 액세스합니다( [데이터베이스 엔진의 격리 수준](http://msdn.microsoft.com/ko-kr/8ac7780b-5147-420b-a539-4eb556e908a7)참조). 주 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 보조 복제본에서 실행할 수 있습니다. 마찬가지로, 보조 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 주 복제본에서 실행할 수 있습니다.  디스크 기반 테이블과 유사하게 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅숏 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다.  
+-   메모리 액세스에 최적화된 지속성 테이블에 대한 읽기 전용 작업은 동일한 트랜잭션 격리 수준 제한이 있는 네이티브 저장 프로시저 또는 SQL 상호 운용성을 사용하여 주 데이터베이스에서 액세스하는 것과 정확히 동일한 방법으로 데이터에 액세스합니다( [데이터베이스 엔진의 격리 수준](http://msdn.microsoft.com/en-us/8ac7780b-5147-420b-a539-4eb556e908a7)참조). 주 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 보조 복제본에서 실행할 수 있습니다. 마찬가지로, 보조 복제본에서 실행하는 보고 작업이나 읽기 전용 쿼리는 변경할 필요 없이 주 복제본에서 실행할 수 있습니다.  디스크 기반 테이블과 유사하게 보조 데이터베이스에 대해 실행되는 모든 쿼리는 스냅숏 격리 트랜잭션 수준에 자동으로 매핑되며, 이는 다른 트랜잭션 격리 수준이 명시적으로 설정되어 있는 경우에도 해당됩니다.  
   
 -   보조 복제본에서는 디스크 기반 및 메모리 액세스에 최적화된 테이블 유형 모두에 대해 테이블 변수에서 DML 작업이 허용됩니다.  
   
@@ -77,11 +82,11 @@ caps.handback.revision: 80
     > [!NOTE]  
     >  필요한 경우 데이터베이스 관리자는 임의의 가용성 복제본을 주 역할로 실행할 때 읽기 전용 연결을 제외하도록 구성할 수도 있습니다.  
   
-     자세한 내용은 이 항목 뒷부분에 있는 [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
+     자세한 내용은 이 항목 뒷부분에 있는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
 -   **가용성 그룹 수신기**  
   
-     읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 응용 프로그램 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
+     읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 응용 프로그램 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
   
 -   **읽기 전용 라우팅**  
   
@@ -94,10 +99,10 @@ caps.handback.revision: 80
         > [!NOTE]  
         >  읽기 전용 연결 요청은 복제본에 부하를 분산할 수 있습니다. 자세한 내용은 [읽기 전용 복제본에 대한 부하 분산 구성](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)을 참조하세요.  
   
-     자세한 내용은 [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)을 참조하세요.  
+     자세한 내용은 이 항목 뒷부분에 있는 [가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
 > [!NOTE]  
->  가용성 그룹 수신기 및 읽기 전용 라우팅에 대한 자세한 내용은 [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
+>  가용성 그룹 수신기 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)와 같은 시스템 데이터베이스, 사용자 데이터베이스를 비롯하여 보조 복제본을 호스트하는 서버 인스턴스의 읽기/쓰기 데이터베이스에는 데이터를 쓸 수 있습니다.  
   
 ##  <a name="bkmk_LimitationsRestrictions"></a> 제한 사항  
  일부 작업은 다음과 같이 완전히 지원되지 않습니다.  
@@ -127,13 +132,13 @@ caps.handback.revision: 80
 ##  <a name="bkmk_Performance"></a> 성능 고려 사항  
  이 섹션에서는 읽기 가능한 보조 데이터베이스에 대한 몇 가지 성능 고려 사항에 설명합니다.  
   
- **섹션 내용:**  
+ **섹션 내용**  
   
 -   [데이터 대기 시간](#DataLatency)  
   
 -   [읽기 전용 작업의 영향](#ReadOnlyWorkloadImpact)  
   
--   [인덱싱](#Indexing)  
+-   [인덱싱](#bkmk_Indexing)  
   
 -   [읽기 전용 액세스 데이터베이스에 대한 통계](#Read-OnlyStats)  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 80
  이로 인해 주 복제본과 보조 복제본 사이에는 대개 몇 초 내외의 대기 시간이 있습니다. 하지만 네트워크 문제로 인해 처리량이 줄어드는 경우와 같은 특수한 경우에는 대기 시간이 중요할 수 있습니다. I/O 병목이 발생하고 데이터 이동이 일시 중지되면 대기 시간이 증가합니다. 일시 중지된 데이터 이동을 모니터링하려면 [Always On 대시보드](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md) 또는 [sys.dm_hadr_database_replica_states](../../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) 동적 관리 뷰를 사용하면 됩니다.  
   
 ####  <a name="bkmk_LatencyWithInMemOLTP"></a> 메모리 액세스에 최적화된 테이블이 포함된 데이터베이스의 데이터 대기 시간  
- [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별 고려 사항이 있었습니다(이 문서의 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 버전 참조). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 액세스에 최적화된 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 액세스에 최적화된 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
+ [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]에서는 활성 보조 데이터베이스의 데이터 대기 시간과 관련된 특별한 고려 사항이 있었습니다([[!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] 활성 보조: 읽기 가능한 보조 복제본](https://technet.microsoft.com/library/ff878253(v=sql.120).aspx) 참조). [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 시작에는 메모리 액세스에 최적화된 테이블의 데이터 대기 시간과 관련된 특별 고려 사항이 없습니다. 메모리 액세스에 최적화된 테이블의 예상 데이터 대기 시간은 디스크 기반 테이블의 대기 시간과 비슷합니다.  
   
 ###  <a name="ReadOnlyWorkloadImpact"></a> 읽기 전용 작업의 영향  
  읽기 전용 액세스를 사용하도록 보조 복제본을 구성하면 특히 디스크 기반 테이블의 읽기 전용 작업이 I/O를 매우 많이 사용하는 경우 보조 데이터베이스의 읽기 전용 작업은 다시 실행 스레드의 CPU 및 I/O(디스크 기반 테이블의 경우)와 같은 시스템 리소스를 소비합니다. 모든 행이 메모리 내에 상주하기 때문에 메모리 액세스에 최적화된 테이블에 액세스할 때 IO의 영향이 없습니다.  
@@ -181,14 +186,14 @@ caps.handback.revision: 80
   
  SQL Server 통계에 대한 자세한 내용은 [통계](../../../relational-databases/statistics/statistics.md)를 참조하세요.  
   
- **섹션 내용:**  
+ **섹션 내용**  
   
 -   [보조 데이터베이스의 유효하지 않은 영구적 통계](#StalePermStats)  
   
 -   [제한 사항](#StatsLimitationsRestrictions)  
   
 ####  <a name="StalePermStats"></a> 보조 데이터베이스의 유효하지 않은 영구적 통계  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 보조 데이터베이스에 대한 영구적 통계가 유효하지 않은 경우 이를 감지합니다. 그러나 주 데이터베이스의 변경을 통하지 않고는 영구적 통계를 변경할 수 없습니다. 쿼리 최적화를 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 보조 데이터베이스에 디스크 기반 테이블에 대한 임시 통계를 만들고 이 통계를 유효하지 않은 영구적 통계 대신 사용합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 보조 데이터베이스에 대한 영구적 통계가 유효하지 않은 경우 이를 감지합니다. 그러나 주 데이터베이스의 변경을 통하지 않고는 영구적 통계를 변경할 수 없습니다. 쿼리 최적화를 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 보조 데이터베이스에 디스크 기반 테이블에 대한 임시 통계를 만들고 이 통계를 유효하지 않은 영구적 통계 대신 사용합니다.  
   
  주 데이터베이스에서 영구적 통계가 업데이트되면 이 통계는 자동으로 보조 데이터베이스에 저장됩니다. 그런 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 임시 통계보다 최신 상태인 업데이트된 영구적 통계를 사용합니다.  
   
@@ -235,7 +240,7 @@ GO
     |예|아니요|행 버전이 없지만 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
     |예|예|행 버전이 있고 14바이트 오버헤드임|행 버전이 있고 14바이트 오버헤드임|  
   
-##  <a name="bkmk_RelatedTasks"></a> 관련 작업  
+##  <a name="bkmk_RelatedTasks"></a> 관련 태스크  
   
 -   [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
@@ -253,10 +258,11 @@ GO
   
 -   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)   
+ [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [통계](../../../relational-databases/statistics/statistics.md)  
   
   
+

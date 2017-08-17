@@ -1,40 +1,36 @@
 ---
 title: "서버 네트워크 주소 지정(데이터베이스 미러링) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 [SQL Server], 배포"
-  - "데이터베이스 미러링 [SQL Server], 끝점"
-  - "끝점 [SQL Server], 데이터베이스 미러링"
-  - "서버 네트워크 주소 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- database mirroring [SQL Server], endpoint
+- endpoints [SQL Server], database mirroring
+- server network addresses [SQL Server]
 ms.assetid: a64d4b6b-9016-4f1e-a310-b1df181dd0c6
 caps.latest.revision: 60
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 92b34f32f94e24e98c331f726cd15fe96361784c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 서버 네트워크 주소 지정(데이터베이스 미러링)
+# <a name="specify-a-server-network-address-database-mirroring"></a>서버 네트워크 주소 지정(데이터베이스 미러링)
   데이터베이스 미러링 세션을 설정하려면 각 서버 인스턴스에 대한 서버 네트워크 주소가 필요합니다. 서버 인스턴스의 서버 네트워크 주소는 시스템 주소와 인스턴스가 수신하는 포트 번호를 제공하여 인스턴스를 명확하게 식별해야 합니다.  
   
  서버 인스턴스에 데이터베이스 미러링 끝점이 있어야만 서버 네트워크 주소에 포트를 지정할 수 있습니다. 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
- **항목 내용:**  
-  
--   [서버 네트워크 주소 구문](#Syntax)  
-  
--   [정규화된 도메인 이름 찾기](#FindFqDn)  
-  
--   [예](#Examples)  
-  
--   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="Syntax"></a> 서버 네트워크 주소 구문  
  서버 네트워크 주소 구문은 다음 형식을 사용합니다.  
@@ -53,7 +49,7 @@ caps.handback.revision: 59
   
     -   정규화된 도메인 이름을 사용하는 것이 좋습니다. 이 주소 문자열은 로컬로 정의되므로 위치에 따라 형식이 달라집니다. 항상은 아니지만 정규화된 도메인 이름은 컴퓨터 이름과 마침표로 구분된 일련의 도메인 세그먼트를 다음 형식으로 포함하는 복합 이름입니다.  
   
-         *computer_name* **.** *domain_segment*[...**.***domain_segment*]  
+         *computer_name* **)을 사용할 수 있습니다.** *domain_segment*[...**.***domain_segment*]  
   
          여기에서 *computer_name*은 서버 인스턴스를 실행하는 컴퓨터의 네트워크 이름이고 *domain_segment*[...**.***domain_segment*]는 서버의 나머지 도메인 정보입니다(예: `localinfo.corp.Adventure-Works.com`).  
   
@@ -62,7 +58,7 @@ caps.handback.revision: 59
         > [!NOTE]  
         >  정규화된 도메인 이름을 찾는 방법은 이 항목의 뒷부분에 나오는 "정규화된 도메인 이름 찾기"를 참조하세요.  
   
--   *\<port>*는 파트너 서버 인스턴스의 미러링 끝점에 사용되는 포트 번호입니다. 끝점 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+-   *\<포트>*는 파트너 서버 인스턴스의 미러링 끝점에서 사용하는 포트 번호입니다. 끝점 지정에 대한 자세한 내용은 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
   
      데이터베이스 미러링 끝점은 컴퓨터 시스템에서 사용 가능한 모든 포트를 사용할 수 있습니다. 컴퓨터 시스템의 각 포트 번호는 하나의 끝점에만 연결되어야 하고 각 끝점은 단일 서버 인스턴스와 연결되므로 같은 서버의 서로 다른 서버 인스턴스는 서로 다른 포트의 각 끝점에서 수신합니다. 따라서 데이터베이스 미러링 세션을 설정할 때 서버 네트워크 주소에 지정하는 포트는 항상 끝점이 해당 포트와 연결된 서버 인스턴스로 세션을 지정합니다.  
   
@@ -78,37 +74,37 @@ caps.handback.revision: 59
   
      **type_desc** 값이 "DATABASE_MIRRORING"인 행을 찾아 해당 포트 번호를 사용합니다.  
   
-### 예  
+### <a name="examples"></a>예  
   
-#### 1. 시스템 이름 사용  
+#### <a name="a-using-a-system-name"></a>1. 시스템 이름 사용  
  다음 서버 네트워크 주소는 시스템 이름 `SYSTEM46`및 포트 `7022`를 지정합니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### 2. 정규화된 도메인 이름 사용  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>2. 정규화된 도메인 이름 사용  
  다음 서버 네트워크 주소는 정규화된 도메인 이름 `DBSERVER8.manufacturing.Adventure-Works.com`및 포트 `7024`를 지정합니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://DBSERVER8.manufacturing.Adventure-Works.com:7024';  
 ```  
   
-#### 3. IPv4 사용  
+#### <a name="c-using-ipv4"></a>3. IPv4 사용  
  다음 서버 네트워크 주소는 IPv4 주소 `10.193.9.134`및 포트 `7023`을 지정합니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://10.193.9.134:7023';  
 ```  
   
-#### 4. IPv6 사용  
+#### <a name="d-using-ipv6"></a>4. IPv6 사용  
  다음 서버 네트워크 주소에는 IPv6 주소 `2001:4898:23:1002:20f:1fff:feff:b3a3`및 포트 `7022`가 포함되어 있습니다.  
   
 ```  
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:feff:b3a3]:7022';  
 ```  
   
-## 정규화된 도메인 이름 찾기  
+## <a name="finding-the-fully-qualified-domain-name"></a>정규화된 도메인 이름 찾기  
  시스템의 정규화된 도메인 이름을 찾으려면 해당 시스템의 Windows 명령 프롬프트에서 다음을 입력합니다.  
   
  **IPCONFIG /ALL**  
@@ -140,7 +136,7 @@ ALTER DATABASE AdventureWorks SET PARTNER ='tcp://[2001:4898:23:1002:20f:1fff:fe
   
 -   [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [데이터베이스 미러링 끝점&#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)  
   

@@ -1,23 +1,28 @@
 ---
 title: "구성 파일을 사용하여 SQL Server 2016 설치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/20/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "home-page"
+ms.custom: 
+ms.date: 01/20/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: home-page
 ms.assetid: a832153a-6775-4bed-83f0-55790766d885
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bfde812d87371a8ae730be4a01577f714334adc6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 구성 파일을 사용하여 SQL Server 2016 설치
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 시스템 기본값 및 런타임 입력을 기반으로 구성 파일을 생성할 수 있습니다. 구성 파일을 사용하면 동일한 구성으로 회사 전체에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 배포할 수 있습니다. 또한 Setup.exe를 실행하는 배치 파일을 만들어 수동 설치를 전사적으로 표준화할 수도 있습니다.  
+# <a name="install-sql-server-2016-using-a-configuration-file"></a>구성 파일을 사용하여 SQL Server 2016 설치
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 시스템 기본값 및 런타임 입력을 기반으로 구성 파일을 생성할 수 있습니다. 구성 파일을 사용하면 동일한 구성으로 회사 전체에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 배포할 수 있습니다. 또한 Setup.exe를 실행하는 배치 파일을 만들어 수동 설치를 전사적으로 표준화할 수도 있습니다.  
   
  구성 파일은 명령 프롬프트에서 설치할 경우에만 사용할 수 있습니다. 구성 파일을 사용할 때 매개 변수의 처리 순서는 다음과 같습니다.  
   
@@ -27,7 +32,7 @@ caps.handback.revision: 34
   
  구성 파일을 사용하여 각 설치의 매개 변수와 값을 추적할 수 있습니다. 따라서 구성 파일은 설치를 검사 및 감사할 때 유용합니다.  
   
-## 구성 파일 구조  
+## <a name="configuration-file-structure"></a>구성 파일 구조  
  ConfigurationFile.ini 파일은 매개 변수(이름/값 쌍)와 설명이 있는 텍스트 파일입니다.  
   
  다음은 ConfigurationFile.ini 파일의 예입니다.  
@@ -46,7 +51,7 @@ ACTION="Install"
 FEATURES=SQL,Tools  
 ```  
   
-#### 구성 파일을 생성하는 방법  
+#### <a name="how-to-generate-a-configuration-file"></a>구성 파일을 생성하는 방법  
   
 1.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 미디어를 넣고 루트 폴더에서 Setup.exe를 두 번 클릭합니다. 네트워크 공유에서 설치하려면 공유에서 루트 폴더를 찾은 다음 Setup.exe를 두 번 클릭합니다.  
   
@@ -55,24 +60,24 @@ FEATURES=SQL,Tools
     >   
     >  SETUP.exe /UIMODE = Normal /ACTION = INSTALL  
   
-2.  마법사의 안내에 따르면 **설치 준비 완료** 페이지가 표시됩니다. 구성 파일의 경로는 **설치 준비 완료** 페이지의 구성 파일 경로 섹션에 지정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 설치하는 방법은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-2016-from-the-installation-wizard-setup.md)를 참조하세요.  
+2.  마법사의 안내에 따르면 **설치 준비 완료** 페이지가 표시됩니다. 구성 파일의 경로는 **설치 준비 완료** 페이지의 구성 파일 경로 섹션에 지정됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 설치하는 방법은 [설치 마법사에서 SQL Server 2016 설치&#40;설치 프로그램&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)를 참조하세요.  
   
 3.  설치를 실제로 완료하지는 않고 INI 파일을 생성하기 위해 설치를 취소합니다.  
   
     > [!NOTE]  
     >  설치 프로그램은 암호 등과 같은 기밀 정보를 제외하고 수행했던 동작에 적합한 모든 매개 변수를 기록합니다. /IAcceptSQLServerLicenseTerms 매개 변수도 구성 파일에 기록되지 않기 때문에 구성 파일을 수정하거나 명령 프롬프트에서 값을 제공해야 합니다. 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요. 또한 일반적으로 명령 프롬프트에서 값을 입력하지 않는 부울 매개 변수에 대한 값도 포함됩니다.  
   
-## 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="using-the-configuration-file-to-install-includessnoversionincludesssnoversion-mdmd"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  구성 파일은 명령줄 설치에서만 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  구성 파일을 변경해야 할 경우 구성 파일을 복사한 후 이 복사본을 변경하는 것이 좋습니다.  
   
-#### 구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 방법  
+#### <a name="how-to-use-a-configuration-file-to-install-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하는 방법  
   
 -   명령 프롬프트에서 설치를 실행하고 *ConfigurationFile* 매개 변수를 사용하여 ConfigurationFile.ini를 입력합니다.  
   
-#### 구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(SysPrep)의 이미지를 준비하고 완료하는 방법  
+#### <a name="how-to-use-a-configuration-file-to-prepare-and-complete-an-image-of-a-stand-alone-includessnoversionincludesssnoversion-mdmd-instance-sysprep"></a>구성 파일을 사용하여 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(SysPrep)의 이미지를 준비하고 완료하는 방법  
   
 1.  같은 시스템에 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 준비하고 구성하려면  
   
@@ -90,7 +95,7 @@ FEATURES=SQL,Tools
   
     -   이미지 완료 구성 파일은 Windows 이미지와 함께 저장하여 준비 인스턴스의 구성을 자동화할 수 있습니다.  
   
-#### 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하는 방법  
+#### <a name="how-to-install-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하는 방법  
   
 1.  통합 설치 옵션(한 노드에 하나의 노드 장애 조치(Failover) 클러스터를 만들고, 추가할 노드에서 AddNode를 실행하여 노드를 추가함):  
   
@@ -112,17 +117,17 @@ FEATURES=SQL,Tools
   
     -   그런 다음 이 ConfigurationFile.ini 파일을 입력하여 장애 조치(Failover) 클러스터를 완료할 수 있습니다.  
   
-#### 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대해 노드를 추가하거나 제거하는 방법  
+#### <a name="how-to-add-or-remove-a-node-to-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 대해 노드를 추가하거나 제거하는 방법  
   
 -   이전에 장애 조치(Failover) 클러스터에 대해 노드를 추가하거나 제거할 때 사용했던 구성 파일이 있을 경우 이 파일을 다시 사용하여 노드를 추가하거나 제거할 수 있습니다.  
   
-#### 구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 업그레이드하는 방법  
+#### <a name="how-to-upgrade-a-includessnoversionincludesssnoversion-mdmd-failover-cluster-using-the-configuration-file"></a>구성 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 업그레이드하는 방법  
   
 1.  패시브 노드에서 업그레이드를 실행하고 ConfigurationFile.ini 파일을 캡처합니다. 실제 업그레이드를 수행하거나, 실제 업그레이드를 수행하지 않고 종료 시 끝내는 방법을 사용할 수 있습니다.  
   
 2.  업그레이드할 모든 추가 노드에서 ConfigurationFile.ini 파일을 입력하여 프로세스를 완료합니다.  
   
-## 예제 구문  
+## <a name="sample-syntax"></a>예제 구문  
  다음은 구성 파일을 사용하는 방법을 보여 주는 예입니다.  
   
 -   명령 프롬프트에 구성 파일을 지정하기  
@@ -137,9 +142,10 @@ Setup.exe /ConfigurationFile=MyConfigurationFile.INI
 Setup.exe /SQLSVCPASSWORD="************" /AGTSVCPASSWORD="************" /ASSVCPASSWORD="************" /ISSVCPASSWORD="************" /RSSVCPASSWORD="************" /ConfigurationFile=MyConfigurationFile.INI  
 ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [SQL Server 장애 조치(Failover) 클러스터 설치](../../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)   
  [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)  
   
   
+

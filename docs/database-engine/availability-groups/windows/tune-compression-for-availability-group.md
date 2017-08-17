@@ -1,22 +1,27 @@
 ---
-title: "가용성 그룹에 대한 압축 조정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/22/2016"
-ms.prod: "sql-non-specified"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "가용성 그룹에 대한 압축 튜닝 | Microsoft Docs"
+ms.custom: 
+ms.date: 06/22/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 7632769c-b246-4766-886f-7c60ec540be8
 caps.latest.revision: 12
-author: "MikeRayMSFT"
-ms.author: "v-saume"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: MikeRayMSFT
+ms.author: v-saume
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1654499b131e9f13362e94f540b6ef8e521f2ad0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 그룹에 대한 압축 조정
+# <a name="tune-compression-for-availability-group"></a>가용성 그룹에 대한 압축 조정
 
 기본적으로 SQL Server는 가용성 그룹에 적절한 데이터 스트림을 압축합니다. 압축은 네트워크 트래픽을 줄이고 CPU 부하를 증가시키며 대기 시간을 유도할 수 있습니다. 압축을 사용하도록 설정하려면 sysadmin 고정 서버 역할이 있는 멤버여야 합니다. 다음 표는 SQL Server가 가용성 그룹 로그 스트림에 대해 압축을 사용하는 경우를 보여 줍니다.
 
@@ -26,7 +31,7 @@ caps.handback.revision: 12
 | 비동기-커밋 복제본 | Compressed
 | 자동 시드 중 | 압축되지 않음
 
-## 가용성 그룹 압축에 대한 추적 플래그 
+## <a name="trace-flags-for-availability-group-compression"></a>가용성 그룹 압축에 대한 추적 플래그 
 
 대부분의 시나리오에서 이러한 설정을 변경하지 않는 것이 좋습니다. 전역 추적 플래그를 사용하여 이러한 설정 변경을 테스트할 수 있습니다. SQL Server는 인스턴스 전체에 전역 추적 플래그를 적용합니다. 인스턴스의 모든 가용성 그룹은 이러한 설정에 영향을 받습니다.  
 
@@ -39,7 +44,7 @@ caps.handback.revision: 12
 9592          | 동기 복제본에서 가용성 그룹에 대한 로그 스트림 압축을 사용하도록 설정합니다. 압축이 대기 시간을 추가하기 때문에 이 기능은 동기 복제본에서 기본적으로 해제되어 있습니다. 비동기 복제본에서 로그 스트림 압축은 기본적으로 설정되어 있습니다.
 
 
-## 리소스
+## <a name="resources"></a>리소스
 
 
 [데이터베이스 엔진 시작 옵션](../../../database-engine/configure-windows/database-engine-service-startup-options.md)
@@ -47,3 +52,4 @@ caps.handback.revision: 12
 [자동 시드](https://msdn.microsoft.com/library/mt735149(SQL.130).aspx)
 
 [Always On 필수 조건](https://msdn.microsoft.com/library/ff878487.aspx) 
+

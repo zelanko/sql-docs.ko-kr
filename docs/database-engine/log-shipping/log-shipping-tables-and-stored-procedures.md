@@ -1,31 +1,36 @@
 ---
 title: "로그 전달 테이블 및 저장 프로시저 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보조 서버 [SQL Server]"
-  - "모니터 서버 [SQL Server]"
-  - "로그 전달 [SQL Server], 시스템 테이블"
-  - "로그 전달 [SQL Server], 저장 프로시저"
-  - "주 서버 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- secondary servers [SQL Server]
+- monitor servers [SQL Server]
+- log shipping [SQL Server], system tables
+- log shipping [SQL Server], stored procedures
+- primary servers [SQL Server]
 ms.assetid: 03420810-4c38-4c0c-adf0-913eb044c50a
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 25b36ec7a049001e54726e37024c392f71cd07ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 로그 전달 테이블 및 저장 프로시저
+# <a name="log-shipping-tables-and-stored-procedures"></a>로그 전달 테이블 및 저장 프로시저
   이 항목에서는 로그 전달 구성과 관련된 모든 테이블과 저장된 프로시저에 대해 설명합니다. 모든 로그 전달 테이블은 각 서버의 **msdb** 에 저장됩니다. 아래의 표에서는 로그 전달 구성에서 서버에 사용된 테이블 및 저장 프로시저를 설명합니다.  
   
-## 주 서버 테이블  
+## <a name="primary-server-tables"></a>주 서버 테이블  
   
 |테이블|설명|  
 |-----------|-----------------|  
@@ -36,7 +41,7 @@ caps.handback.revision: 20
 |[log_shipping_primary_databases](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)|지정된 서버의 주 데이터베이스에 대한 구성 정보를 포함합니다. 주 데이터베이스마다 한 행을 저장합니다.|  
 |[log_shipping_primary_secondaries](../../relational-databases/system-tables/log-shipping-primary-secondaries-transact-sql.md)|주 데이터베이스를 보조 데이터베이스로 매핑합니다.|  
   
-## 주 서버 저장 프로시저  
+## <a name="primary-server-stored-procedures"></a>주 서버 저장 프로시저  
   
 |저장 프로시저|설명|  
 |----------------------|-----------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 20
 |[sp_help_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-primary-secondary-transact-sql.md)|주 데이터베이스의 보조 데이터베이스 이름을 검색합니다.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|지정된 로그 전달 에이전트에 대한 최신 정보로 새로 고칩니다.|  
   
-## 보조 서버 테이블  
+## <a name="secondary-server-tables"></a>보조 서버 테이블  
   
 |테이블|설명|  
 |-----------|-----------------|  
@@ -64,7 +69,7 @@ caps.handback.revision: 20
 > [!NOTE]  
 >  지정된 주 데이터베이스에 대한 동일한 보조 서버의 보조 데이터베이스는 **log_shipping_secondary** 테이블의 설정을 공유합니다. 하나의 보조 데이터베이스에 대한 공유 설정이 변경되면 모든 보조 데이터베이스에 대한 설정이 변경됩니다.  
   
-## 보조 서버 저장 프로시저  
+## <a name="secondary-server-stored-procedures"></a>보조 서버 저장 프로시저  
   
 |저장 프로시저|설명|  
 |----------------------|-----------------|  
@@ -75,11 +80,11 @@ caps.handback.revision: 20
 |[sp_cleanup_log_shipping_history](../../relational-databases/system-stored-procedures/sp-cleanup-log-shipping-history-transact-sql.md)|보존 기간을 기준으로 로컬과 모니터에서 기록을 정리합니다.|  
 |[sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)|보조 데이터베이스, 로컬 기록 및 원격 기록을 제거합니다.|  
 |[sp_delete_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-primary-transact-sql.md)|보조 서버에서 지정한 주 서버에 대한 정보를 제거합니다.|  
-|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|**log_shipping_secondary**, **log_shipping_secondary_databases** 및 **log_shipping_monitor_secondary** 테이블에서 보조 데이터베이스 설정을 검색합니다.|  
+|[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|**log_shipping_secondary**, **log_shipping_secondary_databases**및 **log_shipping_monitor_secondary** 테이블에서 보조 데이터베이스 설정을 검색합니다.|  
 |[sp_help_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|이 저장 프로시저는 보조 서버에서 지정된 주 데이터베이스의 설정을 검색합니다.|  
 |[sp_refresh_log_shipping_monitor](../../relational-databases/system-stored-procedures/sp-refresh-log-shipping-monitor-transact-sql.md)|지정된 로그 전달 에이전트에 대한 최신 정보로 새로 고칩니다.|  
   
-## 모니터 서버 테이블  
+## <a name="monitor-server-tables"></a>모니터 서버 테이블  
   
 |테이블|설명|  
 |-----------|-----------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 20
 |[log_shipping_monitor_primary](../../relational-databases/system-tables/log-shipping-monitor-primary-transact-sql.md)|이 모니터 서버와 관련된 주 데이터베이스마다 하나의 모니터 레코드를 저장합니다.|  
 |[log_shipping_monitor_secondary](../../relational-databases/system-tables/log-shipping-monitor-secondary-transact-sql.md)|이 모니터 서버와 관련된 보조 데이터베이스마다 하나의 모니터 레코드를 저장합니다.|  
   
-## 모니터 서버 저장 프로시저  
+## <a name="monitor-server-stored-procedures"></a>모니터 서버 저장 프로시저  
   
 |저장 프로시저|설명|  
 |----------------------|-----------------|  

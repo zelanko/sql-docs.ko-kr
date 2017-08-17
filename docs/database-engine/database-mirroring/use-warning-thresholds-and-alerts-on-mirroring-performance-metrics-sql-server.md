@@ -1,30 +1,35 @@
 ---
-title: "미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 모니터링 [SQL Server]"
-  - "임계값 [SQL Server]"
-  - "데이터베이스 미러링 [SQL Server], SQL Server Management Studio에서 관리"
-  - "경고 [SQL Server], 데이터베이스 미러링"
-  - "데이터베이스 미러링 [SQL Server], 모니터링"
-  - "경고 [데이터베이스 미러링]"
+title: "미러링 성능 메트릭에 경고 임계값 및 경고 사용 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- monitoring database mirroring [SQL Server]
+- thresholds [SQL Server]
+- database mirroring [SQL Server], managing in SQL Server Management Studio
+- alerts [SQL Server], database mirroring
+- database mirroring [SQL Server], monitoring
+- warnings [database mirroring]
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1d7f8c3105d562dd4203f5f9d2f47852068af819
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
-  이 항목에는 데이터베이스 미러링에 대해 경고 임계값을 구성하고 관리할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 대한 정보가 포함되어 있습니다. 데이터베이스 미러링 모니터 서버 또는 **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert** 및 **sp_dbmmonitordropalert** 저장 프로시저를 사용할 수 있습니다. 또한 이 항목에는 데이터베이스 미러링 이벤트에 대해 경고를 구성하는 방법에 대한 정보도 포함되어 있습니다.  
+# <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>미러링 성능 메트릭에 대해 경고 임계값 및 경고 사용(SQL Server)
+  이 항목에는 데이터베이스 미러링에 대해 경고 임계값을 구성하고 관리할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 대한 정보가 포함되어 있습니다. 데이터베이스 미러링 모니터 서버 또는 **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**및 **sp_dbmmonitordropalert** 저장 프로시저를 사용할 수 있습니다. 또한 이 항목에는 데이터베이스 미러링 이벤트에 대해 경고를 구성하는 방법에 대한 정보도 포함되어 있습니다.  
   
  미러된 데이터베이스에 대해 모니터링을 설정하면 시스템 관리자가 여러 개의 주요 성능 메트릭에 대해 경고 임계값을 구성할 수 있습니다. 또한 관리자는 이러한 데이터베이스 미러링 이벤트 및 기타 이벤트에 대해 경고를 구성할 수 있습니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 40
 |성능 메트릭|경고 임계값|데이터베이스 미러링 모니터 레이블|  
 |------------------------|-----------------------|--------------------------------------|  
 |보내지 않은 로그|주 서버 인스턴스에서 경고를 생성하는 보내지 않은 로그 크기(KB)를 지정합니다. 이 경고는 KB를 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|**보내지 않은 로그가 임계값을 초과하는 경우 경고**|  
-|복원되지 않은 로그|미러 서버 인스턴스에서 경고를 생성하는 복원되지 않은 로그 크기(KB)를 지정합니다. 이 경고는 장애 조치(Failover) 시간을 측정하는 데 도움이 됩니다. *장애 조치 시간* 은 주로 이전 미러 서버에서 Redo Queue에 남아 있는 로그를 롤포워드해야 하는 시간과 짧은 추가 시간으로 구성됩니다.<br /><br /> 참고: 자동 장애 조치의 경우 시스템이 오류를 감지하는 데 걸리는 시간은 장애 조치 시간과 관계가 없습니다.<br /><br /> 자세한 내용은 [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)을 참조하세요.|**복원되지 않은 로그가 임계값을 초과하는 경우 경고**|  
+|복원되지 않은 로그|미러 서버 인스턴스에서 경고를 생성하는 복원되지 않은 로그 크기(KB)를 지정합니다. 이 경고는 장애 조치(Failover) 시간을 측정하는 데 도움이 됩니다. *장애 조치 시간* 은 주로 이전 미러 서버에서 Redo Queue에 남아 있는 로그를 롤포워드해야 하는 시간과 짧은 추가 시간으로 구성됩니다.<br /><br /> 참고: 자동 장애 조치의 경우 시스템이 오류를 감지하는 데 걸리는 시간은 장애 조치 시간과 관계가 없습니다.<br /><br /> 자세한 내용은 [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)프로세스를 통해 주 역할과 미러 역할을 서로 바꿀 수 있습니다.|**복원되지 않은 로그가 임계값을 초과하는 경우 경고**|  
 |보내지 않은 가장 오래된 트랜잭션|주 서버 인스턴스에서 경고가 생성되기까지 Send Queue에 누적될 수 있는 트랜잭션에 해당하는 시간(분)을 지정합니다. 이 경고는 시간을 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 되며 특히 성능 우선 모드와 관련이 있습니다. 그러나 파트너의 연결이 끊어져 미러링이 일시 중지되거나 일시 중단되면 이 경고는 보호 우선 모드와도 관련이 있습니다.|**보내지 않은 가장 오래된 트랜잭션 기간이 임계값을 초과하는 경우 경고**|  
 |미러 커밋 오버헤드|주 서버에서 경고가 생성되기까지 허용되는 트랜잭션당 평균 지연 시간(밀리초)을 지정합니다. 이 지연 시간은 주 서버 인스턴스에서 미리 서버 인스턴스가 트랜잭션 로그 레코드를 Redo Queue에 쓸 때까지 대기하는 동안 발생한 오버헤드 양입니다. 이 값은 보호 우선 모드에만 해당됩니다.|**미러 커밋 오버헤드가 임계값을 초과하는 경우 경고**|  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 40
     |[sp_dbmmonitorhelpalert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)|여러 가지 주요 데이터베이스 미러링 모니터 성능 메트릭 중 하나 또는 모두에 대한 경고 임계값 정보를 반환합니다.|  
     |[sp_dbmmonitordropalert&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)|지정한 성능 메트릭에 대한 경고를 삭제합니다.|  
   
-## Windows 이벤트 로그로 전송되는 성능 임계값 이벤트  
- 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달하지 않은 경우 업데이트 프로시저 **sp_dbmmonitorupdate**가 메트릭에 대해 정보 이벤트(*성능 임계값 이벤트*)를 생성하고 해당 이벤트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
+## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Windows 이벤트 로그로 전송되는 성능 임계값 이벤트  
+ 성능 메트릭에 대해 경고 임계값을 정의하면 상태 테이블이 업데이트될 때 최신 값이 임계값에 대해 평가됩니다. 임계값에 도달하지 않은 경우 업데이트 프로시저 **sp_dbmmonitorupdate**가 메트릭에 대해 정보 이벤트( *성능 임계값 이벤트*)를 생성하고 해당 이벤트를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 이벤트 로그에 기록합니다. 다음 표에서는 성능 임계값 이벤트의 이벤트 ID를 보여 줍니다.  
   
 |성능 메트릭|이벤트 ID|  
 |------------------------|--------------|  
@@ -112,9 +117,9 @@ caps.handback.revision: 40
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **SQL Server Management Studio를 사용하여 경고를 만들려면**  
   
--   [오류 번호를 사용하여 경고 만들기](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [오류 번호를 사용하여 경고 만들기](http://msdn.microsoft.com/library/03dd7fac-5073-4f86-babd-37e45a86023c)  
   
--   [WMI 이벤트 경고 만들기](../../ssms/agent/create-a-wmi-event-alert.md)  
+-   [WMI 이벤트 경고 만들기](http://msdn.microsoft.com/library/b8c46db6-408b-484e-98f0-a8af3e7ec763)  
   
  **데이터베이스 미러링을 모니터링하려면**  
   
@@ -138,7 +143,7 @@ caps.handback.revision: 40
   
 -   [sp_dbmmonitorupdate&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   

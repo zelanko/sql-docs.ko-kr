@@ -1,28 +1,33 @@
 ---
 title: "로그 전달 구성에서 보조 데이터베이스 제거(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보조 데이터베이스 삭제"
-  - "보조 데이터베이스 [SQL Server], 로그 전달에서"
-  - "보조 데이터베이스 제거"
-  - "보조 데이터 파일 [SQL Server], 제거"
-  - "로그 전달 [SQL Server], 보조 데이터베이스"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deleting secondary databases
+- secondary databases [SQL Server], in log shipping
+- removing secondary databases
+- secondary data files [SQL Server], removing
+- log shipping [SQL Server], secondary databases
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 caps.latest.revision: 19
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9c0ced4d63693c2d299556a28796e55fccbcc2b5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 로그 전달 구성에서 보조 데이터베이스 제거(SQL Server)
+# <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에서 보조 데이터베이스 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 로그 전달 보조 데이터베이스를 제거하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -48,9 +53,9 @@ caps.handback.revision: 19
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 로그 전달 보조 데이터베이스를 제거하려면  
+#### <a name="to-remove-a-log-shipping-secondary-database"></a>로그 전달 보조 데이터베이스를 제거하려면  
   
-1.  현재 로그 전달 주 서버인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결하고 해당 인스턴스를 확장합니다.  
+1.  현재 로그 전달 주 서버인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에 연결하고 해당 인스턴스를 확장합니다.  
   
 2.  **데이터베이스**를 확장하고 로그 전달 주 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -64,16 +69,16 @@ caps.handback.revision: 19
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 보조 데이터베이스를 제거하려면  
+#### <a name="to-remove-a-secondary-database"></a>보조 데이터베이스를 제거하려면  
   
-1.  주 서버에서 [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)를 실행하여 주 서버에서 보조 데이터베이스에 대한 정보를 삭제합니다.  
+1.  주 서버에서 [sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md) 를 실행하여 주 서버에서 보조 데이터베이스에 대한 정보를 삭제합니다.  
   
-2.  보조 서버에서 [sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md)를 실행하여 보조 데이터베이스를 삭제합니다.  
+2.  보조 서버에서 [sp_delete_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-secondary-database-transact-sql.md) 를 실행하여 보조 데이터베이스를 삭제합니다.  
   
     > [!NOTE]  
-    >  보조 ID가 같은 보조 데이터베이스가 없는 경우 **sp_delete_log_shipping_secondary_database**에서 **sp_delete_log_shipping_secondary_primary**가 호출되어 보조 ID에 대한 항목과 복사 및 복원 작업이 삭제됩니다.  
+    >  보조 ID가 같은 보조 데이터베이스가 없는 경우 **sp_delete_log_shipping_secondary_database** 에서 **sp_delete_log_shipping_secondary_primary** 가 호출되어 보조 ID에 대한 항목과 복사 및 복원 작업이 삭제됩니다.  
   
-3.  보조 서버에서 복사 및 복원 작업을 사용하지 않도록 설정합니다. 자세한 내용은 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
+3.  보조 서버에서 복사 및 복원 작업을 사용하지 않도록 설정합니다. 자세한 내용은 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)을 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
@@ -91,7 +96,7 @@ caps.handback.revision: 19
   
 -   [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [로그 전달 테이블 및 저장 프로시저](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

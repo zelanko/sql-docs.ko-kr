@@ -1,30 +1,35 @@
 ---
 title: "데이터베이스 미러링 중에 발생 가능한 오류 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "제한 시간 [SQL Server 데이터베이스 미러링]"
-  - "소프트 오류 [SQL Server]"
-  - "데이터베이스 미러링 [SQL Server], 문제 해결"
-  - "제한 시간 오류 [SQL Server]"
-  - "문제 해결 [SQL Server], 데이터베이스 미러링"
-  - "하드 오류"
-  - "실패한 데이터베이스 미러링 세션 [SQL Server]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time-out period [SQL Server database mirroring]
+- soft errors [SQL Server]
+- database mirroring [SQL Server], troubleshooting
+- timeout errors [SQL Server]
+- troubleshooting [SQL Server], database mirroring
+- hard errors
+- failed database mirroring sessions [SQL Server]
 ms.assetid: d7031f58-5f49-4e6d-9a62-9b420f2bb17e
 caps.latest.revision: 59
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 59
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 8c97371185c1fe7bdd38c7ed172d5a49ae27b58c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 중에 발생 가능한 오류
+# <a name="possible-failures-during-database-mirroring"></a>데이터베이스 미러링 중에 발생 가능한 오류
   물리적, 운영 체제 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문제로 인해 데이터베이스 미러링 세션에서 오류가 발생할 수 있습니다. 데이터베이스 미러링은 Sqlservr.exe에서 사용하는 구성 요소를 정기적으로 검사하여 구성 요소가 올바르게 작동하는지, 아니면 실패했는지를 확인하지 않습니다. 하지만 일부 오류 유형의 경우 영향을 받는 구성 요소가 Sqlservr.exe에 오류를 보고합니다. 다른 구성 요소에서 보고된 오류를 *하드 오류*라고 합니다. 확인되지 않는 다른 오류를 감지하기 위해 데이터베이스 미러링은 자체적으로 제한 시간 메커니즘을 구현합니다. 미러링 제한 시간이 발생하면 데이터베이스 미러링은 오류가 발생했다고 가정하고 *소프트 오류*를 선언합니다. 하지만 SQL Server 인스턴스 수준에서 발생하는 일부 오류는 미러링 제한 시간을 일으키지 않으며, 발견되지 않은 상태로 진행될 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -32,7 +37,7 @@ caps.handback.revision: 59
   
  오류 감지 속도 그리고 이에 따른 미러링 세션의 오류 반응 속도는 오류가 하드 오류인지 소프트 오류인지에 따라 달라집니다. 네트워크 오류와 같은 일부 하드 오류는 즉시 보고되지만 경우에 따라 구성 요소별 제한 시간으로 인해 일부 하드 오류 보고가 지연될 수 있습니다. 소프트 오류의 경우 미러링 제한 시간의 길이가 오류 검색 속도를 결정합니다. 기본적으로 이 시간은 10초( 최소 권장 값)입니다.  
   
-## 하드 오류로 인한 실패  
+## <a name="failures-due-to-hard-errors"></a>하드 오류로 인한 실패  
  하드 오류를 일으킬 수 있는 원인 중에는 다음 조건이 있습니다.  
   
 -   연결 또는 전선의 끊어짐  
@@ -73,7 +78,7 @@ caps.handback.revision: 59
 > [!NOTE]  
 >  미러링은 서버에 액세스하는 클라이언트 관련 문제에 대해 보호하지 않습니다. 예를 들어 개인 네트워크 인터페이스 카드가 서버 인스턴스 간의 모든 미러링 트래픽을 처리하는 동안 공용 네트워크 어댑터가 주 서버 인스턴스에 대한 클라이언트 연결을 처리하는 경우 데이터베이스를 계속 미러링하려고 하지만 공용 네트워크 어댑터의 오류로 인해 클라이언트가 데이터베이스에 액세스하지 못합니다.  
   
-## 소프트 오류로 인한 오류  
+## <a name="failures-due-to-soft-errors"></a>소프트 오류로 인한 오류  
  미러링 제한 시간 초과가 발생할 수 있는 상황은 다음과 같습니다.  
   
 -   TCP 연결 제한 시간 초과, 삭제되거나 손상된 패킷, 잘못된 순서의 패킷 등의 네트워크 오류  
@@ -84,7 +89,7 @@ caps.handback.revision: 59
   
 -   CPU 또는 디스크 오버로드, 꽉 찬 트랜잭션 로그 또는 시스템의 메모리나 스레드 부족과 같은 컴퓨팅 리소스 부족. 이런 경우에는 제한 시간을 늘이거나, 작업을 줄이거나, 작업을 처리할 수 있도록 하드웨어를 변경해야 합니다.  
   
-### 미러링 제한 시간 메커니즘  
+### <a name="the-mirroring-time-out-mechanism"></a>미러링 제한 시간 메커니즘  
  소프트 오류는 서버 인스턴스에서 직접 감지되지 않으므로 소프트 오류 발생 시 서버 인스턴스가 무기한 대기할 수 있습니다. 이를 방지하기 위해 데이터베이스 미러링은 미러링 세션의 각 서버 인스턴스를 기반으로 열려 있는 각 연결에서 일정한 간격으로 ping을 보내는 제한 시간 메커니즘을 구현합니다.  
   
  연결이 열려 있으려면 서버 인스턴스가 ping을 하나 더 보내는 데 필요한 시간을 더하여 정의되는 제한 시간에서 해당 연결에 대한 ping을 받아야 합니다. 제한 시간 내에 ping을 받은 경우 연결이 열려 있으며 서버 인스턴스가 해당 연결을 통해 통신하고 있음을 나타냅니다. ping을 받으면 서버 인스턴스는 해당 연결의 제한 시간 카운터를 다시 설정합니다.  
@@ -97,16 +102,16 @@ caps.handback.revision: 59
   
  **제한 시간 값을 변경하려면(보안 우선 모드 전용)**  
   
--   [ALTER DATABASE \<database> SET PARTNER TIMEOUT \<integer>](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용합니다.  
+-   [ALTER DATABASE \<데이터베이스> SET PARTNER TIMEOUT \<정수>](../../t-sql/statements/alter-database-transact-sql.md) 문을 사용합니다.  
   
  **현재 제한 시간 값을 보려면**  
   
--   [sys.database_mirroring](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)에서 **mirroring_connection_timeout**을 쿼리합니다.  
+-   **sys.database_mirroring** 에서 [mirroring_connection_timeout](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)을 쿼리합니다.  
   
-## 오류에 대한 응답  
+## <a name="responding-to-an-error"></a>오류에 대한 응답  
  오류 유형에 관계없이 오류를 감지하는 서버 인스턴스는 인스턴스의 역할, 세션의 운영 모드 및 세션 내 다른 연결의 상태를 기반으로 적절하게 오류에 응답합니다. 파트너 손실로 인해 발생하는 상황에 대한 자세한 내용은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)를 참조하십시오.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [역할 전환 중 서비스 중단 예측&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   

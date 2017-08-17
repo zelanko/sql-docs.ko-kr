@@ -1,34 +1,39 @@
 ---
 title: "가용성 복제본 속성(일반 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.availabilityreplicaproperties.general.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.availabilityreplicaproperties.general.f1
 ms.assetid: 8318fefb-e045-4fab-8507-e1951fc7cec6
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 3720e9230366bb59290d78212ee5ba94fe4d1c71
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 복제본 속성(일반 페이지)
+# <a name="availability-replica-properties-general-page"></a>가용성 복제본 속성(일반 페이지)
   이 대화 상자를 사용하여 가용성 복제본의 속성을 확인할 수 있습니다.  
   
-## 작업 목록  
+## <a name="task-list"></a>작업 목록  
  **가용성 복제본 속성을 보려면**  
   
 -   [가용성 복제본 속성 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   
 -   [Always On 대시보드 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## UIElement 목록  
+## <a name="uielement-list"></a>UIElement 목록  
  **가용성 그룹 이름**  
  가용성 그룹의 이름으로, WSFC(Windows Server 장애 조치(failover) 클러스터) 내에서 고유해야 하는 사용자 지정 이름입니다.  
   
@@ -54,9 +59,9 @@ caps.handback.revision: 14
  **동기 커밋**  
  주 복제본은 보조 복제본이 트랜잭션을 디스크에 쓸 때까지 기다렸다가 지정된 트랜잭션을 커밋합니다.  
   
- 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)을 참조하세요.  
+ 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)또는 PowerShell을 사용하여 AlwaysOn 가용성 그룹에 대해 계획된 수동 장애 조치(failover) 또는 강제 수동 장애 조치(강제 장애 조치)를 수행하는 방법을 설명합니다.  
   
- **장애 조치(Failover) 모드**  
+ **Failover mode**  
  복제본의 장애 조치(failover) 모드로, 다음 중 하나입니다.  
   
  **자동**  
@@ -72,7 +77,7 @@ caps.handback.revision: 14
  주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
  **읽기/쓰기 연결 허용**  
- 응용 프로그램 의도 연결 속성이 **ReadOnly**로 설정된 연결은 허용되지 않습니다. 응용 프로그램 의도 속성이 **ReadWrite** 로 설정되었거나 응용 프로그램 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다.  
+ 응용 프로그램 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다. 응용 프로그램 의도 속성이 **ReadWrite** 로 설정되었거나 응용 프로그램 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다.  
   
  **읽기용 보조**  
  보조 역할을 수행하는 가용성 복제본,  즉 보조 복제본이 클라이언트로부터의 연결을 허용할 수 있는지 여부를 나타내며,  다음 중 하나입니다.  
@@ -86,7 +91,7 @@ caps.handback.revision: 14
  **예**  
  이 복제본의 보조 데이터베이스에 대한 모든 연결이 허용되지만 읽기 액세스만 가능합니다. 즉, 모든 보조 데이터베이스에 대한 읽기 액세스가 가능합니다.  
   
- 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
+ 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)개념을 소개합니다.  
   
  **세션 제한 시간(초)**  
  제한 시간(초)입니다. 제한 시간은 복제본이 주 복제본과 보조 복제본 간의 연결이 실패한 것으로 간주하기 전에 복제본에서 다른 복제본의 메시지를 받기 위해 기다리는 최대 시간입니다. 세션 제한 시간은 보조 복제본이 주 복제본에 연결되어 있는지 여부를 검색합니다. 실패한 보조 복제본 연결을 검색한 경우 주 복제본은 보조 복제본을 NOT_SYNCHRONIZED로 간주합니다. 주 복제본과의 실패한 연결을 검색할 경우 보조 복제본에서는 단순히 다시 연결을 시도합니다.  
@@ -95,9 +100,10 @@ caps.handback.revision: 14
 >  세션 제한 시간은 자동 장애 조치(failover)를 발생시키지 않습니다.  
   
  **끝점 URL**  
- 데이터 동기화를 위해 주 복제본과 보조 복제본 간의 연결에 사용되는 사용자 지정 데이터베이스 미러링 끝점의 문자열 표현입니다. 끝점 URL의 구문에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify endpoint url - adding or modifying availability replica.md)을 참조하세요.  
+ 데이터 동기화를 위해 주 복제본과 보조 복제본 간의 연결에 사용되는 사용자 지정 데이터베이스 미러링 끝점의 문자열 표현입니다. 끝점 URL의 구문에 대한 자세한 내용은 [가용성 복제본 추가 또는 수정 시 끝점 URL 지정&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

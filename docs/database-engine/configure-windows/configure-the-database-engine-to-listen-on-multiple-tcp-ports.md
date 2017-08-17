@@ -1,35 +1,40 @@
 ---
-title: "여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "포트 [SQL Server], 여러"
-  - "TDS"
-  - "여러 포트에서 수신"
-  - "끝점 [SQL Server], TDS"
-  - "포트 추가"
-  - "TDS(Tabular Data Stream)"
-  - "여러 포트"
+title: "여러 TCP 포트에서 수신 대기하도록 데이터베이스 엔진 구성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- ports [SQL Server], multiple
+- TDS
+- listen on multiple ports
+- endpoints [SQL Server], TDS
+- adding ports
+- tabular data stream
+- multiple ports
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 caps.latest.revision: 26
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0ba9063f05af2d7e021244bca5e14b75a8a510b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
-  이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 끝점을 만듭니다.  
+# <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
+  이 항목에서는 SQL Server 구성 관리자를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 여러 TCP 포트로 수신하도록 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 구성하는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 TCP/IP가 설정된 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 IP 주소와 TCP 포트 번호로 구성된 연결 지점에서 들어오는 연결을 수신합니다. 다음 절차에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 추가 TCP 포트에서 수신할 수 있도록 TDS(Tabular Data Stream) 끝점을 만듭니다.  
   
  두 번째 TDS 끝점을 만드는 이유는 다음과 같습니다.  
   
--   특정 서브넷 상에서 로컬 클라이언트 컴퓨터의 기본 끝점에 대한 액세스를 제한하도록 방화벽을 구성하여 보안을 향상시킵니다. 방화벽이 인터넷에 노출시키는 새로운 끝점을 만들고 이 끝점에 대한 연결 권한을 해당 서버 지원 팀으로만 제한하여 지원 팀이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 인터넷으로 액세스할 수 있도록 유지합니다.  
+-   특정 서브넷 상에서 로컬 클라이언트 컴퓨터의 기본 끝점에 대한 액세스를 제한하도록 방화벽을 구성하여 보안을 향상시킵니다. 방화벽이 인터넷에 노출시키는 새로운 끝점을 만들고 이 끝점에 대한 연결 권한을 해당 서버 지원 팀으로만 제한하여 지원 팀이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 인터넷으로 액세스할 수 있도록 유지합니다.  
   
 -   NUMA(Non-Uniform Memory Access)를 사용할 때 특정 프로세서에 대한 연결의 선호도를 설정합니다.  
   
@@ -45,7 +50,7 @@ caps.handback.revision: 26
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### TDS 끝점을 만들려면  
+#### <a name="to-create-a-tds-endpoint"></a>TDS 끝점을 만들려면  
   
 -   다음 문을 실행하여 서버에서 사용 가능한 모든 TCP 주소에 대해 포트 1500의 **CustomConnection** 이라는 끝점을 만듭니다.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 26
   
  새로운 [!INCLUDE[tsql](../../includes/tsql-md.md)] 끝점을 만들 때 **public** 에 대한 연결 권한은 기본 TDS 끝점에 대해 취소됩니다. **public** 그룹에 대한 액세스에 기본 끝점이 필요한 경우 `GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] to [public];` 문을 사용하여 이 권한을 다시 적용합니다.  
   
-#### 끝점에 액세스를 부여하려면  
+#### <a name="to-grant-access-to-the-endpoint"></a>끝점에 액세스를 부여하려면  
   
 -   다음 문을 실행하여 **CustomConnection** 끝점에 대한 액세스를 회사 도메인의 SQLSupport 그룹에 부여합니다.  
   
@@ -71,7 +76,7 @@ caps.handback.revision: 26
     GO  
     ```  
   
-#### 추가 TCP 포트로 수신하도록 SQL Server 데이터베이스 엔진을 구성하려면  
+#### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>추가 TCP 포트로 수신하도록 SQL Server 데이터베이스 엔진을 구성하려면  
   
 1.  SQL Server 구성 관리자에서 **SQL Server 네트워크 구성**을 확장한 다음 *<instance_name>***에 대한 프로토콜**을 클릭합니다.  
   
@@ -92,7 +97,7 @@ caps.handback.revision: 26
   
      [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 다시 시작하면 오류 로그에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 수신 중인 포트 목록이 표시됩니다.  
   
-#### 새 끝점에 연결하려면  
+#### <a name="to-connect-to-the-new-endpoint"></a>새 끝점에 연결하려면  
   
 -   다음 문을 실행하여 ACCT 서버에서 SQL Server의 기본 인스턴스에 대한 **CustomConnection** 끝점에 신뢰할 수 있는 연결을 사용하여 연결합니다. 이때 사용자는 [corp\SQLSupport] 그룹의 멤버인 것으로 가정합니다.  
   
@@ -100,10 +105,10 @@ caps.handback.revision: 26
     sqlcmd -SACCT,1500  
     ```  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [DROP ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
- [GRANT 끝점 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [GRANT 끝점 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
  [NUMA 노드에 TCP IP 포트 매핑&#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)  
   
   

@@ -1,26 +1,31 @@
 ---
 title: "user options 서버 구성 옵션 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "모든 사용자에 대한 전역 기본값 [SQL Server]"
-  - "사용자 [SQL Server], 전역 기본값"
-  - "user options 옵션 [SQL Server]"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- global default for all users [SQL Server]
+- users [SQL Server], global defaults
+- user options option [SQL Server]
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 caps.latest.revision: 25
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a801f77059d2aa6bacd89901c63f80dcc91bf84a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# user options 서버 구성 옵션 구성
+# <a name="configure-the-user-options-server-configuration-option"></a>user options 서버 구성 옵션 구성
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 **또는** 을 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] user options [!INCLUDE[tsql](../../includes/tsql-md.md)]서버 구성 옵션을 구성하는 방법에 대해 설명합니다. **user options** 옵션은 모든 사용자에 대한 전역 기본값을 지정합니다. 기본 쿼리 처리 옵션 목록은 사용자의 작업 세션 기간에 대해 설정됩니다. **user options** 옵션을 사용하면 서버의 기본 설정이 적합하지 않은 경우 SET 옵션의 기본값을 변경할 수 있습니다.  
@@ -67,16 +72,16 @@ caps.handback.revision: 25
     |8192|NUMERIC_ROUNDABORT|식의 전체 자릿수가 떨어지면 오류가 발생합니다.|  
     |16384|XACT_ABORT|Transact-SQL 문이 런타임 오류를 일으키면 트랜잭션을 롤백합니다.|  
   
--   **user options** 의 비트 위치는 @@OPTIONS의 비트 위치와 같습니다. 각 연결에는 구성 환경을 나타내는 @@OPTIONS 함수가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하면 현재 **user options** 값을 @@OPTIONS에 할당하는 기본 환경이 표시됩니다. **user options** 의 SET 문을 실행하면 세션의 @@OPTIONS 함수의 해당하는 값에 영향을 줍니다. 이 설정이 변경된 이후에 만들어진 모든 연결은 새 값을 받습니다.  
+-   **user options**의 비트 위치는 @@OPTIONS의 비트 위치와 같습니다. 각 연결에는 구성 환경을 나타내는 @@OPTIONS 함수가 있습니다. \ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 로그인하면 현재 **user options** 값을 @@OPTIONS에 할당하는 기본 환경이 사용자에게 표시됩니다. **user options**에 대한 SET 문을 실행하면 세션의 @@OPTIONS 함수에 해당하는 값에 영향을 줍니다. 이 설정이 변경된 이후에 만들어진 모든 연결은 새 값을 받습니다.  
   
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> 사용 권한  
- 매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure**를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure**를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
+ 매개 변수 없이 또는 첫 번째 매개 변수만 사용하여 **sp_configure** 를 실행할 수 있는 권한은 기본적으로 모든 사용자에게 부여됩니다. 구성 옵션을 변경하거나 RECONFIGURE 문을 실행하는 두 매개 변수를 사용하여 **sp_configure** 를 실행하려면 사용자에게 ALTER SETTINGS 서버 수준 권한이 있어야 합니다. **sysadmin** 및 **serveradmin** 고정 서버 역할은 ALTER SETTINGS 권한을 암시적으로 보유하고 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### user options 구성 옵션을 구성하려면  
+#### <a name="to-configure-the-user-options-configuration-option"></a>user options 구성 옵션을 구성하려면  
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -88,13 +93,13 @@ caps.handback.revision: 25
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### user options 구성 옵션을 구성하려면  
+#### <a name="to-configure-the-user-options-configuration-option"></a>user options 구성 옵션을 구성하려면  
   
 1.  [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 통해 ANSI_WARNINGS 서버 옵션에 대한 설정을 변경하기 위해 `user options`으로 설정하여 제한 시간을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) 를 통해 ANSI_WARNINGS 서버 옵션에 대한 설정을 변경하기 위해 `user options` 으로 설정하여 제한 시간을 사용하지 않도록 설정하는 방법을 보여 줍니다.  
   
 ```tsql  
 USE AdventureWorks2012 ;  
@@ -109,10 +114,11 @@ GO
 ##  <a name="FollowUp"></a> 후속 작업: user options 구성 옵션을 구성한 후  
  이 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [RECONFIGURE&#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   
+

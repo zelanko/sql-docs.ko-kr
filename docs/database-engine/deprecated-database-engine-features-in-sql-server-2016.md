@@ -1,31 +1,38 @@
 ---
 title: "SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "11/03/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "사용되지 않는 기능 [SQL Server]"
-  - "데이터베이스 엔진 [SQL Server], 이전 버전과의 호환성"
-  - "사용 중단 [SQL Server], 기능 목록"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 06/12/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- deprecated features [SQL Server]
+- Database Engine [SQL Server], backward compatibility
+- deprecation [SQL Server], feature list
 ms.assetid: c10eeaa5-3d3c-49b4-a4bd-5dc4fb190142
 caps.latest.revision: 215
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 215
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0dff466c24cebd9c4045b6cf99530cf5eec8d7d4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능
+# <a name="deprecated-database-engine-features-in-sql-server-2016"></a>SQL Server 2016에서 사용되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
-  
+  이 항목에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
+
+[!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]의 경우 [SQL Server 2017에서 사용되지 않는 데이터베이스 엔진 기능](../database-engine/deprecated-database-engine-features-in-sql-server-2017.md)을 참조하세요.
+
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Deprecated Features 개체 성능 카운터 및 추적 이벤트를 통해 더 이상 사용되지 않는 기능의 사용을 모니터링할 수 있습니다. 자세한 내용은 [SQL Server 개체 사용](../relational-databases/performance-monitor/use-sql-server-objects.md)을 참조하세요.  
   
  다음 문을 실행하여 이러한 카운터의 값을 사용할 수도 있습니다.  
@@ -41,7 +48,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
 |Backup 및 Restore 메서드|RESTORE { DATABASE &#124; LOG } WITH [MEDIA]PASSWORD는 계속 사용되지 않습니다. BACKUP { DATABASE &#124; LOG } WITH PASSWORD 및 BACKUP { DATABASE &#124; LOG } WITH MEDIAPASSWORD는 더 이상 사용되지 않습니다.|없음|BACKUP DATABASE 또는 LOG WITH PASSWORD<br /><br /> BACKUP DATABASE 또는 LOG WITH MEDIAPASSWORD|104<br /><br /> 103|  
-|호환성 수준|버전 110([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])의 업그레이드|호환성 수준은 마지막 두 버전에서만 사용할 수 있습니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)을 참조하세요.|데이터베이스 호환성 수준 100|108|  
+|호환성 수준|버전 110([!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] 및 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)])의 업그레이드|호환성 수준은 마지막 두 버전에서만 사용할 수 있습니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|데이터베이스 호환성 수준 100|108|  
 |데이터베이스 개체|트리거에서 결과 집합을 반환하는 기능|없음|트리거에서 결과 반환|12|  
 |암호화|RC4 또는 RC4_128을 사용한 암호화는 더 이상 사용되지 않으며 다음 버전에서 제거될 예정입니다. RC4 및 RC4_128 해독은 더 이상 사용되지 않습니다.|AES 등과 같은 다른 암호화 알고리즘을 사용하십시오.|사용되지 않는 암호화 알고리즘|253|  
 |원격 서버|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|연결된 서버를 사용하여 원격 서버를 대체합니다. sp_addserver는 로컬 옵션으로만 사용할 수 있습니다.|sp_addremotelogin<br /><br /> sp_addserver<br /><br /> sp_dropremotelogin<br /><br /> sp_helpremotelogin<br /><br /> sp_remoteoption|70<br /><br /> 69<br /><br /> 71<br /><br /> 72<br /><br /> 73|  
@@ -56,10 +63,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
   
 |범주|사용되지 않는 기능|대체 기능|기능 이름|기능 ID|  
 |--------------|------------------------|-----------------|------------------|----------------|  
-|호환성 수준|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)을 참조하세요.|sp_dbcmptlevel|80|  
+|호환성 수준|sp_dbcmptlevel|ALTER DATABASE … SET COMPATIBILITY_LEVEL. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|sp_dbcmptlevel|80|  
 |호환성 수준|데이터베이스 호환성 수준 110 및 120|이후 릴리스로 데이터베이스 및 응용 프로그램을 업그레이드하도록 계획합니다.|데이터베이스 호환성 수준 110<br /><br /> 데이터베이스 호환성 수준 120||  
 |XML|인라인 XDR 스키마 생성|XMLDATA 지시어에 FOR XML 옵션은 더 이상 사용되지 않습니다. RAW 및 AUTO 모드의 경우 XSD 생성을 사용하세요. EXPLICT 모드의 XMLDATA 지시어의 경우에는 대체할 옵션이 없습니다.|XMLDATA|181|  
-|백업 및 복원|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 또는 LOG TO TAPE|235|  
+|Backup 및 Restore 메서드|BACKUP { DATABASE &#124; LOG } TO TAPE<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_tape*|BACKUP { DATABASE &#124; LOG } TO DISK<br /><br /> BACKUP { DATABASE &#124; LOG } TO *device_that_is_a_disk*|BACKUP DATABASE 또는 LOG TO TAPE|235|  
 |Backup 및 Restore 메서드|sp_addumpdevice'**tape**'|sp_addumpdevice'**disk**'|ADDING TAPE DEVICE|236|  
 |Backup 및 Restore 메서드|sp_helpdevice|sys.backup_devices|sp_helpdevice|100|  
 |데이터 정렬|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|없음 이러한 데이터 정렬은 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 지원되기는 하지만 fn_helpcollations를 통해 볼 수는 없습니다.|Korean_Wansung_Unicode<br /><br /> Lithuanian_Classic<br /><br /> SQL_AltDiction_CP1253_CS_AS|191<br /><br /> 192<br /><br /> 194|  
@@ -124,10 +131,10 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |Set 옵션|SET FMTONLY|[sys.dm_exec_describe_first_result_set&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md), [sys.dm_exec_describe_first_result_set_for_object&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md), [sp_describe_first_result_set&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 및 [sp_describe_undeclared_parameters&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md).|SET FMTONLY|250|  
 |서버 구성 옵션|c2 audit 옵션<br /><br /> default trace enabled 옵션|[common criteria compliance enabled 서버 구성 옵션](../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md)<br /><br /> [확장 이벤트](../relational-databases/extended-events/extended-events.md)|sp_configure 'c2 audit mode'<br /><br /> sp_configure 'default trace enabled'|252<br /><br /> 253|  
 |SMO 클래스|**Microsoft.SQLServer. Management.Smo.Information** 클래스<br /><br /> **Microsoft.SQLServer. Management.Smo.Settings** 클래스<br /><br /> **Microsoft.SQLServer.Management. Smo.DatabaseOptions** 클래스<br /><br /> **Microsoft.SqlServer.Management.Smo. DatabaseDdlTrigger.NotForReplication** 속성|**Microsoft.SqlServer.  Management.Smo.Server** 클래스<br /><br /> **Microsoft.SqlServer.  Management.Smo.Server** 클래스<br /><br /> **Microsoft.SqlServer. Management.Smo.Database** 클래스<br /><br /> 없음|없음|없음|  
-|SQL Server 에이전트|**Net Send** 알림<br /><br /> 호출기 알림|전자 메일 알림<br /><br /> 전자 메일 알림 |InclusionThresholdSetting|InclusionThresholdSetting|  
-|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]와 솔루션 탐색기 통합||InclusionThresholdSetting|없음|  
+|SQL Server 에이전트|**Net Send** 알림<br /><br /> 호출기 알림|전자 메일 알림<br /><br /> 전자 메일 알림 |없음|없음|  
+|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]||없음|없음|  
 |시스템 저장 프로시저|sp_db_increased_partitions|없음 증가 파티션에 대한 지원은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 기본적으로 사용할 수 있습니다.|sp_db_increased_partitions|253|  
-|시스템 테이블|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|호환성 뷰입니다. 자세한 내용은 [호환성 뷰&#40;Transact-SQL&#41;](../Topic/Compatibility%20Views%20\(Transact-SQL\).md)를 참조하세요.<br /><br /> **\*\* 중요 \*\*** 호환성 뷰는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 도입된 기능의 메타데이터를 제공하지 않습니다. 응용 프로그램에서 카탈로그 뷰를 사용하도록 업그레이드하는 것이 좋습니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)를 참조하세요.|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> 없음<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
+|시스템 테이블|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|호환성 뷰입니다. 자세한 내용은 [호환성 뷰&#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)를 참조하세요.<br /><br /> **\*\* 중요 \*\*** 호환성 뷰는 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]에서 도입된 기능의 메타데이터를 제공하지 않습니다. 응용 프로그램에서 카탈로그 뷰를 사용하도록 업그레이드하는 것이 좋습니다. 자세한 내용은 [카탈로그 뷰&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/catalog-views-transact-sql.md)를 참조하세요.|sysaltfiles<br /><br /> syscacheobjects<br /><br /> syscolumns<br /><br /> syscomments<br /><br /> sysconfigures<br /><br /> sysconstraints<br /><br /> syscurconfigs<br /><br /> sysdatabases<br /><br /> sysdepends<br /><br /> sysdevices<br /><br /> sysfilegroups<br /><br /> sysfiles<br /><br /> sysforeignkeys<br /><br /> sysfulltextcatalogs<br /><br /> sysindexes<br /><br /> sysindexkeys<br /><br /> syslockinfo<br /><br /> syslogins<br /><br /> sysmembers<br /><br /> sysmessages<br /><br /> sysobjects<br /><br /> sysoledbusers<br /><br /> sysopentapes<br /><br /> sysperfinfo<br /><br /> syspermissions<br /><br /> sysprocesses<br /><br /> sysprotects<br /><br /> sysreferences<br /><br /> sysremotelogins<br /><br /> sysservers<br /><br /> systypes<br /><br /> sysusers|141<br /><br /> 없음<br /><br /> 133<br /><br /> 126<br /><br /> 146<br /><br /> 131<br /><br /> 147<br /><br /> 142<br /><br /> 123<br /><br /> 144<br /><br /> 128<br /><br /> 127<br /><br /> 130<br /><br /> 122<br /><br /> 132<br /><br /> 134<br /><br /> 143<br /><br /> 140<br /><br /> 119<br /><br /> 137<br /><br /> 125<br /><br /> 139<br /><br /> 145<br /><br /> 157<br /><br /> 121<br /><br /> 153<br /><br /> 120<br /><br /> 129<br /><br /> 138<br /><br /> 136<br /><br /> 135<br /><br /> 124|  
 |시스템 테이블|sys.numbered_procedures<br /><br /> sys.numbered_procedure_parameters|없음|numbered_procedures<br /><br /> numbered_procedure_parameters|148<br /><br /> 149|  
 |시스템 함수|fn_virtualservernodes<br /><br /> fn_servershareddrives|sys.dm_os_cluster_nodes<br /><br /> sys.dm_io_cluster_shared_drives|fn_virtualservernodes<br /><br /> fn_servershareddrives|155<br /><br /> 156|  
 |시스템 뷰|sys.sql_dependencies|sys.sql_expression_dependencies|sys.sql_dependencies|198|  
@@ -139,7 +146,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |테이블 힌트|INSERT_HINTS||INSERT_HINTS|34|  
 |Textpointer|WRITETEXT<br /><br /> UPDATETEXT<br /><br /> READTEXT|없음|UPDATETEXT 또는 WRITETEXT<br /><br /> READTEXT|115<br /><br /> 114|  
 |Textpointer|TEXTPTR()<br /><br /> TEXTVALID()|없음|TEXTPTR<br /><br /> TEXTVALID|5<br /><br /> 6|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 함수 호출 시퀀스|SELECT *column_list* FROM sys.\<*function_name*>()으로 대체합니다.<br /><br /> 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다.|'::' 함수 호출 구문|166|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|:: 함수 호출 시퀀스|SELECT *column_list* FROM sys.\<*function_name*>()으로 바꿉니다.<br /><br /> 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다.|'::' 함수 호출 구문|166|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|세 부분 및 네 부분으로 구성된 열 참조입니다.|두 부분으로 구성된 이름이 표준 호환 구성입니다.|세 부분 이상으로 구성된 열 이름|3|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|SELECT 목록에서 식에 대한 열 별칭으로 사용되는 따옴표로 묶인 문자열<br /><br /> '*string_alias*' = *expression*|*expression* [AS] *column_alias*<br /><br /> *expression* [AS] [*column_alias*]<br /><br /> *expression* [AS] "*column_alias*"<br /><br /> *expression* [AS] '*column_alias*'<br /><br /> *column_alias* = *expression*|열 별칭으로 사용되는 문자열 리터럴|184|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|번호를 매긴 프로시저|없음 사용하지 마십시오.|ProcNums|160|  
@@ -149,13 +156,13 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML 문의 열 이름으로서 ROWGUIDCOL|$rowguid를 사용합니다.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML 문의 열 이름으로서 IDENTITYCOL|$identity를 사용합니다.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|임시 테이블 및 임시 저장 프로시저 이름으로서 # 및 ##의 사용|적어도 하나 이상의 추가 문자를 사용해야 합니다.|임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|[!INCLUDE[tsql](../includes/tsql-md.md)] 식별자로 @, @@, 또는 @@ 사용|@ 또는 @@이나 @@으로 시작하는 이름을 식별자로 사용할 수 없습니다.|'@' 및 '@@'으로 시작하는 이름을 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자로 사용|186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|@, @@ 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자로서 @@의 사용|@@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다.|'@' 및 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자 '@@'으로 시작하는 이름|186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|기본값으로서 DEFAULT 키워드의 사용|DEFAULT라는 단어를 기본값으로 사용하지 마십시오.|기본값으로서 DEFAULT 키워드|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|테이블 힌트 사이의 구분 기호로서 공백의 사용|쉼표를 사용하여 테이블 힌트를 구분합니다.|쉼표가 없는 여러 테이블 힌트|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|인덱싱된 집계 뷰의 SELECT 목록은 90의 호환성 모드에서 COUNT_BIG(*)을 포함해야 합니다.|COUNT_BIG(*)을 사용합니다.|COUNT_BIG(*)이 없는 인덱스 뷰 SELECT 목록|2|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|뷰를 통해 다중 문 TVF(테이블 반환 함수)를 호출하는 테이블 힌트의 간접 적용|없음|간접 TVF 힌트|7|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|ALTER DATABASE 구문:<br /><br /> MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|MODIFY FILEGROUP READ_ONLY<br /><br /> MODIFY FILEGROUP READ_WRITE|MODIFY FILEGROUP READONLY<br /><br /> MODIFY FILEGROUP READWRITE|195<br /><br /> 196|  
-|기타|DB-Library<br /><br /> C 언어용 Embedded SQL|[!INCLUDE[ssDE](../includes/ssde-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 응용 프로그램과의 연결을 계속 지원하지만 이들 API를 사용하는 응용 프로그램에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 응용 프로그램과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 응용 프로그램을 개발하지 마십시오. 기존의 응용 프로그램을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 ODBC 등의 API를 사용하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에는 이러한 응용 프로그램을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 응용 프로그램을 실행하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.|없음|없음|  
+|기타|DB-Library<br /><br /> C 언어용 Embedded SQL|[!INCLUDE[ssDE](../includes/ssde-md.md)] 이 DB-Library 및 Embedded SQL API를 사용한 기존 응용 프로그램과의 연결을 계속 지원하지만 이들 API를 사용하는 응용 프로그램에서 프로그래밍 작업을 수행하는 데 필요한 파일 또는 문서는 포함되지 않습니다. 이후 버전의 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 에서는 DB-Library 또는 Embedded SQL 응용 프로그램과의 연결이 더 이상 지원되지 않습니다. DB-Library 또는 Embedded SQL을 사용하여 새 응용 프로그램을 개발하지 마십시오. 기존의 응용 프로그램을 수정할 때 DB-Library 또는 Embedded SQL에 대한 모든 종속 관계를 제거하십시오. 이러한 API 대신 SQLClient 네임스페이스 또는 ODBC 등의 API를 사용하세요. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에는 이러한 응용 프로그램을 실행하는 데 필요한 DB-Library DLL이 없습니다. DB-Library 또는 Embedded SQL 응용 프로그램을 실행하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전 6.5, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7.0 또는 [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]에서 사용 가능한 DB-Library DLL이 있어야 합니다.|없음|없음|  
 |Tools|추적 캡처용 SQL Server Profiler|SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 사용합니다.|SQL Server 프로파일러|없음|  
 |Tools|추적 재생용 SQL Server Profiler|[SQL Server Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md)|SQL Server 프로파일러|없음|  
 |Trace Management Objects|Microsoft.SqlServer.Management.Trace 네임 스페이스(SQL Server 추적 및 재생 개체용 API 포함)|추적 구성: <xref:Microsoft.SqlServer.Management.XEvent><br /><br /> 추적 읽기: <xref:Microsoft.SqlServer.XEvent.Linq><br /><br /> 추적 재생: 없음|||  
@@ -168,3 +175,5 @@ WHERE object_name = 'SQLServer:Deprecated Features';
  [SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)  
   
   
+
+

@@ -1,224 +1,98 @@
 ---
-title: "Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Windows 인증 [SQL Server]"
-  - "데이터베이스 미러링 [SQL Server], 보안"
+title: "데이터베이스 미러링 세션 설정 - Windows 인증 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], sessions
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 caps.latest.revision: 58
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 77
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 104c736aa623fa6aa3c55c204559759eb9885800
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Windows 인증을 사용하여 데이터베이스 미러링 세션 구성(Transact-SQL)
+# <a name="establish-database-mirroring-session---windows-authentication"></a>데이터베이스 미러링 세션 설정 - Windows 인증
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]를 사용해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
- 미러 데이터베이스를 준비한 후([미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md) 참조) 데이터베이스 미러링 세션을 구성합니다. 주 서버, 미러 서버 및 미러링 모니터 서버 인스턴스는 다른 호스트 시스템에 있는 별도의 서버 인스턴스여야 합니다.  
+ 데이터베이스 미러링 세션을 설정하고 데이터베이스에 대한 데이터베이스 미러링 속성을 수정하려면 **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용합니다. **미러링** 페이지를 사용하여 데이터베이스 미러링을 구성하기 전에 다음 요구 사항이 충족되었는지 확인합니다.  
   
-> [!IMPORTANT]  
->  미러링 구성은 성능에 영향을 줄 수 있으므로 사용률이 낮은 시간에 데이터베이스 미러링을 구성하는 것이 좋습니다.  
-  
-> [!NOTE]  
->  지정된 서버 인스턴스는 같은 파트너 또는 다른 파트너에 있는 여러 개의 동시 데이터베이스 미러링 세션에 참여할 수 있습니다. 서버 인스턴스는 한 세션에서는 파트너가 되고, 다른 세션에서는 미러링 모니터 서버가 될 수 있습니다. 미러 서버 인스턴스는 주 서버 인스턴스와 동일한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서는 데이터베이스 미러링을 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
-  
-### 데이터베이스 미러링 세션을 구성하려면  
-  
-1.  미러 데이터베이스를 만듭니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
-  
-2.  각 서버 인스턴스에서 보안을 설정합니다.  
-  
-     데이터베이스 미러링 세션의 각 서버 인스턴스에는 데이터베이스 미러링 끝점이 필요합니다. 따라서 끝점이 없으면 만들어야 합니다.  
+-   주 서버 인스턴스 및 미러 서버 인스턴스에서 같은 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](Standard 또는 Enterprise)를 실행하고 있어야 합니다. 또한 서버 인스턴스는 동일한 작업을 처리할 수 있는 동등한 시스템에서 실행하는 것이 좋습니다.  
   
     > [!NOTE]  
-    >  서버 인스턴스에서 데이터베이스 미러링에 사용하는 인증 형식은 데이터베이스 미러링 끝점의 속성입니다. 데이터베이스 미러링에서 사용할 수 있는 두 가지 전송 보안 유형으로 Windows 인증과 인증서 기반 인증이 있습니다. 자세한 내용은 [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)을 참조하세요.  
+    >  미러링 모니터 서버 인스턴스는 일부 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서만 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
-     각 파트너 서버에서 데이터베이스 미러링의 끝점이 있는지 확인합니다. 지원할 미러링 세션의 수에 관계없이 서버 인스턴스에는 데이터베이스 미러링 끝점이 하나만 있어야 합니다. 이 서버 인스턴스를 데이터베이스 미러링 세션의 파트너 전용으로 사용하려면 끝점에 파트너 역할을 할당합니다(ROLE**=**PARTNER). 이 서버를 다른 데이터베이스 미러링 세션에서 미러링 모니터 서버로도 사용하려면 끝점 역할을 ALL로 지정합니다.  
+-   최신 상태의 미러 데이터베이스가 있어야 합니다.  
   
-     SET PARTNER 문을 실행하려면 두 파트너의 끝점에 대한 STATE가 STARTED로 설정되어 있어야 합니다.  
+     미러 데이터베이스를 만들려면 WITH NORECOVERY를 사용하여 미러 서버 인스턴스에서 주 데이터베이스의 최근 백업을 복원해야 합니다. 또한 전체 백업 후에 로그 백업을 하나 이상 만들고 WITH NORECOVERY를 사용하여 순서대로 미러 데이터베이스에 복원해야 합니다. 자세한 내용은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)에서만 사용할 수 있습니다.  
   
-     서버 인스턴스에 데이터베이스 미러링 끝점이 있는지 확인하고 그 역할과 상태를 확인하려면 해당 인스턴스에 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
+-   서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 계정의 로그인이 다른 계정의 **master** 데이터베이스에 있어야 합니다. 로그인이 없으면 미러링을 구성하기 전에 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용&#40;SQL Server#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)을 참조하세요.  
   
-    ```  
-    SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints  
-    ```  
+### <a name="to-configure-database-mirroring"></a>데이터베이스 미러링을 구성하려면  
   
-    > [!IMPORTANT]  
-    >  사용 중인 데이터베이스 미러링 끝점은 다시 구성하지 마십시오. 데이터베이스 미러링 끝점이 있으며 이미 사용 중인 경우 서버 인스턴스의 모든 세션에 이 끝점을 사용하는 것이 좋습니다. 사용 중인 끝점을 삭제하면 끝점이 다시 시작되어 기존 세션의 연결이 끊어지므로 다른 서버 인스턴스에서 오류가 발생할 수 있습니다. 이는 특히 파트너에 끝점을 다시 구성하면 장애 조치(Failover) 오류가 발생할 수 있는 자동 장애 조치(Failover)가 있는 보호 우선 모드에서 중요한 사항입니다. 또한 세션에 미러링 모니터 서버가 설정된 경우 데이터베이스 미러링 끝점을 삭제하면 해당 세션의 주 서버에서 쿼럼이 손실될 수 있습니다. 이 경우 데이터베이스는 오프라인 상태가 되며 해당 사용자의 연결이 끊어집니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
+1.  주 서버 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-     파트너 중 하나에 끝점이 없는 경우 [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)를 참조하세요.  
+2.  **데이터베이스**를 확장하고 미러링할 데이터베이스를 선택합니다.  
   
-3.  서버 인스턴스가 여러 도메인 사용자 계정으로 실행되는 경우 각 인스턴스는 다른 인스턴스의 **master** 데이터베이스에서 로그인을 필요로 합니다. 따라서 로그인이 없으면 만들어야 합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용&#40;SQL Server#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)을 참조하세요.  
+3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 선택한 다음 **미러**를 클릭합니다. **데이터베이스 속성** 대화 상자의 **미러링** 페이지가 열립니다.  
   
-4.  미러 데이터베이스에서 주 서버를 파트너로 설정하려면 미러 서버에 연결하여 다음 문을 실행합니다.  
-  
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
-  
-     여기서 *<database_name>*은 미러링할 데이터베이스의 이름(두 파트너에서 이 이름은 동일함)이고 *<server_network_address>*는 주 서버의 서버 네트워크 주소입니다.  
-  
-     서버 네트워크 주소 구문은 다음과 같습니다.  
-  
-     TCP**://**\<*system-address>***:**\<*port>*  
-  
-     여기서 \<*system-address>*는 대상 컴퓨터 시스템을 명확하게 식별하는 문자열이고 \<*port>*는 파트너 서버 인스턴스의 미러링 끝점에 사용되는 포트 번호입니다. 자세한 내용은 [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)을 참조하세요.  
-  
-     예를 들어 미러 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 주 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER1(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 끝점에 사용되는 포트는 7022입니다.  
-  
-    ```  
-    ALTER DATABASE AdventureWorks   
-       SET PARTNER = 'TCP://DBSERVER1:7022'  
-    ```  
-  
-     이 문은 주 서버에서 접속할 때 세션을 구성하도록 미러 서버를 준비합니다.  
-  
-5.  주 데이터베이스에서 미러 서버를 파트너로 설정하려면 주 서버에 연결하여 다음 문을 실행합니다.  
-  
-     ALTER DATABASE *<database_name>* SET PARTNER **=***<server_network_address>*  
-  
-     자세한 내용은 4단계를 참조하십시오.  
-  
-     예를 들어 주 서버 인스턴스에서 다음 ALTER DATABASE 문은 파트너를 원래 미러 서버 인스턴스로 설정합니다. 데이터베이스 이름은 **AdventureWorks**이고 시스템 주소는 DBSERVER2(파트너 시스템의 이름)이며 파트너의 데이터베이스 미러링 끝점에 사용되는 포트는 7025입니다.  
-  
-    ```  
-    ALTER DATABASE AdventureWorks SET PARTNER = 'TCP://DBSERVER2:7022'  
-    ```  
-  
-     주 서버에서 이 문을 입력하면 데이터베이스 미러링 세션이 시작됩니다.  
-  
-6.  기본적으로 세션은 전체 트랜잭션 보안으로 설정되므로(SAFETY가 FULL로 설정됨) 자동 장애 조치를 지원하지 않는 동기 보호 우선 모드로 세션이 시작됩니다. 이러한 세션을 다음과 같이 자동 장애 조치(Failover)가 있는 보호 우선 모드나 비동기 성능 우선 모드에서 실행되도록 다시 구성할 수 있습니다.  
-  
-    -   **자동 장애 조치 있는 보호 우선 모드**  
-  
-         자동 장애 조치(Failover)가 있는 보호 우선 모드로 세션을 실행하려면 미러링 모니터 서버 인스턴스를 추가합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)를 참조하세요.  
-  
-    -   **성능 우선 모드**  
-  
-         자동 장애 조치 기능을 지원하지 않고 가용성보다 성능을 우선하려면 트랜잭션 보안을 해제합니다. 자세한 내용은 [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)을 참조하세요.  
-  
-        > [!NOTE]  
-        >  성능 우선 모드에서는 WITNESS를 OFF로 설정해야 합니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.  
-  
-## 예제  
-  
-> [!NOTE]  
->  다음 예에서는 기존 미러 데이터베이스의 파트너 간에 데이터베이스 미러링 세션을 설정합니다. 미러 데이터베이스를 만드는 방법은 [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)를 참조하세요.  
-  
- 이 예에서는 미러링 모니터 서버 없이 데이터베이스 미러링 세션을 만드는 기본 단계를 보여 줍니다. 두 파트너는 두 컴퓨터 시스템(PARTNERHOST1 및 PARTNERHOST5)의 기본 서버 인스턴스입니다. 두 파트너 인스턴스는 동일한 Windows 도메인 사용자 계정(MYDOMAIN\dbousername)을 실행합니다.  
-  
-1.  주 서버 인스턴스(PARTNERHOST1의 기본 인스턴스)에서 포트 7022를 사용하여 모든 역할을 지원하는 끝점을 만듭니다.  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
+4.  미러링 구성을 시작하려면 **보안 구성** 을 클릭하여 데이터베이스 미러링 보안 구성 마법사를 시작합니다.  
   
     > [!NOTE]  
-    >  로그인을 설정하는 방법의 예제는 [Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)을 참조하세요.  
+    >  데이터베이스 미러링 세션 중에 미러링 모니터 서버 인스턴스를 추가하거나 변경하기 위한 용도로만 이 마법사를 사용할 수 있습니다.  
   
-2.  미러 서버 인스턴스(PARTNERHOST5의 기본 인스턴스)에서 포트 7022를 사용하여 모든 역할을 지원하는 끝점을 만듭니다.  
-  
-    ```  
-    --create an endpoint for this instance  
-    CREATE ENDPOINT Endpoint_Mirroring  
-        STATE=STARTED   
-        AS TCP (LISTENER_PORT=7022)   
-        FOR DATABASE_MIRRORING (ROLE=ALL)  
-    GO  
-    --Partners under same domain user; login already exists in master.  
-    ```  
-  
-3.  PARTNERHOST1의 주 서버 인스턴스에서 데이터베이스를 백업합니다.  
-  
-    ```  
-    BACKUP DATABASE AdventureWorks   
-        TO DISK = 'C:\AdvWorks_dbmirror.bak'   
-        WITH FORMAT  
-    GO  
-    ```  
-  
-4.  `PARTNERHOST5`의 미러 서버 인스턴스에서 데이터베이스를 복원합니다.  
-  
-    ```  
-    RESTORE DATABASE AdventureWorks   
-        FROM DISK = 'Z:\AdvWorks_dbmirror.bak'   
-        WITH NORECOVERY  
-    GO  
-    ```  
-  
-5.  전체 데이터베이스 백업을 만든 후 주 데이터베이스에서 로그 백업을 만들어야 합니다. 예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 앞의 데이터베이스 백업에 사용된 동일한 파일에 로그를 백업합니다.  
-  
-    ```  
-    BACKUP LOG AdventureWorks   
-        TO DISK = 'C:\AdventureWorks.bak'   
-    GO  
-    ```  
-  
-6.  미러링을 시작하기 전에 필수 로그 백업 및 모든 후속 로그 백업을 적용해야 합니다.  
-  
-     예를 들어 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 C:\AdventureWorks.bak로부터 첫 번째 로그를 복원합니다.  
-  
-    ```  
-    RESTORE LOG AdventureWorks   
-        FROM DISK = 'C:\ AdventureWorks.bak'   
-        WITH FILE=1, NORECOVERY  
-    GO  
-    ```  
-  
-7.  미러 서버 인스턴스에서 PARTNERHOST1의 서버 인스턴스를 파트너로 설정하여 초기 주 서버로 만듭니다.  
-  
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER =   
-        'TCP://PARTNERHOST1:7022'  
-    GO  
-    ```  
+5.  데이터베이스 미러링 보안 구성 마법사를 사용하면 자동으로 각 서버 인스턴스에 데이터베이스 미러링 끝점이 생성되고(없는 경우) 서버 인스턴스의 역할(**주 서버**, **미러 서버**또는 **미러링 모니터 서버**)에 해당하는 필드에 서버 네트워크 주소가 입력됩니다.  
   
     > [!IMPORTANT]  
-    >  기본적으로 데이터베이스 미러링 세션은 전체 트랜잭션 보안(SAFETY가 FULL로 설정됨)에 따라 달라지는 동기 모드로 실행됩니다. 비동기 성능 우선 모드로 세션을 실행하려면 SAFETY를 OFF로 설정합니다. 자세한 내용은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)을 참조하세요.  
+    >  끝점을 만드는 경우 데이터베이스 미러링 보안 구성 마법사에서 항상 Windows 인증을 사용합니다. 마법사에서 인증서 기반 인증을 사용하려면 각 서버 인스턴스의 인증서를 사용하도록 미러링 끝점이 구성되어 있어야 합니다. 또한 마법사의 **서비스 계정** 대화 상자에 있는 모든 필드가 비어 있어야 합니다. 인증서를 사용할 데이터베이스 미러링 끝점을 만드는 방법은 [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
   
-8.  주 서버 인스턴스에서 `PARTNERHOST5`의 서버 인스턴스를 파트너로 설정하여 초기 미러 서버로 만듭니다.  
+6.  선택적으로 운영 모드를 변경합니다. 특정 운영 모드의 가용성은 미러링 모니터에 TCP 주소를 지정했는지 여부에 따라 다릅니다. 다음과 같은 옵션이 있습니다.  
   
-    ```  
-    USE master;  
-    GO  
-    ALTER DATABASE AdventureWorks   
-        SET PARTNER = 'TCP://PARTNERHOST5:7022'  
-    GO  
-    ```  
+    |옵션|미러링 모니터 여부|설명|  
+    |------------|--------------|-----------------|  
+    |**성능 우선(비동기)**|Null(있어도 사용되지 않지만 세션에 쿼럼이 필요함)|성능을 최대화하기 위해 미러 데이터베이스는 항상 주 데이터베이스와 시간 간격을 두며 앞서가지 않습니다. 그러나 두 데이터베이스의 시간 간격은 일반적으로 크지 않습니다. 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 미러 서버 인스턴스가 중지되지만 세션에 권장된 미러링 모니터 서버가 없거나 미러링 모니터 서버가 미러 서버에 연결되어 있으면 웜 대기로 미러 서버에 액세스할 수 있습니다. 데이터베이스 소유자는 미러 서버 인스턴스에 서비스를 강제 적용할 수 있으며 이 경우 데이터가 손실될 수 있습니다.<br /><br /> <br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.|  
+    |**자동 장애 조치(Failover)가 없는 보호 우선(동기)**|아니요|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다.<br /><br /> 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다.<br /><br /> 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 미러 서버 인스턴스가 중지되지만 웜 대기로 액세스할 수 있습니다. 데이터베이스 소유자는 미러 서버 인스턴스에 서비스를 강제 적용할 수 있으며 이 경우 데이터가 손실될 수 있습니다.<br /><br /> <br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.|  
+    |**자동 장애 조치(Failover)가 있는 보호 우선(동기)**|예(필수)|커밋된 모든 트랜잭션이 미러 서버의 디스크에 기록됩니다.<br /><br /> 자동 장애 조치를 지원하도록 미러링 모니터 서버 인스턴스를 포함하여 가용성을 최대화합니다. 미러링 모니터 서버 주소를 먼저 지정한 경우에만 **자동 장애 조치(failover)가 있는 보호 우선(동기)** 옵션을 선택할 수 있습니다.<br /><br /> 파트너가 서로 연결되어 있으며 데이터베이스가 동기화된 경우 수동 장애 조치를 사용할 수 있습니다.<br /><br /> 미러링 모니터 서버가 있을 경우 파트너가 손실되면 다음과 같은 결과가 나타납니다.<br /><br /> 주 서버 인스턴스를 사용할 수 없는 경우 자동 장애 조치가 수행됩니다. 미러 서버 인스턴스가 주 서버 인스턴스의 역할로 전환하여 해당 데이터베이스를 주 데이터베이스로 제공합니다.<br /><br /> 미러 서버 인스턴스를 사용할 수 없는 경우 주 서버 인스턴스가 계속합니다.<br /><br /> <br /><br /> 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)에서만 사용할 수 있습니다.<br /><br /> **\*\* 중요 \*\*** 미러링 모니터 서버의 연결이 끊어지면 파트너가 서로 연결되어 있어야만 데이터베이스를 사용할 수 있습니다. 자세한 내용은 [쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md)을 참조하세요.|  
   
-9. 필요에 따라 자동 장애 조치(Failover)가 있는 보호 우선 모드를 사용하려면 미러링 모니터 서버 인스턴스를 설정합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)를 참조하세요.  
+7.  다음 조건을 모두 만족하면 **미러링 시작** 을 클릭하여 미러링을 시작합니다.  
   
-> [!NOTE]  
->  보안 설정 표시, 미러 데이터베이스 준비, 파트너 설정 및 미러링 모니터 서버 추가 등의 작업을 수행하는 전체 예제는 [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)를 참조하세요.  
+    -   현재 주 서버 인스턴스에 연결되어 있습니다.  
   
-## 참고 항목  
- [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Windows 인증을 사용하여 데이터베이스 미러링 끝점에 대한 네트워크 액세스 허용&#40;SQL Server&#41;](../../database-engine/database-mirroring/database mirroring - allow network access - windows authentication.md)   
+    -   보안이 올바로 구성되었습니다.  
+  
+    -   **서버 네트워크 주소** 섹션에 주 서버 및 미러 서버 인스턴스의 정규화된 TCP 주소가 지정되어 있습니다.  
+  
+    -   운영 모드가 **자동 장애 조치(failover)가 있는 보호 우선(동기)**으로 설정되어 있는 경우 미러링 모니터 서버 인스턴스의 정규화된 TCP 주소도 지정됩니다.  
+  
+8.  미러링이 시작된 후 운영 모드를 변경하고 **확인**을 클릭하여 변경 사항을 저장할 수 있습니다. 미러링 모니터 서버 주소를 먼저 지정한 경우에만 자동 장애 조치(Failover)가 있는 보호 우선 모드로 전환할 수 있습니다.  
+  
+    > [!NOTE]  
+    >  미러링 모니터 서버를 제거하려면 **미러링 모니터 서버** 필드에서 서버 네트워크 주소를 삭제합니다. 자동 장애 조치(failover)가 있는 보호 우선 모드에서 성능 우선 모드로 전환하면 **미러링 모니터 서버** 필드가 자동으로 지워집니다.  
+  
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [미러 데이터베이스의 미러링 준비&#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Windows 인증에 대한 데이터베이스 미러링 끝점 만들기&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [데이터베이스 미러링 및 로그 전달&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md)   
- [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)   
+ [데이터베이스 속성&#40;미러링 페이지&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [데이터베이스 미러링 세션 일시 중지 또는 재개&#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)   
+ [Trustworthy 속성을 사용하도록 미러 데이터베이스 설정&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)   
+ [데이터베이스 미러링 제거&#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)   
+ [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)   
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [서버 네트워크 주소 지정&#40;데이터베이스 미러링&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md)   
- [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
+ [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리&#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [데이터베이스 미러링 모니터 서버 추가 또는 바꾸기&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
   
+

@@ -1,29 +1,34 @@
 ---
-title: "Always On 가용성 그룹의 FILESTREAM 및 FileTable(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "FileTables [SQL Server], 가용성 그룹"
-  - "FILESTREAM [SQL Server], 가용성 그룹"
-  - "가용성 그룹 [SQL Server], 상호 운용성"
+title: "Always On 가용성 그룹이 포함된 FILESTREAM 및 FileTable(SQL Server) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- FileTables [SQL Server], Availability Groups
+- FILESTREAM [SQL Server], Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: cdd5119460d5b982c30c3e04e924e9a6b501f559
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Always On 가용성 그룹의 FILESTREAM 및 FileTable(SQL Server)
+# <a name="filestream-and-filetable-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹의 FILESTREAM 및 FileTable(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]과 함께 FILESTREAM 및 FileTable 기능 사용에 대한 정보가 포함되어 있습니다.  
+  이 항목에는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 에서 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]과 함께 FILESTREAM 및 FileTable 기능 사용에 대한 정보가 포함되어 있습니다.  
   
  모든 FILESTREAM 기능이 지원됩니다. 장애 조치(Failover) 이후 FILESTREAM 데이터는 읽기 가능한 두 보조 복제본 및 새로운 주 복제본에서 액세스할 수 있습니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 15
 -   FileTable을 포함하거나 포함하지 않고 FILESTREAM을 사용하는 데이터베이스를 가용성 그룹에 추가하려면 먼저 가용성 그룹에 대한 가용성 복제본을 호스팅하는 모든 서버 인스턴스에 FILESTREAM이 설정되었는지 확인합니다. 자세한 내용은 [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)을 참조하세요.  
   
 ##  <a name="vnn"></a> FILESTREAM 및 FileTable 액세스를 위한 VNN(가상 네트워크 이름) 사용  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 FILESTREAM을 설정하면 FILESTREAM 데이터에 대한 액세스를 제공하도록 인스턴스 수준의 공유가 만들어집니다. 이 공유에는 다음 형식의 컴퓨터 이름을 사용하여 액세스합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]인스턴스에 FILESTREAM을 설정하면 FILESTREAM 데이터에 대한 액세스를 제공하도록 인스턴스 수준의 공유가 만들어집니다. 이 공유에는 다음 형식의 컴퓨터 이름을 사용하여 액세스합니다.  
   
  `\\<computer_name>\<filestream_share_name>`  
   
@@ -78,14 +83,15 @@ caps.handback.revision: 15
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
--   [FILESTREAM 사용 및 구성](../../../relational-databases/blob/enable-and-configure-filestream.md)  
+-   [Enable and Configure FILESTREAM](../../../relational-databases/blob/enable-and-configure-filestream.md)  
   
 -   [FileTable의 필수 구성 요소를 사용하도록 설정](../../../relational-databases/blob/enable-the-prerequisites-for-filetable.md)  
   
 ##  <a name="RelatedContent"></a> 관련 내용  
  없음  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   
+

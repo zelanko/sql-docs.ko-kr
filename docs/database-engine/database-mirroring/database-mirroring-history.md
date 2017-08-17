@@ -1,31 +1,36 @@
 ---
 title: "데이터베이스 미러링 기록 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.databasemirroringhistory.f1"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.databasemirroringhistory.f1
 ms.assetid: 1d6e4b10-4a23-47d7-9918-c417992f09d3
 caps.latest.revision: 25
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 24f7e8d76bc04e82c4403139c575c6c736648c48
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 기록
+# <a name="database-mirroring-history"></a>데이터베이스 미러링 기록
   이 대화 상자를 사용하여 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 미러링 상태 기록을 볼 수 있습니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **서버 인스턴스**  
  기록이 보고되고 있는 서버 인스턴스의 이름입니다.  
   
@@ -71,8 +76,8 @@ caps.handback.revision: 25
 |**미러링 상태**|데이터베이스의 상태입니다.<br /><br /> 연결 끊김<br /><br /> 장애 조치(Failover) 보류 중<br /><br /> 일시 중지됨<br /><br /> 동기화됨<br /><br /> 동기화 중<br /><br /> Unknown|  
 |**미러링 모니터 서버 연결**|데이터베이스의 미러링 세션에 있는 미러링 모니터 서버 연결의 상태입니다(연결됨 또는 연결 끊김). 미러링 모니터 서버가 없을 경우 값은 NULL입니다.|  
 |**보내지 않은 로그**|주 서버 인스턴스의 Send Queue에 있는 보내지 않은 로그의 크기(KB)입니다.|  
-|**전송 시간**|주 서버 인스턴스에서 현재 Send Queue에 있는 로그를 미러 서버 인스턴스에 보내는 데 필요한 대략적인 시간입니다(*전송 속도*). 들어오는 트랜잭션의 속도가 크게 달라질 수 있으므로 로그 전송 시간은 예상 시간입니다. 그러나 전송 속도는 수동 장애 조치에 필요한 대략적인 시간을 예상하는 데 유용할 수 있습니다.|  
-|**전송 속도**|트랜잭션이 미러 서버 인스턴스로 전송되는 속도(KB/초)입니다.|  
+|**전송 시간**|주 서버 인스턴스에서 현재 Send Queue에 있는 로그를 미러 서버 인스턴스에 보내는 데 필요한 대략적인 시간입니다( *전송 속도*). 들어오는 트랜잭션의 속도가 크게 달라질 수 있으므로 로그 전송 시간은 예상 시간입니다. 그러나 전송 속도는 수동 장애 조치에 필요한 대략적인 시간을 예상하는 데 유용할 수 있습니다.|  
+|**Send Rate**|트랜잭션이 미러 서버 인스턴스로 전송되는 속도(KB/초)입니다.|  
 |**새 트랜잭션 속도**|들어오는 트랜잭션이 주 서버의 로그에 들어오는 속도(KB/초)입니다. 미러링 속도가 늦는지, 보통인지 또는 빠른지를 확인하려면 이 값을 **전송 시간** 값과 비교합니다.|  
 |**보내지 않은 가장 오래된 트랜잭션**|Send Queue에 있는 보내지 않은 가장 오래된 트랜잭션의 보존 기간입니다. 이 트랜잭션의 보존 기간은 트랜잭션이 미러 서버 인스턴스에 전송되지 않은 채로 경과된 시간(분)을 나타냅니다. 이 값은 시간을 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 됩니다.|  
 |**복원되지 않은 로그**|Redo Queue에서 대기 중인 로그의 양(KB)입니다.|  
@@ -80,9 +85,9 @@ caps.handback.revision: 25
 |**복원 속도**|트랜잭션이 미러 데이터베이스로 복원되는 속도(KB/초)입니다.|  
 |**미러 커밋 오버헤드**|트랜잭션당 평균 지연 시간(밀리초)입니다(동기 모드에만 해당). 이 지연 시간은 주 서버 인스턴스에서 미리 서버 인스턴스가 트랜잭션 로그 레코드를 Redo Queue에 쓸 때까지 대기하는 동안 발생한 오버헤드 양입니다.|  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

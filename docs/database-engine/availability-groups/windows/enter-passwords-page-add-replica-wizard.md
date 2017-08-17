@@ -1,29 +1,34 @@
 ---
 title: "암호 입력 페이지(복제본 추가 마법사) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.enterpasswords.f1"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.enterpasswords.f1
 ms.assetid: e69207a0-c5c4-44e4-ae9a-4afbb67251d1
 caps.latest.revision: 7
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 7
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0e89f1cedff6ee8b3a18e78ce08d5090331a5694
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 암호 입력 페이지(복제본 추가 마법사)
+# <a name="enter-passwords-page-add-replica-wizard"></a>암호 입력 페이지(복제본 추가 마법사)
   이 도움말 항목에서는 **암호 입력** 페이지의 옵션에 대해 설명합니다. 이 항목은 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 의 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다.  
   
  **복제본 선택** 페이지에서 선택한 복제본에 데이터베이스 마스터 키가 있는 데이터베이스가 포함되어 있으면 암호 입력 페이지가 나타납니다.  
   
-## 암호 입력 옵션  
+## <a name="enter-passwords-options"></a>암호 입력 옵션  
  **이 SQL Server 인스턴스의 사용자 데이터베이스 선택** 표에는 모든 로컬 사용자 데이터베이스가 나열됩니다. 열은 다음과 같습니다.  
   
  **이름**  
@@ -43,11 +48,12 @@ caps.handback.revision: 7
  **새로 고침**  
  표를 새로 고치려면 클릭합니다. 필요한 암호를 입력한 후에 이 기능을 사용하면 유용합니다.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 -   [가용성 그룹에 복제본 추가 마법사 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   
-## 참고 항목  
- [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)  
+## <a name="see-also"></a>참고 항목  
+ [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  
   
   
+

@@ -1,31 +1,36 @@
 ---
 title: "데이터베이스 미러링 모니터(상태 페이지) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.status.f1"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.status.f1
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: faa2f672bccc678270d6a7387d27b40e73688425
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 모니터(상태 페이지)
+# <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
   이 읽기 전용 페이지는 탐색 트리에서 현재 선택한 데이터베이스의 주 서버 인스턴스와 미러 서버 인스턴스에 대한 최신 미러링 상태를 표시합니다. 인스턴스에 대한 정보를 현재 사용할 수 없는 경우 인스턴스에 해당하는 **상태** 표의 일부 셀은 회색으로 나타나고 **알 수 없음**을 표시합니다.  
   
  **SQL Server Management Studio를 사용하여 데이터베이스 미러링을 모니터링하려면**  
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 옵션  
+## <a name="options"></a>옵션  
  **상태**  
  각 주 서버 인스턴스와 미러 서버 인스턴스의 최신 상위 수준 미러링 상태를 포함하는 표를 표시합니다. **상태** 표의 행은 다음 순서를 가집니다.  
   
@@ -43,8 +48,8 @@ caps.handback.revision: 36
 |**미러링 모니터 서버 연결**|상태 아이콘 뒤에 오는 미러링 모니터 서버의 연결 상태는 **알 수 없음**, **연결됨**또는 **연결 끊김**입니다.|  
 |**기록**|서버 인스턴스의 미러링 기록을 표시하려면 클릭합니다. 지정된 서버 인스턴스의 미러링된 데이터베이스에 대한 통계 및 미러링 상태의 기록을 표시하는 **데이터베이스 미러링 기록** 대화 상자가 열립니다.<br /><br /> 모니터가 서버 인스턴스에 연결되지 않은 경우 **기록** 단추는 흐리게 표시됩니다.|  
   
- **주 로그(** *\<time>* **)**  
- *\<time>*으로 표시된 서버 인스턴스의 현지 시간을 기준으로 하는 주 서버 인스턴스에 있는 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
+ **주 로그(** *\<시간>* **)**  
+ *\<시간>*으로 표시된 서버 인스턴스의 현지 시간 기준의 주 서버 인스턴스에 대한 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
   
  **보내지 않은 로그**  
  Send Queue에서 대기 중인 로그의 양(KB)입니다.  
@@ -53,7 +58,7 @@ caps.handback.revision: 36
  Send Queue에 있는 보내지 않은 가장 오래된 트랜잭션의 보존 기간입니다. 이 트랜잭션의 보존 기간은 트랜잭션이 미러 서버 인스턴스에 전송되지 않은 채로 경과된 시간(분)을 나타냅니다. 이 값은 시간을 기준으로 발생 가능한 데이터 손실을 측정하는 데 도움이 됩니다.  
   
  **로그 전송 예상 시간**  
- 주 서버 인스턴스에서 현재 Send Queue에 있는 로그를 미러 서버 인스턴스에 보내는 데 필요한 대략적인 시간입니다(*전송 속도*). 들어오는 트랜잭션의 속도가 크게 달라질 수 있으므로 로그 전송 시간은 예상 시간입니다. 그러나 전송 속도는 수동 장애 조치에 필요한 대략적인 시간을 예상하는 데 유용할 수 있습니다.  
+ 주 서버 인스턴스에서 현재 Send Queue에 있는 로그를 미러 서버 인스턴스에 보내는 데 필요한 대략적인 시간입니다( *전송 속도*). 들어오는 트랜잭션의 속도가 크게 달라질 수 있으므로 로그 전송 시간은 예상 시간입니다. 그러나 전송 속도는 수동 장애 조치에 필요한 대략적인 시간을 예상하는 데 유용할 수 있습니다.  
   
  **현재 전송 속도**  
  트랜잭션이 미러 서버 인스턴스로 전송되는 속도(KB/초)입니다.  
@@ -61,8 +66,8 @@ caps.handback.revision: 36
  **현재 새 트랜잭션의 속도**  
  들어오는 트랜잭션이 주 서버의 로그에 들어오는 속도(KB/초)입니다. 미러링 속도가 늦는지, 보통인지 또는 빠른지를 확인하려면 이 값을 **로그 전송 예상 시간** 값과 비교합니다.  
   
- **미러 로그(** *\<time>* **)**  
- *\<time>*으로 표시된 서버 인스턴스의 현지 시간을 기준으로 하는 미러 서버 인스턴스에 있는 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
+ **미러 로그(** *\<시간>* **)**  
+ *\<시간>*으로 표시된 서버 인스턴스의 현지 시간 기준의 미러 서버 인스턴스에 대한 로그의 상태입니다. 다음 매개 변수가 표시됩니다.  
   
  **복원되지 않은 로그**  
  Redo Queue에서 대기 중인 로그의 양(KB)입니다.  
@@ -91,14 +96,14 @@ caps.handback.revision: 36
   
 -   **자동 장애 조치(Failover)가 있는 보호 우선(동기)**  
   
-## 주의  
- **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 이러한 사용자는 **데이터베이스 미러링 모니터 작업**에 따라 상태 테이블을 정기적으로 업데이트합니다. **주 로그(***\<time>***)** 및 **미러 로그(***\<time>***)** 레이블의 시간을 확인하여 표시된 상태의 기간을 알 수 있습니다.  
+## <a name="remarks"></a>주의  
+ **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 이러한 사용자는 **데이터베이스 미러링 모니터 작업**에 따라 상태 테이블을 정기적으로 업데이트합니다. 표시된 상태의 기간을 알아보려면 사용자가 **주 로그(***\<시간>***)** 및 **미러 로그(***\<시간>***)** 레이블의 시간을 확인하면 됩니다.  
   
  이 작업이 존재하지 않거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태는 점점 더 오래되어 미러링 세션의 구성을 더 이상 반영하지 않을 수 있습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

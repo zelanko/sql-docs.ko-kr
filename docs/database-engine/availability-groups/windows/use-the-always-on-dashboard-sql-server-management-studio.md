@@ -1,30 +1,35 @@
 ---
-title: "Always On 대시보드 사용(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.f1"
-helpviewer_keywords: 
-  - "가용성 그룹 [SQL Server], 정책"
-  - "가용성 그룹 [SQL Server], 대시보드"
+title: "Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio) | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
+- Availability Groups [SQL Server], dashboard
 ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 caps.latest.revision: 30
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: b17125da076312057366a5f2150d513072b074f2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Always On 대시보드 사용(SQL Server Management Studio)
+# <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Always On 가용성 그룹 대시보드 사용(SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  데이터베이스 관리자는 Always On 대시보드를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 Always On 가용성 그룹과 해당 가용성 복제본 및 데이터베이스의 상태 개요를 확인할 수 있습니다. Always On 대시보드의 일반적인 용도는 다음과 같습니다.  
+  데이터베이스 관리자는 Always On 가용성 그룹 대시보드를 사용하여 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 가용성 그룹과 해당 가용성 복제본 및 데이터베이스에 대한 상태를 한 눈에 볼 수 있습니다. 가용성 그룹 대시보드의 일반적인 몇 가지 용도는 다음과 같습니다.  
   
 -   수동 장애 조치(failover)를 위한 복제본 선택  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 30
   
 -   동기-커밋 보조 복제본의 성능 영향 평가  
   
- Always On 대시보드는 다음과 같은 유형의 정보를 사용하여 고가용성 작업 결정을 쉽게 내릴 수 있도록 주요 가용성 그룹 상태 및 성과 지표를 제공합니다.  
+ 대시보드는 주요 가용성 그룹 상태 및 성과 지표를 제공하여 다음과 같은 유형의 정보를 통해 고가용성 작업 결정을 쉽게 내릴 수 있도록 합니다.  
   
 -   복제본 롤업 상태  
   
@@ -49,34 +54,6 @@ caps.handback.revision: 30
 -   동기화 모드 및 상태  
   
 -   로그 복원 시간  
-  
- **항목 내용:**  
-  
--   **시작하기 전에:**  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [보안](#Security)  
-  
-     [사용 권한](#Permissions)  
-  
--   **시작:**  
-  
-     [Always On 대시보드](#SSMSProcedure)  
-  
-     [Always On 대시보드 옵션을 변경하려면](#DashboardOptions)  
-  
--   **대시보드 창:**  
-  
-     [가용성 그룹 요약](#AvGroupsView)  
-  
-     [가용성 그룹 정보](#AvGroupDetails)  
-  
-     [가용성 복제본 정보](#AvReplicaDetails)  
-  
-     [가용성 그룹 정보를 그룹화하려면](#AvDbDetails)  
-  
--   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
@@ -120,7 +97,7 @@ caps.handback.revision: 30
 -   **수동**. 자동 장애 조치 모드인 복제본이 없음을 나타냅니다.  
   
  **문제**  
- 지정된 문제에 대한 문제 해결 설명서를 열려면 **문제** 링크를 클릭합니다. 모든 Always On 정책 문제 목록은 [Always On 가용성 그룹의 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)을 참조하세요.  
+ 지정된 문제에 대한 문제 해결 설명서를 열려면 **문제** 링크를 클릭합니다. 모든 Always On 정책 문제 목록은 [Always On 가용성 그룹의 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)을 참조하세요.  
   
 > [!TIP]  
 >  열 머리글을 클릭하여 가용성 그룹, 주 인스턴스, 장애 조치(failover) 모드 또는 문제의 이름을 기준으로 가용성 그룹 정보를 정렬할 수 있습니다.  
@@ -131,10 +108,10 @@ caps.handback.revision: 30
  **가용성 그룹 상태**  
  가용성 그룹의 상태를 표시합니다.  
   
- **주 인스턴스**  
+ **Primary instance**  
  가용성 그룹의 주 복제본을 호스팅하는 서버 인스턴스의 이름입니다.  
   
- **장애 조치(Failover) 모드**  
+ **Failover mode**  
  복제본이 구성되는 장애 조치(failover) 모드를 표시합니다. 가능한 장애 조치(failover) 모드 값은 다음과 같습니다.  
   
 -   **자동**. 하나 이상의 복제본이 자동 장애 조치 모드임을 나타냅니다.  
@@ -151,7 +128,7 @@ caps.handback.revision: 30
  가용성 복제본을 호스팅하는 서버 인스턴스의 이름입니다. 이 열은 기본적으로 표시됩니다.  
   
  **역할**  
- 가용성 복제본의 현재 역할(**주** 또는 **보조**)을 나타냅니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 역할에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요. 이 열은 기본적으로 표시됩니다.  
+ 가용성 복제본의 현재 역할( **주** 또는 **보조**)을 나타냅니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 역할에 대한 자세한 내용은 [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)를 참조하세요. 이 열은 기본적으로 표시됩니다.  
   
  **장애 조치(Failover) 모드**  
  복제본이 구성되는 장애 조치(failover) 모드를 표시합니다. 가능한 장애 조치(failover) 모드 값은 다음과 같습니다.  
@@ -175,7 +152,7 @@ caps.handback.revision: 30
 -   **NULL**. 알 수 없는 상태입니다. 이 값은 로컬 서버 인스턴스가 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없는 경우(즉, 로컬 노드가 WSFC 쿼럼의 일부가 아닌 경우)에 발생합니다.  
   
  **문제**  
- 문제 이름을 나열합니다. 이 값은 기본적으로 표시됩니다. 모든 Always On 정책 문제 목록은 [Always On 가용성 그룹의 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)을 참조하세요.  
+ 문제 이름을 나열합니다. 이 값은 기본적으로 표시됩니다. 모든 Always On 정책 문제 목록은 [Always On 가용성 그룹의 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)을 참조하세요.  
   
  **가용성 모드**  
  각 가용성 복제본에 대해 별도로 설정한 복제본 속성을 나타냅니다. 이 값은 기본적으로 숨겨집니다. 가능한 값은 아래와 같습니다.  
@@ -237,7 +214,7 @@ caps.handback.revision: 30
   
 -   **가용성 데이터베이스**  
   
--   **동기화 상태**  
+-   **Synchronization state**  
   
 -   **장애 조치(Failover) 준비**  
   
@@ -249,7 +226,7 @@ caps.handback.revision: 30
  가용성 데이터베이스의 이름입니다. 이 값은 기본적으로 표시됩니다.  
   
  **복제본**  
- 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스 이름입니다. 이 값은 기본적으로 표시됩니다.  
+ 가용성 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스 이름입니다. 이 값은 기본적으로 표시됩니다.  
   
  **동기화 상태**  
  가용성 데이터베이스가 주 복제본에 현재 동기화되어 있는지 여부를 나타냅니다. 이 값은 기본적으로 표시됩니다. 가능한 동기화 상태는 다음과 같습니다.  
@@ -290,7 +267,7 @@ caps.handback.revision: 30
     > [!CAUTION]  
     >  데이터베이스가 INITIALIZING 상태일 때 보조 복제본에 대한 장애 조치를 강제로 실행하면 해당 데이터베이스가 시작할 수 없는 상태로 될 수 있습니다.  
   
- **장애 조치(Failover) 준비**  
+ **Failover Readiness**  
  잠재적인 데이터 손실을 발생 또는 발생하지 않고 장애 조치할 수 있는 가용성 복제본을 나타냅니다. 이 열은 기본적으로 표시됩니다. 가능한 값은 아래와 같습니다.  
   
 -   **데이터 손실**  
@@ -304,10 +281,10 @@ caps.handback.revision: 30
   
 -   **심각**. 심각한 문제를 표시하려면 클릭합니다.  
   
- 모든 Always On 정책 문제 목록은 [Always On 가용성 그룹의 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always on policies for operational issues - always on availability.md)을 참조하세요.  
+ 모든 Always On 정책 문제 목록은 [Always On 가용성 그룹의 운영 문제에 대한 Always On 정책&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)을 참조하세요.  
   
  **일시 중지됨**  
- 데이터베이스가 **일시 중지됨** 상태인지 아니면 **재개됨** 상태인지 나타냅니다. 이 값은 기본적으로 숨겨집니다.  
+ 데이터베이스가 **일시 중지됨** 상태인지 아니면 **재개됨**상태인지 나타냅니다. 이 값은 기본적으로 숨겨집니다.  
   
  **일시 중지 원인**  
  일시 중지됨 상태에 대한 이유를 나타냅니다. 이 값은 기본적으로 숨겨집니다.  
@@ -316,7 +293,7 @@ caps.handback.revision: 30
  주 복제본과 보조 복제본에서 마지막 트랜잭션 로그 레코드의 시간 차이를 나타냅니다. 주 복제본이 실패하는 경우 시간 창 내의 모든 트랜잭션 로그 레코드가 손실됩니다. 이 값은 기본적으로 숨겨집니다.  
   
  **예상 복구 시간(초)**  
- catchup 시간을 다시 실행하는 데 걸리는 시간(초)을 나타냅니다. *catch-up 시간*은 보조 복제본이 주 복제본을 따라잡기 위해 걸리는 시간입니다. 이 값은 기본적으로 숨겨집니다.  
+ catchup 시간을 다시 실행하는 데 걸리는 시간(초)을 나타냅니다. *catch-up 시간* 은 보조 복제본이 주 복제본을 따라잡기 위해 걸리는 시간입니다. 이 값은 기본적으로 숨겨집니다.  
   
  **동기화 성능(초)**  
  주 복제본과 보조 복제본을 동기화하는 데 걸리는 시간(초)을 나타냅니다. 이 값은 기본적으로 숨겨집니다.  
@@ -379,8 +356,9 @@ caps.handback.revision: 30
   
 -   [Always On 정책을 사용하여 가용성 그룹의 상태 보기&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [sys.dm_os_performance_counters&#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [가용성 그룹 모니터링&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   
   
+

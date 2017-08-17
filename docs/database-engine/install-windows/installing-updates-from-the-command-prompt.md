@@ -1,30 +1,35 @@
 ---
 title: "명령 프롬프트에서 업데이트 설치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7aaad881b18313ca860ac67e386e374fc18d62f5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 명령 프롬프트에서 업데이트 설치
+# <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
   조직의 필요에 따라 설치 스크립트를 테스트하고 수정할 수 있습니다.  
   
-## 설치 구문 예제  
+## <a name="sample-syntax-for-installation"></a>설치 구문 예제  
  업데이트 패키지의 이름은 다양하며 언어, 버전 및 프로세서 구성 요소를 포함할 수 있습니다. 명령 프롬프트에서 <package_name>을 해당하는 업데이트 패키지 이름으로 바꾸어 업데이트를 적용합니다.  
   
--   단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 모든 공유 구성 요소(예: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 관리 도구) 업데이트: InstanceName 매개 변수 또는 InstanceID 매개 변수를 사용하여 인스턴스를 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스를 업데이트하려면 InstanceID 매개 변수 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 또는 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<인스턴스 ID>를 지정해야 합니다.  
+-   단일 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 및 모든 공유 구성 요소(예: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 관리 도구) 업데이트: InstanceName 매개 변수 또는 InstanceID 매개 변수를 사용하여 인스턴스를 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스를 업데이트하려면 다음과 같이 InstanceID 매개 변수를 지정해야 합니다. <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance 또는 <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceID=\<인스턴스 ID>  
   
--   설치 프로그램에서 최신 제품 업데이트를 주 제품 설치와 통합하여 주 제품과 해당 업데이트가 동시에 설치되게 할 수 있습니다. 제품 업데이트를 포함하도록 데이터베이스 엔진 인스턴스의 설치 준비: setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<업데이트가 다운로드된 경로> /INSTANCEID=\<인스턴스 ID> /FEATURES=SQLEngine  
+-   설치 프로그램에서 최신 제품 업데이트를 주 제품 설치와 통합하여 주 제품과 해당 업데이트가 동시에 설치되게 할 수 있습니다. 다음과 같이 제품 업데이트를 포함하도록 데이터베이스 엔진 인스턴스 설치를 준비할 수 있습니다. setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=PrepareImage /UpdateEnabled=True /UpdateEnabled=True /UpdateSource=\<path where the update is downloaded> /INSTANCEID=\<인스턴스 ID> /FEATURES=SQLEngine  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공유 구성 요소(예: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 관리 도구)만 업데이트: <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 18
     > [!NOTE]  
     >  업데이트 설치 관리자는 공유 구성 요소를 항상 최상위 수준의 인스턴스 버전 이상으로 유지합니다.  
   
-## 지원되는 명령 프롬프트 매개 변수  
+## <a name="supported-command-prompt-parameters"></a>지원되는 명령 프롬프트 매개 변수  
   
 > [!IMPORTANT]  
 >  가능한 한 런타임에 보안 자격 증명을 지정하십시오. 스크립트 파일에 자격 증명을 저장해야 하는 경우에는 무단으로 액세스하지 못하도록 파일에 보안을 설정하세요.  
@@ -56,9 +61,9 @@ caps.handback.revision: 18
 |**/UpdateEnabled**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램이 제품 업데이트를 검색하고 포함하는지 여부를 지정합니다. 유효한 값은 True와 False 또는 1과 0입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램에는 검색된 업데이트가 포함됩니다.|  
 |**/IAcceptSQLServerLicenseTerms**|무인 설치에 /Q 또는 /QS 매개 변수가 지정된 경우에만 필수입니다.|  
   
- *[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스에 업데이트를 적용할 때는 이 매개 변수를 지정할 수 없습니다. 대신 /instanceID 매개 변수를 지정해야 합니다.  
+ * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 준비 인스턴스에 업데이트를 적용할 때는 이 매개 변수를 지정할 수 없습니다. 대신 /instanceID 매개 변수를 지정해야 합니다.  
   
-## 참고 항목  
- [SQL Server 서비스 설치 개요](../Topic/Overview%20of%20SQL%20Server%20Servicing%20Installation.md)  
+## <a name="see-also"></a>참고 항목  
+ [SQL Server 서비스 설치 개요](http://msdn.microsoft.com/library/6a9fd19b-2367-4908-b638-363b1e929e1e)  
   
   

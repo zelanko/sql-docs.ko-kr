@@ -1,30 +1,35 @@
 ---
 title: "SQL Server 설치 로그 파일 보기 및 읽기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 보기"
-  - "로그 파일 표시"
-  - "설치 [SQL Server], 로그"
-  - "설치 로그 파일 [SQL Server]"
-  - "SQL Server 설치, 로그"
-  - "오류 [SQL Server], 설치"
-  - "로그 [SQL Server], 설치"
+ms.custom: 
+ms.date: 03/09/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing logs
+- displaying log files
+- Setup [SQL Server], logs
+- installation log files [SQL Server]
+- installing SQL Server, logs
+- errors [SQL Server], Setup
+- logs [SQL Server], Setup
 ms.assetid: 9d77af64-9084-4375-908a-d90f99535062
 caps.latest.revision: 54
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 설치 로그 파일 보기 및 읽기
+# <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
   설치 프로그램을 실행할 때마다 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\에 새로운 타임스탬프 로그 폴더와 함께 로그 파일이 생성됩니다. 타임스탬프 로그 폴더 이름 형식은 YYYYMMDD_hhmmss입니다. 설치 프로그램을 무인 모드로 실행하면 % temp%\sqlsetup*.log에 로그가 생성됩니다. 로그 폴더의 모든 파일은 각각의 로그 폴더에 Log\*.cab 파일로 보관됩니다.  
   
  일반적인 설치 요청은 다음과 같은 세 가지 실행 단계를 거칩니다.  
@@ -47,9 +52,9 @@ caps.handback.revision: 54
   
  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 로그 파일에 대해 설명합니다.  
   
-## 요약 텍스트  
+## <a name="summary-text"></a>요약 텍스트  
   
-### 개요  
+### <a name="overview"></a>개요  
  이 파일은 설치 중에 검색된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소, 운영 체제 환경, 명령줄 매개 변수 값(지정된 경우) 및 각 MSI/MSP의 전반적인 실행 상태를 보여 줍니다.  
   
  로그는 다음 섹션으로 구성됩니다.  
@@ -76,98 +81,99 @@ caps.handback.revision: 54
   
 -   규칙 보고서 파일의 위치  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\에 있습니다.  
   
  요약 텍스트 파일에서 오류를 찾으려면 "오류" 또는 "실패" 키워드를 사용하여 파일을 검색하십시오.  
   
-## Summary_engine-base_YYYYMMDD_HHMMss.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsstxt"></a>Summary_engine-base_YYYYMMDD_HHMMss.txt  
   
-### 개요  
+### <a name="overview"></a>개요  
  summary_engine base 파일은 요약 파일과 비슷하며 주 워크플로 중에 생성됩니다.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
-## Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
+## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
   
-### 개요  
+### <a name="overview"></a>개요  
  구성 요소 업데이트 요약 로그 파일은 요약 파일과 비슷하며 구성 요소 업데이트 워크플로 중에 생성됩니다.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
-## Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
+## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
   
-### 개요  
+### <a name="overview"></a>개요  
  전역 규칙 요약 로그 파일은 요약 파일과 비슷하며 전역 규칙 워크플로 중에 생성됩니다.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
-## Detail.txt  
+## <a name="detailtxt"></a>Detail.txt  
   
-### 개요  
+### <a name="overview"></a>개요  
  Detail.txt는 설치 또는 업그레이드와 같은 주 워크플로 중에 생성되며 실행 세부 사항을 제공합니다. 파일의 로그는 각 설치 동작이 호출된 시간을 기준으로 생성되며 동작이 실행된 순서와 종속성을 보여 줍니다.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup에 있습니다.  
   
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt  
   
  설치 프로세스 중에 오류가 발생하면 이 파일 끝에 예외나 오류가 로깅됩니다. 이 파일에서 오류를 찾으려면 먼저 파일 끝을 검사한 다음 "오류" 또는 "예외" 키워드로 파일을 검색하십시오.  
   
-## Detail_ComponentUpdate.txt  
+## <a name="detailcomponentupdatetxt"></a>Detail_ComponentUpdate.txt  
   
-### 개요  
+### <a name="overview"></a>개요  
  Detail_ComponentUpdate.txt 파일은 구성 요소 업데이트 워크플로 중에 생성되며 Detail.txt와 비슷합니다.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
-## Detail_GlobalRules.txt  
+## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
   
-### 개요  
+### <a name="overview"></a>개요  
  Detail_GlobalRules.txt 파일은 전역 규칙 실행 중 생성되며 Detail.txt와 비슷합니다.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
-## MSI 로그 파일  
+## <a name="msi-log-files"></a>MSI 로그 파일  
   
-### 개요  
+### <a name="overview"></a>개요  
  MSI 로그 파일은 설치 패키지 프로세스의 세부 사항을 제공하며, 지정된 패키지를 설치하는 동안 MSIEXEC에 의해 생성됩니다.  
   
  MSI 로그 파일의 유형:  
   
--   \<Feature>_\<Architecture>\_\<Interation>.log  
+-   \<기능>_\<아키텍처>\_\<반복>.log  
   
--   \<Feature>_\<Architecture>\_\<Language>\_\<Interation>.log  
+-   \<기능>_\<아키텍처>\_\<언어>\_\<반복>.log  
   
--   \<Feature>_\<Architecture>\_\<Interation>\_\<workflow>.log  
+-   \<기능>_\<아키텍처>\_\<반복>\_\<워크플로>.log  
   
-### 위치  
- MSI 로그 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<Name\>.log에 있습니다.  
+### <a name="location"></a>위치  
+ MSI 로그 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<이름\>.log에 있습니다.  
   
  파일 끝에 성공/실패 상태 및 속성을 포함하는 실행 요약이 표시됩니다. MSI 파일에서 오류를 찾으려면 "값 3"을 검색하십시오. 그러면 대개 이 문자열 부근에서 오류를 찾을 수 있습니다.  
   
-## ConfigurationFile.ini  
+## <a name="configurationfileini"></a>ConfigurationFile.ini  
   
-### 개요  
+### <a name="overview"></a>개요  
  구성 파일은 설치 중에 제공된 입력 설정을 포함합니다. 이 파일을 사용하면 수동으로 설정을 입력하지 않고도 설치를 다시 시작할 수 있습니다. 그러나 계정의 암호, PID 및 일부 매개 변수는 구성 파일에 저장되지 않습니다. 이러한 설정은 파일에 추가하거나 명령줄 또는 설치 사용자 인터페이스를 사용하여 제공할 수 있습니다. 자세한 내용은 [구성 파일을 사용하여 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)를 참조하세요.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
-## SystemConfigurationCheck_Report.htm  
+## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
   
-### 개요  
+### <a name="overview"></a>개요  
  시스템 구성 검사 보고서는 각 실행 규칙에 대한 간단한 설명과 실행 상태를 포함합니다.  
   
-### 위치  
+### <a name="location"></a>위치  
  %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\에 있습니다.  
   
-## 참고 항목  
- [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016.md)  
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)  
   
   
+

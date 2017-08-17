@@ -1,28 +1,33 @@
 ---
 title: "가용성 그룹이 오프라인 상태임 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.agdashboard.agp2online.issues.f1"
-helpviewer_keywords: 
-  - "가용성 그룹 [SQL Server], 정책"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.agdashboard.agp2online.issues.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], policies
 ms.assetid: 093c5208-bf7a-49f4-a546-72b48197cadf
 caps.latest.revision: 14
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: c64ddb1c8c152594a359c1b10e0cb621e25bc11e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 그룹이 오프라인 상태임
+# <a name="availability-group-is-offline"></a>가용성 그룹이 오프라인 상태임
     
-## 소개  
+## <a name="introduction"></a>소개  
   
 |||  
 |-|-|  
@@ -31,15 +36,15 @@ caps.handback.revision: 14
 |**범주**|**심각**|  
 |**패싯**|가용성 그룹|  
   
-## 설명  
+## <a name="description"></a>설명  
  이 정책은 가용성 그룹의 온라인 또는 오프라인 상태를 확인합니다. 가용성 그룹의 클러스터 리소스가 오프라인이거나 가용성 그룹에 주 복제본이 없으면 정책이 비정상 상태이며 경고가 발생합니다.  
   
  가용성 그룹의 클러스터 리소스가 온라인이고 가용성 그룹에 주 복제본이 있으면 정책 상태가 정상입니다.  
   
 > [!NOTE]  
->  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki에서 [가용성 그룹이 오프라인 상태임](http://go.microsoft.com/fwlink/p/?LinkId=220850)을 참조하세요.  
+>  이 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]릴리스의 경우 가능한 원인 및 해결 방법에 대한 자세한 내용은 TechNet Wiki에서 [가용성 그룹이 오프라인 상태임](http://go.microsoft.com/fwlink/p/?LinkId=220850) 을 참조하세요.  
   
-## 가능한 원인  
+## <a name="possible-causes"></a>가능한 원인  
  이 문제는 주 복제본을 호스팅하는 서버 인스턴스에 장애가 있거나 WSFC(Windows Server 장애 조치(Failover) 클러스터) 가용성 그룹 리소스가 오프라인 상태가 되어 발생할 수 있습니다. 다음과 같은 경우 가용성 그룹이 오프라인 상태가 될 수 있습니다.  
   
 -   가용성 그룹이 자동 장애 조치(Failover) 모드로 구성되지 않은 경우. 주 복제본을 사용할 수 없게 되고 가용성 그룹에 있는 모든 복제본의 역할이 RESOLVING이 됩니다.  
@@ -60,7 +65,7 @@ caps.handback.revision: 14
   
 -   가용성 그룹에 대해 자동, 수동 또는 강제 장애 조치(Failover)가 진행 중인 경우  
   
-## 가능한 해결 방법  
+## <a name="possible-solutions"></a>가능한 해결 방법  
  이 문제에 대한 해결 방법은 다음과 같습니다.  
   
 -   주 복제본의 SQL Server 인스턴스가 다운된 경우 서버를 다시 시작한 다음 가용성 그룹이 정상 상태로 복구되는지 확인합니다.  
@@ -71,8 +76,9 @@ caps.handback.revision: 14
   
 -   장애 조치(Failover)가 진행 중인 경우 해당 장애 조치가 완료될 때까지 기다립니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 대시보드 사용&#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   
   
+

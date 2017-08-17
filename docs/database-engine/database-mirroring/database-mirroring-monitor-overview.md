@@ -1,26 +1,31 @@
 ---
 title: "데이터베이스 미러링 모니터 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.dbmmonitor.main.f1"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 모니터 [SQL Server], 인터페이스"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.dbmmonitor.main.f1
+helpviewer_keywords:
+- Database Mirroring Monitor [SQL Server], interface
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 129958519a6115df494479c6c2237d4a611cfed5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 모니터 개요
+# <a name="database-mirroring-monitor-overview"></a>데이터베이스 미러링 모니터 개요
   올바른 사용 권한이 있는 경우 데이터베이스 미러링 모니터를 사용하여 서버 인스턴스에 있는 미러된 데이터베이스의 모든 하위 집합을 모니터링할 수 있습니다. 모니터링을 사용하면 데이터베이스 미러링 세션에서 데이터가 제대로 흐르고 있는지 확인할 수 있습니다. 또한 데이터베이스 미러링 모니터는 데이터 흐름 감소의 원인을 해결하는 데 도움이 됩니다.  
   
  각 장애 조치(Failover) 파트너에서 개별적으로 모니터링하기 위해 미러된 데이터베이스를 등록할 수 있습니다. 데이터베이스를 등록하면 데이터베이스 미러링 모니터는 데이터베이스에 대한 다음 정보를 캐시합니다.  
@@ -31,25 +36,25 @@ caps.handback.revision: 40
   
 -   각 파트너의 마지막으로 알려진 역할(주 서버 또는 미러 서버)  
   
-## 사용 권한  
- 데이터베이스 미러링을 모니터링하려면 서버 인스턴스의 **msdb** 데이터베이스에서 **sysadmin** 고정 서버 역할 또는 **dbm_monitor** 고정 데이터베이스 역할의 멤버여야 합니다. 파트너 서버 인스턴스 중 하나에서만 **sysadmin** 또는 **dbm_monitor**의 멤버인 경우 모니터는 해당 파트너에만 연결될 수 있습니다. 즉, 모니터는 다른 파트너에서 정보를 검색할 수 없습니다.  
+## <a name="permissions"></a>사용 권한  
+ 데이터베이스 미러링을 모니터링하려면 서버 인스턴스의 **msdb** 데이터베이스에서 **sysadmin** 고정 서버 역할 또는 **dbm_monitor** 고정 데이터베이스 역할의 멤버여야 합니다. 파트너 서버 인스턴스 중 하나에서만 **sysadmin** 또는 **dbm_monitor** 의 멤버인 경우 모니터는 해당 파트너에만 연결될 수 있습니다. 즉, 모니터는 다른 파트너에서 정보를 검색할 수 없습니다.  
   
- 서버 인스턴스에서 **dbm_monitor**의 멤버인 경우에만 해당 서버 인스턴스에서 제한된 사용 권한을 갖게 됩니다. 사용자는 최신 상태 행만 볼 수 있습니다. **dbm_monitor** 권한을 사용하여 서버 인스턴스에 연결할 경우 데이터베이스 미러링 모니터는 사용자에게 제한된 사용 권한이 있다는 것을 알립니다.  
+ 서버 인스턴스에서 **dbm_monitor** 의 멤버인 경우에만 해당 서버 인스턴스에서 제한된 사용 권한을 갖게 됩니다. 사용자는 최신 상태 행만 볼 수 있습니다. **dbm_monitor** 권한을 사용하여 서버 인스턴스에 연결할 경우 데이터베이스 미러링 모니터는 사용자에게 제한된 사용 권한이 있다는 것을 알립니다.  
   
 > [!IMPORTANT]  
 >  데이터베이스 미러링 모니터에서 첫 번째 데이터베이스를 등록하면 **dbm_monitor** 고정 데이터베이스 역할이 **msdb** 데이터베이스에서 만들어집니다. 새 **dbm_monitor** 역할은 시스템 관리자가 사용자를 할당할 때까지 멤버가 없습니다.  
   
-## 탐색 트리  
+## <a name="navigation-tree"></a>탐색 트리  
  데이터베이스 미러링 모니터가 모니터링하도록 데이터베이스가 등록된 경우 등록된 데이터베이스 목록이 탐색 트리에 표시됩니다. 이 트리는 30초마다 자동으로 새로 고쳐집니다. 등록된 데이터베이스의 상태를 보려면 해당 데이터베이스를 선택합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "세부 정보 창"을 참조하십시오.  
   
  등록된 각 데이터베이스에 대해 다음 정보가 표시됩니다.  
   
- *<Database_name>* **(** *\<Status>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
+ *<Database_name>* **(** *\<상태>* **,** *<PRINCIPAL_SERVER>* **->** *<MIRROR_SERVER>* **)**  
   
  *<Database_name>*  
  데이터베이스 미러링 모니터에 등록한 미러된 데이터베이스의 이름입니다.  
   
- *\<Status>*  
+ *\<상태>*  
  가능한 상태 및 연관된 아이콘은 다음과 같습니다.  
   
 |아이콘|상태|설명|  
@@ -70,7 +75,7 @@ caps.handback.revision: 40
  *<MIRROR_SERVER>*  
  현재 미러 서버 인스턴스인 파트너의 이름입니다. 형식은 주 서버와 동일합니다.  
   
-## 세부 정보 창  
+## <a name="detail-pane"></a>세부 정보 창  
  모니터의 모양은 데이터베이스가 선택되었는지 여부에 따라 달라집니다. 모니터를 열면 세부 정보 창에 **미러된 데이터베이스 등록** 링크가 표시됩니다. 데이터베이스를 등록하려면 이 링크를 클릭합니다. 등록된 데이터베이스는 탐색 트리에서 **데이터베이스 미러링 모니터** 노드 아래에 나열됩니다. 데이터베이스 미러링 모니터는 서버 인스턴스에 대한 저장된 자격 증명이 있을 경우 이러한 모든 서버 인스턴스에 항상 연결을 시도합니다.  
   
  데이터베이스를 선택하면 세부 정보 창의 **상태** 탭 페이지에 해당 상태가 표시됩니다. 이 페이지의 내용은 주 서버 인스턴스 및 미러 서버 인스턴스에서 가져옵니다. 주 서버 인스턴스와 미러 서버 인스턴스에 각각 연결하여 상태가 수집되므로 페이지는 비동기적으로 채워집니다. 상태는 30초마다 자동으로 새로 고쳐집니다.  
@@ -82,7 +87,7 @@ caps.handback.revision: 40
   
  세부 정보 창에서 탭 위의 배너에는 모니터가 상태 정보를 마지막으로 새로 고친 시간이 **마지막 새로 고침:***\<날짜>**\<시간>*으로 표시됩니다. 일반적으로 데이터베이스 미러링 모니터는 서로 다른 시간에 주 서버 인스턴스 및 미러 서버 인스턴스에서 상태 정보를 검색합니다. 이러한 두 새로 고침 시간 중에서 이전 시간이 표시됩니다.  
   
-## 동작 메뉴  
+## <a name="action-menu"></a>동작 메뉴  
  **동작** 메뉴에는 항상 다음 명령이 포함됩니다.  
   
 |Command|설명|  
@@ -101,8 +106,8 @@ caps.handback.revision: 40
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start the configuring database mirroring security wizard.md)  
+ [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

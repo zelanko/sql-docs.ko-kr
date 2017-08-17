@@ -1,26 +1,31 @@
 ---
 title: "데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "미러링 모니터 [SQL Server], 해제"
-  - "미러링 모니터 [SQL Server], 제거"
-  - "데이터베이스 미러링 [SQL Server], 미러링 모니터"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- witness [SQL Server], turning off
+- witness [SQL Server], removing
+- database mirroring [SQL Server], witness
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 caps.latest.revision: 39
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: f46a7668500b1a17b531c241e1e023cfb91d7f3f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
+# <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 데이터베이스 미러링 세션에서 미러링 모니터 서버를 제거하는 방법에 대해 설명합니다. 데이터베이스 소유자는 데이터베이스 미러링 세션 중에 언제든지 미러링 모니터를 해제할 수 있습니다.  
   
  **항목 내용**  
@@ -46,7 +51,7 @@ caps.handback.revision: 39
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 미러링 모니터를 제거하려면  
+#### <a name="to-remove-the-witness"></a>미러링 모니터를 제거하려면  
   
 1.  주 서버 인스턴스에 연결한 다음 **개체 탐색기** 창에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 39
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 미러링 모니터를 제거하려면  
+#### <a name="to-remove-the-witness"></a>미러링 모니터를 제거하려면  
   
 1.  한 파트너 서버 인스턴스의 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 연결합니다.  
   
@@ -69,9 +74,9 @@ caps.handback.revision: 39
   
 3.  다음 문을 실행합니다.  
   
-     [ALTER DATABASE](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md) *database_name* SET WITNESS OFF  
+     [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) *database_name* SET WITNESS OFF  
   
-     여기서 *database_name*은 미러된 데이터베이스의 이름입니다.  
+     여기서 *database_name* 은 미러된 데이터베이스의 이름입니다.  
   
      다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 미러링 모니터 서버를 제거합니다.  
   
@@ -95,8 +100,8 @@ caps.handback.revision: 39
   
 -   [데이터베이스 미러링 모니터 서버 추가 또는 바꾸기&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## 참고 항목  
- [ALTER DATABASE 데이터베이스 미러링&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Database%20Mirroring%20\(Transact-SQL\).md)   
+## <a name="see-also"></a>참고 항목  
+ [ALTER DATABASE 데이터베이스 미러링&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)  

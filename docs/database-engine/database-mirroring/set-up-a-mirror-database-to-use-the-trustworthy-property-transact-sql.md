@@ -1,34 +1,39 @@
 ---
 title: "Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/09/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "TRUSTWORTHY 데이터베이스 옵션"
-  - "미러 데이터베이스 [SQL Server]"
-  - "데이터베이스 미러링 [SQL Server], 보안"
+ms.custom: 
+ms.date: 03/09/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- TRUSTWORTHY database option
+- mirror database [SQL Server]
+- database mirroring [SQL Server], security
 ms.assetid: 6993b076-78ef-453e-b0ea-e341b8e5ee3e
 caps.latest.revision: 15
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 7b99c620aeb148558c5db6cfb15fefd2878ca180
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL)
+# <a name="set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql"></a>Trustworthy 속성을 사용하도록 미러 데이터베이스 설정(Transact-SQL)
   데이터베이스를 백업하면 TRUSTWORTHY 데이터베이스 속성이 OFF로 설정됩니다. 따라서 새 미러 데이터베이스의 TRUSTWORTHY는 항상 OFF입니다. 장애 조치(Failover) 후 데이터베이스를 신뢰할 수 있어야 하는 경우에는 미러링이 시작된 다음 추가 설정 단계가 필요합니다.  
   
 > [!NOTE]  
 >  이 데이터베이스 속성에 대한 자세한 내용은 [TRUSTWORTHY 데이터베이스 속성](../../relational-databases/security/trustworthy-database-property.md)을 참조하세요.  
   
-## 절차  
+## <a name="procedure"></a>절차  
   
-#### Trustworthy 속성을 사용하도록 미러 데이터베이스를 설정하려면  
+#### <a name="to-setup-a-mirror-database-to-use-the-trustworthy-property"></a>Trustworthy 속성을 사용하도록 미러 데이터베이스를 설정하려면  
   
 1.  주 서버 인스턴스에서 주 데이터베이스의 Trustworthy 속성이 설정되었는지 확인합니다.  
   
@@ -74,9 +79,9 @@ caps.handback.revision: 15
   
      SQL Server Management Studio를 사용하는 경우  
   
-    -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+    -   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [TRUSTWORTHY 데이터베이스 속성](../../relational-databases/security/trustworthy-database-property.md)   
  [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)  
   

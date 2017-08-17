@@ -1,26 +1,31 @@
 ---
 title: "가용성 그룹에 보조 복제본 추가(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "가용성 그룹 [SQL Server], 가용성 복제본"
-  - "가용성 그룹 [SQL Server], 구성"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], configuring
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 caps.latest.revision: 38
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d9c742da9a223f3cf8d54911eb841c69ad2d200a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 그룹에 보조 복제본 추가(SQL Server)
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
+# <a name="add-a-secondary-replica-to-an-availability-group-sql-server"></a>가용성 그룹에 보조 복제본 추가(SQL Server)
+  이 항목에서는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
 -   **시작하기 전에:**  
   
@@ -38,14 +43,14 @@ caps.handback.revision: 38
   
 -   **후속 작업:**  [복제본을 추가한 후](#FollowUp)  
   
-## 시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전에  
  가용성 그룹을 처음 만들어 보는 경우 이 섹션을 먼저 읽는 것이 좋습니다.  
   
 ##  <a name="PrerequisitesRestrictions"></a> 사전 요구 사항 및 제한 사항  
   
 -   주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
- 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)를 참조하세요.  
+ 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)에 대한 서버 인스턴스를 구성하는 것과 관련된 일반적인 문제를 해결하는 데 유용한 정보를 제공합니다.  
   
 ##  <a name="Security"></a> 보안  
   
@@ -76,9 +81,9 @@ caps.handback.revision: 38
   
 1.  주 복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   
-2.  ALTER AVAILABILITY GROUP 문의 ADD REPLICA ON 절을 사용하여 가용성 그룹에 새 보조 복제본을 추가합니다. ENDPOINT_URL, AVAILABILITY_MODE 및 FAILOVER_MODE 옵션은 ADD REPLICA ON 절에 필요합니다. 다른 복제본 옵션 BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE 및 SESSION_TIMEOUT은 선택 사항입니다. 자세한 내용은 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)을 참조하세요.  
+2.  ALTER AVAILABILITY GROUP 문의 ADD REPLICA ON 절을 사용하여 가용성 그룹에 새 보조 복제본을 추가합니다. ENDPOINT_URL, AVAILABILITY_MODE 및 FAILOVER_MODE 옵션은 ADD REPLICA ON 절에 필요합니다. 다른 복제본 옵션 BACKUP_PRIORITY, SECONDARY_ROLE, PRIMARY_ROLE 및 SESSION_TIMEOUT은 선택 사항입니다. 자세한 내용은 [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
-     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 끝점 URL이 `MyAG`인 `COMPUTER04`에서 호스팅되는 기본 서버 인스턴스의 `TCP://COMPUTER04.Adventure-Works.com:5022'`라는 가용성 그룹에 새 복제본을 만듭니다. 이 복제본은 수동 장애 조치(Failover) 및 비동기 커밋 가용성 모드를 지원합니다.  
+     예를 들어 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문은 끝점 URL이 `MyAG` 인 `COMPUTER04`에서 호스팅되는 기본 서버 인스턴스의 `TCP://COMPUTER04.Adventure-Works.com:5022'`라는 가용성 그룹에 새 복제본을 만듭니다. 이 복제본은 수동 장애 조치(Failover) 및 비동기 커밋 가용성 모드를 지원합니다.  
   
     ```  
     ALTER AVAILABILITY GROUP MyAG ADD REPLICA ON 'COMPUTER04'   
@@ -114,7 +119,7 @@ caps.handback.revision: 38
     ```  
   
     > [!NOTE]  
-    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 **Get-Help** cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 **PowerShell 환경에서** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
@@ -125,11 +130,11 @@ caps.handback.revision: 38
   
 1.  새 보조 복제본을 호스팅할 서버 인스턴스에 연결합니다.  
   
-2.  새 보조 복제본을 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)을 참조하세요.  
+2.  새 보조 복제본을 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 복제본 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-replica-to-an-availability-group-sql-server.md)또는 PowerShell을 사용하여 기존 Always On 가용성 그룹에 보조 복제본을 추가하는 방법에 대해 설명합니다.  
   
 3.  가용성 그룹의 각 데이터베이스에 대해 보조 복제본을 호스팅하는 서버 인스턴스에 보조 데이터베이스를 만듭니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  
   
-4.  각각의 새로운 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)을 참조하세요.  
+4.  각각의 새로운 보조 데이터베이스를 가용성 그룹에 조인합니다. 자세한 내용은 [가용성 그룹에 보조 데이터베이스 조인&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md)인스턴스에 AlwaysOn 가용성 그룹을 만드는 방법을 설명합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
  **가용성 복제본을 관리하려면**  
@@ -148,7 +153,7 @@ caps.handback.revision: 38
   
 -   [가용성 복제본에 대한 세션 제한 시간 변경&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)   
@@ -156,3 +161,4 @@ caps.handback.revision: 38
  [가용성 그룹 모니터링&#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   
+

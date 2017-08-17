@@ -1,54 +1,47 @@
 ---
-title: "데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항 | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 [SQL Server], 배포"
-  - "파트너 [SQL Server]"
-  - "데이터베이스 미러링 [SQL Server], 필수 구성 요소"
-  - "데이터베이스 미러링 [SQL Server], 권장 사항"
-  - "데이터베이스 미러링 [SQL Server], 제한 사항"
-  - "데이터베이스 미러링 [SQL Server], 계획"
-  - "데이터베이스 미러링 [SQL Server], 데이터베이스 미러링 정보"
+title: "데이터베이스 미러링을 위한 필수 조건, 제한 사항 및 권장 사항 | Microsoft Docs"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], deployment
+- partners [SQL Server]
+- database mirroring [SQL Server], prerequisites
+- database mirroring [SQL Server], recommendations
+- database mirroring [SQL Server], restrictions
+- database mirroring [SQL Server], planning
+- database mirroring [SQL Server], about database mirroring
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 caps.latest.revision: 55
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 54
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d07bee6a462ed184e7bceabb4edcf7903110fd26
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
+# <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
     
 > [!NOTE]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]를 사용해야 합니다.  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]을 대신 사용합니다.  
   
  이 항목에서는 데이터베이스 미러링을 설정하기 위한 사전 요구 사항 및 권장 사항에 대해 설명합니다. 데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
- **항목 내용:**  
-  
--   [데이터베이스 미러링 지원](#DbmSupport)  
-  
--   [필수 구성 요소](#Prerequisites)  
-  
--   [제한 사항](#Restrictions)  
-  
--   [파트너 서버 구성에 대한 권장 사항](#RecommendationsForPartners)  
-  
--   [데이터베이스 미러링 배포 시의 권장 구성](#RecommendationsForDeploying)  
   
 ##  <a name="DbmSupport"></a> 데이터베이스 미러링 지원  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 미러링 지원에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 미러링 지원에 대한 자세한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
   
- 데이터베이스 미러링은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다. 지원되는 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../Topic/ALTER%20DATABASE%20Compatibility%20Level%20\(Transact-SQL\).md)을 참조하세요.  
+ 데이터베이스 미러링은 지원되는 모든 데이터베이스 호환성 수준에서 작동합니다. 지원되는 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
 ##  <a name="Prerequisites"></a> 필수 구성 요소  
   
@@ -71,7 +64,6 @@ caps.handback.revision: 54
     > [!IMPORTANT]  
     >  데이터베이스 미러링이 중지된 경우 주 데이터베이스에서 수행된 모든 후속 로그 백업을 미러 데이터베이스에 적용해야만 미러링을 다시 시작할 수 있습니다.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
 ##  <a name="Restrictions"></a> 제한 사항  
   
@@ -81,9 +73,8 @@ caps.handback.revision: 54
   
 -   데이터베이스 미러링은 FILESTREAM을 지원하지 않습니다. 주 서버에서 FILESTREAM 파일 그룹을 만들 수 없습니다. FILESTREAM 파일 그룹이 포함된 데이터베이스에 대해 데이터베이스 미러링을 구성할 수 없습니다.  
   
--   데이터베이스 미러링은 데이터베이스 간 트랜잭션 또는 분산 트랜잭션에서 지원되지 않습니다. 자세한 내용은 [Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions - always on availability and database mirroring.md)를 참조하세요.  
+-   데이터베이스 미러링은 데이터베이스 간 트랜잭션 또는 분산 트랜잭션에서 지원되지 않습니다. 자세한 내용은 [Always On 가용성 그룹 및 데이터베이스 미러링에 대한 데이터베이스 간 트랜잭션 및 분산 트랜잭션&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md)를 참조하세요.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
 ##  <a name="RecommendationsForPartners"></a> 파트너 서버 구성에 대한 권장 사항  
   
@@ -105,7 +96,6 @@ caps.handback.revision: 54
   
 -   보호 우선 모드 사용 시 WAN(광역 통신망)은 데이터베이스 미러링에 대해 안정적이지 않을 수 있습니다. WAN에서 보호 우선 모드를 사용할 경우 필요 없는 자동 장애 조치가 발생할 수 있으므로 세션에 미러링 모니터 서버를 추가하는 방식에 대해 주의해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [데이터베이스 미러링 배포 시의 권장 구성](#RecommendationsForDeploying)을 참조하십시오.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
 ##  <a name="RecommendationsForDeploying"></a> 데이터베이스 미러링 배포 시의 권장 구성  
  비동기 작업을 사용하면 데이터베이스 미러링 성능이 최적화됩니다. 동기 작업을 사용하는 미러링 세션의 경우 작업에서 대량의 트랜잭션 로그 데이터가 생성될 때 성능이 저하될 수 있습니다.  
@@ -123,14 +113,14 @@ caps.handback.revision: 54
   
 2.  비동기 작업이 비즈니스 요구를 만족시킨다고 확신하는 경우 데이터 보호를 향상시키기 위해 동기 작업을 시도할 수 있습니다. 환경에서 동기 미러링이 어떻게 작동하는지 테스트할 때는 먼저 자동 장애 조치 없는 보호 우선 모드를 테스트하는 것이 좋습니다. 이 테스트의 주요 목적은 동기 작업이 데이터베이스 성능에 미치는 영향을 확인하는 것입니다. 자세한 내용은 [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)을 참조하세요.  
   
-3.  자동 장애 조치 없는 보호 우선 모드에서 비즈니스 요구를 만족시키며 네트워크 오류로 인해 실패하지 않는다고 확신하기 전에는 자동 장애 조치를 설정하지 마십시오. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)을 참조하세요.  
+3.  자동 장애 조치 없는 보호 우선 모드에서 비즈니스 요구를 만족시키며 네트워크 오류로 인해 실패하지 않는다고 확신하기 전에는 자동 장애 조치를 설정하지 마십시오. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)를 다운로드하세요.  
   
- [&#91;맨 위로 이동&#93;](#Top)  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
- [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport security - database mirroring - always on availability.md)   
+ [데이터베이스 미러링 및 Always On 가용성 그룹에 대한 전송 보안&#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [데이터베이스 미러링 구성 문제 해결&#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
+

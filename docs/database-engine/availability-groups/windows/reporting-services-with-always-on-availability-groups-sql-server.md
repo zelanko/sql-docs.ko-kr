@@ -1,32 +1,37 @@
 ---
 title: "Always On 가용성 그룹이 포함된 Reporting Services(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Reporting Services, AlwaysOn 가용성 그룹"
-  - "가용성 그룹 [SQL Server], 상호 운용성"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+- reporting-services-native
+- reporting-services-sharepoint
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Reporting Services, AlwaysOn Availability Groups
+- Availability Groups [SQL Server], interoperability
 ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "erikre"
-caps.handback.revision: 22
+author: MikeRayMSFT
+ms.author: mikeray
+manager: erikre
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 34063117645178c5e8326c3245d6368baa8480e5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
+# <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Always On 가용성 그룹이 포함된 Reporting Services(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]\(AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  
+  이 항목에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG)과 함께 작동하도록 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]를 구성하는 방법에 대한 정보를 제공합니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 및 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사용에 관한 세 가지 시나리오는 보고서 데이터 원본에 대한 데이터베이스, 보고서 서버 데이터베이스 및 보고서 디자인이 있습니다. 세 가지 시나리오에서 지원되는 기능과 필요한 구성은 서로 다릅니다.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]을 사용할 경우의 중요한 이점 중 하나는 읽기 가능한 보조 복제본을 보고 데이터 원본으로 사용하는 것과 동시에 보조 복제본이 주 데이터베이스에 대한 장애 조치(Failover) 기능을 제공할 수 있다는 점입니다.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본에 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 사용할 경우의 중요한 이점 중 하나는 읽기 가능한 보조 복제본을 보고 데이터 원본으로 사용하는 것과 동시에 보조 복제본이 주 데이터베이스에 대한 장애 조치(Failover) 기능을 제공할 수 있다는 점입니다.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대한 일반 정보는 [SQL Server 2012에 대한 Always On FAQ(http://msdn.microsoft.com/sqlserver/gg508768)](http://msdn.microsoft.com/sqlserver/gg508768)를 참조하세요.  
   
@@ -59,10 +64,10 @@ caps.handback.revision: 22
   
  필요한 핫픽스에 대한 자세한 내용은 [KB 2654347A – SQL Server 2012의 Always On 기능에 대한 지원을 .NET Framework 3.5 SP1에 도입하는 핫픽스](http://go.microsoft.com/fwlink/?LinkId=242896)를 참조하세요.  
   
- 기타 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 요구 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)을 참조하세요.  
+ 기타 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 요구 사항에 대한 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] RSreportserver.config **와 같은** 구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능으로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
+>  **RSreportserver.config**와 같은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일은 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 기능의 일부로 지원되지 않습니다. 보고서 서버 중 하나에서 구성 파일을 수동으로 변경할 경우 복제본을 수동으로 업데이트해야 합니다.  
   
 ##  <a name="bkmk_reportdatasources"></a> 보고서 데이터 원본 및 가용성 그룹  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 기반으로 하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 데이터 원본의 동작은 관리자가 AG 환경을 구성한 방법에 따라 다를 수 있습니다.  
@@ -75,9 +80,9 @@ caps.handback.revision: 22
   
  또한 연결 문자열은 읽기 전용 보고를 위해 보조 복제본을 사용하도록 보고서 쿼리 요청을 구성하는 새 Always On 연결 속성을 포함합니다. 보고 요청을 위해 보조 복제본을 사용할 경우 읽기/쓰기 용도의 주 복제본에 대한 부하가 줄어듭니다. 다음 그림은 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 데이터 원본 연결 문자열이 ApplicationIntent=ReadOnly로 구성된 세 개의 복제본 AG 구성 예입니다. 이 예에서 보고서 쿼리 요청은 주 복제본이 아니라 보조 복제본으로 전송됩니다.  
   
- ![](../Image/rs_Always On_Basic.gif)  
+ 
   
- 다음은 [AvailabilityGroupListenerName]이 복제본을 만들 때 구성된 **리스너 DNS 이름**인 연결 문자열의 예입니다.  
+ 다음은 [AvailabilityGroupListenerName]이 복제본을 만들 때 구성된 **리스너 DNS 이름** 인 연결 문자열의 예입니다.  
   
  `Data Source=[AvailabilityGroupListenerName];Initial Catalog = AdventureWorks2016; ApplicationIntent=ReadOnly`  
   
@@ -163,7 +168,7 @@ caps.handback.revision: 22
   
 -   **보고서 서버 자격 증명:** 보조 복제본에서 주 복제본에 만든 적합한 보고서 서버 자격 증명을 만들어야 합니다. 정확한 단계는 Window [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 계정, Windows 사용자 계정 또는 SQL Server 인증 등 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 환경에서 사용 중인 인증 유형에 따라 달라집니다. 자세한 내용은 [보고서 서버 데이터베이스 연결 구성&#40;SSRS 구성 관리자&#41;](../../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)을 참조하세요.  
   
--   리스너 DNS 이름을 사용하도록 데이터베이스 연결을 업데이트합니다. 기본 모드 보고서 서버의 경우 **구성 관리자에서** 보고서 서버 데이터베이스 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다. SharePoint 모드의 경우에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램에 대해 **데이터베이스 서버 이름**을 변경합니다.  
+-   리스너 DNS 이름을 사용하도록 데이터베이스 연결을 업데이트합니다. 기본 모드 보고서 서버의 경우 **구성 관리자에서** 보고서 서버 데이터베이스 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다. SharePoint 모드의 경우에는 **서비스 응용 프로그램에 대해** 데이터베이스 서버 이름 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 을 변경합니다.  
   
 ###  <a name="bkmk_steps_to_complete_failover"></a> 보고서 서버 데이터베이스의 재해 복구 완료 단계  
  보조 복제본으로 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 을 장애 조치(Failover)한 후에는 다음과 같은 단계를 완료해야 합니다.  
@@ -191,7 +196,7 @@ caps.handback.revision: 22
   
 -   데이터베이스 장애 조치(Failover)가 완료되고 보고서 서버 서비스를 다시 시작한 후 SQL Server 에이전트 작업이 자동으로 다시 만들어집니다. SQL 에이전트 작업을 다시 만들 때까지는 SQL Server 에이전트 작업과 연관된 모든 백그라운드 실행이 처리되지 않습니다. 여기에는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구독, 예약 및 스냅샷이 포함됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [고가용성 재해 복구를 위한 SQL Server Native Client 지원](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   
@@ -200,3 +205,5 @@ caps.handback.revision: 22
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+
+

@@ -1,40 +1,34 @@
 ---
 title: "데이터베이스 미러링 운영 모드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터베이스 미러링 [SQL Server], 운영 모드"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- database mirroring [SQL Server], operating modes
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 caps.latest.revision: 22
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 4427cd045642ed4f59e1c9fdb0ab1a5916841bf0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 운영 모드
+# <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
   이 항목에서는 데이터베이스 미러링 세션의 동기 운영 모드 및 비동기 운영 모드에 대해 설명합니다.  
   
 > [!NOTE]  
 >  데이터베이스 미러링에 대한 소개는 [데이터베이스 미러링&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)을 참조하세요.  
   
- **항목 내용**  
-  
--   [용어 및 정의](#TermsAndDefinitions)  
-  
--   [비동기 데이터베이스 미러링(성능 우선 모드)](#async)  
-  
--   [동기 데이터베이스 미러링(보호 우선 모드)](#Sync)  
-  
--   [Transact-SQL 설정 및 데이터베이스 미러링 작업 모드](#TsqlSettingsAndOpModes)  
-  
--   [관련 태스크](#RelatedTasks)  
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
  이 섹션에서는 이 항목의 몇 가지 중요 용어를 소개합니다.  
@@ -51,11 +45,11 @@ caps.handback.revision: 21
  미러링 모니터  
  보호 우선 모드에서만 사용할 수 있으며, 자동 장애 조치(Failover)가 시작되었는지 여부를 미러 서버에서 인식할 수 있도록 하는 SQL Server의 선택적 인스턴스입니다. 미러링 모니터 서버는 두 장애 조치(Failover) 파트너와는 달리 데이터베이스를 제공하지 않습니다. 미러링 모니터 서버는 자동 장애 조치(Failover)를 지원하는 역할만 수행합니다.  
   
-## 비동기 데이터베이스 미러링(성능 우선 모드)  
+## <a name="asynchronous-database-mirroring-high-performance-mode"></a>비동기 데이터베이스 미러링(성능 우선 모드)  
  이 섹션에서는 비동기 데이터베이스 미러링의 작동 방식 및 성능 우선 모드를 사용하기에 적합한 경우에 대해 설명하고 주 서버 실패 시 어떻게 반응하는지에 대해 설명합니다.  
   
 > [!NOTE]  
->  대부분의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 동기 데이터베이스 미러링("Safety Full만")만 지원합니다. 데이터베이스 미러링을 모두 지원하는 버전에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)의 "고가용성(Always On)"을 참조하세요.  
+>  대부분의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전에서는 동기 데이터베이스 미러링("Safety Full만")만 지원합니다. 데이터베이스 미러링을 완전히 지원하는 버전에 대한 내용은 [SQL Server 2016의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)의 "고가용성(Always On)"을 참조하세요.
   
  트랜잭션 보안을 OFF로 설정하면 데이터베이스 미러링 세션은 비동기적으로 작동합니다. 비동기 작업은 성능 우선 모드의 운영 모드만 지원합니다. 이 모드는 성능을 강화하지만 고가용성은 저하됩니다. 성능 우선 모드에서는 주 서버와 미러 서버만 사용됩니다. 미러 서버의 문제점은 주 서버에 영향을 주지 않습니다. 주 서버가 손실되면 미러 데이터베이스는 DISCONNECTED로 표시되지만 웜 대기로 사용할 수 있습니다.  
   
@@ -63,7 +57,7 @@ caps.handback.revision: 21
   
  다음 그림에서는 성능 우선 모드를 사용한 세션 구성을 보여 줍니다.  
   
- ![파트너만 있는 세션 구성](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "파트너만 있는 세션 구성")  
+ ![파트너 전용 세션 구성](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "파트너 전용 세션 구성")  
   
  성능 우선 모드에서 주 서버가 미러 서버로 트랜잭션 로그를 보내면 미러 서버의 확인을 기다리지 않고 즉시 클라이언트로 확인 메시지를 보냅니다. 트랜잭션은 미러 서버에서 로그를 디스크에 쓸 때까지 기다리지 않고 커밋됩니다. 비동기 작업을 통해 주 서버는 최소 트랜잭션 대기 시간을 사용하여 실행됩니다.  
   
@@ -156,7 +150,7 @@ caps.handback.revision: 21
   
  ![미러링 모니터 서버 없이 통신하는 파트너](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "미러링 모니터 서버 없이 통신하는 파트너")  
   
- 파트너가 연결되어 있으며 데이터베이스가 이미 동기화된 경우 수동 장애 조치가 지원됩니다. 미러 서버 인스턴스의 작동이 중단되더라도 주 서버 인스턴스는 아무런 영향을 받지 않으며 노출된 상태(데이터를 미러링하지 않음)로 실행됩니다. 주 서버가 손상되면 미러가 일시 중단되지만 서비스를 미러 서버로 강제 수행할 수 있으며 이 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)을 참조하세요.  
+ 파트너가 연결되어 있으며 데이터베이스가 이미 동기화된 경우 수동 장애 조치가 지원됩니다. 미러 서버 인스턴스의 작동이 중단되더라도 주 서버 인스턴스는 아무런 영향을 받지 않으며 노출된 상태(데이터를 미러링하지 않음)로 실행됩니다. 주 서버가 손상되면 미러가 일시 중단되지만 서비스를 미러 서버로 강제 수행할 수 있으며 이 경우 데이터가 손실될 수 있습니다. 자세한 내용은 [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)를 다운로드하세요.  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> 자동 장애 조치(Failover)를 지원하는 보호 우선 모드  
  자동 장애 조치를 사용하면 서버 한 대가 손실되어도 데이터베이스가 여전히 작동되므로 고가용성이 제공됩니다. 자동 장애 조치를 사용하려면 이상적으로 세 번째 컴퓨터에 있는 세 번째 서버 인스턴스인 *미러링 모니터 서버*가 세션에 필요합니다. 다음 그림에서는 자동 장애 조치를 지원하는 보호 우선 모드 세션의 구성을 보여 줍니다.  
@@ -190,7 +184,7 @@ caps.handback.revision: 21
  이 섹션에서는 ALTER DATABASE 설정과 미러된 데이터베이스 및 미러링 모니터 서버의 상태를 중심으로 데이터베이스 미러링 세션에 대해 설명합니다. 이 섹션은 [!INCLUDE[tsql](../../includes/tsql-md.md)]보다는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]을 사용하여 데이터베이스 미러링을 관리하는 사용자를 위한 것입니다.  
   
 > [!TIP]  
->  [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 대신 개체 탐색기에서 **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용하여 세션의 운영 모드를 제어할 수 있습니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)을 참조하세요.  
+>  [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하는 대신 개체 탐색기에서 **데이터베이스 속성** 대화 상자의 **미러링** 페이지를 사용하여 세션의 운영 모드를 제어할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)을 참조하세요.  
   
  **섹션 내용**  
   
@@ -205,11 +199,11 @@ caps.handback.revision: 21
   
  **섹션 내용**  
   
--   [트랜잭션 보안](#TxnSafety)  
+-   [Transaction Safety](#TxnSafety)  
   
 -   [미러링 모니터 상태](#WitnessState)  
   
-####  <a name="TxnSafety"></a> 트랜잭션 보안  
+####  <a name="TxnSafety"></a> Transaction Safety  
  트랜잭션 보안은 데이터베이스 미러링 세션이 동기적으로 작동하는지 아니면 비동기적으로 작동하는지를 결정하는 미러링별 데이터베이스 속성입니다. 보안 수준은 FULL 및 OFF의 두 가지입니다.  
   
 -   SAFETY FULL  
@@ -222,7 +216,7 @@ caps.handback.revision: 21
   
 -   SAFETY OFF  
   
-     트랜잭션 보안 기능을 끄면 세션이 비동기적으로 성능 우선 모드에서 작동합니다. SAFETY 속성을 OFF로 설정하면 WITNESS 속성도 OFF(기본값)로 설정해야 합니다. 성능 우선 모드에서 미러링 모니터의 영향에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [미러링 모니터 상태](#WitnessState)를 참조하세요. 트랜잭션 보안이 해제된 상태에서 실행하는 방법은 이 항목의 앞부분에 나오는 [비동기 데이터베이스 미러링(성능 우선 모드)](#async)을 참조하세요.  
+     트랜잭션 보안 기능을 끄면 세션이 비동기적으로 성능 우선 모드에서 작동합니다. SAFETY 속성을 OFF로 설정하면 WITNESS 속성도 OFF(기본값)로 설정해야 합니다. 성능 우선 모드에서 미러링 모니터의 영향에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 [미러링 모니터 상태](#WitnessState)를 참조하세요. 트랜잭션 보안이 해제된 상태에서 실행하는 방법은 이 항목의 앞부분에 나오는 [비동기 데이터베이스 미러링(성능 우선 모드)](#asynchronous-database-mirroring-high-performance-mode)을 참조하세요.  
   
  각 파트너의 데이터베이스 트랜잭션 보안 설정은 **sys.database_mirroring** 카탈로그 뷰의 **mirroring_safety_level** 및 **mirroring_safety_level_desc** 열에 기록됩니다. 자세한 내용은 [sys.database_mirroring&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md)을 참조하세요.  
   
@@ -246,7 +240,7 @@ caps.handback.revision: 21
 |운영 모드|트랜잭션 보안|미러링 모니터 상태|  
 |--------------------|------------------------|-------------------|  
 |성능 우선 모드|OFF|NULL(미러링 모니터 없음)**|  
-|자동 장애 조치를 지원하지 않는 보호 우선 모드|FULL|NULL(미러링 모니터 없음)|  
+|자동 장애 조치(Failover)를 지원하지 않는 보호 우선 모드|FULL|NULL(미러링 모니터 없음)|  
 |자동 장애 조치를 지원하는 보호 우선 모드*|FULL|CONNECTED|  
   
  *미러링 모니터 서버의 연결이 끊어질 경우 미러링 모니터 서버 인스턴스를 사용할 수 있을 때까지 WITNESS 속성을 OFF로 설정하는 것이 좋습니다.  
@@ -284,7 +278,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [데이터베이스 미러링 모니터 서버 추가 또는 바꾸기&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish database mirroring session - windows authentication.md)  
+-   [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
 -   [Windows 인증을 사용하여 데이터베이스 미러링 모니터 추가&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
@@ -292,7 +286,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [데이터베이스 미러링 세션에서 트랜잭션 보안 변경&#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

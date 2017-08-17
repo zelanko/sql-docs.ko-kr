@@ -1,26 +1,31 @@
 ---
 title: "SQL Server 모니터 개요 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.sqlservermonitor.main.f1"
-helpviewer_keywords: 
-  - "SQL Server 모니터 [SQL Server]"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.sqlservermonitor.main.f1
+helpviewer_keywords:
+- SQL Server Monitor [SQL Server]
 ms.assetid: 048ae16d-31c3-489a-9f1e-1400a3bacd39
 caps.latest.revision: 22
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eab6968a0727d4c04983dcc1129e3a49f9c23ca4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# SQL Server 모니터 개요
+# <a name="sql-server-monitor-overview"></a>SQL Server 모니터 개요
   SQL Server 모니터는 모니터링 기능을 수행하지 않지만 이 기능을 수행하는 모듈을 호스팅합니다. SQL Server 모니터 모듈에는 복제 모니터와 데이터베이스 미러링 모니터가 있습니다.  
   
  이러한 모듈 중 하나를 사용하려면 **이동** 메뉴에서 해당 모듈을 선택합니다. 현재 선택한 모듈에서 탐색 창과 세부 정보 창의 내용, 세부 정보 창의 사용자 상호 작용, 내용과 상태에 대한 쿼리 등을 소유합니다.  
@@ -28,7 +33,7 @@ caps.handback.revision: 22
 > [!NOTE]  
 >  이러한 모니터에 대한 자세한 내용은 [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication-overview.md) 및 [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)을 참조하세요.  
   
-## 사용 권한  
+## <a name="permissions"></a>사용 권한  
   
 -   복제 모니터  
   
@@ -36,9 +41,9 @@ caps.handback.revision: 22
   
 -   데이터베이스 미러링 모니터  
   
-     데이터베이스 미러링을 모니터링하려면 서버 인스턴스에서 **sysadmin** 고정 서버 역할 또는 **dbm_monitor** 고정 데이터베이스 역할의 멤버여야 합니다. 파트너 서버 인스턴스 중 하나에서만 **sysadmin** 또는 **dbm_monitor**의 멤버인 경우 모니터는 해당 파트너에만 연결될 수 있습니다. 즉, 모니터는 다른 파트너에서 정보를 검색할 수 없습니다. 자세한 내용은 [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)을 참조하세요.  
+     데이터베이스 미러링을 모니터링하려면 서버 인스턴스에서 **sysadmin** 고정 서버 역할 또는 **dbm_monitor** 고정 데이터베이스 역할의 멤버여야 합니다. 파트너 서버 인스턴스 중 하나에서만 **sysadmin** 또는 **dbm_monitor** 의 멤버인 경우 모니터는 해당 파트너에만 연결될 수 있습니다. 즉, 모니터는 다른 파트너에서 정보를 검색할 수 없습니다. 자세한 내용은 [Database Mirroring Monitor Overview](../../database-engine/database-mirroring/database-mirroring-monitor-overview.md)을 참조하세요.  
   
-## 메뉴 옵션  
+## <a name="menu-options"></a>메뉴 옵션  
  SQL Server 모니터에는 SQL Server 모니터와 관련된 명령을 포함하는 메뉴가 있습니다. 또한 이 메뉴에는 선택한 모듈의 명령이 포함될 수 있습니다.  
   
  SQL Server 모니터와 관련된 메뉴 옵션은 다음과 같습니다.  
@@ -60,7 +65,7 @@ caps.handback.revision: 22
   
 -   [데이터베이스 미러링 모니터 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 모니터링&#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

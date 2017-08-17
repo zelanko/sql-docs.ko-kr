@@ -1,29 +1,34 @@
 ---
 title: "가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "가용성 복제본에 대한 연결 액세스"
-  - "가용성 그룹 [SQL Server], 읽기 가능한 보조 복제본"
-  - "활성 보조 복제본 [SQL Server], 읽기 전용 액세스"
-  - "가용성 그룹 [SQL Server], 읽기 전용 라우팅"
-  - "가용성 그룹 [SQL Server], 클라이언트 연결"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- connection access to availability replicas
+- Availability Groups [SQL Server], readable secondary replicas
+- active secondary replicas [SQL Server], read-only access to
+- Availability Groups [SQL Server], read-only routing
+- Availability Groups [SQL Server], client connectivity
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 caps.latest.revision: 35
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: ad04708d680bc716c971fa5e24c304b5516d56a8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
-  기본적으로 주 복제본에 대한 읽기/쓰기 및 읽기 전용 액세스가 모두 허용되며 Always On 가용성 그룹의 보조 복제본에 대한 연결은 허용되지 않습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 Always On 가용성 그룹의 가용성 복제본에 대한 연결 액세스를 구성하는 방법을 설명합니다.  
+# <a name="configure-read-only-access-on-an-availability-replica-sql-server"></a>가용성 복제본에 대한 읽기 전용 액세스 구성(SQL Server)
+  기본적으로 주 복제본에 대한 읽기/쓰기 및 읽기 전용 액세스가 모두 허용되며 Always On 가용성 그룹의 보조 복제본에 대한 연결은 허용되지 않습니다. 이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]또는 PowerShell을 사용하여 Always On 가용성 그룹의 가용성 복제본에 대한 연결 액세스를 구성하는 방법을 설명합니다.  
   
  보조 복제본에 대해 읽기 전용 액세스를 사용하도록 설정할 경우의 영향에 대한 자세한 내용과 연결 액세스 소개는 [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) 및 [활성 보조: 읽기 가능한 보조 복제본&#40;Always ON 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)을 참조하세요.  
   
@@ -41,7 +46,7 @@ caps.handback.revision: 35
   
      [PowerShell](#PowerShellProcedure)  
   
--   **후속 작업:** [가용성 복제본에 대한 읽기 전용 액세스를 구성한 후의 작업](#FollowUp)  
+-   **후속 작업:**  [가용성 복제본에 대한 읽기 전용 액세스를 구성한 후의 작업](#FollowUp)  
   
 -   [관련 태스크](#RelatedTasks)  
   
@@ -110,7 +115,7 @@ caps.handback.revision: 35
   
          각 항목이 나타내는 의미는 다음과 같습니다.  
   
-         NO  
+         아니요  
          이 복제본의 보조 데이터베이스에 대한 직접 연결이 허용되지 않습니다. 즉, 읽기 액세스가 가능하지 않습니다. 이 값은 기본 설정입니다.  
   
          READ_ONLY  
@@ -126,12 +131,12 @@ caps.handback.revision: 35
      각 항목이 나타내는 의미는 다음과 같습니다.  
   
      READ_WRITE  
-     응용 프로그램 의도 연결 속성이 **ReadOnly**로 설정된 연결은 허용되지 않습니다.  응용 프로그램 의도 속성이 **ReadWrite** 로 설정되었거나 응용 프로그램 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 응용 프로그램 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
+     응용 프로그램 의도 연결 속성이 **ReadOnly** 로 설정된 연결은 허용되지 않습니다.  응용 프로그램 의도 속성이 **ReadWrite** 로 설정되었거나 응용 프로그램 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 응용 프로그램 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
   
      ALL  
      주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
-###  <a name="TsqlExample"></a> 예(Transact-SQL)  
+###  <a name="TsqlExample"></a> 예제(Transact-SQL)  
  다음 예제에서는 *AG2*라는 가용성 그룹에 보조 복제본을 추가합니다. 독립 실행형 서버 인스턴스인 *COMPUTER03\HADR_INSTANCE*가 새 가용성 복제본을 호스트하도록 지정됩니다. 이 복제본은 주 역할에 대해 읽기/쓰기 연결만 허용하고 보조 역할에 대해 읽기 전용 연결만 허용하도록 구성되어 있습니다.  
   
 ```  
@@ -156,7 +161,7 @@ GO
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 **New-SqlAvailabilityReplica** cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 **Set-SqlAvailabilityReplica** cmdlet을 사용합니다. 관련 매개 변수는 다음과 같습니다.  
   
-    -   보조 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInSecondaryRole***secondary_role_keyword* 매개 변수를 지정합니다. 여기서 *secondary_role_keyword*에는 다음 값 중 하나를 사용합니다.  
+    -   보조 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInSecondaryRole***secondary_role_keyword* 매개 변수를 지정합니다. 여기서 *secondary_role_keyword* 에는 다음 값 중 하나를 사용합니다.  
   
          **AllowNoConnections**  
          보조 복제본의 데이터베이스에 대한 직접 연결이 허용되지 않으며 읽기 액세스를 위해 데이터베이스에 연결할 수 없습니다. 이 값은 기본 설정입니다.  
@@ -167,7 +172,7 @@ GO
          **AllowAllConnections**  
          보조 복제본의 데이터베이스에 대해 읽기 전용 액세스를 위한 모든 연결이 허용됩니다.  
   
-    -   주 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInPrimaryRole***primary_role_keyword*를 지정합니다. 여기서 *primary_role_keyword*에는 다음 값 중 하나를 사용합니다.  
+    -   주 역할에 대한 연결 액세스를 구성하려면 **ConnectionModeInPrimaryRole***primary_role_keyword*를 지정합니다. 여기서 *primary_role_keyword* 에는 다음 값 중 하나를 사용합니다.  
   
          **AllowReadWriteConnections**  
          응용 프로그램 의도 연결 속성이 ReadOnly로 설정된 연결은 허용되지 않습니다. 응용 프로그램 의도 속성이 ReadWrite로 설정되었거나 응용 프로그램 의도 연결 속성이 설정되지 않은 경우에는 연결이 허용됩니다. 응용 프로그램 의도 연결 속성에 대한 자세한 내용은 [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하십시오.  
@@ -176,7 +181,7 @@ GO
          주 복제본의 데이터베이스에 대한 모든 연결이 허용됩니다. 이 값은 기본 설정입니다.  
   
     > [!NOTE]  
-    >  cmdlet의 구문을 보려면 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell 환경에서 **Get-Help** cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 **PowerShell 환경에서** Get-Help [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)을 참조하세요.  
   
  **SQL Server PowerShell 공급자를 설정하고 사용하려면**  
   
@@ -204,8 +209,8 @@ Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
   
     ||사전 요구 사항|링크|  
     |-|------------------|----------|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
-    |![Checkbox](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
+    |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 수신기가 있는지 확인합니다.|[가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)|  
+    |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|가용성 그룹에 대한 읽기 전용 라우팅을 구성합니다.|[가용성 그룹에 대한 읽기 전용 라우팅 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)|  
   
  **장애 조치(Failover) 후 트리거 및 작업에 영향을 줄 수 있는 요소**  
   
@@ -245,9 +250,10 @@ DATABASEPROPERTYEX([db name],’Updatability’) = N’READ_ONLY’
   
 -   [Always On: 읽기용 보조 복제본 및 데이터 대기 시간](http://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/Always%20On.aspx)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [활성 보조: 읽기 가능한 보조 복제본&#40;Always ON 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)  
   
   
+

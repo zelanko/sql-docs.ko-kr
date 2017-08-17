@@ -1,35 +1,40 @@
 ---
 title: "종료 메시지 브로드캐스트(명령 프롬프트) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server, 중지"
-  - "명명된 인스턴스 [SQL Server], 종료 메시지 브로드캐스트"
-  - "종료 메시지 브로드캐스트"
-  - "종료 메시지 브로드캐스트"
-  - "명령 프롬프트 [SQL Server], 종료 메시지 브로드캐스트"
-  - "기본 인스턴스 [SQL Server], 종료 메시지 브로드캐스트"
-  - "SQL Server 중지"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server, stopping
+- named instances [SQL Server], broadcasting shutdown messages
+- shutdown message broadcast
+- broadcasting shutdown message
+- command prompt [SQL Server], broadcasting shutdown messages
+- default instances [SQL Server], broadcasting shutdown messages
+- stopping SQL Server
 ms.assetid: 9f20ccd5-d952-431d-ba12-339911af9430
 caps.latest.revision: 28
-author: "BYHAM"
-ms.author: "rickbyh"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 796fc61fe4080f5202fded550999951a27e43639
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 종료 메시지 브로드캐스트(명령 프롬프트)
+# <a name="broadcast-a-shutdown-message-command-prompt"></a>종료 메시지 브로드캐스트(명령 프롬프트)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 **net send** 명령을 사용하여 종료 메시지를 브로드캐스팅하는 방법에 대해 설명합니다. 사용자가 제시간에 태스크를 완료할 수 있도록 메시지에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 중지 시간을 포함시키세요.  
   
 ##  <a name="SSMSProcedure"></a>  
   
-#### 종료 메시지를 브로드캐스팅하려면  
+#### <a name="to-broadcast-a-shutdown-message"></a>종료 메시지를 브로드캐스팅하려면  
   
 1.  명령 프롬프트에서 다음을 입력합니다.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 28
   
  네트워크에서는 전자 메일이나 전화로 사용자에게 연락하는 것이 더 적절합니다. 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 사용자를 확인하려면 작업 모니터를 사용합니다. 작업 모니터에 대한 자세한 내용은 [작업 모니터](../../relational-databases/performance-monitor/activity-monitor.md) 및 [작업 모니터 열기&#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)를 참조하세요.  
   
-## 참고 항목  
- [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start, stop, pause, resume, restart sql server services.md)  
+## <a name="see-also"></a>관련 항목:  
+ [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  
   
   

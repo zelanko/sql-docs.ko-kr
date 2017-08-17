@@ -1,27 +1,32 @@
 ---
 title: "로그 전달 구성에 보조 데이터베이스 추가(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보조 데이터베이스 추가"
-  - "보조 데이터베이스 [SQL Server], 로그 전달에서"
-  - "보조 데이터 파일 [SQL Server], 추가"
-  - "로그 전달 [SQL Server], 보조 데이터베이스"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding secondary databases
+- secondary databases [SQL Server], in log shipping
+- secondary data files [SQL Server], adding
+- log shipping [SQL Server], secondary databases
 ms.assetid: b02eba13-f8e6-4684-b7e4-75ea038ea473
 caps.latest.revision: 20
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 20
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: d1f64d49c5baf05dc1c7f18c4c0c568a94e424ae
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 로그 전달 구성에 보조 데이터베이스 추가(SQL Server)
+# <a name="add-a-secondary-database-to-a-log-shipping-configuration-sql-server"></a>로그 전달 구성에 보조 데이터베이스 추가(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 기존의 로그 전달 구성에 보조 데이터베이스를 추가하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
@@ -47,7 +52,7 @@ caps.handback.revision: 20
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
   
-#### 로그 전달 보조 데이터베이스를 추가하려면  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>로그 전달 보조 데이터베이스를 추가하려면  
   
 1.  로그 전달 구성에서 주 데이터베이스로 사용하려는 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
@@ -81,17 +86,17 @@ caps.handback.revision: 20
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-#### 로그 전달 보조 데이터베이스를 추가하려면  
+#### <a name="to-add-a-log-shipping-secondary-database"></a>로그 전달 보조 데이터베이스를 추가하려면  
   
-1.  보조 서버에서 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md)를 실행하여 주 서버와 데이터베이스에 대한 세부 정보를 제공합니다. 이 저장 프로시저는 보조 ID와 복사 및 복원 작업 ID를 반환합니다.  
+1.  보조 서버에서 [sp_add_log_shipping_secondary_primary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-primary-transact-sql.md) 를 실행하여 주 서버와 데이터베이스에 대한 세부 정보를 제공합니다. 이 저장 프로시저는 보조 ID와 복사 및 복원 작업 ID를 반환합니다.  
   
-2.  보조 서버에서 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)을 실행하여 복사 및 복원 작업의 일정을 설정합니다.  
+2.  보조 서버에서 [sp_add_jobschedule](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md) 을 실행하여 복사 및 복원 작업의 일정을 설정합니다.  
   
-3.  보조 서버에서 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md)를 실행하여 보조 데이터베이스를 추가합니다.  
+3.  보조 서버에서 [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md) 를 실행하여 보조 데이터베이스를 추가합니다.  
   
-4.  주 서버에서 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md)를 실행하여 새 보조 데이터베이스에 대한 필요 정보를 주 서버에 추가합니다.  
+4.  주 서버에서 [sp_add_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-secondary-transact-sql.md) 를 실행하여 새 보조 데이터베이스에 대한 필요 정보를 주 서버에 추가합니다.  
   
-5.  보조 서버에서 복사 및 복원 작업을 활성화합니다. 자세한 내용은 [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)을 참조하세요.  
+5.  보조 서버에서 복사 및 복원 작업을 활성화합니다. 자세한 내용은 [Disable or Enable a Job](http://msdn.microsoft.com/library/5041261f-0c32-4d4a-8bee-59a6c16200dd)을 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
@@ -107,9 +112,9 @@ caps.handback.revision: 20
   
 -   [로그 전달 모니터링&#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
--   [로그 전달 보조 데이터베이스로 장애 조치(failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
+-   [로그 전달 보조 데이터베이스로 장애 조치(Failover)&#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [로그 전달 테이블 및 저장 프로시저](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

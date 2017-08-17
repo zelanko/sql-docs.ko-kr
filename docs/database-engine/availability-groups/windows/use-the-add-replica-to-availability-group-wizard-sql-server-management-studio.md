@@ -1,48 +1,45 @@
 ---
 title: "가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.swb.addreplicawizard.f1"
-helpviewer_keywords: 
-  - "가용성 그룹 [SQL Server], 가용성 복제본"
-  - "가용성 그룹 [SQL Server], 마법사"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.addreplicawizard.f1
+helpviewer_keywords:
+- Availability Groups [SQL Server], availability replicas
+- Availability Groups [SQL Server], wizards
 ms.assetid: 60d962b6-2af4-4394-9190-61939a102bc0
 caps.latest.revision: 24
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 1dfe29d1a9284d0efe18aa58431cf3797d5b83fe
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio)
-  복제본을 가용성 그룹에 추가 마법사를 사용하여 기존 Always On 가용성 그룹에 새 보조 복제본을 쉽게 추가할 수 있습니다.  
+# <a name="use-the-add-replica-to-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹에 복제본 추가 마법사 사용(SQL Server Management Studio)
+  **가용성 그룹에 복제본 추가 마법사**를 사용하여 기존 Always On 가용성 그룹에 새 보조 복제본을 추가할 수 있습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 PowerShell을 사용하여 가용성 그룹에 보조 복제본을 추가하는 방법은 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
-  
--   **시작하기 전에:**  
-  
-     [필수 구성 요소](#Prerequisites)  
-  
-     [보안](#Security)  
-  
--   **복제본을 추가하려면:** [복제본을 가용성 그룹에 추가 마법사(SQL Server Management Studio)](#SSMSProcedure) 사용  
-  
+    
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
- 가용성 그룹에 가용성 복제본을 추가한 적이 없는 경우 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)의 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조하세요.  
+ 가용성 그룹에 가용성 복제본을 추가한 적이 없는 경우 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)의 "서버 인스턴스" 섹션과 "가용성 그룹 및 복제본" 섹션을 참조하세요.  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
--   보조 복제본을 추가하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 호스트 인스턴스가 기존 복제본과 동일한 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터 내의 다른 클러스터 노드에 있는지 확인합니다. 또한 이 서버 인스턴스가 다른 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사전 요구 사항과 일치하는지도 확인합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)를 참조하세요.  
+-   보조 복제본을 추가하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 호스트 인스턴스가 기존 복제본과 동일한 WSFC(Windows Server 장애 조치 클러스터)에 있지만 다른 클러스터 노드에 있는지 확인합니다. 또한 이 서버 인스턴스가 다른 모든 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 사전 요구 사항과 일치하는지도 확인합니다. 자세한 내용은 [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)를 참조하세요.  
   
 -   가용성 복제본을 호스팅하도록 선택한 서버 인스턴스가 도메인 사용자 계정으로 실행되고 있고 아직 데이터베이스 미러링 끝점을 가지고 있지 않은 경우, 마법사가 끝점을 만들고 서버 인스턴스 서비스 계정에 CONNECT 권한을 부여할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스가 로컬 시스템, 로컬 서비스 또는 네트워크 서비스와 같은 기본 제공 계정이나 비도메인 계정으로 실행 중인 경우에는 사용자가 끝점 인증을 위한 인증서를 사용해야 하며 마법사를 통해 서버 인스턴스에 대한 데이터베이스 미러링 끝점을 만들 수는 없습니다. 이 경우 가용성 그룹에 복제본 추가 마법사를 시작하기 전에 데이터 미러링 끝점을 수동으로 만드는 것이 좋습니다.  
   
@@ -58,9 +55,9 @@ caps.handback.revision: 24
   
     -   보조 복제본을 호스팅하는 서버 인스턴스에 주 데이터베이스 이름이 없을 수 있습니다. 즉, 새 보조 데이터베이스가 아직 없을 수 있습니다.  
   
-    -   마법사에서 백업을 만들고 액세스하려면 네트워크 공유를 지정해야 합니다. 주 복제본의 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 시작하는 데 사용되는 계정은 네트워크 공유에 대한 읽기 및 쓰기 파일 시스템 권한이 있어야 합니다. 보조 복제본에 대한 계정은 네트워크 공유에 대한 읽기 권한이 있어야 합니다.  
+    -   마법사에서 백업을 만들고 액세스하려면 네트워크 공유를 지정해야 합니다. 주 복제본의 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 을 시작하는 데 사용되는 계정은 네트워크 공유에 대한 읽기 및 쓰기 파일 시스템 권한이 있어야 합니다. 보조 복제본에 대한 계정은 네트워크 공유에 대한 읽기 권한이 있어야 합니다.  
   
-     마법사를 사용하여 전체 초기 데이터 동기화를 수행할 수 없는 경우에는 보조 데이터베이스를 수동으로 준비해야 합니다. 마법사를 실행하기 전이나 후에 이 작업을 수행할 수 있습니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)를 참조하세요.  
+     마법사를 사용하여 전체 초기 데이터 동기화를 수행할 수 없는 경우에는 보조 데이터베이스를 수동으로 준비해야 합니다. 마법사를 실행하기 전이나 후에 이 작업을 수행할 수 있습니다. 자세한 내용은 [가용성 그룹에 대한 보조 데이터베이스 수동 준비&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)에서 AlwaysOn 가용성 그룹을 만들고 구성하는 방법을 설명합니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -78,7 +75,7 @@ caps.handback.revision: 24
   
 3.  보조 복제본을 추가할 가용성 그룹을 마우스 오른쪽 단추로 클릭하고 **복제본 추가** 명령을 선택합니다. 그러면 복제본을 가용성 그룹에 추가 마법사가 시작됩니다.  
   
-4.  **기존 보조 복제본에 연결** 페이지에서 가용성 그룹의 모든 보조 복제본에 연결합니다. 자세한 내용은 [기존 보조 복제본 페이지로 연결&#40;복제본 추가 마법사: 데이터베이스 추가 마법사&#41;](../../../database-engine/availability-groups/windows/connect to existing secondary replicas page.md)을 참조하세요.  
+4.  **기존 보조 복제본에 연결** 페이지에서 가용성 그룹의 모든 보조 복제본에 연결합니다. 자세한 내용은 [기존 보조 복제본 페이지로 연결&#40;복제본 추가 마법사: 데이터베이스 추가 마법사&#41;](../../../database-engine/availability-groups/windows/connect-to-existing-secondary-replicas-page.md)을 참조하세요.  
   
 5.  **복제본 선택** 페이지에서 가용성 그룹에 대해 하나 이상의 새 보조 복제본을 지정하고 구성합니다. 이 페이지에는 세 개의 탭이 있습니다. 다음 표에서는 이러한 탭을 보여 줍니다. 자세한 내용은 [복제본 페이지 지정&#40;새 가용성 그룹 마법사: 복제본 추가 마법사&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)을 참조하세요.  
   
@@ -111,7 +108,7 @@ caps.handback.revision: 24
   
          주 데이터베이스의 로그 백업과 사용자 데이터베이스를 사용하려는 경우 이 옵션을 선택합니다. 자세한 내용은 [Always On 보조 데이터베이스에서 데이터 이동 시작&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/start-data-movement-on-an-always-on-secondary-database-sql-server.md)을 참조하세요.  
   
-8.  **유효성 검사** 페이지에서는 이 마법사에서 지정한 값이 가용성 그룹에 복제본 추가 마법사의 요구 사항을 충족하는지 여부를 확인합니다. 변경하려면 **이전** 을 클릭하여 이전 마법사 페이지로 돌아가서 하나 이상의 값을 변경합니다. **다음**을 클릭하여 **유효성 검사** 페이지로 돌아가서 **유효성 검사 다시 실행**을 클릭합니다.  
+8.  **유효성 검사** 페이지에서는 이 마법사에서 지정한 값이 가용성 그룹에 복제본 추가 마법사의 요구 사항을 충족하는지 여부를 확인합니다. 변경하려면 **이전** 을 클릭하여 이전 마법사 페이지로 돌아가서 하나 이상의 값을 변경합니다. **다음** 을 클릭하여 **유효성 검사** 페이지로 돌아가서 **유효성 검사 다시 실행**을 클릭합니다.  
   
 9. **요약** 페이지에서 새 가용성 그룹에 대한 선택 사항을 확인합니다. 변경하려면 **이전** 을 클릭하여 관련 페이지로 돌아갑니다. 변경 후에는 **다음** 을 클릭하여 **요약** 페이지로 돌아갑니다.  
   
@@ -124,15 +121,16 @@ caps.handback.revision: 24
      마법사가 완료되면 **닫기** 를 클릭하여 종료합니다.  
   
 > [!IMPORTANT]  
->  복제본을 추가한 후에 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)에서 "후속 작업: 복제본을 추가한 후" 섹션을 참조하세요.  
+>  복제본을 추가한 후에 [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)를 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
 -   [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs, restrictions, recommendations - always on availability.md)   
+ [Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [가용성 그룹에 보조 복제본 추가&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   
+

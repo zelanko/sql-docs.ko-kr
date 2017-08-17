@@ -1,33 +1,38 @@
 ---
 title: "쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼럼 [SQL Server], 데이터베이스 미러링"
-  - "데이터베이스 미러링에서 노출 실행 [SQL Server]"
-  - "미러링 모니터 서버에서 파트너로의 쿼럼 [SQL Server]"
-  - "파트너 [SQL Server], 파트너 간 쿼럼"
-  - "미러링 모니터 [SQL Server], 쿼럼"
-  - "쿼럼 있음 [SQL Server]"
-  - "쿼럼 [SQL Server]"
-  - "미러 데이터베이스 [SQL Server]"
-  - "전체 쿼럼 [SQL Server]"
-  - "가용성 우선 모드 [SQL Server]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- quorum [SQL Server], database mirroring
+- running exposed in database mirroring [SQL Server]
+- witness-to-partner quorum [SQL Server]
+- partners [SQL Server], partner-to-partner quorum
+- witness [SQL Server], quorum
+- have quorum [SQL Server]
+- quorum [SQL Server]
+- mirror database [SQL Server]
+- full quorum [SQL Server]
+- high-availability mode [SQL Server]
 ms.assetid: a62d9dd7-3667-4751-a294-a61fc9caae7c
 caps.latest.revision: 36
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 36
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 423b441557ac6d255414889deaaf50e7a510707d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링)
+# <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>쿼럼: 미러링 모니터 서버가 데이터베이스 가용성에 미치는 영향(데이터베이스 미러링)
   데이터베이스 미러링 세션에 대해 미러링 모니터 서버를 설정할 때마다 *쿼럼* 이 필요합니다. 쿼럼은 데이터베이스 미러링 세션에서 둘 이상의 서버 인스턴스가 서로 연결될 때 존재하는 관계입니다. 일반적으로 쿼럼은 3개의 상호 연결된 서버 인스턴스를 포함합니다. 미러링 모니터 서버가 설정된 경우 쿼럼이 있어야만 데이터베이스를 사용할 수 있습니다. 쿼럼은 자동 장애 조치(Failover)를 지원하는 보안 우선 모드를 위해 디자인되었으므로 한 번에 하나의 파트너만 데이터베이스를 소유할 수 있습니다.  
   
  특정 서버 인스턴스의 연결이 미러링 세션에서 끊어지면 해당 인스턴스는 쿼럼을 잃습니다. 연결된 서버 인스턴스가 없는 경우 세션이 쿼럼을 잃고 데이터베이스를 사용할 수 없게 됩니다. 다음 3가지 유형의 쿼럼이 지원됩니다.  
@@ -40,7 +45,7 @@ caps.handback.revision: 36
   
  다음 그림에서는 이러한 유형의 쿼럼을 보여 줍니다.  
   
- ![쿼럼: 전체, 미러링 모니터 서버와 파트너, 두 파트너](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "쿼럼: 전체, 미러링 모니터 서버와 파트너, 두 파트너")  
+ ![쿼럼: 전체, 미러링 모니터 서버와 파트너; 두 파트너 모두](../../database-engine/database-mirroring/media/dbm-failovautoquorum.gif "쿼럼: 전체, 미러링 모니터 서버와 파트너; 두 파트너 모두")  
   
  현재 주 서버에 쿼럼이 있으면 데이터베이스 소유자가 수동 장애 조치를 수행하지 않는 한 주 서버가 주 서버의 역할을 소유하고 데이터베이스를 계속 제공합니다. 주 서버가 쿼럼을 잃으면 데이터베이스 제공을 중지합니다. 자동 장애 조치는 주 데이터베이스가 쿼럼을 잃어 더 이상 데이터베이스를 제공하지 않는 경우에만 발생할 수 있습니다.  
   
@@ -49,7 +54,7 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  자동 장애 조치를 지원하는 보안 우선 모드를 사용하려는 경우에만 미러링 모니터 서버를 설정해야 합니다. 미러링 모니터 서버가 필요하지 않은 성능 우선 모드에서는 WITNESS 속성을 OFF로 설정하는 것이 좋습니다. 성능 우선 모드에서 미러링 모니터 서버의 영향에 대한 자세한 내용은 [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)를 참조하세요.  
   
-## 보안 우선 모드 세션의 쿼럼  
+## <a name="quorum-in-high-safety-mode-sessions"></a>보안 우선 모드 세션의 쿼럼  
  보안 우선 모드에서 쿼럼은 쿼럼이 있는 서버 인스턴스가 주 역할을 소유하는 파트너를 조정하는 컨텍스트를 제공하여 자동 장애 조치를 허용합니다. 쿼럼이 있을 경우 주 서버는 데이터베이스를 제공합니다. 동기화된 미러 서버와 미러링 모니터 서버가 쿼럼을 유지하고 주 서버가 쿼럼을 손실하는 경우 자동 장애 조치가 발생합니다.  
   
  보안 우선 모드의 쿼럼 시나리오는 다음과 같습니다.  
@@ -91,16 +96,16 @@ caps.handback.revision: 36
 > [!IMPORTANT]  
 >  그러나 세션에 파트너 간 쿼럼이 있는 경우 한 파트너가 쿼럼을 손실하면 세션은 쿼럼을 손실합니다. 따라서 미러링 모니터 서버가 오랫동안 연결이 끊어진 상태로 유지될 것이 예상되면 세션에서 미러링 모니터 서버를 일시적으로 제거하는 것이 좋습니다. 미러링 모니터 서버가 제거되면 쿼럼의 요구 사항이 제거됩니다. 그런 다음 미러 서버의 연결이 끊어지면 주 서버가 계속해서 데이터베이스를 제공할 수 있습니다. 미러링 모니터 서버를 추가하거나 제거하는 방법은 [Database Mirroring Witness](../../database-engine/database-mirroring/database-mirroring-witness.md)를 참조하십시오.  
   
-### 데이터베이스 가용성에 대한 쿼럼의 영향  
- 다음 그림에서는 미러링 모니터 서버와 파트너가 협력하여 지정한 시간에 하나의 파트너만 주 역할을 수행하고 현재 주 서버만 해당 데이터베이스를 온라인 상태로 만들 수 있게 하는 방법을 보여 줍니다. 두 시나리오는 모두 전체 쿼럼 및 주 역할의 **Partner_A**와 미러 역할의 **Partner_B**로 시작합니다.  
+### <a name="how-quorum-affects-database-availability"></a>데이터베이스 가용성에 대한 쿼럼의 영향  
+ 다음 그림에서는 미러링 모니터 서버와 파트너가 협력하여 지정한 시간에 하나의 파트너만 주 역할을 수행하고 현재 주 서버만 해당 데이터베이스를 온라인 상태로 만들 수 있게 하는 방법을 보여 줍니다. 두 시나리오는 모두 전체 쿼럼 및 주 역할의 **Partner_A** 와 미러 역할의 **Partner_B** 로 시작합니다.  
   
  ![미러링 모니터 서버 및 파트너의 협력 방식](../../database-engine/database-mirroring/media/dbm-quorum-scenarios.gif "미러링 모니터 서버 및 파트너의 협력 방식")  
   
- 시나리오 1은 원래 주 서버(**Partner_A**)에 문제가 발생한 후 미러링 모니터 서버와 미러 서버가 주 서버 **Partner_A**를 더 이상 사용할 수 없음에 동의하고 쿼럼을 형성하는 방법을 보여 줍니다. 그런 다음 미러 서버 **Partner_B**가 주 역할을 수행합니다. 자동 장애 조치(failover)가 수행되고 **Partner_B**는 해당 데이터베이스 복사본을 온라인 상태로 만듭니다. 그런 다음 **Partner_B**가 다운되고 해당 데이터베이스는 오프라인 상태가 됩니다. 나중에 이전 주 서버였던 **Partner_A**는 쿼럼을 다시 얻은 미러링 모니터 서버에 다시 연결되지만 미러링 모니터 서버와 통신할 때 이제 **Partner_B**가 주 역할을 소유하므로 **Partner_A**에서 해당 데이터베이스 복사본을 온라인 상태로 만들 수 없습니다. **Partner_B**는 세션에 다시 참가할 때 데이터베이스를 다시 온라인 상태로 만듭니다.  
+ 시나리오 1은 원래 주 서버(**Partner_A**)에 문제가 발생한 후 미러링 모니터 서버와 미러 서버가 주 서버 **Partner_A**를 더 이상 사용할 수 없음에 동의하고 쿼럼을 형성하는 방법을 보여 줍니다. 그런 다음 미러 서버 **Partner_B** 가 주 역할을 수행합니다. 자동 장애 조치(failover)가 수행되고 **Partner_B**는 해당 데이터베이스 복사본을 온라인 상태로 만듭니다. 그런 다음 **Partner_B** 가 다운되고 해당 데이터베이스는 오프라인 상태가 됩니다. 나중에 이전 주 서버였던 **Partner_A**는 쿼럼을 다시 얻은 미러링 모니터 서버에 다시 연결되지만 미러링 모니터 서버와 통신할 때 이제 **Partner_B** 가 주 역할을 소유하므로 **Partner_A** 에서 해당 데이터베이스 복사본을 온라인 상태로 만들 수 없습니다. **Partner_B** 는 세션에 다시 참가할 때 데이터베이스를 다시 온라인 상태로 만듭니다.  
   
- 시나리오 2에서 미러링 모니터 서버는 쿼럼을 상실하지만 파트너인 **Partner_A**와 **Partner_B**는 서로 쿼럼을 유지하고 데이터베이스가 온라인 상태로 남아 있습니다. 그런 다음 파트너도 해당 쿼럼을 상실하고 데이터베이스는 오프라인 상태가 됩니다. 나중에 주 서버 **Partner_A**는 쿼럼을 다시 얻은 미러링 모니터 서버에 다시 연결됩니다. 미러링 모니터 서버는 **Partner_A**가 여전히 주 역할을 소유하며 **Partner_A**가 해당 데이터베이스를 다시 온라인 상태로 만드는지 확인합니다.  
+ 시나리오 2에서 미러링 모니터 서버는 쿼럼을 상실하지만 파트너인 **Partner_A** 와 **Partner_B**는 서로 쿼럼을 유지하고 데이터베이스가 온라인 상태로 남아 있습니다. 그런 다음 파트너도 해당 쿼럼을 상실하고 데이터베이스는 오프라인 상태가 됩니다. 나중에 주 서버 **Partner_A**는 쿼럼을 다시 얻은 미러링 모니터 서버에 다시 연결됩니다. 미러링 모니터 서버는 **Partner_A** 가 여전히 주 역할을 소유하며 **Partner_A** 가 해당 데이터베이스를 다시 온라인 상태로 만드는지 확인합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [데이터베이스 미러링 세션 중 역할 전환&#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [데이터베이스 미러링 모니터 서버](../../database-engine/database-mirroring/database-mirroring-witness.md)   

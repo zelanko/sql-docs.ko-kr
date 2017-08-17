@@ -1,27 +1,32 @@
 ---
 title: "로그 전달 보고서 보기(SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 전달 보고서 보기"
-  - "로그 전달 보고서 표시"
-  - "로그 전달 [SQL Server], 모니터링"
-  - "로그 전달 [SQL Server], 보고서 보기"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- viewing log shipping reports
+- displaying log shipping reports
+- log shipping [SQL Server], monitoring
+- log shipping [SQL Server], viewing reports
 ms.assetid: 3b549f2f-3683-45e5-b8e8-8095276c41ab
 caps.latest.revision: 18
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 18
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: bae6798ce7212ece23767ab31884c1ccabb568fd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 로그 전달 보고서 보기(SQL Server Management Studio)
+# <a name="view-the-log-shipping-report-sql-server-management-studio"></a>로그 전달 보고서 보기(SQL Server Management Studio)
   이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 트랜잭션 로그 전달 상태 보고서를 보는 방법을 설명합니다. 모니터 서버, 주 서버 또는 보조 서버에서 상태 보고서를 실행할 수 있습니다. 로그 전달 구성에 대해 가장 완전한 정보를 보려면 모니터 서버 인스턴스에서 보고서를 보십시오.  
   
  이 보고서에는 모든 로그 전달 작업의 상태가 표시됩니다. 상태는 연결된 서버 인스턴스에서 제공됩니다. 한 데이터베이스에 대해서는 모니터 서버 역할을 하고 다른 데이터베이스에 대해서는 보조 서버 역할을 하는 등 서버 인스턴스가 다양한 역할로 여러 가지 구성과 관련되어 있으면 각 역할과 연관된 모든 구성 정보가 결과에 표시됩니다. 저장 프로시저가 특정한 로그 전달 구성을 위해 모니터 서버 인스턴스에 연결할 수 있으면 보고서에 해당 구성의 추가 상태가 표시됩니다.  
@@ -38,7 +43,7 @@ caps.handback.revision: 18
   
  보고서는 **sp_help_log_shipping_monitor**를 호출하여 데이터를 가져옵니다. 필요한 권한에 대한 자세한 내용은 [sp_help_log_shipping_monitor&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-transact-sql.md)를 참조하세요.  
   
-### 서버 인스턴스의 트랜잭션 로그 전달 상태 보고서를 표시하려면  
+### <a name="to-display-the-transaction-log-shipping-status-report-on-a-server-instance"></a>서버 인스턴스의 트랜잭션 로그 전달 상태 보고서를 표시하려면  
   
 1.  모니터 서버, 주 서버 또는 보조 서버에 연결합니다.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 18
   
 3.  **트랜잭션 로그 전달 상태**를 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [로그 전달 모니터링&#40;Transact-SQL&#41;](../../database-engine/log-shipping/monitor-log-shipping-transact-sql.md)  
   
   

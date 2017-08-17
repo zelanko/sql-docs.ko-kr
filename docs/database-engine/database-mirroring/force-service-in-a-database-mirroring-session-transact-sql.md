@@ -1,25 +1,30 @@
 ---
 title: "데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "강제 적용 서비스 [SQL Server]"
-  - "데이터베이스 미러링 [SQL Server], 강제 적용 서비스"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- forced service [SQL Server]
+- database mirroring [SQL Server], forcing service
 ms.assetid: 8b6ffe77-35f3-4e2a-a658-8a38a8e1c794
 caps.latest.revision: 40
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 40
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 41aad1711fe5fb6743cfc6c1527f8c175fbf1d0c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL)
+# <a name="force-service-in-a-database-mirroring-session-transact-sql"></a>데이터베이스 미러링 세션에 서비스 강제 수행(Transact-SQL)
   성능 우선 모드 및 장애 조치를 지원하지 않는 보호 우선 모드에서 미러 서버는 사용할 수 있는데 주 서버는 실패하는 경우 데이터베이스 소유자는 서비스가 미러 데이터베이스로 장애 조치(데이터 손실 가능)되도록 강제 적용하여 데이터베이스를 사용 가능하게 만들 수 있습니다. 이 옵션은 다음 조건이 모두 충족된 경우에만 사용할 수 있습니다.  
   
 -   주 서버가 다운되었습니다.  
@@ -31,7 +36,7 @@ caps.handback.revision: 40
   
  서비스를 강제 적용하면 세션이 일시 중지되고 새 복구 분기가 시작됩니다. 서비스를 강제 적용하는 것은 미러링을 제거하고 이전 주 데이터베이스를 복구하는 것과 유사합니다. 그러나 강제 서비스의 경우 미러링을 재개할 때 데이터베이스를 다시 동기화하기 때문에 데이터가 손실될 가능성이 있습니다.  
   
-### 데이터베이스 미러링 세션에서 서비스를 강제 수행하려면  
+### <a name="to-force-service-in-a-database-mirroring-session"></a>데이터베이스 미러링 세션에서 서비스를 강제 수행하려면  
   
 1.  미러 서버로 연결합니다.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 40
   
      미러 서버는 주 서버로 바로 전환되고 미러링은 일시 중지됩니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [데이터베이스 미러링 운영 모드](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)  
   

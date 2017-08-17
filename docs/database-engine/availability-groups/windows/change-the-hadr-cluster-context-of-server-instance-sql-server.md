@@ -1,28 +1,33 @@
 ---
 title: "서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "가용성 그룹 [SQL Server], WSFC 클러스터"
-  - "가용성 복제본 [SQL Server], WSFC 클러스터 컨텍스트 변경"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Availability Groups [SQL Server], WSFC clusters
+- Availability replicas [SQL Server], change WSFC cluster context
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 caps.latest.revision: 32
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 31
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 29d356ca6c432963015a4c9f4a81702b97812c51
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server)
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이상 버전에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 사용하여 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 인스턴스의 HADR 클러스터 컨텍스트를 전환하는 방법에 대해 설명합니다. *HADR 클러스터 컨텍스트*는 서버 인스턴스에서 호스트하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터를 결정합니다.  
+# <a name="change-the-hadr-cluster-context-of-server-instance-sql-server"></a>서버 인스턴스의 HADR 클러스터 컨텍스트 변경(SQL Server)
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이상 버전에서 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 을 사용하여 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 인스턴스의 HADR 클러스터 컨텍스트를 전환하는 방법에 대해 설명합니다. *HADR 클러스터 컨텍스트* 는 서버 인스턴스에서 호스트하는 가용성 복제본에 대한 메타데이터를 관리하는 WSFC(Windows Server 장애 조치(failover) 클러스터링) 클러스터를 결정합니다.  
   
- 새 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스로의 클러스터 간 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 마이그레이션을 수행하는 동안에만 HADR 클러스터 컨텍스트를 전환합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]의 클러스터 간 마이그레이션은 가용성 그룹의 작동 중단 시간을 최소화하면서 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]로의 OS 업그레이드를 지원합니다. 자세한 내용은 [OS 업그레이드를 위한 Always On 가용성 그룹의 클러스터 간 마이그레이션](http://msdn.microsoft.com/library/jj873730.aspx)을 참조하세요.  
+ 새 WSFC 클러스터에서 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 인스턴스로의 클러스터 간 [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] 마이그레이션을 수행하는 동안에만 HADR 클러스터 컨텍스트를 전환합니다. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] 의 클러스터 간 마이그레이션은 가용성 그룹의 작동 중단 시간을 최소화하면서 [!INCLUDE[win8](../../../includes/win8-md.md)] 또는 [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] 로의 OS 업그레이드를 지원합니다. 자세한 내용은 [OS 업그레이드를 위한 Always On 가용성 그룹의 클러스터 간 마이그레이션](http://msdn.microsoft.com/library/jj873730.aspx)을 참조하세요.  
   
 -   **시작하기 전에:**  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 31
   
      [보안](#Security)  
   
--   **가용성 복제본의 클러스터 컨텍스트를 전환하려면:** [Transact-SQL](#TsqlProcedure) 사용  
+-   **가용성 복제본의 클러스터 컨텍스트를 전환하려면:**  [Transact-SQL](#TsqlProcedure)  
   
 -   **후속 작업:**  [가용성 복제본의 클러스터 컨텍스트를 전환한 후](#FollowUp)  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 31
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   전체 도메인 이름을 지정하는 것이 좋습니다. 이는 짧은 이름의 대상 IP 주소를 찾기 위해 ALTER SERVER CONFIGURATION에서 DNS 확인을 사용하기 때문입니다. 경우에 따라 짧은 이름을 사용하면 DNS 검색 순서로 인해 혼동이 생길 수도 있습니다. 예를 들어 `abc` 도메인의 노드(`node1.abc.com`)에서 다음 명령을 실행한다고 가정합니다. 의도한 대상 클러스터는 `CLUS01` 도메인의 `xyz` 클러스터(`clus01.xyz.com`)입니다. 그러나 로컬 도메인 호스트는 이름이 `CLUS01`인 클러스터(`clus01.abc.com`)도 호스팅합니다.  
+-   전체 도메인 이름을 지정하는 것이 좋습니다. 이는 짧은 이름의 대상 IP 주소를 찾기 위해 ALTER SERVER CONFIGURATION에서 DNS 확인을 사용하기 때문입니다. 경우에 따라 짧은 이름을 사용하면 DNS 검색 순서로 인해 혼동이 생길 수도 있습니다. 예를 들어 `abc` 도메인의 노드(`node1.abc.com`)에서 다음 명령을 실행한다고 가정합니다. 의도한 대상 클러스터는 `CLUS01` 도메인의 `xyz` 클러스터(`clus01.xyz.com`)입니다. 그러나 로컬 도메인 호스트는 이름이 `CLUS01` 인 클러스터(`clus01.abc.com`)도 호스팅합니다.  
   
      대상 클러스터의 짧은 이름인 `CLUS01`이 지정된 경우 DNS 이름 확인이 잘못된 클러스터의 IP 주소인 `clus01.abc.com`을 반환할 수 있습니다. 이러한 혼동을 방지하려면 다음 예와 같은 대상 클러스터의 전체 이름을 지정합니다.  
   
@@ -115,7 +120,7 @@ caps.handback.revision: 31
      LOCAL  
      로컬 WSFC 클러스터입니다.  
   
-### 예  
+### <a name="examples"></a>예  
  다음 예에서는 HARD 클러스터 컨텍스트를 다른 클러스터로 변경합니다. 이 예에서는 대상 WSFC 클러스터( `clus01`)를 식별하기 위해 전체 클러스터 개체 이름( `clus01.xyz.com`)을 지정합니다.  
   
 ```  
@@ -163,11 +168,12 @@ SELECT cluster_name FROM sys.dm_hadr_cluster
   
 -   [SQL Server 2012 기술 문서](http://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](http://blogs.msdn.com/b/sqlAlways%20On/)  
+-   [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [SQL Server의 WSFC&#40;Windows Server 장애 조치(failover) 클러스터링&#41;](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [ALTER SERVER CONFIGURATION&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-configuration-transact-sql.md)  
   
   
+

@@ -1,33 +1,38 @@
 ---
 title: "가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server) | Microsoft Docs"
-ms.custom: ""
-ms.date: "05/17/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "dbe-high-availability"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "읽기 전용 라우팅"
-  - "가용성 그룹 [SQL Server], 읽기 가능한 보조 복제본"
-  - "가용성 그룹 [SQL Server], 읽기 전용 라우팅"
-  - "읽기 가능한 보조 복제본"
-  - "가용성 그룹 [SQL Server], 클라이언트 연결"
-  - "가용성 그룹 [SQL Server], 활성 보조 복제본"
+ms.custom: 
+ms.date: 05/17/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- dbe-high-availability
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- read-only routing
+- Availability Groups [SQL Server], readable secondary replicas
+- Availability Groups [SQL Server], read-only routing
+- readable secondary replicas
+- Availability Groups [SQL Server], client connectivity
+- Availability Groups [SQL Server], active secondary replicas
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 caps.latest.revision: 34
-author: "MikeRayMSFT"
-ms.author: "mikeray"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: MikeRayMSFT
+ms.author: mikeray
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 9133508e63863bc4e73b9569108cb67c6c37d2f6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server)
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 읽기 전용 라우팅을 지원하도록 Always On 가용성 그룹을 구성하려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)]이나 PowerShell을 사용합니다. *읽기 전용 라우팅*이란 특정 읽기 전용 연결 요청을 Always On의 사용 가능하고 [읽기 가능한 보조 복제본](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)(즉, 보조 역할로 실행될 때 읽기 전용 작업을 허용하도록 구성된 복제본)으로 라우팅하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 말합니다. 읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 응용 프로그램 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
+# <a name="configure-read-only-routing-for-an-availability-group-sql-server"></a>가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server)
+  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서 읽기 전용 라우팅을 지원하도록 Always On 가용성 그룹을 구성하려면 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 이나 PowerShell을 사용합니다. *읽기 전용 라우팅* 이란 특정 읽기 전용 연결 요청을 Always On의 사용 가능하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 읽기 가능한 보조 복제본 [(즉, 보조 역할로 실행될 때 읽기 전용 작업을 허용하도록 구성된 복제본)으로 라우팅하는](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) 기능을 말합니다. 읽기 전용 라우팅을 지원하려면 가용성 그룹에 [가용성 그룹 수신기](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다. 읽기 전용 클라이언트는 해당 연결 요청을 이 수신기에 전달해야 하며, 클라이언트의 연결 문자열에서는 응용 프로그램 의도를 "읽기 전용"으로 지정해야 합니다. 즉, 해당 연결 요청은 *읽기 전용 연결 요청*이어야 합니다.  
   
 > [!NOTE]  
->  읽기 가능한 보조 복제본을 구성하는 방법은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조하세요.  
+>  읽기 가능한 보조 복제본을 구성하는 방법은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
 -   **시작하기 전에:**  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 32
     > [!NOTE]  
     >  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서는 읽기 전용 라우팅 구성이 지원되지 않습니다.  
   
--   **후속 작업:** [읽기 전용 라우팅을 구성한 후](#FollowUp)  
+-   **후속 작업:**  [읽기 전용 라우팅을 구성한 후](#FollowUp)  
   
 -   [관련 태스크](#RelatedTasks)  
   
@@ -56,9 +61,9 @@ caps.handback.revision: 32
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
   
--   가용성 그룹에 가용성 그룹 수신기가 있어야 합니다. 자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)을 참조하세요.  
+-   가용성 그룹에 가용성 그룹 수신기가 있어야 합니다. 자세한 내용은 [가용성 그룹 수신기 만들기 또는 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)가 있어야 합니다.  
   
--   하나 이상의 가용성 복제본이 보조 역할로 실행될 경우 읽기 전용 액세스를 허용하도록 구성되어 있어야 합니다([읽기 가능한 보조 복제본](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)이어야 함). 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)을 참조하세요.  
+-   하나 이상의 가용성 복제본이 보조 역할로 실행될 경우 읽기 전용 액세스를 허용하도록 구성되어 있어야 합니다( [읽기 가능한 보조 복제본](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)이어야 함). 자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
 -   현재 주 복제본을 호스팅하는 서버 인스턴스에 연결되어 있어야 합니다.  
   
@@ -66,7 +71,7 @@ caps.handback.revision: 32
   
 -   읽기 전용 라우팅을 지원할 읽기 가능한 보조 복제본 각각에 대해 *읽기 전용 라우팅 URL*을 지정해야 합니다. 이 URL은 로컬 복제본이 보조 역할로 실행되는 경우에만 적용됩니다. 필요에 따라 복제본별로 읽기 전용 라우팅 URL을 지정해야 합니다. 각 읽기 전용 라우팅 URL은 읽기 전용 연결 요청을 지정된 읽기 가능한 보조 복제본으로 라우팅하는 데 사용됩니다. 일반적으로 모든 읽기 가능한 보조 복제본에는 읽기 전용 라우팅 URL이 할당됩니다.  
   
-     가용성 복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법은 [Always On에 대한 read_only_routing_url 계산](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)을 참조하세요.  
+     가용성 복제본에 대한 읽기 전용 라우팅 URL을 계산하는 방법은 [Always On에 대한 read_only_routing_url 계산](https://blogs.msdn.microsoft.com/mattn/2012/04/25/calculating-read_only_routing_url-for-alwayson/)
   
 -   주 복제본으로 사용될 때 읽기 전용 라우팅을 지원하도록 할 각 가용성 복제본에 대해 *읽기 전용 라우팅 목록*을 지정해야 합니다. 지정된 읽기 전용 라우팅 목록은 로컬 복제본이 주 역할로 실행되는 경우에만 적용됩니다. 필요에 따라 복제본별로 이 목록을 지정해야 합니다. 일반적으로 각 읽기 전용 라우팅 목록의 끝에는 로컬 복제본의 URL과 함께 모든 읽기 전용 라우팅 URL이 포함됩니다.  
   
@@ -74,7 +79,7 @@ caps.handback.revision: 32
     >  읽기 전용 연결 요청은 현재 주 복제본의 읽기 전용 라우팅 목록에 있는 사용 가능한 첫 번째 항목으로 라우팅됩니다. 그러나 읽기 전용 복제본에 대한 부하 분산이 지원됩니다. 자세한 내용은 [읽기 전용 복제본에 대한 부하 분산 구성](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md#loadbalancing)을 참조하세요.  
   
 > [!NOTE]  
->  가용성 그룹 수신기 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)를 참조하세요.  
+>  가용성 그룹 수신기 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 32
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   
-### 읽기 전용 라우팅 목록 구성  
+### <a name="configure-a-read-only-routing-list"></a>읽기 전용 라우팅 목록 구성  
  Transact-SQL을 사용하여 읽기 전용 라우팅을 구성하려면 다음 단계를 수행합니다. 코드 예제를 보려면 이 섹션의 뒷부분에 나오는 [예(Transact-SQL)](#TsqlExample)를 참조하세요.  
   
 1.  주 복제본을 호스팅하는 서버 인스턴스에 연결합니다.  
@@ -116,7 +121,7 @@ caps.handback.revision: 32
   
          PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=(‘***server***’** [ **,**...*n* ] **))**  
   
-         여기서 *server*는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다.  
+         여기서 *server* 는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다.  
   
          예를 들어   `PRIMARY_ROLE (READ_ONLY_ROUTING_LIST=('Server1','Server2'))`  
   
@@ -141,7 +146,7 @@ READ_ONLY_ROUTING_LIST = (('Server1','Server2'), ('Server3', 'Server4', 'Server5
  하나의 중첩 괄호 수준만 사용할 수 있습니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예에서는 기존 가용성 그룹 `AG1`의 두 가용성 복제본 중 하나가 현재 주 역할을 소유하고 있는 경우 가용성 복제본이 읽기 전용 라우팅을 지원하도록 수정합니다. 이 예에서는 `COMPUTER01` 및 `COMPUTER02`를 인스턴스 이름으로 지정하여 가용성 복제본을 호스팅하는 서버 인스턴스를 식별합니다.  
+ 다음 예에서는 기존 가용성 그룹 `AG1` 의 두 가용성 복제본 중 하나가 현재 주 역할을 소유하고 있는 경우 가용성 복제본이 읽기 전용 라우팅을 지원하도록 수정합니다. 이 예에서는`COMPUTER01` 및 `COMPUTER02`를 인스턴스 이름으로 지정하여 가용성 복제본을 호스팅하는 서버 인스턴스를 식별합니다.  
   
 ```  
 ALTER AVAILABILITY GROUP [AG1]  
@@ -177,7 +182,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-### 읽기 전용 라우팅 목록 구성  
+### <a name="configure-a-read-only-routing-list"></a>읽기 전용 라우팅 목록 구성  
  PowerShell을 사용하여 읽기 전용 라우팅을 구성하려면 다음 단계를 수행합니다. 코드 예제를 보려면 이 섹션의 뒷부분에 나오는 [예제(PowerShell)](#PSExample)을 참조하세요.  
   
 1.  기본값(**cd**)을 주 복제본을 호스트하는 서버 인스턴스로 설정합니다.  
@@ -186,26 +191,26 @@ GO
   
     -   보조 역할에 대한 읽기 전용 라우팅을 구성하려면 **ReadonlyRoutingConnectionUrl"***url***"** 매개 변수입니다.  
   
-         여기서 *url*은 읽기 전용 연결을 위해 복제본으로 라우팅할 때 사용할 연결 FQDN(정규화된 도메인 이름) 및 포트입니다. 예를 들어  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
+         여기서 *url* 은 읽기 전용 연결을 위해 복제본으로 라우팅할 때 사용할 연결 FQDN(정규화된 도메인 이름) 및 포트입니다. 예를 들어  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          자세한 내용은 [Always On에 대한 read_only_routing_url 계산](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)을 참조하세요.  
   
-    -   주 역할에 대한 연결 액세스를 구성하려면 **ReadonlyRoutingList"***server***"** [ **,**...*n* ]를 지정합니다. 여기서 *server*는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다. 예를 들어  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   주 역할에 대한 연결 액세스를 구성하려면 **ReadonlyRoutingList"***server***"** [ **,**...*n* ]를 지정합니다. 여기서 *server* 는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다. 예를 들어  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  복제본의 읽기 전용 라우팅 목록을 구성하기 전에 읽기 전용 라우팅 URL을 설정해야 합니다.  
   
     > [!NOTE]  
-    >  cmdlet의 구문을 보려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell 환경에서 **Get-Help** cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)을 참조하세요.  
+    >  cmdlet의 구문을 보려면 **PowerShell 환경에서** Get-Help [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cmdlet을 사용합니다. 자세한 내용은 [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)을 참조하세요.  
   
-### SQL Server PowerShell 공급자 설정 및 사용  
+### <a name="set-up-and-use-the-sql-server-powershell-provider"></a>SQL Server PowerShell 공급자 설정 및 사용  
   
 -   [SQL Server PowerShell 공급자](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
--   [SQL Server PowerShell 도움말 보기](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
+-   [Get Help SQL Server PowerShell](../../../relational-databases/scripting/get-help-sql-server-powershell.md)  
   
 ###  <a name="PSExample"></a> 예제(PowerShell)  
- 다음 예에서는 읽기 전용 라우팅을 위해 가용성 그룹에 주 복제본과 보조 복제본 하나를 구성합니다. 먼저, 이 예에서는 각 복제본에 읽기 전용 라우팅 URL을 할당합니다. 그런 다음 주 복제본에 읽기 전용 라우팅 목록을 설정합니다. 연결 문자열에 "ReadOnly" 속성이 설정된 연결은 보조 복제본으로 리디렉션됩니다. 이 보조 복제본을 읽을 수 없는 경우(**ConnectionModeInSecondaryRole** 설정으로 확인) 연결이 주 복제본으로 다시 디렉션됩니다.  
+ 다음 예에서는 읽기 전용 라우팅을 위해 가용성 그룹에 주 복제본과 보조 복제본 하나를 구성합니다. 먼저, 이 예에서는 각 복제본에 읽기 전용 라우팅 URL을 할당합니다. 그런 다음 주 복제본에 읽기 전용 라우팅 목록을 설정합니다. 연결 문자열에 "ReadOnly" 속성이 설정된 연결은 보조 복제본으로 리디렉션됩니다. 이 보조 복제본을 읽을 수 없는 경우( **ConnectionModeInSecondaryRole** 설정으로 확인) 연결이 주 복제본으로 다시 디렉션됩니다.  
   
 ```  
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
@@ -242,9 +247,9 @@ Set-SqlAvailabilityReplica -ReadOnlyRoutingList "SecondaryServer","PrimaryServer
 Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationIntent=ReadOnly;MultiSubnetFailover=True  
 ```  
   
- 읽기 전용 응용 프로그램 방식 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)를 참조하세요.  
+ 읽기 전용 응용 프로그램 방식 및 읽기 전용 라우팅에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)가 있어야 합니다.  
   
-### 읽기 전용 라우팅이 올바르게 작동하지 않는 경우  
+### <a name="if-read-only-routing-is-not-working-correctly"></a>읽기 전용 라우팅이 올바르게 작동하지 않는 경우  
  읽기 전용 라우팅 구성 문제를 해결하는 방법은 [읽기 전용 라우팅이 올바르게 작동하지 않음](../../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md#ROR)을 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
@@ -272,7 +277,7 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
      [Always On에 대한 read_only_routing_url 계산](http://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)  
   
-     [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](http://blogs.msdn.com/b/sqlAlways%20On/)  
+     [SQL Server Always On 팀 블로그: 공식 SQL Server Always On 팀 블로그](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [CSS SQL Server 엔지니어 블로그](http://blogs.msdn.com/b/psssql/)  
   
@@ -282,11 +287,12 @@ Server=tcp:MyAgListener,1433;Database=Db1;IntegratedSecurity=SSPI;ApplicationInt
   
      [SQL Server 고객 자문 팀 백서](http://sqlcat.com/)  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Always On 가용성 그룹 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [활성 보조: 읽기 가능한 보조 복제본&#40;Always ON 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [가용성 복제본에 대한 클라이언트 연결 액세스 정보&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md)   
- [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners, client connectivity, application failover.md)  
+ [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)  
   
   
+
