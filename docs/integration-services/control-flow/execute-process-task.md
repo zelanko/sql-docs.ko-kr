@@ -64,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  여러 프로세스 실행 태스크 속성을 설정하는 식을 사용할 수 있습니다.  
   
- **StandardInputVariable** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 응용 프로그램에서 **Console.ReadLine** 메서드를 호출하여 입력을 읽습니다. 자세한 내용은 [](http://go.microsoft.com/fwlink/?LinkId=129201)클래스 라이브러리의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
+ **StandardInputVariable** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 응용 프로그램에서 **Console.ReadLine** 메서드를 호출하여 입력을 읽습니다. 자세한 내용은 [Console.ReadLine 메서드](http://go.microsoft.com/fwlink/?LinkId=129201)클래스 라이브러리의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Class Library.  
   
  **Arguments** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 다음 단계 중 하나를 수행하여 인수를 얻습니다.  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/03/2017
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  
   
-     자세한 내용은 [참조에서](http://go.microsoft.com/fwlink/?LinkId=129200)My.Application.CommandLineArgs 속성 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 항목을 참조하십시오.  
+     자세한 내용은 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]참조에서[My.Application.CommandLineArgs 속성](http://go.microsoft.com/fwlink/?LinkId=129200) 항목을 참조하십시오.  
   
 -   Microsoft Visual C#을 사용하여 응용 프로그램을 작성하는 경우 **Main** 메서드를 사용합니다.  
   
