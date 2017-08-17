@@ -1,7 +1,7 @@
 ---
 title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
-ms.date: 5/03/2017
+ms.date: 05/03/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 

@@ -27,7 +27,7 @@
 ## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
-# [데이터베이스 엔진](../database-engine/sql-server-database-engine-backward-compatibility.md)
+# [데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)
 # [Data Quality Services](../data-quality-services/data-quality-services.md)
 # [장애 조치(Failover) 클러스터](../sql-server/failover-clusters/install/sql-server-failover-cluster-installation.md)
 # [설치](../sql-server/install/planning-a-sql-server-installation.md)
