@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 COM 기반 사용자 지정 해결 프로그램 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 [](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md)의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  
+  이 항목에서는 [또는 COM 기반 사용자 지정 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 사용하여[!INCLUDE[tsql](../../includes/tsql-md.md)] 의 병합 아티클을 위한 사용자 지정 충돌 해결 프로그램을 구현하는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
