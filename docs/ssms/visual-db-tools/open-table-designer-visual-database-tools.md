@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ecf6dd4edb70904d902f11940da42dc33765708f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-table-designer-visual-database-tools"></a>테이블 디자이너 열기(Visual Database Tools)
@@ -47,7 +47,7 @@ ms.lasthandoff: 06/22/2017
     **테이블 디자이너** 메뉴가 주 메뉴에 추가되고 디자이너 창에 테이블이 열립니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[테이블 디자인&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
 [테이블](http://msdn.microsoft.com/en-us/82d7819c-b801-4309-a849-baa63083e83f)  
   
 

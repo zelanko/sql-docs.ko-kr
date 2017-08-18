@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 1d9dd0036b46e806ea6aaacf41d9bf9683ebc233
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="copy-queries-visual-database-tools"></a>쿼리 복사(Visual Database Tools)
@@ -42,9 +42,9 @@ ms.lasthandoff: 06/22/2017
 6.  마우스 오른쪽 단추를 클릭하고 바로 가기 메뉴에서 **붙여넣기**를 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 이름 바꾸기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  
-[쿼리 결과 지우기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
-[쿼리 저장&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
-[쿼리 관련 기본 작업 수행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[쿼리 이름 바꾸기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rename-queries-visual-database-tools.md)  
+[쿼리 결과 지우기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
+[쿼리 저장&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/save-queries-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

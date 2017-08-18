@@ -21,11 +21,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 23f1d17f062613ef9c75ee8d7748d3ed72d8d375
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="display-query-and-view-designer-panes-visual-database-tools"></a>쿼리 및 뷰 디자이너 창 표시(Visual Database Tools)
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
 2.  **쿼리 디자이너** 메뉴에서 **창** 을 가리킨 다음 열려는 창의 이름을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 만들기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[쿼리 및 뷰 디자이너 열기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
+[쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[쿼리 및 뷰 디자이너 열기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-the-query-and-view-designer-visual-database-tools.md)  
   
 

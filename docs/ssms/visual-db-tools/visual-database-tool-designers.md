@@ -24,11 +24,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f54b0ec82fd9a4c5807c3633f0e78c5782599732
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="visual-database-tool-designers"></a>Visual Database Tools 디자이너
@@ -91,8 +91,8 @@ Visual Database Tools는 데이터 원본 작업을 수행하는 데 사용할 �
 > 이 버전의 Visual Database Tools는 Microsoft SQL Server 버전 7 및 이전 버전을 지원하지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 다이어그램 디자인&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
-[테이블 디자인&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[데이터베이스 다이어그램 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+[테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

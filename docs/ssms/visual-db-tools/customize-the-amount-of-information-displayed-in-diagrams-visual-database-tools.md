@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 2f4f078ac1d04aa8f470ad7479497cc8dfb5c00f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="customize-the-amount-of-information-displayed-in-diagrams-visual-database-tools"></a>다이어그램에 표시된 정보의 양 사용자 지정(Visual Database Tools)
@@ -58,6 +58,6 @@ ms.lasthandoff: 06/22/2017
 3.  **테이블 뷰** 메뉴에서 **사용자 지정** 을 선택한 경우 표시할 속성을 **열 선택** 대화 상자에서 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

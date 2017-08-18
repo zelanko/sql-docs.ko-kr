@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: fbf4122473bbe62865c57da73e661c74e8d9e035
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-pane-visual-database-tools"></a>SQL Visual Database Tools)
@@ -58,11 +58,11 @@ SQL 창에서 현재 쿼리를 직접 편집할 수 있습니다. 다른 창으�
 > SQL 문을 입력한 다음 다이어그램 창과 조건 창을 변경하여 쿼리를 추가로 변경하면 쿼리 및 뷰 디자이너는 SQL 문을 다시 작성하여 표시합니다. 일부 경우 이 동작으로 인해 결과는 같지만 원래 입력한 내용과 다른 SQL 문이 만들어지기도 합니다. 이러한 차이는 AND와 OR로 연결된 여러 절을 포함하는 검색 조건을 사용하여 작업할 때 특히 자주 나타납니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 만들기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[쿼리 실행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[다이어그램 창&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
-[조건 창&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
-[결과 창&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
+[쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[쿼리 실행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[다이어그램 창&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)  
+[조건 창&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
+[결과 창&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)  
   
 

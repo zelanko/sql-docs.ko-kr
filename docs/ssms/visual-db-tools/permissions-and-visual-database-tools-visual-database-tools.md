@@ -16,11 +16,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 91683b0358d76a072517e1b5fd5507cf8c6cb57e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="permissions-and-visual-database-tools-visual-database-tools"></a>사용 권한 및 Visual Database Tools(Visual Database Tools)
@@ -29,6 +29,6 @@ ms.lasthandoff: 06/22/2017
 데이터베이스 권한으로 데이터베이스 구조를 볼 수는 있지만 수정할 수 없는 경우 변경 스크립트를 사용하여 수정 내용을 데이터베이스에 전송하지 않고 디자인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[다중 사용자 환경&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[다중 사용자 환경&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

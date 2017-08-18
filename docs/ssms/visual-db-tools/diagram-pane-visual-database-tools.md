@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d77c2ce648939486be70ca9ab961bb9697b4d8db
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="diagram-pane-visual-database-tools"></a>다이어그램 창(Visual Database Tools)
@@ -69,8 +69,8 @@ ms.lasthandoff: 06/22/2017
   
 |확인란 또는 기호|Description|  
 |-----------------------|---------------|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools icon")|데이터 열을 쿼리 결과 집합(선택 쿼리)에 나타낼지 또는 업데이트, 삽입 원본, 테이블 만들기 또는 삽입 위치 쿼리에서 사용할지 여부를 지정합니다. 열을 선택하여 결과에 추가합니다. **(모든 열)** 을 선택하면 모든 데이터 열이 출력에 나타납니다.<br /><br />확인란과 함께 사용하는 아이콘은 만드는 쿼리 형식에 따라 변경됩니다. 삭제 쿼리를 만들 때에는 열을 개별적으로 선택할 수 없습니다.|  
-|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools icon")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools icon")|데이터 열이 ORDER BY 절의 일부인 쿼리 결과를 정렬하는 데 사용되고 있음을 나타냅니다. 정렬 순서가 오름차순이면 아이콘이 A-Z로 나타나고 내림차순이면 Z-A로 나타납니다.|  
+|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi7.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi8.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbi9.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbia.gif "Visual Database Tools 아이콘")|데이터 열을 쿼리 결과 집합(선택 쿼리)에 나타낼지 또는 업데이트, 삽입 원본, 테이블 만들기 또는 삽입 위치 쿼리에서 사용할지 여부를 지정합니다. 열을 선택하여 결과에 추가합니다. **(모든 열)** 을 선택하면 모든 데이터 열이 출력에 나타납니다.<br /><br />확인란과 함께 사용하는 아이콘은 만드는 쿼리 형식에 따라 변경됩니다. 삭제 쿼리를 만들 때에는 열을 개별적으로 선택할 수 없습니다.|  
+|![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbib.gif "Visual Database Tools 아이콘")<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbic.gif "Visual Database Tools 아이콘")|데이터 열이 ORDER BY 절의 일부인 쿼리 결과를 정렬하는 데 사용되고 있음을 나타냅니다. 정렬 순서가 오름차순이면 아이콘이 A-Z로 나타나고 내림차순이면 Z-A로 나타납니다.|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbid.gif "Visual Database Tools 아이콘")|데이터 열이 집계 쿼리에서 GROUP BY 절의 일부인 그룹화된 결과 집합을 만드는 데 사용되고 있음을 나타냅니다.|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbie.gif "Visual Database Tools 아이콘")|데이터 열이 WHERE 또는 HAVING 절의 일부인 쿼리에 대한 검색 조건에 포함되어 있음을 나타냅니다.|  
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbif.gif "Visual Database Tools 아이콘")|데이터 열의 내용이 SUM, AVG 또는 기타 집계 함수에 포함되어 있는 출력에 맞게 요약되고 있음을 나타냅니다.|  
@@ -100,8 +100,8 @@ ms.lasthandoff: 06/22/2017
 |![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbio.gif "Visual Database Tools 아이콘")|쿼리 및 뷰 디자이너는 조인 형식을 결정할 수 없습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[조건 창&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
-[쿼리 결과 정렬 및 그룹화&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[조건 창&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)  
+[쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
   
 

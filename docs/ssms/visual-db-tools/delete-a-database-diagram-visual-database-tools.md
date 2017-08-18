@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca2182f7cf871a32891a186f13fb177b7f22be52
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 삭제(Visual Database Tools)
@@ -42,6 +42,6 @@ ms.lasthandoff: 06/22/2017
 데이터베이스에서 해당 데이터베이스 다이어그램이 삭제됩니다. 데이터베이스 다이어그램을 삭제할 때 다이어그램에 있는 테이블은 삭제되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

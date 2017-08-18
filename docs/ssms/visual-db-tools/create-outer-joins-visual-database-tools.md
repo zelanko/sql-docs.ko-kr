@@ -17,15 +17,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9098896a6389489eac2c2d5adae26e82e863df9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>외부 조인 만들기(Visual Database Tools)
-[쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)는 기본적으로 테이블 간에 내부 조인을 만듭니다. 다른 테이블의 행과 일치하지 않는 행은 없앱니다. 그러나 외부 조인은 FROM 절에 지정된 하나 이상의 테이블이나 뷰에서 WHERE 또는 HAVING 검색 조건을 만족하는 모든 행을 반환합니다. 조인된 테이블에 일치 값이 없는 데이터 행을 결과 집합에 포함하려면 외부 조인을 만들면 됩니다.  
+[쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 는 기본적으로 테이블 간에 내부 조인을 만듭니다. 다른 테이블의 행과 일치하지 않는 행은 없앱니다. 그러나 외부 조인은 FROM 절에 지정된 하나 이상의 테이블이나 뷰에서 WHERE 또는 HAVING 검색 조건을 만족하는 모든 행을 반환합니다. 조인된 테이블에 일치 값이 없는 데이터 행을 결과 집합에 포함하려면 외부 조인을 만들면 됩니다.  
   
 외부 조인을 만들 때는 SQL 창의 SQL 문에 테이블이 표시되는 순서가 중요합니다. 첫 번째로 추가하는 테이블이 "왼쪽" 테이블이 되고 두 번째로 추가하는 테이블이 "오른쪽" 테이블이 됩니다. [다이어그램 창](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md)에 테이블이 실제로 표시되는 순서는 중요하지 않습니다. 왼쪽 또는 오른쪽 우선 외부 조인을 지정할 경우 쿼리에 테이블이 추가된 순서와 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)의 SQL 문에 테이블이 표시되는 순서를 참조합니다.  
   
@@ -62,7 +62,7 @@ WHERE (jobs.job_id IS NULL)
 ```  
   
 ## <a name="see-also"></a>참고 항목  
-[조인을 사용한 쿼리&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
-[조인 대화 상자&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
+[조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[조인 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)  
   
 

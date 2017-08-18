@@ -17,11 +17,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0c9be76ca64a4df24cca399308244c5bc4c28e0d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
@@ -176,7 +176,7 @@ ms.lasthandoff: 06/22/2017
 |SQL Server 에이전트 오류 로그를 사용하는 방법을 설명합니다.|[SQL Server 에이전트 오류 로그](../../ssms/agent/sql-server-agent-error-log.md)|  
 |성능 개체를 사용하는 방법을 설명합니다.|[성능 개체 사용](../../ssms/agent/use-performance-objects.md)|  
 |SQL Server 인스턴스의 관리를 자동화할 수 있도록 작업, 경고 및 운영자를 만드는 데 사용할 수 있는 유틸리티인 유지 관리 계획 마법사에 대해 설명합니다.|[유지 관리 계획 마법사 사용](http://msdn.microsoft.com/en-us/db65c726-9892-480c-873b-3af29afcee44)|  
-|SQL Server 에이전트를 사용하여 관리 태스크를 자동화하는 방법을 설명합니다.|[관리 태스크 자동화&amp;#40;SQL Server 에이전트&amp;#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
+|SQL Server 에이전트를 사용하여 관리 태스크를 자동화하는 방법을 설명합니다.|[관리 태스크 자동화&#40;SQL Server 에이전트&#41;](../../ssms/agent/automated-administration-tasks-sql-server-agent.md)|  
   
 ## <a name="see-also"></a>참고 항목  
 [노출 영역 구성](http://msdn.microsoft.com/en-us/f741169c-1453-4ad2-830b-bf2be27d712f)  

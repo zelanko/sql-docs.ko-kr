@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9ddd31f4745227986112ccd86d0a35e8a5ce4f76
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-relationships-between-tables-on-a-diagram-visual-database-tools"></a>다이어그램에서 테이블 간의 관계 만들기(Visual Database Tools)
@@ -51,8 +51,8 @@ ms.lasthandoff: 06/22/2017
     데이터베이스 디자이너에서는 선택한 열 간의 관계를 보여 줍니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[테이블 및 열 대화 상자&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
+[테이블 및 열 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/tables-and-columns-dialog-box-visual-database-tools.md)  
 [제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[데이터베이스 다이어그램에서 테이블 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
   
 

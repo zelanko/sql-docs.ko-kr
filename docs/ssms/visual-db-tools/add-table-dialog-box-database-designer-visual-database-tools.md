@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 275f2120bd76147916f1ba6d24d59dc450ed7c8b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>테이블 추가 대화 상자(데이터베이스 디자이너)(Visual Database Tools)
@@ -44,6 +44,6 @@ ms.lasthandoff: 06/22/2017
 테이블을 계속 추가하지 않고 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[다이어그램에 테이블 추가&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
+[다이어그램에 테이블 추가&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/add-tables-to-diagrams-visual-database-tools.md)  
   
 

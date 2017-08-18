@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e2aa0172a18bb1b01297caa9dcf4db07888ce083
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="verify-queries-visual-database-tools"></a>쿼리 확인(Visual Database Tools)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 -   **SQL 창**을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **SQL 구문 검증** 을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 실행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[쿼리 관련 기본 작업 수행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[쿼리 실행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

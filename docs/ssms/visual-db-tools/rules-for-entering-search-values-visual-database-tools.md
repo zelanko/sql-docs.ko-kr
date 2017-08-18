@@ -24,11 +24,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 96cd179445fcab211321ccf4e89f6fbce5792230
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="rules-for-entering-search-values-visual-database-tools"></a>검색 값 입력 규칙(Visual Database Tools)
@@ -149,6 +149,6 @@ ms.lasthandoff: 06/22/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
-[검색 조건 지정&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

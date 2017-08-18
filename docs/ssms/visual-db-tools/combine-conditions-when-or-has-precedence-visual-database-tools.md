@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 01acb8eb71b820655cb6c77df1495099cd0e7f81
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="combine-conditions-when-or-has-precedence-visual-database-tools"></a>OR에 우선 순위가 있는 조건 조합(Visual Database Tools)
@@ -75,7 +75,7 @@ WHERE (job_lvl = 100 OR status = 'R') AND
 > [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)에서 위에 표시된 형식으로 검색 조건을 입력한 다음 다이어그램 창이나 조건 창에서 쿼리를 변경하면 쿼리 및 뷰 디자이너는 두 OR 조건 모두에 명시적으로 배포된 AND 조건과 형식이 일치하는 SQL 문을 다시 만듭니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[조건 창의 검색 조건 결합 규칙&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
-[검색 조건 지정&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[조건 창의 검색 조건 결합 규칙&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)  
+[검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

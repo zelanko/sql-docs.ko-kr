@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d3f44a6e6d80dafc9567ddc146e90b7d258b730
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="summarize-or-aggregate-values-using-custom-expressions-visual-database-tools"></a>사용자 지정 식을 사용하여 값 요약 또는 집계(Visual Database Tools)
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 4.  쿼리를 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 결과 정렬 및 그룹화&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[쿼리 결과 요약&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   
 

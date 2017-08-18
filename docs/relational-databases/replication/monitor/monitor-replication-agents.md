@@ -23,11 +23,11 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 90cb8e5af3fa8e3e86639e7cffa3f9fb97368c45
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="monitor-replication-agents"></a>복제 에이전트 모니터링
@@ -52,7 +52,7 @@ ms.lasthandoff: 06/22/2017
      이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록** (각 게시자에 대해 사용 가능) 또는 **모든 구독** (각 게시에 대해 사용 가능) 탭을 통해 액세스할 수 있습니다. 자세한 내용은 [구독 관련 에이전트에 대한 정보 보기 및 태스크 수행&#40;복제 모니터&#41;](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-for-subscription-agents.md)을 참조하세요.  
   
 ## <a name="using-sql-server-management-studio-to-monitor-replication-agents"></a>SQL Server Management Studio를 사용하여 복제 에이전트 모니터링  
- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] provides the following dialog boxes for monitoring replication agents:  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 는 복제 에이전트 모니터링을 위한 다음 대화 상자를 제공합니다.  
   
 -   **스냅숏 에이전트 상태 보기** (모든 게시용)  
   

@@ -18,15 +18,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0588bd78ef06aa1d24fa7a4ae008002420b9d367
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-tables-automatically-visual-database-tools"></a>테이블 자동 조인(Visual Database Tools)
-쿼리에 두 개 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)가 해당 테이블 사이의 관련성을 판단합니다. 관련이 있는 경우 쿼리 및 뷰 디자이너는 테이블 또는 테이블 구조 개체를 나타내는 사각형 사이에 자동으로 조인 선을 넣습니다.  
+쿼리에 두 개 이상의 테이블을 추가하면 [쿼리 및 뷰 디자이너](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) 가 해당 테이블 사이의 관련성을 판단합니다. 관련이 있는 경우 쿼리 및 뷰 디자이너는 테이블 또는 테이블 구조 개체를 나타내는 사각형 사이에 자동으로 조인 선을 넣습니다.  
   
 다음과 같은 경우 쿼리 및 뷰 디자이너는 테이블이 조인되었다고 판단합니다.  
   
@@ -43,9 +43,9 @@ ms.lasthandoff: 06/22/2017
   
 쿼리 및 뷰 디자이너가 사용자 쿼리에 있는 테이블을 자동으로 조인하지 않는 경우 사용자가 직접 조인을 만들 수 있습니다. 자세한 내용은 [테이블 수동 조인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
-[쿼리 및 뷰 디자이너의 조인 표시 방법&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[조인을 사용한 쿼리&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+## <a name="see-also"></a>관련 항목:  
+[쿼리 및 뷰 디자이너의 조인 표시 방법&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/how-the-query-and-view-designer-represents-joins-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 81ad964781f4d467f27d0693522f601bb86119fc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-server-management-studio-menu-help"></a>SQL Server Management Studio 메뉴 도움말
@@ -31,17 +31,17 @@ ms.lasthandoff: 06/22/2017
   
 [저장 고급 옵션](../../ssms/menu-help/advanced-save-options.md)  
   
-[검색 폴더 선택 대화 상자 &amp;#40;Visual Studio&amp;#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
+[검색 폴더 선택 대화 상자 &#40;Visual Studio&#41;](../../ssms/menu-help/choose-search-folders-dialog-box-visual-studio.md)  
   
-[도구 상자 항목 선택&amp;#40;유지 관리 태스크 페이지&amp;#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
+[도구 상자 항목 선택&#40;유지 관리 태스크 페이지&#41;](../../ssms/menu-help/choose-toolbox-items-maintenance-tasks-page.md)  
   
-[사용자 지정&amp;#40;명령 페이지&amp;#41;](../../ssms/menu-help/customize-commands-page.md)  
+[사용자 지정&#40;명령 페이지&#41;](../../ssms/menu-help/customize-commands-page.md)  
   
-[사용자 지정&amp;#40;도구 모음 페이지&amp;#41;](../../ssms/menu-help/customize-toolbars-page.md)  
+[사용자 지정&#40;도구 모음 페이지&#41;](../../ssms/menu-help/customize-toolbars-page.md)  
   
 [외부 도구](../../ssms/menu-help/external-tools.md)  
   
-[연결 프로그램&amp;#40;새 파일&amp;#41;](../../ssms/menu-help/open-with-new-file.md)  
+[연결 프로그램&#40;새 파일&#41;](../../ssms/menu-help/open-with-new-file.md)  
   
 [옵션 대화 상자 F1 도움말](../../ssms/menu-help/options-dialog-boxes-f1-help.md)  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 06/22/2017
   
 [변경 내용 저장](../../ssms/menu-help/save-changes.md)  
   
-[창 대화 상자&amp;#40;Microsoft Document Explorer 도움말&amp;#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
+[창 대화 상자&#40;Microsoft Document Explorer 도움말&#41;](../../ssms/menu-help/windows-dialog-box-microsoft-document-explorer-help.md)  
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 19926b862a7ec50ca64a9b45718416ab92393cd1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>데이터 정렬 대화 상자(Visual Database Tools)
@@ -58,6 +58,6 @@ ms.lasthandoff: 06/22/2017
 데이터베이스의 기본 데이터 정렬 순서를 열에 적용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[집계 쿼리에서 열 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
+[집계 쿼리에서 열 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
   
 

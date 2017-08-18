@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: d776ff25e821b30f6e0e17778a7ab9f5f3ceebd3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="column-list-dialog-box-visual-database-tools"></a>열 목록 대화 상자(Visual Database Tools)
@@ -41,6 +41,6 @@ ms.lasthandoff: 06/22/2017
 선택한 테이블 반환 개체의 각 열에 대한 데이터 형식 속성을 표시합니다. 이 속성은 NULLABLE, IDENTITY 또는 ROWGUID이거나 비어 있을 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

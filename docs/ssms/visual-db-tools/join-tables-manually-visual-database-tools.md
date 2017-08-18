@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 57821cd36a4684de594df52b0722b7e043097b46
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-tables-manually-visual-database-tools"></a>테이블 수동 조인(Visual Database Tools)
@@ -47,6 +47,6 @@ ms.lasthandoff: 06/22/2017
 쿼리 및 뷰 디자이너는 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md)의 SQL 문에 INNER JOIN 절을 추가합니다. 조인 형식을 외부 조인으로 변경할 수 있습니다. 자세한 내용은 [외부 조인 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-outer-joins-visual-database-tools.md)를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
-[조인을 사용한 쿼리&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

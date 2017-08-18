@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f134aea8903ab0c31c3790c90d07f062ff292055
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="rename-a-database-diagram-visual-database-tools"></a>데이터베이스 다이어그램 이름 바꾸기(Visual Database Tools)
@@ -44,6 +44,6 @@ ms.lasthandoff: 06/22/2017
     새 이름으로 된 데이터베이스 다이어그램이 개체 탐색기에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

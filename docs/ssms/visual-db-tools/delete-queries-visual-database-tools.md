@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c801801c96b4abf82745278e1b28b9b88309a2d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-queries-visual-database-tools"></a>쿼리 삭제(Visual Database Tools)
@@ -43,9 +43,9 @@ ms.lasthandoff: 06/22/2017
 > 쿼리를 삭제하는 대신 프로젝트에서 제거하기만 하려면 **제거**를 클릭합니다. 나중에 쿼리 폴더를 마우스 오른쪽 단추로 클릭하고 **항목 추가** 를 선택하면 쿼리를 찾아 프로젝트에 다시 추가할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 결과 지우기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
-[쿼리 변경 내용 취소&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[쿼리 관련 기본 작업 수행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[쿼리 결과 지우기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
+[쿼리 변경 내용 취소&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 39d9220dc13546a5a1e9c95d034b5a5cf0ac43b5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="design-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램 디자인(Visual Database Tools)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
   
 **제목 표시줄** 제목 표시줄에는 테이블 이름이 표시됩니다.  
   
-테이블을 수정한 다음 아직 저장하지 않은 경우 테이블 이름의 끝에 별표(*)가 표시되어 변경 내용이 저장되지 않았음을 나타냅니다. 수정된 테이블 및 다이어그램을 저장하는 방법에 대한 자세한 내용은 [Work with Database Diagrams &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+테이블을 수정한 다음 아직 저장하지 않은 경우 테이블 이름의 끝에 별표(*)가 표시되어 변경 내용이 저장되지 않았음을 나타냅니다. 수정된 테이블 및 다이어그램을 저장하는 방법에 대한 자세한 내용은 [데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 **행 선택기** 행 선택기를 클릭하여 테이블에서 데이터베이스 열을 선택할 수 있습니다. 행 선택기는 해당 열이 테이블의 기본 키에 있는 경우 키 기호를 표시합니다. 기본 키에 대한 자세한 내용은 [키 작업(Visual Database Tools)](http://msdn.microsoft.com/en-us/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)을 참조하세요.  
   
@@ -61,19 +61,19 @@ ms.lasthandoff: 06/22/2017
 **관련 테이블** 관계 선은 한 테이블과 다른 테이블 사이에 외래 키 관계가 있음을 나타냅니다. 일 대 다 관계의 경우 외래 키 테이블은 선의 숫자 8 기호 옆에 있는 테이블입니다. 선의 두 끝점이 모두 같은 테이블에 연결되면 반사 관계입니다. 자세한 내용은 [반사 관계 그리기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/draw-reflexive-relationships-visual-database-tools.md)를 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
-[데이터베이스 다이어그램 소유권 이해&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
-[데이터베이스 다이어그램 디자이너에서 탐색&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
+[데이터베이스 다이어그램 디자이너에서 탐색&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/navigate-in-database-diagram-designer-visual-database-tools.md)  
   
-[데이터베이스 다이어그램 디자이너 설정&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
+[데이터베이스 다이어그램 디자이너 설정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/set-up-database-diagram-designer-visual-database-tools.md)  
   
-[이전 버전에서 데이터베이스 다이어그램 업그레이드&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
+[이전 버전에서 데이터베이스 다이어그램 업그레이드&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/upgrade-database-diagrams-from-previous-editions-visual-database-tools.md)  
   
-[데이터베이스 다이어그램 디자이너 열기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
+[데이터베이스 다이어그램 디자이너 열기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-database-diagram-designer-visual-database-tools.md)  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[데이터베이스 다이어그램에서 테이블 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
-[다이어그램 레이아웃 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램에서 테이블 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-tables-in-database-diagram-visual-database-tools.md)  
+[다이어그램 레이아웃 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-diagram-layout-visual-database-tools.md)  
   
 

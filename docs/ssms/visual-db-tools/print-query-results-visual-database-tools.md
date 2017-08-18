@@ -19,15 +19,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e64df57000934aca3d532b34a46c799e4a74e542
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="print-query-results-visual-database-tools"></a>쿼리 결과 인쇄(Visual Database Tools)
-쿼리 결과를 인쇄하려면 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)의 내용을 워드 프로세서 프로그램 같은 다른 Windows 프로그램에 복사한 다음 서식을 지정하여 인쇄합니다.  
+쿼리 결과를 인쇄하려면 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md) 의 내용을 워드 프로세서 프로그램 같은 다른 Windows 프로그램에 복사한 다음 서식을 지정하여 인쇄합니다.  
   
 쿼리 및 뷰 디자이너는 탭을 열과 캐리지 리턴 사이의 구분 기호로 사용하고 줄 바꿈 문자를 행 사이의 구분 기호로 사용하여 클립보드에 쿼리 결과를 넣습니다.  
   
@@ -44,6 +44,6 @@ ms.lasthandoff: 06/22/2017
 5.  결과에 서식을 지정하고 인쇄합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 관련 기본 작업 수행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

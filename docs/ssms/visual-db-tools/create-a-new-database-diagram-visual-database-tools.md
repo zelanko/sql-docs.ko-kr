@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f057c7af427ba69ff5b6253ae0d3c7e33ce435aa
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-a-new-database-diagram-visual-database-tools"></a>새 데이터베이스 다이어그램 만들기(Visual Database Tools)
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 새 데이터베이스 다이어그램이 완성될 때까지 테이블 추가 또는 삭제, 기존 테이블 수정 및 테이블 관계 변경 작업을 계속 수행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
-[데이터베이스 다이어그램 소유권 이해&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 소유권 이해&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/understand-database-diagram-ownership-visual-database-tools.md)  
   
 

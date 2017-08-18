@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 30a1677cec766fd17fb80447548341fc73f99edc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>검색 조건 지정(Visual Database Tools)
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 쿼리 및 뷰 디자이너는 WHERE 절을 추가하거나 수정하여 [SQL 창](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) 에서 SQL 문을 업데이트합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[검색 값 입력 규칙&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
-[검색 조건 지정&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[검색 값 입력 규칙&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
+[검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 

@@ -17,11 +17,11 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6d85a1b59656222cf07338d2eb98925e30a5c658
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>중첩 AUTO 모드 쿼리를 사용하여 형제 생성
@@ -169,7 +169,7 @@ FOR XML AUTO, TYPE
     FOR XML AUTO, TYPE ) as T(XmlCol)  
     ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [중첩 FOR XML 쿼리 사용](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   

@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b88b6ec8c86c16709b9fd22f1ef93f0c32b4f10c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>전체 텍스트 인덱스 열 대화 상자(Visual Database Tools)
@@ -47,6 +47,6 @@ ms.lasthandoff: 06/22/2017
 **통계 의미 체계** 를 선택하기 전에 **언어**를 선택했으며 선택한 언어에 연결된 의미 체계 언어 모델이 없으면 **통계 의미 체계** 확인란은 사용할 수 없습니다. **언어** 를 선택하기 전에 **통계 의미 체계**를 선택한 경우 드롭다운 콤보 상자에서 사용할 수 있는 언어가 의미 체계 언어 모델에서 지원하는 언어로 제한됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[전체 텍스트 인덱스 대화 상자&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
+[전체 텍스트 인덱스 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/full-text-index-dialog-box-visual-database-tools.md)  
   
 

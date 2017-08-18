@@ -27,11 +27,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e03cd3190e9705650199c35c18afb8c201eb100
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="operators"></a>연산자
@@ -89,7 +89,7 @@ ms.lasthandoff: 06/22/2017
     **net send** 명령을 사용하여 운영자에게 메시지를 보냅니다. **net send**에서는 네트워크 메시지의 수신자(컴퓨터나 사용자)를 지정합니다.  
   
     > [!NOTE]  
-    > **net send** 명령은 Microsoft Windows MessengeR을 사용합니다. 경고를 성공적으로 보내려면 이 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 실행 중인 컴퓨터와 운영자가 사용하는 컴퓨터에서 모두 실행되어야 합니다.  
+    > **net send** 명령은 Microsoft Windows Messenger를 사용합니다. 경고를 성공적으로 보내려면 이 서비스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 가 실행 중인 컴퓨터와 운영자가 사용하는 컴퓨터에서 모두 실행되어야 합니다.  
   
 ## <a name="alerting-and-fail-safe-operators"></a>경고 알림 및 유사 시 대기 운영자  
 경고에 응답하여 알림을 받을 운영자를 선택할 수 있습니다. 또한 경고를 예약하여 운영자가 교대로 알림을 받도록 지정할 수도 있습니다. 예를 들어 운영자 A는 월, 수, 금에 발생하는 경고에 대한 알림을 받고 운영자 B는 화, 목, 토에 발생하는 경고에 대한 알림을 받으며  
@@ -123,7 +123,7 @@ ms.lasthandoff: 06/22/2017
 |-|-|  
 |**태스크**|**항목**|  
 |운영자 만들기 관련 태스크|[운영자 만들기](../../ssms/agent/create-an-operator.md)<br /><br />[Designate a Fail-Safe Operator](../../ssms/agent/designate-a-fail-safe-operator.md)|  
-|알림 할당 관련 태스크|[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[경고에 대한 응답 정의&amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification(Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)|  
+|알림 할당 관련 태스크|[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)<br /><br />[경고에 대한 응답 정의&#40;SQL Server Management Studio&#41;](../../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md)<br /><br />[sp_add_notification(Transact-SQL)](http://msdn.microsoft.com/en-us/0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd)<br /><br />[운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)|  
   
 ## <a name="see-also"></a>참고 항목  
 [데이터베이스 메일](http://msdn.microsoft.com/en-us/9e4563dd-4799-4b32-a78a-048ea44a44c1)  

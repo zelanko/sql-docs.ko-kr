@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: b9bb3d6b6f64dae6aa3fc79494fd85730b380daf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-dialog-box-visual-database-tools"></a>저장 대화 상자(Visual Database Tools)
@@ -38,6 +38,6 @@ ms.lasthandoff: 06/22/2017
 **다른 이름으로 저장** 대화 상자를 표시합니다. 이 대화 상자에서는 테이블이 나열된 텍스트 파일의 저장 위치를 지정할 수 있습니다. 이 파일에는 변경 내용의 영향을 받는 테이블 목록이 기록됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[테이블 디자인&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
+[테이블 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-tables-visual-database-tools.md)  
   
 

@@ -16,11 +16,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5f285297c725a85eedcbb225b7180ade91728beb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>분할 열 목록 대화 상자(Visual Database Tools)
@@ -36,6 +36,6 @@ ms.lasthandoff: 06/22/2017
 분할 함수를 적용할 열을 선택하는 데 사용할 수 있는 드롭다운 목록을 제공합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[테이블 속성&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[테이블 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   
 

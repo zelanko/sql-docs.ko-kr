@@ -18,11 +18,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f12c61a883c8a0c190a13e4b2ae35ff7188156ff
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="remove-tables-from-database-diagrams-visual-database-tools"></a>데이터베이스 다이어그램에서 테이블 제거(Visual Database Tools)
@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
 이 테이블은 다이어그램에서 제거되지만 데이터베이스에는 계속 남아 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
 [방법: 데이터베이스에서 테이블 삭제(Visual Database Tools)](http://msdn.microsoft.com/en-us/ca6aa3e9-9885-44c3-bafc-aec441fd97ec)  
   
 

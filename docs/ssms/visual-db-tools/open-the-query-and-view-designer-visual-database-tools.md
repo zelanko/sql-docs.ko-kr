@@ -19,11 +19,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6d4b09ac45528392c55f47ab7b62ed7881a1ebc9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="open-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너 열기(Visual Database Tools)
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
 3.  해당 쿼리 문을 강조 표시하고 강조 표시된 영역을 마우스 오른쪽 단추로 클릭한 다음 **편집기에서 쿼리 디자인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
-[쿼리 및 뷰 디자이너 도구&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
   
 

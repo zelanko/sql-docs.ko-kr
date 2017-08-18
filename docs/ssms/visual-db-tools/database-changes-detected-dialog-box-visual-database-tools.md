@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3d2e7bb8486f588c055cc6eee890bf533e726fb4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="database-changes-detected-dialog-box-visual-database-tools"></a>데이터베이스 변경 감지 대화 상자(Visual Database Tools)
@@ -48,7 +48,7 @@ ms.lasthandoff: 06/22/2017
 **다른 이름으로 저장** 대화 상자가 나타납니다. 이 대화 상자를 사용하면 데이터베이스 변경 내용 목록이 포함된 텍스트 파일의 위치를 지정할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[수정된 데이터베이스와 데이터베이스 다이어그램 일치&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)  
-[다중 사용자 환경&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
+[수정된 데이터베이스와 데이터베이스 다이어그램 일치&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/reconcile-a-database-diagram-with-a-modified-database-visual-database-tools.md)  
+[다중 사용자 환경&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/multiuser-environments-visual-database-tools.md)  
   
 

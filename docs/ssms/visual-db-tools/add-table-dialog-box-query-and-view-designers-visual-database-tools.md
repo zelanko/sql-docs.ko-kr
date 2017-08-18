@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f65c7dfb218052015e9cbc818b2829faca5cf4ae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>테이블 추가 대화 상자(쿼리 및 뷰 디자이너)(Visual Database Tools)
@@ -50,6 +50,6 @@ ms.lasthandoff: 06/22/2017
 선택한 하나 이상의 항목을 추가합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

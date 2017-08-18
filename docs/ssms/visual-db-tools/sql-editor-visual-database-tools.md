@@ -25,11 +25,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: dd01c244e33751b49c4bd811a879eedd500be957
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sql-editor-visual-database-tools"></a>SQL 편집기(Visual Database Tools)
@@ -53,6 +53,6 @@ SQL 편집기는 다음과 같이 다양하고 유용한 SQL 텍스트 편집 �
 SQL 문을 편집할 때 특정 Transact-SQL 문은 얇은 선으로 둘러싸인 상자 안에 들어갑니다. 이로 인해 SQL 코드를 명령 섹션으로 분할하고, 쿼리 디자이너를 사용하여 그래픽으로 디자인할 수 있는 SQL 문 블록을 식별할 수 있습니다. 쿼리 디자이너 사용에 대한 자세한 내용은 [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

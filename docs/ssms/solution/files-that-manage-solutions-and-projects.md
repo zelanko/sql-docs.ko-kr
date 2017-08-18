@@ -22,11 +22,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ae75460f02779117b9c6061ab676795796215c09
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="files-that-manage-solutions-and-projects"></a>솔루션 및 프로젝트 관리 파일
@@ -56,8 +56,8 @@ ms.lasthandoff: 06/22/2017
 [인코딩으로 파일 관리](../../ssms/solution/manage-files-with-encoding.md)  
 [기타 파일](../../ssms/solution/miscellaneous-files.md)  
 [솔루션 탐색기](../../ssms/solution/solution-explorer.md)  
-[솔루션&amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[프로젝트&amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[솔루션&#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [솔루션 탐색기 원본 제어](https://msdn.microsoft.com/en-us/library/ms173879.aspx)  
   
 

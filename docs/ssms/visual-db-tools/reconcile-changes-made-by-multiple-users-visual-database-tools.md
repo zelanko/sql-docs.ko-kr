@@ -18,18 +18,18 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 65aad0bfb2f6ce9e9ce5987ea47d4858d54c6e9e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>여러 사용자가 변경한 내용 조정(Visual Database Tools)
 다중 사용자 환경에서는 동일한 개체를 여러 사용자가 동시에 변경할 수 있습니다. 이러한 상황은 테이블 또는 데이터베이스 다이어그램 디자이너에서 개체 구조에 대한 작업을 수행 중일 때 발생할 수도 있고, 쿼리 및 뷰 디자이너의 결과 창에 반환된 결과의 값에 대해 발생할 수도 있습니다. 이 경우 충돌이 발생할 수 있으므로 적절한 해결책이 필요합니다.  
   
 ## <a name="conflicts-in-the-table-or-database-diagram-designers"></a>테이블 또는 데이터베이스 다이어그램 디자이너의 충돌  
-예를 들어, 테이블 디자이너에서 현재 사용자가 작업 중인 것과 동일한 테이블이나 관련 테이블을 다른 사용자가 삭제하거나 이름을 변경할 수 있습니다. 테이블을 저장하려고 하면 [Database Changes Detected Dialog Box &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 가 표시되어 사용자가 테이블을 연 이후 데이터베이스가 업데이트되었음을 알려 줍니다.  
+예를 들어, 테이블 디자이너에서 현재 사용자가 작업 중인 것과 동일한 테이블이나 관련 테이블을 다른 사용자가 삭제하거나 이름을 변경할 수 있습니다. 테이블을 저장하려고 하면 [데이터베이스 변경 감지 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md) 가 표시되어 사용자가 테이블을 연 이후 데이터베이스가 업데이트되었음을 알려 줍니다.  
   
 또한 이 대화 상자에는 테이블을 저장하는 경우 영향을 받는 데이터베이스 개체의 목록이 표시됩니다. 이 때 사용자는 다음 동작 중 하나를 수행할 수 있습니다.  
   
@@ -63,6 +63,6 @@ ms.lasthandoff: 06/22/2017
     이 경우 변경 내용을 데이터베이스에 커밋할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 변경 감지 대화 상자&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
+[데이터베이스 변경 감지 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/database-changes-detected-dialog-box-visual-database-tools.md)  
   
 

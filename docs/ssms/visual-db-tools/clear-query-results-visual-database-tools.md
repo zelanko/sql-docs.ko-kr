@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3da9966a033a4cf1ad697c27de5a92a33c02206b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="clear-query-results-visual-database-tools"></a>쿼리 결과 지우기(Visual Database Tools)
@@ -40,8 +40,8 @@ ms.lasthandoff: 06/22/2017
     결과 창을 지울 때 쿼리가 실행 중이면 쿼리 및 뷰 디자이너가 쿼리를 중지합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 실행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
-[쿼리 중지&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
-[결과 창에서 데이터 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[쿼리 실행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
+[쿼리 중지&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
+[결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   
 

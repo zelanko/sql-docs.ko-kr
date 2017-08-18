@@ -17,15 +17,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 233790dcaeb47f6803e8eb7f586321c880f2a3e5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="general-user-interface-elements"></a>일반 사용자 인터페이스 요소
-**편집기**, **속성** 창 및 **도구 상자**는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]의 기본 요소 중 일부입니다.  
+**편집기**, **속성** 창 및 **도구 상자** 는 [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]의 기본 요소 중 일부입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
 [정보 대화 상자](../ssms/about-dialog-box.md)  
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 [외부 도구 대화 상자](../ssms/external-tools-dialog-box.md)  
 **의 일부가 아닌** 도구 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull_md.md)]메뉴에 도구를 추가할 수 있게 합니다.  
   
-[속성 창&amp;#40;Management Studio&amp;#41;](../ssms/properties-window-management-studio.md)  
+[속성 창&#40;Management Studio&#41;](../ssms/properties-window-management-studio.md)  
 편집기 및 디자이너에 있는 선택한 개체의 속성과 이벤트를 볼 수 있게 합니다. 또한 파일, 프로젝트 및 솔루션의 속성을 편집하고 볼 수 있게 합니다. 일부 속성을 속성 창에서 편집할 수 있습니다.  
   
 [도구 상자 사용](../ssms/use-the-toolbox.md)  

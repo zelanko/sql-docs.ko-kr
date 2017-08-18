@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c6485a4d7020bf63b4650ec70d6eb20c9ccf714f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="delete-table-dialog-box-visual-database-tools"></a>테이블 삭제 대화 상자(Visual Database Tools)
@@ -33,6 +33,6 @@ ms.lasthandoff: 06/22/2017
 > DELETE 쿼리는 테이블의 전체 행을 제거합니다. 따라서 개별 데이터 열의 값을 지우려면 UPDATE 쿼리를 사용해야 합니다. 테이블 정의에서 열을 삭제하거나 테이블 자체를 삭제하려면 테이블 디자이너를 사용하거나 해당 데이터베이스에 대한 데이터베이스 디자인 도구를 사용해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리에서 테이블 제거&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
+[쿼리에서 테이블 제거&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/remove-tables-from-queries-visual-database-tools.md)  
   
 

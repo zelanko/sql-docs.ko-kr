@@ -16,11 +16,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 16603cfdcadc378098bd804b36af1c4223ea3078
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="check-constraint-dialog-box-visual-database-tools"></a>CHECK 제약 조건 대화 상자(Visual Database Tools)
@@ -68,6 +68,6 @@ CHECK 제약 조건에 대해 설명합니다. 속성 필드에 직접 텍스트
   
 ## <a name="see-also"></a>참고 항목  
 [제약 조건 작업(Visual Database Tools)](http://msdn.microsoft.com/en-us/637098af-2567-48f8-90f4-b41df059833e)  
-[인덱스 - 키 대화 상자&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
+[인덱스 - 키 대화 상자&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/indexes-keys-dialog-box-visual-database-tools.md)  
   
 

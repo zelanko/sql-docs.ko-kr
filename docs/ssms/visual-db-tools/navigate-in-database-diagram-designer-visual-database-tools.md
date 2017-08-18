@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 6474761a4aaf0d0e3d8cea032b54be39ed759a92
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="navigate-in-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너에서 탐색(Visual Database Tools)
@@ -42,6 +42,6 @@ ms.lasthandoff: 06/22/2017
 |확대/축소|Ctrl+더하기 키(+) 또는 빼기 키(-)|  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 다이어그램 디자인&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 디자인&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-database-diagrams-visual-database-tools.md)  
   
 

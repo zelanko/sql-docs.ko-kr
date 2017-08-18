@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 55372985e2d5ae739e2e03fd07c3c02e5cbeb97f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>테이블 만들기 대화 상자(Visual Database Tools)
@@ -36,8 +36,8 @@ ms.lasthandoff: 06/22/2017
 > [!NOTE]  
 > 만들 테이블의 속성을 변경하려는 경우 쿼리를 실행하기 전에 **속성** 창에서 이러한 테이블의 속성을 변경할 수 있습니다. 자세한 내용은 [쿼리 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
-[테이블 만들기 쿼리 만들기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
-[쿼리 형식&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
+## <a name="see-also"></a>관련 항목:  
+[테이블 만들기 쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
+[쿼리 형식&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   
 

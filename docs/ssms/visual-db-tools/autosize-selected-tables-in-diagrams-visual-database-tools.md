@@ -19,11 +19,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 85956b6ed09b3ba2e68880a8704dc3a545a3176e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="autosize-selected-tables-in-diagrams-visual-database-tools"></a>다이어그램에서 선택한 테이블 크기 자동 조정(Visual Database Tools)
@@ -36,6 +36,6 @@ ms.lasthandoff: 06/22/2017
 2.  선택한 테이블을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **선택한 테이블 크기 자동 조정**을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

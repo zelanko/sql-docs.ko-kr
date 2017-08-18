@@ -18,11 +18,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a44398daffbf1ab25f52430d2b27a0e822427db1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>수동으로 자체 조인 만들기(Visual Database Tools)
@@ -122,14 +122,14 @@ Cheryl Carson       Abraham Bennet
   
 4.  속성 창에서 **조인 조건 및 형식** 을 클릭하고 속성의 오른쪽에 있는 **줄임표(...)** 를 클릭합니다.  
   
-5.  필요한 경우 [조인 대화 상자](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md)에서 기본 키 사이의 비교 연산자를 변경합니다. 예를 들어, 연산자를 (<)보다 작음으로 변경할 수 있습니다.  
+5.  필요한 경우 [조인 대화 상자](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) 에서 기본 키 사이의 비교 연산자를 변경합니다. 예를 들어, 연산자를 (<)보다 작음으로 변경할 수 있습니다.  
   
 6.  테이블 또는 테이블 반환 개체의 첫 번째 일치 항목에서 기본 조인 열의 이름을 끌어서 두 번째 일치 항목의 해당 열에 놓는 방법을 통해 추가 조인 조건(예: authors.zip = authors1.zip)을 만듭니다.  
   
 7.  출력 열, 검색 조건, 정렬 순서 등의 기타 쿼리 옵션을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[자체 조인 자동으로 만들기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
-[조인을 사용한 쿼리&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[자체 조인 자동으로 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
+[조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   
 

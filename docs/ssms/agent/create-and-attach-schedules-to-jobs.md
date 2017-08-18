@@ -22,11 +22,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5c104e70fc7b2e7065f9aa43a16aac88707391ea
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="create-and-attach-schedules-to-jobs"></a>일정을 만들고 작업에 연결
@@ -92,7 +92,7 @@ CPU 유휴 조건을 CPU 사용이 지정된 시간 동안 그 이하로 유지�
 |**Description**|**항목**|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업에 대한 예약을 만드는 방법에 대해 설명합니다.|[Create a Schedule](../../ssms/agent/create-a-schedule.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 에이전트 작업을 예약하는 방법에 대해 설명합니다.|[작업 예약](../../ssms/agent/schedule-a-job.md)|  
-|서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다.|[CPU 유휴 시간 및 기간 설정&amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
+|서버의 CPU 유휴 상태 판단 기준을 정의하는 방법에 대해 설명합니다.|[CPU 유휴 시간 및 기간 설정&#40;SQL Server Management Studio&#41;](../../ssms/agent/set-cpu-idle-time-and-duration-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>관련 항목:  
 [sp_help_jobschedule](http://msdn.microsoft.com/en-us/2cded902-9272-4667-ac4b-a4f95a9f008e)  

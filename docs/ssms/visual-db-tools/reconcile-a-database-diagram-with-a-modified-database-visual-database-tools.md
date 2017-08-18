@@ -20,11 +20,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 38ef2e93566791eeb1963b02792942ec5450031d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>수정된 데이터베이스와 데이터베이스 다이어그램 일치(Visual Database Tools)
@@ -56,6 +56,6 @@ ms.lasthandoff: 06/22/2017
 4.  다이어그램을 다시 엽니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[데이터베이스 다이어그램 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
+[데이터베이스 다이어그램 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-database-diagrams-visual-database-tools.md)  
   
 

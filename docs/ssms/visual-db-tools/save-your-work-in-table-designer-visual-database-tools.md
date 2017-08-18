@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5643c68421bd731f9615a7e54e3e24d9f5237b37
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>테이블 디자이너에서 작업 내용 저장(Visual Database Tools)
@@ -46,6 +46,6 @@ ms.lasthandoff: 06/22/2017
 > 테이블, 뷰, 저장 프로시저 등과 같이 열려 있는 모든 항목에 대한 변경 내용을 저장하려면 **파일** 메뉴에서 **모두 저장**을 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[테이블 속성&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
+[테이블 속성&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   
 

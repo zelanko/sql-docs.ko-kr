@@ -21,15 +21,15 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ed3ab23388672cda824ad3ccce6e1275908c028d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="edit-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 행 편집(Visual Database Tools)
-대부분의 경우 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에서 데이터를 편집할 수 있습니다. 데이터 변경에 대한 자세한 내용은 [결과 업데이트 규칙&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) 및 [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)을 참조하세요.  
+대부분의 경우 [결과 창](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)에서 데이터를 편집할 수 있습니다. 데이터 변경에 대한 자세한 내용은 [결과 업데이트 규칙&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) 및 [결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)에서 데이터를 편집할 수 있습니다.  
   
 ### <a name="to-edit-data-in-the-results-pane"></a>결과 창에서 데이터를 편집하려면  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 06/22/2017
 4.  행에서 포커스를 옮겨 변경 내용을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[결과 창에서 데이터 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[결과 업데이트 규칙&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
+[결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[결과 업데이트 규칙&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md)  
   
 

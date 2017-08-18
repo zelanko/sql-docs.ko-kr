@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8fbfa283615298113db6fd52de97c27f73291d8d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-properties-visual-database-tools"></a>쿼리 속성(Visual Database Tools)
@@ -87,7 +87,7 @@ SQL 문에 대한 설명을 표시합니다. 전체 설명을 보거나 편집�
 뷰에 WITH TIES 절이 포함되도록 지정합니다. WITH TIES는 백분율을 기반으로 하는 ORDER BY 절과 TOP 절이 뷰에 포함되어 있을 경우 유용합니다. 이 옵션을 설정하는 경우 백분율 값이 ORDER BY 절에서 동일한 값을 가진 행 집합의 중간까지만 포함하면 동일한 값을 가진 행을 모두 포함할 수 있도록 뷰가 확장됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 7.0 이상 버전에만 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[매개 변수를 사용하여 쿼리&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[매개 변수를 사용하여 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-parameters-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 

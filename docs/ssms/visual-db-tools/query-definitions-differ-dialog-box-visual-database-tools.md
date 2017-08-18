@@ -18,11 +18,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 630593a904b4fb28e39e94a81e02481c0e6a8e1d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="query-definitions-differ-dialog-box-visual-database-tools"></a>쿼리 정의 다름 대화 상자(Visual Database Tools)
@@ -55,6 +55,6 @@ SQL 창에서 SQL 문을 입력하거나 편집한 다음 다른 창으로 이�
 > 문이 올바르지만 쿼리 및 뷰 디자이너에서 그래픽 방식으로 나타낼 수 없는 경우 다이어그램 창과 조건 창에 이 문이 표현되지 않더라도 문을 실행할 수 있습니다. 예를 들어, 통합 쿼리를 입력한 경우 문을 실행할 수 있지만 다른 창에는 표현되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 및 뷰 디자이너 도구&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
+[쿼리 및 뷰 디자이너 도구&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md)  
   
 

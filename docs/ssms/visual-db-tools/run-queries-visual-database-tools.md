@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c988c7f2cf6128c0ddab4c126d4424aaead11deb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="run-queries-visual-database-tools"></a>쿼리 실행(Visual Database Tools)
@@ -44,7 +44,7 @@ SELECT 쿼리를 만드는 경우 쿼리 결과는 결과 창에 나타납니다
 업데이트, 삽입 원본, 삽입 위치, 삭제 또는 테이블 만들기 쿼리를 만드는 경우 쿼리 및 뷰 디자이너는 쿼리가 적용되는 행의 수를 메시지로 표시합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[결과 창에서 데이터 작업&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
-[쿼리 관련 기본 작업 수행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[결과 창에서 데이터 작업&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
   
 

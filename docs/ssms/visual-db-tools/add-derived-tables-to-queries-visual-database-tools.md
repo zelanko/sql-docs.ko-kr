@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f54dac23686dfedbba3135cac4be5431f2f24300
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>쿼리에 파생 테이블 추가(Visual Database Tools)
@@ -38,9 +38,9 @@ ms.lasthandoff: 06/22/2017
     derivedtbl_*N* 이라는 새 테이블이 추가되고 파생 테이블의 SELECT 문이 쿼리의 FROM 절에 추가됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 관련 기본 작업 수행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[쿼리 만들기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
-[쿼리 열기&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[쿼리 만들기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-queries-visual-database-tools.md)  
+[쿼리 열기&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/open-queries-visual-database-tools.md)  
 [SELECT (Transact-SQL)](http://msdn.microsoft.com/en-us/dc85caea-54d1-49af-b166-f3aa2f3a93d0)  
   
 

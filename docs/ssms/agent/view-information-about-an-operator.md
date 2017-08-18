@@ -21,11 +21,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a747402098366d0bbe387b76938fc5fbde8ed87a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="view-information-about-an-operator"></a>View Information About an Operator
@@ -74,9 +74,9 @@ ms.lasthandoff: 06/22/2017
   
     -   [운영자 속성 - 새 운영자&amp;#40;일반 페이지&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
-    -   [운영자 속성 - 새 운영자&amp;#40;알림 페이지&amp;#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
+    -   [운영자 속성 - 새 운영자&#40;알림 페이지&#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   
-    -   [운영자 속성&amp;#40;기록 페이지&amp;#41;](../../ssms/agent/operator-properties-history-page.md)  
+    -   [운영자 속성&#40;기록 페이지&#41;](../../ssms/agent/operator-properties-history-page.md)  
   
 5.  완료되었으면 **확인**을 클릭합니다.  
   

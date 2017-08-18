@@ -19,11 +19,11 @@ caps.latest.revision: 5
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: a3487f9048571511460bc22b5c0b605592ba74f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="build-database-projects-by-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 프로젝트 빌드
@@ -70,6 +70,6 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>참고 항목  
 [SQL Server Management Studio 사용](../ssms/use-sql-server-management-studio.md)  
 [SQL Server Management Studio에서 쿼리 작성, 분석 및 편집](http://msdn.microsoft.com/en-us/062051e4-4b77-4969-98ae-d2547c24ce3e)  
-[솔루션&amp;#40;SQL Server Management Studio&amp;#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
+[솔루션&#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   
 

@@ -20,11 +20,11 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: c420cccafdda162f8acee678536b4419270c5777
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>솔루션에 기존 프로젝트 추가
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 > 다중 개발자 환경에서 공유 디렉터리의 기존 프로젝트를 추가하려면 먼저 자신의 변경 내용이 다른 개발자의 변경 내용을 덮어쓰거나 프로젝트에 좋지 않은 영향을 주지는 않는지 확인해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[프로젝트&amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
-[솔루션&amp;#40;SQL Server Management Studio&amp;#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
+[프로젝트&#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
+[솔루션&#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   
 

@@ -16,15 +16,15 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0671c3815de4c20aca3eab4d30e038a094409f07
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>쿼리에서 여러 열 정렬(Visual Database Tools)
-[조건 창](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)에서 **정렬 순서** 열을 사용하면 열이 사용되는 순서를 지정하여 데이터를 정렬할 수 있습니다.  
+**조건 창** 에서 [정렬 순서](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md)열을 사용하면 열이 사용되는 순서를 지정하여 데이터를 정렬할 수 있습니다.  
   
 ### <a name="to-sort-query-results-by-more-than-one-column"></a>두 개 이상의 열을 기준으로 쿼리 결과를 정렬하려면  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 06/22/2017
     결과를 정렬하는 데 사용할 각 열에 대해 위 과정을 반복합니다.  
   
 ## <a name="see-also"></a>참고 항목  
-[쿼리 결과 정렬 및 그룹화&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
-[쿼리 결과 요약&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
+[쿼리 결과 정렬 및 그룹화&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/sort-and-group-query-results-visual-database-tools.md)  
+[쿼리 결과 요약&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/summarize-query-results-visual-database-tools.md)  
   
 

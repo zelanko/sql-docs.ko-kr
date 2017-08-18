@@ -23,11 +23,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 43805e99f16d522e7b9a82e1af4514ad3c8fa043
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="work-with-data-in-the-results-pane-visual-database-tools"></a>결과 창에서 데이터 작업(Visual Database Tools)
@@ -124,7 +124,7 @@ null을 사용하는 대신 빈 공백을 입력하려면 기존 텍스트를 �
 -   경우에 따라 전체 자릿수와 소수 자릿수가 유지되지 않을 수 있습니다. 예를 들어 결과 창에서 전체 자릿수를 27까지 지원하는데 데이터의 전체 자릿수가 이보다 큰 형식인 경우 이 데이터는 초과 부분이 잘리거나 *<Unable to read data>*으로 표시될 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[쿼리 관련 기본 작업 수행&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
-[검색 조건 지정&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
+[쿼리 관련 기본 작업 수행&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  
+[검색 조건 지정&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   
 
