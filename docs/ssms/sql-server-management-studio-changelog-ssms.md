@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Management Studio - 변경 로그(SSMS) | Microsoft 문서"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,17 +13,152 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 470e6c83318eaf8eb579d053f65b5353862eb4c7
-ms.openlocfilehash: 23e304e52967d5d16672872d8d5712f26ef8c610
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 5fa4b384ee88f85c681f7600ebade1a0e5b5d17e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
 
-## <a name="ssms-171-release"></a>SSMS 17.1 릴리스
+이 문서에서는 SSMS의 현재 버전과 이전 버전에 대한 업데이트, 향상 및 버그 수정에 대한 세부 정보를 제공합니다. [아래의 이전 SSMS 버전](#previous-ssms-releases)을 다운로드하세요.
+
+## <a name="ssms-172download-sql-server-management-studio-ssmsmd"></a>[SSMS 17.2](download-sql-server-management-studio-ssms.md)
+
+일반 공급 | 빌드 번호: 14.0.17177.0
+
+### <a name="enhancements"></a>개선 사항
+
+- MFA(Multi-Factor Authentication)
+  - MFA(Multi-Factor Authentication)를 지원하는 UA(유니버설 인증)에 대한 다중 사용자 Azure AD 인증
+  - 다중 사용자 인증을 지원하기 위해서 새 사용자 자격 증명 입력 필드가 MFA를 지원하는 유니버설 인증에 대해 추가되었습니다.
+- 이제 연결 대화 상자는 다음 5개 인증 방법을 지원합니다.
+  - Windows 인증
+  - SQL Server 인증(SQL Server Authentication)
+  - Active Directory - MFA 지원을 포함한 유니버설 인증
+  - Active Directory - 암호
+  - Active Directory - 통합
+
+- MFA를 지원하는 유니버설 인증을 사용하여 DACFx 마법사에 대한 데이터베이스 내보내기/가져오기를 사용할 수 있습니다.
+- API 지원에 대해서는 [IUniversalAuthProvider 인터페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)를 참조하세요.
+- MFA를 지원하는 Azure AD 유니버설 인증에 사용되는 ADAL 관리 라이브러리가 버전 3.13.9로 업그레이드되었습니다.
+- 또한 SQL Database 및 SQL Data Warehouse에 대한 Azure AD 관리자 설정을 지원하는 새 CLI 인터페이스가 제공되었습니다.
+
+ Active Directory 인증 방법에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) 및 [SQL Server Management Studio에 대한 Azure SQL Database 다단계 인증 구성](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)을 참조하세요.
+
+- 출력 창에는 개체 탐색기 노드를 확장하는 동안 실행되는 쿼리에 대한 항목이 있습니다.
+- Azure SQL Database에 대해 뷰 디자이너 사용 설정
+- SSMS의 개체 탐색기에서 개체를 스크립팅하기 위한 기본 스크립팅 옵션이 변경되었습니다.
+  - 이전에는 생성된 스크립트의 대상을 SQL Server의 최신 버전(현재 SQL Server 2017)으로 지정하는 것이 새 설치에 대한 기본값이었습니다.
+  - SSMS 17.2에서는 *스크립트 설정을 원본과 일치* 옵션이 새로 추가되었습니다. *True*로 설정하면 생성된 스크립트의 대상은 스크립팅되는 개체가 있는 서버와 동일한 버전, 엔진 유형 및 엔진 버전이 됩니다.
+  - *스크립트 설정을 원본과 일치* 값은 기본적으로 *True*로 설정되므로 새 SSMS 설치의 기본값은 자동으로 항상 개체를 원본 서버와 동일한 대상으로 스크립팅이 됩니다.
+  - *스크립트 설정을 원본과 일치* 값을 *False*로 설정하면 기본 스크립팅 대상 옵션이 사용하도록 설정되어 이전과 같이 작동합니다.
+    - 또한 모든 스크립팅 옵션이 자체 섹션인 *버전 옵션*으로 이동하였습니다. 따라서 더 이상 *일반 스크립팅 옵션* 아래에 없습니다.
+
+- “URL에서 복원”에서 국가 클라우드에 대한 지원 추가
+- 이제 QueryStoreUI 보고서는 sys.query_store_runtime_stats에서 추가 메트릭(RowCount, DOP, CLR Time 등)을 지원합니다.
+- Azure SQL Database에 IntelliSense 지원
+    - https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
+- 보안: 연결 대화 상자가 기본적으로 Azure SQL DB 연결을 위해 신뢰하는 서버 인증서 및 요청 암호화에 연결되지 않음
+- Linux에서 SQL Server에 대한 지원과 관련된 일반 개선 사항:
+ - 데이터베이스 메일 노드의 재등장
+ - 경로와 관련된 기타 문제 해결
+ - 더욱 안정적인 작업 모니터
+ - [연결 속성] 대화 상자에 정확한 플랫폼 표시
+- 성능 대시보드 서버 보고서를 기본 보고서로 제공:
+  - SQL Server 2008 이상의 버전에 연결할 수 있습니다.
+  - 누락된 인덱스 하위 보고서는 점수 매기기를 사용하여 가장 유용한 인덱스를 식별하는 데 도움을 줍니다.
+  - 기록 대기 상태 하위 보고서는 대기 범주를 집계합니다. 유휴 및 중지 대기는 기본적으로 필터링됩니다.
+  - 새 기록 래치 하위 보고서.
+- 실행 계획 노드 검색을 사용하여 계획 속성을 검색할 수 있습니다. 테이블 이름과 같은 연산자 속성을 쉽게 찾을 수 있습니다. 계획을 볼 때 이 옵션을 사용하려면
+  - 계획을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 [노드 찾기] 옵션을 클릭합니다.
+  - CTRL+F 사용
+
+
+### <a name="analysis-services-as"></a>AS(Analysis Services)
+
+- SSMS의 AS Azure 모델에서 메일 주소가 없는 사용자에 대한 새 AAD 역할 멤버 선택
+
+### <a name="integration-services-is"></a>Integration Services(IS)
+
+- SSIS용 실행 보고서에 새 열("실행 수") 추가
+
+### <a name="known-issues-in-this-release"></a>이 릴리스의 알려진 문제:
+
+- “Active Directory - MFA를 지원하는 유니버설” 인증을 사용하는 쿼리 창을 한 시간 동안 연 후 쿼리를 실행하면 다음과 유사한 오류가 발생할 수 있습니다.
+
+   `Msg 0, Level 11, State 0, Line 0
+The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of ConnectRetryCount to increase the number of recovery attempts.`
+
+   쿼리를 다시 실행하면 오류를 통과하고 성공하게 됩니다.
+
+- MFA를 지원하는 유니버설 인증을 사용하는 Azure AD 인증에는 다른 SSMS 기능이 지원되지 않습니다.
+  - **새 테이블/뷰** 디자이너는 이전 스타일 로그인 프롬프트를 표시하며 Azure AD 인증을 위해 작동하지 않습니다.
+  - **상위 200개의 행 편집** 기능은 Azure AD 인증을 지원하지 않습니다.
+  - **등록된 서버** 구성 요소는 Azure AD 인증을 지원하지 않습니다.
+  - **데이터베이스 엔진 튜닝 관리자**는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. *예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다.* *데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다. (DTAClient)*.
+
+**AS**
+
+- SSAS의 개체 탐색기는 AS Azure 연결 속성에 Windows 인증 사용자 이름을 표시하지 않습니다.
+
+### <a name="bug-fixes"></a>버그 수정
+
+- 텍스트 형식의 쿼리 결과를 인쇄할 때의 문제 해결.  https://connect.microsoft.com/SQLServer/feedback/details/3055225/
+- SQL Azure 데이터베이스에서 개체 삭제를 스크립팅할 때 SSMS가 테이블 및 그러한 개체를 잘못 끌어오는 문제 해결.
+- “하나 이상의 구성 요소를 찾을 수 없습니다. 응용 프로그램을 다시 설치하세요.”와 같은 오류로 SSMS가 가끔 시작을 거부하는 문제 해결.
+- SSMS UI의 SPID가 부실하고 동기화되지 않는 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/1898875
+- SSMS(자동) 설치 프로그램에서 /passive 인수가 /quiet으로 처리되는 문제 해결.
+- SSMS를 시작할 때 가끔 “개체 참조가 개체의 인스턴스로 설정되지 않았습니다.” 오류가 발생하는 문제 해결. http://connect.microsoft.com/SQLServer/feedback/details/3134698
+- "데이터 압축 마법사"의 그래프 테이블에서 ‘Calculate’를 누를 때 SSMS가 충돌을 일으켰던 문제 해결.
+- 테이블에 대한 인덱스를 마우스 오른쪽 단추로 클릭할 때(느린 인터넷 연결을 통해) 발생하는 성능 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3120783
+- SSMS가 서버의 백업 파일을 대/소문자 구분 데이터 정렬로 열거하지 못하는 문제 해결. http://connect.microsoft.com/SQLServer/feedback/details/3134787 및 https://connect.microsoft.com/SQLServer/feedback/details/3137000
+- 실행 계획 및 실행 계획 비교와 관련된 각종 수정 사항
+- SSMS를 실행하는 컴퓨터에 SQL Server를 설치하지 않은 경우 사용자가 [연결] 대화 상자를 이용하여 연결에 사용할 “네트워크 프로토콜”을 지정할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3134997
+- 일부 SSMS 대화 상자가 “임의의” 위치에서 나타나는 다중 모니터 구성에 대한 지원 향상. 작업 대화 상자 또는 속성 시트를 종료한 후 그 위치를 기억할 수 있도록 “SQL Server 개체 탐색기 | 명령” 사용자 설정 아래에 새 옵션인 “작업 대화 상자” 추가. https://connect.microsoft.com/SQLServer/feedback/details/889169, https://connect.microsoft.com/SQLServer/feedback/details/1158271, https://connect.microsoft.com/SQLServer/feedback/details/3135260 
+- SSMS가 암호화된 Azure SQL DB에 대한 DB 속성을 변경할 수 없었던 문제 해결.
+- “실행 후 결과 삭제” 옵션 개선. https://connect.microsoft.com/SQLServer/feedback/details/1196581
+- 관리자가 아닌 Azure 구독에 사용자가 액세스할 수 없는 문제 개선/해결.
+- “데이터베이스 복원” 마법사가 원본 데이터베이스 선택에 관계없이 OE에서 선택한 대상 데이터베이스를 유지하도록 개선. https://connect.microsoft.com/SQLServer/feedback/details/3118581
+- 새롭게 잘못 추가된 “고유하게 컴파일된 저장 프로시저”를 개체 탐색기가 정렬하지 않았던 문제 해결. http://connect.microsoft.com/SQLServer/feedback/details/3133365
+- “상위 n개 행 선택”에 “TOP” 절이 포함되지 않았던 문제 해결. Azure SQLDW의 경우. https://connect.microsoft.com/SQLServer/feedback/details/3133551 및 https://connect.microsoft.com/SQLServer/feedback/details/3135874
+- QueryStoreUI: 사용자 지정이 아닌 시간 간격이 올바로 작동하지 않는 보고서가 있었던 문제 해결.
+- 항상 암호화:
+    - 새 CMK 대화 상자에서 AKV 권한 상태에 대한 메시징 기능 개선
+    - 긴 이름을 가진 CEK를 보다 쉽게 구분할 수 있도록 CEK 드롭다운에 도구 설명 추가
+    - 일부 CNG 키 저장소 공급자가 항상 암호화를 위한 [새 열 마스터 키] 대화 상자에 표시되지 않는 문제 해결
+- SSMS 연결에 대해 일관성 없는 “응용 프로그램 이름” 해결. http://connect.microsoft.com/SQLServer/feedback/details/3135115
+- SSMS가 SQL Azure에 대한 정확한 스크립트(DATA_COMPRESSIONS 옵션을 포함한 테이블 및 인덱스)를 생성하지 않았던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133148
+- 사용자가 빠른 실행을 위해 CTRL+Q 바로 가기를 사용할 수 없었던 문제 해결(참고: 이제 쿼리 편집기에서 "IntelliSense 사용" 옵션을 설정/해제하기 위한 새 키 바인딩은 CTRL+B, CTRL+I). https://connect.microsoft.com/SQLServer/feedback/details/3131968
+- "데이터베이스 복원"에서 사용자 지정 도메인이 정의된 계정을 가진 구독에서 저장소 계정을 선택하려고 할 때 SSMS가 예외를 throw했던 문제 해결
+- "데이터베이스 다이어그램"에서 SSMS가 “인덱스가 배열의 범위 밖에 있습니다.” 오류를 throw하고 사용자가 "테이블 보기"를 표준이 아닌 것으로 변경할 수 없었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3133792 및 http://connect.microsoft.com/SQLServer/feedback/details/3135326
+- "URL에 백업/복원"에서 SSMS가 클래식 저장소 계정을 열거하지 않았던 문제 해결.
+- 스키마 바운드 보안 개체를 DB 역할에 추가하려고 할 때 예외가 throw되었던 문제 해결. https://connect.microsoft.com/SQLServer/feedback/details/3118143
+- 테이블 노드 http://connect.microsoft.com/SQLServer/feedback/details/3136283를 확장할 때 SSMS가 "데이터는 Null입니다. 이 메서드 또는 속성은 Null 값에 호출될 수 없습니다." 오류를 간헐적으로 표시했던 문제 해결.
+- DTA: 특정 경계 값으로 파티션 함수를 평가할 때 DTAEngine.exe가 힙 손상으로 종료되는 문제 해결.
+
+
+AS(Analysis Services)
+- DB가 ID와 다른 이름을 가진 경우 오류가 발생하여 AS 복원 데이터베이스가 실패하는 문제 해결
+- DAX 쿼리 창이 IntelliSense 사용을 설정/해제하기 위한 메뉴 옵션을 무시하는 문제 해결
+- msmdpump IIS http/https 주소를 통해 SSAS에 연결하지 못했던 문제 해결
+- 세미콜론을 포함한 암호를 사용하여 AS Azure에 연결할 수 있도록 허용
+- SQL Server 2017 AS 서버 또는 AS Azure와 함께 사용할 경우 “멤버 등록 생략” 옵션으로 AS 복원 데이터베이스 명령 스크립팅할 때 새로운 해당 JSON 옵션 포함
+- 로드할 때 데이터베이스 삭제 대화 상자에서 오류가 발생할 수 있는 매우 드문 문제 해결
+- SQL 쿼리 및 M 파티션 정의가 혼합된 1400-compat 수준 모델에서 파티션을 보려고 할 때 발생할 수 있는 문제 해결
+
+Integration Services(IS)
+- SSISDB 카탈로그의 실행 정보 보고서를 표시할 수 없는 문제 해결
+- SSMS에서 수많은 프로젝트/패키지의 성능 저하와 관련된 문제 해결
+
+
+## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
+
+다음 섹션의 제목 링크를 클릭하여 이전 SSMS 버전을 다운로드하세요.
+
+## <a name="downloadssdtmediadownloadpng-ssms-171httpsgomicrosoftcomfwlinklinkid849819"></a>[SSMS 17.1](https://go.microsoft.com/fwlink/?linkid=849819) ![다운로드](../ssdt/media/download.png)
 출시 | 빌드 번호: 14.0.17119.0
 
 ### <a name="enhancements"></a>개선 사항
@@ -48,7 +183,7 @@ ms.lasthandoff: 07/31/2017
 - 스크립팅: 해당 옵션을 사용하지 않도록 설정하여 삭제를 스크립팅하려고 할 때 SSMS가 Azure 데이터베이스 개체를 실수로 삭제하지 않도록 일시적으로 제한함.  향후 SSMS 릴리스에서 적절한 수정이 제공될 예정입니다.
 - 개체 탐색기: AS COPY를 사용하여 만든 Azure 데이터베이스에 연결할 때 “데이터베이스” 노드가 확장되지 않는 문제를 해결함
 
-## <a name="ssms-170-release"></a>SSMS 17.0 릴리스
+## <a name="downloadssdtmediadownloadpng-ssms-170httpgomicrosoftcomfwlinklinkid847722"></a>[SSMS 17.0](http://go.microsoft.com/fwlink/?LinkID=847722) ![다운로드](../ssdt/media/download.png)
 출시 | 빌드 번호: 14.0.17099.0
 
 ### <a name="enhancements"></a>개선 사항 
@@ -111,7 +246,10 @@ ms.lasthandoff: 07/31/2017
   - 팝업 메시지를 표시하지 않고 정보를 출력 창에 기록하도록 연결 오류/시간 초과 메시지를 변경함
   - 개요 섹션에서 빈 차트(5번째 차트)를 제거함
   - 작업 모니터 데이터 수집이 일시 중지된 경우 개요 제목에 “(일시 중지됨)”을 추가함
-  - SQL Server에 대한 그래프 확장         - 그래프 노드와 에지 테이블에 대한 새 아이콘         - 그래프 노드 및 에지 테이블이 그래프 테이블 폴더에 표시됨         - 그래프 노드와 에지 테이블을 만드는 템플릿을 사용할 수 있음
+  - SQL Server에 대한 그래프 확장 
+    - 그래프 노드와 에지 테이블에 대한 새 아이콘
+    - 그래프 노드 및 에지 테이블이 그래프 테이블 폴더 아래에 표시됨
+    - 그래프 노드와 에지 테이블을 만들기 위한 서식 파일 사용 가능
 - 프레젠테이션 모드
     - 빠른 실행(Ctr Q)을 통해 사용할 수 있는 세 가지 새 작업
     - PresentOn - 프레젠테이션 모드 켜기
@@ -210,7 +348,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 - 이제 SSMS DAX 쿼리 편집기에서 Ctrl-R을 누르면 결과 창이 전환됨
 
 
-## <a name="ssms-1653-release"></a>SSMS 16.5.3 릴리스
+## <a name="downloadssdtmediadownloadpng-ssms-1653httpgomicrosoftcomfwlinklinkid840946"></a>[SSMS 16.5.3](http://go.microsoft.com/fwlink/?LinkID=840946) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 13.0.16106.4
 
 이 릴리스에서는 다음과 같은 문제가 해결되었습니다.
@@ -240,7 +378,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * SSMS 2016이 "The process was terminated due to an internal error in the .NET Runtime at IP 71AF8579 (71AE0000) with exit code 80131506"(.NET 런타임의 IP 71AF8579(71AE0000)에서 내부 오류로 인해 프로세스가 종료되었습니다(종료 코드 80131506).) 오류와 함께 작동이 중단됨
 
 
-## <a name="ssms-1651-release"></a>SSMS 16.5.1 릴리스
+## <a name="ssms-1651"></a>SSMS 16.5.1
 일반 공급 | 빌드 번호: 13.0.16100.1
 
 * CHECK 제약 조건이 발생할 때 Invoke-Sqlcmd이 여러 행을 잘못 삽입하는 문제를 해결했습니다. [Microsoft Connect 항목: 811560](https://connect.microsoft.com/SQLServer/feedback/details/811560)
@@ -250,7 +388,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * 쿼리 계획 XML을 클릭할 때 올바른 SSMS UI가 열리지 않는 문제를 해결했습니다.
 
 
-## <a name="ssms-165-release"></a>SSMS 16.5 릴리스
+## <a name="downloadssdtmediadownloadpng-ssms-165httpgomicrosoftcomfwlinklinkid832812"></a>[SSMS 16.5](http://go.microsoft.com/fwlink/?LinkID=832812) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 13.0.16000.28
 
 * ";:"을 포함하는 테이블 이름이 있는 데이터베이스를 클릭했을 때 충돌이 발생하는 문제를 해결했습니다.
@@ -274,7 +412,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 * 응용 프로그램을 닫거나 오류 대화 상자를 표시하려는 경우 SSMS 충돌이 발생하는 문제를 해결했습니다.
 
 
-## <a name="ssms-1641-september-2016-release"></a>SSMS 16.4.1(2016년 9월) 릴리스
+## <a name="downloadssdtmediadownloadpng-ssms-1641-september-2016httpgomicrosoftcomfwlinklinkid828615"></a>[SSMS 16.4.1(2016년 9월)](http://go.microsoft.com/fwlink/?LinkID=828615) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 빌드 번호: 13.0.15900.1
 
 *  저장 프로시저를 변경/수정하려는 동안 실패하는 경우 문제 해결  
@@ -336,7 +474,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 
-## <a name="ssms-163-august-2016-release"></a>SSMS 16.3(2016년 8월) 릴리스
+## <a name="downloadssdtmediadownloadpng-ssms-163-august-2016httpgomicrosoftcomfwlinklinkid824938"></a>[SSMS 16.3(2016년 8월)](http://go.microsoft.com/fwlink/?LinkID=824938) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 버전 번호: 13.0.15700.28
 
 * SSMS 월별 릴리스는 이제 번호로 브랜딩됩니다.
@@ -391,7 +529,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 
 ---
-## <a name="ssms-july-2016-hotfix-update-release"></a>SSMS 2016년 7월 핫픽스 업데이트 릴리스 
+## <a name="downloadssdtmediadownloadpng-ssms-july-2016-hotfix-updatehttpgomicrosoftcomfwlinklinkid822301"></a>[SSMS 2016년 7월 핫픽스 업데이트](http://go.microsoft.com/fwlink/?LinkID=822301) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 버전 번호: 13.0.15600.2
 
 * **누락된 오른쪽 클릭 메뉴 항목을 사용하도록 설정하기 위한 SSMS의 버그 수정**  
@@ -401,358 +539,92 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 [Microsoft Connect 항목 #2924345](https://connect.microsoft.com/SQLServer/feedback/details/2924345/some-ssms-object-explorer-right-click-menu-options-missing-in-july-update)
 
 ---
-## <a name="ssms-july-2016-release"></a>SSMS 2016년 7월 릴리스 
+## <a name="ssms-july-2016"></a>SSMS 2016년 7월 
 일반 공급 | 버전 번호: 13.0.15500.91
 
-* *편집(7월 5일):* **Analysis Services 처리 대화 상자 및 Analysis Services 배포 마법사의 SQL Server 2016(호환성 수준 1200) 테이블 형식 데이터베이스에 대해 향상된 지원**
+* *편집(7월 5일):* [Analysis Services 처리] 대화 상자 및 Analysis Services 배포 마법사의 SQL Server 2016(호환성 수준 1200) 테이블 형식 데이터베이스에 대해 향상된 지원.
 
-* *편집(7월 5일):* **'XACT_ABORT'를 설정하는 SSMS '쿼리 실행 옵션' 대화 상자의 새 옵션. 이 옵션은 이 SSMS 릴리스에서 기본적으로 설정되어 있으며 런타임 오류가 발생하는 경우 SQL Server에서 전체 트랜잭션을 롤백하고 배치를 중단하도록 지시합니다.**
+* *편집(7월 5일):* ‘XACT_ABORT’를 설정하는 SSMS ‘쿼리 실행 옵션’ 대화 상자의 새 옵션. 이 옵션은 이 SSMS 릴리스에서 기본적으로 설정되어 있으며 런타임 오류가 발생하는 경우 SQL Server에서 전체 트랜잭션을 롤백하고 배치를 중단하도록 지시합니다.
 
-* **SSMS의 Azure SQL Data Warehouse 지원.**
+* SSMS의 Azure SQL 데이터 웨어하우스 지원.
 
-* **SQL Server PowerShell 모듈에 대한 중요 업데이트. 여기에는 새 [SQL PowerShell 모듈, Always Encrypted, SQL 에이전트 및 SQL 오류 로그에 대한 새 CMDLET](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update)**이 포함됩니다.
+* SQL Server PowerShell 모듈에 대한 중요 업데이트. 여기에는 새 [SQL PowerShell 모듈, 상시 암호화, SQL 에이전트 및 SQL 오류 로그에 대한 새 CMDLET](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update)이 포함됩니다.
 
-* **Always Encrypted 마법사에서 PowerShell 스크립트 생성에 대한 지원**
+* 상시 암호화 마법사에서 PowerShell 스크립트 생성에 대한 지원.
 
-* **Azure SQL Database에 연결 시간 향상.**
+* Azure SQL 데이터베이스에 연결 시간 향상.
 
-* **SQL Server 2016 데이터베이스 백업에 대한 Azure Storage 자격 증명 생성을 지원하기 위한 새 'URL에 백업' 대화 상자. 이는 Azure Storage 계정에 데이터베이스 백업을 저장하는 더욱 간소화된 환경을 경험을 제공합니다.**
+* SQL Server 2016 데이터베이스 백업에 대한 Azure 저장소 자격 증명 생성을 지원하기 위한 새 'URL에 백업' 대화 상자. 이 대화 상자는 Azure Storage 계정에 데이터베이스 백업을 저장하는 더욱 간소화된 환경을 경험을 제공합니다.
  
-* **Microsoft Azure Storage 서비스에서 SQL Server 2016 데이터베이스 백업 복원을 간소화하는 새 복원 대화 상자.**
+* Microsoft Azure 저장소 서비스에서 SQL Server 2016 데이터베이스 백업 복원을 간소화하는 새 복원 대화 상자.
  
-* **사용자에게 SELECT 권한이 없는 경우 디자이너에 테이블을 추가할 수 있도록 SSMS 쿼리 디자이너의 버그 수정**
+* 사용자에게 SELECT 권한이 없는 경우 디자이너에 테이블을 추가할 수 있도록 SSMS 쿼리 디자이너의 버그 수정.
 
-* **'TRY_CAST()' 및 'TRY_CONVERT()' 함수에 대한 IntelliSense 지원을 추가하는 버그 수정**  
+* 'TRY_CAST()' 및 'TRY_CONVERT()' 함수에 대한 IntelliSense 지원을 추가하는 버그 수정  
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2453461](https://connect.microsoft.com/SQLServer/feedback/details/2453461/sql-server-2012-issue-with-try-cast)
 
-* **‘SQLAS’ Analysis Services 확장 로드를 사용하도록 설정하는 PowerShell 모듈의 버그 수정**  
+* ‘SQLAS’ Analysis Services 확장 로드를 사용하도록 설정하는 PowerShell 모듈의 버그 수정  
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2544902](https://connect.microsoft.com/SQLServer/feedback/details/2544902/ssms-march-2016-refresh-sqlps-failed-to-load-the-sqlas-extension)
 
-* **SQL 파일의 끌어서 놓기 열기를 허용하는 SSMS 편집기 창의 버그 수정**  
+* SQL 파일의 끌어서 놓기 열기를 허용하는 SSMS 편집기 창의 버그 수정  
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2690658](https://connect.microsoft.com/SQLServer/feedback/details/2690658/cannot-drag-sql-files-into-management-studios)
 
-* **종료 시 프로파일러 충돌을 해결하는 프로파일러 버그 수정**  
+* 종료 시 프로파일러 충돌을 해결하는 프로파일러 버그 수정  
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2616550](https://connect.microsoft.com/SQLServer/feedback/details/2616550/sql-server-2016-rc2-profiler-version-13-0-1300-275-wont-close-after-trace-is-started-even-after-trace-is-stopped).  
 [Microsoft Connect 항목 #2319968](https://connect.microsoft.com/SQLServer/Feedback/Details/2319968)
 
-* **SSMS 테이블 디자이너에서 참가 링크를 편집하려고 할 때 충돌을 방지하기 위해 SSMS의 버그 수정**  
+* SSMS 테이블 디자이너에서 참가 링크를 편집하려고 할 때 충돌을 방지하기 위해 SSMS의 버그 수정  
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2721052](https://connect.microsoft.com/SQLServer/feedback/details/2721052/ssms-view-design-mode-right-click-on-join-crashes-ssms)
 
-* **db_owner 역할 멤버에 대해 데이터베이스 스크립트 생성을 사용하도록 SSMS의 버그 수정**  
+* db_owner 역할 멤버에 대해 데이터베이스 스크립트 생성을 사용하도록 SSMS의 버그 수정  
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2869241](https://connect.microsoft.com/SQLServer/feedback/details/2869241/error-with-script-database-as-create-to-in-ssms-2008r2-and-ssms-2016-june)
 
-* **서버가 오프라인으로 전환된 경우 쿼리 탭 닫기의 지연을 제거하도록 SSMS 편집기의 버그 수정**  
+* 서버가 오프라인으로 전환된 경우 쿼리 탭 닫기의 지연을 제거하도록 SSMS 편집기의 버그 수정  
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2656058](https://connect.microsoft.com/SQLServer/feedback/details/2656058/ssms-2014-2016-query-tab-takes-significantly-longer-to-close-if-the-instance-it-was-connected-to-is-now-offline).
 
-* **SQL Server Express 데이터베이스의 백업 옵션을 설정하도록 버그 수정**  
+* SQL Server Express 데이터베이스의 백업 옵션을 설정하도록 버그 수정 
 *연결된 고객 버그 요청:*  
 [Microsoft Connect 항목 #2801910](https://connect.microsoft.com/SQLServer/feedback/details/2801910/ssms-2016-backup-option-not-appearing-in-tasks).  
 [Microsoft Connect 항목 #2874434](https://connect.microsoft.com/SQLServer/feedback/details/2874434/backup-missing-from-tasks-context-menu-in-ssms-2016-when-you-are-connected-to-an-express-instance).
 
-* **다차원 Analysis Services 모델의 데이터 피드 공급자를 올바르게 표시하도록 Analysis Services의 버그 수정.**
+* 다차원 Analysis Services 모델의 데이터 피드 공급자를 올바르게 표시하도록 Analysis Services의 버그 수정.
 
 ----
-## <a name="ssms-june-2016-generally-available-release"></a>SSMS 2016년 6월 일반 공급 릴리스
+## <a name="downloadssdtmediadownloadpng-ssms-june-2016httpgomicrosoftcomfwlinklinkid799832"></a>[SSMS 2016년 6월](http://go.microsoft.com/fwlink/?LinkID=799832) ![다운로드](../ssdt/media/download.png)
 일반 공급 | 버전 번호: 13.0.15000.23
 
-* **SSMS는 2016년 6월 릴리스부터 일반 사용자에게 공급됩니다.**
+* SSMS는 2016년 6월 릴리스부터 일반 사용자에게 공급됩니다.
 
-* **현재 문서에 더 잘 통합되고 정규식을 통한 검색을 허용하는 SSMS의 새로운 빠른 찾기 대화 상자**  
+* 현재 문서에 더 잘 통합되고 정규식을 통한 검색을 허용하는 SSMS의 새로운 빠른 찾기 대화 상자 
 *연결된 고객 버그 요청:*  
 <https://connect.microsoft.com/SQLServer/feedback/details/2735513/quick-find-replace-in-ssms-2016-rc3/>
 
-* **스크립트를 통해 무인 설치에 대한 설치 진행률 및 프로세스를 추적할 수 있도록 하는 SSMS 설치 관리자 기능 개선**
+* 스크립트를 통해 무인 설치에 대한 설치 진행률 및 프로세스를 추적할 수 있도록 하는 SSMS 설치 관리자 기능 개선
 
-* **도움말 문서를 올바르게 표시하기 위한 SSMS 상황에 맞는 F1 도움말의 버그 수정**
+* 도움말 문서를 올바르게 표시하기 위한 SSMS 상황에 맞는 F1 도움말의 버그 수정
 
-* **스크롤 시 SSMS가 충돌을 일으키는 쿼리 데이터 저장소 '재발된 쿼리' 보기의 버그 수정** 
+* 스크롤 시 SSMS가 충돌을 일으키는 쿼리 데이터 저장소 '재발된 쿼리' 보기의 버그 수정
 
-* **Excel 2016에서 SQL Server Analysis Services로 연결할 수 있도록 하는 Excel Analysis Services OLEDB 커넥터의 버그 수정**
+* Excel 2016에서 SQL Server Analysis Services로 연결할 수 있도록 하는 Excel Analysis Services OLEDB 커넥터의 버그 수정
 
-* **동일한 모니터의 연결 대화 상자를 다중 모니터 시스템의 기본 SSMS 창으로 표시하기 위한 SSMS 연결 대화 상자의 버그 수정**  
+* 동일한 모니터의 연결 대화 상자를 다중 모니터 시스템의 기본 SSMS 창으로 표시하기 위한 SSMS 연결 대화 상자의 버그 수정  
 *연결된 고객 버그 요청:*  
 <https://connect.microsoft.com/SQLServer/feedback/details/724909/connection-dialog-appears-off-screen/>
 <https://connect.microsoft.com/SQLServer/feedback/details/755689/sql-server-management-studio-connect-to-server-popup-dialog/>  
 <https://connect.microsoft.com/SQLServer/feedback/details/389165/sql-server-management-studio-gets-confused-dealing-with-multiple-displays/>
 
-* **Always Encrypted 환경의 버그 수정 Stretch 데이터베이스에 대해 Always Encrypted 메뉴 옵션이 사용 가능하도록 올바르게 설정되지 않는 버그가 수정되었습니다. 또한 SafeNet(Luna SA) HSM 공급자가 제대로 사용되지 않던 Always Encrypted 마법사의 버그도 수정되었습니다.**
+* Always Encrypted 환경의 버그 수정 Stretch 데이터베이스에 대해 Always Encrypted 메뉴 옵션이 사용 가능하도록 올바르게 설정되지 않는 버그가 수정되었습니다. 또한 SafeNet(Luna SA) HSM 공급자가 제대로 사용되지 않던 Always Encrypted 마법사의 버그도 수정되었습니다.
 
----
-## <a name="ssms-april-2016-preview"></a>SSMS 2016년 4월 미리 보기 
-버전 번호: 13.0.14000.36
-  
-* **사람이 읽을 수 있는 오류 메시지를 추가하도록 SSMS 설치 관리자 기능 개선**  
-  
-* **조건자에 대한 지원을 추가하도록 Stretch 데이터베이스 마법사 기능 개선**  
-  
-* **키 암호화 API를 추가하도록 AlwaysEncrypted Powershell commandlet 기능 개선**  
-  
-* **도구, 옵션 대화 상자에서 사용되지 않도록 설정된 경우 SSMS 도구 모음에서 IntelliSense를 해제하기 위한 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2555163/sql-2016-rc2-turning-off-intellisense-from-options-does-not-turn-it-off-on-toolbar/>  
-    
-* **장기 쿼리 계획에 사용되는 간격을 줄이도록 Showplan 비교 사용자 인터페이스의 기능 개선 및 버그 수정**  
-  
-* **SSMS를 종료할 때 충돌하던 문제를 해결하는 SSMS의 버그 수정**   
-  
-* **암호화 중에 사용자 권한을 유지하고 Always Encrypted 마법사가 완료된 후 데이터베이스 분리 작업을 허용하도록 하는 마법사의 버그 수정**  
-  
-* **지원되지 않는 CNG(암호화 알고리즘) 공급자를 사용하여 키를 생성하려는 시도에 대해 피드백을 제공하도록 하는 Always Encrypted 새 열 마스터 키 대화 상자의 버그 수정**  
-  
----  
-## <a name="ssms-march-2016-preview-refresh"></a>SSMS 2016년 3월 미리 보기 새로 고침
-버전 번호: 13.0.13000.55
-  
-* **SSMS는 이제 Visual Studio 2015의 격리 셸을 사용합니다.**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2390544/update-ssms-to-use-visual-studio-2015-dependencies/>  
-  
-* **메뉴 항목 및 옵션을 빠르게 찾을 수 있도록 하는 새로운 빠른 실행 도구 모음 (VS 2015 격리 셸)**  
-  
-* **SSMS 밝은 테마에 대한 지원을 추가하도록 SSMS 테마 옵션 개선 (VS 2015 격리 셸)**  
-  
-* **"기본값으로 다시 설정" 단추를 누르는 경우 쿼리 바로 가기 키를 올바르게 다시 설정하도록 하는 SSMS 도구 메뉴 옵션 버그 수정**  
-  
-* **쉽게 읽을 수 있는 템플릿 이름을 표시하도록 하는 SSMS 새 프로젝트 템플릿의 버그 수정**  
-  
-* **SSMS에서 SQL 에이전트 작업 기록 보기와 관련된 오류가 해결되었습니다.**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2458860/error-viewing-job-history-microsoft-datawarehouse-sqm/>  
-    
-* **SSMS의 오프라인 설치를 허용하도록 하는 버그 수정 이를 통해 인터넷에 연결하지 않고도 설치할 수 있습니다. (VS 2015 격리 셸)**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2497178/cannot-install-ssms-when-server-has-no-internet-access/>  
-    
-* **SQL Server PowerShell(SQLPS) 모듈을 가져올 때 사용자의 현재 디렉터리를 유지하기 위한 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2434605/loading-sqlps-module-changes-current-directory-to-ps-sqlserver/>  
-    
-* **승인된 PowerShell 동사를 사용하기 위한 SQL Server PowerShell(SQLPS) 모듈의 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2432891/sqlps-module-uses-unapproved-powershell-verbs/>  
-    
-* **모듈을 더 빠르게 로드하기 위한 SQL Server PowerShell(SQLPS) 모듈의 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2429153/sqlps-module-is-slow-to-load/>  
-    
-* **작업 단계 수정을 허용하기 위한 SQL 에이전트 작업 단계의 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2453996/issues-with-agent-in-ssms-2016-rc0-13-0-12000-65/>  
-    
-* **테이블을 사전 순으로 나열하기 위한 SSMS 개체 탐색기의 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2424718/sql-server-2016-ssms-table-list-confusing/>  
-    
-* **SQL Server 연결이 변경될 때 정확한 데이터베이스 이름 목록을 표시하기 위한 '사용 가능한 데이터베이스' 드롭다운의 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2513420/available-databases-drop-down-box-does-not-update-when-connection-changes-in-ssms/>  
-    
-* **'Ctrl+U' 키를 누를 경우 포커스가 '사용 가능한 데이터베이스' 드롭다운으로 이동되도록 하는 SSMS 바로 가기 키의 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2534820/ssms-ctrl-u-doesnt-work/>  
-  
----  
-## <a name="ssms-march-2016-preview"></a>SSMS 2016년 3월 미리 보기 
-버전 번호: 13.0.12500.29 
-  
-* **키보드 키를 사용하는 탐색을 허용하도록 SSMS 웹 설치 관리자 개선**  
-  
-* **암호화에 대해 별칭 데이터 형식을 지원하도록 Always Encrypted 마법사 개선**  
-  
-* **최대 자동 장애 조치 대상의 정확한 수를 표시하도록 하는 AlwaysOn '새 가용성 그룹’ 마법사의 버그 수정**  
-*연결된 고객 버그 요청:* <https://connect.microsoft.com/SQLServer/feedback/details/2333670/ssms-is-showing-the-wrong-number-of-maximum-automatic-failover-targets/>  
-    
-* **설치에 영향을 주는 오류를 수정하기 위한 SSMS 웹 설치 관리자의 버그 수정**  
-*연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2181548/sql-server-2016-ctp-3-2-management-studio-setup/>  
-    
-* **SQL Server 2012 이하 버전에서 유지 관리 계획을 저장할 수 있도록 하는 SSMS 미리 보기 릴리스의 버그 수정**  
-      
-* **스트라이프 백업에 대해 여러 사용자 지정 백업 이름을 허용하고, Storage 자격 증명이 선택된 후 새 이름을 입력하는 경우 적절한 백업 파일 이름을 표시하도록 하는 백업 마법사의 버그 수정**  
-  
----  
-## <a name="ssms-february-2016-preview"></a>SSMS 2016년 2월 미리 보기 
-버전 번호: 13.0.12000.65
-  
-* **SSMS에서 고대비 설정을 사용하도록 설정한 경우 텍스트 옵션을 표시하도록 활동 모니터 개선**  
-  
-* **암호화 프로세스 중 한 열에 대한 데이터 정렬이 변경될 경우 경고를 표시하도록 Always Encrypted 마법사 대화 상자 개선**  
-  
-* **열 암호화 키, 열 암호화 키 값 및 열 마스터 키에 대해 조건을 만들기 위한 지원을 추가하도록 정책 관리 개선**  
-  
-* **Always Encrypted 마스터 키 정리 대화 상자 및 Always Encrypted 오류 메시지의 유용성을 향상시키기 위한 버그 수정**  
-  
-* **키가 하나만 있는 경우 Always Encrypted 열 마스터 키 회전을 사용하지 않도록 하는 버그 수정**  
-  
-* **Always Encrypted 대화 상자가 SSMS 1월 릴리스 또는 SQL Server RC0 미디어와 번들로 제공되는 SSMS 릴리스를 사용하여 시작될 경우에 발생하는 '형식 이니셜라이저' 오류에 대한 버그 수정**  
-  
----  
-## <a name="ssms-january-2016-preview"></a>SSMS 2016년 1월 미리 보기 
-버전 번호: 13.0.11000.78 
-  
-* **확장 이벤트(XEvent) 세션을 삭제할 수 있도록 SSMS의 버그 수정**  
-  
-* **SQL Server 2014 가용성 그룹에 대한 속성 대화 상자를 열 수 있도록 버그 수정**  
- *연결된 고객 버그 요청:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/1609719/>  
-     
-* **가용성 그룹에 Azure 복제본을 추가하는 기능을 지원하도록 버그 수정**  
- *연결된 고객 버그 요청:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2029135/>  
-     
-* **SQL Server 2014 데이터베이스에 대한 속성 대화 상자를 열 수 있도록 버그 수정**  
- *연결된 고객 버그 요청:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2080209/>  
-     
-* **Azure SQL Database에 연결된 경우 각 테이블에 대해 표시되는 중복 열을 제거할 수 있도록 버그 수정**  
- *연결된 고객 버그 요청:*  
- <https://connect.microsoft.com/SQLServer/feedback/details/2103116/>  
----  
-## <a name="ssms-december-2015-preview"></a>SSMS 2015년 12월 미리 보기 
-버전 번호: 13.0.900.73
-  
-* **현재 쿼리 실행 계획의 파일에 저장된 계획과 비교할 수 있도록 실행 계획 비교 개선**  
-  
-* **SSMS에서 인라인 columnstore 인덱스에 대한 IntelliSense 지원 향상**  
-  
-* **Azure V12 서버에 연결되어 있을 때 템플릿을 선택할 수 있도록 확장 이벤트 세션 마법사의 버그 수정**  
-  
-* **보안 폴더 아래의 "감사 만들기" 및 "새 로그인" 대화 상자에서 키보드 탐색을 더 쉽게 하는 새 탭 정지**  
-  
-* **SSMS에서 결과를 표 형식으로 표시하도록 설정된 경우 "쿼리 실행 후 결과 탭으로 전환"하는 기능을 사용할 수 있도록 버그 수정**   
- *연결된 고객 버그 요청:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1390296/switch-to-results-tab-after-query-execution-grid-mode-in-ssms-2016>  
-  
-* **SSMS에서 결과를 표 형식으로 표시하도록 설정된 경우 잘리지 않은 열 머리글을 표시하도록 버그 수정**  
- *연결된 고객 버그 요청:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/2004111/bugbash-column-headers-in-grid-mode-truncated-with-courier-new-8>  
-      
-* **SSMS 웹 설치 관리자를 올바로 설치할 수 있도록 버그 수정**  
- *연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/2003865/ssms-october-preview-incoherent-error-message>  
-<https://connect.microsoft.com/SQLServer/feedback/details/2079557/unable-to-instal-sql-server-update-13-0-800-111-over-13-0-700-242-error-code-2711>  
-  
----  
-## <a name="ssms-november-2015-preview"></a>SSMS 2015년 11월 미리 보기
-버전 번호: 13.0.800.111
-  
-* **SSMS의 높은 DPI 디스플레이에 대한 비트맵 확장 지원**  
-  
-* **데이터베이스 암호화 키를 만드는 과정을 간소화하도록 AlwaysEncrypted 대화 상자 및 마법사의 사용자 인터페이스 개선**  
-  
-* **활성 쿼리 통계를 볼 수 있도록 작업 모니터의 "프로세스" 목록에 새로운 오른쪽 클릭 상황에 맞는 메뉴 제공**  
-  
-* **클라이언트 컴퓨터에서 SSMS 시험판 릴리스를 적절히 제거할 수 있도록 버그 수정**  
-  *연결된 고객 버그 요청:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1868474/ssms-2016-preview-can-be-installed-but-not-uninstalled>  
-  
-* **파일이 없는 경우에도 SQL 작업 에이전트에서 작업 단계를 편집할 수 있도록 버그 수정**  
-  *연결된 고객 버그 요청:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
-    <https://connect.microsoft.com/SQLServer/feedback/details/1502100/ssms-preview-error>  
-      
-* **Azure 가상 컴퓨터에서 실행 중인 데이터베이스에서 확장 이벤트 세션에 대한 "대상 데이터 보기" 메뉴 옵션의 버그 수정**  
-  *연결된 고객 버그 요청*:  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1769778/management-studio-2016-sql-job-agent>  
-***  
 
-## <a name="ssms-october-2015-preview"></a>SSMS 2015년 10월 미리 보기 
-버전 번호: 13.0.700.242  
-* **SSMS 다운로드 및 설치 프로세스를 간소화하는 현대화된 새로운 경량 웹 설치 관리자**  
+## <a name="additional-downloads"></a>추가 다운로드  
+모든 SQL Server Management Studio 다운로드의 전체 목록은 [Microsoft 다운로드 센터](https://www.microsoft.com/en-us/download/search.aspx?q=sql%20server%20management%20studio&p=0&r=10&t=&s=Relevancy~Descending)를 검색하세요.  
   
-* **선택한 열의 클라이언트 쪽 암호화 및 암호 해독을 지원하는 새로운 항상 암호화 열 암호화 마법사**  
-  
-* **데이터 보안 유지를 위한 암호화 키 회전 프로세스를 간소화하는 항상 암호화 데이터베이스의 새로운 CMK(열 마스터 키) 회전 대화 상자**  
-  
-* **Azure 클라우드로 데이터가 마이그레이션되는 상태를 모니터링하고 문제를 해결할 수 있는 새로운 Stretch Database 모니터**  
-  
-* **기본 Microsoft Azure 구독에 없는 Microsoft Azure 서버의 선택을 지원하도록 개선된 Stretch Database 마법사**  
-  *연결된 고객 버그 요청:*  
-  <https://connect.microsoft.com/SQLServer/feedback/details/1687063/cannot-choose-from-multiple-microsoft-azure-subscriptions>  
-* **SSMS에서 라이브 실행 계획을 적절하게 표시할 수 있도록 하는 버그 수정**  
-  *연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1774446/viewing-live-execution-plan-from-activity-monitor-crashes-ssms>    
-* **데이터베이스 스냅숏의 SSMS 스크립팅에서 잘못된 옵션을 제거하는 버그 수정**  
-  *연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1515168/ssms-scripting-of-database-snapshots-includes-invalid-options>  
-* **"Top Resource Consuming Queries(상위 리소스 소비 쿼리)" 창에서 세부 정보를 표시하는 쿼리 데이터 저장소 UI의 버그 수정**  
-  *연결된 고객 버그 요청:*  
-<https://connect.microsoft.com/SQLServer/feedback/details/1737185/sql-server-2016-overall-resource-consumption-query-store-pane-issue>  
-***  
-
-## <a name="ssms-september-2015-preview"></a>SSMS 2015년 9월 미리 보기 
-버전 번호: 13.0.600.65  
-* **Azure SQL Database에 연결하는 과정을 간소화하는 새로운 방화벽 규칙 대화 상자**      
-    
-* **클러스터된 columnstore 인덱스가 있는 경우에도 클러스터되지 않은 rowstore 인덱스를 만들 수 있도록 업데이트된 "새 인덱스" 대화 상자. 이 기능은 SQL 2016 이상에서 사용할 수 있습니다.**      
-  *연결된 고객 버그 요청:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1552617/creation-of-nc-index-when-clustered-columnstore-index>  
-      
-* **Windows 7에서 실행되는 SSMS 미리 보기 릴리스에서 SQL 에이전트 작업 단계를 보고 편집할 수 있도록 하는 버그 수정**      
-  *연결된 고객 버그 요청:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1548140/cannot-view-or-edit-any-sql-agent-job-step>,    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1626895/unable-to-load-dll-dts>,    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1576662/error-creating-new-job-step>     
-      
-* **SQL Server 2014 이상의 SSMS에서 트리거 노드를 표시하는 버그 수정**      
-  *연결된 고객 버그 요청:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1617533/trigger-node-missing>   
-      
-* **헤더에서 버전 정보를 제외하는 데이터베이스 및 서버 표준 보고서 사용자 인터페이스의 버그 수정**      
-  *연결된 고객 버그 요청:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1387471/report-headings-wrongly-named>  
-      
-* **라이브 쿼리 통계 노드가 불완전할 때 완전한 것으로 표시되지 못하게 하는 버그 수정**      
-  *연결된 고객 버그 요청:*    
-  <https://connect.microsoft.com/SQLServer/feedback/details/1589096/live-query-statistics-node-shows-as-completed>  
-  
-***      
-## <a name="ssms-august-2015-preview"></a>SSMS 2015년 8월 미리 보기 
-버전 번호: 13.0.500.53
-  
-* **많은 데이터베이스가 있을 때 로드 지연을 줄이는 개체 탐색기 업데이트**  
-  
-* **Windows 10 컴퓨터에 SSMS를 설치하는 기능 개선**  
-  
-* **SQL Server 구성 관리자와 SSMS 사용자 보고서 사용자 인터페이스의 버그 수정 및 업데이트**    
-***  
-  
-## <a name="ssms-july-2015-preview"></a>SSMS 2015년 7월 미리 보기
-버전 번호: 13.0.400.91
-  
-* **Azure SQL Database(V12)의 데이터베이스 다이어그램**  
-  
-* **새로운 임시 테이블 구문에 대한 향상된 IntelliSense 지원**  
-  
-* **행 수준 보안 및 Azure Active Directory 인증을 비롯한 최신 Azure SQL Database 기능을 지원하도록 업데이트된 DacFx 라이브러리**  
-  
-* **버그 수정(업데이트된 ‘업데이트 확인’ UI, ‘호환성 수준’ 목록의 UI 수정 등)**  
-***  
-  
-## <a name="ssms-june-2015-preview"></a>SSMS 2015년 6월 미리 보기 
-버전 번호: 13.0.300.44
-  
-* **새로운 SSMS 경량 웹 설치 관리자**  
-  
-* **업데이트 자동 확인**  
-  
-* **이제 SSMS에서 Azure SQL Database(V12)에 대한 전체 텍스트 검색을 지원함**  
-  
-* **상위 고객 요청이 처리됨:**  
-  * 개체 편집기에서 테이블 및 뷰에 ‘상위 200개의 행 편집’을 사용할 수 있음  
-  * Azure SQL 데이터베이스(V12)에 테이블 디자이너를 사용할 수 있음  
-  * Azure SQL 데이터베이스(V12)에 데이터베이스 및 테이블 속성 대화 상자를 사용할 수 있음  
-    
- * **T-SQL 파일 저장의 확인을 건너뛰는 새로운 옵션**  
-   
- * **새로운 Azure SQL Database 서비스 계층(기본, 표준, 프리미엄)에 대한 가져오기/내보내기 마법사 지원**  
-   
- * **수많은 버그 수정(시나리오 스크립팅, SQL 데이터베이스에 대한 변경 내용 추적 사용 등)**   
+최신 SQL Server Management Studio에 대해서는 [SQL Server Management Studio 다운로드&#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요.  
 

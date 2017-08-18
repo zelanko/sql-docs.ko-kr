@@ -1,7 +1,7 @@
 ---
 title: "SSDT(SQL Server Data Tools) 다운로드 | Microsoft 문서"
 ms.custom: 
-ms.date: 05/18/2017
+ms.date: 08/07/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,74 +15,76 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 caps.latest.revision: 113
 author: stevestein
 ms.author: sstein
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
-ms.openlocfilehash: 7aaa4c48419bf24357b2bef95c40d721d1ab2f2a
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 4bcceaeca15c3fa20cd797bda0182cf48f73a730
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 다운로드
 
-**[SQL Server Data Tools](https://msdn.microsoft.com/mt186501)**는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, Integration Services 패키지, Analysis Services 데이터 모델 및 Reporting Services 보고서를 빌드할 수 있는 최신형 개발 도구로, 무료로 다운로드할 수 있습니다. SSDT를 사용하면 Visual Studio에서 응용 프로그램을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다. 이 릴리스에서는 SQL Server 2017에서 SQL Server 2005까지 지원하며 SQL Server 2016의 새로운 기능을 추가하기 위한 디자인 환경을 제공합니다.  
+**[SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)**는 SQL Server 관계형 데이터베이스, Azure SQL 데이터베이스, Integration Services 패키지, Analysis Services 데이터 모델 및 Reporting Services 보고서를 빌드할 수 있는 최신형 개발 도구로, 무료로 다운로드할 수 있습니다. SSDT를 사용하면 Visual Studio에서 응용 프로그램을 개발할 때처럼 쉽게 SQL Server 콘텐츠 형식을 디자인 및 배포할 수 있습니다. 이 릴리스에서는 SQL Server 2017에서 SQL Server 2005까지 지원하며 SQL Server의 새로운 기능을 추가하기 위한 디자인 환경을 제공합니다.  
     
     
-![다운로드](../ssdt/media/download.png) [Visual Studio 2015용 SQL Server Data Tools 17.1 다운로드](https://go.microsoft.com/fwlink/?linkid=849393)
+![다운로드](../ssdt/media/download.png) [Visual Studio 2015용 SQL Server Data Tools 17.2 다운로드](https://go.microsoft.com/fwlink/?linkid=852922)
 
-![다운로드](../ssdt/media/download.png) [데이터 계층 응용 프로그램 프레임워크(DacFx) 17.1 다운로드](https://www.microsoft.com/download/details.aspx?id=55255)
+![다운로드](../ssdt/media/download.png) [DACFx(Data-Tier Application Framework) 17.2 다운로드](https://www.microsoft.com/download/details.aspx?id=55713)
 
 ## <a name="sql-server-data-tools"></a>SQL Server Data Tools   
 **버전 정보**  
   
-릴리스 번호: 17.1  
-이 릴리스에 대한 빌드 번호: 14.0.61705.170
+릴리스 번호: 17.2  
+이 릴리스에 대한 빌드 번호: 14.0.61707.300
   
- **새로운 기능**
- - AS 비모델 관련 IntelliSense에 대한 오프라인 지원(예: 강조 표시, 문 완성 및 매개 변수 정보)
- - M 식을 표시하기 위해 테이블 형식 모델 탐색기에 추가된 사항
- - 테이블 형식 모델의 역할 멤버를 구성하기 위한 Azure Active Directory 사용자 선택기
- - 1400 모델을 정의할 때 UI에서 힌트 인코딩 지원
- - AS 프로젝트 버그에 대한 여러 수정 사항
- - DacFx 버그에 대한 여러 수정 사항
+**새로운 기능**
 
- **알려진 문제**
- - 1400 호환성 수준 AS 모델에서 새 데이터 원본을 만들 때 파일 기반 데이터 원본을 선택한 다음 [취소]를 눌러 취소한 후에 데이터 원본을 만드는 경우 테이블 형식 편집기(Model.bim)가 읽기 전용이 됩니다. 단지 테이블 형식 편집기를 닫았다가 솔루션 탐색기에서 다시 열면 이 문제를 방지할 수 있습니다.
+**AS**
 
-[changelog](changelog-for-sql-server-data-tools-ssdt.md)에서 사용 가능한 변경 내용의 전체 목록
+- 이제 1400 호환성 수준의 테이블 형식 모델의 고급 보안을 위한 [역할] 대화 상자에서 개체 수준 보안을 구성할 수 있습니다.
+- VS2017용 SSDT AS 프로젝트의 AS Azure 모델에서 메일 주소가 없는 사용자에 대한 새 AAD 역할 멤버 선택.
+- ADAL 자격 증명 캐싱의 동작을 사용자 지정하기 위한 SSDT AS 테이블 형식 프로젝트의 새 AS Azure "항상 확인" 프로젝트 속성.
 
- > Visual Studio 2017에서 SQL Server Data Tools를 사용하려면 아래의 [이](#use-ssdt-in-visual-studio-2017) 섹션을 참조하세요.
+
+**알려진 문제**
+
+- 전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
+- 문제 보고는 [SSDT Connect 피드백](https://connect.microsoft.com/SQLServer/Feedback) 사이트를 이용하세요.
+
+> [!NOTE]
+> Visual Studio 2017에서 SQL Server Data Tools를 사용하려면 아래의 [이](#use-ssdt-in-visual-studio-2017) 섹션을 참조하세요.
 
   **사용 가능한 언어**  
   
  이 SSDT 릴리스는 다음 언어로 설치할 수 있습니다.  
-[중국어(중국)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x804) | 
-[중국어(대만)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x404) | 
-[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x409) | 
-[프랑스어]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40c)  
-[독일어]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x407) | 
-[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x410) | 
-[일본어]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x411) | 
-[한국어]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x412) | 
-[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x416) | 
-[러시아어]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x419) | 
-[스페인어]( https://go.microsoft.com/fwlink/?linkid=849393&clcid=0x40a)  
+[중국어(중국)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x804) | 
+[중국어(대만)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x404) | 
+[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x409) | 
+[프랑스어]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40c)  
+[독일어]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x407) | 
+[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x410) | 
+[일본어]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x411) | 
+[한국어]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x412) | 
+[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x416) | 
+[러시아어]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x419) | 
+[스페인어]( https://go.microsoft.com/fwlink/?linkid=852922&clcid=0x40a)  
 
 **ISO 이미지**
 
 SSDT의 ISO 이미지를 사용해도 SSDT를 설치하거나 관리 설치 지점을 설정할 수 있습니다. ISO는 SSDT에 필요한 모든 구성 요소가 들어 있는 자체 포함된 파일이고 다시 시작 가능한 다운로드 관리자를 사용하여 다운로드할 수 있어 네트워크 대역폭이 제한되어 있거나 덜 안정적인 상황에 유용합니다. 다운로드가 완료된 다음 ISO를 드라이브로 탑재하거나 DVD로 구울 수 있습니다.
 
-[중국어(중국)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x804) |
-[중국어(대만)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x404) |
-[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x409) |
-[프랑스어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40c)  
-[독일어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x407) |
-[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x410) |
-[일본어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x411) |
-[한국어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x412) |
-[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x416) |
-[러시아어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x419) |
-[스페인어]( https://go.microsoft.com/fwlink/?linkid=849399&clcid=0x40a)
+[중국어(중국)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x804) |
+[중국어(대만)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x404) |
+[영어(미국)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x409) |
+[프랑스어]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40c)  
+[독일어]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x407) |
+[이탈리아어]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x410) |
+[일본어]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x411) |
+[한국어]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x412) |
+[포르투갈어(브라질)]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x416) |
+[러시아어]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x419) |
+[스페인어]( https://go.microsoft.com/fwlink/?linkid=852942&clcid=0x40a)
 
 ## <a name="download-visual-studio"></a>Visual Studio 다운로드
 

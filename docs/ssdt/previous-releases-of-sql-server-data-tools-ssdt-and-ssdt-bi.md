@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/30/2017
+ms.date: 07/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,15 +13,16 @@ ms.assetid: 5d32e301-0f44-4916-b0db-76e8322c0ab7
 caps.latest.revision: 23
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 50ef4db2a3c9eebcdf63ec9329eb22f1e0f001c0
-ms.openlocfilehash: 1f64d004b54f8bc34c17ab3c36c952f9eb831096
+ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
+ms.openlocfilehash: 1fcc7de6bca7ac383f46aa7a76ca4382e706080d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/08/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
+
 SQL Server Data Tools(SSDT)는 관계형 데이터베이스, Analysis Services 모델, Reporting Services 보고서, Integration Services 패키지 등의 SQL Server 콘텐츠 형식을 작성하기 위한 프로젝트 템플릿 및 디자인 화면을 제공합니다.  
   
 SSDT는 Visual Studio 셸을 기반으로 하며 SQL Server와 함께 출시됩니다. 새 버전의 SSDT는 SQL Server의 최신 기능을 통합합니다. 이전 버전에는 출시 당시 최신이던 템플릿과 설계 환경이 포함됩니다.  
@@ -33,18 +34,18 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](https://msdn.micro
 
 ## <a name="recent-downloads"></a>최신 다운로드
 
-[최신 릴리스](https://msdn.microsoft.com/library/mt204009.aspx)관련 문제가 발생하는 경우 최신 다운로드 3개가 제공됩니다. 
+[최신 릴리스](download-sql-server-data-tools-ssdt.md)관련 문제가 발생하는 경우 최신 다운로드 3개가 제공됩니다. 
 
 |릴리스| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.1|[VS2015 17.1용 SSDT](https://go.microsoft.com/fwlink/?linkid=849393)| \* 해당 사항 없음|
 |17.0|[VS2015 17.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=846626)| \* 해당 사항 없음|
 |16.5|[VS2015 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832313)|[VS2013 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832308)|
-|16.4.1|[VS2015 16.4.1용 SSDT](https://go.microsoft.com/fwlink/?LinkID=828740)|[VS2013 16.4.1용 SSDT](https://go.microsoft.com/fwlink/?LinkID=828737)|
 
 \* SSDT는 두 가지 최신 버전의 Visual Studio를 지원합니다. Visual Studio 2017 릴리스에서는 VS2013용 SSDT가 더 이상 업데이트되지 않습니다. 자세한 내용은 [this SSDT team blog post](https://blogs.msdn.microsoft.com/ssdt/2017/03/10/sql-server-data-tools-17-0-rc-and-ssdt-in-vs2017/)(이 SSDT 팀 블로그 게시물)의 *FAQ* 섹션을 참조하세요.
 
   
-## <a name="links-to-download-pages"></a>다운로드 페이지에 대한 링크  
+## <a name="links-to-download-pages"></a>다운로드 페이지에 대한 링크 
 **SQL 관계형: 데이터베이스 엔진**  
   
 RDBMS 및 Azure SQL 데이터베이스에 대한 관계형 데이터베이스를 구축하기 위한 템플릿을 제공합니다. SSDT는 관계형 데이터베이스 디자인과 관련하여 어느 버전이나 사용할 수 있습니다. SQL Server 데이터베이스 엔진 또는 Azure SQL 데이터베이스의 모든 버전에서 Visual Studio 2012 또는 2013 버전을 사용할 수 있습니다.  
@@ -76,5 +77,5 @@ SQL Server 2012 또는 2014의 경우 **Visual Studio 2012용 SSDT-BI** 또는 *
 ## <a name="see-also"></a>관련 항목:  
 [SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Management Studio 다운로드 &#40;SSMS&#41;](../ssms/download-sql-server-management-studio-ssms.md)  
-  
+[SQL 도구 및 유틸리티](../tools/overview-sql-tools.md)
 
