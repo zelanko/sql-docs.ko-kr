@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 61366dbbcc5b4787783ea3e52112d827e2db026f
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: a768e5237b997e5f9b05e9476c907ea66f886c7b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>SQL Server 사용 피드백 모음에 대한 로컬 감사
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/02/2017
 
 Microsoft SQL Server에는 컴퓨터 또는 장치에 대한 정보("표준 컴퓨터 정보")를 수집하여 Microsoft에 보낼 수 있는 인터넷 사용 기능이 포함되어 있습니다. [SQL Server Usage Feedback collection](http://support.microsoft.com/kb/3153756) (SQL Server 사용 피드백 모음)의 로컬 감사 구성 요소는 서비스에서 수집한 데이터를 지정된 폴더에 기록하여 Microsoft로 보내는 데이터(로그)를 나타냅니다. 로컬 감사의 목적은 고객들이 규정 준수 또는 개인 정보 유효성 검사의 이유로 이 기능을 사용하여 Microsoft에서 수집하는 모든 데이터를 확인하기 위함입니다.  
 
-SQL Server 2016 CU2부터 로컬 감사는 SQL Server 데이터베이스 엔진 및 Analysis Services(SSAS)에 대한 인스턴스 수준에서 구성할 수 있습니다. SSIS(SQL Server Integration Services)에 대한 로컬 감사는 데이터베이스 엔진을 사용하여 구성할 수 있습니다. 설정 중 설치된SQL Server 구성 요소와 설정 이후 다운로드하거나 설치한 SQL Server 도구에는 사용 피드백 모음에 대한 로컬 감사 기능이 없습니다. 
+SQL Server 2016 CU2부터 로컬 감사는 SQL Server 데이터베이스 엔진 및 Analysis Services(SSAS)에 대한 인스턴스 수준에서 구성할 수 있습니다. SQL Server 2016 CU4 및 SQL Server 2016 SP1에서 로컬 감사는 SSIS(SQL Server Integration Services)에 대해서도 사용할 수 있습니다. 설정 중 설치된SQL Server 구성 요소와 설정 이후 다운로드하거나 설치한 SQL Server 도구에는 사용 피드백 모음에 대한 로컬 감사 기능이 없습니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소 
 
@@ -61,7 +61,7 @@ SQL Server에 대한 CEIP 원격 분석 서비스 로그온 계정을 얻으려�
  
 1. **서비스** 를 시작하고 **Windows**  단추를 클릭한 다음 *services.msc*를 입력합니다. 
 
-2. 적절한 서비스로 이동합니다. 예를 들어 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스 *인스턴스 이름***에서 키를 만듭니다. Analysis Services의 경우 **SQL Server Analysis Services CEIP *인스턴스 이름***을 찾습니다. 
+2. 적절한 서비스로 이동합니다. 예를 들어 데이터베이스 엔진의 경우 **SQL Server CEIP 서비스 \<인스턴스 이름\>**에서 키를 만듭니다. Analysis Services의 경우 **SQL Server Analysis Services CEIP \<인스턴스 이름\>**을 찾습니다. Integration Services의 경우 **SQL Server Integration Services CEIP 서비스 13**을 찾습니다.
 
 3. 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 
 
