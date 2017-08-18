@@ -2,7 +2,7 @@
 title: "스크립트 파일 (AccessToSQL) 만들기 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,12 +16,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 caps.latest.revision: 21
 author: sabotta
 ms.author: carlasab
-manager: lonnyb
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0798e4aa2ed032b1ab3b015199c17518c533e3fa
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: cec4cf64fcca4a185d8733121305fe186a0f58a8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-script-files-accesstosql"></a>스크립트 파일 (AccessToSQL) 만들기
@@ -353,7 +353,7 @@ ms.lasthandoff: 08/02/2017
   
 예를 들어 Access 데이터베이스의 특정 테이블의 일반적인 데이터 마이그레이션을의 계층 구조를 따릅니다: 데이터베이스-&gt; 테이블입니다.  
   
-스크립트 파일에 있는 모든 명령을 올바르게 실행 되는지, SSMA 콘솔 응용 프로그램 종료 되 고 사용자에 게 컨트롤을 반환 합니다. 스크립트 파일의 내용이 자세한 또는 작은 정적 변수 정보를 포함 한 [변수 값 파일](http://msdn.microsoft.com/en-us/808595c3-8ef1-40bd-a93e-5cf237950e08) 또는 변수 값에 대 한 스크립트 파일 내 별도 섹션입니다.  
+스크립트 파일에 있는 모든 명령을 올바르게 실행 되는지, SSMA 콘솔 응용 프로그램 종료 되 고 사용자에 게 컨트롤을 반환 합니다. 스크립트 파일의 내용이 자세한 또는 작은 정적 변수 정보를 포함 한 [변수 값 파일](http://msdn.microsoft.com/808595c3-8ef1-40bd-a93e-5cf237950e08) 또는 변수 값에 대 한 스크립트 파일 내 별도 섹션입니다.  
   
 **예:**  
   
@@ -397,10 +397,10 @@ ms.lasthandoff: 08/02/2017
 ## <a name="script-file-validation"></a>스크립트 파일 유효성 검사  
 사용자는 스키마 정의 파일에 대해 스크립트 파일의 유효성을 검사할 쉽게 수 **'A2SSConsoleScriptSchema.xsd'** '스키마' 폴더에서 사용할 수 있습니다.  
   
-## <a name="next-step"></a>다음 단계  
+## <a name="next-step"></a>다음 단계
 운영 콘솔에 다음 단계는 [변수 값 파일 만들기 &#40; AccessToSQL &#41; ](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [변수 값 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   
 
