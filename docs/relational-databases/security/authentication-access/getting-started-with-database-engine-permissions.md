@@ -16,11 +16,11 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 16d16229a267564977addc768e04e804d0b163cf
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 376e591e28bbdddbd635392b24c3d6652f3bd94d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>데이터베이스 엔진 권한 시작
@@ -168,7 +168,7 @@ GRANT CONTROL ON DATABASE::SalesDB TO Ted;
  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 보안 주체와 서버 및 데이터베이스 개체 간의 관계를 보여 주는 그래픽은 [사용 권한 계층 구조&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/permissions-hierarchy-database-engine.md)를 참조하세요.  
   
 ## <a name="permissions-vs-fixed-server-and-fixed-database-roles"></a>권한과 고정 서버 및 고정 데이터베이스 역할  
- 고정 서버 역할과 고정 데이터베이스 역할의 권한은 유사하지만 세분화된 권한과 정확히 동일하지는 않습니다. 예를 들어 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]권한으로 로그인할 경우 `CONTROL SERVER` 인스턴스에 대한 모든 권한을 가집니다. 그러나 `CONTROL SERVER` 권한을 부여할 경우 로그인이 sysadmin 고정 서버 역할의 멤버로 설정되지 않으며,  `sysadmin` 고정 서버 역할에 로그인을 추가할 경우 로그인에  `CONTROL SERVER` 권한이 명시적으로 부여되지 않습니다. 경우에 따라 저장 프로시저는 세분화된 권한을 확인하지 않고 고정 역할을 확인하여 권한을 확인합니다. 예를 들어 데이터베이스를 분리하려면 `db_owner` 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 동등한 `CONTROL DATABASE` 권한으로는 부족합니다. 이 두 시스템은 병렬로 작동하지만 거의 서로 상호 작용하지 않습니다. 가능한 경우 고정 역할 대신 세분화된 새 권한 시스템을 사용하는 것이 좋습니다.  
+ 고정 서버 역할과 고정 데이터베이스 역할의 권한은 유사하지만 세분화된 권한과 정확히 동일하지는 않습니다. 예를 들어 `sysadmin` 고정 서버 역할의 멤버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]권한으로 로그인할 경우 `CONTROL SERVER` 인스턴스에 대한 모든 권한을 가집니다. 그러나 `CONTROL SERVER` 권한을 부여할 경우 로그인이 sysadmin 고정 서버 역할의 멤버로 설정되지 않으며,  `sysadmin` 고정 서버 역할에 로그인을 추가할 경우 로그인에  `CONTROL SERVER` 권한이 명시적으로 부여되지 않습니다. 경우에 따라 저장 프로시저는 세분화된 권한을 확인하지 않고 고정 역할을 확인하여 권한을 확인합니다. 예를 들어 데이터베이스를 분리하려면 `db_owner` 고정 데이터베이스 역할의 멤버 자격이 필요합니다. 동등한 `CONTROL DATABASE` 권한으로는 부족합니다. 이 두 시스템은 병렬로 작동하지만 거의 서로 상호 작용하지 않습니다. 가능한 경우 고정 역할 대신 세분화된 새 권한 시스템을 사용하는 것이 좋습니다.
   
 ## <a name="monitoring-permissions"></a>권한 모니터링  
  다음 뷰는 보안 정보를 반환합니다.  

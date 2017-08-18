@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b16232d4a183a75dd9cf76e57ca0751df19e3a2f
+ms.translationtype: HT
+ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
+ms.openlocfilehash: 16e5ac5c58c00568541aa10352b11017c1bd9d3e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 - 쿼리 성능
@@ -116,13 +116,17 @@ ms.lasthandoff: 06/22/2017
  ¹SQL Server 2016, SQL 데이터베이스 V12 Premium Edition 및 SQL 데이터 웨어하우스에 적용    
     
 ### <a name="aggregate-pushdown"></a>집계 푸시 다운    
- SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다.  이러한 실행으로 좋은 성능이 제공되긴 하지만 SQL Server 2016에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다.    
-    
--   지원되는 집계 연산자는 MIN, MAX, SUM, COUNT, AVG입니다.    
-    
--   64 비트 이상의 데이터 형식이 지원됩니다.  예를 들어 bigint는 크기가 8바이트로 지원되지만 지원 이지만 10진수(38,6)는 크기가 17바이트로 지원되지 않습니다. 또한 문자열 형식도 지원되지 않습니다.    
-    
--   집계 연산자는 SCAN 노드 또는 그룹화된 SCAN 노드 맨 위에 있어야 합니다.    
+ SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다.  이러한 실행으로 좋은 성능이 제공되긴 하지만 SQL Server 2016에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다. 
+ 
+-    집계는 MIN, MAX, SUM, COUNT 및 COUNT(*)입니다. 
+-  집계 연산자는 SCAN 노드 또는 그룹화된 SCAN 노드 맨 위에 있어야 합니다.
+-  이 집계는 고유한 집계가 아닙니다.
+-  집계 열은 문자열 열이 아닙니다.
+-  집계 열은 가상의 열이 아닙니다. 
+-  입력 및 출력 데이터 형식은 다음 중 하나여야 하며 64비트 이내여야 합니다.
+    -  tiny int, int, big int, small int, bit
+    -  정밀도가 18 이하인 small money, money, decimal 및 numeric
+    -  small date, date, datetime, datetime2, time
     
  집계 푸시다운은 캐시에서 사용하는 실행에서 압축되거나 인코딩된 데이터를 효율적으로 집계하고 SIMD를 활용하여 좀 더 가속화됩니다.    
     
@@ -162,9 +166,9 @@ FROM FactResellerSalesXL_CCI
 ## <a name="see-also"></a>참고 항목    
  Columnstore 인덱스 가이드     
  Columnstore 인덱스 데이터 로드     
- Columnstore 인덱스 버전형 기능 요약     
+ 버전이 지정된 Columnstore 인덱스 기능 요약     
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)     
- [Get started with Columnstore for real time operational analytics(실시간 운영 분석을 위한 Columnstore 시작)](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
+ [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  데이터 웨어하우스용 Columnstore 인덱스     
  [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
     

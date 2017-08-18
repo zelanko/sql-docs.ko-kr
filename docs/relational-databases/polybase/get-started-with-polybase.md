@@ -2,7 +2,7 @@
 title: "PolyBase 시작하기 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 7/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,16 +19,15 @@ helpviewer_keywords:
 - Azure blob storage export
 - Hadoop import, PolyBase getting started
 - Hadoop export, Polybase getting started
-ms.assetid: c71ddc50-b4c7-416c-9789-264671bd9ecb
 caps.latest.revision: 78
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
-ms.openlocfilehash: baf9d02b824a8aae2a282d0f6203791c4b72f1f8
+ms.sourcegitcommit: 74f73ab33a010583b4747fcc2d9b35d6cdea14a2
+ms.openlocfilehash: b107ea3ebabbf959ee12b900885612df364dfc12
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/04/2017
 
 ---
 # <a name="get-started-with-polybase"></a>PolyBase 시작하기
@@ -90,10 +89,13 @@ SELECT SERVERPROPERTY ('IsPolybaseInstalled') AS IsPolybaseInstalled;
   
 -   Linux에서 Cloudera CDH 4.3  
   
--   Linux에서 Cloudera CDH 5.1 – 5.5, 5.9 - 5.11  
+-   Linux에서 Cloudera CDH 5.1 – 5.5, 5.9 - 5.12  
   
 -   Azure BLOB 저장소  
-  
+ 
+Hadoop은 새 릴리스를 위해 “Major.Minor.Version” 패턴을 따릅니다. 지원되는 주/부 릴리스 내의 모든 버전이 지원됩니다.
+ 
+
 >  [!NOTE]
 > Azure Data Lake Store 연결은 Azure SQL Data Warehouse에서만 지원됩니다.
   
@@ -241,10 +243,15 @@ CREATE EXTERNAL DATA SOURCE AzureStorage with (
 --3:  Create an external file format.  
 -- FORMAT TYPE: Type of format in Hadoop (DELIMITEDTEXT,  RCFILE, ORC, PARQUET).  
   
-CREATE EXTERNAL FILE FORMAT TextFileFormat WITH (  
-        FORMAT_TYPE = DELIMITEDTEXT,   
-        FORMAT_OPTIONS (FIELD_TERMINATOR ='|',   
-                USE_TYPE_DEFAULT = TRUE)  
+CREATE EXTERNAL FILE FORMAT TextFileFormat
+WITH (  
+       FORMAT_TYPE = DELIMITEDTEXT,   
+       FORMAT_OPTIONS (
+         FIELD_TERMINATOR ='|',   
+         USE_TYPE_DEFAULT = TRUE
+       )
+);
+         
   
 --4: Create an external table.  
 -- The external table points to data stored in Azure storage.  
