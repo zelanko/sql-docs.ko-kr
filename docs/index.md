@@ -4,10 +4,10 @@ hide_bc: true
 title: "Microsoft SQL 문서 | Microsoft 문서"
 description: "SQL에 대한 자세한 정보"
 ms.translationtype: HT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: ec933d582956a21fee23173f5c08bec3d1fa807e
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: b280992dadacae7b54d94ba90caadff878f1cd4c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 
@@ -247,11 +247,7 @@ ms.lasthandoff: 08/17/2017
                                                 <ul>
                                                     <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure 데이터베이스 마이그레이션 서비스(비공개 미리 보기)</a></li>
                                                     <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54255">SSMA for Access</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54254">SSMA for DB2</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54257">MySQL용 SSMA</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54258">SSMA for Oracle</a></li>
-                                                    <li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=54256">SSMA for SAP ASE</a></li>
+                                                    <li><a href="/sql/ssma/sql-server-migration-assistant">SQL Server Migration Assistant</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Azure로 데이터베이스 마이그레이션</h4>
                                                 <ul>
