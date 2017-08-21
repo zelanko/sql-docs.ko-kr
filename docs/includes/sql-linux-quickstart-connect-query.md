@@ -113,7 +113,7 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 
 |||
 |---|---|
-| [업그레이드](../linux/sql-server-linux-setup.md#upgrade) | Linux에서 SQL Server의 기존 설치 및 업그레이드 방법을 알아봅니다. |
+| [업그레이드](../linux/sql-server-linux-setup.md#upgrade) | Linux에서 SQL Server의 기존 설치를 업그레이드하는 방법 알아보기 |
 | [제거](../linux/sql-server-linux-setup.md#uninstall) | Linux에서 SQL Server 제거 |
 | [무인 설치](../linux/sql-server-linux-setup.md#unattended) | 확인 메시지를 표시하지 않고 설치를 스크립팅하는 방법을 알아봅니다. |
 | [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
+ms.date: 08/07/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,29 +15,21 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b2f5d26757bd436cfd21076b2a4899376ee60c9f
-ms.openlocfilehash: 9bee627cf0c6918136dbc5adc510944eaaf05dbf
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/04/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
-SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 최신 SQL Server 2017 릴리스 후보(RC1, 2017년 7월) 및 CTP(커뮤니티 기술 미리 보기) 릴리스의 특정 기능 영역에 대한 새로운 기능을 요약합니다.
+SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 최신 SQL Server 2017 릴리스 후보(RC2, 2017년 월) 및 CTP(커뮤니티 기술 미리 보기) 릴리스의 특정 기능 영역에 대한 새로운 기능을 요약합니다.
 
-**사용해 보기:** [SQL Server 2017 RC(릴리스 후보) 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
+**사용해 보기:** [최신 SQL Server 2017 릴리스 다운로드: RC2, 2017년 8월](http://go.microsoft.com/fwlink/?LinkID=829477)
+이 릴리스에는 버그 수정 및 성능 향상 기능이 포함되어 있습니다.
 
 >**Linux에서 SQL Server 실행!** 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)을 참조하세요.
 
-## <a name="latest-release-sql-server-2017-release-candidate-rc2-august-2017"></a>최신 릴리스: SQL Server 2017 릴리스 후보 (RC2, 2017년 8월)
-이 릴리스에는 버그 수정 및 성능 향상 기능이 포함되어 있습니다.
-
-### <a name="master-data-services-mds"></a>MDS(Master Data Services)
-- 다음과 같은 이전 릴리스의 SQL Server에서 SQL Server 2017 Master Data Services로 업그레이드하는 경우 업그레이드 환경 및 성능이 향상되었습니다.
-    - SQL Server 2012
-    - SQL Server 2014
-    - SQL Server 2016
-
-## <a name="sql-server-database-engine"></a>SQL Server 데이터베이스 엔진  
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 데이터베이스 엔진  
 SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 개선 및 성능 개선 사항을 포함하고 있습니다. 
 - CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 **CLR 어셈블리**를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다(RC1).  
 - **다시 시작 가능한 온라인 인덱스 다시 작성**은 오류(예: 복제본으로 장애 조치(failover) 또는 디스크 공간 부족) 발생 후 중지된 위치에서 온라인 인덱스 다시 작성을 재개하거나 일시 중지하고 나중에 온라인 인덱스 다시 작성 작업을 다시 시작합니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요. (CTP 2.0)
@@ -66,7 +58,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 
 자세한 내용은 [What's new in SQL Server 2017 Database Engine](~/database-engine/configure-windows/what-s-new-in-sql-server-2017-database-engine.md)(SQL Server 2017 데이터베이스 엔진의 새로운 기능)을 참조하세요.
 
-## <a name="sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)
+## <a name="sql-server-2017-integration-services-ssis"></a>SQL Server 2017 Integration Services(SSIS)
 - SSIS의 새 **Scale Out** 기능에서 다음과 같은 새로운 기능과 변경된 기능을 제공합니다. 자세한 내용은 [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)(SQL Server 2017에서 Integration Services의 새로운 기능)을 참조하세요. (RC1)
     -   Scale Out Master에서 이제 고가용성을 지원합니다.
     -   Scale Out Worker에서 실행 로그의 장애 조치(failover) 처리가 향상되었습니다.
@@ -79,13 +71,13 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 
 자세한 내용은 [What's New in Integration Services in SQL Server 2017](~/integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)(SQL Server 2017에서 Integration Services의 새로운 기능)을 참조하세요.
 
-## <a name="master-data-services-mds"></a>MDS(Master Data Services)
-SQL Server 2017 MDS로 업그레이드하기 위한 업그레이드 성능 및 환경 개선 외에도 다음과 같은 추가로 향상된 기능이 Master Data Services에 적용되었습니다.
+## <a name="sql-server-2017-master-data-services-mds"></a>SQL Server 2017 MDS(Master Data Services)
+- SQL Server 2012, SQL Server 2014 및 SQL Server 2016에서 SQL Server 2017 Master Data Services로 업그레이드할 때의 환경 및 성능이 개선되었습니다. 
 - 이제 웹 응용 프로그램의 **탐색기** 페이지에서 엔터티, 컬렉션 및 계층 구조의 정렬된 목록을 볼 수 있습니다.
 - 스테이징 저장 프로시저를 사용하여 수백만 개의 레코드를 스테이징하기 위한 성능이 향상되었습니다.
 - 모델 사용 권한을 할당하기 위해 **그룹 관리** 페이지에서 **엔터티** 폴더를 확장할 때의 성능이 향상되었습니다. **그룹 관리** 페이지는 웹 응용 프로그램의 **보안** 섹션에 있습니다. 성능 향상에 대한 자세한 내용은 [https://support.microsoft.com/help/4023865?preview](https://support.microsoft.com/help/4023865?preview)를 참조하세요. 사용 권한 할당에 대한 자세한 내용은 [모델 개체 사용 권한 할당(Master Data Services)](../master-data-services/assign-model-object-permissions-master-data-services.md)를 참조하세요.
 
-## <a name="sql-server-analysis-services-ssas"></a>SSAS(SQL Server Analysis Services) 
+## <a name="sql-server-2017-analysis-services-ssas"></a>SQL Server 2017 Analysis Services(SSAS) 
 SQL Server Analysis Services 2017에서는 테이블 형식 모델에 대한 여러 향상된 기능을 새로 제공합니다. 이러한 개체는 다음과 같습니다.
 - Analysis Services의 기본 설치 옵션인 테이블 형식 모드 (CTP 2.0)
 - 테이블 형식 모델의 메타데이터를 보호하는 개체 수준 보안 (CTP 2.0)
@@ -101,25 +93,22 @@ SQL Server Analysis Services 2017에서는 테이블 형식 모델에 대한 여
 
 자세한 내용은 [What's new in SQL Server Analysis Services 2017](~/analysis-services/what-s-new-in-sql-server-analysis-services-2017.md)(SQL Server Analysis Services 2017의 새로운 기능)을 참조하세요.
 
-## <a name="sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)
+## <a name="sql-server-2017-reporting-services-ssrs"></a>SQL Server 2017 Reporting Services(SSRS)
 CTP 2.1부터 더 이상 SQL Server 설치 프로그램을 통해 SSRS를 설치할 수 없습니다. [Microsoft SQL Server 2017 Reporting Services 릴리스 후보를 다운로드](https://www.microsoft.com/download/details.aspx?id=55252)하려면 Microsoft 다운로드 센터로 이동하세요. 
 - 이제 보고서에서 주석을 사용하여 큐브 뷰를 추가하고 다른 사용자와 공동 작업할 수 있습니다. 주석에 첨부 파일도 포함할 수 있습니다. (CTP 2.1)
 - 최신 버전의 보고서 작성기와 SQL Server Data Tools에서 필요한 필드를 쿼리 디자이너로 끌어다 놓아 지원되는 SQL Server Analysis Services 테이블 형식 데이터 모델에 대한 네이티브 DAX 쿼리를 만들 수 있습니다. [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)(Reporting Services 블로그)를 참조하세요.
 
 자세한 내용은 [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)(SSRS(SQL Server Reporting Services)의 새로운 기능)를 참조하세요.
 
-## <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스
-R 언어와 함께 Python 지원을 반영하여 SQL Server R Services 이름이 **SQL Server Machine Learning Services**로 변경되었습니다. Machine Learning Services(데이터베이스 내)를 사용하여 SQL Server에서 R 또는 Python 스크립트를 실행할 수 있습니다. 또는 **Microsoft Machine Learning Server(독립형)**를 설치하여 SQL Server가 필요하지 않은 R 및 Python 모델을 배포하고 사용합니다. 
+## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 Machine Learning Services
+R 언어와 함께 Python 지원을 반영하여 SQL Server R Services 이름이 **SQL Server Machine Learning Services**로 변경되었습니다. Machine Learning Services(데이터베이스 내)를 사용하여 SQL Server에서 R 또는 Python 스크립트를 실행하거나 **Microsoft Machine Learning Server(독립 실행형)**를 설치하여 SQL Server가 필요 없는 R 및 Python 모델을 배포하고 사용할 수 있습니다. 
 
 SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오픈 소스 에코 시스템에서 사용할 수 있는 광범위 Python ML 및 AI 라이브러리에 액세스할 수 있습니다. 
 
-+ **revoscalepy** - 이 RevoScaleR의 Pythonic 버전에는 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트의 병렬 알고리즘 외에도 데이터 변환 및 데이터 이동, 원격 계산 컨텍스트 및 데이터 소스에 사용할 풍부한 API 집합이 포함되어 있습니다.
-
-+ **microsoftml** - Python 바인딩을 사용하는 이 첨단 기계 학습 알고리즘 및 변환 패키지에는 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 고도로 최적화된 선형 및 로지스틱 회귀 알고리즘이 포함되어 있습니다. 이미지 추출 또는 감정 분석에 사용할 수 있는 ResNet 모델을 기반으로 미리 학습된 모델도 가져옵니다.
-
-+ **T-SQL로 Python 운영화** - 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 코드를 쉽게 배포합니다. SQL에서 Python 프로세스로 데이터를 스트리밍하고 MPI 링 병렬화를 사용하여 뛰어난 성능을 얻습니다.
-
-+ **SQL Server 계산 컨텍스트의 Python** - 데이터 과학자와 개발자는 개발 환경에서 원격으로 Python 코드를 실행하여 데이터를 이동하지 않고 데이터를 탐색하고 모델을 개발할 수 있습니다.
+- **revoscalepy** - 이 RevoScaleR의 Pythonic 버전에는 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트의 병렬 알고리즘 외에도 데이터 변환 및 데이터 이동, 원격 계산 컨텍스트 및 데이터 소스에 사용할 풍부한 API 집합이 포함되어 있습니다.
+- **microsoftml** - Python 바인딩을 사용하는 이 첨단 기계 학습 알고리즘 및 변환 패키지에는 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 최적화된 선형 및 로지스틱 회귀 알고리즘이 포함되어 있습니다. 이미지 추출 또는 감정 분석에 사용할 수 있는 ResNet 모델을 기반으로 미리 학습된 모델도 가져옵니다.
+- **T-SQL로 Python 운영화** - 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 코드를 쉽게 배포합니다. SQL에서 Python 프로세스로 데이터를 스트리밍하고 MPI 링 병렬화를 사용하여 뛰어난 성능을 얻습니다.
+- **SQL Server 계산 컨텍스트의 Python** - 데이터 과학자와 개발자는 개발 환경에서 원격으로 Python 코드를 실행하여 데이터를 이동하지 않고 데이터를 탐색하고 모델을 개발할 수 있습니다.
 
 자세한 내용은 [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
 
