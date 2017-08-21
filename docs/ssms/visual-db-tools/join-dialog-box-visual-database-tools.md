@@ -17,11 +17,11 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 82c974b0a34c99af677eb783b12809e6d185072b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/18/2017
 
 ---
 # <a name="join-dialog-box-visual-database-tools"></a>조인 대화 상자(Visual Database Tools)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
 |------------|------------------|  
 |**테이블**|조인에 관련된 테이블 또는 테이블 반환 개체의 이름입니다. 여기서는 테이블의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
 |**열**|테이블 조인에 사용된 열의 이름입니다. 연산자 목록의 연산자는 열에 있는 데이터 간의 관계를 지정합니다. 여기서는 열의 이름을 변경할 수 없으며 표시된 정보를 참조만 할 수 있습니다.|  
-|**연산자**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools icon")|  
+|**연산자**|조인 열과 관련시키는 데 사용되는 연산자를 지정합니다. 등호(=) 이외의 연산자를 지정하려면 목록에서 해당 연산자를 선택하십시오. 속성 페이지를 닫으면 선택한 연산자가 다음 그림과 같이 조인 선의 다이아몬드 모양 안에 나타납니다.<br /><br />![Visual Database Tools 아이콘](../../ssms/visual-db-tools/media/dv3wbii.gif "Visual Database Tools 아이콘")|  
 |**모든 행 <table1>**|오른쪽 테이블에 일치하는 항목이 없는 경우에도 왼쪽 테이블의 모든 행이 출력되도록 지정합니다. 오른쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 왼쪽 우선 외부 조인을 지정하는 것과 결과가 같습니다.|  
 |**모든 행 <table2>**|왼쪽 테이블에 일치하는 항목이 없는 경우에도 오른쪽 테이블의 모든 행이 출력되도록 지정합니다. 왼쪽 테이블에서 일치하는 데이터가 없는 열은 null로 나타납니다. 이 옵션을 선택하면 SQL 문에 RIGHT OUTER JOIN을 지정하는 것과 결과가 같습니다.|  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
 > "왼쪽"과 "오른쪽"이라는 말이 반드시 다이어그램 창의 테이블 위치를 의미하지는 않습니다. "왼쪽"은 SQL 문에서 JOIN 키워드의 왼쪽에 이름이 나타나는 테이블을 말하고 "오른쪽"은 JOIN 키워드의 오른쪽에 이름이 나타나는 테이블을 말합니다. **다이어그램** 창에서 테이블의 위치를 바꾸어도 여기에서 언급하는 왼쪽과 오른쪽이 바뀌는 것은 아닙니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-[조인을 사용한 쿼리&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
-[쿼리 및 뷰 디자인 방법 도움말 항목&amp;#40;Visual Database Tools&amp;#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
+[조인을 사용한 쿼리&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
+[쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   
 
