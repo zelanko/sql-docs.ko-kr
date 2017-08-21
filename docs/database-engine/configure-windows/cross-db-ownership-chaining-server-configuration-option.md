@@ -1,7 +1,7 @@
 ---
 title: "cross db ownership chaining 서버 구성 옵션 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/02/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 457ca08fbfef2ab0fb96e4cd2ec4515e04b9dc6e
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: c42780edef8e57b9d8159d9dfe384554cade4fb2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining 서버 구성 옵션
@@ -39,7 +39,13 @@ ms.lasthandoff: 08/02/2017
 -   ALTER DATABASE 문의 SET 절을 사용하여 개별 데이터베이스에 대해 데이터베이스 간 소유권 체인을 설정할 수 있습니다. 새 데이터베이스를 만드는 경우 CREATE DATABASE 문을 사용하여 새 데이터베이스에 대해 데이터베이스 간 소유권 체인을 설정할 수 있습니다.  
   
      **인스턴스에서 호스트한 모든 데이터베이스가 데이터베이스 간 소유권 체인에 참여하지 않고 사용자가 이 설정에 따른 보안 위험을 잘 알고 있는 경우가 아니라면** cross db ownership chaining [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 1로 설정하지 않는 것이 좋습니다.  
-  
+
+데이터베이스 간 소유권 체인의 현재 상태를 확인하려면 다음 쿼리를 실행합니다.  
+```sql
+SELECT is_db_chaining_on, name FROM sys.databases;
+```  
+결과 1은 데이터베이스 간 소유권 체인이 사용하도록 설정되어 있음을 나타냅니다.
+
 ## <a name="controlling-cross-database-ownership-chaining"></a>데이터베이스 간 소유권 체인 제어  
  데이터베이스 간 소유권 체인을 설정하기 전에 다음 사항을 고려하십시오.  
   

@@ -1,7 +1,7 @@
 ---
 title: "결정적 함수 및 비결정적 함수 | Microsoft 문서"
 ms.custom: 
-ms.date: 09/28/2016
+ms.date: 08/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: cd6393571f06ba7b73f0b52bcfe8bc218279c1af
+ms.translationtype: HT
+ms.sourcegitcommit: 4d56a0bb3893d43943478c6d5addb719ea32bd10
+ms.openlocfilehash: fe23cb7ab3fbc0461f0c0853aedaa4444e4bb543
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="deterministic-and-nondeterministic-functions"></a>결정적 함수 및 비결정적 함수
@@ -90,16 +90,16 @@ ms.lasthandoff: 06/22/2017
 |CURRENT_TIMESTAMP|RAND|  
 |DENSE_RANK|RANK|  
 |FIRST_VALUE|ROW_NUMBER|   
-||TEXTPTR|  
+|FORMAT|TEXTPTR|  
   
 ## <a name="calling-extended-stored-procedures-from-functions"></a>함수에서 확장 저장 프로시저 호출  
- 확장 저장 프로시저는 데이터베이스에 의도하지 않은 영향을 줄 수 있기 때문에 확장 저장 프로시저를 호출하는 함수는 비결정적입니다. 의도하지 않은 영향으로는 테이블 업데이트와 같은 데이터베이스의 전역 상태 변경이나 파일 수정 또는 전자 메일 메시지 보내기와 같은 파일 또는 네트워크 등의 외부 리소스 변경이 있습니다. 사용자 정의 함수에서 확장 저장 프로시저를 실행할 때 일관된 결과 집합이 반환되지는 않습니다. 데이터베이스에 의도하지 않은 영향을 주는 사용자 정의 함수는 권장되지 않습니다.  
+ 확장 저장 프로시저는 데이터베이스에 의도하지 않은 영향을 줄 수 있기 때문에 확장 저장 프로시저를 호출하는 함수는 비결정적입니다. 의도하지 않은 영향으로는 테이블 업데이트와 같은 데이터베이스의 전역 상태 변경이나 파일 수정 또는 전자 메일 메시지 보내기와 같은 파일 또는 네트워크 등의 외부 리소스 변경이 있습니다. 사용자 정의 함수에서 확장 저장 프로시저를 실행할 때 일관된 결과 집합이 반환되는 것에 의존하지 마세요. 데이터베이스에 의도하지 않은 영향을 주는 사용자 정의 함수는 권장되지 않습니다.  
   
- 함수 내부에서 확장 저장 프로시저를 호출하면 확장 저장 프로시저가 클라이언트에 결과 집합을 반환할 수 없습니다. 클라이언트에 결과 집합을 반환하는 개방형 데이터 서비스 API에는 FAIL 반환 코드가 포함됩니다.  
+ 함수 내부에서 확장 저장 프로시저를 호출하면 확장 저장 프로시저가 클라이언트에 결과 집합을 반환할 수 없습니다. 클라이언트에 결과 집합을 반환하는 모든 개방형 데이터 서비스 API는 FAIL 반환 코드를 포함합니다.  
   
  확장 저장 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 다시 연결할 수 있지만 확장 저장 프로시저를 호출한 원래 함수와 동일한 트랜잭션을 조인할 수는 없습니다.  
   
- 일괄 처리 또는 저장 프로시저에서 호출하는 경우와 마찬가지로 확장 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 실행되고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 계정 컨텍스트에서 실행됩니다. 확장 저장 프로시저의 소유자는 프로시저를 실행하는 다른 사용자에게 사용 권한을 부여할 때 이 점을 고려해야 합니다.  
+ 일괄 처리 또는 저장 프로시저에서 호출하는 경우와 마찬가지로 확장 저장 프로시저는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 가 실행되고 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 계정 컨텍스트에서 실행됩니다. 확장 저장 프로시저의 소유자는 다른 사용자에게 프로시저를 실행하는 권한을 부여할 때 이 보안 컨텍스트의 권한을 고려해야 합니다.  
   
   
 

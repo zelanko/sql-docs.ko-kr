@@ -2,7 +2,7 @@
 title: "PolyBase T-SQL 개체 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/13/2017
+ms.date: 08/15/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,16 +14,15 @@ helpviewer_keywords:
 - PolyBase, fundamentals
 - PolyBase, SQL statements
 - PolyBase, SQL objects
-ms.assetid: ef5d6c40-6ce6-4cf0-8ad3-38f98b32f98e
 caps.latest.revision: 20
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: de25852f9005be687fdb8a547e30a99bbb58cf4c
-ms.openlocfilehash: c2ed145cb54f90bdbb368d120651a6875f9d5b5c
+ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
+ms.openlocfilehash: 8a6a21a3cc6317d1eee54cd83ced008e3358e139
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/16/2017
 
 ---
 # <a name="polybase-t-sql-objects"></a>PolyBase T-SQL 개체
@@ -47,7 +46,9 @@ ms.lasthandoff: 07/31/2017
 ## <a name="prerequisites"></a>필수 구성 요소  
  PolyBase를 구성합니다. [PolyBase configuration](../../relational-databases/polybase/polybase-configuration.md)을 참조하세요.  
   
-## <a name="create-external-tables-for-hadoop"></a>Hadoop에 대한 외부 테이블 만들기  
+## <a name="create-external-tables-for-hadoop"></a>Hadoop에 대한 외부 테이블 만들기
+적용 대상: SQL Server(2016부터), 병렬 데이터 웨어하우스
+  
  **1. 데이터베이스 범위 자격 증명 만들기**  
   
  이 단계는 Kerberos 보안 Hadoop 클러스터에만 필요합니다.  
@@ -126,6 +127,8 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
   
 ## <a name="create-external-tables-for-azure-blob-storage"></a>Azure blob 저장소에 대한 외부 테이블 만들기  
+적용 대상: SQL Server(2016부터), Azure SQL Data Warehouse, 병렬 데이터 웨어하우스
+
  **1. 데이터베이스 범위 자격 증명 만들기**  
   
 ```sql  
@@ -201,11 +204,11 @@ CREATE STATISTICS StatsForSensors on CarSensor_Data(CustomerKey, Speed)
 ```  
  
 ## <a name="create-external-tables-for-azure-data-lake-store"></a>Azure Data Lake Store의 외부 테이블 만들기
-Azure Data Lake Store는 SQL Data Warehouse의 PolyBase에서만 지원됩니다.
-Azure SQL Data Warehouse 및 ADLS에 대한 자세한 내용은 [Azure Data Lake Store를 사용하여 로드](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)를 참조하세요.
+적용 대상: Azure SQL Data Warehouse
+
+자세한 내용은 [Azure Data Lake Store를 사용하여 로드](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-load-from-azure-data-lake-store)를 참조하세요.
  
- **1. 데이터베이스 범위 자격 증명 만들기**  
-  
+ **1. 데이터베이스 범위 자격 증명 만들기**   
 
 ```sql
 -- Create a Database Master Key.

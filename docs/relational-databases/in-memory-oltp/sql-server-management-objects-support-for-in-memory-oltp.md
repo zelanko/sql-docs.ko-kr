@@ -1,7 +1,7 @@
 ---
 title: "메모리 내 OLTP에 대한 SQL Server 관리 개체 지원 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -12,70 +12,71 @@ ms.topic: article
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 caps.latest.revision: 28
 author: JennieHubbard
-ms.author: jhubbard
+ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8c0ed45fbf5da5c1c521ad52e25553a21c068a08
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: f97c2335abf293f70fad454ac9f181a3cb3e439c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
-  이 항목에서는 메모리 내 OLTP에 대한 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)의 변경 내용을 설명합니다.  
+
+이 항목에서는 메모리 내 OLTP에 대한 SMO( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관리 개체)의 변경 내용을 설명합니다.  
   
- 메모리 내 OLTP를 지원하는 형식과 멤버는 다음과 같습니다.  
+메모리 내 OLTP를 지원하는 형식과 멤버는 다음과 같습니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.DurabilityType>  
+- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>**(열거형)
+
+- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>**(생성자)
+
+- Microsoft.SqlServer.Management.Smo.**<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>**(열거형)
+
+- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>**(열거형 멤버)
+
+- Microsoft.SqlServer.Management.Smo.Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>**(속성)
+
+- Microsoft.SqlServer.Management.Smo.UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>**(속성)
+
+## <a name="code-sample"></a>코드 예제
+
+#### <a name="actions-taken-in-the-code-example"></a>코드 예제에서 수행된 작업
   
--   <xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>  
+-   메모리 최적화 파일 그룹 및 메모리 최적화 파일이 있는 데이터베이스를 만듭니다.  
   
--   <xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.FileGroupType>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>  
-  
--   <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>  
-  
-## <a name="code-sample"></a>코드 예제  
- 이 예제에서는 다음을 수행합니다.  
-  
--   메모리 액세스에 최적화된 파일 그룹 및 메모리 액세스에 최적화된 파일이 있는 데이터베이스를 만듭니다.  
-  
--   기본 키, 비클러스터형 인덱스 및 비클러스터형 해시 인덱스가 있는 영구 메모리 액세스에 최적화된 테이블을 만듭니다.  
+-   기본 키, 비클러스터형 인덱스 및 비클러스터형 해시 인덱스가 있는 내구성 있는 메모리 최적화 테이블을 만듭니다.  
   
 -   열 및 인덱스를 만듭니다.  
   
--   사용자 정의 메모리 액세스에 최적화된 테이블 형식을 만듭니다.  
+-   사용자 정의 메모리 최적화 테이블 형식을 만듭니다.  
   
--   고유하게 컴파일된 저장 프로시저를 만듭니다.  
+-   고유하게 컴파일된 저장 프로시저를 만듭니다.
+
+#### <a name="assemblies-referenced-by-the-compiled-code-example"></a>컴파일된 코드 예제에서 참조되는 어셈블리
+
+- Microsoft.SqlServer.ConnectionInfo.dll
+- Microsoft.SqlServer.Management.Sdk.Sfc.dll
+- Microsoft.SqlServer.Smo.dll
+- Microsoft.SqlServer.SqlEnum.dll
+
+#### <a name="source-code"></a>소스 코드
   
- 이 예제는 다음 어셈블리를 참조해야 합니다.  
-  
--   Microsoft.SqlServer.Smo.dll  
-  
--   Microsoft.SqlServer.Management.Sdk.Sfc.dll  
-  
--   Microsoft.SqlServer.ConnectionInfo.dll  
-  
--   Microsoft.SqlServer.SqlEnum.dll  
-  
-```tsql  
+```csharp
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   
@@ -83,23 +84,29 @@ public class A {
    static void Main(string[] args) {  
       Server server = new Server("(local)");  
   
-      // Create a database with memory-optimized filegroup and memory-optimized file  
+      // Create a database with memory-optimized filegroup and memory-optimized file.
       Database db = new Database(server, "MemoryOptimizedDatabase");  
       db.Create();  
-      FileGroup fg = new FileGroup(db, "memOptFilegroup", FileGroupType.MemoryOptimizedDataFileGroup);  
+      FileGroup fg = new FileGroup(
+         db,
+         "memOptFilegroup",
+         FileGroupType.MemoryOptimizedDataFileGroup);  
       db.FileGroups.Add(fg);  
       fg.Create();  
-      // change this path if needed  
-      DataFile file = new DataFile(fg, "memOptFile", @"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\MSSQLmemOptFileName");  
+      // Change this path if needed.
+      DataFile file = new DataFile(
+         fg,
+         "memOptFile",
+         @"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\MSSQLmemOptFileName");  
       file.Create();  
   
-      // Create a durable memory-optimized table with primary key, nonclustered index and nonclustered hash index  
-      // Define the table as memory optimized and set the durability  
+      // Create a durable memory-optimized table with primary key, nonclustered index and nonclustered hash index.
+      // Define the table as memory optimized and set the durability.
       Table table = new Table(db, "memOptTable");  
       table.IsMemoryOptimized = true;  
       table.Durability = DurabilityType.SchemaAndData;  
   
-      // Create columns  
+      // Create columns.
       Column col1 = new Column(table, "col1", DataType.Int);  
       col1.Nullable = false;  
       table.Columns.Add(col1);  
@@ -110,7 +117,7 @@ public class A {
       col3.Nullable = false;  
       table.Columns.Add(col3);  
   
-      // Create indexes  
+      // Create indexes.
       Index pk = new Index(table, "PK_memOptTable");  
       pk.IndexType = IndexType.NonClusteredIndex;  
       pk.IndexKeyType = IndexKeyType.DriPrimaryKey;  
@@ -120,23 +127,25 @@ public class A {
       Index ixNonClustered = new Index(table, "ix_nonClustered");  
       ixNonClustered.IndexType = IndexType.NonClusteredIndex;  
       ixNonClustered.IndexKeyType = IndexKeyType.None;  
-      ixNonClustered.IndexedColumns.Add(new IndexedColumn(ixNonClustered, col2.Name));  
+      ixNonClustered.IndexedColumns.Add(
+         new IndexedColumn(ixNonClustered, col2.Name));  
       table.Indexes.Add(ixNonClustered);  
   
       Index ixNonClusteredHash = new Index(table, "ix_nonClustered_Hash");  
       ixNonClusteredHash.IndexType = IndexType.NonClusteredHashIndex;  
       ixNonClusteredHash.IndexKeyType = IndexKeyType.None;  
       ixNonClusteredHash.BucketCount = 1024;  
-      ixNonClusteredHash.IndexedColumns.Add(new IndexedColumn(ixNonClusteredHash, col3.Name));  
+      ixNonClusteredHash.IndexedColumns.Add(
+         new IndexedColumn(ixNonClusteredHash, col3.Name));  
       table.Indexes.Add(ixNonClusteredHash);  
   
       table.Create();  
   
-      // Create a user-defined memory-optimized table type  
+      // Create a user-defined memory-optimized table type.
       UserDefinedTableType uDTT = new UserDefinedTableType(db, "memOptUDTT");  
       uDTT.IsMemoryOptimized = true;  
   
-      // Add columns  
+      // Add columns.
       Column udTTCol1 = new Column(uDTT, "udtCol1", DataType.Int);  
       udTTCol1.Nullable = false;  
       uDTT.Columns.Add(udTTCol1);  
@@ -147,7 +156,7 @@ public class A {
       udTTCol3.Nullable = false;  
       uDTT.Columns.Add(udTTCol3);  
   
-      // Add index  
+      // Add index.
       Index ix = new Index(uDTT, "IX_UDT");  
       ix.IndexType = IndexType.NonClusteredHashIndex;  
       ix.BucketCount = 1024;  
@@ -157,7 +166,7 @@ public class A {
   
       uDTT.Create();  
   
-      // Create a natively compiled stored procedure  
+      // Create a natively compiled stored procedure.
       StoredProcedure sProc = new StoredProcedure(db, "nCSProc");  
       sProc.TextMode = false;  
       sProc.TextBody = "--Type body here";  
@@ -169,7 +178,7 @@ public class A {
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
-  
-  
+## <a name="see-also"></a>관련 항목:  
+
+[메모리 내 OLTP에 대한 SQL Server 지원](sql-server-support-for-in-memory-oltp.md)
+
