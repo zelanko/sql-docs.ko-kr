@@ -1,7 +1,7 @@
 ---
 title: "서버에 연결(연결 속성 페이지) 데이터베이스 엔진 | Microsoft 문서"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/14/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -17,23 +17,22 @@ caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 22cef3465036947ad6389b41c4c80bfc5ef965cb
+ms.translationtype: HT
+ms.sourcegitcommit: 5316f9d560f7e15bb0699780f67aff641067b203
+ms.openlocfilehash: 67f517ace6307fc4ad5afaf068c04ba6039d1c98
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/15/2017
 
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>서버에 연결(연결 속성 페이지) 데이터베이스 엔진
-[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 인스턴스에 연결하거나 [!INCLUDE[ssDE](../../includes/ssde_md.md)]을 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결 중인 경우에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]등록 시에만 이 대화 상자에 나타납니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion_md.md)] 인스턴스에 연결하거나 [!INCLUDE[ssDE](../../includes/ssde_md.md)] 을 **등록된 서버**에 등록할 때 이 탭을 사용하여 옵션을 확인하거나 지정할 수 있습니다. **연결** 및 **옵션** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]인스턴스에 연결 중인 경우에만 이 대화 상자에 나타납니다. **테스트** 및 **저장** 은 [!INCLUDE[ssDE](../../includes/ssde_md.md)]등록 시에만 이 대화 상자에 나타납니다.  
   
-## <a name="options"></a>옵션  
 **데이터베이스에 연결**  
-목록에서 연결할 데이터베이스를 선택합니다. **<default>**을 선택하면 서버의 기본 데이터베이스에 연결됩니다. **<Browse server>**를 선택하면 연결하려는 데이터베이스에 대한 서버를 찾아볼 수 있습니다.  
+목록에서 연결할 데이터베이스를 선택합니다. **<default>**를 선택하면 서버의 기본 데이터베이스에 연결됩니다. **<Browse server>**를 선택하면 연결하려는 데이터베이스에 대한 서버를 찾아볼 수 있습니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 를 통해 [!INCLUDE[ssSDSfull](../../includes/sssdsfull_md.md)]데이터베이스 엔진 인스턴스에 연결할 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인증을 사용해야 하며 **서버에 연결** 대화 상자의 **연결 속성** 탭에서 데이터베이스를 지정해야 합니다. **연결 암호화** 확인란을 선택해야 합니다.  
   
-기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 는 **master**에 연결됩니다. 사용자 데이터베이스를 지정하면 개체 탐색기에서 해당 데이터베이스와 해당 개체만 볼 수 있습니다. **master**에 연결하면 모든 데이터베이스를 볼 수 있습니다. 자세한 내용은 [Microsoft Azure SQL Database 개요](http://go.microsoft.com/fwlink/?LinkId=163948)를 참조하세요.  
+기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 는 **master**에 연결됩니다. [!INCLUDE[ssSDS](../../includes/sssds_md.md)]에 연결할 때 사용자 데이터베이스를 지정하면 개체 탐색기에서 해당 데이터베이스와 해당 개체만 볼 수 있습니다. **master**에 연결하면 모든 데이터베이스를 볼 수 있습니다. 자세한 내용은 [Microsoft Azure SQL Database 개요](http://go.microsoft.com/fwlink/?LinkId=163948)를 참조하세요.  
   
 **네트워크 프로토콜**  
 목록에서 프로토콜을 선택합니다. 컴퓨터 관리에서 클라이언트 네트워크 구성을 사용하여 구성한 클라이언트 프로토콜을 사용할 수 있습니다.  
@@ -59,6 +58,9 @@ ms.lasthandoff: 06/22/2017
   
 -   **파일** 메뉴에서 **새로 만들기** 를 클릭하고 **데이터베이스 엔진 쿼리**를 클릭하면 **서버에 연결** 대화 상자에서 지정한 색이 쿼리 편집기 창에 적용됩니다.  
   
+**AD 도메인 이름 또는 테넌트 ID**  
+**Active Directory - MFA를 통한 유니버설** 인증을 사용하여 연결할 경우 인증 도메인을 지정합니다. 이 옵션은 SSMS 버전 17.2 이상을 사용할 경우에만 사용할 수 있습니다. 
+
 **모두 다시 설정**  
 수동으로 입력한 모든 연결 속성 값을 기본값으로 되돌립니다.  
   
