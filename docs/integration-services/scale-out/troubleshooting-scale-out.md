@@ -58,7 +58,7 @@ SSIS 스케일 아웃 SSISDB, 스케일 아웃 마스터 서비스와 스케일 
 
 **대/소문자** 
 
-System.ServiceModel.EndpointNotFoundException: https://에서 수신 대기 중인 끝점이 없습니다*[MachineName]: [Port]*/ClusterManagement/ 메시지를 수락할 수 있는 합니다.
+System.ServiceModel.EndpointNotFoundException: 메시지를 수락할 수 있는 https://*[MachineName]:[Port]*/ClusterManagement/에서 수신 대기 중인 끝점이 없습니다.
 
 1 단계: 스케일 아웃 마스터 서비스 구성 파일에서 지정한 포트 번호가 올바른지 확인 하 고 스케일 아웃 마스터 서비스를 다시 시작 합니다. 
 
@@ -117,7 +117,7 @@ HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL
 
 **대/소문자**
 
-System.ServiceModel.CommunicationException: https://에 HTTP 요청을 만드는 동안 오류가 발생 했습니다*[컴퓨터 이름]: [Port]*  /ClusterManagement/합니다. 이 수 때문을 HTTP로 서버 인증서를 제대로 구성 되지 않았습니다. HTTPS의 경우 SYS입니다. 이 클라이언트와 서버 사이 보안 바인딩이 불일치로 인해 발생할 수 또한 수 없습니다. 
+System.ServiceModel.CommunicationException: https://*[Machine Name]:[Port]*/ClusterManagement/에 대한 HTTP 요청을 수행하는 동안 오류가 발생했습니다.Hl 이 수 때문을 HTTP로 서버 인증서를 제대로 구성 되지 않았습니다. HTTPS의 경우 SYS입니다. 이 클라이언트와 서버 사이 보안 바인딩이 불일치로 인해 발생할 수 또한 수 없습니다. 
 
 1 단계: 스케일 아웃 마스터 인증서에 바인딩됩니다 마스터 끝점의 포트를 올바르게 아래 명령 사용 하 여 마스터 노드를 확인 합니다. 인증서 해시 표시 스케일 아웃 마스터 인증서 지문이과 일치 하는 경우를 확인 합니다.
 
