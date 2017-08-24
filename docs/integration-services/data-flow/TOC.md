@@ -45,7 +45,7 @@
 # [플랫 파일 사용자 지정 속성](flat-file-custom-properties.md)  
 # [OData 원본](odata-source.md)  
 ## [자습서: OData 원본 사용](tutorial-using-the-odata-source.md)  
-## [런타임에 OData 원본 쿼리 수정](modify-odata-source-query-at-runtime.md)  
+## [런타임에 OData 원본 쿼리 제공](modify-odata-source-query-at-runtime.md)  
 ## [OData 원본 속성](odata-source-properties.md)  
 # [ODBC 흐름 구성 요소](odbc-flow-components.md)  
 ## [ODBC 대상](odbc-destination.md)  
