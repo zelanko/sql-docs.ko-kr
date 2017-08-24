@@ -1,37 +1,42 @@
 ---
-title: "추적 파일에 대해 이벤트 및 데이터 열 지정(SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이벤트 추가"
-  - "추적 [SQL Server], 데이터 열"
-  - "이벤트 삭제"
-  - "이벤트 제거"
-  - "추적 [SQL Server], 이벤트"
+title: "추적 파일 (SQL Server Profiler)에 대 한 이벤트 및 데이터 열 지정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- adding events
+- traces [SQL Server], data columns
+- deleting events
+- removing events
+- traces [SQL Server], events
 ms.assetid: 7da715a3-2f03-4063-b6a4-20fd7b44e675
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 413a30657e348dba30d335a225ad243600a0ebbd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 추적 파일에 대해 이벤트 및 데이터 열 지정(SQL Server Profiler)
+# <a name="specify-events-and-data-columns-for-a-trace-file-sql-server-profiler"></a>추적 파일에 대해 이벤트 및 데이터 열 지정(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 사용하여 추적에 대해 이벤트 클래스 및 데이터 열을 지정하는 방법에 대해 설명합니다.  
   
-### 추적에 대해 이벤트 및 데이터 열을 지정하려면  
+### <a name="to-specify-events-and-data-columns-for-a-trace"></a>추적에 대해 이벤트 및 데이터 열을 지정하려면  
   
 1.  **추적 속성** 또는 **추적 템플릿 속성** 대화 상자에서 **이벤트 선택** 탭을 클릭합니다.  
   
      **이벤트 선택** 탭에는 표 형태 컨트롤이 있습니다. 표 형태 컨트롤은 추적 가능한 각 이벤트 클래스가 들어 있는 테이블입니다. 테이블에는 각 이벤트 클래스에 대한 행이 하나씩 포함되어 있습니다. 이벤트 클래스는 연결한 서버의 유형 및 버전에 따라 약간 다를 수 있습니다. 이벤트 클래스는 표의 **이벤트**열에서 식별되며 이벤트 범주별로 그룹화됩니다. 나머지 열은 각 이벤트 클래스에 대해 반환할 수 있는 데이터 열을 나열합니다.  
   
-2.  **이벤트 선택** 탭에서 표 형태 컨트롤을 사용하여 이벤트와 데이터 열을 추적 파일에서 추가하거나 제거합니다.  
+2.  **이벤트 선택**탭에서 표 형태 컨트롤을 사용하여 이벤트와 데이터 열을 추적 파일에서 추가하거나 제거합니다.  
   
 3.  추적에서 이벤트를 제거하려면 각 이벤트 클래스에 대한 **이벤트** 열의 확인란을 선택 취소합니다.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 24
   
 2.  필요에 따라 추적에 필터를 적용합니다. 자세한 내용은 [추적에서의 이벤트 필터링&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)을 참조하세요.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -1,33 +1,38 @@
 ---
-title: "추적 만들기(SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "database-engine"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "추적 [SQL Server], 만들기"
+title: "추적 (SQL Server Profiler) 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 08/01/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- traces [SQL Server], creating
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 추적 만들기(SQL Server Profiler)
+# <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
   이 항목에서는 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하여 추적을 만드는 방법에 대해 설명합니다.  
   
-### 추적 만들기  
+### <a name="to-create-a-trace"></a>추적 만들기  
   
 1.  **파일** 메뉴에서 **새 추적**을 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결합니다.  
   
      **추적 속성** 대화 상자가 나타납니다.  
   
-    > **참고:** **연결한 후 즉시 추적 시작**을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 이 설정을 해제하려면 **도구* * 메뉴에서 **옵션**을 클릭한 다음 연결한 후 즉시 추적 시작 확인란의 선택을 취소합니다.  
+    > **참고:** **연결한 후 즉시 추적 시작** 을 선택한 경우에는 **추적 속성** 대화 상자가 나타나지 않고 추적이 시작됩니다. 에이 설정을 해제 하려면는 **도구* * 메뉴를 클릭 하 여 **옵션**, 하 고 연결 후 즉시 추적 시작 선택을 취소 합니다.  
   
 2.  **추적 이름** 입력란에 추적의 이름을 입력합니다.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 28
   
 4.  추적 결과를 저장하려면 다음 중 하나를 수행합니다.  
   
-    -   **파일에 저장**을 클릭하면 추적이 파일에 캡처됩니다. **최대 파일 크기 설정**에 대한 값을 지정합니다. 기본값은 5MB입니다.  
+    -   **파일에 저장** 을 클릭하면 추적이 파일에 캡처됩니다. **최대 파일 크기 설정**에 대한 값을 지정합니다. 기본값은 5MB입니다.  
   
          **파일 롤오버 사용** 을 선택하여 최대 파일 크기에 도달할 때 자동으로 새 파일을 만들 수도 있습니다. **서버에서 추적 데이터 처리**를 선택하면 클라이언트 응용 프로그램 대신 추적을 실행하는 서비스에서 추적 데이터를 처리하게 됩니다. 서버에서 추적 데이터를 처리하는 경우 스트레스 상태에서도 이벤트를 건너뛰지 않지만 서버 성능은 저하될 수 있습니다.  
   
@@ -51,10 +56,11 @@ caps.handback.revision: 28
   
 7.  **실행** 을 클릭하여 추적을 시작합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [추적과 Windows 성능 로그 데이터의 상관 관계 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   
+

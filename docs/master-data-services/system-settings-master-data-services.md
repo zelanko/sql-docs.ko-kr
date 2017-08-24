@@ -1,25 +1,30 @@
 ---
-title: "시스템 설정(Master Data Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "master-data-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Master Data Services, 시스템 설정"
-  - "시스템 설정 [Master Data Services]"
+title: "시스템 설정 (Master Data Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- master-data-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Master Data Services, system settings
+- system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: "sabotta"
-ms.author: "carlasab"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
+ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/02/2017
+
 ---
-# 시스템 설정(Master Data Services)
+# <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스와 연결된 모든 웹 응용 프로그램 및 웹 서비스에 대해 시스템 설정을 구성할 수 있습니다.  
   
  이러한 설정 중 대부분은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 데이터베이스 **페이지의** 에서 구성할 수 있습니다. 다른 설정은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 시스템 설정 테이블(mdm.tblSystemSetting)에서 구성할 수 있습니다.  
@@ -48,10 +53,10 @@ caps.handback.revision: 17
   
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**데이터베이스 연결 제한 시간**|**DatabaseConnectionTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 연결을 완료하는 데 허용하는 시간(초)입니다. 연결이 이 시간 안에 완료되지 않으면 해당 연결이 취소되고 오류가 반환됩니다. 기본값은 **60**초(1분)입니다.|  
-|**데이터베이스 명령 제한 시간**|**DatabaseCommandTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 명령을 완료하는 데 허용하는 시간(초)입니다. 명령이 이 시간 안에 완료되지 않으면 해당 명령이 취소되고 오류가 반환됩니다. 기본값은 **3600**초(60분)입니다.|  
-|**웹 서비스 제한 시간**|**ServerTimeOut**|ASP.NET에서 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 페이지 요청을 완료하는 데 허용하는 시간(초)입니다. 요청이 이 시간 안에 완료되지 않으면 해당 요청이 취소되고 오류가 반환됩니다. 기본값은 **120000**초(2000분)입니다.|  
-|**클라이언트 제한 시간**|**ClientTimeOut**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 아무 작업이 없는 상태가 얼마나 지속되면 홈 페이지로 돌아가는지를 지정하는 시간(초)입니다. 기본값은 **300**초(5분)입니다.|  
+|**데이터베이스 연결 제한 시간**|**DatabaseConnectionTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 연결을 완료하는 데 허용하는 시간(초)입니다. 연결이 이 시간 안에 완료되지 않으면 해당 연결이 취소되고 오류가 반환됩니다. 기본값은 **60** 초(1분)입니다.|  
+|**데이터베이스 명령 제한 시간**|**DatabaseCommandTimeOut**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에서 명령을 완료하는 데 허용하는 시간(초)입니다. 명령이 이 시간 안에 완료되지 않으면 해당 명령이 취소되고 오류가 반환됩니다. 기본값은 **3600** 초(60분)입니다.|  
+|**웹 서비스 제한 시간**|**ServerTimeOut**|ASP.NET에서 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 페이지 요청을 완료하는 데 허용하는 시간(초)입니다. 요청이 이 시간 안에 완료되지 않으면 해당 요청이 취소되고 오류가 반환됩니다. 기본값은 **120000** 초(2000분)입니다.|  
+|**클라이언트 제한 시간**|**ClientTimeOut**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 에서 아무 작업이 없는 상태가 얼마나 지속되면 홈 페이지로 돌아가는지를 지정하는 시간(초)입니다. 기본값은 **300** 초(5분)입니다.|  
 |**일괄 처리당 행 수**|**RowsPerBatch**|웹 서비스를 통해 각 일괄 처리에서 검색할 레코드 수입니다. 기본값은 **50**입니다.|  
 ||**ApplicationName**|이벤트 로그에 표시되는 텍스트입니다. 기본값은 **MDM**입니다.|  
 ||**SiteTitle**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 브라우저의 제목 표시줄에 표시되는 텍스트입니다. 기본값은 **마스터 데이터 관리자**입니다.|  
@@ -70,7 +75,7 @@ caps.handback.revision: 17
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**모든 준비 트랜잭션 기록**|**StagingTransactionLogging**|SQL Server 2008 R2에만 적용됩니다. 준비 레코드가 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스에 로드될 때 트랜잭션을 기록할지 여부를 결정합니다. 기본값은 **해제** 또는 **2**입니다. 기록할 수 있도록 설정하려면 **설정** 또는 **1** 로 변경합니다.|  
-|**준비 일괄 처리 간격**|**StagingBatchInterval**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **통합 관리** 기능 영역에서 **일괄 처리 시작** 을 선택한 후 일괄 처리가 처리될 때까지의 시간(초)입니다. 기본값은 **60**초(1분)입니다.|  
+|**준비 일괄 처리 간격**|**StagingBatchInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **통합 관리** 기능 영역에서 **일괄 처리 시작** 을 선택한 후 일괄 처리가 처리될 때까지의 시간(초)입니다. 기본값은 **60**초(1분)입니다.|  
   
  자세한 내용은 [개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)를 참조하세요.  
   
@@ -79,9 +84,9 @@ caps.handback.revision: 17
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**계층의 기본 멤버 수**|**HierarchyChildNodeLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **…추가…**가 표시되기 전에 각 계층 노드에 표시되는 최대 멤버 수입니다.(!!) 표시됩니다. 다음 멤버 그룹을 표시하려면 **…추가…** 를 클릭합니다. 기본값은 **50**입니다.|  
-|**기본적으로 계층에 이름 표시**|**ShowNamesInHierarchy**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 계층을 볼 때 선택되는 기본 설정을 결정합니다.<br /><br /> 기본값은 **예** 또는 **1**로, 각 멤버의 이름 및 코드가 표시됨을 나타냅니다. 코드만 표시하려면 **아니요** 또는 **2** 로 변경합니다.|  
+|**기본적으로 계층에 이름 표시**|**ShowNamesInHierarchy**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 계층을 볼 때 선택되는 기본 설정을 결정합니다.<br /><br /> 기본값은 **예** 또는 **1**로, 각 멤버의 이름 및 코드가 표시됨을 나타냅니다. 코드만 표시하려면 **아니요** 또는 **2** 로 변경합니다.|  
 |**목록의 도메인 기반 특성 수**|**DBAListRowLimit**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 표의 도메인 기반 특성 값을 두 번 클릭할 때 목록에 표시되는 특성 수입니다. 기본값은 **50**입니다. 멤버 수가 50개보다 많으면 검색 가능한 대화 상자가 대신 표시됩니다.|  
-||**GridFilterDefaultFuzzySimilarityLevel**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **일치** 필터 조건을 사용할 때 사용되는 유사성 수준입니다. 기본값은 **0.3**입니다. 검색 조건과 보다 일치하는 항목을 반환하려면 **1** 에 가까운 값으로 설정합니다. 정확하게 일치하는 항목을 반환하려면 **1** 로 설정합니다.|  
+||**GridFilterDefaultFuzzySimilarityLevel**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 **일치** 필터 조건을 사용할 때 사용되는 유사성 수준입니다. 기본값은 **0.3**입니다. 검색 조건과 보다 일치하는 항목을 반환하려면 **1** 에 가까운 값으로 설정합니다. 정확하게 일치하는 항목을 반환하려면 **1** 로 설정합니다.|  
   
 ##  <a name="xls"></a> Excel용 추가 기능 설정  
   
@@ -94,8 +99,8 @@ caps.handback.revision: 17
   
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**새 비즈니스 규칙 증가값**|**BusinessRuleDefaultPriorityIncrement**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **시스템 관리** 기능 영역에서 각 비즈니스 규칙의 우선 순위가 증가되는 단위입니다. 기본값은 **10**입니다.|  
-|**비즈니스 규칙을 적용할 멤버 수**|**BusinessRuleRealtimeMemberCount**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 비즈니스 규칙을 적용할 최대 멤버 수입니다. [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에서 비즈니스 규칙을 적용할 활성 워크시트에 있는 최대 멤버 수입니다. 기본값은 **10000**입니다.|  
+|**새 비즈니스 규칙 증가값**|**BusinessRuleDefaultPriorityIncrement**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **시스템 관리** 기능 영역에서 각 비즈니스 규칙의 우선 순위가 증가되는 단위입니다. 기본값은 **10**입니다.|  
+|**비즈니스 규칙을 적용할 멤버 수**|**BusinessRuleRealtimeMemberCount**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **탐색기** 기능 영역에서 비즈니스 규칙을 적용할 최대 멤버 수입니다. [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에서 비즈니스 규칙을 적용할 활성 워크시트에 있는 최대 멤버 수입니다. 기본값은 **10000**입니다.|  
   
  자세한 내용은 [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)을 참조하세요.  
   
@@ -103,11 +108,11 @@ caps.handback.revision: 17
   
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|메일 알림의 링크에 사용되는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL(예: http://constoso/mds)입니다.|  
-|**전자 메일 알림 간격**|**NotificationInterval**|전자 메일 알림을 보내는 빈도(초)입니다. 기본값은 **120**초(2분)입니다.|  
+|**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|에 대 한 URL의 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 예를 들어 전자 메일 알림의 링크에 사용 되는 응용 프로그램 `http://constoso/mds`합니다.|  
+|**전자 메일 알림 간격**|**NotificationInterval**|전자 메일 알림을 보내는 빈도(초)입니다. 기본값은 **120** 초(2분)입니다.|  
 |**단일 전자 메일의 알림 수**|**NotificationsPerEmail**|단일 알림 전자 메일에 나열될 유효성 검사 문제의 최대 개수입니다. 문제가 더 있더라도 전자 메일에는 포함되지 않지만 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 제공됩니다.|  
 |**기본 전자 메일 형식**|**EmailFormat**|모든 전자 메일 알림의 형식입니다. 기본값은 **HTML** 또는 **1**입니다. 데이터베이스 설정 **2** 는 **텍스트**를 나타냅니다.<br /><br /> 참고: 개별 사용자의 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]일반 **탭에서** 전자 메일 형식 **을 변경 및 저장하여** 에서 해당 사용자에 대한 이 설정을 재정의할 수 있습니다.|  
-|**전자 메일 주소에 대한 정규식**|**EmailRegExPattern**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 사용자의 **일반** 탭에 입력한 전자 메일 주소의 유효성을 검사하는 데 사용되는 정규식입니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.|  
+|**전자 메일 주소에 대한 정규식**|**EmailRegExPattern**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 사용자의 **일반** 탭에 입력한 전자 메일 주소의 유효성을 검사하는 데 사용되는 정규식입니다. 정규식에 대한 자세한 내용은 MSDN Library의 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=164401) 를 참조하십시오.|  
 |**데이터베이스 메일 계정**|**EmailProfilePrincipalAccount**|전자 메일 알림을 보낼 때 사용할 데이터베이스 메일 계정을 표시합니다. 기본 프로필은 **mds_email_user**입니다.|  
 |**데이터베이스 메일 프로필**|**DatabaseMailProfile**|전자 메일 알림을 보낼 때 사용할 데이터베이스 메일 프로필입니다. 기본값은 공백입니다.|  
 ||**ValidationIssueHTML**|비즈니스 규칙이 유효성 검사를 통과하지 못할 경우 전자 메일 사용자에게 전달되는 HTML 형식의 텍스트입니다.|  
@@ -121,7 +126,7 @@ caps.handback.revision: 17
   
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
-||**SecurityMemberProcessInterval**| [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 **계층 멤버** 탭에 설정된 해당 사용자 및 그룹 권한이 적용되는 빈도(초)입니다. 기본값은 **3600**초(60분)입니다.|  
+||**SecurityMemberProcessInterval**|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **사용자 및 그룹 권한** 기능 영역에서 **계층 멤버** 탭에 설정된 해당 사용자 및 그룹 권한이 적용되는 빈도(초)입니다. 기본값은 **3600**초(60분)입니다.|  
   
  자세한 내용은 [멤버 권한 즉시 적용&#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)을 참조하세요.  
   
@@ -144,7 +149,7 @@ caps.handback.revision: 17
   
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
-## 참고 항목  
- [데이터베이스 개체 보안&#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+## <a name="see-also"></a>참고 항목  
+ [데이터베이스 개체 보안 &#40; Master Data services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   
