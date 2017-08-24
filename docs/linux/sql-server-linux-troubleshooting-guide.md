@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 이 문서에서는 Docker 컨테이너에서 또는 Linux에서 실행 중인 Microsoft SQL Server 문제를 해결 하는 방법을 설명 합니다. Linux에서 SQL Server의 문제를 해결할 때이 비공개 미리 보기 릴리스의 제한 사항 기억 확인 하십시오. 이러한 목록을 찾을 수 있습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
 
 ## <a id="connection"></a>연결 오류 문제 해결

@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>내보내기 및 SSMS 또는 SqlPackage.exe windows와 Linux에서 데이터베이스 가져오기
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 내보내고 Linux에서 SQL Server 2017 RC2에 데이터베이스를 가져옵니다. Windows 응용 프로그램은 SSMS 및 SqlPackage.exe, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 하는 경우이 방법을 사용 합니다.
 
 항상 설치 하 고에 설명 된 대로 SQL Server Management Studio (SSMS)의 가장 최신 버전을 사용 해야 [Linux에서 SQL Server에 연결 하는 Windows에서 SSMS를 사용 하 여](sql-server-linux-develop-use-ssms.md)

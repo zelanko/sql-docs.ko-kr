@@ -16,8 +16,9 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 08/02/2017
 
 ---
-
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 새로운 기능
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
 
 이 항목에서는 SQL Server 2017 Linux에서 실행 중인에 대 한 새로운 설명입니다.
 

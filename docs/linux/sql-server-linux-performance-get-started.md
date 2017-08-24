@@ -18,6 +18,7 @@ ms.lasthandoff: 08/02/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux에서 SQL Server의 성능 기능에 대 한 연습
+
 SQL Server에 새로운 Linux 사용자 인 경우 다음 작업에 관한 일부의 성능 기능입니다. 이러한 설정은 고유 하거나 Linux 특정 아니지만 알 수 있는 영역의 추가로 조사를 수행 하는 데 도움이 됩니다. 각 예제에 해당 영역에 대 한 깊이 설명서에는 링크가 제공 됩니다.
 
 > [!NOTE]

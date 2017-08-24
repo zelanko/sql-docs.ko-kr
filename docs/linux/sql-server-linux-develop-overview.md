@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Linux에서 SQL Server 용 응용 프로그램 개발을 시작 하는 방법
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 연결 하 고 SQL Server 2017 RC2 linux 다양 한 C#, Java, Node.js, PHP, Python, Ruby, 및 c + + 프로그래밍 언어에서에서 사용 하는 응용 프로그램을 만들 수 있습니다. 인기 있는 웹 프레임 워크 및 개체 관계형 매핑 ORM () 프레임 워크를 사용할 수도 있습니다.
 
 > [!TIP]

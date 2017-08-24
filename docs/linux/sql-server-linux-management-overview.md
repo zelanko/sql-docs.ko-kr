@@ -19,6 +19,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux에서 SQL Server를 관리 하는 적절 한 도구 선택
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server 2017 RC2 linux를 관리 하는 방법은 여러 가지가 있습니다. 다음 섹션의 다른 관리 도구와 기술을 더 많은 리소스에 대 한 포인터와 간략 한 개요를 제공 합니다.
 
 ## <a name="mssql-conf"></a>mssql conf 

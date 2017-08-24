@@ -18,7 +18,9 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 보안 제한 사항
 
-현재 Linux에서 SQL Server에는 다음과 같은 제한 사항이 있습니다. 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
+현재 Linux에서 SQL Server에는 다음과 같은 제한 사항이 있습니다.
 
 * 표준 암호 정책이 제공 됩니다. MUST_CHANGE가 유일한 옵션을 구성할 수 있습니다.  
 * 확장 가능 키 관리 지원 되지 않습니다. 

@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 체크 아웃 우리의 [시작 자습서](http://aka.ms/sqldev) 을 빠르게 C#, Java, Node.js, PHP 및 Python 등의 언어와 프로그래밍 시작 macOS에서 Linux 또는 Windows 또는 Docker에서 SQL Server를 사용 하 여 응용 프로그램을 구축 합니다.
 
 아래 표에 연결 라이브러리 또는 *드라이버* 클라이언트 응용 프로그램 또는 클라우드, Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에 연결 하 고 온-프레미스를 실행 중인 Microsoft SQL Server를 사용 하는 언어의 다양 한에서 사용할 수 있습니다. 

@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>Linux VDI 클라이언트 SDK 사양에서 SQL Server
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 이 문서에서는 Linux 가상 장치 인터페이스 (VDI) 클라이언트 SDK에는 SQL Server에서 제공 하는 인터페이스에 설명 합니다. 독립 소프트웨어 공급 업체 (Isv) SQL Server의 제품에 통합 하는 가상 백업 장치 API 응용 프로그래밍 인터페이스 ()를 사용할 수 있습니다. 일반적으로 Linux에서 VDI 유사 하 게 작동 VDI Windows에서 다음과 같이 변경 된:
 
 - Windows 공유 메모리 POSIX 공유 메모리 됩니다.

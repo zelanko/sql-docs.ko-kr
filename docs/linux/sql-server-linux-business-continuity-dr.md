@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>비즈니스 연속성 및 데이터베이스 복구 Linux에서 SQL Server
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 Linux에서 SQL Server는 다양 한 종류의 다양 한 비즈니스 요구 사항에 맞게 서비스 수준 계약 목표를 달성할 수가 있습니다.
 
 가장 간단한 솔루션은 높은 수준의 내결함성 하드웨어 오류 및 탄력성 및 리소스 활용 최대화에 대 한 호스트 수준 오류에 대 한 복구를 달성 하기 위해 가상화 기술을 활용 합니다. 이러한 시스템 사설 또는 공용 클라우드 또는 하이브리드 환경에 온-프레미스, 실행할 수 있습니다. 가장 간단한 형태의 재해 복구 및 보호에는 데이터베이스 백업입니다. SQL Server 2017 r c 2에서 제공 되는 간단한 솔루션은 다음과 같습니다.

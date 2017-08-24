@@ -18,6 +18,8 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에서 SQL Server 에이전트를 설치 합니다.
 
+[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+
 SQL Server 에이전트를 설치 하는 다음 단계를 수행 (**mssql 서버 에이전트**) linux. [SQL Server 에이전트](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) 예약 된 SQL Server 작업을 실행 합니다. 이 버전의 SQL Server 에이전트에 대 한 지원 되는 기능에 대 한 자세한 내용은 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
 
 > [!NOTE]
