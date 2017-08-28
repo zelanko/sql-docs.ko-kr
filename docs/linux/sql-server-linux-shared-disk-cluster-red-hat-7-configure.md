@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 가이드를 Red Hat Enterprise Linux에서 SQL Server에 대 한 공유 디스크 2 개 노드 클러스터를 만드는 지침을 제공 합니다. Red Hat Enterprise Linux (RHEL)를 기반으로 클러스터링 레이어 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. SQL Server 인스턴스는 하나의 노드 또는 다른에서 활성입니다.
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 bcp 사용 하 여 대량 복사 데이터
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 항목에서는 사용 하는 [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) 명령줄 유틸리티를 Linux에서 SQL Server 2017 rc2 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터 대량 복사 합니다.
 

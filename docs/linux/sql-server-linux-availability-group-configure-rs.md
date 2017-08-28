@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-read-scale-out-availability-group-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 읽기 확장 가용성 그룹을 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Linux에서 SQL Server에 대 한 읽기 확장 가용성 그룹을 구성할 수 있습니다. 가용성 그룹에 대 한 두 아키텍처 가지가 있습니다. A *고가용성* 아키텍처 클러스터 관리자를 사용 하 여 향상 된 비즈니스 연속성을 제공 합니다. 이 아키텍처는 읽기 확장 복제본을 포함할 수도 있습니다. 고가용성 아키텍처를 만들려면 참조 [구성 Always On 가용성 그룹 Linux에서 SQL Server에 대 한](sql-server-linux-availability-group-configure-ha.md)합니다.
 

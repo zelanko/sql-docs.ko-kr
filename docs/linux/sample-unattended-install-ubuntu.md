@@ -17,7 +17,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ubuntu 용 SQL Server 무인된 설치 스크립트 샘플:
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 샘플 Bash 스크립트 대화형 입력이 없는 Ubuntu 16.04에 SQL Server 2017 r c 2를 설치합니다. 데이터베이스 엔진, SQL Server Agent, SQL Server 명령줄 도구를 설치 하는 방식의 예제를 제공 하 고 설치 후 단계를 수행 합니다. 필요에 따라 전체 텍스트 검색을 설치 하 고 관리 사용자를 만들 수 있습니다.
 

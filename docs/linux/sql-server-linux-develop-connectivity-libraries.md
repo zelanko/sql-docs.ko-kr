@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 체크 아웃 우리의 [시작 자습서](http://aka.ms/sqldev) 을 빠르게 C#, Java, Node.js, PHP 및 Python 등의 언어와 프로그래밍 시작 macOS에서 Linux 또는 Windows 또는 Docker에서 SQL Server를 사용 하 여 응용 프로그램을 구축 합니다.
 

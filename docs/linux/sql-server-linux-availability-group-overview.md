@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="availability-groups-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 가용성 그룹
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Always On 가용성 그룹은 고가용성 (HA), 재해 복구 (DR) 및 확장 솔루션입니다. 데이터베이스에 직접 연결 된 저장소 그룹에 대 한 HA를 제공합니다. 통합 된 HA 및 DR, 자동 실패 감지, 빠른 투명 한 장애 조치 및 읽기 부하 분산에 대 한 여러 개의 보조 복제본을 지원합니다. 이 광범위 한 기능을 사용 하면 작업에 대 한 최적의 가용성 Sla를 달성 수 있습니다.
 

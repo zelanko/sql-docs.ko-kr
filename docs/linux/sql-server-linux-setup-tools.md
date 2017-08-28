@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 sqlcmd 및 bcp SQL Server 명령줄 도구를 설치
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 명령줄 도구, Microsoft ODBC 드라이버 및 해당 종속성을 설치 하는 다음 단계를 수행 합니다. **mssql 도구** 패키지에 포함 되어 있습니다.
 

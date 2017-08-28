@@ -72,7 +72,7 @@ ms.lasthandoff: 08/18/2017
   
     *operator_name***속성** 대화 상자에 포함된 사용 가능한 옵션에 대한 자세한 내용은 다음을 참조하십시오.  
   
-    -   [운영자 속성 - 새 운영자&amp;#40;일반 페이지&amp;#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
+    -   [운영자 속성 - 새 운영자&#40;일반 페이지&#41;](../../ssms/agent/operator-properties-new-operator-general-page.md)  
   
     -   [운영자 속성 - 새 운영자&#40;알림 페이지&#41;](../../ssms/agent/operator-properties-new-operator-notifications-page.md)  
   

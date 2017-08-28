@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 작업 시작
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server 로그 전달이를 하나 이상의 보조 서버는 주 서버에서 데이터베이스는 복제 하는 HA 구성. 간단히 말해서 원본 데이터베이스의 백업은 보조 서버에 복원 됩니다. 그런 다음 주 서버 트랜잭션 로그 백업을 주기적으로 만들고 보조 서버 복원할 데이터베이스의 보조 복사본을 업데이트 합니다. 
 

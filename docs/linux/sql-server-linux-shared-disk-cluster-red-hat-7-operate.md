@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Red Hat Enterprise Linux 공유 디스크 클러스터 SQL Server에 대 한 작동
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 문서에서는 Red Hat Enterprise Linux를 사용 하 여 공유 디스크 장애 조치 클러스터에서 SQL Server에 대 한 다음 작업을 수행 하는 방법에 설명 합니다.
 

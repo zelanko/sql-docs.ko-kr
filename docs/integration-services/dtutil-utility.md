@@ -209,7 +209,7 @@ dtutil /SQL srcPackage /EXISTS
  **인증을 사용하는** 의 로컬 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스에 패키지가 있는지 여부를 확인하려면 다음 구문을 사용합니다.  
   
 ```dos
-dtutil SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
+dtutil /SQL srcPackage /SOURCEUSER srcUserName /SOURCEPASSWORD *hY$d56b /EXISTS  
 ```  
   
 > [!NOTE]  
@@ -280,3 +280,4 @@ dtutil /FILE PackageToEncrypt.dtsx /ENCRYPT file;EncryptedPackage.dtsx;3;EncPswd
 [Integration Services(SSIS) 패키지 실행](../integration-services/packages/run-integration-services-ssis-packages.md)  
   
   
+

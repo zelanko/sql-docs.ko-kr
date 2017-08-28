@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="business-continuity-and-database-recovery-sql-server-on-linux"></a>비즈니스 연속성 및 데이터베이스 복구 Linux에서 SQL Server
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Linux에서 SQL Server는 다양 한 종류의 다양 한 비즈니스 요구 사항에 맞게 서비스 수준 계약 목표를 달성할 수가 있습니다.
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터를 구성 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 문서에서는 Red Hat Enterprise Linux에서 SQL Server에 대 한 3 노드 가용성 그룹 클러스터를 만드는 방법을 설명 합니다. 고가용성을 위해 Linux에서 가용성 그룹에 노드가 3 개 필요-참조 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. Red Hat Enterprise Linux (RHEL)를 기반으로 클러스터링 레이어 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
 

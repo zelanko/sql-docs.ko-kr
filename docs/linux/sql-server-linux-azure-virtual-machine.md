@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="create-a-linux-sql-server-2017-virtual-machine-with-the-azure-portal"></a>Azure 포털 사용 SQL Server 2017 Linux 가상 컴퓨터 만들기
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Azure는 SQL Server 2017 RC2 설치 되어 있는 Linux 가상 컴퓨터 이미지를 제공 합니다. 이 항목에서는 Linux SQL Server 가상 컴퓨터를 만드는 Azure 포털을 사용 하는 방법에 짧은 연습을 제공 합니다. 
 

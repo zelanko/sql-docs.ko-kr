@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 SQL Server 설정 구성
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Linux에서 SQL Server 2017 RC2를 구성 하려면 몇 가지 서로 다른 환경 변수를 사용할 수 있습니다. 이러한 변수는 두 가지 시나리오에서 사용 됩니다.
 

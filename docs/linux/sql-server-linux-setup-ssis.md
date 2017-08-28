@@ -18,7 +18,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="install-sql-server-integration-services-ssis-on-linux"></a>Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Integration Services를 설치 하려면이 문서의 단계에 따라 (`mssql-server-is`) linux. Linux 용 Integration Services의이 릴리스에서 지원 되는 기능에 대 한 정보에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
 

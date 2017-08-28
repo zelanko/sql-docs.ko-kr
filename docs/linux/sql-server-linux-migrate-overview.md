@@ -19,7 +19,7 @@ ms.lasthandoff: 08/02/2017
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux에서 SQL Server로 데이터베이스와 구조적된 데이터 마이그레이션 
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../../docs/includes/tsql-appliesto-sslinux-only.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 Linux에서 실행 중인 SQL Server 2017 RC2 하 여 데이터베이스와 데이터를 마이그레이션할 수 있습니다. 사용 하도록 선택 하면 원본 데이터 및 특정 시나리오에 따라 다릅니다. 다음 섹션에서는 다양 한 마이그레이션 시나리오에 대 한 유용한 정보를 제공 합니다.
 
