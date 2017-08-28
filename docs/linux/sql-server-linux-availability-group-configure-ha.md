@@ -10,14 +10,15 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3a94bf7646143d687a7300c8ab2a66c3caa2d8d9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 6ceceaa00b2db22b5f1be9a6e8305da5b4cea49b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="configure-always-on-availability-group-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 Always On 가용성 그룹 구성
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 문서에서는 Linux에서 고가용성을 위한 가용성 그룹에 항상 SQL Server를 만드는 방법을 설명 합니다. 가용성 그룹에 대 한 구성 형식은 두 가지가 있습니다. A *고가용성* 구성 클러스터 관리자를 사용 하 여 비즈니스 연속성을 제공 합니다. 이 구성에서 읽기 확장 복제본을 포함할 수도 있습니다. 이 문서에는 가용성 그룹 고가용성 구성을 만드는 방법에 설명 합니다.
 

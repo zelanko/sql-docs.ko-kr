@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.exportcolumntrans.f1
+- sql13.dts.designer.fileextractortransformation.columns.f1
+- sql13.dts.designer.fileextractortransformation.errorhandling.f1
 helpviewer_keywords:
 - exporting data
 - append options [Integration Services]
@@ -24,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7e611452f931d049c63c822587dc7610bf1eb25
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 986a900c49a91578358b0ace380c1fb6e3f5cb9e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="export-column-transformation"></a>열 내보내기 변환
@@ -65,8 +67,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **열 내보내기 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [열 내보내기 변환 편집기&#40;열 페이지&#41;](../../../integration-services/data-flow/transformations/export-column-transformation-editor-columns-page.md)를 참조하세요.  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -74,5 +74,49 @@ ms.lasthandoff: 08/03/2017
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
+  
+## <a name="export-column-transformation-editor-columns-page"></a>열 내보내기 변환 편집기(열 페이지)
+  **열 내보내기 변환 편집기** 대화 상자의 **열** 페이지를 사용하여 데이터 흐름에서 파일로 추출할 열을 지정할 수 있습니다. 열 내보내기 변환 시 데이터를 파일에 추가할 것인지, 아니면 기존 파일을 덮어쓸 것인지를 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **추출 열**  
+ 텍스트 또는 이미지 데이터를 포함하는 입력 열 목록에서 선택합니다. 모든 행에 **추출 열** 과 **파일 경로 열**에 대한 정의가 있어야 합니다.  
+  
+ **파일 경로 열**  
+ 파일 경로 및 파일 이름을 포함하는 입력 열 목록에서 선택합니다. 모든 행에 **추출 열** 과 **파일 경로 열**에 대한 정의가 있어야 합니다.  
+  
+ **추가 허용**  
+ 변환 시 데이터를 기존 파일에 추가할 것인지 여부를 지정합니다. 기본값은 **false**입니다.  
+  
+ **강제 자름**  
+ 변환 시 데이터를 쓰기 전에 기존 파일의 내용을 삭제할 것인지를 지정합니다. 기본값은 **false**입니다.  
+  
+ **BOM 쓰기**  
+ BOM(바이트 순서 표시)을 파일에 쓸 것인지 여부를 지정합니다. 데이터 형식이 **DT_NTEXT** 또는 DT_WSTR이고 기존 데이터 파일에 추가되지 않는 경우에만 BOM을 씁니다.  
+  
+## <a name="export-column-transformation-editor-error-output-page"></a>열 내보내기 변환 편집기(오류 출력 페이지)
+  **열 내보내기 변환 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 방법을 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **입/출력**  
+ 출력의 이름을 확인합니다. 이름을 클릭하여 열을 포함할 뷰를 확장할 수 있습니다.  
+  
+ **열**  
+ **열 내보내기 변환 편집기** 대화 상자의 **열** 페이지에서 선택한 출력 열을 표시합니다.  
+  
+ **오류**  
+ 오류가 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **잘림**  
+ 잘림이 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **Description**  
+ 작업에 대한 설명을 표시합니다.  
+  
+ **이 값을 선택한 셀에 설정**  
+ 오류나 잘림 발생 시 선택한 모든 셀에 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **적용**  
+ 선택한 셀에 오류 처리 옵션을 적용합니다.  
   
   

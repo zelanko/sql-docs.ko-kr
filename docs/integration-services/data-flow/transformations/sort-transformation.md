@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sorttrans.f1
+- sql13.dts.designer.sorttransformation.f1
 helpviewer_keywords:
 - Sort transformation
 - descending sorts
@@ -24,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bb0f93339416c071177fd532847b584ab2043e84
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bcffbef3e370183c6e37726e23d058d342d252e2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="sort-transformation"></a>정렬 변환
@@ -47,8 +48,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-sort-transformation"></a>정렬 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **정렬 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Sort Transformation Editor](../../../integration-services/data-flow/transformations/sort-transformation-editor.md)를 참조하십시오.  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -60,6 +59,37 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-content"></a>관련 내용  
  codeplex.com의 예제 - [SortDeDuplicateDelimitedString 사용자 지정 SSIS 구성 요소](http://go.microsoft.com/fwlink/?LinkId=220821)  
+  
+## <a name="sort-transformation-editor"></a>정렬 변환 편집기
+  **정렬 변환 편집기** 대화 상자를 사용하여 정렬할 열을 선택하고, 정렬 순서를 설정하고, 중복을 제거할지 여부를 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 확인란을 사용하여 정렬할 열을 지정합니다.  
+  
+ **이름**  
+ 사용 가능한 각 입력 열 이름을 표시합니다.  
+  
+ **통과**  
+ 열을 정렬된 출력에 포함할지 여부를 나타냅니다.  
+  
+ **입력 열**  
+ 각 행에 대해 사용 가능한 입력 열 목록에서 선택합니다. 선택 내용에 따라 **사용 가능한 입력 열** 테이블의 확인란이 달라집니다.  
+  
+ **출력 별칭**  
+ 각 출력 열의 별칭을 입력합니다. 기본값은 입력 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
+  
+ **정렬 형식**  
+ 오름차순으로 정렬할 것인지, 아니면 내림차순으로 정렬할 것인지를 나타냅니다.  
+  
+ **정렬 순서**  
+ 열을 정렬할 순서를 나타냅니다. 이 옵션은 각 열에 대해 수동으로 설정해야 합니다.  
+  
+ **비교 플래그**  
+ 문자열 비교 옵션에 대한 자세한 내용은 [문자열 데이터 비교](../../../integration-services/data-flow/comparing-string-data.md)를 참조하세요.  
+  
+ **중복되는 정렬 값이 있는 행 제거**  
+ 지정한 문자열 비교 옵션을 기반으로 변환에서 중복 행을 변환 출력에 복사할 것인지, 아니면 모든 중복에 대한 단일 항목을 만들 것인지를 나타냅니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   

@@ -11,13 +11,15 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 05cc425e6411734b0cc300a9e3587fa2196893ab
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux에서 SQL Server에 대 한 데이터베이스를 만들 수 
+# <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux에서 SQL Server에 대 한 데이터베이스를 만들 수
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 SQL Server Data Tools (SSDT)는 Linux에서 SQL Server에 대 한 강력한 개발 및 데이터베이스 수명 주기 관리 (DLM) 환경으로 Visual Studio를 설정합니다. 개발 빌드 및 테스트 응용 프로그램 코드를 개발 하는 것 처럼 소스 제어 프로젝트에서 데이터베이스를 게시할 수 있습니다.
 
@@ -37,7 +39,7 @@ SQL Server Data Tools (SSDT)는 Linux에서 SQL Server에 대 한 강력한 개�
 
 Linux에서 SQL Server 2017 RC2 SSDT 17.0 RC 이상 버전에서 지원 됩니다.
 
-1. [다운로드 및 설치 17.0 SSDT RC2]합니다.
+* [다운로드 및 설치 17.0 SSDT RC2](https://go.microsoft.com/fwlink/?linkid=837939)합니다.
 
 ## <a name="create-a-new-database-project-in-source-control"></a>소스 제어에서 새 데이터베이스 프로젝트 만들기
 
@@ -110,11 +112,7 @@ T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기] 및
 SQL Data Tools를 사용 하 여 데이터베이스를 개발 하는 방법에 대 한 자세한 내용은 참조 [SSDT MSDN 문서]
 
 [다운로드 하 고 Visual Studio 설치]:https://www.visualstudio.com/downloads/
-[다운로드 및 설치 17.0 SSDT RC2]:https://aka.ms/ssdt-download
+[Download and Install SSDT 17.0 RC2]:https://aka.ms/ssdt-download
 [SSDT MSDN 문서]: https://msdn.microsoft.com/en-us/library/hh272686(v=vs.103).aspx
 [자습서: TRANSACT-SQL 문 쓰기]:https://msdn.microsoft.com/library/ms365303.aspx
 [TRANSACT-SQL 참조 (데이터베이스 엔진)]:https://msdn.microsoft.com/library/bb510741.aspx
-
-
-
-

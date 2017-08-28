@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.percentagesamplingtrans.f1
+- sql13.dts.designer.percentagesamplingtransformation.f1
 helpviewer_keywords:
 - testing mining models
 - sampling seeds [Integration Services]
@@ -25,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b304a50eeec9908427b7fd42319b88d78b151ff0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="percentage-sampling-transformation"></a>비율 샘플링 변환
@@ -52,8 +53,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **비율 샘플링 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Percentage Sampling Transformation Editor](../../../integration-services/data-flow/transformations/percentage-sampling-transformation-editor.md)를 참조하십시오.  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -61,5 +60,23 @@ ms.lasthandoff: 08/03/2017
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
+  
+## <a name="percentage-sampling-transformation-editor"></a>비율 샘플링 변환 편집기
+  **비율 샘플링 변환 편집기** 대화 상자에서 지정한 행의 백분율을 사용하여 입력 부분을 샘플로 분할할 수 있습니다. 이 변환으로 인해 입력이 두 개의 별도 출력으로 나뉩니다.  
+  
+### <a name="options"></a>옵션  
+ **행의 백분율**  
+ 입력에서 샘플로 사용할 행의 백분율을 지정합니다.  
+  
+ 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
+  
+ **샘플 출력 이름**  
+ 샘플링한 행이 포함될 출력에 사용할 고유 이름을 제공합니다. 제공한 이름은 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
+  
+ **선택하지 않은 출력 이름**  
+ 샘플링에서 제외된 행이 포함될 출력에 사용할 고유 이름을 제공합니다. 제공한 이름은 [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
+  
+ **다음과 같은 임의 초기값 사용**  
+ 변환에서 샘플을 만드는 데 사용하는 난수 생성기에 샘플링 초기값을 지정합니다. 이 옵션은 개발 및 테스트 용도로만 사용하는 것이 좋습니다. 임의 초기값을 지정하지 않으면 Microsoft Windows 틱 수가 사용됩니다.  
   
   

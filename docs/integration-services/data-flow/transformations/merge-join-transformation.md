@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergejointrans.f1
+- sql13.dts.designer.mergejointransformation.f1
 helpviewer_keywords:
 - datasets [Integration Services]
 - Merge Join transformation
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 38dd168d67b4be972be9c135e754abf3b925dae0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 7c3382fb6a61c1362fe10d67a422c0d316a5d663
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-join-transformation"></a>병합 조인 변환
@@ -65,8 +66,31 @@ ms.lasthandoff: 08/03/2017
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
+## <a name="merge-join-transformation-editor"></a>병합 조인 변환 편집기
+  **병합 조인 변환 편집기** 대화 상자를 사용하여 조인 유형, 조인 열 및 조인으로 결합된 두 입력을 병합하기 위한 출력 열을 지정할 수 있습니다.  
+  
+> [!IMPORTANT]  
+>  병합 조인 변환에는 정렬된 데이터를 입력해야 합니다. 이러한 중요 요구 사항에 대한 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **조인 유형**  
+ 내부 조인, 왼쪽 우선 외부 조인 또는 완전 조인을 사용할지 여부를 지정합니다.  
+  
+ **입력 바꾸기**  
+ **입력 바꾸기** 단추를 사용하여 입력 간에 순서를 바꿉니다. 왼쪽 우선 외부 조인 옵션과 함께 사용하면 유용합니다.  
+  
+ **Input**  
+ 먼저 사용 가능한 입력 목록에서 병합된 출력에 포함할 각 열에 대한 입력을 선택합니다.  
+  
+ 입력은 별도의 두 테이블에 따로 표시됩니다. 출력에 포함할 열을 선택합니다. 열을 끌어 테이블 간에 조인을 만듭니다. 조인을 삭제하려면 조인을 선택한 다음 Delete 키를 누릅니다.  
+  
+ **입력 열**  
+ 선택한 입력의 사용 가능한 열 목록에서 병합 출력에 포함할 열을 선택합니다.  
+  
+ **출력 별칭**  
+ 각 출력 열의 별칭을 입력합니다. 기본값은 입력 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
+  
 ## <a name="see-also"></a>관련 항목:  
- [병합 조인 변환 편집기](../../../integration-services/data-flow/transformations/merge-join-transformation-editor.md)   
  [병합 변환](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Union All 변환](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

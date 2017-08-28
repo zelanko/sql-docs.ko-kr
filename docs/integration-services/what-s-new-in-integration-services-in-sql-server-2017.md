@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 56d4ea145a34048c8619ff88112021f163e26900
+ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
+ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>기능 &#39; s 2017 SQL Server에서 Integration Services의 새로운
@@ -26,6 +26,24 @@ ms.lasthandoff: 08/03/2017
 
 >   [!NOTE]
 > SQL Server 2017 SQL Server 2016의 기능 및 SQL Server 2016 업데이트에 추가 된 기능에도 포함 되어 있습니다. SQL Server 2016의 새로운 SSIS기능에 대한 자세한 내용은 [SQL Server 2016 Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)을 참조하세요.
+
+## <a name="highlights-of-this-release"></a>이 릴리스의 주요 내용
+
+SQL Server 2017에 대 한 Integration Services에서 가장 중요 한 새로운 기능을 다음과 같습니다.
+
+-   **확장할**합니다. SSIS 패키지 실행이 여러 작업자 컴퓨터 보다 쉽게 배포 하 고 단일 마스터 컴퓨터에서 실행 및 작업자를 관리 합니다. 자세한 내용은 참조 하십시오. [Integration Services 스케일 아웃](../integration-services/scale-out/integration-services-ssis-scale-out.md)합니다.
+
+-   **Linux에서 integration Services**합니다. Linux 컴퓨터에서 SSIS 패키지를 실행 합니다. 자세한 내용은 참조 하십시오. [추출, 변환 및 SSIS와 Linux에서 데이터 로드](../linux/sql-server-linux-migrate-ssis.md)합니다.
+
+-   **연결 개선**합니다. 업데이트 된 OData 구성 요소와 Microsoft Dynamics AX Online 및 Microsoft Dynamics CRM Online OData 피드에 연결 합니다. 
+
+## <a name="new-in-the-azure-feature-pack"></a>Azure 기능 팩의 새로운 기능
+
+SQL Server에서 연결 개선 사항 외에도 Azure에 대 한 Integration Services 기능 팩에는 Azure 데이터 레이크 저장소에 대 한 지원을 추가 했습니다. 자세한 내용은 참조 하십시오. [Integration Services (SSIS)에 대 한 Azure 기능 팩](azure-feature-pack-for-integration-services-ssis.md)합니다.
+
+## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)의 새로운 기능
+
+이제 Visual Studio 2015 또는 Visual Studio 2017에 2017 통해 SQL Server 버전 2012를 대상으로 하는 패키지 및 SSIS 프로젝트를 개발할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
 
 ## <a name="new-in-ssis-in-sql-server-2017-rc1"></a>SSIS의 SQL Server 2017 r c 1의 새로운 기능
 

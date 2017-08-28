@@ -4,26 +4,29 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/19/2017
+ms.date: 08/23/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1b16a5e8168f18a3e687fdf0249f93cd3549f27d
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용 하 여 Linux에서 SQL Server 관리
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 항목에서는 소개 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) 과정을 안내 하는 몇 가지 일반 작업 및 합니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다.
 
 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) 무료로 개발 및 관리 요구 사항에 대 한 Microsoft 서비스를 해제 하는 SQL 도구 제품군의 일부입니다. SSMS는 액세스, 구성, 관리, 관리, 운영 및 온-프레미스를 실행 중인 SQL server 또는 Linux, Windows 또는 macOS 및 Azure SQL 데이터베이스에는 Docker 및 Azure SQL 데이터 웨어하우스 클라우드의 모든 구성 요소를 개발 하기 위한 통합된 환경. SSMS 다양 한 개발자와 모든 기술 수준의 관리자에 SQL Server에 대 한 액세스를 제공 하기 위해 풍부한 스크립트 편집기와 광범위 한 그래픽 도구 그룹을 결합 합니다.
 
 SSMS는 도구를 비롯 하 여 SQL Server에 대 한 다양 한 개발 및 관리 기능 집합을 제공 합니다.
+
 - 구성, 모니터링 및 단일 컴퓨터 또는 SQL Server의 여러 인스턴스를 관리 합니다.
 - 배포, 모니터링 및 데이터 계층 구성 요소와 같은 업그레이드 데이터베이스 및 데이터 웨어하우스
 - 데이터베이스 백업 및 복원

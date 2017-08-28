@@ -13,14 +13,14 @@ helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 caps.latest.revision: 28
-author: BYHAM
-ms.author: rickbyh
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e7c3445dee2fe753506a02e9c828f1835664592a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: d12d9e8aa7c2a11dfe340897c4b63681591784d5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 구성 관리자 도움말
@@ -71,7 +71,13 @@ ms.lasthandoff: 08/02/2017
   
 -   **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server** (버전), **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+  
+ **에 액세스 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용 하 여[!INCLUDE[win8](../../includes/win8-md.md)]**  
+  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[win8](../../includes/win8-md.md)]을(를) 실행할 때 응용 프로그램으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **검색** 참의 **앱**아래에 **SQLServerManager12.msc** ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) 또는 **SQLServerManager11.msc** ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])를 입력한 다음 **Enter**키를 누릅니다.  
+  
+
+## <a name="see-also"></a>참고 항목  
  [SQL Server 서비스](../../tools/configuration-manager/sql-server-services.md)   
  [SQL Server 네트워크 구성](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [SQL Native Client 11.0 구성](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   

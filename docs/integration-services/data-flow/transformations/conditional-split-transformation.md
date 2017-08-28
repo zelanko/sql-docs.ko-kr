@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.conditionalsplittrans.f1
+- sql13.dts.designer.conditionalsplittransformation.f1
 helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
@@ -20,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d5c9ba281713154357344891987131480331f9f0
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 02909ff454816119e2dfbdfeb1090d0f7e9587be
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="conditional-split-transformation"></a>조건부 분할 변환
@@ -56,8 +57,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **조건부 분할 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Conditional Split Transformation Editor](../../../integration-services/data-flow/transformations/conditional-split-transformation-editor.md)를 참조하십시오.  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -71,9 +70,35 @@ ms.lasthandoff: 08/03/2017
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>관련 작업  
- [조건부 분할 변환을 사용하여 데이터 집합 분할](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
+ [조건부 분할 변환을 사용 하 여 데이터 집합 분합니다](../../../integration-services/data-flow/transformations/split-a-dataset-by-using-the-conditional-split-transformation.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="conditional-split-transformation-editor"></a>조건부 분할 변환 편집기
+  **조건부 분할 변환 편집기** 대화 상자를 사용하여 식을 만들고, 식을 평가하는 순서를 설정하고, 조건부 분할 출력의 이름을 지정할 수 있습니다. 이 대화 상자에는 식을 작성할 때 사용할 수 있는 수치 연산, 문자열 및 날짜/시간 함수와 연산자가 포함되어 있습니다. True로 평가하는 첫 번째 조건에 따라 행을 전송할 출력이 결정됩니다.  
+  
+> [!NOTE]  
+>  조건부 분할 변환에서는 각 입력 행을 하나의 출력에만 전송합니다. 여러 조건을 입력하는 경우 조건부 분할 변환에서는 각 행을 조건이 True가 되는 첫 번째 출력으로 전송하고 해당 행에 대한 다른 조건은 무시합니다. 여러 조건을 연속적으로 평가해야 하는 경우 조건부 분할 변환을 데이터 흐름에서 연결해야 합니다.  
+  
+### <a name="options"></a>옵션  
+ **주문**  
+ 행을 선택하고 오른쪽의 화살표 키를 사용하여 식을 평가하는 순서를 변경합니다.  
+  
+ **출력 이름**  
+ 출력 이름을 입력합니다. 기본값은 번호가 매겨진 사례 목록이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
+  
+ **조건**  
+ 식을 입력하거나 사용 가능한 열, 변수, 함수 및 연산자 목록에서 끌어 식을 작성합니다.  
+  
+ 이 속성의 값은 속성 식을 사용하여 지정할 수 있습니다.  
+  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 식](../../../integration-services/expressions/integration-services-ssis-expressions.md), [연산자&#40;SSIS 식&#41;](../../../integration-services/expressions/operators-ssis-expression.md) 및 [함수&#40;SSIS 식&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+  
+ **기본 출력 이름**  
+ 기본 출력의 이름을 입력하거나 기본값을 사용합니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 처리 방법을 지정합니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

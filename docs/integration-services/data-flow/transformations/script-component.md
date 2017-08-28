@@ -11,6 +11,11 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.scriptcomponentdetails.f1
+- sql13.dts.designer.scriptcomponent.f1
+- sql13.dts.designer.scriptcomponent.connections.f1
+- sql13.dts.designer.scriptcomponent.inputcolumn.f1
+- sql13.dts.designer.scriptcomponent.columnproperties.f1
+- sql13.dts.designer.scriptcomponent.script.f1
 helpviewer_keywords:
 - Script transformation
 - scripts [Integration Services], transformations
@@ -22,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b9411fdeb050a63c94c9904cd3f1b6e8aefd6b0a
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e7b0923968137a76b68d0324223ffbb61e7443b9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="script-component"></a>스크립트 구성 요소
@@ -92,16 +97,6 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
 ### <a name="configuring-the-script-component-in-the-designer"></a>디자이너에서 스크립트 구성 요소 구성  
- **스크립트 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [스크립트 변환 편집기&#40;입력 열 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-input-columns-page.md)  
-  
--   [스크립트 변환 편집기&#40;입/출력 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)  
-  
--   [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)  
-  
--   [스크립트 변환 편집기&#40;연결 관리자 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-connection-managers-page.md)  
-  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
@@ -116,6 +111,113 @@ ms.lasthandoff: 08/03/2017
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="select-script-component-type"></a>스크립트 구성 요소 유형 선택
+  **스크립트 구성 요소 유형 선택** 대화 상자를 사용하여 원본, 변환 또는 대상으로 사용하도록 미리 구성된 스크립트 변환 생성 여부를 지정할 수 있습니다.  
+  
+ 스크립트 구성 요소에 대 한 자세한 참조 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)합니다. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **원본**, **대상**또는 **변환** 에서 선택한 내용에 따라 스크립트 변환 편집기의 페이지와 스크립트 변환 구성이 달라집니다.  
+  
+## <a name="script-transformation-editor-connection-managers-page"></a>스크립트 변환 편집기(연결 관리자 페이지)
+  **스크립트 변환 편집기** 의 **연결 관리자** 를 사용하여 스크립트에서 사용할 연결을 지정할 수 있습니다.  
+  
+ 스크립트 구성 요소에 대 한 자세한 참조 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)합니다. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **Connection managers**  
+ 스크립트에 사용할 수 있는 연결 목록을 표시합니다.  
+  
+ **이름**  
+ 연결에 대한 설명이 포함된 고유 이름을 입력합니다.  
+  
+ **연결 관리자**  
+ 사용 가능한 연결 관리자 목록에서 선택 하거나 선택  **\<새 연결 >** 열려는 **SSIS 연결 관리자 추가** 대화 상자.  
+  
+ **설명**  
+ 연결에 대한 설명을 입력합니다.  
+  
+ **추가**  
+ **연결 관리자** 목록에 다른 연결을 추가합니다.  
+  
+ **제거**  
+ 선택한 연결을 **연결 관리자** 목록에서 제거합니다.  
+  
+## <a name="script-transformation-editor-input-columns-page"></a>스크립트 변환 편집기(입력 열 페이지)
+  **스크립트 변환 편집기** 대화 상자의 **입력 열** 페이지를 사용하여 입력 열의 속성을 설정할 수 있습니다.  
+  
+> [!NOTE]  
+>  **입력 열** 페이지는 출력은 있지만 입력은 없는 원본 구성 요소에 대해서는 표시되지 않습니다.  
+  
+ 스크립트 구성 요소에 대 한 자세한 참조 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)합니다. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **입력 이름**  
+ 사용 가능한 입력 목록에서 선택합니다.  
+  
+ **사용 가능한 입력 열**  
+ 확인란을 사용하여 스크립트 변환에서 사용할 열을 지정합니다.  
+  
+ **입력 열**  
+ 각 행에 대해 사용 가능한 입력 열 목록에서 선택합니다. 선택 내용에 따라 **사용 가능한 입력 열**테이블의 확인란이 달라집니다.  
+  
+ **출력 별칭**  
+ 각 출력 열의 별칭을 입력합니다. 기본값은 입력 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
+  
+ **사용 유형**  
+ 스크립트 변환에서 각 열을 **ReadOnly** 로 처리할지, 아니면 **ReadWrite**로 처리할지를 지정합니다.  
+  
+## <a name="script-transformation-editor-inputs-and-outputs-page"></a>스크립트 변환 편집기(입/출력 페이지)
+  **스크립트 변환 편집기** 대화 상자의 **입/출력** 페이지를 사용하여 스크립트 변환에 대한 입력 및 출력을 추가, 제거 및 구성할 수 있습니다.  
+  
+> [!NOTE]  
+>  원본 구성 요소는 출력이 있고 입력이 없지만 대상 구성 요소는 입력이 있고 출력이 없습니다. 변환은 입력과 출력이 모두 있습니다.  
+  
+ 스크립트 구성 요소에 대 한 자세한 참조 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)합니다. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **Inputs and outputs**  
+ 왼쪽에서 입력 또는 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다. 편집할 수 있는 속성은 선택하는 입력 또는 출력에 따라 다릅니다. 표시된 속성 중 다수는 읽기 전용입니다. 개별 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+  
+ [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
+  
+ [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
+  
+ **출력 추가**  
+ 목록에 출력을 추가합니다.  
+  
+ **열 추가**  
+ 새 출력 열을 추가할 폴더를 선택한 다음 **열 추가**를 클릭하여 열을 추가합니다.  
+  
+ **출력 제거**  
+ 출력을 선택한 다음 **출력 제거**를 클릭하여 제거합니다.  
+  
+ **열 제거**  
+ 열을 선택한 다음 **열 제거**를 클릭하여 제거합니다.  
+  
+## <a name="script-transformation-editor-script-page"></a>스크립트 변환 편집기(스크립트 페이지)
+  **스크립트 변환 편집기** 대화 상자의 **스크립트** 탭을 사용하여 스크립트 및 관련 속성을 지정할 수 있습니다.  
+  
+ 스크립트 구성 요소에 대 한 자세한 참조 [스크립트 구성 요소 편집기에서 스크립트 구성 요소 구성](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)합니다. 스크립트 구성 요소 프로그래밍 방법은 [Extending the Data Flow with the Script Component](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **속성**  
+ 스크립트 변환 속성을 보고 수정합니다. 표시된 속성 중 다수는 읽기 전용입니다. 다음 속성을 수정할 수 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**Description**|스크립트 변환의 목적을 기준으로 스크립트 변환을 설명합니다.|  
+|**LocaleID**|정렬과 날짜 및 시간 변환에 사용할 지역별 정보를 제공하는 로캘을 지정합니다.|  
+|**이름**|구성 요소에 대한 설명이 포함된 이름을 입력합니다.|  
+|**ValidateExternalMetadata**|스크립트 변환이 디자인 타임에서 외부 데이터 원본에 대해 열 메타데이터의 유효성을 검사할 것인지 여부를 나타냅니다. 값 **false** 는 실행 시간까지 유효성 검사를 지연합니다.|  
+|**ReadOnlyVariables**|스크립트 변환을 통해 읽기 전용으로 액세스할 변수 목록을 쉼표로 구분하여 입력합니다.<br /><br /> 참고: 변수 이름은 대/소문자를 구분합니다.|  
+|**ReadWriteVariables**|스크립트 변환을 통해 읽기/쓰기로 액세스할 변수 목록을 쉼표로 구분하여 입력합니다.<br /><br /> 참고: 변수 이름은 대/소문자를 구분합니다.|  
+|**ScriptLanguage**|스크립트 구성 요소에 사용될 스크립트 언어를 선택합니다.<br /><br /> 스크립트 구성 요소 및 스크립트 태스크에 대한 기본 스크립트 언어를 설정하려면 **옵션** 대화 상자의 **일반** 페이지에서 **스크립트 언어** 옵션을 사용합니다.|  
+|**UserComponentTypeName**|지정 된 <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> 클래스 및 **Microsoft.SqlServer.TxScript** 지 원하는 어셈블리는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인프라입니다.|  
+  
+ **스크립트 편집**  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 사용하여 스크립트를 작성하거나 수정할 수 있습니다.  
   
 ## <a name="related-content"></a>관련 내용  
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

@@ -14,14 +14,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8e2d26fd9ce79fc8c47c7499313648d565ae1b97
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 353e7cf5cef8430303e3ee6fbefc92db08f5f733
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 문서에서는 Linux 서버에 SQL Server Always On 가용성 그룹에 대 한 지원 되는 배포 구성을 제공 합니다. 가용성 그룹에는 고가용성 및 데이터 보호 지원합니다. 자동 실패 감지, 자동 장애 조치 및 장애 조치 후 투명 하 게 다시 연결할 고가용성을 제공합니다. 동기화 된 복제본 데이터 보호를 제공합니다. 
 
@@ -114,7 +115,7 @@ SQL Server 2017 CTP 1.4 추가 `sequence_number` 를 `sys.availability_groups` P
 이 시나리오에서는 두 개의 복제본 시작 옵션으로 장애 조치에 대 한 응답 해야 합니다. 성공의 자동 장애 조치는 주 복제본 중지 한 후 보조 복제본을 모두를 최신 상태로 유지할 수 한에 응답 해야는 미리 알림을 승격 합니다. 온라인 상태이 고 동기 인 경우 시퀀스 번호가 같은 있는데 가용성 그룹 둘 중 하나를 승격합니다. 경우에 보조 복제본 중 하나에 응답 하는 작업을 미리 승격 리소스 에이전트 응답 보조가 가장 높은 sequence_number 및 장애 조치는 트리거되지 않습니다 보장할 수 없습니다.
 
 >[!IMPORTANT]
->때 `required_synchronized_secondaries_to_commit` 0 위치는 데이터 손실의 위험 합니다. 주 복제본 비활성 동안 리소스 에이전트가 자동으로 장애 조치를 트리거하지 않습니다. 를 복구 하려면 기본에 대 한 대기 하거나 수동으로 장애 조치를 사용 하 여 `FORCE_FAILOVER_ALLOW_DATA_LOSS`합니다.
+>`required_synchronized_secondaries_to_commit`이 0이면 데이터가 손실될 위험이 있습니다. 주 복제본 비활성 동안 리소스 에이전트가 자동으로 장애 조치를 트리거하지 않습니다. 를 복구 하려면 기본에 대 한 대기 하거나 수동으로 장애 조치를 사용 하 여 `FORCE_FAILOVER_ALLOW_DATA_LOSS`합니다.
 
 기본 동작을 재정의 하 고 설정에서 가용성 그룹 리소스를 방지 하도록 선택할 수 있습니다 `required_synchronized_secondaries_to_commit` 자동으로 합니다.
 

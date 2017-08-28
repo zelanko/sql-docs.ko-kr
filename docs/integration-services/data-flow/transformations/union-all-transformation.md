@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.unionalltrans.f1
+- sql13.dts.designer.unionalltransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - combining datasets
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 049d9195499e7145f98258cb90f2fd7069569058
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e947aa8b3d079830b9433ba1b01450fda699904a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="union-all-transformation"></a>UNION ALL 변환
@@ -45,13 +46,24 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-union-all-transformation"></a>UNION ALL 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **UNION ALL 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Union All Transformation Editor](../../../integration-services/data-flow/transformations/union-all-transformation-editor.md)를 참조하십시오.  
-  
  프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을 참조하십시오.  
   
  속성 설정 방법을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
+  
+## <a name="union-all-transformation-editor"></a>UNION ALL 변환 편집기
+  **UNION ALL 변환 편집기** 대화 상자를 사용하여 여러 개의 입력 행 집합을 단일 출력 행 집합으로 병합할 수 있습니다. UNION ALL 변환을 데이터 흐름에 포함하면 여러 데이터 흐름의 데이터를 병합하고, UNION ALL 변환을 중첩하여 복잡한 데이터 집합을 만들고, 데이터의 오류를 수정한 다음 행을 다시 병합할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **출력 열 이름**  
+ 각 열의 별칭을 입력합니다. 기본값은 첫 번째(참조) 입력의 입력 열 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
+  
+ **UNION ALL 입력 1**  
+ 첫 번째(참조) 입력의 사용 가능한 입력 열 목록에서 선택합니다. 매핑된 열의 메타데이터가 일치해야 합니다.  
+  
+ **UNION ALL 입력 n**  
+ 두 번째 및 추가 입력의 사용 가능한 입력 열 목록에서 선택합니다. 매핑된 열의 메타데이터가 일치해야 합니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
  [UNION ALL 변환을 사용하여 데이터 병합](../../../integration-services/data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)  

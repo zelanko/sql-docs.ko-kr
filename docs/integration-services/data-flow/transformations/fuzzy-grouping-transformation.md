@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzygroupingtrans.f1
+- sql13.dts.designer.fuzzygroupingtransformation.connection.f1
+- sql13.dts.designer.fuzzygroupingtransformation.columns.f1
+- sql13.dts.designer.fuzzygroupingtransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 009cdda72a100f887adb81e6f526b9a3ebe7651f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 6fceec90818b05ae23c04f90cff8f68c8c7c3c42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환
@@ -85,14 +88,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-fuzzy-grouping-transformation"></a>유사 항목 그룹화 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **유사 항목 그룹화 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [유사 항목 그룹화 변환 편집기&#40;연결 관리자 탭&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
-  
--   [유사 항목 그룹화 변환 편집기&#40;열 탭&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-columns-tab.md)  
-  
--   [유사 항목 그룹화 변환 편집기&#40;고급 탭&#41;](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation-editor-advanced-tab.md)  
-  
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -106,7 +101,86 @@ ms.lasthandoff: 08/03/2017
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="fuzzy-grouping-transformation-editor-connection-manager-tab"></a>유사 항목 그룹화 변환 편집기(연결 관리자 탭)
+  **유사 항목 그룹화 변환 편집기** 대화 상자의 **연결 관리자** 탭을 사용하여 기존 연결을 선택하거나 새 연결을 만들 수 있습니다.  
+  
+> [!NOTE]  
+>  연결에 지정된 서버에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행해야 합니다. 유사 항목 그룹화 변환에서는 변환에 대한 전체 입력만큼 클 수 있는 임시 데이터 개체를 tempdb에 만듭니다. 실행되는 동안 변환에서는 이러한 임시 개체에 대한 서버 쿼리를 실행합니다. 이 작업은 전체적인 서버 성능에 영향을 줄 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **OLE DB 연결 관리자**  
+ 목록 상자를 사용하여 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기** 단추를 사용하여 새 연결을 만듭니다.  
+  
+ **새로 만들기**  
+ **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
+  
+## <a name="fuzzy-grouping-transformation-editor-columns-tab"></a>유사 항목 그룹화 변환 편집기(열 탭)
+  **유사 항목 그룹화 변환 편집기** 대화 상자의 **열** 탭을 사용하여 중복 값을 가진 행을 그룹화하는 데 사용할 열을 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 중복 값을 가진 행을 그룹화하는 데 사용할 입력 열을 이 목록에서 선택합니다.  
+  
+ **이름**  
+ 사용 가능한 입력 열 이름을 표시합니다.  
+  
+ **통과**  
+ 입력 열을 변환의 출력에 포함할지 여부를 선택합니다. 그룹화에 사용되는 모든 열이 자동으로 출력에 복사됩니다. 이 열을 선택하여 추가 열을 포함할 수 있습니다.  
+  
+ **입력 열**  
+ **사용 가능한 입력 열** 목록에서 이전에 선택한 입력 열 중 하나를 선택합니다.  
+  
+ **출력 별칭**  
+ 해당 출력 열을 설명하는 이름을 입력합니다. 기본적으로 출력 열 이름은 입력 열 이름과 같습니다.  
+  
+ **그룹 출력 별칭**  
+ 그룹화된 중복의 정식 값이 포함될 열을 설명하는 이름을 입력합니다. 이 출력 열의 기본 이름은 입력 열 이름에 _clean이 추가된 것입니다.  
+  
+ **일치 유형**  
+ 유사 항목 일치 또는 정확히 일치를 선택합니다. 유사 항목 일치 유형에서 모든 열이 충분히 유사할 경우 중복 행으로 간주됩니다. 또한 특정 열에 대해 정확히 일치를 지정하면 정확히 일치 열에 동일한 값이 포함된 행만 중복 가능한 것으로 간주됩니다. 따라서 특정 열에 확실하게 오류 없음이나 불일치가 포함되어 있으면 해당 열에 대해 정확히 일치를 지정하여 다른 열에 대한 유사 항목 일치의 정확도를 높일 수 있습니다.  
+  
+ **최소 유사성**  
+ 슬라이더를 사용하여 조인 수준에서 유사성 임계값을 설정합니다. 값이 1에 가까울수록 조회 값과 원본 값이 근접하여 일치 항목으로 처리됩니다. 임계값을 높이면 고려할 레코드 수가 감소하기 때문에 비교 속도를 향상시킬 수 있습니다.  
+  
+ **유사성 출력 별칭**  
+ 선택한 조인에 대한 유사성 점수가 포함된 새 출력 열의 이름을 지정합니다. 이 값을 비워 놓으면 출력 열이 생성되지 않습니다.  
+  
+ **숫자**  
+ 열 데이터 비교 시 선행 및 후행 숫자의 의미를 지정합니다. 예를 들어 선행 숫자가 의미가 있을 경우 "123 Main Street"는 "456 Main Street"와 그룹화되지 않습니다.  
+  
+|값|Description|  
+|-----------|-----------------|  
+|**Neither**|선행 및 후행 숫자 모두 의미가 없습니다.|  
+|**Leading**|선행 숫자만 의미가 있습니다.|  
+|**Trailing**|후행 숫자만 의미가 있습니다.|  
+|**LeadingAndTrailing**|선행 및 후행 숫자 모두 의미가 있습니다.|  
+  
+ **비교 플래그**  
+ 문자열 비교 옵션에 대한 자세한 내용은 [문자열 데이터 비교](../../../integration-services/data-flow/comparing-string-data.md)를 참조하세요.  
+  
+## <a name="fuzzy-grouping-transformation-editor-advanced-tab"></a>유사 항목 그룹화 변환 편집기(고급 탭)
+  **유사 항목 그룹화 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 입/출력 열을 지정하고, 유사성 임계값을 설정하고, 구분 기호를 정의할 수 있습니다.  
+  
+> [!NOTE]  
+>  유사 항목 그룹화 변환의 **Exhaustive** 및 **MaxMemoryUsage** 속성은 **유사 항목 그룹화 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)의 유사 항목 그룹화 변환 섹션을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **입력 키 열 이름**  
+ 각 입력 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. **_key_in** 열에는 각 행을 고유하게 식별하는 값이 있습니다.  
+  
+ **출력 키 열 이름**  
+ 중복 행 그룹의 정식 행에 대한 고유 식별자를 포함하는 출력 열의 이름을 지정합니다. **_key_out** 열은 정식 데이터 행의 **_key_in** 값에 해당합니다.  
+  
+ **유사성 점수 열 이름**  
+ 유사성 점수를 포함하는 열의 이름을 지정합니다. 유사성 점수는 입력 행과 정식 행의 유사성을 나타내는 0과 1 사이의 값입니다. 정식 행과 더 비슷하게 일치할수록 점수가 1에 가까워집니다.  
+  
+ **유사성 임계값**  
+ 슬라이더를 사용하여 유사성 임계값을 설정합니다. 임계값이 1에 가까울수록 두 행이 보다 유사하여 중복으로 처리됩니다. 임계값을 높이면 고려할 레코드 수가 감소하기 때문에 비교 속도를 향상시킬 수 있습니다.  
+  
+ **토큰 구분 기호**  
+ 변환에서 데이터 토큰화에 사용할 수 있는 기본 구분 기호 집합을 제공하지만 필요에 따라 목록을 편집하여 구분 기호를 추가 또는 제거할 수 있습니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [유사 항목 조회 변환](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   

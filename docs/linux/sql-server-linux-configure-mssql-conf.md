@@ -4,19 +4,21 @@ description: "이 항목에서는 Linux에서 SQL Server 2017 설정을 구성 �
 author: luisbosquez
 ms.author: lbosq
 manager: jhubbard
-ms.date: 06/16/2017
+ms.date: 08/24/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a79e5c43dd8921ba2f30ca022d071648b26cdfb0
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf 도구와 함께 Linux에서 SQL Server 구성
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 **mssql conf** 은 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu에 대 한 SQL Server 2017 r c 2와 함께 설치 되는 구성 스크립트입니다. 이 유틸리티를 사용 하 여 다음 매개 변수를 설정할 수 있습니다.
 
@@ -37,13 +39,16 @@ ms.lasthandoff: 08/02/2017
 | [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
 | [Traceflag](#traceflags) | 서비스를 사용 하려고 합니다. traceflag를 설정 합니다. |
 
-다음 섹션에서는 이러한 각 시나리오에 대 한 mssql conf를 사용 하는 방법의 예를 보여 줍니다.
-
 > [!TIP]
-> 전체 경로 지정 하는 이러한 예제를 실행 하 여 mssql conf: **/opt/mssql/bin/mssql-conf**합니다. 대신 해당 경로로 이동 하기로 선택한 경우 mssql conf 현재 디렉터리의 컨텍스트에서 실행: **. / mssql conf**합니다.
-
-> [!NOTE]
 > 이러한 설정 중 일부를 환경 변수와 구성할 수도 있습니다. 자세한 내용은 참조 [환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
+
+## <a name="usage-tips"></a>사용 팁
+
+* Always On 가용성 그룹 및 공유 디스크 클러스터의 경우 항상 각 노드에서 동일한 구성 변경 내용을 확인 합니다.
+
+* 공유 디스크 클러스터 시나리오에 대 한 마십시오 다시 시작 하는 **mssql 서버** 서비스 변경 내용을 적용 합니다. SQL Server가 응용 프로그램으로 실행 됩니다. 대신, 오프 라인 상태로 만들었다가 다시 온라인 다음 리소스를 수행 합니다.
+
+* 전체 경로 지정 하는 이러한 예제를 실행 하 여 mssql conf: **/opt/mssql/bin/mssql-conf**합니다. 대신 해당 경로로 이동 하기로 선택한 경우 mssql conf 현재 디렉터리의 컨텍스트에서 실행: **. / mssql conf**합니다.
 
 ## <a id="collation"></a>SQL Server 데이터 정렬 변경
 
@@ -190,7 +195,7 @@ SQL Server를 수집 덤프 메모리의 형식을 제어에 대 한 두 가지 
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
     ```
 
-    기본값: **true**
+    기본값: **false**
 
 1. 덤프 파일의 유형을 지정는 **coredump.coredumptype** 설정 합니다.
 
@@ -314,11 +319,11 @@ sudo systemctl restart mssql-server
 
 |옵션 |Description |
 |--- |--- |
-|**network.forceencryption** |1 인 경우, 다음 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] 암호화에 대 한 모든 연결을 강제로 수행 합니다. 기본적으로이 옵션은 0입니다. |
-|**network.tlscert** |인증서에 절대 경로 파일 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] TLS를 사용 합니다. 예: `/etc/ssl/certs/mssql.pem` 인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |
-|**network.tlskey** |개인 키에 절대 경로 파일 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] TLS를 사용 합니다. 예: `/etc/ssl/private/mssql.key` 인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |
-|**network.tlsprotocols** |프로토콜은 SQL Server에서 허용 하는 TLS의 쉼표로 구분 된 목록입니다. [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)]항상 가장 강력한 허용 된 프로토콜을 협상 하도록 시도 합니다. 클라이언트가 허용 된 모든 프로토콜을 지원 하지 않는 경우 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] 연결 시도 거부 합니다.  호환성을 위해 지원 되는 모든 프로토콜은 기본 (1.2, 1.1, 1.0)에서 허용 됩니다.  TLS 1.2를 지원 하려면 클라이언트, TLS 1.2만을 허용 하는 것이 좋습니다. |
-|**network.tlsciphers** |허용 하는 암호 지정 [!INCLUDE[ssNoVersion](../../docs/includes/ssnoversion-md.md)] TLS에 대 한 합니다. 이 문자열 당 포맷 해야 [OpenSSL의 암호화 목록 형식](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)합니다. 일반적으로이 옵션을 변경할 필요가 없습니다. <br /> 기본적으로 다음 암호 허용 됩니다. <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+|**network.forceencryption** |1 인 경우, 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 암호화에 대 한 모든 연결을 강제로 수행 합니다. 기본적으로이 옵션은 0입니다. |
+|**network.tlscert** |인증서에 절대 경로 파일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS를 사용 합니다. 예: `/etc/ssl/certs/mssql.pem` 인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |
+|**network.tlskey** |개인 키에 절대 경로 파일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS를 사용 합니다. 예: `/etc/ssl/private/mssql.key` 인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |
+|**network.tlsprotocols** |프로토콜은 SQL Server에서 허용 하는 TLS의 쉼표로 구분 된 목록입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]항상 가장 강력한 허용 된 프로토콜을 협상 하도록 시도 합니다. 클라이언트가 허용 된 모든 프로토콜을 지원 하지 않는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결 시도 거부 합니다.  호환성을 위해 지원 되는 모든 프로토콜은 기본 (1.2, 1.1, 1.0)에서 허용 됩니다.  TLS 1.2를 지원 하려면 클라이언트, TLS 1.2만을 허용 하는 것이 좋습니다. |
+|**network.tlsciphers** |허용 하는 암호 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS에 대 한 합니다. 이 문자열 당 포맷 해야 [OpenSSL의 암호화 목록 형식](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)합니다. 일반적으로이 옵션을 변경할 필요가 없습니다. <br /> 기본적으로 다음 암호 허용 됩니다. <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Kerberos keytab 파일에 대 한 경로 |
 
 TLS 설정을 사용 하 여의 예제를 보려면 [Linux에서 SQL Server 연결 암호화](sql-server-linux-encrypted-connections.md)합니다.
@@ -351,15 +356,83 @@ TLS 설정을 사용 하 여의 예제를 보려면 [Linux에서 SQL Server 연�
    sudo systemctl restart mssql-server
    ```
 
+## <a name="remove-a-setting"></a>설정을 제거합니다
+
+설정 하지 않으려면 모든 설정을 사용해 서 변경 `mssql-conf set`, 호출 **mssql conf** 와 `unset` 옵션 및 설정의 이름입니다. 이 값이 기본값으로 효과적으로 돌아가 설정을 지웁니다.
+
+1. 다음 예제에서는 지웁니다는 **network.tcpport** 옵션입니다.
+
+   ```bash
+   sudo /opt/mssql/bin/mssql-conf unset network.tcpport
+   ```
+
+1. SQL Server 서비스를 다시 시작 합니다.
+
+   ```bash
+   sudo systemctl restart mssql-server
+   ```
+
 ## <a name="view-current-settings"></a>현재 설정 보기
 
-으로 명시적으로 구성 된 모든 설정을 보려면 **mssql conf**, 다음 명령을 실행 합니다.
+보려면 구성 설정의 내용을 출력 하려면 다음 명령을 실행 하는 **mssql.conf** 파일:
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-이 파일에 표시 되지 않은 모든 설정을 기본값으로 사용 하 고 있는지 확인 합니다.
+이 파일에 표시 되지 않은 모든 설정을 기본값으로 사용 하 고 있는지 확인 합니다. 다음 섹션에서는 예제를 제공 **mssql.conf** 파일입니다.
+
+## <a name="mssqlconf-format"></a>mssql.conf 형식
+
+다음 **/var/opt/mssql/mssql.conf** 파일 각 설정에 대 한 예제를 제공 합니다. 변경 하려면 수동으로이 형식을 사용할 수는 **mssql.conf** 필요에 따라 파일입니다. 파일을 변경 수동으로 수행 하는 경우 변경 내용을 적용 하기 전에 SQL Server를 다시 시작 해야 있습니다. 사용 하 여 **mssql.conf** 파일 Docker로 Docker 있어야 [데이터 유지](sql-server-linux-configure-docker.md)합니다. 먼저 전체 추가 **mssql.conf** 호스트 디렉터리에 파일을 다음 컨테이너를 실행 합니다. 이러한 형식의 예로 [고객 의견](sql-server-linux-customer-feedback.md)합니다.
+
+```ini
+[EULA]
+accepteula = Y
+
+[coredump]
+captureminiandfull = true
+coredumptype = full
+
+[filelocation]
+defaultbackupdir = /var/opt/mssql/data/
+defaultdatadir = /var/opt/mssql/data/
+defaultdumpdir = /var/opt/mssql/data/
+defaultlogdir = /var/opt/mssql/data/
+
+[hadr]
+hadrenabled = 0
+
+[language]
+lcid = 1033
+
+[memory]
+memorylimitmb = 4096
+
+[network]
+forceencryption = 0
+ipaddress = 10.192.0.0
+kerberoskeytabfile = /var/opt/mssql/secrets/mssql.keytab
+tcpport = 1401
+tlscert = /etc/ssl/certs/mssql.pem
+tlsciphers = ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA
+tlskey = /etc/ssl/private/mssql.key
+tlsprotocols = 1.2,1.1,1.0
+
+[sqlagent]
+databasemailprofile = default
+errorlogfile = /var/opt/mssql/log/sqlagentlog.log
+errorlogginglevel = 7
+
+[telemetry]
+customerfeedback = true
+userrequestedlocalauditdirectory = /tmp/audit
+
+[traceflag]
+traceflag0 = 1204
+traceflag1 = 2345
+traceflag = 3456
+```
 
 ## <a name="next-steps"></a>다음 단계
 

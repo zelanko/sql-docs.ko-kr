@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.copycolumntrans.f1
+- sql13.dts.designer.copymaptransformation.f1
 helpviewer_keywords:
 - columns [Integration Services], copying
 - copying columns
@@ -21,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3039b400b136b62840c40b463bb1d8f53a43251d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: d05d290cd9468eb7fd0b208e00a88db76cfae61a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="copy-column-transformation"></a>열 복사 변환
@@ -37,8 +38,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **열 복사 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Copy Column Transformation Editor](../../../integration-services/data-flow/transformations/copy-column-transformation-editor.md)를 참조하십시오.  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -46,6 +45,22 @@ ms.lasthandoff: 08/03/2017
 -   [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)  
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
+  
+## <a name="copy-column-transformation-editor"></a>열 복사 변환 편집기
+  **열 복사 변환 편집기** 대화 상자를 사용하여 복사할 열을 선택하고 새 출력 열의 이름을 할당할 수 있습니다.  
+  
+> [!NOTE]  
+>  사용자가 모든 원본 데이터를 대상에 간단하게 복사할 경우 열 복사 변환을 사용할 필요가 없을 수 있습니다. 일부 시나리오에서는 데이터 변환이 필요하지 않을 때 원본을 대상에 직접 연결할 수 있습니다. 이러한 상황에서는 SQL Server 가져오기 및 내보내기 마법사를 사용하여 패키지를 만드는 것이 좋습니다. 필요한 경우 나중에 패키지를 향상시키고 다시 구성할 수 있습니다. 자세한 내용은 [SQL Server Import and Export Wizard](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)를 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 확인란을 사용하여 복사할 열을 선택합니다. 선택한 항목은 아래의 입력 열에 추가됩니다.  
+  
+ **입력 열**  
+ 사용 가능한 입력 열 목록에서 복사할 열을 선택합니다. 선택 내용에 따라 **사용 가능한 입력 열** 테이블의 확인란이 달라집니다.  
+  
+ **출력 별칭**  
+ 각 새 출력 열의 별칭을 입력합니다. 기본값은 **사본 -**뒤에 입력 열의 이름이 오는 형식이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   

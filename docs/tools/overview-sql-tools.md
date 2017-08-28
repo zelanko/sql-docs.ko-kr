@@ -1,7 +1,7 @@
 ---
-title: "SQL Server 도구 개요 | Microsoft Docs"
+title: "SQL 도구 및 SQL Server, Azure SQL 데이터베이스 및 SQL 데이터 웨어하우스 유틸리티 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/21/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,26 +15,72 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 514efc5995ad6dc3d79fb2f323fc6e79d1d849c8
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: eccbe54c561e009858f6192126abc57e3399082c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="overview-of-sql-server-tools-and-utilities"></a>SQL Server 도구 및 유틸리티 개요
+# <a name="tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouse"></a>도구 및 유틸리티 Azure SQL 데이터베이스, SQL Server 및 SQL 데이터 웨어하우스
 
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]  
 
-  ![](../includes/media/sql-database-tools.png)이 문서는 도구 및 유틸리티를 개발 하 고 SQL Server, Azure SQL 데이터베이스, SQL 데이터 웨어하우스, SQL Server 기반 응용 프로그램 관리를 쉽게 사용할 수 있는의 목록이 표시 됩니다. 
+![](../includes/media/sql-database-tools.png)이 문서에서는 SQL Server, Azure SQL 데이터베이스, SQL 데이터 웨어하우스 및 SQL Server 기반 응용 프로그램을 사용 하기 위한 사용 가능한 도구 목록은 제공 합니다. 
+
+이동 하려는 경우 테이블을 만들기 시작 쿼리를 실행, 기본적으로 디자인 하 고 데이터베이스를 한 다음 관리할 [ **SQL Server Management Studio (SSMS)** ](../ssms/download-sql-server-management-studio-ssms.md) 프로그램 이동 도구로 될 것입니다. SSMS는 무료 및 Windows에서 실행 됩니다.
+
+Linux 또는 macOS를 실행 하는 경우 [Visual Studio Code](https://code.visualstudio.com/) 와 [ **Visual Studio Code mssql** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) 확장 합니다. 이러한 도구는 다양 한 기능을 사용 하 여 Microsoft SQL Server, Azure SQL 데이터베이스 및 SQL 데이터 웨어하우스를 개발 하기 위한 고 수도 있습니다. 참조 [를 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 하려면 Visual Studio Code를 사용 하 여](../linux/sql-server-linux-develop-use-vscode.md)합니다.
 
 
+## <a name="sql-tools"></a>SQL 도구 
+ 
 | 도구 | Description |
 |:--|:--|
 | [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS)를 사용 하 여 쿼리를 디자인 하 고 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 관리. |
 | [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에 대 한 강력한 개발 환경으로 Visual Studio를 설정 합니다. |
+| [Visual Studio 코드](https://code.visualstudio.com/)| Visual Studio Code Linux, macOS 등 및 Windows에서 작동합니다. Visual Studio Code를 설치 하면 설치 여 [확장명이 mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) Microsoft SQL Server, Azure SQL 데이터베이스 및 SQL 데이터 웨어하우스를 개발 하기 위한 합니다. |
 | [구성 관리자](../tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server 구성 관리자 SQL Server 서비스를 구성 하 고 네트워크 연결을 구성을 사용 하 고 있습니다.|
 | [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md) | Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 SQL Server로 데이터베이스 마이그레이션을 자동화 하려면 SQL Server Migration Assistant를 사용 합니다.|
 | [Distributed Replay](../tools/distributed-replay/install-distributed-replay-overview.md) | Distributed Replay 기능을 사용 하 여 향후 SQL Server 업그레이드의 영향을 쉽게 평가할 수 있도록 합니다. 하드웨어와 운영 체제 업그레이드 및 SQL Server 튜닝에 따르는 영향도 쉽게 평가할 Distributed Replay를 사용할 수도 있습니다. |
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose 유틸리티는 Service Broker 서비스를 구성 하거나 Service Broker 대화의 문제를 보고합니다. |
-| [명령 프롬프트 유틸리티](command-prompt-utility-reference-database-engine.md) | 명령 프롬프트 유틸리티를 사용 하면 SQL Server 스크립트 작업을 수 있습니다. 이 문서에는 SQL Server와 함께 제공 되는 명령 프롬프트 유틸리티 목록에 포함 되어 있습니다. |
+
+
+## <a name="sql-command-prompt-utilities"></a>SQL 명령 프롬프트 유틸리티
+
+  명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 스크립트로 작성할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 명령 프롬프트 유틸리티를 보여 줍니다.  
+  
+|**유틸리티**|**설명**|**설치 위치**|  
+|-----------------|---------------------|----------------------|  
+|[bcp 유틸리티](../tools/bcp-utility.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 복사하는 데 사용합니다.|\<*드라이브*>: \Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
+|[dta 유틸리티](../tools/dta/dta-utility.md)|작업을 분석하고 해당 작업에서 서버 성능을 최적화하기 위한 물리적 디자인 구조를 제시하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[dtexec 유틸리티](../integration-services/packages/dtexec-utility.md)|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 구성 및 실행하는 데 사용합니다. 이 명령 프롬프트 유틸리티의 사용자 인터페이스 버전을 **DTExecUI**라고 하며 이는 패키지 실행 유틸리티를 표시합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[dtutil 유틸리티](../integration-services/dtutil-utility.md)|SSIS 패키지를 관리하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]DTS\Binn|  
+|[배포 유틸리티를 사용하여 모델 솔루션 배포](../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 배포하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VShell\Common7\IDE|  
+|[mssql-scripter (공개 미리 보기)](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/17/try-new-sql-server-command-line-tools-to-generate-t-sql-scripts-and-monitor-dynamic-management-views/)|SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스의 데이터베이스 개체에 대 한 CREATE 및 삽입 T-SQL 스크립트를 생성 하는 데 사용 합니다.|참조 우리의 [GitHub 리포지토리](https://github.com/Microsoft/sql-xplat-cli) 다운로드 및 사용 정보에 대 한 합니다.| 
+|[osql 유틸리티](../tools/osql-utility.md)|명령 프롬프트에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[프로파일러 유틸리티](../tools/profiler-utility.md)|명령 프롬프트에서 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 를 시작하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[RS.exe 유틸리티&#40;SSRS&#41;](../reporting-services/tools/rs-exe-utility-ssrs.md)|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버를 관리하기 위한 스크립트를 실행하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[rsconfig 유틸리티&#40;SSRS&#41;](../reporting-services/tools/rsconfig-utility-ssrs.md)|보고서 서버 연결을 구성하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[rskeymgmt 유틸리티&#40;SSRS&#41;](../reporting-services/tools/rskeymgmt-utility-ssrs.md)|보고서 서버에서 암호화 키를 관리하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[sqlagent90 응용 프로그램](../tools/sqlagent90-application.md)|명령 프롬프트에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트를 시작하는 데 사용합니다.|\<드라이브 >: files\microsoft SQL Server\\<*instance_name*> \MSSQL\Binn|  
+|[sqlcmd 유틸리티](../tools/sqlcmd-utility.md)|명령 프롬프트에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.|\<*드라이브*>: \Program Files\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\Client SDK\ODBC\110\Tools\Binn|  
+|[SQLdiag 유틸리티](../tools/sqldiag-utility.md)|[!INCLUDE[msCoName](../includes/msconame-md.md)] 고객 서비스 지원 센터에 제공할 진단 정보를 수집하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[sqllogship 응용 프로그램](../tools/sqllogship-application.md)|응용 프로그램에서 백업, 복사 및 복원 작업을 실행하지 않고 로그 전달 구성에 대해 백업, 복사, 복원 작업 및 관련 정리 태스크를 수행하는 데 사용됩니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[SqlLocalDB 유틸리티](../tools/sqllocaldb-utility.md)|프로그램 개발자를 대상으로 하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 모드입니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\|  
+|[sqlmaint 유틸리티](../tools/sqlmaint-utility.md)|이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 만든 데이터베이스 유지 관리 계획을 실행하는 데 사용합니다.|\<드라이브 >: files\microsoft SQL Server\MSSQL13 합니다. MSSQLSERVER\MSSQL\Binn|  
+|[sqlps 유틸리티](../tools/sqlps-utility.md)|PowerShell 명령 및 스크립트를 실행하는 데 사용합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell 공급자 및 cmdlet을 로드하고 등록합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn|  
+|[sqlservr 응용 프로그램](../tools/sqlservr-application.md)|문제 해결을 위해 명령 프롬프트에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스를 시작 및 중지하는 데 사용합니다.|\<드라이브 >: files\microsoft SQL Server\MSSQL13 합니다. MSSQLSERVER\MSSQL\Binn|  
+|[Ssms 유틸리티](../tools/sql-server-management-studio/ssms-utility.md)|명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 시작하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
+|[tablediff 유틸리티](../tools/tablediff-utility.md)|두 테이블의 데이터를 비교하여 불일치가 있는지 확인하는 데 사용합니다. 복제 토폴로지 문제를 해결할 때 유용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
+
+## <a name="sql-command-prompt-utilities-syntax-conventions"></a>SQL 명령 프롬프트 유틸리티 구문 표기 규칙  
+  
+|**규칙**|**사용 대상**|  
+|--------------------|------------------|  
+|대문자|운영 체제 수준에서 사용하는 문 및 용어|  
+|`monospace`|예제 명령 및 프로그램 코드|  
+|*기울임꼴*|사용자가 제공하는 매개 변수|  
+|**굵게**|표시된 대로 입력해야 하는 명령, 매개 변수 및 다른 구문|  
+
+
 

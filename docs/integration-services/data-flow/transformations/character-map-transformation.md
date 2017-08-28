@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.charactertrans.f1
+- sql13.dts.designer.charactermaptransformation.f1
 helpviewer_keywords:
 - mutually exclusive mapping [Integration Services]
 - mapping data [Integration Services]
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 80818df1eb99cfe68012a119d4482698b17d0044
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ea6f6f0526a0ad1a2f98c97aed2a7aebbffb65a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="character-map-transformation"></a>문자표 변환
@@ -74,8 +75,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **문자표 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Character Map Transformation Editor](../../../integration-services/data-flow/transformations/character-map-transformation-editor.md)를 참조하십시오.  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -87,5 +86,45 @@ ms.lasthandoff: 08/03/2017
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="character-map-transformation-editor"></a>문자표 변환 편집기
+  **문자표 변환 편집기** 대화 상자를 사용하여 열 데이터에 적용할 문자열 함수를 선택하고 매핑이 내부 변경인지, 아니면 새 열로 추가되었는지를 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 확인란을 사용하여 문자열 함수로 변환할 열을 선택할 수 있습니다. 아래 테이블에 선택 내용이 나타납니다.  
+  
+ **입력 열**  
+ 위 테이블에서 선택한 입력 열을 표시합니다. 사용 가능한 입력 열 목록을 사용하여 선택 내용을 변경 또는 제거할 수도 있습니다.  
+  
+ **대상**  
+ 문자열 작업 결과를 기존 열을 사용하여 내부에 저장할지, 아니면 수정된 데이터를 새 열로 저장할지를 지정합니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|새 열|새 열에 데이터를 저장합니다. **출력 별칭**의 열 이름을 할당합니다.|  
+|내부 변경|수정된 데이터를 기존 열에 저장합니다.|  
+  
+ **연산**  
+ 열 데이터에 적용할 문자열 함수를 목록에서 선택합니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|소문자|소문자로 변환합니다.|  
+|대문자|대문자로 변환합니다.|  
+|바이트 반전|바이트 순서를 반대로 바꿔 변환합니다.|  
+|히라가나|일본어 가타카나 문자를 히라가나로 변환합니다.|  
+|가타카나|일본어 히라가나 문자를 가타카나로 변환합니다.|  
+|반자|전자 문자를 반자로 변환합니다.|  
+|전자|반자 문자를 전자로 변환합니다.|  
+|대/소문자 구분 기능|시스템 규칙 대신 대/소문자 구분 규칙(터키어 및 다른 로캘의 유니코드 단순 대/소문자 구분 매핑)을 적용합니다.|  
+|중국어(간체)|중국어 번체 문자를 간체로 변환합니다.|  
+|중국어(번체)|중국어 간체 문자를 번체로 변환합니다.|  
+  
+ **출력 별칭**  
+ 각 출력 열의 별칭을 입력합니다. 기본값은 **Copy of** 뒤에 입력 열 이름이 오는 형식이지만 설명이 포함된 고유 이름을 선택할 수 있습니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 이 변환에 대한 오류 처리 옵션을 지정할 수 있습니다.  
   
   

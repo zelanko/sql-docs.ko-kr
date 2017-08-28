@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 88683c4fbf4426ffac83ef2091f81087101463e9
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>이 간단한 예제 가져오기 및 내보내기 마법사 시작
@@ -44,6 +44,8 @@ Windows 시작 메뉴에서 Microsoft SQL Server 2016 그룹에서 마법사를 
 
 > [!NOTE]
 > 예를 들어 32 비트 버전의 Microsoft Office를 설치 해야 하므로 32 비트 마법사를 선택 합니다. 결과적으로, Excel에 연결 하는 32 비트 데이터 공급자를 사용 해야 합니다. 일반적으로 다른 많은 데이터 소스에 대 한 64 비트 마법사 중 선택할 수 있습니다.
+>
+> 64 비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용 하려면 SQL Server를 설치 해야 합니다. SQL Server Data Tools (SSDT) 및 SQL Server Management Studio (SSMS)는 32 비트 응용 프로그램 및 32 비트 버전의 마법사를 포함 하 여 32 비트 파일을 설치 합니다.
 
 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)을 참조하세요.
 
@@ -58,9 +60,6 @@ Windows 시작 메뉴에서 Microsoft SQL Server 2016 그룹에서 마법사를 
 다음 페이지에서 **데이터 원본을 선택**, 데이터 원본으로 Microsoft Excel을 선택 합니다. 그런 다음 Excel 파일 선택를 찾아봅니다. 마지막으로 파일을 만드는 데 있는 Excel 버전을 지정 합니다.
 
 ![Excel 데이터 원본 선택](../../integration-services/import-export-data/media/choose-the-excel-data-source.jpg)
-
-> [!NOTE]
-> 일반적으로 버전, Microsoft Excel 2016을 지정 하 고 액세스 2016 및 Excel 2016에 연결 하기 위한 파일을 다운로드 합니다. 그러나 Microsoft Office 365 구독이 있는 Office 2016 런타임을 설치할 수 없습니다. 액세스 2016 및 Excel 2016에 대 한 데이터 공급자의 Microsoft Office 데스크톱 버전으로 설치할 수 있습니다. 따라서 이전 버전의 Excel에서 Excel 2013 단순히 지정합니다. 필요한 경우 Excel 2013 및 Access 2013에 연결 하기 위한 파일을 다운로드 합니다. 에 지정 된 Office 2016 런타임의 이러한 제한을 [이 블로그 게시물](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)합니다.
 
 Excel에 연결 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Excel 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md)합니다. 마법사의이 페이지에 대 한 자세한 내용은 참조 하십시오. [데이터 원본을 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)합니다.
 

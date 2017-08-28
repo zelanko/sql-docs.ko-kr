@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.multicasttrans.f1
+- sql13.dts.designer.multicasttransformation.f1
 helpviewer_keywords:
 - multiple outputs
 - Multicast transformation
@@ -22,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8619a0ed02ffc73126eb151f4a83a0b6b24c4be8
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: bd3eee42fbb204a9ca1e806d273b7c09a86c87d2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="multicast-transformation"></a>멀티캐스트 변환
@@ -40,12 +41,20 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-multicast-transformation"></a>멀티캐스트 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **멀티캐스트 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Multicast Transformation Editor](../../../integration-services/data-flow/transformations/multicast-transformation-editor.md)를 참조하십시오.  
-  
  프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용은 [Common Properties](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)을 참조하십시오.  
   
 ## <a name="related-tasks"></a>관련 작업  
  이 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
+  
+## <a name="multicast-transformation-editor"></a>멀티캐스트 변환 편집기
+  **멀티캐스트 변환 편집기** 대화 상자를 사용하여 각 변환 출력에 대한 속성을 보고 설정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **출력**  
+ 왼쪽에서 출력을 선택하여 오른쪽에 있는 테이블에서 해당 속성을 확인합니다.  
+  
+ **속성**  
+ 나열된 모든 출력 속성은 **Name** 과 **Description**을 제외하고 읽기 전용입니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 흐름](../../../integration-services/data-flow/data-flow.md)   

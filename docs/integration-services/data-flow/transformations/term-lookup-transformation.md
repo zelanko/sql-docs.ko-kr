@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termlookuptrans.f1
+- sql13.dts.designer.termlookup.termlookup.f1
+- sql13.dts.designer.termlookup.referencetable.f1
+- sql13.dts.designer.termlookup.advanced.f1
 helpviewer_keywords:
 - extracting data [Integration Services]
 - match extracted terms [Integration Services]
@@ -25,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3eefbab1c6f9b3cd5e51faa9e875a44218c33b3f
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ee1fa267107940169c05942e8614a7bf7148566a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-lookup-transformation"></a>용어 조회 변환
@@ -96,14 +99,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **용어 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [용어 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [용어 조회 변환 편집기&#40;용어 조회 탭&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-term-lookup-tab.md)  
-  
--   [용어 조회 변환 편집기&#40;고급 탭&#41;](../../../integration-services/data-flow/transformations/term-lookup-transformation-editor-advanced-tab.md)  
-  
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -112,4 +107,53 @@ ms.lasthandoff: 08/03/2017
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
+## <a name="term-lookup-transformation-editor-term-lookup-tab"></a>용어 조회 변환 편집기(용어 조회 탭)
+  **용어 조회 변환 편집기** 대화 상자의 **용어 조회** 탭을 사용하여 입력 열을 참조 테이블의 조회 열로 매핑하고 각 출력 열의 별칭을 제공할 수 있습니다.  
   
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 확인란을 사용하여 변경되지 않은 출력 열로 전달할 입력 열을 선택합니다. 입력 열을 **사용 가능한 참조 열** 목록으로 끌어서 참조 테이블의 조회 열로 매핑할 수 있습니다. 입력 및 조회 열에 일치하는 지원 데이터 형식 DT_NTEXT 또는 DT_WSTR이 있어야 합니다. 매핑 선을 선택하고 마우스 오른쪽 단추를 클릭하여 [관계 만들기](../../../integration-services/data-flow/transformations/create-relationships.md) 대화 상자에서 매핑을 편집합니다.  
+  
+ **사용 가능한 참조 열**  
+ 참조 테이블에서 사용 가능한 열을 표시합니다. 일치시킬 용어 목록이 포함된 열을 선택합니다.  
+  
+ **통과 열**  
+ 사용 가능한 입력 열 목록에서 선택합니다. 선택 내용에 따라 **사용 가능한 입력 열** 테이블의 확인란이 달라집니다.  
+  
+ **출력 열 별칭**  
+ 각 출력 열의 별칭을 입력합니다. 기본값은 열 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
+  
+## <a name="term-lookup-transformation-editor-reference-table-tab"></a>용어 조회 변환 편집기(참조 테이블 탭)
+  **용어 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 참조(조회) 테이블에 대한 연결을 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **OLE DB 연결 관리자**  
+ 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+  
+ **새로 만들기**  
+ **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
+  
+ **참조 테이블 이름**  
+ 목록에서 항목을 골라 데이터베이스의 조회 테이블 또는 뷰를 선택합니다. 테이블 또는 뷰는 원본 열의 텍스트와 비교할 수 있는 기존 용어 목록이 있는 열을 포함해야 합니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
+  
+## <a name="term-lookup-transformation-editor-advanced-tab"></a>용어 조회 변환 편집기(고급 탭)
+  **용어 조회 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 조회에서 대/소문자를 구분할지 여부를 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **대/소문자 구분 용어 조회 사용**  
+ 조회에서 대/소문자를 구분할지 여부를 표시합니다. 기본값은 **False**입니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리 옵션을 지정할 수 있습니다.  
+  
+## <a name="see-also"></a>관련 항목:  
+ [Integration Services 오류 및 메시지 참조](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [용어 추출 변환](../../../integration-services/data-flow/transformations/term-extraction-transformation.md)  
+  
+

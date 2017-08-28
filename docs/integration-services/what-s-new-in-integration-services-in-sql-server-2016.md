@@ -19,16 +19,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bdb767ed145a95868bb11e5a9fa4facc837d0c07
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>기능 &#39;의 새로운 SQL Server 2016의에서 Integration Services
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
- 이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 추가되거나 업데이트된 기능에 대해 설명합니다.  
+ 이 항목에서는 SQL Server 2016에서 업데이트 되거나 추가 된 기능을 설명 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]합니다.  
   
 ## <a name="improvements-grouped-by-category"></a>범주별로 그룹화된 향상된 기능  
   
@@ -156,7 +156,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AlwaysOn"></a> SSIS 카탈로그에서 Always On 지원  
  Always On 가용성 그룹 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. 가용성 그룹은 함께 장애 조치(Failover)되는 사용자 데이터베이스(가용성 데이터베이스라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 자세한 내용은 [AlwaysOn 가용성 그룹](https://msdn.microsoft.com/library/hh510230.aspx)을 참조하세요.  
   
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 SSIS에는 중앙 집중식 SSIS 카탈로그(즉, SSISDB 사용자 데이터베이스)로 쉽게 배포할 수 있는 기능이 새로 도입되었습니다. SSIS 데이터베이스 및 해당 콘텐츠(프로젝트, 패키지, 실행 로그 등)에 대한 고가용성을 제공하려는 경우에는 다른 사용자 데이터베이스와 같은 방식으로 SSISDB 데이터베이스를 AlwaysOn 가용성 그룹에 추가할 수 있습니다. 장애 조치(Failover)가 발생하면 보조 노드 중 하나가 자동으로 새 주 노드가 됩니다.  
+ SQL Server 2016 SSIS 중앙 집중식된 SSIS 카탈로그 (예: SSISDB 사용자 데이터베이스)를 쉽게 배포할 수 있는 새로운 기능을 제공 합니다. SSIS 데이터베이스 및 해당 콘텐츠(프로젝트, 패키지, 실행 로그 등)에 대한 고가용성을 제공하려는 경우에는 다른 사용자 데이터베이스와 같은 방식으로 SSISDB 데이터베이스를 AlwaysOn 가용성 그룹에 추가할 수 있습니다. 장애 조치(Failover)가 발생하면 보조 노드 중 하나가 자동으로 새 주 노드가 됩니다.  
   
  SSISDB에 대 한 Always On 사용 하기 위한 단계별 지침과 상세 개요에 대 한 참조 [SSIS 카탈로그](../integration-services/service/ssis-catalog.md)합니다.  
 
@@ -193,7 +193,7 @@ ms.lasthandoff: 08/03/2017
  SSIS 카탈로그에서 새 **RuntimeLineage** 로깅 수준에서는 데이터 흐름의 계보 정보를 추적하는 데 필요한 데이터를 수집합니다. 이 계보 정보를 구문 분석하여 작업 간의 계보 관계를 매핑할 수 있습니다. ISV와 개발자가 이 정보로 사용자 지정 계보 매핑 도구를 빌드할 수 있습니다. 
 
 ####  <a name="CustomLogging"></a> SSIS 카탈로그에서 새 사용자 지정 로깅 수준  
- SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에서는 **RuntimeLineage** 로깅 수준을 추가합니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
+ SSIS 카탈로그의 이전 버전을 사용하면 패키지를 실행할 때 네 가지 기본 제공 로깅 수준 **없음, 기본, 성능, 자세한 정보 표시**에서 선택할 수 있습니다. 추가 하는 SQL Server 2016의 **RuntimeLineage** 로깅 수준입니다. 또한 이제 SSIS 카탈로그에서 사용자 지정된 로깅 수준을 여러 개 만들고 저장할 수 있으며, 패키지를 실행할 때마다 사용할 로깅 수준을 선택할 수 있습니다. 각 사용자 지정된 로깅 수준에 대해 캡처할 통계 및 이벤트를 선택합니다. 필요에 따라 변수 값, 연결 문자열 및 작업 속성을 표시하는 이벤트 컨텍스트를 포함합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../integration-services/performance/integration-services-ssis-logging.md#server_logging)를 참조하십시오. 
 
 ####  <a name="ErrorColumn"></a> 데이터 흐름의 오류에 대한 열 이름  
  오류 출력에 오류를 포함 하는 데이터 흐름에서 행을 리디렉션하는 경우 출력 오류가 발생 했지만 열 이름이 표시 되지 않는 열에 대 한 숫자 식별자를 포함 합니다. 이제 여러 가지 방법을 사용하여 오류가 발생할 때 열 이름을 찾아 표시할 수 있습니다.  
@@ -289,7 +289,7 @@ PDW AU5로 데이터를 로드하기 위한 대상 어댑터가 릴리스되었�
 ### <a name="expanded-connectivity-to-the-cloud"></a>클라우드에 연결 확장
 
 ####  <a name="AFP2016"></a> Azure Feature Pack for SSIS가 SQL Server 2016용으로 릴리스됨  
- Integration Services용 Azure Feature Pack이 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]용으로 릴리스되었습니다. 기능 팩에는 연결 관리자가 포함되어 있어 일반적인 Azure 작업을 수행할 수 있도록 Azure 데이터 원본 및 작업에 연결합니다. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.  
+ Integration Services에 대 한 Azure 기능 팩 SQL Server 2016에 대 한 릴리스 되었습니다. 기능 팩에는 연결 관리자가 포함되어 있어 일반적인 Azure 작업을 수행할 수 있도록 Azure 데이터 원본 및 작업에 연결합니다. 자세한 내용은 [Integration Services용 Azure 기능 팩&#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md)을 참조하세요.  
 
 #### <a name="dynamics"></a> 서비스 팩 1에 릴리스된 Microsoft Dynamics 온라인 리소스에 대한 지원
 

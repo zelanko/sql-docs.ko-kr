@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4d1a2374d480f2d6b886425a02cb590b00b3564a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0e3ffe2ff1695de69be7149f4be7b42f57b0e991
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-odbc-data-source-sql-server-import-and-export-wizard"></a>ODBC 데이터 원본 (SQL Server 가져오기 및 내보내기 마법사)에 연결
@@ -39,6 +39,8 @@ Microsoft에서 필요한 또는 제 3 자에서 ODBC 드라이버를 다운로�
 
 > [!TIP]
 > 드라이버의 설치 및 64 비트 애플릿에서 표시 되지 않으면 있는지 알고 있는 경우 대신 32 비트 애플릿에서 찾습니다. 또한 인지 64 비트 또는 32 비트 SQL Server 가져오기 및 내보내기 마법사를 실행 해야 하는지 여부.
+>
+> 64 비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용 하려면 SQL Server를 설치 해야 합니다. SQL Server Data Tools (SSDT) 및 SQL Server Management Studio (SSMS)는 32 비트 응용 프로그램 및 32 비트 버전의 마법사를 포함 하 여 32 비트 파일을 설치 합니다.
     
 ## <a name="step-1---select-the-data-source"></a>1 단계-데이터 소스를 선택 합니다.
 컴퓨터에 설치 된 ODBC 드라이버는 데이터 원본의 드롭 다운 목록에 나열 되지 않습니다. ODBC 드라이버를 연결 하려면 선택 하 여 시작 된 **.NET Framework Data Provider for ODBC** 데이터 원본으로 **데이터 원본을 선택** 또는 **대상 선택** 마법사의 페이지입니다. 이 공급자는 ODBC 드라이버 주위에서 래퍼로 역할을 합니다.

@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.termextractiontrans.f1
+- sql13.dts.designer.termextraction.termextraction.f1
+- sql13.dts.designer.termextraction.inclusionexclusion.f1
+- sql13.dts.designer.termextraction.advanced.f1
 helpviewer_keywords:
 - word boundaries [Integration Services]
 - extracting data [Integration Services]
@@ -30,10 +33,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1aff30861feebd429bf4c061a3b8cff3031c7528
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: e664673c39b6f60ef9d3a523c46a2415a993d950
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="term-extraction-transformation"></a>용어 추출 변환
@@ -175,14 +178,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **용어 추출 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [용어 추출 변환 편집기&#40;용어 추출 탭&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-term-extraction-tab.md)  
-  
--   [용어 추출 변환 편집기&#40;제외 탭&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-exclusion-tab.md)  
-  
--   [용어 추출 변환 편집기&#40;고급 탭&#41;](../../../integration-services/data-flow/transformations/term-extraction-transformation-editor-advanced-tab.md)  
-  
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -191,4 +186,77 @@ ms.lasthandoff: 08/03/2017
   
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
+## <a name="term-extraction-transformation-editor-term-extraction-tab"></a>용어 추출 변환 편집기(용어 추출 탭)
+  **용어 추출 변환 편집기** 대화 상자의 **용어 추출** 탭을 사용하여 추출할 텍스트가 포함된 텍스트 열을 지정합니다.  
   
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 확인란을 사용하여 용어 추출에 사용할 단일 텍스트 열을 선택합니다.  
+  
+ **용어**  
+ 추출된 용어를 포함할 출력 열의 이름을 지정합니다.  
+  
+ **점수**  
+ 추출된 각 용어에 대한 점수를 포함할 출력 열의 이름을 지정합니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리를 지정할 수 있습니다.  
+  
+## <a name="term-extraction-transformation-editor-exclusion-tab"></a>용어 추출 변환 편집기(제외 탭)
+  **용어 추출 변환 편집기** 대화 상자의 **제외** 탭을 사용하여 제외 테이블에 대한 연결을 설정하고 제외 용어를 포함하는 열을 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **제외 용어 사용**  
+ 제외 용어를 포함하는 열을 지정하여 용어 추출 중 특정 용어를 제외할지 여부를 나타냅니다. 용어를 제외하기로 선택하는 경우 다음 원본 속성을 지정해야 합니다.  
+  
+ **OLE DB 연결 관리자**  
+ 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 설정합니다.  
+  
+ **새로 만들기**  
+ **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 데이터베이스에 대한 새 연결을 설정합니다.  
+  
+ **테이블 또는 뷰**  
+ 제외 용어를 포함하는 테이블 또는 뷰를 선택합니다.  
+  
+ **열**  
+ 제외 용어를 포함하는 테이블 또는 뷰의 열을 선택합니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리를 지정할 수 있습니다.  
+  
+## <a name="term-extraction-transformation-editor-advanced-tab"></a>용어 추출 변환 편집기(고급 탭)
+  **용어 추출 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 빈도, 길이 및 단어 또는 구 추출 여부와 같은 추출에 대한 속성을 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **명사**  
+ 변환에서 개별 명사만 추출하도록 지정합니다.  
+  
+ **명사구**  
+ 변환에서 명사구만 추출하도록 지정합니다.  
+  
+ **명사 및 명사구**  
+ 변환에서 명사 및 명사구를 모두 추출하도록 지정합니다.  
+  
+ **빈도**  
+ 점수를 용어의 빈도로 지정합니다.  
+  
+ **TFIDF**  
+ 점수를 용어의 TFIDF 값으로 지정합니다. TFIDF 점수는 TF(용어 빈도)와 IDF(역 문서 빈도)의 곱으로, 용어 T의 TFIDF = (T의 빈도) * log((입력의 행 수)/(T를 포함하는 행 수))와 같이 정의됩니다.  
+  
+ **빈도 임계값**  
+ 단어 또는 구를 추출할 때까지 발생해야 하는 횟수를 지정합니다. 기본값은 2입니다.  
+  
+ **최대 용어 길이**  
+ 단어 구의 최대 길이를 지정합니다. 이 옵션은 명사구에만 영향을 줍니다. 기본 값은 12입니다.  
+  
+ **대/소문자 구분 용어 추출 사용**  
+ 추출 시 대/소문자 구분 여부를 지정합니다. 기본값은 **False**입니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 오류 발생의 원인이 되는 행에 대한 오류 처리를 지정할 수 있습니다.  
+  
+## <a name="see-also"></a>관련 항목:  
+ [Integration Services 오류 및 메시지 참조](../../../integration-services/integration-services-error-and-message-reference.md)   
+ [용어 조회 변환](../../../integration-services/data-flow/transformations/term-lookup-transformation.md)  
+
+

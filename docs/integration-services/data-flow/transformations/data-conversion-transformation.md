@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.dataconversiontrans.f1
+- sql13.dts.designer.dataconversiontransformation.f1
 helpviewer_keywords:
 - converting data types [Integration Services]
 - Data Conversion transformation
@@ -21,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 897651a9257aadeac68a392eeae8b51d0c87de8d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ad8bb1bcb5ad02be3604ff0899074c4ced10cc96
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="data-conversion-transformation"></a>데이터 변환
@@ -49,10 +50,44 @@ ms.lasthandoff: 08/03/2017
  이 변환에는 하나의 입력, 하나의 출력 및 하나의 오류 출력이 있습니다.  
   
 ## <a name="related-tasks"></a>관련 작업  
- [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. SSIS 디자이너에서 데이터 변환을 사용하는 방법은 [데이터 변환을 사용하여 데이터를 다른 데이터 형식으로 변환](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md) 및 [데이터 변환 편집기](../../../integration-services/data-flow/transformations/data-conversion-transformation-editor.md)를 참조하세요. 이 변환의 속성을 프로그래밍 방식으로 설정하는 방법은 [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 및 [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)을 참조하세요.  
+ [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다. SSIS 디자이너에서 데이터 변환을 사용 하는 방법에 대 한 정보를 참조 하십시오. [데이터 변환을 사용 하 여 다른 데이터 형식에 대 한 데이터 변환](../../../integration-services/data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)합니다. 이 변환의 속성을 프로그래밍 방식으로 설정하는 방법은 [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796) 및 [변환 사용자 지정 속성](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)을 참조하세요.  
   
 ## <a name="related-content"></a>관련 내용  
  blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](http://go.microsoft.com/fwlink/?LinkId=220823)  
+  
+## <a name="data-conversion-transformation-editor"></a>데이터 변환 편집기
+  **데이터 변환 편집기** 대화 상자를 사용하여 변환할 열을 선택하고, 열이 변환될 데이터 형식을 선택하고, 변환 특성을 설정할 수 있습니다.  
+  
+> [!NOTE]  
+>  데이터 변환 출력 열의 **FastParse** 속성은 **데이터 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)의 데이터 변환 섹션을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 확인란을 사용하여 변환할 열을 선택합니다. 선택한 항목은 아래의 입력 열에 추가됩니다.  
+  
+ **입력 열**  
+ 사용 가능한 입력 열 목록에서 변환할 열을 선택합니다. 선택 내용에 따라 위의 확인란이 달라집니다.  
+  
+ **출력 별칭**  
+ 각 새 열의 별칭을 입력합니다. 기본값은 **Copy of** 뒤에 입력 열 이름이 오는 형식이지만 설명이 포함된 고유 이름을 선택할 수 있습니다.  
+  
+ **데이터 형식**  
+ 목록에서 사용 가능한 데이터 형식을 선택합니다. 자세한 내용은 [Integration Services Data Types](../../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.  
+  
+ **길이**  
+ 문자열 데이터의 열 길이를 설정합니다.  
+  
+ **전체 자릿수**  
+ 숫자 데이터의 전체 자릿수를 설정합니다.  
+  
+ **소수 자릿수**  
+ 숫자 데이터의 소수 자릿수를 설정합니다.  
+  
+ **코드 페이지**  
+ DT_STR 유형의 열에 적절한 코드 페이지를 선택합니다.  
+  
+ **오류 출력 구성**  
+ [오류 출력 구성](http://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) 대화 상자를 사용하여 하위 수준 오류를 처리하는 방법을 지정합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [빠른 구문 분석](http://msdn.microsoft.com/library/6688707d-3c5b-404e-aa2f-e13092ac8d95)   

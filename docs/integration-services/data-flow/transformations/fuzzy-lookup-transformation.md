@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.fuzzylookuptrans.f1
+- sql13.dts.designer.fuzzylookuptransformation.referencetable.f1
+- sql13.dts.designer.fuzzylookuptransformation.columns.f1
+- sql13.dts.designer.fuzzylookuptransformation.advanced.f1
 helpviewer_keywords:
 - cleaning data
 - comparing data
@@ -35,10 +38,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c05d44e6a91c79e5a5ce71b1e26ac2f4a319a88
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: ff5f003749572b16e750b5940cd0f05b0b879fda
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="fuzzy-lookup-transformation"></a>유사 항목 조회 변환
@@ -128,14 +131,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuring-the-fuzzy-lookup-transformation"></a>유사 항목 조회 변환의 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **유사 항목 조회 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 다음 항목을 참조하십시오.  
-  
--   [유사 항목 조회 변환 편집기&#40;참조 테이블 탭&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-reference-table-tab.md)  
-  
--   [유사 항목 조회 변환 편집기&#40;열 탭&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-columns-tab.md)  
-  
--   [유사 항목 조회 변환 편집기&#40;고급 탭&#41;](../../../integration-services/data-flow/transformations/fuzzy-lookup-transformation-editor-advanced-tab.md)  
-  
  **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -145,7 +140,84 @@ ms.lasthandoff: 08/03/2017
 ## <a name="related-tasks"></a>관련 작업  
  데이터 흐름 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>유사 항목 조회 변환 편집기(참조 테이블 탭)
+  **유사 항목 조회 변환 편집기** 대화 상자의 **참조 테이블** 탭을 사용하여 조회 시 사용할 원본 테이블 및 인덱스를 지정할 수 있습니다. 참조 데이터 원본은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 있는 테이블이어야 합니다.  
+  
+> [!NOTE]  
+>  유사 항목 조회 변환은 참조 테이블의 작업 복사본을 만듭니다. 아래에서 설명하는 인덱스는 일반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인덱스가 아닌 특수 테이블을 사용하여 이 작업 테이블에 생성됩니다. **저장된 인덱스 유지 관리**를 선택하지 않으면 변환에서 기존 원본 테이블을 수정하지 않습니다. 이 경우 변환에서는 참조 테이블에 대한 변경 내용을 기반으로 작업 테이블 및 조회 인덱스 테이블을 업데이트하는 트리거를 참조 테이블에 만듭니다.  
+  
+> [!NOTE]  
+>  유사 항목 조회 변환의 **Exhaustive** 및 **MaxMemoryUsage** 속성은 **유사 항목 조회 변환 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 또한 **MaxOutputMatchesPerInput** 에 대해 100을 초과하는 값은 **고급 편집기**에서만 지정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md)의 유사 항목 조회 변환 섹션을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **OLE DB 연결 관리자**  
+ 목록에서 기존 OLE DB 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+  
+ **새로 만들기**  
+ **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
+  
+ **새 인덱스 생성**  
+ 변환에서 조회 시 사용할 새 인덱스를 만들도록 지정합니다.  
+  
+ **참조 테이블 이름**  
+ 참조(조회) 테이블로 사용할 기존 테이블을 선택합니다.  
+  
+ **새 인덱스 저장**  
+ 새 조회 인덱스를 저장하려면 이 옵션을 선택합니다.  
+  
+ **새 인덱스 이름**  
+ 새 조회 인덱스를 저장하도록 선택한 경우 해당 인덱스를 설명하는 이름을 입력합니다.  
+  
+ **저장된 인덱스 유지 관리**  
+ 새 조회 인덱스를 저장하도록 선택한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 해당 인덱스를 유지 관리하도록 할지 여부를 지정합니다.  
+  
+> [!NOTE]  
+>  **유사 항목 조회 변환 편집기** 의 **참조 테이블** 에서 **저장된 인덱스 유지 관리**를 선택하면 변환은 관리 저장 프로시저를 사용하여 인덱스를 유지 관리합니다. 이러한 관리 저장 프로시저는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 CLR(공용 언어 런타임) 통합 기능을 사용합니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 CLR 통합은 사용되지 않습니다. **저장된 인덱스 유지 관리** 기능을 사용하려면 CLR 통합을 사용하도록 설정해야 합니다. 자세한 내용은 [Enabling CLR Integration](../../../relational-databases/clr-integration/clr-integration-enabling.md)을 참조하세요.  
+>   
+>  **저장된 인덱스 유지 관리** 옵션에는 CLR 통합이 필요하므로 CLR 통합이 사용되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 있는 참조 테이블을 선택하는 경우에만 이 기능이 작동합니다.  
+  
+ **기존 인덱스 사용**  
+ 변환에서 조회 시 기존 인덱스를 사용하도록 지정합니다.  
+  
+ **기존 인덱스의 이름**  
+ 목록에서 이전에 만든 조회 인덱스를 선택합니다.  
+  
+## <a name="fuzzy-lookup-transformation-editor-columns-tab"></a>유사 항목 조회 변환 편집기(열 탭)
+  **유사 항목 조회 변환 편집기** 대화 상자의 **열** 탭을 사용하여 입력 및 출력 열의 속성을 설정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 입력 열을 사용 가능한 조회 열로 끌어 연결합니다. 이러한 열에는 일치하며 지원되는 데이터 형식이 있어야 합니다. 매핑 선을 선택하고 마우스 오른쪽 단추를 클릭하여 [관계 만들기](../../../integration-services/data-flow/transformations/create-relationships.md) 대화 상자에서 매핑을 편집합니다.  
+  
+ **이름**  
+ 사용 가능한 입력 열의 이름을 표시합니다.  
+  
+ **통과**  
+ 입력 열을 변환의 출력에 포함할지 여부를 지정합니다.  
+  
+ **사용 가능한 조회 열**  
+ 확인란을 사용하여 유사 항목 조회 작업을 수행할 열을 선택합니다.  
+  
+ **조회 열**  
+ 사용 가능한 참조 테이블 열 목록에서 조회 열을 선택합니다. 선택 내용에 따라 **사용 가능한 조회 열** 테이블의 확인란이 달라집니다. **사용 가능한 조회 열** 테이블에서 열을 선택하면 반환된 일치하는 각 행에 대한 참조 테이블 열 값이 포함된 출력 열이 생성됩니다.  
+  
+ **출력 별칭**  
+ 각 조회 열에 대한 출력의 별칭을 입력합니다. 기본값은 추가된 숫자 인덱스 값이 있는 조회 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다.  
+  
+## <a name="fuzzy-lookup-transformation-editor-advanced-tab"></a>유사 항목 조회 변환 편집기(고급 탭)
+  **유사 항목 조회 변환 편집기** 대화 상자의 **고급** 탭을 사용하여 유사 항목 조회 매개 변수를 설정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **조회당 출력에서 일치하는 최대 항목 수**  
+ 변환에서 각 입력 행에 대해 반환할 수 있는 일치하는 최대 항목 수를 지정합니다. 기본값은 **1**입니다.  
+  
+ **유사성 임계값**  
+ 슬라이더를 사용하여 구성 요소 수준에서 유사성 임계값을 설정합니다. 값이 1에 가까울수록 조회 값과 원본 값이 근접하여 일치 항목으로 처리됩니다. 임계값을 높이면 고려할 레코드 수가 감소하기 때문에 비교 속도를 향상시킬 수 있습니다.  
+  
+ **토큰 구분 기호**  
+ 변환에서 열 값을 토큰화하는 데 사용하는 구분 기호를 지정합니다.  
+  
+## <a name="see-also"></a>참고 항목  
  [조회 변환](../../../integration-services/data-flow/transformations/lookup-transformation.md)   
  [유사 항목 그룹화 변환](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)   
  [Integration Services 변환](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

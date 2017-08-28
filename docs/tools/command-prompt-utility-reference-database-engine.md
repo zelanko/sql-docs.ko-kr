@@ -1,5 +1,5 @@
 ---
-title: "명령 프롬프트 유틸리티 참조 (데이터베이스 엔진) | Microsoft Docs"
+title: "SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - command prompt [SQL Server], utilities
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 caps.latest.revision: 90
-author: JennieHubbard
-ms.author: jhubbard
-manager: jhubbard
+author: stevestein
+ms.author: sstein
+manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 12e1015034b5f933eff620c626ab363cdf5800e7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 4ef7f8faaebd237d498744554b44283142e2b01e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="command-prompt-utility-reference-database-engine"></a>명령 프롬프트 유틸리티 참조(데이터베이스 엔진)
+# <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
   명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 스크립트로 작성할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 명령 프롬프트 유틸리티를 보여 줍니다.  
   
 |**유틸리티**|**설명**|**설치 위치**|  
@@ -53,11 +53,7 @@ ms.lasthandoff: 08/02/2017
 |[sqlservr 응용 프로그램](../tools/sqlservr-application.md)|문제 해결을 위해 명령 프롬프트에서 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스를 시작 및 중지하는 데 사용합니다.|\<드라이브 >: files\microsoft SQL Server\MSSQL13 합니다. MSSQLSERVER\MSSQL\Binn|  
 |[Ssms 유틸리티](../tools/sql-server-management-studio/ssms-utility.md)|명령 프롬프트에서 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 시작하는 데 사용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]Tools\Binn\VSShell\Common7\IDE|  
 |[tablediff 유틸리티](../tools/tablediff-utility.md)|두 테이블의 데이터를 비교하여 불일치가 있는지 확인하는 데 사용합니다. 복제 토폴로지 문제를 해결할 때 유용합니다.|[!INCLUDE[ssInstallPathVar](../includes/ssinstallpathvar-md.md)]COM|  
-  
- **을(를) 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자에 액세스하려면(!!) [!INCLUDE[win8](../includes/win8-md.md)]**  
-  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 독립 실행형 프로그램이 아니라 [!INCLUDE[msCoName](../includes/msconame-md.md)] Management Console 프로그램용 스냅인이므로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자는 [!INCLUDE[win8](../includes/win8-md.md)]을(를) 실행할 때 응용 프로그램으로 표시되지 않습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 관리자를 열려면 **검색** 참의 **앱**아래에 **SQLServerManager12.msc** ( [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]) 또는 **SQLServerManager11.msc** ([!INCLUDE[ssSQL11](../includes/sssql11-md.md)])를 입력한 다음 **Enter**키를 누릅니다.  
-  
+
 ## <a name="command-prompt-utilities-syntax-conventions"></a>명령 프롬프트 유틸리티 구문 규칙  
   
 |**규칙**|**사용 대상**|  

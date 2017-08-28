@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b2a5deb6e6ec95e6f6707abe9ad85374b2334e05
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 71bb3914e31259bc95a1116c2db03708c0442e8c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>(SQL Server 가져오기 및 내보내기 마법사)는 Access 데이터 소스에 연결
@@ -44,9 +44,7 @@ ms.lasthandoff: 08/03/2017
 |Microsoft Access (Microsoft Jet 데이터베이스 엔진)|Office 2007 이전에 지정 된 office 버전|
 
 > [!IMPORTANT]
-> 선택 하는 액세스의 버전에 연결 하는 데 추가 파일 다운로드 및 설치를 할 수 있습니다. 참조 [Access에 연결 하는 데 필요한 파일을 가져올](#officeDownloads) 자세한 내용을 보려면이 페이지에 있습니다.
-
-버전을 지정 하는 경우 문제가 있는 경우 다른 버전으로 이전 버전을 지정 하십시오. 예를 들어 수 Microsoft Office 365 구독을 보유 하기 때문에 Office 2016 데이터 공급자를 설치할 수 없습니다. 액세스 2016 및 Excel 2016에 대 한 데이터 공급자의 Microsoft Office 데스크톱 버전으로 설치할 수 있습니다. 이 경우 Access 2013 액세스 2016 대신 지정할 수 있습니다. 두 버전의 공급자는 기능적으로 동일 합니다. 에 지정 된 Office 2016 런타임의 이러한 제한을 [이 블로그 게시물](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)합니다.
+> Access 데이터베이스에 연결할 추가 파일 다운로드 및 설치를 할 수 있습니다. 참조 [Access에 연결 하는 데 필요한 파일을 가져올](#officeDownloads) 자세한 내용을 보려면이 페이지에 있습니다.
 
  **파일 이름**  
 Access 파일에 대 한 경로 파일 이름을 지정 합니다. 예를 들어 **c:\\MyData.mdb** 로컬 컴퓨터에서 파일 또는  **\\ \\Sales\\데이터베이스\\Northwind.mdb** 네트워크 공유에 파일에 대 한 합니다. 또는 **찾아보기**를 클릭합니다. 
@@ -70,20 +68,20 @@ Access 파일에 대 한 경로 파일 이름을 지정 합니다. 예를 들어
 
 ## <a name="i-dont-see-access-in-the-list-of-data-sources"></a>Access 데이터 원본 목록에 표시 되지 않는
 액세스 보이지 않으면 데이터 원본 목록에서 64 비트 마법사 실행은 무엇입니까? Excel 및 Access에 대 한 공급자는 일반적으로 32 비트 및 64 비트 마법사에 표시 되지 않습니다. 대신 32 비트 마법사를 실행 합니다.
-  
+
+> [!NOTE]
+> 64 비트 버전의 SQL Server 가져오기 및 내보내기 마법사를 사용 하려면 SQL Server를 설치 해야 합니다. SQL Server Data Tools (SSDT) 및 SQL Server Management Studio (SSMS)는 32 비트 응용 프로그램 및 32 비트 버전의 마법사를 포함 하 여 32 비트 파일을 설치 합니다.
+
 ## <a name="officeDownloads"></a>에 액세스 하려면 연결 하는 데 필요한 파일 가져오기  
-설치 되어 있지 않으면 Excel 및 Access을 비롯 한 Microsoft Office 데이터 원본에 대 한 연결 구성 요소를 다운로드 해야 할 수 있습니다.
+설치 되어 있지 않으면 Access 및 Excel을 비롯 한 Microsoft Office 데이터 원본에 대 한 연결 구성 요소를 다운로드 해야 할 수 있습니다. 최신 버전의 Access 및 Excel 모두 파일에 여기에 대 한 연결 구성 요소 다운로드: [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=54920)합니다.
+  
+최신 버전의 구성 요소는 이전 버전의 Access에서 만든 파일을 열 수 있습니다.
 
-최신 버전 구성 요소는 이전 버전의 프로그램에서 만든 파일을 열 수 있습니다. 대부분의 경우에서 이전 버전의 구성 요소 프로그램의 이후 버전에서 만든 파일을 열 수도 있습니다. 예를 들어 Office 2016 구성 요소를 설치할 수 없는 경우 Office 2013 구성 요소 대신 사용 합니다. 두 버전의 공급자는 기능적으로 동일 합니다. 에 지정 된 Office 2016 런타임의 이러한 제한을 [이 블로그 게시물](https://blogs.office.com/2015/12/16/access-2016-runtime-is-now-available-for-download/)합니다.
+컴퓨터에 32 비트 버전의 Office가 32 비트 버전의 구성 요소를 설치 해야 합니다 및 32 비트 모드로 패키지를 실행 해야 합니다.
 
-이 64 비트 컴퓨터-에서도 일반적인-컴퓨터에 32 비트 버전의 Office 32 비트 버전의 구성 요소를 설치 해야 합니다. 32 비트 마법사를 실행 하거나 32 비트 모드에서 마법사에서 생성 하는 SQL Server Integration Services 패키지를 실행 해야 할 수도 있습니다.
+Office 365 구독을 보유 하는 경우 Access 데이터베이스 엔진 2016 재배포 가능 패키지 및 Microsoft Access 2016 런타임이 아닌를 다운로드 해야 합니다. 설치 관리자를 실행 하는 경우 Office 간편 실행 구성 요소와는 다운로드-함께 설치할 수 없습니다 오류 메시지가 표시 될 수 있습니다. 이 오류 메시지를 무시 하려면 설치 자동 모드로 명령 프롬프트 창을 열고 실행 하 여 실행 된 합니다. 와 함께 다운로드 한 EXE 파일의 `/quiet` 전환 합니다. 예를 들어
 
-|Microsoft Office 버전|다운로드|  
-|------------------------------|--------------|  
-|2016|[Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)|
-|2013|[Microsoft Access 2013 Runtime](http://www.microsoft.com/download/details.aspx?id=39358)|
-|2010|[Microsoft Access 2010 Runtime](https://www.microsoft.com/download/details.aspx?id=10910)|  
-|2007|[2007 Office System 드라이버: 데이터 연결 구성 요소](https://www.microsoft.com/download/details.aspx?id=23734)|    
+`C:\Users\<user name>\Downloads\AccessDatabaseEngine.exe /quiet`
 
 ## <a name="database_password"></a>암호로 보호 된 데이터베이스 파일 인가요?
 경우에 따라 Access 데이터베이스는 암호로 보호 되어 있지만 작업 그룹 정보 파일을 사용 하 여 되지 않습니다. 모든 사용자가 같은 암호를 제공 해야 하지만 사용자 이름을 입력할 필요가 없습니다. 데이터베이스 암호를 제공 하려면 다음을 수행 합니다.

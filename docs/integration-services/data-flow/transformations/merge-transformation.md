@@ -11,6 +11,7 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.mergetrans.f1
+- sql13.dts.designer.mergetransformation.f1
 helpviewer_keywords:
 - merging datasets [Integration Services]
 - merging data [Integration Services]
@@ -23,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e9bb9533459c720bae5b12d5f4ebdce1f85fc4d
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 4c3eead08bb91d43f83782682a122da278ac051f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="merge-transformation"></a>병합 변환
@@ -60,8 +61,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-merge-transformation"></a>병합 변환 구성  
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **병합 변환 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용은 [Merge Transformation Editor](../../../integration-services/data-flow/transformations/merge-transformation-editor.md)를 참조하십시오.  
-  
  프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -74,6 +73,22 @@ ms.lasthandoff: 08/03/2017
 -   [데이터 흐름 구성 요소의 속성 설정](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
 -   [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
+  
+## <a name="merge-transformation-editor"></a>병합 변환 편집기
+  **병합 변환 편집기** 를 사용하여 병합할 두 개의 정렬된 데이터 집합에서 열을 지정할 수 있습니다.  
+  
+> [!IMPORTANT]  
+>  병합 변환에는 정렬된 데이터를 입력해야 합니다. 이러한 중요 요구 사항에 대한 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **출력 열 이름**  
+ 출력 열 이름을 지정합니다.  
+  
+ **병합 입력 1**  
+ 병합 입력 1로 병합할 열을 선택합니다.  
+  
+ **병합 입력 2**  
+ 병합 입력 2로 병합할 열을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [병합 조인 변환](../../../integration-services/data-flow/transformations/merge-join-transformation.md)   
