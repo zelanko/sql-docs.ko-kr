@@ -1,7 +1,7 @@
 ---
 title: "FileTable 관리 | Microsoft 문서"
 ms.custom: 
-ms.date: 06/02/2016
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2ec52f5b4ebdb3fdd61fda320316186d220b6b53
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: f804ca956ac8287fad529f4bc5c31965d01f1c72
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="manage-filetables"></a>FileTable 관리
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
   
 -   [sys.tables&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)(**is_filetable** 열의 값 확인)  
   
-```tsql  
+```sql  
 SELECT * FROM sys.filetables;  
 GO  
   
@@ -44,10 +44,9 @@ GO
   
  연결된 FileTable을 만들 때 생성된 시스템 정의 개체 목록을 가져오려면 카탈로그 뷰 [sys.filetable_system_defined_objects&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql.md)를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT object_id, OBJECT_NAME(object_id) AS 'Object Name'  
-    FROM sys.filetable_system_defined_objects  
-    WHERE object_id = filetable_object_id;  
+FROM sys.filetable_system_defined_objects;  
 GO  
 ```  
   
@@ -89,24 +88,24 @@ GO
  **전체 비트랜잭션 액세스를 사용하지 않도록 설정하려면**  
  **ALTER DATABASE** 문을 호출하고 **NON_TRANSACTED_ACCESS** 값을 **READ_ONLY** 또는 **OFF**로 설정합니다.  
   
-```tsql  
+```sql  
 -- Disable write access.  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = READ_ONLY );  
 GO  
   
 -- Disable non-transactional access.  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = OFF );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = OFF );  
 GO  
 ```  
   
  **전체 비트랜잭션 액세스를 다시 사용하도록 설정하려면**  
  **ALTER DATABASE** 문을 호출하고 **NON_TRANSACTED_ACCESS** 값을 **FULL**로 설정합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE database_name  
-    SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
+SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL );  
 GO  
 ```  
   
@@ -146,16 +145,16 @@ GO
  **{ ENABLE | DISABLE } FILETABLE_NAMESPACE** 옵션을 사용하여 ALTER TABLE 문을 호출합니다.  
   
  **FileTable 네임스페이스를 사용하지 않도록 설정하려면**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
-    DISABLE FILETABLE_NAMESPACE;  
+DISABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
  **FileTable 네임스페이스를 다시 사용하도록 설정하려면**  
- ```tsql  
+ ```sql  
 ALTER TABLE filetable_name  
-    ENABLE FILETABLE_NAMESPACE;  
+ENABLE FILETABLE_NAMESPACE;  
 GO  
 ```  
   
@@ -168,7 +167,7 @@ GO
 ###  <a name="HowToListOpen"></a> 방법: FileTable과 연결된 열려 있는 파일 핸들 목록 가져오기  
  카탈로그 뷰 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)를 쿼리합니다.  
   
-```tsql  
+```sql  
 SELECT * FROM sys.dm_filestream_non_transacted_handles;  
 GO  
 ```  
@@ -176,7 +175,7 @@ GO
 ###  <a name="HowToKill"></a> 방법: FileTable과 연결된 열려 있는 파일 핸들 중지  
  적절한 인수로 저장 프로시저 [sp_kill_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)를 호출하여 데이터베이스 또는 FileTable에 열려 있는 모든 파일 핸들을 중지하거나 특정 핸들을 중지합니다.  
   
-```  
+```sql  
 USE database_name;  
   
 -- Kill all open handles in all the filetables in the database.  
@@ -198,11 +197,11 @@ GO
  **열려 있는 파일과 연결된 잠금을 식별하려면**  
  동적 관리 뷰 [sys.dm_tran_locks&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)의 **request_owner_id** 필드와 [sys.dm_filestream_non_transacted_handles&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)의 **fcb_id** 필드를 조인합니다. 잠금이 열려 있는 하나의 열려 있는 파일 핸들에 해당하지 않는 경우도 있습니다.  
   
-```tsql  
+```sql  
 SELECT opened_file_name  
-    FROM sys.dm_filestream_non_transacted_handles  
-    WHERE fcb_id IN  
-        ( SELECT request_owner_id FROM sys.dm_tran_locks );  
+FROM sys.dm_filestream_non_transacted_handles  
+WHERE fcb_id IN  
+    ( SELECT request_owner_id FROM sys.dm_tran_locks );  
 GO  
 ```  
   
@@ -238,6 +237,4 @@ GO
 ## <a name="see-also"></a>참고 항목  
  [FileTable과 기타 SQL Server 기능 간 호환성](../../relational-databases/blob/filetable-compatibility-with-other-sql-server-features.md)   
  [FileTable DDL, 함수, 저장 프로시저 및 뷰](../../relational-databases/blob/filetable-ddl-functions-stored-procedures-and-views.md)  
-  
-  
 
