@@ -32,6 +32,7 @@
 # [SSMS 환경](the-sql-server-management-studio-environment.md)
 # [SSMS의 속성 페이지](property-pages-in-sql-server-management-studio.md)
 # [SSMS의 속성 창](properties-window-management-studio.md)
+# [SSMS의 출력 창](output-window.md)
 
 # [정보 대화 상자](about-dialog-box.md)
 # [SSMS 웹 브라우저](sql-server-management-studio-web-browser.md)
