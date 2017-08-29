@@ -40,7 +40,6 @@
 # [행 개수 변환](row-count-transformation.md)  
 # [행 샘플링 변환](row-sampling-transformation.md)  
 # [S스크립트 구성 요소](script-component.md)  
-## [스크립트 구성 요소 유형 선택](select-script-component-type.md)  
 # [느린 변경 차원 변환](slowly-changing-dimension-transformation.md)  
 ## [느린 변경 차원 마법사를 사용하여 출력 구성](configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
 ## [느린 변경 차원 마법사 F1 도움말](slowly-changing-dimension-wizard-f1-help.md)  
