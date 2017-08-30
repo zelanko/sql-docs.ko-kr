@@ -15,11 +15,11 @@ caps.latest.revision: 23
 author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 5bd0e1d3955d898824d285d28979089e2de6f322
 ms.openlocfilehash: 1fdb84c01f9e25c6ad818a6350a08df9ceaeae93
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
@@ -36,9 +36,9 @@ ms.lasthandoff: 06/23/2017
 ## <a name="data-retention-management-for-history-table"></a>기록 테이블에 대한 데이터 보존 관리  
  임시 테이블 데이터 보존 관리는 각 임시 테이블에 대한 필수 보존 기간을 결정하는 것부터 시작됩니다. 대부분의 경우 보존 정책은 임시 테이블을 사용하는 응용 프로그램의 비즈니스 논리의 일부로 간주해야 합니다. 예를 들어 데이터 감사와 시간 이동 시나리오에서 응용 프로그램은 온라인 쿼리에 사용할 수 있는 기록 데이터의 기간 측면에서 확실하게 요구되는 사항이 있습니다.  
   
- 데이터 보존 기간을 결정하고 나면 그 다음으로 기록 데이터 저장 방법과 저장 위치, 그리고 요구되는 보존 기간보다 오래된 기록 데이터를 삭제하는 방법 등 기록 데이터를 관리하기 위한 계획을 개발합니다. 임시 기록 테이블에서 기록 데이터를 관리 하기 위한 다음 네 가지 방법을 사용할 수 있습니다.  
+ 데이터 보존 기간을 결정하고 나면 그 다음으로 기록 데이터 저장 방법과 저장 위치, 그리고 요구되는 보존 기간보다 오래된 기록 데이터를 삭제하는 방법 등 기록 데이터를 관리하기 위한 계획을 개발합니다. 다음 네 가지 방법으로 임시 기록 테이블에서 기록 데이터를 관리할 수 있습니다.  
   
--   [Stretch Database](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
+-   [스트레치 데이터베이스](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
 -   [테이블 분할](https://msdn.microsoft.com/library/mt637341.aspx#using-table-partitioning-approach)  
   
@@ -429,27 +429,27 @@ COMMIT;
 ```  
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>임시 기록 보존 정책 접근 방식 사용
-> **참고:** 임시 기록 보존 정책을 사용 하 여 접근 방식을 적용할 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3에서 시작 합니다.  
+> **참고:** 임시 기록 보존 정책 접근 방식 사용은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3 이상에 적용됩니다.  
 
-임시 기록 보존 될 수 있습니다 정책은 사용자가을 유연한 에이징을 만들 수 있는 개별 테이블 수준에서 구성 합니다. 임시 보존이 적용 하는 것은 간단: 테이블 스키마를 만들거나 변경 하는 동안 설정 하려면 매개 변수는 하나만 필요 합니다.
+임시 기록 보존은 개별 테이블 수준에서 구성할 수 있으므로 사용자가 유연한 에이징 정책을 만들 수 있습니다. 임시 보존 적용은 간단해서, 테이블을 만들거나 스키마를 변경할 때 매개 변수 하나만 설정하면 됩니다.
 
-보존 정책을 정의 하 고 나면 Azure SQL 데이터베이스는 자동 데이터 정리에 사용할 수 있는 기록 행이 있는 경우 정기적으로 검사를 시작 합니다. 일치 하는 행 식별 하 고 기록 테이블에서 해당 제거 예약 되 고 시스템에서 실행 하는 백그라운드 태스크에서 투명 하 게 발생 합니다. 기록 테이블의 행에 대 한 나이 조건은 나타내는 SYSTEM_TIME 기간 종료 열에 따라 확인 됩니다. 예를 들어 보존 기간 이후 6 개월으로 설정 된, 경우 테이블의 정리에 대 한 적격 행 다음 조건을 만족 합니다.
+보존 정책을 정의한 후부터 Azure SQL Database는 자동 데이터 정리를 사용할 수 있는 기록 행이 있는지 정기적으로 확인합니다. 일치하는 행을 식별하고 기록 테이블에서 제거하는 작업은 시스템에서 예약하고 실행하는 백그라운드 태스크로 투명하게 수행됩니다. 기록 테이블 행의 기간 조건은 SYSTEM_TIME 기간의 종료를 나타내는 열을 기준으로 확인됩니다. 예를 들어 보존 기간이 6개월로 설정된 경우 정리할 수 있는 테이블 행은 다음 조건을 만족합니다.
 ```
 ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
-앞의 예제에서 ValidTo 열 SYSTEM_TIME 기간 종료에 해당 하는지을 가정 합니다.
-### <a name="how-to-configure-retention-policy"></a>보존 정책을 구성 하려면 어떻게 하나요?
-데이터베이스 수준에서 임시 기록 보존이 사용 되는지 여부를 임시 테이블에 대 한 보존 정책을 구성 하기 전에 먼저 검사.
+앞의 예제에서는 ValidTo 열이 SYSTEM_TIME 기간의 종료에 해당한다고 가정했습니다.
+### <a name="how-to-configure-retention-policy"></a>보존 정책을 구성하는 방법
+임시 테이블의 보존 정책을 구성하려면 먼저 데이터베이스 수준에서 임시 기록 보존이 사용하도록 설정되어 있는지 확인해야 합니다.
 ```
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-플래그 데이터베이스 **is_temporal_history_retention_enabled** 기본적으로 ON으로 설정 되어 사용자가 ALTER DATABASE 문을 사용 하 여 변경할 수 있습니다. 시간 복원 작업에서 이후에 자동으로 OFF로 설정 됩니다. 데이터베이스에 대 한 임시 기록 보존 정리를 활성화 하려면 다음 문을 실행 합니다.
+데이터베이스 플래그 **is_temporal_history_retention_enabled**는 기본적으로 ON으로 설정되어 있지만 사용자가 ALTER DATABASE 문을 사용하여 변경할 수 있습니다. 특정 시점 복원 작업 후에도 자동으로 OFF로 설정됩니다. 데이터베이스에 대한 임시 기록 보존 정리를 사용하도록 설정하려면 다음 문을 실행합니다.
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
 ```
-보존 정책은 HISTORY_RETENTION_PERIOD 매개 변수 값을 지정 하 여 테이블을 만들 때 구성 됩니다.
+보존 정책은 테이블을 만들 때 HISTORY_RETENTION_PERIOD 매개 변수 값을 지정하여 구성합니다.
 ```
 CREATE TABLE dbo.WebsiteUserInfo
 (  
@@ -469,13 +469,13 @@ CREATE TABLE dbo.WebsiteUserInfo
      )
  );
 ```
-다른 시간 단위를 사용 하 여 보존 기간을 지정할 수 있습니다: 일, 주, 월 및 연도입니다. HISTORY_RETENTION_PERIOD를 생략 하면 무한 보존 가정 합니다. 또한 무한 키워드를 명시적으로 사용할 수 있습니다.
-일부 시나리오에서는 테이블을 만든 후 보존을 구성 해야 할 수 또는 구성 된 값을 이전에 변경 합니다. 이런 경우에서 ALTER TABLE 문을 사용 합니다.
+DAYS, WEEKS, MONTHS 및 YEARS와 같은 여러 시간 단위를 사용하여 보존 기간을 지정할 수 있습니다. HISTORY_RETENTION_PERIOD를 생략하면 INFINITE 보존으로 간주됩니다. INFINITE 키워드를 명시적으로 사용할 수도 있습니다.
+일부 시나리오에서는 테이블을 만든 후 보존을 구성할 수도 있고 이전에 구성한 값을 변경할 수도 있습니다. 이런 경우에 ALTER TABLE 문을 사용합니다.
 ```
 ALTER TABLE dbo.WebsiteUserInfo
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
 ```
-보존 정책의 현재 상태를 검토 하려면 보존 기간이 개별 테이블에 대 한 데이터베이스 수준에서 임시 보존 사용 플래그를 연결 하는 다음 쿼리를 사용 합니다.
+보존 정책의 현재 상태를 살펴보려면 데이터베이스 수준에서 임시 보존 사용 플래그를 개별 테이블의 보존 기간과 조인하는 다음 쿼리를 사용합니다.
 ```
 SELECT DB.is_temporal_history_retention_enabled,
 SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
@@ -488,16 +488,16 @@ where name = DB_NAME()) AS DB
 LEFT JOIN sys.tables T2   
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
-### <a name="how-sql-database-deletes-aged-rows"></a>SQL 데이터베이스 삭제 하는 방법을 행 오래 된?
-정리 프로세스에서 기록 테이블의 인덱스 레이아웃에 따라 달라 집니다. 다음에 유의 해야 *유한 보존 정책을 구성한를 포함할 수 있습니다 (B-트리 또는 columnstore) 클러스터형된 인덱스를 가진 기록 테이블*합니다. 한정 된 보존 기간을 포함 하는 모든 임시 테이블에 대 한 오래 된 데이터 정리를 수행 하는 백그라운드 작업이 만들어집니다. 더 작은 청크 (최대 10k)의 오래 된 행을 삭제 하는 클러스터형된 rowstore (btree) 인덱스에 대 한 정리 논리 데이터베이스 로그와 I/O 하위 시스템에 대 한 압력을 최소화 합니다. 정리 논리를 활용 하지만 B-트리 인덱스, 보존 기간을 모뎀과 보장할 수 없는 보다 오래 된 행에 대 한 삭제의 순서를 필요 합니다. 따라서 *응용 프로그램에서 정리 순서에 모든 종속성을 사용 하지 않는*합니다.
+### <a name="how-sql-database-deletes-aged-rows"></a>SQL Database에서 오래된 행을 삭제하는 방법
+정리 프로세스는 기록 테이블의 인덱스 레이아웃에 따라 달라집니다. *클러스터형 인덱스(B-트리 또는 columnstore)를 사용하는 기록 테이블에만 유한 보존 정책을 구성할 수 있다*는 점을 기억해야 합니다. 보존 기간이 한정된 모든 임시 테이블에 대한 오래된 데이터 정리를 수행하는 백그라운드 태스크가 만들어집니다. rowstore(B-트리) 클러스터형 인덱스에 대한 정리 논리에서는 더 작은 청크(최대 10K)의 오래된 행을 삭제하여 데이터베이스 로그 및 I/O 하위 시스템에 주는 부담을 최소화합니다. 정리 논리에서 필요한 B-트리 인덱스를 활용하긴 하지만 보존 기간보다 오래된 행의 삭제 순서를 확실히 보장할 수는 없습니다. 따라서 *응용 프로그램의 정리 순서를 신뢰하지 마세요*.
 
-클러스터 된 columnstore에 대 한 정리 태스크는 한 번에 전체 행 그룹을 제거 (일반적으로 포함 되어 각 행의 1 백만), 높은 속도로 기록 데이터가 생성 되는 경우에 특히 매우 효율적인를 합니다.
+클러스터형 columnstore에 대한 정리 태스크는 전체 행 그룹을 한 번에 제거하므로(일반적으로 각 그룹에 1백만 개 행 포함) 매우 효율적이며, 기록 데이터가 빠른 속도로 생성되는 경우 특히 효율적입니다.
 
-![클러스터형 columnstore 보존](../../relational-databases/tables/media/cciretention.png "Clustered columnstore 보존")
+![클러스터형 columnstore 보존](../../relational-databases/tables/media/cciretention.png "클러스터형 columnstore 보존")
 
-뛰어난 데이터 압축 및 효율적인 보존 정리는 클러스터형 columnstore 인덱스 시나리오에 대 한 완벽 한 선택 하는 많은 양의 기록 데이터가 신속 하 게 생성 하는 경우. 해당 패턴은 변경 내용 추적 및 감사, 추세 분석 또는 IoT 데이터 수집에 대 한 임시 테이블을 사용 하는 많은 트랜잭션 처리 작업에 일반적입니다.
+클러스터형 columnstore 인덱스는 데이터 압축이 뛰어나고 보존 정리가 효율적이므로 작업에서 대량의 기록 데이터를 빠르게 생성하는 시나리오에 적합합니다. 이런 패턴은 변경 내용 추적 및 감사, 추세 분석 또는 IoT 데이터 수집에 임시 테이블을 사용하는 집약적 트랜잭션 처리 작업에서 일반적으로 나타납니다.
 
-확인 하십시오 [보존 정책 사용 하 여 임시 테이블에서 기록 데이터를 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy) 내용을 확인 합니다.
+자세한 내용은 [보존 정책을 사용하여 임시 테이블에서 기록 데이터 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
 
 ## <a name="see-also"></a>관련 항목:  
  [임시 테이블](../../relational-databases/tables/temporal-tables.md)   
