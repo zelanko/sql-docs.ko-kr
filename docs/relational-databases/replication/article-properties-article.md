@@ -130,7 +130,7 @@ ms.lasthandoff: 06/22/2017
  **사용자 지정 해결 프로그램 사용(배포자에 등록됨)**  
  아티클 해결 프로그램( [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 제공하는 해결 프로그램 또는 사용자가 작성한 해결 프로그램) 사용을 선택한 경우 목록 상자에서 해결 프로그램을 선택해야 합니다. 자세한 내용은 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
- 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을 참조하세요.  
+ 해결 프로그램에 입력이 필요한 경우 **해결 프로그램에 필요한 정보 입력** 입력란에 필요한 입력을 지정합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 사용자 지정 해결 프로그램에 필요한 입력에 대한 자세한 내용은 [Microsoft COM-Based Resolvers](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md) 을 참조하세요.  
   
  **요청 시 동기화 작업 중 구독자가 대화형으로 충돌 해결**  
  대화형으로 충돌을 해결하고 구독자가 요청 시 동기화(병합 복제의 기본값)를 사용하게 하려면 이 옵션을 선택합니다. 새 구독 마법사의 **동기화 일정** 페이지에서 요청 시 동기화를 지정합니다. 충돌을 대화형으로 해결하려면 대화형 해결 프로그램 사용자 인터페이스를 사용합니다. 자세한 내용은 [Interactive Conflict Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)을 참조하세요.  

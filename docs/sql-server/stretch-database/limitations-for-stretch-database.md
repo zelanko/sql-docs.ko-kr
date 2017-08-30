@@ -62,8 +62,8 @@ ms.lasthandoff: 07/29/2017
   
 -   메모리 액세스에 최적화된 테이블  
   
- ### <a name="data-types"></a>데이터 형식  
- -   text, ntext 및 image  
+### <a name="data-types"></a>데이터 형식  
+-   text, ntext 및 image  
   
 -   timestamp  
   

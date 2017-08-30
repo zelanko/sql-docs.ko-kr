@@ -216,7 +216,7 @@ ms.lasthandoff: 06/22/2017
  **지리 자동 표**  
  이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에 사용할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 분할을 구현하는 방법은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 공간 분할을 구현하는 방법은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md) 를 참조하세요.  
   
  **개체당 셀 수**  
  인덱스의 단일 공간 개체에 사용할 수 있는 개체당 공간 분할(tessellation) 셀 수를 나타냅니다. 이 수는 1과 8192(포함) 사이의 정수일 수 있습니다. 기본값은 16이며, 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 호환성 수준이 110 이상으로 설정된 경우에는 8입니다.  
