@@ -2,8 +2,10 @@
 title: "SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 06/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -51,17 +53,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f6ac799e828d817eb19d6a8451c8c2011b0ea82f
-ms.openlocfilehash: 85e12d330f4c779deda67a739e107309074c0ea7
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 952d6202918895d0d6f7b6496bff1185ccc4170b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server 2008 R2 설치를 위한 하드웨어 및 소프트웨어 요구 사항
 
 이 항목에서는 Windows 운영 체제에서 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] 설치 및 실행을 위한 최소 하드웨어 및 소프트웨어 요구 사항을 나열합니다. 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]에서는 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] Linux에 대한 지원 기능을 제공합니다. 자세한 내용은 [[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] Linux](../../linux/sql-server-linux-overview.md)를 참조하세요. 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)]에서는 [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] Linux에 대한 지원 기능을 제공합니다. 자세한 내용은 [Linux에 [!INCLUDE[ssNoVersion](../../includes/ssNoVersion_md.md)]를 위한 하드웨어 및 소프트웨어 요구 사항](../../linux/sql-server-linux-setup.md#system)을 참조하세요. 
 
 > 이 항목은 [!INCLUDE[ss2016](../../includes/sssql15-md.md)] 이상에 적용됩니다. 이전 버전의 SQL Server과 관련된 콘텐츠는 [SQL Server 2014 설치를 위한 하드웨어 및 소프트웨어 요구 사항](https://msdn.microsoft.com/library/ms143506(v=sql.120).aspx)을 참조하세요. 
   

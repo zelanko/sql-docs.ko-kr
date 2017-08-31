@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 릴리스 정보 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/16/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,18 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 04245fd42b770129ce4074f8a4ae8377b10cf384
-ms.openlocfilehash: 6494051851601ead6fb3d51e1688b8f1320ed5d4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/15/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 이 항목에서는 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
-  
-[![평가 센터에서 다운로드](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=829477)  **[평가 센터](http://go.microsoft.com/fwlink/?LinkID=829477)**에서 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] 다운로드
+
+[![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [최신 SQL Server 2017 릴리스 다운로드: RC2, 2017년 8월](http://go.microsoft.com/fwlink/?LinkID=829477)
 
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 릴리스 후보(RC2 - 2017년 8월)
 이 릴리스에 대한 Windows 릴리스 정보에는 SQL Server가 없습니다. [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)를 참조하세요.
@@ -109,11 +109,12 @@ ms.lasthandoff: 08/15/2017
 
    보조 복제본을 호스트하는 SQL Server의 인스턴스가 복구됩니다.
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) SQL Server 엔지니어링 팀에 문의 
-- [Stack Overflow(태그 sql-server) - 기술 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 도움말 보기 
+- [Stack Overflow(태그 sql-server) - SQL 개발 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 포럼 - 기술 관련 문의 사항](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 버그 보고 및 기능 요청](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="more-information"></a>자세한 정보
 - [SQL Server Reporting Services 릴리스 정보](../reporting-services/reporting-services-release-notes.md)관련 제한 사항 및 문제에 대해 설명합니다.

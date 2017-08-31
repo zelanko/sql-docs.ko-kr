@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/25/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,16 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 64fa56e239432ed01fb908ebcb9bda221a42cd5e
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 최신 SQL Server 2017 릴리스 후보(RC2, 2017년 월) 및 CTP(커뮤니티 기술 미리 보기) 릴리스의 특정 기능 영역에 대한 새로운 기능을 요약합니다.
 
-**사용해 보기:** [최신 SQL Server 2017 릴리스 다운로드: RC2, 2017년 8월](http://go.microsoft.com/fwlink/?LinkID=829477)
+[![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [최신 SQL Server 2017 릴리스 다운로드: RC2, 2017년 8월](http://go.microsoft.com/fwlink/?LinkID=829477)
 이 릴리스에는 버그 수정 및 성능 향상 기능이 포함되어 있습니다.
 
 >**Linux에서 SQL Server 실행!** 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)을 참조하세요.
@@ -112,11 +112,12 @@ SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오�
 
 자세한 내용은 [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
 
-##  <a name="infotipsql-servermediainfo-tippng-engage-with-the-sql-server-engineering-team"></a>![info_tip](../sql-server/media/info-tip.png) SQL Server 엔지니어링 팀에 문의 
-- [Stack Overflow(태그 sql-server) - 기술 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
+##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 도움말 보기 
+- [Stack Overflow(태그 sql-server) - SQL 개발 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
 - [MSDN 포럼 - 기술 관련 문의 사항](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
 - [Microsoft Connect - 버그 보고 및 기능 요청](https://connect.microsoft.com/SQLServer/Feedback)
 - [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)
+- [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
 
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)를 참조하세요.

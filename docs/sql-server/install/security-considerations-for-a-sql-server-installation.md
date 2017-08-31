@@ -1,8 +1,10 @@
 ---
 title: "SQL Server 설치에 대한 보안 고려 사항 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -30,15 +32,15 @@ caps.latest.revision: 48
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: af11eb46f2c213e85f0b1bbff80e98e5eeb436c0
+ms.translationtype: HT
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 9f2669116da566511273ca482f801bd2762ced09
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>SQL Server 설치에 대한 보안 고려 사항
-  보안은 모든 제품과 모든 비즈니스에서 중요합니다. 간단한 권장 사항을 따르면 많은 보안상의 취약점을 방지할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하기 전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 후에 모두 고려해야 하는 보안 권장 사항에 대해 설명합니다. 특정 기능에 대한 보안 지침은 해당 기능에 대한 참조 항목에 포함되어 있습니다.  
+ 보안은 모든 제품과 모든 비즈니스에서 중요합니다. 간단한 권장 사항을 따르면 많은 보안상의 취약점을 방지할 수 있습니다. 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하기 전과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치한 후에 모두 고려해야 하는 보안 권장 사항에 대해 설명합니다. 특정 기능에 대한 보안 지침은 해당 기능에 대한 참조 항목에 포함되어 있습니다.  
   
 ## <a name="before-installing-includessnoversionincludesssnoversion-mdmd"></a>다음 설치 전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  서버 환경을 설정하는 경우 다음 권장 사항을 따르십시오.  
@@ -62,7 +64,7 @@ ms.lasthandoff: 06/22/2017
   
 -   데이터베이스를 호스팅하는 컴퓨터를 물리적으로 보호된 위치에 둡니다. 누수 및 화재 감지 또는 억제 시스템을 갖춘 밀폐된 컴퓨터실이 가장 좋습니다.  
   
--   데이터베이스를 기업 인트라넷의 보안 영역에 설치하고 SQL ServeR을 인터넷에 직접 연결하지 않습니다.  
+-   데이터베이스를 기업 인트라넷의 보안 영역에 설치하고 SQL Server를 인터넷에 직접 연결하지 않습니다.  
   
 -   모든 데이터를 정기적으로 백업하고 멀리 떨어진 지역에 백업을 안전하게 보관합니다.  
   
@@ -116,7 +118,7 @@ ms.lasthandoff: 06/22/2017
  웹 서버 및 DNS(Domain Name System) 서버에는 NetBIOS 또는 SMB가 필요 없습니다. 이러한 서버에서 두 프로토콜을 모두 비활성화하여 사용자 목록 노출 위협을 줄이십시오.  
   
 ###  <a name="Install_DC"></a> 도메인 컨트롤러에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치  
- 보안상의 이유로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 도메인 컨트롤러에 설치하지 않는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 도메인 컨트롤러 컴퓨터에 설치하는 것을 차단하지는 않지만 다음과 같은 제한 사항을 적용합니다.  
+ 보안상의 이유로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 도메인 컨트롤러에 설치하지 않는 것이 좋습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 프로그램은 도메인 컨트롤러 컴퓨터에 설치하는 것을 차단하지는 않지만 다음과 같은 제한 사항을 적용합니다.  
   
 -   도메인 컨트롤러에서는 로컬 서비스 계정으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행할 수 없습니다.  
   
@@ -156,8 +158,8 @@ ms.lasthandoff: 06/22/2017
 > [!IMPORTANT]  
 >  [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 설치 중에 BUILTIN\Users 그룹에 대한 로그인이 추가됩니다. 이 로그인을 사용하면 컴퓨터의 모든 인증된 사용자가 public 역할의 멤버로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 인스턴스에 액세스할 수 있습니다. BUILTIN\Users 로그인은 개별 로그인이 있거나 로그인이 있는 기타 Windows 그룹의 멤버인 컴퓨터 사용자에 대한 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 액세스를 제한하기 위해 안전하게 제거할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [네트워크 프로토콜 및 네트워크 라이브러리](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Kerberos 연결의 서비스 사용자 이름 등록](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  
   

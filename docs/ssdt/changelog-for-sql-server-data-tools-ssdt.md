@@ -1,7 +1,7 @@
 ---
 title: "SSDT(SQL Server Data Tools)에 대한 변경 로그 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 08/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,20 +15,36 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 51cfeaf15f9d7a01ce55968907e0074f7f2cb955
+ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
+ms.openlocfilehash: e4bc77e76190463864ecab75ae94e28b16624309
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 08/23/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
-다음은 [Visual Studio 2015용 SSDT(SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx)에 대한 변경 로그입니다.  
+다음은 [SSDT(SQL Server Data Tools)](https://msdn.microsoft.com/library/mt204009.aspx)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
 
+## <a name="ssdt-for-visual-studio-2017-1530-preview"></a>Visual Studio 2017용 SSDT(15.3.0 미리 보기)
+빌드 번호: 14.0.16121.0
+  
+### <a name="whats-new"></a>새로운 기능
+
+이 미리 보기는 Visual Studio 2017용 SSDT의 첫 번째 버전입니다. 이 릴리스에서는 Visual Studio 2017 15.3 이상의 SQL Server Database, Analysis Services, Reporting Services 및 Integration Services 프로젝트에 대한 독립 실행형 웹 설치 환경을 소개합니다.
 
 
-## <a name="ssdt-172"></a>SSDT 17.2
+**알려진 문제**
+
+- 설치 프로그램이 지역화되지 않았습니다.
+- SSIS가 지역화되지 않았습니다.
+- SSIS 패키지 실행 태스크는 *ExecuteOutofProcess*가 *True*로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
+- 전체 변경 내용 목록은 [변경 로그](changelog-for-sql-server-data-tools-ssdt.md)를 참조하세요.
+- 문제 보고는 [SSDT Connect 피드백](https://connect.microsoft.com/SQLServer/Feedback) 사이트를 이용하세요.
+- 타사 확장을 포함하는 SSIS 패키지는 다른 서버 버전을 대상으로 하도록 전환할 수 없습니다.
+
+
+## <a name="ssdt-172-for-visual-studio-2015"></a>Visual Studio 2015용 SSDT 17.2
 빌드 번호: 14.0.61707.300
 
 ### <a name="whats-new"></a>새로운 기능
@@ -76,7 +92,7 @@ ms.lasthandoff: 08/08/2017
 - 최신 *TargetServerVersion*이 "SQL Server vNext"에서 "SQL Server 2017"로 변경됨
 
 
-## <a name="ssdt-171"></a>SSDT 17.1
+## <a name="ssdt-171-for-visual-studio-2015"></a>Visual Studio 2015용 SSDT 17.1
 빌드 번호: 14.0.61705.170
 
 ### <a name="whats-new"></a>새로운 기능
@@ -106,7 +122,7 @@ ms.lasthandoff: 08/08/2017
 ## <a name="dacfx-1701"></a>DacFx 17.0.1 
 - EKM 공급자를 사용하는 HSM의 비대칭 키가 포함된 데이터베이스와 관련된 문제에 대한 수정 [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/3132749/sqlpackage-exe-fails-when-extracting-a-database-which-contains-an-asymmetric-key-using-an-ekm-provider)
 
-## <a name="ssdt-170-supports-up-to-sql-server-2017"></a>SSDT 17.0(SQL Server 2017까지 지원)
+## <a name="ssdt-170-for-visual-studio-2015-supports-up-to-sql-server-2017"></a>Visual Studio 2015용 SSDT 17.0(SQL Server 2017까지 지원)
 빌드 번호: 14.0.61704.140
 
 ### <a name="whats-new"></a>새로운 기능
@@ -208,7 +224,7 @@ ms.lasthandoff: 08/08/2017
 - Always Encrypted: 온라인 암호화가 취소 시 변경 내용 추적을 사용하지 않도록 설정하지 않으며 암호화 시작 전에 변경 내용 추적이 정리되지 않은 경우 올바로 작동하지 않음
 
 
-## <a name="ssdt-165-supports-up-to-sql-server-2016"></a>SSDT 16.5(SQL Server 2016까지 지원)
+## <a name="ssdt-165-for-visual-studio-2015-supports-up-to-sql-server-2016"></a>Visual Studio 2015용 SSDT 16.5(SQL Server 2016까지 지원)
 릴리스됨: 2016년 10월 20일
 
 빌드 번호: 14.0.61021.0
@@ -303,14 +319,14 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
 
 
-## <a name="ssdt-164-for-sql-server-2016"></a>SSDT 16.4(SQL Server 2016용)
+## <a name="ssdt-164-for-visual-studio-2015-for-sql-server-2016"></a>Visual Studio 2015용(SQL Server 2016용) SSDT 16.4
 릴리스됨: 2016년 9월 20일
 
 빌드 번호: 14.0.60918
 
 **새로운 기능**
 
-이제 스키마 비교가 SqlPackage.exe 및 DacFx(데이터 계층 응용 프로그램 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 응용 프로그램 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
+이제 스키마 비교가 SqlPackage.exe 및 DACFx(데이터 계층 응용 프로그램 프레임워크) API에서 지원됩니다. 자세한 내용은 [SqlPackage 및 데이터 계층 응용 프로그램 프레임워크의 스키마 비교](https://blogs.msdn.microsoft.com/ssdt/2016/09/20/schema-compare-in-sqlpackage-and-the-data-tier-application-framework-dacfx/)를 참조하세요.
 
 **Analysis Services – SSDT 테이블 형식에 대한 통합 작업 영역 모드(SSAS)**
 
@@ -343,7 +359,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
 
 
-## <a name="ssdt-163-for-sql-server-2016"></a>SSDT 16.3(SQL Server 2016용)
+## <a name="ssdt-163-for-visual-studio-2015-for-sql-server-2016"></a>Visual Studio 2015용(SQL Server 2016용) SSDT 16.3
 릴리스됨: 2016년 8월 15일
 
 빌드 번호: 14.0.60812.0  
@@ -383,7 +399,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
  
   
-## <a name="ssdt-july-for-sql-server-2016"></a>SSDT 7월(SQL Server 2016용)  
+## <a name="ssdt-july-for-visual-studio-2015-for-sql-server-2016"></a>Visual Studio 2015용(SQL Server 2016용) SSDT 7월  
 릴리스됨: 2016년 6월 30일  
   
 빌드 번호: 14.0.60629.0  
@@ -426,7 +442,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
     * UI에서 서식 유형을 변경할 수 있도록 열 형식에 기본 서식을 사용하는 경우 1200 호환성 수준 모델 계산된 테이블 UI의 문제가 해결되었습니다. 
     
 
-## <a name="ssdt-june-for-sql-server-2016"></a>SSDT 6월(SQL Server 2016용)  
+## <a name="ssdt-june-for-visual-studio-2015-for-sql-server-2016"></a>Visual Studio 2015용(SQL Server 2016용) SSDT 6월  
 릴리스됨: 2016년 6월 1일  
   
 빌드 번호: 14.0.60525.0 

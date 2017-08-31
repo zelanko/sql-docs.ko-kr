@@ -1,8 +1,10 @@
 ---
 title: "SQL Server의 로컬 언어 버전 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 08/23/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,11 +16,11 @@ caps.latest.revision: 12
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 067307bd3c91b8ac52c7e30f37aa816ca5ca06d9
+ms.translationtype: HT
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 59bccb3bef14b779a017567211148096d2cb6c35
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server의 로컬 언어 버전
@@ -86,8 +88,8 @@ ms.lasthandoff: 06/22/2017
   
 4.  **적용** 을 클릭하여 변경 내용을 확인하거나 **확인** 을 클릭하여 창을 닫습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
- [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)  
+## <a name="see-also"></a>관련 항목:  
+ [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md)  
   
   

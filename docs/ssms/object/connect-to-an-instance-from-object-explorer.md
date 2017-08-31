@@ -1,7 +1,7 @@
 ---
-title: "개체 탐색기에서 인스턴스에 연결 | Microsoft 문서"
+title: "SQL Server 또는 Azure SQL Database에 연결 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/25/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -13,45 +13,55 @@ ms.assetid: 9803a8a0-a8f1-4b65-87b8-989b06850194
 caps.latest.revision: 4
 author: stevestein
 ms.author: sstein
-manager: jhubbard
+manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 53043981ec7d3d66f3a16252a5dd90a9ad323aa6
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 2d5048825b3c71ecaec5da0f6ae75277994d1697
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/28/2017
 
 ---
-# <a name="connect-to-an-instance-from-object-explorer"></a>개체 탐색기에서 인스턴스에 연결
-개체 탐색기를 사용하여 개체를 관리하려면 먼저 개체가 포함된 인스턴스에 개체 탐색기를 연결해야 합니다. 동시에 여러 인스턴스에 개체 탐색기를 연결할 수 있습니다.  
+# <a name="connect-to-a-sql-server-or-azure-sql-database"></a>SQL Server 또는 Azure SQL Database에 연결
+
+서버 및 데이터베이스를 사용하려면 먼저 서버에 연결해야 합니다. 여러 서버에 동시에 연결할 수 있습니다.
+
+[SSMS(SQL Server Management Studio)](../download-sql-server-management-studio-ssms.md)는 여러 유형의 연결을 지원합니다. 이 문서에서는 SQL Server 및 Azure SQL Database에 연결(SQL Azure 논리 서버에 연결)에 대한 세부 정보를 제공합니다. 다른 연결 옵션에 대한 내용은 이 페이지 하단의 [링크](#see-also)를 참조하세요.
   
-## <a name="connecting-object-explorer-to-a-server"></a>개체 탐색기를 서버에 연결  
-개체 탐색기를 사용하려면 먼저 서버에 연결해야 합니다. 개체 탐색기 도구 모음에서 **연결** 을 클릭하고 드롭다운 목록에서 서버의 유형을 선택합니다. **서버에 연결** 대화 상자가 열립니다. 연결하려면 적어도 서버 이름과 올바른 인증 정보를 제공해야 합니다.  
-  
-## <a name="optional-object-explorer-connection-settings"></a>개체 탐색기 연결 설정(옵션)  
-서버에 연결할 때 **서버에 연결** 대화 상자에서 추가 연결 정보를 지정할 수 있습니다. **서버에 연결** 대화 상자는 마지막으로 사용된 설정을 보유하며 새 코드 편집기 창과 같은 새 연결에서 이러한 설정을 사용합니다.  
-  
-연결 설정(옵션)을 지정하려면 다음 단계를 따르십시오.  
-  
-1.  개체 탐색기 도구 모음에서 **연결** 을 클릭하고 연결할 서버의 유형을 클릭합니다. **서버에 연결** 대화 상자가 표시됩니다.  
-  
-2.  **서버 이름** 상자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 인스턴스의 이름을 입력합니다.  
-  
-3.  **옵션**을 클릭합니다. **서버에 연결** 대화 상자에 추가 옵션이 표시됩니다.  
-  
-4.  **연결 속성** 탭을 클릭하여 추가 설정을 구성합니다. 사용할 수 있는 설정은 서버 유형에 따라 다릅니다. [!INCLUDE[ssDE](../../includes/ssde_md.md)]의 경우 다음 설정을 사용할 수 있습니다.  
-  
-    |설정|Description|  
-    |-----------|---------------|  
-    |**데이터베이스에 연결**|서버에서 사용할 수 있는 데이터베이스 중에서 선택합니다. 사용자에게 볼 수 있는 권한이 있는 데이터베이스만 이 목록에 표시됩니다.|  
-    |**네트워크 프로토콜**|공유 메모리, TCP/IP 또는 명명된 파이프 중에서 선택합니다.|  
-    |**네트워크 패킷 크기**|바이트 단위로 구성합니다. 기본 설정은 4096바이트입니다.|  
-    |**연결 제한 시간**|초 단위로 구성합니다. 기본 설정은 15초입니다.|  
-    |**실행 제한 시간**|초 단위로 구성합니다. 기본 설정(0)은 실행의 제한 시간이 없음을 나타냅니다.|  
-    |**연결 암호화**|강제로 암호화합니다.|  
-  
-5.  지정된 서버를 등록된 서버 목록에 추가하려면 **등록된 서버** 탭을 클릭하고 새 서버를 표시할 위치를 클릭한 다음 연결을 완료합니다.  
-  
-> [!NOTE]  
-> **추가 연결 매개 변수** 페이지를 사용하면 연결 문자열에 연결 매개 변수를 더 추가할 수 있습니다. 자세한 내용은 [서버에 연결&#40;추가 연결 매개 변수 페이지&#41;](../../ssms/f1-help/connect-to-server-additional-connection-parameters-page.md)을 참조하세요.  
-  
+## <a name="connecting-to-a-server"></a>Server에 연결  
+
+1. **개체 탐색기**에서 **연결 > 데이터베이스 엔진...** 을 클릭합니다.
+
+   ![connect](../media/connect-to-server/connect-db-engine.png)
+
+1. **서버에 연결** 양식을 입력하고 **연결**을 클릭합니다.
+
+   ![서버에 연결](../media/connect-to-server/connect.png)
+
+1. Azure SQL Server에 연결하는 경우 방화벽 규칙을 만들려면 로그인하라는 메시지가 표시될 수 있습니다. **로그인...** (그렇지 않은 경우 아래 6단계로 건너뜀)을 클릭합니다.
+
+   ![방화벽](../media/connect-to-server/firewall-rule-sign-in.png)
+
+1. 성공적으로 로그인하면 특정 IP 주소로 양식이 미리 채워져 있습니다. IP 주소를 자주 변경하는 경우 범위에 액세스 권한을 쉽게 부여할 수 있으므로 환경에 가장 적합한 옵션을 선택합니다. 
+
+   ![방화벽](../media/connect-to-server/new-firewall-rule.png)
+
+1. 방화벽 규칙을 만들고 서버에 연결하려면 **확인**을 클릭합니다.
+
+1. 성공적으로 연결되면 서버가 **개체 탐색기**에 표시됩니다.
+
+   ![연결됨](../media/connect-to-server/connected.png)
+
+## <a name="next-steps"></a>다음 단계
+
+[테이블 디자인, 생성 및 업데이트](../visual-db-tools/design-tables-visual-database-tools.md)
+
+## <a name="see-also"></a>관련 항목:
+
+[SSMS(SQL Server Management Studio)](../sql-server-management-studio-ssms.md)  
+[SSMS(SQL Server Management Studio) 다운로드](../download-sql-server-management-studio-ssms.md)
+
+[Analysis Services](https://docs.microsoft.com/sql/analysis-services/instances/connect-to-analysis-services)  
+[Integration Services](https://docs.microsoft.com/sql/integration-services/sql-server-integration-services)  
+[Reporting Services](https://docs.microsoft.com/sql/reporting-services/tools/connect-to-a-report-server-in-management-studio)  
+[Azure Storage](../f1-help/connect-to-microsoft-azure-storage.md)  
 

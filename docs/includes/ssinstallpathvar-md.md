@@ -1,2 +1,2 @@
-  \<*드라이브*>:\Program Files\Microsoft SQL Server\130\
+  \<*드라이브*>:\Program Files\Microsoft SQL Server\\*nnn*\\
    
