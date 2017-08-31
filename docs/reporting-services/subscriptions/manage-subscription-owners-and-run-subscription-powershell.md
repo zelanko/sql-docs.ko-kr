@@ -82,7 +82,7 @@ ms.lasthandoff: 08/09/2017
   
 -   이벤트 발생: ManageWeb  
   
- 자세한 내용은 [Compare Roles and Tasks in Reporting Services to SharePoint Groups and Permissions](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
+ 자세한 내용은 [Reporting Services의 역할 및 작업과 SharePoint 그룹 및 사용 권한 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)를 참조하세요.  
   
 ### <a name="script-usage"></a>스크립트 사용자  
  **스크립트 파일(.ps1) 만들기**  

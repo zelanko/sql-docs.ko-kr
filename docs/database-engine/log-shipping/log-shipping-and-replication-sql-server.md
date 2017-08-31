@@ -52,7 +52,7 @@ ms.lasthandoff: 08/02/2017
 ### <a name="log-shipping-with-transactional-replication"></a>트랜잭션 복제의 로그 전달  
  트랜잭션 복제의 경우 로그 전달의 동작은 **sync with backup** 옵션에 따라 달라집니다. 이 옵션은 게시 데이터베이스 및 배포 데이터베이스에 설정될 수 있으며, 게시자의 로드 전달의 경우에는 게시 데이터베이스의 설정만 관련이 있습니다.  
   
- 게시 데이터베이스에 이 옵션을 설정하면 트랜잭션은 게시 데이터베이스에서 백업될 때까지 배포 데이터베이스로 배달되지 않습니다. 그러면 복원된 게시 데이터베이스에 없는 트랜잭션이 배포 데이터베이스에 있을 수 없으므로 보조 서버에서 마지막 게시 데이터베이스 백업을 복원할 수 있습니다. 이 옵션은 게시자가 보조 서버로 장애 조치되는 경우 게시자, 배포자 및 구독자 간의 일관성이 유지되도록 보장합니다. 트랜잭션이 게시자에서 백업되기 전까지는 배포 데이터베이스로 트랜잭션을 전달할 수 없으므로 지연이 발생하거나 처리량이 줄어들 수 있습니다. 응용 프로그램에서 이러한 지연이 허용되는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다. **sync with backup** 옵션을 설정하지 않으면 보조 서버에서 복구된 데이터베이스에는 포함되지 않는 변경 내용을 구독자가 받을 수 있습니다. 자세한 내용은 [Strategies for Backing Up and Restoring Snapshot and Transactional Replication](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을(를) 참조하세요.  
+ 게시 데이터베이스에 이 옵션을 설정하면 트랜잭션은 게시 데이터베이스에서 백업될 때까지 배포 데이터베이스로 배달되지 않습니다. 그러면 복원된 게시 데이터베이스에 없는 트랜잭션이 배포 데이터베이스에 있을 수 없으므로 보조 서버에서 마지막 게시 데이터베이스 백업을 복원할 수 있습니다. 이 옵션은 게시자가 보조 서버로 장애 조치되는 경우 게시자, 배포자 및 구독자 간의 일관성이 유지되도록 보장합니다. 트랜잭션이 게시자에서 백업되기 전까지는 배포 데이터베이스로 트랜잭션을 전달할 수 없으므로 지연이 발생하거나 처리량이 줄어들 수 있습니다. 응용 프로그램에서 이러한 지연이 허용되는 경우 게시 데이터베이스에 이 옵션을 설정하는 것이 좋습니다. **sync with backup** 옵션을 설정하지 않으면 보조 서버에서 복구된 데이터베이스에는 포함되지 않는 변경 내용을 구독자가 받을 수 있습니다. 자세한 내용은 [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을(를) 참조하세요.  
   
  **sync with backup 옵션으로 트랜잭션 게시 및 로그 전달을 구성하려면**  
   
