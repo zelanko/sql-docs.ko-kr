@@ -1,7 +1,7 @@
 ---
-title: "클러스터형 및 비클러스터형 인덱스 소개 | Microsoft 문서"
+title: "클러스터형 및 비클러스터형 인덱스 소개 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/01/2016
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: bc2034ac69dee1a72429e94841aec1763703de7c
-ms.openlocfilehash: 860844c00da732d2a40b4572aff98ec06f5d4ddf
+ms.translationtype: HT
+ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
+ms.openlocfilehash: 3ddf0231bfbea2137834ffbf7113654af9d9af6a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/19/2017
 
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
     -   비클러스터형 인덱스의 인덱스 행에서 데이터 행으로의 포인터를 행 로케이터라고 합니다. 행 로케이터의 구조는 데이터 페이지가 힙에 저장되는지 아니면 클러스터형 테이블에 저장되는지에 따라 다릅니다. 힙의 경우 행 로케이터는 행에 대한 포인터입니다. 클러스터형 테이블의 경우 행 로케이터는 클러스터형 인덱스 키입니다.  
   
-    -   클러스터형 인덱스의 리프 수준에 키가 아닌 열을 추가하여 기존 키 제한(900바이트 및 16개 키 열)을 무시하고 완전히 포괄되는 인덱싱된 쿼리를 실행할 수 있습니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요.  
+    -   클러스터형 인덱스의 리프 수준에 키가 아닌 열을 추가하여 기존 키 제한을 무시하고 완전히 포괄되는 인덱싱된 쿼리를 실행할 수 있습니다. 자세한 내용은 [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md)을 참조하세요. 인덱스 키 제한에 대한 자세한 내용은 [SQL Server의 최대 용량 사양](../../sql-server/maximum-capacity-specifications-for-sql-server.md)을 참조하세요. 
   
  클러스터형 인덱스와 비클러스터형 인덱스 모두 고유 인덱스가 될 수 있습니다. 이 경우 두 행에 인덱스 키에 대한 동일한 값이 있을 수 없습니다. 동일한 값이 있다면 인덱스는 고유하지 않으며 여러 행에서 동일한 키 값을 공유할 수 있습니다. 자세한 내용은 [고유 인덱스 만들기](../../relational-databases/indexes/create-unique-indexes.md)를 참조하세요.  
   

@@ -1,7 +1,7 @@
 ---
-title: "XML 형식으로 실행 계획 저장 | Microsoft 문서"
+title: "XML 형식으로 실행 계획 저장 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -20,11 +20,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5e60ae53c74f8f6df450ac6abc5a421f773ce434
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 6fe7ad1d3aedc20aac792831c0d469816979ae7e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>XML 형식으로 실행 계획 저장
@@ -36,25 +36,26 @@ ms.lasthandoff: 06/22/2017
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 쿼리 편집기를 열고 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 연결합니다.  
   
-2.  다음 문으로 SHOWPLAN_XML을 설정합니다.  
+2.  다음 문으로 [SHOWPLAN_XML](../../t-sql/statements/set-showplan-xml-transact-sql.md)을 설정합니다.  
   
-    ```  
+    ```t-sql  
     SET SHOWPLAN_XML ON;  
     GO  
     ```  
   
-     STATISTICS XML을 설정하려면 다음 문을 사용합니다.  
+     [STATISTICS XML](../../t-sql/statements/set-statistics-xml-transact-sql.md)을 설정하려면 다음 문을 사용합니다.  
   
-    ```  
+    ```t-sql  
     SET STATISTICS XML ON;  
     GO  
     ```  
   
-     SHOWPLAN_XML은 쿼리에 대한 컴파일 시간 쿼리 실행 계획 정보를 생성하지만 쿼리를 실행하지는 않습니다. STATISTICS XML은 쿼리에 대한 런타임 쿼리 실행 계획 정보를 생성하고 쿼리를 실행합니다.  
+     > [!NOTE] 
+     > SHOWPLAN_XML은 쿼리에 대한 컴파일 시간 쿼리 실행 계획 정보를 생성하지만 쿼리를 실행하지는 않습니다. **예상** 실행 계획이라고도 합니다. STATISTICS XML은 쿼리에 대한 런타임 쿼리 실행 계획 정보를 생성하고 쿼리를 실행합니다. **실제** 실행 계획이라고도 합니다.  
   
 3.  쿼리를 실행합니다. 예:  
   
-    ```  
+    ```t-sql  
     USE AdventureWorks2012;  
     GO  
     SET SHOWPLAN_XML ON;  
@@ -75,7 +76,7 @@ ms.lasthandoff: 06/22/2017
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>SQL Server Management Studio 옵션을 사용하여 실행 계획을 저장하려면  
   
-1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 예상 실행 계획이나 실제 실행 계획을 생성합니다. 자세한 내용은 [예상 실행 계획 표시](../../relational-databases/performance/display-the-estimated-execution-plan.md) 또는 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.  
+1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 사용하여 예상 실행 계획이나 실제 실행 계획을 생성합니다. 자세한 내용은 [예상 실행 계획 표시](../../relational-databases/performance/display-the-estimated-execution-plan.md) 및 [실제 실행 계획 표시](../../relational-databases/performance/display-an-actual-execution-plan.md)를 참조하세요.  
   
 2.  결과 창의 **실행 계획** 탭에서 그래픽 실행 계획을 마우스 오른쪽 단추로 클릭하고 **실행 계획을 다른 이름으로 저장**을 선택합니다.  
   
@@ -100,3 +101,4 @@ ms.lasthandoff: 06/22/2017
  [SET STATISTICS XML&#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-xml-transact-sql.md)  
   
   
+

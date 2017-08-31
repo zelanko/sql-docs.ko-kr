@@ -1,5 +1,5 @@
 ---
-title: "계획 지침 | Microsoft 문서"
+title: "계획 지침 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -24,11 +24,11 @@ caps.latest.revision: 52
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e3c1733219769d0a2d08996db9a25e3dd08a1e86
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 2e8ae8b72d588904cc7b3d4aaeaba1e783a21b48
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="plan-guides"></a>계획 지침
@@ -42,12 +42,12 @@ ms.lasthandoff: 06/22/2017
 ## <a name="types-of-plan-guides"></a>계획 지침의 유형  
  다음과 같은 계획 지침 유형을 만들 수 있습니다.  
   
- OBJECT 계획 지침  
+ ### <a name="object-plan-guide"></a>OBJECT 계획 지침  
  OBJECT 계획 지침은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 사용자 정의 스칼라 함수, 다중 문 사용자 정의 테이블 반환 함수 및 DML 트리거의 컨텍스트에서 실행되는 쿼리와 일치합니다.  
   
- `@Country`데이터베이스에 대해 배포되는 데이터베이스 응용 프로그램에`region` _ [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 매개 변수를 가져오는 다음 저장 프로시저가 있다고 가정합니다.  
+ `@Country_region` 데이터베이스에 대해 배포되는 데이터베이스 응용 프로그램에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 매개 변수를 가져오는 다음 저장 프로시저가 있다고 가정합니다.  
   
-```  
+```t-sql  
 CREATE PROCEDURE Sales.GetSalesOrderByCountry (@Country_region nvarchar(60))  
 AS  
 BEGIN  
@@ -60,11 +60,11 @@ BEGIN
 END;  
 ```  
   
- 이 저장 프로시저가 `@Country`_`region = N'AU'` (오스트레일리아)에 맞게 컴파일되고 최적화되었다고 가정합니다. 그러나 오스트레일리아에서 발주되는 판매 주문이 비교적 적기 때문에 판매 주문이 더 많은 국가의 매개 변수 값을 사용하여 쿼리를 실행할 경우 성능이 저하됩니다. 미국이 판매 주문을 가장 많이 내므로 `@Country`\_`region = N'US'` 매개 변수의 가능한 모든 값에 대해 `@Country`\_`region` 에 대해 생성된 쿼리 계획이 더 잘 수행될 가능성이 높습니다.  
+ 이 저장 프로시저가 `@Country_region = N'AU'`(오스트레일리아)에 맞게 컴파일되고 최적화되었다고 가정합니다. 그러나 오스트레일리아에서 발주되는 판매 주문이 비교적 적기 때문에 판매 주문이 더 많은 국가의 매개 변수 값을 사용하여 쿼리를 실행할 경우 성능이 저하됩니다. 미국이 판매 주문을 가장 많이 내므로 `@Country_region = N'US'` 매개 변수의 가능한 모든 값에 대해 `@Country_region` 에 대해 생성된 쿼리 계획이 더 잘 수행될 가능성이 높습니다.  
   
  저장 프로시저를 수정하여 `OPTIMIZE FOR` 쿼리 힌트를 쿼리에 추가하면 이 문제를 해결할 수 있습니다. 그러나 저장 프로시저가 배포된 응용 프로그램 안에 있기 때문에 응용 프로그램 코드를 직접 수정할 수 없습니다. 대신 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에서 다음 계획 지침을 만들 수 있습니다.  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide1',  
 @stmt = N'SELECT *FROM Sales.SalesOrderHeader AS h,  
@@ -81,16 +81,16 @@ sp_create_plan_guide
   
  `sp_create_plan_guide` 문에 지정되어 있는 쿼리가 실행되면 `OPTIMIZE FOR (@Country = N''US'')` 절을 포함하도록 최적화 이전에 쿼리가 수정됩니다.  
   
- SQL 계획 지침  
+ ### <a name="sql-plan-guide"></a>SQL 계획 지침  
  SQL 계획 지침은 데이터베이스 개체의 일부가 아닌 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 일괄 처리의 컨텍스트에서 실행되는 쿼리와 일치합니다. SQL 기반 계획 지침은 지정된 형식으로 매개 변수화되는 쿼리와 일치되도록 하는 데도 사용될 수 있습니다. SQL 계획 지침은 독립 실행형 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 및 일괄 처리에 적용됩니다. 이러한 문은 종종 응용 프로그램에서 [sp_executesql](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md) 시스템 저장 프로시저를 사용하여 제출됩니다. 예를 들어 다음 독립 실행형 일괄 처리를 생각해 보십시오.  
   
-```  
+```t-sql  
 SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC;  
 ```  
   
  병렬 실행 계획이 이 쿼리에서 생성되지 않도록 하려면 다음 계획 지침을 만들고 `MAXDOP` 쿼리 힌트를 `1` 매개 변수의 `@hints` 로 설정합니다.  
   
-```  
+```t-sql  
 sp_create_plan_guide   
 @name = N'Guide2',   
 @stmt = N'SELECT TOP 1 * FROM Sales.SalesOrderHeader ORDER BY OrderDate DESC',  
@@ -105,25 +105,28 @@ sp_create_plan_guide
   
  PARAMETERIZATION 데이터베이스 옵션을 FORCED로 설정했거나 쿼리 클래스를 매개 변수화하도록 지정하는 TEMPLATE 계획 지침을 만든 경우에 같은 형식으로 매개 변수화된 쿼리에 대해서도 SQL 계획 지침을 만들 수 있습니다.  
   
- TEMPLATE 계획 지침  
+ ### <a name="template-plan-guide"></a>TEMPLATE 계획 지침  
  TEMPLATE 계획 지침은 지정된 형식으로 매개 변수화되는 독립 실행형 쿼리와 일치합니다. 이 계획 지침은 쿼리 클래스에 대한 데이터베이스의 현재 PARAMETERIZATION 데이터베이스 SET 옵션을 대체하는 데 사용됩니다.  
   
  다음과 같은 경우 TEMPLATE 계획 지침을 만들 수 있습니다.  
   
--   PARAMETERIZATION 데이터베이스 옵션이 FORCED로 설정되었지만 단순 매개 변수화 규칙에 따라 컴파일하려는 쿼리가 있는 경우  
+-   PARAMETERIZATION 데이터베이스 옵션이 FORCED로 설정되었지만 [단순 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#SimpleParam) 규칙에 따라 컴파일하려는 쿼리가 있는 경우  
   
--   PARAMETERIZATION 데이터베이스 옵션이 SIMPLE(기본 설정)로 설정되었지만 쿼리 클래스에 대해 강제 매개 변수화를 시도하려는 경우  
+-   PARAMETERIZATION 데이터베이스 옵션이 SIMPLE(기본 설정)로 설정되었지만 쿼리 클래스에 대해 [강제 매개 변수화](../../relational-databases/query-processing-architecture-guide.md#ForcedParam)를 시도하려는 경우  
   
 ## <a name="plan-guide-matching-requirements"></a>계획 지침 일치 요구 사항  
  계획 지침의 범위는 이 지침이 생성되는 데이터베이스입니다. 따라서 쿼리를 실행할 때 현재 데이터베이스에 있는 계획 지침만 쿼리에 일치시킬 수 있습니다. 예를 들어 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 쿼리가 실행됩니다.  
   
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 계획 지침만 이 쿼리에 일치될 수 있습니다. 그러나 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 가 현재 데이터베이스이면 다음 문이 실행됩니다.  
   
- `USE DB1;`  
-  
- `SELECT FirstName, LastName FROM Person.Person;`  
+ ```t-sql
+ USE DB1; 
+ SELECT FirstName, LastName FROM Person.Person;
+ ```  
   
  쿼리가 `DB1` 컨텍스트에서 실행되므로 `DB1`의 계획 지침만 쿼리에 일치됩니다.  
   

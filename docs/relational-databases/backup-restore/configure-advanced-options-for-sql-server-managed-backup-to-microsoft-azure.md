@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성 | Microsoft 문서"
+title: "Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/04/2017
 ms.prod: sql-server-2016
@@ -14,17 +14,17 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 6c41a2a22b034f36ebe96508e978096b0ed29524
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: c247025da3c103105e41162cc614b1986796bb42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup용 고급 옵션 구성
   다음 자습서는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에 대한 고급 옵션 설정 방법을 설명합니다. 이러한 절차는 제공되는 기능에서 필요한 경우에만 필요합니다. 그렇지 않으면 기본 동작에 따라 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을(를) 사용할 수 있습니다.  
   
- 각 시나리오에서 백업은 `database_name` 매개 변수를 사용하여 지정됩니다. `database_name` 이 NUL 또는 *인 경우 변경하면 인스턴스 수준의 기본 설정에 영향을 줍니다. 또한, 인스턴스 수준 설정은 변경 이후 생성된 새로운 데이터베이스에도 영향을 줍니다.  
+ 각 시나리오에서 백업은 `database_name` 매개 변수를 사용하여 지정됩니다. `database_name` 이 NULL 또는 *인 경우 변경하면 인스턴스 수준의 기본 설정에 영향을 줍니다. 또한, 인스턴스 수준 설정은 변경 이후 생성된 새로운 데이터베이스에도 영향을 줍니다.  
   
  이러한 설정을 지정하면 시스템 저장 프로시저 [managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)을 사용하여 데이터베이스 또는 인스턴스에서 Managed Backup을 사용하도록 설정할 수 있습니다. 자세한 내용은 [Enable SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을(를) 참조하십시오.  
   
@@ -120,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
   
   
+

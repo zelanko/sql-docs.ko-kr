@@ -1,7 +1,7 @@
 ---
 title: "분산 가용성 그룹(SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 06/20/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 01f20dd99963b0bb1be86ddc3e173aef6fb3e8b3
-ms.openlocfilehash: e390d6efa26dcb628da636bc9bcf7c8fac54af65
+ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
+ms.openlocfilehash: 534cc0e8f798c8d231936e1c89835257832c4b16
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 08/21/2017
 
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
@@ -42,7 +42,8 @@ ms.lasthandoff: 08/11/2017
 
 다음 그림에서는 각각 고유한 WSFC 클러스터에 구성된 두 개의 가용성 그룹 (AG 1 및 AG 2)에 걸친 분산 가용성 그룹의 고급 수준을 보여 줍니다. 분산 가용성 그룹에는 총 4개의 복제본이 있으며, 각 가용성 그룹에는 2개의 복제본이 있습니다. 각 가용성 그룹마다 최대 수의 복제본을 지원할 수 있으므로 Standard Edition 기반 분산 가용성 그룹에는 최대 4개의 복제본이 있고, Enterprise Edition 기반 분산 가용성 그룹에는 최대 18개의 복제본이 있을 수 있습니다.
 
-<a name="fig1"></a> ![분산 가용성 그룹에 대한 상위 수준 보기][1]
+<a name="fig1"></a>
+![분산 가용성 그룹에 대한 상위 수준 보기][1]
 
 분산 가용성 그룹에서 데이터 이동을 동기 또는 비동기로 구성할 수 있습니다. 그러나 데이터 이동은 기존 가용성 그룹에 비해 분산 가용성 그룹 내에서 약간 다릅니다. 각 가용성 그룹에는 하나의 주 복제본이 있지만 삽입, 업데이트 및 삭제를 허용할 수 있는 분산 가용성 그룹에 참여하는 데이터베이스 복사본은 하나만 있습니다. 다음 그림에서 보여 주듯이 AG 1은 주 가용성 그룹입니다. 주 복제본은 AG 1의 보조 복제본과 AG 2의 주 복제본 모두로 트랜잭션을 보냅니다. 그런 다음 AG 2의 주 복제본은 AG 2의 보조 복제본을 계속 업데이트합니다. 
 
@@ -119,7 +120,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 마이그레이션 기능은 동일한 SQL Server 버전을 유지하면서 기본 OS를 변경하거나 업그레이드하는 시나리오에서 특히 유용합니다. Windows Server 2016은 동일한 하드웨어에서 Windows Server 2012 R2의 롤링 업그레이드를 허용하지만, 대부분의 사용자는 새 하드웨어 또는 가상 컴퓨터를 배포하도록 선택합니다. 
 
-새 구성으로의 마이그레이션을 완료하려면 프로세스가 완료되었을 때 원래 가용성 그룹에 대한 모든 데이터 트래픽을 중지하고 분산 가용성 그룹을 동기 데이터 이동으로 변경합니다. 이렇게 하면 두 번째 가용성 그룹의 주 복제본이 완전히 동기화되므로 데이터가 손실되지 않습니다. 동기화를 확인한 후에는 분산 가용성 그룹을 [보조 가용성 그룹으로 장애 조치](https://msdn.microsoft.com/en-US/library/mt651673.aspx) 섹션의 두 번째 가용성 그룹으로 장애 조치합니다.
+새 구성으로의 마이그레이션을 완료하려면 프로세스가 완료되었을 때 원래 가용성 그룹에 대한 모든 데이터 트래픽을 중지하고 분산 가용성 그룹을 동기 데이터 이동으로 변경합니다. 이렇게 하면 두 번째 가용성 그룹의 주 복제본이 완전히 동기화되므로 데이터가 손실되지 않습니다. 동기화를 확인한 후 분산 가용성 그룹을 보조 가용성 그룹으로 장애 조치(failover)합니다. 자세한 내용은 [보조 가용성 그룹에 대한 장애 조치(failover)](configure-distributed-availability-groups.md#failover)를 참조하세요.
 
 마이그레이션 후에 이제 두 번째 가용성 그룹이 새로운 주 가용성 그룹인 경우 다음 중 하나를 수행해야 할 수 있습니다.
 
@@ -174,75 +175,101 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 
 <!-- ![Two WSFC clusters with multiple availability groups through PowerShell Get-ClusterGroup command][7]  -->
 <a name="fig7"></a>
+
 ```
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_A
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG1                             DENNIS                Online Available Storage               GLEN                  Offline Cluster Group                   JY                    Online New_RoR                         DENNIS                Online Old_RoR                         DENNIS                Online SeedingAG                       DENNIS                Online
+AG1                             DENNIS                Online
+Available Storage               GLEN                  Offline
+Cluster Group                   JY                    Online
+New_RoR                         DENNIS                Online
+Old_RoR                         DENNIS                Online
+SeedingAG                       DENNIS                Online
 
 
 PS C:\> Get-ClusterGroup -Cluster CLUSTER_B
 
 Name                            OwnerNode             State
 ----                            ---------             -----
-AG2                             TOMMY                 Online Available Storage               JC                    Offline Cluster Group                   JC                    Online
+AG2                             TOMMY                 Online
+Available Storage               JC                    Offline
+Cluster Group                   JC                    Online
 ```
 
-All detailed information about a distributed availability group is in SQL Server, specifically in the availability-group dynamic management views. Currently, the only information shown in SQL Server Management Studio for a distributed availability group is on the primary replica for the availability groups. As shown in the following figure, under the Availability Groups folder, SQL Server Management Studio shows that there is a distributed availability group. The figure shows AG1 as a primary replica for an individual availability group that's local to that instance, not for a distributed availability group.
+분산 가용성 그룹에 대한 자세한 정보는 모두 SQL Server, 특히 가용성 그룹 동적 관리 뷰에서 확인할 수 있습니다. 현재 분산 가용성 그룹에 대한 SQL Server Management Studio에 표시되는 유일한 정보는 가용성 그룹에 대한 주 복제본에서 확인할 수 있습니다. 다음 그림에서 확인할 수 있듯이 가용성 그룹 폴더의 SQL Server Management Studio에는 분산 가용성 그룹이 표시됩니다. 그림에서는 AG1이 분산 가용성 그룹이 아닌 인스턴스의 로컬 그룹인 개별 가용성 그룹에 대한 주 복제본으로 표시되었습니다.
 
-![View in SQL Server Management Studio of the primary replica on the first WSFC cluster of a distributed availability group][8]
+![분산 가용성 그룹의 첫 번째 WSFC 클러스터에 있는 주 복제본의 SQL Server Management Studio에서 보기][8]
 
 
-However, if you right-click the distributed availability group, no options are available (see the following figure), and the expanded Availability Databases, Availability Group Listeners, and Availability Replicas folders are all empty. SQL Server Management Studio 16 displays this result, but it might change in a future version of SQL Server Management Studio.
+그러나 분산 가용성 그룹을 마우스 오른쪽 단추로 클릭할 경우 사용할 수 있는 옵션이 없으며(아래 그림 참조) 확장된 가용성 데이터베이스, 가용성 그룹 수신기 및 가용성 복제본 폴더가 모두 비어 있는 것을 확인할 수 있습니다. SQL Server Management Studio 16에서는 이러한 결과가 표시되지만 SQL Server Management Studio의 이후 버전에서 변경될 수 있습니다.
 
-![No options available for action][9]
+![작업에 사용할 수 있는 옵션이 없음][9]
 
-As shown in the following figure, secondary replicas show nothing in SQL Server Management Studio related to the distributed availability group. These availability group names map to the roles shown in the previous [CLUSTER_A WSFC cluster](#fig7) image.
+다음 그림에 표시된 것처럼 SQL Server Management Studio의 보조 복제본에는 분산 가용성 그룹과 관련된 항목이 아무것도 표시되지 않습니다. 이러한 가용성 그룹 이름은 이전 [CLUSTER_A WSFC 클러스터](#fig7) 이미지에 표시된 역할에 매핑합니다.
 
-![View in SQL Server Management Studio of a secondary replica][10]
+![보조 복제본의 SQL Server Management Studio에서 보기][10]
 
-The same concepts hold true when you use the dynamic management views. By using the following query, you can see all the availability groups (regular and distributed) and the nodes participating in them. This result is displayed only if you query the primary replica in one of the WSFC clusters that are participating in the distributed availability group. There is a new column in the dynamic management view `sys.availability_groups` named `is_distributed`, which is 1 when the availability group is a distributed availability group. To see this column:
+동적 관리 뷰를 사용하는 경우 동일한 개념이 적용됩니다. 다음 쿼리를 사용하여 모든 가용성 그룹(일반 및 분산) 및 그룹에 참여하는 노드를 확인할 수 있습니다. 이 결과는 분산 가용성 그룹에 참여하는 WSFC 클러스터 중 하나에서 주 복제본을 쿼리할 경우에만 표시됩니다. 동적 관리 뷰 `sys.availability_groups`에는 이름이 `is_distributed`인 새 열이 표시되며 가용성 그룹이 분산 가용성 그룹인 경우 해당 열의 값은 1입니다. 이 열을 보려면:
 
-```
-SELECT ag.[name] as 'AG Name', ag.Is_Distributed, ar.replica_server_name as 'Replica Name' FROM    sys.availability_groups ag, sys.availability_replicas ar       
+```sql
+SELECT ag.[name] as 'AG Name', 
+    ag.Is_Distributed, 
+    ar.replica_server_name as 'Replica Name'
+FROM    sys.availability_groups ag, 
+    sys.availability_replicas ar       
 WHERE   ag.group_id = ar.group_id
 ```
 
-An example of output from the second WSFC cluster that's participating in a distributed availability group is shown in the following figure. SPAG1 is composed of two replicas: DENNIS and JY. However, the distributed availability group named SPDistAG has the names of the two participating availability groups (SPAG1 and SPAG2) rather than the names of the instances, as with a traditional availability group. 
+분산 가용성 그룹에 참여하는 두 번째 WSFC 클러스터의 출력 예제가 다음 그림에 표시됩니다. SPAG1은 DENNIS와 JY라는 두 개의 복제본으로 구성되어 있습니다. 그러나 SPDistAG라는 이름의 분산 가용성 그룹에는 기존 가용성 그룹과 마찬가지로 인스턴스의 이름이 아닌 참여하는 가용성 그룹의 이름 2개(SPAG1 및 SPAG2)가 표시됩니다. 
 
-![Example output of the preceding query][11]
+![이전 쿼리의 예제 출력][11]
 
-In SQL Server Management Studio, any status shown on the Dashboard and other areas are for local synchronization only within that availability group. To display the health of a distributed availability group, query the dynamic management views. The following example query extends and refines the previous query:
+SQL Server Management Studio에서 대시보드 및 다른 영역에 표시되는 모든 상태는 가용성 그룹 내의 로컬 동기화에만 해당됩니다. 분산 가용성 그룹의 상태를 표시하려면 동적 관리 뷰를 쿼리하세요. 다음 예제 쿼리는 이전 쿼리를 확장하고 구체화합니다.
 
-```
-SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status' FROM    sys.availability_groups ag, sys.availability_replicas ar,       
+```sql
+SELECT ag.[name] as 'AG Name', ag.is_distributed, ar.replica_server_name as 'Underlying AG', ars.role_desc as 'Role', ars.synchronization_health_desc as 'Sync Status'
+FROM    sys.availability_groups ag, 
+sys.availability_replicas ar,       
 sys.dm_hadr_availability_replica_states ars       
-WHERE   ar.replica_id = ars.replica_id and     ag.group_id = ar.group_id and ag.is_distributed = 1
+WHERE   ar.replica_id = ars.replica_id
+and     ag.group_id = ar.group_id 
+and ag.is_distributed = 1
 ```
        
        
-![Distributed availability group status][12]
+![분산 가용성 그룹 상태][12]
 
 
-To further extend the previous query, you can also see the underlying performance via the dynamic management views by adding in `sys.dm_hadr_database_replicas_states`. The dynamic management view currently stores information about the second availability group only. The following example query, run on the primary availability group, produces the sample output shown below:
+이전 쿼리를 더 확장하기 위해 `sys.dm_hadr_database_replicas_states`를 추가하여 동적 관리 뷰를 통해 기본 성능을 확인할 수도 있습니다. 현재 동적 관리 뷰에는 보조 가용성 그룹에 대한 정보만 저장됩니다. 주 가용성 그룹에서 실행되는 다음 예제 쿼리는 아래에 표시된 샘플 출력을 생성합니다.
 
 ```
-SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate FROM    sys.databases dbs, sys.availability_groups ag, sys.availablity_replicas ar, sys.dm_hadr_availability_replica_states ars, sys.dm_hadr_database_replica_states drs WHERE   drs.group_id = ag.group_id and ar.replica_id = ars.replica_id and ars.replica_id = drs.replica_id and dbs.database_id = drs.database_id and ag.is_distributed = 1
+SELECT ag.[name] as 'Distributed AG Name', ar.replica_server_name as 'Underlying AG', dbs.[name] as 'DB', ars.role_desc as 'Role', drs.synchronization_health_desc as 'Sync Status', drs.log_send_queue_size, drs.log_send_rate, drs.redo_queue_size, drs.redo_rate
+FROM    sys.databases dbs,
+    sys.availability_groups ag,
+    sys.availability_replicas ar,
+    sys.dm_hadr_availability_replica_states ars,
+    sys.dm_hadr_database_replica_states drs
+WHERE   drs.group_id = ag.group_id
+and ar.replica_id = ars.replica_id
+and ars.replica_id = drs.replica_id
+and dbs.database_id = drs.database_id
+and ag.is_distributed = 1
 ```
 
-![Performance information for a distributed availability group][13]
+![분산 가용성 그룹에 대한 성능 정보][13]
 
 
-### Next steps 
+### <a name="next-steps"></a>다음 단계 
 
-* [Use the availability group wizard (SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
+* [가용성 그룹 마법사 사용(SQL Server Management Studio)](use-the-availability-group-wizard-sql-server-management-studio.md)
 
-* [Use the new availability group dialog box (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
+* [새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
-* [Create an availability group with Transact-SQL](create-an-availability-group-transact-sql.md)
+* [Transact-SQL을 사용하여 가용성 그룹 만들기](create-an-availability-group-transact-sql.md)
 
-This content was written by [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt), Microsoft Most Valued Professional.
+이 콘텐츠는 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt)(Microsoft Most Valued Professional)에 의해 작성되었습니다.
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

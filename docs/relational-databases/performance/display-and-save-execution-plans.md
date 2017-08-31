@@ -1,7 +1,7 @@
 ---
-title: "실행 계획 표시 및 저장 | Microsoft 문서"
+title: "실행 계획 표시 및 저장 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,17 +21,23 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 866b5b14bdc88727538b7abbba32d6547a7e3b21
+ms.translationtype: HT
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 3eb1056b561e2fea455c29c2d5f72736564c1ffd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="display-and-save-execution-plans"></a>실행 계획 표시 및 저장
   이 섹션에서는 실행 계획을 표시하는 방법과 Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 실행 계획을 XML 형식의 파일로 저장하는 방법에 대해 설명합니다.  
   
- 실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 선택한 데이터 검색 방법을 그래픽으로 표시합니다. 실행 계획은 SET SHOWPLAN_ALL 또는 SET SHOWPLAN_TEXT 문으로 생성되는 테이블 형식이 아닌 아이콘으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특정 문과 쿼리 실행 비용을 표시합니다. 이러한 그래픽 표시는 쿼리의 성능 특성을 이해하는 데 매우 유용합니다.  
+ 실행 계획은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서 선택한 데이터 검색 방법을 그래픽으로 표시합니다. 실행 계획은 [SET SHOWPLAN_ALL](../../t-sql/statements/set-showplan-all-transact-sql.md) 또는 [SET SHOWPLAN_TEXT](../../t-sql/statements/set-showplan-text-transact-sql.md) 문으로 생성되는 테이블 형식이 아닌 아이콘으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 특정 문과 쿼리 실행 비용을 표시합니다. 이러한 그래픽 표시는 쿼리의 성능 특성을 이해하는 데 매우 유용합니다.  
+
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램에서는 하나의 실행 계획만 생성하지만 **예상** 실행 계획과 **실제** 실행 계획이라는 개념이 있습니다.
+ -  [예상 실행 계획](../../relational-databases/performance/display-the-estimated-execution-plan.md)은 컴파일 시간에 쿼리 최적화 프로그램에서 생성된 실행 계획을 반환합니다. 예상 실행 계획을 생성해도 실제로 쿼리 또는 일괄 처리를 실행하지 않기 때문에 실제 리소스 사용량 메트릭이나 런타임 경고와 같은 런타임 정보가 이 계획에 포함되지 않습니다. 
+ -  [실제 실행 계획](../../relational-databases/performance/display-an-actual-execution-plan.md)은 쿼리 또는 일괄 처리 실행이 완료된 후 쿼리 최적화 프로그램에서 생성된 실행 계획을 반환합니다. 따라서 리소스 사용량 메트릭 및 런타임 경고에 관한 런타임 정보가 포함됩니다.  
+
+ 자세한 내용은 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)를 참조하세요.
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -42,3 +48,4 @@ ms.lasthandoff: 06/22/2017
 -   [XML 형식으로 실행 계획 저장](../../relational-databases/performance/save-an-execution-plan-in-xml-format.md)  
   
   
+

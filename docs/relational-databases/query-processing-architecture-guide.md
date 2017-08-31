@@ -1,5 +1,5 @@
 ---
-title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
+title: "쿼리 처리 아키텍처 가이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2017
 ms.prod: sql-non-specified
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: 0052444959911431f68bb40fd5059fb45b0d3412
+ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
+ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/22/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
@@ -37,7 +37,7 @@ ms.lasthandoff: 07/31/2017
 
 `SELECT` 문은 프로시저를 통하지 않습니다. 즉, 데이터베이스 서버가 요청한 데이터를 검색하는 데 사용해야 하는 정확한 단계를 지정하고 있지 않습니다. 이는 데이터베이스 서버가 문을 분석하여 요청한 데이터를 추출하는 가장 효율적인 방법을 판단해야 함을 의미합니다. 이것을 `SELECT` 문 최적화라고 하며 이를 위한 구성 요소를 쿼리 최적화 프로그램이라고 합니다. 최적화 프로그램에 대한 입력은 쿼리, 데이터베이스 스키마(테이블 및 인덱스 정의) 및 데이터베이스 통계로 이루어집니다. 쿼리 최적화 프로그램의 출력은 쿼리 실행 계획이며 경우에 따라 쿼리 계획이나 그냥 계획이라고도 합니다. 쿼리 계획의 내용은 이 항목의 뒷부분에서 보다 자세히 설명됩니다.
 
-The inputs and outputs of the Query Optimizer during optimization of a single `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다. ![query_processor_io](../relational-databases/media/query-processor-io.gif)
+다음 도표는 단일 `SELECT` 문을 최적화하는 동안 쿼리 최적화 프로그램에 입력되는 내용과 출력 내용을 보여 줍니다. ![query_processor_io](../relational-databases/media/query-processor-io.gif)
 
 `SELECT` 문은 다음 사항만 정의합니다.  
 * 결과 집합의 서식. 대부분 SELECT 목록에 지정됩니다. 하지만 `ORDER BY` 및 `GROUP BY` 와 같은 다른 절도 결과 집합의 최종 서식에 영향을 줍니다.
@@ -210,19 +210,19 @@ WHERE TableA.ColZ = TableB.Colz;
 > [!NOTE] 
 > 이 컨텍스트에서 `READCOMMITTED` 힌트와 `READCOMMITTEDLOCK` 힌트는 현재 트랜잭션 격리 수준과 관계없이 항상 다른 힌트로 간주됩니다.
  
-`SET` options and table hints, these are the same rules that the Query Optimizer uses to determine whether a table index covers a query. 인덱싱된 뷰를 사용하기 위해 쿼리에 아무 것도 추가로 지정할 필요가 없습니다.
+`SET` 옵션 및 테이블 힌트에 대한 요구 사항을 제외하고 위의 사항은 쿼리 최적화 프로그램에서 쿼리가 테이블 인덱스 범위에 해당하는지 즉, 테이블 인덱스로 쿼리를 처리할 수 있는지 여부를 확인하는 데 사용하는 규칙과 동일합니다. 인덱싱된 뷰를 사용하기 위해 쿼리에 아무 것도 추가로 지정할 필요가 없습니다.
 
-쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하도록 쿼리의 `FROM` clause for the Query Optimizer to use the indexed view. 쿼리가 인덱싱된 뷰에도 있는 기본 테이블의 열에 대한 참조를 포함하고 쿼리 최적화 프로그램에서 해당 인덱싱된 뷰를 사용할 때 비용이 가장 저렴한 액세스 메커니즘을 제공할 수 있을 것으로 예상하는 경우 쿼리 최적화 프로그램은 기본 테이블 인덱스가 쿼리에서 직접 참조되지 않을 때 이러한 기본 테이블 인덱스를 선택하는 것과 유사한 방법으로 인덱싱된 뷰를 선택합니다. 쿼리에서 참조하지 않는 열을 포함하는 뷰의 경우 뷰가 쿼리에 지정된 하나 이상의 열을 포괄하기 위한 가장 저렴한 비용 옵션을 제공하면 쿼리 최적화 프로그램에서 이 뷰를 선택할 수 있습니다.
+쿼리 최적화 프로그램에서 인덱싱된 뷰를 사용하도록 쿼리의 `FROM` 절에서 인덱싱된 뷰를 명시적으로 참조할 필요가 없습니다. 쿼리가 인덱싱된 뷰에도 있는 기본 테이블의 열에 대한 참조를 포함하고 쿼리 최적화 프로그램에서 해당 인덱싱된 뷰를 사용할 때 비용이 가장 저렴한 액세스 메커니즘을 제공할 수 있을 것으로 예상하는 경우 쿼리 최적화 프로그램은 기본 테이블 인덱스가 쿼리에서 직접 참조되지 않을 때 이러한 기본 테이블 인덱스를 선택하는 것과 유사한 방법으로 인덱싱된 뷰를 선택합니다. 쿼리에서 참조하지 않는 열을 포함하는 뷰의 경우 뷰가 쿼리에 지정된 하나 이상의 열을 포괄하기 위한 가장 저렴한 비용 옵션을 제공하면 쿼리 최적화 프로그램에서 이 뷰를 선택할 수 있습니다.
 
-The Query Optimizer treats an indexed view referenced in the `FROM` 절에서 참조하는 인덱싱된 뷰를 표준 뷰로 간주하고 처리합니다. 쿼리 최적화 프로그램은 최적화 프로세스 시작 시 뷰의 정의를 쿼리로 확장합니다. 그런 다음 인덱싱된 뷰 일치가 수행됩니다. 쿼리 최적화 프로그램에서 선택하는 최종 실행 계획에 인덱싱된 뷰가 사용될 수 있습니다. 또는 계획이 뷰에서 참조하는 기본 테이블에 액세스하여 뷰에서 필요한 데이터를 구체화할 수 있습니다. 쿼리 최적화 프로그램에서는 이 중 가장 저렴한 비용의 방법이 선택됩니다.
+쿼리 최적화 프로그램은 `FROM` 절에서 참조하는 인덱싱된 뷰를 표준 뷰로 간주하고 처리합니다. 쿼리 최적화 프로그램은 최적화 프로세스 시작 시 뷰의 정의를 쿼리로 확장합니다. 그런 다음 인덱싱된 뷰 일치가 수행됩니다. 쿼리 최적화 프로그램에서 선택하는 최종 실행 계획에 인덱싱된 뷰가 사용될 수 있습니다. 또는 계획이 뷰에서 참조하는 기본 테이블에 액세스하여 뷰에서 필요한 데이터를 구체화할 수 있습니다. 쿼리 최적화 프로그램에서는 이 중 가장 저렴한 비용의 방법이 선택됩니다.
 
 #### <a name="using-hints-with-indexed-views"></a>인덱싱된 뷰에 힌트 사용
 
 `EXPAND VIEWS` 쿼리 힌트를 사용하여 쿼리에 뷰 인덱스가 사용되지 않도록 하거나 `NOEXPAND` 테이블 힌트를 사용하여 쿼리의 `FROM` 절에 지정된 인덱싱된 뷰에 인덱스가 사용되도록 할 수 있습니다. 그러나 쿼리 최적화 프로그램이 각 쿼리에 사용할 최상의 액세스 방법을 동적으로 결정하도록 해야 합니다. `EXPAND` 와 `NOEXPAND` 는 성능을 크게 향상하는 것으로 확인된 특정 경우에만 사용합니다.
 
-`EXPAND VIEWS` option specifies that the Query Optimizer not use any view indexes for the whole query. 
+`EXPAND VIEWS` 옵션은 쿼리 최적화 프로그램이 전체 쿼리에 뷰 인덱스를 사용하지 않도록 지정합니다. 
 
-뷰에 `NOEXPAND` is specified for a view, the Query Optimizer considers using any indexes defined on the view. 선택적`NOEXPAND` 절을 사용하여 `INDEX()` clause forces the Query Optimizer to use the specified indexes. `NOEXPAND` 는 인덱싱된 뷰에만 지정할 수 있고 인덱싱되지 않은 뷰에는 지정할 수 없습니다.
+뷰에 `NOEXPAND` 를 지정하면 쿼리 최적화 프로그램은 뷰에 정의된 인덱스의 사용을 고려합니다. 선택적`NOEXPAND` 절을 사용하여 `INDEX()` 를 지정하면 쿼리 최적화 프로그램은 지정된 인덱스를 사용합니다. `NOEXPAND` 는 인덱싱된 뷰에만 지정할 수 있고 인덱싱되지 않은 뷰에는 지정할 수 없습니다.
 
 뷰를 포함하는 쿼리에서 `NOEXPAND` 와 `EXPAND VIEWS` 를 지정하지 않으면 뷰가 확장되어 기본 테이블에 액세스합니다. 뷰를 구성하는 쿼리에 테이블 힌트가 포함된 경우 해당 힌트는 기본 테이블로 전파됩니다. 이 프로세스는 뷰 확인에서 자세히 설명합니다. 뷰의 기본 테이블에 있는 힌트 집합이 모두 동일하면 쿼리를 인덱싱된 뷰와 일치시킬 수 있습니다. 대부분의 경우 이러한 힌트는 뷰에서 직접 상속되기 때문에 서로 일치합니다. 그러나 쿼리가 뷰 대신 테이블을 참조하고 이러한 테이블에 직접 적용된 힌트가 동일하지 않으면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다. 뷰 확장 후 쿼리에서 참조하는 테이블에 `INDEX`, `PAGLOCK`, `ROWLOCK`, `TABLOCKX`, `UPDLOCK`또는 `XLOCK` 힌트가 적용되면 쿼리를 인덱싱된 뷰와 일치시킬 수 없습니다.
 
@@ -468,7 +468,7 @@ WHERE ProductSubcategoryID = 4;
 복잡한 SQL 문을 처리할 때 관계형 엔진은 매개 변수화할 수 있는 식을 결정하기가 어려울 수 있습니다. 복잡한 SQL 문을 사용되지 않은 기존 실행 계획과 일치시키는 관계형 엔진의 성능을 향상하려면 sp_executesql 또는 매개 변수 표식을 사용하여 매개 변수를 명시적으로 지정합니다. 
 
 > [!NOTE]
-> +, -, *, / 또는 % 산술 연산자를 사용하여 암시적 또는 명시적으로 int, smallint, tinyint 또는 bigint 상수 값을 float, real, decimal 또는 numeric의 데이터 형식으로 변환할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 특정 규칙에 따라 식 결과의 형식과 전체 자릿수를 계산합니다. 그러나 이러한 규칙은 쿼리의 매개 변수화 여부에 따라 다릅니다. 따라서 쿼리에서 유사한 식을 사용해도 다른 결과가 발생하는 경우가 있습니다.
+> +, -, \*, / 또는 % 산술 연산자를 사용하여 암시적 또는 명시적으로 int, smallint, tinyint 또는 bigint 상수 값을 float, real, decimal 또는 numeric의 데이터 형식으로 변환할 때 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 특정 규칙에 따라 식 결과의 형식과 전체 자릿수를 계산합니다. 그러나 이러한 규칙은 쿼리의 매개 변수화 여부에 따라 다릅니다. 따라서 쿼리에서 유사한 식을 사용해도 다른 결과가 발생하는 경우가 있습니다.
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 단순 매개 변수화의 기본 동작에 따라 비교적 작은 클래스의 쿼리를 매개 변수화합니다. 그러나 `PARAMETERIZATION` 명령의 `ALTER DATABASE` 옵션을 `FORCED`로 설정하여 데이터베이스의 모든 쿼리를 특정 제한 사항에 따라 매개 변수화하도록 지정할 수 있습니다. 이렇게 하면 쿼리 컴파일 빈도를 낮추어 대량의 동시 쿼리가 발생하는 데이터베이스의 성능이 향상될 수 있습니다.
 
@@ -503,7 +503,7 @@ WHERE ProductSubcategoryID = 4;
 * `CONVERT` 절의 style 인수.
 * `IDENTITY` 절 내의 정수 상수
 * ODBC 확장 구문을 사용하여 지정한 상수
-* +, -, *, / 및 % 연산자의 인수인 상수 폴딩 가능 식. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 식이 강제 매개 변수화에 적합한지 결정할 때 다음 조건 중 하나가 True이면 상수 폴딩 가능 식으로 간주합니다.  
+* +, -, \*, / 및 % 연산자의 인수인 상수 폴딩 가능 식. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 식이 강제 매개 변수화에 적합한지 결정할 때 다음 조건 중 하나가 True이면 상수 폴딩 가능 식으로 간주합니다.  
   * 식에 열, 변수 또는 하위 쿼리가 나타나지 않습니다.  
   * 식에 `CASE` 절이 포함됩니다.  
 * 쿼리 힌트 절에 대한 인수. 여기에는 `number_of_rows` 쿼리 힌트의 `FAST` 인수, `number_of_processors` 쿼리 힌트의 `MAXDOP` 인수 및 `MAXRECURSION` 쿼리 힌트의 숫자 인수가 포함됩니다.

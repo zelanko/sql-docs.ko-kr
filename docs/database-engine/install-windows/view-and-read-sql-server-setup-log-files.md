@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 863533653fb69b61b94a796feb0d5a103578974a
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 3f87dec24a195cabd75fb653fcb5bcaf51e29db9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>SQL Server 설치 로그 파일 보기 및 읽기
@@ -145,11 +145,11 @@ ms.lasthandoff: 08/02/2017
   
  MSI 로그 파일의 유형:  
   
--   \<기능>_\<아키텍처>\_\<반복>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>.log  
   
--   \<기능>_\<아키텍처>\_\<언어>\_\<반복>.log  
+-   \<Feature>_\<Architecture>\_\<Language>\_\<Interaction>.log  
   
--   \<기능>_\<아키텍처>\_\<반복>\_\<워크플로>.log  
+-   \<Feature>_\<Architecture>\_\<Interaction>\_\<workflow>.log  
   
 ### <a name="location"></a>위치  
  MSI 로그 파일은 %programfiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\130\Setup Bootstrap\Log\\<YYYYMMDD_HHMM>\\<이름\>.log에 있습니다.  

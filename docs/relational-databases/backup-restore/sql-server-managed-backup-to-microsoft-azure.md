@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure에 대한 SQL Server Managed Backup 해제 | Microsoft 문서"
+title: "Microsoft Azure에 대한 SQL Server Managed Backup 해제 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/18/2016
 ms.prod: sql-server-2016
@@ -13,12 +13,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 caps.latest.revision: 44
 author: MightyPen
 ms.author: genemi
-manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 529ae718a28d99104d8835ecaf2cdc4eb5fcc63f
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 9061cf182fd1bc245de22ea2bade18b93e231042
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup
@@ -111,6 +111,10 @@ ms.lasthandoff: 06/22/2017
  특정 데이터베이스의 경우 기존의 전체 데이터베이스 백업 작업이 실행 중이면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 는 현재 작업이 완료될 때까지 기다린 다음 동일한 데이터베이스에 대해 다른 전체 데이터베이스 백업을 수행합니다. 마찬가지로 한 번에 한 트랜잭션 로그 백업만 실행할 수 있습니다. 그러나 전체 데이터베이스 백업 및 트랜잭션 로그 백업은 동시에 실행할 수 있습니다. 실패는 확장 이벤트로 기록됩니다.  
   
  10개 이상의 전체 데이터베이스 백업이 동시에 예약된 경우 확장 이벤트의 디버그 채널을 통해 경고가 발생합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 백업이 필요한 나머지 데이터베이스의 우선 순위 큐를 관리합니다.  
+
+> [!NOTE]
+> 프록시 서버에서 SQL Server Managed Backup이 지원되지 않습니다.
+>
   
 ##  <a name="support_limits"></a> 지원 가능성  
  다음 지원 제한 사항 및 고려 사항은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 특정한 것입니다.  

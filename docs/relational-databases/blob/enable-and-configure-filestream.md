@@ -1,7 +1,7 @@
 ---
-title: "FILESTREAM 사용 및 구성 | Microsoft 문서"
+title: "FILESTREAM 사용 및 구성 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/23/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 7bee35abc8b2c450a9bd1badb89b18eb31128be8
+ms.translationtype: HT
+ms.sourcegitcommit: 91098c850b0f6affb8e4831325d0f18fd163d71a
+ms.openlocfilehash: 19f5d560766c4bc70bd16fcff4f9f12f23b80146
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/24/2017
 
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
 13. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
   
   
-##  <a name="best"></a> 최선의 구현 방법  
+##  <a name="best"></a> 모범 사례  
   
 ###  <a name="config"></a> 물리적 구성 및 유지 관리  
  FILESTREAM 저장소 볼륨을 설정할 때 다음 지침을 고려하십시오.  
@@ -73,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   64KB NTFS 클러스터를 사용합니다. 압축된 볼륨은 4KB NTFS 클러스터로 설정해야 합니다.  
   
--   FILESTREAM 볼륨에서 인덱싱을 해제하고 **disablelastaccess** 설정합니다. **disablelastaccess**를 설정하려면 Windows **fsutil** 유틸리티를 사용합니다.  
+-   FILESTREAM 볼륨에서 인덱싱을 해제하고 **disablelastaccess**를 설정합니다. **disablelastaccess**를 설정하려면 Windows **fsutil** 유틸리티를 사용합니다.  
   
 -   FILESTREAM 볼륨에 대한 바이러스 검사가 필요 없을 때는 해제합니다. 바이러스 검사가 필요한 경우, 잘못된 파일을 자동으로 삭제하는 정책을 설정하지 마십시오.  
   
@@ -97,3 +97,4 @@ ms.lasthandoff: 06/22/2017
 -   공간 관리 및 정책은 FILESTREAM에서 직접적으로 지원되지 않습니다. 하지만 각 FILESTREAM 파일 그룹을 개별 볼륨에 지정하고 볼륨의 관리 기능을 사용하는 방법을 통해 간접적으로 공간을 관리하고 정책을 적용할 수 있습니다.  
   
   
+
