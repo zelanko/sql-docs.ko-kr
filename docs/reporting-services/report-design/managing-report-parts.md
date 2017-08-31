@@ -15,7 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 310cad57050dba44c5303b78ea33e5b3f42d309c
 ms.contentlocale: ko-kr
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/09/2017
  보고서 작성기와 같은 보고서 제작 응용 프로그램에서 SharePoint 통합 모드의 보고서 서버로 보고서 파트를 게시하면 보고서 서버 카탈로그도 업데이트되므로 갤러리 검색에도 새 보고서 파트나 업데이트 보고서 파트가 정확히 반영됩니다.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>SharePoint 폴더로 보고서 파트 직접 업로드  
- 보고서 파트가 보고서 제작 응용 프로그램에서 게시되지 않고 대신에 SharePoint 문서 폴더로 직접 업로드되는 경우 보고서 서버 카탈로그가 업데이트되지 않습니다. 따라서 보고서 파트 갤러리를 검색할 때 업로드된 보고서 파트를 찾을 수 없습니다. SharePoint 폴더와 보고서 서버 카탈로그의 동기화 상태를 유지하기 위해 SharePoint 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 동기화 기능을 활성화할 수 있습니다. 자세한 내용은 [Activate the Report Server File Sync Feature in SharePoint Central Administration](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)를 참조하세요.  
+ 보고서 파트가 보고서 제작 응용 프로그램에서 게시되지 않고 대신에 SharePoint 문서 폴더로 직접 업로드되는 경우 보고서 서버 카탈로그가 업데이트되지 않습니다. 따라서 보고서 파트 갤러리를 검색할 때 업로드된 보고서 파트를 찾을 수 없습니다. SharePoint 폴더와 보고서 서버 카탈로그의 동기화 상태를 유지하기 위해 SharePoint 서버에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 파일 동기화 기능을 활성화할 수 있습니다. 자세한 내용은 [SharePoint 중앙 관리에서 보고서 서버 파일 동기화 기능 활성화](../../reporting-services/report-server-sharepoint/activate-the-report-server-file-sync-feature-in-sharepoint-ca.md)를 참조하세요.  
   
  GetProperties 및 SetProperties와 같은 일부 Reporting Services 관리 API를 호출하여 파일을 동기화할 수도 있습니다.  
   
