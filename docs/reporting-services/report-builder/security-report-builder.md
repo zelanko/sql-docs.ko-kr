@@ -50,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
      보고서 서버에서 항목을 보거나 게시하기 위해 보고서 관련 항목 및 작업에 적용되는 권한 집합이 역할로 구성됩니다. 보고서 서버 관리자는 하나 이상의 역할에 사용자를 할당합니다. 예를 들어 미리 정의된 역할인 브라우저를 통해 보고서, 폴더, 모델 및 리소스를 볼 수 있습니다.  
   
-     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [](../../reporting-services/security/reporting-services-security-and-protection.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+     보고서 서버에 연결할 수 없거나 보고서 서버를 찾을 수 없는 경우 보고서 서버 관리자에게 문의하세요. 자세한 내용은 [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).   
   
 -   SharePoint 통합 모드에서 구성된 보고서 서버  
   
@@ -115,9 +115,9 @@ ms.lasthandoff: 08/09/2017
   
 -   유효한 값을 제공한 경우에만 쿼리 매개 변수를 기반으로 하는 **텍스트** 형식의 매개 변수를 사용하세요. 사용 가능한 값 목록은 사용자가 유효한 값만 선택하는 데 도움이 됩니다. 사용 가능한 값 목록이 없으면 사용자가 입력할 수 있는 값을 제한할 수 없습니다.  
   
--   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+-   전역 [&UserID]를 사용하여 개인 데이터에 보안을 설정하지 마세요. 이 값은 URL 액세스 구문을 사용하여 보고서 URL에 보고서 매개 변수로 지정할 수 있습니다. 이 값을 공유 데이터 집합의 식에 사용하면 데이터 집합을 캐시할 수 없습니다. 자세한 내용은 [URL Access Parameter Reference](../../reporting-services/url-access-parameter-reference.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
- 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [](../../reporting-services/security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
+ 보고서 서버에 항목을 게시한 후 보고서 서버 관리자는 역할 기반 보안이나 폴더 및 항목 수준 보안을 할당하여 항목에 보안을 설정할 수 있습니다. 자세한 내용은 [보안 보고서 및 리소스](../../reporting-services/security/secure-reports-and-resources.md) 온라인 설명서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Books Online](http://go.microsoft.com/fwlink/?linkid=121312).  
   
   
 ## <a name="see-also"></a>관련 항목:  
