@@ -23,7 +23,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 223d43974e6b63f7375a3d3e000492612fb6856e
 ms.openlocfilehash: bb666c02a3e0d165a3c32515503be265287e1cac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/25/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="rebuild-index-task-maintenance-plan"></a>인덱스 다시 작성 태스크(유지 관리 계획)

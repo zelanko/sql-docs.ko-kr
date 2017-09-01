@@ -14,11 +14,11 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4233db126530558a3183e410e1b96b50f57d1d27
+ms.translationtype: HT
+ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
+ms.openlocfilehash: 179935cc6a15d076737d12b4fa6fac28f354db3c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>스트레치 사용 데이터베이스 복원(Stretch Database)
@@ -39,7 +39,7 @@ SQL Server 데이터베이스를 복원한 후 저장 프로시저 **sys.sp_rda_
 ## <a name="restore-your-remote-azure-data"></a>원격 Azure 데이터 복원
 
 ### <a name="recover-a-live-azure-database"></a>라이브 Azure 데이터베이스 복구
-Azure의 SQL Server Stretch Database 서비스는 Azure Storage 스냅숏을 사용하여 적어도 8시간마다 모든 라이브 데이터의 스냅숏을 만듭니다. 이러한 스냅숏은 7일 동안 유지됩니다. 따라서 마지막 스냅숏이 만들어진 시간까지 지난 7일 내에 적어도 21개 지점 중 하나로 데이터를 복원할 수 있습니다.
+Azure의 SQL Server 스트레치 데이터베이스 서비스는 Azure Storage 스냅숏을 사용하여 적어도 8시간마다 모든 라이브 데이터의 스냅숏을 만듭니다. 이러한 스냅숏은 7일 동안 유지됩니다. 따라서 마지막 스냅숏이 만들어진 시간까지 지난 7일 내에 적어도 21개 지점 중 하나로 데이터를 복원할 수 있습니다.
 
 Azure 포털을 사용하여 라이브 Azure 데이터베이스를 이전 시점으로 복원하려면 다음을 수행합니다.
 
@@ -51,7 +51,7 @@ Azure 포털을 사용하여 라이브 Azure 데이터베이스를 이전 시점
 6. 데이터베이스 복원 프로세스가 시작되고 **알림**을 사용하여 모니터링할 수 있습니다.
 
 ### <a name="recover-a-deleted-azure-database"></a>삭제된 Azure 데이터베이스 복구
-Azure의 SQL Server Stretch Database 서비스는 데이터베이스가 삭제되기 전에 데이터베이스 스냅숏을 만들어 7일간 보유합니다. 이후에는 라이브 데이터베이스에서 더 이상 스냅숏을 보유하지 않습니다. 이렇게 하면 삭제된 데이터베이스를 삭제된 시점으로 복원할 수 있습니다.
+Azure의 SQL Server 스트레치 데이터베이스 서비스는 데이터베이스가 삭제되기 전에 데이터베이스 스냅숏을 만들어 7일간 보유합니다. 이후에는 라이브 데이터베이스에서 더 이상 스냅숏을 보유하지 않습니다. 이렇게 하면 삭제된 데이터베이스를 삭제된 시점으로 복원할 수 있습니다.
 
 Azure 포털을 사용하여 삭제된 Azure 데이터베이스를 삭제된 시점으로 복원하려면 다음을 수행합니다.
 
@@ -84,7 +84,7 @@ Azure 포털을 사용하여 삭제된 Azure 데이터베이스를 삭제된 시
     
   ## <a name="see-also"></a>참고 항목  
  [스트레치 사용 데이터베이스 백업](../../sql-server/stretch-database/backup-stretch-enabled-databases-stretch-database.md)  
- [Stretch Database 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
+ [스트레치 데이터베이스 관리 및 문제 해결](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
  [sys.sp_rda_reauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 
  [sys.sp_rda_deauthorize_db](../../relational-databases/system-stored-procedures/sys-sp-rda-deauthorize-db-transact-sql.md)  
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
