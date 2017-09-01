@@ -1,5 +1,5 @@
 ---
-title: "시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리 | Microsoft 문서"
+title: "시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 05/18/2017
@@ -22,21 +22,21 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리
+# <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  시스템 버전 관리된 임시 테이블에서 기록 테이블은 특히 다음과 같은 상황에서 일반 테이블보다 데이터베이스 크기를 좀 더 크게 늘릴 수 있습니다.  
+  시스템 버전 관리된 temporal 테이블에서 기록 테이블은 특히 다음과 같은 상황에서 일반 테이블보다 데이터베이스 크기를 좀 더 크게 늘릴 수 있습니다.  
   
 -   기록 데이터를 오랫동안 보관  
   
 -   업데이트가 있거나 과도한 데이터 수정 패턴을 삭제함  
   
- 크기가 크고 점점 증가하는 기록 테이블은 기본 저장소 비용과 임시 쿼리에 대한 성능 세금 부과로 인해 문제가 발생할 수 있습니다. 따라서 기록 테이블에서 데이터를 관리하기 위한 데이터 보존 정책을 개발하는 것이 모든 임시 테이블의 수명 주기 계획 및 관리의 중요한 요소입니다.  
+ 크기가 크고 점점 증가하는 기록 테이블은 기본 저장소 비용과 temporal 쿼리에 대한 성능 세금 부과로 인해 문제가 발생할 수 있습니다. 따라서 기록 테이블에서 데이터를 관리하기 위한 데이터 보존 정책을 개발하는 것이 모든 temporal 테이블의 수명 주기 계획 및 관리의 중요한 요소입니다.  
   
 ## <a name="data-retention-management-for-history-table"></a>기록 테이블에 대한 데이터 보존 관리  
- 임시 테이블 데이터 보존 관리는 각 임시 테이블에 대한 필수 보존 기간을 결정하는 것부터 시작됩니다. 대부분의 경우 보존 정책은 임시 테이블을 사용하는 응용 프로그램의 비즈니스 논리의 일부로 간주해야 합니다. 예를 들어 데이터 감사와 시간 이동 시나리오에서 응용 프로그램은 온라인 쿼리에 사용할 수 있는 기록 데이터의 기간 측면에서 확실하게 요구되는 사항이 있습니다.  
+ Temporal 테이블 데이터 보존 관리는 각 temporal 테이블에 대한 필수 보존 기간을 결정하는 것부터 시작됩니다. 대부분의 경우 보존 정책은 temporal 테이블을 사용하는 응용 프로그램의 비즈니스 논리의 일부로 간주해야 합니다. 예를 들어 데이터 감사와 시간 이동 시나리오에서 응용 프로그램은 온라인 쿼리에 사용할 수 있는 기록 데이터의 기간 측면에서 확실하게 요구되는 사항이 있습니다.  
   
- 데이터 보존 기간을 결정하고 나면 그 다음으로 기록 데이터 저장 방법과 저장 위치, 그리고 요구되는 보존 기간보다 오래된 기록 데이터를 삭제하는 방법 등 기록 데이터를 관리하기 위한 계획을 개발합니다. 다음 네 가지 방법으로 임시 기록 테이블에서 기록 데이터를 관리할 수 있습니다.  
+ 데이터 보존 기간을 결정하고 나면 그 다음으로 기록 데이터 저장 방법과 저장 위치, 그리고 요구되는 보존 기간보다 오래된 기록 데이터를 삭제하는 방법 등 기록 데이터를 관리하기 위한 계획을 개발합니다. 다음 네 가지 방법으로 temporal 기록 테이블에서 기록 데이터를 관리할 수 있습니다.  
   
 -   [스트레치 데이터베이스](https://msdn.microsoft.com/library/mt637341.aspx#using-stretch-database-approach)  
   
@@ -48,33 +48,33 @@ ms.lasthandoff: 07/31/2017
 
  기록 데이터 문제 완화 또는 정리를 위한 논리는 이 방법 중 한 가지를 사용하며 현재 테이블에서 기간 종료에 해당하는 열을 기반으로 합니다. 각 행에 대해 기간 값의 끝에서는 행 버전이 "닫힌" 상태가 되는, 즉 기록 테이블에서 해당 값이 처음 삽입되는 순간을 결정합니다. 예를 들어 조건 `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` 은1개월보다 오래된 기록 데이터를 기록 테이블에서 제거하거나 제외해야 한다고 지정합니다.  
   
-> **참고:**  이 항목의 예제에서는 이 [임시 테이블 예제](https://msdn.microsoft.com/library/mt590957.aspx)를 사용합니다.  
+> **참고:**  이 항목의 예제에서는 이 [Temporal 테이블 예제](https://msdn.microsoft.com/library/mt590957.aspx)를 사용합니다.  
   
 ## <a name="using-stretch-database-approach"></a>스트레치 데이터베이스 접근 방식 사용  
   
 > **참고:**  Stretch Database 접근 방식 사용은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에만 적용되며 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 적용되지 않습니다.  
   
- [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 임시 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.  
+ [스트레치 데이터베이스](../../sql-server/stretch-database/stretch-database.md) 에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Azure로 기록 데이터를 투명하게 마이그레이션합니다. 추가 보안을 위해 SQL Server의 [항상 암호화](https://msdnstage.redmond.corp.microsoft.com/library/mt163865.aspx) 기능을 사용하여 동작에 대한 데이터를 암호화할 수 있습니다. 또한 데이터 보호를 위해 [행 수준 보안](../../relational-databases/security/row-level-security.md) 및 기타 고급 SQL Server 보안 기능을 temporal 및 스트레치 데이터베이스와 함께 사용할 수 있습니다.  
   
- 스트레치 데이터베이스 접근 방식을 사용하면 기록 데이터 일부 또는 전체를 Azure에 스트레치할 수 있으며 SQL Server에서 Azure로 기록 데이터를 자동으로 옮깁니다. 기록 테이블에서 스트레치를 사용하도록 설정한다고 해서 데이터 수정 및 임시 쿼리 측면에서 임시 테이블을 조작하는 방식이 변경되는 것은 아닙니다.  
+ 스트레치 데이터베이스 접근 방식을 사용하면 temporal 기록 테이블 일부 또는 전체를 Azure에 스트레치할 수 있으며 SQL Server에서 Azure로 기록 데이터를 자동으로 옮깁니다. 기록 테이블에서 스트레치를 사용하도록 설정한다고 해서 데이터 수정 및 temporal 쿼리 측면에서 temporal 테이블을 조작하는 방식이 변경되는 것은 아닙니다.  
   
--   **전체 기록 테이블 스트레치:** 주 시나리오에서 기록 데이터에서 데이터 변경 빈도가 높은 반면 쿼리는 상대적으로 드문 환경에서 데이터 감사를 수행할 경우 전체 기록 테이블에 대해 스트레치 데이터베이스를 구성합니다.  즉, 임시 쿼리 작업의 성능이 중요하지 않은 경우 이 방법을 사용합니다. 이 경우 Azure에서 제공하는 비용 효율성이 매력적일 수 있습니다.   
+-   **전체 기록 테이블 스트레치:** 주 시나리오에서 기록 데이터에서 데이터 변경 빈도가 높은 반면 쿼리는 상대적으로 드문 환경에서 데이터 감사를 수행할 경우 전체 기록 테이블에 대해 스트레치 데이터베이스를 구성합니다.  즉, temporal 쿼리 작업의 성능이 중요하지 않은 경우 이 방법을 사용합니다. 이 경우 Azure에서 제공하는 비용 효율성이 매력적일 수 있습니다.   
     전체 기록 테이블을 스트레치할 때 스트레치 마법사 또는 TRANSACT-SQL을 사용할 수 있습니다. 두 방법에 대한 예는 아래에 표시됩니다.  
   
--   **일부 기록 테이블 스트레치:** 주 시나리오에서 최근 기록 데이터를 주로 쿼리하지만 필요할 경우 이전 기록 데이터를 저렴한 비용으로 원격 저장하면서 쿼리하는 옵션을 유지하려고 할 경우 성능 개선을 위해 기록 테이블의 일부에 대해서만 스트레치 데이터베이스를 구성합니다. TRANSACT-SQL을 사용하면 전체 행을 마이그레이션하지 않고 기록테이블에서 마이그레이션할 행을 선택할 수 있도록 조건자 함수를 지정하여 이 작업을 수행할 수 있습니다.  임시 테이블에서 작업 시 일반적으로 시간 조건을 기준으로 데이터를 이동하는 것이 좋습니다(예: 기록 테이블의 행 버전 보존 기간 기준)    
+-   **일부 기록 테이블 스트레치:** 주 시나리오에서 최근 기록 데이터를 주로 쿼리하지만 필요할 경우 이전 기록 데이터를 저렴한 비용으로 원격 저장하면서 쿼리하는 옵션을 유지하려고 할 경우 성능 개선을 위해 기록 테이블의 일부에 대해서만 스트레치 데이터베이스를 구성합니다. TRANSACT-SQL을 사용하면 전체 행을 마이그레이션하지 않고 기록테이블에서 마이그레이션할 행을 선택할 수 있도록 조건자 함수를 지정하여 이 작업을 수행할 수 있습니다.  Temporal 테이블에서 작업 시 일반적으로 시간 조건을 기준으로 데이터를 이동하는 것이 좋습니다(예: 기록 테이블의 행 버전 보존 기간 기준)    
     결정적 조건자 함수를 사용하면 현재 데이터가 있는 동일한 데이터베이스에서 기록의 일부를 보관하고 나머지는 Azure로 마이그레이션할 수 있습니다.    
     예제 및 제한 사항에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)](https://msdn.microsoft.com/library/mt613432.aspx)을 참조하세요. 비결정적인 함수는 유효하지 않으므로 슬라이딩 윈도우 방식으로 기록 데이터를 전송하려는 경우에는 로컬로 보관할 행의 창이 보관 기간 측면에서 일정하도록 인라인 조건자 함수 정의를 지속적으로 변경해야 합니다. 슬라이딩 윈도우를 사용하면 1개월이 지난 기록 데이터를 지속적으로 Azure로 이동할 수 있습니다. 이 접근 방법의 예는 아래에 표시됩니다.  
   
 > **참고:** Stretch Database는 데이터를 Azure로 마이그레이션합니다. 따라서 대금 청구를 위해 Azure 계정 및 구독이 있어야 합니다. Azure 무료 평가판 계정을 얻으려면 [1개월 무료 평가판](https://azure.microsoft.com/pricing/free-trial/)을 클릭하세요.  
   
- 스트레치 마법사 또는 TRANSACT-SQL을 사용하여 스트레치를 위해 임시 기록 테이블을 구성할 수 있으며 시스템 버전 관리가 **ON**으로 설정되어 있어도 임시 기록 테이블에 스트레치를 사용하도록 설정할 수 있습니다. 현재 테이블을 스트레치하는 것은 의미가 없으므로 허용되지 않습니다.  
+ 스트레치 마법사 또는 TRANSACT-SQL을 사용하여 스트레치를 위해 temporal 기록 테이블을 구성할 수 있으며 시스템 버전 관리가 **ON**으로 설정되어 있어도 temporal 기록 테이블에 스트레치를 사용하도록 설정할 수 있습니다. 현재 테이블을 스트레치하는 것은 의미가 없으므로 허용되지 않습니다.  
   
 ### <a name="using-the-stretch-wizard-to-stretch-the-entire-history-table"></a>스트레치 마법사를 사용하여 전체 기록 테이블 스트레치  
- 초보자를 위한 가장 쉬운 방법은 스트레치 마법사를 사용하여 전체 데이터베이스에 대해 스트레치를 사용하도록 설정한 다음 스트레치 마법사 내에서 임시 기록 테이블을 선택 하는 것입니다(이 예에서는 다른 빈 데이터베이스에서 Department 테이블을 시스템 버전 관리된 임시 테이블로 구성했다고 가정). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 임시 기록 테이블 자체를 마우스 오른쪽 단추로 클릭하고 스트레치를 클릭할 수 없습니다.  
+ 초보자를 위한 가장 쉬운 방법은 스트레치 마법사를 사용하여 전체 데이터베이스에 대해 스트레치를 사용하도록 설정한 다음 스트레치 마법사 내에서 temporal 기록 테이블을 선택 하는 것입니다(이 예에서는 다른 빈 데이터베이스에서 Department 테이블을 시스템 버전 관리된 temporal 테이블로 구성했다고 가정). [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서는 temporal 기록 테이블 자체를 마우스 오른쪽 단추로 클릭하고 스트레치를 클릭할 수 없습니다.  
   
 1.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**, **스트레치**를 차례로 클릭하고 **사용** 을 클릭하여 마법사를 시작합니다.  
   
-2.  **테이블 선택** 창에서 임시 기록 테이블에 대한 확인란을 선택하고 다음을 클릭합니다.  
+2.  **테이블 선택** 창에서 temporal 기록 테이블에 대한 확인란을 선택하고 다음을 클릭합니다.  
   
      ![테이블 선택 페이지에서 기록 테이블 선택](../../relational-databases/tables/media/stretch-wizard-2-for-temporal.png "테이블 선택 페이지에서 기록 테이블 선택")  
   
@@ -86,7 +86,7 @@ ms.lasthandoff: 07/31/2017
   
      ![Stretch Database 마법사의 보안 자격 증명 페이지](../../relational-databases/tables/media/stretch-wizard-6.png "Stretch Database 마법사의 보안 자격 증명 페이지")  
   
-5.  **선택 IP 주소** 창에서 Azure 서버가 SQL Server와 통신할 수 있도록 SQL Server에 대한 IP 주소 범위를 제공합니다. 방화벽 규칙이 이미 있는 기존 서버를 선택한 경우 여기서 다음을 클릭하기만 하면 기존 방화벽 규칙을 사용할 수 있습니다. **다음** 을 클릭하고 **마침** 을 클릭하여 스트레치 데이터베이스를 사용하도록 설정한 다음 임시 기록 테이블을 스트레치합니다.  
+5.  **선택 IP 주소** 창에서 Azure 서버가 SQL Server와 통신할 수 있도록 SQL Server에 대한 IP 주소 범위를 제공합니다. 방화벽 규칙이 이미 있는 기존 서버를 선택한 경우 여기서 다음을 클릭하기만 하면 기존 방화벽 규칙을 사용할 수 있습니다. **다음** 을 클릭하고 **마침** 을 클릭하여 스트레치 데이터베이스를 사용하도록 설정한 다음, temporal 기록 테이블을 스트레치합니다.  
   
      ![Stretch Database 마법사의 IP 주소 선택 페이지](../../relational-databases/tables/media/stretch-wizard-7.png "Stretch Database 마법사의 IP 주소 선택 페이지")  
   
@@ -103,7 +103,7 @@ ms.lasthandoff: 07/31/2017
 -   [테이블에서 스트레치 데이터베이스 활성화](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  
   
 ### <a name="using-transact-sql-to-stretch-the-entire-history-table"></a>Transact-SQL을 사용하여 전체 기록 테이블 스트레치  
- Transact-SQL을 사용하여 로컬 서버에서 스트레치를 사용하도록 설정하고 [데이터베이스에 대해 스트레치 데이터베이스를 사용](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)하도록 설정할 수 있습니다. 그런 다음  [TRANSACT-SQL을 사용하여 테이블에서 스트레치 데이터베이스를 사용하도록 설정](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)할 수 있습니다. 스트레치 데이터베이스에 대해 이전에 사용하도록 설정된 데이터베이스를 사용하여 기존 시스템 버전 관리된 임시 기록 테이블을 스트레치할 수 있도록 다음 Transact-SQL 스크립트를 실행합니다.  
+ Transact-SQL을 사용하여 로컬 서버에서 스트레치를 사용하도록 설정하고 [데이터베이스에 대해 스트레치 데이터베이스를 사용](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)하도록 설정할 수 있습니다. 그런 다음  [TRANSACT-SQL을 사용하여 테이블에서 스트레치 데이터베이스를 사용하도록 설정](https://msdn.microsoft.com/library/mt605115.aspx#Anchor_1)할 수 있습니다. 스트레치 데이터베이스에 대해 이전에 사용하도록 설정된 데이터베이스를 사용하여 기존 시스템 버전 관리된 temporal 기록 테이블을 스트레치할 수 있도록 다음 Transact-SQL 스크립트를 실행합니다.  
   
 ```  
 ALTER TABLE <history table name>   
@@ -165,11 +165,11 @@ COMMIT ;
  SQL Server 에이전트 또는 일부 다른 예약 메커니즘을 사용하여 조건자 함수 정의가 항상 유효한지 확인합니다.  
   
 ## <a name="using-table-partitioning-approach"></a>테이블 분할 접근 방법 사용  
- [테이블 분할](https://msdn.microsoft.com/library/ms188730.aspx) 을 사용하면 큰 테이블을 좀 더 관리 및 확장할 수 있습니다. 테이블 분할 방법으로 기록 테이블 파티션을 사용하여 시간 조건을 기반으로 오프라인으로 보관하거나 사용자 지정 데이터를 정리할 수 있습니다. 또한 테이블 분할을 통해 데이터 기록 하위 집합에서 임시 테이블을 쿼리할 때 파티션 제거를 사용하여 성능이 향상될 수도 있습니다.  
+ [테이블 분할](https://msdn.microsoft.com/library/ms188730.aspx) 을 사용하면 큰 테이블을 좀 더 관리 및 확장할 수 있습니다. 테이블 분할 방법으로 기록 테이블 파티션을 사용하여 시간 조건을 기반으로 오프라인으로 보관하거나 사용자 지정 데이터를 정리할 수 있습니다. 또한 테이블 분할을 통해 데이터 기록 하위 집합에서 temporal 테이블을 쿼리할 때 파티션 제거를 사용하여 성능이 향상될 수도 있습니다.  
   
  테이블 분할 기능을 사용하면 슬라이딩 윈도우 접근 방식을 구현하여 필수 보존 기간에 맞게 데이터를 기록 테이블에서 유지 관리하면서도 기록 테이블에서 가장 오래된 기록 데이터 일부를 이동하여 제외시키고, 기간 측면에서 보관 부분의 크기를 지속적으로 유지할 수 있습니다. SYSTEM_VERSIONING이 ON이더라도 기록 테이블의 데이터를 외부로 전환하는 작업은 지원됩니다. 즉 유지 관리 창을 도입하거나 정기 작업을 차단하지 않고 기록 데이터의 일부를 정리할 수 있습니다.  
   
-> **참고:** 파티션 전환 작업을 수행하려면 기록 테이블에서 클러스터형 인덱스를 분할 스키마에 정렬해야 합니다(SysEndTime 포함 필수). 시스템에서 만든 기본 기록 테이블에는 SysEndTime 및 SysStartTime 열이 포함된 클러스터형 인덱스가 있어 분할, 새 기록 데이터 삽입, 일반적인 임시 쿼리 작업에 적합합니다. 자세한 내용은 [Temporal Tables](../../relational-databases/tables/temporal-tables.md)을 참조하세요.  
+> **참고:** 파티션 전환 작업을 수행하려면 기록 테이블에서 클러스터형 인덱스를 분할 스키마에 정렬해야 합니다(SysEndTime 포함 필수). 시스템에서 만든 기본 기록 테이블에는 SysEndTime 및 SysStartTime 열이 포함된 클러스터형 인덱스가 있어 분할, 새 기록 데이터 삽입, 일반적인 temporal 쿼리 작업에 적합합니다. 자세한 내용은 [Temporal 테이블](../../relational-databases/tables/temporal-tables.md)을 참조하세요.  
   
  슬라이딩 윈도우 방식에서는 다음 두 가지 작업을 수행해야 합니다.  
   
@@ -355,23 +355,23 @@ COMMIT TRANSACTION
   
  일반 응용 프로그램 및 사용자 쿼리를 최소한으로 차단하려면 트랜잭션 내에서 정리 스크립트를 수행할 때 지연을 두고 더 작은 청크로 데이터를 삭제합니다. 모든 시나리오에서 삭제할 각 데이터 청크에 적합한 크기는 없지만 단일 트랜잭션에서 10,000개 이상의 행을 삭제하면 상당한 영향을 미칠 수 있습니다.  
   
- 정리 논리는 모든 임시 테이블에서 동일합니다. 따라서 데이터 기록을 제한하려는 모든 임시 테이블에 대해 정기적인 실행이 예약된 일반 저장 프로시저를 통해 비교적 쉽게 자동화할 수 있습니다.  
+ 정리 논리는 모든 temporal 테이블에서 동일합니다. 따라서 데이터 기록을 제한하려는 모든 temporal 테이블에 대해 정기적인 실행이 예약된 일반 저장 프로시저를 통해 비교적 쉽게 자동화할 수 있습니다.  
   
  다음 다이어그램에서는 실행 중인 작업에 미치는 영향을 줄이기 위해 단일 테이블에 대해 정리 논리를 구성하는 방식을 보여 줍니다.  
   
  ![CustomCleanUpScriptDiagram](../../relational-databases/tables/media/customcleanupscriptdiagram.png "CustomCleanUpScriptDiagram")  
   
- 다음은 프로세스의 구현을 위한 높은 수준의 몇 가지 지침입니다. 정리 논리를 매일 실행하고 데이터 정리에 필요한 모든 임시 테이블에서 반복될 수 있게 예약합니다. SQL Server 에이전트 또는 다른 도구를 사용하여 다음 프로세스를 예약합니다.  
+ 다음은 프로세스의 구현을 위한 높은 수준의 몇 가지 지침입니다. 정리 논리를 매일 실행하고 데이터 정리에 필요한 모든 temporal 테이블에서 반복될 수 있게 예약합니다. SQL Server 에이전트 또는 다른 도구를 사용하여 다음 프로세스를 예약합니다.  
   
--   가장 오래된 행부터 시작하여 가장 최신 행까지 작은 청크로 여러 번 반복을 거쳐 모든 임시 테이블의 기록 데이터를 삭제하고, 위 그림에서와 같이 단일 트랜잭션의 모든 행을 삭제하지 마세요.  
+-   가장 오래된 행부터 시작하여 가장 최신 행까지 작은 청크로 여러 번 반복을 거쳐 모든 temporal 테이블의 기록 데이터를 삭제하고, 위 그림에서와 같이 단일 트랜잭션의 모든 행을 삭제하지 마세요.  
   
 -   모든 반복은 기록 테이블에서 일부 데이터를 제거하는 일반 저장 프로시저를 호출하여 구현합니다(이 프로시저에 대한 내용은 아래 코드 예제 참조).  
   
--   프로세스를 호출할 때마다 개별 임시 테이블에 대해 삭제해야 하는 행 수를 계산합니다. 행 수와 호출 수에 따라 모든 프로시저 호출에 대한 분할 지점을 동적으로 결정합니다.  
+-   프로세스를 호출할 때마다 개별 temporal 테이블에 대해 삭제해야 하는 행 수를 계산합니다. 행 수와 호출 수에 따라 모든 프로시저 호출에 대한 분할 지점을 동적으로 결정합니다.  
   
--   임시 테이블에 액세스하는 응용 프로그램에 미치는 영향을 줄이기 위해 단일 테이블에 대한 반복 간 지연 기간을 설정하도록 계획합니다.  
+-   Temporal 테이블에 액세스하는 응용 프로그램에 미치는 영향을 줄이기 위해 단일 테이블에 대한 반복 간 지연 기간을 설정하도록 계획합니다.  
   
- 단일 임시 테이블에 대한 데이터를 삭제하는 저장 프로시저는 다음 코드 조각과 유사하게 표현될 수 있습니다(환경에 적용하기 전에 이 코드를 주의 깊게 검토한 후 조정 필요).  
+ 단일 temporal 테이블에 대한 데이터를 삭제하는 저장 프로시저는 다음 코드 조각과 유사하게 표현될 수 있습니다(환경에 적용하기 전에 이 코드를 주의 깊게 검토한 후 조정 필요).  
   
 ```  
 DROP PROCEDURE IF EXISTS sp_CleanupHistoryData;  
@@ -428,10 +428,10 @@ BEGIN TRAN
 COMMIT;  
 ```  
 
-## <a name="using-temporal-history-retention-policy-approach"></a>임시 기록 보존 정책 접근 방식 사용
-> **참고:** 임시 기록 보존 정책 접근 방식 사용은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3 이상에 적용됩니다.  
+## <a name="using-temporal-history-retention-policy-approach"></a>Temporal 기록 보존 정책 접근 방식 사용
+> **참고:** Temporal 기록 보존 정책 접근 방식 사용은 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] 및 SQL Server 2017 CTP 1.3 이상에 적용됩니다.  
 
-임시 기록 보존은 개별 테이블 수준에서 구성할 수 있으므로 사용자가 유연한 에이징 정책을 만들 수 있습니다. 임시 보존 적용은 간단해서, 테이블을 만들거나 스키마를 변경할 때 매개 변수 하나만 설정하면 됩니다.
+Temporal 기록 보존은 개별 테이블 수준에서 구성할 수 있으므로 사용자가 유연한 에이징 정책을 만들 수 있습니다. Temporal 보존 적용은 간단해서, 테이블을 만들거나 스키마를 변경할 때 매개 변수 하나만 설정하면 됩니다.
 
 보존 정책을 정의한 후부터 Azure SQL Database는 자동 데이터 정리를 사용할 수 있는 기록 행이 있는지 정기적으로 확인합니다. 일치하는 행을 식별하고 기록 테이블에서 제거하는 작업은 시스템에서 예약하고 실행하는 백그라운드 태스크로 투명하게 수행됩니다. 기록 테이블 행의 기간 조건은 SYSTEM_TIME 기간의 종료를 나타내는 열을 기준으로 확인됩니다. 예를 들어 보존 기간이 6개월로 설정된 경우 정리할 수 있는 테이블 행은 다음 조건을 만족합니다.
 ```
@@ -439,12 +439,12 @@ ValidTo < DATEADD (MONTH, -6, SYSUTCDATETIME())
 ```
 앞의 예제에서는 ValidTo 열이 SYSTEM_TIME 기간의 종료에 해당한다고 가정했습니다.
 ### <a name="how-to-configure-retention-policy"></a>보존 정책을 구성하는 방법
-임시 테이블의 보존 정책을 구성하려면 먼저 데이터베이스 수준에서 임시 기록 보존이 사용하도록 설정되어 있는지 확인해야 합니다.
+Temporal 테이블의 보존 정책을 구성하려면 먼저 데이터베이스 수준에서 temporal 기록 보존이 사용하도록 설정되어 있는지 확인해야 합니다.
 ```
 SELECT is_temporal_history_retention_enabled, name
 FROM sys.databases
 ```
-데이터베이스 플래그 **is_temporal_history_retention_enabled**는 기본적으로 ON으로 설정되어 있지만 사용자가 ALTER DATABASE 문을 사용하여 변경할 수 있습니다. 특정 시점 복원 작업 후에도 자동으로 OFF로 설정됩니다. 데이터베이스에 대한 임시 기록 보존 정리를 사용하도록 설정하려면 다음 문을 실행합니다.
+데이터베이스 플래그 **is_temporal_history_retention_enabled**는 기본적으로 ON으로 설정되어 있지만 사용자가 ALTER DATABASE 문을 사용하여 변경할 수 있습니다. 특정 시점 복원 작업 후에도 자동으로 OFF로 설정됩니다. 데이터베이스에 대한 temporal 기록 보존 정리를 사용하도록 설정하려면 다음 문을 실행합니다.
 ```
 ALTER DATABASE <myDB>
 SET TEMPORAL_HISTORY_RETENTION  ON
@@ -475,7 +475,7 @@ DAYS, WEEKS, MONTHS 및 YEARS와 같은 여러 시간 단위를 사용하여 보
 ALTER TABLE dbo.WebsiteUserInfo
 SET (SYSTEM_VERSIONING = ON (HISTORY_RETENTION_PERIOD = 9 MONTHS));
 ```
-보존 정책의 현재 상태를 살펴보려면 데이터베이스 수준에서 임시 보존 사용 플래그를 개별 테이블의 보존 기간과 조인하는 다음 쿼리를 사용합니다.
+보존 정책의 현재 상태를 살펴보려면 데이터베이스 수준에서 temporal 보존 사용 플래그를 개별 테이블의 보존 기간과 조인하는 다음 쿼리를 사용합니다.
 ```
 SELECT DB.is_temporal_history_retention_enabled,
 SCHEMA_NAME(T1.schema_id) AS TemporalTableSchema,
@@ -489,25 +489,25 @@ LEFT JOIN sys.tables T2
 ON T1.history_table_id = T2.object_id WHERE T1.temporal_type = 2
 ```
 ### <a name="how-sql-database-deletes-aged-rows"></a>SQL Database에서 오래된 행을 삭제하는 방법
-정리 프로세스는 기록 테이블의 인덱스 레이아웃에 따라 달라집니다. *클러스터형 인덱스(B-트리 또는 columnstore)를 사용하는 기록 테이블에만 유한 보존 정책을 구성할 수 있다*는 점을 기억해야 합니다. 보존 기간이 한정된 모든 임시 테이블에 대한 오래된 데이터 정리를 수행하는 백그라운드 태스크가 만들어집니다. rowstore(B-트리) 클러스터형 인덱스에 대한 정리 논리에서는 더 작은 청크(최대 10K)의 오래된 행을 삭제하여 데이터베이스 로그 및 I/O 하위 시스템에 주는 부담을 최소화합니다. 정리 논리에서 필요한 B-트리 인덱스를 활용하긴 하지만 보존 기간보다 오래된 행의 삭제 순서를 확실히 보장할 수는 없습니다. 따라서 *응용 프로그램의 정리 순서를 신뢰하지 마세요*.
+정리 프로세스는 기록 테이블의 인덱스 레이아웃에 따라 달라집니다. *클러스터형 인덱스(B-트리 또는 columnstore)를 사용하는 기록 테이블에만 유한 보존 정책을 구성할 수 있다*는 점을 기억해야 합니다. 보존 기간이 한정된 모든 temporal 테이블에 대한 오래된 데이터 정리를 수행하는 백그라운드 태스크가 만들어집니다. rowstore(B-트리) 클러스터형 인덱스에 대한 정리 논리에서는 더 작은 청크(최대 10K)의 오래된 행을 삭제하여 데이터베이스 로그 및 I/O 하위 시스템에 주는 부담을 최소화합니다. 정리 논리에서 필요한 B-트리 인덱스를 활용하긴 하지만 보존 기간보다 오래된 행의 삭제 순서를 확실히 보장할 수는 없습니다. 따라서 *응용 프로그램의 정리 순서를 신뢰하지 마세요*.
 
 클러스터형 columnstore에 대한 정리 태스크는 전체 행 그룹을 한 번에 제거하므로(일반적으로 각 그룹에 1백만 개 행 포함) 매우 효율적이며, 기록 데이터가 빠른 속도로 생성되는 경우 특히 효율적입니다.
 
 ![클러스터형 columnstore 보존](../../relational-databases/tables/media/cciretention.png "클러스터형 columnstore 보존")
 
-클러스터형 columnstore 인덱스는 데이터 압축이 뛰어나고 보존 정리가 효율적이므로 작업에서 대량의 기록 데이터를 빠르게 생성하는 시나리오에 적합합니다. 이런 패턴은 변경 내용 추적 및 감사, 추세 분석 또는 IoT 데이터 수집에 임시 테이블을 사용하는 집약적 트랜잭션 처리 작업에서 일반적으로 나타납니다.
+클러스터형 columnstore 인덱스는 데이터 압축이 뛰어나고 보존 정리가 효율적이므로 작업에서 대량의 기록 데이터를 빠르게 생성하는 시나리오에 적합합니다. 이런 패턴은 변경 내용 추적 및 감사, 추세 분석 또는 IoT 데이터 수집에 temporal 테이블을 사용하는 집약적 트랜잭션 처리 작업에서 일반적으로 나타납니다.
 
-자세한 내용은 [보존 정책을 사용하여 임시 테이블에서 기록 데이터 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
+자세한 내용은 [보존 정책을 사용하여 temporal 테이블에서 기록 데이터 관리](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-temporal-tables-retention-policy)를 참조하세요.
 
 ## <a name="see-also"></a>관련 항목:  
- [임시 테이블](../../relational-databases/tables/temporal-tables.md)   
- [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
- [임시 테이블 시스템 일관성 검사](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
- [임시 테이블을 사용하여 분할](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
- [임시 테이블 고려 사항 및 제한 사항](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
- [임시 테이블 보안](../../relational-databases/tables/temporal-table-security.md)   
- [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
- [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
+ [Temporal 테이블](../../relational-databases/tables/temporal-tables.md)   
+ [시스템 버전 관리 temporal 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
+ [Temporal 테이블 시스템 일관성 검사](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
+ [Temporal 테이블을 사용하여 분할](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
+ [Temporal 테이블 고려 사항 및 제한 사항](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
+ [Temporal 테이블 보안](../../relational-databases/tables/temporal-table-security.md)   
+ [메모리 최적화 테이블을 포함한 시스템 버전 temporal 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [Temporal 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
 

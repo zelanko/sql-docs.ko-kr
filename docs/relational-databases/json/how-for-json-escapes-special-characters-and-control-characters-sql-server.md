@@ -1,5 +1,5 @@
 ---
-title: "FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법(SQL Server) | Microsoft 문서"
+title: "FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/16/2017
@@ -30,7 +30,7 @@ ms.lasthandoff: 07/31/2017
   이 항목에서는 SQL Server **SELECT**의 **FOR JSON** 절이 특수 문자를 이스케이프 처리하고 JSON 출력에서 제어 문자를 표시하는 방법에 대해 설명합니다.  
 
 > [!IMPORTANT]
-> 이 페이지에서는 Microsoft SQL Server에서 기본 제공되는 JSON 지원에 대해 설명합니다. JSON에서 이스케이프 및 인코딩에 대한 일반적인 정보는 JSON RFC - [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt)의 섹션 2.5를 참조하세요.
+> 이 페이지에서는 Microsoft SQL Server에서 기본 제공 지원되는 JSON 지원에 대해 설명합니다. JSON에서 이스케이프 및 인코딩에 대한 일반적인 정보는 JSON RFC - [http://www.ietf.org/rfc/rfc4627.txt](http://www.ietf.org/rfc/rfc4627.txt)의 섹션 2.5를 참조하세요.
 
 ## <a name="escaping-of-special-characters"></a>특수 문자를 이스케이프 처리  
 원본 데이터에 특수 문자가 포함된 경우 **FOR JSON** 절은 다음 표에 나와 있는 것처럼 `\`를 사용하여 JSON 출력의 특수 문자를 이스케이프 처리합니다. 속성 이름과 해당 값에서 모두 특수 문자가 이와 같이 이스케이프 처리됩니다.  

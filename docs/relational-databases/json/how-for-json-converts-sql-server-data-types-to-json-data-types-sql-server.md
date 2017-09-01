@@ -1,5 +1,5 @@
 ---
-title: "FOR JSON을 통해 SQL Server 데이터 형식을 JSON 데이터 형식으로 변환하는 방법(SQL Server) | Microsoft 문서"
+title: "FOR JSON을 통해 SQL Server 데이터 형식을 JSON 데이터 형식으로 변환하는 방법(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/07/2016
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
 |비트 유형|bit|부울(true 또는 false)|  
 |날짜 및 시간 유형|date, datetime, datetime2, time, datetimeoffset|string|  
 |이진 유형|varbinary, binary, image, timestamp, rowversion|Base64로 인코딩된 문자열|  
-|CLR 유형|geometry, geography, 기타 CLR 형식|지원되지 않습니다. 이러한 유형은 오류를 반환합니다.<br /><br /> SELECT 문에서 CAST 또는 CONVERT를 사용하거나, CLR 속성 또는 메서드를 사용하여 원본 데이터를 JSON 형식으로 변환할 수 있는 SQL Server 데이터 형식으로 변환합니다. 예를 들어 모든 geometry 형식의 경우 **STAsText()**를 사용하고 CLR 형식의 경우 **ToString()**를 사용합니다. 그러면 JSON 출력 값의 형식이 SELECT 문에서 적용하는 변환의 반환 형식에서 파생됩니다.|  
+|CLR 유형|geometry, geography, 기타 CLR 형식|지원되지 않습니다. 이러한 유형은 오류를 반환합니다.<br /><br /> SELECT 문에서 CAST 또는 CONVERT를 사용하거나 CLR 속성 또는 메서드를 사용하여, JSON 형식으로 변환할 수 있는 SQL Server 데이터 형식으로 원본 데이터를 변환합니다. 예를 들어 모든 geometry 형식의 경우 **STAsText()**를 사용하고 CLR 형식의 경우 **ToString()**를 사용합니다. 그러면 JSON 출력 값의 형식이 SELECT 문에서 적용하는 변환의 반환 형식에서 파생됩니다.|  
 |다른 유형|uniqueidentifier, money|string|  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
