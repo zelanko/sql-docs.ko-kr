@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6aa73e749d4f308265dfe27a160802c15a391a3e
-ms.openlocfilehash: 6c17972f863043a53bf60b6c814aaac0c3c38d51
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
@@ -199,7 +199,8 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |지연된 내구성|예|예|예|예|예|
 |자동 튜닝|예|아니오|아니오|아니오|아니요|
 |일괄 처리 모드 적응 조인|예|아니오|아니오|아니오|아니요|
-|일괄 처리 메모리 부여 피드백|예|아니오|아니오|아니오|아니요|
+|일괄 처리 모드 메모리 부여 피드백|예|아니오|아니오|아니오|아니요|
+|다중 문 테이블 반환 함수에 대한 인터리브 실행|예|예|예|예|예|
 |대량 삽입 기능 개선|예|예|예|예|예|
 
 
