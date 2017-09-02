@@ -114,7 +114,7 @@ ms.lasthandoff: 08/02/2017
  \* Microsoft는 특별히 TAP(기술 채택 프로그램)에 참여하는 고객들을 위해 릴리스 후보 소프트웨어에서의 업그레이드를 지원합니다. 
 
    
-###  <a name="SupportFor2005">[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 대한 </a> [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 지원  
+###  <a name="SupportFor2005"></a> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 대한  [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 지원  
  이 섹션에서는 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 에 대한 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]지원에 대해 설명합니다. [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]에서는 다음을 수행할 수 있습니다.  
   
 -   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 데이터베이스(mdf/ldf 파일)를 데이터베이스 엔진의 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 인스턴스에 연결합니다.  
