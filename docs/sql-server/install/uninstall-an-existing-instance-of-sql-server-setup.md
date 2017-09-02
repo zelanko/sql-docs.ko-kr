@@ -1,5 +1,5 @@
 ---
-title: "SQL Server의 기존 인스턴스 제거(설치) | Microsoft 문서"
+title: "SQL Server의 기존 인스턴스 제거(설치) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/27/2017
 ms.prod: sql-server-2016
@@ -21,16 +21,16 @@ caps.latest.revision: 74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
 ms.openlocfilehash: 31c1a78b0f951933fea5927efd7acc13a6ce6f6c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="uninstall-an-existing-instance-of-sql-server-setup"></a>SQL Server의 기존 인스턴스 제거(설치)
 
- > 이전 버전의 SQL Server와 관련 된 콘텐츠를 참조 하십시오. [기존 SQL Server 인스턴스 (설치)를 제거](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx)합니다.
+ > 이전 버전의 SQL Server와 관련된 콘텐츠는 [SQL Server의 기존 인스턴스 제거(설치)](https://msdn.microsoft.com/en-US/library/ms143412(SQL.120).aspx)를 참조하세요.
 
   이 문서에서는 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 제거하는 방법에 대해 설명합니다. 이 항목의 단계를 수행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 설치할 수 있도록 시스템을 준비할 수도 있습니다.  
   

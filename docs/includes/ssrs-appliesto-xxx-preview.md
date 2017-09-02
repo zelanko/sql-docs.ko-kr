@@ -1,1 +1,1 @@
-**이 항목 적용 대상:**![없습니다](media/no.png)SQL Server 2016![예](media/yes.png)Power BI 보고서 서버
+**이 항목은 다음에 적용됩니다.**![아니요](media/no.png)SQL Server 2016![예](media/yes.png)Power BI Report Server

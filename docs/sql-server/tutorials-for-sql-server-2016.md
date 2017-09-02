@@ -1,5 +1,5 @@
 ---
-title: "SQL Server에 대 한 자습서 | Microsoft Docs"
+title: "SQL Server 자습서 | Microsoft Docs"
 ms.custom: 
 ms.date: 06/21/2017
 ms.prod: sql-server-2016
@@ -14,19 +14,19 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: erikre
-ms.translationtype: Human Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/23/2017
+ms.lasthandoff: 07/31/2017
 
 ---
-# <a name="tutorials-for-sql-server"></a>SQL Server에 대 한 자습서
+# <a name="tutorials-for-sql-server"></a>SQL Server 자습서
 [!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
 
-[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]새로운 기술 및 기능을 알아보는 데 도움이 되는 자습서를 제공 합니다. 이전 버전에 대 한 자습서는 일반적으로 최신 버전으로 사용할 수 있습니다. 자습서는 새로운 기능을 해결 하는 경우 자습서를 완료 하려면 최소 버전은 나타냅니다.  
+[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서는 새로운 기술과 기능을 알아볼 수 있는 자습서를 제공합니다. 대개 이전 버전용 자습서를 최신 버전에서도 사용할 수 있습니다. 자습서에서 최신 기능을 설명할 때는 자습서를 완료하는 데 필요한 최소 버전이 표시됩니다.  
      
--   자습서 중 하나를 사용 하는 경우는 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스를 다운로드 하 여 CodePlex에서 최신 버전을 사용 해야 합니다. 자세한 내용은 참조 [SQL Server 2016 c t p 3 용 AdventureWorks 데이터베이스 및 스크립트](https://www.microsoft.com/download/details.aspx?id=49502)합니다.    
+-   자습서에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스 중 하나를 사용하는 경우에는 CodePlex에서 최신 버전을 다운로드하여 사용해야 합니다. 자세한 내용은 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)(SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트)을 참조하세요.    
 -   [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] 자습서에서 사용할 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 통합 문서와 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 보고서를 다운로드하려면 [SQL Server 2012용 파워 뷰 샘플](http://go.microsoft.com/fwlink/?LinkId=220734)로 이동합니다.  
 - [sql-server-samples](https://msdn.microsoft.com/library/mt734199(SQL.1).aspx) GitHub 리포지토리에서 사용할 수 있는 새로운 [Wide World Importers](https://github.com/Microsoft/sql-server-samples) 샘플을 확인합니다. 
 
