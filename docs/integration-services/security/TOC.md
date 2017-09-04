@@ -1,4 +1,4 @@
-# [위협 요소 및 취약성 완화](threat-and-vulnerability-mitigation-integration-services.md)
-# [패키지에서 사용되는 파일 액세스](access-to-files-used-by-packages.md)
-# [Integration Services 서비스 액세스](access-to-the-integration-services-service.md)
-# [보안](security-overview-integration-services.md)
+# [개요](security-overview-integration-services.md)  
+# [패키지의 중요한 데이터에 대한 액세스 제어](access-control-for-sensitive-data-in-packages.md)  
+# [디지털 서명을 사용하여 패키지 원본 확인](identify-the-source-of-packages-with-digital-signatures.md)  
+# [Integration Services 역할(SSIS 서비스)](integration-services-roles-ssis-service.md)
