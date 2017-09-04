@@ -4,17 +4,17 @@ description: "및 SQL Server 2017 컨테이너 이미지 Docker에서 상호 작
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 66f625f1739f17f20a6b5e2a564f2d72f81d6b95
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker에서 SQL Server 2017 컨테이너 이미지를 구성 합니다.
@@ -227,7 +227,7 @@ docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
 docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 
-## <a name="upgrade-sql-server-in-containers"></a>컨테이너에서 SQL Server 업그레이드
+## <a id="upgrade"></a>컨테이너에서 SQL Server 업그레이드
 
 Docker가 있는 컨테이너 이미지를 업그레이드 하려면 레지스트리에서 최신 버전을 꺼냅니다. 사용 하 여 `docker pull` 명령:
 
@@ -237,15 +237,51 @@ docker pull microsoft/mssql-server-linux:latest
 
 SQL Server 이미지를 만든 모든 새 컨테이너를 업데이트 하지만 모든 실행 중인 컨테이너의 SQL Server를 업데이트 하지 않습니다. 이 위해 새 컨테이너를 최신 SQL Server 컨테이너 이미지를 만들고 해야 해당 새 컨테이너에 데이터를 마이그레이션할 합니다.
 
-1. 먼저 중 하나를 사용 하 고 있는지를 확인는 [데이터 지 속성 방법](#persist) 기존 SQL Server 컨테이너에 대 한 합니다.
+1. 먼저, 최신 SQL Server 컨테이너 이미지를 가져옵니다.
 
-2. 사용 하 여 SQL Server 컨테이너를 중지는 `docker stop` 명령입니다.
+   ```bash
+   docker pull microsoft/mssql-server-linux:latest
+   ```
 
-3. 사용 하 여 새 SQL Server 컨테이너 만들기 `docker run` 매핑된 호스트 디렉터리 또는 데이터 볼륨 컨테이너를 지정 합니다. 이제 새 컨테이너는 기존 SQL Server 데이터와 새 버전의 SQL Server를 사용합니다.
+1. 중 하나를 사용 하 고 있는지 확인은 [데이터 지 속성 방법](#persist) 기존 SQL Server 컨테이너에 대 한 합니다. 이렇게 하면 동일한 데이터를 새 컨테이너를 시작할 수 있습니다.
 
-4. 데이터베이스와 새 컨테이너의에서 데이터를 확인 합니다.
+1. 사용 하 여 SQL Server 컨테이너를 중지는 `docker stop` 명령입니다.
 
-5. 그러면 이전 컨테이너와 필요에 따라 제거 `docker rm`합니다.
+1. 사용 하 여 새 SQL Server 컨테이너 만들기 `docker run` 매핑된 호스트 디렉터리 또는 데이터 볼륨 컨테이너를 지정 합니다. 이제 새 컨테이너는 기존 SQL Server 데이터와 새 버전의 SQL Server를 사용합니다.
+
+   > [!IMPORTANT]
+   > 업그레이드는이 이번에 RC1와 RC2 사이 에서만 지원 됩니다.
+
+1. 데이터베이스와 새 컨테이너의에서 데이터를 확인 합니다.
+
+1. 그러면 이전 컨테이너와 필요에 따라 제거 `docker rm`합니다.
+
+## <a name="run-a-specific-sql-server-container-image"></a>특정 SQL Server 컨테이너 이미지를 실행 합니다.
+
+여기서 수 원하지 최신 SQL Server 컨테이너 이미지를 사용 하는 시나리오가 있습니다. 특정 SQL Server 컨테이너 이미지를 실행 하려면 다음 단계를 사용 합니다.
+
+1. Docker 식별 **태그** 사용 하려는 릴리스에 대 한 합니다. 사용 가능한 태그를 보려면 참조 [mssql-서버-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)합니다.
+
+1. 태그와 SQL Server 컨테이너 이미지를 끌어옵니다. 예를 들어 대체 RC1 이미지를 끌어오려면 `<image_tag>` 다음 명령에 `rc1`합니다.
+
+   ```bash
+   docker pull microsoft/mssql-server-linux:<image_tag>
+   ```
+
+1. 새 컨테이너 이미지를 실행 하려면에 태그 이름을 지정는 `docker run` 명령입니다. 다음 명령에서 `<image_tag>` 실행 하려는 버전입니다.
+
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux:<image_tag>
+   ```
+
+이러한 단계는 기존 컨테이너를 다운 그레이드 하 데도 사용할 수 있습니다. 예를 들어 rollback을 하거나 문제를 해결 하거나 테스트에 대 한 실행 중인 컨테이너를 다운 그레이드할 수 있습니다. 실행 중인 컨테이너를 다운 그레이드 하려면 사용 해야 하는 지 속성 기술 데이터 폴더에 대 한 합니다. 에 설명 된 동일한 단계에 따라는 [섹션 업그레이드](#upgrade), 하지만 새 컨테이너를 실행 하면 이전 버전의 태그 이름을 지정 합니다.
+
+> [!IMPORTANT]
+> 업그레이드 및 다운 그레이드만 사용할 수 RC1와 RC2 사이이 이번에 있습니다.
 
 ## <a id="troubleshooting"></a>문제 해결
 

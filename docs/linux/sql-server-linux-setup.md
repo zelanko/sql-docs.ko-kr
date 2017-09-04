@@ -4,19 +4,21 @@ description: "설치, 업데이트 및 Linux에서 SQL Server를 제거 합니�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 08/28/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: c5bd1be5cbe08e9454b1640d9dd58584aa54955f
+ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
+ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
+
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 항목에서는 설치, 업데이트 및 SQL Server 2017 Linux에서 제거 하는 방법에 설명 합니다. SQL Server 2017 RC2 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 및 Ubuntu에서 지원 됩니다. Linux 또는 Docker에 대 한 Windows/Mac. Docker 엔진에서 실행할 수 있는 Docker 이미지 형식으로 제공 됩니다.
 
@@ -57,11 +59,11 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 - [Red Hat Enterprise Linux에 설치](quickstart-install-connect-red-hat.md)
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
-- [Docker에서 실행](quickstart-install-connect-ubuntu.md)
+- [Docker에서 실행](quickstart-install-connect-docker.md)
 
-## <a id="upgrade"></a>SQL Server 업그레이드
+## <a id="upgrade"></a>SQL Server를 업데이트 합니다.
 
-업그레이드 하는 **mssql 서버** linux 플랫폼에 따라 다음 명령 중 하나를 사용 합니다.
+업데이트 하는 **mssql 서버** 을 최신 릴리스로 해당 플랫폼에 따라 다음 명령 중 하나를 사용 합니다.
 
 | 플랫폼 | 패키지 업데이트 명령 |
 |-----|-----|
@@ -70,6 +72,26 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 | Ubuntu | `sudo apt-get update`<br/>`sudo apt-get install mssql-server` |
 
 이 명령은 최신 패키지를 다운로드 하 고 아래에 있는 이진 파일을 대체 `/opt/mssql/`합니다. 사용자가 생성 한 데이터베이스 및 시스템 데이터베이스는이 작업에 영향을 받지 않습니다.
+
+## <a id="rollback"></a>SQL Server 롤백
+
+롤백 또는 SQL Server 이전 버전으로 다운 그레이드 하려면 다음 단계를 사용 합니다.
+
+1. 으로 다운 그레이드 하려면 SQL Server 패키지에 대 한 버전 번호를 식별 합니다. 목록이 패키지 번호에 대 한 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
+
+1. SQL Server의 이전 버전으로 다운 그레이드 합니다. 다음 명령에서 대체 `<version_number>` 을 1 단계에서 식별 된 SQL Server 버전 번호입니다.
+
+   | 플랫폼 | 패키지 업데이트 명령 |
+   |-----|-----|
+   | RHEL | `sudo yum downgrade mssql-server-<version_number>.x86_64` |
+   | SLES | `sudo zypper install --oldpackage mssql-server=<version_number>` |
+   | Ubuntu | `sudo apt-get install mssql-server=<version_number>`<br/>`sudo systemctl start mssql-server` |
+
+> [!NOTE]
+> SQL Server 2017 같은 같은 주 버전 내에서 릴리스를 다운 그레이드 하 에서만 지원 됩니다.
+
+> [!IMPORTANT]
+> 다운 그레이드이 이번에 간의 RC2 및 r c 1만 지원 됩니다.
 
 ## <a id="uninstall"></a>SQL Server 제거
 
@@ -110,7 +132,7 @@ sudo MSSQL_PID=Developer ACCEPT_EULA=Y MSSQL_SA_PASSWORD='<YourStrong!Passw0rd>'
 
 ## <a id="offline"></a>오프 라인 설치
 
-Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소에는 [빠른 시작](#platforms), 패키지 파일을 직접 다운로드할 수 있습니다. 이러한 패키지는 Microsoft 저장소에 있는 [https://packages.microsoft.com](https://packages.microsoft.com)합니다.
+Linux 컴퓨터에 없는 경우 액세스에 사용 되는 온라인 저장소에는 [빠른 시작](#platforms), 패키지 파일을 직접 다운로드할 수 있습니다. 이러한 패키지는 Microsoft 리포지토리([https://packages.microsoft.com](https://packages.microsoft.com))에 있습니다.
 
 > [!TIP]
 > 빠른 시작의 단계와 성공적으로 설치를 다운로드 하거나 아래 패키지를 수동으로 설치할 필요가 없습니다. 이 섹션은 오프 라인 시나리오에 대해서만 합니다.

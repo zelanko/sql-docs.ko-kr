@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
-ms.openlocfilehash: 2d47d1bb82b586890e3bfc250cf09e929a64fb25
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>기능 &#39; s 2017 SQL Server에서 Integration Services의 새로운
@@ -39,7 +39,7 @@ SQL Server 2017에 대 한 Integration Services에서 가장 중요 한 새로�
 
 ## <a name="new-in-the-azure-feature-pack"></a>Azure 기능 팩의 새로운 기능
 
-SQL Server에서 연결 개선 사항 외에도 Azure에 대 한 Integration Services 기능 팩에는 Azure 데이터 레이크 저장소에 대 한 지원을 추가 했습니다. 자세한 내용은 참조 하십시오. [Integration Services (SSIS)에 대 한 Azure 기능 팩](azure-feature-pack-for-integration-services-ssis.md)합니다.
+SQL Server에서 연결 개선 사항 외에도 Azure에 대 한 Integration Services 기능 팩에는 Azure 데이터 레이크 저장소에 대 한 지원을 추가 했습니다. 자세한 내용은 블로그 게시물을 참조 하세요. [새 Azure 기능 팩 릴리스 강화 ADLS 연결](https://blogs.msdn.microsoft.com/ssis/2017/08/29/new-azure-feature-pack-release-strengthening-adls-connectivity/)합니다. 또한 참조 [Integration Services (SSIS)에 대 한 Azure 기능 팩](azure-feature-pack-for-integration-services-ssis.md)합니다.
 
 ## <a name="new-in-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT)의 새로운 기능
 

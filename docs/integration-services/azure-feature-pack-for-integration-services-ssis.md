@@ -1,31 +1,41 @@
 ---
-title: "Integration Services에 대한 Azure 기능 팩(SSIS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "SQL13.SSIS.AZURE.F1"
-  - "SQL14.SSIS.AZURE.F1"
+title: "Integration Services (SSIS)에 대 한 azure 기능 팩 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 08/22/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- SQL13.SSIS.AZURE.F1
+- SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 caps.latest.revision: 19
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: d4204ba56e515025bed3ae3bf8e7a77d6da471be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/30/2017
+
 ---
-# Integration Services에 대한 Azure 기능 팩(SSIS)
-  SQL Server 2016에 대한 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 다음 구성 요소를 제공하는 확장 프로그램입니다.
+# <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
+Azure에 대 한 SQL Server Integration Services (SSIS) 기능 팩에는 Azure 서비스, Azure 및 온-프레미스 데이터 원본 및 Azure에 저장 된 데이터 처리 간에 데이터를 전송에 연결 하는 SSIS 용이 페이지에 나열 된 구성 요소를 제공 하는 확장입니다.
 
-[![Azure용 SSIS 기능 팩 다운로드](../analysis-services/media/download.png)](http://go.microsoft.com/fwlink/?LinkID=626967) **SQL Server 2016에 대한 Azure용 SSIS 기능 팩**  [다운로드](http://go.microsoft.com/fwlink/?LinkID=626967)
+[![Azure 용 SSIS 기능 팩 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=54798) **다운로드**
 
+- SQL server 2017- [Microsoft SQL Server 2017 Integration Services 용 Azure 기능 팩](https://www.microsoft.com/download/details.aspx?id=54798)
+- SQL server 2016- [Microsoft SQL Server 2016 Integration Services 용 Azure 기능 팩](https://www.microsoft.com/download/details.aspx?id=49492)
+- SQL server 2014- [Microsoft SQL Server 2014 Integration Services 용 Azure 기능 팩](https://www.microsoft.com/en-us/download/details.aspx?id=47366)
+- SQL server 2012- [Microsoft SQL Server 2012 Integration Services 용 Azure 기능 팩](https://www.microsoft.com/en-us/download/details.aspx?id=47367)
 
+## <a name="components-in-the-feature-pack"></a>기능 팩의 구성 요소
 -   연결 관리자
 
     -   [Azure Storage 연결 관리자](../integration-services/connection-manager/azure-storage-connection-manager.md)
@@ -33,6 +43,10 @@ caps.handback.revision: 15
     -   [Azure 구독 연결 관리자](../integration-services/connection-manager/azure-subscription-connection-manager.md)
     
     -   [Azure Data Lake Store 연결 관리자](../integration-services/connection-manager/azure-data-lake-store-connection-manager.md)
+    
+    -   [Azure 리소스 관리자 연결 관리자](../integration-services/connection-manager/azure-resource-manager-connection-manager.md)
+    
+    -   [Azure HDInsight 연결 관리자](../integration-services/connection-manager/azure-hdinsight-connection-manager.md)
 
 -   태스크
 
@@ -50,6 +64,8 @@ caps.handback.revision: 15
     
     -   [Azure SQL DW 업로드 태스크](../integration-services/control-flow/azure-sql-dw-upload-task.md)
 
+    -   [Azure 데이터 레이크 저장소 파일 시스템 태스크](../integration-services/control-flow/azure-data-lake-store-file-system-task.md)
+
 -   데이터 흐름 구성 요소
 
     -   [Azure Blob 원본](../integration-services/data-flow/azure-blob-source.md)
@@ -60,16 +76,18 @@ caps.handback.revision: 15
     
     -   [Azure Data Lake Store 대상](../integration-services/data-flow/azure-data-lake-store-destination.md)
 
--   Azure Blob 열거자. [열거자 = Foreach Azure Blob 열거자](../../../Topic/Foreach%20Loop%20Editor%20\(Collection%20Page\).md#ForeachAzureBlob)
+-   Azure Blob 및 ADLS File 열거자를 제공 합니다. 참조 [Foreach 루프 컨테이너](http://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296)
 
 ## <a name="download-the-feature-pack"></a>기능 팩 다운로드
- [여기](http://go.microsoft.com/fwlink/?LinkID=626967)에서 SQL Server 2016에 대한 Azure용 SSIS(SQL Server Integration Services) 기능 팩을 다운로드합니다.
+ Azure에 대 한 SQL Server Integration Services (SSIS) 기능 팩을 다운로드 합니다.
+ 
+- [SSIS 용 기능 팩 Azure](http://go.microsoft.com/fwlink/?LinkID=626967) SQL Server 2016 용
+- [SSIS 용 기능 팩 Azure](https://www.microsoft.com/en-us/download/details.aspx?id=54798) 에 대 한[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
 ## <a name="prerequisites"></a>필수 구성 요소
  이 기능 팩을 설치하기 전에 다음과 같은 필수 조건을 설치해야 합니다.
 
 -   SQL Server Integration Services
-
 -   .Net Framework 4.5
 
 ## <a name="scenario-processing-big-data"></a>시나리오: 빅 데이터 처리
@@ -98,3 +116,4 @@ caps.handback.revision: 15
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
+

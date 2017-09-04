@@ -1,0 +1,10 @@
+# [스크립트 태스크를 사용하여 패키지 확장](extending-the-package-with-the-script-task.md)
+# [스크립트 태스크 편집기에서 스크립트 태스크 구성](configuring-the-script-task-in-the-script-task-editor.md)
+# [스크립트 태스크 코딩 및 디버깅](coding-and-debugging-the-script-task.md)
+# [스크립트 태스크에서 변수 사용](using-variables-in-the-script-task.md)
+# [스크립트 태스크에서 데이터 원본에 연결](connecting-to-data-sources-in-the-script-task.md)
+# [스크립트 태스크에서 이벤트 발생](raising-events-in-the-script-task.md)
+# [스크립트 태스크에서 로깅](logging-in-the-script-task.md)
+# [스크립트 태스크에서 결과 반환](returning-results-from-the-script-task.md)
+
+# [스크립트 태스크 예제](../../extending-packages-scripting-task-examples/script-task-examples.md)
