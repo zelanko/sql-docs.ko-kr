@@ -1,5 +1,5 @@
 ---
-title: "명시적 스키마와 함께 OPENJSON 사용(SQL Server) | Microsoft 문서"
+title: "명시적 스키마와 함께 OPENJSON 사용(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/02/2016

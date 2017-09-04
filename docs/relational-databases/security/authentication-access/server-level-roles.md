@@ -1,5 +1,5 @@
 ---
-title: "서버 수준 역할 | Microsoft 문서"
+title: "서버 수준 역할 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/24/2017
 ms.prod: sql-server-2016

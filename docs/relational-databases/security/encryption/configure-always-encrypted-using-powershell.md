@@ -1,5 +1,5 @@
 ---
-title: "PowerShell을 사용하여 상시 암호화 구성 | Microsoft 문서"
+title: "PowerShell을 사용하여 상시 암호화 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/17/2017
 ms.prod: sql-server-2016

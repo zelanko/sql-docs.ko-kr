@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 및 클라이언트 앱에서 FOR JSON 출력 사용(SQL Server) | Microsoft 문서"
+title: "SQL Server 및 클라이언트 앱에서 FOR JSON 출력 사용(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/02/2016
@@ -31,7 +31,7 @@ ms.lasthandoff: 07/31/2017
 다음 예제에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 클라이언트 앱에서 **FOR JSON** 절 및 해당 JSON 출력을 사용하는 몇 가지 방법이 나와 있습니다.  
   
 ## <a name="use-for-json-output-in-sql-server-variables"></a>SQL 서버 변수에서 FOR JSON 출력 사용  
-FOR JSON 절의 출력은 NVARCHAR(MAX) 형식이므로 다음 예에 나와 있는 것처럼 어떤 변수에나 할당할 수 있습니다.  
+FOR JSON 절의 출력은 NVARCHAR(MAX) 형식이므로 다음 예제에 나와 있는 것처럼 어떤 변수에나 할당할 수 있습니다.  
   
 ```sql  
 DECLARE @x NVARCHAR(MAX) = (SELECT TOP 10 * FROM Sales.SalesOrderHeader FOR JSON AUTO)  
@@ -65,7 +65,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="merge-parent-and-child-data-into-a-single-table"></a>단일 테이블에 부모 및 자식 데이터 병합  
-다음 예제에서 각 자식 행 집합을 JSON 배열로 형식 지정합니다. JSON 배열은 부모 테이블의 Details 열 값이 됩니다.  
+다음 예제에서 각 자식 행 집합은 JSON 배열로 형식 지정됩니다. JSON 배열은 부모 테이블의 Details 열 값이 됩니다.  
   
 ```sql  
 SELECT TOP 10 SalesOrderId, OrderDate,  
@@ -78,7 +78,7 @@ FROM Sales.SalesOrderHeader H
 ```  
   
 ## <a name="update-the-data-in-json-columns"></a>JSON 열의 데이터 업데이트  
- 다음 예에서는 JSON 텍스트가 포함된 열의 값을 업데이트하는 방법을 확인할 수 있습니다.  
+ 다음 예제에는 JSON 텍스트가 포함된 열의 값을 업데이트할 수 있는 방법이 나와 있습니다.  
   
 ```sql  
 UPDATE SalesOrder  

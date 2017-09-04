@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 암호화 | Microsoft 문서"
+title: "SQL Server 암호화 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 05/15/2017

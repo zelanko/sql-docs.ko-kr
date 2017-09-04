@@ -1,5 +1,5 @@
 ---
-title: "DAC 패키지 유효성 검사 | Microsoft 문서"
+title: "DAC 패키지 유효성 검사 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -140,7 +140,7 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
 ### <a name="view-upgrade-actions-example-powershell"></a>업그레이드 동작 보기 예(PowerShell)  
  **업그레이드 동작 보기 예(PowerShell)**  
   
- 다음 예에서는 MyApplication이라는 DAC를 MyApplication2017.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
+ 다음 예제에서는 MyApplication이라는 DAC를 MyApplication2017.dacpac 파일에 정의된 스키마로 업그레이드하기 위해 실행하는 Transact-SQL 문에 대해 보고합니다.  
   
 ```  
 ## Set a SMO Server object to the default instance on the local computer.  

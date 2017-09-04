@@ -1,5 +1,5 @@
 ---
-title: "PolyBase 구성 | Microsoft 문서"
+title: "PolyBase 구성 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/11/2017
 ms.prod: sql-server-2016
@@ -54,7 +54,7 @@ ms.lasthandoff: 07/31/2017
     -   SQL Server PolyBase 엔진  
   
 ## <a name="pushdown-configuration"></a>푸시다운 구성  
- 쿼리 성능을 향상하려면 Hadoop 환경에 맞는 일부 SQL Server 구성 매개 변수를 제공해야 하는 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
+ 쿼리 성능을 향상하려면 Hadoop 클러스터에 푸시다운 계산을 사용하도록 설정합니다. SQL Server에서 Hadoop 환경에 적절한 구성 매개 변수를 일부 지정해야 합니다.  
   
 1.  SQL Server 설치 경로에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
   
@@ -68,7 +68,7 @@ ms.lasthandoff: 07/31/2017
 
 4. 모든 CDH 5.X 버전에서 **mapreduce.application.classpath** 구성 매개 변수를 **yarn.site.xml 파일**의 끝이나 **mapred-site.xml 파일**에 추가해야 합니다. HortonWorks는 **yarn.application.classpath** 구성 내에 이러한 구성을 포함하고 있습니다.
 
-## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>CDH 5.X 클러스터의 yarn-site.xml 및 mapred-site.xml 파일의 예
+## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>CDH 5.X 클러스터의 yarn-site.xml 및 mapred-site.xml 파일의 예제
 
 
 

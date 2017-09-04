@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure의 SQL Server 데이터 파일 | Microsoft 문서"
+title: "Microsoft Azure의 SQL Server 데이터 파일 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016

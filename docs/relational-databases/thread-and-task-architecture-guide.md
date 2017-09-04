@@ -1,5 +1,5 @@
 ---
-title: "스레드 및 태스크 아키텍처 가이드 | Microsoft 문서"
+title: "스레드 및 태스크 아키텍처 가이드 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/26/2016
 ms.prod: sql-non-specified
@@ -98,7 +98,7 @@ CPU가 여러 개인 컴퓨터에서 데이터베이스의 복구 모델을 임�
 * 전체 복구 모델의 경우 max degree of parallelism 옵션 값은 8 이하로 설정해야 합니다.   
 * 대량 로그 모델 또는 단순 복구 모델의 경우에는 max degree of parallelism 옵션 값을 8보다 크게 설정하는 것이 좋습니다.   
 * NUMA가 구성된 서버에서는 최대 병렬 처리 수준이 각 NUMA 노드에 할당된 CPU 수를 초과하면 안 됩니다. 이는 쿼리가 1개의 NUMA 노드에서 로컬 메모리를 사용할 가능성이 높고 이 경우 메모리 액세스 시간을 개선할 수 있기 때문입니다.  
-* 하이퍼스레딩을 사용하며 2009년 이전(하이퍼스레딩 기능이 개선되기 전)에 제조된 서버의 경우 MAXDOP 값이 논리 프로세서가 아닌 실제 프로세서 수를 초과하면 안 됩니다.
+* 하이퍼스레딩을 사용하며 2009년 또는 그 이전(하이퍼스레딩 기능이 개선되기 전)에 제조된 서버의 경우 MAXDOP 값이 논리 프로세서가 아닌 실제 프로세서 수를 초과하면 안 됩니다.
 
 최대 병렬 처리 수준 옵션에 대한 자세한 내용은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 

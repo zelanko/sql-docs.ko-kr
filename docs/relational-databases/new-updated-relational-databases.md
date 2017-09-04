@@ -65,17 +65,17 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 ## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
 
-이 간결한 목록에는 인용 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
+이 간결한 목록에는 발췌 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>업데이트된 문서와 일부 내용
+## <a name="updated-articles-with-excerpts"></a>업데이트된 문서의 발췌 내용
 
 이 섹션에는 최근에 많이 업데이트된 문서에서 발췌한 업데이트 내용이 표시됩니다.
 
-여기에 표시된 발췌 내용은 적절한 의미 체계 맥락과 분리되어 표시됩니다. 때로는 실제 문서에서 이 내용 주변에 있는 중요한 markdown 구문과도 분리되어 표시됩니다. 따라서 이러한 발췌 내용은 일반적인 지침을 제공하기 위한 것입니다. 이 발췌 내용에서는 관심 내용을 클릭하여 실제 문서를 참조할 가치가 있을지 여부만 파악할 수 있습니다.
+여기에 표시된 발췌 내용은 적절한 의미 체계 맥락과 분리되어 표시됩니다. 또한 발췌 내용은 때때로 실제 문서에서 이 내용의 주변에 있는 중요한 markdown 구문과도 분리되어 표시됩니다. 따라서 이러한 발췌 내용은 일반적인 지침을 제공하기 위한 것입니다. 이 발췌 내용에서는 관심 내용을 클릭하여 실제 문서를 참조할 가치가 있을지 여부만 파악할 수 있습니다.
 
 따라서 이러한 발췌 내용에서 코드를 복사하거나 발췌 내용을 정확한 사실로 간주하지 마세요. 대신 실제 문서를 참조하세요.
 
@@ -263,7 +263,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(4+4) : **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(4+4): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
 - [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
 - [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
 - [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)

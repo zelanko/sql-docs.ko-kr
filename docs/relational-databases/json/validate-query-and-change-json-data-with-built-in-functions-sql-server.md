@@ -1,5 +1,5 @@
 ---
-title: "기본 제공 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server) | Microsoft 문서"
+title: "기본 제공 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/17/2017
@@ -28,7 +28,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="validate-query-and-change-json-data-with-built-in-functions-sql-server"></a>기본 함수를 사용하여 JSON 데이터 유효성 검사, 쿼리, 변경(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-JSON의 기본 지원에는 이 항목에서 간단히 설명하는 다음과 같은 기본 제공 함수가 포함됩니다.  
+JSON의 기본 제공 지원에는 이 항목에서 간단히 설명하는 다음과 같은 기본 제공 함수가 포함됩니다.  
   
 -   [ISJSON](#ISJSON) 은 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.  
   

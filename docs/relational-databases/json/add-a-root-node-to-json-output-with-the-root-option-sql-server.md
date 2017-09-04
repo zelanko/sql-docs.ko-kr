@@ -1,5 +1,5 @@
 ---
-title: "ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가(SQL Server) | Microsoft 문서"
+title: "ROOT 옵션을 사용하여 JSON 출력에 루트 노드 추가(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/02/2016

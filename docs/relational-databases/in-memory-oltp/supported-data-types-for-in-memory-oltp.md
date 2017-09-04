@@ -26,7 +26,7 @@ ms.lasthandoff: 07/31/2017
 
   이 문서에서는 다음 항목의 메모리 내 OLTP 기능에 대해 지원되지 않는 데이터 형식을 소개합니다.  
   
--   메모리 액세스에 최적화된 테이블  
+-   메모리 최적화 테이블  
   
 -   고유하게 컴파일된 T-SQL 모듈  
   
@@ -50,18 +50,18 @@ ms.lasthandoff: 07/31/2017
   
 위의 문자열 및 이진 데이터 형식의 경우 SQL Server 2016부터는 다음 사항이 적용됩니다.  
   
-- 메모리 액세스에 최적화된 개별 테이블은 `nvarchar(4000)`등의 긴 열을 여러 개 포함할 수도 있습니다. 이러한 열의 길이로 인해 실제 행 크기가 8060바이트보다 커지더라도 포함이 가능합니다.  
+- 개별 메모리 최적화 테이블은 `nvarchar(4000)`등의 긴 열을 여러 개 포함할 수도 있습니다. 이러한 열의 길이로 인해 실제 행 크기가 8060바이트보다 커지더라도 포함이 가능합니다.  
   
-- 메모리 액세스에 최적화된 테이블은 `varchar(max)`와 같은 데이터 형식의 이진 열과 최대 길이 문자열을 포함할 수 있습니다.  
+- 메모리 최적화 테이블은 `varchar(max)`와 같은 데이터 형식의 이진 열과 최대 길이 문자열을 포함할 수 있습니다.  
 
 
 ### <a name="identify-lobs-and-other-columns-that-are-off-row"></a>LOB 및 기타 행 외부 열 식별
 
-SQL Server 2016부터는 메모리 액세스에 최적화된 테이블이 [행 외부 열을 지원](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)하여, 단일 테이블 행이 8060바이트보다 클 수 있습니다. 다음 Transact-SQL SELECT 문은 메모리 액세스에 최적화된 테이블에 대한 모든 행 외부 열을 보고합니다. 다음을 참고하십시오.
+SQL Server 2016부터는 메모리 최적화 테이블이 [행 외부 열을 지원](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)하여, 단일 테이블 행이 8060바이트보다 클 수 있습니다. 다음 Transact-SQL SELECT 문은 메모리 최적화 테이블에 대한 모든 행 외부 열을 보고합니다. 다음을 참고하십시오.
 
 - 모든 인덱스 키 열은 행에 저장됩니다.
-  - 이제 메모리 액세스에 최적화된 테이블에서 고유하지 않은 인덱스 키에 NULLable 열을 포함할 수 있습니다.
-  - 인덱스는 메모리 액세스에 최적화된 테이블에서 UNIQUE로 선언할 수 있습니다.
+  - 이제 메모리 최적화 테이블에서 고유하지 않은 인덱스 키에 NULLable 열을 포함할 수 있습니다.
+  - 인덱스는 메모리 최적화 테이블에서 UNIQUE로 선언할 수 있습니다.
 - 모든 LOB 열은 행 외부에 저장됩니다.
 - max_length가 -1이면 LOB(Large Object) 열을 나타냅니다.
 
@@ -86,12 +86,12 @@ SELECT
 
 |기타 유형|참조 항목|  
 |-----------------|--------------------------|  
-|테이블 형식|[메모리 액세스에 최적화된 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
+|테이블 형식|[메모리 최적화 테이블 변수](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 내 OLTP에 대한 Transact-SQL 지원](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
- [메모리 액세스에 최적화된 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
- [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+ [메모리 최적화 테이블에서 SQL_VARIANT 구현](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
+ [메모리 최적화 테이블의 테이블 및 행 크기](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능 | Microsoft 문서"
+title: "고유하게 컴파일된 T-SQL 모듈에 대해 지원되는 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/12/2017
 ms.prod: sql-server-2016
@@ -79,7 +79,7 @@ SELECT 절:
 
 FROM 절:  
 
--   FROM \<메모리 액세스에 최적화된 테이블 또는 테이블 변수>  
+-   FROM \<메모리 최적화 테이블 또는 테이블 변수>  
 
 -   FROM \<고유하게 컴파일된 인라인 TVF>  
 
@@ -142,7 +142,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 하지만 **TOP** 절에 상수를 사용하면 변수를 사용할 때보다 나은 성능을 가져옵니다.  
 
-고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대한 이러한 제한 사항은 메모리 액세스에 최적화된 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에는 적용되지 않습니다.  
+고유하게 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에 대한 이러한 제한 사항은 메모리 최적화 테이블에 대한 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 액세스에는 적용되지 않습니다.  
 
 
 ##  <a name="dml"></a> 데이터 수정  
@@ -166,7 +166,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
 
 -   [RETURN&#40;Transact-SQL&#41;](../../t-sql/language-elements/return-transact-sql.md)  
 
--   [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)은 모든 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) 및 메모리 액세스에 최적화된 테이블 형식을 사용합니다. 변수는 NULL 또는 NOT NULL로 선언할 수 있습니다.  
+-   [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)은 모든 [메모리 내 OLTP에 지원되는 데이터 형식](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) 및 메모리 최적화 테이블 형식을 사용합니다. 변수는 NULL 또는 NOT NULL로 선언할 수 있습니다.  
 
 -   [SET @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md)  
 
@@ -198,7 +198,7 @@ SELECT TOP (@v) … FROM … ORDER BY …
       [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1부터 APPLY 연산자는 고유하게 컴파일된 모듈에서 지원됩니다.
 
 ##  <a name="bfncsp"></a> 고유하게 컴파일된 모듈의 기본 제공 함수  
- 다음 함수는 메모리 액세스에 최적화된 테이블에 대한 제약 조건과 고유하게 컴파일된 T-SQL 모듈에서 지원됩니다.  
+ 다음 함수는 메모리 최적화 테이블에 대한 제약 조건과 고유하게 컴파일된 T-SQL 모듈에서 지원됩니다.  
 
 -   모든 [수치 연산 함수&#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
 

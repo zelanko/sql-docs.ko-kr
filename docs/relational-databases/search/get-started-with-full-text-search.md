@@ -1,5 +1,5 @@
 ---
-title: "전체 텍스트 검색 시작 | Microsoft 문서"
+title: "전체 텍스트 검색 시작 | Microsoft Docs"
 ms.date: 08/22/2016
 ms.prod: sql-server-2016
 ms.reviewer: 

@@ -1,5 +1,5 @@
 ---
-title: "메모리 내 OLTP를 통해 JSON 처리 최적화 | Microsoft 문서"
+title: "메모리 내 OLTP를 통해 JSON 처리 최적화 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/18/2017
 ms.prod: sql-server-2017
@@ -24,10 +24,10 @@ ms.lasthandoff: 07/31/2017
 # <a name="optimize-json-processing-with-in-memory-oltp"></a>메모리 내 OLTP를 통해 JSON 처리 최적화
 [!INCLUDE[tsql-appliesto-ssvNxt-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-asdb-xxxx-xxx.md)]
 
-SQL Server 및 Azure SQL Database를 통해 JSON으로 서식이 지정된 텍스트로 작업할 수 있습니다. JSON 데이터를 처리하는 쿼리의 성능을 향상하려면 표준 문자열 열(NVARCHAR 형식)을 사용하여 메모리 액세스에 최적화된 테이블에 JSON 문서를 저장할 수 있습니다. 메모리 액세스에 최적화된 테이블에 JSON 데이터를 저장하면 잠금 해제된 메모리 내 데이터 액세스를 활용하여 쿼리 성능이 향상됩니다.
+SQL Server 및 Azure SQL Database를 통해 JSON으로 서식이 지정된 텍스트로 작업할 수 있습니다. JSON 데이터를 처리하는 쿼리의 성능을 향상하려면 표준 문자열 열(NVARCHAR 형식)을 사용하여 메모리 최적화 테이블에 JSON 문서를 저장할 수 있습니다. 메모리 최적화 테이블에 JSON 데이터를 저장하면 잠금 해제된 메모리 내 데이터 액세스를 활용하여 쿼리 성능이 향상됩니다.
 
-## <a name="store-json-in-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 JSON 저장
-다음 예제에서는 `Tags`와 `Data`라는 두 개의 JSON 열이 있는 메모리 액세스에 최적화된 `Product` 테이블을 보여 줍니다.
+## <a name="store-json-in-memory-optimized-tables"></a>메모리 최적화 테이블에 JSON 저장
+다음 예제에서는 `Tags`와 `Data`라는 두 개의 JSON 열이 있는 메모리 최적화 `Product` 테이블을 보여 줍니다.
 
 ```sql
 CREATE SCHEMA xtp;
@@ -45,15 +45,15 @@ CREATE TABLE xtp.Product(
 
 ## <a name="optimize-json-processing-with-additional-in-memory-features"></a>추가 메모리 내 기능을 통해 JSON 처리 최적화
 SQL Server 및 Azure SQL Database에서 사용할 수 있는 기능을 통해 기존의 메모리 내 OLTP 기술과 JSON 기능을 완벽하게 통합할 수 있습니다. 예를 들어 다음과 같은 작업을 수행할 수 있습니다.
- - 고유하게 컴파일된 CHECK 제약 조건을 사용하여 메모리 액세스에 최적화된 테이블에 저장된 [JSON 문서 구조의 유효성을 검사](#validate)합니다.
+ - 고유하게 컴파일된 CHECK 제약 조건을 사용하여 메모리 최적화 테이블에 저장된 [JSON 문서 구조의 유효성을 검사](#validate)합니다.
  - 계산 열을 사용하여 JSON 문서에 저장된 [값을 노출하고 강력하게 형식화](#computedcol)합니다.
- - 메모리 액세스에 최적화된 인덱스를 사용하여 JSON 문서의 [값을 인덱싱](#index)합니다.
+ - 메모리 최적화 인덱스를 사용하여 JSON 문서의 [값을 인덱싱](#index)합니다.
  - JSON 문서의 값을 사용하거나 JSON 텍스트로 결과의 서식을 지정하는 [SQL 쿼리를 고유하게 컴파일](#compile)합니다.
 
 ## <a name="validate"></a> JSON 열의 유효성 검사
-SQL Server 및 Azure SQL Database를 사용하면 문자열 열에 저장된 JSON 문서 내용의 유효성을 검사하는 고유하게 컴파일된 CHECK 제약 조건을 추가할 수 있습니다. 고유하게 컴파일된 JSON CHECK 제약 조건을 사용하여 메모리 액세스에 최적화된 테이블에 저장된 JSON 텍스트의 서식이 올바르게 지정되었는지 확인할 수 있습니다.
+SQL Server 및 Azure SQL Database를 사용하면 문자열 열에 저장된 JSON 문서 내용의 유효성을 검사하는 고유하게 컴파일된 CHECK 제약 조건을 추가할 수 있습니다. 고유하게 컴파일된 JSON CHECK 제약 조건을 사용하여 메모리 최적화 테이블에 저장된 JSON 텍스트의 서식이 올바르게 지정되었는지 확인할 수 있습니다.
 
-다음 예에서는 JSON 열 `Tags`가 있는 `Product` 테이블을 만듭니다. `Tags` 열에는 `ISJSON` 함수를 사용하여 열에 있는 JSON 텍스트의 유효성을 검사하는 CHECK 제약 조건이 있습니다.
+다음 예제에서는 JSON 열 `Tags`가 있는 `Product` 테이블을 만듭니다. `Tags` 열에는 `ISJSON` 함수를 사용하여 열에 있는 JSON 텍스트의 유효성을 검사하는 CHECK 제약 조건이 있습니다.
 
 ```sql
 DROP TABLE IF EXISTS xtp.Product;
@@ -105,7 +105,7 @@ CREATE TABLE xtp.Product(
 ```
 
 ## <a name="index"></a> JSON 열의 값 인덱싱
-SQL Server 및 Azure SQL Database를 사용하면 메모리 액세스에 최적화된 인덱스를 사용하여 JSON 열의 값을 인덱싱할 수 있습니다. 이전 예제에서 설명한 대로 인덱싱되는 JSON 값은 계산 열을 사용하여 노출되고 강력하게 형식화되어야 합니다.
+SQL Server 및 Azure SQL Database를 사용하면 메모리 최적화 인덱스를 사용하여 JSON 열의 값을 인덱싱할 수 있습니다. 이전 예제에서 설명한 대로 인덱싱되는 JSON 값은 계산 열을 사용하여 노출되고 강력하게 형식화되어야 합니다.
 
 JSON 열의 값은 표준 NONCLUSTERED 및 HASH 인덱스를 사용하여 인덱싱할 수 있습니다.
 -   NONCLUSTERED 인덱스는 일부 JSON 값에 따라 행 범위를 선택하고 JSON 값에 따라 결과를 정렬하는 쿼리를 최적화합니다.

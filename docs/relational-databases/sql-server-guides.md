@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 지침 | Microsoft 문서"
+title: "SQL Server 지침 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/03/2017
 ms.prod: sql-non-specified
@@ -27,7 +27,7 @@ ms.lasthandoff: 07/31/2017
 # <a name="sql-server-guides"></a>SQL Server 지침
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]
 
-다음 가이드를 사용할 수 있습니다. 이러한 가이드는 해당 가이드에 다른 설명이 없는 한 일반 개념을 다루며 모든 버전의 SQL Server에 적용됩니다. 
+다음 가이드를 사용할 수 있습니다. 이러한 가이드는 일반적인 개념을 다루며 각 해당 가이드에 다른 설명이 없는 한, 모든 버전의 SQL Server에 적용됩니다. 
 
 [Always On 가용성 그룹 문제 해결 및 모니터링 가이드](http://msdn.microsoft.com/library/dn135328)  
 [인덱스 디자인 가이드](../relational-databases/sql-server-index-design-guide.md)  

@@ -1,5 +1,5 @@
 ---
-title: "PolyBase 버전 기능 요약 | Microsoft 문서"
+title: "PolyBase 버전 기능 요약 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/13/2016
 ms.prod: sql-non-specified

@@ -1,5 +1,5 @@
 ---
-title: "기술 참조(복제) | Microsoft 문서"
+title: "기술 참조(복제) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

@@ -1,5 +1,5 @@
 ---
-title: "ASP.NET에서 중첩 FOR XML 쿼리 사용 | Microsoft 문서"
+title: "ASP.NET에서 중첩 FOR XML 쿼리 사용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016

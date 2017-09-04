@@ -1,5 +1,5 @@
 ---
-title: "상시 암호화(데이터베이스 엔진) | Microsoft 문서"
+title: "상시 암호화(데이터베이스 엔진) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/24/2017

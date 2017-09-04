@@ -1,5 +1,5 @@
 ---
-title: "실행 계획 논리 및 물리 연산자 참조 | Microsoft 문서"
+title: "실행 계획 논리 및 물리 연산자 참조 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/31/2017
 ms.prod: sql-server-2016
