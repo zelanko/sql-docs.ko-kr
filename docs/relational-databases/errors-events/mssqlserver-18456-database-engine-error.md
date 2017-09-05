@@ -1,5 +1,5 @@
 ---
-title: "MSSQLSERVER_18456 | Microsoft 문서"
+title: MSSQLSERVER_18456 | Microsoft Docs
 ms.custom: 
 ms.date: 06/09/2017
 ms.prod: sql-server-2016

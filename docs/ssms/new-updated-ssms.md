@@ -78,7 +78,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 29. [1단원: SQL Server Management Studio의 기본 탐색](tutorials/lesson-1-basic-navigation-in-sql-server-management-studio.md)
 30. [2-1단원: 쿼리 편집기와 연결](tutorials/lesson-2-1-connecting-with-query-editor.md)
 31. [2-2단원 - 들여쓰기 추가](tutorials/lesson-2-2-adding-indentation.md)
-32. [2-3단원 - 쿼리 편집기 화면 크기](tutorials/lesson-2-3-maximizing-query-editor.md)
+32. [2-3단원 - 쿼리 편집기 창 최대화](tutorials/lesson-2-3-maximizing-query-editor.md)
 33. [2-4단원 - 주석 사용](tutorials/lesson-2-4-using-comments.md)
 34. [2-5단원 - 코드 창을 표시하는 다른 방법](tutorials/lesson-2-5-other-ways-of-viewing-the-code-window.md)
 35. [2-6단원 - 테이블 스크립팅](tutorials/lesson-2-6-script-a-table.md)
@@ -99,17 +99,17 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 ## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
 
-이 간결한 목록에는 인용 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
+이 간결한 목록에는 발췌 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
 
 
 
 &nbsp;
 
-## <a name="updated-articles-with-excerpts"></a>업데이트된 문서와 일부 내용
+## <a name="updated-articles-with-excerpts"></a>업데이트된 문서의 발췌 내용
 
 이 섹션에는 최근에 많이 업데이트된 문서에서 발췌한 업데이트 내용이 표시됩니다.
 
-여기에 표시된 발췌 내용은 적절한 의미 체계 맥락과 분리되어 표시됩니다. 때로는 실제 문서에서 이 내용 주변에 있는 중요한 markdown 구문과도 분리되어 표시됩니다. 따라서 이러한 발췌 내용은 일반적인 지침을 제공하기 위한 것입니다. 이 발췌 내용에서는 관심 내용을 클릭하여 실제 문서를 참조할 가치가 있을지 여부만 파악할 수 있습니다.
+여기에 표시된 발췌 내용은 적절한 의미 체계 맥락과 분리되어 표시됩니다. 또한 발췌 내용은 때때로 실제 문서에서 이 내용의 주변에 있는 중요한 markdown 구문과도 분리되어 표시됩니다. 따라서 이러한 발췌 내용은 일반적인 지침을 제공하기 위한 것입니다. 이 발췌 내용에서는 관심 내용을 클릭하여 실제 문서를 참조할 가치가 있을지 여부만 파악할 수 있습니다.
 
 따라서 이러한 발췌 내용에서 코드를 복사하거나 발췌 내용을 정확한 사실로 간주하지 마세요. 대신 실제 문서를 참조하세요.
 
@@ -141,13 +141,13 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 **개선 사항**
 
 
-- Profiler: 도움말 > 정보에 이제 릴리스 버전 번호(예: 17.1)가 표시됨
+- 프로파일러: 도움말 > 정보에 이제 릴리스 버전 번호(예: 17.1)가 표시됨
 - Analysis Services 사용자가 데이터 원본의 상황에 맞는 메뉴에서 1200 TM 모델 이상에 대해 데이터 원본의 자격 증명을 새로 고칠 수 있음
 - 기본 제공 SSIS 보고서에 CTP 2.1에서 SSIS Scale Out 실행의 로그가 표시됨
 - SSIS Scale Out 관리 응용 프로그램
-  - 확장 마스터에 대한 기본 정보 보기
-  - 확장 배포에 작업자를 쉽게 추가
-  - 모든 확장 작업자 및 해당 작업자에 대한 기본 정보를 보고 간단히 작업자를 사용하거나 사용하지 않도록 설정할 수도 있음
+  - 스케일 아웃 마스터에 대한 기본 정보 보기
+  - 스케일 아웃 배포에 작업자를 쉽게 추가
+  - 모든 스케일 아웃 작업자 및 이들에 대한 기본 정보를 보고, 간단히 이러한 작업자를 사용하거나 사용하지 않도록 설정할 수도 있음
 
 **버그 수정**
 
@@ -160,7 +160,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
   - SSMS 17.0이 Visual Studio 2013에서 SSDT를 중단시키는 문제를 해결함[Connect 항목 3133479]
   - 설치 완료 시 “다시 시작”을 클릭해도 컴퓨터가 다시 시작되지 않는 문제를 해결함
 - 스크립팅: 해당 옵션을 사용하지 않도록 설정하여 삭제를 스크립팅하려고 할 때 SSMS가 Azure 데이터베이스 개체를 실수로 삭제하지 않도록 일시적으로 제한함.  향후 SSMS 릴리스에서 적절한 수정이 제공될 예정입니다.
-- 개체 탐색기: AS COPY를 사용하여 만든 Azure 데이터베이스에 연결할 때 “데이터베이스” 노드가 확장되지 않는 문제를 해결함
+- 개체 탐색기: “AS COPY”를 사용하여 만든 Azure 데이터베이스에 연결할 때 “데이터베이스” 노드가 확장되지 않는 문제를 해결함
 
 
 
@@ -179,7 +179,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(4+4) : **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(4+4): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
 - [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
 - [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
 - [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)

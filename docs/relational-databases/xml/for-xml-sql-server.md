@@ -1,5 +1,5 @@
 ---
-title: "FOR XML(SQL Server) | Microsoft 문서"
+title: FOR XML(SQL Server) | Microsoft Docs
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016

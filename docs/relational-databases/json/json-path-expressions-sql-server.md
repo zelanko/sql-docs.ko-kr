@@ -1,5 +1,5 @@
 ---
-title: "JSON 경로 식(SQL Server) | Microsoft 문서"
+title: "JSON 경로 식(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/23/2017

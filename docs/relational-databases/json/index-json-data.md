@@ -1,5 +1,5 @@
 ---
-title: "JSON 데이터 인덱싱 | Microsoft 문서"
+title: "JSON 데이터 인덱싱 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/01/2016
@@ -36,10 +36,10 @@ SQL Server 2016에서 JSON은 기본 제공 데이터 형식이 아니며 SQL Se
 SQL Server에 JSON 데이터를 저장하는 경우 JSON 문서 *속성* 하나 이상을 기준으로 쿼리 결과를 필터링하거나 정렬하는 것이 일반적입니다.  
 
 ### <a name="example"></a>예제 
-이 예제에서는 AdventureWorks `SalesOrderHeader` 테이블에 판매 주문에 대한 다양한 정보가 JSON 형식으로 포함되어 있는 `Info` 열이 있다고 가정합니다. 예를 들어 이 열은 고객, 영업 사원, 배송 및 대금 청구 주소 등에 대한 정보를 포함합니다. `Info` 열의 값을 사용하여 고객에 대한 판매 주문을 필터링하려고 합니다.
+이 예제에서는 AdventureWorks `SalesOrderHeader` 테이블에 판매 주문에 대한 다양한 정보가 JSON 형식으로 포함되어 있는 `Info` 열이 있다고 가정합니다. 예를 들어 이 열은 고객, 영업 사원, 배송 및 대금 청구 주소 등에 대한 정보를 포함합니다. `Info` 열의 값을 사용하여 고객의 판매 주문을 필터링하려고 합니다.
 
 ### <a name="query-to-optimize"></a>최적화할 쿼리
-다음은 인덱스를 사용하여 최적화할 쿼리 형식의 예입니다.  
+다음은 인덱스를 사용하여 최적화할 쿼리 형식의 예제입니다.  
   
 ```sql  
 SELECT SalesOrderNumber,
@@ -90,7 +90,7 @@ INCLUDE(SalesOrderNumber,OrderDate)
 이 경우 비클러스터형 JSON 인덱스에 필요한 모든 사항이 있기 때문에 SQL Server는 `SalesOrderHeader` 테이블에서 데이터를 추가로 읽을 필요가 없습니다. 이것은 쿼리에서 JSON과 열 데이터를 결합하고 작업에 대한 최적의 인덱스를 생성하기 위한 좋은 방법입니다.  
   
 ## <a name="json-indexes-are-collation-aware-indexes"></a>JSON 인덱스는 데이터 정렬 인식 인덱스입니다.  
-JSON 데이터에 대한 중요한 인덱스 기능은 인덱스가 데이터 정렬 인식 인덱스라는 점입니다. 계산 열을 만들 때 사용하는 `JSON_VALUE` 함수의 결과는 입력 식에서 데이터 정렬을 상속하는 텍스트 값입니다. 따라서 인덱스의 값은 원본 열에 정의된 데이터 정렬 규칙을 사용하여 정렬됩니다.  
+JSON 데이터에 대한 중요한 인덱스 기능은 인덱스의 데이터 정렬 인식 기능입니다. 계산 열을 만들 때 사용하는 `JSON_VALUE` 함수의 결과는 입력 식에서 데이터 정렬을 상속하는 텍스트 값입니다. 따라서 인덱스의 값은 원본 열에 정의된 데이터 정렬 규칙을 사용하여 정렬됩니다.  
   
 이것을 보여주기 위해 다음 예제에서는 기본 키와 JSON 콘텐츠가 있는 단순한 컬렉션 테이블을 만듭니다.  
   

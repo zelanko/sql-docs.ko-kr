@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 에이전트 서비스의 계정 선택 | Microsoft 문서"
+title: "SQL Server 에이전트 서비스의 계정 선택 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/04/2017
 ms.prod: sql-non-specified

@@ -1,5 +1,5 @@
 ---
-title: "JSON에 Null 값 포함 - INCLUDE_NULL_VALUES 옵션 | Microsoft 문서"
+title: "JSON에 Null 값 포함 - INCLUDE_NULL_VALUES 옵션 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/02/2016

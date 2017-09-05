@@ -1,5 +1,5 @@
 ---
-title: "OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환(SQL Server) | Microsoft 문서"
+title: "OPENJSON을 사용하여 JSON 데이터를 행과 열로 변환(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/18/2017

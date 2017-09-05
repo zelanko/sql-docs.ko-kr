@@ -1,5 +1,5 @@
 ---
-title: "FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server) | Microsoft 문서"
+title: "FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/18/2017
@@ -121,7 +121,7 @@ FOR JSON AUTO
   
 |||||  
 |-|-|-|-|  
-|**변수를 잠그기 위한**|**B**|**C**|**D**|  
+|**A**|**B**|**C**|**D**|  
 |10|11|12|X|  
 |20|21|22|Y|  
 |30|31|32|Z|  

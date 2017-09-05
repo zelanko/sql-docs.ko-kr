@@ -1,5 +1,5 @@
 ---
-title: "SQL Server에 JSON 문서 가져오기 | Microsoft 문서"
+title: "SQL Server에 JSON 문서 가져오기 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/16/2017
 ms.prod: sql-server-2016
@@ -71,7 +71,7 @@ END
 ```
 
 ## <a name="import-json-documents-from-azure-file-storage"></a>Azure File Storage에서 JSON 문서 가져오기
-위에서 설명한 대로 OPENROWSET(BULK)을 사용하여 SQL Server가 액세스할 수 있는 파일 위치에서 JSON 파일을 읽을 수도 있습니다. 예를 들어 Azure File Storage는 SMB 프로토콜을 지원합니다. 따라서 다음 절차에 따라 Azure File Storage 공유에 로컬 가상 드라이브를 매핑할 수 있습니다.
+위에서 설명한 대로 OPENROWSET(BULK)을 사용하여 SQL Server가 액세스할 수 있는 다른 파일 위치에서 JSON 파일을 읽을 수도 있습니다. 예를 들어 Azure File Storage는 SMB 프로토콜을 지원합니다. 따라서 다음 절차에 따라 Azure File Storage 공유에 로컬 가상 드라이브를 매핑할 수 있습니다.
 1.  Azure Portal 또는 Azure PowerShell을 사용하여 Azure File Storage에 파일 저장소 계정(예: `mystorage`), 파일 공유(예: `sharejson`) 및 폴더를 만듭니다.
 2.  파일 저장소 공유에 일부 JSON 파일을 업로드합니다.
 3.  포트 445를 허용하는 컴퓨터에서 Windows 방화벽에 아웃바운드 방화벽 규칙을 만듭니다. 인터넷 서비스 공급자가 이 포트를 차단할 수 있습니다. 다음 단계에서 DNS 오류(오류 53)가 발생하면 포트 445를 열지 않았거나 ISP가 이 포트를 차단하고 있는 것입니다.

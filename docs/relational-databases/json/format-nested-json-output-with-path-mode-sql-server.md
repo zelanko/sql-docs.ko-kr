@@ -1,5 +1,5 @@
 ---
-title: "PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server) | Microsoft 문서"
+title: "PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/17/2017

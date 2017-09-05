@@ -1,5 +1,5 @@
 ---
-title: "데이터 열 암호화 | Microsoft 문서"
+title: "데이터 열 암호화 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/22/2017
 ms.prod: sql-server-2016

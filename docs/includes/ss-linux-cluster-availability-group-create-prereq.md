@@ -108,9 +108,9 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-이제 주 SQL Server 복제본은 `/var/opt/mssql/data/dbm_certificate.cer`에 인증서, `var/opt/mssql/data/dbm_certificate.pvk`에 개인 키가 있습니다. 이러한 두 파일을 모든 서버에서 가용성 복제본을 호스트할 동일한 위치로 복사합니다. mssql 사용자를 사용하거나 mssql 사용자에게 이러한 파일에 액세스할 수 있는 권한을 부여합니다. 
+이제 기본 SQL Server 복제본은 `/var/opt/mssql/data/dbm_certificate.cer`에 인증서, `var/opt/mssql/data/dbm_certificate.pvk`에 개인 키가 있습니다. 이러한 두 파일을 가용성 복제본을 호스트할 모든 서버의 동일한 위치로 복사합니다. mssql 사용자를 사용하거나 mssql 사용자에게 이러한 파일에 액세스할 수 있는 권한을 부여합니다. 
 
-예를 들어 원본 서버에서 다음 명령은 파일을 대상 컴퓨터에 복사합니다.  **<node2>**  값을 복제본을 호스트할 SQL Server 인스턴스의 이름으로 바꿉니다. 
+예를 들어 원본 서버에서 다음 명령은 파일을 대상 컴퓨터에 복사합니다. **<node2>** 값을 복제본을 호스트할 SQL Server 인스턴스의 이름으로 바꿉니다. 
 
 ```bash
 cd /var/opt/mssql/data
@@ -126,7 +126,7 @@ chown mssql:mssql dbm_certificate.*
 
 ## <a name="create-the-certificate-on-secondary-servers"></a>보조 서버에서 인증서 만들기
 
-다음 Transact-SQL 스크립트는 주 SQL Server 복제본에 대해 만든 백업을 사용하여 마스터 키와 인증서를 만듭니다. 이 명령은 사용자에게 인증서에 액세스할 권한도 부여합니다. 강력한 암호로 스크립트를 업데이트합니다. 해독 암호는 이전 단계에서 .pvk 파일을 만들 때 사용한 암호와 동일합니다. 모든 보조 서버에서 다음 스크립트를 실행하여 인증서를 만듭니다.
+다음 Transact-SQL 스크립트는 기본 SQL Server 복제본에 대해 만든 백업을 사용하여 마스터 키와 인증서를 만듭니다. 이 명령은 사용자에게 인증서에 액세스할 권한도 부여합니다. 강력한 암호로 스크립트를 업데이트합니다. 해독 암호는 이전 단계에서 .pvk 파일을 만들 때 사용한 암호와 동일합니다. 모든 보조 서버에서 다음 스크립트를 실행하여 인증서를 만듭니다.
 
 ```Transact-SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';

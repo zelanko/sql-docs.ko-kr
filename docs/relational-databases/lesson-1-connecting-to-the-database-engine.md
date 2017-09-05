@@ -1,5 +1,5 @@
 ---
-title: "1 단원: 데이터베이스 엔진에 연결 | Microsoft 문서"
+title: "1 단원: 데이터베이스 엔진에 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/05/2016
 ms.prod: sql-server-2016

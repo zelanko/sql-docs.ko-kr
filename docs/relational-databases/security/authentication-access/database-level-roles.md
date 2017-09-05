@@ -1,5 +1,5 @@
 ---
-title: "데이터베이스 수준 역할 | Microsoft 문서"
+title: "데이터베이스 수준 역할 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 06/29/2017

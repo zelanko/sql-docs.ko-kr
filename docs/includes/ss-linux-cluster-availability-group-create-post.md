@@ -1,7 +1,7 @@
 
 ## <a name="add-a-database-to-the-availability-group"></a>가용성 그룹에 데이터베이스 추가
 
-가용성 그룹에 추가하는 데이터베이스는 전체 복구 모드여야 하고 유효한 로그 백업이 있어야 합니다. 테스트 데이터베이스이거나 새로 만든 데이터베이스인 경우 데이터베이스 백업을 수행합니다. 주 SQL Server에서 다음 Transact-SQL을 실행하여 `db1`이라는 데이터베이스를 만들고 백업합니다.
+가용성 그룹에 추가하는 데이터베이스는 전체 복구 모드여야 하고 유효한 로그 백업이 있어야 합니다. 테스트 데이터베이스이거나 새로 만든 데이터베이스인 경우 데이터베이스 백업을 수행합니다. 기본 SQL Server에서 다음 Transact-SQL을 실행하여 `db1`이라는 데이터베이스를 만들고 백업합니다.
 
 ```Transact-SQL
 CREATE DATABASE [db1];
@@ -10,7 +10,7 @@ BACKUP DATABASE [db1]
    TO DISK = N'/var/opt/mssql/data/db1.bak';
 ```
 
-주 SQL Server 복제본에서 다음 Transact-SQL을 실행하여 `db1` 데이터베이스를 가용성 그룹 `ag1`에 추가합니다.
+기본 SQL Server 복제본에서 다음 Transact-SQL을 실행하여 `db1` 데이터베이스를 가용성 그룹 `ag1`에 추가합니다.
 
 ```Transact-SQL
 ALTER AVAILABILITY GROUP [ag1] ADD DATABASE [db1];

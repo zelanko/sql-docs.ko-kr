@@ -1,5 +1,5 @@
 ---
-title: "테이블에서 열 삭제 | Microsoft 문서"
+title: "테이블에서 열 삭제 | Microsoft Docs"
 ms.custom: 
 ms.date: 04/11/2017
 ms.prod: sql-server-2016

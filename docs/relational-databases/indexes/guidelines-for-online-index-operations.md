@@ -1,5 +1,5 @@
 ---
-title: "온라인 인덱스 작업에 대한 지침 | Microsoft 문서"
+title: "온라인 인덱스 작업에 대한 지침 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/10/2017
 ms.prod: sql-server-2016
@@ -37,8 +37,8 @@ ms.lasthandoff: 07/31/2017
   
 -   테이블에 LOB 데이터 형식이 들어 있는 경우 비고유 비클러스터형 인덱스를 온라인 상태로 만들 수 있지만 이러한 열은 인덱스 정의에 키 또는 키가 아닌 포괄 열로 사용되지 않습니다.  
   
--   로컬 임시 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 임시 테이블의 인덱스에는 적용되지 않습니다.
-- 예기치 않은 오류, 데이터베이스 장애 조치(failover) Ehsms **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 이 기능은 SQL Server 2017 및 Azure SQL Database에 대한 공용 미리 보기입니다.
+-   로컬 temporal 테이블의 인덱스를 온라인 상태로 만들거나 다시 작성하거나 삭제할 수 없습니다. 이 제한 사항은 전역 temporal 테이블의 인덱스에는 적용되지 않습니다.
+- 예기치 않은 오류, 데이터베이스 장애 조치(failover) 또는 **PAUSE** 명령 실행 후 중지된 위치에서 인덱스를 다시 시작할 수 있습니다. [Alter Index](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요. 이 기능은 SQL Server 2017 및 Azure SQL Database에 대한 공용 미리 보기입니다.
 
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [버전에서 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
@@ -47,11 +47,11 @@ ms.lasthandoff: 07/31/2017
   
 | 온라인 인덱스 작업 | 제외되는 인덱스 | 기타 제한 사항 |  
 |----------------------------|----------------------|------------------------|  
-|ALTER  INDEX  REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 임시 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
-|CREATE  INDEX|XML 인덱스<br /><br /> 뷰의 초기 고유 클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스||  
-|CREATE  INDEX  WITH  DROP_EXISTING|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> 로컬 임시 테이블의 인덱스<br /><br /> XML 인덱스||  
-|DROP  INDEX|비활성 인덱스<br /><br /> XML 인덱스<br /><br /> 비클러스터형 인덱스<br /><br /> 로컬 임시 테이블의 인덱스|단일 문에 여러 인덱스를 지정할 수 없습니다.|  
-|ALTER  TABLE  ADD  CONSTRAINT(PRIMARY  KEY  또는 UNIQUE)|로컬 임시 테이블의 인덱스<br /><br /> 클러스터형 인덱스|한 번에 하나의 하위 절만 허용됩니다. 예를 들어 동일한 ALTER  TABLE  문에서 PRIMARY  KEY  또는 UNIQUE  제약 조건을 추가하거나 삭제할 수 없습니다.|  
+|ALTER  INDEX  REBUILD|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> XML 인덱스<br /><br />columnstore 인덱스 <br /><br /> 로컬 temporal 테이블의 인덱스|키워드를 ALL로 지정하면 테이블에 제외된 인덱스가 들어 있는 경우 작업이 실패할 수 있습니다.<br /><br /> 비활성 인덱스를 다시 작성하는 작업에 추가 제한 사항이 적용됩니다. 자세한 내용은 [인덱스 및 제약 조건 비활성화](../../relational-databases/indexes/disable-indexes-and-constraints.md)를 참조하세요.|  
+|CREATE  INDEX|XML 인덱스<br /><br /> 뷰의 초기 고유 클러스터형 인덱스<br /><br /> 로컬 temporal 테이블의 인덱스||  
+|CREATE  INDEX  WITH  DROP_EXISTING|비활성화된 클러스터형 인덱스 또는 비활성화된 인덱싱된 뷰<br /><br /> 로컬 temporal 테이블의 인덱스<br /><br /> XML 인덱스||  
+|DROP  INDEX|비활성 인덱스<br /><br /> XML 인덱스<br /><br /> 비클러스터형 인덱스<br /><br /> 로컬 temporal 테이블의 인덱스|단일 문에 여러 인덱스를 지정할 수 없습니다.|  
+|ALTER  TABLE  ADD  CONSTRAINT(PRIMARY  KEY  또는 UNIQUE)|로컬 temporal 테이블의 인덱스<br /><br /> 클러스터형 인덱스|한 번에 하나의 하위 절만 허용됩니다. 예를 들어 동일한 ALTER  TABLE  문에서 PRIMARY  KEY  또는 UNIQUE  제약 조건을 추가하거나 삭제할 수 없습니다.|  
 |ALTER TABLE DROP CONSTRAINT(PRIMARY KEY 또는 UNIQUE)|클러스터형 인덱스||  
   
  온라인 인덱스 작업이 진행되는 동안에는 기본 테이블을 수정하거나 자르거나 삭제할 수 없습니다.  
@@ -97,8 +97,8 @@ ms.lasthandoff: 07/31/2017
 >
 
 다시 시작 가능한 온라인 인덱스 다시 작성을 수행할 때 다음 지침이 적용됩니다.
--   인덱스 유지 관리 기간 관리, 계획 및 확장. 유지 관리 기간에 맞게 인덱스 다시 작성 작업을 여러 번 일시 중지 및 다시 시작할 수 있습니다.
-- 인덱스 다시 작성 오류 (예: 데이터베이스 장애 조치(failover)나 디스크 공간 부족)에서 복구
+-   인덱스 유지 관리 기간의 관리, 계획 및 확장. 유지 관리 기간에 맞게 인덱스 다시 작성 작업을 여러 번 일시 중지 및 다시 시작할 수 있습니다.
+- 인덱스 다시 작성 오류(예: 데이터베이스 장애 조치(failover)나 디스크 공간 부족)에서 복구
 - 인덱스 작업이 일시 중지된 경우 원래 인덱스와 새로 만든 인덱스 모두 저장할 디스크 공간이 필요하고 DML 작업 중 업데이트해야 합니다.
 
 - 인덱스 다시 작성 작업 중 잘림 로그의 잘림 지원(일반 온라인 인덱스 작업에서는 이 작업을 수행할 수 없음)
@@ -108,7 +108,7 @@ ms.lasthandoff: 07/31/2017
 > 다시 시작 가능한 다시 작성에서는 오래 실행되는 잘림을 계속 열어둘 필요가 없으므로 이 작업 중 로그 잘림이 허용되고 로그 공간을 더 효율적으로 관리할 수 있습니다. 새로운 디자인에서는 다시 시작 가능한 작업을 다시 시작하는 데 필요한 모든 참조와 함께 필요한 데이터를 하나의 데이터베이스에 유지할 수 있도록 했습니다.
 >
 
-일반적으로 온라인 인덱스 다시 작성 시 다시 시작 가능 여부에 따른 성능 차이는 없습니다. 다시 시작 가능한 인덱스를 업데이트할 때 인덱스 다시 작성 작업이 일시 중지되는 경우 다음과 같습니다.
+일반적으로 온라인 인덱스 다시 작성 시 다시 시작 가능 여부에 따른 성능 차이는 없습니다. 인덱스 다시 작성 작업이 일시 중지된 동안, 다시 시작 가능한 인덱스를 업데이트하면 다음과 같습니다.
 - 읽기가 대부분인 작업의 경우 성능에 미치는 영향이 크지 않습니다. 
 - 업데이트가 많은 작업의 경우 약간의 처리량 저하가 발생할 수 있습니다(테스트에 따르면 10% 미만의 저하가 나타남).
 
