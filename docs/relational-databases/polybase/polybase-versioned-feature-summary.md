@@ -1,5 +1,5 @@
 ---
-title: "PolyBase 버전 기능 요약 | Microsoft Docs"
+title: "PolyBase 버전 기능 요약 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/13/2016
 ms.prod: sql-non-specified
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cf69aa2c57e86aab11974b5874039ae7f72b9917
-ms.openlocfilehash: 3384d962c3765bf4feb00f957ad56a668f8d92e4
+ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
+ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 버전 기능 요약
@@ -35,6 +35,7 @@ SQL Server 제품 및 서비스에 사용할 수 있는 PolyBase 기능 요약�
 |다음을 사용하여 Hadoop 데이터 쿼리 [!INCLUDE[tsql](../../includes/tsql-md.md)]|예|아니요|아니요|예|
 |Hadoop에서 데이터 가져오기|예|아니요|아니요|예|
 |Hadoop으로 데이터 내보내기  |예|아니요|아니요| 예|
+|HDInsight 쿼리, HDInsight에서 가져오기, HDInsight로 내보내기 |아니요|아니요|아니요|아니요
 |Hadoop으로 쿼리 계산 푸시다운|예|아니요|아니요|예|  
 |Azure Blob 저장소에서 데이터 가져오기|예|아니요|예|예| 
 |Azure Blob 저장소로 데이터 내보내기|예|아니요|예|예|  

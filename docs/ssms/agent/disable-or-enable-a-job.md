@@ -69,7 +69,7 @@ ms.lasthandoff: 06/22/2017
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
     ```  
-    -- changes the name, description, and enables status of the job NightlyBackups.  
+    -- changes the name, description, and disables status of the job NightlyBackups.  
     USE msdb ;  
     GO  
   
@@ -77,7 +77,7 @@ ms.lasthandoff: 06/22/2017
         @job_name = N'NightlyBackups',  
         @new_name = N'NightlyBackups -- Disabled',  
         @description = N'Nightly backups disabled during server migration.',  
-        @enabled = 1 ;  
+        @enabled = 0 ;  
     GO  
     ```  
   
