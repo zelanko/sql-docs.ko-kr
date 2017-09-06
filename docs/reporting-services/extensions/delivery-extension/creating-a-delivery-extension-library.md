@@ -21,11 +21,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: bcfb5b69df148108531e9e5b843f127af0e3fbb4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="creating-a-delivery-extension-library"></a>배달 확장 프로그램 라이브러리 만들기

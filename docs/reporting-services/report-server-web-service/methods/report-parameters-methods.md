@@ -20,11 +20,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 1613e1aae458d38e383b6acf54abf19361822336
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="report-parameters-methods"></a>보고서 매개 변수 메서드
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
 |<xref:ReportService2010.ReportingService2010.ListParameterTypes%2A>|지원되는 매개 변수 유형 목록을 반환합니다.|  
 |<xref:ReportService2010.ReportingService2010.SetItemParameters%2A>|지정된 항목에 대한 매개 변수 속성을 설정합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [보고서 서버 웹 서비스 메서드](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

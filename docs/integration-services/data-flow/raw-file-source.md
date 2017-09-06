@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.rawfilesource.f1
+- sql13.dts.designer.rawfilesourceconnectionmanager.f1
+- sql13.dts.designer.rawfilesourcecolumns.f1
 helpviewer_keywords:
 - sources [Integration Services], Raw File
 - raw data [Integration Services]
@@ -21,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9ea51c506ebda4ea06da6938f68ae91c655bb3ce
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 14608c3bbf570ecfa4cbc0d45d2961ea7ab48a4d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="raw-file-source"></a>원시 파일 원본
@@ -57,7 +59,11 @@ ms.lasthandoff: 08/03/2017
   
 -   sqlservercentral.com의 블로그 항목 - [원시 파일의 놀라운 기능](http://www.sqlservercentral.com/blogs/stratesql/archive/2011/1/1/31-days-of-ssis-_1320_-raw-files-are-awesome-_2800_1_2F00_31_2900_.aspx)  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="raw-file-source-editor-connection-manager-page"></a>원시 파일 원본 편집기(연결 관리자 페이지)
+  원시 파일 원본은 파일에서 원시 데이터를 읽습니다. 원본의 기본 데이터 표현을 사용하므로 데이터를 변환하거나 거의 구문 분석할 필요도 없습니다.   
+## <a name="raw-file-source-editor-columns-page"></a>원시 파일 원본 편집기(열 페이지)
+  원시 파일 원본은 파일에서 원시 데이터를 읽습니다. 원본의 기본 데이터 표현을 사용하므로 데이터를 변환하거나 거의 구문 분석할 필요도 없습니다.   
+## <a name="see-also"></a>참고 항목  
  [Raw File Destination](../../integration-services/data-flow/raw-file-destination.md)   
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   

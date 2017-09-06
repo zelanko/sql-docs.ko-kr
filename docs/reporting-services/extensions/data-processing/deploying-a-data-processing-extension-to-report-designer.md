@@ -20,11 +20,11 @@ caps.latest.revision: 41
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: e5e309ee7092bdc64efa89fa27579e9e8944da14
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>보고서 디자이너에 데이터 처리 확장 프로그램 배포

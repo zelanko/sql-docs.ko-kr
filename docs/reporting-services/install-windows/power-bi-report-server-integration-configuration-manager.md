@@ -2,7 +2,7 @@
 title: "Power BI 보고서 서버 통합 (구성 관리자) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/25/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,17 +19,17 @@ caps.latest.revision: 22
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5ece1f5e492f4508d6c014709a953bfb4d29815a
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3d39c8851c43adba12102f7d2440ae55e8216e1e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Power BI 보고서 서버 통합(구성 관리자)
 
-[!INCLUDE[ssrs-appliesto-sql2016-preview](../../includes/ssrs-appliesto-sql2016-preview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 **구성 관리자의** Power BI 통합 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지는 보고서 서버 사용자가 지원되는 보고서 항목을 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드에 고정할 수 있도록 보고서 서버를 원하는 Azure AD(Active Directory) 관리되는 테넌트에 등록하는 데 사용됩니다. 고정할 수 있는 지원되는 항목의 목록은 [Power BI 대시보드에 Reporting Services 항목 고정](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
 
 - **Azure Active Directory:** 조직에서 Azure 서비스 및 웹 응용 프로그램에 대한 디렉터리 및 ID 관리를 제공하는 Azure Active Directory를 사용해야 합니다. 자세한 내용은 [Azure Active Directory란?](https://azure.microsoft.com/en-us/documentation/articles/active-directory-whatis/)을 참조하세요.
 
-- **관리되는 테넌트:** 보고서 항목을 고정할 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드는 Azure AD 관리되는 테넌트에 속해야 합니다.  관리되는 테넌트는 Office 365 및 Microsoft Intune과 같은 Azure 서비스를 처음으로 구독할 때 자동으로 만들어집니다.   바이럴 테넌트는 현재 지원되지 않습니다.  자세한 내용은 [Azure AD 디렉터리란?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)에서 "Azure AD 테넌트란" 및 "Azure AD 디렉터리를 가져오는 방법" 섹션을 참조하세요.
+- **관리되는 테넌트:** 보고서 항목을 고정할 [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 대시보드는 Azure AD 관리되는 테넌트에 속해야 합니다.  관리되는 테넌트는 Office 365 및 Microsoft Intune과 같은 Azure 서비스를 처음으로 구독할 때 자동으로 만들어집니다.   바 이럴 테 넌 트는 현재 지원 되지 않습니다.  자세한 내용은 [Azure AD 디렉터리란?](https://msdn.microsoft.com/library/azure/jj573650.aspx#BKMK_WhatIsAnAzureADTenant)에서 "Azure AD 테넌트란" 및 "Azure AD 디렉터리를 가져오는 방법" 섹션을 참조하세요.
 
 - [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] 통합을 수행하는 사용자는 Azure AD 테넌트의 멤버이고, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 시스템 관리자이며, ReportServer 카탈로그 데이터베이스의 시스템 관리자여야 합니다.
 

@@ -21,11 +21,11 @@ caps.latest.revision: 32
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 830e388abe098bab402e5af56486d1e6cd528e98
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="preventing-invalid-requests"></a>잘못된 요청 방지
@@ -76,7 +76,7 @@ private void PublishReport()
   
  요청이 보고서 서버로 전송 되기 전에 방지할 수 있는 오류 유형에 대 한 자세한 내용은 참조 하십시오. [SoapException 오류 테이블](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/soapexception-errors-table.md)합니다. Try/catch 블록을 사용 하 여 앞의 예제를 개선 하는 방법에 대 한 자세한 내용은 참조 [를 사용 하 여 시도 하 고 Catch 블록](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services의 예외 처리 소개](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Reporting Services SoapException 클래스](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)  
   

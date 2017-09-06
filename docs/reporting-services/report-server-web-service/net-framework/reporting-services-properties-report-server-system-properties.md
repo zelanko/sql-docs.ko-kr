@@ -20,11 +20,11 @@ caps.latest.revision: 55
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: d91c1bb43978ab08857c09ffc235da78f5f0ffea
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>보고 서비스 속성-보고서 서버 시스템 속성
@@ -48,7 +48,7 @@ ms.lasthandoff: 08/03/2017
 |EnableIntegratedSecurity|보고서 데이터 원본 연결에 통합 보안이 지원되는지 여부를 지정합니다. 기본값은 **True**입니다. 유효한 값은 다음과 같습니다.<br /><br /> **True** = 통합 보안을 사용 합니다.<br /><br /> **False** = 통합 보안이 사용 되지 않습니다. 통합 보안을 사용하도록 구성된 보고서 데이터 원본이 실행되지 않습니다.|  
 |EnableRemoteErrors|원격 컴퓨터에서 보고서를 요청하는 사용자에 대해 반환되는 오류 메시지에 외부 오류 정보(예: 보고서 데이터 원본에 대한 오류 정보)를 포함합니다. 유효한 값은 **true** 및 **false**입니다. 기본값은 **false**입니다. 자세한 내용은 [원격 오류 사용&#40;Reporting Services&#41;](../../../reporting-services/report-server/enable-remote-errors-reporting-services.md)을 참조하세요.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>   
  <xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>   
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

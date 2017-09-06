@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.flatfilesource.f1
+- sql13.dts.designer.flatfilesourceadapter.connection.f1
+- sql13.dts.designer.flatfilesourceadapter.columns.f1
+- sql13.dts.designer.flatfilesourceadapter.errorhandling.f1
 helpviewer_keywords:
 - sources [Integration Services], Flat File
 - text file reading [Integration Services]
@@ -22,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 79a0d3dd55338815b6b99ce0a1002a174af11984
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3460c0a209af8b587617e81c28fdccc2d5ff0eed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
@@ -57,14 +60,6 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-flat-file-source"></a>플랫 파일 원본 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **플랫 파일 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [플랫 파일 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/flat-file-source-editor-connection-manager-page.md)  
-  
--   [플랫 파일 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/flat-file-source-editor-columns-page.md)  
-  
--   [플랫 파일 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/flat-file-source-editor-error-output-page.md)  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -73,6 +68,71 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="related-tasks"></a>관련 작업  
  데이터 흐름 구성 요소의 속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
+  
+## <a name="flat-file-source-editor-connection-manager-page"></a>플랫 파일 원본 편집기(연결 관리자 페이지)
+  **플랫 파일 원본 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 플랫 파일 원본이 사용할 연결 관리자를 선택할 수 있습니다. 플랫 파일 원본은 구분 기호로 분리된 텍스트 파일, 고정 폭 텍스트 파일 또는 혼합 형식의 텍스트 파일에서 데이터를 읽을 수 있습니다.  
+  
+ 플랫 파일 원본은 다음과 같은 연결 관리자 유형 중 하나를 사용할 수 있습니다.  
+  
+-   원본이 단일 플랫 파일인 경우 플랫 파일 연결 관리자. 자세한 내용은 [Flat File Connection Manager](../../integration-services/connection-manager/flat-file-connection-manager.md)을(를) 참조하세요.  
+  
+-   원본이 다중 플랫 파일이고 데이터 흐름 태스크가 For 루프 컨테이너와 같은 루프 컨테이너 내부에 있는 경우 다중 플랫 파일 연결 관리자. 각 컨테이너 루프에서 플랫 파일 원본은 다중 플랫 파일 연결 관리자가 제공하는 다음 파일 이름에서 데이터를 로드합니다. 자세한 내용은 [Multiple Flat Files Connection Manager](../../integration-services/connection-manager/multiple-flat-files-connection-manager.md)을(를) 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **Flat file connection manager**  
+ 목록에서 기존 연결 관리자를 선택하거나 **새로 만들기**를 클릭하여 새 연결 관리자를 만듭니다.  
+  
+ **새로 만들기**  
+ **플랫 파일 연결 관리자 편집기** 대화 상자를 사용하여 새 연결 관리자를 만듭니다.  
+  
+ **원본의 Null 값을 데이터 흐름의 Null 값으로 유지**  
+ 데이터를 추출할 때 Null 값을 유지할지 여부를 지정합니다. 이 속성의 기본값은 **false**입니다. 이 값이 f**alse**이면 플랫 파일 원본이 원본 데이터의 Null 값을 각 열에 적합한 기본값으로 바꿉니다. 예를 들어 문자열 열의 경우 빈 문자열로 바꾸고 숫자 열의 경우 0으로 바꿉니다.  
+  
+ **미리 보기**  
+ **데이터 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 미리 보기에는 최대 200개의 행이 표시될 수 있습니다.  
+  
+## <a name="flat-file-source-editor-columns-page"></a>플랫 파일 원본 편집기(열 페이지)
+  **플랫 파일 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  
+  
+> [!NOTE]  
+>  플랫 파일 원본의 **FileNameColumnName** 속성과 해당 출력 열의 **FastParse** 속성은 **플랫 파일 원본 편집기**에서 사용할 수 없지만 **고급 편집기**를 사용하여 설정할 수 있습니다. 이러한 속성에 대한 자세한 내용은 [Flat File Custom Properties](../../integration-services/data-flow/flat-file-custom-properties.md)의 플랫 파일 원본 섹션을 참조하십시오.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 외부 열**  
+ 데이터 원본에서 사용 가능한 외부 열의 목록을 표시합니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다.  
+  
+ **외부 열**  
+ 태스크에서 읽는 순서대로 외부(원본) 열을 표시합니다. 이 순서는 먼저 테이블에서 선택된 열을 지운 다음 목록에서 다른 순서로 외부 열을 선택하여 변경할 수 있습니다.  
+  
+ **출력 열**  
+ 각 출력 열에 고유한 이름을 지정합니다. 기본값은 선택한 외부(원본) 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
+  
+## <a name="flat-file-source-editor-error-output-page"></a>플랫 파일 원본 편집기(오류 출력 페이지)
+  **플랫 파일 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열의 속성을 설정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **입/출력**  
+ 데이터 원본의 이름을 표시합니다.  
+  
+ **열**  
+ **플랫 파일 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
+  
+ **오류**  
+ 오류가 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **관련 항목:** [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **잘림**  
+ 잘림이 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **Description**  
+ 오류에 대한 설명을 표시합니다.  
+  
+ **이 값을 선택한 셀에 설정**  
+ 오류나 잘림 발생 시 선택한 모든 셀에 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **적용**  
+ 선택한 셀에 오류 처리 옵션을 적용합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [플랫 파일 대상](../../integration-services/data-flow/flat-file-destination.md)   
