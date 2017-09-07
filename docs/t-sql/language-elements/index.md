@@ -4,7 +4,7 @@ ms.translationtype: HT
 ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
 ms.openlocfilehash: eac182232a4125d56b2339a5cdbeb4a7c6628cd5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 --- 
 
