@@ -1,24 +1,29 @@
 ---
 title: "Oracle 원본 데이터베이스에 연결 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "oraDb"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- oraDb
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 caps.latest.revision: 8
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 8
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a5c5a28264e255b50ee3d33986ba2b84c646c0f8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# Oracle 원본 데이터베이스에 연결
+# <a name="connect-to-an-oracle-source-database"></a>Oracle 원본 데이터베이스에 연결
   Oracle 원본 페이지를 사용하여 Oracle 원본 데이터베이스에 연결하는 데 필요한 정보를 제공할 수 있습니다. CDC 인스턴스는 연결된 Oracle 데이터베이스의 다시 실행 로그를 읽습니다.  
   
  **Oracle 연결 문자열**  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
 > [!NOTE]  
 >  사용자가 로그 마이닝 사용자가 되려면 Oracle 데이터베이스에 다음 권한이 부여되어야 합니다.  
 >   
->  -   \<any-captured-table>에 대한 SELECT 권한  
+>  -   에 선택 \<any 캡처된 테이블 >  
 > -   SELECT ANY TRANSACTION  
 > -   DBMS LOGMNR에 대한 EXECUTE 권한  
 > -   V$LOGMNR CONTENTS에 대한 SELECT 권한  
@@ -57,14 +62,14 @@ caps.handback.revision: 8
 >  이러한 권한을 V$xxx에 부여할 수 없는 경우 V_S$xxx에 부여합니다.  
   
  **연결 테스트**  
- **연결 테스트**를 클릭하여 Oracle 데이터베이스가 있는 원격 컴퓨터와의 연결되었는지 여부를 확인할 수 있습니다. 연결에 성공했는지 여부를 알려주는 대화 상자가 열립니다.  
+ **연결 테스트** 를 클릭하여 Oracle 데이터베이스가 있는 원격 컴퓨터와의 연결되었는지 여부를 확인할 수 있습니다. 연결에 성공했는지 여부를 알려주는 대화 상자가 열립니다.  
   
 > [!IMPORTANT]  
 >  CDC Designer를 관리자 권한으로 실행하지 않을 경우 알려진 문제로 인해 Oracle 원본 데이터베이스에 연결하지 못할 수 있습니다. 연결이 실패하는 경우 CDC Designer를 닫은 후 **관리자 권한으로 실행** 옵션을 사용하여 다시 시작합니다.  
   
  이 페이지에서 정보 입력을 마친 후 **다음** 을 클릭하여 [Select Oracle Tables and Columns](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)을 수행합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 변경 데이터베이스 인스턴스를 만드는 방법](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [인스턴스 속성 편집](../../integration-services/change-data-capture/edit-instance-properties.md)  
   

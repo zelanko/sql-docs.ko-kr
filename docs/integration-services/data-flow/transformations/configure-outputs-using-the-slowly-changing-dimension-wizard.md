@@ -1,26 +1,31 @@
 ---
-title: "느린 변경 차원 마법사를 사용하여 출력 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "느린 변경 차원 변환"
-  - "느린 변경 차원"
-  - "느린 변경 차원 마법사"
+title: "느린 변경 차원 마법사를 사용 하 여 출력 구성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Slowly Changing Dimension transformation
+- slowly changing dimensions
+- Slowly Changing Dimension Wizard
 ms.assetid: da111731-1ffa-49b9-bcaa-3c93fd0eb619
 caps.latest.revision: 43
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cc89e598abbf0b224325d74501b47e3999bf472b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 08/03/2017
+
 ---
-# 느린 변경 차원 마법사를 사용하여 출력 구성
+# <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>느린 변경 차원 마법사를 사용하여 출력 구성
   느린 변경 차원 마법사는 느린 변경 차원 변환에 대한 편집기 역할을 수행합니다. 느린 변경 차원 데이터에 대한 데이터 흐름의 작성 및 구성은 복잡한 태스크일 수 있습니다. 느린 변경 차원 마법사를 사용하면 열을 매핑하고, 비즈니스 키 열을 선택하고, 열 변경 특성을 설정하고, 유추 차원 멤버에 대한 지원을 구성하는 단계별 안내에 따라 가장 쉬운 방법으로 느린 변경 차원 변환 출력에 대한 데이터 흐름을 작성할 수 있습니다.  
   
  차원 테이블에 있는 적어도 하나 이상의 비즈니스 키 열을 선택하고 이를 입력 열에 매핑해야 합니다. 비즈니스 키의 값은 원본의 레코드를 차원 테이블의 레코드로 연결합니다. 이 매핑은 변환에서 차원 테이블의 레코드를 찾고 레코드가 새로운 것인지 변경되는 것인지 확인하는 데 사용됩니다. 비즈니스 키는 일반적으로 원본의 기본 키이지만 레코드를 고유하게 식별하고 해당 값이 변경되지 않는 한 대체 키로 사용될 수 있습니다. 또한 비즈니스 키는 여러 개의 열로 구성된 복합 키로 사용될 수도 있습니다. 차원 테이블의 기본 키는 일반적으로 서로게이트 키입니다. 즉, ID 열 또는 스크립트와 같은 사용자 지정 솔루션을 통해 자동으로 생성되는 숫자 값입니다.  
@@ -29,9 +34,9 @@ caps.handback.revision: 43
   
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 느린 변경 차원 마법사를 열려면 느린 변경 차원 변환을 두 번 클릭합니다.  
   
-## 느린 변경 차원 출력 만들기  
+## <a name="creating-slowly-changing-dimension-outputs"></a>느린 변경 차원 출력 만들기  
   
-#### 느린 변경 차원 변환 출력을 만들려면  
+#### <a name="to-create-slowly-changing-dimension-transformation-outputs"></a>느린 변경 차원 변환 출력을 만들려면  
   
 1.  업데이트하려는 차원 테이블이 포함된 데이터 원본에 액세스할 연결 관리자를 선택합니다.  
   
@@ -73,12 +78,12 @@ caps.handback.revision: 43
   
      다음 다이어그램에서는 고정 특성, 변경 특성, 기록 특성 변경 내용, 유추 멤버 및 일치하는 레코드에 대한 변경 내용을 지원하는 데이터 흐름 예를 보여 줍니다.  
   
-     ![느린 변경 차원 마법사의 데이터 흐름](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "느린 변경 차원 마법사의 데이터 흐름")  
+     ![느린 변경 차원 마법사에서 데이터 흐름](../../../integration-services/data-flow/transformations/media/dimensionwizard.gif "느린 변경 차원 마법사에서 데이터 흐름")  
   
-## 느린 변경 차원 출력 업데이트  
+## <a name="updating-slowly-changing-dimension-outputs"></a>느린 변경 차원 출력 업데이트  
  느린 변경 차원 변환 출력의 구성을 업데이트하는 가장 쉬운 방법은 느린 변경 차원 마법사를 다시 실행하고 마법사 페이지에서 속성을 수정하는 것입니다. 또한 **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 느린 변경 차원 변환을 업데이트할 수 있습니다.  
   
-## 관련 항목:  
- [느린 변경 차원 변환](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Slowly Changing Dimension Transformation](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
   
   
