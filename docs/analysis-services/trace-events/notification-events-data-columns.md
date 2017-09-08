@@ -1,24 +1,29 @@
 ---
-title: "Notification Events 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Notification Events 이벤트 범주"
+title: Notification Events Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Notification Events event category
 ms.assetid: 0ecf06da-1586-415a-9da8-60d4c634f030
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f671eb89295049c09da1f037fdb4544db84b7280
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Notification Events 데이터 열
+# <a name="notification-events-data-columns"></a>Notification Events 데이터 열
   알림 이벤트는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]사용자가 직접 발생시키지 않는 이벤트입니다. 예를 들어 사용자가 자동 관리 캐싱을 위해 기본 테이블을 업데이트할 때 알림이 발생합니다.  
   
  Notification Events 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
@@ -30,7 +35,7 @@ caps.handback.revision: 30
   
  다음 표에서는 이 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## 알림  
+## <a name="notification"></a>알림  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -57,7 +62,7 @@ caps.handback.revision: 30
 |ServerName|43|8|알림 이벤트가 발생한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
 |RequestProperties|45|9|XMLA 요청의 속성을 포함합니다.|  
   
-## 사용자 정의  
+## <a name="user-defined"></a>사용자 정의  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -75,7 +80,7 @@ caps.handback.revision: 30
 |TextData|42|9|알림 이벤트와 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|알림 이벤트가 발생한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## 관련 항목:  
- [Notification Events 이벤트 범주](../../analysis-services/trace-events/notification-events-event-category.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Notification Events Event Category](../../analysis-services/trace-events/notification-events-event-category.md)  
   
   

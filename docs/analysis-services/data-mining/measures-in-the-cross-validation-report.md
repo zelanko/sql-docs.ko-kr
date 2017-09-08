@@ -1,30 +1,35 @@
 ---
 title: "교차 유효성 검사 보고서의 측정값 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "제곱 평균 오차 [데이터 마이닝]"
-  - "교차 유효성 검사 [데이터 마이닝]"
-  - "절대 평균 오차 [데이터 마이닝]"
-  - "로그 점수 [데이터 마이닝]"
-  - "유사도 [데이터 마이닝]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- root mean square error [data mining]
+- cross-validation [data mining]
+- mean absolute error [data mining]
+- log score [data mining]
+- likelihood [data mining]
 ms.assetid: a07b1665-7f72-4266-82a4-43a91ae2571d
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f046ddaa3152318bfb3fe01d055bf213fdfdec41
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 교차 유효성 검사 보고서의 측정값
-  교차 유효성 검사 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 마이닝 구조의 데이터를 여러 교집합 영역으로 분리한 다음 구조 및 관련 마이닝 모델을 대화식으로 테스트합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  
+# <a name="measures-in-the-cross-validation-report"></a>교차 유효성 검사 보고서의 측정값
+  교차 유효성 검사 중에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 구조의 데이터를 여러 교집합 영역으로 분리한 다음 구조 및 관련 마이닝 모델을 대화식으로 테스트합니다. 이 분석을 기반으로 구조 및 각 모델에 대한 표준 정확도 측정값 집합을 출력합니다.  
   
  보고서에는 데이터의 접기 수 및 각 접기의 데이터 양에 대한 기본 정보와, 데이터 분포를 설명하는 일반 메트릭 집합이 포함됩니다. 각 교집합 영역에 대한 일반 메트릭을 비교하여 구조 또는 모델의 안정성을 평가할 수 있습니다.  
   
@@ -32,7 +37,7 @@ caps.handback.revision: 28
   
  이 섹션에서는 **교차 유효성 검사** 보고서에 포함되는 측정값의 목록과 의미를 제공합니다. 각 측정값을 계산하는 방법에 대한 자세한 내용은 [교차 유효성 검사 수식](../../analysis-services/data-mining/cross-validation-formulas.md)을 참조하세요.  
   
-## 교차 유효성 검사 보고서의 측정값 목록  
+## <a name="list-of-measures-in-the-cross-validation-report"></a>교차 유효성 검사 보고서의 측정값 목록  
  다음 표에서는 교차 유효성 검사 보고서에 표시되는 측정값을 나열합니다. 측정값은 다음 표의 왼쪽 열에서 제공하는 *테스트 유형*별로 그룹화됩니다. 오른쪽 열에는 보고서에 표시되는 측정값의 이름이 나열되고 간단한 설명이 제공됩니다.  
   
 |테스트 유형|측정값 및 설명|  
@@ -54,7 +59,7 @@ caps.handback.revision: 28
 ||**평균**:<br />                      특정 측정값에 대한 파티션 값의 평균입니다.|  
 ||**표준 편차**:<br />                      모델의 전체 파티션에서 특정 측정값에 대한 평균값과의 편차에 대한 평균입니다.<br /><br /> 교차 유효성 검사의 경우 이 점수의 값이 높으면 접기 사이에 상당한 변형이 있음을 의미합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

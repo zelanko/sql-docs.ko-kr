@@ -1,112 +1,117 @@
 ---
 title: "OLAP 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "AggregationPerfLog 속성"
-  - "DefaultPageSizeForProp 속성"
-  - "UseSinglePassForDimSecurityAutoExist 속성"
-  - "DeepCompressValue 속성"
-  - "CacheRowsetRows 속성"
-  - "Income 속성"
-  - "AggregationNewAlgo 속성"
-  - "MemoryAdjustFactor 속성"
-  - "DimensionLatencyAccuracy 속성"
-  - "InitialBonus 속성"
-  - "DefaultPageSizeForDataHeader 속성"
-  - "MaxCPUUsage 속성"
-  - "DistinctBuffer 속성"
-  - "PartitionLatencyAccuracy 속성"
-  - "MaxRetries 속성"
-  - "UseDataCacheRegistryMultiplyKey 속성"
-  - "ConvertDeletedToUnknown 속성"
-  - "DatabaseConnectionPoolMax 속성"
-  - "DataFileInitEnabled 속성"
-  - "DefaultPageSizeForHash 속성"
-  - "MaxRolapOrConditions 속성"
-  - "UseDataCacheFreeLastPageMemory 속성"
-  - "OLAP [Analysis Services], 속성"
-  - "MapHandleAlgorithm 속성"
-  - "IndexBuildEnabled 속성"
-  - "MaxObjectsInParallel 속성"
-  - "IgnoreNullRolapRows 속성"
-  - "DimensionPropertyCacheSize 속성"
-  - "DefaultRefreshInterval 속성"
-  - "CheckDistinctRecordSortOrder 속성"
-  - "BufferMemoryLimit 속성"
-  - "EnableTableGrouping 속성"
-  - "ExpressNonEmptyUseEnabled 속성"
-  - "CopyLinkedDataCacheAndRegistry 속성"
-  - "UseDataSlice 속성"
-  - "MemoryLimitErrorEnabled 속성"
-  - "Enabled 속성"
-  - "EnableRolapOptimization 속성"
-  - "DatabaseConnectionPoolTimeout 속성"
-  - "UseDataCacheRegistryHashTable 속성"
-  - "AggregationsBuildEnabled 속성"
-  - "Tax 속성"
-  - "DatabaseConnectionPoolGeneralTimeout 속성"
-  - "DefaultPageSizeForString 속성"
-  - "DatabaseConnectionPoolConnectTimeout 속성"
-  - "MinimumBalance 속성"
-  - "OptimizeSchema 속성"
-  - "UseCalculationCacheRegistry 속성"
-  - "MaxTableDepth 속성"
-  - "DataSliceInitEnabled 속성"
-  - "PrefetchLowerGranularities 속성"
-  - "UseVBANet 속성"
-  - "BufferRecordLimit 속성"
-  - "DefaultPageSizeForIndexHeader 속성"
-  - "MaximumBalance 속성"
-  - "CalculationCacheRegistryMaxIterations 속성"
-  - "DefaultDrillthroughMaxRows 속성"
-  - "IndexBuildThreshold 속성"
-  - "UseDataCacheRegistry 속성"
-  - "MemoryAdjustConst 속성"
-  - "ApplyIntersect 속성"
-  - "IndexFileInitEnabled 속성"
-  - "CacheRowsetToDisk 속성"
-  - "DataCacheRegistryMaxIterations 속성"
-  - "AllowSEFiltering 속성"
-  - "ForceMultiPass 속성"
-  - "ApplySubtract 속성"
-  - "IndexUseEnabled 속성"
-  - "AggregationsUseEnabled 속성"
-  - "DataPlacementOptimization 속성"
-  - "UseMaterializedIterators 속성"
-  - "CacheRecordLimit 속성"
-  - "ROLAPDimensionProcessingEffort 속성"
-  - "DefaultPageSizeForIndex 속성"
-  - "EnableRolapDimQueryTableGrouping 속성"
-  - "DimensionPropertyKeyCache 속성"
-  - "SleepIntervalSecs 속성"
-  - "DefaultPageSizeForData 속성"
-  - "MapFormatMask 속성"
-  - "CalculationEvaluationPolicy 속성"
-  - "AggregationMemoryLimitMin 속성"
-  - "RecordsReportGranularity 속성"
-  - "MemoryLimit 속성"
-  - "AggregationMemoryLimitMax 속성"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- AggregationPerfLog property
+- DefaultPageSizeForProp property
+- UseSinglePassForDimSecurityAutoExist property
+- DeepCompressValue property
+- CacheRowsetRows property
+- Income property
+- AggregationNewAlgo property
+- MemoryAdjustFactor property
+- DimensionLatencyAccuracy property
+- InitialBonus property
+- DefaultPageSizeForDataHeader property
+- MaxCPUUsage property
+- DistinctBuffer property
+- PartitionLatencyAccuracy property
+- MaxRetries property
+- UseDataCacheRegistryMultiplyKey property
+- ConvertDeletedToUnknown property
+- DatabaseConnectionPoolMax property
+- DataFileInitEnabled property
+- DefaultPageSizeForHash property
+- MaxRolapOrConditions property
+- UseDataCacheFreeLastPageMemory property
+- OLAP [Analysis Services], properties
+- MapHandleAlgorithm property
+- IndexBuildEnabled property
+- MaxObjectsInParallel property
+- IgnoreNullRolapRows property
+- DimensionPropertyCacheSize property
+- DefaultRefreshInterval property
+- CheckDistinctRecordSortOrder property
+- BufferMemoryLimit property
+- EnableTableGrouping property
+- ExpressNonEmptyUseEnabled property
+- CopyLinkedDataCacheAndRegistry property
+- UseDataSlice property
+- MemoryLimitErrorEnabled property
+- Enabled property
+- EnableRolapOptimization property
+- DatabaseConnectionPoolTimeout property
+- UseDataCacheRegistryHashTable property
+- AggregationsBuildEnabled property
+- Tax property
+- DatabaseConnectionPoolGeneralTimeout property
+- DefaultPageSizeForString property
+- DatabaseConnectionPoolConnectTimeout property
+- MinimumBalance property
+- OptimizeSchema property
+- UseCalculationCacheRegistry property
+- MaxTableDepth property
+- DataSliceInitEnabled property
+- PrefetchLowerGranularities property
+- UseVBANet property
+- BufferRecordLimit property
+- DefaultPageSizeForIndexHeader property
+- MaximumBalance property
+- CalculationCacheRegistryMaxIterations property
+- DefaultDrillthroughMaxRows property
+- IndexBuildThreshold property
+- UseDataCacheRegistry property
+- MemoryAdjustConst property
+- ApplyIntersect property
+- IndexFileInitEnabled property
+- CacheRowsetToDisk property
+- DataCacheRegistryMaxIterations property
+- AllowSEFiltering property
+- ForceMultiPass property
+- ApplySubtract property
+- IndexUseEnabled property
+- AggregationsUseEnabled property
+- DataPlacementOptimization property
+- UseMaterializedIterators property
+- CacheRecordLimit property
+- ROLAPDimensionProcessingEffort property
+- DefaultPageSizeForIndex property
+- EnableRolapDimQueryTableGrouping property
+- DimensionPropertyKeyCache property
+- SleepIntervalSecs property
+- DefaultPageSizeForData property
+- MapFormatMask property
+- CalculationEvaluationPolicy property
+- AggregationMemoryLimitMin property
+- RecordsReportGranularity property
+- MemoryLimit property
+- AggregationMemoryLimitMax property
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 095706fc60fe06ae2a83969431b390772bee37f2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# OLAP 속성
+# <a name="olap-properties"></a>OLAP 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 OLAP 서버 속성을 지원합니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
  **적용 대상:** 다차원 서버 모드에만  
   
-## 메모리  
+## <a name="memory"></a>메모리  
  **DefaultPageSizeForData**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 18
  **DefaultPageSizeForProp**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## LazyProcessing  
+## <a name="lazyprocessing"></a>LazyProcessing  
  **설정**  
  지연 집계 처리가 설정되어 있는지 여부를 지정하는 부울 속성입니다.  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 18
  **MaxRetries**  
  오류 발생 전에 지연 처리가 실패하는 경우의 재시도 횟수를 정의하는 부호 있는 32비트 정수 속성입니다.  
   
-## ProcessPlan  
+## <a name="processplan"></a>ProcessPlan  
  **CacheRowsetRows**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -185,7 +190,7 @@ caps.handback.revision: 18
  **OptimizeSchema**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## ProactiveCaching  
+## <a name="proactivecaching"></a>ProactiveCaching  
  **DefaultRefreshInterval**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -195,7 +200,7 @@ caps.handback.revision: 18
  **PartitionLatencyAccuracy**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-##  처리   
+## <a name="process"></a>처리  
  **AggregationMemoryLimitMax**  
  실제 메모리의 백분율로 표시된 집계 처리 전용으로 할당된 최대 메모리 양을 정의하는 부호 있는 64비트 배정밀도 부동 소수점 수 속성입니다.  
   
@@ -286,7 +291,7 @@ caps.handback.revision: 18
  **ROLAPDimensionProcessingEffort**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## Query  
+## <a name="query"></a>Query  
  **AggregationsUseEnabled**  
  런타임에 저장 집계가 사용되는지 여부를 정의하는 부울 속성입니다. 이 속성을 사용하면 정보 제공 및 벤치마크 목적으로 집계 디자인을 변경하거나 다시 처리하지 않고 집계를 해제할 수 있습니다.  
   
@@ -326,7 +331,7 @@ caps.handback.revision: 18
   
      이러한 캐시에 사용되는 메모리는 축소 불가능한 것으로 간주되며 **TotalMemoryLimit**을 기준으로 고려할 때 포함됩니다.  
   
--   서버의 모든 데이터베이스에 영향을 줍니다. **DimensionPropertyCachesize**는 서버 차원의 속성입니다. 이 속성을 변경하면 현재 인스턴스에서 실행되는 모든 데이터베이스에 영향을 줍니다.  
+-   서버의 모든 데이터베이스에 영향을 줍니다. **DimensionPropertyCachesize** 는 서버 차원의 속성입니다. 이 속성을 변경하면 현재 인스턴스에서 실행되는 모든 데이터베이스에 영향을 줍니다.  
   
  차원 캐시 요구 사항을 예측하는 방법:  
   
@@ -430,7 +435,7 @@ caps.handback.revision: 18
  **DataCache\ MemoryModel\ Tax**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 작업  
+## <a name="jobs"></a>작업  
  **ProcessAggregation\ MemoryModel\ Income**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -476,7 +481,7 @@ caps.handback.revision: 18
  **ProcessAggregation\ ProcessProperty\ Tax**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

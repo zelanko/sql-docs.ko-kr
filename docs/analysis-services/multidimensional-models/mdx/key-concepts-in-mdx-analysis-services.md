@@ -1,37 +1,42 @@
 ---
-title: "MDX의 주요 개념(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Multidimensional Expression [Analysis Services], MDX 정보"
-  - "차원 모델링 [MDX]"
-  - "MDX [Analysis Services], MDX 정보"
-  - "Multidimensional Expression [Analysis Services], 차원 모델링"
-  - "MDX [Analysis Services], 차원 모델링"
+title: "주요 개념 (Analysis Services) mdx에서 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Multidimensional Expressions [Analysis Services], about MDX
+- dimensional modeling [MDX]
+- MDX [Analysis Services], about MDX
+- Multidimensional Expressions [Analysis Services], dimensional modeling
+- MDX [Analysis Services], dimensional modeling
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 52
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8d474afc6fb339265ff58a6af4204d7d3677cff
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# MDX의 주요 개념(Analysis Services)
+# <a name="key-concepts-in-mdx-analysis-services"></a>MDX의 주요 개념(Analysis Services)
   MDX(Multidimensional Expressions)를 사용하여 다차원 데이터를 쿼리하거나 큐브 내에 MDX 식을 만들기 전에 다차원의 개념과 용어를 이해하는 것이 도움이 됩니다.  
   
  이미 알고 있는 데이터 요약 예제를 사용하여 시작한 다음 MDX가 어떻게 관련되는지 확인하는 것이 좋습니다. 여기에 Excel에서 생성되고 Analysis Services 샘플 큐브의 데이터로 채워진 피벗 테이블이 있습니다.  
   
- ![측정값과 차원이 호출된 피벗 테이블](../../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "측정값과 차원이 호출된 피벗 테이블")  
+ ![측정값과 차원이 호출 된 피벗 테이블](../../../analysis-services/multidimensional-models/media/ssas-keyconcepts-pivot1-measures-dimensions.png "측정값과 차원이 호출 된 피벗 테이블")  
   
-## 측정값 및 차원  
+## <a name="measures-and-dimensions"></a>측정값 및 차원  
  Analysis Services 큐브는 측정값, 차원 및 차원 특성으로 구성되며, 모두 피벗 테이블 예제에서 분명하게 확인할 수 있습니다.  
   
  **측정값** 은 셀에 있는 숫자 데이터 값으로 합계, 개수, 백분율, 최소, 최대 또는 평균으로 집계됩니다. 측정값은 사용자 탐색 및 피벗 테이블과의 상호 작용에 응답하여 실시간으로 계산되는 동적인 값입니다. 이 예에서 셀은 축을 확장하거나 축소함에 따라 늘어나거나 줄어드는 Reseller Sales Amounts를 보여 줍니다. Date(연도, 분기, 월 또는 날짜) 및 Sales Territory(Country group, Country, Region) 조합의 경우, 해당 특정 컨텍스트에 대해 합산된 Reseller Sales Amount를 얻을 수 있습니다. 측정값과 동의어인 다른 용어는 팩트(데이터 웨어하우스)와 계산된 필드(테이블 및 Excel 데이터 모델)입니다.  
@@ -43,16 +48,16 @@ caps.handback.revision: 52
  각 특성에는 연관된 데이터 값 또는 구성원의 컬렉션이 있습니다. 예에서 Country Group 특성의 구성원은 Europe, North America 및 Pacific입니다. **구성원** 은 특성에 속하는 실제 데이터 값을 의미합니다.  
   
 > [!NOTE]  
->  데이터 모델링의 한 가지 측면은 이미 데이터 자체 내에 존재하는 패턴과 관계를 형식화하는 것입니다. 국가-지역-도시의 경우처럼 자연 계층에 속하는 데이터로 작업할 때 **특성 관계**를 생성하여 해당 관계를 형식화할 수 있습니다. 특성 관계는 특성 간의 일 대 다 관계입니다. 예를 들어 도에는 여러 개의 시가 있지만 시는 한 도에만 속하는 도/시 관계가 이에 해당합니다. 모델에서 특성 관계를 생성하면 쿼리 성능의 속도가 빨라지므로 데이터가 지원하는 경우 특성 관계를 생성하는 것이 좋습니다. SQL Server Data Tools의 차원 디자이너에서 특성 관계를 만들 수 있습니다. [Define Attribute Relationships](../../../analysis-services/multidimensional-models/define-attribute-relationships.md)를 참조하십시오.  
+>  데이터 모델링의 한 가지 측면은 이미 데이터 자체 내에 존재하는 패턴과 관계를 형식화하는 것입니다. 국가-지역-도시의 경우처럼 자연 계층에 속하는 데이터로 작업할 때 **특성 관계**를 생성하여 해당 관계를 형식화할 수 있습니다. 특성 관계는 특성 간의 일 대 다 관계입니다. 예를 들어 도에는 여러 개의 시가 있지만 시는 한 도에만 속하는 도/시 관계가 이에 해당합니다. 모델에서 특성 관계를 생성하면 쿼리 성능의 속도가 빨라지므로 데이터가 지원하는 경우 특성 관계를 생성하는 것이 좋습니다. SQL Server Data Tools의 차원 디자이너에서 특성 관계를 만들 수 있습니다. [Define Attribute Relationships](../../../analysis-services/multidimensional-models/attribute-relationships-define.md)를 참조하십시오.  
   
  Excel에서 모델 메타데이터가 피벗 테이블 필드 목록에 표시됩니다.  위 피벗 테이블과 아래 필드 목록을 비교해 보세요. 필드 목록에는 Sales Territory, Group, Country, Region(메타데이터)이 포함되는 반면, 피벗 테이블에는 구성원(데이터 값)만 포함됩니다. 아이콘 모양을 알면 다차원 모델의 부분과 Excel의 피벗 테이블을 쉽게 연결할 수 있습니다.  
   
  ![피벗 테이블 필드 목록](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-ptfieldlist.png "피벗 테이블 필드 목록")  
   
-## 특성 계층  
+## <a name="attribute-hierarchies"></a>특성 계층  
  각 축을 따라 수준을 확장하고 축소하면 피벗 테이블의 값이 위 또는 아래로 이동한다는 것은 모두 알고 계실 것입니다. 하지만 어떤 원리에 의해 이것이 가능한 것일까요? 그 답은 특성 계층에 있습니다.  
   
- 모든 수준을 축소하고 각 Country Group 및 Calendar Year의 총합계를 보세요. 이 값은 계층 구조 내의 **(전체) 구성원**이라는 항목에서 파생됩니다. (전체) 구성원은 특성 계층의 모든 구성원에 대해 계산된 값입니다.  
+ 모든 수준을 축소하고 각 Country Group 및 Calendar Year의 총합계를 보세요. 이 값은 계층 구조 내의 **(전체) 구성원** 이라는 항목에서 파생됩니다. (전체) 구성원은 특성 계층의 모든 구성원에 대해 계산된 값입니다.  
   
 -   결합된 모든 Country Group 및 Date의 (전체) 구성원은 $80,450,596.98입니다.  
   
@@ -62,11 +67,11 @@ caps.handback.revision: 52
   
  이처럼 집계는 미리 사전 계산되고 저장됩니다. 이것이 바로 Analysis Services가 제공하는 빠른 쿼리 성능의 비결입니다.  
   
- ![모든 구성원이 호출된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "모든 구성원이 호출된 피벗 테이블")  
+ ![설명선 all 멤버가 포함 된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "설명선 all 멤버가 포함 된 피벗 테이블")  
   
  계층을 확장하면 결국 최저 수준으로 이동합니다. 이를 **리프 구성원**이라고 합니다. 리프 구성원은 계층에서 하위 항목이 없는 구성원입니다. 이 예에서는 Australia가 리프 구성원입니다.  
   
- ![리프 구성원이 호출된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.png "리프 구성원이 호출된 피벗 테이블")  
+ ![리프 구성원이 호출 된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "리프 구성원이 호출 된 피벗 테이블")  
   
  그 위의 것은 **상위 구성원**이라고 합니다. Pacific은 Australia의 상위입니다.  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 52
 > [!NOTE]  
 >  BI 개발자는 종종 특성 계층에 속성을 설정하여 클라이언트 응용 프로그램에서 특정 동작을 얻거나 특정 성능 혜택을 얻습니다. 예를 들어 (전체) 구성원과는 맞지 않는 특성에 AttributeHierarchyEnabled=False를 설정할 수 있습니다. 또는 단순히 (전체) 구성원을 숨기고자 하는 경우 AttributeHierarchyVisible=False를 설정할 수 있습니다. 속성에 대한 자세한 내용은 [Dimension Attribute Properties Reference](../../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md) (영문)를 참조하세요.  
   
-## 탐색 계층  
+## <a name="navigation-hierarchies"></a>탐색 계층  
  이 예를 살펴보면 피벗 테이블 내에서 행 및 열 축을 확장하여 특성의 더 낮은 수준을 볼 수 있습니다. 모델에서 생성하는 탐색 계층을 통해 확장 가능한 트리를 얻습니다.  AdventureWorks 샘플 모델에서 Sales Territory 차원에는 Country Group으로 시작하여 Country, Region으로 이어지는 여러 수준의 계층이 있습니다.  
   
  이처럼 계층은 피벗 테이블 또는 다른 데이터 요약 개체에서 탐색 경로를 제공하는 데 사용됩니다. 기본 유형으로는 균형과 불균형이 있습니다.  
@@ -92,16 +97,16 @@ caps.handback.revision: 52
   
 |||  
 |-|-|  
-|![균형 있는 계층 구조가 호출된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot4-balancedhierarchy.png "균형 있는 계층 구조가 호출된 피벗 테이블")|**균형 계층** 은 최상위 수준과 모든 리프 구성원 사이의 수준 수가 동일한 계층입니다.<br /><br /> **자연 계층** 은 기본 데이터에서 자연적으로 발생하는 계층입니다. 일반적인 예로는 Country-Region-State, Year-Month-Date 또는 Category-Subcategory-Model이 있으며 각 하위 수준은 상위로부터 예측할 수 있습니다.<br /><br /> 다차원 모델에서 계층 대부분은 균형 계층이며, 이 중 대부분이 자연 계층입니다.<br /><br /> 관련된 다른 모델링 용어는 **사용자 정의 계층 구조**이며 종종 특성 계층과 대조적으로 사용됩니다. BI 개발자가 생성한 계층이라는 의미로, 특성을 정의할 때 Analysis Services에서 자동으로 생성되는 특성 계층과 반대되는 개념입니다.|  
+|![균형된 계층 구조의 호출 된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot4-balancedhierarchy.PNG "균형된 계층 구조의 호출 된 피벗 테이블")|**균형 계층** 은 최상위 수준과 모든 리프 구성원 사이의 수준 수가 동일한 계층입니다.<br /><br /> **자연 계층** 은 기본 데이터에서 자연적으로 발생하는 계층입니다. 일반적인 예로는 Country-Region-State, Year-Month-Date 또는 Category-Subcategory-Model이 있으며 각 하위 수준은 상위로부터 예측할 수 있습니다.<br /><br /> 다차원 모델에서 계층 대부분은 균형 계층이며, 이 중 대부분이 자연 계층입니다.<br /><br /> 관련된 다른 모델링 용어는 **사용자 정의 계층 구조**이며 종종 특성 계층과 대조적으로 사용됩니다. BI 개발자가 생성한 계층이라는 의미로, 특성을 정의할 때 Analysis Services에서 자동으로 생성되는 특성 계층과 반대되는 개념입니다.|  
   
  **불균형 계층 구조**  
   
 |||  
 |-|-|  
-|![비정형 계층이 호출된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot15-raggedhierarchy.png "비정형 계층이 호출된 피벗 테이블")|**비정형 계층** 또는 **불균형 계층** 은 최상위 수준과 리프 구성원 사이의 수준 수가 다른 계층입니다. 이 또한 BI 개발자가 생성하지만 이 경우 데이터에 차이가 있습니다.<br /><br /> AdventureWorks 샘플 모델에서, 미국에는 이 예의 다른 국가에는 존재하지 않는 추가 수준(Regions)이 있기 때문에 Sales Territory는 비정형 계층을 보여 줍니다.<br /><br /> 클라이언트 응용 프로그램이 비정형 계층을 원활하게 처리하지 못하는 경우 비정형 계층은 BI 개발자에게 문제가 됩니다. Analysis Services 모델에서 여러 수준 데이터 간의 관계를 명확하게 정의하는 **상위-하위 계층 구조**를 만들어 한 수준이 다른 수준과 관련되는 방식의 모호성을 없앨 수 있습니다. 자세한 내용은 [부모-자식 차원](../../../analysis-services/multidimensional-models/parent-child-dimensions.md)을 참조하세요.|  
+|![비정형된 계층이 호출 된 피벗 테이블](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot15-raggedhierarchy.PNG "비정형된 계층이 호출 된 피벗 테이블")|**비정형 계층** 또는 **불균형 계층** 은 최상위 수준과 리프 구성원 사이의 수준 수가 다른 계층입니다. 이 또한 BI 개발자가 생성하지만 이 경우 데이터에 차이가 있습니다.<br /><br /> AdventureWorks 샘플 모델에서, 미국에는 이 예의 다른 국가에는 존재하지 않는 추가 수준(Regions)이 있기 때문에 Sales Territory는 비정형 계층을 보여 줍니다.<br /><br /> 클라이언트 응용 프로그램이 비정형 계층을 원활하게 처리하지 못하는 경우 비정형 계층은 BI 개발자에게 문제가 됩니다. Analysis Services 모델에서 여러 수준 데이터 간의 관계를 명확하게 정의하는 **상위-하위 계층 구조** 를 만들어 한 수준이 다른 수준과 관련되는 방식의 모호성을 없앨 수 있습니다. 자세한 내용은 [부모-자식 차원](../../../analysis-services/multidimensional-models/parent-child-dimension.md) 을 참조하세요.|  
   
-## 키 특성  
- 모델은 키와 인덱스를 사용하여 연결을 만드는 관련 개체의 컬렉션입니다. Analysis Services 모델도 다르지 않습니다. 각 차원(관계형 모델의 테이블과 동일)에 대해 키 특성이 있습니다. **키 특성**은 팩트 테이블(측정값 그룹)에 대한 외래 키 관계에서 사용됩니다. 차원에서 키가 아닌 모든 특성이 키 특성에 직접적으로 또는 간접적으로 연결됩니다.  
+## <a name="key-attributes"></a>키 특성  
+ 모델은 키와 인덱스를 사용하여 연결을 만드는 관련 개체의 컬렉션입니다. Analysis Services 모델도 다르지 않습니다. 각 차원(관계형 모델의 테이블과 동일)에 대해 키 특성이 있습니다. **키 특성** 은 팩트 테이블(측정값 그룹)에 대한 외래 키 관계에서 사용됩니다. 차원에서 키가 아닌 모든 특성이 키 특성에 직접적으로 또는 간접적으로 연결됩니다.  
   
  항상은 아니지만, 종종 키 특성은 **세분성 특성**이기도 합니다. 세분성이란 데이터 내의 세부 정보 또는 정밀도 수준을 의미합니다. 다시, 가장 쉽게 이해할 수 있도록 일반적인 예를 들어 설명해 보겠습니다. 날짜 값을 생각해 봅시다. 일일 판매의 경우, 해당 일에 지정된 날짜 값이 필요합니다. 할당량의 경우 분기별로 설정해도 충분하겠지만, 데이터 분석이 스포츠 행사의 경기 결과로 구성되는 경우 세분성은 밀리초 단위로 설정되어야 할 것입니다. 데이터 값의 정확도 수준은 세분성입니다.  
   
@@ -114,7 +119,7 @@ caps.handback.revision: 52
 > [!NOTE]  
 >  세분성 특성과 키 특성이 다른 경우, 키가 아닌 모든 특성은 세분성 특성에 직접 또는 간접적으로 연결되어야 합니다. 큐브 내에서 세분성 특성은 차원 세분성을 정의합니다.  
   
-## 쿼리 범위(큐브 공간)  
+## <a name="query-scope-cube-space"></a>쿼리 범위(큐브 공간)  
  쿼리 범위는 데이터가 선택되는 경계를 의미합니다. 범위는 전체 큐브(큐브는 가장 큰 쿼리 개체)에서 셀까지 가능합니다.  
   
  **큐브 공간** 은 큐브 특성 계층의 구성원과 큐브의 측정값을 곱하여 생성된 공간입니다.  
@@ -123,7 +128,7 @@ caps.handback.revision: 52
   
  **셀** 은 측정값 차원의 구성원과 큐브의 각 특성 계층의 구성원이 교차하는 지점에 있는 공간입니다.  
   
-## 기타 모델링 용어  
+## <a name="other-modeling-terms"></a>기타 모델링 용어  
  이 섹션에는 다른 섹션에 쉽게 적용할 수 없는 개념과 용어를 모아 두었지만, 이러한 개념과 용어도 알고 있어야 합니다.  
   
  **계산 구성원** 은 쿼리할 때 정의 및 계산되는 차원 구성원입니다. 계산 멤버는 사용자 쿼리나 MDX 계산 스크립트에서 정의되고 서버에 저장될 수 있습니다. 계산 멤버는 해당 멤버가 정의된 차원의 차원 테이블에 있는 행에 대응됩니다.  
@@ -136,23 +141,23 @@ caps.handback.revision: 52
   
  **데이터베이스 차원 및 큐브 차원**. 모델 내에서 같은 모델에 있는 임의 개수의 큐브에 포함되는 독립 실행형 차원을 정의할 수 있습니다. 큐브에 차원을 추가하면 이를 큐브 차원이라 부릅니다. 개체 탐색기의 독립 실행 항목으로, 프로젝트 내에서 그 자체로 데이터베이스 차원이라 부릅니다. 이렇게 구분하는 이유는 무엇일까요? 독립적으로 속성을 설정할 수 있기 때문입니다. 이 두 용어는 제품 설명서에서 사용되고 있으므로 그 의미를 이해하는 것이 중요합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  이제 중요한 개념과 용어에 대해 살펴봤으므로 Analysis Services의 기본 개념을 더 자세히 설명하는 다음과 같은 추가 항목을 진행할 수 있습니다.  
   
--   [기본 MDX 쿼리&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md)  
+-   [기본 MDX 쿼리&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)  
   
 -   [기본 MDX 스크립트&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)  
   
 -   [다차원 모델링&#40;Adventure Works 자습서&#41;](../../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
   
-## 관련 항목:  
- [큐브 공간](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [튜플](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 스크립팅 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 스크립팅 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
  [MDX&#40;Multidimensional Expression&#41; 참조](../../../mdx/multidimensional-expressions-mdx-reference.md)  
   
