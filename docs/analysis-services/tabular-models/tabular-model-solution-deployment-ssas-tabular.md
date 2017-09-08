@@ -1,24 +1,29 @@
 ---
-title: "테이블 형식 모델 솔루션 배포(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "테이블 형식 모델 솔루션 배포 (SSAS 테이블 형식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad8d85e820ae8940a1b80dd130c57d5d06f140e6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 테이블 형식 모델 솔루션 배포(SSAS 테이블 형식)
+# <a name="tabular-model-solution-deployment-ssas-tabular"></a>테이블 형식 모델 솔루션 배포(SSAS 테이블 형식)
   테이블 형식 모델 프로젝트를 제작한 후에는 사용자가 보고 클라이언트 응용 프로그램을 사용하여 모델을 찾아볼 수 있도록 프로젝트를 배포해야 합니다. 이 항목에서는 사용자 환경에서 테이블 형식 모델 솔루션을 배포할 때 사용할 수 있는 다양한 속성과 메서드에 대해 설명합니다.  
   
  이 항목의 섹션:  
@@ -41,12 +46,12 @@ caps.handback.revision: 22
 ##  <a name="bkmk_deploying_bism"></a> SSDT(SQL Server Data Tools)에서 테이블 형식 모델 배포  
  솔루션을 배포하는 작업은 간단하지만 모델이 올바른 구성 옵션을 사용하여 올바른 Analysis Services 인스턴스로 배포되도록 몇 가지 단계를 수행해야 합니다.  
   
- 테이블 형식 모델은 몇 가지 배포 특정 속성을 사용하여 정의됩니다. 배포할 때 **서버** 속성에서 지정한 Analysis Services 인스턴스에 대해 연결이 설정됩니다. 그런 다음 **데이터베이스** 속성에서 지정한 이름의 새 model 데이터베이스가 해당 인스턴스에 만들어집니다(아직 없는 경우). 모델 프로젝트의 Model.bim 파일에 있는 메타데이터를 사용하여 배포 서버의 model 데이터베이스에 있는 개체가 구성됩니다. **처리 옵션**을 사용하면 모델 메타데이터만 배포하여 model 데이터베이스를 만들지 여부를 지정할 수 있으며 **기본값** 또는 **전체**를 지정한 경우 데이터 원본에 연결하는 데 사용된 가장 자격 증명이 모델 작업 영역 데이터베이스에서 배포된 model 데이터베이스로 메모리 내에 전달됩니다. 그런 다음 Analysis Services는 배포된 모델에 데이터를 채우는 작업을 실행합니다. 배포 프로세스가 완료되면 클라이언트 응용 프로그램에서 데이터 연결 또는 SharePoint의 .bism 연결 파일을 사용하여 모델에 연결할 수 있습니다.  
+ 테이블 형식 모델은 몇 가지 배포 특정 속성을 사용하여 정의됩니다. 배포할 때 **서버** 속성에서 지정한 Analysis Services 인스턴스에 대해 연결이 설정됩니다. 그런 다음 **데이터베이스** 속성에서 지정한 이름의 새 model 데이터베이스가 해당 인스턴스에 만들어집니다(아직 없는 경우). 모델 프로젝트의 Model.bim 파일에 있는 메타데이터를 사용하여 배포 서버의 model 데이터베이스에 있는 개체가 구성됩니다. **처리 옵션**을 사용하면 모델 메타데이터만 배포하여 model 데이터베이스를 만들지 여부를 지정할 수 있으며 **기본값** 또는 **전체** 를 지정한 경우 데이터 원본에 연결하는 데 사용된 가장 자격 증명이 모델 작업 영역 데이터베이스에서 배포된 model 데이터베이스로 메모리 내에 전달됩니다. 그런 다음 Analysis Services는 배포된 모델에 데이터를 채우는 작업을 실행합니다. 배포 프로세스가 완료되면 클라이언트 응용 프로그램에서 데이터 연결 또는 SharePoint의 .bism 연결 파일을 사용하여 모델에 연결할 수 있습니다.  
   
 ##  <a name="bkmk_deploy_props"></a> 배포 속성  
  프로젝트 배포 옵션 및 배포 서버 속성은 모델을 준비 또는 프로덕션 Analysis Services 환경에 배포하는 방법 및 위치를 지정합니다. 모든 모델 프로젝트에 대해 기본 속성 설정이 정의되지만 특정 배포 요구 사항에 따라 프로젝트별로 이러한 속성 설정을 변경할 수 있습니다. 기본 배포 속성 설정에 대한 자세한 내용은 [기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)을 참조하세요.  
   
-### 배포 옵션 속성  
+### <a name="deployment-options-properties"></a>배포 옵션 속성  
  다음과 같은 배포 옵션 속성이 있습니다.  
   
 |속성|기본 설정|Description|  
@@ -55,17 +60,17 @@ caps.handback.revision: 22
 |**트랜잭션 배포**|**False**|이 속성은 배포가 트랜잭션인지 여부를 지정합니다. 기본적으로 모든 개체 또는 변경된 개체의 배포는 배포되는 개체의 처리에 있어서 트랜잭션이 아닙니다. 처리가 실패해도 배포는 성공하고 유지될 수 있습니다. 이를 변경하여 배포와 처리를 단일 트랜잭션에 통합할 수 있습니다.|  
 |**쿼리 모드**|**메모리 내**|이 속성은 메모리 내(캐시됨) 모드 또는 DirectQuery 모드 중에서 쿼리 결과가 반환되는 원본이 실행되는 모드를 지정합니다. 이 속성에는 다음과 같은 옵션이 있습니다.<br /><br /> **DirectQuery** – 이 설정은 모델에 대한 모든 쿼리에서 관계형 데이터 원본만 사용하도록 지정합니다.<br /><br /> **DirectQuery with In-Memory** - 이 설정은 클라이언트의 연결 문자열에 다르게 지정되어 있지 않으면 기본적으로 관계형 원본을 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> **In-Memory** - 이 설정은 캐시만 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> **In-Memory with DirectQuery** - 이 설정은 기본적으로 클라이언트에서 연결 문자열에 다르게 지정되어 있지 않으면 캐시를 사용하여 쿼리에 응답하도록 지정합니다.<br /><br /> <br /><br /> 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)를 참조하세요.|  
   
-### 배포 서버 속성  
+### <a name="deployment-server-properties"></a>배포 서버 속성  
  다음과 같은 배포 서버 속성이 있습니다.  
   
 |속성|기본 설정|Description|  
 |--------------|---------------------|-----------------|  
 |**서버**<br /><br /> 프로젝트가 생성될 때 설정됩니다.|**localhost**|프로젝트가 생성될 때 설정되는 이 속성은 모델이 배포될 이름별 Analysis Services 인스턴스를 지정합니다. 기본적으로 모델은 로컬 컴퓨터에 있는 기본 Analysis Services 인스턴스로 배포됩니다. 하지만 이 설정을 변경하여 로컬 컴퓨터의 명명된 인스턴스 또는 Analysis Services 개체를 만들 권한이 있는 원격 컴퓨터의 인스턴스를 지정할 수 있습니다.|  
 |**버전**|작업 영역 서버가 위치한 인스턴스와 동일한 버전입니다.|이 속성은 모델이 배포될 Analysis Services 서버의 버전을 지정합니다. 서버 버전은 프로젝트에 통합할 수 있는 다양한 기능을 정의합니다. 기본적으로 로컬 Analysis Services 서버의 버전이 사용됩니다. 프로덕션 Analysis Services 서버 등의 다른 Analysis Services 서버를 지정하는 경우 해당 Analysis Services 서버의 버전을 지정해야 합니다.|  
-|**데이터베이스**|**\<projectname>**|이 속성은 배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 보고 클라이언트 데이터 연결 또는 .bism 데이터 연결 파일에도 지정됩니다.<br /><br /> 모델을 제작할 때 언제든지 이 이름을 변경할 수 있습니다. 모델을 배포한 후 이름을 변경하면 배포 후의 변경 내용은 이전에 배포한 모델에 영향을 주지 않습니다. 예를 들어 **TestDB** 이라는 솔루션을 열고 기본 model 데이터베이스 이름인 Model로 솔루션을 배포한 다음, 솔루션을 수정하고 model 데이터베이스 **Sales**의 이름을 바꾸면 솔루션이 배포된 Analysis Services 인스턴스에는 Model이라는 이름의 데이터베이스와 Sales라는 이름의 데이터베이스가 별도로 표시됩니다.|  
+|**데이터베이스**|**\<프로젝트 이름 >**|이 속성은 배포 시 모델 개체가 인스턴스화될 Analysis Services 데이터베이스의 이름을 지정합니다. 이 이름은 보고 클라이언트 데이터 연결 또는 .bism 데이터 연결 파일에도 지정됩니다.<br /><br /> 모델을 제작할 때 언제든지 이 이름을 변경할 수 있습니다. 모델을 배포한 후 이름을 변경하면 배포 후의 변경 내용은 이전에 배포한 모델에 영향을 주지 않습니다. 예를 들어 **TestDB** 이라는 솔루션을 열고 기본 model 데이터베이스 이름인 Model로 솔루션을 배포한 다음, 솔루션을 수정하고 model 데이터베이스 **Sales**의 이름을 바꾸면 솔루션이 배포된 Analysis Services 인스턴스에는 Model이라는 이름의 데이터베이스와 Sales라는 이름의 데이터베이스가 별도로 표시됩니다.|  
 |**큐브 이름**|**Model**|이 속성은 클라이언트 도구(예: Excel)와 AMO(Analysis Management Objects)에 표시된 큐브 이름을 지정합니다.|  
   
-### DirectQuery 옵션 속성  
+### <a name="directquery-options-properties"></a>DirectQuery 옵션 속성  
  다음과 같은 배포 옵션 속성이 있습니다.  
   
 |속성|기본 설정|Description|  
@@ -100,7 +105,7 @@ caps.handback.revision: 22
 |[XMLA를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)|XMLA를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 솔루션 및 다차원 솔루션을 배포하는 방법에 대해 설명합니다.|  
 |[Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)|데이터베이스 동기화 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 또는 다차원 데이터베이스 간에 메타데이터와 데이터를 동기화하는 방법에 대해 설명합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [테이블 형식 model 데이터베이스에 연결&#40;SSAS&#41;](../../analysis-services/tabular-models/connect-to-a-tabular-model-database-ssas.md)  
   
   

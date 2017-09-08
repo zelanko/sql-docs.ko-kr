@@ -1,28 +1,33 @@
 ---
 title: "마이닝 구조에서 열 제거 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "마이닝 구조 [Analysis Services], 열"
-  - "열 제거"
-  - "열 삭제"
-  - "열 [데이터 마이닝], 마이닝 구조 열"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], columns
+- removing columns
+- deleting columns
+- columns [data mining], mining structure columns
 ms.assetid: 41073ffe-9351-416b-9f0c-62634bc213f9
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4fc6781554893147c9f2e5d1c3eb74c3526ec878
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 구조에서 열 제거
+# <a name="remove-columns-from-a-mining-structure"></a>마이닝 구조에서 열 제거
   마이닝 구조를 만든 후 데이터 마이닝 디자이너를 사용하여 해당 구조에서 열을 제거할 수 있습니다. 마이닝 구조 열을 제거하는 이유는 다음과 같을 수 있습니다.  
   
 -   마이닝 구조에 한 열의 여러 복사본이 포함되어 있으며 모델에 중복 데이터를 사용하지 않으려고 합니다.  
@@ -33,7 +38,7 @@ caps.handback.revision: 27
   
  마이닝 구조에서 열을 삭제하면 데이터 원본 뷰 또는 외부 데이터에서는 열이 변경되지 않고 메타데이터만 삭제됩니다. 그러나 마이닝 구조에서 사용되는 열을 변경하면 해당 구조 및 해당 구조를 기반으로 하는 모델을 모두 다시 처리해야 합니다.  
   
-### 마이닝 구조에서 열을 제거하려면  
+### <a name="to-remove-a-column-from-the-mining-structure"></a>마이닝 구조에서 열을 제거하려면  
   
 1.  데이터 마이닝 디자이너에서 **마이닝 구조** 탭을 선택합니다.  
   
@@ -43,7 +48,7 @@ caps.handback.revision: 27
   
 4.  **개체 삭제** 대화 상자에서 **확인**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

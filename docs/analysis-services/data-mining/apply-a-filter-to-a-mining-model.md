@@ -1,28 +1,33 @@
 ---
-title: "마이닝 모델에 필터 적용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/19/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "모델 필터 [데이터 마이닝]"
-  - "필터 [데이터 마이닝]"
-  - "입력 행 필터링 [Analysis Services]"
-  - "데이터 필터링 [Analysis Services]"
+title: "마이닝 모델에 필터를 적용 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/19/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- model filter [data mining]
+- filters [data mining]
+- filtering input rows [Analysis Services]
+- filtering data [Analysis Services]
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a3e32512c4cb0139b838195d3a03e8384183a11a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 모델에 필터 적용
+# <a name="apply-a-filter-to-a-mining-model"></a>마이닝 모델에 필터 적용
   마이닝 구조에 중첩 테이블이 포함된 경우 사례 테이블, 중첩 테이블 또는 두 테이블 모두에 필터를 적용할 수 있습니다.  
   
  다음 절차에서는 사례 필터 및 중첩 테이블 행의 필터와 같은 두 종류의 필터를 만드는 방법을 보여 줍니다.  
@@ -38,7 +43,7 @@ AND EXISTS (SELECT * FROM [<nested table name>]
 WHERE [Model] <> 'Water Bottle' )   
 ```  
   
-### 마이닝 모델에 사례 필터를 만들려면  
+### <a name="to-create-a-case-filter-on-a-mining-model"></a>마이닝 모델에 사례 필터를 만들려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 필터링할 마이닝 모델이 포함된 마이닝 구조를 클릭합니다.  
   
@@ -74,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 10. 표의 다음 행에서 **AND/OR** 입력란을 클릭하여 조건을 추가합니다.  
   
-     예를 들어 BETWEEN 조건을 만들려면 논리 피연산자의 드롭다운 목록에서 **AND**를 선택합니다.  
+     예를 들어 BETWEEN 조건을 만들려면 논리 피연산자의 드롭다운 목록에서 **AND** 를 선택합니다.  
   
 11. 7-8단계의 설명에 따라 연산자를 선택하고 값을 입력합니다.  
   
@@ -84,9 +89,9 @@ WHERE [Model] <> 'Water Bottle' )
   
 13. 식 입력란의 필터 조건이 새 조건을 포함하도록 자동으로 업데이트됩니다. 전체 식은 `[Income] > '30000'AND [Income] < '40000'`  
   
-### 마이닝 모델의 중첩 테이블에 필터를 추가하려면  
+### <a name="to-add-a-filter-on-the-nested-table-in-a-mining-model"></a>마이닝 모델의 중첩 테이블에 필터를 추가하려면  
   
-1.  **\<name>모델 필터** 대화 상자에서 **마이닝 구조 열** 아래 표의 빈 행을 클릭합니다.  
+1.  에  **\<이름 > 모델 필터** 대화 상자에서 아래 표의 빈 행을 클릭 **마이닝 구조 열**합니다.  
   
 2.  드롭다운 목록에서 중첩 테이블 이름을 선택합니다.  
   
@@ -98,7 +103,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 4.  **값** 상자를 클릭한 다음 **(…)** 단추를 클릭하여 식을 작성합니다.  
   
-     **\<name>필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
+      **\<이름 > 필터** 대화 상자가 열립니다. 이 대화 상자에서는 현재 테이블의 조건만 설정할 수 있습니다. 이 사례에서 현재 테이블은 중첩 테이블입니다.  
   
 5.  **마이닝 구조 열** 상자를 클릭하고 중첩 테이블 열의 드롭다운 목록에서 열 이름을 선택합니다.  
   
@@ -106,7 +111,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  **값** 을 클릭한 다음 값을 입력합니다.  
   
-     예를 들어 **마이닝 구조 열** 에서 **Model**을(를) 선택합니다. **연산자**에서 **<>**를 선택하고 **Water Bottle** 값을 입력합니다. 이 조건은 다음 필터 식을 만듭니다.  
+     예를 들어 **마이닝 구조 열** 에서 **Model**을(를) 선택합니다. **연산자**에서 **<>**를 선택하고 **Water Bottle**값을 입력합니다. 이 조건은 다음 필터 식을 만듭니다.  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   
@@ -115,7 +120,7 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
 > [!NOTE]  
 >  중첩 테이블 특성의 수는 잠재적으로 제한이 없기 때문에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 선택 가능한 값 목록을 제공하지 않습니다. 정확한 값을 입력해야 합니다. 또한 중첩 테이블에서는 LIKE 연산자를 사용할 수 없습니다.  
   
-1.  필요에 따라 조건을 더 추가하고 **조건** 표의 왼쪽에 있는 **AND/OR** 상자에서 **AND** 또는 **OR**을 선택하여 조건을 결합합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+1.  필요에 따라 조건을 더 추가하고 **조건** 표의 왼쪽에 있는 **AND/OR** 상자에서 **AND** 또는 **OR** 을 선택하여 조건을 결합합니다. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 2.  **모델 필터** 대화 상자에서 **필터** 대화 상자를 사용하여 만든 조건을 검토합니다. 중첩 테이블의 조건이 사례 테이블의 조건에 추가되며 필터 조건의 전체 집합이 **식** 입력란에 표시됩니다.  
   
@@ -124,11 +129,10 @@ EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )
     > [!NOTE]  
     >  필터 식의 임의 부분을 수동으로 변경하면 표가 비활성화되어 텍스트 편집 모드에서만 필터 식 작업을 수행할 수 있습니다. 표 편집 모드를 복원하려면 해당 필터 식을 지우고 다시 시작해야 합니다.  
   
-4.  
-  
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델에 대한 필터&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [마이닝 모델에서 필터 삭제](../../analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)  
   
   
+

@@ -1,68 +1,73 @@
 ---
 title: "로그 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "QueryLogFileSize 속성"
-  - "QueryLogTableName 속성"
-  - "TraceBackgroundDistributionPeriod 속성"
-  - "TraceMaxRowsetSize 속성"
-  - "NullKeyConvertedToUnknown 속성"
-  - "CrashReportsFolder 속성"
-  - "TraceDefinitionFile 속성"
-  - "SQLDumperFlagsOn 속성"
-  - "KeyErrorLimit 속성"
-  - "SnapshotDefinitionFile 속성"
-  - "MinidumpErrorList 속성"
-  - "ErrorLogFileName 속성"
-  - "KeyDuplicate 속성"
-  - "IgnoreDataTruncation 속성"
-  - "로그 [Analysis Services]"
-  - "Enabled 속성"
-  - "FileSizeMB 속성"
-  - "TraceFileWriteTrailerPeriod 속성"
-  - "TraceQueryResponseTextChunkSize 속성"
-  - "File 속성"
-  - "FileBufferSize 속성"
-  - "TraceRowsetBackgroundFlushPeriod 속성"
-  - "ErrorLogFileSize 속성"
-  - "TraceRequestParameters 속성"
-  - "KeyErrorLimitAction 속성"
-  - "CreateQueryLogTable 속성"
-  - "LogDir 속성"
-  - "TraceBackgroundFlushPeriod 속성"
-  - "TraceFileBufferSize 속성"
-  - "SQLDumperFlagsOff 속성"
-  - "QueryLogConnectionString 속성"
-  - "KeyNotFound 속성"
-  - "KeyErrorLogFile 속성"
-  - "TraceReportFQDN 속성"
-  - "KeyErrorAction 속성"
-  - "QueryLogFileName 속성"
-  - "MessageLogs 속성"
-  - "MiniDumpFlagsOn 속성"
-  - "SnapshotFrequencySec 속성"
-  - "QueryLogSampling 속성"
-  - "CreateAndSendCrashReports 속성"
-  - "LogDurationSec 속성"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- QueryLogFileSize property
+- QueryLogTableName property
+- TraceBackgroundDistributionPeriod property
+- TraceMaxRowsetSize property
+- NullKeyConvertedToUnknown property
+- CrashReportsFolder property
+- TraceDefinitionFile property
+- SQLDumperFlagsOn property
+- KeyErrorLimit property
+- SnapshotDefinitionFile property
+- MinidumpErrorList property
+- ErrorLogFileName property
+- KeyDuplicate property
+- IgnoreDataTruncation property
+- logs [Analysis Services]
+- Enabled property
+- FileSizeMB property
+- TraceFileWriteTrailerPeriod property
+- TraceQueryResponseTextChunkSize property
+- File property
+- FileBufferSize property
+- TraceRowsetBackgroundFlushPeriod property
+- ErrorLogFileSize property
+- TraceRequestParameters property
+- KeyErrorLimitAction property
+- CreateQueryLogTable property
+- LogDir property
+- TraceBackgroundFlushPeriod property
+- TraceFileBufferSize property
+- SQLDumperFlagsOff property
+- QueryLogConnectionString property
+- KeyNotFound property
+- KeyErrorLogFile property
+- TraceReportFQDN property
+- KeyErrorAction property
+- QueryLogFileName property
+- MessageLogs property
+- MiniDumpFlagsOn property
+- SnapshotFrequencySec property
+- QueryLogSampling property
+- CreateAndSendCrashReports property
+- LogDurationSec property
 ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 72e9b5094c12d014c361875016b8208264ad2860
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 로그 속성
+# <a name="log-properties"></a>로그 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 로그 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
-## 일반  
+## <a name="general"></a>일반  
  **파일**  
  서버 로그 파일의 이름을 식별하는 문자열 속성입니다. 이 속성은 데이터베이스 테이블과는 달리 디스크 파일이 로깅용으로 사용되는 경우에만 적용됩니다(기본 동작).  
   
@@ -74,8 +79,8 @@ caps.handback.revision: 23
  **MessageLogs**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 오류 로그  
- 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 자세한 내용은 [큐브, 파티션 및 차원 처리에 대한 오류 구성&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/error configuration for cube, partition, and dimension processing.md) 및 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A>을 참조하세요.  
+## <a name="error-log"></a>오류 로그  
+ 서버 인스턴스 수준에서 이러한 속성을 설정하여 다른 도구 및 디자이너에 나타나는 오류 구성에 대한 기본값을 수정할 수 있습니다. 참조 [큐브, 파티션 및 차원 처리 &#40;에 대 한 오류 구성 SSAS-다차원 데이터 &#41; ](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md) 및 <xref:Microsoft.AnalysisServices.MiningStructure.ErrorConfiguration%2A> 자세한 정보에 대 한 합니다.  
   
  **ErrorLog\ErrorLogFileName**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
@@ -119,7 +124,7 @@ caps.handback.revision: 23
  null 키가 알 수 없는 멤버로 변환된 경우 서버에서 수행하는 동작을 지정합니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 **IgnoreError** , 오류를 기록하고 처리를 계속하는 **ReportAndContinue** , 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 **ReportAndStop** 이 포함됩니다.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- 차원 특성에 대해 **NullProcessing**이 **Error**로 설정된 경우 서버에서 수행하는 동작을 지정합니다. null 값이 지정된 특성에서 허용되지 않는 경우 오류가 생성됩니다. 이 오류 구성 속성은 오류를 보고하고 오류 제한에 도달할 때까지 처리를 계속하는 다음 단계를 알려줍니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 **IgnoreError** , 오류를 기록하고 처리를 계속하는 **ReportAndContinue** , 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 **ReportAndStop** 이 포함됩니다.  
+ 차원 특성에 대해 **NullProcessing** 이 **Error** 로 설정된 경우 서버에서 수행하는 동작을 지정합니다. null 값이 지정된 특성에서 허용되지 않는 경우 오류가 생성됩니다. 이 오류 구성 속성은 오류를 보고하고 오류 제한에 도달할 때까지 처리를 계속하는 다음 단계를 알려줍니다. 유효한 값에는 오류가 발생하지 않은 것처럼 처리를 계속하는 **IgnoreError** , 오류를 기록하고 처리를 계속하는 **ReportAndContinue** , 오류를 기록하고 오류 개수가 오류 제한에 못 미치더라도 처리를 즉시 중지하는 **ReportAndStop** 이 포함됩니다.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
@@ -127,7 +132,7 @@ caps.handback.revision: 23
  **ErrorLog\IgnoreDataTruncation**  
  서버가 수행한 작업을 처리하는 동안 속성이 기본값으로 사용되었습니다.  
   
-## 예외  
+## <a name="exception"></a>예외  
  **Exception\CreateAndSendCrashReports**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -146,7 +151,7 @@ caps.handback.revision: 23
  **Exception\MinidumpErrorList**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 비행 레코더  
+## <a name="flight-recorder"></a>비행 레코더  
  **FlightRecorder\Enabled**  
  비행 레코더 기능이 설정되어 있는지 여부를 나타내는 부울 속성입니다.  
   
@@ -169,7 +174,7 @@ caps.handback.revision: 23
   
  이 속성의 기본값은 빈 문자열이며 이후 FlightRecorderTraceDef.xml이 기본값이 됩니다.  
   
-## 쿼리 로그  
+## <a name="query-log"></a>쿼리 로그  
  **적용 대상:** 다차원 서버 모드에만  
   
  **QueryLog\QueryLogFileName**  
@@ -199,7 +204,7 @@ caps.handback.revision: 23
 > [!NOTE]  
 >  쿼리 로그 구성 방법에 대한 자세한 내용은 [Configuring the Analysis Services Query Log](http://go.microsoft.com/fwlink/?LinkId=81890)(Analysis Services 쿼리 로그 구성)를 참조하세요.  
   
-## 추적  
+## <a name="trace"></a>추적  
  **Trace\TraceBackgroundDistributionPeriod**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -230,7 +235,7 @@ caps.handback.revision: 23
  **Trace\TraceRowsetBackgroundFlushPeriod**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

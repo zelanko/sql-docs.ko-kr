@@ -1,22 +1,27 @@
 ---
-title: "Lock 이벤트 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Events Data Columns 잠금 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: c223157f-41a0-405c-bc1a-41c999506936
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a211ed540b3bddb11c5d84cf0db65ef3dade1ad
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Lock 이벤트 데이터 열
+# <a name="lock-events-data-columns"></a>Lock 이벤트 데이터 열
   Lock 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 5
   
  다음 표에서는 이 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Deadlock  
+## <a name="deadlock"></a>Deadlock  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -39,7 +44,7 @@ caps.handback.revision: 5
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Lock Timeout  
+## <a name="lock-timeout"></a>Lock Timeout  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -60,7 +65,7 @@ caps.handback.revision: 5
 |SPID|41|1.|서버 프로세스 ID로, 사용자 세션을 고유하게 식별합니다. 이 SPI는 XML/A에서 사용하는 세션 GUID와 정확히 일치합니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Lock Acquired  
+## <a name="lock-acquired"></a>Lock Acquired  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -78,7 +83,7 @@ caps.handback.revision: 5
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Lock Released  
+## <a name="lock-released"></a>Lock Released  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -96,7 +101,7 @@ caps.handback.revision: 5
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Lock Waiting  
+## <a name="lock-waiting"></a>Lock Waiting  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -114,7 +119,7 @@ caps.handback.revision: 5
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [잠금 이벤트 범주](../../analysis-services/trace-events/lock-events-category.md)  
   
   

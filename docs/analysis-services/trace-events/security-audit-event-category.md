@@ -1,26 +1,31 @@
 ---
 title: "Security Audit 이벤트 범주 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Security Audit 이벤트 범주 [SQL Server]"
-  - "이벤트 클래스 [Analysis Services], 보안 감사"
-  - "보안 이벤트 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
+- event classes [Analysis Services], security audit
+- security events [Analysis Services]
 ms.assetid: 9686a495-68d7-4137-8e30-2655aa519f6c
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bb384601c49088675c25547b3ae7dc21b4510380
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Security Audit 이벤트 범주
+# <a name="security-audit-event-category"></a>Security Audit 이벤트 범주
   Security Audit 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  
   
 |Event Class|이벤트 ID|Description|  
@@ -33,7 +38,7 @@ caps.handback.revision: 25
   
  각각의 Security Audit 이벤트 클래스와 연관된 열에 대한 자세한 내용은 [Security Audit Data Columns](../../analysis-services/trace-events/security-audit-data-columns.md)을 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

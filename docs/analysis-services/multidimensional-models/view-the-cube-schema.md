@@ -1,24 +1,29 @@
 ---
 title: "큐브 스키마 보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 82fc715c-e08e-447d-8fc8-9c9005f145f0
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 큐브 스키마 보기
+# <a name="view-the-cube-schema"></a>큐브 스키마 보기
   **큐브 디자이너** 에서 **큐브 구조** 탭의 **데이터 원본 뷰** 에는 큐브 스키마가 표시됩니다. 이 스키마는 큐브의 측정값과 차원이 파생된 원본 테이블 집합입니다. 모든 큐브 스키마는 해당 큐브의 측정값과 차원의 기반이 되는 하나 이상의 팩트 테이블과 하나 이상의 차원 테이블로 구성됩니다.  
   
  **큐브 구조** 탭의 **데이터 원본 뷰** 창에는 큐브의 기반이 되는 데이터 원본 뷰의 다이어그램이 표시됩니다. 이 다이어그램은 데이터 원본 뷰의 주 다이어그램의 하위 집합입니다. **데이터 원본 뷰** 창에서 테이블을 숨기고 표시할 수 있으며, 기존 다이어그램을 볼 수 있습니다. 하지만 새 관계나 명명된 쿼리를 추가하는 등의 기본 스키마를 변경하는 작업은 할 수 없습니다. 스키마를 변경하려면 데이터 원본 뷰 디자이너를 사용합니다.  

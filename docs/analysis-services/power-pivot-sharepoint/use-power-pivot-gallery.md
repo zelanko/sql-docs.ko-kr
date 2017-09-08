@@ -1,24 +1,29 @@
 ---
 title: "파워 피벗 갤러리 사용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/31/2015"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 08/31/2015
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9ff92d1-787a-4f34-990f-6676b61875d7
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: a14deecac6f597c9f09f9659ed165345ef5faceb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 파워 피벗 갤러리 사용
+# <a name="use-power-pivot-gallery"></a>파워 피벗 갤러리 사용
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하는 게시된 Excel 통합 문서 및 Reporting Services 보고서에 대해 유용한 미리 보기와 문서 관리 기능을 제공합니다.  
   
 > [!NOTE]  
@@ -49,7 +54,7 @@ caps.handback.revision: 14
 >  파워 피벗 갤러리에는 Microsoft Silverlight가 필요합니다.  Microsoft Edge 브라우저는 Silverlight를 지원하지 않습니다.   
 > Edge에서 라이브러리 콘텐츠를 보려면 파워 피벗 갤러리에서 **라이브러리** 탭을 클릭한 다음 문서 라이브러리 보기를 **모든 문서**로 변경합니다.    
 > 기본 보기를 변경하려면 **라이브러리** 탭을 클릭한 다음 보기 수정을 클릭합니다. "이 보기를 기본 보기로 만듭니다"를 클릭한 다음 확인을 클릭하여 기본 보기를 저장합니다.  
->  Edge에서 지원하는 사항에 대한 자세한 내용은 Windows 블로그 [과거로부터의 완벽한 변화, 2부: ActiveX, VBScript의 종말...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)(영문)을 참조하세요.  
+>  Edge에서 지원하는 사항에 대한 자세한 내용은 Windows 블로그 [과거로부터의 완벽한 변화, 2부: ActiveX, VBScript의 종말...](https://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)(영문)을 참조하세요.  
   
  필수 조건의 전체 목록은 [Create and Customize Power Pivot Gallery](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)을 참조하세요.  
   
@@ -58,11 +63,11 @@ caps.handback.revision: 14
   
 |아이콘|Description|  
 |----------|-----------------|  
-|![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.png "GMNI_PowerPivotGalleryIcon_Hourglass")|문서의 각 페이지 축소판 이미지를 생성하는 동안에는 모래 시계 아이콘이 나타납니다. 업데이트된 이미지를 표시하려면 페이지를 새로 고칩니다.|  
-|![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.png "GMNI_PowerPivotGalleryIcon_Truncated")|통합 문서 또는 보고서의 페이지 수가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 표시할 수 있는 것보다 많으면 페이지 아이콘이 나타납니다. 모든 페이지를 표시하려면 클라이언트 응용 프로그램을 사용해야 합니다.|  
-|![GMNI_PowerPivotGalleryIcon_Error](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-error.png "GMNI_PowerPivotGalleryIcon_Error")|문서의 축소판 이미지를 렌더링할 수 없으면 오류 아이콘이 나타납니다. 문서는 라이브러리에 게시되기는 하지만 사용자 지정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 보기에서 렌더링할 수는 없습니다. Excel용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능 등의 클라이언트 응용 프로그램에서는 문서를 볼 수 있습니다.|  
-|![GMNI_PowerPivotGalleryIcon_badtype](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-badtype.png "GMNI_PowerPivotGalleryIcon_badtype")|업로드한 문서를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서 렌더링할 수 없으면 콘텐츠 사용할 수 없음 아이콘이 나타납니다. 지원되는 문서 유형에는 SQL Server 2008 R2 Reporting Services 보고서 작성기에서 만든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 보고서가 포함됩니다.<br /><br /> 휴지통에서 문서를 재활용하는 경우에도 이 아이콘이 표시됩니다.<br /><br /> 이전에는 유효한 미리 보기 이미지를 제공했던 문서에 이 아이콘이 표시되게 하려는 경우 문서 속성을 편집하고 변경 사항을 저장하여 이미지를 새로 고칠 수 있습니다.|  
-|![GMNI_PowerPivotGalleryIcon_Locked](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-locked.png "GMNI_PowerPivotGalleryIcon_Locked")|이 문서에 대해 축소판 이미지를 의도적으로 사용할 수 없도록 설정한 경우 콘텐츠 잠김 아이콘이 나타납니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 없는 Excel 통합 문서나 스냅숏 생성 요구 사항을 충족하지 않는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 또는 Reporting Services 보고서에 대한 축소판 이미지를 생성하지 않습니다. 자세한 내용은 이 항목의 사전 요구 사항 섹션을 참조하세요.|  
+|![GMNI_PowerPivotGalleryIcon_Hourglass](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-hourglass.gif "GMNI_PowerPivotGalleryIcon_Hourglass")|문서의 각 페이지 축소판 이미지를 생성하는 동안에는 모래 시계 아이콘이 나타납니다. 업데이트된 이미지를 표시하려면 페이지를 새로 고칩니다.|  
+|![GMNI_PowerPivotGalleryIcon_Truncated](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|통합 문서 또는 보고서의 페이지 수가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 표시할 수 있는 것보다 많으면 페이지 아이콘이 나타납니다. 모든 페이지를 표시하려면 클라이언트 응용 프로그램을 사용해야 합니다.|  
+|![GMNI_PowerPivotGalleryIcon_Error](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-error.gif "GMNI_PowerPivotGalleryIcon_Error")|문서의 축소판 이미지를 렌더링할 수 없으면 오류 아이콘이 나타납니다. 문서는 라이브러리에 게시되기는 하지만 사용자 지정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 보기에서 렌더링할 수는 없습니다. Excel용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능 등의 클라이언트 응용 프로그램에서는 문서를 볼 수 있습니다.|  
+|![GMNI_PowerPivotGalleryIcon_badtype](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|업로드한 문서를 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서 렌더링할 수 없으면 콘텐츠 사용할 수 없음 아이콘이 나타납니다. 지원되는 문서 유형에는 SQL Server 2008 R2 Reporting Services 보고서 작성기에서 만든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 및 보고서가 포함됩니다.<br /><br /> 휴지통에서 문서를 재활용하는 경우에도 이 아이콘이 표시됩니다.<br /><br /> 이전에는 유효한 미리 보기 이미지를 제공했던 문서에 이 아이콘이 표시되게 하려는 경우 문서 속성을 편집하고 변경 사항을 저장하여 이미지를 새로 고칠 수 있습니다.|  
+|![GMNI_PowerPivotGalleryIcon_Locked](../../analysis-services/power-pivot-sharepoint/media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|이 문서에 대해 축소판 이미지를 의도적으로 사용할 수 없도록 설정한 경우 콘텐츠 잠김 아이콘이 나타납니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 없는 Excel 통합 문서나 스냅숏 생성 요구 사항을 충족하지 않는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 또는 Reporting Services 보고서에 대한 축소판 이미지를 생성하지 않습니다. 자세한 내용은 이 항목의 사전 요구 사항 섹션을 참조하세요.|  
   
 ##  <a name="add"></a> 파워 피벗 갤러리에 Excel 통합 문서 저장  
  Excel 2010에서 제공하는 모든 공유 기술을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 라이브러리에 게시할 수 있습니다. 예를 들어 Excel 2010에서 다른 이름으로 저장을 사용하여 라이브러리에 대한 전체 또는 부분 SharePoint 경로를 지정할 수 있습니다.  
@@ -91,7 +96,7 @@ caps.handback.revision: 14
   
  브라우저 창에서 해당 문서가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 나타나는지 확인합니다. 새로 게시된 문서가 목록에 나타납니다. 라이브러리 설정에 따라 문서의 표시 방법이 결정됩니다(예: 날짜별 오름차순 정렬 또는 이름별 사전순 정렬). 가장 최근에 추가된 항목을 보려면 브라우저 창을 새로 고쳐야 할 수도 있습니다.  
   
-#### 파워 피벗 갤러리에 통합 문서 업로드  
+#### <a name="upload-a-workbook-into-power-pivot-gallery"></a>파워 피벗 갤러리에 통합 문서 업로드  
  SharePoint에서 시작하여 컴퓨터에서 게시할 파일을 선택하려는 경우 통합 문서를 업로드할 수도 있습니다.  
   
 1.  SharePoint  사이트에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 엽니다.  
@@ -105,12 +110,12 @@ caps.handback.revision: 14
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDocReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdocreportgallery.png "GMNI_btn_NewDocReportGallery")|보고서 작성기나 Excel 2010을 시작하려면 새 보고서 단추의 아래쪽 화살표 부분을 클릭합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 새 보고서 단추를 사용하려면 갤러리에서 미리 정의된 보기(극장식, 갤러리, 회전식) 중 하나를 사용해야 합니다.|  
+|![GMNI_btn_NewDocReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdocreportgallery.gif "GMNI_btn_NewDocReportGallery")|보고서 작성기나 Excel 2010을 시작하려면 새 보고서 단추의 아래쪽 화살표 부분을 클릭합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 새 보고서 단추를 사용하려면 갤러리에서 미리 정의된 보기(극장식, 갤러리, 회전식) 중 하나를 사용해야 합니다.|  
   
-#### 보고서 작성기 보고서 만들기  
+#### <a name="create-report-builder-report"></a>보고서 작성기 보고서 만들기  
  라이브러리에서 기존 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기반으로 새 보고서를 만들려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 포함하는 동일 사이트에 대해 Reporting Services를 SharePoint 통합용으로 구성해야 합니다. 보고서 작성기 보고서 만들기 옵션을 선택하면 보고서 서버에서 보고서 작성기가 다운로드되어 처음 사용 시 로컬 워크스테이션에 설치됩니다. 그런 다음 새 보고서에 대한 자리 표시자 보고서 파일이 생성되어 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 저장됩니다. 또한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대한 연결 정보가 보고서에서 새 데이터 원본으로 자동 생성됩니다. 다음 단계로, 디자인 작업 영역에서 데이터 집합 및 보고서 레이아웃을 만들 수 있습니다. 보고서 작성기를 사용하여 보고서를 조합할 때 변경 사항 및 최종 결과를 갤러리의 보고서 문서에 저장할 수 있습니다. 나중에 데이터 연결이 끊어지지 않도록 같은 라이브러리에 보고서와 통합 문서 파일을 함께 둡니다.  
   
-#### 새 Excel 통합 문서 열기  
+#### <a name="open-new-excel-workbook"></a>새 Excel 통합 문서 열기  
  기존 통합 문서에서 새 Excel 통합 문서를 만들려면 로컬 컴퓨터에 Excel 및 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 이 있어야 합니다. 새 Excel 통합 문서 열기를 선택하면 Excel이 시작되고, 빈 통합 문서(.xlsx) 파일이 열리며, 백그라운드로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 연결된 데이터 원본으로 로드됩니다. 원래 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 창에 표시된 데이터만 새 통합 문서에서 사용됩니다. 원래 통합 문서의 피벗 테이블 또는 피벗 차트는 제외됩니다. 새 통합 문서는 원래 통합 문서의 데이터에 연결됩니다. 데이터가 새 통합 문서 자체에 복사되지는 않습니다.  
   
 ##  <a name="view"></a> 통합 문서 또는 보고서를 전체 페이지 모드로 열기  
@@ -123,7 +128,7 @@ caps.handback.revision: 14
   
 |||  
 |-|-|  
-|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.png "GMNI_btn_NewDataRefreshReportGallery")|데이터 새로 고침 관리 단추를 클릭하여 연결된 데이터 원본에서 업데이트된 데이터를 검색하는 일정을 만들거나 봅니다. 일정을 만드는 방법에 대한 지침은 [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/ko-kr/8571208f-6aae-4058-83c6-9f916f5e2f9b)을 참조하세요.|  
+|![GMNI_btn_NewDataRefreshReportGallery](../../analysis-services/power-pivot-sharepoint/media/gmni-btn-newdatarefreshreportgallery.gif "GMNI_btn_NewDataRefreshReportGallery")|데이터 새로 고침 관리 단추를 클릭하여 연결된 데이터 원본에서 업데이트된 데이터를 검색하는 일정을 만들거나 봅니다. 일정을 만드는 방법에 대한 지침은 [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)을 참조하세요.|  
   
 ##  <a name="delete"></a> 파워 피벗 갤러리에서 통합 문서 또는 보고서 삭제  
  라이브러리에서 문서를 삭제하려면 먼저 모든 문서 보기로 전환합니다.  
@@ -151,7 +156,7 @@ caps.handback.revision: 14
   
 ##  <a name="bkmk_known_issues"></a> 알려진 문제  
   
-### 문서 유형이 지원되지 않습니다.  
+### <a name="document-type-is-not-supported"></a>문서 유형이 지원되지 않습니다.  
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 문서** 콘텐츠 형식은 지원되지 않습니다. 문서 라이브러리에 대해 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 문서** 콘텐츠 형식을 사용하도록 설정하고 해당 형식의 새 문서를 만들려고 하면 다음 중 하나와 비슷한 오류 메시지가 표시됩니다.  
   
 -   '새 문서'를 사용하려면 Microsoft Sharepoint Foundation 호환 응용 프로그램 및 웹 브라우저가 있어야 합니다. 이 문서 라이브러리에 문서를 추가하려면 '문서 업로드' 단추를 클릭하세요.  
@@ -160,10 +165,11 @@ caps.handback.revision: 14
   
  **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 문서** 콘텐츠 형식이 문서 라이브러리에 자동으로 추가되지 않습니다. 지원되지 않는 콘텐츠 형식을 사용하도록 수동으로 설정하지 않으면 이 문제가 발생하지 않습니다.  
   
-## 관련 항목:  
- [중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [파워 피벗 갤러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)   
- [Power Pivot 갤러리 만들기 및 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/ko-kr/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
+ [만들기 및 파워 피벗 갤러리에 사용자 지정](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [데이터 새로 고침 예약(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)  
   
   
+

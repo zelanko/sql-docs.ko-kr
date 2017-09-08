@@ -1,46 +1,51 @@
 ---
 title: "Microsoft 신경망 알고리즘 기술 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "HIDDEN_NODE_RATIO 매개 변수"
-  - "MAXIMUM_INPUT_ATTRIBUTES 매개 변수"
-  - "HOLDOUT_PERCENTAGE 매개 변수"
-  - "신경망 알고리즘 [Analysis Services]"
-  - "출력 계층 [데이터 마이닝]"
-  - "신경망"
-  - "MAXIMUM_OUTPUT_ATTRIBUTES 매개 변수"
-  - "MAXIMUM_STATES 매개 변수"
-  - "SAMPLE_SIZE 매개 변수"
-  - "숨겨진 계층"
-  - "숨겨진 뉴런"
-  - "입력 계층 [데이터 마이닝]"
-  - "활성화 함수 [데이터 마이닝]"
-  - "역전파 델타 규칙 네트워크"
-  - "neural network model [Analysis Services]"
-  - "코딩 [데이터 마이닝]"
-  - "HOLDOUT_SEED 매개 변수"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- HIDDEN_NODE_RATIO parameter
+- MAXIMUM_INPUT_ATTRIBUTES parameter
+- HOLDOUT_PERCENTAGE parameter
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- neural networks
+- MAXIMUM_OUTPUT_ATTRIBUTES parameter
+- MAXIMUM_STATES parameter
+- SAMPLE_SIZE parameter
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- activation function [Data Mining]
+- Back-Propagated Delta Rule network
+- neural network model [Analysis Services]
+- coding [Data Mining]
+- HOLDOUT_SEED parameter
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d29618af2bb8ffe0a7e809388f32ed5987b67aea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 신경망 알고리즘 기술 참조
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론*으로 구성된 *다중 계층 퍼셉트론* 신경망(*역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
+# <a name="microsoft-neural-network-algorithm-technical-reference"></a>Microsoft 신경망 알고리즘 기술 참조
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망은 최대 3 계층의 뉴런 또는 *퍼셉트론* 으로 구성된 *다중 계층 퍼셉트론*신경망( *역전파 델타 규칙 네트워크*)을 사용합니다. 이러한 3개의 계층은 입력 계층, 출력 계층 및 숨겨진 계층(옵션)입니다.  
   
  다중 계층 퍼셉트론 신경망에 대한 자세한 내용은 이 설명서에서 다루지 않습니다. 이 항목에서는 입력 및 출력 값을 정규화하는 데 사용되는 방법과 특성 카디널리티를 줄이는 데 사용되는 기능 선택 방법을 포함하여 알고리즘의 기본 구현에 대해 설명합니다. 또한 이 항목에서는 알고리즘의 동작을 사용자 지정하는 데 사용할 수 있는 매개 변수 및 기타 설정을 설명하고 모델 쿼리에 대한 추가 정보로 연결되는 링크를 제공합니다.  
   
-## Microsoft 신경망 알고리즘 구현  
+## <a name="implementation-of-the-microsoft-neural-network-algorithm"></a>Microsoft 신경망 알고리즘 구현  
  다중 계층 퍼셉트론 신경망에서 각 뉴런은 하나 이상의 입력을 받아 하나 이상의 동일한 출력을 생성합니다. 각 출력은 뉴런에 대한 입력 합계의 간단한 비선형 함수입니다. 입력은 입력 계층의 노드에서 숨겨진 계층의 노드로 전달된 후 숨겨진 계층에서 출력 계층으로 전달됩니다. 계층 내 뉴런 사이에는 연결이 없습니다. 로지스틱 회귀 모델에서와 같이 숨겨진 계층이 포함되지 않은 경우에는 입력이 입력 계층의 노드에서 출력 계층의 노드로 직접 전달됩니다.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 생성된 신경망에는 다음과 같은 3가지 유형의 뉴런이 있습니다.  
@@ -49,7 +54,7 @@ caps.handback.revision: 26
   
  입력 뉴런은 데이터 마이닝 모델의 입력 특성 값을 제공합니다. 불연속 입력 특성의 경우 입력 뉴런은 일반적으로 입력 특성의 단일 상태를 나타냅니다. 학습 데이터에 해당 특성에 대한 Null이 들어 있는 경우 누락 값도 여기에 포함됩니다. 3개 이상의 상태가 있는 불연속 입력 특성은 각 상태에 대해 하나씩의 입력 뉴런과 누락된 상태에 대한 입력 뉴런 하나(학습 데이터에 Null이 있는 경우)를 생성합니다. 연속 입력 특성은 두 개의 입력 뉴런, 즉 누락된 상태에 대한 뉴런 하나와 연속 특성 자체의 값에 대한 뉴런 하나를 생성합니다. 입력 뉴런은 하나 이상의 숨겨진 뉴런에 입력을 제공합니다.  
   
-**숨겨진 뉴런**  
+**Hidden neurons**  
   
  숨겨진 뉴런은 입력 뉴런에서 입력을 받아 출력 뉴런에 출력을 제공합니다.  
   
@@ -63,7 +68,7 @@ caps.handback.revision: 26
   
  각 뉴런에는 *활성화 함수*라는 간단한 비선형 함수가 할당되어 있으며 이 함수는 신경망 계층에 대한 특정 뉴런의 관련성 또는 중요도를 설명합니다. 숨겨진 뉴런은 활성화 함수로 *쌍곡 탄젠트* 함수(tanh)를 사용하는 반면 출력 뉴런은 활성화 함수로 *시그모이드* 함수를 사용합니다. 두 함수는 모두 신경망이 입력 뉴런과 출력 뉴런 간의 비선형 관계를 모델링할 수 있도록 하는 비선형 연속 함수입니다.  
   
-### 신경망 학습  
+### <a name="training-neural-networks"></a>신경망 학습  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하는 데이터 마이닝 모델의 학습에는 여러 단계가 필요합니다. 이러한 단계는 알고리즘 매개 변수에 지정한 값에 따라 큰 영향을 받습니다.  
   
  알고리즘은 먼저 데이터 원본에서 학습 데이터를 평가 및 추출합니다. *홀드아웃 데이터*라는 학습 데이터의 비율은 네트워크의 정확도를 평가하는 데 사용하기 위해 예약됩니다. 학습 프로세스 중 네트워크는 학습 데이터에 대한 각 반복 후에 즉시 평가됩니다. 정확도가 더 이상 높아지지 않으면 학습 프로세스가 중지됩니다.  
@@ -77,11 +82,11 @@ caps.handback.revision: 26
   
  불연속 값이 포함된 입력 및 예측 가능한 특성의 경우 각 입력 또는 출력 뉴런이 각각 단일 상태를 나타냅니다. 연속 값이 포함된 입력 및 예측 가능한 특성의 경우에는 각 입력 또는 출력 뉴런이 각각 특성 값의 범위 및 분포를 나타냅니다. 두 경우 모두에서 지원되는 최대 상태 수는 *MAXIMUM_STATES* 알고리즘 매개 변수 값에 따라 달라집니다. 특정 특성의 상태 수가 *MAXIMUM_STATES* 알고리즘 매개 변수 값을 초과하면 해당 특성에 대해 가장 많이 사용되거나 해당 특성과 관련성이 가장 높은 상태가 최대값을 초과하지 않는 한도 내에서 선택되고 나머지 상태는 분석을 위해 누락된 값으로 그룹화됩니다.  
   
- 그런 다음 알고리즘은 *HIDDEN_NODE_RATIO* 매개 변수 값을 사용하여 숨겨진 계층에 대해 만들 초기 뉴런 수를 결정합니다. *HIDDEN_NODE_RATIO*를 0으로 설정하여 알고리즘이 마이닝 모델에 대해 생성하는 네트워크에서 숨겨진 계층의 생성을 방지하고 신경망을 로지스틱 회귀 분석으로 처리할 수 있습니다.  
+ 그런 다음 알고리즘은 *HIDDEN_NODE_RATIO* 매개 변수 값을 사용하여 숨겨진 계층에 대해 만들 초기 뉴런 수를 결정합니다. *HIDDEN_NODE_RATIO* 를 0으로 설정하여 알고리즘이 마이닝 모델에 대해 생성하는 네트워크에서 숨겨진 계층의 생성을 방지하고 신경망을 로지스틱 회귀 분석으로 처리할 수 있습니다.  
   
  알고리즘 공급자는 이전에 예약된 학습 데이터 집합을 사용하고 *일괄 학습*이라는 프로세스를 통해 홀드아웃 데이터에 있는 각 사례의 실제 알려진 값을 네트워크의 예측과 비교하여 네트워크 전반의 모든 입력 가중치를 반복하여 동시에 평가합니다. 알고리즘은 전체 학습 데이터 집합을 평가한 후 각 뉴런의 예측 값 및 실제 값을 검토합니다. 이때 오류 정도(있는 경우)를 계산하고 *역전파*라는 프로세스를 통해 출력 뉴런에서 입력 뉴런으로 반대 방향으로 작업하여 해당 뉴런에 대한 입력과 연결된 가중치를 조정합니다. 그런 다음 전체 학습 데이터 집합에 대해 이 프로세스를 반복합니다. 알고리즘에 다양한 가중치 및 출력 뉴런을 사용할 수 있으므로 입력에 대한 가중치 할당 및 평가를 위해 켤레 경사도 알고리즘을 사용하여 학습 프로세스를 진행할 수 있습니다. 켤레 경사도 알고리즘에 대한 자세한 내용은 이 설명서에서 다루지 않습니다.  
   
-### 기능 선택  
+### <a name="feature-selection"></a>기능 선택  
  입력 특성의 수가 *MAXIMUM_INPUT_ATTRIBUTES* 매개 변수 값보다 크고 예측 가능한 특성의 수가 *MAXIMUM_OUTPUT_ATTRIBUTES* 매개 변수 값보다 크면 마이닝 모델에 포함된 네트워크의 복잡도를 낮추기 위해 기능 선택 알고리즘이 사용됩니다. 기능 선택은 통계상 모델과 가장 관련성이 높은 특성만 남겨 입력 또는 예측 가능한 특성 수를 줄입니다.  
   
  모든 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 마이닝 알고리즘에서는 자동으로 기능 선택을 사용하여 분석을 향상시키고 처리 로드를 줄입니다. 신경망 모델의 기능 선택에 사용되는 방법은 특성의 데이터 형식에 따라 달라집니다. 다음 표에서는 참조를 위해 신경망 모델에 사용되는 기능 선택 방법과 신경망 알고리즘을 기반으로 하는 로지스틱 회귀 알고리즘에 사용되는 기능 선택 방법을 보여 줍니다.  
@@ -93,7 +98,7 @@ caps.handback.revision: 26
   
  신경망 모델의 기능 선택을 제어하는 알고리즘 매개 변수는 MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES 및 MAXIMUM_STATES입니다. HIDDEN_NODE_RATIO 매개 변수를 설정하여 숨겨진 계층 수를 제어할 수도 있습니다.  
   
-### 점수 매기기 방법  
+### <a name="scoring-methods"></a>점수 매기기 방법  
  *점수 매기기* 는 정규화의 한 종류로서, 신경망 모델 학습 컨텍스트에서는 불연속 텍스트 레이블과 같은 값을 네트워크에서 다른 유형의 입력과 비교하고 가중치를 적용할 수 있는 값으로 변환하는 프로세스를 의미합니다. 예를 들어 한 입력 특성이 Gender이고 가능한 값은 Male 및 Female이며 다른 입력 특성은 Income이고 값 범위가 가변적인 경우, 각 특성의 값은 직접 비교할 수 없으므로 가중치를 계산할 수 있도록 공통적인 배율로 인코딩되어야 합니다. 점수 매기기는 이러한 입력을 숫자 값, 특히 확률 범위로 정규화하는 프로세스입니다. 정규화에 사용되는 함수는 극단적인 값으로 인해 분석 결과가 왜곡되지 않도록 입력 값을 동일한 배율로 보다 균일하게 분산시키는 데도 유용합니다.  
   
  신경망의 출력도 인코딩됩니다. 출력(즉, 예측)에 대한 단일 대상이 있거나 예측에만 사용되고 입력에는 사용되지 않는 여러 대상이 있는 경우에는 모델에서 단일 네트워크를 만들기 때문에 값을 정규화할 필요가 없을 수 있습니다. 그러나 입력 및 예측에 여러 개의 특성이 사용된 경우에는 모델에서 여러 네트워크를 만들어야 하므로 모든 값을 정규화해야 하며 네트워크에서 출력이 나갈 때 출력도 인코딩해야 합니다.  
@@ -116,10 +121,10 @@ caps.handback.revision: 26
   
  출력에 대한 인코딩에는 예측에 매우 유용한 속성이 있는 시그모이드 함수가 사용됩니다. 이러한 속성 중 하나는 원래 값의 배율 조정 방식과 값이 양수인지 음수인지에 관계없이 이 함수의 출력이 항상 확률을 0에서 1 사이의 값이므로 확률을 예상하는 데 적합하다는 것입니다. 또 다른 유용한 속성은 시그모이드 함수에 다듬기 효과가 있으므로 값이 굴곡 지점에서 멀리 벗어날수록 값의 확률은 천천히 0 또는 1에 가까워진다는 것입니다.  
   
-## 신경망 알고리즘 사용자 지정  
+## <a name="customizing-the-neural-network-algorithm"></a>신경망 알고리즘 사용자 지정  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 결과 마이닝 모델의 동작, 성능 및 정확도에 영향을 주는 여러 매개 변수를 지원합니다. 열에 모델링 플래그를 설정하여 모델의 데이터 처리 방식을 수정하거나 분산 플래그를 설정하여 열 내의 값이 처리되는 방식을 지정할 수도 있습니다.  
   
-### 알고리즘 매개 변수 설정  
+### <a name="setting-algorithm-parameters"></a>알고리즘 매개 변수 설정  
  다음 표에서는 Microsoft 신경망 알고리즘에서 사용할 수 있는 매개 변수에 대해 설명합니다.  
   
  HIDDEN_NODE_RATIO  
@@ -161,7 +166,7 @@ caps.handback.revision: 26
   
  기본값은 10000입니다.  
   
-### 모델링 플래그  
+### <a name="modeling-flags"></a>모델링 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘에서 지원되는 모델링 플래그는 다음과 같습니다.  
   
  NOT  NULL  
@@ -174,7 +179,7 @@ caps.handback.revision: 26
   
  마이닝 모델 열에 적용됩니다.  
   
-### 분산 플래그  
+### <a name="distribution-flags"></a>분산 플래그  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘에서 지원되는 분산 플래그는 다음과 같습니다. 이 플래그는 모델에 대해서만 힌트로 사용됩니다. 알고리즘에서는 다른 분산을 발견할 경우 힌트에 제공된 분산이 아니라 발견된 분산을 사용합니다.  
   
  보통  
@@ -186,10 +191,10 @@ caps.handback.revision: 26
  Log Normal  
  열 내의 값이 *log normal* 곡선에 따라 분산된 것처럼 처리되어야 함을 나타냅니다. 즉, 값의 로그가 일정하게 분산되어야 함을 나타냅니다.  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  신경망 모델은 하나 이상의 입력 열과 하나의 출력 열을 포함해야 합니다.  
   
-### 입력 열과 예측 가능한 열  
+### <a name="input-and-predictable-columns"></a>입력 열과 예측 가능한 열  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘은 다음 표에 나열된 특정 입력 열과 예측 가능한 열을 지원합니다.  
   
 |열|내용 유형|  
@@ -200,9 +205,9 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft 신경망 알고리즘](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [신경망 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

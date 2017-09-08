@@ -1,30 +1,35 @@
 ---
-title: "모델에서 회귀 변수로 사용할 열 지정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "모델에서 회귀 변수로 사용할 열을 지정 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d8e0cb8e-302a-4166-9ed0-e2d9e2919b0a
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25b142831c6b4cb1dd1afaa25734f0b0435de18c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 모델에서 회귀 변수로 사용할 열 지정
+# <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>모델에서 회귀 변수로 사용할 열 지정
   선형 회귀 모델은 데이터를 예상 회귀선에 가능한 한 근접하게 맞추는 방식으로 입력을 조합하는 수식의 결과로 예측 가능한 특성 값을 나타냅니다. 알고리즘은 숫자 값만 입력으로 받으며 가장 적합한 입력을 자동으로 검색합니다.  
   
  그러나 FORCE_REGRESSOR 매개 변수를 모델에 추가하고 사용할 회귀 변수를 지정하여 열을 회귀 변수로 포함하도록 지정할 수 있습니다. 효과가 너무 작아 모델에서 검색할 수 없어도 특성이 의미를 가지는 경우 또는 특성을 수식에 포함해야 할 경우 이 작업을 원할 수 있습니다.  
   
- 다음 절차에서는 [신경망 자습서](../Topic/Lesson%205:%20Building%20Neural%20Network%20and%20Logistic%20Regression%20Models%20\(Intermediate%20Data%20Mining%20Tutorial\).md)에 사용된 것과 동일한 예제 데이터를 사용하여 간단한 선형 회귀 모델을 만드는 방법을 설명합니다. 모델은 견고할 필요는 없지만 데이터 마이닝 디자이너를 사용하여 선형 회귀 모델을 사용자 지정하는 방법을 보여 줍니다.  
+ 다음 절차에서는 [신경망 자습서](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)에 사용된 것과 동일한 예제 데이터를 사용하여 간단한 선형 회귀 모델을 만드는 방법을 설명합니다. 모델은 견고할 필요는 없지만 데이터 마이닝 디자이너를 사용하여 선형 회귀 모델을 사용자 지정하는 방법을 보여 줍니다.  
   
-### 단순 선형 회귀 모델을 만드는 방법  
+### <a name="how-to-create-a-simple-linear-regression-model"></a>단순 선형 회귀 모델을 만드는 방법  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **솔루션 탐색기**에서 **마이닝 구조**를 확장합니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 6
   
      뷰어에서 모델은 회귀 수식을 포함하는 단일 노드로 나타납니다. **마이닝 범례**에서 수식을 보거나 쿼리를 사용하여 수식에 대한 계수를 추출할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft 선형 회귀 알고리즘](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

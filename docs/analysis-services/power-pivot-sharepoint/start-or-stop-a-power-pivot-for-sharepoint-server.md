@@ -1,24 +1,29 @@
 ---
-title: "SharePoint용 파워 피벗 서버 시작 또는 중지 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "시작 또는 Stop a Power Pivot for SharePoint 서버 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e38e6366-9f20-4db0-b2a8-da7d5adf00eb
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5f512a256765bbba4b1f641fb9752bd09fae4696
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint용 파워 피벗 서버 시작 또는 중지
+# <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>SharePoint용 파워 피벗 서버 시작 또는 중지
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스 및 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스는 SharePoint 팜에서 요청 및 데이터 처리를 조정할 수 있도록 동일한 로컬 응용 프로그램 서버에서 함께 작동합니다.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -41,7 +46,7 @@ caps.handback.revision: 8
   
  팜에서 모든 물리적 서비스를 동시에 시작하거나 중지할 수 없습니다. 각 서버를 선택한 다음 특정 서비스를 시작하거나 중지해야 합니다.  
   
- 특정 웹 응용 프로그램에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스를 시작, 일시 중지 또는 중지할 수는 없지만 서비스를 사용하지 못하도록 기본 연결 목록에서 제거할 수는 있습니다. 자세한 내용은 [중앙 관리에서 SharePoint 웹 응용 프로그램에 파워 피벗 서비스 응용 프로그램 연결](../../analysis-services/power-pivot-sharepoint/connect power pivot service app to sharepoint web app in ca.md)을 참조하세요.  
+ 특정 웹 응용 프로그램에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스를 시작, 일시 중지 또는 중지할 수는 없지만 서비스를 사용하지 못하도록 기본 연결 목록에서 제거할 수는 있습니다. 자세한 내용은 [중앙 관리에서 SharePoint 웹 응용 프로그램에 파워 피벗 서비스 응용 프로그램 연결](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)을 참조하세요.  
   
 1.  중앙 관리의 **시스템 설정**에서 **서버의 서비스 관리**를 클릭합니다.  
   
@@ -62,7 +67,7 @@ caps.handback.revision: 8
 |쿼리나 데이터 새로 고침에 대한 새로운 요청|팜에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버만 중지하는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 새 요청이 처리되지 않으며 데이터를 요청하면 데이터를 찾을 수 없다는 오류가 발생합니다.<br /><br /> SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버가 더 있는 경우 요청이 사용 가능한 서버 중 하나로 전달됩니다.|  
 |사용 데이터|서비스가 중지된 동안에는 사용 데이터가 수집되지 않습니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

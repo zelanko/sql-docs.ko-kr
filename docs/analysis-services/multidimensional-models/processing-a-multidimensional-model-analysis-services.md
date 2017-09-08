@@ -1,35 +1,40 @@
 ---
-title: "다차원 모델 처리(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "온라인 모드 [Analysis Services]"
-  - "개체 처리 [Analysis Services]"
-  - "파티션 [Analysis Services], 처리"
-  - "작업 [Analysis Services]"
-  - "개체 [Analysis Services], 처리"
-  - "개체 다시 처리"
-  - "영향 분석 [Analysis Services]"
-  - "차원 [Analysis Services], 처리"
-  - "프로젝트 모드 [Analysis Services]"
-  - "큐브 [Analysis Services], 처리"
+title: "다차원 모델 (Analysis Services) 처리 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- online mode [Analysis Services]
+- processing objects [Analysis Services]
+- partitions [Analysis Services], processing
+- jobs [Analysis Services]
+- objects [Analysis Services], processing
+- reprocessing objects
+- impact analysis [Analysis Services]
+- dimensions [Analysis Services], processing
+- project mode [Analysis Services]
+- cubes [Analysis Services], processing
 ms.assetid: 625aa5a6-aa09-4bac-be8a-778fa81c5a61
 caps.latest.revision: 52
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 52
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eb063d1667fc3cd3824f2577784278fa46308960
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 다차원 모델 처리(Analysis Services)
+# <a name="processing-a-multidimensional-model-analysis-services"></a>다차원 모델 처리(Analysis Services)
   처리는 Analysis Services가 관계형 데이터 원본의 데이터를 다차원 모델에 로드하는 단계 또는 일련의 단계입니다. MOLAP 저장소를 사용하는 개체의 경우 데이터가 데이터베이스 파일 폴더의 디스크에 지정됩니다. ROLAP 저장소의 경우 처리는 개체에 대한 MDX 쿼리의 응답으로 요청 시 발생합니다. ROLAP 저장소를 사용하는 개체의 경우 처리는 쿼리 결과를 반환하기 전 캐시를 업데이트하는 과정을 의미합니다.  
   
  기본적으로 처리는 서버에 솔루션을 배포할 때 수행됩니다. 또한 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 또는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]와 같은 도구를 사용하여 솔루션의 전체 또는 일부를 임시로 처리하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 및 SQL Server 에이전트를 사용하여 예약을 통해 처리할 수 있습니다. 차원을 제거하거나 해당 호환성 수준을 변경하는 등 모델을 구조적으로 변경할 경우 모델의 물리적 및 논리적 특성을 동기화하도록 다시 처리해야 합니다.  
@@ -42,7 +47,7 @@ caps.handback.revision: 52
   
  [개체 처리](#bkmk_proc)  
   
- [개체 다시 처리](#bkmk_reproc)  
+ [Reprocessing Objects](#bkmk_reproc)  
   
 ##  <a name="bkmk_prereq"></a> 필수 구성 요소  
   
@@ -68,7 +73,7 @@ caps.handback.revision: 52
   
  처리 작업을 수행하는 동안 개체의 처리 여부 및 개체가 처리되는 방법은 해당 개체에 대해 설정된 처리 옵션에 따라 달라집니다. 각 개체에 적용할 수 있는 특정 처리 옵션에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
-##  <a name="bkmk_reproc"></a> 개체 다시 처리  
+##  <a name="bkmk_reproc"></a> Reprocessing Objects  
  처리되지 않은 요소가 포함된 큐브를 찾아보려면 먼저 다시 처리해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 큐브에는 측정값 그룹 및 파티션이 포함되어 있으며 이들을 처리해야만 큐브를 쿼리할 수 있습니다. 차원이 처리되지 않은 상태에 있을 경우 큐브를 처리하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 큐브의 구성 차원을 처리합니다. 개체를 처음 처리한 다음에는 다음과 같은 상황 중 하나가 발생할 때마다 개체를 부분 또는 전체적으로 다시 처리해야 합니다.  
   
 -   팩트 테이블의 열 삭제 등을 통해 개체 구조가 변경된 경우  
@@ -79,8 +84,8 @@ caps.handback.revision: 52
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리할 때는 처리 옵션을 선택하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 적절한 처리 유형을 결정하도록 할 수 있습니다. 사용 가능한 처리 방법은 개체에 따라 달라지며 개체 유형을 기반으로 합니다. 또한 사용 가능한 방법은 개체를 마지막으로 처리한 후 적용된 개체 변경 내용을 기반으로 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다. 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
-## 관련 항목:  
- [논리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../Topic/Logical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [논리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

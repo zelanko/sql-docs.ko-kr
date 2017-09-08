@@ -1,26 +1,31 @@
 ---
-title: "스키마 생성 마법사(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "관계형 스키마 [Analysis Services]"
+title: "스키마 생성 마법사 (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- relational schema [Analysis Services]
 ms.assetid: 68bf7ba3-d0cb-437f-9a3e-9edc0999af19
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 789106378805f50a4a27dbb02ace2e8e0943daed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 스키마 생성 마법사(Analysis Services)
+# <a name="schema-generation-wizard-analysis-services"></a>스키마 생성 마법사(Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 OLAP 개체를 정의할 때 두 가지 관계형 스키마 작업 방법을 지원합니다. 일반적으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스 내의 데이터 원본 뷰에 생성된 논리적 데이터 모델을 기반으로 OLAP 개체를 정의합니다. 이 데이터 원본 뷰는 데이터 원본 뷰에 사용자 지정된 대로 하나 이상의 관계형 데이터 원본의 스키마 요소를 기반으로 정의됩니다.  
   
  또는 OLAP 개체를 먼저 정의한 다음 데이터 원본 뷰 및 데이터 원본과, 해당 OLAP 개체를 지원하는 기본 관계형 데이터베이스 스키마를 생성할 수도 있습니다. 이러한 관계형 데이터베이스를 주제 영역 데이터베이스라고 합니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 16
   
  일반적으로, 스키마 생성 마법사가 원래 생성했던 개체에서 변경된 내용은 이후에 스키마 생성 마법사가 해당 개체를 다시 생성할 때 덮어쓰게 됩니다. 단, 스키마 생성 마법사가 생성한 테이블에 열을 추가하는 경우는 예외입니다. 이와 같은 경우에는 스키마 생성 마법사가 테이블에 추가된 열 및 해당 열의 데이터를 그대로 유지합니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  다음 표에는 스키마 생성 마법사의 작업 방법을 설명하는 추가 항목이 나와 있습니다.  
   
 |항목|Description|  
@@ -44,7 +49,7 @@ caps.handback.revision: 16
 |[데이터베이스 스키마 이해](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|주제 영역 데이터베이스와 준비 영역 데이터베이스에 대해 생성되는 스키마에 대해 설명합니다.|  
 |[증분 생성 이해](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|스키마 생성 마법사의 증분 생성 기능에 대해 설명합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [다차원 모델의 데이터 원본](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [지원되는 데이터 원본&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

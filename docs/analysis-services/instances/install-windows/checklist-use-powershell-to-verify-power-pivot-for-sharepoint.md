@@ -1,27 +1,32 @@
 ---
-title: "검사 목록: PowerShell을 사용하여 SharePoint용 파워 피벗 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "검사 목록: PowerShell을 사용 하 여 SharePoint 용 파워 피벗 확인 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 73a13f05-3450-411f-95f9-4b6167cc7607
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: aa577404c035753f7173546aff32fe0f8d1ee7a1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 검사 목록: PowerShell을 사용하여 SharePoint용 파워 피벗 확인
+# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 파워 피벗 확인
   서비스 및 데이터가 작동하는지 확인하는 견고한 확인 테스트에 성공하지 않으면 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 완료되지 않습니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 응용 프로그램 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
   
 |||  
 |-|-|  
-|![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell 관련 내용")|전체 PowerShell 스크립트가 항목 맨 아래에 포함되어 있습니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.|  
+|![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")|전체 PowerShell 스크립트가 항목 맨 아래에 포함되어 있습니다. 전체 스크립트를 시작점으로 사용하여 전체 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 배포를 제작하는 데 사용자 지정 스크립트를 만듭니다.|  
   
 ||  
 |-|  
@@ -31,7 +36,7 @@ caps.handback.revision: 25
   
 |||  
 |-|-|  
-|[PowerShell 환경 준비](#bkmk_prerequisites)<br /><br /> [증상 및 권장되는 작업](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 서비스](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService 및 PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [파워 피벗 서비스 응용 프로그램 및 프록시](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [데이터베이스](#bkmk_databases)<br /><br /> [SharePoint 기능](#bkmk_features)<br /><br /> [타이머 작업](#bkmk_timer_jobs)<br /><br /> [상태 규칙](#bkmk_health_rules)<br /><br /> **(E)** [Windows 및 ULS 로그](#bkmk_logs)<br /><br /> [MSOLAP 공급자](#bkmk_msolap)<br /><br /> [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd)<br /><br /> [상태 데이터 수집 규칙](#bkmk_health_collection)<br /><br /> [솔루션](#bkmk_solutions)<br /><br /> [수동 확인 단계](#bkmk_manual)<br /><br /> [추가 리소스](#bkmk_more_resources)<br /><br /> [전체 PowerShell 스크립트](#bkmk_full_script)|![powershell verification of powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powershell verification of powerpivot")|  
+|[PowerShell 환경 준비](#bkmk_prerequisites)<br /><br /> [증상 및 권장되는 작업](#bkmk_symptoms)<br /><br /> **(A)** [Analysis Services Windows 서비스](#bkmk_windows_service)<br /><br /> **(B)** [PowerPivotSystemService 및 PowerPivotEngineSerivce](#bkmk_engine_and_system_service)<br /><br /> **(C)** [파워 피벗 서비스 응용 프로그램 및 프록시](#bkmk_powerpivot_service_application)<br /><br /> **(D)** [데이터베이스](#bkmk_databases)<br /><br /> [SharePoint 기능](#bkmk_features)<br /><br /> [타이머 작업](#bkmk_timer_jobs)<br /><br /> [상태 규칙](#bkmk_health_rules)<br /><br /> **(E)** [Windows 및 ULS 로그](#bkmk_logs)<br /><br /> [MSOLAP 공급자](#bkmk_msolap)<br /><br /> [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd)<br /><br /> [상태 데이터 수집 규칙](#bkmk_health_collection)<br /><br /> [솔루션](#bkmk_solutions)<br /><br /> [수동 확인 단계](#bkmk_manual)<br /><br /> [추가 리소스](#bkmk_more_resources)<br /><br /> [전체 PowerShell 스크립트](#bkmk_full_script)|![powerpivot의 powershell 확인](../../../analysis-services/instances/install-windows/media/ssas-powershell-component-verification.png "powerpivot의 powershell 확인")|  
   
 ##  <a name="bkmk_prerequisites"></a> PowerShell 환경 준비  
  이 섹션의 단계에서는 PowerShell 환경을 준비합니다. 현재 스크립트 환경에 구성된 방법에 따라 단계를 수행하지 않아도 될 수 있습니다.  
@@ -46,7 +51,7 @@ caps.handback.revision: 25
   
  SharePoint 관련 cmdlet을 실행할 때 다음과 유사한 오류 메시지가 표시되는 경우 Add-PSSnapin 명령을 실행합니다.  
   
- 'Get-PowerPivotSystemService' 용어**는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 인식되지 않습니다**. 경로가 올바른지 확인한 다음 다시 시도하세요.  
+ 'Get-PowerPivotSystemService' 용어 **는 cmdlet, 함수, 스크립트 파일 또는 실행 프로그램의 이름으로 인식되지 않습니다**. 경로가 올바른지 확인한 다음 다시 시도하세요.  
   
 ```  
 Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0  
@@ -58,16 +63,16 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell –EA 0
   
 |||  
 |-|-|  
-|![powerpivot in sharepoint general application set](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot in sharepoint general application set")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 중앙 관리에서 대부분의 구성 요소를 선택적으로 확인할 수 있습니다. 중앙 관리에서 대시보드를 열려면 **일반 응용 프로그램 설정**, **의** 관리 대시보드 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**를 차례로 클릭합니다. 대시보드에 대한 자세한 내용은 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.|  
+|![sharepoint 일반 응용 프로그램 집합에는 powerpivot](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "sharepoint 일반 응용 프로그램 집합의 powerpivot")|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드를 사용하여 중앙 관리에서 대부분의 구성 요소를 선택적으로 확인할 수 있습니다. 중앙 관리에서 대시보드를 열려면 **일반 응용 프로그램 설정**, **의** 관리 대시보드 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**를 차례로 클릭합니다. 대시보드에 대한 자세한 내용은 [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.|  
   
 ##  <a name="bkmk_symptoms"></a> 증상 및 권장되는 작업  
  다음 표는 증상 또는 문제 및 문제를 해결하는 데 도움이 되는 이 항목의 제안되는 섹션 목록입니다.  
   
 |증상|섹션 참조|  
 |-------------|-----------------|  
-|데이터 새로 고침이 실행되지 않음|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **온라인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업**이 온라인인지 확인합니다.|  
+|데이터 새로 고침이 실행되지 않음|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **온라인 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 새로 고침 타이머 작업** 이 온라인인지 확인합니다.|  
 |관리 대시보드 데이터가 오래됨|[타이머 작업](#bkmk_timer_jobs) 섹션을 참고하여 **관리 대시보드 처리 타이머 작업** 이 온라인인지 확인합니다.|  
-|관리 대시보드의 일부|Excel Services 또는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]을 설치하는 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드의 기본 제공 보고서에 대한 모든 권한을 사용하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치해야 합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다. [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd) 섹션 및 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/ko-kr/c2372180-e847-4cdb-b267-4befac3faf7e) 항목을 참조하세요.|  
+|관리 대시보드의 일부|Excel Services 또는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 을 설치하는 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드의 기본 제공 보고서에 대한 모든 권한을 사용하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치해야 합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다. [ADOMD.Net 클라이언트 라이브러리](#bkmk_adomd) 섹션 및 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)항목을 참조하세요.|  
   
 ##  <a name="bkmk_windows_service"></a> Analysis Services Windows 서비스  
  이 섹션의 스크립트는 SharePoint 모드에서 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 확인합니다. 서비스가 **실행 중**인지 확인합니다.  
@@ -106,7 +111,7 @@ SQL Server PowerPivot Service Application Online {Default PowerPivot Service App
  **PowerPivotEngineSerivce**  
   
 > [!NOTE]  
-> SharePoint 2013을 사용 중인 경우 **이 스크립트를 건너뜁니다** . PowerPivotEngineService는 SharePoint 2013 배포의 일부입니다. SharePoint 2013에서 Get-PowerPivotEngineService cmdlet을 실행하는 경우 다음과 유사한 오류 메시지가 표시됩니다. 이 항목의 사전 요구 사항 섹션에 명시된 Add-PSSnapin 명령을 실행한 경우에도 이 오류 메시지가 반환됩니다.  
+>  SharePoint 2013을 사용 중인 경우**이 스크립트를 건너뜁니다** . PowerPivotEngineService는 SharePoint 2013 배포의 일부입니다. SharePoint 2013에서 Get-PowerPivotEngineService cmdlet을 실행하는 경우 다음과 유사한 오류 메시지가 표시됩니다. 이 항목의 사전 요구 사항 섹션에 명시된 Add-PSSnapin 명령을 실행한 경우에도 이 오류 메시지가 반환됩니다.  
 >   
 >  'Get-PowerPivotEngineService' 용어는 cmdlet 이름으로 인식되지 않습니다.  
   
@@ -177,7 +182,7 @@ Name                           Status ProcessAccountName Id
 SharePoint Web Services System Online DOMAIN\account     89b50ec3-49e3-4de7-881a-2cec4b8b73ea  
 ```  
   
- ![참고](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")응용 프로그램 풀은 중앙 관리 페이지 **서비스 응용 프로그램 관리**에서도 확인할 수 있습니다. 서비스 응용 프로그램의 이름을 클릭한 다음 리본에서 **속성** 을 클릭합니다.  
+ ![참고](../../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")응용 프로그램 풀은 중앙 관리 페이지도 확인할 수 있습니다 **서비스 응용 프로그램 관리**합니다. 서비스 응용 프로그램의 이름을 클릭한 다음 리본에서 **속성** 을 클릭합니다.  
   
  **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 및 Excel Service 응용 프로그램 프록시**  
   
@@ -281,8 +286,8 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
 ##  <a name="bkmk_logs"></a> Windows 및 ULS 로그  
  **Windows 이벤트 로그**  
   
- 다음 명령은 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 관련 이벤트의 Windows 이벤트 로그를 검색합니다. 이벤트 비활성화 또는 이벤트 수준 변경에 대한 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)를 참조하세요.  
-  
+ 다음 명령은 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 관련 이벤트의 Windows 이벤트 로그를 검색합니다. 이벤트 비활성화 또는 이벤트 수준 변경에 대 한 자세한 내용은 참조 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40; Power Pivot for SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
+ 
  **서비스 이름:** MSOLAP$POWERPIVOT  
   
  **Windows 서비스의 표시 이름:** SQL Server Analysis Services(POWERPIVOT)  
@@ -360,7 +365,7 @@ MSOLAP.4   Oledb        Microsoft OLE DB Provider for OLAP Services 10.0
 MSOLAP.5   Oledb        Microsoft OLE DB Provider for OLAP Services 11.0  
 ```  
   
- 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/ko-kr/2c62daf9-1f2d-4508-a497-af62360ee859) 및 [MSOLAP.5를 Excel Services에서 신뢰할 수 있는 데이터 공급자로 추가](http://technet.microsoft.com/library/hh758436.aspx)를 참조하세요.  
+ 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859) 및 [MSOLAP.5를 Excel Services에서 신뢰할 수 있는 데이터 공급자로 추가](http://technet.microsoft.com/library/hh758436.aspx)를 참조하세요.  
   
 ##  <a name="bkmk_adomd"></a> ADOMD.Net 클라이언트 라이브러리  
   
@@ -377,7 +382,7 @@ Microsoft SQL Server 2008 Analysis Services ADOMD.NET 10.1.2531.0  Microsoft Cor
 Microsoft SQL Server 2005 Analysis Services ADOMD.NET 9.00.1399.06 Microsoft Corporation  
 ```  
   
- 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/ko-kr/c2372180-e847-4cdb-b267-4befac3faf7e)를 참조하세요.  
+ 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)를 참조하세요.  
   
 ##  <a name="bkmk_health_collection"></a> 상태 데이터 수집 규칙  
  **상태** 가 온라인이고 **설정** 이 True인지 확인합니다.  
@@ -430,7 +435,7 @@ powerpivotwebapp.wsp Online     True WebApplicationDeployed {uesql11spoint2}
 ##  <a name="bkmk_manual"></a> 수동 확인 단계  
  이 섹션에서는 PowerShell cmdlet으로 완료할 수 없는 확인 단계에 대해 설명합니다.  
   
- **예약된 데이터 새로 고침:** 통합 문서에 대한 새로 고침 일정을 **가능한 한 빨리 새로 고침**으로 구성합니다.  자세한 내용은 [데이터 새로 고침 및 Windows 인증을 지원하지 않는 데이터 원본&#40;SharePoint용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/schedule data refresh and data sources - no windows authentication.md)을 참조하세요.  
+ **예약된 데이터 새로 고침:** 통합 문서에 대한 새로 고침 일정을 **가능한 한 빨리 새로 고침**으로 구성합니다.  자세한 내용은 [데이터 새로 고침 및 Windows 인증을 지원하지 않는 데이터 원본&#40;SharePoint용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/schedule-data-refresh-and-data-sources-no-windows-authentication.md)을 참조하세요.  
   
 ##  <a name="bkmk_more_resources"></a> 추가 리소스  
  [Windows PowerShell의 웹 서버(IIS) 관리 Cmdlet](http://technet.microsoft.com/library/ee790599.aspx).  

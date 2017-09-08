@@ -1,24 +1,29 @@
 ---
 title: "Power Pivot 서비스 계정 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 76a85cd0-af93-40c9-9adf-9eb0f80b30c1
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bdd53a084d7438152d4ae83eeeb884984d48e51
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot 서비스 계정 구성
+# <a name="configure-power-pivot-service-accounts"></a>Power Pivot 서비스 계정 구성
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]설치에는 서버 작업을 지원하는 두 서비스가 포함됩니다. **SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** 서비스는 응용 프로그램 서버에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 처리 및 쿼리 지원을 제공하는 Windows 서비스입니다. 이 서비스의 로그인 계정은 항상 SQL Server 설치 중 SharePoint 통합 모드의 Analysis Services를 설치할 때 지정됩니다.  
   
  SharePoint 팜에서 응용 프로그램 풀 ID로 실행되는 공유 웹 서비스인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 대해 두 번째 계정을 지정해야 합니다. 이 계정은 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]구성 도구 또는 PowerShell을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치를 구성할 때 지정합니다.  
@@ -69,11 +74,11 @@ caps.handback.revision: 15
   
 1.  중앙 관리의 보안 섹션에서 **서비스 계정 구성**을 클릭합니다.  
   
-2.  Analysis Services 서비스 계정을 변경하려면 **Windows 서비스 - SQL Server Analysis Services**를 선택합니다.  
+2.  Analysis Services 서비스 계정을 변경하려면 **Windows 서비스 - SQL Server Analysis Services** 를 선택합니다.  
   
 3.  **이 서비스에 대한 계정을 선택하십시오**에서 기존 관리 계정을 선택하거나 새 계정을 만듭니다. 계정은 도메인 사용자 계정이어야 합니다.  
   
-4.  기본 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램의 응용 프로그램 풀 ID를 변경하려면 **서비스 응용 프로그램 풀 - SharePoint 웹 서비스 시스템**을 선택합니다. 설치 구성 방식에 따라 서비스가 SharePoint 서비스용으로 만든 기존 서비스 응용 프로그램 풀로 실행될 수 있습니다. 기본적으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구는 서비스를 **기본 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램)**으로 등록합니다.  
+4.  기본 **서비스 응용 프로그램의 응용 프로그램 풀 ID를 변경하려면** 서비스 응용 프로그램 풀 - SharePoint 웹 서비스 시스템 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 선택합니다. 설치 구성 방식에 따라 서비스가 SharePoint 서비스용으로 만든 기존 서비스 응용 프로그램 풀로 실행될 수 있습니다. 기본적으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구는 서비스를 **기본 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램)**으로 등록합니다.  
   
      SharePoint 관리자가 서비스를 수동으로 구성한 경우 이 서비스에는 자체 서비스 응용 프로그램 풀이 있을 가능성이 높습니다.  
   
@@ -98,16 +103,16 @@ caps.handback.revision: 15
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 풀. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램은 팜에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 쿼리 처리를 위한 SharePoint 통합 및 인프라를 제공하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스와 연결됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 대해 지정하는 응용 프로그램 풀은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스의 ID입니다. 팜에서 여러 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 사용할 수 있습니다. 만드는 각 PowerPivot 서비스 응용 프로그램은 자체 응용 프로그램 풀에서 실행됩니다.  
   
-#### Analysis Services 서비스 계정  
+#### <a name="analysis-services-service-account"></a>Analysis Services 서비스 계정  
   
 |요구 사항|Description|  
 |-----------------|-----------------|  
 |프로비전 요구 사항|이 계정은 SQL Server 설치 중 설치 마법사의 **Analysis Services - 구성 페이지** 또는 명령줄 설치의 **ASSVCACCOUNT** 설치 매개 변수를 사용하여 지정해야 합니다.<br /><br /> 중앙 관리, PowerShell 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 사용자 이름 또는 암호를 수정할 수 있습니다. 다른 도구를 사용하여 계정과 암호를 변경할 수는 없습니다.|  
 |도메인 사용자 계정 요구 사항|이 계정은 Windows 도메인 사용자 계정이어야 합니다. 기본 제공 컴퓨터 계정(예: 네트워크 서비스 또는 로컬 서비스)은 사용할 수 없습니다. SQL Server 설치 프로그램에서는 컴퓨터 계정이 지정되어 있으면 설치를 차단함으로써 도메인 사용자 계정 요구 사항을 강제 적용합니다.|  
-|사용 권한 요구 사항|이 계정은 로컬 컴퓨터의 SQLServerMSASUser$\<server>$PowerPivot 보안 그룹 및 WSS_WPG 보안 그룹 멤버여야 합니다. 이러한 사용 권한은 자동으로 부여됩니다. 사용 권한을 확인하거나 부여하는 방법에 대한 자세한 내용은 이 항목에서 [수동으로 파워 피벗 서비스 계정 관리 권한 부여](#updatemanually) 및 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/ko-kr/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)을 참조하세요.|  
+|사용 권한 요구 사항|이 계정은 SQLServerMSASUser $의 구성원 이어야 합니다\<서버 > $PowerPivot 보안 그룹 및 로컬 컴퓨터의 WSS_WPG 보안 그룹입니다. 이러한 사용 권한은 자동으로 부여됩니다. 사용 권한을 확인하거나 부여하는 방법에 대한 자세한 내용은 이 항목에서 [수동으로 파워 피벗 서비스 계정 관리 권한 부여](#updatemanually) 및 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)을 참조하세요.|  
 |확장 요구 사항|팜에 여러 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 인스턴스를 설치할 경우 모든 Analysis Services 서버 인스턴스가 동일한 도메인 사용자 계정으로 실행되어야 합니다. 예를 들어 첫 번째 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스가 Contoso\ssas-srv01로 실행되도록 구성한 경우 이후에 동일한 팜에 배포하는 모든 추가 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스도 Contoso\ssas-srv01(또는 어떤 계정이든 현재 계정)로 실행되어야 합니다.<br /><br /> 모든 서비스 인스턴스가 동일한 계정으로 실행되도록 구성하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스에서 쿼리 처리 또는 데이터 새로 고침 작업을 팜에 있는 모든 Analysis Services 서비스 인스턴스에 할당할 수 있습니다. 또한 Analysis Services 서버 인스턴스에 대해 중앙 관리의 관리 계정 기능을 사용할 수 있습니다. 모든 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스에 동일한 계정을 사용하는 경우 한 번만 계정이나 암호를 변경하면 해당 자격 증명을 사용하는 모든 서비스 인스턴스가 자동으로 업데이트됩니다.<br /><br /> SQL Server 설치 프로그램은 동일한 계정 요구 사항을 강제 적용합니다. 이미 설치된 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 인스턴스가 있는 SharePoint 팜에 확장 배포하는 경우 지정한 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 계정이 팜에서 이미 사용 중인 계정과 다른 경우 설치 프로그램에서 새 설치를 차단합니다.|  
   
-#### Power Pivot 서비스 응용 프로그램 풀  
+#### <a name="power-pivot-service-application-pool"></a>Power Pivot 서비스 응용 프로그램 풀  
   
 |요구 사항|Description|  
 |-----------------|-----------------|  
@@ -125,11 +130,11 @@ caps.handback.revision: 15
   
 3.  **지금 실행**을 클릭합니다.  
   
- 최후의 수단으로 Analysis Services 시스템 관리 권한을 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에 부여하여 올바른 사용 권한을 확인한 다음 서비스 응용 프로그램 ID를 SQLServerMSASUser$\<servername>$PowerPivot Windows 보안 그룹에 추가할 수 있습니다. SharePoint 팜에 통합되는 모든 Analysis Services 인스턴스에 대해 이 단계를 반복해야 합니다.  
+ 마지막 수단으로 Analysis Services 시스템 관리 권한을 부여 하 여 올바른 사용 권한을 확인 수는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램을 한 다음 추가할 서비스 응용 프로그램 id를 SQLServerMSASUser$\<서버 이름 > $PowerPivot Windows 보안 그룹입니다. SharePoint 팜에 통합되는 모든 Analysis Services 인스턴스에 대해 이 단계를 반복해야 합니다.  
   
  Windows 보안 그룹을 업데이트하려면 로컬 관리자여야 합니다.  
   
-1.  SQL Server Management Studio에서 Analysis Services 인스턴스에 \<server name>\POWERPIVOT으로 연결합니다.  
+1.  SQL Server Management Studio에서으로 Analysis Services 인스턴스에 연결 \<서버 이름 > \POWERPIVOT 합니다.  
   
 2.  서버 이름을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -145,7 +150,7 @@ caps.handback.revision: 15
   
 8.  **그룹**을 엽니다.  
   
-9. SQLServerMSASUser$\<servername>$PowerPivot을 두 번 클릭합니다.  
+9. SQLServerMSASUser $를 두 번 클릭\<서버 이름 > $PowerPivot 합니다.  
   
 10. **추가**를 클릭합니다.  
   
@@ -178,10 +183,10 @@ caps.handback.revision: 15
   
 8.  암호를 입력한 다음 **확인**을 클릭합니다.  
   
- Reporting Services를 설치한 경우 Reporting Services 구성 관리자를 사용하여 보고서 서버에 대한 암호와 보고서 서버 데이터베이스에 대한 연결을 업데이트합니다. 자세한 내용은 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration and administration of a report server.md)를 참조하세요.  
+ Reporting Services를 설치한 경우 Reporting Services 구성 관리자를 사용하여 보고서 서버에 대한 암호와 보고서 서버 데이터베이스에 대한 연결을 업데이트합니다. 자세한 내용은 [보고서 서버의 구성 및 관리&#40;Reporting Services SharePoint 모드&#41;](../../reporting-services/report-server-sharepoint/configuration-and-administration-of-a-report-server.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint용 PowerPivot 서버 시작 또는 중지](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)   
- [Power Pivot 무인 데이터 새로 고침 계정 구성(SharePoint용 Power Pivot)](http://msdn.microsoft.com/ko-kr/81401eac-c619-4fad-ad3e-599e7a6f8493)  
+ [Power Pivot 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)  
   
   

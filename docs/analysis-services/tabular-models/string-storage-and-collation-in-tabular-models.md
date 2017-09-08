@@ -1,29 +1,34 @@
 ---
-title: "테이블 형식 모델의 문자열 저장소 및 데이터 정렬 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "문자열 저장소 및 테이블 형식 모델에서 데이터 정렬 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 8516f0ad-32ee-4688-a304-e705143642ca
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 테이블 형식 모델의 문자열 저장소 및 데이터 정렬
+# <a name="string-storage-and-collation-in-tabular-models"></a>테이블 형식 모델의 문자열 저장소 및 데이터 정렬
   테이블 형식 모델에서 문자열(텍스트 값)은 고도로 압축된 형식으로 저장되며, 이러한 압축으로 인해 전체 또는 부분 문자열을 검색할 때 예기치 않은 결과를 얻게 될 수 있습니다. 또한 문자열 로캘 및 데이터 정렬은 가장 가까운 부모 개체에서 계층적으로 상속되므로 문자열 언어가 명시적으로 정의되어 있지 않은 경우 각 문자열이 저장되는 방식과 문자열이 고유한지 아니면 부모 데이터 정렬에 의해 정의된 유사 문자열과 혼합되는지는 부모의 로캘 및 데이터 정렬에 따라 달라질 수 있습니다.  
   
  이 항목에서는 문자열 압축 및 저장 메커니즘에 대해 설명하고 테이블 형식 모델에서 데이터 정렬 및 언어가 텍스트 수식 결과에 미치는 영향을 보여 주는 예를 제공합니다.  
   
-## 저장소  
+## <a name="storage"></a>저장소  
  테이블 형식 모델에서는 모든 데이터가 메모리 사용을 최적화할 수 있도록 고도로 압축됩니다. 따라서 어휘적으로 동일한 것으로 간주될 수 있는 모든 문자열이 한 번만 저장됩니다. 문자열의 첫 번째 인스턴스는 정식 표현으로 사용되며 이후 해당하는 각 문자열은 첫 번째 발생한 인스턴스와 동일한 압축된 값으로 인덱싱됩니다.  
   
  중요한 점은 어휘적으로 동일한 문자열을 구성하는 요소가 무엇이냐는 것입니다. 동일한 단어로 간주할 수 있는 두 문자열은 어휘적으로 동일한 것으로 간주됩니다. 예를 들어 영어로 **violin** 이라는 단어를 사전에서 검색할 경우 사전의 편집 정책에 따라 **Violin** 또는 **violin**항목을 찾을 수 있지만, 일반적으로 두 단어는 모두 동일한 것으로 간주되며 대/소문자 차이는 무시됩니다. 테이블 형식 모델에서 두 문자열이 어휘적으로 동일한지 여부를 결정하는 요소는 편집 정책이나 사용자 선호도가 아니라 해당 열에 할당된 로캘 및 데이터 정렬 순서입니다.  
@@ -60,7 +65,7 @@ caps.handback.revision: 10
 > [!WARNING]  
 >  사용자가 판단하는 올바른 형태에 따라 첫 번째로 저장할 문자열을 정의할 수도 있지만 이 과정은 매우 어려울 수 있습니다. 모든 값이 동일한 것으로 간주될 경우 엔진에서 처음 처리될 행을 미리 결정할 수 있는 간단한 방법은 없습니다. 대신 표준 값을 설정해야 하는 경우에는 모델을 로드하기 전에 모든 문자열을 정리해야 합니다.  
   
-## 로캘 및 데이터 정렬 순서  
+## <a name="locale-and-collation-order"></a>로캘 및 데이터 정렬 순서  
  문자열(텍스트 값)을 비교할 때 동일성을 정의하는 요소는 일반적으로 해당 문자열이 해석되는 방식에 대한 culture 특성입니다. 일부 culture에서는 문자의 악센트나 대/소문자에 따라 문자열의 의미가 완전히 달라질 수 있으므로, 특정 언어 또는 영역에서 동일성을 결정할 때는 대개 이러한 차이가 고려됩니다.  
   
  일반적으로 사용 중인 컴퓨터는 이미 사용자에게 필요한 culture 및 언어 동작에 맞게 구성되어 있으므로 텍스트 값 정렬 및 비교와 같은 문자열 작업이 예상대로 작동합니다. 언어별 동작을 제어하는 설정은 Windows의 **국가 및 언어** 설정을 통해 정의됩니다. 응용 프로그램에서는 이 설정을 읽고 그에 따라 동작을 변경합니다. 일부 응용 프로그램에는 사용자가 응용 프로그램의 culture 동작이나 문자열 비교 방식을 변경할 수 있는 기능이 있는 경우도 있습니다.  
@@ -71,7 +76,7 @@ caps.handback.revision: 10
   
 -   데이터 정렬은 문자 순서와 문자 일치성을 정의합니다.  
   
- 언어 식별자는 언어를 식별할 뿐 아니라 해당 언어가 사용되는 국가 또는 지역도 식별한다는 점에 주의해야 합니다. 각 언어 식별자에는 기본 데이터 정렬도 지정되어 있습니다. 언어 식별자에 자세한 내용은 [Microsoft에서 할당한 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하십시오. 수동으로 값을 삽입할 때는 10진수 LCID 열에서 올바른 ID를 확인할 수 있습니다. SQL의 데이터 정렬 개념에 대한 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](../Topic/COLLATE%20\(Transact-SQL\).md)를 참조하세요. 데이터 정렬 지정자 및 Windows 데이터 정렬 이름의 비교 스타일에 대한 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요. [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) 항목에서는 Windows 데이터 정렬 이름을 SQL에 사용되는 이름에 매핑합니다.  
+ 언어 식별자는 언어를 식별할 뿐 아니라 해당 언어가 사용되는 국가 또는 지역도 식별한다는 점에 주의해야 합니다. 각 언어 식별자에는 기본 데이터 정렬도 지정되어 있습니다. 언어 식별자에 자세한 내용은 [Microsoft에서 할당한 로캘 ID](http://msdn.microsoft.com/goglobal/bb964664.aspx)를 참조하십시오. 수동으로 값을 삽입할 때는 10진수 LCID 열에서 올바른 ID를 확인할 수 있습니다. SQL의 데이터 정렬 개념에 대한 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)를 참조하세요. 데이터 정렬 지정자 및 Windows 데이터 정렬 이름의 비교 스타일에 대한 자세한 내용은 [Windows 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요. [SQL Server 데이터 정렬 이름&#40;Transact-SQL&#41;](../../t-sql/statements/sql-server-collation-name-transact-sql.md) 항목에서는 Windows 데이터 정렬 이름을 SQL에 사용되는 이름에 매핑합니다.  
   
  테이블 형식 model 데이터베이스를 만든 후 모델의 모든 새 개체는 데이터베이스 특성에서 언어 및 데이터 정렬 특성을 상속합니다. 이는 모든 개체에 대해 적용됩니다. 상속 경로는 개체에서 시작되어, 부모에서 상속할 언어 및 데이터 정렬 특성을 확인하고, 특성을 찾을 수 없는 경우 최상위 수준까지 계속 진행하여 데이터베이스 수준에서 언어 및 데이터 정렬 특성을 찾는 방식으로 진행됩니다. 즉, 개체의 언어 및 데이터 정렬 특성을 지정하지 않을 경우 기본적으로 개체는 가장 가까운 부모의 특성을 상속합니다.  
   

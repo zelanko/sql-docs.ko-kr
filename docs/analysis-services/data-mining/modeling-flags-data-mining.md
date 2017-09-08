@@ -1,62 +1,67 @@
 ---
-title: "모델링 플래그(데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "특성 [데이터 마이닝]"
-  - "데이터 형식 [데이터 마이닝]"
-  - "REGRESSOR 플래그"
-  - "MODEL_EXISTENCE_ONLY 플래그"
-  - "REGRESSOR 열"
-  - "열 [데이터 마이닝], 모델링 플래그"
-  - "NOT NULL 모델링 플래그"
-  - "모델링 플래그 [데이터 마이닝]"
-  - "Null 값 [Analysis Services]"
-  - "MODEL_EXISTENCE_ONLY 열"
-  - "코딩 [데이터 마이닝]"
+title: "모델링 플래그 (데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- attributes [data mining]
+- data types [data mining]
+- REGRESSOR flag
+- MODEL_EXISTENCE_ONLY flag
+- REGRESSOR column
+- columns [data mining], modeling flags
+- NOT NULL modeling flag
+- modeling flags [data mining]
+- null values [Analysis Services]
+- MODEL_EXISTENCE_ONLY column
+- coding [Data Mining]
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 모델링 플래그(데이터 마이닝)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
+# <a name="modeling-flags-data-mining"></a>모델링 플래그(데이터 마이닝)
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 모델링 플래그를 사용하여 사례 테이블에 정의되어 있는 데이터에 대한 데이터 마이닝 알고리즘에 추가 정보를 제공할 수 있습니다. 데이터 마이닝 알고리즘은 이 정보를 토대로 더욱 정확한 데이터 마이닝 모델을 만들 수 있습니다.  
   
  마이닝 구조 수준에서 정의되는 모델링 플래그도 있고 마이닝 모델 열 수준에서 정의되는 모델링 플래그도 있습니다. 예를 들어 **NOT NULL** 모델링 플래그는 마이닝 구조 열에 사용됩니다. 모델을 만드는 데 사용하는 알고리즘에 따라 마이닝 모델 열에 추가 모델링 플래그를 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  타사 플러그 인의 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 미리 정의한 모델링 플래그 외에 다른 모델링 플래그를 사용할 수 있습니다.  
   
-## 모델링 플래그 목록  
+## <a name="list-of-modeling-flags"></a>모델링 플래그 목록  
  다음 목록에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 지원하는 모델링 플래그에 대해 설명합니다. 특정 알고리즘에서 지원하는 모델링 플래그에 대한 자세한 내용은 모델을 만드는 데 사용된 알고리즘의 기술 참조 항목을 참조하십시오.  
   
- **NOT  NULL**  
+ **NOT NULL**  
  특성 열 값이 Null 값을 포함할 수 없음을 나타냅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 모델 학습 프로세스 중 이 특성 열에 Null 값이 있는 경우에는 오류가 발생합니다.  
   
  **MODEL_EXISTENCE_ONLY**  
- 열이 **없음** 및 **있음** 상태로 처리됨을 나타냅니다. 값이 **NULL**인 경우 Missing으로 간주됩니다 MODEL_EXISTENCE_ONLY 플래그는 예측 가능한 특성에 적용되며 대부분의 알고리즘에서 지원됩니다.  
+ 열이 **없음** 및 **있음**상태로 처리됨을 나타냅니다. 값이 **NULL**인 경우 Missing으로 간주됩니다 MODEL_EXISTENCE_ONLY 플래그는 예측 가능한 특성에 적용되며 대부분의 알고리즘에서 지원됩니다.  
   
- 실제로 MODEL_EXISTENCE_ONLY 플래그를 **True**로 설정하면 **없음**과 **있음**의 두 가지 상태만 있도록 값의 표현이 변경됩니다. 누락 이외의 상태는 모두 단일 **있음** 값으로 결합됩니다.  
+ 실제로 MODEL_EXISTENCE_ONLY 플래그를 **True** 로 설정하면 **없음** 과 **있음**의 두 가지 상태만 있도록 값의 표현이 변경됩니다. 누락 이외의 상태는 모두 단일 **있음** 값으로 결합됩니다.  
   
- 이 모델링 플래그는 일반적으로 **NULL** 상태가 암시적인 의미를 갖는 특성을 나타내는 데 사용됩니다. 따라서 **NOT NULL** 상태의 명시적 값은 열이 값을 갖는다는 사실만큼이나 중요하지 않습니다. 예를 들어 [DateContractSigned] 열은 서명되지 않은 계약의 경우 **NULL**이고 서명된 계약의 경우 **NOT NULL**일 수 있습니다. 따라서 모델의 목적이 계약에 서명할지 여부를 예측하는 것이라면 MODEL_EXISTENCE_ONLY 플래그를 사용하여 **NOT NULL** 사례의 정확한 날짜 값은 무시하고 계약이 **없음** 또는 **있음**인 사례만 구별할 수 있습니다.  
+ 이 모델링 플래그는 일반적으로 **NULL** 상태가 암시적인 의미를 갖는 특성을 나타내는 데 사용됩니다. 따라서 **NOT NULL** 상태의 명시적 값은 열이 값을 갖는다는 사실만큼이나 중요하지 않습니다. 예를 들어 [DateContractSigned] 열은 서명되지 않은 계약의 경우 **NULL** 이고 서명된 계약의 경우 **NOT NULL** 일 수 있습니다. 따라서 모델의 목적이 계약에 서명할지 여부를 예측하는 것이라면 MODEL_EXISTENCE_ONLY 플래그를 사용하여 **NOT NULL** 사례의 정확한 날짜 값은 무시하고 계약이 **없음** 또는 **있음**인 사례만 구별할 수 있습니다.  
   
 > [!NOTE]  
->  Missing은 알고리즘에서 사용하는 특수한 상태로 열의 텍스트 값인 "Missing"과는 다릅니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.  
+>  Missing은 알고리즘에서 사용하는 특수한 상태로 열의 텍스트 값인 "Missing"과는 다릅니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)에서 미리 정의한 모델링 플래그 외에 다른 모델링 플래그를 사용할 수 있습니다.  
   
  **REGRESSOR**  
- 열이 처리 중에 회귀 변수로 사용할 후보임을 나타냅니다. 이 플래그는 마이닝 모델 열에서 정의되며 연속 숫자 데이터 형식이 있는 열에만 적용할 수 있습니다. 이 플래그의 사용에 대한 자세한 내용은 이 항목의 [REGRESSOR 모델링 플래그 사용](#bkmk_UseRegressors) 섹션을 참조하세요.  
+ 열이 처리 중에 회귀 변수로 사용할 후보임을 나타냅니다. 이 플래그는 마이닝 모델 열에서 정의되며 연속 숫자 데이터 형식이 있는 열에만 적용할 수 있습니다. 이 플래그의 사용에 대한 자세한 내용은 이 항목의 [REGRESSOR 모델링 플래그 사용](#bkmk_UseRegressors)섹션을 참조하세요.  
   
-## 모델링 플래그 확인 및 변경  
+## <a name="viewing-and-changing-modeling-flags"></a>모델링 플래그 확인 및 변경  
  데이터 마이닝 디자이너에서 구조 또는 모델의 속성을 확인하여 마이닝 구조 열 또는 모델 열과 관련된 모델링 플래그를 볼 수 있습니다.  
   
  현재 마이닝 구조에 적용된 모델링 플래그를 확인하려면 다음과 같은 쿼리를 사용하여 데이터 마이닝 스키마 행 집합에 대해 구조 열의 모델링 플래그를 반환하는 쿼리를 만들면 됩니다.  
@@ -86,7 +91,7 @@ WHERE MODEL_NAME = '<model name>'
   
  **참고** 마이닝 모델을 수정한 다음 열의 내용 유형을 Continuous에서 Discrete로 변경할 경우 마이닝 열의 플래그를 수동으로 변경한 다음 모델을 다시 처리해야 합니다.  
   
-### 선형 회귀 모델의 회귀 변수  
+### <a name="regressors-in-linear-regression-models"></a>선형 회귀 모델의 회귀 변수  
  선형 회귀 모델은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 기반으로 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하지 않는 경우라도 연속 특성에 대한 회귀를 나타내는 트리나 노드가 의사 결정 트리에 포함될 수 있습니다.  
   
  따라서 이러한 모델에서는 연속 열이 회귀 변수를 나타내도록 지정할 필요가 없습니다. 열에 REGRESSOR 플래그를 설정하지 않더라도 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 의미 있는 패턴을 포함하는 영역으로 데이터 집합을 분할합니다. 단, 모델링 플래그를 설정할 때 알고리즘이 트리의 노드에 패턴을 맞추기 위해 다음 형식의 회귀 수식을 찾으려고 한다는 것이 다릅니다.  
@@ -99,7 +104,7 @@ WHERE MODEL_NAME = '<model name>'
   
  FORCE_REGRESSOR 매개 변수를 사용하여 알고리즘이 항상 특정 회귀 변수를 사용하도록 할 수 있습니다. 이 매개 변수는 의사 결정 트리 알고리즘과 선형 회귀 알고리즘에서 사용할 수 있습니다.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  모델링 플래그 사용에 대해 자세히 알아보려면 다음 링크를 사용하십시오.  
   
 |태스크|항목|  

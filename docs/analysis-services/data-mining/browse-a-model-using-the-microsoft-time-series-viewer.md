@@ -1,32 +1,37 @@
 ---
-title: "Microsoft 시계열 뷰어를 사용하여 모델 찾아보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 마이닝 [Analysis Services], 연속 열"
-  - "마이닝 모델 콘텐츠, 보기"
-  - "Microsoft 시계열 뷰어"
-  - "차트 [Analysis Services]"
-  - "시계열 뷰어 [Analysis Services]"
-  - "연속 열"
-  - "회귀 알고리즘 [Analysis Services]"
+title: "Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], continuous columns
+- mining model content, viewing
+- Microsoft Time Series Viewer
+- charts [Analysis Services]
+- Time Series Viewer [Analysis Services]
+- continuous columns
+- regression algorithms [Analysis Services]
 ms.assetid: a77c16cd-1cd0-4fc5-afeb-d1dab30d1e25
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0de59252e18921c4c280143b695000b5913a5aa2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 시계열 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
+# <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft 시계열 뷰어를 사용하여 모델 찾아보기
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시계열 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘으로 작성한 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 예측 시나리오에서 제품 판매량과 같은 연속 열을 예측하기 위해 데이터 마이닝 모델을 만드는 회귀 알고리즘입니다. 이 시계열 모델은 다음과 같이 다른 알고리즘을 기반으로 한 정보를 포함할 수 있습니다.  
   
 -   단기 예측에 대해 최적화되어 있는 ARIxp 알고리즘  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 44
  이러한 알고리즘에 대한 자세한 내용은 [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md) 및 [Microsoft Time Series Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)를 참조하십시오.  
   
 > [!NOTE]  
->  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)를 참조하세요.  
+>  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)를 참조하세요.  
   
 ##  <a name="BKMK_ViewerTabs"></a> 뷰어 탭  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델을 찾으면 해당 모델의 적절한 뷰어에서 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 해당 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어에는 다음과 같은 탭이 있습니다.  
@@ -53,7 +58,7 @@ caps.handback.revision: 44
   
  각 트리에서 시계열 모델은 **모두** 노드를 포함한 다음 알고리즘에서 발견한 주기적 구조를 나타내는 노드 계열로 분리합니다. 각 노드를 클릭하여 일련의 사례와 수식 등의 통계를 표시할 수 있습니다.  
   
- ARTxp만 사용하여 모델을 만든 경우 루트 노드의 **마이닝 범례** 에는 총 사례 수만 포함됩니다. 루트가 아닌 각 노드의 **마이닝 범례**에는 분할된 트리에 대한 세부 정보가 포함됩니다. 예를 들어 사례 수 및 노드에 대한 수식이 표시됩니다. 범례의 *규칙* 에는 계열을 식별하는 정보와 규칙이 적용되는 시간 조각이 포함됩니다. 예를 들어 범례 텍스트 `M200 Europe Amount -2` 는 노드가 두 개의 시간 조각 이전 기간에서 M200 Europe 계열의 모델을 나타냄을 가리킵니다.  
+ ARTxp만 사용하여 모델을 만든 경우 루트 노드의 **마이닝 범례** 에는 총 사례 수만 포함됩니다. 루트가 아닌 각 노드의 **마이닝 범례** 에는 분할된 트리에 대한 세부 정보가 포함됩니다. 예를 들어 사례 수 및 노드에 대한 수식이 표시됩니다. 범례의 *규칙* 에는 계열을 식별하는 정보와 규칙이 적용되는 시간 조각이 포함됩니다. 예를 들어 범례 텍스트 `M200 Europe Amount -2` 는 노드가 두 개의 시간 조각 이전 기간에서 M200 Europe 계열의 모델을 나타냄을 가리킵니다.  
   
  ARIMA만 사용하여 모델을 만든 경우 **모델** 탭에는 **모두**라는 캡션이 있는 단일 노드가 포함됩니다. 루트 노드의 **마이닝 범례** 에는 ARIMA 수식이 포함됩니다.  
   
@@ -85,7 +90,7 @@ caps.handback.revision: 44
   
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)   

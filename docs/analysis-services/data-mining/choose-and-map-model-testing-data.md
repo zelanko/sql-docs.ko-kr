@@ -1,28 +1,33 @@
 ---
 title: "모델 테스트 데이터 선택 및 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "열 [데이터 마이닝], 마이닝 정확도 차트"
-  - "마이닝 정확도 차트 [Analysis Services], 열 매핑"
-  - "입력 열 매핑 [Analysis Services]"
-  - "입력 열 매핑 [Analysis Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining accuracy charts
+- Mining Accuracy Chart [Analysis Services], column mappings
+- input column mapping [Analysis Services]
+- mapping input columns [Analysis Services]
 ms.assetid: be0d9f20-40c3-4dac-81da-281cfe724126
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5374180481138f62346ec1ff3aa83eff82403c05
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 모델 테스트 데이터 선택 및 매핑
+# <a name="choose-and-map-model-testing-data"></a>모델 테스트 데이터 선택 및 매핑
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 정확도 차트를 만들려면 모델을 테스트하는 데 사용할 데이터를 선택하고 데이터를 모델에 매핑해야 합니다.  
   
  마이닝 구조를 작성할 때 홀드아웃 데이터 집합을 만든 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 기본적으로 마이닝 모델 테스트 데이터가 사용됩니다. 홀드아웃 테스트 집합은 열 이름 및 데이터 형식이 항상 모델과 일치하고 데이터 분포도 유사하므로 홀드아웃 테스트 집합을 만드는 것은 동일한 마이닝 구조를 기반으로 하는 모델을 테스트하는 가장 쉬운 방법입니다. 또한 디자이너에서는 입력 열과 모델 열 간의 관계를 자동으로 만듭니다.  
@@ -75,11 +80,11 @@ caps.handback.revision: 44
   
 3.  **입력 선택** 탭의 **정확도 차트에 사용할 데이터 집합을 선택하십시오.**에서 **다른 데이터 집합 지정**을 선택합니다.  
   
-4.  찾아보기 단추**(…)**를 클릭하여 대화 상자를 열고 외부 데이터 집합의 정의를 작성합니다.  
+4.  찾아보기 단추 **(…)** 를 클릭하여 대화 상자를 열고 외부 데이터 집합의 정의를 작성합니다.  
   
 5.  **마이닝 구조 선택** 대화 상자에서 작업할 모델이 포함된 마이닝 구조를 선택한 다음 **확인**을 클릭합니다.  
   
-6.  **마이닝 정확도 차트** 탭의 **입력 테이블 선택** 테이블에서 **사례 테이블 선택**을 클릭하여 **테이블 선택** 대화 상자를 엽니다.  
+6.  **마이닝 정확도 차트** 탭의 **입력 테이블 선택** 테이블에서 **사례 테이블 선택** 을 클릭하여 **테이블 선택** 대화 상자를 엽니다.  
   
 7.  **테이블 선택** 대화 상자의 **데이터 원본** 목록에서 데이터 원본을 선택합니다. 모델 정확도를 확인하기 위해 예측 쿼리에 사용할 데이터가 포함된 테이블을 선택합니다.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 44
   
 4.  **정확도 차트에 사용할 데이터 집합을 선택하십시오**에서 **다른 데이터 집합 지정**옵션을 선택합니다.  
   
-5.  찾아보기 단추**(…)**를 클릭하여 대화 상자를 열고 외부 데이터 원본의 정의를 작성합니다.  
+5.  찾아보기 단추 **(…)** 를 클릭하여 대화 상자를 열고 외부 데이터 원본의 정의를 작성합니다.  
   
 6.  **열 매핑 지정** 대화 상자에서 **사례 테이블 선택**을 클릭합니다.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 44
   
      **열 매핑 지정** 대화 상자에 새 열 매핑이 표시됩니다. 열 사이의 선을 선택하고 Delete 키를 눌러 매핑을 제거할 수 있습니다. **마이닝 구조** 테이블의 열을 선택하고 **입력 테이블 선택** 테이블의 해당 열로 끌어 새 연결을 만들 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [테스트 및 유효성 검사 태스크 및 방법&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

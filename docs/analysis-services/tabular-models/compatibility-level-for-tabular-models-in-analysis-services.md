@@ -1,73 +1,80 @@
 ---
-title: "Analysis services에서 테이블 형식 모델에 대한 호환성 수준 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.versioncompat.f1"
+title: "Analysis Services 테이블 형식 모델에 호환성 수준이 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.versioncompat.f1
 ms.assetid: 8943d78d-4a73-4be8-ad14-3d428f5abd06
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 58710676e09a49ecc1b49ad37c656e3589ee1257
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis services에서 테이블 형식 모델에 대한 호환성 수준
-  모델 또는 데이터베이스의 *호환성 수준*은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진의 릴리스 관련 동작의 집합을 참조합니다. 특정 릴리스의 동작을 가져오도록 모든 지원되는 호환성 수준에서 모델을 만들 수 있습니다. 예를 들어 DirectQuery 및 테이블 형식 개체 메타데이터에는 호환성 수준 할당에 따라 서로 다른 구현이 있습니다.  
+# <a name="compatibility-level-for-analysis-services-tabular-models"></a>Analysis Services 테이블 형식 모델에 대 한 호환성 수준
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+  *호환성 수준이* Analysis Services 엔진의 릴리스 관련 동작을 가리킵니다. 예를 들어 DirectQuery 및 테이블 형식 개체 메타 데이터는 서로 다른 구현이 호환성 수준에 따라 합니다. 일반에 서버에서 지 원하는 최신 호환성 수준을 선택 해야 합니다.
+
+  **최신 호환성 수준은 1400** 
   
- **SQL Server 2016 RTM(1200)** 또는 줄여서 1200 호환성 수준은 SQL Server 2016에서 새로 도입되었으며 테이블 형식 모델에만 적용됩니다.  1200 호환성 수준에서 테이블 형식 모델은 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 테이블 형식 인스턴스에서만 실행됩니다.  
+1400 호환성 수준에서 주요 기능은 다음과 같습니다.
+
+*  TOM Api 및 TMSL 스크립트를 지 원하는 데이터 연결 및 테이블 형식 모델에 가져오기에 대 한 새로운 인프라입니다. 이 통해 Azure Blob 저장소와 같은 추가 데이터 원본에 대 한 지원. 추가 데이터 원본을 사용할 수는 향후 업데이트를 포함 합니다.
+*  데이터 변환 및 데이터 가져오기 및 M 식을 사용 하 여 데이터 매시업 기능입니다.
+*  측정값 집계 된 보고서에서 자세한 데이터를 드릴 다운 하는 Microsoft Excel과 같은 BI 도구를 사용 하도록 설정 하는 DAX 식 사용 하 여 정보 행 속성을 지원 합니다. 예를 들어 최종 사용자가 보는 지역 및 월에 대 한 총 판매액을 관련된 주문 세부 정보를 볼 수 있습니다. 
+*  내 데이터 외에도 테이블 및 열 이름에 대 한 개체 수준 보안 합니다.
+*  비정형된 계층 구조에 대 한 향상 된 지원 합니다.
+*  성능 및 향상 된 기능을 모니터링 합니다.
+
   
- 테이블 형식 모델을 만들거나 업그레이드하려면 프로젝트가 만들어진 후 **model.bim** 파일에서 또는 프로젝트를 만들 때 SSDT(SQL Server Data Tools)를 사용하고 **호환성 수준** 속성을 설정합니다.  
+## <a name="supported-compatibility-levels-by-version"></a>버전에서 지원 되는 호환성 수준
   
-> [!NOTE]  
->  다차원 모델은 호환성 수준 기준으로 독립적인 버전 경로를 따릅니다. 1103의 경우와 숫자가 동일한 경우 이는 우연의 일치입니다. 자세한 내용은 [다차원 데이터베이스의 호환성 수준&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)을 참조하세요.  
+|||  
+|-|-|- 
+|**호환성 수준**|**서버 버전**| 
+|1400|SQL Server 2017 azure Analysis Services (미리 보기) |  
+|1200|Azure Analysis Services, SQL Server 2017 년 1 SQL Server 2016| 
+|1103|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
+|1100|SQL Server 2017 *, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
+
+\*1100 및 1103 호환성 수준은 SQL Server 2017에서는 사용 되지 않습니다.
   
-## 테이블 형식 모델 데이터베이스에 대한 지원되는 호환성 수준  
- Analysis Services는 모델 및 데이터베이스 모두에 적용할 수 있는 다음 호환성 수준을 지원합니다.  모델을 만드는 데 사용되는 도구의 버전은 더 높은 호환성 수준을 사용할 수 있는지 확인합니다.  
+## <a name="set-compatibility-level"></a>호환성 수준을 설정 
+ 새 테이블 형식 모델 프로젝트를 SQL Server Data Tools (SSDT)를 만들 때에 호환성 수준을 지정할 수 있습니다는 **테이블 형식 모델 디자이너** 대화 상자. 
   
-||||  
-|-|-|-|  
-|호환성 수준|서버 버전|모델링 도구 버전|  
-|1200|SQL Server 2016 인스턴스에서만 실행|[Visual Studio 2015용 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [What's New in Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md) 은(는) 이 수준에서 사용할 수 있는 기능을 설명합니다.|  
-|1103|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1|[Visual Studio 2015용 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>2</sup><br /><br /> [Business Intelligence용 SQL Server Data Tools(Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [Business Intelligence용 SQL Server Data Tools(Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)|  
-|1100|SQL Server 2016<br /><br /> SQL Server 2014<br /><br /> SQL Server 2012 SP1<br /><br /> SQL Server 2012|[Visual Studio 2015용 SQL Server Data Tools](http://go.microsoft.com/fwlink/?LinkID=690931) <sup>1</sup><br /><br /> [Business Intelligence용 SQL Server Data Tools(Visual Studio 2013)](https://www.microsoft.com/en-us/download/details.aspx?id=42313)<br /><br /> [Business Intelligence용 SQL Server Data Tools(Visual Studio 2012)](http://www.microsoft.com/en-us/download/details.aspx?id=36843)<br /><br /> Business Intelligence Development Studio(Visual Studio 2010 Shell에서 실행 및 SQL Server 설치 프로그램을 통해 설치)|  
+ ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.png)  
   
- <sup>1</sup> Visual Studio 2015용 SQL Server Data Tools를 사용하여 이전 버전의 Analysis Services에 1100 또는 1103 테이블 형식 모델을 배포할 수 있습니다.  
+ 선택 하는 경우는 **이 메시지를 다시 표시 안 함** 옵션을 모든 후속 프로젝트는 기본적으로 지정 된 호환성 수준을 사용 합니다. SSDT의 **도구** > **옵션**에서 기본 호환성 수준을 변경할 수 있습니다.  
   
- <sup>2</sup> 호환성 수준 1100, 1103 및 1200은 Visual Studio 2015용 SQL Server Data Tools의 테이블 형식 모델 프로젝트에 대해 모두 유효하지만 Analysis Services의 SQL Server 2016 인스턴스에서 1200 모델을 배포 및 실행할 수 있습니다.  
+ SSDT에서 테이블 형식 모델 프로젝트를 업그레이드 하려면 설정는 **호환성 수준이** 모델의 속성 **속성** 창. 에 유의 해야, 호환성 수준이 업그레이드은 취소할 수 없습니다.
   
-## SSDT에서 테이블 형식을 만들거나 업그레이드할 때 호환성 수준 설정  
- SSDT(SQL Server Data Tools)에서 새 테이블 형식 모델 프로젝트를 만들 때 **새 테이블 형식 프로젝트 옵션** 대화 상자에서 호환성 수준을 지정할 수 있습니다.  
+## <a name="check-compatibility-level-for-a-database-in-ssms"></a>SSMS에서 데이터베이스에 대한 호환성 수준 확인  
+ SSMS에서 데이터베이스 이름을 마우스 오른쪽 단추로 클릭 > **속성** > **호환성 수준이**합니다.  
   
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+## <a name="check-supported-compatibility-level-for-a-server-in-ssms"></a>SSMS의 서버에 대해 지원되는 호환성 수준 확인  
+ SSMS에서 서버 이름을 마우스 오른쪽 단추로 클릭 > **속성** > **호환성 수준을 지원**합니다.  
   
- 또한 **이 메시지를 다시 표시 안 함** 옵션을 선택하여 기본 호환성 수준을 지정할 수도 있습니다. 모든 후속 프로젝트는 지정된 호환성 수준을 사용합니다. SSDT의 **도구** > **옵션**에서 기본 호환성 수준을 변경할 수 있습니다.  
+ 이 속성에는 서버에서 실행 되는 데이터베이스의 가장 높은 호환성 수준을 지정 합니다. 지원되는 호환성 수준은 읽기 전용이며 변경할 수 없습니다.  
   
- 테이블 형식 모델 프로젝트를 업그레이드하려면 모델 **속성** 창의 **호환성 수준** 속성을 **SQL Server 2016 RTM(1200)**으로 설정합니다.  자세한 내용은 [Upgrade Analysis Services](../../database-engine/install-windows/upgrade-analysis-services.md) 을 참조하세요.  
-  
-> [!NOTE]  
->  테이블 형식 모델을 만드는 한 가지 방법은 가져오는 Power Pivot 통합 문서를 기준으로 하는 것입니다. 기본적으로 Power BI Desktop은 1200 호환성 수준에서 테이블 형식 모델을 자동으로 만듭니다. 그러나 이전 버전의 Power Pivot 통합 문서는 1100 수준에 있을 수 있습니다. 이전 통합 문서를 사용할 경우 **호환성 수준** 속성을 변경하여 업그레이드해야 합니다.  
-  
-## SSMS에서 데이터베이스에 대한 호환성 수준 확인  
- SSMS에서 데이터베이스 이름 > **속성**  > **호환성 수준** 속성을 마우스 오른쪽 단추로 클릭합니다.  
-  
-## SSMS의 서버에 대해 지원되는 호환성 수준 확인  
- SSMS에서 서버 이름 > **속성** > **지원되는 호환성 수준**을 마우스 오른쪽 단추로 클릭합니다.  
-  
- 이 속성은 서버에서 실행되는 데이터베이스의 가장 높은 호환성 수준을 지정합니다.  지원되는 호환성 수준은 읽기 전용이며 변경할 수 없습니다.  
-  
-## 관련 항목:  
- [다차원 데이터베이스의 호환성 수준&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
+## <a name="see-also"></a>참고 항목  
+ [다차원 데이터베이스의 호환성 수준](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md)   
  [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)   
- [파워 피벗에서 가져오기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)   
- [새 테이블 형식 모델 프로젝트 만들기&#40;Reporting Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
+ [새 테이블 형식 모델 프로젝트 만들기](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)  
   
   
+

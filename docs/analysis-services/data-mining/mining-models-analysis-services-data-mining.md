@@ -1,30 +1,35 @@
 ---
-title: "마이닝 모델(Analysis Services - 데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "알고리즘 [데이터 마이닝]"
-  - "마이닝 모델 [Analysis Services]"
-  - "논리적 아키텍처 [Analysis Services 다차원 데이터]"
-  - "속성 [Analysis Services]"
-  - "마이닝 모델 [Analysis Services], 데이터 마이닝 모델 정보"
-  - "아키텍처 [Analysis Services]"
+title: "마이닝 모델 (Analysis Services-데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services]
+- logical architecture [Analysis Services Multidimensional Data]
+- properties [Analysis Services]
+- mining models [Analysis Services], about data mining models
+- architecture [Analysis Services]
 ms.assetid: cd4df273-0c6a-4b3e-9572-8a7e313111e8
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3425210ee85136d7b85c48c16562d85534a115f8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 모델(Analysis Services - 데이터 마이닝)
+# <a name="mining-models-analysis-services---data-mining"></a>마이닝 모델(Analysis Services - 데이터 마이닝)
   *마이닝 모델* 은 데이터에 알고리즘을 적용하여 만들지만 단순한 알고리즘 또는 메타데이터 컨테이너가 아니며, 새로운 데이터에 적용하여 예측을 생성하고 관계를 추론할 수 있는 데이터, 통계 및 패턴의 집합입니다.  
   
  이 섹션에서는 데이터 마이닝 모델의 정의와 용도에 대해 설명합니다. 즉, 모델 및 구조의 기본 아키텍처, 마이닝 모델의 속성, 마이닝 모델을 만들고 사용하는 방법에 대해 설명합니다.  
@@ -46,7 +51,7 @@ caps.handback.revision: 37
   
  마이닝 모델은 마이닝 구조에서 제공한 데이터가 처리 및 분석되기 전까지 비어 있습니다. 마이닝 모델이 처리된 후에는 메타데이터, 결과 및 마이닝 구조에 대한 바인딩으로 채워집니다.  
   
- ![모델에 메타데이터, 패턴 및 바인딩이 포함됨](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "모델에 메타데이터, 패턴 및 바인딩이 포함됨")  
+ ![모델 메타 데이터, 패턴 및 바인딩이 포함](../../analysis-services/data-mining/media/dmcon-modelarch2.gif "모델 메타 데이터, 패턴 및 바인딩이 포함")  
   
  메타데이터는 모델의 이름과 해당 모델이 저장된 서버뿐 아니라 모델을 만드는 데 사용된 마이닝 구조의 열을 비롯한 모델 정의, 모델을 처리할 때 적용된 필터 정의 및 데이터를 분석하는 데 사용된 알고리즘도 지정합니다. 데이터 열, 데이터 유형, 필터, 알고리즘 등 모든 선택 항목은 분석 결과에 상당한 영향을 줍니다.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 37
   
  또한 각 마이닝 모델에는 <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> 및 <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>라는 두 특수 속성이 있습니다.  
   
--   **Algorithm 속성** 모델을 만드는 데 사용되는 알고리즘을 지정합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 포함된 알고리즘 목록은 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요. **Algorithm** 속성은 마이닝 모델에 적용되며 각 모델에 대해 한 번만 설정할 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.  
+-   **Algorithm 속성** 모델을 만드는 데 사용되는 알고리즘을 지정합니다. 사용 가능한 알고리즘은 사용 중인 공급자에 따라 달라집니다. 와 함께 제공 되는 알고리즘 목록은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 참조 [Data Mining Algorithms &#40; Analysis Services-데이터 마이닝 &#41; ](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md). **Algorithm** 속성은 마이닝 모델에 적용되며 각 모델에 대해 한 번만 설정할 수 있습니다. 나중에 알고리즘을 변경할 수 있지만 마이닝 모델의 일부 열은 선택하는 알고리즘에서 지원하지 않는 경우 사용할 수 없게 될 수 있습니다. 이 속성을 변경한 후 모델을 항상 다시 처리해야 합니다.  
   
 -   **Usage 속성** 모델에서 각 열이 사용되는 방법을 정의합니다. 열 사용을 **Input**, **Predict**, **Predict Only**또는 **Key**로 정의할 수 있습니다. **Usage** 속성은 개별 마이닝 모델 열에 적용되고 모델에 포함되어 있는 각 열에 대해 개별적으로 설정되어야 합니다. 구조에 모델에서 사용하지 않는 열이 포함되어 있는 경우 사용이 **Ignore**로 설정됩니다. 마이닝 구조에 포함되지만 분석에 사용되지 않는 데이터의 예로는 고객 이름, 전자 메일 주소 등이 있습니다. 이렇게 하면 분석 단계에서 데이터를 포함시키지 않고 나중에 해당 데이터를 쿼리할 수 있습니다.  
   
@@ -121,7 +126,7 @@ caps.handback.revision: 37
   
  마이닝 모델에 대한 쿼리를 작성하여 예측을 만들거나 모델 메타데이터 또는 해당 모델에서 생성된 패턴을 검색할 수도 있습니다. 쿼리를 작성하려면 DMX(Data Mining Extensions)를 사용합니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
   
 |항목|링크|  
 |------------|-----------|  
@@ -132,7 +137,7 @@ caps.handback.revision: 37
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 지정 데이터 마이닝 뷰어를 사용하는 방법에 대해 알아봅니다.|[데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |데이터 마이닝 모델에 대해 사용할 수 있는 다양한 쿼리 유형의 예를 봅니다.|[데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)|  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  다음 링크를 사용하여 데이터 마이닝 모델 작업에 대한 자세한 정보를 확인할 수 있습니다.  
   
 |태스크|링크|  
@@ -144,7 +149,7 @@ caps.handback.revision: 37
 |모델에 데이터 채우기 또는 모델의 데이터 업데이트|[마이닝 모델 처리](../../analysis-services/data-mining/process-a-mining-model.md)|  
 |OLAP 모델 작업|[데이터 마이닝 차원 만들기](../../analysis-services/data-mining/create-a-data-mining-dimension.md)|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 개체&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

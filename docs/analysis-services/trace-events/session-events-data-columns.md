@@ -1,24 +1,29 @@
 ---
-title: "Session Events 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Session Events 이벤트 범주"
+title: Session Events Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Session Events event category
 ms.assetid: 35853451-6768-4a02-8b8f-81a8ae37a333
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cb85851bd0c05de09120fa2403c1e47bf0da9a75
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Session Events 데이터 열
+# <a name="session-events-data-columns"></a>Session Events 데이터 열
   Session Events 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 21
   
  다음 표에서는 이 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Existing Connection  
+## <a name="existing-connection"></a>Existing Connection  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -44,7 +49,7 @@ caps.handback.revision: 21
 |SPID|41|1.|서버 프로세스 ID로, 사용자 세션을 고유하게 식별합니다. 이 SPI는 XML/A에서 사용하는 세션 GUID와 정확히 일치합니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Existing Session  
+## <a name="existing-session"></a>Existing Session  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 21
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
 |RequestProperties|45|9|XMLA 요청 속성입니다.|  
   
-## Session Initialize  
+## <a name="session-initialize"></a>Session Initialize  
   
 |||||  
 |-|-|-|-|  
@@ -85,7 +90,7 @@ caps.handback.revision: 21
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
 |RequestProperties|45|9|XMLA 요청 속성입니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Security Audit 이벤트 범주](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

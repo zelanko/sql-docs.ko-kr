@@ -1,24 +1,33 @@
 ---
-title: "클라이언트 응용 프로그램에서 연결(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "클라이언트 응용 프로그램 (Analysis Services)에서 연결 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.swb.connection.login.analysisserver.f1
+- sql13.swb.connecttoas.connectionproperties.f1
+- sql13.swb.connecttoas.login.f1
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1316b995a0d12f3ee358a9e355925dfc334473a4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 클라이언트 응용 프로그램에서 연결(Analysis Services)
+# <a name="connect-from-client-applications-analysis-services"></a>클라이언트 응용 프로그램에서 연결(Analysis Services)
   Analysis Services를 처음 접하는 경우 이 항목의 정보를 사용하여 일반 도구 및 응용 프로그램을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 기존 인스턴스에 연결할 수 있습니다. 이 항목에서는 테스트를 위해 서로 다른 사용자 ID로 연결하는 방법에 대해서도 설명합니다.  
   
 -   [SQL Server Management Studio를 사용하여 연결(SSMS)](#bkmk_SSMS)  
@@ -69,7 +78,7 @@ caps.handback.revision: 9
     ```  
   
 ##  <a name="bkmk_excel"></a> Excel을 사용하여 연결  
- Microsoft Excel은 일반적으로 비즈니스 데이터를 분석하는 데 사용됩니다. Excel 설치 시 Office는 네트워크 서버의 데이터를 보다 쉽게 사용할 수 있도록 Analysis Services OLE DB 공급자(MSOLAP DLL), ADOMD.NET 및 기타 데이터 공급자를 설치합니다. 이전 버전의 Excel과 함께 최신 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용 중인 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 연결하는 각 워크스테이션에서 최신 데이터 공급자를 설치해야 할 수 있습니다. 자세한 내용은 [Analysis Services 연결에 사용되는 데이터 공급자](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md)를 참조하세요.  
+ Microsoft Excel은 일반적으로 비즈니스 데이터를 분석하는 데 사용됩니다. Excel 설치 시 Office는 네트워크 서버의 데이터를 보다 쉽게 사용할 수 있도록 Analysis Services OLE DB 공급자(MSOLAP DLL), ADOMD.NET 및 기타 데이터 공급자를 설치합니다. 이전 버전의 Excel과 함께 최신 버전의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용 중인 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 연결하는 각 워크스테이션에서 최신 데이터 공급자를 설치해야 할 수 있습니다. 자세한 내용은 [Analysis Services 연결에 사용되는 데이터 공급자](../../analysis-services/instances/data-providers-used-for-analysis-services-connections.md) 를 참조하세요.  
   
  Analysis Services 큐브 또는 테이블 형식 model 데이터베이스에 대한 연결을 설정하면 Excel에서 나중에 사용할 수 있도록 연결 정보를 .odc 파일에 저장합니다. 연결은 현재 Windows 사용자의 보안 컨텍스트에서 수행됩니다. 연결에 성공하려면 사용자 계정에 데이터베이스에 대한 읽기 권한이 있어야 합니다.  
   
@@ -120,7 +129,7 @@ caps.handback.revision: 9
   
      테스트하려면 원격 컴퓨터에서 Excel 또는 SSMS를 사용하여 Analysis Services 인스턴스에서 사용하는 IP 주소 및 포트를 지정합니다. 연결할 수 있으면 방화벽 규칙이 인스턴스에 대해 올바르며 인스턴스에서 원격 연결을 허용하는 것입니다.  
   
-     또한 연결 프로토콜에 TCP/IP를 사용하는 경우 Analysis Services에서는 클라이언트 연결이 동일한 도메인이나 트러스트된 도메인에서 설정되도록 요구합니다. 연결이 보안 경계를 넘어 이동하는 경우 대부분 HTTP 액세스를 구성해야 합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)을 참조하세요.  
+     또한 연결 프로토콜에 TCP/IP를 사용하는 경우 Analysis Services에서는 클라이언트 연결이 동일한 도메인이나 트러스트된 도메인에서 설정되도록 요구합니다. 연결이 보안 경계를 넘어 이동하는 경우 대부분 HTTP 액세스를 구성해야 합니다. 자세한 내용은 [IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)을 참조하세요.  
   
 -   특정 도구를 사용해서만 연결할 수 있습니까? 문제는 잘못된 클라이언트 라이브러리 버전일 수 있습니다. SQL Server 기능 팩 다운로드 페이지에서 클라이언트 라이브러리를 얻을 수 있습니다.  
   
@@ -128,10 +137,10 @@ caps.handback.revision: 9
   
  [SQL Server 2005 Analysis Services 연결 시나리오의 일반적인 연결 문제 해결](http://technet.microsoft.com/library/cc917670.aspx). 이 문서는 몇 년 전에 작성되었지만 정보와 방법은 여전히 유효합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Analysis Services에서 지원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [가장&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
+ [가장 &#40; SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/impersonation-ssas-tabular.md)   
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

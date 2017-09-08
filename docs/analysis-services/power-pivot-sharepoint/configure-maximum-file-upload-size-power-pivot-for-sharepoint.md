@@ -1,24 +1,29 @@
 ---
-title: "최대 파일 업로드 크기 구성(SharePoint용 파워 피벗) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "최대 파일 업로드 크기 (SharePoint 용 파워 피벗) 구성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6e79739162ee4eba9fde6af1efddd7b5b273b73d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 최대 파일 업로드 크기 구성(SharePoint용 파워 피벗)
+# <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>최대 파일 업로드 크기 구성(SharePoint용 파워 피벗)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 많은 데이터가 포함되어 SharePoint 업로드에 대해 허용되는 최대 파일 크기가 초과되는 경우가 많습니다. 이 상한을 초과하는 파일을 업로드하려고 하면 SharePoint에서  
   
 -   “지정된 파일이 지원되는 최대 파일 크기보다 큽니다."라는 오류가 표시됩니다.  
@@ -27,7 +32,7 @@ caps.handback.revision: 9
   
  최대 파일 업로드 크기를 변경하려면 SharePoint 관리자여야 합니다.  
   
-### Excel 서비스의 최대 파일 크기 구성  
+### <a name="configure-maximum-file-size-for-excel-services"></a>Excel 서비스의 최대 파일 크기 구성  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 9
   
 3.  **신뢰할 수 있는 파일 위치**를 클릭합니다.  
   
-4.  속성을 편집할 위치를 클릭합니다. 기본적으로 Excel 서비스는 기본 웹 응용 프로그램을 신뢰할 수 있는 사이트로 간주합니다. 기본 웹 응용 프로그램을 사용 중인 경우 **http://**를 클릭하여 해당 위치의 구성 페이지를 엽니다.  
+4.  속성을 편집할 위치를 클릭합니다. 기본적으로 Excel 서비스는 기본 웹 응용 프로그램을 신뢰할 수 있는 사이트로 간주합니다. 기본 웹 응용 프로그램을 사용 중인 경우 **http://** 를 클릭하여 해당 위치의 구성 페이지를 엽니다.  
   
 5.  **통합 문서 속성**으로 스크롤합니다.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 9
   
 7.  **확인**을 클릭합니다.  
   
-### SharePoint 웹 응용 프로그램의 최대 파일 크기 구성  
+### <a name="configure-maximum-file-size-for-a-sharepoint-web-application"></a>SharePoint 웹 응용 프로그램의 최대 파일 크기 구성  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **웹 응용 프로그램 관리**를 클릭합니다.  
   

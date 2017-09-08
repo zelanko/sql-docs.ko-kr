@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 894a3756d9bffcaaf3347e0bfae92abb0f846a97
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf 도구와 함께 Linux에서 SQL Server 구성
@@ -26,6 +26,7 @@ ms.lasthandoff: 08/28/2017
 |---|---|
 | [데이터 정렬](#collation) | Linux에서 SQL Server에 대 한 새로운 데이터 정렬이 설정 합니다. |
 | [고객 의견](#customerfeedback) | SQL Server를 Microsoft로 피드백을 보냅니다 여부를 선택 합니다. |
+| [데이터베이스 메일 프로필](#dbmail) | Linux에서 SQL Server에 대 한 기본 데이터베이스 메일 프로필 설정 |
 | [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일 (.mdf)에 대 한 기본 디렉터리를 변경 합니다. |
 | [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그 (.ldf) 파일에 대 한 기본 디렉터리를 변경합니다. |
 | [기본 덤프 디렉터리](#dumpdir) | 새 메모리 덤프 및 기타 문제 해결 파일에 대 한 기본 디렉터리를 변경 합니다. |
@@ -214,6 +215,13 @@ SQL Server를 수집 덤프 메모리의 형식을 제어에 대 한 두 가지 
     | **필터링** | 여기서는 프로세스의 모든 메모리는 구체적으로 제외 되지 않은 경우 포함 빼기 기반 필터링된 사용 하 여 디자인 합니다. 디자인은 호스트 환경에 특정 지역 덤프에서 제외 하 고 SQLPAL의 내부를 이해 합니다.
     | **전체** | 에 모든 영역을 포함 하는 전체 프로세스 덤프 있는 전체 **/proc/$ pid/매핑**합니다. 에 의해 제어 되지이 **coredump.captureminiandfull** 설정 합니다. |
 
+## <a id="dbmail"></a>Linux에서 SQL Server에 대 한 기본 데이터베이스 메일 프로필 설정
+
+**sqlpagent.databasemailprofile** 전자 메일 경고에 대 한 기본 DB 메일 프로필을 설정할 수 있습니다.
+
+```bash
+sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
 ## <a id="hadr"></a>고가용성
 
 **hadr.hadrenabled** 옵션을 사용 하면 SQL Server 인스턴스에서 가용성 그룹입니다. 다음 명령은 설정 하 여 가용성 그룹을 사용 하면 **hadr.hadrenabled** 1입니다. 설정에 대해 적용 되려면 SQL Server를 다시 시작 해야 합니다.

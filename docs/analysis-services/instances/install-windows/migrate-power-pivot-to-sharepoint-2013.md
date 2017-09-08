@@ -1,33 +1,38 @@
 ---
 title: "SharePoint 2013으로 파워 피벗 마이그레이션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0722554c3ebfea2f80bc9643db337dd6d181ef11
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint 2013으로 파워 피벗 마이그레이션
+# <a name="migrate-power-pivot-to-sharepoint-2013"></a>SharePoint 2013으로 파워 피벗 마이그레이션
   
   
  SharePoint 2013에서는 전체 업그레이드를 지원하지 않습니다. 그러나 **데이터베이스 연결 업그레이드 절차는 지원**됩니다. 동작은 전체 업그레이드 및 데이터베이스 연결 업그레이드의 두 가지 기본 업그레이드 방법 중 고객이 선택할 수 있는 SharePoint 2010으로 업그레이드와 다릅니다.  
   
- [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013 팜으로 마이그레이션할 수 있습니다. 이 항목에서는 데이터베이스 연결 업그레이드 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관련 마이그레이션을 완료하기 위해 수행해야 하는 단계를 대략적으로 설명합니다.  
+ [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치가 SharePoint 2010에 통합되어 있는 경우에는 SharePoint 서버를 전체 업그레이드할 수 없습니다. 그러나 SharePoint 2010 팜에서 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 SharePoint 2013 팜으로 마이그레이션할 수 있습니다. 이 항목에서는 데이터베이스 연결 업그레이드 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]관련 마이그레이션을 완료하기 위해 수행해야 하는 단계를 대략적으로 설명합니다.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013|  
   
-### 마이그레이션 개요  
+### <a name="migration-overview"></a>마이그레이션 개요  
   
 |1|2|3|4|  
 |-------|-------|-------|-------|  
@@ -70,10 +75,10 @@ caps.handback.revision: 18
   
 4.  **복원:** 대상 [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]에 데이터베이스를 복원합니다. 이 단계는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 수행할 수 있습니다.  
   
-5.  **데이터베이스를 읽기/쓰기로 설정:** **데이터베이스가 읽기 전용**을 **False**로 설정합니다.  
+5.  **데이터베이스를 읽기/쓰기로 설정:** **데이터베이스가 읽기 전용** 을 **False**로 설정합니다.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) 웹 응용 프로그램 준비 및 콘텐츠 데이터베이스 탑재  
- 다음 절차에 대한 자세한 설명은 [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)를 참조하세요.  
+ 다음 절차에 대한 자세한 설명은 [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)를 참조하세요.  
   
 1.  **데이터베이스를 오프라인 상태로 만들기:**  
   
@@ -91,20 +96,20 @@ caps.handback.revision: 18
   
 -   **콘텐츠 데이터베이스 탑재:**  
   
-     SharePoint 2013 관리 셸에서 PowerShell cmdlet을 사용하여 마이그레이션된 콘텐츠 데이터베이스를 탑재합니다. 서비스 응용 프로그램 데이터베이스는 탑재하지 않아도 되며, 콘텐츠 데이터베이스만 탑재 ![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell 관련 내용")  
+     SharePoint 2013 관리 셸에서 PowerShell cmdlet을 사용하여 마이그레이션된 콘텐츠 데이터베이스를 탑재합니다. 서비스 응용 프로그램 데이터베이스를 탑재 하지 않아도 콘텐츠 데이터베이스에만: ![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")  
   
     ```  
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     자세한 내용은 [콘텐츠 데이터베이스 연결 또는 분리(SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx)(http://technet.microsoft.com/library/ff628582.aspx)를 참조하세요.  
+     자세한 내용은 [콘텐츠 데이터베이스 연결 또는 분리(SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)를 참조하세요.  
   
      **단계가 완료된 상태:**  탑재 작업이 완료되면 사용자가 이전 콘텐츠 데이터베이스에 있는 파일을 볼 수 있습니다. 따라서 사용자는 문서 라이브러리에서 통합 문서를 보고 열 수 있습니다.  
   
     -   > [!TIP]  
         >  마이그레이션 프로세스의 이 시점에서 마이그레이션된 통합 문서에 대한 새 일정을 만들 수 있습니다. 하지만 일정은 새 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스에서 만들어지고 기존 SharePoint 팜에서 복사한 데이터베이스에는 만들어지지 않습니다. 따라서 새 일정에는 기존 일정이 포함되지 않습니다. 다음 단계를 완료하여 기존 데이터베이스를 사용하고 기존 일정을 마이그레이션한 후에는 새 일정을 사용할 수 있습니다.  
   
-### 데이터베이스 탑재 시 발생하는 문제 해결  
+### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>데이터베이스 탑재 시 발생하는 문제 해결  
  이 섹션에서는 데이터베이스를 탑재할 때 발생할 수 있는 문제를 요약합니다.  
   
 1.  **인증 오류:** 인증 관련 오류가 표시되면 소스 웹 응용 프로그램에서 사용하는 인증 모드를 검토합니다. 이 오류는 SharePoint 2013 웹 응용 프로그램과 SharePoint 2010 웹 응용 프로그램 간의 인증 불일치로 인해 발생할 수 있습니다. 자세한 내용은 [1) SharePoint 2013 팜 준비](#bkmk_prepare_sharepoint2013) 를 참조하세요.  
@@ -130,7 +135,7 @@ caps.handback.revision: 18
   
 -   **일정 옵션 1 마이그레이션: SharePoint 팜 관리자**  
   
-    1.  SharePoint 2013 관리에서 `Set-PowerPivotServiceApplication` cmdlet을 `-StartMigratingRefreshSchedules` 스위치와 함께 실행하여 필요 시 일정 자동 마이그레이션 ![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.png "PowerShell 관련 내용")을 활성화합니다. 다음 Windows PowerShell 스크립트는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 하나뿐이라고 가정합니다.  
+    1.  SharePoint 2013 관리 실행 시는 `Set-PowerPivotServiceApplication` 사용 하 여 cmdlet의 `-StartMigratingRefreshSchedules` 시 필요 시 일정 자동 마이그레이션 수 있도록 스위치 ![PowerShell 관련 내용](../../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용"). 다음 Windows PowerShell 스크립트는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 응용 프로그램이 하나뿐이라고 가정합니다.  
   
         ```  
         $app=Get-PowerPivotServiceApplication  
@@ -163,7 +168,7 @@ caps.handback.revision: 18
   
 -   SQL Server 2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서는 SharePoint 2013용 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서 사용할 경우 자동으로 업그레이드되지 않습니다. 2008 R2 통합 문서가 포함된 콘텐츠 데이터베이스를 마이그레이션한 후 통합 문서를 사용할 수 있지만 일정이 업그레이드되지 않습니다.  
   
--   자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
+-   자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 검토하세요.  
   
 ##  <a name="bkmk_additional_resources"></a> 추가 리소스  
   
@@ -174,8 +179,8 @@ caps.handback.revision: 18
   
 -   [SharePoint 2013 업그레이드 프로세스 개요](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688).  
   
--   [SharePoint 2013로 업그레이드하기 전에 정리 준비](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [SharePoint 2013로 업그레이드하기 전에 정리 준비](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689).  
   
--   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690).  
+-   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
   

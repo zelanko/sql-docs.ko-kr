@@ -4,16 +4,16 @@ description: "이 빠른 시작 자습서에는 SQL Server 2017 ubuntu 설치 �
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/24/2017
+ms.date: 09/07/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 052a2f0a7618c5e160d3c17a3a1efd7d7a4b3fd6
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f530c1fb9f1d21054631598a2d2ff06d6e2c5f46
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Ubuntu에서 데이터베이스를 만들고 SQL Server 설치
@@ -56,7 +56,7 @@ Ubuntu에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명�
    sudo apt-get install -y mssql-server
    ```
 
-1. 실행 패키지 설치 완료 후 **mssql conf 설치** 따르다 SA 암호를 설정 하 고 버전을 선택 합니다.
+1. 실행 패키지 설치 완료 후 **mssql conf 설치** 지시에 따라 SA 암호를 설정 하 고 해당 버전을 선택 하 고 있습니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -117,3 +117,4 @@ Ubuntu에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명�
 > **Sqlcmd** 쿼리를 실행 하 고 관리 및 개발 작업을 수행 하도록 SQL Server에 연결 하기 위한 하나의 도구입니다. 다른 도구로 [SQL Server Management Studio](sql-server-linux-develop-use-ssms.md) 및 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다.
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]
+

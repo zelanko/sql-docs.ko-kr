@@ -1,27 +1,32 @@
 ---
 title: "계산 컨텍스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: aec8aa98-b77d-4f8f-9684-2618b1d8e970
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6101305123e48bf5194313c852f2a24e45e5847a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 계산 컨텍스트
+# <a name="calculation-context"></a>계산 컨텍스트
   계산 컨텍스트는 식이 계산되고 모든 좌표가 명시적으로 알려지거나 식에서 파생될 수 있는 큐브의 알려진 하위 공간입니다.  
   
-## 계산 컨텍스트 확인  
+## <a name="determining-the-calculation-context"></a>계산 컨텍스트 확인  
  모든 집합, 멤버, 튜플, 또는 숫자 함수는 MDX 식 또는 문 전체의 컨텍스트에서 실행됩니다. 튜플과 같은 인수가 함수에 전달될 때는 큐브 공간의 일부 좌표만 명시적으로 제공됩니다. 다른 좌표는 현재 계산 컨텍스트에 따라 얻습니다.  
   
  지정되지 않은 셀 좌표 및 특성 멤버의 계산 컨텍스트는 다음 순서에 따라 결정됩니다.  
@@ -70,9 +75,9 @@ WHERE (Customer.Country.France,
 > [!IMPORTANT]  
 >  쿼리 성능을 향상시키려면 멤버와 튜플을 확인 과정에서 가능한 한 빨리 제거해야 합니다. 이렇게 하면 쿼리할 때 최종 멤버 집합에 대한 복잡한 계산이 가능한 가장 적은 수의 셀에 대해 수행됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX 쿼리 기본 사항 &#40; Analysis Services &#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
  [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
   
   

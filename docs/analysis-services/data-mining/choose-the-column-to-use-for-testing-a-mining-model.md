@@ -1,27 +1,32 @@
 ---
 title: "마이닝 모델 테스트에 사용할 열 선택 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "열 [데이터 마이닝], 예측 가능한 마이닝 열"
-  - "마이닝 정확도 차트 [Analysis Services], 열"
-  - "예측 가능한 마이닝 열 [Analysis Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], predictable mining columns
+- Mining Accuracy Chart [Analysis Services], columns
+- predictable mining columns [Analysis Services]
 ms.assetid: c6a8f23a-da21-4f31-9521-99460d624649
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 모델 테스트에 사용할 열 선택
+# <a name="choose-the-column-to-use-for-testing-a-mining-model"></a>마이닝 모델 테스트에 사용할 열 선택
   마이닝 모델의 정확도를 측정하려면 먼저 평가할 결과를 결정해야 합니다. 대부분의 데이터 마이닝 모델에서는 모델을 만들 때 예측 가능한 특성으로 사용할 열을 하나 이상 선택해야 합니다. 따라서 모델의 정확도를 테스트할 때는 일반적으로 테스트할 특성을 선택해야 합니다.  
   
  다음 목록에서는 테스트에 사용할 예측 가능한 특성을 선택할 때 추가적으로 고려할 사항에 대해 설명합니다.  
@@ -36,11 +41,11 @@ caps.handback.revision: 35
   
 -   여러 모델을 포함하여 하나의 정확도 차트에서 비교하려면 모든 모델에서 동일한 예측 가능한 열을 사용해야 합니다.  
   
--   교차 유효성 검사 보고서를 만드는 경우에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 예측 가능한 특성이 동일한 모든 모델을 자동으로 분석합니다.  
+-   교차 유효성 검사 보고서를 만드는 경우에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 예측 가능한 특성이 동일한 모든 모델을 자동으로 분석합니다.  
   
 -   **예측 열과 값 동기화**옵션을 선택한 경우에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 이름이 같고 데이터 형식이 일치하는 예측 가능한 열을 자동으로 선택합니다. 열이 이러한 조건을 충족하지 않는 경우 이 옵션을 해제하고 예측 가능한 열을 수동으로 선택할 수 있습니다. 모델과 다른 열이 있는 외부 데이터 집합을 사용하여 모델을 테스트하는 경우에 예측 가능한 열을 수동으로 선택해야 할 수 있습니다. 그러나 데이터 형식이 잘못된 열을 선택하면 오류가 발생하거나 잘못된 결과가 나타납니다.  
   
-### 예측할 결과 지정  
+### <a name="specify-the-outcome-to-predict"></a>예측할 결과 지정  
   
 1.  마이닝 구조를 두 번 클릭하여 데이터 마이닝 디자이너에서 엽니다.  
   
@@ -54,8 +59,8 @@ caps.handback.revision: 35
   
 5.  모델의 리프트를 결정하려면 **예측 값** 목록에서 측정할 특정 결과 값을 선택해야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [모델 테스트 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [정확도 차트 유형 선택 및 차트 옵션 설정](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [정확도 차트 유형 선택 및 집합 차트 옵션](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

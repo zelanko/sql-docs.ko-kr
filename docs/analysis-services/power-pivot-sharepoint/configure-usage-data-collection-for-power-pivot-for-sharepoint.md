@@ -1,24 +1,29 @@
 ---
-title: "사용 현황 데이터 수집 구성(SharePoint용 파워 피벗) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "사용 현황 데이터 수집 구성 (SharePoint 용 Power Pivot | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 955ca6d6-9d5b-47a4-a87c-59bd23f1bf74
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 98ec79c14a0ac082c75967a9c81fa7b2027f5511
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 사용 현황 데이터 수집 구성(SharePoint용 파워 피벗)
+# <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>사용 현황 데이터 수집 구성(SharePoint용 파워 피벗)
   사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 이 시스템을 사용하고 확장하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드의 사용 현황 데이터에 대한 자세한 내용은 [파워 피벗 관리 대시보드 및 사용 현황 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)를 참조하세요.  
@@ -49,7 +54,7 @@ caps.handback.revision: 9
   
 1.  중앙 관리에서 **모니터링**을 클릭합니다.  
   
-2.   **보고**섹션에서 **Usage and Health Data Collection 구성**을 클릭합니다.  
+2.  **보고**섹션에서 **Usage and Health Data Collection 구성**을 클릭합니다.  
   
 3.  **사용 현황 데이터 수집 사용**을 선택합니다.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 9
   
 6.  **확인** 을 클릭하여 변경 내용을 저장합니다.  
   
-7.  선택적으로 모든 메시지를 기록할 것인지 또는 오류만 기록할 것인지를 지정할 수 있습니다. 이벤트 메시지를 제한하는 방법은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)를 참조하세요.  
+7.  선택적으로 모든 메시지를 기록할 것인지 또는 오류만 기록할 것인지를 지정할 수 있습니다. 이벤트 메시지를 제한하는 방법은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)를 참조하세요.  
   
 ##  <a name="configdb"></a> 로그 파일 위치 설정  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 사용 현황 데이터는 처음에 로컬 서버의 사용 현황 로그 파일에 저장된 다음 정기적으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스로 이동됩니다. 로그 파일 위치는 중앙 관리에 설정됩니다. 기본 위치는  
@@ -137,13 +142,13 @@ caps.handback.revision: 9
   
 1.  [Power Pivot 서비스 응용 프로그램 페이지를 엽니다](#openconfig).  
   
-2.  **사용 현황 데이터 수집** 섹션의 **간단한 응답 상한값**에 간단한 응답을 완료할 상한을 설정하는 값(밀리초)을 입력합니다. 이 범주에 속하는 요청에는 일반적으로 서버 ping, 세션 초기화 및 메타데이터 쿼리가 포함됩니다. 기본값은 500밀리초(또는 0.5초)입니다.  
+2.  **사용 현황 데이터 수집** 섹션의 **간단한 응답 상한값** 에 간단한 응답을 완료할 상한을 설정하는 값(밀리초)을 입력합니다. 이 범주에 속하는 요청에는 일반적으로 서버 ping, 세션 초기화 및 메타데이터 쿼리가 포함됩니다. 기본값은 500밀리초(또는 0.5초)입니다.  
   
 3.  빠른 요청 상한에 빠른 응답을 완료할 상한을 설정하는 값(밀리초)을 입력합니다. 이 범주에 속하는 요청에는 매우 작은 데이터 집합이나 큰 데이터 집합의 메타데이터 서버에 대한 쿼리가 포함됩니다. 기본값은 1000밀리초(또는 1초)입니다.  
   
-4.  **예상 응답 상한값**에 예상 또는 평균 시간대에서 응답을 완료할 상한을 설정하는 값(밀리초)을 입력합니다. 이 범주에 속하는 요청에는 뷰어로 데이터 로드가 포함됩니다.  기본값은 3000밀리초(또는 3초)입니다.   
+4.  **예상 응답 상한값**에 예상 또는 평균 시간대에서 응답을 완료할 상한을 설정하는 값(밀리초)을 입력합니다. 이 범주에 속하는 요청에는 뷰어로 데이터 로드가 포함됩니다. 기본값은 3000밀리초(또는 3초)입니다.  
   
-5.  **긴 응답 상한값**에 장기 실행 응답을 완료할 상한을 설정하는 값(밀리초)을 입력합니다. 이 범주에 속하는 요청은 예상보다 길게 실행되지만 여전히 허용 가능한 범위 내에 속하는 요청입니다.  기본값은 10000밀리초(또는 10초)입니다.   
+5.  **긴 응답 상한값**에 장기 실행 응답을 완료할 상한을 설정하는 값(밀리초)을 입력합니다. 이 범주에 속하는 요청은 예상보다 길게 실행되지만 여전히 허용 가능한 범위 내에 속하는 요청입니다. 기본값은 10000밀리초(또는 10초)입니다.  
   
      이 한계를 초과하는 요청은 모두 *초과*로 분류됩니다. *초과*에 대해 구성할 수 있는 임계값은 없으며, 장기 요청 상한에 대해 지정한 상한에서 유추됩니다. 초과 범주에 속하는 요청은 정의한 SLA에서 허용한 시간보다 오래 실행됩니다.  
   
@@ -182,15 +187,15 @@ caps.handback.revision: 9
   
 |설정|기본값|형식|유효 범위|  
 |-------------|-------------------|----------|-----------------|  
-|**Analysis Services 사용 이벤트**(연결, 로드, 언로드, 요청)|\<사용>|Boolean|이러한 값이 사용되거나 사용되지 않습니다.|  
-|**쿼리 보고 간격**|300(초)|정수|1부터 임의의 양의 정수입니다. 기본값은 5분입니다.|  
-|**사용 데이터 기록**|365(일)|정수|0은 제한이 없음을 지정하지만 기록 데이터를 만료할 상한을 설정하고 이 데이터가 자동으로 삭제되도록 할 수도 있습니다. 제한된 보존 기간에 유효한 값은 1 ~ 5000(일)입니다.|  
+|**Analysis Services 사용 이벤트** (연결, 로드, 언로드, 요청)|\<설정 >|Boolean|이러한 값이 사용되거나 사용되지 않습니다.|  
+|**Query Reporting interval**|300(초)|정수|1부터 임의의 양의 정수입니다. 기본값은 5분입니다.|  
+|**Usage data history**|365(일)|정수|0은 제한이 없음을 지정하지만 기록 데이터를 만료할 상한을 설정하고 이 데이터가 자동으로 삭제되도록 할 수도 있습니다. 제한된 보존 기간에 유효한 값은 1 ~ 5000(일)입니다.|  
 |간단한 응답 상한값|500(밀리초)|정수|간단한 요청-응답 교환을 정의하는 상한을 설정합니다. 0밀리초에서 500밀리초 사이에 완료되는 모든 요청은 간단한 요청으로, 보고에서 무시됩니다.|  
 |빠른 응답 상한값|1000(밀리초)|정수|빠른 요청-응답 교환을 정의하는 상한을 설정합니다.|  
 |예상 응답 상한값|3000(밀리초)|정수|예상 요청-응답 교환을 정의하는 상한을 설정합니다.|  
 |긴 실행 응답 상한값|10000(밀리초)|정수|장기 실행 요청-응답 교환을 정의하는 상한을 설정합니다. 이 상한을 초과하는 모든 요청은 상한 임계값이 없는 초과 범주에 속합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [구성 설정 참조&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Power Pivot 사용 데이터 컬렉션](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

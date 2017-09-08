@@ -1,24 +1,29 @@
 ---
-title: "Security Audit 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Security Audit 이벤트 범주 [SQL Server]"
+title: Security Audit Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Security Audit event category [SQL Server]
 ms.assetid: fac1a7f9-5961-4f4b-bb04-847616b505d7
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 77d887822dd132c6e4d3e356e49279fa92d32541
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Security Audit 데이터 열
+# <a name="security-audit-data-columns"></a>Security Audit 데이터 열
   Security Audit 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 ||||  
@@ -32,7 +37,7 @@ caps.handback.revision: 36
   
  다음 표에서는 이러한 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Audit Login  
+## <a name="audit-login"></a>Audit Login  
   
 |||||  
 |-|-|-|-|  
@@ -52,7 +57,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|정식 사용자 이름(예: engineering.microsoft.com/software/someone)입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Audit Logout  
+## <a name="audit-logout"></a>Audit Logout  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTCanonicalUserName|40|8|정식 사용자 이름(예: engineering.microsoft.com/software/someone)입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Audit Server Starts And Stops  
+## <a name="audit-server-starts-and-stops"></a>Audit Server Starts And Stops  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 36
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Audit Object Permission Event  
+## <a name="audit-object-permission-event"></a>Audit Object Permission Event  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -109,7 +114,7 @@ caps.handback.revision: 36
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Audit Admin Operations Event  
+## <a name="audit-admin-operations-event"></a>Audit Admin Operations Event  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 36
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Security Audit 이벤트 범주](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

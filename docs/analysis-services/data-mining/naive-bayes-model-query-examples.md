@@ -1,27 +1,32 @@
 ---
 title: "Naive Bayes 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "naive bayes 모델 [Analysis Services]"
-  - "naive bayes 알고리즘 [Analysis Services]"
-  - "content queries [DMX]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- naive bayes algorithms [Analysis Services]
+- content queries [DMX]
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6935ffd8851a9454a1a2e53655be814a4eda3af1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Naive Bayes 모델 쿼리 예제
+# <a name="naive-bayes-model-query-examples"></a>Naive Bayes 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 데이터 마이닝 스키마 행 집합에 대한 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다. 이 섹션에서는 Microsoft Naive Bayes 알고리즘을 기반으로 하는 모델에 대해 이러한 쿼리를 만드는 방법을 설명합니다.  
   
  **내용 쿼리**  
@@ -42,7 +47,7 @@ caps.handback.revision: 13
   
  [연결 예측](#bkmk_Query7)  
   
-## Naive Bayes 모델에 대한 정보 찾기  
+## <a name="finding-information-about-a-naive-bayes-model"></a>Naive Bayes 모델에 대한 정보 찾기  
  Naive Bayes 모델의 모델 콘텐츠는 학습 데이터의 값 분포에 대한 집계 정보를 제공합니다. 데이터 마이닝 스키마 행 집합에 대한 쿼리를 만들어 모델의 메타데이터에 대한 정보를 검색할 수도 있습니다.  
   
 ###  <a name="bkmk_Query1"></a> 예제 쿼리 1: DMX를 사용하여 모델 메타데이터 가져오기  
@@ -67,7 +72,7 @@ WHERE MODEL_NAME = 'TM_NaiveBayes_Filtered'
 |PREDICTION_ENTITY|Bike Buyer,Yearly Income|  
 |FILTER|[Region] = 'Europe' OR [Region] = 'North America'|  
   
- 이 예에 사용된 모델은 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)에서 만드는 Naive Bayes 모델을 기반으로 하되 여기에 두 번째 예측 가능한 특성을 추가하고 학습 데이터에 필터를 적용하여 수정한 것입니다.  
+ 이 예에 사용된 모델은 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만드는 Naive Bayes 모델을 기반으로 하되 여기에 두 번째 예측 가능한 특성을 추가하고 학습 데이터에 필터를 적용하여 수정한 것입니다.  
   
 ###  <a name="bkmk_Query2"></a> 예제 쿼리 2: 학습 데이터의 요약 검색  
  Naive Bayes 모델에서 한계 통계 노드에는 학습 데이터의 값 분포에 대한 집계 정보가 저장됩니다. 따라서 이와 같은 요약 정보를 찾기 위해 학습 데이터에 대한 SQL 쿼리를 만들지 않아도 되므로 편리합니다.  
@@ -164,7 +169,7 @@ CALL GetPredictableAttributes ('TM_NaiveBayes')
   
  Analysis Services 시스템 저장 프로시저에 대한 자세한 내용은 [데이터 마이닝 저장 프로시저&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)를 참조하세요.  
   
-## Naive Bayes 모델을 사용하여 예측 만들기  
+## <a name="using-a-naive-bayes-model-to-make-predictions"></a>Naive Bayes 모델을 사용하여 예측 만들기  
  Microsoft Naive Bayes 알고리즘은 일반적으로 예측에 사용되는 경우보다 입력 및 예측 가능한 특성 간의 관계를 탐색하는 데 사용되는 경우가 더 많습니다. 그러나 이 모델에서는 예측 및 연결 모두에 대해 예측 함수를 사용할 수 있습니다.  
   
 ###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 단일 쿼리를 사용하여 결과 예측  
@@ -213,7 +218,7 @@ NATURAL PREDICTION JOIN
  표의 마지막 행에서는 누락 값의 지지도 및 확률에 대한 조정을 보여 줍니다. 분산 및 표준 편차 값은 항상 0이지만 Naive Bayes 모델에서는 연속 값을 모델링할 수 없습니다.  
   
 ###  <a name="bkmk_Query7"></a> 예제 쿼리 7: 연결 예측  
- 마이닝 구조에 예측 가능한 특성을 키로 사용하는 중첩 테이블이 들어 있는 경우 연결 분석에 Microsoft Naive Bayes 알고리즘을 사용할 수 있습니다. 예를 들어 데이터 마이닝 자습서의 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)에서 만든 마이닝 구조를 사용하여 Naive Bayes 모델을 작성할 수 있습니다. 이 예에 사용된 모델을 수정하여 사례 테이블에 수입 및 고객 지역에 대한 정보를 추가했습니다.  
+ 마이닝 구조에 예측 가능한 특성을 키로 사용하는 중첩 테이블이 들어 있는 경우 연결 분석에 Microsoft Naive Bayes 알고리즘을 사용할 수 있습니다. 예를 들어 데이터 마이닝 자습서의 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)에서 만든 마이닝 구조를 사용하여 Naive Bayes 모델을 작성할 수 있습니다. 이 예에 사용된 모델을 수정하여 사례 테이블에 수입 및 고객 지역에 대한 정보를 추가했습니다.  
   
  다음 쿼리 예에서는 `'Road Tire Tube'`제품의 구매와 관련된 제품을 예측하는 단일 쿼리를 보여 줍니다. 이 정보를 사용하여 특정 유형의 고객에게 제품을 추천할 수 있습니다.  
   
@@ -238,7 +243,7 @@ AS t
 |Touring-2000|  
 |Touring-1000|  
   
-## 함수 목록  
+## <a name="function-list"></a>함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 다음 표에 나열된 추가 함수도 지원합니다.  
   
 |||  
@@ -254,9 +259,9 @@ AS t
   
  특정 함수의 구문을 보려면 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft Naive Bayes 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)   
- [Microsoft Naive Bayes 알고리즘](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

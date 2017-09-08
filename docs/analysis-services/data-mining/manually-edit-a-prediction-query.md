@@ -1,27 +1,32 @@
 ---
 title: "예측 쿼리 수동 편집 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "예측 쿼리 수정"
-  - "마이닝 모델 예측 [Analysis Services], 예측 쿼리 수정"
-  - "예측 쿼리 수동 수정 [Analysis Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying prediction queries
+- Mining Model Prediction [Analysis Services], modifying prediction queries
+- manual prediction query modification [Analysis Services]
 ms.assetid: 9f6a9298-49d5-4675-ad49-977a47dff5a6
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57f892500d2ef26dc2227b4c0710c4d039dcb34e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 예측 쿼리 수동 편집
+# <a name="manually-edit-a-prediction-query"></a>예측 쿼리 수동 편집
   예측 쿼리 작성기를 사용하여 쿼리를 디자인한 후에는 데이터 마이닝 디자이너의 **마이닝 모델 예측** 의 탭에서 쿼리 텍스트 보기로 전환하여 해당 쿼리를 수정할 수 있습니다. 쿼리 작성기가 만든 쿼리를 표시할 텍스트 편집기가 화면 맨 아래에 나타납니다.  
   
  쿼리 텍스트 보기로 전환은 쿼리에 항목을 추가하는 데 유용합니다. 예를 들어 WHERE 절 또는 ORDER BY 절을 추가할 수 있습니다.  
@@ -31,7 +36,7 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  **쿼리 텍스트** 뷰에서 **디자인** 뷰로 다시 전환하면 **쿼리 텍스트** 뷰에서 변경한 내용이 모두 손실됩니다.  
   
-### 쿼리 수정  
+### <a name="modify-a-query"></a>쿼리 수정  
   
 1.  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 예측 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 **SQL**을 클릭합니다.  
   
@@ -42,9 +47,9 @@ caps.handback.revision: 17
     > [!NOTE]  
     >  만든 쿼리가 유효하지 않을 경우 결과 창에 오류도 표시되지 않고 결과도 표시되지 않습니다. **디자인** 단추를 클릭하거나 **마이닝 모델** 메뉴에서 **디자인** 또는 **쿼리** 를 선택하여 문제를 해결하고 쿼리를 다시 실행하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
- [예측 쿼리 작성기&#40;데이터 마이닝&#41;](../Topic/Prediction%20Query%20Builder%20\(Data%20Mining\).md)   
- [6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+ [예측 쿼리 작성기 &#40; 데이터 마이닝 &#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
+ [6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   

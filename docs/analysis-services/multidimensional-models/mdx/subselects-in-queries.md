@@ -1,27 +1,32 @@
 ---
-title: "쿼리의 하위 SELECT | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "쿼리의 하위 select | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 쿼리의 하위 SELECT
+# <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
   하위 SELECT 식은 바깥쪽 외부 SELECT가 실행되는 큐브 공간을 제한하는 데 사용되는 중첩 SELECT 식입니다. 하위 SELECT를 사용하면 모든 계산이 실행되는 새로운 공간을 정의할 수 있습니다.  
   
-## 하위 SELECT 예  
+## <a name="subselects-by-example"></a>하위 SELECT 예  
  첫 번째 예에서는 표시할 결과를 생성하는 데 하위 SELECT가 어떻게 사용되는지를 보여 줍니다. 상위 10개 제품에 대한 여러 해 동안의 판매액을 표시하는 테이블을 생성하라는 요청을 받았다고 가정합니다.  
   
  결과는 다음 테이블과 같아야 합니다.  
@@ -158,7 +163,7 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
  위의 결과는 Internet 채널을 통해 France에서 판매된 상위 10개 제품입니다.  
   
-## 하위 SELECT 문  
+## <a name="subselect-statement"></a>하위 SELECT 문  
  하위 SELECT의 BNF는 다음과 같습니다.  
   
 ```  
@@ -339,7 +344,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  두 집합의 결과가 다름을 확인할 수 있습니다. 첫 번째 쿼리는 상위 5개 판매 지역에서 잘 팔리는 제품이 무엇인가라는 질문에 답했고, 두 번째 쿼리는 상위 5개 판매 제품이 가장 많이 팔리는 지역이 어디인가라는 질문에 답변했습니다.  
   
-### 주의  
+### <a name="remarks"></a>주의  
  하위 SELECT에는 다음과 같은 제한이 있습니다.  
   
 -   WHERE 절은 하위 공간을 필터링하지 않습니다.  
@@ -350,6 +355,6 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 -   축 절에서는 HAVING 절을 사용할 수 없습니다. 대신 [필터&#40;MDX&#41;](../../../mdx/filter-mdx.md) 함수 식을 사용하세요.  
   
--   기본적으로 하위 SELECT에서는 계산 멤버를 사용할 수 없지만, <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>의 **SubQueries** 연결 문자열 속성 또는 [지원되는 XMLA 속성&#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)의 **DBPROP_MSMD_SUBQUERIES** 속성에 값을 할당하여 세션별로 이 제한을 변경할 수 있습니다. **SubQueries** 또는 **DBPROP_MSMD_SUBQUERIES**의 값에 따른 계산 멤버의 동작에 대한 자세한 내용은 [하위 SELECT 및 하위 큐브의 계산 멤버](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md)를 참조하세요.  
+-   기본적으로 계산된 멤버; 하위 select에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로에서 값을 할당 하 여는 **하위 쿼리** 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 **DBPROP_MSMD_SUBQUERIES** 속성[ 지원 되는 XMLA 속성 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 또는 **DBPROP_MSMD_SUBQUERIES** 의 값에 따른 계산 멤버의 동작에 대한 자세한 내용은 **하위 SELECT 및 하위 큐브의 계산 멤버**를 참조하세요.  
   
   

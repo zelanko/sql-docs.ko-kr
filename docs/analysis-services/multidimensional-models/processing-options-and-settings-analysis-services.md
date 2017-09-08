@@ -1,43 +1,48 @@
 ---
-title: "처리 옵션 및 설정(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 처리 옵션 [Analysis Services]"
-  - "개체 처리 [Analysis Services]"
-  - "처리 안 함 옵션 [Analysis Services]"
-  - "전체 처리 옵션 [Analysis Services]"
-  - "인덱스 처리 옵션 [Analysis Services]"
-  - "구조 처리 옵션 [Analysis Services]"
-  - "증분 처리 옵션 [Analysis Services]"
-  - "업데이트 처리 옵션 [Analysis Services]"
-  - "구조 지우기 처리 옵션 [Analysis Services]"
-  - "기본값 처리 옵션 [Analysis Services]"
+title: "처리 옵션 및 설정 (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process data option [Analysis Services]
+- processing objects [Analysis Services]
+- unprocess option [Analysis Services]
+- process full option [Analysis Services]
+- process index option [Analysis Services]
+- process structure option [Analysis Services]
+- process incremental option [Analysis Services]
+- process update option [Analysis Services]
+- process clear structure option [Analysis Services]
+- process default option [Analysis Services]
 ms.assetid: 2e858c74-ad3e-45f1-8745-efe2c0c3a7fa
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a4540adcf485554cff6c909dedf4d53585336ae6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 처리 옵션 및 설정(Analysis Services)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리하는 경우 각 개체에 대해 발생하는 처리 유형을 제어하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
+# <a name="processing-options-and-settings-analysis-services"></a>처리 옵션 및 설정(Analysis Services)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 개체를 처리하는 경우 각 개체에 대해 발생하는 처리 유형을 제어하는 처리 옵션을 선택할 수 있습니다. 처리 유형은 개체마다 다르며 마지막으로 처리되어 개체에 변경된 내용에 따라서도 다릅니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 처리 방법을 선택하도록 하면 최단 시간 내에 개체를 전체 처리된 상태로 반환하는 방법이 사용됩니다.  
   
  처리 설정을 지정하면 처리되는 개체 및 이러한 개체를 처리하는 데 사용되는 방법을 제어할 수 있습니다. 일부 처리 설정은 배치 처리 작업에 주로 사용됩니다. 일괄 처리에 대한 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
   
 > [!NOTE]  
 >  이 항목은 다차원 및 데이터 마이닝 솔루션에 적용됩니다. 테이블 형식 솔루션에 대한 자세한 내용은 [데이터베이스, 테이블 또는 파티션 처리&#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)를 참조하세요.  
   
-## 처리 옵션  
+## <a name="processing-options"></a>처리 옵션  
  다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용 가능한 처리 방법을 설명하고 각 방법이 지원하는 개체를 식별합니다.  
   
 |모드|적용 대상|Description|  
@@ -52,7 +57,7 @@ caps.handback.revision: 48
 |**구조 처리**|큐브 및 마이닝 구조|큐브가 처리되지 않은 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 필요에 따라 큐브의 모든 차원을 처리한 다음 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 은(는) 큐브 정의만 만듭니다. 마이닝 구조에 이 옵션을 적용하면 마이닝 구조에 원본 데이터가 채워집니다. 이 옵션과 전체 처리 옵션의 차이점으로 이 옵션은 마이닝 모델 자체에까지 처리를 반복하지 않는다는 것입니다.|  
 |**구조 지우기 처리**|마이닝 구조|마이닝 구조에서 모든 학습 데이터를 제거합니다.|  
   
-## 처리 설정  
+## <a name="processing-settings"></a>처리 설정  
  다음 표에서는 처리 작업을 만들 때 사용할 수 있는 처리 설정을 설명합니다.  
   
 |처리 옵션|Description|옵션 값|  
@@ -66,7 +71,7 @@ caps.handback.revision: 48
 ||**오류 처리 제한** 다음 옵션 중 하나를 선택하여 처리될 오류 개수를 제어합니다.|**오류 개수 무시** 오류 수에 관계없이 처리를 계속 수행합니다.<br /><br /> **오류 발생 시 중지** 이 옵션을 사용하면 두 가지 추가 설정을 제어할 수 있습니다. **오류 개수** 를 사용하여 특정 오류 개수 간격으로 처리하도록 제한할 수 있습니다. **오류 시 수행할 동작** 은 **오류 개수** 에 도달한 경우 수행할 작업을 지정합니다. **처리 중지**를 선택하면 처리 작업이 실패하고 모든 변경 내용이 롤백됩니다. **로깅 중지**를 선택하면 오류를 기록하지 않고 처리를 계속 수행할 수 있습니다. **오류 발생 시 중지** 는 기본 설정으로 **오류 개수** 가 **0** 으로 설정되고 **오류 시 수행할 동작** 은 **처리 중지**로 설정됩니다.|  
 ||다음 오류 조건이 발생했습니다. 옵션 값을 설정하여 특정 오류 처리 동작을 제어할 수 있습니다.<br /><br /> **기본 오류 구성 사용**을 선택한 경우 Analysis Services는 처리될 각 개체에 대해 설정된 오류 구성을 사용합니다. 개체가 기본 구성 설정을 사용하도록 설정된 경우 Analysis Services는 각 옵션에 대해 나열된 기본 설정을 사용합니다.|**키를 찾을 수 없는 경우** 키 값이 파티션에는 있고 해당하는 차원에는 없는 경우 발생합니다. 기본 설정은 **보고하고 계속**입니다. 다른 설정은 **오류 무시** 및 **보고하고 중지**입니다.<br /><br /> **중복 키** 차원에 둘 이상의 키 값이 있는 경우 발생합니다. 기본 설정은 **오류 무시**입니다. 다른 설정은 **보고하고 계속** 및 **보고하고 중지**입니다.<br /><br /> **Null 키가 알 수 없는 상태로 변환된 경우** 키 값이 Null이고 **키 오류 동작** 이 **알 수 없음 상태로 변환**으로 설정된 경우 발생합니다. 기본 설정은 **오류 무시**입니다. 다른 설정은 **보고하고 계속** 및 **보고하고 중지**입니다.<br /><br /> **Null 키가 허용되지 않는 경우** **키 오류 동작** 이 **레코드 삭제**로 설정된 경우 발생합니다. 기본 설정은 **보고하고 계속**입니다. 다른 설정은 **오류 무시** 및 **보고하고 중지**입니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

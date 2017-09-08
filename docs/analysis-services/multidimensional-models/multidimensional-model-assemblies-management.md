@@ -1,35 +1,40 @@
 ---
 title: "다차원 모델 어셈블리 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "권한 [Analysis Services], 어셈블리"
-  - "사용자 정의 함수 호출"
-  - "사용자 가장 [Analysis Services]"
-  - "가장 [Analysis Services]"
-  - "Data Mining Extensions [Analysis Services], 어셈블리"
-  - "MDX [Analysis Services], 어셈블리"
-  - "사용자 정의 함수 [Analysis Services]"
-  - "Analysis Services 개체, 어셈블리"
-  - "어셈블리 [Analysis Services]"
-  - "응용 프로그램 도메인 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- permissions [Analysis Services], assemblies
+- calling user-defined functions
+- user impersonation [Analysis Services]
+- impersonation [Analysis Services]
+- Data Mining Extensions [Analysis Services], assemblies
+- MDX [Analysis Services], assemblies
+- user-defined functions [Analysis Services]
+- Analysis Services objects, assemblies
+- assemblies [Analysis Services]
+- application domains [Analysis Services]
 ms.assetid: b2645d10-6d17-444e-9289-f111ec48bbfb
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 38bbf72a7fd58be5db3d8672de1ad4269c763020
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 다차원 모델 어셈블리 관리
+# <a name="multidimensional-model-assemblies-management"></a>다차원 모델 어셈블리 관리
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 MDX(Multidimensional Expressions) 및 DMX(Data Mining Extensions) 언어에 사용할 수 있는 다양한 내장 함수를 제공합니다. 이러한 함수를 사용하여 표준 통계 계산을 비롯하여 계층에서의 멤버 이동에 이르는 모든 작업을 수행할 수 있습니다. 그러나 복잡하고 강력한 다른 제품에서도 그렇듯이 제품의 기능을 더 확장할 필요성은 언제나 있기 마련입니다.  
   
  따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 어셈블리를 추가할 수 있습니다. 어셈블리를 사용하면 Microsoft Visual Basic .NET 또는 Microsoft Visual C#과 같은 CLR(공용 언어 런타임) 언어를 사용하여 사용자 정의 외부 함수를 만들 수 있습니다. 또한 Microsoft Visual Basic 또는 Microsoft Visual C++와 같은 COM(구성 요소 개체 모델) 자동화 언어도 사용할 수 있습니다.  
@@ -51,7 +56,7 @@ caps.handback.revision: 35
   
  보안 사양에는 어셈블리를 실행하는 데 사용되는 권한 집합과 가장이 포함되어 있습니다.  
   
-## 사용자 정의 함수 호출  
+## <a name="calling-user-defined-functions"></a>사용자 정의 함수 호출  
  어셈블리의 사용자 정의 함수를 호출하는 방법은 전부 정규화된 이름을 사용해야 한다는 것을 제외하고는 내장 함수를 호출하는 방법과 동일합니다. 예를 들어 다음과 같이 MDX 쿼리에는 MDX에서 필요한 형식을 반환하는 사용자 정의 함수가 포함됩니다.  
   
 ```  
@@ -66,7 +71,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  어셈블리를 사용하면 공통 코드를 개발한 후 이를 단일 위치에 저장하여 재사용할 수 있으므로 데이터베이스 개발이 간편해집니다. 클라이언트 소프트웨어 개발자는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대한 함수 라이브러리를 만들어 해당 응용 프로그램과 함께 배포할 수 있습니다.  
   
- 어셈블리와 사용자 정의 함수 이름은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 함수 라이브러리의 함수 이름 또는 다른 어셈블리의 함수 이름과 중복되게 지정할 수 있습니다. 해당 정규화된 이름을 사용하여 사용자 정의 함수를 호출하기만 하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 올바른 프로시저를 사용할 수 있습니다. 보안을 유지하고 다른 클래스 라이브러리에 있는 중복 이름을 호출하는 것을 방지하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 저장 프로시저에 정규화된 이름만 사용해야 합니다.  
+ 어셈블리와 사용자 정의 함수 이름은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 함수 라이브러리의 함수 이름 또는 다른 어셈블리의 함수 이름과 중복되게 지정할 수 있습니다. 해당 정규화된 이름을 사용하여 사용자 정의 함수를 호출하기만 하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 올바른 프로시저를 사용할 수 있습니다. 보안을 유지하고 다른 클래스 라이브러리에 있는 중복 이름을 호출하는 것을 방지하기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 저장 프로시저에 정규화된 이름만 사용해야 합니다.  
   
  특정 CLR 어셈블리에서 사용자 정의 함수를 호출하려면 다음과 같이 사용자 정의 함수 앞에 어셈블리 이름, 전체 클래스 이름 및 프로시저 이름이 와야 합니다.  
   
@@ -80,10 +85,10 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  *AssemblyName*!*InterfaceID*!*ProcedureName*(*Argument1*, *Argument2*, ...)  
   
-## 보안  
+## <a name="security"></a>보안  
  어셈블리 보안은 코드 액세스 보안 모델인 .NET Framework 보안 모델에 기반을 둡니다. .NET Framework는 런타임에서 완전히 신뢰할 수 있는 코드와 부분적으로 신뢰할 수 있는 코드를 모두 호스팅할 수 있다고 가정하는 코드 액세스 보안 메커니즘을 지원합니다. 일반적으로 .NET Framework 코드 액세스 보안을 통해 보호되는 리소스는 액세스를 허용하기 전에 먼저 해당 사용 권한을 요구하는 관리 코드에 의해 래핑됩니다. 사용 권한 요청은 호출 스택의 어셈블리 수준에 있는 모든 호출자가 해당 리소스 사용 권한을 가지고 있는 경우에만 충족됩니다.  
   
- 어셈블리의 경우 **PermissionSet** 개체에 **Assembly** 속성이 설정된 상태로 실행 권한이 전달됩니다. 관리 코드가 받게 되는 사용 권한은 적용된 보안 정책에 따라 결정됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 호스팅하지 않는 환경에는 엔터프라이즈, 컴퓨터 및 사용자라는 3가지 수준의 보안 정책이 이미 적용되어 있습니다. 코드가 받게 되는 유효한 사용 권한 목록은 이 3가지 수준에서 확보하는 사용 권한의 공통 사항에 따라 결정됩니다.  
+ 어셈블리의 경우 **PermissionSet** 개체에 **Assembly** 속성이 설정된 상태로 실행 권한이 전달됩니다. 관리 코드가 받게 되는 사용 권한은 적용된 보안 정책에 따라 결정됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 호스팅하지 않는 환경에는 엔터프라이즈, 컴퓨터 및 사용자라는 3가지 수준의 보안 정책이 이미 적용되어 있습니다. 코드가 받게 되는 유효한 사용 권한 목록은 이 3가지 수준에서 확보하는 사용 권한의 공통 사항에 따라 결정됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 CLR을 호스트하면서 호스트 수준 보안 정책을 CLR에 제공합니다. 이 정책은 항상 적용되는 위의 3가지 정책 수준 아래에 있는 추가 정책 수준입니다. 이 정책은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 만든 모든 응용 프로그램 도메인에 대해 설정됩니다.  
   
@@ -99,21 +104,21 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  COM 또는 관리되지 않는 어셈블리 루틴은 CLR 보안 모델을 지원하지 않습니다.  
   
-### 가장  
- 관리 코드가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 외부의 리소스에 액세스할 때마다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 어셈블리의 **ImpersonationMode** 속성 설정과 관련된 규칙을 따라 적절한 Windows 보안 컨텍스트에서 액세스가 이루어지도록 합니다. **Safe** 권한 설정을 사용하는 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 외부의 리소스에 액세스할 수 없으므로 이러한 규칙은 **ExternalAccess** 및 **Unsafe** 권한 설정을 사용하는 어셈블리에만 적용됩니다.  
+### <a name="impersonation"></a>가장  
+ 관리 코드가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]외부의 리소스에 액세스할 때마다 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 어셈블리의 **ImpersonationMode** 속성 설정과 관련된 규칙을 따라 적절한 Windows 보안 컨텍스트에서 액세스가 이루어지도록 합니다. **Safe** 권한 설정을 사용하는 어셈블리는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]외부의 리소스에 액세스할 수 없으므로 이러한 규칙은 **ExternalAccess** 및 **Unsafe** 권한 설정을 사용하는 어셈블리에만 적용됩니다.  
   
--   현재의 실행 컨텍스트가 Windows 인증 로그인과 일치하며 원래 호출자의 컨텍스트와 동일한 경우(즉, 중간에 EXECUTE AS가 없는 경우) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 리소스에 액세스하기 전에 먼저 Windows 인증 로그인을 가장합니다.  
+-   현재의 실행 컨텍스트가 Windows 인증 로그인과 일치하며 원래 호출자의 컨텍스트와 동일한 경우(즉, 중간에 EXECUTE AS가 없는 경우) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 리소스에 액세스하기 전에 먼저 Windows 인증 로그인을 가장합니다.  
   
 -   중간에 EXECUTE AS가 있어서 컨텍스트가 원래 호출자의 컨텍스트와 다르게 변경된 경우에는 외부 리소스에 액세스할 수 없습니다.  
   
- **ImpersonationMode** 속성은 **ImpersonateCurrentUser** 또는 **ImpersonateAnonymous**로 설정할 수 있습니다. 기본 설정 **ImpersonateCurrentUser**는 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행합니다. **ImpersonateAnonymous** 설정을 사용하면 실행 컨텍스트가 서버의 Windows 로그인 사용자 계정인 IUSER_*servername*과 일치하게 됩니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
+ **ImpersonationMode** 속성은 **ImpersonateCurrentUser** 또는 **ImpersonateAnonymous**로 설정할 수 있습니다. 기본 설정 **ImpersonateCurrentUser**는 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행합니다. **ImpersonateAnonymous** 설정을 사용하면 실행 컨텍스트가 서버의 Windows 로그인 사용자 계정인 IUSER_*servername* 과 일치하게 됩니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
   
-### 응용 프로그램 도메인  
+### <a name="application-domains"></a>응용 프로그램 도메인  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 응용 프로그램 도메인을 직접 노출시키지 않습니다. 동일한 응용 프로그램 도메인에서 실행되는 어셈블리 집합으로 인해 응용 프로그램 도메인은 .NET Framework의 **System.Reflection** 네임스페이스를 사용하거나 다른 방법으로 실행 시 서로를 검색할 수 있으며 런타임에 바인딩된 방식으로 응용 프로그램을 호출할 수 있습니다. 이러한 호출에 대해서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 권한 부여 기반의 보안 방식에서 사용되는 권한 확인이 수행됩니다.  
   
  응용 프로그램 도메인 경계와 각 도메인에 속하는 어셈블리는 구현에 따라 달라지므로 동일한 응용 프로그램 도메인 내에서 어셈블리를 찾는 방법에만 의존해서는 안 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [저장 프로시저의 보안 설정](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [저장 프로시저 정의](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

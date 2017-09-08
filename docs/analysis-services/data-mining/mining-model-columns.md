@@ -1,38 +1,43 @@
 ---
 title: "마이닝 모델 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "열 [데이터 마이닝], 마이닝 모델 열"
-  - "열 [데이터 마이닝]"
-  - "REGRESSOR 열"
-  - "열 [데이터 마이닝], 모델링 플래그"
-  - "모델링 플래그 [데이터 마이닝]"
-  - "MODEL_EXISTENCE_ONLY 열"
-  - "사용법 속성 [데이터 마이닝]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- columns [data mining], mining model columns
+- columns [data mining]
+- REGRESSOR column
+- columns [data mining], modeling flags
+- modeling flags [data mining]
+- MODEL_EXISTENCE_ONLY column
+- usage property [data mining]
 ms.assetid: fab47643-5bfd-424e-a0f7-69e665db6bab
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e2691f87c4ded8d2e9f00e4390681c936591bc83
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 모델 열
+# <a name="mining-model-columns"></a>마이닝 모델 열
   데이터 마이닝 모델은 마이닝 구조가 나타나는 데이터에 마이닝 모델 알고리즘을 적용합니다. 마이닝 구조와 마찬가지로 마이닝 모델에는 열이 포함됩니다. 마이닝 모델은 마이닝 구조 내에 포함되며 마이닝 구조에서 정의한 속성의 모든 값을 상속받습니다. 모델은 마이닝 구조에 포함된 모든 열이나 이 열의 하위 집합을 사용할 수 있습니다.  
   
  마이닝 모델 열에는 사용법 및 모델링 플래그 정보를 추가로 정의할 수 있습니다.  
   
 -   **사용법** 은 모델이 열을 사용하는 방법을 정의하는 속성입니다. 열은 입력 열, 키 열 또는 예측 가능한 열로 사용될 수 있습니다.  
   
--   **모델링 플래그** 는 사례 테이블에 정의된 데이터에 대한 추가 정보를 알고리즘에 제공하므로 알고리즘이 보다 정확한 모델을 작성할 수 있습니다. 모델링 플래그는 DMX(Data Mining Extensions) 언어를 사용하여 프로그래밍 방식으로 정의하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **데이터 마이닝 디자이너**에서 정의할 수 있습니다.  
+-   **모델링 플래그** 는 사례 테이블에 정의된 데이터에 대한 추가 정보를 알고리즘에 제공하므로 알고리즘이 보다 정확한 모델을 작성할 수 있습니다. 모델링 플래그는 DMX(Data Mining Extensions) 언어를 사용하여 프로그래밍 방식으로 정의하거나 **의** 데이터 마이닝 디자이너 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 정의할 수 있습니다.  
   
  다음 목록에서는 마이닝 모델 열에 정의할 수 있는 모델링 플래그를 설명합니다.  
   
@@ -44,7 +49,7 @@ caps.handback.revision: 38
   
  사용법 속성을 설정하고 DMX를 사용하여 프로그래밍 방식으로 모델링 플래그를 정의하는 방법은 [CREATE MINING MODEL&#40;DMX&#41;](../../dmx/create-mining-model-dmx.md)을 참조하세요. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 사용법 속성을 설정하고 모델링 플래그를 정의하는 방법은 [데이터 마이닝 개체 이동](../../analysis-services/data-mining/moving-data-mining-objects.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   

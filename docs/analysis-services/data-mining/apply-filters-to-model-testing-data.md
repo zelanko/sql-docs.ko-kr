@@ -1,27 +1,32 @@
 ---
-title: "모델 테스트 데이터에 필터 적용 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "입력 행 필터링 [SQL Server]"
-  - "입력 행 필터링 [Analysis Services]"
-  - "마이닝 정확도 차트 [Analysis Services], 입력행 필터링"
+title: "테스트 데이터를 모델에 필터 적용 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- input row filtering [SQL Server]
+- filtering input rows [Analysis Services]
+- Mining Accuracy Chart [Analysis Services], filtering input rows
 ms.assetid: 9ccc9a23-5597-4b35-a05f-2fc8eb885147
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ae4d7899d0b027f912b6320934ddefc2431a303a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 모델 테스트 데이터에 필터 적용
+# <a name="apply-filters-to-model-testing-data"></a>모델 테스트 데이터에 필터 적용
   모델을 테스트하는 데 사용할 외부 데이터 원본을 지정할 경우 필요에 따라 입력 데이터를 제한하기 위한 필터를 적용할 수 있습니다. 예를 들어 특별히 특정 수입 범위 내의 고객에 대해 예측하기 위해 모델을 테스트하려고 할 수 있습니다.  
   
  예를 들어 Adventure Works의 대상인 메일링 시나리오에서 테스트 데이터가 포함된 테이블인 ProspectiveBuyer에 다음과 같은 필터 식을 만들고 사례를 수입 범위별로 테스트하도록 제한할 수 있습니다.  
@@ -53,7 +58,7 @@ caps.handback.revision: 44
   
  적용할 수 있는 필터 종류에 대한 자세한 내용과 필터 식이 계산되는 방법은 [모델 필터 구문 및 예&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)를 참조하세요.  
   
-### 외부 테스트 데이터에 대한 필터 만들기  
+### <a name="create-a-filter-on-external-testing-data"></a>외부 테스트 데이터에 대한 필터 만들기  
   
 1.  테스트할 모델이 포함된 마이닝 구조를 두 번 클릭하여 데이터 마이닝 디자이너를 엽니다.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 44
   
 3.  **입력 선택** 탭의 **정확도 차트에 사용할 데이터 집합을 선택하십시오.**에서 **다른 데이터 집합 지정**옵션을 선택합니다.  
   
-4.  찾아보기 단추**(…)**를 클릭하여 대화 상자를 열고 외부 데이터 집합을 선택합니다.  
+4.  찾아보기 단추 **(…)** 를 클릭하여 대화 상자를 열고 외부 데이터 집합을 선택합니다.  
   
 5.  사례 테이블을 선택하고, 필요한 경우 중첩된 테이블을 추가합니다. 필요한 경우 모델의 열을 외부 데이터 집합의 열에 매핑합니다. **열 매핑 지정** 대화 상자를 닫아 원본 테이블 정의를 저장합니다.  
   
@@ -81,7 +86,7 @@ caps.handback.revision: 44
   
 9. **및/또는** 입력란을 클릭하고 논리 연산자를 선택하여 여러 조건이 결합되는 방법을 정의합니다.  
   
-10. 필요에 따라 **값** 텍스트 상자의 오른쪽에 있는 찾아보기 단추**(…)**를 클릭하여 **필터** 대화 상자를 열고 중첩 테이블 또는 개별 사례 테이블 열에 대한 조건을 설정합니다.  
+10. 필요에 따라 **값** 텍스트 상자의 오른쪽에 있는 찾아보기 단추 **(…)** 를 클릭하여 **필터** 대화 상자를 열고 중첩 테이블 또는 개별 사례 테이블 열에 대한 조건을 설정합니다.  
   
 11. **식** 창의 텍스트를 읽어 전체 필터 조건이 올바른지 확인합니다.  
   
@@ -89,9 +94,9 @@ caps.handback.revision: 44
   
      필터 조건은 정확도 차트를 만들 때 데이터 원본에 적용됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [모델 테스트 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-model-testing-data.md)   
- [정확도 차트에 대한 입력으로 중첩 테이블 데이터 사용](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
- [정확도 차트 유형 선택 및 차트 옵션 설정](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
+ [사용 하 여 중첩 테이블 데이터를 입력으로 정확도 차트에 대 한](../../analysis-services/data-mining/using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+ [정확도 차트 유형 선택 및 집합 차트 옵션](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

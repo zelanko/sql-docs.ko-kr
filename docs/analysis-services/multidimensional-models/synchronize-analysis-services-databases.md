@@ -1,29 +1,34 @@
 ---
 title: "Analysis Services 데이터베이스 동기화 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services 배포, 데이터베이스 동기화 마법사"
-  - "배포 [Analysis Services], 데이터베이스 동기화 마법사"
-  - "데이터베이스 동기화 마법사"
-  - "동기화 [Analysis Services]"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, Synchronize Database Wizard
+- deploying [Analysis Services], Synchronize Database Wizard
+- Synchronize Database Wizard
+- synchronization [Analysis Services]
 ms.assetid: 6aeff68d-8470-43fb-a3ed-a4b9685332c2
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: ad1667e587056d10fd1b30b0b804366dbd5dfa14
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 데이터베이스 동기화
+# <a name="synchronize-analysis-services-databases"></a>Analysis Services 데이터베이스 동기화
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 원본 서버의 데이터베이스에 있는 데이터와 메타데이터를 대상 서버의 데이터베이스로 복사하여 두 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 동일하게 만드는 데이터베이스 동기화 기능이 포함되어 있습니다. 데이터베이스 동기화 기능을 사용하여 다음 작업을 수행할 수 있습니다.  
   
 -   준비 서버에서 프로덕션 서버로 데이터베이스를 배포합니다.  
@@ -43,12 +48,12 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  이전 버전의 Analysis Services용으로 작성된 다음 백서는 SQL Server 2012를 사용하여 구축된 확장 가능한 다차원 솔루션에도 적용됩니다. 자세한 내용은 [Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253136) 및 [읽기 전용 데이터베이스로 Analysis Services의 쿼리 확장](http://go.microsoft.com/fwlink/?LinkId=253137.)을 참조하세요.  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  데이터베이스 동기화를 시작하는 대상 서버에서 Analysis Services 서버 관리자 역할의 멤버여야 합니다. 원본 서버에서 Windows 사용자 계정에 원본 데이터베이스에 대한 모든 권한이 있어야 합니다. 데이터베이스를 대화형으로 동기화하는 경우 동기화가 Windows 사용자 ID의 보안 컨텍스트에서 실행됩니다. 특정 개체에 대한 계정의 액세스가 거부되는 경우 해당 개체가 작업에서 제외됩니다. 서버 관리자 역할 및 데이터베이스 권한에 대한 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 및 [데이터베이스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)를 참조하세요.  
   
  TCP 포트 2383이 기본 인스턴스 간의 원격 연결을 허용하기 위해 두 서버에서 열려 있어야 합니다. Windows 방화벽에서 예외를 만드는 방법은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하십시오.  
   
- 원본 서버와 대상 서버가 동일한 버전이어야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+ 원본 및 대상 서버는 동일한 버전 및 서비스 팩이 설치 해야 합니다. 모델 메타 데이터 동기화도 되어 있으므로 빌드 호환성을 보장 하려면 두 서버 모두에 대 한 번호 동일 해야 합니다. 각 설치 버전이 데이터베이스 동기화를 지원해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 데이터베이스 동기화가 Enterprise, Developer 및 Business Intelligence 버전에서 지원됩니다. 각 버전의 기능에 대 한 자세한 내용은 참조 [버전 및 SQL Server 2016에 대 한 지원 되는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)합니다.  
   
  서버 배포 모드는 각 서버에서 동일해야 합니다. 동기화할 데이터베이스가 다차원인 경우 원본 서버와 대상 서버가 다차원 서버 모드에 대해 구성되어야 합니다. 배포 모드에 대한 자세한 내용은 [Determine the Server Mode of an Analysis Services Instance](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하십시오.  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 39
 > [!NOTE]  
 >  데이터베이스 크기는 동기화가 적합한 방식인지 결정하는 요소입니다. 까다로운 요구 사항은 없지만 동기화가 너무 느리면 [Analysis Services 동기화 모범 사례](http://go.microsoft.com/fwlink/?LinkID=253136)문서에 설명된 대로 여러 서버를 병렬로 동기화하는 것이 좋습니다.  
   
-## 데이터베이스 동기화 마법사  
+## <a name="synchronize-database-wizard"></a>데이터베이스 동기화 마법사  
  데이터베이스 동기화 마법사를 사용하여 원본 데이터베이스에서 대상 데이터베이스로 단방향 동기화를 수행하거나 데이터베이스 동기화 작업을 지정하는 스크립트를 생성할 수 있습니다. 동기화 프로세스 중에 로컬 및 원격 파티션을 둘 다 동기화하고 역할을 포함할지 여부를 선택할 수 있습니다.  
   
  데이터베이스 동기화 마법사는 다음 단계로 이루어져 있습니다.  
@@ -74,7 +79,7 @@ caps.handback.revision: 39
   
  기본적으로 마법사는 기존 보안 그룹의 멤버 이외의 모든 데이터와 메타데이터를 동기화합니다. 또한 데이터와 메타데이터를 동기화할 때 모든 보안 설정을 복사하거나 모든 보안 설정을 무시할 수 있습니다.  
   
-#### 마법사 실행  
+#### <a name="run-the-wizard"></a>마법사 실행  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 대상 데이터베이스를 실행할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결합니다. 예를 들어 프로덕션 서버에 데이터베이스를 배포하는 경우 프로덕션 서버에서 마법사를 실행합니다.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 39
      **대상 폴더**  
      로컬 파티션을 동기화할 대상 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)" 값이 있으면 대상 인스턴스의 기본 위치에 로컬 파티션이 포함됩니다.  
   
-     **원격 폴더 찾아보기** 대화 상자를 표시하고 선택한 위치에 저장된 로컬 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표(**...**) 단추를 클릭합니다.  
+     **원격 폴더 찾아보기**대화 상자를 표시하고 선택한 위치에 저장된 로컬 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표( **...** ) 단추를 클릭합니다.  
   
     > [!NOTE]  
     >  원본 인스턴스의 기본 위치에 저장된 로컬 파티션에 대해서는 이 열을 변경할 수 없습니다.  
@@ -140,17 +145,17 @@ caps.handback.revision: 39
      원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 이름을 표시합니다.  
   
      **원본 폴더**  
-     원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)"이 있으면 **원본 서버**에 표시되는 인스턴스에 대한 기본 위치에 원격 파티션이 포함됩니다.  
+     원격 파티션을 포함하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)"이 있으면 **원본 서버** 에 표시되는 인스턴스에 대한 기본 위치에 원격 파티션이 포함됩니다.  
   
      **대상 서버**  
-     **원본 서버** 및 **원본 폴더**에서 지정한 위치에 저장된 원격 파티션이 동기화될 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 표시합니다.  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 원본 서버 **및** 원본 폴더 **에서 지정한 위치에 저장된 원격 파티션이 동기화될** 인스턴스의 이름을 표시합니다.  
   
-     **연결 관리자** 대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 지정하려면 줄임표(**...**) 단추를 클릭합니다.  
+     **연결 관리자**대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 **인스턴스를 지정하려면 줄임표(** ... [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ) 단추를 클릭합니다.  
   
      **대상 폴더**  
      원격 파티션을 동기화할 대상 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 폴더 이름을 표시합니다. 열에 "(기본값)"이 있으면 대상 인스턴스에 대한 기본 위치에 원격 파티션이 포함됩니다.  
   
-     **원격 폴더 찾아보기** 대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표(**...**) 단추를 클릭합니다.  
+     **원격 폴더 찾아보기**대화 상자를 표시하고 선택한 위치에 저장된 원격 파티션을 동기화할 대상 인스턴스의 폴더를 지정하려면 줄임표( **...** ) 단추를 클릭합니다.  
   
      **크기**  
      위치에 저장된 원격 파티션의 예상 크기를 표시합니다.  
@@ -184,10 +189,10 @@ caps.handback.revision: 39
   
 8.  **마침** 을 클릭하여 동기화를 시작합니다. **마법사 완료** 페이지의 옵션을 확인하고 **마침** 을 다시 클릭합니다.  
   
-## 다음 단계  
+## <a name="next-steps"></a>다음 단계  
  역할 또는 멤버 자격을 동기화하지 않은 경우 지금 대상 데이터베이스에 대한 사용자 액세스 권한을 지정해야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Synchronize 요소&#40;XMLA&#41;](../../analysis-services/xmla/xml-elements-commands/synchronize-element-xmla.md)   
  [XMLA를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)  

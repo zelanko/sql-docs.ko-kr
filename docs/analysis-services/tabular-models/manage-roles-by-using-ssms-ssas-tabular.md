@@ -1,24 +1,29 @@
 ---
-title: "SSMS를 사용하여 역할 관리(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SSMS (SSAS 테이블 형식)를 사용 하 여 역할 관리 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7458aa948c023e073f3080116fed980e8571c78
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SSMS를 사용하여 역할 관리(SSAS 테이블 형식)
+# <a name="manage-roles-by-using-ssms-ssas-tabular"></a>SSMS를 사용하여 역할 관리(SSAS 테이블 형식)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 배포된 테이블 형식 모델에 대한 역할을 생성, 편집 및 관리할 수 있습니다.  
   
  이 항목의 태스크:  
@@ -32,7 +37,7 @@ caps.handback.revision: 10
 -   [역할을 삭제하려면](#bkmk_deletet_role)  
   
 > [!CAUTION]  
->  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 역할 관리자를 사용하여 정의한 역할로 테이블 형식 모델 프로젝트를 다시 배포하면 배포된 테이블 형식 모델에 정의된 역할을 덮어씁니다.  
+>  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 역할 관리자를 사용하여 정의한 역할로 테이블 형식 모델 프로젝트를 다시 배포하면 배포된 테이블 형식 모델에 정의된 역할을 덮어씁니다.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 모델 프로젝트가 열려 있는 동안 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 테이블 형식 모델 작업 영역 데이터베이스를 관리하면 Model.bim 파일이 손상될 수 있습니다. 테이블 형식 모델 작업 영역 데이터베이스에 대한 역할을 만들고 관리하는 경우 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 역할 관리자를 사용하십시오.  
@@ -59,12 +64,12 @@ caps.handback.revision: 10
   
 6.  **멤버 자격 설정 창에서 추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 멤버로 추가할 Windows 사용자 또는 그룹을 추가합니다.  
   
-7.  만들고 있는 역할에 읽기 권한이 있는 경우 DAX 수식을 사용하여 테이블에 대한 행 필터를 추가할 수 있습니다. 행 필터를 추가하려면 **역할 속성 - \<rolename>** 대화 상자의 **페이지 선택**에서 **행 필터**를 클릭합니다.  
+7.  만들고 있는 역할에 읽기 권한이 있는 경우 DAX 수식을 사용하여 테이블에 대한 행 필터를 추가할 수 있습니다. 행 필터를 추가 하려면는 **역할 속성- \<rolename >** 대화 상자의 **페이지 선택**, 클릭 **행 필터**합니다.  
   
-8.  행 필터 창에서 테이블을 선택한 다음 **DAX 필터** 필드를 클릭한 다음 **DAX 필터 - \<tablename>** 필드에서 DAX 수식을 입력합니다.  
+8.  행 필터 창에서 테이블을 클릭 한 다음는 **DAX 필터** 필드를 선택한 후는 **DAX 필터- \<tablename >** 필드에 DAX 수식을 입력 합니다.  
   
     > [!NOTE]  
-    >  DAX 필터 - \<tablename> 필드에는 자동 완성 쿼리 편집기 또는 함수 삽입 기능이 없습니다. DAX 수식을 작성할 때 자동 완성을 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 DAX 수식 편집기를 사용해야 합니다.  
+    >  DAX 필터- \<tablename > 필드 자동 완성 쿼리 편집기를 포함 하지 않거나 함수 삽입 기능이 있습니다. DAX 수식을 작성할 때 자동 완성을 사용하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 DAX 수식 편집기를 사용해야 합니다.  
   
 9. **확인** 을 클릭하여 역할을 저장합니다.  
   
@@ -76,13 +81,13 @@ caps.handback.revision: 10
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 편집할 역할을 포함하는 테이블 형식 model 데이터베이스와 **역할**을 차례로 확장하고 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-     **역할 속성** \<rolename> 대화 상자에서 사용 권한을 변경하고 멤버를 추가 또는 제거하고 행 필터를 추가/편집할 수 있습니다.  
+     에 **역할 속성** \<역할 이름 > 대화 상자는 추가/편집 행 필터 및 사용 권한 변경, 추가 또는 구성원을 제거할 수 있습니다.  
   
 ###  <a name="bkmk_deletet_role"></a> 역할을 삭제하려면  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 삭제할 역할을 포함하는 테이블 형식 model 데이터베이스와 **역할**을 차례로 확장하고 역할을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

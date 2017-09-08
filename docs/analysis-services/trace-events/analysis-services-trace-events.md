@@ -1,33 +1,38 @@
 ---
 title: "Analysis Services 추적 이벤트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SQL Server Profiler, Analysis Services"
-  - "Analysis Services 모니터링 [SQL Server]"
-  - "성능 [Analysis Services], SQL Server Profiler"
-  - "이벤트 [Analysis Services]"
-  - "이벤트 클래스 [Analysis Services], 이벤트 클래스 정보"
-  - "Profiler [SQL Server Profiler], Analysis Services"
-  - "이벤트 클래스 [Analysis Services]"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SQL Server Profiler, Analysis Services
+- monitoring Analysis Services [SQL Server]
+- performance [Analysis Services], SQL Server Profiler
+- events [Analysis Services]
+- event classes [Analysis Services], about event classes
+- Profiler [SQL Server Profiler], Analysis Services
+- event classes [Analysis Services]
 ms.assetid: 6fb219cc-f37e-437a-a544-01cec0953571
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b97d63ba708128fbd4d42f2e5278273609d144e1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 추적 이벤트
+# <a name="analysis-services-trace-events"></a>Analysis Services 추적 이벤트
   인스턴스에서 생성되는 추적 이벤트를 캡처한 다음 분석하여 Microsoft SQL SSAS(Server Analysis Services) 인스턴스의 작업을 따라갈 수 있습니다.  추적 이벤트는 관련된 추적 이벤트를 더 쉽게 찾을 수 있도록 그룹화되어 있습니다.  각 추적 이벤트에는 이벤트와 관련된 데이터 집합이 포함되어 있습니다. 모든 데이터 조각이 모든 이벤트와 관련이 있는 것은 아닙니다.  
   
- 추적 이벤트는 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**를 사용하여 시작하고 캡처하거나([SQL Server Profiler를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md) 참조) XMLA 명령에서 **SQL Server 확장 이벤트**로 시작하고 나중에 분석할 수 있습니다([SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 참조).  
+ 추적 이벤트는 **[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]**를 사용하여 시작하고 캡처하거나( [SQL Server Profiler를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)참조) XMLA 명령에서 **SQL Server 확장 이벤트** 로 시작하고 나중에 분석할 수 있습니다( [SQL Server 확장 이벤트를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)참조).  
   
  다음 표에서는 각 이벤트 범주 및 해당 범주의 이벤트에 대해 설명합니다. 각 표에는 다음 열이 있습니다.  
   
@@ -183,7 +188,7 @@ caps.handback.revision: 37
 |42|Existing Session|기존 세션입니다.|  
 |43|Session Initialize|세션을 초기화합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server Profiler를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)  
   
   

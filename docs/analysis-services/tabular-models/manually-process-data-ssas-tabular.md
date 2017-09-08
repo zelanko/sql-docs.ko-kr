@@ -1,26 +1,31 @@
 ---
-title: "수동으로 데이터 처리(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.datarefreshprogressdb.f1"
+title: "데이터 (SSAS 테이블 형식)를 수동으로 처리 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.datarefreshprogressdb.f1
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 caps.latest.revision: 18
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 18
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6d421c1f625ee182497be3fbbff0c19f727f1a2b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 수동으로 데이터 처리(SSAS 테이블 형식)
+# <a name="manually-process-data-ssas-tabular"></a>수동으로 데이터 처리(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 작업 영역 데이터를 수동으로 처리하는 방법에 대해 설명합니다.  
   
  외부 데이터를 사용하는 테이블 형식 모델을 제작할 때 처리 명령을 사용하여 데이터를 수동으로 새로 고칠 수 있습니다. 단일 테이블, 모델에 있는 모든 테이블 또는 하나 이상의 파티션을 처리할 수 있습니다. 데이터를 처리할 때마다 데이터를 다시 계산해야 할 수도 있습니다.  데이터 처리는 외부 원본에서 최신 데이터를 가져오는 것을 의미합니다. 다시 계산은 데이터를 사용하는 모든 수식의 결과를 업데이트하는 것을 의미합니다.  
@@ -33,19 +38,19 @@ caps.handback.revision: 18
   
 ##  <a name="bkmk_mahually_process"></a> 수동으로 데이터 처리  
   
-#### 모델의 단일 테이블 또는 모든 테이블의 데이터를 처리하려면  
+#### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>모델의 단일 테이블 또는 모든 테이블의 데이터를 처리하려면  
   
 1.  모델 디자이너에서 처리할 테이블을 클릭합니다.  
   
 2.  **모델** 메뉴를 클릭하고 **처리**를 클릭한 다음 **처리** 또는 **모두 처리**를 클릭합니다.  
   
-#### 같은 연결을 사용하는 모든 테이블에 대한 데이터를 처리하려면  
+#### <a name="to-process-data-for-all-tables-using-the-same-connection"></a>같은 연결을 사용하는 모든 테이블에 대한 데이터를 처리하려면  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **기존 연결**을 클릭합니다.  
   
 2.  **기존 연결** 대화 상자에서 연결을 선택한 다음 **처리**를 클릭합니다.  
   
-#### 하나 이상의 파티션에 대한 데이터를 처리하려면  
+#### <a name="to-process-data-for-one-or-more-partitions"></a>하나 이상의 파티션에 대한 데이터를 처리하려면  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭하고 **처리**를 가리킨 다음 **파티션 처리**를 클릭합니다.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 18
  **새로 고침 중지**  
  처리 작업을 중지하려면 클릭합니다. 이 옵션은 작업에 시간이 너무 많이 걸리거나 오류가 너무 많은 경우에 유용합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [데이터 처리 문제 해결&#40;SSAS 테이블 형식&#41;](../../analysis-services/troubleshoot-process-data-ssas-tabular.md)  
   

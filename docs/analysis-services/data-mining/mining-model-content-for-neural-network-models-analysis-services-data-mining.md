@@ -1,45 +1,50 @@
 ---
-title: "신경망 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "출력 뉴런 [Analysis Services]"
-  - "신경망 알고리즘 [Analysis Services]"
-  - "출력 계층 [데이터 마이닝]"
-  - "숨겨진 계층"
-  - "숨겨진 뉴런"
-  - "입력 계층 [데이터 마이닝]"
-  - "입력 뉴런 [Analysis Services]"
-  - "마이닝 모델 콘텐츠, 신경망 모델"
-  - "neural network model [Analysis Services]"
+title: "마이닝 모델 콘텐츠 신경망 모델에 대 한 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- output neurons [Analysis Services]
+- neural network algorithms [Analysis Services]
+- output layer [Data Mining]
+- hidden layer
+- hidden neurons
+- input layer [Data Mining]
+- input neurons [Analysis Services]
+- mining model content, neural network models
+- neural network model [Analysis Services]
 ms.assetid: ea21ff9d-857f-475c-bd3d-6d1405bad069
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4ba3de4a84dfd666e23d9877241f8c444891a0be
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 신경망 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>신경망 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 Microsoft 신경망 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
-## 신경망 모델의 구조 이해  
+## <a name="understanding-the-structure-of-a-neural-network-model"></a>신경망 모델의 구조 이해  
  각 신경망 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드와 입력 특성에 대한 기술 통계를 제공하는 특수한 한계 통계 노드(NODE_TYPE = 24)가 있습니다. 한계 통계 노드는 입력에 대한 정보를 요약하기 때문에 개별 노드에서 데이터를 쿼리하지 않아도 되므로 유용합니다.  
   
  이 두 노드 아래에는 두 개 이상의 노드가 있으며, 이러한 노드는 모델에 포함된 예측 가능한 특성의 수에 따라 매우 많이 있을 수도 있습니다.  
   
 -   첫 번째 노드(NODE_TYPE = 18)는 항상 입력 계층의 최상위 노드를 나타냅니다. 이 최상위 노드 아래에는 실제 입력 특성과 해당 값이 들어 있는 입력 노드(NODE_TYPE = 21)가 있습니다.  
   
--   연속된 각 노드에는 각기 다른 *서브네트워크*(NODE_TYPE = 17)가 있습니다. 각 하위 네트워크에는 해당 하위 네트워크에 대한 숨겨진 계층(NODE_TYPE = 19)과 출력 계층(NODE_TYPE = 20)이 항상 포함되어 있습니다.  
+-   연속된 각 노드에는 각기 다른 *서브네트워크* (NODE_TYPE = 17)가 있습니다. 각 하위 네트워크에는 해당 하위 네트워크에 대한 숨겨진 계층(NODE_TYPE = 19)과 출력 계층(NODE_TYPE = 20)이 항상 포함되어 있습니다.  
   
- ![신경망에 대한 모델 콘텐츠 구조](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "신경망에 대한 모델 콘텐츠 구조")  
+ ![신경망 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "한 신경망에 대 한 모델 콘텐츠 구조")  
   
  입력 계층의 정보는 간단합니다. 각 입력 계층의 최상위 노드(NODE_TYPE = 18)는 입력 노드(NODE_TYPE = 21) 컬렉션의 구성 도우미 역할을 합니다. 입력 노드의 내용은 다음 표에서 설명합니다.  
   
@@ -54,7 +59,7 @@ caps.handback.revision: 19
   
  데이터를 사용하고 모델이 입력과 출력 간의 상관 관계를 찾아내는 방식을 보려면 **Microsoft 신경망 뷰어**를 사용합니다. 이 사용자 지정 뷰어를 사용하면 입력 특성과 해당 값을 필터링하고 이러한 항목이 출력에 주는 영향을 그래픽으로 볼 수 있습니다. 뷰어의 도구 설명에는 각 입력 및 출력 값 쌍과 연결된 확률 및 리프트가 표시됩니다. 자세한 내용은 [Microsoft 신경망 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)를 참조하세요.  
   
-## 신경망 모델에 대한 모델 콘텐츠  
+## <a name="model-content-for-a-neural-network-model"></a>신경망 모델에 대한 모델 콘텐츠  
  이 섹션에서는 신경망 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다. MODEL_CATALOG와 MODEL_NAME을 비롯하여 여기에 설명되지 않은 스키마 행 집합의 범용 열에 대한 자세한 내용 또는 마이닝 모델 용어에 대한 자세한 내용은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
  MODEL_CATALOG  
@@ -160,7 +165,7 @@ caps.handback.revision: 19
  부모 노드에서 해당 노드에 도달할 확률입니다. 신경망 모델의 경우 항상 0입니다.  
   
  NODE_DISTRIBUTION  
- 노드에 대한 통계 정보가 들어 있는 중첩 테이블입니다. 각 노드 유형에 대해 이 테이블에 포함되는 내용에 대한 자세한 내용은 [NODE_DISTRIBUTION 테이블 이해](#bkmk_NodeDistTable) 섹션을 참조하세요.  
+ 노드에 대한 통계 정보가 들어 있는 중첩 테이블입니다. 각 노드 유형에 대해 이 테이블에 포함되는 내용에 대한 자세한 내용은 [NODE_DISTRIBUTION 테이블 이해](#bkmk_NodeDistTable)섹션을 참조하세요.  
   
  NODE_SUPPORT  
  신경망 모델의 경우 항상 0입니다.  
@@ -188,7 +193,7 @@ caps.handback.revision: 19
  MSOLAP_NODE_SHORT_CAPTION  
  신경망 모델의 경우 항상 비어 있습니다.  
   
-## 주의  
+## <a name="remarks"></a>주의  
  신경망 모델의 학습 목적은 입력에서 중간점 및 중간점에서 끝점으로의 각 전환과 연결된 가중치를 확인하는 것입니다. 따라서 모델의 입력 계층은 주로 모델을 작성하는 데 사용된 실제 값을 저장하기 위해 존재합니다. 숨겨진 계층은 계산된 가중치를 저장하며 입력 특성에 대한 포인터를 제공합니다. 출력 계층은 예측 가능한 값을 저장하며 숨겨진 계층의 중간점에 대한 포인터를 제공합니다.  
   
 ##  <a name="bkmk_NodeIDs"></a> 노드 이름 및 ID 사용  
@@ -213,7 +218,7 @@ caps.handback.revision: 19
 ##  <a name="bkmk_NodeDistTable"></a> NODE_DISTRIBUTION 테이블의 정보 해석  
  일부 노드에서는 NODE_DISTRIBUTION 테이블이 비어 있을 수 있습니다. 그러나 입력 노드, 숨겨진 계층 노드 및 출력 노드의 경우 NODE_DISTRIBUTION 테이블에는 모델에 대한 중요하고 주목할 만한 정보가 저장됩니다. 이 정보를 쉽게 해석할 수 있도록 NODE_DISTRIBUTION 테이블에는 각 행에 대해 VALUETYPE 열이 들어 있으므로 이 열을 통해 ATTRIBUTE_VALUE 열의 값이 불연속적(4)인지, 불연속화(5)되었는지, 연속적(3)인지를 알 수 있습니다.  
   
-### 입력 노드  
+### <a name="input-nodes"></a>입력 노드  
  입력 계층에는 모델에 사용된 각 특성 값에 대한 노드가 포함됩니다.  
   
  **불연속 특성:** 입력 노드에는 ATTRIBUTE_NAME 및 ATTRIBUTE_VALUE 열의 특성 이름 및 해당 값만 저장됩니다. 예를 들어 [Work Shift]가 열인 경우 이 열의 값 중 모델에 사용된 각 값(예: AM 및 PM)에 대해 별도의 노드가 만들어집니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
@@ -222,10 +227,10 @@ caps.handback.revision: 19
   
  **연속 특성:** 입력 노드에는 노드의 평균값이 저장됩니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 특성의 현재 값만 나열됩니다.  
   
-### 숨겨진 계층 노드  
+### <a name="hidden-layer-nodes"></a>숨겨진 계층 노드  
  숨겨진 계층에는 여러 개의 노드가 포함됩니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 숨겨진 계층에서 입력 계층 노드로의 매핑이 들어 있습니다. ATTRIBUTE_NAME 열에는 입력 계층의 노드에 해당하는 노드 ID가 들어 있습니다. ATTRIBUTE_VALUE 열에는 입력 노드 및 숨겨진 계층 노드의 조합과 연결된 가중치가 들어 있습니다. 테이블의 마지막 행에는 숨겨진 계층에 있는 숨겨진 해당 노드의 가중치를 나타내는 계수가 들어 있습니다.  
   
-### 출력 노드  
+### <a name="output-nodes"></a>출력 노드  
  출력 계층에는 모델에 사용된 각 출력 값에 대한 출력 노드가 하나씩 포함됩니다. 각 노드의 NODE_DISTRIBUTION 테이블에는 출력 계층에서 숨겨진 계층 노드로의 매핑이 들어 있습니다. ATTRIBUTE_NAME 열에는 숨겨진 계층의 노드에 해당하는 노드 ID가 들어 있습니다. ATTRIBUTE_VALUE 열에는 출력 노드 및 숨겨진 계층 노드의 조합과 연결된 가중치가 들어 있습니다.  
   
  NODE_DISTRIBUTION 테이블에는 특성 유형에 따라 다음과 같은 추가 정보가 포함됩니다.  
@@ -236,7 +241,7 @@ caps.handback.revision: 19
   
  **연속 특성:** NODE_DISTRIBUTION 테이블의 마지막 두 행에 특성의 평균, 해당 노드 전체에 대한 계수 및 계수의 분산이 들어 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft 신경망 알고리즘](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Microsoft 신경망 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
  [신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)  

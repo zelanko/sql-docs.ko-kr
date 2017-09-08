@@ -1,26 +1,31 @@
 ---
-title: "예측 쿼리에 대한 입력 데이터 선택 및 매핑 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "테이블 [Analysis Services], 예측 쿼리"
-  - "마이닝 모델 예측 [Analysis Services], 입력 테이블"
+title: "선택 하 고 예측 쿼리에 대 한 입력된 데이터를 매핑할 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tables [Analysis Services], prediction queries
+- Mining Model Prediction [Analysis Services], input tables
 ms.assetid: 00d330a0-879d-4da0-9f29-53c288116f4d
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b95fd2fc60fa252e8ad9de34768c12846a45e322
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 예측 쿼리에 대한 입력 데이터 선택 및 매핑
+# <a name="choose-and-map-input-data-for-a-prediction-query"></a>예측 쿼리에 대한 입력 데이터 선택 및 매핑
   마이닝 모델에서 예측을 만드는 경우 일반적으로 모델에 새 데이터를 제공하여 예측을 만듭니다. 기록 데이터만 기반으로 하여 예측을 만들 수 있는 시계열 모델은 예외입니다. 모델에 새 데이터를 제공하려면 해당 데이터를 데이터 원본 뷰의 일부로 사용할 수 있는지 확인해야 합니다. 예측에 사용할 데이터를 미리 알아보려는 경우 모델을 만드는 데 사용한 데이터 원본 뷰에 해당 데이터를 포함할 수 있습니다. 그렇지 않으면 새 데이터 원본 뷰를 만들어야 할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
   
  필요한 데이터가 일 대 다 조인에서 두 개 이상의 테이블에 포함되는 경우도 있습니다. 제품 또는 트랜잭션 세부 정보가 포함된 중첩 테이블에 연결된 사례 테이블을 사용하는 연결 모델 또는 시퀀스 클러스터링 모델에 사용되는 데이터의 경우에 해당됩니다. 모델에서 사례 중첩 테이블 구조를 사용하는 경우에는 예측에 사용하는 데이터에도 사례 중첩 테이블 구조가 있어야 합니다.  
@@ -38,9 +43,9 @@ caps.handback.revision: 16
   
  다음 절차에서는 **중첩 조인 지정** 대화 상자를 사용하여 예측 쿼리의 입력으로 사용되는 사례 테이블과 중첩 테이블 간에 만들어진 조인을 수정할 수 있습니다.  
   
-### 입력 테이블 선택  
+### <a name="select-an-input-table"></a>입력 테이블 선택  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너에 있는 **마이닝 정확도 차트** 탭의 **입력 테이블 선택** 테이블에서 **사례 테이블 선택**을 클릭합니다.  
+1.  **의 데이터 마이닝 디자이너에 있는** 마이닝 정확도 차트 **탭의** 입력 테이블 선택 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]테이블에서 **사례 테이블 선택**을 클릭합니다.  
   
      쿼리의 기반으로 사용할 데이터가 포함된 테이블을 선택할 수 있는 **테이블 선택** 대화 상자가 열립니다.  
   
@@ -52,7 +57,7 @@ caps.handback.revision: 16
   
      마이닝 구조의 열이 입력 테이블에 있는 동일한 이름의 열에 자동으로 매핑됩니다.  
   
-### 입력 데이터가 모델에 매핑되는 방식 변경  
+### <a name="change-the-way-that-input-data-is-mapped-to-the-model"></a>입력 데이터가 모델에 매핑되는 방식 변경  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너에서 **마이닝 모델 예측** 탭을 선택합니다.  
   
@@ -68,9 +73,9 @@ caps.handback.revision: 16
   
      디자이너에 새 열 매핑이 표시됩니다.  
   
-### 입력 테이블 간의 관계 제거  
+### <a name="remove-a-relationship-between-input-tables"></a>입력 테이블 간의 관계 제거  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너에 있는 **마이닝 모델 예측** 탭의 **입력 테이블 선택** 테이블에서 **조인 수정**을 클릭합니다.  
+1.  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 예측 **탭의** 입력 테이블 선택 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]테이블에서 **조인 수정**을 클릭합니다.  
   
      **중첩 조인 지정** 대화 상자가 열립니다.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
      사례 테이블과 중첩 테이블 간의 관계가 제거되었습니다.  
   
-### 입력 테이블 간에 새 관계 만들기  
+### <a name="create-a-new-relationship-between-input-tables"></a>입력 테이블 간에 새 관계 만들기  
   
 1.  데이터 마이닝 디자이너에 있는 **마이닝 모델 예측** 탭의 **입력 테이블 선택** 테이블에서 **조인 수정**을 클릭합니다.  
   
@@ -102,7 +107,7 @@ caps.handback.revision: 16
   
      사례 테이블과 중첩 테이블 간에 새 관계가 생성되었습니다.  
   
-### 예측 쿼리의 입력 테이블에 중첩 테이블 추가  
+### <a name="add-a-nested-table-to-the-input-tables-of-a-prediction-query"></a>예측 쿼리의 입력 테이블에 중첩 테이블 추가  
   
 1.  데이터 마이닝 디자이너의 **마이닝 모델 예측** 탭에서 **사례 테이블 선택** 을 클릭하여 **테이블 선택** 대화 상자를 엽니다.  
   
@@ -117,7 +122,7 @@ caps.handback.revision: 16
   
      관계가 이미 존재한다면 마이닝 모델의 열이 입력 테이블에 있는 동일한 이름의 열에 자동으로 매핑됩니다. **조인 수정**을 클릭하면 열리는 **관계 만들기** 대화 상자를 사용하여 중첩 테이블과 사례 테이블 간의 관계를 수정할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [예측 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

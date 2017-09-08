@@ -1,35 +1,40 @@
 ---
-title: "SharePoint 2013에서 파워 피벗 데이터 새로 고침 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 데이터 새로 고침 SharePoint 2013 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34f03407-2ec4-4554-b16b-bc9a6c161815
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 30482b2c269a3d73bd6ef4852d295ae37e52c5e3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint 2013에서 파워 피벗 데이터 새로 고침
+# <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013에서 파워 피벗 데이터 새로 고침
   SharePoint 2013에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 새로 고치기 위한 디자인에서는 Excel Services를 기본 구성 요소로 사용하여 SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에서 데이터 모델을 로드하고 새로 고칩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버는 SharePoint 팜 외부에서 실행됩니다. SharePoint 2013 Excel Services의 아키텍처는 **대화형 데이터 새로 고침** 과 **예약된 데이터 새로 고침**을 모두 지원합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
  **항목 내용**  
   
--   [대화형 데이터 새로 고침](#bkmk_interactive_refresh)  
+-   [Interactive Data Refresh](#bkmk_interactive_refresh)  
   
 -   [통합 문서 데이터 연결 및 대화형 데이터 새로 고침을 사용하는 Windows 인증](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [예약된 데이터 새로 고침](#bkmk_scheduled_refresh)  
+-   [Scheduled Data Refresh](#bkmk_scheduled_refresh)  
   
 -   [SharePoint 2013의 예약된 데이터 새로 고침 아키텍처](#bkmk_refresh_architecture)  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
 -   [자세한 정보](#bkmk_moreinformation)  
   
-## 배경  
+## <a name="background"></a>배경  
  SharePoint Server 2013 Excel Services는 Excel 2013 통합 문서에 대한 데이터 새로 고침을 관리하고 SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 데이터 모델 처리를 트리거합니다. Excel 2010 통합 문서의 경우 Excel Services에서 통합 문서와 데이터 모델의 로드 및 저장도 관리합니다. 그러나 Excel Services는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스를 사용하여 데이터 모델에 처리 명령을 보냅니다. 다음 표에는 통합 문서 버전에 따라 데이터 새로 고침에 대한 처리 명령을 보내는 구성 요소가 요약되어 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 분석 서버를 사용하도록 SharePoint 2013 팜이 구성되어 있다고 가정합니다.  
   
 ||||  
@@ -54,14 +59,14 @@ caps.handback.revision: 14
   
 |통합 문서 작성 환경|예약된 데이터 새로 고침|대화형 새로 고침|  
 |-------------------------|----------------------------|-------------------------|  
-|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel|지원되지 않습니다. 통합 문서 업그레이드**(\*)**|지원되지 않습니다. 통합 문서 업그레이드**(\*)**|  
-|Excel용 2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|지원됨|지원되지 않습니다. 통합 문서 업그레이드**(\*)**|  
+|2008 R2 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel|지원되지 않습니다. 통합 문서 업그레이드 **열기 메뉴\*)**|지원되지 않습니다. 통합 문서 업그레이드 **열기 메뉴\*)**|  
+|Excel용 2012 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|지원됨|지원되지 않습니다. 통합 문서 업그레이드 **열기 메뉴\*)**|  
 |Excel 2013|지원됨|지원됨|  
   
  **(\*)** 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
   
-##  <a name="bkmk_interactive_refresh"></a> 대화형 데이터 새로 고침  
- SharePoint Server 2013 Excel Services에서 대화형 또는 수동 데이터 새로 고침은 원래 데이터 원본의 데이터로 데이터 모델을 새로 고칠 수 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 등록하여 Excel Services 응용 프로그램을 구성한 후에 대화형 데이터 새로 고침을 사용할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx)(http://technet.microsoft.com/library/jj219780.aspx)를 참조하세요.  
+##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
+ SharePoint Server 2013 Excel Services에서 대화형 또는 수동 데이터 새로 고침은 원래 데이터 원본의 데이터로 데이터 모델을 새로 고칠 수 있습니다. SharePoint 모드에서 실행 중인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 등록하여 Excel Services 응용 프로그램을 구성한 후에 대화형 데이터 새로 고침을 사용할 수 있습니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리(SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)를 참조하세요.  
   
 > [!NOTE]  
 >  대화형 데이터 새로 고침은 Excel 2013에서 만든 통합 문서에만 사용할 수 있습니다. Excel 2010 통합 문서를 새로 고치려고 하면 “[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 작업 실패: 이전 버전의 Excel에서 만든 통합 문서와 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 파일을 업그레이드해야 새로 고칠 수 있습니다.”와 비슷한 오류 메시지가 Excel Services에 표시됩니다. 통합 문서 업그레이드에 대한 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
@@ -125,9 +130,9 @@ caps.handback.revision: 14
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../../analysis-services/power-pivot-sharepoint/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 자세한 내용은 [운영 체제의 일부로 작동](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx)을 참조하세요.  
+ 자세한 내용은 [운영 체제의 일부로 작동](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx) (http://technet.microsoft.com/library/cc784323(WS.10).aspx)을 참조하세요.  
   
-##  <a name="bkmk_scheduled_refresh"></a> 예약된 데이터 새로 고침  
+##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **예약된 데이터 새로 고침의 핵심 사항**  
   
 -   SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 추가 기능 배포가 필요합니다. 설치에 대한 자세한 내용은 [SharePoint용 PowerPivot 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
@@ -162,15 +167,15 @@ caps.handback.revision: 14
   
     -   콘텐츠 데이터베이스에 통합 문서를 다시 저장합니다.  
   
- ![데이터 새로 고침 상황에 맞는 메뉴 관리](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "데이터 새로 고침 상황에 맞는 메뉴 관리")  
+ ![데이터 새로 고침 상황에 맞는 메뉴 관리](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "데이터 새로 고침 상황에 맞는 메뉴를 관리 합니다.")  
   
 > [!TIP]  
->  SharePoint Online에서 통합 문서를 새로 고치는 방법에 대한 자세한 내용은 [SharePoint Online에서 파워 피벗 모델이 포함된 Excel 통합 문서 새로 고침(백서)](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)을 참조하세요.  
+>  SharePoint Online에서 통합 문서를 새로 고치는 방법에 대한 자세한 내용은 [SharePoint Online에서 파워 피벗 모델이 포함된 Excel 통합 문서 새로 고침(백서)](http://technet.microsoft.com/library/jj992650.aspx) (http://technet.microsoft.com/library/jj992650.aspx)을 참조하세요.  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013의 예약된 데이터 새로 고침 아키텍처  
  다음 그림에는 SharePoint 2013과 SQL Server 2012 SP1의 데이터 새로 고침 아키텍처가 요약되어 있습니다.  
   
- ![SQL Server 2012 SP1 데이터 새로 고침 아키텍처](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "SQL Server 2012 SP1 데이터 새로 고침 아키텍처")  
+ ![SQL Server 2012 SP1 데이터 새로 고침의 아키텍처](../../analysis-services/power-pivot-sharepoint/media/as-scheduled-data-refresh2012sp1-architecture.gif "의 SQL Server 2012 SP1 데이터 새로 고침 아키텍처")  
   
 ||Description||  
 |-|-----------------|-|  
@@ -191,7 +196,7 @@ caps.handback.revision: 14
 > [!NOTE]  
 >  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스는 더 이상 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모델을 로드하거나 저장하지 않기 때문에 응용 프로그램 서버에 모델을 캐시하는 대부분의 설정은 SharePoint 2013 팜에 적용되지 않습니다.  
   
-## 데이터 새로 고침 로그 데이터  
+## <a name="data-refresh-log-data"></a>데이터 새로 고침 로그 데이터  
  **사용 현황 데이터:** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관리 대시보드에서 데이터 새로 고침 사용 현황 데이터를 볼 수 있습니다. 사용 현황 데이터를 보려면  
   
 1.  SharePoint 중앙 관리의 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 일반 응용 프로그램 설정** 그룹에서 **관리 대시보드** 를 클릭합니다.  
@@ -208,7 +213,7 @@ caps.handback.revision: 14
   
 -   **데이터 새로 고침**의 범주  
   
- **진단 로깅 구성**을 검토합니다. 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 PowerPivot&#41;](../Topic/Configure%20and%20View%20SharePoint%20Log%20Files%20%20and%20Diagnostic%20Logging%20\(Power%20Pivot%20for%20SharePoint\).md)를 참조하세요.  
+ **진단 로깅 구성**을 검토합니다. 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)를 참조하세요.
   
 ##  <a name="datarefresh_additional_authentication"></a> 인증에 대한 추가 고려 사항  
  Excel 2013의 **Excel Services 인증 설정** 대화 상자 설정에 따라 Excel Services와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 데이터 새로 고침에 사용하는 Windows ID가 결정됩니다.  
@@ -229,16 +234,16 @@ caps.handback.revision: 14
   
 4.  In the **연결 속성** 대화 상자에서 **정의**를 클릭하고 **인증 설정…** 단추를 선택합니다.  
   
- ![Excel Services 인증 설정](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "Excel Services 인증 설정")  
+ ![excel services authentication settings](../../analysis-services/power-pivot-sharepoint/media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
  데이터 새로 고침 인증 및 자격 증명 사용에 대한 자세한 내용은 [SharePoint 2013에서 파워 피벗 데이터 새로 고침](http://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx)블로그 게시물을 참조하세요.  
   
 ##  <a name="bkmk_moreinformation"></a> 자세한 정보  
  [파워 피벗 데이터 새로 고침 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
- [SharePoint 2013의 Excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\))(http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
+ [SharePoint 2013의 Excel Services](http://msdn.microsoft.com/library/sharepoint/jj164076\(v=office.15\)) (http://msdn.microsoft.com/library/sharepoint/jj164076(v=office.15)).  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

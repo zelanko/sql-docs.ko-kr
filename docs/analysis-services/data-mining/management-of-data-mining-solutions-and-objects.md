@@ -1,38 +1,43 @@
 ---
 title: "데이터 마이닝 솔루션 및 개체 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/03/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 마이닝 [Analysis Services], 관리"
-  - "마이닝 모델 관리"
+ms.custom: 
+ms.date: 03/03/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], managing
+- managing mining models
 ms.assetid: 06fc61dd-925c-4347-8677-7046ee5d2f6f
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4154a0e542ed8e2bc6799dbc3f3c9ecb25ad5f4e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 솔루션 및 개체 관리
+# <a name="management-of-data-mining-solutions-and-objects"></a>데이터 마이닝 솔루션 및 개체 관리
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 기존 마이닝 구조와 마이닝 모델을 관리하는 데 활용할 수 있는 클라이언트 도구를 제공합니다. 이 섹션에서는 각 환경을 사용하여 수행할 수 있는 관리 작업에 대해 설명합니다.  
   
  이러한 도구 외에도 AMO를 사용하여 프로그래밍 방식으로 데이터 마이닝 개체를 관리하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2007용 데이터 마이닝 추가 기능과 같이 [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 데이터베이스에 연결되는 다른 클라이언트를 사용할 수 있습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [데이터 마이닝 개체 이동](../../analysis-services/data-mining/moving-data-mining-objects.md)  
   
  [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
  [SQL Server Profiler를 사용하여 데이터 마이닝 모니터링&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/using-sql-server-profiler-to-monitor-data-mining-analysis-services-data-mining.md)  
   
-## 데이터 마이닝 개체 위치  
+## <a name="location-of-data-mining-objects"></a>데이터 마이닝 개체 위치  
  처리된 마이닝 구조 및 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 저장됩니다.  
   
  데이터 마이닝 개체를 개발할 때 즉시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모드에서 **** 데이터베이스에 대한 연결을 설정하는 경우 만드는 모든 개체는 작업하는 동안 서버에 즉시 추가됩니다. 그러나 **** 에서 작업할 때의 기본 설정인 오프라인 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]모드에서 데이터 마이닝 개체를 디자인하는 경우에는 만드는 마이닝 개체가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 배포되기 전까지 메타데이터 컨테이너일 뿐입니다. 따라서 개체를 변경할 때마다 해당 개체를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버로 다시 배포해야 합니다. 데이터 마이닝 아키텍처에 대한 자세한 내용은 [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)를 참조하세요.  
@@ -40,7 +45,7 @@ caps.handback.revision: 26
 > [!NOTE]  
 >  [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] 2007용 데이터 마이닝 추가 기능과 같은 일부 클라이언트를 사용하면 인스턴스에 대한 연결을 사용하지만 마이닝 구조 및 모델을 세션 기간 동안만 서버에 저장하는 세션 마이닝 모델 및 마이닝 구조를 만들 수도 있습니다. 이러한 모델도 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장된 구조 및 모델과 같이 여전히 클라이언트를 통해 관리할 수 있지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스와의 연결을 끊은 후에는 개체가 유지되지 않습니다.  
   
-## SQL Server Data Tools에서 데이터 마이닝 개체 관리  
+## <a name="managing-data-mining-objects-in-sql-server-data-tools"></a>SQL Server Data Tools에서 데이터 마이닝 개체 관리  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 데이터 마이닝 개체를 쉽게 만들고, 찾아보고, 편집할 수 있는 여러 기능을 제공합니다.  
   
  다음 링크에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 데이터 마이닝 개체를 수정하는 방법에 대한 정보를 제공합니다.  
@@ -64,15 +69,15 @@ caps.handback.revision: 26
   
  데이터 마이닝 프로젝트 또는 개체를 만드는 데 사용된 솔루션 파일이 없는 경우 Analysis Services 가져오기 마법사를 사용하여 서버에서 기존 프로젝트를 가져와서 개체를 수정한 다음 **Incremental** 옵션을 사용하여 다시 배포할 수 있습니다. 자세한 내용은 [Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)를 참조하세요.  
   
-## SQL Server Management Studio에서 데이터 마이닝 개체 관리  
+## <a name="managing-data-mining-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 데이터 마이닝 개체 관리  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 마이닝 구조 및 마이닝 모델을 스크립팅, 처리 또는 삭제할 수 있습니다. 개체 탐색기를 사용하여 제한된 속성 집합만 볼 수 있지만 **DMX 쿼리** 창을 열고 마이닝 구조를 선택하면 마이닝 모델에 대한 추가 메타데이터를 볼 수 있습니다.  
   
 -   [SQL Server Management Studio에서 DMX 쿼리 만들기](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
-## 프로그래밍 방식으로 데이터 마이닝 개체 관리  
+## <a name="managing-data-mining-objects-programmatically"></a>프로그래밍 방식으로 데이터 마이닝 개체 관리  
  다음과 같은 프로그래밍 언어를 사용하여 데이터 마이닝 개체를 생성, 변경, 처리 및 삭제할 수 있습니다. 각 언어는 서로 다른 태스크를 위해 설계되었으므로 수행할 수 있는 작업의 유형에는 제한이 있을 수 있습니다. 예를 들어 데이터 마이닝 개체의 일부 속성을 변경하는 데는 DMX(Data Mining Extensions)를 사용할 수 없고 XMLA나 AMO를 사용해야 합니다.  
   
-### AMO(Analysis Management Objects)  
+### <a name="analysis-management-objects-amo"></a>AMO(Analysis Management Objects)  
  AMO(Analysis Management Objects)는 XMLA의 최상위에 작성되며 데이터 마이닝 개체를 완전히 제어할 수 있게 하는 개체 모델입니다. AMO를 사용하여 마이닝 구조와 마이닝 모델을 생성, 배포 및 모니터링할 수 있습니다.  
   
 -   [AMO 개념 및 개체 모델](../../analysis-services/multidimensional-models/analysis-management-objects/amo-concepts-and-object-model.md)  
@@ -81,19 +86,19 @@ caps.handback.revision: 26
   
  **제한 사항:** 없음  
   
-### DMX(Data Mining Extensions)  
+### <a name="data-mining-extensions-dmx"></a>DMX(Data Mining Extensions)  
  DMX(Data Mining Extensions)를 [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 또는 ADOMD.Net 등의 다른 명령 인터페이스와 함께 사용하여 마이닝 구조와 마이닝 모델을 생성, 삭제 및 쿼리할 수 있습니다.  
   
--   [DMX&#40;Data Mining Extensions&#41; 데이터 정의 문](../Topic/Data%20Mining%20Extensions%20\(DMX\)%20Data%20Definition%20Statements.md)  
+-   [DMX&#40;Data Mining Extensions&#41; 데이터 정의 문](../../dmx/dmx-statements-data-definition.md)  
   
  **제한 사항:** 일부 속성은 DMX를 사용하여 변경할 수 없습니다.  
   
-### XMLA(XML for Analysis)  
- XMLA(XML for Analysis)는 모든 Analysis Services에 대한 데이터 정의 언어입니다. XMLA를 사용하면 대부분의 데이터 마이닝 개체와 서버 작업을 제어할 수 있습니다. 클라이언트와 서버 간의 모든 관리 작업은 XMLA를 사용하여 수행할 수 있습니다. 편의상 ASSL([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language)을 사용하여 XML을 래핑할 수 있습니다.  
+### <a name="xml-for-analysis-xmla"></a>XMLA(XML for Analysis)  
+ XMLA(XML for Analysis)는 모든 Analysis Services에 대한 데이터 정의 언어입니다. XMLA를 사용하면 대부분의 데이터 마이닝 개체와 서버 작업을 제어할 수 있습니다. 클라이언트와 서버 간의 모든 관리 작업은 XMLA를 사용하여 수행할 수 있습니다. 편의상 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language)을 사용하여 XML을 래핑할 수 있습니다.  
   
  **제한 사항:** [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 생성하는 일부 XMLA 문은 내부 용도로만 사용할 수 있고 XML DDL 스크립트에는 사용할 수 없습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 개발자 설명서](../../analysis-services/analysis-services-developer-documentation.md)  
   
   

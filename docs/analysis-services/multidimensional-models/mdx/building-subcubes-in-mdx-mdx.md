@@ -1,36 +1,41 @@
 ---
-title: "MDX로 하위 큐브 작성(MDX) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "쿼리 [MDX], 하위 큐브"
-  - "하위 큐브 [MDX]"
-  - "필터링된 보기 [MDX]"
-  - "MDX [Analysis Services], 하위 큐브"
-  - "Multidimensional Expression [Analysis Services], 하위 큐브"
-  - "CREATE SUBCUBE 문"
+title: "MDX (MDX)로 하위 큐브 작성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- queries [MDX], subcubes
+- subcubes [MDX]
+- filtered views [MDX]
+- MDX [Analysis Services], subcubes
+- Multidimensional Expressions [Analysis Services], subcubes
+- CREATE SUBCUBE statement
 ms.assetid: 5403a62b-99ac-4d83-b02a-89bf78bf0f46
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a60ea4f39735f9dfb6d8b3283faa58d38e6a075
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# MDX로 하위 큐브 작성(MDX)
+# <a name="building-subcubes-in-mdx-mdx"></a>MDX로 하위 큐브 작성(MDX)
   하위 큐브는 기본 데이터의 필터링된 뷰를 나타내는 큐브의 하위 집합입니다. 큐브를 하위 큐브로 제한하여 쿼리 성능을 높일 수 있습니다.  
   
- 하위 큐브를 정의하려면 이 항목에서 설명하는 바와 같이 [CREATE SUBCUBE](../Topic/CREATE%20SUBCUBE%20Statement%20\(MDX\).md) 문을 사용합니다.  
+ 하위 큐브를 정의하려면 이 항목에서 설명하는 바와 같이 [CREATE SUBCUBE](../../../mdx/mdx-data-definition-create-subcube.md) 문을 사용합니다.  
   
-## CREATE SUBCUBE 구문  
+## <a name="create-subcube-syntax"></a>CREATE SUBCUBE 구문  
  다음 구문을 사용하여 하위 큐브를 만듭니다.  
   
 ```  
@@ -39,9 +44,9 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  CREATE SUBCUBE 구문은 꽤 간단합니다. *Subcube_Identifier* 매개 변수는 하위 큐브의 기반이 되는 큐브를 식별합니다. *Subcube_Expression* 매개 변수는 하위 큐브가 될 큐브의 해당 부분을 선택합니다.  
   
- 하위 큐브를 만들고 난 후 해당 하위 큐브는 세션을 닫거나 [DROP SUBCUBE](../Topic/DROP%20SUBCUBE%20Statement%20\(MDX\).md) 문을 실행할 때까지는 모든 MDX 쿼리에 대한 컨텍스트가 됩니다.  
+ 하위 큐브를 만들고 난 후 해당 하위 큐브는 세션을 닫거나 [DROP SUBCUBE](../../../mdx/mdx-data-definition-drop-subcube.md) 문을 실행할 때까지는 모든 MDX 쿼리에 대한 컨텍스트가 됩니다.  
   
-### 하위 큐브가 포함하는 것  
+### <a name="what-a-subcube-contains"></a>하위 큐브가 포함하는 것  
  CREATE SUBCUBE 문은 간단하게 사용할 수 있지만 이 문 자체가 하위 큐브의 일부가 되는 멤버들을 모두 명시적으로 표시하지는 않습니다. 하위 큐브를 정의할 때 다음 규칙을 적용합니다.  
   
 -   어떤 계층의 **(All)** 멤버를 포함하면 해당 계층의 모든 멤버가 포함됩니다.  
@@ -58,7 +63,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  마지막으로 원래 컨텍스트를 덮어쓰지 않은 경우 하위 SELECT에서 계산된 집합 함수는 하위 SELECT의 컨텍스트에서 계산됩니다. 컨텍스트를 덮어쓴 경우 집합 함수는 전체 큐브의 컨텍스트에서 계산됩니다.  
   
-## CREATE SUBCUBE 예  
+## <a name="create-subcube-example"></a>CREATE SUBCUBE 예  
  다음 예에서는 예산 큐브를 4200 및 4300 계정으로만 한정하는 하위 큐브를 만드는 방법을 보여 줍니다.  
   
  `CREATE SUBCUBE Budget AS SELECT {[Account].[Account].&[4200], [Account].[Account].&[4300] } ON 0 FROM Budget`  
@@ -67,7 +72,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [쿼리에 큐브 컨텍스트 설정&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/establishing-cube-context-in-a-query-mdx.md)   
  [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   

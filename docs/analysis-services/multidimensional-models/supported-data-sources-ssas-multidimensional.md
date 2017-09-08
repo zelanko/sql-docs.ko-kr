@@ -1,30 +1,35 @@
 ---
-title: "지원되는 데이터 원본(SSAS - 다차원) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Analysis Services, 데이터 원본"
-  - "데이터 원본 [Analysis Services], 데이터 원본 정보"
-  - "Analysis Services, 데이터 원본"
-  - "연결 [Analysis Services]"
-  - "SSAS, 데이터 원본"
+title: "지원 되는 데이터 원본 (SSAS-다차원) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Analysis Services, data sources
+- data sources [Analysis Services], about data sources
+- Analysis Services, data sources
+- connections [Analysis Services]
+- SSAS, data sources
 ms.assetid: c97e0f8d-7ddd-4941-8b51-e7832f30fbbe
 caps.latest.revision: 69
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 69
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 173ba9ef24e1f05dcd3500ad8fecbad0dba98241
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 지원되는 데이터 원본(SSAS - 다차원)
+# <a name="supported-data-sources-ssas---multidimensional"></a>지원되는 데이터 원본(SSAS - 다차원)
   이 항목에서는 다차원 모델에서 사용할 수 있는 데이터 원본 유형에 대해 설명합니다.  
   
 ##  <a name="bkmk_supported_ds"></a> 지원되는 데이터 원본  
@@ -45,11 +50,11 @@ caps.handback.revision: 69
 |Sybase 적응형 Server Enterprise (ASE) 관계형 데이터베이스|15.0.2|(해당 사항 없음)|Sybase OLE DB 공급자|  
 |기타 관계형 데이터베이스|(해당 사항 없음)|(해당 사항 없음)|OLE DB Provider|  
   
- \* ODBC 데이터 원본은 다차원 솔루션에서 지원되지 않습니다. Analysis Services 자체는 연결을 처리하지만 솔루션을 빌드하는 데 사용되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 디자이너는 MSDASQL 드라이버를 사용하는 경우에도 ODBC 데이터 원본에 연결할 수 없습니다. 비즈니스 요구 사항에 ODBC 데이터 원본이 포함되는 경우 테이블 형식 솔루션을 대신 빌드해 보세요.  
+ \* ODBC 데이터 원본은 다차원 솔루션에서 지원되지 않습니다. Analysis Services 자체는 연결을 처리하지만 솔루션을 빌드하는 데 사용되는 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 의 디자이너는 MSDASQL 드라이버를 사용하는 경우에도 ODBC 데이터 원본에 연결할 수 없습니다. 비즈니스 요구 사항에 ODBC 데이터 원본이 포함되는 경우 테이블 형식 솔루션을 대신 빌드해 보세요.  
   
  ** 일부 기능의 경우 온-프레미스로 실행되는 SQL Server 관계형 데이터베이스가 필요합니다. 특히 쓰기 저장 및 ROLAP 저장소를 사용하려면 기본 데이터 원본이 SQL Server 관계형 데이터베이스여야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
  [다차원 모델의 데이터 원본](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

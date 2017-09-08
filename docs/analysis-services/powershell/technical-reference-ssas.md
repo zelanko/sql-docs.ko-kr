@@ -1,26 +1,34 @@
 ---
-title: "기술 참조(SSAS) | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Analysis Services, 기술 참조"
-  - "다차원 데이터 [Analysis Services], 기술 참조"
-  - "기술 참조 [Analysis Services - 다차원 데이터]"
+title: "기술 참조 (SSAS) | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Analysis Services, technical reference
+- multidimensional data [Analysis Services], technical reference
+- technical reference [Analysis Services - multidimensional data]
 ms.assetid: 1226c5a4-fd88-469c-81fe-3f664ab66e5e
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 2d0f84b78c133242fe3f2b432ccd6bbb607012c8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 기술 참조(SSAS)
+# <a name="technical-reference-ssas"></a>기술 참조(SSAS)
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
 이 섹션에서 항목을 찾으려면 브라우저 왼쪽에 있는 내용 창을 사용합니다.  
   

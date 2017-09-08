@@ -1,30 +1,35 @@
 ---
-title: "다차원 모델링(Adventure Works 자습서) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "get-started-article"
-applies_to: 
-  - "SQL Server 2016"
-helpviewer_keywords: 
-  - "자습서 [Analysis Services]"
-  - "Analysis Services, 자습서"
+title: "다차원 모델링 (Adventure Works 자습서) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: get-started-article
+applies_to:
+- SQL Server 2016
+helpviewer_keywords:
+- tutorials [Analysis Services]
+- Analysis Services, tutorials
 ms.assetid: db55e226-601a-4026-8651-573195555a59
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: eee675f86ab6707346b2789e424bcc1778f111f4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 다차원 모델링(Adventure Works 자습서)
+# <a name="multidimensional-modeling-adventure-works-tutorial"></a>다차원 모델링(Adventure Works 자습서)
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자습서입니다. 이 자습서의 모든 예에서는 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 라는 가상 회사에서 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 프로젝트를 개발 및 배포하는 방법을 설명합니다.  
   
-## 학습 내용  
+## <a name="what-you-will-learn"></a>학습 내용  
 이 자습서에서는 다음 항목을 배웁니다.  
   
 -   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 내의 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]프로젝트에서 데이터 원본, 데이터 원본 뷰, 차원, 특성, 특성 관계, 계층 및 큐브를 정의하는 방법  
@@ -37,8 +42,8 @@ caps.handback.revision: 31
   
 이 단원에 대한 컨텍스트를 더 잘 이해할 수 있도록 이 자습서와 함께 시나리오 설명이 제공됩니다. 자세한 내용은 [Analysis Services Tutorial Scenario](../analysis-services/analysis-services-tutorial-scenario.md)을 참조하세요.  
   
-## 필수 구성 요소  
-이 자습서의 모든 단원을 완료하려면 예제 데이터, 예제 프로젝트 파일 및 소프트웨어가 있어야 합니다. 이 자습서의 필수 구성 요소를 찾아서 설치하는 방법은 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install sample data and projects.md)를 참조하십시오.  
+## <a name="prerequisites"></a>필수 구성 요소  
+이 자습서의 모든 단원을 완료하려면 예제 데이터, 예제 프로젝트 파일 및 소프트웨어가 있어야 합니다. 이 자습서의 필수 구성 요소를 찾아서 설치하는 방법은 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md)를 참조하십시오.  
   
 이 자습서를 성공적으로 완료하려면 이 외에도 다음과 같은 사용 권한이 있어야 합니다.  
   
@@ -46,7 +51,7 @@ caps.handback.revision: 31
   
 -   **AdventureWorksDW2012** 예제 데이터베이스에 대한 읽기 권한이 있어야 합니다. 이 예제 데이터베이스는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 릴리스에 사용할 수 있습니다.  
   
-## 단원  
+## <a name="lessons"></a>단원  
 이 자습서에는 다음 단원이 포함되어 있습니다.  
   
 |단원|소요되는 예상 시간|  
@@ -65,8 +70,9 @@ caps.handback.revision: 31
 > [!NOTE]  
 > 이 자습서에서 만들 큐브 데이터베이스는 codeplex 사이트에서 다운로드할 수 있는 Adventure Works 예제 데이터베이스의 일부인 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델 프로젝트의 단순화된 버전입니다. Adventure Works 다차원 데이터베이스의 자습서 버전은 바로 익히려는 특정 기술에 더 집중하도록 단순화되어 있습니다. 이 자습서를 끝낸 후에는 직접 다차원 모델 프로젝트를 탐색하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 다차원 모델링에 대한 이해를 높이는 것이 좋습니다.  
   
-## 다음 단계  
+## <a name="next-step"></a>다음 단계  
 자습서를 시작하려면 첫 번째 단원인 [Lesson 1: Defining a Data Source View within an Analysis Services Project](../analysis-services/lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)로 이동하십시오.  
   
   
   
+

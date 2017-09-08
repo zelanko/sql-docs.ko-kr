@@ -1,28 +1,33 @@
 ---
-title: "데이터 원본 뷰에서 명명된 계산 정의(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "명명된 계산 수정"
-  - "데이터 원본 뷰 [Analysis Services], 명명된 계산"
-  - "명명된 계산 [Analysis Services]"
+title: "데이터 원본 뷰 (Analysis Services)에서 명명 된 계산을 정의 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying named calculations
+- data source views [Analysis Services], named calculations
+- named calculations [Analysis Services]
 ms.assetid: 729e7b12-6185-4b73-8bcb-cfe459b15355
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d74a249e280b0c6b31c970638e3c47b3e6327c5f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 원본 뷰에서 명명된 계산 정의(Analysis Services)
+# <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 계산 정의(Analysis Services)
   명명된 계산은 계산 열로 표시된 SQL 식입니다. 이 식은 테이블의 열과 같이 나타나고 동작합니다. 명명된 계산을 사용하면 기본 데이터 원본의 테이블이나 뷰를 수정하지 않고 데이터 원본 뷰에 있는 기존 테이블이나 뷰의 관계형 스키마를 확장할 수 있습니다. 다음 예를 살펴봅니다.  
   
 -   팩트 테이블의 여러 열로부터 파생되는 단일 명명된 계산을 만듭니다. 예를 들어 세율에 소매 가격을 곱해서 Tax Amount를 만듭니다.  
@@ -31,7 +36,7 @@ caps.handback.revision: 34
   
 -   쿼리 성능을 향상하기 위해 큐브에 계산 멤버를 만드는 대신 DSV에 명명된 계산을 만듭니다. 명명된 계산은 처리 중에 계산되고 계산 멤버는 쿼리 시에 계산됩니다.  
   
-## 명명된 계산 만들기  
+## <a name="creating-named-calculations"></a>명명된 계산 만들기  
   
 > [!NOTE]  
 >  명명된 계산을 명명된 쿼리에 추가할 수 없으며 명명된 계산이 포함된 테이블을 명명된 쿼리의 기반으로 할 수 없습니다.  
@@ -56,7 +61,7 @@ FROM
 (SELECT Description FROM Categories WHERE Categories.CategoryID = CategoryID)  
 ```  
   
-## 명명된 계산 추가 또는 편집  
+## <a name="add-or-edit-a-named-calculation"></a>명명된 계산 추가 또는 편집  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 명명된 계산을 정의할 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
   
@@ -64,7 +69,7 @@ FROM
   
 3.  **테이블** 또는 **다이어그램** 창에서 명명된 계산을 정의할 테이블을 마우스 오른쪽 단추로 클릭한 다음 **새 명명된 계산**을 클릭합니다. 특성이 아닌 테이블 이름을 마우스 오른쪽 단추로 클릭해야 합니다. 다음과 같은 메뉴가 나타납니다.  
   
-     ![다이어그램 작업 영역, 마우스 오른쪽 단추 클릭 메뉴의 스크린 샷](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "다이어그램 작업 영역, 마우스 오른쪽 단추 클릭 메뉴의 스크린 샷")  
+     ![오른쪽 클릭 메뉴의 다이어그램 작업 영역에서 스크린샷](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "오른쪽 클릭 메뉴의 다이어그램 작업 영역에서 스크린 샷")  
   
     > [!NOTE]  
     >  테이블이나 뷰를 찾으려면 **데이터 원본 뷰** 메뉴를 클릭하거나 **테이블** 또는 **다이어그램** 창의 열린 영역을 마우스 오른쪽 단추로 클릭하여 **테이블 찾기** 옵션을 사용합니다.  
@@ -81,10 +86,10 @@ FROM
   
      명명된 계산 열이 데이터 원본 뷰 테이블의 마지막 열로 표시됩니다. 계산기 기호는 열에 명명된 계산이 있음을 나타냅니다.  
   
-## 명명된 계산 삭제  
+## <a name="delete-a-named-calculation"></a>명명된 계산 삭제  
  명명된 계산을 삭제하려고 하면 프로젝트나 데이터베이스에 정의된 개체 중에서 삭제 작업으로 인해 무효화될 개체 목록이 표시됩니다. 계산을 삭제하기 전에 목록을 신중하게 검토합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 원본 뷰에서 명명된 쿼리 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

@@ -1,28 +1,33 @@
 ---
-title: "추적에 사용되는 Analysis Services 개체 형식 코드 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+title: "Analysis Services 개체 형식 코드를 추적에 사용 되는 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: e4119db1-4a41-4335-9b33-f1ea95564300
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7bd50f15603440953dc2f9c52ae669e5fcbd3108
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 추적에 사용되는 Analysis Services 개체 형식 코드
+# <a name="analysis-services-object-type-codes-used-in-traces"></a>추적에 사용되는 Analysis Services 개체 형식 코드
   이 페이지에는 Analysis Services 데이터 모델에 있는 각 개체의 개체 형식(6자리 숫자)이 나열됩니다. 이러한 코드는 추적 로그에 표시되며 특정 잠금과 연관된 개체 형식을 식별하는 데 사용됩니다. 예를 들어 데이터베이스에 대한 잠금 시간 제한은 데이터베이스 개체 형식인 개체 형식 100002를 나타냅니다.  
   
 > [!NOTE]  
 >  아래에 나열된 코드는 추적 로그에 실제로 표시되는 코드보다 많습니다. 아래 목록은 모든 개체에 대한 형식 코드를 포함하는 포괄적인 목록이지만 잠금이 있는 개체만 추적 로그의 개체 형식 코드를 표시합니다.  
   
-## 개체 형식 참조  
+## <a name="object-type-reference"></a>개체 형식 참조  
   
 |개체 유형|개체 이름|  
 |-----------------|-----------------|  

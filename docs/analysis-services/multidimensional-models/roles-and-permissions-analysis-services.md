@@ -1,27 +1,32 @@
 ---
-title: "역할 및 권한(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보안 [Analysis Services], 보안 정보"
-  - "보안 [Analysis Services - 다차원 데이터], 보안 정보"
+title: "역할 및 사용 권한 (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services], about security
+- security [Analysis Services - multidimensional data], about security
 ms.assetid: bb885447-868b-4686-853c-8241f63d4370
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2981ab6e8c529fa24fc2256c93dc903dc58857d7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 역할 및 권한(Analysis Services)
+# <a name="roles-and-permissions-analysis-services"></a>역할 및 권한(Analysis Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 작업, 개체 및 데이터에 대한 액세스 권한을 부여하는 역할 기준 권한 부여 모델을 제공합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스 또는 데이터베이스에 액세스하는 모든 사용자는 역할 컨텍스트 내에서 이를 수행해야 합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시스템 관리자는 **서버 관리자 역할** 에 서버의 작업에 무제한 액세스할 수 있는 멤버 자격을 부여해야 합니다. 이 역할은 사용 권한이 고정되며 사용자 지정할 수 없습니다. 기본적으로 로컬 관리자 그룹의 멤버는 자동으로 Analysis Services 시스템 관리자가 됩니다.  
@@ -35,7 +40,7 @@ caps.handback.revision: 21
 > [!IMPORTANT]  
 >  데이터베이스의 모든 역할에서 각 Windows 사용자 및 그룹에 대해 권한은 부가적입니다. 한 역할은 사용자나 그룹에게 특정 태스크를 수행하거나 데이터를 볼 수 있는 사용 권한을 부여하지 않지만 다른 역할이 이 사용자나 그룹에게 이러한 사용 권한을 부여하는 경우 해당 사용자나 그룹은 작업을 수행하거나 데이터를 볼 수 있게 됩니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
@@ -57,7 +62,7 @@ caps.handback.revision: 21
   
 -   [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)  
   
   

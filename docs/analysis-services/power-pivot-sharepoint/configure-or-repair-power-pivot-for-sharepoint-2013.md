@@ -1,25 +1,30 @@
 ---
-title: "SharePoint 2013용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SharePoint 2013 용 파워 피벗 구성 또는 복구 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 616877e3-464a-4c97-bc74-1fa6f4faa756
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 2920b6663bce5bcd82f16f4fe7cd85cc9d104fef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint 2013용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)
-  SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 설치를 구성하거나 복구하려면 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구뿐만 아니라 SharePoint 2010용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에 대해 설명합니다. SharePoint 2010에 대한 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/ko-kr/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
+# <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>SharePoint 2013 용 파워 피벗 구성 또는 복구
+  SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 설치를 구성하거나 복구하려면 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용합니다. 구성 도구는 시스템 검색으로 시작한 다음 설치를 완료하거나 복구하는 데 필요한 동작 목록을 반환합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 마법사는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구뿐만 아니라 SharePoint 2010용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 설치합니다. 이 항목에서는 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에 대해 설명합니다. SharePoint 2010에 대한 자세한 내용은 [SharePoint 2010용 파워 피벗 구성 또는 복구(파워 피벗 구성 도구)](http://msdn.microsoft.com/en-us/d61f49c5-efaa-4455-98f2-8c293fa50046)를 참조하세요.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013  
   
@@ -56,7 +61,7 @@ caps.handback.revision: 14
   
  이 도구는 Windows PowerShell을 사용하여 서버를 구성합니다. **스크립트** 탭을 클릭하여 도구가 서버를 구성하는 데 사용하는 Windows PowerShell 스크립트를 검토할 수 있습니다.  
   
- ![SharePoint 2013용 PowerPivot 구성 도구](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "SharePoint 2013용 PowerPivot 구성 도구")  
+ ![SharePoint 2013 구성 도구에 대 한 PowerPivot](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot for SharePoint 2013 구성 도구")  
   
 ||Description|  
 |-|-----------------|  
@@ -118,14 +123,14 @@ caps.handback.revision: 14
 ||||- 사이트 모음 관리자|  
 ||||- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정.|  
 ||||기본적으로 현재 사용자의 도메인 계정이 사용됩니다.<br /><br /> 참고: 평가 및 비프로덕션용으로 서버를 구성하는 경우가 아니면 기본값을 바꾸는 것이 좋습니다.<br /><br /> 중앙 관리를 사용하여 구성 또는 복구 후에 서비스 ID를 변경할 수 있습니다.<br /><br /> 필요에 따라 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구에서 다음에 대한 전용 계정을 지정합니다.|  
-||||- 웹 응용 프로그램(**기본 웹 응용 프로그램 만들기** 페이지 사용). 도구가 팜에 대한 웹 응용 프로그램을 만든다고 가정합니다.|  
+||||- 웹 응용 프로그램( **기본 웹 응용 프로그램 만들기** 페이지 사용). 도구가 팜에 대한 웹 응용 프로그램을 만든다고 가정합니다.|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정(이 도구의 **데이터 새로 고침 무인 계정 만들기** 페이지 사용)|  
 ||데이터베이스 서버|사용 가능한 경우 로컬 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 명명된 인스턴스|데이터베이스 엔진 인스턴스가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 명명된 인스턴스로 설치되는 경우 이 도구는 데이터베이스 서버 필드를 이 인스턴스 이름으로 채웁니다. 데이터베이스 엔진을 설치하지 않은 경우 이 필드는 비어 있습니다.<br /><br /> **데이터베이스 서버**  는 필수 매개 변수입니다. 인스턴스는 SharePoint 팜에 대해 지원되는 모든 버전 또는 에디션의 SQL Server일 수 있습니다.|  
 ||암호|사용자 입력|새 팜을 만드는 경우 사용자가 입력하는 암호는 팜의 암호가 됩니다. 기존 팜에 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 추가하는 경우 기존 팜 암호를 입력합니다.|  
 ||SharePoint 중앙 관리 포트|필요한 경우 기본값|팜이 구성되지 않은 경우 이 도구는 중앙 관리에 대한 HTTP 끝점 만들기를 포함하여 팜을 만들 수 있는 옵션을 제공합니다. 이 도구는 사용 중이 아닌 임의로 생성된 포트 번호를 선택합니다.|  
 ||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Excel Services([ServerName]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|사용자 입력|Excel Services에서 핵심 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능을 사용하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버가 필요합니다. 이 페이지에 입력하는 서버 이름은 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 구성** 페이지의 목록에도 추가됩니다.|  
 |**새 팜 구성**|데이터베이스 서버<br /><br /> 팜 계정<br /><br /> 암호<br /><br /> SharePoint 중앙 관리 포트|필요한 경우 기본값|메인 페이지에 입력한 내용을 기본 설정으로 사용합니다.|  
-|**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기**|서비스 응용 프로그램 이름|기본값|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 이름입니다. 기본 이름은 **기본 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램**입니다. 도구에서 다른 값을 바꿀 수 있습니다.|  
+|**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 만들기**|서비스 응용 프로그램 이름|기본값|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 이름입니다. 기본 이름은 **기본값 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**를 참조하세요. 도구에서 다른 값을 바꿀 수 있습니다.|  
 ||데이터베이스 서버|기본값|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스를 호스팅할 데이터베이스 서버입니다. 기본 서버 이름은 팜에 사용되는 데이터베이스 서버와 같습니다. 기본 서버 이름이 아닌 다른 값으로 바꿀 수 있습니다.|  
 ||데이터베이스 이름|기본값|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 데이터베이스에 대해 만들려는 데이터베이스의 이름입니다. 기본 데이터베이스 이름은 서비스 응용 프로그램 이름을 기반으로 하며 고유의 이름을 GUID가 뒤에 나옵니다. 도구에서 다른 값을 바꿀 수 있습니다.|  
 |**기본 웹 응용 프로그램 만들기**|웹 응용 프로그램 이름|필요한 경우 기본값|웹 응용 프로그램이 없는 경우 도구에서 만들어집니다. 웹 응용 프로그램이 클래식 모드 인증에 대해 구성되고 포트 80에서 수신합니다. 최대 파일 업로드 크기는 SharePoint에서 허용되는 최대값인 2047로 설정됩니다. 더 큰 파일 업로드 크기는 서버에 업로드되는 큰 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 파일을 수용하기 위한 것입니다.|  
@@ -150,7 +155,7 @@ caps.handback.revision: 14
 ||암호|사용자 입력|데이터 암호화에 사용되는 마스터 키입니다. 기본적으로 키 생성에 사용되는 암호는 팜에서 새 서버를 프로비전하는 데 사용되는 암호와 같습니다. 기본 암호를 고유한 암호로 바꿀 수 있습니다.|  
 |**DataRefresh 무인 계정 만들기**|대상 응용 프로그램 ID|필요한 경우 기본값|무인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 새로 고침용 자격 증명을 저장할 대상 응용 프로그램을 만듭니다.<br /><br /> 응용 프로그램 ID는 설명 텍스트일 수 있습니다.|  
 ||대상 응용 프로그램의 이름|필요한 경우 기본값||  
-||무인 계정 사용자 이름 및 암호|필요한 경우 기본값|대상 응용 프로그램에서 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다. 자세한 내용은 [Configure Excel Services data refresh by using the unattended service account in SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx)(SharePoint Server 2013에서 무인 서비스 계정을 사용하여 Excel Services 데이터 새로 고침 구성)(http://technet.microsoft.com/en-us/library/hh525344(office.15).aspx)을 참조하세요.|  
+||무인 계정 사용자 이름 및 암호|필요한 경우 기본값|대상 응용 프로그램에서 무인 데이터 새로 고침을 실행하는 데 사용하는 Windows 사용자 계정의 자격 증명을 입력합니다. 자세한 내용은 [Configure Excel Services data refresh by using the unattended service account in SharePoint Server 2013](http://technet.microsoft.com/library/hh525344\(office.15\).aspx) (SharePoint Server 2013에서 무인 서비스 계정을 사용하여 Excel Services 데이터 새로 고침 구성)(http://technet.microsoft.com/en-us/library/hh525344(office.15).aspx)을 참조하세요.|  
 ||사이트 URL|필요한 경우 기본값|대상 응용 프로그램과 연결된 사이트 모음의 사이트 URL을 입력합니다. 사이트 모음을 추가로 연결하려면 SharePoint 중앙 관리를 사용합니다.|  
 |**Excel Services 서비스 응용 프로그램 만들기**|서비스 응용 프로그램 이름|필요한 경우 기본값|서비스 응용 프로그램 이름을 입력합니다. SharePoint 팜의 데이터베이스 서버에 동일한 이름의 서비스 응용 프로그램 데이터베이스가 만들어집니다.|  
 |**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 구성**|서비스 응용 프로그램 이름|필요한 경우 기본값|이전 페이지에서 입력한 서비스 응용 프로그램 이름입니다.|  
@@ -162,7 +167,7 @@ caps.handback.revision: 14
   
  도구에서 사이트 모음을 만드는 경우 이 도구는 SharePoint와 동일한 파일 명명 규칙을 사용하여 데이터베이스 서버에 콘텐츠 데이터베이스를 만듭니다. 콘텐츠 데이터베이스 이름을 변경할 수 없습니다.  
   
-## 구성 확인  
+## <a name="verify-the-configuration"></a>구성 확인  
  [파워 피벗 구성 및 솔루션 배포&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md)의 “[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 확인” 섹션을 참조하세요.  
   
 ##  <a name="bkmk_nextsteps"></a> 다음 단계  
@@ -176,10 +181,10 @@ caps.handback.revision: 14
   
 -   일반적으로 사용되는 데이터 공급자를 설치하여 서버 쪽 데이터 새로 고침을 활성화합니다.  
   
-### 통합 문서 사용자에게 SharePoint 사용 권한 부여  
+### <a name="grant-sharepoint-permissions-to-workbook-users"></a>통합 문서 사용자에게 SharePoint 사용 권한 부여  
  통합 문서를 게시하거나 보려는 사용자에게는 SharePoint 사용 권한이 필요합니다. 게시된 통합 문서를 보려는 사용자에게는 **보기** 권한을 부여하고, 통합 문서를 게시 또는 관리하는 사용자에게는 **참가** 권한을 부여합니다. 사용 권한을 부여하려면 사이트 컬렉션 관리자여야 합니다.  
   
-1.  SharePoint 2013 사이트에서 설정 아이콘 ![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 설정")을 클릭하고 **사이트 설정**을 클릭합니다.  
+1.  SharePoint 2013 사이트에서 설정 아이콘을 클릭 ![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") 클릭 하 고 **사이트 설정**합니다.  
   
 2.  **사용자 및 사용 권한** 그룹에서 **사이트 사용 권한** 을 클릭합니다.  
   
@@ -187,32 +192,32 @@ caps.handback.revision: 14
   
 4.  그룹에서 멤버 자격이 있어야 하는 Windows 도메인 사용자 또는 그룹 계정을 입력합니다. 앞서 수행한 단계와 마찬가지로 응용 프로그램이 기본 인증용으로 구성된 경우에는 전자 메일 주소 또는 메일 그룹을 사용하지 마십시오.  
   
-### 데이터 새로 고침 및 사용자 권한 확인에 사용된 데이터 공급자 설치  
- 서버 쪽 데이터 새로 고침을 사용하면 사용자가 무인 모드에서 자신의 통합 문서로 업데이트된 데이터를 다시 가져올 수 있습니다. 데이터 새로 고침이 성공하려면 SharePoint 모드로 Analysis Services를 실행 중인 서버에 원래 데이터를 가져오는 데 사용된 것과 동일한 데이터 공급자가 있어야 합니다. 또한 데이터 새로 고침이 실행되는 사용자 계정에도 외부 데이터 원본에 대한 읽기 권한이 필요한 경우가 많습니다. 성공적인 결과를 얻기 위해서는 데이터 새로 고침 설정 및 구성에 대한 요구 사항을 확인해야 합니다. 자세한 내용은 [SharePoint 2010에서 파워 피벗 데이터 새로 고침](http://msdn.microsoft.com/ko-kr/01b54e6f-66e5-485c-acaa-3f9aa53119c9)을 참조하세요.  
+### <a name="install-data-providers-used-in-data-refresh-and-check-user-permissions"></a>데이터 새로 고침 및 사용자 권한 확인에 사용된 데이터 공급자 설치  
+ 서버 쪽 데이터 새로 고침을 사용하면 사용자가 무인 모드에서 자신의 통합 문서로 업데이트된 데이터를 다시 가져올 수 있습니다. 데이터 새로 고침이 성공하려면 SharePoint 모드로 Analysis Services를 실행 중인 서버에 원래 데이터를 가져오는 데 사용된 것과 동일한 데이터 공급자가 있어야 합니다. 또한 데이터 새로 고침이 실행되는 사용자 계정에도 외부 데이터 원본에 대한 읽기 권한이 필요한 경우가 많습니다. 성공적인 결과를 얻기 위해서는 데이터 새로 고침 설정 및 구성에 대한 요구 사항을 확인해야 합니다. 자세한 내용은 [SharePoint 2010에서 파워 피벗 데이터 새로 고침](http://msdn.microsoft.com/en-us/01b54e6f-66e5-485c-acaa-3f9aa53119c9)을 참조하세요.  
   
 > [!NOTE]  
->  SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 경우 **spPowerPivot.msi** 설치 관리자와 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 실행할 때 데이터 공급자가 설치됩니다. 설치에 대한 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
+>  SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 경우 **spPowerPivot.msi** 설치 관리자와 SharePoint 2013용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 실행할 때 데이터 공급자가 설치됩니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
   
-### SharePoint에서 응용 프로그램 풀 및 서비스 ID 변경  
+### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>SharePoint에서 응용 프로그램 풀 및 서비스 ID 변경  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구는 단일 계정에서 실행할 팜 기능, 응용 프로그램 및 서비스를 프로비전합니다. 따라서 설치가 간편해지지만 배포에서 SharePoint 팜의 보안 요구 사항이 충족되지는 않습니다. 보다 강력한 배포를 작성하려면 설치가 완료된 후 응용 프로그램 풀과 서비스 ID가 각각 다른 계정에서 실행되도록 변경합니다. 자세한 내용은 [파워 피벗 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)을 참조하세요.  
   
-### Excel 서비스에서 신뢰할 수 있는 사이트 추가로 만들기  
+### <a name="create-additional-trusted-sites-in-excel-services"></a>Excel 서비스에서 신뢰할 수 있는 사이트 추가로 만들기  
  신뢰할 수 있는 사이트를 Excel Services에 추가하여 Excel 통합 문서 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 제공하는 사이트에 대한 권한 및 구성 설정을 다양하게 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
-### [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 작성  
+### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 작성  
  팜에 서버 구성 요소를 설치한 후에는 포함된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 사용하는 첫 번째 Excel 2013 통합 문서를 만들어 SharePoint 라이브러리에 게시할 수 있습니다. 또는 샘플 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 업로드하거나 게시하여 SharePoint에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 확인할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Excel 2013에서 파워 피벗의 새로운 기능](http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1)(http://office.microsoft.com/excel-help/whats-new-in-powerpivot-in-excel-2013-HA102893837.aspx?CTT=1)  
+-   [Power Pivot 도움말](https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f) (https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f).  
   
 -   [Excel 2013 추가 기능에서 파워 피벗 시작](http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)(http://office.microsoft.com/excel-help/start-powerpivot-in-excel-2013-add-in-HA102837097.aspx?CTT=5&origin=HA102837110)  
   
-### SharePoint 모드의 Analysis Services 서버 추가  
+### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>SharePoint 모드의 Analysis Services 서버 추가  
  이후에 데이터 저장소와 처리 능력이 추가로 필요하다고 판단되는 경우 팜에 SharePoint 모드의 Analysis Services를 실행하는 서버를 더 추가할 수 있습니다. SharePoint 2013용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 의 경우 SharePoint 모드에서 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버를 설치하고 Excel Services를 구성합니다. 자세한 내용은 [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)의 “단일 서버 설치 그 이상” 섹션을 참조하세요.  
   
-## 추가 리소스  
- ![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback)  
+## <a name="additional-resources"></a>추가 리소스  
+ ![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
  [파워 피벗 구성 도구](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)   
  [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   

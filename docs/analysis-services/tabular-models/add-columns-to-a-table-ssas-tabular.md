@@ -1,27 +1,32 @@
 ---
-title: "테이블에 열 추가(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "테이블 (SSAS 테이블 형식)에 열 추가 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 5974a3cc-caf8-4558-8836-6e3c24b1ee23
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 11
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 170b1c7aceb4a642343f00faa6dc6ffbb3f6cbbb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 테이블에 열 추가(SSAS 테이블 형식)
+# <a name="add-columns-to-a-table-ssas-tabular"></a>테이블에 열 추가(SSAS 테이블 형식)
   이 항목에서는 기존 테이블에 열을 추가하는 방법을 설명합니다.  
   
-## 데이터 원본의 열 추가  
+## <a name="add-columns-from-the-data-source"></a>데이터 원본의 열 추가  
  데이터 원본 테이블에서 데이터를 가져오기 위해 테이블 가져오기 마법사를 사용할 경우 원본 테이블의 모든 열을 포함하거나 미리 보기 및 필터 기능을 사용하여 특정 열을 필터링하여 제외하도록 선택한 경우 해당 열 및 선택한 필터링된 데이터를 포함하는 새 테이블이 모델에서 만들어집니다. 가져올 특정 열만 지정하는 SQL 쿼리를 작성할 수도 있습니다. 그러나 나중에 추가로 원본 테이블의 다른 열을 모델 테이블에 가져오거나 DAX 수식에서 값을 유추하는 계산 열을 추가할 수 있습니다.  
   
  예를 들어 먼저 테이블 가져오기 마법사에서 미리 보기 및 필터 기능을 사용하여 데이터 원본의 일부 열만 선택하여 데이터를 가져온 다음, 나중에 원본 테이블에는 존재하지만 모델 테이블에 없는 다른 열을 추가해야 할 수 있습니다. 또는 데이터 원본의 FactSales 테이블에 새 AdjustedProfit 열을 추가한 다음 동일한 AdjustedProfit 열과 데이터를 모델의 Sales 테이블에 추가해야 할 수 있습니다.  
@@ -34,16 +39,16 @@ caps.handback.revision: 11
 > [!NOTE]  
 >  처음에 테이블 가져오기 마법사를 사용하여 데이터를 가져올 때 SQL 쿼리를 사용하여 테이블 및 열을 선택한 경우에는 나중에 테이블 속성 편집 대화 상자에서 모델 테이블에 열을 추가할 때에도 SQL 쿼리를 사용해야 합니다.  
   
-#### 테이블 속성 편집 대화 상자를 사용하여 데이터 원본의 열을 추가하려면  
+#### <a name="to-add-a-column-from-the-data-source-by-using-the-edit-table-properties-dialog-box"></a>테이블 속성 편집 대화 상자를 사용하여 데이터 원본의 열을 추가하려면  
   
 1.  모델 디자이너에서 열을 추가할 테이블을 클릭한 다음 **테이블** 메뉴를 클릭하고  **테이블 속성**을 클릭합니다.  
   
 2.  **테이블 속성 편집** 대화 상자의 테이블 미리 보기 창에서 추가할 원본 열을 선택한 다음 확인을 클릭합니다. 이때 모델 테이블 정의에 이미 포함된 열은 확인란이 선택되어 있습니다.  
   
-## 계산 열 추가  
- 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)을 참조하세요.  
+## <a name="add-a-calculated-column"></a>계산 열 추가  
+ 계산 열에서는 DAX 수식에 따라 각 행의 값이 정해집니다. 예를 들어 각 행에 값으로 1을 추가하는 간단한 수식(=1)으로 계산된 열을 만들 수 있습니다. 또는 모델의 다른 데이터를 바탕으로 값을 계산하는 좀 더 복잡한 수식의 계산된 열을 만들 수도 있습니다. 계산 열은 다른 항목에서 더 자세히 다룹니다. 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)을 참조하세요.  
   
-#### 계산 열을 만들려면  
+#### <a name="to-create-a-calculated-column"></a>계산 열을 만들려면  
   
 1.  모델 디자이너의 데이터 뷰에서 새로운 빈 계산 열을 추가하려는 테이블을 선택한 다음 맨 오른쪽 열로 스크롤하거나 **열** 메뉴를 클릭한 다음 **열 추가**를 클릭합니다.  
   
@@ -51,10 +56,10 @@ caps.handback.revision: 11
   
 2.  수식 입력줄에 DAX 수식을 입력하여 각 행에 대한 특성을 추가합니다.  
   
-## 빈 열 추가  
- 모델 테이블에서 명명된 빈 열을 만들 수 있습니다. 빈 열은 다른 원본에서 데이터를 가져와서 붙여넣을 경우에 유용하게 사용됩니다. 붙여넣은 데이터는 가져올 때와 다르게 저장됩니다. 자세한 내용은 [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md)를 참조하세요.  
+## <a name="add-a-blank-column"></a>빈 열 추가  
+ 모델 테이블에서 명명된 빈 열을 만들 수 있습니다. 빈 열은 다른 원본에서 데이터를 가져와서 붙여넣을 경우에 유용하게 사용됩니다. 붙여넣은 데이터는 가져올 때와 다르게 저장됩니다. 자세한 내용은 [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)를 참조하세요.  
   
-#### 명명된 빈 열을 만들려면  
+#### <a name="to-create-a-named-blank-column"></a>명명된 빈 열을 만들려면  
   
 1.  모델 디자이너의 데이터 뷰에서 빈 열을 추가하려는 테이블을 선택한 다음 맨 오른쪽 열로 스크롤하거나 **열** 메뉴를 클릭한 다음 **열 추가**를 클릭합니다.  
   
@@ -62,8 +67,8 @@ caps.handback.revision: 11
   
 2.  맨 위 셀을 클릭하고 이름을 입력한 다음 Enter 키를 누릅니다.  
   
-## 관련 항목:  
- [테이블 속성 편집 대화 상자&#40;SSAS&#41;](../Topic/Edit%20Table%20Properties%20Dialog%20Box%20\(SSAS\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [테이블 속성 편집 대화 상자&#40;SSAS&#41;](http://msdn.microsoft.com/library/8d913e83-7246-44cc-8fc7-31729023c0d8)   
  [테이블, 열 또는 행 필터 매핑 변경&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/change-table-column-or-row-filter-mappings-ssas-tabular.md)  
   
   

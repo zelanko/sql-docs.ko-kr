@@ -1,23 +1,28 @@
 ---
-title: "Office용 SQL Server 데이터 마이닝 추가 기능 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "SQL Server 데이터 마이닝 추가 기능에 대 한 Office | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c9021a19-2c19-4f0a-a293-5f7e0ac2524c
 caps.latest.revision: 11
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d637a50ca56acfcc80da1a09542e88e476351634
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Office용 SQL Server 데이터 마이닝 추가 기능
+# <a name="sql-server-data-mining-add-ins-for-office"></a>Office용 SQL Server 데이터 마이닝 추가 기능
   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Office용 데이터 마이닝 추가 기능은 Excel의 데이터를 사용하여 예측, 권장 또는 탐색을 위한 분석 모델을 작성할 수 있도록 지원하는 일련의 간단한 예측 분석 도구 집합입니다.  
   
  추가 기능의 마법사 및 데이터 관리 도구는 다음과 같은 일반 데이터 마이닝 작업에 대한 단계별 지침을 제공합니다.  
@@ -46,16 +51,16 @@ caps.handback.revision: 10
   
 -   **탐색하고 시각화합니다.** 데이터 마이닝은 완전히 자동화할 수 있는 활동이 아닙니다. 직접 결과를 탐색하고 파악해야 의미 있는 작업이 됩니다. 추가 기능은 Excel의 대화형 뷰어, 모델 다이어그램을 사용자 지정할 수 있는 Visio 템플릿, 추가 필터링이나 수정을 위해 차트와 테이블을 Excel로 내보내는 기능을 제공하므로 탐색하는 데 도움이 됩니다.  
   
--   **배포하고 통합합니다.** 유용한 모델을 만든 경우 관리 도구를 사용하여 실험 서버에서 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 모델을 내보내 프로덕션에 배치합니다.  
+-   **배포하고 통합합니다.** 유용한 모델을 만든 경우 관리 도구를 사용하여 실험 서버에서 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 모델을 내보내 프로덕션에 배치합니다.  
   
      또는 모델을 만든 서버에 모델을 그대로 두되 학습 데이터를 새로 고치고 Integration Services 또는 DMX 스크립트를 사용하여 예측을 실행할 수도 있습니다.  
   
      고급 사용자는 서버로 전송된 XMLA 및 DMX 문을 표시하는 **추적** 기능을 유용하게 여길 것입니다.  
   
-## 시작  
+## <a name="getting-started"></a>시작  
  자세한 내용은 [Office용 데이터 마이닝 추가 기능에 포함된 내용](http://go.microsoft.com/fwlink/p/?LinkId=616849)을 참조하세요.  
   
-## 지원 및 요구 사항  
+## <a name="support-and-requirements"></a>지원 및 요구 사항  
  Office용 SQL Server 데이터 마이닝 추가 기능은 무료로 다운로드할 수 있습니다. 이러한 도구를 사용하려면 다음 Office 버전 중 하나가 이미 설치되어 있어야 합니다.  
   
 -   Office 2010, 32비트 또는 64비트 버전  
@@ -73,7 +78,7 @@ caps.handback.revision: 10
   
 -   Standard  
   
- 연결하는 SQL Server Analysis Services의 버전에 따라 일부 고급 알고리즘을 사용하지 못할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+ 연결하는 SQL Server Analysis Services의 버전에 따라 일부 고급 알고리즘을 사용하지 못할 수 있습니다. 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md)을 참조하세요.  
   
  설치 관련 추가 도움말은 다운로드 센터에서 다음 페이지를 참조하세요. [http://www.microsoft.com/download/details.aspx?id=29061](http://www.microsoft.com/download/details.aspx?id=29061)  
   

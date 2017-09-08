@@ -1,27 +1,32 @@
 ---
 title: "Analysis Services 개체 처리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "OLAP 개체 [Analysis Services], 처리"
-  - "OLAP 개체 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- OLAP objects [Analysis Services], processing
+- OLAP objects [Analysis Services]
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 58e0a8da7c8bfeae9d661dc78d264218c7c19b81
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 개체 처리
+# <a name="processing-analysis-services-objects"></a>Analysis Services 개체 처리
   처리를 수행하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체 유형인 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스, 큐브, 차원, 측정값 그룹, 파티션, 데이터 마이닝 구조 및 모델이 영향을 받습니다. 각 개체에 대해 개체 처리 수준을 지정하거나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 자동으로 최적 처리 수준을 선택하도록 기본값 처리 옵션을 지정할 수 있습니다. 각 개체의 다른 처리 수준에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)을 참조하세요.  
   
  부정적인 영향을 최소화하기 위해 처리 작업의 결과를 파악해야 합니다. 예를 들어 차원을 전체 처리하면 해당 차원에 종속되는 모든 파티션이 처리되지 않은 상태로 자동 설정됩니다. 이렇게 되면 종속 파티션이 처리될 때까지 쿼리에 영향을 받는 큐브를 사용할 수 없습니다.  
@@ -73,7 +78,7 @@ caps.handback.revision: 44
   
  차원 처리 시 큐브 수준에서 정의된 계산 멤버를 만들거나 업데이트하지 않습니다. 계산 멤버는 큐브 정의가 업데이트될 때 영향을 받습니다. 또한 차원 처리 시 집계를 만들거나 업데이트하지 않지만 집계가 삭제될 수 있습니다. 집계는 파티션을 처리하는 동안에만 생성 또는 업데이트됩니다.  
   
- 차원을 처리할 때는 해당 차원이 여러 큐브에서 사용될 수 있다는 점을 기억해야 합니다. 차원을 처리하면 해당 큐브는 처리되지 않은 것으로 표시되고 쿼리에 사용할 수 없게 됩니다. 차원과 관련 큐브 둘 다 동시에 처리하려면 일괄 처리 설정을 사용합니다. 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
+ 차원을 처리할 때는 해당 차원이 여러 큐브에서 사용될 수 있다는 점을 기억해야 합니다. 차원을 처리하면 해당 큐브는 처리되지 않은 것으로 표시되고 쿼리에 사용할 수 없게 됩니다. 차원과 관련 큐브 둘 다 동시에 처리하려면 일괄 처리 설정을 사용합니다. 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)을 참조하세요.  
   
 ##  <a name="bkmk_procmeasure"></a> 측정값 그룹 처리  
  측정값 그룹을 처리하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 측정값 그룹의 전체 또는 일부 파티션 및 측정값 그룹에 참여하지만 처리되지 않은 모든 차원을 처리합니다. 처리 작업의 세부 사항은 선택하는 처리 옵션에 따라 달라집니다. 큐브의 다른 측정값 그룹에 영향을 미치지 않고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 하나 이상의 측정값 그룹을 처리할 수 있습니다.  
@@ -93,9 +98,9 @@ caps.handback.revision: 44
   
  마이닝 구조 및 모델을 처리하는 방법은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [도구 및 처리 접근 방법&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
+ [일괄 처리 &#40; Analysis Services &#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

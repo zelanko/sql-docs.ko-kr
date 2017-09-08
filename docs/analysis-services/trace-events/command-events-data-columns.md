@@ -1,24 +1,29 @@
 ---
-title: "Command Events 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Command Events 이벤트 범주"
+title: Command Events Data Columns | Microsoft Docs
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Command Events event category
 ms.assetid: 7169f1e2-c6be-4d8c-b147-25719b84bc2c
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 39022629aeda9951a01e79ebf45ec099bd5d7205
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Command Events 데이터 열
+# <a name="command-events-data-columns"></a>Command Events 데이터 열
   다음 표에서는 **Command Events** 이벤트 범주의 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
  **Command Events** 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
@@ -71,7 +76,7 @@ caps.handback.revision: 36
 |NTDomainName|명령 이벤트와 연결된 Windows 도메인 계정을 포함합니다.|  
 |ClientProcessID|명령 이벤트와 연결된 고유 클라이언트 프로세스 ID를 포함합니다.|  
   
-## 관련 항목:  
- [Command Events 이벤트 범주](../../analysis-services/trace-events/command-events-event-category.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Command Events Event Category](../../analysis-services/trace-events/command-events-event-category.md)  
   
   

@@ -1,22 +1,27 @@
 ---
-title: "SharePoint용 파워 피벗 설치 확인 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/20/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Verify a Power Pivot for SharePoint 설치 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/20/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 855bd055-5ad3-493f-9c5b-1f5297b2e6e2
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint용 파워 피벗 설치 확인
+# <a name="verify-a-power-pivot-for-sharepoint-installation"></a>SharePoint용 파워 피벗 설치 확인
   SharePoint 팜에 설치하는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 인스턴스는 SharePoint 중앙 관리를 통해 관리됩니다. 최소한 중앙 관리와 SharePoint 사이트에서 페이지를 검사하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버 구성 요소 및 기능이 사용 가능한지를 확인할 수는 있습니다. 그러나 설치를 전체적으로 확인하려면 SharePoint에 게시하여 라이브러리에서 액세스할 수 있는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서가 있어야 합니다. 테스트를 위해 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터가 포함되어 있는 샘플 통합 문서를 게시하여 SharePoint 통합이 올바르게 구성되어 있는지 확인하는 데 사용할 수 있습니다.  
   
 ||  
@@ -61,18 +66,18 @@ caps.handback.revision: 15
   
      또는 **기본 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 응용 프로그램** 옆의 빈 공간을 클릭하여 행을 선택하고 **속성**을 클릭하여 이 서비스 응용 프로그램의 구성 설정을 확인합니다. 구성 설정과 응용 프로그램 속성을 모두 수정하여 서버 구성을 변경할 수 있습니다. 이러한 설정에 대한 자세한 내용은 [중앙 관리에서 파워 피벗 서비스 응용 프로그램 만들기 및 구성](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)을 참조하세요.  
   
-## 사이트 수준에서 통합 확인  
+## <a name="verify-integration-at-the-site-level"></a>사이트 수준에서 통합 확인  
  SharePoint 사이트와 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 통합을 확인하려면 다음 단계를 수행합니다.  
   
-1.  앞서 만든 웹 응용 프로그램을 브라우저에서 엽니다. 기본값을 사용한 경우 URL 주소에 http://\<컴퓨터 이름>을 지정할 수 있습니다.  
+1.  앞서 만든 웹 응용 프로그램을 브라우저에서 엽니다. 기본값을 사용한 경우에 http://을 지정할 수 있습니다\<컴퓨터 이름 > URL 주소에 있습니다.  
   
-2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스 및 처리 기능을 응용 프로그램에서 사용할 수 있는지 확인합니다. 이렇게 하려면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
+2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스 및 처리 기능을 응용 프로그램에서 사용할 수 있는지 확인합니다. 이렇게 하려면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]제공 라이브러리 템플릿이 있는지 확인하면 됩니다.  
   
     1.  **사이트 콘텐츠**를 선택합니다.  
   
     2.  앱 목록에 **데이터 피드 라이브러리** 및 **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리**가 표시되어야 합니다. 이러한 라이브러리 템플릿은 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에서 제공하는 것이며 기능이 올바르게 통합되는 경우 라이브러리 목록에 표시됩니다.  
   
-## 서버의 데이터 액세스 확인  
+## <a name="verify-data-access-on-the-server"></a>서버의 데이터 액세스 확인  
  서버에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스를 확인하려면 다음 단계를 수행합니다.  
   
 1.  Reporting Services 자습서와 함께 제공되는 Picnic 데이터 예제를[다운로드](http://go.microsoft.com/fwlink/?LinkID=219108) 합니다. 이 다운로드에 포함된 샘플 통합 문서를 사용하여 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스를 확인합니다. 파일의 압축을 풉니다.  
@@ -91,7 +96,7 @@ caps.handback.revision: 15
   
 7.  서버 유형에서 **Analysis  Services**를 선택합니다.  
   
-8.  서버 이름에 **\<server-name>\powerpivot**을 입력합니다. 여기서 **\<server-name>**은 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]을 설치한 컴퓨터의 이름입니다.  
+8.  서버 이름에 입력  **\<서버 이름 > \powerpivot**여기서  **\<서버 이름 >** 있는 컴퓨터의 이름에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SharePoint에 대 한 설치 합니다.  
   
 9. **연결**을 클릭합니다. Analysis Services 서버를 사용할 수 있는지 확인합니다.  
   

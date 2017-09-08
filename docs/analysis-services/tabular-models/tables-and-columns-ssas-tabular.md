@@ -1,24 +1,29 @@
 ---
-title: "테이블 및 열(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "테이블 및 열 (SSAS 테이블 형식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c428d717-05de-436c-b9dc-e8c1925a60ca
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 테이블 및 열(SSAS 테이블 형식)
+# <a name="tables-and-columns-ssas-tabular"></a>테이블 및 열(SSAS 테이블 형식)
   테이블 가져오기 마법사를 사용하여 테이블과 데이터를 모델에 추가한 후에는 데이터의 새 열 추가, 테이블 간의 관계 만들기, 데이터를 확장하는 계산 정의, 보기 쉽게 테이블의 데이터 필터링 및 정렬 등을 수행하여 테이블 작업을 시작할 수 있습니다.  
   
  이 항목의 섹션:  
@@ -50,7 +55,7 @@ caps.handback.revision: 13
   
 -   복사하여 테이블에 붙여넣은 관계형 데이터 및 테이블 형식(HTML) 데이터의 조합  
   
- 데이터를 가져오면 데이터의 각 테이블이나 뷰, 시트 또는 파일이 모델 디자이너에 테이블로 추가됩니다. 다양한 원본의 데이터를 각각 별도의 탭에 추가하는 것이 일반적지만 **붙여넣기** 및 **추가하여 붙여넣기**를 사용하여 데이터를 단일 테이블로 결합할 수도 있습니다. 자세한 내용은 [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/copy-and-paste-data-ssas-tabular.md)를 참조하세요.  
+ 데이터를 가져오면 데이터의 각 테이블이나 뷰, 시트 또는 파일이 모델 디자이너에 테이블로 추가됩니다. 다양한 원본의 데이터를 각각 별도의 탭에 추가하는 것이 일반적지만 **붙여넣기** 및 **추가하여 붙여넣기**를 사용하여 데이터를 단일 테이블로 결합할 수도 있습니다. 자세한 내용은 [데이터 복사 및 붙여넣기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-import-data-copy-and-paste-data.md)를 참조하세요.  
   
  필요한 데이터를 모두 추가한 후 테이블 간의 추가 관계를 만들거나, 다른 테이블의 관련 값을 조회 또는 참조하거나, 새 계산 열을 추가하여 파생 값을 만들 수 있습니다.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 13
 |[테이블 또는 열 이름 바꾸기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/rename-a-table-or-column-ssas-tabular.md)|모델에서 쉽게 식별할 수 있도록 테이블 또는 열의 이름을 바꾸는 방법을 설명합니다.|  
 |[열 데이터 형식 설정&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)|열의 데이터 형식을 변경하는 방법을 설명합니다. 데이터 형식은 열의 데이터가 저장되고 표시되는 방법을 정의합니다.|  
 |[열 숨기기 또는 고정&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/hide-or-freeze-columns-ssas-tabular.md)|표시하지 않을 열을 숨기는 방법과 한 영역에서 특정 열을 고정(잠금)하여 모델의 다른 영역으로 스크롤하는 동안 모델의 특정 영역을 계속 표시하는 방법을 설명합니다.|  
-|[계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
-|[데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](../Topic/Filter%20and%20Sort%20Data%20\(SSAS%20Tabular\).md)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
+|[계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/ssas-calculated-columns.md)|이 섹션의 항목에서는 계산 열을 사용하여 집계된 데이터를 모델에 추가하는 방법을 설명합니다.|  
+|[데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
   
   

@@ -1,32 +1,37 @@
 ---
-title: "기본 데이터 모델링 및 배포 속성 구성(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING"
-  - "sql13.asvs.bidtoolset.deployment.f1"
-  - "sql13.asvs.bidtoolset.asoptions.f1"
-  - "VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT"
+title: "기본 데이터 모델링 및 배포 속성 (SSAS 테이블 형식) 구성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DATA_MODELING
+- sql13.asvs.bidtoolset.deployment.f1
+- sql13.asvs.bidtoolset.asoptions.f1
+- VS.TOOLSOPTIONSPAGES.ANALYSIS_SERVICES.DEPLOYMENT
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 50c41697a0197261be8ef1b60b469a28bd331248
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 기본 데이터 모델링 및 배포 속성 구성(SSAS 테이블 형식)
+# <a name="configure-default-data-modeling-and-deployment-properties-ssas-tabular"></a>기본 데이터 모델링 및 배포 속성 구성(SSAS 테이블 형식)
   이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 만든 각각의 새로운 테이블 형식 모델 프로젝트에 대해 미리 정의될 수 있는 기본 호환성 수준, 배포 및 작업 영역 데이터베이스 속성 설정을 구성하는 방법에 대해 설명합니다. 새 프로젝트를 만든 후 특정 요구 사항에 따라 이러한 속성을 변경할 수 있습니다.  
   
-#### 새 모델 프로젝트의 기본 호환성 수준 속성 설정을 구성하려면  
+#### <a name="to-configure-the-default-compatibility-level-property-setting-for-new-model-projects"></a>새 모델 프로젝트의 기본 호환성 수준 속성 설정을 구성하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **도구** 메뉴를 클릭한 다음 **옵션**을 클릭합니다.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 17
     |**새 프로젝트의 기본 호환성 수준**|SQL Server 2016(1200)|이 설정은 새 테이블 형식 모델 프로젝트를 만들 때 사용할 기본 호환성 수준을 지정합니다. SP1이 적용되지 않은 Analysis Services 인스턴스에 배포하려는 경우 SQL Server 2012(1100)를 선택하거나 배포 인스턴스에 SP1이 적용된 경우 SQL Server 2012 SP1 이상을 선택할 수 있습니다. 자세한 내용은 [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을 참조하세요.|  
     |**호환성 수준 옵션**|모든 선택됨|새 테이블 형식 모델 프로젝트의 호환성 수준 옵션 및 다른 Analysis Services 인스턴스에 배포할 시기를 지정합니다.|  
   
-#### 새 모델 프로젝트의 기본 배포 서버 속성 설정을 구성하려면  
+#### <a name="to-configure-the-default-deployment-server-property-setting-for-new-model-projects"></a>새 모델 프로젝트의 기본 배포 서버 속성 설정을 구성하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **도구** 메뉴를 클릭한 다음 **옵션**을 클릭합니다.  
   
@@ -71,9 +76,9 @@ caps.handback.revision: 17
 > [!NOTE]  
 >  기본 모델 속성을 변경해도 변경 전에 만들어진 기존 모델의 속성은 영향을 받지 않습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [프로젝트 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)   
- [모델 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
+ [모델 속성 &#40; SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)   
  [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
   
   

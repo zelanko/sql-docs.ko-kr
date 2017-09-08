@@ -1,30 +1,35 @@
 ---
-title: "리프트 차트(Analysis Services - 데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 마이닝 모델 테스트"
-  - "정확성, 차트 작성"
-  - "마이닝 정확도 보기"
-  - "리프트 차트 [Analysis Services]"
-  - "수익 차트 [Analysis Services]"
-  - "정확도 테스트 [데이터 마이닝]"
+title: "리프트 차트 (Analysis Services-데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- testing data mining models
+- accuracy, charting
+- viewing mining accuracy
+- lift charts [Analysis Services]
+- profit charts [Analysis Services]
+- accuracy testing [data mining]
 ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 caps.latest.revision: 55
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 55
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2b939d468a964160cd84dbdb60fcae97d4f2ee6a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 리프트 차트(Analysis Services - 데이터 마이닝)
+# <a name="lift-chart-analysis-services---data-mining"></a>리프트 차트(Analysis Services - 데이터 마이닝)
   A *리프트 chart* 는 임의 추측에 대해 비교할 때 마이닝 모델이 제공하는 향상률을 그래픽으로 나타내며 *리프트* 점수를 기준으로 변화를 측정합니다. 서로 다른 모델에 대한 리프트 점수를 비교하여 가장 적합한 모델을 확인할 수 있습니다. 또한 모델의 예측이 유용하지 않은 지점을 확인할 수 있습니다. 예를 들어 리프트 차트를 검토하면 프로모션 캠페인이 30%의 고객에게만 효과적임을 파악하고 해당 수치를 사용하여 캠페인의 범위를 제한할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 마이닝에서는 리프트 차트를 사용하여 동일한 예측 가능한 특성이 있는 여러 모델의 정확도를 비교할 수 있습니다. 단일 결과(예측 가능한 특성의 단일 값)에 대해 또는 모든 결과(지정된 특성의 모든 값)에 대해 예측의 정확도를 평가할 수도 있습니다.  
@@ -48,12 +53,12 @@ caps.handback.revision: 55
   
  [맨 위로 이동](#bkmk_Top)  
   
-### 대상 값이 있는 리프트 차트  
- 다음 차트에서는 **Basic Data Mining Tutorial** 에서 만든 [타겟 메일링](../Topic/Basic%20Data%20Mining%20Tutorial.md)모델에 대한 리프트 차트를 보여 줍니다. 이 차트에서 대상 특성은 [Bike Buyer]이며 대상 값은 1입니다. 이 값은 고객이 자전거를 구입할 것으로 예상됨을 의미합니다. 따라서 리프트 차트는 이러한 잠재 고객을 식별할 때 모델이 제공하는 향상률을 보여 줍니다.  
+### <a name="lift-chart-with-target-value"></a>대상 값이 있는 리프트 차트  
+ 다음 차트에서는 **Basic Data Mining Tutorial** 에서 만든 [타겟 메일링](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)모델에 대한 리프트 차트를 보여 줍니다. 이 차트에서 대상 특성은 [Bike Buyer]이며 대상 값은 1입니다. 이 값은 고객이 자전거를 구입할 것으로 예상됨을 의미합니다. 따라서 리프트 차트는 이러한 잠재 고객을 식별할 때 모델이 제공하는 향상률을 보여 줍니다.  
   
  이 차트에는 동일한 데이터를 기반으로 여러 모델이 포함됩니다. 이러한 모델 중 하나는 특정 고객을 대상으로 사용자 지정되었습니다. 모델을 학습하는 데 사용되는 데이터에 필터를 추가하여 모델을 사용자 지정할 수 있습니다. 이 필터는 학습 및 평가에 사용되는 사례를 30세 미만의 고객으로 제한합니다. 필터링의 효과 중 하나는 기본 모델과 필터링된 모델이 다른 데이터 집합을 사용하며 따라서 리프트 차트에서 평가에 사용된 사례의 수도 다르다는 것입니다. 예측 결과 및 기타 통계를 해석할 때는 이러한 사실을 반드시 유념해야 합니다.  
   
- ![두 모델을 보여 주는 리프트 차트](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "두 모델을 보여 주는 리프트 차트")  
+ ![리프트 차트 보여 주는 두 개의 모델](../../analysis-services/data-mining/media/newliftchart-tm30-30.gif "리프트 차트 보여 주는 두 가지 모델")  
   
  차트의 X축은 예측을 비교하는 데 사용되는 테스트 데이터 집합의 비율을 나타냅니다. 차트의 Y축은 예측되는 값의 비율을 나타냅니다.  
   
@@ -75,7 +80,7 @@ caps.handback.revision: 55
   
  [맨 위로 이동](#bkmk_Top)  
   
-#### 결과 해석  
+#### <a name="interpreting-the-results"></a>결과 해석  
  이 결과를 보면 모든 사례의 30%에서 측정할 때 일반적인 모델[전체 타겟 메일링]은 대상 모집단의 47.40%에 0대해 자전거 구입 행동을 예측할 수 있습니다. 즉, 데이터베이스에 있는 고객의 30%에게만 타겟 메일링을 보낼 경우 대상의 절반에 조금 못미치게 도달할 수 있습니다. 필터링된 모델을 사용하면 약간 더 나은 결과를 얻을 수 있으며 대상 고객의 약 51%에 도달할 수 있습니다.  
   
  **예측 확률** 값은 “구입할 가능성이 높은” 사례의 고객을 포함하는 데 필요한 임계값을 나타냅니다. 각 사례에 대해 모델은 각 예측의 정확도를 예상하여 이 값을 저장합니다. 이 값은 고객을 걸러내거나 대상으로 지정하는 데 사용할 수 있습니다. 예를 들어 기본 모델에서 구입할 가능성이 높은 고객을 식별하려면 예측 확률이 61% 이상인 사례를 검색하는 쿼리를 사용하면 됩니다. 필터링된 모델에 의해 대상으로 지정된 고객을 가져오려면 모든 조건, 즉 나이와 최소 46%의 **PredictProbability** 값을 모두 충족하는 사례를 검색하는 쿼리를 만들면 됩니다.  
@@ -84,19 +89,19 @@ caps.handback.revision: 55
   
  **점수** 값은 정규화된 모집단에 대한 모델의 효율성을 계산하는 방법으로 모델을 비교하는 데 도움이 됩니다. 점수는 높을수록 더 좋으므로 이 사례에서는 30세 미만의 고객을 대상으로 지정하는 방법이 낮은 예측 확률에도 불구하고 가장 효율적인 전략이라고 판단할 수 있습니다.  
   
-#### 점수 계산 방법  
+#### <a name="how-is-the-score-calculated"></a>점수 계산 방법  
  점수는 x축에는 실제 값이 포함되고 y축에는 예측 값이 포함되며 각 요소에 연결된 확률이 있는 산점도를 구성하는 모든 요소의 기하 평균 점수로 계산됩니다.  
   
  모든 개별 요소 점수의 통계적 의미는 해당 지점에서 측정된 모델에 대한 예측 리프트입니다. 모든 요소의 평균은 모델에 대한 점수를 구성합니다.  
   
  [맨 위로 이동](#bkmk_Top)  
   
-### 대상 값이 없는 모델에 대한 리프트 차트  
+### <a name="lift-chart-for-model-with-no-target-value"></a>대상 값이 없는 모델에 대한 리프트 차트  
  예측 가능한 열의 상태를 지정하지 않은 경우에는 다음 다이어그램에 표시된 차트 종류를 만들어야 합니다. 이 차트는 예측 가능한 특성의 모든 상태에 대한 모델의 성능을 보여 줍니다. 예를 들어 이 차트는 자전거를 구입할 가능성이 높은 고객과 구입할 가능성이 낮은 고객을 모델이 얼마나 잘 예측하는지 보여 줍니다.  
   
  X축은 예측 가능한 열이 지정된 차트에서와 동일하지만 Y축은 정확한 예측의 비율을 나타냅니다. 따라서 이상적인 선은 대각선이며, 이 선은 모델이 데이터의 50%에서 사례의 50%(예측 가능한 최대값)를 정확히 예측함을 보여 줍니다.  
   
- ![올바른 예측을 보여 주는 리프트 차트](../../analysis-services/data-mining/media/lift1.gif "올바른 예측을 보여 주는 리프트 차트")  
+ ![리프트 차트 표시 된 정확한 예측](../../analysis-services/data-mining/media/lift1.gif "정확한 예측을 보여 주는 리프트 차트")  
   
  차트를 클릭하여 회색 세로 막대를 옮길 수 있으며 **마이닝 범례** 는 전체 사례의 비율과 정확하게 예측된 사례의 비율을 표시합니다. 예를 들어 회색 슬라이더를 50% 표시 지점에 놓으면 **마이닝 범례** 는 다음과 같은 정확도 점수를 표시합니다. 이 수치는 기본 데이터 마이닝 자습서에서 만든 TM_Decision 트리 모델을 기반으로 합니다.  
   
@@ -109,7 +114,7 @@ caps.handback.revision: 55
   
  [맨 위로 이동](#bkmk_Top)  
   
-### 리프트 차트에 대한 제한 사항  
+### <a name="restrictions-on-lift-charts"></a>리프트 차트에 대한 제한 사항  
  리프트 차트에서 예측 가능한 특성은 불연속 값이어야 합니다. 다시 말해서 리프트 차트를 사용하여 연속 숫자 값을 예측하는 모델의 정확도를 측정할 수 없습니다.  
   
  예측 가능한 특성의 모든 불연속 값에 대한 예측 정확도는 한 줄로 표시됩니다. 예측 가능한 특성의 개별적인 값에 대한 예측 정확도 선을 보려면 각 대상 값에 대해 별도의 리프트 차트를 만들어야 합니다.  
@@ -118,10 +123,11 @@ caps.handback.revision: 55
   
  리프트 차트 또는 수익 차트에는 시계열 모델을 표시할 수 없습니다. 시계열 예측의 정확도를 측정하기 위한 일반적인 방법은 기록 데이터의 일부를 예약하고 해당 데이터를 예측과 비교하는 것입니다. 자세한 내용은 [Microsoft Time Series Algorithm](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)을 참조하세요.  
   
-### 관련 내용  
+### <a name="related-content"></a>관련 내용  
  [맨 위로 이동](#bkmk_Top)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

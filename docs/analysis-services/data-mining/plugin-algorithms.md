@@ -1,32 +1,37 @@
 ---
 title: "플러그 인 알고리즘 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "타사 알고리즘 [Analysis Services]"
-  - "알고리즘 [데이터 마이닝], 만들기"
-  - "플러그인 알고리즘 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- third-party algorithms [Analysis Services]
+- algorithms [data mining], creating
+- plugin algorithms [Analysis Services]
 ms.assetid: fe364ddc-576e-42fc-9ced-baa399992f92
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66fad2d8974e832925ab67174f2c635b8f5fbf37
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 플러그 인 알고리즘
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 외에 여러 가지 알고리즘을 데이터 마이닝에 사용할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  
+# <a name="plugin-algorithms"></a>플러그 인 알고리즘
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 외에 여러 가지 알고리즘을 데이터 마이닝에 사용할 수 있습니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 타사에서 만든 알고리즘을 "연결"하는 메커니즘을 제공합니다. 특정 표준을 따르는 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 내에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘을 사용하듯이 사용할 수 있습니다. 플러그 인 알고리즘에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘의 모든 기능이 포함되어 있습니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 플러그 인 알고리즘과 통신하는 데 사용하는 인터페이스에 대한 전체 설명을 보려면 [CodePlex](http://go.microsoft.com/fwlink/?LinkID=87843) 웹 사이트에 게시된 사용자 지정 알고리즘 및 사용자 지정 모델 뷰어를 만드는 예제를 참조하십시오.  
   
-## 알고리즘 요구 사항  
+## <a name="algorithm-requirements"></a>알고리즘 요구 사항  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 알고리즘을 연결하려면 다음 COM 인터페이스를 구현해야 합니다.  
   
  **IDMAlgorithm**  
@@ -42,7 +47,7 @@ caps.handback.revision: 25
  알고리즘의 기능 및 입력 매개 변수를 설명합니다.  
   
  **IDMAlgorithmFactory**  
- 알고리즘 인터페이스를 구현하는 개체의 인스턴스를 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 알고리즘-메타데이터 인터페이스에 액세스할 수 있도록 합니다.  
+ 알고리즘 인터페이스를 구현하는 개체의 인스턴스를 만들고 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 알고리즘-메타데이터 인터페이스에 액세스할 수 있도록 합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 이러한 COM 인터페이스를 사용하여 플러그 인 알고리즘과 통신합니다. 사용하는 플러그 인 알고리즘이 데이터 마이닝용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 사양을 지원해야 하지만 사양의 데이터 마이닝 옵션을 모두 지원하지 않아도 됩니다. [MINING_SERVICES](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md) 스키마 행 집합을 사용하여 알고리즘의 기능을 확인할 수 있습니다. 이러한 스키마 행 집합은 각 플러그 인 알고리즘 공급자에 대한 데이터 마이닝 지원 옵션을 나열합니다.  
   
@@ -88,7 +93,7 @@ caps.handback.revision: 25
   
  `</ConfigurationSettings>`  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [DMSCHEMA_MINING_SERVICES 행 집합](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-services-rowset.md)  
   

@@ -1,33 +1,38 @@
 ---
 title: "마이닝 구조 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 마이닝 [Analysis Services], 구조"
-  - "마이닝 구조 [Analysis Services], 열"
-  - "데이터 원본 [Analysis Services], 마이닝 구조 열"
-  - "열 [데이터 마이닝], 마이닝 구조 열"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], columns
+- data sources [Analysis Services], mining structure columns
+- columns [data mining], mining structure columns
 ms.assetid: 20cbf433-70d1-4b61-a462-41a8435b27b4
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0bf7ffc6f8531385ef9100b3c104db887c2fb565
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 구조 열
+# <a name="mining-structure-columns"></a>마이닝 구조 열
   마이닝 구조를 만들 때 외부 데이터 열을 선택한 다음 데이터가 모델링에 사용되는 방법을 지정하여 마이닝 구조의 열을 정의합니다. 따라서 마이닝 구조 열이 데이터 원본의 데이터 복사본보다 많으며 마이닝 구조 열에 따라 원본 데이터가 마이닝 모델에 사용되는 방법이 정의됩니다. 데이터를 분할하는 방법을 결정하는 속성과 데이터 값을 분산하는 방법을 설명하는 속성을 할당할 수 있습니다.  
   
  마이닝 모델 작성 시 사용하는 각 알고리즘이 구조의 여러 열을 사용하여 데이터를 해석할 수 있기 때문에 마이닝 구조 열은 유연성이 있고 확장 가능합니다. 각 모델에 대해 하나의 데이터 집합을 포함하는 대신 단일 마이닝 구조를 사용하고 해당 구조의 열을 사용하여 데이터를 각 모델에 맞게 사용자 지정할 수 있습니다.  
   
-## 마이닝 구조 열 정의  
+## <a name="defining-mining-structure-columns"></a>마이닝 구조 열 정의  
  구조 열을 정의하는 기본 데이터 형식과 내용 유형은 구조 생성 시 사용하는 데이터 원본에서 파생됩니다. 마이닝 구조 내에서 이러한 설정을 변경할 수 있으며 연속 열에 대해 분포를 설정하고 모델링 플래그를 설정할 수도 있습니다.  
   
  마이닝 구조 열의 정의에는 다음 정보가 포함되어야 합니다.  
@@ -50,7 +55,7 @@ caps.handback.revision: 41
   
  데이터 마이닝 구조와 데이터 마이닝 모델에 대한 자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)를 참조하세요.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  마이닝 구조 열을 정의하고 사용하는 방법은 다음 항목을 참조하십시오.  
   
 |항목|링크|  
@@ -64,7 +69,7 @@ caps.handback.revision: 41
 |한 마이닝 구조 열을 다른 마이닝 구조 열과 연결하는 데 사용할 수 있는 특수한 유형의 열인 분류된 열에 대해 설명합니다.|[분류된 열&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/classified-columns-data-mining.md)|  
 |마이닝 구조 열을 추가하고 수정하는 방법에 대해 알아봅니다.|[마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)  
   

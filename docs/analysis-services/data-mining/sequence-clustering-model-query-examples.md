@@ -1,27 +1,32 @@
 ---
 title: "시퀀스 클러스터링 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "시퀀스 클러스터링 알고리즘 [Analysis Services]"
-  - "content queries [DMX]"
-  - "시퀀스 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sequence clustering algorithms [Analysis Services]
+- content queries [DMX]
+- sequence [Analysis Services]
 ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 caps.latest.revision: 22
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 580fc9147e787d22bf3a87f7ba2bc6752cf4a816
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 시퀀스 클러스터링 모델 쿼리 예제
+# <a name="sequence-clustering-model-query-examples"></a>시퀀스 클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 저장된 정보에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 사용자가 제공한 새 데이터를 기반으로 예측을 만드는 예측 쿼리를 만들 수 있습니다. 시퀀스 클러스터링 모델의 경우 내용 쿼리는 일반적으로 발견된 클러스터나 해당 클러스터 내의 전환에 대한 추가 정보를 제공합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  시퀀스 클러스터링 모델에 대한 예측 쿼리는 일반적으로 시퀀스와 전환, 모델에 포함된 비시퀀스 특성, 또는 시퀀스 특성과 비시퀀스 특성의 조합 중 하나에 따라 권장 구성을 생성합니다.  
@@ -41,12 +46,12 @@ caps.handback.revision: 22
  [다음 상태 예측](#bkmk_Query4)  
   
 ##  <a name="bkmk_ContentQueries"></a> 시퀀스 클러스터링 모델에 대한 정보 찾기  
- 마이닝 모델의 콘텐츠에 대한 의미 있는 쿼리를 만들려면 모델 콘텐츠의 구조와 노드 유형에 따라 저장되는 정보의 종류를 이해해야 합니다. 자세한 내용은 [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)를 참조하세요.  
+ 마이닝 모델의 콘텐츠에 대한 의미 있는 쿼리를 만들려면 모델 콘텐츠의 구조와 노드 유형에 따라 저장되는 정보의 종류를 이해해야 합니다. 자세한 내용은 [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)를 참조하세요.  
   
 ###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용하여 모델 매개 변수 반환  
  데이터 마이닝 스키마 행 집합을 쿼리하면 기본적인 메타데이터, 모델이 만들어진 날짜 및 시간, 모델이 마지막으로 처리된 날짜 및 시간, 모델의 기반이 되는 마이닝 구조의 이름, 예측 가능한 특성으로 사용된 열 등을 비롯하여 모델에 대한 다양한 종류의 정보를 찾을 수 있습니다.  
   
- 다음 쿼리는 `[Sequence Clustering]`모델의 작성 및 학습에 사용된 매개 변수를 반환합니다. 이 모델은 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)의 5단원에서 만들 수 있습니다.  
+ 다음 쿼리는 `[Sequence Clustering]`모델의 작성 및 학습에 사용된 매개 변수를 반환합니다. 이 모델은 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)의 5단원에서 만들 수 있습니다.  
   
 ```  
 SELECT MINING_PARAMETERS   
@@ -152,7 +157,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  이 섹션에서는 시스템 저장 프로시저를 사용하여 시퀀스 클러스터링 모델에 대한 쿼리를 만드는 방법을 보여 주는 몇 가지 예제를 제공합니다.  
   
-#### 클러스터 프로필 및 예제 사례  
+#### <a name="cluster-profiles-and-sample-cases"></a>클러스터 프로필 및 예제 사례  
  클러스터 프로필 탭에서는 모델에 있는 클러스터의 목록과 각 클러스터의 크기, 그리고 클러스터에 포함된 상태를 나타내는 히스토그램을 보여 줍니다. 쿼리에서 비슷한 정보를 검색하는 데 사용할 수 있는 시스템 저장 프로시저는 다음 두 가지가 있습니다.  
   
 -   `GetClusterProfile` 은(는) 클러스터의 특성과 해당 클러스터의 NODE_DISTRIBUTION 테이블에서 찾은 모든 정보를 반환합니다.  
@@ -181,9 +186,9 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetNodeGraph
 SELECT * FROM [Sequence Clustering].SAMPLE_CASES WHERE IsInNode('12')  
 ```  
   
- 자세한 내용은 [SELECT FROM &#60;model&#62;.SAMPLE_CASES&#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.SAMPLE_CASES%20\(DMX\).md)를 참조하세요.  
+ 자세한 내용은 [SELECT FROM &#60;model&#62;.SAMPLE_CASES&#40;DMX&#41;](../../dmx/select-from-model-sample-cases-dmx.md)를 참조하세요.  
   
-#### 클러스터 특징 및 클러스터 차원  
+#### <a name="cluster-characteristics-and-cluster-discrimination"></a>클러스터 특징 및 클러스터 차원  
  **클러스터 특징** 탭에는 각 클러스터의 주요 특성이 확률에 따라 순위가 지정되어 요약됩니다. 여기에서 클러스터에 속하는 사례의 수와 클러스터의 사례 분포를 확인할 수 있습니다. 각 특징에는 특정 지지도가 있습니다. 특정 클러스터의 특징을 보려면 해당 클러스터의 ID를 알고 있어야 합니다.  
   
  다음 예에서는 시스템 저장 프로시저인 `GetClusterCharacteristics`를 사용하여 클러스터 12의 특징 중 확률 점수가 지정된 임계값 0.0005를 초과하는 모든 특징을 반환합니다.  
@@ -206,16 +211,16 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  DMX로 직접 쿼리를 작성하여 두 클러스터를 비교하거나 클러스터를 나머지 클러스터와 비교하려면 먼저 특징 집합 하나를 검색한 다음 관심 있는 특정 클러스터에 대한 특징을 검색하고 두 집합을 비교해야 합니다. 이 시나리오는 보다 복잡하여 일반적으로 클라이언트 처리를 필요로 합니다.  
   
-#### 상태 및 전환  
+#### <a name="states-and-transitions"></a>상태 및 전환  
  Microsoft 시퀀스 클러스터링의 **상태 전환** 탭에서는 백 엔드에 대한 복잡한 쿼리를 수행하여 서로 다른 여러 클러스터의 통계를 검색하고 비교합니다. 이러한 결과를 다시 생성하려면 보다 복잡한 쿼리와 클라이언트 처리가 필요합니다.  
   
  그러나 [내용 쿼리](#bkmk_ContentQueries)섹션의 예 2에 설명된 DMX 쿼리를 사용하면 시퀀스나 개별 전환에 대한 확률 및 상태를 검색할 수 있습니다.  
   
-## 모델을 사용하여 예측 만들기  
+## <a name="using-the-model-to-make-predictions"></a>모델을 사용하여 예측 만들기  
  시퀀스 클러스터링 모델에 대한 예측 쿼리에서는 다른 클러스터링 모델에서 사용되는 예측 함수를 상당수 사용할 수 있습니다. 또한 특수한 예측 함수인 [PredictSequence&#40;DMX&#41;](../../dmx/predictsequence-dmx.md)를 사용하여 권장 구성을 생성하거나 다음 상태를 예측할 수 있습니다.  
   
 ###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 다음 상태 예측  
- [PredictSequence&#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
+ [PredictSequence &#40;DMX&#41;](../../dmx/predictsequence-dmx.md) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
   
  다음 예제 쿼리는 상위 5개의 예측과 해당 확률을 반환하는 단일 예측 쿼리입니다. 해당 모델에는 중첩 테이블이 포함되어 있으므로 예측을 만들 때는 중첩 테이블 `[v Assoc Seq Line Items]`를 열 참조로 사용해야 합니다. 또한 입력 값을 지정할 때는 중첩된 SELECT 문에 표시된 것과 같이 사례 테이블 및 중첩 테이블 열을 모두 조인해야 합니다.  
   
@@ -235,7 +240,7 @@ AS t
 |1.||Cycling Cap|  
 |2||Cycling Cap|  
 |3||Sport-100|  
-|4||Long-Sleeve logo Jersey|  
+|4||Long-Sleeve Logo Jersey|  
 |5||Half-Finger Gloves|  
 |6||All-Purpose Bike Stand|  
 |7||All-Purpose Bike Stand|  
@@ -248,7 +253,7 @@ AS t
   
  6행과 7행의 값은 자리 표시자입니다. 가능한 전환의 체인 끝에 도달하면 예측 결과가 종료되는 것이 아니라 입력으로 전달된 값이 결과에 추가됩니다. 예를 들어 예측 수를 20개로 늘리면 6-20행의 값은 모두 동일하게 All-Purpose Bike Stand가 됩니다.  
   
-## 함수 목록  
+## <a name="function-list"></a>함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘은 다음 표에 나열된 함수를 추가로 지원합니다.  
   
 |||  
@@ -271,10 +276,10 @@ AS t
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 시퀀스 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Microsoft 시퀀스 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)  
+ [Microsoft Sequence Clustering Algorithm](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

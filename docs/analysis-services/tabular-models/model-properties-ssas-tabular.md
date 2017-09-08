@@ -1,27 +1,32 @@
 ---
-title: "모델 속성(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.wspacedbconfig.f1"
-  - "sql13.asvs.bidtoolset.fileprop.f1"
+title: "모델 속성 (SSAS 테이블 형식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.wspacedbconfig.f1
+- sql13.asvs.bidtoolset.fileprop.f1
 ms.assetid: 8ab04656-75a5-485c-9687-7b1ca49f7f80
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e0d09f3f0bd09017c73579d3f8b04b27e91cabfb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 모델 속성(SSAS 테이블 형식)
+# <a name="model-properties-ssas-tabular"></a>모델 속성(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델 속성에 대해 설명합니다. 테이블 형식 모델 프로젝트 각각에는 SQL Server 개발 도구에서 제작하는 모델의 빌드 방식, 백업 방식 및 작업 영역 데이터베이스의 저장 방식에 영향을 주는 모델 속성이 있습니다. 여기서 설명하는 모델 속성은 이미 배포된 모델에는 적용되지 않습니다.  
   
  이 항목의 섹션:  
@@ -50,7 +55,8 @@ caps.handback.revision: 30
 |--------------|---------------------|-----------------|  
 |**데이터 정렬**|Visual Studio가 설치된 컴퓨터의 기본 데이터 정렬입니다.|모델에 대한 데이터 정렬 지정자입니다.|  
 |**호환성 수준**|기본 수준 또는 프로젝트를 만들 때 선택한 다른 수준입니다.|SQL Server 2012 Analysis Services SP1 이상에 적용됩니다. 이 모델에 사용할 수 있는 기능과 설정을 지정합니다. 자세한 내용은 [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을 참조하세요.|  
-|**데이터 백업**|디스크에 백업 안 함|모델 데이터의 백업이 백업 파일에 유지되는지 여부를 지정합니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **디스크에 백업** - 모델 데이터의 백업을 디스크에 유지하도록 지정합니다. 모델을 저장하면 데이터가 백업 파일(ABF)에도 저장됩니다. 이 옵션을 선택하면 모델 저장 및 로드 시간이 길어질 수 있습니다.<br /><br /> **디스크에 백업 안 함** - 모델 데이터의 백업을 디스크에 유지하지 않도록 지정합니다. 이 옵션을 사용하면 저장 및 모델 로드 시간이 최소화됩니다.<br /><br /> <br /><br /> 도구\옵션 대화 상자의 Analysis Server 설정에서 데이터 모델링 페이지를 사용하여 이 속성의 기본 설정을 변경할 수 있습니다.|  
+|**데이터 백업**|디스크에 백업 안 함|모델 데이터의 백업이 백업 파일에 유지되는지 여부를 지정합니다. 이 속성 설정에는 다음과 같은 옵션이 있습니다.<br /><br /> **디스크에 백업** - 모델 데이터의 백업을 디스크에 유지하도록 지정합니다. 모델을 저장하면 데이터가 백업 파일(ABF)에도 저장됩니다. 이 옵션을 선택하면 모델 저장 및 로드 시간이 길어질 수 있습니다.<br /><br /> **디스크에 백업 안 함** - 모델 데이터의 백업을 디스크에 유지하지 않도록 지정합니다. 이 옵션을 사용하면 저장 및 모델 로드 시간이 최소화됩니다.<br /><br /> <br /><br /> 도구\옵션 대화 상자의 Analysis Server 설정에서 데이터 모델링 페이지를 사용하여 이 속성의 기본 설정을 변경할 수 있습니다.| 
+|**기본 필터 방향**|단일 방향|새 관계에 대 한 기본 필터 방향을 결정합니다.| 
 |**DirectQuery 모드**|Off|이 모델이 DirectQuery 모드에서 작동하는지 여부를 지정합니다. 자세한 내용은 [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)를 참조하세요.|  
 |**파일 이름**|Model.bim|.bim 파일의 이름을 지정합니다. 파일 이름은 변경할 수 없습니다.|  
 |**전체 경로**|프로젝트를 만들 때 지정한 경로입니다.|model.bim 파일 위치입니다. 이 속성은 속성 창에서 설정할 수 없습니다.|  
@@ -65,7 +71,7 @@ caps.handback.revision: 30
   
 2.  **속성** 창에서 속성을 클릭한 다음 값을 입력하거나 아래쪽 화살표를 클릭하여 설정 옵션을 선택합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
  [프로젝트 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)  
   

@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 8a0c0a07c6874c6015ec3c4b1f561e0a1076482f
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker에서 SQL Server 2017 컨테이너 이미지를 구성 합니다.
@@ -139,7 +139,7 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 또한이 기술을 공유 하 고 Docker 외부 호스트에서 파일을 볼 수 있습니다.
 
 > [!IMPORTANT]
-> 이 이번에는 Mac에서 Linux 이미지에서 SQL Server와 함께 Docker에 대 한 호스트 볼륨 매핑이 지원 되지 않습니다. 데이터 볼륨 컨테이너를 대신 사용 합니다. 이 제한은 관련 된 `/var/opt/msql` 디렉터리입니다. 탑재 디렉터리 작동에서 읽는 중입니다. 예를 들어-v를 사용 하 여 Mac의 호스트 디렉터리 탑재 하 고 호스트에 있는.bak 파일에서 백업 복원 수 있습니다.
+> 이 이번에는 Mac에서 Linux 이미지에서 SQL Server와 함께 Docker에 대 한 호스트 볼륨 매핑이 지원 되지 않습니다. 데이터 볼륨 컨테이너를 대신 사용 합니다. 이 제한은 관련 된 `/var/opt/mssql` 디렉터리입니다. 탑재 디렉터리 작동에서 읽는 중입니다. 예를 들어-v를 사용 하 여 Mac의 호스트 디렉터리 탑재 하 고 호스트에 있는.bak 파일에서 백업 복원 수 있습니다.
 
 ### <a name="use-data-volume-containers"></a>데이터 볼륨 컨테이너를 사용 하 여
 
@@ -169,7 +169,7 @@ docker volume ls
 > [!WARNING]
 > 컨테이너의 모든 SQL Server 데이터는 데이터 볼륨 컨테이너를 삭제 하면 *영구적으로* 삭제 합니다.
 
-### <a name="backup-and-restore"></a>백업 및 복원
+### <a name="backup-and-restore"></a>Backup 및 Restore 메서드
 이러한 컨테이너 기술 외에도 표준 SQL Server 백업을 사용 하 고 복원 기술 수도 있습니다. 데이터를 보호 하거나 데이터를 다른 SQL Server 인스턴스로 이동 하려면 백업 파일을 사용할 수 있습니다. 자세한 내용은 참조 [Linux에서 SQL Server 데이터베이스 백업 및 복원](sql-server-linux-backup-and-restore-database.md)합니다.
 
 > [!WARNING]

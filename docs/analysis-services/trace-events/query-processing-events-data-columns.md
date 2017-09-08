@@ -1,22 +1,27 @@
 ---
 title: "Query Processing 이벤트 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
 ms.assetid: 81a522bd-440d-406c-a524-3af44a3af101
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0fafade22e12b14c1e11aab4a44ce65433d2a158
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Query Processing 이벤트 데이터 열
+# <a name="query-processing-events-data-columns"></a>Query Processing 이벤트 데이터 열
   Query Processing Events 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
@@ -46,7 +51,7 @@ caps.handback.revision: 6
   
  다음 표에서는 이러한 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Query Cube Begin  
+## <a name="query-cube-begin"></a>Query Cube Begin  
   
 |||||  
 |-|-|-|-|  
@@ -68,7 +73,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Query Cube End  
+## <a name="query-cube-end"></a>Query Cube End  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -89,7 +94,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Calculate Non Empty Begin  
+## <a name="calculate-non-empty-begin"></a>Calculate Non Empty Begin  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -110,7 +115,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Calculate Non Empty Current  
+## <a name="calculate-non-empty-current"></a>Calculate Non Empty Current  
   
 |||||  
 |-|-|-|-|  
@@ -133,7 +138,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Calculate Non Empty End  
+## <a name="calculate-non-empty-end"></a>Calculate Non Empty End  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -154,7 +159,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Serialize Results Begin  
+## <a name="serialize-results-begin"></a>Serialize Results Begin  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -175,7 +180,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Serialize Results Current  
+## <a name="serialize-results-current"></a>Serialize Results Current  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -197,7 +202,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Serialize Results End  
+## <a name="serialize-results-end"></a>Serialize Results End  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -218,50 +223,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Execute MDX Script Begin  
-  
-|**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1.|이벤트 클래스는 이벤트를 분류하는 데 사용됩니다.|  
-|EventSubclass|1.|1.|이벤트 하위 클래스는 각 이벤트 클래스에 대한 추가 정보를 제공합니다.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
-|CurrentTime|2|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
-|StartTime|3|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
-|EndTime|4|5|이벤트가 종료된 시간입니다. 이 열은 SQL:BatchStarting 또는 SP:Starting과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
-|기간|5|2|이벤트에 의해 사용된 시간(밀리초)입니다.|  
-|CPUTime|6|2|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
-|ProgressTotal|9|1.|총 진행률입니다.|  
-|IntegerData|10|1.|정수 데이터입니다.|  
-|ObjectType|12|1.|개체 유형입니다.|  
-|ObjectPath|14|8|개체 경로입니다. 개체의 부모로 시작하는 쉼표로 구분된 부모 목록입니다.|  
-|ConnectionID|25|1.|고유 연결 ID입니다.|  
-|DatabaseName|28|8|사용자 문이 실행되는 데이터베이스의 이름입니다.|  
-|NTCanonicalUserName|40|8|정식 사용자 이름(예: engineering.microsoft.com/software/someone)입니다.|  
-|SPID|41|1.|서버 프로세스 ID로, 사용자 세션을 고유하게 식별합니다. 이 SPI는 XML/A에서 사용하는 세션 GUID와 정확히 일치합니다.|  
-|TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
-|ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
-  
-## Execute MDX Script Current  
-  
-|**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
-|---------------------|-------------------|---------------------|----------------------------|  
-|EventClass|0|1.|이벤트 클래스는 이벤트를 분류하는 데 사용됩니다.|  
-|CurrentTime|2|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
-|StartTime|3|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
-|EndTime|4|5|이벤트가 종료된 시간입니다. 이 열은 SQL:BatchStarting 또는 SP:Starting과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
-|기간|5|2|이벤트에 의해 사용된 시간(밀리초)입니다.|  
-|CPUTime|6|2|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
-|ProgressTotal|9|1.|총 진행률입니다.|  
-|IntegerData|10|1.|정수 데이터입니다.|  
-|ObjectType|12|1.|개체 유형입니다.|  
-|ObjectPath|14|8|개체 경로입니다. 개체의 부모로 시작하는 쉼표로 구분된 부모 목록입니다.|  
-|ConnectionID|25|1.|고유 연결 ID입니다.|  
-|DatabaseName|28|8|사용자 문이 실행되는 데이터베이스의 이름입니다.|  
-|NTCanonicalUserName|40|8|정식 사용자 이름(예: engineering.microsoft.com/software/someone)입니다.|  
-|SPID|41|1.|서버 프로세스 ID로, 사용자 세션을 고유하게 식별합니다. 이 SPI는 XML/A에서 사용하는 세션 GUID와 정확히 일치합니다.|  
-|TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
-|ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
-  
-## Execute MDX Script End  
+## <a name="execute-mdx-script-begin"></a>Execute MDX Script Begin  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -283,7 +245,50 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Query Dimension  
+## <a name="execute-mdx-script-current"></a>Execute MDX Script Current  
+  
+|**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1.|이벤트 클래스는 이벤트를 분류하는 데 사용됩니다.|  
+|CurrentTime|2|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
+|StartTime|3|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
+|EndTime|4|5|이벤트가 종료된 시간입니다. 이 열은 SQL:BatchStarting 또는 SP:Starting과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
+|기간|5|2|이벤트에 의해 사용된 시간(밀리초)입니다.|  
+|CPUTime|6|2|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
+|ProgressTotal|9|1.|총 진행률입니다.|  
+|IntegerData|10|1.|정수 데이터입니다.|  
+|ObjectType|12|1.|개체 유형입니다.|  
+|ObjectPath|14|8|개체 경로입니다. 개체의 부모로 시작하는 쉼표로 구분된 부모 목록입니다.|  
+|ConnectionID|25|1.|고유 연결 ID입니다.|  
+|DatabaseName|28|8|사용자 문이 실행되는 데이터베이스의 이름입니다.|  
+|NTCanonicalUserName|40|8|정식 사용자 이름(예: engineering.microsoft.com/software/someone)입니다.|  
+|SPID|41|1.|서버 프로세스 ID로, 사용자 세션을 고유하게 식별합니다. 이 SPI는 XML/A에서 사용하는 세션 GUID와 정확히 일치합니다.|  
+|TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
+|ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
+  
+## <a name="execute-mdx-script-end"></a>Execute MDX Script End  
+  
+|**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
+|---------------------|-------------------|---------------------|----------------------------|  
+|EventClass|0|1.|이벤트 클래스는 이벤트를 분류하는 데 사용됩니다.|  
+|EventSubclass|1.|1.|이벤트 하위 클래스는 각 이벤트 클래스에 대한 추가 정보를 제공합니다.<br /><br /> 1: MDX Script<br /><br /> 2: MDX Script Command|  
+|CurrentTime|2|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
+|StartTime|3|5|사용 가능한 경우 이벤트가 시작된 시간입니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
+|EndTime|4|5|이벤트가 종료된 시간입니다. 이 열은 SQL:BatchStarting 또는 SP:Starting과 같은 시작하는 이벤트 클래스의 경우 채워지지 않습니다. 필터링 형식은 'YYYY-MM-DD' 및 'YYYY-MM-DD HH:MM:SS'입니다.|  
+|기간|5|2|이벤트에 의해 사용된 시간(밀리초)입니다.|  
+|CPUTime|6|2|이벤트에 의해 사용된 CPU 시간(밀리초)입니다.|  
+|ProgressTotal|9|1.|총 진행률입니다.|  
+|IntegerData|10|1.|정수 데이터입니다.|  
+|ObjectType|12|1.|개체 유형입니다.|  
+|ObjectPath|14|8|개체 경로입니다. 개체의 부모로 시작하는 쉼표로 구분된 부모 목록입니다.|  
+|ConnectionID|25|1.|고유 연결 ID입니다.|  
+|DatabaseName|28|8|사용자 문이 실행되는 데이터베이스의 이름입니다.|  
+|NTCanonicalUserName|40|8|정식 사용자 이름(예: engineering.microsoft.com/software/someone)입니다.|  
+|SPID|41|1.|서버 프로세스 ID로, 사용자 세션을 고유하게 식별합니다. 이 SPI는 XML/A에서 사용하는 세션 GUID와 정확히 일치합니다.|  
+|TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
+|ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
+  
+## <a name="query-dimension"></a>Query Dimension  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -305,7 +310,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Query Subcube  
+## <a name="query-subcube"></a>Query Subcube  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -325,7 +330,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Query Subcube Verbose  
+## <a name="query-subcube-verbose"></a>Query Subcube Verbose  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -345,7 +350,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Get Data From Aggregation  
+## <a name="get-data-from-aggregation"></a>Get Data From Aggregation  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -364,7 +369,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Get Data From Cache  
+## <a name="get-data-from-cache"></a>Get Data From Cache  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -384,7 +389,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## VertiPaq SE Query Begin  
+## <a name="vertipaq-se-query-begin"></a>VertiPaq SE Query Begin  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -409,7 +414,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## VertiPaq SE Query End  
+## <a name="vertipaq-se-query-end"></a>VertiPaq SE Query End  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -442,7 +447,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Resource Usage  
+## <a name="resource-usage"></a>Resource Usage  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -460,7 +465,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## VertiPaq SE Query Cache Match  
+## <a name="vertipaq-se-query-cache-match"></a>VertiPaq SE Query Cache Match  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -484,7 +489,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Direct Query Begin  
+## <a name="direct-query-begin"></a>Direct Query Begin  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -512,7 +517,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## Direct Query End  
+## <a name="direct-query-end"></a>Direct Query End  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -540,7 +545,7 @@ caps.handback.revision: 6
 |TextData|42|9|이벤트와 연결된 텍스트 데이터입니다.|  
 |ServerName|43|8|이벤트를 생성하는 서버의 이름입니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Query Processing 이벤트 범주](../../analysis-services/trace-events/query-processing-events-category.md)  
   
   

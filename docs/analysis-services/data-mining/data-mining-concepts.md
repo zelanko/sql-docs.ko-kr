@@ -1,37 +1,42 @@
 ---
 title: "데이터 마이닝 개념 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "SQL Server Analysis Services, 데이터 마이닝"
-  - "데이터 정리"
-  - "예측 분석"
-  - "학습 알고리즘"
-  - "데이터 마이닝 [Analysis Services], 개념"
-  - "귀납적 학습"
-  - "데이터 마이닝 [Analysis Services], 데이터 마이닝 정보"
-  - "마이닝 모델 [Analysis Services]"
-  - "데이터 액세스 [Analysis Services]"
-  - "시스템 학습 알고리즘 [Analysis Services]"
-  - "마이닝 모델 [Analysis Services], 데이터 마이닝 정보"
-  - "SSAS, 데이터 마이닝"
-  - "Analysis Services, 데이터 마이닝"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- SQL Server Analysis Services, data mining
+- cleaning data
+- predictive analytics
+- learning algorithms
+- data mining [Analysis Services], concepts
+- inductive learning
+- data mining [Analysis Services], about data mining
+- mining models [Analysis Services]
+- data access [Analysis Services]
+- machine learning algorithms [Analysis Services]
+- mining models [Analysis Services], about data mining
+- SSAS, data mining
+- Analysis Services, data mining
 ms.assetid: 6da6c26b-7809-415c-b5dd-bb642b51c194
 caps.latest.revision: 48
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 48
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d9bad5ee7b9724c7faa1acbe4ebcc3fa2fa6812c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 개념
+# <a name="data-mining-concepts"></a>데이터 마이닝 개념
   데이터 마이닝은 큰 데이터 집합에서 동작 가능한 정보를 찾는 프로세스입니다. 데이터 마이닝에서는 수학적 분석을 사용하여 데이터에 있는 패턴 및 추세를 찾습니다. 일반적으로는 관계가 너무 복잡하거나 데이터가 너무 많아서 전통적인 데이터 탐색으로는 이러한 패턴을 찾을 수 없습니다.  
   
  이러한 패턴과 추세를 수집하여 *데이터 마이닝 모델*로 정의할 수 있습니다. 마이닝 모델은 다음과 같은 특정 시나리오에 적용할 수 있습니다.  
@@ -68,12 +73,12 @@ caps.handback.revision: 48
   
  Microsoft SQL Server 데이터 마이닝은 데이터 마이닝 모델 생성 및 작업을 위한 통합 환경을 제공합니다. 이 환경에는 다양한 프로젝트를 위한 포괄적인 솔루션을 손쉽게 구축할 수 있도록 도와 주는 데이터 마이닝 알고리즘과 쿼리 도구를 제공하는 SQL Server Development Studio와, 모델 검색 및 데이터 마이닝 개체 관리를 위한 도구를 제공하는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]가 포함됩니다. 자세한 내용은 [SSDT&#40;SQL Server Data Tools&#41;를 사용하여 다차원 모델 만들기](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 비즈니스 시나리오에 적용하는 방법의 예는 [기본 데이터 마이닝 자습서](../Topic/Basic%20Data%20Mining%20Tutorial.md)를 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 비즈니스 시나리오에 적용하는 방법의 예는 [기본 데이터 마이닝 자습서](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)를 참조하세요.  
   
 ##  <a name="DefiningTheProblem"></a> 문제 정의  
  데이터 마이닝 프로세스의 첫 번째 단계는 다음 다이어그램에 강조 표시된 바와 같이 문제를 명확하게 정의하고, 문제에 대한 답을 제공하기 위해 데이터를 활용할 수 있는 방법을 고려하는 것입니다.  
   
- ![데이터 마이닝 1단계: 문제 정의](../../analysis-services/data-mining/media/dmprocess-defining.gif "데이터 마이닝 1단계: 문제 정의")  
+ ![데이터 마이닝 1 단계: 문제 정의](../../analysis-services/data-mining/media/dmprocess-defining.gif "데이터 마이닝 1 단계: 문제 정의")  
   
  이 단계에는 비즈니스 요구 사항 분석, 문제 영역 정의, 모델을 평가할 메트릭 정의 및 데이터 마이닝 프로젝트의 구체적 목표 정의가 포함됩니다. 이러한 태스크를 질문으로 바꾸면 다음과 같습니다.  
   
@@ -96,7 +101,7 @@ caps.handback.revision: 48
 ##  <a name="PreparingData"></a> 데이터 준비  
  데이터 마이닝 프로세스의 두 번째 단계는 다음 다이어그램에 강조 표시된 바와 같이 [문제 정의](#DefiningTheProblem) 단계에서 식별한 데이터를 통합하고 정리하는 것입니다.  
   
- ![데이터 마이닝 2단계: 데이터 준비](../../analysis-services/data-mining/media/dmprocess-preparing.gif "데이터 마이닝 2단계: 데이터 준비")  
+ ![데이터 마이닝 2 단계: 데이터 준비](../../analysis-services/data-mining/media/dmprocess-preparing.gif "데이터 마이닝 2 단계: 데이터 준비")  
   
  데이터가 회사의 여러 부서에 흩어져 서로 다른 형식으로 저장되기도 하고 항목이 잘못되었거나 항목이 누락되는 등 데이터가 불일치할 수도 있습니다. 예를 들어 제품이 시장에 공급되기도 전에 고객이 제품을 구입했다거나 집에서 3220km나 떨어진 매장에서 정기적으로 제품을 구입한다고 데이터에 표시되어 있을 수 있습니다.  
   
@@ -115,7 +120,7 @@ caps.handback.revision: 48
 ##  <a name="ExploringData"></a> 데이터 탐색  
  데이터 마이닝 프로세스의 3번째 단계는 다음 다이어그램에 강조 표시된 바와 같이 준비된 데이터를 탐색하는 것입니다.  
   
- ![데이터 마이닝 3단계: 데이터 탐색](../../analysis-services/data-mining/media/dmprocess-exploring.gif "데이터 마이닝 3단계: 데이터 탐색")  
+ ![데이터 마이닝 3 단계: 데이터 탐색](../../analysis-services/data-mining/media/dmprocess-exploring.gif "데이터 마이닝 3 단계: 데이터 탐색")  
   
  마이닝 모델을 만들 때 적절한 결정을 내리기 위해서는 데이터를 이해해야 합니다. 탐색 기술에는 최소값 및 최대값 계산, 평균 및 표준 편차 계산, 데이터 배포 검토 등이 포함됩니다. 예를 들어 최대값, 최소값 및 평균 값을 검토하여 데이터가 고객 또는 비즈니스 프로세스를 대표하지 않는지 확인하고, 그러한 경우 보다 균형 있는 데이터를 가져오거나 예상의 기초가 된 가정을 검토해야 하는지 확인할 수 있습니다. 표준 편차 및 기타 분포 값은 결과의 안정성과 정확도에 대한 유용한 정보를 제공할 수 있습니다. 표준 편차가 크면 다른 데이터를 추가하여 모델을 개선할 수 있습니다. 표준 분포에서 지나치게 벗어나는 데이터는 왜곡된 것일 수도 있고 실제 문제를 정확히 나타낸 것일 수도 있지만 이러한 데이터가 있으면 데이터에 맞는 모델을 만들기가 어려워집니다.  
   
@@ -130,7 +135,7 @@ caps.handback.revision: 48
 ##  <a name="BuildingModels"></a> 모델 작성  
  데이터 마이닝 프로세스의 4번째 단계는 다음 다이어그램에 강조 표시된 바와 같이 마이닝 모델을 작성하는 것입니다. [데이터 탐색](#ExploringData) 단계에서 얻은 정보를 사용하면 모델을 정의하고 만드는 데 도움이 됩니다.  
   
- ![데이터 마이닝 4단계: 마이닝 모델 구축](../../analysis-services/data-mining/media/dmprocess-building.gif "데이터 마이닝 4단계: 마이닝 모델 구축")  
+ ![데이터 마이닝 4 단계: 마이닝 모델을 작성](../../analysis-services/data-mining/media/dmprocess-building.gif "데이터 마이닝 4 단계: 마이닝 모델 작성")  
   
  마이닝 구조를 만들어 사용할 데이터 열을 정의합니다. 마이닝 구조는 데이터 원본에 링크되지만 처리되기 전까지는 실제로 데이터가 포함되지 않습니다. 마이닝 구조를 처리하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 분석에 사용할 수 있는 집계 및 기타 통계 정보를 생성합니다. 이 정보는 해당 구조를 기반으로 하는 마이닝 모델에서 사용할 수 있습니다. 마이닝 구조와 마이닝 모델의 관계에 대한 자세한 내용은 [논리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -145,11 +150,11 @@ caps.handback.revision: 48
 ##  <a name="ValidatingModels"></a> 모델 탐색 및 유효성 검사  
  데이터 마이닝 프로세스의 5번째 단계는 다음 다이어그램에 강조 표시된 바와 같이 작성한 마이닝 모델을 탐색하고 모델의 효율성을 테스트하는 것입니다.  
   
- ![데이터 마이닝 5단계: 마이닝 모델 유효성 검사](../../analysis-services/data-mining/media/dmprocess-validating.gif "데이터 마이닝 5단계: 마이닝 모델 유효성 검사")  
+ ![데이터 마이닝 5 단계: 마이닝 모델 유효성 검사](../../analysis-services/data-mining/media/dmprocess-validating.gif "데이터 마이닝 5 단계: 마이닝 모델 유효성 검사")  
   
  모델을 프로덕션 환경에 배포하기 전에 모델의 효율성을 테스트해야 합니다. 또한 모델을 작성할 때는 일반적으로 각기 다른 구성으로 여러 모델을 만들고 모든 모델을 테스트하여 어떤 모델에서 문제 및 데이터에 대한 최상의 결과가 얻어지는지 확인합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 동일한 데이터에 대한 모든 모델의 성능을 정확하게 평가할 수 있도록 데이터를 학습 데이터 집합과 테스트 데이터 집합으로 분리하는 데 유용한 도구를 제공합니다. 학습 데이터 집합으로는 모델을 작성할 수 있고 테스트 데이터 집합으로는 예측 쿼리를 만들어 모델의 정확도를 테스트할 수 있습니다. [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서 이 분할은 마이닝 모델을 작성하는 동안 자동으로 수행될 수 있습니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 동일한 데이터에 대한 모든 모델의 성능을 정확하게 평가할 수 있도록 데이터를 학습 데이터 집합과 테스트 데이터 집합으로 분리하는 데 유용한 도구를 제공합니다. 학습 데이터 집합으로는 모델을 작성할 수 있고 테스트 데이터 집합으로는 예측 쿼리를 만들어 모델의 정확도를 테스트할 수 있습니다. 이 분할 방법은 마이닝 모델을 작성 하는 동안 자동으로 합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)템플릿을 사용하여 데이터 마이닝 프로젝트를 작성할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 데이터 마이닝 디자이너에 있는 뷰어를 사용하여 알고리즘이 검색한 추세 및 패턴을 탐색할 수 있습니다. 자세한 내용은 [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)를 참조하세요. 또한 리프트 차트 및 분류 행렬과 같은 디자이너의 도구를 사용하여 모델의 예측 정확도를 테스트할 수 있습니다. 모델이 데이터와 관련되어 있는지 또는 일반적인 모집단에 대해 유추하는 데 사용할 수 있는지 확인하려면 *교차 유효성 검사*라는 통계 기법을 사용하여 데이터의 하위 집합을 자동으로 만들고 각 하위 집합에 대해 모델을 테스트합니다. 자세한 내용은 [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)를 참조하세요.  
   
@@ -158,7 +163,7 @@ caps.handback.revision: 48
 ##  <a name="DeployingandUpdatingModels"></a> 모델 배포 및 업데이트  
  데이터 마이닝 프로세스의 마지막 단계는 다음 다이어그램에 강조 표시된 바와 같이 가장 효율적인 모델을 프로덕션 환경에 배포하는 것입니다.  
   
- ![데이터 마이닝 6단계: 마이닝 모델 배포](../../analysis-services/data-mining/media/dmprocess-deploying.gif "데이터 마이닝 6단계: 마이닝 모델 배포")  
+ ![데이터 마이닝 6 단계: 마이닝 모델 배포](../../analysis-services/data-mining/media/dmprocess-deploying.gif "데이터 마이닝 6 단계: 마이닝 모델 배포")  
   
  프로덕션 환경에 마이닝 모델을 배포한 다음에는 필요에 따라 다양한 태스크를 수행할 수 있습니다. 다음은 수행할 수 있는 일부 태스크입니다.  
   
@@ -166,9 +171,9 @@ caps.handback.revision: 48
   
 -   내용 쿼리를 만들어 모델에서 통계, 규칙 또는 수식 검색. 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요.  
   
--   데이터 마이닝 기능을 직접 응용 프로그램에 포함할 수 있습니다. 마이닝 구조 및 마이닝 모델의 생성, 변경, 처리 및 삭제를 위해 응용 프로그램에서 사용할 수 있는 개체 집합이 들어 있는 AMO(Analysis Management Objects)를 포함할 수 있습니다. 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 XMLA(XML for Analysis) 메시지를 직접 보낼 수도 있습니다. 자세한 내용은 [개발(Analysis Services - 데이터 마이닝)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx)을 참조하세요.  
+-   데이터 마이닝 기능을 직접 응용 프로그램에 포함할 수 있습니다. 마이닝 구조 및 마이닝 모델의 생성, 변경, 처리 및 삭제를 위해 응용 프로그램에서 사용할 수 있는 개체 집합이 들어 있는 AMO(Analysis Management Objects)를 포함할 수 있습니다. 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 XMLA(XML for Analysis) 메시지를 직접 보낼 수도 있습니다. 자세한 내용은 [개발(Analysis Services - 데이터 마이닝)](https://technet.microsoft.com/library/bb522473\(v=sql.110\).aspx)을 참조하세요.  
   
--   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 마이닝 모델을 통해 들어오는 데이터를 여러 테이블에 논리적으로 분리하는 패키지 만들기. 예를 들어 잠재적인 고객으로 데이터베이스를 계속 업데이트하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 함께 마이닝 모델을 사용하여 들어오는 데이터를 제품을 구매할 가능성이 높은 고객과 제품을 구매하지 않을 가능성이 높은 고객으로 분할할 수 있습니다. 자세한 내용은 [Integration Services의 일반적인 사용](http://msdn.microsoft.com/ko-kr/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)을 참조하세요.  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 마이닝 모델을 통해 들어오는 데이터를 여러 테이블에 논리적으로 분리하는 패키지 만들기. 예를 들어 잠재적인 고객으로 데이터베이스를 계속 업데이트하는 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 함께 마이닝 모델을 사용하여 들어오는 데이터를 제품을 구매할 가능성이 높은 고객과 제품을 구매하지 않을 가능성이 높은 고객으로 분할할 수 있습니다. 자세한 내용은 [Integration Services의 일반적인 사용](http://msdn.microsoft.com/en-us/3b97897a-d418-4ef4-b5a4-5aabf4fa6bca)을 참조하세요.  
   
 -   사용자가 기존 마이닝 모델에 대해 직접 쿼리할 수 있는 보고서 만들기. 자세한 내용은 [SQL Server Data Tools의 Reporting Services&#40;SSDT&#41;](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)를 참조하세요.  
   
@@ -176,7 +181,7 @@ caps.handback.revision: 48
   
 -   조직에 더 많은 데이터가 들어올 때 모델을 동적으로 업데이트. 지속적인 변경을 통해 솔루션의 효율성을 높이는 것은 배포 전략의 일부가 되어야 합니다. 자세한 내용은 [데이터 마이닝 솔루션 및 개체 관리](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)   
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)  
   

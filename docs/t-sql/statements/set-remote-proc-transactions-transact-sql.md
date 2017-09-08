@@ -1,0 +1,79 @@
+---
+title: SET REMOTE_PROC_TRANSACTIONS (Transact SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 07/26/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- REMOTE_PROC_TRANSACTIONS_TSQL
+- SET REMOTE_PROC_TRANSACTIONS
+- REMOTE_PROC_TRANSACTIONS
+- SET_REMOTE_PROC_TRANSACTIONS_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- remote stored procedures [SQL Server]
+- SET REMOTE_PROC_TRANSACTIONS statement
+- distributed transactions [SQL Server], starting
+- REMOTE_PROC_TRANSACTIONS option
+- active transactions
+ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
+caps.latest.revision: 37
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 9ad924fa239801adb78cb391a26249cb1c2a21d1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+  로컬 트랜잭션이 활성 트랜잭션일 때 원격 저장 프로시저를 실행하면 MS DTC([!INCLUDE[tsql](../../includes/tsql-md.md)] Distributed Transaction Manager)에서 관리하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 분산 트랜잭션이 시작되도록 지정합니다.  
+  
+> [!IMPORTANT]  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 이 옵션은 원격 저장 프로시저를 사용하는 응용 프로그램에 대해 이전 버전과의 호환성을 위해 제공됩니다. 원격 저장 프로시저 호출을 실행하는 대신 연결된 서버를 참조하는 분산 쿼리를 사용합니다. 사용 하 여 정의 되며 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)합니다.  
+  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+  
+SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
+```  
+  
+## <a name="arguments"></a>인수  
+ ON | OFF  
+ ON으로 설정하면 로컬 트랜잭션에서 원격 저장 프로시저를 실행할 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션이 시작됩니다. OFF로 설정하면 로컬 트랜잭션에서 원격 저장 프로시저를 호출해도 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션이 시작되지 않습니다.  
+  
+## <a name="remarks"></a>주의  
+ REMOTE_PROC_TRANSACTIONS 옵션을 ON으로 설정할 경우 원격 저장 프로시저를 호출하면 분산 트랜잭션이 시작되고 MS DTC를 사용해 이 트랜잭션을 참여시킵니다. 원격 저장 프로시저를 호출하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 트랜잭션 주관자이며 트랜잭션의 완료를 제어합니다. 이후 연결에 대해 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문을 실행하면 제어 인스턴스는 MS DTC에서 관련 컴퓨터 간의 분산 트랜잭션 완료를 관리하도록 요청합니다.  
+  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션이 시작되면 원격 서버로 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스에 대해 원격 저장 프로시저를 호출할 수 있습니다. 원격 서버를 모두 [!INCLUDE[tsql](../../includes/tsql-md.md)] 분산 트랜잭션에 참여시키고 MS DTC는 각 원격 서버에 대해 트랜잭션이 완료되도록 합니다.  
+  
+ REMOTE_PROC_TRANSACTIONS는 인스턴스 수준 재정의 하는 데 사용할 수 있는 연결 수준 설정 **sp_configure 원격 프로시저 트랜잭션** 옵션입니다.  
+  
+ REMOTE_PROC_TRANSACTIONS 옵션을 OFF로 설정하면 원격 저장 프로시저가 로컬 트랜잭션의 일부로 호출되지 않습니다. 원격 저장 프로시저에서 수정한 내용은 저장 프로시저가 완료될 때 커밋되거나 롤백됩니다. 이후 원격 저장 프로시저를 호출한 연결에서 실행한 COMMIT TRANSACTION이나 ROLLBACK TRANSACTION 문은 프로시저에서 완료한 처리에 영향을 주지 않습니다.  
+  
+ REMOTE_PROC_TRANSACTIONS 옵션은 원격 저장된 프로시저 호출의 인스턴스에 대해를 영향을 주는 호환성 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용 하 여 원격 서버로 정의 **sp_addserver**합니다. 옵션을 사용 하 여 연결 된 서버 정의 된 인스턴스에서 저장된 프로시저를 실행 하는 분산 쿼리에 적용 되지 않습니다 **sp_addlinkedserver**합니다.  
+  
+ SET REMOTE_PROC_TRANSACTIONS 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
+  
+## <a name="permissions"></a>Permissions  
+ **public** 역할의 멤버 자격이 필요합니다.  
+  
+## <a name="see-also"></a>관련 항목:  
+ [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
+ [SET 문&#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
+  
+  
+

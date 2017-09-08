@@ -1,35 +1,40 @@
 ---
-title: "Analysis Services 데이터베이스 백업 및 복원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.ssmsimbi.Restore.f1"
-  - "sql13.asvs.ssmsimbi.Backup.f1"
-helpviewer_keywords: 
-  - "데이터베이스 백업 [Analysis Services]"
-  - "암호화 [Analysis Services]"
-  - "데이터베이스 [Analysis Services], 복원"
-  - "암호화 [Analysis Services]"
-  - "데이터베이스 [Analysis Services], 백업"
-  - "데이터베이스 복원 [Analysis Services]"
-  - "복구 [Analysis Services]"
+title: "Analysis Services 데이터베이스의 백업 및 복원 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.ssmsimbi.Restore.f1
+- sql13.asvs.ssmsimbi.Backup.f1
+helpviewer_keywords:
+- backing up databases [Analysis Services]
+- encryption [Analysis Services]
+- databases [Analysis Services], restoring
+- cryptography [Analysis Services]
+- databases [Analysis Services], backing up
+- restoring databases [Analysis Services]
+- recovery [Analysis Services]
 ms.assetid: 947eebd2-3622-479e-8aa6-57c11836e4ec
 caps.latest.revision: 54
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 54
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 917761cf40eca3847cd304ec4e2aafb46fc06c5d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 데이터베이스 백업 및 복원
+# <a name="backup-and-restore-of-analysis-services-databases"></a>Analysis Services 데이터베이스 백업 및 복원
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터베이스와 해당 개체를 특정 시점에서 복구할 수 있도록 백업 및 복원이 포함되어 있습니다. 백업 및 복원은 데이터베이스를 업그레이드한 서버에 마이그레이션하거나 서버 간에 데이터베이스를 이동하거나 데이터베이스를 프로덕션 서버에 배포하는 데 사용할 수 있는 기술이기도 합니다. 중요한 데이터에 대한 백업 계획이 없는 경우 데이터 복구를 위해 가능한 한 빨리 계획을 수립하고 구현해야 합니다.  
   
  백업 및 복원 명령은 배포된 Analysis Services 데이터베이스에서 수행됩니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 프로젝트 및 솔루션에 대해 원본 제어를 사용하여 특정 버전의 원본 파일을 복구한 다음 사용하고 있는 원본 제어 시스템의 리포지토리에 대한 데이터 복구 계획을 만들어야 합니다.  
@@ -68,7 +73,7 @@ caps.handback.revision: 54
  관리자는 데이터베이스의 크기에 관계없이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 단일 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 백업 파일(.abf)로 백업할 수 있습니다. 단계별 지침은 [Analysis Services 데이터베이스 복원 방법(TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) 및 [Analysis Services 데이터베이스 백업 자동화(TechMantra)](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)를 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]데이터 모델을 로드하고 쿼리하는 데 사용하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 SharePoint 콘텐츠 데이터베이스에서 해당 모델을 로드합니다. 이러한 콘텐츠 데이터베이스는 관계형이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스 엔진에서 실행됩니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 백업 및 복원 전략이 없습니다. SharePoint 콘텐츠에 대한 재해 복구 계획이 있는 경우 해당 계획은 콘텐츠 데이터베이스에 저장된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 포함합니다.  
+>  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]를 로드 하 고 쿼리에 사용 되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint 환경에서 데이터 모델에는 SharePoint 콘텐츠 데이터베이스에서 해당 모델을 로드 합니다. 이러한 콘텐츠 데이터베이스는 관계형이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관계형 데이터베이스 엔진에서 실행됩니다. 따라서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델에 대해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 백업 및 복원 전략이 없습니다. SharePoint 콘텐츠에 대한 재해 복구 계획이 있는 경우 해당 계획은 콘텐츠 데이터베이스에 저장된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 모델을 포함합니다.  
   
  **원격 파티션**  
   
@@ -124,8 +129,8 @@ caps.handback.revision: 54
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 복원 방법은 [복원 옵션](../../analysis-services/multidimensional-models/restore-options.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 백업, 복원 및 동기화&#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)   
- [PowerShell scripting in Analysis Services](../../analysis-services/instances/powershell-scripting-in-analysis-services.md)  
+
   
   

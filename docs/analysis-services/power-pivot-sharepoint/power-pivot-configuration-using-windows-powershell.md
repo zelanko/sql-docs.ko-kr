@@ -1,33 +1,38 @@
 ---
-title: "Windows PowerShell을 사용하여 파워 피벗 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 구성 Windows PowerShell을 사용 하 여 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d83e53e-04f1-417d-9039-d9e81ae0483d
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e25460598e99163c4866b14741bf020208de902b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Windows PowerShell을 사용하여 파워 피벗 구성
+# <a name="power-pivot-configuration-using-windows-powershell"></a>Windows PowerShell을 사용하여 파워 피벗 구성
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]의 설치를 구성하는 데 사용할 수 있는 Windows PowerShell cmdlet이 포함되어 있습니다. PowerShell을 사용하여 설치를 완전히 구성하려면 SharePoint cmdlet과 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet을 모두 사용해야 합니다. 대부분의 구성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 도구 중 하나를 사용하여 완료할 수 있습니다. 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
   
 > [!IMPORTANT]  
 >  SharePoint 2010 팜의 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스 서버를 사용하는 SharePoint 팜이나 SharePoint용 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 구성하려면 먼저 SharePoint 2010 SP1을 설치해야 합니다. 서비스 팩을 아직 설치하지 않았으면 서버를 구성하기 전에 설치합니다.  
   
-## PowerShell을 사용하여 SharePoint용 PowerPivot을 구성할 때의 이점  
+## <a name="benefits-of-configuring-power-pivot-for-sharepoint-using-powershell"></a>PowerShell을 사용하여 SharePoint용 PowerPivot을 구성할 때의 이점  
  Windows PowerShell 스크립트(.ps1) 파일을 작성하여 구성 태스크를 자동화할 수 있습니다. 모든 서버에서 실행할 수 있는 스크립팅된 설치 및 구성 단계가 필요한 경우 이 방법을 사용하는 것이 좋습니다. 하드웨어 오류가 발생할 경우 서버를 다시 작성하기 위한 재해 복구 계획의 일부로 이러한 스크립트가 필요할 수 있습니다.  
   
-## 서버의 파워 피벗 cmdlet 목록 보기  
+## <a name="view-a-list-of-the-power-pivot-cmdlets-on-a-server"></a>서버의 파워 피벗 cmdlet 목록 보기  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet의 내용과 예는 [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)를 참조하세요.  
   
  PowerShell을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet의 목록을 보려면  
@@ -60,7 +65,7 @@ caps.handback.revision: 19
     Get-help new-powerpivotserviceapplication -example  
     ```  
   
-## 서버에서 파워 피벗 Cmdlet 사용  
+## <a name="enable-power-pivot-cmdlets-on-a-server"></a>서버에서 파워 피벗 Cmdlet 사용  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 설치하고 팜 솔루션을 배포한 후 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] cmdlet을 사용할 수 있습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 실행하면 솔루션이 배포됩니다. Cmdlet을 사용하려면 다음 단계를 수행합니다.  
   
 1.  **관리자 권한으로 실행** 옵션을 사용하여 SharePoint 관리 셸을 엽니다.  
@@ -81,11 +86,11 @@ caps.handback.revision: 19
   
 4.  창을 닫습니다. **관리자 권한으로 실행** 옵션을 사용하여 창을 다시 엽니다.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  [중앙 관리에서 파워 피벗 서버 관리 및 구성](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
- [파워 피벗 구성 도구](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
+ [Power Pivot Configuration Tools](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
   
- [SharePoint용 Power Pivot에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+ [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
   

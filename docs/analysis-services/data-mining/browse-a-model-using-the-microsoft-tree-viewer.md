@@ -1,40 +1,45 @@
 ---
-title: "Microsoft 트리 뷰어를 사용하여 모델 찾아보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "트리 뷰어 [Analysis Services]"
-  - "예측 [Analysis Services], 불연속 특성"
-  - "마이닝 모델 콘텐츠, 보기"
-  - "예측 [Analysis Services], 연속 특성"
-  - "마이닝 범례 [Analysis Services]"
-  - "불연속 특성 [Analysis Services]"
-  - "Microsoft 의사 결정 트리 알고리즘 [Analysis Services]"
-  - "의사 결정 트리 알고리즘 [Analysis Services]"
-  - "Microsoft 트리 뷰어"
-  - "의사 결정 트리 [Analysis Services]"
-  - "종속성 [Analysis Services]"
-  - "연속 특성"
+title: "Microsoft 트리 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Tree Viewer [Analysis Services]
+- predictions [Analysis Services], discrete attributes
+- mining model content, viewing
+- predictions [Analysis Services], continuous attributes
+- mining legend [Analysis Services]
+- discrete attributes [Analysis Services]
+- Microsoft Decision Trees algorithm [Analysis Services]
+- decision tree algorithms [Analysis Services]
+- Microsoft Tree Viewer
+- decision trees [Analysis Services]
+- dependencies [Analysis Services]
+- continuous attributes
 ms.assetid: 0c96d518-ed20-40b7-8d62-b26ad6244287
 caps.latest.revision: 46
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 46
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cf93bd7a9be8f6de5e4f807730fcaa4bcb60ab5c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 트리 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하여 작성된 의사 결정 트리를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 알고리즘은 분류와 회귀를 둘 다 지원하는 하이브리드 의사 결정 트리 알고리즘입니다. 따라서 이 뷰어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 기반으로 모델을 볼 수도 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 및 연속 특성 모두의 예측 모델링에 사용됩니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)를 참조하십시오.  
+# <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Microsoft 트리 뷰어를 사용하여 모델 찾아보기
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 트리 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 사용하여 작성된 의사 결정 트리를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 알고리즘은 분류와 회귀를 둘 다 지원하는 하이브리드 의사 결정 트리 알고리즘입니다. 따라서 이 뷰어를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 기반으로 모델을 볼 수도 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 불연속 및 연속 특성 모두의 예측 모델링에 사용됩니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)를 참조하십시오.  
   
 > [!NOTE]  
->  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)를 참조하세요.  
+>  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)를 참조하세요.  
   
 ##  <a name="BKMK_TabsPanes"></a> 뷰어 탭  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델을 찾으면 해당 모델의 적절한 뷰어에서 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 해당 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어에는 다음과 같은 탭과 창이 있습니다.  
@@ -52,7 +57,7 @@ caps.handback.revision: 46
   
  트리의 개별 노드를 확장하거나 축소하여 각 노드 다음에 발생하는 분할을 표시하거나 숨길 수 있습니다. **의사 결정 트리** 탭의 옵션을 사용하여 트리 표시 방법을 변경할 수도 있습니다. **수준 표시** 슬라이더를 사용하여 트리에 표시되는 수준의 개수를 조정할 수 있습니다. **기본 확장** 을 사용하여 모델의 모든 트리에 표시되는 기본 수준 개수를 설정할 수 있습니다.  
   
-#### 불연속 특성 예측  
+#### <a name="predicting-discrete-attributes"></a>불연속 특성 예측  
  예측 가능한 불연속 특성을 사용하여 트리를 작성할 때 뷰어는 트리의 각 노드에 대해 다음을 표시합니다.  
   
 -   분할 발생 조건  
@@ -63,10 +68,10 @@ caps.handback.revision: 46
   
  각 노드의 배경색은 **배경** 옵션을 사용하여 선택한 특성 상태의 사례 집중을 나타냅니다. 이 옵션을 사용하여 관심 있는 특정 대상이 포함된 노드를 강조 표시할 수 있습니다.  
   
-#### 연속 특성 예측  
+#### <a name="predicting-continuous-attributes"></a>연속 특성 예측  
  예측 가능한 연속 특성을 사용하여 트리를 작성할 때 뷰어는 트리의 각 노드에 대해 히스토그램 대신 다이아몬드 차트를 표시합니다. 다이아몬드 차트에는 특성의 범위를 나타내는 선이 있습니다. 다이아몬드는 노드의 평균에 있고 다이아몬드 너비는 해당 노드에서 특성의 분산을 나타냅니다. 다이아몬드가 가늘수록 노드에서 보다 더 정확한 예측을 도출할 수 있음을 나타냅니다. 뷰어는 노드의 분할을 결정하는 데 사용되는 회귀 수식도 표시합니다.  
   
-#### 추가 의사 결정 트리 표시 옵션  
+#### <a name="additional-decision-tree-display-options"></a>추가 의사 결정 트리 표시 옵션  
  의사 결정 트리 모델에 대해 드릴스루를 사용하면 트리에서 노드를 마우스 오른쪽 단추로 클릭하고 **드릴스루**를 선택하여 해당 노드를 지원하는 학습 사례에 액세스할 수 있습니다. **마이닝 모델** 탭에서 마이닝 모델에 대한 드릴스루 속성을 조정하거나 데이터 마이닝 마법사 내에서 드릴스루를 설정할 수 있습니다.  
   
  **의사 결정 트리** 탭의 확대/축소 옵션을 사용하여 트리를 확대 또는 축소하거나 **크기 조정** 을 사용하여 전체 모델을 뷰어 화면에 맞출 수 있습니다. 트리가 너무 커서 화면에 맞게 크기를 조정할 수 없으면 **탐색**옵션을 사용하여 트리를 이동할 수 있습니다. **탐색** 을 클릭하면 표시할 모델 섹션을 선택하는 데 사용할 수 있는 별도의 탐색 창이 열립니다.  
@@ -103,9 +108,9 @@ caps.handback.revision: 46
   
  [맨 위로 이동](#BKMK_TabsPanes)  
   
-## 관련 항목:  
- [Microsoft 의사 결정 트리 알고리즘](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
- [마이닝 모델 뷰어&#40;데이터 마이닝 모델 디자이너&#41;](../Topic/Mining%20Model%20Viewers%20\(Data%20Mining%20Model%20Designer\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [Microsoft Decision Trees Algorithm](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
+ [마이닝 모델 뷰어 &#40; 데이터 마이닝 모델 디자이너 &#41;](http://msdn.microsoft.com/library/4ba391d5-c97b-4848-ba7c-7d096fa4b7dd)   
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)   
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)  

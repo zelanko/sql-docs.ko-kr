@@ -1,38 +1,43 @@
 ---
-title: "연결된 측정값 그룹 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "연결된 측정값 그룹 [Analysis Services]"
-  - "측정값 그룹 참조"
-  - "연결된 측정값 그룹 마법사"
-  - "측정값 그룹 [Analysis Services], 연결됨"
-  - "연결된 차원 [Analysis Services]"
+title: "측정값 그룹 연결 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- linked measure groups [Analysis Services]
+- referencing measure groups
+- Linked Measure Group Wizard
+- measure groups [Analysis Services], linked
+- linked dimensions [Analysis Services]
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 390e596ce08f5956f65cc106b50af7b68c4d2da4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 연결된 측정값 그룹
+# <a name="linked-measure-groups"></a>연결된 측정값 그룹
   연결된 측정값 그룹은 동일한 데이터베이스 또는 다른 Analysis Services 데이터베이스 내에 있는 다른 큐브의 또 다른 측정값 그룹을 기반으로 합니다. 측정값 집합을 다시 사용하려는 경우 여러 큐브에서 연결된 측정값 그룹과 해당 데이터 값을 사용할 수 있습니다.  
   
- 원본 측정값 그룹과 연결된 측정값 그룹은 동일한 서버에서 실행되는 솔루션에 상주하는 것이 좋습니다. 원격 서버의 측정값 그룹에 연결하는 기능은 이후 릴리스에서 사용 중단될 예정입니다([SQL Server 2016에서 사용되지 않는 Analysis Services 기능](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md) 참조).  
+ 원본 측정값 그룹과 연결된 측정값 그룹은 동일한 서버에서 실행되는 솔루션에 상주하는 것이 좋습니다. 원격 서버의 측정값 그룹에 연결하는 기능은 이후 릴리스에서 사용 중단될 예정입니다( [SQL Server 2016에서 사용되지 않는 Analysis Services 기능](../../analysis-services/deprecated-analysis-services-features-in-sql-server-2016.md)참조).  
   
 > [!IMPORTANT]  
 >  연결된 측정값 그룹은 읽기 전용입니다. 최근 변경 사항을 선택하려면 모든 연결된 측정값을 삭제하고 수정된 원본 개체를 기반으로 다시 만들어야 합니다. 따라서 이후에 측정값 그룹 수정이 필요할 경우에는 프로젝트 사이에 측정값 그룹을 복사하고 붙여넣는 방식을 고려해야 할 수 있습니다.  
   
-## 사용 제한 사항  
+## <a name="usage-limitations"></a>사용 제한 사항  
  앞에서 설명한 대로 연결된 측정값을 사용하는 데 있어서 중요한 제한 사항은 연결된 측정값을 직접 사용자 지정할 수 없다는 점입니다. 데이터 형식, 형식, 데이터 바인딩 및 표시 유형뿐만 아니라 측정값 그룹 자체에 있는 항목의 멤버 자격에 대한 수정 사항은 모두 원래 측정값 그룹에서 변경해야 합니다.  
   
  작업 측면에서 연결된 측정값 그룹은 클라이언트 응용 프로그램에서 액세스하면 다른 측정값 그룹과 동일하므로 다른 측정값 그룹과 동일한 방식으로 쿼리됩니다.  
@@ -51,7 +56,7 @@ caps.handback.revision: 41
   
  연결된 측정값 그룹에 포함된 측정값은 동일한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 검색한 연결된 차원과만 직접 구성이 가능합니다. 그러나 계산 멤버를 사용하면 연결된 측정값 그룹의 정보를 큐브 내의 연결되지 않은 다른 차원과 연결할 수 있습니다. 또한 참조 또는 다 대 다 관계 등의 간접 관계를 사용하여 연결되지 않은 차원을 연결된 측정값 그룹에 연결할 수 있습니다.  
   
-## 연결된 측정값 만들기 또는 수정  
+## <a name="create-or-modify-a-linked-measure"></a>연결된 측정값 만들기 또는 수정  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 를 사용하여 연결된 측정값 그룹을 만들 수 있습니다.  
   
 1.  이제 원본 큐브에서 원래 측정값 그룹에 대한 수정을 모두 완료합니다. 이에 따라 나중에 이후 큐브에서 연결된 측정값 그룹을 다시 만들 필요가 없습니다. 연결된 개체의 이름을 바꿀 수 있지만 다른 속성을 변경할 수는 없습니다.  
@@ -66,12 +71,12 @@ caps.handback.revision: 41
   
 6.  **마침** 을 클릭하여 연결된 개체를 만듭니다. 연결된 개체가 측정값 및 차원 창에서 링크 아이콘으로 표시되어 나타납니다.  
   
-## 연결된 측정값 보안  
+## <a name="secure-a-linked-measure"></a>연결된 측정값 보안  
  연결이 정의된 다음에는 연결된 측정값 그룹의 측정값에 대한 액세스가 다른 측정값 그룹에 대한 액세스와 동일한 방법으로 관리됩니다. 연결된 개체가 역할 디자이너에서 연결되지 않은 해당 항목과 함께 나타납니다. 측정값 그룹의 보안 관리에 대한 자세한 내용은 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)를 참조하세요.  
   
  연결된 측정값 그룹을 정의하거나 사용하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 Windows 서비스 계정이 원본 큐브 및 측정값 그룹에 대한 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대해 **ReadDefinition** 및 **읽기** 권한을 갖는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 역할에 속하거나 원본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자 역할에 속해야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [연결된 차원 정의](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

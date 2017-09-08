@@ -1,22 +1,27 @@
 ---
-title: "통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "통합 문서 및 예약 된 데이터 새로 고침 (SharePoint 2013) 업그레이드 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/02/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 09907013b8a83b70fae3f0bf91f68f49a08290df
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
+# <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>통합 문서 업그레이드 및 예약된 데이터 새로 고침(SharePoint 2013)
   이 항목은 이전 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경에서 사용자의 통합 문서 환경과 이 릴리스에 새로 도입된 기능을 이용할 수 있도록 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서를 업그레이드 하는 방법에 대해 설명합니다. 새 기능에 대한 자세한 내용은 [PowerPivot의 새로운 기능](http://go.microsoft.com/fwlink/?LinkID=203917)을 참조하세요.  
   
 > [!WARNING]  
@@ -42,11 +47,11 @@ caps.handback.revision: 20
 -   [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] Analysis Services 서버와 함께 SharePoint 모드로 실행되는 통합 문서에 대해 예약된 데이터 새로 고침을 사용합니다.  
   
 > [!IMPORTANT]  
->  업그레이드된 통합 문서를 롤백할 수 없으므로 이전 버전의 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] 또는 이전 버전의 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]에서 통합 문서를 사용하려는 경우 파일 복사본을 만드십시오.  
+>  업그레이드된 통합 문서를 롤백할 수 없으므로 이전 버전의 [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]또는 이전 버전의 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]에서 통합 문서를 사용하려는 경우 파일 복사본을 만드십시오.  
   
  다음 표에서는 통합 문서가 만들어진 환경을 기준으로 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서의 지원 및 동작을 보여 줍니다. 일반 사용자 환경, 특정 환경으로 통합 문서를 업그레이드하도록 지원되는 업그레이드 옵션 및 아직 업그레이드되지 않은 통합 문서의 예약된 데이터 새로 고침 동작 등이 설명됩니다.  
   
-### 통합 문서 동작 및 업그레이드 옵션  
+### <a name="workbook-behavior-and-upgrade-options"></a>통합 문서 동작 및 업그레이드 옵션  
   
 |통합 문서 작성 환경|\<|지원 및 동작|>|  
 |----------------|--------|--------------------------|--------|  
@@ -84,7 +89,7 @@ caps.handback.revision: 20
   
  Analysis Services 기능 변경 사항에 대한 자세한 내용은 [SQL Server 2016 Analysis Services 기능의 동작 변경 내용](../../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)을 참조하세요.  
   
- 새로 고침 기록에 대한 자세한 내용은 [데이터 새로 고침 기록 보기&#40;SharePoint용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)를 참조하세요.  
+ 새로 고침 기록에 대한 자세한 내용은 [데이터 새로 고침 기록 보기&#40;SharePoint용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)을 참조하세요.  
   
 ##  <a name="bkmk_to_2012sp1_from_2012"></a> 2012 PowerPivot for Excel 추가 기능으로 만든 버전에서 Office 2013 통합 문서로 업그레이드  
  이 섹션에서는 SQL Server 2012 **for Excel 2010 통합 문서** 에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] SQL Server 2012 SP1 **in Excel 2013 업그레이드에** 대해 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 설명합니다.  
@@ -155,11 +160,11 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  **정의** 탭에서 공급자 버전이 연결 문자열의 시작 부분에 나타납니다.  
   
-     **Provider=MSOLAP.5**는 통합 문서가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]임을 나타냅니다.  
+     **Provider=MSOLAP.5** 는 통합 문서가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]임을 나타냅니다.  
   
-     **Provider=MSOLAP.4**는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]를 나타냅니다.  
+     **Provider=MSOLAP.4** 는 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]를 나타냅니다.  
   
-     **Data Source=$Embedded$**는 통합 문서가 포함된 데이터베이스를 사용하는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서입니다.  
+     **Data Source=$Embedded$** 는 통합 문서가 포함된 데이터베이스를 사용하는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서입니다.  
   
 ###  <a name="bkmk_msolappc"></a> 로컬 컴퓨터에서 MSOLAP 데이터 공급자의 현재 버전을 확인하는 방법  
  아래 지침을 사용하여 OLE DB 공급자가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서를 실행하는 서버 또는 워크스테이션에서 최신 버전인지 확인합니다. 현재 버전을 알고 있으면 업그레이드 후 데이터 연결 오류 문제를 해결하는 데 도움이 될 수 있습니다.  
@@ -168,10 +173,10 @@ PS C:\Windows\system32> Set-PowerPivotSystemService –WorkbookUpgradeOnDataRefr
   
 2.  MSOLAP이 나타날 때까지 아래로 스크롤합니다. 시스템에 설치된 OLAP 공급자 중에 MSOLAP.5가 나열되었는지 확인합니다. MSOLAP | CurVer이 MSOLAP.5로 설정되었는지 확인합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>참고 항목  
  [SharePoint 2013으로 파워 피벗 마이그레이션](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
- [SharePoint용 Power Pivot 업그레이드](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
+ [SharePoint용 파워 피벗 업그레이드](../../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [Analysis Services의 새로운 기능](../../../analysis-services/what-s-new-in-analysis-services.md)   
- [데이터 새로 고침 기록 보기&#40;SharePoint용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
+ [기록 &#40; 뷰 데이터 새로 고침 Power Pivot for SharePoint &#41;](../../../analysis-services/power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md)  
   
   

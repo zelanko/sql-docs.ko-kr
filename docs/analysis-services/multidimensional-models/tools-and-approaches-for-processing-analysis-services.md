@@ -1,27 +1,32 @@
 ---
-title: "도구 및 처리 접근 방법(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "프로세스 [Analysis Services]"
-  - "처리 [Analysis Services]"
+title: "도구 및 처리 접근 방법 (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- process [Analysis Services]
+- processing [Analysis Services]
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5eecf424cf155c53a2f636590ba002028f24db84
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 도구 및 처리 접근 방법(Analysis Services)
+# <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
   처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  
   
  Analysis Services 시스템 관리자는 다음과 같은 방법을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체의 처리를 실행하고 모니터링할 수 있습니다.  
@@ -49,7 +54,7 @@ caps.handback.revision: 34
 > [!NOTE]  
 >  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델 처리에 대한 자세한 내용은 [데이터베이스, 테이블 또는 파티션 처리&#40;Analysis Services&#41;](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md) 및 [데이터 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)를 참조하세요.  
   
-### SQL Server Management Studio에서 개체 처리  
+### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 처리  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 Analysis Services에 연결합니다.  
   
@@ -79,7 +84,7 @@ caps.handback.revision: 34
   
      프로세스 진행률 대화 상자에 각 명령의 현재 상태가 표시됩니다. 상태 메시지가 잘리는 경우 **자세히 보기** 를 클릭하면 전체 메시지를 읽을 수 있습니다.  
   
-### SQL Server 데이터 도구에서 개체 처리  
+### <a name="processing-objects-in-sql-server-data-tools"></a>SQL Server 데이터 도구에서 개체 처리  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 시작하고 배포된 프로젝트를 엽니다.  
   
@@ -87,7 +92,7 @@ caps.handback.revision: 34
   
 3.  차원을 마우스 오른쪽 단추로 클릭한 다음 **처리**를 클릭합니다. 여러 차원을 마우스 오른쪽 단추로 클릭하여 여러 개체를 한 번에 처리할 수 있습니다. 자세한 내용은 [일괄 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)를 참조하세요.  
   
-4.  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다. 그렇지 않을 경우 **처리 옵션**에서 해당 옵션을 클릭한 다음 드롭다운 목록에서 **전체 처리**를 선택합니다.  
+4.  **차원 처리** 대화 상자에 있는 **개체 목록** 의 **처리 옵션**열에서 이 열에 대한 옵션이 **전체 처리**인지 확인합니다. 그렇지 않을 경우 **처리 옵션**에서 해당 옵션을 클릭한 다음 드롭다운 목록에서 **전체 처리** 를 선택합니다.  
   
 5.  **실행**을 클릭합니다.  
   
@@ -101,7 +106,7 @@ caps.handback.revision: 34
   
 3.  **영향 분석**을 클릭합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 모델을 검색한 후 처리하기 위해 선택한 모델과 관련된 개체에 대한 다시 처리 요구 사항에 대해 보고합니다.  
   
-### XMLA를 사용하여 개체 처리  
+### <a name="processing-objects-using-xmla"></a>XMLA를 사용하여 개체 처리  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 Analysis Services에 연결합니다.  
   
@@ -119,7 +124,7 @@ caps.handback.revision: 34
   
 7.  메뉴 모음에서 **쿼리**를 클릭한 다음 **실행**을 클릭합니다.  
   
-### PowerShell을 사용하여 개체 처리  
+### <a name="processing-objects-using-powershell"></a>PowerShell을 사용하여 개체 처리  
   
 1.  이 SQL Server 릴리스부터는 Analysis Services PowerShell cmdlet을 사용하여 개체를 처리할 수 있습니다. 다음 cmdlet은 대화형으로 실행하거나 스크립트로 실행할 수 있습니다.  
   
@@ -129,9 +134,9 @@ caps.handback.revision: 34
   
     -   [Invoke-ProcessPartition cmdlet](../../analysis-services/powershell/invoke-processpartition-cmdlet.md)  
   
-    -   [Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md) - 처리 명령을 포함하는 XMLA, MDX 또는 DMX 스크립트를 실행하는 데 사용할 수 있습니다.  
+    -   [Invoke-ASCmd cmdlet](../../analysis-services/powershell/invoke-ascmd-cmdlet.md)- 처리 명령을 포함하는 XMLA, MDX 또는 DMX 스크립트를 실행하는 데 사용할 수 있습니다.  
   
-### SQL Server 프로파일러를 사용하여 개체 처리 모니터링  
+### <a name="monitoring-object-processing-using-sql-server-profiler"></a>SQL Server 프로파일러를 사용하여 개체 처리 모니터링  
   
 1.  SQL Server 프로파일러의 Analysis Services 인스턴스에 연결합니다.  
   
@@ -149,15 +154,15 @@ caps.handback.revision: 34
   
     -   필요에 따라 처리와 관련된 성능 문제를 진단하려는 경우 잠금 이벤트를 추가합니다.  
   
-### Integration Services를 사용하여 Analysis Services 개체 처리  
+### <a name="process-analysis-services-objects-using-integration-services"></a>Integration Services를 사용하여 Analysis Services 개체 처리  
   
 1.  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서 Analysis Services 처리 태스크를 사용하여 원본 관계형 데이터베이스를 정기적으로 업데이트할 때 자동으로 개체를 새 데이터로 채우는 패키지를 만듭니다.  
   
-2.  **SSIS 도구 상자**에서 **Analysis Services 처리**를 두 번 클릭하여 패키지에 추가합니다.  
+2.  **SSIS 도구 상자**에서 **Analysis Services 처리** 를 두 번 클릭하여 패키지에 추가합니다.  
   
 3.  태스크를 편집하여 데이터베이스에 대한 연결, 처리할 개체 및 처리 옵션을 지정합니다. 이 태스크의 구현 방법은 [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md)을 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

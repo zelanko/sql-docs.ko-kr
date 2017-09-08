@@ -1,56 +1,61 @@
 ---
 title: "네트워크 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "LingerTimeout 속성"
-  - "EnableNagleAlgorithm 속성"
-  - "MinPendingAcceptExCount 속성"
-  - "MaxPendingSendCount 속성"
-  - "EnableBinaryXML 속성"
-  - "MinPendingReceiveCount 속성"
-  - "MaxCompletedReceiveCount 속성"
-  - "DisableNonblockingMode 속성"
-  - "RequestSizeThreshold 속성"
-  - "CompressionLevel 속성"
-  - "ReceiveBufferSize 속성"
-  - "EnableCompression 속성"
-  - "ServerSendTimeout 속성"
-  - "IPV4Support 속성"
-  - "MaxPendingReceiveCount 속성"
-  - "MaxPendingAcceptExCount 속성"
-  - "IPV6Support 속성"
-  - "MaxAllowedRequestSize 속성"
-  - "ServerReceiveTimeout 속성"
-  - "EnableLingerOnClose 속성"
-  - "InitialConnectTimeout 속성"
-  - "SendBufferSize 속성"
-  - "ScatterReceiveMultiplier 속성"
-  - "네트워크 속성 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- LingerTimeout property
+- EnableNagleAlgorithm property
+- MinPendingAcceptExCount property
+- MaxPendingSendCount property
+- EnableBinaryXML property
+- MinPendingReceiveCount property
+- MaxCompletedReceiveCount property
+- DisableNonblockingMode property
+- RequestSizeThreshold property
+- CompressionLevel property
+- ReceiveBufferSize property
+- EnableCompression property
+- ServerSendTimeout property
+- IPV4Support property
+- MaxPendingReceiveCount property
+- MaxPendingAcceptExCount property
+- IPV6Support property
+- MaxAllowedRequestSize property
+- ServerReceiveTimeout property
+- EnableLingerOnClose property
+- InitialConnectTimeout property
+- SendBufferSize property
+- ScatterReceiveMultiplier property
+- network properties [Analysis Services]
 ms.assetid: ef4251e2-abe5-4c5b-9868-7549782d0244
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e866ebb50ceb59a43f6d32303aa59092250e230b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 네트워크 속성
+# <a name="network-properties"></a>네트워크 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
  **적용 대상:** 다차원 및 테이블 형식 서버 모드  
   
-## 일반  
+## <a name="general"></a>일반  
  **ListenOnlyOnLocalConnections**  
  로컬 연결(예: localhost)만 수신하는지 여부를 식별하는 부울 속성입니다.  
   
-## 수신기  
+## <a name="listener"></a>수신기  
  **IPV4Support**  
  IPv4 프로토콜에 대한 지원을 정의하는 부호 있는 32비트 정수 속성입니다. 이 속성은 다음 표에 나열된 값 중 하나를 가집니다.  
   
@@ -81,14 +86,14 @@ caps.handback.revision: 15
  **ServerSendTimeout**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 요청  
+## <a name="requests"></a>요청  
  **EnableBinaryXML**  
  서버에서 이진 xml 형식 요청을 식별하는지 여부를 지정하는 부울 속성입니다.  
   
  **EnableCompression**  
  요청에 대해 압축이 설정되어 있는지 여부를 지정하는 부울 속성입니다.  
   
-## 응답  
+## <a name="responses"></a>응답  
  **CompressionLevel**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -98,7 +103,7 @@ caps.handback.revision: 15
  **EnableCompression**  
  클라이언트 요청에 대한 응답으로 압축이 설정되어 있는지 여부를 지정하는 부울 속성입니다.  
   
-## TCP  
+## <a name="tcp"></a>TCP  
  **InitialConnectTimeout**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -141,7 +146,7 @@ caps.handback.revision: 15
  **SocketOptions\ SendBufferSize**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "파워 피벗 BI 의미 체계 모델 연결(.bism) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "전원 피벗 BI 의미 체계 모델 연결 (.bism) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41cfa6b2ca110803ca4b63abf683edf7d508c027
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 파워 피벗 BI 의미 체계 모델 연결(.bism)
+# <a name="power-pivot-bi-semantic-model-connection-bism"></a>파워 피벗 BI 의미 체계 모델 연결(.bism)
   BI 의미 체계 모델 연결(.bism)은 Excel 또는 파워 뷰 보고서를 Analysis Services 테이블 형식 model 데이터베이스 또는 다차원 모드의 Analysis Services 인스턴스에 연결하는 이식 가능한 연결입니다. Office 데이터 연결(.odc) 파일에 대해 잘 알고 있다면 .bism 연결 파일을 정의하여 사용하는 것이 얼마나 간편한지를 알 수 있습니다.  
   
  BI 의미 체계 모델 연결은 SharePoint를 통해 만들고 액세스합니다. BI 의미 체계 모델 연결을 만들면 라이브러리에서 BI 의미 체계 모델 연결에 대한 빠른 시작 명령을 사용할 수 있습니다. 빠른 시작 명령은 새 Excel 통합 문서 또는 연결 파일 편집 옵션을 엽니다. Reporting Services가 설치되어 있는 경우 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서를 만드는 명령도 표시됩니다.  
   
- ![BISM 빠른 시작 명령의 스크린 샷](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "BISM 빠른 시작 명령의 스크린 샷")  
+ ![빠른 시작 명령의 스크린 샷의 BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "스크린 샷의 BISM 빠른 실행 명령")  
   
 ##  <a name="bkmk_prereq"></a> 지원되는 데이터베이스  
  BI 의미 체계 모델 연결은 테이블 형식 모델 데이터를 가리킵니다. 이 데이터의 원본은 다음 세 가지입니다.  
@@ -36,7 +41,7 @@ caps.handback.revision: 37
   
  데이터 원본을 비교한 내용은 커뮤니티 콘텐츠 [SQL Server 2012 BISM(BI 의미 체계 모델) 이해](http://www.mssqltips.com/sqlservertip/2818/understanding-the-sql-server-2012-bi-semantic-model-bism/)를 참조하세요.  
   
-## BI 의미 체계 연결에 대한 연결 시퀀스 이해  
+## <a name="understanding-the-connection-sequence-for-bi-semantic-connections"></a>BI 의미 체계 연결에 대한 연결 시퀀스 이해  
  이 섹션에서는 Excel 데스크톱 응용 프로그램이나 SharePoint의 파워 뷰 보고 클라이언트와 같은 다양한 클라이언트 응용 프로그램과, SharePoint 팜 내부 또는 외부의 테이블 형식 모델 데이터베이스 간의 연결 동작을 설명합니다.  
   
  테이블 형식 모델 데이터베이스로의 모든 연결은 데이터를 요청하는 사용자의 자격 증명을 사용하여 이루어집니다. 하지만 해당 연결의 메커니즘은 연결이 팜 내 연결인지 단일 홉 또는 이중 홉 연결인지 그리고 Kerberos를 사용할 수 있는지 여부에 따라 다릅니다. SharePoint와 백 엔드 데이터 원본 간의 인증된 연결에 대한 자세한 내용은 [이중 홉 인증: NTLM은 실패하고 Kerberos는 작동하는 이유](http://go.microsoft.com/fwlink/?LinkId=237137)를 참조하세요.  
@@ -57,11 +62,11 @@ caps.handback.revision: 37
   
  Kerberos가 구성 되어 있지 않고 요청이 실패할 경우 Reporting Services는 두 번째 시도를 합니다. 이 시나리오에서 클라이언트 라이브러리는 Reporting Services서비스 ID 및 NTLM 인증을 사용하여 Analysis Services에 연결합니다. 파워 뷰 사용자 ID는 **effectiveusername** 매개 변수를 사용하여 연결 문자열에 전달됩니다.  
   
- Analysis Services 인스턴스의 시스템 관리자 역할 중 한 멤버만이 **effectiveusername** 매개 변수를 사용하여 연결할 권한을 가지며 서버 인스턴스의 또 다른 사용자를 가장합니다. 따라서 Reporting Services 공유 서비스의 실행 계정은 Analysis Services 인스턴스에 대한 관리 권한을 가져야 합니다.  서비스 계정에 관리 권한을 부여하는 방법에 대한 자세한 내용은 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md) 항목을 참조하세요.  
+ Analysis Services 인스턴스의 시스템 관리자 역할 중 한 멤버만이 **effectiveusername** 매개 변수를 사용하여 연결할 권한을 가지며 서버 인스턴스의 또 다른 사용자를 가장합니다. 따라서 Reporting Services 공유 서비스의 실행 계정은 Analysis Services 인스턴스에 대한 관리 권한을 가져야 합니다.  서비스 계정에 관리 권한을 부여하는 방법에 대한 자세한 내용은 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목을 참조하세요.  
   
  다음 그림에서는 각 연결에 대해 동일한 Windows 사용자 ID를 사용하는 연결 시퀀스를 보여 줍니다. Analysis Services에 대한 마지막 연결에서 연결은 Reporting Services 서비스 응용 프로그램 ID를 통해 이루어지며 **effectiveusername**를 사용하여 Windows 사용자 ID가 전달됩니다.  
   
- ![테이블 형식 데이터베이스에 대한 가장된 연결](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "테이블 형식 데이터베이스에 대한 가장된 연결")  
+ ![테이블 형식 데이터베이스에 대 한 가장 된 연결](../../analysis-services/power-pivot-sharepoint/media/ssas-powerpivotbismconnection-2.gif "테이블 형식 데이터베이스에 대 한 가장 된 연결")  
   
  **파워 뷰에서 SharePoint의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 연결**  
   
@@ -70,15 +75,15 @@ caps.handback.revision: 37
  이 시나리오에서는 모든 연결이 동일한 팜 내에서 이루어지므로 Kerberos나 제한 위임에 대한 요구 사항이 없습니다.  
   
 ##  <a name="bkmk_rel"></a> 관련 작업  
- [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)  
+ [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [테이블 형식 모델 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)  
   

@@ -1,42 +1,47 @@
 ---
 title: "Microsoft Naive Bayes 알고리즘 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/02/2016"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Bayesian 분류자"
-  - "알고리즘 [데이터 마이닝]"
-  - "예측 모델링 [Analysis Services]"
-  - "분류 알고리즘 [Analysis Services]"
-  - "naive bayes 알고리즘 [Analysis Services]"
+ms.custom: 
+ms.date: 03/02/2016
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Bayesian classifiers
+- algorithms [data mining]
+- predictive modeling [Analysis Services]
+- classification algorithms [Analysis Services]
+- naive bayes algorithms [Analysis Services]
 ms.assetid: 3b53e011-3b1a-4cd1-bdc2-456768ba31b5
 caps.latest.revision: 57
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 57
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 074a93f83cd89449898f0fe66e3680b8dfd95b21
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft Naive Bayes 알고리즘
+# <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes 알고리즘
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 Bayes 정리를 기반으로 하는 분류 알고리즘으로, 설명 및 예측 모델링 둘 다에 사용할 수 있습니다. Naïve Bayes라는 이름의 naïve는 이 알고리즘이 Bayes 기술을 사용하지만 있을 수 있는 종속성을 고려하지 않는다는 사실에서 비롯된 것입니다.  
   
  이 알고리즘은 다른 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘보다 계산 과정이 단순하여 입력 열과 예측 가능한 열 간의 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다. 이 알고리즘을 사용하여 초기 데이터 탐색을 수행한 후 나중에 그 결과를 적용하여 보다 복잡하고 정확한 다른 알고리즘으로 추가 마이닝 모델을 만들 수 있습니다.  
   
-## 예제  
+## <a name="example"></a>예제  
  진행 중인 홍보 행사 전략의 하나로 Adventure Works Cycle사의 마케팅 부서는 우편으로 전단지를 보내 잠재 고객을 공략하기로 결정했습니다. 비용을 줄이기 위해 응답 가능성이 큰 고객에게만 전단지를 보내려고 합니다. 회사는 인구 통계 및 이전 우편물에 대한 응답 정보를 데이터베이스에 저장합니다. 이 데이터를 사용하여 특징이 유사하고 과거에 회사 제품을 구매한 고객과 잠재 고객을 비교하여 연령 및 위치와 같은 인구 통계가 홍보 행사에 대한 응답을 예측하는 데 얼마나 도움이 되는지 확인하려고 합니다. 특히 자전거를 구입한 고객과 구입하지 않은 고객의 차이점을 찾으려고 합니다.  
   
  마케팅 부서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 특정 고객 프로필에 대한 결과를 신속하게 예측할 수 있으므로 전단지에 응답할 가능성이 큰 고객을 결정할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Naive Bayes 뷰어를 사용하면 특히 전단지에 대한 긍정적인 응답에 기여한 입력 열을 시각적으로 조사할 수도 있습니다.  
   
-## 알고리즘 작동 방법  
+## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 가능한 열에 가능한 각 상태가 지정되면 각 입력 열의 모든 상태에 대한 확률을 계산합니다.  
   
- 다음 그래픽에 표시된 것처럼 [!INCLUDE[msCoName](../../includes/msconame-md.md)]의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Naive Bayes 뷰어를 사용하여 알고리즘의 상태 분포를 시각적으로 탐색함으로써 이 알고리즘의 작동 방식을 이해할 수 있습니다.  
+ 다음 그래픽에 표시된 것처럼 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Naive Bayes 뷰어를 사용하여 알고리즘의 상태 분포를 시각적으로 탐색함으로써 이 알고리즘의 작동 방식을 이해할 수 있습니다.  
   
  ![Naive bayes 상태 분포](../../analysis-services/data-mining/media/naive-bayes.gif "Naive bayes 상태 분포")  
   
@@ -50,7 +55,7 @@ caps.handback.revision: 57
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어를 사용하는 방법에 대한 자세한 내용은 [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 참조하세요.  
   
-## Naive Bayes 모델에 필요한 데이터  
+## <a name="data-required-for-naive-bayes-models"></a>Naive Bayes 모델에 필요한 데이터  
  Naive Bayes 모델을 학습하는 데 사용할 데이터를 준비할 때는 필요한 데이터의 양과 사용법을 비롯하여 해당 알고리즘의 요구 사항을 알고 있어야 합니다.  
   
  Naive Bayes 모델의 요구 사항은 다음과 같습니다.  
@@ -67,19 +72,19 @@ caps.handback.revision: 57
   
      예측 가능한 열의 값은 입력으로 처리할 수 있습니다. 이 방법은 열 간의 관계를 찾기 위해 새 데이터 집합을 탐색하는 경우에 유용할 수 있습니다.  
   
-## 모델 보기  
+## <a name="viewing-the-model"></a>모델 보기  
  **Microsoft Naive Bayes 뷰어**를 사용하여 모델을 탐색할 수 있습니다. 이 뷰어에서는 입력 특성과 예측 가능한 특성의 관계를 보여 줍니다. 또한 뷰어에서는 각 클러스터에 대한 자세한 프로필, 각 클러스터를 다른 클러스터와 구별하게 해 주는 특성 목록 및 전체 학습 데이터 집합의 특성도 제공합니다. 자세한 내용은 [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)를 참조하세요.  
   
- 자세한 내용을 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)에서 모델을 살펴보세요. 모델에 저장된 정보 유형에 대한 자세한 내용은 [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)을 참조하세요.  
+ 자세한 내용을 보려면 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)에서 모델을 살펴보세요. 모델에 저장된 정보 유형에 대한 자세한 내용은 [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)을 참조하세요.  
   
-## 예측  
+## <a name="making-predictions"></a>예측  
  모델을 학습한 후에는 그 결과가 일련의 패턴으로 저장되며 이러한 패턴을 탐색하거나 사용하여 예측을 만들 수 있습니다.  
   
  새 데이터와 예측 가능한 특성의 관계에 대한 예측을 반환하는 쿼리를 만들거나 모델에서 발견된 상관 관계를 설명하는 통계를 검색할 수 있습니다.  
   
  데이터 마이닝 모델에 대한 쿼리를 만드는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요. Naive Bayes 모델에서 쿼리를 사용하는 방법의 예는 [Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)를 참조하세요.  
   
-## 주의  
+## <a name="remarks"></a>주의  
   
 -   PMML(Predictive Model Markup Language)을 사용하여 마이닝 모델을 만들 수 있습니다.  
   
@@ -89,11 +94,12 @@ caps.handback.revision: 57
   
 -   OLAP 마이닝 모델의 사용을 지원합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [기능 선택&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
+ [기능 선택 &#40; 데이터 마이닝 &#41;](../../analysis-services/data-mining/feature-selection-data-mining.md)   
  [Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)   
- [Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
+ [Naive Bayes 모델 &#40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)   
  [Microsoft Naive Bayes 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)  
   
   
+

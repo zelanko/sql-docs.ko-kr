@@ -1,26 +1,31 @@
 ---
-title: "Queries Events 범주 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Queries Events 이벤트 범주"
-  - "쿼리 이벤트 [Analysis Services]"
-  - "이벤트 클래스 [Analysis Services], 쿼리 이벤트"
+title: "이벤트 범주를 쿼리 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Queries Events event category
+- query events [Analysis Services]
+- event classes [Analysis Services], queries events
 ms.assetid: 99e1d1d6-f03f-4dd0-b467-ea915aea7667
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 33e463c8a03877997616fc419651023eeebd4782
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Queries Events 범주
+# <a name="queries-events-category"></a>Queries Events 범주
   Queries Events 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  
   
 |Event Class|이벤트 ID|Description|  
@@ -30,7 +35,7 @@ caps.handback.revision: 27
   
  각각의 Query Events 이벤트 클래스와 연관된 열에 대한 자세한 내용은 [Queries Events Data Columns](../../analysis-services/trace-events/queries-events-data-columns.md)을 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   
