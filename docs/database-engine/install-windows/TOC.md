@@ -26,7 +26,7 @@
 ## [시스템 구성 검사기의 검사 매개 변수](check-parameters-for-the-system-configuration-checker.md)  
 ## [Server Core 설치 시 SQL Server 구성](configure-sql-server-on-a-server-core-installation.md)  
 ## [Server Core에 SQL Server 설치](install-sql-server-on-server-core.md)  
-## [설치 마법사에서 SQL Server 설치(설치 프로그램)](install-sql-server-from-the-installation-wizard-setup.md)  
+## [설치 마법사에서 SQL Server 설치(설치 프로그램)](install-sql-server-from-the-installation-wizard-setup.md)
 ## [명령 프롬프트에서 SQL Server 설치](install-sql-server-2016-from-the-command-prompt.md)  
 ## [구성 파일을 사용하여 SQL Server 설치](install-sql-server-2016-using-a-configuration-file.md)  
 ## [SysPrep을 사용하여 SQL Server 설치](install-sql-server-using-sysprep.md)  
