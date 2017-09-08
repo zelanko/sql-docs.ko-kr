@@ -22,11 +22,11 @@ caps.latest.revision: 49
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: add18839976ae919686cbd488385531de3bf684e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Reporting Services에서 외부 데이터 집합 사용
@@ -169,7 +169,7 @@ public int GetOrdinal(string name)
   
  만들거나 데이터 집합을 검색 한 후 사용할 수 있습니다는 **DataSet** 구현에는 개체는 **읽기**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType**, 및 **FieldCount** 의 멤버는 **DataReader** 클래스입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  

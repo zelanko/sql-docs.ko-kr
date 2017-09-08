@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.wmieventwatchertask.f1
+- sql13.dts.designer.wmieventwatcher.general.f1
+- sql13.dts.designer.wmieventwatcher.wmiquery.f1
 helpviewer_keywords:
 - WQL [Integration Services]
 - WMI Event Watcher task [Integration Services]
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91107cf76f48f60b23b7ee1f0f93352468a1422
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: e46d2c926ecd1dd381d358ea6e779bc427116444
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="wmi-event-watcher-task"></a>WMI 이벤트 감시자 태스크
@@ -93,11 +95,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [WMI 이벤트 감시자 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-general-page.md)  
-  
--   [WMI 이벤트 감시자 태스크 편집기&#40;WMI 옵션 페이지&#41;](../../integration-services/control-flow/wmi-event-watcher-task-editor-wmi-options-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목을 클릭하십시오.  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -110,4 +108,75 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WmiEventWatcherTask.WmiEventWatcherTask>  
   
+## <a name="wmi-event-watcher-task-editor-general-page"></a>WMI 이벤트 감시자 태스크 편집기(일반 페이지)
+  **WMI 이벤트 감시자 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 WMI 이벤트 감시자 태스크의 이름을 지정하고 설명할 수 있습니다.  
   
+ WQL(WMI Query Language)에 대한 자세한 내용은 MSDN 라이브러리의 WMI(Windows Management Instrumentation) 항목인 [Querying with WQL(WQL을 사용하여 쿼리)](http://go.microsoft.com/fwlink/?LinkId=79045)을 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **이름**  
+ WMI 이벤트 감시자 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
+  
+> [!NOTE]  
+>  태스크 이름은 패키지 내에서 고유해야 합니다.  
+  
+ **Description**  
+ WMI 이벤트 감시자 태스크에 대한 설명을 입력합니다.  
+  
+## <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>WMI 이벤트 감시자 태스크 편집기(WMI 옵션 페이지)
+  **WMI 이벤트 감시자 태스크 편집기** 대화 상자의 **WMI 옵션** 페이지를 사용하여 WQL(Windows Management Instrumentation Query Language) 쿼리의 원본 및 WMI 이벤트 감시자 태스크가 Microsoft Windows Instrumentation(WMI) 이벤트에 응답하는 방식을 지정할 수 있습니다.  
+  
+ WQL(WMI Query Language)에 대한 자세한 내용은 MSDN 라이브러리의 WMI(Windows Management Instrumentation) 항목인 [Querying with WQL(WQL을 사용하여 쿼리)](http://go.microsoft.com/fwlink/?LinkId=79045)을 참조하세요.  
+  
+### <a name="static-options"></a>정적 옵션  
+ **WMIConnectionName**  
+ 목록에서 WMI 연결 관리자를 선택 하거나 클릭 \< **새 WMI 연결...** > 새 연결 관리자를 만듭니다.  
+  
+ **관련 항목:** [WMI 연결 관리자](../../integration-services/connection-manager/wmi-connection-manager.md), [WMI 연결 관리자 편집기](../../integration-services/connection-manager/wmi-connection-manager-editor.md)  
+  
+ **WQLQuerySourceType**  
+ 태스크에서 실행하는 WQL 쿼리의 원본 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**직접 입력**|WQL 쿼리에 대한 원본을 설정합니다. 이 값을 선택하면 동적 옵션 **WQLQuerySource**가 표시됩니다.|  
+|**파일 연결**|WQL 쿼리가 포함된 파일을 선택합니다. 이 값을 선택하면 동적 옵션 **WQLQuerySource**가 표시됩니다.|  
+|**변수**|WQL 쿼리를 정의하는 변수에 대한 원본을 설정합니다. 이 값을 선택하면 동적 옵션 **WQLQuerySource**가 표시됩니다.|  
+  
+ **ActionAtEvent**  
+ WMI 이벤트가 이벤트를 기록하고 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 동작을 시작할지, 아니면 이벤트만 기록할지를 지정합니다.  
+  
+ **AfterEvent**  
+ WMI 이벤트를 수신한 후 태스크가 성공 또는 실패하도록 지정하거나 태스크가 이벤트가 다시 발생하는지 여부를 계속 감시하도록 지정합니다.  
+  
+ **ActionAtTimeout**  
+ 태스크가 WMI 쿼리에 대한 제한 시간 초과 발생을 기록하고 이에 대한 응답으로 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 이벤트를 시작할지, 아니면 제한 시간 초과 발생만 기록할지를 지정합니다.  
+  
+ **AfterTimeout**  
+ 제한 시간 초과에 대한 응답으로 태스크가 성공 또는 실패하도록 지정하거나 태스크가 제한 시간 초과가 다시 발생하는지 여부를 계속 감시하도록 지정합니다.  
+  
+ **NumberOfEvents**  
+ 감시할 이벤트의 수를 지정합니다.  
+  
+ **Timeout**  
+ 이벤트가 발생할 때까지 대기할 시간(초)을 지정합니다. 값 0은 제한 시간이 적용되지 않음을 의미합니다.  
+  
+### <a name="wqlquerysource-dynamic-options"></a>WQLQuerySource 동적 옵션  
+  
+#### <a name="wqlquerysource--direct-input"></a>WQLQuerySource = 직접 입력  
+ **WQLQuerySource**  
+ 쿼리를 제공하거나, 줄임표 단추(...)를 클릭하고 **WQL 쿼리** 대화 상자를 사용하여 쿼리를 입력합니다.  
+  
+#### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = 파일 연결  
+ **WQLQuerySource**  
+ 목록에서 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+  
+ **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="wqlquerysource--variable"></a>WQLQuerySource = 변수  
+ **WQLQuerySource**  
+ 목록에서 변수를 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+  
+

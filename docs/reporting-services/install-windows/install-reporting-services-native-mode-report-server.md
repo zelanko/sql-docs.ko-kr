@@ -2,7 +2,7 @@
 title: "Reporting Services 기본 모드 보고서 서버 설치 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,16 +19,16 @@ caps.latest.revision: 68
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 65a02d6be519b146f37159dd75f1f51dcfb254cc
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 3e535ef444e43860e35befbf0f33fe1eb582801d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 기본 모드로 설치하는 방법을 알아 봅니다. 이 보고서 및 기타 항목을 관리할 수 있는 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에 대한 액세스 권한을 제공합니다.
 
@@ -179,7 +179,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 보기 및 관리 하려면 보고서 컴퓨터에 액세스할 수 있도록 웹 포털을 구성 하려면 참조 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md) 및 [원격 관리를 위한 보고서 서버 구성](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [Reporting Services 설치 문제 해결](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)   
 [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)   

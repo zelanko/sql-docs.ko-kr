@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferjobstask.f1
+- sql13.dts.designer.transferjobstask.general.f1
+- sql13.dts.designer.transferjobstask.jobs.f1
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61839f15a36ff679f4edfc4585192100c370bb43
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a4264d737901fbb7c023e216d3d8faf5309469f9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-jobs-task"></a>작업 전송 태스크
@@ -64,11 +66,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-jobs-task"></a>작업 전송 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [작업 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-general-page.md)  
-  
--   [작업 전송 태스크 편집기&#40;작업 페이지&#41;](../../integration-services/control-flow/transfer-jobs-task-editor-jobs-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목을 클릭하십시오.  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -80,6 +78,74 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-jobs-task-editor-general-page"></a>작업 전송 태스크 편집기(일반 페이지)
+  **작업 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 작업 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다.  
+  
+> [!NOTE]  
+>  대상 서버의 **sysadmin** 고정 서버 역할 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 중 하나의 멤버만 대상 서버에서 작업을 만들 수 있습니다. 원본 서버의 작업에 액세스하려면 사용자는 최소한 원본 서버의 **SQLAgentUserRole** 고정 데이터베이스 역할의 멤버여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 및 해당 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **이름**  
+ 작업 전송 태스크에 사용할 고유 이름을 입력합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
+  
+> [!NOTE]  
+>  태스크 이름은 패키지 내에서 고유해야 합니다.  
+  
+ **Description**  
+ 작업 전송 태스크에 대한 설명을 입력합니다.  
+  
+## <a name="transfer-jobs-task-editor-jobs-page"></a>작업 전송 태스크 편집기(작업 페이지)
+  **작업 전송 태스크 편집기** 대화 상자의 **작업** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하기 위한 속성을 지정할 수 있습니다.  
+  
+> [!NOTE]  
+>  원본 서버의 작업에 액세스하려면 사용자가 적어도 서버에서 **SQLAgentUserRole** 고정 데이터베이스 역할의 멤버여야 합니다. 대상 서버에 작업을 만들려면 사용자가 **sysadmin** 고정 서버 역할의 멤버이거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 중 하나여야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 고정 데이터베이스 역할 및 해당 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](http://msdn.microsoft.com/library/719ce56b-d6b2-414a-88a8-f43b725ebc79)을 참조하세요.  
+  
+### <a name="options"></a>옵션  
+ **SourceConnection**  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 원본 서버에 새 연결을 만듭니다.  
+  
+ **DestinationConnection**  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 대상 서버에 새 연결을 만듭니다.  
+  
+ **TransferAllJobs**  
+ 원본 서버에서 대상 서버로 모든 SQL Server 에이전트 작업을 복사할지, 아니면 지정한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업만 복사할지를 선택합니다.  
+  
+ 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|모든 작업을 복사합니다.|  
+|**False**|지정한 작업만 복사합니다.|  
+  
+ **JobsList**  
+ 복사할 작업을 선택하려면 찾아보기 단추 **(…)** 를 클릭합니다. 하나 이상의 작업을 선택해야 합니다.  
+  
+> [!NOTE]  
+>  복사할 작업을 선택하기 전에 **SourceConnection** 을 지정합니다.  
+  
+ **TransferAllJobs** 를 **True** 로 설정하면 **JobsList**옵션을 사용할 수 없습니다.  
+  
+ **IfObjectExists**  
+ 태스크에서 대상 서버에 이미 있는 작업과 이름이 동일한 작업을 처리하는 방법을 선택합니다.  
+  
+ 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**FailTask**|대상 서버에 이름이 동일한 작업이 이미 있는 경우 태스크가 실패합니다.|  
+|**Overwrite**|대상 서버에 이름이 동일한 태스크가 있는 경우 이를 덮어씁니다.|  
+|**Skip**|대상 서버에 이름이 동일한 태스크가 있는 경우 이를 건너뜁니다.|  
+  
+ **EnableJobsAtDestination**  
+ 대상 서버로 복사한 작업을 활성화할지 여부를 선택합니다.  
+  
+ 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|대상 서버에서 작업을 활성화합니다.|  
+|**False**|대상 서버에서 작업을 비활성화합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [Integration Services 태스크](../../integration-services/control-flow/integration-services-tasks.md)   

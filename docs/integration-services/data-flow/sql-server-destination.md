@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.sqlserverdest.f1
+- sql13.dts.designer.sqlserverdestadapter.connection.f1
+- sql13.dts.designer.sqlserverdestadapter.mappings.f1
+- sql13.dts.designer.sqlserverdestadapter.advanced.f1
 helpviewer_keywords:
 - SQL Server destination
 - loading data
@@ -23,10 +26,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f1224814d165d5763d832b18f6523c6c47f6f59c
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: e85093b58f8fcad60231c0f1a5c24387be686be3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="sql-server-destination"></a>SQL Server 대상
@@ -93,14 +96,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **SQL Server 대상 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [SQL 대상 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/sql-destination-editor-connection-manager-page.md)  
-  
--   [SQL 대상 편집기&#40;매핑 페이지&#41;](../../integration-services/data-flow/sql-destination-editor-mappings-page.md)  
-  
--   [SQL 대상 편집기&#40;고급 페이지&#41;](../../integration-services/data-flow/sql-destination-editor-advanced-page.md)  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -126,6 +121,87 @@ ms.lasthandoff: 08/03/2017
 -   msdn.microsoft.com의 기술 문서 - [데이터 로드 성능 가이드](http://go.microsoft.com/fwlink/?LinkId=233700)  
   
 -   simple-talk.com의 기술 문서, [SQL Server Integration Services를 사용하여 데이터 대량 로드](http://go.microsoft.com/fwlink/?LinkId=233701)  
+  
+## <a name="sql-destination-editor-connection-manager-page"></a>SQL 대상 편집기(연결 관리자 페이지)
+  **SQL 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 데이터 원본 정보를 지정하고 결과를 미리 볼 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블이나 뷰로 데이터를 로드합니다.  
+  
+### <a name="options"></a>옵션  
+ **OLE DB 연결 관리자**  
+ 목록에서 기존 연결을 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+  
+ **새로 만들기**  
+ **OLE DB 연결 관리자 구성** 대화 상자를 사용하여 새 연결을 만듭니다.  
+  
+ **테이블 또는 뷰 사용**  
+ 목록에서 기존 테이블 또는 뷰를 선택하거나 **새로 만들기**를 클릭하여 새 연결을 만듭니다.  
+  
+ **새로 만들기**  
+ **테이블 만들기** 대화 상자를 사용하여 새 테이블을 만듭니다.  
+  
+> [!NOTE]  
+>  **새로 만들기**를 클릭하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 연결된 데이터 원본에 따라 기본 CREATE TABLE 문을 생성합니다. 원본 테이블에 선언된 FILESTREAM 특성이 포함된 열이 있어도 기본 CREATE TABLE 문은 FILESTREAM 특성을 포함하지 않습니다. FILESTREAM 특성이 포함된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 구성 요소를 실행하려면 먼저 대상 데이터베이스에서 FILESTREAM 저장소를 구현하십시오. 그런 다음 **테이블 만들기** 대화 상자에서 FILESTREAM 특성을 CREATE TABLE 문에 추가하십시오. 자세한 내용은 [Blob&#40;Binary Large Object&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
+  
+ **미리 보기**  
+ **쿼리 결과 미리 보기** 대화 상자를 사용하여 결과를 미리 봅니다. 미리 보기에는 최대 200개의 행이 표시될 수 있습니다.  
+  
+## <a name="sql-destination-editor-mappings-page"></a>SQL 대상 편집기(매핑 페이지)
+  **SQL 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 입력 열**  
+ 사용 가능한 입력 열 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 입력 열을 대상 열에 매핑합니다.  
+  
+ **사용 가능한 대상 열**  
+ 사용 가능한 대상 열의 목록을 표시합니다. 끌어서 놓기 작업을 사용하여 테이블에서 사용 가능한 대상 열을 입력 열에 매핑합니다.  
+  
+ **입력 열**  
+ 위 테이블에서 선택한 입력 열을 표시합니다. **사용 가능한 입력 열**의 목록을 사용하여 매핑을 변경할 수 있습니다.  
+  
+ **대상 열**  
+ 매핑 여부에 관계없이 사용 가능한 각 대상 열을 표시합니다.  
+  
+## <a name="sql-destination-editor-advanced-page"></a>SQL 대상 편집기(고급 페이지)
+  **SQL 대상 편집기** 대화 상자의 **고급** 페이지를 사용하여 고급 대량 삽입 옵션을 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **ID 유지**  
+ 태스크에서 ID 열에 값을 삽입할지 여부를 지정합니다. 이 속성의 기본값은 **False**입니다.  
+  
+ **Null 유지**  
+ 태스크에서 Null 값을 유지할지 여부를 지정합니다. 이 속성의 기본값은 **False**입니다.  
+  
+ **테이블 잠금**  
+ 데이터를 로드할 때 테이블을 잠글지 여부를 지정합니다. 이 속성의 기본값은 **True**입니다.  
+  
+ **CHECK 제약 조건**  
+ 태스크에서 제약 조건을 확인할지 여부를 지정합니다. 이 속성의 기본값은 **True**입니다.  
+  
+ **트리거 실행**  
+ 대량 삽입에서 테이블에 대해 트리거를 실행할지 여부를 지정합니다. 이 속성의 기본값은 **False**입니다.  
+  
+ **첫 번째 행**  
+ 삽입할 첫 번째 행을 지정합니다. 이 속성의 기본값은 **-1**이며 이 경우 값이 할당되지 않습니다.  
+  
+> [!NOTE]  
+>  이 속성에 값을 할당하지 않으려면 **SQL 대상 편집기** 에서 해당 입력란의 내용을 지웁니다. **속성** 창, **고급 편집기**및 개체 모델에 -1을 사용합니다.  
+  
+ **마지막 행**  
+ 삽입할 마지막 행을 지정합니다. 이 속성의 기본값은 **-1**이며 이 경우 값이 할당되지 않습니다.  
+  
+> [!NOTE]  
+>  이 속성에 값을 할당하지 않으려면 **SQL 대상 편집기** 에서 해당 입력란의 내용을 지웁니다. **속성** 창, **고급 편집기**및 개체 모델에 -1을 사용합니다.  
+  
+ **최대 오류 개수**  
+ 대량 삽입이 중지되기 전에 발생할 수 있는 오류 수를 지정합니다. 이 속성의 기본값은 **-1**이며 이 경우 값이 할당되지 않습니다.  
+  
+> [!NOTE]  
+>  이 속성에 값을 할당하지 않으려면 **SQL 대상 편집기** 에서 해당 입력란의 내용을 지웁니다. **속성** 창, **고급 편집기**및 개체 모델에 -1을 사용합니다.  
+  
+ **Timeout**  
+ 시간이 초과되어 대량 삽입이 중지되기까지 기다리는 시간(초)을 지정합니다.  
+  
+ **열 순서 지정**  
+ 정렬 열의 이름을 입력합니다. 각 열을 오름차순이나 내림차순으로 정렬할 수 있습니다. 여러 정렬 열을 사용하는 경우 쉼표로 목록을 구분합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 흐름](../../integration-services/data-flow/data-flow.md)  

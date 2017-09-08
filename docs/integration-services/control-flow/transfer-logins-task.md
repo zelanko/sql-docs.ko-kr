@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transferloginstask.f1
+- sql13.dts.designer.transferloginstask.general.f1
+- sql13.dts.designer.transferloginstask.logins.f1
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 02215c15fbbbcb4f7fd5ee5638afa4e0092e86c9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 2027b3ea760568ced8a41b72a7a2c3cf225de94f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-logins-task"></a>로그인 전송 태스크
@@ -70,11 +72,7 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [로그인 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-logins-task-editor-general-page.md)  
-  
--   [로그인 전송 태스크 편집기&#40;로그인 페이지&#41;](../../integration-services/control-flow/transfer-logins-task-editor-logins-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목을 클릭하십시오.  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -87,4 +85,59 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.TransferLoginsTask.TransferLoginsTask>  
   
+## <a name="transfer-logins-task-editor-general-page"></a>로그인 전송 태스크 편집기(일반 페이지)
+  **로그인 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 로그인 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다.  
   
+### <a name="options"></a>옵션  
+ **이름**  
+ 로그인 전송 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
+  
+> [!NOTE]  
+>  태스크 이름은 패키지 내에서 고유해야 합니다.  
+  
+ **Description**  
+ 로그인 전송 태스크에 대한 설명을 입력합니다.  
+  
+## <a name="transfer-logins-task-editor-logins-page"></a>로그인 전송 태스크 편집기(로그인 페이지)
+  **로그인 전송 태스크 편집기** 대화 상자의 **로그인** 페이지를 사용하여 하나 이상의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 인스턴스에서 다른 인스턴스로 복사하는 속성을 지정할 수 있습니다.  
+  
+> [!IMPORTANT]  
+>  로그인 전송 태스크를 실행하면 대상 서버에 임의의 암호로 로그인이 생성되고 해당 암호는 해제됩니다. 이러한 로그인을 사용하려면 **sysadmin** 고정 서버 역할의 멤버가 해당 암호를 변경한 다음 다시 설정해야 합니다. **sa** 로그인은 전송될 수 없습니다.  
+  
+### <a name="options"></a>옵션  
+ **SourceConnection**  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 원본 서버에 새 연결을 만듭니다.  
+  
+ **DestinationConnection**  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 대상 서버에 새 연결을 만듭니다.  
+  
+ **LoginsToTransfer**  
+ 원본 서버에서 대상 서버로 복사할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**AllLogins**|원본 서버의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 대상 서버로 복사됩니다.|  
+|**SelectedLogins**|**LoginsList** 로 지정된 로그인만 대상 서버로 복사됩니다.|  
+|**AllLoginsFromSelectedDatabases**|**DatabasesList** 로 지정된 데이터베이스의 모든 로그인이 대상 서버로 복사됩니다.|  
+  
+ **LoginsList**  
+ 대상 서버로 복사할 원본 서버의 로그인을 선택합니다. 이 옵션은 **LoginsToTransfer** 에 대해 **SelectedLogins**를 선택한 경우에만 사용할 수 있습니다.  
+  
+ **DatabasesList**  
+ 대상 서버로 복사할 로그인을 포함하는 원본 서버의 데이터베이스를 선택합니다. 이 옵션은 **LoginsToTransfer** 에 대해 **AllLoginsFromSelectedDatabases**를 선택한 경우에만 사용할 수 있습니다.  
+  
+ **IfObjectExists**  
+ 태스크에서 대상 서버에 이미 있는 로그인과 이름이 동일한 로그인을 처리하는 방법을 선택합니다.  
+  
+ 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**FailTask**|대상 서버에 이름이 동일한 로그인이 이미 있는 경우 태스크가 실패합니다.|  
+|**Overwrite**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 덮어씁니다.|  
+|**Skip**|대상 서버에 이름이 동일한 로그인이 있는 경우 이를 건너뜁니다.|  
+  
+ **CopySids**  
+ 로그인에 연결된 보안 식별자를 대상 서버로 복사할지 여부를 선택합니다. 로그인 전송 태스크를 데이터베이스 전송 동작과 함께 사용하는 경우에는**CopySids** 를 **True** 로 설정해야 합니다. 그렇게 하지 않으면 복사된 로그인을 전송된 데이터베이스에서 인식하지 않습니다.  
+  
+

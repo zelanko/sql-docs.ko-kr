@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.webservicetask.f1
+- sql13.dts.designer.webservicestask.general.f1
+- sql13.dts.designer.webservicestask.input.f1
+- sql13.dts.designer.webservicestask.output.f1
 helpviewer_keywords:
 - Web Service task [Integration Services]
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
@@ -19,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: f91aa6e47ee1255c97e8ffd2f91a5fb559a942ca
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: d8ebe6e3486cb13440a66383c518c9d306f2984f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
@@ -66,13 +69,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-web-service-task"></a>웹 서비스 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [웹 서비스 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/web-service-task-editor-general-page.md)  
-  
--   [웹 서비스 태스크 편집기&#40;입력 페이지&#41;](../../integration-services/control-flow/web-service-task-editor-input-page.md)  
-  
--   [웹 서비스 태스크 편집기&#40;출력 페이지&#41;](../../integration-services/control-flow/web-service-task-editor-output-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목을 클릭하십시오.  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +81,107 @@ ms.lasthandoff: 08/03/2017
  이러한 속성을 프로그래밍 방식으로 설정하는 방법을 보려면 다음 항목 중 하나를 클릭하십시오.  
   
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
+  
+## <a name="web-service-task-editor-general-page"></a>웹 서비스 태스크 편집기(일반 페이지)
+  **웹 서비스 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 HTTP 연결 관리자를 지정하고, 웹 서비스 태스크에 사용하는 WSDL(웹 서비스 기술 언어) 파일의 위치를 지정하고, 웹 서비스 태스크를 설명하고, WSDL 파일을 다운로드할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **HTTPConnection**  
+ 목록에서 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+  
+> [!IMPORTANT]  
+>  HTTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
+  
+ **관련 항목:** [HTTP 연결 관리자](../../integration-services/connection-manager/http-connection-manager.md), [HTTP 연결 관리자 편집기&#40;서버 페이지&#41;](../../integration-services/connection-manager/http-connection-manager-editor-server-page.md)  
+  
+ **WSDLFile**  
+ 컴퓨터에 로컬인 WSDL 파일의 정규화된 경로를 입력하거나 찾아보기 단추 **(…)** 를 클릭하여 이 파일을 찾습니다.  
+  
+ WSDL 파일을 컴퓨터에 이미 수동으로 다운로드한 경우에는 이 파일을 선택하고, WSDL 파일을 아직 다운로드하지 않은 경우에는 다음 단계를 수행합니다.  
+  
+-   파일 이름 확장명이 ".wsdl"인 빈 파일을 만듭니다.  
+  
+-   **WSDLFile** 옵션으로 이 빈 파일을 선택합니다.  
+  
+-   **OverwriteWSDLFile** 값을 **True** 로 설정하여 이 빈 파일을 실제 WSDL 파일로 덮어쓸 수 있도록 합니다.  
+  
+-   **WSDL 다운로드** 를 클릭하여 실제 WSDL 파일을 다운로드하고 빈 파일을 덮어씁니다.  
+  
+    > [!NOTE]  
+    >  **WSDL 다운로드** 옵션은 **WSDLFile** 상자에 기존 로컬 파일의 이름을 입력할 때까지 사용할 수 없습니다.  
+  
+ **OverwriteWSDLFile**  
+ 웹 서비스 태스크에 대한 WSDL 파일을 덮어쓸지 여부를 나타냅니다.  
+  
+ **WSDL 다운로드** 단추를 사용하여 WSDL 파일을 다운로드하려면 이 값을 **True**로 설정합니다.  
+  
+ **이름**  
+ 웹 서비스 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
+  
+> [!NOTE]  
+>  태스크 이름은 패키지 내에서 고유해야 합니다.  
+  
+ **Description**  
+ 웹 서비스 태스크에 대한 설명을 입력합니다.  
+  
+ **WSDL 다운로드**  
+ WSDL 파일을 다운로드합니다.  
+  
+ 이 단추는 **WSDLFile** 상자에 기존 로컬 파일의 이름을 입력할 때까지 사용할 수 없습니다.  
+  
+## <a name="web-service-task-editor-input-page"></a>웹 서비스 태스크 편집기(입력 페이지)
+  **웹 서비스 태스크 편집기** 대화 상자의 **입력** 페이지를 사용하여 웹 서비스, 웹 메서드 및 웹 메서드에 입력으로 제공할 값을 지정할 수 있습니다. 문자열을 값 열에 직접 입력하거나 값 열에서 변수를 선택하여 값을 지정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **서비스**  
+ 목록에서 웹 메서드를 실행하는 데 사용할 웹 서비스를 선택합니다.  
+  
+ **메서드**  
+ 목록에서 실행할 태스크에 사용할 웹 메서드를 선택합니다.  
+  
+ **WebMethodDocumentation**  
+ 웹 방식에 대한 설명을 입력하거나 찾아보기 단추 **(…)** 를 클릭하여 **웹 메서드 설명서** 대화 상자에 설명을 입력합니다.  
+  
+ **이름**  
+ 웹 메서드에 대한 입력의 이름을 나열합니다.  
+  
+ **형식**  
+ 입력의 데이터 형식을 나열합니다.  
+  
+> [!NOTE]  
+>  웹 서비스 태스크는 정수 및 문자열과 같은 기본 형식, 기본 형식의 배열 및 시퀀스, 열거 등과 같은 데이터 형식의 매개 변수만 지원합니다.  
+  
+ **변수**  
+ 확인란을 선택하여 입력을 제공하기 위한 변수를 사용합니다.  
+  
+ **Value**  
+ Variable 확인란이 선택된 경우 목록에서 변수를 선택하여 입력을 제공하고 선택되지 않은 경우 입력에 사용할 값을 입력합니다.  
+  
+## <a name="web-service-task-editor-output-page"></a>웹 서비스 태스크 편집기(출력 페이지)
+  **웹 서비스 태스크 편집기** 대화 상자의 **출력** 페이지를 사용하여 웹 메서드에서 반환하는 결과를 저장할 위치를 지정할 수 있습니다.  
+  
+### <a name="static-options"></a>정적 옵션  
+ **OutputType**  
+ 결과를 저장할 때 사용할 저장 유형을 선택합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**파일 연결**|결과를 파일에 저장합니다. 이 값을 선택하면 동적 옵션 **File**이 표시됩니다.|  
+|**변수**|결과를 변수에 저장합니다. 이 값을 선택하면 동적 옵션 **Variable**이 표시됩니다.|  
+  
+### <a name="outputtype-dynamic-options"></a>OutputType 동적 옵션  
+  
+#### <a name="outputtype--file-connection"></a>OutputType = 파일 연결  
+ **파일**  
+ 목록에서 파일 연결 관리자를 선택 하거나 클릭 \< **새 연결...** > 새 연결 관리자를 만듭니다.  
+  
+ **관련 항목:** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+  
+#### <a name="outputtype--variable"></a>OutputType = 변수  
+ **변수**  
+ 목록에서 변수를 선택 하거나 클릭 \< **새 변수...** > 새 변수를 만듭니다.  
+  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](http://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>관련 내용  
  technet.microsoft.com의 비디오, [How to: Call a Web Service by Using the Web Service Task (SQL Server Video)](http://go.microsoft.com/fwlink/?LinkId=259642)(방법: 웹 서비스 태스크를 사용하여 웹 서비스 호출(SQL Server 비디오))  

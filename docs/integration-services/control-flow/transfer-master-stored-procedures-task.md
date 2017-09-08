@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.transfermasterspstask.f1
+- sql13.dts.designer.transferstoredprocedurestask.general.f1
+- sql13.dts.designer.transferstoredprocedurestask.storedprocedures.f1
 helpviewer_keywords:
 - Transfer Master Stored Procedures task [Integration Services]
 ms.assetid: 81702560-48a3-46d1-a469-e41304c7af8e
@@ -19,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: b309790e8ac39e9ac978c56bc451cfd68c5e3c75
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 83001193fc8cedf13bf7425d6b8bae88ac09c987
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크
@@ -66,11 +68,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-transfer-master-stored-procedures-task"></a>Master 저장 프로시저 전송 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [master 저장 프로시저 전송 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-general-page.md)  
-  
--   [master 저장 프로시저 전송 태스크 편집기&#40저장 프로시저 페이지&#41;](../../integration-services/control-flow/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목을 클릭하십시오.  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -84,6 +82,57 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 이러한 속성을 설정하는 방법을 보려면 다음 항목을 클릭하십시오.  
   
 -   [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)  
+  
+## <a name="transfer-master-stored-procedures-task-editor-general-page"></a>master 저장 프로시저 전송 태스크 편집기(일반 페이지)
+  **master 저장 프로시저 전송 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 master 저장 프로시저 전송 태스크의 이름을 지정하고 해당 태스크를 설명할 수 있습니다.  
+  
+> [!NOTE]  
+>  이 태스크는 **dbo** 소유의 사용자 정의 저장 프로시저만 원본 서버의 **master** 데이터베이스에서 대상 서버의 **master** 데이터베이스로 전송합니다. 대상 서버의 **master** 데이터베이스에서 CREATE PROCEDURE 권한을 부여받았거나 대상 서버에서 **sysadmin** 고정 서버 역할의 멤버인 사용자만 해당 데이터베이스에 저장 프로시저를 만들 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **이름**  
+ master 저장 프로시저 전송 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
+  
+> [!NOTE]  
+>  태스크 이름은 패키지 내에서 고유해야 합니다.  
+  
+ **Description**  
+ master 저장 프로시저 전송 태스크에 대한 설명을 입력합니다.  
+  
+## <a name="transfer-master-stored-procedures-task-editor-stored-procedures-page"></a>master 저장 프로시저 전송 태스크 편집기(저장 프로시저 페이지)
+  **master 저장 프로시저 전송 태스크 편집기** 대화 상자의 **저장 프로시저** 페이지를 사용하여 하나 이상의 사용자 정의 저장 프로시저를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 **master** 데이터베이스에서 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 **master** 데이터베이스로 복사하기 위한 속성을 지정할 수 있습니다.  
+  
+> [!NOTE]  
+>  이 태스크는 **dbo** 소유의 사용자 정의 저장 프로시저만 원본 서버의 **master** 데이터베이스에서 대상 서버의 **master** 데이터베이스로 전송합니다. 대상 서버의 **master** 데이터베이스에서 CREATE PROCEDURE 권한을 부여받았거나 대상 서버에서 **sysadmin** 고정 서버 역할의 멤버인 사용자만 해당 데이터베이스에 저장 프로시저를 만들 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **SourceConnection**  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 원본 서버에 새 연결을 만듭니다.  
+  
+ **DestinationConnection**  
+ 목록에서 SMO 연결 관리자를 선택 하거나 클릭  **\<새 연결... >** 대상 서버에 새 연결을 만듭니다.  
+  
+ **IfObjectExists**  
+ 대상 서버의 **master** 데이터베이스에 이미 있는 같은 이름의 사용자 정의 저장 프로시저를 태스크에서 처리하는 방법을 선택합니다.  
+  
+ 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**FailTask**|대상 서버의 **master** 데이터베이스에 같은 이름의 저장 프로시저가 이미 있는 경우 태스크가 실패합니다.|  
+|**Overwrite**|대상 서버의 **master** 데이터베이스에 있는 같은 이름의 저장 프로시저를 덮어씁니다.|  
+|**Skip**|대상 서버의 **master** 데이터베이스에 있는 같은 이름의 저장 프로시저를 건너뜁니다.|  
+  
+ **TransferAllStoredProcedures**  
+ 원본 서버의 **master** 데이터베이스에 있는 모든 사용자 정의 저장 프로시저를 대상 서버로 복사할지 여부를 선택합니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**True**|**master** 데이터베이스의 모든 사용자 정의 저장 프로시저를 복사합니다.|  
+|**False**|지정한 저장 프로시저만 복사합니다.|  
+  
+ **StoredProceduresList**  
+ 원본 서버의 **master** 데이터베이스에서 대상 **master** 데이터베이스로 복사할 사용자 정의 저장 프로시저를 선택합니다. 이 옵션은 **TransferAllStoredProcedures** 를 **False**로 설정한 경우에만 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server 개체 전송 태스크](../../integration-services/control-flow/transfer-sql-server-objects-task.md)   

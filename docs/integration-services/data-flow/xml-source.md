@@ -11,6 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.xmlsource.f1
+- sql13.dts.designer.xmlsourceadapter.connectionmanager.f1
+- sql13.dts.designer.xmlsourceadapter.columns.f1
+- sql13.dts.designer.xmlsourceadapter.erroroutput.f1
 helpviewer_keywords:
 - sources [Integration Services], XML
 - XML source [Integration Services]
@@ -21,10 +24,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0e3af9fa8b743b01b222d1596197aa83bbb39854
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 53aaa24f90570856354e1f7ebc46fea9eac0730f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="xml-source"></a>XML 원본
@@ -77,14 +80,6 @@ ms.lasthandoff: 08/03/2017
   
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- **XML 원본 편집기** 대화 상자에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [XML 원본 편집기&#40;연결 관리자 페이지&#41;](../../integration-services/data-flow/xml-source-editor-connection-manager-page.md)  
-  
--   [XML 원본 편집기&#40;열 페이지&#41;](../../integration-services/data-flow/xml-source-editor-columns-page.md)  
-  
--   [XML 원본 편집기&#40;오류 출력 페이지&#41;](../../integration-services/data-flow/xml-source-editor-error-output-page.md)  
-  
  **고급 편집기** 대화 상자에는 프로그래밍 방식으로 설정할 수 있는 속성이 표시됩니다. **고급 편집기** 대화 상자를 사용하거나 프로그래밍 방식으로 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하세요.  
   
 -   [공용 속성](http://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
@@ -95,6 +90,88 @@ ms.lasthandoff: 08/03/2017
   
 -   [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="related-tasks"></a>관련 태스크  
+## <a name="xml-source-editor-connection-manager-page"></a>XML 원본 편집기(연결 관리자 페이지)
+  **XML 원본 편집기** 의 **연결 관리자** 페이지를 사용하여 XML 데이터를 변환할 XML 파일 및 XSD를 지정할 수 있습니다.  
+  
+### <a name="static-options"></a>정적 옵션  
+ **데이터 액세스 모드**  
+ 원본에서 데이터를 선택하는 방법을 지정합니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|XML 파일 위치|XML 파일에서 데이터를 검색합니다.|  
+|변수를 사용한 XML 파일|변수에 XML 파일 이름을 지정합니다.<br /><br /> **관련 정보**: [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|변수를 사용한 XML 데이터|변수에서 XML 데이터를 검색합니다.|  
+  
+ **인라인 스키마 사용**  
+ XML 원본 데이터에 구조 및 데이터를 정의하고 유효성을 검사하는 XSD 스키마를 포함할지 여부를 지정합니다.  
+  
+ **XSD 위치**  
+ XSD 스키마 파일의 경로 및 파일 이름을 입력하거나 **찾아보기**를 클릭하여 파일을 찾습니다.  
+  
+ **찾아보기**  
+ **열기** 대화 상자를 사용하여 XSD 스키마 파일을 찾을 수 있습니다.  
+  
+ **XSD 생성**  
+ **다른 이름으로 저장** 대화 상자를 사용하여 자동 생성된 XSD 스키마 파일의 위치를 선택할 수 있습니다. 편집기에서는 XML 데이터의 구조를 통해 스키마를 유추합니다.  
+  
+### <a name="data-access-mode-dynamic-options"></a>데이터 액세스 모드 동적 옵션  
+  
+#### <a name="data-access-mode--xml-file-location"></a>데이터 액세스 모드 = XML 파일 위치  
+ **XML 위치**  
+ XML 데이터 파일의 경로 및 파일 이름을 입력하거나 **찾아보기**를 클릭하여 파일을 찾습니다.  
+  
+ **찾아보기**  
+ **열기** 대화 상자를 사용하여 XML 데이터 파일을 찾을 수 있습니다.  
+  
+#### <a name="data-access-mode--xml-file-from-variable"></a>데이터 액세스 모드 = 변수를 사용한 XML 파일  
+ **변수 이름**  
+ XML 파일의 경로 및 파일 이름을 포함하는 변수를 선택합니다.  
+  
+#### <a name="data-access-mode--xml-data-from-variable"></a>데이터 액세스 모드 = 변수를 사용한 XML 데이터  
+ **변수 이름**  
+ XML 데이터를 포함하는 변수를 선택합니다.  
+  
+## <a name="xml-source-editor-columns-page"></a>XML 원본 편집기(열 페이지)
+  **XML 원본 편집기** 대화 상자의 **열** 노드를 사용하여 출력 열을 외부(원본) 열에 매핑할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **사용 가능한 외부 열**  
+ 데이터 원본에서 사용 가능한 외부 열의 목록을 표시합니다. 이 테이블을 사용하여 열을 추가하거나 삭제할 수 없습니다.  
+  
+ **외부 열**  
+ 태스크에서 읽는 순서대로 외부(원본) 열을 표시합니다. 이 순서는 먼저 편집기에 표시된 테이블에서 선택한 열을 지운 다음 목록에서 다른 순서로 외부 열을 선택하여 변경할 수 있습니다.  
+  
+ **출력 열**  
+ 각 출력 열에 고유한 이름을 지정합니다. 기본값은 선택한 외부(원본) 열의 이름이지만 설명이 포함된 고유 이름을 임의로 선택할 수 있습니다. 제공한 이름은 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에 표시됩니다.  
+  
+## <a name="xml-source-editor-error-output-page"></a>XML 원본 편집기(오류 출력 페이지)
+  **XML 원본 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택하고 오류 출력 열에 속성을 설정할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+ **입/출력**  
+ 데이터 원본의 이름을 표시합니다.  
+  
+ **열**  
+ **XML 원본 편집기** 대화 상자의 **연결 관리자**페이지에서 선택한 외부(원본) 열을 표시합니다.  
+  
+ **오류**  
+ 오류가 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **관련 항목:** [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)  
+  
+ **잘림**  
+ 잘림이 발생할 경우 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **Description**  
+ 오류에 대한 설명을 표시합니다.  
+  
+ **이 값을 선택한 셀에 설정**  
+ 오류나 잘림 발생 시 선택한 모든 셀에 수행할 동작을 지정합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+ **적용**  
+ 선택한 셀에 오류 처리 옵션을 적용합니다.  
+  
+## <a name="related-tasks"></a>관련 작업  
  [XML 원본을 사용하여 데이터 추출](../../integration-services/data-flow/extract-data-by-using-the-xml-source.md)  
 

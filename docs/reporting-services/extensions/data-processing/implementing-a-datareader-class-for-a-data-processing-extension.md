@@ -22,11 +22,11 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: cfd3a6cb38c59b1810d046839cb3be4f0dc9846a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="implementing-a-datareader-class-for-a-data-processing-extension"></a>데이터 처리 확장 프로그램에 대한 DataReader 클래스 구현
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
  <xref:Microsoft.ReportingServices.DataProcessing.IDataReaderExtension> 인터페이스를 통해 결과 집합에 대한 특정 집계 정보를 제공할 수 있습니다. 샘플 **DataReader** 클래스 구현, 참조 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [Reporting Services 확장 프로그램](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [데이터 처리 확장 프로그램 구현](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  

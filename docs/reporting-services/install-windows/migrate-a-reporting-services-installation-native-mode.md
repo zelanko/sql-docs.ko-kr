@@ -1,7 +1,7 @@
 ---
-title: "Reporting Services 설치 (기본 모드) 마이그레이션 | Microsoft Docs"
+title: "Reporting Services 설치 마이그레이션(기본 모드) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -23,19 +23,19 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: Machine Translation
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: b1e79ca61f1de78ca82cb65aadccd9ea214090a7
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: 8b6d83cb8261483890c376121b23f1ffca9f6bbf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Reporting Services 설치 마이그레이션(기본 모드)
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-로 마이그레이션하기 위한 단계별 지침을 제공 하는이 항목의 지원 되는 다음 버전 중 하나는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 새 SQL Server Reporting Services 인스턴스를 기본 모드 배포:  
+이 항목에서는 다음과 같은 지원되는 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 배포 중 하나를 새로운 SQL Server Reporting Services 인스턴스로 마이그레이션하는 데 필요한 단계별 지침을 제공합니다.  
   
 -   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
   
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드 배포 마이그레이션에 대한 자세한 내용은 [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)을 참조하세요.  
   
- 마이그레이션 새 SQL Server 인스턴스를 응용 프로그램 데이터 파일을 이동으로 정의 됩니다. 설치를 마이그레이션해야 하는 일반적인 원인은 다음과 같습니다.  
+ 마이그레이션은 응용 프로그램 데이터 파일을 새 SQL Server 인스턴스로 이동하는 것을 말합니다. 설치를 마이그레이션해야 하는 일반적인 원인은 다음과 같습니다.  
   
 -   광범위한 배포 또는 작동 시간이 필요합니다.  
   
@@ -63,12 +63,12 @@ ms.lasthandoff: 08/09/2017
   
 -   암호화 키를 백업합니다.  
   
--   SQL Server의 새 인스턴스를 설치 합니다. 동일한 하드웨어를 사용 하는 경우 지원 되는 버전 중 하나인 경우 기존 설치와 SQL Server--나란히 설치할 수 있습니다.  
+-   새 SQL Server 인스턴스를 설치합니다. 같은 하드웨어를 사용 중인 경우 SQL Server를 기존 설치와 함께 설치할 수 있습니다(지원되는 버전 중 하나인 경우).  
   
     > [!TIP]  
-    >  SQL Server 명명 된 인스턴스로 설치-나란히 설치 해야 합니다.  
+    >  함께 설치하려면 SQL Server를 명명된 인스턴스로 설치해야 합니다.  
   
--   새 SQL Server 설치에 기존 설치에서 보고서 서버 데이터베이스 및 기타 응용 프로그램 파일을 이동 합니다.  
+-   보고서 서버 데이터베이스 및 기타 응용 프로그램 파일을 기존 설치에서 새 SQL Server 설치로 이동합니다.  
   
 -   모든 사용자 지정 응용 프로그램 파일을 새 설치로 이동합니다.  
   
@@ -96,9 +96,9 @@ ms.lasthandoff: 08/09/2017
 -   항목 수가 적은 경우 보고서, 보고서 모델 및 공유 데이터 원본을 보고서 디자이너, 모델 디자이너 및 보고서 작성기에서 새 보고서 서버로 다시 게시할 수 있습니다. 이 경우 역할 할당, 구독, 공유 일정, 보고서 스냅숏 일정, 보고서 또는 기타 항목에서 설정한 사용자 지정 속성, 모델 항목 보안 및 보고서 서버에서 설정한 속성을 다시 만들어야 합니다. 보고서 기록 및 보고서 실행 로그 데이터는 손실됩니다.  
   
 ##  <a name="bkmk_before_you_start"></a> 시작하기 전에  
- 설치를 업그레이드하는 것이 아니라 마이그레이션하는 경우에도 기존 설치에서 업그레이드 관리자를 실행하여 마이그레이션에 영향을 미칠 수 있는 모든 문제를 쉽게 파악할 수 있습니다. 이러한 단계는 특히 본인이 설치하거나 구성하지 않은 보고서 서버를 마이그레이션하는 경우에 유용합니다. 업그레이드 관리자를 실행 하 여 새 SQL Server 설치에서 지원 되지 않는 사용자 지정 설정에 대 한 찾을 수 있습니다.  
+ 설치를 업그레이드하는 것이 아니라 마이그레이션하는 경우에도 기존 설치에서 업그레이드 관리자를 실행하여 마이그레이션에 영향을 미칠 수 있는 모든 문제를 쉽게 파악할 수 있습니다. 이러한 단계는 특히 본인이 설치하거나 구성하지 않은 보고서 서버를 마이그레이션하는 경우에 유용합니다. 업그레이드 관리자를 실행하면 새 SQL Server 설치에서 지원되지 않는 사용자 지정 설정을 찾을 수 있습니다.  
   
- 또한 SQL Server Reporting Services의 설치를 마이그레이션하는 어떻게 영향을 주는 몇 가지 중요 한 변경 사항을 알고 있어야 있습니다.
+ 또한 설치를 마이그레이션하는 방법에 영향을 줄 수 있는 SQL Server Reporting Services의 몇 가지 주요 변경 내용에 대해서도 알아야 합니다.
  
 - 새 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 에서는 보고서 관리자가 대체됩니다.
   
@@ -118,7 +118,7 @@ ms.lasthandoff: 08/09/2017
   
 - 보고 환경에서 사용자 지정 CSS 스타일시트 파일을 사용할 경우 이 파일이 마이그레이션되지 않습니다. 이 파일은 마이그레이션 후에 수동으로 이동해야 합니다.  
   
-SQL Server Reporting Services의 변경 내용에 대 한 자세한 내용은 업그레이드 관리자 설명서를 참조 하 고 [Reporting Services의 새로운](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)합니다.  
+SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업그레이드 관리자 설명서 및 [Reporting Services의 새로운 기능 ](../../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)을 참조하세요.  
 
 ## <a name="bkmk_backup"></a> 파일 및 데이터 백업
 
@@ -140,7 +140,7 @@ SQL Server Reporting Services의 변경 내용에 대 한 자세한 내용은 �
   
     5.  Reportingservicesservice.exe.config  
   
-    6.  보고서 서버에 대 한 Web.config [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램입니다.  
+    6.  보고서 서버 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용 Web.cofig  
   
     7.  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 용 Machine.config(보고서 서버 작업을 위해 이 파일을 수정한 경우)  
 
@@ -162,7 +162,7 @@ SQL Server Reporting Services의 변경 내용에 대 한 자세한 내용은 �
   
  보고서 서버 데이터베이스를 이동하려면 다음을 수행하십시오.  
   
-1.  사용할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 선택합니다. SQL Server Reporting Services 보고서 서버 데이터베이스를 호스팅하는 다음 버전 중 하나를 사용 하는 필요 합니다.  
+1.  사용할 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 선택합니다. SQL Server Reporting Services에서 보고서 서버 데이터베이스를 호스트하려면 다음 버전 중 하나를 사용해야 합니다.  
   
     -   SQL Server 2016  
   
@@ -198,7 +198,7 @@ SQL Server Reporting Services의 변경 내용에 대 한 자세한 내용은 �
   
     -   다른 사용자 지정 어셈블리는 다시 컴파일할 필요가 없습니다.  
   
-2.  새 보고서 서버 \bin 폴더에 어셈블리를 이동 합니다. SQL Server에서 보고서 서버 이진 파일은 기본 보고서 서버 인스턴스는 다음 위치에 있습니다.  
+2.  어셈블ㄹ를 새 보고서 서버 \bin 폴더로 이동합니다. SQL Server에서 보고서 서버 이진 파일은 기본 보고서 서버 인스턴스의 경우 다음 위치에 있습니다.  
   
      `\Program files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\ReportServer\bin`  
   
@@ -218,9 +218,9 @@ SQL Server Reporting Services의 변경 내용에 대 한 자세한 내용은 �
 
 ## <a name="bkmk_configure_reportserver"></a> 보고서 서버 구성
 
- 보고서 서버 웹 서비스 및 웹 포털에 대 한 Url을 구성 하 고 보고서 서버 데이터베이스에 연결을 구성 합니다.  
+ 보고서 서버 웹 서비스 및 웹 포털의 URL을 구성하고 보고서 서버 데이터베이스에 대한 연결을 구성합니다.  
   
- 확장 배포를 마이그레이션하는 경우 모든 보고서 서버 노드를 오프라인으로 만들고 각 서버를 한 번에 하나씩 마이그레이션해야 합니다. 마이그레이션된 첫 번째 보고서 서버가 보고서 서버 데이터베이스에 성공적으로 연결 되 면 보고서 서버 데이터베이스 버전이 SQL Server 데이터베이스 버전으로 자동 업그레이드 됩니다.  
+ 확장 배포를 마이그레이션하는 경우 모든 보고서 서버 노드를 오프라인으로 만들고 각 서버를 한 번에 하나씩 마이그레이션해야 합니다. 마이그레이션된 첫 번째 보고서 서버가 보고서 서버 데이터베이스에 성공적으로 연결되면 보고서 서버 데이터베이스 버전이 SQL Server 데이터베이스 버전으로 자동 업그레이드됩니다.  
   
 > [!IMPORTANT]  
 >  확장 배포에 있는 보고서 서버 중 일부가 온라인이고 마이그레이션되지 않은 경우 업그레이드된 버전에 연결하면 이전 스키마가 사용되어 rsInvalidReportServerDatabase 예외가 발생할 수 있습니다.  
@@ -228,44 +228,44 @@ SQL Server Reporting Services의 변경 내용에 대 한 자세한 내용은 �
 > [!NOTE]  
 >  마이그레이션한 보고서 서버가 확장 배포를 위한 공유 데이터베이스로 구성된 경우에는 보고서 서버 서비스를 구성하기 전에 **ReportServer** 데이터베이스의 **Keys** 테이블에서 이전 암호화 키를 삭제해야 합니다. 키를 제거하지 않으면 마이그레이션된 보고서 서버가 확장 배포 모드에서 초기화됩니다. 자세한 내용은 [확장 배포의 암호화 키 추가 및 제거&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md) 및 [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.  
 >   
->  확장 키는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]구성 관리자를 사용하여 삭제할 수 없습니다. SQL Server Management Studio를 사용하여 **Keys** 데이터베이스의 **ReportServer** 테이블에서 이전 키를 삭제해야 합니다. Keys 테이블의 모든 행을 삭제합니다. 그러면 테이블이 지워지므로 다음 단계에서 설명하는 대로 대칭 키만 복원할 수 있습니다.  
+>  확장 키는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 삭제할 수 없습니다. SQL Server Management Studio를 사용하여 **Keys** 데이터베이스의 **ReportServer** 테이블에서 이전 키를 삭제해야 합니다. Keys 테이블의 모든 행을 삭제합니다. 그러면 테이블이 지워지므로 다음 단계에서 설명하는 대로 대칭 키만 복원할 수 있습니다.  
 >   
->  키를 삭제하기 전에 먼저 대칭 암호화 키를 백업하는 것이 좋습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 키를 백업할 수 있습니다. 구성 관리자를 열고 **암호화 키** 탭을 클릭한 다음 **백업** 단추를 클릭합니다. WMI 명령을 스크립팅하여 암호화 키를 백업할 수도 있습니다. WMI에 대한 자세한 내용은 [BackupEncryptionKey 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)를 참조하세요.  
+>  키를 삭제하기 전에 먼저 대칭 암호화 키를 백업하는 것이 좋습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 키를 백업할 수 있습니다. 구성 관리자를 열고 **암호화 키** 탭을 클릭한 다음 **백업** 단추를 클릭합니다. WMI 명령을 스크립팅하여 암호화 키를 백업할 수도 있습니다. WMI에 대한 자세한 내용은 [BackupEncryptionKey 메서드&#40;WMI MSReportServer_ConfigurationSetting&#41;](../../reporting-services/wmi-provider-library-reference/configurationsetting-method-backupencryptionkey.md)을 참조하세요.  
   
 1.  Reporting Services 구성 관리자를 시작하고 방금 설치한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 연결합니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.  
   
-2.  보고서 서버와 웹 포털에 대 한 Url을 구성 합니다. 자세한 내용은 [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
+2.  보고서 서버와 웹 포털의 URL을 구성합니다. 자세한 내용은 [URL 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)을 참조하세요.  
   
-3.  이전 설치에서 기존 보고서 서버 데이터베이스를 선택하여 보고서 서버 데이터베이스를 구성합니다. 구성을 성공적으로 마치면 보고서 서버 서비스가 다시 시작 되 고 보고서 서버 데이터베이스에 연결 되 면 데이터베이스가 자동으로 업그레이드 됩니다 SQL Server Reporting Services에 있습니다. 보고서 서버 데이터베이스를 선택 합니다. 사용 하는 데이터베이스 변경 마법사를 실행 하는 방법에 대 한 자세한 내용은 참조 하십시오. [기본 모드 보고서 서버 데이터베이스를 만들](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)합니다.  
+3.  이전 설치에서 기존 보고서 서버 데이터베이스를 선택하여 보고서 서버 데이터베이스를 구성합니다. 구성을 성공적으로 마치면 보고서 서버 서비스가 다시 시작되고, 보고서 서버 데이터베이스에 대한 연결이 설정되면 데이터베이스가 SQL Server Reporting Services로 자동 업그레이드됩니다. 보고서 서버 데이터베이스를 만들거나 선택하는 데 사용하는 데이터베이스 변경 마법사를 실행하는 방법은 [기본 모드 보고서 서버 데이터베이스 만들기](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)를 참조하세요.  
   
 4.  암호화 키를 복원합니다. 이 단계는 이미 보고서 서버 데이터베이스에 있는 기존의 연결 문자열 및 자격 증명에 해독 가능한 암호화를 설정하기 위해 필요합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요.  
   
 5.  새 컴퓨터에 보고서 서버를 설치한 후 Windows 방화벽을 사용 중인 경우에는 보고서 서버가 수신하는 TCP 포트를 열어야 합니다. 기본값은 포트 80입니다. 자세한 내용은 [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)을 참조하세요.  
   
-6.  로컬 기본 모드 보고서 서버를 관리 하려면 웹 포털에서 로컬 관리가 가능 하도록 운영 체제를 구성 해야 합니다. 자세한 내용은 참조 [로컬 관리를 위한 기본 모드 보고서 서버 구성](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)합니다.  
+6.  기본 모드 보고서 서버를 로컬로 관리하려는 경우 웹 포털에서 로컬 관리가 가능하도록 운영 체제를 구성해야 합니다. 자세한 내용은 [로컬 관리용으로 기본 모드 보고서 서버 구성](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)을 참조하세요.  
 
 ## <a name="bkmk_copy_custom_config"></a> RSReportServer.config 파일에 사용자 지정 구성 설정 복사
 
-이전 설치에서 RSReportServer.config 파일 또는 RSWebApplication.config 파일을 수정한 경우 새 RSReportServer.config 파일도 동일하게 수정해야 합니다. 다음은 일부의 이유 수정 이전 구성 파일 하 게 하 고 SQL Server 2016에서 동일한 설정을 구성 하는 방법에 대 한 추가 정보 링크를 제공 하는 이유를 요약 합니다.  
+이전 설치에서 RSReportServer.config 파일 또는 RSWebApplication.config 파일을 수정한 경우 새 RSReportServer.config 파일도 동일하게 수정해야 합니다. 다음 목록에서는 이전 구성 파일을 수정하게 되는 이유를 간략히 설명하며, SQL Server 2016에서 동일한 설정을 구성하는 방법에 대한 추가 정보 링크도 제공합니다.  
   
 |사용자 지정|정보|  
 |-------------------|-----------------|  
-|사용자 지정 설정으로 보고서 서버 전자 메일 배달|[전자 메일 설정-Reporting Services 기본 모드](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)합니다.|  
+|사용자 지정 설정으로 보고서 서버 전자 메일 배달|[전자 메일 설정 - Reporting Services 기본 모드](../../reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |장치 정보 설정|[RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../reporting-services/customize-rendering-extension-parameters-in-rsreportserver-config.md)|
 
 ## <a name="bkmk_windowsservice_group"></a> Windows 서비스 그룹 및 보안 ACL
 
- [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], 유일한 서비스 그룹인은는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 모든 레지스트리 키, 파일 및 SQL Server Reporting Services와 함께 설치 된 폴더에 대 한 보안 Acl을 만드는 데 사용 되는 Windows 서비스 그룹입니다. 이 Windows 그룹 이름은 SQLServerReportServerUser$ 형식으로 표시\<*t e r _*>$\<*instance_name*> 합니다.  
+ [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]에 있는 유일한 서비스 그룹인 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows 서비스 그룹은 SQL Server Reporting Services에 설치된 모든 레지스트리 키, 파일 및 폴더에 대한 보안 ACL을 만드는 데 사용됩니다. 이 Windows 그룹 이름은 SQLServerReportServerUser$\<*computer_name*>$\<*instance_name*> 형식으로 표시됩니다.  
 
 ## <a name="bkmk_verify"></a> 배포 확인
 
 1.  브라우저를 열고 URL 주소를 입력하여 보고서 서버 및 [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] 가상 디렉터리를 테스트해 봅니다. 자세한 내용은 [Reporting Services 설치 확인](../../reporting-services/install-windows/verify-a-reporting-services-installation.md)을 참조하세요.  
   
-2.  보고서를 테스트하고 해당 보고서에 원하는 데이터가 포함되어 있는지 확인합니다. 데이터 원본 정보를 검토하여 데이터 원본 연결 정보가 지정되어 있는지 확인합니다. 보고서 서버 처리 하 고 보고서를 렌더링 하는 경우 보고서 개체 모델을 사용 하지만 대체 하지는 않습니다 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 구문을 새 보고서 정의 언어 요소로 합니다. 새 버전의 보고서 서버에서 실행 하는 방법을 기존 보고서에 대 한 자세한 내용을 보려면를 참조 하세요. [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)합니다.  
+2.  보고서를 테스트하고 해당 보고서에 원하는 데이터가 포함되어 있는지 확인합니다. 데이터 원본 정보를 검토하여 데이터 원본 연결 정보가 지정되어 있는지 확인합니다. 보고서 서버는 보고서 개체 모델을 사용하여 보고서를 처리하고 렌더링하지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 구문을 새 보고서 정의 언어 요소로 대체하지 않습니다. 기존 보고서가 새 버전의 보고서 서버에서 실행되는 방식에 대한 자세한 내용은 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)를 참조하세요.  
 
 ## <a name="bkmk_remove_unused"></a> 사용하지 않는 프로그램 및 파일 제거
 
-새 인스턴스를 보고서 서버를 성공적으로 마이그레이션한 후에 더 이상 필요 없는 파일 및 프로그램을 제거 하려면 다음 단계를 수행 하는 것이 좋습니다.  
+보고서 서버를 새로운 인스턴스로 마이그레이션하고 나면 다음 단계를 수행하여 더 이상 필요하지 않은 프로그램 및 파일을 제거할 수 있습니다.  
   
 1.  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 가 더 이상 필요하지 않은 경우 제거합니다. 이 단계에서는 다음 항목들이 삭제되지 않지만 더 이상 필요하지 않은 경우 이를 수동으로 제거할 수 있습니다.  
   
@@ -288,7 +288,7 @@ SQL Server Reporting Services의 변경 내용에 대 한 자세한 내용은 �
 [Reporting Services 설치 마이그레이션](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)   
 [보고서 서버 데이터베이스](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[Reporting Services 이전 버전과 호환성](../../reporting-services/reporting-services-backward-compatibility.md)   
+[Reporting Services의 이전 버전과의 호환성](../../reporting-services/reporting-services-backward-compatibility.md)   
 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

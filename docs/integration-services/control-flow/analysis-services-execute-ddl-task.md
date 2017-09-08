@@ -11,6 +11,8 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.dts.designer.asexecuteddltask.f1
+- sql13.dts.designer.asexecuteddltask.general.f1
+- sql13.dts.designer.asexecuteddltask.ddl.f1
 helpviewer_keywords:
 - Analysis Services Execute DDL task
 - DDL
@@ -20,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4db091d5934df75f6dd90295e8501a562aa0a0ef
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: a8272f3306050e8d184fd6d5e4e3d349c4e259e9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크
@@ -220,11 +222,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="configuration-of-the-analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크 구성  
  [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목 중 하나를 클릭하십시오.  
-  
--   [Analysis Services DDL 실행 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-general-page.md)  
-  
--   [Analysis Services DDL 실행 태스크 편집기&#40;DDL 페이지&#41;](../../integration-services/control-flow/analysis-services-execute-ddl-task-editor-ddl-page.md)  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너에서 설정할 수 있는 속성에 대한 자세한 내용을 보려면 다음 항목을 클릭하십시오.  
   
 -   [식 페이지](../../integration-services/expressions/expressions-page.md)  
   
@@ -237,4 +235,53 @@ ms.lasthandoff: 08/03/2017
   
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.ASExecuteDDLTask>  
   
+## <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Analysis Services DDL 실행 태스크 편집기(일반 페이지)
+  **Analysis Services DDL 실행 태스크 편집기** 대화 상자의 **일반** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 실행 태스크를 명명 및 설명할 수 있습니다.  
   
+### <a name="options"></a>옵션  
+ **이름**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 실행 태스크에 사용할 고유 이름을 제공합니다. 이 이름은 태스크 아이콘에서 레이블로 사용됩니다.  
+  
+> [!NOTE]  
+>  태스크 이름은 패키지 내에서 고유해야 합니다.  
+  
+ **Description**  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 실행 태스크에 대한 설명을 입력합니다.  
+  
+## <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Analysis Services DDL 실행 태스크 편집기(DDL 페이지)
+  **Analysis Services DDL 실행 태스크 편집기** 대화 상자의 **DDL** 페이지를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 연결을 지정하고 DDL(데이터 정의 언어) 문의 원본에 대한 정보를 제공할 수 있습니다.  
+  
+### <a name="static-options"></a>정적 옵션  
+ **연결**  
+ 선택 된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 클릭 또는 목록에서 연결 관리자 \< **새 연결...** >를 사용 하 고는 **Analysis Services 연결 관리자 추가** 대화 상자는 새 연결을 만듭니다.  
+  
+ **관련 항목:** [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md), [Analysis Services 연결 관리자](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+  
+ **SourceType**  
+ DDL 문의 원본 유형을 지정합니다. 이 속성의 옵션은 다음 표에 나열되어 있습니다.  
+  
+|Value|Description|  
+|-----------|-----------------|  
+|**직접 입력**|원본을 **SourceDirect** 입력란에 저장된 DDL 문으로 설정합니다. 이 값을 선택하면 다음 섹션에 동적 옵션이 표시됩니다.|  
+|**파일 연결**|원본을 DDL 문이 포함된 파일로 설정합니다. 이 값을 선택하면 다음 섹션에 동적 옵션이 표시됩니다.|  
+|**변수**|원본을 변수로 설정합니다. 이 값을 선택하면 다음 섹션에 동적 옵션이 표시됩니다.|  
+  
+### <a name="dynamic-options"></a>동적 옵션  
+  
+#### <a name="sourcetype--direct-input"></a>SourceType = 직접 입력  
+ **원본**  
+ DDL 문을 입력하거나 줄임표 **(…)** 를 클릭한 다음 **DDL 문** 대화 상자에 문을 입력합니다.  
+  
+#### <a name="sourcetype--file-connection"></a>SourceType = 파일 연결  
+ **원본**  
+ 목록에서 파일 연결을 선택 하거나 클릭 \< **새 연결...** >를 사용 하 고는 **파일 연결 관리자** 대화 상자는 새 연결을 만듭니다.  
+  
+ **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md)  
+  
+#### <a name="sourcetype--variable"></a>SourceType = 변수  
+ **원본**  
+ 목록에서 변수를 선택 하거나 클릭 \< **새 변수...** >를 사용 하 고는 **변수 추가** 대화 상자를 새 변수를 만듭니다.  
+  
+ **관련 항목:** [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md)  
+  
+

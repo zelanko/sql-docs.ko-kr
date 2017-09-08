@@ -2,7 +2,7 @@
 title: "변수 값 파일 (AccessToSQL) 만들기 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/17/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,23 +14,23 @@ applies_to:
 - SQL Server
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2ebc00ea1b5fc7eb9ca2383d8887b522f59428d1
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b7ccb1d92b39d41ec3fa961b03b33c229a274af0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>변수 값 파일 (AccessToSQL) 만들기
-변수 값 파일은 다른 하나의 서버 마이그레이션의 자주 변경 하는 원본 또는 대상 서버 이름이 같은 명령의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션 다 수 발생 하는 경우 원본 서버의 각 값을 저장 하기 위한 여러 변수 파일을 만든 포함 마스터 스크립트 파일에서 참조 되는 **– v** 명령줄에서 전환 합니다. 이렇게 하면 여러 변수 파일에서 변수 값이 포함 된 몇 가지 스크립트 파일에 정적 값을 유지 관리 합니다.  
+변수는 값 파일은 서버 마이그레이션을 통해 자주 변경 하는 명령 (예: 소스 또는 대상 서버 이름)의 매개 변수 값을 구성 하는 XML 파일입니다. 데이터베이스 마이그레이션 다 수 발생 하는 경우 원본 서버의 각 값을 저장 하기 위한 여러 변수 파일 만들고 포함 하는 마스터 스크립트 파일에서 참조 되는 **– v** 명령줄에서 전환 합니다. 이 동작은 여러 변수 파일에서 변수 값이 포함 된 몇 가지 스크립트 파일에 정적 값을 유지 관리에 보호할 수 있습니다.  
   
 > [!NOTE]  
-> 1.  변수 이름은 접두사를 $ (달러) 기호 접미사. 변수는 변수 값 파일의 값이 지정 되지 않은 경우에 콘솔 실행 프로세스 시간으로 인해 발생 하는 스크립트 파일의 구문 분석 하는 동안 오류가 발생 합니다.  
-> 2.  The escape character for **$** is **$$**. 매개 변수 또는 정적 값의 값에 포함 된 경우  **$**  (달러) 기호를 다음  **$$**  변수 대신 문자로 취급 되도록 지정 해야 합니다.  
-> 3.  유지 관리 용이성을 위해 변수를 선언할 수 내부 `‘variable-group’` 사용자의 논리적 분리에 대 한 요소는 변수를 정의 합니다.  사용 현황이 요소는 필수입니다.  
+> -  변수 이름은 접두사를 $ (달러) 기호 접미사. 변수에 변수 값 파일의 값이 할당 되지 않은 경우 스크립트 파일의 구문 분석 하는 동안 오류가 발생 합니다, 정지 콘솔 실행 프로세스의 결과입니다.  
+> -  The escape character for **$** is **$$**. 매개 변수 또는 정적 값의 값을 포함 하는 경우는  **$**  (달러) 기호를 다음  **$$**  변수 대신 문자로 취급 되도록 지정 해야 합니다.  
+> -  유지 관리 용이성을 위해 변수를 선언할 수 내부 `‘variable-group’` 사용자 정의 변수의 논리적 분리에 대 한 요소입니다.  사용 현황이 요소는 필수입니다.  
   
 **예:**  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="next-step"></a>다음 단계  
 운영 콘솔에 다음 단계는 [서버 연결 파일 &#40; 만들기 AccessToSQL &#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>관련 항목:  
-[서버 연결 파일 (Access) 만들기](http://msdn.microsoft.com/en-us/829153be-aa8e-4162-87e8-69882feecf19)  
+## <a name="see-also"></a>참고 항목  
+[서버 연결 파일 (Access) 만들기](http://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   
 

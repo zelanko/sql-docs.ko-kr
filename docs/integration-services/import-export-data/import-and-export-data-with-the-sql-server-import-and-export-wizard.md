@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7b9fae76cd6ffaee5679bc2d0ba7fa7b44f9aa65
+ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
+ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
@@ -55,7 +55,7 @@ ms.lasthandoff: 08/03/2017
 |-------------|-----------------------------------------|
 |**엔터프라이즈 데이터베이스**<br/>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle, DB2, 등입니다.|SQL Server 또는 SQL Server Data Tools (SSDT)에 연결 해야 하는 파일을 설치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 하지만 SSDT Oracle 또는 IBM DB2 등 다른 엔터프라이즈 데이터베이스에 연결 해야 하는 모든 파일을 설치 하지는 않습니다.<br/><br/>일반적으로 엔터프라이즈 데이터베이스에 연결 하려면 다음 두 가지 해야 할:<br/><br/>1. **클라이언트 소프트웨어**합니다. 엔터프라이즈 데이터베이스 시스템용으로 클라이언트 소프트웨어가 이미 설치된 경우 일반적으로 연결해야 합니다. 클라이언트 소프트웨어를 설치하지 않은 경우 데이터베이스 관리자에게 사용이 허가된 복사본 설치 방법을 문의하세요.<br/><br/>2. **공급자 또는 드라이버**합니다. Microsoft은 Oracle에 연결 하는 공급자 및 드라이버를 설치 합니다. 를 IBM d b 2에 연결 하려면 Microsoft® OLEDB Provider for DB2 v 5.0에서 Microsoft SQL Server에 대 한 가져오기는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|
 |**텍스트 파일** (플랫 파일)|추가 파일이 필요 없습니다.|
-|**Microsoft Excel 및 Microsoft Access 파일**|Microsoft Office는 데이터 원본으로 Excel 및 Access 파일에 연결해야 하는 모든 파일을 설치하지 않습니다. 다운로드 [Microsoft Access 2016 Runtime](https://www.microsoft.com/download/details.aspx?id=50040)을 가져옵니다.<br/><br/>자세한 내용은 참조 하십시오. [Excel 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) 또는 [Access 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)합니다.|
+|**Microsoft Excel 및 Microsoft Access 파일**|Microsoft Office는 데이터 원본으로 Excel 및 Access 파일에 연결해야 하는 모든 파일을 설치하지 않습니다. 다음 다운로드-가져오기 [Microsoft Access 데이터베이스 엔진 2016 재배포 가능 패키지](https://www.microsoft.com/download/details.aspx?id=54920)합니다.<br/><br/>자세한 내용은 참조 하십시오. [Excel 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md) 또는 [Access 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-access-data-source-sql-server-import-and-export-wizard.md)합니다.|
 |**Azure 데이터 원본**<br/>현재 Azure Blob Storage만 해당합니다.|SQL Server Data Tools는 데이터 원본으로 Azure Blob 저장소에 연결 해야 하는 파일을 설치 하지 마세요. 다운로드 [Azure용 Microsoft SQL Server 2016 Integration Services Feature Pack](https://www.microsoft.com/download/details.aspx?id=49492)을 가져옵니다.<br/><br/>자세한 내용은 참조 하십시오. [Azure 블로그 저장소에 연결](../../integration-services/import-export-data/connect-to-azure-blob-storage-sql-server-import-and-export-wizard.md)합니다.|
 |**오픈 소스 데이터베이스**<br/>PostgreSQL, MySql, 등입니다.|이러한 데이터 원본에 연결할 추가 파일을 다운로드해야 합니다.<br/><br/>- **PostgreSQL**, 참조 [PostgreSQL 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard.md)합니다.<br/>- **MySql**, 참조 [MySQL 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-a-mysql-data-source-sql-server-import-and-export-wizard.md)합니다.|
 |**다른 데이터 소스를 드라이버 또는 공급자를 사용할 수**|일반적으로 다음 데이터 원본에 연결할 추가 파일을 다운로드해야 합니다.<br/><br/>- **ODBC 드라이버** 를 사용할 수 있는 모든 원본 자세한 내용은 참조 하십시오. [ODBC 데이터 원본에 연결](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md)합니다.<br/>- **.Net Framework 데이터 공급자** 를 사용할 수 있는 모든 원본<br/>- **OLE DB 공급자** 를 사용할 수 있는 모든 원본<br/><br/>다른 데이터 원본에 대 한 원본 및 대상 기능을 제공 하는 타사 구성 요소는 경우에 따라 판매 되 플랫폼 추가 기능 제품으로 SQL Server Integration Services (SSIS)에 대 한 합니다.|
@@ -103,7 +103,7 @@ SSIS에 대한 자세한 내용은 [SQL Server Integration Services](../../integ
  마법사를 시작합니다. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)을 참조하세요.  
 
 ## <a name="see-also"></a>참고 항목
-[이 간단한 예제 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
+[가져오기 및 내보내기 마법사의 이 간단한 예제로 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [SQL Server 가져오기 및 내보내기 마법사에서 데이터 형식 매핑](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 
 

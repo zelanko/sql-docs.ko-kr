@@ -1,7 +1,7 @@
 ---
 title: "Windows 토큰 서비스 (c2WTS) 및 Reporting Services에 대 한 클레임 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 08/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,16 +19,16 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 2ab5f4b5d2774d9dc944ad17bb55063388b70a6d
+ms.translationtype: MT
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: c0190e9e7a7194f6d848b56a72953f81a0002f98
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>c2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 
-[!INCLUDE[ssrs-appliesto-sql2016-xpreview](../../includes/ssrs-appliesto-sql2016-xpreview.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)]
 
   SharePoint 팜 외부에 있는 데이터 원본에 대해 Windows 인증을 사용하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에서 SharePoint c2WTS(Windows 토큰 서비스에 대한 클레임)를 사용해야 합니다. 사용자가 Windows 인증을 사용하여 데이터 원본에 액세스하는 경우에도 WFE(웹 프런트 엔드)와 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 공유 서비스 간의 통신은 항상 클레임 인증으로 수행되기 때문에 SharePoint c2WTS가 필요합니다.  
   

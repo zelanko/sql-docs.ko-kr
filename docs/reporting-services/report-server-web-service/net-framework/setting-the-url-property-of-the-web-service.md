@@ -24,11 +24,11 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 3a367a9ca2d9a8c9b51d0b55a9fedc006a6fa621
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>웹 서비스의 URL 속성 설정
@@ -113,7 +113,7 @@ class Sample
   
  초기 웹 서비스 프록시를 만드는 방법에 대 한 자세한 내용은 참조 [웹 서비스 프록시를 만드는](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

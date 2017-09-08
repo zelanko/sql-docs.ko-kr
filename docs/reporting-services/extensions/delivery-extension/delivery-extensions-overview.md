@@ -20,11 +20,11 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="delivery-extensions-overview"></a>배달 확장 프로그램 개요
@@ -62,7 +62,7 @@ Reporting Services 배달 확장 프로그램 검토 및 업데이트 프로그�
   
 -   개발 해 본 경험이 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 과 같은 언어 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] .NET 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [배달 확장 프로그램 구현](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   

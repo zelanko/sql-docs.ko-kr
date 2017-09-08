@@ -2,7 +2,7 @@
 title: "MySQL (MySQLToSQL)에 대 한 SQL Server Migration Assistant | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 01/19/2017
+ms.date: 08/09/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -14,18 +14,18 @@ applies_to:
 - SQL Server
 ms.assetid: 2793bc33-38d3-46ed-8277-b8580cf78ced
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8b549951fc3272566ea6e7f5f7231988822375d9
+ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
+ms.openlocfilehash: 9147a4de7cb2b74c0cdb65518c07ecb7ff1ba8a8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/11/2017
 
 ---
 # <a name="sql-server-migration-assistant-for-mysql-mysqltosql"></a>MySQL (MySQLToSQL)에 대 한 SQL Server Migration Assistant
-[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) MySQL 용는 MySQL 데이터베이스 마이그레이션에 대 한 도구 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / Azure [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB입니다. SSMA MySQL MySQL 데이터베이스 개체를 SQL Server 데이터베이스 개체를 변환에 대 한 이러한 개체를 만드는에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 MySQL에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
+[!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]Migration Assistant (SSMA) MySQL 용는 MySQL 데이터베이스 마이그레이션에 대 한 도구 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 2017 Windows 및 Linux (미리 보기)에서 Azure / [!INCLUDE[msCoName](../../includes/msconame_md.md)] DB입니다. SSMA MySQL MySQL 데이터베이스 개체를 SQL Server 데이터베이스 개체를 변환에 대 한 이러한 개체를 만드는에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]에 MySQL에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다.  
   
 이 설명서 SSMA MySQL에 대 한 소개 및 MySQL 데이터베이스 마이그레이션에 대 한 단계별 지침을 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]합니다. 다음 표에서 자세히 알아보는 데 도움이 되는 항목을 보여 줍니다.  
   

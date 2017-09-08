@@ -21,11 +21,11 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 6c47c200899dbd25c9685817ea81a391364739c6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="setting-the-item-namespace-for-the-getproperties-method"></a>GetProperties 메서드에 대한 항목 네임스페이스 설정
@@ -126,7 +126,7 @@ class Sample
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [보고를 사용 하 여 Services SOAP 헤더](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  
   

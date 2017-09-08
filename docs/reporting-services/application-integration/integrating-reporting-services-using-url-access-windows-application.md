@@ -23,11 +23,11 @@ caps.latest.revision: 48
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 782be214cb491e1fdddf6ff7d45ac377fcfbf8a4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="integrating-reporting-services-using-url-access---windows-application"></a>URL 액세스-Windows 응용 프로그램을 사용 하 여 Reporting Services 통합
@@ -120,7 +120,7 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [응용 프로그램에 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
  [URL 액세스를 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-url-access.md)   
  [SOAP를 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-soap.md)   

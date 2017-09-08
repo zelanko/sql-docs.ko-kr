@@ -21,11 +21,11 @@ ms.assetid: f229c3ef-f2ca-448f-98f1-b8df350b9992
 caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 0d6c14934417d4ece40596c17a7335e09ec1ad78
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="the-role-of-soap-in-reporting-services"></a>The Role of SOAP in Reporting Services
@@ -65,7 +65,7 @@ public void DeleteItem(string item);
   
  <xref:ReportService2010.ReportingService2010.DeleteItem%2A> 메서드에는 반환 값이 없으므로 빈 응답이 반환됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SOAP API 액세스](../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [보고서 관리자 &#40; SSRS 기본 모드 &#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
  [Reporting Services 보고서 서버](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   

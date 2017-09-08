@@ -23,11 +23,11 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 08aec184077b69d05939fe493bf677043beb99d3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="using-reporting-services-soap-headers"></a>Reporting Services SOAP 헤더 사용
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/03/2017
 |[실행 상태 식별](../../reporting-services/report-server-web-service-net-framework-soap-headers/identifying-execution-state.md)|세션 상태를 관리 하는 방법에 설명 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 사용 하 여 **SessionHeader**합니다.|  
 |[GetProperties 메서드에 대 한 항목 Namespace를 설정](../../reporting-services/report-server-web-service-net-framework-soap-headers/setting-the-item-namespace-for-the-getproperties-method.md)|<xref:ReportService2010.ReportingService2010.GetProperties%2A> 메서드 및 <xref:ReportService2010.ItemNamespaceHeader> SOAP 헤더를 사용하여 항목의 경로나 ID를 기반으로 속성을 검색하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)  
   

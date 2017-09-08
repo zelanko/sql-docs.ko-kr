@@ -20,11 +20,11 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 2cbf3f1a1ffeb702551a2aa0ff94134867cb1786
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="using-the-report-class-for-a-delivery-extension"></a>배달 확장 프로그램에 대해 Report 클래스 사용
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
  사용 하는 방법의 예는 <xref:Microsoft.ReportingServices.Interfaces.Report> 클래스를 참조 하십시오. [SQL Server Reporting Services 제품 예제](http://go.microsoft.com/fwlink/?LinkId=177889)  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [배달 확장 프로그램 구현](../../../reporting-services/extensions/delivery-extension/implementing-a-delivery-extension.md)   
  [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)   
  [RenderedOutputFile 클래스를 사용 하 여 배달 확장 프로그램에 대 한](../../../reporting-services/extensions/delivery-extension/using-the-renderedoutputfile-class-for-a-delivery-extension.md)  

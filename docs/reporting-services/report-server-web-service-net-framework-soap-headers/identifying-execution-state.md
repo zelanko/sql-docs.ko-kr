@@ -22,11 +22,11 @@ caps.latest.revision: 46
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 4e7dcd26be988380e17041134e0ff511ed3bed83
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/12/2017
 
 ---
 # <a name="identifying-execution-state"></a>실행 상태 식별
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/03/2017
   
  URL 액세스 명령을 사용하여 보고서 세션을 관리할 수도 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [보고를 사용 하 여 Services SOAP 헤더](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  

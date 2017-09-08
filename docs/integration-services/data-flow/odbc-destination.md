@@ -11,16 +11,19 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords:
 - sql13.ssis.designer.odbcdest.f1
+- sql13.ssis.designer.odbcdest.connection.f1
+- sql13.ssis.designer.odbcdest.columns.f1
+- sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
 caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5947fa19295580396ce74f8dd93f75abed653797
+ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
+ms.openlocfilehash: b17bf59986633097e381e968222c5da670eefd7b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 08/17/2017
 
 ---
 # <a name="odbc-destination"></a>ODBC 대상
@@ -79,14 +82,107 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [ODBC 대상 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-error-output-page.md)  
-  
--   [ODBC 대상 편집기 &#40; 매핑 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-mappings-page.md)  
-  
--   [ODBC 대상 편집기 &#40; 연결 관리자 페이지 &#41;](../../integration-services/data-flow/odbc-destination-editor-connection-manager-page.md)  
-  
 -   [ODBC 대상을 사용 하 여 데이터를 로드 합니다.](../../integration-services/data-flow/load-data-by-using-the-odbc-destination.md)  
   
 -   [ODBC 대상 사용자 지정 속성](../../integration-services/data-flow/odbc-destination-custom-properties.md)  
   
+## <a name="odbc-destination-editor-connection-manager-page"></a>ODBC 대상 편집기(연결 관리자 페이지)
+  **ODBC 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 ODBC 연결 관리자를 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
   
+ **ODBC 대상 편집기의 연결 관리자 페이지를 열려면**  
+  
+### <a name="task-list"></a>작업 목록  
+  
+-   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 ODBC 대상이 있는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 패키지를 엽니다.  
+  
+-   **데이터 흐름** 탭에서 ODBC 대상을 두 번 클릭합니다.  
+  
+-   **ODBC 대상 편집기**에서 **연결 관리자**를 클릭합니다.  
+  
+### <a name="options"></a>옵션  
+  
+#### <a name="connection-manager"></a>ODBC 대상 편집기  
+ 목록에서 기존 ODBC 연결 관리자를 선택하거나 새로 만들기를 클릭하여 새 연결을 만듭니다. 어느 ODBC 지원 데이터베이스에나 연결할 수 있습니다.  
+  
+#### <a name="new"></a>새로 만들기  
+ **새로 만들기**를 클릭합니다. 새 연결 관리자를 만들 수 있는 **ODBC 연결 관리자 편집기 구성** 대화 상자가 열립니다.  
+  
+#### <a name="data-access-mode"></a>데이터 액세스 모드  
+ 대상으로 데이터를 로드하는 방법을 선택합니다. 옵션은 다음 표에 표시되어 있습니다.  
+  
+|옵션|Description|  
+|------------|-----------------|  
+|테이블 이름 - 일괄 처리|일괄 처리 모드에서 작업하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 다음 옵션을 사용할 수 있습니다.|  
+||**테이블 또는 뷰 이름**: 목록에서 사용 가능한 테이블이나 뷰를 선택합니다.<br /><br /> 이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(\*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.<br /><br /> **일괄 처리 크기**: 대량 로드에 대한 일괄 처리 크기를 입력합니다. 일괄 처리로 로드되는 행의 개수입니다.|  
+|테이블 이름 - 행 단위|각 행을 한 번에 하나씩 대상 테이블에 삽입하도록 ODBC 대상을 구성하려면 이 옵션을 선택합니다. 이 옵션을 선택하면 다음 옵션을 사용할 수 있습니다.|  
+||**테이블 또는 뷰 이름**: 목록의 데이터베이스에서 사용 가능한 테이블이나 뷰를 선택합니다.<br /><br /> 이 목록에는 처음 1000개의 테이블만 포함되어 있습니다. 데이터베이스에 포함되어 있는 테이블이 1000개를 넘는 경우 테이블 이름의 시작 부분을 입력하거나 와일드카드(*)를 통해 이름의 일부를 입력하여 사용할 테이블을 표시합니다.|  
+  
+#### <a name="preview"></a>미리 보기  
+ **미리 보기** 를 클릭하면 선택한 테이블의 데이터 행을 최대 200개까지 볼 수 있습니다.  
+  
+## <a name="odbc-destination-editor-mappings-page"></a>ODBC 대상 편집기(매핑 페이지)
+  **ODBC 대상 편집기** 대화 상자의 **매핑** 페이지를 사용하여 입력 열을 대상 열에 매핑할 수 있습니다.  
+  
+### <a name="options"></a>옵션  
+  
+#### <a name="available-input-columns"></a>사용 가능한 입력 열  
+ 사용 가능한 입력 열 목록입니다. 입력 열을 사용 가능한 대상 열에 끌어 놓아 열을 매핑할 수 있습니다.  
+  
+#### <a name="available-destination-columns"></a>사용 가능한 대상 열  
+ 사용 가능한 대상 열 목록입니다. 대상 열을 사용 가능한 입력 열에 끌어 놓아 열을 매핑할 수 있습니다.  
+  
+#### <a name="input-column"></a>입력 열  
+ 선택한 입력 열을 표시합니다. 선택 하 여 매핑을 제거할 수 있습니다  **\<무시 >** 출력에서 열을 제외 합니다.  
+  
+#### <a name="destination-column"></a>대상 열  
+ 사용 가능한 모든 대상 열(매핑되거나 매핑되지 않음)을 표시합니다.  
+  
+## <a name="odbc-destination-editor-error-output-page"></a>ODBC 대상 편집기(오류 출력 페이지)
+  **ODBC 대상 편집기** 대화 상자의 **오류 출력** 페이지를 사용하여 오류 처리 옵션을 선택할 수 있습니다.  
+  
+ **ODBC 대상 편집기 오류 출력 페이지를 열려면**  
+  
+### <a name="task-list"></a>작업 목록  
+  
+-   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 ODBC 대상이 있는 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 패키지를 엽니다.  
+  
+-   **데이터 흐름** 탭에서 ODBC 대상을 두 번 클릭합니다.  
+  
+-   **ODBC 대상 편집기**에서 **오류 출력**을 클릭합니다.  
+  
+### <a name="options"></a>옵션  
+  
+#### <a name="inputoutput"></a>입/출력  
+ 데이터 원본의 이름을 표시합니다.  
+  
+#### <a name="column"></a>열  
+ 사용되지 않습니다.  
+  
+#### <a name="error"></a>오류  
+ ODBC 대상에서 흐름 오류를 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+#### <a name="truncation"></a>잘림  
+ ODBC 대상에서 흐름 잘림을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+#### <a name="description"></a>Description  
+ 오류에 대한 설명을 표시합니다.  
+  
+#### <a name="set-this-value-to-selected-cells"></a>이 값을 선택한 셀에 설정  
+ 오류나 잘림 발생 시 ODBC 대상에서 선택한 모든 셀을 처리하는 방법을 선택합니다. 오류 무시, 행 리디렉션 또는 구성 요소 실패를 지정할 수 있습니다.  
+  
+#### <a name="apply"></a>적용  
+ 선택한 셀에 오류 처리 옵션을 적용합니다.  
+  
+### <a name="error-handling-options"></a>오류 처리 옵션  
+ 다음 옵션을 사용하여 ODBC 대상에서 오류 및 잘림을 처리하는 방법을 구성할 수 있습니다.  
+  
+#### <a name="fail-component"></a>구성 요소 실패  
+ 오류 또는 잘림이 발생하면 데이터 흐름 태스크가 실패합니다. 이것이 기본 동작입니다.  
+  
+#### <a name="ignore-failure"></a>오류 무시  
+ 오류 또는 잘림이 무시됩니다.  
+  
+#### <a name="redirect-flow"></a>흐름 리디렉션  
+ 오류 또는 잘림을 발생시키는 행이 ODBC 대상의 오류 출력으로 전송됩니다. 자세한 내용은 ODBC 대상을 참조하십시오.  
+  
+
