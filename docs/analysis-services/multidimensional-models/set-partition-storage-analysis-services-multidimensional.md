@@ -1,44 +1,49 @@
 ---
-title: "파티션 저장소 설정(Analysis Services - 다차원) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "짧은 대기 시간 MOLAP"
-  - "표준 저장소 [Analysis Services]"
-  - "하이브리드 OLAP"
-  - "자동 MOLAP"
-  - "관계형 OLAP"
-  - "다차원 OLAP"
-  - "예약된 MOLAP [Analysis Services]"
-  - "파티션 [Analysis Services], 저장소"
-  - "HOLAP"
-  - "MOLAP"
-  - "실시간 ROLAP"
-  - "실시간 HOLAP"
-  - "ROLAP"
-  - "보통 대기 시간 MOLAP"
+title: "파티션 저장소 (Analysis Services-다차원) 설정 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- low latency MOLAP
+- standard storage [Analysis Services]
+- hybrid OLAP
+- automatic MOLAP
+- relational OLAP
+- multidimensional OLAP
+- scheduled MOLAP [Analysis Services]
+- partitions [Analysis Services], storage
+- HOLAP
+- MOLAP
+- real time ROLAP
+- real time HOLAP
+- ROLAP
+- medium latency MOLAP
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8915a2890be20925d739ae03098a2f29a1fab8ef
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 파티션 저장소 설정(Analysis Services - 다차원)
+# <a name="set-partition-storage-analysis-services---multidimensional"></a>파티션 저장소 설정(Analysis Services - 다차원)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 저장소 모드 및 캐싱 옵션에 대한 여러 가지 표준 저장소 구성을 제공합니다. 이를 통해 업데이트 알림, 대기 시간 및 데이터 다시 작성에 대한 일반적인 구성을 사용할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 큐브 파티션 탭 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 파티션 속성 페이지에서 파티션 저장소를 지정할 수 있습니다.  
   
-## 저장소 모드 선택에 대한 지침  
+## <a name="guidelines-for-choosing-a-storage-mode"></a>저장소 모드 선택에 대한 지침  
  큰 측정값 그룹의 경우 파티션별로 다르게 저장소를 구성하는 것이 일반적입니다. 다음 지침을 살펴 보십시오.  
   
 -   계속 업데이트되고 있는 현재 데이터의 경우 실시간 ROLAP을 사용합니다.  
@@ -53,7 +58,7 @@ caps.handback.revision: 31
   
  앞서 설명한 내용은 일반적인 지침이며 데이터에 대해 최상의 저장소 계획을 세우려면 주의 깊은 분석과 테스트가 필요할 수 있습니다. 또한 표준 구성 중 사용자 요구에 맞는 구성이 없는 경우 파티션에 대한 저장소 설정을 수동으로 구성할 수 있습니다.  
   
-## 저장소 설정 설명  
+## <a name="storage-settings-descriptions"></a>저장소 설정 설명  
   
 |표준 저장소 설정|Description|  
 |------------------------------|-----------------|  
@@ -65,7 +70,7 @@ caps.handback.revision: 31
 |예약된 MOLAP|세부 데이터와 집계가 다차원 형식으로 저장됩니다. 데이터가 변경될 때 서버는 알림을 받지 않습니다. 처리는 24시간 간격으로 자동 발생합니다.<br /><br /> 이 설정은 하루에 한 번만 업데이트하면 되는 데이터 원본에 일반적으로 사용됩니다. 쿼리는 새 캐시가 작성되고 해당 개체가 처리될 때까지 삭제되지 않는 MOLAP 캐시에 있는 데이터의 현재 상태를 반영합니다.|  
 |MOLAP|자동 관리 캐싱이 설정되지 않습니다. 세부 데이터와 집계가 다차원 형식으로 저장됩니다. 데이터가 변경될 때 서버는 알림을 받지 않습니다. 처리는 예약하거나 수동으로 수행해야 합니다.<br /><br /> 이 설정은 클라이언트 응용 프로그램에 대해 정기적인 업데이트가 필요하지 않지만 높은 성능이 필수적인 데이터 원본에 일반적으로 사용됩니다.<br /><br /> 응용 프로그램에 최신 데이터가 필요하지 않은 경우 자동 관리 캐싱이 설정되지 않은 MOLAP 저장소를 사용하면 가장 높은 성능을 얻을 수 있습니다. 준비 서버(staging server)에서 큐브를 업데이트 및 처리하고 데이터베이스 동기화를 사용하여 업데이트 및 처리된 MOLAP 개체를 프로덕션 서버로 복사하여 작동 중단 시간을 최소화할 수 있지만 MOLAP 저장소의 경우 업데이트된 개체를 처리하기 위해 서버의 작동을 중단할 필요가 없습니다.|  
   
-## 사용자 지정 저장소 옵션  
+## <a name="custom-storage-options"></a>사용자 지정 저장소 옵션  
  표준 저장소 설정 중 하나를 사용하는 대신 저장소 및 자동 관리 캐싱을 수동으로 구성할 수 있습니다. 사용자 지정 저장소 설정을 만들기 전에 먼저 **표준 설정** 옵션을 클릭하여 사용하려는 구성과 가장 일치하는 표준 설정으로 슬라이더를 이동하는 것이 좋습니다. 그런 다음 사용자 지정 구성을 만들려면 **사용자 지정 설정** 옵션을 클릭하고 **옵션**을 클릭합니다.  
   
 -   데이터 원본이 변경되면 캐시를 업데이트할지 지정할 수 있습니다. 적절한 수준의 작업을 허용하기 위해 데이터 원본에 대한 업데이트 후 최소 대기 간격을 지정할 수 있습니다. 데이터 원본에 대한 변경 간격이 결코 최소값에 도달하지 않으면 지정한 기간 후에 캐시를 업데이트하는 대기 간격 무시를 지정할 수도 있습니다.  
@@ -78,7 +83,7 @@ caps.handback.revision: 31
   
  **차원에 설정 적용** 확인란을 선택하면 측정값 그룹과 관련된 차원에 동일한 저장소 설정이 적용됩니다. 처음에는 차원 값이 파티션 값과 같습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 파티션](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

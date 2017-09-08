@@ -1,31 +1,36 @@
 ---
-title: "Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "naive bayes 모델 [Analysis Services]"
-  - "Bayesian 분류자"
-  - "naive bayes 알고리즘 [Analysis Services]"
-  - "마이닝 모델 콘텐트, Naive Bayes 모델"
+title: "마이닝 Naive Bayes 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- naive bayes algorithms [Analysis Services]
+- mining model content, naive bayes models
 ms.assetid: 63fa15b0-e00c-4aa3-aa49-335f5572ff7e
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: f7786d6273c7941863b413f384ea8eb86bbbe84e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
+# <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하는 모델만의 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에서 공유하는 통계 및 구조를 해석하는 방법에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
-## Naive Bayes 모델의 구조 이해  
+## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Naive Bayes 모델의 구조 이해  
  Naive Bayes 모델에는 모델 및 해당 메타데이터를 나타내는 단일 부모 노드가 있으며 이 부모 노드 아래에는 사용자가 선택한 예측 가능 특성을 나타내는 여러 개의 독립적인 트리가 있습니다. 특성에 대한 트리 외에도 각 모델에는 학습 사례 집합에 대한 기술 통계를 제공하는 하나의 한계 통계 노드(NODE_TYPE = 26)가 포함됩니다. 자세한 내용은 [한계 통계 노드의 정보](#bkmk_margstats)를 참조하십시오.  
   
  예측 가능한 각 특성 및 값에 대해 이 모델은 다양한 입력 열이 특정 예측 가능 항목의 결과에 미친 영향을 설명하는 정보가 들어 있는 트리를 출력합니다. 각 트리에는 예측 가능한 특성 및 해당 값이 포함된 다음(NODE_TYPE = 9) 입력 특성을 나타내는 일련의 노드가 포함됩니다(NODE_TYPE = 10). 입력 특성에는 일반적으로 여러 개의 값이 있으므로 각 입력 특성(NODE_TYPE = 10)에는 각각 특성의 특정 상태를 나타내는 여러 개의 자식 노드(NODE_TYPE = 11)가 있을 수 있습니다.  
@@ -33,9 +38,9 @@ caps.handback.revision: 16
 > [!NOTE]  
 >  Naive Bayes 모델은 연속 데이터 형식을 허용하지 않으므로 입력 열의 모든 값은 불연속 또는 분할된 열로 처리됩니다. 값이 분할되는 방식은 사용자가 지정할 수 있습니다. 자세한 내용은 [마이닝 모델에서 열의 불연속화 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)을 참조하세요.  
   
- ![Naive Bayes에 대한 모델 콘텐츠 구조](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "Naive Bayes에 대한 모델 콘텐츠 구조")  
+ ![naïve bayes에 대 한 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "한 naïve bayes에 대 한 모델 콘텐츠 구조")  
   
-## Naive Bayes 모델에 대한 모델 콘텐츠  
+## <a name="model-content-for-a-naive-bayes-model"></a>Naive Bayes 모델에 대한 모델 콘텐츠  
  이 섹션에서는 Naive Bayes 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다.  
   
  MODEL_CATALOG와 MODEL_NAME을 비롯하여 여기에 설명되지 않은 스키마 행 집합의 범용 열에 대한 자세한 내용 또는 마이닝 모델 용어에 대한 자세한 내용은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -244,7 +249,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |입력 특성(10)|비어 있습니다.|  
 |입력 특성 상태(11)|예측 가능한 값 및 입력 특성 값의 이 특정 조합에 대해 학습 데이터의 값 분포를 설명하는 통계를 포함합니다.|  
   
- 노드 ID 또는 노드 캡션을 사용하여 높은 수준의 세부 정보를 검색할 수 있습니다. 예를 들어 다음 쿼리는 NODE_DISTRIBUTION 테이블에서 `'Marital Status = S'` 값과 관련된 입력 특성 노드에 대한 특정 열만 검색합니다.  
+ 노드 ID 또는 노드 캡션을 사용하여 높은 수준의 세부 정보를 검색할 수 있습니다. 예를 들어 다음 쿼리는 NODE_DISTRIBUTION 테이블에서 `'Marital Status = S'`값과 관련된 입력 특성 노드에 대한 특정 열만 검색합니다.  
   
 ```  
 SELECT FLATTENED NODE_CAPTION,  
@@ -266,7 +271,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
  이러한 결과에서 SUPPORT 열의 값은 자전거를 구매한 고객 수를 결혼 여부와 함께 알려 줍니다. PROBABILITY 열에는 이 노드에 대해서만 계산되는 각 특성 값의 확률이 포함됩니다. NODE_DISTRIBUTION 테이블에서 사용되는 용어의 일반적인 정의는 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
 ###  <a name="bkmk_margstats"></a> 한계 통계 노드의 정보  
- Naive Bayes 모델에서 한계 통계 노드의 중첩 테이블에는 전체 학습 데이터 집합의 값 분포가 포함됩니다. 예를 들어 다음 표에서는 `TM_NaiveBayes` 모델에 대한 NODE_DISTRIBUTION 중첩 테이블의 통계 목록을 일부 보여 줍니다.  
+ Naive Bayes 모델에서 한계 통계 노드의 중첩 테이블에는 전체 학습 데이터 집합의 값 분포가 포함됩니다. 예를 들어 다음 표에서는 `TM_NaiveBayes`모델에 대한 NODE_DISTRIBUTION 중첩 테이블의 통계 목록을 일부 보여 줍니다.  
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
@@ -287,7 +292,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  **Missing** 값(VALUE_TYPE = 1)은 모든 입력 및 출력 특성에 추가되어 학습 데이터에 없었던 잠재적인 값을 나타냅니다. 문자열 "missing"과 기본 **Missing** 값을 주의해서 구별해야 합니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   

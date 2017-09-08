@@ -1,41 +1,46 @@
 ---
-title: "Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "식별 [Analysis Services]"
-  - "naive bayes 모델 [Analysis Services]"
-  - "Bayesian 분류자"
-  - "마이닝 모델 콘텐츠, 보기"
-  - "예측 모델링 [Analysis Services]"
-  - "Naive Bayes 뷰어 [Analysis Services]"
-  - "데이터 마이닝 [Analysis Services], 예측 모델링"
-  - "Microsoft Naive Bayes 뷰어"
-  - "히스토그램 [Analysis Services]"
-  - "마이닝 모델 [Analysis Services], 예측 모델링"
-  - "종속성 [Analysis Services]"
+title: "Microsoft Naive Bayes 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- discrimination [Analysis Services]
+- naive bayes model [Analysis Services]
+- Bayesian classifiers
+- mining model content, viewing
+- predictive modeling [Analysis Services]
+- Naive Bayes Viewer [Analysis Services]
+- data mining [Analysis Services], predictive modeling
+- Microsoft Naive Bayes Viewer
+- histograms [Analysis Services]
+- mining models [Analysis Services], predictive modeling
+- dependencies [Analysis Services]
 ms.assetid: 19743095-63c1-4486-8c1d-2efc143243be
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ec5fa6be2358366b181b0608025d3d3a4b94a321
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 모델링 태스크에 매우 적응력이 뛰어난 분류 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)를 참조하십시오.  
+# <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Naive Bayes 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘은 예측 모델링 태스크에 매우 적응력이 뛰어난 분류 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)를 참조하십시오.  
   
  Naive Bayes 모델의 주 목적 중 하나는 데이터 집합의 데이터를 빨리 탐색하는 방법을 제공하는 것이기 때문에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어는 예측 가능한 특성과 입력 특성 간의 상호 작용을 표시하는 여러 가지 방법을 제공합니다.  
   
 > [!NOTE]  
->  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어로 전환할 수 있습니다. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)를 참조하세요.  
+>  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려는 경우 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어로 전환할 수 있습니다. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)를 참조하세요.  
   
 ##  <a name="BKMK_ViewerTabs"></a> 뷰어 탭  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델을 찾으면 해당 모델의 적절한 뷰어에서 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 해당 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어는 데이터 탐색을 위해 다음과 같은 탭을 제공합니다.  
@@ -74,22 +79,22 @@ caps.handback.revision: 39
 ##  <a name="BKMK_Discrimination"></a> 특성 판별  
  **특성 판별** 탭을 사용하려면 **특성**, **값 1**및 **값 2** 목록에서 예측 가능한 특성과 두 가지 상태를 선택합니다. 그러면 **특성 판별** 탭에 있는 표의 열에 다음 정보가 표시됩니다.  
   
- **Attribute**  
+ **특성**  
  예측 가능한 특성의 한 가지 상태와 유사성이 큰 상태가 포함된 데이터 집합의 다른 특성을 나열합니다.  
   
  **값**  
  **특성** 열의 특성 값을 보여 줍니다.  
   
- **\<값 1>와(과)의 유사성**  
+ **유사성 \<값 1 >**  
  특성 값이 **값 1**에 표시된 예측 가능한 특성 값과 얼마나 유사한지 나타내는 색이 지정된 막대를 표시합니다.  
   
- **\<값 2>와(과)의 유사성**  
+ **유사성 \<값 2 >**  
  특성 값이 **값 2**에 표시된 예측 가능한 특성 값과 얼마나 유사한지 나타내는 색이 지정된 막대를 표시합니다.  
   
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
-## 관련 항목:  
- [Microsoft Naive Bayes 알고리즘](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Microsoft Naive Bayes Algorithm](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)   
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)  

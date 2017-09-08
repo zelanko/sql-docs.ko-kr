@@ -1,27 +1,32 @@
 ---
-title: "동작 테스트 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "동작을 테스트 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 0ec7feb3-a6b2-4be1-8036-c72b9fbc3562
 caps.latest.revision: 7
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 7
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 10d7a7a33b38e23c3cb6b88a3d2b73007daf3e72
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 동작 테스트
+# <a name="test-an-action"></a>동작 테스트
   큐브 디자이너의 브라우저 보기를 사용하여 동작을 테스트합니다. 큐브 디자이너는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 액세스할 수 있습니다. 동작을 만든 후에 동작을 테스트하려면 먼저 큐브를 처리해야 합니다. 자세한 내용은 [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)를 참조하세요.  
   
-### 동작을 테스트하려면  
+### <a name="to-test-an-action"></a>동작을 테스트하려면  
   
 1.  테스트할 동작이 포함된 큐브를 연 다음 **보기**에서 **브라우저**를 클릭합니다.  
   

@@ -1,31 +1,36 @@
 ---
-title: "작업 영역 데이터베이스에서 파티션 처리(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "작업 영역 데이터베이스 (SSAS 테이블 형식)에서 파티션을 처리 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 3a369705-43fa-4961-9045-32e06fbdde33
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 650821073c8c2c15d143ba0fb2ff24e1352c9cb6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 작업 영역 데이터베이스에서 파티션 처리(SSAS 테이블 형식)
+# <a name="process-partitions-in-the-workspace-databse-ssas-tabular"></a>작업 영역 데이터베이스에서 파티션 처리(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 이 항목의 태스크에서는 **의** 파티션 처리 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]대화 상자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 처리하는 방법을 설명합니다.  
   
  다른 Analysis Services 인스턴스로 모델을 배포한 후 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 스크립트 또는 IS 패키지를 사용하여 (배포된) 모델에서 파티션을 만들고 관리할 수 있습니다. 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
   
 ###  <a name="bkmk_create_new"></a> 파티션을 처리하려면  
   
-1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **처리**(새로 고침) 및 **파티션 처리**를 차례로 클릭합니다.  
+1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **처리** (새로 고침) 및 **파티션 처리**를 차례로 클릭합니다.  
   
 2.  **모드** 목록 상자에서 다음 처리 모드 중 하나를 선택합니다.  
   
@@ -39,7 +44,7 @@ caps.handback.revision: 12
   
 3.  **처리** 확인란 열에서 선택된 모드로 처리할 파티션을 선택한 후 **확인**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [작업 영역 데이터베이스에서 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
   

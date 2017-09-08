@@ -1,24 +1,29 @@
 ---
-title: "Queries Events 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Queries Events 이벤트 범주"
+title: "이벤트 데이터 열을 쿼리하여 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Queries Events event category
 ms.assetid: 28aa7df5-3e1f-4f4f-8a1c-8bbd29d5da13
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 48f2e8dec1939bedda904845dd2e56a237ddc10c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Queries Events 데이터 열
+# <a name="queries-events-data-columns"></a>Queries Events 데이터 열
   Queries Events 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
@@ -28,7 +33,7 @@ caps.handback.revision: 33
   
  다음 표에서는 이러한 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Query Begin 클래스 - 데이터 열  
+## <a name="query-begin-classdata-columns"></a>Query Begin 클래스 - 데이터 열  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -50,7 +55,7 @@ caps.handback.revision: 33
 |RequestParameters|44|9|쿼리 이벤트와 연결된 매개 변수가 있는 쿼리 및 명령의 매개 변수를 포함합니다.|  
 |RequestProperties|45|9|XMLA 요청의 속성을 포함합니다.|  
   
-## Query End 클래스 - 데이터 열  
+## <a name="query-end-classdata-columns"></a>Query End 클래스 - 데이터 열  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -76,7 +81,7 @@ caps.handback.revision: 33
 |TextData|42|9|쿼리 이벤트와 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|쿼리 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Queries Events 범주](../../analysis-services/trace-events/queries-events-category.md)  
   
   

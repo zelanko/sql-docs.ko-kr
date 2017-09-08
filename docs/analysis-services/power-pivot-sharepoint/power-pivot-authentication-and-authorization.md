@@ -1,25 +1,30 @@
 ---
 title: "Power Pivot 인증 및 권한 부여 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 40b36877a7c64c10fb2eee2933b1ac2461719c0c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Power Pivot 인증 및 권한 부여
-  SharePoint 2010 팜에서 실행되는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 SharePoint 서버에서 제공되는 인증 하위 시스템과 권한 부여 모델을 사용합니다. 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관련 콘텐츠는 SharePoint 콘텐츠 데이터베이스에 저장되고 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관련 작업은 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스에 의해 수행되므로 SharePoint 보안 인프라는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 콘텐츠 및 작업까지 포함합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 통합 문서를 요청하는 사용자는 Windows 사용자 ID를 기반으로 하는 SharePoint 사용자 ID를 사용하여 인증됩니다. 통합 문서에 대한 보기 권한에 따라 요청을 허용할지 여부가 결정됩니다.  
+# <a name="power-pivot-authentication-and-authorization"></a>Power Pivot 인증 및 권한 부여
+  SharePoint 2010 팜에서 실행되는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 SharePoint 서버에서 제공되는 인증 하위 시스템과 권한 부여 모델을 사용합니다. 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 관련 콘텐츠는 SharePoint 콘텐츠 데이터베이스에 저장되고 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]관련 작업은 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]공유 서비스에 의해 수행되므로 SharePoint 보안 인프라는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 콘텐츠 및 작업까지 포함합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 통합 문서를 요청하는 사용자는 Windows 사용자 ID를 기반으로 하는 SharePoint 사용자 ID를 사용하여 인증됩니다. 통합 문서에 대한 보기 권한에 따라 요청을 허용할지 여부가 결정됩니다.  
   
  셀프 서비스 데이터 분석을 위해 Excel Services와 통합해야 하므로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버를 보호하려면 Excel Services 보안에 대해서도 잘 알고 있어야 합니다. 사용자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 데이터 연결이 있는 피벗 테이블을 쿼리할 경우 Excel 서비스에서는 데이터 연결 요청을 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 전달하여 데이터를 로드합니다. 서버 간의 이러한 상호 작용을 위해서는 각 서버에서 보안 설정을 구성하는 방법을 잘 알고 있어야 합니다.  
   
@@ -40,7 +45,7 @@ caps.handback.revision: 31
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스가 작동하려면 두 번째 요구 사항으로 웹 응용 프로그램의 클래식 모드 인증이 필요합니다. 웹 서비스는 웹 프런트 엔드에서 실행되어 팜의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버에 HTTP 리디렉션을 제공하는 구성 요소입니다. 이 웹 서비스는 서비스 간 통신에 대한 클레임은 인식하지만 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스로 라우팅하는 데이터 연결 요청에 대한 클레임은 인식하지 못합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하는 요청은 IIS에서 시작되어 Windows ID를 사용하여 인증된 연결에서만 지원됩니다. 웹 응용 프로그램에서 클래식 모드로 로그인하면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스와 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 공유 서비스 간 연결이 설정됩니다.  
   
- 더 일반적인 데이터 액세스 시나리오([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 데이터를 렌더링하는 동일한 Excel 통합 문서에서 추출되는 경우)에는 클래식 모드 로그인이 필요하지 않지만, SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]을 다른 인증 공급자를 사용하도록 구성된 SharePoint 웹 응용 프로그램과 함께 사용하지 마세요. 그렇게 하면 사용자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 외부 데이터 원본으로 연결하려고 할 때마다 연결이 실패합니다.  
+ 더 일반적인 데이터 액세스 시나리오( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 데이터를 렌더링하는 동일한 Excel 통합 문서에서 추출되는 경우)에는 클래식 모드 로그인이 필요하지 않지만, SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 다른 인증 공급자를 사용하도록 구성된 SharePoint 웹 응용 프로그램과 함께 사용하지 마세요. 그렇게 하면 사용자가 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 외부 데이터 원본으로 연결하려고 할 때마다 연결이 실패합니다.  
   
  클래식 모드 로그인을 사용하지 않는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 웹 서비스에서 처리되는 다음과 같은 유형의 요청은 실패합니다.  
   
@@ -48,7 +53,7 @@ caps.handback.revision: 31
   
 -   외부 데이터 원본으로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 사용하는 보고서 또는 클라이언트 응용 프로그램의 팜 내부 요청(예: 두 번째 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 포함 Excel 통합 문서로 데이터 원본을 사용하여 Excel 데스크톱 응용 프로그램에서 통합 문서 작성)  
   
-### 응용 프로그램의 인증 공급자를 확인하는 방법  
+### <a name="how-to-check-the-authentication-provider-for-your-application"></a>응용 프로그램의 인증 공급자를 확인하는 방법  
  새 웹 응용 프로그램을 만들 경우에는 새 웹 응용 프로그램 만들기 페이지에서 **클래식 모드 인증** 옵션을 선택해야 합니다.  
   
  기존 웹 응용 프로그램의 경우 다음 지침에 따라 웹 응용 프로그램이 Windows 인증을 사용하도록 구성되어 있는지 확인합니다.  
@@ -72,7 +77,7 @@ caps.handback.revision: 31
   
 -   사용 가능한 데이터가 없을 때 캐시 또는 라이브러리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 로드하는 경우. 시스템에 아직 로드되지 않은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 데이터 연결 요청이 이루어지면 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 인스턴스에서 SharePoint 사용자 ID를 사용하여 콘텐츠 라이브러리에서 데이터 원본을 검색한 후 메모리로 로드합니다.  
   
--   데이터 원본의 업데이트된 복사본을 콘텐츠 라이브러리의 통합 문서에 저장하는 데이터 새로 고침 작업을 수행하는 경우. 이 경우 실제 로그온 작업은 Secure Store Service의 대상 응용 프로그램에서 검색되는 사용자 이름과 암호를 사용하여 수행됩니다. 자격 증명은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정이거나 만들 때 데이터 새로 고침 일정에 함께 저장된 자격 증명일 수 있습니다. 자세한 내용은 [파워 피벗 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/ko-kr/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 및 [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/ko-kr/81401eac-c619-4fad-ad3e-599e7a6f8493)을 참조하세요.  
+-   데이터 원본의 업데이트된 복사본을 콘텐츠 라이브러리의 통합 문서에 저장하는 데이터 새로 고침 작업을 수행하는 경우. 이 경우 실제 로그온 작업은 Secure Store Service의 대상 응용 프로그램에서 검색되는 사용자 이름과 암호를 사용하여 수행됩니다. 자격 증명은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정이거나 만들 때 데이터 새로 고침 일정에 함께 저장된 자격 증명일 수 있습니다. 자세한 내용은 [파워 피벗 데이터 새로 고침을 위한 저장된 자격 증명 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/987eff0f-bcfe-4bbd-81e0-9aca993a2a75) 및 [파워 피벗 무인 데이터 새로 고침 계정 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)을 참조하세요.  
   
 ##  <a name="Permissions"></a> Power Pivot 데이터 액세스에 대한 SharePoint 사용 권한  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 게시, 관리 및 보안은 SharePoint 통합을 통해서만 지원됩니다. SharePoint 서버에서는 데이터에 대한 합법적인 액세스를 보장하는 인증 및 권한 부여 하위 시스템을 제공합니다. SharePoint 팜 외부에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 안전하게 배포할 수 있는 시나리오는 지원되지 않습니다.  
@@ -96,7 +101,7 @@ caps.handback.revision: 31
   
  SharePoint 사이트에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 연 경우 Excel 서비스는 포함된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 연결 문자열을 읽어서 해당 요청을 로컬 SQL Server Analysis Services OLE DB 공급자로 전달합니다. 그러면 공급자는 연결 정보를 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버로 전달합니다. 두 서버 간에 요청이 원활하게 전달되려면 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에 필요한 설정을 사용하도록 Excel 서비스를 구성해야 합니다.  
   
- Excel 서비스에서 보안 관련 구성 설정은 신뢰할 수 있는 위치, 신뢰할 수 있는 데이터 공급자 및 신뢰할 수 있는 데이터 연결 라이브러리에서 지정됩니다. 다음 표에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 허용하거나 개선하는 설정에 대해 설명합니다. 아래에 나와 있지 않은 설정은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 연결에 영향을 주지 않습니다. 이러한 설정을 단계별로 지정하는 방법에 대한 자세한 내용은 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/ko-kr/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)에서 "Excel Services 사용" 섹션을 참조하세요.  
+ Excel 서비스에서 보안 관련 구성 설정은 신뢰할 수 있는 위치, 신뢰할 수 있는 데이터 공급자 및 신뢰할 수 있는 데이터 연결 라이브러리에서 지정됩니다. 다음 표에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 허용하거나 개선하는 설정에 대해 설명합니다. 아래에 나와 있지 않은 설정은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 연결에 영향을 주지 않습니다. 이러한 설정을 단계별로 지정하는 방법에 대한 자세한 내용은 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)에서 "Excel Services 사용" 섹션을 참조하세요.  
   
 > [!NOTE]  
 >  대부분의 보안 관련 설정은 신뢰할 수 있는 위치에 적용됩니다. 기본값을 유지하거나 다른 사이트에 대해 각각 다른 값을 사용하려는 경우에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 사이트에 추가로 신뢰할 수 있는 위치를 만든 다음 해당 사이트에만 다음 설정을 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
@@ -107,14 +112,14 @@ caps.handback.revision: 31
 |신뢰할 수 있는 위치|위치 유형|이 값은 **Microsoft SharePoint Foundation**으로 설정해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버는 .xlsx 파일의 복사본을 검색하여 팜의 Analysis Services 서버에 로드합니다. 서버는 콘텐츠 라이브러리에서 .xlsx 파일만 검색할 수 있습니다.|  
 ||외부 데이터 허용|이 값은 **신뢰할 수 있는 데이터 연결 라이브러리 및 포함 라이브러리**로 설정해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 연결은 통합 문서에 포함됩니다. 포함된 연결을 허용하지 않을 경우 사용자는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 캐시를 볼 수 있지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터와 상호 작용할 수는 없습니다.|  
 ||새로 고칠 때 경고|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 사용하여 통합 문서 및 보고서를 저장하는 경우 이 값을 사용하지 않도록 설정해야 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에는 열 때마다 새로 고침 및 새로 고칠 때 경고가 모두 해제되어 있을 경우 가장 잘 작동하는 문서 미리 보기 기능이 있습니다.|  
-|신뢰할 수 있는 데이터 공급자|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4는 기본적으로 포함되지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 액세스하려면 MSOLAP.4 공급자가 SQL Server 2008 R2 버전이어야 합니다.<br /><br /> MSOLAP.5는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 과 함께 설치됩니다.<br /><br /> 신뢰할 수 있는 데이터 공급자 목록에서 이 공급자를 제거하지 마십시오. 경우에 따라 팜의 다른 SharePoint 서버에 이 공급자에 대한 복사본을 추가로 설치해야 할 수도 있습니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/ko-kr/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.|  
+|신뢰할 수 있는 데이터 공급자|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4는 기본적으로 포함되지만 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 액세스하려면 MSOLAP.4 공급자가 SQL Server 2008 R2 버전이어야 합니다.<br /><br /> MSOLAP.5는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 과 함께 설치됩니다.<br /><br /> 신뢰할 수 있는 데이터 공급자 목록에서 이 공급자를 제거하지 마십시오. 경우에 따라 팜의 다른 SharePoint 서버에 이 공급자에 대한 복사본을 추가로 설치해야 할 수도 있습니다. 자세한 내용은 [SharePoint 서버에서 Analysis Services OLE DB 공급자 설치](http://msdn.microsoft.com/en-us/2c62daf9-1f2d-4508-a497-af62360ee859)를 참조하세요.|  
 |신뢰할 수 있는 데이터 연결 라이브러리|(선택 사항)|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 Office 데이터 연결 파일(.odc)을 사용할 수 있습니다. .odc 파일을 사용하여 로컬 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 연결 정보를 제공할 경우 동일한 .odc 파일을 이 라이브러리에 추가할 수 있습니다.|  
 |사용자 정의 함수 어셈블리|이 오류에는 이 작업을 적용할 수 없습니다.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] SharePoint용 PowerPivot은 Excel Services용으로 빌드하고 배포하는 사용자 정의 함수 어셈블리를 무시합니다. 특정 동작에 대해 사용자 정의 어셈블리를 사용해야 할 경우에도 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 쿼리는 사용자 정의 함수를 사용하지 않고 처리됩니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
- [Power Pivot 무인 데이터 새로 고침 계정 구성(SharePoint용 Power Pivot)](http://msdn.microsoft.com/ko-kr/81401eac-c619-4fad-ad3e-599e7a6f8493)   
- [중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [파워 피벗 구성 무인된 데이터 새로 고침 계정 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
+ [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot 보안 아키텍처](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

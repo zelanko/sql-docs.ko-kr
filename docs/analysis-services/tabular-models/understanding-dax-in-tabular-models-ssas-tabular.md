@@ -1,89 +1,59 @@
 ---
-title: "테이블 형식 모델의 DAX 이해(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/17/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "테이블 형식 모델 (SSAS 테이블 형식)의 DAX | Microsoft Docs"
+ms.custom: 
+ms.date: 04/10/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2693985-1bea-4861-a100-cea4761ba809
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 테이블 형식 모델의 DAX 이해(SSAS 테이블 형식)
-  DAX(Data Analysis Expressions)는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Microsoft Excel 통합 문서 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델 프로젝트에서 사용자 지정 계산을 만드는 데 사용되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
+# <a name="dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델 (SSAS 테이블 형식)의 DAX
+  데이터 분석 식 (DAX)은 분석 서비스, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
   
- DAX는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서와 테이블 형식 모델 프로젝트 모두에 적용되지만 이 항목에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다. 이 항목을 이해하려면 테이블 형식 모델과 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 테이블 형식 모델 프로젝트 작성 환경에 대해 알고 있어야 합니다.  
+ Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에 DAX가 사용 하는 동안 SQL Server Data Tools (SSDT) 작성 하는 Analysis Services 테이블 형식 모델 프로젝트에이 항목 더 적용 합니다.  
   
- 이 항목의 섹션:  
+##  <a name="bkmk_DAX"></a> DAX formulas in calculated columns, measures, and row filters  
+ SSDT에서 작성 된 테이블 형식 모델에 대 한 DAX 수식은 계산된 열, 측정값 및 행 필터에 사용 됩니다.  
   
--   [테이블 형식 모델의 DAX](#bkmk_DAXintm)  
-  
--   [계산 열, 측정값 및 행 필터의 DAX 수식](#bkmk_DAX)  
-  
--   [DAX 데이터 형식](#bkmk_DAX_datatypes)  
-  
--   [DAX 연산자](#bkmk_DAX_opertors)  
-  
--   [DAX 수식](#bkmk_DAX_Formulas)  
-  
--   [DAX 함수](#bkmk_DAX_functions)  
-  
--   [DAX 수식의 컨텍스트](#bkmk_context)  
-  
--   [수식 및 테이블 형식 모델](#bkmk_RelModel)  
-  
--   [테이블 및 열 작업](#bkmk_tables)  
-  
--   [수식 결과 업데이트(처리)](#bkmk_RefreshRecalc)  
-  
--   [수식의 오류 문제 해결](#bkmk_troubleshoot)  
-  
--   [추가 리소스](#bkmk_addional_resources)  
-  
-##  <a name="bkmk_DAXintm"></a> 테이블 형식 모델의 DAX  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 과 테이블 형식 모델에서 DAX 수식이 해당 데이터 집합에서 값을 계산하는 방식에는 기능적으로 차이가 없지만 통합 문서와 모델 작성 도구에서 DAX 수식이 만들어지는 위치 및 특정 측정값의 컨텍스트가 평가되는 위치는 다릅니다.  
-  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 계산 수식은 대개 통합 문서 사용자가 자체적인 비즈니스 인텔리전스 분석을 위해 만듭니다. 계산 열은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 창에서 테이블에 대해 만들어지고, 측정값은 피벗 테이블 또는 계산 영역에서 만들어집니다. 테이블 형식 모델 프로젝트와 달리 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서는 데이터 보호를 위해 DAX 수식을 사용할 수 있는 역할 기반 보안을 제공하지 않습니다.  
-  
- 테이블 형식 모델 프로젝트에서 계산 수식은 모델 작성자가 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 모델 디자이너에서 만듭니다. DAX 수식을 사용하여 계산된 계산 열 값은 모델 디자이너에서 테이블에 즉시 표시되지만, 측정값은 사용자가 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 또는 Microsoft Excel의 피벗 테이블과 같은 보고 클라이언트에서 필터를 지정할 때까지 계산되지 않습니다. 단, 측정값 표의 측정값 미리 보기 기능은 예외입니다.  
-  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 가져오기 프로젝트 템플릿을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 새 테이블 형식 모델 프로젝트로 가져오는 경우 계산 열에 대한 DAX 수식이 새 테이블 형식 모델에 자동으로 만들어집니다. 통합 문서의 암시적/명시적 측정값에 대한 DAX 수식은 새 테이블 형식 모델에 명시적 측정값으로 자동으로 만들어집니다. 역할 및 보안 행 필터 기능이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 아직 없으므로 새 테이블 형식 모델에서 적어도 하나의 역할을 만들어 역할 멤버에 모델 데이터 액세스 권한을 제공해야 합니다. 행 필터의 DAX 수식은 행 수준에서 테이블 데이터를 보호하려는 경우에만 필요합니다.  
-  
-##  <a name="bkmk_DAX"></a> 계산 열, 측정값 및 행 필터의 DAX 수식  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 작성된 테이블 형식 모델의 경우 DAX 수식은 계산 열, 측정값 및 행 필터에 사용됩니다.  
-  
-### 계산 열  
- 계산 열은 모델 디자이너에서 기존 테이블에 추가한 다음 열 값을 정의하는 DAX 수식을 만드는 열입니다. 모델 디자이너에서 수식 입력줄을 사용하여 계산 열에 대한 수식을 만듭니다.  
+### <a name="calculated-columns"></a>계산 열  
+ 계산된 열은 열 (모델 디자이너)에 있는 기존 테이블에 추가 하 고 다음 열의 값을 정의 하는 DAX 수식을 만듭니다. 
   
 > [!NOTE]  
 >  DirectQuery 모드를 사용하여 관계형 데이터 원본에서 데이터를 검색하는 모델에서는 계산 열이 지원되지 않습니다.  
   
- 계산 열에 올바른 DAX 수식이 포함되어 있으면 수식이 입력되자마자 각 행에 대한 값이 계산됩니다. 그런 다음 이 값은 데이터베이스에 저장됩니다. 예를 들어 Date 테이블에서 수식 `=[Calendar Year] & " Q" & [Calendar Quarter]`를 수식 입력줄에 입력하면 같은 Date 테이블의 Calendar Year 열에서 값을 가져와 공백과 대문자 Q를 더한 다음 같은 Date 테이블의 Calendar Quarter 열의 값을 추가하여 테이블의 각 행에 대한 값이 계산됩니다. 계산 열의 각 행에 대한 결과는 즉시 계산되고, 예를 들어 **2010 Q1**과 같이 표시됩니다. 데이터를 다시 처리하는 경우에만 열 값이 다시 계산됩니다.  
+ 계산 열에 올바른 DAX 수식이 포함되어 있으면 수식이 입력되자마자 각 행에 대한 값이 계산됩니다. 그런 다음 이 값은 데이터베이스에 저장됩니다. 예를 들어 Date 테이블에서 수식 `=[Calendar Year] & " Q" & [Calendar Quarter]` 를 수식 입력줄에 입력하면 같은 Date 테이블의 Calendar Year 열에서 값을 가져와 공백과 대문자 Q를 더한 다음 같은 Date 테이블의 Calendar Quarter 열의 값을 추가하여 테이블의 각 행에 대한 값이 계산됩니다. 계산 열의 각 행에 대한 결과는 즉시 계산되고, 예를 들어 **2010 Q1**과 같이 표시됩니다. 데이터를 다시 처리하는 경우에만 열 값이 다시 계산됩니다.  
   
- 자세한 내용은 [계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)을 참조하세요.  
+ 자세한 내용은 [계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
-### 측정값 그룹  
- 측정값은 컨텍스트에 따라 결과가 변경되는 동적 수식입니다. 측정값은 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서, Excel 피벗 테이블 또는 피벗 차트와 같이 여러 특성을 사용한 모델 데이터의 결합과 필터링을 지원하는 보고 형식에서 사용됩니다. 테이블 형식 모델 프로젝트에서 측정값은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 모델 디자이너에서 측정값 표(및 수식 입력줄)를 사용하여 모델 작성자가 정의합니다.  
+### <a name="measures"></a>측정값 그룹  
+ 측정값은 컨텍스트에 따라 결과가 변경되는 동적 수식입니다. 측정값이 지을 결합 하 고 Power BI 보고서, Excel 피벗 테이블 또는 피벗 차트 등의 여러 속성을 사용 하 여 모델 데이터를 필터링을 지 원하는 보고 형식에서 사용 됩니다. 측정값은 SSDT의 모델 디자이너에서 측정값 표 (및 수식 입력줄)를 사용 하 여 모델 작성자가 정의 됩니다.  
   
  측정값의 수식에서는 COUNT 또는 SUM과 같은 자동 합계 기능을 사용하여 자동으로 만든 표준 집계 함수를 사용할 수도 있고 DAX를 사용하여 고유한 수식을 정의할 수도 있습니다. 수식 입력줄에서 측정값에 대한 수식을 정의하는 경우 도구 설명 기능에 총 현재 컨텍스트에 대한 결과의 미리 보기가 표시되지만 결과가 어느 곳에도 즉시 출력되지는 않습니다. 기타 측정값 정보도 **속성** 창에 표시됩니다.  
   
- (필터링된) 계산 결과를 즉시 볼 수 없는 이유는 측정값의 결과가 컨텍스트 없이 결정될 수 없기 때문입니다. 측정값을 계산하려면 각 셀과 관련된 데이터를 검색한 다음 각 셀에 대한 식을 계산하는 데 필요한 컨텍스트를 제공할 수 있는 보고 클라이언트 응용 프로그램이 있어야 합니다. 클라이언트는 Excel 피벗 테이블 또는 피벗 차트, [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서 또는 MDX 쿼리일 수 있습니다. 보고 클라이언트에 관계없이 별도의 쿼리가 결과의 각 셀에 대해 실행됩니다. 즉, 피벗 테이블에 있는 행 및 열 머리글의 각 조합이나 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 있는 슬라이서 및 필터의 각 선택은 측정값이 계산되는 각기 다른 데이터 하위 집합을 생성합니다. 예를 들어 수식 `Total Sales:=SUM([Sales Amount])`가 포함된 측정값에서 사용자가 피벗 테이블의 값 창에 Total Sales 측정값을 배치한 다음 Product 테이블의 Product Category 열을 필터 창에 배치하면 각 제품 범주에 대해 Sales Amount의 합계가 계산되고 표시됩니다.  
+ (필터링된) 계산 결과를 즉시 볼 수 없는 이유는 측정값의 결과가 컨텍스트 없이 결정될 수 없기 때문입니다. 측정값을 계산하려면 각 셀과 관련된 데이터를 검색한 다음 각 셀에 대한 식을 계산하는 데 필요한 컨텍스트를 제공할 수 있는 보고 클라이언트 응용 프로그램이 있어야 합니다. 해당 클라이언트는 Excel 피벗 테이블 또는 피벗 차트, Power BI 보고서 또는 MDX 쿼리일 수 있습니다. 보고 클라이언트에 관계없이 별도의 쿼리가 결과의 각 셀에 대해 실행됩니다. 즉, 피벗 테이블의 행 및 열 머리글의 각 조합 또는 슬라이서 및 필터에는 Power BI 보고서의 각 선택은 측정값이 계산 되는 데이터의 다른 하위 집합을 생성 합니다. 예를 들어 수식으로 측정값에서에서 `Total Sales:=SUM([Sales Amount])`사용자는 피벗 테이블의 값 창에 TotalSales 측정값을 배치한 다음 위치에서 Sales Amount의 합계가 필터 창에 DimProduct 테이블 DimProductCategory 열이 고, 계산 된 후 각 제품 범주의 표시 합니다.  
   
  계산 열 및 행 필터와 달리 측정값에 대한 구문에는 수식의 앞에 측정값 이름이 포함됩니다. 위 예에서는 측정값 이름인 **Total Sales:** 가 수식 앞에 나타납니다. 측정값을 만들면 이름과 해당 정의가 보고 클라이언트 응용 프로그램 필드 목록에 표시되며 큐브 뷰 및 역할에 따라 모델의 모든 사용자가 측정값을 사용할 수 있습니다.  
   
- 자세한 내용은 [측정값&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)을 참조하세요.  
+ 자세한 내용은 [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)에서 작성된 테이블 형식 모델 프로젝트에 대해 설명합니다.  
   
-### 행 필터  
- 행 필터는 특정 역할의 멤버가 볼 수 있는 테이블의 행을 정의합니다. DAX 수식을 사용하여 모델의 각 테이블에 대해 행 필터를 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 역할 관리자를 사용하여 특정 역할에 대해 행 필터를 만듭니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 역할 속성을 사용하여 배포된 모델에 대해 행 필터를 정의할 수도 있습니다.  
+### <a name="row-filters"></a>행 필터  
+ 행 필터는 특정 역할의 멤버가 볼 수 있는 테이블의 행을 정의합니다. DAX 수식을 사용하여 모델의 각 테이블에 대해 행 필터를 만들 수 있습니다. 행 필터는 SSDT의 역할 관리자를 사용 하 여 특정 역할에 대해 생성 됩니다. SQL Server Management Studio (SSMS)의 역할 속성을 사용 하 여 행 필터 배포 모델에 대해 정의할 수도 있습니다.  
   
  행 필터에서 부울 TRUE/FALSE 조건으로 계산되어야 하는 DAX 수식은 해당 역할의 멤버가 쿼리 결과로 반환할 수 있는 행을 정의합니다. DAX 수식에 포함되지 않은 행은 반환할 수 없습니다. 예를 들어 Sales 역할 멤버의 경우 Customers 테이블에 DAX 수식인 `=Customers[Country] = “USA”`가 있으면 Sales 역할의 멤버는 미국의 고객 데이터만 볼 수 있고 SUM 등의 집계는 미국의 고객에게만 반환됩니다.  
   
@@ -91,7 +61,7 @@ caps.handback.revision: 26
   
  행 필터는 지정된 행과 관련 행에 적용됩니다. 테이블에 여러 관계가 있는 경우 필터는 활성 관계에 대한 보안을 적용합니다. 행 필터는 관련 테이블에 대해 정의된 다른 행 필터와 교차됩니다.  
   
- 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)을 참조하세요.  
+ 자세한 내용은 참조 [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_DAX_datatypes"></a> DAX 데이터 형식  
  다양한 데이터 형식을 지원하는 여러 데이터 원본의 데이터를 모델로 가져올 수 있습니다. 데이터를 모델로 가져올 때 데이터는 테이블 형식 모델 데이터 형식 중 하나로 변환됩니다. 계산에서 모델 데이터를 사용하면 해당 데이터는 계산 출력 및 지속을 위해 DAX 데이터 형식으로 변환됩니다. DAX 수식을 만들면 수식에 사용된 조건이 자동으로 반환되는 값 데이터 형식을 결정합니다.  
@@ -112,7 +82,7 @@ caps.handback.revision: 26
   
  데이터 형식은 대개 자동으로 설정되지만, 데이터 형식과 해당 형식이 DAX 수식에 적용되는 방식을 이해하는 것이 중요합니다. 수식의 오류나 예기치 못한 결과는 인수에 지정된 데이터 형식에 사용할 수 없는 특정 연산자를 사용하여 발생하는 경우가 많습니다. 예를 들어 수식 `= 1 & 2`는 결과로 문자열 12를 반환합니다. 하지만 수식 `= “1” + “2”`는 정수 3을 반환합니다.  
   
- 테이블 형식 모델의 데이터 형식 및 DAX의 명시적/암시적 데이터 형식 변환에 대한 자세한 내용은 [지원되는 데이터 형식&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)을 참조하세요.  
+ 테이블 형식 모델 및 DAX에는 데이터 형식 명시적 및 암시적 변환의 데이터 형식에 대 한 자세한 내용은 참조 하십시오. [지원 되는 데이터 형식](../../analysis-services/tabular-models/data-types-supported-ssas-tabular.md)합니다.  
   
 ##  <a name="bkmk_DAX_opertors"></a> DAX 연산자  
  DAX 언어는 수식에서 다음과 같은 네 가지 유형의 계산 연산자를 사용합니다.  
@@ -125,12 +95,12 @@ caps.handback.revision: 26
   
 -   둘 이상의 식을 결합하여 단일 결과를 반환하는 논리 연산자  
   
- DAX 수식에서 사용되는 연산자에 대한 자세한 내용은 [DAX 연산자 참조](http://msdn.microsoft.com/ko-kr/1befbddc-6178-472c-8bc4-05dafd62207e)를 참조하세요.  
+ DAX 수식에서 사용되는 연산자에 대한 자세한 내용은 [DAX 연산자 참조](http://msdn.microsoft.com/en-us/1befbddc-6178-472c-8bc4-05dafd62207e)를 참조하세요.  
   
-##  <a name="bkmk_DAX_Formulas"></a> DAX 수식  
- DAX 수식은 계산 열 및 측정값에서 계산을 만들고 행 수준 필터를 사용하여 데이터를 보호하는데 필수적입니다. 계산 열 및 측정값에 대한 수식을 만들려면 모델 디자이너 창의 맨 위에 있는 수식 입력줄을 사용합니다. 행 필터에 대한 수식을 만들려면 역할 관리자 대화 상자를 사용합니다. 이 섹션의 내용은 DAX 수식의 기본 사항에 대한 이해를 돕기 위한 것입니다.  
+##  <a name="bkmk_DAX_Formulas"></a> DAX formulas  
+ DAX 수식은 계산 열 및 측정값에서 계산을 만들고 행 수준 필터를 사용하여 데이터를 보호하는데 필수적입니다. 에 계산된 열 및 측정값에 대 한 수식을 만들려면 모델 디자이너 창 또는 DAX 편집기의 맨 위에 수식 입력줄을 사용 합니다. 행 필터에 대한 수식을 만들려면 역할 관리자 대화 상자를 사용합니다. 이 섹션의 내용은 DAX 수식의 기본 사항에 대한 이해를 돕기 위한 것입니다.  
   
-###  <a name="basics"></a> 수식에 대한 기본 정보  
+###  <a name="basics"></a> Formula basics  
  DAX를 사용하면 테이블 형식 모델 작성자가 계산 열의 일부로, 그리고 직접 표시되지는 않지만 테이블과 연결된 측정값으로 두 모델 테이블에서 사용자 지정 계산을 정의할 수 있습니다. 또한 DAX를 사용하면 모델 작성자가 특정 테이블 또는 관련된 테이블에서 연결된 역할의 멤버 사용자가 쿼리할 수 있는 행을 정의하는 부울 값을 반환하는 계산을 만들어 데이터를 보호할 수 있습니다.  
   
  DAX 수식은 매우 간단할 수도, 매우 복잡할 수도 있습니다. 다음 표에서는 계산 열에서 사용할 수 있는 간단한 수식의 몇 가지 예를 보여 줍니다.  
@@ -159,7 +129,7 @@ caps.handback.revision: 26
 6.  Enter 키를 눌러 수식을 적용합니다.  
   
 > [!NOTE]  
->  계산 열에서 수식을 수락하면 바로 수식의 유효성이 검사되고 열이 값으로 채워집니다. 측정값에서 Enter 키를 누르면 테이블과 함께 측정값 표에 측정값 정의가 저장됩니다. 수식이 잘못된 경우 오류가 표시됩니다.  
+>  계산된 된 열에서 수식을 입력 하 고 수식을 유효성이 확인 되는 열은 값 채워집니다. 측정값에서 Enter 키를 누르면 테이블과 함께 측정값 표에 측정값 정의가 저장됩니다. 수식이 잘못된 경우 오류가 표시됩니다.  
   
  다음 예의 Days in Current Quarter 측정값에서는 좀 더 복잡한 수식을 볼 수 있습니다.  
   
@@ -175,7 +145,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |---------------------|-----------------|  
 |`Days in Current Quarter:=`|측정값 이름입니다.|  
 |`=`|등호(=)가 수식을 시작합니다.|  
-|`COUNTROWS`|[COUNTROWS 함수(DAX)](http://msdn.microsoft.com/ko-kr/830dd659-5405-4e0a-8d26-01ae9d5e5e9a)는 Date 테이블의 행 수를 계산합니다.|  
+|`COUNTROWS`|[COUNTROWS 함수(DAX)](http://msdn.microsoft.com/en-us/830dd659-5405-4e0a-8d26-01ae9d5e5e9a) 는 Date 테이블의 행 수를 계산합니다.|  
 |`()`|열고 닫는 괄호는 인수를 지정합니다.|  
 |`DATESBETWEEN`|DATESBETWEEN 함수는 Date 테이블의 Date 열에 있는 각 값의 마지막 날짜 사이의 날짜 수를 반환합니다.|  
 |`'Date'`|Date 테이블을 지정합니다. 테이블은 작은 따옴표로 묶입니다.|  
@@ -190,14 +160,14 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 |`'Date'`|Date 테이블을 지정합니다.|  
 |`[Date]`|Date 테이블의 Date 열을 지정합니다.|  
   
-#### 수식 자동 완성 사용  
+#### <a name="using-formula-autocomplete"></a>수식 자동 완성 사용  
  모델 디자이너의 수식 입력줄과 역할 관리자 대화 상자의 수식 행 필터 창에는 자동 완성 기능이 제공됩니다. 자동 완성을 사용하면 수식의 각 요소에 대한 옵션이 제공되므로 올바른 수식 구문을 쉽게 입력할 수 있습니다.  
   
 -   중첩된 함수가 있는 기존 수식의 중간에 수식 자동 완성 기능을 사용할 수 있습니다. 삽입 지점 바로 전 텍스트는 드롭다운 목록의 값을 표시하는 데 사용되며 삽입 지점 이후의 모든 텍스트는 변경되지 않은 상태로 유지됩니다.  
   
 -   자동 완성 기능은 함수의 닫는 괄호를 추가하거나 괄호를 자동으로 일치시키지 않습니다. 각 함수의 구문이 올바른지 확인해야 합니다. 구문이 올바르지 않으면 수식을 저장하거나 사용할 수 없습니다.  
   
-#### 수식에 여러 함수 사용  
+#### <a name="using-multiple-functions-in-a-formula"></a>수식에 여러 함수 사용  
  한 함수의 결과를 다른 함수의 인수로 사용하도록 함수를 중첩할 수 있습니다. 계산 열에서 함수의 64 수준까지 중첩할 수 있습니다. 그러나 함수를 중첩하면 수식을 만들거나 수식의 문제를 해결하기가 어려워질 수 있습니다.  
   
  여러 함수가 중첩 함수로만 사용되도록 설계되었습니다. 이러한 함수는 테이블을 반환합니다. 테이블은 결과로 직접 저장할 수 없으며 테이블 함수에 대한 입력으로 제공해야 합니다. 예를 들어 SUMX, AVERAGEX 및 MINX 함수의 경우 첫 번째 인수로 테이블을 사용해야 합니다.  
@@ -205,8 +175,8 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 > [!NOTE]  
 >  열 사이의 종속성에 필요한 여러 계산 때문에 성능이 저하되지 않도록 측정값 내에서는 함수 중첩에 몇 가지 제한이 있습니다.  
   
-##  <a name="bkmk_DAX_functions"></a> DAX 함수  
- 이 섹션에서는 DAX에서 지원되는 함수 *유형* 에 대한 개요를 제공합니다. 자세한 내용은 [DAX 함수 참조](http://msdn.microsoft.com/ko-kr/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)를 참조하세요.  
+##  <a name="bkmk_DAX_functions"></a> DAX functions  
+ 이 섹션에서는 DAX에서 지원되는 함수 *유형* 에 대한 개요를 제공합니다. 자세한 내용은 [DAX 함수 참조](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)를 참조하세요.  
   
  DAX는 날짜 및 시간을 사용하여 계산을 수행하고, 조건 값을 만들고, 문자열을 사용하고, 관계를 기반으로 조회를 수행하는 다양한 함수와 테이블을 반복하여 재귀적 계산을 수행하는 기능을 제공합니다. Excel 수식에 익숙한 경우 많은 함수가 비슷해 보이겠지만 DAX 수식에는 다음과 같은 중요한 차이가 있습니다.  
   
@@ -216,42 +186,42 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   DAX에는 값보다는 테이블을 반환하는 많은 함수가 포함되어 있습니다. 테이블은 보고 클라이언트에서 표시되지 않지만 다른 함수에 대한 입력을 제공하는 데 사용됩니다. 예를 들어 테이블을 검색한 다음 테이블에 있는 고유 값을 세거나 필터링된 테이블 또는 열에 대해 동적 합계를 계산할 수 있습니다.  
   
--   DAX 함수에는 다양한 *시간 인텔리전스* 함수가 포함되어 있습니다. 이러한 함수를 통해 날짜 범위를 정의하거나 선택하고 이러한 날짜 또는 범위를 기반으로 동적 계산을 수행할 수 있습니다. 예를 들어 병렬 기간에 대한 합계를 비교할 수 있습니다.  
+-   DAX 함수는 다양 한 *시간 인텔리전스* 함수입니다. 이러한 함수를 통해 날짜 범위를 정의하거나 선택하고 이러한 날짜 또는 범위를 기반으로 동적 계산을 수행할 수 있습니다. 예를 들어 병렬 기간에 대한 합계를 비교할 수 있습니다.  
   
-### 날짜 및 시간 함수  
- DAX의 날짜 및 시간 함수는 Microsoft Excel의 날짜 및 시간 함수와 비슷합니다. 하지만 DAX 함수는 Microsoft SQL Server에서 사용되는 **datetime** 데이터 형식을 기반으로 합니다. 자세한 내용은 [날짜 및 시간 함수(DAX)](http://msdn.microsoft.com/ko-kr/9fc9214a-fcd6-40c0-bf51-0c95637c6ffb)를 참조하세요.  
+### <a name="date-and-time-functions"></a>날짜 및 시간 함수  
+ DAX의 날짜 및 시간 함수는 Microsoft Excel의 날짜 및 시간 함수와 비슷합니다. 하지만 DAX 함수는 Microsoft SQL Server에서 사용되는 **datetime** 데이터 형식을 기반으로 합니다. 자세한 내용은 [날짜 및 시간 함수(DAX)](http://msdn.microsoft.com/en-us/9fc9214a-fcd6-40c0-bf51-0c95637c6ffb)를 참조하세요.  
   
-### 필터 함수  
- DAX의 필터 함수를 사용하면 특정 데이터 형식을 반환하고, 관련 테이블의 값을 조회하고, 관련 값을 기준으로 필터링할 수 있습니다. 조회 함수는 데이터베이스와 같이 테이블 및 관계를 사용하여 작동됩니다. 필터링 함수를 사용하면 데이터 컨텍스트를 조작하여 동적 계산을 만들 수 있습니다. 자세한 내용은 [필터 함수(DAX)](http://msdn.microsoft.com/ko-kr/b036fd40-4d3b-426d-a0d2-80258b53d8e5)를 참조하세요.  
+### <a name="filter-functions"></a>필터 함수  
+ DAX의 필터 함수를 사용하면 특정 데이터 형식을 반환하고, 관련 테이블의 값을 조회하고, 관련 값을 기준으로 필터링할 수 있습니다. 조회 함수는 데이터베이스와 같이 테이블 및 관계를 사용하여 작동됩니다. 필터링 함수를 사용하면 데이터 컨텍스트를 조작하여 동적 계산을 만들 수 있습니다. 자세한 내용은 [필터 함수(DAX)](http://msdn.microsoft.com/en-us/b036fd40-4d3b-426d-a0d2-80258b53d8e5)를 참조하세요.  
   
-### 정보 함수  
- 정보 함수는 인수로 제공되는 셀 또는 행을 살펴보고 값이 필요한 형식과 일치하는지 여부를 알려 줍니다. 예를 들어 ISERROR 함수는 참조하는 값에 오류가 포함되어 있는 경우 TRUE를 반환합니다. 자세한 내용은 [정보 함수(DAX)](http://msdn.microsoft.com/ko-kr/6d2bee09-0456-4444-b4d2-c231fd788a2e)를 참조하세요.  
+### <a name="information-functions"></a>정보 함수  
+ 정보 함수는 인수로 제공되는 셀 또는 행을 살펴보고 값이 필요한 형식과 일치하는지 여부를 알려 줍니다. 예를 들어 ISERROR 함수는 참조하는 값에 오류가 포함되어 있는 경우 TRUE를 반환합니다. 자세한 내용은 [정보 함수(DAX)](http://msdn.microsoft.com/en-us/6d2bee09-0456-4444-b4d2-c231fd788a2e)를 참조하세요.  
   
-### 논리 함수  
- 논리 함수는 식에 대해 실행되어 식의 값에 대한 정보를 반환합니다. 예를 들어 TRUE 함수를 사용하면 계산 중인 식에서 TRUE 값을 반환하는지 여부를 알 수 있습니다. 자세한 내용은 [논리 함수(DAX)](http://msdn.microsoft.com/ko-kr/2eb33add-60b2-44ab-b761-012a473116a2)를 참조하세요.  
+### <a name="logical-functions"></a>논리 함수  
+ 논리 함수는 식에 대해 실행되어 식의 값에 대한 정보를 반환합니다. 예를 들어 TRUE 함수를 사용하면 계산 중인 식에서 TRUE 값을 반환하는지 여부를 알 수 있습니다. 자세한 내용은 [논리 함수(DAX)](http://msdn.microsoft.com/en-us/2eb33add-60b2-44ab-b761-012a473116a2)를 참조하세요.  
   
-### 수치 연산 및 삼각 함수  
- DAX의 수치 연산 함수는 Excel 수치 연산 및 삼각 함수와 매우 비슷합니다. DAX 함수에서 사용하는 숫자 데이터 형식에는 사소한 몇 가지 차이점이 있습니다. 자세한 내용은 [수학 및 삼각 함수(DAX)](http://msdn.microsoft.com/ko-kr/1f408ec1-e769-43d6-a68c-567bc30d893f)를 참조하세요.  
+### <a name="mathematical-and-trigonometric-functions"></a>수치 연산 및 삼각 함수  
+ DAX의 수치 연산 함수는 Excel 수치 연산 및 삼각 함수와 매우 비슷합니다. DAX 함수에서 사용하는 숫자 데이터 형식에는 사소한 몇 가지 차이점이 있습니다. 자세한 내용은 [수학 및 삼각 함수(DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f)를 참조하세요.  
   
-### 통계 함수  
- DAX는 집계를 수행하는 통계 함수를 제공 합니다. DAX에서는 합계와 평균을 만들거나 최소값과 최대값을 구할 수 있을 뿐 아니라 관련 테이블을 기준으로 집계를 수행하거나 만들기 전에 열을 필터링할 수도 있습니다. 자세한 내용은 [통계 함수(DAX)](http://msdn.microsoft.com/ko-kr/ba4c1298-57a0-40fc-b6f6-00e187ace559)를 참조하세요.  
+### <a name="statistical-functions"></a>통계 함수  
+ DAX는 집계를 수행하는 통계 함수를 제공 합니다. DAX에서는 합계와 평균을 만들거나 최소값과 최대값을 구할 수 있을 뿐 아니라 관련 테이블을 기준으로 집계를 수행하거나 만들기 전에 열을 필터링할 수도 있습니다. 자세한 내용은 [통계 함수(DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559)를 참조하세요.  
   
-### 텍스트 함수  
- DAX의 텍스트 함수는 Excel의 텍스트 함수와 매우 비슷합니다. 문자열의 일부를 반환하거나, 문자열 내의 텍스트를 검색하거나, 문자열 값을 연결할 수 있습니다. DAX에서는 날짜, 시간 및 숫자의 형식을 제어하기 위한 함수도 제공합니다. 자세한 내용은 [텍스트 함수(DAX)](http://msdn.microsoft.com/ko-kr/e4821571-ae55-4df7-ae98-c578200bba5f)를 참조하세요.  
+### <a name="text-functions"></a>텍스트 함수  
+ DAX의 텍스트 함수는 Excel의 텍스트 함수와 매우 비슷합니다. 문자열의 일부를 반환하거나, 문자열 내의 텍스트를 검색하거나, 문자열 값을 연결할 수 있습니다. DAX에서는 날짜, 시간 및 숫자의 형식을 제어하기 위한 함수도 제공합니다. 자세한 내용은 [텍스트 함수(DAX)](http://msdn.microsoft.com/en-us/e4821571-ae55-4df7-ae98-c578200bba5f)를 참조하세요.  
   
-### 시간 인텔리전스 함수  
- DAX에 제공되는 시간 인텔리전스 함수를 사용하면 달력과 날짜에 대한 기본 제공 정보를 사용하는 계산을 만들 수 있습니다. 시간 및 날짜 범위를 집계 또는 계산과 함께 사용하면 비교 가능한 기간에서 판매량, 재고 등에 대한 의미 있는 비교 자료를 작성할 수 있습니다. 자세한 내용은 [시간 인텔리전스 함수(DAX)](http://msdn.microsoft.com/ko-kr/91df278d-4b28-40c1-a572-cdb91f081517)를 참조하세요.  
+### <a name="time-intelligence-functions"></a>시간 인텔리전스 함수  
+ DAX에서 제공 되는 시간 인텔리전스 함수를 통해 달력과 날짜에 대 한 기본 제공 지식을 사용 하는 계산을 만들 수 있습니다. 시간 및 날짜 범위를 집계 또는 계산과 함께 사용하면 비교 가능한 기간에서 판매량, 재고 등에 대한 의미 있는 비교 자료를 작성할 수 있습니다. 자세한 내용은 참조 [시간 인텔리전스 함수 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)합니다.  
   
-###  <a name="bkmk_TableFunc"></a> 테이블 반환 함수  
+###  <a name="bkmk_TableFunc"></a> Table-valued functions  
  테이블을 출력하거나, 테이블을 입력으로 받아들이거나, 둘 다 수행하는 DAX 함수가 있습니다. 테이블에 열이 하나만 있을 수 있기 때문에 테이블 반환 함수는 단일 열도 입력으로 받아들입니다. DAX 수식을 최대한 활용하려면 이러한 테이블 반환 함수를 사용하는 방법을 이해하는 것이 중요합니다. DAX에는 다음과 같은 유형의 테이블 반환 함수가 있습니다.  
   
- **필터 함수** 현재 행과 관련된 열, 테이블 또는 값을 반환합니다.  
+  **필터 함수** -열, 테이블 또는 현재 행과 관련 된 값을 반환 합니다.  
+    
+  **집계 함수** -테이블의 행에서 식을 집계 합니다.  
+    
+  **시간 인텔리전스 함수** -날짜 테이블을 반환 하거나 날짜 테이블을 사용 하 여 집계를 계산 합니다.  
   
- **집계 함수** 테이블 행에서 식을 집계합니다.  
-  
- **시간 인텔리전스 함수** 날짜 테이블을 반환하거나 날짜 테이블을 사용하여 집계를 계산합니다.  
-  
-##  <a name="bkmk_context"></a> DAX 수식의 컨텍스트  
+##  <a name="bkmk_context"></a> Context in DAX formulas  
  *컨텍스트* 는 DAX를 사용하여 수식을 만들 때 이해해야 하는 중요한 개념입니다. 컨텍스트를 사용하면 수식의 결과가 현재 행 또는 셀 선택과 모든 관련 데이터에 맞게 변경될 수 있는 동적 분석을 수행할 수 있습니다. 우수한 성능의 동적 분석을 작성하고 수식 문제를 해결하려면 컨텍스트를 이해하고 효과적으로 사용해야 합니다.  
   
  테이블 형식 모델의 수식은 다음과 같은 디자인 요소에 따라 각기 다른 컨텍스트에서 계산될 수 있습니다.  
@@ -264,7 +234,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  컨텍스트의 유형으로는 *행 컨텍스트*, *쿼리 컨텍스트*및 *필터 컨텍스트*가 있습니다.  
   
-###  <a name="bkmk_row_context"></a> 행 컨텍스트  
+###  <a name="bkmk_row_context"></a> Row context  
  *행 컨텍스트* 는 "현재 행"으로 생각할 수 있습니다. 계산 열에서 수식을 만드는 경우 해당 수식의 행 컨텍스트에 현재 행에 있는 모든 열의 값이 포함됩니다. 테이블이 다른 테이블과 관련되어 있으면 다른 테이블에서 현재 행과 관련된 모든 값도 내용에 포함됩니다.  
   
  예를 들어 Freight와 Tax라는 두 열의 값을 더하는 `=[Freight] + [Tax]`계산 열을 만든다고 가정합니다. 이 수식은 자동으로 지정된 열에 있는 현재 행의 값만 가져옵니다.  
@@ -279,7 +249,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  이 수식은 Region 테이블에서 현재 지역의 세율을 가져와서 Freight 열의 값에 더합니다. DAX 수식에서 테이블을 연결하는 특정 관계를 알거나 지정할 필요는 없습니다.  
   
-#### 여러 행 컨텍스트  
+#### <a name="multiple-row-context"></a>여러 행 컨텍스트  
  DAX에는 테이블에서 계산을 반복하는 함수가 포함되어 있습니다. 이러한 함수에는 각각 고유한 행 컨텍스트가 있는 여러 현재 행이 포함될 수 있습니다.  기본적으로 이러한 함수를 사용하여 내부 및 외부 루프에서 재귀적으로 연산을 수행하는 수식을 만들 수 있습니다.  
   
  예를 들어 모델에 **Products** 테이블과 **Sales** 테이블이 있다고 가정합니다. 사용자는 여러 제품과 관련된 트랜잭션으로 꽉 찬 판매량 테이블 전체를 살펴보고 한 트랜잭션에서 각 제품에 대해 주문된 수량 중 가장 많은 수량을 찾을 수 있습니다.  
@@ -290,11 +260,11 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 =MAXX(FILTER(Sales,[ProdKey]=EARLIER([ProdKey])),Sales[OrderQty])  
 ```  
   
- 이 수식에 대한 구체적인 연습은 [EARLIER 함수(DAX)](http://msdn.microsoft.com/ko-kr/6d126c4d-2315-49ec-899d-cb396eefbae6)를 참조하세요.  
+ 이 수식에 대한 구체적인 연습은 [EARLIER 함수(DAX)](http://msdn.microsoft.com/en-us/6d126c4d-2315-49ec-899d-cb396eefbae6)를 참조하세요.  
   
  요약하자면 EARLIER 함수는 현재 연산보다 먼저 발생한 연산의 행 컨텍스트를 저장합니다. 이 함수는 항상 두 개의 컨텍스트 집합을 메모리에 저장합니다. 하나의 컨텍스트 집합은 수식의 내부 루프에 대한 현재 행을 나타내고, 다른 컨텍스트 집합은 수식의 외부 루프에 대한 현재 행을 나타냅니다. DAX는 두 루프 간에 값을 자동으로 공급하므로 복잡한 집계를 만들 수 있습니다.  
   
-####  <a name="bkmk_query_context"></a> 쿼리 컨텍스트  
+####  <a name="bkmk_query_context"></a> Query context  
  *쿼리 컨텍스트* 는 수식에 대해 암시적으로 검색되는 데이터의 하위 집합을 참조합니다. 사용자가 측정값 또는 기타 값 필드를 피벗 테이블이나 테이블 형식 모델 기반의 보고서에 넣으면 엔진에서 행 머리글과 열 머리글, 슬라이서 및 보고서 필터를 검사하여 컨텍스트를 확인합니다. 그런 다음 필요한 쿼리가 데이터 원본에 대해 실행되어 올바른 데이터 하위 집합을 가져오고 수식으로 정의된 계산을 수행한 후 피벗 테이블 또는 보고서의 각 셀을 채웁니다. 검색되는 데이터 집합은 각 셀의 쿼리 컨텍스트입니다.  
   
 > [!WARNING]  
@@ -308,46 +278,46 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  열 및 행 머리글을 추가하거나 제거하고 슬라이서를 추가하거나 제거하여 피벗 테이블의 컨텍스트를 변경할 수 있습니다. 사용자가 피벗 테이블에 열 머리글이나 행 머리글을 추가할 때마다 측정값이 평가되는 쿼리 컨텍스트가 변경됩니다. 추출 및 필터링 작업도 컨텍스트에 영향을 줍니다. 따라서 측정값에서 사용되는 동일한 수식은 셀에 따라 다른 *쿼리 컨텍스트* 에서 계산됩니다.  
   
-####  <a name="bkmk_filter_context"></a> 필터 컨텍스트  
+####  <a name="bkmk_filter_context"></a> Filter context  
  *필터 컨텍스트* 는 관련 테이블에서 검색된 값이나 각 열에서 허용되는 값의 집합입니다. 디자이너 또는 표시 계층(보고서 및 피벗 테이블)에서 열에 필터를 적용할 수 있습니다. 수식 내의 필터 식으로 필터를 명시적으로 정의할 수도 있습니다.  
   
  필터 컨텍스트는 수식에 인수를 사용하여 열이나 테이블에 허용되는 값 집합에 대한 필터 제약 조건을 지정하면 추가됩니다. 필터 컨텍스트는 행 컨텍스트 또는 쿼리 컨텍스트와 같은 다른 컨텍스트보다 먼저 적용됩니다.  
   
- 테이블 형식 모델에서는 필터 컨텍스트를 만드는 다양한 방법이 있습니다. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서와 같이 모델을 사용할 수 있는 클라이언트의 컨텍스트에서 사용자는 행 및 열 머리글에 슬라이서나 보고서 필터를 추가하여 즉시 필터를 만들 수 있습니다. 수식에서 직접 필터 식을 지정하여 관련 값을 지정하거나 입력으로 사용되는 테이블을 필터링하거나 계산에서 사용되는 값의 컨텍스트를 동적으로 가져올 수도 있습니다. 특정 열의 필터를 완전히 지우거나 선택적으로 지울 수도 있습니다. 이는 총합계를 계산하는 수식을 만들 때 매우 유용합니다.  
+ 테이블 형식 모델에서는 필터 컨텍스트를 만드는 다양한 방법이 있습니다. Power BI 보고서와 같은 모델을 사용할 수 있는 클라이언트의 컨텍스트 내에서 사용자는 행 및 열 머리글에 슬라이서나 보고서 필터를 추가 하 여 즉시 필터를 만들 수 있습니다. 수식에서 직접 필터 식을 지정하여 관련 값을 지정하거나 입력으로 사용되는 테이블을 필터링하거나 계산에서 사용되는 값의 컨텍스트를 동적으로 가져올 수도 있습니다. 특정 열의 필터를 완전히 지우거나 선택적으로 지울 수도 있습니다. 이는 총합계를 계산하는 수식을 만들 때 매우 유용합니다.  
   
- 수식 내에 필터를 만드는 방법은 [FILTER 함수(DAX)](http://msdn.microsoft.com/ko-kr/f1f6bee4-547b-407c-b70b-9216b2f3d3fd)를 참조하세요.  
+ 수식 내에 필터를 만드는 방법은 [FILTER 함수(DAX)](http://msdn.microsoft.com/en-us/f1f6bee4-547b-407c-b70b-9216b2f3d3fd)를 참조하세요.  
   
- 필터를 지워서 총합계를 구하는 방법의 예는 [ALL 함수(DAX)](http://msdn.microsoft.com/ko-kr/a7e0ab71-d83e-4463-bc77-9eb5dd73c6fc)를 참조하세요.  
+ 필터를 지워서 총합계를 구하는 방법의 예는 [ALL 함수(DAX)](http://msdn.microsoft.com/en-us/a7e0ab71-d83e-4463-bc77-9eb5dd73c6fc)를 참조하세요.  
   
- 수식 내에서 필터를 선택적으로 지우고 적용하는 방법의 예는 [ALLEXCEPT 함수(DAX)](http://msdn.microsoft.com/ko-kr/a6f575a1-9803-4bb2-85b3-c95c060f1fb1)를 참조하세요.  
+ 수식 내에서 필터를 선택적으로 지우고 적용하는 방법의 예는 [ALLEXCEPT 함수(DAX)](http://msdn.microsoft.com/en-us/a6f575a1-9803-4bb2-85b3-c95c060f1fb1)를 참조하세요.  
   
-####  <a name="bkmk_determine_context"></a> 수식의 컨텍스트 확인  
+####  <a name="bkmk_determine_context"></a> Determining context in formulas  
  DAX 수식을 만들 때 수식은 먼저 유효한 구문인지 테스트된 다음 수식에 포함된 열과 테이블의 이름을 현재 컨텍스트에서 찾을 수 있는지 테스트됩니다. 수식으로 지정된 열이나 테이블을 찾을 수 없는 경우 오류가 반환됩니다.  
   
  유효성 검사(및 재계산 작업) 중의 컨텍스트는 이전 섹션에 설명된 대로 모델에서 사용 가능한 테이블, 테이블 간의 관계 및 적용된 필터를 사용하여 결정됩니다.  
   
- 예를 들어 다른 테이블과 관련되지 않은 일부 데이터를 새 테이블로 가져오고 필터를 적용하지 않은 경우 *현재 컨텍스트*는 테이블의 전체 열 집합입니다. 테이블이 다른 테이블과 관계로 연결되어 있으면 현재 컨텍스트에 관련 테이블이 포함됩니다. 테이블의 열을 슬라이서(및 경우에 따라 보고서 필터)가 있는 보고서에 추가하는 경우 수식의 컨텍스트는 보고서의 각 셀에 있는 데이터의 하위 집합입니다.  
+ 예를 들어 다른 테이블과 관련되지 않은 일부 데이터를 새 테이블로 가져오고 필터를 적용하지 않은 경우 *현재 컨텍스트* 는 테이블의 전체 열 집합입니다. 테이블이 다른 테이블과 관계로 연결되어 있으면 현재 컨텍스트에 관련 테이블이 포함됩니다. 테이블의 열을 슬라이서(및 경우에 따라 보고서 필터)가 있는 보고서에 추가하는 경우 수식의 컨텍스트는 보고서의 각 셀에 있는 데이터의 하위 집합입니다.  
   
  컨텍스트는 수식의 문제 해결을 어렵게 할 수도 있는 강력한 개념입니다. 간단한 수식 및 관계에서 시작하여 컨텍스트가 어떻게 작동하는지 확인해 보는 것이 좋습니다. 다음 섹션에서는 수식이 여러 유형의 컨텍스트를 사용하여 결과를 동적으로 반환하는 방식의 몇 가지 예를 제공합니다.  
   
-##### 수식의 컨텍스트 예  
+##### <a name="examples-of-context-in-formulas"></a>수식의 컨텍스트 예  
   
-1.  [RELATED 함수(DAX)](http://msdn.microsoft.com/ko-kr/0023fd13-c17a-4243-ab77-3779a4b502b6) 함수는 관련 열의 값을 포함하도록 현재 행의 컨텍스트를 확장합니다. 이 함수를 사용하여 조회를 수행할 수 있습니다. 이 항목의 예에서는 필터링과 행 컨텍스트의 상호 작용을 보여 줍니다.  
+1.  [RELATED 함수(DAX)](http://msdn.microsoft.com/en-us/0023fd13-c17a-4243-ab77-3779a4b502b6) 함수는 관련 열의 값을 포함하도록 현재 행의 컨텍스트를 확장합니다. 이 함수를 사용하여 조회를 수행할 수 있습니다. 이 항목의 예에서는 필터링과 행 컨텍스트의 상호 작용을 보여 줍니다.  
   
-2.  [FILTER 함수(DAX)](http://msdn.microsoft.com/ko-kr/f1f6bee4-547b-407c-b70b-9216b2f3d3fd) 함수를 사용하여 현재 컨텍스트에 포함시킬 행을 지정할 수 있습니다. 또한 이 항목의 예에서는 집계를 수행하는 다른 함수에 필터를 포함하는 방법을 보여 줍니다.  
+2.  [FILTER 함수(DAX)](http://msdn.microsoft.com/en-us/f1f6bee4-547b-407c-b70b-9216b2f3d3fd) 함수를 사용하여 현재 컨텍스트에 포함시킬 행을 지정할 수 있습니다. 또한 이 항목의 예에서는 집계를 수행하는 다른 함수에 필터를 포함하는 방법을 보여 줍니다.  
   
-3.  [ALL 함수(DAX)](http://msdn.microsoft.com/ko-kr/a7e0ab71-d83e-4463-bc77-9eb5dd73c6fc) 함수는 수식에서 컨텍스트를 설정합니다. 이 함수를 사용하여 쿼리 컨텍스트의 결과로 적용되는 필터를 재정의할 수 있습니다.  
+3.  [ALL 함수(DAX)](http://msdn.microsoft.com/en-us/a7e0ab71-d83e-4463-bc77-9eb5dd73c6fc) 함수는 수식에서 컨텍스트를 설정합니다. 이 함수를 사용하여 쿼리 컨텍스트의 결과로 적용되는 필터를 재정의할 수 있습니다.  
   
-4.  [ALLEXCEPT 함수(DAX)](http://msdn.microsoft.com/ko-kr/a6f575a1-9803-4bb2-85b3-c95c060f1fb1) 함수를 사용하면 지정된 필터를 제외한 모든 필터를 제거할 수 있습니다. 두 항목에는 모두 수식을 작성하고 복잡한 컨텍스트를 이해할 수 있도록 안내하는 예제가 포함되어 있습니다.  
+4.  [ALLEXCEPT 함수(DAX)](http://msdn.microsoft.com/en-us/a6f575a1-9803-4bb2-85b3-c95c060f1fb1) 함수를 사용하면 지정된 필터를 제외한 모든 필터를 제거할 수 있습니다. 두 항목에는 모두 수식을 작성하고 복잡한 컨텍스트를 이해할 수 있도록 안내하는 예제가 포함되어 있습니다.  
   
-5.  [EARLIER 함수(DAX)](http://msdn.microsoft.com/ko-kr/6d126c4d-2315-49ec-899d-cb396eefbae6) 및 [EARLIEST 함수(DAX)](http://msdn.microsoft.com/ko-kr/9befa04d-78db-492e-a463-80b8b77206d6) 함수를 사용하면 내부 루프의 값을 참조하면서 계산을 수행하여 테이블을 반복할 수 있습니다. 재귀의 개념과 내부 및 외부 루프에 대해 잘 알고 있다면 EARLIER 및 EARLIEST 함수의 기능이 얼마나 유용한지 확인할 수 있을 것입니다. 이러한 개념을 처음 접하는 경우 예에서 설명된 단계를 수행하여 계산에서 내부 컨텍스트와 외부 컨텍스트가 어떻게 사용되는지를 확인해야 합니다.  
+5.  [EARLIER 함수(DAX)](http://msdn.microsoft.com/en-us/6d126c4d-2315-49ec-899d-cb396eefbae6) 및 [EARLIEST 함수(DAX)](http://msdn.microsoft.com/en-us/9befa04d-78db-492e-a463-80b8b77206d6) 함수를 사용하면 내부 루프의 값을 참조하면서 계산을 수행하여 테이블을 반복할 수 있습니다. 재귀의 개념과 내부 및 외부 루프에 대해 잘 알고 있다면 EARLIER 및 EARLIEST 함수의 기능이 얼마나 유용한지 확인할 수 있을 것입니다. 이러한 개념을 처음 접하는 경우 예에서 설명된 단계를 수행하여 계산에서 내부 컨텍스트와 외부 컨텍스트가 어떻게 사용되는지를 확인해야 합니다.  
   
-##  <a name="bkmk_RelModel"></a> 수식 및 테이블 형식 모델  
- [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 모델 디자이너는 여러 개의 데이터 테이블에 대해 작업하고 해당 테이블을 테이블 형식 모델로 연결할 수 있는 영역입니다. 이 모델 내에서 테이블은 공통 값(키)이 있는 열에서 관계에 의해 조인됩니다. 테이블 형식 모델을 통해 다른 테이블의 열에 값을 연결하고 더 유용한 계산을 만들 수 있습니다. 관계형 데이터베이스에서와 마찬가지로 많은 수준의 관련 테이블을 연결하고 이러한 테이블의 열을 결과에 사용할 수 있습니다.  
+##  <a name="bkmk_RelModel"></a> Formulas and the tabular model  
+ SSDT에서 모델 디자이너는 데이터의 여러 테이블을 작업 하 고 테이블 형식 모델의 테이블을 연결할 수 있는 영역입니다. 이 모델 내에서 테이블은 공통 값(키)이 있는 열에서 관계에 의해 조인됩니다. 테이블 형식 모델을 통해 다른 테이블의 열에 값을 연결하고 더 유용한 계산을 만들 수 있습니다. 관계형 데이터베이스에서와 마찬가지로 많은 수준의 관련 테이블을 연결하고 이러한 테이블의 열을 결과에 사용할 수 있습니다.  
   
- 예를 들어 판매 테이블, 제품 테이블 및 제품 범주 테이블을 연결하면 사용자가 피벗 테이블 및 보고서에서 열의 다양한 조합을 사용할 수 있습니다. 관련 필드를 사용하여 연결된 테이블을 필터링하거나 하위 집합에 대한 계산을 만들 수 있습니다. 관계형 데이터베이스와 테이블 및 조인 작업에 익숙하지 않은 경우 [관계&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)를 참조하세요.  
+ 예를 들어 판매 테이블, 제품 테이블 및 제품 범주 테이블을 연결하면 사용자가 피벗 테이블 및 보고서에서 열의 다양한 조합을 사용할 수 있습니다. 관련 필드를 사용하여 연결된 테이블을 필터링하거나 하위 집합에 대한 계산을 만들 수 있습니다. (관계형 데이터베이스와 테이블 및 조인 작업에 익숙하지 않은 경우 참조 [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md).)  
   
- 테이블 형식 모델에는 테이블 간의 여러 관계가 지원됩니다. 혼동이나 잘못된 결과를 방지하기 위해 한 번에 한 관계만 활성 관계로 지정되지만 필요에 따라 활성 관계를 변경하여 계산에 데이터의 다양한 연결을 포함할 수 있습니다. [USERELATIONSHIP 함수(DAX)](http://msdn.microsoft.com/ko-kr/200484ab-9da1-4570-a100-7f9ed20d33af)를 사용하면 특정 계산에 사용할 관계를 하나 이상 지정할 수 있습니다.  
+ 테이블 형식 모델에는 테이블 간의 여러 관계가 지원됩니다. 혼동이나 잘못된 결과를 방지하기 위해 한 번에 한 관계만 활성 관계로 지정되지만 필요에 따라 활성 관계를 변경하여 계산에 데이터의 다양한 연결을 포함할 수 있습니다. [USERELATIONSHIP 함수(DAX)](http://msdn.microsoft.com/en-us/200484ab-9da1-4570-a100-7f9ed20d33af) 를 사용하면 특정 계산에 사용할 관계를 하나 이상 지정할 수 있습니다.  
   
  테이블 형식 모델에서는 다음과 같은 수식 디자인 규칙을 준수해야 합니다.  
   
@@ -355,7 +325,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   관계를 사용하여 모델에서 테이블을 연결하면 수식이 계산되는 범위, 즉 *컨텍스트*가 확장됩니다. 새 테이블 또는 새 관계의 추가나 활성 관계의 변경으로 컨텍스트가 변경되면 예기치 않은 방식으로 결과가 변경될 수 있습니다. 자세한 내용은 이 항목의 앞부분에 나오는 [DAX 수식의 컨텍스트](#bkmk_context) 을 참조하십시오.  
   
-##  <a name="bkmk_tables"></a> 테이블 및 열 작업  
+##  <a name="bkmk_tables"></a> Working with tables and columns  
  테이블 형식 모델의 테이블은 Excel 테이블과 비슷해 보이지만 데이터와 수식 작업을 수행하는 방식이 다릅니다.  
   
 -   수식은 개별 셀, 범위 참조 또는 배열에서는 작동하지 않으며 테이블과 열에서만 작동합니다.  
@@ -366,21 +336,21 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   각 열에 대해 데이터 형식이 설정되어 있지만 해당 열에 있는 각 값의 형식은 같아야 합니다.  
   
-### 수식에서 테이블 및 열 참조  
+### <a name="referring-to-tables-and-columns-in-formulas"></a>수식에서 테이블 및 열 참조  
  이름을 사용하여 모든 테이블과 열을 참조할 수 있습니다. 예를 들어 다음의 수식은 *정규화된* 이름을 사용하여 두 개의 테이블에서 열을 참조하는 방법을 보여 줍니다.  
   
 ```  
 =SUM('New Sales'[Amount]) + SUM('Past Sales'[Amount])  
 ```  
   
- 수식을 계산할 때 모델 디자이너는 먼저 일반 구문을 확인한 다음 현재 컨텍스트에서 가능한 열과 테이블을 기준으로 제공된 열 및 테이블의 이름을 확인합니다. 이름이 모호하거나 열 또는 테이블을 찾을 수 없는 경우 수식에서 오류가 발생하여 오류가 발생한 셀에 데이터 값 대신 #ERROR 문자열이 표시됩니다. 테이블, 열 및 기타 개체의 명명 요구 사항에 대한 자세한 내용은 [DAX 구문 참조](http://msdn.microsoft.com/ko-kr/098630f4-7d1d-467e-976c-99b2279430d5)의 "명명 요구 사항"을 참조하세요.  
+ 수식을 계산할 때 모델 디자이너는 먼저 일반 구문을 확인한 다음 현재 컨텍스트에서 가능한 열과 테이블을 기준으로 제공된 열 및 테이블의 이름을 확인합니다. 이름이 모호하거나 열 또는 테이블을 찾을 수 없는 경우 수식에서 오류가 발생하여 오류가 발생한 셀에 데이터 값 대신 #ERROR 문자열이 표시됩니다. 테이블, 열 및 기타 개체의 명명 요구 사항에 대한 자세한 내용은 [DAX 구문 참조](http://msdn.microsoft.com/en-us/098630f4-7d1d-467e-976c-99b2279430d5)의 "명명 요구 사항"을 참조하세요.  
   
-### 테이블 관계  
- 테이블 간 관계를 만들면 다른 테이블의 데이터를 조회하고 관련 값을 사용하여 복잡한 계산을 수행할 수 있습니다. 예를 들어 계산 열을 사용하여 현재 대리점에 대한 모든 배송 레코드를 조회한 다음 각각에 대한 배송 비용의 합계를 구할 수 있습니다. 그러나 대부분의 경우 관계가 필요하지 않을 수 있습니다. *search_column* 및 *search_value* 매개 변수에서 지정된 조건을 충족하는 행에 대해 *result_columnName*의 값을 반환하기 위해 수식에 LOOKUPVALUE 함수를 사용할 수 있습니다.  
+### <a name="table-relationships"></a>테이블 관계  
+ 테이블 간 관계를 만들면 다른 테이블의 데이터를 조회하고 관련 값을 사용하여 복잡한 계산을 수행할 수 있습니다. 예를 들어 계산 열을 사용하여 현재 대리점에 대한 모든 배송 레코드를 조회한 다음 각각에 대한 배송 비용의 합계를 구할 수 있습니다. 그러나 대부분의 경우 관계가 필요하지 않을 수 있습니다. *search_column* 및 *search_value* 매개 변수에서 지정된 조건을 충족하는 행에 대해 *result_columnName* 의 값을 반환하기 위해 수식에 LOOKUPVALUE 함수를 사용할 수 있습니다.  
   
  대부분의 DAX 함수에서 참조한 열을 찾고 의미 있는 결과를 반환하기 위해서는 두 테이블 간이나 여러 테이블 간에 관계가 있어야 합니다. 다른 함수에서는 관계를 확인하려고 시도하지만 최상의 결과를 얻기 위해서는 가능하면 항상 관계를 만들어야 합니다. 자세한 내용은 [수식 및 테이블 형식 모델](#bkmk_RelModel) 을 참조하십시오.  
   
-##  <a name="bkmk_RefreshRecalc"></a> 수식 결과 업데이트(처리)  
+##  <a name="bkmk_RefreshRecalc"></a> Updating the results of formulas (Process)  
  *데이터 프로세스* 및 *다시 계산* 은 두 개의 별개 작업이지만, 연관된 작업입니다. 복잡한 수식, 대용량 데이터 또는 외부 데이터 원본에서 가져온 데이터를 포함하는 데이터 모델을 디자인할 때 이러한 개념을 완벽하게 이해해야 합니다.  
   
  *데이터 처리* 는 모델의 데이터를 외부 데이터 원본의 새 데이터로 업데이트하는 프로세스입니다.  
@@ -395,10 +365,10 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  자세한 내용은 [데이터 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_troubleshoot"></a> 수식의 오류 문제 해결  
+##  <a name="bkmk_troubleshoot"></a> Troubleshooting errors in formulas  
  수식을 정의할 때 오류가 발생하면 수식에 *구문 오류*, *의미 체계 오류*또는 *계산 오류*가 있는 경우일 수 있습니다.  
   
- 구문 오류는 해결하기가 쉽습니다. 대개는 괄호나 쉼표가 누락된 경우가 많습니다. 개별 함수의 구문과 관련된 도움말은 [DAX 함수 참조](http://msdn.microsoft.com/ko-kr/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)를 참조하세요.  
+ 구문 오류는 해결하기가 쉽습니다. 대개는 괄호나 쉼표가 누락된 경우가 많습니다. 개별 함수의 구문과 관련된 도움말은 [DAX 함수 참조](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)를 참조하세요.  
   
  구문은 올바르지만 참조되는 값이나 열이 수식의 컨텍스트에 적합하지 않은 경우에 다른 유형의 오류가 발생합니다. 다음과 같은 문제 때문에 이러한 의미 체계 오류와 계산 오류가 발생할 수 있습니다.  
   
@@ -414,19 +384,19 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  처음 네 경우에서 DAX는 잘못된 수식이 포함된 열 전체에 플래그를 지정합니다. 마지막 경우 DAX는 열이 처리되지 않은 상태임을 나타내기 위해 열을 회색으로 표시합니다.  
   
-##  <a name="bkmk_addional_resources"></a> 추가 리소스  
+##  <a name="bkmk_addional_resources"></a> Additional resources  
  [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md)에서 계산 열, 측정값 및 행 필터에 많은 계산을 포함하는 테이블 형식 모델을 만드는 방법에 대한 단계별 지침을 제공합니다. 대부분의 수식에 대해 수식의 용도에 대한 설명이 제공됩니다.  
   
- [Analysis Services 및 PowerPivot 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에 대한 정보, 팁, 뉴스 및 알림을 제공합니다.  
+ [Analysis Services 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 최신 정보, 팁, 뉴스 및 알림을 제공 합니다. 
   
  [DAX 리소스 센터](http://go.microsoft.com/fwlink/?LinkID=220966&clcid=0x409) 에는 DAX에 대한 내부 및 외부 정보와 뛰어난 비즈니스 인텔리전스 전문가들이 제공한 다양한 DAX 솔루션이 포함되어 있습니다.  
   
-## 관련 항목:  
- [DAX(Data Analysis Expressions) 참조](http://msdn.microsoft.com/ko-kr/70a82136-0926-4a91-bcb3-e18e82593b0d)   
- [측정값&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
- [계산 열&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/calculated-columns-ssas-tabular.md)   
- [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
- [KPI&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+## <a name="see-also"></a>관련 항목:  
+ [DAX(Data Analysis Expressions) 참조](http://msdn.microsoft.com/en-us/70a82136-0926-4a91-bcb3-e18e82593b0d)   
+ [측정값](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
+ [계산 된 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
+ [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
+ [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [지원 되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

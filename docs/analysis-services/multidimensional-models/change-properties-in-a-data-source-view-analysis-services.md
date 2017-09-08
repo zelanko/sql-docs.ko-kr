@@ -1,31 +1,36 @@
 ---
-title: "데이터 원본 뷰에서 속성 변경(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이름 [Analysis Services]"
-  - "이름 [Analysis Services], 데이터 원본 뷰"
-  - "테이블 보기"
-  - "테이블 표시"
-  - "데이터 원본 뷰 [Analysis Services], 테이블"
-  - "테이블 [Analysis Services], 데이터 원본 뷰"
+title: "데이터 원본 뷰 (Analysis Services)에서 속성을 변경 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- friendly names [Analysis Services]
+- names [Analysis Services], data source views
+- viewing tables
+- displaying tables
+- data source views [Analysis Services], tables
+- tables [Analysis Services], data source views
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d2d7af5e8fa2adb597380aded86778e57135ae0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 원본 뷰에서 속성 변경(Analysis Services)
+# <a name="change-properties-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 속성 변경(Analysis Services)
   데이터 원본 뷰 마법사를 사용하여 데이터 원본 뷰를 정의하고 데이터 원본 뷰에 테이블, 뷰, 명명된 계산 및 명명된 쿼리를 추가한 후 다음과 관련된 속성을 변경할 수 있습니다.  
   
 -   데이터 원본 뷰 일치 조건  
@@ -38,7 +43,7 @@ caps.handback.revision: 34
   
  수정할 수 없는 데이터 원본에서 검색된 개체 메타데이터를 볼 수도 있습니다.  
   
-## 데이터 원본 뷰 속성 보기 또는 변경  
+## <a name="viewing-or-changing-data-source-view-properties"></a>데이터 원본 뷰 속성 보기 또는 변경  
  데이터 원본 뷰에 대한 설명을 제외한 데이터 원본 뷰 속성은 처음에 데이터 원본 뷰를 정의할 때 데이터 원본 뷰 마법사에서 설정합니다. 다음 표에서는 데이터 원본 뷰의 속성을 보여 주고 설명합니다.  
   
 > [!NOTE]  
@@ -53,7 +58,7 @@ caps.handback.revision: 34
 |RetrieveRelationships|데이터베이스에서 관계가 검색되는지 여부를 지정합니다. 기본값은 True입니다.|  
 |SchemaRestriction|데이터 원본에서 검색된 스키마에 대한 제한(있는 경우)을 지정합니다. 기본적으로 스키마 제한은 없습니다.|  
   
-## DataTable 속성 보기 또는 변경  
+## <a name="viewing-or-changing-datatable-properties"></a>DataTable 속성 보기 또는 변경  
  **DataTable** 속성은 데이터 원본 뷰의 테이블, 뷰 및 명명된 쿼리의 속성입니다. 이러한 속성은 데이터 원본 뷰에 이러한 개체를 추가할 때 설정됩니다. 다음 표에서는 데이터 원본 뷰의 **DataTable** 개체 속성을 보여 주고 설명합니다.  
   
 |속성|Description|  
@@ -67,7 +72,7 @@ caps.handback.revision: 34
 |스키마|테이블, 뷰 또는 명명된 쿼리에 해당하는 데이터베이스 스키마를 지정합니다. 이 속성은 편집할 수 없습니다.|  
 |TableType|테이블, 뷰 또는 명명된 쿼리에 대한 테이블 유형을 지정합니다. 이 속성은 편집할 수 없습니다.|  
   
-## DataColumn 속성 보기 또는 변경  
+## <a name="viewing-or-changing-datacolumn-properties"></a>DataColumn 속성 보기 또는 변경  
  **DataColumn** 속성은 데이터 원본 뷰의 테이블, 뷰 및 명명된 쿼리의 열 속성입니다. 이러한 속성은 명명된 계산에서 정의하는 대로 또는 기본 테이블이나 뷰, 명명된 쿼리에서 이러한 개체를 데이터 원본 뷰에 추가할 때 설정됩니다. 다음 표에서는 데이터 원본 뷰의 **DataColumn** 개체 속성을 보여 주고 설명합니다.  
   
 |속성|Description|  
@@ -80,7 +85,7 @@ caps.handback.revision: 34
 |길이|기본 테이블이나 뷰의 열 데이터를 기반으로 열의 최대 길이를 지정합니다.|  
 |이름|기본 열의 이름 또는 명명된 계산의 이름을 지정합니다. **Name** 속성은 명명된 계산을 기반으로 특성을 정의할 때 OLAP 및 데이터 마이닝 개체에 사용됩니다. 이 속성은 명명된 계산에 대해서만 편집할 수 있습니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [데이터 원본 뷰 디자이너에서의 다이어그램 작업&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   

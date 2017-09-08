@@ -1,29 +1,34 @@
 ---
-title: "알고리즘 매개 변수 확인 또는 변경 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "알고리즘 [데이터 마이닝]"
-  - "마이닝 모델 [Analysis Services], 알고리즘"
+title: "보기 또는 변경 알고리즘 매개 변수 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- mining models [Analysis Services], algorithms
 ms.assetid: 151b899b-c27a-4a09-bcf5-5c9f0ec24168
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6144f270df1d20543b45c419df494a023a0f3bfb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 알고리즘 매개 변수 확인 또는 변경
+# <a name="view-or-change-algorithm-parameters"></a>알고리즘 매개 변수 확인 또는 변경
   데이터 마이닝 모델을 작성하여 모델 결과를 사용자 지정하는 데 사용하는 알고리즘과 함께 제공되는 매개 변수를 변경할 수 있습니다.  
   
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 매개 변수는 모델에 대한 속성보다 훨씬 더 많으며, 이 매개 변수는 데이터의 처리, 그룹화 및 표시 방법을 근본적으로 변경하는 데 사용할 수 있습니다. 예를 들어 알고리즘 매개 변수를 사용하여 다음을 수행할 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 알고리즘 매개 변수는 모델에 대한 속성보다 훨씬 더 많으며, 이 매개 변수는 데이터의 처리, 그룹화 및 표시 방법을 근본적으로 변경하는 데 사용할 수 있습니다. 예를 들어 알고리즘 매개 변수를 사용하여 다음을 수행할 수 있습니다.  
   
 -   클러스터링 메서드와 같은 분석 방법을 변경합니다.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 15
   
  각 알고리즘마다 제공되는 매개 변수는 크게 다릅니다. 각 알고리즘에 대해 설정할 수 있는 매개 변수 목록은 이 섹션의 기술 참조 항목 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
   
-### 알고리즘 매개 변수 변경  
+### <a name="change-an-algorithm-parameter"></a>알고리즘 매개 변수 변경  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 데이터 마이닝 디자이너에 있는 **마이닝 모델** 탭에서 알고리즘을 조정할 마이닝 모델의 알고리즘 유형을 마우스 오른쪽 단추로 클릭하고 **알고리즘 매개 변수 설정**을 선택합니다.  
+1.  **의 데이터 마이닝 디자이너에 있는** 마이닝 모델 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]탭에서 알고리즘을 조정할 마이닝 모델의 알고리즘 유형을 마우스 오른쪽 단추로 클릭하고 **알고리즘 매개 변수 설정**을 선택합니다.  
   
      **알고리즘 매개 변수** 대화 상자가 열립니다.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 15
   
      알고리즘 매개 변수가 새 값으로 설정됩니다. 모델을 다시 처리해야 매개 변수 변경 내용이 마이닝 모델에 적용됩니다.  
   
-### 기존 모델에 사용되는 매개 변수 보기  
+### <a name="view-the-parameters-used-in-an-existing-model"></a>기존 모델에 사용되는 매개 변수 보기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 DMX 쿼리 창을 엽니다.  
   
@@ -64,7 +69,7 @@ caps.handback.revision: 15
   
     ```  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

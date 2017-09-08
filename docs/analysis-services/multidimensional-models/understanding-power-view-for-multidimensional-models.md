@@ -1,24 +1,29 @@
 ---
-title: "다차원 모델용 파워 뷰 이해 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "다차원 모델용 Power View 이해 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d0558cae-8209-4242-80c5-2c95981b88b9
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9536b3a2d178e7dea79bf7d9cf3482e423c078ed
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 다차원 모델용 파워 뷰 이해
+# <a name="understanding-power-view-for-multidimensional-models"></a>다차원 모델용 파워 뷰 이해
   이 문서에서는 SQL Server의 다차원 모델용 파워 뷰 기능에 대해 설명하고, 조직에서 다차원 모델용 파워 뷰를 구현하려는 BI 전문가 및 관리자에게 중요한 정보를 제공합니다.  
   
  다차원 모델은 업계 최고의 OLAP 데이터 모델링, 저장소 및 분석 솔루션을 제공합니다. SQL Server의 다차원 모델에서는 Microsoft 파워 뷰를 사용하여 임시 데이터 분석, 탐색 및 시각화를 수행할 수 있습니다.  
@@ -27,9 +32,9 @@ caps.handback.revision: 15
   
  **다차원 모델용 파워 뷰 아키텍처**  
   
- ![다차원 모델 아키텍처용 Power View](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "다차원 모델 아키텍처용 Power View")  
+ ![Power View를 다차원 모델 아키텍처용](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View를 다차원 모델 아키텍처용")  
   
-## 필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소  
  **서버 요구 사항**  
   
 -   다차원 모드에서 실행하는 Microsoft SQL Server 2016 Analysis Services  
@@ -40,7 +45,7 @@ caps.handback.revision: 15
   
 -   파워 뷰 클라이언트 기능에는 Microsoft Silverlight 5가 필요합니다. 자세한 내용은 [Reporting Services 및 파워 뷰에 대한 브라우저 지원](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조하세요.  
   
-## 기능  
+## <a name="features"></a>기능  
  **파워 뷰에 대한 기본 지원**  
   
  이 릴리스에서 다차원 모델은 SharePoint 모드의 파워 뷰를 사용하여 분석 및 시각화를 지원합니다. 다차원 모델에 대한 특별한 구성은 필요하지 않습니다. 하지만 Microsoft Excel 및 Microsoft PerformancePoint 등의 다른 클라이언트 도구와 비교할 때 파워 뷰에서 다차원 모델 개체가 표시되는 방식에는 몇 가지 차이점이 있습니다. 이 릴리스에서는 Excel의 파워 뷰를 사용하여 다차원 모델을 분석하고 시각화할 수 없습니다.  
@@ -49,7 +54,7 @@ caps.handback.revision: 15
   
  이 릴리스에서 다차원 모델은 일반적인 MDX 쿼리뿐 아니라 DAX 쿼리 및 함수도 지원합니다. PATH 같은 일부 DAX 함수는 다차원 모델링에 적용할 수 없습니다. DAX에 대한 자세한 내용 및 MDX와의 차이점을 알아보려면 [Data Analysis Expressions 및 MDX](http://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx)를 참조하십시오.  
   
-## 다차원 개체와 테이블 형식 개체의 매핑  
+## <a name="multidimensional-to-tabular-object-mapping"></a>다차원 개체와 테이블 형식 개체의 매핑  
  Analysis Services에서는 다차원 모델을 테이블 형식 모델 메타데이터로 표현합니다. 다차원 모델의 개체는 파워 뷰와 BI 주석이 포함된 CSDL 출력에서 테이블 형식 개체로 표현됩니다.  
   
  **개체 매핑 요약**  
@@ -60,15 +65,15 @@ caps.handback.revision: 15
 |큐브 차원|테이블|  
 |차원 특성(키, 이름)|열|  
 |측정값 그룹|테이블|  
-|측정값|이름|  
+|측정값|측정값|  
 |측정값 그룹이 없는 측정값|Measures라는 테이블의 내부|  
 |측정값 그룹 큐브 차원 관계|관계|  
-|Cube|큐브 뷰|  
+|Cube|Cube|  
 |KPI|KPI|  
 |사용자/부모-자식 계층|계층|  
 |표시 폴더|표시 폴더|  
   
-## 측정값, 측정값 그룹 및 KPI  
+## <a name="measures-measure-groups-and-kpis"></a>측정값, 측정값 그룹 및 KPI  
   
 > [!NOTE]  
 >  이 문서의 일부 이미지 및 텍스트는 SQL Server 2012용 Adventure Works 다차원 모델 예제 데이터베이스를 나타냅니다.  
@@ -77,7 +82,7 @@ caps.handback.revision: 15
   
  **파워 뷰 필드 목록의 측정값 그룹**  
   
- ![Power View의 필드 목록](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "Power View의 필드 목록")  
+ ![필드 목록 Power View에서](../../analysis-services/multidimensional-models/media/daxmd-powerviewfieldlist.gif "필드 Power View의 목록")  
   
  측정값 그룹 내의 측정값은 측정값으로 나타납니다. 연결된 측정값 그룹이 없는 계산 측정값이 있을 경우 이러한 측정값은 Measures라는 특수 테이블에 그룹화됩니다.  
   
@@ -87,31 +92,31 @@ caps.handback.revision: 15
   
  ![Power View 필드 목록의 측정값 그룹](../../analysis-services/multidimensional-models/media/daxmd-fieldlist-group.gif "Power View 필드 목록의 측정값 그룹")  
   
-### variant로서의 측정값  
+### <a name="measures-as-variants"></a>variant로서의 측정값  
  다차원 모델의 측정값은 variant입니다. 즉, 이 측정값은 강력한 형식이 아니며 다른 데이터 형식일 수 있습니다. 예를 들어 아래 이미지에서 Financial Reporting 테이블의 Amount 측정값은 기본적으로 통화 데이터 형식이지만, 문자열 데이터 형식인 "Statistical Accounts"의 부분합에 대해 문자열 값 "NA"도 가집니다. 파워 뷰에서는 일부 측정값을 variant로 인식하고 다른 시각화 유형으로 올바른 값 및 서식을 표시합니다.  
   
  **variant로서의 측정값**  
   
- ![Power View의 집계할 수 없는 계층](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Power View의 집계할 수 없는 계층")  
+ ![파워 뷰의 집계할 수 없는 계층](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 수 없는 계층")  
   
-### 암시적 측정값  
+### <a name="implicit-measures"></a>암시적 측정값  
  테이블 형식 모델에서는 사용자가 필드에 count, sum 또는 average와 같은 *암시적* 측정값을 만들 수 있습니다. 다차원 모델의 경우에는 차원 특성 데이터가 다른 방식으로 저장되므로 암시적 측정값을 쿼리하는 데 시간이 오래 걸릴 수 있습니다. 따라서 Powe View에서는 암시적 측정값을 사용할 수 없습니다.  
   
-## 차원, 특성 및 계층  
+## <a name="dimensions-attributes-and-hierarchies"></a>차원, 특성 및 계층  
  큐브 차원은 테이블 형식 메타데이터에서 테이블로 표시됩니다. 파워 뷰 필드 목록에서 차원 특성은 표시 폴더 내에 열로 표시됩니다.  Customer 차원의 Birth Date 특성과 같이 AttributeHierarchyEnabled 속성이 false로 설정된 차원 특성이나 AttributeHierarchyVisible 속성이 false로 설정된 차원 특성은 파워 뷰 필드 목록에 표시되지 않습니다. 여러 수준 계층 또는 사용자 계층(예: Customer 차원의 Customer Geography)은 파워 뷰 필드 목록에서 계층으로 표시됩니다. 차원 특성의 숨겨진 UnknownMember는 DAX 쿼리와 파워 뷰에서는 표시됩니다.  
   
  **SSDT(SQL Server Data Tools) 및 파워 뷰 필드 목록의 차원, 특성 및 계층**  
   
  ![SSDT 및 Power View 필드 목록의 차원](../../analysis-services/multidimensional-models/media/daxmd-ssdt-dimensions.gif "SSDT 및 Power View 필드 목록의 차원")  
   
-### 차원 특성 유형  
+### <a name="dimension-attribute-type"></a>차원 특성 유형  
  다차원 모델에서는 차원 특성을 특정 차원 특성 유형과 연결할 수 있습니다. 아래 이미지에서는 City, State-Province, Country 및 Postal Code 차원 특성에 지리 유형이 연결된 Geography 차원을 보여 줍니다. 이러한 차원 특성은 테이블 형식 메타데이터에 표시됩니다. 파워 뷰에서는 메타데이터를 인식하므로 사용자가 지도 시각화를 만들 수 있습니다. 이는 파워 뷰 필드 목록에서 Geography 테이블의 City, Country, Postal Code 및 State-Province 열 옆에 지도 아이콘으로 표시됩니다.  
   
  **SSDT 및 파워 뷰 필드 목록의 차원 특성 지리 유형**  
   
- ![차원 특성 유형 geography 형식](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "차원 특성 유형 geography 형식")  
+ ![차원 특성 지리 유형](../../analysis-services/multidimensional-models/media/daxmd-ssdt-attribute-geog-types.gif "차원 특성 지리 유형")  
   
-### 차원 계산 멤버  
+### <a name="dimension-calculated-members"></a>차원 계산 멤버  
  다차원 모델에서는 단일 실제 멤버가 있는 모든 항목의 자식에 대해 계산 멤버를 지원합니다. 이러한 유형의 계산 멤버를 표시할 때의 추가 제약 조건은 다음과 같습니다.  
   
 -   차원에 둘 이상의 특성이 있는 경우 단일 실제 멤버여야 합니다.  
@@ -126,38 +131,38 @@ caps.handback.revision: 15
   
  **계산 멤버가 있는 파워 뷰 보고서**  
   
- ![Power View의 계산 구성원](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "Power View의 계산 구성원")  
+ ![Power View의 계산 된 구성원](../../analysis-services/multidimensional-models/media/daxmd-calcmembersinpowerview.gif "Power View의 계산 된 구성원")  
   
-### 기본 멤버  
+### <a name="default-members"></a>기본 멤버  
  다차원 모델에서는 차원 특성의 기본 멤버를 지원합니다. 기본 멤버는 Analysis Services에서 쿼리를 위해 데이터를 집계할 때 사용됩니다. 차원 특성의 기본 멤버는 테이블 형식 메타데이터에서 해당하는 열의 기본 값 또는 필터로 표시됩니다.  
   
  특성이 적용될 경우 파워 뷰는 Excel 피벗 테이블과 거의 동일하게 동작합니다. 사용자가 기본값을 포함하는 파워 뷰 시각화 유형(테이블, 행렬 또는 차트)에 열을 추가할 경우 해당 기본값이 적용되지 않고 사용 가능한 모든 값이 표시됩니다. 사용자가 필터에 열을 추가할 경우에는 기본값이 적용됩니다.  
   
-### 차원 보안  
+### <a name="dimension-security"></a>차원 보안  
  다차원 모델에서는 역할을 통해 차원 및 셀 수준 보안을 지원합니다. 파워 뷰를 사용하여 큐브에 연결하는 사용자는 인증 후 적절한 사용 권한이 있는지 여부가 평가됩니다. 차원 보안이 적용된 경우에는 해당 차원 멤버가 파워 뷰에서 사용자에게 표시되지 않고, 사용자에게 일부 셀이 제한된 셀 보안 사용 권한이 정의된 경우에는 해당 사용자가 파워 뷰를 사용하여 큐브에 연결할 수 없습니다. 집계 데이터의 일부가 보안 데이터에서 계산된 경우 사용자가 집계 데이터를 볼 수 있는 경우도 있습니다.  
   
-### 집계할 수 없는 특성/계층  
+### <a name="non-aggregatable-attributeshierarchies"></a>집계할 수 없는 특성/계층  
  다차원 모델에서는 차원의 특성에 대해 IsAggregatable 속성이 false로 설정될 수 있습니다. 이는 클라이언트 응용 프로그램에서 데이터를 쿼리할 때 계층 간에 데이터를 집계하지 않도록 모델 작성자가 지정했음을 의미합니다. 파워 뷰에서 이 차원 특성은 부분합을 사용할 수 없는 열로 표시됩니다. 아래 이미지에서는 집계할 수 없는 계층의 예인 Accounts를 확인할 수 있습니다. Accounts 부모-자식 계층의 최상위 수준은 집계할 수 없는 반면 다른 수준은 집계할 수 있습니다. Accounts 계층의 행렬 시각화(처음 두 수준)에서는 Account Level 02에 대한 부분합이 표시되지만 최상위 수준인 Account Level 01에 대한 부분합은 표시되지 않습니다.  
   
  **파워 뷰의 집계할 수 없는 계층**  
   
- ![Power View의 집계할 수 없는 계층](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "Power View의 집계할 수 없는 계층")  
+ ![파워 뷰의 집계할 수 없는 계층](../../analysis-services/multidimensional-models/media/daxmd-nonaggrattrib.gif "파워 뷰의 집계할 수 없는 계층")  
   
-## 이미지  
+## <a name="images"></a>이미지  
  파워 뷰에서는 이미지를 렌더링할 수 있습니다. 다차원 모델에서 파워 뷰에 이미지를 제공하는 방법 중 하나는 이미지의 URL(Uniform Resource Locator)을 포함하는 열을 표시하는 것입니다. 이 릴리스의 Analysis Services에서는 ImageURL 형식으로 차원 특성의 태그를 지정할 수 있습니다. 그런 다음 이 데이터 형식이 테이블 형식 메타데이터에 포함되어 파워 뷰에 제공됩니다. 그러면 파워 뷰는 시각화 내에서 URL에 지정된 이미지를 다운로드하여 표시할 수 있습니다.  
   
  **SSDT의 ImageURL 차원 특성 유형**  
   
  ![차원 특성 속성](../../analysis-services/multidimensional-models/media/daxmd-dimattribute-properties.gif "차원 특성 속성")  
   
-## 부모-자식 계층  
+## <a name="parent-child-hierarchies"></a>부모-자식 계층  
  다차원 모델은 부모-자식 계층을 지원하며 이 계층은 테이블 형식 메타데이터에 계층으로 표시됩니다. 부모-자식 계층의 각 수준은 숨겨진 열로 제공됩니다. 부모-자식 차원의 키 특성은 테이블 형식 메타데이터에 표시되지 않습니다.  
   
  **파워 뷰의 부모-자식 계층**  
   
  ![부모-자식 계층](../../analysis-services/multidimensional-models/media/daxmd-ssdt-hierarchies.gif "부모-자식 계층")  
   
-## 큐브 뷰 및 번역  
+## <a name="perspectives-and-translations"></a>큐브 뷰 및 번역  
  큐브 뷰는 일부 차원 또는 측정값 그룹만 클라이언트 도구에 표시되는 큐브의 뷰입니다. 큐브 뷰의 이름은 큐브 연결 문자열 속성에 대한 값으로 지정할 수 있습니다. 예를 들어 다음 연결 문자열에서 'Direct Sales'는 다차원 모델의 큐브 뷰입니다.  
   
  `Data Source=localost;Initial Catalog=AdventureWorksDW-MD;Cube='Direct Sales'`  
@@ -170,14 +175,14 @@ caps.handback.revision: 15
   
  자세한 내용은 [Create a Report Data Source](../../analysis-services/multidimensional-models/create-a-report-data-source.md)을 참조하세요.  
   
-## 파워 뷰의 고정된 필터  
+## <a name="power-view-pinned-filters"></a>파워 뷰의 고정된 필터  
  파워 뷰 보고서에는 여러 뷰가 포함될 수 있습니다. 이 릴리스에서는 테이블 형식 모델과 다차원 모델 모두에 대해 *필터 고정* 기능을 사용하여 보고서의 모든 뷰에 적용되는 필터를 만들 수 있습니다. 아래 이미지에서는 뷰 필터에 대한 필터 고정 토글 단추를 보여 줍니다. 기본적으로 뷰 필터는 고정 해제되어 있고 해당 뷰에만 적용됩니다. 뷰 필터 고정은 모든 뷰에 적용되며, 뷰 필터를 고정 해제하면 다른 뷰에서 해당 필터가 제거됩니다.  
   
  **고정된 필터**  
   
- ![고정된 필터](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "고정된 필터")  
+ ![필터 고정](../../analysis-services/multidimensional-models/media/daxmd-pinnedfilterinpowerview.gif "필터를 고정 합니다.")  
   
-## 지원되지 않는 기능  
+## <a name="unsupported-features"></a>지원되지 않는 기능  
  **Excel 2013의 파워 뷰** - 다차원 모델에 연결하거나 다차원 모델에 대한 보고서를 만들 수 없습니다. 그러나 **Excel 2016의 파워 뷰** 에서는 다차원 모델에 연결하거나 다차원 모델용 보고서를 만들 수 없습니다. 자세한 내용을 확인하려면 [Excel 2016의 파워 뷰 및 OLAP](https://support.office.com/en-us/article/power-view-and-olap-in-excel-2016-ea5ff7a5-ea5f-48d4-aeb0-98c89ab738ac)를 참조하세요.  
   
  **동작** - 다차원 모델에 대한 파워 뷰 보고서나 DAX 쿼리에서는 지원되지 않습니다.  
@@ -189,7 +194,7 @@ caps.handback.revision: 15
   
  **셀 수준 보안** - 파워 뷰 보고서에서는 지원되지 않습니다.  
   
-## CSDLBI 주석  
+## <a name="csdlbi-annotations"></a>CSDLBI 주석  
  다차원 큐브 메타데이터는 CSDLBI(비즈니스 인텔리전스 포함 개념 스키마 정의 언어) 주석을 사용하여 EDM(엔터티 데이터 모델) 기반 개념 모델로 표시됩니다.  
   
  Analysis Services 인스턴스로 DISCOVER_CSDL_METADATA 요청이 보내질 때 다차원 메타데이터는 CSDLBI 문서, 즉 CSDL 출력에서 테이블 형식 모델 네임스페이스로 표현됩니다.  
@@ -228,7 +233,7 @@ caps.handback.revision: 15
   
  테이블 형식 모델의 CSDLBI 주석에 대한 자세한 내용은 MSDN의 [CSDL용 BI 주석에 대한 기술 참조](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/conceptual-schema-definition-language-csdl/technical-reference-for-bi-annotations-to-csdl.md) 및 [\[MS-CSDLBI\]: 비즈니스 인텔리전스 주석을 사용하는 개념 스키마 정의 파일 형식](http://msdn.microsoft.com/library/jj161299\(SQL.105\).aspx)을 참조하세요.  
   
-## Office.com의 클라이언트 도움말  
+## <a name="client-help-on-officecom"></a>Office.com의 클라이언트 도움말  
  Office.com에서 제공되는 다음 문서는 파워 뷰에서 다차원 모델 개체가 나타나는 방식과 예제 보고서를 만드는 방법을 배우는 데 유용합니다.  
   
  [파워 뷰의 다차원 모델 개체 이해](http://office.microsoft.com/en-us/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  

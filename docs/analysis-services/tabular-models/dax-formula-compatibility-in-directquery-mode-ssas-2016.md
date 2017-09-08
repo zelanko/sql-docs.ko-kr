@@ -1,35 +1,42 @@
 ---
-title: "DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "DirectQuery 모드 (SSAS 2016)에서 DAX 수식 호환성 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d2fbafe6-d7fb-437b-b32b-fa2446023fa5
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d7c13126b258662572b5ad5a9b02bcf7921c2346
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# DirectQuery 모드에서의 DAX 수식 호환성(SSAS 2016)
-[!INCLUDE[ssASCurrent_md](../../includes/ssascurrent-md.md)]의 가장 중요한 향상 기능 중 하나는 테이블 형식 1200 모델의 DirectQuery 모드 기능입니다. 이전 버전의 많은 기능 제한 사항이 더 이상 적용되지 않습니다. 특히 DAX 수식에서:
+# <a name="dax-formula-compatibility-in-directquery-mode"></a>DirectQuery 모드에서의 DAX 수식 호환성 
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+
+테이블 형식 1200 이상 모델에 DirectQuery 모드에서 이전 버전에서 많은 기능 제한 사항이 더 이상 적용 됩니다. 특히 DAX 수식에서:
 
 - 이제 DirectQuery에서 더 단순한 쿼리를 생성하고 향상된 성능을 제공합니다.
-- 이제 테이블 형식 1200 모델의 DirectQuery 모드에서 RLS(행 수준 보안)가 지원됩니다.
-- DirectQuery 모드의 테이블 형식 1200 모델에 대해서는 계산 열이 지원되지 않습니다.
+- 행 수준 보안 (RLS)은 이제 DirectQuery 모드에서 지원 됩니다.
+- 이제 DirectQuery 모드에서 테이블 형식 모델에 대 한 계산 된 열이 지원 됩니다.
 
-## DirectQuery 모드의 DAX 함수
+## <a name="dax-functions-in-directquery-mode"></a>DirectQuery 모드의 DAX 함수
 
-즉, 테이블 형식 1200 DirectQuery 모델에 대해 모든 DAX 함수가 지원됩니다. 그러나 모든 수식 형식에 대해 모든 함수가 지원되는 것은 아닙니다. 또한 모든 함수가 테이블 형식 1200 DirectQuery 모델에 대해 최적화된 것도 아닙니다. 기본적으로 DAX 함수는 최적화된 함수와 최적화되지 않은 함수, 두 그룹으로 나뉩니다. 먼저 최적화된 함수를 살펴보겠습니다.
+즉, 모든 DAX 함수는 DirectQuery 모델에 대해 지원 됩니다. 그러나 일부 함수는 모든 수식 유형에 대 한 지원 및 DirectQuery 모델에 대해 최적화 된 모든 함수입니다. 기본적으로 DAX 함수는 최적화된 함수와 최적화되지 않은 함수, 두 그룹으로 나뉩니다. 먼저 최적화된 함수를 살펴보겠습니다.
 
 
-### DirectQuery에 대해 최적화된 함수
+### <a name="optimized-for-directquery"></a>DirectQuery에 대해 최적화된 함수
 주로 스칼라 또는 집계 결과를 반환하는 함수입니다. 이러한 함수는 모든 유형의 수식(측정값, 쿼리, 계산 열, 행 수준 보안)에서 지원되는 함수와 측정값 및 쿼리 수식에서만 지원되는 함수로 세분화됩니다. 이러한 개체는 다음과 같습니다.    
 
 | 모든 DAX 수식에서 지원                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | 측정값 및 쿼리 수식에서 지원                                                                                                                                                                                                                                                                                                |
@@ -38,8 +45,8 @@ caps.handback.revision: 10
 
 
 
-### DirectQuery에 대해 최적화되지 않은 함수
-이러한 함수는 테이블 형식 1200 모델에서 DirectQuery와 함께 사용하도록 최적화되지 않았습니다. 이러한 함수는 계산 열 및 행 수준 보안 수식에서 지원되지 *않습니다*. 측정값과 쿼리 수식에서 *지원되지만* 성능은 확실하지 않습니다.
+### <a name="non-optimized-for-directquery"></a>DirectQuery에 대해 최적화되지 않은 함수
+이러한 함수 DirectQuery 작업 때 최적화 되지 않습니다. 이러한 함수는 계산 열 및 행 수준 보안 수식에서 지원되지 *않습니다* . 측정값과 쿼리 수식에서 *지원되지만* 성능은 확실하지 않습니다.
 
  여기에서 모든 함수를 나열하지는 않습니다. 기본적으로 위의 최적화된 함수 목록에 없으면 DirectQuery에 대해 최적화되지 않은 것입니다.
 
@@ -47,12 +54,12 @@ caps.handback.revision: 10
 
 모든 DAX 함수에 대해 확인하려면 [DAX 함수 참조](https://msdn.microsoft.com/en-us/library/ee634396.aspx)를 참조하세요.
 
-## DirectQuery 모드의 DAX 연산자
-모든 DAX 비교 및 산술 연산자는 테이블 형식 1200 모델의 DirectQuery 모드에서 완벽하게 지원됩니다. 자세한 내용은 [DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237.aspx)를 참조하세요.
+## <a name="dax-operators-in-directquery-mode"></a>DirectQuery 모드의 DAX 연산자
+모든 DAX 비교 및 산술 연산자는 DirectQuery 모드에서 완벽 하 게 지원 됩니다. 자세한 내용은 [DAX 연산자 참조](https://msdn.microsoft.com/library/ee634237.aspx)를 참조하세요.
 
 
  
-## 메모리 내 모드와 DirectQuery 모드 간의 차이점  
+## <a name="differences-between-in-memory-and-directquery-mode"></a>메모리 내 모드와 DirectQuery 모드 간의 차이점  
 DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모델이 메모리 내 모드로 배포되었을 때와 다른 결과를 반환할 수 있습니다. 이는 DirectQuery를 사용할 경우 데이터가 관계형 데이터 저장소에서 직접 쿼리되고, 수식에 필요한 집계가 저장 및 계산용 xVelocity 메모리 내 분석 엔진 대신 관련된 관계형 엔진(SQL, Oracle, Teradata)을 사용하여 수행되기 때문입니다.  
   
 예를 들어 일부 관계형 데이터 저장소는 숫자 값, 날짜, Null 등을 처리하는 방식에 차이점이 있습니다.  
@@ -61,10 +68,10 @@ DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모�
   
 또한 일부 함수의 경우에는 계산 시 현재 컨텍스트의 데이터를 관계형 데이터 원본에 매개 변수로 보내야 하므로 DirectQuery 모드에 대해 최적화되지 않습니다. 예를 들어 달력 테이블에서 날짜 범위를 참조하는 시간 인텔리전스 함수를 사용하여 측정합니다. 관계형 데이터 원본에는 달력 테이블이 없거나 하나 이상 있을 수 있습니다.  
   
-## 의미 체계 차이점  
+## <a name="semantic-differences"></a>의미 체계 차이점  
 이 섹션에서는 예상 가능한 의미 체계 차이점의 유형을 나열하고 함수 사용 또는 쿼리 결과에 적용될 수 있는 제한 사항에 대해 설명합니다.  
   
-### 비교  
+### <a name="comparisons"></a>비교  
 메모리 내 모델에서 DAX는 서로 다른 데이터 형식의 스칼라 값으로 확인되는 두 식의 비교를 지원합니다. 그러나 DirectQuery 모드로 배포된 모델에서는 관계형 엔진의 데이터 형식 및 비교 연산자를 사용하므로 다른 결과를 반환할 수 있습니다.  
   
 다음 비교는 DirectQuery 데이터 원본에 대한 계산에 사용될 경우 항상 오류를 반환합니다.  
@@ -80,9 +87,9 @@ DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모�
 **문자열과 숫자 비교**  
 예: `“2” < 3`  
   
-이 수식은 텍스트 문자열과 숫자를 비교합니다. 이 식은 DirectQuery 모드와 메모리 내 모델 모두에서 **true**가 됩니다.  
+이 수식은 텍스트 문자열과 숫자를 비교합니다. 이 식은 DirectQuery 모드와 메모리 내 모델 모두에서 **true** 가 됩니다.  
   
-메모리 내 모델에서는 문자열로 표현된 숫자가 다른 숫자와의 비교를 위해 숫자 데이터 형식으로 암시적으로 캐스팅되므로 결과가 **true**가 됩니다. SQL에서도 텍스트 숫자를 숫자 데이터 형식과 비교하기 위해 암시적으로 숫자로 캐스팅합니다.  
+메모리 내 모델에서는 문자열로 표현된 숫자가 다른 숫자와의 비교를 위해 숫자 데이터 형식으로 암시적으로 캐스팅되므로 결과가 **true** 가 됩니다. SQL에서도 텍스트 숫자를 숫자 데이터 형식과 비교하기 위해 암시적으로 숫자로 캐스팅합니다.  
   
 이는 첫 번째 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서 변경된 동작으로, 이 버전에서는 텍스트 "2"가 항상 모든 숫자보다 큰 것으로 간주되기 때문에 **false**가 반환되었습니다.  
   
@@ -94,20 +101,20 @@ DirectQuery 모드로 배포된 모델에 대한 쿼리에서는 동일한 모�
 **Null 비교**  
 예: `EVALUATE ROW("X", BLANK() = BLANK())`  
   
-이 수식은 SQL에서 Null에 해당하는 값과 Null을 비교합니다. 메모리 내 모델과 DirectQuery 모델에서 반환 값은 **true**이며, DirectQuery 모델에서는 메모리 내 모델과 비슷한 동작을 보장하기 위해 프로비전이 수행됩니다.  
+이 수식은 SQL에서 Null에 해당하는 값과 Null을 비교합니다. 메모리 내 모델과 DirectQuery 모델에서 반환 값은 **true** 이며, DirectQuery 모델에서는 메모리 내 모델과 비슷한 동작을 보장하기 위해 프로비전이 수행됩니다.  
   
 Transact-SQL에서는 Null이 Null과 같을 수 없습니다. 그러나 DAX에서는 빈 값이 다른 빈 값과 같습니다. 이 동작은 모든 메모리 내 모델에 대해 동일합니다. DirectQuery 모드에서는 대부분의 SQL Server 의미 체계를 사용하지만 이 경우에는 NULL 비교에 새로운 동작을 제공하여 SQL Server 의미 체계와 구별된다는 점을 주의해야 합니다.  
   
-### 캐스팅  
+### <a name="casts"></a>캐스팅  
   
 DAX에는 일반적인 의미의 캐스팅 함수는 없지만 많은 비교 및 산술 연산에서 암시적 캐스팅이 수행됩니다. 결과의 데이터 형식은 비교 또는 산술 연산에 의해 결정됩니다. 예:  
   
 -   TRUE + 1과 같은 산술 연산이나 부울 값 열에 적용된 MIN 함수에서 부울 값은 숫자로 처리됩니다. NOT 연산에서도 숫자 값을 반환합니다.  
   
--   비교에 사용될 때와 EXACT, AND, OR, &amp;&amp; 또는 ||와 함께 사용될 때 부울 값은 항상 논리적 값으로 처리됩니다.  
+-   비교에 사용될 때와 EXACT, AND, OR, &amp;&amp;또는 ||와 함께 사용될 때 부울 값은 항상 논리적 값으로 처리됩니다.  
   
 **문자열에서 부울로 캐스팅**  
-메모리 내 모델과 DirectQuery 모델에서는 **“”**(빈 문자열), **“true”** 및 **“false”** 문자열만 부울 값으로 캐스팅할 수 있습니다. 빈 문자열은 false 값으로 캐스팅됩니다.  
+메모리 내 모델과 DirectQuery 모델에서는 **“”** (빈 문자열), **“true”**및 **“false”**문자열만 부울 값으로 캐스팅할 수 있습니다. 빈 문자열은 false 값으로 캐스팅됩니다.  
   
 다른 문자열을 부울 데이터 형식으로 캐스팅하면 오류가 발생합니다.  
   
@@ -117,7 +124,7 @@ DirectQuery 모드에서 날짜 및 시간의 문자열 표현을 실제 **datet
 메모리 내 데이터 저장소를 사용하는 모델에서 지원되는 텍스트 형식 날짜의 범위는 SQL Server에서 지원되는 문자열 형식 날짜의 범위보다 제한적입니다. 그러나 DAX에서는 사용자 지정 날짜 및 시간 형식이 지원됩니다.  
   
 **문자열에서 부울이 아닌 다른 값으로 캐스팅**  
-문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/ko-kr/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
+문자열에서 부울이 아닌 값으로 캐스팅할 때 DirectQuery 모드는 SQL Server와 동일하게 작동합니다. 자세한 내용은 [CAST 및 CONVERT(Transact-SQL)](http://msdn.microsoft.com/en-us/a87d0850-c670-4720-9ad5-6f5a22343ea8)를 참조하세요.  
   
 **숫자에서 문자열로의 캐스팅이 허용되지 않음**  
 예: `CONCATENATE(102,”,345”)`  
@@ -131,11 +138,11 @@ SQL Server에서는 숫자에서 문자열로의 캐스팅이 허용되지 않�
   
 예: `TODAY() + “13:14:15”`  
   
-이 식에서 첫 번째 매개 변수는 **datetime** 형식이고 두 번째 매개 변수는 **string** 형식입니다. 그러나 피연산자를 결합할 때 캐스팅은 다르게 처리됩니다. DAX에서는 **string**에서 **double**로의 암시적 캐스팅을 수행합니다. 메모리 내 모델에서는 수식 엔진이 **double**로 직접 캐스팅하려고 시도하고, 이 시도가 실패하면 문자열을 **datetime**으로 캐스팅하려고 시도합니다.  
+이 식에서 첫 번째 매개 변수는 **datetime** 형식이고 두 번째 매개 변수는 **string**형식입니다. 그러나 피연산자를 결합할 때 캐스팅은 다르게 처리됩니다. DAX에서는 **string** 에서 **double**로의 암시적 캐스팅을 수행합니다. 메모리 내 모델에서는 수식 엔진이 **double**로 직접 캐스팅하려고 시도하고, 이 시도가 실패하면 문자열을 **datetime**으로 캐스팅하려고 시도합니다.  
   
-DirectQuery 모드에서는 **string**에서 **double**로의 직접 캐스팅만 적용됩니다. 이 캐스팅이 실패하면 수식에서 오류가 반환됩니다.  
+DirectQuery 모드에서는 **string** 에서 **double** 로의 직접 캐스팅만 적용됩니다. 이 캐스팅이 실패하면 수식에서 오류가 반환됩니다.  
   
-### 수학 함수 및 산술 연산  
+### <a name="math-functions-and-arithmetic-operations"></a>수학 함수 및 산술 연산  
 일부 수학 함수의 경우 DirectQuery 모드에서는 기본 데이터 형식과 연산에서 적용할 수 있는 캐스팅에 차이가 있기 때문에 다른 결과를 반환합니다. 또한 위에서 설명한 허용되는 값 범위에 대한 제한으로 인해 산술 연산의 결과가 달라질 수 있습니다.  
   
 **더하기 순서**  
@@ -179,9 +186,9 @@ Excel 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 모델에서도 0�
   
 `0/0`  
   
-`BLANK/BLANK` 식은 메모리 내 모델과 DirectQuery 모드 모두에서 `BLANK`를 반환하는 특수한 경우입니다.  
+`BLANK/BLANK` 식은 메모리 내 모델과 DirectQuery 모드 모두에서 `BLANK` 를 반환하는 특수한 경우입니다.  
   
-### 지원되는 숫자 및 날짜-시간 범위  
+### <a name="supported-numeric-and-date-time-ranges"></a>지원되는 숫자 및 날짜-시간 범위  
 메모리 내 테이블 형식 모델에서는 실수 및 날짜에 대한 최대 허용 값과 관련하여 Excel과 동일한 제한 사항이 수식에 적용됩니다. 그러나 계산 또는 쿼리에서 최대값이 반환되거나 값에 변환, 캐스팅, 반올림 또는 잘림이 적용되는 경우에는 차이점이 있을 수 있습니다.  
   
 -   **Currency** 및 **Real** 형식의 값을 곱할 경우 결과가 가능한 최대값보다 크면 DirectQuery 모드에서는 오류가 발생하지 않고 Null이 반환됩니다.  
@@ -247,7 +254,7 @@ DirectQuery 모드에서는 SQL Server 규칙에 따라 결과가 잘리고 식�
 이 동작은 날짜 열을 매개 변수로 사용하는 모든 함수에 적용됩니다.  
   
 ### <a name="bkmk_Currency"></a>Currency  
-DirectQuery 모드에서는 산술 연산의 결과가 **Currency** 형식일 경우 값이 다음 범위 내에 있어야 합니다.  
+DirectQuery 모드에서는 산술 연산의 결과가 **Currency**형식일 경우 값이 다음 범위 내에 있어야 합니다.  
   
 -   최소: -922337203685477.5808  
   
@@ -336,13 +343,14 @@ DirectQuery 모드에서는 이 제한이 적용되지 않습니다.
   
 입력 텍스트가 **varchar** 또는 **nvarchar**일 경우 수식 결과는 항상 동일합니다.  
   
-그러나 텍스트가 고정 길이의 문자이고 *&lt;num_chars&gt;*의 값이 대상 문자열의 길이보다 길 경우 DirectQuery 모드에서는 결과 문자열의 끝에 공백이 추가됩니다.  
+그러나 텍스트가 고정 길이의 문자이고 *&lt;num_chars&gt;* 의 값이 대상 문자열의 길이보다 길 경우 DirectQuery 모드에서는 결과 문자열의 끝에 공백이 추가됩니다.  
   
 메모리 내 모델에서는 결과가 패딩 없이 마지막 문자열 문자에서 끝납니다.  
 
 
-## 참고 항목  
-[DirectQuery 모드(SSAS 테이블 형식)](http://msdn.microsoft.com/ko-kr/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>참고 항목  
+[DirectQuery 모드(SSAS 테이블 형식)](http://msdn.microsoft.com/en-us/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
+
 
 

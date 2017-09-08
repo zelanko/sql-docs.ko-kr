@@ -1,24 +1,29 @@
 ---
 title: "Progress Reports 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Progress Reports 이벤트 범주"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Progress Reports event category
 ms.assetid: d34a6322-e26b-4454-b98f-32307d6956b5
 caps.latest.revision: 34
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 18f95a363c72cde1e067bb930d44c65254631ce2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Progress Reports 데이터 열
+# <a name="progress-reports-data-columns"></a>Progress Reports 데이터 열
   Progress Reports 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
@@ -30,7 +35,7 @@ caps.handback.revision: 34
   
  다음 표에서는 이러한 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Progress Report Begin - 데이터 열  
+## <a name="progress-report-begindata-columns"></a>Progress Report Begin - 데이터 열  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -51,11 +56,11 @@ caps.handback.revision: 34
 |NTDomainName|33|8|보고된 이벤트와 연결된 Windows 도메인 계정을 포함합니다.|  
 |SessionID|39|8|보고된 이벤트와 연결된 세션 ID를 포함합니다.|  
 |NTCanonicalUserName|40|8|정식 사용자 이름(예: engineering.microsoft.com/software/someone)입니다.|  
-|SPID|41|1|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
+|SPID|41|1.|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
 |TextData|42|9|보고된 이벤트와 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|보고된 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## Progress Report End - 데이터 열  
+## <a name="progress-report-enddata-columns"></a>Progress Report End - 데이터 열  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -84,11 +89,11 @@ caps.handback.revision: 34
 |NTDomainName|33|8|보고된 이벤트와 연결된 Windows 도메인 계정을 포함합니다.|  
 |SessionID|39|8|보고된 이벤트와 연결된 세션 ID를 포함합니다.|  
 |NTCanonicalUserName|40|8|보고된 이벤트와 연결된 Windows 사용자 이름을 포함합니다. 이는 정식 사용자 이름으로 engineering.microsoft.com/software/user와 같습니다.|  
-|SPID|41|1|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
+|SPID|41|1.|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
 |TextData|42|9|보고된 이벤트와 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|보고된 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## Progress Report Current - 데이터 열  
+## <a name="progress-report-currentdata-columns"></a>Progress Report Current - 데이터 열  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -108,11 +113,11 @@ caps.handback.revision: 34
 |ConnectionID|25|1.|보고된 이벤트와 연결된 고유 연결 ID를 포함합니다.|  
 |DatabaseName|28|8|보고된 이벤트가 발생한 데이터베이스의 이름을 포함합니다.|  
 |SessionID|39|8|보고된 이벤트와 연결된 세션 ID를 포함합니다.|  
-|SPID|41|1|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
+|SPID|41|1.|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
 |TextData|42|9|보고된 이벤트와 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|보고된 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## Progress Report Error - 데이터 열  
+## <a name="progress-report-errordata-columns"></a>Progress Report Error - 데이터 열  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -136,11 +141,11 @@ caps.handback.revision: 34
 |ConnectionID|25|1.|보고된 이벤트와 연결된 고유 연결 ID를 포함합니다.|  
 |DatabaseName|28|8|보고된 이벤트가 발생한 데이터베이스의 이름을 포함합니다.|  
 |SessionID|39|8|보고된 이벤트와 연결된 세션 ID를 포함합니다.|  
-|SPID|41|1|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
+|SPID|41|1.|보고된 이벤트와 연결된 사용자 세션을 고유하게 식별하는 SPID(서버 프로세스 ID)를 포함합니다. SPID는 XMLA(XML for Analysis)에서 사용하는 세션 GUID와 정확히 일치합니다.|  
 |TextData|42|9|보고된 이벤트와 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|보고된 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## 관련 항목:  
- [Progress Reports 이벤트 범주](../../analysis-services/trace-events/progress-reports-event-category.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Progress Reports Event Category](../../analysis-services/trace-events/progress-reports-event-category.md)  
   
   

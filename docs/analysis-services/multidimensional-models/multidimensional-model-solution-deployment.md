@@ -1,28 +1,33 @@
 ---
 title: "다차원 모델 솔루션 배포 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services 배포, 계획"
-  - "배포 [Analysis Services]"
-  - "[Analysis Services] 배포, 계획"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services deployments, planning
+- deploying [Analysis Services]
+- deploying [Analysis Services], planning
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d09db4ead5f0b05d82c40a16aed31a070b16250c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 다차원 모델 솔루션 배포
+# <a name="multidimensional-model-solution-deployment"></a>다차원 모델 솔루션 배포
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 개발을 완료했으면 Analysis Services 서버에 데이터베이스를 배포할 수 있습니다. Analysis Services는 데이터베이스를 테스트 서버나 프로덕션 서버로 이동하는 데 사용할 수 있는 6가지의 배포 방법을 제공합니다. 메소드를 이점이 많은 순서에 따라 나열하면 AMO 자동화, XMLA, 배포 마법사, 배포 유틸리티, 동기화 마법사, 백업 및 복원과 같습니다.  
   
  이 항목은 다음과 같은 섹션으로 구성됩니다.  
@@ -52,7 +57,7 @@ caps.handback.revision: 39
 |이 솔루션에 어떤 하드웨어 및 소프트웨어 리소스가 필요합니까?|[Analysis Services 배포에 대한 요구 사항 및 고려 사항](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 패키지, 보고서 또는 관계형 데이터베이스 스키마와 같이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 범위 외부에 있는 관련 개체를 어떻게 배포합니까?||  
 |배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 데이터를 어떻게 로드하고 업데이트합니까?<br /><br /> 배포된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 메타데이터(예: 계산)를 어떻게 업데이트하나요?|이 항목의[배포 방법](#bkmk_meth) .|  
-|인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 액세스를 사용자에게 제공하기를 원합니까?|[IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure http access to analysis services on iis 8.0.md)|  
+|인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 액세스를 사용자에게 제공하기를 원합니까?|[IIS&#40;인터넷 정보 서비스&#41; 8.0에서 Analysis Services에 대한 HTTP 액세스 구성](../../analysis-services/instances/configure-http-access-to-analysis-services-on-iis-8-0.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터에 대한 지속적인 쿼리 액세스를 제공하기를 원합니까?|[Analysis Services 배포에 대한 요구 사항 및 고려 사항](../../analysis-services/multidimensional-models/requirements-and-considerations-for-analysis-services-deployment.md)|  
 |연결된 개체 또는 원격 파티션을 사용하여 분산 환경에 개체를 배포하기를 원합니까?|[로컬 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md), [원격 파티션 만들기 및 관리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md) 및 [연결된 측정값 그룹](../../analysis-services/multidimensional-models/linked-measure-groups.md).|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터를 어떻게 보호합니까?|[개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)|  

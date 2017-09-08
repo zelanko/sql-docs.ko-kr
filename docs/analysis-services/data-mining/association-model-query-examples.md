@@ -1,29 +1,34 @@
 ---
 title: "연결 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "항목 집합 [Analysis Services]"
-  - "연결 알고리즘 [Analysis Services]"
-  - "규칙 [데이터 마이닝]"
-  - "연결 규칙"
-  - "content queries [DMX]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- rules [Data Mining]
+- association rules
+- content queries [DMX]
 ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c7e1bd8f5d4b6b70c0d31f1fc4a9e1c06da088e3
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 연결 모델 쿼리 예제
+# <a name="association-model-query-examples"></a>연결 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 규칙과 항목 집합에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 데이터에서 발견된 연결을 사용하여 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 연결 모델에서 예측은 일반적으로 규칙을 기반으로 하여 권장 구성을 생성하는 데 사용되고, 내용에 대한 쿼리는 일반적으로 항목 집합 간의 관계를 탐색합니다. 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘을 기반으로 하는 모델에 대해 이러한 종류의 쿼리를 만드는 방법에 대해 설명합니다.  
@@ -115,7 +120,7 @@ WHERE MODEL_NAME = 'Association'
   
  [맨 위로 이동](#bkmk_top2)  
   
-## 규칙 및 항목 집합에 대한 정보 찾기  
+## <a name="finding-information-about-rules-and-itemsets"></a>규칙 및 항목 집합에 대한 정보 찾기  
  연결 모델의 일반적인 용도는 자주 사용하는 항목 집합에 대한 정보를 검색하는 것과 특정 규칙과 항목 집합에 대한 세부 정보를 추출하는 것입니다. 예를 들어 특별히 관심 있는 항목으로 점수가 매겨진 규칙 목록을 추출하거나 가장 일반적인 항목 집합의 목록을 만들 수 있습니다. 이러한 정보는 DMX 내용 쿼리를 사용하여 검색할 수 있습니다. **Microsoft 연결 뷰어**에서도 이러한 정보를 찾아볼 수 있습니다.  
   
 ###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 항목 집합 및 제품 목록 검색  
@@ -160,13 +165,13 @@ WHERE NODE_TYPE = 7
   
  [맨 위로 이동](#bkmk_top2)  
   
-## 모델을 사용하여 예측 수행  
- 연결 규칙 모델은 항목 집합에서 발견된 상관 관계를 기반으로 하는 권장 구성을 생성하는 데 주로 사용됩니다. 따라서 연결 규칙 모델을 기반으로 예측 쿼리를 만들 때 일반적으로 모델의 규칙을 사용하여 새로운 데이터를 토대로 예측을 수행합니다.  [PredictAssociation&#40;DMX&#41;](../../dmx/predictassociation-dmx.md)은 권장 구성을 반환하는 함수로, 쿼리 결과를 사용자 지정하는 데 사용할 수 있는 몇 개의 인수를 포함합니다.  
+## <a name="making-predictions-using-the-model"></a>모델을 사용하여 예측 수행  
+ 연결 규칙 모델은 항목 집합에서 발견된 상관 관계를 기반으로 하는 권장 구성을 생성하는 데 주로 사용됩니다. 따라서 연결 규칙 모델을 기반으로 예측 쿼리를 만들 때 일반적으로 모델의 규칙을 사용하여 새로운 데이터를 토대로 예측을 수행합니다.  [PredictAssociation&#40;DMX&#41;](../../dmx/predictassociation-dmx.md) 은 권장 구성을 반환하는 함수로, 쿼리 결과를 사용자 지정하는 데 사용할 수 있는 몇 개의 인수를 포함합니다.  
   
  서로 다른 교차 판매 전략의 효율성을 비교할 수 있도록 다양한 규칙과 항목 집합에 대한 신뢰도를 반환하려는 경우 연결 모델에 대한 쿼리가 유용할 수 있습니다. 다음 예에서는 이러한 쿼리를 만드는 방법을 보여 줍니다.  
   
 ###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 관련 항목 예측  
- 다음 예제에서는 [중간 데이터 마이닝 자습서&#40;Analysis Services - 데이터 마이닝&#41;](../Topic/Intermediate%20Data%20Mining%20Tutorial%20\(Analysis%20Services%20-%20Data%20Mining\).md)에서 만든 연결 모델을 사용하며, 특정 제품을 구매한 고객에게 어떤 제품을 권장할 것인지를 알려 주는 예측 쿼리를 만드는 방법을 보여 줍니다. 사용자가 **SELECT…UNION** 문에서 모델에 값을 제공하는 쿼리를 단일 쿼리라고 합니다. 새로운 값에 해당하는 예측 가능한 모델 열이 중첩 테이블이므로 **SELECT** 절을 하나 사용하여 새 값을 중첩 테이블 열 `[Model]`에 매핑하고, 또 다른 **SELECT** 절을 사용하여 중첩 테이블 열을 사례 수준 열 `[v Assoc Seq Line Items]`에 매핑해야 합니다. INCLUDE-STATISTICS 키워드를 쿼리에 추가하면 권장 구성에 대한 확률과 지지도를 확인할 수 있습니다.  
+ 다음 예제에서는 [중간 데이터 마이닝 자습서&#40;Analysis Services - 데이터 마이닝&#41;](http://msdn.microsoft.com/library/404b31d5-27f4-4875-bd60-7b2b8613eb1b)에서 만든 연결 모델을 사용하며, 특정 제품을 구매한 고객에게 어떤 제품을 권장할 것인지를 알려 주는 예측 쿼리를 만드는 방법을 보여 줍니다. 사용자가 **SELECT…UNION** 문에서 모델에 값을 제공하는 쿼리를 단일 쿼리라고 합니다. 새로운 값에 해당하는 예측 가능한 모델 열이 중첩 테이블이므로 **SELECT** 절을 하나 사용하여 새 값을 중첩 테이블 열 `[Model]`에 매핑하고, 또 다른 **SELECT** 절을 사용하여 중첩 테이블 열을 사례 수준 열 `[v Assoc Seq Line Items]`에 매핑해야 합니다. INCLUDE-STATISTICS 키워드를 쿼리에 추가하면 권장 구성에 대한 확률과 지지도를 확인할 수 있습니다.  
   
 ```  
 SELECT PredictAssociation([Association].[vAssocSeqLineItems],INCLUDE_STATISTICS, 3)  
@@ -219,7 +224,7 @@ ORDER BY NODE_SUPPORT DESC
   
  [맨 위로 이동](#bkmk_top2)  
   
-## 함수 목록  
+## <a name="function-list"></a>함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 다음 표에 나열된 함수를 추가로 지원합니다.  
   
 |||  
@@ -235,7 +240,7 @@ ORDER BY NODE_SUPPORT DESC
 |[PredictSupport&#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
 |[PredictVariance&#40;DMX&#41;](../../dmx/predictvariance-dmx.md)|예측 값의 분산을 반환합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [Microsoft 연결 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)   
  [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

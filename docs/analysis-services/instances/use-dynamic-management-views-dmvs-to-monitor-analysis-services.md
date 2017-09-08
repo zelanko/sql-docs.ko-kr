@@ -1,24 +1,29 @@
 ---
-title: "DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "동적 관리 뷰 (Dmv)를 사용 하 여 Analysis Services를 모니터링할 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0c9faafd33f7abaee582821336dcd471d637a1c1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
+# <a name="use-dynamic-management-views-dmvs-to-monitor-analysis-services"></a>DMV(동적 관리 뷰)를 사용하여 Analysis Services 모니터링
   Analysis Services DMV(동적 관리 뷰)는 로컬 서버 작업 및 서버 상태에 대한 정보를 표시하는 쿼리 구조입니다. 쿼리 구조는 Analysis Services 인스턴스에 대한 메타데이터 및 모니터링 정보를 반환하는 스키마 행 집합에 대한 인터페이스입니다.  
   
  대부분의 DMV 쿼리에서는 **SELECT** 문 및 **$System** 스키마를 XML/A 스키마 행 집합과 함께 사용합니다.  
@@ -99,7 +104,7 @@ ORDER BY TABLE_NAME ASC
 ```  
   
 > [!NOTE]  
->  주어진 행 집합에 대해 DMV를 사용할 수 없으면 다음 오류가 서버에서 반환됩니다. “서버에서 \<schemarowset> 요청 유형을 인식할 수 없습니다." 다른 모든 오류는 구문 문제를 가리킵니다.  
+>  서버에 다음 오류가 반환 DMV 주어진된 행 집합에 대해 사용할 수 없는 경우: "는 \<w s e t > 서버에서 요청 유형을 인식할 수 없습니다". 다른 모든 오류는 구문 문제를 가리킵니다.  
   
 |행 집합|Description|  
 |------------|-----------------|  
@@ -138,7 +143,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACE_EVENT_CATEGORIES 행 집합](../../analysis-services/schema-rowsets/xml/discover-trace-event-categories-rowset.md)|사용 가능한 범주 목록을 반환합니다.|  
 |[DISCOVER_TRACES 행 집합](../../analysis-services/schema-rowsets/xml/discover-traces-rowset.md)|현재 연결에서 현재 실행 중인 추적 목록을 반환합니다.|  
 |[DISCOVER_TRANSACTIONS 행 집합](../../analysis-services/schema-rowsets/xml/discover-transactions-rowset.md)|현재 연결에서 현재 실행 중인 트랜잭션 목록을 반환합니다.|  
-|[DISCOVER_XEVENT_TRACE_DEFINITION 행 집합](../Topic/DISCOVER_XEVENT_TRACE_DEFINITION%20Rowset.md)|현재 연결에서 현재 실행 중인 이벤트 추적 목록을 반환합니다.|  
+|[DISCOVER_XEVENT_TRACE_DEFINITION 행 집합](http://msdn.microsoft.com/library/e1ce2d2d-f994-4318-801a-ee0385aecd84)|현재 연결에서 현재 실행 중인 이벤트 추적 목록을 반환합니다.|  
 |[DMSCHEMA_MINING_COLUMNS 행 집합](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-columns-rowset.md)|현재 연결에서 사용할 수 있는 모든 마이닝 모델의 개별 열을 나열합니다.|  
 |[DMSCHEMA_MINING_FUNCTIONS 행 집합](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-functions-rowset.md)|서버의 데이터 마이닝 알고리즘이 지원하는 함수 목록을 반환합니다.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT 행 집합](../../analysis-services/schema-rowsets/data-mining/dmschema-mining-model-content-rowset.md)|현재 모델을 설명하는 열로 구성된 행 집합을 반환합니다.|  
@@ -163,9 +168,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_PROPERTIES 행 집합](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-properties-rowset.md)|속성 유형, 데이터 형식 및 기타 메타데이터와 함께 각 속성의 정규화된 이름을 반환합니다.|  
 |[MDSCHEMA_SETS 행 집합](../../analysis-services/schema-rowsets/ole-db-olap/mdschema-sets-rowset.md)|현재 연결에 정의된 집합 목록을 반환합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539&clcid=0x409)   
  [새 System.Discover_Object_Activity](http://go.microsoft.com/fwlink/?linkid=221322)   
- [제한된 행 집합 및 DMV에 대한 새 SYSTEMRESTRICTEDSCHEMA 함수](http://go.microsoft.com/fwlink/?LinkId=231885)  
+ [제한 된 행 집합 및 Dmv에 대 한 새 SYSTEMRESTRICTEDSCHEMA 함수](http://go.microsoft.com/fwlink/?LinkId=231885)  
   
   

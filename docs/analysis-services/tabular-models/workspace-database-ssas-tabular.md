@@ -1,27 +1,32 @@
 ---
-title: "작업 영역 데이터베이스(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "작업 영역 데이터베이스 (SSAS 테이블 형식) | Microsoft Docs"
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 662daf08-a514-44a7-8675-44644aa454a2
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f9a2bcb97d74089651e4c9d1df92561fa298d397
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 작업 영역 데이터베이스(SSAS 테이블 형식)
+# <a name="workspace-database-ssas-tabular"></a>작업 영역 데이터베이스(SSAS 테이블 형식)
   모델을 제작하는 동안 사용되는 테이블 형식 모델 작업 영역 데이터베이스는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 새 테이블 형식 모델 프로젝트를 만들 때 만들어집니다.
   
-## 작업 영역 인스턴스 지정  
+## <a name="specifying-a-workspace-instance"></a>작업 영역 인스턴스 지정  
   SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 프로젝트를 제작하는 동안 사용할 Analysis Services 인스턴스를 지정할 수 있습니다. [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 2016년 9월 릴리스(14.0.60918.0)부터 새 테이블 형식 모델 프로젝트를 만들 때 작업 영역 인스턴스를 지정하기 위한 두 가지 모드가 도입됩니다. 
 
 **통합 작업 영역** - SSDT의 자체 내부 Analysis Services 인스턴스를 활용합니다.
@@ -30,7 +35,7 @@ caps.handback.revision: 24
 
 
   
-### 통합 작업 영역
+### <a name="integrated-workspace"></a>통합 작업 영역
 통합 작업 영역에서는 작업 데이터베이스가 SSDT 자체 암시적 Analysis Services 인스턴스를 사용하여 메모리에 만들어집니다. 통합 작업 영역 모드에서는 따로 SQL Server Analysis Services를 명시적으로 설치할 필요가 없으므로 SSDT에서 테이블 형식 프로젝트 제작할 때의 복잡성을 크게 줄입니다.
 
 통합 작업 영역 모드를 사용하면 SSDT 테이블 형식에서 자체의 내부 SSAS 인스턴스를 백그라운드에서 동적으로 시작하고 데이터베이스를 로드합니다. 모델 디자이너에서 뷰 테이블, 열 및 데이터를 추가할 수 있습니다. 테이블, 열, 관계 등을 추가하는 경우 작업 영역 데이터베이스가 수정됩니다. 통합 작업 영역 모드에서는 SSDT 테이블 형식이 작업 영역 서버 및 데이터베이스에서 작동하는 방식은 변경하지 않습니다. SSDT 테이블 형식이 작업 영역 데이터베이스를 호스트하는 위치만 변경합니다.
@@ -42,7 +47,7 @@ SSDT에서 새 테이블 형식 모델 프로젝트를 만드는 경우 통합 �
 model.bim의 작업 영역 데이터베이스 및 작업 영역 서버 속성을 사용하여 SSDT 테이블 형식이 데이터베이스를 호스트하는 내부 SSAS 인스턴스의 TCP 포트와 임시 데이터베이스의 이름을 검색할 수 있습니다. SSDT 테이블 형식에 로드된 데이터베이스가 있는 경우 SSMS를 사용하여 작업 영역 데이터베이스에 연결할 수 있습니다. 작업 영역 보존 설정은 모델 프로젝트를 닫은 후 SSDT 테이블 형식에서 디스크에는 작업 영역 데이터베이스를 유지하지만 메모리에는 유지하지 않도록 지정합니다. 이렇게 하면 모델을 메모리에 항상 유지하는 경우보다 메모리를 덜 사용하게 됩니다. 이러한 설정을 제어하려면 통합 작업 영역 모드 속성을 False로 설정하고 명시적 작업 영역 서버를 제공합니다. 모델로 가져오는 데이터가 SSDT 워크스테이션의 메모리 용량을 초과하는 경우에도 명시적 작업 영역 서버가 적합합니다.
 
 > [!NOTE]  
->  통합 작업 영역 모드를 사용할 경우 로컬 Analysis Services 인스턴스는 64비트이지만 SSDT 테이블 형식은 Visual Studio의 32비트 환경에서 실행됩니다. 특수 데이터 원본에 연결하는 경우 워크스테이션에 해당 데이터 공급자의 32비트 버전과 64비트 버전을 모두 설치해야 합니다. 64비트 공급자는 64비트 Analysis Services 인스턴스에 필요하고 32비트 버전은 SSDT 테이블 형식의 테이블 가져오기 마법사에 필요합니다.
+>  통합된 작업 모드를 사용 하는 경우 로컬 Analysis Services 인스턴스에 SSDT는 Visual Studio의 32 비트 환경에서 실행 되는 동안 64 비트입니다. 특수 데이터 원본에 연결하는 경우 워크스테이션에 해당 데이터 공급자의 32비트 버전과 64비트 버전을 모두 설치해야 합니다. 64 비트 공급자가 64 비트 Analysis Services 인스턴스에 대 한 필요 되며 32 비트 버전의 SSDT에서는 테이블 가져오기 마법사에 대 한 필요 합니다.
 
 ###  <a name="bkmk_overview"></a> 작업 영역 서버  
  작업 영역 데이터베이스는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 테이블 형식 모델 프로젝트 템플릿 중 하나를 사용하여 새 비즈니스 인텔리전스 프로젝트를 만들 때 작업 영역 서버 속성에서 지정한 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]인스턴스에 만들어집니다. 각 테이블 형식 모델 프로젝트에는 고유의 작업 영역 데이터베이스가 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에서 작업 영역 데이터베이스를 볼 수 있습니다. 작업 영역 데이터베이스 이름에는 프로젝트 이름이 포함되고 뒤에 밑줄, 사용자 이름, 밑줄, GUID가 차례로 옵니다.  
@@ -64,7 +69,7 @@ model.bim의 작업 영역 데이터베이스 및 작업 영역 서버 속성을
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 가져오기 프로젝트 템플릿을 사용하여 새로운 테이블 형식 모델 프로젝트를 만들 때 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 가져올 수 없습니다.  
   
   > [!IMPORTANT]  
->  모델의 호환성 수준 및 작업 영역 서버는 일치해야 합니다. **SQL Server 2016 RTM(1200)** 호환성 수준에서 테이블 형식 모델의 경우 작업 영역 서버는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 테이블 형식 인스턴스여야 합니다.  
+>  모델의 호환성 수준 및 작업 영역 서버는 일치해야 합니다.
   
 > [!NOTE]  
 >  모델에 많은 행이 포함된 테이블이 있는 경우에는 모델 제작 중에 데이터의 하위 집합만 가져오는 것이 좋습니다. 데이터의 하위 집합을 가져오면 처리 시간 및 작업 영역 데이터베이스 서버 리소스 사용량을 줄일 수 있습니다.  
@@ -89,7 +94,8 @@ model.bim의 작업 영역 데이터베이스 및 작업 영역 서버 속성을
 ##  <a name="bkmk_use_ssms"></a> SSMS를 사용하여 작업 영역 데이터베이스 관리  
  SSMS(SQL Server Management Studio)를 사용하여 작업 영역 데이터베이스를 호스트하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 연결할 수 있습니다. 일반적으로 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 수행해야 하는 작업 영역 데이터베이스 분리 또는 삭제 작업을 제외하면 작업 영역 데이터베이스의 관리는 필요하지 않습니다. 모델 디자이너에 프로젝트가 열려 있는 동안 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 작업 영역 데이터베이스를 관리하지 마십시오. 이렇게 하면 데이터가 손실될 수 있습니다.
    
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
 [모델 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md) 
   
   
+

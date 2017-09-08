@@ -1,24 +1,29 @@
 ---
-title: "파워 피벗 데이터 액세스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "Power Pivot 데이터 액세스 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 83dc82da-91fb-4e47-91a8-0e0db67339b8
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ad15d17a17809c6190a45b9ead89bc66ed6962d6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 파워 피벗 데이터 액세스
+# <a name="power-pivot-data-access"></a>파워 피벗 데이터 액세스
   이 항목에서는 Sharepoint 라이브러리에 게시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 검색하는 방법을 설명합니다.  
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터는 Excel 통합 문서 내에 저장됩니다. 연결 문자열은 SharePoint 사이트에 있는 통합 문서에 대한 URL입니다.  
@@ -40,7 +45,7 @@ caps.handback.revision: 8
   
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모든 데이터가 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 처리되는 것은 아닙니다. Excel 서비스는 워크시트의 테이블 및 셀 데이터를 처리합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 사용하는 피벗 테이블, 피벗 차트 및 슬라이서만 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 처리됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services에 연결](../../analysis-services/instances/connect-to-analysis-services.md)   
  [테이블 형식 모델 데이터 액세스](../../analysis-services/tabular-models/tabular-model-data-access.md)  
   

@@ -1,26 +1,31 @@
 ---
-title: "보안 개요(데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "보안 [Analysis Services - 데이터 마이닝], 보안 정보"
+title: "보안 개요 (데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- security [Analysis Services - data mining], about security
 ms.assetid: 387bde00-bcf3-4612-b27b-f9f608dbf71e
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4857608190aa03baca0a6916275641f463c6cf2a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 보안 개요(데이터 마이닝)
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 보안은 여러 수준에서 설정해야 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
+# <a name="security-overview-data-mining"></a>보안 개요(데이터 마이닝)
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 보안은 여러 수준에서 설정해야 합니다. 권한이 있는 사용자만 선택된 차원, 마이닝 모델 및 데이터 원본에 대한 읽기 또는 읽기/쓰기 권한을 갖도록 각 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 해당 데이터 원본의 보안을 설정해야 합니다. 또한 권한이 없는 사용자가 중요한 비즈니스 정보를 고의로 손상시킬 수 없도록 기본 데이터 원본의 보안을 설정해야 합니다. 다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 보안 설정 과정을 설명합니다.  
   
 ##  <a name="bkmk_Architecture"></a> 보안 아키텍처  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 사용자 액세스 인증에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Windows 인증을 사용하는 방법을 비롯하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스의 기본 보안 아키텍처에 대한 자세한 내용은 다음 리소스를 참조하십시오.  
@@ -55,7 +60,7 @@ caps.handback.revision: 12
   
  Integration Services 패키지를 사용하여 데이터를 정리하거나 마이닝 모델을 업데이트하거나 예측을 만드는 경우 Integration Services 서비스에 모델이 저장된 데이터베이스에 대한 적절한 사용 권한과 원본 데이터에 대한 적절한 사용 권한이 있어야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

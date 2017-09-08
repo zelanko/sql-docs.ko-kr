@@ -1,23 +1,28 @@
 ---
-title: "예측 쿼리(데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "예측 쿼리 (데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: e5e6686c-1360-480e-8c0d-8a56204fbed9
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55dd3cf7af1721a958ebebb70d864a1fd0b873c6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 예측 쿼리(데이터 마이닝)
+# <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
   일반적인 데이터 마이닝 프로젝트의 목표는 마이닝 모델을 사용하여 예측을 수행하는 것입니다. 예를 들어 서버의 특정 클러스터에 대해 예상 작동 중단 시간의 양을 예측하거나, 고객의 세그먼트가 광고 캠페인에 응답할 가능성이 있는지 여부를 표시하는 점수를 생성할 수 있습니다. 이러한 작업을 모두 수행하기 위해 예측 쿼리를 만들 수 있습니다.  
   
  기능적으로 쿼리에 대한 입력의 유형에 따라 SQL Server에서 다른 유형의 예측 쿼리가 지원됩니다.  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 > [!WARNING]  
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 디자이너를 사용하는 경우 먼저 외부 데이터 원본을 데이터 원본 뷰로 정의해야 합니다.  
   
- DMX를 사용하여 예측 조인을 만드는 경우 OPENQUERY, OPENROWSET 또는 SHAPE 명령을 사용하여 외부 데이터 원본을 지정할 수 있습니다. DMX 템플릿의 기본 데이터 액세스 메서드는 OPENQUERY입니다. 이러한 메서드에 대한 자세한 내용은 [&#60;원본 데이터 쿼리&#62;](../Topic/%3Csource%20data%20query%3E.md)를 참조하세요.  
+ DMX를 사용하여 예측 조인을 만드는 경우 OPENQUERY, OPENROWSET 또는 SHAPE 명령을 사용하여 외부 데이터 원본을 지정할 수 있습니다. DMX 템플릿의 기본 데이터 액세스 메서드는 OPENQUERY입니다. 이러한 메서드에 대한 자세한 내용은 [&#60;원본 데이터 쿼리&#62;](../../dmx/source-data-query.md)를 참조하세요.  
   
 ###  <a name="bkmk_TSQuery"></a> 시계열 마이닝 모델의 예측  
  시계열 모델은 다른 모델 유형과 다릅니다. 모델을 있는 그대로 사용하여 예측을 만들 수도 있고, 모델에 새 데이터를 제공하여 최신 추세를 기반으로 모델을 업데이트하고 예측을 만들 수도 있습니다. 새 데이터를 추가하는 경우 새 데이터를 사용할 방법을 지정할 수 있습니다.  
@@ -147,7 +152,7 @@ FROM
   
  공급자가 계층적 행 집합을 처리할 수 없는 경우 예측 쿼리에 FLATTEN 키워드를 사용하여 결과를 평면화할 수 있습니다. 일반 행 집합의 예를 비롯한 자세한 내용은 [SELECT&#40;DMX&#41;](../../dmx/select-dmx.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [데이터 정의 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   

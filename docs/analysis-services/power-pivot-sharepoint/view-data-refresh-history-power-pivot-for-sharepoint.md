@@ -1,29 +1,34 @@
 ---
-title: "데이터 새로 고침 기록 보기(SharePoint용 PowerPivot) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "무인 데이터 새로 고침 [Analysis Services와 SharePoint 통합]"
-  - "데이터 새로 고침 기록 [Analysis Services와 SharePoint 통합]"
-  - "예약된 데이터 새로 고침 [Analysis Services와 SharePoint 통합]"
-  - "데이터 새로 고침 [Analysis Services와 SharePoint 통합]"
+title: "데이터 새로 고침 (SharePoint 용 파워 피벗) 기록 보기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- unattended data refresh [Analysis Services with SharePoint]
+- data refresh history [Analysis Services with SharePoint]
+- scheduled data refresh [Analysis Services with SharePoint]
+- data refresh [Analysis Services with SharePoint]
 ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: bad4593c84946a2957b6b433de359d4857f116ad
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 새로 고침 기록 보기(SharePoint용 PowerPivot)
+# <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>데이터 새로 고침 기록 보기(SharePoint용 PowerPivot)
   데이터 새로 고침 기록은 Excel 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 모든 데이터 새로 고침 작업의 레코드입니다. 데이터 새로 고침 작업은 제공된 일정에 따라 SharePoint 팜의 Analysis Services 서버 인스턴스에서 수행됩니다. 기본적으로 데이터 새로 고침 기록은 1년 동안 보존됩니다. 그러나 팜 관리자가 데이터 새로 고침 레코드 보관 기간을 결정하는 사용 및 이벤트 기록에 대한 다른 보존 정책을 지정할 수 있습니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 2010  
@@ -69,12 +74,12 @@ caps.handback.revision: 16
 |다음에 예정된 새로 고침|다음 데이터 새로 고침이 예약된 날짜를 지정합니다.<br /><br /> **일정 구성** 링크를 누르면 일정 정의 페이지로 이동합니다. 통합 문서에 대한 참가 권한이 있는 경우 링크를 클릭하여 통합 문서의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 무인 데이터 새로 고침을 제어하는 일정 정보를 보고 수정할 수 있습니다.|  
 |시작됨|기록 세부 정보 섹션에서 **시작됨** 은 실제 처리 시간을 나타냅니다. 실제 처리 시간이 사용자가 예약한 시간과 다를 수 있습니다. 처리는 서버에 사용 가능한 메모리가 충분히 있을 때 시작됩니다. 따라서 서버의 사용량이 많을 경우 지정된 시간보다 몇 시간 뒤에 처리가 시작될 수도 있습니다.|  
 |완료|기록 세부 정보 섹션에서 **완료** 는 데이터 새로 고침 작업을 마친 시기를 나타냅니다. 날짜와 시간은 통합 문서가 라이브러리에 다시 체크 인된 시기를 나타냅니다.<br /><br /> 데이터 새로 고침이 실패하면 실패 원인을 설명하는 하나 이상의 메시지가 표시됩니다. 각 레코드를 확장하여 자세한 상태를 확인할 수 있습니다. 각 데이터 원본은 성공 또는 데이터 새로 고침이 완료되지 않은 이유를 설명하는 실패 메시지와 함께 개별적으로 나열됩니다.|  
-| Time |데이터 새로 고침이 시작된 시간부터 완료된 시간까지의 누적 시간을 제공합니다.|  
+|Time|데이터 새로 고침이 시작된 시간부터 완료된 시간까지의 누적 시간을 제공합니다.|  
 |상태|새로 고침 작업이 성공 또는 실패했는지를 나타내는 기록 레코드를 제공합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
- [데이터 새로 고침 예약(SharePoint용 Power Pivot)](http://msdn.microsoft.com/ko-kr/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
+ [일정 데이터 새로 고침 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/en-us/8571208f-6aae-4058-83c6-9f916f5e2f9b)   
  [Power Pivot 데이터 새로 고침](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)  
   
   

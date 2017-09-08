@@ -1,37 +1,42 @@
 ---
-title: "Autoexists | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: Autoexist | Microsoft Docs
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 934307b7230a950bc41b5de117cc6f2326b90561
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Autoexists
+# <a name="autoexists"></a>Autoexists
   *AUTOEXIST* 개념에서는 동일한 계층의 특성 계층 멤버로 만들 수 있는 모든 조합의 결과로 존재하는 셀이 아니라 큐브에서 실제로 존재하는 셀로 큐브 공간을 제한합니다. 이는 한 특성 계층의 멤버가 동일한 차원에 있는 다른 특성 계층의 멤버와 함께 존재할 수 없기 때문입니다. SELECT 문에서 동일한 차원의 특성 계층이 두 개 이상 사용되는 경우 Analysis Services에서는 이러한 특성의 멤버가 다른 모든 특성의 조건에 맞게 적절히 제한되도록 특성의 식을 계산합니다.  
   
  예를 들어 Geography 차원의 특성을 사용한다고 가정합니다. City 특성의 모든 멤버를 반환하는 식과 Country 특성의 멤버를 유럽의 모든 국가로 제한하는 다른 식이 있는 경우 City 멤버는 유럽 국가에 속한 도시로만 제한됩니다. 이것은 Analysis Services의 AUTOEXIST 특징 때문입니다. Autoexists는 한 특성 식에서 제외된 차원 레코드를 다른 특성 식에서 포함하지 않도록 하기 때문에 동일한 차원의 특성에만 적용됩니다. 결과적으로 차원 행에서 서로 다른 특성 식이 교차하는 것으로 AUTOEXIST를 이해할 수도 있습니다.  
   
-## 셀 존재  
+## <a name="cell-existence"></a>셀 존재  
  다음 셀은 항상 존재합니다.  
   
 -   동일한 차원에 있는 다른 계층의 멤버와 교차할 경우 모든 계층의 (All) 멤버  
   
 -   비계산 형제 또는 비계산 형제의 부모나 하위 항목과 교차할 경우 계산 멤버  
   
-## 존재하지 않는 셀 제공  
+## <a name="providing-non-existing-cells"></a>존재하지 않는 셀 제공  
  존재하지 않는 셀은 큐브에 존재하지 않은 셀을 요청하는 쿼리나 계산에 대한 응답으로 시스템에서 제공하는 셀입니다. 예를 들어 Geography 차원에 속하는 City 특성 계층 및 Country 특성 계층과 Internet Sales Amount 측정값이 있는 큐브에서 이 큐브의 공간에는 서로 함께 존재하는 멤버만 포함됩니다. 예를 들어 City 특성 계층에 New York, London, Paris, Tokyo 및 Melbourne이 포함되어 있고 Country 특성 계층에 United States, United Kingdom, France, Japan 및 Australia가 포함되어 있는 경우 Paris와 United States가 교차하는 지점의 공간(셀)은 해당 큐브 공간에 포함되지 않습니다.  
   
  존재하지 않는 셀을 쿼리하면 존재하지 않는 셀에서는 Null이 반환됩니다. 즉, 이 셀에는 계산이 들어 있지 않으며 이 공간에 쓰는 계산은 정의할 수 없습니다. 예를 들어 다음 문은 존재하지 않는 셀을 포함합니다.  
@@ -64,7 +69,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  0은 열 축을 지정하는 데 사용되었으며 열 축을 나타내는 axis(0)을 줄여 쓴 것입니다.  
   
- 앞의 쿼리는 쿼리의 각 특성 계층에서 서로 함께 존재하는 멤버의 셀만 반환합니다. 이전 쿼리는 [*(Crossjoin)(MDX)](../../../mdx/crossjoin-mdx.md) 함수의 새로운 * 변형을 사용하여 작성할 수도 있습니다.  
+ 앞의 쿼리는 쿼리의 각 특성 계층에서 서로 함께 존재하는 멤버의 셀만 반환합니다. 이전 쿼리는 [*(Crossjoin)(MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) 함수의 새로운 * 변형을 사용하여 작성할 수도 있습니다.  
   
 ```  
 SELECT   
@@ -89,7 +94,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  앞의 세 쿼리는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 AUTOEXIST 동작이 미치는 영향을 보여 줍니다.  
   
-## 전체 및 단순 AUTOEXIST  
+## <a name="deep-and-shallow-autoexists"></a>전체 및 단순 AUTOEXIST  
  AUTOEXIST는 식에 전체 또는 단순 적용될 수 있습니다. **Deep Autoexists** 는 slicer 식, 축의 하위 선택 식 등을 적용한 후 가능한 가장 범위가 큰 공간에 맞게 모든 식이 계산됨을 의미합니다. **Shallow Autoexists** 는 현재 식과 해당 결과가 현재 식에 전달되기 전에 외부 식이 계산됨을 의미합니다. 기본 설정은 전체 AUTOEXIST입니다.  
   
  다음 시나리오와 샘플에서는 여러 다른 유형의 AUTOEXIST를 보여 줍니다. 다음 예에서는 두 집합인 계산 식으로서의 집합과 상수 식으로서의 집합을 만듭니다.  
@@ -310,11 +315,11 @@ WHERE (Measures.[Internet Sales Amount],
 |**Mountain-100**|**$8,568,958.27**|**$139,393.27**|**1.63%**|  
 |**HL Mountain Frame**|**$3,365,069.27**|**$174.11**|**0.01%**|  
   
- Autoexist 동작은 연결 문자열의 AUTOEXISTS=[1|2|3] 매개 변수를 사용하여 수정할 수 있습니다. 매개 변수 사용에 대해서는 [지원되는 XMLA 속성&#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>을 참조하세요.  
+ Autoexists 동작은 AUTOEXISTS를 사용 하 여 수정할 수 있습니다 = [1 | 2 | 3]; 연결 문자열 매개 변수 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 및 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 매개 변수 사용 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
- [큐브 공간](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
+ [Cube Space](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [튜플](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
  [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   

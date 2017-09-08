@@ -1,30 +1,35 @@
 ---
-title: "Analysis Services의 서버 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "SSAS, 구성 속성"
-  - "Analysis Services, 구성 속성"
-  - "SQL Server Analysis Services, 구성 속성"
-  - "옵션 구성 [Analysis Services]"
-  - "서버 속성 [Analysis Services]"
-  - "속성 [Analysis Services], 구성"
-  - "속성 [Analysis Services]"
+title: "Analysis Services에서 서버 속성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- SSAS, configuration properties
+- Analysis Services, configuration properties
+- SQL Server Analysis Services, configuration properties
+- configuration options [Analysis Services]
+- server properties [Analysis Services]
+- properties [Analysis Services], configuration
+- properties [Analysis Services]
 ms.assetid: 274b89cd-14ed-4666-bc13-eedf1de51e18
 caps.latest.revision: 21
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 21
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 4157f63f72acd5da6dd369034d1633e7461c9b87
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services의 서버 속성
+# <a name="server-properties-in-analysis-services"></a>Analysis Services의 서버 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 관리자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 기본 서버 구성 속성을 수정할 수 있습니다. 각 인스턴스에는 동일한 서버의 다른 인스턴스와 독립적으로 설정되는 자체 구성 속성이 있습니다.  
   
  서버를 구성하려면 SQL Server Management Studio를 사용하거나 특정 인스턴스의 msmdsrv.ini 파일을 편집합니다.  
@@ -34,7 +39,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 > [!NOTE]  
 >  기본 설치에서는 \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config 폴더에서 msmdsrv.ini를 찾을 수 있습니다.
 > 
-> 서버 구성에 영향을 주는 기타 속성에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 배포 구성 속성이 포함됩니다. 이러한 속성에 대한 자세한 내용은 [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)을 참조하세요.
+> 서버 구성에 영향을 주는 기타 속성에는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 배포 구성 속성이 포함됩니다. 이러한 속성에 대한 자세한 내용은 [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)을 참조하세요.
  
 ##  <a name="bkmk_config"></a> Management Studio에서 속성 구성 
   
@@ -85,8 +90,8 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 |[보안 속성](../../analysis-services/server-properties/security-properties.md)|보안 섹션에는 액세스 권한을 정의하는 기본 및 고급 속성이 모두 포함됩니다. 여기에는 관리자 및 사용자와 관련된 설정이 포함됩니다.|  
 |[스레드 풀 속성](../../analysis-services/server-properties/thread-pool-properties.md)|스레드 풀 속성은 서버에서 만드는 스레드 개수를 제어합니다. 이 속성은 주로 고급 속성입니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 인스턴스 관리](../../analysis-services/instances/analysis-services-instance-management.md)   
- [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/specifying-configuration-settings-for-solution-deployment.md)  
+ [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   
   

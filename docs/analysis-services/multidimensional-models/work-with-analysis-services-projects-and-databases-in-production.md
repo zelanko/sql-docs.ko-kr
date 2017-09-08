@@ -1,26 +1,31 @@
 ---
-title: "프로덕션 환경에서 Analysis Services 프로젝트 및 데이터베이스 작업 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Analysis Services, 프로젝트"
+title: "작업을 Analysis Services 프로젝트 및 프로덕션 환경에서 데이터베이스 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Analysis Services, projects
 ms.assetid: c589097f-ad29-4b97-8c7e-b8a910909c1a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 027e9cfb4f69cbdb89d776b80916afa8ac89eb69
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 프로덕션 환경에서 Analysis Services 프로젝트 및 데이터베이스 작업
+# <a name="work-with-analysis-services-projects-and-databases-in-production"></a>작업을 Analysis Services 프로젝트 및 프로덕션 환경에서 데이터베이스
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 개발하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 배포한 다음에는 배포된 데이터베이스의 개체 변경 방법을 결정해야 합니다. 보안 역할, 분할 및 저장소 설정과 관련된 변경 내용 등 특정 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 변경할 수 있습니다. 특성 추가나 사용자 정의 계층과 같은 기타 설정은 프로젝트 모드나 온라인 모드의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서만 변경할 수 있습니다.  
   
  온라인 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 배포된 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스를 변경하면 배포에 사용된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트는 이제 최신이 아닙니다. 개발자가 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 내에서 변경 작업을 수행하고 수정된 프로젝트를 배포하려고 하면 전체 데이터베이스를 덮어쓸 것인지 묻는 메시지가 표시됩니다. 개발자가 전체 데이터베이스를 덮어쓰면 해당 데이터베이스도 처리해야 합니다. 프로덕션 직원이 배포된 데이터베이스를 직접 변경한 사항이 개발 팀에 전달되지 않은 경우 해당 변경 내용이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 표시되지 않는 이유를 이해하지 못하기 때문에 문제가 복잡해집니다.  

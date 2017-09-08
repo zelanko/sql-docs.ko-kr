@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c7ece8c33a4c110898134da60aea6595b936e1e9
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: e718e67c8756d691338a614c775c2ff71df4b06c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>열 패턴 프로필 요청 옵션(데이터 프로파일링 태스크)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/03/2017
   
 -   **Delimiters** 기본적으로 Delimiters 목록에는 공백 문자, 가로 탭 문자(\t), 줄 바꿈 문자(\n) 및 캐리지 리턴 문자(\r)가 포함됩니다. 추가 구분 기호를 지정할 수 있지만 기본 구분 기호는 제거할 수 없습니다.  
   
--   **Symbols** 기본적으로 **Symbols** 목록에는 `,.;:-"'`~=&/@!?()<>[]{}|#*^%`. For example, if the symbols are "`()-`"과 같은 문자가 포함됩니다. 값 "(425) 123-4567"은 ["(", "425", ")", "123", "-", "4567", ")"]로 토큰화됩니다.  
+-   **기호** 기본적으로 목록 **기호** 문자 포함: `,.;:-"'~=&/@!?()<>[]{}|#*^%`합니다. 예를 들어 기호가 "`()-`"인 경우 값 "(425) 123-4567"은 ["(", "425", ")", "123", "-", "4567", ")"]로 토큰화됩니다.  
   
  한 문자가 동시에 구분 기호이면서 기호일 수는 없습니다.  
   
@@ -147,7 +147,8 @@ ms.lasthandoff: 08/03/2017
  자세한 내용은 이 항목의 앞부분에 나오는 "태그 테이블 사용 이해"를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
- [데이터 작업 편집기 &#40; 프로 파일링 일반 페이지 &#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
+ [데이터 프로파일링 태스크 편집기&#40;일반 페이지&#41;](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)   
  [단일 테이블 빠른 프로필 형식 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

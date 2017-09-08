@@ -1,33 +1,38 @@
 ---
 title: "시계열 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "시계열 알고리즘 [Analysis Services]"
-  - "MISSING_VALUE_SUBSTITUTION"
-  - "시계열 [Analysis Services]"
-  - "예측 [Analysis Services], 시계열"
-  - "EXTEND_MODEL_CASES 매개 변수"
-  - "REPLACE_MODEL_CASES 매개 변수"
-  - "예측 쿼리 [DMX]"
-  - "PREDICTION_SMOOTHING"
-  - "content queries [DMX]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- time series algorithms [Analysis Services]
+- MISSING_VALUE_SUBSTITUTION
+- time series [Analysis Services]
+- predictions [Analysis Services], time series
+- EXTEND_MODEL_CASES parameter
+- REPLACE_MODEL_CASES parameter
+- prediction queries [DMX]
+- PREDICTION_SMOOTHING
+- content queries [DMX]
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 34
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b43b6b6144931dea129aeb82531fdbc5204121d0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 시계열 모델 쿼리 예제
+# <a name="time-series-model-query-examples"></a>시계열 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 작성할 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 작성하거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 예를 들어 시계열 모델에 대한 내용 쿼리는 검색된 주기 구조에 대한 추가 세부 정보를 제공할 수 있고 예측 쿼리는 다음 5-10개의 시간 조각에 대한 예측을 제공할 수 있습니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  이 섹션에서는 Microsoft 시계열 알고리즘을 기반으로 하는 모델에 대해 이러한 두 종류의 쿼리를 만드는 방법에 대해 설명합니다.  
@@ -50,7 +55,7 @@ caps.handback.revision: 34
   
  [시계열 모델의 누락된 값 대체](#bkmk_MissingValues)  
   
-## 시계열 모델에 대한 정보 가져오기  
+## <a name="getting-information-about-a-time-series-model"></a>시계열 모델에 대한 정보 가져오기  
  모델 내용 쿼리는 모델을 만들 때 사용된 매개 변수, 모델이 마지막으로 처리된 시간 등과 같은 모델에 대한 기본 정보를 제공할 수 있습니다. 다음 예에서는 데이터 마이닝 스키마 행 집합을 사용하여 모델 콘텐츠를 쿼리하기 위한 기본 구문을 보여 줍니다.  
   
 ###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 모델에 대한 주기 힌트 검색  
@@ -73,7 +78,6 @@ WHERE MODEL_NAME = '<model name>'
 > [!NOTE]  
 >  여기서는 읽기 쉽도록 결과를 잘라냈습니다.  
   
- [맨 위로 이동](#bkmk_Top)  
   
 ###  <a name="bkmk_Query2"></a> 예제 쿼리 2: ARIMA 모델에 대한 수식 검색  
  개별 트리에서 임의의 노드를 쿼리하여 ARIMA 모델에 대한 수식을 검색할 수 있습니다. ARIMA 모델 내의 각 트리는 다른 주기를 나타내며 여러 데이터 계열이 있는 경우 각 데이터 계열은 고유한 주기 트리 집합을 가집니다. 따라서 특정 데이터 계열에 대한 수식을 검색하려면 먼저 트리를 식별해야 합니다.  
@@ -107,7 +111,6 @@ WHERE NODE_NAME = 'TA00000007'
   
  이 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
   
- [맨 위로 이동](#bkmk_Top)  
   
 ###  <a name="bkmk_Query3"></a> 예제 쿼리 3: ARTxp 모델에 대한 수식 검색  
  ARTxp 모델의 경우 트리의 각 수준에 다른 정보가 저장됩니다. ARTxp 모델의 구조에 대한 자세한 내용과 수식에서 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
@@ -129,9 +132,8 @@ AND NODE_TYPE = 15
   
  이 정보를 해석하는 방법은 [시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)를 참조하세요.  
   
- [맨 위로 이동](#bkmk_Top)  
   
-## 시계열 모델에서 예측 만들기  
+## <a name="creating-predictions-on-a-time-series-model"></a>시계열 모델에서 예측 만들기  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]이상의 버전에서는 시계열 모델에 새 데이터를 추가하고 새 데이터를 모델에 자동으로 수용할 수 있습니다. 다음 두 가지 방법 중 하나를 사용하여 시계열 마이닝 모델에 새 데이터를 추가할 수 있습니다.  
   
 -   **PREDICTION JOIN** 을 사용하여 외부 원본의 데이터를 학습 데이터에 조인합니다.  
@@ -145,13 +147,13 @@ AND NODE_TYPE = 15
   
      모델 사례 확장은 새 데이터로 계속해서 모델을 업데이트하는 경우 유용합니다. 예를 들어 시간이 지남에 따라 학습 집합이 증가하도록 하려는 경우 모델을 확장하면 됩니다.  
   
-     데이터를 확장하려면 시계열 모델에 **PREDICTION JOIN**을 만들고 새 데이터의 원본을 지정하고 **EXTEND_MODEL_CASES** 인수를 사용합니다.  
+     데이터를 확장하려면 시계열 모델에 **PREDICTION JOIN** 을 만들고 새 데이터의 원본을 지정하고 **EXTEND_MODEL_CASES** 인수를 사용합니다.  
   
 -   **바꾸기:** 데이터 계열에서 데이터를 바꾸는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 학습된 모델은 유지하지만 새 데이터 값을 사용하여 기존 학습 사례의 일부 또는 전체를 바꿉니다. 따라서 학습 데이터의 크기는 바뀌지 않지만 사례 자체는 더 새로운 데이터로 계속해서 대체됩니다. 새 데이터를 충분히 제공하면 완전히 새로운 계열로 학습 데이터를 대체할 수 있습니다.  
   
      모델 사례 대체는 하나의 사례 집합을 학습시킨 다음 이 모델을 다른 데이터 계열에 적용하려는 경우 유용합니다.  
   
-     데이터를 대체하려면 시계열 모델에 **PREDICTION JOIN**을 만들고 새 데이터의 원본을 지정하고 **REPLACE_MODEL_CASES** 인수를 사용합니다.  
+     데이터를 대체하려면 시계열 모델에 **PREDICTION JOIN** 을 만들고 새 데이터의 원본을 지정하고 **REPLACE_MODEL_CASES** 인수를 사용합니다.  
   
 > [!NOTE]  
 >  새 데이터를 추가할 때에는 기록 예측을 수행할 수 없습니다.  
@@ -162,9 +164,8 @@ AND NODE_TYPE = 15
   
  예를 들어 기존 모델에 6개월에 상당하는 데이터가 있다고 가정해 보겠습니다. 지난 3개월 동안의 판매 수치를 추가하여 이 모델을 확장하려고 합니다. 또한 이와 동시에 다음 3개월에 대한 예측을 수행하고자 합니다. 새 데이터를 추가하는 경우 새 예측만 구하려면 시작 지점을 시간 조각 4로, 끝 지점을 시간 조각 7로 지정합니다. 총 6개의 예측을 요청할 수도 있지만 처음 3개에 대한 시간 조각은 방금 추가한 새 데이터와 겹칩니다.  
   
- 쿼리 예제와 **REPLACE_MODEL_CASES** 및 **EXTEND_MODEL_CASES** 사용 구문에 대한 자세한 내용은 [PredictTimeSeries&#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)를 참조하세요.  
+ 쿼리 예제와 **REPLACE_MODEL_CASES** 및 **EXTEND_MODEL_CASES**사용 구문에 대한 자세한 내용은 [PredictTimeSeries&#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)를 참조하세요.  
   
- [맨 위로 이동](#bkmk_Top)  
   
 ###  <a name="bkmk_EXTEND"></a> EXTEND_MODEL_CASES로 예측 수행  
  예측 동작은 모델 사례를 확장하느냐, 대체하느냐에 따라 달라집니다. 모델을 확장하는 경우 새 데이터가 계열의 끝에 추가되며 학습 집합의 크기가 증가합니다. 그러나 예측 쿼리에 사용된 시간 조각은 항상 원래 계열의 끝에서 시작됩니다. 따라서 3개의 새 데이터 지점을 추가하고 6개의 예측을 요청할 경우 반환되는 첫 3개의 예측은 새 데이터와 겹칩니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 모든 새 데이터 지점이 사용될 때까지 예측을 수행하지 않고 실제 새 데이터 지점을 반환합니다. 그런 다음 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 복합 계열을 기반으로 예측을 수행합니다.  
@@ -179,24 +180,23 @@ AND NODE_TYPE = 15
   
 -   새 예측만 구하려면 시작 지점을 4로 지정하고 종료 지점을 7로 지정합니다.  
   
--   **EXTEND_MODEL_CASES** 인수를 사용해야 합니다.  
+-   **EXTEND_MODEL_CASES**인수를 사용해야 합니다.  
   
      실제 판매 수치는 처음 3개의 시간 조각에 대해서 반환되며, 확장된 모델 기반의 예측은 다음 3개의 시간 조각에 대해 반환됩니다.  
   
- [맨 위로 이동](#bkmk_Top)  
   
 ###  <a name="bkmk_REPLACE"></a> REPLACE_MODEL_CASES로 예측 수행  
  모델의 사례를 대체하는 경우 모델의 크기는 그대로 유지되지만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 모델의 개별 사례를 대체합니다. 이는 학습 데이터 집합을 일정한 크기로 유지하는 것이 중요한 시나리오와 교차 예측에 유용합니다.  
   
  예를 들어 매장 중 하나의 판매 데이터가 충분하지 않다고 가정해 보겠습니다. 특정 지역의 모든 매장에 대한 판매의 평균을 구하여 일반 모델을 만든 다음 모델을 학습시킬 수 있습니다. 그런 다음 충분한 판매 데이터가 없는 매장에 대해 예측을 수행하려면 해당 매장에 대한 새 판매 데이터에 **PREDICTION JOIN** 을 만듭니다. 이렇게 하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 지역 모델에서 파생된 패턴을 유지하되 기존 학습 사례를 개별 매장의 데이터로 대체합니다. 그 결과 예측 값은 개별 매장에 대한 추세 선에 근접하게 됩니다.  
   
- **REPLACE_MODEL_CASES** 인수를 사용하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 사례 집합의 끝에 새 사례를 계속해서 추가하고 해당되는 수만큼을 사례 집합의 시작부터 삭제합니다. 원래의 학습 집합에서보다 더 많은 수의 새 데이터를 추가할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 가장 앞선 데이터를 버립니다. 새 값을 충분히 제공하면 예측은 완전히 새로운 데이터를 기반으로 할 수 있습니다.  
+ **REPLACE_MODEL_CASES** 인수를 사용하는 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 사례 집합의 끝에 새 사례를 계속해서 추가하고 해당되는 수만큼을 사례 집합의 시작부터 삭제합니다. 원래의 학습 집합에서보다 더 많은 수의 새 데이터를 추가할 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 가장 앞선 데이터를 버립니다. 새 값을 충분히 제공하면 예측은 완전히 새로운 데이터를 기반으로 할 수 있습니다.  
   
  예를 들어 1000개의 행을 포함하는 사례 데이터 집합에서 모델을 학습시켰습니다. 그 후 100개 행의 새 데이터를 추가합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 총 1000개의 행이 되도록 학습 집합에서 처음 100개의 행을 삭제하고 집합의 끝에 100개 행의 새 데이터를 추가합니다. 1100개 행의 새 데이터를 추가할 경우 최근 순서대로 1000개 행만 사용됩니다.  
   
  다른 예를 살펴보겠습니다. 3개월 분량의 새 데이터를 추가하고 3개의 새로운 예측을 수행하려면 다음과 같이 합니다.  
   
--   시계열 모델에 **PREDICTION JOIN**을 만들고 **REPLACE_MODEL_CASE** 인수를 사용합니다.  
+-   시계열 모델에 **PREDICTION JOIN** 을 만들고 **REPLACE_MODEL_CASE** 인수를 사용합니다.  
   
 -   3개월 분 새 데이터의 원본을 지정합니다. 이 데이터는 원래의 학습 데이터와 완전히 다른 원본에서 가져올 수 있습니다.  
   
@@ -208,14 +208,13 @@ AND NODE_TYPE = 15
     > [!NOTE]  
     >  타임스탬프 1에서 시작하는 REPLACE_MODEL_CASES를 사용하면 이전 학습 데이터를 대체하는 새 데이터에 기반한 새 예측을 얻게 됩니다.  
   
- 쿼리 예제와 **REPLACE_MODEL_CASES** 및 **EXTEND_MODEL_CASES** 사용 구문에 대한 자세한 내용은 [PredictTimeSeries&#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)를 참조하세요.  
+ 쿼리 예제와 **REPLACE_MODEL_CASES** 및 **EXTEND_MODEL_CASES**사용 구문에 대한 자세한 내용은 [PredictTimeSeries&#40;DMX&#41;](../../dmx/predicttimeseries-dmx.md)를 참조하세요.  
   
- [맨 위로 이동](#bkmk_Top)  
   
 ###  <a name="bkmk_MissingValues"></a> 시계열 모델의 누락된 값 대체  
- **PREDICTION JOIN** 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 집합에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. **EXTEND_MODEL_CASES**를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. **REPLACE_MODEL_CASES**를 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 *MISSING_VALUE_SUBSTITUTION* 매개 변수에 지정한 값으로 누락된 값을 대체합니다.  
+ **PREDICTION JOIN** 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 집합에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. **EXTEND_MODEL_CASES**를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. **REPLACE_MODEL_CASES**를 사용하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 *MISSING_VALUE_SUBSTITUTION* 매개 변수에 지정한 값으로 누락된 값을 대체합니다.  
   
-## 예측 함수 목록  
+## <a name="list-of-prediction-functions"></a>예측 함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 다음 표에 나열된 함수를 추가로 지원합니다.  
   
 |||  
@@ -229,9 +228,8 @@ AND NODE_TYPE = 15
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
- [맨 위로 이동](#bkmk_Top)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 시계열 알고리즘](../../analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 시계열 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   

@@ -1,29 +1,34 @@
 ---
-title: "데이터 원본 뷰 디자이너에서의 다이어그램 작업(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.dsvdesigner.findtable.f1"
-  - "sql13.asvs.dsvdesigner.diagramorganizerpane.f1"
-  - "sql13.asvs.dsvdesigner.diagrampane.f1"
-helpviewer_keywords: 
-  - "데이터 원본 뷰 [Analysis Services], 다이어그램"
-  - "다이어그램 [Analysis Services]"
+title: "데이터 원본 뷰 디자이너 (Analysis Services)에서 다이어그램 작업 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.dsvdesigner.findtable.f1
+- sql13.asvs.dsvdesigner.diagramorganizerpane.f1
+- sql13.asvs.dsvdesigner.diagrampane.f1
+helpviewer_keywords:
+- data source views [Analysis Services], diagrams
+- diagrams [Analysis Services]
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 caps.latest.revision: 36
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 36
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b3e877f63972f6a891f788a65196d2ec621cc203
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 원본 뷰 디자이너에서의 다이어그램 작업(Analysis Services)
+# <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>데이터 원본 뷰 디자이너에서의 다이어그램 작업(Analysis Services)
   데이터 원본 뷰(DSV) 다이어그램은 DSV 개체를 시각적으로 표현합니다. 다이어그램에서 대화형 작업을 통해 특정 개체를 추가, 숨기기, 삭제 또는 수정할 수 있습니다. 한 DSV에서 개체의 특정 하위 집합에 초점을 맞춘 다이어그램을 여러 개 만들 수도 있습니다.  
   
  다이어그램 창에 표시할 다이어그램 영역을 변경하려면 창의 오른쪽 아래 모퉁이에서 십자형 화살표를 클릭하여 다이어그램 창에 표시할 영역이 선택될 때까지 선택 상자를 축소판 다이어그램 위로 끕니다.  
@@ -45,16 +50,16 @@ caps.handback.revision: 36
   
  새 다이어그램을 만들려면 **다이어그램 구성 도우미** 창을 마우스 오른쪽 단추로 클릭하고 **새 다이어그램**을 클릭합니다.  
   
- 처음에 Analysis Services 프로젝트에서 데이터 원본 뷰(DSV)를 정의할 때 데이터 원본 뷰에 추가한 모든 테이블과 뷰는 \<모든 테이블> 다이어그램에 추가됩니다. 이 다이어그램은 데이터 원본 뷰 디자이너의 다이어그램 구성 도우미 창에 나타나고 이 다이어그램의 테이블 및 해당 열과 관계는 테이블 창에 나열되며 스키마 창에 그래픽으로 표시됩니다. 그러나 \<모든 테이블> 다이어그램에 테이블, 뷰 및 명명된 쿼리를 추가하면 특히 여러 개의 팩트 테이블을 다이어그램에 추가하고 차원 테이블이 여러 개의 팩트 테이블과 관련이 있는 경우 이 다이어그램의 개체 수가 너무 많아 관계를 시각화하기가 어렵습니다.  
+ 모든 테이블 및 데이터 원본 뷰에 추가 된 보기에 추가 됩니다 처음 Analysis Services 프로젝트에서 데이터 원본 뷰 (DSV)를 정의 하면는 \<모든 테이블 > 다이어그램. 이 다이어그램은 데이터 원본 뷰 디자이너의 다이어그램 구성 도우미 창에 나타나고 이 다이어그램의 테이블 및 해당 열과 관계는 테이블 창에 나열되며 스키마 창에 그래픽으로 표시됩니다. 그러나 때 테이블, 뷰 및 명명 된 쿼리를 추가 \<모든 테이블 > 다이어그램에서이 다이어그램의 개체 수가 너무 많아 쉽게 수 없는 관계를 시각화-특히 여러 팩트 테이블은 다이어그램에 추가 되 고 차원 테이블 여러 팩트 테이블에 연결합니다.  
   
  데이터 원본 뷰에서 테이블의 하위 집합만 보려는 경우 시각적으로 복잡하지 않도록 데이터 원본 뷰에서 선택한 하위 집합의 테이블, 뷰 및 명명된 쿼리로 구성된 하위 다이어그램(간단하게 다이어그램이라고 함)을 정의할 수 있습니다. 다이어그램을 사용하여 비즈니스 또는 솔루션 요구에 따라 데이터 원본 뷰의 항목을 그룹화할 수 있습니다.  
   
- 비즈니스를 목적으로 그리고 많은 테이블, 뷰 및 명명된 쿼리가 포함된 데이터 원본 뷰를 보다 쉽게 이해할 수 있도록 관련 테이블 및 명명된 쿼리를 별도의 다이어그램에 그룹화할 수 있습니다. 동일한 테이블 또는 명명된 쿼리가 \<모든 테이블> 다이어그램을 제외한 여러 다이어그램에 포함될 수 있습니다. \<모든 테이블> 다이어그램에서는 데이터 원본 뷰에 포함된 모든 개체가 한 번만 표시됩니다.  
+ 비즈니스를 목적으로 그리고 많은 테이블, 뷰 및 명명된 쿼리가 포함된 데이터 원본 뷰를 보다 쉽게 이해할 수 있도록 관련 테이블 및 명명된 쿼리를 별도의 다이어그램에 그룹화할 수 있습니다. 동일한 테이블 또는 명명 된 쿼리를 제외한 여러 다이어그램에 포함 될 수는 \<모든 테이블 > 다이어그램. 에 \<모든 테이블 > 다이어그램을 데이터 원본 뷰에 포함 된 모든 개체가 한 번만 표시 됩니다.  
   
 ##  <a name="bkmk_edit"></a> 다이어그램 편집 또는 삭제  
  다이어그램으로 작업할 경우 개체를 추가 및 삭제하는 데 사용되는 명령에 특히 주의해야 합니다. 예를 들어 다이어그램에서 개체를 삭제하면 DSV에서도 해당 개제가 삭제됩니다. 다이어그램에서만 삭제하려면 **테이블 숨기기** 명령을 사용해야 합니다.  
   
- ![다이어그램 작업 영역, 마우스 오른쪽 단추 클릭 메뉴의 스크린 샷](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "다이어그램 작업 영역, 마우스 오른쪽 단추 클릭 메뉴의 스크린 샷")  
+ ![오른쪽 클릭 메뉴의 다이어그램 작업 영역에서 스크린샷](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "오른쪽 클릭 메뉴의 다이어그램 작업 영역에서 스크린 샷")  
   
  개체를 개별적으로 숨길 수 있지만, 숨겨진 개체를 관련 테이블 표시 명령을 사용하여 다시 표시하면 관련된 모든 개체가 다이어그램에 반환됩니다. 작업 영역에 원하는 개체만 반환되게 하려면 테이블 창에서 직접 끌어 와야 합니다.  
   
@@ -87,8 +92,8 @@ caps.handback.revision: 36
   
  이 문제를 방지하려면 마지막으로 조정하기 전에 먼저 모든 테이블을 추가하십시오. 나중에 다이어그램을 다시 열 경우 개체는 다이어그램에서 위치를 유지해야 합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](../Topic/Data%20Source%20View%20Designer%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)  
+ [데이터 원본 뷰 디자이너 &#40; Analysis Services-다차원 데이터 &#41;](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   
   

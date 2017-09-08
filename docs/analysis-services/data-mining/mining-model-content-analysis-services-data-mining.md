@@ -1,33 +1,38 @@
 ---
-title: "마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "알고리즘 [데이터 마이닝]"
-  - "표준 편차"
-  - "신뢰성 점수 [데이터 마이닝]"
-  - "마이닝 모델 [Analysis Services]"
-  - "분산"
-  - "시스템 학습 알고리즘 [Analysis Services]"
-  - "모델 콘텐츠"
-  - "지원 [데이터 마이닝]"
-  - "노드 분포"
+title: "마이닝 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- algorithms [data mining]
+- standard deviation
+- confidence scores [data mining]
+- mining models [Analysis Services]
+- variance
+- machine learning algorithms [Analysis Services]
+- model content
+- support [data mining]
+- node distribution
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 caps.latest.revision: 25
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 4097a5ab62a6e30f2056216ec83eb0c568547479
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
+# <a name="mining-model-content-analysis-services---data-mining"></a>마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   기본 마이닝 구조의 데이터를 사용하여 마이닝 모델을 디자인하고 처리하고 나면 마이닝 모델이 완성되고 마이닝 모델에 *마이닝 모델 콘텐츠*가 포함됩니다. 이 콘텐츠를 사용하여 예측을 만들거나 데이터를 분석할 수 있습니다.  
   
  마이닝 모델 콘텐츠에는 모델에 대한 메타데이터, 데이터에 대한 통계 및 마이닝 알고리즘을 통해 발견한 패턴이 포함됩니다. 사용된 알고리즘에 따라 모델 콘텐츠에는 회귀 수식, 규칙 및 항목 집합의 정의, 가중치 또는 기타 통계가 포함될 수 있습니다.  
@@ -68,11 +73,11 @@ caps.handback.revision: 25
   
 -   모델의 특정 부분을 나타내는 XML 조각  
   
-### 마이닝 콘텐츠 노드 유형 목록  
+### <a name="list-of-mining-content-node-types"></a>마이닝 콘텐츠 노드 유형 목록  
  다음 표에서는 데이터 마이닝 모델에 출력되는 다양한 유형의 노드를 보여 줍니다. 알고리즘마다 정보를 처리하는 방법이 다르기 때문에 각 모델은 몇 개의 특정 종류의 노드만 생성합니다. 알고리즘을 변경하면 노드 유형이 변경될 수 있습니다. 또한 모델을 다시 처리하면 각 노드의 내용이 변경될 수도 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)]에서 제공하는 것과 다른 데이터 마이닝 서비스를 사용하거나 사용자 고유의 플러그 인 알고리즘을 만드는 경우 추가 사용자 지정 노드 유형을 사용할 수 있습니다.  
+>  다른 데이터 마이닝 서비스를 사용 하는 경우 또는 사용자 고유의 플러그 인 알고리즘을 만드는 경우 추가 사용자 지정 노드 유형을 사용할 수 있습니다.  
   
 |NODE_TYPE ID|노드 레이블|노드 내용|  
 |-------------------|----------------|-------------------|  
@@ -107,12 +112,12 @@ caps.handback.revision: 25
 |30|ArimaMovingAverage|ARIMA 모델의 단일 용어에 대한 이동 평균 계수입니다. ARIMA 알고리즘을 사용하는 시계열 모델에만 적용됩니다.|  
 |1000|CustomBase|사용자 지정 노드 유형의 시작 지점입니다. 사용자 지정 노드 유형의 값은 이 상수보다 큰 정수여야 합니다. 사용자 지정 플러그 인 알고리즘을 사용하여 만든 모델에 적용됩니다.|  
   
-### 노드 ID, 이름, 캡션 및 설명  
+### <a name="node-id-name-caption-and-description"></a>노드 ID, 이름, 캡션 및 설명  
  모든 모델의 루트 노드는 항상 고유 ID(**NODE_UNIQUE_NAME**)로 0을 갖습니다. 모든 노드 ID는 Analysis Services에 의해 자동으로 할당되며 수정할 수 없습니다.  
   
- 각 모델의 루트 노드에는 모델에 대한 몇 가지 기본 메타데이터도 포함됩니다. 이러한 메타데이터로는 모델이 저장되는 Analysis Services 데이터베이스(**MODEL_CATALOG**), 스키마(**MODEL_SCHEMA)** 및 모델 이름(**MODEL_NAME)**이 있습니다. 그리나 이 정보는 모델의 모든 노드에서 반복되므로 이 메타데이터를 가져오기 위해 루트 노드를 쿼리할 필요는 없습니다.  
+ 각 모델의 루트 노드에는 모델에 대한 몇 가지 기본 메타데이터도 포함됩니다. 이러한 메타데이터로는 모델이 저장되는 Analysis Services 데이터베이스(**MODEL_CATALOG**), 스키마(**MODEL_SCHEMA)**및 모델 이름(**MODEL_NAME)**이 있습니다. 그리나 이 정보는 모델의 모든 노드에서 반복되므로 이 메타데이터를 가져오기 위해 루트 노드를 쿼리할 필요는 없습니다.  
   
- 고유 식별자로 사용되는 이름 외에도 각 노드에는 별도의 *이름*(**NODE_NAME**)이 있습니다. 이 이름은 표시 목적으로 알고리즘을 통해 자동으로 생성되며 수정할 수 없습니다.  
+ 고유 식별자로 사용되는 이름 외에도 각 노드에는 별도의 *이름* (**NODE_NAME**)이 있습니다. 이 이름은 표시 목적으로 알고리즘을 통해 자동으로 생성되며 수정할 수 없습니다.  
   
 > [!NOTE]  
 >  Microsoft 클러스터링 알고리즘을 사용하면 각 클러스터에 이름을 할당할 수 있습니다. 그러나 이러한 이름은 서버에서 유지되지 않으며, 모델을 다시 처리하면 알고리즘을 통해 새 클러스터 이름이 생성됩니다.  
@@ -122,7 +127,7 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Analysis Services 서버에서는 이름 바꾸기를 구현하는 사용자 지정 플러그 인 알고리즘을 사용하여 모델을 작성한 경우에만 모델의 이름 바꾸기를 지원합니다. 이름 바꾸기를 사용하려면 플러그 인 알고리즘을 만들 때 메서드를 재정의해야 합니다.  
   
-### 부모 노드, 자식 노드 및 노드 카디널리티  
+### <a name="node-parents-node-children-and-node-cardinality"></a>부모 노드, 자식 노드 및 노드 카디널리티  
  트리 구조에서 부모 노드와 자식 노드 간의 관계는 PARENT_UNIQUE_NAME 열의 값에 의해 결정됩니다. 이 값은 자식 노드에 저장되며 부모 노드의 ID를 보여 줍니다. 다음은 이 정보의 사용 방법을 보여 주는 몇 가지 예입니다.  
   
 -   PARENT_UNIQUE_NAME의 값이 NULL이면 노드가 모델의 최상위 노드임을 나타냅니다.  
@@ -141,7 +146,7 @@ caps.handback.revision: 25
 > [!NOTE]  
 >  Microsoft 신경망 알고리즘을 통해 만든 모델과 같은 일부 모델에는 전체 모델의 학습 모델에 대한 기술 통계를 제공하는 특수한 노드 유형이 추가로 포함될 수 있습니다. 정의에 따르면 이러한 노드에는 자식 노드가 없습니다.  
   
-### 노드 분포  
+### <a name="node-distribution"></a>노드 분포  
  NODE_DISTRIBUTION 열에는 많은 노드에서 알고리즘을 통해 발견된 패턴에 대한 중요한 세부 정보를 제공하는 중첩 테이블이 포함됩니다. 이 테이블에 제공되는 정확한 통계는 모델 유형, 트리에 있는 노드의 위치 및 예측 가능한 특성이 연속 숫자 값인지 또는 불연속 값인지 여부에 따라 달라집니다. 그러나 이러한 통계에는 특성의 최소값 및 최대값, 값에 할당된 가중치, 노드에 있는 사례 수, 회귀 수식에 사용되는 계수, 표준 편차 및 분산과 같은 통계 측정값 등이 포함될 수 있습니다. 노드 분포를 해석하는 방법은 작업 중인 모델 유형에 대한 항목을 참조하세요.  
   
 > [!NOTE]  
@@ -161,7 +166,7 @@ caps.handback.revision: 25
   
  ATTRIBUTE_VALUE에는 알고리즘이 값을 처리하는 방법에 따라 특성 값이 있는지 여부(**Existing**) 또는 값이 null인지 여부(**Missing**)를 나타내는 플래그도 포함될 수 있습니다.  
   
- 예를 들어 특정 항목을 한 번 이상 구매한 고객을 찾도록 모델을 설정한 경우 ATTRIBUTE_NAME 열에는 `Model = 'Water bottle'`과 같은 관심 있는 항목을 정의하는 특성-값 쌍이 포함될 수 있고 ATTRIBUTE_VALUE 열에는 **Existing** 또는 **Missing** 키워드만 포함될 수 있습니다.  
+ 예를 들어 특정 항목을 한 번 이상 구매한 고객을 찾도록 모델을 설정한 경우 ATTRIBUTE_NAME 열에는 `Model = 'Water bottle'`과 같은 관심 있는 항목을 정의하는 특성-값 쌍이 포함될 수 있고 ATTRIBUTE_VALUE 열에는 **Existing** 또는 **Missing**키워드만 포함될 수 있습니다.  
   
  별칭  
  이 특성-값 쌍이 있거나 이 항목 집합 또는 규칙이 포함된 사례 수입니다.  
@@ -201,7 +206,7 @@ caps.handback.revision: 25
   
  조정 후 모든 값의 확률은 여전히 더해져 1이 됩니다. 데이터가 없는 값의 확률(이 예제의 경우, [총 자녀 수 = '0', '3' 또는 기타 다른 값])은 0이 아닌 매우 낮은 수준에서 시작해서 사례가 추가됨에 따라 천천히 증가합니다.  
   
- VARIANCE  
+ 분산  
  노드 내의 값 분산을 나타냅니다. 정의에 따르면 불연속 값의 분산은 항상 0입니다. 모델에서 연속 값을 지원하는 경우 분모 n 또는 노드에 있는 사례 수를 사용하여 분산이 σ(시그마)로 계산됩니다.  
   
  일반적으로 표준 편차(**StDev**)를 나타날 때는 두 가지 방법이 사용됩니다. 하나는 바이어스를 사용하여 표준 편차를 계산하는 방법이고 다른 하나는 바이어스를 사용하지 않고 표준 편차를 계산하는 방법입니다. 일반적으로 Microsoft 데이터 마이닝 알고리즘은 표준 편차를 계산할 때 바이어스를 사용하지 않습니다.  
@@ -214,11 +219,11 @@ caps.handback.revision: 25
 |VALUE_TYPE ID|값 레이블|값 형식 이름|  
 |--------------------|-----------------|---------------------|  
 |1.|Missing|사례 데이터에 해당 특성에 대한 값이 포함되지 않았음을 나타냅니다. **Missing** 상태는 값이 있는 특성과 별도로 계산됩니다.|  
-|2|기존|사례 데이터에 해당 특성에 대한 값이 포함되어 있음을 나타냅니다.|  
+|2|Existing|사례 데이터에 해당 특성에 대한 값이 포함되어 있음을 나타냅니다.|  
 |3|연속|특성 값이 연속 숫자 값이며 분산 및 표준 편차와 함께 평균으로 표시할 수 있음을 나타냅니다.|  
 |4|불연속|불연속 값으로 처리되는 숫자 또는 텍스트 값을 나타냅니다.<br /><br /> **참고** 불연속 값도 누락될 수 있지만 누락된 불연속 값은 계산을 수행할 때 다르게 처리됩니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.|  
 |5|불연속화됨|특성에 불연속화 숫자 값이 포함되어 있음을 나타냅니다. 이러한 값은 불연속화 버킷을 나타내는 서식 있는 문자열이 됩니다.|  
-|6|기존|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
+|6|Existing|특성에 연속 숫자 값이 포함되어 있고 이러한 값이 누락 또는 유추된 데이터 및 값에 제공되었음을 나타냅니다.|  
 |7|계수|계수를 나타내는 숫자 값을 가리킵니다.<br /><br /> 계수는 종속 변수의 값을 계산할 때 적용되는 값입니다. 예를 들어 모델에서 나이를 기반으로 소득을 예측하는 회귀 수식을 만들면 나이와 소득을 연결하는 수식에 계수가 사용됩니다.|  
 |8|득점|특성의 득점을 나타내는 숫자 값을 가리킵니다.|  
 |9|통계|회귀 변수의 통계를 나타내는 숫자 값을 가리킵니다.|  
@@ -232,12 +237,12 @@ caps.handback.revision: 25
 |17|기타|알고리즘을 통해 정의된 사용자 지정 값을 나타냅니다.|  
 |18|미리 렌더링된 문자열|알고리즘을 통해 문자열로 렌더링되는 사용자 지정 값을 나타냅니다. 개체 모델에 의해 서식이 적용되지 않았습니다.|  
   
- 값 형식은 ADMOMD.NET 열거형에서 파생됩니다. 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>을 참조하세요.  
+ 값 형식은 ADMOMD.NET 열거형에서 파생됩니다. 자세한 내용은 <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>가 포함됩니다.  
   
-### 노드 점수  
+### <a name="node-score"></a>노드 점수  
  노드 점수 관리는 모델 유형에 따라 다르며 노드 유형의 영향을 받을 수도 있습니다. 각 모델 및 노드 유형에 따라 NODE_SCORE가 계산되는 방법은 [알고리즘 유형별 마이닝 모델 콘텐츠](#bkmk_AlgoType)를 참조하세요.  
   
-### 노드 확률 및 한계 확률  
+### <a name="node-probability-and-marginal-probability"></a>노드 확률 및 한계 확률  
  마이닝 모델 스키마 행 집합에는 모든 모델 유형에 대해 NODE_PROBABILITY 및 MARGINAL_PROBABILITY 열이 포함됩니다. 이러한 열에는 확률 값이 중요한 노드의 값만 포함됩니다. 예를 들어 모델의 루트 노드에는 확률 점수가 포함되지 않습니다.  
   
  확률 점수를 제공하는 노드에서는 노드 확률과 한계 확률이 서로 다른 계산을 나타냅니다.  
@@ -256,7 +261,7 @@ caps.handback.revision: 25
 |성별로 나눈 대상 고객|.5|.5|  
 |성별로 나누고 다시 소득에 따라 세 가지로 나눈 대상 고객|.33|.5 * .33 = .165|  
   
-### 노드 규칙 및 한계 규칙  
+### <a name="node-rule-and-marginal-rule"></a>노드 규칙 및 한계 규칙  
  마이닝 모델 스키마 행 집합에는 모든 모델 유형에 대해 NODE_RULE 및 MARGINAL_RULE 열도 포함됩니다. 이러한 열에는 모델을 직렬화하고 모델 구조의 특정 부분을 나타내는 데 사용할 수 있는 XML 조각이 포함됩니다. 이러한 열은 값이 의미가 없을 경우 일부 노드에 대해 비워 둘 수 있습니다.  
   
  위 두 가지 종류의 확률 값과 유사한 두 가지 종류의 XML 규칙이 제공됩니다. MARGINAL_RULE의 XML 조각은 현재 노드의 특성과 값을 정의하는 반면 NODE_RULE의 XML 조각은 모델 루트에서 현재 노드까지의 경로를 나타냅니다.  
@@ -276,10 +281,10 @@ caps.handback.revision: 25
 |클러스터링 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)|  
 |의사 결정 트리 모델|[의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)|  
 |선형 회귀 모델|[선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
-|로지스틱 회귀 모델|[로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining model content for logistic regression models.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
+|로지스틱 회귀 모델|[로지스틱 회귀 분석 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)|[선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)|  
 |Naïve Bayes 모델|[Naive Bayes 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Naive Bayes 모델 쿼리 예제](../../analysis-services/data-mining/naive-bayes-model-query-examples.md)|  
 |신경망 모델|[신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[신경망 모델 쿼리 예제](../../analysis-services/data-mining/neural-network-model-query-examples.md)|  
-|시퀀스 클러스터링|[시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining model content for sequence clustering models.md)|[시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
+|시퀀스 클러스터링|[시퀀스 클러스터링 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)|[시퀀스 클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)|  
 |시계열 모델|[시계열 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[시계열 모델 쿼리 예제](../../analysis-services/data-mining/time-series-model-query-examples.md)|  
   
 ##  <a name="bkmk_Viewing"></a> 마이닝 모델 콘텐츠를 보기 위한 도구  
@@ -302,8 +307,8 @@ SELECT * FROM [<mining model name>].CONTENT
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 열고 시스템 테이블을 쿼리하여 데이터 마이닝 스키마 행 집합의 정보에 액세스할 수도 있습니다. 자세한 내용은 [데이터 마이닝 스키마 행 집합&#40;SSAs&#41;](../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)을 참조하세요.  
   
-## 관련 항목:  
- [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)   
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
   

@@ -1,35 +1,40 @@
 ---
-title: "연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "항목 집합 [Analysis Services]"
-  - "연결 알고리즘 [Analysis Services]"
-  - "마이닝 모델 콘텐츠, 연결 모델"
-  - "규칙 [데이터 마이닝]"
-  - "연결 [Analysis Services]"
+title: "마이닝 연결 모델에 대 한 모델 콘텐츠 (Analysis Services-데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- association algorithms [Analysis Services]
+- mining model content, association models
+- rules [Data Mining]
+- associations [Analysis Services]
 ms.assetid: d5849bcb-4b8f-4f71-9761-7dc5bb465224
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 259335815674dfd8c9d59b1fe6bde7c170d096b6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
+# <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>연결 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 알고리즘을 사용하는 모델에만 적용되는 마이닝 모델 콘텐츠에 대해 설명합니다. 모든 모델 유형에 적용되는 마이닝 모델 콘텐츠와 관련된 일반 용어 및 통계 용어에 대한 설명은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
-## 연결 모델의 구조 이해  
+## <a name="understanding-the-structure-of-an-association-model"></a>연결 모델의 구조 이해  
  연결 모델의 구조는 간단합니다. 각 모델에는 모델과 메타데이터를 나타내는 부모 노드가 한 개 있고 각 부모 노드에는 항목 집합과 규칙에 대한 기본 목록이 있습니다. 항목 집합과 규칙은 트리로 구성되어 있지 않으며 다음 다이어그램에서와 같이 항목 집합 및 규칙 순으로 정렬됩니다.  
   
- ![연결 모델에 대한 모델 콘텐츠 구조](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "연결 모델에 대한 모델 콘텐츠 구조")  
+ ![연결 모델에 대 한 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "한 연결 모델에 대 한 모델 콘텐츠 구조")  
   
  각 항목 집합은 자체 노드(NODE_TYPE = 7)에 포함되어 있습니다. *노드* 에는 항목 집합의 정의, 이 항목 집합을 포함하는 사례 수 및 기타 정보가 포함되어 있습니다.  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
  **참고** 규칙 또는 항목 집합을 추출하려는 경우 쿼리를 사용하여 원하는 노드 유형만 반환할 수 있습니다. 자세한 내용은 [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)를 참조하세요.  
   
-## 연결 모델에 대한 모델 콘텐츠  
+## <a name="model-content-for-an-association-model"></a>연결 모델에 대한 모델 콘텐츠  
  이 섹션에서는 연결 모델과 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보와 예만 제공합니다.  
   
  스키마 행 집합(예: MODEL_CATALOG 및 MODEL_NAME)의 범용 열에 대한 자세한 내용은 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
@@ -63,8 +68,8 @@ caps.handback.revision: 17
 |노드 유형 ID|형식|  
 |------------------|----------|  
 |1(모델)|루트 또는 부모 노드입니다.|  
-|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 또는<br /><br /> `Gender = Male`.|  
-|8(규칙)|항목 간의 관련 방식을 정의하는 규칙입니다.<br /><br /> 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
+|7(항목 집합)|항목 집합 또는 특성-값 쌍 모음입니다. 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> 또는<br /><br /> `Gender = Male`를 참조하세요.|  
+|8(규칙)|항목 간의 관련 방식을 정의하는 규칙입니다.<br /><br /> 예:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`를 참조하세요.|  
   
  NODE_CAPTION  
  노드와 연결된 레이블 또는 캡션입니다.  
@@ -192,7 +197,7 @@ caps.handback.revision: 17
  MSOLAP_NODE_SHORT_CAPTION  
  비어 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)  

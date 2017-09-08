@@ -1,27 +1,32 @@
 ---
-title: "속성(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "속성 (SSAS 테이블 형식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a59d3448-8619-4044-923b-8effba926dfa
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 속성(SSAS 테이블 형식)
+# <a name="properties-ssas-tabular"></a>속성(SSAS 테이블 형식)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 테이블 형식 모델 프로젝트에는 프로젝트, 모델, 보고 및 배포를 위한 동작을 정의하는 다양한 속성이 있습니다. 속성 설정은 Model.bim 파일에 XML 형식으로 저장되지만, 이 섹션에서 설명하는 모든 속성은 **의** 속성 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]창에서 구성할 수 있습니다.  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
   
 |항목|Description|  
 |-----------|-----------------|  

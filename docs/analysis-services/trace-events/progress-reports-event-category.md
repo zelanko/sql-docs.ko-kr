@@ -1,26 +1,31 @@
 ---
 title: "Progress Reports 이벤트 범주 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "진행률 이벤트 [Analysis Services]"
-  - "Progress Reports 이벤트 범주"
-  - "이벤트 클래스 [Analysis Services], 진행률 보고서"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- progress events [Analysis Services]
+- Progress Reports event category
+- event classes [Analysis Services], progress reports
 ms.assetid: c130f160-28ef-49bc-9ee6-da47dc9aab2a
 caps.latest.revision: 23
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 23
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3489d5176553ba8482646610a048955b93399043
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Progress Reports 이벤트 범주
+# <a name="progress-reports-event-category"></a>Progress Reports 이벤트 범주
   Progress Reports 이벤트 범주에는 다음 표에 설명된 이벤트 클래스가 있습니다.  
   
 |Event Class|이벤트 ID|Description|  
@@ -34,7 +39,7 @@ caps.handback.revision: 23
   
  각각의 Progress Reports 이벤트 클래스와 연관된 열에 대한 자세한 내용은 [Progress Reports Data Columns](../../analysis-services/trace-events/progress-reports-data-columns.md)을 참조하십시오.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 추적 이벤트](../../analysis-services/trace-events/analysis-services-trace-events.md)  
   
   

@@ -1,34 +1,39 @@
 ---
-title: "Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "항목 집합 [Analysis Services]"
-  - "마이닝 모델 [Analysis Services], 연결"
-  - "마이닝 모델 콘텐츠, 보기"
-  - "규칙 [데이터 마이닝]"
-  - "연결 규칙 뷰어 [Analysis Services]"
-  - "장바구니 분석 [Analysis Services]"
-  - "연결 [Analysis Services]"
-  - "Microsoft 연결 규칙 뷰어"
-  - "종속성 [Analysis Services]"
+title: "Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- itemsets [Analysis Services]
+- mining models [Analysis Services], associations
+- mining model content, viewing
+- rules [Data Mining]
+- Association Rules Viewer [Analysis Services]
+- market basket analysis [Analysis Services]
+- associations [Analysis Services]
+- Microsoft Association Rules Viewer
+- dependencies [Analysis Services]
 ms.assetid: 538fc01b-8eb1-467a-9b66-3cd57cf7489f
 caps.latest.revision: 39
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 39
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d8145dd87dd2c1e09663a8b6f6c0cea6dcb1ae7f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 뷰어에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)를 참조하십시오.  
+# <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 규칙 뷰어에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)를 참조하십시오.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하는 주된 이유는 다음과 같습니다.  
   
@@ -37,9 +42,9 @@ caps.handback.revision: 39
 -   기존 항목을 기반으로 트랜잭션에 다른 항목이 있는지 여부를 예측하는 규칙 발견  
   
 > [!NOTE]  
->  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](../Topic/Microsoft%20Generic%20Content%20Tree%20Viewer%20\(Data%20Mining\).md)를 참조하세요.  
+>  발견된 패턴 및 모델에 사용된 수식에 대한 자세한 정보를 보려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 일반 콘텐츠 트리 뷰어를 사용하십시오. 자세한 내용은 [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) 또는 [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)를 참조하세요.  
   
- 연결 마이닝 모델의 생성, 탐색, 사용 방법에 대한 연습은 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)을 참조하세요.  
+ 연결 마이닝 모델의 생성, 탐색, 사용 방법에 대한 연습은 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)을 참조하세요.  
   
 ##  <a name="BKMK_ViewerTabs"></a> 뷰어 탭  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 마이닝 모델을 찾으면 해당 모델의 적절한 뷰어에서 데이터 마이닝 디자이너의 **마이닝 모델 뷰어** 탭에 해당 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 뷰어에는 다음과 같은 탭이 있습니다.  
@@ -83,8 +88,8 @@ caps.handback.revision: 39
   
  [맨 위로 이동](#BKMK_ViewerTabs)  
   
-## 관련 항목:  
- [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
+## <a name="see-also"></a>관련 항목:  
+ [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [데이터 마이닝 도구](../../analysis-services/data-mining/data-mining-tools.md)   

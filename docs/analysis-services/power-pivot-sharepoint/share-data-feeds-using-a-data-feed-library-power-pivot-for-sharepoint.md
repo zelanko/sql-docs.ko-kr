@@ -1,26 +1,31 @@
 ---
-title: "데이터 피드 라이브러리를 사용하여 데이터 피드 공유(SharePoint용 PowerPivot) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 피드 [Analysis Services와 SharePoint 통합]"
+title: "데이터 피드 라이브러리 (SharePoint 용 파워 피벗)를 사용 하 여 데이터 피드 공유 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data feeds [Analysis Services with SharePoint]
 ms.assetid: 4ec98dec-0cd2-4727-bb79-5bf6f8a865d6
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 31457f6abb88dff525bd19609b8dd552adadfeb8
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 피드 라이브러리를 사용하여 데이터 피드 공유(SharePoint용 PowerPivot)
+# <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>데이터 피드 라이브러리를 사용하여 데이터 피드 공유(SharePoint용 PowerPivot)
   데이터 피드는 Atom 연결 형식으로 데이터를 노출하는 서비스 또는 응용 프로그램에서 생성되는 XML 데이터 스트림입니다. 데이터 피드는 응용 프로그램 간에 데이터를 전송하고 클라이언트측 뷰어에게 데이터를 전송하는 데 점점 더 많이 사용되고 있습니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서 데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 Atom 인식 응용 프로그램 또는 서비스의 데이터를 채우는 데 사용됩니다.  
   
  이미 Atom 인식 응용 프로그램 조합을 사용하고 있는 경우 응용 프로그램 간의 데이터 전송이 완벽하게 수행되므로 피드가 어떻게 생성되고 사용되는지를 알 필요가 없습니다. 그러나 사용자 지정 솔루션을 사용하여 Atom 피드를 게시하는 조직에서는 정보 근로자가 피드를 사용할 수 있도록 해야 합니다. 이렇게 하는 한 가지 방법은 피드를 생성하는 온라인 원본에 대한 연결을 제공하는 데이터 서비스 문서(.atomsvc) 파일을 만들어 공유하는 것입니다. 데이터 피드 라이브러리라는 특수 용도의 라이브러리는 SharePoint 웹 응용 프로그램에서 데이터 서비스 문서 만들기와 공유를 지원합니다.  
@@ -38,10 +43,10 @@ caps.handback.revision: 26
  [다음 단계: 데이터 서비스 문서 사용](#usedsdoc)  
   
 > [!NOTE]  
->  데이터 피드는 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]에서 만든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]데이터 원본에 웹 데이터를 추가하는 데 사용되지만 Atom 피드를 읽을 수 있는 모든 클라이언트 응용 프로그램에서 데이터 서비스 문서를 처리할 수 있습니다.  
+>  데이터 피드는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 만든 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]데이터 원본에 웹 데이터를 추가하는 데 사용되지만 Atom 피드를 읽을 수 있는 모든 클라이언트 응용 프로그램에서 데이터 서비스 문서를 처리할 수 있습니다.  
   
 ##  <a name="prereq"></a> 필수 구성 요소  
- SharePoint 팜에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 쿼리 처리 기능을 추가하는 SharePoint용 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포가 있어야 합니다. 데이터 피드 지원은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지를 통해 배포됩니다.  
+ SharePoint 팜에 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포가 있어야 합니다. 데이터 피드 지원은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션 패키지를 통해 배포됩니다.  
   
  데이터 서비스 문서 콘텐츠 형식을 지원하는 SharePoint 라이브러리가 있어야 합니다. 이 경우 기본 데이터 피드 라이브러리를 사용하는 것이 좋지만, 콘텐츠 형식을 라이브러리에 수동으로 추가할 수 있습니다. 자세한 내용은 [데이터 피드 라이브러리 만들기 또는 사용자 지정&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md)을 참조하세요.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 26
   
 6.  문서를 저장합니다. 데이터 서비스 문서는 이 콘텐츠 형식에 대해 구성된 콘텐츠 라이브러리에 물리적 파일(.atomsvc)로 저장됩니다.  
   
- 데이터 서비스 문서를 사용하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 통합 문서를 열고 데이터 가져오기 마법사에서 **데이터 피드** 옵션을 선택할 수 있습니다. 메시지가 표시되면 데이터 가져오기 작업을 시작할 데이터 서비스 문서의 SharePoint URL을 지정합니다. 자세한 내용은 [데이터 피드 사용&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)을 참조하세요.  
+ 데이터 서비스 문서를 사용하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] 통합 문서를 열고 데이터 가져오기 마법사에서 **데이터 피드** 옵션을 선택할 수 있습니다. 메시지가 표시되면 데이터 가져오기 작업을 시작할 데이터 서비스 문서의 SharePoint URL을 지정합니다. 자세한 내용은 [데이터 피드 사용&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)을(를) 참조하세요.  
   
 ##  <a name="securedsdoc"></a> 데이터 서비스 문서 보안  
  데이터 서비스 문서는 해당 문서가 속해 있는 라이브러리의 권한을 상속합니다. 항목에 대해 설정한 권한에 따라 사용자가 데이터 서비스 문서를 열거나 수정하거나 삭제할 수 있는지 여부가 결정됩니다.  
@@ -95,7 +100,7 @@ caps.handback.revision: 26
   
 |태스크|SharePoint 사용 권한 요구 사항|  
 |----------|----------------------------------------|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 사용 통합 문서로 데이터 피드를 가져옵니다.|라이브러리의 데이터 서비스 문서에 대한 보기 권한이 필요합니다.|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]사용 통합 문서로 데이터 피드를 가져옵니다.|라이브러리의 데이터 서비스 문서에 대한 보기 권한이 필요합니다.|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트 응용 프로그램에서 피드를 통해 이전에 검색된 데이터를 새로 고칩니다.|이 오류에는 이 작업을 적용할 수 없습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트 응용 프로그램에서는 포함된 HTTP 연결 정보를 사용하여 피드를 제공하는 데이터 서비스 및 응용 프로그램에 직접 연결합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 클라이언트 응용 프로그램은 데이터 서비스 문서를 사용하지 않습니다.|  
 |SharePoint 팜에서 사용자의 입력을 요구하지 않고 데이터를 예약된 태스크로 새로 고칩니다.|이 오류에는 이 작업을 적용할 수 없습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스에서는 포함된 HTTP 연결 정보를 사용하여 피드를 제공하는 데이터 서비스 및 응용 프로그램에 직접 연결합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스는 데이터 서비스 문서를 사용하지 않습니다.|  
 |라이브러리에서 데이터 서비스 문서를 삭제합니다.|라이브러리에 대한 참가 권한이 필요합니다.|  
@@ -113,7 +118,7 @@ caps.handback.revision: 26
 ##  <a name="usedsdoc"></a> 다음 단계: 데이터 서비스 문서 사용  
  SharePoint 라이브러리에서 만든 데이터 서비스 문서를 사용하려면 **데이터 원본에서** 데이터 피드 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 가져오기 옵션을 사용합니다. 자세한 내용은 [데이터 피드 사용&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [파워 피벗 데이터 피드](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

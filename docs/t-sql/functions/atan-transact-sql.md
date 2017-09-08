@@ -1,0 +1,122 @@
+---
+title: ATAN (Transact SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 07/24/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- ATAN_TSQL
+- ATAN
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- arctangent
+- ATAN function
+- tangent
+ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
+caps.latest.revision: 25
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 2c0604d007934327541814aedbc860671905e513
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="atan-transact-sql"></a>ATAN(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+탄젠트가 지정 된 라디안으로 각도 반환 **float** 식입니다. 이를 아크탄젠트라고도 합니다.
+  
+![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+  
+## <a name="syntax"></a>구문  
+  
+```sql
+-- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+  
+ATAN ( float_expression )  
+```  
+  
+## <a name="arguments"></a>인수  
+*float_expression*  
+이 [식](../../t-sql/language-elements/expressions-transact-sql.md) 형식의 **float** 또는 암시적으로 변환할 수 있는 형식의 **float**합니다.
+  
+## <a name="return-types"></a>반환 형식
+**float**
+  
+## <a name="examples"></a>예  
+다음 예제에서는 **float** 식과 지정된 된 각도의 atan 값을 반환 합니다.
+  
+```sql
+SELECT 'The ATAN of -45.01 is: ' + CONVERT(varchar, ATAN(-45.01))  
+SELECT 'The ATAN of -181.01 is: ' + CONVERT(varchar, ATAN(-181.01))  
+SELECT 'The ATAN of 0 is: ' + CONVERT(varchar, ATAN(0))  
+SELECT 'The ATAN of 0.1472738 is: ' + CONVERT(varchar, ATAN(0.1472738))  
+SELECT 'The ATAN of 197.1099392 is: ' + CONVERT(varchar, ATAN(197.1099392))  
+GO  
+```  
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+```sql
+  
+-------------------------------   
+The ATAN of -45.01 is: -1.54858                         
+  
+(1 row(s) affected)  
+  
+--------------------------------   
+The ATAN of -181.01 is: -1.56527                         
+  
+(1 row(s) affected)  
+  
+--------------------------------   
+The ATAN of 0 is: 0                                
+  
+(1 row(s) affected)  
+  
+----------------------------------   
+The ATAN of 0.1472738 is: 0.146223                         
+  
+(1 row(s) affected)  
+  
+-----------------------------------   
+The ATAN of 197.1099392 is: 1.56572                          
+  
+(1 row(s) affected)  
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+다음 예제에서는 **float** 식이 지정된 된 각도의 아크탄젠트를 반환 합니다.
+  
+```sql
+SELECT ATAN(45.87) AS atanCalc1,  
+    ATAN(-181.01) AS atanCalc2,  
+    ATAN(0) AS atanCalc3,  
+    ATAN(0.1472738) AS atanCalc4,  
+    ATAN(197.1099392) AS atanCalc5;  
+```  
+  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
+  
+`atanCalc1  atanCalc2  atanCalc3  atanCalc4  atanCalc5`
+  
+`---------  ---------  ---------  ---------  ---------`
+  
+`1.55       -1.57       0.00       0.15       1.57`
+  
+## <a name="see-also"></a>참고 항목
+[천장 &#40; Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)  
+[수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)
+  
+  
+
+

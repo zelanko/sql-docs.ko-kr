@@ -1,27 +1,32 @@
 ---
 title: "클러스터링 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클러스터링 [데이터 마이닝]"
-  - "내용 쿼리 [DMX]"
-  - "클러스터링 알고리즘 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clustering [Data Mining]
+- content queries [DMX]
+- clustering algorithms [Analysis Services]
 ms.assetid: bf2ba332-9bc6-411a-a3af-b919c52432c8
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0b72ea275e4d396531feabd86780f0dabc736e85
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 클러스터링 모델 쿼리 예제
+# <a name="clustering-model-query-examples"></a>클러스터링 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 모델에 대한 메타데이터를 검색하거나, 분석 시 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들 수 있습니다. 또는 모델의 패턴을 사용하여 새 데이터에 대한 예측을 만드는 예측 쿼리를 작성할 수 있습니다. 각 유형의 쿼리는 서로 다른 정보를 제공합니다. 예를 들어 내용 쿼리는 발견된 클러스터에 대한 추가 세부 정보를 제공하지만 예측 쿼리는 새 데이터 요소가 속해 있을 가능성이 가장 높은 클러스터를 알려 줍니다.  
   
  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘을 기반으로 하는 모델에 대해 쿼리를 만드는 방법을 설명합니다.  
@@ -106,7 +111,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
   
  [맨 위로 이동](#bkmk_top2)  
   
-## 클러스터 정보 찾기  
+## <a name="finding-information-about-clusters"></a>클러스터 정보 찾기  
  클러스터링 모델에 대한 가장 유용한 내용 쿼리는 일반적으로 **클러스터 뷰어**에서 찾아볼 수 있는 것과 동일한 유형의 정보를 반환합니다. 여기에는 클러스터 프로필, 클러스터 특징 및 클러스터 판별 등이 포함됩니다. 이 섹션에서는 이러한 정보를 검색하는 예제 쿼리를 제공합니다.  
   
 ###  <a name="bkmk_Query3"></a> 예제 쿼리 3: 클러스터 또는 클러스터 목록 반환  
@@ -131,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
 -   NODE_DESCRIPTION 열에는 쉼표로 구분된 특성 목록이 들어 있습니다. 특성 목록이 표시용으로 축약될 수도 있습니다.  
   
--   NODE_DISTRIBUTION 열의 중첩 테이블에는 클러스터에 대한 전체 특성 목록이 들어 있습니다. 클라이언트에서 계층적 행 집합을 지원하지 않는 경우 SELECT 열 목록 앞에 FLATTEN 키워드를 추가하여 중첩 테이블을 반환할 수 있습니다. FLATTENED 키워드 사용에 대한 자세한 내용은 [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../Topic/SELECT%20FROM%20%3Cmodel%3E.CONTENT%20\(DMX\).md)를 참조하세요.  
+-   NODE_DISTRIBUTION 열의 중첩 테이블에는 클러스터에 대한 전체 특성 목록이 들어 있습니다. 클라이언트에서 계층적 행 집합을 지원하지 않는 경우 SELECT 열 목록 앞에 FLATTEN 키워드를 추가하여 중첩 테이블을 반환할 수 있습니다. FLATTENED 키워드 사용에 대한 자세한 내용은 [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../../dmx/select-from-model-content-dmx.md)를 참조하세요.  
   
  [맨 위로 이동](#bkmk_top2)  
   
@@ -204,7 +209,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
  [맨 위로 이동](#bkmk_top2)  
   
 ###  <a name="bkmk_Query6"></a> 예제 쿼리 6: 클러스터에 대한 판별 요소 찾기  
- **클러스터 뷰어**의 **클러스터 판별** 탭에서는 손쉽게 한 클러스터와 다른 클러스터를 비교하거나, 한 클러스터와 나머지 모든 사례(나머지 클러스터)를 비교할 수 있습니다.  
+ **클러스터 뷰어** 의 **클러스터 판별** 탭에서는 손쉽게 한 클러스터와 다른 클러스터를 비교하거나, 한 클러스터와 나머지 모든 사례(나머지 클러스터)를 비교할 수 있습니다.  
   
  그러나 이러한 정보를 반환하는 쿼리를 만드는 것이 복잡할 수 있으며 임시 결과를 저장하고 둘 이상의 쿼리 결과를 비교하기 위해서는 클라이언트에서 약간의 추가 처리가 필요할 수 있습니다. 이 경우 간단하게 시스템 저장 프로시저를 사용할 수 있습니다.  
   
@@ -249,7 +254,7 @@ WHERE IsInNode('001')
   
  [맨 위로 이동](#bkmk_top2)  
   
-## 모델을 사용하여 예측 수행  
+## <a name="making-predictions-using-the-model"></a>모델을 사용하여 예측 수행  
  데이터를 설명하고 이해하는 데 클러스터링이 일반적으로 사용되지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 구현을 사용해도 클러스터 멤버 자격에 대한 예측을 만들고 예측과 연관된 확률을 반환할 수 있습니다. 이 섹션에서는 클러스터링 모델에 대한 예측 쿼리를 만드는 방법에 대한 예를 제공합니다. 테이블 형식 데이터 원본을 지정하여 여러 사례에 대한 예측을 만들거나 단일 쿼리를 만들어 한 번에 새 값을 제공할 수 있습니다. 의미를 명확하게 전달하기 위해 이 섹션의 예는 모두 단일 쿼리입니다.  
   
  DMX를 사용하여 예측 쿼리를 만드는 방법은 [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)를 참조하세요.  
@@ -283,7 +288,7 @@ NATURAL PREDICTION JOIN
 |----------------|----------------|  
 |1.|0.55843544003102|  
   
- 이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다. [PredictCaseLikelihood&#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
+ 이 예에서 모델의 차이는 그다지 중요하지 않습니다. 그러나 실제 값 분포와 모델에서 예측하는 분포의 차이를 알아내는 것이 때로는 중요할 수 있습니다. [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 함수는 해당 모델이 제공될 경우 사례가 나타날 가능성을 알려 주므로 이러한 경우에 유용합니다.  
   
  PredictCaseLikelihood 함수에 의해 반환되는 값은 확률이므로 항상 0과 1 사이이며 임의의 결과를 나타내는 경우 값이 .5입니다. 그러므로 점수가 .5 미만인 경우 해당 모델이 제공될 경우 예측 사례가 나타날 가능성이 별로 없음을 의미하고 점수가 .5 이상인 경우에는 예측 사례가 해당 모델에 적합하지 않은 경우보다 나타날 가능성이 높음을 의미합니다.  
   
@@ -360,11 +365,11 @@ NATURAL PREDICTION JOIN
   
  기본적으로 결과는 확률 순으로 순위가 지정됩니다. 결과를 통해 Cluster 2의 확률이 매우 낮지만 그래도 Cluster 2가 새 데이터 요소에 가장 적합하다는 것을 알 수 있습니다.  
   
- **참고** 추가 열 `$DISTANCE`는 데이터 요소에서 클러스터까지의 거리를 나타냅니다. 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 Scalable EM 클러스터링을 사용하여 여러 개의 클러스터를 각 데이터 요소에 할당하고 가능한 클러스터의 순위를 지정합니다.  그러나 K-Means 알고리즘을 사용하여 클러스터링 모델을 만드는 경우 각 데이터 요소에 한 개의 클러스터만 할당할 수 있으므로 이 쿼리는 한 개의 행만 반환합니다. [PredictCaseLikelihood&#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 함수의 결과를 해석하기 위해서는 이러한 차이를 이해하고 있어야 합니다. EM 클러스터링과 K-means 클러스터링의 차이점에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)를 참조하세요.  
+ **참고** 추가 열 `$DISTANCE`는 데이터 요소에서 클러스터까지의 거리를 나타냅니다. 기본적으로 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 Scalable EM 클러스터링을 사용하여 여러 개의 클러스터를 각 데이터 요소에 할당하고 가능한 클러스터의 순위를 지정합니다.  그러나 K-Means 알고리즘을 사용하여 클러스터링 모델을 만드는 경우 각 데이터 요소에 한 개의 클러스터만 할당할 수 있으므로 이 쿼리는 한 개의 행만 반환합니다. [PredictCaseLikelihood &#40;DMX&#41;](../../dmx/predictcaselikelihood-dmx.md) 함수를 사용하여 기본 구조의 열을 포함할 수 있습니다. EM 클러스터링과 K-means 클러스터링의 차이점에 대한 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)를 참조하세요.  
   
  [맨 위로 이동](#bkmk_top2)  
   
-## 함수 목록  
+## <a name="function-list"></a>함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 작성된 모델은 다음 표에 나열된 함수를 추가로 지원합니다.  
   
 |||  
@@ -387,7 +392,7 @@ NATURAL PREDICTION JOIN
   
  특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [Microsoft 클러스터링 알고리즘](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)  

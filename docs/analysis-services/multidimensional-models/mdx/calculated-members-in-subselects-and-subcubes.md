@@ -1,29 +1,34 @@
 ---
-title: "하위 SELECT 및 하위 큐브의 계산 멤버 | Microsoft Docs"
-ms.custom: 
-  - "SQL2016_New_Updated"
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "계산 멤버를 하위 Select 및 하위 큐브 | Microsoft Docs"
+ms.custom:
+- SQL2016_New_Updated
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 6e35e8f7-ae1c-4549-8432-accf036d2373
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a06ba2933b415a28d53266e4c02f3768e5044866
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 하위 SELECT 및 하위 큐브의 계산 멤버
+# <a name="calculated-members-in-subselects-and-subcubes"></a>하위 SELECT 및 하위 큐브의 계산 멤버
   계산 멤버는 값을 런타임 시 식에서 계산하는 차원 멤버이며 하위 SELECT 및 하위 큐브에서 사용하여 보다 정확하게 쿼리의 cubespace를 정의할 수 있습니다.  
   
-## 하위 공간에서 계산 멤버 사용  
- <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>의 **SubQueries** 연결 문자열 속성 또는 [지원되는 XMLA 속성&#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)의 **DBPROPMSMDSUBQUERIES** 속성은 하위 SELECT 또는 하위 큐브에서 계산 멤버나 계산 집합의 동작이나 허용을 정의합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
+## <a name="enabling-calculated-members-in-the-subspace"></a>하위 공간에서 계산 멤버 사용  
+ **하위 쿼리** 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 **DBPROPMSMDSUBQUERIES** 속성 [지원 XMLA 속성 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md) 하위 큐브 또는 하위 select에 동작이 나 허용 되는 계산된 멤버 또는 계산된 집합을 정의 합니다. 특별한 언급이 없으면 이 문서의 컨텍스트에서 하위 SELECT는 하위 SELECT 및 하위 큐브를 말합니다.  
   
  SubQueries 속성은 다음 값을 허용합니다.  
   
@@ -121,12 +126,12 @@ Where [Measures].[Reseller Sales Amount]
   
  위 결과에서 [All Geographies], [United States], [Oregon] 및 [Washington]에 대한 집계 값은 &[Portland]&[OR] 및 &[Spokane]&[WA]의 하위 항목에 대한 집계에서 제공됩니다. 계산 멤버에서는 아무 것도 제공되지 않습니다.  
   
-### 주의  
+### <a name="remarks"></a>주의  
  전역 또는 세션 계산 멤버만 하위 SELECT 또는 하위 큐브 식에서 허용됩니다. MDX 식에 쿼리 계산 멤버가 있으면 하위 SELECT 또는 하위 큐브 식이 평가될 때 오류가 발생합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>   
- [쿼리의 하위 SELECT](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
- [지원되는 XMLA 속성&#40;XMLA&#41;](../Topic/Supported%20XMLA%20Properties%20\(XMLA\).md)  
+ [쿼리의 하위 select](../../../analysis-services/multidimensional-models/mdx/subselects-in-queries.md)   
+ [지원 되는 XMLA 속성 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md)  
   
   
