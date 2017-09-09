@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f07eec3427ee1e691da665323455bb35690dc93a
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 3bf6c76a72b4414163b68f4cbdd00756b5f4f0bf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="install-sql-server"></a>SQL Server 설치
@@ -49,11 +49,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="get-the-installation-media"></a>설치 미디어 다운로드
 
-[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 다운로드 위치는 버전에 따라 다릅니다.
-
-- **SQL Server Enterprise, Standard 및 Express Edition** 은 프로덕션 사용이 허가되었습니다. Enterprise 및 Standard Edition의 경우 설치 미디어를 얻으려면 소프트웨어 공급업체에 문의하세요. 구매 정보 및 Microsoft 파트너 디렉터리는 [Microsoft 구매 웹 사이트](https://www.microsoft.com/en-us/server-cloud/products/sql-server/overview.aspx)에서 확인할 수 있습니다. 
-
-- **평가판**은 [SQL Server 다운로드](http://www.microsoft.com/sql-server/sql-server-downloads)에서 사용할 수 있습니다.
+[!INCLUDE[GetInstallationMedia](../../includes/getssmedia.md)]
 
 ## <a name="how-to-install-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] 설치 방법
  

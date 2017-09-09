@@ -15,11 +15,11 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0250c8370960dc17adf13c020c51bfc603b111c8
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 2d0a6459bc0c46e3f19de59875f73e1ebedd14d4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 저장소 구성
@@ -42,7 +42,7 @@ ms.lasthandoff: 06/22/2017
 -   짝수 개의 스핀들이 있으면 SQL Server 2014와 달리 검사점 파일이 모든 스핀들에 균일하게 분산됩니다.  
   
 ## <a name="encryption"></a>암호화  
- [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 데이터베이스에 TDE를 사용하는 일부로 메모리 액세스에 최적화된 테이블에 대한 저장소를 암호화합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)를 참조하세요.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 데이터베이스에 TDE를 사용하는 일부로 메모리 액세스에 최적화된 테이블에 대한 저장소를 암호화합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  

@@ -17,11 +17,11 @@ caps.latest.revision: 3
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 64297656b09d9f0843127887b490cef98d07b835
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 36377fe5db9440651b4e63a2c848efc290470d3e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>SQL Server 지적 재산 보호
@@ -34,7 +34,7 @@ ms.lasthandoff: 06/22/2017
 
 저장 프로시저 및 데이터는 암호화할 수 있지만 데이터 구조는 숨길 수 없으며 서버 프로세스에 디버거를 연결할 수 있는 사용자는 런타임에 메모리에서 암호 해독된 프로시저 및 데이터를 검색할 수 있습니다.
 
-클라이언트가 컴퓨터에서 관리자가 아닌 경우 클라이언트의 액세스를 방지할 수 있습니다. You can use [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)를 사용하여 데이터 파일을 암호화할 수 있으며 백업을 암호화하고 모든 사용자의 작업을 감사할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 관리자 및 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터의 관리자는 이러한 작업을 되돌릴 수 있습니다.
+클라이언트가 컴퓨터에서 관리자가 아닌 경우 클라이언트의 액세스를 방지할 수 있습니다. You can use [투명한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)를 사용하여 데이터 파일을 암호화할 수 있으며 백업을 암호화하고 모든 사용자의 작업을 감사할 수 있습니다. 그러나 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 관리자 및 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 컴퓨터의 관리자는 이러한 작업을 되돌릴 수 있습니다.
 
 ## <a name="solution"></a>해결 방법
 클라이언트 컴퓨터에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]를 설치하지 않고도 다양한 방법으로 클라이언트 데이터 액세스를 구성할 수 있습니다. 가장 쉬운 방법은 [상시 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)와 함께 [!INCLUDE[ssSDSfull_md](../../includes/sssdsfull-md.md)]를 사용하여 클라이언트가 관리자가 되지 않도록 하는 것입니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]시작에 대한 자세한 내용은 [SQL Database 정의 SQL Database 소개](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)를 참조하세요.  

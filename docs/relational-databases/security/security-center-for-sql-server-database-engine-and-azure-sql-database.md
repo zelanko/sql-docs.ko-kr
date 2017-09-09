@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 959bb6b98264296d13967725f29f763e0943a843
-ms.openlocfilehash: 970ea936f444a1c96d2c05e376905af7e03aef58
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
@@ -60,7 +60,7 @@ ms.lasthandoff: 07/31/2017
   
 |||  
 |-|-|  
-|**파일 암호화**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") BitLocker 암호화(드라이브 수준)<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") NTFS 암호화(폴더 수준)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 투명한 데이터 암호화(파일 수준)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 백업 암호화(파일 수준)|[BitLocker(드라이브 수준)](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS 암호화(폴더 수준)](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [투명한 데이터 암호화(파일 수준)](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)<br /><br /> [백업 암호화(파일 수준)](../../relational-databases/backup-restore/backup-encryption.md)|  
+|**파일 암호화**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") BitLocker 암호화(드라이브 수준)<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") NTFS 암호화(폴더 수준)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 투명한 데이터 암호화(파일 수준)<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 백업 암호화(파일 수준)|[BitLocker(드라이브 수준)](http://support.microsoft.com/kb/2855131)<br /><br /> [NTFS 암호화(폴더 수준)](http://msdn.microsoft.com/library/dd163562.aspx)<br /><br /> [투명한 데이터 암호화(파일 수준)](../../relational-databases/security/encryption/transparent-data-encryption.md)<br /><br /> [백업 암호화(파일 수준)](../../relational-databases/backup-restore/backup-encryption.md)|  
 |**소스 암호화**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 확장 가능 키 관리 모듈<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Azure Key Vault에 저장된 키<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Always Encrypted|[확장 가능 키 관리 모듈](../../relational-databases/security/encryption/extensible-key-management-ekm.md)<br /><br /> [Azure 키 자격 증명 모음에 저장된 키](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)<br /><br /> [항상 암호화](../../relational-databases/security/encryption/always-encrypted-database-engine.md)|  
 |**열, 데이터 및 키 암호화**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 인증서로 암호화<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 대칭 키로 암호화<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 비대칭 키로 암호화<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 암호로 암호화|[인증서로 암호화](../../t-sql/functions/encryptbycert-transact-sql.md)<br /><br /> [비대칭 키로 암호화](../../t-sql/functions/encryptbyasymkey-transact-sql.md)<br /><br /> [대칭 키로 암호화](../../t-sql/functions/encryptbykey-transact-sql.md)<br /><br /> [암호로 암호화](../../t-sql/functions/encryptbypassphrase-transact-sql.md)<br /><br /> [데이터 열 암호화](../../relational-databases/security/encryption/encrypt-a-column-of-data.md)|  
   
@@ -101,6 +101,5 @@ ms.lasthandoff: 07/31/2017
  [TRUSTWORTHY 데이터베이스 속성](../../relational-databases/security/trustworthy-database-property.md)   
  [데이터베이스 엔진 기능 및 태스크](http://msdn.microsoft.com/library/d9efe145-3306-4d61-bd77-e2af43e19c34)  
  [SQL Server 지적 재산 보호](../../relational-databases/security/protecting-your-sql-server-intellectual-property.md)   
-  
   
 

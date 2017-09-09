@@ -1,5 +1,5 @@
 ---
-title: "쿼리 처리 아키텍처 가이드 | Microsoft Docs"
+title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
 ms.date: 05/03/2017
 ms.prod: sql-non-specified
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 014b531a94b555b8d12f049da1bd9eb749b4b0db
-ms.openlocfilehash: 24f0d590630fb04ff45557dfb72616a8e1795f7e
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/22/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
@@ -1035,5 +1035,6 @@ GO
 ##  <a name="Additional_Reading"></a> 더 보기  
  [실행 계획 논리 및 물리 연산자 참조](../relational-databases/showplan-logical-and-physical-operators-reference.md)  
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)  
- [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)
+ [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [카디널리티 추정](../relational-databases/performance/cardinality-estimation-sql-server.md)  
 

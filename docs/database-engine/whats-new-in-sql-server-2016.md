@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: bc39be67f0d2fba9195fe2f8e372f05994f0d49d
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
@@ -42,7 +42,8 @@ ms.lasthandoff: 08/16/2017
 
 - Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 이 이미 설치된 가상 컴퓨터를 실행해 보세요.
 
-![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 현재 릴리스 정보는 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)를 참조하세요.
+> [!NOTE]
+> 현재 릴리스 정보는 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)를 참조하세요.
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 서비스 팩 1(SP1)  
 -  이제`CREATE OR ALTER <object>` 구문은 [프로시저](../t-sql/statements/create-procedure-transact-sql.md), [뷰](../t-sql/statements/create-view-transact-sql.md), [함수](../t-sql/statements/create-function-transact-sql.md)및 [트리거](../t-sql/statements/create-trigger-transact-sql.md)에 사용할 수 있습니다.
@@ -173,7 +174,7 @@ SQL Server 2014의 메모리 액세스에 최적화된 테이블에 지원되지
   - 인덱스 추가 및 삭제 해시 인덱스의 bucket_count를 변경합니다.
   - 스키마 변경합니다(열 추가/삭제/변경, 제약 조건 추가/삭제).
 
-- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이 3 개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
+- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이&3;개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
 
 - [LOB(Large Object) 형식](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`, `nvarchar(max)`및 `varchar(max)` 는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.
 
@@ -250,7 +251,7 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 
 - 이제 [MARS&#40;Multiple Active Result Sets&#41; 사용](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md) 연결이 메모리 액세스에 최적화된 테이블 및 고유하게 컴파일된 저장 프로시저에 액세스할 수 있습니다.
 
-- [TDE(투명한 데이터 암호화)](../relational-databases/security/encryption/transparent-data-encryption-tde.md) 지원. 데이터베이스의 ENCRYPTION이 사용하도록 구성된 경우 이제 [메모리 액세스에 최적화된 파일 그룹](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)의 파일도 암호화됩니다.
+- [TDE(투명한 데이터 암호화)](../relational-databases/security/encryption/transparent-data-encryption.md) 지원. 데이터베이스의 ENCRYPTION이 사용하도록 구성된 경우 이제 [메모리 액세스에 최적화된 파일 그룹](../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)의 파일도 암호화됩니다.
 
 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.
 

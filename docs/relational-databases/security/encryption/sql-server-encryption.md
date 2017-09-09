@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 암호화 | Microsoft Docs"
+title: "SQL Server 암호화 | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 05/15/2017
@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: c7aee6098b6cf8eca74dd3f34b9ed9a836bb9d20
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 8c449858a5f72cb7647c32a22b7a5906754d23bf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="sql-server-encryption"></a>SQL Server 암호화
@@ -44,7 +44,7 @@ ms.lasthandoff: 07/31/2017
  [암호화 알고리즘 선택](../../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
  효과적인 암호화 알고리즘을 선택하는 방법에 대한 정보입니다.  
   
- [투명한 데이터 암호화&#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+ [투명한 데이터 암호화&#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
  데이터를 명시적으로 암호화하는 방법에 대한 일반적인 정보입니다.  
   
  [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
