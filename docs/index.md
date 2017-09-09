@@ -4,10 +4,10 @@ hide_bc: true
 title: "Microsoft SQL 문서 | Microsoft 문서"
 description: "SQL에 대한 자세한 정보"
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: b280992dadacae7b54d94ba90caadff878f1cd4c
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: b744860d1899695d83b44860f18755ba97bf6f21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 
@@ -209,6 +209,7 @@ ms.lasthandoff: 08/19/2017
                                                 <ul>
                                                     <li><a href="/sql/t-sql/language-reference">T-SQL</a></li>
                                                     <li><a href="/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views">DMV</a></li>
+                                                    <li><a href="https://docs.microsoft.com/powershell/sql-server/overview?view=sqlserver-ps">PowerShell</a></li>
                                                     <li><a href="/sql/xquery/xquery-language-reference-sql-server">XQuery</a></li>
                                                 </ul>
                                             </div>
@@ -246,7 +247,7 @@ ms.lasthandoff: 08/19/2017
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">마이그레이션 도구 및 서비스</h4>
                                                 <ul>
                                                     <li><a href="http://sqldatabase-migrationpreview.azurewebsites.net">Azure 데이터베이스 마이그레이션 서비스(비공개 미리 보기)</a></li>
-                                                    <li><a href="https://www.microsoft.com/download/details.aspx?id=53595">Data Migration Assistant</a></li>
+                                                    <li><a href="/sql/dma/dma-overview">Data Migration Assistant</a></li>
                                                     <li><a href="/sql/ssma/sql-server-migration-assistant">SQL Server Migration Assistant</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">Azure로 데이터베이스 마이그레이션</h4>

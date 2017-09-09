@@ -14,17 +14,15 @@
 
 # 릴리스 정보
 
-## [Microsoft SQL Server](../release-notes/microsoft-sql-server.md)
-## [SQL Server 릴리스 정보](../release-notes/sql-server-release-notes.md)
+## [SQL Server 릴리스 정보](sql-server-release-notes.md)
 ## [SQL Server 2016 릴리스 정보](sql-server-2016-release-notes.md)
 ## [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)
-
-## [SQL Server 2014 Release Notes](../release-notes/sql-server-2014-release-notes.md)
-## [SQL Server 2012 릴리스 정보](../release-notes/sql-server-2012-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](../release-notes/sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](../release-notes/sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP3 릴리스 정보](../release-notes/sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](../release-notes/sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP3 릴리스 정보](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 릴리스 정보](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)
@@ -35,6 +33,7 @@
 # [MDS(Master Data Services)](../master-data-services/master-data-services-overview-mds.md)
 # [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)
 # [SQL Server Migration Assistant](../ssma/sql-server-migration-assistant.md)
+# [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 자습서](tutorials-for-sql-server-2016.md)
-# [도움말 뷰어에서의 로컬 콘텐츠](../release-notes/sql-server-help-installation.md)
+# [도움말 뷰어에서의 로컬 콘텐츠](sql-server-help-installation.md)
