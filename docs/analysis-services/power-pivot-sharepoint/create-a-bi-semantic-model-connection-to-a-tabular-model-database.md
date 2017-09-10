@@ -1,24 +1,29 @@
 ---
-title: "테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "테이블 형식 모델 데이터베이스에 BI 의미 체계 모델 연결 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 69b306f6-ee8a-44d2-8f51-0cad2c0bc135
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7c4e9b6b1814994caf778e0c3d50a69ffc70d4ee
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
+# <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기
   SharePoint 팜 외부의 Analysis Services 인스턴스에서 실행되는 테이블 형식 model 데이터베이스로 리디렉션하는 BI 의미 체계 모델 연결을 설정하려면 이 항목의 정보를 참조합니다.  
   
  BI 의미 체계 모델 연결을 만들고 SharePoint 및 Analysis Services 사용 권한을 구성한 후에는 이 연결을 Excel 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 데이터 원본으로 사용할 수 있습니다.  
@@ -40,7 +45,7 @@ caps.handback.revision: 16
 ##  <a name="bkmk_prereq"></a> 필수 구성 요소 검토  
  BI 의미 체계 모델 연결 파일을 만들려면 참가 권한 이상이 있어야 합니다.  
   
- BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)를 참조하세요.  
+ BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)를 참조하세요.  
   
  BI 의미 체계 모델 연결을 설정할 서버 및 데이터베이스 이름을 알아야 합니다. Analysis Services를 테이블 형식 모드에 대해 구성해야 합니다. 서버에서 실행 중인 데이터베이스는 테이블 형식 model 데이터베이스여야 합니다. 서버 모드를 확인하는 방법에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
   
@@ -82,7 +87,7 @@ caps.handback.revision: 16
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 만들 때 역할 또는 역할 멤버 자격이 정의됩니다. SQL Server Management Studio로 역할을 만들 수 있지만, 이미 정의된 역할에 멤버를 추가할 수는 없습니다. 역할을 만드는 방법에 대한 자세한 내용은 [역할 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md)를 참조하세요.  
   
-#### 역할 멤버 자격 할당  
+#### <a name="assign-role-membership"></a>역할 멤버 자격 할당  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 개체 탐색기에서 데이터베이스를 확장한 다음 **역할**을 확장합니다. 이미 정의된 역할이 표시됩니다. 역할이 없는 경우 모델 작성자에게 연락하여 추가 또는 역할을 요청하십시오. 모델을 다시 배포해야 역할이 Management Studio에 표시됩니다.  
   
@@ -99,7 +104,7 @@ caps.handback.revision: 16
   
 3.  **서버** 및 **데이터베이스** 속성을 설정합니다. 데이터베이스 이름을 모를 경우 SQL Server Management Studio를 사용하여 서버에 배포된 데이터베이스의 목록을 확인합니다.  
   
-     **서버 이름**은 서버의 네트워크 이름, IP 주소 또는 정규화된 도메인 이름(예: myserver.mydomain.corp.adventure-works.com)입니다. 서버가 명명된 인스턴스로 설치된 경우 computername\instancename 형식으로 서버 이름을 입력합니다.  
+     **서버 이름** 은 서버의 네트워크 이름, IP 주소 또는 정규화된 도메인 이름(예: myserver.mydomain.corp.adventure-works.com)입니다. 서버가 명명된 인스턴스로 설치된 경우 computername\instancename 형식으로 서버 이름을 입력합니다.  
   
      **데이터베이스** 는 서버에서 현재 사용할 수 있는 테이블 형식 데이터베이스여야 합니다. 다른 BI 의미 체계 모델 연결 파일, Office 데이터 연결(.odc) 파일, Analysis Services OLAP 데이터베이스 또는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 지정하지 마세요. 데이터베이스 이름을 가져오려면 Management Studio를 사용하여 서버에 연결하고 사용 가능한 데이터베이스 목록을 볼 수 있습니다. 데이터베이스의 속성 페이지를 사용하여 이름이 올바른지 확인합니다.  
   
@@ -143,7 +148,7 @@ caps.handback.revision: 16
 ##  <a name="bkmk_next"></a> 다음 단계  
  BI 의미 체계 모델 연결을 만들고 확인한 후 데이터 원본으로 지정할 수 있습니다. 자세한 내용은 [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [파워 피벗 BI 의미 체계 모델 연결&#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
  [파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   

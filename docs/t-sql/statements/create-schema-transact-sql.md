@@ -1,0 +1,198 @@
+---
+title: CREATE SCHEMA (Transact SQL) | Microsoft Docs
+ms.custom: 
+ms.date: 12/01/2016
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- database-engine
+ms.tgt_pltfrm: 
+ms.topic: language-reference
+f1_keywords:
+- CREATE_SCHEMA_TSQL
+- SCHEMA
+- CREATE SCHEMA
+- SCHEMA_TSQL
+dev_langs:
+- TSQL
+helpviewer_keywords:
+- owners [SQL Server], schemas
+- table creation [SQL Server], CREATE SCHEMA statement
+- permissions [SQL Server], schemas
+- schemas [SQL Server], creating
+- CREATE SCHEMA statement
+ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
+caps.latest.revision: 60
+author: BYHAM
+ms.author: rickbyh
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 58eaf0c325ab4884dfe1e67ae0b0889a2ca6769a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
+---
+# <a name="create-schema-transact-sql"></a>CREATE SCHEMA(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+  현재 데이터베이스에 스키마를 만듭니다. CREATE SCHEMA 트랜잭션에서는 새 스키마 내에 테이블과 뷰를 만들고 해당 개체에 대한 GRANT, DENY 또는 REVOKE 권한을 설정할 수도 있습니다.  
+  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+-- Syntax for SQL Server and Azure SQL Database  
+  
+CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]  
+  
+<schema_name_clause> ::=  
+    {  
+    schema_name  
+    | AUTHORIZATION owner_name  
+    | schema_name AUTHORIZATION owner_name  
+    }  
+  
+<schema_element> ::=   
+    {   
+        table_definition | view_definition | grant_statement |   
+        revoke_statement | deny_statement   
+    }  
+```  
+  
+```  
+-- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+  
+CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
+```  
+  
+## <a name="arguments"></a>인수  
+ *schema_name*  
+ 데이터베이스 내에서 스키마를 식별하는 이름입니다.  
+  
+ 권한 부여 *owner_name*  
+ 스키마를 소유하게 될 데이터베이스 수준 보안 주체의 이름을 지정합니다. 이 보안 주체는 다른 스키마를 소유할 수 있으며 현재 스키마를 기본 스키마로 사용하지 않을 수도 있습니다.  
+  
+ *테이블*  
+ 스키마 내에서 테이블을 만드는 CREATE TABLE 문을 지정합니다. 이 문을 실행하는 보안 주체에게 현재 데이터베이스에 대한 CREATE TABLE 권한이 있어야 합니다.  
+  
+ *view_definition*  
+ 스키마 내에서 뷰를 만드는 CREATE VIEW 문을 지정합니다. 이 문을 실행하는 보안 주체에게 현재 데이터베이스에 대한 CREATE VIEW 권한이 있어야 합니다.  
+  
+ *grant_statement*  
+ 새 스키마를 제외한 모든 보안 개체에 대한 사용 권한을 부여하는 GRANT 문을 지정합니다.  
+  
+ *revoke_statement*  
+ 새 스키마를 제외한 모든 보안 개체에 대한 사용 권한을 취소하는 REVOKE 문을 지정합니다.  
+  
+ *deny_statement*  
+ 새 스키마를 제외한 모든 보안 개체에 대한 사용 권한을 거부하는 DENY 문을 지정합니다.  
+  
+## <a name="remarks"></a>주의  
+  
+> [!NOTE]  
+>  CREATE SCHEMA AUTHORIZATION을 포함하지만 이름을 지정하지 않는 문은 이전 버전과의 호환성을 위해서만 허용됩니다. 이 문은 오류를 일으키지 않지만 스키마를 만들지는 않습니다.  
+  
+ CREATE SCHEMA는 스키마와 이에 포함된 테이블 및 뷰를 만들 수 있으며 단일 문에서 모든 보안 개체에 대한 GRANT, REVOKE 또는 DENY 권한을 만들 수 있습니다. 이 문은 별도의 일괄 처리로 실행해야 합니다. CREATE SCHEMA 문으로 만드는 개체는 생성되는 스키마 내부에 생성됩니다.  
+  
+ CREATE SCHEMA 트랜잭션은 원자성을 갖습니다. CREATE SCHEMA 문을 실행하는 동안 오류가 발생하는 경우 지정한 보안 개체는 생성되지 않으며 사용 권한은 부여되지 않습니다.  
+  
+ CREATE SCHEMA로 만든 보안 개체는 다른 뷰를 참조하는 뷰를 제외하면 순서에 관계없이 나열할 수 있습니다. 다른 뷰를 참조하는 뷰의 경우에는 참조하는 뷰보다 참조되는 뷰를 먼저 만들어야 합니다.  
+  
+ 따라서 GRANT 문은 개체를 만들기 전에 개체에 대한 사용 권한을 부여할 수 있으며 CREATE VIEW 문은 뷰가 참조하는 테이블을 만드는 CREATE TABLE 문에 앞서 표시될 수 있습니다. 또한 CREATE TABLE 문은 CREATE SCHEMA문에 나중에 정의된 테이블에 대한 외래 키를 선언할 수 있습니다.  
+  
+> [!NOTE]  
+>  CREATE SCHEMA 문 내에서 DENY 및 REVOKE를 사용할 수 있습니다. DENY 및 REVOKE 절은 CREATE SCHEMA 문에 표시되는 순서대로 실행됩니다.  
+  
+ CREATE SCHEMA를 실행하는 보안 주체는 다른 데이터베이스 보안 주체를 생성될 스키마의 소유자로 지정할 수 있습니다. 이렇게 하려면 이 항목의 뒷부분에 나오는 "사용 권한" 섹션에서 설명하는 추가 사용 권한이 필요합니다.  
+  
+ 새 스키마는 데이터베이스 수준 보안 주체인 데이터베이스 사용자, 데이터베이스 역할 또는 응용 프로그램 역할 중 하나가 소유합니다. 스키마 내에서 만든 개체는 스키마 소유자가 소유하며 **sys.objects** 의 **principal_id**가 NULL입니다. 스키마 포함 개체의 소유권을 모든 데이터베이스 수준 보안 주체에게 이전할 수 있지만 스키마 소유자는 항상 스키마 내의 개체에 대한 CONTROL 권한을 갖고 있어야 합니다.  
+  
+> [!CAUTION]  
+>  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
+  
+ **암시적 스키마 및 사용자 만들기**  
+  
+ 일부 경우에 사용자는 데이터베이스 사용자 계정(데이터베이스의 데이터베이스 보안 주체)이 없더라도 데이터베이스를 사용할 수 있습니다. 이런 경우 다음과 같은 상황이 발생할 수 있습니다.  
+  
+-   로그인은 **제어 서버** 권한.  
+  
+-   Windows 사용자는 개별 데이터베이스 사용자 계정(데이터베이스의 데이터베이스 보안 주체)을 갖지 않지만 데이터베이스 사용자 계정(Windows 그룹용 데이터베이스 보안 주체)을 갖는 Windows 그룹의 구성원으로 데이터베이스에 액세스합니다.  
+  
+ 데이터베이스 사용자 계정이 없는 사용자는 기존 스키마를 지정하지 않고 개체를 만들 경우 해당 사용자에 대한 데이터베이스 보안 주체 및 기본 스키마가 데이터베이스에 자동으로 생성됩니다. 생성된 데이터베이스 보안 주체 및 스키마는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 때 사용자가 사용한 이름과 동일한 이름([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인 이름 또는 Windows 사용자 이름)을 사용합니다.  
+  
+ 이 동작은 Windows 그룹에 속한 사용자가 개체를 만들어 소유할 수 있도록 허용하므로 필요합니다. 그러나 스키마 및 사용자가 의도하지 않게 생성될 수 있습니다. 의도하지 않은 사용자 및 스키마 생성을 방지하려면 가능한 경우 데이터베이스 보안 주체를 명시적으로 만들어 기본 스키마를 할당하세요. 또는 데이터베이스에서 개체를 만들 때 두, 세 부분으로 구성된 개체 이름을 사용하여 기존 스키마를 명시적으로 지정합니다.  
+
+>  [!NOTE]
+>  Azure Active Directory 사용자의 암시적 생성 가능 하지 않기 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]합니다. 외부 공급자에서 Azure AD 사용자를 만들기는 AAD에서 사용자 상태를 확인 해야 하기 때문에 2760 오류로 실패는 사용자를 만드는: **지정한 스키마 이름 "\<user_name@domain>" 없거나 권한이 없습니다 사용할 수 있는 권한입니다.** 및 오류 2759: **CREATE SCHEMA가 이전 오류로 인해 실패 했습니다.** 이러한 오류를 해결 하려면 Azure AD 사용자 외부 공급자에서 먼저 만든 다음 개체를 만드는 문을 다시 실행 하십시오.
+ 
+  
+## <a name="deprecation-notice"></a>사용 중단 고지 사항  
+ 스키마 이름을 지정하지 않는 CREATE SCHEMA 문은 이전 버전과의 호환성을 위해 현재 지원됩니다. 이 문은 데이터베이스 내부에 실제로 스키마를 만들지는 않지만 테이블과 뷰를 만들고 사용 권한을 부여합니다. 스키마가 생성되지 않기 때문에 보안 주체에게는 이러한 이전 형식의 CREATE SCHEMA를 실행하는 데 CREATE SCHEMA 권한이 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음번 릴리스에서는 이 기능이 제거될 예정입니다.  
+  
+## <a name="permissions"></a>Permissions  
+ 데이터베이스에 대한 CREATE SCHEMA 권한이 필요합니다.  
+  
+ CREATE SCHEMA 문 내에서 지정한 개체를 만들려면 사용자에게 해당 CREATE 권한이 있어야 합니다.  
+  
+ 다른 사용자를 생성되는 스키마의 소유자로 지정하려면 호출자에게 해당 사용자에 대한 IMPERSONATE 권한이 있어야 합니다. 데이터베이스 역할을 소유자로 지정하는 경우 호출자에게 해당 역할의 멤버 자격이나 해당 역할에 대한 ALTER 권한이 있어야 합니다.  
+  
+> [!NOTE]  
+>  이전 버전과 호환되는 구문을 사용하면 스키마가 생성되지 않기 때문에 CREATE SCHEMA 권한이 확인되지 않습니다.  
+  
+## <a name="examples"></a>예  
+  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>1. 스키마 만들기 및 사용 권한 부여  
+ 다음 예에서는 `Sprockets`가 소유하고 `Annik` 테이블을 포함하는 `NineProngs` 스키마를 만듭니다. 이 문에서는 `SELECT`에게 `Mandar` 권한을 부여하고 `SELECT`에게는 `Prasanna` 권한을 거부합니다. `Sprockets` 및 `NineProngs`는 단일 문으로 생성됩니다.  
+  
+```  
+USE AdventureWorks2012;  
+GO  
+CREATE SCHEMA Sprockets AUTHORIZATION Annik  
+    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    GRANT SELECT ON SCHEMA::Sprockets TO Mandar  
+    DENY SELECT ON SCHEMA::Sprockets TO Prasanna;  
+GO   
+```  
+  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>2. 스키마에서 스키마 및 테이블 만들기  
+ 다음 예제에서는 스키마 `Sales` 다음 테이블을 만듭니다 `Sales.Region` 해당 스키마에 있습니다.  
+  
+```  
+CREATE SCHEMA Sales;  
+GO;  
+  
+CREATE TABLE Sales.Region   
+(Region_id int NOT NULL,  
+Region_Name char(5) NOT NULL)  
+WITH (DISTRIBUTION = REPLICATE);  
+GO  
+```  
+  
+### <a name="c-setting-the-owner-of-a-schema"></a>3. 스키마의 소유자를 설정합니다.  
+ 다음 예제에서는 스키마 `Production` 소유한 `Mary`합니다.  
+  
+```  
+CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
+GO  
+```  
+  
+## <a name="see-also"></a>관련 항목:  
+ [스키마 &#40; 변경 Transact SQL &#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
+ [DROP 스키마 &#40; Transact SQL &#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [GRANT&#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [DENY&#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+ [REVOKE&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [CREATE VIEW&#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
+ [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
+ [sys.schemas &#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/schemas-catalog-views-sys-schemas.md)   
+ [데이터베이스 스키마 만들기](../../relational-databases/security/authentication-access/create-a-database-schema.md)  
+  
+  
+
+
+

@@ -1,31 +1,36 @@
 ---
-title: "Errors and Warnings 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "오류 및 경고 이벤트 범주 [SQL Server]"
+title: "오류 및 경고 Events Data Columns | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Errors and Warnings event category [SQL Server]
 ms.assetid: f375d303-7aab-4c51-a955-05a2762cc4d1
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a909f39446c2a90347e8253c7fb54c1abe91c353
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Errors and Warnings 데이터 열
+# <a name="errors-and-warnings-events-data-columns"></a>Errors and Warnings 데이터 열
   Security Audit 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 -   Error 클래스  
   
  다음 표에서는 이 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Error 이벤트 클래스 - 데이터 열  
+## <a name="error-event-classdata-columns"></a>Error 이벤트 클래스 - 데이터 열  
   
 |**열 이름**|**열 ID**|**열 유형**|**열 설명**|  
 |---------------------|-------------------|---------------------|----------------------------|  
@@ -47,7 +52,7 @@ caps.handback.revision: 24
 |TextData|42|9|오류 이벤트와 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|오류 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 실행하는 서버의 이름을 포함합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Security Audit 이벤트 범주](../../analysis-services/trace-events/security-audit-event-category.md)  
   
   

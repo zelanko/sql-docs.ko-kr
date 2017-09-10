@@ -1,26 +1,31 @@
 ---
 title: "큐브 특성 속성 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "큐브 [Analysis Services], 정의"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], defining
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: fe36e6ba9ff002706260e2e195adb292ba19b085
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 큐브 특성 속성 정의
+# <a name="define-cube-attribute-properties"></a>큐브 특성 속성 정의
   큐브 특성 속성을 사용하면 같은 데이터베이스 차원을 기반으로 하는 큐브 차원의 차원 특성에 고유한 설정을 지정할 수 있습니다. 다음 표에서는 큐브 특성의 속성에 대해 설명합니다.  
   
 |속성|Description|  
@@ -31,7 +36,7 @@ caps.handback.revision: 13
 |**AttributeHierarchyVisible**|이 큐브 차원에서 특성 계층을 표시할지 여부를 식별합니다. 이렇게 하면 특정 큐브 또는 차원 역할에서 특성 계층을 표시할 수 있습니다. 기본 특성 계층이 표시되지 않는 경우 이 설정은 적용되지 않습니다. 기본값은 **True**입니다.|  
 |**AttributeID**|특성의 고유 ID를 포함합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [큐브 차원 속성 정의](../../analysis-services/multidimensional-models/define-cube-dimension-properties.md)   
  [큐브 계층 속성 정의](../../analysis-services/multidimensional-models/define-cube-hierarchy-properties.md)  
   

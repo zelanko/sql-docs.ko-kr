@@ -1,27 +1,32 @@
 ---
-title: "참조 관계 및 참조 관계 속성 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "참조 차원 관계"
-  - "관계 [Analysis Services], 참조 차원"
+title: "참조 관계를 정의 및 참조 관계 속성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- referenced dimension relationship
+- relationships [Analysis Services], referenced dimensions
 ms.assetid: 5bb44b41-635b-4398-8fe9-0bfbb142553e
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 참조 관계 및 참조 관계 속성 정의
+# <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>참조 관계 및 참조 관계 속성 정의
   참조 차원 관계는 큐브 디자이너의 **차원 용도** 탭에서 다음을 지정하여 정의됩니다.  
   
 -   조인할 중간 차원. 일반 차원이나 다른 참조 차원이 될 수 있습니다.  

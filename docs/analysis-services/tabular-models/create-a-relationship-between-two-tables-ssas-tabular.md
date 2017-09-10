@@ -1,37 +1,42 @@
 ---
-title: "두 테이블 간에 관계 만들기(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.createrelatdb.f1"
-  - "sql13.asvs.bidtoolset.managereldb.f1"
+title: "(SSAS 테이블 형식)의 두 테이블 간에 관계 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.createrelatdb.f1
+- sql13.asvs.bidtoolset.managereldb.f1
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9bc0373c1b0e018430106530da93107c600bbdee
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 두 테이블 간에 관계 만들기(SSAS 테이블 형식)
+# <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>두 테이블 간에 관계 만들기(SSAS 테이블 형식)
   데이터 원본의 테이블에 기존 관계가 없거나 새 테이블을 추가하는 경우 모델 디자이너의 도구를 사용하여 새 관계를 만들 수 있습니다. 테이블 형식 모델에서 관계를 사용하는 방법에 대한 자세한 내용은 [관계&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)를 참조하세요.  
   
-## 두 테이블 간 관계 만들기  
+## <a name="create-a-relationship-between-two-tables"></a>두 테이블 간에 관계 만들기  
   
-#### 다이어그램 뷰에서 두 테이블 간의 관계를 만들려면(클릭하여 끌기)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-click-and-drag"></a>다이어그램 뷰에서 두 테이블 간의 관계를 만들려면(클릭하여 끌기)  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 클릭한 다음 **다이어그램 뷰**를 클릭합니다.  
   
 2.  테이블 내의 열을 클릭한 채로 커서를 관련 조회 테이블의 관련 조회 열로 끌어다 놓으면 관계가 올바른 순서로 자동으로 만들어집니다.  
   
-#### 다이어그램 뷰에서 두 테이블 간의 관계를 만들려면(마우스 오른쪽 단추 클릭)  
+#### <a name="to-create-a-relationship-between-two-tables-in-diagram-view-right-click"></a>다이어그램 뷰에서 두 테이블 간의 관계를 만들려면(마우스 오른쪽 단추 클릭)  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭하고 **모델 뷰**를 클릭한 다음 **다이어그램 뷰**를 클릭합니다.  
   
@@ -51,7 +56,7 @@ caps.handback.revision: 16
   
 7.  **만들기**를 클릭합니다.  
   
-#### 데이터 뷰에서 두 테이블 간의 관계를 만들려면  
+#### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>데이터 뷰에서 두 테이블 간의 관계를 만들려면  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** 메뉴를 클릭한 다음 **관계 만들기**를 클릭합니다.  
   
@@ -69,7 +74,7 @@ caps.handback.revision: 16
   
 6.  **만들기**를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [관계 삭제&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   
  [관계&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/relationships-ssas-tabular.md)  
   

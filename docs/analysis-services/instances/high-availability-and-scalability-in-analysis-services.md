@@ -1,29 +1,34 @@
 ---
-title: "Analysis Services의 고가용성 및 확장성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "고가용성 및 Analysis Services의 확장성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d7040a55-1e4d-4c24-9333-689c1b9e2db8
 caps.latest.revision: 14
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 14
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5417a642fd9522ffb3453caff198480e1d930a0a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services의 고가용성 및 확장성
+# <a name="high-availability-and-scalability-in-analysis-services"></a>Analysis Services의 고가용성 및 확장성
   이 문서에서는 Analysis Services 데이터베이스를 항상 사용 가능하고 확장 가능하도록 만드는 가장 일반적으로 사용되는 기술을 설명합니다. 각 목표를 개별적으로 다룰 수 있지만 실제로는 연관된 경우가 많습니다. 대규모 쿼리 또는 처리 워크로드에 대한 확장 가능한 배포는 일반적으로 고가용성에 대한 기대와 함께 제공됩니다.  
   
  그러나 반대의 경우는 그렇지 않을 때도 있습니다. 업무에 중요하지만 적절한 규모의 쿼리 워크로드에 대해 엄격한 서비스 수준 계약이 존재하는 경우에는 확장 없이 고가용성이 단독 목표일 수 있습니다.  
   
  Analysis Services를 항상 사용 가능하고 확장 가능하게 만드는 기술은 모든 서버 모드(다차원, 테이블 형식 및 SharePoint 통합 모드)에 대해 동일한 경향이 있습니다. 다른 설명이 없는 경우, 이 문서의 정보는 모든 모드에 적용되는 것으로 가정해야 합니다.  
   
-## 요점  
+## <a name="key-points"></a>요점  
  가용성 및 확장 기술은 관계형 데이터베이스 엔진에 대한 기술과 다르기 때문에 Analysis Services에서 사용되는 기술을 소개하는 데 다음과 같은 요점이 유용합니다.  
   
 -   Analysis Services에서는 Windows server 플랫폼에 기본 제공되는 고가용성 및 확장성 메커니즘(NLB(네트워크 부하 분산), Window Server 장애 조치(failover) 클러스터링 또는 둘 다)을 활용합니다.  
@@ -60,10 +65,10 @@ caps.handback.revision: 14
   
  고가용성 요구 사항을 충족하기 위한 또 다른 전략에는 가상 컴퓨터의 사용이 포함될 수 있습니다. 가용성을 충족하기 위해 대체 서버를 설치하는 데 몇 분이 아니라 몇 시간이 걸리는 경우 요청 시 시작하고 중앙 위치에서 검색되는 업데이트된 데이터베이스와 함께 로드할 수 있는 가상 컴퓨터를 사용할 수 있습니다.  
   
-## 읽기 전용 및 읽기/쓰기 데이터베이스를 통한 확장성  
+## <a name="scalability-using-read-only-and-read-write-databases"></a>읽기 전용 및 읽기/쓰기 데이터베이스를 통한 확장성  
  네트워크 부하 분산은 쿼리 및 처리 워크로드가 높거나 상승하는 경우에 권장됩니다. NLB 솔루션의 Analysis Services 데이터베이스는 쿼리 간의 일관성을 위해 읽기 전용 데이터베이스로 정의됩니다.  
   
- [읽기 전용 데이터베이스를 사용하여 Analysis Services에 대한 쿼리 확장](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx)(2008에 게시)의 참고 자료는 오래되었지만 여전히 일반적으로 유효합니다. 서버 운영 체제 및 컴퓨터 하드웨어가 진화하여 특정 플랫폼에 대한 참조 및 CPU 제한이 더 이상 사용되지 않지만 읽기 전용 및 읽기/쓰기 데이터베이스를 대용량 쿼리에 사용하는 기본 기술은 변경되지 않습니다.  
+ [읽기 전용 데이터베이스를 사용하여 Analysis Services에 대한 쿼리 확장](https://technet.microsoft.com/library/ff795582\(v=sql.100\).aspx) (2008에 게시)의 참고 자료는 오래되었지만 여전히 일반적으로 유효합니다. 서버 운영 체제 및 컴퓨터 하드웨어가 진화하여 특정 플랫폼에 대한 참조 및 CPU 제한이 더 이상 사용되지 않지만 읽기 전용 및 읽기/쓰기 데이터베이스를 대용량 쿼리에 사용하는 기본 기술은 변경되지 않습니다.  
   
  이 접근 방식은 다음과 같이 요약될 수 있습니다.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 14
   
 -   Robocopy를 사용하여 처리 서버에서 각 쿼리 서버로 전체 데이터 디렉터리를 복사하고 읽기 전용 모드의 동일한 데이터베이스를 모든 쿼리 서버에 연결합니다. 또한 SAN 스냅숏, 동기화 또는 프로덕션 데이터베이스를 이동하는 데 사용되는 기타 모든 도구 또는 방법을 사용할 수 있습니다.  
   
-## 테이블 형식 및 다차원 워크로드에 대한 리소스 요구  
+## <a name="resource-demands-for-tabular-and-multidimensional-workloads"></a>테이블 형식 및 다차원 워크로드에 대한 리소스 요구  
  다음 표에는 Analysis Services에서 쿼리 및 처리에 시스템 리소스를 사용하는 방법이 서버 모드 및 저장소별로 요약되어 있습니다. 이 요약을 통해 분산 워크로드를 처리하는 다중 서버 배포에서 강조할 항목을 이해할 수 있습니다.  
   
 |||  
@@ -84,7 +89,7 @@ caps.handback.revision: 14
 |MOLAP 저장소를 사용하는 다차원 모델|신속한 데이터 로드를 위한 디스크 IO및 캐시된 데이터에 충분한 RAM을 수용하는 부하 분산된 구성을 선택합니다.|  
 |ROLAP 저장소를 사용하는 다차원 모델|디스크 IO를 최대화하고 네트워크 대기 시간을 최소화합니다.|  
   
-## WSFC를 통한 고가용성 및 중복성  
+## <a name="highly-availability-and-redundancy-through-wsfc"></a>WSFC를 통한 고가용성 및 중복성  
  Analysis Services를 기존 WSFC(Windows Server 장애 조치(failover) 클러스터)에 설치하여 가장 짧은 시간 내에 서비스를 복원하는 고가용성을 달성할 수 있습니다.  
   
  장애 조치(failover) 클러스터는 데이터베이스에 대한 모든 액세스 권한(읽기 및 쓰기 저장)을 제공하지만 한 번에 하나의 노드만 지원합니다. 첫 번째 노드가 중단된 경우 보조 데이터베이스가 클러스터의 추가 노드에서 대체 서버로 실행됩니다.  
@@ -99,9 +104,9 @@ caps.handback.revision: 14
  
  장애 조치(failover) 클러스터에서 Analysis Services를 배포하는 방법에 대한 자세한 지침 및 배경 정보는 [SQL Server Analysis Services 클러스터링 방법](https://msdn.microsoft.com/library/dn736073.aspx)을 참조하세요. 이 지침은 SQL Server 2012용으로 작성되었지만 최신 버전의 Analysis Services에도 계속 적용됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [Analysis Services 테이블 형식 데이터베이스에 대한 NUMA 선호도 강제 적용](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
+ [Analysis Services 테이블 형식 데이터베이스에 대 한 NUMA 선호도 강제 적용](https://blogs.msdn.microsoft.com/sqlcat/2013/11/05/forcing-numa-node-affinity-for-analysis-services-tabular-databases/)   
  [Analysis Services 사례 연구: 대규모 상용 솔루션에서 테이블 형식 모델 사용](https://msdn.microsoft.com/library/dn751533.aspx)  
   
   

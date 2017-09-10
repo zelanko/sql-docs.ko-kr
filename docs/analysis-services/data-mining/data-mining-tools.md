@@ -1,28 +1,33 @@
 ---
 title: "데이터 마이닝 도구 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "도구 [Analysis Services]"
-  - "마이닝 모델 [Analysis Services], 도구"
-  - "데이터 마이닝 [Analysis Services], 도구"
-  - "데이터 마이닝[Analysis Services], 배포"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- tools [Analysis Services]
+- mining models [Analysis Services], tools
+- data mining [Analysis Services], tools
+- data mining [Analysis Services], development
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 caps.latest.revision: 49
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 49
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2ebbfe4e003be235b2265c215bfd731f8f2c1562
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 도구
+# <a name="data-mining-tools"></a>데이터 마이닝 도구
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에는 데이터 마이닝 솔루션을 만드는 데 사용할 수 있는 다음 도구가 있습니다.  
   
 -   **** 의 데이터 마이닝 마법사 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 관계형 데이터 원본이나 큐브의 다차원 데이터를 사용하여 마이닝 구조와 마이닝 모델을 쉽게 만들 수 있도록 합니다.  
@@ -39,12 +44,12 @@ caps.handback.revision: 49
   
  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터 마이닝 도구에 대한 추가 정보를 제공합니다.  
   
-## 데이터 마이닝 마법사  
+## <a name="data-mining-wizard"></a>데이터 마이닝 마법사  
  데이터 마이닝 마법사를 사용하여 데이터 마이닝 솔루션 생성을 시작할 수 있습니다. 이 마법사는 빠르고 쉬우며 데이터 마이닝 구조 및 초기 관련 마이닝 모델을 만드는 과정을 안내하고 알고리즘 유형 및 데이터 원본 선택 태스크와 분석에 사용되는 사례 데이터 정의 태스크를 포함합니다.  
   
  **자세한 내용:** [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## 데이터 마이닝 디자이너  
+## <a name="data-mining-designer"></a>데이터 마이닝 디자이너  
  데이터 마이닝 마법사를 사용하여 마이닝 구조와 마이닝 모델을 만든 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 데이터 마이닝 디자이너를 사용하여 기존 모델과 구조로 작업할 수 있습니다.  
   
  디자이너에는 다음 태스크를 위한 도구가 포함되어 있습니다.  
@@ -61,12 +66,12 @@ caps.handback.revision: 49
   
 -   기존 마이닝 모델에 대해 예측 및 내용 쿼리를 만듭니다. 외부 데이터의 전체 테이블에 대한 예측을 생성하기 위해 쿼리를 설정하거나 일회용 쿼리를 작성합니다.  
   
-## SQL Server Management Studio  
+## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  마이닝 모델을 만들어 서버에 배포한 후 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 데이터 마이닝 개체를 호스팅하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스를 관리할 수 있습니다. 또한 모델 탐색, 새 데이터 처리, 예측 생성 등의 모델을 사용하는 태스크를 계속 수행할 수도 있습니다.  
   
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에는 DMX(Data Mining Extensions) 쿼리를 디자인하고 실행하거나 XMLA를 사용하여 데이터 마이닝 개체로 작업하는 데 사용할 수 있는 쿼리 편집기도 포함되어 있습니다.  
   
-## Integration Services 데이터 마이닝 태스크 및 변환  
+## <a name="integration-services-data-mining-tasks-and-transformations"></a>Integration Services 데이터 마이닝 태스크 및 변환  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 데이터 마이닝을 지원하는 많은 구성 요소가 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 일부 도구는 예측, 모델 작성, 처리 등의 일반적인 데이터 마이닝 태스크를 쉽게 자동화할 수 있도록 설계되었습니다. 예를 들어  
@@ -87,7 +92,7 @@ caps.handback.revision: 49
   
  **자세한 내용:** [데이터 마이닝 솔루션 관련 프로젝트](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)   
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   

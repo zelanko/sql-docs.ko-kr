@@ -1,30 +1,35 @@
 ---
 title: "데이터 마이닝 차원 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "마이닝 구조 [Analysis Services], 차원"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], dimensions
 ms.assetid: 9f0c39e5-3516-43ab-b203-f3f6dbcff89a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 238af959c27daaf75415cf913fddb823f6927c85
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 차원 만들기
+# <a name="create-a-data-mining-dimension"></a>데이터 마이닝 차원 만들기
   마이닝 구조가 OLAP 큐브를 기반으로 하는 경우에는 마이닝 모델의 내용을 포함하는 차원을 만들 수 있습니다. 그런 다음 차원을 다시 원본 큐브에 통합할 수 있습니다.  
   
  또한 차원을 찾아보거나 차원을 사용하여 모델 결과를 탐색하거나 MDX를 사용하여 차원을 쿼리할 수 있습니다.  
   
-### 데이터 마이닝 차원을 만들려면  
+### <a name="to-create-a-data-mining-dimension"></a>데이터 마이닝 차원을 만들려면  
   
 1.  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]의 데이터 마이닝 디자이너에서 **마이닝 구조** 탭이나 **마이닝 모델** 탭을 선택합니다.  
   
@@ -42,7 +47,7 @@ caps.handback.revision: 12
   
      데이터 마이닝 차원이 생성되어 솔루션 탐색기의 **차원** 폴더에 추가됩니다. **큐브 만들기**를 선택한 경우에는 새 큐브도 생성되어 **큐브** 폴더에 추가됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -1,27 +1,32 @@
 ---
 title: "의사 결정 트리 모델 쿼리 예제 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "의사 결정 트리 알고리즘 [Analysis Services]"
-  - "content queries [DMX]"
-  - "의사 결정 트리 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- decision tree algorithms [Analysis Services]
+- content queries [DMX]
+- decision trees [Analysis Services]
 ms.assetid: ceaf1370-9dd1-4d1a-a143-7f89a723ef80
 caps.latest.revision: 24
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2822b60d236ab7d961ce02bf76cbc7ac996aefb0
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 의사 결정 트리 모델 쿼리 예제
+# <a name="decision-trees-model-query-examples"></a>의사 결정 트리 모델 쿼리 예제
   데이터 마이닝 모델에 대한 쿼리를 만들 때 분석 중에 발견된 패턴에 대한 세부 정보를 제공하는 내용 쿼리를 만들거나, 모델의 패턴을 사용하여 새 데이터에 대한 예측을 수행하는 예측 쿼리를 만들 수 있습니다. 예를 들어 의사 결정 트리 모델에 대한 내용 쿼리는 각 트리 수준의 사례 수에 대한 통계를 제공하거나 사례를 구분하는 규칙을 제공할 수 있습니다. 또한 예측 쿼리는 권장 사항, 분류 등을 생성하기 위해 모델을 새 데이터에 매핑합니다. 쿼리를 사용하여 모델에 대한 메타데이터를 검색할 수도 있습니다.  
   
  이 섹션에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘을 기반으로 하는 모델에 대한 쿼리를 만드는 방법에 대해 설명합니다.  
@@ -61,7 +66,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
 ###  <a name="bkmk_Query2"></a> 예제 쿼리 2: DMX를 사용하여 모델 내용에 대한 정보 반환  
- 다음 쿼리는 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)에서 모델을 작성할 때 만들어진 의사 결정 트리에 대한 몇 가지 기본 정보를 반환합니다. 각 트리 구조는 자체 노드에 저장됩니다. 이 모델에는 예측 가능한 특성이 하나이므로 트리 노드가 한 개뿐입니다. 그러나 의사 결정 트리 알고리즘을 사용하여 연결 모델을 만드는 경우 각 제품에 대해 하나씩 수백 개의 트리가 있을 수 있습니다.  
+ 다음 쿼리는 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 모델을 작성할 때 만들어진 의사 결정 트리에 대한 몇 가지 기본 정보를 반환합니다. 각 트리 구조는 자체 노드에 저장됩니다. 이 모델에는 예측 가능한 특성이 하나이므로 트리 노드가 한 개뿐입니다. 그러나 의사 결정 트리 알고리즘을 사용하여 연결 모델을 만드는 경우 각 제품에 대해 하나씩 수백 개의 트리가 있을 수 있습니다.  
   
  이 쿼리는 예측 가능한 특정 특성을 나타내는 최상위 트리 노드인 유형 2 노드를 모두 반환합니다.  
   
@@ -130,7 +135,7 @@ AND NODE_TYPE = 4
 |00000000100010100|Total Children = 3|75|  
 |0000000010001010100|Number Children At Home = 1|75|  
   
-## 의사 결정 트리 모델을 사용하여 예측 수행  
+## <a name="making-predictions-using-a-decision-trees-model"></a>의사 결정 트리 모델을 사용하여 예측 수행  
  의사 결정 트리는 분류, 회귀, 연결 등과 같은 다양한 태스크에 사용할 수 있으므로 의사 결정 트리 모델에 대한 예측 쿼리를 작성할 때 많은 옵션을 사용할 수 있습니다. 예측 결과를 이해하려면 모델을 만든 용도를 알아야 합니다. 다음 쿼리 예제에서는 3가지 다른 시나리오를 보여 줍니다.  
   
 -   분류 모델에 대한 예측을 예측이 정확할 확률과 함께 반환한 다음 확률별로 결과 필터링  
@@ -140,7 +145,7 @@ AND NODE_TYPE = 4
 -   의사 결정 트리에서 입력과 출력 간의 관계가 선형인 부분에 대한 회귀 수식 검색  
   
 ###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 예측 및 확률 반환  
- 다음 예제 쿼리에서는 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md)에서 만든 의사 결정 트리 모델을 사용하고 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW의 dbo.ProspectiveBuyers 테이블에서 예제 데이터의 새 집합을 전달하여 새 데이터 집합의 고객 중 자전거를 구입할 가능성이 있는 고객을 예측합니다.  
+ 다음 예제 쿼리에서는 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 만든 의사 결정 트리 모델을 사용하고 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW의 dbo.ProspectiveBuyers 테이블에서 예제 데이터의 새 집합을 전달하여 새 데이터 집합의 고객 중 자전거를 구입할 가능성이 있는 고객을 예측합니다.  
   
  이 쿼리에서는 모델에서 발견한 확률에 대한 유용한 정보를 포함하는 중첩 테이블을 반환하는 예측 함수 [PredictHistogram&#40;DMX&#41;](../../dmx/predicthistogram-dmx.md)을 사용합니다. 쿼리의 최종 WHERE 절은 결과를 필터링하여 자전거를 구매할 가능성이 있는 것으로 예측된 고객, 즉 확률이 0%를 초과하는 고객만 반환합니다.  
   
@@ -192,7 +197,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  공급자가 여기에 표시된 것과 같은 계층적 행 집합을 지원하지 않는 경우 쿼리에 FLATTENED 키워드를 사용하여 반복되는 열 값 대신 Null을 포함하는 테이블로 결과를 반환할 수 있습니다. 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) 또는 [DMX Select 문 이해](../../dmx/understanding-the-dmx-select-statement.md)를 참조하세요.  
   
 ###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 의사 결정 트리 모델에서 연결 예측  
- 다음 예제 쿼리는 Association 마이닝 구조를 기반으로 합니다. 이 예제의 단계별 작업을 따라가려면 이 마이닝 구조에 새 모델을 추가하고 Microsoft 의사 결정 트리를 알고리즘으로 선택합니다. 연결 마이닝 구조를 만드는 방법은 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](../Topic/Lesson%203:%20Building%20a%20Market%20Basket%20Scenario%20\(Intermediate%20Data%20Mining%20Tutorial\).md)을 참조하세요.  
+ 다음 예제 쿼리는 Association 마이닝 구조를 기반으로 합니다. 이 예제의 단계별 작업을 따라가려면 이 마이닝 구조에 새 모델을 추가하고 Microsoft 의사 결정 트리를 알고리즘으로 선택합니다. 연결 마이닝 구조를 만드는 방법은 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)을 참조하세요.  
   
  다음 예제 쿼리는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 필드를 선택한 다음 드롭다운 목록에서 이러한 필드의 값을 선택하여 간단하게 만들 수 있는 단일 쿼리입니다.  
   
@@ -244,15 +249,15 @@ WHERE NODE_TYPE = 25
   
  예제 결과:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|1|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1.|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
  회귀 모델에 사용되는 값 형식 및 통계에 대한 자세한 내용은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
-## 예측 함수 목록  
+## <a name="list-of-prediction-functions"></a>예측 함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘은 다음 표에 나열된 함수를 추가로 지원합니다.  
   
 |||  
@@ -271,7 +276,7 @@ WHERE NODE_TYPE = 25
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 의사 결정 트리 알고리즘](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft 의사 결정 트리 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   

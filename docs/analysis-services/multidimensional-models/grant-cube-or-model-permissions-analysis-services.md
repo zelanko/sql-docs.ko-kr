@@ -1,31 +1,36 @@
 ---
-title: "큐브 또는 모델 권한 부여(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.roledesignerdialog.cubes.f1"
-helpviewer_keywords: 
-  - "사용자 액세스 권한 [Analysis Services], 큐브"
-  - "큐브 [Analysis Services], 보안"
-  - "읽기/쓰기 권한"
-  - "권한 [Analysis Services], 큐브"
+title: "큐브 또는 모델 권한 부여 (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.roledesignerdialog.cubes.f1
+helpviewer_keywords:
+- user access rights [Analysis Services], cubes
+- cubes [Analysis Services], security
+- read/write permissions
+- permissions [Analysis Services], cubes
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: cbde1e75c0ff22e0d2c426c04f2f4e3756536923
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 큐브 또는 모델 권한 부여(Analysis Services)
+# <a name="grant-cube-or-model-permissions-analysis-services"></a>큐브 또는 모델 권한 부여(Analysis Services)
   큐브 또는 테이블 형식 모델은 Analysis Services 데이터 모델의 기본 쿼리 개체입니다. 임시 데이터 탐색을 위해 Excel에서 다차원 또는 테이블 형식 데이터에 연결할 경우 일반적으로 가장 먼저 피벗 보고서 개체를 지원하는 데이터 구조로 특정 큐브 또는 테이블 형식 모델을 선택합니다. 이 항목에서는 큐브 또는 테이블 형식 데이터 액세스에 필요한 사용 권한을 부여하는 방법에 대해 설명합니다.  
   
  기본적으로 서버 관리자 또는 데이터베이스 관리자에게 데이터베이스의 큐브를 쿼리할 수 있는 권한이 없다고 생각하는 사람은 없습니다. 관리자가 아닌 사용자가 큐브에 액세스하려면 큐브를 포함한 데이터베이스에 대해 만든 역할의 멤버 자격이 필요합니다. 멤버 자격은 Windows 사용자 또는 그룹 계정에서 지원하며, Active Directory 또는 로컬 컴퓨터에서 정의됩니다. 시작하기에 앞서 생성하려는 역할의 멤버 자격을 할당할 계정을 확인합니다.  
@@ -37,27 +42,27 @@ caps.handback.revision: 30
 > [!NOTE]  
 >  모든 권한을 보유한 서버 관리자 또는 데이터베이스 관리자만 원본 파일에서 서버로 큐브를 배포하거나 역할을 만들고 구성원을 할당할 수 있습니다. 이러한 권한 수준에 대한 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) 및 [데이터베이스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)를 참조하세요.  
   
-#### 1단계: 역할 만들기  
+#### <a name="step-1-create-the-role"></a>1단계: 역할 만들기  
   
 1.  SSMS에서 Analysis Services에 연결합니다. 이 단계에서 도움이 필요한 경우 [클라이언트 응용 프로그램에서 연결&#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
   
 2.  개체 탐색기에서 **데이터베이스** 폴더를 열고 데이터베이스를 선택합니다.  
   
-3.  **역할**을 마우스 오른쪽 단추로 클릭하고 **새 역할**을 선택합니다. 역할이 데이터베이스 수준에서 생성되고 해당 데이터베이스 내 개체에 적용됩니다. 데이터베이스 간에 역할을 공유할 수 없습니다.  
+3.  **역할** 을 마우스 오른쪽 단추로 클릭하고 **새 역할**을 선택합니다. 역할이 데이터베이스 수준에서 생성되고 해당 데이터베이스 내 개체에 적용됩니다. 데이터베이스 간에 역할을 공유할 수 없습니다.  
   
 4.  **일반** 창에서 이름 및 설명(옵션)을 입력합니다. 이 창에는 모든 권한, 데이터베이스 처리 및 정의 읽기와 같은 몇 가지 데이터베이스 사용 권한도 포함되어 있습니다. 이러한 사용 권한은 큐브 또는 테이블 형식 모델을 쿼리하는 데 필요하지 않습니다. 이러한 권한에 대한 자세한 내용은 [데이터베이스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)를 참조하세요.  
   
 5.  이름 및 설명(옵션)을 입력한 후 다음 단계를 계속 진행합니다.  
   
-#### 2단계: 멤버 자격 할당  
+#### <a name="step-2-assign-membership"></a>2단계: 멤버 자격 할당  
   
 1.  **멤버 자격** 창에서 **추가** 를 클릭하여 이 역할을 사용하는 큐브에 액세스할 Windows 사용자 또는 그룹 계정을 입력합니다. Analysis Services만 Windows 보안 ID를 지원합니다. 이 단계에서는 데이터베이스 로그인을 만들지 않습니다. Analysis Services에서 사용자는 Windows 계정을 통해 연결합니다.  
   
 2.  다음 단계인 큐브 사용 권한 설정을 계속 진행합니다.  
   
-     데이터 소스 창은 건너뜁니다. 대부분 Analysis Services 데이터에의 일반 소비자에게는 데이터 소스 개체에 대한 사용 권한이 필요하지 않습니다. 이 권한을 설정하는 경우에 대한 자세한 내용은 [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)를 참조하세요.  
+     데이터 소스 창은 건너뜁니다. 대부분 Analysis Services 데이터에의 일반 소비자에게는 데이터 소스 개체에 대한 사용 권한이 필요하지 않습니다. 이러한 권한 수준에 대한 자세한 내용은 [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) 를 참조하세요.  
   
-#### 3단계: 큐브 사용 권한 설정  
+#### <a name="step-3-set-cube-permissions"></a>3단계: 큐브 사용 권한 설정  
   
 1.  **큐브** 창에서 큐브를 선택한 후 **읽기** 또는 **읽기/쓰기** 권한을 클릭합니다.  
   
@@ -73,7 +78,7 @@ caps.handback.revision: 30
   
      마지막으로, 이 창을 통해 큐브에 대한 **데이터베이스 처리** 권한을 부여하여 이 역할의 모든 구성원에게 이 큐브의 데이터를 처리할 권한을 제공할 수 있습니다. 일반적으로 처리는 제한된 작업이므로 해당 작업을 관리자에게만 부여하거나 해당 작업에 대해 구체적으로 별도의 역할을 정의하는 것이 좋습니다. 처리 권한의 모범 사례에 대한 자세한 내용은 [처리 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)를 참조하세요.  
   
-#### 4단계: 테스트  
+#### <a name="step-4-test"></a>4단계: 테스트  
   
 1.  Excel을 사용하여 큐브 액세스 권한을 테스트합니다. 또한 아래에서 설명한 것과 동일한 기법(관리자가 아닌 사용자로 응용 프로그램 실행)에 따라 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용할 수 있습니다.  
   
@@ -86,7 +91,7 @@ caps.handback.revision: 30
   
      연결에 오류가 발생한 경우 Analysis Services의 포트 구성을 점검하고 서버에서 원격 연결을 수락했는지 확인합니다. 포트 구성에 대해서는 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 을 참조하세요.  
   
-#### 5단계: 역할 정의 스크립팅 및 할당  
+#### <a name="step-5-script-role-definition-and-assignments"></a>5단계: 역할 정의 스크립팅 및 할당  
   
 1.  마지막 단계로 방금 만든 역할 정의를 캡처하는 스크립트를 생성해야 합니다.  
   
@@ -98,12 +103,12 @@ caps.handback.revision: 30
   
 4.  파일을 .xmla 파일 확장명으로 저장합니다. 스크립트를 테스트하려면 현재 역할을 삭제하고 SSMS에서 파일을 열고 F5 키를 눌러 스크립트를 실행합니다.  
   
-## 다음 단계  
+## <a name="next-step"></a>다음 단계  
  큐브 권한을 구체화하여 셀 또는 차원 데이터에 대한 액세스를 제한할 수 있습니다. 자세한 내용은 [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md) 및 [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services에서 지원하는 인증 방법](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델 &#40;에 대 한 권한 부여 Analysis Services &#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [데이터 원본 개체에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

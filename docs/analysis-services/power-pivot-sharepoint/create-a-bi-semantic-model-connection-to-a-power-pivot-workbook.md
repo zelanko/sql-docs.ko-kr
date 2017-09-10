@@ -1,24 +1,29 @@
 ---
-title: "파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/07/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "파워 피벗 통합 문서에는 BI 의미 체계 모델 연결 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/07/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 caps.latest.revision: 10
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 10
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: f5171b30d867a9e2bd676ff1895ad992b56c5e96
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
+# <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기
   이 항목의 정보를 참조하여 동일한 팜의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서로 리디렉션되는 BI 의미 체계 모델 연결을 설정할 수 있습니다.  
   
  BI 의미 체계 모델 연결을 만들고 SharePoint 사용 권한을 구성한 후에는 이 연결을 Excel 또는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서에 데이터 원본으로 사용할 수 있습니다.  
@@ -38,9 +43,9 @@ caps.handback.revision: 10
 ##  <a name="bkmk_prereq"></a> 필수 구성 요소 검토  
  BI 의미 체계 모델 연결 파일을 만들려면 참가 권한 이상이 있어야 합니다.  
   
- BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add bi semantic model connection content type to library.md)를 참조하세요.  
+ BI 의미 체계 모델 연결 콘텐츠 형식을 지원하는 라이브러리가 있어야 합니다. 자세한 내용은 [라이브러리에 BI 의미 체계 모델 연결 콘텐츠 형식 추가&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)를 참조하세요.  
   
- BI 의미 체계 모델 연결을 설정할 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 URL(예: http://adventure-works/shared documents/myworkbook.xlsx)을 알아야 합니다. 통합 문서는 동일한 팜에 있어야 합니다.  
+ URL을 알고 있어야는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 설정 하는 BI 의미 체계 모델 연결 (예를 들어 `http://adventure-works/shared documents/myworkbook.xlsx`). 통합 문서는 동일한 팜에 있어야 합니다.  
   
  연결 시퀀스에 참가하는 모든 컴퓨터 및 사용자는 동일한 도메인이나 트러스트된 도메인(양방향 신뢰)에 있어야 합니다.  
   
@@ -48,15 +53,15 @@ caps.handback.revision: 10
   
 1.  BI 의미 체계 모델 연결이 포함될 라이브러리의 SharePoint 리본에서 **문서** 를 클릭합니다. 새 문서에서 아래쪽 화살표를 클릭하고 **BISM 연결 파일** 을 선택하여 새 BI 의미 체계 모델 연결 페이지를 엽니다.  
   
-     ![SharePoint 라이브러리의 새 문서 하위 메뉴](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 라이브러리의 새 문서 하위 메뉴")  
+     ![SharePoint 라이브러리에 새 문서 하위 메뉴](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint 라이브러리에 새 문서 하위 메뉴")  
   
-2.  **Server** 속성을 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 SharePoint URL(예: **http://mysharepoint/shared documents/myWorkbook.xlsx**)로 설정합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 팜의 모든 서버에 데이터를 로드할 수 있습니다. 그러므로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 데이터 원본 연결은 통합 문서의 경로만 지정합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스가 데이터를 로드하는 서버를 결정합니다.  
+2.  설정의 **서버** 속성의 SharePoint URL을는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 (예를 들어 `http://mysharepoint/shared documents/myWorkbook.xlsx`합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포에서는 팜의 모든 서버에 데이터를 로드할 수 있습니다. 그러므로 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 데이터 원본 연결은 통합 문서의 경로만 지정합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스가 데이터를 로드하는 서버를 결정합니다.  
   
      **데이터베이스** 속성은 사용하지 마세요. 이 속성은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 위치를 지정할 때 사용되지 않습니다.  
   
      페이지는 다음 그림과 비슷해야 합니다.  
   
-     ![통합 문서에 대한 URL을 보여 주는 BISM 연결 페이지](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "통합 문서에 대한 URL을 보여 주는 BISM 연결 페이지")  
+     ![통합 문서에 URL을 보여 주는 BISM 연결 페이지](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "통합 문서에 URL을 보여 주는 BISM 연결 페이지")  
   
      통합 문서에 대한 SharePoint 사용 권한이 있는 경우 추가 유효성 검사 단계도 수행하여 위치가 올바른지 확인합니다. 데이터에 액세스할 권한이 없는 경우 유효성 검사 응답 없이 BI 의미 체계 모델 연결을 저장할 수 있는 옵션이 제공됩니다.  
   
@@ -97,9 +102,9 @@ caps.handback.revision: 10
 ##  <a name="bkmk_next"></a> 다음 단계  
  BI 의미 체계 모델 연결을 만들고 확인한 후 데이터 원본으로 지정할 수 있습니다. 자세한 내용은 [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [파워 피벗 BI 의미 체계 모델 연결&#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
- [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결을 사용 하 여](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [테이블 형식 모델 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

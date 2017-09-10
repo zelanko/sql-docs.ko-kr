@@ -1,23 +1,28 @@
 ---
-title: "내용 쿼리(데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "내용 쿼리 (데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 2d45986f9907903c6ccdf4d7b1c6bfe5d22eee78
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 내용 쿼리(데이터 마이닝)
+# <a name="content-queries-data-mining"></a>내용 쿼리(데이터 마이닝)
   내용 쿼리는 마이닝 모델의 내부 통계와 구조에 대한 정보를 추출하는 한 방법입니다. 내용 쿼리는 때때로 뷰어에서 쉽게 사용할 수 없는 세부 정보를 제공할 수 있습니다. 내용 쿼리의 결과를 사용하여 다른 용도로 사용할 정보를 프로그래밍 방식으로 추출할 수도 있습니다.  
   
  이 섹션에서는 내용 쿼리 및 내용 쿼리에 대한 일반 DMX 구문을 사용하여 검색할 수 있는 정보의 유형에 대한 일반적인 정보를 제공합니다.  
@@ -195,7 +200,7 @@ WHERE NODE_UNIQUE_NAME= '<node id>'
   
  계층적 행 집합으로 작업하는 방법은 MSDN에서 OLEDB 사양을 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [DMX Select 문 이해](../../dmx/understanding-the-dmx-select-statement.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)  
   

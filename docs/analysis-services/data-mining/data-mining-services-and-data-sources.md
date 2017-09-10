@@ -1,29 +1,34 @@
 ---
-title: "데이터 마이닝 서비스 및 데이터 원본 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 마이닝 서비스 및 데이터 원본을 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: b26fd6e3-7d87-4f66-ab47-5303b51b87da
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 0207dac1835ae9e478802d2f3d501642d4866454
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 서비스 및 데이터 원본
+# <a name="data-mining-services-and-data-sources"></a>데이터 마이닝 서비스 및 데이터 원본
   데이터 마이닝을 사용하려면 SQL Server Analysis Services 인스턴스에 대한 연결이 필요합니다. 큐브의 데이터는 데이터 마이닝에 필요하지 않으며 관계형 원본을 사용하는 것이 권장되지만 데이터 마이닝에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 엔진에서 제공하는 구성 요소를 사용합니다.  
   
  이 항목에서는 데이터 마이닝 모델을 생성, 처리, 배포 또는 쿼리하기 위해 SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결할 때 필요한 정보를 제공합니다.  
   
-## 데이터 마이닝 서비스  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
+## <a name="data-mining-services"></a>데이터 마이닝 서비스  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 서버 구성 요소는 msmdsrv.exe 응용 프로그램이며 일반적으로 Windows 서비스로 실행됩니다. 이 응용 프로그램은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
   
 -   클라이언트로부터 수신한 문 구문 분석  
   
@@ -43,18 +48,18 @@ caps.handback.revision: 19
   
 -   서버 리소스 관리  
   
-### XMLA 수신기  
+### <a name="xmla-listener"></a>XMLA 수신기  
  XMLA 수신기 구성 요소는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 와 클라이언트 간의 모든 XMLA 통신을 처리합니다. msmdsrv.ini 파일의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **포트** 구성 설정을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스가 수신하는 포트를 지정할 수 있습니다. 이 파일의 값이 0이면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 기본 포트에서 수신합니다. 달리 지정하지 않는 한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 기본 TCP 포트를 사용합니다.  
   
 |포트|Description|  
 |----------|-----------------|  
-|2383| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
-|2382| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
-|서버 시작 시 동적으로 할당됩니다.| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
+|2383|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
+|2382|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
+|서버 시작 시 동적으로 할당됩니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
   
  이 서비스에서 사용된 포트를 제어하는 방법은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
-## 데이터 원본에 연결  
+## <a name="connecting-to-data-sources"></a>데이터 원본에 연결  
  데이터 마이닝 구조 또는 모델을 만들거나 업데이트할 때마다 데이터 원본에 의해 정의된 데이터를 사용하게 됩니다. 데이터 원본은 Excel 통합 문서, 텍스트 파일, SQL Server 데이터베이스 등의 데이터를 포함하지 않으며 연결 정보만 정의합니다.  DSV(데이터 원본 뷰)는 해당 원본 위의 추상화 계층 역할을 하며 원본에서 가져온 데이터를 수정하거나 매핑합니다.  
   
  이러한 각 원본의 연결 요구 사항에 대한 설명은 이 항목에서 다루지 않습니다. 자세한 내용은 공급자에 대한 설명서를 참조하십시오. 그러나 일반적으로 공급자와 상호 작용할 때 Analysis Services에 대한 다음 요구 사항을 알아야 합니다.  
@@ -67,8 +72,8 @@ caps.handback.revision: 19
   
 -   모델을 이동할 때도 동일한 요구 사항이 적용됩니다. 즉, 이전 데이터 원본의 위치에 액세스하거나 데이터 원본을 복사하거나 새 데이터 원본을 구성할 수 있는 적절한 액세스 권한을 설정해야 합니다. 또한 로그인 및 역할을 전송하거나 새 위치에서 데이터 마이닝 개체를 처리하고 업데이트할 수 있는 권한을 설정해야 합니다.  
   
-## 사용 권한 및 서버 속성 구성  
- 데이터 마이닝에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 추가 권한이 필요합니다. 대부분의 데이터 마이닝 속성은 [Analysis Server 속성 대화 상자&#40;Analysis Services&#41;](../Topic/Analysis%20Server%20Properties%20Dialog%20Box%20\(Analysis%20Services\).md)를 사용하여 설정할 수 있습니다.  
+## <a name="configuring-permissions-and-server-properties"></a>사용 권한 및 서버 속성 구성  
+ 데이터 마이닝에는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 추가 권한이 필요합니다. 대부분의 데이터 마이닝 속성은 [Analysis Server 속성 대화 상자&#40;Analysis Services&#41;](http://msdn.microsoft.com/library/b01ec658-c191-49c9-a6cb-549b21a368ab)를 사용하여 설정할 수 있습니다.  
   
  구성할 수 있는 속성에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
@@ -88,9 +93,9 @@ caps.handback.revision: 19
  서버를 튜닝하고 클라이언트 사용에 대한 보안을 제어하는 속성도 설정할 수 있습니다. 자세한 내용은 [Feature Properties](../../analysis-services/server-properties/feature-properties.md)을 참조하세요.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전의 플러그 인 알고리즘 지원에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전의 플러그 인 알고리즘 지원에 대한 자세한 내용은 [SQL Server 2012 버전에서 지원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)을 참조하세요.  
   
-## 데이터 마이닝 개체에 대한 프로그래밍 방식 액세스  
+## <a name="programmatic-access-to-data-mining-objects"></a>데이터 마이닝 개체에 대한 프로그래밍 방식 액세스  
  다음 개체 모델을 사용하여 Analysis Services 데이터베이스에 대한 연결을 만들고 데이터 마이닝 개체 작업을 수행할 수 있습니다.  
   
  **ADO** OLE DB를 사용하여 Analysis Services 서버에 연결합니다. ADO를 사용하는 경우 클라이언트는 스키마 행 집합 쿼리와 DMX 문으로 제한됩니다.  
@@ -103,7 +108,7 @@ caps.handback.revision: 19
   
  **AMO** DSO(의사 결정 지원 개체)를 대체하는 Analysis Services용 관리 인터페이스입니다. AMO를 사용할 때는 개체 반복과 같은 작업에서 다른 인터페이스에 비해 더 높은 사용 권한이 필요합니다. 이는 ADOMD.NET 및 기타 인터페이스가 데이터베이스 스키마에만 액세스하는 반면 AMO는 메타데이터에 직접 액세스하기 때문입니다.  
   
-### 서버에 대한 액세스 찾아보기 및 쿼리  
+### <a name="browse-and-query-access-to-servers"></a>서버에 대한 액세스 찾아보기 및 쿼리  
  OLAP/데이터 마이닝 모드에서 Analysis Services 인스턴스를 사용하여 모든 종류의 예측을 수행할 수 있습니다. 단, 다음과 같은 제한 사항이 있습니다.  
   
 -   서버 ADOMD를 사용하는 경우 DMX를 사용하면 연결 없이 서버에 액세스할 수 있습니다. 그런 다음 결과를 데이터 테이블에 바로 복사해 넣을 수 있습니다. 그러나 원격 인스턴스에서는 서버 ADOMD를 사용할 수 없습니다. 로컬 서버만 쿼리할 수 있습니다.  
@@ -112,7 +117,7 @@ caps.handback.revision: 19
   
 -   ADOMD.NET을 사용하면 매개 변수로 사용할 전체 테이블을 전달할 수 있으므로 클라이언트의 데이터 또는 서버에서 사용할 수 없는 데이터를 사용할 수 있습니다. 모양이 지정된 테이블을 예측 입력으로 사용할 수도 있습니다.  
   
-### 데이터 마이닝 저장 프로시저 사용  
+### <a name="using-data-mining-stored-procedures"></a>데이터 마이닝 저장 프로시저 사용  
  일반적으로 저장 프로시저는 재사용을 위해 쿼리를 캡슐화하는 데 사용됩니다. 클라이언트는 CALL을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 시스템 저장 프로시저를 비롯한 저장 프로시저를 실행할 수 있습니다.  
   
  프로시저가 데이터 집합을 반환하면 클라이언트는 데이터 집합 또는 행이 포함된 중첩된 테이블이 있는 데이터 테이블을 받게 됩니다. 예를 들어 모델에 대한 쿼리를 만들 경우 쿼리는 전체 모델을 반환합니다. 너무 많은 행을 가져오지 않도록 하려면 ADOMD+ 개체 모델을 사용하여 저장 프로시저를 작성하면 됩니다.  
@@ -122,8 +127,8 @@ caps.handback.revision: 19
 > [!NOTE]  
 >  저장 프로시저는 데이터 서버 개체의 보안을 변경하는 데 사용할 수 없습니다. 저장 프로시저를 실행하면 모든 서버 개체에 대한 액세스를 확인하기 위해 사용자의 현재 컨텍스트가 사용됩니다. 따라서 사용자에게는 액세스하는 데이터베이스 개체에 대해 적절한 사용 권한이 있어야 합니다.  
   
-## 관련 항목:  
- [물리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../Topic/Physical%20Architecture%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [물리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [물리적 아키텍처&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/physical-architecture-analysis-services-data-mining.md)   
  [데이터 마이닝 솔루션 및 개체 관리](../../analysis-services/data-mining/management-of-data-mining-solutions-and-objects.md)  
   

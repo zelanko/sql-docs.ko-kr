@@ -1,29 +1,34 @@
 ---
 title: "데이터 마이닝 솔루션 배포 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "마이닝 모델 [Analysis Services], 배포"
-  - "배포 [Analysis Services], 프로덕션 환경"
-  - "배포 [Analysis Services - 데이터 마이닝]"
-  - "솔루션 [Analysis Services], 배포"
-  - "모델 [Analysis Services], 데이터 마이닝"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining models [Analysis Services], deploying
+- deploying [Analysis Services], production environments
+- deploying [Analysis Services - data mining]
+- solutions [Analysis Services], deploying
+- models [Analysis Services], data mining
 ms.assetid: d83effc7-437d-42e9-8ac3-b65f79e27043
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: aa037f7ff155df158ba2967c5e7c31989ace887d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 솔루션 배포
+# <a name="deployment-of-data-mining-solutions"></a>데이터 마이닝 솔루션 배포
   데이터 마이닝 프로세스의 마지막 단계는 모델을 프로덕션 환경에 배포하는 것입니다. 배포 작업을 수행해야 사용자가 모델을 사용하여 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   모델을 사용하여 예측을 만들고 비즈니스 의사 결정을 내릴 수 있습니다. 쿼리를 만드는 데 사용할 수 있는 도구에 대한 자세한 내용은 [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)를 참조하세요.  
@@ -42,7 +47,7 @@ caps.handback.revision: 16
   
  [관련 리소스](#bkmk_Resources)  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
@@ -81,7 +86,7 @@ caps.handback.revision: 16
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 배포에 대한 일반적인 정보를 제공하고 프로젝트를 구성할 때 설정할 수 있는 속성에 대해 설명합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  

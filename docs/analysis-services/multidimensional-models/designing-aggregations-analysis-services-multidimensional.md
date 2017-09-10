@@ -1,27 +1,32 @@
 ---
-title: "집계 디자인(Analysis Services - 다차원) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "집계 [Analysis Services], 파티션"
-  - "파티션 [Analysis Services], 집계"
+title: "집계 디자인 (Analysis Services-다차원) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- aggregations [Analysis Services], partitions
+- partitions [Analysis Services], aggregations
 ms.assetid: 3072b7e0-6961-42ad-a287-16f391f2cec4
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 33
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 7fef45841f28152dfed66aa95f670e8a21a3d903
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 집계 디자인(Analysis Services - 다차원)
+# <a name="designing-aggregations-analysis-services---multidimensional"></a>집계 디자인(Analysis Services - 다차원)
   집계는 큐브 데이터의 미리 계산된 요약으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 신속한 쿼리 응답을 제공할 수 있도록 도와 줍니다.  
   
  집계 디자인 마법사를 사용하여 파티션에 대한 저장소 옵션을 설정하고 집계를 디자인할 수 있습니다. 이 마법사는 한 번에 개별 측정값 그룹의 단일 파티션에 대해 실행되므로 각 파티션마다 다른 옵션과 디자인을 선택할 수 있습니다. 저장소 디자인 마법사는 파티션에 대한 저장소를 구성하고 집계를 디자인하는 단계로 이루어져 있습니다. 저장소를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
@@ -42,7 +47,7 @@ caps.handback.revision: 33
   
  마법사의 마지막 단계에서는 처리를 시작하거나 지연할 수 있습니다. 처리하는 경우에는 마법사로 디자인한 집계가 생성되며, 연기하는 경우에는 디자인된 집계를 나중에 처리할 수 있도록 저장하여 처리 과정 없이 디자인 동작을 계속할 수 있습니다. 파티션 크기에 따라 처리 시간이 오래 걸릴 수도 있습니다. 필요한 경우 파티션 처리를 중단할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [집계 및 집계 디자인](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

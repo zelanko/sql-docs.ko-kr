@@ -1,28 +1,33 @@
 ---
 title: "교차 유효성 검사 보고서 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 마이닝 모델 유효성 검사"
-  - "마이닝 구조 [Analysis Services], 방법 도움말 항목"
-  - "교차 유효성 검사 [데이터 마이닝]"
-  - "통계적 표준 편차"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- validating data mining models
+- mining structures [Analysis Services], how-to topics
+- cross-validation [data mining]
+- statistical standard deviation
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 87f3809146240a6e807cad3a5e1e22981f8bbf4d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 교차 유효성 검사 보고서 만들기
+# <a name="create-a-cross-validation-report"></a>교차 유효성 검사 보고서 만들기
   이 항목에서는 데이터 마이닝 디자이너에서 정확도 차트 탭을 사용하여 교차 유효성 검사 보고서를 만드는 단계를 안내합니다. 교차 유효성 검사 보고서의 표시 형태 및 해당 보고서에 포함되는 통계 측정값에 대한 일반적인 내용은 [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)를 참조하세요.  
   
  교차 유효성 검사 보고서는 리프트 차트 또는 분류 행렬과 같은 정확도 차트와 근본적으로 다릅니다.  
@@ -37,7 +42,7 @@ caps.handback.revision: 17
   
 -   마이닝 구조가 다른 예측 가능한 특성을 모두 지원하지 않는 경우에만 예측 가능한 특성이 없는 클러스터링 모델에 대한 교차 유효성 검사 보고서를 만들 수 있습니다.  
   
-### 마이닝 구조 선택  
+### <a name="select-a-mining-structure"></a>마이닝 구조 선택  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 데이터 마이닝 디자이너를 엽니다.  
   
@@ -49,19 +54,19 @@ caps.handback.revision: 17
   
 5.  **교차 유효성 검사** 탭을 클릭합니다.  
   
-### 교차 유효성 검사 옵션 설정  
+### <a name="set-cross-validation-options"></a>교차 유효성 검사 옵션 설정  
   
 1.  **교차 유효성 검사** 탭에서 **접기 개수**에 대해 아래쪽 화살표를 클릭하여 1에서 10 사이의 숫자를 선택합니다. 기본값은 10입니다.  
   
      **접기 개수** 는 원본 데이터 집합 내에 만들어지는 파티션의 수를 나타냅니다. 접기 개수를 1로 설정하면 분할 없이 학습 집합이 사용됩니다.  
   
-2.  **대상 특성**에서 아래쪽 화살표를 클릭하고 목록에서 열을 선택합니다. 클러스터링 모델인 경우 **#Cluster**를 선택하여 모델에 예측 가능한 특성이 없음을 나타냅니다. **#Cluster** 값은 마이닝 구조가 다른 유형의 예측 가능한 특성을 지원하지 않는 경우에만 사용할 수 있습니다.  
+2.  **대상 특성**에서 아래쪽 화살표를 클릭하고 목록에서 열을 선택합니다. 클러스터링 모델인 경우 **#Cluster** 를 선택하여 모델에 예측 가능한 특성이 없음을 나타냅니다. **#Cluster**값은 마이닝 구조가 다른 유형의 예측 가능한 특성을 지원하지 않는 경우에만 사용할 수 있습니다.  
   
      보고서별로 예측 가능한 특성을 한 개만 선택할 수 있습니다. 기본적으로 같은 예측 가능한 특성을 가진 모든 관련 모델이 보고서에 포함됩니다.  
   
 3.  **최대 사례**에서 데이터가 지정된 접기 수로 분할될 때 데이터를 대표하는 샘플을 제공할 수 있도록 충분히 큰 수를 입력합니다. 이 수가 모델 학습 집합의 사례 수보다 많을 경우 모든 사례가 사용됩니다.  
   
-     학습 데이터 집합이 매우 큰 경우 **최대 사례** 값을 설정하면 처리되는 사례의 수를 제한하여 보고서를 보다 신속하게 완료할 수 있습니다. 단, **최대 사례**를 너무 낮게 설정하면 안 됩니다. 너무 낮을 경우 교차 유효성 검사를 위한 데이터가 부족하게 됩니다.  
+     학습 데이터 집합이 매우 큰 경우 **최대 사례** 값을 설정하면 처리되는 사례의 수를 제한하여 보고서를 보다 신속하게 완료할 수 있습니다. 단, **최대 사례** 를 너무 낮게 설정하면 안 됩니다. 너무 낮을 경우 교차 유효성 검사를 위한 데이터가 부족하게 됩니다.  
   
 4.  필요에 따라 **대상 상태**에 모델링하려는 예측 가능한 특성의 값을 입력합니다. 예를 들어 [Bike Buyer] 열에 가능한 값이 1(예)과 2(아니요) 두 개인 경우 값 1을 입력하여 원하는 결과에 대해서만 모델의 정확도를 평가할 수 있습니다.  
   
@@ -74,13 +79,13 @@ caps.handback.revision: 17
   
 6.  **결과 가져오기**를 클릭합니다.  
   
-### 교차 유효성 검사 보고서 인쇄  
+### <a name="print-the-cross-validation-report"></a>교차 유효성 검사 보고서 인쇄  
   
 1.  **교차 유효성 검사** 탭에서 완성된 보고서를 마우스 오른쪽 단추로 클릭합니다.  
   
 2.  바로 가기 메뉴에서 **인쇄** 를 선택하거나 **인쇄 미리 보기** 를 선택하여 먼저 보고서를 검토합니다.  
   
-### Microsoft Excel에서 보고서 복사본 만들기  
+### <a name="create-a-copy-of-the-report-in-microsoft-excel"></a>Microsoft Excel에서 보고서 복사본 만들기  
   
 1.  **교차 유효성 검사** 탭에서 완성된 보고서를 마우스 오른쪽 단추로 클릭합니다.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 17
   
 4.  열어 놓은 Excel 통합 문서에 선택한 부분을 붙여넣습니다. **붙여넣기** 옵션을 사용하면 보고서가 HTML로 Excel에 붙여넣어지며 행과 열 서식이 그대로 유지됩니다. 텍스트 또는 유니코드 텍스트에 대해 **선택하여 붙여넣기** 옵션을 사용하여 보고서를 붙여넣으면 보고서는 행으로 구분된 형식으로 붙여넣어집니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

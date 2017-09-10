@@ -1,29 +1,34 @@
 ---
-title: "큐브 마법사를 사용하여 큐브 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "큐브 [Analysis Services], 만들기"
+title: "큐브 마법사를 사용 하 여 큐브 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- cubes [Analysis Services], creating
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 큐브 마법사를 사용하여 큐브 만들기
+# <a name="create-a-cube-using-the-cube-wizard"></a>큐브 마법사를 사용하여 큐브 만들기
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 큐브 마법사를 사용하여 새 큐브를 만들 수 있습니다.  
   
-### 새 큐브를 만들려면  
+### <a name="to-create-a-new-cube"></a>새 큐브를 만들려면  
   
 1.  **솔루션 탐색기**에서 **큐브**를 마우스 오른쪽 단추로 클릭한 다음 **새 큐브**를 클릭합니다.  
   

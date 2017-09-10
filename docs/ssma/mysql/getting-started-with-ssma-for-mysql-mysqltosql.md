@@ -18,14 +18,14 @@ helpviewer_keywords:
 - Getting started,Installing and licensing
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 caps.latest.revision: 19
-author: sabotta
-ms.author: carlasab
-manager: lonnyb
+author: Shamikg
+ms.author: Shamikg
+manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7f46606c1a6ecb368ec92b0f5e3882d5fe9df533
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 38ce5c0e27703094e4d7ff2415d0bc91d501d1b4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>MySQL (MySQLToSQL) 용 SSMA 시작
@@ -115,7 +115,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
   
 |||  
 |-|-|  
-|**메뉴**|**설명**|  
+|**메뉴**|**Description**|  
 |**파일**|프로젝트 작업 MySQL에 연결 하 고 SQL Server 또는 Azure SQL DB에 연결 명령에 포함 되어 있습니다.|  
 |**편집**|찾기 및 세부 정보 페이지에서 텍스트 작업에 대 한 명령을 포함 합니다. 열려는 **관리 책갈피** 대화 상자에서 편집 메뉴에서 관리 하는 책갈피를 클릭 합니다. 대화 상자에서 기존 책갈피의 목록이 표시 됩니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **동기화 메타 데이터 탐색기** 명령입니다. MySQL 메타 데이터 탐색기 및 SQL Server 또는 Azure SQL DB 메타 데이터 탐색기 간에 개체를 동기화 하는입니다. 표시 하거나 숨기는 명령이 포함 되어는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 를 사용할 수 있는 레이아웃을 사용 하 여 관리 합니다.|  

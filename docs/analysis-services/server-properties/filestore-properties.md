@@ -1,41 +1,46 @@
 ---
-title: "파일 저장소 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Income 속성"
-  - "InitialBonus 속성"
-  - "PercentScanPerPrice 속성"
-  - "FileStore 속성"
-  - "BackgroundTrimCost 속성"
-  - "Tax 속성"
-  - "PerformanceTrace 속성"
-  - "MinimumBalance 속성"
-  - "UnbufferedThreshold 속성"
-  - "BackgroundTrimAmount 속성"
-  - "MaximumBalance 속성"
-  - "MemoryLimitMin 속성"
-  - "MemoryLimit 속성"
+title: "Filestore 속성 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Income property
+- InitialBonus property
+- PercentScanPerPrice property
+- FileStore properties
+- BackgroundTrimCost property
+- Tax property
+- PerformanceTrace property
+- MinimumBalance property
+- UnbufferedThreshold property
+- BackgroundTrimAmount property
+- MaximumBalance property
+- MemoryLimitMin property
+- MemoryLimit property
 ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 caps.latest.revision: 19
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 19
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 68845b8dc5ff1b025134b227605363607db4b7cf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 파일 저장소 속성
+# <a name="filestore-properties"></a>FileStore 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 파일 저장소 서버 속성을 사용할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 이 고급 속성을 변경하면 안 됩니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
  **적용 대상:** 다차원 및 테이블 형식 서버 모드  
   
-## 속성  
+## <a name="properties"></a>속성  
  **MemoryLimit**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 19
  **UnbufferedThreshold**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 메모리 모델 범주  
+## <a name="memory-model-category"></a>메모리 모델 범주  
  **MemoryModel\Tax**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 19
  **MemoryModel\InitialBonus**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

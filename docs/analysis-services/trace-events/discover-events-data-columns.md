@@ -1,24 +1,29 @@
 ---
 title: "Discover Events 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Discover Events 이벤트 범주"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Events event category
 ms.assetid: 10ec598e-5b51-4767-b4f7-42e261d96a40
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1d4275dc8ed85c907a458c5772a57153dc88fa0e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Discover Events 데이터 열
+# <a name="discover-events-data-columns"></a>Discover Events 데이터 열
   Discover Events 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 -   Discover Begin 클래스  
@@ -27,7 +32,7 @@ caps.handback.revision: 29
   
  다음 표에서는 이러한 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Discover Begin 클래스 - 데이터 열  
+## <a name="discover-begin-classdata-columns"></a>Discover Begin 클래스 - 데이터 열  
   
 |||||  
 |-|-|-|-|  
@@ -49,7 +54,7 @@ caps.handback.revision: 29
 |ServerName|43|8|검색 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
 |RequestProperties|45|9|검색 이벤트와 연결된 XMLA(XML for Analysis) 요청 속성을 포함합니다.|  
   
-## Discover End 클래스 - 데이터 열  
+## <a name="discover-end-classdata-columns"></a>Discover End 클래스 - 데이터 열  
   
 |||||  
 |-|-|-|-|  
@@ -77,7 +82,7 @@ caps.handback.revision: 29
 |ServerName|43|8|검색 이벤트가 발생한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
 |RequestProperties|45|9|XMLA 요청의 속성을 포함합니다.|  
   
-## 관련 항목:  
- [Discover Events 이벤트 범주](../../analysis-services/trace-events/discover-events-event-category.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Discover Events Event Category](../../analysis-services/trace-events/discover-events-event-category.md)  
   
   

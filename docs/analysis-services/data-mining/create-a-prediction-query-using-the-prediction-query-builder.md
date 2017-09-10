@@ -1,29 +1,34 @@
 ---
-title: "예측 쿼리 작성기를 사용하여 예측 쿼리 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "예측 쿼리 [Analysis Services]"
-  - "마이닝 모델 예측 [Analysis Services], 예측 쿼리"
+title: "예측 쿼리 작성기를 사용 하 여 예측 쿼리 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- Mining Model Prediction [Analysis Services], prediction queries
 ms.assetid: e02836e5-dd8c-4c97-a078-840ae79d3660
 caps.latest.revision: 30
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 30
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 3a61c0e05e427ef4d4e693e1594598dafe85f3c2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 예측 쿼리 작성기를 사용하여 예측 쿼리 만들기
-  BI Development Studio에서 데이터 마이닝 솔루션을 작성하는 동안이나 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭한 다음 **예측 쿼리 작성** 옵션을 선택하여 예측 쿼리를 만들 수 있습니다.  
+# <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>예측 쿼리 작성기를 사용하여 예측 쿼리 만들기
+  BI Development Studio에서 데이터 마이닝 솔루션을 작성하는 동안이나 SQL Server Management Studio에서 기존 마이닝 모델을 마우스 오른쪽 단추로 클릭한 다음 **예측 쿼리 작성**옵션을 선택하여 예측 쿼리를 만들 수 있습니다.  
   
- **예측 쿼리 작성기**에는 다음과 같은 세 가지 디자인 모드가 있습니다. 모드는 왼쪽 위 모퉁이에 있는 아이콘을 클릭하여 전환할 수 있습니다.  
+ **예측 쿼리 작성기** 에는 다음과 같은 세 가지 디자인 모드가 있습니다. 모드는 왼쪽 위 모퉁이에 있는 아이콘을 클릭하여 전환할 수 있습니다.  
   
 -   **디자인**  
   
@@ -60,7 +65,7 @@ caps.handback.revision: 30
   
  시각적 도구와 텍스트 편집기를 함께 사용하여 데이터 마이닝 쿼리를 디자인할 수 있습니다. 텍스트 편집기에서 쿼리에 대한 변경 내용을 입력한 다음 **디자인** 뷰로 전환하면 변경 내용이 모두 손실되고 예측 쿼리 작성기로 만든 원래 쿼리로 돌아갑니다. 이 항목에서는 그래픽 쿼리 작성기 사용법을 연습합니다.  
   
-### 예측 쿼리를 만들려면  
+### <a name="to-create-a-prediction-query"></a>예측 쿼리를 만들려면  
   
 1.  데이터 마이닝 디자이너에서 **마이닝 모델 예측** 탭을 클릭합니다.  
   
@@ -90,7 +95,7 @@ caps.handback.revision: 30
   
 8.  **마이닝 모델 예측** 탭의 도구 모음에 있는 첫 번째 단추를 누른 다음 **결과**를 선택하여 쿼리를 실행합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 디자이너에서 단일 쿼리 작성](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)  
   

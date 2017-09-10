@@ -1,30 +1,35 @@
 ---
-title: "데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 원본 [Analysis Services], 데이터 원본이 없는 차원"
-  - "차원 [Analysis Services], 표준"
-  - "차원 [Analysis Services], 데이터 원본 없이 만들기"
-  - "표준 차원 [Analysis Services]"
+title: "데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data sources [Analysis Services], dimensions without data source
+- dimensions [Analysis Services], standard
+- dimensions [Analysis Services], creating without data source
+- standard dimensions [Analysis Services]
 ms.assetid: a37f7a46-7451-4582-ba19-2595196d97bc
 caps.latest.revision: 41
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 41
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 20035f6d8fff0c5d45b4c807cf6202531156741d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 데이터 원본 없이 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본에 시간이 아닌 테이블 생성** 옵션을 선택합니다. 기본 데이터 원본에 새 차원 테이블을 만들려면 기본 데이터 원본에 개체를 만들 수 있는 권한이 있어야 합니다. 미리 정의된 데이터 원본 뷰 없이 차원을 정의하는 경우 완전히 새로 차원을 정의하거나 차원 템플릿을 사용할 수 있습니다.  
+# <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 마법사를 사용하여 기존 데이터 원본 없이 차원을 만들 수 있습니다. 이렇게 하려면 마법사의 **생성 방법 선택** 페이지에서 **데이터 원본에 시간이 아닌 테이블 생성** 옵션을 선택합니다. 기본 데이터 원본에 새 차원 테이블을 만들려면 기본 데이터 원본에 개체를 만들 수 있는 권한이 있어야 합니다. 미리 정의된 데이터 원본 뷰 없이 차원을 정의하는 경우 완전히 새로 차원을 정의하거나 차원 템플릿을 사용할 수 있습니다.  
   
  차원 마법사에서는 일반적인 차원 유형을 작성할 수 있는 예제 차원 템플릿을 제공합니다. 다음 차원 유형 중에서 선택할 수 있습니다.  
   
@@ -74,14 +79,14 @@ caps.handback.revision: 41
   
  데이터 원본 없이 시간 차원 이외의 다른 차원을 만드는 경우 차원 마법사가 차원 유형을 지정하고 키 특성 및 느린 변경 차원을 식별하는 과정을 단계별로 안내합니다.  
   
-## 차원 유형 지정  
+## <a name="specify-dimension-type"></a>차원 유형 지정  
  차원 마법사의 **차원 유형 지정** 페이지에서 차원 유형을 지정할 수 있습니다. 템플릿을 기반으로 차원을 작성하는 경우 차원 유형이 자동으로 정의됩니다. 이 페이지에서는 지정된 차원 유형(사용 가능한 경우)의 표준 특성도 선택할 수 있습니다.  
   
  차원 유형에 해당하는 템플릿을 선택한 경우 이 페이지가 해당 차원 유형의 옵션으로 채워집니다. 템플릿을 선택하지 않았거나 해당하는 차원 유형이 없는 경우 기본 차원 유형은 **Regular**입니다. 차원 유형을 선택하지 않은 경우 생성할 차원에 가장 적합한 유형을 선택합니다. **차원 유형**에 적절한 유형이 나열되지 않은 경우 **Regular**를 사용합니다.  
   
  차원 유형을 선택하면 **차원 특성**아래에 해당 차원에 적용할 수 있는 특성 유형이 나열됩니다. 특성 유형을 선택하려면 특성 유형 옆에 있는 **포함** 확인란을 선택하고 **차원 특성**아래에 특성 이름을 입력합니다. 기본 이름은 **특성 유형**과 같습니다.  
   
-## 키 특성 및 변경 차원 식별  
+## <a name="identify-key-attribute-and-changing-dimensions"></a>키 특성 및 변경 차원 식별  
  **차원 키 및 유형 지정** 페이지에서 차원의 키 특성으로 지정할 특성을 선택합니다. 일반적으로 키 특성은 주 차원 테이블의 기본 키 열에 해당하며 대개 차원의 리프 멤버를 인덱싱합니다.  
   
  템플릿을 선택했을 경우 템플릿에 키 특성이 정의되어 있으면 해당 특성이 기본 키 특성입니다. 템플릿을 선택했는데 템플릿에 키 특성이 정의되어 있지 않은 경우 목록의 첫 번째 특성이 기본값이 됩니다. 목록에는 **차원 유형 지정** 페이지에서 선택한 모든 특성이 포함되어 있습니다. **차원 유형 지정** 페이지에서 키 특성으로 선택한 특성 중 하나를 선택할 수 있습니다. 아무 특성도 선택하지 않은 경우에는 마법사에서 자동으로 키 특성을 만들고 차원 이름과 "ID"를 합쳐 이름을 지정합니다.  
@@ -101,11 +106,11 @@ caps.handback.revision: 41
   
  차원 디자이너를 사용하여 느린 변경 차원의 속성을 구성할 수 있습니다.  
   
-## 차원 마법사 완료  
+## <a name="completing-the-dimension-wizard"></a>차원 마법사 완료  
  **마법사 완료** 페이지에서 새 차원의 이름을 입력하고 차원 구조를 확인합니다. **마침** 을 클릭한 후 스키마 생성 마법사를 시작하려면 **지금 스키마 생성**확인란을 선택합니다. 대부분의 경우 추가 개체를 만들려면 이 확인란을 선택하지 않아야 합니다. 이 확인란을 선택하지 않을 경우 나중에 차원 디자이너를 사용하여 스키마를 생성할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [시간 테이블을 생성하여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [시간 테이블을 생성하여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
+ [시간 테이블을 생성 하 여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   

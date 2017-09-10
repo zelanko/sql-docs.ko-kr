@@ -1,26 +1,31 @@
 ---
 title: "데이터 마이닝 솔루션 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 마이닝 [Analysis Services], 데이터 마이닝 정보"
-  - "데이터 마이닝[Analysis Services], 배포"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- data mining [Analysis Services], about data mining
+- data mining [Analysis Services], development
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 caps.latest.revision: 64
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 64
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ee2196b673eb9a53d5fefe5c62d1158ae94bf702
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 솔루션
+# <a name="data-mining-solutions"></a>데이터 마이닝 솔루션
   데이터 마이닝 솔루션은 하나 이상의 데이터 마이닝 프로젝트가 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 솔루션입니다.  
   
  이 섹션의 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 통합 데이터 마이닝 솔루션을 디자인하고 구현하는 방법에 대해 설명합니다. 데이터 마이닝 디자인 프로세스와 관련 도구에 대한 개요는 [Data Mining Concepts](../../analysis-services/data-mining/data-mining-concepts.md)를 참조하십시오.  
@@ -33,7 +38,7 @@ caps.handback.revision: 64
   
  [솔루션 연습](#bkmk_Walkthru)  
   
-##  <a name="bkmk_RelMD"></a> 관계형 마이닝 모델과 다차원 솔루션  
+##  <a name="bkmk_RelMD"></a>관계형 마이닝 모델과 다차원 솔루션  
  데이터 마이닝 솔루션은 다차원 데이터(즉, 기존 큐브)나 순수 관계형 데이터(예: 데이터 웨어하우스의 테이블 및 뷰) 또는 텍스트 파일, Excel 통합 문서 또는 기타 외부 데이터 원본을 기반으로 할 수 있습니다.  
   
 -   기존 다차원 데이터베이스 솔루션 내에 데이터 마이닝 개체를 만들 수 있습니다.  
@@ -62,7 +67,7 @@ caps.handback.revision: 64
  [OLAP 마이닝 구조 만들기](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
  OLAP 큐브의 데이터를 기반으로 하는 마이닝 구조를 만듭니다. OLAP 데이터에서 만든 모델을 데이터 마이닝 차원으로 저장하거나 데이터 및 모델 집합을 새 큐브로 저장할 수 있습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [데이터 마이닝 프로젝트](../../analysis-services/data-mining/data-mining-projects.md)  
   
  [데이터 마이닝 개체 처리](../../analysis-services/data-mining/processing-data-mining-objects.md)  
@@ -71,7 +76,7 @@ caps.handback.revision: 64
   
  [데이터 마이닝 솔루션 배포](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)  
   
-## 관련 태스크 및 항목  
+## <a name="related-tasks-and-topics"></a>관련 태스크 및 항목  
  데이터 원본 및 마이닝 구조를 포함하여 기본 데이터 마이닝 솔루션을 만든 후에는 새 모델을 추가하고, 모델을 테스트 및 비교하고, 예측을 만들고, 데이터 하위 집합을 시험하여 솔루션을 빌드할 수 있습니다.  
   
  자세한 내용은 다음 링크를 참조하십시오.  
@@ -84,7 +89,7 @@ caps.handback.revision: 64
 |모델을 학습하는 데 사용되는 데이터에 필터를 적용하여 마이닝 모델을 사용자 지정합니다.|[구조에 마이닝 모델 추가&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)|  
 |데이터 마이닝 솔루션을 업데이트하고 관리합니다.|Link TBD|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 자습서&#40;Analysis Services&#41;](../../analysis-services/data-mining-tutorials-analysis-services.md)  
   
   

@@ -1,29 +1,34 @@
 ---
 title: "데이터 마이닝 쿼리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "예측 쿼리 [Analysis Services]"
-  - "쿼리 [DMX], 만들기"
-  - "예측 쿼리 [DMX]"
-  - "예측 쿼리 작성기"
-  - "마이닝 모델 [Analysis Services], 쿼리"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- prediction queries [Analysis Services]
+- queries [DMX], creating
+- prediction queries [DMX]
+- Prediction Query Builder
+- mining models [Analysis Services], querying
 ms.assetid: 802806a6-69bb-4c3c-b9aa-d1a1ddfc7fc2
 caps.latest.revision: 44
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1994ebc359ca23eee9ae76112d9ceebd1970debb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 쿼리
+# <a name="data-mining-queries"></a>데이터 마이닝 쿼리
   데이터 마이닝 쿼리는 다음과 같은 다양한 용도로 다음 작업을 수행할 수 있습니다.  
   
 -   새 데이터에 모델을 적용하여 단일 또는 여러 예측을 수행합니다. 매개 변수나 일괄 처리로 입력 값을 제공할 수 있습니다.  
@@ -73,14 +78,14 @@ caps.handback.revision: 44
   
 -   각 알고리즘 유형에 대해 제공된 사용자 지정 데이터 마이닝 뷰어를 사용하여 각 모델 유형을 찾아보고 탐색합니다. 자세한 내용은 [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)을 참조하세요.  
   
--   **Microsoft 일반 콘텐츠 트리 뷰어**를 사용하여 각 모델 유형의 모델 콘텐츠를 검토합니다. 이 정보를 해석하려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
+-   **Microsoft 일반 콘텐츠 트리 뷰어**를 사용하여 각 모델 유형의 모델 콘텐츠를 검토합니다. 이 정보를 해석하려면 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)을 참조하세요.  
   
 ##  <a name="bkmk_Interfaces"></a> 쿼리 도구 및 인터페이스  
- SQL Server에서 제공하는 쿼리 도구 중 하나를 사용하여 대화식으로 데이터 마이닝 쿼리를 작성할 수 있습니다. 그래픽 예측 쿼리 작성기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공됩니다. 예측 쿼리 작성기를 사용해보지 않은 경우 [Basic Data Mining Tutorial](../Topic/Basic%20Data%20Mining%20Tutorial.md) 의 단계를 수행하여 인터페이스에 대해 잘 알아두는 것이 좋습니다. 단계를 간단히 살펴보려면 [예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)를 사용하여 쿼리 만들기를 참조하세요.  
+ SQL Server에서 제공하는 쿼리 도구 중 하나를 사용하여 대화식으로 데이터 마이닝 쿼리를 작성할 수 있습니다. 그래픽 예측 쿼리 작성기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 와 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공됩니다. 예측 쿼리 작성기를 사용해보지 않은 경우 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c) 의 단계를 수행하여 인터페이스에 대해 잘 알아두는 것이 좋습니다. 단계를 간단히 살펴보려면 [예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)를 사용하여 쿼리 만들기를 참조하세요.  
   
  예측 쿼리 작성기는 나중에 사용자 지정할 쿼리를 시작하는 데 유용합니다. 쉽게 데이터 원본을 추가하고 열에 매핑한 다음 DMX 뷰로 전환하고 WHERE 절이나 다른 함수를 추가하여 쿼리를 사용자 지정할 수 있습니다.  
   
- 데이터 마이닝 모델과 쿼리 작성 방법을 익히면 DMX(Data Mining Extensions)를 사용하여 쿼리를 직접 작성할 수도 있습니다. DMX는 Transact-SQL과 유사하며 다양한 여러 클라이언트에서 사용할 수 있는 쿼리 언어입니다. DMX는 사용자 지정 예측과 복잡한 쿼리를 만들 수 있는 최상의 도구입니다. DMX에 대한 소개는 [DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서&#40;Analysis Services - 데이터 마이닝&#41;](../Topic/Creating%20and%20Querying%20Data%20Mining%20Models%20with%20DMX:%20Tutorials%20\(Analysis%20Services%20-%20Data%20Mining\).md)를 참조하세요.  
+ 데이터 마이닝 모델과 쿼리 작성 방법을 익히면 DMX(Data Mining Extensions)를 사용하여 쿼리를 직접 작성할 수도 있습니다. DMX는 Transact-SQL과 유사하며 다양한 여러 클라이언트에서 사용할 수 있는 쿼리 언어입니다. DMX는 사용자 지정 예측과 복잡한 쿼리를 만들 수 있는 최상의 도구입니다. DMX에 대한 소개는 [DMX를 사용하여 데이터 마이닝 모델 만들기 및 쿼리: 자습서&#40;Analysis Services - 데이터 마이닝&#41;](http://msdn.microsoft.com/library/145b81a7-c0c3-4ca3-bb32-0b482423b9a0)를 참조하세요.  
   
  DMX 편집기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 제공됩니다. 예측 쿼리 작성기를 사용하여 쿼리를 시작한 다음 뷰를 텍스트 편집기로 변경하고 DMX 문을 다른 클라이언트에 복사할 수도 있습니다. 자세한 내용은 [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)를 참조하세요.  
   
@@ -128,7 +133,7 @@ caps.handback.revision: 44
   
 -   **모델 콘텐츠 함수:** 모든 모델의 *콘텐츠* 는 단순 쿼리로 정보를 검색할 수 있는 표준화된 형식으로 표시됩니다. DMX를 사용하여 모델 콘텐츠에 대한 쿼리를 만듭니다. 또한 데이터 마이닝 스키마 행 집합을 사용하여 일부 유형의 모델 콘텐츠를 가져올 수도 있습니다.  
   
-     모델 콘텐츠에서 반환되는 테이블의 각 행 또는 노드의 의미는 모델을 작성하는 데 사용된 알고리즘의 유형과 열의 데이터 형식에 따라 달라집니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)를 참조하세요.  
+     모델 콘텐츠에서 반환되는 테이블의 각 행 또는 노드의 의미는 모델을 작성하는 데 사용된 알고리즘의 유형과 열의 데이터 형식에 따라 달라집니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)을 참조하세요.  
   
 ##  <a name="bkmk_Reqs"></a> 요구 사항  
  모델에 대해 쿼리를 만들려면 먼저 데이터 마이닝 모델을 처리해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체를 처리하려면 특별한 권한이 있어야 합니다. 마이닝 모델 처리에 대한 자세한 내용은 [처리 요구 사항 및 고려 사항&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)을 참조하세요.  
@@ -139,7 +144,7 @@ caps.handback.revision: 44
   
  데이터 마이닝 쿼리를 실행하는 데 필요한 보안 컨텍스트에 대한 자세한 내용은 [보안 개요&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/security-overview-data-mining.md)를 참조하세요.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  이 섹션의 항목에서는 데이터 마이닝 쿼리의 각 유형에 대해 자세히 소개하고 데이터 마이닝 모델에 대한 쿼리를 만드는 방법을 보여 주는 자세한 예의 링크를 제공합니다.  
   
  [예측 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
@@ -152,21 +157,21 @@ caps.handback.revision: 44
   
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
  다음 링크를 사용하여 데이터 마이닝 쿼리를 만들고 작업하는 방법을 알아봅니다.  
   
 |태스크|링크|  
 |-----------|-----------|  
-|자습서 및 연습 데이터 마이닝 쿼리 보기|[6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](../Topic/Lesson%206:%20Creating%20and%20Working%20with%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)<br /><br /> [시계열 예측 DMX 자습서](../Topic/Time%20Series%20Prediction%20DMX%20Tutorial.md)|  
+|자습서 및 연습 데이터 마이닝 쿼리 보기|[6단원: 예측 만들기 및 작업&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)<br /><br /> [시계열 예측 DMX 자습서](http://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2)|  
 |SQL Server Management Studio 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|[SQL Server Management Studio에서 DMX 쿼리 만들기](../../analysis-services/data-mining/create-a-dmx-query-in-sql-server-management-studio.md)<br /><br /> [예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)<br /><br /> [모델에 예측 함수 적용](../../analysis-services/data-mining/apply-prediction-functions-to-a-model.md)<br /><br /> [예측 쿼리 수동 편집](../../analysis-services/data-mining/manually-edit-a-prediction-query.md)|  
 |예측 쿼리에 사용하는 외부 데이터 작업|[예측 쿼리에 대한 입력 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)<br /><br /> [예측 쿼리에 대한 입력 데이터 선택 및 매핑](../../analysis-services/data-mining/choose-and-map-input-data-for-a-prediction-query.md)|  
 |쿼리 결과 사용|[예측 쿼리 결과 보기 및 저장](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)|  
 |Management Studio에서 제공하는 DMX 및 XMLA 쿼리 템플릿 사용|[템플릿에서 단일 예측 쿼리 작성](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)<br /><br /> [XMLA를 사용하여 데이터 마이닝 쿼리 만들기](../../analysis-services/data-mining/create-a-data-mining-query-by-using-xmla.md)<br /><br /> [SQL Server Management Studio에서 Analysis Services 템플릿 사용](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |내용 쿼리에 대한 자세한 정보 및 예제 참조|[마이닝 모델에 내용 쿼리 만들기](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)<br /><br /> [마이닝 모델을 만드는 데 사용한 매개 변수 쿼리](../../analysis-services/data-mining/query-the-parameters-used-to-create-a-mining-model.md)<br /><br /> [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)|  
 |쿼리 옵션 설정과 쿼리 권한 및 문제 해결|[데이터 마이닝 쿼리에 대한 제한 시간 값 변경](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)|  
-|Integration Services에서 데이터 마이닝 구성 요소 사용|[데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [데이터 마이닝 쿼리 변환](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
+|Integration Services에서 데이터 마이닝 구성 요소 사용|[Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md)<br /><br /> [Data Mining Query Transformation](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)  
   

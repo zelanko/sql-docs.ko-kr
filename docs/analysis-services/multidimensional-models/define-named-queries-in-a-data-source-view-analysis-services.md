@@ -1,33 +1,38 @@
 ---
-title: "데이터 원본 뷰에서 명명된 쿼리 정의(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "명명된 쿼리 [Analysis Services], 만들기"
-  - "명명된 쿼리 수정"
-  - "데이터 원본 뷰 [Analysis Services], 명명된 쿼리"
+title: "데이터 원본 뷰 (Analysis Services)에서 명명 된 쿼리 정의 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- named queries [Analysis Services], creating
+- modifying named queries
+- data source views [Analysis Services], named queries
 ms.assetid: f09ba8aa-950e-4c0d-961e-970de13200be
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 31
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 19b3f52626202c555cb51173508f2a1954318b83
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 원본 뷰에서 명명된 쿼리 정의(Analysis Services)
+# <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 명명된 쿼리 정의(Analysis Services)
   명명된 쿼리는 테이블로 표현된 SQL 식입니다. 명명된 쿼리에 SQL 식을 지정하여 하나 이상의 데이터 원본에 있는 하나 이상의 테이블에서 반환된 행 및 열을 선택할 수 있습니다. 식을 기반으로 한다는 점을 제외하면 명명된 쿼리는 관계 및 행이 있는 데이터 원본 뷰(DSV)의 다른 테이블과 같습니다.  
   
  명명된 쿼리를 사용하면 기본 데이터 원본을 수정하지 않고 DSV에 있는 기존 테이블의 관계형 스키마를 확장할 수 있습니다. 예를 들어 일련의 명명된 쿼리를 사용하여 복잡한 차원 테이블을 데이터베이스 차원에서 사용할 수 있도록 더 작고 간단한 차원 테이블로 분할할 수 있습니다. 명명된 쿼리를 사용하여 하나 이상의 데이터 원본의 여러 데이터베이스 테이블을 하나의 데이터 원본 뷰 테이블로 조인할 수도 있습니다.  
   
-## 명명된 쿼리 만들기  
+## <a name="creating-a-named-query"></a>명명된 쿼리 만들기  
   
 > [!NOTE]  
 >  명명된 계산을 명명된 쿼리에 추가할 수 없으며 명명된 계산이 포함된 테이블을 명명된 쿼리의 기반으로 할 수 없습니다.  
@@ -38,7 +43,7 @@ caps.handback.revision: 31
   
  **참고**   [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 데이터 원본을 쿼리하는 명명된 쿼리를 정의할 때 상관 하위 쿼리 및 GROUP BY 절을 포함하는 명명된 쿼리는 실패합니다. 자세한 내용은 [기술 문서에서](http://support.microsoft.com/kb/274729) 버그: 상관 하위 쿼리 및 GROUP BY를 포함하는 SELECT 문의 내부 오류(BUG: Internal Error with SELECT Statement Containing Correlated Subquery and GROUP BY) [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 참조하십시오.  
   
-## 명명된 쿼리 추가 또는 편집  
+## <a name="add-or-edit-a-named-query"></a>명명된 쿼리 추가 또는 편집  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 명명된 쿼리를 추가할 데이터 원본 뷰가 포함된 프로젝트를 열거나 데이터베이스에 연결합니다.  
   
@@ -57,11 +62,11 @@ caps.handback.revision: 31
     4.  아래쪽 창에 쿼리를 입력하거나 그래픽 쿼리 작성 도구를 사용하여 쿼리를 만듭니다.  
   
     > [!NOTE]  
-    >  쿼리 작성 UI(사용자 인터페이스)는 데이터 원본에 따라 달라집니다. 그래픽 UI가 아닌 텍스트 기반의 일반 UI가 표시될 수 있습니다. 이렇게 다른 UI를 사용해도 같은 작업을 수행할 수 있지만 수행 방식은 서로 다릅니다. 자세한 내용은 [명명된 쿼리 만들기 또는 편집 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../Topic/Create%20or%20Edit%20Named%20Query%20Dialog%20Box%20\(Analysis%20Services%20-%20Multidimensional%20Data\).md)를 참조하세요.  
+    >  쿼리 작성 UI(사용자 인터페이스)는 데이터 원본에 따라 달라집니다. 그래픽 UI가 아닌 텍스트 기반의 일반 UI가 표시될 수 있습니다. 이렇게 다른 UI를 사용해도 같은 작업을 수행할 수 있지만 수행 방식은 서로 다릅니다. 자세한 내용은 [명명된 쿼리 만들기 또는 편집 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/8e192ad6-a0b1-4e21-bb3f-087c93e62941)를 참조하세요.  
   
 5.  **확인**을 클릭합니다. 테이블이 명명된 쿼리로 바뀌었음을 나타내기 위해 겹치는 두 개의 테이블을 표시하는 아이콘이 테이블 머리글에 나타납니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   

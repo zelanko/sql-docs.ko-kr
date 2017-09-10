@@ -1,29 +1,34 @@
 ---
 title: "보고서 데이터 원본 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: bd6662c7-ffbe-479d-8944-3dc858340998
 caps.latest.revision: 8
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 8
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: b941dc8eb4fb1f0fc14d2565c8f1f65dd3ba4d15
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 보고서 데이터 원본 만들기
+# <a name="create-a-report-data-source"></a>보고서 데이터 원본 만들기
   파워 뷰를 다차원 모델에 연결하려면 SharePoint 라이브러리에서 .rsds 파일이라는 공유 보고서 데이터 원본 정의를 만들어야 합니다. .rsds 파일은 다차원 모델에 연결하는 데 사용되는 Analysis Services 서버 인스턴스의 이름, 연결 형식, 연결 문자열 및 자격 증명을 지정합니다. 사용자가 .rsds를 클릭하면 비어 있는 새 파워 뷰 보고서(.rdlx 파일)가 브라우저에 열립니다.  
   
  .rsds 연결을 만들려면 SQL Server 2012 이상의 Reporting Services와 SharePoint 2010 또는 SharePoint 2013용 Reporting Services 추가 기능을 설치해야 합니다.  
   
-## 다차원 모델에 대한 보고서 데이터 원본(.rsds) 연결 만들기  
+## <a name="create-a-report-data-source-rsds-connection-to-a-multidimensional-model"></a>다차원 모델에 대한 보고서 데이터 원본(.rsds) 연결 만들기  
  시작하기 전에 다음을 알아야 합니다.  
   
 -   다차원 모드에서 실행하는 Analysis Services 서버 인스턴스의 이름.  
@@ -36,7 +41,7 @@ caps.handback.revision: 8
   
 -   (선택 사항) 로캘 식별자.  
   
-#### 공유 데이터 원본(.rsds) 파일을 만들려면(SharePoint 2010)  
+#### <a name="to-create-a-shared-report-data-source-rsds-file-sharepoint-2010"></a>공유 데이터 원본(.rsds) 파일을 만들려면(SharePoint 2010)  
   
 1.  라이브러리 리본 메뉴에 있는 **문서** 탭을 클릭합니다.  
   
@@ -62,13 +67,13 @@ caps.handback.revision: 8
   
 6.  **자격 증명**에서 보고서 서버가 외부 데이터 원본에 액세스하는 데 필요한 자격 증명을 얻는 방법을 지정합니다.  
   
-    -   보고서를 연 사용자의 자격 증명을 사용하여 데이터에 액세스하려면 **Windows 인증(통합)**을 선택합니다. SharePoint 사이트 또는 팜에서 폼 인증을 사용하거나 트러스트된 계정을 통해 보고서 서버에 연결하는 경우 이 옵션을 선택하지 마십시오. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오. 이 옵션은 도메인에 Kerberos 인증을 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos 인증을 해제하면 Windows 자격 증명이 하나의 다른 컴퓨터로만 전달될 수 있습니다. 따라서 추가 연결이 필요한 다른 컴퓨터에 외부 데이터 원본이 있는 경우 원하는 데이터 대신 오류가 표시됩니다.  
+    -   보고서를 연 사용자의 자격 증명을 사용하여 데이터에 액세스하려면 **Windows 인증(통합)** 을 선택합니다. SharePoint 사이트 또는 팜에서 폼 인증을 사용하거나 트러스트된 계정을 통해 보고서 서버에 연결하는 경우 이 옵션을 선택하지 마십시오. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오. 이 옵션은 도메인에 Kerberos 인증을 설정한 경우나 데이터 원본이 보고서 서버와 같은 컴퓨터에 있는 경우에 가장 잘 작동합니다. Kerberos 인증을 해제하면 Windows 자격 증명이 하나의 다른 컴퓨터로만 전달될 수 있습니다. 따라서 추가 연결이 필요한 다른 컴퓨터에 외부 데이터 원본이 있는 경우 원하는 데이터 대신 오류가 표시됩니다.  
   
     -   사용자가 보고서를 실행할 때마다 자격 증명을 입력하도록 하려면 **자격 증명 확인** 을 선택합니다. 이 보고서에 대한 구독 또는 데이터 처리를 예약하려는 경우 이 옵션을 선택하지 마십시오.  
   
     -   단일 자격 증명 집합을 사용하여 데이터에 액세스하려면 **저장된 자격 증명** 을 선택합니다. 자격 증명은 저장되기 전에 암호화됩니다. 저장된 자격 증명의 인증 방법을 결정하는 옵션을 선택할 수 있습니다. 저장된 자격 증명이 Windows 사용자 계정에 속하면 Windows 자격 증명으로 사용을 선택합니다. 데이터베이스 서버에 대한 실행 컨텍스트를 설정하려면 **이 계정에 대한 실행 컨텍스트 설정** 을 선택합니다.  
   
-    -   연결 문자열에서 자격 증명을 지정하거나 최소 권한 계정을 사용하여 보고서를 실행하려면 **자격 증명 필요 없음**을 선택합니다.  
+    -   연결 문자열에서 자격 증명을 지정하거나 최소 권한 계정을 사용하여 보고서를 실행하려면 **자격 증명 필요 없음** 을 선택합니다.  
   
 7.  **연결 테스트** 를 클릭하여 유효성을 검사합니다.  
   

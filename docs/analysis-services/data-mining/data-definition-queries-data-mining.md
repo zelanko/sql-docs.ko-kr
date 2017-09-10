@@ -1,23 +1,28 @@
 ---
-title: "데이터 정의 쿼리(데이터 마이닝) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/06/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 정의 쿼리 (데이터 마이닝) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/06/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 49e02de1-4ffa-401c-8eee-471a9c25b86a
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: a42d980837958ff2b605eeaac01dd61739bc1078
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 정의 쿼리(데이터 마이닝)
+# <a name="data-definition-queries-data-mining"></a>데이터 정의 쿼리(데이터 마이닝)
   데이터 마이닝의 *데이터 정의 쿼리* 범주는 다음을 수행하는 DMX 문이나 XMLA 명령을 의미합니다.  
   
 -   모델과 같은 데이터 마이닝 개체를 만들거나 변경하거나 조작합니다.  
@@ -81,14 +86,14 @@ caps.handback.revision: 12
   
 |||  
 |-|-|  
-|DMX 쿼리에 대한 템플릿으로 작업합니다.|[SQL Server Management Studio에서 Analysis Services 템플릿 사용](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
+|DMX 쿼리에 대한 템플릿으로 작업합니다.|[Use Analysis Services Templates in SQL Server Management Studio](../../analysis-services/instances/use-analysis-services-templates-in-sql-server-management-studio.md)|  
 |예측 쿼리 작성기를 사용하여 모든 종류의 쿼리를 디자인합니다.|[예측 쿼리 작성기를 사용하여 예측 쿼리 만들기](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)|  
-|SQL Server Profiler를 사용하여 쿼리 정의를 캡처하고 추적을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 모니터링합니다.|[SQL Server Profiler를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
+|SQL Server Profiler를 사용하여 쿼리 정의를 캡처하고 추적을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 모니터링합니다.|[Use SQL Server Profiler to Monitor Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md)|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 제공되는 스크립트 언어와 프로그래밍 언어에 대해 자세히 알아봅니다.|[XMLA&#40;XML for Analysis&#41; 참조](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)<br /><br /> [AMO&#40;Analysis Management Objects&#41;를 사용하여 개발](../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)|  
 |[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 및 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 모델을 관리하는 방법을 알아봅니다.|[데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)<br /><br /> [EXPORT&#40;DMX&#41;](../../dmx/export-dmx.md)<br /><br /> [IMPORT&#40;DMX&#41;](../../dmx/import-dmx.md)|  
-|외부 데이터를 쿼리하기 위한 OPENROWSET 및 다른 방법에 대해 자세히 알아봅니다.|[&#60;원본 데이터 쿼리&#62;](../Topic/%3Csource%20data%20query%3E.md).|  
+|외부 데이터를 쿼리하기 위한 OPENROWSET 및 다른 방법에 대해 자세히 알아봅니다.|[&#60;원본 데이터 쿼리&#62;](../../dmx/source-data-query.md).|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
   

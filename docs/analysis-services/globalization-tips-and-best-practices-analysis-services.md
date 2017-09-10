@@ -1,46 +1,39 @@
 ---
-title: "세계화 팁과 모범 사례(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "번역 [Analysis Services], 클라이언트 응용 프로그램"
-  - " 날짜 비교 "
-  - " 요일 비교 [Analysis Services] "
-  - " 시간 [Analysis Services] "
-  - " 월 비교 [Analysis Services] "
+title: "세계화 팁과 모범 사례 (Analysis Services) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- translations [Analysis Services], client applications
+- date comparisons
+- day-of-week comparisons [Analysis Services]
+- time [Analysis Services]
+- month comparisons [Analysis Services]
 ms.assetid: 71a8c438-1370-4c69-961e-d067ee4e47c2
 caps.latest.revision: 33
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 79c80dd57b6a6ea1257c00dfb95bf1e9a08a5b99
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 세계화 팁과 모범 사례(Analysis Services)
+# <a name="globalization-tips-and-best-practices-analysis-services"></a>세계화 팁과 모범 사례(Analysis Services)
   [!INCLUDE[applies](../includes/applies-md.md)] 다차원 전용  
   
  다음의 팁 및 지침은 비즈니스 인텔리전스 솔루션의 이식성을 향상시키고 언어 및 데이터 정렬 설정과 직접적으로 관련이 있는 오류를 방지하는 데 유용할 수 있습니다.  
   
--   [스택 전체에서 유사한 데이터 정렬 사용](#bkmk_sameColl)  
-  
--   [일반적인 데이터 정렬 권장 사항](#bkmk_recos)  
-  
--   [개체 식별자의 대/소문자 구분](#bkmk_objid)  
-  
--   [Excel 및 SQL Server Profiler를 사용한 로캘 테스트](#bkmk_test)  
-  
--   [번역이 들어 있는 솔루션에서 MDX 쿼리 작성](#bkmk_mdx)  
-  
--   [날짜 및 시간 값이 들어 있는 MDX 쿼리 작성](#bkmk_datetime)  
-  
 ##  <a name="bkmk_sameColl"></a> 스택 전체에서 유사한 데이터 정렬 사용  
- 가능하면 데이터베이스 엔진에 사용하는 것과 동일한 데이터 정렬 설정을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용하여 전자/반자 구분 및 대/소문자 구분과 액세스 민감도를 일치시키도록 하세요.  
+ 가능하면 데이터베이스 엔진에 사용하는 것과 동일한 데이터 정렬 설정을 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 사용하여 전자/반자 구분 및 대/소문자 구분과 액세스 민감도를 일치시키도록 하세요.  
   
  각 서비스에는 데이터베이스 엔진의 기본값이 SQL_Latin1_General_CP1_CI_AS로 설정되어 있고 Analysis Services가 Latin1_General_AS로 설정되어 있는 자체 데이터 정렬 설정이 있습니다. 기본값은 대/소문자, 전자/반자 및 악센트 구분 측면에서 호환됩니다. 두 데이터 정렬 중 하나의 설정을 변경하는 경우 데이터 정렬 속성이 기본 방법에서 벗어나면 문제가 발생할 수 있습니다.  
   
@@ -90,7 +83,7 @@ caps.handback.revision: 32
  개체 이름이 아니라 개체 식별자만 표에 설명된 대/소문자 구분 동작이 적용됩니다. 솔루션 작동 방식에 변화가 있는 경우(전후 비교 -- SQL Server 2012 SP2 이상 설치 후), 처리 문제가 발생할 수 있습니다. 쿼리는 개체 식별자에 의해 영향을 받지 않습니다. 두 쿼리 언어(DAX 및 MDX)에서 수식 엔진에 개체 이름(식별자 아님)이 사용됩니다.  
   
 > [!NOTE]  
->  대/소문자 구분과 관련된 코드 변경 내용은 일부 응용 프로그램에 대한 주요 변경 내용이었습니다. 자세한 내용은 [SQL Server 2016에서 Analysis Services 기능의 주요 변경](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md)을 참조하세요.  
+>  대/소문자 구분과 관련된 코드 변경 내용은 일부 응용 프로그램에 대한 주요 변경 내용이었습니다. 자세한 내용은 [SQL Server 2016에서 Analysis Services 기능의 주요 변경](../analysis-services/breaking-changes-to-analysis-services-features-in-sql-server-2016.md) 을 참조하세요.  
   
 ##  <a name="bkmk_test"></a> Excel, SQL Server Profiler 및 SQL Server Management Studio를 사용한 로캘 테스트  
  번역을 테스트할 때 연결에서 번역의 LCID를 지정해야 합니다. [다른 언어를 SSAS에서 Excel로 가져오기](http://extremeexperts.com/sql/Tips/ExcelDiffLocale.aspx)(영문)에 설명된 대로 Excel을 사용하여 번역을 테스트할 수 있습니다.  
@@ -99,7 +92,7 @@ caps.handback.revision: 32
   
 -   기존 .odc 파일을 검색합니다. Adventure Works 다차원 데이터용으로 하나를 찾았으면 이 파일을 마우스 오른쪽 단추로 클릭하여 메모장에서 엽니다.  
   
--    연결 문자열에 `Locale Identifier=1036`를 추가합니다.   파일을 저장하고 닫습니다.   
+-   연결 문자열에 `Locale Identifier=1036` 를 추가합니다. 파일을 저장하고 닫습니다.  
   
 -   Excel | **데이터** | **기존 연결**을 엽니다. 목록을 이 컴퓨터에 있는 연결 파일로 필터링합니다. Adventure Works용 연결을 찾습니다. 이름을 주의 깊게 살펴보세요. 두 개 이상 있을 수 있습니다. 연결을 엽니다.  
   
@@ -120,7 +113,7 @@ caps.handback.revision: 32
      ![SSMS에서 프랑스어 번역이 있는 MDX 쿼리](../analysis-services/media/ssas-localetest-ssms.png "SSMS에서 프랑스어 번역이 있는 MDX 쿼리")  
   
 ##  <a name="bkmk_mdx"></a> 번역이 들어 있는 솔루션에서 MDX 쿼리 작성  
- 번역은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 이름에 대한 표시 정보를 제공합니다. 그러나 동일 개체의 식별자는 번역되지 않습니다. 가능하면 번역된 캡션 및 이름 대신 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 식별자 및 키를 사용하십시오.  예를 들어 여러 언어 간 이식성을 위해 MDX(Multidimensional Expressions) 문 및 스크립트에 대해 멤버 이름 대신 멤버 키를 사용할 수 있습니다.   
+ 번역은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 이름에 대한 표시 정보를 제공합니다. 그러나 동일 개체의 식별자는 번역되지 않습니다. 가능하면 번역된 캡션 및 이름 대신 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 식별자 및 키를 사용하십시오. 예를 들어 여러 언어 간 이식성을 위해 MDX(Multidimensional Expressions) 문 및 스크립트에 대해 멤버 이름 대신 멤버 키를 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  테이블 형식 개체 이름은 데이터 정렬에 관계없이 항상 대/소문자를 구분한다는 점에 유의하세요. 반면에 다차원 개체 이름은 데이터 정렬의 대/소문자 구분을 따릅니다. 다차원 개체 이름만 대/소문자를 구분하므로 다차원 개체를 참조하는 모든 MDX 쿼리에 대/소문자가 올바로 사용되었는지 확인합니다.  
@@ -138,14 +131,13 @@ caps.handback.revision: 32
   
 3.  **일반적인 날짜 및 시간 정보를 위한 ISO 날짜 형식 사용**  
   
-     한 [Analysis Services 전문가](http://geekswithblogs.net/darrengosbell/Default.aspx)는 다음과 같이 추천합니다. "저는 SQL 또는 MDX 쿼리에 전달하는 날짜 문자열에 대해 항상 ISO 날짜 형식인 yyyy-mm-dd를 사용합니다. 이 형식은 명확하고 클라이언트나 서버의 국가별 설정과 관계없이 작동하기 때문입니다. 모호한 날짜 형식을 구문 분석할 때 서버는 국가별 설정을 따라야 한다는 데 동의하겠지만 또한 선택할 수 있다면 선택에 따라 해석이 달라지지 않는 것이 좋다고 생각합니다."  
+     한 [Analysis Services 전문가](http://geekswithblogs.net/darrengosbell/Default.aspx) 는 다음과 같이 추천합니다. "저는 SQL 또는 MDX 쿼리에 전달하는 날짜 문자열에 대해 항상 ISO 날짜 형식인 yyyy-mm-dd를 사용합니다. 이 형식은 명확하고 클라이언트나 서버의 국가별 설정과 관계없이 작동하기 때문입니다. 모호한 날짜 형식을 구문 분석할 때 서버는 국가별 설정을 따라야 한다는 데 동의하겠지만 또한 선택할 수 있다면 선택에 따라 해석이 달라지지 않는 것이 좋다고 생각합니다."  
   
 4.  **국가별 언어 설정에 관계없이 Format 함수를 사용하여 특정 형식 적용**  
   
      포럼 게시물에서 가져온 다음의 MDX 쿼리는 형식을 사용하여 기본 국가별 설정에 관계없이 특정 형식으로 날짜를 반환하는 방법을 보여 줍니다.  
   
-     원래 게시물을 보려면 [SSAS 2012가 잘못된 날짜 생성(Network Steve의 포럼 게시물)](http://www.networksteve.com/forum/topic.php/SSAS_2012_generates_invalid_dates/?TopicId=40504&Posts=2)을 참조하세요.  
-  
+
     ```  
     WITH MEMBER [LinkTimeAdd11Date_Manual] as Format(dateadd("d",15,"2014-12-11"), "mm/dd/yyyy")  
     member [LinkTimeAdd15Date_Manual] as Format(dateadd("d",11,"2014-12-13"), "mm/dd/yyyy")  
@@ -158,7 +150,7 @@ caps.handback.revision: 32
   
     ```  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 세계화 시나리오](../analysis-services/globalization-scenarios-for-analysis-services.md)   
  [국가별 Transact-SQL 문 작성](../relational-databases/collations/write-international-transact-sql-statements.md)  
   

@@ -1,24 +1,29 @@
 ---
 title: "Discover Server State Events 데이터 열 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "Discover Server State 이벤트 범주"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- Discover Server State event category
 ms.assetid: fbacb187-a4d1-4aa4-be3b-3ddd175f9e19
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c71c32614ee4be7fdbe198530d5ce228452d2276
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Discover Server State Events 데이터 열
+# <a name="discover-server-state-events-data-columns"></a>Discover Server State Events 데이터 열
   Discover Server State 이벤트 범주에는 다음과 같은 이벤트 클래스가 있습니다.  
   
 |**이벤트 ID**|**이벤트 이름**|**이벤트 설명**|  
@@ -29,7 +34,7 @@ caps.handback.revision: 32
   
  다음 표에서는 이러한 각 이벤트 클래스에 대한 데이터 열을 나열합니다.  
   
-## Server State Discover Begin 클래스 - 데이터 열  
+## <a name="server-state-discover-begin-classdata-columns"></a>Server State Discover Begin 클래스 - 데이터 열  
   
 |||||  
 |-|-|-|-|  
@@ -50,7 +55,7 @@ caps.handback.revision: 32
 |ServerName|43|8|서버 상태 검색 이벤트가 발생한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
 |RequestProperties|45|9|현재 XMLA 요청의 속성을 포함합니다.|  
   
-## Server State Discover Data 클래스 - 데이터 열  
+## <a name="server-state-discover-data-classdata-columns"></a>Server State Discover Data 클래스 - 데이터 열  
   
 |||||  
 |-|-|-|-|  
@@ -65,7 +70,7 @@ caps.handback.revision: 32
 |TextData|42|9|검색 요청에 대한 서버 응답과 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|서버 상태 검색 이벤트가 발생한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## Server State Discover End 클래스 - 데이터 열  
+## <a name="server-state-discover-end-classdata-columns"></a>Server State Discover End 클래스 - 데이터 열  
   
 |||||  
 |-|-|-|-|  
@@ -88,7 +93,7 @@ caps.handback.revision: 32
 |TextData|42|9|검색 요청에 대한 서버 응답과 연결된 텍스트 데이터를 포함합니다.|  
 |ServerName|43|8|서버 상태 검색 이벤트가 발생한 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 이름을 포함합니다.|  
   
-## 관련 항목:  
- [Discover Server State 이벤트 범주](../../analysis-services/trace-events/discover-server-state-event-category.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Discover Server State Event Category](../../analysis-services/trace-events/discover-server-state-event-category.md)  
   
   

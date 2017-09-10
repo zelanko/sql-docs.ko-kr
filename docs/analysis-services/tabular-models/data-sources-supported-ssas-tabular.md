@@ -1,24 +1,29 @@
 ---
-title: "지원되는 데이터 원본 (SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "데이터 원본 (SSAS 테이블 형식)이 지원 | Microsoft Docs"
+ms.custom: 
+ms.date: 07/25/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d6c2b1b3-91fc-4175-af25-509946dc7f24
 caps.latest.revision: 28
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 28
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: e5457f0c2abf5f1b7cdae5ff2ae57b5298a72d82
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 지원되는 데이터 원본 (SSAS 테이블 형식)
+# <a name="data-sources-supported-ssas-tabular"></a>지원되는 데이터 원본 (SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 사용할 수 있는 데이터 원본의 유형에 대해 설명합니다.  
   
 ##  <a name="bkmk_supported_ds"></a> 메모리 내 모델에 대해 지원되는 데이터 원본  
@@ -28,7 +33,7 @@ caps.handback.revision: 28
 |-|-|-|-|  
 |원본|버전|파일 유형|공급자|  
 |Access 데이터베이스|Microsoft Access 2010 이상|.accdb 또는 .mdb|ACE 14 OLE DB 공급자|  
-|SQL Server 관계형 데이터베이스|Microsoft SQL Server 2008 이상, Microsoft SQL Server 데이터 웨어하우스 2008 이상, Microsoft Azure SQL Database, Microsoft APS(분석 플랫폼 시스템)<br /><br /> <br /><br /> Analytics Platform System(APS의 이전 명칭은 SQL Server Parallel Datawarehouse(PDW)였습니다. 원래는 PDW에서 Analysis Services에 연결하려면 특수한 데이터 공급자가 필요했습니다. 이 공급자는 SQL Server 2012에서 바뀌었습니다. SQL Server 2012부터는 PDW/APS에 대한 연결에 SQL Server Native Client가 사용됩니다. APS에 대한 자세한 내용은 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)웹 사이트를 참조하세요.|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 10.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server 관계형 데이터베이스|SQL Server 2008 이상, SQL Server 데이터 웨어하우스 2008 및 이후, Azure SQL 데이터베이스, Azure SQL 데이터 웨어하우스 Analytics Platform System (APS)<br /><br /> <br /><br /> Analytics Platform System(APS의 이전 명칭은 SQL Server Parallel Datawarehouse(PDW)였습니다. 원래는 PDW에서 Analysis Services에 연결하려면 특수한 데이터 공급자가 필요했습니다. 이 공급자는 SQL Server 2012에서 바뀌었습니다. SQL Server 2012부터는 PDW/APS에 대한 연결에 SQL Server Native Client가 사용됩니다. |(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 10.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle 관계형 데이터베이스|Oracle 9i 이상.|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 관계형 데이터베이스|Teradata V2R6 이상|(해당 사항 없음)|TDOLEDB OLE DB 공급자<br /><br /> .Net Data Provider for Teradata|  
 |Informix 관계형 데이터베이스||(해당 사항 없음)|Informix OLE DB 공급자|  
@@ -37,7 +42,7 @@ caps.handback.revision: 28
 |기타 관계형 데이터베이스|(해당 사항 없음)|(해당 사항 없음)|OLE DB 공급자 또는 ODBC 드라이버|  
 |텍스트 파일|(해당 사항 없음)|.txt, .tab, .csv|ACE 14 OLE DB provider for Microsoft Access|  
 |Microsoft Excel 파일|Excel 2010 이상|.xlsx, xlsm, .xlsb, .xltx, .xltm|ACE 14 OLE DB 공급자|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서(workbook)|Microsoft SQL Server 2008 이상 Analysis Services|.xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> ([!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]가 설치된 SharePoint 팜에 게시된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에만 사용)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서(workbook)|Microsoft SQL Server 2008 이상 Analysis Services|.xlsx, xlsm, .xlsb, .xltx, .xltm|ASOLEDB 10.5<br /><br /> ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 가 설치된 SharePoint 팜에 게시된 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 통합 문서에만 사용)|  
 |Analysis Services 큐브|Microsoft SQL Server 2008 이상 Analysis Services|(해당 사항 없음)|ASOLEDB 10|  
 |데이터 피드<br /><br /> (Reporting Services 보고서, Atom 서비스 문서, Microsoft Azure Marketplace DataMarket 및 단일 데이터 피드에서 데이터를 가져오는 데 사용됨)|Atom 1.0 형식<br /><br /> 모든 데이터베이스 또는 WCF(Windows Communication Foundation) 데이터 서비스(이전 ADO.NET Data Services)로 노출되는 문서입니다.|하나 이상의 피드를 정의하는 서비스 문서용 .atomsvc<br /><br /> Atom 웹 피드 문서용 .atom|Microsoft Data Feed Provider for [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework 데이터 피드 데이터 공급자 - [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
 |Office 데이터베이스 연결 파일||.odc||  
@@ -66,8 +71,9 @@ Teradata 관계형 데이터베이스    |  Teradata V2R6 이상     | .Net Data
   
 OLE DB 공급자는 경우에 따라 대량 데이터를 위해 더욱 빠른 성능을 제공할 수도 있습니다. 동일한 데이터 원본에 대해 여러 공급자 중에서 하나를 선택하는 경우 OLE DB 공급자를 먼저 사용해 보는 것이 좋습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
- [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)  
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)  
   
   
+

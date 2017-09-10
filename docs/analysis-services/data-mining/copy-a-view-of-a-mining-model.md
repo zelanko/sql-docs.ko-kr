@@ -1,27 +1,32 @@
 ---
 title: "마이닝 모델의 뷰 복사 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "클립보드 [데이터 마이닝]"
-  - "마이닝 모델 뷰어 [Analysis Services], 클립보드"
-  - "클립보드에 마이닝 모델 복사"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- clipboards [data mining]
+- Mining Model Viewer [Analysis Services], clipboards
+- copying mining models to clipboard
 ms.assetid: 768372db-e5b4-4990-b459-03d854fd9a6d
 caps.latest.revision: 38
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 353d9d48d8dc8fd6ca596935d96c01522467cdde
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 마이닝 모델의 뷰 복사
+# <a name="copy-a-view-of-a-mining-model"></a>마이닝 모델의 뷰 복사
   **데이터 마이닝 디자이너의** 마이닝 모델 뷰어 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 탭에서는 마이닝 모델 유형마다 별도의 뷰어가 사용됩니다. 이 중 몇몇 뷰어에는 내용을 클립보드로 복사하고 문서나 이미지 조작 소프트웨어에 붙여넣을 수 있는 구성 요소가 있습니다. 다음 구성 요소에서 이 기능을 사용할 수 있습니다.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터 뷰어와 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터 뷰어의 클러스터 다이어그램  
@@ -39,13 +44,13 @@ caps.handback.revision: 38
 > [!WARNING]  
 >  뷰어를 사용하여 모델을 복사할 경우 새 모델 개체가 만들어지지 않습니다. 새 모델을 만들려면 마법사 또는 데이터 마이닝 디자이너를 사용해야 합니다. 자세한 내용은 [마이닝 모델 복사본 만들기](../../analysis-services/data-mining/make-a-copy-of-a-mining-model.md)를 참조하세요.  
   
-### 전체 모델을 클립보드로 복사하려면  
+### <a name="to-copy-the-complete-model-to-the-clipboard"></a>전체 모델을 클립보드로 복사하려면  
   
 1.  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
   
 2.  **종속성 네트워크** 등의 적절한 탭을 선택하고 해당 탭의 도구 모음에서 **전체 그래프 복사** 를 클릭합니다.  
   
-### 모델의 표시되는 부분을 클립보드로 복사하려면  
+### <a name="to-copy-the-visible-piece-of-the-model-to-the-clipboard"></a>모델의 표시되는 부분을 클립보드로 복사하려면  
   
 1.  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
   
@@ -53,7 +58,7 @@ caps.handback.revision: 38
   
 3.  선택한 탭의 도구 모음에서 **그래프 뷰 복사** 를 클릭합니다.  
   
-### 마이닝 모델 콘텐츠를 클립보드로 복사하려면  
+### <a name="to-copy-the-mining-model-content-to-the-clipboard"></a>마이닝 모델 콘텐츠를 클립보드로 복사하려면  
   
 1.  **마이닝 모델 뷰어** 탭의 **마이닝 모델** 목록에서 보려는 마이닝 모델을 선택합니다.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 38
   
 5.  **노드 정보** 창을 마우스 오른쪽 단추로 다시 클릭한 다음 **복사**를 선택합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 모델 뷰어 태스크 및 방법](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

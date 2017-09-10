@@ -1,39 +1,44 @@
 ---
-title: "개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "메타데이터 [Analysis Services]"
-  - "권한 [Analysis Services], 메타데이터 읽기"
-  - "메타데이터 읽기 권한"
+title: "정의 읽기 권한 부여 (Analysis Services) 개체 메타 데이터에 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- metadata [Analysis Services]
+- permissions [Analysis Services], read metadata
+- read metadata permissions
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 55c4e6d43ffedd933e968e8fc2355871c698d290
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services)
+# <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>개체 메타데이터에 대한 정의 읽기 권한 부여(Analysis Services)
   선택한 개체에 대한 개체 정의 또는 메타데이터를 읽을 수 있는 권한을 통해 관리자는 개체 정의를 수정하거나 개체 구조를 수정하거나 개체에 대한 실제 데이터를 볼 수 있는 권한을 부여하지 않고도 개체 정보를 볼 수 있는 권한을 부여할 수 있습니다. **정의 읽기** 권한은 데이터베이스, 데이터 원본, 차원, 마이닝 구조 및 마이닝 모델 수준에서 부여할 수 있습니다. 큐브에 대한 **정의 읽기** 권한이 필요한 경우 데이터베이스에 대한 **정의 읽기** 를 사용하도록 설정해야 합니다. 권한은 부가적입니다. 예를 들어 한 역할이 큐브에 대한 메타데이터를 읽을 수 있는 권한을 부여하고 두 번째 역할은 동일한 사용자에게 차원에 대한 메타데이터를 읽을 수 있는 권한을 부여합니다. 이 경우 두 역할의 사용 권한이 결합하여 사용자는 큐브에 대한 메타데이터와 해당 데이터베이스 내의 차원에 대한 메타데이터를 읽을 수 있는 권한을 동시에 부여받습니다.  
   
 > [!NOTE]  
 >  데이터베이스의 메타데이터를 읽을 수 있는 권한은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하여 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]데이터베이스에 연결하는 데 필요한 최소 사용 권한입니다. 메타데이터를 읽을 권한이 있는 사용자는 DISCOVER_XML_METADATA 스키마 행 집합을 사용하여 개체를 쿼리하고 해당 메타데이터를 볼 수도 있습니다. 자세한 내용은 [DISCOVER_XML_METADATA 행 집합](../../analysis-services/schema-rowsets/xml/discover-xml-metadata-rowset.md)을 참조하세요.  
   
-## 데이터베이스에 대한 정의 읽기 권한 설정  
+## <a name="set-read-definition-permissions-on-a-database"></a>데이터베이스에 대한 정의 읽기 권한 설정  
  데이터베이스 메타데이터를 읽을 수 있는 권한을 부여하면 데이터베이스 내 모든 개체의 메타데이터를 읽을 수 있는 권한도 부여됩니다.  
   
- 전용 처리를 위해 역할을 설정할 때마다 데이터베이스 수준에서 **정의 읽기** 권한을 포함하는 것이 좋습니다. **정의 읽기** 권한이 있으면 관리자가 아닌 사용자도 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 모델의 개체 계층을 보고 후속 처리를 위해 개별 개체로 이동할 수 있습니다.  
+ 전용 처리를 위해 역할을 설정할 때마다 데이터베이스 수준에서 **정의 읽기** 권한을 포함하는 것이 좋습니다. **정의 읽기** 권한이 있으면 관리자가 아닌 사용자도 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 모델의 개체 계층을 보고 후속 처리를 위해 개별 개체로 이동할 수 있습니다.  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할**을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
   
 2.  **일반** 탭에서 **정의 읽기** 옵션을 선택합니다.  
   
@@ -41,9 +46,9 @@ caps.handback.revision: 32
   
 4.  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
   
-## 개별 개체에 대한 정의 읽기 권한 설정  
+## <a name="set-read-definition-permissions-on-individual-objects"></a>개별 개체에 대한 정의 읽기 권한 설정  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결하고 **데이터베이스** 폴더를 열고 데이터베이스를 선택하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할**을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스에 연결하고 **데이터베이스** 폴더를 열고 데이터베이스를 선택하고 개체 탐색기에서 해당 데이터베이스에 대한 **역할** 을 확장한 다음 데이터베이스 역할을 클릭하거나 새 데이터베이스 역할을 만듭니다.  
   
 2.  **일반** 창에서 **Read Definition**에 대한 데이터베이스 권한을 제거합니다. 이 단계는 사용 권한 상속을 제거하므로, 개별 개체에 대한 사용 권한을 설정할 수 있습니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 32
   
 5.  **확인** 을 클릭하여 역할 만들기를 마칩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md)   
  [처리 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   

@@ -1,55 +1,60 @@
 ---
 title: "일반 속성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "reference"
-helpviewer_keywords: 
-  - "IdleConnectionTimeout 속성"
-  - "InstanceVisible 속성"
-  - "TempDir 속성"
-  - "AdminTimeout 속성"
-  - "MinIdleSessionTimeout 속성"
-  - "MaxIdleSessionTimeout 속성"
-  - "IdleOrphanSessionTimeout 속성"
-  - "BackupDir 속성"
-  - "CommitTimeout 속성"
-  - "ExternalCommandTimeout 속성"
-  - "Enabled 속성"
-  - "ForceCommitTimeout 속성"
-  - "Port 속성"
-  - "CoordinatorShutdownMode 속성"
-  - "ServerTimeout 속성"
-  - "AllowedBrowsingFolders 속성"
-  - "CoordinatorCancelCount 속성"
-  - "DataDir 속성"
-  - "CoordinatorQueryMaxThreads 속성"
-  - "CoordinatorExecutionMode 속성"
-  - "ExternalConnectionTimeout 속성"
-  - "CollationName 속성"
-  - "EnableFast1033Locale 속성"
-  - "CoordinatorBuildMaxThreads 속성"
-  - "Language 속성"
-  - "StatisticsStoreSize 속성"
-  - "RepositoryConnectionString 속성"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: reference
+helpviewer_keywords:
+- IdleConnectionTimeout property
+- InstanceVisible property
+- TempDir property
+- AdminTimeout property
+- MinIdleSessionTimeout property
+- MaxIdleSessionTimeout property
+- IdleOrphanSessionTimeout property
+- BackupDir property
+- CommitTimeout property
+- ExternalCommandTimeout property
+- Enabled property
+- ForceCommitTimeout property
+- Port property
+- CoordinatorShutdownMode property
+- ServerTimeout property
+- AllowedBrowsingFolders property
+- CoordinatorCancelCount property
+- DataDir property
+- CoordinatorQueryMaxThreads property
+- CoordinatorExecutionMode property
+- ExternalConnectionTimeout property
+- CollationName property
+- EnableFast1033Locale property
+- CoordinatorBuildMaxThreads property
+- Language property
+- StatisticsStoreSize property
+- RepositoryConnectionString property
 ms.assetid: 88a8117c-396a-469f-a62d-c6f262504021
 caps.latest.revision: 31
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 007ace0dcec576b4a15909d470a701f442221788
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 일반 속성
+# <a name="general-properties"></a>일반 속성
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 이 항목에서는 msmdsrv.ini 파일의 서버 속성 중 보안, 네트워크, ThreadPool 등 특정 섹션에 포함되지 않은 속성에 대해 설명됩니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
  **적용 대상:** 다차원 및 테이블 형식 서버 모드(다르게 표시되지 않은 경우)  
   
-## 일반 범주  
+## <a name="non-specific-category"></a>일반 범주  
  **AdminTimeout**  
  관리자 제한 시간(초)을 정의하는 부호 있는 32비트 정수 속성입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 이 고급 속성을 변경하면 안 됩니다.  
   
@@ -73,15 +78,11 @@ caps.handback.revision: 29
  파티션 인덱스를 작성하도록 할당된 최대 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다. 메모리 사용을 늘리는 대신 파티션 인덱싱 속도를 높이려면 이 값을 늘리십시오. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  **CoordinatorCancelCount**  
- 내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오.  
-  
- 테이블 형식 서버 모드에서는**CoordinatorCancelCount** 가 무시됩니다.  
+ 내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오. 테이블 형식 서버 모드에서이 속성은 무시 됩니다.  
   
  **CoordinatorExecutionMode**  
  서버에서 시도하는 작업 처리 및 쿼리를 포함한 최대 병렬 작업 수를 정의하는 부호 있는 32비트 정수 속성입니다. 0으로 설정하면 내부 알고리즘에 따라 서버에서 작업 수를 결정합니다. 양수 값은 최대 작업 수의 합계를 나타냅니다. 음수 값은 부호를 반대로 하여 프로세서당 최대 작업 수를 나타냅니다.  
-  
- 테이블 형식 서버 모드에서는**CoordinatorExecutionMode** 가 무시됩니다.  
-  
+
  이 속성의 기본값은 -4로 프로세서당 4개의 병렬 작업으로 서버가 제한됩니다. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  **CoordinatorQueryMaxThreads**  
@@ -100,7 +101,7 @@ caps.handback.revision: 29
   
 |Value|설명|  
 |-----------|-----------------|  
-|0| 이 값은 기본값입니다.  이 설정은 MOLAP, HOLAP 및 ROLAP 저장소를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
+|0|이 값은 기본값입니다. 이 설정은 MOLAP, HOLAP 및 ROLAP 저장소를 사용하는 다차원 데이터베이스와 데이터 마이닝 모델에 서비스를 제공하는 데 사용되는 다차원 모드를 지정합니다.|  
 |1.|SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 배포의 일부로 설치된 Analysis Services 인스턴스를 지정합니다. SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치의 일부인 Analysis Services 인스턴스의 배포 모드 속성은 변경하지 마십시오. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 서버에서 더 이상 실행되지 않습니다.|  
 |2|메모리 내 저장소나 DirectQuery 저장소를 사용하는 테이블 형식 model 데이터베이스를 호스팅하는 데 사용되는 테이블 형식 모드를 지정합니다.|  
   
@@ -168,14 +169,14 @@ caps.handback.revision: 29
  **TempDir**  
  처리, 복원 및 기타 작업 중에 사용되는 임시 파일을 정의하기 위한 위치를 지정하는 문자열 속성입니다. 이 속성의 기본값은 설치 프로그램에 의해 결정됩니다. 지정하지 않는 경우의 기본값은 Data 디렉터리입니다.  
   
-## RequestPrioritization 범주  
+## <a name="requestprioritization-category"></a>RequestPrioritization 범주  
  **설정**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
  **StatisticsStoreSize**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
  [Analysis Services 인스턴스의 서버 모드 확인](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   

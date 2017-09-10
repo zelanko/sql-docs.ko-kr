@@ -1,27 +1,32 @@
 ---
-title: "테이블 추가(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "테이블 추가 (SSAS 테이블 형식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d713c432-db99-4983-acc1-52b0fdd58bd6
 caps.latest.revision: 5
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 5
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 8d68422844c6c5692ebfe362cb6e6d44400e705b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 테이블 추가(SSAS 테이블 형식)
+# <a name="add-a-table-ssas-tabular"></a>테이블 추가(SSAS 테이블 형식)
   이 항목에서는 이전에 데이터를 모델로 가져왔던 데이터 원본의 테이블을 추가하는 방법에 대해 설명합니다. 같은 데이터 원본의 테이블을 추가하려면 기존 데이터 원본 연결을 사용합니다. 단일 데이터 원본에서 임의 개수의 테이블을 가져올 때는 항상 단일 연결을 사용하는 것이 좋습니다.  
   
-### 기존 데이터 원본의 테이블을 추가하려면  
+### <a name="to-add-a-table-from-an-existing-data-source"></a>기존 데이터 원본의 테이블을 추가하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭한 다음 **기존 연결**을 클릭합니다.  
   
@@ -39,8 +44,8 @@ caps.handback.revision: 5
 > [!NOTE]  
 >  단일 데이터 원본에서 여러 테이블을 동시에 가져올 때는 원본에 있는 해당 테이블 간의 관계가 모델에서 자동으로 생성됩니다. 그러나 나중에 테이블을 추가할 때는 새로 추가한 테이블과 이전에 가져온 테이블 간에 모델에서 관계를 수동으로 만들어야 할 수 있습니다.  
   
-## 관련 항목:  
- [데이터 가져오기&#40;SSAS 테이블 형식&#41;](../Topic/Import%20Data%20\(SSAS%20Tabular\).md)   
+## <a name="see-also"></a>관련 항목:  
+ [데이터 가져오기&#40;SSAS 테이블 형식&#41;](http://msdn.microsoft.com/library/6617b2a2-9f69-433e-89e0-4c5dc92982cf)   
  [테이블 삭제&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/delete-a-table-ssas-tabular.md)  
   
   

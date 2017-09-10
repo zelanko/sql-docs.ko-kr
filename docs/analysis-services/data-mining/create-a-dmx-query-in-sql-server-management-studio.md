@@ -1,31 +1,36 @@
 ---
 title: "SQL Server Management Studio에서 DMX 쿼리 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "템플릿 [Analysis Services], 쿼리"
-  - "SQL Server Management Studio [Analysis Services], DMX 쿼리"
-  - "예측 [Analysis Services], DMX 예측 쿼리"
-  - "예측 [DMX]"
-  - "예측 쿼리 [DMX]"
-  - "쿼리 [DMX], 예측 쿼리"
-  - "마이닝 모델 [Analysis Services], DMX"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services], queries
+- SQL Server Management Studio [Analysis Services], DMX queries
+- predictions [Analysis Services], DMX prediction queries
+- predictions [DMX]
+- prediction queries [DMX]
+- queries [DMX], prediction queries
+- mining models [Analysis Services], DMX
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 caps.latest.revision: 43
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 43
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 51a8ea188eb54adf0ac208225dd7c5fda417178c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SQL Server Management Studio에서 DMX 쿼리 만들기
+# <a name="create-a-dmx-query-in-sql-server-management-studio"></a>SQL Server Management Studio에서 DMX 쿼리 만들기
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 마이닝 모델 및 마이닝 구조에 대해 예측 쿼리, 내용 쿼리 및 데이터 정의 쿼리를 작성하는 데 유용한 기능 집합이 있습니다.  
   
 -   그래픽 예측 쿼리 작성기는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 예측 쿼리를 작성하고 데이터 집합을 모델에 매핑하는 프로세스를 간소화하는 데 사용됩니다.  
@@ -49,7 +54,7 @@ caps.handback.revision: 43
   
  자주 실행하는 쿼리나 명령에 대한 사용자 지정 템플릿을 만들 수도 있습니다.  
   
-## XMLA 쿼리 템플릿  
+## <a name="xmla-query-templates"></a>XMLA 쿼리 템플릿  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 XMLA 쿼리에 대한 템플릿도 제공합니다.  
   
  XMLA와 DMX를 사용하여 수행할 수 있는 쿼리 유형은 일부 중첩됩니다. 예를 들어 DMX 또는 데이터 마이닝 스키마 행 집합을 사용하여 몇 가지 모델 내용 쿼리를 만들 수 있지만 스키마 행 집합에 DMX 내용 쿼리에 노출되지 않는 정보가 포함되어 있는 경우도 있습니다.  
@@ -58,19 +63,19 @@ caps.handback.revision: 43
   
 ##  <a name="BKMK_Building_Queries"></a> DMX 쿼리 작성 및 실행  
   
-#### 새 DMX 쿼리 창 열기  
+#### <a name="open-a-new-dmx-query-window"></a>새 DMX 쿼리 창 열기  
   
 1.  **에서** 새 쿼리 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]를 클릭한 다음 **새 Analysis Server DMX 쿼리**를 선택합니다.  
   
 2.  **서버에 연결** 대화 상자가 나타나면 작업할 마이닝 모델이 포함된 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 선택합니다.  
   
-#### 템플릿 탐색기 열기  
+#### <a name="open-template-explorer"></a>템플릿 탐색기 열기  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 선택합니다.  
   
 2.  **에 적용되는 템플릿을 트리 뷰로 보려면** Analysis Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 클릭합니다.  
   
-#### 쿼리를 작성할 템플릿을 적용합니다.  
+#### <a name="apply-a-template-to-build-a-query"></a>쿼리를 작성할 템플릿을 적용합니다.  
   
 -   적절한 쿼리 유형을 마우스 오른쪽 단추로 클릭하고 **열기**를 선택합니다.  
   
@@ -84,7 +89,7 @@ caps.handback.revision: 43
   
  [마이닝 모델에 내용 쿼리 만들기](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)   
  [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)  
   

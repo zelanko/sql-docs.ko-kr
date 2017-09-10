@@ -1,23 +1,28 @@
 ---
-title: "파워 피벗 모드에서 Analysis Services 설치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "setup-install"
-  - "setup-install"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "파워 피벗 모드에서 Analysis Services를 설치 합니다. | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- setup-install
+- setup-install
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: d3310562-82c1-454f-9c48-33a241749238
 caps.latest.revision: 40
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 38
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 035348a23627db2346d319c69030e74e128e744b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 파워 피벗 모드에서 Analysis Services 설치
+# <a name="install-analysis-services-in-power-pivot-mode"></a>파워 피벗 모드에서 Analysis Services 설치
   이 항목의 절차에서는 SharePoint를 배포하기 위한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버의 단일 서버 설치 단계를 안내합니다. 이 단계에는 SharePoint 중앙 관리를 사용하는 구성 태스크 및 SQL Server 설치 마법사의 실행이 포합됩니다.  
   
 ||  
@@ -51,7 +56,7 @@ caps.handback.revision: 38
   
 -   **중간 계층:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함한 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 환경 향상. 중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
-    -   [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2016&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
+    -   [설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2016)](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016.md)  
   
     -   [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -67,16 +72,16 @@ caps.handback.revision: 38
   
 3.  Office Online Server(SharePoint 2016) 또는 Excel Services(SharePoint 2013)와 동일한 Active Directory 포리스트의 도메인에 컴퓨터가 참가해야 합니다.  
   
-4.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 인스턴스 이름을 사용할 수 있어야 합니다. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드에서 Analysis Services를 설치 중인 컴퓨터에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]이라고 명명된 기존 인스턴스가 있어서는 안 됩니다.  
+4.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 인스턴스 이름을 사용할 수 있어야 합니다. [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]모드에서 Analysis Services를 설치 중인 컴퓨터에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 이라고 명명된 기존 인스턴스가 있어서는 안 됩니다.  
   
      **참고:** 인스턴스 이름은 POWERPIVOT여야 합니다.  
   
-5.  [SharePoint 모드의 Analysis Services 서버 하드웨어 및 소프트웨어 요구 사항](../Topic/Hardware%20and%20Software%20Requirements%20for%20Analysis%20Services%20Server%20in%20SharePoint%20Mode.md)을 검토하세요.  
+5.  [SharePoint 모드의 Analysis Services 서버 하드웨어 및 소프트웨어 요구 사항](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)을 검토하세요.  
   
 6.  [SQL Server 2016 Release Notes](../../../sql-server/sql-server-2016-release-notes.md)의 릴리스 정보를 검토하십시오.  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server 버전 요구 사항  
- 비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2016](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md) 및 [Editions and Components of SQL Server 2016](../../../sql-server/editions-and-components-of-sql-server-2016.md)를 참조하십시오.  
+ 비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 자세한 내용은 참조 [Analysis Services에서 지 원하는 기능 SQL Server 2016 버전](../../../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) 및 [버전 및 SQL Server 2016 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)합니다.  
   
 ##  <a name="InstallSQL"></a> 1단계: SharePoint용 Power Pivot 설치  
  이 단계에서는 SQL Server 설치 프로그램을 실행하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버를 설치합니다. 이후 단계에서는 통합 문서 데이터 모델에 이 서버를 사용하도록 Excel Services를 구성합니다.  
@@ -109,9 +114,9 @@ caps.handback.revision: 38
   
 12. **인스턴스 구성** 페이지에서 **명명된 인스턴스** 유형을 선택한 후 인스턴스 이름에 **POWERPIVOT** 을 입력하고 **다음**을 클릭합니다.  
   
-     ![SQL Setup - Instance Configuration Landing Page](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL Setup - Instance Configuration Landing Page")  
+     ![SQL 설치 프로그램-인스턴스 구성 페이지를 방문](../../../analysis-services/instances/install-windows/media/sql2016-pp-instance-config-landing-page.png "SQL 설치 프로그램-인스턴스 구성 페이지를 방문 합니다.")  
   
-13. **서버 구성** 페이지에서 자동 **시작 유형**에 대해 모든 서비스를 구성합니다. 다음 다이어그램의 **SQL Server Analysis Services**, **(1)**에 대해 원하는 도메인 계정과 암호를 지정합니다.  
+13. **서버 구성** 페이지에서 자동 **시작 유형**에 대해 모든 서비스를 구성합니다. 다음 다이어그램의 **SQL Server Analysis Services**, **(1)** 에 대해 원하는 도메인 계정과 암호를 지정합니다.  
   
     -   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 경우 **도메인 사용자** 계정 또는 **NetworkService** 계정을 사용할 수 있습니다. LocalSystem 또는 LocalService 계정을 사용하지 마세요.  
   
@@ -121,15 +126,15 @@ caps.handback.revision: 38
   
      **다음**을 선택합니다.  
   
-     ![SQL Setup - Server Configuration landing page](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL Setup - Server Configuration landing page")  
+     ![SQL 설치 프로그램-서버 구성 방문 페이지](../../../analysis-services/instances/install-windows/media/sql2016-pp-server-config-landing-page.png "SQL 설치 프로그램-서버 구성 방문 페이지")  
   
 14. [!INCLUDE[ssDE](../../../includes/ssde-md.md)]을 설치하는 경우 **데이터베이스 엔진 구성** 페이지가 나타납니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 구성에서 **현재 사용자 추가** 를 선택하여 사용자 계정에 데이터베이스 엔진 인스턴스에 대한 관리자 권한을 부여합니다.  
   
      **다음**을 선택합니다.  
   
-15.  **Analysis Services 구성** 페이지에서 **서버 모드** 아래에 있는 **PowerPivot 모드**를 선택합니다.  
+15. **Analysis Services 구성** 페이지에서 **서버 모드** 아래에 있는 **PowerPivot 모드**를 선택합니다.  
   
-     ![SQL Setup - Analysis Services Configuration Landing Page](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL Setup - Analysis Services Configuration Landing Page")  
+     ![SQL 설치 프로그램-Analysis Services 구성 페이지를 방문](../../../analysis-services/instances/install-windows/media/sql2016-pp-as-config-landing-page.png "SQL 설치 프로그램-Analysis Services 구성 페이지를 방문 합니다.")  
   
 16. **Analysis Services 구성** 페이지에서 **현재 사용자 추가** 를 선택하여 사용자 계정에 관리 권한을 부여합니다. 설치가 완료된 후 서버를 구성하려면 관리 권한이 필요합니다.  
   
@@ -152,7 +157,7 @@ caps.handback.revision: 38
   
 22. 사용자 환경에 방화벽이 있는 경우 SQL Server 온라인 설명서의 [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)항목을 검토하세요.  
   
-### SQL Server 설치 확인  
+### <a name="verify-the-sql-server-installation"></a>SQL Server 설치 확인  
  Analysis Services Service가 실행 중인지 확인합니다.  
   
 1.  Microsoft Windows에서 **시작**, **모든 프로그램**, **Microsoft SQL Server 2016** 그룹을 차례로 선택합니다.  
@@ -164,23 +169,23 @@ caps.handback.revision: 38
 ##  <a name="bkmk_config"></a> 2단계: Basic Analysis Services SharePoint 통합 구성  
  다음 단계에서는 SharePoint 문서 라이브러리에서 Excel 고급 데이터 모델과 상호 작용하는 데 필요한 구성 변경 내용에 대해 설명합니다. SharePoint 및 SQL Server Analysis Services를 설치한 후 이 단계를 수행합니다.  
   
-### SharePoint 2016  
+### <a name="sharepoint-2016"></a>SharePoint 2016  
  Excel 서비스는 SharePoint 2016에서 제거되었습니다. 그 대신 Office Online Server를 사용하여 Excel을 호스팅할 수 있습니다.  
   
-#### Office Online Server 컴퓨터에 Analysis Services에 대한 계정 관리 권한 부여  
+#### <a name="grant-office-online-server-machine-account-administration-rights-on-analysis-services"></a>Office Online Server 컴퓨터에 Analysis Services에 대한 계정 관리 권한 부여  
  Analysis Services를 설치하는 동안 Office Online Server 컴퓨터 계정을 Analysis Services 관리자로 추가했다면 이 섹션을 완료하지 않아도 됩니다.  
   
 1.  Analysis Services 서버에서 SQL Server Management Studio를 시작하고 Analysis Services 인스턴스에 연결합니다(예: `[MyServer]\POWERPIVOT`).  
   
 2.  개체 탐색기에서 인스턴스 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-     ![View Properties of an SSAS server](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "View Properties of an SSAS server")  
+     ![SSAS 서버 속성 보기](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS 서버 속성 보기")  
   
 3.  왼쪽 창에서 **보안**을 선택합니다. Office Online 서버가 설치된 컴퓨터 계정을 추가합니다.  
   
-     ![Security Settings of an SSAS Server](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "Security Settings of an SSAS Server")  
+     ![SSAS 서버의 보안 설정을](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 서버의 보안 설정")  
   
-#### Office Online 서버와 Analysis Services 서버를 등록합니다.  
+#### <a name="register-analysis-services-server-with-office-online-server"></a>Office Online 서버와 Analysis Services 서버를 등록합니다.  
  Office Online 서버에서 이러한 단계를 수행합니다.  
   
 -   관리자 권한으로 PowerShell 명령 창을 엽니다.  
@@ -193,22 +198,22 @@ caps.handback.revision: 38
   
      `New-OfficeWebAppsExcelBIServer -ServerId [MyServer]\POWERPIVOT]`  
   
-### SharePoint 2013  
+### <a name="sharepoint-2013"></a>SharePoint 2013  
   
-#### Analysis Services에 Excel Services 서버 관리 권한 부여  
+#### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Analysis Services에 Excel Services 서버 관리 권한 부여  
  Analysis Services를 설치하는 동안 Excel Services 응용 프로그램 서비스 계정을 Analysis Services 관리자로 추가했다면 이 섹션을 완료하지 않아도 됩니다.  
   
 1.  Analysis Services 서버에서 SQL Server Management Studio를 시작하고 Analysis Services 인스턴스에 연결합니다(예: `[MyServer]\POWERPIVOT`).  
   
 2.  개체 탐색기에서 인스턴스 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-     ![View Properties of an SSAS server](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "View Properties of an SSAS server")  
+     ![SSAS 서버 속성 보기](../../../analysis-services/instances/install-windows/media/as-ssms-proeprties.gif "SSAS 서버 속성 보기")  
   
 3.  왼쪽 창에서 **보안**을 선택합니다. 1단계에서 Excel Services 응용 프로그램에 대해 구성한 도메인 로그인을 추가합니다.  
   
-     ![Security Settings of an SSAS Server](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "Security Settings of an SSAS Server")  
+     ![SSAS 서버의 보안 설정을](../../../analysis-services/instances/install-windows/media/as-ssms-security.gif "SSAS 서버의 보안 설정")  
   
-#### Analysis Services 통합을 위한 Excel Services 구성  
+#### <a name="configure-excel-services-for-analysis-services-integration"></a>Analysis Services 통합을 위한 Excel Services 구성  
   
 1.  SharePoint 중앙 관리의 응용 프로그램 관리 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
   
@@ -278,13 +283,13 @@ caps.handback.revision: 38
 18. 통합 문서 이름을 선택하여 Excel Online에서 보고 슬라이서를 클릭하거나 이전에 추가한 필터를 변경합니다. 데이터 업데이트가 발생하면 Analysis Services가 설치되었고 Excel에 사용할 수 있음을 의미합니다. Excel에서 통합 문서를 여는 경우 Analysis Services 서버를 사용하지 않고 캐시된 복사본을 사용하게 됩니다.  
   
 ##  <a name="bkmk_firewall"></a> Analysis Services 액세스를 허용하도록 Windows 방화벽 구성  
- [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 항목에 있는 정보를 사용하여 방화벽의 포트 차단을 해제하여 Analysis Services 또는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]에 대한 액세스를 허용하도록 결정할 수 있습니다. 이 항목에서 제공하는 단계를 수행하여 포트와 방화벽 설정을 모두 구성할 수 있습니다. 실제로는 Analysis Services 서버에 대한 액세스를 허용하기 위해 이러한 단계를 함께 수행해야 합니다.  
+ [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 항목에 있는 정보를 사용하여 방화벽의 포트 차단을 해제하여 Analysis Services 또는 SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에 대한 액세스를 허용하도록 결정할 수 있습니다. 이 항목에서 제공하는 단계를 수행하여 포트와 방화벽 설정을 모두 구성할 수 있습니다. 실제로는 Analysis Services 서버에 대한 액세스를 허용하기 위해 이러한 단계를 함께 수행해야 합니다.  
   
 ##  <a name="bkmk_upgrade_workbook"></a> 통합 문서 업그레이드 및 예약된 데이터 새로 고침  
- 이전 버전의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서 만든 통합 문서를 업그레이드 하는 데 필요한 단계는 통합 문서를 만든 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 버전에 따라 달라집니다. 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 참조하세요.  
+ 이전 버전의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 에서 만든 통합 문서를 업그레이드 하는 데 필요한 단계는 통합 문서를 만든 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 의 버전에 따라 달라집니다. 자세한 내용은 [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)을 검토하세요.  
   
 ##  <a name="bkmk_multiple_servers"></a> 단일 서버 설치 그 이상 – Microsoft SharePoint용 Power Pivot  
- **WFE(웹 프런트 엔드)** 또는 **중간 계층:** 더 큰 SharePoint 팜에 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하고 팜에 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 설치하려면 각 SharePoint 서버에서 설치 관리자 패키지 **spPowerPivot16.msi(SharePoint 2016) 또는 spPowerPivot.msi(SharePoint 2013)**를 실행해야 합니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
+ **WFE(웹 프런트 엔드)** 또는 **중간 계층:**더 큰 SharePoint 팜에 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버를 사용하고 팜에 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 설치하려면 각 SharePoint 서버에서 설치 관리자 패키지 **spPowerPivot16.msi(SharePoint 2016) 또는 spPowerPivot.msi(SharePoint 2013)** 를 실행해야 합니다. spPowerPivot16.msi 또는 spPowerPivot.msi는 필요한 데이터 공급자와 SharePoint 2016 또는 2013용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치합니다.  
   
  중간 계층 설치 및 구성에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -298,15 +303,15 @@ caps.handback.revision: 38
   
  **중복 및 서버 부하:** [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드의 보조 또는 추가 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버를 설치하면 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버 기능이 중복됩니다. 또한 서버 간에 부하가 분산됩니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Excel Services에서 데이터 모델 처리를 위해 Analysis Services 구성(SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\))(http://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Excel Services에서 데이터 모델 처리를 위해 Analysis Services 구성(SharePoint 2013)](http://technet.microsoft.com/library/jj614437\(v=office.15\)) (http://technet.microsoft.com/library/jj614437(v=office.15)).  
   
--   [Excel Services 데이터 모델 설정 관리(SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\))(http://technet.microsoft.com/library/jj219780(v=office.15)).  
+-   [Excel Services 데이터 모델 설정 관리(SharePoint 2013)](http://technet.microsoft.com/library/jj219780\(v=office.15\)) (http://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.png "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback)(https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint 설정](../../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정") [Microsoft SQL Server Connect를 통해 사용자 의견 및 담당자 정보 제출](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SharePoint 2013으로 파워 피벗 마이그레이션](../../../analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013.md)   
  [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
+ [통합 문서 및 예약 된 데이터 새로 고침 &#40; 업그레이드 SharePoint 2013 &#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
   

@@ -1,29 +1,34 @@
 ---
 title: "관계형 마이닝 구조 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "차원 [Analysis Services], 데이터 마이닝"
-  - "데이터 마이닝 [Analysis Services], 구조"
-  - "마이닝 구조 [Analysis Services], 만들기"
-  - "관계형 마이닝 모델 [Analysis Services]"
-  - "OLAP 마이닝 모델 [Analysis Services]"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], data mining
+- data mining [Analysis Services], structure
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
+- OLAP mining models [Analysis Services]
 ms.assetid: 5547d639-377d-4ca7-88fc-ce1f9e2babc5
 caps.latest.revision: 35
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 35
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 82fa652f76c1818ef6538b379723e7f91c8482ab
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 관계형 마이닝 구조 만들기
+# <a name="create-a-relational-mining-structure"></a>관계형 마이닝 구조 만들기
   대부분의 데이터 마이닝 모델은 관계형 데이터 원본을 기반으로 합니다. 관계형 데이터 마이닝 모델을 만들면 복잡하게 큐브를 만들 필요 없이 임시 데이터를 조합하여 모델을 학습 및 업데이트할 수 있는 이점이 있습니다.  
   
  관계형 마이닝 구조는 서로 다른 원본에서 데이터를 가져올 수 있습니다. 데이터를 데이터 원본 뷰의 일부로 정의할 수 있는 경우 원시 데이터를 테이블, 파일 또는 관계형 데이터베이스 시스템에 저장할 수 있습니다. 예를 들어 데이터가 Excel, SQL Server 데이터 웨어하우스 또는 SQL Server 보고 데이터베이스에 있거나 OLE DB 또는 ODBC 공급자를 통해 액세스하는 외부 원본에 있는 경우 관계형 마이닝 구조를 사용해야 합니다.  
@@ -42,7 +47,7 @@ caps.handback.revision: 35
   
  [드릴스루를 사용하는 이유 및 방법](#BKMK_DrillThru)  
   
-## 요구 사항  
+## <a name="requirements"></a>요구 사항  
  먼저 기존 데이터 원본이 있어야 합니다. 데이터 원본 디자이너를 사용하여 데이터 원본(없는 경우)을 설정할 수 있습니다. 자세한 내용은 [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)를 참조하세요.  
   
  그런 다음 데이터 원본 뷰 마법사를 사용하여 필요한 데이터를 단일 데이터 원본 뷰로 조합합니다. 데이터 원본 뷰를 사용하여 데이터를 선택, 변환, 필터링 또는 관리하는 방법에 대한 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
@@ -124,11 +129,11 @@ caps.handback.revision: 35
 > [!WARNING]  
 >  드릴스루를 사용하려면 마이닝 구조를 만들 때 드릴스루를 사용하도록 설정해야 합니다. 나중에 모델에서 속성을 설정하여 드릴스루를 사용하도록 설정할 수 있지만 마이닝 구조의 경우 이 옵션을 시작할 때 설정해야 합니다. 자세한 내용은 [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)를 참조하세요.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 디자이너](../../analysis-services/data-mining/data-mining-designer.md)   
- [데이터 마이닝 마법사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [데이터 마이닝 마법사 &#40; Analysis Services-데이터 마이닝 &#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)   
  [마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)   
- [마이닝 구조 및 구조 열의 속성](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
+ [마이닝 구조 및 구조 열에 대 한 속성](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)   
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

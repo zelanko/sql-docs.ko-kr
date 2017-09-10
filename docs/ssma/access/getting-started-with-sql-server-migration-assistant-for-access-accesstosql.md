@@ -23,14 +23,14 @@ helpviewer_keywords:
 - user interface overview
 ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
+author: Shamikg
+ms.author: Shamikg
 manager: murato
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: dfec6c6fdcf4640199c08190b558e68f63cfec1f
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 846d08c9226e6a34e0d0b3bbd5efab8c2548a469
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL) 시작

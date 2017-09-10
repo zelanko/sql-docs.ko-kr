@@ -1,27 +1,32 @@
 ---
 title: "큐브 공간 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c3a012b4-9ca0-4fb8-9c26-5ecc0e2e2b2b
 caps.latest.revision: 6
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 6
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 16c39c5d1699c69e7f2dc119e90ff975b637d74f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 큐브 공간
+# <a name="cube-space"></a>큐브 공간
   큐브 공간은 큐브 특성 계층의 멤버와 큐브의 측정값을 곱하여 생성된 공간입니다. 따라서 큐브 공간은 큐브의 모든 특성 계층 멤버와 큐브의 측정값을 곱한 결과의 조합으로 결정되며 큐브의 최대 크기를 정의합니다. 실제로는 조합이 불가능한 것으로 간주될 수도 있지만(예: 도시는 파리이고 국가는 잉글랜드, 스페인, 일본 또는 인도인 조합의 경우) 이 공간은 특성 계층 멤버의 가능한 모든 조합을 포함합니다.  
   
-## AUTOEXIST 및 큐브 공간  
+## <a name="autoexists-and-cube-space"></a>AUTOEXIST 및 큐브 공간  
  *AUTOEXIST* 의 개념은 이 큐브 공간을 실제로 존재하는 셀로 제한합니다. 한 차원에 있는 특성 계층의 멤버가 동일한 차원에 있는 다른 특성 계층의 멤버와 함께 존재하지 않을 수 있습니다.  
   
  예를 들어 City 특성 계층, Country 특성 계층 및 Internet Sales Amount 측정값이 있는 큐브에서 이 큐브의 공간에는 서로 함께 존재하는 멤버만 포함됩니다. 예를 들어 City 특성 계층에 New York, London, Paris, Tokyo 및 Melbourne이 포함되어 있고 Country 특성 계층에 United States, United Kingdom, France, Japan 및 Australia가 포함되어 있는 경우 Paris와 United States가 교차하는 지점의 공간(셀)은 해당 큐브 공간에 포함되지 않습니다.  
@@ -56,7 +61,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  0은 열 축을 지정하는 데 사용되었으며 열 축을 나타내는 axis(0)을 줄여 쓴 것입니다.  
   
- 앞의 쿼리는 쿼리의 각 특성 계층에서 서로 함께 존재하는 멤버의 셀만 반환합니다. 이전 쿼리는 [*(Crossjoin)(MDX)](../../../mdx/crossjoin-mdx.md) 함수의 새로운 * 변형을 사용하여 작성할 수도 있습니다.  
+ 앞의 쿼리는 쿼리의 각 특성 계층에서 서로 함께 존재하는 멤버의 셀만 반환합니다. 이전 쿼리는 [*(Crossjoin)(MDX)](../../../mdx/crossjoin-mdx-operator-reference.md) 함수의 새로운 * 변형을 사용하여 작성할 수도 있습니다.  
   
 ```  
 SELECT   
@@ -81,7 +86,7 @@ WHERE (Measures.[Internet Sales Amount],
   
  앞의 세 쿼리는 각각 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서 AUTOEXIST 동작이 미치는 영향을 보여 줍니다.  
   
-## 사용자 정의 계층 및 큐브 공간  
+## <a name="user-defined-hierarchies-and-cube-space"></a>사용자 정의 계층 및 큐브 공간  
  이 항목의 앞에 나온 예제에서는 특성 계층을 사용하여 큐브 공간 내의 위치를 정의합니다. 그러나 차원의 특성 계층에 따라 정의한 사용자 정의 계층을 사용하여 큐브 공간 내의 위치를 정의할 수도 있습니다. 사용자 정의 계층은 사용자가 큐브 데이터를 쉽게 찾을 수 있도록 디자인된 특성 계층의 한 계층입니다.  
   
  예를 들어 이전 섹션의 **CROSSJOIN** 쿼리를 다음과 같이 작성할 수도 있습니다.  
@@ -113,7 +118,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  **WITH** 키워드는 [CurrentMember(MDX)](../../../mdx/currentmember-mdx.md) 및 [Name(MDX)](../../../mdx/name-mdx.md) 함수와 함께 쿼리에 사용할 계산 멤버를 만드는 데 사용됩니다. 자세한 내용은 [기본 MDX 쿼리&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-query-mdx.md)를 참조하세요.  
+>  **WITH** 키워드는 [CurrentMember(MDX)](../../../mdx/currentmember-mdx.md) 및 [Name(MDX)](../../../mdx/name-mdx.md) 함수와 함께 쿼리에 사용할 계산 멤버를 만드는 데 사용됩니다. 자세한 내용은 [기본 MDX 쿼리&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)를 참조하세요.  
   
  앞의 쿼리에서는 State 특성 계층의 각 멤버와 관련된 Country 특성 계층의 멤버 이름이 반환됩니다. 이 경우 City 특성과 Country 특성 간의 특성 관계가 정의되어 있으므로 예상한 Country 멤버가 나타납니다. 그러나 동일한 차원의 특성 계층 간에 특성 관계가 정의되어 있지 않으면 (All) 멤버가 반환됩니다. 다음 쿼리에서는 이를 보여 줍니다.  
   
@@ -127,12 +132,12 @@ FROM [Adventure Works]
   
  이 쿼리에서는 Education과 City 간의 관계가 없으므로 (All) 멤버("All Customers")가 반환됩니다. 따라서 Education 특성 계층의 (All) 멤버는 Education 멤버가 명시적으로 지정되지 않은 경우 City 특성 계층이 관련된 모든 튜플에서 사용되는 Education 특성 계층의 기본 멤버입니다.  
   
-## 계산 컨텍스트  
+## <a name="calculation-context"></a>계산 컨텍스트  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [MDX의 주요 개념&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [튜플](../../../analysis-services/multidimensional-models/mdx/tuples.md)   
- [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [Autoexist](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
  [멤버, 튜플 및 집합 작업&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)   
  [보이는 값 합계 및 보이지 않는 값 합계](../../../analysis-services/multidimensional-models/mdx/visual-totals-and-non-visual-totals.md)   
  [MDX 언어 참조&#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   

@@ -1,32 +1,37 @@
 ---
 title: "새 OLAP 마이닝 구조 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "마이닝 구조 [Analysis Services], OLAP"
-  - "마이닝 구조 [Analysis Services], 만들기"
-  - "OLAP [Analysis Services], 마이닝 모델"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], OLAP
+- mining structures [Analysis Services], creating
+- OLAP [Analysis Services], mining models
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 caps.latest.revision: 32
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 32
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 41047907b0e53f6d17fc49a9734ed4b9a52817f1
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 새 OLAP 마이닝 구조 만들기
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
+# <a name="create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조 만들기
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 데이터 마이닝 마법사를 사용하여 다차원 모델의 데이터를 사용하는 마이닝 구조를 만들 수 있습니다. OLAP 큐브를 기반으로 하는 마이닝 모델은 팩트 테이블의 열과 값, 차원 및 측정값 그룹을 분석 특성으로 사용할 수 있습니다.  
   
-### 새 OLAP 마이닝 구조를 만들려면  
+### <a name="to-create-a-new-olap-mining-structure"></a>새 OLAP 마이닝 구조를 만들려면  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 **마이닝 구조** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 마이닝 구조**를 클릭하여 데이터 마이닝 마법사를 엽니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 솔루션 탐색기에서 **프로젝트의** 마이닝 구조 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭하고 **새 마이닝 구조** 를 클릭하여 데이터 마이닝 마법사를 엽니다.  
   
 2.  **데이터 마이닝 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 32
   
      중첩된 데이터를 추가하는 경우 다음과 같은 두 개의 추가 열을 지정해야 합니다.  
   
-    -   중첩 테이블의 키: 이 열은 **중첩 테이블 키 선택** 페이지에서 미리 선택되어야 합니다.  
+    -   중첩 테이블의 키: 이 열은 **중첩 테이블 키 선택**페이지에서 미리 선택되어야 합니다.  
   
     -   분석에 사용할 특성: **중첩 테이블 열 선택**페이지에서 중첩 테이블 선택 항목의 특성 및 측정값 목록을 제공합니다.  
   
@@ -129,7 +134,7 @@ caps.handback.revision: 32
   
      **마이닝 모델 차원을 사용하여 큐브 만들기**: 이 확인란을 선택하고 새 큐브의 이름을 제공합니다. 이 옵션을 사용하면 구조를 작성하는 데 사용된 기존 차원과 모델의 결과가 포함된 새 데이터 마이닝 차원이 모두 포함된 새 큐브가 만들어집니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

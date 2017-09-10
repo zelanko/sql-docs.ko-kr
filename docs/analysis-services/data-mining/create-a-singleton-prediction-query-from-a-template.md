@@ -1,25 +1,30 @@
 ---
-title: "템플릿에서 단일 예측 쿼리 작성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "단일 쿼리 예측 [DMX]"
+title: "템플릿에서 단일 예측 쿼리 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- singleton query predictions [DMX]
 ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c54b65567095408f66c01d22b7f39d839ae939b2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 템플릿에서 단일 예측 쿼리 작성
+# <a name="create-a-singleton-prediction-query-from-a-template"></a>템플릿에서 단일 예측 쿼리 작성
   단일 쿼리는 예측에 사용하려는 모델이 있지만 이 모델을 외부 입력 데이터 집합에 매핑하거나 대량 예측을 수행하지는 않으려는 경우에 유용합니다. 단일 쿼리를 사용하면 모델에 값을 제공하고 바로 예측된 값을 볼 수 있습니다.  
   
  예를 들어 다음 DMX 쿼리는 타겟 메일링 모델인 TM_Decision_Tree에 대한 단일 쿼리를 나타냅니다.  
@@ -33,13 +38,13 @@ AS [t]
   
  다음 절차에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 템플릿 탐색기를 사용하여 이 쿼리를 빠르게 만드는 방법을 설명합니다.  
   
-### SQL Server Management Studio에서 Analysis Services 템플릿을 열려면  
+### <a name="to-open-the-analysis-services-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 Analysis Services 템플릿을 열려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **보기** 메뉴에서 **템플릿 탐색기**를 클릭합니다.  
   
 2.  큐브 아이콘을 클릭하여 **Analysis Services**템플릿을 엽니다.  
   
-### 예측 쿼리 템플릿을 열려면  
+### <a name="to-open-a-prediction-query-template"></a>예측 쿼리 템플릿을 열려면  
   
 1.  **템플릿 탐색기**의 Analysis Server 템플릿 목록에서 **DMX**, **예측 쿼리**를 차례로 확장합니다.  
   
@@ -51,7 +56,7 @@ AS [t]
   
 5.  데이터 마이닝 함수 및 데이터 마이닝 구조/관련 모델 목록을 포함하는 마이닝 모델 개체 브라우저와 함께 템플릿이 지정 데이터베이스에서 열립니다.  
   
-### 단일 쿼리 템플릿을 사용자 지정하려면  
+### <a name="to-customize-the-singleton-query-template"></a>단일 쿼리 템플릿을 사용자 지정하려면  
   
 1.  템플릿에서 **사용 가능한 데이터베이스** 드롭다운 목록을 클릭한 다음 목록에서 Analysis Services 인스턴스를 선택합니다.  
   
@@ -92,7 +97,7 @@ AS [t]
   
 11. **실행**을 클릭합니다.  
   
-## 관련 항목:  
- [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](../Topic/Creating%20Predictions%20\(Basic%20Data%20Mining%20Tutorial\).md)  
+## <a name="see-also"></a>관련 항목:  
+ [예측 만들기&#40;기본 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/a8410ed2-bb98-4d51-a9eb-b239be1201c2)  
   
   

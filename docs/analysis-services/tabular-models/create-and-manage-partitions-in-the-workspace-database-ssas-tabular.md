@@ -1,26 +1,31 @@
 ---
-title: "작업 영역 데이터베이스에서 파티션 만들기 및 관리(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.partitionmgr.f1"
+title: "작업 영역 데이터베이스 (SSAS 테이블 형식)에서 파티션 만들기 및 관리 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.partitionmgr.f1
 ms.assetid: 0b3027d6-652b-4eb3-a197-58b25df65218
 caps.latest.revision: 15
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 15
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 737b5220666edbbb481f0e50671b65e5a55a1de5
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 작업 영역 데이터베이스에서 파티션 만들기 및 관리(SSAS 테이블 형식)
+# <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>작업 영역 데이터베이스에서 파티션 만들기 및 관리(SSAS 테이블 형식)
   파티션은 테이블을 논리적 부분으로 나눕니다. 각 파티션은 다른 파티션에 독립적으로 또는 병렬로 처리(새로 고침)할 수 있습니다. 파티션은 확장성 및 대형 데이터베이스의 관리 효율성을 높일 수 있습니다. 기본적으로 각 테이블에는 모든 열을 포함하는 파티션이 하나 있습니다. 이 항목의 태스크에서는 **의** 파티션 관리자 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]  
   
  다른 Analysis Services 인스턴스로 모델을 배포한 후 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 (배포된) 모델에서 파티션을 만들고 관리할 수 있습니다. 자세한 내용은 [테이블 형식 모델 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)를 참조하세요.  
@@ -36,7 +41,7 @@ caps.handback.revision: 15
 > [!NOTE]  
 >  파티션 관리자 대화 상자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 병합할 수 없습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]만을 사용하여 배포된 모델에서 파티션을 병합할 수 있습니다.  
   
-## 태스크  
+## <a name="tasks"></a>태스크  
  파티션을 만들고 관리하려면 **파티션 관리자** 대화 상자를 사용해야 합니다. **파티션 관리자** 대화 상자를 확인하려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **테이블** 메뉴를 클릭한 다음 **파티션**을 클릭합니다.  
   
 ###  <a name="bkmk_create_new"></a> 새 파티션을 만들려면  
@@ -69,7 +74,7 @@ caps.handback.revision: 15
   
 2.  **파티션** 목록에서 삭제할 파티션을 선택한 다음 **삭제**를 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [파티션&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [작업 영역 데이터베이스에서 파티션 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-partitions-in-the-workspace-databse-ssas-tabular.md)  
   

@@ -1,29 +1,34 @@
 ---
-title: "계산 멤버 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "계산 멤버 [Analysis Services]"
-  - "사용자 지정 측정값 [Analysis Services]"
-  - "멤버 [Analysis Services], 계산됨"
-  - "계산 [Analysis Services], 계산 멤버"
+title: "계산된 멤버 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- calculated members [Analysis Services]
+- custom measures [Analysis Services]
+- members [Analysis Services], calculated
+- calculations [Analysis Services], calculated members
 ms.assetid: 820e4b18-9c3a-4b12-a126-ca16d8364a00
 caps.latest.revision: 26
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 26
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 73feb8d67594c4967fa0ecb0050783b970e58726
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 계산 멤버 만들기
+# <a name="create-calculated-members"></a>계산 멤버 만들기
   큐브 데이터, 산술 연산자, 숫자 및 함수 등을 결합하여 계산 멤버라고 하는 사용자 지정 측정값 또는 차원 멤버를 만들 수 있습니다. 예를 들어 기존 달러 측정값을 환율과 곱해서 달러를 유로로 환산하는 Euros라는 계산 멤버를 만들 수 있습니다. 그런 다음 Euros를 별도의 행이나 열로 최종 사용자에게 표시할 수 있습니다.  
   
  계산 멤버의 정의는 저장되지만, 값은 메모리에만 존재합니다. 위의 예에서는 유로 값이 최종 사용자에게 표시되기만 하고 큐브 데이터로 저장되지는 않습니다.  
@@ -39,7 +44,7 @@ caps.handback.revision: 26
  또 다른 방법으로, 차원이 아닌 측정값에 계산 멤버를 포함할 수도 있습니다. 또한 이 옵션은 새로운 열 또는 행 머리글을 제공하지만, 이것은 브라우저에서 측정값에 첨부됩니다.  
   
  **부모 멤버**  
- 계산 멤버를 포함할 부모 멤버를 선택하려면 **변경**을 클릭합니다. 한 수준으로 이루어진 계층 또는 측정값을 부모 차원으로 선택하는 경우에는 이 옵션을 사용할 수 없습니다.  
+ 계산 멤버를 포함할 부모 멤버를 선택하려면 **변경** 을 클릭합니다. 한 수준으로 이루어진 계층 또는 측정값을 부모 차원으로 선택하는 경우에는 이 옵션을 사용할 수 없습니다.  
   
  계층은 멤버가 포함된 여러 개의 수준으로 나누어집니다. 각 멤버는 열 머리글을 만듭니다. 최종 사용자는 큐브 데이터를 찾아보는 동안 선택한 머리글로부터 이전에 표시되지 않은 종속 머리글로 드릴다운할 수 있습니다. 계산 멤버의 머리글은 선택한 부모 멤버 바로 아래 수준에서 추가됩니다.  
   
@@ -76,12 +81,12 @@ caps.handback.revision: 26
   
  **계산 도구** 창의 **메타데이터** 탭에서 계산 식 창의 **식** 상자로 큐브 구성 요소를 복사하거나 끌어올 수 있습니다. **계산 도구** 창의 **함수** 탭에서 계산 식 창의 **식** 상자로 함수를 복사하거나 끌어올 수 있습니다.  
   
-## 계산 멤버 접근성  
+## <a name="addressing-calculated-members"></a>계산 멤버 접근성  
  **큐브 디자이너** 의 **계산**탭에서 계산 멤버를 만들 때 계산 멤버가 저장된 부모 계층을 지정합니다. 다음 규칙에 따라 부모 계층은 계산 멤버에 접근하는 방법을 결정합니다.  
   
 -   계산 멤버가 측정값 차원에서 생성되는 경우 해당 차원에서 계산 멤버에 접근할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [다차원 모델의 계산](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

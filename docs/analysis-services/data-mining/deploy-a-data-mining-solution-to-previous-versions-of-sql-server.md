@@ -1,31 +1,36 @@
 ---
-title: "데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/13/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "이전 버전과의 호환성 [Analysis Services]"
-  - "홀드아웃 [데이터 마이닝]"
-  - "배포 [Analysis Services]"
-  - "시계열 [Analysis Services]"
-  - "배포 [Analysis Services - 데이터 마이닝]"
-  - "동기화 [Analysis Services]"
-  - "배포 [Analysis Services]"
+title: "이전 버전의 SQL Server 데이터 마이닝 솔루션을 배포 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/13/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- backward compatibility [Analysis Services]
+- holdout [data mining]
+- deploy [Analysis Services]
+- time series [Analysis Services]
+- deploying [Analysis Services - data mining]
+- synchronization [Analysis Services]
+- deployment [Analysis Services]
 ms.assetid: 2715c245-f206-43af-8bf5-e6bd2585477a
 caps.latest.revision: 16
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 16
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: d56f2cdd207e7d50584b08b5ebcae77bd9057b36
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
+# <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>데이터 마이닝 솔루션을 이전 버전의 SQL Server에 배포
   이 섹션에서는 [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 인스턴스에서 만든 데이터 마이닝 모델이나 데이터 마이닝 구조를 SQL Server 2005 Analysis Services를 사용하는 데이터베이스에 배포하려고 하거나 SQL Server 2005에서 만든 모델을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]인스턴스에 배포할 때 발생할 수 있는 알려진 호환성 문제에 대해 설명합니다.  
   
  SQL Server 2000 Analysis Services 인스턴스로의 배포는 지원되지 않습니다.  
@@ -56,14 +61,14 @@ caps.handback.revision: 16
  모델의 데이터 원본에 사용되는 공급자가 SQL Client Data Provider 10이면 데이터 원본 정의도 수정하여 이전 버전의 SQL Server Native Client를 지정해야 합니다. 그렇지 않으면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 공급자가 등록되지 않았다는 오류가 생성됩니다.  
   
 ##  <a name="bkmk_Holdout"></a> 홀드아웃이 있는 모델 배포  
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 를 사용하여 데이터 마이닝 모델의 테스트에 사용되는 홀드아웃 파티션이 포함된 마이닝 구조를 만들면 이 마이닝 구조를 SQL Server 2005 인스턴스에 배포할 수 있지만 파티션 정보는 손실됩니다.  
+ 데이터 마이닝 모델 테스트에 사용 되는 홀드 아웃 파티션이 포함 된 마이닝 구조를 만드는 경우 마이닝 구조를 SQL Server 2005 인스턴스에 배포할 수 있지만 파티션 정보는 손실 됩니다.  
   
  SQL Server 2005 Analysis Services에서 마이닝 구조를 열면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 에서 오류가 발생하고 홀드아웃 파티션이 제거된 구조가 다시 생성됩니다.  
   
- 구조가 다시 작성된 후에는 속성 창에서 홀드아웃 파티션의 크기를 더 이상 사용할 수 없습니다. 그러나 \<ddl100_100:HoldoutMaxPercent>30\</ddl100_100:HoldoutMaxPercent> 값은 ASSL 스크립트 파일에 계속 표시될 수 있습니다.  
+ 구조 다시 작성 후 홀드 아웃 파티션의 크기를 더 이상 사용할 수; 속성 창에서 그러나 값 \<ddl100_100: > 30\</ddl100_100:HoldoutMaxPercent >)은 ASSL 스크립트 파일에 있는 수 있습니다.  
   
 ##  <a name="bkmk_Filter"></a> 필터가 있는 모델 배포  
- [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] 를 사용하여 마이닝 모델에 필터를 적용하는 경우 SQL Server 2005 인스턴스에 모델을 배포할 수 있지만 필터는 적용되지 않습니다.  
+ 마이닝 모델에 필터를 적용 하는 경우 SQL Server 2005 인스턴스에 모델을 배포할 수 있습니다 하지만 필터가 적용 되지 않습니다.  
   
  마이닝 모델을 열면 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 오류가 발생하고 필터가 제거된 모델이 다시 생성됩니다.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 16
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 동기화하려고 하면 서버에서 오류를 반환하고 데이터베이스 동기화가 실패합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 이전 버전과의 호환성](../../analysis-services/analysis-services-backward-compatibility.md)  
   
   

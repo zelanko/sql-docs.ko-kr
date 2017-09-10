@@ -1,30 +1,35 @@
 ---
 title: "교차 유효성 검사 수식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 caps.latest.revision: 9
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9ae8b6960e04fbbe04a7a536cc75c361d36c907f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 교차 유효성 검사 수식
+# <a name="cross-validation-formulas"></a>교차 유효성 검사 수식
   교차 유효성 검사 보고서를 생성하면 마이닝 모델의 유형(모델을 만드는 데 사용된 알고리즘), 예측 가능한 특성의 데이터 형식 및 예측 가능한 특성 값(있는 경우)에 따라 각 모델에 대한 정확도 측정값이 포함됩니다.  
   
  이 섹션에서는 교차 유효성 검사 보고서에 사용되는 측정값을 보여 주고 해당 계산 방법에 대해 설명합니다.  
   
  모델 유형별 정확도 측정값을 분석하는 방법은 [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)을 참조하세요.  
   
-## 교차 유효성 검사 측정값에 사용되는 수식  
+## <a name="formulas-used-for-cross-validation-measures"></a>교차 유효성 검사 측정값에 사용되는 수식  
   
 > [!NOTE]  
 >  **중요:** 이러한 정확도 측정값은 각 대상 특성에 대해 계산됩니다. 각 특성에 대해 대상 값을 지정하거나 생략할 수 있습니다. 데이터 집합의 사례에 대상 특성의 값이 없는 경우 이러한 사례는 *누락 값*이라는 특수한 값을 가지고 있는 것으로 간주됩니다. 값이 누락된 행은 특정 대상 특성에 대한 정확도 측정값을 계산할 때 계산되지 않습니다. 점수는 각 특성에 대해 개별적으로 계산되므로 대상 특성의 값은 있지만 다른 특성의 값은 누락된 경우 대상 특성의 점수가 영향을 받지 않습니다.  
@@ -44,7 +49,7 @@ caps.handback.revision: 9
 |**제곱 평균 오차**|불연속 특성. 대상 값을 지정할 수 있지만 대상 값이 필수 항목은 아닙니다.|파티션의 사례 수로 나눈 확률 점수의 보수에 대한 제곱 평균의 제곱근으로, 대상 특성 값이 누락된 행은 제외됩니다.|  
 |**제곱 평균 오차**|불연속 특성(지정된 대상 없음)|파티션의 사례 수로 나눈 확률 점수의 보수에 대한 제곱 평균의 제곱근으로, 대상 특성 값이 누락된 사례는 제외됩니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [교차 유효성 검사&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   

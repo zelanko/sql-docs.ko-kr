@@ -1,31 +1,36 @@
 ---
-title: "Analysis Services 프로젝트 만들기(SSDT) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "템플릿 [Analysis Services]"
-  - "템플릿 [Analysis Services], 프로젝트"
-  - "프로젝트 [Analysis Services], 만들기"
-  - "프로젝트 [Analysis Services], Business Intelligence Development Studio"
-  - "Business Intelligence Development Studio, 프로젝트 정의 [Analysis Services]"
-  - "항목 [Analysis Services]"
+title: "Analysis Services 프로젝트 만들기 (SSDT) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- templates [Analysis Services]
+- templates [Analysis Services], projects
+- projects [Analysis Services], creating
+- projects [Analysis Services], Business Intelligence Development Studio
+- Business Intelligence Development Studio, defining projects [Analysis Services]
+- items [Analysis Services]
 ms.assetid: d00913b0-cd6d-4de0-a1e7-4ce86fcc078d
 caps.latest.revision: 37
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 37
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 25b3c2bf3c86f69e9333b5e62541bbcfbbc877ea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# Analysis Services 프로젝트 만들기(SSDT)
+# <a name="create-an-analysis-services-project-ssdt"></a>Analysis Services 프로젝트 만들기(SSDT)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 템플릿을 사용하거나 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스 가져오기 마법사를 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스의 내용을 읽어서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 정의할 수 있습니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에 현재 로드된 솔루션이 없는 경우 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만들면 자동으로 새 솔루션이 생성됩니다. 로드된 솔루션이 있으면 새로운 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트가 기존 솔루션에 추가됩니다. 솔루션을 개발하는 가장 좋은 방법은 응용 프로그램 데이터 유형별로 다른 개별 프로젝트를 만들어 프로젝트와 관련 있는 단일 솔루션을 사용하는 것입니다. 예를 들어 동일한 비즈니스 응용 프로그램에 사용되는 Integration Services 패키지, Analysis Services 데이터베이스 및 Reporting Services 보고서에 대해 별도의 프로젝트를 포함하는 단일 솔루션을 사용할 수 있습니다.  
   
  Analysis Services 프로젝트는 단일 Analysis Services 데이터베이스에 사용되는 개체를 포함합니다. 프로젝트의 배포 속성은 프로젝트 메타데이터가 인스턴스화된 개체로 배포될 서버 및 데이터베이스 이름을 지정합니다.  
@@ -55,7 +60,7 @@ caps.handback.revision: 37
   
 3.  **이름** 입력란에 프로젝트 이름을 입력합니다. 입력한 이름이 기본 데이터베이스 이름으로 사용됩니다.  
   
-4.  **위치** 드롭다운 목록에서 프로젝트 파일을 저장할 폴더를 입력 또는 선택하거나 **찾아보기**를 클릭하여 폴더를 선택합니다.  
+4.  **위치** 드롭다운 목록에서 프로젝트 파일을 저장할 폴더를 입력 또는 선택하거나 **찾아보기** 를 클릭하여 폴더를 선택합니다.  
   
 5.  기존 솔루션에 새 프로젝트를 추가하려면 **솔루션** 드롭다운 목록에서 **솔루션에 추가**를 선택합니다.  
   
@@ -76,7 +81,7 @@ caps.handback.revision: 37
   
 2.  **새 프로젝트** 대화 상자의 **Visual Studio에 설치되어 있는 템플릿** 범주에서 **Analysis Services 데이터베이스 가져오기**를 선택합니다.  
   
-3.  파일의 이름과 위치를 포함하여 프로젝트 및 솔루션에 대한 속성 정보를 입력합니다.  **확인**을 클릭합니다.  
+3.  파일의 이름과 위치를 포함하여 프로젝트 및 솔루션에 대한 속성 정보를 입력합니다. **확인**을 클릭합니다.  
   
 4.  **Analysis Services 데이터베이스 가져오기 마법사 시작** 페이지에서 **다음**을 클릭합니다.  
   
@@ -95,7 +100,7 @@ caps.handback.revision: 37
   
  솔루션에 기존 프로젝트를 추가하면 프로젝트가 솔루션에 연결되지만 복사되지는 않습니다. Analysis Services 프로젝트를 다른 솔루션에서 만들었을 경우 프로젝트 파일이 프로젝트를 만든 원본 솔루션과 함께 유지됩니다. 따라서 어느 솔루션을 통해 프로젝트를 변경하더라도 변경 사항이 동일한 원본 파일 집합에 적용됩니다. 이 동작을 원하지 않는 경우 프로젝트 파일을 새 솔루션 폴더로 복사 또는 이동한 다음 솔루션에 프로젝트를 추가해야 합니다.  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 솔루션을 엽니다. 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **기존 프로젝트**를 클릭하여 추가할 프로젝트를 선택합니다.  
+1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 솔루션을 엽니다. 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **기존 프로젝트** 를 클릭하여 추가할 프로젝트를 선택합니다.  
   
 2.  솔루션에 추가할 .dwproj 파일을 선택합니다.  
   
@@ -137,7 +142,7 @@ caps.handback.revision: 37
 |---------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 정의 파일(.dwproj)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 정의 및 포함된 항목, 구성 및 어셈블리 참조에 대한 메타데이터를 포함합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트 사용자 설정(.dwproj.user)|특정 사용자의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 대한 구성 정보를 포함합니다.|  
-|데이터 원본 파일(.ds)|데이터 원본에 대한 메타데이터를 정의하는 ASSL([!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 요소를 포함합니다.|  
+|데이터 원본 파일(.ds)|데이터 원본에 대한 메타데이터를 정의하는 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 요소를 포함합니다.|  
 |데이터 원본 뷰 파일(.dsv)|데이터 원본 뷰에 대한 메타데이터를 정의하는 ASSL 요소를 포함합니다.|  
 |큐브 파일(.cube)|측정값 그룹, 측정값 및 큐브 차원을 비롯하여 큐브에 대한 메타데이터를 정의하는 ASSL 요소를 포함합니다.|  
 |파티션 파일(.partitions)|지정한 큐브의 파티션에 대한 메타데이터를 정의하는 ASSL 요소를 포함합니다.|  
@@ -160,7 +165,7 @@ caps.handback.revision: 37
 ||차원|차원 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 데이터베이스 차원을 추가합니다.|  
 ||마이닝 구조|데이터 마이닝 마법사를 시작하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트에 새 마이닝 구조 및 관련 마이닝 모델을 추가합니다.|  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [Analysis Services 프로젝트 속성 구성&#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](../../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
  [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  

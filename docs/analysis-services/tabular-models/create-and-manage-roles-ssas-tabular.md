@@ -1,32 +1,37 @@
 ---
-title: "역할 만들기 및 관리(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.rolemanager.f1"
-  - "sql13.asvs.bidtoolset.roledb.f1"
+title: "역할 (SSAS 테이블 형식) 만들기 및 관리 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.rolemanager.f1
+- sql13.asvs.bidtoolset.roledb.f1
 ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5c625fce817af3072e059d5d2b1172383fcdafea
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 역할 만들기 및 관리(SSAS 테이블 형식)
+# <a name="create-and-manage-roles-ssas-tabular"></a>역할 만들기 및 관리(SSAS 테이블 형식)
   테이블 형식 모델에서 역할은 모델에 대한 멤버 권한을 정의합니다. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 역할 관리자 대화 상자를 사용하여 모델 프로젝트에 대해 역할을 정의합니다. 모델을 배포할 때 데이터베이스 관리자는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 역할을 관리할 수 있습니다.  
   
  이 항목의 태스크에서는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 역할 관리자 대화 상자를 사용하여 모델 제작 중에 역할을 만들고 관리하는 방법을 설명합니다. 배포된 model 데이터베이스에서 역할을 관리하는 방법은 [테이블 형식 모델 역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md)을 참조하세요.  
   
-## 태스크  
+## <a name="tasks"></a>태스크  
  역할을 만들고, 편집, 복사 및 삭제하려면 **역할 관리자** 대화 상자를 사용합니다. **역할 관리자** 대화 상자를 보려면 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]에서 **모델** 메뉴를 클릭한 다음 **역할 관리자**를 클릭합니다.  
   
 ###  <a name="bkmk_new_role"></a> 새 역할을 만들려면  
@@ -48,7 +53,7 @@ caps.handback.revision: 17
     |**InclusionThresholdSetting**|멤버는 모델 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|  
     |**읽기**|멤버는 행 필터를 기반으로 데이터를 쿼리할 수 있지만 모델 스키마를 변경할 수 없습니다.|  
     |**읽기 및 처리**|멤버는 행 수준 필터를 기반으로 데이터를 쿼리하고 처리 및 모두 처리 작업을 실행할 수 있지만 모델 스키마를 변경할 수 없습니다.|  
-    |** 처리 **|멤버는 처리 및 모두 처리 작업을 실행할 수 있습니다. 모델 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|  
+    |**처리**|멤버는 처리 및 모두 처리 작업을 실행할 수 있습니다. 모델 스키마를 수정할 수 없으며 데이터를 쿼리할 수 없습니다.|  
     |**관리자**|멤버는 모델 스키마를 수정할 수 있으며 모든 데이터를 쿼리할 수 있습니다.|  
   
 5.  역할에 대한 설명을 입력하려면 **설명** 필드를 클릭한 다음 설명을 입력합니다.  
@@ -64,11 +69,11 @@ caps.handback.revision: 17
   
 9. **확인**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [역할&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [큐브 뷰&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)   
- [Excel에서 분석&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
- [USERNAME 함수(DAX)](http://msdn.microsoft.com/ko-kr/22dddc4b-1648-4c89-8c93-f1151162b93f)   
- [CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/ko-kr/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
+ [Excel &#40;에서 분석 SSAS 테이블 형식 &#41;](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)   
+ [USERNAME 함수 (DAX)](http://msdn.microsoft.com/en-us/22dddc4b-1648-4c89-8c93-f1151162b93f)   
+ [CUSTOMDATA 함수(DAX)](http://msdn.microsoft.com/en-us/58235ad8-226c-43cc-8a69-5a52ac19dd4e)  
   
   

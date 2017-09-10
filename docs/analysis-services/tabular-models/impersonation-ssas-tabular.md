@@ -1,24 +1,29 @@
 ---
-title: "가장(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "가장 (SSAS 테이블 형식) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 caps.latest.revision: 20
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 20
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1bb694fef39accedea28b1c53576a7ebb161cc51
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 가장(SSAS 테이블 형식)
+# <a name="impersonation-ssas-tabular"></a>가장(SSAS 테이블 형식)
   이 항목에서는 테이블 형식의 모델 작성자를 대상으로 데이터 원본에 연결하여 데이터를 가져오고 처리(새로 고침)할 때 로그온 자격 증명이 Analysis Services에서 사용되는 방법에 대해 설명합니다.  
   
  이 문서에는 다음과 같은 섹션이 포함되어 있습니다.  
@@ -68,7 +73,7 @@ caps.handback.revision: 20
   
 |옵션|ImpersonationMode*|Description|  
 |------------|-------------------------|-----------------|  
-|**특정 Windows 사용자 이름 및 암호***\*|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 사용자 계정의 도메인과 이름은 **\<도메인 이름>\\<사용자 계정 이름\>** 형식을 사용합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
+|**특정 Windows 사용자 이름 및 암호***\*|ImpersonateWindowsUserAccount|이 옵션은 모델에서 Windows 사용자 계정을 사용하여 데이터 원본에서 데이터를 가져오거나 처리하도록 지정합니다. 다음과 같은 형식을 사용 하 여 도메인 및 사용자 계정의 이름을:**\<도메인 이름 >\\< 사용자 계정 이름을\>**합니다. 테이블 가져오기 마법사를 사용하여 새 모델을 만드는 경우의 기본 옵션입니다.|  
 |**서비스 계정**|ImpersonateServiceAccount|이 옵션은 모델에서 모델을 관리하는 Analysis Services 서비스 인스턴스와 연결된 보안 자격 증명을 사용하도록 지정합니다.|  
   
  *ImpersonationMode는 데이터 원본에서 [DataSourceImpersonationInfo 요소&#40;ASSL&#41;](../../analysis-services/scripting/properties/datasourceimpersonationinfo-element-assl.md) 속성에 대한 값을 지정합니다.  
@@ -82,7 +87,7 @@ caps.handback.revision: 20
 >  가장 자격 증명에 대한 Windows 사용자 계정과 암호를 지정하는 것이 좋습니다. Windows 사용자 계정은 데이터 원본에 연결하고 데이터 원본에서 데이터를 읽는 데 필요한 최소한의 권한을 사용하도록 구성할 수 있습니다.  
   
 ##  <a name="bkmk_imp_newmodel"></a> 모델을 가져오는 경우의 가장  
- 서로 다른 여러 가장 모드를 사용하여 out-of-process 데이터 수집을 지원할 수 있는 테이블 형식 모델과 달리 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에서는 ImpersonateCurrentUser 모드 하나만 사용합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]은 항상 in-process로 실행되므로 현재 로그온한 사용자의 자격 증명을 사용하여 데이터 원본에 연결합니다. 테이블 형식 모델을 사용하는 경우 현재 로그온한 사용자의 자격 증명은 테이블 가져오기 마법사의 **미리 보기 및 필터** 기능과 **테이블 속성**보기에서만 사용됩니다. 가장 자격 증명은 데이터를 작업 영역 데이터베이스로 가져오거나 처리하는 경우 또는 데이터를 배포된 model로 가져오거나 처리하는 경우에 사용됩니다.  
+ 서로 다른 여러 가장 모드를 사용하여 out-of-process 데이터 수집을 지원할 수 있는 테이블 형식 모델과 달리 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서는 ImpersonateCurrentUser 모드 하나만 사용합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 은 항상 in-process로 실행되므로 현재 로그온한 사용자의 자격 증명을 사용하여 데이터 원본에 연결합니다. 테이블 형식 모델을 사용하는 경우 현재 로그온한 사용자의 자격 증명은 테이블 가져오기 마법사의 **미리 보기 및 필터** 기능과 **테이블 속성**보기에서만 사용됩니다. 가장 자격 증명은 데이터를 작업 영역 데이터베이스로 가져오거나 처리하는 경우 또는 데이터를 배포된 model로 가져오거나 처리하는 경우에 사용됩니다.  
   
  기존 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 가져와서 새 모델을 만드는 경우 기본적으로 모델 디자이너는 서비스 계정을 사용하도록 가장을 구성합니다(ImpersonateServiceAccount). [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 Windows 사용자 계정으로 가져온 모델에 대한 가장 자격 증명을 변경하는 것이 좋습니다. 모델 디자이너에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 가져오고 새 모델을 만든 후 **기존 연결** 대화 상자를 사용하여 자격 증명을 변경할 수 있습니다.  
   
@@ -93,7 +98,7 @@ caps.handback.revision: 20
   
  Analysis Services 서버에 배포되는 모델의 경우 가장 정보는 SSMS의 **연결 속성** > **가장 정보**에서 구성할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-ssas-tabular.md)   
  [테이블 형식 모델 솔루션 배포&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  

@@ -1,5 +1,5 @@
 ---
-title: "배포 및 SQL Server Data Tools (SSRS)의 버전 지원 | Microsoft Docs"
+title: "배포 및 SQL Server Data Tools (SSDT)의 버전 지원 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 29df783121de48e39d824b9b9e9666d764717ebc
+ms.translationtype: MT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 173d2a355d1084b22bdc90643484dbab2568e0b0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/06/2017
 
 ---
-# <a name="deployment-and-version-support-in-sql-server-data-tools-ssrs"></a>SQL Server Data Tools의 배포 및 버전 지원(SSRS)
+# <a name="deployment-and-version-support-in-sql-server-data-tools-ssdt"></a>배포 및 SQL Server Data Tools (SSDT)의 버전 지원
   [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 는 다음과 같은 시나리오를 지원합니다.  
   
 -   보고서 정의(*.rdl) 및 보고서 서버 프로젝트(\*.rptproj) 열기  
@@ -78,3 +78,4 @@ ms.lasthandoff: 08/09/2017
  [데이터 원본 및 보고서 게시](../../reporting-services/reports/publishing-data-sources-and-reports.md)  
   
   
+

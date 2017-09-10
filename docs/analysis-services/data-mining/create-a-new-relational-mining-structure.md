@@ -1,32 +1,37 @@
 ---
 title: "새 관계형 마이닝 구조 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "마이닝 구조 [Analysis Services], 관계형"
-  - "마이닝 구조 [Analysis Services], 만들기"
-  - "관계형 마이닝 모델 [Analysis Services]"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- mining structures [Analysis Services], relational
+- mining structures [Analysis Services], creating
+- relational mining models [Analysis Services]
 ms.assetid: 55bac3bd-700e-4f91-bcc6-f3cd8c026da1
 caps.latest.revision: 29
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6784d7ab5e13d5e842794041589db515a6fd2a30
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 새 관계형 마이닝 구조 만들기
+# <a name="create-a-new-relational-mining-structure"></a>새 관계형 마이닝 구조 만들기
   데이터 마이닝 마법사를 사용하여 관계형 데이터베이스 또는 기타 원본의 데이터로 새 마이닝 구조를 만든 후 해당 구조와 모든 관련 모델을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 저장할 수 있습니다.  
   
-## 관계형 마이닝 구조를 만들려면  
+## <a name="to-create-a-relational-mining-structure"></a>관계형 마이닝 구조를 만들려면  
   
-1.  솔루션 탐색기에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 **마이닝 구조** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 마이닝 구조**를 클릭합니다.  
+1.  솔루션 탐색기에서 **프로젝트의** 마이닝 구조 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 폴더를 마우스 오른쪽 단추로 클릭하고 **새 마이닝 구조**를 클릭합니다.  
   
      데이터 마이닝 마법사가 열립니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 29
   
 11. **마법사 완료** 페이지에서 마이닝 구조의 이름과 생성될 관련 초기 마이닝 모델을 지정하고 **마침**을 클릭합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

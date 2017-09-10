@@ -1,27 +1,32 @@
 ---
 title: "데이터베이스 차원 정의 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "차원 [Analysis Services], 정의"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], defining
 ms.assetid: fe84588b-66a3-4100-a1cf-59b21b7adf01
 caps.latest.revision: 27
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 27
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: d57a877e5d332dfffc24ed6d3df14143ecae3442
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 데이터베이스 차원 정의
-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 기존 데이터베이스 차원을 구성할 수 있습니다. 차원 디자이너를 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
+# <a name="define-database-dimensions"></a>데이터베이스 차원 정의
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 차원 디자이너를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 기존 데이터베이스 차원을 구성할 수 있습니다. 차원 디자이너를 사용하여 수행할 수 있는 작업은 다음과 같습니다.  
   
 -   차원 수준 속성 구성  
   
@@ -37,7 +42,7 @@ caps.handback.revision: 27
   
  차원, 특성 또는 계층을 수정한 후 변경 내용을 보려면 해당 차원을 처리해야 합니다. 프로젝트 모드에서 작업하는 경우에는 처리하기 전에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 변경 내용을 배포합니다.  
   
- 차원 디자이너에서 차원을 여는 방법은 [솔루션 탐색기에서 데이터베이스 차원 수정 또는 삭제](../../analysis-services/multidimensional-models/modify-or-delete-a-database-dimension-in-solution-explorer.md)를 참조하세요.  
+ 차원 디자이너에서 차원을 여는 방법은 [솔루션 탐색기에서 데이터베이스 차원 수정 또는 삭제](../../analysis-services/multidimensional-models/database-dimensions-modify-or-delete-a-database-dimension-in-solution-explorer.md)를 참조하세요.  
   
  차원 디자이너에는 다음 표에 설명된 3개의 탭이 있습니다.  
   
@@ -53,13 +58,13 @@ caps.handback.revision: 27
  [차원 특성 속성 참조](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
  차원 특성을 정의 및 구성하는 방법에 대해 설명합니다.  
   
- [사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/create-user-defined-hierarchies.md)  
+ [사용자 정의 계층 만들기](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)  
  사용자 정의 계층을 정의 및 구성하는 방법에 대해 설명합니다.  
   
- [특성 관계 정의](../../analysis-services/multidimensional-models/define-attribute-relationships.md)  
+ [특성 관계 정의](../../analysis-services/multidimensional-models/attribute-relationships-define.md)  
  특성 관계를 정의 및 구성하는 방법에 대해 설명합니다.  
   
- [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](../Topic/Use%20the%20Business%20Intelligence%20Wizard%20to%20Enhance%20Dimensions.md)  
+ [비즈니스 인텔리전스 마법사를 사용하여 차원 향상](http://msdn.microsoft.com/library/12d995d1-75ca-4890-bf4b-a2656910b8d0)  
  비즈니스 인텔리전스 마법사를 사용하여 차원을 향상시키는 방법에 대해 설명합니다.  
   
   

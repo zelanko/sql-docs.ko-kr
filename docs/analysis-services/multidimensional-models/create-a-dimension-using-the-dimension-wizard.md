@@ -1,29 +1,34 @@
 ---
-title: "차원 마법사를 사용하여 차원 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "차원 [Analysis Services], 만들기"
+title: "차원 마법사를 사용 하 여 차원 만들기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dimensions [Analysis Services], creating
 ms.assetid: d84f66ae-7551-49bf-99d0-88368ca2dd0e
 caps.latest.revision: 17
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 17
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ff4a16fdc7f18eae35de5023116a11179fb11c5b
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 차원 마법사를 사용하여 차원 만들기
+# <a name="create-a-dimension-using-the-dimension-wizard"></a>차원 마법사를 사용하여 차원 만들기
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 차원 마법사를 사용하여 새 차원을 만들 수 있습니다.  
   
-### 새 차원을 만들려면  
+### <a name="to-create-a-new-dimension"></a>새 차원을 만들려면  
   
 1.  **솔루션 탐색기**에서 **차원**을 마우스 오른쪽 단추로 클릭한 다음 **새 차원**을 클릭합니다.  
   
@@ -72,7 +77,7 @@ caps.handback.revision: 17
     > [!NOTE]  
     >  차원 마법사를 완료한 후에는 차원 디자이너를 사용하여 차원의 특성과 계층을 추가, 제거 및 구성할 수 있습니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [기존 테이블을 사용하여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

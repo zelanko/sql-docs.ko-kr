@@ -1,23 +1,28 @@
 ---
 title: "OLAP 마이닝 구조 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 21cbdc9d-d33c-4026-b9ef-1be2bd92b3b1
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: b4c361d8a255b4ef5dc348692bb688a0421b0abd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# OLAP 마이닝 구조 만들기
+# <a name="create-an-olap-mining-structure"></a>OLAP 마이닝 구조 만들기
   OLAP 큐브 또는 다른 다차원 데이터 저장소를 기반으로 데이터 마이닝 모델을 만들면 다음과 같은 여러 가지 이점이 있습니다. OLAP 솔루션에는 잘 정리되고 올바른 형식이 지정된 많은 양의 데이터가 이미 포함되어 있습니다. 하지만 사용자가 임시 탐색을 통해 의미 있는 패턴을 찾을 수 없을 정도로 데이터가 복잡합니다. 데이터 마이닝은 새로운 상관 관계를 발견하고 실현 가능한 통찰력을 제공할 수 있는 기능을 제공합니다.  
   
  이 항목에서는 기존 다차원 솔루션의 차원 및 관련 측정값을 기반으로 OLAP 마이닝 구조를 만드는 방법에 대해 설명합니다.  
@@ -37,12 +42,12 @@ caps.handback.revision: 12
 ##  <a name="bkmk_Reqs"></a> OLAP 마이닝 구조 및 모델에 대한 요구 사항  
  OLAP 마이닝 모델을 디자인하는 경우 데이터 원본은 큐브를 생성하는 데 사용된 데이터베이스에 이미 있습니다. 원격 큐브에 연결하여 데이터 마이닝 개체를 생성할 수 없습니다. 큐브 개체는 생성할 마이닝 구조와 동일한 솔루션 내에서 데이터베이스로 사용할 수 있어야 합니다.  
   
- 원래 프로젝트 파일이 없거나 원래 프로젝트 파일을 변경하지 않을 경우 Visual Studio의 **서버에서 가져오기(다차원 및 데이터 마이닝)** 옵션을 사용하여 메타데이터 및 솔루션 개체의 복사본을 가져올 수 있습니다. 그런 다음 기존 개체에 영향을 주지 않고 배포 대상을 수정하고, 데이터 원본을 편집하고, 큐브 개체를 사용할 수 있습니다.  
+ 원래 프로젝트 파일이 없거나 원래 프로젝트 파일을 변경하지 않을 경우 Visual Studio의 **서버에서 가져오기(다차원 및 데이터 마이닝)**옵션을 사용하여 메타데이터 및 솔루션 개체의 복사본을 가져올 수 있습니다. 그런 다음 기존 개체에 영향을 주지 않고 배포 대상을 수정하고, 데이터 원본을 편집하고, 큐브 개체를 사용할 수 있습니다.  
   
  자세한 내용은 [Analysis Services 가져오기 마법사를 사용하여 데이터 마이닝 프로젝트 가져오기](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md)를 참조하세요.  
   
 ##  <a name="bkmk_Overview"></a> OLAP 데이터 마이닝 프로세스 개요  
- 솔루션 탐색기에서 **마이닝 구조** 노드를 마우스 오른쪽 단추로 클릭한 다음 **새 마이닝 구조**를 선택하여 데이터 마이닝 마법사를 시작합니다. 마법사에서 새로운 구조와 모델에 대한 구조를 만드는 다음 단계를 안내합니다.  
+ 솔루션 탐색기에서 **마이닝 구조** 노드를 마우스 오른쪽 단추로 클릭한 다음  **새 마이닝 구조**를 선택하여 데이터 마이닝 마법사를 시작합니다. 마법사에서 새로운 구조와 모델에 대한 구조를 만드는 다음 단계를 안내합니다.  
   
 1.  **정의 방법 선택**: 여기에서 데이터 원본 유형을 선택한 다음 **기존 큐브 사용**을 선택합니다.  
   
@@ -113,7 +118,7 @@ caps.handback.revision: 12
 |주목할 만한 셀 또는 비정상적인 셀 찾기|일반적인 시간별 경향에 반하는 매장 판매량을 식별합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘|  
 |상관 관계 찾기|지역, 컴퓨터 유형, OS 또는 구매 날짜를 포함하여 서버 가동 중지 시간과 관련된 요소를 식별합니다.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naïve Bayes 알고리즘|  
   
-##  <a name="bkmk_Filters"></a> 큐브 조각화와 모델 필터링  
+##  <a name="bkmk_Filters"></a>큐브 조각화 합니다. 모델 필터링  
  모델을 작성하는 동안 큐브를 조각화하는 것은 관계형 마이닝 모델에서 필터를 만드는 것과 유사합니다. 관계형 모델에서 데이터 원본에 대한 필터는 SQL 문의 WHERE 절로 정의됩니다. 큐브의 경우 편집기에서 MDX를 사용하여 필터 문을 만들 수 있습니다.  
   
  예를 들어 큐브에 전 세계 제품 구매 정보가 포함되어 있을 수 있지만 마케팅 캠페인을 위해 영국에 거주하는 30세 이상의 여성 고객에 대한 분석을 기반으로 모델을 만들 수 있습니다.  
@@ -124,7 +129,7 @@ caps.handback.revision: 12
   
 -   두 번째 필터에 대해 Customer 차원을 선택하고 Gender 특성을 선택한 다음 특성 값 목록에서 “Female”을 선택합니다.  
   
- 마이닝 구조를 만든 후 큐브 데이터 및 필터 조건 정의를 둘 다 수정할 수 있습니다. 자세한 내용은 [Filter the Source Cube for a Mining Structure](../Topic/Filter%20the%20Source%20Cube%20for%20a%20Mining%20Structure.md)을 참조하세요.  
+ 마이닝 구조를 만든 후 큐브 데이터 및 필터 조건 정의를 둘 다 수정할 수 있습니다. 자세한 내용은 참조 [마이닝 모델에 대 한 필터](~/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)합니다.  
   
  **마이닝 구조** 탭과 **마이닝 모델** 탭에는 둘 다 **큐브 조각 정의**를 클릭하여 기존 마이닝 구조에 필터를 추가할 수 있는 옵션이 있습니다. **큐브 조각화** 대화 상자에서는 드롭다운 목록에서 값을 선택하여 유효한 MDX 필터 식을 작성할 수 있습니다.  
   
@@ -158,11 +163,12 @@ caps.handback.revision: 12
 > [!WARNING]  
 >  Microsoft 클러스터링 알고리즘, Microsoft 의사 결정 트리 알고리즘 또는 Microsoft 연결 알고리즘을 기반으로 하는 모델만 데이터 마이닝 차원 만들기를 지원합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)   
  [마이닝 모델 열](../../analysis-services/data-mining/mining-model-columns.md)   
  [마이닝 모델 속성](../../analysis-services/data-mining/mining-model-properties.md)   
- [마이닝 구조 및 구조 열의 속성](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
+ [마이닝 구조 및 구조 열에 대 한 속성](../../analysis-services/data-mining/properties-for-mining-structure-and-structure-columns.md)  
   
   
+

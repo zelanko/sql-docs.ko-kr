@@ -1,27 +1,32 @@
 ---
-title: "SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+title: "설치 또는 파워 피벗에 대 한 SharePoint 추가 기능을 제거 (SharePoint 2016) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 34dd07b8-d59d-49ce-bad0-74f40e4db0b8
 caps.latest.revision: 12
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 12
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 1dbd22c1c09de66200cda7300f34666ea453777a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)
-  [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 는 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 팜에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 데이터 액세스를 제공하는 응용 프로그램 서버 구성 요소 및 백 엔드 서비스의 컬렉션입니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot16.msi**)은 응용 프로그램 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
+# <a name="install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2016"></a>SharePoint용 Power Pivot 추가 기능 설치 또는 제거(SharePoint 2016)
+  [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] 는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 팜에서 [!INCLUDE[SPS2016](../../../includes/sps2016-md.md)] 데이터 액세스를 제공하는 응용 프로그램 서버 구성 요소 및 백 엔드 서비스의 컬렉션입니다. SharePoint용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 추가 기능(**spPowerpivot16.msi**)은 응용 프로그램 서버 구성 요소를 설치하는 데 사용되는 설치 관리자 패키지입니다.  
   
  **참고:** 이 항목에서는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 솔루션 파일 및 SharePoint 2016용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구 설치에 대해 설명합니다. 설치 후 구성 도구와 추가 기능에 대한 자세한 내용은 [파워 피벗 구성 및 솔루션 배포&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md) 항목을 참조하세요.  
   
- **spPowerPivot16.msi**를 다운로드하는 방법은 [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](http://go.microsoft.com/fwlink/?LinkID=324854)를 참조하세요.  
+ **spPowerPivot16.msi**를 다운로드하는 방법은 [Microsoft® SQL Server® 2016 Power Pivot® for Microsoft SharePoint®](https://www.microsoft.com/download/details.aspx?id=52675)를 참조하세요.  
   
  **항목 내용**  
   
@@ -37,17 +42,16 @@ caps.handback.revision: 12
   
 -   [추가 기능 제거 또는 복구](#bkmk_remove_addin)  
   
-||  
-|-|  
-|**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016|  
+
+**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2016 
   
 ##  <a name="bkmk_background"></a> 배경  
   
 -   **응용 프로그램 서버:** [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능에는 통합 문서를 데이터 원본으로 사용, 예약된 데이터 새로 고침 및 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 관리 대시보드가 포함됩니다.  
   
-     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 은 Analysis Services 클라이언트 라이브러리를 배포하고 [!INCLUDE[ssGeminiShortvnext](../../../includes/ssgeminishortvnext-md.md)] 설치 파일을 컴퓨터에 복사하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Installer 패키지(**spPowerpivot16.msi**)입니다. 설치 관리자는 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 배포 또는 구성하지 않습니다. 다음 구성 요소가 기본적으로 설치됩니다.  
+     [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 은 Analysis Services 클라이언트 라이브러리를 배포하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 설치 파일을 컴퓨터에 복사하는**Windows Installer 패키지(**spPowerpivot16.msi [!INCLUDE[ssGeminiShort2017](../../../includes/ssgeminishort2017-md.md)] )입니다. 설치 관리자는 SharePoint의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 기능을 배포 또는 구성하지 않습니다. 다음 구성 요소가 기본적으로 설치됩니다.  
   
-    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]. 이 구성 요소에는 PowerShell 스크립트(.ps1 파일), SharePoint 솔루션 패키지(.wsp) 및 SharePoint 2016 팜에서 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]을 배포하기 위한 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 구성 도구가 포함되어 있습니다.  
+    -   [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]항목을 참조하세요. 이 구성 요소에는 PowerShell 스크립트(.ps1 파일), SharePoint 솔루션 패키지(.wsp) 및 SharePoint 2016 팜에서 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 을 배포하기 위한 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구가 포함되어 있습니다.  
   
     -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Analysis Services용 OLE DB 공급자(MSOLAP)  
   
@@ -64,7 +68,7 @@ caps.handback.revision: 12
     -   [SharePoint용 Power Pivot 제거](../../../sql-server/install/uninstall-power-pivot-for-sharepoint.md)  
   
 ##  <a name="bkmk_where_to_install"></a> spPowerPivot16.msi 설치 위치  
- 권장되는 최선의 구현 방법은 구성 일치를 위해 응용 프로그램 서버 및 웹 프런트 엔드 서버를 포함하여 SharePoint 팜의 모든 서버에 **spPowerPivot16.msi**를 설치하는 것입니다. 설치 관리자 패키지에는 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 구성 도구뿐만 아니라 Analysis Services 데이터 공급자도 포함되어 있습니다. **spPowerPivot16.msi** 를 설치하는 경우 개별 구성 요소를 제외하여 설치를 사용자 지정할 수 있습니다.  
+ 권장되는 최선의 구현 방법은 구성 일치를 위해 응용 프로그램 서버 및 웹 프런트 엔드 서버를 포함하여 SharePoint 팜의 모든 서버에 **spPowerPivot16.msi** 를 설치하는 것입니다. 설치 관리자 패키지에는 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 구성 도구뿐만 아니라 Analysis Services 데이터 공급자도 포함되어 있습니다. **spPowerPivot16.msi** 를 설치하는 경우 개별 구성 요소를 제외하여 설치를 사용자 지정할 수 있습니다.  
   
  **데이터 공급자:** 여러 SharePoint 및 SQL Server 기술은 PerformancePoint Services 및 Power View 등 Analysis Services 데이터 공급자를 사용합니다. 모든 SharePoint 서버에 **spPowerPivot16.msi** 를 설치하면 Analysis Services 데이터 공급자의 전체 집합과 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 연결이 팜에서 일관적으로 사용할 수 있음을 확인할 수 있습니다.  
   
@@ -77,18 +81,18 @@ caps.handback.revision: 12
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SharePoint Server 2016.  
   
--   SharePoint 제품 및 기술 요구 사항에 따라 **spPowerPivot16.msi**는 64비트 전용입니다.  
+-   SharePoint 제품 및 기술 요구 사항에 따라**spPowerPivot16.msi** 는 64비트 전용입니다.  
   
--   [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] 모드의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버. Office Online Server는 SQL Server Analysis Services 인스턴스를 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버로 사용합니다. Analysis Services는 로컬 SharePoint 서버 또는 원격 컴퓨터에서 실행할 수 있습니다. Office Online Server에 설치할 수 없습니다.  
+-   서버에 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 모드입니다. Office Online Server는 SQL Server Analysis Services 인스턴스를 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서버로 사용합니다. Analysis Services는 로컬 SharePoint 서버 또는 원격 컴퓨터에서 실행할 수 있습니다. Office Online Server에 설치할 수 없습니다.  
   
 -   **사용 권한:** [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)]을 설치하려면 현재 사용자가 컴퓨터의 관리자이며 SharePoint 팜 관리자 그룹에 속해야 합니다.  
   
--   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 요구 사항 및 필수 조건에 대한 자세한 내용은 [SharePoint 모드의 Analysis Services 서버 하드웨어 및 소프트웨어 요구 사항](../Topic/Hardware%20and%20Software%20Requirements%20for%20Analysis%20Services%20Server%20in%20SharePoint%20Mode.md)을 참조하세요.  
+-   [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 요구 사항 및 필수 조건에 대한 자세한 내용은 [SharePoint 모드의 Analysis Services 서버 하드웨어 및 소프트웨어 요구 사항](http://msdn.microsoft.com/library/fb86ca0a-518c-4c61-ae78-7680c57fae1f)을 참조하세요.  
   
-##  <a name="bkmk_install"></a> SharePoint용 파워 피벗을 설치하려면  
+##  <a name="bkmk_install"></a> SharePoint용 Power Pivot을 설치하려면  
  **spPowerpivot16.msi** 설치 관리자 패키지는 그래픽 사용자 인터페이스 및 명령줄 설치 모드를 둘 다 지원합니다. 두 설치 방법 모두 관리자 권한으로 .msi를 실행해야 합니다. 설치 후 구성 도구와 추가 기능에 대한 자세한 내용은 [파워 피벗 구성 및 솔루션 배포&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md) 항목을 참조하세요.  
   
-### 사용자 인터페이스 설치  
+### <a name="user-interface-installation"></a>사용자 인터페이스 설치  
  그래픽 사용자 인터페이스를 사용하여 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 을 설치하려면 다음 단계를 완료하십시오.  
   
 1.  **spPowerPivot16.msi**를 실행합니다.  
@@ -103,10 +107,10 @@ caps.handback.revision: 12
   
 6.  **설치** 를 선택하여 설치하고 설치를 완료합니다.  
   
-### 명령줄 설치  
+### <a name="command-line-installation"></a>명령줄 설치  
  명령줄 설치의 경우 관리 권한으로 명령 프롬프트를 연 다음 **spPowerPivot16.msi**를 실행합니다. 예를 들어  
   
- `Msiexec.exe /i spPowerPivot16.msi`.  
+ `Msiexec.exe /i spPowerPivot16.msi`항목을 참조하세요.  
   
  설치 로그를 만들려면 표준 MsiExec 로깅 스위치를 사용합니다. 다음 예에서는 “v” 자세한 로깅 스위치를 사용하는 로그 파일 “Install_Log.txt”를 만듭니다.  
   
@@ -114,7 +118,7 @@ caps.handback.revision: 12
 Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt  
 ```  
   
-### 스크립팅을 위한 자동 명령줄 설치  
+### <a name="quiet-command-line-installation-for-scripting"></a>스크립팅을 위한 자동 명령줄 설치  
  대화 상자 또는 경고가 표시되지 않는 "자동" 설치를 위해 **/q** 또는 **/quiet** 스위치를 사용할 수 있습니다. 자동 설치는 추가 기능 설치를 스크립팅하려는 경우에 유용합니다.  
   
 > [!IMPORTANT]  
@@ -130,7 +134,7 @@ Msiexec.exe /i spPowerPivot16.msi /L v c:\test\Install_Log.txt
     Msiexec.exe /i spPowerPivot16.msi /q  
     ```  
   
-### 특정 구성 요소를 포함하는 명령줄 설치  
+### <a name="command-line-installation-to-include-specific-components"></a>특정 구성 요소를 포함하는 명령줄 설치  
  모든 SharePoint 서버에 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 구성 도구가 필요한 것은 아닙니다. 그러나 구성 도구가 필요한 경우 사용할 수 있도록 최소 2개 이상의 서버에 설치하는 것이 좋습니다.  
   
  spPowerPivot16.msi를 설치하는 경우 [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 구성 도구가 아닌 데이터 공급자 등의 특정 항목을 설치하는 명령줄 옵션을 사용할 수 있습니다. 다음 명령줄은 구성 도구를 제외하고 모든 구성 요소를 설치하는 예입니다.  
@@ -151,9 +155,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
  spPowerPivot16.msi에서 하드 드라이브에 복사하는 파일 중 3개는 SharePoint 솔루션 파일입니다. 솔루션 파일의 범위는 웹 응용 프로그램 수준이지만 다른 파일의 범위는 팜 수준입니다. 파일은 다음과 같습니다.  
   
 -   `PowerPivot16FarmSolution.wsp`  
-  
--   `PowerPivot16Farm14Solution.wsp`  
-  
+
 -   `PowerPivot16WebApplicationSolution.wsp`  
   
  솔루션 파일은 다음 폴더에 복사됩니다.  
@@ -166,9 +168,9 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
   
  Windows 시작 화면에서 “power”를 입력한 다음 응용 프로그램 검색 결과에서 **[!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 구성**을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램은 SharePoint 2013 및 SharePoint 2016에 대해 별개의 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 도구를 설치하기 때문에 검색 결과에 두 개의 링크가 포함될 수 있습니다. [!INCLUDE[ssGeminiShort2016](../../../includes/ssgeminishort2016-md.md)] 구성 도구를 시작해야 합니다.  
   
- ![PowerPivot for SharePoint 2016 Configuration](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot for SharePoint 2016 Configuration")  
+ ![SharePoint 2016 구성에 대 한 PowerPivot](../../../analysis-services/instances/install-windows/media/powerpivot-for-sharepoint-2016-configuration.png "PowerPivot for SharePoint 2016 구성")  
   
- **또는**  
+ **Or**  
   
 1.  **시작**, **모든 프로그램**으로 이동합니다.  
   
@@ -199,7 +201,7 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
     msiexec.exe /f spPowerPivot16.msi  
     ```  
   
- OR  
+ 또는  
   
 -   제거하려면 다음 명령을 실행합니다.  
   
@@ -208,3 +210,4 @@ Msiexec /i spPowerPivot16.msi AGREETOLICENSE="yes" ADDLOCAL=” SQL_OLAPDM,SQL_A
     ```  
   
   
+

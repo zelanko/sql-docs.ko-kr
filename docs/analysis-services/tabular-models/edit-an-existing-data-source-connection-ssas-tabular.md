@@ -1,26 +1,31 @@
 ---
-title: "기존 데이터 원본 연결 편집(SSAS 테이블 형식) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "analysis-services"
-  - "analysis-services/multidimensional-tabular"
-  - "analysis-services/data-mining"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.asvs.bidtoolset.selexistconn.f1"
+title: "기존 데이터 원본 연결 (SSAS 테이블 형식)을 편집 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- analysis-services
+- analysis-services/multidimensional-tabular
+- analysis-services/data-mining
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.asvs.bidtoolset.selexistconn.f1
 ms.assetid: 97e63f18-a01d-4c91-a411-e7e6d40a0647
 caps.latest.revision: 13
-author: "Minewiskan"
-ms.author: "owend"
-manager: "erikre"
-caps.handback.revision: 13
+author: Minewiskan
+ms.author: owend
+manager: erikre
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 67cac388bba3160fe5714a2c21f5741eafd6b32c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/01/2017
+
 ---
-# 기존 데이터 원본 연결 편집(SSAS 테이블 형식)
+# <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>기존 데이터 원본 연결 편집(SSAS 테이블 형식)
   이 항목에서는 테이블 형식 모델에서 기존 데이터 원본 연결의 속성을 편집하는 방법에 대해 설명합니다.  
   
  외부 데이터 원본에 대한 연결을 만든 후 나중에 다음과 같은 방법으로 연결을 수정할 수 있습니다.  
@@ -31,10 +36,10 @@ caps.handback.revision: 13
   
 -   외부 데이터 원본에서 가져오는 테이블, 뷰 또는 열을 변경할 수 있습니다.  
   
-## 연결 수정  
+## <a name="modify-a-connection"></a>연결 수정  
  이 절차에서는 데이터베이스 데이터 원본 연결을 수정하는 방법을 설명합니다. 데이터 원본으로 작업하는 데 사용할 수 있는 일부 옵션은 데이터 원본의 유형에 따라 다르지만 그러한 차이를 쉽게 식별할 수 있습니다.  
   
-#### 현재 연결에 사용되는 외부 데이터 원본을 변경하려면  
+#### <a name="to-change-the-external-data-source-used-by-a-current-connection"></a>현재 연결에 사용되는 외부 데이터 원본을 변경하려면  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 **모델** 메뉴를 클릭한 다음 **기존 연결**을 클릭합니다.  
   
@@ -53,10 +58,10 @@ caps.handback.revision: 13
     > [!NOTE]  
     >  새 데이터 원본에 원래 데이터 원본에는 없는 추가 테이블이 있는 경우 변경한 연결을 다시 열고 해당 테이블을 추가해야 합니다.  
   
-## 테이블 및 열 매핑(바인딩) 편집  
+## <a name="edit-table-and-column-mappings-bindings"></a>테이블 및 열 매핑(바인딩) 편집  
  이 절차에서는 데이터 원본을 변경한 후 매핑을 편집하는 방법에 대해 설명합니다.  
   
-#### 데이터 원본을 변경할 때 열 매핑을 편집하려면  
+#### <a name="to-edit-column-mappings-when-a-data-source-changes"></a>데이터 원본을 변경할 때 열 매핑을 편집하려면  
   
 1.  모델 디자이너에서 테이블을 선택합니다.  
   
@@ -78,7 +83,7 @@ caps.handback.revision: 13
   
      현재 테이블 속성 집합을 저장하면 테이블을 처리해야 한다는 메시지가 나타날 수 있습니다. **처리** 를 클릭하여 업데이트된 데이터를 모델에 로드합니다.  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)   
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
