@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
-ms.openlocfilehash: e0bdc95320ea2e696444048156dffefcd89e1910
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/19/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 기술 설명서
@@ -85,13 +85,8 @@ SQL Server를 설치하고, 구성하고, 사용하는 데 도움이 되는 설�
 - [GitHub의 SQL Server 예제](https://github.com/Microsoft/sql-server-samples) 
    
  ## <a name="more-information"></a>자세한 정보   
-+ 오프라인에서 SQL Server 설명서를 보려면 [SQL Server용 도움말 뷰어 및 오프라인 콘텐츠](../release-notes/sql-server-help-installation.md)를 참조하세요.
++ 오프라인에서 SQL Server 설명서를 보려면 [SQL Server용 도움말 뷰어 및 오프라인 콘텐츠](sql-server-help-installation.md)를 참조하세요.
 + [SQL Server 구성 관리자](../relational-databases/sql-server-configuration-manager.md)
 + [SQL Server 업데이트 센터 - 지원되는 모든 버전에 대한 링크 및 정보](https://msdn.microsoft.com/library/ff803383.aspx)
-  
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 도움말 보기 
-- [Stack Overflow(태그 sql-server) - SQL 개발 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 포럼 - 기술 관련 문의 사항](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 버그 보고 및 기능 요청](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
