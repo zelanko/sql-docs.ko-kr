@@ -567,7 +567,7 @@
               homepage: /sql/relational-databases/graphs/sql-graph-overview
             - name: 가져오기 및 내보내기
               href: /sql/relational-databases/import-export/
-              homepage: /sql/relational-databases/import-export/bulk-import-and-export-of-data-sql-server
+              homepage: /sql/relational-databases/import-export/overview-import-export
             - name: 메모리 내 OLTP
               href: /sql/relational-databases/in-memory-oltp/
               homepage: /sql/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization
