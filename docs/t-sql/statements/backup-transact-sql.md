@@ -1,7 +1,7 @@
 ---
 title: "백업 (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 09/05/2017
+ms.date: 09/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -50,10 +50,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: ac638619fc3117551c774ecc26a43cae72826d39
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 3654be2e02163cd8069a95eb5e82d4649cec1ab5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
@@ -179,18 +179,19 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 > [!NOTE]  
 >  일반적인 로그 백업 후 WITH NO_TRUNCATE 또는 COPY_ONLY를 지정하지 않으면 일부 트랜잭션 로그 레코드가 비활성 상태가 됩니다. 하나 이상의 가상 로그 파일 내의 모든 레코드가 비활성 상태가 된 후에는 로그가 잘립니다. 일상적인 로그 백업 후 로그가 잘리지 않을 경우 로그 잘림이 지연되는 것일 수 있습니다. 자세한 내용은 다음을 참조하십시오.  
   
- { *database_name*| **@**database_name_var *을 (를)  
- 트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다. 변수로 제공한 경우 (**@***database_name_var*),이 이름은 문자열 상수를 지정 ( **@**   *database_name_var***=***데이터베이스 이름*) 또는 문자 문자열 데이터 형식의 변수를 제외 하 고는 **ntext** 또는 **텍스트** 데이터 형식입니다.  
+ { *database_name* | **@**database_name_var *을 (를)   
+ 트랜잭션 로그, 일부 데이터베이스, 전체 데이터베이스가 백업되는 데이터베이스입니다. 변수로 제공한 경우 (**@***database_name_var*),이 이름은 문자열 상수를 지정 (** @ ** * database_name_var***=***데이터베이스 이름*) 또는 문자 문자열 데이터 형식의 변수를 제외 하 고는 **ntext** 또는 **텍스트** 데이터 형식입니다.  
   
 > [!NOTE]  
 >  데이터베이스 미러링 파트너 관계의 미러 데이터베이스는 백업할 수 없습니다.  
   
-\<file_or_filegroup > [ **,**...  *n*  ] 데이터베이스 백업에 사용 되는 데이터베이스 파일 또는 파일 백업에 포함할 파일 그룹을 지정 하거나 읽기 전용 파일 또는 부분 백업에 포함할 파일 그룹을 지정 합니다.  
+\<file_or_filegroup > [ **,**... *n* ]  
+ BACKUP DATABASE와 함께만 사용되며 파일 백업에 포함시킬 데이터베이스 파일 또는 파일 그룹을 지정하거나 부분 백업에 포함시킬 읽기 전용 파일 또는 파일 그룹을 지정합니다.  
   
- 파일  **=**  { *logical_file_name*| **@***logical_file_name_var* }  
+ 파일 ** = ** { *logical_file_name*| **@***logical_file_name_var* }  
  파일의 논리적 이름이거나 해당 값이 백업에 포함시킬 파일의 논리적 이름과 같은 변수입니다.  
   
- 파일 그룹  **=**  { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
+ 파일 그룹 ** = ** { *logical_filegroup_name*| **@***logical_filegroup_name_var* }  
  파일 그룹의 논리적 이름이거나 해당 값이 백업에 포함시킬 파일 그룹의 논리적 이름과 같은 변수입니다. 단순 복구 모델에서 파일 그룹 백업은 읽기 전용 파일 그룹에만 사용할 수 있습니다.  
   
 > [!NOTE]  
@@ -218,14 +219,14 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
   
  부분 백업에 대 한 자세한 내용은 참조 하세요. [부분 백업 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/partial-backups-sql-server.md).  
   
-\<backup_device > [ **,**...  *n*  ] 집합이 함께 제공 되는 나타냅니다 [백업 장치](../../relational-databases/backup-restore/backup-devices-sql-server.md) 미러되지 않은 미디어 세트 이거나 미러된 미디어 세트 (에 하나 이상의 MIRROR TO 내의 미러 중 첫 번째 절은 선언 됨).  
+\<backup_device > [ **,**... * n * ] 집합이 함께 제공 되는 나타냅니다 [백업 장치](../../relational-databases/backup-restore/backup-devices-sql-server.md) 미러되지 않은 미디어 세트 이거나 미러된 미디어 세트 (에 하나 이상의 MIRROR TO 내의 미러 중 첫 번째 절은 선언 됨).  
   
 \<backup_device > 백업 작업에 사용할 논리적 또는 물리적 백업 장치를 지정 합니다.  
   
  { *logical_device_name* | **@***logical_device_name_var* }  
- 데이터베이스를 백업할 백업 장치의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수로 제공한 경우 (@*logical_device_name_var*), 백업 장치 이름은 수 지정 하는 문자열 상수 (@*logical_device_name_var*  **=**  논리적 백업 장치 이름) 또는 모든 문자열 형식의 데이터를 제외 하 고 변수는 **ntext** 또는 **텍스트** 데이터 형식입니다.  
+ 데이터베이스를 백업할 백업 장치의 논리적 이름입니다. 논리적 이름은 식별자 규칙을 따라야 합니다. 변수로 제공한 경우 (@*logical_device_name_var*), 백업 장치 이름은 수 지정 하는 문자열 상수 (@*logical_device_name_var* ** = ** 논리적 백업 장치 이름) 또는 모든 문자열 형식의 데이터를 제외 하 고 변수는 **ntext** 또는 **텍스트** 데이터 형식입니다.  
   
- {디스크 | 테이프 | URL을 (를)  **=**  { **'***physical_device_name***'**  |   **@**  *physical_device_name_var* }  
+ {디스크 | 테이프 | URL을 (를) ** = ** { **'***physical_device_name***'**  |  ** @ ** *physical_device_name_var* }  
  디스크 파일이나 테이프 장치 또는 Windows Azure Blob 스토리지 서비스를 지정합니다. URL 형식은 Windows Azure 저장소 서비스에 백업을 만드는 데 사용 됩니다. 자세한 내용 및 예제에 대 한 참조 [SQL Server 백업 및 Microsoft Azure Blob 저장소 서비스로 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)합니다. 자습서를 참조 하십시오. [자습서: SQL Server 백업 및 복원 Windows Azure Blob 저장소 서비스에](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)합니다.  
   
 > [!IMPORTANT]  
@@ -243,7 +244,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
  *n*  
  쉼표로 구분된 목록에 백업 장치를 최대 64개까지 지정할 수 있음을 나타내는 자리 표시자입니다.  
   
-MIRROR TO \<backup_device > [ **,**...  *n*  ] 최대 3 개의 보조 백업 장치, 파일 TO 절에 백업 장치에 지정 된 각 미러는 집합을 지정 합니다. MIRROR TO 절은 TO 절과 같은 유형과 개수의 백업 장치를 지정 해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.  
+MIRROR TO \<backup_device > [ **,**... * n * ] 최대 3 개의 보조 백업 장치, 파일 TO 절에 백업 장치에 지정 된 각 미러는 집합을 지정 합니다. MIRROR TO 절은 TO 절과 같은 유형과 개수의 백업 장치를 지정 해야 합니다. MIRROR TO 절은 최대 3개까지 포함시킬 수 있습니다.  
   
  이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 엔터프라이즈 버전에서만 사용할 수 있습니다.  
   
@@ -303,12 +304,12 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] 최대 3 개의 보조 백업 장
     > [!WARNING]  
     >  FILE_SNAPSHOT 인수와 함께에서 암호화를 사용 하는 경우 지정 된 암호화 알고리즘을 사용 하는 메타 데이터 파일 자체 암호화 하 고 시스템 TDE는 데이터베이스에 대 한 완료 되었음을 확인 합니다. 데이터 자체에 대 한 추가 암호화 되지 않은 오류 발생합니다. 데이터베이스 암호화 되지 않은 이거나 백업 문이 실행 된 암호화 하기 전에 완료 되지 않은 경우 백업이 실패 합니다.  
   
- **백업 세트 옵션**  
+**백업 세트 옵션**  
   
- 이러한 옵션은 이 백업 작업에서 만든 백업 세트에서 작동합니다.  
+이러한 옵션은 이 백업 작업에서 만든 백업 세트에서 작동합니다.  
   
 > [!NOTE]  
->  복원 작업에 백업 세트를 지정 하려면 파일을 사용 하 여  **=**   *\<backup_set_file_number >* 옵션입니다. 백업 세트를 지정 하는 방법에 대 한 자세한 내용은 "백업 세트 지정"의 참조 [RESTORE 인수 &#40; Transact SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
+>  복원 작업에 백업 세트를 지정 하려면 파일을 사용 하 여 ** = ** * \<backup_set_file_number >* 옵션입니다. 백업 세트를 지정 하는 방법에 대 한 자세한 내용은 "백업 세트 지정"의 참조 [RESTORE 인수 &#40; Transact SQL &#41; ](../../t-sql/statements/restore-statements-arguments-transact-sql.md).
   
  COPY_ONLY  
  백업 임을 지정는 *복사 전용 백업은*는 정상적인 백업 시퀀스에는 영향을 주지 않습니다. 복사 전용 백업은 정기적으로 예약되어 수행되는 기존 백업과는 별개로 생성됩니다. 복사 전용 백업은 백업 전체에 영향을 주지 않고 데이터베이스에 대한 프로시저를 복원합니다.  
@@ -322,250 +323,240 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] 최대 3 개의 보조 백업 장
   
 -   BACKUP LOG를 사용할 때는 COPY_ONLY 옵션 만듭니다는 *복사 전용 로그 백업은*, 트랜잭션 로그를 자르지 않는 합니다. 복사 전용 로그 백업은 로그 체인에 영향을 주지 않으며 기타 로그 백업은 복사 전용 백업이 없는 것처럼 작동합니다.  
   
- 자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
+자세한 내용은 [복사 전용 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)를 참조하세요.  
   
- { COMPRESSION | NO_COMPRESSION }  
- [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전을 지정 하 고 있는지 여부를 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 서버 수준 기본값을 재정의이 백업에서 수행 됩니다.  
+{ COMPRESSION | NO_COMPRESSION }  
+[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전을 지정 하 고 있는지 여부를 [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 서버 수준 기본값을 재정의이 백업에서 수행 됩니다.  
   
- 설치 시 백업 압축은 기본 동작이 아닙니다. 하지만이 기본값을 설정 하 여 변경할 수 있습니다는 [백업 압축 기본값](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) 서버 구성 옵션입니다. 이 옵션의 현재 값을 보는 방법에 대 한 정보를 참조 하십시오. [보기 또는 변경 서버 속성 &#40; SQL Server &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
+설치 시 백업 압축은 기본 동작이 아닙니다. 하지만이 기본값을 설정 하 여 변경할 수 있습니다는 [백업 압축 기본값](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) 서버 구성 옵션입니다. 이 옵션의 현재 값을 보는 방법에 대 한 정보를 참조 하십시오. [보기 또는 변경 서버 속성 &#40; SQL Server &#41; ](../../database-engine/configure-windows/view-or-change-server-properties-sql-server.md).  
   
- COMPRESSION  
- 백업 압축을 명시적으로 활성화합니다.  
+COMPRESSION  
+백업 압축을 명시적으로 활성화합니다.  
   
- NO_COMPRESSION  
- 백업 압축을 명시적으로 비활성화합니다.  
+NO_COMPRESSION  
+백업 압축을 명시적으로 비활성화합니다.  
   
- DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
- 백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.  
+DESCRIPTION **=** { **'***text***'** | **@***text_variable* }  
+백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.  
   
- 이름  **=**  { *backup_set_name*| **@***backup_set_var* }  
- 백업 세트의 이름을 지정합니다. 이름은 최대 128자까지 지정할 수 있습니다. NAME을 지정하지 않으면 공백이 됩니다.  
+이름 ** = ** { *backup_set_name*| **@***backup_set_var* }  
+백업 세트의 이름을 지정합니다. 이름은 최대 128자까지 지정할 수 있습니다. NAME을 지정하지 않으면 공백이 됩니다.  
   
- {EXPIREDATE **='***날짜***'**| RETAINDAYS  **=**  *일* }  
- 이 백업에 대한 백업 세트를 덮어쓸 수 있는 날짜를 지정합니다. 두 옵션을 모두 사용하면 RETAINDAYS가 EXPIREDATE보다 우선적으로 적용됩니다.  
+{EXPIREDATE **='***날짜***'**| RETAINDAYS ** = ** *일* }  
+이 백업에 대한 백업 세트를 덮어쓸 수 있는 날짜를 지정합니다. 두 옵션을 모두 사용하면 RETAINDAYS가 EXPIREDATE보다 우선적으로 적용됩니다.  
   
- 따라 만료 날짜가 결정은 두 옵션을 지정 하는 경우는 **mediaretention** 구성 설정입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.  
+따라 만료 날짜가 결정은 두 옵션을 지정 하는 경우는 **mediaretention** 구성 설정입니다. 자세한 내용은 [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.  
   
 > [!IMPORTANT]  
 >  이러한 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 파일을 덮어쓰지 못하도록 하기 위한 것입니다. 테이프는 다른 방법을 사용하여 지울 수 있고 디스크 파일은 운영 체제를 통해 삭제할 수 있습니다. 만료일 확인에 대한 자세한 내용은 이 항목에서 SKIP과 FORMAT을 참조하십시오.  
   
- EXPIREDATE  **=**  { **'***날짜***'** |   **@**  *date_var* }  
+EXPIREDATE ** = ** { **'***날짜***'** |  ** @ ** *date_var* }  
  백업 세트가 만료되어 덮어쓸 수 있는 날짜를 지정합니다. 변수로 제공한 경우 (@*date_var*),이 날짜에 구성 된 시스템 따라야 합니다. **datetime** 서식을 지정 하 고 다음 중 하나로 지정 해야 합니다.  
   
--   문자열 상수 (@*date_var*  **=**  날짜)  
-  
+-   문자열 상수 (@*date_var* ** = ** 날짜)  
 -   문자열 데이터 형식의 변수 (제외 하 고는 **ntext** 또는 **텍스트** 데이터 형식)  
-  
 -   A **smalldatetime**  
-  
 -   A **datetime** 변수  
   
- 예를 들어  
+예를 들어  
   
 -   `'Dec 31, 2020 11:59 PM'`  
-  
 -   `'1/1/2021'`  
   
- 지정 하는 방법에 대 한 내용은 **datetime** 값, 참조 [날짜 및 시간 형식](../../t-sql/data-types/date-and-time-types.md)합니다.  
+지정 하는 방법에 대 한 내용은 **datetime** 값, 참조 [날짜 및 시간 형식](../../t-sql/data-types/date-and-time-types.md)합니다.  
   
 > [!NOTE]  
 >  만료 날짜를 무시하려면 SKIP 옵션을 사용하십시오.  
   
- RETAINDAYS  **=**  { *일*| **@***days_var* }  
+RETAINDAYS ** = ** { *일*| **@***days_var* }  
  백업 미디어 세트를 덮어쓰지 않고 보존할 일 수를 지정합니다. 변수로 제공한 경우 (**@***days_var*)을 정수로 지정 해야 합니다.  
   
- **미디어 세트 옵션**  
+**미디어 세트 옵션**  
   
- 이러한 옵션은 전체 미디어 세트에서 작동합니다.  
+이러한 옵션은 전체 미디어 세트에서 작동합니다.  
   
- { **NOINIT** | INIT}  
+{ **NOINIT** | INIT}  
  백업 작업이 백업 미디어의 기존 백업 세트에 추가되는지 또는 이를 덮어쓰는지 여부를 제어합니다. 기본적으로 백업 작업은 미디어의 최신 백업 세트에 추가됩니다(NOINIT).  
   
 > [!NOTE]  
 >  간의 상호 작용에 대 한 정보에 대 한 { **NOINIT** | INIT}와 { **NOSKIP** | SKIP}이 항목의 뒷부분에 나오는 "주의"를 참조 합니다.  
   
- NOINIT  
+NOINIT  
  백업 세트가 기존 백업 세트를 보존하면서 지정된 미디어 세트에 추가되는 것을 나타냅니다. 미디어 세트에 미디어 암호가 정의되어 있는 경우에는 암호를 제공해야 합니다. NOINIT는 기본값입니다.  
   
- 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)을 참조하세요.  
+자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)을 참조하세요.  
   
- INIT  
+INIT  
  미디어 헤더만 보존하고 모든 백업 세트를 덮어쓰도록 지정합니다. INIT가 지정되면 조건이 허용되는 경우 해당 장치의 기존 백업 세트를 모두 덮어씁니다. 기본적으로 BACKUP은 다음 조건을 확인하고 둘 중 한 조건에 해당되면 백업 미디어를 덮어쓰지 않습니다.  
   
 -   백업 세트가 아직 만료되지 않은 경우. 자세한 내용은 EXPIREDATE 및 RETAINDATYS 옵션을 참조하십시오.  
-  
 -   BACKUP 문에 지정된 백업 세트 이름이 백업 미디어에 있는 이름과 일치하지 않을 경우. 자세한 내용은 이 섹션의 앞부분에 나오는 NAME 옵션을 참조하십시오.  
   
- 이러한 검사를 무시하려면 SKIP 옵션을 사용합니다.  
+이러한 검사를 무시하려면 SKIP 옵션을 사용합니다.  
   
- 자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)을 참조하세요.  
+자세한 내용은 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)을 참조하세요.  
   
- { **NOSKIP** | SKIP}  
- 백업 작업에서 미디어에 있는 백업 세트의 만료 날짜 및 시간을 덮어쓰기 전에 검사하는지 여부를 제어합니다.  
+{ **NOSKIP** | SKIP}  
+백업 작업에서 미디어에 있는 백업 세트의 만료 날짜 및 시간을 덮어쓰기 전에 검사하는지 여부를 제어합니다.  
   
 > [!NOTE]  
 >  간의 상호 작용에 대 한 정보에 대 한 { **NOINIT** | INIT}와 { **NOSKIP** | SKIP}이 항목의 뒷부분에 나오는 "주의"를 참조 합니다.  
   
- NOSKIP  
- BACKUP 문이 백업 세트를 덮어쓰기 전에 미디어에 있는 모든 백업 세트의 만료 날짜를 확인하도록 지정합니다. 이것이 기본 동작입니다.  
+NOSKIP  
+BACKUP 문이 백업 세트를 덮어쓰기 전에 미디어에 있는 모든 백업 세트의 만료 날짜를 확인하도록 지정합니다. 이것이 기본 동작입니다.  
   
- SKIP  
- 백업 세트를 덮어쓰지 않도록 BACKUP 문에서 일반적으로 수행되는 백업 세트 만료 날짜와 이름 확인을 해제합니다. { INIT | NOINIT }와 { NOSKIP | SKIP } 간 상호 작용에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+SKIP  
+백업 세트를 덮어쓰지 않도록 BACKUP 문에서 일반적으로 수행되는 백업 세트 만료 날짜와 이름 확인을 해제합니다. { INIT | NOINIT }와 { NOSKIP | SKIP } 간 상호 작용에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
+백업 세트의 만료 날짜를 보려면 쿼리는 **expiration_date** 의 열은 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 기록 테이블입니다.  
   
- 백업 세트의 만료 날짜를 보려면 쿼리는 **expiration_date** 의 열은 [backupset](../../relational-databases/system-tables/backupset-transact-sql.md) 기록 테이블입니다.  
+{ **종류가 NOFORMAT** | 형식}  
+이 백업 작업에 사용된 볼륨에 미디어 헤더를 기록하여 기존 미디어 헤더와 백업 세트를 덮어써야 하는지 여부를 지정합니다.  
   
- { **종류가 NOFORMAT** | 형식}  
- 이 백업 작업에 사용된 볼륨에 미디어 헤더를 기록하여 기존 미디어 헤더와 백업 세트를 덮어써야 하는지 여부를 지정합니다.  
+NOFORMAT  
+백업 작업에서 이 작업에 사용된 미디어 볼륨의 기존 미디어 헤더와 백업 세트를 유지하도록 지정합니다. 이것이 기본 동작입니다.  
   
- NOFORMAT  
- 백업 작업에서 이 작업에 사용된 미디어 볼륨의 기존 미디어 헤더와 백업 세트를 유지하도록 지정합니다. 이것이 기본 동작입니다.  
-  
- FORMAT  
- 새 미디어 세트가 만들어지도록 지정합니다. FORMAT을 사용하면 백업 작업에서 해당 작업에 사용된 모든 미디어 볼륨의 새 미디어 헤더를 기록합니다. 이때 볼륨의 기존 내용은 기존의 모든 미디어 헤더와 백업 세트가 덮어쓰이므로 사용할 수 없게 됩니다.  
+FORMAT  
+새 미디어 세트가 만들어지도록 지정합니다. FORMAT을 사용하면 백업 작업에서 해당 작업에 사용된 모든 미디어 볼륨의 새 미디어 헤더를 기록합니다. 이때 볼륨의 기존 내용은 기존의 모든 미디어 헤더와 백업 세트가 덮어쓰이므로 사용할 수 없게 됩니다.  
   
 > [!IMPORTANT]  
 >  FORMAT 옵션은 신중하게 사용해야 합니다. 미디어 세트의 볼륨을 포맷하면 전체 미디어 세트를 사용할 수 없게 됩니다. 예를 들어 기존 스트라이프 미디어 세트에 속하는 테이프 하나를 초기화하면 전체 미디어 세트를 사용할 수 없게 됩니다.  
   
- FORMAT 지정은 SKIP을 의미하며 SKIP은 명시적으로 지정할 필요가 없습니다.  
+FORMAT 지정은 SKIP을 의미하며 SKIP은 명시적으로 지정할 필요가 없습니다.  
   
- MEDIADESCRIPTION  **=**  { *텍스트* | **@***text_variable* }  
- 미디어 세트에 대한 설명 텍스트를 최대 255자까지 지정합니다.  
+MEDIADESCRIPTION ** = ** { *텍스트* | **@***text_variable* }  
+미디어 세트에 대한 설명 텍스트를 최대 255자까지 지정합니다.  
   
- MEDIANAME  **=**  { *media_name* | **@***media_name_variable* }  
- 전체 백업 미디어 세트에 대한 미디어 이름을 지정합니다. 미디어 이름은 128자 이하여야 합니다. MEDIANAME을 지정하면 백업 볼륨에 이미 있는 이전에 지정한 미디어 이름과 일치해야 합니다. 지정하지 않거나 SKIP 옵션을 지정하면 미디어 이름에 대한 확인을 수행하지 않습니다.  
+MEDIANAME ** = ** { *media_name* | **@***media_name_variable* }  
+전체 백업 미디어 세트에 대한 미디어 이름을 지정합니다. 미디어 이름은 128자 이하여야 합니다. MEDIANAME을 지정하면 백업 볼륨에 이미 있는 이전에 지정한 미디어 이름과 일치해야 합니다. 지정하지 않거나 SKIP 옵션을 지정하면 미디어 이름에 대한 확인을 수행하지 않습니다.  
   
- BLOCKSIZE  **=**  { *blocksize* | **@***blocksize_variable* }  
- 물리적 블록 크기(바이트)를 지정합니다. 지원되는 크기는 512, 1024, 2048, 4096, 8192, 16384, 32768 및 65536(64KB) 바이트입니다. 테이프 장치의 기본값은 65536이고 그렇지 않은 경우에는 512입니다. 일반적으로 BACKUP에서 장치에 적합한 블록 크기를 자동으로 선택하기 때문에 이 옵션은 필요하지 않습니다. 명시적으로 지정된 블록 크기는 자동 선택된 블록 크기보다 우선 적용됩니다.  
+BLOCKSIZE ** = ** { *blocksize* | **@***blocksize_variable* }  
+물리적 블록 크기(바이트)를 지정합니다. 지원되는 크기는 512, 1024, 2048, 4096, 8192, 16384, 32768 및 65536(64KB) 바이트입니다. 테이프 장치의 기본값은 65536이고 그렇지 않은 경우에는 512입니다. 일반적으로 BACKUP에서 장치에 적합한 블록 크기를 자동으로 선택하기 때문에 이 옵션은 필요하지 않습니다. 명시적으로 지정된 블록 크기는 자동 선택된 블록 크기보다 우선 적용됩니다.  
   
- CD-ROM으로 복사하거나 CD-ROM에서 복원할 백업을 만드는 경우 BLOCKSIZE=2048을 지정합니다.  
+CD-ROM으로 복사하거나 CD-ROM에서 복원할 백업을 만드는 경우 BLOCKSIZE=2048을 지정합니다.  
   
 > [!NOTE]  
 >  이 옵션은 일반적으로 테이프 장치에 쓰는 경우에만 성능에 영향을 줍니다.  
   
- **데이터 전송 옵션**  
+**데이터 전송 옵션**  
   
- BUFFERCOUNT  **=**  { *buffercount* | **@***buffercount_variable* }  
- 백업 작업에 사용되는 I/O 버퍼의 총 수를 지정합니다. 임의의 양의 정수를 지정할 수 있지만 버퍼 수가 많으면 Sqlservr.exe 프로세스의 부적절한 가상 주소 공간으로 인해 "메모리가 부족합니다"라는 오류가 발생할 수 있습니다.  
+BUFFERCOUNT ** = ** { *buffercount* | **@***buffercount_variable* }  
+백업 작업에 사용되는 I/O 버퍼의 총 수를 지정합니다. 임의의 양의 정수를 지정할 수 있지만 버퍼 수가 많으면 Sqlservr.exe 프로세스의 부적절한 가상 주소 공간으로 인해 "메모리가 부족합니다"라는 오류가 발생할 수 있습니다.  
   
- 버퍼에서 사용 하는 총 공간에 의해 결정 됩니다: *buffercount***\****maxtransfersize*합니다.  
+버퍼에서 사용 하는 총 공간에 의해 결정 됩니다: *buffercount***\****maxtransfersize*합니다.  
   
 > [!NOTE]  
 >  BUFFERCOUNT 옵션을 사용 하는 방법에 대 한 중요 한 정보에 대 한 참조는 [잘못 된 BufferCount 데이터 전송 옵션 OOM 상태가 발생할 수](http://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그.  
   
- MAXTRANSFERSIZE  **=**  { *maxtransfersize* | **@***maxtransfersize_variable* }  
+MAXTRANSFERSIZE ** = ** { *maxtransfersize* | **@***maxtransfersize_variable* }  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.  
 > [!NOTE]  
->  메모리 내 OLTP 파일 그룹 또는 데이터베이스의 FILESTREAM을 구성한 경우 또는 포함 `MAXTRANSFERSIZE` 복원할 때에는 백업을 만들 때 사용 된 것 보다 크거나 이어야 합니다.  
+>  데이터베이스에 FILESTREAM을 구성한 또는 메모리 내 OLTP 파일 그룹을 포함 하는 경우 SQL 기록기 서비스를 사용 하 여 백업을 만들 때 하면 `MAXTRANSFERSIZE` 복원 시 해야 보다 크거나 같은 경우는 `MAXTRANSFERSIZE` 된 때 사용 되는 백업이 생성 되었습니다. 
   
- **오류 관리 옵션**  
+**오류 관리 옵션**  
   
- 이러한 옵션을 사용 하 여 백업 작업에 대 한 백업 체크섬의 설정 여부 및 오류 발생 시 작업을 중지 하는지 여부를 확인할 수 있습니다.  
+이러한 옵션을 사용 하 여 백업 작업에 대 한 백업 체크섬의 설정 여부 및 오류 발생 시 작업을 중지 하는지 여부를 확인할 수 있습니다.  
   
- { **NO_CHECKSUM** | 체크섬을 (를)  
+{ **NO_CHECKSUM** | 체크섬을 (를)  
  백업 체크섬의 설정 여부를 제어합니다.  
   
- NO_CHECKSUM  
- 백업 체크섬 생성 및 페이지 체크섬의 유효성 검사를 명시적으로 해제합니다. 이것이 기본 동작입니다.  
+NO_CHECKSUM  
+백업 체크섬 생성 및 페이지 체크섬의 유효성 검사를 명시적으로 해제합니다. 이것이 기본 동작입니다.  
   
- CHECKSUM  
- 백업 작업을 사용할 수 및 사용 하도록 설정 하는 경우 각 페이지의 체크섬과 조각난된 페이지를 확인 하 고 전체 백업에 대 한 체크섬을 생성을 지정 합니다.  
+CHECKSUM  
+백업 작업을 사용할 수 및 사용 하도록 설정 하는 경우 각 페이지의 체크섬과 조각난된 페이지를 확인 하 고 전체 백업에 대 한 체크섬을 생성을 지정 합니다.  
   
- 백업 체크섬을 사용하면 작업 및 백업 처리량에 영향을 줄 수 있습니다.  
+백업 체크섬을 사용하면 작업 및 백업 처리량에 영향을 줄 수 있습니다.  
   
- 자세한 내용은 참조 [가능한 미디어 오류 시 백업 및 복원 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+자세한 내용은 참조 [가능한 미디어 오류 시 백업 및 복원 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- { **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
- 페이지 체크섬 오류가 발생한 후 백업 작업을 중지할지, 아니면 계속할지를 제어합니다.  
+{ **STOP_ON_ERROR** | CONTINUE_AFTER_ERROR}  
+페이지 체크섬 오류가 발생한 후 백업 작업을 중지할지, 아니면 계속할지를 제어합니다.  
   
- STOP_ON_ERROR  
- 페이지 체크섬에서 확인하지 않을 경우 BACKUP이 실패하도록 지정합니다. 이것이 기본 동작입니다.  
+STOP_ON_ERROR  
+페이지 체크섬에서 확인하지 않을 경우 BACKUP이 실패하도록 지정합니다. 이것이 기본 동작입니다.  
   
- CONTINUE_AFTER_ERROR  
- 잘못된 체크섬이나 조각난 페이지 등의 오류가 발생하더라도 BACKUP을 계속하도록 지시합니다.  
+CONTINUE_AFTER_ERROR  
+잘못된 체크섬이나 조각난 페이지 등의 오류가 발생하더라도 BACKUP을 계속하도록 지시합니다.  
   
- 꼬리를 백업할 수 없는 경우 데이터베이스가 손상 된 경우 NO_TRUNCATE를 사용 하 여 로그 옵션, 시작할 수 있습니다. 한 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) NO_TRUNCATE 대신 CONTINUE_AFTER_ERROR를 지정 하 여 합니다.  
+꼬리를 백업할 수 없는 경우 데이터베이스가 손상 된 경우 NO_TRUNCATE를 사용 하 여 로그 옵션, 시작할 수 있습니다. 한 [비상 로그 백업](../../relational-databases/backup-restore/tail-log-backups-sql-server.md) NO_TRUNCATE 대신 CONTINUE_AFTER_ERROR를 지정 하 여 합니다.  
   
- 자세한 내용은 참조 [가능한 미디어 오류 시 백업 및 복원 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
+자세한 내용은 참조 [가능한 미디어 오류 시 백업 및 복원 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md).  
   
- **호환성 옵션**  
+**호환성 옵션**  
   
- RESTART  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 아무 효과가 없습니다. 이 옵션은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와의 호환성을 위해 사용됩니다.  
+RESTART  
+[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 아무 효과가 없습니다. 이 옵션은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와의 호환성을 위해 사용됩니다.  
   
- **모니터링 옵션**  
+**모니터링 옵션**  
   
- STATS [  **=**  *백분율* ]  
+STATS [ ** = ** *백분율* ]  
  다른 사용자가 메시지를 표시 *백분율* 완료 되 고 진행 상태를 측정 하는 데 사용 됩니다. 경우 *백분율* 를 생략 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 각 10%가 완료 된 후 메시지를 표시 합니다.  
   
- STATS 옵션은 다음 간격을 보고할 임계값에 도달한 시점까지의 완료 백분율을 보고합니다. 간격은 지정된 비율을 대략적으로 나타냅니다. 예를 들어 STATS=10인 경우 완료된 크기가 40%이면 옵션은 43%를 표시할 수 있습니다. 대용량 백업 세트의 경우 완료 백분율이 완료된 I/O 호출 간에 매우 느리게 진행되므로 문제가 되지 않습니다.  
+STATS 옵션은 다음 간격을 보고할 임계값에 도달한 시점까지의 완료 백분율을 보고합니다. 간격은 지정된 비율을 대략적으로 나타냅니다. 예를 들어 STATS=10인 경우 완료된 크기가 40%이면 옵션은 43%를 표시할 수 있습니다. 대용량 백업 세트의 경우 완료 백분율이 완료된 I/O 호출 간에 매우 느리게 진행되므로 문제가 되지 않습니다.  
   
- **테이프 옵션**  
+**테이프 옵션**  
   
- 이러한 옵션은 테이프 장치에만 사용됩니다. 테이프가 아닌 장치를 사용할 경우 이러한 옵션은 무시됩니다.  
+이러한 옵션은 테이프 장치에만 사용됩니다. 테이프가 아닌 장치를 사용할 경우 이러한 옵션은 무시됩니다.  
   
- { **REWIND** | NOREWIND }  
- REWIND  
+{ **REWIND** | NOREWIND }  
+REWIND  
  지정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 해제 하 고 테이프를 되감습니다. 기본값은 REWIND입니다.  
   
- NOREWIND  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 작업 후에 테이프를 열어 놓도록 지정합니다. 테이프에 여러 개의 백업 작업을 수행할 때 이 옵션을 사용하면 성능을 향상시킬 수 있습니다.  
+NOREWIND  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 작업 후에 테이프를 열어 놓도록 지정합니다. 테이프에 여러 개의 백업 작업을 수행할 때 이 옵션을 사용하면 성능을 향상시킬 수 있습니다.  
   
- NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 BACKUP 문 내에서 호환되지 않습니다.  
+NOREWIND는 NOUNLOAD를 의미하며 두 옵션은 단일 BACKUP 문 내에서 호환되지 않습니다.  
   
 > [!NOTE]  
 >  NOREWIND를 사용하는 경우 같은 프로세스에서 실행 중인 BACKUP 또는 RESTORE 문이 REWIND 또는 UNLOAD 옵션을 사용하거나 서버 인스턴스가 종료될 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 테이프 드라이브에 대한 소유권을 보유합니다. 테이프를 열어 두면 다른 프로세스에서 테이프를 액세스하는 것을 방지합니다. 열려 있는 테이프 목록을 표시 하 고 열려 있는 테이프를 닫고 하는 방법에 대 한 정보를 참조 하십시오. [백업 장치 &#40; SQL Server &#41; ](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
- { **언로드** | NOUNLOAD}  
- > [!NOTE]  
+{ **언로드** | NOUNLOAD}  
+> [!NOTE]  
 >  UNLOAD/NOUNLOAD는 세션 기간 동안이나 다른 옵션을 지정하여 다시 설정할 때까지 유지되는 세션 설정입니다.  
   
- UNLOAD  
+UNLOAD  
  백업이 끝나면 테이프를 자동으로 되감고 언로드되도록 지정합니다. UNLOAD는 세션 시작 시의 기본값입니다. 
   
- NOUNLOAD  
+NOUNLOAD  
  후 백업 작업에서 테이프를 테이프 드라이브에 로드 된 상태로 유지 되도록 지정 합니다.  
   
 > [!NOTE]  
 >  테이프 백업 장치에 백업하는 경우 BLOCKSIZE 옵션은 백업 작업의 성능에 영향을 줍니다. 이 옵션은 일반적으로 테이프 장치에 쓰는 경우에만 성능에 영향을 줍니다.  
   
- **로그 관련 옵션**  
+**로그 관련 옵션**  
   
- 이러한 옵션은 BACKUP LOG와 함께만 사용됩니다.  
+이러한 옵션은 BACKUP LOG와 함께만 사용됩니다.  
   
 > [!NOTE]  
 >  로그 백업을 수행하지 않으려면 단순 복구 모델을 사용합니다. 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
- {NORECOVERY | 대기  **=**  *undo_file_name* }  
- NORECOVERY  
- 비상 로그를 백업하고 데이터베이스를 RESTORING 상태로 유지합니다. NORECOVERY는 보조 데이터베이스로 장애 조치(failover)하거나 RESTORE 작업에 앞서 비상 로그를 저장할 때 유용합니다.  
+{NORECOVERY | 대기 ** = ** *undo_file_name* }  
+  NORECOVERY  
+  비상 로그를 백업하고 데이터베이스를 RESTORING 상태로 유지합니다. NORECOVERY는 보조 데이터베이스로 장애 조치(failover)하거나 RESTORE 작업에 앞서 비상 로그를 저장할 때 유용합니다.  
   
- 로그 잘림을 건너뛰는 최상의 로그 백업을 수행한 다음 데이터베이스를 자동으로 다시 RESTORING 상태로 되돌리려면 NO_TRUNCATE 및 NORECOVERY 옵션을 함께 사용하십시오.  
+  로그 잘림을 건너뛰는 최상의 로그 백업을 수행한 다음 데이터베이스를 자동으로 다시 RESTORING 상태로 되돌리려면 NO_TRUNCATE 및 NORECOVERY 옵션을 함께 사용하십시오.  
   
- 대기  **=**  *standby_file_name*  
- 비상 로그를 백업하고 데이터베이스를 읽기 전용 및 STANDBY 상태로 유지합니다. STANDBY 절은 대기 데이터를 쓰고 롤백을 수행하지만 추가 복원 옵션을 사용해야 합니다. STANDBY 옵션 사용은 BACKUP LOG WITH NORECOVERY를 사용한 다음 RESTORE WITH STANDBY를 사용하는 것과 동일합니다.  
+  대기 ** = ** *standby_file_name*  
+  비상 로그를 백업하고 데이터베이스를 읽기 전용 및 STANDBY 상태로 유지합니다. STANDBY 절은 대기 데이터를 쓰고 롤백을 수행하지만 추가 복원 옵션을 사용해야 합니다. STANDBY 옵션 사용은 BACKUP LOG WITH NORECOVERY를 사용한 다음 RESTORE WITH STANDBY를 사용하는 것과 동일합니다.  
   
- 지정한 대기 파일 대기 모드를 사용 하려면 *standby_file_name*, 데이터베이스의 로그에 위치가 저장 됩니다. 지정한 파일이 이미 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 해당 파일을 덮어쓰고 파일이 없으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 파일을 만듭니다. 대기 파일은 데이터베이스의 일부가 됩니다.  
+  지정한 대기 파일 대기 모드를 사용 하려면 *standby_file_name*, 데이터베이스의 로그에 위치가 저장 됩니다. 지정한 파일이 이미 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 해당 파일을 덮어쓰고 파일이 없으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 파일을 만듭니다. 대기 파일은 데이터베이스의 일부가 됩니다.  
   
- 이 파일에는 롤백된 변경 내용이 저장되는데 다음에 RESTORE LOG를 적용하려는 경우 이 변경 내용은 취소해야 합니다. 커밋되지 않은 트랜잭션을 롤백하여 수정된 데이터베이스의 고유한 페이지가 모두 들어갈 수 있도록 대기 파일이 증가되므로 디스크 공간이 충분히 있어야 합니다.  
+  이 파일에는 롤백된 변경 내용이 저장되는데 다음에 RESTORE LOG를 적용하려는 경우 이 변경 내용은 취소해야 합니다. 커밋되지 않은 트랜잭션을 롤백하여 수정된 데이터베이스의 고유한 페이지가 모두 들어갈 수 있도록 대기 파일이 증가되므로 디스크 공간이 충분히 있어야 합니다.  
   
- NO_TRUNCATE  
- 지정 하는 로그 잘리지 있고는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스의 상태에 관계 없이 백업을 시도 하도록 합니다. 따라서 NO_TRUNCATE 옵션으로 수행된 백업의 메타데이터는 완전하지 않을 수 있습니다. 이 옵션을 사용하면 데이터베이스가 손상된 경우에도 로그를 백업할 수 있습니다.  
+NO_TRUNCATE  
+지정 하는 로그 잘리지 있고는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 데이터베이스의 상태에 관계 없이 백업을 시도 하도록 합니다. 따라서 NO_TRUNCATE 옵션으로 수행된 백업의 메타데이터는 완전하지 않을 수 있습니다. 이 옵션을 사용하면 데이터베이스가 손상된 경우에도 로그를 백업할 수 있습니다.  
   
- BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 지정하는 것과 같습니다.  
+BACKUP LOG의 NO_TRUNCATE 옵션은 COPY_ONLY와 CONTINUE_AFTER_ERROR를 모두 지정하는 것과 같습니다.  
   
- NO_TRUNCATE 옵션을 사용하지 않으면 데이터베이스가 ONLINE 상태여야 합니다. 데이터베이스가 SUSPENDED 상태이면 NO_TRUNCATE를 지정하여 백업을 만들 수 있습니다. 그러나 데이터베이스가 OFFLINE 또는 EMERGENCY 상태이면 NO_TRUNCATE에서도 BACKUP을 사용할 수 없습니다. 데이터베이스 상태에 대 한 정보를 참조 하십시오. [데이터베이스 상태](../../relational-databases/databases/database-states.md)합니다.  
+NO_TRUNCATE 옵션을 사용하지 않으면 데이터베이스가 ONLINE 상태여야 합니다. 데이터베이스가 SUSPENDED 상태이면 NO_TRUNCATE를 지정하여 백업을 만들 수 있습니다. 그러나 데이터베이스가 OFFLINE 또는 EMERGENCY 상태이면 NO_TRUNCATE에서도 BACKUP을 사용할 수 없습니다. 데이터베이스 상태에 대 한 정보를 참조 하십시오. [데이터베이스 상태](../../relational-databases/databases/database-states.md)합니다.  
   
 ## <a name="about-working-with-sql-server-backups"></a>SQL Server 백업 사용 정보  
  이 섹션에서는 다음 필수 백업 개념을 설명합니다.  
   
  [백업 유형](#Backup_Types)  
-  
  [트랜잭션 로그 잘림](#Tlog_Truncation)  
-  
  [백업 미디어 포맷](#Formatting_Media)  
-  
  [백업 장치 및 미디어 세트 사용](#Backup_Devices_and_Media_Sets)  
-  
  [SQL Server 백업 복원](#Restoring_Backups)  
   
 > [!NOTE]  
@@ -580,7 +571,7 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] 최대 3 개의 보조 백업 장
     |---------------------|------------------|  
     |전체 데이터베이스|[데이터베이스 백업을](../../relational-databases/backup-restore/full-database-backups-sql-server.md) 전체 데이터베이스를 포함 합니다.<br /><br /> 각 데이터베이스 백업은 하나 이상의 일련의 기초로 사용 될 수 필요에 따라 [차등 데이터베이스 백업을](../../relational-databases/backup-restore/differential-backups-sql-server.md)합니다.|  
     |부분 데이터베이스|[부분 백업](../../relational-databases/backup-restore/partial-backups-sql-server.md) 은 읽기/쓰기 파일 그룹 및 하나 이상의 읽기 전용 파일이 나 파일 그룹입니다.<br /><br /> 각 부분 백업은 하나 이상의 일련의 기초로 사용 될 수 필요에 따라 [차등 부분 백업](../../relational-databases/backup-restore/differential-backups-sql-server.md)합니다.|  
-    |파일 또는 파일 그룹|[파일 백업](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 하나 이상의 파일 또는 파일 그룹을 포함 하 고 여러 개의 파일 그룹이 포함 하는 데이터베이스에 대해서만 관련이 있습니다. 단순 복구 모델에서 파일 백업은 기본적으로 읽기 전용 보조 파일 그룹으로 제한됩니다.<br /><br /> 각 파일 백업은 하나 이상의 일련의 기초로 사용 될 수 필요에 따라 [차등 파일 백업을](../../relational-databases/backup-restore/differential-backups-sql-server.md)합니다.|  
+    |파일 또는 파일 그룹|[파일 백업](../../relational-databases/backup-restore/full-file-backups-sql-server.md) 하나 이상의 파일 또는 파일 그룹을 포함 하 고 여러 개의 파일 그룹이 포함 하는 데이터베이스에 대해서만 관련이 있습니다. 단순 복구 모델에서 파일 백업은 기본적으로 읽기 전용 보조 파일 그룹으로 제한됩니다.<br /> 각 파일 백업은 하나 이상의 일련의 기초로 사용 될 수 필요에 따라 [차등 파일 백업을](../../relational-databases/backup-restore/differential-backups-sql-server.md)합니다.|  
   
 -   전체 복구 모델 또는 대량 로그 복구 모델에서 기존 백업은 포함 순차적 *트랜잭션 로그 백업을* (또는 *로그 백업을*), 필요한 합니다. 각 로그 백업은 백업이 생성되었을 당시 활성 상태에 있었던 트랜잭션 로그 부분을 포함하며 이전 로그 백업에서 백업되지 않은 모든 로그 레코드를 포함합니다.  
   
@@ -603,9 +594,7 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] 최대 3 개의 보조 백업 장
  다음 조건이 충족되는 경우에만 BACKUP 문에 의해 백업 미디어가 포맷됩니다.  
   
 -   FORMAT 옵션이 지정된 경우  
-  
 -   미디어가 비어 있는 경우  
-  
 -   작업이 연속 테이프를 기록하는 경우  
   
 ###  <a name="Backup_Devices_and_Media_Sets"></a>백업 장치 및 미디어 세트 사용  
@@ -615,7 +604,7 @@ MIRROR TO \<backup_device > [ **,**...  *n*  ] 최대 3 개의 보조 백업 장
   
  다음 예에서는 3개의 디스크 파일을 사용하는 새 스트라이프 미디어 세트에 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스의 백업을 작성합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2.bak',   
@@ -637,7 +626,7 @@ GO
   
  미러된 미디어 세트의 경우 각 MIRROR TO 절은 TO 절과 동일한 수와 유형의 장치를 나열해야 합니다. 다음 예에서는 2개의 미러를 포함하고 미러당 3개의 장치를 사용하는 미러된 미디어 세트에 기록합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO DISK='X:\SQLServerBackups\AdventureWorks1a.bak',   
 DISK='Y:\SQLServerBackups\AdventureWorks2a.bak',   
@@ -678,8 +667,8 @@ GO
   
 ||NOINIT|INIT|  
 |------|------------|----------|  
-|NOSKIP|볼륨에 유효한 미디어 헤더가 포함되어 있으면 미디어 이름이 지정된 MEDIANAME과 일치하는지 확인합니다. 이름이 일치하면 기존 백업 세트를 모두 유지하면서 백업 세트를 추가합니다.<br /><br /> 볼륨에 유효한 미디어 헤더가 포함되어 있지 않으면 오류가 발생합니다.|볼륨에 유효한 미디어 헤더가 포함되어 있으면 다음 검사를 수행합니다.<br /><br /> -지정 된 미디어 이름이 일치 하는지 미디어 헤더의 미디어 name.* * MEDIANAME이 지정 하는 경우 확인<br /><br /> -미디어에 아직 만료 되지 않은 백업 세트가 없습니다 않은지 확인 합니다. 만료되지 않은 백업 세트가 있으면 백업을 종료합니다.<br /><br /> 이러한 검사를 통과하면 미디어 헤더만 유지하며 미디어의 모든 백업 세트를 덮어씁니다.<br /><br /> 볼륨에 유효한 미디어 헤더가 포함되어 있지 않으면 지정된 MEDIANAME 및 MEDIADESCRIPTION을 사용하여 미디어 헤더를 생성합니다.|  
-|SKIP|볼륨에 유효한 미디어 헤더가 포함되어 있으면 기존 백업 세트를 모두 유지하면서 백업 세트를 추가합니다.|볼륨에 유효한 포함 되어 있으면 * 미디어 헤더를 미디어 헤더만 유지 하며 미디어의 모든 백업 세트를 덮어씁니다.<br /><br /> 미디어가 비어 있으면 지정된 MEDIANAME 및 MEDIADESCRIPTION을 사용하여 미디어 헤더를 생성합니다.|  
+|NOSKIP|볼륨에 유효한 미디어 헤더가 포함되어 있으면 미디어 이름이 지정된 MEDIANAME과 일치하는지 확인합니다. 이름이 일치하면 기존 백업 세트를 모두 유지하면서 백업 세트를 추가합니다.<br /> 볼륨에 유효한 미디어 헤더가 포함되어 있지 않으면 오류가 발생합니다.|볼륨에 유효한 미디어 헤더가 포함되어 있으면 다음 검사를 수행합니다.<br /> -지정 된 미디어 이름이 일치 하는지 미디어 헤더의 미디어 name.* * MEDIANAME이 지정 하는 경우 확인<br /> -미디어에 아직 만료 되지 않은 백업 세트가 없습니다 않은지 확인 합니다. 만료되지 않은 백업 세트가 있으면 백업을 종료합니다.<br /> 이러한 검사를 통과하면 미디어 헤더만 유지하며 미디어의 모든 백업 세트를 덮어씁니다.<br /> 볼륨에 유효한 미디어 헤더가 포함되어 있지 않으면 지정된 MEDIANAME 및 MEDIADESCRIPTION을 사용하여 미디어 헤더를 생성합니다.|  
+|SKIP|볼륨에 유효한 미디어 헤더가 포함되어 있으면 기존 백업 세트를 모두 유지하면서 백업 세트를 추가합니다.|볼륨에 유효한 포함 되어 있으면 * 미디어 헤더를 미디어 헤더만 유지 하며 미디어의 모든 백업 세트를 덮어씁니다.<br /> 미디어가 비어 있으면 지정된 MEDIANAME 및 MEDIADESCRIPTION을 사용하여 미디어 헤더를 생성합니다.|  
   
  * 유효성에는 MTF 버전 번호와 기타 헤더 정보가 포함 됩니다. 지정한 버전이 지원되지 않거나 예기치 못한 값일 경우 오류가 발생합니다.  
   
@@ -711,22 +700,18 @@ GO
   
 -   데이터베이스 축소 또는 파일 축소 작업. 자동 축소 작업도 포함됩니다.  
   
- 백업 작업이 파일 관리 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업이 설정한 잠금 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
+백업 작업이 파일 관리 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업이 설정한 잠금 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
   
 ## <a name="metadata"></a>메타데이터  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 백업 작업을 추적하는 다음과 같은 백업 기록 테이블이 있습니다.  
   
 -   [backupfile&#40; Transact SQL &#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)  
-  
 -   [backupfilegroup&#40; Transact SQL &#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)  
-  
 -   [backupmediafamily&#40; Transact SQL &#41;](../../relational-databases/system-tables/backupmediafamily-transact-sql.md)  
-  
 -   [backupmediaset&#40; Transact SQL &#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)  
-  
 -   [backupset&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)  
   
- 백업 세트에 아직 기록 되지 않았습니다 경우, 복원 수행 되는 **msdb** 데이터베이스, 백업 기록 테이블을 수정할 수도 있습니다.  
+백업 세트에 아직 기록 되지 않았습니다 경우, 복원 수행 되는 **msdb** 데이터베이스, 백업 기록 테이블을 수정할 수도 있습니다.  
   
 ## <a name="security"></a>보안  
  부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], **암호** 및 **MEDIAPASSWORD** 옵션은 백업을 만드는 데 지원 되지 않습니다. 암호로 만든 백업을 여전히 복원할 수 있습니다.  
@@ -740,22 +725,14 @@ GO
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
 -   1. [전체 데이터베이스 백업](#backing_up_db)  
-  
 -   2. [데이터베이스 및 로그 백업](#backing_up_db_and_log)  
-  
 -   3. [보조 파일 그룹의 전체 파일 백업 만들기](#full_file_backup)  
-  
 -   4. [보조 파일 그룹의 차등 파일 백업 만들기](#differential_file_backup)  
-  
 -   5. [세트 만들기 및 미러된 단일 패밀리 미디어에 백업](#create_single_family_mirrored_media_set)  
-  
 -   6. [세트 만들기 및 미러된 다중 패밀리 미디어에 백업](#create_multifamily_mirrored_media_set)  
-  
 -   G [미러된 미디어 세트를 기존의 백업](#existing_mirrored_media_set)  
-  
 -   8. [새 미디어 세트에 압축된 된 백업 만들기](#creating_compressed_backup_new_media_set)  
-
-- 9.  [Microsoft Azure Blob 저장소 서비스에 백업](#url)
+-   9.  [Microsoft Azure Blob 저장소 서비스에 백업](#url)  
   
 > [!NOTE]  
 >  백업 방법 도움말 항목에 추가적인 예가 포함되어 있습니다. 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)을 참조하세요.  
@@ -763,7 +740,7 @@ GO
 ###  <a name="backing_up_db"></a> 1. 전체 데이터베이스 백업  
  다음 예에서는 백업에서 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스를 디스크 파일입니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH FORMAT;  
@@ -777,7 +754,7 @@ GO
   
  마지막으로 `AdvWorksData`에 대한 전체 데이터베이스 백업을 만들고 업데이트 작업 기간이 경과된 후 로그를 `AdvWorksLog`에 백업합니다.  
   
-```tsql  
+```sql  
 -- To permit log backups, before the full database backup, modify the database   
 -- to use the full recovery model.  
 USE master;  
@@ -810,7 +787,7 @@ GO
 ###  <a name="full_file_backup"></a> 3. 보조 파일 그룹의 전체 파일 백업 만들기  
  다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 전체 파일 백업을 만듭니다.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -822,7 +799,7 @@ GO
 ###  <a name="differential_file_backup"></a> 4. 보조 파일 그룹의 차등 파일 백업 만들기  
  다음 예에서는 두 보조 파일 그룹에 있는 모든 파일의 차등 파일 백업을 만듭니다.  
   
-```tsql  
+```sql  
 --Back up the files in SalesGroup1:  
 BACKUP DATABASE Sales  
    FILEGROUP = 'SalesGroup1',  
@@ -836,7 +813,7 @@ GO
 ###  <a name="create_single_family_mirrored_media_set"></a> 5. 미러된 단일 패밀리 미디어 세트 만들기 및 백업  
  다음 예에서는 단일 미디어 패밀리와 4개의 미러를 포함하는 미러된 미디어 세트를 만들고 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스를 해당 미디어 세트에 백업합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0'  
 MIRROR TO TAPE = '\\.\tape1'  
@@ -850,7 +827,7 @@ WITH
 ###  <a name="create_multifamily_mirrored_media_set"></a> 6. 미러된 다중 패밀리 미디어 세트 만들기 및 백업  
  다음 예에서는 각 미러가 두 개의 미디어 패밀리로 구성되는 미러된 미디어 세트를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스를 두 미러에 백업합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -862,7 +839,7 @@ WITH
 ###  <a name="existing_mirrored_media_set"></a>7. 기존 미러된 미디어 세트에 백업  
  다음 예에서는 앞부분에 나오는 예에서 만든 미디어 세트에 백업 세트를 추가합니다.  
   
-```tsql  
+```sql  
 BACKUP LOG AdventureWorks2012  
 TO TAPE = '\\.\tape0', TAPE = '\\.\tape1'  
 MIRROR TO TAPE = '\\.\tape2', TAPE = '\\.\tape3'  
@@ -877,7 +854,7 @@ WITH
 ###  <a name="creating_compressed_backup_new_media_set"></a>8. 새 미디어 세트에 압축된 백업 만들기  
  다음 예에서는 미디어를 포맷하여 새 미디어 세트를 만들고 [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] 데이터베이스에 대해 압축된 전체 백업을 수행합니다.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012 TO DISK='Z:\SQLServerBackups\AdvWorksData.bak'   
 WITH   
    FORMAT,   
@@ -887,7 +864,7 @@ WITH
 ###  <a name="url"></a>I입니다. Microsoft Azure Blob 저장소 서비스에 백업 
 이 예제에서는 수행의 전체 데이터베이스 백업을 `Sales` Microsoft Azure Blob 저장소 서비스에 있습니다.  저장소 계정 이름은 `mystorageaccount`입니다.  컨테이너는 `myfirstcontainer`입니다.  읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, 저장 된 액세스 정책과 연결 된 공유 액세스 서명을 사용 하 여 만들어졌습니다.  에 대 한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows Azure Blob 저장소 서비스에 백업, 참조 [SQL Server 백업 및 Microsoft Azure Blob 저장소 서비스로 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) 및 [SQL Server Backup to URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)합니다.
 
-```tsql  
+```sql  
 BACKUP DATABASE Sales
 TO URL = 'https://mystorageaccount.blob.core.windows.net/myfirstcontainer/Sales_20160726.bak'
 WITH STATS = 5;

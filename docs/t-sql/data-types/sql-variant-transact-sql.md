@@ -1,7 +1,7 @@
 ---
 title: sql_variant (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/23/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,18 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4eb946d5b6ed5a9c6d33789166327bd2dd25d7c1
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 014cf6a2859bc60b4366418363681b1cd53dc5c6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="sqlvariant-transact-sql"></a>sql_variant(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 여러 가지 데이터 형식의 값을 저장하는 데이터 형식입니다.
-  
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)),[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -70,7 +68,7 @@ ODBC 완전히 지원 하지 않는 **sql_variant**합니다. 따라서 쿼리�
   
 |데이터 형식 계층|데이터 형식 패밀리|  
 |---|---|
-|**sql_variant**|**sql_variant**|  
+|**sql_variant**|sql_variant |  
 |**datetime2**|날짜 및 시간|  
 |**datetimeoffset**|날짜 및 시간|  
 |**datetime**|날짜 및 시간|  
@@ -93,7 +91,7 @@ ODBC 완전히 지원 하지 않는 **sql_variant**합니다. 따라서 쿼리�
 |**char**|유니코드|  
 |**varbinary**|이진|  
 |**binary**|이진|  
-|**uniqueidentifier**|**고유 식별자**|  
+|**uniqueidentifier**|Uniqueidentifier |  
   
 에 다음 규칙이 적용 **sql_variant** 비교:
 -   때 **sql_variant** 서로 다른 기본 데이터 형식의 값을 비교 하 고 기본 데이터 형식이 서로 다른 데이터 형식 패밀리, 계층 구조 차트에서 데이터 형식 패밀리의 더 높은 값 두 값 중 더 큰 것으로 간주 됩니다.  
@@ -115,7 +113,44 @@ ODBC 완전히 지원 하지 않는 **sql_variant**합니다. 따라서 쿼리�
 |**sql_variant**|**geography**|  
 |**hierarchyid**|**geometry**|  
 |사용자 정의 형식|**datetimeoffset**|  
+
+## <a name="examples"></a>예  
+
+### <a name="a-using-a-sqlvariant-in-a-table"></a>1. 테이블에서 sql_variant 사용  
+ 다음 예제에서는 sql_variant 데이터 형식으로 테이블을 만듭니다. 이 예제에서는 검색 `SQL_VARIANT_PROPERTY` 에 대 한 정보는 `colA` 값 `46279.1` 여기서 `colB`  = `1689`있다고 가정, `tableA` 가 `colA` 형식의 `sql_variant` 및 `colB`.  
   
+```sql    
+CREATE   TABLE tableA(colA sql_variant, colB int)  
+INSERT INTO tableA values ( cast (46279.1 as decimal(8,2)), 1689)  
+SELECT   SQL_VARIANT_PROPERTY(colA,'BaseType') AS 'Base Type',  
+         SQL_VARIANT_PROPERTY(colA,'Precision') AS 'Precision',  
+         SQL_VARIANT_PROPERTY(colA,'Scale') AS 'Scale'  
+FROM      tableA  
+WHERE      colB = 1689  
+```  
+  
+ [!INCLUDE[ssResult](../../includes/ssresult-md.md)]다음 세 값 중 각는 **sql_variant**합니다.  
+  
+```  
+Base Type    Precision    Scale  
+---------    ---------    -----  
+decimal      8           2  
+  
+(1 row(s) affected)  
+```  
+  
+### <a name="b-using-a-sqlvariant-as-a-variable"></a>2. 변수는 sql_variant를 사용 하 여   
+ 다음 예제에서는 sql_variant 데이터 형식을 사용 하 여 변수를 만들고 다음 검색 `SQL_VARIANT_PROPERTY` 라는 변수에 대 한 정보 @v1합니다.  
+  
+```sql    
+DECLARE @v1 sql_variant;  
+SET @v1 = 'ABC';  
+SELECT @v1;  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'BaseType');  
+SELECT SQL_VARIANT_PROPERTY(@v1, 'MaxLength');  
+```    
+
+
 ## <a name="see-also"></a>참고 항목
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [SQL_VARIANT_PROPERTY &#40; Transact SQL &#41;](../../t-sql/functions/sql-variant-property-transact-sql.md)

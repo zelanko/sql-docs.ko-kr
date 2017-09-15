@@ -1,7 +1,7 @@
 ---
 title: ROLLBACK TRANSACTION (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 06/10/2016
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e31f62560b4061610c0d3c0ec3147110a3e84644
+ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
+ms.openlocfilehash: 7a7cf37490b1dab17a061104ab14b5d11d26632d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/14/2017
 
 ---
 # <a name="rollback-transaction-transact-sql"></a>ROLLBACK TRANSACTION(Transact-SQL)
@@ -46,7 +46,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 ROLLBACK { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable  
      | savepoint_name | @savepoint_variable ]   
@@ -55,7 +54,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
 ## <a name="arguments"></a>인수  
  *transaction_name*  
- BEGIN TRANSACTION에서 트랜잭션에 할당된 이름입니다. *transaction_name* 식별자에 대 한 규칙을 따라야 하지만 트랜잭션 이름의 처음 32 자만 사용 됩니다. 트랜잭션을 중첩할 경우 *transaction_name* 가장 바깥쪽 BEGIN TRANSACTION 문에서 이름 이어야 합니다. *transaction_name* 항상 대/소문자 구분, 경우에 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대/소문자를 무시 합니다.  
+ BEGIN TRANSACTION에서 트랜잭션에 할당된 이름입니다. *transaction_name* 식별자에 대 한 규칙을 따라야 하지만 트랜잭션 이름의 처음 32 자만 사용 됩니다. 트랜잭션을 중첩할 경우 *transaction_name* 가장 바깥쪽 BEGIN TRANSACTION 문에서 이름 이어야 합니다. *transaction_name* 는 항상 대/소문자 구분, 경우에 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구분 하지 않습니다.  
   
  **@***tran_name_variable*  
  유효한 트랜잭션 이름이 포함된 사용자 정의 변수의 이름입니다. 변수를 사용 하 여 선언 해야 합니다는 **char**, **varchar**, **nchar**, 또는 **nvarchar** 데이터 형식입니다.  
@@ -74,7 +73,7 @@ ROLLBACK { TRAN | TRANSACTION }
   
  ROLLBACK TRANSACTION을 참조할 수 없습니다는 *savepoint_name* BEGIN DISTRIBUTED TRANSACTION으로 명시적으로 하거나 분산된 트랜잭션을 시작 하거나 로컬 트랜잭션에서 에스컬레이션 합니다.  
   
- COMMIT TRANSACTION 문이 실행된 후에는 트랜잭션을 롤백할 수 없습니다. 단, COMMIT TRANSACTION이 롤백되는 트랜잭션 내에 포함된 중첩된 트랜잭션과 연결되어 있는 경우는 제외됩니다. 이 경우에는 중첩된 트랜잭션에 대해 COMMIT TRANSACTION을 실행한 경우에도 중첩된 트랜잭션이 롤백됩니다.  
+ COMMIT TRANSACTION 문이 실행된 후에는 트랜잭션을 롤백할 수 없습니다. 단, COMMIT TRANSACTION이 롤백되는 트랜잭션 내에 포함된 중첩된 트랜잭션과 연결되어 있는 경우는 제외됩니다. 이 인스턴스에서 중첩된 트랜잭션 하는 롤백되거나에 대 한 COMMIT TRANSACTION을 실행 한 경우에 합니다.  
   
  트랜잭션에서 중복되는 저장점 이름이 허용되지만 중복되는 저장점 이름을 사용하는 ROLLBACK TRANSACTION은 해당 저장점 이름을 사용하여 가장 최근의 SAVE TRANSACTION으로만 롤백합니다.  
   
@@ -89,11 +88,11 @@ ROLLBACK { TRAN | TRANSACTION }
   
 -   트리거를 발생시키는 문 다음의 일괄 처리에 있는 문은 실행되지 않습니다.  
   
- @@TRANCOUNT 는 자동 커밋 모드에도 트리거를 입력 하면 1 씩 증가 합니다. 시스템은 트리거를 암시적인 중첩 트랜잭션으로 처리합니다.  
+@@TRANCOUNT 는 자동 커밋 모드에도 트리거를 입력 하면 1 씩 증가 합니다. 시스템은 트리거를 암시적인 중첩 트랜잭션으로 처리합니다.  
   
- 저장 프로시저의 ROLLBACK TRANSACTION 문은 해당 프로시저를 호출하는 일괄 처리의 다음 문에 영향을 미치지 않습니다. 일괄 처리의 다음 문이 실행됩니다. 트리거의 ROLLBACK TRANSACTION 문은 트리거를 발생시킨 문이 포함된 일괄 처리를 종료합니다. 일괄 처리의 다음 문은 실행되지 않습니다.  
+저장 프로시저의 ROLLBACK TRANSACTION 문은 해당 프로시저를 호출하는 일괄 처리의 다음 문에 영향을 미치지 않습니다. 일괄 처리의 다음 문이 실행됩니다. 트리거의 ROLLBACK TRANSACTION 문은 트리거를 발생시킨 문이 포함된 일괄 처리를 종료합니다. 일괄 처리의 다음 문은 실행되지 않습니다.  
   
- 커서에 대한 ROLLBACK의 결과는 다음 3가지 규칙으로 정의합니다.  
+커서에 대한 ROLLBACK의 결과는 다음 3가지 규칙으로 정의합니다.  
   
 1.  CURSOR_CLOSE_ON_COMMIT을 ON으로 설정하면 ROLLBACK에서는 모든 열려있는 커서의 할당을 취소하지 않습니다.  
   
@@ -108,21 +107,15 @@ ROLLBACK { TRAN | TRANSACTION }
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 명명된 트랜잭션을 롤백한 결과를 보여 줍니다.  
+ 다음 예에서는 명명된 트랜잭션을 롤백한 결과를 보여 줍니다. 테이블을 만든 후에 다음 문은 명명 된 트랜잭션을 시작, 두 개의 행을 삽입 하 고 변수에 명명 된 트랜잭션을 롤백 후 @TransactionName합니다. 명명 된 트랜잭션 외부에서 다른 문을 두 개의 행을 삽입 합니다. 쿼리는 이전 문의 결과 반환합니다.   
   
-```  
+```sql    
 USE tempdb;  
 GO  
-CREATE TABLE ValueTable ([value] int;)  
+CREATE TABLE ValueTable ([value] int);  
 GO  
   
 DECLARE @TransactionName varchar(20) = 'Transaction1';  
-  
---The following statements start a named transaction,  
---insert two rows, and then roll back  
---the transaction named in the variable @TransactionName.  
---Another statement outside of the named transaction inserts two rows.  
---The query returns the results of the previous statements.  
   
 BEGIN TRAN @TransactionName  
        INSERT INTO ValueTable VALUES(1), (2);  
@@ -133,13 +126,15 @@ INSERT INTO ValueTable VALUES(3),(4);
 SELECT [value] FROM ValueTable;  
   
 DROP TABLE ValueTable;  
-  
---Results  
---value  
--------------  
---3  
---4  
 ```  
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+```  
+value  
+-----   
+3    
+4  
+```  
+  
   
 ## <a name="see-also"></a>관련 항목:  
  [BEGIN DISTRIBUTED TRANSACTION&#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
