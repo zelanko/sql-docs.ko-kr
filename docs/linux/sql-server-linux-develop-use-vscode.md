@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 이 항목에서는 사용 하는 **mssql** Visual Studio 코드 (VS) SQL Server 데이터베이스를 개발 하기에 대 한 확장입니다.
 
-Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그래픽 코드 편집기입니다. [ **mssql** VS Code에 대 한 확장] TRANSACT-SQL (T-SQL) 사용 하 여 쿼리를 SQL Server에 연결 하 고 결과 볼 수 있습니다.
+Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그래픽 코드 편집기입니다. [**mssql** VS Code에 대 한 확장] TRANSACT-SQL (T-SQL) 사용 하 여 쿼리를 SQL Server에 연결 하 고 결과 볼 수 있습니다.
 
 ## <a name="install-vs-code"></a>VS Code 설치
 1. VS Code를 아직 설치 하지 않은 경우 [다운로드 하 고 VS Code 설치] 컴퓨터에 있습니다.
