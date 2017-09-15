@@ -1,5 +1,5 @@
 ---
-title: "버전 (Master Data Services) | Microsoft Docs"
+title: "버전(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - versions [Master Data Services], version flags
 ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4aa3e9252b57b596ab576616820bbad706a4ea92
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5c633441058f1db8843de596824b235d30ec2eba
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="versions-master-data-services"></a>버전(Master Data Services)
@@ -74,23 +74,23 @@ ms.lasthandoff: 08/02/2017
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|기존 버전의 이름을 변경합니다.|[버전 이름 &#40; 변경 Master Data services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|관리자만 데이터를 편집할 수 있도록 버전을 잠급니다.|[버전 &#40; 잠금 Master Data services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
-|사용자가 데이터를 편집할 수 있도록 버전을 잠금 해제합니다.|[버전 &#40; 잠금 해제 Master Data services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|모든 데이터의 유효성 검사를 마친 후 버전을 커밋합니다.|[버전 &#40; 커밋 Master Data services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|버전을 표시하는 새 플래그를 만듭니다.|[버전 플래그 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|기존 버전 플래그의 이름을 변경합니다.|[버전 플래그 이름 &#40; 변경 Master Data services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
-|기존 플래그를 버전에 할당합니다.|[버전 &#40;에 플래그 할당 Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|기존 버전의 새 복사본을 만듭니다.|[버전 &#40; 복사 Master Data services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|기존 버전의 이름을 변경합니다.|[버전 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|관리자만 데이터를 편집할 수 있도록 버전을 잠급니다.|[버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|사용자가 데이터를 편집할 수 있도록 버전을 잠금 해제합니다.|[버전 잠금 해제&#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
+|모든 데이터의 유효성 검사를 마친 후 버전을 커밋합니다.|[버전 커밋&#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|버전을 표시하는 새 플래그를 만듭니다.|[버전 플래그 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|기존 버전 플래그의 이름을 변경합니다.|[버전 플래그 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|기존 플래그를 버전에 할당합니다.|[버전에 플래그 할당&#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
+|기존 버전의 새 복사본을 만듭니다.|[버전 복사&#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
 |기존 버전을 삭제합니다.|[버전 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
 |버전에서 일시 삭제된 멤버를 삭제합니다.|[버전 멤버 삭제&#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [역방향 transaction&#40; Master Data services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
+-   [트랜잭션 되돌리기&#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
--   [알림 &#40; Master Data services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

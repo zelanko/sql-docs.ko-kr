@@ -1,7 +1,7 @@
 ---
 title: "빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017"
+ms.date: 09/05/2017"
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: db24b73ba03d4cde0dfc090ebf2ed8a1661a55e1
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 481c0843888345d3a3440dd22cae2135c00863e1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
@@ -136,7 +136,7 @@ CREATE TABLE 문에서 T-SQL 키워드 MEMORY_OPTIMIZED는 디스크가 아니�
   
 #### <a name="natively-compiled-modules"></a>고유하게 컴파일된 모듈  
   
-CREATE PROCEDURE 문에서 T-SQL 키워드 NATIVE_COMPILATION은 네이티브 프로시저를 만드는 방법입니다. 온라인에서 데이터베이스를 순환할 때마다 네이티브 프로시저를 처음 사용할 때 T-SQL 문이 기계어 코드로 컴파일됩니다. T-SQL 명령이 각 명령의 느린 해석을 더 이상 허용하지 않습니다.  
+CREATE PROCEDURE 문에서 T-SQL 키워드 NATIVE_COMPILATION은 네이티브 컴파일된 저장 프로시저를 만드는 방법입니다. 온라인에서 데이터베이스를 순환할 때마다 네이티브 프로시저를 처음 사용할 때 T-SQL 문이 기계어 코드로 컴파일됩니다. T-SQL 명령이 각 명령의 느린 해석을 더 이상 허용하지 않습니다.  
   
 - 네이티브 컴파일 결과를 확인하는 데 해석된 프로시저 기간의 1/100 정도밖에 걸리지 않았습니다.  
   
@@ -218,14 +218,12 @@ Microsoft SQL Server에서 메모리 액세스에 최적화된 테이블을 만�
 Azure SQL 데이터베이스에서는 이러한 FILEGROUP을 만들 수 없으며, 만들 필요도 없습니다.  
 
 다음 샘플 T-SQL 스크립트는 메모리 내 OLTP에 데이터베이스를 사용하고 모든 권장 설정을 구성합니다. 이는 SQL Server와 Azure SQL Database 둘 다에서 작동합니다([enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)).
-  
+
+MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에는 일부 SQL Server 기능만 지원됩니다. 제한 사항에 대한 자세한 내용은 [메모리 내 OLTP에 대한 지원되지 않는 SQL Server 기능](unsupported-sql-server-features-for-in-memory-oltp.md)을 참조하세요.
   
 <a name="create-a-memory-optimized-table-26y"></a>  
   
 ## <a name="4-create-a-memory-optimized-table"></a>4. 메모리 액세스에 최적화된 테이블 만들기  
-  
-  
-  
   
 중요한 Transact-SQL 키워드는 MEMORY_OPTIMIZED 키워드입니다.  
   
@@ -302,6 +300,7 @@ ALTER TABLE... ADD/DROP은 메모리 액세스에 최적화된 테이블 또는 
   
 키워드 SCHEMABINDING은 기본 프로시저가 먼저 삭제되지 않으면 기본 프로시저에서 참조하는 테이블을 삭제할 수 없음을 의미합니다. 자세한 내용은 [네이티브 컴파일 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md)를 참조하세요.  
   
+메모리 최적화 테이블에 액세스하기 위해 네이티브 컴파일된 저장 프로시저를 만들 필요가 없습니다. 기존의 저장 프로시저 및 임시 일괄 처리에서 메모리 최적화 테이블을 참조할 수도 있습니다.
   
 <a name="execute-the-native-proc-31e"></a>  
   

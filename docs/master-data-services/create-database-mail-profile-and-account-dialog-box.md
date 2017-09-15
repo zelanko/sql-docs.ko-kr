@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.dbmailprofileacct.f1
 ms.assetid: b93ea3d4-9f22-490e-8e26-d766b454aed6
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: e8f05588d7ad0a4ab6b723f495a34b5343caab63
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 240967b3909a2b3796534cb29c42dfa5838be692
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-database-mail-profile-and-account-dialog-box"></a>데이터베이스 메일 프로필 및 계정 만들기 대화 상자
@@ -41,9 +41,9 @@ ms.lasthandoff: 08/02/2017
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
-|**전자 메일 주소**|계정에 대한 전자 메일 주소의 이름을 입력합니다. 이 주소는 메일을 보내는 메일 주소이며 *email_name*@*domain_name* 예제에서는 전자 메일 주소는 sales@contoso.com합니다.|  
+|**전자 메일 주소**|계정에 대한 전자 메일 주소의 이름을 입력합니다. 이 주소는 메일을 보내는 메일 주소이며 *email_name*@*domain_name* 이메일 주소의 예는 sales@contoso.com입니다.|  
 |**표시 이름**|선택적 설정입니다. 이 계정을 사용하여 보낼 전자 메일 메시지에 표시할 이름(예: Contoso Sales Group)을 입력합니다.|  
-|**회신 전자 메일 주소**|선택적 설정입니다. 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 예제에서는 회신 전자 메일 주소는 admin@contoso.com합니다.|  
+|**회신 전자 메일 주소**|선택적 설정입니다. 이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 회신 이메일 주소의 예는 admin@contoso.com입니다.|  
 |**SMTP 서버**|계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 예를 들어 **smtp.***<company_name>***.com**과 같은 SMTP 서버 형식을 사용할 수 있습니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.|  
 |**포트 번호**|이 계정에 대한 SMTP 서버의 포트 번호를 입력합니다. 기본 SMTP 포트는 25입니다.|  
 |**이 서버에는 보안 연결(SSL)이 필요합니다.**|SSL(Secure Sockets Layer)을 사용하여 통신을 암호화합니다.|  

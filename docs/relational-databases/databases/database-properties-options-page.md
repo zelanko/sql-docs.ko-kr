@@ -2,7 +2,7 @@
 title: "데이터베이스 속성(옵션 페이지) | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 04/29/2016
+ms.date: 08/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,11 +17,11 @@ caps.latest.revision: 67
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 49b5572874fd642d738b8ffee362cc84540709ea
+ms.translationtype: HT
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
@@ -37,7 +37,7 @@ ms.lasthandoff: 06/22/2017
  데이터베이스 복구 모델을 **전체**, **대량 로그**또는 **단순**중에서 하나 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
- 데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은  **SQL Server 2014(120)**,  **SQL Server 2012(110)**및 **SQL Server 2008(100)**입니다. SQL Server 2005 데이터베이스를 SQL Server 2014로 업그레이드하는 경우 데이터베이스의 호환성 수준이 90에서 100으로 변경됩니다.  SQL Server 2014에서는 호환성 수준 90이 지원되지 않습니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
+ 데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은 [ALTER DATABASE(Transact-SQL) 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. SQL Server 데이터베이스가 업그레이드되면 해당 데이터베이스에 대한 호환성 수준이 보존되거나(가능한 경우) 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 지원되는 최소 수준으로 변경됩니다. 
   
  **포함 유형**  
  없음 또는 부분을 지정하여 데이터베이스가 포함된 데이터베이스인지 여부를 나타냅니다. 포함된 데이터베이스에 대한 자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md)를 참조하십시오. 데이터베이스를 포함된 데이터베이스로 구성하려면 **포함된 데이터베이스 사용** 서버 속성을 **TRUE** 로 설정해야 합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
  **자동 닫기**  
  마지막 사용자가 끝낸 후 데이터베이스가 완전히 종료되고 리소스가 해제되는지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 마지막 사용자가 로그오프한 후 데이터베이스가 완전히 종료되고 해당 리소스가 해제됩니다.  
   
- 증분 통계 자동 작성  
+ **증분 통계 자동 작성**  
  파티션당 통계를 만들 때 증분 옵션을 사용할지 여부를 지정합니다. 증분 통계에 대한 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.  
   
  **통계 자동 작성**  
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
  데이터베이스에서 오래된 최적화 통계를 자동으로 업데이트하는지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 쿼리 최적화에 필요한 오래된 통계가 최적화 동안 모두 자동으로 업데이트됩니다. 자세한 내용은 [CREATE STATISTICS&#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)를 참조하세요.  
   
  **통계를 비동기적으로 자동 업데이트**  
- **True**로 설정하면 오래된 통계에 대해 자동 업데이트를 시작하는 쿼리가 컴파일 수행 전에 통계가 업데이트되기를 기다리지 않습니다. 업데이트된 통계를 이용할 수 있으면 후속 쿼리는 업데이트된 통계를 사용하게 됩니다.  
+ **True**로 설정하면 오래된 통계에 대해 자동 업데이트를 시작하는 쿼리가 컴파일 수행 전에 통계가 업데이트되기를 기다리지 않습니다. 업데이트된 통계를 이용할 수 있으면 후속 쿼리는 업데이트된 통계를 사용합니다.  
   
  **False**로 설정하면 오래된 통계에 대해 자동 업데이트를 시작하는 쿼리가 업데이트된 통계를 쿼리 최적화 계획에 사용할 수 있을 때까지 기다립니다.  
   
@@ -130,6 +130,9 @@ ms.lasthandoff: 06/22/2017
  파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY**또는 **FULL**중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
 ## <a name="miscellaneous"></a>기타  
+**스냅숏 격리 허용**  
+이 기능을 사용할 수 있습니다.  
+
  **ANSI Null 기본값**  
  **CREATE TABLE** 또는 **ALTER TABLE** 문(기본 상태)을 실행하는 동안 **NOT NULL** 로 명시적으로 정의되지 않은 모든 사용자 정의 데이터 형식 또는 열에서 Null 값을 허용합니다. 자세한 내용은 [SET ANSI_NULL_DFLT_ON&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-on-transact-sql.md) 및 [SET ANSI_NULL_DFLT_OFF&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-null-dflt-off-transact-sql.md)를 참조하세요.  
   
@@ -155,7 +158,13 @@ ms.lasthandoff: 06/22/2017
  **True**로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 데이터베이스 내에서 FOREIGN KEY 제약 조건으로 연결되고 **datetime** 열이 있는 임의의 두 테이블 간에 상관 관계 통계를 유지합니다.  
   
  **False**로 설정하면 상관 관계 통계가 유지되지 않습니다.  
-  
+ 
+ **지원된 내구성**  
+ 이 기능을 사용할 수 있습니다.  
+ 
+ **Read Committed 스냅숏 설정 여부**  
+ 이 기능을 사용할 수 있습니다.  
+ 
  **숫자 반올림 시 중단**  
  데이터베이스에서 반올림 오류를 처리하는 방법을 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정한 경우 식에서 전체 자릿수 손실이 발생하면 오류가 생성됩니다. **False**로 설정한 경우 전체 자릿수가 손실되면 오류 메시지가 생성되지 않고 해당 결과를 저장하는 변수나 열의 전체 자릿수로 결과가 반올림됩니다. 자세한 내용은 [SET NUMERIC_ROUNDABORT&#40;Transact-SQL&#41;](../../t-sql/statements/set-numeric-roundabort-transact-sql.md)를 참조하세요.  
   
@@ -192,14 +201,27 @@ ms.lasthandoff: 06/22/2017
   
  **대상 복구 시간(초)**  
  충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간(초)을 지정합니다. 자세한 내용은 [데이터베이스 검사점&#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.  
-  
+
+## <a name="service-broker"></a>Service Broker  
+**Broker 활성화**  
+Service Broker를 활성화 또는 비활성화합니다.  
+
+**Broker 우선 순위 인식**  
+읽기 전용 Service Broker 속성입니다.  
+
+**Serice Broker 식별자**  
+읽기 전용 식별자입니다.  
+
 ## <a name="state"></a>State  
  **데이터베이스 읽기 전용**  
- 데이터베이스가 읽기 전용인지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 사용자가 데이터베이스의 데이터를 읽을 수만 있습니다. 사용자가 데이터나 데이터베이스 개체를 수정할 수는 없지만 DROP DATABASE 문을 사용하여 데이터베이스 자체를 삭제할 수는 있습니다. 데이터베이스를 사용하고 있을 때는 **데이터베이스 읽기 전용** 옵션의 새 값을 지정할 수 없습니다. master 데이터베이스는 예외인데, 이 옵션이 설정되어 있는 동안 시스템 관리자만 master를 사용할 수 있습니다.  
+ 데이터베이스가 읽기 전용인지 여부를 지정합니다. 가능한 값은 **True** 및 **False**입니다. **True**로 설정하면 사용자가 데이터베이스의 데이터를 읽을 수만 있습니다. 사용자가 데이터나 데이터베이스 개체를 수정할 수는 없지만 `DROP DATABASE` 문을 사용하여 데이터베이스 자체를 삭제할 수는 있습니다. 데이터베이스를 사용하고 있을 때는 **데이터베이스 읽기 전용** 옵션의 새 값을 지정할 수 없습니다. master 데이터베이스는 예외인데, 이 옵션이 설정되어 있는 동안 시스템 관리자만 master를 사용할 수 있습니다.  
   
  **데이터베이스 상태**  
  데이터베이스의 현재 상태를 확인합니다. 편집할 수 없습니다. **데이터베이스 상태**에 대한 자세한 내용은 [Database States](../../relational-databases/databases/database-states.md)를 참조하십시오.  
-  
+
+ **암호화 사용**  
+ **True**이면 이 데이터베이스에 데이터베이스 암호화를 사용할 수 있습니다. 데이터베이스 암호화 키는 암호화에 필요합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
+ 
  **액세스 제한**  
  데이터베이스에 액세스할 수 있는 사용자를 지정합니다. 가능한 값은  
   
@@ -215,12 +237,10 @@ ms.lasthandoff: 06/22/2017
   
      db_owner, dbcreator 또는 sysadmin 역할의 멤버만 데이터베이스를 사용할 수 있습니다.  
   
- **암호화 사용**  
- **True**이면 이 데이터베이스에 데이터베이스 암호화를 사용할 수 있습니다. 데이터베이스 암호화 키는 암호화에 필요합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../relational-databases/security/encryption/transparent-data-encryption-tde.md)를 참조하세요.  
-  
+
+
 ## <a name="see-also"></a>관련 항목:  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
-  
   
 

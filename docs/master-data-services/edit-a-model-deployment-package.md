@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bcf1d714605d3f1df2e713e3e8d0311ca1440210
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a5b5a850ad5f21670776629c4bc85c5d82b587d1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="edit-a-model-deployment-package"></a>모델 배포 패키지 편집
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  배포할 엔터티, 파생 계층, 구독 뷰 또는 비즈니스 규칙을 선택합니다. 배포하지 않을 엔터티, 파생 계층, 구독 뷰 또는 비즈니스 규칙의 선택을 취소합니다. **다음**을 클릭합니다.  
   
-5.  배포할 선택 항목의 목록을 확인합니다. 변경하려면 **뒤로** 를 클릭한 다음 4단계를 반복합니다.  
+5.  배포할 선택 항목의 목록을 확인합니다. 변경하려면 **뒤로**를 클릭한 다음 4단계를 반복합니다.  
   
 6.  **찾아보기**를 클릭하여 부분 패키지를 저장할 폴더로 이동한 다음 부분 패키지의 파일 이름(확장명은 .pkg)을 입력합니다. **저장**을 클릭합니다.  
   
@@ -53,8 +53,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [마법사를 사용 하 여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
+-   [마법사를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)  
   
--   [MDSModelDeploy를 사용 하 여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
+-   [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

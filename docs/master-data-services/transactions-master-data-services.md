@@ -1,5 +1,5 @@
 ---
-title: "트랜잭션 (Master Data Services) | Microsoft Docs"
+title: "트랜잭션(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/10/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - transactions [Master Data Services]
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 841657a13d802ba1af2f81436769f76a3c3aa409
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98cb408b0ec3d5449f0f81dc363e2278ac107f3d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/02/2017
  관리자는 **버전 관리** 기능 영역에서 액세스 권한을 가지고 있는 모델의 모든 사용자에 대한 모든 트랜잭션을 보고 되돌릴 수 있습니다.
  
 > [!NOTE]  
->  관리자 수준이에 적용 된 읽기 전용 권한이 없는 경우으로 모든 사용자에 대 한 모든 트랜잭션을 볼 수 있습니다는 **버전 관리** 기능 영역입니다. 예를 들어 읽기 전용 권한 및 업데이트 권한 수준을 관리자에 대 한을 설정 하는 경우 관리자는 읽기 전용 권한이 업데이트 권한 보다 우선 합니다 때문에 다른 사용자 트랜잭션을 볼 수 없습니다.
+>  관리자는 **버전 관리** 기능 영역에 읽기 전용 권한 수준이 적용되지 않는 한, 모든 사용자의 모든 트랜잭션을 볼 수 있습니다. 예를 들어 관리자에 대해 읽기 전용 권한 및 업데이트 권한 수준이 설정된 경우 읽기 전용 권한이 업데이트 권한보다 우선하므로 관리자는 다른 사용자 트랜잭션을 볼 수 없습니다.
   
  **데이터베이스에 대한 시스템 설정에서** 로그 보존 기간(일) [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 속성을 설정하고 모델을 만들거나 편집할 때 **로그 보존 기간(일)** 을 설정하면 트랜잭션 로그 데이터를 보존할 기간을 구성할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md) 및 [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)를 참조하세요.  
   
@@ -98,9 +98,9 @@ EXEC mdm.udpEntityStagingBatchTableCleanup @ModelID, @CleanupOlderThanDate;
   
 ## <a name="related-content"></a>관련 내용  
   
--   [관리자 &#40; Master Data services&#41;](../master-data-services/administrators-master-data-services.md)  
+-   [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)  
   
--   [주석 &#40; Master Data services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [주석&#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
   
 

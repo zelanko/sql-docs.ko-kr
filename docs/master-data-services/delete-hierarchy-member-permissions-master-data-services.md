@@ -1,5 +1,5 @@
 ---
-title: "계층 멤버 권한 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+title: "계층 멤버 권한 삭제(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], deleting member permissions
 ms.assetid: 7f22d5e2-70c1-422c-99c2-e995a47d812a
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 3c06cb0309491e9663e4b130b9a641bbbc3a07be
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 97e377cb8b63384fbbe3f58ef0b535e2c2da0877
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>계층 멤버 권한 삭제(Master Data Services)
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/02/2017
   
 8.  **계층 멤버 권한** 패널에서 사용 권한이 있는 트리 노드를 찾습니다.  
   
-9. 트리 노드를 클릭하고 상황에 맞는 메뉴에서 **없음** 을 클릭합니다.  
+9. 트리 노드를 클릭하고 상황에 맞는 메뉴에서 **없음**을 클릭합니다.  
   
     > [!NOTE]  
     >  사용 권한이 그룹에서 상속되는 경우에는 사용자로부터 사용 권한을 제거할 수 없습니다. 대신 그룹에서 사용 권한을 제거해야 합니다.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 10. **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [계층 멤버 권한 &#40; Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [계층 멤버 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

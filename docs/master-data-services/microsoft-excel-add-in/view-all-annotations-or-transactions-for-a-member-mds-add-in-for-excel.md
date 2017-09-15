@@ -1,5 +1,5 @@
 ---
-title: "모든 주석 또는 트랜잭션 (MDS 추가 기능에 Excel 용) 멤버에 대 한 보기 | Microsoft Docs"
+title: "멤버에 대한 모든 주석 또는 트랜잭션 보기(Excel용 MDS 추가 기능) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,18 +12,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: de90c81c-9e7f-4997-bf96-e22b97b2862c
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 468c203df40b817dd22ada447172fb4d2afee340
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 84b4772712d6b921614470cff72a6d33f3b1df0e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="view-all-annotations-or-transactions-for-a-member-mds-add-in-for-excel"></a>멤버에 대한 모든 주석 또는 트랜잭션 보기(Excel용 MDS 추가 기능)
-  에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 시간별 데이터 업데이트를 보려는 경우 주석 (설명) 및 데이터 (멤버) 행에 대 한 트랜잭션을 확인 합니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 시간별 데이터 업데이트를 보려는 경우 데이터(멤버) 행에 대한 주석(설명) 및 트랜잭션을 확인합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  

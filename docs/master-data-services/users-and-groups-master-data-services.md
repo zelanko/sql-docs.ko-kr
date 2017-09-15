@@ -1,5 +1,5 @@
 ---
-title: "사용자 및 그룹 (Master Data Services) | Microsoft Docs"
+title: "사용자 및 그룹(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - groups [Master Data Services], about groups
 ms.assetid: ed08dd2d-248e-4b68-91d4-e9961cb50eed
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 8d08ef5501ae6cbbd17f54c31ab36523fbb28c49
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e7ce67245871cff2682bec6e314a21fdca31a954
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="users-and-groups-master-data-services"></a>사용자 및 그룹(Master Data Services)
@@ -46,9 +46,9 @@ ms.lasthandoff: 08/02/2017
  개별 사용자에게는 추가 권한을 할당하지 말고 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 대한 액세스 권한이 있는 여러 그룹에 사용자를 포함하지 마십시오. 또한 그룹에서 특정 멤버에 대해 제한된 액세스 권한을 부여하려는 경우를 제외하고는 계층 멤버 권한을 사용하지 마십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
- [추가 사용자 &#40; Master Data services&#41;](../master-data-services/add-a-user-master-data-services.md)   
- [추가 그룹 &#40; Master Data services&#41;](../master-data-services/add-a-group-master-data-services.md)   
- [사용자 또는 그룹 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
- [사용자의 사용 권한 &#40; 테스트 Master Data services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [사용자 추가&#40;Master Data Services&#41;](../master-data-services/add-a-user-master-data-services.md)   
+ [그룹 추가&#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)   
+ [사용자 또는 그룹 삭제&#40;Master Data Services&#41;](../master-data-services/delete-users-or-groups-master-data-services.md)   
+ [사용자의 사용 권한 테스트&#40;Master Data Services&#41;](../master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

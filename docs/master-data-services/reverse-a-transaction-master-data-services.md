@@ -1,5 +1,5 @@
 ---
-title: "트랜잭션 (Master Data Services) 되돌리기 | Microsoft Docs"
+title: "트랜잭션 되돌리기(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - transactions [Master Data Services], reversing
 ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2c0adfc3f27bf8767f759a67001020cbbdff9f31
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7bfd5c364d0805f32ea738585794d3b3ec47107d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>트랜잭션 되돌리기(Master Data Services)
@@ -49,8 +49,8 @@ ms.lasthandoff: 08/02/2017
 7.  확인 대화 상자에서 **확인**을 클릭합니다. 되돌린 트랜잭션을 기록하기 위해 또 다른 트랜잭션이 표에 추가됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [트랜잭션 &#40; Master Data services&#41;](../master-data-services/transactions-master-data-services.md)   
- [멤버 또는 컬렉션 &#40; 다시 활성화 Master Data services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
+ [멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [멤버 수정 기록 롤백](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

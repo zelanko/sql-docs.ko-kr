@@ -1,5 +1,5 @@
 ---
-title: "엔터티 (Master Data Services)를 만듭니다. | Microsoft Docs"
+title: "엔터티 만들기(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating entities [Master Data Services]
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2766ad2cb250200e7fbb3f19f96eab7b5f748a9a
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 9b081ac7c85401a43533863f2495dad9032c7ba0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-an-entity-master-data-services"></a>엔터티 만들기(Master Data Services)
@@ -71,7 +71,7 @@ ms.lasthandoff: 08/02/2017
   
 |이름|설명|  
 |----------|-----------------|  
-|상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![상태 업데이트에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘")|  
+|상태|엔터티 상태입니다. **저장** 을 클릭하면 엔터티가 업데이트되고 있음을 나타내는 다음 이미지가 표시됩니다.<br /><br /> ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘")<br /><br /> 엔터티를 만들거나 편집할 때 오류가 발생하면 다음 이미지가 표시됩니다.<br /><br /> ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘")<br /><br /> 엔터티가 정상 상태이면 다음 이미지가 표시됩니다.<br /><br /> ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")|  
 |이름|엔터티 이름입니다.|  
 |설명|엔터티 설명입니다.|  
 |준비 테이블|데이터 저장에 사용되는 테이블의 접두사 이름입니다.|  
@@ -95,8 +95,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
- [명시적 계층 &#40; Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [엔터티 &#40; 편집 Master Data services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [엔터티 편집&#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
  [엔터티 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

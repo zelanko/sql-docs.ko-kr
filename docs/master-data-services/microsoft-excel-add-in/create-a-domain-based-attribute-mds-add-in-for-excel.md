@@ -1,5 +1,5 @@
 ---
-title: "도메인 기반 특성 만들기 (MDS 추가 기능 Excel 용) | Microsoft Docs"
+title: "도메인 기반 특성 만들기(Excel용 MDS 추가 기능) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/25/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f67b43f772e9693f5abbb396b6987527a5220a1d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0183ba6f178fbc9f392b4e711ccaba49220ffa3e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>도메인 기반 특성 만들기(Excel용 MDS 추가 기능)
@@ -54,7 +54,7 @@ ms.lasthandoff: 08/02/2017
   
     -   기존 엔터티의 값을 사용하려면 엔터티 이름을 선택합니다.
     
-    필터링 하 고 검색할 수 있는 경우 50 개 이상의 엔터티, 엔터티의 합니다. 그렇지 않으면 드롭 다운 목록에서 엔터티를 선택 합니다.  
+    엔터티가 50개 이상 있으면 엔터티를 필터링하고 검색할 수 있습니다. 그렇지 않으면 드롭다운 목록에서 엔터티를 선택합니다.  
   
 6.  이전 단계에서 **선택한 열을** 을 선택한 경우 **새 엔터티 이름** 상자에 새 엔터티의 이름을 입력합니다. 이 이름은 열(특성) 이름과 같을 수 있습니다.  
   
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [도메인 기반 특성&#40;Master Data Services&#41;](../../master-data-services/domain-based-attributes-master-data-services.md)   
- [엔터티 &#40; 만들기 MDS에 추가 기능 Excel &#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
+ [엔터티 만들기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [모델 작성&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  
   
   

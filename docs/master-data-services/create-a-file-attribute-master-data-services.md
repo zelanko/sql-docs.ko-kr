@@ -1,5 +1,5 @@
 ---
-title: "파일 특성 (Master Data Services) 만들기 | Microsoft Docs"
+title: "파일 특성 만들기(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating file attributes
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: edacb4f71f1cb154ebdf2c01fb614e69f0a64713
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bb8f5926bf65e2a6628244aab3468c76ade7a192
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>파일 특성 만들기(Master Data Services)
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 |열|Description|  
 |------------|-----------------|  
-|상태|특성 상태입니다.<br /><br /> 저장을 클릭할 때는 ![상태를 업데이트 하는 것에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘") 이미지가 특성이 업데이트 되 고 있음을 나타내는 표시 됩니다.<br /><br /> 만들거나 특성을 편집할 때 오류가 있는 경우는 ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘") 이미지가 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 및 ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘") 이미지가 표시 됩니다.|  
+|상태|특성 상태입니다.<br /><br /> 저장을 클릭하면 특성이 업데이트 중임을 나타내는 ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
 |이름|특성 이름입니다.|  
 |표시 이름|특성 표시 이름입니다.|  
 |Description|특성 설명입니다.|  
@@ -94,8 +94,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
- [특성 이름 및 데이터 형식 &#40; 변경 Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
- [도메인 기반 특성 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [만들기 텍스트 특성 &#40; Master Data services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+ [특성 이름 및 데이터 형식 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)   
+ [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
   

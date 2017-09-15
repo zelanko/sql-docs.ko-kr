@@ -1,5 +1,5 @@
 ---
-title: "삭제 (Master Data Services) 버전 | Microsoft Docs"
+title: "버전 삭제(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - deleting versions [Master Data Services]
 ms.assetid: 2a4eeffe-8379-4744-ad44-c27d8c8ac9a8
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf3a315d60bed733bd2d72cd6ba2317a8ab84ae5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: fa6979d6ce1aadbbf6c7f1ac1929a5579cc862bc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-version-master-data-services"></a>버전 삭제(Master Data Services)
@@ -37,7 +37,7 @@ ms.lasthandoff: 08/02/2017
   
 ### <a name="to-delete-a-version"></a>버전을 삭제하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 을 열고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터베이스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]을 열고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터베이스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 연결합니다.  
   
 2.  mdm.viw_SYSTEM_SCHEMA_VERSION 뷰를 엽니다.  
   
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  새 쿼리를 만듭니다.  
   
-5.  다음 텍스트를 입력합니다. 여기서 *version_ID* 를 2단계에서 복사한 값으로 바꿉니다.  
+5.  다음 텍스트를 입력합니다. 여기서 *version_ID*를 2단계에서 복사한 값으로 바꿉니다.  
   
     ```  
     EXEC [mdm].[udpVersionDelete] @Version_ID='version_ID'  
@@ -57,7 +57,7 @@ ms.lasthandoff: 08/02/2017
     >  웹 응용 프로그램에서 변경 내용을 반영할 때까지 몇 분간 기다려야 할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [버전 &#40; Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
- [버전 &#40; 복사 Master Data services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+ [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [버전 복사&#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
   

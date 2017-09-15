@@ -1,5 +1,5 @@
 ---
-title: "도메인 기반 특성 (Master Data Services) 만들기 | Microsoft Docs"
+title: "도메인 기반 특성 만들기(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/25/2017
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - attributes [Master Data Services], creating domain-based attributes
 ms.assetid: 11c31c9f-e6cc-47b7-b76a-d691f84c93c6
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 963b974e68187ecf4f42ad06c90ff1cb0ab3aa67
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a8242d0b8f5285201c32721c793aff995d50b88d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-domain-based-attribute-master-data-services"></a>도메인 기반 특성 만들기(Master Data Services)
@@ -45,7 +45,7 @@ ms.lasthandoff: 08/02/2017
   
 |열|Description|  
 |------------|-----------------|  
-|상태|특성 상태입니다.<br /><br /> 저장을 클릭할 때는 ![상태를 업데이트 하는 것에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘") 이미지가 특성이 업데이트 되 고 있음을 나타내는 표시 됩니다.<br /><br /> 만들거나 특성을 편집할 때 오류가 있는 경우는 ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘") 이미지가 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 및 ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘") 이미지가 표시 됩니다.|  
+|상태|특성 상태입니다.<br /><br /> 저장을 클릭하면 특성이 업데이트 중임을 나타내는 ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 특성을 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
 |이름|특성 이름입니다.|  
 |표시 이름|특성 표시 이름입니다.|  
 |Description|특성 설명입니다.|  
@@ -103,8 +103,8 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [파생된 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
- [특성 이름 및 데이터 형식 &#40; 변경 Master Data services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
+ [파생 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-derived-hierarchy-master-data-services.md)   
+ [특성 이름 및 데이터 형식 변경&#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)   
  [특성 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)  
   
   

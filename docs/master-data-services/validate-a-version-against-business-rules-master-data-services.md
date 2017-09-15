@@ -1,5 +1,5 @@
 ---
-title: "비즈니스 규칙 (Master Data Services)에 대해 버전 유효성 검사 | Microsoft Docs"
+title: "비즈니스 규칙에 대해 버전 유효성 검사(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -16,20 +16,20 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to all members
 ms.assetid: 5aee7901-6d05-41d4-8bbb-c6f26791d1df
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 036659fbe3b6cafd1272180bbd37737062ed0967
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2a31c8b91872276636addc25c673f07ba5b11bc7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>비즈니스 규칙에 대해 버전 유효성 검사(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서는 버전의 유효성을 검사하여 모델 버전의 모든 멤버에 비즈니스 규칙을 적용할 수 있습니다.  
   
- 이 절차는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 사용하여 데이터의 유효성을 검사하는 방법을 설명합니다. MDS 데이터베이스에 대한 권한이 있는 경우 대신 저장 프로시저를 사용할 수 있습니다. 자세한 내용은 [Validation Stored Procedure &#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
+ 이 절차는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램을 사용하여 데이터의 유효성을 검사하는 방법을 설명합니다. MDS 데이터베이스에 대한 권한이 있는 경우 대신 저장 프로시저를 사용할 수 있습니다. 자세한 내용은 [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)를 참조하세요.  
   
 > [!NOTE]  
 >  모든 멤버가 유효성 검사를 통과해야 버전을 커밋할 수 있습니다.  
@@ -62,13 +62,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [버전 &#40; 잠금 Master Data services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
+-   [버전 잠금&#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [유효성 검사 상태 &#40; Master Data services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
- [유효성 검사 저장 프로시저 &#40; Master Data services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
- [버전 &#40; Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
- [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [비즈니스 규칙 &#40;에 대해 특정 멤버 유효성 검사 Master Data services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [유효성 검사 상태&#40;Master Data Services&#41;](../master-data-services/validation-statuses-master-data-services.md)   
+ [유효성 검사 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/validation-stored-procedure-master-data-services.md)   
+ [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

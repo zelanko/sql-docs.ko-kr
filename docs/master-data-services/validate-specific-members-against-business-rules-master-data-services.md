@@ -1,5 +1,5 @@
 ---
-title: "비즈니스 규칙 (Master Data Services)에 대해 특정 멤버 유효성 검사 | Microsoft Docs"
+title: "비즈니스 규칙에 대해 특정 멤버 유효성 검사(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - business rules [Master Data Services], applying to select members
 ms.assetid: 2288ef43-5392-47ea-b651-ec25e5692a14
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5ca1beaf471a1adfb91ec4fa66c32e0bde3c6514
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 293a1a5f1614df67cd1a28d88a432cc55a3927b7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="validate-specific-members-against-business-rules-master-data-services"></a>비즈니스 규칙에 대해 특정 멤버 유효성 검사(Master Data Services)
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/02/2017
 5.  **규칙 적용**을 클릭합니다. 비즈니스 규칙은 표에 표시된 멤버에만 적용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [비즈니스 규칙 &#40;에 대해 버전 유효성 검사 Master Data services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
- [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
+ [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "엔터티 동기화 관계 (Master Data Services) 만들기 및 실행 | Microsoft Docs"
+title: "엔터티 동기화 관계(Master Data Services) 만들기 및 실행 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -12,14 +12,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f9efe68604f73df42930c5b3eb348e5c2b3e7965
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 14bc03c2c8c462895102d6c34c62cf23724c706f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services) 만들기 및 실행
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/02/2017
   
 |열|Description|  
 |------------|-----------------|  
-|상태|동기화 관계 상태입니다.<br /><br /> 클릭할 때 **저장** 동기화 관계를 실행 하거나는 ![상태를 업데이트 하는 것에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘") 이미지가 동기화 관계가 업데이트 되 고 있음을 나타내는 표시 됩니다.<br /><br /> 만들기, 편집 또는 동기화 관계를 실행할 때 오류가 있는 경우는 ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘") 이미지가 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 및 ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘") 이미지가 표시 됩니다.|  
+|상태|동기화 관계 상태입니다.<br /><br /> **저장** 을 클릭하거나 동기화 관계를 실행하는 경우 동기화 관계가 업데이트되고 있음을 나타내는 ![업데이트 상태 아이콘](../master-data-services/media/mds-statusicon-updating.png "업데이트 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 동기화 관계를 생성, 편집 또는 실행할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
 |원본 모델|원본 모델 이름입니다.|  
 |원본 버전|원본 버전 이름입니다.|  
 |원본 엔터티|원본 엔터티 이름입니다.|  

@@ -1,5 +1,5 @@
 ---
-title: "모델 배포 (Master Data Services) | Microsoft Docs"
+title: "모델 배포(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,21 +15,21 @@ helpviewer_keywords:
 - deployment packages [Master Data Services]
 ms.assetid: 30085c08-034f-4efe-80fe-408f9091ff5c
 caps.latest.revision: 24
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 24067aaaceb2ad1e6704027c4445be9bf393a18f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 021c2e7c829f8da9cf1633aa5047c561b11702d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploying-models-master-data-services"></a>모델 배포(Master Data Services)
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 패키지는 배포 가능한 모델 구조와 모델의 데이터(옵션)를 포함하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 MDS 환경에 새로운 모델을 만듭니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**MDSModelDeploy 도구** 에서 만든 패키지와 역호환 되 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상.  
+>  [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] **MDSModelDeploy 도구**는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 이상에서 만든 패키지와 이전 버전에서 호환됩니다.  
   
 ## <a name="tools-for-deploying-models"></a>모델 배포 도구  
  모델 패키지를 사용하려면 필요에 따라 다음 세 도구 중 하나를 사용합니다.  
@@ -73,14 +73,14 @@ ms.lasthandoff: 08/02/2017
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|MDSModelDeploy 도구를 사용하여 모델 개체 및/또는 데이터의 새 배포 패키지를 만듭니다.|[MDSModelDeploy를 사용 하 여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|마법사를 사용하여 모델 개체만의 새 배포 패키지를 만듭니다.|[마법사를 사용 하 여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
-|MDSModelDeploy 도구를 사용하여 모델 개체 및/또는 데이터의 패키지를 배포합니다.|[MDSModelDeploy를 사용 하 여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
-|마법사를 사용하여 모델 개체만의 패키지를 배포합니다.|[마법사를 사용 하 여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
+|MDSModelDeploy 도구를 사용하여 모델 개체 및/또는 데이터의 새 배포 패키지를 만듭니다.|[MDSModelDeploy를 사용하여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|마법사를 사용하여 모델 개체만의 새 배포 패키지를 만듭니다.|[마법사를 사용하여 모델 배포 패키지 만들기](../master-data-services/create-a-model-deployment-package-by-using-the-wizard.md)|  
+|MDSModelDeploy 도구를 사용하여 모델 개체 및/또는 데이터의 패키지를 배포합니다.|[MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)|  
+|마법사를 사용하여 모델 개체만의 패키지를 배포합니다.|[마법사를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-the-wizard.md)|  
 |모델 배포 패키지를 편집하여 전체 모델이 아닌 모델의 일부 선택한 부분만 배포합니다.|[모델 배포 패키지 편집](../master-data-services/edit-a-model-deployment-package.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [모델 배포 옵션 &#40; Master Data services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
+-   [모델 배포 옵션&#40;Master Data Services&#41;](../master-data-services/model-deployment-options-master-data-services.md)  
   
   

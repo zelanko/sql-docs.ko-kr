@@ -1,5 +1,5 @@
 ---
-title: "멤버 수정 기록 롤백 (Master Data Services) | Microsoft Docs"
+title: "멤버 수정 기록 롤백(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d39d3474-20e7-429f-9c8d-fcc4eb0854fc
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 42b58095bac7ea8532e12a0683d0fda6806156a3
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a242f91eb8259b8941a61db94f59c4e331d5b06b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="rollback-member-revision-history-master-data-services"></a>멤버 수정 기록 롤백(Master Data Services)
@@ -42,6 +42,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [멤버 수정 기록&#40;Master Data Services&#41;](../master-data-services/member-revision-history-master-data-services.md)   
- [엔터티 트랜잭션 로그 유형 &#40; 변경 Master Data services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
+ [엔터티 트랜잭션 로그 유형 변경&#40;Master Data Services&#41;](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "PolyBase 버전 기능 요약 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/13/2016
+ms.date: 08/29/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: dcfa27ad11e3027519398b9424056b52afb1617b
+ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
+ms.openlocfilehash: 61b23238b26af3e127ae889e20487987c358e6c2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="polybase-versioned-feature-summary"></a>PolyBase 버전 기능 요약
@@ -44,9 +44,21 @@ SQL Server 제품 및 서비스에 사용할 수 있는 PolyBase 기능 요약�
 |Microsoft의 BI 도구에서 PolyBase 쿼리 실행|예|아니요|예|예|   
 
 
+## <a name="pushdown-computation-supported-t-sql-operators"></a>푸시 다운 계산 지원 T-SQL 연산자
+SQL Server 및 APS에서 모든 T-SQL 운영자가 hadoop 클러스터로 푸시 다운될 수 있는 것은 아닙니다. 아래 테이블에는 지원되는 모든 운영자와 지원되지 않는 운영자의 하위 집합이 나와 있습니다. 
 
-  
-## <a name="see-also"></a>참고 항목  
+||||
+|-|-|-| 
+|**연산자 유형**|**Hadoop으로 푸시 가능**|**Blob Storage로 푸시 가능**|
+|열 프로젝션|예|아니요|
+|조건자|예|아니요|
+|집계|부분|아니요|
+|외부 테이블간 조인|아니요|아니요|
+|외부 테이블과 로컬 테이블간 조인|아니요|아니요|
+|정렬|아니요|아니요|
+
+부분 집계는 데이터가 SQL Server에 도달하면 최종 집계가 발생해야 하지만 집계의 일부가 Hadoop에서 발생하는 것을 의미합니다. 이것은 대량 병렬 처리 시스템에서 집계를 계산하는 일반적인 메서드입니다.  
+## <a name="see-also"></a>관련 항목:  
  [PolyBase 가이드](../../relational-databases/polybase/polybase-guide.md)  
   
   

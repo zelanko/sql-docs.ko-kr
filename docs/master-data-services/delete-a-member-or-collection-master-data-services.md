@@ -1,5 +1,5 @@
 ---
-title: "멤버 또는 컬렉션 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+title: "멤버 또는 컬렉션 삭제(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], deleting
 ms.assetid: 519130a7-4226-4d71-9124-d2ee0ce7e5bd
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 89e49964ef41c7d093a2bdba1673ae8ea44a4a70
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f39b7e4c68f20d1a83532145029f51e6cd06e47d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 삭제(Master Data Services)
@@ -53,11 +53,11 @@ ms.lasthandoff: 08/02/2017
   
 4.  삭제하려면  
   
-    -   리프 멤버를 삭제하려면 메뉴 모음에서 **엔터티** 를 가리키고 멤버가 포함된 엔터티의 이름을 클릭합니다.  
+    -   리프 멤버를 삭제하려면 메뉴 모음에서 **엔터티**를 가리키고 멤버가 포함된 엔터티의 이름을 클릭합니다.  
   
-    -   통합 멤버를 삭제하려면 메뉴 모음에서 **계층** 을 가리키고 멤버가 포함된 계층의 이름을 클릭합니다. 그런 다음 멤버를 포함하고 있는 계층에서 노드를 클릭합니다.  
+    -   통합 멤버를 삭제하려면 메뉴 모음에서 **계층**을 가리키고 멤버가 포함된 계층의 이름을 클릭합니다. 그런 다음 멤버를 포함하고 있는 계층에서 노드를 클릭합니다.  
   
-    -   컬렉션을 삭제하려면 메뉴 모음에서 **컬렉션** 을 가리키고 컬렉션이 포함된 엔터티의 이름을 클릭합니다.  
+    -   컬렉션을 삭제하려면 메뉴 모음에서 **컬렉션**을 가리키고 컬렉션이 포함된 엔터티의 이름을 클릭합니다.  
   
 5.  표에서 삭제할 멤버 또는 컬렉션의 행을 선택합니다.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [멤버 또는 컬렉션 다시 활성화&#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [멤버 &#40; Master Data services&#41;](../master-data-services/members-master-data-services.md)   
- [컬렉션 &#40; Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
+ [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

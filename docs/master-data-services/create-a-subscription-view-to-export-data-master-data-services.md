@@ -1,5 +1,5 @@
 ---
-title: "구독 뷰를 만들어 (Master Data Services) 데이터를 내보낼 | Microsoft Docs"
+title: "구독 뷰를 만들어 데이터 내보내기(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - creating subscription views [Master Data Services]
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4934e49ef7b8e4f6b56439dd3b414fc93d5af832
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 863c5976f20cda1edc4ecba9ae81db599ec94d99
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>구독 뷰를 만들어 데이터 내보내기(Master Data Services)
@@ -69,7 +69,7 @@ ms.lasthandoff: 08/02/2017
   
 |열|Description|  
 |------------|-----------------|  
-|상태|보기 상태입니다.<br /><br /> 클릭할 때 **저장**, ![상태를 업데이트 하는 것에 대 한 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태를 업데이트 하는 것에 대 한 아이콘") 이미지가 표시 하면 뷰가 업데이트 되 합니다.<br /><br /> 만들거나 뷰를 편집할 때 오류가 있는 경우는 ![오류 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태에 대 한 아이콘") 이미지가 표시 됩니다.<br /><br /> 그렇지 않으면 상태가 정상 및 ![정상 상태에 대 한 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태에 대 한 아이콘") 이미지가 표시 됩니다.|  
+|상태|보기 상태입니다.<br /><br /> **저장**을 클릭하면 뷰가 업데이트 중임을 나타내는 ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 이미지가 표시됩니다.<br /><br /> 뷰를 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
 |이름|구독 뷰 이름입니다.|  
 |모델|모델 이름입니다.|  
 |버전 옵션|버전 이름입니다.|  
@@ -90,9 +90,9 @@ ms.lasthandoff: 08/02/2017
   
 -   **날짜**: 뷰를 마지막으로 업데이트한 날짜와 시간입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [개요: 데이터 내보내기&#40;Master Data Services&#41;](../master-data-services/overview-exporting-data-master-data-services.md)   
- [구독 뷰 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
- [버전 플래그 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+ [구독 뷰 삭제&#40;Master Data Services&#41;](../master-data-services/delete-a-subscription-view-master-data-services.md)   
+ [버전 플래그 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
   

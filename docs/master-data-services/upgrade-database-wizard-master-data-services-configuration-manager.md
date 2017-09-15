@@ -1,5 +1,5 @@
 ---
-title: "데이터베이스 업그레이드 마법사 (Master Data Services 구성 관리자) | Microsoft Docs"
+title: "데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 7823eb8d6b5b4a591f38e0e6dae1a4f8fdbadb80
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 1b43487f640dea05d9d29c195cd660db8bd24574
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>데이터베이스 업그레이드 마법사(Master Data Services 구성 관리자)
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/02/2017
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
-|**SQL Server 인스턴스**|현재 선택 된 이름 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스.|  
+|**SQL Server 인스턴스**|현재 선택한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스의 이름입니다.|  
 |**Master Data Services 데이터베이스**|현재 선택한 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 이름입니다.|  
   
 ## <a name="progress-and-finish"></a>진행 후 마침  

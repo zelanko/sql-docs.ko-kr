@@ -1,5 +1,5 @@
 ---
-title: "버전 플래그 (Master Data Services) 만들기 | Microsoft Docs"
+title: "버전 플래그 만들기(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - versions [Master Data Services], creating flags
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be3585a40a7ce8312e4e31b13118f6b128e2be13
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 039f5c71946946bc6093dcfcd432da21d75ec2ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="create-a-version-flag-master-data-services"></a>버전 플래그 만들기(Master Data Services)
@@ -57,10 +57,10 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [버전 &#40;에 플래그 할당 Master Data services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
+-   [버전에 플래그 할당&#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [버전 &#40; Master Data services&#41;](../master-data-services/versions-master-data-services.md)   
- [버전 플래그 이름 &#40; 변경 Master Data services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
+ [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
+ [버전 플래그 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

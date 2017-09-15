@@ -2,7 +2,7 @@
 title: "PolyBase 문제 해결 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 10/25/2016
+ms.date: 8/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: e65ea926f3a2d2fb3c30c511a1fbba6150de7b42
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 문제 해결
@@ -227,8 +227,18 @@ ms.lasthandoff: 07/31/2017
  - 가변 길이 열의 전체 길이를 포함하여 행의 최대 가능 크기가 1MB를 초과할 수 없습니다. 
  - PolyBase는 Hive 0.12+ 데이터 유형(즉, Char(), VarChar())을 지원하지 않습니다.   
  - SQL Server 또는 Azure SQL Data Warehouse에서 ORC 파일 형식으로 데이터를 내보낼 때 텍스트가 많은 열은 java 메모리 부족 오류로 인해 50개 이내로 제한될 수 있습니다. 이 문제를 해결하려면 열의 하위 집합만 내보냅니다.
-- [PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
-  
+ - Hadoop에서 암호화된 미사용 데이터를 읽거나 쓸 수 없습니다. 여기에는 HDFS 암호화 영역 또는 투명 암호화가 포함됩니다.
+ - KNOX가 활성화되어 있으면 PolyBase가 Hortonworks 인스턴스에 연결할 수 없습니다. 
+ - hadoop.RPC.Protection 설정이 "authenticate" 이외의 값으로 설정되면 PolyBase가 Hadoop 인스턴스에 연결할 수 없습니다.
+
+[PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
+
+## <a name="hadoop-name-node-high-availability"></a>Hadoop 이름 노드 고가용성
+PolyBase는 오늘 Zookeeper 또는 Knox와 같은 이름 노드 HA 서비스와 인터페이스하지 않습니다. 하지만 기능을 제공하는 데 사용할 수 있는 검증된 해결 방법이 있습니다. 
+
+해결 방법: DNS 이름을 사용하여 활성 이름 노드에 대한 연결을 다시 라우팅합니다. 이렇게 하려면 외부 데이터 원본이 DNS 이름을 사용하여 이름 노드와 통신하는지 확인해야 합니다. 이름 노드 장애 조치(failover)가 발생하면 외부 데이터 원본 정의에 사용된 DNS 이름과 연결된 IP 주소를 변경해야 합니다. 그러면 모든 새 연결이 올바른 이름 노드로 다시 라우팅됩니다. 장애 조치(failover)가 발생하면 기존 연결이 실패합니다. 이 프로세스를 자동화하기 위해 "하트 비트"가 활성 이름 노드를 ping할 수 있습니다. 하트 비트가 실패하면 장애 조치(failover)가 발생했다고 가정하고 보조 IP 주소로 자동 전환할 수 있습니다.
+
+
 ## <a name="error-messages-and-possible-solutions"></a>오류 메시지 및 가능한 해결 방법
 
 외부 테이블 오류 문제를 해결하려면 Murshed Zaman 블로그 [https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/](https://blogs.msdn.microsoft.com/sqlcat/2016/06/21/polybase-setup-errors-and-possible-solutions/ "PolyBase setup errors and possible solutions")(PolyBase 설치 오류 및 가능한 해결 방법)를 참조하세요.

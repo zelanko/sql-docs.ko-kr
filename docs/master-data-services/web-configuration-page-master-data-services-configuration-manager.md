@@ -1,5 +1,5 @@
 ---
-title: "웹 구성 페이지 (Master Data Services 구성 관리자) | Microsoft Docs"
+title: "웹 구성 페이지(Master Data Services 구성 관리자) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/20/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.mds.configmanager.webconfigpg.f1
 ms.assetid: 7b900778-0169-4e42-9faf-98dc1c01313e
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 32cc0f559017846efbc349377255634e89515c7d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: b382066dbac55174763e4c32ff4360de9a5026fd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="web-configuration-page-master-data-services-configuration-manager"></a>웹 구성 페이지(Master Data Services 구성 마법사)
@@ -46,10 +46,10 @@ ms.lasthandoff: 08/02/2017
   
 |컨트롤 이름|Description|  
 |------------------|-----------------|  
-|**Data Quality Services와의 통합 사용**|사용할 수 있는 데이터 품질 기능을 사용 하도록 설정 하려면이 옵션을 선택는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]합니다. 자세한 내용은 [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)을 참조하세요.|  
+|**Data Quality Services와의 통합 사용**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]에서 데이터 품질 기능을 사용하도록 설정하려면 이 옵션을 선택합니다. 자세한 내용은 [Enable Data Quality Services Integration with Master Data Services](../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)을 참조하세요.|  
   
-## <a name="see-also"></a>참고 항목  
-[Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md) [웹 응용 프로그램 요구 사항 &#40; Master Data services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
- [마스터 데이터 관리자 웹 응용 프로그램 만들기 &#40; Master Data services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
+## <a name="see-also"></a>관련 항목:  
+[Master Data Services 설치 및 구성](../master-data-services/master-data-services-installation-and-configuration.md) [웹 응용 프로그램 요구 사항&#40;Master Data Services&#41;](../master-data-services/install-windows/web-application-requirements-master-data-services.md)   
+ [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 이외 구독자 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 08/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -24,15 +24,17 @@ caps.latest.revision: 55
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 90cae789ce180c32c4651f967a7d7fdc246effe2
+ms.translationtype: HT
+ms.sourcegitcommit: 05497c347c94b42bb22488560c89b7f9a7783a4d
+ms.openlocfilehash: feeb6962b9505dd33594f423fff08ca7ca1ff61f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/30/2017
 
 ---
-# <a name="non-sql-server-subscribers"></a>SQL Server 이외 구독자
-  다음[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 밀어넣기 구독을 사용하여 스냅숏 및 트랜잭션 게시를 구독할 수 있습니다. 구독은 나열된 OLE DB 공급자의 최신 버전을 사용하는 나열된 각 데이터베이스의 가장 최신 버전 두 개에 대해 지원됩니다.  
+# <a name="non-sql-server-subscribers"></a>SQL Server 이외 구독자  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+다음[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 밀어넣기 구독을 사용하여 스냅숏 및 트랜잭션 게시를 구독할 수 있습니다. 구독은 나열된 OLE DB 공급자의 최신 버전을 사용하는 나열된 각 데이터베이스의 가장 최신 버전 두 개에 대해 지원됩니다.  
   
  SQL Server 이외의 구독자에 대한 다른 유형의 복제는 지원되지 않습니다. Oracle 게시는 지원되지 않습니다. 데이터를 이동하려면 변경 데이터 캡처 및 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 사용하여 솔루션을 만듭니다.  
   
@@ -43,8 +45,22 @@ ms.lasthandoff: 06/22/2017
 |--------------|----------------------|--------------|  
 |Oracle|Oracle에서 지원하는 모든 플랫폼|Oracle OLE DB 공급자(Oracle에서 제공)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows 9.x 이상(9.x 제외)|Microsoft HIS(Host Integration Server) OLE DB 공급자|  
+
+Oracle 버전 정보:  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 트랜잭션 및 스냅숏 복제에 대해 다음과 같이 다른 유형의 시나리오를 지원합니다.  
   
- Oracle 및 IBM DB2,에 구독을 만드는 방법은 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 및 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)를 사용하여 솔루션을 만듭니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자로 데이터 게시  
+
+-   Oracle에서 데이터를 게시할 때 다음과 같은 제한 사항이 있습니다.  
+  | |2016 또는 이전 버전 |2017 이상 |
+  |-------|-------|--------|
+  |Oracle에서 복제 |Oracle 10g 또는 이전 버전만 지원 |Oracle 10g 또는 이전 버전만 지원 |
+  |Oracle로 복제 |Oracle 12c까지 |지원되지 않음 |
+
+
+ SQL Server 이외의 구독자에 대한 다른 유형의 복제는 지원되지 않습니다. Oracle 게시는 지원되지 않습니다. 데이터를 이동하려면 변경 데이터 캡처 및 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 사용하여 솔루션을 만듭니다.  
+
+Oracle 및 IBM DB2,에 구독을 만드는 방법은 [Oracle Subscribers](../../../relational-databases/replication/non-sql/oracle-subscribers.md) 및 [IBM DB2 Subscribers](../../../relational-databases/replication/non-sql/ibm-db2-subscribers.md)를 사용하여 솔루션을 만듭니다.  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>SQL Server 이외 구독자에 대한 고려 사항  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자로 복제 시 다음 사항을 고려하십시오.  
@@ -57,7 +73,7 @@ ms.lasthandoff: 06/22/2017
   
 -   게시에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자와[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자가 있는 경우[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 대한 구독을 만들기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에서 게시를 사용할 수 있도록 설정해야 합니다.  
   
--   기본적으로[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 스냅숏 에이전트에 의해 생성된 스크립트는 CREATE TABLE 구문에 따옴표가 붙지 않은 식별자를 사용합니다. 따라서 이름이 'test'인 게시된 테이블이 'TEST'로 복제됩니다. 게시 데이터베이스에 있는 테이블에서와 똑같이 대/소문자를 맞추려면 배포 에이전트에 대해 **-QuotedIdentifier** 매개 변수를 사용합니다. 게시된 개체 이름(테이블, 열 및 제약 조건)에 **이외 구독자의 데이터베이스 버전에서 예약된 단어나 공백이 포함되어 있으면** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수도 사용해야 합니다. 이 매개 변수에 대한 자세한 내용은 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)를 참조하십시오.  
+-   기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 스냅숏 에이전트에 의해 생성된 스크립트는 `CREATE TABLE` 구문에 따옴표가 붙지 않은 식별자를 사용합니다. 따라서 이름이 'test'인 게시된 테이블이 'TEST'로 복제됩니다. 게시 데이터베이스에 있는 테이블에서와 똑같이 대/소문자를 맞추려면 배포 에이전트에 대해 **-QuotedIdentifier** 매개 변수를 사용합니다. 게시된 개체 이름(테이블, 열 및 제약 조건)에 **이외 구독자의 데이터베이스 버전에서 예약된 단어나 공백이 포함되어 있으면** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수도 사용해야 합니다. 이 매개 변수에 대한 자세한 내용은 [Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)를 참조하십시오.  
   
 -   배포 에이전트를 실행하는 계정에는 OLE DB 공급자의 설치 디렉터리에 대해 읽기 권한이 있어야 합니다.  
   
@@ -104,3 +120,4 @@ ms.lasthandoff: 06/22/2017
  [게시 구독](../../../relational-databases/replication/subscribe-to-publications.md)  
   
   
+

@@ -1,5 +1,5 @@
 ---
-title: "보안 (Master Data Services) | Microsoft Docs"
+title: "보안(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 56bc41ea-de28-4184-aa7e-99111ae55af5
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7a011cac6d34c73cffb9fba286ebe64ebb9e7103
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4b540d7f5a204d6543bc32b5ec46fef766c9b973
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="security-master-data-services"></a>보안(Master Data Services)
@@ -35,7 +35,7 @@ ms.lasthandoff: 08/02/2017
   
 -   **탐색기** 기능 영역에서 데이터에 액세스하는 사용자.  
   
--   **탐색기**이외의 영역에서 관리 태스크를 수행할 수 있는 사용자. 이러한 사용자를 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)라고 합니다.  
+-   **탐색기**이외의 영역에서 관리 태스크를 수행할 수 있는 사용자. 이러한 사용자를 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)을 참조하세요.  
   
 ## <a name="how-to-set-security"></a>보안을 설정하는 방법  
  사용자 또는 그룹에 MDS 데이터 또는 기능에 대한 액세스 권한을 부여하려면 다음을 할당해야 합니다.  
@@ -57,18 +57,18 @@ ms.lasthandoff: 08/02/2017
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|모델에 대한 전체 권한이 있는 사용자를 만듭니다.|[모델 관리자 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 Active Directory 그룹을 추가합니다. 이 작업은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램에서 데이터 액세스 권한을 그룹에 부여할 때 첫 번째 단계입니다.|[추가 그룹 &#40; Master Data services&#41;](../master-data-services/add-a-group-master-data-services.md)|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램의 기능 영역에 사용 권한을 할당합니다.|[기능 영역 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
-|모델 개체에 사용 권한을 할당하여 특성 값에 사용 권한을 할당합니다.|[모델 개체 사용 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
-|계층 노드에 사용 권한을 할당하여 멤버에 사용 권한을 할당합니다.|[계층 멤버 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
+|모델에 대한 전체 권한이 있는 사용자를 만듭니다.|[모델 관리자 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에 Active Directory 그룹을 추가합니다. 이 작업은 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램에서 데이터 액세스 권한을 그룹에 부여할 때 첫 번째 단계입니다.|[그룹 추가&#40;Master Data Services&#41;](../master-data-services/add-a-group-master-data-services.md)|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 웹 응용 프로그램의 기능 영역에 사용 권한을 할당합니다.|[기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)|  
+|모델 개체에 사용 권한을 할당하여 특성 값에 사용 권한을 할당합니다.|[모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|계층 노드에 사용 권한을 할당하여 멤버에 사용 권한을 할당합니다.|[계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|  
   
 ## <a name="see-also"></a>참고 항목  
- [관리자 &#40; Master Data services&#41;](../master-data-services/administrators-master-data-services.md)   
- [사용자 및 그룹 &#40; Master Data services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
- [기능 영역 권한 &#40; Master Data services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
- [모델 개체 사용 권한 &#40; Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [계층 멤버 권한 &#40; Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [사용 권한이 결정 되는 방법 &#40; Master Data services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)   
+ [사용자 및 그룹&#40;Master Data Services&#41;](../master-data-services/users-and-groups-master-data-services.md)   
+ [기능 영역 권한&#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md)   
+ [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "요구 사항 (Master Data Services) 데이터베이스 | Microsoft Docs"
+title: "데이터베이스 요구 사항(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 caps.latest.revision: 18
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 9f48345ef6fb8bd0a27bf2d40a829e53e2eae308
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 16858dc8ab6dcad69792697b88811cba2689b1fe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="database-requirements-master-data-services"></a>데이터베이스 요구 사항(MDS(Master Data Services))
@@ -71,11 +71,11 @@ ms.lasthandoff: 08/02/2017
 ### <a name="database-backup"></a>데이터베이스 백업  
  매일 작업량이 적은 시간에 전체 데이터베이스를 백업하고 사용자 환경의 요구 사항에 따라 트랜잭션 로그를 보다 자주 백업하는 것이 가장 좋습니다. 데이터베이스 백업에 대한 자세한 내용은 [백업 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)   
  [Master Data Services 데이터베이스 만들기](../../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Master Data Services 데이터베이스](../../master-data-services/master-data-services-database.md)   
- [Master Data Services 데이터베이스 대화 상자에 연결](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
- [데이터베이스 마법사 &#40; 만들기 Master Data Services 구성 관리자 &#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
+ [Master Data Services 데이터베이스에 연결 대화 상자](../../master-data-services/connect-to-a-master-data-services-database-dialog-box.md)   
+ [데이터베이스 만들기 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)  
   
   

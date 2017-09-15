@@ -17,49 +17,25 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 61dab0bbd770679206c7eebee438f2fa22807ac2
+ms.translationtype: HT
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 512d13d8349be9370bb222e1513f5166f2cabeee
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
   이 항목에서는 TDE(투명한 데이터 암호화)를 사용하여 데이터베이스를 보호하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 이 데이터베이스를 [!INCLUDE[tsql](../../../includes/tsql-md.md)]의 다른 인스턴스로 이동하기 위한 단계를 설명합니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. DEK는 서버의 **master** 데이터베이스에 저장된 인증서 또는 EKM 모듈로 보호되는 비대칭 키를 사용하여 보호되는 대칭 키입니다.  
+   
+##  <a name="Restrictions"></a> 제한 사항  
   
- **항목 내용**  
-  
--   **시작하기 전에:**  
-  
-     [제한 사항](#Restrictions)  
-  
-     [보안](#Security)  
-  
--   **다음을 사용하여 투명한 데이터 암호화로 보호되는 데이터베이스를 만듭니다.**  
-  
-     [SQL Server Management Studio](#SSMSCreate)  
-  
-     [Transact-SQL](#TsqlCreate)  
-  
--   **다음을 사용하여 데이터베이스를 이동합니다.**  
-  
-     [SQL Server Management Studio](#SSMSMove)  
-  
-     [Transact-SQL](#TsqlMove)  
-  
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
-  
-###  <a name="Restrictions"></a> 제한 사항  
-  
--   TDE로 보호되는 데이터베이스를 이동하려면 DEK를 여는 데 사용되는 인증서 또는 비대칭 키도 이동해야 합니다. 인증서 또는 비대칭 키는 **에서 데이터베이스 파일에 액세스할 수 있도록 대상 서버의** master [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 설치되어야 합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)를 참조하세요.  
+-   TDE로 보호되는 데이터베이스를 이동하려면 DEK를 여는 데 사용되는 인증서 또는 비대칭 키도 이동해야 합니다. 인증서 또는 비대칭 키는 **에서 데이터베이스 파일에 액세스할 수 있도록 대상 서버의** master [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 설치되어야 합니다. 자세한 내용은 [TDE&#40;투명한 데이터 암호화&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.  
   
 -   인증서를 복구하려면 인증서 파일 및 개인 키 파일의 사본을 보관해야 합니다. 개인 키의 암호는 데이터베이스 마스터 키 암호와 동일할 필요가 없습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 기본적으로 여기서 생성된 파일을 **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** 에 저장합니다. 파일 이름 및 위치는 다를 수 있습니다.  
   
-###  <a name="Security"></a> 보안  
-  
-####  <a name="Permissions"></a> 사용 권한  
+##  <a name="Permissions"></a> 사용 권한  
   
 -   데이터베이스 마스터 키를 만들려면 **master** 데이터베이스에 대한 **CONTROL DATABASE** 권한이 필요합니다.  
   
@@ -68,6 +44,8 @@ ms.lasthandoff: 06/22/2017
 -   암호화된 데이터베이스에 대한 **CONTROL DATABASE** 권한과 데이터베이스 암호화 키를 암호화하는 데 사용되는 인증서 또는 비대칭 키에 대한 **VIEW DEFINITION** 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 만들려면  
+
+다음 절차에서는 SQL Server Management Studio를 사용하고 Transact-SQL을 사용하여 TDE로 보호되는 데이터베이스를 만들어야 함을 보여줍니다.
   
 ###  <a name="SSMSCreate"></a> SQL Server Management Studio 사용  
   
@@ -109,7 +87,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql  
     -- Create a database master key and a certificate in the master database.  
     USE master ;  
     GO  
@@ -161,7 +139,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)  
   
-##  <a name="TsqlProcedure"></a> 데이터베이스를 이동하려면  
+##  <a name="TsqlProcedure"></a> 투명한 데이터 암호화로 보호되는 데이터베이스를 이동하려면 
+
+다음 절차에서는 SQL Server Management Studio를 사용하고 Transact-SQL을 사용하여 TDE로 보호되는 데이터베이스를 이동해야 함을 보여줍니다.
   
 ###  <a name="SSMSMove"></a> SQL Server Management Studio 사용  
   
@@ -282,7 +262,7 @@ ms.lasthandoff: 06/22/2017
   
 3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
   
-    ```  
+    ```sql  
     -- Detach the TDE protected database from the source server.   
     USE master ;  
     GO  
@@ -327,6 +307,6 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 분리 및 연결&#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-with-azure-sql-database.md)  
+ [Azure SQL 데이터베이스를 사용한 투명한 데이터 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   
   

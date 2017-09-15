@@ -1,5 +1,5 @@
 ---
-title: "SQL Server 예제: 모델 배포 패키지 (MDS) | Microsoft Docs"
+title: "SQL Server 예제: 모델 배포 패키지(MDS) | Microsoft Docs"
 ms.custom: 
 ms.date: 07/28/2017
 ms.prod: sql-server-2016
@@ -14,23 +14,23 @@ keywords:
 - sample
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
+author: smartysanthosh
+ms.author: nagavo
 manager: craigg
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7a031ba18c6782cdd73ae31ef395bc2ecdcf102
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: bda0dbc730e24017dfc1978e691d3da654a15149
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 예제: 모델 배포 패키지 (MDS)
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]을 설치할 때 데이터가 있는 샘플 모델 패키지가 포함됩니다. 기본 위치 이러한 패키지 파일에 대 한는 \<드라이브 > files\microsoft SQL Server\130\Master Data Services\Samples\Packages 합니다.  
+# <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 예제: 모델 배포 패키지(MDS)
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]을 설치할 때 데이터가 있는 샘플 모델 패키지가 포함됩니다. 이러한 패키지 파일의 기본 위치는 \<드라이브>\Program Files\Microsoft SQL Server\130\Master Data Services\Samples\Packages입니다.  
   
  샘플 모델 패키지를 배포하는 방법에 대한 지침은 [샘플 모델 및 데이터 배포](../master-data-services/master-data-services-installation-and-configuration.md#deploySample)를 참조하세요. [MDSModelDeploy 도구](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 사용하여 샘플 모델 패키지를 배포합니다.  
   
 > [!IMPORTANT]  
->  **샘플 업데이트[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]**  
+>  **[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 샘플 업데이트**  
 >   
 >  샘플 패키지가 다음과 같은 새로운 기능을 지원하도록 업데이트되었습니다.  
 >   
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/02/2017
  
 
  
- Master Data Services 패키지는 배포 가능한 모델 구조와 필요에 따라 모델의 데이터를 포함 하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 환경에 새로운 모델을 만듭니다.  
+ Master Data Services에서 패키지는 배포 가능한 모델 구조와 모델의 데이터(옵션)를 포함하는 XML 파일입니다. 모델 패키지를 사용하여 MDS 환경 간에 모델의 복사본을 이동하거나 기존 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 환경에 새로운 모델을 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  

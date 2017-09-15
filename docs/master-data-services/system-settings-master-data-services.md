@@ -1,5 +1,5 @@
 ---
-title: "시스템 설정 (Master Data Services) | Microsoft Docs"
+title: "시스템 설정(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - system settings [Master Data Services]
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 caps.latest.revision: 17
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 0856c24aee54589941ba96aad979ef732d143f37
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: c2c1d9b5af3b0825e7002c44344ac9428d0e8980
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
@@ -108,7 +108,7 @@ ms.lasthandoff: 08/02/2017
   
 |구성 관리자 설정|시스템 설정|Description|  
 |-----------------------------------|--------------------|-----------------|  
-|**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|에 대 한 URL의 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 예를 들어 전자 메일 알림의 링크에 사용 되는 응용 프로그램 `http://constoso/mds`합니다.|  
+|**알림에 대한 마스터 데이터 관리자 URL**|**MDMRootURL**|메일 알림의 링크에 사용되는 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램의 URL(예: `http://constoso/mds`)입니다.|  
 |**전자 메일 알림 간격**|**NotificationInterval**|전자 메일 알림을 보내는 빈도(초)입니다. 기본값은 **120** 초(2분)입니다.|  
 |**단일 전자 메일의 알림 수**|**NotificationsPerEmail**|단일 알림 전자 메일에 나열될 유효성 검사 문제의 최대 개수입니다. 문제가 더 있더라도 전자 메일에는 포함되지 않지만 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서는 제공됩니다.|  
 |**기본 전자 메일 형식**|**EmailFormat**|모든 전자 메일 알림의 형식입니다. 기본값은 **HTML** 또는 **1**입니다. 데이터베이스 설정 **2** 는 **텍스트**를 나타냅니다.<br /><br /> 참고: 개별 사용자의 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]일반 **탭에서** 전자 메일 형식 **을 변경 및 저장하여** 에서 해당 사용자에 대한 이 설정을 재정의할 수 있습니다.|  
@@ -150,6 +150,6 @@ ms.lasthandoff: 08/02/2017
 -   **AttributeExplorerMarkAllActionMemberCount**  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 개체 보안 &#40; Master Data services&#41;](../master-data-services/database-object-security-master-data-services.md)  
+ [데이터베이스 개체 보안&#40;Master Data Services&#41;](../master-data-services/database-object-security-master-data-services.md)  
   
   

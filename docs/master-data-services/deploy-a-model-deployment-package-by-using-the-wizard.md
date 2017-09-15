@@ -1,5 +1,5 @@
 ---
-title: "마법사를 사용 하 여 모델 배포 패키지 배포 | Microsoft Docs"
+title: "마법사를 사용하여 모델 배포 패키지 배포 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -14,21 +14,21 @@ helpviewer_keywords:
 - models [Master Data Services], deploying a package
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: ba982c9e81e5f3ff0c6e5997806cc3d00f16fce4
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6f9206369f5111cbc74556d71dc815b26d03af7b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>마법사를 사용하여 모델 배포 패키지 배포
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 모델 배포 마법사를 사용하여 모델 개체만 포함된 패키지를 배포할 수 있습니다. 데이터가 포함된 패키지를 배포해야 하는 경우 [MDSModelDeploy를 사용하여 모델 배포 패키지 배포](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 배포할 수 있습니다. 따라서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] 에서 만든 패키지는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 배포할 수 없습니다.  
+>  패키지는 해당 패키지를 만드는 데 사용한 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에만 배포할 수 있습니다. 따라서 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 만든 패키지는 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 배포할 수 없습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  **모델 뷰** 페이지의 메뉴 모음에서 **시스템** 을 가리키고 **배포**를 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **시스템**을 가리키고 **배포**를 클릭합니다.  
   
 3.  **모델 배포 마법사**에서 **배포**를 클릭합니다.  
   
@@ -55,9 +55,9 @@ ms.lasthandoff: 08/02/2017
   
 7.  패키지가 로드되면 **다음**을 클릭합니다.  
   
-8.  모델이 이미 있는 경우 **기존 모델 업데이트**를 선택하여 해당 모델을 업데이트할 수 있습니다. 새 모델을 만들려는 경우 **새 모델 만들기** 를 선택하고 **다음** 을 클릭하면 새 모델의 이름을 입력할 수 있습니다.  
+8.  모델이 이미 있는 경우 **기존 모델 업데이트**를 선택하여 해당 모델을 업데이트할 수 있습니다. 새 모델을 만들려는 경우 **새 모델 만들기**를 선택하고 **다음**을 클릭하면 새 모델의 이름을 입력할 수 있습니다.  
   
-9. **마침** 을 클릭하여 마법사를 끝냅니다.  
+9. **마침**을 클릭하여 마법사를 끝냅니다.  
   
  **참고:**  
   
@@ -81,6 +81,6 @@ ms.lasthandoff: 08/02/2017
 -   [모델 개체 사용 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [모델 &#40; 배포 Master Data services&#41;](../master-data-services/deploying-models-master-data-services.md)  
+ [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: "서버 구성 (MDS 구성 관리자) | Microsoft Docs"
+title: "서버 구성(MDS Configuration Manager) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 01/26/2017
@@ -14,17 +14,17 @@ f1_keywords:
 - sql13.mds.configmanager.srvinfopg.f1
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 caps.latest.revision: 11
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c94e975f19137325e14044a6d1d07ee65897d857
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a6203f550646e1fc6b0998ccccad89ea113befb4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="server-configuration-mds-configuration-manager"></a>서버 구성 (MDS 구성 관리자)
+# <a name="server-configuration-mds-configuration-manager"></a>서버 구성(MDS Configuration Manager)
   **서버 구성** 페이지를 사용하여 로컬 서버 컴퓨터에 대한 구성 정보를 볼 수 있습니다.  
   
 ## <a name="server-configuration"></a>서버 구성  

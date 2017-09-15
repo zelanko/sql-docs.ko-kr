@@ -1,5 +1,5 @@
 ---
-title: "개요: 테이블 (Master Data Services)에서 데이터 가져오기 | Microsoft Docs"
+title: "개요: 테이블에서 데이터 가져오기(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - staging process [Master Data Services]
 ms.assetid: 181d1e22-379c-45d1-b03c-e1e22ff14164
 caps.latest.revision: 21
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: a33ef299ad64c4bc6ca5a96b43feb888b9147565
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 98127d5652b06fa012d5ac3f6865d73adcce9f7e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="overview-importing-data-from-tables-master-data-services"></a>개요: 테이블에서 데이터 가져오기(Master Data Services)
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [리프 멤버 준비 테이블&#40;Master Data Services&#41;](../master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [통합된 멤버 준비 테이블 &#40; Master Data services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [통합 멤버 준비 테이블&#40;Master Data Services&#41;](../master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [관계 준비 테이블&#40;Master Data Services&#41;](../master-data-services/relationship-staging-table-master-data-services.md)  
   
@@ -90,15 +90,15 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 다음 유형의 준비 저장 프로시저를 포함합니다.  
   
--   stg.udp_\<이름 > _Leaf  
+-   stg.udp_\<name>_Leaf  
   
--   stg.udp_\<이름 > _Consolidated  
+-   stg.udp_\<name>_Consolidated  
   
--   stg.udp_\<이름 > _Relationship  
+-   stg.udp_\<name>_Relationship  
   
  모델의 각 엔터티에는 리프 멤버, 통합 멤버 및 관계 준비 표에 해당하는 3개의 저장 프로시저가 있습니다.  다음 이미지는 통화, 고객 및 제품 엔터티에 대한 준비 저장 프로시저를 보여 줍니다.  
   
- ![MDS 데이터베이스의 저장된 프로시저가 준비](../master-data-services/media/mds-staging-storedprocedures.png "준비 MDS 데이터베이스의 저장된 프로시저")  
+ ![MDS 데이터베이스의 준비 저장 프로시저](../master-data-services/media/mds-staging-storedprocedures.png "MDS 데이터베이스의 준비 저장 프로시저")  
   
  저장 프로시저에 대한 자세한 내용은 [준비 저장 프로시저&#40;Master Data Services&#41;](../master-data-services/staging-stored-procedure-master-data-services.md)를 참조하세요.  
   
@@ -109,7 +109,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="related-content"></a>관련 내용  
   
--   [유효성 검사 &#40; Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [유효성 검사&#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
 -   [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: "웹 응용 프로그램 요구 사항 (Master Data Services) | Microsoft Docs"
+title: "웹 응용 프로그램 요구 사항(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 02/13/2017
@@ -14,20 +14,20 @@ keywords:
 - Master Data Services
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 caps.latest.revision: 40
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: b3ca26f48614ee2ed12275ec148dcaec3c044ce5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: e8e0c4a9f925192c79dcb998c159d311c80256c5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="web-application-requirements-master-data-services"></a>웹 응용 프로그램 요구 사항(MDS(Master Data Services))
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IIS(인터넷 정보 서비스)에서 호스트하는 웹 응용 프로그램입니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 은 IE(Internet Explorer) 9 이상에서만 사용할 수 있습니다. IE 8 이하 버전, Microsoft Edge 및 Chrome은 지원되지 않습니다.  
 
-**IIS 설치 및 구성 하는 방법에 대 한 지침은**, 참조 [IIS 구성 및 설치](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)합니다.
+**IIS를 설치 및 구성하는 방법에 대한 지침은** [IIS 설치 및 구성](../../master-data-services/master-data-services-installation-and-configuration.md#InstallIIS)을 참조하세요.
   
  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 웹 응용 프로그램을 만들고 구성하려면 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 를 사용합니다. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 는 로컬 컴퓨터에서 IIS를 구성하므로 초기 웹 구성 작업을 수행할 때 가장 적합합니다. 예를 들어 단일 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 응용 프로그램이 있는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 환경을 구성하거나 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 확장 배포에서 초기 웹 응용 프로그램을 구성할 수 있습니다. IIS 도구는 확장 배포에서 여러 웹 서버를 구성하는 등 보다 복잡한 태스크를 수행하는 데 사용됩니다.  
   
@@ -77,13 +77,13 @@ Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeat
 |유형|설명|  
 |----------|-----------------|  
 |Windows 계정|웹 서버 컴퓨터에 로그온할 때는 Windows 역할, 역할 서비스 및 기능을 구성하고 응용 프로그램 풀, 웹 사이트 및 웹 응용 프로그램을 로컬 컴퓨터의 IIS에서 작성 및 관리할 수 있는 사용 권한을 가진 Windows 계정을 사용해야 합니다.|  
-|서비스 계정|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 에서 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]웹 응용 프로그램을 만들 경우 응용 프로그램이 실행되는 응용 프로그램 풀의 ID를 지정해야 합니다. 이 계정은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들 때 지정한 서비스 계정과 다를 수 있습니다.<br /><br /> 이 ID는 도메인 사용자 계정이어야 하며 데이터베이스 액세스를 위해 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 mds_exec 데이터베이스 역할에 추가됩니다. 자세한 내용은 참조 [데이터베이스 로그인, 사용자 및 역할](../../master-data-services/database-logins-users-and-roles-master-data-services.md)합니다. 또한 이 계정은 파일 시스템의 임시 컴파일 디렉터리인 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] MDSTempDir **에 대한 사용 권한이 부여되는**Windows 그룹인 **MDS_ServiceAccounts**에 추가됩니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  
+|서비스 계정|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 에서 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]웹 응용 프로그램을 만들 경우 응용 프로그램이 실행되는 응용 프로그램 풀의 ID를 지정해야 합니다. 이 계정은 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스를 만들 때 지정한 서비스 계정과 다를 수 있습니다.<br /><br /> 이 ID는 도메인 사용자 계정이어야 하며 데이터베이스 액세스를 위해 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 데이터베이스의 mds_exec 데이터베이스 역할에 추가됩니다. 자세한 내용은 [데이터베이스 로그인, 사용자 및 역할](../../master-data-services/database-logins-users-and-roles-master-data-services.md)을 참조하세요. 또한 이 계정은 파일 시스템의 임시 컴파일 디렉터리인 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] MDSTempDir **에 대한 사용 권한이 부여되는**Windows 그룹인 **MDS_ServiceAccounts**에 추가됩니다. 자세한 내용은 [폴더 및 파일 사용 권한&#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)을 참조하세요.|  
   
 ## <a name="see-also"></a>관련 항목:  
  [MDS(Master Data Services) 설치](../../master-data-services/install-windows/install-master-data-services.md)   
       
  [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)   
- [웹 구성 페이지 &#40; Master Data Services 구성 관리자 &#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [웹 구성 페이지&#40;Master Data Services 구성 마법사&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   
 

@@ -1,7 +1,7 @@
 ---
 title: "데이터베이스 엔진의 새로운 기능 - SQL Server 2017 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/26/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: e3d06068b28a6870a5c34286f073c32519428e39
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 331ef33b70578c955767eb40680644329a2b6519
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2017
@@ -29,12 +29,9 @@ ms.lasthandoff: 08/16/2017
 > [!NOTE]  
 > SQL Server 2017에는 SQL Server 2016 서비스 팩에 추가된 기능도 포함되어 있습니다. 해당 항목에 대해서는 [SQL Server 2016(데이터베이스 엔진)의 새로운 기능](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md)을 참조하세요.
 
+**개선 사항**  
 
-## <a name="sql-server-database-engine-rc1"></a>SQL Server 데이터베이스 엔진(RC1)  
-- 이제 CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 CLR 어셈블리를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다.
-
-## <a name="sql-server-database-engine-previous-ctps"></a>SQL Server 데이터베이스 엔진(이전의 CTP)  
-- CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. 자세한 내용은 [CLR strict security](configure-windows/clr-strict-security.md)를 참조하세요.  
+- CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. `clr strict security` 기능에 대한 해결 방법으로 CLR 어셈블리를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다. 자세한 내용은 [CLR strict security](configure-windows/clr-strict-security.md)를 참조하세요.  
 - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) DMF가 트랜잭션 로그 파일에 대한 요약 수준 특성 및 정보를 표시하기 위해 새로 도입되었으며, 트랜잭션 로그의 상태를 모니터링하는 데 유용합니다.  
 - 다시 시작 가능한 온라인 인덱스 다시 작성 - 다시 시작 가능한 온라인 인덱스 다시 작성을 사용하면 오류(예: 복제본으로 장애 조치 또는 디스크 공간 부족)가 발생한 후 중지된 위치에서 온라인 인덱스 다시 작성 작업을 다시 시작할 수 있습니다. 또한 온라인 인덱스 다시 작성 작업을 일시 중지했다가 나중에 다시 시작할 수도 있습니다. 예를 들어 우선 순위가 높은 작업을 실행하기 위해 시스템 리소스를 일시적으로 비우거나, 사용 가능한 유지 관리 시간이 큰 테이블에 비해 너무 짧은 경우 또 다른 유지 관리 기간에서 인덱스 다시 작성하여 완료해야 할 수 있습니다. 마지막으로 다시 시작 가능한 온라인 인덱스 다시 작성에는 상당한 로그 공간이 필요하지 않으므로 이 작업이 실행되는 동안 로그 잘림을 수행할 수 있습니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
 - **ALTER DATABASE SCOPED CONFIGURATION에 대한 IDENTITY_CACHE 옵션** - IDENTITY_CACHE 옵션이 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 문에 새로 추가되었습니다. 이 옵션을 `OFF`로 설정하면 서버가 예기치 않게 다시 시작되거나 보조 서버로 장애 조치되는 경우 데이터베이스 엔진에서 ID 열 값 차이가 발생하지 않도록 방지할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.   

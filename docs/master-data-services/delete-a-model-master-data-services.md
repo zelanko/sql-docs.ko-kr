@@ -1,5 +1,5 @@
 ---
-title: "모델 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+title: "모델 삭제(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - models [Master Data Services], deleting models
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: be50aa7e9de502b0db2cb427bf894081196b579e
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: f1ac3250d2d1f852ec43bf88fb206b2009fc0430
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-model-master-data-services"></a>모델 삭제(Master Data Services)
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리** 를 가리키고 **모델**을 클릭합니다.  
+2.  **모델 뷰** 페이지의 메뉴 모음에서 **관리**를 가리키고 **모델**을 클릭합니다.  
   
 3.  **모델 관리** 페이지의 표에서 삭제할 모델의 행을 선택합니다.  
   
@@ -52,10 +52,10 @@ ms.lasthandoff: 08/02/2017
   
 6.  추가 확인 대화 상자에서 **확인**을 클릭합니다.  
   
- 표의 **상태** 열에는 모델에 대한 작업의 상태가 표시됩니다. 클릭할 때는 **모델 저장** 단추는 ![업데이트](../master-data-services/media/mds-model-status-updating.png "업데이트") 모델 업데이트 되 고 있음을 나타내는 이미지가 표시 됩니다. 작성 하거나 모델을 편집할 때 오류가 있는 경우는 ![오류](../master-data-services/media/mds-model-status-error.png "오류") 이미지가 표시 됩니다. 오류가 발생하지 않으면 상태가 정상이며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
+ 표의 **상태** 열에는 모델에 대한 작업의 상태가 표시됩니다. **모델 저장** 단추를 클릭하면 모델을 업데이트하는 중임을 나타내는 ![업데이트 중](../master-data-services/media/mds-model-status-updating.png "업데이트 중") 이미지가 표시됩니다. 모델을 만들거나 편집할 때 오류가 발생하면 ![오류](../master-data-services/media/mds-model-status-error.png "오류") 이미지가 표시됩니다. 오류가 발생하지 않으면 상태가 정상이며 ![확인](../master-data-services/media/mds-model-status-ok.png "확인") 이미지가 표시됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [모델 &#40; Master Data services&#41;](../master-data-services/models-master-data-services.md)   
- [모델 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-model-master-data-services.md)  
+ [모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)   
+ [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)  
   
   

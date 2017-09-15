@@ -1,5 +1,5 @@
 ---
-title: "준비 저장된 프로시저 (Master Data Services) | Microsoft Docs"
+title: "준비 저장 프로시저(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,24 +11,24 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 6a613106-9f87-4caf-a23a-a726fc6561c5
 caps.latest.revision: 15
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c2c12151d25b7d563a8a37a7ccfd617bca5cb479
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 19ce25e1182e362761b1919f36d72623dd7289e7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="staging-stored-procedure-master-data-services"></a>준비 저장 프로시저(Master Data Services)
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에서 준비 프로세스를 시작할 때는 다음 세 가지 저장 프로시저 중 하나를 사용합니다.  
   
--   stg.udp_\<이름 > _Leaf  
+-   stg.udp_\<name>_Leaf  
   
--   stg.udp_\<이름 > _Consolidated  
+-   stg.udp_\<name>_Consolidated  
   
--   stg.udp_\<이름 > _Relationship  
+-   stg.udp_\<name>_Relationship  
   
  여기서 name은 엔터티를 만들 때 지정된 준비 테이블의 이름입니다.  
   

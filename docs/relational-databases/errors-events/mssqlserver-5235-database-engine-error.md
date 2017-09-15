@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_5235 | Microsoft 문서"
 ms.custom: 
-ms.date: 04/04/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: bb6ed08c7ffad0e723dea7ad4774439049de3d99
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 4374db61b2ae314fe9a11307d083588e4b15800c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="mssqlserver5235"></a>MSSQLSERVER_5235
@@ -43,24 +43,25 @@ ms.lasthandoff: 06/22/2017
   
 |오류 상태|정의|  
 |---------------|--------------|  
-|상태 0|메타데이터가 손상되어 문이 종료되었습니다. 이 메시지는 하나 이상의 오류 8930과 함께 표시됩니다.|  
-|상태 1|내부 검사에 실패하여 문이 종료되었습니다. 이 메시지는 하나 이상의 오류 8967과 함께 표시됩니다.|  
-|상태 2|핵심 저장소 엔진 시스템 테이블에 대한 기본 시스템 테이블 검사가 실패했습니다. 이 메시지는 하나 이상의 오류 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 또는 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md)과 함께 표시됩니다.|  
-|상태 3|트랜잭션 로그를 다시 작성한 후 데이터베이스를 시작할 수 없어 DBCC 응급 모드 복구가 실패했습니다. 이 메시지는 오류 7909와 함께 표시됩니다.|  
-|상태 4|명령을 실행하는 동안 어설션 오류나 액세스 위반이 발생했습니다.|  
-|상태 5|알 수 없는 오류가 발생하여 DBCC 명령이 예기치 않게 종료되었습니다.|  
+|상태 1|메타데이터가 손상되어 문이 종료되었습니다. 이 메시지는 하나 이상의 오류 8930과 함께 표시됩니다.|  
+|상태 2|내부 검사에 실패하여 문이 종료되었습니다. 이 메시지는 하나 이상의 오류 8967과 함께 표시됩니다.|  
+|상태 3|핵심 저장소 엔진 시스템 테이블에 대한 기본 시스템 테이블 검사가 실패했습니다. 이 메시지는 하나 이상의 오류 [7984](../../relational-databases/errors-events/mssqlserver-7984-database-engine-error.md), 7985, [7986](~/relational-databases/errors-events/mssqlserver-7986-database-engine-error.md), [7987](~/relational-databases/errors-events/mssqlserver-7987-database-engine-error.md) 또는 [7988](~/relational-databases/errors-events/mssqlserver-7988-database-engine-error.md)과 함께 표시됩니다.|  
+|상태 4|트랜잭션 로그를 다시 작성한 후 데이터베이스를 시작할 수 없어 DBCC 응급 모드 복구가 실패했습니다. 이 메시지는 오류 7909와 함께 표시됩니다.|  
+|상태 5|명령을 실행하는 동안 어설션 오류나 액세스 위반이 발생했습니다.|  
+|상태 6|알 수 없는 오류가 발생하여 DBCC 명령이 예기치 않게 종료되었습니다.|  
+|상태 7|복제본의 오류로 인해 비정상 종료되었습니다(항상 사용).|  
   
 ## <a name="user-action"></a>사용자 동작  
 다음 표에서는 특정 오류 상태에 적합한 사용자 동작을 설명합니다.  
   
 |오류 상태|사용자 동작|  
 |---------------|---------------|  
-|상태 0|백업에서 복원합니다.|  
-|상태 1|[!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS(고객 서비스 지원 센터)에 문의합니다.|  
-|상태 2|백업에서 복원합니다.|  
+|상태 1|백업에서 복원합니다.|  
+|상태 2|[!INCLUDE[msCoName](../../includes/msconame-md.md)] CSS(고객 서비스 지원 센터)에 문의합니다.|  
 |상태 3|백업에서 복원합니다.|  
+|상태 4|백업에서 복원합니다.|  
 |상태 4|CSS에 문의합니다.|  
-|상태 5|명령을 다시 실행합니다. 문제가 지속되면 CSS에 문의합니다.|  
+|상태 6|명령을 다시 실행합니다. 문제가 지속되면 CSS에 문의합니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
 [DBCC&#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-transact-sql.md)  

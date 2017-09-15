@@ -1,5 +1,5 @@
 ---
-title: "엔터티 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+title: "엔터티 삭제(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - deleting entities [Master Data Services]
 ms.assetid: 71fffb03-38fd-46f0-9e10-6ec75da19ab2
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 4f802b5e2bc1524751af90ae809fa063b86ffa8f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 433e3a29d3eb64ab4e64ef1dc8d3ea9f9f5a951e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-entity-master-data-services"></a>엔터티 삭제(Master Data Services)
@@ -53,7 +53,7 @@ ms.lasthandoff: 08/02/2017
 6.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [엔터티 &#40; Master Data services&#41;](../master-data-services/entities-master-data-services.md)   
- [엔터티 &#40; 만들기 Master Data services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
+ [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
+ [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)  
   
   

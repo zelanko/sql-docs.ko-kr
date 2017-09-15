@@ -1,5 +1,5 @@
 ---
-title: "명시적 계층 (Master Data Services) | Microsoft Docs"
+title: "명시적 계층(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - explicit hierarchies
 ms.assetid: e6f44e37-e1f0-4c38-a816-1935a856d5a4
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c4680ca90441beb57266656b85461697f95eb19d
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: ca0d83ac41efca3c9a0c1a71f87e9176bfd34553
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>명시적 계층(Master Data Services)
@@ -80,7 +80,7 @@ ms.lasthandoff: 08/02/2017
   
  이러한 리프 멤버를 특정 통합 지점에서 요약하려면 Product 엔터티 내에 통합 멤버를 만들면 됩니다. 계층 트리에서 리프 멤버를 요약할 수준에 통합 멤버를 삽입합니다. 통합 멤버를 삽입할 수 있는 위치에 대한 제한은 없지만 각 멤버(리프 또는 통합)를 한 번만 사용할 수 있습니다.  
   
- ![Mountain Bike 명시적 계층 예](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike 명시적 계층 예")  
+ ![Mountain Bike 명시적 계층 예제](../master-data-services/media/mds-conc-explicit-hierarchy.gif "Mountain Bike 명시적 계층 예제")  
   
  통합 멤버를 사용하여 원하는 수준에서 멤버를 그룹화하고, 리프 및 통합 멤버를 원하는 순서대로 정렬할 수 있습니다.  
   
@@ -88,16 +88,16 @@ ms.lasthandoff: 08/02/2017
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|새 명시적 계층을 만듭니다.|[명시적 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
-|기존 명시적 계층의 이름을 변경합니다.|[명시적 계층 이름 &#40; 변경 Master Data services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
-|기존 명시적 계층을 삭제합니다.|[명시적 계층 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
+|새 명시적 계층을 만듭니다.|[명시적 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)|  
+|기존 명시적 계층의 이름을 변경합니다.|[명시적 계층 이름 변경&#40;Master Data Services&#41;](../master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|  
+|기존 명시적 계층을 삭제합니다.|[명시적 계층 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|  
 |||  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [파생된 계층 &#40; Master Data services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
+-   [파생 계층&#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md)  
   
--   [컬렉션 &#40; Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   
 

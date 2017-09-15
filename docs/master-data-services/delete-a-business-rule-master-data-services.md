@@ -1,5 +1,5 @@
 ---
-title: "비즈니스 규칙 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+title: "비즈니스 규칙 삭제(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - business rules [Master Data Services], deleting
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6ae93d3c89386382b88b470cbfa3a455302c00c2
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 09868e7f137be741ece555316fd71c536a543490
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>비즈니스 규칙 삭제(Master Data Services)
@@ -42,7 +42,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  메뉴 모음에서 **관리** 를 가리키고 **비즈니스 규칙**을 클릭합니다.  
+2.  메뉴 모음에서 **관리**를 가리키고 **비즈니스 규칙**을 클릭합니다.  
   
 3.  **비즈니스 규칙** 페이지의 **모델** 드롭다운 목록에서 모델을 선택합니다.  
   
@@ -61,8 +61,8 @@ ms.lasthandoff: 08/02/2017
 10. 확인 대화 상자에서 **확인**을 클릭합니다. 삭제된 비즈니스 규칙은 더 이상 눈금에 표시되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [비즈니스 규칙 &#40; 제외 Master Data services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
- [만들기 및 비즈니스 규칙 &#40; 게시 Master Data services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
- [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [비즈니스 규칙 제외&#40;Master Data Services&#41;](../master-data-services/exclude-a-business-rule-master-data-services.md)   
+ [비즈니스 규칙 만들기 및 게시&#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)   
+ [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   
