@@ -16,16 +16,16 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 6e1d0305fff039aad4d387cbc63026f40db9f97e
-ms.openlocfilehash: 9d229fd4764da21612d1b1cf532f1beaf8116769
+ms.translationtype: MT
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 51c6e0a0baa59e49ae482db01253c1998894b5f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---get-started"></a>Reporting Services ReportViewer 컨트롤을 사용 하 여 시작-통합
 
-개발자가 ASP.Net 웹 사이트 및 Reporting Services 2016 ReportViewer 컨트롤을 통해 Windows forms 앱에서 페이지 매긴된 보고서를 포함할 수 있습니다는 방법에 대해 알아봅니다. 새 프로젝트에서 컨트롤을 추가 하거나 기존 프로젝트를 업데이트할 수 있습니다.
+개발자가 ASP.NET 웹 사이트 및 Reporting Services 2016 ReportViewer 컨트롤을 통해 Windows Forms 앱에서 페이지 매긴된 보고서를 포함할 수 있습니다는 방법에 대해 알아봅니다. 새 프로젝트에서 컨트롤을 추가 하거나 기존 프로젝트를 업데이트할 수 있습니다.
 
 ## <a name="adding-the-reportviewer-control-to-a-new-web-project"></a>새 웹 프로젝트에 ReportViewer 컨트롤 추가
 
@@ -142,7 +142,7 @@ ms.lasthandoff: 08/09/2017
 <!DOCTYPE html>
 ```
 
-## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>새 Windows forms 프로젝트에 ReportViewer 컨트롤 추가
+## <a name="adding-the-reportviewer-control-to-a-new-windows-forms-project"></a>새 Windows Forms 프로젝트에 ReportViewer 컨트롤 추가
 
 1. 새 **Windows Forms 응용 프로그램** 또는 기존 프로젝트를 엽니다.
 
@@ -242,7 +242,7 @@ ms.lasthandoff: 08/09/2017
 
     ![ssRS-제거-오래-rvcontrol-도구 상자](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 도구 상자에서 아무 곳 이나 클릭 마우스 오른쪽 단추로 선택한 후 **항목 선택...** .
+3. 도구 상자에서 아무 곳 이나 클릭 마우스 오른쪽 단추로 선택한 후 **항목 선택... **.
 
     ![ssRS-도구 상자--항목 선택](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     
@@ -281,6 +281,6 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>참고 항목
 
 [2016 ReportingViewer 컨트롤에서 데이터 수집](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)  
-문의: [Reporting Services 포럼을 시도 하십시오.](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼을 이용해 보세요.](http://go.microsoft.com/fwlink/?LinkId=620231)
 
 

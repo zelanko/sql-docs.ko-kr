@@ -1,7 +1,7 @@
 ---
 title: "int, bigint, smallint 및 tinyint (TRANSACT-SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 07/22/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -32,16 +32,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 07f5adc3d8ea7bb963b399cce22caa701021d6e9
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: 46ac51971b07b38b73ef18d8a953674fc77b4b17
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int, bigint, smallint 및 tinyint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-정수 데이터를 사용하는 정확한 숫자 데이터 형식입니다.
+정수 데이터를 사용하는 정확한 숫자 데이터 형식입니다. 데이터베이스의 공간 절약을 위해 모든 가능한 값을 포함할 안정적 수 있는 가장 작은 데이터 형식을 사용 합니다. 예를 들어 255 세 개 이상의에 거주 하 고 아무도 때문에 tinyint은 사용자를 사용 하는 기간에 대 한 충분 한 것입니다. 있지만 건물 255 년 미만으로 남았는지 수 있기 때문에 tinyint 것 건물을 사용 하는 기간에 대 한 충분 한 수 없습니다.
   
 |데이터 형식|범위|저장소|  
 |---|---|---|
@@ -58,11 +58,11 @@ ms.lasthandoff: 09/01/2017
 함수 반환 **bigint** 매개 변수 식이 있는 경우에는 **bigint** 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]다른 정수 데이터 형식에 자동으로 승격 하지 않습니다 (**tinyint**, **smallint**, 및 **int**)를 **bigint**합니다.
   
 > [!CAUTION]  
->  사용 하는 경우는 +,-, \*, /, 또는 % 산술 연산자의 암시적 또는 명시적 변환을 수행 하기 위해 **int**, **smallint**, **tinyint**, 또는  **bigint** 상수 값을 **float**, **실제**, **10 진수** 또는 **숫자** 규칙, 데이터 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 자동 인지 여부에 따라 다를 데이터 형식 및 식 결과 전체 자릿수를 계산할 때 적용 됩니다.  
+>  사용 하는 경우는 +,-, \*, /, 또는 % 산술 연산자의 암시적 또는 명시적 변환을 수행 하기 위해 **int**, **smallint**, **tinyint**, 또는 ** bigint** 상수 값을 **float**, **실제**, **10 진수** 또는 **숫자** 규칙, 데이터 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 자동 인지 여부에 따라 다를 데이터 형식 및 식 결과 전체 자릿수를 계산할 때 적용 됩니다.  
 >   
 >  그러므로 경우에 따라 쿼리의 비슷한 식이 다른 결과를 생성하기도 합니다. 상수 값은 먼저 변환할 쿼리 자동 없을 때 **숫자**, 전체 자릿수가 지정 된 데이터 형식으로 변환 하기 전에 상수의 값을 보유할 수 만큼 큰 됩니다. 예를 들어 상수 값 1은 변환할 **숫자 (1, 0)**, 상수 값 250으로 변환 됩니다 **숫자 (3, 0)**합니다.  
 >   
->  상수 값은 항상 변환할 쿼리 자동 이면 **숫자 (10, 0)** 최종 데이터 형식으로 변환 하기 전에. / 연산자가 들어 있는 경우 비슷한 쿼리 간에 결과 형식의 전체 자릿수뿐만 아니라 결과 값도 달라질 수 있습니다. 예를 들어 식이 포함 된 쿼리의의 결과 값 `SELECT CAST (1.0 / 7 AS float)` 자동 쿼리의 결과에 맞게 잘립니다 자동 되지 않는 동일한 쿼리의 결과 값에서 다릅니다 에 **숫자 (10, 0)** 데이터 형식입니다.  
+>  상수 값은 항상 변환할 쿼리 자동 이면 **숫자 (10, 0)** 최종 데이터 형식으로 변환 하기 전에. / 연산자가 들어 있는 경우 비슷한 쿼리 간에 결과 형식의 전체 자릿수뿐만 아니라 결과 값도 달라질 수 있습니다. 예를 들어 식이 포함 된 쿼리의의 결과 값 `SELECT CAST (1.0 / 7 AS float)`, 자동 되지 않는 동일한 쿼리의 결과 값에서와 다른 자동 쿼리의 결과에 맞게 잘립니다. **숫자 (10, 0)** 데이터 형식입니다.  
   
 ## <a name="converting-integer-data"></a>Integer 데이터 변환
 정수가 암시적으로 문자 데이터 형식으로 변환될 경우 정수가 너무 커서 문자 필드에 맞지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 ASCII 문자 42인 별표(*)를 입력합니다.

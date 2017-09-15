@@ -18,17 +18,17 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: df8ef05d3e1813453d2fdfa40c2e0a6eec4ddecf
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: d56cf1f72a7d7ea20ae63c59d119d372e76aa393
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-reporting-services-at-the-command-prompt"></a>명령 프롬프트에 Reporting Services 설치
 
 [!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE[ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../../includes/ssrs-appliesto-not-pbirs.md)]
 
-[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SQL Server 설치 프로그램에서 명령줄 설치를 지원합니다. 이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 몇 가지 명령줄 설치 예가 포함됩니다. 모든 SQL Server 구성 요소에 대해 사용 가능한 명령줄 옵션에 대한 자세한 설명은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요. 이 항목에서는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대한 명령줄 옵션은 다루지 않습니다. 추가 기능 명령 설치에 자세한 내용은 [rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)를 참조하세요.
+[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SQL Server 설치 프로그램에서 명령줄 설치를 지원합니다. 이 항목에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련된 몇 가지 명령줄 설치 예가 포함됩니다. 모든 SQL Server 구성 요소에 사용할 수 있는 명령줄 옵션의 전체 설명은 참조 하십시오. [명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)합니다. 이 항목에서는 SharePoint 제품용 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 추가 기능에 대한 명령줄 옵션은 다루지 않습니다. 추가 기능 명령 설치에 자세한 내용은 [rsSharePoint.msi 설치 파일을 사용하여 추가 기능 설치](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint)를 참조하세요.
 
 ##  <a name="bkmk_native_mode"></a> 기본 모드 Reporting Services
 
@@ -91,8 +91,8 @@ Setup.exe /q /ACTION="Upgrade" /INSTANCENAME="MSSQLSERVER" /PID="[Your PID Value
 
 ## <a name="next-steps"></a>다음 단계
 
-[명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
-[SysPrep 매개 변수](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md#SysPrep)   
+[명령 프롬프트에서 SQL Server 설치](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+[SysPrep 매개 변수](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#SysPrep)   
 [명령 프롬프트에서 Power Pivot 설치](http://msdn.microsoft.com/en-us/7f1f2b28-c9f5-49ad-934b-02f2fa6b9328)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
