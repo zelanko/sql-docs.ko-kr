@@ -19,11 +19,11 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9bd44a94f0025524ede2abf189f0dec6944090dc
+ms.translationtype: HT
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
@@ -89,7 +89,7 @@ GO
   
  매개 변수에 적당한 기본값을 지정할 수 없을 때는 NULL을 기본값으로 지정합니다. 프로시저가 매개 변수 값이 없이 실행되는 경우 프로시저에서 사용자 지정 메시지를 반환하는 것이 좋습니다.  
   
- 다음 예는 한 개의 입력 매개 변수 `usp_GetSalesYTD` 을 사용하여 `@SalesPerson`프로시저를 만듭니다. `@SalesPerson` 매개 변수 값 없이 프로시저를 실행할 경우 NULL이 이 매개 변수의 기본값으로 할당되고 사용자 지정 오류 메시지를 반환하는 오류 처리 문에서 NULL이 사용됩니다.  
+ 다음 예는 한 개의 입력 매개 변수 `uspGetSalesYTD` 을 사용하여 `@SalesPerson`프로시저를 만듭니다. `@SalesPerson` 매개 변수 값 없이 프로시저를 실행할 경우 NULL이 이 매개 변수의 기본값으로 할당되고 사용자 지정 오류 메시지를 반환하는 오류 처리 문에서 NULL이 사용됩니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,10 +123,10 @@ GO
   
 ```  
 -- Run the procedure without specifying an input value.  
-EXEC Sales.usp_GetSalesYTD;  
+EXEC Sales.uspGetSalesYTD;  
 GO  
 -- Run the procedure with an input value.  
-EXEC Sales.usp_GetSalesYTD N'Blythe';  
+EXEC Sales.uspGetSalesYTD N'Blythe';  
 GO  
 ```  
   
@@ -210,3 +210,4 @@ These items can be purchased for less than $700.00.
  [CREATE PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  
   
   
+
