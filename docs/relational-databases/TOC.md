@@ -45,7 +45,7 @@
 # [확장 이벤트](../relational-databases/extended-events/extended-events.md)
 # [그래프](../relational-databases/graphs/sql-graph-overview.md)
 # [계층적 데이터](hierarchical-data-sql-server.md)  
-# [가져오기 및 내보내기](../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)
+# [가져오기 및 내보내기](../relational-databases/import-export/overview-import-export.md)
 # [메모리 내 OLTP](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 # [인덱스](../relational-databases/indexes/indexes.md)
 # [JSON](../relational-databases/json/json-data-sql-server.md)
