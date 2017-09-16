@@ -14,11 +14,11 @@ caps.latest.revision: 4
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 84464c4553eab6d8e65c0bf6b476ae728e2a8463
+ms.translationtype: HT
+ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
+ms.openlocfilehash: 8b3ee682de6e27014f403be32849478f9d076c84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 04/11/2017
+ms.lasthandoff: 08/30/2017
 
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Stretch Database와 호환 가능한 SQL Server 기능 구성
@@ -51,3 +51,5 @@ Always Encrypted와 Stretch Database를 함께 사용하려면 테이블에서 S
 임시 테이블을 사용하는 경우에는 현재 테이블이 아닌 기록 테이블에서 Stretch Database를 사용하도록 설정할 수 있습니다.
 -   Stretch Database와 임시 테이블을 사용하는 방법에 대한 지침은 [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)를 참조하세요.
 -   행을 필터링하고 슬라이딩 윈도우를 사용하여 기록 테이블에서 마이그레이션하려면 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.
+-   테이블이 메모리 액세스에 최적화된 경우 임시 기록 테이블에서 스트레치 데이터베이스를 사용할 수 없습니다. 메모리 액세스에 최적화된 테이블은 지원되지 않습니다.
+

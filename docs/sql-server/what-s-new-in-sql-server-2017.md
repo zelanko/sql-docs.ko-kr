@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 08/31/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 8d10f9e80eb1cc0c2495042e03ff746a017f8e2a
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
@@ -34,8 +34,9 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 - CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 **CLR 어셈블리**를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다(RC1).  
 - **다시 시작 가능한 온라인 인덱스 다시 작성**은 오류(예: 복제본으로 장애 조치(failover) 또는 디스크 공간 부족) 발생 후 중지된 위치에서 온라인 인덱스 다시 작성을 재개하거나 일시 중지하고 나중에 온라인 인덱스 다시 작성 작업을 다시 시작합니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요. (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION의 **IDENTITY_CACHE** 옵션을 사용하면 서버가 예기치 않게 다시 시작하거나 보조 서버로 장애 조치(failover)된 후 ID 열의 값이 차이 나지 않도록 할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요. (CTP 2.0)
+- 응용 프로그램 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL Databases의 적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
 - **자동 데이터베이스 튜닝**은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고 솔루션을 추천하며 식별된 문제를 자동으로 해결할 수 있습니다. [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md)(자동 튜닝)을 참조하세요. (CTP 2.0)
-- 다 대 다 관계를 모델링하기 위한 새 **그래프 데이터베이스 기능** 에 노드 및 에지 테이블을 만들기 위한 새 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리를 위한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)(SQL Server 2017에서 그래프 처리)을 참조하세요. (CTP 2.0)
+- 다 대 다 관계를 모델링하기 위한 새 **그래프 데이터베이스 기능 **에 노드 및 에지 테이블을 만들기 위한 새 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리를 위한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)(SQL Server 2017에서 그래프 처리)을 참조하세요. (CTP 2.0)
 - CLR 어셈블리의 보안을 향상하기 위해 `clr strict security`라는 sp_configure 옵션이 기본적으로 사용하도록 설정됩니다. [CLR strict security](../database-engine/configure-windows/clr-strict-security.md)(CLR 엄격한 보안)를 참조하세요. (CTP 2.0)
 - 설치 프로그램에서는 이제 초기 tempdb 파일 크기를 최대 파일당 **256GB**(262,144MB)까지 지정할 수 있으며, IFI를 사용하도록 설정하지 않고 파일 크기를 1GB보다 크게 설정하면 경고가 표시됩니다. (CTP 2.0)
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)의 **modified_extent_page_count** 열에서 각 데이터베이스 파일의 차등 변경 내용을 추적하므로 데이터베이스에서 변경된 페이지의 비율에 따라 차등 백업이나 전체 백업을 수행하는 스마트 백업 솔루션을 지원합니다. (CTP 2.0)
@@ -112,14 +113,9 @@ SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오�
 
 자세한 내용은 [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
 
-##  <a name="infotipsql-servermediainfo-tippng-get-help"></a>![info_tip](../sql-server/media/info-tip.png) 도움말 보기 
-- [Stack Overflow(태그 sql-server) - SQL 개발 관련 문의 사항](http://stackoverflow.com/questions/tagged/sql-server)
-- [MSDN 포럼 - 기술 관련 문의 사항](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
-- [Microsoft Connect - 버그 보고 및 기능 요청](https://connect.microsoft.com/SQLServer/Feedback)
-- [Reddit - SQL Server에 대한 일반 토론](https://www.reddit.com/r/SQLServer/)
-- [Microsoft SQL Server 사용 조건 및 정보](https://www.microsoft.com/en-us/download/details.aspx?id=39299) 
-
 ## <a name="next-steps"></a>다음 단계
 - [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)를 참조하세요.
 - [SQL Server 2017 on Linux의 새로운 기능](https://docs.microsoft.com/sql/linux/sql-server-linux-whats-new)을 알아보세요.
 - [SQL Server 2016의 새로운 기능](what-s-new-in-sql-server-2016.md)을 확인하세요.
+
+[!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
