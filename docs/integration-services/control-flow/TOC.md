@@ -16,6 +16,7 @@
 ## [Azure HDInsight 클러스터 만들기 태스크](azure-hdinsight-create-cluster-task.md)  
 ## [Azure HDInsight 클러스터 삭제 작업](azure-hdinsight-delete-cluster-task.md)  
 ## [Azure SQL DW 업로드 태스크](azure-sql-dw-upload-task.md)  
+## [Azure Data Lake Store 파일 시스템 태스크](azure-data-lake-store-file-system-task.md) 
 ## [데이터베이스 백업 태스크](back-up-database-task.md)  
 ## [대량 삽입 태스크](bulk-insert-task.md)  
 ## [CDC 제어 태스크](cdc-control-task.md)  
