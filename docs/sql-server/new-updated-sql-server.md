@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 07/17/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 748f2ec122ea9a889b33cbcf15a188acd5da8459
+ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
+ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 08/29/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>새로 추가되었거나 최근에 업데이트됨: SQL Server 문서
@@ -28,9 +28,9 @@ ms.lasthandoff: 07/31/2017
 
 Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/) 설명서 웹 사이트에서 기존 문서 일부를 업데이트합니다. 이 문서에는 최근 업데이트된 문서에서 발췌한 내용이 표시됩니다. 새 문서로 연결되는 링크도 나열될 수 있습니다.
 
-이 문서는 주기적으로 다시 실행되는 프로그램에 의해 생성됩니다. 경우에 따라 발췌한 내용의 형식이 완전하지 않거나 원본 문서의 markdown으로 표시될 수 있습니다. 여기에 이미지가 표시되는 일은 없습니다.
+이 문서는 주기적으로 다시 실행되는 프로그램에 의해 생성됩니다. 경우에 따라 발췌한 내용의 형식이 완전하지 않거나 원본 문서의 표식(markdown)으로 표시될 수 있습니다. 이미지는 여기에 표시되지 않습니다.
 
-다음 날짜 범위 및 주제에 대한 최신 업데이트가 보고됩니다.
+다음 날짜 범위 및 주제에 대한 최근 업데이트가 보고됩니다.
 
 
 
@@ -157,7 +157,7 @@ Developer Edition은 [SQL Server Distributed Replay--../tools/distributed-replay
 |단일 인스턴스에서 사용되는 최대 계산 용량 - [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)] 인스턴스당 버퍼 풀에 대한 최대 메모리|운영 체제가 지원하는 최대 크기|128GB|64GB|1410MB|1410MB|
 |[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)] 인스턴스당 Columnstore 세그먼트 캐시에 대한 최대 메모리|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
-|[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]의 데이터베이스당 최대 메모리 최적화 데이터 크기|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
+|[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]의 데이터베이스당 메모리 액세스에 최적화된 최대 데이터 크기|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
 
 
 
@@ -169,13 +169,13 @@ Developer Edition은 [SQL Server Distributed Replay--../tools/distributed-replay
 
 ## <a name="similar-articles"></a>유사한 문서
 
-이 섹션에는 동일한 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+이 섹션에는 동일한 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/).
 
 <!--  20170717-1101  -->
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(4+4): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(4+4) : **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
 - [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
 - [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
 - [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
