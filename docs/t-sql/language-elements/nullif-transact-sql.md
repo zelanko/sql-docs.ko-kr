@@ -1,7 +1,7 @@
 ---
 title: NULLIF (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/16/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,16 +25,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e07e3960466d782911c20ced9ce6d88a10406bc2
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: fe8e4663688ce510d9600ebeba9d3c30703ee3aa
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="nullif-transact-sql"></a>NULLIF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  지정된 두 식이 같으면 Null 값을 반환합니다.  
+  지정된 두 식이 같으면 Null 값을 반환합니다. 예를 들어 `SELECT NULLIF(4,4) AS Same, NULLIF(5,7) AS Different;` 두 입력된 값이 동일 하기 때문에 첫 번째 열 (4 및 4)에 대 한 NULL을 반환 합니다. 두 입력된 값이 다르기 때문에 두 번째 열의 첫 번째 값 (5)를 반환 합니다. 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: index_option (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -19,10 +19,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 64f1d5cec0e74509e59491f50feec3be705badf2
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e7563f9fe992dcf4f9308cccbf11f6310b7925a7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/08/2017
 
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (TRANSACT-SQL)
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/01/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- PAD_INDEX  **=**  {ON | **OFF** }  
+ PAD_INDEX ** = ** {ON | **OFF** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/01/2017
  OFF 또는 *fillfactor* 지정 하지 않으면  
  중간 수준 페이지는 중간 페이지의 키 집합이 지정된 경우 최소한 인덱스에 사용할 수 있는 최대 크기의 행 하나를 위한 공간을 남겨 두고 거의 채워집니다.  
   
- FILLFACTOR  **=**  *fillfactor*  
+ FILLFACTOR ** = ** *fillfactor*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  인덱스를 만들거나 변경할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. 지정한 값은 1에서 100까지의 정수 값이어야 합니다. 기본값은 0입니다.  
@@ -89,14 +89,14 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
   
- IGNORE_DUP_KEY  **=**  {ON | **OFF** }  
+ IGNORE_DUP_KEY ** = ** {ON | **OFF** }  
  삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. 실행할 때이 옵션에 영향을 주지 않습니다 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), 또는 [업데이트](../../t-sql/queries/update-transact-sql.md)합니다. 기본값은 OFF입니다.  
   
  ON  
- 중복된 키 값이 고유 인덱스에 삽입되는 경우 경고 메시지가 나타나고 고유성 제약 조건을 위반하는 행만 실패합니다.  
+ 중복 키 값이 고유 인덱스에 삽입 하는 경우 경고 메시지가 나타납니다. 고유성 제약 조건을 위반 하는 행만 실패 합니다.  
   
  OFF  
- 중복된 키 값이 고유 인덱스에 삽입되는 경우 오류 메시지가 나타나고 전체 INSERT 작업이 롤백됩니다.  
+ 오류 메시지가 중복 키 값이 고유 인덱스에 삽입 되 면 발생 합니다. 전체 INSERT 작업이 롤백됩니다.  
   
  뷰에 생성 된 인덱스, 고유 하지 않은 인덱스, XML 인덱스, 공간 인덱스 및 필터링 된 인덱스에 대 한 IGNORE_DUP_KEY는 ON으로 설정할 수 없습니다.  
   
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/01/2017
   
  이전 버전과 호환되는 구문에서 WITH IGNORE_DUP_KEY는 WITH IGNORE_DUP_KEY = ON과 같습니다.  
   
- STATISTICS_NORECOMPUTE  **=**  {ON | **OFF** }  
+ STATISTICS_NORECOMPUTE ** = ** {ON | **OFF** }  
  통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  자동 통계 업데이트가 설정됩니다.  
   
- ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
+ ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  행 잠금이 사용되지 않습니다.  
   
- ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}  
+ ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  페이지 잠금이 사용되지 않습니다.  
   
- SORT_IN_TEMPDB  **=**  {ON | **OFF** }  
+ SORT_IN_TEMPDB ** = ** {ON | **OFF** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  에 정렬 결과 저장할지 여부를 지정 **tempdb**합니다. 기본값은 OFF입니다.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/01/2017
  OFF  
  중간 정렬 결과가 인덱스와 같은 데이터베이스에 저장됩니다.  
   
- 온라인  **=**  {ON | **OFF** }  
+ 온라인 ** = ** {ON | **OFF** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다. REBUILD 작업은 ONLINE 작업으로만 수행할 수 있습니다.  
@@ -168,21 +168,16 @@ ms.lasthandoff: 09/01/2017
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- MAXDOP  **=**  *max_degree_of_parallelism*  
+ MAXDOP ** = ** *max_degree_of_parallelism*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  재정의 **x degree of** 인덱스 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
- 1.  
- 병렬 계획이 생성되지 않습니다.  
-  
- \>1  
- 병렬 인덱스 작업에 사용되는 최대 프로세서 수를 지정된 값으로 제한합니다.  
-  
- 0(기본값)  
- 현재 시스템 작업에 따라 실제 프로세서 수 이하의 프로세서를 사용합니다.  
+ - 1-병렬 계획이 생성이 되지 않습니다.  
+ - \>1-지정 된 병렬 인덱스 작업에 사용 되는 프로세서의 최대 수를 제한 합니다.  
+ - 현재 시스템 작업에 따라 보다 적은 또는 0 (기본값)-실제 프로세서 수를 사용 합니다.  
   
  자세한 내용은 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
   
@@ -206,32 +201,30 @@ ms.lasthandoff: 09/01/2017
  COLUMNSTORE  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- columnstore 테이블에만 적용됩니다. COLUMNSTORE에서는 COLUMNSTORE_ARCHIVE 옵션으로 압축된 파티션을 압축 해제하도록 지정합니다. 데이터는 복구될 때 모든 columnstore 테이블에 사용된 columnstore 압축으로 계속 압축됩니다.  
+ columnstore 테이블에만 적용됩니다. COLUMNSTORE에서는 COLUMNSTORE_ARCHIVE 옵션으로 압축된 파티션을 압축 해제하도록 지정합니다. 데이터를 복원할 때 모든 columnstore 테이블에 사용 되는 columnstore 압축으로 압축 되도록 COLUMNSTORE 인덱스 계속 합니다.  
   
  COLUMNSTORE_ARCHIVE  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 클러스터형 columnstore 인덱스로 저장된 테이블인 columnstore 테이블에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보관하거나 보다 적은 저장소가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
+ 클러스터형 columnstore 인덱스로 저장된 테이블인 columnstore 테이블에만 적용됩니다. COLUMNSTORE_ARCHIVE 더 작은 크기로 지정 된 파티션을 압축합니다. 보관하거나 보다 적은 저장소가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
   
  압축에 대 한 자세한 내용은 참조 [데이터 압축](../../relational-databases/data-compression/data-compression.md)합니다.  
   
-ON PARTITIONS **(** { \<partition_number_expression > | \<범위 >} [ **,**...  *n*  ] **)** **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
+ON PARTITIONS **(** { \<partition_number_expression > | \<범위 >} [ **,**... * n * ] **)** **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
   
- DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 테이블이 분할되지 않은 경우 ON PARTITIONS 인수를 사용하면 오류가 발생합니다. ON PARTITIONS 절을 지정하지 않으면 DATA_COMPRESSION 옵션이 분할된 테이블의 모든 파티션에 적용됩니다.  
+ DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 테이블이 분할 되지 않은 경우 ON PARTITIONS 인수 오류가 발생 합니다. ON PARTITIONS 절을 제공 하지 않으면 DATA_COMPRESSION 옵션이 분할된 된 테이블의 모든 파티션에 적용 됩니다.  
   
 \<partition_number_expression > 다음과 같은 방법으로 지정할 수 있습니다.  
   
 -   파티션 번호를 지정합니다(예: ON PARTITIONS (2)).  
-  
 -   여러 개별 파티션의 파티션 번호를 쉼표로 구분하여 지정합니다(예: ON PARTITIONS (1,5)).  
-  
 -   범위와 개별 파티션을 모두 지정합니다(예: ON PARTITIONS (2,4,6 TO 8)).  
   
- \<범위 > 예를 들어, TO로 구분 된 파티션 번호로 지정할 수 있습니다: ON PARTITIONS (6 TO 8)).  
+\<범위 > 예를 들어, TO로 구분 된 파티션 번호로 지정할 수 있습니다: ON PARTITIONS (6 TO 8)).  
   
  여러 파티션에 대해 서로 다른 데이터 압축 유형을 설정하려면 DATA_COMPRESSION 옵션을 두 번 이상 지정합니다. 예를 들면 다음과 같습니다.  
   
-```  
+```sql  
 --For rowstore tables  
 REBUILD WITH   
 (  
@@ -252,20 +245,18 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  대부분의 경우 인덱스를 다시 작성하면 분할된 인덱스의 모든 파티션이 다시 작성됩니다. 다음 옵션을 단일 파티션에 적용하는 경우 일부 파티션이 다시 작성되지 않습니다.  
   
 -   SORT_IN_TEMPDB  
-  
 -   MAXDOP  
-  
 -   DATA_COMPRESSION  
   
 **low_priority_lock_wait**  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- A **스위치** 또는 온라인 인덱스 다시 작성이이 테이블에 대 한 차단 작업이 없는 경우 즉시 완료 됩니다. *WAIT_AT_LOW_PRIORITY* 경우 나타냅니다는 **스위치** 또는 대기 하는 즉시 온라인 인덱스 다시 작성 작업을 완료할 수 없습니다. 이 작업은 우선 순위가 낮은 잠금을 보류하여, DDL 문과 충돌하는 잠금을 가진 다른 작업이 계속 수행될 수 있도록 허용합니다. 생략 된 **WAIT AT LOW PRIORITY** 옵션은 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`합니다.  
+ A **스위치** 또는 온라인 인덱스 다시 작성이이 테이블에 대 한 차단 작업이 없는 경우 즉시 완료 됩니다. *WAIT_AT_LOW_PRIORITY* 경우 나타냅니다는 **스위치** 또는 온라인 인덱스 다시 작성 작업을 즉시 완료할 수 없을 때까지 대기 합니다. 작업에는 잠금을 계속 하려면는 DDL 문을 사용 하 여 충돌 하는 유지 하는 다른 작업을 허용 하는 낮은 우선 순위 잠금을 보유 합니다. 생략 된 **WAIT AT LOW PRIORITY** 옵션은 `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`합니다.  
   
 MAX_DURATION = *시간* [**분** ]  
- 대기 시간 (분 단위로 지정 된 정수 값) 하는 **스위치** 또는 온라인 인덱스 다시 작성 잠금이 획득 해야 하는 DDL 명령을 실행할 때 대기 합니다. SWITCH 또는 온라인 인덱스 다시 작성 작업은 즉시 완료하려고 시도합니다. 작업에 대 한 차단 된 경우는 **MAX_DURATION** 시간 중 하나는 **ABORT_AFTER_WAIT** 작업 실행 됩니다. **MAX_DURATION** 시간은 항상 분 단위 이며 단어 **분** 생략할 수 있습니다.  
+ 대기 시간 (분 단위로 지정 된 정수 값) 하는 **스위치** DDL 명령을 실행할 때까지 대기 하는 온라인 인덱스 다시 작성 잠금이 획득 해야 하는 또는 합니다. SWITCH 또는 온라인 인덱스 다시 작성 작업은 즉시 완료하려고 시도합니다. 작업에 대 한 차단 된 경우는 **MAX_DURATION** 시간 중 하나는 **ABORT_AFTER_WAIT** 동작이 실행 됩니다. **MAX_DURATION** 시간은 항상 분 단위 이며 단어 **분** 생략할 수 있습니다.  
   
-ABOUT_AFTER_WAIT = [**NONE** | **자체** | **블로 커가** }]  
+ABORT_AFTER_WAIT = [**NONE** | **자체** | **블로 커가** }]  
  없음  
  계속는 **스위치** 또는 온라인 인덱스 작업 (일반 우선 순위 사용) 잠금 우선 순위를 변경 하지 않고 다시 작성 합니다.  
   

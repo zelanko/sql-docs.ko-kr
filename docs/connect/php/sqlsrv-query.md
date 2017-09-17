@@ -1,0 +1,183 @@
+---
+title: sqlsrv_query | Microsoft Docs
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+apiname:
+- sqlsrv_query
+apitype: NA
+helpviewer_keywords:
+- sqlsrv_query
+- executing queries
+- API Reference, sqlsrv_query
+ms.assetid: 9fa7c4c8-4da8-4299-9893-f61815055aa3
+caps.latest.revision: 46
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: a1dbc5c20a1d9fb1210bb7729f36299ea4392ebc
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="sqlsrvquery"></a>sqlsrv_query
+[!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
+
+문을 준비하고 실행합니다.  
+  
+## <a name="syntax"></a>구문  
+  
+```  
+  
+sqlsrv_query( resource $conn, string $tsql [, array $params [, array $options]])  
+```  
+  
+#### <a name="parameters"></a>매개 변수  
+*$conn*: 준비된 문과 연결된 연결 리소스입니다.  
+  
+*$tsql*: 준비 된 문에 해당 하는 TRANSACT-SQL 식입니다.  
+  
+*$params* [선택 사항]:는 **배열** 매개 변수가 있는 쿼리 매개 변수에 해당 하는 값입니다. 배열의 각 요소는 다음 중 하나일 수 있습니다.  
+  
+-   리터럴 값입니다.  
+  
+-   PHP 변수입니다.  
+  
+-   다음 구조체를 가진 **배열** 입니다.  
+  
+    ```  
+    array($value [, $direction [, $phpType [, $sqlType]]])  
+    ```  
+  
+    배열의 각 요소에 대한 설명이 아래 표에 나와 있습니다.  
+  
+    |요소|설명|  
+    |-----------|---------------|  
+    |*$value*|리터럴 값, PHP 변수 또는 PHP by-reference 변수입니다.|  
+    |*$direction*[선택 사항]|다음 중 하나 **SQLSRV_PARAM_\* ** 매개 변수 방향을 나타내기 위해 사용 되는 상수: **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**합니다. 기본값은 **SQLSRV_PARAM_IN**합니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40; Microsoft Drivers for PHP for SQL server&#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[선택 사항]|A **SQLSRV_PHPTYPE_\* ** 반환된 된 값의 PHP 데이터 형식을 지정 하는 상수입니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40; Microsoft Drivers for PHP for SQL server&#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$sqlType*[선택 사항]|A **SQLSRV_SQLTYPE_\* ** 입력된 값의 SQL Server 데이터 형식을 지정 하는 상수입니다.<br /><br />PHP 상수에 대 한 자세한 내용은 참조 [상수 &#40; Microsoft Drivers for PHP for SQL server&#41; ](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+  
+*$options* [선택 사항]: 쿼리 속성을 설정 하는 결합형 배열입니다. 지원되는 키는 다음과 같습니다.  
+  
+|Key|지원되는 값|설명|  
+|-------|--------------------|---------------|  
+|QueryTimeout|양의 정수 값입니다.|쿼리 시간 제한(초)을 설정합니다. 기본적으로 드라이버가 결과를 무한정 기다립니다.|  
+|SendStreamParamsAtExec|**true** 또는 **false**<br /><br />기본값은 **true**입니다.|실행 시 모든 스트림 데이터를 보내려고 드라이버를 구성 합니다 (**true**), 또는 스트림 데이터를 청크로 보내도록 (**false**). 기본적으로 이 값은 **true**로 설정되어 있습니다. 자세한 내용은 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md)을 참조하세요.|  
+|스크롤 가능|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|이러한 값에 대한 자세한 내용은 [커서 유형 지정 및 행 선택](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)을 참조하세요.|  
+  
+## <a name="return-value"></a>반환 값  
+문 리소스입니다. 문을 만들 수 없거나 실행 하는 경우 **false** 반환 됩니다.  
+  
+## <a name="remarks"></a>주의  
+**sqlsrv_query** 함수는 일회성 쿼리에 적합 한 특수 한 환경이 적용 되지 않는 한 쿼리를 실행 하는 기본 선택 이어야 합니다. 이 함수는 최소한의 코드 작성으로 쿼리를 실행하기 위한 간소한 메서드를 제공합니다. **sqlsrv_query** 함수는 문 준비와 문 실행을 수행 하 고는 매개 변수가 있는 쿼리를 실행 하는 데 사용할 수 있습니다.  
+  
+자세한 내용은 [How to: Retrieve Output Parameters Using the SQLSRV Driver](../../connect/php/how-to-retrieve-output-parameters-using-the-sqlsrv-driver.md)을 참조하세요.  
+  
+## <a name="example"></a>예제  
+다음 예제에서는 단일 행이 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에 삽입됩니다. 이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+  
+> [!NOTE]  
+> 다음 예에서는 INSERT 문을 사용 하 여의 사용을 보여만 **sqlsrv_query** 개념에서는 일회성 문 실행에 대 한 TRANSACT-SQL 문에 적용 합니다.  
+  
+```  
+<?php  
+/* Connect to the local server using Windows Authentication and  
+specify the AdventureWorks database as the database in use. */  
+$serverName = "(local)";  
+$connectionInfo = array( "Database"=>"AdventureWorks");  
+$conn = sqlsrv_connect( $serverName, $connectionInfo);  
+if( $conn === false )  
+{  
+     echo "Could not connect.\n";  
+     die( print_r( sqlsrv_errors(), true));  
+}  
+  
+/* Set up the parameterized query. */  
+$tsql = "INSERT INTO Sales.SalesOrderDetail   
+        (SalesOrderID,   
+         OrderQty,   
+         ProductID,   
+         SpecialOfferID,   
+         UnitPrice,   
+         UnitPriceDiscount)  
+        VALUES   
+        (?, ?, ?, ?, ?, ?)";  
+  
+/* Set parameter values. */  
+$params = array(75123, 5, 741, 1, 818.70, 0.00);  
+  
+/* Prepare and execute the query. */  
+$stmt = sqlsrv_query( $conn, $tsql, $params);  
+if( $stmt )  
+{  
+     echo "Row successfully inserted.\n";  
+}  
+else  
+{  
+     echo "Row insertion failed.\n";  
+     die( print_r( sqlsrv_errors(), true));  
+}  
+  
+/* Free statement and connection resources. */  
+sqlsrv_free_stmt( $stmt);  
+sqlsrv_close( $conn);  
+?>  
+```  
+  
+## <a name="example"></a>예제  
+아래 예제에서는 AdventureWorks 데이터베이스의 *Sales.SalesOrderDetail* 테이블에서 필드를 업데이트합니다. 이 예제에서는 SQL Server 및 [AdventureWorks](http://go.microsoft.com/fwlink/?LinkID=67739) 데이터베이스가 로컬 컴퓨터에 설치된 것으로 가정합니다. 모든 출력은 명령줄에서 예제가 실행될 때 콘솔에 기록됩니다.  
+  
+```  
+<?php  
+/* Connect to the local server using Windows Authentication and  
+specify the AdventureWorks database as the database in use. */  
+$serverName = "(local)";  
+$connectionInfo = array("Database"=>"AdventureWorks");  
+$conn = sqlsrv_connect( $serverName, $connectionInfo);  
+if( $conn === false )  
+{  
+     echo "Could not connect.\n";  
+     die( print_r( sqlsrv_errors(), true));  
+}  
+  
+/* Set up the parameterized query. */  
+$tsql = "UPDATE Sales.SalesOrderDetail   
+         SET OrderQty = ( ?)   
+         WHERE SalesOrderDetailID = ( ?)";  
+  
+/* Assign literal parameter values. */  
+$params = array( 5, 10);  
+  
+/* Execute the query. */  
+if( sqlsrv_query( $conn, $tsql, $params))  
+{  
+      echo "Statement executed.\n";  
+}   
+else  
+{  
+      echo "Error in statement execution.\n";  
+      die( print_r( sqlsrv_errors(), true));  
+}  
+  
+/* Free connection resources. */  
+sqlsrv_close( $conn);  
+?>  
+```  
+  
+## <a name="see-also"></a>참고 항목  
+[SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
+[방법: 매개 변수가 있는 쿼리 수행](../../connect/php/how-to-perform-parameterized-queries.md)  
+[설명서의 코드 예제 정보](../../connect/php/about-code-examples-in-the-documentation.md)  
+[방법: 데이터를 스트림으로 전송](../../connect/php/how-to-send-data-as-a-stream.md)  
+[방향 매개 변수 사용](../../connect/php/using-directional-parameters.md)  
+  
+

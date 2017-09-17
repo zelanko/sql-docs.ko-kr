@@ -1,7 +1,7 @@
 ---
 title: "(나누기 EQUALS) (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 09/12/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,24 +23,22 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c75fb8bf157f1bba666df065e238993909038418
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: 796aa8801ebfff9d1bb3ef6e194eadaa907601d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="divide-equals-transact-sql"></a>(나누기 EQUALS) (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  한 숫자를 다른 숫자로 나누고 값을 연산 결과로 설정합니다. 예를 들어 변수 @x 34, 다음 equals @x = 2는 원래 값의 / @x2로 나누고 설정 @x 를 새 값 (17).  
+  한 숫자를 다른 숫자로 나누고 값을 연산 결과로 설정합니다. 예를 들어 변수 @x 34, 다음 equals `@x /= 2` 는 원래 값의 @x2로 나누고 설정 @x 를 새 값 (17).  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
 ```  
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
 expression /= expression  
 ```  
   
@@ -53,10 +51,25 @@ expression /= expression
   
 ## <a name="remarks"></a>주의  
  자세한 내용은 참조 [&#40; 나누기 &#41; &#40; Transact SQL &#41; ](../../t-sql/language-elements/divide-transact-sql.md).  
+
+## <a name="examples"></a>예  
+다음 예제에서는 17 변수를 설정 합니다. 다음 사용 하 여는 `/=` 원래 값의 절반으로 변수를 설정 하는 연산자입니다.  
+```sql  
+DECLARE @myVariable decimal(5,2);
+SET @myVariable = 17.5;
+SET @myVariable /= 2;
+SELECT @myVariable AS ResultVariable;  
+```
   
+[!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]  
+|ResultVariable | 
+|--- |
+|8.75 |
+
 ## <a name="see-also"></a>관련 항목:  
  [복합 연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [연산자 &#40; Transact SQL &#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   
   
+

@@ -1,7 +1,7 @@
 ---
 title: "CAST 및 CONVERT (Transact SQL) | Microsoft Docs"
 ms.custom: 
-ms.date: 09/07/2017
+ms.date: 09/08/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -39,8 +39,8 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: 40f0515c07d78963dd10dc8c4ff52e31e096aba8
+ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
+ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
 ms.contentlocale: ko-kr
 ms.lasthandoff: 09/08/2017
 
@@ -48,7 +48,19 @@ ms.lasthandoff: 09/08/2017
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-식을 다른 데이터 형식으로 변환합니다.
+식을 다른 데이터 형식으로 변환합니다.  
+예를 들어 다음 예제에서는 두 개의 다른 데이터 형식, 정밀도 수준이 다른으로 입력된 datatype을 변경 합니다.
+```sql  
+SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
+    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
+    CONVERT(decimal(6,4), 9.5) AS decimal;
+```  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+|원문 언어   |int    |decimal |  
+|----|----|----|  
+|9.5 |9 |9.5000 |  
+
 > [!TIP]
 > 많은 [예제](#BKMK_examples) 이 항목의 아래쪽에 있습니다.  
   
@@ -75,17 +87,13 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 대상 데이터 형식의 길이를 지정하는 선택적 정수입니다. 기본값은 30입니다.
   
 *스타일*  
-CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니다. style이 NULL이면 NULL이 반환됩니다. 범위 따라 사용자가 *data_type*합니다. 자세한 내용은 주의 섹션을 참조하세요.
+CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니다. style이 NULL이면 NULL이 반환됩니다. 범위 따라 사용자가 *data_type*합니다. 
   
 ## <a name="return-types"></a>반환 형식
 반환 *식* 변환할 *data_type*합니다.
 
-[이 항목의 끝부분에 15 예제도 이동](#BKMK_examples)
-  
-## <a name="remarks"></a>주의  
-  
 ## <a name="date-and-time-styles"></a>날짜 및 시간 스타일  
-때 *식* 날짜 또는 시간 데이터 형식, *스타일* 다음 표에 표시 된 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다. 의 인스턴스에 액세스할 때마다 SQL Server 로그인을 제공할 필요가 없습니다. 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 변환할 때 지원 되는 유일한 스타일 날짜 및 시간에 형식을 **datetimeoffset** 은 0 또는 1입니다. 다른 모든 변환 스타일은 오류 9809를 반환합니다.
+때 *식* 날짜 또는 시간 데이터 형식, *스타일* 다음 표에 표시 된 값 중 하나일 수 있습니다. 다른 값은 0으로 처리됩니다. 부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 변환할 때 지원 되는 유일한 스타일 날짜 및 시간에 형식을 **datetimeoffset** 은 0 또는 1입니다. 다른 모든 변환 스타일은 오류 9809를 반환합니다.
   
 >  [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 쿠웨이트 알고리즘을 사용하여 아랍어 스타일의 날짜 형식을 지원합니다.
@@ -182,7 +190,7 @@ CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니�
   
 ![데이터 형식 변환 표](../../t-sql/data-types/media/lrdatahd.png "데이터 형식 변환 표")
   
-간에 변환 하는 경우 **datetimeoffset** 및 문자 형식 **char**, **varchar**, **nchar**, 및 **nvarchar**  변환 된 표준 시간대 오프셋된 부분의 HH 및 MM-08 예를 들어, 두 자리는 항상: 00입니다.
+간에 변환 하는 경우 **datetimeoffset** 및 문자 형식 **char**, **varchar**, **nchar**, 및 **nvarchar ** 변환 된 표준 시간대 오프셋된 부분의 HH 및 MM-08 예를 들어, 두 자리는 항상: 00입니다.
   
 > [!NOTE]  
 >  유니코드 데이터는 항상 짝수 바이트의 수를 사용 하므로 주의 변환할 때 **이진** 또는 **varbinary** 유니코드 데이터 형식을 지원 합니다. 예를 들어 `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)` 변환은 16진수 값 41이 아니라 4100을 반환합니다.  
@@ -211,7 +219,7 @@ CAST 또는 CONVERT의 출력이 문자열이고 입력도 문자열이면 출�
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>결과 잘라내기 및 반올림
-변환 하는 경우 문자 또는 이진 식 (**char**, **nchar**, **nvarchar**, **varchar**, **이진**, 또는 **varbinary**)을 다른 데이터 형식의 식으로 데이터를 자르기 일부만 표시 또는 결과 길이가 너무 짧아 표시 하면 오류가 반환 됩니다. 으로 변환은 **char**, **varchar**, **nchar**, **nvarchar**, **이진**, 및  **varbinary** 다음 표에 있는 변환을 제외 하 고 잘립니다.
+변환 하는 경우 문자 또는 이진 식 (**char**, **nchar**, **nvarchar**, **varchar**, **이진**, 또는 **varbinary**)을 다른 데이터 형식의 식으로 데이터를 자르기 일부만 표시 또는 결과 길이가 너무 짧아 표시 하면 오류가 반환 됩니다. 으로 변환은 **char**, **varchar**, **nchar**, **nvarchar**, **이진**, 및 ** varbinary** 다음 표에 있는 변환을 제외 하 고 잘립니다.
   
 |원래 데이터 형식|변경할 데이터 형식|결과|  
 |---|---|---|
@@ -296,7 +304,7 @@ SELECT  CAST(10.6496 AS int) as trunc1,
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]숫자가 아닌 경우 오류 메시지가 반환 **char**, **nchar**, **varchar**, 또는 **nvarchar** 데이터 변환할 **int** , **float**, **숫자**, 또는 **10 진수**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]빈 문자열이 될 경우 오류도 반환 ("")으로 변환 **숫자** 또는 **10 진수**합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]숫자가 아닌 경우 오류 메시지가 반환 **char**, **nchar**, **varchar**, 또는 **nvarchar** 데이터 변환할 **int **, **float**, **숫자**, 또는 **10 진수**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]빈 문자열이 될 경우 오류도 반환 ("")으로 변환 **숫자** 또는 **10 진수**합니다.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>일부 datetime 변환은 비결 정적 됩니다.
 다음 표에서는 문자열에서 datetime으로의 변환이 비결정적인 스타일을 나열합니다.
@@ -310,7 +318,7 @@ SELECT  CAST(10.6496 AS int) as trunc1,
 <sup>1</sup> 스타일 20 및 21 제외
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자 (서로게이트 쌍)
-부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SC (보조 문자) 데이터 정렬 캐스트 연산에서 사용 하는 경우, **nchar** 또는 **nvarchar** 에 **nchar** 또는  **nvarchar** 길이가 더 짧은 형식의 서로게이트 쌍 안에서 자르지 않고; 보충 문자 앞에서 자릅니다. 예를 들어 다음 코드 조각에서는 `@x`만 보유한 `'ab'`를 남깁니다. 공간이 부족하여 보조 문자를 포함할 수 없습니다.
+부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SC (보조 문자) 데이터 정렬 캐스트 연산에서 사용 하는 경우, **nchar** 또는 **nvarchar** 에 **nchar** 또는 ** nvarchar** 길이가 더 짧은 형식의 서로게이트 쌍 안에서 자르지 않고; 보충 문자 앞에서 자릅니다. 예를 들어 다음 코드 조각에서는 `@x`만 보유한 `'ab'`를 남깁니다. 공간이 부족하여 보조 문자를 포함할 수 없습니다.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
