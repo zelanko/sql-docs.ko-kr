@@ -1,0 +1,48 @@
+---
+title: "SQL 문 처리는 | Microsoft Docs"
+ms.custom: 
+ms.date: 01/19/2017
+ms.prod: sql-non-specified
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- drivers
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- sending SQL statements to DBMS [ODBC]
+- SQL statements [ODBC], processing
+- SQL [ODBC], processing statements
+- statement processing [ODBC]
+- SQL statements [ODBC]
+- ODBC [ODBC], SQL
+ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
+caps.latest.revision: 7
+author: MightyPen
+ms.author: genemi
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
+ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
+---
+# <a name="processing-a-sql-statement"></a>SQL 문 처리
+프로그래밍 방식으로 SQL을 사용 하는 기술을 다루기 전에 SQL 문을 처리 되는 방식에 대해 설명 하는 데 필요한는 합니다. 단계는 각 기법에서는 서로 다른 시간에 수행 하지만 세 가지 기술 모두에 공통적으로 적용 합니다. 다음 그림에서는 단계와 관련 된이 섹션의 나머지 부분에서 설명 하는 SQL 문 처리 합니다.  
+  
+ ![SQL 문 처리 단계에 대해](../../odbc/reference/media/pr01.gif "pr01")  
+  
+ SQL 문, 처리 DBMS 다음 5 단계를 수행 합니다.  
+  
+1.  DBMS는 먼저 SQL 문을 구문 분석합니다. 문이를 tokens 라는 개별 단어로 분할 하 여, 문에 올바른 동사 및 유효한 절 고 되도록 합니다. 이 단계에서 구문 오류 및 맞춤법 오류를 검색할 수 있습니다.  
+  
+2.  DBMS 문의 유효성을 검사 합니다. 시스템 카탈로그에 대해 문을 확인합니다. 모든 테이블 문에서 명명 된 데이터베이스에도? 존재의 모든 열은 열 이름이 모호 합니다. 및? 문을 실행 하는 데 필요한 권한이 사용자에 게 있습니까? 이 단계에서는 특정 의미 체계 오류를 검색할 수 있습니다.  
+  
+3.  DBMS 문에 대 한 액세스 계획을 생성 합니다. 문을;를 수행 하는 데 필요한 단계의 이진 표현인 액세스 계획 실행 코드의 DBMS에 해당 하는 경우  
+  
+4.  DBMS는 액세스 계획을 최적화합니다. 액세스 계획을 수행 하는 다양 한 방법을 살펴봅니다. 검색 속도 높이기 위해 인덱스를 사용할 수 있습니까? 해야 하는 DBMS 테이블 A에 검색 조건을 적용 한 후 테이블 B에 조인 하거나 조인으로 시작 하며 나중에 검색 조건을 사용 하 여 해야? 테이블을 통해 순차적 검색 될 수 피할 수 또는 테이블의 하위 집합으로 세분화? DBMS를 대신 사용 하는 탐색 한 결과, 그 중 하나를 선택 합니다.  
+  
+5.  DBMS는 액세스 계획을 실행 하 여 문을 실행 합니다.  
+  
+ SQL 문을 처리 하는 데 사용 하는 단계는 데 걸리는 시간 및/또는 필요로 하는 데이터베이스 액세스 입력 다릅니다. SQL 문을 구문 분석 데이터베이스에 대 한 액세스 필요 하지 않으며 매우 신속 하 게 수행할 수 있습니다. 최적화는 반면에 매우 CPU를 많이 사용은 처리 하 고 시스템 카탈로그에 액세스 해야 합니다. 복잡 한 다중 테이블 쿼리를 최적화 프로그램 수천 동일한 쿼리를 수행 하는 다양 한 방법의을 탐색할 수 있습니다. 그러나 비효율적으로 쿼리 실행 비용을 최적화에 소요 된 시간 증가 된 쿼리 실행 속도가 다시 얻으면 보다 더 높은 일반적으로. 이 기능은 반복적인 쿼리를 수행 하려면 동일한 최적화 된 액세스 계획을 반복 해 사용할 수 있으면 훨씬 더 중요 합니다.
