@@ -1,5 +1,5 @@
 ---
-title: "DQS 작업에 대 한 데이터에 액세스 | Microsoft Docs"
+title: "DQS 작업을 위해 데이터 액세스 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,15 +14,15 @@ caps.latest.revision: 15
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a03861b1706667657461ecf95196fc6cb3501d2f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="access-data-for-the-dqs-operations"></a>DQS 작업을 위해 데이터 액세스
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)](DQS) 작업에 원본 데이터를 사용하고 처리된 데이터를 내보내려면 다음 중 하나를 수행할 수 있습니다.  
+  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) 작업에 원본 데이터를 사용하고 처리된 데이터를 내보내려면 다음 중 하나를 수행할 수 있습니다.  
   
 -   원본 데이터를 DQS_STAGING_DATA 데이터베이스의 테이블/뷰로 복사한 다음 이를 DQS 작업에 사용합니다. 처리된 데이터를 DQS_STAGING_DATA 데이터베이스의 새 테이블로 내보낼 수도 있습니다. 이렇게 하려면 Windows 사용자 계정에 DQS_STAGING_DATA 데이터베이스에 대한 읽기/쓰기 액세스 권한을 부여해야 합니다.  
   

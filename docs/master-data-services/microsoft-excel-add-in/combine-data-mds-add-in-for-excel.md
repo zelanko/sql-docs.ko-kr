@@ -1,5 +1,5 @@
 ---
-title: "데이터 결합 (MDS 추가 기능 Excel 용) | Microsoft Docs"
+title: "데이터 결합(Excel용 MDS 추가 기능) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 87457a33b1fd66f42baab7ea59dbaa9c2f2123df
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 8a8ee3e56e5b8ed42bca6b30192c3b14686d1240
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>데이터 결합(Excel용 MDS 추가 기능)
-  에 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]를 게시 하기 전에 데이터를 비교 하려면 두 워크시트의 데이터를 결합 합니다. 이 절차에서는 두 워크시트의 데이터를 한 워크시트에 결합합니다. 그런 다음 추가 비교를 수행하여 MDS 저장소에 게시할 데이터를 결정할 수 있습니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 두 워크시트의 데이터를 결합하여 데이터를 게시하기 전에 둘을 비교할 수 있습니다. 이 절차에서는 두 워크시트의 데이터를 한 워크시트에 결합합니다. 그런 다음 추가 비교를 수행하여 MDS 저장소에 게시할 데이터를 결정할 수 있습니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
   
@@ -48,9 +48,9 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>다음 단계  
   
--   MDS에서 관리 되 고 외부 데이터의 유사성을 찾으려면 참조 [유사한 데이터 일치 &#40; MDS에 추가 기능 Excel &#41; ](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md).  
+-   MDS 관리 데이터와 외부 데이터 간의 유사성을 찾으려면 [유사한 데이터 일치&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md)를 참조하십시오.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [개요: Excel로 데이터 내보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Excel용 MDS 추가 기능의 데이터 품질 일치](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
   

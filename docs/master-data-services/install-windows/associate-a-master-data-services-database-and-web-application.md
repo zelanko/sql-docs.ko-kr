@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 데이터베이스 연결 및 응용 프로그램 웹 | Microsoft Docs"
+title: "Master Data Services 데이터베이스와 웹 응용 프로그램 연결 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: ccb25672-f71d-4135-b548-f50eb45d8fa5
 caps.latest.revision: 9
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 729f1dab03952ff2986973ec387b10a8f14a965f
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 31a1db8384143ead4a5d8adc81a8b905129d6b4e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Master Data Services 데이터베이스와 웹 응용 프로그램 연결
@@ -26,7 +26,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="prerequisites"></a>필수 구성 요소  
   
--   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]로컬 컴퓨터에 설치 되어야 합니다. 자세한 내용은 [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
+-   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] 가 로컬 컴퓨터에 설치되어야 합니다. 자세한 내용은 [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)를 참조하세요.  
   
 -   로컬 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 웹 응용 프로그램이 있어야 합니다. 자세한 내용은 [마스터 데이터 관리자 웹 응용 프로그램 만들기&#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md)를 참조하세요.  
   
@@ -58,6 +58,6 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [Master Data Services 설치](../../master-data-services/install-windows/install-master-data-services.md)   
- [웹 구성 페이지 &#40; Master Data Services 구성 관리자 &#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+ [웹 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
   

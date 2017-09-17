@@ -1,5 +1,5 @@
 ---
-title: "비즈니스 규칙 적용 (MDS 추가 기능 Excel 용) | Microsoft Docs"
+title: "비즈니스 규칙 적용(Excel용 MDS 추가 기능) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: cd106345-f561-4966-88d3-a69139b2bd78
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7bcf554389f2e768b4d49741b00bcb829a600aa0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6e1a0df6fad77c3f43331358ae0d18ebeed0f7f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>비즈니스 규칙 적용(Excel용 MDS 추가 기능)

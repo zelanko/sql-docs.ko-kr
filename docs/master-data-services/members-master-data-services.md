@@ -1,5 +1,5 @@
 ---
-title: "멤버 (Master Data Services) | Microsoft Docs"
+title: "멤버(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/17/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - members [Master Data Services]
 ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 caps.latest.revision: 16
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: abda6e0259b924a184d9d7cf888fdf5f430a8dd6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 3161b24f55c5473829b5d0a0ea090763d1203295
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="members-master-data-services"></a>멤버(Master Data Services)
@@ -36,7 +36,7 @@ ms.lasthandoff: 08/02/2017
   
  이 예에서 테이블은 엔터티를 나타내고, 테이블의 행은 멤버를 나타내며, 테이블의 열은 특성을 나타냅니다. 각 셀은 특정 멤버의 특성 값을 나타냅니다.  
   
- ![Master Data Services 엔터티 테이블으로 표현](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시 된 Master Data Services 엔터티")  
+ ![테이블로 표시된 Master Data Services 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 Master Data Services 엔터티")  
   
 ## <a name="member-types"></a>멤버 유형  
  리프 멤버, 통합 멤버 및 컬렉션 멤버로 세 가지 멤버 유형이 있습니다.  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
   
  ![Bike 제품 엔터티 테이블](../master-data-services/media/mds-conc-entity-table-w-data.gif "Bike 제품 엔터티 테이블")  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

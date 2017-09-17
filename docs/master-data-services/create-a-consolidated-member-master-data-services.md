@@ -1,5 +1,5 @@
 ---
-title: "통합된 멤버 (Master Data Services) 만들기 | Microsoft Docs"
+title: "통합 멤버 만들기(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 04/01/2016
@@ -16,17 +16,17 @@ helpviewer_keywords:
 - consolidated members [Master Data Services], creating
 ms.assetid: 431ab2d2-5517-4372-9980-142b05427c08
 caps.latest.revision: 12
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: a50e1b7136542b4a230a461a81813e10730fba09
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a48fd41c90f01925b2cd884f33cf37bc0407d533
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="create-a-consolidated-member-master-data-services"></a>Create a Consolidated Member (Master Data Services)
+# <a name="create-a-consolidated-member-master-data-services"></a>통합 멤버 만들기(Master Data Services)
   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 명시적 계층에 대한 부모 노드가 필요한 경우 통합 멤버를 만듭니다. 대량으로 데이터를 추가하려는 경우 준비 테이블을 대신 사용합니다. 자세한 내용은 [테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md)를 참조하세요.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
@@ -59,10 +59,10 @@ ms.lasthandoff: 08/02/2017
 10. **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [명시적 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [리프 멤버 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
- [멤버 &#40; Master Data services&#41;](../master-data-services/members-master-data-services.md)   
- [명시적 계층 &#40; Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
+ [명시적 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [리프 멤버 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
+ [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)  
   
   
 

@@ -1,5 +1,5 @@
 ---
-title: "컬렉션 (Master Data Services)에 구성원을 추가 합니다. | Microsoft Docs"
+title: "컬렉션에 멤버 추가(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - collections [Master Data Services], adding members
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 56799f639b1ea5833926ee8965c60ba936c90f98
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: d345777b15d43f1edb9fcde0d6b348c892de0e00
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>컬렉션에 멤버 추가(Master Data Services)
@@ -60,6 +60,6 @@ ms.lasthandoff: 08/02/2017
 11. 필요에 따라 **가중치** 열에서 값을 클릭하여 가중치를 설정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [컬렉션 &#40; Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
+ [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
   

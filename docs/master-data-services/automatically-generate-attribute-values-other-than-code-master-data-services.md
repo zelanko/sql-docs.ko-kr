@@ -1,5 +1,5 @@
 ---
-title: "코드 (Master Data Services) 이외의 특성 값 자동 생성 | Microsoft Docs"
+title: "코드 외의 특성 값 자동 생성(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: b82f6f81-6e9c-4918-9ea9-4ab5f5d11b15
 caps.latest.revision: 5
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aa9f904e870324a51ae46e94986c3b20cd84f354
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2709d8389e92b9688e18fba0a055263fa67e33e7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>코드 외의 특성 값 자동 생성(Master Data Services)
@@ -71,13 +71,13 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [비즈니스 규칙 &#40;에 대해 특정 멤버 유효성 검사 Master Data services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
--   [비즈니스 규칙 &#40;에 대해 버전 유효성 검사 Master Data services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+-   [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [코드 자동 생성 &#40; Master Data services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
- [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)   
- [유효성 검사 &#40; Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
+ [코드 자동 생성&#40;Master Data Services&#41;](../master-data-services/automatic-code-creation-master-data-services.md)   
+ [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
+ [유효성 검사&#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
   

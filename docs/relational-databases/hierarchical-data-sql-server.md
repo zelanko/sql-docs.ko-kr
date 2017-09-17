@@ -1,7 +1,7 @@
 ---
 title: "계층적 데이터(SQL Server) | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/01/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -21,15 +21,15 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 502bbf9e763ffc8132e741a33ebe0ec4d0cad499
+ms.translationtype: HT
+ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
+ms.openlocfilehash: 6f4cd91c26935f93d99e2a23965c3c256e2e5bbd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/02/2017
 
 ---
 # <a name="hierarchical-data-sql-server"></a>계층적 데이터(SQL Server)
-  기본 제공 **hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 더 쉽게 저장하고 쿼리할 수 있습니다. **hierarchyid** 는 계층적 데이터의 가장 일반적인 유형인 트리를 표시하는 데 최적화되어 있습니다.  
+  기본 제공 **hierarchyid** 데이터 형식을 사용하면 계층적 데이터를 더 쉽게 저장하고 쿼리할 수 있습니다. **hierarchyid**는 계층적 데이터의 가장 일반적인 유형인 트리를 표시하는 데 최적화되어 있습니다.  
   
  계층적 데이터는 계층 관계를 통해 서로 관련된 데이터 항목 집합으로 정의됩니다. 계층 관계는 데이터의 한 항목이 다른 항목의 부모인 관계입니다. 데이터베이스에 일반적으로 저장되는 계층적 데이터는 다음과 같습니다.  
   
@@ -43,14 +43,14 @@ ms.lasthandoff: 06/22/2017
   
 -   웹 페이지 간 링크의 그래프  
   
- [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md) 를 데이터 형식으로 사용하여 계층 구조가 있는 테이블을 만들거나 다른 위치에 저장된 데이터의 계층 구조를 설명할 수 있습니다. [의](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 함수 [!INCLUDE[tsql](../includes/tsql-md.md)] 를 사용하면 계층적 데이터를 쿼리하고 관리할 수 있습니다.  
+ [hierarchyid](../t-sql/data-types/hierarchyid-data-type-method-reference.md)를 데이터 형식으로 사용하여 계층 구조가 있는 테이블을 만들거나 다른 위치에 저장된 데이터의 계층 구조를 설명할 수 있습니다. [의](http://msdn.microsoft.com/library/01a050f5-7580-4d5f-807c-7f11423cbb06) hierarchyid 함수 [!INCLUDE[tsql](../includes/tsql-md.md)]를 사용하면 계층적 데이터를 쿼리하고 관리할 수 있습니다.  
   
 ##  <a name="keyprops"></a> hierarchyid의 주요 속성  
  **hierarchyid** 데이터 형식의 값은 트리 계층에서의 위치를 나타냅니다. **hierarchyid** 값의 속성은 다음과 같습니다.  
   
 -   높은 압축성  
   
-     *n* 개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 저장을 위해 40비트나 5바이트로 반올림됩니다.  
+     *n*개 노드가 포함된 트리에서 노드를 나타내는 데 필요한 평균 비트 수는 평균 fanout(노드의 평균 자식 수)에 따라 달라집니다. 작은 fanout(0-7)의 경우 크기는 약 6\*logA*n* 비트입니다. 여기서 A는 평균 fanout입니다. 평균 fanout 수준이 6인 100,000명으로 구성된 조직 계층의 노드는 약 38비트를 사용합니다. 이는 저장을 위해 40비트나 5바이트로 반올림됩니다.  
   
 -   깊이 우선 순서로 비교  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 06/22/2017
   
 -   XML  
   
- **hierarchyid** 는 일반적으로 이러한 대체 방법보다 우수합니다. 그러나 대체 방법을 사용하는 것이 더 나은 상황도 있으며 아래에서는 이에 대해 설명합니다.  
+ **hierarchyid**는 일반적으로 이러한 대체 방법보다 우수합니다. 그러나 대체 방법을 사용하는 것이 더 나은 상황도 있으며 아래에서는 이에 대해 설명합니다.  
   
 ### <a name="parentchild"></a>부모/자식  
  부모/자식 방법을 사용하면 각 행에 부모에 대한 참조가 포함됩니다. 다음 테이블에서는 하나의 부모/자식 관계에서 부모 및 자식 행을 포함하는 데 사용되는 일반적인 테이블을 정의합니다.  
@@ -108,11 +108,11 @@ GO
   
  다음 경우 부모/자식이 더 우수할 수 있습니다.  
   
--   키의 크기가 중요한 경우. 노드 수가 같은 경우 **hierarchyid** 값은 정수 패밀리(**smallint**, **int**, **bigint**) 값보다 크거나 같습니다. **hierarchyid** 에서는 부모/자식 구조를 사용할 때 필요한 공통 테이블 식보다 I/O 및 CPU 복잡성의 효율이 훨씬 증가하므로 이 경우에 한해 부모/자식을 많이 사용합니다.  
+-   키의 크기가 중요한 경우. 노드 수가 같은 경우 **hierarchyid** 값은 정수 패밀리(**smallint**, **int**, **bigint**) 값보다 크거나 같습니다. **hierarchyid**에서는 부모/자식 구조를 사용할 때 필요한 공통 테이블 식보다 I/O 및 CPU 복잡성의 효율이 훨씬 증가하므로 이 경우에 한해 부모/자식을 많이 사용합니다.  
   
 -   계층의 섹션 간 쿼리를 거의 하지 않는 쿼리의 경우. 즉, 쿼리가 일반적으로 계층의 단일 지점만 다루는 경우입니다. 이러한 경우 같은 위치에 배치하는 작업이 중요하지 않습니다. 예를 들어 조직 테이블이 개별 직원에 대한 급여를 처리하는 데에만 사용되는 경우 부모/자식이 더 우수합니다.  
   
--   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 그러나 **hierarchyid** 사용 시 한 행의 위치를 변경하면 *n* 개의 행에 영향을 줍니다. 여기서 *n* 은 이동하는 하위 트리의 노드 수입니다.  
+-   리프가 아닌 하위 트리가 자주 이동하며 성능이 매우 중요한 경우. 부모/자식 표현의 경우 한 계층에서 한 행의 위치를 변경하면 단일 행에 영향을 줍니다. 그러나 **hierarchyid** 사용 시 한 행의 위치를 변경하면 *n* 개의 행에 영향을 줍니다. 여기서 *n*은 이동하는 하위 트리의 노드 수입니다.  
   
      리프가 아닌 하위 트리가 자주 이동하며 성능이 중요하지만 대부분의 이동이 잘 정의된 계층 수준에서 발생하는 경우에는 상위 수준과 하위 수준을 두 개의 계층으로 분할하십시오. 이렇게 하면 모든 트리가 상위 계층의 리프 수준으로 이동됩니다. 예를 들어 서비스에서 호스팅하는 웹 사이트 계층의 경우 사이트에는 계층으로 정렬된 많은 페이지가 있습니다. 호스팅된 사이트는 사이트 계층의 다른 위치로 이동될 수 있지만 하위 페이지는 거의 다시 정렬되지 않습니다. 이는 다음을 통해 나타낼 수 있습니다.  
   
@@ -269,7 +269,7 @@ VALUES ('/', 'Earth', 'Planet');
 ##  <a name="tasks"></a> 관련 태스크  
   
 ###  <a name="migrating"></a> 부모/자식에서 hierarchyid로 마이그레이션  
- 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 **hierarchyid** 를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예제는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
+ 대부분의 트리는 부모/자식을 사용하여 표현됩니다. 부모/자식 구조를 **hierarchyid**를 사용하는 테이블로 마이그레이션하는 가장 쉬운 방법은 임시 열이나 임시 테이블을 사용하여 계층의 각 수준에서 노드 수를 추적하는 것입니다. 부모/자식 테이블 마이그레이션의 예제는 [자습서: hierarchyid 데이터 형식 사용](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)의 1단원을 참조하세요.  
   
   
 ###  <a name="BKMK_ManagingTrees"></a> hierarchyid를 사용하여 트리 관리  
@@ -323,7 +323,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>직렬화 가능 트랜잭션 사용 예  
- **Org_BreadthFirst** 인덱스를 사용하면 **@last_child** 확인 시 범위 검색이 사용됩니다. 응용 프로그램에서 확인할 수 있는 다른 오류 상황뿐만 아니라 삽입 후의 중복 키 위반은 ID가 같은 여러 직원을 추가하려고 했음을 나타내므로 **@last_child** 를 다시 계산해야 합니다. 다음 코드에서는 직렬화 가능 트랜잭션과 너비 우선 인덱스를 사용하여 새 노드 값을 계산합니다.  
+ **Org_BreadthFirst** 인덱스를 사용하면 **@last_child** 확인 시 범위 검색이 사용됩니다. 응용 프로그램에서 확인할 수 있는 다른 오류 상황뿐만 아니라 삽입 후의 중복 키 위반은 ID가 같은 여러 직원을 추가하려고 했음을 나타내므로 **@last_child**를 다시 계산해야 합니다. 다음 코드에서는 직렬화 가능 트랜잭션과 너비 우선 인덱스를 사용하여 새 노드 값을 계산합니다.  
   
 ```  
 CREATE TABLE Org_T2  
@@ -533,3 +533,4 @@ GO
  [hierarchyid&#40;Transact-SQL&#41;](../t-sql/data-types/hierarchyid-data-type-method-reference.md)  
   
   
+

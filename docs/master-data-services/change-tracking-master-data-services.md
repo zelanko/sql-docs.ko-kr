@@ -1,5 +1,5 @@
 ---
-title: "변경 내용 추적 (Master Data Services) | Microsoft Docs"
+title: "변경 내용 추적(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - change tracking [SQL Server]
 ms.assetid: 5e879c65-0d38-454f-9a20-62a6e72c89f7
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 6851da978ab681f0236bc9737e7f628c0089abe0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 0def93a0f88d19ba894508d4a5d39de59dbd7a28
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-tracking-master-data-services"></a>변경 내용 추적(Master Data Services)
@@ -36,15 +36,15 @@ ms.lasthandoff: 08/02/2017
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|변경 내용 추적 그룹에 특성 추가|[변경 내용 추적 그룹 &#40;에 특성 추가 Master Data services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
-|특성 변경을 기반으로 하는 동작을 시작하는 비즈니스 규칙을 만듭니다.|[특성 값 변경 &#40; 기반 동작 시작 Master Data services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
+|변경 내용 추적 그룹에 특성 추가|[변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|특성 변경을 기반으로 하는 동작을 시작하는 비즈니스 규칙을 만듭니다.|[특성 값 변경 기반 동작 시작&#40;Master Data Services&#41;](../master-data-services/initiate-actions-based-on-attribute-value-changes-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   
--   [유효성 검사 &#40; Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [유효성 검사&#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [특성 &#40; Master Data services&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

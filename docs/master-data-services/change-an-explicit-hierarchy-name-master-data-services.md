@@ -1,5 +1,5 @@
 ---
-title: "명시적 계층 이름 (Master Data Services)를 변경 합니다. | Microsoft Docs"
+title: "명시적 계층 이름 변경(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/01/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - explicit hierarchies, changing name
 ms.assetid: 12991603-474e-4042-b160-b1f7979694b1
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 33418d852f5895f9cc160d80975f62137631f047
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: be3d09477f5253fea15704e42f4eba23a4ead6de
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-an-explicit-hierarchy-name-master-data-services"></a>명시적 계층 이름 변경(Master Data Services)
@@ -51,8 +51,8 @@ ms.lasthandoff: 08/02/2017
 7.  **저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [명시적 계층 &#40; Master Data services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [명시적 계층 &#40; 만들기 Master Data services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
- [명시적 계층 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
+ [명시적 계층&#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
+ [명시적 계층 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
+ [명시적 계층 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-explicit-hierarchy-master-data-services.md)  
   
   

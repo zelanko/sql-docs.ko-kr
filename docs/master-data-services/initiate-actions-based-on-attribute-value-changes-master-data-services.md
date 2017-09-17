@@ -1,5 +1,5 @@
 ---
-title: "특성 값 변경 (Master Data Services) 기반 동작 시작 | Microsoft Docs"
+title: "특성 값 변경 기반 동작 시작(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - change tracking groups [Master Data Services], initiating actions
 ms.assetid: 5e4402ce-31db-4774-a2a1-552335f87693
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: efc81991bc2cc84642740632a4f5b58515c19011
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 4745861bfded49fe43eb2b17ab1dcca596491abd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>특성 값 변경 기반 동작 시작(Master Data Services)
@@ -34,13 +34,13 @@ ms.lasthandoff: 08/02/2017
   
 -   모델 관리자여야 합니다. 자세한 내용은 [관리자&#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)를 참조하세요.  
   
--   특성이 변경 내용 추적 그룹 안에 있어야 합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) 를 참조하세요.  
+-   특성이 변경 내용 추적 그룹 안에 있어야 합니다. 자세한 내용은 [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)를 참조하세요.  
   
 ### <a name="to-create-a-business-rule-to-initiate-actions-based-on-attribute-value-changes"></a>특성 값 변경을 기반으로 하는 동작을 시작하는 비즈니스 규칙을 만들려면  
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  메뉴 모음에서 **관리** 를 가리키고 **비즈니스 규칙**을 클릭합니다.  
+2.  메뉴 모음에서 **관리**를 가리키고 **비즈니스 규칙**을 클릭합니다.  
   
 3.  **비즈니스 규칙 유지 관리** 페이지의 **모델** 목록에서 모델을 선택합니다.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 9. **구성 요소** 창에서 **조건** 노드를 확장합니다.  
   
-10. **값 비교** 노드 아래에서 **이(가) 변경된 경우** 를 **IF** 창의 **조건** 레이블로 끌어 놓습니다.  
+10. **값 비교** 노드 아래에서 **이(가) 변경된 경우**를 **IF** 창의 **조건** 레이블로 끌어 놓습니다.  
   
 11. **조건 편집** 창의 **변경 내용 추적 그룹** 상자에서 필수 구성 요소의 일부로 할당한 변경 내용 추적 그룹의 번호를 입력합니다.  
   
@@ -89,10 +89,10 @@ ms.lasthandoff: 08/02/2017
   
     -   [비즈니스 규칙에 대해 특정 멤버 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
-    -   [비즈니스 규칙 &#40;에 대해 버전 유효성 검사 Master Data services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
+    -   [비즈니스 규칙에 대해 버전 유효성 검사&#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [변경 내용 추적 그룹에 특성 추가&#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
- [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+ [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

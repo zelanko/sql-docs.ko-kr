@@ -1,5 +1,5 @@
 ---
-title: "파생된 계층 (Master Data Services)의 수준 숨기기 또는 삭제 | Microsoft Docs"
+title: "파생 계층의 수준 숨기기 또는 삭제(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - derived hierarchies, deleting levels
 ms.assetid: e00582b9-9415-4b66-b4a7-9f590d83875f
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fbaed046a052c458d228ef14d851cef572b2b6e0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: a4d70ee875bdd39ee4ff79c7ce19cad426c677b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="hide-or-delete-levels-in-a-derived-hierarchy-master-data-services"></a>파생 계층의 수준 숨기기 또는 삭제(Master Data Services)
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
   
 1.  [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에서 **시스템 관리**를 클릭합니다.  
   
-2.  메뉴 모음에서 **관리** 를 가리키고 **파생 계층**을 클릭합니다.  
+2.  메뉴 모음에서 **관리**를 가리키고 **파생 계층**을 클릭합니다.  
   
 3.  **파생 계층 유지 관리** 페이지의 **모델** 목록에서 모델을 선택합니다.  
   

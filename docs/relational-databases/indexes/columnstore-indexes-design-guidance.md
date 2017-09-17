@@ -14,17 +14,17 @@ caps.latest.revision: 16
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b60c6ab2bc24a2865d06c949a0bb5b765fdc7454
+ms.translationtype: HT
+ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
+ms.openlocfilehash: 57fa80162feb8a294733ef15ffaec86d11fcf677
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/06/2017
 
 ---
 # <a name="columnstore-indexes---design-guidance"></a>Columnstore 인덱스 디자인 지침
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-columnstore 인덱스 디자인을 위한 고급 권장 사항입니다. 적은 수의 올바른 의사 결정만으로 columnstore 인덱스에서 제공하고자 하는 높은 데이터 압축 및 쿼리 성능을 얻을 수 있습니다. 
+columnstore 인덱스 디자인을 위한 고급 권장 사항입니다. 소수의 훌륭한 디자인 결정을 통해 columnstore 인덱스에서 제공하고자 하는 높은 데이터 압축 및 쿼리 성능을 얻을 수 있습니다. 
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

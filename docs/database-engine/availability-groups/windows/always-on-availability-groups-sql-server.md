@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 519a66344458046238aa4c8ce1b901fe84bacc7f
+ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
+ms.openlocfilehash: 03997ff880842e2cb088ee5f79237a517aca9abb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 08/28/2017
 
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On 가용성 그룹(SQL Server)
@@ -89,28 +89,28 @@ ms.lasthandoff: 08/02/2017
     -   PowerShell cmdlet. 자세한 내용은 [Always On 가용성 그룹에 대한 PowerShell Cmdlet 개요&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)를 참조하세요.  
   
 ##  <a name="TermsAndDefinitions"></a> 용어 및 정의  
- 가용성 그룹  
+ **가용성 그룹**  
  함께 장애 조치(failover)되는 데이터베이스의 집합인 *가용성 데이터베이스*의 컨테이너입니다.  
   
- 가용성 데이터베이스  
+ **가용성 데이터베이스**  
  가용성 그룹에 속하는 데이터베이스입니다. 가용성 그룹은 각 가용성 데이터베이스에 대해 하나의 읽기/쓰기 복사본( *주 데이터베이스*)과 1~8개의 읽기 전용 복사본(*보조 데이터베이스*)을 유지 관리합니다.  
   
- 주 데이터베이스  
+ **주 데이터베이스**  
  가용성 데이터베이스의 읽기/쓰기 복사본입니다.  
   
- 보조 데이터베이스  
+ **보조 데이터베이스**  
  가용성 데이터베이스의 읽기 전용 복사본입니다.  
   
- 가용성 복제본  
+ **가용성 복제본**  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 특정 인스턴스에 의해 호스팅되고 가용성 그룹에 속하는 각 가용성 데이터베이스의 로컬 복사본을 유지 관리하는 가용성 그룹 인스턴스화입니다. 가용성 복제본은 하나의 *주 복제본* 과 1~8개의 *보조 복제본*이라는 두 가지 유형이 있습니다.  
   
- 주 복제본  
+ **주 복제본**  
  클라이언트에서 주 데이터베이스에 읽기/쓰기 연결을 할 수 있도록 주 데이터베이스를 설정하고 각 주 데이터베이스에 대한 트랜잭션 로그 레코드를 모든 보조 복제본에 보내는 가용성 복제본입니다.  
   
- 보조 복제본  
+ **보조 복제본**  
  각 가용성 데이터베이스의 보조 복사본을 유지 관리하고 가용성 그룹에 대한 잠재적인 장애 조치(Failover) 대상 역할을 하는 가용성 복제본입니다. 필요에 따라 보조 복제본은 보조 데이터베이스에 대한 읽기 전용 액세스와 보조 데이터베이스에 백업을 만드는 것을 지원할 수 있습니다.  
   
- 가용성 그룹 수신기  
+ **가용성 그룹 수신기**  
  Always On 가용성 그룹의 주 복제본 또는 보조 복제본에 있는 데이터베이스에 액세스하기 위해 클라이언트가 연결할 수 있는 서버 이름입니다. 가용성 그룹 수신기는 들어오는 연결을 주 복제본이나 읽기 전용 보조 복제본에 전달합니다.  
   
 > [!NOTE]  
@@ -125,7 +125,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [포함된 데이터베이스](../../../relational-databases/databases/contained-databases.md)  
   
--   [데이터베이스 암호화](../../../relational-databases/security/encryption/transparent-data-encryption-tde.md)  
+-   [데이터베이스 암호화](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
 -   [데이터베이스 스냅숏](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   

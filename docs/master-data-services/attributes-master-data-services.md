@@ -1,5 +1,5 @@
 ---
-title: "특성 (Master Data Services) | Microsoft Docs"
+title: "특성(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - attributes [Master Data Services]
 ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 caps.latest.revision: 13
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 55a658c7d4d0638c2dabf82ba910276f29178aa7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 5e34382b2252af20e0959940f2f7ac9c06bf0379
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="attributes-master-data-services"></a>특성(Master Data Services)
@@ -34,7 +34,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="how-attributes-relate-to-other-model-objects"></a>다른 모델 개체와 특성의 관계  
  특성은 엔터티 테이블의 열로 생각할 수 있습니다. 특성 값은 특정 멤버를 설명하는 데 사용되는 값입니다.  
   
- ![Master Data Services 엔터티 테이블으로 표현](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시 된 Master Data Services 엔터티")  
+ ![테이블로 표시된 Master Data Services 엔터티](../master-data-services/media/mds-conc-entity-table.gif "테이블로 표시된 Master Data Services 엔터티")  
   
  다수의 특성이 포함된 엔터티를 만들 때는 특성을 특성 그룹으로 구성할 수 있습니다. 자세한 내용은 [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)을 참조하세요.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 08/02/2017
   
  ![제품 엔터티 트리 구조](../master-data-services/media/mds-conc-entity-ui.gif "제품 엔터티 트리 구조")  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

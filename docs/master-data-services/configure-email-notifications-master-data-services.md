@@ -1,5 +1,5 @@
 ---
-title: "전자 메일 알림 (Master Data Services) 구성 | Microsoft Docs"
+title: "전자 메일 알림 구성(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/07/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - notifications [Master Data Services], configuring notifications
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 10139480120dffc47c93d36022b7c15e196a2a76
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 6d2c212964afe4048e08343324e4fb29294eda08
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="configure-email-notifications-master-data-services"></a>전자 메일 알림 구성(Master Data Services)
@@ -45,8 +45,8 @@ ms.lasthandoff: 08/02/2017
 -   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에는 알림에 영향을 주는 설정이 있습니다. 이러한 설정은 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 에서 조정하거나 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스의 시스템 설정 테이블에서 직접 조정할 수 있습니다. 자세한 내용은 [시스템 설정&#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [알림 &#40; Master Data services&#41;](../master-data-services/notifications-master-data-services.md)   
+ [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)   
  [전자 메일 알림 문제 해결(Master Data Services)](http://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-email-notifications-master-data-services.aspx)   
- [알림을 &#40; 보내도록 비즈니스 규칙 구성 Master Data services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
+ [알림을 보내도록 비즈니스 규칙 구성&#40;Master Data Services&#41;](../master-data-services/configure-business-rules-to-send-notifications-master-data-services.md)  
   
   

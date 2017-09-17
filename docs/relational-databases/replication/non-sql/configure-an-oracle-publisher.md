@@ -1,7 +1,7 @@
 ---
 title: "Oracle 게시자 구성 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,11 +16,11 @@ caps.latest.revision: 60
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2eb98196756e47a5118c8cf777a6ef5e05b950f4
+ms.translationtype: HT
+ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
+ms.openlocfilehash: c5fb2503568339307c8e63a66f7a3b25bed20cfc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/05/2017
 
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
@@ -28,12 +28,25 @@ ms.lasthandoff: 06/22/2017
   
 1.  제공된 스크립트를 사용하여 Oracle 데이터베이스 내에 복제 관리 사용자를 만듭니다.  
   
-2.  게시할 테이블에 대해서는 1단계에서 만든 Oracle 관리 사용자에게 각 테이블에 대한 SELECT 권한을 역할을 사용하지 않고 직접 부여합니다.  
+2.  게시하는 테이블에 대해서는 1단계에서 만든 Oracle 관리 사용자에게 SELECT 권한을(역할을 사용하지 않고 ) 직접 부여합니다.  
   
 3.  Oracle 클라이언트 소프트웨어와 OLE DB 공급자를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 설치한 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 중지했다가 다시 시작합니다. 배포자가 64비트 플랫폼에서 실행되는 경우 64비트 버전의 Oracle OLE DB 공급자를 사용해야 합니다.  
   
 4.  Oracle 데이터베이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 게시자로 구성합니다.  
+
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 트랜잭션 및 스냅숏 복제에 대해 다음과 같이 다른 유형의 시나리오를 지원합니다.  
   
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자로 데이터 게시  
+
+-   Oracle에서 데이터를 게시할 때 다음과 같은 제한 사항이 있습니다.  
+  | |2016 또는 이전 버전 |2017 이상 |
+  |-------|-------|--------|
+  |Oracle에서 복제 |Oracle 10g 또는 이전 버전만 지원 |Oracle 10g 또는 이전 버전만 지원 |
+  |Oracle로 복제 |Oracle 12c까지 |지원되지 않음 |
+
+ SQL Server 이외의 구독자에 대한 다른 유형의 복제는 지원되지 않습니다. Oracle 게시는 지원되지 않습니다. 데이터를 이동하려면 변경 데이터 캡처 및 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 사용하여 솔루션을 만듭니다.  
+
+
  Oracle 데이터베이스에서 복제할 수 있는 개체 목록은 [Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항](../../../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md)을 참조하세요.  
   
 > [!NOTE]  
@@ -47,7 +60,7 @@ ms.lasthandoff: 06/22/2017
   
  Oracle 복제 사용자 스키마의 설치를 도와 주는 예제 스크립트가 제공됩니다. 이 스크립트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 후 *\<드라이브>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>*\MSSQL\Install\oracleadmin.sql 디렉터리에서 사용할 수 있습니다. 이 스크립트에 대한 내용은 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)항목에도 포함되어 있습니다.  
   
- DBA 권한이 있는 계정을 사용하여 Oracle 데이터베이스에 연결하고 해당 스크립트를 실행합니다. 이 스크립트는 개체를 만들 기본 테이블스페이스(이 테이블스페이스는 이미 Oracle 데이터베이스에 있어야 함)를 비롯하여 복제 관리 사용자 스키마에 대한 사용자 이름 및 암호를 묻는 메시지를 표시합니다. 개체에 대해 다른 테이블스페이스를 지정하는 방법은 [Oracle 테이블스페이스 관리](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요. 원하는 사용자 이름과 강력한 암호를 선택한 다음 이를 기록해 둡니다. 나중에 Oracle 데이터베이스를 게시자로 구성할 때 이러한 정보를 묻는 메시지가 표시됩니다. 복제에 필요한 개체에 대해서만 스키마를 사용하는 것이 좋습니다. 이 스키마에 게시될 테이블은 만들지 마십시오.  
+ DBA 권한이 있는 계정을 사용하여 Oracle 데이터베이스에 연결하고 해당 스크립트를 실행합니다. 이 스크립트는 개체를 만들 기본 테이블스페이스(이 테이블스페이스는 이미 Oracle 데이터베이스에 있어야 함)를 비롯하여 복제 관리 사용자 스키마에 대한 사용자 이름 및 암호를 묻는 메시지를 표시합니다. 개체에 대해 다른 테이블스페이스를 지정하는 방법은 [Oracle 테이블스페이스 관리](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요. 원하는 사용자 이름과 강력한 암호를 선택한 다음 이를 기록해 둡니다. 나중에 Oracle 데이터베이스를 게시자로 구성할 때 이러한 정보를 제공해야 합니다. 복제에 필요한 개체에 대해서만 스키마를 사용하는 것이 좋습니다. 이 스키마에 게시될 테이블은 만들지 마십시오.  
   
 ### <a name="creating-the-user-schema-manually"></a>수동으로 사용자 스키마 만들기  
  복제 관리 사용자 스키마를 수동으로 만드는 경우에는 스키마에 다음 사용 권한을 직접 또는 데이터베이스 역할을 통해 부여해야 합니다.  
@@ -76,7 +89,7 @@ ms.lasthandoff: 06/22/2017
   
  클라이언트 네트워킹 소프트웨어를 설치하고 구성할 수 있는 가장 간단한 방법은 Oracle 클라이언트 디스크에 있는 Oracle Universal Installer와 Net Configuration Assistant를 사용하는 것입니다.  
   
- Oracle Universal Installer에서 다음 정보를 지정합니다.  
+ Oracle Universal Installer에서 다음 정보를 제공해야 합니다.  
   
 |정보|설명|  
 |-----------------|-----------------|  
@@ -111,7 +124,7 @@ ms.lasthandoff: 06/22/2017
   
      예: `sqlplus replication/$tr0ngPasswerd@Oracle90Server`  
   
-4.  네트워크 구성이 성공했다면 로그인하여 `SQL` 프롬프트를 볼 수 있습니다.  
+4.  네트워크 구성이 성공했다면 로그인이 성공하고 `SQL` 프롬프트가 표시됩니다.  
   
 5.  Oracle 데이터베이스 연결에 문제가 있으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 " [ssNoVersion](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하십시오.  
   
@@ -139,3 +152,4 @@ ms.lasthandoff: 06/22/2017
  [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   
   
+

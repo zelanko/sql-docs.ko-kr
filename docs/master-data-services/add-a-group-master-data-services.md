@@ -1,5 +1,5 @@
 ---
-title: "그룹 (Master Data Services) 추가 | Microsoft Docs"
+title: "그룹 추가(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - adding groups [Master Data Services]
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f333376223c44056bc8380c705a0289113bcdbd7
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 2311a84c5127336613f86c7d69d61e381e1499f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
@@ -51,7 +51,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="next-steps"></a>다음 단계  
   
--   [기능 영역 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  

@@ -1,8 +1,10 @@
 ---
-title: "저장소 옵션으로 SMB 공유를 사용하여 SQL Server 설치 | Microsoft Docs"
+title: "SMB 파일 공유 저장소를 사용하여 SQL Server 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/05/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,30 +17,30 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 1f56f9b3716e8950ceea9110f7ece301ac8c0c74
+ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
+ms.openlocfilehash: 862addca6027f4bb5b45a059d9dd65b254c9f92a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/08/2017
 
 ---
-# <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SMB 파일 공유와 함께 저장소로 SQL Server 설치 옵션
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작해서 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
+# <a name="install-sql-server-with-smb-fileshare-storage"></a>SMB 파일 공유 저장소를 사용하여 SQL Server 설치
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시작해서 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
   
 > [!NOTE]  
 >  Filestream이 현재 SMB 파일 공유에서 지원되지 않습니다.  
   
 ## <a name="installation-considerations"></a>설치 고려 사항  
   
-### <a name="smb-file-share-formats"></a>SMB 파일 공유 형식:  
+### <a name="smb-fileshare-formats"></a>SMB 파일 공유 형식:  
  SMB 파일 공유를 지정할 때 독립 실행형 및 FCI 데이터베이스에 대해 지원되는 UNC(Universal Naming Convention) 경로 형식은 다음과 같습니다.  
   
 -   \\\ServerName\ShareName\  
   
 -   \\\ServerName\ShareName  
   
- 범용 명명 규칙에 대한 자세한 내용은 [UNC](http://go.microsoft.com/fwlink/?LinkId=245534) (http://go.microsoft.com/fwlink/?LinkId=245534)를 참조하세요.  
+ 범용 명명 규칙에 대한 자세한 내용은 [UNC](http://msdn.microsoft.com/library/gg465305.aspx)를 참조하세요.  
   
- 루프백 UNC 경로(서버 이름이 localhost, 127.0.0.1또는 로컬 컴퓨터 이름인 UNC 경로)는 지원되지 않습니다. 특별한 경우이기는 하지만 같은 노드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 호스팅되는 파일 서버 클러스터를 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행도 지원되지 않습니다. 이러한 상황이 발생하지 않게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 파일 서버 클러스터를 별도의 Windows 클러스터에 만드는 것이 좋습니다.  
+ 루프백 UNC 경로(서버 이름이 localhost, 127.0.0.1또는 로컬 컴퓨터 이름인 UNC 경로)는 지원되지 않습니다. 특별한 경우이기는 하지만 같은 노드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅되는 파일 서버 클러스터를 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행도 지원되지 않습니다. 이러한 상황이 발생하지 않게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 파일 서버 클러스터를 별도의 Windows 클러스터에 만드는 것이 좋습니다.  
   
  아래 UNC 경로 형식은 지원되지 않습니다.  
   
@@ -61,17 +63,13 @@ ms.lasthandoff: 08/02/2017
   
 4.  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)  
   
-5.  [sp_attach_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md)  
-  
-6.  [sp_attach_single_file_db&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md)  
-  
 ### <a name="installation-options"></a>설치 옵션  
   
 -   설치 UI "데이터베이스 엔진 구성" 페이지의 "데이터 디렉터리" 탭에서 "데이터 루트 디렉터리" 매개 변수를 "\\\fileserver1\share1\"로 설정합니다.  
   
 -   명령 프롬프트 설치에서 "/INSTALLSQLDATADIR"을 "\\\fileserver1\share1\"로 지정합니다.  
   
-     다음은 SMB 파일 공유 옵션을 사용하여 독립 실행형 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치하는 예제 구문입니다.  
+     다음은 SMB 파일 공유 옵션을 사용하여 독립 실행형 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 예제 구문입니다.  
   
     ```  
     Setup.exe /q /ACTION=Install /FEATURES=SQL /INSTANCENAME=MSSQLSERVER /SQLSVCACCOUNT="<DomainName\UserName>" /SQLSVCPASSWORD="<StrongPassword>" /SQLSYSADMINACCOUNTS="<DomainName\UserName>" /AGTSVCACCOUNT="<DomainName\UserName>" /AGTSVCPASSWORD="<StrongPassword>" /INSTALLSQLDATADIR="\\FileServer\Share1\" /IACCEPTSQLSERVERLICENSETERMS  
@@ -85,7 +83,7 @@ ms.lasthandoff: 08/02/2017
   
      [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 다양한 명령줄 매개 변수 옵션의 사용법에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
-## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>운영 체제 고려 사항(SMB 프로토콜과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
+## <a name="operating-system-considerations-smb-protocol-vs-includessnoversionincludesssnoversion-mdmd"></a>운영 체제 고려 사항(SMB 프로토콜 대 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])  
  Windows 운영 체제마다 포함되어 있는 SMB 프로토콜 버전이 다르며 SMB 프로토콜 버전은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 투명합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 관련하여 다른 SMB 프로토콜 버전의 이점을 찾을 수 있습니다.  
   
 |운영 체제|SMB2 프로토콜 버전|이점 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
@@ -102,12 +100,12 @@ ms.lasthandoff: 08/02/2017
     > [!NOTE]  
     >  SMB 공유 폴더에 대한 FULL CONTROL 공유 권한 및 NTFS 권한은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 및 관리자 서버 역할이 할당된 Windows 사용자에게만 부여되어야 합니다.  
   
-     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용하는 경우에는 *<domain_name>***\\***<computer_name>***$** 형식으로 컴퓨터 계정에 대한 사용 권한을 부여해야 합니다.  
+     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용하는 경우에는 \<*domain_name*>\\<*computer_name*>\*$* 형식으로 컴퓨터 계정에 대한 사용 권한을 부여해야 합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 SMB 파일 공유를 저장소 옵션으로 지정하는 경우 도메인 계정을 서비스 계정으로 지정해야 합니다. SMB 파일 공유를 사용하는 경우 시스템 계정은 서비스 계정 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치로만 지정할 수 있습니다.  
     >   
-    >  가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. *<domain_name>***\\***<computer_name>***$** 형식으로 시스템 계정을 프로비전합니다.  
+    >  가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. \<*domain_name*>\\<*computer_name*>\*$* 형식으로 컴퓨터 계정을 프로비전합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정에는 클러스터를 설치하는 동안 데이터 디렉터리로 사용되는 SMB 파일 공유 폴더 또는 다른 데이터 폴더(사용자 데이터베이스 디렉터리, 사용자 데이터베이스 로그 디렉터리, TempDB 디렉터리, TempDB 로그 디렉터리, 백업 디렉터리)에 대해 FULL CONTROL NTFS 권한이 있어야 합니다.  
   

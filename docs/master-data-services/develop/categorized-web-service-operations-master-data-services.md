@@ -1,5 +1,5 @@
 ---
-title: "웹 서비스 작업 (Master Data Services) 분류 | Microsoft Docs"
+title: "범주별로 분류한 웹 서비스 작업(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/15/2017
 ms.prod: sql-server-2016
@@ -13,18 +13,18 @@ applies_to:
 - SQL Server 2016 Preview
 ms.assetid: e3f346b5-7e26-481d-9821-1846e2e91289
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5363c242248d57e23da9aae986f39825896d5162
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 783893453fecd48f129bd2936ed6e5f1b5a3bd2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="categorized-web-service-operations-master-data-services"></a>범주별로 분류한 웹 서비스 작업(Master Data Services)
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] 가 해당 사용자 인터페이스를 통해 사용하는 모든 기능을 제어하기 위한 코드를 작성할 수 있는 완전한 작업 집합이 포함되어 있습니다. 웹 서비스 작업은 <xref:Microsoft.MasterDataServices.IService> 인터페이스를 통해 정의되며 <xref:Microsoft.MasterDataServices.ServiceClient>에서 메서드로 구현됩니다. 이 항목에서는 웹 서비스 API를 사용하는 방법을 이해하는 데 도움이 되도록 웹 서비스 작업을 개념적 범주로 그룹화하였습니다.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 웹 서비스에는 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]가 해당 사용자 인터페이스를 통해 사용하는 모든 기능을 제어하기 위한 코드를 작성할 수 있는 완전한 작업 집합이 포함되어 있습니다. 웹 서비스 작업은 <xref:Microsoft.MasterDataServices.IService> 인터페이스를 통해 정의되며 <xref:Microsoft.MasterDataServices.ServiceClient>에서 메서드로 구현됩니다. 이 항목에서는 웹 서비스 API를 사용하는 방법을 이해하는 데 도움이 되도록 웹 서비스 작업을 개념적 범주로 그룹화하였습니다.  
   
 ## <a name="model-operations"></a>모델 작업  
  이러한 작업은 모델을 만들고, 업데이트하고, 삭제하는 데 사용될 뿐 아니라 모델의 모든 콘텐츠(예: 엔터티, 계층 및 버전)에 대해 작업을 수행하는 데에도 사용됩니다. 자세한 내용은 [모델&#40;Master Data Services&#41;](../../master-data-services/models-master-data-services.md)을 참조하세요.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>|  
   
 ## <a name="entity-operations"></a>엔터티 작업  
- 이러한 작업은 단일 엔터티의 멤버를 만들고, 업데이트하고, 삭제하는 데 사용됩니다. 자세한 내용은 참조 [엔터티 &#40; Master Data services&#41; ](../../master-data-services/entities-master-data-services.md) 및 [멤버 &#40; Master Data services&#41; ](../../master-data-services/members-master-data-services.md).  
+ 이러한 작업은 단일 엔터티의 멤버를 만들고, 업데이트하고, 삭제하는 데 사용됩니다. 자세한 내용은 [엔터티&#40;Master Data Services&#41;](../../master-data-services/entities-master-data-services.md) 및 [멤버&#40;Master Data Services&#41;](../../master-data-services/members-master-data-services.md)를 참조하세요.  
   
 ||  
 |-|  
@@ -61,7 +61,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.ModelMembersGet%2A>|  
   
 ## <a name="attribute-and-hierarchy-operations"></a>특성 및 계층 작업  
- 이러한 작업은 특성 및 계층 정보를 가져오는 데 사용됩니다. 특성 및 계층은 <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>와 같은 모델 작업을 사용하여 수정할 수도 있습니다. 자세한 내용은 참조 [특성 &#40; Master Data services&#41; ](../../master-data-services/attributes-master-data-services.md) 및 [계층 &#40; Master Data services&#41; ](../../master-data-services/hierarchies-master-data-services.md).  
+ 이러한 작업은 특성 및 계층 정보를 가져오는 데 사용됩니다. 특성 및 계층은 <xref:Microsoft.MasterDataServices.ServiceClient.MetadataUpdate%2A>와 같은 모델 작업을 사용하여 수정할 수도 있습니다. 자세한 내용은 [특성&#40;Master Data Services&#41;](../../master-data-services/attributes-master-data-services.md) 및 [계층&#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md)을 참조하세요.  
   
 ||  
 |-|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.BusinessRulesUpdate%2A>|  
   
 ## <a name="annotation-operations"></a>주석 작업  
- 이러한 작업은 주석을 만들고, 업데이트하고, 삭제하는 데 사용됩니다. 자세한 내용은 참조 [주석 &#40; Master Data services&#41; ](../../master-data-services/annotations-master-data-services.md).  
+ 이러한 작업은 주석을 만들고, 업데이트하고, 삭제하는 데 사용됩니다. 자세한 내용은 [주석&#40;Master Data Services&#41;](../../master-data-services/annotations-master-data-services.md)을 참조하세요.  
   
 ||  
 |-|  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/02/2017
 |<xref:Microsoft.MasterDataServices.ServiceClient.TransactionsReverse%2A>|  
   
 ## <a name="version-and-validation-operations"></a>버전 및 유효성 검사 작업  
- 이러한 작업은 버전을 복사하고 그 유효성을 검사하는 데 사용됩니다. 자세한 내용은 참조 [버전 &#40; Master Data services&#41; ](../../master-data-services/versions-master-data-services.md) 및 [유효성 검사 &#40; Master Data services&#41; ](../../master-data-services/validation-master-data-services.md).  
+ 이러한 작업은 버전을 복사하고 그 유효성을 검사하는 데 사용됩니다. 자세한 내용은 [버전&#40;Master Data Services&#41;](../../master-data-services/versions-master-data-services.md) 및 [유효성 검사&#40;Master Data Services&#41;](../../master-data-services/validation-master-data-services.md)를 참조하세요.  
   
 ||  
 |-|  

@@ -1,5 +1,5 @@
 ---
-title: "특성 그룹 이름 (Master Data Services)를 변경 합니다. | Microsoft Docs"
+title: "특성 그룹 이름 변경(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - attribute groups [Master Data Services], changing name
 ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e02e78cf3c099b69127e57294e45de198711e126
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 88431942f7ec31b7e358c3320b76c9d8a5dea6eb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>특성 그룹 이름 변경(Master Data Services)
@@ -53,8 +53,8 @@ ms.lasthandoff: 08/02/2017
 8.  **그룹 저장**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [특성 그룹 &#40; Master Data services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [특성 그룹 &#40; 만들기 Master Data services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
- [특성 그룹 &#40; 삭제 Master Data services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  
+ [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [특성 그룹 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
+ [특성 그룹 삭제&#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

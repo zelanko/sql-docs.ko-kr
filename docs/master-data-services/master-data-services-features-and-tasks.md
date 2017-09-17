@@ -1,5 +1,5 @@
 ---
-title: "Master Data Services 기능 및 태스크 | Microsoft Docs"
+title: "Master Data Services 기능 및 태스크 | Microsoft 문서"
 ms.custom: 
 ms.date: 04/01/2016
 ms.prod: sql-server-2016
@@ -11,14 +11,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 19519697-c219-44a8-9339-ee1b02545445
 caps.latest.revision: 8
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fdf3bd232ff92759bee00d20ed26879d700ed59b
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: afc9e1fc978556d7a454319cdfc661115f373925
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="master-data-services-features-and-tasks"></a>Master Data Services 기능 및 태스크
@@ -30,35 +30,35 @@ ms.lasthandoff: 08/02/2017
   
 -   [엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
--   [특성 &#40; Master Data services&#41;](../master-data-services/attributes-master-data-services.md)  
+-   [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
--   [도메인 기반 특성 &#40; Master Data services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [특성 그룹 &#40; Master Data services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
+-   [특성 그룹&#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
   
 ## <a name="maintain-master-data"></a>마스터 데이터 유지 관리  
   
--   [Master Data Services 추가 기능을 for Microsoft Excel](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
+-   [Microsoft Excel용 Master Data Services 추가 기능](../master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md)  
   
--   [멤버 &#40; Master Data services&#41;](../master-data-services/members-master-data-services.md)  
+-   [멤버&#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
 -   [트랜잭션&#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   
--   [주석 &#40; Master Data services&#41;](../master-data-services/annotations-master-data-services.md)  
+-   [주석&#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)  
   
--   [계층 &#40; Master Data services&#41;](../master-data-services/hierarchies-master-data-services.md)  
+-   [계층&#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)  
   
--   [컬렉션 &#40; Master Data services&#41;](../master-data-services/collections-master-data-services.md)  
+-   [컬렉션&#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
 ## <a name="improve-data-quality"></a>데이터 품질 향상  
   
--   [비즈니스 규칙 &#40; Master Data services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [비즈니스 규칙&#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
   
--   [유효성 검사 &#40; Master Data services&#41;](../master-data-services/validation-master-data-services.md)  
+-   [유효성 검사&#40;Master Data Services&#41;](../master-data-services/validation-master-data-services.md)  
   
--   [버전 &#40; Master Data services&#41;](../master-data-services/versions-master-data-services.md)  
+-   [버전&#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
--   [알림 &#40; Master Data services&#41;](../master-data-services/notifications-master-data-services.md)  
+-   [알림&#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
 -   [보안&#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   

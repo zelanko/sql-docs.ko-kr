@@ -1,5 +1,5 @@
 ---
-title: "기능 영역 권한 (Master Data Services) | Microsoft Docs"
+title: "기능 영역 권한(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], functional areas
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: e0ad6fd33d69b9b6e3b76dcf1d2c18da528083d5
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 34aa40c2c999709c871fe7b1e283c5d6e30ab1b4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="functional-area-permissions-master-data-services"></a>기능 영역 권한(Master Data Services)
@@ -50,9 +50,9 @@ ms.lasthandoff: 08/02/2017
  사용자 또는 그룹은 **모델** 탭에 있는 하나의 모델과 하나 이상의 기능 영역에 대한 사용 권한이 있어야 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]에 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [기능 영역 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
- [모델 개체 사용 권한 &#40; Master Data services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [계층 멤버 권한 &#40; Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [사용 권한이 결정 되는 방법 &#40; Master Data services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [기능 영역 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)   
+ [모델 개체 권한&#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [사용 권한이 결정되는 방식&#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

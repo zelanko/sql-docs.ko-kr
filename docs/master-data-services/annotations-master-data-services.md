@@ -1,5 +1,5 @@
 ---
-title: "주석 (Master Data Services) | Microsoft Docs"
+title: "주석(Master Data Services) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - annotations [Master Data Services], about annotations
 ms.assetid: 8c6401ef-17f0-41f5-be7a-01f49141f04c
 caps.latest.revision: 7
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 5fef31971a6c710f0e19ffe7fe5c92711c07f2c6
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 7d522bdb8562c6cf480e5c3ca63edb86f401e0be
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="annotations-master-data-services"></a>주석(Master Data Services)
@@ -39,7 +39,7 @@ ms.lasthandoff: 08/02/2017
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
-|트랜잭션에 주석을 추가합니다.|[Transaction&#40; 주석 달기 Master Data services&#41;](../master-data-services/annotate-a-transaction-master-data-services.md)|  
+|트랜잭션에 주석을 추가합니다.|[트랜잭션에 주석 추가&#40;Master Data Services&#41;](../master-data-services/annotate-a-transaction-master-data-services.md)|  
   
 ## <a name="related-content"></a>관련 내용  
   

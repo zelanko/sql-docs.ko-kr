@@ -1,5 +1,5 @@
 ---
-title: "(MDS 추가 기능에 Excel 용)을 내보내기 전에 데이터를 필터링 합니다. | Microsoft Docs"
+title: "내보내기 전 데이터 필터링(Excel용 MDS 추가 기능) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -11,25 +11,25 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: 9e30eae0-776b-4a09-aac3-0c0249d92ca5
 caps.latest.revision: 10
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d3bc2b1200364c76321c127823c0b9a6161fe4d0
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 13a0720defc0a9e837f771a73f44bca343773ce1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/07/2017
 
 ---
-# <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>(MDS 추가 기능에 Excel 용)을 내보내기 전에 데이터 필터링
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], 크기 또는 Excel로 내보내는 데이터의 범위를 제한 하려는 경우 데이터를 필터링 합니다.  
+# <a name="filter-data-before-exporting-mds-add-in-for-excel"></a>내보내기 전 데이터 필터링(Excel용 MDS 추가 기능)
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서는 Excel에 내보내려는 데이터의 크기 또는 범위를 제한하려는 경우에 데이터를 필터링합니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  이 절차를 수행하려면  
   
 -   **탐색기** 기능 영역에 액세스할 수 있는 권한이 있어야 합니다.  
   
-### <a name="to-filter-data-before-exporting"></a>내보내기 전에 데이터를 필터링 하려면  
+### <a name="to-filter-data-before-exporting"></a>내보내기 전에 데이터를 필터링하려면  
   
 1.  Excel을 열고 **마스터 데이터** 탭에서 MDS 저장소에 연결합니다. 자세한 내용은 [MDS 리포지토리에 연결&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/connect-to-an-mds-repository-mds-add-in-for-excel.md)을 참조하세요.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  리본 메뉴의 **연결 및 로드** 그룹에서 **필터**를 클릭합니다.  
   
-5.  표시할 특성(열)을 선택하여 **필터** 대화 상자를 완료하여 열 순서를 설정하고 필요한 경우 더 적은 행이 반환되도록 데이터를 필터링합니다. **요약** 창에서 반환된 데이터의 양을 확인합니다. 자세한 내용은 참조 [필터 대화 상자 &#40; MDS에 추가 기능 Excel &#41; ](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md).  
+5.  표시할 특성(열)을 선택하여 **필터** 대화 상자를 완료하여 열 순서를 설정하고 필요한 경우 더 적은 행이 반환되도록 데이터를 필터링합니다. **요약** 창에서 반환된 데이터의 양을 확인합니다. 자세한 내용은 [필터 대화 상자&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)를 참조하세요.  
   
 6.  **데이터 로드**를 클릭합니다. 시트에 MDS 관리 데이터가 채워집니다.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/02/2017
   
 ## <a name="see-also"></a>참고 항목  
  [개요: Excel로 데이터 내보내기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [필터 대화 상자 &#40; MDS에 추가 기능 Excel &#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
+ [필터 대화 상자&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/filter-dialog-box-mds-add-in-for-excel.md)   
  [열 순서 바꾸기&#40;Excel용 MDS 추가 기능&#41;](../../master-data-services/microsoft-excel-add-in/reorder-columns-mds-add-in-for-excel.md)  
   
   
