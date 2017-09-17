@@ -65,7 +65,7 @@ ms.lasthandoff: 08/19/2017
  [!INCLUDE[ssIS](../../../includes/ssis-md.md)] 디자이너에서 스크립트 구성 요소에는 두 가지 모드인 메타데이터 디자인 모드와 코드 디자인 모드가 있습니다. 메타데이터 디자인 모드에서는 스크립트 구성 요소 입력 및 출력을 추가하고 수정할 수 있지만 코드를 작성할 수는 없습니다. 따라서 입력과 출력이 구성된 다음에는 스크립트를 작성하기 위해 코드 디자인 모드로 전환해야 합니다. 스크립트 구성 요소는 입력 및 출력의 메타데이터로부터 기본 코드를 자동으로 생성합니다. 스크립트 구성 요소가 기본 코드를 생성한 다음 메타데이터를 변경하면 업데이트된 기본 코드가 사용자의 코드와 호환되지 않기 때문에 사용자의 코드가 더 이상 컴파일되지 않을 수 있습니다.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>구성 요소에서 사용하는 스크립트 작성  
- 스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) as the environment in which you write the scripts. VSTA는 **스크립트 변환 편집기**를 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)을 참조하세요.  
+ 스크립트 구성 요소는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications)를 스크립트 작성 환경으로 사용합니다. VSTA는 **스크립트 변환 편집기**를 통해 액세스할 수 있습니다. 자세한 내용은 [스크립트 변환 편집기&#40;스크립트 페이지&#41;](../../../integration-services/data-flow/transformations/script-transformation-editor-script-page.md)을 참조하세요.  
   
  스크립트 구성 요소는 구성 요소 메타데이터를 나타내는 ScriptMain이라는 자동 생성된 클래스가 포함된 VSTA 프로젝트를 제공합니다. 예를 들어 스크립트 구성 요소가 3개의 출력이 있는 변환으로 사용되는 경우 ScriptMain에는 각 출력에 대한 메서드가 포함됩니다. ScriptMain은 스크립트에 대한 진입점입니다.  
   
