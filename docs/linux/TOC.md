@@ -19,6 +19,7 @@
 ### [SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 ### [Azure에서 SQL VM 프로비전](sql-server-linux-azure-virtual-machine.md)
+### [GA 리포지토리 등록](sql-server-linux-change-repo.md)
 
 ## 구성
 ### [mssql-conf를 사용하여 구성](sql-server-linux-configure-mssql-conf.md)
