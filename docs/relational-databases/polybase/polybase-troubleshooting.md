@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 4941d8eb846e9d47b008447fe0e346d43de5d87f
-ms.openlocfilehash: ec61aa036b77b827ac021b56066e8047bd74c44a
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/30/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 문제 해결
@@ -229,7 +229,6 @@ ms.lasthandoff: 08/30/2017
  - SQL Server 또는 Azure SQL Data Warehouse에서 ORC 파일 형식으로 데이터를 내보낼 때 텍스트가 많은 열은 java 메모리 부족 오류로 인해 50개 이내로 제한될 수 있습니다. 이 문제를 해결하려면 열의 하위 집합만 내보냅니다.
  - Hadoop에서 암호화된 미사용 데이터를 읽거나 쓸 수 없습니다. 여기에는 HDFS 암호화 영역 또는 투명 암호화가 포함됩니다.
  - KNOX가 활성화되어 있으면 PolyBase가 Hortonworks 인스턴스에 연결할 수 없습니다. 
- - hadoop.RPC.Protection 설정이 "authenticate" 이외의 값으로 설정되면 PolyBase가 Hadoop 인스턴스에 연결할 수 없습니다.
 
 [PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: df7853f5a49a4c3b2bab4f5573cd9559e55c8b44
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
@@ -28,7 +28,7 @@ Server Core 설치에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
   
 Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 환경을 제공합니다. 이렇게 하면 유지 관리 및 관리 요구 사항이 줄어들고 이러한 서버 역할에 대한 공격 노출 영역이 감소합니다. Server Core에 대한 자세한 내용은 [Server Core 설치](http://docs.microsoft.com/windows-server/get-started/getting-started-with-server-core)를 참조하세요. [!INCLUDE[win8srv](../../includes/win8srv-md.md)]에서 구현되는 Server Core에 대한 자세한 내용은 [Server Core for Windows Server 2012](http://msdn.microsoft.com/library/hh846323\(VS.85\).aspx) (http://msdn.microsoft.com/library/hh846323(VS.85).aspx)를 참조하세요.  
   
- 현재 지원되는 운영 체제 목록은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](https://docs.microsoft.com/en-us/sql/sql-server/install/hardware-and-software-requirements-for-installing-sql-server)을 참조하세요.
+ 현재 지원되는 운영 체제 목록은 [SQL Server 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>필수 구성 요소  
   
@@ -76,10 +76,10 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 |Windows  버전|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
 ## <a name="upgrade"></a>업그레이드 
- Server Core 설치 시 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]로 업그레이드는 지원됩니다.  
+ Server Core 설치 시 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 로 업그레이드는 지원됩니다.  
   
 ## <a name="install"></a>Install  
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]는 Server  Core  운영 체제의 설치 마법사를 사용하는 설치를 지원하지 않습니다. Server Core에 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. 자세한 내용은 명령 프롬프트에서 [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 는 Server  Core  운영 체제의 설치 마법사를 사용하는 설치를 지원하지 않습니다. Server Core에 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. 자세한 내용은 명령 프롬프트에서 [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
  소프트웨어 사용이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 볼륨 라이선스 계약 또는 공급 업체와의 ISV  또는 OEM  계약과 같은 별도의 계약에 의해 관리되지 않는 한 설치 방법에 상관없이 개인 또는 업체 대표로서 소프트웨어 사용 조건에 대한 동의를 확인해야 합니다.  
   
@@ -115,7 +115,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 
   
 ### <a name="installation-options"></a>설치 옵션  
- 설치 프로그램에서는 Server  Core  운영 체제에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]를 설치할 때 다음과 같은 설치 옵션이 지원됩니다.  
+ 설치 프로그램에서는 Server  Core  운영 체제에 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 설치할 때 다음과 같은 설치 옵션이 지원됩니다.  
   
 1.  **명령줄에서 설치**  
   
@@ -294,7 +294,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
   
 2.  **응용 프로그램** 탭에서 **새 작업**을 클릭합니다.  
   
-3.  **새 작업 만들기** 대화 상자에서 **열기** 필드에 **sqlps.exe**를 입력하고 **확인**을 클릭합니다. 이렇게 하면 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창이 열립니다.  
+3.  **새 작업 만들기** 대화 상자에서 **열기** 필드에 **sqlps.exe** 를 입력하고 **확인**을 클릭합니다. 이렇게 하면 **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창이 열립니다.  
   
 4.  **Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Powershell** 창에서 다음 스크립트를 실행하여 TCP/IP 프로토콜을 사용하도록 설정합니다.  
   
@@ -327,7 +327,7 @@ Setup.exe /Q /Action=Uninstall /FEATURES=SQLEngine,AS,IS /INSTANCENAME=MSSQLSERV
  
 1.  Ctrl+Shift+Esc를 눌러 작업 관리자를 표시합니다.  
 2.  **응용 프로그램** 탭에서 **새 작업**을 클릭합니다.  
-3.  **새 태스크 만들기** 대화 상자에서 **열기** 필드에 **cmd**를 입력한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
+3.  **새 태스크 만들기** 대화 상자에서 **열기** 필드에 **cmd** 를 입력한 다음 [!INCLUDE[clickOK](../../includes/clickok-md.md)].  
   
 ## <a name="see-also"></a>참고 항목  
  [구성 파일을 사용하여 SQL Server 설치](../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md)   
