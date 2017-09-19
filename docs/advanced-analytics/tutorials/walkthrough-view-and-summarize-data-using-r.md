@@ -2,7 +2,7 @@
 title: "보기 및 R (연습)를 사용 하 여 데이터를 요약 합니다. | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/08/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -190,7 +190,7 @@ Microsoft R에서는 *데이터 소스* 는 RevoScaleR 함수를 사용 하 여 
     **결과**
 
     ```
-    rxSummary(formula = ~fare_amount:F(passenger_count), data = inDataSource)
+    rxSummary(formula = ~fare_amount:F(passenger_count, 1,6), data = inDataSource)
     Data: inDataSource (RxSqlServerData Data Source)
     Number of valid observations: 1000
     Name  Mean    StdDev   Min Max ValidObs MissingObs
