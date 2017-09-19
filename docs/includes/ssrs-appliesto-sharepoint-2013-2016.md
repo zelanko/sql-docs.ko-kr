@@ -1,1 +1,1 @@
-![예](media/yes.png)SharePoint 통합 모드
+![예](media/yes.png)SharePoint

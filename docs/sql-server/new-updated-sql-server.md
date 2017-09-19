@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: sql-server
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: d61aed44a16e78107c36ed4f7b1be387043b6746
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>새로 추가되었거나 최근에 업데이트됨: SQL Server 문서
@@ -34,7 +34,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:* &nbsp; **2017-05-23** &nbsp; ~ &nbsp; **2017-07-17**
+- *업데이트 날짜 범위:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *주제 영역:* &nbsp; **SQL Server**
 
 
@@ -47,19 +47,13 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [버전 및 SQL Server 2017 의 지원 되는 기능](editions-and-components-of-sql-server-2017.md)
-2. [SQL Server를 구성하여 Microsoft에 피드백 보내기](sql-server-customer-feedback.md)
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
-
-이 간결한 목록에는 발췌 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
+1. [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+2. [SQL Server 2012 릴리스 정보](sql-server-2012-release-notes.md)
+3. [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
+4. [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
+5. [SQL Server 2012 SP3 릴리스 정보](sql-server-2012-sp3-release-notes.md)
+6. [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
+7. [SQL Server용 도움말 뷰어 및 오프라인 콘텐츠](sql-server-help-installation.md)
 
 
 
@@ -75,48 +69,17 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-&nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-customer-experience-improvement-program-for-sql-server-data-toolscustomer-experience-improvement-program-for-sql-server-data-toolsmd"></a>1. &nbsp; [SQL Server Data Tools에 대한 사용자 환경 개선 프로그램](customer-experience-improvement-program-for-sql-server-data-tools.md)
-
-*업데이트됨: 2017-06-14* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
-
-<!-- Source markdown line 25.  ms.author= "sstein".  -->
 
 &nbsp;
 
+<a name="compactupdatedlist"/>
 
-<!-- git diff --ignore-all-space --unified=0 e35a35aaa3c8ee8a4419b6318ebff9db027aa73d 16a623cf0ab4c9e6d7a17f4617804432c863ac86  (PR=2038  ,  Filename=customer-experience-improvement-program-for-sql-server-data-tools.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=be884b2d1b316506592f939167c5be91ddc2a9f6) -->
+## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
 
+이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-
- 사용자 환경 개선 프로그램은 Microsoft가 시간에 따라 제품을 개선하는 데 도움이 되도록 설계된 프로그램입니다. 이 프로그램은 컴퓨터 하드웨어에 대한 정보는 물론, 컴퓨터 작업 수행 시 사용자를 방해하지 않고 사용자의 제품 사용 방식을 수집합니다. 수집된 정보를 통해 Microsoft는 개선할 기능을 식별할 수 있습니다. 이 문서에서는 Visual Studio 2017, Visual Studio 2015 및 Visual Studio 2013에 대한 SQL Server Data Tools(SSDT)의 CEIP에 참여 또는 참여 거부하는 방법을 다룰 것입니다.  
-
-**Visual Studio 2017용 SQL Server Data Tools와 CEIP에 대한 선택과 제어**
-
- Visual Studio 2017용 SSDT는 SQL Server 2017과 함께 제공되는 데이터 모델링 도구로서, Visual Studio 2017에 내장되어 있는 CEIP 옵션을 사용합니다. 이 [Visual Studio 도움말 문서](https://www.visualstudio.com/en-us/docs/work/connect/give-feedback)에서 Visual Studio 2017의 CEIP를 통해 사용자 의견을 제출하는 방법에 대해 알 수 있습니다.  
-  
- SQL Server 2017 미리 보기 버전의 경우 CEIP가 기본적으로 사용 설정되어 있습니다. 아래 지침에 따라 사용 해제하거나 다시 설정할 수 있습니다.  
-  
- **Visual Studio(Visual Studio 2017의 전체 언어 설치에 해당)**  
-  
- 이미 Visual Studio가 있는 컴퓨터에서 SSDT 설치를 실행할 경우 SQL Server 및 비즈니스 인텔리전스 프로젝트 템플릿만 추가됩니다. 이 시나리오에서는 Visual Studio에서 제공하는 사용자 의견 옵션을 사용하여 CEIP에 참여 또는 참여하지 않을 수 있습니다.  
-  
-1.  Visual Studio를 시작합니다.  
-  
-2.  도움말 메뉴에서 **사용자 의견 보내기** > **설정**을 선택합니다.  
-  
-3.  CEIP를 해제하려면 **아니요, 참여하지 않습니다.**를 클릭한 후 **확인**을 클릭합니다.  
-  
-     CEIP를 설정하려면 **예, 참여하겠습니다.**를 클릭한 후 **확인**을 클릭합니다.  
-  
-
-  
- **레지스트리 기반 정책 또는 그룹 정책 사용**  
+1. [SQL Server 2016의 새로운 기능](#TitleNum_1)
 
 
 
@@ -125,85 +88,83 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 &nbsp;
 
----
+<a name="TitleNum_1"/>
 
-<a name="TitleNum_2"/>
+### <a name="1-nbsp-whats-new-in-sql-server-2016what-s-new-in-sql-server-2016md"></a>1. &nbsp;[SQL Server 2016의 새로운 기능](what-s-new-in-sql-server-2016.md)
 
-### <a name="2-nbsp-editions-and-supported-features-of-sql-server-2016editions-and-components-of-sql-server-2016md"></a>2. &nbsp; [SQL Server 2016의 버전 및 지원하는 기능](editions-and-components-of-sql-server-2016.md)
+*업데이트됨: 2017-09-08* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-*업데이트됨: 2017-06-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([이전](#TitleNum_1))
-
-<!-- Source markdown line 113.  ms.author= "mikeray".  -->
+<!-- Source markdown line 34.  ms.author= "craigg".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 471ad35ebf1898470033d43c7bd43cbac5ddfece 7814e4d7428907161a9a2567280fb9fe20d5f273  (PR=2064  ,  Filename=editions-and-components-of-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=727d9ccd8cd1e40d89cfe74291edae92988b407c) -->
+<!-- git diff --ignore-all-space --unified=0 e5bc0c05f120289f09a535400a4d521e4113ae55 0607d0a9af1c9a8dd9d3d7b0606895ff23bbffdc  (PR=0  ,  Filename=what-s-new-in-sql-server-2016.md  ,  Dirpath=docs\sql-server\  ,  MergeCommitSha40=b97cc9723d563b19c85661f5ad7049a96fc904ff) -->
 
 
 
-**Developer 및 Evaluation Edition**  
-Developer 및 Evaluation Edition에서 지원하는 기능의 경우 아래 표에서 SQL Server Enterprise Edition에 대해 나열된 기능을 참조하세요.
-[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1용 Developer Edition에 추가된 기능 목록은 [SQL Server 2016 SP1 버전](https://aka.ms/uw6cw4)을 참조하세요.  
+- **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
+- 최신 버전의 [SQL Server Management Studio(SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)를 다운로드하세요.
+- Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 컴퓨터](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)를 실행해 보세요.
 
-Developer Edition은 [SQL Server Distributed Replay--../tools/distributed-replay/sql-server-distributed-replay.md)]에 대해 클라이언트 1개만 계속 지원합니다. 
-  
-**<a name="Cross-BoxScaleLimits"></a> 확장 한도**
+**SQL Server 2016 데이터베이스 엔진**
 
-  
-|기능|Enterprise|Standard|Web|Express with Advanced Services|Express| 
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|단일 인스턴스에서 사용되는 최대 계산 용량 - [!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]<sup>1</sup>|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨| 
-|단일 인스턴스에서 사용되는 최대 계산 용량 - [!INCLUDE[ssASnoversion--../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssRSnoversion--../includes/ssrsnoversion-md.md)]|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 24개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
-|[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)] 인스턴스당 버퍼 풀에 대한 최대 메모리|운영 체제가 지원하는 최대 크기|128GB|64GB|1410MB|1410MB|
-|[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)] 인스턴스당 Columnstore 세그먼트 캐시에 대한 최대 메모리|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
-|[!INCLUDE[ssDEnoversion--../includes/ssdenoversion-md.md)]의 데이터베이스당 메모리 액세스에 최적화된 최대 데이터 크기|무제한 메모리| 32GB<sup>2</sup>| 16GB<sup>2</sup>| 352MB<sup>2</sup>| 352MB<sup>2</sup>|  
+- 이제 SQL Server 설치 및 설정 중에 **여러 tempDB** 데이터베이스 파일을 구성할 수 있습니다.
+- 새 **쿼리 저장소**는 쿼리 텍스트, 실행 계획 및 성능 메트릭을 데이터베이스 내에 저장하여 성능 문제를 쉽게 모니터링하고 문제를 해결할 수 있습니다. 대시보드는 시간, 메모리 또는 CPU 리소스를 가장 많이 사용한 쿼리를 표시합니다.
+- **Temporal 테이블**은 발생한 시간과 날짜와 함께 완료하여 모든 데이터 변경 내용을 기록하는 기록 테이블입니다.
+- SQL Server의 새 기본 제공 **JSON 지원**은 가져오기, 내보내기, 구문 분석 및 저장을 지원합니다.
+- 새 **PolyBase** 쿼리 엔진은 Hadoop 또는 Azure Blob Storage에 외부 데이터와 SQL Server를 통합합니다. 데이터를 가져오거나 내보낼 뿐 아니라 쿼리를 실행할 수 있습니다.
+- 새 **Stretch Database** 기능을 사용하면 로컬 SQL Server 데이터베이스에서 클라우드의 Azure SQL Database까지, 데이터를 안전하고 동적으로 보관할 수 있습니다. SQL Server는 연결된 데이터베이스의 로컬 및 원격 데이터를 모두 자동으로 쿼리합니다.
+- **메모리 내 OLTP:**
+    - 이제 FOREIGN KEY, UNIQUE 및 CHECK 제약 조건, 네이티브 컴파일 저장 프로시저 OR, NOT, SELECT DISTINCT, OUTER JOIN 및 SELECT의 하위 쿼리를 지원합니다.
+    - 최대 2TB 테이블을 지원합니다(256GB부터).
+    - 정렬 및 Always On 가용성 그룹 지원을 위한 향상된 열 저장 인덱스가 있습니다.
+- 새 보안 기능:
+    - **Always Encrypted:** 이 기능을 사용하면 암호화 키가 있는 응용 프로그램에서만 SQL Server 2016 데이터베이스의 암호화된 중요 데이터를 액세스할 수 있습니다. 이 키는 SQL Server에 전달되지 않습니다.
 
 
 
 
 
-<a name="similars2"/>
 
-&nbsp;
 
 ## <a name="similar-articles"></a>유사한 문서
 
-이 섹션에는 동일한 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(4+4) : **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(13+2): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
-- [새로 추가되었거나 업데이트됨(8+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(2+2): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(1+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
-
+- [새로 추가되었거나 업데이트됨(3+12): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(5+0): **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(5+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(19+82): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(1+8): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(12+1): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(7+1): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(1+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(0+2): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
+- [새로 추가되었거나 업데이트됨(1+4): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(4+1): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 
