@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/31/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,13 +15,14 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: 0e254f84039defcc4a1e56cd966e8607efc92503
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
+
 SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 최신 SQL Server 2017 릴리스 후보(RC2, 2017년 월) 및 CTP(커뮤니티 기술 미리 보기) 릴리스의 특정 기능 영역에 대한 새로운 기능을 요약합니다.
 
 [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [최신 SQL Server 2017 릴리스 다운로드: RC2, 2017년 8월](http://go.microsoft.com/fwlink/?LinkID=829477)
@@ -29,7 +30,8 @@ SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨�
 
 >**Linux에서 SQL Server 실행!** 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)을 참조하세요.
 
-## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 데이터베이스 엔진  
+## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 데이터베이스 엔진
+
 SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 개선 및 성능 개선 사항을 포함하고 있습니다. 
 - CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 **CLR 어셈블리**를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다(RC1).  
 - **다시 시작 가능한 온라인 인덱스 다시 작성**은 오류(예: 복제본으로 장애 조치(failover) 또는 디스크 공간 부족) 발생 후 중지된 위치에서 온라인 인덱스 다시 작성을 재개하거나 일시 중지하고 나중에 온라인 인덱스 다시 작성 작업을 다시 시작합니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요. (CTP 2.0)
@@ -101,15 +103,20 @@ CTP 2.1부터 더 이상 SQL Server 설치 프로그램을 통해 SSRS를 설치
 
 자세한 내용은 [What's new in SQL Server Reporting Services (SSRS)](~/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)(SSRS(SQL Server Reporting Services)의 새로운 기능)를 참조하세요.
 
-## <a name="sql-server-2017-machine-learning-services"></a>SQL Server 2017 Machine Learning Services
+## <a name="machine-learning-in-sql-server-2017"></a>SQL Server 2017의 Machine Learning 
+
 R 언어와 함께 Python 지원을 반영하여 SQL Server R Services 이름이 **SQL Server Machine Learning Services**로 변경되었습니다. Machine Learning Services(데이터베이스 내)를 사용하여 SQL Server에서 R 또는 Python 스크립트를 실행하거나 **Microsoft Machine Learning Server(독립 실행형)**를 설치하여 SQL Server가 필요 없는 R 및 Python 모델을 배포하고 사용할 수 있습니다. 
 
-SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오픈 소스 에코 시스템에서 사용할 수 있는 광범위 Python ML 및 AI 라이브러리에 액세스할 수 있습니다. 
+SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오픈 소스 에코 시스템에서 사용할 수 있는 광범위 Python ML 및 AI 라이브러리에 액세스할 수 있습니다.
 
-- **revoscalepy** - 이 RevoScaleR의 Pythonic 버전에는 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트의 병렬 알고리즘 외에도 데이터 변환 및 데이터 이동, 원격 계산 컨텍스트 및 데이터 소스에 사용할 풍부한 API 집합이 포함되어 있습니다.
+- **revoscalepy** - RevoScaleR에 해당하는 이 Pythonic 항목에는 선형 및 로지스틱 회귀, 의사 결정 트리, 승격된 트리 및 임의 포리스트의 병렬 알고리즘 외에도 데이터 변환 및 데이터 이동, 원격 계산 컨텍스트 및 데이터 소스에 사용할 풍부한 API 집합이 포함되어 있습니다.
 - **microsoftml** - Python 바인딩을 사용하는 이 첨단 기계 학습 알고리즘 및 변환 패키지에는 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 최적화된 선형 및 로지스틱 회귀 알고리즘이 포함되어 있습니다. 이미지 추출 또는 감정 분석에 사용할 수 있는 ResNet 모델을 기반으로 미리 학습된 모델도 가져옵니다.
 - **T-SQL로 Python 운영화** - 저장 프로시저 `sp_execute_external_script`를 사용하여 Python 코드를 쉽게 배포합니다. SQL에서 Python 프로세스로 데이터를 스트리밍하고 MPI 링 병렬화를 사용하여 뛰어난 성능을 얻습니다.
 - **SQL Server 계산 컨텍스트의 Python** - 데이터 과학자와 개발자는 개발 환경에서 원격으로 Python 코드를 실행하여 데이터를 이동하지 않고 데이터를 탐색하고 모델을 개발할 수 있습니다.
+- **네이티브 점수 매기기** - Transact-SQL의 PREDICT 함수는 R의 설치 여부와 관계없이 SQL Server 2017의 모든 인스턴스에서 점수를 매기는 데 사용할 수 있습니다. 지원되는 RevoScaleR 및 revoscalepy 알고리즘 하나를 사용하여 모델을 학습한 후 새로운 압축 이진 형식으로 저장하기만 하면 됩니다.
+- **패키지 관리** - T-SQL은 이제 DBA가 R 패키지를 좀 더 효과적으로 관리할 수 있도록 CREATE EXTERNAL LIBRARY 문을 지원합니다. 역할을 사용하여 개인 또는 공유 패키지 액세스를 제어하고, 데이터베이스에 R 패키지를 저장하여 다른 사용자와 공유합니다.
+- **성능 향상** - 저장 프로시저 `sp_execute_external_script`는 columnstore 데이터에 대한 일괄 처리 모드 실행을 지원하도록 최적화되었습니다.
+
 
 자세한 내용은 [What's new in SQL Server Machine Learning Services](~/advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)(SQL Server Machine Learning Services의 새로운 기능)를 참조하세요.
 
@@ -119,3 +126,4 @@ SQL Server 개발자는 이제 Microsoft의 최신 혁신 기능과 함께 오�
 - [SQL Server 2016의 새로운 기능](what-s-new-in-sql-server-2016.md)을 확인하세요.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

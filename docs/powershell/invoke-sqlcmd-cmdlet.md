@@ -19,11 +19,11 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 679625527f4f29d086b50e2291af4cff14b74d3e
+ms.translationtype: HT
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 2172a7e83454030f0cee9eaec1909c0cfb019d63
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd cmdlet
@@ -76,7 +76,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 |SQLSERVER:\SQL\ComputerName\InstanceName\Databases|지정된 컴퓨터에 있는 지정된 인스턴스의 로그인 ID에 대한 기본 데이터베이스입니다.|  
 |SQLSERVER:\SQL\ComputerName\InstanceName\Databases\DatabaseName|지정된 컴퓨터에 있는 지정된 인스턴스의 지정된 데이터베이스입니다. 이는 또한 데이터베이스 내의 테이블 및 열 노드를 지정하는 경로와 같은 보다 긴 경로에 적용됩니다.|  
   
- 예를 들어 로컬 컴퓨터의 기본 인스턴스에 있는 Windows 계정에 대한 기본 데이터베이스가 master라고 가정합니다. 이 경우 다음 명령에서 masteR을 반환합니다.  
+ 예를 들어 로컬 컴퓨터의 기본 인스턴스에 있는 Windows 계정에 대한 기본 데이터베이스가 master라고 가정합니다. 이 경우 다음 명령에서 master를 반환합니다.  
   
 ```  
 Set-Location SQLSERVER:\SQL  
@@ -129,7 +129,7 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |최대 문자 출력 길이|-w|-MaxCharLength|  
 |최대 이진 출력 길이|-w|-MaxBinaryLength|  
 |SSL 암호화를 사용하여 연결|매개 변수 없음|-EncryptConnection|  
-|오류 표시|매개 변수 없음|-OutputSqlErrors|  
+|오류 표시|매개 변수 없음|-OutputSqlErrors: 부울 매개 변수 $true 또는 $false 필요|  
 |메시지를 stderr로 출력|-r|매개 변수 없음|  
 |클라이언트의 국가별 설정 사용|-r|매개 변수 없음|  
 |지정된 쿼리 실행 후 실행 중인 상태로 유지|-Q|매개 변수 없음|  
