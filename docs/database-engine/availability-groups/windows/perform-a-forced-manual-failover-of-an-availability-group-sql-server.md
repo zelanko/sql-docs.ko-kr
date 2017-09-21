@@ -296,7 +296,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [가용성 그룹을 원래 토폴로지로 복귀](#ReturnToOrigTopology)  
   
-###  <a name="FailureResponse"></a> Responding to the Catastrophic Failure of the Main Data Center  
+###  <a name="FailureResponse"></a> 기본 데이터 센터의 치명적인 오류에 응답  
  다음 그림에서는 기본 데이터 센터에서의 치명적 오류에 대한 응답으로 원격 데이터 센터에서 수행되는 일련의 동작을 보여 줍니다.  
   
  ![기본 데이터 센터의 장애에 대응하기 위한 단계](../../../database-engine/availability-groups/windows/media/aoag-failurerecovery-actions-part1.gif "기본 데이터 센터의 장애에 대응하기 위한 단계")  

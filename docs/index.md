@@ -3,6 +3,11 @@ layout: HubPage
 hide_bc: true
 title: "Microsoft SQL 문서 | Microsoft 문서"
 description: "SQL에 대한 자세한 정보"
+author: barbkess
+ms.author: barbkess
+ms.topic: article
+ms.technology:
+- database-engine
 ms.translationtype: HT
 ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
 ms.openlocfilehash: b744860d1899695d83b44860f18755ba97bf6f21
