@@ -1,7 +1,7 @@
 ---
 title: '@@OPTIONS (Transact SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 10/11/2016
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bc5a7b7899715ee06b8b0e6924893d0d8a04b14d
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 9480ffeffa83650b5cf44ad51547c36d5563b13b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="options-transact-sql"></a>@@OPTIONS (Transact SQL)
+# <a name="x40x40options-transact-sql"></a>& #x 40; & #x 40; 옵션 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 SET 옵션에 대한 정보를 반환합니다.  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 @@OPTIONS  
 ```  
   
@@ -50,11 +49,11 @@ ms.lasthandoff: 09/01/2017
 ## <a name="remarks"></a>주의  
  옵션의 사용에서 가져올 수 있습니다는 **설정** 명령 또는 **sp_configure 사용자 옵션** 값입니다. 세션 값을 사용 하 여 구성 된 **설정** 명령 재정의 **sp_configure** 옵션입니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]와 같은 많은 도구가 집합 옵션을 자동으로 구성합니다. 각 사용자에 게는 @@OPTIONS 구성을 나타내는 함수입니다.  
   
- SET 문을 사용하여 특정 사용자 세션에 대한 언어와 쿼리 처리 옵션을 변경할 수 있습니다. **@@OPTIONS**  옵션을 ON으로 설정 되는 검색할 수 있습니다 또는 OFF입니다.  
+ SET 문을 사용하여 특정 사용자 세션에 대한 언어와 쿼리 처리 옵션을 변경할 수 있습니다. **@@OPTIONS ** 옵션을 ON으로 설정 되는 검색할 수 있습니다 또는 OFF입니다.  
   
- **@@OPTIONS**  함수 기본 10 진수 정수로 변환할 옵션의 비트맵을 반환 합니다. 비트 설정은 항목의 테이블에 설명 된 위치에 저장 됩니다 [user options 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)합니다.  
+ **@@OPTIONS ** 함수 기본 10 진수 정수로 변환할 옵션의 비트맵을 반환 합니다. 비트 설정은 항목의 테이블에 설명 된 위치에 저장 됩니다 [user options 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)합니다.  
   
- 디코딩하는 **@@OPTIONS**  반환한 정수를 변환, 값 **@@OPTIONS**  를 이진으로 다음의 테이블에 값을 조회 하 고 [user options 서버 구성 구성 옵션](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)합니다. 예를 들어 경우 `SELECT @@OPTIONS;` 값을 반환 `5496`, Windows 프로그래머 계산기를 사용 하 여 (**calc.exe**) 10 진수 변환 하려면 `5496` 이진입니다. 결과는 `1010101111000`입니다. 가장 오른쪽 문자 (이진 1, 2 및 4)는 0으로, 테이블의 처음 세 항목은 해제 하는지 여부를 나타내는입니다. 테이블을 참조 하는, 표시 하는 것은 **DISABLE_DEF_CNST_CHK** 및 **IMPLICIT_TRANSACTIONS**, 및 **CURSOR_CLOSE_ON_COMMIT**합니다. 다음 항목 (**ANSI_WARNINGS** 에 `1000` 위치)에 있습니다. 비트맵을 하지만 작업 왼쪽을 계속 하 및 옵션의 목록에서 아래쪽 합니다. 맨 왼쪽 옵션은 0, 형식 변환으로 잘립니다. 비트맵 `1010101111000`은 실제로 `001010101111000`으로 모두 15개의 옵션을 나타냅니다.  
+ 디코딩하는 **@@OPTIONS ** 반환한 정수를 변환, 값 **@@OPTIONS ** 를 이진으로 다음의 테이블에 값을 조회 하 고 [user options 서버 구성 구성 옵션](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md)합니다. 예를 들어 경우 `SELECT @@OPTIONS;` 값을 반환 `5496`, Windows 프로그래머 계산기를 사용 하 여 (**calc.exe**) 10 진수 변환 하려면 `5496` 이진입니다. 결과는 `1010101111000`입니다. 가장 오른쪽 문자 (이진 1, 2 및 4)는 0으로, 테이블의 처음 세 항목은 해제 하는지 여부를 나타내는입니다. 테이블을 참조 하는, 표시 하는 것은 **DISABLE_DEF_CNST_CHK** 및 **IMPLICIT_TRANSACTIONS**, 및 **CURSOR_CLOSE_ON_COMMIT**합니다. 다음 항목 (**ANSI_WARNINGS** 에 `1000` 위치)에 있습니다. 비트맵을 하지만 작업 왼쪽을 계속 하 및 옵션의 목록에서 아래쪽 합니다. 맨 왼쪽 옵션은 0, 형식 변환으로 잘립니다. 비트맵 `1010101111000`은 실제로 `001010101111000`으로 모두 15개의 옵션을 나타냅니다.  
   
 ## <a name="examples"></a>예  
   

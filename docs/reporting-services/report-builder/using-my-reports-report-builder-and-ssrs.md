@@ -15,11 +15,11 @@ caps.latest.revision: 8
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f394a1ad055276cc7f0a6d28f923215dde8e437a
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 48a6c898c5381bb777863ed7569c6ac302560eb3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-my-reports-report-builder-and-ssrs"></a>내 보고서 사용(보고서 작성기 및 SSRS)
@@ -27,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
  개념적으로 내 보고서 폴더는 Windows 파일 시스템의 내 문서 폴더와 비슷합니다. 각 사용자가 내 보고서라는 폴더를 가지고 있더라도 액세스하는 폴더는 모두 다릅니다. 보고서 서버 관리자를 제외한 사용자는 다른 사용자가 소유한 내 보고서 폴더의 내용에 액세스할 수 없습니다.  
   
- 내 보고서 기능은 선택적이며 보고서 서버 관리자가 설정을 해제할 수 있습니다. 이 기능을 설정하면 홈 폴더에 내 보고서 폴더가 나타나며 보고서 관리자나 웹 브라우저를 사용하여 이 폴더에 액세스할 수 있습니다. 자세한 내용은 [보고서 관리자에서 보고서 찾기 및 보기&#40;보고서 작성기 및 SSRS&#41;](https://msdn.microsoft.com/library/dd255286.aspx)를 참조하세요.  
+ 내 보고서 기능은 선택적이며 보고서 서버 관리자가 설정을 해제할 수 있습니다. 이 기능을 설정하면 홈 폴더에 내 보고서 폴더가 나타나며 보고서 관리자나 웹 브라우저를 사용하여 이 폴더에 액세스할 수 있습니다. 자세한 내용은 참조 [보고서 찾기 및 보기에서 보고서 관리자 &#40; 보고서 작성기 및 SSRS &#41; ](/sql-docs/docs/reporting-services/report-builder/finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs).  
   
  SharePoint 통합 모드로 구성된 보고서 서버에는 내 보고서 폴더에 해당하는 폴더가 없습니다. 자세한 내용은 [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -39,9 +39,9 @@ ms.lasthandoff: 08/09/2017
   
 -   링크된 개인 보고서를 만들어 내 보고서에 저장합니다. 일부 보고서는 링크로 연결할 수 없습니다. 자세한 내용은 [연결된 보고서 만들기](../../reporting-services/reports/create-a-linked-report.md)를 참조하세요.  
   
--   파일 시스템에서 보고서 정의 파일(.rdl), 보고서 모델 파일(.smdl) 또는 기타 파일을 업로드합니다. 모든 파일을 업로드할 수 있지만 보고서 서버에서는 파일 확장명이 .rdl 또는 .smdl인 보고서 파일만 처리합니다. 자세한 내용은 SQL Server 온라인 설명서의 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312)에서 "보고서 정의" 및 [파일 또는 보고서 업로드&#40;보고서 관리자&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md)를 참조하세요.  
+-   파일 시스템에서 보고서 정의 파일(.rdl), 보고서 모델 파일(.smdl) 또는 기타 파일을 업로드합니다. 모든 파일을 업로드할 수 있지만 보고서 서버에서는 파일 확장명이 .rdl 또는 .smdl인 보고서 파일만 처리합니다. 자세한 내용은 보고서 정의 "의 참조는 [Reporting Services 설명서](http://go.microsoft.com/fwlink/?linkid=121312) SQL Server 온라인 설명서의 및 [을 파일이 나 보고서 &#40; 업로드 보고서 관리자 &#41; ](../../reporting-services/reports/upload-a-file-or-report-report-manager.md).  
   
--   사용자 보고서를 만들어 내 보고서에 게시합니다. 자세한 내용은 [보고서 디자인 뷰&#40;보고서 작성기&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)를 참조하세요.  
+-   사용자 보고서를 만들어 내 보고서에 게시합니다. 자세한 내용은 참조 [보고서 디자인 보기 &#40; 보고서 작성기 &#41; ](../../reporting-services/report-builder/report-design-view-report-builder.md).  
   
  일반적으로 내 보고서에 대한 사용 권한으로 폴더를 직접 관리할 수 있습니다. 그러나 사용자가 수행할 수 있는 태스크는 보고서 서버 관리자가 결정합니다. 사용 권한이 부족하여 내 보고서에서 작업할 수 없는 경우 보고서 서버 관리자에게 문의하십시오.  
   
@@ -49,6 +49,6 @@ ms.lasthandoff: 08/09/2017
  보고서 서버 데이터베이스를 검색할 때 검색 범위에 해당 사용자의 내 보고서 폴더 내용만 포함되고 다른 사용자의 내 보고서 폴더 내용은 포함되지 않습니다. 검색 결과에는 사용자가 액세스할 수 있는 보고서만 나열됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

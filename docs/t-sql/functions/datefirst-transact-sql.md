@@ -1,7 +1,7 @@
 ---
 title: '@@DATEFIRST (Transact SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -36,13 +36,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 951628293157784f522a262a1017b5b8b7f4bd83
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 2dfe63f2d59cb3e3a1b563d524693af0d3dd1b51
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="datefirst-transact-sql"></a>@@DATEFIRST (Transact SQL)
+# <a name="x40x40datefirst-transact-sql"></a>& #x 40; & &#40;x; DATEFIRST (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 세션에 대 한 현재 값을 반환 합니다. [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)합니다.
@@ -53,9 +53,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>구문  
   
-```sql
--- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
-  
+```
 @@DATEFIRST  
 ```  
   

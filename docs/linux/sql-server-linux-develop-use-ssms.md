@@ -10,23 +10,23 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 30cc4564-f389-4707-9b25-8ba782cc5150
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a999ca0248e83d2d9ef59f7ec04ad2dd58378132
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3c48596ed8bb4b4febc5982a3f37609f2ef4281f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-sql-server-management-studio-ssms-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio (SSMS)를 사용 하 여 Linux에서 SQL Server 관리
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx) Linux에서 SQL Server 2017 RC2 연결할 수 있습니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다. 
+이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) Linux에서 SQL Server 2017 RC2 연결할 수 있습니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다. 
 
 성공적으로 연결한 후 데이터베이스와의 통신을 확인 하려면 간단한 TRANSACT-SQL (T-SQL) 쿼리를 실행 합니다.
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio"></a>SQL Server Management Studio의 최신 버전 설치
 
-SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Studio (SSMS)를 사용 해야 합니다. 최신 버전의 SSMS 지속적으로 업데이트 되 고 최적화 된와 현재 SQL Server on 2017 Linux 합니다. 참조를 다운로드 하 여 최신 버전을 설치 하려면 [SQL Server Management Studio 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)합니다. 최신 상태로 유지, 최신 버전의 SSMS 묻는 메시지를 다운로드 하는 새 버전이 있는 경우. 
+SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Studio (SSMS)를 사용 해야 합니다. 최신 버전의 SSMS 지속적으로 업데이트 되 고 최적화 된와 현재 SQL Server on 2017 Linux 합니다. 참조를 다운로드 하 여 최신 버전을 설치 하려면 [SQL Server Management Studio 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)합니다. 최신 상태로 유지, 최신 버전의 SSMS 묻는 메시지를 다운로드 하는 새 버전이 있는 경우. 
 
 ## <a name="connect-to-sql-server-on-linux"></a>Linux에서 SQL Server에 연결
 
@@ -59,9 +59,9 @@ SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Stu
      
 ## <a name="run-sample-queries"></a>예제 쿼리를 실행 합니다.
 
-서버에 연결한 후 데이터베이스에 연결 하 고 예제 쿼리를 실행할 수 있습니다. 경우에 새 쿼리를 작성 하는 참조 [TRANSACT-SQL 문 작성](https://msdn.microsoft.com/library/ms365303.aspx)합니다.
+서버에 연결한 후 데이터베이스에 연결 하 고 예제 쿼리를 실행할 수 있습니다. 경우에 새 쿼리를 작성 하는 참조 [TRANSACT-SQL 문 작성](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)합니다.
 
-1. 에 대 한 쿼리를 실행 하기 위해 사용할 데이터베이스를 식별 합니다. 만든 새 데이터베이스 수는 [TRANSACT-SQL 자습서](https://msdn.microsoft.com/library/ms365303.aspx)합니다. 일 수는 **AdventureWorks** 샘플 데이터베이스 [다운로드 하 고 복원](sql-server-linux-migrate-restore-database.md)합니다.
+1. 에 대 한 쿼리를 실행 하기 위해 사용할 데이터베이스를 식별 합니다. 만든 새 데이터베이스 수는 [TRANSACT-SQL 자습서](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)합니다. 일 수는 **AdventureWorks** 샘플 데이터베이스 [다운로드 하 고 복원](sql-server-linux-migrate-restore-database.md)합니다.
 2. **개체 탐색기**, 서버에서 대상 데이터베이스로 이동 합니다.
 2. 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음 선택 **새 쿼리**:
 
@@ -81,7 +81,7 @@ SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Stu
 
 쿼리 외에 만들고 데이터베이스를 관리 하는 T-SQL 문을 사용할 수 있습니다.
 
-T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기](https://msdn.microsoft.com/library/ms365303.aspx) 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)](https://msdn.microsoft.com/library/bb510741.aspx)합니다.
+T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements) 및 [TRANSACT-SQL 참조 (데이터베이스 엔진)](https://msdn.microsoft.com/library/bb510741.aspx)합니다.
 
 SSMS를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. [사용 하 여 SQL Server Management Studio](https://msdn.microsoft.com/library/ms174173.aspx)합니다.
 

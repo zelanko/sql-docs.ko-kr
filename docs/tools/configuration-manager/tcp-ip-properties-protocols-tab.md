@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: c1a3d4995d3cc79f9a31533b918268f14204d511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a37c630af512d85e22b3547eb520aebe22546040
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # TCP/IP 속성(프로토콜 탭)
@@ -43,7 +43,7 @@ ms.lasthandoff: 08/02/2017
   
 ## 관련 항목:  
  [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
- [TCP IP를 사용 하 여 유효한 연결 문자열 만들기](https://msdn.microsoft.com/library/ms191260.aspx)  
+ [TCP/IP를 사용하여 유효한 연결 문자열 만들기](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)  
   
   
 

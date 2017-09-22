@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e867bb283434a6a7ae515823b370c73e4df4e131
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cf501a1e52a499ac2e2df8df49024da9763ed66d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Microsoft ODBC Driver for SQL Server
@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ODBC는 C 및 c + +로 작성 된 SQL Server에 대 한 응용 프로그램에 대 한 기본 네이티브 데이터 액세스 API입니다. 대부분의 데이터 원본에 대 한 ODBC 드라이버가 있습니다. ODBC를 사용할 수 있는 다른 언어는 COBOL, Perl, PHP 및 Python을 포함 합니다. ODBC는 데이터 통합 시나리오에서 널리 사용 됩니다.
 
-ODBC 드라이버와 같은 도구와 함께 제공 [ **sqlcmd** ](https://msdn.microsoft.com/library/ms162773.aspx) 및 [ **bcp**](https://msdn.microsoft.com/library/ms162802.aspx)합니다. **sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 SQL 스크립트를 실행할 수 있습니다. **bcp** 사용자가 선택한 형식에서의 Microsoft SQL Server 인스턴스 및 데이터 파일 간에 데이터를 대량 복사 합니다. 사용할 수 있습니다 **bcp** SQL Server 테이블로 많은 새 행을 가져오려면 하거나 데이터를 내보낼 테이블에서 데이터 파일.  
+ODBC 드라이버와 같은 도구와 함께 제공 [ **sqlcmd** ](/sql-docs/docs/tools/sqlcmd-utility) 및 [ **bcp**](/sql-docs/docs/tools/bcp-utility)합니다. **sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 SQL 스크립트를 실행할 수 있습니다. **bcp** 사용자가 선택한 형식에서의 Microsoft SQL Server 인스턴스 및 데이터 파일 간에 데이터를 대량 복사 합니다. 사용할 수 있습니다 **bcp** SQL Server 테이블로 많은 새 행을 가져오려면 하거나 데이터를 내보낼 테이블에서 데이터 파일.  
 
 ## <a name="code-example-in-c"></a>C + +의 코드 예제에서
 

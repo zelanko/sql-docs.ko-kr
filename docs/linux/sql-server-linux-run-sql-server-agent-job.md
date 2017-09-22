@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 3ffb76838940f42d7a696e1c17f227517d89012d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 8d05ec1ae3be89b7a087938c44b356ccc9dbca43
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>만들기 및 Linux에서 SQL Server 에이전트 작업 실행
@@ -35,7 +35,7 @@ SQL Server 작업이 정기적으로 SQL Server 데이터베이스에 동일한 
 > [!TIP]
 > 이러한 명령을 실행 하는 T-SQL 클라이언트를 사용할 수 있습니다. 예를 들어 Linux에서 사용할 수 있습니다 [sqlcmd](sql-server-linux-setup-tools.md) 또는 [Visual Studio Code](sql-server-linux-develop-use-vscode.md)합니다. 원격 Windows 서버에서 SQL Server Management Studio (SSMS) 쿼리를 실행 하거나 다음 섹션에 설명 된 작업 관리에 대 한 UI 인터페이스를 사용 하 여 수도 있습니다.
 
-1. **작업을 만들어**합니다. 다음 예제에서는 [sp_add_job](https://msdn.microsoft.com/library/ms182079.aspx) 라는 작업을 만들려면 `Daily AdventureWorks Backup`합니다.
+1. **작업을 만들어**합니다. 다음 예제에서는 [sp_add_job](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-job-transact-sql) 라는 작업을 만들려면 `Daily AdventureWorks Backup`합니다.
 
     ```tsql
      -- Adds a new job executed by the SQLServerAgent service 
@@ -49,7 +49,7 @@ SQL Server 작업이 정기적으로 SQL Server 데이터베이스에 동일한 
 
     ```
 
-2. **하나 이상의 작업 단계를 추가**합니다. 다음 TRANSACT-SQL 스크립트를 사용 하 여 [sp_add_jobstep](https://msdn.microsoft.com/library/ms187358.aspx) 의 백업을 만드는 작업 단계를 만들려면는 `AdventureWlorks2014` 데이터베이스입니다.
+2. **하나 이상의 작업 단계를 추가**합니다. 다음 TRANSACT-SQL 스크립트를 사용 하 여 [sp_add_jobstep](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql) 의 백업을 만드는 작업 단계를 만들려면는 `AdventureWlorks2014` 데이터베이스입니다.
 
     ```tsql
     -- Adds a step (operation) to the job  
@@ -65,7 +65,7 @@ SQL Server 작업이 정기적으로 SQL Server 데이터베이스에 동일한 
     GO
     ```
 
-3. **작업 일정을 만들**합니다. 이 예에서는 [sp_add_schedule](https://msdn.microsoft.com/library/ms366342.aspx) 작업에 대 한 일별 일정을 만듭니다.
+3. **작업 일정을 만들**합니다. 이 예에서는 [sp_add_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql) 작업에 대 한 일별 일정을 만듭니다.
 
     ```tsql
     -- Creates a schedule called 'Daily'  
@@ -78,7 +78,7 @@ SQL Server 작업이 정기적으로 SQL Server 데이터베이스에 동일한 
    GO
     ```
 
-4. **작업에 작업 일정을 연결**합니다. 사용 하 여 [sp_attach_schedule](https://msdn.microsoft.com/library/ms186766.aspx) 작업에 작업 일정을 연결 합니다.
+4. **작업에 작업 일정을 연결**합니다. 사용 하 여 [sp_attach_schedule](/sql-docs/docs/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql) 작업에 작업 일정을 연결 합니다.
 
     ```tsql
     -- Sets the 'Daily' schedule to the 'Daily AdventureWorks Backup' Job  
@@ -88,7 +88,7 @@ SQL Server 작업이 정기적으로 SQL Server 데이터베이스에 동일한 
     GO
     ```
 
-5. **대상 서버에 작업 할당**합니다. 사용 하 여 대상 서버에 작업 할당 [sp_add_jobserver](https://msdn.microsoft.com/library/ms178625.aspx)합니다. 이 예제에서는 로컬 서버에는 대상이 됩니다.
+5. **대상 서버에 작업 할당**합니다. 사용 하 여 대상 서버에 작업 할당 [sp_add_jobserver](/sql-docs/docs/relational-databases/system-stored-procedures/sp-add-jobserver-transact-sql)합니다. 이 예제에서는 로컬 서버에는 대상이 됩니다.
 
     ```tsql
     EXEC dbo.sp_add_jobserver  

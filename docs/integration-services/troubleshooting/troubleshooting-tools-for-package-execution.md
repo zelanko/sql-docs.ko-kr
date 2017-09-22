@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: d4d50bedde83e493c8327d9321ebcfb12bc12985
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
@@ -72,9 +72,9 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>로깅을 사용하여 패키지 실행 문제 해결  
  로깅을 설정하여 실행하는 패키지에서 발생하는 문제를 대부분 추적할 수 있습니다. 로그 공급자는 지정된 이벤트에 대한 정보를 나중에 분석할 수 있도록 캡처하고 해당 정보를 데이터베이스 테이블, 플랫 파일, XML 파일 또는 지원되는 다른 출력 형식으로 저장합니다.  
   
--   **로깅 설정** 캡처할 이벤트와 정보 항목만 선택하여 로깅 출력을 구체화할 수 있습니다. 자세한 내용은 [SSIS(Integration Services) 로깅](https://msdn.microsoft.com/library/ms140246.aspx)을 참조하세요.  
+-   **로깅 설정** 캡처할 이벤트와 정보 항목만 선택하여 로깅 출력을 구체화할 수 있습니다. 자세한 내용은 [SSIS(Integration Services) 로깅](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging)을 참조하세요.  
   
--   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [Troubleshooting Tools Package Connectivity](https://msdn.microsoft.com/library/cc879309.aspx)을 참조하세요.  
+-   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity)을 참조하세요.  
   
 -   **기본 로깅 출력 향상**. 로깅 기능은 일반적으로 패키지가 실행될 때마다 로깅 대상에 행을 추가합니다. 로깅 출력의 각 행이 패키지를 이름과 고유 식별자로 식별하고 패키지 실행을 고유 ExecutionID로 식별하더라도 단일 목록에 많은 양의 로깅 출력이 있으면 분석하기가 어려울 수 있습니다.  
   
@@ -110,7 +110,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="troubleshoot-errors-without-a-description"></a>설명이 없는 오류 문제 해결  
  설명이 없는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 오류가 발생할 경우 [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md) 에서 오류 번호로 조회하여 해당 오류에 대한 설명을 찾을 수 있습니다. 이 목록에는 현재 문제 해결 정보는 들어 있지 않습니다.  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 태스크  
  [데이터 흐름 디버깅](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
 ## <a name="related-content"></a>관련 내용  

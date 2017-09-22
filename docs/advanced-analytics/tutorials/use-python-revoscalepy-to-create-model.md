@@ -2,8 +2,8 @@
 title: "Revoscalepy로 Python을 사용 하 여 모델을 만드는 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/03/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,19 +15,19 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 6b7e166971ff74add56bce628838c82a9a6c1128
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c497ad3e302f2950a65cf41aaa41237f19171ab4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model"></a>Revoscalepy로 Python을 사용 하 여 모델을 만들려면
 
-알고리즘을 사용 하 여 SQL server에서는 로지스틱 회귀 모델을 만들 수는 방법을 보여 주는이 예제는 **revoscalepy** 패키지 합니다.
+알고리즘을 사용 하 여 SQL Server에서 선형 회귀 모델을 만들 수는 방법을 보여 주는이 예제는 **revoscalepy** 패키지 합니다.
 
 **revoscalepy** Python 포함 개체를 변환에 대해 제공 된 것과 유사한 알고리즘에 대 한 패키지는 **RevoScaleR** R 언어에 대 한 패키지입니다. 이 라이브러리와 계산 컨텍스트, 데이터를 변환 및 물류 및 선형 회귀, 의사 결정 트리 등과 같은 인기 있는 알고리즘을 사용 하 여 예측 모델을 학습 간에 데이터를 이동, 한 계산 컨텍스트를 만듭니다 수 있습니다.
 
-자세한 내용은 참조 [revoscalepy 란?](../python/what-is-revoscalepy.md)
+자세한 내용은 참조 [revoscalepy 란?](../python/what-is-revoscalepy.md) 및 [Python 함수 참조](https://docs.microsoft.com/r-server/python-reference/introducing-python-package-reference)
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -112,8 +112,8 @@ def test_linmod_sql():
 
 데이터 소스는 한 계산 컨텍스트와에서 다릅니다. _데이터 소스_ 코드에 사용 되는 데이터를 정의 합니다. _계산 컨텍스트_ 코드의 실행 수는 위치를 정의 합니다.
 
-1. 과 같은 Python 변수를 만들 `sql_query` 및 `sql_connection_string`, 원본 및 사용 하려는 데이터를 정의 하는 합니다. 이 변수를 구현 하는 RxSqlServerData 생성자에 전달할는 **데이터 원본 개체** 라는 `data_source`합니다.
-2. 계산 컨텍스트 개체를 사용 하 여 만들는 **RxInSqlServer** 생성자입니다. 이 예제에서는 계산 컨텍스트로 써 사용 하 여 동일한 SQL Server 인스턴스에서 데이터를 가정 하에서 이전에 정의 된 동일한 연결 문자열을 전달 합니다. 그러나 데이터 원본 및 계산 컨텍스트 서로 다른 서버에 있을 수 있습니다. 그 결과 **컨텍스트 개체를 계산** 라는 `sql_cc`합니다.
+1. 과 같은 Python 변수를 만들 `sql_query` 및 `sql_connection_string`, 원본 및 사용 하려는 데이터를 정의 하는 합니다. 이러한 변수를 전달 하는 [RxSqlServerData](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxsqlserverdata) 생성자를 구현 하는 **데이터 원본 개체** 라는 `data_source`합니다.
+2. 계산 컨텍스트 개체를 사용 하 여 만들는 [RxInSqlServer](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rxinsqlserverdata) 생성자입니다. 이 예제에서는 계산 컨텍스트로 써 사용 하 여 동일한 SQL Server 인스턴스에서 데이터를 가정 하에서 이전에 정의 된 동일한 연결 문자열을 전달 합니다. 그러나 데이터 원본 및 계산 컨텍스트 서로 다른 서버에 있을 수 있습니다. 그 결과 **컨텍스트 개체를 계산** 라는 `sql_cc`합니다.
 3. 현재 계산 컨텍스트를 선택 합니다. 기본적으로 즉, 다른 계산 컨텍스트를 지정 하지 않으면 작업을 로컬로 실행 하 고 데이터 원본에서 인출 되는 데이터가 모델 맞춤 현재 Python 환경에서 실행 됩니다.
 
 ### <a name="changing-compute-contexts"></a>계산 컨텍스트를 변경합니다.
@@ -126,17 +126,15 @@ def test_linmod_sql():
 
 `summary = rx_summary("ArrDelay ~ DayOfWeek", data = data_source, compute_context = sql_compute_context)`
 
-함수를 사용할 수도 있습니다 **rxsetcomputecontext** 이미 정의 하는 계산 컨텍스트를 전환할 수 있습니다. 
+함수를 사용할 수도 있습니다 [rx_set_computecontext](https://docs.microsoft.com/r-server/python-reference/revoscalepy/rx-set-compute-context) 이미 정의 하는 계산 컨텍스트를 전환할 수 있습니다.
 
 ### <a name="setting-the-degree-of-parallelism"></a>병렬 처리 수준을 설정
 
-계산 컨텍스트를 정의할 때 매개 변수를 계산 컨텍스트에서 고 데이터를 처리 하는 방법을 제어 하는 설정할 수 있습니다. 이러한 매개 변수는 데이터 원본 유형에 따라 달라 집니다. 
+계산 컨텍스트를 정의할 때 매개 변수를 계산 컨텍스트에서 고 데이터를 처리 하는 방법을 제어 하는 설정할 수 있습니다. 이러한 매개 변수는 데이터 원본 유형에 따라 달라 집니다.
 
 SQL Server 계산 컨텍스트를 위한 일괄 처리 크기를 설정 하거나 실행 중인 작업에 사용할 병렬 처리 수준에 대 한 힌트를 제공할 수 있습니다.
 
-샘플 된 4 개의 프로세서가 있는 컴퓨터에서 실행 설정 되므로 *num_tasks* 4로 매개 변수입니다. 이 값을 0으로 설정 하면 SQL Server는 기본적으로 서버에 대 한 현재의 MAXDOP 설정 가능한 동시에 많은 작업을 실행 하는 것을 사용 합니다. 그러나 많은 프로세서를 포함 하는 서버에도 할당 될 수 있는 작업의 정확한 수에 따라 달라 집니다 서버 설정 등 다른 많은 요인 및 다른 실행 중인 작업을 합니다. 
-
-자세한 내용은 참조 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)합니다.
+샘플 된 4 개의 프로세서가 있는 컴퓨터에서 실행 설정 되므로 *num_tasks* 4로 매개 변수입니다. 이 값을 0으로 설정 하면 SQL Server는 기본적으로 서버에 대 한 현재의 MAXDOP 설정 가능한 동시에 많은 작업을 실행 하는 것을 사용 합니다. 그러나 많은 프로세서를 포함 하는 서버에도 할당 될 수 있는 작업의 정확한 수에 따라 달라 집니다 서버 설정 등 다른 많은 요인 및 다른 실행 중인 작업을 합니다.
 
 ## <a name="related-samples"></a>관련 된 샘플
 

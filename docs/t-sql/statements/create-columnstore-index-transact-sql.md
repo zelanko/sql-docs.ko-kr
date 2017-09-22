@@ -34,10 +34,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e29110bc0e536375dc2d21ec852a634069fa868
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a4e3b602b026d359c7eac492fc44480d4b1a18a9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -54,12 +54,12 @@ ms.lasthandoff: 09/01/2017
 -   [비클러스터형 columnstore 인덱스에 대 한 예제](../../t-sql/statements/create-columnstore-index-transact-sql.md#nonclustered)  
   
 다음 시나리오로 이동:  
--   [실시간 운영 분석에 Columnstore 인덱스](https://msdn.microsoft.com/library/dn817827.aspx)  
--   [데이터 웨어하우스 용 Columnstore 인덱스](https://msdn.microsoft.com/library/dn913734.aspx)  
+-   [실시간 운영 분석에 Columnstore 인덱스](/sql-docs/docs/relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics)  
+-   [데이터 웨어하우스 용 Columnstore 인덱스](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-data-warehouse)  
   
 더 알아보세요:  
--   [Columnstore 인덱스 가이드](https://msdn.microsoft.com/library/gg492088.aspx)  
--   [Columnstore 인덱스 기능 요약](https://msdn.microsoft.com/library/dn934994.aspx)  
+-   [Columnstore 인덱스 가이드](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-overview)  
+-   [Columnstore 인덱스 기능 요약](/sql-docs/docs/relational-databases/indexes/columnstore-indexes-what-s-new)  
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -298,14 +298,14 @@ ON
 ##  <a name="LimitRest"></a> 제한 사항  
 
 **Columnstore 인덱스의 각 열은 다음과 같은 일반적인 비즈니스 데이터 형식 중 하나 여야 합니다.** 
--   datetimeoffset [(  *n*  )]  
--   datetime2 [(  *n*  )]  
+-   datetimeoffset [( * n * )]  
+-   datetime2 [( * n * )]  
 -   datetime  
 -   smalldatetime  
 -   date  
--   시간 [(  *n*  )]  
--   float [(  *n*  )]  
--   실제 [(  *n*  )]  
+-   시간 [( * n * )]  
+-   float [( * n * )]  
+-   실제 [( * n * )]  
 -   10 진수 [( *정밀도* [ *, 배율* ] **)** ]
 -   숫자 [( *정밀도* [ *, 배율* ] **)** ]    
 -   money  
@@ -315,15 +315,15 @@ ON
 -   smallint  
 -   tinyint  
 -   bit  
--   nvarchar [(  *n*  )] 
+-   nvarchar [( * n * )] 
 -   nvarchar (max) (적용할 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 클러스터형된 columnstore 인덱스에만에서 가격 책정 계층을 premium Azure SQL 데이터베이스)   
--   nchar [(  *n*  )]  
--   varchar [(  *n*  )]  
+-   nchar [( * n * )]  
+-   varchar [( * n * )]  
 -   varchar (max) (적용할 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 클러스터형된 columnstore 인덱스에만에서 가격 책정 계층을 premium Azure SQL 데이터베이스)
--   char [(  *n*  )]  
--   varbinary [(  *n*  )] 
+-   char [( * n * )]  
+-   varbinary [( * n * )] 
 -   varbinary (max) (적용할 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 클러스터형된 columnstore 인덱스에만에서 가격 책정 계층을 premium Azure SQL 데이터베이스)
--   이진 [(  *n*  )]  
+-   이진 [( * n * )]  
 -   고유 식별자 (적용할 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상)
   
 기본 테이블에 columnstore 인덱스에 대해 지원 되지 않는 데이터 형식의 열을 비클러스터형 columnstore 인덱스에서 해당 열을 생략 해야 합니다.  

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: a542817a861f968cebf3a66f91cfb016d2a685b8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
@@ -86,7 +86,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>지원되는 언어
 
-전체 텍스트 검색을 사용 하 여 [단어 분리기](https://msdn.microsoft.com/library/ms142509.aspx) 언어에 따라 개별 단어를 식별 하는 방법을 결정 하는 합니다. 쿼리를 통해 등록 된 단어 분리기의 목록을 가져올 수 있습니다는 **sys.fulltext_languages** 카탈로그 뷰에 있습니다. 다음 언어에 대 한 단어 분리기는 SQL Server 2017 RC2와 함께 설치 됩니다.
+전체 텍스트 검색을 사용 하 여 [단어 분리기](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) 언어에 따라 개별 단어를 식별 하는 방법을 결정 하는 합니다. 쿼리를 통해 등록 된 단어 분리기의 목록을 가져올 수 있습니다는 **sys.fulltext_languages** 카탈로그 뷰에 있습니다. 다음 언어에 대 한 단어 분리기는 SQL Server 2017 RC2와 함께 설치 됩니다.
 
 | 언어 | 언어 ID |
 |---|---|
@@ -146,7 +146,7 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a>필터
 
-전체 텍스트 검색 이진 파일에 저장 된 텍스트 에서도 작동 합니다. 하지만 경우 설치 된 필터는 파일을 처리 해야 합니다. 필터에 대 한 자세한 내용은 참조 [필터 구성 및 관리 검색에 대 한](https://msdn.microsoft.com/library/ms142499.aspx)합니다.
+전체 텍스트 검색 이진 파일에 저장 된 텍스트 에서도 작동 합니다. 하지만 경우 설치 된 필터는 파일을 처리 해야 합니다. 필터에 대 한 자세한 내용은 참조 [필터 구성 및 관리 검색에 대 한](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search)합니다.
 
 호출 하 여 설치 된 필터의 목록을 볼 수 **sp_help_fulltext_system_components 'filter'**합니다. SQL Server 2017 rc2 다음 필터 설치 됩니다.
 
@@ -258,9 +258,9 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>의미 체계 검색
-[의미 체계 검색](https://msdn.microsoft.com/library/gg492075.aspx) 추출 하 고 통계적으로 관련성이 인덱스의 전체 텍스트 검색 기능에 빌드 *키 구*합니다. 이렇게 하면 데이터베이스에는 문서 내에서 의미를 쿼리할 수 있습니다. 또한이 유사한 문서를 식별할 수 있습니다.
+[의미 체계 검색](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) 추출 하 고 통계적으로 관련성이 인덱스의 전체 텍스트 검색 기능에 빌드 *키 구*합니다. 이렇게 하면 데이터베이스에는 문서 내에서 의미를 쿼리할 수 있습니다. 또한이 유사한 문서를 식별할 수 있습니다.
 
-의미 체계 검색을 사용 하려면 먼저 다운로드 하 고 연결 된 [의미 체계 언어 통계 데이터베이스](https://msdn.microsoft.com/library/gg509085.aspx)합니다.
+의미 체계 검색을 사용 하려면 먼저 다운로드 하 고 연결 된 [의미 체계 언어 통계 데이터베이스](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search)합니다.
 
 1. Windows 컴퓨터에서 [다운로드는 합니다. 의미 체계 언어 통계 데이터베이스에 대 한 MSI 파일](https://www.microsoft.com/download/details.aspx?id=54277)합니다.
 

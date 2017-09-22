@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 88c4fec1697c91daa3cb97fe61d76f75a67546f3
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 009c30b7f14fe10099257c97a5a310aa41df71b0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>패키지에 대한 SQL Server 에이전트 작업
@@ -132,7 +132,7 @@ ms.lasthandoff: 08/03/2017
     |--------------------|-----------------|  
     |**SSIS 카탈로그**|SSISDB 데이터베이스에 저장된 패키지입니다. 패키지는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포되는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트에 포함됩니다.|  
     |**SQL Server**|MSDB 데이터베이스에 저장된 패키지입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.|  
-    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는  *\<드라이브 >*: files\microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 구성 파일을 수정하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서비스에서 관리할 파일 시스템에 추가로 폴더를 지정하거나 다른 폴더를 지정할 수 있습니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.|  
+    |**SSIS 패키지 저장소**|컴퓨터의 기본 폴더에 저장된 패키지입니다. 기본 폴더는 * \<드라이브 >*: files\microsoft SQL Server\110\DTS\Packages입니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 사용하여 패키지를 관리합니다.<br /><br /> 참고: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 구성 파일을 수정하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]서비스에서 관리할 파일 시스템에 추가로 폴더를 지정하거나 다른 폴더를 지정할 수 있습니다. 자세한 내용은 [Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)를 참조하세요.|  
     |**파일 시스템**|컴퓨터의 임의 폴더에 저장된 패키지입니다.|  
   
      **다음 표에서는 선택한 패키지 원본에 따라 작업 단계에 사용할 수 있는 구성 옵션을 설명합니다.**  
@@ -150,7 +150,7 @@ ms.lasthandoff: 08/03/2017
     |**고급**<br /><br /> **구성** 탭에 위치합니다.|패키지 실행에 대해 다음과 같은 추가 설정을 구성합니다.|  
     ||**속성 재정의**:<br /><br /> 패키지 속성에 대한 새 값을 입력하고, 속성 경로를 지정하고, 속성 값이 중요한지 여부를 나타내려면 **추가** 를 클릭합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버는 중요한 데이터를 암호화합니다. 속성에 대한 설정을 편집하거나 제거하려면 **속성** 재정의 상자의 행을 클릭한 다음 **편집** 이나 **제거**를 클릭합니다. 다음 중 하나를 수행하여 속성 경로를 찾을 수 있습니다.<br /><br /> -XML 구성 파일(\*.dtsconfig)에서 속성 경로를 복사합니다. 경로는 파일의 구성 섹션에 경로 속성의 값으로 나열됩니다. MaximumErrorCount 속성에 대한 경로의 예는 \Package.Properties[MaximumErrorCount]와 같습니다.<br /><br /> - **패키지 구성 마법사** 를 실행하고 마지막 **마법사 완료** 페이지에서 속성 경로를 복사합니다. 그런 다음 마법사를 취소할 수 있습니다.<br /><br /> <br /><br /> 참고: **속성 재정의** 옵션은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 이전 릴리스에서 업그레이드된 구성을 포함하는 패키지용입니다. [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 를 사용하여 만들고 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지는 구성 대신 매개 변수를 사용합니다.|  
     ||**로깅 수준**<br /><br /> 패키지 실행에 대해 다음 로깅 수준 중 하나를 선택합니다. **성능** 또는 **자세한 정보** 로깅 수준을 선택하면 패키지 실행 성능에 영향을 줄 수 있습니다.<br /><br /> **없음**:<br />                          로깅이 해제됩니다. 패키지 실행 상태에만 기록됩니다.<br /><br /> **기본**:<br />                          사용자 지정 이벤트 및 진단 이벤트 외의 모든 이벤트가 기록됩니다. 로깅 수준의 기본값입니다.<br /><br /> **성능**:<br />                          성능 통계와 OnError 및 OnWarning 이벤트만 기록됩니다.<br /><br /> **자세한 정보**:<br />                          사용자 지정 이벤트 및 진단 이벤트를 포함한 모든 이벤트가 기록됩니다.<br /><br /> 선택한 로깅 수준은 SSISDB 보기 및 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 보고서에 표시될 정보를 결정합니다. 자세한 내용은 [SSIS(Integration Services) 로깅](../../integration-services/performance/integration-services-ssis-logging.md)을 참조하세요.|  
-    ||**오류 덤프**<br /><br /> 패키지 실행 시 오류가 발생할 때 덤프 파일을 생성할지 여부를 지정합니다. 이 파일은 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다. 이 옵션을 선택하고 실행 중에 오류가 발생하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 .mdmp 파일(이진 파일) 및 .tmp 파일(텍스트 파일)을 만듭니다. 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 파일을 저장 된  *\<드라이브 >:*files\microsoft SQL Server\110\Shared\ErrorDumps 폴더입니다.|  
+    ||**오류 덤프**<br /><br /> 패키지 실행 시 오류가 발생할 때 덤프 파일을 생성할지 여부를 지정합니다. 이 파일은 문제를 해결하는 데 도움이 될 수 있는 패키지 실행에 대한 정보를 제공합니다. 이 옵션을 선택하고 실행 중에 오류가 발생하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 .mdmp 파일(이진 파일) 및 .tmp 파일(텍스트 파일)을 만듭니다. 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 파일을 저장 된 * \<드라이브 >:*files\microsoft SQL Server\110\Shared\ErrorDumps 폴더입니다.|  
     ||**32비트 런타임**<br /><br /> 64비트 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 설치된 64비트 컴퓨터에서 32비트 버전의 dtexec 유틸리티를 사용하는 패키지의 실행 여부를 나타냅니다.<br /><br /> 예를 들어 64비트 버전에서 사용할 수 없는 네이티브 OLE DB 공급자를 패키지에서 사용하는 경우 32비트 버전의 dtexec를 사용하여 패키지를 실행해야 합니다. 자세한 내용은 [Integration Services에 대한 64비트 고려 사항](http://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx)을 참조하십시오.<br /><br /> 기본적으로 **SQL Server Integration Services 패키지** 작업 단계 유형을 선택하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 시스템에서 자동으로 호출된 dtexec 유틸리티 버전을 사용하여 패키지를 실행합니다. 시스템은 컴퓨터 프로세서와 컴퓨터에서 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 버전에 따라 32비트 또는 64비트 버전 유틸리티를 호출합니다.|  
   
      **패키지 원본**: SQL서버, SSIS 패키지 저장소 또는 파일 시스템  
@@ -189,7 +189,7 @@ ms.lasthandoff: 08/03/2017
     >  일정에 이름을 지정할 때 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 일정과 쉽게 구분할 수 있도록 고유하고 설명이 포함된 이름을 사용하는 것이 좋습니다.  
 
 ## <a name="see-also"></a>관련 항목:  
- [프로젝트 및 패키지 실행](https://msdn.microsoft.com/library/hh213290.aspx)  
+ [프로젝트 및 패키지 실행](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
 
 ## <a name="external-resources"></a>외부 리소스  
   

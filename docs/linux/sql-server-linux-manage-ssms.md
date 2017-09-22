@@ -11,19 +11,19 @@ ms.technology: database-engine
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 1f8fe782aa69f462366130418fce84a2654de3cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: dabdf1d6f179ad240b304e39fc355c14477841ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Windows에서 SQL Server Management Studio를 사용 하 여 Linux에서 SQL Server 관리
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 항목에서는 소개 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) 과정을 안내 하는 몇 가지 일반 작업 및 합니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다.
+이 항목에서는 소개 [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms) 과정을 안내 하는 몇 가지 일반 작업 및 합니다. SSMS는 Windows 응용 프로그램, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 경우 SSMS를 사용 합니다.
 
-[SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx) 무료로 개발 및 관리 요구 사항에 대 한 Microsoft 서비스를 해제 하는 SQL 도구 제품군의 일부입니다. SSMS는 액세스, 구성, 관리, 관리, 운영 및 온-프레미스를 실행 중인 SQL server 또는 Linux, Windows 또는 macOS 및 Azure SQL 데이터베이스에는 Docker 및 Azure SQL 데이터 웨어하우스 클라우드의 모든 구성 요소를 개발 하기 위한 통합된 환경. SSMS 다양 한 개발자와 모든 기술 수준의 관리자에 SQL Server에 대 한 액세스를 제공 하기 위해 풍부한 스크립트 편집기와 광범위 한 그래픽 도구 그룹을 결합 합니다.
+[SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms) 무료로 개발 및 관리 요구 사항에 대 한 Microsoft 서비스를 해제 하는 SQL 도구 제품군의 일부입니다. SSMS는 액세스, 구성, 관리, 관리, 운영 및 온-프레미스를 실행 중인 SQL server 또는 Linux, Windows 또는 macOS 및 Azure SQL 데이터베이스에는 Docker 및 Azure SQL 데이터 웨어하우스 클라우드의 모든 구성 요소를 개발 하기 위한 통합된 환경. SSMS 다양 한 개발자와 모든 기술 수준의 관리자에 SQL Server에 대 한 액세스를 제공 하기 위해 풍부한 스크립트 편집기와 광범위 한 그래픽 도구 그룹을 결합 합니다.
 
 SSMS는 도구를 비롯 하 여 SQL Server에 대 한 다양 한 개발 및 관리 기능 집합을 제공 합니다.
 
@@ -39,7 +39,7 @@ SSMS는 도구를 비롯 하 여 SQL Server에 대 한 다양 한 개발 및 관
 
 ## <a name="install-the-newest-version-of-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)의 최신 버전 설치
 
-SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Studio (SSMS)를 사용 해야 합니다. 최신 버전의 SSMS 지속적으로 업데이트 되 고 최적화 된와 현재 SQL Server on 2017 Linux 합니다. 참조를 다운로드 하 여 최신 버전을 설치 하려면 [SQL Server Management Studio 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)합니다. 최신 상태로 유지, 최신 버전의 SSMS 묻는 메시지를 다운로드 하는 새 버전이 있는 경우. 
+SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Studio (SSMS)를 사용 해야 합니다. 최신 버전의 SSMS 지속적으로 업데이트 되 고 최적화 된와 현재 SQL Server on 2017 Linux 합니다. 참조를 다운로드 하 여 최신 버전을 설치 하려면 [SQL Server Management Studio 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)합니다. 최신 상태로 유지, 최신 버전의 SSMS 묻는 메시지를 다운로드 하는 새 버전이 있는 경우. 
 
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항
 - 참조 [Linux에서 SQL Server에 연결 하는 Windows에서 사용 하 여 SSMS](sql-server-linux-develop-use-ssms.md) SSMS를 사용 하 여 쿼리 및 연결 하는 방법에 대 한
@@ -56,7 +56,7 @@ SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Stu
 
 3. 에 *새 데이터베이스* 대화 상자에서 새 데이터베이스에 대 한 이름을 입력 한 다음 클릭 *확인*
 
-새 데이터베이스 서버에 성공적으로 만들어집니다. T-SQL을 사용 하 여 새 데이터베이스를 만들려면 다음을 참조 하는 경우 [CREATE DATABASE (SQL Server Transact SQL)](https://msdn.microsoft.com/en-us/library/ms176061.aspx)합니다.
+새 데이터베이스 서버에 성공적으로 만들어집니다. T-SQL을 사용 하 여 새 데이터베이스를 만들려면 다음을 참조 하는 경우 [CREATE DATABASE (SQL Server Transact SQL)](/sql-docs/docs/t-sql/statements/create-database-sql-server-transact-sql)합니다.
 
 ### <a name="drop-a-database"></a>데이터베이스 삭제
 
@@ -68,11 +68,11 @@ SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Stu
 
 4. 에 *개체 삭제* 대화 상자에서 확인 *기존 연결 닫기* 클릭 한 다음 *확인*
 
-데이터베이스 서버에서 성공적으로 삭제 됩니다. T-SQL을 사용 하 여 데이터베이스를 삭제 하려면 다음을 참조 하면 [DROP DATABASE (SQL Server Transact SQL)](https://msdn.microsoft.com/en-us/library/ms178613.aspx)합니다.
+데이터베이스 서버에서 성공적으로 삭제 됩니다. T-SQL을 사용 하 여 데이터베이스를 삭제 하려면 다음을 참조 하면 [DROP DATABASE (SQL Server Transact SQL)](/sql-docs/docs/t-sql/statements/drop-database-transact-sql)합니다.
 
 ## <a name="use-activity-monitor-to-see-information-about-sql-server-activity"></a>작업 모니터를 사용 하 여 SQL Server 작업에 대 한 정보를 보려면
 
-[작업 모니터](https://msdn.microsoft.com/en-us/library/hh212951.aspx) 도구는 SQL Server Management Studio (SSMS)에 기본적으로 제공 하 고 SQL Server 프로세스와 이러한 프로세스가 현재 SQL Server 인스턴스의 미치는 영향에 대 한 정보를 표시 합니다.
+[작업 모니터](/sql-docs/docs/relational-databases/performance-monitor/activity-monitor) 도구는 SQL Server Management Studio (SSMS)에 기본적으로 제공 하 고 SQL Server 프로세스와 이러한 프로세스가 현재 SQL Server 인스턴스의 미치는 영향에 대 한 정보를 표시 합니다.
 
 1. SSMS를 시작 하 고 Linux에서 SQL Server 2017 r c 2의 서버에 연결
 
@@ -92,6 +92,6 @@ SQL Server를 사용할 때는 항상 최신 버전의 SQL Server Management Stu
 - [SQL Server Management Studio 사용](https://msdn.microsoft.com/en-us/library/ms174173.aspx)
 - [SSMS 사용 하 여 데이터베이스를 내보내고](sql-server-linux-migrate-ssms.md)
 - [자습서: SQL Server Management Studio](https://msdn.microsoft.com/en-us/library/bb934498.aspx)
-- [자습서: Transact-SQL 문 작성](https://msdn.microsoft.com/en-us/library/ms365303.aspx)
-- [서버 성능 및 작업 모니터링](https://msdn.microsoft.com/en-us/library/ms191511.aspx)
+- [자습서: Transact-SQL 문 작성](/sql-docs/docs/t-sql/tutorial-writing-transact-sql-statements)
+- [서버 성능 및 작업 모니터링](/sql-docs/docs/relational-databases/performance/server-performance-and-activity-monitoring)
 

@@ -15,11 +15,11 @@ caps.latest.revision: 17
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: a633c14ae598d3535acc4f721ae5ae392f91a6a2
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 95ed4009d425fbc3383812ba3689f4caff487cd7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -143,7 +143,7 @@ ms.lasthandoff: 08/09/2017
 |SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 및 구성을 위한 세부 단계|[Reporting Services SharePoint 2010 용 SharePoint 모드 설치](http://msdn.microsoft.com/en-us/47efa72e-1735-4387-8485-f8994fb08c8c) 및 [팜 &#40;에 추가 보고서 서버 추가 SSRS 확장 &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |보고서 서버를 추가하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 배포를 확대합니다.|[추가 보고서 서버를 팜에 &#40; 추가 SSRS 확장 &#41; ](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) 및 [SharePoint의 SQL Server BI 기능에 대 한 배포 토폴로지](http://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26)합니다.|  
 |보기용으로 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소 및 보고서 항목이 포함된 추가 SharePoint 웹 프런트 엔드를 추가합니다.|[팜에 추가 Reporting Services 웹 프런트 엔드 추가](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 경고 및 구독 기능에 대한 전자 메일을 구성합니다.|[Reporting Services 서비스 응용 프로그램에 대한 메일 구성&#40;SharePoint 2010 및 SharePoint 2013&#41;](https://msdn.microsoft.com/library/hh231673.aspx)|  
+|전자 메일에 대 한 구성 [! 포함[ssRSnoversion](/sql-docs/docs/reporting-services/install-windows/configure-e-mail-for-a-reporting-services-service-application)|  
 |TechNet Wiki에 있는 이 릴리스에 대한 최신 정보|[SQL Server 2012 Reporting Services 팁, 요령 및 문제 해결](http://go.microsoft.com/fwlink/?LinkId=221297)(영문)|  
 
 ## <a name="next-steps"></a>다음 단계
@@ -152,4 +152,4 @@ ms.lasthandoff: 08/09/2017
 [SharePoint 사이트의 보고서 뷰어 웹 파트](../../reporting-services/report-server-sharepoint/report-viewer-web-part-on-a-sharepoint-site.md)   
 [퀴즈: SharePoint 통합을 위한 SSRS 2012 구성](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

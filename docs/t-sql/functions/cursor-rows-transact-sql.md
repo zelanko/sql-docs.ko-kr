@@ -1,7 +1,7 @@
 ---
 title: '@@CURSOR_ROWS (Transact SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 08/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e3251891dfaa079933ea79c76154f76f7c2e148
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 10a3a6cabae8d25de670cbacb037a62f4c5a2d54
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cursorrows-transact-sql"></a>@@CURSOR_ROWS (Transact SQL)
+# <a name="x40x40cursorrows-transact-sql"></a>& #x 40; & #x 40; CURSOR_ROWS (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 현재 연결에 대해 열려 있는 마지막 커서에서 한정하는 행 수를 반환합니다. 성능 향상을 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 큰 키 집합과 정적 커서를 비동기식으로 채울 수 있습니다. @@CURSOR_ROWS 커서를 한 정하는 행 수가 @ 시간에 검색 됩니다 확인 하기 위해 호출할 수@CURSOR_ROWS 호출 됩니다.
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```
 @@CURSOR_ROWS  
 ```  
   

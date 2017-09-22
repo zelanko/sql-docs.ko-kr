@@ -1,7 +1,7 @@
 ---
 title: '@@DBTS (Transact SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 07/30/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,13 +23,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f044c71018186baaf2bd5c27076b78aae139b34f
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 4a90150c55cdeb89788fdb86faf8aef8a1efdcd2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="dbts-transact-sql"></a>@@DBTS (Transact SQL)
+# <a name="x40x40dbts-transact-sql"></a>& #x 40; & &#40;x; DBTS (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 현재 데이터베이스의 현재 **timestamp** 데이터 형식 값을 반환합니다. 이 타임스탬프는 데이터베이스에서 고유합니다.
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```
 @@DBTS  
 ```  
   

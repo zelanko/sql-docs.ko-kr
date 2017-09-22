@@ -15,11 +15,11 @@ caps.latest.revision: 9
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: aef6ef0fe1f32f015abe3b48177f6e4d3e45648d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: c13295c229dc4450b9661c25f86d7eacf669787d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="change-row-height-or-column-width-report-builder-and-ssrs"></a>행 높이 또는 열 너비 변경(보고서 작성기 및 SSRS)
@@ -70,11 +70,11 @@ ms.lasthandoff: 08/09/2017
 3.  열의 가장자리를 클릭한 상태로 왼쪽 또는 오른쪽으로 이동하여 열 너비를 조정합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블릭스 데이터 영역(보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd220587.aspx)   
- [테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS](https://msdn.microsoft.com/library/dd220511.aspx)   
+ [테이블 릭 스 데이터 영역 (보고서 작성기 및 SSRS)](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs)   
  [테이블 (보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)   
- [행렬 (보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd207149.aspx)   
- [목록 (보고서 작성기 및 SSRS)](https://msdn.microsoft.com/library/dd239330.aspx)   
+ [행렬 (보고서 작성기 및 SSRS)](/sql-docs/docs/reporting-services/report-design/create-a-matrix-report-builder-and-ssrs)   
+ [목록 (보고서 작성기 및 SSRS)](/sql-docs/docs/reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs)   
  [테이블, 행렬 및 목록 (보고서 작성기 및 SSRS)](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

@@ -4,16 +4,16 @@ description: "이 빠른 시작 자습서에는 SQL Server 2017 SUSE Linux Enter
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: d454dca437f64a73879ed689fce1100c74a6fcde
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 57be01c49643bafada701849a32b532679513c71
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
@@ -72,7 +72,11 @@ SLES에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령�
    systemctl status mssql-server
    ```
 
-1. 원격으로 연결 하려면 방화벽에서 SQL Server TCP 포트 (기본값 1433)를 열려고 할 수도 있습니다.
+1. 원격으로 연결 하려면 방화벽에서 SQL Server TCP 포트 (기본값 1433)를 열려고 할 수도 있습니다. 편집 해야 하는 경우 SuSE 방화벽을 사용 하 여 **/etc/sysconfig/SuSEfirewall2** 구성 파일입니다. 수정 된 **FW_SERVICES_EXT_TCP** SQL Server 포트 번호를 포함 하는 항목입니다.
+
+   ```
+   FW_SERVICES_EXT_TCP="1433"
+   ```
 
 이 시점에서 SQL Server SLES 컴퓨터에서 실행 되 고 사용할 준비가 되었습니다!
 

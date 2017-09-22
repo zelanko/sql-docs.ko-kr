@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 81b5951a4f4a79d7d56fbf01af3fc1cef247510c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>작업에 입 / 출력 (SQL 빠른 시작에서 R)
 
-SQL Server에서 R 코드를 실행 하려는 경우 R 스크립트는 시스템 저장 프로시저에서 래핑해야 [sp_execute_external_script](https://msdn.microsoft.com/library/mt604368.aspx)합니다. 이 저장 프로시저는 SQL Server의 컨텍스트에서 R 런타임을 시작하는 데 사용되어 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트로 반환합니다.
+SQL Server에서 R 코드를 실행 하려는 경우 R 스크립트는 시스템 저장 프로시저에서 래핑해야 [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)합니다. 이 저장 프로시저는 SQL Server의 컨텍스트에서 R 런타임을 시작하는 데 사용되어 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트로 반환합니다.
 
 ## <a name="bkmk_SSMSBasics"></a>몇 가지 간단한 테스트 데이터 만들기
 
@@ -143,5 +143,5 @@ EXECUTE sp_execute_external_script
 
 R과 SQL 간 테이블 형식 데이터의 암시적 변환 및 차이점을 포함하여 R과 SQL Server 간에 데이터를 전달할 때 발생할 수 있는 몇 가지 문제를 살펴보겠습니다.
 
-[R 및 SQL 데이터 형식과 데이터 개체](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
+[R 및 SQL 데이터 형식 및 데이터 개체](../tutorials/rtsql-r-and-sql-data-types-and-data-objects.md)
 

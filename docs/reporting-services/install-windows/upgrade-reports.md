@@ -24,11 +24,11 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 5c6265fd62ae10a8037b0fbd1f7d26edb5de8bc9
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 56ab6a26866958c27b5fc4895fae24316e8a3517
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/09/2017
   
  로컬 또는 보고서 서버에서 보고서를 업그레이드한 후 추가적인 오류, 경고 및 메시지가 나타날 수 있습니다. 이것은 내부 보고서 개체 모델 및 처리 구성 요소가 변경됨에 따라 보고서에서 근본적인 문제를 감지하고 메시지를 표시하기 때문입니다. 자세한 내용은 참조 [Reporting Services Backward Compatibility][](../../reporting-services/reporting-services-backward-compatibility.md "이전 버전과 호환성 | Reporting Services")합니다.  
   
- 에 대 한 새로운 기능에 대 한 자세한 내용은 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)], 참조 [Reporting Services의 새로운](https://msdn.microsoft.com/library/ms170438.aspx)합니다.  
+ 에 대 한 새로운 기능에 대 한 자세한 내용은 [! 포함[ssRSCurrent](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)합니다.  
 
 ##  <a name="bkmk_versionsupported"></a> 업그레이드 가능한 버전  
  이전 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서 만든 보고서는 업그레이드할 수 있습니다. 여기에는 다음과 같은 버전이 포함됩니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 08/09/2017
   
  이전 네임스페이스용으로 만든 보고서의 .rdl 파일을 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 열면 자동으로 백업 파일이 만들어지고 보고서가 현재 네임스페이스로 업그레이드됩니다. 이 방법은 보고서 정의 파일을 업그레이드할 수 있는 유일한 방법입니다.  
   
- 설정한 배포 속성은 보고서 정의 파일이 저장된 스키마에 영향을 줄 수 있습니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)을 참조하세요.  
+ 설정한 배포 속성은 보고서 정의 파일이 저장된 스키마에 영향을 줄 수 있습니다. 자세한 내용은 [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)에 포함되지 않습니다.  
   
  이전 버전의에서 만든.rdl 파일을 업로드할 수 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 새 버전은 자동으로 처음 사용할 때 업그레이드 합니다. 보고서 서버는 보고서 정의 파일을 원래 형식으로 저장합니다. 보고서는 처음 볼 때 자동으로 업그레이드되지만 저장된 보고서 정의 파일은 변경되지 않은 상태로 유지됩니다.  
   
@@ -138,7 +138,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **아니요** 보고서에서 CRI를 변환하지 않으려면 **아니요** 를 선택합니다. 이러한 CRI는 현재 버전의 보고서 처리기에서는 표시할 수 없습니다. 시스템 관리자가 새 보고서 정의 형식과 호환되는 타사 소프트웨어 공급업체가 제공하는 새 버전의 CRI를 설치하려는 경우에는 **아니요**를 선택해야 합니다. 새 버전을 사용할 수 있을 때까지 보고서에 CRI가 빨간색 X가 있는 비어 있는 입력란으로 표시됩니다.  
   
- 두 경우 모두 보고서는 새 보고서 정의 형식으로 업그레이드 되며 원래 보고서의 백업 복사본으로 저장 됩니다  *\<보고서 이름 >* `-` Backup.rdl 합니다. 보고서를 보고서 작성 도구에 저장하는 경우 업그레이드된 보고서가 새 보고서 정의 형식으로 저장됩니다. 보고서를 게시하는 경우 보고서는 컴퓨터에 먼저 저장된 다음 보고서 서버에 게시됩니다. 업그레이드된 버전의 보고서가 보고서 서버에 게시됩니다.  
+ 두 경우 모두 보고서는 새 보고서 정의 형식으로 업그레이드 되며 원래 보고서의 백업 복사본으로 저장 됩니다 * \<보고서 이름 >* `-` Backup.rdl 합니다. 보고서를 보고서 작성 도구에 저장하는 경우 업그레이드된 보고서가 새 보고서 정의 형식으로 저장됩니다. 보고서를 게시하는 경우 보고서는 컴퓨터에 먼저 저장된 다음 보고서 서버에 게시됩니다. 업그레이드된 버전의 보고서가 보고서 서버에 게시됩니다.  
   
  보고서를 저장하지 않는 경우 원래 보고서가 그대로 유지됩니다. 그러나 SQL Server 2016 버전에서이 보고서를 편집할 수 없습니다 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] 또는 보고서 제작 최신 보고서 정의 형식을 사용 하는 환경입니다. 계속 업로딩 하 여 원래 버전의 보고서를 실행할 수 있습니다는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 웹 포털을 사용 하 여 보고서 서버. 자세한 내용은 참조 [웹 포털](../../reporting-services/web-portal-ssrs-native-mode.md)합니다.  
   
@@ -153,4 +153,4 @@ ms.lasthandoff: 08/09/2017
 [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)   
 [보고서 서버 데이터베이스 업그레이드](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

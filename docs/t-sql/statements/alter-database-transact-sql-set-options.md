@@ -32,10 +32,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 802642d2c9ba70c2a8750dc0ed5536e198a33f6f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: d3e4af471573ffa2220eb9dfb1ee7a129899b5eb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL) 
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/01/2017
   
 -   [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 
--   [ALTER database&#40; Azure SQL 데이터베이스 &#41;](https://msdn.microsoft.com/library/mt574871.aspx) 
+-   [ALTER database&#40; Azure SQL 데이터베이스 &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database) 
 
 -   [ALTER database&#40; Azure SQL 데이터 웨어하우스 &#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)  
   
@@ -654,7 +654,7 @@ MULTI_USER
  FULL  
  FileTabl의 FILESTREAM 데이터에 대한 전체 비트랜잭션 액세스를 사용할 수 있습니다.  
   
- DIRECTORY_NAME =  *\<directory_name >*  
+ DIRECTORY_NAME = * \<directory_name >*  
  Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스 수준 디렉터리 이름 중에서 고유해야 합니다. 고유성을 비교할 때는 데이터 정렬 설정과 관계없이 대/소문자가 구분되지 않습니다. 데이터베이스에 FileTable을 만들기 전에 이 옵션을 설정해야 합니다.  
   
  **\<HADR_options >:: =**  
@@ -987,7 +987,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
   
- **char (*n*) * * 및  **이진 (*n*) * * null ANSI_PADDING이 설정 된 경우 열의 길이로 패딩 됩니다에 대 한 허용 하는 열 on으로 하지만 후행 공백 및 0이 잘립니다 ANSI_PADDING이 OFF입니다. **char (*n*) * * 및  **이진 (*n*) * * null을 허용 하지 않는 열은 항상 열 길이 채워집니다.  
+ **char (*n*) * * 및 * *이진 (*n*) * * null ANSI_PADDING이 설정 된 경우 열의 길이로 패딩 됩니다에 대 한 허용 하는 열 on으로 하지만 후행 공백 및 0이 잘립니다 ANSI_PADDING이 OFF입니다. **char (*n*) * * 및 * *이진 (*n*) * * null을 허용 하지 않는 열은 항상 열 길이 채워집니다.  
   
  SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_PADDING에 대한 기본 데이터베이스 수준 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 ANSI_PADDING을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
   

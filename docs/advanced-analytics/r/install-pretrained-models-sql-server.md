@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14789bafd555a4980875de78c85b32f535a8c0fe
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 컴퓨터를 설치 합니다.
@@ -37,8 +37,8 @@ R 서버에 대 한 별도 Windows 기반 설치를 실행 해야만 이러한 �
 
 현재 사용할 수 있는 모델은 감성 분석 및 이미지 분류에 대 한 심층 신경망 (DNN) 모델입니다. 모든 4 개의 미리 학습 된 모델 CNTK에 대해 학습 되었습니다. 각 네트워크의 구성 된 다음 참조 구현이 기반으로 합니다.
 
-+ Resnet 18
-+ Resnet 50
++ ResNet 18
++ ResNet 50
 + ResNet 101
 + AlexNet
 
@@ -133,3 +133,4 @@ R 서버에 대 한 별도 Windows 기반 설치를 실행 해야만 이러한 �
 이 샘플 분류에 대 한 미리 학습 된 모델의 사용을 보여 줍니다.
 
 [텍스트 Featurizer를 사용 하 여 의미 분석](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
+

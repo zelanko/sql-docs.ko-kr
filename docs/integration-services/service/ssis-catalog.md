@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: 82784542c0f6c21bf803590aa4af0ea7942516cf
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0d019b77e70316f3976a610cb399e270b54f52b6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 
@@ -394,7 +394,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="back-up-restore-and-move-the-ssis-catalog"></a>백업, 복원 및 SSIS 카탈로그를 이동 합니다.
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] SSISDB 데이터베이스를 포함합니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
+  [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 에는 SSISDB 데이터베이스가 포함되어 있습니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
   
  **SSISDB** 카탈로그는 사용자가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포한 패키지를 저장합니다. 카탈로그에 대한 자세한 내용은 [SSIS 카탈로그](../../integration-services/service/ssis-catalog.md)를 참조하세요.  
   
@@ -455,7 +455,7 @@ ms.lasthandoff: 08/03/2017
   
     ```  
   
-     로그인에는 Microsoft Win32 API와 같은 제한된 리소스에 대한 추가 액세스가 필요하기 때문에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
+     [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] CLR 저장 프로시저를 사용하려면 해당 로그인에 UNSAFE 권한을 부여해야 합니다. UNSAFE 코드 권한에 대한 자세한 내용은 [Creating an Assembly](../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)를 참조하십시오.  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -473,7 +473,7 @@ ms.lasthandoff: 08/03/2017
   
     -   [데이터베이스 복원&#40;옵션 페이지&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)  
   
-4.  [SSIS 데이터베이스를 백업하려면](#backup)에서 ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup 및 SSIS 서버 유지 관리 작업에 대해 만든 스크립트를 실행합니다. SQL Server 에이전트가 시작되었는지 확인합니다.  
+4.  [SSIS 데이터베이스를 백업하려면](#backup) 에서 ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup 및 SSIS 서버 유지 관리 작업에 대해 만든 스크립트를 실행합니다. SQL Server 에이전트가 시작되었는지 확인합니다.  
   
 5.  다음 문을 실행하여 sp_ssis_startup 프로시저가 자동 실행되도록 설정합니다. 자세한 내용은 [sp_procoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-procoption-transact-sql.md)을 참조하세요.  
   
@@ -485,7 +485,7 @@ ms.lasthandoff: 08/03/2017
   
 7.  다음 방법 중 하나를 사용하여 마스터 키를 복원합니다. 암호화에 대한 자세한 내용은 [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)을 참조하십시오.  
   
-    -   **방법 1**  
+    -   **메서드 1**  
   
          이미 데이터베이스 마스터 키에 대한 백업을 수행했고 마스터 키를 암호화하기 위해 사용된 암호를 갖고 있는 경우 이 방법을 사용합니다.  
   
@@ -503,7 +503,7 @@ ms.lasthandoff: 08/03/2017
         > [!NOTE]  
         >  데이터베이스 마스터 키가 아직 서비스 마스터 키로 암호화되지 않은 경우 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에 다음과 같은 경고 메시지가 표시됩니다. 경고 메시지를 무시합니다.  
         >   
-        >  **현재 마스터 키를 해독할 수 없습니다. FORCE 옵션이 지정되어 있어 오류가 무시되었습니다.**  
+        >  **현재 마스터 키를 해독할 수 없습니다. FORCE 옵션이 지정 되어 있어 오류가 무시 되었습니다.**  
         >   
         >  FORCE 인수는 현재 데이터베이스 마스터 키가 열려 있지 않더라도 복원 프로세스가 계속되도록 지정합니다. SSISDB 카탈로그의 경우 사용자가 데이터베이스를 복원 중인 인스턴스에서 데이터베이스 마스터 키가 아직 열려 있지 않으므로 이 메시지가 표시됩니다.  
   
@@ -563,7 +563,7 @@ ms.lasthandoff: 08/03/2017
      ![SSISDB 업그레이드 마법사에서 결과 검토](../../integration-services/service/media/ssisdb-upgrade-wizard-3.png "SSISDB 업그레이드 마법사에서 결과 검토")  
 
 ## <a name="always-on-for-ssis-catalog-ssisdb"></a>Always On SSIS 카탈로그 (SSISDB)에 대 한
-  Always On 가용성 그룹 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. 가용성 그룹은 함께 장애 조치(Failover)되는 사용자 데이터베이스(가용성 데이터베이스라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 자세한 내용은 [Always On 가용성 그룹](https://msdn.microsoft.com/library/hh510230.aspx)을 참조하세요.  
+  Always On 가용성 그룹 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. 가용성 그룹은 함께 장애 조치(Failover)되는 사용자 데이터베이스(가용성 데이터베이스라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 자세한 내용은 [Always On 가용성 그룹](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)을 참조하세요.  
   
  SSIS 카탈로그(SSISDB) 및 해당 콘텐츠(프로젝트, 패키지, 실행 로그 등)에 대한 고가용성을 제공하기 위해 Always On 가용성 그룹에 SSISDB 데이터베이스(다른 사용자 데이터베이스와 동일하게)를 추가할 수 있습니다. 장애 조치(Failover)가 발생하면 보조 노드 중 하나가 자동으로 새 주 노드가 됩니다.  
  
@@ -585,7 +585,7 @@ ms.lasthandoff: 08/03/2017
   
 2.  클러스터의 각 노드에 Integration Services 기능이 포함된 SQL Server 2016(SSIS)을 설치합니다.  
   
-3.  각 SQL Server 인스턴스에 대 한 Always On 가용성 그룹을 사용 합니다. 자세한 내용은 [Always On 가용성 그룹 활성화](https://msdn.microsoft.com/library/ff878259.aspx) 를 참조하세요.  
+3.  각 SQL Server 인스턴스에 대 한 Always On 가용성 그룹을 사용 합니다. 자세한 내용은 [Always On 가용성 그룹 활성화](/sql-docs/docs/database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server) 를 참조하세요.  
   
 ###  <a name="Firsttime"></a> Always On에 대한 SSIS 지원 구성  
   
@@ -607,12 +607,12 @@ ms.lasthandoff: 08/03/2017
   
 3.  **CLR 통합 사용**을 클릭합니다. 카탈로그에 CLR 저장 프로시저가 사용됩니다.  
   
-4.  **SQL Server 시작 시 Integration Services 저장 프로시저 자동 실행** 을 클릭하여 SSIS 서버 인스턴스를 다시 시작할 때마다 [catalog.startup](https://msdn.microsoft.com/library/hh230984.aspx) 저장 프로시저를 실행하도록 지정합니다. 저장 프로시저에서는 SSISDB 카탈로그에 대한 작업의 상태를 유지 관리합니다. SSIS 서버 인스턴스가 다운될 때 실행 중이었던 패키지의 상태를 수정합니다.  
+4.  **SQL Server 시작 시 Integration Services 저장 프로시저 자동 실행** 을 클릭하여 SSIS 서버 인스턴스를 다시 시작할 때마다 [catalog.startup](/sql-docs/docs/integration-services/system-stored-procedures/catalog-startup) 저장 프로시저를 실행하도록 지정합니다. 저장 프로시저에서는 SSISDB 카탈로그에 대한 작업의 상태를 유지 관리합니다. SSIS 서버 인스턴스가 다운될 때 실행 중이었던 패키지의 상태를 수정합니다.  
   
-5.  **암호**를 입력하고 **확인**을 클릭합니다. 암호는 카탈로그 데이터를 암호화하는 데 사용되는 데이터베이스 마스터 키를 보호합니다. 암호를 안전한 위치에 저장하십시오. 데이터베이스 마스터 키도 백업하는 것이 좋습니다. 자세한 내용은 [Back Up a Database Master Key](https://msdn.microsoft.com/library/aa337546.aspx)을 참조하세요.  
+5.  **암호**를 입력하고 **확인**을 클릭합니다. 암호는 카탈로그 데이터를 암호화하는 데 사용되는 데이터베이스 마스터 키를 보호합니다. 암호를 안전한 위치에 저장하십시오. 데이터베이스 마스터 키도 백업하는 것이 좋습니다. 자세한 내용은 [Back Up a Database Master Key](/sql-docs/docs/relational-databases/security/encryption/back-up-a-database-master-key)을 참조하세요.  
   
 ####  <a name="Step2"></a> 2단계: Always On 가용성 그룹에 SSISDB 추가  
- Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 가용성 그룹에 다른 사용자 데이터베이스를 추가하는 것과 거의 동일합니다. [가용성 그룹 마법사 사용](https://msdn.microsoft.com/library/hh403415.aspx)을 참조하세요.  
+ Always On 가용성 그룹에 SSISDB 데이터베이스를 추가하는 것은 가용성 그룹에 다른 사용자 데이터베이스를 추가하는 것과 거의 동일합니다. [가용성 그룹 마법사 사용](/sql-docs/docs/database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio)을 참조하세요.  
   
  **새 가용성 그룹** 마법사의 **데이터베이스 선택** 페이지에서 SSIS 카탈로그를 만드는 동안 지정한 암호를 제공해야 합니다.  
   

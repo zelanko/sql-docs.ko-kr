@@ -19,11 +19,11 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0498dfe642a927744c7a0b5c7cefb5803cb0d469
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
@@ -88,7 +88,7 @@ ms.lasthandoff: 08/09/2017
  기본 모드 보고서 서버의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일을 편집하는 방식으로 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 통해 메일 배달 확장 프로그램을 구성합니다. SharePoint 모드 보고서 서버의 경우에는 SharePoint 관리 페이지 및 PowerShell 스크립트에서 전자 메일 배달 확장 프로그램을 구성합니다.  
   
  
- 기본 모드 보고서 서버를 구성하는 방법은 [메일 설정 - Reporting Services 기본 모드(구성 관리자)](https://msdn.microsoft.com/library/ms189342.aspx)를 참조하세요.
+ 기본 모드 보고서 서버를 구성 하는 방법에 대 한 정보를 참조 하세요. [전자 메일 설정-Reporting Services 기본 모드 (구성 관리자)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
  
  
  SharePoint 모드 보고서 서버를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [태스크 및 권한](../../reporting-services/security/tasks-and-permissions.md)   
- [구독 및 배달 &#40; Reporting services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [데이터 기반 구독](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [역할 할당](../../reporting-services/security/role-assignments.md)  
   

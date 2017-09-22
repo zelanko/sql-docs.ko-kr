@@ -31,10 +31,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2be7d74bde1731e9b4312ec80eb8a9a75b0c4d70
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 49b2acefb625107a65ee8e88ae3f28fc6473851d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -177,10 +177,10 @@ sqlcmd
 **-j** 화면에 원시 오류 메시지를 출력합니다.
   
  **-K** *application_intent*  
- 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요.  
+ 서버에 연결할 때 응용 프로그램 작업 유형을 선언합니다. 현재 **ReadOnly**값만 지원됩니다. **-K** 를 지정하지 않으면 sqlcmd 유틸리티가 Always On 가용성 그룹에 있는 보조 복제본에 연결할 수 없습니다. 자세한 내용은 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](/sql-docs/docs/database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups)을 참조하세요.  
   
  **-M** *multisubnet_failover*  
- 항상 지정 **-M** SQL Server 장애 조치 클러스터 인스턴스 또는 SQL Server 가용성 그룹의 가용성 그룹 수신기에 연결할 때. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M**이 지정되지 않으면 **-M**이 해제되어 있습니다. [!INCLUDE[ssHADR](../includes/sshadr-md.md)]에 대한 자세한 내용은 [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(Failover)(SQL Server)](https://msdn.microsoft.com/library/hh213417.aspx), [가용성 그룹의 생성 및 구성&#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치(Failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.comlibrary/ff929171.aspx) 및 [활성 보조: 읽기 가능한 보조 복제본(Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx)을 참조하세요.  
+ 항상 지정 **-M** SQL Server 장애 조치 클러스터 인스턴스 또는 SQL Server 가용성 그룹의 가용성 그룹 수신기에 연결할 때. **-M** 은 현재 활성 상태인 서버를 빠르게 검색하여 연결할 수 있도록 제공합니다. **–M** 이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [! 포함[ssHADR](/sql-docs/docs/database-engine/availability-groups/windows/listeners-client-connectivity-application-failover), [만들기 및 구성의 가용성 그룹 &#40; SQL Server &#41; ](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [장애 조치 클러스터링 및 Always On 가용성 그룹 (SQL Server)] (https://msdn.microsoft.comlibrary/ff929171.aspx, 및 [활성 보조: 읽기 가능한 보조 복제본 (Always On 가용성 그룹)](https://msdn.microsoft.com/library/ff878253.aspx.  
   
  **-N**  
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
@@ -215,11 +215,11 @@ sqlcmd
  **-S** [*protocol*:]*server*[**\\***instance_name*][**,***port*]  
  연결할 SQL Server의 인스턴스를 지정 합니다. **sqlcmd** 스크립팅 변수 SQLCMDSERVER를 설정합니다.  
   
- 지정 *server_name* 해당 서버 컴퓨터에서 SQL Server의 기본 인스턴스에 연결할 수 있습니다. 지정 *server_name* [  **\\**  *instance_name* ] 해당 서버 컴퓨터에서 SQL Server의 명명 된 인스턴스에 연결 합니다. 지정 된 서버 컴퓨터가 경우 **sqlcmd** 로컬 컴퓨터에서 SQL Server의 기본 인스턴스에 연결 합니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
+ 지정 *server_name* 해당 서버 컴퓨터에서 SQL Server의 기본 인스턴스에 연결할 수 있습니다. 지정 *server_name* [ ** \\ ** *instance_name* ] 해당 서버 컴퓨터에서 SQL Server의 명명 된 인스턴스에 연결 합니다. 지정 된 서버 컴퓨터가 경우 **sqlcmd** 로컬 컴퓨터에서 SQL Server의 기본 인스턴스에 연결 합니다. 네트워크의 원격 컴퓨터에서 **sqlcmd** 를 실행할 경우에는 이 옵션을 지정해야 합니다.  
   
  *protocol* 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다.  
   
- 지정 하지 않는 경우는 *server_name* [  **\\**  *instance_name* ] 시작할 때 **sqlcmd**, SQL Server에 대 한 확인 하 고 기본적으로 SQLCMDSERVER 환경 변수를 사용 하 여 합니다.  
+ 지정 하지 않는 경우는 *server_name* [ ** \\ ** *instance_name* ] 시작할 때 **sqlcmd**, SQL Server에 대 한 확인 하 고 기본적으로 SQLCMDSERVER 환경 변수를 사용 하 여 합니다.  
   
 > [!NOTE]  
 >  OSQLSERVER 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDSERVER 환경 변수는 OSQLSERVER 환경 변수보다 우선 적용됩니다. 따라서 **sqlcmd** 와 **osql** 을 문제 없이 함께 사용할 수 있으며 이전 스크립트를 계속 사용할 수 있습니다.  
@@ -336,7 +336,7 @@ sqlcmd
  이 옵션과 함께 **-b** 를 지정하면 오류가 발생하여 **sqlcmd** 가 종료됩니다. **-b** 에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
  **-t** *query_timeout*  
- 명령 또는 SQL 문 제한 시간(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDSTATTIMEOUT을 설정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다. *query**time_out* 은 1에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다.  
+ 명령 또는 SQL 문 제한 시간(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDSTATTIMEOUT을 설정합니다. *time_out* 값을 지정하지 않으면 명령이 무기한 실행됩니다. *query**time_out*은 1에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다.  
   
 > [!NOTE]  
 >  실제 제한 시간 값은 지정한 *time_out* 값과 몇 초 정도 차이가 날 수 있습니다.  
@@ -685,7 +685,7 @@ sqlcmd
   
  **기타 명령**  
   **:r \<** *filename***>**  
- 추가 Transact SQL 문을 구문 분석 및 **sqlcmd** 로 지정 된 파일에 포함 된 명령을  **\<**  *filename***>**캐시로 합니다.  
+ 추가 Transact SQL 문을 구문 분석 및 **sqlcmd** 로 지정 된 파일에 포함 된 명령을 ** \< ** *filename***>**캐시로 합니다.  
   
  파일을 따르지 하 여 TRANSACT-SQL 문을 포함 하는 경우 **이동**를 입력 해야 **이동** 뒤에 오는 줄에 **: r**합니다.  
   
@@ -700,7 +700,7 @@ sqlcmd
  **:Serverlist**  
  로컬로 구성된 서버와 네트워크상에서 브로드캐스팅하는 서버의 이름을 표시합니다.  
   
- **:Connect**  *server_name*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  *인스턴스에 연결하려면*[**\\***instance_name*] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server의 인스턴스에 연결합니다. 또한 현재 연결을 종료합니다.  
   
  제한 시간 옵션은 다음과 같습니다.  

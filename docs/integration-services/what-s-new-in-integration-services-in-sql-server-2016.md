@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 5e1127580ff900077fa3d36abcb339cce57857d2
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 82347011d4650d52cca30f43e87f7ba63eca9057
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2016"></a>기능 &#39;의 새로운 SQL Server 2016의에서 Integration Services
@@ -154,7 +154,7 @@ ms.lasthandoff: 08/21/2017
  자세한 내용은 참조 하십시오. [SSIS 카탈로그 &#40; SSISDB &#41; ](../integration-services/service/ssis-catalog.md). 
 
 ####  <a name="AlwaysOn"></a> SSIS 카탈로그에서 Always On 지원  
- Always On 가용성 그룹 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. 가용성 그룹은 함께 장애 조치(Failover)되는 사용자 데이터베이스(가용성 데이터베이스라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 자세한 내용은 [AlwaysOn 가용성 그룹](https://msdn.microsoft.com/library/hh510230.aspx)을 참조하세요.  
+ Always On 가용성 그룹 기능은 데이터베이스 미러링에 대한 엔터프라이즈 수준의 대안을 제공하는 고가용성 및 재해 복구 솔루션입니다. 가용성 그룹은 함께 장애 조치(Failover)되는 사용자 데이터베이스(가용성 데이터베이스라고 함)의 불연속 집합에 대한 장애 조치(Failover) 환경을 지원합니다. 자세한 내용은 [AlwaysOn 가용성 그룹](/sql-docs/docs/database-engine/availability-groups/windows/always-on-availability-groups-sql-server)을 참조하세요.  
   
  SQL Server 2016 SSIS 중앙 집중식된 SSIS 카탈로그 (예: SSISDB 사용자 데이터베이스)를 쉽게 배포할 수 있는 새로운 기능을 제공 합니다. SSIS 데이터베이스 및 해당 콘텐츠(프로젝트, 패키지, 실행 로그 등)에 대한 고가용성을 제공하려는 경우에는 다른 사용자 데이터베이스와 같은 방식으로 SSISDB 데이터베이스를 AlwaysOn 가용성 그룹에 추가할 수 있습니다. 장애 조치(Failover)가 발생하면 보조 노드 중 하나가 자동으로 새 주 노드가 됩니다.  
   
@@ -313,7 +313,7 @@ SQL Server 2016 서비스 팩 1을 설치하면 이제 OData 원본 및 OData �
 ### <a name="better-design-experience"></a>디자인 환경 향상
 
 ####  <a name="OneDesigner"></a> SSIS 디자이너에서 멀티 타기팅 및 다중 버전 지원  
- 이제 Visual Studio 2015용 SSDT(SQL Server Data Tools)에서 SSIS 디자이너를 사용하여 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 만들고, 유지 관리하고, 실행할 수 있습니다. SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요. 
+ 이제 Visual Studio 2015용 SSDT(SQL Server Data Tools)에서 SSIS 디자이너를 사용하여 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 만들고, 유지 관리하고, 실행할 수 있습니다. SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)를 참조하세요. 
 
  솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
    

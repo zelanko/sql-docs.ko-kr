@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
-ms.openlocfilehash: f564922466740d2410f686651d889e7a3fec5fe9
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: be817ff6961e68227cdae8aff14049b55652099c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>일반적인 문제를 SQL Server의 외부 스크립트 실행
@@ -64,7 +64,7 @@ SQL Server 신뢰할 수 있는 실행 패드 서비스는 실행 한 외부 스
 - 트래버스 검사 무시(SeChangeNotifyPrivilege)
 - 프로세스 (SeIncreaseQuotaSizePrivilege)에 대 한 메모리 할당량 조정
 
-이러한 사용자 권한에 대 한 내용은 "Windows 사용 권한 및 권한" 섹션을 참조 하십시오. [Windows 구성 서비스 계정 및 권한](https://msdn.microsoft.com/library/ms143504.aspx)합니다.
+이러한 사용자 권한에 대 한 내용은 "Windows 사용 권한 및 권한" 섹션을 참조 하십시오. [Windows 구성 서비스 계정 및 권한](/sql-docs/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions)합니다.
 
 > [!TIP]
 > SQL Server 진단에 대 한 지원 진단 플랫폼 (SDP) 도구를 사용 하 여는 잘 알고 있다면 MachineName_UserRights.txt 이름의 출력 파일을 확인 하려면 SDP를 사용할 수 있습니다.

@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: def6c774a66262f2baa7cdfc726a0ddf6c299075
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: 936a53d9174b199860432e0cfcb9c8add97529ca
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact SQL)
@@ -67,7 +67,7 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
   
 ![WITH 절에서 OPENJSON TVF에 대 한 구문](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON 사용 구문")
 
-*with_clause* 에 대 한 해당 형식 가진 열 목록이 포함 되어 **OPENJSON** 돌아갑니다. 기본적으로 **OPENJSON** 의 키와 일치 *jsonExpression* 에서 열 이름의 *with_clause*합니다. 열 이름에는 키 이름이 일치 하지 않으면를 제공할 수 있습니다는 선택적 *column_path*, 변수인는 [JSON 경로 식](../../relational-databases/json/json-path-expressions-sql-server.md) 내에서 키를 참조 하는 *jsonExpression*합니다. 
+*with_clause* 에 대 한 해당 형식 가진 열 목록이 포함 되어 **OPENJSON** 돌아갑니다. 기본적으로 **OPENJSON** 의 키와 일치 *jsonExpression* 에서 열 이름의 *with_clause* (이 경우 일치 하는 항목 키 있음을 의미 대/소문자 구분). 열 이름에는 키 이름이 일치 하지 않으면를 제공할 수 있습니다는 선택적 *column_path*, 변수인는 [JSON 경로 식](../../relational-databases/json/json-path-expressions-sql-server.md) 내에서 키를 참조 하는 *jsonExpression*합니다. 
 
 ## <a name="arguments"></a>인수  
 ### <a name="jsonexpression"></a>*jsonExpression*  

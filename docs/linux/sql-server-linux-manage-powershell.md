@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 75bbcf35ae4547c1ba2404324b31eeb4bdd7ea1e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e2c1a69f81bafe3f1165c50950bb10fbfc87b579
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Windows PowerShell을 사용 하 여 Linux에서 SQL Server 관리
@@ -24,7 +24,7 @@ ms.lasthandoff: 08/02/2017
 
 ## <a name="install-the-newest-version-of-sql-powershell-on-windows"></a>Windows에서 최신 버전의 SQL PowerShell 설치
 
-[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) windows에 포함 된 [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/en-us/library/hh213248.aspx)합니다. SQL Server를 사용할 때는 가장 최신 버전의 SSMS 및 SQL PowerShell를 항상 사용 해야 합니다. 최신 버전의 SSMS 지속적으로 업데이트 되 고 액세스에 최적화 된와 현재 SQL Server linux 2017 RC2 합니다. 참조를 다운로드 하 여 최신 버전을 설치 하려면 [SQL Server Management Studio 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)합니다. 최신 상태로 유지, 최신 버전의 SSMS 묻는 메시지를 다운로드 하는 새 버전이 있는 경우. 
+[SQL PowerShell](https://msdn.microsoft.com/en-us/library/mt740629.aspx) windows에 포함 된 [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/sql-server-management-studio-ssms)합니다. SQL Server를 사용할 때는 가장 최신 버전의 SSMS 및 SQL PowerShell를 항상 사용 해야 합니다. 최신 버전의 SSMS 지속적으로 업데이트 되 고 액세스에 최적화 된와 현재 SQL Server linux 2017 RC2 합니다. 참조를 다운로드 하 여 최신 버전을 설치 하려면 [SQL Server Management Studio 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)합니다. 최신 상태로 유지, 최신 버전의 SSMS 묻는 메시지를 다운로드 하는 새 버전이 있는 경우. 
 
 ## <a name="before-you-begin"></a>시작하기 전 주의 사항
 
@@ -71,7 +71,7 @@ SQL Server 2017 Linux에서 인스턴스에 연결의 서버 속성을 표시 �
 - 인스턴스를 만들고는 [서버](https://msdn.microsoft.com/en-us/library/microsoft.sqlserver.management.smo.server.aspx) 개체
 - 에 연결 된 **서버** 몇 가지 속성을 표시 하 고
 
-대체  **\<your_server_instance\>**  Linux에서 SQL Server 2017 RC2 인스턴스의 호스트 이름 또는 IP 주소입니다.
+대체 ** \<your_server_instance\> ** Linux에서 SQL Server 2017 RC2 인스턴스의 호스트 이름 또는 IP 주소입니다.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -111,7 +111,7 @@ HostDistribution : Ubuntu
 - 사용 하 여는 **Get SqlErrorLog** cmdlet의 SQL Server 2017 Linux 인스턴스에 연결 하 고 오류를 검색할 이후 로그 **어제**
 - 출력을 파이프는 **Out-gridview** cmdlet
 
-대체  **\<your_server_instance\>**  Linux에서 SQL Server 2017 RC2 인스턴스의 호스트 이름 또는 IP 주소입니다.
+대체 ** \<your_server_instance\> ** Linux에서 SQL Server 2017 RC2 인스턴스의 호스트 이름 또는 IP 주소입니다.
 
 ```powershell
 # Prompt for credentials to login into SQL Server
@@ -123,5 +123,5 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 ## <a name="see-also"></a>참고 항목
-- [SQL Server PowerShell](https://msdn.microsoft.com/en-us/library/hh245198.aspx)
+- [SQL Server PowerShell](/sql-docs/docs/relational-databases/scripting/sql-server-powershell)
 

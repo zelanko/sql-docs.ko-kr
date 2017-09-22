@@ -1,7 +1,7 @@
 ---
 title: '@@SERVICENAME (Transact SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -24,13 +24,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8e93602aed47f8b5147d39eaf41503488f57a855
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: d800a7dc222b3ac25777cd83964b755185817a7a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="servicename-transact-sql"></a>@@SERVICENAME (Transact SQL)
+# <a name="x40x40servicename-transact-sql"></a>& #x 40; & #x 40; SERVICENAME (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 실행되고 있는 레지스트리 키의 이름을 반환합니다. @@SERVICENAME 경우 'MSSQLSERVER'를 반환 합니다. 현재 인스턴스가 기본 인스턴스가;이 함수는 현재 인스턴스가 명명 된 인스턴스인 경우 인스턴스 이름을 반환 합니다.  
@@ -40,7 +40,6 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 @@SERVICENAME  
 ```  
   
@@ -70,3 +69,4 @@ MSSQLSERVER
  [데이터베이스 엔진 서비스 관리](../../database-engine/configure-windows/manage-the-database-engine-services.md)  
   
   
+

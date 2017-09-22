@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d642d8d9d732a51c210e5d83cecf2b090ac2f426
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b840ffc9c1cf621d1c59ee927fff26949b013c0d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installing-integration-services-versions-side-by-side"></a>여러 Integration Services 버전을 병렬로 설치
@@ -29,7 +29,7 @@ ms.lasthandoff: 08/03/2017
       [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Integration Services (SSIS)--와 함께 SSIS의 이전 버전입니다. 이 항목에서는 병렬 설치의 몇 가지 제한에 대해 설명합니다.  
   
 ## <a name="designing-and-maintaining-packages"></a>패키지 디자인 및 유지 관리  
- SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 디자인하고 유지 관리하려면 Visual Studio 2015dyd SSDT(SQL Server Data Tools)를 사용합니다. SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.  
+ SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로 하는 패키지를 디자인하고 유지 관리하려면 Visual Studio 2015dyd SSDT(SQL Server Data Tools)를 사용합니다. SSDT를 다운로드하려면 [최신 SQL Server Data Tools 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)를 참조하세요.  
   
  Integration Services 프로젝트의 속성 페이지에 있는 **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
   

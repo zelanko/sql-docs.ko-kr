@@ -48,10 +48,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bfe0bfe90cfb8a168fd2c87d662ba978c12a898e
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 68aa9ada24b5bcf1dedf7ff8d60d5fad31d68126
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
@@ -251,7 +251,7 @@ PARTITION
    
 **적용 대상**: Azure SQL 데이터베이스 및 SQL Server (SQL Server 2008부터 시작)입니다.  
   
- SORT_IN_TEMPDB, MAXDOP 및 DATA_COMPRESSION은 단일 파티션을 다시 작성할 때 지정할 수 있는 옵션 (파티션 =  *n* ). 단일 파티션 다시 작성 작업에는 XML 인덱스를 지정할 수 없습니다.  
+ SORT_IN_TEMPDB, MAXDOP 및 DATA_COMPRESSION은 단일 파티션을 다시 작성할 때 지정할 수 있는 옵션 (파티션 = * n *). 단일 파티션 다시 작성 작업에는 XML 인덱스를 지정할 수 없습니다.  
   
  DISABLE  
  인덱스를 비활성 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용할 수 없음으로 표시합니다. 모든 인덱스를 비활성화할 수 있습니다. 비활성 인덱스의 인덱스 정의는 기본 인덱스 데이터 없이 시스템 카탈로그에 유지됩니다. 클러스터형 인덱스를 비활성화하면 사용자가 기본 테이블 데이터에 액세스하지 못합니다. 인덱스를 활성화하려면 ALTER INDEX REBUILD 또는 CREATE INDEX WITH DROP_EXISTING을 사용합니다. 자세한 내용은 참조 [사용 하지 않도록 설정 하는 인덱스 및 제약 조건](../../relational-databases/indexes/disable-indexes-and-constraints.md) 및 [Enable Indexes and Constraints](../../relational-databases/indexes/enable-indexes-and-constraints.md)합니다.  
@@ -356,7 +356,7 @@ FILLFACTOR = *fillfactor*
   
  자세한 내용은 참조 [인덱스에 대 한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)합니다.  
   
- IGNORE_DUP_KEY  **=**  {ON | OFF}  
+ IGNORE_DUP_KEY ** = ** {ON | OFF}  
  삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. 기본값은 OFF입니다.  
   
  ON  
@@ -371,7 +371,7 @@ FILLFACTOR = *fillfactor*
   
  이전 버전과 호환되는 구문에서 WITH IGNORE_DUP_KEY는 WITH IGNORE_DUP_KEY = ON과 같습니다.  
   
- STATISTICS_NORECOMPUTE  **=**  {ON | OFF}  
+ STATISTICS_NORECOMPUTE ** = ** {ON | OFF}  
  배포 통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
  ON  
@@ -407,7 +407,7 @@ FILLFACTOR = *fillfactor*
  
 **적용 대상**: Azure SQL 데이터베이스 및 SQL Server (SQL Server 2014부터 시작)입니다.  
   
- 온라인  **=**  {ON | **OFF** } \<rebuild_index_option에 적용 >  
+ 온라인 ** = ** {ON | **OFF** } \<rebuild_index_option에 적용 >  
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.  
   
  XML 인덱스 또는 공간 인덱스의 경우 ONLINE = OFF만 지원되며 ONLINE을 ON으로 설정하면 오류가 발생합니다.  
@@ -431,9 +431,9 @@ FILLFACTOR = *fillfactor*
   
 -   분할된 인덱스의 하위 집합(분할된 전체 인덱스를 온라인으로 다시 작성할 수 있음)  
 
--  SQL 데이터베이스 V12, 이전 버전 및 SQL Server 2012 이전의 SQL Server를 허용 하지 않습니다는 `ONLINE` 클러스터형된 인덱스 작성에 대 한 다시 실행 하거나 기본 테이블을 포함 하는 경우 작업을 다시 작성 **varchar (max)** 또는 **varbinary (max)**  열입니다.
+-  SQL 데이터베이스 V12, 이전 버전 및 SQL Server 2012 이전의 SQL Server를 허용 하지 않습니다는 `ONLINE` 클러스터형된 인덱스 작성에 대 한 다시 실행 하거나 기본 테이블을 포함 하는 경우 작업을 다시 작성 **varchar (max)** 또는 **varbinary (max) ** 열입니다.
 
-다시 시작 가능한  **=**  {ON | **OFF**}
+다시 시작 가능한 ** = ** {ON | **OFF**}
 
 **적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작  
 
@@ -443,13 +443,13 @@ FILLFACTOR = *fillfactor*
 
  인덱스 해제 작업을 다시 시작할 수 없습니다.
 
-MAX_DURATION  **=**  *시간* [**분**] 사용한 **다시 시작 가능 = ON** (필요 **에ONLINE=**).
+MAX_DURATION ** = ** *시간* [**분**] 사용한 **다시 시작 가능 = ON** (필요 **에ONLINE=**).
  
 **적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작  
 
 시간을 나타냅니다 (분 단위로 지정 된 정수 값)를 다시 시작 가능한 온라인 인덱스 작업을 일시 중지 하기 전에 실행 됩니다. 
 
-ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
+ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}  
  
 **적용 대상**: Azure SQL 데이터베이스 및 SQL Server (SQL Server 2008부터 시작)입니다.  
   
@@ -461,7 +461,7 @@ ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}
  OFF  
  행 잠금이 사용되지 않습니다.  
   
-ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}  
+ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}  
   
 **적용 대상**: Azure SQL 데이터베이스 및 SQL Server (SQL Server 2008부터 시작)입니다.
   
@@ -476,7 +476,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
 > [!NOTE]
 >  ALLOW_PAGE_LOCKS가 OFF로 설정되면 인덱스를 다시 구성할 수 없습니다.  
   
- MAXDOP  **=**  max_degree_of_parallelism  
+ MAXDOP ** = ** max_degree_of_parallelism  
  
 **적용 대상**: Azure SQL 데이터베이스 및 SQL Server (SQL Server 2008부터 시작)입니다.  
   
@@ -501,7 +501,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
 > [!NOTE]
 >  병렬 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- COMPRESSION_DELAY  **=**  { **0** |*기간 [분]* }  
+ COMPRESSION_DELAY ** = ** { **0** |*기간 [분]* }  
  이 기능은 SQL Server 2016부터 사용할 수  
   
  디스크 기반 테이블에 대 한 지연 SQL Server는 압축 된 행 그룹으로 압축할 수 전에 델타 행 그룹에 델타 행 그룹을 CLOSED 상태에서 유지 되어야 하는 시간 (분)의 최소 수를 지정 합니다. 디스크 기반 테이블에서 insert를 관리 하 고 업데이트할 하지 이후 시간에 개별 행을 SQL Server에 적용 됩니다 지연 CLOSED 상태에서 델타 행 그룹입니다.  
@@ -564,7 +564,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );  
 ```  
   
- 온라인  **=**  {ON | **OFF** } \<single_partition_rebuild_index_option에 적용 >  
+ 온라인 ** = ** {ON | **OFF** } \<single_partition_rebuild_index_option에 적용 >  
  여부 인덱스 또는 테이블의 인덱스 파티션을 다시 작성할 수 있습니다 온라인 또는 오프 라인으로 지정 합니다. 경우 **다시 작성** 온라인으로 수행 됨 (**ON**)이이 테이블의 데이터를 인덱스 작업 중 쿼리 및 데이터 수정을 위해 사용할 수 있습니다.  기본값은 **OFF**합니다.  
   
  ON  
@@ -580,7 +580,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
  
 **적용 대상**: Azure SQL 데이터베이스 및 SQL Server (SQL Server 2014부터 시작)입니다.
   
- 온라인 인덱스 다시 작성에서 이 테이블의 차단 작업을 대기해야 합니다. **WAIT_AT_LOW_PRIORITY** 온라인 인덱스 다시 작성 작업은 다른 작업을 온라인 인덱스 작성 작업을 대기 하는 동안 진행할 수 있도록 하는 낮은 우선 순위 잠금을 대기 함을 나타냅니다. 생략 된 **WAIT AT LOW PRIORITY** 옵션은 `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`합니다. 자세한 내용은 참조 [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx)합니다. 
+ 온라인 인덱스 다시 작성에서 이 테이블의 차단 작업을 대기해야 합니다. **WAIT_AT_LOW_PRIORITY** 온라인 인덱스 다시 작성 작업은 다른 작업을 온라인 인덱스 작성 작업을 대기 하는 동안 진행할 수 있도록 하는 낮은 우선 순위 잠금을 대기 함을 나타냅니다. 생략 된 **WAIT AT LOW PRIORITY** 옵션은 `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`합니다. 자세한 내용은 참조 [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)합니다. 
   
  MAX_DURATION = *시간* [**분**]  
   
@@ -618,7 +618,7 @@ WAIT_AT_LOW_PRIORITY 사용한 **다시 시작 가능 = ON** 및 **ONLINE = ON**
   
 **적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서)로 시작
   
- 이 테이블에 대 한 차단 작업을 대기 하는 일시 중지 한 후 온라인 인덱스 다시 작성을 다시 시작 합니다. **WAIT_AT_LOW_PRIORITY** 온라인 인덱스 다시 작성 작업은 다른 작업을 온라인 인덱스 작성 작업을 대기 하는 동안 진행할 수 있도록 하는 낮은 우선 순위 잠금을 대기 함을 나타냅니다. 생략 된 **WAIT AT LOW PRIORITY** 옵션은 `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`합니다. 자세한 내용은 참조 [WAIT_AT_LOW_PRIORITY](https://msdn.microsoft.com/library/ms188388.aspx)합니다. 
+ 이 테이블에 대 한 차단 작업을 대기 하는 일시 중지 한 후 온라인 인덱스 다시 작성을 다시 시작 합니다. **WAIT_AT_LOW_PRIORITY** 온라인 인덱스 다시 작성 작업은 다른 작업을 온라인 인덱스 작성 작업을 대기 하는 동안 진행할 수 있도록 하는 낮은 우선 순위 잠금을 대기 함을 나타냅니다. 생략 된 **WAIT AT LOW PRIORITY** 옵션은 `WAIT_AT_LOW_PRIORITY (MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`합니다. 자세한 내용은 참조 [WAIT_AT_LOW_PRIORITY](/sql-docs/docs/t-sql/statements/alter-index-transact-sql)합니다. 
 
 
 일시 중지

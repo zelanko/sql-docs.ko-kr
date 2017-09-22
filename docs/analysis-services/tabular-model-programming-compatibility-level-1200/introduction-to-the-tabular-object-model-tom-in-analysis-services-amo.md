@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8254d5d5d492815805d9b2132dcf77ee8727f879
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2f9e5d07831070ad69ccf23a3975fbdc19fa4c83
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="introduction-to-the-tabular-object-model-tom-in-analysis-services-amo"></a>Analysis Services AMO의에서 테이블 형식 개체 모델 (TOM) 소개
@@ -51,17 +51,17 @@ TOM와 같은 기본 테이블 형식 메타 데이터를 노출 **모델**, **�
 이 작업은 몇 가지 유용한 합니다.
 모든 테이블 형식 메타 데이터에 지정 되지 않은 개체를 관리 하는 경우 첫 번째 (같은 **서버** 또는 **데이터베이스**), 이러한 개체를 설명 하는 기존 AMO 스택의 여러 부분에 필요 합니다. 레거시 API 개체의 상태는 서버 또는 서버에 저장 하는 경우 검색 된 것으로 세부적인 설명을 제공 하는 주요 및 보조 개체의 개념이입니다. Microsoft.AnalysisServices 네임 스페이스 아래의 MajorObject 클래스에 대 한 메서드를 노출 **새로 고침** 및 **업데이트**합니다. 보조 개체는 새로 고침만 또는 주요 개체를 통해 저장 된 테이블이 포함 된 합니다.
 
-테이블 형식 메타 데이터의 일부인 개체를 관리 하는 반면 경우 (같은 **모델** 또는 **테이블**)를 완전히 새 테이블 형식 스택을 활용 합니다. 이 스택 내에서 업데이트는 세분화 된 되므로 모든 메타 데이터 개체 (에서 파생 된는 **MetadataObject** Microsoft.AnalysisServices.Tabular 네임 스페이스 아래의 클래스) 서버에 개별적으로 저장할 수 있습니다. 전체 검색은 일반적으로 **모델**, 다음 그 아래에서 개별 메타 데이터 개체를 변경 합니다 (예: **테이블** 또는 **열**), 호출  **Model.SaveChanges()** 메서드 (세분화 된 수준에서 사용자가 변경한 내용이 이해), 명령을 변경 하는 개체에 대해서만 업데이트 하도록 서버에 전송 합니다.
+테이블 형식 메타 데이터의 일부인 개체를 관리 하는 반면 경우 (같은 **모델** 또는 **테이블**)를 완전히 새 테이블 형식 스택을 활용 합니다. 이 스택 내에서 업데이트는 세분화 된 되므로 모든 메타 데이터 개체 (에서 파생 된는 **MetadataObject** Microsoft.AnalysisServices.Tabular 네임 스페이스 아래의 클래스) 서버에 개별적으로 저장할 수 있습니다. 전체 검색은 일반적으로 **모델**, 다음 그 아래에서 개별 메타 데이터 개체를 변경 합니다 (예: **테이블** 또는 **열**), 호출 ** Model.SaveChanges()** 메서드 (세분화 된 수준에서 사용자가 변경한 내용이 이해), 명령을 변경 하는 개체에 대해서만 업데이트 하도록 서버에 전송 합니다.
 
 ### <a name="tom-and-xmla"></a>TOM 및 XMLA
 
-통신 중에 TOM Analysis Services 서버와 통신 하 고 개체를 관리 하는 XMLA 프로토콜을 사용 합니다. TOM 사용 하 여 표 형식이 아닌 개체를 관리 하는 경우 [ASSL](https://msdn.microsoft.com/library/ms128525.aspx), XMLA의 Analysis Services Scripting Language 확장 합니다. 테이블 형식 개체를 관리 하는 경우 TOM는 SSAS 테이블 형식 프로토콜 사용도 XMLA의 확장 합니다. 참조 [MS-SSAS-T SQL Server Analysis Services 테이블 프로토콜 설명서](https://msdn.microsoft.com/library/mt719260.aspx) 자세한 정보에 대 한 합니다.
+통신 중에 TOM Analysis Services 서버와 통신 하 고 개체를 관리 하는 XMLA 프로토콜을 사용 합니다. TOM 사용 하 여 표 형식이 아닌 개체를 관리 하는 경우 [ASSL](/sql-docs/docs/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla), XMLA의 Analysis Services Scripting Language 확장 합니다. 테이블 형식 개체를 관리 하는 경우 TOM는 SSAS 테이블 형식 프로토콜 사용도 XMLA의 확장 합니다. 참조 [MS-SSAS-T SQL Server Analysis Services 테이블 프로토콜 설명서](https://msdn.microsoft.com/library/mt719260.aspx) 자세한 정보에 대 한 합니다.
 
 ### <a name="tom-and-json"></a>TOM 및 JSON
 
-JSON 문서도 구조화 된 테이블 형식 메타 데이터에는 새 명령 및 개체 모델 정의 구문을 통해 테이블 형식 모델 스크립팅 언어 [TMSL](https://msdn.microsoft.com/library/mt614797.aspx)합니다. 스크립트 언어의 요청 및 응답 본문에 대 한 JSON을 사용합니다.
+JSON 문서도 구조화 된 테이블 형식 메타 데이터에는 새 명령 및 개체 모델 정의 구문을 통해 테이블 형식 모델 스크립팅 언어 [TMSL](/sql-docs/docs/analysis-services/tabular-model-scripting-language-tmsl-reference)합니다. 스크립트 언어의 요청 및 응답 본문에 대 한 JSON을 사용합니다.
 
-TMSL와 TOM 모두 동일한 개체를 노출 하지만 (**테이블**, **열**, 등)와 서비스가 동일한 작업 (**만들기**, **삭제**,  **새로 고침**), TOM TMSL (MS SSAS 테이블 형식 프로토콜 대신 사용, 설명한 것 처럼)는 통신 중에 사용 하지 않습니다.
+TMSL와 TOM 모두 동일한 개체를 노출 하지만 (**테이블**, **열**, 등)와 서비스가 동일한 작업 (**만들기**, **삭제**, ** 새로 고침**), TOM TMSL (MS SSAS 테이블 형식 프로토콜 대신 사용, 설명한 것 처럼)는 통신 중에 사용 하지 않습니다.
 
 사용자로 PowerShell, SQL Server Management Studio (SSMS) 또는 SQL Server 에이전트 작업을 통해 실행 되는 TMSL 스크립트를 통해 또는 C# 프로그램 또는 PowerShell 스크립트에서 TOM 라이브러리를 통해 테이블 형식 데이터베이스 관리를 선택할 수 있습니다.
 

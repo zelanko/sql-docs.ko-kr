@@ -1,19 +1,19 @@
 ---
 title: "Linux에서 SQL Server 설정 구성 | Microsoft Docs"
 description: "이 항목에서는 Linux에서 SQL Server 2017 설정을 구성 하는 mssql conf 도구를 사용 하는 방법을 설명 합니다."
-author: luisbosquez
-ms.author: lbosq
+author: rothja
+ms.author: jroth
 manager: jhubbard
-ms.date: 08/24/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 ms.translationtype: MT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: 5147b648f2b34496bc46f756639ded028b01fe0e
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 68b895f4497fc5e111bc346d01eb85f1bf0ab222
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql conf 도구와 함께 Linux에서 SQL Server 구성
@@ -53,7 +53,11 @@ ms.lasthandoff: 09/05/2017
 
 ## <a id="collation"></a>SQL Server 데이터 정렬 변경
 
-**데이터 정렬 설정** 지원 되는 데이터 정렬 중 하나에 있는 데이터 정렬 값을 변경 하는 옵션:
+**데이터 정렬 설정** 지원 되는 데이터 정렬 중 하나에 있는 데이터 정렬 값을 변경 하는 옵션입니다.
+
+1. 첫 번째 [모든 사용자 데이터베이스를 백업](sql-server-linux-backup-and-restore-database.md) 서버에 있습니다.
+
+1. 다음 사용 하 여는 [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) 저장 프로시저를 사용자 데이터베이스를 분리 합니다.
 
 1. 실행 된 **데이터 정렬 설정** 따르다 및 옵션:
 
@@ -61,7 +65,9 @@ ms.lasthandoff: 09/05/2017
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. Mssql conf 유틸리티는 지정 된 데이터 정렬을 사용 하 여 데이터베이스를 복원 하 고 서비스를 다시 시작 하려고 합니다. 오류가 있는 경우 롤백됩니다 데이터 정렬은 이전 값으로.
+1. Mssql conf 유틸리티는 지정 된 데이터 정렬 값으로 변경 하 고 서비스를 다시 시작 하려고 합니다. 오류가 있는 경우 롤백됩니다 데이터 정렬은 이전 값으로.
+
+1. 사용자 데이터베이스 백업을 복원 합니다.
 
 지원 되는 데이터 정렬 목록에 대 한 실행은 [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 함수: `SELECT Name from sys.fn_helpcollations()`합니다.
 

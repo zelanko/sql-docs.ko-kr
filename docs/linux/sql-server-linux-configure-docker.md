@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 693b994cd7e00e9db439a445fe0b692bc2d379d5
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 6a187e6ad238743d0643ef56b76ace7977def228
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker에서 SQL Server 2017 컨테이너 이미지를 구성 합니다.
@@ -96,13 +96,13 @@ Docker 같은 호스트 컴퓨터에서 여러 SQL Server 컨테이너를 실행
 다음 예제에서는 두 개의 SQL Server 컨테이너를 만들고 포트에서는 이러한 **1401** 및 **1402** 호스트 컴퓨터에 있습니다.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1402:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1402:1433 -d microsoft/mssql-server-linux
 ```
 
 이제 별도 컨테이너에서 실행 중인 SQL Server의 인스턴스 두 개가 있습니다. 클라이언트는 컨테이너에 대 한 Docker 호스트와 포트 번호의 IP 주소를 사용 하 여 각 SQL Server 인스턴스에 연결할 수 있습니다.
@@ -129,11 +129,11 @@ SQL Server 구성 변경 및 데이터베이스 파일에에서 유지 되는 �
 첫 번째 옵션은 호스트에 디렉터리를 컨테이너의 데이터 볼륨으로 탑재 합니다. 이 위해 사용 하 여는 `docker run` 명령에 `-v <host directory>:/var/opt/mssql` 플래그입니다. 따라서 데이터를 컨테이너 실행 간에 복원할 수 있습니다.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 또한이 기술을 공유 하 고 Docker 외부 호스트에서 파일을 볼 수 있습니다.
@@ -146,11 +146,11 @@ docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap
 두 번째 방법은 데이터 볼륨 컨테이너를 사용 하는 것입니다. 사용 하 여 호스트 디렉터리 대신 볼륨 이름을 지정 하 여 데이터 볼륨 컨테이너를 만들 수는 `-v` 매개 변수입니다. 다음 예제에서는 공유 데이터 볼륨 v **sqlvolume**합니다.
 
 ```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 ```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v sqlvolume:/var/opt/mssql -d microsoft/mssql-server-linux
 ```
 
 > [!NOTE]
@@ -170,6 +170,7 @@ docker volume ls
 > 컨테이너의 모든 SQL Server 데이터는 데이터 볼륨 컨테이너를 삭제 하면 *영구적으로* 삭제 합니다.
 
 ### <a name="backup-and-restore"></a>Backup 및 Restore 메서드
+
 이러한 컨테이너 기술 외에도 표준 SQL Server 백업을 사용 하 고 복원 기술 수도 있습니다. 데이터를 보호 하거나 데이터를 다른 SQL Server 인스턴스로 이동 하려면 백업 파일을 사용할 수 있습니다. 자세한 내용은 참조 [Linux에서 SQL Server 데이터베이스 백업 및 복원](sql-server-linux-backup-and-restore-database.md)합니다.
 
 > [!WARNING]
@@ -210,6 +211,8 @@ docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
 ```PowerShell
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog C:\Temp\errorlog
 ```
+
+## <a name="copy-files-into-a-container"></a>컨테이너에 파일을 복사 합니다.
 
 컨테이너에 파일을 복사 하려면 다음 명령을 사용 합니다.
 
@@ -310,14 +313,14 @@ Windows에서는 시작 하는 PowerShell 또는 관리자 권한으로 명령 �
 
 SQL Server 컨테이너 실행이 실패 하면 다음 테스트 하세요.
 
-- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시를 시작 하지 못했습니다: 수신 대기 tcp 0.0.0.0:1433 바인딩할: 이미 사용 중인 주소입니다.'** , 컨테이너 포트 1433은 이미 사용 하는 포트를 매핑하려면 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우에 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 모두 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 컨테이너 포트 1433 포트를 다른 호스트를 매핑하려면 매개 변수입니다. 예를 들어 
+- 와 같은 오류가 발생할 경우 **' 네트워크 브리지에서 CONTAINER_NAME 끝점을 만들지 못했습니다. 프록시를 시작 하지 못했습니다: 수신 대기 tcp 0.0.0.0:1433 바인딩할: 이미 사용 중인 주소입니다.' **, 컨테이너 포트 1433은 이미 사용 하는 포트를 매핑하려면 하려고 합니다. 이 호스트 컴퓨터에서 로컬로 SQL Server를 실행 하는 경우에 발생할 수 있습니다. 두 SQL Server 컨테이너를 시작 하 고 모두 동일한 호스트 포트 매핑을 시도 하는 경우에 발생할 수 있습니다. 사용 하 여 이런 경우는 `-p` 컨테이너 포트 1433 포트를 다른 호스트를 매핑하려면 매개 변수입니다. 예를 들어 
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" --cap-add SYS_PTRACE -p 1400:1433 -d microsoft/mssql-server-linux`.
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d microsoft/mssql-server-linux`.
     ```
 
 - 컨테이너에서 모든 오류 메시지 인지를 확인 합니다.
@@ -331,6 +334,14 @@ SQL Server 컨테이너 실행이 실패 하면 다음 테스트 하세요.
 - 모든 컨테이너 관리 소프트웨어를 사용 하는 경우 루트로 실행 중인 컨테이너 프로세스를 지원 하는지 확인 합니다. Sqlservr 프로세스 컨테이너의 루트로 실행합니다.
 
 - 검토는 [SQL Server 설치 프로그램 및 오류 로그](#errorlogs)합니다.
+
+### <a name="enable-dump-captures"></a>덤프 캡처를 사용 하도록 설정
+
+컨테이너 내에서 SQL Server 프로세스에 실패할 경우와 새 컨테이너를 만든 **SYS_PTRACE** 사용 하도록 설정 합니다. 이 예외에 덤프 파일을 만드는 데 필요한 프로세스를 추적 하는 Linux 기능을 추가 합니다. 덤프 파일 문제를 해결 하기 위해 지원에서 사용할 수 있습니다. 이 기능을 활성화 하는 다음 docker run 명령입니다.
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+```
 
 ### <a name="sql-server-connection-failures"></a>SQL Server 연결 실패
 

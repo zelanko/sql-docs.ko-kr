@@ -15,18 +15,18 @@ ms.author: v-chojas
 manager: jhubbard
 author: MightyPen
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e02c46bc1e068d75d9a67413f45b303616ccd82b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 2d0ac1f1a8e9a78539a2c7824f06d3ed3507c0b5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-131-for-sql-server"></a>Using Always Encrypted with the ODBC Driver 13.1 for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-이 문서를 사용 하 여 ODBC 응용 프로그램을 개발 하는 방법에 대해 설명 [상시 암호화 (데이터베이스 엔진)](https://msdn.microsoft.com/library/mt163865.aspx) 및 [for SQL Server ODBC Driver 13.1](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)합니다.
+이 문서를 사용 하 여 ODBC 응용 프로그램을 개발 하는 방법에 대해 설명 [상시 암호화 (데이터베이스 엔진)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) 및 [for SQL Server ODBC Driver 13.1](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)합니다.
 
-Always Encrypted를 사용하면 클라이언트 응용 프로그램이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. ODBC Driver 13.1 for SQL Server에서는이를 위해 투명 하 게 암호화 하 고 클라이언트 응용 프로그램의 중요 한 데이터를 암호 해독과 같은 상시 암호화 드라이버를 지원 합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](https://msdn.microsoft.com/library/mt163865.aspx)를 참조하세요.
+Always Encrypted를 사용하면 클라이언트 응용 프로그램이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. ODBC Driver 13.1 for SQL Server에서는이를 위해 투명 하 게 암호화 하 고 클라이언트 응용 프로그램의 중요 한 데이터를 암호 해독과 같은 상시 암호화 드라이버를 지원 합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)를 참조하세요.
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
@@ -240,7 +240,7 @@ while (SQL_SUCCEEDED(SQLFetch(hstmt)))
 
 ##### <a name="unsupported-data-type-conversion-errors"></a>지원되지 않는 데이터 형식 변환 오류
 
-상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 참조 [상시 암호화 (데이터베이스 엔진)](https://msdn.microsoft.com/library/mt163865.aspx) 자세한 목록은 지원 되는 형식 변환에 대 한 합니다. 데이터 형식 변환 오류를 방지 하려면 SQLBindParameter 암호화 된 열을 대상으로 하는 매개 변수와 함께 사용 하는 경우 다음 사항을 관찰 해야 있는지를 확인 합니다.
+상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 참조 [상시 암호화 (데이터베이스 엔진)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) 자세한 목록은 지원 되는 형식 변환에 대 한 합니다. 데이터 형식 변환 오류를 방지 하려면 SQLBindParameter 암호화 된 열을 대상으로 하는 매개 변수와 함께 사용 하는 경우 다음 사항을 관찰 해야 있는지를 확인 합니다.
 
 - 매개 변수의 SQL 형식을 하거나 정확히 대상 열의 형식과 동일 되었거나 열 형식으로 변환 하는 SQL 형식에서 사용할 수 있습니다.
 
@@ -284,7 +284,7 @@ string queryText = "SELECT [SSN], [FirstName], [LastName], [BirthDate] FROM [dbo
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>메타 데이터를 검색할 쿼리 매개 변수에 대 한 왕복 횟수를 제어 합니다.
 
-상시 암호화를 연결에 사용 하는 경우 ODBC Driver 13.1 기본적으로 SQL Server가에 대 한 호출 [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) 각 매개 변수가 있는 쿼리에 대 한 매개 변수 (없이 쿼리 문을 전달 SQL Server로 값). 이 저장된 프로시저 매개 변수를 암호화 해야 하는 경우 그리고 있다면 확인 하려면 쿼리 문을 분석 하 여, 드라이버를 암호화할 수 있도록 각 매개 변수에 대해 암호화 관련 정보를 반환 합니다. 위의 동작은 클라이언트 응용 프로그램에는 투명도 대 한 높은 수준의 보장: 응용 프로그램 (및 응용 프로그램 개발자)에 암호화 된 열을 대상으로 값이 전달 된으로 어떤 쿼리가 암호화 된 열 액세스 주의 해야 할 필요 하지 않습니다 매개 변수에서 드라이버입니다.
+상시 암호화를 연결에 사용 하는 경우 ODBC Driver 13.1 기본적으로 SQL Server가에 대 한 호출 [sys.sp_describe_parameter_encryption](/sql-docs/docs/relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql) 각 매개 변수가 있는 쿼리에 대 한 매개 변수 (없이 쿼리 문을 전달 SQL Server로 값). 이 저장된 프로시저 매개 변수를 암호화 해야 하는 경우 그리고 있다면 확인 하려면 쿼리 문을 분석 하 여, 드라이버를 암호화할 수 있도록 각 매개 변수에 대해 암호화 관련 정보를 반환 합니다. 위의 동작은 클라이언트 응용 프로그램에는 투명도 대 한 높은 수준의 보장: 응용 프로그램 (및 응용 프로그램 개발자)에 암호화 된 열을 대상으로 값이 전달 된으로 어떤 쿼리가 암호화 된 열 액세스 주의 해야 할 필요 하지 않습니다 매개 변수에서 드라이버입니다.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>문 별 동작을 항상 암호화
 
@@ -344,7 +344,7 @@ ODBC Driver 13.1 for SQL Server는 다음 기본 제공 키 저장소 공급자�
 |Azure Key Vault |저장소 Cmk를 Azure 키 자격 증명 모음 | `AZURE_KEY_VAULT` |Windows, Linux, macOS|
 |Windows 인증서 저장소|Windows 키 저장소에 Cmk를 로컬로 저장| `MSSQL_CERTIFICATE_STORE`|Windows|
 
-- 사용자 (또는 DBA)는 열 마스터 키 메타 데이터에 구성 된 공급자 이름이 올바른지와 열 마스터 키 경로 지정 된 공급자에 대 한 키 경로 형식을 준수 되도록 해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다.
+- 사용자 (또는 DBA)는 열 마스터 키 메타 데이터에 구성 된 공급자 이름이 올바른지와 열 마스터 키 경로 지정 된 공급자에 대 한 키 경로 형식을 준수 되도록 해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다.
 
 - 응용 프로그램 키 저장소에 키에 액세스할 수 있는지 확인 해야 합니다. 여기에 키 및/또는 키 저장소에 따라 키 저장소에 대 한 응용 프로그램 액세스 권한을 부여 하거나 다른 키 저장소 관련 구성 단계를 수행 포함 될 수 있습니다. 예를 들어 Azure 키 자격 증명 모음에 액세스 하려면 키 저장소에 올바른 자격 증명을 제공 합니다.
 
@@ -514,10 +514,10 @@ SQLRETURN SQLGetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>상시 암호화를 사용 하는 경우 ODBC 드라이버의 제한 사항
 
 ### <a name="bulk-copy-function-usage"></a>대량 복사 함수 사용
-사용은 [SQL 대량 복사 함수](https://msdn.microsoft.com/library/ms130792.aspx) 상시 암호화로 ODBC 드라이버를 사용 하는 경우 지원 되지 않습니다. SQL 대량 복사 함수와 함께 사용 되는 암호화 된 열에서 없습니다 투명 한 암호화/암호 해독이 발생 합니다.
+사용은 [SQL 대량 복사 함수](/sql-docs/docs/relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc) 상시 암호화로 ODBC 드라이버를 사용 하는 경우 지원 되지 않습니다. SQL 대량 복사 함수와 함께 사용 되는 암호화 된 열에서 없습니다 투명 한 암호화/암호 해독이 발생 합니다.
 
 ### <a name="asynchronous-operations"></a>비동기 작업
-ODBC 드라이버는 사용을 허용 하는 동안 [비동기 작업](https://msdn.microsoft.com/library/ms131658.aspx) 상시 암호화,이 생깁니다 성능에 영향 되는 작업에 항상 암호화를 사용 하도록 설정 합니다. 에 대 한 호출 `sys.sp_describe_parameter_encryption` 명령문을 차단 하 고 반환 하기 전에 메타 데이터를 반환 하는 서버에 대해 기다려야 하면 드라이버에 대 한 암호화 메타 데이터를 확인 하려면 `SQL_STILL_EXECUTING`합니다.
+ODBC 드라이버는 사용을 허용 하는 동안 [비동기 작업](/sql-docs/docs/relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel) 상시 암호화,이 생깁니다 성능에 영향 되는 작업에 항상 암호화를 사용 하도록 설정 합니다. 에 대 한 호출 `sys.sp_describe_parameter_encryption` 명령문을 차단 하 고 반환 하기 전에 메타 데이터를 반환 하는 서버에 대해 기다려야 하면 드라이버에 대 한 암호화 메타 데이터를 확인 하려면 `SQL_STILL_EXECUTING`합니다.
 
 ## <a name="always-encrypted-api-summary"></a>상시 암호화 API 요약
 
@@ -552,7 +552,7 @@ ODBC 드라이버는 사용을 허용 하는 동안 [비동기 작업](https://m
 
 ## <a name="see-also"></a>관련 항목:
 
-- [상시 암호화(데이터베이스 엔진)](https://msdn.microsoft.com/library/mt163865.aspx)
+- [상시 암호화(데이터베이스 엔진)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)
 - [상시 암호화 블로그](http://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 
 

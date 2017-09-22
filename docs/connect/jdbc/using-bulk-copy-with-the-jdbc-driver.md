@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f42cd86be5f91b54e0ae862bee0fa64fb483c27d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7069c168d1d144335ac0d1121158193127c67e75
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
@@ -858,7 +858,7 @@ public class Program
  다음 응용 프로그램에서는 SQLServerBulkCopy 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서 CSV 파일은 SQL Server AdventureWorks 데이터베이스의 Production.Product 테이블에서 내보낸 데이터를 데이터베이스의 유사한 테이블에 복사하는 데 사용됩니다.  
   
 > [!IMPORTANT]  
->  이 샘플을 만들지 않은 경우 작업 테이블에 설명 된 대로 실행 되지 것입니다 [테이블 설정](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup)합니다. 또한 Production.Product 테이블에서 내보낸 데이터로 CSV 파일을 만들어야 하며 이 작업은 SSMS(SQL Server Management Studio)를 사용하여 수행할 수 있습니다.  방문할 수 있는 경우 SSMS가 없는 [SQL Server Management Studio 다운로드](https://msdn.microsoft.com/library/mt238290.aspx) 를 가져오려고 합니다.  
+>  이 샘플을 만들지 않은 경우 작업 테이블에 설명 된 대로 실행 되지 것입니다 [테이블 설정](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) 를 가져오려고 합니다.  
   
 1.  열기 **SQL Server Management Studio** 및 AdventureWorks 데이터베이스가 있는 SQL Server에 연결 합니다.  
   

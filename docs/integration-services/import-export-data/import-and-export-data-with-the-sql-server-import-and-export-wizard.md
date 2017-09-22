@@ -28,10 +28,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
-ms.openlocfilehash: 22419ce21476588f4ff2859185c8b833306fa896
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 58908fc8a7b18cff36a41ee26e7a3eab8e84a5d0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="import-and-export-data-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기
@@ -41,11 +41,11 @@ ms.lasthandoff: 08/17/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사는 원본에서 대상으로 데이터를 복사하는 간단한 방법입니다. 이 개요에서는으로 마법사는 원본 및 대상으로 사용할 수 있는 데이터 원본 마법사를 실행 하려면 필요한 사용 권한을 설명 합니다.
 
 ## <a name="get-the-wizard"></a>가져오기 마법사
-마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
+마법사를 실행 하려고 하지만 없는 경우 [! 포함[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)합니다.
 
 ## <a name="what-happens-when-i-run-the-wizard"></a>마법사를 실행할 때 어떻게 될까요?
 -    **단계 목록을 참조 하십시오.** 마법사의 단계에 대 한 참조 [SQL Server 가져오기 및 내보내기 마법사의 단계를](../../integration-services/import-export-data/steps-in-the-sql-server-import-and-export-wizard.md)합니다. 마법사의 각 페이지에 대 한 설명서의 개별 페이지 이기도합니다.  
-    \-또는\-
+    \- 또는 \-
 -   **간단한 예를 참조 하십시오.** 일반적인 세션에서 여러 화면을 빠르게 확인에 대 한 살펴보세요이 간단한 종단 간 예제를 한 페이지- [가져오기 및 내보내기 마법사의이 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)합니다.  
 
 ##  <a name="wizardSources"></a>어떤 원본 및 대상을 사용할 수 있습니까?  

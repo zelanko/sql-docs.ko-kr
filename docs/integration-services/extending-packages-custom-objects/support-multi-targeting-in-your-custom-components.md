@@ -17,14 +17,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: bf7649b06354bfa621624ddfcf22bdea90bf0467
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 57ac95d7883ce47e1a39d4d50d3f60b968bccf21
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>사용자 지정 구성 요소에서 다중 대상 지정을 지원 합니다.
- 이제 사용할 수 있습니다 SSIS 디자이너 SQL Server Data Tools (SSDT) 만들기, 유지 관리 및 해당 대상 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012에는 패키지를 실행 합니다. Visual Studio 2015 용 SSDT를 다운로드 하려면 참조 [최신 SQL Server Data Tools 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)합니다. 
+ 이제 사용할 수 있습니다 SSIS 디자이너 SQL Server Data Tools (SSDT) 만들기, 유지 관리 및 해당 대상 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012에는 패키지를 실행 합니다. Visual Studio 2015 용 SSDT를 다운로드 하려면 참조 [최신 SQL Server Data Tools 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)합니다. 
 
  솔루션 탐색기에서 Integration Services 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성** 을 선택하여 프로젝트에 대한 속성 페이지를 엽니다. **구성 속성** 의 **일반**탭에서 **TargetServerVersion** 속성을 선택하고 SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 선택합니다.  
    

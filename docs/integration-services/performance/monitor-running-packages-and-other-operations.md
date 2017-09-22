@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
-ms.openlocfilehash: 411086a4a75b002faa7e07befa77e7277a494bab
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
@@ -123,7 +123,7 @@ ms.lasthandoff: 08/03/2017
  참조는 <xref:Microsoft.SqlServer.Management.IntegrationServices> 네임 스페이스 및 클래스입니다.  
 
 ## <a name="reports"></a> Reports for the Integration Services Server
-  현재 릴리스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 표준 보고서에서 사용할 수 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 모니터링 하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 배포 된 프로젝트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버입니다. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
+  현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다. 이러한 보고서는 패키지 상태 및 기록을 보고 필요한 경우 패키지 실행 실패 원인을 파악하는 데 도움이 됩니다.  
   
  각 보고서 페이지의 위쪽에서 뒤로 아이콘을 클릭하면 확인한 이전 페이지로 이동하고, 새로 고침 아이콘을 클릭하면 페이지에 표시된 정보가 새로 고쳐지며, 인쇄 아이콘을 사용하면 현재 페이지를 인쇄할 수 있습니다.  
   
@@ -174,7 +174,7 @@ ms.lasthandoff: 08/03/2017
  **모든 유효성 검사 보고서** 에는 서버에서 수행된 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 유효성 검사에 대한 요약 내용이 표시됩니다. 요약 내용으로는 상태, 시작 시간 및 종료 시간과 같은 각 유효성 검사에 대한 정보가 표시됩니다. 각 요약 항목에는 유효성 검사 중 생성된 메시지에 대한 링크가 포함됩니다. Integration Services 대시보드를 사용하는 경우와 마찬가지로 테이블에 필터를 적용하여 표시되는 정보를 좁힐 수 있습니다.  
   
 ### <a name="custom-reports"></a>사용자 지정 보고서  
- ****  Integration Services 카탈로그 **노드 아래의** SSISDB [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스 >.\< 소유자 >. \<개체 >. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
+ ** ** Integration Services 카탈로그 **노드 아래의** SSISDB [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스 >.\< 소유자 >. \<개체 >. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
   
 > [!NOTE]  
 >  **데이터베이스** 노드 아래의 **SSISDB** 노드에 사용자 지정 보고서를 추가한 경우에는 SSISDB 접두사가 필요하지 않습니다.  
@@ -182,7 +182,7 @@ ms.lasthandoff: 08/03/2017
  사용자 지정 보고서를 만들고 추가하는 방법은 [Add a Custom Report to Management Studio](http://msdn.microsoft.com/library/3cf8d726-0a90-4f80-98d0-352a2a59be0f)를 참조하십시오.  
 
 ## <a name="view-reports-for-the-integration-services-server"></a>Integration Services 서버용 보고서 보기
-  현재 릴리스에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 표준 보고서에서 사용할 수 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 모니터링 하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에 배포 된 프로젝트는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버입니다.  보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](#reports)를 참조하세요.  
+  현재 릴리스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서버에 배포된 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 모니터링하는 데 도움이 되는 표준 보고서를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 사용할 수 있습니다.  보고서에 대한 자세한 내용은 [Integration Services 서버를 위한 보고서](#reports)를 참조하세요.  
   
 ### <a name="to-view-reports-for-the-integration-services-server"></a>Integration Services 서버용 보고서를 보려면  
   
@@ -203,6 +203,6 @@ ms.lasthandoff: 08/03/2017
     -   **모든 연결**  
 
 ## <a name="see-also"></a>관련 항목:  
- [프로젝트 및 패키지 실행](https://msdn.microsoft.com/library/hh213290.aspx)   
- [패키지 실행 문제 해결 보고서](https://msdn.microsoft.com/library/gg471512.aspx)  
+ [프로젝트 및 패키지 실행](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
+ [패키지 실행 문제 해결 보고서](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
 

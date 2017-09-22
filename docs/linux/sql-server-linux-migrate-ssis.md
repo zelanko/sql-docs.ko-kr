@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dab69c7-73af-4340-aef0-de057356b791
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: d7317cad5aa1e77653431c128ce1549bc4349e18
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 736b7e0744a95d859bd25a6c7974dc13e79d4bb7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="extract-transform-and-load-data-on-linux-with-ssis"></a>추출, 변환 및 SSIS와 Linux에서 데이터 로드
@@ -79,10 +79,10 @@ SSIS에는 다음과 같은 기능이 포함 됩니다.
 - 다양 한 정리, 집계, 병합 및 데이터 복사를 위한 변환
 - 사용자 고유의 사용자 지정 스크립트 및 구성 요소와 SSIS를 확장 하기 위한 응용 프로그래밍 인터페이스 (Api)
 
-SSIS와 시작 하려면 최신 버전의 다운로드 [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md)합니다. 다음 자습서를 따라 [ETL 패키지를 만드는 방법을 SSIS](https://msdn.microsoft.com/en-us/library/ms169917.aspx)합니다.
+SSIS와 시작 하려면 최신 버전의 다운로드 [SQL Server Data Tools (SSDT)](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)합니다.
 
 ## <a name="see-also"></a>참고 항목
-- [SQL Server Integration Services에 대 한 자세한 정보](https://msdn.microsoft.com/en-us/library/ms141026.aspx)
-- [SQL Server Integration Services (SSIS) 개발 및 관리 도구](https://msdn.microsoft.com/en-us/library/ms140028.aspx)
-- [SQL Server Integration Services 자습서](https://msdn.microsoft.com/en-us/library/jj720568.aspx)
+- [SQL Server Integration Services에 대 한 자세한 정보](/sql-docs/docs/integration-services/sql-server-integration-services)
+- [SQL Server Integration Services (SSIS) 개발 및 관리 도구](/sql-docs/docs/integration-services/integration-services-ssis-development-and-management-tools)
+- [SQL Server Integration Services 자습서](/sql-docs/docs/integration-services/integration-services-tutorials)
 

@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: a4fa8a4080a8483aba8494dd1195c7fbb1aec67a
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7fc69e2d9a5e86e63ceb40e43befa65ab2cfdb7d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 bcp 사용 하 여 대량 복사 데이터
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 항목에서는 사용 하는 [bcp](https://msdn.microsoft.com/en-us/library/ms162802.aspx) 명령줄 유틸리티를 Linux에서 SQL Server 2017 rc2 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터 대량 복사 합니다.
+이 항목에서는 사용 하는 [bcp](/sql-docs/docs/tools/bcp-utility) 명령줄 유틸리티를 Linux에서 SQL Server 2017 rc2 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터 대량 복사 합니다.
 
 사용할 수 있습니다 `bcp` SQL Server 테이블로 많은 수의 행을 가져올 또는 SQL Server 테이블에서 데이터 파일로 데이터를 내보냅니다. Queryout 옵션은 함께 사용할 경우에 `bcp` Transact SQL을 알아야 합니다. `bcp` Linux, Windows 또는 Docker 및 Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에서 클라우드 나 온-프레미스를 실행 중인 Microsoft SQL Server와 함께 작동 하는 명령줄 유틸리티입니다.
 
@@ -136,8 +136,8 @@ cat ~/test_export.txt
 ```
 
 ## <a name="see-also"></a>참고 항목
-- [bcp 유틸리티](https://msdn.microsoft.com/en-us/library/ms162802.aspx)
-- [Bcp를 사용 하는 경우 호환성을 위한 데이터 형식](https://msdn.microsoft.com/en-us/library/ms190759.aspx)
-- [BULK INSERT를 사용 하 여 데이터 대량 가져오기](https://msdn.microsoft.com/en-us/library/ms175915.aspx)
-- [대량 삽입 (Transact SQL)](https://msdn.microsoft.com/en-us/library/ms188365.aspx)
+- [bcp 유틸리티](/sql-docs/docs/tools/bcp-utility)
+- [Bcp를 사용 하는 경우 호환성을 위한 데이터 형식](/sql-docs/docs/relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server)
+- [BULK INSERT를 사용 하 여 데이터 대량 가져오기](/sql-docs/docs/relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server)
+- [대량 삽입 (Transact SQL)](/sql-docs/docs/t-sql/statements/bulk-insert-transact-sql)
 

@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f34a56282f5901fe13131cdd2e1c688054fca85f
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="database-catalog"></a>데이터베이스 카탈로그
@@ -99,7 +99,7 @@ WideWorldImporters 데이터베이스 모든는 트랜잭션 정보 및 판매 �
 
 |테이블|Description|
 |-----------------------------|---------------------|
-|Customers|고객 (조직이 나 개인)에 대 한 주 엔터티 테이블|
+|고객|고객 (조직이 나 개인)에 대 한 주 엔터티 테이블|
 |CustomerCategories|고객 (ie 새로 움 저장소, 슈퍼마켓 등)에 대 한 범주|
 |BuyingGroups|고객 조직에는 강력한 구매를 실행 하는 그룹의 일부가 될 수 있습니다.|
 |CustomerTransactions|고객 관련 (송장을 지불) 되는 모든 금융 거래|
@@ -181,7 +181,7 @@ WideWorldImporters 적은 수의 스키마를 사용 하므로 데이터베이�
 
 ### <a name="integration-schema"></a>통합 스키마
 
-이 스키마에 저장된 프로시저는 ETL 프로세스에 의해 사용 됩니다. 에 필요한 기간에 대 한 다양 한 테이블에서 필요한 데이터를 가져올는 [ETL 패키지](https://msdn.microsoft.com/library/mt734218.aspx)합니다.
+이 스키마에 저장된 프로시저는 ETL 프로세스에 의해 사용 됩니다. 에 필요한 기간에 대 한 다양 한 테이블에서 필요한 데이터를 가져올는 [ETL 패키지](/sql-docs/docs/sample/world-wide-importers/etl-workflow)합니다.
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 스키마
 

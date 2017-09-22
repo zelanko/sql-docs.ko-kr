@@ -34,10 +34,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe808df2a3d0f55ab00946db2bd86aa8d9fb3511
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cccf648270523e86e502caebfbc7f6ba6a55cfd7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="create-database-azure-sql-database"></a>CREATE DATABASE(Azure SQL Database)
@@ -130,11 +130,11 @@ CREATE DATABASE database_name
 |150GB|해당 사항 없음|√|√|√|√|  
 |200GB|해당 사항 없음|√|√|√|√|  
 |250GB|해당 사항 없음|√ (D)|√ (D)|√|√|  
-|300GB|해당 사항 없음|√|√|√|√|  
-|400GB|해당 사항 없음|√|√|√|√|
-|500GB|해당 사항 없음|√|√|√ (D)|√|
-|750 GB|해당 사항 없음|√|√|√|√|
-|1024GB|해당 사항 없음|√|√|√|√ (D)|
+|300GB|해당 사항 없음|해당 사항 없음|√|√|√|  
+|400GB|해당 사항 없음|해당 사항 없음|√|√|√|
+|500GB|해당 사항 없음|해당 사항 없음|√|√ (D)|√|
+|750 GB|해당 사항 없음|해당 사항 없음|√|√|√|
+|1024GB|해당 사항 없음|해당 사항 없음|√|√|√ (D)|
 |1024GB에서 최대 4, 096 GB 단위로 256 GB * |해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
  \*P11 및 P15 허용 MAXSIZE 최대 4TB 1024GB 기본 크기 되 고 사용 합니다.  P11 및 P15 추가 비용 없이 최대 4TB의 포함 된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 보다 큰 최대 크기는 현재 다음 지역에서 사용할 수 있습니다: 미국 East2, 미국 서 부, 미국 정부 기관용 버지니아, 서 부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 중앙 캐나다 및 캐나다 동부 합니다. 현재 제한 사항에 대 한 참조 [데이터베이스를 단일](https://docs.microsoft.com/azure/sql-database-single-database-resources)합니다.  
@@ -292,7 +292,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 
 -  [sys.dm_database_copies &#40; Azure SQL 데이터베이스 &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-database-copies-azure-sql-database.md)
 
--   [ALTER database&#40; Azure SQL 데이터베이스 &#41;](https://msdn.microsoft.com/library/mt574871.aspx)   
+-   [ALTER database&#40; Azure SQL 데이터베이스 &#41;](/sql-docs/docs/t-sql/statements/alter-database-azure-sql-database)   
     
   
 

@@ -1,7 +1,7 @@
 ---
 title: '@@CPU_BUSY (Transact SQL) | Microsoft Docs'
 ms.custom: 
-ms.date: 07/24/2017
+ms.date: 09/18/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,13 +28,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 165aef4dc063f9487c5ee581981fc013d6f40ff0
+ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
+ms.openlocfilehash: f01d73c9ec0a0aca7237603169f8a290af0ce225
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="cpubusy-transact-sql"></a>@@CPU_BUSY (Transact SQL)
+# <a name="x40x40cpubusy-transact-sql"></a>& #x 40; & #x 40; CPU_BUSY (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 마지막으로 시작된 이후의 사용 시간을 반환합니다. 결과는 CPU 시간 증가값 또는 "틱"으로 표시되며 모든 CPU에 대해 누적됩니다. 따라서 실제 경과 시간을 초과할 수 있습니다. 곱한@TIMETICKS 을 마이크로초로 변환할 합니다.
@@ -46,7 +46,7 @@ ms.lasthandoff: 09/01/2017
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```
 @@CPU_BUSY  
 ```  
   

@@ -4,16 +4,16 @@ description: "이 빠른 시작 자습서에는 SQL Server 2017 컨테이너 이
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 09/20/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: 10623562f57ae1b4b571dd2e5b7dad56b81b8f8b
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 7fe6626cf8c5b9b348e95b956cee9ac67db16f97
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.
@@ -73,13 +73,13 @@ ms.lasthandoff: 08/29/2017
 1. Docker가 있는 컨테이너 이미지를 실행 하려면 bash 셸의 (Linux/macOS)에서 다음 명령을 사용할 수 있습니다.
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
     ```
 
     Windows 용 Docker를 사용 하는 경우에 관리자 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용 합니다.
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" --cap-add SYS_PTRACE -p 1401:1433 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
     ```
 
     > [!NOTE]
@@ -92,9 +92,10 @@ ms.lasthandoff: 08/29/2017
     | **-e ' ACCEPT_EULA = Y'** |  설정의 **ACCEPT_EULA** 동의한 것에 어떤 값이 변수는 [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
     | **-e ' MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 사용자 고유의 강력한 암호를 8 자 이상 있고에 맞는 지정 [SQL Server 암호 요구 사항을](../relational-databases/security/password-policy.md)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
     | **-e ' MSSQL_PID 개발자 ='** | 버전 또는 제품 키를 지정합니다. 이 예제에서는 자유롭게 사용이 허가 된 Developer Edition은 비-프로덕션 테스트에 사용 됩니다. 다른 값을 참조 하십시오. [Linux에서 환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다. |
-    | **-cap 추가 SYS_PTRACE** | 프로세스를 추적 하는 Linux 기능을 추가 합니다. 이 통해 예외에서 덤프를 생성 합니다. |
     | **-p 1401:1433** | 호스트 환경에서 TCP 포트 매핑 (첫째 값) 컨테이너의 TCP 포트 (두 번째 값). 이 예제에서는 SQL Server가 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1401 포트에 노출 됩니다. |
+    | **-이름 sqlcontainer1** | 임의로 생성 된 것 보다는 컨테이너에 대 한 사용자 지정 이름을 지정 합니다. 둘 이상의 컨테이너를 실행 하는 경우에이 이름을 다시 사용할 수 없습니다. |
     | **microsoft/mssql-서버-linux** | SQL Server Linux 컨테이너 이미지입니다. 기본값은 별도로 지정 하지 않으면는 **최신** 이미지입니다. |
+
 
 1. Docker 컨테이너를 보려면 사용 하 여는 `docker ps` 명령입니다.
 
@@ -108,7 +109,7 @@ ms.lasthandoff: 08/29/2017
 
 1. 경우는 **상태** 열 표시의 상태 **를**컨테이너에서 SQL Server가 실행 한 다음, 및에 지정 된 포트에서 수신 하는 **포트** 열입니다. 경우는 **상태** SQL Server 컨테이너 표시에 대 한 열 **Exited**, 참조는 [구성 가이드의 섹션 문제 해결](sql-server-linux-configure-docker.md#troubleshooting)합니다.
 
-두 개의 유용한 `docker run` 편의상 이전 예제에서 사용 되지 옵션입니다. `-h` (호스트 이름) 매개 변수는 컨테이너의 내부 이름을 사용자 지정 값으로 변경 합니다. 이 다음 Transact SQL 쿼리에서 반환 된 이름이 표시 됩니다.
+`-h` 도 유용 합니다 (호스트 이름) 매개 변수 이지만 간단한 설명을 위해이 자습서에서 사용 되지 않습니다. 이 컨테이너의 내부 이름을 사용자 지정 값으로 변경 합니다. 이 다음 Transact SQL 쿼리에서 반환 된 이름이 표시 됩니다.
 
 ```sql
 SELECT @@SERVERNAME,
@@ -117,7 +118,7 @@ SELECT @@SERVERNAME,
     SERVERPROPERTY('ServerName')
 ```
 
-또한 확인할 수도 `--name` 매개 변수 생성된 컨테이너 이름을 보다는 컨테이너 이름을 지정 하는 데 유용 합니다. 설정 `-h` 및 `--name` 과 같은 값은 쉽게 대상 컨테이너를 식별 하는 데 유용 합니다.
+설정 `-h` 및 `--name` 과 같은 값은 쉽게 대상 컨테이너를 식별 하는 데 유용 합니다.
 
 ## <a name="change-the-sa-password"></a>SA 암호를 변경 합니다.
 
@@ -125,24 +126,25 @@ SA 계정이 설치 중 생성 되는 SQL Server 인스턴스에서 시스템 �
 
 1. SA 사용자에 사용할 수 있는 강력한 암호를 선택 합니다.
 
-1. 사용 하 여 `docker exec` 실행 **sqlcmd** TRANSACT-SQL을 사용 하 여 암호를 변경 합니다. 대체 `<Old Password>` 및 `<New Password>` 암호 값입니다.
+1. 사용 하 여 `docker exec` 실행 **sqlcmd** TRANSACT-SQL을 사용 하 여 암호를 변경 합니다. 대체 `<YourStrong!Passw0rd>` 및 `<YourNewStrong!Passw0rd>` 고유한 암호 값으로.
 
-> ```bash
-> docker exec -it <Container ID> /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<Old Password>' -Q 'ALTER LOGIN SA WITH PASSWORD="<New Password>";'
-> ```
+   ```bash
+   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourStrong!Passw0rd>' -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
+   ```
+
+   ```PowerShell
+   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourStrong!Passw0rd>" -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
+   ```
 
 ## <a name="connect-to-sql-server"></a>SQL Server에 연결
 
 다음 단계에 SQL Server 명령줄 도구를 사용 하 여 **sqlcmd**, 컨테이너 내에서 SQL Server에 연결 합니다.
 
-1. 사용 하 여는 `docker exec -it` 는 대화형 bash 셸의 실행 중인 컨테이너 내 시작 명령입니다. 다음 예에서 `e69e056c702d` 컨테이너 ID입니다.
+1. 사용 하 여는 `docker exec -it` 는 대화형 bash 셸의 실행 중인 컨테이너 내 시작 명령입니다. 다음 예에서 `sqlcontainer1` 으로 이름이 지정 되는 `--name` 컨테이너를 만들 때 매개 변수입니다.
 
     ```bash
-    docker exec -it e69e056c702d "bash"
+    docker exec -it sqlcontainer1 "bash"
     ```
-
-    > [!TIP]
-    > 항상 전체 컨테이너 id를 지정할 필요가 없습니다. 고유 하 게 식별 필요한 만큼의 문자를 지정 해야 합니다. 이 예제에서 사용 하기에 충분 한 않을 수도 것 `e6` 또는 `e69` 전체 id 대신 합니다.
 
 1. 한 번, 컨테이너 내부 연결 로컬로 sqlcmd 합니다. Sqlcmd 아니므로 기본적으로 경로에 전체 경로 지정 해야 합니다.
 

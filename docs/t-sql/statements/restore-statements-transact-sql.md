@@ -44,10 +44,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 357b2d42e404c7bcbfcd8ba8edd4714187159f0b
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ea93e3764e23cd34662abd693908c6218b30e977
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문 (TRANSACT-SQL)
@@ -680,7 +680,7 @@ RESTORE DATABASE Sales
 ## <a name="much-more-information"></a>훨씬 더 많은 정보!!  
  - [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md) 
 - [백업 및 복원 시스템 데이터베이스 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md) 
- - [Restore a Database Backup Using SSMS](https://msdn.microsoft.com/library/ms177429.aspx)
+ - [Restore a Database Backup Using SSMS](/sql-docs/docs/relational-databases/backup-restore/restore-a-database-backup-using-ssms)
  - [전체 텍스트 카탈로그와 인덱스 백업 및 복원](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  - [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  - [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

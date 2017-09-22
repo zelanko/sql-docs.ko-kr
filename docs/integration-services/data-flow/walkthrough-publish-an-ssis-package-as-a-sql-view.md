@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: fe3ec4ebb7b62bd1bee9e6ba43c630bc17460dbb
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: a7479a6682c2cd95e3cc465b74642347bf682951
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="walkthrough-publish-an-ssis-package-as-a-sql-view"></a>연습: SSIS 패키지를 SQL 뷰로 게시
@@ -32,7 +32,7 @@ ms.lasthandoff: 08/03/2017
   
 1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 이상( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]포함)  
   
-2.  [SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx)  
+2.  [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
 ## <a name="step-1-build-and-deploy-ssis-project-to-the-ssis-catalog"></a>1단계: SSIS 프로젝트 빌드 및 SSIS 카탈로그에 배포  
  이 단계에서는 SSIS 지원 데이터 원본(이 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 사용)에서 데이터를 추출하는 SSIS 패키지를 만들고 데이터 스트리밍 대상 구성 요소를 사용하여 데이터를 출력합니다. 그런 다음 SSIS 프로젝트를 빌드하고 SSIS 카탈로그에 배포합니다.  

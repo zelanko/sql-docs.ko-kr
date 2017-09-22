@@ -36,10 +36,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: 5828528bcf8bc05e6cb504ef7dc52769ea9a59a5
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 54d2ef0f186916fa79f7af606b33e42e8f241cb7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="legacy-package-deployment-ssis"></a>레거시 패키지 배포(SSIS)
@@ -58,7 +58,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="package-configurations"></a>패키지 구성
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 런타임에 속성 값을 업데이트하는 데 사용할 수 있는 패키지 구성을 제공합니다.  
   
-> **참고:** 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+> **참고:** 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 통해 배포할 수 있습니다 [! 포함[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
   
  구성은 완성된 패키지에 추가하는 속성/값 쌍입니다. 일반적으로 패키지 개발 과정에서 패키지 개체의 패키지 집합 속성을 만든 다음 해당 패키지에 구성을 추가합니다. 패키지가 실행될 때는 구성의 새 속성 값이 사용됩니다. 예를 들어 구성을 사용하여 연결 관리자의 연결 문자열을 변경하거나 변수 값을 업데이트할 수 있습니다.  
   
@@ -181,7 +181,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
  **참고:**
 >**구성** 속성 옆에 있는 줄임표 단추를 클릭하여 **패키지 구성 도우미** 에 액세스할 수도 있습니다. 구성 속성은 패키지의 속성 창에 나타납니다.  
   
->구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+>구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 통해 배포할 수 있습니다 [! 포함[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
   
 >**패키지 구성 도우미** 대화 상자에서는 구성을 사용하도록 패키지를 활성화하고 구성을 추가 및 삭제하며 구성이 로드되는 기본 순서를 설정할 수 있습니다. 
  
@@ -256,13 +256,13 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configurations-organizer"></a>패키지 구성 도우미
   **패키지 구성 도우미** 대화 상자를 사용하여 패키지 구성을 설정하고, 현재 패키지에 대한 구성 목록을 보고, 구성을 로드해야 하는 기본 순서를 지정할 수 있습니다.  
   
-> **참고:** 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+> **참고:** 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 통해 배포할 수 있습니다 [! 포함[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
   
  여러 구성에서 동일한 속성을 업데이트하는 경우 구성 목록에서 더 아래에 있는 구성의 값이 목록에서 위에 있는 구성의 값을 대체합니다. 패키지를 실행하면 마지막으로 속성에 로드된 값이 사용됩니다. 또한 패키지가 XML 구성 파일 등의 직접 구성과 환경 변수 등의 간접 구성을 조합해서 사용하는 경우 직접 구성의 위치를 가리키는 간접 구성이 목록에서 더 위에 있어야 합니다.  
   
 > **참고:** 패키지 구성이 기본 순서로 로드되는 경우 **패키지 구성 도우미** 대화 상자에 표시된 목록의 맨 위에서 맨 아래까지의 구성이 로드됩니다. 그러나 런타임 시 패키지 구성이 기본 순서로 로드되지 않을 수 있습니다. 특히 부모 패키지 구성은 다른 유형의 구성보다 뒤에 로드됩니다.  
   
- 패키지 구성은 런타임 시 패키지 개체의 속성 값을 업데이트합니다. 패키지가 로드되면 구성의 값이 패키지 개발 시 설정한 값을 대체합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 여러 가지 구성 유형을 지원합니다. 예를 들어 여러 구성이 포함될 수 있는 XML 파일이나 단일 구성이 포함되는 환경 변수를 사용할 수 있습니다. 자세한 내용은 [Package Configurations](../../integration-services/packages/package-configurations.md)를 참조하십시오.  
+ 패키지 구성은 런타임 시 패키지 개체의 속성 값을 업데이트합니다. 패키지가 로드되면 구성의 값이 패키지 개발 시 설정한 값을 대체합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 여러 가지 구성 유형을 지원합니다. 예를 들어 여러 구성이 포함될 수 있는 XML 파일이나 단일 구성이 포함되는 환경 변수를 사용할 수 있습니다. 자세한 내용은 [Package Configurations](../../integration-services/packages/package-configurations.md)을 참조하세요.  
   
 ### <a name="options"></a>옵션  
  **패키지 구성 설정**  
@@ -298,7 +298,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
 ## <a name="package-configuration-wizard-ui-reference"></a>패키지 구성 마법사 UI 참조
   **패키지 구성 마법사** 를 사용하여 런타임에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 및 패키지 개체의 속성을 업데이트하는 구성을 만들 수 있습니다. 이 마법사는 **패키지 구성 도우미** 대화 상자에서 기존 구성을 수정하거나 새 구성을 추가하는 경우 실행됩니다. **패키지 구성 도우미** 대화 상자를 열려면 **의** SSIS **메뉴에서** 패키지 구성 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]을 선택합니다. 자세한 내용은 [패키지 구성 만들기](../../integration-services/packages/create-package-configurations.md)를 참조하세요.  
   
-> **참고:** 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 사용하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포할 수 있습니다. 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+> **참고:** 구성은 패키지 배포 모델에 사용할 수 있습니다. 매개 변수는 프로젝트 배포 모델에 대한 구성 대신 사용됩니다. 프로젝트 배포 모델을 통해 배포할 수 있습니다 [! 포함[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
   
  다음 섹션에서는 마법사의 페이지에 대해 설명합니다.  
   
@@ -498,7 +498,7 @@ ConfiguredValueType NVARCHAR(20) NOT NULL
   
 2.  프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  에  **\<프로젝트 이름 > 속성 페이지** 대화 상자를 클릭 **배포 유틸리티**합니다.  
+3.  에 ** \<프로젝트 이름 > 속성 페이지** 대화 상자를 클릭 **배포 유틸리티**합니다.  
   
 4.  패키지를 배포할 때 패키지 구성을 업데이트하려면 **AllowConfigurationChanges** 를 **True**로 설정합니다.  
   

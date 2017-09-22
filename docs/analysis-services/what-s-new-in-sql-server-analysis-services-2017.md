@@ -15,10 +15,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 572af6f86f015c88141bb6e78b781b5825be155c
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>기능 &#39; s SQL Server 2017 Analysis Services의 새로운 기능
@@ -110,7 +110,7 @@ SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 새 1400 호�
 >[!NOTE]
 > SSDT(SQL Server Data Tools) 12월 릴리스의 통합 작업 영역에서는 1400 호환성 수준을 지원합니다. 작업 영역 서버 인스턴스에서 새 테이블 형식 모델 프로젝트를 만드는 경우 해당 인스턴스 또는 프로젝트를 배포하는 모든 인스턴스는 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1이어야 합니다. 
 
-솔루션 탐색기에서 SSDT에서는 기존 테이블 형식 모델을 업그레이드 하려면 마우스 오른쪽 단추로 클릭 **Model.bim**, 한 다음 **속성**로 설정 된 **호환성 수준이** 속성 를 **SQL Server 2017 (1400)**합니다. 
+솔루션 탐색기에서 SSDT에서는 기존 테이블 형식 모델을 업그레이드 하려면 마우스 오른쪽 단추로 클릭 **Model.bim**, 한 다음 **속성**로 설정 된 **호환성 수준이** 속성 를** SQL Server 2017 (1400)**합니다. 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -185,7 +185,7 @@ EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
 ## <a name="dax-enhancements"></a>향상된 DAX 기능
-이 릴리스에는 DAX 식에 대한 `IN` 연산자가 포함되어 있습니다. 이것은 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 절에서 여러 값을 지정하는 데 자주 사용되는 `WHERE` 연산자와 유사합니다.
+이 릴리스에는 DAX 식에 대한 `IN` 연산자가 포함되어 있습니다. 이것은 `WHERE` 절에서 여러 값을 지정하는 데 자주 사용되는 [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) 연산자와 유사합니다.
 
 이전에는 다음 측정값 식과 같이 논리적 `OR` 연산자를 사용하여 다중 값 필터를 지정하는 것이 일반적이었습니다.
 

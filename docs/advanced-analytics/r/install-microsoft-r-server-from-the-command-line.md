@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 811709fae77dee6daa46a97a51c44c02e372d9a8
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 87d6c0b358d7747b20ed37f159e713cc10018866
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="install-microsoft-r-server-from-the-command-line"></a>명령줄에서 Microsoft R Server 설치
@@ -83,7 +83,7 @@ Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR /IACCEPTROPENLICENSETERMS /
 
 설치된 각 기능에 대해 별도의 하위 폴더가 생성됩니다.
 
-동일한 매개 변수를 가진 Microsoft R Server의 다른 인스턴스를 설정 하려면 설치 중에 생성 된 구성 파일을 다시 사용할 수 있습니다. 자세한 내용은 [구성 파일을 사용하여 SQL Server 설치](https://msdn.microsoft.com/library/dd239405.aspx)
+동일한 매개 변수를 가진 Microsoft R Server의 다른 인스턴스를 설정 하려면 설치 중에 생성 된 구성 파일을 다시 사용할 수 있습니다. 자세한 내용은 참조 [구성 파일을 통해 SQL Server 설치](/sql-docs/docs/database-engine/install-windows/install-sql-server-2016-using-a-configuration-file)
 
 
 ## <a name="customize-your-r-environment"></a>R 환경 사용자 지정

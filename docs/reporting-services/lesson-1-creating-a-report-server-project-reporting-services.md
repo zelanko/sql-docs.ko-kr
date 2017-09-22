@@ -14,11 +14,11 @@ caps.latest.revision: 57
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: bead48dd2f32047b2782a54204bf06a145a7d71d
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 3b9b3bea0adf69916e698b03df1601a7fd6a62d4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>1단원: 보고서 서버 프로젝트 만들기(Reporting Services)
@@ -47,7 +47,7 @@ ms.lasthandoff: 08/09/2017
 
 5. **보고서 서버 프로젝트** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png)를 클릭합니다. 
 
-   >**참고**: 표시 되지 않으면는 **Business Intelligence** 또는 **보고서 서버 프로젝트** Business Intelligence 템플릿으로 SSDT를 업데이트 해야 하는 옵션입니다. [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.  
+   >**참고**: 표시 되지 않으면는 **Business Intelligence** 또는 **보고서 서버 프로젝트** Business Intelligence 템플릿으로 SSDT를 업데이트 해야 하는 옵션입니다. [SSDT(SQL Server Data Tools) 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)를 참조하세요.  
   
 5.  **이름**에 **Tutorial**을 입력합니다.  
 

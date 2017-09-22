@@ -1,8 +1,8 @@
 ---
 title: "T-SQL을 사용 하 여 Python 실행 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/31/2017
-ms.prod: sql-server-2016
+ms.date: 09/19/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,10 +18,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c7ab513960d3e102725bde6762fcf4de117554db
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: f2eba50d5c5e57025462c46b38fc0ddbfc947ea0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="run-python-using-t-sql"></a>T-SQL을 사용 하 여 Python 실행
@@ -57,7 +57,7 @@ GO
 
 다음 코드 Python 실행 파일을 로드 하 고, 입력된 데이터를 전달, 입력된 데이터의 각 행에 대 한 테이블의 요일 이름이 주 일 인덱스를 나타내는 숫자도 업데이트.
 
-매개 변수를 메모해  *@RowsPerRead* 합니다. 이 매개 변수는 Python 런타임의에 SQL Server에서 전달 되는 행 수를 지정 합니다.
+매개 변수를 메모해 * @RowsPerRead *합니다. 이 매개 변수는 Python 런타임의에 SQL Server에서 전달 되는 행 수를 지정 합니다.
 
 이라고 Python 데이터 분석 라이브러리 **팬더**, SQL server에 데이터를 전달 하기 위한 필수 항목이 며 기본적으로 컴퓨터 학습 서비스 포함 됩니다.
 
@@ -127,7 +127,7 @@ GO
 
 ## <a name="step-3-view-the-results"></a>3단계. 결과 보기
 
-저장된 프로시저 원래 데이터를 반환 합니다. 스크립트를 적용 하 고 다음에 수정된 된 데이터를 반환 된 **결과** Management Studio 또는 다른 SQL 쿼리 도구 창입니다.
+저장된 프로시저는 원래 데이터를 가져옵니다 Python 스크립트를 적용 하 고 다음에 수정된 된 데이터를 반환 된 **결과** Management Studio 또는 다른 SQL 쿼리 도구 창입니다.
 
 
 |DayOfWeek (이전)| Amount|DayOfWeek (이후) |
@@ -173,9 +173,11 @@ ParamINT=2
 ParamCharN=OUTPUT
 ```
 
-+ 메시지 출력은 스크립트 실행에 사용 되는 작업 디렉터리를 포함 합니다. 이 예제에서는 작업을 관리 하려면 SQL Server에서 할당 된 작업자 계정이 MSSQLSERVER01 참조 합니다. GUID에는 데이터와 스크립트 아티팩트 저장 스크립트 실행 중에 만들어진 임시 폴더의 이름입니다. 이러한 임시 폴더 SQL Server를 통해 보안이 유지 되 고 정리 됩니다 Windows 작업 개체에서 스크립트 종료 된 후입니다.
++ **메시지** 출력 스크립트 실행에 사용 되는 작업 디렉터리에 포함 됩니다. 이 예제에서는 작업을 관리 하려면 SQL Server에서 할당 된 작업자 계정이 MSSQLSERVER01 참조 합니다. 
 
-+ "Hello World" 라는 메시지가 포함 된 섹션에는 두 번 출력 합니다. 이 문제가 발생 하기 때문에 값  *@RowsPerRead*  5로 설정 된 테이블에 10 개의 행이 하 고 따라서 Python에 대 한 두 호출 테이블의 모든 행을 처리 하는 데 필요한 합니다.
+    GUID에는 데이터와 스크립트 아티팩트 저장 스크립트 실행 중에 만들어진 임시 폴더의 이름입니다. 이러한 임시 폴더 SQL Server를 통해 보안이 유지 되 고 정리 됩니다 Windows 작업 개체에서 스크립트 종료 된 후입니다.
+
++ "Hello World" 라는 메시지가 포함 된 섹션에는 두 번 출력 합니다. 이 문제가 발생 하기 때문에 값 * @RowsPerRead * 5로 설정 된 테이블에 10 개의 행이 하 고 따라서 Python에 대 한 두 호출 테이블의 모든 행을 처리 하는 데 필요한 합니다.
 
     프로덕션, 실행에서는 각 일괄 처리에서 전달 되어야 하는 행의 최대 수를 확인 하려면 다른 값을 실험할 하는 것이 좋습니다. 행 수가 최적의 데이터에 따라 달라을 전달 하는 데이터의 형식과 데이터 집합의 열 수에 영향을 합니다.
 
@@ -189,4 +191,4 @@ ParamCharN=OUTPUT
 
 ## <a name="troubleshooting"></a>문제 해결
 
-저장된 프로시저를 찾을 수 없는 경우 `sp_execute_external_script`, 아마도 완료 하지 않았습니다 외부 런타임 지원 하도록 인스턴스 구성 것을 의미 합니다. SQL Server 2017 설치 프로그램을 실행 하 기계 학습 언어도 Python을 선택한 후 명시적으로 설정 해야 사용 하 여 기능 `sp_configure`, 한 다음 인스턴스를 다시 시작 합니다. 자세한 내용은 참조 [python 설치 컴퓨터 학습 서비스](../python/setup-python-machine-learning-services.md)합니다.
+저장된 프로시저를 찾을 수 없는 경우 `sp_execute_external_script`, 아마도 완료 하지 않았습니다 외부 스크립트 실행을 지원 하도록 인스턴스 구성 것을 의미 합니다. SQL Server 2017 설치 프로그램을 실행 하 기계 학습 언어도 Python을 선택한 후 명시적으로 설정 해야 사용 하 여 기능 `sp_configure`, 한 다음 인스턴스를 다시 시작 합니다. 자세한 내용은 참조 [python 설치 컴퓨터 학습 서비스](../python/setup-python-machine-learning-services.md)합니다.

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 8221755d220caec5588c8ed1343e360799b82694
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: cffe6569f7bac5308d49bb89f4fb4db259be445b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.1 준수
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
   
 |새 기능|Description|  
 |-----------------|-----------------|  
-|새 이스케이프 함수<br /><br /> 제한된 행 반환 이스케이프|부분적으로 지원됨<br /><br /> 이스케이프 구문을: 제한 \<행 > [< row_offset > 오프셋]<br /><br /> 이스케이프 구문은 두 가지 요소로 구성되어 있습니다. 필수 요소인 ‘rows’는 반환할 행 수를 지정하고 선택적 요소인 'row_offset'은 행 반환을 시작하기 전에 건너뛸 행 수를 지정합니다.<br /><br /> 드라이버는 LIMIT 대신 ‘TOP’를 사용하도록 쿼리를 변환하여 필수 요소만 지원합니다. SQL Server는 'LIMIT'를 지원하지 않습니다.<br /><br /> SQL Server에는 선택적 요소인 'row_offset'을 지원하는 기본 제공 구문이 없으므로 이 요소를 사용할 경우 드라이버에서 예외가 throw됩니다.<br /><br /> 자세한 내용은 참조 [SQL 이스케이프 시퀀스를 사용 하 여](https://msdn.microsoft.com/en-us/library/ms378045.aspx)합니다.|  
+|새 이스케이프 함수<br /><br /> 제한된 행 반환 이스케이프|부분적으로 지원됨<br /><br /> 이스케이프 구문을: 제한 \<행 > [오프셋 < row_offset >](/sql-docs/docs/connect/jdbc/using-sql-escape-sequences)합니다.|  
   
  Java Database Connectivity API 4.1 사양은 다음과 같은 데이터 형식 매핑을 통해 SQL Server용 Microsoft JDBC Driver 4.2에서 지원됩니다.  
   

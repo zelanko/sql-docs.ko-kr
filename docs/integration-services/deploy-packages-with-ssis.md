@@ -25,14 +25,14 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 939f988b8d91e93aa8f1cc4ef4b555af7b26cf67
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.    
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 패키지를 다른 컴퓨터에 쉽게 배포할 수 있게 하는 도구를 제공합니다. 또한 이러한 배포 도구는 패키지에 필요한 구성 및 파일과 같은 모든 종속 파일을 관리합니다. 이 자습서에서는 이러한 도구를 사용하여 패키지와 패키지의 종속 파일을 대상 컴퓨터에 설치하는 방법을 배웁니다.    
     
 먼저 배포를 준비하기 위한 태스크를 수행합니다. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 새 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 프로젝트를 만들고 기존 패키지와 데이터 파일을 프로젝트에 추가합니다. 새 패키지를 처음부터 만드는 대신에 이 자습서용으로 만들어진 완성된 패키지만 사용하여 작업합니다. 이 자습서에서 패키지의 기능을 수정하지는 않습니다. 그러나 패키지를 프로젝트에 추가한 후에 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에서 패키지를 열고 각 패키지의 내용을 검토하면 도움이 될 것입니다. 패키지를 검사하면 로그 파일과 같은 패키지 종속 파일과 패키지의 다른 흥미로운 기능에 대해 알 수 있습니다.    
     
@@ -57,14 +57,14 @@ ms.lasthandoff: 08/03/2017
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 이러한 파일은 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 샘플 데이터베이스)를 다운로드하면 함께 설치됩니다.     
 > **참고!** AdventureWorks의 테이블이나 사용하는 다른 데이터를 만들고 삭제할 수 있는 권한이 있어야 합니다.         
     
--   [SQL Server Data Tools(SSDT)](https://msdn.microsoft.com/library/mt204009.aspx).    
+-   [SQL Server Data Tools(SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).    
     
 **대상 컴퓨터.** 패키지를 배포하려는 컴퓨터에 **다음 구성 요소가 설치되어 있어야 합니다.**    
     
 - SQL Server
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 이러한 파일은 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 샘플 데이터베이스)를 다운로드하면 함께 설치됩니다. 
     
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx).    
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 참조하세요.    
     

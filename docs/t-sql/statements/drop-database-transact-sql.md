@@ -2,7 +2,7 @@
 title: DROP DATABASE (TRANSACT-SQL) | Microsoft Docs
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 05/10/2017
+ms.date: 09/15/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -30,14 +30,14 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 347995e21c5930007404fd8a9dd8bb29d9879981
+ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
+ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/15/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 하나 이상의 사용자 데이터베이스 또는 데이터베이스 스냅숏을 제거합니다.  
   
@@ -51,7 +51,7 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 ```  
   
 ```  
--- Azure SQL Database and Parallel Data Warehouse Syntax   
+-- Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse Syntax   
 DROP DATABASE database_name [;]  
 ```  
   
@@ -105,10 +105,15 @@ DROP DATABASE database_name [;]
  스트레치 데이터베이스에 대 한 데이터베이스 사용을 삭제 하는 중입니다. 원격 데이터는 제거 되지 않습니다. 원격 데이터를 삭제 하려는 경우 수동으로 제거 해야 합니다.  
   
 ### [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
- 데이터베이스를 삭제하려면 master 데이터베이스에 연결해야 합니다.  
+ 데이터베이스를 삭제하려면 master 데이터베이스에 연결해야 합니다.
   
- DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 번에 하나의 데이터베이스를 삭제할 수 있습니다.  
+ DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 번에 하나의 데이터베이스를 삭제할 수 있습니다.
   
+### [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+ 데이터베이스를 삭제하려면 master 데이터베이스에 연결해야 합니다.
+  
+ DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 번에 하나의 데이터베이스를 삭제할 수 있습니다.
+
 ## <a name="permissions"></a>Permissions  
   
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  

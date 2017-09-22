@@ -15,11 +15,11 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 69c0ea4110b678e9bffa959992d48f2c28df5897
+ms.translationtype: MT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0a59b89b558922f27c91fb2452df157f7baa3918
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="plan-for-report-design-and-report-deployment--reporting-services"></a>보고서 디자인 및 보고서 배포 계획 | Reporting Services
@@ -96,7 +96,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [SQL Server Data Tools의 배포 및 버전 지원&#40;SSRS&#41;](../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
--   [Visual Studio 2015용 SQL Server Data Tools](https://msdn.microsoft.com/library/mt204009.aspx).  
+-   [Visual Studio 2015용 SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).  
   
 ##  <a name="bkmk_reportviewer"></a> ReportViewer 컨트롤  
  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer 컨트롤은 로컬 미리 보기 모드 또는 원격 미리 보기 모드로 .rdlc 보고서를 표시할 수 있으며, 이 컨트롤은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버에서 호스팅되는 .rdl 파일을 표시할 수 있습니다. 다음 표에서는 로컬 처리를 위한 ReportViewer 컨트롤(.rdlc)에서 지원되는 RDL 버전 목록을 보여 줍니다. 서버 쪽 RDL 지원은 [보고서 서버 및 RDL 스키마 지원](#bkmk_report_server_rdl_schema_support)섹션에 요약되어 있습니다.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [보고서, 보고서 파트 및 보고서 정의&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Reporting Services 도구](../reporting-services/tools/reporting-services-tools.md)   
- [보고서 정의 언어 &#40; Ssrs&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
+ [RDL(Report Definition Language)&#40;SSRS&#41;](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   
 

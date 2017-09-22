@@ -23,10 +23,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
-ms.openlocfilehash: 331468a55b793f81b7d5d53e5b1f4e5f24a53cca
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 32ca3905c25a2b2182e519b56f23a6699728e854
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Integration Services(SSIS) 프로젝트 및 패키지 배포
@@ -271,7 +271,7 @@ static void Main()
   
 2.  프로젝트 및 모든 패키지가 호환성 테스트를 성공하면 **확인** 을 클릭하여 패키지를 변환합니다.  
   
-> **참고:** 프로젝트를 프로젝트 배포 모델로 변환하려면 **Integration Services 프로젝트 변환 마법사**를 사용합니다. 자세한 내용은 [Integration Services Project Conversion Wizard](https://msdn.microsoft.com/library/hh213290.aspx)을 참조하세요.  
+> **참고:** 프로젝트를 프로젝트 배포 모델로 변환하려면 **Integration Services 프로젝트 변환 마법사**를 사용합니다. 자세한 내용은 [Integration Services Project Conversion Wizard](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)을 참조하세요.  
 
 ## <a name="integration-services-deployment-wizard"></a>Integration Services 배포 마법사
   **Integration Services 배포 마법사** 는 아래의 두 가지 배포 모델을 지원합니다.
@@ -309,7 +309,7 @@ static void Main()
  이 페이지를 사용하면 선택한 설정을 검토할 수 있습니다. **이전**을 클릭하거나 왼쪽 창의 단계 중 하나를 클릭하여 선택 항목을 변경할 수 있습니다. **배포** 를 클릭해 배포 프로세스를 시작합니다.  
   
 #### <a name="results"></a>결과  
- 배포 프로세스가 완료되면 **결과** 페이지가 표시되어야 합니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다. 작업이 실패하면 **결과** 열에서 **실패** 를 클릭하여 해당 오류에 대한 설명을 표시합니다. 클릭 **보고서 저장...**  XML 파일이 나 클릭 하 여 결과 저장 하려면 **닫기** 여 마법사를 종료 합니다.
+ 배포 프로세스가 완료되면 **결과** 페이지가 표시되어야 합니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다. 작업이 실패하면 **결과** 열에서 **실패** 를 클릭하여 해당 오류에 대한 설명을 표시합니다. 클릭 **보고서 저장... ** XML 파일이 나 클릭 하 여 결과 저장 하려면 **닫기** 여 마법사를 종료 합니다.
   
 ###  <a name="PackageModel"></a> Package Deployment Model  
   
@@ -403,7 +403,7 @@ static void Main()
 14. **확인** 을 두 번 클릭하여 변경 내용을 저장합니다.  
 
 ## <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>저장 프로시저를 사용하여 SSIS 패키지 배포 및 실행
-  프로젝트 배포 모델을 사용하도록 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 구성하면 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 카탈로그의 저장 프로시저를 사용하여 프로젝트를 배포하고 패키지를 실행할 수 있습니다. 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
+  구성 하는 경우는 [! 포함[ssISnoversion](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 사용하여 프로젝트를 배포하고 패키지를 실행할 수도 있습니다. 자세한 내용은 **참고 항목** 섹션의 항목을 참조하십시오.  
   
@@ -421,9 +421,9 @@ static void Main()
   
 1.  [catalog.deploy_project&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database.md)를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 대한 패키지를 포함하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트를 배포합니다.  
   
-     이진 콘텐츠를 검색 하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 배포 파일에 대 한는  *@project_stream*  매개 변수를 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용 합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)을 참조하세요.  
+     이진 콘텐츠를 검색 하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트 배포 파일에 대 한는 * @project_stream * 매개 변수를 SELECT 문을 OPENROWSET 함수 및 BULK 행 집합 공급자와 함께 사용 합니다. BULK 행 집합 공급자를 사용하여 파일에서 데이터를 읽을 수 있습니다. BULK 행 집합 공급자에 대한 SINGLE_BLOB 인수는 데이터 파일의 내용을 varbinary(max) 형식의 단일 행, 단일 열 행 집합으로 반환합니다. 자세한 내용은 [OPENROWSET&#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)을 참조하세요.  
   
-     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 프로젝트 파일(SSISPackage_ProjectDeployment.ispac)에서 이진 데이터를 읽어서 varbinary(max) 형식의 *@ProjectBinary* 매개 변수에 저장합니다.  *@ProjectBinary*  에 매개 변수 값이 할당 된  *@project_stream*  매개 변수입니다.  
+     다음 예에서는 SSISPackages_ProjectDeployment 프로젝트를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버의 SSIS Packages 폴더에 배포합니다. 프로젝트 파일(SSISPackage_ProjectDeployment.ispac)에서 이진 데이터를 읽어서 varbinary(max) 형식의 *@ProjectBinary* 매개 변수에 저장합니다. * @ProjectBinary * 에 매개 변수 값이 할당 된 * @project_stream * 매개 변수입니다.  
   
     ```sql
     DECLARE @ProjectBinary as varbinary(max)  

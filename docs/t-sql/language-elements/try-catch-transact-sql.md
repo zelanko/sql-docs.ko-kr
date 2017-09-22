@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 542fba03b289dd0f393e3e5013cad0730c6d0756
+ms.sourcegitcommit: 6214ff450fd85eb3bd580850aef1e56056a43a54
+ms.openlocfilehash: 0b3842a160ba6a98db1aabb39585d76caa8743f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH(Transact-SQL)
@@ -95,21 +95,21 @@ END CATCH
 ## <a name="retrieving-error-information"></a>오류 정보 검색  
  CATCH 블록의 범위에서 다음 시스템 함수를 사용하여 CATCH 블록을 실행하도록 만든 오류에 대한 정보를 얻을 수 있습니다.  
   
--   ERROR_NUMBER()는 오류 번호를 반환합니다.  
+-   [Error_number ()](../../t-sql/functions/error-number-transact-sql.md) 의 오류 번호를 반환 합니다.  
   
--   ERROR_SEVERITY()는 심각도를 반환합니다.  
+-   [Error_severity ()](../../t-sql/functions/error-severity-transact-sql.md) 심각도 반환 합니다.  
   
--   ERROR_STATE()는 오류 상태 번호를 반환합니다.  
+-   [Error_state ()](../../t-sql/functions/error-state-transact-sql.md) 오류 상태 번호를 반환 합니다.  
   
--   ERROR_PROCEDURE()는 오류가 발생한 저장 프로시저 또는 트리거의 이름을 반환합니다.  
+-   [Error_procedure ()](../../t-sql/functions/error-procedure-transact-sql.md) 오류가 발생 한 저장된 프로시저 또는 트리거의 이름을 반환 합니다.  
   
--   ERROR_LINE()은 오류를 발생시킨 루틴 내의 줄 번호를 반환합니다.  
+-   [Error_line ()](../../t-sql/functions/error-line-transact-sql.md) 오류를 발생 시킨 루틴 내의 줄 번호를 반환 합니다.  
   
--   ERROR_MESSAGE()는 오류 메시지의 전체 텍스트를 반환합니다. 이 텍스트는 길이, 개체 이름 또는 시간과 같은 대체 가능한 매개 변수에 제공된 값을 포함합니다.  
+-   [Error_message ()](../../t-sql/functions/error-message-transact-sql.md) 오류 메시지의 전체 텍스트를 반환 합니다. 이 텍스트는 길이, 개체 이름 또는 시간과 같은 대체 가능한 매개 변수에 제공된 값을 포함합니다.  
   
  CATCH 블록의 범위를 벗어나서 이러한 함수를 호출하면 NULL이 반환됩니다. CATCH 블록의 범위 내 어디에서나 이들 함수를 사용하여 오류 정보를 검색할 수 있습니다. 예를 들어 다음 스크립트는 오류 처리 함수를 포함하는 저장 프로시저를 보여 줍니다. `CATCH` 구문의 `TRY…CATCH` 블록에서 이 저장 프로시저를 호출하면 오류에 대한 정보가 반환됩니다.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not already exist.  
 IF OBJECT_ID ( 'usp_GetErrorInfo', 'P' ) IS NOT NULL   
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -137,7 +137,7 @@ BEGIN CATCH
 END CATCH;   
 ```  
   
- 작업 에서도 오류 * 함수는 `CATCH` 블록 내부는 [고유 하 게 컴파일된 저장된 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)합니다.  
+ 오류\_ \* 작업 에서도 함수는 `CATCH` 블록 내부는 [고유 하 게 컴파일된 저장된 프로시저](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)합니다.  
   
 ## <a name="errors-unaffected-by-a-trycatch-construct"></a>TRY...CATCH 구문의 영향을 받지 않는 오류  
  TRY...CATCH 구문은 다음과 같은 조건에서 오류를 포착하지 않습니다.  
@@ -162,7 +162,7 @@ END CATCH;
   
  다음 예에서는 `SELECT` 문에서 발생한 개체 이름 확인 오류가 `TRY…CATCH` 구문으로는 포착되지 않지만 저장 프로시저 내에서 동일한 `CATCH` 문을 실행할 때 `SELECT` 블록에서 포착되는 상황을 보여 줍니다.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Table does not exist; object name resolution  
     -- error not caught.  
@@ -179,7 +179,7 @@ END CATCH
   
  저장 프로시저 내에서 `SELECT` 문을 실행하면 `TRY` 블록보다 낮은 수준에서 오류가 발생하여 `TRY…CATCH` 구문에서 오류를 처리할 수 있습니다.  
   
-```  
+```t-sql  
 -- Verify that the stored procedure does not exist.  
 IF OBJECT_ID ( N'usp_ExampleProc', N'P' ) IS NOT NULL   
     DROP PROCEDURE usp_ExampleProc;  
@@ -212,7 +212,7 @@ END CATCH;
 ### <a name="a-using-trycatch"></a>1. TRY…CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  
@@ -232,7 +232,7 @@ GO
 ### <a name="b-using-trycatch-in-a-transaction"></a>2. 트랜잭션에서 TRY...CATCH 사용  
  다음 예에서는 트랜잭션 내에서 `TRY…CATCH` 블록이 작동하는 방법을 보여 줍니다. `TRY` 블록 내의 문은 제약 조건 위반 오류를 일으킵니다.  
   
-```  
+```t-sql  
 BEGIN TRANSACTION;  
   
 BEGIN TRY  
@@ -261,7 +261,7 @@ GO
 ### <a name="c-using-trycatch-with-xactstate"></a>3. TRY...CATCH에 XACT_STATE 사용  
  다음 예에서는 트랜잭션 내부에서 발생하는 오류를 `TRY…CATCH` 구문을 사용하여 처리하는 방법을 보여 줍니다. 트랜잭션을 커밋해야 하는지 또는 롤백해야 하는지는 `XACT_STATE` 함수가 결정합니다. 이 예에서 `SET XACT_ABORT`는 `ON`입니다. 이렇게 하면 제약 조건 위반 오류가 발생할 경우 트랜잭션을 커밋할 수 없습니다.  
   
-```  
+```t-sql  
 -- Check to see whether this stored procedure exists.  
 IF OBJECT_ID (N'usp_GetErrorInfo', N'P') IS NOT NULL  
     DROP PROCEDURE usp_GetErrorInfo;  
@@ -330,7 +330,7 @@ GO
 ### <a name="d-using-trycatch"></a>4. TRY…CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
-```  
+```t-sql  
 BEGIN TRY  
     -- Generate a divide-by-zero error.  
     SELECT 1/0;  

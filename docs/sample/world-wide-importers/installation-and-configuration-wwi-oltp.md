@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 4102284612e0838fb876708b959266994a0f2b96
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 38890f32a5431b1c67a75f2330cc97ae3428b2fb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="installation-and-configuration"></a>설치 및 구성
@@ -28,7 +28,7 @@ Wide World Importers OLTP 데이터베이스 설치 및 구성 지침입니다.
 ## <a name="prerequisites"></a>필수 구성 요소
 
 - [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) (또는 이상) 또는 [Azure SQL 데이터베이스](https://azure.microsoft.com/services/sql-database/)합니다. 샘플의 전체 버전에 대 한 SQL Server 평가/개발자/Enterprise Edition을 사용 합니다.
-- [SQL Server Management Studio](https://msdn.microsoft.com/library/mt238290.aspx). 2016 년 6 월 릴리스를 사용 하는 최상의 결과 대 한 이후 버전입니다.
+- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms). 2016 년 6 월 릴리스를 사용 하는 최상의 결과 대 한 이후 버전입니다.
 
 ## <a name="download"></a>다운로드
 
@@ -56,7 +56,7 @@ SQL Server 인스턴스를 백업을 복원 하려면 Management Studio를 사�
 5. 필요한 경우 데이터에 대 한 대상 위치를 변경 하 고 로그 파일에는 **파일** 창. 데이터 배치 및 로그 파일은 서로 다른 드라이브에 가장 좋은 방법은 임을 note 합니다.
 6. **확인**을 클릭합니다. 그러면 데이터베이스 복원을 시작 합니다. 완료 되 면 SQL Server 인스턴스에 설치 된 WideWorldImporters 데이터베이스를 해야 합니다.
 
-### <a name="azure-sql-database"></a>Azure SQL Database
+### <a name="azure-sql-database"></a>Azure SQL 데이터베이스
 
 새 SQL 데이터베이스를 bacpac로 가져오려면 Management Studio를 사용할 수 있습니다.
 

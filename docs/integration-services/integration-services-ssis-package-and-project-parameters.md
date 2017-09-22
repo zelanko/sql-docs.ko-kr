@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
-ms.openlocfilehash: eb3b444f7cc248e89d21970d174d9792711dfbc6
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 55d240737f84e8e260222bbb921bd602d2d19062
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="integration-services-ssis-package-and-project-parameters"></a>Integration Services (SSIS) 패키지 및 프로젝트 매개 변수
@@ -164,8 +164,8 @@ ms.lasthandoff: 08/03/2017
   
     > **경고!** 목록에서 직접 편집하거나 **속성** 창을 사용하여 매개 변수 속성의 값을 수정할 수 있습니다. **삭제(X)** 도구 모음 단추를 사용하여 매개 변수를 삭제할 수 있습니다. 마지막 도구 모음 단추를 사용하여 **매개 변수 값 관리** 대화 상자를 열면 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 패키지를 실행할 때만 사용되는 매개 변수의 값을 지정할 수 있습니다.  
     
-## <a name="parameterize-dialog-box"></a>매개 변수화 대화 상자
-**매개 변수화** 대화 상자에서는 새 데이터베이스 또는 기존 매개 변수는 태스크의 속성과 연결할 수 있습니다. 태스크나 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너의 제어 흐름 탭을 마우스 오른쪽 단추로 클릭한 다음 **매개 변수화**를 클릭하여 이 대화 상자를 엽니다. 다음 목록에서는 이 대화 상자의 UI 요소에 대해 설명합니다. 매개 변수에 대한 자세한 내용은 [SSIS(Integration Services) 매개 변수](https://msdn.microsoft.com/library/hh213214.aspx)를 참조하세요.
+## <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
+**매개 변수화** 대화 상자에서는 새 데이터베이스 또는 기존 매개 변수는 태스크의 속성과 연결할 수 있습니다. 작업 또는 제어 흐름 탭을 마우스 오른쪽 단추로 클릭 하 여 대화 상자를 열고 [! 포함[ssIS](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters)합니다.
   
 ### <a name="options"></a>옵션  
  **속성**  
@@ -183,10 +183,10 @@ ms.lasthandoff: 08/03/2017
  **이름**  
  만들려는 매개 변수의 이름을 지정합니다.  
   
- **설명**  
+ **Description**  
  매개 변수에 대한 설명을 지정합니다.  
   
- **값**  
+ **Value**  
  매개 변수의 기본값을 지정합니다. 이 값은 디자인 기본값이라고도 하며 나중에 배포할 때 재정의할 수 있습니다.  
   
  **범위**  
