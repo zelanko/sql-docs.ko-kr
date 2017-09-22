@@ -1,25 +1,30 @@
 ---
 title: "도메인 속성 설정 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.domainproperties.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 도메인 속성 설정
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
+# <a name="set-domain-properties"></a>도메인 속성 설정
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 속성을 설정하는 방법에 대해 설명합니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -33,14 +38,14 @@ caps.handback.revision: 22
   
 ##  <a name="Set"></a> 도메인 속성 설정  
   
-1.  기존 도메인에서 도메인 관리 작업에서 기술 자료를 열어 속성을 설정 (참조 [기술 자료를 열려면](../data-quality-services/open-a-knowledge-base.md)), 다음에서 적절 한 도메인을 선택 하 고는 **도메인** 목록입니다. 기본적으로 도메인 속성 페이지가 표시됩니다.  
+1.  도메인 관리 작업에서 기술 자료를 연 후( [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)참조) **도메인** 목록에서 적절한 도메인을 선택하여 기존 도메인의 속성을 설정합니다. 기본적으로 도메인 속성 페이지가 표시됩니다.  
   
 2.  [Create a Domain](../data-quality-services/create-a-domain.md)에 설명된 대로 새 도메인을 만든 후 속성을 설정합니다.  
   
-3.  **마침** 을 클릭하여 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+3.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인 속성 설정 후  
- 도메인 속성을 설정한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 참조 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)합니다.  
+ 도메인 속성을 설정한 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Properties"></a> 도메인 속성  
   
@@ -48,13 +53,13 @@ caps.handback.revision: 22
  도메인이 생성된 후 도메인 이름 또는 설명을 변경할 수 있습니다. 도메인 이름은 기술 자료에 대해 고유해야 합니다. 설명은 최대 256자까지 지정할 수 있습니다.  
   
 ###  <a name="Type"></a> 데이터 형식  
- 도메인을 만들 때 값에 대 한 다음 데이터 형식 중 하나에서 선택 도메인: **문자열** (기본값) 이면 **날짜**, **정수**, 또는 **10 진수**합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하십시오.  
+ 도메인을 만들 때 도메인의 값에 대해 **문자열** (기본값), **날짜**, **정수**또는 **10진수**데이터 형식 중 하나를 선택합니다. 도메인을 만든 후 데이터 형식을 볼 수 있지만 변경할 수는 없습니다. 도메인에 대해 선택한 데이터 형식에 따라 도메인에 매핑할 수 있는 원본 데이터가 정의됩니다. DQS에서 4개의 도메인 데이터 형식 각각에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하십시오.  
   
 ###  <a name="Leading"></a> 선행 값 사용  
  동의어 값 대신 동의어 그룹의 선행 값이 출력되도록 지정하려면 이 확인란을 선택합니다. 각 동의어 값이 올바른 형식 또는 수정된 형식으로 출력되고 동의어 그룹의 선행 값으로 바뀌지 않도록 지정하려면 **선행 값 사용** 을 선택 취소합니다.  
   
 ###  <a name="Normalize"></a> 문자열 정규화  
- 데이터 형식이 경우 **문자열**, 데이터 품질 DQS에 의해 처리에 대 한 원본 데이터의 특수 문자를 무시 하려면 클릭 합니다. DQS는 날짜가 도메인에 로드될 때 내부적으로 특수 문자를 null 또는 공백으로 바꿉니다. 콜론, 하이픈, 마침표, 큰따옴표 또는 세미콜론이 공백으로 바뀝니다. 작은따옴표는 null로 바뀝니다. null을 사용하면 문자열의 두 부분이 결합됩니다.  
+ 데이터 형식이 **문자열**인 경우 클릭하여 DQS의 데이터 품질 처리를 위해 원본 데이터의 특수 문자를 무시합니다. DQS는 날짜가 도메인에 로드될 때 내부적으로 특수 문자를 null 또는 공백으로 바꿉니다. 콜론, 하이픈, 마침표, 큰따옴표 또는 세미콜론이 공백으로 바뀝니다. 작은따옴표는 null로 바뀝니다. null을 사용하면 문자열의 두 부분이 결합됩니다.  
   
  문자열 값의 특수 문자를 무시하면 일치 정확도가 증가할 수 있습니다. 특수 문자를 null 또는 공백으로 바꾸면 두 문자열 간의 유사성 점수가 높아질 수 있습니다. 문장 부호 또는 다른 기호는 여러 문자열에서 서로 다를 가능성이 높습니다. 내부적으로 특수 문자를 바꾸면 점수가 DQS의 최소 일치 임계값을 초과하여 이전에 일치한 적 없는 두 문자열이 일치 항목으로 간주될 수 있습니다. 그러나 일치 작업을 수행할 데이터 형식에 따라 특수 문자를 무시하도록 선택할지 여부를 결정해야 합니다. 예를 들어 영어로 된 측정 시스템의 데이터를 작업 중일 때 제품 데이터에서 큰따옴표가 인치를 의미하고, 작은따옴표가 피트를 의미할 경우 제품 데이터의 큰따옴표와 작은따옴표를 무시하면 거짓 긍정이 발생할 수 있습니다.  
   
@@ -77,7 +82,7 @@ caps.handback.revision: 22
  기본 언어는 한국어(Korean)입니다. **언어** 속성을 **기타** 로 설정하면 도메인에 대해 맞춤법 검사기가 해제됩니다.  
   
 > [!TIP]  
->  에 나열 되지 않는 경우는 **언어** 드롭 다운 목록 선택 해야 **다른**합니다. 이렇게 하면 DQS는 도메인에서 사용 가능한 정보(도메인 규칙, 도메인 값, TBR, 일치 규칙)를 기반으로 나열되지 않는 언어 데이터에 대한 중복을 정리하여 제거합니다.  
+>  언어가 **언어** 드롭다운 목록에 나열되지 않는 경우 **기타**를 선택해야 합니다. 이렇게 하면 DQS는 도메인에서 사용 가능한 정보(도메인 규칙, 도메인 값, TBR, 일치 규칙)를 기반으로 나열되지 않는 언어 데이터에 대한 중복을 정리하여 제거합니다.  
   
 ###  <a name="Speller"></a> 맞춤법 검사기 설정  
  데이터 형식이 **문자열**인 경우 도메인에 대해 DQS 맞춤법 검사기를 설정하려면 클릭합니다. 맞춤법 검사기는 문자열 데이터 형식인 도메인에 대해서만 작동합니다. **맞춤법 검사기 사용** 확인란은 확인란과 관련된 단일 도메인에 대해서만 맞춤법 검사기를 설정합니다. 복합 도메인에는 이 확인란이 적용되지 않습니다.  

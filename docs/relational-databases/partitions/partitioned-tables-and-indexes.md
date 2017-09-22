@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 00d990aa777630847e0993631ee1c7bbce781d54
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: f723156f18ee6661ffb26f615f9c3598bd6875b4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="partitioned-tables-and-indexes"></a>분할된 테이블 및 인덱스
@@ -68,9 +68,8 @@ ms.lasthandoff: 08/03/2017
 -   인덱스 키가 고유하고 테이블의 분할 열을 포함하고 있지 않은 경우  
   
 -   기본 테이블이 다른 조인 열을 사용하여 추가 테이블과의 배치된 조인에 참여하도록 하려는 경우  
-  
- 파티션 제거  
- 쿼리 최적화 프로그램에서 관련 파티션만 액세스하여 쿼리의 필터 조건을 충족하기 위해 사용되는 프로세스입니다.  
+
+ 파티션 제거 쿼리 최적화 프로그램에서 관련 파티션만 액세스하여 쿼리의 필터 조건을 충족하기 위해 사용되는 프로세스입니다.  
   
 ## <a name="performance-guidelines"></a>성능 지침  
  파티션 수 제한이 15,000개로 늘어나서 메모리, 분할된 인덱스 작업, DBCC 명령 및 쿼리에 영향을 줍니다. 이 섹션에서는 파티션 수를 1,000개 이상으로 늘리는 경우의 성능 영향에 대해 설명하고 필요한 경우 해결 방법을 제시합니다. 최대 파티션 수 제한을 15,000개로 늘리면 데이터를 더 오래 동안 저장할 수 있습니다. 하지만 데이터를 필요한 기간 동안만 저장하고 성능과 파티션 수를 균형되게 조정해야 합니다.  

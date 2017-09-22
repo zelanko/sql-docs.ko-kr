@@ -1,8 +1,10 @@
 ---
 title: "SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기 | Microsoft Docs"
 ms.custom: 
-ms.date: 03/14/2017
-ms.prod: sql-server-2016
+ms.date: 09/08/2017
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -24,16 +26,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 8f5fc3acde45aa4dab6738f0d88ec9d8005864b6
+ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
+ms.openlocfilehash: 3409cf7906f37569763ac2277ea82fe1d0fe4c82
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>SQL Server의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 이름을 변경하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 새 이름이 인식됩니다. 컴퓨터 이름을 다시 설정하기 위해 설치 프로그램을 다시 실행할 필요는 없습니다. 대신 다음 단계를 사용하여 sys.servers에 저장되고 @@SERVERNAME 시스템 함수로 보고되는 시스템 메타데이터를 업데이트합니다. @@SERVERNAME을 사용하거나 sys.servers에서 서버 이름을 쿼리하는 응용 프로그램 및 원격 연결에 대해 변경된 컴퓨터 이름을 반영하도록 시스템 메타데이터를 업데이트합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하는 컴퓨터의 이름을 변경하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 시 새 이름이 인식됩니다. 컴퓨터 이름을 다시 설정하기 위해 설치 프로그램을 다시 실행할 필요는 없습니다. 대신 다음 단계를 사용하여 sys.servers에 저장되고 @@SERVERNAME 시스템 함수로 보고되는 시스템 메타데이터를 업데이트합니다. @@SERVERNAME을 사용하거나 sys.servers에서 서버 이름을 쿼리하는 응용 프로그램 및 원격 연결에 대해 변경된 컴퓨터 이름을 반영하도록 시스템 메타데이터를 업데이트합니다.  
   
- 다음 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름 변경 작업에 사용할 수 없습니다. 이 단계는 인스턴스 이름에서 컴퓨터 이름에 해당하는 부분을 변경하는 경우에만 사용할 수 있습니다. 예를 들어 Instance1이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 MB1이라는 컴퓨터의 이름을 다른 이름(예: MB2)으로 변경할 수 있습니다. 그러나 이름에서 인스턴스에 해당하는 Instance1은 변경되지 않고 유지됩니다. 이 예제의 경우 \\\\*ComputerName*\\*InstanceName* 은 \\\MB1\Instance1에서 \\\MB2\Instance1로 변경됩니다.  
+다음 단계는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 이름 변경 작업에 사용할 수 없습니다. 이 단계는 인스턴스 이름에서 컴퓨터 이름에 해당하는 부분을 변경하는 경우에만 사용할 수 있습니다. 예를 들어 Instance1이라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 호스팅하는 MB1이라는 컴퓨터의 이름을 다른 이름(예: MB2)으로 변경할 수 있습니다. 그러나 이름에서 인스턴스에 해당하는 Instance1은 변경되지 않고 유지됩니다. 이 예제의 경우 \\\\*ComputerName*\\*InstanceName* 은 \\\MB1\Instance1에서 \\\MB2\Instance1로 변경됩니다.  
   
  **시작하기 전 주의 사항**  
   
@@ -51,11 +53,11 @@ ms.lasthandoff: 08/02/2017
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버를 다시 시작하면 새 컴퓨터 이름을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 있습니다. @@SERVERNAME에서 로컬 서버 인스턴스의 업데이트된 이름을 반환하도록 하려면 시나리오에 적용되는 다음 절차를 직접 실행해야 합니다. 업데이트하는 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스를 호스팅하는지 아니면 명명된 인스턴스를 호스팅하는지 여부에 따라 사용할 절차가 달라집니다.  
   
-### <a name="to-rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>다음의 독립 실행형 인스턴스를 호스트하는 컴퓨터의 이름을 바꾸려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+## <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 독립 실행형 인스턴스를 호스팅하는 컴퓨터 이름 바꾸기  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스를 호스팅하는 컴퓨터의 이름이 바뀐 경우 다음 절차를 실행합니다.  
   
-    ```  
+    ```sql
     sp_dropserver <old_name>;  
     GO  
     sp_addserver <new_name>, local;  
@@ -66,7 +68,7 @@ ms.lasthandoff: 08/02/2017
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스를 호스팅하는 컴퓨터의 이름이 바뀐 경우 다음 절차를 실행합니다.  
   
-    ```  
+    ```sql
     sp_dropserver <old_name\instancename>;  
     GO  
     sp_addserver <new_name\instancename>, local;  
@@ -78,7 +80,7 @@ ms.lasthandoff: 08/02/2017
 ## <a name="after-the-renaming-operation"></a>이름 바꾸기 작업을 실행한 후  
  컴퓨터의 이름이 변경되면 이전 컴퓨터 이름을 사용하던 모든 연결은 새 이름을 사용하여 연결되어야 합니다.  
   
-#### <a name="to-verify-that-the-renaming-operation-has-completed-successfully"></a>이름 바꾸기 작업이 성공적으로 완료되었는지 여부를 확인하려면  
+## <a name="verify-renaming-operation"></a>이름 바꾸기 작업 확인  
   
 -   @@SERVERNAME 또는 sys.servers에서 정보를 선택합니다. @@SERVERNAME 함수에서 새 이름을 반환하고, sys.servers 테이블에 새 이름이 표시됩니다. 다음 예제에서는 @@SERVERNAME의 사용을 보여 줍니다.  
   
@@ -93,18 +95,18 @@ ms.lasthandoff: 08/02/2017
   
  오류를 해결하려면 이 서버에 대한 원격 로그인을 삭제해야 합니다.  
   
-#### <a name="to-drop-remote-logins"></a>원격 로그인을 삭제하려면  
+### <a name="drop-remote-logins"></a>원격 로그인 삭제  
   
 -   기본 인스턴스의 경우 다음 프로시저를 실행합니다.  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name;  
     GO  
     ```  
   
 -   명명된 인스턴스의 경우 다음 프로시저를 실행합니다.  
   
-    ```  
+    ```sql
     sp_dropremotelogin old_name\instancename;  
     GO  
     ```  
@@ -114,6 +116,6 @@ ms.lasthandoff: 08/02/2017
  **클라이언트 별칭** - 명명된 파이프를 사용하는 클라이언트 별칭은 컴퓨터 이름 바꾸기 작업의 영향을 받습니다. 예를 들어 명명된 파이프 프로토콜을 사용하여 SRVR1을 가리키는 "PROD_SRVR"이라는 별칭을 만든 경우 파이프 이름은 `\\SRVR1\pipe\sql\query`와 같습니다. 컴퓨터의 이름을 바꾸면 명명된 파이프의 경로가 더 이상 유효하지 않습니다. 명명된 파이프에 대한 자세한 내용은 [명명된 파이프를 사용하여 유효한 연결 문자열 만들기](http://go.microsoft.com/fwlink/?LinkId=111063)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)  
+ [SQL Server 설치](../../database-engine/install-windows/install-sql-server.md)  
   
   

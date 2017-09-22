@@ -1,29 +1,34 @@
 ---
 title: "복합 도메인 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 07/31/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 47821eff-800b-4053-8d36-e42bbc267f54
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 32a0bb0592614c496a3ceff5a3cfa82f73032d9f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 복합 도메인 관리
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 복합 도메인을 사용하는 방법에 대해 설명합니다. 단일 도메인이 필드의 데이터를 충분히 표현하지 않아서 단일 도메인을 그룹화해야만 데이터를 표현할 수 있는 경우가 있습니다. 이 경우 복합 도메인을 만듭니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 구문 분석되지 않았지만 단일 복합 값에 포함되어 있는 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 값의 각 용어는 다른 단일 값으로 표현됩니다. 단일 도메인을 복합 도메인에 포함한 후 복합 도메인을 데이터 필드에 매핑하고 나면 단일 도메인의 정보를 구축하여 해당 필드의 데이터에 대한 기술 자료의 정보를 구축할 수 있습니다. 복합 도메인은 단일 도메인과 마찬가지로 단일 데이터 필드의 데이터를 의미 체계에 따라 표현한 것입니다.  
+# <a name="managing-a-composite-domain"></a>복합 도메인 관리
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 복합 도메인을 사용하는 방법에 대해 설명합니다. 단일 도메인이 필드의 데이터를 충분히 표현하지 않아서 단일 도메인을 그룹화해야만 데이터를 표현할 수 있는 경우가 있습니다. 이 경우 복합 도메인을 만듭니다. 복합 도메인은 둘 이상의 단일 도메인으로 구성되며 구문 분석되지 않았지만 단일 복합 값에 포함되어 있는 여러 관련 용어로 구성된 데이터 필드에 매핑됩니다. 값의 각 용어는 다른 단일 값으로 표현됩니다. 단일 도메인을 복합 도메인에 포함한 후 복합 도메인을 데이터 필드에 매핑하고 나면 단일 도메인의 정보를 구축하여 해당 필드의 데이터에 대한 기술 자료의 정보를 구축할 수 있습니다. 복합 도메인은 단일 도메인과 마찬가지로 단일 데이터 필드의 데이터를 의미 체계에 따라 표현한 것입니다.  
   
  복합 도메인의 단일 도메인은 서로 공통된 정보 영역이 있어야 합니다. 예를 들어 우편 번호, 국가, 시/도, 구/군/시 및 번지 데이터가 있는 주소 필드가 있습니다. 이 필드에 있는 여러 용어의 데이터 형식은 서로 다를 수 있습니다. 이 문제를 해결하려면 해당 용어를 서로 다른 단일 도메인에 매핑합니다. 또 다른 예로 성, 중간 이름 및 이름 데이터가 있는 전체 이름 필드가 있습니다. 복합 도메인을 사용하려면 필드의 데이터를 서로 다른 단일 도메인으로 구문 분석한 후 해당 필드에 대한 복합 도메인과 필드의 각 부분에 대한 단일 도메인을 만들어야 합니다.  
   
  복합 도메인은 단일 도메인과 기능이 다릅니다. 복합 도메인에서는 단일 도메인에서처럼 값을 변경할 수 없습니다. 복합 도메인의 경우 도메인 간 규칙을 사용하여 복합 도메인의 단일 도메인에 있는 값을 테스트할 수 있습니다. 또한 복합 도메인에 있는 값 조합을 볼 수도 있습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  복합 도메인을 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
   
 |||  
@@ -34,7 +39,7 @@ caps.handback.revision: 12
 |복합 도메인의 한 도메인 값이 다른 도메인의 값에 영향을 줄 경우 도메인 간 규칙을 만듭니다.|[도메인 간 규칙 만들기](../data-quality-services/create-a-cross-domain-rule.md)|  
 |DQS가 빈도를 보고할 수 있도록 값 조합을 식별합니다.|[복합 도메인의 값 관계 사용](../data-quality-services/use-value-relations-in-a-composite-domain.md)|  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

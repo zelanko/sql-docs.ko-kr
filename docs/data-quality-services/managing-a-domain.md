@@ -1,29 +1,34 @@
 ---
 title: "도메인 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "07/31/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 07/31/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 13743e56a9965e9a417b7c8222a7fa534b7feced
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 도메인 관리
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 도메인을 사용하는 방법에 대해 설명합니다. 도메인은 분석할 데이터 원본의 특정 필드에 있는 데이터를 의미 체계에 따라 표현한 것입니다. 도메인은 사용자가 데이터 원본에 대해 만드는 기술 자료의 일부이며, 샘플 데이터 원본을 분석하거나 데이터를 가져와 구축한 정보는 기술 자료에 정의된 도메인에 추가됩니다. 이러한 도메인의 정보는 나중에 데이터 품질 프로젝트에서 정리 및 일치를 수행할 때 사용됩니다. 도메인은 Data Quality Services에서 모든 작업의 핵심에 있습니다.  
+# <a name="managing-a-domain"></a>도메인 관리
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인을 사용하는 방법에 대해 설명합니다. 도메인은 분석할 데이터 원본의 특정 필드에 있는 데이터를 의미 체계에 따라 표현한 것입니다. 도메인은 사용자가 데이터 원본에 대해 만드는 기술 자료의 일부이며, 샘플 데이터 원본을 분석하거나 데이터를 가져와 구축한 정보는 기술 자료에 정의된 도메인에 추가됩니다. 이러한 도메인의 정보는 나중에 데이터 품질 프로젝트에서 정리 및 일치를 수행할 때 사용됩니다. 도메인은 Data Quality Services에서 모든 작업의 핵심에 있습니다.  
   
  도메인은 데이터 원본 필드에 매핑되고 기술 자료 검색, 도메인 관리 및 일치 작업에서 채워집니다. 데이터 원본의 데이터와 보고서의 출력 데이터를 로드하는 방법은 도메인 속성에 정의됩니다. 참조 데이터 공급자를 사용하여 데이터를 정리할 경우 단일 도메인이나 복합 도메인에 참조 데이터 서비스를 연결합니다. 도메인의 데이터에 적용할 규칙을 만들고 도메인의 용어 기반 관계를 만들 수 있습니다. 도메인의 데이터를 보고 수정할 수 있습니다.  
   
- 또한 각각 공통 데이터에 대한 정보가 포함된 두 개 이상의 개별 도메인으로 구성되는 복합 도메인을 만들 수도 있습니다. 자세한 내용은 참조 [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)합니다.  
+ 또한 각각 공통 데이터에 대한 정보가 포함된 두 개 이상의 개별 도메인으로 구성되는 복합 도메인을 만들 수도 있습니다. 자세한 내용은 [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
   
-## 도메인 속성  
+## <a name="domain-properties"></a>도메인 속성  
  도메인을 만들 때 원본 데이터에서 도메인을 채우는 방법과 도메인 값을 출력하는 방법에 대해 다음과 같은 옵션을 사용할 수 있습니다. 자세한 내용은 [Set Domain Properties](../data-quality-services/set-domain-properties.md)을 참조하세요.  
   
 -   도메인을 채우는 데 사용할 데이터 형식을 선택합니다. 각 도메인 데이터 형식에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하십시오.  
@@ -38,7 +43,7 @@ caps.handback.revision: 13
   
 -   데이터 형식이 문자열인 경우 문자열에서 구문 오류가 발생하지 않을 것이라 판단되면 DQS에서 구문 오류를 식별하지 않도록 지정할 수 있습니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  도메인을 사용하면 다음과 같은 작업을 수행할 수 있습니다.  
   
 |||  
@@ -49,9 +54,9 @@ caps.handback.revision: 13
 |기술 자료의 값 변경 또는 보강|[도메인 값 변경](../data-quality-services/change-domain-values.md)|  
 |유효성 검사 및 표준화 규칙 사용|[도메인 규칙 만들기](../data-quality-services/create-a-domain-rule.md)|  
 |관계를 사용하여 도메인 값에 포함된 용어 수정|[용어 기반 관계 만들기](../data-quality-services/create-term-based-relations.md)|  
-|도메인 관리 작업 완료, 닫기 또는 취소|[도메인 관리 작업 종료](../Topic/End%20the%20Domain%20Management%20Activity.md)|  
+|도메인 관리 작업 완료, 닫기 또는 취소|[도메인 관리 작업 종료](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

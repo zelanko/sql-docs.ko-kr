@@ -1,7 +1,7 @@
 ---
-title: "PolyBase 구성 | Microsoft Docs"
+title: "PolyBase 구성 | Microsoft 문서"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/13/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
-ms.openlocfilehash: dd9edc9dccf29c21bb37bb0347c8a8cdb87e2b21
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: 95a149c4a59de88373206f1b90419c0b7359bb90
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="polybase-configuration"></a>PolyBase 구성
@@ -30,8 +30,7 @@ ms.lasthandoff: 07/31/2017
  SQL Server에서 외부 데이터 원본에 대한 연결을 확인해야 합니다. 연결 형식에 따라 쿼리 성능이 크게 달라집니다. 예를 들어 PolyBase 쿼리에서 10Gbit 이더넷 링크를 사용하는 경우 1Gbit 이더넷 링크보다 쿼리 응답 속도가 빨라집니다.  
   
  **sp_configure**를 사용하여 SQL Server가 사용 중인 Hadoop 버전 또는 Azure Blob 저장소에 연결하도록 구성해야 합니다. PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 배포를 지원합니다.  지원되는 외부 데이터 원본의 전체 목록은 [PolyBase Connectivity Configuration&#40;Transact-SQL&#41;](../../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요.  
- 
- 참고: PolyBase는 Cloudera 암호화 영역을 지원하지 않습니다. 
+1 참고: PolyBase는 Cloudera 암호화 영역을 지원하지 않습니다. 
   
 ### <a name="run-spconfigure"></a>sp_configure 실행  
   
@@ -54,7 +53,7 @@ ms.lasthandoff: 07/31/2017
     -   SQL Server PolyBase 엔진  
   
 ## <a name="pushdown-configuration"></a>푸시다운 구성  
- 쿼리 성능을 향상하려면 Hadoop 클러스터에 푸시다운 계산을 사용하도록 설정합니다. SQL Server에서 Hadoop 환경에 적절한 구성 매개 변수를 일부 지정해야 합니다.  
+ 쿼리 성능을 향상하려면 Hadoop 환경에 맞는 일부 SQL Server 구성 매개 변수를 제공해야 하는 Hadoop 클러스터에 대한 푸시다운 계산을 사용하도록 설정합니다.  
   
 1.  SQL Server 설치 경로에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
   
@@ -67,6 +66,20 @@ ms.lasthandoff: 07/31/2017
 3.  SQL Server 컴퓨터의 **yarn.site.xml 파일** 에서 **yarn.application.classpath** 속성을 찾은 다음 Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
 
 4. 모든 CDH 5.X 버전에서 **mapreduce.application.classpath** 구성 매개 변수를 **yarn.site.xml 파일**의 끝이나 **mapred-site.xml 파일**에 추가해야 합니다. HortonWorks는 **yarn.application.classpath** 구성 내에 이러한 구성을 포함하고 있습니다.
+
+## <a name="connecting-to-hadoop-cluster-with-hadooprpcprotection-setting"></a>Hadoop.RPC.Protection 설정을 사용하여 Hadoop 클러스터에 연결
+Hadoop 클러스터에서 통신을 보호하는 일반적인 방법은 '개인 정보' 또는 '무결성' hadoop.rpc.protection 구성을 변경하는 것입니다. 기본적으로 PolyBase는 구성이 '인증'으로 설정되었다고 가정합니다. 이 기본값을 재정의하려면 core-site.xml 파일에 다음 속성을 추가해야 합니다. 이 구성을 변경하면 SQL Server에 대한 SSL 연결 뿐만 아니라 hadoop 노드 간에 안전한 데이터 전송을 활성화합니다.
+
+```
+<!-- RPC Encryption information, PLEASE FILL THESE IN ACCORDING TO HADOOP CLUSTER CONFIG -->
+  <property>
+    <name>hadoop.rpc.protection</name>
+    <value></value>
+  </property> 
+```
+
+
+
 
 ## <a name="example-yarn-sitexml-and-mapred-sitexml-files-for-cdh-5x-cluster"></a>CDH 5.X 클러스터의 yarn-site.xml 및 mapred-site.xml 파일의 예제
 

@@ -1,25 +1,30 @@
 ---
 title: "DQS의 참조 데이터 서비스 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 caps.latest.revision: 22
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 22
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 201f30b4b5fd5ff6de06274a83fa62967498db2e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS의 참조 데이터 서비스
+# <a name="reference-data-services-in-dqs"></a>DQS의 참조 데이터 서비스
   참조 데이터는 신뢰할 수 있는 공용 도메인에서 또는 고급 상용 콘텐츠 공급자를 통해 사용할 수 있는 관련 또는 분류된 전역 데이터(엔터프라이즈의 경계를 벗어남)의 정확하고 완전한 집합을 의미합니다.  
   
- DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])의 참조 데이터 서비스 기능을 사용하여 타사 참조 데이터 공급자를 구독하고 고품질 데이터를 기준으로 비즈니스 데이터의 유효성을 검사하여 비즈니스 데이터를 쉽게 정리하고 보강할 수 있습니다. 정리 프로세스가 진행되는 동안 Data Quality Services 내에서 업계 선두 데이터 품질 서비스 공급업체의 서비스를 사용하여 데이터 표준화, 수정 또는 보강을 수행할 수 있습니다. 예를 들어 지역 번호 또는 우편 번호 목록을 사용하여 참조 데이터를 기준으로 고객 주소의 유효성을 검사할 수 있습니다.  
+ DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 참조 데이터 서비스 기능을 사용하여 타사 참조 데이터 공급자를 구독하고 고품질 데이터를 기준으로 비즈니스 데이터의 유효성을 검사하여 비즈니스 데이터를 쉽게 정리하고 보강할 수 있습니다. 정리 프로세스가 진행되는 동안 Data Quality Services 내에서 업계 선두 데이터 품질 서비스 공급업체의 서비스를 사용하여 데이터 표준화, 수정 또는 보강을 수행할 수 있습니다. 예를 들어 지역 번호 또는 우편 번호 목록을 사용하여 참조 데이터를 기준으로 고객 주소의 유효성을 검사할 수 있습니다.  
   
  참조 데이터 서비스 기능에는 다음과 같은 이점이 있습니다.  
   
@@ -30,11 +35,11 @@ caps.handback.revision: 22
 -   Windows Azure Marketplace뿐만 아니라 다이렉트 온라인 타사 참조 데이터 공급자를 통해 직접 참조 데이터를 사용할 수 있습니다.  
   
 ##  <a name="Marketplace"></a> Windows Azure Marketplace의 참조 데이터 사용  
- DQS에서는 콘텐츠 공급자가 Marketplace를 통해 참조 데이터 서비스를 제공할 수 있도록 Windows Azure Marketplace의 참조 데이터 사용을 지원합니다. Marketplace는 단일 마켓플레이스와 고품질 데이터 및 응용 프로그램 배달 채널을 클라우드 서비스로 제공하는 Microsoft의 서비스입니다. 시장에 대 한 자세한 내용은 참조 [설명에 대 한 Windows Azure Marketplace](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS에서는 콘텐츠 공급자가 Marketplace를 통해 참조 데이터 서비스를 제공할 수 있도록 Windows Azure Marketplace의 참조 데이터 사용을 지원합니다. Marketplace는 단일 마켓플레이스와 고품질 데이터 및 응용 프로그램 배달 채널을 클라우드 서비스로 제공하는 Microsoft의 서비스입니다. Marketplace에 대한 자세한 내용은 [Windows Azure Marketplace에 대해 알아보기](http://go.microsoft.com/fwlink/?LinkId=211291) (http://go.microsoft.com/fwlink/?LinkId=211291)를 참조하세요.  
   
  Marketplace와 DQS 간의 원활한 통합은 DQS 내 데이터 품질 프로젝트에 대한 정보 검색, 탐색 및 가져오기와 관련된 단계를 간소화합니다. DQS에서 데이터를 가져올 수 있으므로 DQS 사용자는 DQS, Marketplace 및 참조 데이터 서비스 공급자를 혁신적인 방식으로 결합하여 고품질 데이터를 얻을 수 있습니다.  
   
- DQS에서 Marketplace의 참조 데이터를 정리 작업에 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 것은 무료이며 유료 데이터 집합을 구독하는 경우에만 요금이 청구됩니다. 무료 데이터 집합을 구독하고 사용하는 경우에는 요금이 청구되지 않습니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 참조 [계정 만들기](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936).  
+ DQS에서 Marketplace의 참조 데이터를 정리 작업에 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 것은 무료이며 유료 데이터 집합을 구독하는 경우에만 요금이 청구됩니다. 무료 데이터 집합을 구독하고 사용하는 경우에는 요금이 청구되지 않습니다. Marketplace 계정 키를 만드는 방법은 [계정 만들기](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)를 참조하세요.  
   
  또한 DQS 내에서 다음과 같은 Marketplace 작업을 수행할 수 있습니다.  
   
@@ -60,16 +65,16 @@ caps.handback.revision: 22
   
      DQS에서 참조 데이터 공급자 세부 정보를 구성하는 작업은 특정 데이터 공급자에 대해 한 번만 수행하면 됩니다. DQS 관리자만 DQS에서 참조 데이터 설정을 구성할 수 있습니다.  
   
-2.  **참조 데이터 서비스에 기술 자료의 도메인/복합 도메인을 매핑하고**: 1 단계에서 구독/추가한 적절 한 참조 데이터 서비스에 도메인/복합 도메인을 매핑합니다.  
+2.  **기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑**: 1단계에서 구독/추가한 적절한 데이터 서비스에 도메인/복합 도메인을 매핑합니다.  
   
-3.  **매핑된 도메인을 사용 하 여 데이터 품질 프로젝트의 정리 작업에 대 한**:에 대 한 데이터 품질 프로젝트를 만드는 동안는 **정리** 활동을 2 단계에서 참조 데이터 서비스와 매핑된 도메인/복합 도메인을 포함 하는 기술 자료를 선택 하 고 정리 작업을 수행 합니다.  
+3.  **데이터 품질 프로젝트의 정리 작업에 매핑된 도메인 사용**: **정리** 작업에 대한 데이터 품질 프로젝트를 만들 때 2단계서 참조 데이터 서비스와 매핑된 도메인/복합 도메인이 포함된 기술 자료를 선택하고 정리 작업을 수행합니다.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |Marketplace 또는 다이렉트 온라인 타사 데이터 공급자의 참조 데이터 서비스를 사용하도록 DQS를 구성하는 방법에 대해 설명합니다.|[참조 데이터를 사용하도록 DQS 구성](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |기술 자료의 도메인/복합 도메인을 참조 데이터 서비스에 매핑하는 방법에 대해 설명합니다.|[참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|참조 데이터 서비스를 사용하여 데이터를 정리하는 방법에 대해 설명합니다.|[참조 데이터 & #40;를 사용 하 여 데이터를 정리 합니다. 외부 & #41; 기술](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|참조 데이터 서비스를 사용하여 데이터를 정리하는 방법에 대해 설명합니다.|[참조 데이터&#40;외부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

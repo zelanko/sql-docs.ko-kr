@@ -1,25 +1,30 @@
 ---
 title: "용어 기반 관계 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.kbtermsbased.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.kbtermsbased.f1
 ms.assetid: 66db9277-d892-4dae-8a82-060fd3ba6949
 caps.latest.revision: 27
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 27
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 93965e0267bb988b2b833701c9f193385220ff90
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 용어 기반 관계 만들기
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 도메인의 용어 기반 관계를 만드는 방법에 대해 설명합니다. TBR(용어 기반 관계)을 사용하면 도메인 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 용어 "Inc."를 "Incorporated"로 변경하는 용어 기반 관계를 설정할 수 있습니다. 용어 "Inc."는 도메인에서 발생할 때마다 변경됩니다. "Contoso, Inc."의 인스턴스는 "Contoso, Incorporated"로 변경되고 두 값은 정확한 동의어로 간주됩니다.  
+# <a name="create-term-based-relations"></a>용어 기반 관계 만들기
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인의 용어 기반 관계를 만드는 방법에 대해 설명합니다. TBR(용어 기반 관계)을 사용하면 도메인 값의 일부인 용어를 수정할 수 있습니다. 이를 통해 공통 부분의 맞춤법을 제외하고 동일한 여러 값을 동일한 동의어로 간주할 수 있습니다. 예를 들어 용어 "Inc."를 "Incorporated"로 변경하는 용어 기반 관계를 설정할 수 있습니다. 용어 "Inc."는 도메인에서 발생할 때마다 변경됩니다. "Contoso, Inc."의 인스턴스는 "Contoso, Incorporated"로 변경되고 두 값은 정확한 동의어로 간주됩니다.  
   
  용어 기반 관계를 사용하려면 "Inc." 및 "Incorporated" 또는 "Senior" 및 "Sr."과 같은 값/다음으로 수정 쌍 목록을 작성합니다. 용어 기반 관계를 사용하면 수동으로 개별 도메인 값을 동의어로 설정할 필요 없이 도메인 전체에서 용어를 변경할 수 있습니다. 기술 자료 검색에서 이전에 검색된 적이 없는 값을 수정하도록 지정할 수도 있습니다. 용어 기반 관계 변환으로 인해 두 값이 동일해지는 경우 DQS에서는 두 값 간에 동의어 관계(기술 자료 검색의 경우) 또는 수정 관계(데이터 수정의 경우)를 만들거나 정확하게 일치하는 항목(일치의 경우)을 만듭니다.  
   
@@ -27,13 +32,13 @@ caps.handback.revision: 27
   
  **용어 기반 관계와 도메인 관리**  
   
- 도메인 관리에 용어 기반 관계를 적용할 경우 DQS에서는 기술 자료 검색, 정리 및 일치 프로세스에서 변경 내용을 적용하지만 용어 기반 관계를 따르기 위해 도메인 값 자체를 변경하지는 않습니다. 즉, 입력 하 고의 용어 기반 관계를 적용 하는 경우는 **용어 기반 관계** 탭은 **도메인 관리** 페이지를 변경 하지에서 구현 될 것는 **도메인 값** 동일한 페이지의 탭 합니다. 따라서 이후에 TBR을 변경할 수 있습니다.  
+ 도메인 관리에 용어 기반 관계를 적용할 경우 DQS에서는 기술 자료 검색, 정리 및 일치 프로세스에서 변경 내용을 적용하지만 용어 기반 관계를 따르기 위해 도메인 값 자체를 변경하지는 않습니다. 즉, **도메인 관리** 페이지의 **용어 기반 관계** 탭에서 용어 기반 관계를 입력하거나 수락하더라도 동일한 페이지의 **도메인 값** 탭에서는 변경 작업이 수행되지 않습니다. 따라서 이후에 TBR을 변경할 수 있습니다.  
   
  **용어 기반 관계와 데이터 정리**  
   
  도메인에 용어 기반 관계를 적용하고 데이터 정리 프로세스를 실행할 경우 DQS에서는 정리 중에 변경 내용을 적용하지만 용어 변경 내용을 기술 자료에 적용하지는 않습니다.  
   
--   용어 기반 관계에 의해 변경 된 값은 도메인에 있지만 없는 동의어, 경우에 표시 됩니다는 **수정** 아래 열은 **수정 됨** 탭은 **결과 관리 및 보기** 이유 용어 기반 관계로 설정 페이지.  
+-   용어 기반 관계에 의해 변경된 값이 도메인에 있지만 동의어가 아닌 경우 해당 값은 **결과 관리 및 보기** 페이지의 **수정됨** 탭에 있는 **다음으로 수정** 열에 표시되고 이유가 용어 기반 관계로 설정됩니다.  
   
 -   용어 기반 관계에 의해 변경된 값이 도메인에 없고 DQS가 일치하는 값을 찾은 경우 해당 값이 변경된 값으로 수정되고 신뢰 수준에 따라 수정됨 탭이나 제안 탭에 나타납니다. 일치 항목이 없으면 해당 값이 TBR 수정 내용과 함께 새로 만들기에 나타납니다. 이는 TBR을 수정한다고 해서 해당 값이 올바르다는 것을 의미하지는 않기 때문입니다.  
   
@@ -61,7 +66,7 @@ caps.handback.revision: 27
   
 ##  <a name="Create"></a> 용어 기반 관계 만들기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 또는 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 27
   
 3.  **도메인 관리** 페이지의 **도메인 목록** 에서 도메인 규칙을 만들 도메인을 선택하거나 새 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [Create a Domain](../data-quality-services/create-a-domain.md)를 참조하세요.  
   
-4.  클릭 하 고 **용어 기반 관계** 탭 합니다.  
+4.  **용어 기반 관계** 탭을 클릭합니다.  
   
 5.  다음과 같이 용어 기반 관계를 만듭니다.  
   
@@ -83,7 +88,7 @@ caps.handback.revision: 27
   
     3.  **다음으로 수정** 열에 **값** 열의 용어를 어떤 용어로 변경할지 입력합니다.  
   
-    4.  클릭 **새 관계 추가** 다른 용어 기반 관계를 추가 하려면 다시 합니다.  
+    4.  또 다른 용어 기반 관계를 추가하려면 **새 관계 추가** 를 다시 클릭합니다.  
   
     5.  선택한 하나 이상의 행을 관계 테이블에서 삭제하려면 **선택한 관계 삭제** 를 클릭합니다. Ctrl 단추를 누르고 선택되지 않은 행을 클릭하면 여러 행을 선택할 수 있습니다.  
   
@@ -92,13 +97,13 @@ caps.handback.revision: 27
     7.  **맞춤법 검사기**: **값** 또는 **다음으로 수정** 열 값에 빨간색 물결선 밑줄이 있는 경우 맞춤법 검사기에서 값의 수정 사항을 제안하는 것입니다. 밑줄이 있는 값을 마우스 오른쪽 단추로 클릭한 후 맞춤법 검사기에서 제안하는 값 중 하나를 선택합니다. 또는 바로 가기 메뉴에서 **추가** 를 클릭하여 원래 값으로 진행할 수도 있습니다. 자세한 내용은 [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) 및 [Set Domain Properties](../data-quality-services/set-domain-properties.md)를 참조하세요.  
   
         > [!NOTE]  
-        >  맞춤법 검사기를 사용 하려면 설정할에서 **도메인 속성** 페이지에서 사용할 수 없는 경우 또는 **도메인 속성** 페이지를 클릭할 수는 **활성화/비활성화 맞춤법 검사기** 아이콘을는 **용어 기반 관계** 페이지가이 페이지에서 사용 하도록 설정 합니다.  
+        >  맞춤법 검사기를 사용하려면 **도메인 속성** 페이지에서 맞춤법 검사기를 설정하면 됩니다. **도메인 속성** 페이지에서 맞춤법 검사기가 해제된 경우 **용어 기반 관계** 페이지에서 **맞춤법 검사기를 설정/해제합니다** 아이콘을 클릭하여 설정할 수 있습니다.  
   
-6.  클릭 **변경 내용 적용** 를 도메인에 용어 기반 관계를 적용 합니다.  
+6.  **변경 사항 적용** 을 클릭하여 도메인에 용어 기반 관계를 적용합니다.  
   
-7.  **마침** 을 클릭하여 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+7.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 용어 기반 관계를 만든 후  
- 용어 기반 관계를 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 참조 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)합니다.  
+ 용어 기반 관계를 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   

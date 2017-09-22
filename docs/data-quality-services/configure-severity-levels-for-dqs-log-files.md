@@ -1,33 +1,38 @@
 ---
 title: "DQS 로그 파일에 대한 심각도 수준 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.admin.config.log.f1"
-helpviewer_keywords: 
-  - "심각도 수준"
-  - "로그 파일, 심각도 수준"
-  - "dqs 로그 파일, 심각도 수준"
-  - "로깅, 심각도 수준"
-  - "심각도 수준 구성"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.admin.config.log.f1
+helpviewer_keywords:
+- severity levels
+- log files,severity levels
+- dqs log files,severity levels
+- logging,severity levels
+- configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 caps.latest.revision: 11
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 11
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 336ea328d7a72ed46477781fb687135ee78b429a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 로그 파일에 대한 심각도 수준 구성
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 다양한 작업 및 모듈의 심각도를 구성하는 방법에 대해 설명합니다. 심각도는 DQS에서 발생하는 이벤트의 강도를 정의합니다. DQS 이벤트의 심각도는 다음과 같습니다(심각도 내림차순 정렬).  
+# <a name="configure-severity-levels-for-dqs-log-files"></a>DQS 로그 파일에 대한 심각도 수준 구성
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 다양한 작업 및 모듈의 심각도를 구성하는 방법에 대해 설명합니다. 심각도는 DQS에서 발생하는 이벤트의 강도를 정의합니다. DQS 이벤트의 심각도는 다음과 같습니다(심각도 내림차순 정렬).  
   
--   **심각한**: 심각한/예기치 않은 결과가 발생할 수 있는 치명적인 런타임 오류입니다.  
+-   **치명적**: 심각한/예기치 않은 결과를 일으킬 수 있는 치명적인 런타임 오류입니다.  
   
 -   **오류**: 그 외 런타임 오류입니다.  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 11
   
 -   **정보**: 오류나 경고가 아닌 일반 이벤트에 대한 정보입니다. 예를 들어 'DQS 프로세스가 시작되었습니다'가 있습니다.  
   
--   **디버그**: 이벤트에 대 한 자세한 정보를 자세히 설명 합니다.  
+-   **디버그**: 이벤트에 대한 자세한(세부) 정보입니다.  
   
- 다양한 DQS 작업 및 모듈의 심각도를 구성하면 해당 DQS 작업 또는 모듈에 대한 DQS 로그 파일에 로깅하고 기록할 정보가 필터링됩니다. 예를 들어를 DQS 작업의 심각도 수준을 설정 하는 경우 **경고**, 경고 및만 더 높은 심각도 메시지 (오류 및 치명적) DQS 활동과 관련 된 기록 됩니다.  
+ 다양한 DQS 작업 및 모듈의 심각도를 구성하면 해당 DQS 작업 또는 모듈에 대한 DQS 로그 파일에 로깅하고 기록할 정보가 필터링됩니다. 예를 들어 DQS 작업의 심각도를 **경고**로 설정하면 해당 DQS 작업과 관련된 경고 이상의 심각도 메시지만 로깅됩니다(오류 및 치명적).  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -49,13 +54,13 @@ caps.handback.revision: 11
 ##  <a name="ConfigureActivity"></a> 작업 수준에서 심각도 구성  
  DQS에서 도메인 관리, 기술 자료 검색, 일치 정책, 데이터 정리, 데이터 일치 및 참조 데이터 서비스와 같은 작업에 대한 로그 심각도 설정을 구성할 수 있습니다. 이렇게 하려면  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **구성**을 클릭합니다.  
   
-3.  다음으로, **로그 설정** 탭을 클릭합니다. DQS 작업의 심각도 선택할 수 있는 나열 됩니다: **도메인 관리**, **기술 자료 검색**, **정리 프로젝트 (예: RDS)**, **일치 정책 및 일치 프로젝트**, 및 **RDS**합니다.  
+3.  다음으로, **로그 설정** 탭을 클릭합니다. 심각도를 선택할 수 있는 DQS 작업 **도메인 관리**, **기술 자료 검색**, **정리 프로젝트(예: RDS)**, **일치하는 정책 및 프로젝트** 및 **RDS**가 나열됩니다.  
   
-4.  특정 DQS 작업에 대해 로깅할 심각도를 선택합니다. 심각도 **치명적**, **오류**, **경고**, **정보**및 **디버그**중 하나를 선택할 수 있습니다. 예를 들어 기술 자료 검색 작업에 대 한 DQS 로그 파일에 쓰여지도록 치명적 메시지만, 선택 **치명적** 에 대 한 드롭다운 목록에는 **기술 자료 검색** 활동입니다.  
+4.  특정 DQS 작업에 대해 로깅할 심각도를 선택합니다. 심각도 **치명적**, **오류**, **경고**, **정보**및 **디버그**중 하나를 선택할 수 있습니다. 예를 들어 기술 자료 검색 작업에서 치명적 메시지만 DQS 로그 파일에 기록하려면 **기술 자료 검색** 작업에 대한 드롭다운 목록에서 **치명적** 을 선택합니다.  
   
     > [!NOTE]  
     >  기본적으로 각 작업에 대해 **오류** 가 선택됩니다. 이는 각 작업에 대한 DQS 로그 파일에 기본적으로 오류 및 치명적 메시지가 기록됨을 의미합니다.  
@@ -77,17 +82,17 @@ caps.handback.revision: 11
   
 1.  **로그 설정** 탭에서 **고급** 에 대해 아래쪽 화살표를 클릭하여 영역을 표시합니다.  
   
-2.  표시 된 표에서 모듈 이름을 드롭 다운 목록에서 선택 된 **모듈** 열.  
+2.  표시된 표에서 **모듈** 열에 있는 드롭다운 목록의 모듈 이름을 선택합니다.  
   
-3.  드롭다운 목록에서 모듈에 대 한 심각도 수준 선택은 **심각도** 열입니다. 심각도 **치명적**, **오류**, **경고**, **정보**및 **디버그**중 하나를 선택할 수 있습니다.  
+3.  다음으로, **심각도** 열의 드롭다운 목록에서 모듈의 심각도를 선택합니다. 심각도 **치명적**, **오류**, **경고**, **정보**및 **디버그**중 하나를 선택할 수 있습니다.  
   
-     예를 들어 도메인 관리 작업 내에서 **Microsoft.Ssdqs.DomainRules.Define** 모듈을 선택하고 다른 로그 심각도를 선택하여 도메인 규칙 정의 기능의 세분성 수준을 도메인 관리 작업과 다르게 설정할 수 있습니다. 마찬가지로, 도메인 간 규칙 기능의 세분성 수준을 선택 하 여 설정할 수 있습니다는 **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** 모듈을 선택 하 고 다른 로그 심각도입니다.  
+     예를 들어 도메인 관리 작업 내에서 **Microsoft.Ssdqs.DomainRules.Define** 모듈을 선택하고 다른 로그 심각도를 선택하여 도메인 규칙 정의 기능의 세분성 수준을 도메인 관리 작업과 다르게 설정할 수 있습니다. 마찬가지로 **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** 모듈을 선택하고 다른 로그 심각도를 선택하여 도메인 간 규칙 기능의 세분성 수준을 다르게 설정할 수 있습니다.  
   
 4.  필요한 경우 다른 모듈에 대해 2단계와 3단계를 반복합니다. 또한 **모듈 추가** 및 **모듈 제거** 아이콘을 클릭하여 표에서 행을 추가하거나 삭제할 수도 있습니다.  
   
 5.  **닫기**를 클릭합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DQS 로그 파일에 대한 고급 설정 구성](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

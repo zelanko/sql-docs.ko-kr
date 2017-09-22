@@ -1,27 +1,32 @@
 ---
 title: "Excel 파일에서 도메인으로 값 가져오기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importfailing.f1"
-  - "sql13.dqs.kb.importselect.f1"
-  - "sql13.dqs.kb.failingvalues.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importfailing.f1
+- sql13.dqs.kb.importselect.f1
+- sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 caps.latest.revision: 26
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 26
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: c007da5bb365b81cd3a8bdd570c139077e44afbd
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# Excel 파일에서 도메인으로 값 가져오기
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 Excel 파일의 값을 도메인으로 가져오는 방법에 대해 설명합니다. Excel 파일을 사용하여 도메인 값을 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램으로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 이 방법을 사용하면 Excel 파일이나 텍스트 파일로 올바른 데이터 값 목록을 가진 사용자가 해당 값을 도메인으로 가져올 수 있습니다. Excel 파일에서 도메인이나 기술 자료로 도메인 값을 가져올 수 있습니다. (참조 [기술 자료 검색에서 Excel 파일에서 가져오기 도메인](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md) 기술 자료로 도메인을 가져오는 방법에 대 한 자세한 내용은.) Excel 파일로의 내보내기는 지원되지 않습니다.  
+# <a name="import-values-from-an-excel-file-into-a-domain"></a>Excel 파일에서 도메인으로 값 가져오기
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 Excel 파일의 값을 도메인으로 가져오는 방법에 대해 설명합니다. Excel 파일을 사용하여 도메인 값을 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램으로 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 이 방법을 사용하면 Excel 파일이나 텍스트 파일로 올바른 데이터 값 목록을 가진 사용자가 해당 값을 도메인으로 가져올 수 있습니다. Excel 파일에서 도메인이나 기술 자료로 도메인 값을 가져올 수 있습니다. (기술 자료로 도메인 가져오기에 대한 자세한 내용은 [기술 자료 검색 시 Excel 파일에서 도메인 가져오기](../data-quality-services/import-domains-from-an-excel-file-in-knowledge-discovery.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  
   
  다음 두 가지 방법으로 데이터 값을 가져올 수 있습니다.  
   
@@ -32,16 +37,16 @@ caps.handback.revision: 26
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
- Excel 파일에서 도메인을 가져오려면 Excel 컴퓨터에 설치 해야 하는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 도메인 값 또는 전체 도메인을 가져오려면 응용 프로그램에 설치 되어; 도메인 값이 있는 Excel 파일을 만든 상태 여야 (참조 [가져오기 작동 방식](#How)); 해야 만들고 기술 자료를 도메인을 가져올 열을 합니다.  
+ Excel 파일에서 도메인을 가져오려면 도메인 값이나 전체 도메인을 가져오기 위해 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램이 설치된 컴퓨터에 Excel이 설치되어 있어야 합니다. 도메인 값이 포함된 Excel 파일을 만들어 놓은 상태여야 합니다( [How the import works](#How)참조). 그리고 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
 ####  <a name="Permissions"></a> 사용 권한  
  Excel 파일에서 도메인 값을 가져오려면 DQS_MAIN 데이터베이스의 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Import"></a> Excel 파일에서 도메인으로 값 가져오기  
+##  <a name="Import"></a> Import values from an Excel file into a domain  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
@@ -53,9 +58,9 @@ caps.handback.revision: 26
   
 6.  **도메인 값 가져오기** 대화 상자에서 **찾아보기**를 클릭합니다.  
   
-7.  에 **파일 선택을** 대화 상자에서 도메인 값 가져오기 (확장명이.xlsx,.xls 또는.csv) 파일을 선택 하 고 클릭 하려는 Excel 파일이 포함 된 폴더로 이동 **열려**합니다. 파일은 DQS를 실행하는 클라이언트에 있거나 사용자가 액세스할 수 있는 공유 파일에 있어야 합니다.  
+7.  **파일 선택** 대화 상자에서 도메인 값을 가져올 Excel 파일이 포함된 폴더로 이동하고 파일(확장명이 .xlsx, .xls 또는 .csv)을 선택한 후 **열기**를 클릭합니다. 파일은 DQS를 실행하는 클라이언트에 있거나 사용자가 액세스할 수 있는 공유 파일에 있어야 합니다.  
   
-8.   **워크시트** 드롭 다운 목록에서 가져올 워크시트를 선택 합니다.  
+8.  **워크시트** 드롭다운 목록에서 가져올 워크시트를 선택합니다.  
   
 9. 스프레드시트의 첫 번째 행이 도메인 이름을 나타내고 나머지 모든 행이 유효한 도메인 값을 나타낼 경우 **첫 번째 행을 헤더로 사용하세요.** 를 선택합니다.  
   
@@ -70,7 +75,7 @@ caps.handback.revision: 26
 14. **마침** 을 클릭하여 기술 자료에 값을 추가합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: Excel 파일에서 도메인으로 값을 가져온 후  
- 값을 도메인으로 가져온 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 지식을 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 참조 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)합니다.  
+ 값을 도메인으로 가져온 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 지식을 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Synonyms"></a> 동의어 가져오기  
  동의어를 다음과 같이 가져올 수 있습니다.  
@@ -87,7 +92,7 @@ caps.handback.revision: 26
   
 -   어떤 이유로든 응용 프로그램에서 수동으로 값을 연결할 수 없으면 값이 가져오기 작업에 적용되지 않습니다.  
   
-##  <a name="How"></a> 가져오기 작동 방식  
+##  <a name="How"></a> How the import works  
  이 작업에서 다음 값을 가져옵니다.  
   
  가져오기 작업에서 DQS는 Excel 파일을 다음과 같이 가져옵니다.  
@@ -102,11 +107,11 @@ caps.handback.revision: 26
   
 -   각 행은 도메인 값을 나타냅니다.  
   
--   첫 번째 행은 **첫 번째 행을 헤더로 사용하세요** 확인란의 설정에 따라 도메인 이름을 나타내거나 첫 번째 데이터 값 또는 레코드입니다. .xslx 파일이나 .xls 파일을 사용할 때 **첫 번째 행을 헤더로 사용하세요.** 를 선택할 경우 null인 열 이름은 F*n*으로 자동 변환되며 중복되는 열에는 번호가 추가됩니다.  
+-   첫 번째 행은 **첫 번째 행을 헤더로 사용하세요** 확인란의 설정에 따라 도메인 이름을 나타내거나 첫 번째 데이터 값 또는 레코드입니다. .xslx 파일이나 .xls 파일을 사용할 때 **Use First Row as header** 를 선택할 경우 null인 열 이름은 F*n*으로 자동 변환되며 중복되는 열에는 번호가 추가됩니다.  
   
 -   완료 전에 가져오기 작업을 취소하면 작업이 롤백되고 데이터를 가져오지 않습니다.  
   
--   첫 번째 열의 값을 도메인으로 가져옵니다. 첫 번째 열 외에 하나 이상의 추가 열이 채워지면 하는 경우 해당 열에 값을 동의어로 추가 됩니다 (참조 [동의어 가져오기](#Synonyms)).  
+-   첫 번째 열의 값을 도메인으로 가져옵니다. 첫 번째 열 외에 하나 이상의 추가 열이 채워지면 해당 열의 값이 동의어로 추가됩니다. [동의어 가져오기](#Synonyms)를 참조하세요.  
   
     -   첫 번째 열이 선행 열이 되고 두 번째 열부터 동의어가 되어야 합니다.  
   

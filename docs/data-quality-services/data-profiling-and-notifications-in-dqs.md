@@ -1,23 +1,28 @@
 ---
 title: "DQS의 데이터 프로파일링 및 알림 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 caps.latest.revision: 25
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 25
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS의 데이터 프로파일링 및 알림
-  DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])의 데이터 프로파일링은 기존 데이터 원본의 데이터를 분석하고 DQS 작업의 데이터에 대한 통계를 표시하는 프로세스입니다. 자동화된 데이터 품질 평가를 제공합니다. DQS 프로파일링은 DQS 기술 자료 관리 및 데이터 품질 프로젝트에 통합되어 있습니다. 동적이며 조정 가능합니다. 프로파일링에는 두 가지 주요 목표가 있습니다. 첫째는 데이터 품질 프로세스를 안내하고 의사 결정을 지원하는 것이고, 둘째는 프로세스의 효율성을 평가하는 것입니다. DQS 프로파일링 프로세스에는 다음과 같은 이점이 있습니다.  
+# <a name="data-profiling-and-notifications-in-dqs"></a>DQS의 데이터 프로파일링 및 알림
+  DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 데이터 프로파일링은 기존 데이터 원본의 데이터를 분석하고 DQS 작업의 데이터에 대한 통계를 표시하는 프로세스입니다. 자동화된 데이터 품질 평가를 제공합니다. DQS 프로파일링은 DQS 기술 자료 관리 및 데이터 품질 프로젝트에 통합되어 있습니다. 동적이며 조정 가능합니다. 프로파일링에는 두 가지 주요 목표가 있습니다. 첫째는 데이터 품질 프로세스를 안내하고 의사 결정을 지원하는 것이고, 둘째는 프로세스의 효율성을 평가하는 것입니다. DQS 프로파일링 프로세스에는 다음과 같은 이점이 있습니다.  
   
 -   프로파일링은 원본 데이터의 품질에 대한 통찰력을 제공하고 데이터 품질 문제를 식별하도록 도와줍니다.  
   
@@ -65,7 +70,7 @@ caps.handback.revision: 25
   
 -   [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS & #40;를 사용 하 여 데이터를 정리 내부 & #41; 기술](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)  
   
@@ -81,19 +86,19 @@ caps.handback.revision: 25
   
  알림은 **프로파일링** 탭에서 느낌표가 있는 도구 설명으로 표시됩니다. 알림과 관련된 통계가 빨간색으로 표시되어 알림에 대한 통계적 이유를 알려줍니다.  
   
- 알림을 사용 하지 않도록 설정 하거나 (기본값)을 설정할 수 있습니다는 **일반 설정** 탭은 **관리** Data Quality 클라이언트 홈 페이지의 섹션입니다. 알림이 해제되면 도구 설명이 표시되지 않고 통계가 빨간색으로 표시되지 않습니다. 알림을 해제할 경우 성능에 큰 이점은 없습니다. 알림을 해제해도 프로파일링은 계속 작동합니다.  
+ Data Quality 클라이언트 홈 페이지의 **관리** 섹션에 있는 **일반 설정** 탭에서 알림을 설정하거나(기본값) 해제할 수 있습니다. 알림이 해제되면 도구 설명이 표시되지 않고 통계가 빨간색으로 표시되지 않습니다. 알림을 해제할 경우 성능에 큰 이점은 없습니다. 알림을 해제해도 프로파일링은 계속 작동합니다.  
   
  특정 작업에 대한 알림과 관련된 특정 상태는 다음을 참조하세요.  
   
 -   [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md)  
   
--   [DQS & #40;를 사용 하 여 데이터를 정리 내부 & #41; 기술](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
+-   [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)  
   
 -   [일치 프로젝트 실행](../data-quality-services/run-a-matching-project.md)  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  

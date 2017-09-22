@@ -1,27 +1,32 @@
 ---
 title: "DQS 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "dqs 관리"
-  - "관리"
-  - "dqs, 관리"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- dqs administration
+- administration
+- dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dab2f79fbd66389684bafcac726bcfe363f50f8e
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 관리
-  [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)에서 수행 되는 다양 한 DQS 작업을 관리 하 고 있습니다 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)], DQS 활동과 관련 된 서버 수준 속성을 구성, 참조 데이터 서비스 설정을 구성 하 고 DQS 로그 설정을 구성 합니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  
+# <a name="dqs-administration"></a>dqs 관리
+  DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 사용하면 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 여러 DQS 활동을 관리하고, DQS 활동과 관련된 서버 수준의 속성을 구성하고, 참조 데이터 서비스 설정을 구성하고, DQS 로그 설정을 구성할 수 있습니다. 이러한 작업은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 통해 수행됩니다. DQS의 보안 액세스(역할)에 따라 사용자에게는 이 영역의 특정 기능에 대한 액세스 권한이 부여되거나 거부됩니다.  
   
  이러한 관리 활동과 별도로 이 항목에서는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]를 사용하여 수행되지 않는 관리 활동, DQS 데이터베이스 백업 및 복원에 대한 정보를 제공합니다.  
   
@@ -42,10 +47,10 @@ caps.handback.revision: 21
 ##  <a name="AdminUsingClent"></a> Data Quality 클라이언트를 사용한 관리 활동  
  이러한 활동은 **의** 관리 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]기능을 사용하여 수행됩니다.  
   
-### 작업 모니터링  
- **의** 활동 모니터링 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 각 활동에 대한 자세한 정보를 표시합니다. 이 화면은 데이터 관리자가 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 응용 프로그램이 연결된 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]에서 수행되는 모든 작업에 대한 상위 수준의 모니터링을 수행하는 데 주로 사용됩니다. 이 화면에서는 시스템 수준 모니터링을 제공하지 않습니다. 또한 이 화면에서 DQS 관리자는 필요에 따라 실행 중인 활동을 종료하거나 활동 내에서 실행 중인 프로세스를 중지하여 활동 또는 활동 내의 프로세스를 제어할 수 있습니다. 데이터는 기술 자료 검색, 도메인 관리, 일치 정책, 정리, 일치, SSIS(SQL Server Integration Services) 기반 정리에 대해 표시됩니다.  
+### <a name="activity-monitoring"></a>작업 모니터링  
+ **의** 활동 모니터링 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]에서 수행되는 각 활동에 대한 자세한 정보를 표시합니다. 이 화면은 데이터 관리자가 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 응용 프로그램이 연결된 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 에서 수행되는 모든 작업에 대한 상위 수준의 모니터링을 수행하는 데 주로 사용됩니다. 이 화면에서는 시스템 수준 모니터링을 제공하지 않습니다. 또한 이 화면에서 DQS 관리자는 필요에 따라 실행 중인 활동을 종료하거나 활동 내에서 실행 중인 프로세스를 중지하여 활동 또는 활동 내의 프로세스를 제어할 수 있습니다. 데이터는 기술 자료 검색, 도메인 관리, 일치 정책, 정리, 일치, SSIS(SQL Server Integration Services) 기반 정리에 대해 표시됩니다.  
   
-### 구성  
+### <a name="configuration"></a>Configuration  
  **의** 구성 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 화면에서는 DQS 관리자가 다음 작업을 수행할 수 있습니다.  
   
 -   **참조 데이터**: 참조 데이터 서비스 공급자 구성: Windows Azure 마켓플레이스 또는 다이렉트 참조 데이터 서비스 공급자입니다. 참조 데이터 서비스 공급자를 설정한 후 기술 자료에서 도메인 관리 활동 중 참조 데이터와 함께 도메인/복합 도메인을 매핑하고 동일한 기술 자료를 데이터 품질 프로젝트의 정리 활동에 대해 사용할 수 있습니다. 또한 Windows Azure Marketplace를 사용하도록 인터넷에 연결하기 위해 프록시 설정을 지정할 수 있습니다.  
@@ -55,7 +60,7 @@ caps.handback.revision: 21
 -   **로그 설정**: DQS의 로그 파일은 DQS에서 수행되는 활동을 기록하며 유지 관리 및 문제 해결 중 작업 문제를 추적하는 데 유용합니다. 이벤트 심각도 수준에 따라 다양한 DQS 기능(도메인 관리, 기술 자료 검색, 정리, 일치 및 참조 데이터 서비스) 및 DQS 모듈에 대해 기록하려는 메시지를 필터링할 수 있습니다.  
   
 > [!NOTE]  
->   **구성** 화면은 DQS_MAIN 데이터베이스에 대 한 dqs_administrator 역할이 있는 사용자에만 사용할 수 있습니다.  
+>  **구성** 화면은 DQS_MAIN 데이터베이스에서 dqs_administrator 역할이 있는 사용자에게만 제공됩니다.  
   
 ##  <a name="AdminOutsideClient"></a> Data Quality 클라이언트 외부의 관리 활동  
  다음 활동은 Data Quality 클라이언트 외부에서 수행됩니다.  
@@ -66,7 +71,7 @@ caps.handback.revision: 21
   
  자세한 내용은 [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)을 참조하세요.  
   
-## 관련 태스크  
+## <a name="related-tasks"></a>관련 태스크  
   
 |태스크 설명|항목|  
 |----------------------|-----------|  
@@ -79,7 +84,7 @@ caps.handback.revision: 21
 |DQS 데이터베이스를 백업 및 복원하는 방법을 설명합니다.|[DQS 데이터베이스 백업 및 복원](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |DQS 데이터베이스를 분리하고 연결하는 방법을 설명합니다.|[DQS 데이터베이스 분리 및 연결](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DQS의 참조 데이터 서비스](../data-quality-services/reference-data-services-in-dqs.md)   
  [DQS 로그 파일 관리](../data-quality-services/manage-dqs-log-files.md)   
  [DQS 데이터베이스 관리](../data-quality-services/manage-dqs-databases.md)  

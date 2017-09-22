@@ -1,32 +1,37 @@
 ---
 title: "참조 데이터를 사용하도록 DQS 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.administration.rdsconfiguration.f1"
-  - "sql13.dqs.administration.configuration.createDirectRDS.f1"
-  - "sql13.dqs.admin.config.rds.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.administration.rdsconfiguration.f1
+- sql13.dqs.administration.configuration.createDirectRDS.f1
+- sql13.dqs.admin.config.rds.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
 caps.latest.revision: 15
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 15
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: db1e4d797fa5794c24569f18e300bc4ab64c725c
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 참조 데이터를 사용하도록 DQS 구성
-  이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])를 구성하는 방법에 대해 설명합니다. Windows Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  
+# <a name="configure-dqs-to-use-reference-data"></a>참조 데이터를 사용하도록 DQS 구성
+  이 항목에서는 데이터를 정리하는 데 참조 데이터를 사용하도록 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )를 구성하는 방법에 대해 설명합니다. Windows Azure Marketplace 또는 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용할 수 있습니다.  
   
-## 시작하기 전에  
+## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
- Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법에 대 한 자세한 내용은 참조 [계정 만들기](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936). [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
+ Marketplace의 참조 데이터를 사용하려면 유효한 Marketplace 계정 키가 있어야 합니다. Marketplace 계정 키를 만드는 방법은 [계정 만들기](http://go.microsoft.com/fwlink/?LinkId=212936) (http://go.microsoft.com/fwlink/?LinkId=212936)를 참조하세요. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리** 에서 **구성** 을 클릭한 다음 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 참조 데이터 **탭에서** DataMarket 계정 ID 만들기 **를 클릭하여** 내에서 Marketplace 계정 키를 만들 수도 있습니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -35,7 +40,7 @@ caps.handback.revision: 15
   
 ##  <a name="Marketplace"></a> Marketplace의 참조 데이터를 사용하도록 DQS 구성  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리**에서 **구성**을 클릭합니다.  
   
@@ -47,7 +52,7 @@ caps.handback.revision: 15
   
 ##  <a name="ThirdParty"></a> 다이렉트 온라인 타사 참조 데이터 공급자의 참조 데이터를 사용하도록 DQS 구성  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 **관리**에서 **구성**을 클릭합니다.  
   
@@ -59,7 +64,7 @@ caps.handback.revision: 15
   
     1.  **이름** 상자에 새 다이렉트 참조 데이터 서비스 공급자의 이름을 입력합니다.  
   
-    2.  (선택 사항) 에 **설명** 상자에 새 다이렉트 참조 데이터 서비스 공급자에 대 한 설명을 입력 합니다.  
+    2.  (선택 사항) **설명** 상자에 새 다이렉트 참조 데이터 서비스 공급자에 대한 설명을 입력합니다.  
   
     3.  **범주** 상자에 새 다이렉트 참조 데이터 서비스 공급자가 제공한 데이터의 범주를 입력합니다.  
   
@@ -76,6 +81,6 @@ caps.handback.revision: 15
  이제 DQS에서 새로 구성한 다이렉트 온라인 타사 참조 데이터 서비스 공급자의 참조 데이터 서비스를 사용할 준비가 완료되었습니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 참조 데이터를 사용하도록 DQS를 구성한 후  
- 이제 방금 구성한 데이터 공급자에서 사용할 수 있는 참조 데이터에 필요한 기술 자료 도메인을 매핑해야 합니다. 이렇게 하려면 참조 [연결 도메인 또는 복합 도메인을 참조 데이터](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)합니다.  
+ 이제 방금 구성한 데이터 공급자에서 사용할 수 있는 참조 데이터에 필요한 기술 자료 도메인을 매핑해야 합니다. 이렇게 하려면 [참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)을 참조하세요.  
   
   

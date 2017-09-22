@@ -1,23 +1,28 @@
 ---
 title: "데이터 일치 | Microsoft Docs"
-ms.custom: ""
-ms.date: "10/01/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 10/01/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: fe66d098-bec3-4258-b42a-479ae460feb3
 caps.latest.revision: 29
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 29
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 04c6e34258d4e732373ea003e8457582bea9c4eb
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 데이터 일치
-  DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]) 데이터 일치 프로세스를 통해 데이터 원본에서 데이터 중복을 줄이고 데이터 정확도를 개선할 수 있습니다. 일치는 단일 데이터 원본의 모든 레코드에서 중복 수준을 분석하고 각 비교 대상 레코드 집합 간 일치 항목에 대한 가중 확률을 반환합니다. 그런 다음 어떤 레코드가 일치 항목인지 확인하고 원본 데이터에 대해 적절한 작업을 수행할 수 있습니다.  
+# <a name="data-matching"></a>데이터 일치
+  DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 데이터 일치 프로세스를 통해 데이터 원본에서 데이터 중복을 줄이고 데이터 정확도를 개선할 수 있습니다. 일치는 단일 데이터 원본의 모든 레코드에서 중복 수준을 분석하고 각 비교 대상 레코드 집합 간 일치 항목에 대한 가중 확률을 반환합니다. 그런 다음 어떤 레코드가 일치 항목인지 확인하고 원본 데이터에 대해 적절한 작업을 수행할 수 있습니다.  
   
  DQS 일치 프로세스에는 다음과 같은 이점이 있습니다.  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 29
   
 -   일치 정책 및 원본 데이터의 상태에 따라 원본에서 준비 테이블로 복사된 데이터의 인덱스를 다시 만들거나 만들지 않을 수 있습니다. 인덱스를 다시 만들지 않을 경우 성능이 개선될 수 있습니다.  
   
- 일치 프로세스와 다른 데이터 정리 프로세스를 함께 수행하여 전반적인 데이터 품질을 개선할 수 있습니다. 또한 Master Data Services에 기본 제공되는 DQS 기능을 사용하여 데이터 중복 제거를 수행할 수도 있습니다. 자세한 내용은 참조 [Master Data Services 개요 & #40; MDS (& a) #41;](../master-data-services/master-data-services-overview-mds.md)합니다.  
+ 일치 프로세스와 다른 데이터 정리 프로세스를 함께 수행하여 전반적인 데이터 품질을 개선할 수 있습니다. 또한 Master Data Services에 기본 제공되는 DQS 기능을 사용하여 데이터 중복 제거를 수행할 수도 있습니다. 자세한 내용은 [Master Data Services 개요&#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)를 참조하세요.  
   
  다음 그림은 DQS에서 데이터 일치를 수행하는 방법을 보여 줍니다.  
   
@@ -67,7 +72,7 @@ caps.handback.revision: 29
   
  일치 프로세스의 결과는 SQL Server 테이블 또는 .csv 파일로 내보낼 수 있습니다. 일치 결과는 두 가지 형식으로 내보낼 수 있습니다. 하나는 일치하는 레코드와 일치하지 않는 레코드이고, 다른 하나는 특정 클러스터의 Survivor 레코드만 포함된 Survivorship 레코드와 일치하지 않는 결과입니다. Survivorship 레코드에서 동일한 레코드가 여러 클러스터에 대한 Survivor로 식별된 경우 해당 레코드는 한 번만 내보내집니다.  
   
-## 섹션 내용  
+## <a name="in-this-section"></a>섹션 내용  
  DQS에서 일치와 관련된 다음 태스크를 수행할 수 있습니다.  
   
 |||  

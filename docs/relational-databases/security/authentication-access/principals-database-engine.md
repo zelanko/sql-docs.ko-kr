@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9ac118739640b288307e09c8fd36ba842d0c7ef1
+ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
+ms.openlocfilehash: e8567384e8546fa5f48ae287794ecf368f728a2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
@@ -83,6 +83,8 @@ ms.lasthandoff: 07/31/2017
 -   \##MS_PolicyEventProcessingLogin##   
 -   \##MS_PolicySigningCertificate##   
 -   \##MS_PolicyTsqlExecutionLogin##   
+ 
+ 이러한 사용자 계정은 Microsoft에 발급된 인증서에 기반하므로 관리자에 의해 변경될 수 있는 암호를 갖지 않습니다.
   
 ## <a name="the-guest-user"></a>guest 사용자  
  각 데이터베이스에는 `guest`에서 변경되었습니다. `guest` 사용자에게 부여된 권한은 데이터베이스에 대한 액세스 권한이 있지만 데이터베이스에 사용자 계정이 없는 사용자가 상속합니다. `guest` 사용자는 삭제할 수 없지만 CONNECT 권한을 취소하여 해제할 수 있습니다. CONNECT 권한은 `master` 또는 `tempdb`가 아닌 임의의 데이터베이스 내에서 `REVOKE CONNECT FROM GUEST;`를 실행하여 취소할 수 있습니다.  

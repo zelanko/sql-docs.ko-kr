@@ -1,28 +1,33 @@
 ---
 title: "기술 자료 검색 시 Excel 파일에서 도메인 가져오기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 caps.latest.revision: 24
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 24
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9a33a9e7a45689a4585c4e091d909420f46d8b23
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 기술 자료 검색 시 Excel 파일에서 도메인 가져오기
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)]) 기술 자료 검색 작업을 통해 Excel 파일에서 하나 이상의 도메인을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스는 기술 자료 생성 프로세스를 간소화하여 시간과 노력을 절감합니다. Excel 파일이나 텍스트 파일에 데이터가 있는 사용자는 이 프로세스를 통해 해당 데이터를 포함한 기술 자료를 만들 수 있습니다. (참조 [값을 도메인으로 Excel 파일에서 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) 기존 기술 자료의 도메인에 값을 가져오기에 대 한 자세한 내용은.) Excel 파일로의 내보내기는 지원되지 않습니다.  
+# <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>기술 자료 검색 시 Excel 파일에서 도메인 가져오기
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] ) 기술 자료 검색 작업을 통해 Excel 파일에서 하나 이상의 도메인을 가져오는 방법에 대해 설명합니다. 가져오기 프로세스는 기술 자료 생성 프로세스를 간소화하여 시간과 노력을 절감합니다. Excel 파일이나 텍스트 파일에 데이터가 있는 사용자는 이 프로세스를 통해 해당 데이터를 포함한 기술 자료를 만들 수 있습니다. (기존 기술 자료의 도메인에 값을 가져오는 방법에 대한 자세한 내용은 [Excel 파일에서 도메인으로 값 가져오기](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md)를 참조하세요.) Excel 파일로의 내보내기는 지원되지 않습니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
- Excel 파일에서 도메인을 가져오려면 Excel 컴퓨터에 설치 해야 하는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 가 설치 되어;에 만든 상태 여야를 Excel 파일로 도메인 값이 포함 (참조 [가져오기 작동 방식](#How)); 해야 만들고 기술 자료를 도메인을 가져올 열을 합니다.  
+ Excel 파일에서 도메인을 가져오려면 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 가 설치된 컴퓨터에 Excel이 설치되어 있어야 합니다. 도메인 값이 포함된 Excel 파일을 생성한 상태여야 합니다( [How the import works](#How)참조). 그리고 도메인을 가져올 기술 자료를 만들고 열어 두어야 합니다.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 24
   
 ##  <a name="Import"></a> Excel 파일에서 기술 자료로 도메인 가져오기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 다음 중 하나를 수행합니다.  
   
@@ -45,9 +50,9 @@ caps.handback.revision: 24
   
 5.  **Excel 파일 선택** 대화 상자에서 가져올 Excel 파일이 포함된 폴더로 이동하고 Excel 파일을 선택한 후 **열기**를 클릭합니다.  
   
-6.   **워크시트** 드롭 다운 목록에서 가져올 Excel 파일의 워크시트를 선택 합니다.  
+6.  **워크시트** 드롭다운 목록에서 가져올 Excel 파일의 워크시트를 선택합니다.  
   
-7.  첫 번째 행을 데이터 헤더로 간주하려는 경우, 그리고 첫 번째 행의 값을 열 이름으로 사용하려는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택합니다. 선택 취소 **첫 번째 행을 머리글로** 데이터 값으로 간주 될 첫 번째 행을 원한다 면이 경우 DQS Excel 헤더가 이름을 사용 합니다 (영문자) 열에 대 한 합니다.  
+7.  첫 번째 행을 데이터 헤더로 간주하려는 경우, 그리고 첫 번째 행의 값을 열 이름으로 사용하려는 경우 **첫 번째 행을 헤더로 사용하세요** 를 선택합니다. DQS에서 Excel의 열 머리글 값(영문자)을 사용할 경우 첫 번째 행을 데이터 값으로 간주하려면 **첫 번째 행을 헤더로 사용하세요** 를 선택 취소합니다.  
   
 8.  열을 선택한 다음 기존 도메인을 열에 매핑하거나 **도메인 만들기** 아이콘을 클릭하고 **도메인 만들기** 대화 상자에서 도메인을 만든 후 도메인을 열에 매핑하여 새 도메인을 만듭니다. 도메인의 데이터 형식이 열의 데이터 형식과 일치해야 합니다. 스프레드시트의 모든 열에 대해 위의 작업을 반복합니다.  
   
@@ -67,9 +72,9 @@ caps.handback.revision: 24
 14. 기술 자료가 게시되었는지 확인한 후 **확인**을 클릭합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: Excel 파일에서 도메인을 가져온 후  
- Excel 파일에서 도메인을 가져온 후 도메인에 정보를 추가하거나 도메인의 내용에 따라 정리 또는 일치 프로젝트에서 도메인을 사용할 수 있습니다. 자세한 내용은 참조 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md), [데이터 정리](../data-quality-services/data-cleansing.md), 또는 [데이터 일치](../data-quality-services/data-matching.md)합니다.  
+ Excel 파일에서 도메인을 가져온 후 도메인에 정보를 추가하거나 도메인의 내용에 따라 정리 또는 일치 프로젝트에서 도메인을 사용할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md), [데이터 정리](../data-quality-services/data-cleansing.md) 또는 [데이터 일치](../data-quality-services/data-matching.md)를 참조하세요.  
   
-##  <a name="How"></a> 가져오기 작동 방식  
+##  <a name="How"></a> How the import works  
  가져오기 작업에서 DQS는 Excel 파일을 다음과 같이 해석합니다.  
   
 -   열은 도메인을 나타냅니다.  

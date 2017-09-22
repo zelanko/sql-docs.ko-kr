@@ -1,25 +1,30 @@
 ---
 title: "도메인으로 정리 프로젝트 값 가져오기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.importprojectvalues.f1"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.importprojectvalues.f1
 ms.assetid: f23e38e2-39e0-42d7-abd5-34d8fcca5d2a
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: ccbaa61727e3d3ef85c0de713bbb596cede7797a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 도메인으로 정리 프로젝트 값 가져오기
-  DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서는 데이터 품질 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 수 있습니다. 이렇게 하면 신뢰할 수 있는 정보가 손실되지 않고 기술 자료가 지속적으로 개선됩니다.  
+# <a name="import-cleansing-project-values-into-a-domain"></a>도메인으로 정리 프로젝트 값 가져오기
+  DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서는 데이터 품질 정리 프로젝트나 DQS 정리 구성 요소가 포함된 Integration Services 패키지에서 정리 프로세스 중에 수집된 데이터 품질 기술 자료를 도메인으로 가져올 수 있습니다. 이렇게 하면 신뢰할 수 있는 정보가 손실되지 않고 기술 자료가 지속적으로 개선됩니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -36,7 +41,7 @@ caps.handback.revision: 21
   
 ##  <a name="Import"></a> 정리 프로젝트 값 가져오기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면의 도메인 관리 작업에서 기술 자료를 엽니다.  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 21
 4.  **도메인 값** 탭을 클릭하고 아이콘 표시줄에서 **값 가져오기** 아이콘을 클릭한 후 **프로젝트 값 가져오기**를 클릭합니다. **프로젝트 값 가져오기** 대화 상자가 나타나고 도메인을 사용하여 정리한 데이터 품질 프로젝트 및 Integration Services 패키지의 목록이 표시됩니다.  
   
     > [!NOTE]  
-    >  도메인 또는 연결 된 도메인을 사용 하 여 프로젝트가 생성 되지 않았거나 프로젝트가 완료 되지 않은 경우는 **프로젝트 값 가져오기** 옵션을 사용할 수 없습니다.  
+    >  해당 도메인이나 연결된 도메인을 사용하여 프로젝트가 생성되지 않았거나 프로젝트가 완료되지 않은 경우 **프로젝트 값 가져오기** 옵션을 사용할 수 없습니다.  
   
 5.  **프로젝트 값 가져오기** 대화 상자에서 다음을 수행합니다.  
   
-    -   선택 **모든** 에 **가져옴** 모든 프로젝트를 표시 하려면 드롭다운 목록 또는 **No** 값을 가진 가져오지 않은 아직 프로젝트만 표시 하려면.  
+    -   **가져옴** 드롭다운 목록에서 모든 프로젝트를 표시하려면 **모두** 를 선택하고, 값을 아직 가져오지 않은 프로젝트만 표시하려면 **아니요** 를 선택합니다.  
   
     -   가져올 값이 있는 프로젝트를 선택합니다.  
   
@@ -68,10 +73,10 @@ caps.handback.revision: 21
 10. **마침**을 클릭합니다.  
   
     > [!NOTE]  
-    >  작업의 값에 대 한 자세한 내용은 **도메인 값** 탭, 참조 [도메인 값 변경](../data-quality-services/change-domain-values.md)합니다.  
+    >  **도메인 값** 탭의 값에 대한 작업 방법은 [Change Domain Values](../data-quality-services/change-domain-values.md)을 참조하세요.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인에 프로젝트 값을 가져온 후  
- 정리 프로세스 도중 수집된 데이터 품질 기술 자료를 도메인으로 가져온 후 도메인 및 값에 대해 다른 도메인 관리 태스크를 수행할 수 있습니다. 자세한 내용은 참조 [도메인 관리](../data-quality-services/managing-a-domain.md)합니다.  
+ 정리 프로세스 도중 수집된 데이터 품질 기술 자료를 도메인으로 가져온 후 도메인 및 값에 대해 다른 도메인 관리 태스크를 수행할 수 있습니다. 자세한 내용은 [도메인 관리](../data-quality-services/managing-a-domain.md)를 참조하세요.  
   
 ##  <a name="Values"></a> 가져올 수 있는 값  
  프로젝트에서 도메인으로 가져올 수 있는 값은 다음과 같습니다.  
@@ -109,7 +114,7 @@ caps.handback.revision: 21
   
 -   기술 자료가 작업 중인 상태이고 가져오기 작업을 수행하는 사용자에 의해 잠긴 경우에만 프로젝트에서 값을 가져올 수 있습니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 정리](../data-quality-services/data-cleansing.md)   
  [DQS 정리 변환](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)  
   

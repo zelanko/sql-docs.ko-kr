@@ -1,26 +1,31 @@
 ---
 title: "복합 도메인 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/22/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.kb.createcd.f1"
-  - "sql13.dqs.dm.cdproperties.f1"
+ms.custom: 
+ms.date: 11/22/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.kb.createcd.f1
+- sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 caps.latest.revision: 21
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 21
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 복합 도메인 만들기
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대 한 자세한 내용은 참조 하십시오. [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)합니다.  
+# <a name="create-a-composite-domain"></a>복합 도메인 만들기
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에서 복합 도메인을 만드는 방법에 대해 설명합니다. 복합 도메인은 단일 데이터 필드에 적용되는 하나 이상의 단일 도메인으로 구성됩니다. 복합 도메인에 대한 자세한 내용은 [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
   
  새 복합 도메인을 만드는 방법에는 두 가지가 있습니다. 첫 번째는 새 기술 자료 또는 기존 기술 자료에 정보를 추가할 데이터 샘플을 분석하는 기술 자료 검색 작업의 매핑 단계에서 만드는 방법입니다. 두 번째는 도메인 관리 작업에서 기존 도메인을 변경하는 대신 새 도메인을 만드는 방법입니다. 복합 도메인을 만들려면 복합 도메인에 추가할 두 개 이상의 단일 도메인이 있어야 합니다. 이미 만들어지고 기존 복합 도메인에 추가되지 않은 단일 도메인만 새 복합 도메인을 만들 때 사용할 수 있습니다. 단일 도메인을 둘 이상의 복합 도메인에 추가할 수 없으며, 복합 도메인을 다른 복합 도메인에 추가할 수 없습니다.  
   
@@ -38,7 +43,7 @@ caps.handback.revision: 21
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> 기술 자료 검색 작업에서 복합 도메인 만들기  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **기술 자료 열기** 를 클릭한 다음 기술 자료를 선택하거나 **새 기술 자료** 를 클릭하고 새 기술 자료의 속성을 입력합니다.  
   
@@ -46,9 +51,9 @@ caps.handback.revision: 21
   
 4.  **맵** 페이지에서 데이터 원본에 대한 연결을 지정합니다. 자세한 내용은 [Perform Knowledge Discovery](../data-quality-services/perform-knowledge-discovery.md)을 참조하세요.  
   
-5.  에 **매핑** 테이블에서 원본 열에 대 한 드롭 다운 목록에서 선택는 **원본 열** 빈 행의 열입니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭합니다.  
+5.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭합니다.  
   
-6.  에 **매핑** 테이블에서 원본 열에 대 한 드롭 다운 목록에서 선택는 **원본 열** 빈 행의 열입니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인 부분이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 자세한 내용은 [Create a Domain](../data-quality-services/create-a-domain.md)을 참조하세요.  
+6.  **매핑** 테이블에서 빈 행의 **원본 열** 에 대한 드롭다운 목록에서 원본 열을 선택합니다. 원본 열에 두 개의 기존 단일 도메인에 의해 주소가 지정된 복합 도메인 부분이 포함되어 있는지 확인합니다. 해당하는 단일 도메인이 없으면 **도메인 만들기** 아이콘을 클릭하여 도메인을 만듭니다. 자세한 내용은 [Create a Domain](../data-quality-services/create-a-domain.md)을 참조하세요.  
   
 7.  **복합 도메인 만들기** 아이콘을 클릭합니다.  
   
@@ -78,20 +83,20 @@ caps.handback.revision: 21
   
 4.  **구문 분석 방법**에 대해 다음 중 하나를 선택합니다.  
   
-    -   **참조 데이터**: 참조 데이터 서비스 (RDS)에서 데이터를 포맷 하는 방법에 따라 필드의 값을 구문 분석 합니다. Data Quality Services에서 복합 도메인의 값을 RDS로 보내면 RDS에서 복합 도메인 내의 도메인에 따라 수정하고 구문 분석한 데이터를 반환합니다.  
+    -   **참조 데이터**: RDS(참조 데이터 서비스)에 의해 데이터 형식이 지정된 방식에 따라 필드의 값을 구문 분석합니다. Data Quality Services에서 복합 도메인의 값을 RDS로 보내면 RDS에서 복합 도메인 내의 도메인에 따라 수정하고 구문 분석한 데이터를 반환합니다.  
   
     -   **순서대로**: 복합 도메인에 있는 도메인의 순서에 따라 필드의 값을 구문 분석합니다. 첫 번째 값은 첫 번째 도메인에 포함되고, 두 번째 값은 두 번째 도메인에 포함되는 방식으로 이루어집니다.  
   
     -   **구분 기호**: 구분 기호를 선택할 때 표시된 라디오 단추에서 선택한 구분 기호에 따라 필드의 값을 구문 분석합니다. 구분 기호는 **탭**, **세미콜론**, **쉼표**, **공백**또는 **기타**일 수 있습니다. **기타**를 선택한 경우 구분 기호 역할을 할 값을 입력합니다.  
   
-5.  구문 분석 방법에 대해 **구분 기호** 를 선택한 경우 **기술 자료 구문 분석 사용**을 선택할 수도 있습니다. 자세한 내용은 [기술 자료 구문 분석](#KnowledgeBaseParsing)을 참조하세요.  
+5.  구문 분석 방법에 대해 **구분 기호** 를 선택한 경우 **기술 자료 구문 분석 사용**을 선택할 수도 있습니다. 자세한 내용은 [Knowledge-Based Parsing](#KnowledgeBaseParsing)을 참조하세요.  
   
-6.  **마침** 을 클릭하여 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+6.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 복합 도메인을 만든 후  
- 복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 참조 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)합니다.  
+ 복합 도메인을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
-##  <a name="KnowledgeBaseParsing"></a> 기술 자료 구문 분석  
+##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  
  Data Quality Services를 사용하면 구분 기호나 순서뿐 아니라 기술 자료를 기반으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석은 복잡한 원본 데이터가 복합 도메인에 매핑되어 있고 참조 데이터 서비스를 사용하지 않는 경우에 사용됩니다. 기술 자료 구문 분석을 사용하여 데이터 원본에서 관련 단일 도메인으로 데이터를 구문 분석할 수 있습니다. 기술 자료 구문 분석을 사용하는 경우 DQS에서는 먼저 기술 자료를 사용하여 복잡한 데이터를 단일 도메인으로 구문 분석합니다. 가능한 경우 문자열의 일부를 하나 이상의 도메인으로 식별하여 문자열을 여러 도메인으로 구문 분석합니다. 예를 들어, "John B. Doe"를 전체 이름 복합 도메인으로 표시된 전체 이름 필드의 복잡한 값으로 가정합니다. DQS에서 "John"을 이름 도메인으로, "Doe"를 성 도메인으로 식별한 경우 도메인 기술 자료에 따라 "B."를 중간 이름 도메인에 추가합니다.  
   
  기술 자료 구문 분석은 구분 기호 기반 구문 분석을 선택한 경우에만 사용할 수 있습니다. 기술 자료 구문 분석은 구분 기호 구문 분석을 대체하는 것이 아니라 향상시킵니다. 구문 분석에 사용할 기술 자료가 없는 경우에만 DQS에서 구분 기호를 사용하여 구문 분석을 수행합니다. 경우에 따라 DQS에서 기술 자료 구문 분석으로 일부 구문 분석을 확인한 후 구분 기호 기반 구문 분석으로 다른 구문 분석을 확인할 수도 있습니다.  

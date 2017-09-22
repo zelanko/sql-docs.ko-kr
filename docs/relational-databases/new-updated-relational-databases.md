@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 07/17/2017
+ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 71203bfa7cb4dcd06cc14ad8e49e5bc1113f8605
-ms.openlocfilehash: 519fbd2bc596112dbb1c662d76e4aeeb230ffc36
+ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
+ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/13/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>새로 추가되었거나 최근에 업데이트됨: 관계형 데이터베이스 문서
@@ -28,13 +28,13 @@ ms.lasthandoff: 07/31/2017
 
 Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/) 설명서 웹 사이트에서 기존 문서 일부를 업데이트합니다. 이 문서에는 최근 업데이트된 문서에서 발췌한 내용이 표시됩니다. 새 문서로 연결되는 링크도 나열될 수 있습니다.
 
-이 문서는 주기적으로 다시 실행되는 프로그램에 의해 생성됩니다. 경우에 따라 발췌한 내용의 형식이 완전하지 않거나 원본 문서의 markdown으로 표시될 수 있습니다. 여기에 이미지가 표시되는 일은 없습니다.
+이 문서는 주기적으로 다시 실행되는 프로그램에 의해 생성됩니다. 경우에 따라 발췌한 내용의 형식이 완전하지 않거나 원본 문서의 표식(markdown)으로 표시될 수 있습니다. 이미지는 여기에 표시되지 않습니다.
 
-다음 날짜 범위 및 주제에 대한 최신 업데이트가 보고됩니다.
+다음 날짜 범위 및 주제에 대한 최근 업데이트가 보고됩니다.
 
 
 
-- *업데이트 날짜 범위:* &nbsp; **2017-05-23** &nbsp; ~ &nbsp; **2017-07-17**
+- *업데이트 날짜 범위:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
 - *주제 영역:* &nbsp; **관계형 데이터베이스**
 
 
@@ -47,25 +47,18 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [SQL Server 2016용 SQL Server 메모리 내 OLTP 내부](in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md)
-2. [SQL 데이터베이스의 적응 쿼리 처리](performance/adaptive-query-processing.md)
-3. [Microsoft SQL 플랫폼을 사용한 개인 정보 보호 향상 및 GDPR 요구 사항 해결 가이드](security/microsoft-sql-and-the-gdpr-requirements.md)
-4. [sys.pdw_replicated_table_cache_state(Transact-SQL)](system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md)
-5. [sys.trusted_assemblies(Transact-SQL)](system-catalog-views/sys-trusted-assemblies-transact-sql.md)
-6. [sys.dm_exec_query_parallel_workers(Transact-SQL)](system-dynamic-management-views/sys-dm-exec-query-parallel-workers-transact-sql.md)
-7. [sys.sp_add_trusted_assembly(Transact-SQL)](system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)
-8. [sys.sp_drop_trusted_assembly(Transact-SQL)](system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)
-
-
-
-
-&nbsp;
-
-<a name="compactupdatedlist"/>
-
-## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
-
-이 간결한 목록에는 발췌 섹션에 나열된 업데이트된 모든 문서로 연결되는 링크가 있습니다.
+1. [Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기](import-export/import-data-from-excel-to-sql.md)
+2. [PolyBase Kerberos 연결 문제 해결](polybase/polybase-troubleshoot-connectivity.md)
+3. [TDE(투명한 데이터 암호화)](security/encryption/transparent-data-encryption.md)
+4. [Azure SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화](security/encryption/transparent-data-encryption-azure-sql.md)
+5. [Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key 지원으로 투명한 데이터 암호화](security/encryption/transparent-data-encryption-byok-azure-sql.md)
+6. [PowerShell: Azure Key Vault에서 사용자 고유 키를 사용하여 투명한 데이터 암호화 사용](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
+7. [PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 회전](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
+8. [PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 제거](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
+9. [SMO(SQL Server 공유 관리 개체) 사용 조건](server-management-objects-smo/smo-license-terms.md)
+10. [sys.external_libraries(Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
+11. [sys.external_library_files(Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
+12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
 
 
 
@@ -81,45 +74,17 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-&nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-altering-memory-optimized-tablesin-memory-oltpaltering-memory-optimized-tablesmd"></a>1. &nbsp; [메모리 최적화 테이블 변경](in-memory-oltp/altering-memory-optimized-tables.md)
-
-*업데이트됨: 2017-06-23* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([다음](#TitleNum_2))
-
-<!-- Source markdown line 82.  ms.author= "genemi".  -->
 
 &nbsp;
 
+<a name="compactupdatedlist"/>
 
-<!-- git diff --ignore-all-space --unified=0 8359700b5db24838f1bb273526794c2865bbbe11 41d77cf0bbcf53a1b64d6524a24e5736c5a073da  (PR=2171  ,  Filename=altering-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=7d2dbe0bdc4cbd05f11eacf938b35a9c35ace2e7) -->
+## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
 
+이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-
-**메모리 최적화 테이블에 대한 ALTER TABLE 로깅**
-
-대부분 ALTER TABLE 시나리오는 이제 병렬로 실행되고 이를 통해 트랜잭션 로그에 대한 쓰기가 최적화됩니다. 최적화는 메타데이터 변경 내용을 트랜잭션 로그에 기록해야만 가능합니다. 그러나 다음 ALTER TABLE 작업은 단일 스레드를 실행하고 로그에 최적화되지 않습니다.
-
-이 경우 단일 스레드 작업은 변경된 테이블의 전체 내용을 트랜잭션 로그에 기록합니다. 단일 스레드 작업 목록은 다음과 같습니다.
-
-- 큰 개체(LOB) 형식인 nvarchar(max), varchar(max) 또는 varbinary(max)를 사용하도록 열을 변경하거나 추가합니다.
-
-- COLUMNSTORE 인덱스를 추가하거나 삭제합니다.
-
-- [off-row column--../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)에 영향을 주는 거의 모든 항목입니다.
-
-    - 행 내부 열이 행 외부 열을 이동하게 합니다.
-
-    - 행 외부 열이 행 내부 열을 이동하게 합니다.
-
-    - 새 행 외부 열을 만듭니다.
-
-    - *예외:* 이미 행 외부 형식인 열을 늘리면 최적화된 방식으로 기록됩니다. 
-  
+1. [자동 조정](#TitleNum_1)
 
 
 
@@ -128,170 +93,90 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 &nbsp;
 
----
+<a name="TitleNum_1"/>
 
-<a name="TitleNum_2"/>
+### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [자동 조정](automatic-tuning/automatic-tuning.md)
 
-### <a name="2-nbsp-table-and-row-size-in-memory-optimized-tablesin-memory-oltptable-and-row-size-in-memory-optimized-tablesmd"></a>2. &nbsp; [메모리 최적화 테이블의 테이블 및 행 크기](in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)
+*업데이트됨: 2017-08-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-*업데이트됨: 2017-06-22* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_1) | [다음](#TitleNum_3))
-
-<!-- Source markdown line 114.  ms.author= "genemi".  -->
+<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 27ce0fa2e7bb464f9c3d6e32dd195de3b79abfcd 0a3cacd86024e2b734704ffd37e55ca0b17a0c94  (PR=2163  ,  Filename=table-and-row-size-in-memory-optimized-tables.md  ,  Dirpath=docs\relational-databases\in-memory-oltp\  ,  MergeCommitSha40=fe6de2b16b9792a5399b1c014af72a2a5ee52377) -->
+<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
 
 
 
- 
-  
- [row body size] 계산은 다음 표에서 설명합니다.  
-  
- 행 본문 크기는 계산된 크기 및 실제 크기의 두 가지 방식으로 계산할 수 있습니다.  
-  
--   [computed row body size]로 표시되는 계산 크기는 행 크기 제한인 8,060바이트를 초과하는지 여부를 확인하기 위해 사용됩니다.  
-  
--   [actual row body size]로 표시되는 실제 크기는 메모리 및 검사점 파일에서 행 본문의 실제 저장소 크기입니다.  
-  
- [computed row body size] 및 [actual row body size]는 모두 비슷하게 계산됩니다. 유일한 차이점은 다음 표의 하단에 표시된 것처럼 (n)varchar(i) 및 varbinary(i) 열의 크기에 대한 계산입니다. 계산된 행 본문 크기는 선언된 크기인 *i* 를 열 크기로 사용하고, 실제 행 본문 크기는 데이터의 실제 크기를 사용합니다.  
-  
- 다음 표에서는 [actual row body size] = SUM([size of shallow types]) + 2 + 2 * [number of deep type columns]와 같이 행 본문 크기의 계산에 대해 설명합니다.  
-  
-|섹션|크기|설명|  
-|-------------|----------|--------------|  
-|단순 형식 열|SUM([단순 형식의 크기]) 개별 형식의 바이트 크기는 다음과 같습니다.<br /><br /> **Bit**: 1<br /><br /> **Tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **숫자**(전체 자릿수<=18): 8<br /><br /> **Time**: 8<br /><br /> **숫자**(전체 자릿수>18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|단순 열 패딩|가능한 값은<br /><br /> 전체 형식 열이 있고 단순 열의 총 데이터 크기가 홀수인 경우 1입니다.<br /><br /> 그렇지 않으면 0입니다.|전체 형식은 (var)binary 및 (n)(var)char 형식입니다.|  
+**자동 계획 선택 수정**
 
 
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]은(는) 계획 선택 재발이 검색될 때마다 알려진 마지막 좋은 계획으로 자동으로 전환할 수 있습니다.
+
+![SQL 계획 선택 수정--media/force-last-good-plan.png "SQL 계획 선택 수정")
+
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]은(는) 잘못된 계획 대신 사용되어야 하는 계획을 포함한 모든 잠재적 계획 선택 재발을 자동으로 검색합니다.
+..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 알려진 마지막 좋은 계획을 적용할 때 강제로 적용된 계획의 성능을 자동으로 모니터링합니다. 강제로 적용된 계획이 재발된 계획보다 낫지 않은 경우 새 계획이 강제적이지 않게 되고 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 새 계획을 컴파일합니다. ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 강제로 적용된 계획이 재발된 계획보다 낫다는 것을 확인하는 경우 강제로 적용된 계획이 재발된 계획보다 나은 경우 다시 컴파일될 때까지 유지됩니다(예: 다음 통계 또는 스키마 변경 시).
+
+**자동 계획 선택 수정 사용**
 
 
-&nbsp;
+데이터베이스마다 자동 튜닝을 활성화하고 일부 계획 변경 재발이 검색될 때마다 마지막 좋은 계획이 강제로 적용되어야 함을 지정할 수 있습니다. 다음 명령을 사용하여 자동 튜닝이 활성화됩니다.
 
-&nbsp;
+```
+ALTER DATABASE current
+SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
+```
+이 옵션을 켜면, ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 예상된 CPU 이득이 10초보다 높거나 새 계획의 오류 수가 권장된 계획의 오류 수보다 높은 곳에서 모든 권장 사항을 자동으로 강제 적용하고 강제로 적용된 계획이 현재 계획보다 낫다는 것을 확인합니다.
 
----
-
-<a name="TitleNum_3"/>
-
-### <a name="3-nbsp-post-migration-validation-and-optimization-guidepost-migration-validation-and-optimization-guidemd"></a>3. &nbsp; [마이그레이션 후 유효성 검사 및 최적화 가이드](post-migration-validation-and-optimization-guide.md)
-
-*업데이트됨: 2017-06-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;([이전](#TitleNum_2) | [다음](#TitleNum_4))
-
-<!-- Source markdown line 27.  ms.author= "harinid".  -->
-
-&nbsp;
+**대안 - 수동 계획 선택 수정**
 
 
-<!-- git diff --ignore-all-space --unified=0 faa2e3dd8be3aeb475bf8c7f71617ebf17969892 f2760dfecda10baeb121929b72a4d8164e81185b  (PR=2126  ,  Filename=post-migration-validation-and-optimization-guide.md  ,  Dirpath=docs\relational-databases\  ,  MergeCommitSha40=dcbeda6b8372b358b6497f78d6139cad91c8097c) -->
-
-
-
-다음은 [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)] 플랫폼으로 마이그레이션한 후 발생하는 몇 가지 일반적인 성능 시나리오 및 해결 방법입니다. 여기에는 이전 버전 [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]에서 새 버전 [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]로의 마이그레이션 및 Oracle, DB2, MySQL, Sybase 등의 외래 플랫폼에서 [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]로의 마이그레이션에 특정한 시나리오가 포함됩니다.
-
-**<a name="CEUpgrade"></a> CE 버전 변경으로 인한 쿼리 회귀**
-
-
-**적용 대상:** [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]로의 마이그레이션.
-
-이전 버전의 [!INCLUDE[ssNoVersion--../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14--../includes/sssql14-md.md)] 이상으로 마이그레이션하고 [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)을 최신 버전으로 업그레이드하는 경우 워크로드가 성능 회귀 위험에 노출될 수 있습니다.
-
-[!INCLUDE[ssSQL14--../includes/sssql14-md.md)]부터는 쿼리 최적화 프로그램의 모든 변경 내용이 최신 [database compatibility level--../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)에 연결되므로 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL` 데이터베이스 옵션을 최신 상태로 변경하는 경우에 변경됩니다. 이 기능은 쿼리 저장소와 함께 업그레이드 프로세스에서 쿼리 성능에 대한 뛰어난 제어 수준을 제공합니다. 
-
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에 도입된 쿼리 최적화 프로그램 변경 사항에 대한 자세한 내용은 [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](http://msdn.microsoft.com/library/dn673537.aspx)(SQL Server 2014 카디널리티 평가기로 쿼리 계획 최적화)를 참조하세요.
-
-
-
-
-&nbsp;
-
-&nbsp;
-
----
-
-<a name="TitleNum_4"/>
-
-### <a name="4-nbsp-sysquerystoreplan-transact-sqlsystem-catalog-viewssys-query-store-plan-transact-sqlmd"></a>4. &nbsp; [sys.query_store_plan(Transact-SQL)](system-catalog-views/sys-query-store-plan-transact-sql.md)
-
-*업데이트됨: 2017-06-05* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  ([이전](#TitleNum_3))
-
-<!-- Source markdown line 58.  ms.author= "rickbyh".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 1b77e34309ba7033578b3c82ed83c8c2fbc93e24 ce4ade9ab906c35cb87068a1fb91c4e1d7549aac  (PR=1940  ,  Filename=sys-query-store-plan-transact-sql.md  ,  Dirpath=docs\relational-databases\system-catalog-views\  ,  MergeCommitSha40=1d363db8e8bd0e1460cdea3c3a7add68e48714c9) -->
-
-
-
-**계획 강제 적용 제한 사항**
-
-쿼리 저장소에는 쿼리 최적화 프로그램이 특정 실행 계획을 사용하도록 적용하는 메커니즘이 있습니다. 그러나 계획이 적용되지 않도록 하는 몇 가지 제한 사항이 있습니다. 
-
-첫째, 계획에 다음과 같은 구성이 포함된 경우
-* Insert bulk 문
-* Insert bulk 문
-* 외부 테이블에 대한 참조
-* 분산 쿼리 또는 전체 텍스트 작업
-* 전역 쿼리 사용 
-* 커서
-* 잘못된 스타 조인 사양 
-
-둘째, 계획에 사용되는 개체를 더 이상 사용할 수 없는 경우
-* 데이터베이스(계획이 발생한 데이터베이스가 더 이상 없는 경우)
-* 인덱스(더 이상 없거나 사용할 수 없는 경우)
-
-마지막으로, 계획 자체에 문제가 있는 경우
-* 쿼리에 적합하지 않음
-* 쿼리 최적화 프로그램이 허용되는 작업 수를 초과함
-* 잘못 구성된 계획 XML
+자동 튜닝 없이 사용자는 시스템을 주기적으로 모니터링하고 재발된 쿼리를 찾아야 합니다. 계획이 재발된 경우 사용자는 다음을 찾아야 합니다.
 
 
 
 
 
-<a name="similars2"/>
 
-&nbsp;
 
 ## <a name="similar-articles"></a>유사한 문서
 
-이 섹션에는 동일한 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/**sql-docs-pr**](https://github.com/microsoftdocs/sql-docs-pr/).
+<!--  HOW TO:
+    Refresh this file's line items with the latest 'Count-in-Similars*' content.
+    Then run Run-533-*.BAT
+-->
 
-<!--  20170717-1101  -->
+이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(4+4): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
-- [새로 추가되었거나 업데이트됨(1+2): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(6+0): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(13+2): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
-- [새로 추가되었거나 업데이트됨(8+4): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(2+2): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(1+0): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
-- [새로 추가되었거나 업데이트됨(1+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
-
+- [새로 추가되었거나 업데이트됨(3+12): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(5+0): **SQL에 연결** 문서](../connect/new-updated-connect.md)
+- [새로 추가되었거나 업데이트됨(5+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(19+82): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(1+8): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(12+1): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(7+1): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(1+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(0+2): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
+- [새로 추가되었거나 업데이트됨(1+4): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(4+1): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
-
-&nbsp;
 
 

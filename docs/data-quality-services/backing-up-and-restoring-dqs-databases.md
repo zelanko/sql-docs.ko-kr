@@ -1,22 +1,27 @@
 ---
 title: "DQS 데이터베이스 백업 및 복원 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: f3091f62-2234-4a80-a615-cf14c2a1da85
 caps.latest.revision: 12
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 12
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 6bab5e3ddb4473a949b12f0ce001a947262966c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 데이터베이스 백업 및 복원
+# <a name="backing-up-and-restoring-dqs-databases"></a>DQS 데이터베이스 백업 및 복원
   이 항목에서는 DQS 데이터베이스를 백업 및 복원하는 방법에 대해 설명합니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
@@ -43,7 +48,7 @@ caps.handback.revision: 12
   
 2.  개체 탐색기에서 **데이터베이스** 노드를 확장합니다.  
   
-3.  DQS_STAGING_DATA 데이터베이스를 백업합니다. SQL Server 데이터베이스를 백업 하기 위한 단계별 지침을 참조 하십시오. [만들기 전체 데이터베이스 백업 & #40; SQL Server 및 #41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)합니다.  
+3.  DQS_STAGING_DATA 데이터베이스를 백업합니다. SQL Server 데이터베이스 백업에 대한 단계별 지침은 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요.  
   
 4.  DQS_PROJECTS 데이터베이스를 백업합니다.  
   
@@ -51,15 +56,15 @@ caps.handback.revision: 12
   
 6.  SQL Server의 현재 인스턴스에 대한 연결을 끊고 이러한 데이터베이스를 복원할 SQL Server 인스턴스에 연결합니다.  
   
-7.  DQS_MAIN 데이터베이스를 복원합니다. SQL Server 데이터베이스 복원에 대 한 단계별 지침에 대 한 참조 [데이터베이스 백업을 사용 하 여 SSMS 복원](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)합니다.  
+7.  DQS_MAIN 데이터베이스를 복원합니다. SQL Server 데이터베이스 복원에 대한 단계별 지침은 [SSMS를 사용하여 데이터베이스 백업 복원](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)을 참조하세요.  
   
 8.  DQS_PROJECTS 데이터베이스를 복원합니다.  
   
 9. DQS_STAGING_DATA 데이터베이스를 복원합니다.  
   
-10. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭 하 고 클릭 **새 쿼리**합니다.  
+10. 개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다.  
   
-11. 쿼리 편집기 창에서 다음 SQL 문을 복사 하 고 대체 *\< 암호>* 데이터베이스 마스터 키에 대 한 DQS 설치 중에 입력 한 암호를 사용 합니다.  
+11. 쿼리 편집기 창에서 다음 SQL 문을 복사하고 *\<<PASSWORD>*를 DQS를 설치할 때 데이터베이스 마스터 키에 대해 제공한 암호로 바꿉니다.  
   
     ```  
     USE [DQS_MAIN]  
@@ -71,7 +76,7 @@ caps.handback.revision: 12
   
 12. F5 키를 눌러 문을 실행합니다. **결과** 창에서 문이 성공적으로 실행되었는지 확인합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DQS 데이터베이스 관리](../data-quality-services/manage-dqs-databases.md)  
   
   

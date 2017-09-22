@@ -1,29 +1,34 @@
 ---
-title: "데이터 품질 클라이언트 홈 화면 | Microsoft Docs"
-ms.custom: ""
-ms.date: "02/29/2012"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.clienthome.f1"
+title: "Data Quality Client 홈 화면 | Microsoft Docs"
+ms.custom: 
+ms.date: 02/29/2012
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.clienthome.f1
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 caps.latest.revision: 14
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 14
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 00ed6a9eaa24ff9981ca4184a7ec8ef3107ffc0f
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 데이터 품질 클라이언트 홈 화면
-  이 화면 액세스를 사용 하는 사용자 인터페이스 각각에 대해 세 가지 주요 [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) 작업 그룹의: 기술 자료 관리, 데이터 품질 프로젝트 및 관리 합니다.  
+# <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
+  이 화면에서는 기술 자료 관리, 데이터 품질 프로젝트 및 관리라는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 세 가지 주요 태스크 그룹에 대한 사용자 인터페이스 액세스 권한을 얻을 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>옵션  
   
-### 기술 자료 관리  
+### <a name="knowledge-base-management"></a>기술 자료 관리  
  DQS 기술 자료는 DQS에서 데이터 품질을 향상시키는 데 사용되는 메타데이터의 리포지토리입니다. 이 메타데이터는 DQS 플랫폼에서 컴퓨터 기반 기술 자료 검색 프로세스를 통해 만들어지거나, 데이터 관리자가 대화형 도메인 관리 프로세스를 통해 만듭니다.  
   
  **새 기술 자료**  
@@ -37,7 +42,7 @@ caps.handback.revision: 14
   
  잠긴 기술 자료는 사용자 자신이 잠근 경우에만 기술 자료를 열고 편집할 수 있습니다. 이 경우, 닫혔을 때의 상태로 기술 자료가 열리고 이러한 정보를 나타내기 위해 괄호로 표시됩니다. 기술 자료가 잠겨 있고 이를 사용자가 직접 잠근 것이 아니라면 읽기 전용으로만 열 수 있습니다.  
   
-### 데이터 품질 프로젝트  
+### <a name="data-quality-projects"></a>데이터 품질 프로젝트  
  데이터 품질 프로젝트는 DQS에서 컴퓨터 기반 데이터 수정과 대화형 데이터 정리를 통해 데이터 수정 또는 데이터 일치를 수행하는 프로세스입니다.  
   
  **새 데이터 품질 프로젝트**  
@@ -49,18 +54,18 @@ caps.handback.revision: 14
  **최근 데이터 품질 프로젝트**  
  화면의 목록에서 이미 만든 프로젝트를 선택합니다. 잠긴 프로젝트는 자신이 직접 잠근 프로젝트만 열 수 있습니다. 이 경우, 닫혔을 때의 상태로 프로젝트가 열리고 이러한 정보를 나타내기 위해 괄호로 표시됩니다. 프로젝트가 완료된 경우 활동의 내보내기 단계에서 열립니다.  
   
-### 관리  
+### <a name="administration"></a>관리  
  DQS 관리를 통해 DQS를 모니터링, 구성 및 유지 관리할 수 있습니다.  
   
  **작업 모니터링**  
- 연결된 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 서버와 관련된 현재 및 과거의 모든 작업 상태에 대한 뷰를 표시합니다. 모니터링되는 작업 유형에는 기술 자료 관리, 데이터 품질 프로젝트 및 SSIS 기반 데이터 수정이 포함됩니다.  
+ 연결된 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]서버와 관련된 현재 및 과거의 모든 작업 상태에 대한 뷰를 표시합니다. 모니터링되는 작업 유형에는 기술 자료 관리, 데이터 품질 프로젝트 및 SSIS 기반 데이터 수정이 포함됩니다.  
   
  **Configuration**  
  참조 데이터 서비스 계정(Windows Azure Marketplace 및 참조 데이터 서비스 직접 사용)에 대한 구성 속성, 일반 설정(대화형 정리, 일치 및 프로파일링) 및 로그 심각도 설정을 표시합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
- [데이터 품질 프로젝트 & #40; DQS & #41;](../data-quality-services/data-quality-projects-dqs.md)   
+ [데이터 품질 프로젝트&#40;DQS&#41;](../data-quality-services/data-quality-projects-dqs.md)   
  [DQS 관리](../data-quality-services/dqs-administration.md)  
   
   

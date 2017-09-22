@@ -1,28 +1,28 @@
 ---
-title: "업데이트됨 - 데이터베이스 엔진 설명서 | Microsoft Docs"
-description: "데이터베이스 엔진 설명서에서 최근에 변경되어 업데이트된 내용 중에서 발췌한 부분을 표시합니다."
+title: "업데이트됨 - SQL Server용 Data Quality Services 문서 | Microsoft Docs"
+description: "Microsoft SQL Server용 Data Quality Services 설명서에서 최근에 변경된 내용에 대해 업데이트된 콘텐츠의 코드 조각을 표시합니다."
 services: na
 documentationcenter: 
 author: MightyPen
 manager: jhubbard
-editor: barbkess
+editor: 
 ms.service: na
 ms.topic: updart-autogen
 ms.technology: database-engine
 ms.custom: UpdArt.exe
-ms.workload: database-engine
 ms.tgt_pltfrm: na
 ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
+ms.workload: data-quality-services
 ms.translationtype: HT
 ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ce80496cdf82c2bc2df2447ed043216e6c78ad7e
+ms.openlocfilehash: c28c7e0a78c4fbbed04e2b30b7bdaff2638163ad
 ms.contentlocale: ko-kr
 ms.lasthandoff: 09/13/2017
 
 ---
-# <a name="new-and-recently-updated-database-engine-docs"></a>신규 및 최근 업데이트: 데이터베이스 엔진 설명서
+# <a name="new-and-recently-updated-data-quality-services-for-sql-server"></a>새로 추가되거나 최근에 업데이트됨: SQL Server용 Data Quality Services
 
 
 
@@ -35,7 +35,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 - *업데이트 날짜 범위:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
-- *주제 영역:* &nbsp; **데이터베이스 엔진**
+- *주제 영역:* &nbsp; **SQL Server용 Data Quality Services**.
 
 
 
@@ -47,11 +47,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [SQL Server 설치](install-windows/installation-for-sql-server.md)
-2. [SQL Server 2017에 지원되는 버전 및 에디션 업그레이드](install-windows/supported-version-and-edition-upgrades-2017.md)
-3. [SQL Server 데이터베이스 엔진](sql-server-database-engine-overview.md)
-4. [데이터베이스 엔진의 새로운 기능 - SQL Server 2016](whats-new-in-sql-server-2016.md)
-5. [데이터베이스 엔진의 새로운 기능 - SQL Server 2017](whats-new-in-sql-server-2017.md)
+***지금은 나열할 새 문서가 없습니다.***
 
 
 
@@ -77,53 +73,13 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [보조 복제본에 대한 자동 시드](#TitleNum_1)
 
 
 
 
 &nbsp;
 
-&nbsp;
-
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-automatic-seeding-for-secondary-replicasavailability-groupswindowsautomatic-seeding-secondary-replicasmd"></a>1. &nbsp; [보조 복제본에 대한 자동 시드](availability-groups/windows/automatic-seeding-secondary-replicas.md)
-
-*업데이트됨: 2017-08-21* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 55.  ms.author= "mikeray".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 0b7b6a23f38bfe5959ccd170527a9bbdb308dc4b dc51fdf69649ed6cae03584cff7bc900d5b72149  (PR=2896  ,  Filename=automatic-seeding-secondary-replicas.md  ,  Dirpath=docs\database-engine\availability-groups\windows\  ,  MergeCommitSha40=80642503480add90fc75573338760ab86139694c) -->
-
-
-
-SQL Server 2016 및 이전 버전에서 자동 시드로 데이터베이스가 만들어진 폴더는 이미 존재해야 하며 주 복제본의 경로와 동일해야 합니다.
-
-SQL Server 2017에서는 가용성 그룹에 참여하는 모든 복제본에서 동일한 데이터 및 로그 파일 경로를 사용하는 것이 좋지만 필요한 경우 다른 데이터 및 경로를 사용할 수 있습니다. 예를 들어 플랫폼 간 가용성 그룹에서 SQL Server의 인스턴트 하나는 Windows에 있고 다른 하나는 Linux에 있는 경우가 있습니다. 서로 다른 플랫폼의 기본 경로는 모두 다릅니다. SQL Server 2017은 기본 경로가 다른 SQL Server의 인스턴스에서 가용성 그룹 복제본을 지원합니다.
-
-다음 표는 자동 시드를 지원할 수 있는 지원되는 데이터 디스크 레이아웃의 예를 보여줍니다.
-
-|주 인스턴스</br>기본 데이터 경로|보조 인스턴스</br>기본 데이터 경로|주 인스턴스</br>원본 파일 위치|보조 인스턴스</br> 대상 파일 위치
-|:------|:------|:------|:------
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\ |/var/opt/mssql/data/|
-|c:\\data\\ |/var/opt/mssql/data/ |c:\\data\\group1\\ |/var/opt/mssql/data/group1/|
-|c:\\data\\ |d:\\data\\ |c:\\data\\ |d:\\data\\
-|c:\\data\\ |d:\\data\\ |c:\\data\\group1\\ |d:\\data\\group1\
-
-주 및 보조 복제본 데이터 위치가 인스턴스 기본 경로가 아닌 시나리오는 이 변경 사항에 영향을 받지 않습니다. 보조 복제본 파일 경로가 주 복제본 파일 경로와 일치하기 위한 요구 사항은 동일합니다.
-
-|주 인스턴스</br>기본 데이터 경로|보조 인스턴스</br>기본 데이터 경로|주 인스턴스</br>파일 위치|보조 인스턴스</br> 파일 위치
-|:------|:------|:------|:------
-|c:\\data\\ |c:\\data\\ |d:\\group1\\ |d:\\group1\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\ |d:\\data\\
-|c:\\data\\ |c:\\data\\ |d:\\data\\group1\\ |d:\\data\\group1\\
-
-주 및 보조 복제본에서 기본 경로와 기본이 아닌 경로가 혼합된 경우 SQL Server 2017은 이전 릴리스와 다르게 작동합니다. 다음 표에서는 SQL Server 2017의 동작을 보여줍니다.
-
+***지금은 이 영역에서 최근에 업데이트된 문서가 없습니다.***
 
 
 

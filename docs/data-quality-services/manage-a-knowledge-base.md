@@ -1,23 +1,28 @@
 ---
 title: "기술 자료 관리 | Microsoft Docs"
-ms.custom: ""
-ms.date: "06/04/2013"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 06/04/2013
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 caps.latest.revision: 9
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 9
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e725235e961b2f40765525d4812ddb7160657361
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 기술 자료 관리
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])의 기술 자료에 대해 관리 기능을 수행하는 방법에 대해 설명합니다. 기술 자료에 대해 삭제, 잠금 해제, 작업 취소, 이름 바꾸기 및 속성 표시 기능을 수행할 수 있습니다.  
+# <a name="manage-a-knowledge-base"></a>기술 자료 관리
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )의 기술 자료에 대해 관리 기능을 수행하는 방법에 대해 설명합니다. 기술 자료에 대해 삭제, 잠금 해제, 작업 취소, 이름 바꾸기 및 속성 표시 기능을 수행할 수 있습니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -31,7 +36,7 @@ caps.handback.revision: 9
   
 ##  <a name="Manage"></a> 기술 자료 관리  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **기술 자료 열기**를 클릭합니다.  
   
@@ -45,11 +50,11 @@ caps.handback.revision: 9
   
     3.  **작업 삭제**: 테이블의 상태 필드 항목에 기술 자료가 작업 중인 상태로 표시되는 경우 클릭합니다. 기술 자료가 작업 상태가 아닌 경우, 기술 자료가 잠긴 경우에는 이 명령을 사용할 수 없습니다. 자세한 내용은 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)을 참조하세요.  
   
-    4.  **이름 바꾸기**: 테이블의 기술 자료 필드 편집 가능 하 게 한 기술 자료를 마우스 오른쪽 단추를 클릭 합니다. 이름을 변경한 다음 해당 기술 자료를 클릭하고 필드의 다른 기술 자료를 클릭하여 이름 변경을 적용합니다.  
+    4.  **이름 바꾸기**: 마우스 오른쪽 단추로 클릭한 기술 자료에서 테이블의 기술 자료 필드를 편집 가능한 상태로 만들려면 클릭합니다. 이름을 변경한 다음 해당 기술 자료를 클릭하고 필드의 다른 기술 자료를 클릭하여 이름 변경을 적용합니다.  
   
-    5.  **삭제**: DQS_MAIN 데이터베이스에서 기술 자료를 제거 하려면 클릭 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]합니다.  
+    5.  **삭제**: [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]의 DQS_MAIN 데이터베이스에서 기술 자료를 제거하려면 클릭합니다.  
   
-    6.  **속성**: 읽기 전용 화면에서 데이터베이스에 대 한 속성을 표시 하려면 클릭 합니다.  
+    6.  **속성**: 읽기 전용 화면에서 데이터베이스의 속성을 표시하려면 클릭합니다.  
   
         1.  **원본 기술 자료**: 이 데이터베이스가 기반으로 하는 기술 자료입니다. 이 구성 요소는 선택 사항입니다.  
   

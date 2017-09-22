@@ -1,23 +1,28 @@
 ---
 title: ".dqs 파일에서 기술 자료 가져오기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
 ms.assetid: 9b9786fe-9e80-429a-afcb-dc3b3dd6f0b0
 caps.latest.revision: 17
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 17
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 9914672b055d007c76e55f70a87c7af71225de0a
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# .dqs 파일에서 기술 자료 가져오기
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 .dqs 데이터 파일의 전체 기술 자료를 가져오는 방법에 대해 설명합니다. 내에서 기존 기술 자료를 내보내서 데이터 파일을 만들면는 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램 (참조 [.dqs 파일에 기술 자료 내보내기](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)).  
+# <a name="import-a-knowledge-base-from-a-dqs-file"></a>.dqs 파일에서 기술 자료 가져오기
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 .dqs 데이터 파일의 전체 기술 자료를 가져오는 방법에 대해 설명합니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 응용 프로그램 내에서 기존 기술 자료를 내보내서 데이터 파일을 만듭니다([.dqs 파일로 기술 자료 내보내기](../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md) 참조).  
   
  .dqs 데이터 파일을 사용하여 기술 자료의 내용을 내보낸 다음 동일한 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 또는 다른 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 에서 다른 기술 자료로 내용을 가져오면 기술 자료 생성 프로세스가 간소화되어 시간과 노력을 절감할 수 있습니다. 기술 자료와 정보를 다른 사람과 공유하여 다른 사람의 시간을 절감할 수도 있습니다. .dqs 파일에는 연결된 참조 데이터 정보를 제외하고 도메인 및 일치 정책을 포함한 모든 기술 자료 정보가 포함됩니다. 게시된 데이터와 게시되지 않은 데이터를 가져올 수 있습니다.  
   
@@ -35,9 +40,9 @@ caps.handback.revision: 17
 ####  <a name="Permissions"></a> 사용 권한  
  .dqs 데이터 파일에서 기술 자료를 가져오려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_administrator 역할이 있어야 합니다.  
   
-##  <a name="Import"></a> .dqs 파일에서 기술 자료 가져오기  
+##  <a name="Import"></a> Import a knowledge base from a .dqs file  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 **새 기술 자료**를 클릭합니다.  
   
@@ -64,6 +69,6 @@ caps.handback.revision: 17
 13. Data Quality Services 홈 페이지에서 **최근 기술 자료**에 해당 기술 자료가 나열되는지 확인합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: .dqs 파일에서 기술 자료를 가져온 후  
- .dqs 파일에서 기술 자료를 가져온 후 기술 자료에 정보를 추가하거나 기술 자료의 내용에 따라 정리 또는 일치 프로젝트에서 기술 자료를 사용할 수 있습니다. 자세한 내용은 참조 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md), [데이터 정리](../data-quality-services/data-cleansing.md), 또는 [데이터 일치](../data-quality-services/data-matching.md)합니다.  
+ .dqs 파일에서 기술 자료를 가져온 후 기술 자료에 정보를 추가하거나 기술 자료의 내용에 따라 정리 또는 일치 프로젝트에서 기술 자료를 사용할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md), [데이터 정리](../data-quality-services/data-cleansing.md) 또는 [데이터 일치](../data-quality-services/data-matching.md)를 참조하세요.  
   
   

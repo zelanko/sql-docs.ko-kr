@@ -1,26 +1,31 @@
 ---
 title: "도메인 규칙 만들기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/08/2011"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dqs.dm.testdomainrule.f1"
-  - "sql13.dqs.dm.rules.f1"
+ms.custom: 
+ms.date: 11/08/2011
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dqs.dm.testdomainrule.f1
+- sql13.dqs.dm.rules.f1
 ms.assetid: 339fa10d-e22c-4468-b366-080c33f1a23f
 caps.latest.revision: 28
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 28
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# 도메인 규칙 만들기
-  이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 도메인 규칙을 만드는 방법에 대해 설명합니다. 도메인 규칙은 도메인 값의 유효성 검사, 수정 및 표준화를 수행하는 데 사용되는 조건입니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 규칙이 도메인 전체에서 유효해야 합니다. 도메인 규칙은 도메인 값의 유효성을 검사하는 데 사용되는 유효성 검사 규칙을 포함할 수 있지만 데이터 품질 프로젝트의 데이터를 수정하는 데 사용되지는 않습니다. 규칙은 또한 유효한 데이터에 대해 적용되고 데이터 수정에 사용되는 표준화 규칙을 포함합니다.  
+# <a name="create-a-domain-rule"></a>도메인 규칙 만들기
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 도메인 규칙을 만드는 방법에 대해 설명합니다. 도메인 규칙은 도메인 값의 유효성 검사, 수정 및 표준화를 수행하는 데 사용되는 조건입니다. 도메인 값이 정확하고 비즈니스 요구 사항에 맞는 것으로 간주되려면 도메인 규칙이 도메인 전체에서 유효해야 합니다. 도메인 규칙은 도메인 값의 유효성을 검사하는 데 사용되는 유효성 검사 규칙을 포함할 수 있지만 데이터 품질 프로젝트의 데이터를 수정하는 데 사용되지는 않습니다. 규칙은 또한 유효한 데이터에 대해 적용되고 데이터 수정에 사용되는 표준화 규칙을 포함합니다.  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -34,7 +39,7 @@ caps.handback.revision: 28
   
 ##  <a name="Build"></a> 도메인 규칙 작성  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [데이터 품질 클라이언트 응용 프로그램 실행](../data-quality-services/run-the-data-quality-client-application.md)합니다.  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
 2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 또는 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
@@ -47,9 +52,9 @@ caps.handback.revision: 28
   
 5.  **새 도메인 규칙 추가**를 클릭한 다음 기술 자료에서 고유한 이름과 규칙에 대한 설명을 입력합니다.  
   
-6.  선택 **활성** 규칙이 실행 됩니다 (기본값), 또는 선택 취소 하 여 규칙이 실행에서 되지 않도록 지정할 수 있습니다.  
+6.  **활성** 을 선택하여 해당 규칙이 실행되도록 지정하거나(기본값) 선택 취소하여 규칙이 실행되지 않도록 합니다.  
   
-7.  에 **규칙 작성** 창의 규칙 절 상자에서 드롭 다운 목록에서 조건 선택 합니다.  
+7.  **규칙 작성** 창의 규칙 절 상자에 있는 드롭다운 목록에서 조건을 선택합니다.  
   
 8.  조건에 값이 필요한 경우 해당 입력란에 값을 입력합니다.  
   
@@ -94,10 +99,10 @@ caps.handback.revision: 28
   
 2.  **모든 변경 내용 취소** 를 클릭하면 도메인 규칙에 대한 모든 변경 내용이 제거되고 이전에 적용된 규칙을 되돌리므로 규칙의 마지막 적용 이후에 변경된 내용이 더 이상 적용되지 않습니다. 각 도메인 값의 유효성은 취소된 변경 내용이 아니라 이전에 적용된 규칙에 따라 업데이트됩니다.  
   
-3.  **마침** 을 클릭하여 [End the Domain Management Activity](../Topic/End%20the%20Domain%20Management%20Activity.md)에 설명된 대로 도메인 관리 작업을 완료합니다.  
+3.  **마침** 을 클릭하여 [End the Domain Management Activity](http://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)에 설명된 대로 도메인 관리 작업을 완료합니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 도메인 규칙을 만든 후  
- 도메인 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 참조 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)합니다.  
+ 도메인 규칙을 만든 후 도메인에 대해 다른 도메인 관리 태스크를 수행하거나, 기술 자료 검색을 수행하여 도메인에 정보를 추가하거나, 도메인에 일치 정책을 추가할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
 ##  <a name="Conditions"></a> 도메인 규칙 조건  
  다음 표에서는 도메인 규칙에 적용될 수 있는 조건을 설명하고 조건을 적용하는 방법을 설명하는 예를 제공합니다.  
@@ -113,7 +118,7 @@ caps.handback.revision: 28
 |길이가 다음 값과 같음|피연산자에 지정된 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1<br /><br /> 유효하지 않은 값: AA|  
 |길이가 다음 값보다 크거나 같음|피연산자에 지정된 문자 수 또는 그보다 큰 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1, BBAA<br /><br /> 유효하지 않은 값: AA|  
 |길이가 다음 값보다 작거나 같음|피연산자에 지정된 문자 수 또는 그보다 작은 문자 수로 구성된 값만 유효합니다.|피연산자 예: 3<br /><br /> 유효한 값: BB1, AA<br /><br /> 유효하지 않은 값: BBAA|  
-|값이 다음 값과 같음|피연산자와 동일한 값만 유효합니다.|피연산자 예: BB1<br /><br /> 유효한 값: BB1<br /><br /> 유효 하지 않은 값: BB, BB1#|  
+|값이 다음 값과 같음|피연산자와 동일한 값만 유효합니다.|피연산자 예: BB1<br /><br /> 유효한 값: BB1<br /><br /> 유효하지 않은 값: BB, BB1#|  
 |값이 다음 값과 같지 않음|피연산자와 동일하지 않은 값만 유효합니다.|피연산자 예: BB1<br /><br /> 유효한 값: BB, BB1#<br /><br /> 유효하지 않은 값: BB1|  
 |값이 다음을 포함|모든 문자가 순서에 관계없이 피연산자 내에 포함된 값만 유효합니다.|피연산자 예: A1<br /><br /> 유효한 값: A1, AA1<br /><br /> 유효하지 않은 값: 1A, AA|  
 |값이 다음을 포함하지 않음|피연산자 내에 포함되지 않은 값만 유효합니다.|피연산자 예: A1<br /><br /> 유효한 값: 1A, AA<br /><br /> 유효하지 않은 값: A1, AA1|  
@@ -123,10 +128,10 @@ caps.handback.revision: 28
 |값이 날짜/시간임|SQL Server date/time 데이터 형식이 있는 값만 유효합니다. 여기에는 datetime, time, date 등이 포함됩니다.|피연산자 예: 해당 없음<br /><br /> 유효한 값: 1916-06-04; 1916-06-04 18:24:24; March 21, 2001; 5/18/2011; 18:24:24<br /><br /> 유효하지 않은 값: March 213, 2006|  
 |값이 다음에 속함|피연산자의 집합에 있는 값만 유효합니다.<br /><br /> 집합에 값을 입력하려면 피연산자 입력란을 클릭하고 첫 번째 값을 입력한 후 Enter 키를 누르고 두 번째 값을 입력하는 식으로 집합에 입력하고자 하는 만큼의 값에 대해 이 작업을 반복한 다음 다시 피연산자 입력란을 클릭합니다. DQS는 집합의 값 사이에 쉼표를 추가합니다. 캐리지 리턴 없이 쉼표로 구분된 단일 문자열을 입력하면(예: "A1, B1") DQS가 해당 문자열을 집합의 단일 값으로 간주하게 됩니다.|피연산자 예: [A1, B1]<br /><br /> 유효한 값: A1, B1<br /><br /> 유효하지 않은 값: AA, 11|  
 |값이 다음에 포함되지 않음|피연산자의 집합에 없는 값만 유효합니다.|피연산자 예: [A1, B1]<br /><br /> 유효한 값: AA, 11<br /><br /> 유효하지 않은 값: A1, B1|  
-|값이 패턴과 일치|피연산자의 문자, 숫자 또는 특수 문자 패턴과 일치하는 값만 유효합니다.<br /><br /> 모든 문자(A...Z)를 문자에 대한 패턴으로 사용할 수 있으며 대/소문자는 구분하지 않습니다. 모든 숫자(0…9)를 숫자에 대한 패턴으로 사용할 수 있습니다. 문자 또는 숫자를 제외하고 모든 특수 문자를 자체 패턴으로 사용할 수 있습니다. 대괄호([])는 선택적 일치를 정의합니다.|피연산자 예: AA:000 (패턴의 *모든* 두 문자 뒤에 콜론 (:) 된 후 다시 *모든* 3 자리 숫자입니다.<br /><br /> 유효한 값: AB:012, df:257<br /><br /> 유효하지 않은 값: abc:123, FJ-369<br /><br /> DQS의 패턴 규칙과 예에 대한 자세한 내용은 [DQS 도메인 규칙의 패턴 일치](http://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx)를 참조하세요.|  
-|값이 패턴과 일치하지 않음|피연산자의 문자, 숫자 또는 특수 문자 패턴과 일치하지 않는 값만 유효합니다.|피연산자 예: A1 (값의 패턴과 일치 해서는 *모든* 문자 하나 뒤 *모든* 한 자릿수입니다.)<br /><br /> 유효한 값: AB1, A, A:5<br /><br /> 유효하지 않은 값: B7, c9|  
-|값이 패턴 포함|피연산자의 문자, 숫자 또는 특수 문자 패턴을 포함하는 값만 유효합니다.|피연산자 예: aa-12 (값의 패턴을 포함 *모든* 다시 뒤에 하이픈 (-) 문자 두 개 뒤 *모든* 두 자리 숫자입니다.)<br /><br /> 유효한 값: AAA-01, ab-975<br /><br /> 유효하지 않은 값: A7, AA-6, C-45, aa;98|  
-|값이 패턴 포함 안 함|피연산자의 문자 패턴을 포함하지 않는 값만 유효합니다.|피연산자 예: ab-12 (패턴의 값을 포함할 수 없습니다 *모든* 다시 뒤에 하이픈 (-) 문자 두 개 뒤 *모든* 두 자리 숫자입니다.)<br /><br /> 유효한 값: A7, AA-6, C-45, aa;98<br /><br /> 유효하지 않은 값: AAA-01, ab-975|  
+|값이 패턴과 일치|피연산자의 문자, 숫자 또는 특수 문자 패턴과 일치하는 값만 유효합니다.<br /><br /> 모든 문자(A...Z)를 문자에 대한 패턴으로 사용할 수 있으며 대/소문자는 구분하지 않습니다. 모든 숫자(0…9)를 숫자에 대한 패턴으로 사용할 수 있습니다. 문자 또는 숫자를 제외하고 모든 특수 문자를 자체 패턴으로 사용할 수 있습니다. 대괄호([])는 선택적 일치를 정의합니다.|피연산자 예: AA:000( *임의의* 문자 두 개 뒤에 콜론(:)이 오고, 그 뒤에 *임의의* 숫자 세 개가 오는 패턴)<br /><br /> 유효한 값: AB:012, df:257<br /><br /> 유효하지 않은 값: abc:123, FJ-369<br /><br /> DQS의 패턴 규칙과 예에 대한 자세한 내용은 [DQS 도메인 규칙의 패턴 일치](http://blogs.msdn.com/b/dqs/archive/2012/10/08/pattern-matching-in-dqs-domain-rules.aspx)를 참조하세요.|  
+|값이 패턴과 일치하지 않음|피연산자의 문자, 숫자 또는 특수 문자 패턴과 일치하지 않는 값만 유효합니다.|피연산자 예: A1(값은 *임의의* 문자 하나 뒤에 *임의의* 숫자 하나가 오는 패턴과 일치하지 않아야 함)<br /><br /> 유효한 값: AB1, A, A:5<br /><br /> 유효하지 않은 값: B7, c9|  
+|값이 패턴 포함|피연산자의 문자, 숫자 또는 특수 문자 패턴을 포함하는 값만 유효합니다.|피연산자 예: AA-12(값은 *임의의* 문자 두 개 뒤에 하이픈(-)이 오고, 그 뒤에 *임의의* 숫자 두 개가 오는 패턴을 포함해야 함)<br /><br /> 유효한 값: AAA-01, ab-975<br /><br /> 유효하지 않은 값: A7, AA-6, C-45, aa;98|  
+|값이 패턴 포함 안 함|피연산자의 문자 패턴을 포함하지 않는 값만 유효합니다.|피연산자 예: AB-12(값은 *임의의* 문자 두 개 뒤에 하이픈(-)이 오고, 그 뒤에 *임의의* 숫자 두 개가 오는 패턴을 포함하지 않아야 함)<br /><br /> 유효한 값: A7, AA-6, C-45, aa;98<br /><br /> 유효하지 않은 값: AAA-01, ab-975|  
 |값이 정규식과 일치합니다.|피연산자의 정규식과 같은 값만 유효한 것으로 간주됩니다.<br /><br /> 정규식에 "^" 앵커 또는 "$" 앵커를 포함하지 마세요. DQS가 정규식과 일치하는 값을 포함하는 절에 이러한 앵커를 자동으로 추가합니다. (또는 "^" 및 "$" 앵커를 포함하는 정규식을 괄호로 묶을 수 있습니다.) 정규식에 대한 자세한 내용은 [정규식 언어 요소](http://go.microsoft.com/fwlink/?LinkId=225561)를 참조하세요.|피연산자 예: [1-5]+(각 문자는 1에서 5 사이의 숫자가 한 번 이상 사용되는 숫자여야 함)<br /><br /> 유효한 값: 123, 12345, 14352<br /><br /> 유효하지 않은 값: 456, ABC|  
 |값이 정규식과 일치하지 않습니다.|피연산자의 정규식과 일치하지 않는 값만 유효한 것으로 간주됩니다.|피연산자 예: [1-5]+(1에서 5 사이의 숫자로만 구성된 문자열이 아니어야 함)<br /><br /> 유효한 값: 456, ABC<br /><br /> 유효하지 않은 값: 123, 123456, 14352|  
   

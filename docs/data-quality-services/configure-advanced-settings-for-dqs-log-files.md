@@ -1,25 +1,30 @@
 ---
 title: "DQS 로그 파일에 대한 고급 설정 구성 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "data-quality-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "로그 파일, 고급 설정"
-  - "dqs 로그 파일, 고급 설정"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- data-quality-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- log files,advanced settings
+- dqs log files,advanced settings
 ms.assetid: 1d565748-9759-425c-ae38-4d2032a86868
 caps.latest.revision: 13
-author: "JennieHubbard"
-ms.author: "jhubbard"
-manager: "jhubbard"
-caps.handback.revision: 13
+author: JennieHubbard
+ms.author: jhubbard
+manager: jhubbard
+ms.translationtype: HT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 5182c032b4a0c21358631df64f43dc16cdbd9ecf
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/09/2017
+
 ---
-# DQS 로그 파일에 대한 고급 설정 구성
+# <a name="configure-advanced-settings-for-dqs-log-files"></a>DQS 로그 파일에 대한 고급 설정 구성
   이 항목에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 및 [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 파일에 대해 로그 파일의 롤링 파일 크기 제한을 설정하거나, 이벤트의 타임스탬프 패턴을 설정하는 등 고급 설정을 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
@@ -36,7 +41,7 @@ caps.handback.revision: 13
 -   [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로깅 설정을 구성하려면 DQLog.Client.xml 파일을 수정할 컴퓨터에서 Administrators 그룹의 멤버로 로그온해야 합니다.  
   
 ##  <a name="DQSServer"></a> Data Quality 서버 로그 설정 구성  
-  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정에 XML 형식에 있는 **값** 의 열은 **ServerLogging** DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블의 행입니다. 다음 SQL 쿼리를 실행하여 구성 정보를 볼 수 있습니다.  
+ [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정은 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에서 **ServerLogging** 행의 **VALUE** 열에 XML 형식으로 나타납니다. 다음 SQL 쿼리를 실행하여 구성 정보를 볼 수 있습니다.  
   
 ```  
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
@@ -46,7 +51,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   
-2.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭 하 고 클릭 **새 쿼리**합니다.  
+2.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭한 다음 **새 쿼리**를 클릭합니다.  
   
 3.  쿼리 편집기 창에서 다음 SQL 문을 복사합니다.  
   
@@ -109,10 +114,10 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
 6.  F5 키를 눌러 문을 실행합니다. **결과** 창에서 문이 성공적으로 실행되었는지 확인합니다.  
   
 > [!NOTE]  
->   [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로깅 설정 구성이 동적으로 생성 되 고 DQS_MAIN에 저장 합니다. 일반적으로 C:\Program Files\Microsoft SQL Server\MSSQL13에서 제공 되는 로그 파일입니다. SQL Server의 기본 인스턴스를 설치한 경우 MSSQLSERVER\MSSQL\Log 합니다. 그러나 이 파일에서 직접 변경한 내용은 유지되지 않고 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 있는 구성 설정이 이 변경 내용을 덮어씁니다.  
+>  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로깅 설정 구성이 동적으로 생성되어 DQS_MAIN.Log 파일에 저장됩니다. SQL Server의 기본 인스턴스를 설치한 경우 이 파일은 대개 C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log에 있습니다. 그러나 이 파일에서 직접 변경한 내용은 유지되지 않고 DQS_MAIN 데이터베이스의 A_CONFIGURATION 테이블에 있는 구성 설정이 이 변경 내용을 덮어씁니다.  
   
 ##  <a name="DQSClient"></a> Data Quality 클라이언트 로그 설정 구성  
-  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정 구성 파일 DQLog.Client.xml은 일반적으로 C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config에서 사용할 수 있습니다. XML 파일 내용은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 구성 설정에 대해 전에 수정한 XML 파일과 비슷합니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정을 구성하려면  
+ [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정 구성 파일 DQLog.Client.xml은 대개 C:\Program Files\Microsoft SQL Server\130\Tools\Binn\DQ\config에 있습니다. XML 파일 내용은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 구성 설정에 대해 전에 수정한 XML 파일과 비슷합니다. [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 로그 설정을 구성하려면  
   
 1.  XML 편집 도구나 메모장을 관리자로 실행합니다.  
   
@@ -120,7 +125,7 @@ select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'
   
 3.  필요한 사항을 변경하고 파일을 저장하여 새 로깅 변경 내용을 적용합니다.  
   
-## 참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [DQS 로그 파일에 대한 심각도 수준 구성](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)  
   
   

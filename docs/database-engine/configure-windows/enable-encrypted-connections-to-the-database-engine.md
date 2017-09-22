@@ -1,7 +1,7 @@
 ---
 title: "데이터베이스 엔진에 암호화된 연결 사용 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/12/2017
+ms.date: 09/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 5dba6e8516e97ce603b529b8ad4c07eac0db2981
+ms.sourcegitcommit: 754242a86367b07b98caa9f70f457b70d0840075
+ms.openlocfilehash: a00e09f47685eba578296b8e390d3c7d15fc6953
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/12/2017
 
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
@@ -50,9 +50,7 @@ ms.lasthandoff: 08/02/2017
 > Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 암호화된 연결을 만드는 경우 [Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 연결 구성](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)을 참조하세요. 
   
  
-##  <a name="SSMSProcedure"></a>  
-  
-###  <a name="Provision"></a> 서버에 인증서를 구축(설치)하려면  
+##  <a name="Provision"></a> 서버에 인증서를 구축(설치)하려면  
   
 1.  **시작** 메뉴에서 **실행**을 클릭하고 **열기** 입력란에 **MMC** 를 입력한 다음 **확인**을 클릭합니다.  
   
@@ -74,13 +72,13 @@ ms.lasthandoff: 08/02/2017
   
 10. **인증서 가져오기 마법사**를 완료하여 컴퓨터에 인증서를 추가하고 MMC 콘솔을 닫습니다. 컴퓨터에 인증서를 추가하는 방법은 Windows 설명서를 참조하세요.  
   
-###  <a name="Export"></a> 서버 인증서를 내보내려면  
+##  <a name="Export"></a> 서버 인증서를 내보내려면  
   
 1.  **인증서** 스냅인의 **인증서** / **개인** 폴더에서 인증서를 찾은 다음 **인증서**를 마우스 오른쪽 단추로 클릭하고 **모든 태스크**를 가리킨 다음 **내보내기**를 클릭합니다.  
   
 2.  편리한 위치에 인증서 파일을 저장하여 **인증서 내보내기 마법사**를 완료합니다.  
   
-###  <a name="ConfigureServerConnections"></a> 암호화된 연결을 허용하도록 서버를 구성하려면  
+##  <a name="ConfigureServerConnections"></a> 암호화된 연결을 허용하도록 서버를 구성하려면  
   
 1.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 *\<서버 인스턴스>***에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
@@ -89,8 +87,13 @@ ms.lasthandoff: 08/02/2017
 3.  **플래그** 탭의 **ForceEncryption** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 다시 시작합니다.  
+
+### <a name="wildcard-certificates"></a>와일드카드 인증서  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008부터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원시 클라이언트는 와일드카드 인증서를 지원합니다. 다른 클라이언트에서는 와일드카드 인증서를 지원하지 않습니다. 자세한 내용은 클라이언트 설명서를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 와일드카드 인증서를 선택할 수 없습니다. 와일드카드 인증서를 사용하려면 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` 레지스트리 키를 편집하고 **인증서** 값에 공백 없이 인증서의 지문을 입력해야 합니다.  
+> [!WARNING]  
+> [!INCLUDE[ssnoteregistry_md](../../includes/ssnoteregistry_md.md)]  
   
-###  <a name="ConfigureClientConnections"></a> 암호화된 연결을 요청하도록 클라이언트를 구성하려면  
+##  <a name="ConfigureClientConnections"></a> 암호화된 연결을 요청하도록 클라이언트를 구성하려면  
   
 1.  원래 인증서 또는 내보낸 인증서 파일을 클라이언트 컴퓨터로 복사합니다.  
   
@@ -100,7 +103,7 @@ ms.lasthandoff: 08/02/2017
   
 4.  **플래그** 페이지의 **프로토콜 암호화 강제 사용** 상자에서 **예**를 클릭합니다.  
   
-###  <a name="EncryptConnection"></a> SQL Server Management Studio의 연결을 암호화하려면  
+##  <a name="EncryptConnection"></a> SQL Server Management Studio의 연결을 암호화하려면  
   
 1.  개체 탐색기 도구 모음에서 **연결**, **데이터베이스 엔진**을 차례로 클릭합니다.  
   
