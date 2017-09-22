@@ -60,7 +60,7 @@ Linux 컴퓨터에서 터미널 명령을 열고 여기서 [!INCLUDE[ssNoVersion
 - 에 대 한 액세스를 제한 합니다.`mssql`  
    ```  
    sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 400 mssql.pem mssql.key 
+   sudo chmod 600 mssql.pem mssql.key 
    ```  
  
 - 시스템 SSL 디렉터리 (선택 사항)으로 이동  
