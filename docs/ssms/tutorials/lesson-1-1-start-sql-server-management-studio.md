@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 109b5a18604b2111f3344ba216a6d3d98131d116
-ms.openlocfilehash: 2d5147747a0b9bac8e90c77cca24fd3632d42240
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 6cc0ed90b88e52e4812011f56714a1f1a662636c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="lesson-1-1---start-sql-server-management-studio"></a>1-1단원 - SQL Server Management Studio 시작
@@ -35,12 +35,12 @@ ms.lasthandoff: 07/31/2017
   * 이전 버전의 Windows에서는 **시작** 메뉴에서 **모든 프로그램**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]을 차례로 가리킨 다음 **SQL Server Management Studio**를 클릭합니다. 또는 **실행** 대화 상자에서 **SSMS.exe** 를 입력한 다음 **확인**을 클릭합니다.  
   
     > [!NOTE]  
-    >  SSMS가 나타나지 않을 경우 SSMS가 제대로 설치되지 않았을 수 있습니다. [다운로드 센터](https://msdn.microsoft.com/library/mt238290.aspx)에서 SSMS를 설치합니다. SSMS는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016과 함께 자동으로 설치되지 않습니다. 모든 기능에 액세스하려면 최신 버전을 사용합니다.  
+    >  SSMS가 나타나지 않을 경우 SSMS가 제대로 설치되지 않았을 수 있습니다. [다운로드 센터](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)에서 SSMS를 설치합니다. SSMS는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016과 함께 자동으로 설치되지 않습니다. 모든 기능에 액세스하려면 최신 버전을 사용합니다.  
   
 2.  다음 단계에서는 SSMS의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 탐색기 **구성 요소를 사용하여** 에 연결합니다. 개체 탐색기 창이 표시되지 않는 경우 **보기** 메뉴에서 **개체 탐색기**를 클릭합니다. 개체 탐색기 메뉴에서 **연결** 단추, **데이터베이스 엔진**을 차례로 클릭합니다. **서버에 연결** 대화 상자가 표시됩니다. 이전에 SSMS를 설치한 경우 사용자 설정 때문에 **서버에 연결** 대화 상자가 자동으로 표시될 수도 있습니다.  
   
 3.  **서버에 연결** 대화 상자의 **서버 이름** 상자에 정보를 입력합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 세 가지 유형 중 하나에 연결할 수 있습니다. 각 유형마다 **서버 이름** 상자의 형식이 약간씩 다릅니다. 다음 형식 중 하나를 선택합니다.  
-  -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스:** 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기본값(명명되지 않은 인스턴스) 또는 명명된 인스턴스로 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에 연결하는 경우 컴퓨터 이름을 삽입합니다. 예를 들어 Accounting이라는 컴퓨터에서 SSMS를 실행 중이며 해당 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  의 기본 인스턴스에 연결하는 경우 **서버 이름** 상자에 **Accounting** 을 입력합니다.  
+  -  **기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스: ** 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 기본값(명명되지 않은 인스턴스) 또는 명명된 인스턴스로 지정할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 인스턴스에 연결하는 경우 컴퓨터 이름을 삽입합니다. 예를 들어 Accounting이라는 컴퓨터에서 SSMS를 실행 중이며 해당 컴퓨터에 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  의 기본 인스턴스에 연결하는 경우 **서버 이름** 상자에 **Accounting** 을 입력합니다.  
   -  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 명명된 인스턴스:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 도중에 인스턴스 이름을 지정할 수 있습니다. 예를 들어 Accounting이라는 컴퓨터에서는 **Receivables**라는 명명된 인스턴스를 지정할 수 있습니다. 명명된 인스턴스에 연결하려면 **서버 이름** 상자에 컴퓨터 이름 백슬래시 인스턴스 이름을 입력합니다(예: **Accounting\Receivables**).  
   -  **Azure SQL Database:** SQL Database에 대한 서버 이름의 형식은 SQL_Server_name.database.windows.net입니다(예: **mydb2.database.windows.net**). 서버 이름을 확인하는 데 문제가 있는 경우 Azure Portal에서 연결 문자열을 만드는 방법에 대한 도움말을 확인하세요.  
   

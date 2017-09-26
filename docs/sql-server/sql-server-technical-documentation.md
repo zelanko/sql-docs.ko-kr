@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: 43b840061dec69be8e733929477d79ca9d379814
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0412057a8d3e0849ddaeecfeb199e00b46a96d7b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 기술 설명서
@@ -50,7 +50,7 @@ SQL Server를 설치하고, 구성하고, 사용하는 데 도움이 되는 설�
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
 - [SQL Server 2016이 이미 설치된 가상 컴퓨터 실행](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![평가 센터에서 다운로드](../includes/media/download2.png)](https://msdn.microsoft.com/library/mt238290.aspx) [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)   
+- [![평가 센터에서 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) [SSMS(SQL Server Management Studio) 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)   
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server 기술    

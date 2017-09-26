@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 71a2cbf181c94c4c1aff877614aadf890b2496e0
-ms.openlocfilehash: 0bdc983c4a80781eaba888c3e214fc23a4ddad22
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 0a64043328380b107fb7e33716ec0bb48d061dd1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/23/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="download-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 다운로드
@@ -123,11 +123,11 @@ SSDT를 설치한 후 데이터베이스, 패키지, 데이터 모델 및 SSDT�
   
 -   [프로젝트 기반 오프라인 데이터베이스 개발](https://msdn.microsoft.com/library/hh272702(v=vs.103).aspx)  
   
--   [SSIS 자습서: 간단한 ETL 패키지 만들기](https://msdn.microsoft.com/library/ms169917.aspx)  
+-   [SSIS 자습서: 간단한 ETL 패키지 만들기](/sql-docs/docs/integration-services/ssis-how-to-create-an-etl-package)  
   
--   [Analysis Services 자습서](https://msdn.microsoft.com/library/hh231701.aspx)  
+-   [Analysis Services 자습서](/sql-docs/docs/analysis-services/analysis-services-tutorials-ssas)  
   
--   [기본 테이블 보고서 만들기(SSRS 자습서)](https://msdn.microsoft.com/library/ms167305.aspx)  
+-   [기본 테이블 보고서 만들기(SSRS 자습서)](/sql-docs/docs/reporting-services/create-a-basic-table-report-ssrs-tutorial)  
   
 
 

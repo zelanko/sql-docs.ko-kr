@@ -1,33 +1,38 @@
 ---
-title: "Integration Services(SSIS) 이벤트 처리기 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/04/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "Integration Services 패키지, 이벤트"
-  - "런타임 [Integration Services]"
-  - "SQL Server Integration Services 패키지, 이벤트"
-  - "이벤트 처리기 [Integration Services], 이벤트 처리기 정보"
-  - "이벤트 [Integration Services]"
-  - "패키지 [Integration Services], 이벤트"
-  - "이벤트 처리기 [Integration Services]"
-  - "SSIS 패키지, 이벤트"
-  - "컨테이너 [Integration Services], 이벤트"
-  - "이벤트 [Integration Services], 이벤트 정보"
+title: "Integration Services (SSIS) 이벤트 처리기 | Microsoft Docs"
+ms.custom: 
+ms.date: 03/04/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- Integration Services packages, events
+- run-time [Integration Services]
+- SQL Server Integration Services packages, events
+- event handlers [Integration Services], about event handlers
+- events [Integration Services]
+- packages [Integration Services], events
+- event handlers [Integration Services]
+- SSIS packages, events
+- containers [Integration Services], events
+- events [Integration Services], about events
 ms.assetid: 6f60cf93-35dc-431c-908d-2049c4ab66ba
 caps.latest.revision: 52
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 51
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: fb4fb7cc58ace602daa44d07dbaf59f76d9b7755
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/26/2017
+
 ---
-# Integration Services(SSIS) 이벤트 처리기
+# <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
   런타임 시 실행 개체(패키지 및 Foreach 루프, For 루프, 시퀀스 및 태스크 호스트 컨테이너)는 이벤트를 발생시킵니다. 예를 들어 오류가 발생하면 OnError 이벤트가 발생합니다. 이러한 이벤트에 대한 사용자 지정 이벤트 처리기를 만들면 패키지 기능을 확장하고 런타임 시 패키지를 더 쉽게 관리할 수 있습니다. 이벤트 처리기는 다음과 같은 태스크를 수행할 수 있습니다.  
   
 -   패키지 또는 태스크 실행이 완료될 때 임시 데이터 저장소를 삭제합니다.  
@@ -62,13 +67,13 @@ caps.handback.revision: 51
   
 -   이벤트 처리기에서 사용되는 로깅 모드를 지정합니다.  
   
-## 이벤트 처리기 내용  
+## <a name="event-handler-content"></a>이벤트 처리기 내용  
  이벤트 처리기를 만드는 방법은 패키지를 빌드하는 방법과 비슷합니다. 이벤트 처리기에는 제어 흐름으로 순서가 지정된 태스크 및 컨테이너가 포함되며, 데이터 흐름이 포함될 수도 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너에는 사용자 지정 이벤트 처리기를 만들기 위한 **이벤트 처리기** 탭이 포함됩니다.  
   
  이벤트 처리기를 프로그래밍 방식으로 만들 수도 있습니다. 자세한 내용은 [프로그래밍 방식으로 이벤트 처리](../integration-services/building-packages-programmatically/handling-events-programmatically.md)를 참조하세요.  
   
-## 런타임 이벤트  
- 다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 제공되는 이벤트 처리기를 나열하고 이벤트 처리기를 실행하는 런타임 이벤트에 대해 설명합니다.  
+## <a name="run-time-events"></a>런타임 이벤트  
+ 다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공되는 이벤트 처리기를 나열하고 이벤트 처리기를 실행하는 런타임 이벤트에 대해 설명합니다.  
   
 |이벤트 처리기|이벤트|  
 |-------------------|-----------|  
@@ -84,15 +89,50 @@ caps.handback.revision: 51
 |**OnTaskFailed**|**OnTaskFailed** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 작업이 실패할 때 해당 태스크에 의해 발생합니다.|  
 |**OnVariableValueChanged**|**OnVariableValueChanged** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 변수 값이 변경될 때 실행 개체에 의해 발생합니다. 이 이벤트는 변수가 정의되는 실행 개체에 의해 발생합니다. 변수에 대한 **RaiseChangeEvent** 속성을 **False**로 설정한 경우에는 이 이벤트가 발생하지 않습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.|  
 |**OnWarning**|**OnWarning** 이벤트에 대한 이벤트 처리기입니다. 이 이벤트는 경고가 발생할 때 실행 개체에 의해 발생합니다.|  
+
+## <a name="add-an-event-handler-to-a-package"></a>패키지에 이벤트 처리기 추가
+컨테이너와 태스크는 런타임에 이벤트를 발생시킵니다. 이벤트가 발생할 때 워크플로를 실행하여 이벤트에 응답하는 사용자 지정 이벤트 처리기를 만들 수 있습니다. 예를 들어 태스크가 실패하면 전자 메일 메시지를 보내는 이벤트 처리기를 만들 수 있습니다.  
   
-## 이벤트 처리기 구성  
+ 이벤트 처리기는 패키지와 비슷합니다. 패키지와 같이 이벤트 처리기에서는 변수에 대한 범위를 제공할 수 있으며 제어 흐름과 선택적 데이터 흐름이 포함됩니다. 패키지, Foreach 루프 컨테이너, For 루프 컨테이너, 시퀀스 컨테이너 및 모든 태스크에 대해 이벤트 처리기를 만들 수 있습니다.  
+  
+ **디자이너에서** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 탭의 디자인 화면을 사용하여 이벤트 처리기를 만들 수 있습니다.  
+  
+ **이벤트 처리기** 탭이 활성화되면 **디자이너의 도구 상자에 있는** 제어 흐름 항목 **및** 유지 관리 계획 태스크 [!INCLUDE[ssIS](../includes/ssis-md.md)] 노드에 이벤트 처리기의 제어 흐름을 작성하기 위한 태스크와 컨테이너가 포함됩니다. **데이터 흐름 원본**, **변환**및 **데이터 흐름 대상** 노드에는 이벤트 처리기의 데이터 흐름을 작성하기 위한 데이터 원본, 변환 및 대상이 포함됩니다. 자세한 내용은 [Control Flow](../integration-services/control-flow/control-flow.md) 및 [Data Flow](../integration-services/data-flow/data-flow.md)를 참조하세요.  
+  
+ **이벤트 처리기** 탭에는 또한 이벤트 처리기에서 서버 및 데이터 원본에 연결하는 데 사용하는 연결 관리자를 만들고 수정할 수 있는 **연결 관리자** 영역이 포함됩니다. 자세한 내용은 [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
+  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>이벤트 처리기 탭에서 이벤트 처리기를 추가 합니다.  
+  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
+  
+2.  솔루션 탐색기에서 패키지를 두 번 클릭하여 엽니다.  
+  
+3.  **이벤트 처리기** 탭을 클릭합니다.  
+  
+     ![디자인 화면에 이벤트 처리기의 스크린샷](../integration-services/media/eventhandlers.gif "디자인 화면에 이벤트 처리기의 스크린 샷")  
+  
+     이벤트 처리기에서 제어 흐름과 데이터 흐름을 만드는 방법은 패키지에서 제어 흐름과 데이터 흐름을 만드는 방법과 비슷합니다. 자세한 내용은 [Control Flow](../integration-services/control-flow/control-flow.md) 및 [Data Flow](../integration-services/data-flow/data-flow.md)를 참조하세요.  
+  
+4.  **실행 파일** 목록에서 이벤트 처리기를 만들 실행 파일을 선택합니다.  
+  
+5.  **이벤트 처리기** 목록에서 만들 이벤트 처리기를 선택합니다.  
+  
+6.  **이벤트 처리기** 탭의 디자인 화면에서 링크를 클릭합니다.  
+  
+7.  이벤트 처리기에 제어 흐름 항목을 추가하고 제어 흐름 항목 간에 제약 조건을 끌어서 선행 제약 조건을 사용하는 항목을 연결합니다. 자세한 내용은 [Control Flow](../integration-services/control-flow/control-flow.md)을 참조하세요.  
+  
+8.  필요에 따라 **데이터 흐름** 탭의 디자인 화면에 데이터 흐름 태스크를 추가하고 이벤트 처리기의 데이터 흐름을 만들 수도 있습니다. 자세한 내용은 [Data Flow](../integration-services/data-flow/data-flow.md)을 참조하세요.  
+  
+9. **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 패키지를 저장합니다.  
+
+## <a name="set-the-properties-of-an-event-handler"></a>이벤트 처리기의 속성 설정  
  **** 의 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
- [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](../Topic/Set%20the%20Properties%20of%20a%20Task%20or%20Container.md)을 참조하세요.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
   
  이러한 속성을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:Microsoft.SqlServer.Dts.Runtime.DtsEventHandler>를 참조하세요.  
   
-## 관련 작업  
- 패키지에 이벤트 처리기를 추가하는 방법에 대한 자세한 내용은 [패키지에 이벤트 처리기 추가](../Topic/Add%20an%20Event%20Handler%20to%20a%20Package.md)를 참조하세요.  
+## <a name="related-tasks"></a>관련 작업  
+ 패키지에 이벤트 처리기를 추가하는 방법에 대한 자세한 내용은 [패키지에 이벤트 처리기 추가](http://msdn.microsoft.com/library/5e56885d-8658-480a-bed9-3f2f8003fd78)를 참조하세요.  
   
   

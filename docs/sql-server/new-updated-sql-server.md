@@ -16,10 +16,10 @@ ms.devlang: na
 ms.date: 09/11/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: bd22355518bde09b5af006062b2ec03cf11a7597
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 7f1c64e11e1bec44a558cec10c3d1f90f4951dfd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="new-and-recently-updated-sql-server-docs"></a>새로 추가되었거나 최근에 업데이트됨: SQL Server 문서
@@ -104,7 +104,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 - **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
-- 최신 버전의 [SQL Server Management Studio(SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)를 다운로드하세요.
+- 최신 버전의 [SQL Server Management Studio(SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)를 다운로드하세요.
 - Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 컴퓨터](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)를 실행해 보세요.
 
 **SQL Server 2016 데이터베이스 엔진**

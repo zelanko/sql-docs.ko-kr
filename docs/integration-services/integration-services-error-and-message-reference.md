@@ -1,32 +1,37 @@
 ---
 title: "Integration Services 오류 및 메시지 참조 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "오류 번호 [Integration Services]"
-  - "hresult [Integration Services]"
-  - "오류 [Integration Services], 나열됨"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- error numbers [Integration Services]
+- hresults [Integration Services]
+- errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 caps.latest.revision: 44
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 44
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 50a5d76125594e3175c2dc03d07de88e56cb2206
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/26/2017
+
 ---
-# Integration Services 오류 및 메시지 참조
-  다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 클래스의 필드로 정의됩니다.  
+# <a name="integration-services-error-and-message-reference"></a>Integration Services 오류 및 메시지 참조
+  다음 표에서는 각 범주별로 미리 정의된 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 오류, 경고 및 정보 메시지를 숫자 코드 및 심볼 이름과 함께 오름차순으로 나열합니다. 이러한 각 오류는 <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> 네임스페이스에 있는 <xref:Microsoft.SqlServer.Dts.Runtime> 클래스의 필드로 정의됩니다.  
   
  이 목록은 아무런 설명 없이 오류가 발생할 경우 유용할 수 있습니다. 이 목록에는 현재 문제 해결 정보는 들어 있지 않습니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 작업할 때 볼 수 있는 오류 메시지 중 상당수가 다른 구성 요소의 메시지입니다. 이 항목에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 요소에서 발생하는 모든 오류가 나와 있습니다. 이 목록에 없는 오류는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 아닌 다른 구성 요소에서 발생한 것입니다. 여기에는 OLE DB 공급자, 다른 데이터베이스 구성 요소(예: [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]) 또는 다른 서비스나 구성 요소(예: 파일 시스템, SMTP 서버 또는 MSMQ라고도 하는 Message Queuing)가 포함됩니다. 이러한 외부 오류 메시지에 대한 자세한 내용은 해당 구성 요소의 설명서를 참조하십시오.  
+>  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 작업할 때 볼 수 있는 오류 메시지 중 상당수가 다른 구성 요소의 메시지입니다. 이 항목에는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 구성 요소에서 발생하는 모든 오류가 나와 있습니다. 이 목록에 없는 오류는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]가 아닌 다른 구성 요소에서 발생한 것입니다. 여기에는 OLE DB 공급자, 다른 데이터베이스 구성 요소(예: [!INCLUDE[ssDE](../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ) 또는 다른 서비스나 구성 요소(예: 파일 시스템, SMTP 서버 또는 MSMQ라고도 하는 Message Queuing)가 포함됩니다. 이러한 외부 오류 메시지에 대한 자세한 내용은 해당 구성 요소의 설명서를 참조하십시오.  
   
  이 목록에는 다음과 같은 메시지 그룹이 포함되어 있습니다.  
   
@@ -153,7 +158,7 @@ caps.handback.revision: 44
 |0xC0014020|-1073659872|DTS_E_ODBCERROR|ODBC 오류 %1!d!이(가) 발생했습니다.|  
 |0xC0014021|-1073659871|DTS_E_PRECEDENCECONSTRAINT|"%1" 및 "%2" 사이의 선행 제약 조건에 오류가 있습니다.|  
 |0xC0014022|-1073659870|DTS_E_FAILEDPOPNATIVEFEE|ForEachEnumeratorInfos 컬렉션을 네이티브 ForEachEnumerators로 채우지 못했습니다. 오류 코드: %1.|  
-|0xC0014023|-1073659869|DTS_E_GETENUMERATOR|오류 0x%1!8.8X! "%2"(으)로 인해 ForEach 열거자의 GetEnumerator 메서드가 실패했습니다. 이 오류는 ForEach 열거자가 항목을 열거할 수 없을 때 발생합니다.|  
+|0xC0014023|-1073659869|DTS_E_GETENUMERATOR|오류 0x%1!8.8X! "%2"(으)로 인해 ForEach 열거자의 GetEnumerator 메서드가 "%2"입니다. 이 오류는 ForEach 열거자가 항목을 열거할 수 없을 때 발생합니다.|  
 |0xC0014024|-1073659868|DTS_E_CANTGETCERTDATA|원시 인증서 데이터를 제공된 인증서 개체에서 가져올 수 없습니다(오류: %1). 이 오류는 CPackage::put_CertificateObject가 ManagedHelper 개체를 인스턴스화할 수 없을 경우, ManagedHelper 개체가 실패할 경우 또는 ManagedHelper 개체가 잘못된 형식의 배열을 반환할 경우 발생합니다.|  
 |0xC0014025|-1073659867|DTS_E_CANTCREATECERTCONTEXT|인증서 컨텍스트를 만들지 못했습니다(오류: %1). 이 오류는 해당 CryptoAPI 함수가 실패할 때 CPackage::put_CertificateObject 또는 CPackage::LoadFromXML에서 발생합니다.|  
 |0xC0014026|-1073659866|DTS_E_CANTOPENCERTSTORE|오류 "%1"(으)로 인해 내 인증서 저장소를 열지 못했습니다. 이 오류는 CPackage::LoadUserCertificateByName 및 CPackage::LoadUserCertificateByHash에서 발생합니다.|  
@@ -162,7 +167,7 @@ caps.handback.revision: 44
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|해시 값이 1차원 바이트 배열이 아닙니다(오류: %1). 이 오류는 CPackage::LoadUserCertificateByHash에서 발생합니다.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|배열의 데이터에 액세스할 수 없습니다(오류: %1). 이 오류는 GetDataFromSafeArray가 호출될 때마다 발생할 수 있습니다.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 관리되는 SSIS 도우미 개체를 만들지 "%2"입니다. 이 오류는 CoCreateInstance CLSID_DTSManagedHelper가 실패할 때마다 발생할 수 있습니다.|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 못했습니다.|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|오류 0x%1!8.8X! "%2"(으)로 인해 SSIS 런타임이 OLE DB 연결을 분산 트랜잭션에 참여시키지 "%2"입니다.|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지를 서명하지 "%2"입니다. 이 오류는 ManagedHelper.SignDocument 메서드가 실패할 때 발생합니다.|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 패키지 XML에서 XML 서명 봉투를 확인하지 "%2"입니다. 이 오류는 CPackage::LoadFromXML에서 발생합니다.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|오류 0x%1!8.8X! "%2"(으)로 인해 XML DOM 개체에서 XML 원본을 가져오지 "%2"입니다. 이 오류는 IXMLDOMDocument::get_xml이 실패할 때 발생합니다.|  
@@ -357,7 +362,7 @@ caps.handback.revision: 44
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|개체 이름 "%1"이(가) 잘못되었습니다. 이름은 알파벳 문자로 시작해야 합니다.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|개체 이름 "%1"이(가) 잘못되었습니다. 이름은 알파벳 문자나 밑줄("_")로 시작해야 합니다.|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|개체 이름 "%1"이(가) 잘못되었습니다. 이름에는 영숫자나 밑줄("_")만 포함되어야 합니다.|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|개체 이름 "%1"이(가) 잘못되었습니다. 이름에는 / \ : ? 문자를 사용할 수 없습니다. " \< > &#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|개체 이름 "%1"이(가) 잘못되었습니다. 이름에는 / \ : ? 문자를 사용할 수 없습니다. " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|기본 지속성을 사용하여 값 속성 "%1"을(를) 로드하지 못했습니다.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|연결 관리자 "%1"이(가) "%2" 유형이 아닙니다.|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|"%1"이(가) 비어 있습니다.|  
@@ -2317,7 +2322,7 @@ caps.handback.revision: 44
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|출력 및 오류 출력의 총 수인 %1!lu!이(가) 잘못되었습니다. 정확하게 %2!lu!개가 있어야 합니다.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|인덱스 %1!lu!(으)로 출력을 검색할 수 없습니다.|  
 |0xC8000005|-939524091|DTSBC_E_INCORRECTEXACTNUMBEROFERROROUTPUTS|오류 출력 수인 %1!lu!이(가) 잘못되었습니다. 정확하게 %2!lu!개가 있어야 합니다.|  
-|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|유효성 검사 상태 값 "%1!lu!"이(가) 잘못되었습니다.  DTSValidationStatus 열거에 있는 값 중 하나여야 합니다.|  
+|0xC8000006|-939524090|DTSBC_E_INVALIDVALIDATIONSTATUSVALUE|유효성 검사 상태 값 "%1!lu!"이(가) "에 지원되지 않는 데이터 형식이 있습니다.  DTSValidationStatus 열거에 있는 값 중 하나여야 합니다.|  
 |0xC8000007|-939524089|DTSBC_E_INPUTHASNOOUTPUT|입력 "%1!lu!"에 동기 오류 출력이 없습니다.|  
 |0xC8000008|-939524088|DTSBC_E_INPUTHASNOERROROUTPUT|입력 "%1!lu!"에 동기 오류 출력이 없습니다.|  
 |0xC8000009|-939524087|DTSBC_E_INVALIDHTPIVALUE|HowToProcessInput 값 %1!lu!이(가) 잘못되었습니다. HowToProcessInput 열거에 있는 값 중 하나여야 합니다.|  
@@ -2336,3 +2341,4 @@ caps.handback.revision: 44
 |0xC8000018|-939524072|DTSBC_E_CANTINSERTEXTERNALMETADATACOLUMN|%1에서는 외부 메타데이터 열을 삽입할 수 없습니다.|  
   
   
+

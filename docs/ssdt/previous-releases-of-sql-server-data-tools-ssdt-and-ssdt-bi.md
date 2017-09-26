@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: 1fcc7de6bca7ac383f46aa7a76ca4382e706080d
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: fbd9bb9d0edbbeae81ebc074f28386476fd8635f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
@@ -27,10 +27,10 @@ SQL Server Data Tools(SSDT)는 관계형 데이터베이스, Analysis Services �
   
 SSDT는 Visual Studio 셸을 기반으로 하며 SQL Server와 함께 출시됩니다. 새 버전의 SSDT는 SQL Server의 최신 기능을 통합합니다. 이전 버전에는 출시 당시 최신이던 템플릿과 설계 환경이 포함됩니다.  
   
-SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](https://msdn.microsoft.com/library/mt204009.aspx)를 사용하여 이전 버전의 SQL Server에서 실행되는 데이터베이스, 모델, 보고서 및 패키지를 설계하고 배포할 수 있습니다.  
+SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)를 사용하여 이전 버전의 SQL Server에서 실행되는 데이터베이스, 모델, 보고서 및 패키지를 설계하고 배포할 수 있습니다.  
   
 > [!NOTE]  
-> 기존에 SQL Server 콘텐츠 형식을 만드는 데 사용하는 Visual Studio 셸은 **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, **Business Intelligence Development Studio**등과 같은 다양한 이름으로 출시되었습니다. 이전 버전에는 고유한 프로젝트 템플릿 집합이 함께 제공되었습니다. 하나의 SSDT에서 모든 프로젝트를 함께 이용하려면 [최신 버전](https://msdn.microsoft.com/library/mt204009.aspx)이 있어야 합니다. 그렇지 않으면 여러 이전 버전을 설치하여 SQL Server에서 사용되는 모든 템플릿을 가져와야 합니다.  Visual Studio 버전당 셸이 하나만 설치되지만, 두 번째 SSDT를 설치하기만 하면 누락된 템플릿이 추가됩니다.  
+> 기존에 SQL Server 콘텐츠 형식을 만드는 데 사용하는 Visual Studio 셸은 **SQL Server Data Tools**, **SQL Server Data Tools - Business Intelligence**, **Business Intelligence Development Studio**등과 같은 다양한 이름으로 출시되었습니다. 이전 버전에는 고유한 프로젝트 템플릿 집합이 함께 제공되었습니다. 하나의 SSDT에서 모든 프로젝트를 함께 이용하려면 [최신 버전](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)이 있어야 합니다. 그렇지 않으면 여러 이전 버전을 설치하여 SQL Server에서 사용되는 모든 템플릿을 가져와야 합니다.  Visual Studio 버전당 셸이 하나만 설치되지만, 두 번째 SSDT를 설치하기만 하면 누락된 템플릿이 추가됩니다.  
 
 ## <a name="recent-downloads"></a>최신 다운로드
 

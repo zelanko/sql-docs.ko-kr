@@ -1,27 +1,32 @@
 ---
 title: "변수 창 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-f1_keywords: 
-  - "sql13.dts.designer.variables.f1"
-  - "sql13.dts.designer.variableoptionswindow.f1"
-helpviewer_keywords: 
-  - "변수 창 대화 상자"
+ms.custom: 
+ms.date: 03/01/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+f1_keywords:
+- sql13.dts.designer.variables.f1
+- sql13.dts.designer.variableoptionswindow.f1
+helpviewer_keywords:
+- Variables Window dialog box
 ms.assetid: f405e5ce-ef69-4c58-8c7d-a3d44dfe9ab0
 caps.latest.revision: 53
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 52
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: a87438f0f702a46b88b350ee32b734f64b1c6ad2
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/26/2017
+
 ---
-# 변수 창
+# <a name="variables-window"></a>변수 창
   **변수** 창을 사용하여 사용자 정의 변수를 생성 및 수정하고 시스템 변수를 볼 수 있습니다.  
   
  기본적으로는 **변수** 창은 **의 SSID 디자이너에 있는** 연결 관리자 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]영역 아래에 있습니다. **변수** 창이 표시되지 않는 경우 **SSIS** 메뉴에서 **변수** 를 클릭하여 창을 표시합니다.  
@@ -31,14 +36,14 @@ caps.handback.revision: 52
 > [!NOTE]  
 >  **Name** 및 **Namespace** 속성 값은 Unicode Standard 2.0에 정의된 대로 영문자 또는 밑줄(_)로 시작해야 합니다. 후속 문자는 Unicode Standard 2.0에 정의된 문자 또는 숫자이거나 밑줄(\_)일 수 있습니다.  
   
-## 옵션  
+## <a name="options"></a>변수  
  **변수 추가**  
  사용자 정의 변수를 추가합니다.  
   
  **변수 이동**  
- 목록에서 변수를 클릭하고 **변수 이동**을 클릭하여 변수 범위를 변경합니다. **새 범위 선택** 대화 상자에서 변수 범위를 변경할 패키지나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기를 선택합니다.  
+ 목록에서 변수를 클릭하고 **변수 이동** 을 클릭하여 변수 범위를 변경합니다. **새 범위 선택** 대화 상자에서 변수 범위를 변경할 패키지나 패키지에 들어 있는 컨테이너, 태스크 또는 이벤트 처리기를 선택합니다.  
   
- 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
+ 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)영역 아래에 있습니다.  
   
  **변수 삭제**  
  목록에서 변수를 선택한 다음 **변수 삭제**를 클릭합니다.  
@@ -46,7 +51,7 @@ caps.handback.revision: 52
  **표 옵션**  
  열 선택을 변경하고 **변수** 창에 필터를 적용할 수 있는 **가변 눈금 옵션** 대화 상자를 열려면 클릭합니다. 자세한 내용은 [가변 눈금 옵션](../integration-services/variable-grid-options.md)을 참조하세요.  
   
- **이름**  
+ **Name**  
  변수 이름을 봅니다. 사용자 정의 변수의 이름을 업데이트할 수 있습니다.  
   
  **범위**  
@@ -63,7 +68,7 @@ caps.handback.revision: 52
  **Value**  
  변수 값을 봅니다. 사용자 정의 변수에 대한 값을 업데이트할 수 있습니다. 이 값은 리터럴 또는 식일 수 있으며 값은 다중 행 문자열일 수 있습니다. 변수에 식을 할당하려면 **변수** 창의 **식** 열 옆에 있는 줄임표 단추를 클릭합니다.  
   
- **네임스페이스**  
+ **Namespace**  
  네임스페이스 이름을 봅니다. 사용자 정의 변수는 처음에 **User** 네임스페이스에 생성되지만 **네임스페이스** 필드에서 해당 네임스페이스 이름을 변경할 수 있습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
  **Raise Change Event**  
@@ -72,15 +77,46 @@ caps.handback.revision: 52
  **Description**  
  변수 설명을 봅니다. 사용자 정의 변수에 대한 설명을 변경할 수 있습니다. 기본적으로 **변수** 창에는 이 열이 나열되지 않습니다. 이 열을 표시하려면 **표 옵션**을 클릭합니다.  
   
- **식**  
+ **변수**  
  변수에 할당된 식을 봅니다. 식을 할당하려면 줄임표 단추를 클릭합니다.  
   
  변수에 식을 할당할 경우 해당 변수 옆에 특수 아이콘 표식이 표시됩니다. 이 특수 아이콘 표식은 식이 설정되어 있는 연결 관리자 및 태스크 옆에도 표시됩니다.  
+
+## <a name="variable-grid-options-dialog-box"></a>가변 눈금 옵션 대화 상자
+ **가변 눈금 옵션** 대화 상자를 사용하여 **변수** 창에 표시될 열을 선택하고 변수 목록에 적용할 필터를 선택할 수 있습니다. 해당 변수 속성에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
   
-## 관련 항목:  
+### <a name="options-for-filter"></a>필터 옵션  
+ **시스템 변수 표시**  
+ **변수** 창에 시스템 변수를 나열하려면 선택합니다. 시스템 변수는 미리 정의되어 있습니다. 시스템 변수는 추가하거나 삭제할 수 없습니다. **RaiseChangedEvent** 속성 설정을 수정할 수 있습니다.  
+  
+ 이 목록은 색으로 구분됩니다. 시스템 변수는 회색으로 표시되고 사용자 정의 변수는 검은색으로 표시됩니다.  
+  
+ **모든 범위의 변수 표시**  
+ 패키지의 범위 내에 있는 변수와 패키지의 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수를 표시하려면 이 옵션을 선택합니다. 패키지의 범위 내에 있는 변수와 선택된 컨테이너, 태스크 또는 이벤트 처리기의 범위 내에 있는 변수만 표시하려면 이 옵션의 선택을 취소합니다.  
+  
+ 변수 범위에 대한 자세한 내용은 [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)를 참조하세요.  
+  
+### <a name="options-for-columns"></a>열 옵션  
+ **변수** 창에 표시할 열을 선택합니다.  
+  
+-   **범위**  
+  
+-   **Data type**  
+  
+-   **Value**  
+  
+-   **네임스페이스**  
+  
+-   **변수 값 변경 시 이벤트 발생**  
+  
+-   **Description**  
+  
+-   **변수**  
+  
+## <a name="see-also"></a>관련 항목:  
  [Integration Services&#40;SSIS&#41; 변수](../integration-services/integration-services-ssis-variables.md)   
- [패키지에서 변수 사용](../Topic/Use%20Variables%20in%20Packages.md)   
- [Integration Services&#40;SSIS&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)   
+ [패키지에서 변수 사용](http://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
+ [Integration Services &#40; Ssis&#41; 식](../integration-services/expressions/integration-services-ssis-expressions.md)   
  [패키지 실행을 위한 덤프 파일 생성](../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   

@@ -1,36 +1,41 @@
 ---
-title: "변경 데이터 캡처(SSIS) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "증분 로드 [SQL Server 변경 데이터 캡처]"
-  - "변경 데이터 캡처 [SQL Server], Integration Services 및"
+title: "변경 데이터 캡처 (SSIS) | Microsoft Docs"
+ms.custom: 
+ms.date: 03/14/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- incremental loads [SQL Server change data capture]
+- change data capture [SQL Server], Integration Services and
 ms.assetid: c4aaba1b-73e5-4187-a97b-61c10069cc5a
 caps.latest.revision: 38
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 38
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: b9c01b948f5510a01c778648c23324155471b8ac
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/26/2017
+
 ---
-# 변경 데이터 캡처(SSIS)
+# <a name="change-data-capture-ssis"></a>변경 데이터 캡처(SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경 데이터 캡처는 원본 테이블에서 데이터 마트 및 데이터 웨어하우스로의 증분 로드를 효율적으로 수행하는 문제에 대한 효과적인 솔루션을 제공합니다.  
   
-## 변경 데이터 캡처 정의  
+## <a name="what-is-change-data-capture"></a>변경 데이터 캡처 정의  
  시간이 지나면서 원본 테이블은 변경됩니다. 이러한 테이블을 기반으로 하는 데이터 마트나 데이터 웨어하우스에도 이러한 변경 내용이 반영되어야 합니다. 그러나 전체 원본의 스냅숏을 주기적으로 복사하는 프로세스에는 시간과 리소스가 너무 많이 소모됩니다. 또한 타임스탬프 열, 트리거 또는 복잡한 쿼리를 비롯한 대체 방법을 사용하면 성능이 저하되고 복잡성이 증가되는 경우가 많습니다. 따라서 소비자가 데이터의 대상 표현에 쉽게 적용할 수 있도록 구조화된 안정적인 변경 데이터 스트림이 필요합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 변경 데이터 캡처가 이러한 솔루션을 제공합니다.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 변경 데이터 캡처 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 적용된 삽입, 업데이트 및 삭제 작업을 캡처하고 변경 내용에 대한 세부 정보를 쉽게 사용할 수 있는 관계형 형식으로 만듭니다. 변경 데이터 캡처에 사용되는 변경 테이블에는 행 단위로 발생한 변경 내용을 이해하는 데 필요한 메타데이터뿐만 아니라 추적된 원본 테이블의 열 구조를 미러링하는 열이 포함됩니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 변경 데이터 캡처 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 적용된 삽입, 업데이트 및 삭제 작업을 캡처하고 변경 내용에 대한 세부 정보를 쉽게 사용할 수 있는 관계형 형식으로 만듭니다. 변경 데이터 캡처에 사용되는 변경 테이블에는 행 단위로 발생한 변경 내용을 이해하는 데 필요한 메타데이터뿐만 아니라 추적된 원본 테이블의 열 구조를 미러링하는 열이 포함됩니다.  
   
 > [!NOTE]  
->  변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](../Topic/Features%20Supported%20by%20the%20Editions%20of%20SQL%20Server%202016.md)을 참조하세요.  
+>  변경 데이터 캡처는 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
-## Integration Services에서의 변경 데이터 캡처 작동 방식  
+## <a name="how-change-data-capture-works-in-integration-services"></a>Integration Services에서의 변경 데이터 캡처 작동 방식  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 변경 데이터를 쉽게 수집하여 데이터 웨어하우스에 대한 증분 로드를 효율적으로 수행할 수 있습니다. 그러나 사용자가 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 사용하여 변경 데이터를 로드하려면 먼저 사용자가 변경 내용을 캡처하려는 데이터베이스 및 테이블에서 관리자가 변경 데이터 캡처를 설정해야 합니다. 데이터베이스에서 변경 데이터 캡처를 구성하는 방법은 [변경 데이터 캡처 설정 및 해제&#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)를 참조하세요.  
   
  관리자가 데이터베이스에서 변경 데이터 캡처를 설정하면 사용자가 변경 데이터를 증분 로드하는 패키지를 만들 수 있습니다. 다음 다이어그램에서는 단일 테이블에서 증분 로드를 수행하는 패키지를 만드는 단계를 보여 줍니다.  
@@ -88,17 +93,17 @@ caps.handback.revision: 38
   
      **자세한 내용:** [대상에 변경 내용 적용](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)  
   
-### 여러 테이블의 데이터 변경  
+### <a name="change-data-from-multiple-tables"></a>여러 테이블의 데이터 변경  
  위 다이어그램에 설명된 프로세스 및 단계는 단일 테이블에서 증분 로드를 수행합니다. 여러 테이블에서 증분 로드를 수행하는 경우 전반적인 프로세스는 같습니다. 그러나 여러 테이블 처리에 맞게 패키지의 디자인을 변경해야 합니다. 여러 테이블에서 증분 로드를 수행하는 패키지를 만드는 방법은 [여러 테이블의 증분 로드 수행](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)을 참조하세요.  
   
-## 패키지 변경 데이터 캡처 예제  
+## <a name="samples-of-change-data-capture-packages"></a>패키지 변경 데이터 캡처 예제  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서는 패키지에서 변경 데이터 캡처를 사용하는 방법을 보여 주는 두 가지 예제를 제공합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
 -   [지정된 간격 동안 변경 데이터 캡처 패키지 예제 추가 정보](http://go.microsoft.com/fwlink/?LinkId=133507)  
   
 -   [마지막 요청 이후 변경 데이터 캡처 패키지 예제 추가 정보](http://go.microsoft.com/fwlink/?LinkId=133508)  
   
-## 관련 작업  
+## <a name="related-tasks"></a>관련 작업  
   
 -   [변경 데이터의 간격 지정](../../integration-services/change-data-capture/specify-an-interval-of-change-data.md)  
   
@@ -116,7 +121,8 @@ caps.handback.revision: 38
   
 -   [여러 테이블의 증분 로드 수행](../../integration-services/change-data-capture/perform-an-incremental-load-of-multiple-tables.md)  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  sqlblog.com의 블로그 항목 - [SSIS 디자인 패턴 – 증분 로드](http://go.microsoft.com/fwlink/?LinkId=217679)  
   
   
+

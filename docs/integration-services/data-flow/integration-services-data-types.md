@@ -1,33 +1,38 @@
 ---
 title: "Integration Services 데이터 형식 | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
-ms.prod: "sql-server-2016"
-ms.reviewer: ""
-ms.suite: ""
-ms.technology: 
-  - "integration-services"
-ms.tgt_pltfrm: ""
-ms.topic: "article"
-helpviewer_keywords: 
-  - "데이터 형식 수정"
-  - "데이터 형식 [Integration Services], 나열됨"
-  - "데이터 형식 [Integration Services]"
-  - "열 데이터 형식 [Integration Services]"
-  - "SSIS, 데이터 형식"
-  - "Integration Services, 데이터 형식"
-  - "SQL Server Integration Services, 데이터 형식"
+ms.custom: 
+ms.date: 03/16/2017
+ms.prod: sql-server-2016
+ms.reviewer: 
+ms.suite: 
+ms.technology:
+- integration-services
+ms.tgt_pltfrm: 
+ms.topic: article
+helpviewer_keywords:
+- modifying data types
+- data types [Integration Services], listed
+- data types [Integration Services]
+- column data types [Integration Services]
+- SSIS, data types
+- Integration Services, data types
+- SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 caps.latest.revision: 98
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: "jhubbard"
-caps.handback.revision: 98
+author: douglaslMS
+ms.author: douglasl
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
+ms.openlocfilehash: 272d0442798d1968a50c124e8422011c2f174718
+ms.contentlocale: ko-kr
+ms.lasthandoff: 09/26/2017
+
 ---
-# Integration Services 데이터 형식
+# <a name="integration-services-data-types"></a>Integration Services 데이터 형식
   데이터가 패키지의 데이터 흐름으로 들어갈 때 데이터를 추출하는 원본은 데이터를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식으로 변환합니다. 숫자 데이터에는 숫자 데이터 형식이 지정되고, 문자열 데이터에는 문자 데이터 형식이, 그리고 날짜에는 날짜 데이터 형식이 지정됩니다. 또한 GUID 및 BLOB(Binary Large Object Block)과 같은 다른 데이터에는 해당 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식이 지정됩니다. 데이터에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 호환되지 않는 데이터 형식이 있는 경우에는 오류가 발생합니다.  
   
- 일부 데이터 흐름 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 관리 데이터 형식 간의 데이터 형식을 변환합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]와 관리 데이터 형식 간 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
+ 일부 데이터 흐름 구성 요소는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 관리 데이터 형식 간의 데이터 형식을 변환합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 와 관리 데이터 형식 간 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
   
  다음 표에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식을 나열합니다. 이 표의 일부 데이터 형식에는 해당 형식에 적용되는 전체 자릿수 및 소수 자릿수 정보가 있습니다. 전체 자릿수 및 소수 자릿수에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이&#40;Transact-SQL&#41;](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
@@ -59,11 +64,11 @@ caps.handback.revision: 98
 |DT_UI4|4바이트의 부호 없는 정수입니다.|  
 |DT_UI8|8바이트의 부호 없는 정수입니다.|  
 |DT_WSTR|최대 길이가 4000자인 Null 종료 유니코드 문자열입니다. 열 값에 추가 Null 종결자가 들어 있으면 해당 문자열은 첫 번째 Null이 나타나는 위치에서 잘립니다.|  
-|DT_IMAGE|최대 크기가 2^31-1(2,147,483,647)바이트인 이진 값입니다. .|  
+|DT_IMAGE|최대 크기가 2^31-1(2,147,483,647)바이트인 이진 값입니다. 의 관리 데이터 형식 간의 데이터 형식을 변환합니다.|  
 |DT_NTEXT|최대 길이가 2^30-1(1,073,741,823)자인 유니코드 문자열입니다.|  
 |DT_TEXT|최대 길이가 2^31-1(2,147,483,647)자인 [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)]/MBCS 문자열입니다.|  
   
-## 데이터 형식 변환  
+## <a name="conversion-of-data-types"></a>데이터 형식 변환  
  열의 데이터에 원본 데이터 형식으로 할당된 전체 너비가 필요하지 않은 경우 열의 데이터 형식을 변경할 수 있습니다. 각 행이 좁을수록 원본에서 대상으로 데이터를 이동하는 속도가 빨라지기 때문에 각 데이터 행을 가능한 한 좁게 만들면 데이터 전송 시 성능을 최적화할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에는 숫자 데이터 형식이 모두 포함되어 있으므로 데이터의 크기와 적합한 데이터 형식을 찾아 볼 수 있습니다. 예를 들어 데이터 형식이 DT_UI8인 열의 값이 항상 0에서 3000 사이의 정수인 경우 데이터 형식을 DT_UI2로 변경할 수 있습니다. 마찬가지로, 데이터 형식이 DT_CY인 열에 대해 정수 데이터 형식을 대신 사용해도 패키지의 데이터 요구 사항에 문제가 없다면 해당 데이터 형식을 DT_I4로 변경할 수 있습니다.  
@@ -78,7 +83,7 @@ caps.handback.revision: 98
   
 -   파생 열 변환을 사용하여 원래 열과 데이터 형식이 다른 열의 복사본을 만듭니다. 자세한 내용은 [Derived Column Transformation](../../integration-services/data-flow/transformations/derived-column-transformation.md)을 참조하세요.  
   
-### 문자열과 날짜/시간 데이터 형식 간 변환  
+### <a name="converting-between-strings-and-datetime-data-types"></a>문자열과 날짜/시간 데이터 형식 간 변환  
  다음 표에서는 날짜/시간 데이터 형식과 문자열 간의 캐스팅 또는 변환 결과를 보여 줍니다.  
   
 -   캐스트 연산자나 데이터 변환을 사용하는 경우 날짜 또는 시간 데이터 형식이 해당 문자열 형식으로 변환됩니다. 예를 들어 DT_DBTIME 데이터 형식은 "hh:mm:ss" 형식의 문자열로 변환됩니다.  
@@ -101,10 +106,10 @@ caps.handback.revision: 98
   
  DT_DBTIMESTAMPOFFSET의 날짜 형식에는 표준 시간대 요소도 포함되어 있습니다. 시간 요소와 표준 시간대 요소 사이에는 공백이 있습니다.  
   
-### 날짜/시간 데이터 형식 변환  
+### <a name="converting-datetime-data-types"></a>날짜/시간 데이터 형식 변환  
  날짜/시간 데이터가 포함된 열의 데이터 형식을 변경하여 데이터의 날짜 또는 시간 부분을 추출할 수 있습니다. 다음 표에서는 한 날짜/시간 데이터 형식을 다른 날짜/시간 데이터 형식으로 변경한 결과를 나열합니다.  
   
-#### DT_FILETIME에서 변환  
+#### <a name="converting-from-dtfiletime"></a>DT_FILETIME에서 변환  
   
 |DT_FILETIME 변환 대상|결과|  
 |-----------------------------|------------|  
@@ -117,7 +122,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### DT_DATE에서 변환  
+#### <a name="converting-from-dtdate"></a>DT_DATE에서 변환  
   
 |DT_DATE 변환 대상|결과|  
 |-------------------------|------------|  
@@ -130,7 +135,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|데이터 형식을 변환합니다.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.|  
   
-#### DT_DBDATE에서 변환  
+#### <a name="converting-from-dtdbdate"></a>DT_DBDATE에서 변환  
   
 |DT_DBDATE 변환 대상|결과|  
 |---------------------------|------------|  
@@ -143,7 +148,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 시간 필드와 표준 시간대 필드를 0으로 설정합니다.|  
   
-#### DT_DBTIME에서 변환  
+#### <a name="converting-from-dtdbtime"></a>DT_DBTIME에서 변환  
   
 |DT_DBTIME 변환 대상|결과|  
 |---------------------------|------------|  
@@ -156,7 +161,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 날짜 필드와 표준 시간대 필드를 각각 현재 날짜와 0으로 설정합니다.|  
   
-#### DT_DBTIME2에서 변환  
+#### <a name="converting-from-dtdbtime2"></a>DT_DBTIME2에서 변환  
   
 |DT_DBTIME2 변환 대상|결과|  
 |----------------------------|------------|  
@@ -169,7 +174,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 날짜 필드와 표준 시간대 필드를 각각 현재 날짜와 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### DT_DBTIMESTAMP에서 변환  
+#### <a name="converting-from-dtdbtimestamp"></a>DT_DBTIMESTAMP에서 변환  
   
 |DT_DBTIMESTAMP 변환 대상|결과|  
 |--------------------------------|------------|  
@@ -182,7 +187,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### DT_DBTIMESTAMP2에서 변환  
+#### <a name="converting-from-dtdbtimestamp2"></a>DT_DBTIMESTAMP2에서 변환  
   
 |DT_DBTIMESTAMP2 변환 대상|결과|  
 |---------------------------------|------------|  
@@ -195,7 +200,7 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|소수 자릿수가 대상 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### DT_DBTIMESTAMPOFFSET에서 변환  
+#### <a name="converting-from-dtdbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET에서 변환  
   
 |DT_DBTIMESTAMPOFFSET 변환 대상|결과|  
 |--------------------------------------|------------|  
@@ -208,8 +213,8 @@ caps.handback.revision: 98
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMPOFFSET 데이터 형식이 나타내는 시간 값을 UTC로 변경합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|소수 자릿수가 대상 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-## 데이터베이스 데이터 형식에 Integration Services 데이터 형식 매핑  
- 다음 표에서는 일부 데이터베이스에서 사용되는 데이터 형식을 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑하는 데 대한 지침을 제공합니다. 이러한 매핑은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 데이터 원본의 데이터를 가져올 때 이 마법사에 사용되는 매핑 파일의 내용을 요약한 것입니다. 이러한 매핑 파일에 대한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사](../Topic/SQL%20Server%20Import%20and%20Export%20Wizard.md)를 참조하세요.  
+## <a name="mapping-of-integration-services-data-types-to-database-data-types"></a>데이터베이스 데이터 형식에 Integration Services 데이터 형식 매핑  
+ 다음 표에서는 일부 데이터베이스에서 사용되는 데이터 형식을 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 매핑하는 데 대한 지침을 제공합니다. 이러한 매핑은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사가 데이터 원본의 데이터를 가져올 때 이 마법사에 사용되는 매핑 파일의 내용을 요약한 것입니다. 이러한 매핑 파일에 대한 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md)를 참조하세요.  
   
 > [!IMPORTANT]  
 >  이러한 매핑은 엄격하게 일치해야 함을 나타내기 위한 것이 아니라 단지 지침을 제공하기 위한 것입니다. 일부 경우에는 이 표에 표시된 데이터 형식이 아닌 다른 데이터 형식을 사용해야 합니다.  
@@ -219,7 +224,7 @@ caps.handback.revision: 98
   
 |데이터 형식|SQL Server<br /><br /> (SQLOLEDB; SQLNCLI10)|SQL Server(SqlClient)|Jet|Oracle<br /><br /> (OracleClient)|DB2<br /><br /> (DB2OLEDB)|DB2<br /><br /> (IBMDADB2)|  
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
-|DT_BOOL|bit|bit|Bit||||  
+|DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
 |DT_CY|smallmoney, money|smallmoney, money|Currency||||  
 |DT_DATE|||||||  
@@ -233,13 +238,13 @@ caps.handback.revision: 98
 |DT_FILETIME|||||||  
 |DT_GUID|uniqueidentifier|uniqueidentifier|GUID||||  
 |DT_I1|||||||  
-|DT_I2|smallint|smallint|Short||smallint|SMALLINT|  
+|DT_I2|smallint|smallint|Short||smallint|smallint|  
 |DT_I4|int|int|Long||INTEGER|INTEGER|  
-|DT_I8|bigint|bigint|||BIGINT|bigint|  
-|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|DECIMAL, NUMERIC|decimal, numeric|  
-|DT_R4|real|real|단일||real|REAL|  
+|DT_I8|bigint|bigint|||bigint|bigint|  
+|DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
+|DT_R4|real|real|단일||real|real|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
-|DT_STR|char, varchar||varchar||char, varchar|CHAR, VARCHAR|  
+|DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
 |DT_UI1|tinyint|tinyint|Byte||||  
 |DT_UI2|||||||  
 |DT_UI4|||||||  
@@ -251,10 +256,11 @@ caps.handback.revision: 98
   
  데이터 흐름의 데이터 형식 매핑에 대한 자세한 내용은 [데이터 흐름의 데이터 형식 작업](../../integration-services/extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md)을 참조하세요.  
   
-## 관련 내용  
+## <a name="related-content"></a>관련 내용  
  blogs.msdn.com의 블로그 항목 - [SSIS 2008의 데이터 형식 변환 기술 간 성능 비교](http://go.microsoft.com/fwlink/?LinkId=220823)  
   
-## 관련 항목:  
+## <a name="see-also"></a>관련 항목:  
  [데이터 흐름의 데이터](../../integration-services/data-flow/data-in-data-flows.md)  
   
   
+

@@ -16,11 +16,11 @@ caps.latest.revision: 276
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0447dd94774287a71028252723508ebc5e2e50f8
+ms.translationtype: HT
+ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
+ms.openlocfilehash: 287e4d57ae890b6ba9c7e6fc92b3bf209263abf5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="sql-server-2016-release-notes"></a>SQL Server 2016 릴리스 정보
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
     
 [![Azure 가상 컴퓨터 소형](../analysis-services/media/azure-virtual-machine-small.png)](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/) Azure 계정이 있습니까?  계정이 있는 경우 **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)** 로 이동하여 SQL Server 2016 SP1이 이미 설치된 가상 컴퓨터를 실행해 보세요.
     
-[![SSMS 다운로드](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) **SSMS:** SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)**를 참조하세요.   
+[![SSMS 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) **SSMS:** SQL Server Management Studio의 최신 버전을 얻으려면 **[SSMS(SQL Server Management Studio) 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**를 참조하세요.   
     
  새로운 기능에 대한 자세한 내용은 [SQL Server 2016의 새로운 기능](http://msdn.microsoft.com/library/8223c19b-4b0d-4b1d-a042-9a726c18e708)을 참조하세요.
     
