@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
 -   **해지** 기존 제거 **GRANT** 또는 **거부** 사용 권한.  
   
- ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [TRANSACT-SQL 구문 표기 규칙 &#40;Transact SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
@@ -88,13 +88,13 @@ REVOKE
  \<class_type > 보안 개체의 클래스 형식입니다. 이 수 **로그인**, **데이터베이스**, **개체**, **스키마**, **역할**, 또는 **사용자** . 에 사용 권한을 부여할 수도 있습니다는 **서버***class_type*, 하지만 **서버** 이러한 사용 권한은 지정 되지 않았습니다. **데이터베이스** 권한을 단어를 포함 하는 시기를 지정 하지 않으면 **데이터베이스** (예를 들어 **ALTER ANY DATABASE**). No *class_type* 지정 된 사용 권한 유형을 서버 또는 데이터베이스 클래스에 제한 되지 않습니다, 클래스 것으로 간주 되 고 **개체**합니다.  
   
  *보안 개체*  
- 로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자에 게 부여 하려면 이름, 거부 또는 사용 권한을 취소 합니다. 개체 이름에 설명 된의 세 부분으로 이루어진 명명 규칙을 지정할 수 있습니다 [TRANSACT-SQL 구문 표기 규칙 &#40; Transact SQL &#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ 로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자에 게 부여 하려면 이름, 거부 또는 사용 권한을 취소 합니다. 개체 이름에 설명 된의 세 부분으로 이루어진 명명 규칙을 지정할 수 있습니다 [TRANSACT-SQL 구문 표기 규칙 &#40;Transact SQL&#41; ](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  *주* [ **,**... *n* ]  
  하나 이상의 보안 주체 권한을 부여 하기 거부 또는 사용 권한을 취소 합니다. 보안 주체에는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다.  
   
  *주* [ **,**... *n* ]  
- 사용 권한을 해지 하려면 하나 이상의 보안 주체입니다.  보안 주체에는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **** 에 사용할 수는 **해지** 문. **** 함께 사용할 수 있습니다 **GRANT**, **DENY**, 또는 **해지**합니다.  
+ 사용 권한을 해지 하려면 하나 이상의 보안 주체입니다.  보안 주체에는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **** 에 사용할 수는 **해지** 문. **** 함께 사용할 수 있습니다 **GRANT** , **DENY** , 또는 **해지**합니다.  
   
  WITH GRANT OPTION  
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 피부여자에게 제공됨을 나타냅니다.  

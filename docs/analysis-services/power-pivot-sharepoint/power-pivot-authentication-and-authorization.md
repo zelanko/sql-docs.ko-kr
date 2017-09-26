@@ -104,7 +104,7 @@ ms.lasthandoff: 09/01/2017
  Excel 서비스에서 보안 관련 구성 설정은 신뢰할 수 있는 위치, 신뢰할 수 있는 데이터 공급자 및 신뢰할 수 있는 데이터 연결 라이브러리에서 지정됩니다. 다음 표에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 허용하거나 개선하는 설정에 대해 설명합니다. 아래에 나와 있지 않은 설정은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 연결에 영향을 주지 않습니다. 이러한 설정을 단계별로 지정하는 방법에 대한 자세한 내용은 [초기 구성(SharePoint용 파워 피벗)](http://msdn.microsoft.com/en-us/3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146)에서 "Excel Services 사용" 섹션을 참조하세요.  
   
 > [!NOTE]  
->  대부분의 보안 관련 설정은 신뢰할 수 있는 위치에 적용됩니다. 기본값을 유지하거나 다른 사이트에 대해 각각 다른 값을 사용하려는 경우에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 사이트에 추가로 신뢰할 수 있는 위치를 만든 다음 해당 사이트에만 다음 설정을 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
+>  대부분의 보안 관련 설정은 신뢰할 수 있는 위치에 적용됩니다. 기본값을 유지하거나 다른 사이트에 대해 각각 다른 값을 사용하려는 경우에는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 사이트에 추가로 신뢰할 수 있는 위치를 만든 다음 해당 사이트에만 다음 설정을 구성할 수 있습니다. 자세한 내용은 [파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
 |영역|설정|Description|  
 |----------|-------------|-----------------|  
@@ -119,7 +119,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="see-also"></a>관련 항목:  
  [Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [파워 피벗 구성 무인된 데이터 새로 고침 계정 (SharePoint 용 파워 피벗)](http://msdn.microsoft.com/en-us/81401eac-c619-4fad-ad3e-599e7a6f8493)   
- [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [Power Pivot 보안 아키텍처](http://go.microsoft.com/fwlink/?linkID=220970)  
   
   

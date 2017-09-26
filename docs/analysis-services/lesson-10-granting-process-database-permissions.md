@@ -59,7 +59,7 @@ ms.lasthandoff: 09/01/2017
     이제 데이터베이스 개체 처리 보안 역할을 성공적으로 정의하여 배포했습니다. 큐브가 프로덕션 환경으로 배포된 후에 배포된 큐브의 관리자는 필요에 따라 이 역할에 사용자를 추가하여 특정 사용자에게 처리 권한을 위임할 수 있습니다.  
   
 > [!NOTE]  
-> 10단원의 완료된 프로젝트는 예제를 다운로드 및 설치하여 사용할 수 있습니다. 자세한 내용은 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../analysis-services/install-sample-data-and-projects.md)을(를) 참조하세요.  
+> 10단원의 완료된 프로젝트는 예제를 다운로드 및 설치하여 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../analysis-services/install-sample-data-and-projects.md)을(를) 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [역할 및 권한&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
