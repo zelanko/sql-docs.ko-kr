@@ -14,7 +14,8 @@
 ## [새로 추가되거나 최근에 업데이트된 문서](new-updated-database-engine.md)
 
 # [설치](../database-engine/install-windows/installation-for-sql-server-2016.md)
-# [가용성 그룹](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
 # [구성](../database-engine/configure-windows/configure-database-engine-instances-sql-server.md)
-# [데이터베이스 미러링](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
-# [로그 전달](../database-engine/log-shipping/about-log-shipping-sql-server.md)
+# [고가용성](sql-server-business-continuity-dr.md)
+## [가용성 그룹](../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
+## [데이터베이스 미러링](../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)
+## [로그 전달](../database-engine/log-shipping/about-log-shipping-sql-server.md)
