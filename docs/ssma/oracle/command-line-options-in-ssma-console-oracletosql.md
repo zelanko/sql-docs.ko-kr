@@ -92,7 +92,7 @@ Microsoft은 SSMA 작업을 제어를 실행 하는 강력한 집합 명령줄 �
 ### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML 출력 옵션:-x / xmloutput [xmloutputfile]  
 이 명령은 콘솔 이나 xml 파일에 xml 형식에서 명령 출력 메시지를 출력 하는 중에 사용 됩니다.  
   
-두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz.. 하십시오:  
+두 가지 옵션이 있습니다 xmloutput에 사용할 수 있는 viz 하십시오..,:  
   
 -   Filepath xmloutput 전환 된 후 제공 된 경우 출력 파일에 리디렉션됩니다.  
   

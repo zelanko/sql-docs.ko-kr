@@ -6,6 +6,28 @@
 ## [새로 추가되거나 최근에 업데이트된 문서](new-updated-integration-services.md)
 ## [SQL Server 버전에서 지원하는 Integration Services 기능](integration-services-features-supported-by-the-editions-of-sql-server.md)
 ## [Integration Services의 이전 버전과의 호환성](integration-services-backward-compatibility.md)
+
+# 빠른 시작
+## 배포
+### [SSMS를 사용하여 배포](./ssis-quickstart-deploy-ssms.md)
+### [Transact-SQL(SSMS)을 사용하여 배포](./ssis-quickstart-deploy-tsql-ssms.md)
+### [Transact-SQL(VS Code)을 사용하여 배포](ssis-quickstart-deploy-tsql-vscode.md)
+### [명령 프롬프트에서 배포](./ssis-quickstart-deploy-cmdline.md)
+### [PowerShell을 사용하여 배포](ssis-quickstart-deploy-powershell.md)
+### [C#을 사용하여 배포](./ssis-quickstart-deploy-dotnet.md) 
+## 실행
+### [SSMS를 사용하여 실행](./ssis-quickstart-run-ssms.md)
+### [Transact-SQL(SSMS)을 사용하여 실행](./ssis-quickstart-run-tsql-ssms.md)
+### [Transact-SQL(VS Code)을 사용하여 실행](ssis-quickstart-run-tsql-vscode.md)
+### [명령 프롬프트에서 실행](./ssis-quickstart-run-cmdline.md)
+### [PowerShell을 사용하여 실행](ssis-quickstart-run-powershell.md)
+### [C#을 사용하여 실행](./ssis-quickstart-run-dotnet.md) 
+
+# [SSIS 패키지를 Azure로 리프트 앤 시프트](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)
+## [자습서 - Azure에서 패키지를 배포, 실행 및 모니터링](lift-shift/ssis-azure-deploy-run-monitor-tutorial.md)
+## [Azure에서 SSIS 카탈로그에 연결](lift-shift/ssis-azure-connect-to-catalog-database.md)
+## [Azure에서 패키지 실행 예약](lift-shift/ssis-azure-schedule-packages.md)
+## [Windows 인증을 사용하여 데이터 원본에 연결](lift-shift/ssis-azure-connect-with-windows-auth.md)
 # [설치 또는 업그레이드](../integration-services/install-windows/install-integration-services.md)
 
 # [개발 및 관리 도구](integration-services-ssis-development-and-management-tools.md)

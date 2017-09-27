@@ -4,6 +4,7 @@
 ## [릴리스 정보](sql-server-linux-release-notes.md)
 ## [이 릴리스의 새로운 기능](sql-server-linux-whats-new.md)
 ## [새로 추가되거나 최근에 업데이트된 문서](new-updated-linux.md)
+## [버전 및 지원되는 기능](sql-server-linux-editions-and-components-2017.md)
 
 # 빠른 시작
 ## [설치 및 연결 - Red Hat](quickstart-install-connect-red-hat.md)
@@ -44,7 +45,10 @@
 ### [Windows에서 BACPAC 내보내기 및 가져오기](sql-server-linux-migrate-ssms.md)
 ### [SQL Server Migration Assistant를 사용하여 마이그레이션](sql-server-linux-migrate-ssma.md)
 ### [bcp를 사용하여 대량 복사](sql-server-linux-migrate-bcp.md)
-### [SSIS를 사용하여 데이터 로드](sql-server-linux-migrate-ssis.md)
+
+## [추출, 변환, 로드](sql-server-linux-migrate-ssis.md)
+### [SSIS 구성](sql-server-linux-configure-ssis.md)
+### [SSIS 패키지 예약](sql-server-linux-schedule-ssis-packages.md)
 
 ## [비즈니스 연속성 구성](sql-server-linux-business-continuity-dr.md)
 ### [백업 및 복원](sql-server-linux-backup-and-restore-database.md)
