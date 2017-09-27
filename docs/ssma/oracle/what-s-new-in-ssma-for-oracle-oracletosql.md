@@ -2,7 +2,7 @@
 title: "기능 &#39; Oracle (OracleToSQL) 용 SSMA의 새로운 s | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,14 +15,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 690d34e4391bcdbcbf7adfe1d80ed8c503d80895
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 0dfba12d3b2d06677817bb087f11cbd922ca390d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
-# <a name="what39s-new-in-ssma--for-oracle-oracletosql"></a>기능 &#39;의 새로운 Oracle (OracleToSQL) 용 SSMA
+# <a name="what39s-new-in-ssma-for-oracle-oracletosql"></a>기능 &#39;의 새로운 Oracle (OracleToSQL) 용 SSMA
 이 항목에서는 각 릴리스의 Oracle 변경에 대 한 SSMA를 나열 합니다.  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+Oracle 용 SSMA의 v7.5 릴리스는 다음과 같은 변경을 포함 되어 있습니다.
+- 장애가 있는 사용자에 대 한 큰 액세스 가능성을 확인 하려면 몇 가지 향상 된 버전으로 향상 되었습니다.
+- 업데이트 대상된의 수정 된 품질 및 변환 메트릭이 개선 하기 위해 같은 고객 의견에 따라, 데이터 마이그레이션 중에 날짜 및 float 데이터 형식 처리가 향상 되었습니다.
+
+> [!IMPORTANT]
+> .NET 4.5.2 v7.5 SSMA를 설치 하기 위한 필수 조건입니다. 또한 v7.4 부터는 32 비트 버전의 SSMA는 되 고 중단 되었습니다.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 Oracle 용 SSMA의 v7.4 릴리스는 다음과 같은 변경을 포함 되어 있습니다.
@@ -65,7 +73,7 @@ Oracle 용 SSMA의 v 7.2가 사전 릴리스는 다음과 같은 변경을 포�
 - 원격 분석의 향상 된 기능 고객 문제를 해결 하 고 SSMA의 변환율 향상에 더 나은 데이터 요소를 제공 합니다.
 
 ## <a name="ssma-v71"></a>SSMA v7.1
-Access 용 SSMA의 v7.1 릴리스는 다음과 같은 변경을 포함 되어 있습니다.
+Oracle 용 SSMA의 v7.1 릴리스는 다음과 같은 변경을 포함 되어 있습니다.
 - Windows 및 Linux c t p 1에서 SQL Server 2017 마이그레이션에 지원 되는 대상 플랫폼 되었습니다. 이 기능은 기술 미리 보기 상태에서 이며 대상 SQL 서버에 스키마 및 데이터를 이동할 수 있습니다.
 - SSMA는 이제 자동으로 업데이트 되는 사용 가능한 즉시 최신 버전의 SSMA 다운로드를 지원 합니다.
 - SSMA 설치할 수 있는 이진 파일은 이제 Windows installer 패키지 파일 (.msi)을 통해 배달 됩니다.

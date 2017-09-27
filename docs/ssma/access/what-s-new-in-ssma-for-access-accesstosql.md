@@ -2,7 +2,7 @@
 title: "기능 &#39; Access(AccessToSQL) 용 SSMA의 새로운 s | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 06347e6e199fe2aea5f4854b3b355bf28d8d1769
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: d955f186e5a533839becdec5aefebc0af750bef1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-access-accesstosql"></a>기능 &#39;의 새로운 (AccessToSQL) Access 용 SSMA
 이 항목에서는 각 릴리스에 대 한 액세스 변경에 대 한 SSMA를 나열 합니다.  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+장애가 있는 사용자에 대 한 큰 액세스 가능성을 확인 하려면 몇 가지 향상 된 Access 용 SSMA v7.5 릴리스의 향상 되었습니다.
+
+> [!IMPORTANT]
+> .NET 4.5.2 v7.5 SSMA를 설치 하기 위한 필수 조건입니다. 또한 v7.4 부터는 32 비트 버전의 SSMA는 되 고 중단 되었습니다.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 Access 용 SSMA의 v7.4 릴리스는 다음과 같은 변경을 포함 되어 있습니다.

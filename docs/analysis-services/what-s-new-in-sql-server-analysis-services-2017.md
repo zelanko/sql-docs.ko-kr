@@ -1,7 +1,7 @@
 ---
 title: "기능 &#39; s SQL Server 2017 Analysis Services의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/27/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,56 +15,56 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: eb98483d6237f2db2fdb0cb9aa444dd938a431f0
+ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
+ms.openlocfilehash: c75d1ec210f3511408e2c976df28f9db22d7272f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
+
 # <a name="what39s-new-in-sql-server-2017-analysis-services"></a>기능 &#39; s SQL Server 2017 Analysis Services의 새로운 기능
-[!INCLUDE[tsql-appliesto-ssvNxt-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]
+[!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
+
+SQL Server 2017 Analysis Services는 SQL Server 2012 이후에 가장 중요 한 향상 된 기능 중 일부를 볼 수 있습니다. 이 릴리스 (SQL Server 2012 Analysis Services에 처음 도입 된) 테이블 형식 모드의 성공 여부에 구축 하면 테이블 형식 모델 그 어느 때 보다 더 강력 합니다.
+
+다차원 모드와 SharePoint 모드에 대 한 파워 피벗은 대부분의 Analysis Services 배포에 대 한 주요 요소입니다. Analysis Services 제품 수명 주기에서 이러한 모드는 완성 합니다. 이 릴리스에서 두이 모드 중 하나에 대 한 새로운 기능은 없습니다. 그러나 성능 향상 및 버그 수정 포함 됩니다.
+
+여기서 설명 하는 기능은 SQL Server 2017 Analysis Services에 포함 됩니다. 그중에서 이용 하려면 또한 최신 버전의를 사용 해야 하지만 [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) (SSDT) 및 [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) (SSMS). 업데이트 SSDT 및 SSMS와 새롭고 향상 된 월별 사용 하 여 기능 일반적으로 conincide SQL Server의 새로운 기능입니다.  
+
+되 무엇을 알아야 이기도 재미 있게 새 기능을 모두 해제 하는 래퍼를 수행할 수 있지만, 사용 되지 않으며이 릴리스 및 이후 버전에서 지원 되지 않습니다. 체크 아웃 해야 [이전 버전과 호환성 (SQL Server 2017 Analysis Services)](analysis-services-backward-compatibility-sql2017.md)합니다.
+
+이 릴리스에서 주요 새로운 기능 중 일부 살펴보겠습니다를 보겠습니다.
+
+## <a name="1400-compatibility-level-for-tabular-models"></a>테이블 형식 모델에 대한&1400; 호환성 수준
+  활용 하기 위해 다양 한 새로운 기능을 설명 하는 기능 여기, 기존 또는 새 테이블 형식 모델을 설정 하거나 1400 호환성 수준으로 업그레이드 될 해야 합니다. 1400 호환성 수준의 모델은 SQL Server 2016 SP1 이전 버전에 배포하거나 하위 호환성 수준으로 다운그레이드할 수 없습니다. 자세한 내용은 참고 [Analysis Services 테이블 형식 모델에 대 한 호환성 수준을](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)합니다.
+  
+SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 새 1400 호환성 수준을 선택할 수 있습니다. 
+
+![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-## <a name="sql-server-2017-analysis-services-rc2"></a>SQL Server 2017 Analysis Services RC2
-이 릴리스에는 새로운 기능이 없습니다. 이 릴리스에서 향상 된 기능에는 버그 수정 및 성능 포함 됩니다.
+솔루션 탐색기에서 SSDT에서는 기존 테이블 형식 모델을 업그레이드 하려면 마우스 오른쪽 단추로 클릭 **Model.bim**, 한 다음 **속성**로 설정 된 **호환성 수준이** 속성 를** SQL Server 2017 (1400)**합니다. 
 
-## <a name="sql-server-2017-analysis-services-rc1"></a>SQL Server 2017 Analysis Services RC1
-이 릴리스의 새로운 기능은 없습니다,이 릴리스에 추가 기능을 포함 하는 반면 [동적 관리 뷰](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) 1400 하 고 1200 호환성 수준의 테이블 형식 모델에 대 한 합니다.
+![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
-DISCOVER_CALC_DEPENDENCY 이제 테이블 형식 1200 및 1400 모델과 함께 작동합니다. 테이블 형식 1400 모델 M 파티션, M 식 및 구조화 된 데이터 소스 간의 종속성을 표시합니다. 자세한 내용은 참조는 [Analysis Services 블로그](https://blogs.msdn.microsoft.com/analysisservices/)합니다.
+유의 해야 하면 기존 모델 1400를로 업그레이드 되 면 다운 그레이드할 수 없습니다. 1200 모델 데이터베이스의 백업을 보관 해야 합니다.
 
-MDSCHEMA_MEASUREGROUP_DIMENSIONS 개선 측정값 차원이 표시 하도록 다양 한 클라이언트 도구에서 사용 되는이 DMV에 대 한 포함 됩니다. 예를 들어 Excel 피벗 테이블에서 탐색 기능에는 사용자를 크로스-선택한 측정값을 관련 차원 데이터로 드릴을 수 있습니다. 이 릴리스에서 잘못 된 값이 이전에 표시 된 카디널리티 열을 수정 합니다.
+## <a name="modern-get-data-experience"></a>최신 데이터 가져오기 환경
+SQL Server Data Tools (SSDT)는 최신 소개를 테이블 형식 모델에 데이터 원본에서 데이터를 수집 하 고 있어 **데이터 가져오기** 1400 호환성 수준에서 모델에 대 한 환경입니다. 이 새로운 기능은 Power BI Desktop 및 Microsoft Excel 2016의 유사한 기능을 기반으로 합니다. 최신 데이터 가져오기 경험 데이터 가져오기 쿼리 작성기와 M 식을 사용 하 여 거 대 한 데이터 변환 및 데이터 매시업 기능을 제공 합니다.
 
-## <a name="sql-server-analysis-services-ctp-21"></a>SQL Server Analysis Services CTP 2.1
-이 릴리스에는 새로운 기능이 없습니다. 이 릴리스에서 향상 된 기능 포함 버그 수정 및 성능 및 향상 된 기능 [동적 관리 뷰](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV). Dmv는 로컬 서버 작업 및 서버 상태에 대 한 정보를 반환 하는 SQL Server Profiler에서 쿼리 합니다. 자세한 내용은 참조는 [Analysis Services 블로그](https://blogs.msdn.microsoft.com/analysisservices/)합니다.
+최신 가져올 데이터에는 다양 한 추가 데이터 원본에 대 한 제공 된 지원을 발생합니다. 향후 업데이트에는 데이터 원본을 추가로 지원 합니다.
 
-## <a name="sql-server-analysis-services-ctp-20"></a>SQL Server Analysis Services CTP 2.0
-이 릴리스에 테이블 형식 모델에 대 한 향상 된 여러 새로운 기능 포함 하 여:
+![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 
-* 테이블 형식 모델의 메타데이터를 보호하는 개체 수준 보안
-* 응답성 개발자 환경에 대 한 트랜잭션 성능이 개선 되었습니다.
-* 1200 및 1400 모델 종속성 분석을 사용 하도록 설정 및 보고에 대 한 동적 관리 뷰 개선 되었습니다.
-* 자세한 행 식에 대 한 제작 환경에 개선 되었습니다.
-* 계층 구조 및 열에는 Power BI 필드 목록에 더 유용한 위치에 표시 되어야 하 다시 사용 합니다.
-* 날짜 필드를 기반으로 하는 날짜 차원에 대 한 관계를 쉽게 만들 날짜 관계입니다.
-* Analysis Services에 대 한 기본 설치 옵션은 이제 테이블 형식 모드에 대 한 합니다.
-* 새 데이터 가져오기 (Power Qery) 데이터 원본.
-* SSDT용 DAX 편집기
-* M 쿼리에 대 한 기존 DirectQuery 데이터 원본 지원 합니다.
-* 보기, 편집, 스크립팅 구조화 된 데이터 원본에 대 한 지원 같은 SSMS 개선 합니다.
+ 데이터 및 데이터 변환/매시업 기능을 보다 쉽게 선택 하는 강력 하 고 직관적인 사용자 인터페이스 확인 하십시오.
 
-이 CTP 2.0 버전에 대 한 자세한 내용을 보려면 참조는 [Analysis Services 블로그](https://blogs.msdn.microsoft.com/analysisservices/)합니다.
-
-## <a name="sql-server-analysis-services-on-windows-ctp-14"></a>Windows 1.4 CTP에서 SQL Server Analysis Services
-[SQL Server Data Tools (SSDT)](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate) 및 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms-release-candidate) 미리 보기 릴리스에서 SQL Server 2017 미리 보기 릴리스와 일치 합니다. 최신 새 기능을 사용 해야 합니다. 자세한 내용은 참조는 [Analysis Services 블로그](https://blogs.msdn.microsoft.com/analysisservices/)합니다.
+![고급 매시업](../analysis-services/media/as-get-data-advanced.png)
 
 
+최신 가져올 데이터 발생 하 고 M 매시업 기능 1400 1200 호환성 수준에서 기존 테이블 형식 모델 ugraded에 적용 되지 않습니다. 새로운 환경 1400 호환성 수준에서 생성 하는 새 모델에만 적용 됩니다.
 
-## <a name="sql-server-analysis-services-on-windows-ctp-13"></a>Windows 1.3 CTP에서 SQL Server Analysis Services
-
-### <a name="encoding-hints"></a>인코딩 힌트
-
-이 릴리스에서 인코딩 힌트 (데이터 새로 고침) 큰 메모리 내 테이블 형식 모델의 처리를 최적화 하는 데 사용 하는 고급 기능을 소개 합니다. 인코딩을 더 잘 이해 하려면 참조 [성능 튜닝의 테이블 형식 모델 SQL Server 2012 Analysis Services에서](https://msdn.microsoft.com/library/dn393915.aspx) 인코딩 더 잘 이해 하는 백서입니다. 여기에서 설명 하는 인코딩 프로세스 1.3 CTP에에서 적용 됩니다.
+## <a name="encoding-hints"></a>인코딩 힌트
+이 릴리스에서 인코딩 힌트 (데이터 새로 고침) 큰 메모리 내 테이블 형식 모델의 처리를 최적화 하는 데 사용 하는 고급 기능을 소개 합니다. 인코딩을 더 잘 이해 하려면 참조 [성능 튜닝의 테이블 형식 모델 SQL Server 2012 Analysis Services에서](https://msdn.microsoft.com/library/dn393915.aspx) 인코딩 더 잘 이해 하는 백서입니다.
 
 * 값 인코딩을 일반적으로 집계의 경우에 사용 되는 열에 대 한 쿼리 성능을 향상을 제공 합니다.
 
@@ -72,7 +72,7 @@ MDSCHEMA_MEASUREGROUP_DIMENSIONS 개선 측정값 차원이 표시 하도록 다
 
 숫자 열이 인코딩 방법 중 하나를 사용할 수 있습니다. Analysis Services의 처리를 시작 테이블 (또는 제외 파티션) 테이블이 없거나 테이블 비어 있으면 또는 전체 테이블 처리 작업이 수행 되는 샘플 값 취해집니다 값 또는 해시 인코딩 적용 여부를 확인 하려면 각 숫자 열에 대 한 . 기본적으로 값 인코딩을 선택한 경우 열에 고유한 값의 샘플을 충분히 큰 – 해시 인코딩을 일반적으로 제공 보다 효율적인 압축 합니다. 열은 데이터 분포에 대 한 추가 정보에 따라 부분적으로 처리 한 후 인코딩 방법 변경를 인코딩 프로세스를 다시 시작 Analysis Services에 대 한 것 같습니다. 이 물론 처리 시간이 늘어나고 비효율적입니다. 성능 조정 백서 다시 자세히는 인코딩을 설명 및 SQL Server Profiler를 사용 하 여 요소를 검색 하는 방법을 설명 합니다.
 
-CTP 1.3에 인코딩 힌트에서 데이터 프로 파일링 및/또는 응답으로 다시 추적 이벤트를 인코딩 사전 지식이 지정 된 인코딩 방법에 대 한 기본 설정을 지정 하는 모델을 허용 합니다. 이후 해시 인코딩된 열에 대 한 집계는 인코딩된 값 열에 대해 값 인코딩을 지정할 수 있습니다 이러한 열에 대 한 힌트로 보다 속도가 느립니다. 기본 설정이 적용 됨; 보장 되지 않습니다. 따라서이 설정 달리 힌트입니다. 인코딩 힌트를 지정 하려면 열에 EncodingHint 속성을 설정 합니다. 가능한 값은 "Default", "Value" 및 "해시"입니다. 작성 시점에는 속성이 표시 되지 않습니다 아직 ssdt에서 JSON 기반 메타 데이터, TMSL Tabular Model Scripting Language (), 또는 테이블 형식 개체 모델 (TOM)를 사용 하 여 설정할 수 있도록 합니다. JSON 기반 메타 데이터는 Model.bim 파일에서의 다음 코드 조각은 Sales Amount 열에 대 한 인코딩 값을 지정 합니다.
+인코딩 힌트에서 데이터 프로 파일링 및/또는 응답으로 다시 추적 이벤트를 인코딩 사전 지식이 지정 된 인코딩 방법에 대 한 기본 설정을 지정 하는 모델을 허용 합니다. 이후 해시 인코딩된 열에 대 한 집계는 인코딩된 값 열에 대해 값 인코딩을 지정할 수 있습니다 이러한 열에 대 한 힌트로 보다 속도가 느립니다. 기본 설정이 적용 됨; 보장 되지 않습니다. 따라서이 설정 달리 힌트입니다. 인코딩 힌트를 지정 하려면 열에 EncodingHint 속성을 설정 합니다. 가능한 값은 "Default", "Value" 및 "해시"입니다. JSON 기반 메타 데이터는 Model.bim 파일에서의 다음 코드 조각은 Sales Amount 열에 대 한 인코딩 값을 지정 합니다.
 
 ```
 {
@@ -84,45 +84,6 @@ CTP 1.3에 인코딩 힌트에서 데이터 프로 파일링 및/또는 응답�
     "encodingHint": "Value"
 }
 ```
-
-### <a name="extended-events-not-working-in-ctp-13"></a>확장 이벤트 CTP 1.3에서 작동 하지 않음
-확장 이벤트는 SSAS CTP 1.3에서 작동 하지 않습니다. 다음 CTP에서 수정 프로그램을 계획 합니다.
-
-## <a name="sql-server-analysis-services-on-windows-ctp-12"></a>Windows CTP 1.2의 SQL Server Analysis Services
-
-이 릴리스에는 새로운 기능이 없습니다. 향상된 기능에는 버그 수정 및 성능이 포함됩니다.
-
-새 쿼리 편집기 메뉴 및 빠른 액세스 기능을 사용 하 여 CTP 1.1에서 도입 된 새로운 최신 데이터 가져오기 환경을 향상 시켰습니다는 최신 미리 보기 버전의 SSDT SQL Server 데이터 도구 (), SQL Server 2017 CTP 1.2와 일치 합니다. 
-
-## <a name="sql-server-analysis-services-on-windows-ctp-11"></a>Windows CTP1.1의 SQL Server Analysis Services 
-
-이 릴리스에서는 테이블 형식 모델에 대한 향상된 기능을 소개합니다. 
-
-### <a name="1400-compatibility-level-for-tabular-models"></a>테이블 형식 모델에 대한&1400; 호환성 수준
-  이 문서에서 설명하는 기능을 활용하려면 기존 또는 새 테이블 형식 모델을 1400 호환성 수준으로 설정해야 합니다. 1400 호환성 수준의 모델은 SQL Server 2016 SP1 이전 버전에 배포하거나 하위 호환성 수준으로 다운그레이드할 수 없습니다.
-  
-  새로 만들거나 기존 테이블 형식 모델 프로젝트를 1400 호환성 수준으로 업그레이드하려면 **SSDT(SQL Server Data Tools) 17.0 RC2** [미리 보기 릴리스](https://go.microsoft.com/fwlink?LinkId=837939)를 다운로드 및 설치합니다. 
-  
-SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 새 1400 호환성 수준을 선택할 수 있습니다. 
-
-![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
-
->[!NOTE]
-> SSDT(SQL Server Data Tools) 12월 릴리스의 통합 작업 영역에서는 1400 호환성 수준을 지원합니다. 작업 영역 서버 인스턴스에서 새 테이블 형식 모델 프로젝트를 만드는 경우 해당 인스턴스 또는 프로젝트를 배포하는 모든 인스턴스는 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1이어야 합니다. 
-
-솔루션 탐색기에서 SSDT에서는 기존 테이블 형식 모델을 업그레이드 하려면 마우스 오른쪽 단추로 클릭 **Model.bim**, 한 다음 **속성**로 설정 된 **호환성 수준이** 속성 를** SQL Server 2017 (1400)**합니다. 
-
-![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
-
-### <a name="modern-get-data-experience"></a>최신 데이터 가져오기 환경
-[!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] CTP 1.1 릴리스와 함께 제공되는 SSDT(SQL Server Data Tools)의 최신 미리 보기 릴리스에서는 1400 호환성 수준의 테이블 형식 모델에 대한 최신 **데이터 가져오기** 환경이 도입되었습니다. 이 새로운 기능은 Power BI Desktop 및 Microsoft Excel 2016의 유사한 기능을 기반으로 합니다.
-
-![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
-
->[!NOTE]
-> 이 릴리스에서는 제한된 개수의 데이터 원본이 지원됩니다. 향후 업데이트에서 추가 데이터 원본 및 기능을 지원할 예정입니다.
-
-최신 데이터 가져오기 환경에 대한 자세한 내용은 [Analysis Services 팀 블로그](https://blogs.msdn.microsoft.com/analysisservices/2016/12/16/introducing-a-modern-get-data-experience-for-sql-server-2017-on-windows-ctp-1-1-for-analysis-services/)를 참조하세요.
 
 ## <a name="ragged-hierarchies"></a>비정형 계층 구조
 테이블 형식 모델에서 부모-자식 계층 구조를 모델링할 수 있습니다. 수준 수가 서로 다른 계층 구조를 종종 비정형 계층 구조라고 합니다. 기본적으로, 비정형 계층 구조에서는 최하위 자식 아래 수준을 위한 공백이 표시됩니다. 조직 차트에서 비정형 계층 구조의 예는 다음과 같습니다.
@@ -140,7 +101,8 @@ SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 새 1400 호�
 
 ![AS_Non_Ragged_Hierarchy](../analysis-services/media/as-non-ragged-hierarchy.png)
 
-### <a name="detail-rows"></a>정보 행
+
+## <a name="detail-rows"></a>정보 행
 이제 측정값에 영향을 주는 사용자 지정 행 집합을 정의할 수 있습니다. 정보 행은 다차원 모델의 기본 드릴스루 작업과 비슷합니다. 따라서 최종 사용자가 집계된 수준보다 자세히 정보를 볼 수 있습니다. 
 
 다음 피벗 테이블은 Adventure Works 샘플 테이블 형식 모델의 연도별 인터넷 총 매출액을 보여 줍니다. 측정값에서 집계된 값이 포함된 셀을 마우스 오른쪽 단추로 클릭한 다음 **자세한 정보 표시** 를 클릭하면 정보 행을 볼 수 있습니다.
@@ -184,8 +146,47 @@ SELECTCOLUMNS(
 EVALUATE DETAILROWS([Internet Total Sales])
 ```
 
+## <a name="object-level-security"></a>개체 수준 보안
+이 릴리스에 도입 되었습니다 [개체 수준 보안](../analysis-services/tabular-models/object-level-security.md) 테이블 및 열에 대 한 합니다. 테이블 및 열 데이터를 액세스를 제한 하는 것 외에도 중요 한 테이블 및 열 이름은 강화할 수 있습니다. 이렇게 하면 악의적인 사용자가 해당 테이블이 있는지 검색할 수 없습니다.
+
+JSON 기반 메타 데이터, TMSL Tabular Model Scripting Language (), 또는 테이블 형식 개체 모델 (TOM)를 사용 하 여 개체 수준 보안을 설정 해야 합니다. 
+
+예를 들어 다음 코드는 **TablePermission** 클래스의 **MetadataPermission** 속성을 **None**으로 설정하여 샘플 Adventure Works 테이블 형식 모델의 Product 테이블을 보호하는 데 도움이 됩니다.
+
+```
+//Find the Users role in Adventure Works and secure the Product table
+ModelRole role = db.Model.Roles.Find("Users");
+Table productTable = db.Model.Tables.Find("Product");
+if (role != null && productTable != null)
+{
+    TablePermission tablePermission;
+    if (role.TablePermissions.Contains(productTable.Name))
+    {
+        tablePermission = role.TablePermissions[productTable.Name];
+    }
+    else
+    {
+        tablePermission = new TablePermission();
+        role.TablePermissions.Add(tablePermission);
+        tablePermission.Table = productTable;
+    }
+    tablePermission.MetadataPermission = MetadataPermission.None;
+}
+db.Update(UpdateOptions.ExpandFull);
+```
+
+## <a name="dynamic-management-views-dmvs"></a>동적 관리 뷰(DMV)
+[Dmv](../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md) 로컬 서버 작업 및 서버 상태에 대 한 정보를 반환 하는 SQL Server Profiler에서 쿼리 됩니다.
+이 릴리스에 향상 된 기능이 [동적 관리 뷰](https://docs.microsoft.com/sql/analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services) (DMV) 1400 하 고 1200 호환성 수준의 테이블 형식 모델에 대 한 합니다.
+
+[DISCOVER_CALC_DEPENDENCY](../analysis-services/schema-rowsets/xml/discover-calc-dependency-rowset.md) 이제 테이블 형식 1200 및 1400 모델과 함께 작동 합니다. 테이블 형식 1400 모델 M 파티션, M 식 및 구조화 된 데이터 소스 간의 종속성을 표시합니다. 자세한 내용은 참조는 [Analysis Services 블로그](https://blogs.msdn.microsoft.com/analysisservices/2017/07/17/whats-new-in-sql-server-2017-rc1-for-analysis-services/)합니다.
+
+[MDSCHEMA_MEASUREGROUP_DIMENSIONS](../analysis-services/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset.md) 측정값 차원이 표시 하도록 다양 한 클라이언트 도구에서 사용 되는이 DMV에 대 한 향상 된 같습니다. 예를 들어 Excel 피벗 테이블에서 탐색 기능에는 사용자를 크로스-선택한 측정값을 관련 차원 데이터로 드릴을 수 있습니다. 이 릴리스에서 잘못 된 값이 이전에 표시 된 카디널리티 열을 수정 합니다.
+
 ## <a name="dax-enhancements"></a>향상된 DAX 기능
-이 릴리스에는 DAX 식에 대한 `IN` 연산자가 포함되어 있습니다. 이것은 `WHERE` 절에서 여러 값을 지정하는 데 자주 사용되는 [`TSQL IN`](/sql-docs/docs/t-sql/language-elements/in-transact-sql) 연산자와 유사합니다.
+이 릴리스에서 새 DAX 함수 및 기능을 지원 합니다. 이러한 지원을 사용 하려면 최신 버전의 SSDT 사용 해야 합니다. 자세한 내용은 참고 [새 DAX 함수](https://msdn.microsoft.com/library/mt704075.aspx)합니다.
+
+새로운 DAX 기능의 가장 중요 한 부분 중 하나는 새 [IN 연산자 / 함수 CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx) DAX 식에 대 한 합니다. 이것은 [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) 절에서 여러 값을 지정하는 데 자주 사용되는 `WHERE` 연산자와 유사합니다.
 
 이전에는 다음 측정값 식과 같이 논리적 `OR` 연산자를 사용하여 다중 값 필터를 지정하는 것이 일반적이었습니다.
 
@@ -237,34 +238,20 @@ Filtered Sales:=CALCULATE (
     )
 ```
 
+## <a name="additional-improvements"></a>추가 개선 사항
+모든 새 기능 외에도 Analysis Services, SSDT 및 SSMS도 다음과 같은 개선 사항이 포함:
 
-## <a name="table-level-security"></a>테이블 수준 보안
-이 릴리스에서는 테이블 수준 보안이 도입되었습니다. 테이블 데이터에 대한 액세스 제한 외에도 중요한 테이블 이름을 보호할 수 있습니다. 이렇게 하면 악의적인 사용자가 해당 테이블이 있는지 검색할 수 없습니다.
+* 계층 구조 및 열 다시 사용할 수 있도록 Power BI 필드 목록에 더 유용한 위치에 표시 합니다.
+* 날짜 필드를 기반으로 하는 날짜 차원에 대 한 관계를 쉽게 만들 날짜 관계입니다.
+* Analysis Services에 대 한 기본 설치 옵션은 이제 테이블 형식 모드에 대 한 합니다.
+* 새 데이터 가져오기 (Power Qery) 데이터 원본.
+* SSDT용 DAX 편집기
+* M 쿼리에 대 한 기존 DirectQuery 데이터 원본 지원 합니다.
+* 보기, 편집, 스크립팅 구조화 된 데이터 원본에 대 한 지원 같은 SSMS 개선 합니다.
 
-JSON 기반 메타데이터, TMSL(Tabular Model Scripting Language) 또는 TOM(테이블 형식 개체 모델)을 사용하여 테이블 수준 보안을 설정해야 합니다. 
 
-예를 들어 다음 코드는 **TablePermission** 클래스의 **MetadataPermission** 속성을 **None**으로 설정하여 샘플 Adventure Works 테이블 형식 모델의 Product 테이블을 보호하는 데 도움이 됩니다.
 
-```
-//Find the Users role in Adventure Works and secure the Product table
-ModelRole role = db.Model.Roles.Find("Users");
-Table productTable = db.Model.Tables.Find("Product");
-if (role != null && productTable != null)
-{
-    TablePermission tablePermission;
-    if (role.TablePermissions.Contains(productTable.Name))
-    {
-        tablePermission = role.TablePermissions[productTable.Name];
-    }
-    else
-    {
-        tablePermission = new TablePermission();
-        role.TablePermissions.Add(tablePermission);
-        tablePermission.Table = productTable;
-    }
-    tablePermission.MetadataPermission = MetadataPermission.None;
-}
-db.Update(UpdateOptions.ExpandFull);
-```
-
+## <a name="see-also"></a>참고 항목
+[SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md)   
+[SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 

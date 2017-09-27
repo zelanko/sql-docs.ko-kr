@@ -2,7 +2,7 @@
 title: "기능 &#39; s d b 2 용 SSMA의 새로운 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -18,14 +18,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 66c14c087752244985886ca539c8ea80504f8159
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 03a3de915ae5426f15f04b95c0148610ec917047
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-db2-db2tosql"></a>기능 &#39; s d b 2 용 SSMA의 새로운 (DB2ToSQL)
 이 항목에서는 각 릴리스의 DB2 변경에 대 한 SSMA를 나열 합니다.  
+
+## <a name="ssma-v75"></a>SSMA v7.5
+장애가 있는 사용자에 대 한 큰 액세스 가능성을 확인 하려면 몇 가지 향상 된 d b 2 용 SSMA의 v7.5 릴리스에서 향상 되었습니다.
+
+> [!IMPORTANT]
+> .NET 4.5.2 v7.5 SSMA를 설치 하기 위한 필수 조건입니다. 또한 v7.4 부터는 32 비트 버전의 SSMA는 되 고 중단 되었습니다.
 
 ## <a name="ssma-v74"></a>SSMA v7.4
 D b 2 용 SSMA의 v7.4 릴리스에서 다음 변경 내용이 포함 되어 있습니다.

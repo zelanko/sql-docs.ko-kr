@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: baa5826e9722bfb23afacf729d80bebf88985ed3
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 14277304baaaf6aa40fe279af407c7ce915eaa60
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
@@ -73,7 +73,7 @@ ms.lasthandoff: 08/09/2017
 | [Visual Studio 용 SQL Server Data Tools](https://go.microsoft.com/fwlink/?linkid=846626) | 17.0 |
 | [Visual Studio Code](https://code.visualstudio.com) 와 [mssql 확장](https://aka.ms/mssql-marketplace) | 최신 |
 
-### <a name="unsupported-features-and-services"></a>지원 되지 않는 기능 및 서비스
+### <a name="Unsupported"></a>지원 되지 않는 기능 및 서비스
 
 다음 기능 및 서비스에서 사용할 수 없는 Linux이 이번에 있습니다. 이러한 기능의 지원 미리 보기 프로그램의 월별 업데이트 흐름 중 점점 더 사용할 수 있습니다.
 
@@ -99,7 +99,7 @@ ms.lasthandoff: 08/09/2017
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
 
@@ -285,7 +285,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
 
@@ -470,7 +470,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
 
@@ -631,7 +631,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
@@ -777,7 +777,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
@@ -810,7 +810,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 
 - SQL Server 구성 관리자는 Linux에서 SQL Server에 연결할 수 없습니다.
 
-- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\>**  메서드 대신 지금은 합니다. 
+- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\> ** 메서드 대신 지금은 합니다. 
 
 #### <a name="databases"></a>데이터베이스
 - Mssql conf 유틸리티와 시스템 데이터베이스를 이동할 수 없습니다.
@@ -954,7 +954,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
@@ -987,7 +987,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 
 - SQL Server 구성 관리자는 Linux에서 SQL Server에 연결할 수 없습니다.
 
-- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\>**  메서드 대신 지금은 합니다. 
+- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\> ** 메서드 대신 지금은 합니다. 
 
 #### <a name="databases"></a>데이터베이스
 - TempDB 데이터 및 로그 파일의 위치 변경은 지원 되지 않습니다.
@@ -1112,7 +1112,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
@@ -1147,7 +1147,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 
 - SQL Server 구성 관리자는 Linux에서 SQL Server에 연결할 수 없습니다.
 
-- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\>**  메서드 대신 지금은 합니다. 
+- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\> ** 메서드 대신 지금은 합니다. 
 
 #### <a name="databases"></a>데이터베이스
 - TempDB 데이터 및 로그 파일의 위치 변경은 지원 되지 않습니다.
@@ -1257,7 +1257,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
@@ -1292,7 +1292,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 
 - SQL Server 구성 관리자는 Linux에서 SQL Server에 연결할 수 없습니다.
 
-- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\>**  메서드 대신 지금은 합니다. 
+- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\> ** 메서드 대신 지금은 합니다. 
 
 #### <a name="databases"></a>데이터베이스
 - TempDB 데이터 및 로그 파일의 위치 변경은 지원 되지 않습니다.
@@ -1393,7 +1393,7 @@ v
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
+| &nbsp; | Reporting  Services |
 | &nbsp; | Integration Services | 
 | &nbsp; | Data Quality Services |
 | &nbsp; | Master  Data  Services |
@@ -1424,7 +1424,7 @@ v
 
 - SQL Server 구성 관리자는 Linux에서 SQL Server에 연결할 수 없습니다.
 
-- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\>**  메서드 대신 지금은 합니다.
+- **CREATE ASSEMBLY** 파일을 사용 하는 동안 작동 하지 것입니다. 사용 하 여는 **FROM \<비트\> ** 메서드 대신 지금은 합니다.
 
 #### <a name="databases"></a>데이터베이스
 - TempDB 데이터 및 로그 파일의 위치 변경은 지원 되지 않습니다.

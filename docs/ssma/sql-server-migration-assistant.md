@@ -1,7 +1,7 @@
 ---
 title: SQL Server Migration Assistant | Microsoft Docs
 ms.custom: 
-ms.date: 08/17/2017
+ms.date: 09/22/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,14 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: e6cdbf2e39051ad4298966863f16fb7295f6a8a5
+ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
+ms.openlocfilehash: 6310f16ee3f3a57c46e1aab1023c18fcaf6bf074
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/22/2017
 
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server 마이그레이션 길잡이
-Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL, Oracle 및 Sybase에서 SQL Server로 데이터베이스 마이그레이션을 자동화할 수 있는 도구입니다.  
+Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE에서 SQL Server로 데이터베이스 마이그레이션을 자동화할 수 있는 도구입니다.  
   
 ## <a name="migration-sources"></a>마이그레이션 원본  
   
@@ -37,7 +37,7 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
   
 -   [Oracle 용 SQL Server Migration Assistant](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
--  [Sybase ASE에 대 한 SQL Server Migration Assistant](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
+-  [SAP ASE에 대 한 SQL Server Migration Assistant](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
 ## <a name="supported-sources-and-target-versions"></a>지원 되는 소스 및 대상 버전
 지원 되는 소스에 대 한 SSMA 다운로드에 대 한 다운로드 센터에 대 한 정보를 검토 합니다.
@@ -49,19 +49,18 @@ Microsoft SQL Server Migration Assistant (SSMA)는 Microsoft Access, DB2, MySQL,
 - SQL Server 2012
 - SQL Server 2014
 - SQL Server 2016
-- Azure SQL Database
+- Azure SQL 데이터베이스
 - Windows 및 Linux (미리 보기)에서 SQL Server 2017
 - * * Azure SQL 데이터 웨어하우스
 
 * *이 대상 Oracle 용 SSMA 에서만 지원 됩니다.
  
-
 ## <a name="downloads"></a>다운로드
 - [SSMA for Access](http://aka.ms/ssmaforaccess)
 - [SSMA for DB2](http://aka.ms/ssmafordb2)
 - [MySQL용 SSMA](http://aka.ms/ssmaformysql)
 - [SSMA for Oracle](http://aka.ms/ssmafororacle)
-- [SSMA for Sybase ASE](http://aka.ms/ssmaforsybase)
+- [SSMA for SAP ASE](http://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>SSMA 지원 받기  
 **도움말 및 지원에 대 한 Microsoft SQL Server Migration Assistant (SSMA):**  
