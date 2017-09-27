@@ -217,7 +217,7 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** 옵션에 관한 여러 가지 예는 **주의** 섹션을 참조하세요.  
   
--   * * /D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
+-   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
   
      *package_path* 인수는 SSIS 패키지 저장소의 루트에서 시작하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 상대 경로를 지정하고 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 이름을 포함합니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
   
