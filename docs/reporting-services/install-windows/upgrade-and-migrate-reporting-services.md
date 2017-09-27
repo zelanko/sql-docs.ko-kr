@@ -21,10 +21,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 46bb863944694292395b50621acaf87259a3260b
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -126,7 +126,7 @@ ms.lasthandoff: 09/21/2017
   
     2.  새 버전으로 업그레이드되는 보고서 서버 구성 도구 및 유틸리티에는 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구, 명령줄 유틸리티(예: RS.exe) 및 보고서 작성기가 포함됩니다.  
   
-    3.  와 같은 기타 클라이언트 도구 [! 포함[ssManStudioFull](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)합니다.
+    3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 와 같은 다른 클라이언트 도구는 별도로 다운로드되며 개별적으로 업그레이드해야 합니다. 자세한 내용은 [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)를 참조하세요.
   
     4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 는 별도의 다운로드입니다. 자세한 내용은 [SQL Server Data Tools in Visual Studio 2015](https://msdn.microsoft.com/mt186501)(Visual Studio 2015의 SQL Server Data Tools)를 참조하세요.  
   
@@ -252,4 +252,4 @@ ms.lasthandoff: 09/21/2017
 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)   
 [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)

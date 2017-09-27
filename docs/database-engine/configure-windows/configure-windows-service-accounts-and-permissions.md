@@ -189,7 +189,7 @@ ms.lasthandoff: 08/29/2017
   
 -   <a name="VA_Desc"></a>**Virtual Accounts**  
   
-     (Windows Server 2008 R2 및 Windows 7부터) 가상 계정은 서비스 관리를 간소화하기 위해 다음과 같은 기능들을 제공하는 *관리 로컬 계정* 입니다. 가상 계정은 자동으로 관리되며 도메인 환경에서 네트워크에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 서비스 계정에 기본값을 사용하는 경우 인스턴스 이름을 서비스 이름으로 사용하는 가상 계정이 **NT SERVICE\\***\<SERVICENAME>* 형식으로 사용됩니다. 가상 계정으로 실행되는 서비스는 *<domain_name>***\\***<computer_name>***$** 형식으로 된 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하는 가상 계정을 지정할 때는 암호를 비워 둡니다. 가상 계정을 사용하여 SPN(서비스 사용자 이름)을 등록할 수 없는 경우 SPN을 수동으로 등록합니다. SPN을 수동으로 등록하는 방법에 대한 자세한 내용은 [SPN 수동 등록](https://msdn.microsoft.com/library/ms191153.aspx)을 참조하세요.  
+    (Windows Server 2008 R2 및 Windows 7부터) 가상 계정은 서비스 관리를 간소화하기 위해 다음과 같은 기능들을 제공하는 *관리 로컬 계정* 입니다. 가상 계정은 자동으로 관리되며 도메인 환경에서 네트워크에 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치하는 동안 서비스 계정에 기본값을 사용하는 경우 인스턴스 이름을 서비스 이름으로 사용하는 가상 계정이 **NT SERVICE\\***\<SERVICENAME>* 형식으로 사용됩니다. 가상 계정으로 실행되는 서비스는 *<domain_name>***\\***<computer_name>***$** 형식으로 된 컴퓨터 계정의 자격 증명을 사용하여 네트워크 리소스에 액세스합니다.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하는 가상 계정을 지정할 때는 암호를 비워 둡니다. 가상 계정을 사용하여 SPN(서비스 사용자 이름)을 등록할 수 없는 경우 SPN을 수동으로 등록합니다. SPN을 수동으로 등록하는 방법에 대한 자세한 내용은 [SPN 수동 등록](https://msdn.microsoft.com/library/ms191153.aspx)을 참조하세요.  
   
     > [!NOTE]  
     >  가상 계정은 클러스터의 각 노드에서 SID가 동일하지 않으므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 대해 사용할 수 없습니다.  

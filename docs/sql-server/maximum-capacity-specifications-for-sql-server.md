@@ -123,7 +123,7 @@ ms.lasthandoff: 08/11/2017
 |데이터베이스당 로그 파일 수||1|  
 |컴퓨터당 볼륨 수||3|  
   
- * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](https://msdn.microsoft.com/library/ee210548.aspx)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.  
+ * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](https://msdn.microsoft.com/library/ee210548.aspx)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 응용 프로그램)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 44308a0c36e49852f199fb8dbfdb6de9db789c9f
+ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
+ms.openlocfilehash: 5aee9077dcf9c0c31746c3e8d3b056376a8e61dc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="generating-dump-files-for-package-execution"></a>패키지 실행을 위한 덤프 파일 생성
@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
      실행 중인 패키지를 일시 중지하고 덤프 파일을 만들도록 하려면 이 저장 프로시저를 호출합니다.  
   
- 패키지 배포 모델을 사용하는 경우 명령줄에서 디버그 덤프 옵션을 지정하기 위해 **dtexec** 유틸리티 또는 **dtutil** 유틸리티를 사용하여 디버그 덤프 파일을 만듭니다. 자세한 내용은 참조 [dtexec 유틸리티](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages) 및 [레거시 패키지 배포 &#40; Ssis&#41; ](../../integration-services/packages/legacy-package-deployment-ssis.md).  
+ 패키지 배포 모델을 사용하는 경우 명령줄에서 디버그 덤프 옵션을 지정하기 위해 **dtexec** 유틸리티 또는 **dtutil** 유틸리티를 사용하여 디버그 덤프 파일을 만듭니다. 자세한 내용은 [dtexec Utility](../../integration-services/packages/dtexec-utility.md) 및 [dtutil Utility](../../integration-services/dtutil-utility.md)를 참조하세요. 패키지 배포 모델에 대한 자세한 내용은 [SSIS(Integration Services) 프로젝트 및 패키지 배포](https://msdn.microsoft.com/library/hh213290.aspx) 및 [레거시 패키지 배포&#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md)를 참조하세요.   
   
 ## <a name="debug-dump-file-format"></a>디버그 덤프 파일 형식  
  디버그 덤프 옵션을 지정하면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 가 다음과 같은 디버그 덤프 파일을 만듭니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 09/21/2017
   
 -   .tmp 디버그 덤프 파일. 텍스트 형식 파일입니다.  
   
- 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 폴더에 이러한 파일을 저장 * \<드라이브 >:*files\microsoft SQL Server\110\Shared\ErrorDumps 합니다.  
+ 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 은 폴더에 이러한 파일을 저장  *\<드라이브 >:*files\microsoft SQL Server\110\Shared\ErrorDumps 합니다.  
   
  다음 표에서는 .tmp 파일의 특정 섹션에 대해서만 설명합니다. .tmp 파일에는 이 표에 나열되지 않은 추가 데이터가 포함되어 있습니다.  
   

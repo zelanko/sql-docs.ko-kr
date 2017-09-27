@@ -15,17 +15,17 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1b59268e884d3e797a74ef65d9e75c405d75a0d5
+ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
+ms.openlocfilehash: 9eee58be471d8b39b051c1343f9eb26a2960b6d6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="get-started-with-this-simple-example-of-the-import-and-export-wizard"></a>이 간단한 예제 가져오기 및 내보내기 마법사 시작
 SQL Server 데이터베이스에는 Excel 스프레드시트에서 데이터를 가져오는-일반적인 시나리오를 통해 탐색 하 여 SQL Server 가져오기 및 내보내기 마법사에서 기대 하는 알아봅니다. 다른 원본 및 다른 위치를 사용 하려는 경우에이 항목에서는 대부분의 마법사를 실행 하는 방법에 대 한 알아야 해야 합니다.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>필수 구성 요소-는 컴퓨터에 설치 하는 마법사?
-마법사를 실행 하려고 하지만 없는 경우 [! 포함[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)합니다.
+마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
 
 ## <a name="heres-the-excel-source-data-for-this-example"></a>다음은이 예제에 대 한 Excel 원본 데이터
 -WizardWalkthrough.xlsx Excel 통합 문서의 WizardWalkthrough 워크시트의 작은 2 열 테이블을 복사 하려는 원본 데이터는 다음과 같습니다.

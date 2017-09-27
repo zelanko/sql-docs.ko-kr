@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
   
 -   메모리 내 OLTP는 **데이터베이스 엔진 서비스**의 일부로 설치됩니다.  
   
-     보고서 생성([메모리 내 OLTP에 테이블 또는 저장 프로시저를 포팅해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기를 통해 메모리 내 OLTP를 관리하기 위해)를 설치하려면 [SSMS(SQL Server Management Studio)를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)합니다.  
+     보고서 생성([메모리 내 OLTP에 테이블 또는 저장 프로시저를 포팅해야 하는지 확인](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) 및 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 개체 탐색기를 통해 메모리 내 OLTP를 관리하기 위해)를 설치하려면 [SSMS(SQL Server Management Studio)를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)합니다.   
   
 ## <a name="important-notes-on-using-includehek2includeshek-2-mdmd"></a>[!INCLUDE[hek_2](../../includes/hek-2-md.md)] 사용에 관한 중요 사항  
   

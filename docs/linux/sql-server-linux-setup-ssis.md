@@ -36,7 +36,7 @@ SQL Server Integration Services를 설치 하려면이 문서의 단계에 따�
 1.  공용 저장소 GPG 키를 가져옵니다.
 
     ```bash
-    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
 

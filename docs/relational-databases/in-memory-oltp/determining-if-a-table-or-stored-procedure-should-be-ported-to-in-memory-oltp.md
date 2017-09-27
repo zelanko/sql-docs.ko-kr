@@ -43,7 +43,7 @@ ms.lasthandoff: 08/03/2017
     > [!IMPORTANT]  
     >  데이터베이스 시스템의 성능은 다양한 요소에 따라 달라지며 트랜잭션 성능 수집기 중 일부는 관찰하고 측정하지 못할 수도 있습니다. 따라서 트랜잭션 성능 분석 보고서는 실제 성능 향상 정도가 어떠한 예측과도 일치한다고 보증하지 않습니다.  
   
- 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 **설치 시** 관리 도구-기본 **또는** 관리 도구-고급 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때SSMS(SQL Server Management Studio)의 일부로 설치됩니다.  
+ 트랜잭션 성능 분석 보고서 및 마이그레이션 관리자는 **설치 시** 관리 도구-기본 **또는** 관리 도구-고급 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 선택하거나 [SQL Server Management Studio를 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)할 때SSMS(SQL Server Management Studio)의 일부로 설치됩니다.    
   
 ## <a name="transaction-performance-analysis-reports"></a>트랜잭션 성능 분석 보고서  
  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **보고서** 를 선택한 후 **표준 보고서**를 선택하고 **트랜잭션 성능 분석 개요**를 선택하여 **개체 탐색기**에 트랜잭션 성능 분석 보고서를 생성할 수 있습니다. 의미 있는 분석 보고서를 생성하려면 데이터베이스에 활성 작업이 있거나 최근에 작업이 실행되어야 합니다.  

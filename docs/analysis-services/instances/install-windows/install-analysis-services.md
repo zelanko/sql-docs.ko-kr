@@ -36,7 +36,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [SSDT(SQL Server Data Tools) 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
   
- Analysis Services 인스턴스 및 데이터로 작업 하려면 SSMS와 SSDT 모두 필요 합니다. 도구 어디에서 든 지 설치할 수 있지만 서버에 대 한 연결을 시도 하기 전에 포트를 구성 하십시오. 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 를 참조하세요.  
+ Analysis Services 인스턴스 및 데이터로 작업 하려면 SSMS와 SSDT 모두 필요 합니다. 도구 어디에서 든 지 설치할 수 있지만 서버에 대 한 연결을 시도 하기 전에 포트를 구성 하십시오. 자세한 내용은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 를 참조하세요.  
   
 ## <a name="install-using-a-wizard"></a>마법사를 사용한 설치  
  다음 목록에서는 Analysis Services를 설치하는 데 사용되는 SQL Server 설치 마법사의 해당 페이지를 보여 줍니다.  
