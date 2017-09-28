@@ -69,7 +69,7 @@ SQLRETURN SQLNativeSql(
  [입력] 문자 수는 \* *OutStatementText* 버퍼입니다. 에 값이 반환 하는 경우 * \*InStatementText* 는 유니코드 문자열 (호출할 때 **SQLNativeSqlW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
   
  *TextLength2Ptr*  
- [출력] (제외 null 종료) 사용할 수 있는 문자를 반환 하려면의 총 수를 반환 하는 버퍼에 대 한 포인터 \* *OutStatementText*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength*에 SQL 문자열을 번역 \* *OutStatementText* 잘립니다 * BufferLength* null 종결 문자 길이 뺀 값입니다.  
+ [출력] \(제외 null 종료) 사용할 수 있는 문자를 반환 하려면의 총 수를 반환 하는 버퍼에 대 한 포인터 \* *OutStatementText*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength*에 SQL 문자열을 번역 \* *OutStatementText* 잘립니다 * BufferLength* null 종결 문자 길이 뺀 값입니다.  
   
 ## <a name="returns"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
