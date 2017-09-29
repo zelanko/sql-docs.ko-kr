@@ -95,7 +95,7 @@ C# 및 Visual Basic의 경우.NET 관리 되는 언어는 ADO.NET의 가장 일�
 
 <a name="an-116-csharp-ef-orm" />
 
-## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework 로고][image-ref-333-ef] Entity Framework (EF)를 #x x23; & C
+## <a name="entity-framework-logoimage-ref-333-ef-entity-framework-ef-with-cx23"></a>![Entity Framework 로고][image-ref-333-ef] Entity Framework (EF)를 C&#x23;
 
 Entity Framework (EF) 개체-관계형 매핑 ORM ()를 제공합니다. ORM 관계형 SQL 데이터베이스에서 검색 된 데이터를 조작 하기 위한 개체 지향 프로그래밍 OOP () 소스 코드 쉽게 있습니다.
 
@@ -118,7 +118,7 @@ EF 다음 기술과 함께 직접 또는 간접 관계에 있습니다.
 |     |     |
 | :-- | :-- |
 | [EF 6.x](http://docs.microsoft.com/ef/ef6/) | Microsoft는 EF 2008 년 8 월에에서 처음 릴리스 합니다. 2015 년 3 월 Microsoft 발표 하 EF 6.x 개발할 때 Microsoft는 최종 버전 이었습니다. Microsoft 공용 도메인에 소스 코드를 릴리스 했습니다.<br /><br />처음 EF가.NET Framework의 일부입니다. 하지만 EF 6.x.NET Framework에서 제거 되었습니다.<br /><br />[Github 리포지토리에 EF 6.x 소스 코드 *aspnet/EntityFramework6*](http://github.com/aspnet/EntityFramework6) |
-| [EF 코어](http://docs.microsoft.com/ef/core/) | Microsoft에서는 2016 년 6 월 새로 개발된 EF 코어를 릴리스 했습니다. EF 코어 우수한 유연성과 이동성 위해 설계 되었습니다. EF 코어도 Microsoft Windows 이외의 운영 체제에서 실행할 수 있습니다. 및 EF 코어는 Microsoft SQL Server 이외의 데이터베이스와 다른 관계형 데이터베이스와 상호 작용할 수 있습니다.<br /><br />**#X x23; & C 코드 예:**<br />[Entity Framework Core 시작 하기](https://docs.microsoft.com/ef/core/get-started/index)<br />[기존 데이터베이스와.NET Framework에서 EF Core 시작 하기](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
+| [EF 코어](http://docs.microsoft.com/ef/core/) | Microsoft에서는 2016 년 6 월 새로 개발된 EF 코어를 릴리스 했습니다. EF 코어 우수한 유연성과 이동성 위해 설계 되었습니다. EF 코어도 Microsoft Windows 이외의 운영 체제에서 실행할 수 있습니다. 및 EF 코어는 Microsoft SQL Server 이외의 데이터베이스와 다른 관계형 데이터베이스와 상호 작용할 수 있습니다.<br /><br />**C&#x23; 코드 예:**<br />[Entity Framework Core 시작 하기](https://docs.microsoft.com/ef/core/get-started/index)<br />[기존 데이터베이스와.NET Framework에서 EF Core 시작 하기](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
 | &nbsp; | <br /> |
 
 EF 및 관련된 기술에는 강력한 되며 전체 영역 마스터 하려는 개발자에 대 한 배울 있습니다.
