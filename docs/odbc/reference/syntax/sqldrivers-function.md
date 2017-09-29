@@ -71,7 +71,7 @@ SQLRETURN SQLDrivers(
  [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *DriverDescription*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength1*에서 드라이버 설명을 \* *DriverDescription* 잘립니다 * BufferLength1* null 종결 문자 길이 뺀 값입니다.  
   
  *DriverAttributes*  
- [출력] ("주석" 참조) 드라이버 특성 값 쌍의 목록을 반환 하는 버퍼에 대 한 포인터입니다.  
+ [출력]\ ("주석" 참조) 드라이버 특성 값 쌍의 목록을 반환 하는 버퍼에 대 한 포인터입니다.  
   
  경우 *DriverAttributes* 이 NULL 이면 *AttributesLengthPtr* 여전히 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 버퍼에서 반환할 수 가 가리키는 *DriverAttributes*합니다.  
   

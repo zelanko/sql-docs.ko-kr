@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_prereq"></a> 지원되는 데이터베이스  
  BI 의미 체계 모델 연결은 테이블 형식 모델 데이터를 가리킵니다. 이 데이터의 원본은 다음 세 가지입니다.  
   
--   독립 실행형 Analysis Services 인스턴스에서 테이블 형식 서버 모드로 실행되는 테이블 형식 모델 데이터베이스. 독립 실행형 Analysis Services 인스턴스의 배포는 팜 외부에서 이루어집니다. 팜 외부의 데이터 원본에 액세스하려면 사용 권한이 추가로 필요합니다. 이에 대해서는 [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목에서 설명합니다.  
+-   독립 실행형 Analysis Services 인스턴스에서 테이블 형식 서버 모드로 실행되는 테이블 형식 모델 데이터베이스. 독립 실행형 Analysis Services 인스턴스의 배포는 팜 외부에서 이루어집니다. 팜 외부의 데이터 원본에 액세스하려면 사용 권한이 추가로 필요합니다. 이에 대해서는 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목에서 설명합니다.  
   
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서. Excel 통합 문서 안에 포함된 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터베이스는 독립 실행형 Analysis Services 테이블 형식 모드 서버에서 실행되는 테이블 형식 model 데이터베이스에 해당합니다. 이미 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel과 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 사용하는 경우 SharePoint 라이브러리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 가리키는 BI 의미 체계 모델 연결을 정의하고 기존 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 데이터를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 보고서를 작성할 수 있습니다.  SQL Server 2008 R2 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel에서 만든 통합 문서를 사용할 수 있습니다.  
   
@@ -79,7 +79,7 @@ ms.lasthandoff: 09/01/2017
   
  [파워 피벗 통합 문서에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
- [Create a BI Semantic Model Connection to a Tabular Model Database](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
+ [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
  [Excel 또는 Reporting Services에서 BI 의미 체계 모델 연결 사용](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   

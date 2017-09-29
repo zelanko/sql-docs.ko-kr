@@ -32,7 +32,7 @@ ms.lasthandoff: 09/01/2017
   
 -   원격 서버에서 **이 컴퓨터에 대한 원격 연결 허용** 을 사용해야 하고 처리 요청을 실행하는 계정이 허용된 사용자로 나열되어야 합니다.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 인바운드 연결을 허용하도록 Windows 방화벽 규칙을 구성해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 원격 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결할 수 있는지 확인합니다. [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
+-   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 인바운드 연결을 허용하도록 Windows 방화벽 규칙을 구성해야 합니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 를 사용하여 원격 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스에 연결할 수 있는지 확인합니다. [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
 -   원격 처리를 시도하기 전에 모든 기존 로컬 처리 오류를 해결합니다. 처리 요청이 로컬인 경우 외부 관계형 데이터 원본에서 데이터를 검색할 수 있는지 확인합니다. 데이터 검색에 사용되는 자격 증명 지정에 대한 지침은 [가장 옵션 설정&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional.md)을 참조하세요.  
   

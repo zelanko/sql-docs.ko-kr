@@ -184,7 +184,7 @@ ms.lasthandoff: 09/01/2017
 ##  <a name="bkmk_next"></a> 다음 단계  
  오류로 인해 처리를 중지할지 오류를 무시할지 결정합니다. 오류만 무시됩니다. 오류를 발생시킨 레코드는 무시되지 않으며 삭제되거나 알 수 없는 멤버로 변환됩니다. 데이터 무결성 규칙을 위반하는 레코드는 데이터베이스에 추가되지 않습니다. 기본적으로 첫 번째 오류가 발생할 때 처리가 중지되지만 오류 제한을 높여서 이를 변경할 수 있습니다. 큐브 개발 시 오류 구성 규칙을 완화하여 테스트할 데이터가 있도록 처리를 계속할 수 있게 허용하는 것이 유용할 수 있습니다.  
   
- 기본 Null 처리 동작을 변경할지 여부를 결정합니다. 기본적으로 숫자 열의 Null은 0으로 처리되는 반면 문자열 열의 Null은 빈 값으로 처리됩니다. 특성에 대한 Null 처리를 설정하는 데 대한 지침은 [Defining the Unknown Member and Null Processing Properties](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 를 참조하십시오.  
+ 기본 Null 처리 동작을 변경할지 여부를 결정합니다. 기본적으로 숫자 열의 Null은 0으로 처리되는 반면 문자열 열의 Null은 빈 값으로 처리됩니다. 특성에 대한 Null 처리를 설정하는 데 대한 지침은 [알 수 없는 멤버 및 Null 처리 속성 정의](../../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) 를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
  [로그 속성](../../analysis-services/server-properties/log-properties.md)   

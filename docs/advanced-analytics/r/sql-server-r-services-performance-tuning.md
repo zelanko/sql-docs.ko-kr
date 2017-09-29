@@ -91,7 +91,7 @@ SQL Server 2017 년 1에서 나중에 따라 추가 언어와 동일한 아키�
 
 + [SQL Server-하드웨어에에서 R에 대 한 성능 조정](..\r\sql-server-configuration-r-services.md)
 
-    하드웨어 구성에 대 한 지침을 제공 하는 [!INCLUDE [ssNoVersion_md](..\..\includes\ssnoversion-md.md) ] 가에 설치 되어, 외부 스크립트를 더 잘 지원 하기 위해 SQL Server 인스턴스를 구성 합니다. 에 특히 유용 **데이터베이스 관리자**합니다.
+    하드웨어 구성에 대 한 지침을 제공 하는 [!INCLUDE[ssNoVersion_md](..\..\includes\ssnoversion-md.md)] 가에 설치 되어, 외부 스크립트를 더 잘 지원 하기 위해 SQL Server 인스턴스를 구성 합니다. 에 특히 유용 **데이터베이스 관리자**합니다.
 
 + [SQL Server-코드 및 데이터에에서 R에 대 한 성능 조정 최적화](..\r\r-and-data-optimization-r-services.md)
 

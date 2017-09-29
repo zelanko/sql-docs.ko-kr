@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 # <a name="deploy-from-sql-server-data-tools"></a>SQL Server Data Tools에서 배포
   SSDT에서 배포 명령을 사용 하 여 테이블 형식 모델 솔루션을 배포 하려면이 항목의 태스크를 사용 합니다.  
   
-##  <a name="bkmk_deploy"></a> Configure deployment options and deployment server properties  
+##  <a name="bkmk_deploy"></a> 배포 옵션 및 배포 서버 속성 구성  
  테이블 형식 모델 솔루션을 배포하기 전에 먼저 배포 옵션 및 배포 서버 속성을 지정해야 합니다. 배포 속성 설정에 대 한 자세한 내용은 참조 [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)합니다.  
   
 #### <a name="to-configure-options-and-properties"></a>옵션 및 속성을 구성 하려면  

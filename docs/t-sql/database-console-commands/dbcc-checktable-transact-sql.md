@@ -124,7 +124,7 @@ DBCC CHECKTABLE
     
  MAXDOP  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 s p 2 통해 [현재 버전](http://go.microsoft.com/fwlink/p/?LinkId=299658)합니다.  
- 재정의 **x degree of** 구성 옵션의 **sp_configure** 문에 대 한 합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 리소스 관리자에 구성 된 값을 초과 하면 데이터베이스 엔진 ALTER WORKLOAD GROUP (TRANSACT-SQL)에서 설명 하는 리소스 관리자 MAXDOP 값을 사용 합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
+ 재정의 **x degree of** 구성 옵션의 **sp_configure** 문에 대 한 합니다. MAXDOP은 sp_configure로 구성한 값을 초과할 수 있습니다. MAXDOP가 리소스 관리자에 구성 된 값을 초과 하면 데이터베이스 엔진 ALTER WORKLOAD GROUP (TRANSACT-SQL)에서 설명 하는 리소스 관리자 MAXDOP 값을 사용 합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.  
     
  > [!CAUTION]  
  >  MAXDOP가 0으로 설정되면 서버는 최대 병렬 처리 수준을 선택합니다.  
@@ -170,7 +170,7 @@ DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 �
 예를 들어, 테이블을 포함 하는 경우는 **varbinary (max)** 열의 FILESTREAM 특성을 DBCC CHECKTABLE 사용 하는 파일 시스템 디렉터리 및 파일 및 테이블 행, 열 및 열 한 일 매핑이 존재 하는 확인 값입니다. REPAIR_ALLOW_DATA_LOSS 옵션을 지정하면 DBCC CHECKTABLE이 손상을 복구할 수 있습니다. FILESTREAM 손상을 복구하기 위해 DBCC는 파일 시스템 데이터가 누락된 모든 테이블 행을 삭제하고 테이블 행, 열 또는 열 값에 매핑되지 않는 모든 디렉터리와 파일을 삭제합니다.
     
 ## <a name="checking-objects-in-parallel"></a>병렬로 개체 검사    
-기본적으로 DBCC CHECKTABLE은 개체의 병렬 검사를 수행합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 최대 병렬 쿼리 수준과 동일한 방식으로 구성됩니다. DBCC 검사에 사용할 수 있는 프로세서의 최대 수를 제한 하기 위해 사용할 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
+기본적으로 DBCC CHECKTABLE은 개체의 병렬 검사를 수행합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 최대 병렬 쿼리 수준과 동일한 방식으로 구성됩니다. DBCC 검사에 사용할 수 있는 프로세서의 최대 수를 제한 하기 위해 사용할 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
 추적 플래그 2528을 사용하면 병렬 검사를 비활성화할 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.
     
 > [!NOTE]    

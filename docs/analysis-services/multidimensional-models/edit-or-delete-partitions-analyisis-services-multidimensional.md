@@ -43,7 +43,7 @@ ms.lasthandoff: 09/01/2017
   
  ![파티션 창의 원본 열](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "파티션 창의 원본 열")  
   
- 파티션이 쿼리를 기반으로 하는 경우 찾아보기 (**...**) 단추를 클릭하여 쿼리를 편집합니다. 이렇게 하면 파티션의 **원본** 속성이 편집됩니다. 자세한 내용은 [Change a partition source to use a different fact table](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)을 참조하세요.  
+ 파티션이 쿼리를 기반으로 하는 경우 찾아보기 (**...**) 단추를 클릭하여 쿼리를 편집합니다. 이렇게 하면 파티션의 **원본** 속성이 편집됩니다. 자세한 내용은 [다른 팩트 테이블을 사용하도록 파티션 원본 변경](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)을 참조하세요.  
   
  데이터가 검색되는 외부 데이터 원본의 원래 원본 테이블과 동일한 구조를 가진 데이터 원본 뷰의 테이블을 지정할 수 있습니다. 원본은 큐브 데이터베이스의 모든 데이터 원본 또는 데이터 원본 뷰에 있을 수 있습니다.  
   
