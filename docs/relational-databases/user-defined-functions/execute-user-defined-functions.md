@@ -17,18 +17,18 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 08287922d15adabd1128da2edbb1caa65bc3f85f
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 121ec11d9bf1dbd380716da37e78463467d41f54
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="execute-user-defined-functions"></a>사용자 정의 함수 실행
   Transact-SQL을 사용하여 사용자 정의 함수 실행
   
 
-> **참고:** 사용자 정의 함수에 대한 자세한 내용은  [사용자 정의 함수](https://msdn.microsoft.com/library/ms191007.aspx) 및 [Create Function (Transact SQL)](https://msdn.microsoft.com/library/ms186755.aspx) 항목을 참고하세요. 
+> **참고:** 사용자 정의 함수에 대한 자세한 내용은  [사용자 정의 함수](user-defined-functions.md) 및 [Create Function (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) 항목을 참고하세요. 
   
  
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
@@ -38,7 +38,7 @@ ms.lasthandoff: 06/22/2017
   
 ###  <a name="Security"></a> 보안  
   
- [EXECUTE](https://msdn.microsoft.com/library/ms188332.aspx) 문을 실행하는 데에는 사용 권한이 필요하지 않습니다. 그러나 EXECUTE 문자열 내에서 참조되는 보안 개체에 대해서는 사용 권한이 **필요합니다** . 예를 들어 문자열에 [INSERT](https://msdn.microsoft.com/library/ms174335.aspx) 문이 있는 경우 EXECUTE 문의 호출자에게는 대상 테이블에 대한 INSERT 권한이 있어야 합니다. EXECUTE 문이 모듈 내에 포함된 경우에도 EXECUTE 문이 실행될 때는 사용 권한 검사가 수행됩니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)를 참조하세요.  
+ [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 문을 실행하는 데에는 사용 권한이 필요하지 않습니다. 그러나 EXECUTE 문자열 내에서 참조되는 보안 개체에 대해서는 사용 권한이 **필요합니다** . 예를 들어 문자열에 [INSERT](../../t-sql/statements/insert-transact-sql.md) 문이 있는 경우 EXECUTE 문의 호출자에게는 대상 테이블에 대한 INSERT 권한이 있어야 합니다. EXECUTE 문이 모듈 내에 포함된 경우에도 EXECUTE 문이 실행될 때는 사용 권한 검사가 수행됩니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)를 참조하세요.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

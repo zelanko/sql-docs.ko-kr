@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
-ms.openlocfilehash: 40b7bd5f5f8bf6682a7c85d332cce420baf06105
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 54be2f39c2f0b3c8ea640c1df720213f7936823d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
@@ -84,18 +84,18 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
   
   
-    SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
-    GO  
+      SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
+      GO  
   
-    BEGIN TRANSACTION;  -- Explicit transaction.  
+      BEGIN TRANSACTION;  -- Explicit transaction.  
   
       -- Order_mo  is a memory-optimized table.  
-    SELECT *  
+      SELECT *  
        FROM  
                 dbo.Order_mo  as o  WITH (SNAPSHOT)  -- Table hint.  
            JOIN dbo.Customer  as c  on c.CustomerId = o.CustomerId;  
       
-    COMMIT TRANSACTION;  
+      COMMIT TRANSACTION;  
   
 데이터베이스 옵션 `WITH (SNAPSHOT)` 을 사용할 경우 `MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT`힌트를 사용하지 않아도 됩니다. 이 옵션이 `ON`으로 설정되면 더 낮은 격리 수준에서 메모리 액세스에 최적화된 테이블의 격리 수준이 자동으로 SNAPSHOT 격리로 승격됩니다.  
   
@@ -308,7 +308,7 @@ SQL Server에는 다음과 같은 트랜잭션 시작 모드가 있습니다.
   
 - 기본 프로시저 본문에는 명시적 트랜잭션 제어 문을 사용할 수 없습니다. BEGIN TRANSACTION, ROLLBACK TRANSACTION 등은 모두 허용되지 않습니다.  
   
-- ATOMIC 블록을 사용한 트랜잭션 제어에 대한 자세한 내용은 [Atomic 블록](https://msdn.microsoft.com/library/dn452281.aspx)을 참조하세요.  
+- ATOMIC 블록을 사용한 트랜잭션 제어에 대한 자세한 내용은 [Atomic 블록](atomic-blocks-in-native-procedures.md)을 참조하세요.  
   
 <a name="othertxnlinks44ni"/>  
   

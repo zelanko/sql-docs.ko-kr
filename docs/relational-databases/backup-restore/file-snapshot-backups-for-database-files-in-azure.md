@@ -16,11 +16,11 @@ caps.latest.revision: 34
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ed2e98c34b3efed454130e7e1c6de86545ba6aea
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 509c4b512bc1f0aeafcd82eb896b9291af450aff
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 >  트랜잭션 로그 백업 체인(파일-스냅숏 백업일 수 있음)을 설정하는 데 필요한 초기 전체 백업 후에는 각 트랜잭션 로그 파일-스냅숏 백업 집합에 모든 데이터베이스 파일의 파일-스냅숏이 포함되고 이를 사용하여 데이터베이스를 복원 또는 로그 복원을 수행할 수 있으므로 트랜잭션 로그 백업을 수행하기만 하면 됩니다. 초기 전체 데이터베이스 백업 후에는 원하지 않는 추가 전체 또는 차등 백업을 Azure Blob 저장소 서비스가 각 데이터베이스 파일에 대한 기본 blob의 현재 상태와 각 파일-스냅숏 간의 차이를 처리하기 때문에 전체 또는 차등 백업을 추가로 수행할 필요가 없습니다.  
   
 > [!NOTE]  
->  Microsoft Azure Blob 저장소 서비스에서 SQL Server 2016을 사용하는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용](https://msdn.microsoft.com/library/dn466438.aspx)을 참조하세요.  
+>  Microsoft Azure Blob 저장소 서비스에서 SQL Server 2016을 사용하는 방법에 대한 자습서는 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   
 ### <a name="restore-using-file-snapshot-backups"></a>파일-스냅숏 백업을 사용하여 복원  
  각 파일-스냅숏 백업 집합은 각 데이터베이스 파일의 파일-스냅숏을 포함하기 때문에 복원 프로세스에는 인접한 두 개의 파일-스냅숏 백업 집합만 필요합니다. 백업 집합을 전체 데이터베이스 백업에서 가져오든 로그 백업에서 가져오든 상관없습니다. 이는 기존 스트리밍 백업 파일을 사용하여 복원 프로세스를 수행하는 경우와 매우 다릅니다. 기존 스트리밍 백업을 사용하는 경우에는 복원 프로세스에서 전체 백업 집합 체인(전체 백업, 차등 백업 및 하나 이상의 트랜잭션 로그 백업)을 사용해야 합니다. 복원 프로세스의 복구 부분은 복원에서 파일-스냅숏 백업을 사용하는지 또는 스트리밍 백업 집합을 사용하는지에 관계없이 동일하게 유지됩니다.  
@@ -184,7 +184,7 @@ GO
  어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20File-Snapshot%20Backups%20for%20Database%20Files%20in%20Azure%20page)  
   
 ## <a name="see-also"></a>참고 항목  
- [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용](https://msdn.microsoft.com/library/dn466438.aspx)  
+ [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   
 

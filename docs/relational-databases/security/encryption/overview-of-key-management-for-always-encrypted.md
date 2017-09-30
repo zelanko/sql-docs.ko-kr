@@ -14,11 +14,11 @@ caps.latest.revision: 32
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 611fcbd96531e57dd47a7ae61e5b4b32d84dcb46
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8333a497795ae7968b5d297b62aba83944f1b3ba
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>상시 암호화를 위한 키 관리 개요
@@ -70,7 +70,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="tools-for-managing-always-encrypted-keys"></a>상시 암호화 키 관리 도구
 
-상시 암호화 키는 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/ms174173.aspx) 및 [PowerShell](https://msdn.microsoft.com/library/hh245198.aspx)을 사용하여 관리할 수 있습니다.
+상시 암호화 키는 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/ms174173.aspx) 및 [PowerShell](../../scripting/sql-server-powershell.md)을 사용하여 관리할 수 있습니다.
 
 - **SSMS(SQL Server Management Studio)** – 키 저장소 액세스 및 데이터베이스 액세스와 관련된 태스크를 결합하는 대화 상자와 마법사를 제공하므로 SSMS는 역할 구분을 지원하지 않지만 쉽게 키를 구성할 수 있게 합니다. SSMS를 사용하여 키를 관리하는 방법은 다음을 참조하세요.
     - [열 마스터 키 프로비전](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)

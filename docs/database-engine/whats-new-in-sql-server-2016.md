@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: 0d4b7b0b668c6ac8ff2808f2d02576c9285e682a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
@@ -438,7 +438,7 @@ model 데이터베이스의 새 값 및 모델을 기반으로 하는 새 데이
 ###  <a name="Tools"></a> 향상된 도구 기능
 
 ####  <a name="SSMS"></a> Management Studio
-최신 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx)를 다운로드
+최신 [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드
 
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 는 Microsoft Azure에 연결하기 위해 개발 중인 ADAL(Active Directory Authentication Library)을 지원합니다. 이 기능은 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에서 사용되는 인증서 기반 인증을 대체합니다.
 - [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 를 설치하려면 필수 조건으로 .NET 4.6을 설치해야 합니다. .NET 4.6은 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 가 설치될 때 설치 프로그램에 의해 자동으로 설치됩니다.

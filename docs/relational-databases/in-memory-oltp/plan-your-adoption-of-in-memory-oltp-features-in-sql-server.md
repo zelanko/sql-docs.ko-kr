@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0bcdf5c7eec91bccabc4b7b54f6121bec4d6c7f2
-ms.openlocfilehash: bf29cd596c9b52ecf88fc715a580253de5477271
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d1a1f9dceede34a4ccf9c6914b0fb4c50c5babdf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>SQL Server에 메모리 내 OLTP 기능 채택 계획
@@ -99,7 +99,7 @@ Azure SQL Database 클라우드 서비스에 호스트된 데이터베이스의 
 메모리 최적화 관리자 도구는 디스크 기반 테이블을 메모리 액세스에 최적화된 테이블로 변환하는 작업을 구현하는 데 유용한 스크립트를 생성할 수 있습니다. 이 도구는 SSDT(SQL Server Data Tools)의 일부로 설치됩니다.
 
 - [메모리 최적화 관리자](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md)
-- [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)
+- [SSDT(SQL Server Data Tools) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)
 
 
 #### <a name="dacpac-file"></a>.dacpac 파일

@@ -17,10 +17,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
-ms.openlocfilehash: 5736d22a7ce8bf9c1269677c6d5df02b1b1282d8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fb74c78868691c1a59a132eb637dedbfebec41e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/11/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>remote access 서버 구성 옵션 구성
@@ -46,7 +46,7 @@ ms.lasthandoff: 08/11/2017
   
 -   [방법: ASP.NET 2.0에서 SQL 인증을 사용하여 SQL Server에 연결](https://msdn.microsoft.com/library/ff648340.aspx)  
   
--   [SQL Server 인스턴스에 연결](https://msdn.microsoft.com/library/ms162132.aspx)  
+-   [SQL Server 인스턴스에 연결](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
 -   [방법: SQL Server 데이터베이스에 대한 연결 만들기](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   

@@ -24,10 +24,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 0d09693778fa9382d40dfb02f0c3fb4b212f86ed
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4557b2183cf0043050cbf240b837b53796150653
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
@@ -36,7 +36,7 @@ ms.lasthandoff: 07/31/2017
   이 항목에서는 SQL Server Management Studio를 사용하여 전체 데이터베이스 백업을 복원하는 방법을 설명합니다.    
        
 ### <a name="important"></a>중요!    
-전체 복구 모델 또는 대량 로그 복구 모델에서 데이터베이스를 복원하려면 먼저 활성 트랜잭션 로그( [비상 로그](https://msdn.microsoft.com/library/ms179314.aspx)라고도 함)를 백업해야 할 수 있습니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)라고도 함)를 백업해야 할 수 있습니다.  
+전체 복구 모델 또는 대량 로그 복구 모델에서 데이터베이스를 복원하려면 먼저 활성 트랜잭션 로그( [비상 로그](tail-log-backups-sql-server.md)라고도 함)를 백업해야 할 수 있습니다. 자세한 내용은 [트랜잭션 로그 백업&#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)라고도 함)를 백업해야 할 수 있습니다.  
 
 다른 인스턴스에서 데이터베이스를 복원할 때 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리(SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)의 정보를 참조하세요.   
     

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 8d3a9c04f09d48823638e1608722268b360610e8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 24561dd19ef8992aba1d5e48ceadd49a68f18c1f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
@@ -105,10 +105,10 @@ ms.lasthandoff: 08/29/2017
  데이터베이스의 호환성 수준에 관계없이 보조 항목(있는 경우)에 대한 쿼리 최적화 프로그램 카디널리티 추정 모델을 지정합니다. 이 설정은 [추적 플래그 9481](https://support.microsoft.com/en-us/kb/2801413)과 동일합니다.  
   
  **최대 DOP**  
- 문에 사용해야 하는 주 항목에 대한 기본 [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 설정을 지정합니다.  
+ 문에 사용해야 하는 주 항목에 대한 기본 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 설정을 지정합니다.  
   
  **보조 항목에 대한 최대 DOP**  
- 문에 사용해야 하는 보조 항목(있는 경우)에 대한 기본 [MAXDOP](https://msdn.microsoft.com/en-us/library/ms189094.aspx) 설정을 지정합니다.  
+ 문에 사용해야 하는 보조 항목(있는 경우)에 대한 기본 [MAXDOP](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 설정을 지정합니다.  
   
  **매개 변수 검색**  
  주 항목에 대해 매개 변수 검색을 사용하거나 사용하지 않도록 설정합니다. 이 설정은 [추적 플래그 4136](https://support.microsoft.com/en-us/kb/980653)과 동일합니다.  

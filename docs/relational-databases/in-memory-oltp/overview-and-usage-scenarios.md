@@ -14,11 +14,11 @@ caps.latest.revision: 5
 author: jodebrui
 ms.author: jodebrui
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: edf397a4e4922167ae2eafd2c8e78ac97858bd37
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 13128a755dcfd302224a8291a006878a68bdd09f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
@@ -63,8 +63,8 @@ ms.lasthandoff: 06/22/2017
 핵심 트랜잭션 테이블, 즉 성능이 가장 중요한 트랜잭션이 있는 테이블에 메모리 액세스에 최적화된 테이블을 사용합니다. 비즈니스 트랜잭션과 관련된 논리 실행을 최적화하려면 고유하게 컴파일된 저장 프로시저를 사용합니다. 데이터베이스에 저장 프로시저로 푸시할 수 있는 논리가 많을수록 메모리 내 OLTP에서 더 많은 이점을 얻을 수 있습니다.
 
 기존 응용 프로그램에서 시작하려면 다음을 수행합니다.
-1. [트랜잭션 성능 분석 보고서](https://msdn.microsoft.com/library/dn205133.aspx) 를 사용하여 마이그레이션할 개체를 식별합니다. 
-2. [메모리 최적화](https://msdn.microsoft.com/library/dn284308.aspx) 및 [네이티브 컴파일](https://msdn.microsoft.com/library/dn358355.aspx) Advisor를 사용하여 마이그레이션에 대한 도움을 얻습니다.
+1. [트랜잭션 성능 분석 보고서](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md) 를 사용하여 마이그레이션할 개체를 식별합니다. 
+2. [메모리 최적화](memory-optimization-advisor.md) 및 [네이티브 컴파일](native-compilation-advisor.md) Advisor를 사용하여 마이그레이션에 대한 도움을 얻습니다.
 
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
@@ -82,8 +82,8 @@ ms.lasthandoff: 06/22/2017
 
 메모리 액세스에 최적화된 테이블을 데이터 수집에 사용합니다. 수집이 업데이트보다 주로 삽입으로 구성되고 메모리 내 OLTP 저장소의 데이터 공간이 중요한 경우 다음 중 하나를 수행합니다.
 
-- [을 수행하는 작업을 사용하여](https://msdn.microsoft.com/library/gg492088.aspx)클러스터형 Columnstore 인덱스 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`가 있는 디스크 기반 테이블에 데이터를 정기적으로 일괄 오프로드합니다.
-- [임시 메모리 액세스에 최적화된 테이블](https://msdn.microsoft.com/library/mt590207.aspx) 을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며, 데이터 이동이 시스템에 의해 관리됩니다.
+- [을 수행하는 작업을 사용하여](../indexes/columnstore-indexes-overview.md)클러스터형 Columnstore 인덱스 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`가 있는 디스크 기반 테이블에 데이터를 정기적으로 일괄 오프로드합니다.
+- [임시 메모리 액세스에 최적화된 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md) 을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며, 데이터 이동이 시스템에 의해 관리됩니다.
 
 SQL Server 샘플 리포지토리에는 임시 메모리 액세스에 최적화된 테이블, 메모리 액세스에 최적화된 테이블 형식 및 고유하게 컴파일된 저장 프로시저를 사용하여 센서 데이터의 메모리 내 OLTP 저장소 공간을 관리하는 동시에 데이터 수집을 가속화하는 스마트 그리드 응용 프로그램이 포함되어 있습니다. 
 
@@ -228,10 +228,10 @@ ETL 워크플로에는 종종 준비 테이블로 데이터 로드, 데이터 �
 - 메모리 내 OLTP 사용에 대한 성능 데모는 [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)에서 확인할 수 있습니다.
 - [메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 비디오](https://www.youtube.com/watch?v=l5l5eophmK4) (데모는 8분 25초에서 시작)
 - [메모리 내 OLTP를 사용하도록 설정하고 권장 옵션을 설정하는 스크립트](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)
-- [기본 메모리 내 OLTP 설명서](https://msdn.microsoft.com/library/dn133186.aspx)
+- [기본 메모리 내 OLTP 설명서](in-memory-oltp-in-memory-optimization.md)
 - [Azure SQL Database의 메모리 내 OLTP 성능 및 리소스 사용률 이점](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)
 - [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/21/improving-temp-table-and-table-variable-performance-using-memory-optimization/)
 [SQL Database에서 메모리 내 기술을 사용하여 성능 최적화](https://docs.microsoft.com/azure/sql-database/sql-database-in-memory)
-- [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](https://msdn.microsoft.com/library/mt590207.aspx)
+- [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)
 - [메모리 내 OLTP – 자주 사용되는 작업 패턴 및 마이그레이션 고려 사항](http://msdn.microsoft.com/library/dn673538.aspx) 
 

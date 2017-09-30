@@ -14,11 +14,11 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 4d54ac6d74c9794acfcc241e56ee6c128c9c50e2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: db336415059b9bc6b6251d9e590ac852903b66f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
@@ -48,10 +48,10 @@ ms.lasthandoff: 06/22/2017
 [자습서: 정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 이 자습서에서는 사이트 관리 표준을 강화하는 정책을 만드는 방법에 대해 설명합니다.  
   
-[자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+[Tutorial: SQL Server Backup and Restore to Windows Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
 이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 저장소 서비스로 복원하는 방법에 대해 설명합니다.  
   
-[자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](https://msdn.microsoft.com/library/dn466438.aspx)  
+[자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
 이 자습서는 Windows Azure BLOB 저장소 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
   
 ## <a name="see-also"></a>참고 항목  

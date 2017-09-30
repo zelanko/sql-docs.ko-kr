@@ -15,11 +15,11 @@ caps.latest.revision: 31
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9113272fdba93720cdca5dcedb737092af8d4e1d
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 69fce52c0c651388656f5065b1b7b84ff98cbe82
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore 인덱스 - 데이터 로드 지침
@@ -32,7 +32,7 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="what-is-bulk-loading"></a>대량 로드란 무엇인가요?
 *대량 로드*는 많은 행이 데이터 저장소에 추가되는 방식을 가리킵니다. 행 일괄 처리로 작동하기 때문에 데이터를 columnstore 인덱스로 이동하는 가장 성능 효과적인 방법입니다. 대량 로드는 최대 용량까지 행 그룹을 채우고 columnstore에 직접 압축합니다. 행 그룹당 102,400개의 최소 행 수를 충족하지 않는, 로드의 끝에 있는 행만 deltastore로 이동합니다.  
-대량 로드를 수행하려면 [bcp 유틸리티](https://msdn.microsoft.com/library/ms162802.aspx) 또는 [Integration Services](https://msdn.microsoft.com/library/ms141026.aspx)를 사용하거나 준비 테이블에서 행을 선택합니다.
+대량 로드를 수행하려면 [bcp 유틸리티](../../tools/bcp-utility.md) 또는 [Integration Services](../../integration-services/sql-server-integration-services.md)를 사용하거나 준비 테이블에서 행을 선택합니다.
 
 ![클러스터형 columnstore 인덱스로 로드](../../relational-databases/indexes/media/sql-server-pdw-columnstore-loadprocess.gif "클러스터형 columnstore 인덱스로 로드")  
   
@@ -103,7 +103,7 @@ INSERT INTO <columnstore index>  WITH (TABLOCK)  SELECT <list of columns> FROM <
   
 ## <a name="what-is-trickle-insert"></a>trickle insert란 무엇인가요?
 
-*trickle insert*는 개별 행이 columnstore 인덱스로 이동하는 방식을 가리킵니다. trickle insert는 [INSERT INTO](https://msdn.microsoft.com/library/ms174335.aspx) 문을 사용합니다. trickle insert를 사용할 경우 모든 행이 deltastore로 이동합니다. 이 기능은 행 수가 적은 경우에 유용하며 대규모 로드에는 적합하지 않습니다.
+*trickle insert*는 개별 행이 columnstore 인덱스로 이동하는 방식을 가리킵니다. trickle insert는 [INSERT INTO](../../t-sql/statements/insert-transact-sql.md) 문을 사용합니다. trickle insert를 사용할 경우 모든 행이 deltastore로 이동합니다. 이 기능은 행 수가 적은 경우에 유용하며 대규모 로드에는 적합하지 않습니다.
   
 ```  
 INSERT INTO <table-name> VALUES (<set of values>)  

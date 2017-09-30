@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 데이터 원본은 데이터 원본 뷰의 생성 기반을 제공하며 데이터 원본 뷰는 다시 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트나 데이터베이스의 차원, 큐브 및 마이닝 구조를 정의하는 데 사용됩니다. 따라서 데이터 원본을 삭제하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트의 다른 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 개체가 무효화될 수 있습니다. 항상 개체를 삭제하기 전에 제공되는 종속 개체의 목록을 검토해야 합니다.  
   
 > [!IMPORTANT]  
->  다른 개체가 종속된 데이터 원본은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 온라인 모드로 열린 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스에서 삭제할 수 없습니다. 데이터 원본을 삭제하기 전에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 해당 데이터 원본에 종속된 모든 개체를 삭제해야 합니다. 온라인 모드에 대한 자세한 내용은 [Connect in Online Mode to an Analysis Services Database](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)을 참조하십시오.  
+>  다른 개체가 종속된 데이터 원본은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 온라인 모드로 열린 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스에서 삭제할 수 없습니다. 데이터 원본을 삭제하기 전에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 해당 데이터 원본에 종속된 모든 개체를 삭제해야 합니다. 온라인 모드에 대한 자세한 내용은 [온라인 모드로 Analysis Services 데이터베이스에 연결](../../analysis-services/multidimensional-models/connect-in-online-mode-to-an-analysis-services-database.md)을 참조하십시오.  
   
 ### <a name="to-delete-a-data-source"></a>데이터 원본을 삭제하려면  
   

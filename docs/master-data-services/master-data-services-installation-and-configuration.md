@@ -16,10 +16,10 @@ author: smartysanthosh
 ms.author: nagavo
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: da09783f5d8bdcd491f73a1b46390918bbb7dd8d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 1993aee7d27d51a3788df44288a014374fcf430c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/07/2017
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
-     Windows 데이터 정렬에 대한 자세한 내용은 [Windows 데이터 정렬 이름(Transact-SQL)](https://msdn.microsoft.com/library/ms188046.aspx)을 참조하세요.  
+     Windows 데이터 정렬에 대한 자세한 내용은 [Windows 데이터 정렬 이름(Transact-SQL)](../t-sql/statements/windows-collation-name-transact-sql.md)을 참조하세요.  
   
 5.  **사용자 이름** 필드에서 Master Data Services의 기본 슈퍼 사용자로 설정할 사용자의 Windows 계정을 지정합니다. 슈퍼 사용자는 모든 기능 영역에 액세스할 수 있으며 모든 모델을 추가, 삭제 및 업데이트할 수 있습니다.  
 

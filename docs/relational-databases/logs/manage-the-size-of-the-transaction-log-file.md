@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 6d75e0e40c5642993cb17b09e421fbfebf40f87a
-ms.openlocfilehash: cd1931ef0f77c0a1e31c29833f38c51416e267c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9076e3fbddd2af5459e4d8895ce969c61a4315ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>트랜잭션 로그 파일의 크기 관리
@@ -78,7 +78,7 @@ ms.lasthandoff: 07/31/2017
 -   현재 파일의 크기(KB, MB, GB 및 TB 단위)를 변경하려면 SIZE 옵션을 사용합니다.  
   -   증분을 변경하려면 FILEGROWTH 옵션을 사용합니다. 값 0은 자동 증가를 사용하지 않고 추가 공간을 허용하지 않음을 나타냅니다. 로그 파일의 자동 증가분이 적어도 성능이 저하될 수 있습니다. 로그 파일의 파일 증가분이 충분히 커야 자주 확장하는 번거로움을 피할 수 있습니다. 대개 기본 증가분인 10%가 알맞습니다.  
 
-로그 파일의 파일 증가 속성을 변경하는 방법은 [ALTER DATABASE(TRANSACT-SQL)](https://msdn.microsoft.com/library/ms174269.aspx)를 참조하세요.  
+로그 파일의 파일 증가 속성을 변경하는 방법은 [ALTER DATABASE(TRANSACT-SQL)](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 -   로그 파일의 최대 크기(KB, MB, GB 및 TB 단위)를 제어하거나 증가를 UNLIMITED로 설정하려면 MAXSIZE 옵션을 사용합니다.  
   

@@ -161,7 +161,7 @@ ms.lasthandoff: 09/01/2017
  **포트**  
  서버에서 클라이언트 연결을 수신할 포트 번호를 정의하는 정수 속성입니다. 설정하지 않으면 서버가 사용되지 않은 첫 번째 포트를 동적으로 검색합니다.  
   
- 이 속성의 기본값은 0으로 이후 포트 2383이 기본값이 됩니다. 포트 구성에 대한 자세한 내용은 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
+ 이 속성의 기본값은 0으로 이후 포트 2383이 기본값이 됩니다. 포트 구성에 대한 자세한 내용은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
   
  **ServerTimeout**  
  쿼리에 대한 제한 시간(초)을 정의하는 정수입니다. 기본값은 3600초(또는 60분)입니다. 0을 지정하면 쿼리가 시간 초과되지 않습니다.  

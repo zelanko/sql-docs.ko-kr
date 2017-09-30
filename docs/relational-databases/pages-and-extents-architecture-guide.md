@@ -17,11 +17,11 @@ caps.latest.revision: 2
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 970981a0f8db1baa802a68ea1186211f031488e6
+ms.translationtype: HT
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 0b7dc681acb41c7d90360ae67331621a738a7cfd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
@@ -45,7 +45,7 @@ SQL Server에서 페이지 크기는 8KB입니다. 즉, SQL Server 데이터베�
 |-------|-------|
 |Data |text in row를 ON으로 설정한 경우 온갖 데이터를 포함한 데이터 행. 단, 텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터 제외. |
 |인덱스 |인덱스 항목 |
-|테스트/이미지 |LOB(Large Object) 데이터 유형: (텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터) <br> 데이터 행이 8KB를 초과하는 경우 가변 길이 열: (varchar, nvarchar, varbinary, and sql_variant) |
+|텍스트/이미지 |LOB(Large Object) 데이터 유형: (텍스트, ntext, 이미지, nvarchar(max), varchar(max), varbinary(max), xml 데이터) <br> 데이터 행이 8KB를 초과하는 경우 가변 길이 열: (varchar, nvarchar, varbinary, and sql_variant) |
 |전역 할당 맵, 공유 전역 할당 맵 |익스텐트가 할당되었는지 여부에 대한 정보 |
 |페이지의 사용 가능한 공간(PFS) |페이지 할당 및 페이지의 사용 가능한 공간에 대한 정보 |
 |IAM(Index Allocation Map) |테이블 또는 인덱스에서 할당 단위당 사용하는 익스텐트에 대한 정보 |

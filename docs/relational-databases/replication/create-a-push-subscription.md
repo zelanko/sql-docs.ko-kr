@@ -21,10 +21,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e8fbc50a3d0e2c8e9df837f40bdfa5b787225fb3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 7a78735cc1ccee742982c51a12bab2b5d47b046e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
@@ -95,7 +95,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **allow_push**의 값이 **0**이면 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행하고 **@property**에 **allow_push**, **@value**에 **true**를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](https://msdn.microsoft.com/library/ms181702.aspx)을 실행합니다. **@publication**, **@subscriber** 및 **@destination_db**을 지정합니다. **@subscription_type**에 **push** 값을 지정합니다. 구독 업데이트 방법은 [Create an Updatable Subscription to a Transactional Publication](https://msdn.microsoft.com/library/ms152769.aspx)를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber** 및 **@destination_db**을 지정합니다. **@subscription_type**에 **push** 값을 지정합니다. 구독 업데이트 방법은 [Create an Updatable Subscription to a Transactional Publication](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
@@ -250,7 +250,7 @@ ms.lasthandoff: 08/03/2017
   
  [!code-vb[HowTo#rmo_vb_CreateMergePushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergepushsub)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [밀어넣기 구독 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)   

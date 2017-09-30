@@ -22,11 +22,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d848c756eee54184aa10b5553779d0ebf1807366
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c5a9e33d2ea86fa57c0e7fee684b2096f4c459f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>데이터베이스 복구 모델 보기 또는 변경
@@ -36,13 +36,13 @@ ms.lasthandoff: 06/22/2017
   
   *복구 모델* 은 트랜잭션이 로깅되는 방법, 트랜잭션 로그에 백업이 필요하며 허용되는지 여부 및 사용 가능한 복원 작업의 종류를 제어하는 데이터베이스 속성입니다. 사용할 수 있는 복구 모델은 3가지로 단순, 전체 및 대량 로그 복구 모델입니다. 일반적으로 데이터베이스는 전체 복구 모델이나 단순 복구 모델을 사용합니다. 데이터베이스는 언제든지 다른 복구 모델로 전환이 가능합니다. **model** 데이터베이스는 새 데이터베이스의 기본 복구 모델을 설정합니다.  
   
-  [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)에 대한 자세한 내용은 [SQL Server 복구 모델](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 의 동료들이 제공한 [SQL Server 복구 모델](https://www.mssqltips.com/)을 참조하세요.
+  [복구 모델](recovery-models-sql-server.md)에 대한 자세한 내용은 [SQL Server 복구 모델](https://www.mssqltips.com/sqlservertutorial/2/sql-server-recovery-models/) 의 동료들이 제공한 [SQL Server 복구 모델](https://www.mssqltips.com/)을 참조하세요.
   
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
   
 
--   [전체 복구 모델 또는 대량 로그된 복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)에서 전환하기 **전에** [트랜잭션 로그를 백업](https://msdn.microsoft.com/library/ms179478.aspx)합니다.  
+-   [전체 복구 모델 또는 대량 로그된 복구 모델](recovery-models-sql-server.md)에서 전환하기 **전에** [트랜잭션 로그를 백업](back-up-a-transaction-log-sql-server.md)합니다.  
   
 -   대량 로그 모델에서는 지정 시간 복구를 사용할 수 없습니다. 트랜잭션 로그 복원이 필요한 대량 로그된 복구 모델에서 트랜잭션을 실행하면 데이터가 손실될 수 있습니다. 재해 복구 시나리오에서 데이터 복구 기능을 최대화하기 위해 다음 조건에서만 대량 로그된 복구 모델로 전환합니다.  
   

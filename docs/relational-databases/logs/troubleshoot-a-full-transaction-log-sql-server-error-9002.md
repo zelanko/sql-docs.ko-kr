@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 09bb30a44ef1675353fe8fa5bd9245c3f25c3894
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6631665bbb24d8404e6b115ee0dd608bb6dbef85
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>꽉 찬 트랜잭션 로그 문제 해결(SQL Server 오류 9002)
@@ -40,7 +40,7 @@ ms.lasthandoff: 07/31/2017
  지정된 경우에서 로그 잘림이 발생하지 않는 이유를 확인하려면 **sys.database** 카탈로그 뷰의 **log_reuse_wait** 및 **log_reuse_wait_desc** 열을 사용합니다. 자세한 내용은 [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)를 참조하세요. 로그 잘림을 지연시킬 수 있는 요소에 대한 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)를 참조하세요.  
   
 > **중요!!**  
->  데이터베이스 복구 중에 9002 오류가 발생한 경우에는 문제를 해결한 다음 [ALTER DATABASE *database_name* SET ONLINE](https://msdn.microsoft.com/library/bb522682.aspx)을 사용하여 데이터베이스를 복구합니다.  
+>  데이터베이스 복구 중에 9002 오류가 발생한 경우에는 문제를 해결한 다음 [ALTER DATABASE *database_name* SET ONLINE](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 데이터베이스를 복구합니다.  
   
  트랜잭션 로그가 꽉 찬 경우의 대처 방법으로 다음 방법을 사용할 수도 있습니다.  
   
@@ -104,14 +104,14 @@ ms.lasthandoff: 07/31/2017
 ## <a name="complete-or-kill-a-long-running-transaction"></a>장기 실행 트랜잭션 완료 또는 중지
 ### <a name="discovering-long-running-transactions"></a>장기 실행 트랜잭션 검색
 장기 실행 트랜잭션으로 인해 트랜잭션 로그가 꽉 찰 수 있습니다. 장기 실행 트랜잭션을 찾으려면 다음 중 하나를 사용합니다.
- - **[sys.dm_tran_database_transactions](https://msdn.microsoft.com/library/ms186957.aspx).**
-이 동적 관리 뷰는 데이터베이스 수준에서 트랜잭션 정보를 반환합니다. 장기 실행 트랜잭션과 특히 관련된 열에는 첫 번째 로그 레코드 시간[(database_transaction_begin_time)](https://msdn.microsoft.com/library/ms186957.aspx), 현재 트랜잭션 상태[(database_transaction_state)](https://msdn.microsoft.com/library/ms186957.aspx), 트랜잭션 로그에서 시작 레코드의 [LSN(로그 시퀀스 번호)](https://msdn.microsoft.com/library/ms191459.aspx)[(database_transaction_begin_lsn)](https://msdn.microsoft.com/library/ms186957.aspx) 등이 있습니다.
+ - **[sys.dm_tran_database_transactions](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md).**
+이 동적 관리 뷰는 데이터베이스 수준에서 트랜잭션 정보를 반환합니다. 장기 실행 트랜잭션과 특히 관련된 열에는 첫 번째 로그 레코드 시간[(database_transaction_begin_time)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), 현재 트랜잭션 상태[(database_transaction_state)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md), 트랜잭션 로그에서 시작 레코드의 [LSN(로그 시퀀스 번호)](../backup-restore/recover-to-a-log-sequence-number-sql-server.md)[(database_transaction_begin_lsn)](../system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md) 등이 있습니다.
 
- - **[DBCC OPENTRAN](https://msdn.microsoft.com/library/ms182792.aspx).**
+ - **[DBCC OPENTRAN](../../t-sql/database-console-commands/dbcc-opentran-transact-sql.md).**
 이 문을 사용하면 트랜잭션 소유자의 사용자 ID를 식별할 수 있으므로 트랜잭션의 출처를 추적하여 롤백 대신 커밋을 더 많이 수행하는 순차적 종료 작업을 확인할 수 있습니다.
 
 ### <a name="kill-a-transaction"></a>트랜잭션 중지
-프로세스를 종료해야 할 때 [KILL](https://msdn.microsoft.com/library/ms173730.aspx) 문을 사용해야 하는 경우도 있습니다. 특히 중지하지 않을 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하세요. 자세한 내용은 [KILL (Transact-SQL)](https://msdn.microsoft.com/library/ms173730.aspx)을 참조하세요.
+프로세스를 종료해야 할 때 [KILL](../../t-sql/language-elements/kill-transact-sql.md) 문을 사용해야 하는 경우도 있습니다. 특히 중지하지 않을 중요한 프로세스가 실행 중일 때는 이 문을 신중하게 사용하세요. 자세한 내용은 [KILL (Transact-SQL)](../../t-sql/language-elements/kill-transact-sql.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목  
 [KB 지원 문서 - A transaction log grows unexpectedly or becomes full in SQL Server(트랜잭션 로그가 예기치 않게 커지거나 SQL Server에 가득 참)](https://support.microsoft.com/en-us/kb/317375) [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   

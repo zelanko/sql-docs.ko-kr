@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: f61a7661093216f4aae6ebf71b9d7159200e5dbd
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 640fa43bc4db2907f676dadad8688b7cf5a1bef4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server에서 확장 이벤트에 대한 대상
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 
 
 - 자주 업데이트되는 유틸리티 SQL Server Management Studio(SSMS.exe)의 최신 버전이 설치되어 있어야 합니다. 자세한 내용은 다음을 참조하세요.
-    - [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)
+    - [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 - **출력 데이터를 간편하게 볼 수 있도록** SSMS.exe에서 [개체 탐색기](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)를 사용하여 이벤트 세션에서 대상 노드를 마우스 오른쪽 단추로 클릭하는 방법을 알고 있어야 합니다.

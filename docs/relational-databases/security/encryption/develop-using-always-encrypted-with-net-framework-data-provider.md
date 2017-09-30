@@ -14,11 +14,11 @@ caps.latest.revision: 11
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 09253894ace06e9bd0b6a515e133eb8e2f5860a1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de7909d5b33568c0218b7f9895d36952c7cdd3af
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>.NET Framework 데이터 공급자와 Always Encrypted를 사용하여 개발
@@ -289,7 +289,7 @@ cmd.ExecuteNonQuery();
   
 이러한 공급자를 사용하기 위해 응용 프로그램 코드를 변경할 필요는 없지만 다음에 유의하세요.
 
-- 사용자 또는 DBA는 열 마스터 키 메타데이터에 구성된 공급자 이름이 정확하고 열 마스터 키 경로가 특정 공급자에 대해 적합한 키 경로 형식을 준수해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](https://msdn.microsoft.com/library/mt146393.aspx) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다. 자세한 내용은 [SQL Server Management Studio를 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) 및 [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)을 참조하세요.
+- 사용자 또는 DBA는 열 마스터 키 메타데이터에 구성된 공급자 이름이 정확하고 열 마스터 키 경로가 특정 공급자에 대해 적합한 키 경로 형식을 준수해야 합니다. [CREATE COLUMN MASTER KEY(Transact-SQL)](../../../t-sql/statements/create-column-master-key-transact-sql.md) 문을 실행할 때 적합한 공급자 이름 및 키 경로를 자동으로 생성하는 SQL Server Management Studio 등의 도구를 사용하여 키를 구성하는 것이 좋습니다. 자세한 내용은 [SQL Server Management Studio를 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md) 및 [PowerShell을 사용하여 Always Encrypted 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)을 참조하세요.
 - 응용 프로그램에서 키 저장소의 키에 액세스할 수 있어야 합니다. 이는 키 저장소를 기준으로 응용 프로그램 액세스를 키 및/또는 키 저장소에 부여하거나 다른 키 저장소 관련 구성 단계를 수행하는 것과 관련이 있습니다. 예를 들어 CNG 또는 CAPI(예: 하드웨어 보안 모듈)를 구현하는 키 저장소에 액세스하려면 저장소에 대한 CNG 또는 CAPI를 구현하는 라이브러리가 응용 프로그램에 설치되었는지 확인해야 합니다. 자세한 내용은 [열 마스터 키 만들기 및 저장(상시 암호화)](../../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md)를 참조하세요.
 
 ### <a name="using-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
@@ -373,7 +373,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>쿼리 매개 변수에 대한 메타데이터를 검색하기 위한 왕복 제어
 
-연결에 대한 Always Encrypted가 설정된 경우 기본적으로 .NET Framework Data Provider for SQL Server는 매개 변수가 있는 각 쿼리에 대해 [sys.sp_describe_parameter_encryption](https://msdn.microsoft.com/library/mt631693.aspx) 을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. **sys.sp_describe_parameter_encryption** 은 쿼리 문을 분석하여 암호화해야 하는 매개 변수가 있는지 확인하고, 있는 경우 .NET Framework Data Provider for SQL Server에서 매개 변수 값을 암호화할 수 있도록 이러한 각 매개 변수에 대해 암호화 관련 정보를 반환합니다. 위의 동작은 클라이언트 응용 프로그램에 대한 높은 수준의 투명도를 보장합니다. 응용 프로그램(및 응용 프로그램 개발자)에서는 암호화된 열을 대상으로 하는 값이 SqlParameter 개체의 .NET Framework Data Provider for SQL Server에 전달되는 한 어떤 쿼리가 암호화된 열에 액세스하는지 유의하지 않아도 됩니다.
+연결에 대한 Always Encrypted가 설정된 경우 기본적으로 .NET Framework Data Provider for SQL Server는 매개 변수가 있는 각 쿼리에 대해 [sys.sp_describe_parameter_encryption](../../system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) 을 호출하고 매개 변수 값 없이 쿼리 문을 SQL Server에 전달합니다. **sys.sp_describe_parameter_encryption** 은 쿼리 문을 분석하여 암호화해야 하는 매개 변수가 있는지 확인하고, 있는 경우 .NET Framework Data Provider for SQL Server에서 매개 변수 값을 암호화할 수 있도록 이러한 각 매개 변수에 대해 암호화 관련 정보를 반환합니다. 위의 동작은 클라이언트 응용 프로그램에 대한 높은 수준의 투명도를 보장합니다. 응용 프로그램(및 응용 프로그램 개발자)에서는 암호화된 열을 대상으로 하는 값이 SqlParameter 개체의 .NET Framework Data Provider for SQL Server에 전달되는 한 어떤 쿼리가 암호화된 열에 액세스하는지 유의하지 않아도 됩니다.
 
 
 ### <a name="query-metadata-caching"></a>쿼리 메타데이터 캐싱
@@ -392,7 +392,7 @@ static byte[]  GetEncryptedColumnEncryptonKey()
 > [!NOTE]
 > 쿼리 수준에서 Always Encrypted를 설정하면 .NET 4.6.2 이상 버전에서 성능상의 혜택이 제한되어 매개 변수 암호화 메타데이터 캐싱이 구현됩니다.
 
-개별 쿼리의 Always Encrypted 동작을 제어하려면  [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 및 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)의 이 생성자를 사용해야 합니다. 다음은 몇 가지 유용한 지침입니다.
+개별 쿼리의 Always Encrypted 동작을 제어하려면 [SqlCommand](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommand.aspx) 및 [SqlCommandColumnEncryptionSetting](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcommandcolumnencryptionsetting.aspx)의 이 생성자를 사용해야 합니다. 다음은 몇 가지 유용한 지침입니다.
 - 대부분이 데이터베이스 연결 액세스 암호화된 열을 통해 전송하는 클라이언트 응용 프로그램을 쿼리하는 경우:
     - **열 암호화 설정** 연결 문자열 키워드를 *사용*으로 설정합니다.
     - 암호화된 모든 열을 액세스하지 않는 개별 쿼리에 대해 **SqlCommandColumnEncryptionSetting.Disabled** 를 설정합니다. 이렇게 하면 sys.sp_describe_parameter_encryption이 호출되지 않고 결과 집합 값의 암호 해독도 시도되지 않습니다.
@@ -544,7 +544,7 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 
 ## <a name="always-encrypted-api-reference"></a>Always Encrypted API 참조
 
-**Namespace:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
+**네임스페이스:** [System.Data.SqlClient](https://msdn.microsoft.com/library/system.data.sqlclient.aspx)
 
 **어셈블리:** System.Data(System.Data.dll에서)
 

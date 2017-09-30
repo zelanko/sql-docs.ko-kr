@@ -19,11 +19,11 @@ caps.latest.revision: 25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 327b70f445a9f794152073a39059165f75fd3cad
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 297fce0c33230efa45c159807bed0a577cef804e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, 가용성 복제본
@@ -44,7 +44,7 @@ ms.lasthandoff: 06/22/2017
 ## <a name="see-also"></a>관련 항목:  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Serve, 데이터베이스 복제본](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
- [Always On 가용성 그룹(SQL Server)](https://msdn.microsoft.com/library/hh510230.aspx)  
+ [Always On 가용성 그룹(SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   
 

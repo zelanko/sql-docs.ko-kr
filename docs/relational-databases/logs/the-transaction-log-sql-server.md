@@ -18,11 +18,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: d23b661d9fd99090a5140100513886d8351460b9
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6e2b36af7393ecd115feefb5c3dffba5e28d1304
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
@@ -78,7 +78,7 @@ Always On 가용성 그룹 시나리오에서는 주 복제본인 데이터베�
 -  트랜잭션 로그는 여러 파일에 구현할 수 있습니다. 트랜잭션 로그에 FILEGROWTH 값을 설정하여 자동으로 확장되도록 파일을 정의할 수 있습니다. 이를 통해 트랜잭션 로그에서 공간이 부족해질 확률이 줄어들며 동시에 관리 오버헤드가 줄어듭니다. 자세한 내용은 [ALTER DATABASE(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.
 -  로그에서 공간을 재사용하는 메커니즘은 빠르게 수행되며 트랜잭션 처리량에 최소의 영향만 미칩니다.
 
-##  <a name="Truncation"></a> Transaction log truncation  
+##  <a name="Truncation"></a> 트랜잭션 로그 잘림  
  로그 잘림은 트랜잭션 로그에서 다시 사용할 수 있도록 로그 파일의 공간을 확보하는 것입니다. 할당된 공간이 가득 차지 않도록 트랜잭션 로그를 주기적으로 줄여야 합니다. 몇몇 요소로 인해 로그 잘림이 지연될 수 있으므로 로그 크기를 모니터링하는 것이 중요합니다. 일부 작업을 최소로 기록하여 트랜잭션 로그 크기에 주는 영향을 줄일 수 있습니다.  
  
   로그 잘림은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 논리 트랜잭션 로그에서 비활성 가상 로그 파일을 삭제하여 물리적 트랜잭션 로그에서 다시 사용할 수 있도록 논리 로그의 공간을 확보합니다. 트랜잭션 로그가 잘리지 않으면 물리적 로그 파일에 할당된 디스크 공간이 모두 채워집니다.  
@@ -118,12 +118,12 @@ Always On 가용성 그룹 시나리오에서는 주 복제본인 데이터베�
 |13|OLDEST_PAGE|데이터베이스가 간접 검사점을 사용하도록 구성된 경우 데이터베이스의 가장 오래된 페이지가 검사점 LSN보다 오래되었을 수 있습니다. 이 경우 가장 오래된 페이지는 로그 잘림이 지연될 수 있습니다(모든 복구 모델).<br /><br /> 간접 검사점에 대한 자세한 내용은 [Database Checkpoints &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.|  
 |14|OTHER_TRANSIENT|이 값은 현재 사용되지 않습니다.|  
   
-##  <a name="MinimallyLogged"></a> Operations that can be minimally logged  
- *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx) 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
+##  <a name="MinimallyLogged"></a> 최소 로깅 가능한 작업  
+ *최소 로깅* 은 지정 시간 복구를 지원하지 않고 트랜잭션을 복구하는 데 필요한 정보만 기록합니다. 이 항목에서는 대량 로그 [복구 모델](../backup-restore/recovery-models-sql-server.md) 및 단순 복구 모델(백업이 실행 중인 경우 제외)에서 최소 로깅되는 작업을 식별합니다.  
   
 > **참고!** 최소 로깅은 메모리 액세스에 최적화된 테이블에 대해 지원되지 않습니다.  
   
-> **추가 참고!** 전체 [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)에서는 모든 대량 작업을 완전히 기록합니다. 그러나 대량 작업에 대해 일시적으로 데이터베이스를 대량 로그 복구 모델로 전환하여 대량 작업 집합의 로깅을 최소화할 수 있습니다. 최소 로깅은 전체 로깅보다 효율적이며 대규모 대량 작업이 대량 트랜잭션 중에 사용 가능한 트랜잭션 로그 공간을 꽉 채울 가능성을 줄여줍니다. 그러나 최소 로깅을 사용할 때 데이터베이스가 손상되거나 손실되면 데이터베이스를 오류 지점으로 복구할 수 없습니다.  
+> **추가 참고!** 전체 [복구 모델](../backup-restore/recovery-models-sql-server.md)에서는 모든 대량 작업을 완전히 기록합니다. 그러나 대량 작업에 대해 일시적으로 데이터베이스를 대량 로그 복구 모델로 전환하여 대량 작업 집합의 로깅을 최소화할 수 있습니다. 최소 로깅은 전체 로깅보다 효율적이며 대규모 대량 작업이 대량 트랜잭션 중에 사용 가능한 트랜잭션 로그 공간을 꽉 채울 가능성을 줄여줍니다. 그러나 최소 로깅을 사용할 때 데이터베이스가 손상되거나 손실되면 데이터베이스를 오류 지점으로 복구할 수 없습니다.  
   
  전체 복구 모델에서 전체 로깅되는 다음 작업은 단순 및 대량 로그 복구 모델에서 최소 로깅됩니다.  
   
@@ -151,7 +151,7 @@ Always On 가용성 그룹 시나리오에서는 주 복제본인 데이터베�
   
     -   DROP INDEX 새 힙 다시 작성(해당 사항이 있을 경우) [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 작업 중의 인덱스 페이지 할당 취소는 **항상** 모두 로깅됩니다.
   
-##  <a name="RelatedTasks"></a> Related tasks  
+##  <a name="RelatedTasks"></a> 관련 작업  
  **트랜잭션 로그 관리**  
   
 -   [트랜잭션 로그 파일의 크기 관리](../../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)  

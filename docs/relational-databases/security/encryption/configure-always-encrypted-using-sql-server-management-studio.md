@@ -20,17 +20,17 @@ caps.latest.revision: 15
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 80c832db0ffdb9a3666b60a19fdf11a01750b2e1
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 097ce7fb331df64de9b293a6af9e05e7d95f1b37
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="configure-always-encrypted-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 상시 암호화 구성
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-이 문서에서는 [SSMS(SQL Server Management Studio)](https://msdn.microsoft.com/library/mt238290.aspx)를 사용하여 상시 암호화를 구성하고 상시 암호화를 사용하는 데이터베이스를 관리하는 작업에 대해 설명합니다.
+이 문서에서는 [SSMS(SQL Server Management Studio)](../../../ssms/download-sql-server-management-studio-ssms.md)를 사용하여 상시 암호화를 구성하고 상시 암호화를 사용하는 데이터베이스를 관리하는 작업에 대해 설명합니다.
 
 SSMS를 사용하여 상시 암호화를 구성하는 경우 SSMS에서 상시 암호화 키와 중요한 데이터를 둘 다 처리하므로 키와 데이터가 SSMS 프로세스 내에서 일반 텍스트로 모두 표시됩니다. 따라서 보안 컴퓨터에서 SSMS를 실행하는 것이 중요합니다. 데이터베이스가 SQL Server에서 호스트된 경우 SQL Server 인스턴스를 호스트하는 컴퓨터 이외의 다른 컴퓨터에서 SSMS를 실행합니다. 상시 암호화의 주요 목표는 데이터베이스 시스템이 손상된 경우에도 암호화된 중요한 데이터를 안전하게 보호하는 것이므로 SQL Server 컴퓨터에서 키 또는 중요한 데이터를 처리하는 PowerShell 스크립트를 실행하면 기능의 이점이 감소하거나 무효화될 수 있습니다. 추가 권장 사항을 보려면 [키 관리에 대한 보안 고려 사항](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)을 참조하세요.
 
@@ -89,7 +89,7 @@ SSN이 `char(11)` 테이블의 암호화된 `Patients` 열이라고 가정할 �
 
 ![always-encrypted-patients](../../../relational-databases/security/encryption/media/always-encrypted-patients.png)
  
-### <a name="en-dis"></a> Enabling and disabling Always Encrypted for a database connection   
+### <a name="en-dis"></a> 데이터베이스 연결에 Always Encrypted 사용 및 사용 안 함   
 
 데이터베이스 연결에 Always Encrypted를 사용하도록 설정하면 SQL Server Management Studio에서 사용하는 .NET Framework Data Provider for SQL Server가 다음 작업을 투명하게 시도합니다.   
 -   암호화된 열에서 검색된 값의 암호를 해독하여 쿼리 결과에 반환합니다.   
@@ -105,7 +105,7 @@ SSN이 `char(11)` 테이블의 암호화된 `Patients` 열이라고 가정할 �
 >  4.   **추가 속성** 탭을 선택하고 `Column Encryption Setting=Enabled`(Always Encrypted 동작 사용)를 입력하거나 설정을 제거(Always Encrypted 동작 사용 안 함)합니다.   
 >  5.   **연결**을 클릭합니다.   
    
-### <a name="param"></a>Parameterization for Always Encrypted   
+### <a name="param"></a>Always Encrypted에 대한 매개 변수화   
  
 Always Encrypted에 대한 매개 변수화는 Transact-SQL 변수를 쿼리 매개 변수([SqlParameter 클래스](https://msdn.microsoft.com/library/system.data.sqlclient.sqlparameter.aspx)의 인스턴스)로 자동으로 변환하는 SQL Server Management Studio의 기능입니다. SSMS 버전 17.0 이상이 필요합니다. 이 기능을 사용하면 기본 .NET Framework Data Provider for SQL Server이 암호화된 열을 대상으로 하는 데이터를 검색하고, 이러한 데이터를 데이터베이스로 전송하기 전에 암호화합니다. 
   

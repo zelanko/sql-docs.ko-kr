@@ -22,11 +22,11 @@ caps.latest.revision: 65
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 17f350c10f32dbd230d7c372820178a3dde081d2
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
@@ -49,7 +49,7 @@ ms.lasthandoff: 06/22/2017
   - [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
    - [BULK INSERT 또는 OPENROWSET(BULK...)(SQL Server)를 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
     - [XML 대량 로드 구성 요소를 사용하여 SQL Server에 XML을 가져오는 방법입니다.](https://support.microsoft.com/en-us/kb/316005)
-     - [XML 스키마 컬렉션 [SQL Server]](https://msdn.microsoft.com/library/ms187856.aspx)
+     - [XML 스키마 컬렉션 [SQL Server]](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>예  
  다음과 같은 예가 제공됩니다.  

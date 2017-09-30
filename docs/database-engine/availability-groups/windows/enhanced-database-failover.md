@@ -1,7 +1,7 @@
 ---
 title: "가용성 그룹에 확장된 데이터베이스 장애 조치 추가(SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/10/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], failover
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ff670b7dd9ece16e281d9d0944a5d66d1529b726
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: 6faff6e4464f21503132c72034535d11b8c3a0eb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 
@@ -88,5 +88,4 @@ ALTER AVAILABILITY GROUP [AGNAME] SET (DB_FAILOVER = OFF)
  
 - [Transact-SQL을 사용하여 가용성 그룹 만들기](create-an-availability-group-transact-sql.md)
 
->이 콘텐츠는 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20%20Hirt)(Microsoft Most Valued Professional)에 의해 작성되었습니다.
 

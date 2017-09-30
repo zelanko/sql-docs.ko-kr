@@ -1,7 +1,7 @@
 ---
 title: "도메인 독립 가용성 그룹(SQL Server) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/12/2017
+ms.date: 09/25/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], domain independent
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 847c34fedcaa48149a6545d830af021aae26f530
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b6953bbfb9af88bb0d6c4bb575feb97557c43ea2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
@@ -45,7 +45,7 @@ Windows Server 2016에서는 Active Directory 분리 클러스터(작업 그룹 
 
 ![도메인에 가입된 두 개의 노드가 있는 작업 그룹 클러스터][2]
 
-도메인 독립 가용성 그룹은 다중 사이트 또는 재해 복구 시나리오에만 사용되지는 않습니다. 단일 데이터 센터에 배포할 수 있으며, [기본 가용성 그룹](https://msdn.microsoft.com/library/mt614935.aspx)(Standard Edition 가용성 그룹이라고도 함)과 함께 사용하여 그림과 같이 인증서로 데이터베이스 미러링을 사용하여 달성한 것과 비슷한 아키텍처를 제공합니다.
+도메인 독립 가용성 그룹은 다중 사이트 또는 재해 복구 시나리오에만 사용되지는 않습니다. 단일 데이터 센터에 배포할 수 있으며, [기본 가용성 그룹](basic-availability-groups-always-on-availability-groups.md)(Standard Edition 가용성 그룹이라고도 함)과 함께 사용하여 그림과 같이 인증서로 데이터베이스 미러링을 사용하여 달성한 것과 비슷한 아키텍처를 제공합니다.
 
 
 ![Standard Edition에서 AG의 상위 수준 보기][3]
@@ -123,7 +123,7 @@ CREATE CERTIFICATE [InstanceB_Cert]
 AUTHORIZATION InstanceB_User
 FROM FILE = 'Restore_path\InstanceB_Cert.cer'
 ```
-12. 복제본이 될 각 인스턴스에서 가용성 그룹이 사용할 끝점을 만듭니다. 가용성 그룹의 경우 끝점의 유형은 DATABASE_MIRRORING이어야 합니다. 끝점은 인증을 위해 해당 인스턴스에 대해 4단계에서 만든 인증서를 사용합니다. 인증서를 사용하여 끝점을 만드는 예제 구문은 다음과 같습니다. 사용자 환경과 관련된 적절한 암호화 방법 및 다른 옵션을 사용합니다. 사용 가능한 옵션에 대한 자세한 내용은 [CREATE ENDPOINT(Transact-SQL)](https://msdn.microsoft.com/library/ms181591.aspx)를 참조하세요.
+12. 복제본이 될 각 인스턴스에서 가용성 그룹이 사용할 끝점을 만듭니다. 가용성 그룹의 경우 끝점의 유형은 DATABASE_MIRRORING이어야 합니다. 끝점은 인증을 위해 해당 인스턴스에 대해 4단계에서 만든 인증서를 사용합니다. 인증서를 사용하여 끝점을 만드는 예제 구문은 다음과 같습니다. 사용자 환경과 관련된 적절한 암호화 방법 및 다른 옵션을 사용합니다. 사용 가능한 옵션에 대한 자세한 내용은 [CREATE ENDPOINT(Transact-SQL)](../../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.
 ```
 CREATE ENDPOINT DIAG_EP
 STATE = STARTED
@@ -141,7 +141,7 @@ FOR DATABASE_MIRRORING (
 GRANT CONNECT ON ENDPOINT::DIAG_EP TO 'InstanceX_User';
 GO
 ```
-14. 기본 인증서와 끝점 보안이 구성되었으면 기본 설정 방법을 사용하여 가용성 그룹을 만듭니다. 보조 복제본을 초기화하는 데 사용된 백업을 수동으로 백업, 복사 및 복원하거나 [자동 시드](https://msdn.microsoft.com/library/mt735149.aspx)를 사용하는 것이 좋습니다. 마법사를 사용하여 보조 복제본을 초기화하면, 비도메인 가입 작업 그룹 클러스터를 사용할 때 작동하지 않을 수 있는 SMB(서버 메시지 블록) 파일이 사용됩니다.
+14. 기본 인증서와 끝점 보안이 구성되었으면 기본 설정 방법을 사용하여 가용성 그룹을 만듭니다. 보조 복제본을 초기화하는 데 사용된 백업을 수동으로 백업, 복사 및 복원하거나 [자동 시드](automatically-initialize-always-on-availability-group.md)를 사용하는 것이 좋습니다. 마법사를 사용하여 보조 복제본을 초기화하면, 비도메인 가입 작업 그룹 클러스터를 사용할 때 작동하지 않을 수 있는 SMB(서버 메시지 블록) 파일이 사용됩니다.
 15. 수신기를 만드는 경우 이름과 IP 주소가 모두 DNS에 등록되어 있는지 확인합니다.
 
 ### <a name="next-steps"></a>다음 단계 
@@ -151,8 +151,6 @@ GO
 - [새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 - [Transact-SQL을 사용하여 가용성 그룹 만들기](create-an-availability-group-transact-sql.md)
-
->이 콘텐츠는 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt)(Microsoft Most Valued Professional)에 의해 작성되었습니다.
 
 <!--Image references-->
 [1]: ./media/diag-wsfc-two-data-centers-same-domain.png

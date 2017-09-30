@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0c85f3e3417afc5943baee86eff0c3248172f82a
-ms.openlocfilehash: f13f4f60d8df7d2a2fb668cc6d5a93f092973116
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dcc8a068ee429f889726cfc1b5fa3d0be579135e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="how-query-store-collects-data"></a>쿼리 저장소에서 데이터를 수집하는 방법
@@ -45,7 +45,7 @@ ms.lasthandoff: 07/31/2017
 |**sys.query_store_runtime_stats_interval**|쿼리 저장소는 시간을 자동으로 생성된 시간 창(간격)으로 분할하고 실행된 모든 계획에 대한 해당 간격에 집계 통계를 저장합니다. 간격의 크기는 통계 수집 간격 구성 옵션([!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서) 또는 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 사용하여 `INTERVAL_LENGTH_MINUTES`에 의해 제어됩니다.|  
 |**sys.query_store_runtime_stats**|실행된 계획에 대한 집계된 런타임 통계입니다. 모든 캡처된 메트릭은 4개의 통계 함수 형태인 평균, 최소값, 최대값 및 표준 편차로 표현됩니다.|  
   
- 쿼리 저장소 뷰에 대한 자세한 내용은 **쿼리 저장소를 사용하여 성능 모니터링** 의 [관련된 뷰, 함수 및 프로시저](https://msdn.microsoft.com/library/dn817826.aspx)섹션을 참조하세요.  
+ 쿼리 저장소 뷰에 대한 자세한 내용은 **쿼리 저장소를 사용하여 성능 모니터링** 의 [관련된 뷰, 함수 및 프로시저](monitoring-performance-by-using-the-query-store.md)섹션을 참조하세요.  
   
 ## <a name="query-processing"></a>쿼리 처리  
  쿼리 저장소는 다음 주요 지점에서 쿼리 처리 파이프라인과 상호 작용합니다.  

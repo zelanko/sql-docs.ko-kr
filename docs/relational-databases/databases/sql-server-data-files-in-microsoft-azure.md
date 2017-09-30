@@ -1,5 +1,5 @@
 ---
-title: "Microsoft Azure의 SQL Server 데이터 파일 | Microsoft Docs"
+title: "Microsoft Azure의 SQL Server 데이터 파일 | Microsoft 문서"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: c0e55c0e35039490f0ce4cd8a7fb6d7e232c05aa
-ms.openlocfilehash: c105f4fae3b3fffb61ef892cecbbe75754ccfd28
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: fb653826a9a53251cbd5fe6ef20b4b0f664c1422
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
@@ -30,7 +30,7 @@ ms.lasthandoff: 07/31/2017
   
  이 항목에서는 SQL Server 데이터 파일을 Microsoft Azure Storage 서비스에 저장하는 데 중요한 개념 및 고려 사항에 대해 설명합니다.  
   
- 이 새 기능을 사용하는 방법을 실제로 실습하려면 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](https://msdn.microsoft.com/library/dn466438.aspx)을 참조하세요.  
+ 이 새 기능을 사용하는 방법을 실제로 실습하려면 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일을 사용하는 이유는 무엇인가요? 
   
@@ -134,7 +134,7 @@ ON
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
  SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 https://teststorageaccnt.blob.core.windows.net/testcontainer/와 같이 저장소 컨테이너의 URL 경로를 입력할 수 있습니다.
  
- 여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](https://msdn.microsoft.com/library/dn466438.aspx)을 참조하세요.  
+ 여러 대화 상자 창(예: **새 데이터베이스** , **데이터베이스 연결**및 **데이터베이스 복원**)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)을 참조하세요.  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 관리 개체 지원  
  Azure의 SQL Server 데이터 파일 기능을 사용할 경우 모든 SMO(SQL Server 관리 개체)가 지원됩니다. SMO 개체에 파일 경로가 필요한 경우 로컬 파일 경로 대신 BLOB URL 형식을 사용합니다(예: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`). SMO(SQL Server 관리 개체)에 대한 자세한 내용은 SQL Server 온라인 설명서의 [SMO&#40;SQL Server 관리 개체&#41; 프로그래밍 가이드](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조하세요.  
@@ -155,10 +155,10 @@ ON
     해결 방법: Azure Storage에서 활성 데이터베이스 파일이 사용 중인 자격 증명을 삭제하려고 하면 이 오류가 나타날 수 있습니다. 자격 증명을 삭제하려면 이 데이터베이스 파일을 포함하는 연결된 BLOB을 먼저 삭제해야 합니다. 활성 임대가 있는 BLOB을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 -   *공유 액세스 서명이 컨테이너에서 올바르게 만들어지지 않습니다.*   
-     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](https://msdn.microsoft.com/library/dn466435.aspx)에서 2단원에 제공된 지침을 검토하세요.  
+     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 저장소 서비스 사용 ](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)에서 2단원에 제공된 지침을 검토하세요.  
   
 -   *SQL Server 자격 증명이 올바르게 만들어지지 않았습니다.*   
-    해결 방법: **Identity** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](https://msdn.microsoft.com/library/dn466436.aspx)에서 3단원에 제공된 지침을 검토하세요.  
+    해결 방법: **Identity** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../lesson-3-database-backup-to-url.md)에서 3단원에 제공된 지침을 검토하세요.  
   
  **임대 BLOB 오류:**  
   
@@ -167,10 +167,10 @@ ON
  **데이터베이스 오류**  
   
 1.  *데이터베이스를 만들 때 발생하는 오류*   
-    해결 방법: [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](https://msdn.microsoft.com/library/dn466431.aspx)에서 4단원에 제공된 지침을 검토하세요.  
+    해결 방법: [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../lesson-4-restore-database-to-virtual-machine-from-url.md)에서 4단원에 제공된 지침을 검토하세요.  
   
 2.  *Alter 문을 실행할 때 발생하는 오류*   
-    해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Azure Storage에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](https://msdn.microsoft.com/library/dn466438.aspx)에서 7단원에 제공된 지침을 검토하세요.  
+    해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Azure Storage에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob Storage 서비스 사용](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 7단원에 제공된 지침을 검토하세요.  
   
 3.  *오류 코드 5120 물리적 파일 "%.\*ls"을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"*   
     해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Azure Storage의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 오류 *코드 5120 물리적 파일 "%.\*ls"를 열 수 없습니다. 운영 체제 오류 %d: "%ls"*.  

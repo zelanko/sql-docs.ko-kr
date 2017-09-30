@@ -14,11 +14,11 @@ caps.latest.revision: 26
 author: stevestein
 ms.author: sstein
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 1167a74aff5a5cfa495bc5a00a6b52e30a5c2e7b
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 9c4dfd2aa4f511e9ef7615dccf05ed46757f1e0c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>열 마스터 키 만들기 및 저장(상시 암호화)
@@ -51,7 +51,7 @@ ms.lasthandoff: 06/22/2017
 
 ### <a name="supported-tools"></a>지원되는 도구
 
-[SQL Server Management Studio](https://msdn.microsoft.com/library/Hh213248.aspx) 및 [SqlServer PowerShell 모듈](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 을 사용하여 상시 암호화를 구성하고 상시 암호화 키를 관리할 수 있습니다. 이러한 도구에서 지원하는 키 저장소 목록은 다음을 참조하세요.
+[SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) 및 [SqlServer PowerShell 모듈](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update) 을 사용하여 상시 암호화를 구성하고 상시 암호화 키를 관리할 수 있습니다. 이러한 도구에서 지원하는 키 저장소 목록은 다음을 참조하세요.
 
 - [SQL Server Management Studio를 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [PowerShell을 사용하여 상시 암호화 구성](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)

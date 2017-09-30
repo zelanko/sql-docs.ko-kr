@@ -18,11 +18,11 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: ba3bc85a1b6fced603f9f0a137f638a921c0f447
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 41831fe1852600666f5f3cf370cbab675e723cca
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>트랜잭션 로그 백업(SQL Server)
@@ -31,11 +31,11 @@ ms.lasthandoff: 06/22/2017
    
 ##  <a name="Restrictions"></a> 제한 사항  
   
--   명시적 또는 [암시적](https://msdn.microsoft.com/library/ms187807.aspx) 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  명시적 트랜잭션은 트랜잭션 시작 및 완료를 모두 명시적으로 정의하는 트랜잭션입니다.
+-   명시적 또는 [암시적](../../t-sql/statements/set-implicit-transactions-transact-sql.md) 트랜잭션에서는 BACKUP 문을 사용할 수 없습니다.  명시적 트랜잭션은 트랜잭션 시작 및 완료를 모두 명시적으로 정의하는 트랜잭션입니다.
   
 ##  <a name="Recommendations"></a> 권장 사항  
   
--   데이터베이스에서 전체 또는 대량 로그 [복구 모델](https://msdn.microsoft.com/library/ms189275.aspx)을 사용하는 경우 데이터를 보호하고 [트랜잭션 로그가 채워지지 않도록](https://msdn.microsoft.com/library/ms175495.aspx) 트랜잭션 로그를 정기적으로 백업해야 합니다. 그러면 로그가 잘리고 특정 시점에 데이터베이스를 복원할 수 있습니다. 
+-   데이터베이스에서 전체 또는 대량 로그 [복구 모델](recovery-models-sql-server.md)을 사용하는 경우 데이터를 보호하고 [트랜잭션 로그가 채워지지 않도록](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md) 트랜잭션 로그를 정기적으로 백업해야 합니다. 그러면 로그가 잘리고 특정 시점에 데이터베이스를 복원할 수 있습니다. 
   
 -   기본적으로 백업 작업을 성공적으로 수행할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 시스템 이벤트 로그에 항목이 추가됩니다. 로그를 자주 백업하는 경우 이러한 성공 메시지는 빠르게 누적되므로 엄청난 오류 로그가 쌓여 다른 메시지를 찾기 힘들 수 있습니다. 이 경우 스크립트가 이러한 로그 항목에 종속되지 않을 경우 추적 플래그 3226을 사용하여 이러한 항목을 표시하지 않을 수 있습니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)를 참조하세요.  
   
