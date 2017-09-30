@@ -20,10 +20,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: be884b2d1b316506592f939167c5be91ddc2a9f6
-ms.openlocfilehash: 141c83e009e1cf135690297442c6a4864a871bfc
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5f180c837af757fd5a8df7f356b8c644916612f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
@@ -153,7 +153,7 @@ ms.lasthandoff: 07/31/2017
 22. **암호화** 섹션에서 **백업 암호화** 확인란을 사용하여 백업에 암호화를 사용할지 여부를 결정합니다. 암호화 알고리즘을 선택하려면 **알고리즘** 드롭다운 목록을 사용합니다.  기존 인증서 또는 비대칭 키를 선택하려면 **인증서 또는 비대칭 키** 드롭다운 목록을 사용합니다. 암호화는 SQL Server 2014 이상에서 지원됩니다. 암호화 옵션에 대한 자세한 내용은 [데이터베이스 백업&#40;백업 옵션 페이지&#41;](../../relational-databases/backup-restore/back-up-database-backup-options-page.md)을 참조하세요.  
   
   
-[유지 관리 계획 마법사](https://msdn.microsoft.com/library/ms191002.aspx) 를 사용하여 데이터베이스 백업을 만들 수 있습니다. 
+[유지 관리 계획 마법사](../maintenance-plans/use-the-maintenance-plan-wizard.md) 를 사용하여 데이터베이스 백업을 만들 수 있습니다. 
 
 ### <a name="examples"></a>예  
 #### <a name="a--full-back-up-to-disk-to-default-location"></a>**A.  기본 위치로 디스크 전체 백업**
