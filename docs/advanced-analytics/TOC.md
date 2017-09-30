@@ -7,6 +7,8 @@
 ## [아키텍처 및 개요](architecture-overview-machine-learning.md)
 ## [SQL Server 버전 간 기계 학습 기능의 차이점](r/differences-in-r-features-between-editions-of-sql-server.md)
 
+## [Azure SQL Database에서 R 사용](r/using-r-in-azure-sql-database.md)
+
 # [Machine Learning Services - R](r/sql-server-r-services.md)
 
 ## [시작](r/getting-started-with-sql-server-r-services.md)
