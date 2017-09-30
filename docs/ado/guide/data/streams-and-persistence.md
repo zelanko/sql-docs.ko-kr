@@ -108,7 +108,7 @@ Set rs = nothing
   
  RDS에 새 속성 [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md)를 생성 하는.asp 페이지를 가리키는 **레코드 집합**합니다. 즉, 한 **레코드 집합** 개체 없이 얻을 수 RDS 서버 쪽을 사용 하 여 [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체나 비즈니스 개체를 작성 하는 사용자입니다. RDS 프로그래밍 모델을 훨씬 간단해 집니다.  
   
- Http://server/directory/recordset.asp 명명 된 서버 쪽 코드:  
+ http://server/directory/recordset.asp 명명 된 서버 쪽 코드:  
   
 ```  
 <%  
