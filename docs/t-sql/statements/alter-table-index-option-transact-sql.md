@@ -70,7 +70,7 @@ ms.lasthandoff: 09/08/2017
 ```  
   
 ## <a name="arguments"></a>인수  
- PAD_INDEX ** = ** {ON | **OFF** }  
+ PAD_INDEX  **=**  {ON | **OFF** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 09/08/2017
  OFF 또는 *fillfactor* 지정 하지 않으면  
  중간 수준 페이지는 중간 페이지의 키 집합이 지정된 경우 최소한 인덱스에 사용할 수 있는 최대 크기의 행 하나를 위한 공간을 남겨 두고 거의 채워집니다.  
   
- FILLFACTOR ** = ** *fillfactor*  
+ FILLFACTOR  **=**  *fillfactor*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  인덱스를 만들거나 변경할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. 지정한 값은 1에서 100까지의 정수 값이어야 합니다. 기본값은 0입니다.  
@@ -89,7 +89,7 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  채우기 비율 값 0과 100은 모든 면에서 동일합니다.  
   
- IGNORE_DUP_KEY ** = ** {ON | **OFF** }  
+ IGNORE_DUP_KEY  **=**  {ON | **OFF** }  
  삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다. IGNORE_DUP_KEY 옵션은 인덱스를 만들거나 다시 작성한 후의 삽입 작업에만 적용됩니다. 실행할 때이 옵션에 영향을 주지 않습니다 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md), 또는 [업데이트](../../t-sql/queries/update-transact-sql.md)합니다. 기본값은 OFF입니다.  
   
  ON  
@@ -104,7 +104,7 @@ ms.lasthandoff: 09/08/2017
   
  이전 버전과 호환되는 구문에서 WITH IGNORE_DUP_KEY는 WITH IGNORE_DUP_KEY = ON과 같습니다.  
   
- STATISTICS_NORECOMPUTE ** = ** {ON | **OFF** }  
+ STATISTICS_NORECOMPUTE  **=**  {ON | **OFF** }  
  통계를 다시 계산할지 여부를 지정합니다. 기본값은 OFF입니다.  
   
  ON  
@@ -113,7 +113,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  자동 통계 업데이트가 설정됩니다.  
   
- ALLOW_ROW_LOCKS ** = ** { **ON** | OFF}  
+ ALLOW_ROW_LOCKS  **=**  { **ON** | OFF}  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  행 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
@@ -124,7 +124,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  행 잠금이 사용되지 않습니다.  
   
- ALLOW_PAGE_LOCKS ** = ** { **ON** | OFF}  
+ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  페이지 잠금의 허용 여부를 지정합니다. 기본값은 ON입니다.  
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  페이지 잠금이 사용되지 않습니다.  
   
- SORT_IN_TEMPDB ** = ** {ON | **OFF** }  
+ SORT_IN_TEMPDB  **=**  {ON | **OFF** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  에 정렬 결과 저장할지 여부를 지정 **tempdb**합니다. 기본값은 OFF입니다.  
@@ -146,7 +146,7 @@ ms.lasthandoff: 09/08/2017
  OFF  
  중간 정렬 결과가 인덱스와 같은 데이터베이스에 저장됩니다.  
   
- 온라인 ** = ** {ON | **OFF** }  
+ 온라인  **=**  {ON | **OFF** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다. REBUILD 작업은 ONLINE 작업으로만 수행할 수 있습니다.  
@@ -168,10 +168,10 @@ ms.lasthandoff: 09/08/2017
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- MAXDOP ** = ** *max_degree_of_parallelism*  
+ MAXDOP  **=**  *max_degree_of_parallelism*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 재정의 **x degree of** 인덱스 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
+ 재정의 **x degree of** 인덱스 작업의 기간에 대 한 구성 옵션입니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
@@ -210,7 +210,7 @@ ms.lasthandoff: 09/08/2017
   
  압축에 대 한 자세한 내용은 참조 [데이터 압축](../../relational-databases/data-compression/data-compression.md)합니다.  
   
-ON PARTITIONS **(** { \<partition_number_expression > | \<범위 >} [ **,**... * n * ] **)** **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
+ON PARTITIONS **(** { \<partition_number_expression > | \<범위 >} [ **,**...  *n*  ] **)** **적용할**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다.  
   
  DATA_COMPRESSION 설정을 적용할 파티션을 지정합니다. 테이블이 분할 되지 않은 경우 ON PARTITIONS 인수 오류가 발생 합니다. ON PARTITIONS 절을 제공 하지 않으면 DATA_COMPRESSION 옵션이 분할된 된 테이블의 모든 파티션에 적용 됩니다.  
   
