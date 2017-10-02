@@ -26,7 +26,7 @@ ms.lasthandoff: 08/03/2017
 
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 파티션을 관리하는 방법에 대해 설명합니다. 매개 변수가 있는 행 필터를 사용하여 겹치지 않는 파티션을 생성할 수 있습니다. 이러한 파티션을 제한하여 특정 파티션을 하나의 구독에서만 받도록 할 수 있습니다. 이러한 경우 구독자 수가 많으면 파티션 수가 많아지고 이에 따라 동일한 수의 분할된 스냅숏이 필요합니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 매개 변수가 있는 필터로 병합 게시에 대한 파티션을 관리하는 방법에 대해 설명합니다. 매개 변수가 있는 행 필터를 사용하여 겹치지 않는 파티션을 생성할 수 있습니다. 이러한 파티션을 제한하여 특정 파티션을 하나의 구독에서만 받도록 할 수 있습니다. 이러한 경우 구독자 수가 많으면 파티션 수가 많아지고 이에 따라 동일한 수의 분할된 스냅숏이 필요합니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요.  
   
  **항목 내용**  
   
@@ -46,12 +46,12 @@ ms.lasthandoff: 08/03/2017
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   권장하는 복제 토폴로지를 스크립팅할 경우 게시 스크립트는 데이터 파티션을 만드는 저장 프로시저 호출을 포함합니다. 스크립트는 생성된 파티션에 대한 참조와 하나 이상의 파티션을 다시 만드는 방법(필요한 경우)을 제공합니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+-   권장하는 복제 토폴로지를 스크립팅할 경우 게시 스크립트는 데이터 파티션을 만드는 저장 프로시저 호출을 포함합니다. 스크립트는 생성된 파티션에 대한 참조와 하나 이상의 파티션을 다시 만드는 방법(필요한 경우)을 제공합니다. 자세한 내용은 [스크립팅 복제](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
--   겹치지 않는 파티션과 함께 구독을 생성하는 매개 변수가 있는 필터가 게시에 사용된 경우 특정 구독이 손실되어 다시 만들어야 하면 구독된 파티션을 제거하고 구독을 다시 만든 다음 파티션을 다시 만듭니다. 자세한 내용은 [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요. 복제에서는 게시 만들기 스크립트가 생성될 때 기존 구독자 파티션에 대한 만들기 스크립트를 생성합니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+-   겹치지 않는 파티션과 함께 구독을 생성하는 매개 변수가 있는 필터가 게시에 사용된 경우 특정 구독이 손실되어 다시 만들어야 하면 구독된 파티션을 제거하고 구독을 다시 만든 다음 파티션을 다시 만듭니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)을 참조하세요. 복제에서는 게시 만들기 스크립트가 생성될 때 기존 구독자 파티션에 대한 만들기 스크립트를 생성합니다. 자세한 내용은 [스크립팅 복제](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅숏을 생성하고, 스냅숏을 정리할 수 있습니다.  
+ **게시 속성 - \<Publication>** 대화 상자의 **데이터 파티션** 페이지에서 파티션을 관리합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 이 페이지에서는 파티션을 만들거나 삭제하고, 구독자가 스냅숏 생성 및 배달을 시작하도록 허용하고, 하나 이상의 파티션에 대한 스냅숏을 생성하고, 스냅숏을 정리할 수 있습니다.  
   
 #### <a name="to-create-a-partition"></a>파티션을 만들려면  
   
@@ -100,7 +100,7 @@ ms.lasthandoff: 08/03/2017
   
 -   분할된 스냅숏 작업이 마지막으로 실행된 시간  
   
- 두 부분으로 구성된 스냅숏의 두 번째 부분은 새 구독이 초기화될 때 요청에 따라 생성될 수 있지만, 아래의 절차를 사용하면 이 스냅숏이 생성되는 방식을 제어하고 가장 편리할 때 이 스냅숏을 미리 생성할 수 있습니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
+ 두 부분으로 구성된 스냅숏의 두 번째 부분은 새 구독이 초기화될 때 요청에 따라 생성될 수 있지만, 아래의 절차를 사용하면 이 스냅숏이 생성되는 방식을 제어하고 가장 편리할 때 이 스냅숏을 미리 생성할 수 있습니다. 자세한 내용은 [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
   
 #### <a name="to-view-information-on-existing-partitions"></a>기존 파티션의 정보를 보려면  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 08/03/2017
   
     -   **@host_name** - 매개 변수가 있는 필터가 [HOST_NAME&#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md)에 의해 반환된 값으로 정의된 경우  
   
-2.  이 새 파티션에 대해 매개 변수가 있는 스냅숏을 만들고 초기화합니다. 자세한 내용은 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+2.  이 새 파티션에 대해 매개 변수가 있는 스냅숏을 만들고 초기화합니다. 자세한 내용은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
   
 #### <a name="to-delete-a-partition"></a>파티션을 삭제하려면  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 08/03/2017
      이 경우 파티션에 대한 스냅숏 작업과 스냅숏 파일도 제거됩니다.  
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
- 매개 변수가 있는 필터를 사용하여 게시를 보다 잘 관리하려면 RMO(복제 관리 개체)를 사용하여 새 구독자 파티션을 프로그래밍 방식으로 만들고, 기존 구독자 파티션을 열거하고, 프로그래밍 방식으로 열거합니다. 구독자 파티션을 만드는 방법은 [Create a Snapshot for a Merge Publication with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요. 기존 파티션에 대한 다음 정보를 가져올 수 있습니다.  
+ 매개 변수가 있는 필터를 사용하여 게시를 보다 잘 관리하려면 RMO(복제 관리 개체)를 사용하여 새 구독자 파티션을 프로그래밍 방식으로 만들고, 기존 구독자 파티션을 열거하고, 프로그래밍 방식으로 열거합니다. 구독자 파티션을 만드는 방법은 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요. 기존 파티션에 대한 다음 정보를 가져올 수 있습니다.  
   
 -   파티션에서 기반으로 사용하는 값 및 필터링 기능  
   
@@ -164,7 +164,7 @@ ms.lasthandoff: 08/03/2017
 7.  삭제된 각 파티션에 대해 6단계를 반복합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [매개 변수가 있는 행 필터](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../../relational-databases/replication/snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   
