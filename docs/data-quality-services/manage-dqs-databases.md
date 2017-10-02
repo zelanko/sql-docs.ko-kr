@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   DQS 데이터베이스가 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]로 작동하기 위해 필요한 몇몇 외부 엔터티가 있습니다. 구체적으로 말하면 master 데이터베이스의 SQL Server 로그인 2개(##MS_dqs_db_owner_login## 및 ##MS_dqs_service_login##)와 초기화 저장 프로시저(DQInitDQS_MAIN)입니다.  
   
- SQL Server의 백업 및 복원에 대한 자세한 내용은 [Back Up and Restore of SQL Server Databases](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하십시오.  
+ SQL Server의 백업 및 복원에 대한 자세한 내용은 [SQL Server 데이터베이스 백업 및 복원](../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)을 참조하십시오.  
   
 ### <a name="default-autogrowth-size-and-recovery-model-for-the-dqs-databases"></a>DQS 데이터베이스에 대한 기본 자동 증가 크기 및 복구 모델  
  DQS 데이터베이스 및 트랜잭션 로그가 무제한으로 커져서 잠재적으로 하드 디스크를 가득 채우지 않도록 하려면  
