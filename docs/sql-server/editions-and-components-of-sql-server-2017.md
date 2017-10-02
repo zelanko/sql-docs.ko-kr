@@ -3,7 +3,7 @@ title: "SQL Server 2017의 버전과 지원하는 기능 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 - SQL2017_New_Updated
-ms.date: 07/14/2017
+ms.date: 09/14/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 22507f627c33c9424d725ca5d249bd04628b3ea6
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
@@ -57,8 +57,6 @@ ms.lasthandoff: 08/28/2017
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)  
 * [SQL Server 2014](http://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)
 
->[!NOTE]
->이 문서의 모든 정보는 SQL Server 2017의 예비 릴리스에 적용되므로 변경될 수 있습니다. 
   
 설치 요구 사항은 사용자의 응용 프로그램 요구에 따라 달라질 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전별로 각기 다르게 조직 및 개인의 고유한 성능, 런타임 및 가격 요구 사항을 충족시켜 줍니다. 설치하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 구성 요소도 특정 요구 사항에 따라 달라집니다. 다음 섹션은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 여러 버전과 구성 요소 중에서 가장 적합한 항목을 선택하는 방법을 이해하는 데 도움이 될 것입니다.  
 
@@ -84,7 +82,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |Enterprise|프리미엄 제품인 [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise 버전에서는 초고속 성능, 무제한 가상화 및 종단 간 비즈니스 인텔리전스 기능이 포함된 포괄적인 고성능 데이터 센터를 제공함으로써 중요한 작업의 서비스 수준을 높이고 데이터 인사이트에 대한 최종 사용자의 액세스가 가능하도록 합니다.|  
 |표준|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard 버전에서는 부서와 소규모 조직이 응용 프로그램을 실행하기 위한 기본 데이터 관리 및 비즈니스 인텔리전스 데이터베이스를 제공하고 온-프레미스 및 클라우드용 공용 개발 도구를 지원함으로써, 최소한의 IT 리소스만으로도 데이터베이스 관리를 효율적으로 수행할 수 있도록 합니다.|  
 |Web|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Web 버전을 사용하면 소규모부터 대규모에 이르는 웹 속성에 대한 확장성, 경제성 및 관리 효율성 기능을 제공하여 웹 호스터와 웹 VAP의 총 소유 비용을 낮출 수 있습니다.|  
-|개발자|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기반에서 어떤 유형의 응용 프로그램도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허여되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 응용 프로그램을 빌드하고 테스트하는 사용자에게<br />                [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] 적합한 버전입니다.|  
+|개발자|[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer 버전을 사용하면 개발자는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]기반에서 어떤 유형의 응용 프로그램도 빌드할 수 있습니다. 이 버전은 Enterprise 버전의 모든 기능을 포함하지만 프로덕션 서버가 아닌 개발 및 테스트 시스템으로 사용하도록 라이선스가 허여되어 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer는 응용 프로그램을 빌드하고 테스트하는 사용자에게 적합한 버전입니다.|  
 |Express 버전:|Express 버전은 초급 단계의 무료 데이터베이스로 데스크톱 및 소규모 서버 데이터 기반 응용 프로그램을 분석 및 빌드하는 데 적합합니다. 이 버전은 개별 소프트웨어 공급업체, 개발자 및 취미로 클라이언트 응용 프로그램을 빌드하는 사용자에게 이상적입니다. 고급 데이터베이스 기능이 필요할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를 다른 고급 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]로 원활하게 업그레이드할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB는 모든 프로그래밍 기능을 포함하지만 사용자 모드에서 실행되며 구성이 필요 없는 빠른 설치가 가능하고 필수 구성 요소가 적은 새로운 경량 버전의 Express입니다|  
   
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>인터넷 서버에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용  
@@ -157,9 +155,9 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |데이터베이스 미러링|예|예<br /><br /> Full 보안만|미러링 모니터만|미러링 모니터만|미러링 모니터만| 
 |백업 압축|예|예|아니오|아니오|아니요| 
 |데이터베이스 스냅숏|예|예|예|예|예|
-|Always On 장애 조치(failover) 클러스터 인스턴스|예<br /><br /> 운영 체제가 지원하는 최대 크기의 노드 수|예<br /><br /> 노드 2개 지원|아니요|아니오|아니요|  
-|Always On 가용성 그룹|예<br /><br /> 2개의 동기 보조 복제본을 포함하여 최대 8개까지 보조 복제본 지원|아니요|아니오|아니오|아니요|
-|기본 가용성 그룹 <sup>2</sup>|아니요|예<br /><br /> 노드 2개 지원|아니요|아니오|아니요|
+|Always On 장애 조치(failover) 클러스터 인스턴스<sup>2</sup>|예|예|아니오|아니오|아니요|  
+|Always On 가용성 그룹<sup>3</sup>|예|아니오|아니오|아니오|아니요|
+|기본 가용성 그룹<sup>4</sup>|아니요|예|아니오|아니오|아니요|
 |온라인 페이지 및 파일 복원|예|아니오|아니오|아니오|아니요|
 |온라인 인덱싱|예|아니오|아니오|아니오|아니요|
 |다시 시작 가능한 온라인 인덱스 다시 작성|예|아니오|아니오|아니오|아니요|
@@ -170,12 +168,18 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |데이터베이스 복구 관리자|예|예|예|예|예|
 |암호화된 백업|예|예|아니오|아니오|아니요|
 |Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니오|아니요|
-|클러스터가 없는 가용성 그룹|예|예|예|아니오|아니오|아니요|
+|클러스터가 없는 가용성 그룹|예|예|아니오|아니오|아니오|아니요|
 |최소 복제본 커밋 가용성 그룹|예|예|예|아니오|아니오|아니요|
   
- <sup>1</sup> Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md)(Server Core에 SQL Server 설치)를 참조하세요. 
 
-<sup>2</sup> 기본 가용성 그룹에 대한 자세한 내용은 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.  
+<sup>1</sup> Server Core에 SQL Server를 설치하는 방법에 대한 자세한 내용은 [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md)(Server Core에 SQL Server 설치)를 참조하세요. 
+
+<sup>2</sup> Enterprise 버전에서 노드 수는 운영 체제 최대값입니다. Standard 버전에서는 두 개의 노드가 지원됩니다. 
+
+<sup>3</sup> Enterprise 버전에서는 2개의 동기 보조 복제본을 포함하여 최대 8개까지 보조 복제본이 지원됩니다. 
+
+<sup>4</sup> Standard 버전은 기본 가용성 그룹을 지원합니다. 기본 가용성 그룹은 데이터베이스가 하나인 두 개의 복제본을 지원합니다. 기본 가용성 그룹에 대한 자세한 내용은 [기본 가용성 그룹](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md)을 참조하세요.  
+
 
 ##  <a name="RDBMSSP"></a> RDBMS 확장성 및 성능  
   
@@ -263,8 +267,8 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |사용자 인스턴스|아니요|아니오|아니요|예|예| 
 |LocalDB|아니요|아니오|아니요|예|아니요| 
 |관리자 전용 연결|예|예|예|예, 추적 플래그 있음|예, 추적 플래그 있음|   
-|PowerShell 스크립팅 지원|예|예|예|예|예| 
 |SysPrep 지원 <sup>1</sup>|예|예|예|예|예| 
+|PowerShell 스크립팅 지원<sup>2</sup>|예|예|예|예|예| 
 |데이터 계층 응용 프로그램 구성 요소 작업 지원 - 추출, 배포, 업그레이드, 삭제|예|예|예|예|예| 
 |정책 자동화(일정 및 변경 내용 검사)|예|예|예|아니오|아니요|   
 |성능 데이터 수집기|예|예|예|아니오|아니요| 
@@ -282,6 +286,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
   
  <sup>1</sup> 자세한 내용은 [SysPrep을 사용하여 SQL Server 설치 시 고려 사항](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
  
+ <sup>2</sup> Linux에서는 Linux의 SQL Server를 대상으로 하는 Windows 컴퓨터에서 PowerShell 스크립트가 지원됩니다. 
 ##  <a name="DevTools"></a> 개발 도구  
   
 |기능|Enterprise|Standard|Web|Express with Advanced Services|Express| 
@@ -393,7 +398,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|아니요|아니요| 
 |StreamInsight HA|StreamInsight Premium Edition|아니요|아니오|아니오|아니요|   
   
-> [![SSMS 다운로드](../analysis-services/media/download.png)](https://msdn.microsoft.com/library/mt238290.aspx) 최신 버전의 **[SQL Server Management Studio 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)**    
+> [![SSMS 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  **최신 버전의 [SQL Server Management Studio 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
   
 ## <a name="next-steps"></a>다음 단계 
  [SQL Server에 대한 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
