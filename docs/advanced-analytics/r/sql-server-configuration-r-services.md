@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 912e0180acf95e2788213a7febd9361f4d4d6990
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R로 사용 하기 위한 SQL Server 구성
@@ -96,7 +96,7 @@ Columnstore는 테이블에 대 한 다양 한 삽입 경우 효율적인 수 �
 
 + [테이블이 나 인덱스에 압축 사용](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 
-+ [Columnstore 인덱스 가이드](https://msdn.microsoft.com/library/gg492088.aspx)
++ [Columnstore 인덱스 가이드](../../relational-databases/indexes/columnstore-indexes-overview.md)
 
 ### <a name="memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블
 
@@ -208,7 +208,7 @@ SQL Server의 이점 중 하나는 많은 양의 행 병렬에서 처리 기능�
 
 이; resume 일치 하는 시나리오에서 사용 하는 방법 그러나 SQL Server에서 리소스 관리를이 접근 방식을 구현 해야 합니다. 외부 스크립트 작업에 대 한 작업 그룹을 설정 하 여 서로 다른 프로세서 그룹에 작업 점수 매기기 R 라우팅하고 더 빠른 처리량을 달성 합니다.
 
-리소스 관리를 할당할 수 있습니다 (CPU 및 메모리)의 경쟁을 작업 부하를 최소화 하기 위해 서버에서 사용 가능한 리소스를 나눕니다. R 작업의 서로 다른 유형을 구분 하기 위해 분류자 함수를 설정할 수 있습니다: 예를 들어 판단할 수 있습니다는 항상 응용 프로그램에서 호출 하는 점수 매기기 ± ְ , 낮은 우선 순위를 보유 하는 재교육 작업 합니다. 잠재적으로 이러한 리소스 격리 실행 시간을 향상 되 고 예측 가능성이 더욱 뛰어난 성능을 제공할 수 있습니다.
+리소스 관리를 할당할 수 있습니다 (CPU 및 메모리)의 경쟁을 작업 부하를 최소화 하기 위해 서버에서 사용 가능한 리소스를 나눕니다. R 작업의 서로 다른 유형을 구분 하기 위해 분류자 함수를 설정할 수 있습니다: 예를 들어 판단할 수 있습니다는 항상 응용 프로그램에서 호출 하는 점수 매기기, 낮은 우선 순위를 보유 하는 재교육 작업 합니다. 잠재적으로 이러한 리소스 격리 실행 시간을 향상 되 고 예측 가능성이 더욱 뛰어난 성능을 제공할 수 있습니다.
 
 ### <a name="concurrent-scoring-using-powershell"></a>PowerShell을 사용 하 여 동시 점수 매기기
 
