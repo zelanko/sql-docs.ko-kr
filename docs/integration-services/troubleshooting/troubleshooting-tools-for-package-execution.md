@@ -43,7 +43,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **트랜잭션을 사용하여 데이터 무결성 유지** 자세한 내용은 [Integration Services 트랜잭션](../../integration-services/integration-services-transactions.md)을 참조하세요.  
   
--   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+-   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>이벤트 처리기를 사용하여 패키지 오류 파악 및 처리  
  이벤트 처리기를 사용하여 패키지 및 패키지의 개체에서 발생한 여러 이벤트에 대응할 수 있습니다.  
