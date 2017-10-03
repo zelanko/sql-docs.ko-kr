@@ -11,17 +11,17 @@ ms.technology: database-engine
 ms.assetid: 1619489d-377a-4f32-8930-d4f536539689
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 61b4ba948df071768380d4a6f2b4ddc4421692d8
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 3e29e84d1aa2fcae2dca2d36bd0e3698eedc54a8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-databases-and-structured-data-to-sql-server-on-linux"></a>Linux에서 SQL Server로 데이터베이스와 구조적된 데이터 마이그레이션 
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-Linux에서 실행 중인 SQL Server 2017 RC2 하 여 데이터베이스와 데이터를 마이그레이션할 수 있습니다. 사용 하도록 선택 하면 원본 데이터 및 특정 시나리오에 따라 다릅니다. 다음 섹션에서는 다양 한 마이그레이션 시나리오에 대 한 유용한 정보를 제공 합니다.
+에 SQL Server 2017 Linux에서 실행 중인 데이터베이스 및 데이터를 마이그레이션할 수 있습니다. 사용 하도록 선택 하면 원본 데이터 및 특정 시나리오에 따라 다릅니다. 다음 섹션에서는 다양 한 마이그레이션 시나리오에 대 한 유용한 정보를 제공 합니다.
 
 ## <a name="migrate-from-sql-server-on-windows"></a>Windows에서 SQL Server에서 마이그레이션
 Windows에서 SQL Server 데이터베이스 SQL Server 2017 Linux에서 마이그레이션할 경우 바람직한 방법은 SQL Server 백업 및 복원 사용 것입니다.

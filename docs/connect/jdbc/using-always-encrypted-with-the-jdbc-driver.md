@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 4bc5be85fddcc86de0a3fe845620f5152b568015
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/21/2017
     -   정책 파일을 다운로드할 수 sqljdbc42.jar를 사용 하는 경우 [Java Cryptography Extension (JCE) 무제한 강도 Jurisdiction Policy Files 8 다운로드](http://www.oracle.com/technetwork/java/javase/downloads/jce8-download-2133166.html)   
     
 ## <a name="enabling-always-encrypted-for-application-queries"></a>응용 프로그램 쿼리에 대해 Always Encrypted 사용  
-값을 설정 하 여이 매개 변수를 암호화 및 암호화 된 열을 대상으로 하는 쿼리 결과의 암호 해독을 활성화 하는 가장 쉬운 방법은 **columnEncryptionSetting** 연결 문자열 키워드를 ** 활성화**합니다.
+값을 설정 하 여이 매개 변수를 암호화 및 암호화 된 열을 대상으로 하는 쿼리 결과의 암호 해독을 활성화 하는 가장 쉬운 방법은 **columnEncryptionSetting** 연결 문자열 키워드를  **활성화**합니다.
 
 다음은 JDBC 드라이버에서 상시 암호화를 사용 하는 연결 문자열의 예입니다.
   
@@ -152,7 +152,7 @@ catch (Exception e)
 - Microsoft JDBC Driver for SQL Server가 SSN 및 BirthDate 열에서 검색 한 데이터를 투명 하 게 암호 해독 하는 대로 프로그램이 인쇄 하는 모든 값에 일반 텍스트로 됩니다.
 
 > [!NOTE]  
->  결정적 암호화를 사용하여 암호화된 경우 쿼리에서 열에 대해 동등 비교를 수행할 수 있습니다. 자세한 내용은 참조는 **선택 하면 결정적 또는 임의 암호화** 의 섹션은 [상시 암호화 (데이터베이스 엔진)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) 항목입니다.  
+>  결정적 암호화를 사용하여 암호화된 경우 쿼리에서 열에 대해 동등 비교를 수행할 수 있습니다. 자세한 내용은 참조는 **선택 하면 결정적 또는 임의 암호화** 의 섹션은 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 항목입니다.  
 
 ```
 String connectionString =  "jdbc:sqlserver://localhost:1433;databaseName=Clinic;user=sa;password=******;columnEncryptionSetting=Enabled;" ;
@@ -214,7 +214,7 @@ catch (Exception e)
 
 ### <a name="unsupported-data-type-conversion-errors"></a>지원 되지 않는 데이터 형식 변환 오류
 
-상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 참조 [상시 암호화 (데이터베이스 엔진)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine) 자세한 목록은 지원 되는 형식 변환에 대 한 합니다. 데이터 형식 변환 오류를 방지하려면 다음을 확인하세요.
+상시 암호화는 암호화된 데이터 형식에 대해 몇 가지 변환을 지원합니다. 참조 [상시 암호화 (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 자세한 목록은 지원 되는 형식 변환에 대 한 합니다. 데이터 형식 변환 오류를 방지하려면 다음을 확인하세요.
 
 - 적절 한 setter 메서드를 사용 하 여 전달 하는 경우 암호화 된 열을 대상으로 매개 변수 값 매개 변수의 SQL Server 데이터 형식이 되도록 정확히 동일한 대상 열 또는 매개 변수의 SQL Server 데이터 형식 변환의 형식으로 대상 열의 형식을 사용할 수 있습니다. Note는 새로운 API 메서드가 특정 SQL Server 데이터 형식에 해당 하는 매개 변수를 전달할 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가 되었습니다. 예를 들어, 열 암호화 되지 않은 경우에 datetime2 또는 날짜/시간 열의 매개 변수를 전달할 setTimestamp() 메서드를 사용할 수 있습니다. 하지만 열을 암호화할 때 데이터베이스에 있는 열의 유형을 나타내는 정확 하 게 메서드를 사용 해야 합니다. 예를 들어 setTimestamp()를 사용 하 여 하는 암호화 된 datetime2 열에 값을 전달 하 고 setDateTime()를 사용 하 여 암호화 된 datetime 열에 값을 전달 합니다. 참조 [상시 암호화 API 참조 JDBC 드라이버에 대 한](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) 전체 목록은 새로운 Api입니다. 
 - SQL Server 데이터 형식이 decimal 및 numeric인 열을 대상으로 하는 매개 변수의 정밀도 및 배율이 대상 열에 대해 구성된 정밀도 및 배율과 동일해야 합니다. Note는 새로운 API 메서드가 정밀도 배율을 decimal 및 numeric 데이터 형식을 나타내는 매개 변수/열에 대 한 데이터 값과 함께 적용 하려면 SQLServerPreparedStatement, SQLServerCallableStatement 및 SQLServerResultSet 클래스에 추가 되었습니다. 참조 [상시 암호화 API 참조 JDBC 드라이버에 대 한](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md) 오버 로드/새 Api의 전체 목록은 합니다.  
@@ -314,7 +314,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-active directory-라이브러리-에-java 라이브러리](https://github.com/AzureAD/azure-activedirectory-library-for-java)  
   
 ### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자를 사용 하 여
-Windows 인증서 저장소에 열 마스터 키를 저장 하는 SQLServerColumnEncryptionCertificateStoreProvider는 사용할 수 있습니다. SQL Server Management Studio (SSMS)에서 상시 암호화 마법사 또는 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키와 열 암호화 키 정의 만들 수 있습니다. 수 있는 Windows 인증서 저장소에서 자체 서명 된 인증서를 생성 하는 동일한 마법사를 사용할 수는 항상 암호화 된 데이터에 대 한 열 마스터 키로 사용 합니다. 열 마스터 키와 열 암호화에 대 한 자세한 내용은 키 T-SQL 구문 방문 [CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql) 및 [CREATE COLUMN ENCRPTION KEY](/sql-docs/docs/t-sql/statements/create-column-encryption-key-transact-sql) 각각.
+Windows 인증서 저장소에 열 마스터 키를 저장 하는 SQLServerColumnEncryptionCertificateStoreProvider는 사용할 수 있습니다. SQL Server Management Studio (SSMS)에서 상시 암호화 마법사 또는 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키와 열 암호화 키 정의 만들 수 있습니다. 수 있는 Windows 인증서 저장소에서 자체 서명 된 인증서를 생성 하는 동일한 마법사를 사용할 수는 항상 암호화 된 데이터에 대 한 열 마스터 키로 사용 합니다. 열 마스터 키와 열 암호화에 대 한 자세한 내용은 키 T-SQL 구문 방문 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 [CREATE COLUMN ENCRPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 각각.
 
 SQLServerColumnEncryptionCertificateStoreProvider의 이름은 "MSSQL_CERTIFICATE_STORE" 이며 공급자 개체의 getName() API에서 쿼리할 수 있습니다. 드라이버에 의해 자동으로 등록 하 고 모든 응용 프로그램 변경 없이 원활 하 게 사용할 수 있습니다.
 
@@ -356,7 +356,7 @@ SQLServerColumnEncryptionJavaKeyStoreProvider JKS, PKCS12 키 저장소 유형�
 
 .Pfx 형식으로 Windows 인증서 저장소에서 인증서를 내보낼 하 고는 SQLServerColumnEncryptionJavaKeyStoreProvider 함께 사용 하는 수도 있습니다. 내보낸된 인증서 Java 키 저장소에 JKS 키 저장소 형식으로 가져올 수도 있습니다. 
 
-Keytool 항목을 만든 후 키 저장소 공급자 이름 및 키 경로 데이터베이스에 열 마스터 키 메타 데이터를 만들 해야 합니다. 열 마스터 키 메타 데이터를 만드는 방법에 대 한 자세한 내용은 방문 [CREATE COLUMN MASTER KEY](/sql-docs/docs/t-sql/statements/create-column-master-key-transact-sql)합니다. SQLServerColumnEncryptionJavaKeyStoreProvider, 키 경로 키의 별칭만입니다. 및는 SQLServerColumnEncryptionJavaKeyStoreProvider 이름은 'MSSQL_JAVA_KEYSTORE'. 또한 SQLServerColumnEncryptionJavaKeyStoreProvider 클래스의 getName() 공용 API를 사용 하 여이 이름을 쿼리할 수 있습니다. 
+Keytool 항목을 만든 후 키 저장소 공급자 이름 및 키 경로 데이터베이스에 열 마스터 키 메타 데이터를 만들 해야 합니다. 열 마스터 키 메타 데이터를 만드는 방법에 대 한 자세한 내용은 방문 [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md)합니다. SQLServerColumnEncryptionJavaKeyStoreProvider, 키 경로 키의 별칭만입니다. 및는 SQLServerColumnEncryptionJavaKeyStoreProvider 이름은 'MSSQL_JAVA_KEYSTORE'. 또한 SQLServerColumnEncryptionJavaKeyStoreProvider 클래스의 getName() 공용 API를 사용 하 여이 이름을 쿼리할 수 있습니다. 
 
 열 마스터 키를 만들기 위한 T-SQL 구문은 다음과 같습니다.
 
@@ -429,7 +429,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
   
 ## <a name="using-column-master-key-store-providers-for-programmatic-key-provisioning"></a>열 마스터 키 저장소 공급자를 사용하여 프로그래밍 방식으로 키 프로비전
 
-암호화 된 열에 액세스할 때는 SQL Server 용 Microsoft JDBC Driver 투명 하 게 찾아서 열 암호화 키의 암호를 해독 하려면 오른쪽 열 마스터 키 저장소 공급자를 호출 합니다. 일반적으로 정상적인 응용 프로그램 코드는 열 마스터 키 저장소 공급자를 직접 호출하지 않습니다. 그러나 명시적으로 공급자를 시작 및 호출하여 프로그래밍 방식으로 상시 암호화 키를 프로비전 및 관리하고, 암호화된 열 암호화 키를 생성하고, 열 암호화 키의 암호를 해독할 수 있습니다(예: 열 마스터 키 순환의 일부로). 자세한 내용은 [상시 암호화를 위한 키 관리 개요](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted)를 참조하세요.
+암호화 된 열에 액세스할 때는 SQL Server 용 Microsoft JDBC Driver 투명 하 게 찾아서 열 암호화 키의 암호를 해독 하려면 오른쪽 열 마스터 키 저장소 공급자를 호출 합니다. 일반적으로 정상적인 응용 프로그램 코드는 열 마스터 키 저장소 공급자를 직접 호출하지 않습니다. 그러나 명시적으로 공급자를 시작 및 호출하여 프로그래밍 방식으로 상시 암호화 키를 프로비전 및 관리하고, 암호화된 열 암호화 키를 생성하고, 열 암호화 키의 암호를 해독할 수 있습니다(예: 열 마스터 키 순환의 일부로). 자세한 내용은 [상시 암호화를 위한 키 관리 개요](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)를 참조하세요.
 사용자 지정 키 저장소 공급자를 사용하는 경우에만 고유한 키 관리 도구를 구현해야 합니다. Windows 인증서 저장소 또는 Azure 키 자격 증명 모음에 저장 된 키를 사용할 때 관리 하 고 키를 프로 비전 할 SQL Server Management Studio 또는 PowerShell과 같은 기존 도구를 사용할 수 있습니다. Java 키 저장소에 저장 된 키를 사용할 때 키를 프로그래밍 방식으로 프로 비전 해야 합니다. 아래 예제에서는 Java 키 저장소에 저장 된 키를 사용 하 여 키를 암호화 하 SQLServerColumnEncryptionJavaKeyStoreProvider 클래스를 사용 하 여 보여 줍니다.
 
 ```  
@@ -650,6 +650,6 @@ SQLServerBulkCopy를 이미 암호화 되 고 데이터를 해독 하지 않고 
 SQL Server 용 Microsoft JDBC Driver는 데이터가 암호화 되었는지, 또는 동일한 암호화를 사용 하 여 올바르게 암호화 하는 경우를 검사 하지 않기 때문에 데이터베이스를 손상 될 수 AllowEncryptedValueModifications를 지정할 때는 주의 하 참고: 형식, 알고리즘 및 키에 대상 열으로 합니다.
 
 ## <a name="see-also"></a>관련 항목:  
- [상시 암호화(데이터베이스 엔진)](/sql-docs/docs/relational-databases/security/encryption/always-encrypted-database-engine)  
+ [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   

@@ -21,16 +21,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f20330dab55ad3670f6d30037cb6b1962dd5c02c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3fce85745c90ee7cae060c26a24042eccbd0ee10
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>기본 테이블 보고서 만들기(SSRS 자습서)
 
-이 자습서에서는 보고서 디자이너를 사용 하면 SQL Server Data Tools에서 만드는 기본 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서로 테이블을 기반으로 ** [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] ** 데이터베이스입니다. 만들 수도 있습니다 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서 작성기는 보고서입니다. 
+이 자습서에서는 보고서 디자이너를 사용 하면 SQL Server Data Tools에서 만드는 기본 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서로 테이블을 기반으로  **[!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)]**  데이터베이스입니다. 만들 수도 있습니다 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 페이지가 매겨진 보고서 작성기는 보고서입니다. 
 
 이 자습서를 진행 보고서 프로젝트, 연결 정보를 설정, 쿼리를 정의 테이블 데이터 영역을 추가, 그룹화 및 총 일부 필드를 만들고 보고서를 미리 봅니다.  
   
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 데이터베이스.  자세한 내용은 [Adventure Works 2014 샘플 데이터베이스](https://msftdbprodsamples.codeplex.com/releases/view/125550)를 참조하세요.  
   
- -   [SQL Server Data Tools](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt) 는 "SQL Server Reporting Services" 구성 요소가 설치 된 보고서 디자이너를 갖도록 합니다.    
+ -   [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) 는 "SQL Server Reporting Services" 구성 요소가 설치 된 보고서 디자이너를 갖도록 합니다.    
   
 또한 [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] 데이터베이스에서 데이터를 검색하려면 읽기 전용 권한이 있어야 합니다.
 

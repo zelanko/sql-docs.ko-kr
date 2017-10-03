@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 06b07e613856bd9c3c66ec06d76c5e14ee8d4f4e
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 77ca3b5849eb90d21da55989d2c9ec7ae94a53f6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="data-sources"></a>데이터 원본
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/21/2017
   
 > **참고:** 패키지 배포 모델을 사용하도록 구성된 프로젝트에만 데이터 원본을 추가할 수 있습니다. 프로젝트가 프로젝트 배포 모델을 사용하도록 구성된 경우 데이터 원본을 사용하는 대신 프로젝트 수준에서 만든 연결 관리자를 사용하여 연결을 공유합니다.  
 >   
->  배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)를 참조하십시오. 프로젝트를 프로젝트 배포 모델로 변환하는 방법은 [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx)를 참조하십시오.  
+>  배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오. 프로젝트를 프로젝트 배포 모델로 변환하는 방법은 [Deploy Projects to Integration Services Server](https://msdn.microsoft.com/library/hh231102.aspx)를 참조하십시오.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지에서 데이터 원본을 사용하면 다음과 같은 이점이 있습니다.  
   

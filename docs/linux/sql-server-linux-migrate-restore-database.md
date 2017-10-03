@@ -1,6 +1,6 @@
 ---
 title: "Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션 | Microsoft Docs"
-description: "이 항목에서는 Windows에서 SQL Server 데이터베이스 백업을 수행 하 고 SQL Server 2017 r c 2를 실행 하는 Linux 컴퓨터를 복원 하는 방법을 보여 줍니다."
+description: "이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행 하 고 SQL Server 2017을 실행 하는 Linux 컴퓨터를 복원 하는 방법을 보여 줍니다."
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.translationtype: MT
-ms.sourcegitcommit: e4a6157cb56c6db911406585f841046a431eef99
-ms.openlocfilehash: 0405f6faad62b9dbaf32cb9730ac1450da2b2f48
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: a6d84942bfd13d672b3c59416cb64d2ae41ee10f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/16/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>Linux 백업 및 복원을 사용 하 여 Windows에서 SQL Server 데이터베이스 마이그레이션
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-SQL Server의 백업 및 복원 기능은 Linux에서 SQL Server 2017 r c 2로 Windows에서 SQL Server에서 데이터베이스를 마이그레이션하는 것이 좋습니다. 이 자습서에서는 Linux를 백업으로 데이터베이스를 이동한 복원 기술 하는 데 필요한 단계를 안내 합니다.
+SQL Server의 백업 및 복원 기능은 Windows에서 SQL Server에서 SQL Server 2017 Linux에서 데이터베이스를 마이그레이션하는 것이 좋습니다. 이 자습서에서는 Linux를 백업으로 데이터베이스를 이동한 복원 기술 하는 데 필요한 단계를 안내 합니다.
 
 > [!div class="checklist"]
 > * SSMS로 Windows에서 백업 파일을 만듭니다.
@@ -39,8 +39,7 @@ SQL Server의 백업 및 복원 기능은 Linux에서 SQL Server 2017 r c 2로 W
   * 마이그레이션할 대상 데이터베이스입니다.
 
 * 다음을 설치 된 Linux 컴퓨터:
-  * SQL Server 2017 RC2 합니다. 참조에 대 한 설치 퀵 스타트 [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), 또는 [Ubuntu](quickstart-install-connect-ubuntu.md)합니다.
-  * SQL Server 2017 RC2 [명령줄 도구](sql-server-linux-setup-tools.md)합니다.
+  * SQL Server 2017 ([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), 또는 [Ubuntu](quickstart-install-connect-ubuntu.md)) 명령줄 도구를 사용 합니다.
 
 ## <a name="create-a-backup-on-windows"></a>Windows에서 백업을 만들기
 
@@ -182,7 +181,7 @@ SQL Server의 백업 및 복원 기능은 Linux에서 SQL Server 2017 r c 2로 W
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 Windows에서 데이터베이스를 백업 하 고 SQL Server 2017 r c 2를 실행 하는 Linux 서버를 이동 하는 방법을 배웠습니다. 방법에 대해 배웠습니다에:
+이 자습서에서는 Windows에서 데이터베이스를 백업 하 고 SQL Server 2017을 실행 하는 Linux 서버를 이동 하는 방법을 배웠습니다. 방법에 대해 배웠습니다에:
 > [!div class="checklist"]
 > * SSMS 및 Transact SQL을 사용 하 여 Windows에서 백업 파일을 만들려면
 > * Bash 셸의 Windows에 설치

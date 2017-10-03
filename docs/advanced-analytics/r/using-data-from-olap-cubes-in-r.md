@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8fe9d54e1d635b5c8f1dd6e00e33bd92136343b4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: bdd86896b43d79b5d7cd00383476700735accff4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R에서 OLAP 큐브의 데이터 사용
@@ -81,7 +81,7 @@ OLAP 또는 MDX 쿼리를 처음 사용하는 경우 Wikipedia 문서 [OLAP Cube
 
 ### <a name="samples"></a>샘플
 
-큐브에 대해 자세히 알아보려면 Analysis Services 자습서의 4단원 [OLAP 큐브 만들기](/sql-docs/docs/analysis-services/multidimensional-modeling-adventure-works-tutorial)까지 수행하여 이러한 예제에서 사용되는 큐브를 만들 수 있습니다.
+큐브에 대해 자세히 알아보려면 Analysis Services 자습서의 4단원 [OLAP 큐브 만들기](../../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)까지 수행하여 이러한 예제에서 사용되는 큐브를 만들 수 있습니다.
 
 기존 큐브를 백업으로 다운로드하여 Analysis Services의 인스턴스로 복원할 수도 있습니다. 예를 들어 [Adventure Works Multidimensional Model SQL 2014](http://msftdbprodsamples.codeplex.com/downloads/get/882334)(Adventure Works 다차원 모델 SQL 2014)의 완전히 처리된 큐브를 압축된 형식으로 다운로드하여 SSAS 인스턴스로 복원할 수 있습니다. 자세한 내용은 [백업 및 복원](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md), 또는 [Restore-ASDatabase Cmdlet](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)을 참조하세요.
 

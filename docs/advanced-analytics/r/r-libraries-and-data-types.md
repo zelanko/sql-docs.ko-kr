@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bedc8b9d5e8e4c2a9bd8c3271a8463fc860f3fd5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: c4ab2ed64eaaf970057987c7169d12e93c4380ad
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="r-libraries-and-r-data-types"></a>R 라이브러리 및 R 데이터 형식
@@ -80,9 +80,9 @@ Microsoft R Server의 특정 버전에 포함 된 R 버전을 찾으려면 참�
 
 ## <a name="data-types-not-supported-by-r"></a>R에서 지원되지 않는 데이터 형식
 
-[SQL Server 형식 시스템](/sql-docs/docs/t-sql/data-types/data-types-transact-sql)에서 지원되는 데이터 형식의 범주 중에서 다음 형식은 R 코드에 전달될 때 문제를 일으킬 수 있습니다.
+[SQL Server 형식 시스템](../../t-sql/data-types/data-types-transact-sql.md)에서 지원되는 데이터 형식의 범주 중에서 다음 형식은 R 코드에 전달될 때 문제를 일으킬 수 있습니다.
 
-+ 데이터 형식에 나열 된는 **다른** SQL 유형 시스템 항목의 섹션: **커서**, **타임 스탬프**, **hierarchyid**, ** uniqueidentifier**, **sql_variant**, **xml**, **테이블**
++ 데이터 형식에 나열 된는 **다른** SQL 유형 시스템 항목의 섹션: **커서**, **타임 스탬프**, **hierarchyid**,  **uniqueidentifier**, **sql_variant**, **xml**, **테이블**
 + 모든 공간 형식
 + **image**
 
@@ -111,7 +111,7 @@ Microsoft SQL Server 2016 및 Microsoft Azure SQL Database의 데이터 형식 �
 
 데이터베이스에서 R 코드에 사용할 데이터를 검색할 경우 항상 R에서 사용할 수 없는 열을 제거하고 분석에 도움이 되지 않는 열(예: GUID(uniqueidentifier)), 감사에 사용되는 타임스탬프와 기타 열 또는 ETL 프로세스에서 만들어진 계보 정보를 제거해야 합니다. 
 
-불필요한 열을 포함하면, 특히 카디널리티가 높은 열이 요소로 사용될 경우 R 코드의 성능이 크게 저하될 수 있습니다. 따라서 SQL Server 시스템 저장 프로시저 및 정보 뷰를 사용하여 지정된 테이블에 대한 데이터 형식을 미리 가져오고 호환되지 않는 열을 제거하거나 변환하는 것이 좋습니다. 자세한 내용은 [시스템 정보 스키마 뷰(TRANSACT-SQL)](/sql-docs/docs/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql)를 참조하세요.
+불필요한 열을 포함하면, 특히 카디널리티가 높은 열이 요소로 사용될 경우 R 코드의 성능이 크게 저하될 수 있습니다. 따라서 SQL Server 시스템 저장 프로시저 및 정보 뷰를 사용하여 지정된 테이블에 대한 데이터 형식을 미리 가져오고 호환되지 않는 열을 제거하거나 변환하는 것이 좋습니다. 자세한 내용은 [시스템 정보 스키마 뷰(TRANSACT-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)를 참조하세요.
 
 R에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지원하지 않지만 R 스크립트에서 데이터 열을 사용해야 하는 경우 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수를 사용하여 R 스크립트에서 데이터를 사용하기 전에 데이터 형식 변환이 의도한 대로 시행되었는지 확인하는 것이 좋습니다.  
 

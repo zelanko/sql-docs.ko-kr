@@ -27,10 +27,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ec83d1e567c44abba880716bbd700af2810be60
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: cb825e9f5a654ec7dd24059d43dcea5b7d91e1e1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="integration-services-service-ssis-service"></a>Integration Services 서비스(SSIS 서비스)
@@ -71,7 +71,7 @@ ms.lasthandoff: 09/21/2017
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]구성 요소를 설치할 때 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스도 함께 설치됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 기본적으로 시작되며 서비스의 시작 유형은 자동으로 설정됩니다. 그러나 서비스를 사용하여 저장 및 실행 중인 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 패키지를 관리하려면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 도 설치해야 합니다.  
   
 > [!NOTE]
-> 레거시 Integration Services 서비스의 인스턴스에 직접 연결하려면 Integration Services 서비스가 실행 중인 SQL Server의 버전에 맞는 SSMS(SQL Server Management Studio) 버전을 사용해야 합니다. 예를 들어 SQL Server 2016의 인스턴스에서 실행 중인 레거시 Integration Services 서비스에 연결하려면 SQL Server 2016용으로 릴리스된 SSMS의 버전을 사용해야 합니다. [SSMS(SQL Server Management Studio) 다운로드합니다](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+> 레거시 Integration Services 서비스의 인스턴스에 직접 연결하려면 Integration Services 서비스가 실행 중인 SQL Server의 버전에 맞는 SSMS(SQL Server Management Studio) 버전을 사용해야 합니다. 예를 들어 SQL Server 2016의 인스턴스에서 실행 중인 레거시 Integration Services 서비스에 연결하려면 SQL Server 2016용으로 릴리스된 SSMS의 버전을 사용해야 합니다. [SSMS(SQL Server Management Studio) 다운로드합니다](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >   SSMS **서버에 연결** 대화 상자에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스의 이전 버전을 실행 중인 서버의 이름을 입력할 수 없습니다. 그러나 원격 서버에 저장된 패키지를 관리하는 경우 해당 원격 서버에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 인스턴스에 연결할 필요가 없습니다. 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 원격 서버에 저장된 패키지를 표시하도록 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서비스에 대한 구성 파일을 편집합니다.   
   
@@ -278,7 +278,7 @@ ms.lasthandoff: 09/21/2017
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 나 다른 관리 응용 프로그램에서 원격 서버의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스에 연결하려면 응용 프로그램 사용자에게 서버에 대한 특정 권한 집합이 필요합니다.  
   
 > [!IMPORTANT]
-> 레거시 Integration Services 서비스의 인스턴스에 직접 연결하려면 Integration Services 서비스가 실행 중인 SQL Server의 버전에 맞는 SSMS(SQL Server Management Studio) 버전을 사용해야 합니다. 예를 들어 SQL Server 2016의 인스턴스에서 실행 중인 레거시 Integration Services 서비스에 연결하려면 SQL Server 2016용으로 릴리스된 SSMS의 버전을 사용해야 합니다. [SSMS(SQL Server Management Studio) 다운로드합니다](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).
+> 레거시 Integration Services 서비스의 인스턴스에 직접 연결하려면 Integration Services 서비스가 실행 중인 SQL Server의 버전에 맞는 SSMS(SQL Server Management Studio) 버전을 사용해야 합니다. 예를 들어 SQL Server 2016의 인스턴스에서 실행 중인 레거시 Integration Services 서비스에 연결하려면 SQL Server 2016용으로 릴리스된 SSMS의 버전을 사용해야 합니다. [SSMS(SQL Server Management Studio) 다운로드합니다](../../ssms/download-sql-server-management-studio-ssms.md).
 >
 >  원격 서버에 저장된 패키지를 관리하는 경우 해당 원격 서버에 있는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스 인스턴스에 연결할 필요가 없습니다. 대신 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 원격 서버에 저장된 패키지를 표시하도록 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 서비스에 대한 구성 파일을 편집합니다.
   

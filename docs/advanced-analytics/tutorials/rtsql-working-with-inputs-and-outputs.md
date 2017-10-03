@@ -18,15 +18,15 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5cebde92184ac69093222d57eb91750fa13e369c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a5ffcfafc29f0b741d8e6ada0d50ef6f94fecc7f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="working-with-inputs-and-outputs-r-in-sql-quickstart"></a>작업에 입 / 출력 (SQL 빠른 시작에서 R)
 
-SQL Server에서 R 코드를 실행 하려는 경우 R 스크립트는 시스템 저장 프로시저에서 래핑해야 [sp_execute_external_script](/sql-docs/docs/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)합니다. 이 저장 프로시저는 SQL Server의 컨텍스트에서 R 런타임을 시작하는 데 사용되어 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트로 반환합니다.
+SQL Server에서 R 코드를 실행 하려는 경우 R 스크립트는 시스템 저장 프로시저에서 래핑해야 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다. 이 저장 프로시저는 SQL Server의 컨텍스트에서 R 런타임을 시작하는 데 사용되어 데이터를 R에 전달하고, R 사용자 세션을 안전하게 관리하고, 결과를 클라이언트로 반환합니다.
 
 ## <a name="bkmk_SSMSBasics"></a>몇 가지 간단한 테스트 데이터 만들기
 

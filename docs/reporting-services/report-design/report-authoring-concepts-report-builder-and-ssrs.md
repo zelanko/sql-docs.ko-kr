@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0bbbee2d86c0ec82172ec63317039ace7a19b50c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f063c61d46765587cb4b298544d5aa51960efd2e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>보고서 제작 개념(보고서 작성기 및 SSRS)
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
  [데이터 영역 및 지도&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/data-regions-and-maps-report-builder-and-ssrs.md)  
  보고서 레이아웃에 추가할 수 있는 데이터 영역 유형에 대해 설명합니다. 데이터 영역에 따라 보고서 모양이 테이블 형식, 행렬, 목록 또는 차트 중 하나로 결정됩니다.  
   
- [보고서 매개 변수 개념 (보고서 작성기 및 SSRS)](/sql-docs/docs/reporting-services/report-design/report-parameters-concepts-report-builder-and-ssrs)  
+ [보고서 매개 변수 개념 (보고서 작성기 및 SSRS)](report-parameters-concepts-report-builder-and-ssrs.md)  
  보고서 매개 변수를 정의하고 사용하는 방법 및 보고서 서버의 보고서 정의를 통해 보고서 매개 변수를 별도로 관리하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  

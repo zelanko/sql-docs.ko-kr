@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 컴퓨터 학습 Services (In-database) 설치 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/29/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,10 +17,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: f0065068d53517626c7157c9be884549573ae08b
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 9b3449e8c1f19ee69b36107f3530eac80fae0227
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="set-up-sql-server-machine-learning-services-in-database"></a>SQL Server 컴퓨터 학습 Services (In-database) 설치
@@ -97,15 +97,15 @@ SQL Server 설치 프로그램에서는 기계 학습을 설치 하기 위한 �
 
 6. 에 **설치 준비 완료** 페이지에서 다음 항목은 포함 되어 있으며 다음 선택 **설치**합니다.
 
-   **SQL Server 2016**
-   - 데이터베이스 엔진 서비스
-   - R Services(In-Database)
-
    **SQL Server 2017**
    - 데이터베이스 엔진 서비스
    - Machine Learning Services(데이터베이스 내)
    - R, Python, 또는 둘 다
-    
+
+   **SQL Server 2016**
+   - 데이터베이스 엔진 서비스
+   - R Services(In-Database)
+
 7. 설치가 완료 되 면 컴퓨터를 다시 시작 합니다.
 
 ##  <a name="bkmk_enableFeature"></a>2 단계: 외부 스크립트 서비스를 사용 합니다.
@@ -189,12 +189,15 @@ R 또는 Python에 대 한 사용 사례에 따라 서버, 방화벽, 서비스 
 
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 개체 탐색기에서 **보안**을 확장하고 **로그인**을 마우스 오른쪽 단추로 클릭한 다음 **새 로그인**을 선택합니다.
 2. 에 **로그인-신규** 대화 상자에서 **검색**합니다.
-3. 선택 된 **개체 유형** 및 **그룹** 확인란을 선택한 다른 모든 확인란의 선택을 취소 합니다. 
-4. **선택할 개체 이름을 입력**, 형식 **SQLRUserGroup**를 선택한 후 **이름 확인**합니다.  
-    인스턴스의 실행 패드 서비스와 관련 된 로컬 그룹의 이름이 같은 값으로 확인 되어야 *instancename\SQLRUserGroup*합니다. 
-5. **확인**을 선택합니다.
-6. 기본적으로 로그인은 **public** 역할에 할당되며 데이터베이스 엔진에 연결할 수 있는 권한이 있습니다.
-7. **확인**을 선택합니다.
+3. 선택 된 **개체 유형** 및 **그룹** 확인란을 선택한 다른 모든 확인란의 선택을 취소 합니다.
+4. 클릭 **고급**를 확인 합니다.를 검색할 위치는 현재 컴퓨터를 클릭 한 다음 **지금 찾기**합니다.
+5. 부터는 하나를 찾을 때까지 서버에서 그룹 계정 목록 스크롤하여 `SQLRUserGroup`합니다.
+    
+    + 에 대 한 실행 패드 서비스와 관련 된 그룹의 이름에서 _기본 인스턴스_ 방금는 항상 **SQLRUserGroup**합니다. 기본 인스턴스에 대해서만이 계정을 선택 합니다.
+    + 사용 하는 경우는 _명명 된 인스턴스_, 인스턴스 이름이 기본 이름에 추가 됩니다 `SQLRUserGroup`합니다. 따라서 인스턴스 이름이 "MLTEST" 이면이 인스턴스에 대 한 기본 사용자 그룹 이름을 것 **SQLRUserGroupMLTest**합니다.
+5. 클릭 **확인** 고급 검색 대화 상자를 닫고 인스턴스에 대 한 올바른 계정 선택 했는지 확인 합니다. 각 인스턴스는 자체 실행 패드 서비스와 해당 서비스에 대해 생성 된 그룹에 사용할 수 있습니다.
+6. 클릭 **확인** 를 한 번 더 닫습니다는 **사용자 또는 그룹 선택** 대화 상자.
+7. 에 **로그인-신규** 대화 상자를 클릭 **확인**합니다. 기본적으로 로그인은 **public** 역할에 할당되며 데이터베이스 엔진에 연결할 수 있는 권한이 있습니다.
 
 ### <a name="bkmk_AllowLogon"></a>사용자 한 외부 스크립트를 실행 하는 권한 부여
 

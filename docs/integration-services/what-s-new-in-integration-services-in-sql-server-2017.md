@@ -1,7 +1,7 @@
 ---
 title: "기능 &#39; s 2017 SQL Server에서 Integration Services의 새로운 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/11/2017
+ms.date: 09/28/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 8cd44c8b384019418a2a913e5f8d13d82120eac2
-ms.openlocfilehash: 87b850c06bea8992ad6869c56acdecd45fa289f4
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 63aba0f64bc63a3a86e5aa07245375938acdf6e4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>기능 &#39; s 2017 SQL Server에서 Integration Services의 새로운
@@ -29,13 +29,23 @@ ms.lasthandoff: 08/29/2017
 
 ## <a name="highlights-of-this-release"></a>이 릴리스의 주요 내용
 
-SQL Server 2017에 대 한 Integration Services에서 가장 중요 한 새로운 기능을 다음과 같습니다.
+다음은 SQL Server 2017의 Integration Services의 가장 중요 한 새로운 기능입니다.
 
 -   **확장할**합니다. SSIS 패키지 실행이 여러 작업자 컴퓨터 보다 쉽게 배포 하 고 단일 마스터 컴퓨터에서 실행 및 작업자를 관리 합니다. 자세한 내용은 참조 하십시오. [Integration Services 스케일 아웃](../integration-services/scale-out/integration-services-ssis-scale-out.md)합니다.
 
 -   **Linux에서 integration Services**합니다. Linux 컴퓨터에서 SSIS 패키지를 실행 합니다. 자세한 내용은 참조 하십시오. [추출, 변환 및 SSIS와 Linux에서 데이터 로드](../linux/sql-server-linux-migrate-ssis.md)합니다.
 
 -   **연결 개선**합니다. 업데이트 된 OData 구성 요소와 Microsoft Dynamics AX Online 및 Microsoft Dynamics CRM Online OData 피드에 연결 합니다. 
+
+## <a name="new-in-azure-data-factory"></a>Azure 데이터 팩터리에의 새로운 기능
+
+Azure Data Factory 2017 년 9 월에에서 버전 2의 공개 미리 보기에서는 이제 다음과 같은 작업을 수행할 수 있습니다.
+-   SSIS 카탈로그 데이터베이스 (SSISDB) Azure SQL 데이터베이스에 패키지를 배포 합니다.
+-   Azure SSIS 통합 런타임에서 Azure 데이터 팩터리 버전 2의 구성 요소에는 Azure에 배포 된 패키지를 실행 합니다.
+
+자세한 내용은 참조 하십시오. [클라우드로 SQL Server Integration Services 작업 리프트 및 shift](lift-shift/ssis-azure-lift-shift-ssis-packages-overview.md)합니다.
+
+이러한 새로운 기능 SQL Server 데이터 도구 (SSDT) 버전 17.2 이상 필요 하지만 SQL Server 2017 또는 SQL Server 2016 필요 하지 않습니다. Azure에 패키지를 배포할 때 패키지 배포 마법사는 패키지를 최신 패키지 형식으로 항상 업그레이드 합니다.
 
 ## <a name="new-in-the-azure-feature-pack"></a>Azure 기능 팩의 새로운 기능
 

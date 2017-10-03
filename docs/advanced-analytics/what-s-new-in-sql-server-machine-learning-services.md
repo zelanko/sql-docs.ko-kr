@@ -2,7 +2,7 @@
 title: "기능 &#39; s 컴퓨터 학습 서비스의 새로운 기능 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/08/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: fffe2ab906f659a2fb0e2996363ac8e7da000707
-ms.openlocfilehash: 34a404511d72c5775f25dd182b018926b6d0d62e
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/18/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server의 컴퓨터 학습 서비스의 새로운 기능
@@ -30,16 +30,13 @@ SQL Server 2017 기계 학습 훨씬 더 강력해졌습니다 인기 있는 Pyt
 
 여기에 최신 공지 catch! [SQL Server 2017에 Python: 데이터베이스에서 기계 학습 향상](https://blogs.technet.microsoft.com/dataplatforminsider/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/)
 
+[!NOTE]
+> 이제 Azure SQL 데이터베이스에서 R을 실행할 수 있습니다! 자세한 내용은 참조 [이 문서](r/using-r-in-azure-sql-database.md), 또는 SQL Server 개발팀의이 블로그: [알림 미리 보기 컴퓨터 학습 서비스의 Azure SQL 데이터베이스의 R 지원과 함께](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/09/25/announcing-preview-of-machine-learning-services-with-r-support-in-azure-sql-database/)합니다.
+
 ## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 
 SQL Server에서 Microsoft 컴퓨터 학습 서버는 이제 Python 또는 R에서 컴퓨터 학습 솔루션 작성 하기 위한 포괄적인 지원을 제공 합니다. 다음은이 릴리스의 주요 내용입니다.
 
-> [!IMPORTANT]
-> 
-> 컴퓨터 학습 서비스, Python 또는 R의 사용을 포함 하는 현재 지원 되지 않습니다 linux에서 또는 Azure SQL 데이터베이스에서 SQL Server를 실행 하는 경우. 이후 버전에서 변경 내용을 찾습니다.
-> 
-> 기본 점수 매기기 PREDICT 함수를 사용 하는 현재 Linux 버전에서 지원 됩니다.
- 
 ### <a name="in-database-python-integration"></a>데이터베이스에서 Python 통합
 
 저장된 프로시저에서 Python을 실행 하거나 원격으로 SQL Server 컴퓨터를 사용 하 여 계산 컨텍스트로 써 Python을 실행할 수 있습니다. 이러한 통합 이루어진 Python 개발자 및 데이터 과학자의 SQL Server 기능을 사용 하는 데에 대 한 새 경로를 엽니다. 
@@ -60,9 +57,13 @@ SQL Server 개발자에서에서에 액세스할 광범위 한 Python 라이브�
 
 + Microsoft 컴퓨터 학습 Server (독립 실행형)에서 Python 지원
 
-    SQL Server 2017 Microsoft 기계 학습 플랫폼의 독립 실행형 버전을 설치 하는 옵션을 포함 합니다. 서버를 학습 하는 컴퓨터를 사용 하 여 배포할 수 있으며 SQL Server를 사용 하지 않고 R, Python 코드를 확장할 수 있습니다.
+    SQL Server 2017 독립 실행형 버전의 Microsoft 컴퓨터 학습 서버를 설치 하는 옵션을 포함 합니다. 서버를 학습 하는 컴퓨터를 사용 하 여 배포할 수 있으며 SQL Server를 사용 하지 않고 R, Python 코드를 확장할 수 있습니다.
 
-    예를 보려면 Microsoft 학습 서버 컴퓨터에서에서 실행 되는 Python 참조 [게시 Python 코드 사용 및](python/publish-consume-python-code.md)합니다.
+### <a name="linux-support"></a>Linux 지원
+
+기계 학습 Python 또는 R에서 데이터베이스를 사용 하 여 Linux에서 SQL Server에서 현재 지원 되지 않습니다. 이후 릴리스에서 공지를 찾습니다.
+
+그러나 Linux에서 수행할 수 있습니다 [기본 점수 매기기](sql-native-scoring.md) T-SQL 예측 함수를 사용 하 여 합니다. 기본 점수 매기기를 호출 하거나 R 런타임도 요구 하지 않고 매우 빠르게 미리 학습 된 모델에서 점수를 매길 수 있습니다. 즉, Linux에서 SQL Server를 사용 하 여 클라이언트 응용 프로그램 역할을 매우 빠르게 예측을 생성할 수 있습니다.
 
 ### <a name="new-algorithms"></a>새 알고리즘
 

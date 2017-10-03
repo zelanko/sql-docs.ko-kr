@@ -16,10 +16,10 @@ ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: b26e8e92a00fd23441a0417daa15897bab48501c
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 036afa491ae8390c38520d7dff2e5c6cd0d1a419
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="database-catalog"></a>데이터베이스 카탈로그
@@ -181,7 +181,7 @@ WideWorldImporters 적은 수의 스키마를 사용 하므로 데이터베이�
 
 ### <a name="integration-schema"></a>통합 스키마
 
-이 스키마에 저장된 프로시저는 ETL 프로세스에 의해 사용 됩니다. 에 필요한 기간에 대 한 다양 한 테이블에서 필요한 데이터를 가져올는 [ETL 패키지](/sql-docs/docs/sample/world-wide-importers/etl-workflow)합니다.
+이 스키마에 저장된 프로시저는 ETL 프로세스에 의해 사용 됩니다. 에 필요한 기간에 대 한 다양 한 테이블에서 필요한 데이터를 가져올는 [ETL 패키지](etl-workflow.md)합니다.
 
 ### <a name="dataloadsimulation-schema"></a>DataLoadSimulation 스키마
 

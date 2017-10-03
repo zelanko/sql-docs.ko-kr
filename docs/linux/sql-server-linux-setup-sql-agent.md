@@ -4,16 +4,16 @@ description: "이 항목에서는 Linux에서 SQL Server 에이전트를 설치 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1f6f741a87a13e5b5bc8ba83741e86b065378bad
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 83f6e12a38d5fef4ab27cc39257906c4263aa846
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에서 SQL Server 에이전트를 설치 합니다.
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/02/2017
 SQL Server 에이전트를 설치 하는 다음 단계를 수행 (**mssql 서버 에이전트**) linux. [SQL Server 에이전트](https://docs.microsoft.com/sql/ssms/agent/sql-server-agent) 예약 된 SQL Server 작업을 실행 합니다. 이 버전의 SQL Server 에이전트에 대 한 지원 되는 기능에 대 한 자세한 내용은 참조는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
 
 > [!NOTE]
-> 먼저 SQL Server 에이전트를 설치 하기 전에 [설치할 SQL Server RC2 +](sql-server-linux-setup.md#platforms)합니다. 이 구성 요소의 키 및 설치할 때 사용 하는 저장소는 **mssql 서버 에이전트** 패키지 합니다.
+> 먼저 SQL Server 에이전트를 설치 하기 전에 [SQL Server 2017 설치](sql-server-linux-setup.md#platforms)합니다. 이 구성 요소의 키 및 설치할 때 사용 하는 저장소는 **mssql 서버 에이전트** 패키지 합니다.
 
 플랫폼에 대 한 SQL Server 에이전트를 설치 합니다.
 

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f76aa1cfbcad38e383abca8a79005b3851767e2a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0c021c5f17266bfbba65d3d364136dd0d61d74f3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="dtexec-utility"></a>dtexec 유틸리티
@@ -66,7 +66,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="bit"></a> 64비트 컴퓨터에서의 설치 고려 사항  
  64비트 컴퓨터의 경우 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 64비트 버전의 **dtexec** 유틸리티(dtexec.exe)를 설치합니다. 특정 패키지를 32비트 모드로 실행해야 하는 경우 **dtexec** 유틸리티의 32비트 버전을 설치해야 합니다. 32비트 버전의 **dtexec** 유틸리티를 설치하려면 설치 도중 클라이언트 도구 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 를 선택해야 합니다.  
   
- 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32 비트 디렉터리 경로 * \<드라이브 >*: 파일 (x86) server\110\dts\binn 이며 64 비트 디렉터리 경로 \Program * \<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn입니다.)  
+ 기본적으로 64비트 및 32비트 버전의 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 명령 프롬프트 유틸리티가 모두 설치되어 있는 64비트 컴퓨터는 명령 프롬프트에서 32비트 버전을 실행합니다. 64비트 버전에 대한 디렉터리 경로 앞에 32비트 버전에 대한 디렉터리 경로가 PATH 환경 변수에 나타나기 때문에 32비트 버전이 실행됩니다. (일반적으로 32 비트 디렉터리 경로  *\<드라이브 >*: 파일 (x86) server\110\dts\binn 이며 64 비트 디렉터리 경로 \Program  *\<드라이브 >*: files\microsoft SQL Server\110\DTS\Binn입니다.)  
   
 > **참고:** SQL Server 에이전트를 사용하여 유틸리티를 실행하는 경우 SQL Server 에이전트는 64비트 버전의 유틸리티를 자동으로 사용합니다. SQL Server 에이전트는 PATH 환경 변수가 아닌 레지스트리를 사용하여 유틸리티에 대한 올바른 실행 파일을 찾습니다.  
   
@@ -217,11 +217,11 @@ dtexec /option [value] [/option [value]]...
   
      **/ConsoleLog** 옵션에 관한 여러 가지 예는 **주의** 섹션을 참조하세요.  
   
--   **/D[ts](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
+--   **/D [ts]** *package_path*: (선택 사항). SSIS 패키지 저장소에서 패키지를 로드합니다. SSIS 패키지 저장소에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.  
   
-     *package_path* 인수는 SSIS 패키지 저장소의 루트에서 시작하여 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 상대 경로를 지정하고 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지의 이름을 포함합니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
+     The *package_path* argument specifies the relative path of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package, starting at the root of the SSIS Package Store, and includes the name of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] package. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     **/DTS** 옵션은 **/File** 또는 **/SQL** 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 **dtexec** 는 실패합니다.  
+     The **/DTS** option cannot be used together with the **/File** or **/SQL** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/De[crypt]**  *password*: (옵션). 암호가 암호화된 패키지를 로드할 때 사용할 해독 암호를 설정합니다.  
   
@@ -233,7 +233,7 @@ dtexec /option [value] [/option [value]]...
     /Dump 0xC020801C  
     ```  
   
-     **/Dump** *오류 코드*: 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장 * \<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 합니다.  
+     **/Dump** *오류 코드*: 기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장  *\<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 합니다.  
   
     > **참고:** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 Microsoft 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  
   
@@ -245,7 +245,7 @@ dtexec /option [value] [/option [value]]...
   
 -   **/DumpOnError**: (옵션) 패키지가 실행되는 동안 오류가 발생할 때 디버그 덤프 파일(.mdmp 및 .tmp)을 만듭니다.  
   
-     기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장 * \<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 폴더입니다.  
+     기본적으로 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 폴더에서 디버그 덤프 파일을 저장  *\<드라이브 >*: files\microsoft SQL Server\110\Shared\ErrorDumps 폴더입니다.  
   
     > **참고:** 디버그 덤프 파일에는 중요한 정보가 들어 있을 수 있습니다. ACL(액세스 제어 목록)을 사용하여 파일에 대한 액세스를 제한하거나 파일을 액세스가 제한된 폴더에 복사합니다. 예를 들어 디버그 파일을 Microsoft 지원 서비스에 보내기 전에 중요한 정보나 기밀 정보를 제거하는 것이 좋습니다.  
   
@@ -262,10 +262,9 @@ dtexec /option [value] [/option [value]]...
      **/Env[Reference]** 옵션은 **/ISServer** 및 **/Server** 옵션과 함께 사용합니다.  
   
      이 매개 변수는 SQL Server 에이전트에서 사용됩니다.  
-  
--   * * /F[ile](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)  
-  
-     *filespec* 인수는 패키지의 경로와 파일 이름을 지정합니다. 경로는 UNC(Universal Naming Convention) 경로나 로컬 경로로 지정할 수 있습니다. *filespec* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *filespec* 인수를 따옴표로 묶어야 합니다.  
+  --   **/F [ile]** *filespec*: (선택 사항). 파일 시스템에 저장된 패키지를 로드합니다. 파일 시스템에 저장된 패키지는 레거시 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](deploy-integration-services-ssis-projects-and-packages.md)를 참조하십시오.  
+
+  *filespec* 인수는 패키지의 경로와 파일 이름을 지정합니다. 경로는 UNC(Universal Naming Convention) 경로나 로컬 경로로 지정할 수 있습니다. *filespec* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *filespec* 인수를 따옴표로 묶어야 합니다.  
   
      **/File** 옵션은 **/DTS** 또는 **/SQL** 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 **dtexec** 는 실패합니다.  
   
@@ -413,21 +412,21 @@ dtexec /option [value] [/option [value]]...
   
      **/ISServer** 옵션이 지정된 경우 **/Ser[ver]** 옵션이 필요합니다.  
   
--   * * /SQ[L](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)합니다.  
+--   **/SQ [L]** *package_path*:에 저장 된 패키지를 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 **msdb** 데이터베이스입니다. **msdb** 데이터베이스에 저장된 패키지는 패키지 배포 모델을 사용하여 배포됩니다. 프로젝트 배포 모델을 사용하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에 배포된 패키지를 실행하려면 **/ISServer** 옵션을 사용합니다. 패키지 및 프로젝트 배포 모델에 대한 자세한 내용은 [Deployment of Projects and Packages](https://msdn.microsoft.com/library/hh213290.aspx)를 참조하십시오.   
   
-     *package_path* 인수는 검색할 패키지의 이름을 지정합니다. 경로에 폴더가 포함된 경우 백슬래시("\\")로 끝납니다. *package_path* 값은 따옴표로 묶을 수 있습니다. *package_path* 인수에 지정된 경로나 파일 이름에 공백이 있는 경우 *package_path* 인수를 따옴표로 묶어야 합니다.  
+     The *package_path* argument specifies the name of the package to retrieve. If folders are included in the path, they are terminated with backslashes ("\\"). The *package_path* value can be quoted. If the path or file name specified in the *package_path* argument contains a space, you must put quotation marks around the *package_path* argument.  
   
-     **/SQL**옵션과 함께 **/User**, **/Password** , **/Server** 옵션을 사용할 수 있습니다.  
+     You can use the **/User**, **/Password**, and **/Server** options together with the **/SQL** option.  
   
-     **/User** 옵션을 생략하면 패키지에 액세스하는 데 Windows 인증이 사용됩니다. **/User** 옵션을 사용하면 지정된 **/User** 로그인 이름이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 연결됩니다.  
+     If you omit the **/User** option, Windows Authentication is used to access the package. If you use the **/User** option, the **/User** login name specified is associated with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.  
   
-     **/Password** 옵션은 **/User** 옵션과 함께 사용해야 합니다. **/Password** 옵션을 사용할 경우 패키지는 제공된 사용자 이름 및 암호 정보로 액세스합니다. **/Password** 옵션을 생략하면 빈 암호가 사용됩니다.  
+     The **/Password** option is used only together with the **/User** option. If you use the **/Password** option, the package is accessed with the user name and password information provided. If you omit the **/Password** option, a blank password is used.  
   
-    > **중요!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+    > **IMPORTANT!!** [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-     **/Server** 옵션을 생략할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 기본 로컬 인스턴스가 사용됩니다.  
+     If the **/Server** option is omitted, the default local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is assumed.  
   
-     **/SQL** 옵션은 **/DTS** 또는 **/File** 옵션과 함께 사용할 수 없습니다. 여러 개의 옵션을 지정하는 경우 **dtexec** 는 실패합니다.  
+     The **/SQL** option cannot be used together with the **/DTS** or **/File** option. If multiple options are specified, **dtexec** fails.  
   
 -   **/Su[m]**: (옵션). 다음 구성 요소에서 받을 행 수를 포함하는 증분 카운터를 표시합니다.  
   

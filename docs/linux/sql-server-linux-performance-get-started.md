@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c6a5fa2872d7888d28ba34aae959aac9b13ea4b0
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5936634cf243216f5916812bbe5ec04767932ec7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Linux에서 SQL Server의 성능 기능에 대 한 연습
@@ -157,11 +157,11 @@ SQL Server 메모리 액세스에 최적화 된 테이블에 액세스 하는 �
 ### <a name="learn-more-about-in-memory-oltp"></a>메모리 내 OLTP에 대 한 자세한 정보
 메모리 내 OLTP에 대 한 자세한 내용은 다음 항목을 참조 합니다.
 
-- [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](/sql-docs/docs/relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp)
-- [메모리 내 OLTP로 마이그레이션](/sql-docs/docs/relational-databases/in-memory-oltp/migrating-to-in-memory-oltp)
-- [메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수](/sql-docs/docs/relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization)
-- [메모리 사용량 모니터링 및 문제 해결](/sql-docs/docs/relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage)
-- [메모리 내 OLTP(메모리 내 최적화)](/sql-docs/docs/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization)
+- [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [메모리 내 OLTP로 마이그레이션](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
+- [메모리 최적화를 사용한 더 빠른 임시 테이블 및 테이블 변수](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
+- [메모리 사용량 모니터링 및 문제 해결](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
+- [메모리 내 OLTP(메모리 내 최적화)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>쿼리 저장소 사용
 쿼리 저장소는 쿼리, 실행 계획 및 런타임 통계에 대 한 자세한 성능 정보를 수집합니다.

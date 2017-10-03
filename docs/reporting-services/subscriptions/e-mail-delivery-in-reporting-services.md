@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: bd3def842c9171dd20e53eff37128a7a95779ddf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0b50ccb5717de8f64f915d7cbedc663ec8345400
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Reporting Services의 전자 메일 배달
@@ -88,7 +88,7 @@ ms.lasthandoff: 09/21/2017
  기본 모드 보고서 서버의 경우에는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 파일을 편집하는 방식으로 기본 모드 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 통해 메일 배달 확장 프로그램을 구성합니다. SharePoint 모드 보고서 서버의 경우에는 SharePoint 관리 페이지 및 PowerShell 스크립트에서 전자 메일 배달 확장 프로그램을 구성합니다.  
   
  
- 기본 모드 보고서 서버를 구성 하는 방법에 대 한 정보를 참조 하세요. [전자 메일 설정-Reporting Services 기본 모드 (구성 관리자)](/sql-docs/docs/reporting-services/install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager)
+ 기본 모드 보고서 서버를 구성 하는 방법에 대 한 정보를 참조 하세요. [전자 메일 설정-Reporting Services 기본 모드 (구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)
  
  
  SharePoint 모드 보고서 서버를 구성하는 방법에 대한 자세한 내용은 다음을 참조하십시오.  

@@ -4,24 +4,24 @@ description:
 author: sanagama
 ms.author: sanagama
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ef4a59f57f0bd99951297733e51bbc02b81e78ef
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 06dc93bec060f2ceb435fcf17817df9e7a8daee9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>내보내기 및 SSMS 또는 SqlPackage.exe windows와 Linux에서 데이터베이스 가져오기
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 내보내고 Linux에서 SQL Server 2017 RC2에 데이터베이스를 가져옵니다. Windows 응용 프로그램은 SSMS 및 SqlPackage.exe, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 하는 경우이 방법을 사용 합니다.
+이 항목에서는 사용 하는 방법을 보여 줍니다. [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) 및 [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) 내보내고 SQL Server 2017 linux에서 데이터베이스를 가져옵니다. Windows 응용 프로그램은 SSMS 및 SqlPackage.exe, 따라서 Linux에서 원격 SQL Server 인스턴스에 연결할 수 있는 Windows 컴퓨터는 하는 경우이 방법을 사용 합니다.
 
 항상 설치 하 고에 설명 된 대로 SQL Server Management Studio (SSMS)의 가장 최신 버전을 사용 해야 [Linux에서 SQL Server에 연결 하는 Windows에서 SSMS를 사용 하 여](sql-server-linux-develop-use-ssms.md)
 

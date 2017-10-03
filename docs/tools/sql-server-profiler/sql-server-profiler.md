@@ -30,10 +30,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0ab5d4cbddc6922bc13a37dc42c1915cdd149367
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ec5830ac7d4a4bf468f7c9af0ae1866e05725ca2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-profiler"></a>SQL Server 프로파일러
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
 
  ## <a name="where-is-the-profiler"></a>프로파일러는 어디에 있나요?
  
- 다양한 방법으로 SSMS에서 프로파일러를 시작할 수 있습니다. [다음은 프로파일러를 시작 하는 방법을 나열 하는 항목입니다.](/sql-docs/docs/tools/sql-server-profiler/start-sql-server-profiler)
+ 다양한 방법으로 SSMS에서 프로파일러를 시작할 수 있습니다. [다음은 프로파일러를 시작 하는 방법을 나열 하는 항목입니다.](start-sql-server-profiler.md)
   
 ## <a name="capture-and-replay-trace-data"></a>추적 데이터 캡처 및 재생 
 다음 표에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 추적 데이터를 캡처하고 재생하는 데 사용할 수 있는 권장 기능을 보여 줍니다.
@@ -57,8 +57,8 @@ ms.lasthandoff: 09/21/2017
 ||||  
 |-|-|-|  
 |**기능 \ 대상 작업**|**관계형 엔진**|**Analysis Services**|  
-|**추적 캡처**|SQL Server Management Studio의[확장 이벤트](/sql-docs/docs/relational-databases/extended-events/extended-events) 그래픽 사용자 인터페이스|SQL Server 프로파일러|  
-|**추적 재생**|[Distributed Replay](/sql-docs/docs/tools/distributed-replay/sql-server-distributed-replay)|SQL Server 프로파일러|  
+|**추적 캡처**|SQL Server Management Studio의[확장 이벤트](../../relational-databases/extended-events/extended-events.md) 그래픽 사용자 인터페이스|SQL Server 프로파일러|  
+|**추적 재생**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|SQL Server 프로파일러|  
   
 ## <a name="sql-server-profiler"></a>SQL Server 프로파일러  
  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 또는 Analysis Services의 인스턴스를 모니터링하기 위한 SQL 추적에 대한 그래픽 사용자 인터페이스입니다. 각 이벤트에 대한 데이터를 캡처하고 파일이나 테이블에 저장하여 나중에 분석할 수 있습니다. 예를 들어 프로덕션 환경을 모니터링하여 어느 저장 프로시저가 너무 늦게 실행되어 성능을 떨어뜨리고 있는지 볼 수 있습니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]이 활동에 대 한 다음과 같은 사용  

@@ -3,7 +3,7 @@ title: "ALTER DATABASE (Azure SQL 데이터베이스) | Microsoft Docs"
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 08/07/2017
+ms.date: 09/25/2017
 ms.prod: 
 ms.reviewer: 
 ms.service: sql-database
@@ -18,10 +18,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe1ad8f6331d853b65ac10c64ae9d0349d962cfb
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: f525c0ca01f49be05c1920897951059b126c83e9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="alter-database-azure-sql-database"></a>ALTER DATABASE (Azure SQL 데이터베이스)
@@ -34,29 +34,27 @@ ms.lasthandoff: 09/01/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-      -- Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 ALTER DATABASE { database_name }  
 {  
-    MODIFY NAME =new_database_name  
+    MODIFY NAME = new_database_name  
   | MODIFY ( <edition_options> [, ... n] )   
   | SET { <option_spec> [ ,... n ] }   
   | ADD SECONDARY ON SERVER <partner_server_name>  
-      [WITH (\<add-secondary-option>::= [, ... n] ) ]  
+      [WITH ( <add-secondary-option>::= [, ... n] ) ]  
   | REMOVE SECONDARY ON SERVER <partner_server_name>  
   | FAILOVER  
   | FORCE_FAILOVER_ALLOW_DATA_LOSS  
 }  
-  
+[;] 
+
 <edition_options> ::=   
 {  
 
       MAXSIZE = { 100 MB | 250 MB | 500 MB | 1 … 1024 … 4096 GB }    
     | EDITION = { 'basic' | 'standard' | 'premium' | 'premiumrs' }   
-    | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |
+    | SERVICE_OBJECTIVE = 
+                 {  <service-objective>
                  | { ELASTIC_POOL (name = <elastic_pool_name>) }   
                  }   
 }  
@@ -65,21 +63,22 @@ ALTER DATABASE { database_name }
    {  
       ALLOW_CONNECTIONS = { ALL | NO }  
      | SERVICE_OBJECTIVE =   
-                 {  'S0' | 'S1' | 'S2' | 'S3' | 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
-                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11' | 'P15' |
-                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
+                 {  <service-objective> 
                  | { ELASTIC_POOL ( name = <elastic_pool_name>) }   
                  }   
    }  
-  
- [;]  
+
+<service-objective> ::=  { 'S0' | 'S1' | 'S2' | 'S3'| 'S4'| 'S6'| 'S7'| 'S9'| 'S12' |
+                 | 'P1' | 'P2' | 'P4'| 'P6' | 'P11'  | 'P15' | 
+                 | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' | }
+
 ```  
   
-```  
-SET OPTIONS AVAILABLE FOR SQL Database  
-Full descriptions of the set options are available in the topic   
-ALTER DATABASE SET Options. The supported syntax is listed here.  
-  
+```
+-- SET OPTIONS AVAILABLE FOR SQL Database  
+-- Full descriptions of the set options are available in the topic   
+-- ALTER DATABASE SET Options. The supported syntax is listed here.  
+
 <optionspec> ::=   
 {  
     <auto_option>   
@@ -107,7 +106,7 @@ ALTER DATABASE SET Options. The supported syntax is listed here.
 }  
   
 <compatibility_level_option>::=  
-COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }  
+COMPATIBILITY_LEVEL = { 140 | 130 | 120 | 110 | 100 }  
   
 <cursor_option> ::=   
 {  
@@ -191,15 +190,27 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
  현재 사용 중인 데이터베이스를 변경하도록 지정합니다.  
   
  MODIFY NAME  **=**  *new_database_name*  
- 로 지정 된 이름의 데이터베이스를 이름을 바꿉니다. *new_database_name*합니다.  
-  
+ 로 지정 된 이름의 데이터베이스를 이름을 바꿉니다. *new_database_name*합니다. 다음 예에서는 데이터베이스의 이름을 변경 `db1` 를 `db2`:   
+
+```  
+ALTER DATABASE db1  
+    MODIFY Name = db2 ;  
+```    
+
  수정 (버전  **=**  ['기본' | '표준' | '프리미엄' | premiumrs'])    
- 데이터베이스의 서비스 계층을 변경합니다.  버전 변경이 데이터베이스의 MAXSIZE 속성이 해당 버전에서 지 원하는 올바른 범위를 벗어난 값으로 설정 되어 있으면 실패 합니다.  
+ 데이터베이스의 서비스 계층을 변경합니다. 다음 예에서는 변경 버전으로 `premium`:
   
+```  
+ALTER DATABASE current 
+    MODIFY (EDITION = 'premium');
+``` 
+
+버전 변경이 데이터베이스의 MAXSIZE 속성이 해당 버전에서 지 원하는 올바른 범위를 벗어난 값으로 설정 되어 있으면 실패 합니다.  
+
  수정 (MAXSIZE  **=**  [100MB | 500MB | 1 | 1024... 4096] GB)  
  데이터베이스의 최대 크기를 지정합니다. 최대 크기는 데이터베이스의 EDITION 속성에 대한 유효한 값 집합을 따라야 합니다. 데이터베이스의 최대 크기를 변경하면 데이터베이스 EDITION이 변경될 수 있습니다. 다음 표에서는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서비스 계층에 대해 지원되는 MAXSIZE 값 및 기본값(D)을 보여 줍니다.  
   
-|**MAXSIZE**|**Basic**|**S0 S2**|**S3 S12**|**P1 P6 및 PRS1 PRS6**| **P11 P15** 
+|**MAXSIZE**|**Basic**|**S0 S2**|**S3 S12**|**P1 P6 및 PRS1 PRS6**|**P11 P15**|  
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|  
 |100MB|√|√|√|√|√|  
 |250MB|√|√|√|√|√|  
@@ -217,10 +228,10 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 |200GB|해당 사항 없음|√|√|√|√|  
 |250GB|해당 사항 없음|√ (D)|√ (D)|√|√|  
 |300GB|해당 사항 없음|√|√|√|√|  
-|400GB|해당 사항 없음|√|√|√|√|
-|500GB|해당 사항 없음|√|√|√ (D)|√|
-|750 GB|해당 사항 없음|√|√|√|√|
-|1024GB|해당 사항 없음|√|√|√|√ (D)|
+|400GB|해당 사항 없음|√|√|√|√|  
+|500GB|해당 사항 없음|√|√|√ (D)|√|  
+|750 GB|해당 사항 없음|√|√|√|√|  
+|1024GB|해당 사항 없음|√|√|√|√ (D)|  
 |1024GB에서 최대 4, 096 GB 단위로 256 GB *|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|√|√|  
   
  \*P11 및 P15 허용 MAXSIZE 최대 4TB 1024GB 기본 크기 되 고 사용 합니다.  P11 및 P15 추가 비용 없이 최대 4TB의 포함 된 저장소를 사용할 수 있습니다. 프리미엄 계층에서 1TB 보다 큰 최대 크기는 현재 다음 지역에서 사용할 수 있습니다: 미국 East2, 미국 서 부, 미국 정부 기관용 버지니아, 서 부 유럽, 독일 중앙, 동남 아시아, 일본 동부, 오스트레일리아 동부, 중앙 캐나다 및 캐나다 동부 합니다. 현재 제한 사항에 대 한 참조 [데이터베이스를 단일](https://docs.microsoft.com/azure/sql-database-single-database-resources)합니다.  
@@ -233,11 +244,19 @@ COMPATIBILITY_LEVEL = { 130 | 120 | 110 | 100 }
 -   EDITION이 지정되었지만 MAXSIZE가 지정되지 않은 경우 해당 버전에 대한 기본값이 사용됩니다. 예를 들어 EDITION이 Standard로 설정되었고 MAXSIZE가 지정되지 않았으면 MAXSIZE가 자동으로 500 MB로 설정됩니다.  
   
 -   MAXSIZE 또는 EDITION이 모두를 지정 EDITION 표준 (S0)로 설정 되 고 MAXSIZE는 250GB를 설정 됩니다.  
+ 
+
+ 수정 (SERVICE_OBJECTIVE = \<서비스 목표 >)  
+ 성능 수준을 지정합니다. 다음 예제에서는 변경 내용에 premium 데이터베이스의 서비스 `P6`:
+ 
+```  
+ALTER DATABASE current 
+    MODIFY (SERVICE_OBJECTIVE = 'P6');
+```  
+ 서비스 목표에 대 한 사용 가능한 값은: `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `PRS1`, `PRS2`, `PRS4`, 및 `PRS6`합니다. 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합에 대 한 자세한 내용은 [Azure SQL 데이터베이스 서비스 계층 및 성능 수준](http://msdn.microsoft.com/library/azure/dn741336.aspx)합니다. 지정 된 SERVICE_OBJECTIVE 버전에서 지원 되지 않는 경우 오류가 발생 합니다. SERVICE_OBJECTIVE 값을 한 계층에서 다른 계층으로 변경하려면(예: S1에서 P1로 변경), EDITION 값도 변경해야 합니다.  
   
- SERVICE_OBJECTIVE 수정 {'S0' | 'S1' | 'S 2' | ' S3 "| 'S4' | 'S6' | 'S7' | 'S9' | 'S12' | 'P1' | 'P 2' | 'P4' | 'P6' | 'P11' | 'P15' | 'PRS1' | 'PRS2' | 'PRS4' | 'PRS6' |  
- 성능 수준을 지정합니다. 서비스 목표 설명과 크기, 버전 및 서비스 목표 조합에 대 한 자세한 내용은 [Azure SQL 데이터베이스 서비스 계층 및 성능 수준](http://msdn.microsoft.com/library/azure/dn741336.aspx)합니다. 지정 된 SERVICE_OBJECTIVE 버전에서 지원 되지 않는 경우 오류가 발생 합니다. SERVICE_OBJECTIVE 값을 한 계층에서 다른 계층으로 변경하려면(예: S1에서 P1로 변경), EDITION 값도 변경해야 합니다.  
-  
-ELASTIC_POOL (이름 = \<elastic_pool_name >) 기존 데이터베이스는 탄력적인 풀에 추가할 데이터베이스의 SERVICE_OBJECTIVE ELASTIC_POOL로 설정 하 고 탄력적 풀의 이름을 제공 합니다. 동일한 서버 내에서 다른 탄력적인 풀에 데이터베이스를 변경 하려면이 옵션을 사용할 수도 있습니다. 자세한 내용은 참조 [만들기 및 SQL 데이터베이스 탄력적 풀 관리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)합니다. 탄력적 풀에서 데이터베이스를 제거 하는 SERVICE_OBJECTIVE 단일 데이터베이스 성능 수준으로 설정 하려면 ALTER DATABASE를 사용 합니다.  
+ 수정 (SERVICE_OBJECTIVE 탄력적인 =\_풀 (이름 = \<elastic_pool_name >)  
+ 기존 데이터베이스를 탄력적인 풀에 추가 하려면 데이터베이스의 SERVICE_OBJECTIVE ELASTIC_POOL로 설정 하 고 탄력적 풀의 이름을 제공 합니다. 동일한 서버 내에서 다른 탄력적인 풀에 데이터베이스를 변경 하려면이 옵션을 사용할 수도 있습니다. 자세한 내용은 참조 [만들기 및 SQL 데이터베이스 탄력적 풀 관리](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool-portal/)합니다. 탄력적 풀에서 데이터베이스를 제거 하는 SERVICE_OBJECTIVE 단일 데이터베이스 성능 수준으로 설정 하려면 ALTER DATABASE를 사용 합니다.  
 
  보조에 서버 추가 \<partner_server_name >  
  파트너 서버에 로컬 데이터베이스에 지리적 복제, 주에 같은 이름의 지리적 복제 보조 데이터베이스를 만들고 주 데이터베이스에서 새 보조 복제본에 데이터를 비동기적으로 복제를 시작 합니다. 동일한 이름의 데이터베이스가 보조 데이터베이스에 이미 있으면 명령이 실패 합니다. 이 명령은 주 되는 로컬 데이터베이스를 호스팅하는 서버의 master 데이터베이스에서 실행 됩니다.  
@@ -322,21 +341,17 @@ ELASTIC_POOL (이름 = \<elastic_pool_name >) 기존 데이터베이스는 탄�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-name-of-a-database"></a>1. 데이터베이스의 이름 변경  
- 다음 예에서는 `db1` 데이터베이스의 이름을 `db2`로 변경합니다.  
-  
-```  
-ALTER DATABASE db1  
-Modify Name = db2 ;  
-```    
-
-### <a name="b-changing-the-edition-size-and-service-objective-for-an-existing-database"></a>2. 기존 데이터베이스에 대 한 버전, 크기 및 서비스 목표를 변경합니다.
+### <a name="a-check-the-edition-options-and-change-them"></a>1. 버전 옵션을 확인 하 고 변경 합니다.
 
 ```
+SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
+        ServiceObjective = DATABASEPROPERTYEX('db1', 'ServiceObjective'),
+        MaxSizeInBytes =  DATABASEPROPERTYEX('db1', 'MaxSizeInBytes');
+
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="c-moving-a-database-to-a-different-elastic-pool"></a>3. 다른 탄력적 풀에 데이터베이스를 이동  
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>2. 다른 탄력적 풀에 데이터베이스를 이동  
  기존 데이터베이스 풀 1 이라는 풀으로 이동 합니다.  
   
 ```  
@@ -344,8 +359,8 @@ ALTER DATABASE db1
 MODIFY ( SERVICE_OBJECTIVE = ELASTIC_POOL ( name = pool1 ) ) ;  
 ```  
   
-### <a name="d-add-a-geo-replication-secondary"></a>4. 지리적 복제 보조를 추가 합니다.  
- 로컬 서버에서 d b 1의 서버 secondaryserver에 db1을 읽을 수 없는 보조 데이터베이스를 만듭니다.  
+### <a name="c-add-a-geo-replication-secondary"></a>3. 지리적 복제 보조를 추가 합니다.  
+ 서버에 db1 읽을 수 없는 보조 데이터베이스를 만듭니다. `secondaryserver` 로컬 서버에서 d b 1의 합니다.  
   
 ```  
 ALTER DATABASE db1   
@@ -353,16 +368,16 @@ ADD SECONDARY ON SERVER secondaryserver
 WITH ( ALLOW_CONNECTIONS = NO )  
 ```  
   
-### <a name="e-remove-a-geo-replication-secondary"></a>5. 지리적 복제 보조를 제거 합니다.  
- 서버 secondaryserver에는 보조 데이터베이스 d b 1을 제거합니다.  
+### <a name="d-remove-a-geo-replication-secondary"></a>4. 지리적 복제 보조를 제거 합니다.  
+ 서버에서 보조 데이터베이스에서는 db1 제거 `secondaryserver`합니다.  
   
 ```  
 ALTER DATABASE db1   
 REMOVE SECONDARY ON SERVER testsecondaryserver   
 ```  
   
-### <a name="f-failover-to-a-geo-replication-secondary"></a>6. 지리적 복제 보조 복제본으로 장애 조치  
- 서버 secondaryserver secondaryserver 서버에서 실행 될 때 새 주 데이터베이스가 될 수에 보조 데이터베이스 d b 1의 수준을 올립니다.  
+### <a name="e-failover-to-a-geo-replication-secondary"></a>5. 지리적 복제 보조 복제본으로 장애 조치  
+ 서버에서 보조 데이터베이스에서는 db1 승격 `secondaryserver` 새로운 주 데이터베이스 서버에서 실행 되도록 `secondaryserver`합니다.  
   
 ```  
 ALTER DATABASE db1 FAILOVER  

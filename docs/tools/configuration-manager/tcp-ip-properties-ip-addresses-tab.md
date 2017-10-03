@@ -18,16 +18,16 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fb0172c59d4ba114a98191b5ac5b5c88c94bb4a3
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 3d2e6ea5bd6d2436946a015addc1e25f3dd98ce1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>TCP/IP 속성(IP 주소 탭)
   **TCP/IP 속성(IP 주소 탭)** 대화 상자를 사용하여 특정 IP 주소에 대한 TCP/IP 프로토콜 옵션을 구성할 수 있습니다. **IPAll** 을 선택하면 모든 주소에 대해 **TCP 동적 포트** 및 **TCP 포트**만 동시에 구성할 수 있습니다.  
   
- 변경 내용은 SQL Server를 다시 시작할 때 적용됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 [SQL Server Browser 서비스 시작 및 중지](/sql-docs/docs/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services)를 참조하세요.  
+ 변경 내용은 SQL Server를 다시 시작할 때 적용됩니다. SQL Server Browser 서비스를 시작 및 중지하는 방법은 [SQL Server Browser 서비스 시작 및 중지](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)를 참조하세요.  
   
 ## <a name="static-vs-dynamic-ports"></a>정적 포트 대 동적 포트  
  SQL Server의 기본 인스턴스는 들어오는 연결을 1443번 포트에서 수신합니다. 보안상의 이유 또는 클라이언트 응용 프로그램 요구 사항으로 인해 포트를 변경할 수 있습니다. 기본적으로 SQL Server Express를 비롯한 명명된 인스턴스는 동적 포트에서 수신하도록 구성됩니다. 정적 포트를 구성하려면 **TCP 동적 포트** 상자를 비워 놓고 **TCP 포트** 상자에 사용 가능한 포트 번호를 제공합니다. 방화벽에서 포트를 여는 방법은 온라인 설명서에서 SQL Server 액세스를 허용하도록 Windows 방화벽 구성을 참조하십시오.  
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [네트워크 프로토콜 선택](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
- [TCP IP를 사용 하 여 유효한 연결 문자열 만들기](/sql-docs/docs/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip)   
+ [TCP IP를 사용 하 여 유효한 연결 문자열 만들기](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser 서비스](https://msdn.microsoft.com/library/ms181087(v=sql.130).aspx)  
   
   

@@ -22,10 +22,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2aeb88c7c6829c0efd0cd5f422f65690dd3da2b6
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: b7a7ecd3e1a181dda15cb360e336a22af837aa92
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
@@ -43,7 +43,7 @@ ms.lasthandoff: 09/21/2017
   
 -   **트랜잭션을 사용하여 데이터 무결성 유지** 자세한 내용은 [Integration Services 트랜잭션](../../integration-services/integration-services-transactions.md)을 참조하세요.  
   
--   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [검사점을 사용하여 패키지 다시 시작](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
+-   **검사점을 사용하여 실패한 지점에서 패키지 다시 시작** 자세한 내용은 [Restart Packages by Using Checkpoints](../../integration-services/packages/restart-packages-by-using-checkpoints.md)을 참조하세요.  
   
 ## <a name="catch-and-handle-package-errors-by-using-event-handlers"></a>이벤트 처리기를 사용하여 패키지 오류 파악 및 처리  
  이벤트 처리기를 사용하여 패키지 및 패키지의 개체에서 발생한 여러 이벤트에 대응할 수 있습니다.  
@@ -72,9 +72,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="troubleshoot-package-execution-by-using-logging"></a>로깅을 사용하여 패키지 실행 문제 해결  
  로깅을 설정하여 실행하는 패키지에서 발생하는 문제를 대부분 추적할 수 있습니다. 로그 공급자는 지정된 이벤트에 대한 정보를 나중에 분석할 수 있도록 캡처하고 해당 정보를 데이터베이스 테이블, 플랫 파일, XML 파일 또는 지원되는 다른 출력 형식으로 저장합니다.  
   
--   **로깅 설정** 캡처할 이벤트와 정보 항목만 선택하여 로깅 출력을 구체화할 수 있습니다. 자세한 내용은 [SSIS(Integration Services) 로깅](/sql-docs/docs/integration-services/performance/integration-services-ssis-logging)을 참조하세요.  
+-   **로깅 설정** 캡처할 이벤트와 정보 항목만 선택하여 로깅 출력을 구체화할 수 있습니다. 자세한 내용은 [SSIS(Integration Services) 로깅](../performance/integration-services-ssis-logging.md)을 참조하세요.  
   
--   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [Troubleshooting Tools Package Connectivity](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-tools-for-package-connectivity)을 참조하세요.  
+-   **패키지의 Diagnostic 이벤트를 선택하여 공급자 문제 해결.** 외부 데이터 원본과의 패키지 상호 작용 문제를 해결하는 데 유용한 로깅 메시지가 있습니다. 자세한 내용은 [Troubleshooting Tools Package Connectivity](troubleshooting-tools-for-package-connectivity.md)을 참조하세요.  
   
 -   **기본 로깅 출력 향상**. 로깅 기능은 일반적으로 패키지가 실행될 때마다 로깅 대상에 행을 추가합니다. 로깅 출력의 각 행이 패키지를 이름과 고유 식별자로 식별하고 패키지 실행을 고유 ExecutionID로 식별하더라도 단일 목록에 많은 양의 로깅 출력이 있으면 분석하기가 어려울 수 있습니다.  
   

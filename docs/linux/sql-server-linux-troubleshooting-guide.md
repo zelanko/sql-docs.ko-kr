@@ -10,17 +10,17 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 21b7d94bcf15e1ae2d99dd44f4b0030929b92111
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: fdaa3435a26bc96a0dfbd3b1043e92f800ab9915
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="troubleshoot-sql-server-on-linux"></a>Linux에서 SQL Server 문제 해결
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 문서에서는 Docker 컨테이너에서 또는 Linux에서 실행 중인 Microsoft SQL Server 문제를 해결 하는 방법을 설명 합니다. Linux에서 SQL Server의 문제를 해결할 때이 비공개 미리 보기 릴리스의 제한 사항 기억 확인 하십시오. 이러한 목록을 찾을 수 있습니다는 [릴리스 정보](sql-server-linux-release-notes.md)합니다.
+이 문서에서는 Docker 컨테이너에서 또는 Linux에서 실행 중인 Microsoft SQL Server 문제를 해결 하는 방법을 설명 합니다. Linux에서 SQL Server 문제를 해결 해야 지원 되는 기능 및의 알려진된 제한 사항을 검토 하 고 [Linux 릴리스 정보에서 SQL Server](sql-server-linux-release-notes.md)합니다.
 
 ## <a id="connection"></a>연결 오류 문제 해결
 Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가지 있습니다. 
@@ -38,11 +38,11 @@ Linux SQL Server에 연결 하는 데 문제가 있는 경우 확인할 몇 가�
    >   ```bash
    >   sudo ip addr show eth0 | grep "inet"
    >   ```
-   > 이 기술은 한 가지 예외는 Azure Vm을 연결합니다. Azure Vm에 대 한 [Azure 포털에서 VM에 대 한 공용 IP를 찾을](sql-server-linux-azure-virtual-machine.md#connect)합니다.
+   > 이 기술은 한 가지 예외는 Azure Vm을 연결합니다. Azure Vm에 대 한 [Azure 포털에서 VM에 대 한 공용 IP를 찾을](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#connect)합니다.
 
 - 해당 하는 경우 방화벽에서 SQL Server 포트 (기본값 1433)를 열었는지 확인 합니다.
 
-- Azure Vm에 대 한 권한이 있는지 확인 한 [기본 SQL Server 포트에 대 한 네트워크 보안 그룹 규칙](sql-server-linux-azure-virtual-machine.md#remote)합니다.
+- Azure Vm에 대 한 권한이 있는지 확인 한 [기본 SQL Server 포트에 대 한 네트워크 보안 그룹 규칙](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine#remote)합니다.
 
 - 사용자 이름 및 암호 포함 되지 않도록 입력 오류 또는 추가 공백이 나 잘못 된 대/소문자를 확인 합니다.
 

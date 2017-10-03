@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 052e0f66818fd3d9e4cd4ad59720da4a7280c988
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 36fd7c4ac62280fb980bb24c89306a006605b665
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>그룹과 함께 머리글 및 바닥글 표시(보고서 작성기 및 SSRS)
   그룹 머리글 또는 바닥글 같은 정적 행을 테이블릭스 데이터 영역의 그룹과 연결된 동적 행과 함께 렌더링할지 여부를 제어할 수 있습니다.  
   
- 모든 열 머리글 또는 행 머리글을 여러 페이지에서 반복하려면 테이블릭스 데이터 영역에 대해 속성을 설정할 수 있습니다. 자세한 내용은 참조 [행 및 열 머리글을 여러 페이지 (보고서 작성기 및 SSRS)에 표시](/sql-docs/docs/reporting-services/report-design/display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs)합니다.  
+ 모든 열 머리글 또는 행 머리글을 여러 페이지에서 반복하려면 테이블릭스 데이터 영역에 대해 속성을 설정할 수 있습니다. 자세한 내용은 참조 [행 및 열 머리글을 여러 페이지 (보고서 작성기 및 SSRS)에 표시](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)합니다.  
   
  중첩된 그룹에 연결된 동적 행 및 열 또는 레이블이나 부분합과 연결된 정적 행 및 열의 렌더링 동작을 제어하려면 테이블릭스 멤버에 대해 속성을 설정해야 합니다. 테이블릭스 멤버는 정적이거나 동적인 행 또는 열을 나타냅니다. 정적 멤버는 한 번씩 반복되는 멤버로, 총합계 행을 예로 들 수 있습니다. 동적 멤버는 그룹 인스턴스당 한 번씩 반복됩니다. 예를 들어 그룹 식 [Territory]가 있는 그룹과 연결된 행은 해당 지역의 각 고유 값에 대해 한 번씩 반복됩니다. 테이블 릭 스 멤버에 대 한 자세한 내용은 참조 [테이블 릭 스 데이터 영역 셀, 행 및 열 &#40; 보고서 작성기 &#41; 와 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)합니다.  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 09/21/2017
 5.  (옵션) 보고서를 미리 봅니다. 가능한 경우, 보고서는 이 멤버를 지정된 열 그룹 멤버와 함께 렌더링합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS](/sql-docs/docs/reporting-services/report-design/tablix-data-region-report-builder-and-ssrs)   
+ [테이블 릭 스 데이터 영역 셀, 행 및 열 (보고서 작성기) 및 SSRS](tablix-data-region-report-builder-and-ssrs.md)   
  
   
   

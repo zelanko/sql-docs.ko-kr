@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: a645a57cac6eef7507aed9ea81df9fc75eb32dd4
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 445782c1958ee5344f64b365dd81725c5ac8e6f6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>3 단계: Ruby를 사용 하 여 SQL에 연결 하는 개념 증명
@@ -58,7 +58,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="step-3--insert-a-row"></a>행을 삽입 하는 3 단계:  
   
-이 예제를 실행 하는 방법을 표시 됩니다는 [삽입](/sql-docs/docs/t-sql/statements/insert-transact-sql) 문을에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 [SQL 주입](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) 값입니다.    
+이 예제를 실행 하는 방법을 표시 됩니다는 [삽입](../../t-sql/statements/insert-transact-sql.md) 문을에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 [SQL 주입](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값입니다.    
   
 TinyTDS에서 Azure를 사용 하려면 것이 좋습니다 여러 실행 `SET` 현재 세션에서 특정 정보를 처리 하는 방법을 변경 하려면 문을 합니다. 권장 `SET` 문 코드 샘플에 제공 됩니다. 예를 들어 `SET ANSI_NULL_DFLT_ON` 열의 null 허용 여부 상태가 명시적으로 명시 되지 않은 경우에 null 값을 허용 하기 위해 만든 새 열을 허용 합니다.  
   

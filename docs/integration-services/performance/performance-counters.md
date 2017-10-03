@@ -21,10 +21,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 20627d31b8b12990de28a5703244789a6171a388
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a079ca03c21823aa8a3308bccc92cc71e92930c5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="performance-counters"></a>성능 카운터
@@ -121,5 +121,5 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
     >  Administrators 그룹의 멤버인 로컬 계정 또는 도메인 계정을 사용하여 성능 로그 및 경고 서비스를 시작해야 합니다.  
 
 ## <a name="see-also"></a>관련 항목:  
- [프로젝트 및 패키지 실행](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages) [Integration Services 패키지에 의해 기록 된 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
+ [프로젝트 및 패키지 실행](../packages/run-integration-services-ssis-packages.md) [Integration Services 패키지에 의해 기록 된 이벤트](../../integration-services/performance/events-logged-by-an-integration-services-package.md)  
 

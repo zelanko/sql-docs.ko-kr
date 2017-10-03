@@ -29,10 +29,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 03e33d60d1d19449d8f7275ae957b4fa2a74e8e2
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
@@ -85,7 +85,7 @@ ms.lasthandoff: 09/21/2017
 ### <a name="parameters-tab"></a>매개 변수 탭  
  Integration Services(SSIS) 매개 변수를 사용하여 패키지 실행 시 패키지 내의 속성에 값을 할당할 수 있습니다. 프로젝트 수준에서 프로젝트 매개 변수를 만들고 패키지 수준에서 패키지 매개 변수를 만들 수 있습니다. 프로젝트 매개 변수는 프로젝트가 수신하는 외부 입력을 프로젝트 내 하나 이상의 패키지에 제공하기 위해 사용됩니다. 패키지 매개 변수를 사용하면 패키지를 편집하여 다시 배포할 필요 없이 패키지 실행을 수정할 수 있습니다. 이 탭에서 패키지 매개 변수를 관리할 수 있습니다.  
   
- 매개 변수에 대한 자세한 내용은 [SSIS(Integration Services) 매개 변수](/sql-docs/docs/integration-services/integration-services-ssis-package-and-project-parameters)를 참조하세요.  
+ 매개 변수에 대한 자세한 내용은 [SSIS(Integration Services) 매개 변수](integration-services-ssis-package-and-project-parameters.md)를 참조하세요.  
   
 > **중요!!**  매개 변수는 프로젝트 배포 모델을 위해 배포된 프로젝트에만 사용할 수 있습니다. 따라서 프로젝트 배포 모델을 사용하도록 구성된 프로젝트에 속한 패키지에 대해서만 매개 변수 탭이 표시됩니다.  
   

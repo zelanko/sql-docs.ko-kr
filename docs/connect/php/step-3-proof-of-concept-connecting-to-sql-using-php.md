@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 9b2fb2de59b10315691ea177522fd9c36da4f4c8
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: f1ea7333aa847916f45d648c582f07de0774eda6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>3단계: PHP를 사용하는 SQL과 연결된 개념 증명
@@ -83,7 +83,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="step-3--insert-a-row"></a>행을 삽입 하는 3 단계:  
   
-이 예제를 실행 하는 방법을 표시 됩니다는 [삽입](/sql-docs/docs/t-sql/statements/insert-transact-sql) 문을에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 [SQL 주입](/sql-docs/docs/relational-databases/tables/primary-and-foreign-key-constraints) 값입니다.    
+이 예제를 실행 하는 방법을 표시 됩니다는 [삽입](../../t-sql/statements/insert-transact-sql.md) 문을에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 [SQL 주입](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값입니다.    
   
   
 ```php 

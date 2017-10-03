@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12ac0e3b42b647d90af01a96b8e9d2e8571447d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: de48d6e15cdb165e865d13a00b6f956816e46e39
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="welcome-to-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 시작
@@ -30,7 +30,7 @@ ms.lasthandoff: 09/21/2017
 > 이 항목에서는 마법사의 **첫 번째 페이지** 에 대해서만 설명합니다. 다른 작업에 대 한 찾고 있는 경우 참조 [관련 콘텐츠 및 작업](#related)합니다.
 
 ## <a name="prerequisite---is-the-wizard-installed-on-your-computer"></a>필수 구성 요소-는 컴퓨터에 설치 하는 마법사?
-마법사를 실행 하려고 하지만 없는 경우 [! 포함[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)합니다.
+마법사를 실행 하려고 하지만 없는 경우 [! 포함[msCoName](../../ssdt/download-sql-server-data-tools-ssdt.md)합니다.
 
 ## <a name="screen-shot-of-the-welcome-page"></a>시작 페이지의 스크린샷  
 다음 스크린샷에서는 마법사의 **SQL Server 가져오기 및 내보내기 마법사 시작** 페이지를 보여 줍니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 09/21/2017
 
 -   **마법사를 시작 합니다.** 마법사 실행 준비를 마치고 시작하는 방법을 알고 싶으면 [SQL Server 가져오기 및 내보내기 마법사 시작](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)을 참조하세요.
 
--   **마법사를 가져옵니다.** 마법사를 실행 하려고 하지만 없는 경우 [! 포함[msCoName](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)합니다.
+-  **마법사를 가져옵니다.**  마법사를 실행하려고 하지만 컴퓨터에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치되지 않은 경우 SSDT(SQL Server Data Tools)를 설치하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가져오기 및 내보내기 마법사를 설치할 수 있습니다. 자세한 내용은 [SSDT(SQL Server Data Tools) 다운로드](https://msdn.microsoft.com/library/mt204009.aspx)를 참조하세요.
 
 
 

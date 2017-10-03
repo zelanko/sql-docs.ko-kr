@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1afd17d5ba2879fd13f0b3703ca84ea02b3cd416
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: df4b2e68a9b024ed2911d4b5c1d5bcea8984ae15
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
   
  이 항목에서는 패키지가 응용 프로그램 이벤트 로그에 기록하는 일반적인 이벤트 메시지에 대해 설명합니다. 이러한 메시지 중 일부는 패키지에 로깅이 사용되도록 설정되지 않은 경우에도 기본적으로 기록되지만 일부 메시지는 패키지에 로깅이 사용되도록 설정된 경우에만 기록됩니다. 패키지가 이러한 메시지를 기본적으로 기록하는지 아니면 로깅이 사용되도록 설정되어 있기 때문에 기록하는지 여부에 관계없이 메시지의 이벤트 원본은 SQLISPackage입니다.  
   
- SSIS 패키지를 실행하는 방법에 대한 일반적인 내용은 [프로젝트 및 패키지 실행](/sql-docs/docs/integration-services/packages/run-integration-services-ssis-packages)을 참조하세요.  
+ SSIS 패키지를 실행하는 방법에 대한 일반적인 내용은 [프로젝트 및 패키지 실행](../packages/run-integration-services-ssis-packages.md)을 참조하세요.  
   
  패키지 실행 문제를 해결하는 방법에 대한 자세한 내용은 [패키지 실행 문제 해결 도구](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
   

@@ -4,21 +4,21 @@ description: "이 항목에서는 SQL 서버가 Linux에서 실행 하 고 자�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 1192afb7032f34f0af98c3c1051808e89dc22b63
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 6fdb36fbf294ea1f109728a1f304b5a3f3662122
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-on-linux"></a>Linux의 SQL Server
 
-SQL Server는 이제 Linux에서 실행 됩니다! 이 최신 릴리스의 SQL Server 2017 RC2 Linux에서 실행 되며 여러 가지 방법으로 SQL Server 하기만 합니다. 많은 유사 기능 및 운영 체제와 관계 없이 서비스와 동일한 SQL Server 데이터베이스 엔진은
+SQL Server 2017 Linux에서 실행 됩니다. 많은 유사 기능 및 운영 체제와 관계 없이 서비스와 동일한 SQL Server 데이터베이스 엔진은
 
 ## <a name="install"></a>Install
 

@@ -16,16 +16,16 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 8768b00b0bfcd64fae9db63350b94ab4edce2c20
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a48df35dacab91324966eff5c26609c00ecfbfe6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-reporting-services"></a>Reporting Services 문제 해결
   이 섹션의 항목은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 관련된 문제를 식별하고 해결하는 데 도움이 됩니다.  
 
-![작은 파일 폴더 아이콘](../../reporting-services/troubleshooting/media/filefolder-small.png)**Reporting Services 문제 해결   **  
+![작은 파일 폴더 아이콘](../../reporting-services/troubleshooting/media/filefolder-small.png)**Reporting Services 문제 해결**   
 + [Reporting Services 보고서 문제 해결](../../reporting-services/troubleshooting/troubleshoot-reporting-services-report-issues.md)    
 +  [Reporting Services 구독 및 배달 문제 해결](../../reporting-services/troubleshooting/troubleshoot-reporting-services-subscriptions-and-delivery.md)  
 
@@ -39,9 +39,9 @@ ms.lasthandoff: 09/21/2017
 
 +  [기본 모드 보고서 서버에서 보고서 게시 또는 보기 문제 해결](../../reporting-services/troubleshooting/troubleshoot-publishing-or-viewing-a-report-on-a-native-mode-report-server.md)  
 
-+  [서버 및 데이터베이스 연결 문제 해결을 보고와 문제 해결](/sql-docs/docs/reporting-services/troubleshooting/troubleshoot-server-and-database-connection-problems-with-reporting-services)  
++  [서버 및 데이터베이스 연결 문제 해결을 보고와 문제 해결](troubleshoot-server-and-database-connection-problems-with-reporting-services.md)  
 
- ![작은 파일 폴더 아이콘](../../reporting-services/troubleshooting/media/filefolder-small.png)**오류 및 이벤트 참조   **  
+ ![작은 파일 폴더 아이콘](../../reporting-services/troubleshooting/media/filefolder-small.png)**오류 및 이벤트 참조**   
  + [오류 및 이벤트 참조&#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
 
 +  [Reporting Services 오류의 원인 및 해결 방법](../../reporting-services/troubleshooting/cause-and-resolution-of-reporting-services-errors.md)  

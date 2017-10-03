@@ -25,10 +25,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: ced8482c76d970ccd2c146fff04d63279082b1c9
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0dd4e2e79166b803cc70220bcad12dc422eed337
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="deploy-packages-with-ssis"></a>SSIS를 사용하여 패키지 배포
@@ -57,14 +57,14 @@ ms.lasthandoff: 09/21/2017
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 이러한 파일은 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 샘플 데이터베이스)를 다운로드하면 함께 설치됩니다.     
 > **참고!** AdventureWorks의 테이블이나 사용하는 다른 데이터를 만들고 삭제할 수 있는 권한이 있어야 합니다.         
     
--   [SQL Server Data Tools(SSDT)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt).    
+-   [SQL Server Data Tools(SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md).    
     
 **대상 컴퓨터.** 패키지를 배포하려는 컴퓨터에 **다음 구성 요소가 설치되어 있어야 합니다.**    
     
 - SQL Server
 - 샘플 데이터, 완성된 패키지, 구성 및 추가 정보. 이러한 파일은 [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550)(Adventure Works 2014 샘플 데이터베이스)를 다운로드하면 함께 설치됩니다. 
     
-- [SQL Server Management Studio](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms).    
+- [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md).    
     
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 참조하세요.    
     

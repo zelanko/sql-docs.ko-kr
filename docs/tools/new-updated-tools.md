@@ -12,14 +12,14 @@ ms.technology: database-engine
 ms.custom: UpdArt.exe
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.workload: tools
 ms.translationtype: MT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: 1dcb3604619114a1c8d66267dfa7f74c125ce72d
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: c3e9acadb822a833558f8cc805a087c27198e7cd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-tools-for-sql-server"></a>새로 추가 되거나 최근에 업데이트 된: SQL Server 용 도구
@@ -34,7 +34,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *날짜 범위 업데이트:* &nbsp; **2017-07-18** &nbsp; 을 아래와 같이 &nbsp; **2017-09-11**
+- *날짜 범위 업데이트:* &nbsp; **2017-09-11** &nbsp; 을 아래와 같이 &nbsp; **2017-09-27**
 - *주제 영역:* &nbsp; **for SQL Server 도구**합니다.
 
 
@@ -44,7 +44,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 ## <a name="new-articles-created-recently"></a>최근에 만든 새로운 문서
 
-다음 링크는 최근에 추가 된 새 문서를 이동 합니다.
+다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
 ***지금은 나열할 새 문서가 없습니다.***
@@ -55,7 +55,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 ## <a name="updated-articles-with-excerpts"></a>업데이트된 문서의 발췌 내용
 
-이 섹션에는 최근에 대규모 업데이트 발견 된 문서에서 수집 하는 업데이트의 발췌 한 내용 표시 됩니다.
+이 섹션에는 최근에 많이 업데이트된 문서에서 발췌한 업데이트 내용이 표시됩니다.
 
 여기에 표시된 발췌 내용은 적절한 의미 체계 맥락과 분리되어 표시됩니다. 또한 발췌 내용은 때때로 실제 문서에서 이 내용의 주변에 있는 중요한 markdown 구문과도 분리되어 표시됩니다. 따라서 이러한 발췌 내용은 일반적인 지침을 제공하기 위한 것입니다. 이 발췌 내용에서는 관심 내용을 클릭하여 실제 문서를 참조할 가치가 있을지 여부만 파악할 수 있습니다.
 
@@ -69,51 +69,17 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
+### <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
 
-이 compact 목록 발췌 한 내용 섹션에 나열 된 모든 업데이트 된 문서에 대 한 링크를 제공 합니다.
-
-1. [도구 및 유틸리티 Azure SQL 데이터베이스, SQL Server 및 SQL 데이터 웨어하우스](#TitleNum_1)
+이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
 
 
 
-&nbsp;
 
 &nbsp;
 
-<a name="TitleNum_1"/>
-
-### <a name="1-nbsp-tools-and-utilities-for-azure-sql-database-sql-server-and-sql-data-warehouseoverview-sql-toolsmd"></a>1. &nbsp;[도구와 Azure SQL 데이터베이스, SQL Server 및 SQL 데이터 웨어하우스 유틸리티](overview-sql-tools.md)
-
-*업데이트 됨된: 2017-08-25* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-
-<!-- Source markdown line 22.  ms.author= "sstein".  -->
-
-&nbsp;
-
-
-<!-- git diff --ignore-all-space --unified=0 7f3767cca36fb78560c902a5637362727169b2ca f0b1e34fc9737079f522efe86e9e27c697b4b11d  (PR=2961  ,  Filename=overview-sql-tools.md  ,  Dirpath=docs\tools\  ,  MergeCommitSha40=21f0cfd102a6fcc44dfc9151750f1b3c936aa053) -->
-
-
-
-! [--../ includes/media/sql-database-tools.png)이이 문서에서는 SQL Server, Azure SQL 데이터베이스, SQL 데이터 웨어하우스 및 SQL Server 기반 응용 프로그램을 사용 하기 위한 사용 가능한 도구 목록은 제공 합니다.
-
-이동 하려는 경우 테이블을 만들기 시작 쿼리를 실행, 기본적으로 디자인 하 고 데이터베이스를 다음 관리 [**SQL Server Management Studio (SSMS)**... / ssms/download-sql-server-management-studio-ssms.md)으로 도구 될 것입니다. SSMS는 무료 및 Windows에서 실행 됩니다.
-
-Linux 또는 macOS를 실행 하는 경우 [Visual Studio Code](https://code.visualstudio.com/) 와 [ **Visual Studio Code mssql** ](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) 확장 합니다. 이러한 도구는 다양 한 기능을 사용 하 여 Microsoft SQL Server, Azure SQL 데이터베이스 및 SQL 데이터 웨어하우스를 개발 하기 위한 고 수도 있습니다. 참조 [를 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 하려면 Visual Studio Code를 사용 하 여](../linux/sql-server-linux-develop-use-vscode.md)합니다.
-
-
-**SQL 도구**
-
-
-| 도구 | Description |
-|:--|:--|
-| [SQL Server Management Studio (SSMS)... / ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS)를 사용 하 여 쿼리를 디자인 하 고 SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스 관리. |
-| [SQL Server Data Tools (SSDT)... / ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL 데이터베이스 및 Azure SQL 데이터 웨어하우스에 대 한 강력한 개발 환경으로 Visual Studio를 설정 합니다. |
-| [Visual Studio 코드](https://code.visualstudio.com/)| Visual Studio Code Linux, macOS 등 및 Windows에서 작동합니다. Visual Studio Code를 설치 하면 설치 여 [확장명이 mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) Microsoft SQL Server, Azure SQL 데이터베이스 및 SQL 데이터 웨어하우스를 개발 하기 위한 합니다. |
-| [Configuration Manager-... / tools/configuration-manager/sql-server-configuration-manager-help.md) | SQL Server 구성 관리자 SQL Server 서비스를 구성 하 고 네트워크 연결을 구성을 사용 하 고 있습니다.|
-
+***지금은 이 영역에서 최근에 업데이트된 문서가 없습니다.***
 
 
 
@@ -127,35 +93,35 @@ Linux 또는 macOS를 실행 하는 경우 [Visual Studio Code](https://code.vis
     Then run Run-533-*.BAT
 -->
 
-이 섹션에서는 공용 GitHub.com 리포지토리 내에서 다른 주제 영역에서 최근에 업데이트 된 아티클에 대 한 매우 유사한 문서: [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)합니다.
+이 섹션에는 공용 GitHub.com 리포지토리 내의 다른 주제 영역에서 최근에 업데이트된 문서와 유사한 문서가 나와 있습니다. [MicrosoftDocs/sql-docs](https://github.com/MicrosoftDocs/sql-docs/)
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새 + 업데이트 (3 + 12): **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새 + 업데이트 (5 + 0): **SQL에 연결** docs](../connect/new-updated-connect.md)
-- [새 + 업데이트 (5 + 1): **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
-- [새 + 업데이트 (19 + 82): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
-- [새 + 업데이트 (1 + 8): **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
-- [새 + 업데이트 (12 + 1): **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
-- [새 + 업데이트 (0 + 1): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
-- [새 + 업데이트 (7 + 1): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
-- [새 + 업데이트 (1 + 1): **SQL Server Data Tools (SSDT)** docs](../ssdt/new-updated-ssdt.md)
-- [새 + 업데이트 (0 + 2): **SQL Server Migration Assistant (SSMA)** docs](../ssma/new-updated-ssma.md)
-- [새 + 업데이트 (1 + 4): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
-- [새 + 업데이트 (4 + 1): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
-- [새 + 업데이트 (0 + 1): **SQL에 대 한 도구** docs](../tools/new-updated-tools.md)
+- [새 + 업데이트 (0 + 1): **SQL에 대 한 고급 분석** docs](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새 + 업데이트 (0 + 1): **SQL에 대 한 Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [새 + 업데이트 (4 + 1): **SQL에 대 한 데이터베이스 엔진** docs](../database-engine/new-updated-database-engine.md)
+- [새 + 업데이트 (17 + 0): **sql Integration Services** docs](../integration-services/new-updated-integration-services.md)
+- [새 + 업데이트 (3 + 0): **SQL에 대 한 Linux** docs](../linux/new-updated-linux.md)
+- [새 + 업데이트 (1 + 1): **SQL에 대 한 관계형 데이터베이스** docs](../relational-databases/new-updated-relational-databases.md)
+- [새 + 업데이트 (2 + 0): **sql Reporting Services** docs](../reporting-services/new-updated-reporting-services.md)
+- [새 + 업데이트 (0 + 1): **SQL Server Management Studio (SSMS)** docs](../ssms/new-updated-ssms.md)
+- [새 + 업데이트 (0 + 1): **TRANSACT-SQL** docs](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새 + 업데이트 (0 + 0): **SQL에 대 한 Analysis Services** docs](../analysis-services/new-updated-analysis-services.md)
+- [새 + 업데이트 (0 + 0): **SQL에 연결** docs](../connect/new-updated-connect.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
-- [새 + 업데이트 (0 + 0): **서비스 MDS (Master Data) sql** docs](../master-data-services/new-updated-master-data-services.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDX(Multidimensional Expression)** 문서](../mdx/new-updated-mdx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새 + 업데이트 (0 + 0): **Microsoft SQL Server** docs](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
+- [새 + 업데이트 (0 + 0): **SQL에 대 한 도구** docs](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
 

@@ -4,22 +4,22 @@ description: "SQL Server 스크립트 샘플-Red Hat Enterprise Linux에서 무�
 author: edmacauley
 ms.author: edmacauley
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 8b97ec59acf463f73a9277566a89f32a2498a856
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 50f3e867f17987c36a15810eaace668d59b738f2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Red Hat Enterprise Linux에 대 한 SQL Server 무인된 설치 스크립트 샘플:
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 샘플 Bash 스크립트 대화형 입력이 없는 SQL Server 2017 RC2 Red Hat Enterprise Linux (RHEL)를 설치합니다. 데이터베이스 엔진, SQL Server Agent, SQL Server 명령줄 도구를 설치 하는 방식의 예제를 제공 하 고 설치 후 단계를 수행 합니다. 필요에 따라 전체 텍스트 검색을 설치 하 고 관리 사용자를 만들 수 있습니다.
+이 샘플 Bash 스크립트 대화형 입력이 없는 SQL Server 2017 Red Hat Enterprise Linux (RHEL)를 설치합니다. 데이터베이스 엔진, SQL Server Agent, SQL Server 명령줄 도구를 설치 하는 방식의 예제를 제공 하 고 설치 후 단계를 수행 합니다. 필요에 따라 전체 텍스트 검색을 설치 하 고 관리 사용자를 만들 수 있습니다.
 
 > [!TIP]
 > SQL Server를 설치 하는 가장 빠른 방법은 따라야 하는 무인된 설치 스크립트를 필요 하지 않은 경우는 [Red Hat에 대 한 빠른 시작 자습서](quickstart-install-connect-red-hat.md)합니다. 다른 설정 정보를 참조 하십시오. [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.

@@ -4,16 +4,16 @@ description: "이 항목에서는 Linux에서 SQL Server와 함께 DB 메일 및
 author: meet-bhagdev
 ms.author: meetb
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: tbd
 ms.translationtype: MT
-ms.sourcegitcommit: ea75391663eb4d509c10fb785fcf321558ff0b6e
-ms.openlocfilehash: 838a7d492f9826d966da205fc4727eae48ff6e42
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 77eed5cce942dbb91b0b9eb5afbd9ad11403e1d2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 메일 및 Linux에서 SQL 에이전트와 전자 메일 알림
@@ -23,11 +23,12 @@ ms.lasthandoff: 08/02/2017
 다음 단계에서는 DB 메일을 설정 하 고 SQL Server 에이전트를 사용 하는 방법을 보여 줍니다. (**mssql 서버 에이전트**) linux. 
 
 > [!NOTE]
-> Linux에서 SQL Server와 함께 DB 메일을 사용 하려면 SQL Server 2017 RC2 사용 해야 이상.
+> Linux에서 SQL Server와 함께 DB 메일을 사용 하려면 SQL Server 2017 RC1 사용 해야 이상.
 
 ## <a name="prerequisites"></a>필수 구성 요소
--   SQL Server 2017 RC2 이상
--   SQL Server 에이전트 v14.0.800.90 2 이상 (경고에 대 한 전자 메일을 사용 하려는) 하는 경우
+
+- SQL Server 2017 RC1 이상
+- SQL Server 에이전트 v14.0.800.90 2 이상 (경고에 대 한 전자 메일을 사용 하려는) 하는 경우
 
 ## <a name="1-enable-db-mail"></a>1. DB 메일을 사용 하도록 설정
 

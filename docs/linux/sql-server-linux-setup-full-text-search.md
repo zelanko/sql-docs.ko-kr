@@ -4,16 +4,16 @@ description: "이 항목에서는 Linux에서 SQL Server 전체 텍스트 검색
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 07/17/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 67f11f3e21151dba66127b6a86fe0b82a245ad23
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 1f19074764820bddf2cc2a0e8fe4204120a5041d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux에서 SQL Server 전체 텍스트 검색 설치
@@ -86,7 +86,7 @@ sudo zypper update mssql-server-fts
 
 ## <a name="supported-languages"></a>지원되는 언어
 
-전체 텍스트 검색을 사용 하 여 [단어 분리기](/sql-docs/docs/relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search) 언어에 따라 개별 단어를 식별 하는 방법을 결정 하는 합니다. 쿼리를 통해 등록 된 단어 분리기의 목록을 가져올 수 있습니다는 **sys.fulltext_languages** 카탈로그 뷰에 있습니다. 다음 언어에 대 한 단어 분리기는 SQL Server 2017 RC2와 함께 설치 됩니다.
+전체 텍스트 검색을 사용 하 여 [단어 분리기](../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) 언어에 따라 개별 단어를 식별 하는 방법을 결정 하는 합니다. 쿼리를 통해 등록 된 단어 분리기의 목록을 가져올 수 있습니다는 **sys.fulltext_languages** 카탈로그 뷰에 있습니다. 다음 언어에 대 한 단어 분리기는 SQL Server 2017와 함께 설치 됩니다.
 
 | 언어 | 언어 ID |
 |---|---|
@@ -146,9 +146,9 @@ sudo zypper update mssql-server-fts
 
 ## <a id="filters"></a>필터
 
-전체 텍스트 검색 이진 파일에 저장 된 텍스트 에서도 작동 합니다. 하지만 경우 설치 된 필터는 파일을 처리 해야 합니다. 필터에 대 한 자세한 내용은 참조 [필터 구성 및 관리 검색에 대 한](/sql-docs/docs/relational-databases/search/configure-and-manage-filters-for-search)합니다.
+전체 텍스트 검색 이진 파일에 저장 된 텍스트 에서도 작동 합니다. 하지만 경우 설치 된 필터는 파일을 처리 해야 합니다. 필터에 대 한 자세한 내용은 참조 [필터 구성 및 관리 검색에 대 한](../relational-databases/search/configure-and-manage-filters-for-search.md)합니다.
 
-호출 하 여 설치 된 필터의 목록을 볼 수 **sp_help_fulltext_system_components 'filter'**합니다. SQL Server 2017 rc2 다음 필터 설치 됩니다.
+호출 하 여 설치 된 필터의 목록을 볼 수 **sp_help_fulltext_system_components 'filter'**합니다. SQL Server 2017 년에 대 한 다음 필터 설치 됩니다.
 
 | 구성 요소 이름 | 클래스 ID | 버전 |
 |---|---|---|
@@ -258,37 +258,28 @@ sudo zypper update mssql-server-fts
 |.xml | 41B9BE05-B3AF-460C-BF0B-2CDD44A093B1 | 12.0.9735.0 |
 
 ## <a name="semantic-search"></a>의미 체계 검색
-[의미 체계 검색](/sql-docs/docs/relational-databases/search/semantic-search-sql-server) 추출 하 고 통계적으로 관련성이 인덱스의 전체 텍스트 검색 기능에 빌드 *키 구*합니다. 이렇게 하면 데이터베이스에는 문서 내에서 의미를 쿼리할 수 있습니다. 또한이 유사한 문서를 식별할 수 있습니다.
+[의미 체계 검색](../relational-databases/search/semantic-search-sql-server.md) 추출 하 고 통계적으로 관련성이 인덱스의 전체 텍스트 검색 기능에 빌드 *키 구*합니다. 이렇게 하면 데이터베이스에는 문서 내에서 의미를 쿼리할 수 있습니다. 또한이 유사한 문서를 식별할 수 있습니다.
 
-의미 체계 검색을 사용 하려면 먼저 다운로드 하 고 연결 된 [의미 체계 언어 통계 데이터베이스](/sql-docs/docs/relational-databases/search/install-and-configure-semantic-search)합니다.
+의미 체계 검색을 사용 하려면 먼저 컴퓨터를 의미 체계 언어 통계 데이터베이스를 복원 해야 합니다.
 
-1. Windows 컴퓨터에서 [다운로드는 합니다. 의미 체계 언어 통계 데이터베이스에 대 한 MSI 파일](https://www.microsoft.com/download/details.aspx?id=54277)합니다.
+1. 와 같은 도구를 사용 하 여 [sqlcmd](sql-server-linux-setup-tools.md)Linux SQL Server 인스턴스에 대해 다음 TRANSACT-SQL 명령을 실행 하는 등입니다. 이 명령은 언어 통계 데이터베이스를 복원합니다.
 
-    > [!NOTE]
-    > 이 다운로드는 데이터베이스에 대 한 시간을 합니다. MSI 파일 때문에 Windows 컴퓨터를이 단계에 대해 필요 합니다.
+   ```sql
+   RESTORE DATABASE [semanticsdb] FROM
+   DISK = N'/opt/mssql/misc/semanticsdb.bak' WITH FILE = 1,
+   MOVE N'semanticsdb' TO N'/var/opt/mssql/data/semanticsDB.mdf',
+   MOVE N'semanticsdb_log' TO N'/var/opt/mssql/data/semanticsdb_log.ldf', NOUNLOAD, STATS = 5
+   GO
+   ```
 
-2. 실행 된 합니다. MSI 파일에서 데이터베이스를 추출할 및 로그 파일입니다.
+   > [!NOTE]
+   > 필요한 경우 구성에 맞게 조정 하려면 이전 RESTORE 명령에서 경로 업데이트 합니다.
 
-3. Linux SQL Server 컴퓨터에 데이터베이스 및 로그 파일을 이동 합니다.
+1. 의미 체계 언어 통계 데이터베이스를 등록 하려면 다음 TRANSACT-SQL 명령을 실행 합니다.
 
-    > [!TIP]
-    > Linux를 Windows에서 파일을 이동 하는 방법에 대 한 지침을 참조 하십시오. [Linux로 파일을 전송](sql-server-linux-migrate-restore-database.md#scp)합니다.
-
-4. 언어 통계 데이터베이스를 연결 하 여 Linux SQL Server 인스턴스에서 다음 TRANSACT-SQL 명령을 실행 합니다.
-
-    ```tsql
-    CREATE DATABASE semanticsdb  
-            ON ( FILENAME = N'var/opt/mssql/data/semanticsdb.mdf' )  
-            LOG ON ( FILENAME = N'var/opt/mssql/data/semanticsdb_log.ldf' )  
-            FOR ATTACH;  
-    GO  
-    ```
-
-5. 의미 체계 언어 통계 데이터베이스를 등록 하려면 다음 TRANSACT-SQL 명령을 실행 합니다.
-
-    ```tsql
+    ```sql
     EXEC sp_fulltext_semantic_register_language_statistics_db @dbname = N'semanticsdb';  
-    GO  
+    GO
     ```
 
 ## <a name="next-steps"></a>다음 단계

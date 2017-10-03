@@ -4,23 +4,23 @@ description: "이 빠른 시작 자습서에는 Red Hat Enterprise Linux에 SQL 
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/07/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 5309c2884fa4bf46a4c9c7224f4c1f21be23e7e6
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Red Hat에서 데이터베이스를 만들고 SQL Server 설치
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 빠른 시작 자습서에서는 처음 설치할 SQL Server 2017 RC2에 Red Hat Enterprise Linux (RHEL) 7.3 합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작 자습서에서는 처음 설치할 SQL Server 2017에 Red Hat Enterprise Linux (RHEL) 7.3 합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 > [!TIP]
 > 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 에 관심이 있는 경우는 [무인](sql-server-linux-setup.md#unattended) 또는 [오프 라인](sql-server-linux-setup.md#offline) 설치 절차 참조 [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
@@ -37,11 +37,17 @@ Red Hat Enterprise Linux을 사용자의 컴퓨터에 설치 하려면로 이동
 
 RHEL에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령을 실행는 **mssql 서버** 패키지:
 
+> [!IMPORTANT]
+> CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 GA 저장소 중 하나를 등록 하기 전에 이전 저장소를 먼저 제거 해야 있습니다. 자세한 내용은 참조 [GA 저장소에 미리 보기 저장소에서 저장소 변경](sql-server-linux-change-repo.md)
+
 1. Microsoft SQL Server Red Hat 저장소 구성 파일을 다운로드 합니다.
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
    ```
+
+   > [!NOTE]
+   > CU (누적 업데이트) 저장소입니다. 저장소 옵션 및 간 차이점에 대 한 자세한 내용은 참조 [소스 저장소 변경](sql-server-linux-setup.md#repositories)합니다.
 
 1. SQL Server를 설치 하려면 다음 명령을 실행 합니다.
 
@@ -56,14 +62,10 @@ RHEL에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령�
    sudo /opt/mssql/bin/mssql-conf setup
    ```
    > [!TIP]
-   > (최소 길이가 8 자, 대문자를 포함 하 고 소문자, 10 진수 및/또는 영숫자가 아닌 기호가) SA 계정에 대 한 강력한 암호를 지정 해야 합니다.
+   > 이 자습서에서는 SQL Server 2017을 시도 하는 경우 다음과 같은 버전 자유롭게 사용이 허가 됩니다: Evaluation, Developer 및 Express입니다.
 
-   > [!TIP]
-   > R c 2를 설치할 때 구매한 라이선스가 없습니다.는 버전 중 하나를 수행 해야 합니다. 출시 후보 이기 때문에 선택한 버전에 관계 없이 다음과 같은 메시지가 나타납니다.
-   >
-   > `This is an evaluation version.  There are [175] days left in the evaluation period.`
-   >
-   > 이 메시지는 선택한 버전을 반영 하지 않습니다. R c 2에 대 한 미리 보기 기간을 연결합니다.
+   > [!NOTE]
+   > (최소 길이가 8 자, 대문자를 포함 하 고 소문자, 10 진수 및/또는 영숫자가 아닌 기호가) SA 계정에 대 한 강력한 암호를 지정 해야 합니다.
 
 1. 구성 작업이 완료 되 면 서비스가 실행 되 고 있는지 확인 합니다.
 

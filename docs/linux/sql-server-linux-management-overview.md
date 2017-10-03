@@ -11,24 +11,24 @@ ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 5f7c0f61cf9f441c56529ddaaddc96a0c318ce59
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 4639379a65fc28c363f6510c1a393df8840dc7f8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Linux에서 SQL Server를 관리 하는 적절 한 도구 선택
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-SQL Server 2017 RC2 linux를 관리 하는 방법은 여러 가지가 있습니다. 다음 섹션의 다른 관리 도구와 기술을 더 많은 리소스에 대 한 포인터와 간략 한 개요를 제공 합니다.
+SQL Server 2017 linux를 관리 하는 방법은 여러 가지가 있습니다. 다음 섹션의 다른 관리 도구와 기술을 더 많은 리소스에 대 한 포인터와 간략 한 개요를 제공 합니다.
 
 ## <a name="mssql-conf"></a>mssql conf 
 **mssql conf** 도구는 Linux에서 SQL Server를 구성 합니다. 자세한 내용은 참조 [mssql conf와 Linux에서 SQL Server 구성](sql-server-linux-configure-mssql-conf.md)합니다.
 
 ## <a name="transact-sql"></a>Transact-SQL
 
-클라이언트 도구에서 수행할 수 있는 모든 항목이 거의 Transact SQL 문으로 수행할 수도 있습니다. SQL Server에서 제공 [동적 관리 뷰 (Dmv)](/sql-docs/docs/relational-databases/system-dynamic-management-views/system-dynamic-management-views) 상태와 구성을 SQL server를 쿼리 합니다. 또한 [TRANSACT-SQL 명령을](https://msdn.microsoft.com/library/bb510741.aspx) 데이터베이스 관리 작업에 대 한 합니다. SQL Server에 연결 및 TRANSACT-SQL 쿼리를 실행할 수 있도록 하는 클라이언트 도구에서 이러한 명령을 실행할 수 있습니다. 예를 들면 [sqlcmd](sql-server-linux-setup-tools.md), [Visual Studio Code](sql-server-linux-develop-use-vscode.md), 및 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)합니다.
+클라이언트 도구에서 수행할 수 있는 모든 항목이 거의 Transact SQL 문으로 수행할 수도 있습니다. SQL Server에서 제공 [동적 관리 뷰 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 상태와 구성을 SQL server를 쿼리 합니다. 또한 [TRANSACT-SQL 명령을](https://msdn.microsoft.com/library/bb510741.aspx) 데이터베이스 관리 작업에 대 한 합니다. SQL Server에 연결 및 TRANSACT-SQL 쿼리를 실행할 수 있도록 하는 클라이언트 도구에서 이러한 명령을 실행할 수 있습니다. 예를 들면 [sqlcmd](sql-server-linux-setup-tools.md), [Visual Studio Code](sql-server-linux-develop-use-vscode.md), 및 [SQL Server Management Studio](sql-server-linux-manage-ssms.md)합니다.
 
 ## <a name="sql-server-management-studio-on-windows"></a>Windows에서 SQL Server Management Studio
 

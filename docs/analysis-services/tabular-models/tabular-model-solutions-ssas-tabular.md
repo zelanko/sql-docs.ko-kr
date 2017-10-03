@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 1a74389ea12c6c8987246946a9c81d8aeb3851cf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 31c6a32198c4a9aa417ec65fcf85a5455ea53c4a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="creating-tabular-models"></a>테이블 형식 모델 만들기
@@ -63,7 +63,7 @@ ms.lasthandoff: 09/21/2017
  [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   
 ## <a name="see-also"></a>관련 항목:  
- [SQL Server Data Tools (SSDT) 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)   
+ [SQL Server Data Tools (SSDT) 다운로드](../../ssdt/download-sql-server-data-tools-ssdt.md)   
  [도구 및 Analysis Services에서 사용 되는 응용 프로그램](../../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
   

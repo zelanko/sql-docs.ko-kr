@@ -1,7 +1,7 @@
 ---
 title: "게시 및 Python 코드를 사용 합니다. | Microsoft Docs"
 ms.custom: 
-ms.date: 04/14/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,25 +13,26 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 77a4c36636b48474a6d227f6ea18e08e50add4bc
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 550056f595b881484f3be272b8ae8b2a6d5455af
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 
 # <a name="publish-and-consume-python-web-services"></a>게시 및 Python 웹 서비스를 사용 합니다.
 
-**적용 대상: SQL Server 2017 CTP 2.0 (공개 미리 보기)**
+Microsoft 학습 서버 컴퓨터의에서 화 기능을 사용 하 여 웹 서비스에 작업 중인 Python 솔루션을 배포할 수 있습니다. 이 항목에서는 성공적으로 게시 한 후 솔루션을 실행 하는 단계를 설명 합니다.
 
-Microsoft 학습 서버 컴퓨터의에서 화 기능을 사용 하 여 웹 서비스에 작업 중인 Python 솔루션을 배포할 수 있습니다.
-
-이 항목에서는 따르도록, 성공적으로 게시 한 후 솔루션을 실행 하는 단계를 설명 합니다.
+> [!IMPORTANT]
+>
+> 이 예제는 학습 Server 컴퓨터 (독립 실행형)는 포함 되며 컴퓨터 학습 서버 9.1.0 버전의에서 기능을 사용 하 여 Python 버전에 대 한 개발 되었습니다.
+ > 
+ > Microsoft 컴퓨터 학습 서버 9.2.0, 버전의 최신 버전의 기능을 활용 하는 유사한 예를 보려면 컴퓨터 학습 서버 사이트에이 문서를 참조 하세요: [배포에서 Python 웹 서비스를 관리 하 고](https://docs.microsoft.com/machine-learning-server/operationalize/python/how-to-deploy-manage-web-services)합니다.
 
 이 문서에 대 한 대상 사용자는 Python 코드 또는 모델 Microsoft 학습 서버 컴퓨터에서에서 호스팅되는 웹 서비스로 게시 하는 방법을 알아 보 려는 데이터 과학자입니다. 설명 하 고 응용 프로그램을 소비할 수 있는 방법의 코드 또는 모델입니다. 이 문서에서는 Python에 능숙 한 한다고 가정 합니다.
 
-> [!IMPORTANT]
-> Python 웹 서비스는 SQL Server 2017 CTP 2.0 (공개 미리 보기)에 Python 지원 설치에만 사용할 수 있습니다. 이 기능의 가용성을 확장할 수 이후 릴리스.
+**적용 대상: SQL server 2017 기계 Server (독립 실행형) 학습**
 
 ## <a name="overview-of-workflow"></a>워크플로 개요
 

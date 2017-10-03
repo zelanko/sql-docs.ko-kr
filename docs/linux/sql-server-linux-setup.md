@@ -4,23 +4,23 @@ description: "설치, 업데이트 및 Linux에서 SQL Server를 제거 합니�
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/28/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: 303d3b74da3fe370d19b7602c0e11e67b63191e7
-ms.openlocfilehash: f746037f695301881ce9a993f3d556db44f44292
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 0220ef0349acac274567bb75bcb0e8b38a3126ce
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/29/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 항목에서는 설치, 업데이트 및 SQL Server 2017 Linux에서 제거 하는 방법에 설명 합니다. SQL Server 2017 RC2 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 및 Ubuntu에서 지원 됩니다. Linux 또는 Docker에 대 한 Windows/Mac. Docker 엔진에서 실행할 수 있는 Docker 이미지 형식으로 제공 됩니다.
+이 항목에서는 설치, 업데이트 및 SQL Server 2017 Linux에서 제거 하는 방법에 설명 합니다. SQL Server 2017 Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), 및 Ubuntu에서 지원 됩니다. Linux 또는 Docker에 대 한 Windows/Mac. Docker 엔진에서 실행할 수 있는 Docker 이미지 형식으로 제공 됩니다.
 
 > [!TIP]
 > 빠르게 시작 하려면 하나에 대 한 빠른 시작 자습서로 이동할 [RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md), [Ubuntu](quickstart-install-connect-ubuntu.md), 또는 [Docker](quickstart-install-connect-docker.md)합니다.
@@ -51,6 +51,12 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 
 > [!NOTE]
 > SQL Server 엔진 되었습니다.이 이번에 최대 1TB의 메모리를 테스트 합니다.
+
+사용 하는 경우 **네트워크 파일 시스템 (NFS)** 프로덕션 환경에서 원격 공유에는 다음과 같은 지원 요구 사항을 확인 하세요.
+
+- 사용 하 여 NFS 버전 **4.2 이상**합니다. 이전 버전의 NFS fallocate, 최신 파일 시스템에 공통 스파스 파일 만들기 등 필수 기능을 지원 하지 않습니다.
+- 만 찾습니다는 **/var/opt/mssql** NFS 탑재 디렉터리입니다. SQL Server 시스템 이진 파일 등의 기타 파일 지원 되지 않습니다.
+- 원격 공유 마운트할 때 NFS 클라이언트 'nolock' 옵션을 사용 하도록 확인 합니다.
 
 ## <a id="platforms"></a> SQL Server 설치
 
@@ -91,7 +97,55 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 > SQL Server 2017 같은 같은 주 버전 내에서 릴리스를 다운 그레이드 하 에서만 지원 됩니다.
 
 > [!IMPORTANT]
-> 다운 그레이드이 이번에 간의 RC2 및 r c 1만 지원 됩니다.
+> 다운 그레이드이 이번에 간의 RTM, RC2 및 r c 1만 지원 됩니다.
+
+## <a id="repositories"></a>소스 저장소 변경
+
+를 설치 하거나 SQL Server를 업그레이드 하는 경우 구성 된 Microsoft 리포지토리에서 SQL Server의 최신 버전을 가져옵니다. 같은 두 가지 유형의 각 배포에 대 한 저장소는을 고려해 야 합니다.
+
+- **CU (누적 업데이트)**: The CU (누적 업데이트) 저장소 해당 릴리스 이후 기본 SQL Server 릴리스 및 버그 수정 또는 향상 된 기능에 대 한 패키지를 포함 합니다. 누적 업데이트는 SQL Server 2017 등의 릴리스 버전에 고유 합니다. 일반 주기로 릴리스되는 합니다.
+
+- **GDR**: The GDR 리포지토리 해당 릴리스 이후는 기본 SQL Server 릴리스만 주요 수정 프로그램 및 보안 업데이트에 대 한 패키지를 포함 합니다. 이러한 업데이트는 다음 CU 릴리스로 추가 됩니다.
+
+각 CU 및 GDR 릴리스에 전체 SQL Server 패키지 및 해당 저장소에 대 한 모든 이전 업데이트를 포함합니다. CU 릴리스에 GDR 릴리스의 업데이트는 SQL Server에 대 한 구성된 저장소를 변경 하 여 지원 됩니다. 수도 있습니다 [다운 그레이드](#rollback) 주요 버전 내에서 모든 릴리스를 (예: 2017).
+
+> [!NOTE]
+> 업데이트 CU에서 릴리스를 GDR 릴리스 지원 되지 않습니다.
+
+CU 리포지토리에 GDR 저장소에서 변경 하려면 다음 단계를 따르십시오.
+
+1. 미리 보기 이전에 구성 된 저장소를 제거 합니다.
+
+   | 플랫폼 | 저장소 제거 명령 |
+   |-----|-----|
+   | RHEL | `sudo rm -rf /etc/yum.repos.d/mssql-server.repo` |
+   | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+   | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
+
+1. 새 저장소를 구성 합니다.
+
+   | 플랫폼 | 리포지토리 | Command |
+   |-----|-----|-----|
+   | RHEL | CU | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+   | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+   | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017.repo` |
+   | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles12/mssql-server-2017-gdr.repo` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)"` |
+
+1. 시스템을 업데이트 합니다.
+
+   | 플랫폼 | Update 명령 |
+   |-----|-----|
+   | RHEL | `sudo yum update` |
+   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
+   | Ubuntu | `sudo apt-get update` |
+
+
+1. [설치](#platforms) 또는 [업데이트](#upgrade) 새 저장소에서 SQL Server.
+
+   > [!IMPORTANT]
+   > 사용 하 여 전체 설치를 수행 하도록 선택한 경우이 시점에서 [빠른 시작 자습서](#platforms), 대상 저장소 방금 구성한 기억 합니다. 이 자습서에서 해당 단계를 반복 하지 않습니다. 이 빠른 시작 자습서 CU 리포지토리를 사용 하기 때문에 GDR 저장소를 구성 하는 경우에 특히 그렇습니다.
 
 ## <a id="uninstall"></a>SQL Server 제거
 

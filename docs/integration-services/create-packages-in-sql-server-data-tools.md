@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 6b712ca0975108b0b7fb4bfe0a5ffa50ce44c8fb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="create-packages-in-sql-server-data-tools"></a>SQL Server Data Tools에서 패키지 만들기
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/21/2017
  기본 패키지 템플릿을 사용하여 기본 패키지를 만드는 방법을 보여 주는 비디오는 [기본 패키지 만들기(SQL Server 비디오)](http://go.microsoft.com/fwlink/?LinkId=131023)를 참조하세요.  
 
 ## <a name="get-sql-server-data-tools"></a>SQL Server Data Tools 가져오기
-SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)를 참조하세요.
+SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)를 참조하세요.
 
 ## <a name="create-a-package-in-sql-server-data-tools-using-the-package-template"></a>패키지 템플릿을 사용하여 SQL Server Data Tools에서 패키지 만들기  
   

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: e5ad1bdd-c054-4999-a5aa-00e74770b481
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 02cf781a1035326ad5073f6a6d3219e8a7d9c070
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8e4f84fe50051d1d09c5057a04840cbf19c4d1b0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="configure-sles-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 SLES 공유 디스크 클러스터를 구성 합니다.
@@ -23,9 +23,6 @@ ms.lasthandoff: 08/02/2017
 이 가이드를 SQL Server SUSE Linux Enterprise Server (SLES)에 대 한 2 노드 공유 디스크 클러스터를 만드는 지침을 제공 합니다. 클러스터링 레이어 SUSE 기반 [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability) 기반으로 구축 [Pacemaker](http://clusterlabs.org/)합니다. 
 
 클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대 한 자세한 내용은 참조 하십시오. [SUSE Linux Enterprise 높은 가용성 확장 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)합니다.
-
-> [!NOTE]
-> 이 시점에서 linux Pacemaker와 SQL Server의 통합 Windows에서 WSFC와으로으로 결합 된 않습니다. sql에서 클러스터의 존재에 대 한 지식이 없는, 외부 모든 오케스트레이션은 되며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에는 동일한 동등한 옵션이 없습니다. 것으로 예상 되는 @@servername 및 이름을 반환 하는 노드를 클러스터 dmv sys.dm_os_cluster_nodes 및 sys.dm_os_cluster_properties는 레코드가 없는 동안 sys.servers 합니다. 문자열 서버 이름이를 가리키는 연결 문자열을 사용 하는 IP를 사용 하지 있습니다 (아래 설명 됨)는 선택한 서버 이름으로 가상 IP 리소스를 만드는 데 IP를 DNS 서버에 등록 해야 합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 

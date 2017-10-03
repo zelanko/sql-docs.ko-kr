@@ -16,10 +16,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: cf762b3aaeb222e456b0b46256a7d7f0efddbf48
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 084223d83c3786610dbce145f27a4c18a6409769
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-analysis-services"></a>SQL Server Analysis Services 설치
@@ -32,9 +32,9 @@ ms.lasthandoff: 09/21/2017
 ## <a name="get-tools-and-designers"></a>도구 및 디자이너 다운로드  
  SQL Server 설치 프로그램은 솔루션 설계 또는 서버 관리를 위해 사용되는 모델 디자이너 또는 관리 도구를 더 이상 설치하지 않습니다. 이 릴리스에서 도구는 별도로 설치되고 다음 링크에서 다운로드할 수 있습니다.  
   
--   [SSMS(SQL Server Management Studio) 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  
+-   [SSMS(SQL Server Management Studio) 다운로드](../../../ssms/download-sql-server-management-studio-ssms.md)  
   
--   [SSDT(SQL Server Data Tools) 다운로드](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)  
+-   [SSDT(SQL Server Data Tools) 다운로드](../../../ssdt/download-sql-server-data-tools-ssdt.md)  
   
  Analysis Services 인스턴스 및 데이터로 작업 하려면 SSMS와 SSDT 모두 필요 합니다. 도구 어디에서 든 지 설치할 수 있지만 서버에 대 한 연결을 시도 하기 전에 포트를 구성 하십시오. 자세한 내용은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 를 참조하세요.  
   

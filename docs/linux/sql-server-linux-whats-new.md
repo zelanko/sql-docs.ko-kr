@@ -1,19 +1,19 @@
 ---
-title: "Linux에서 SQL Server 2017 r c 1에 대 한 새로운 기능 | Microsoft Docs"
+title: "SQL Server 2017 linux에 대 한 새로운 기능 | Microsoft Docs"
 description: "이 항목의 SQL Server 2017 Linux에서 현재 릴리스에 대 한 새로운 강조 표시 합니다."
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 08/02/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 622e0ed2242ddc454028962c63b5760a6baad38a
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 새로운 기능
@@ -21,6 +21,13 @@ ms.lasthandoff: 09/21/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 이 항목에서는 SQL Server 2017 Linux에서 실행 중인에 대 한 새로운 설명입니다.
+
+## <a name="ga"></a>GA
+
+Availaiblity GA (일반) 릴리스는 다음과 같은 향상 된 기능 및 수정 포함 되어 있습니다.
+
+- 이제 NFS에서 데이터베이스 파일을 호스팅할 수 있습니다. NFS 공유 디스크 시나리오에 컨테이너 플랫폼에 대 한 원격 저장소를 탑재 및 Windows 용 Docker에 대 한 폴더를 탑재 하는 문제를 해결 합니다.
+- 다른 기타 버그 수정 및 개선 합니다.
 
 ## <a name="rc2"></a>RC2
 
@@ -131,7 +138,7 @@ CTP 1.1 릴리스에 다음과 같은 향상 된 기능 및 수정 포함 되어
 [서비스 팩 1에서 향상 된 기능](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) 이 CTP1.1 릴리스에서:
 - CLR, Filestream/Filetable, 메모리 내 모드와 쿼리 저장소 개체에 대 한 복제 된 데이터베이스입니다.
 - **만들** 또는 **ALTER** 프로그래밍 기능 개체에 대 한 연산자입니다.
-- 새 **USE 힌트** 쿼리 옵션 쿼리 프로세서에 대 한 힌트를 제공할 수 있습니다. 자세히 보기: [쿼리 힌트](/sql-docs/docs/t-sql/queries/hints-transact-sql-query)합니다.
+- 새 **USE 힌트** 쿼리 옵션 쿼리 프로세서에 대 한 힌트를 제공할 수 있습니다. 자세히 보기: [쿼리 힌트](../t-sql/queries/hints-transact-sql-query.md)합니다.
 - SQL 서비스 계정 이제 프로그래밍 방식으로 식별할 수 페이지 잠금 사용 메모리와 인스턴트 파일 초기화 사용 권한.
 - TempDB 파일 수, 파일 크기 및 파일 증가 설정을 지원 합니다.
 - XML 실행 계획에서 확장 된 진단 합니다.

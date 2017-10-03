@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: e09afe4634c02db6e74413e7c1c10565450b3559
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: b9f7ca16589b2383eaed959c6556f0b2b6c4cf74
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="tree-map-and-sunburst-charts-in-reporting-services"></a>Reporting Services의 트리 맵 및 선버스트 차트
@@ -32,12 +32,13 @@ ms.lasthandoff: 08/09/2017
   
  트리 맵 차트는 차트 영역을 데이터 계층의 서로 다른 수준과 상대적 크기를 나타내는 사각형으로 분할합니다. 이 맵은 트렁크로 시작하여 점점 더 작은 분기로 분할하는 트리의 분기와 유사합니다. 각 사각형은 계층의 다음 수준을 나타내는 더 작은 사각형으로 구분됩니다. 최상위 수준 트리 맵 사각형은 차트의 왼쪽 위에 가장 큰 사각형이 있고 가장 작은 사각형이 오른쪽 아래에 있도록 정렬됩니다.  사각형 내에서 더 높은 수준의 다음 수준도 사각형이 왼쪽 위에서 오른쪽 아래로 있도록 정렬됩니다.  
   
- 예를 들어 샘플 트리 맵의 다음 이미지에서는 남서쪽 지역이 가장 크고 독일이 가장 작습니다. 남서쪽 내에서 로드 바이크는 마운틴 바이크보다 더 큽니다.  
+ 예를 들어 샘플 트리 맵의 다음 이미지에서는 남서쪽 지역이 가장 큰 및 독일이 가장 작습니다. 남서쪽 내에서 로드 바이크는 마운틴 바이크보다 더 큽니다.  
   
  ![ssrs_treemap_example](../../reporting-services/report-design/media/ssrs-treemap-example.png "ssrs_treemap_example")  
   
 ### <a name="to-insert-a-tree-map-chart-and-configure-for-the-sample-adventureworks-data"></a>트리 맵 차트를 삽입하고 샘플 Adventureworks 데이터에 대해 구성하려면  
- **참고:** 보고서에 차트를 추가하기 전에 데이터 원본 및 데이터 집합을 만듭니다.  샘플 데이터 및 샘플 쿼리는 이 항목의 [샘플 Adventureworks 데이터](#bkmk_sample_data) 섹션을 참조하세요.  
+   
+[!NOTE] 보고서에 차트를 추가 하기 전에 데이터 원본 및 데이터 집합을 만듭니다.  샘플 데이터 및 샘플 쿼리는 이 항목의 [샘플 Adventureworks 데이터](#bkmk_sample_data) 섹션을 참조하세요.  
   
 1.  디자인 화면을 마우스 오른쪽 단추로 클릭하고 **삽입**, **차트** 를 차례로 클릭합니다.  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
  ![ssrs_sunburst_example](../../reporting-services/report-design/media/ssrs-sunburst-example.png "ssrs_sunburst_example")  
   
 ### <a name="to-insert-a-sunburst-chart-and-configure-for-the-sample-adventureworks-data"></a>선버스트 차트를 삽입하고 샘플 Adventureworks 데이터에 대해 구성하려면  
- **참고:** 보고서에 차트를 추가하기 전에 데이터 원본 및 데이터 집합을 만듭니다.  샘플 데이터 및 샘플 쿼리는 이 항목의 [샘플 Adventureworks 데이터](#bkmk_sample_data) 섹션을 참조하세요.  
+ [!NOTE] 보고서에 차트를 추가 하기 전에 데이터 원본 및 데이터 집합을 만듭니다.  샘플 데이터 및 샘플 쿼리는 이 항목의 [샘플 Adventureworks 데이터](#bkmk_sample_data) 섹션을 참조하세요.  
   
 1.  디자인 화면을 마우스 오른쪽 단추로 클릭하고 **삽입**, **차트** 를 차례로 클릭합니다.  
   
@@ -100,11 +101,13 @@ ms.lasthandoff: 08/09/2017
   
 5.  기본 차트 제목을 "지역별로 분류한 판매, 판매 이유 포함"으로 변경합니다.  
   
-6.  |||  
+6.
+    |||  
     |-|-|  
-    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|범주 그룹의 값을 선버스트에 레이블로 추가하려면 레이블 속성 **Visible** =true 및 **UseValueAsLabel**=False를 설정합니다.<br /><br /> 표시되는 레이블 값은 글꼴 크기, 전체 차트 영역의 크기 및 특정 사각형 크기에 의해 영향을 받습니다.  레이블을 더 자세히 보려면 LineTotal의 레이블 글꼴 속성을 기본값 10pt 대신 8pt로 변경합니다.|  
+    |![ssrs_sunburst_linetotalproperties](../../reporting-services/report-design/media/ssrs-sunburst-linetotalproperties.png "ssrs_sunburst_linetotalproperties")|범주 그룹의 값을 선버스트에 레이블로 추가하려면 레이블 속성 **Visible** =true 및 **UseValueAsLabel**=False를 설정합니다.<br /><br /> 표시되는 레이블 값은 글꼴 크기, 전체 차트 영역의 크기 및 특정 사각형 크기에 의해 영향을 받습니다.  레이블을 더 자세히 보려면 LineTotal의 레이블 글꼴 속성을 기본값 10pt 대신 8pt로 변경합니다.|
   
 7.  다른 색 범위를 원하는 경우 차트 **색상표** 속성을 변경합니다.  
+  
   
      ![ssrs_visualization_palette](../../reporting-services/report-design/media/ssrs-visualization-palette.png "ssrs_visualization_palette")  
   

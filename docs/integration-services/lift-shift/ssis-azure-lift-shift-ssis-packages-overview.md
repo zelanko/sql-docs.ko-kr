@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Integration Services 작업에서 클라우드로 이동할 | Microsoft Docs"
-ms.date: 09/25/2017
+ms.date: 09/28/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 3d22689e440b2a498f76d43ede74ad3f6f756796
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 작업에서 클라우드로 이동할
@@ -48,14 +48,20 @@ SSIS IR의 프로 비전 할 때을 확장 하 고 다음 옵션에 대 한 값�
 
 데이터 팩터리는 다른 유형의 통합 런타임도 지원합니다. SSIS IR 및 다른 유형의 통합 런타임에 대 한 자세한 참조 [Azure Data Factory에 통합 런타임에서](/azure/data-factory/concepts-integration-runtime.md)합니다.
 
-## <a name="package-features-on-azure"></a>Azure에서 패키지 기능
+## <a name="prerequisites"></a>필수 구성 요소
+이 항목에서 설명 하는 기능 SQL Server 데이터 도구 (SSDT) 버전 17.2 이상 필요 하지만 SQL Server 2017 또는 SQL Server 2016 필요 하지 않습니다. Azure에 패키지를 배포할 때 패키지 배포 마법사는 패키지를 최신 패키지 형식으로 항상 업그레이드 합니다.
+
+Azure에서 필수 구성 요소에 대 한 자세한 내용은 참조 하십시오. [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)합니다.
+
+## <a name="ssis-features-on-azure"></a>Azure에서 SSIS 기능
+
 SSISDB를 호스트 하기 위해 SQL 데이터베이스의 인스턴스를 프로 비전 하는 경우 SSIS 및 액세스 재배포 가능 패키지에 대 한 Azure 기능 팩이 설치 됩니다. 이러한 구성 요소는 Excel 및 Access 파일 및 다양 한 Azure 데이터 원본 연결을 제공합니다. 이 이번에 SSIS에 대 한 타사 구성 요소를 설치할 수 없습니다.
 
-디자인 하 고 패키지 온-프레미스에서 SSDT 또는 Visual Studio에서 SSDT 설치로 구축 계속 있습니다.
+SSISDB를 호스팅하는 SQL 데이터베이스의 이름은 됩니다 배포 SSDT 및 SSMS-에서 패키지를 관리 하는 경우 사용 하는 네 부분으로 된 이름에서 첫 번째 부분의 `<sql_database_name>.database.windows.net`합니다.
 
 Azure SQL 데이터베이스에는 SSISDB에 배포한 프로젝트에 대 한 프로젝트 배포 모델로 패키지 배포 모델이 아닌를 사용 해야 합니다.
 
-SSISDB를 호스팅하는 SQL 데이터베이스의 이름은 됩니다 배포 SSDT 및 SSMS-에서 패키지를 관리 하는 경우 사용 하는 네 부분으로 된 이름에서 첫 번째 부분의 `<sql_database_name>.database.windows.net`합니다.
+디자인 하 고 패키지 온-프레미스에서 SSDT 또는 Visual Studio에서 SSDT 설치로 구축 계속 있습니다.
 
 Windows 인증을 사용 하 여 클라우드에서 온-프레미스 데이터 원본에 연결 하는 방법에 대 한 정보를 참조 하십시오. [Windows 인증을 사용 하 여 온-프레미스 데이터 원본에 연결](ssis-azure-connect-with-windows-auth.md)합니다.
 

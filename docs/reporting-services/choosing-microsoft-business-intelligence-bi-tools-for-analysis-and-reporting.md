@@ -16,10 +16,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: c41e28d5083de71906106a09cf4b129d3e1907c5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: a9684685e218cb0f2dd1fe01c11606ce750c66a2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="choosing-microsoft-business-intelligence-bi-tools-for-analysis-and-reporting"></a>분석 및 보고에 대 한 Microsoft BI (Business Intelligence) 도구 선택
@@ -38,17 +38,17 @@ ms.lasthandoff: 09/21/2017
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 지원됨)|  
 |데이터 시각화 및 탐색||[파워 뷰](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D 맵](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
 |자연어 쿼리를 사용하여 질문|||||[질문과 대답](https://powerbi.microsoft.com/documentation/powerbi-service-q-and-a/)||  
-|모바일 장치를 사용하여 보고서 액세스||||[HTML 5 (볼 수 있도록 지원 < 10MB 파일)](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)<br/>(모바일 장치용 Power BI 앱 사용)|  
+|모바일 장치를 사용하여 보고서 액세스||||[HTML 5 (볼 수 있도록 지원 < 10MB 파일)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br/>(모바일 장치용 Power BI 앱 사용)|  
 |공동 작업 및 공유|||[SharePoint 사이트](http://go.microsoft.com/fwlink/?LinkId=391849)|[SharePoint 팀 사이트](http://go.microsoft.com/fwlink/?LinkId=391850)|||  
 |**기업 BI**|IT 전문가||||||  
-|다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](/sql-docs/docs/analysis-services/analysis-services)|  
+|다차원/테이블 형식 기업 모델 만들기||||||[Analysis Services](../analysis-services/analysis-services.md)|  
 |임시 데이터 시각화 만들기|||[SharePoint용 파워 뷰](http://go.microsoft.com/fwlink/?LinkId=391858)||||  
 |대시보드 만들기|||[SharePoint 대시보드](http://go.microsoft.com/fwlink/?LinkId=391859)<br /><br /> [PerformancePoint Services](http://technet.microsoft.com/library/ee424392.aspx)||[Power BI의 대시보드](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)||  
-|작업 보고서 만들기||||||*[Reporting Services](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
-|사용자 지정 및 포함된 보고서 만들기|||||[포함 된 power BI](/sql-docs/docs/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)|  
+|작업 보고서 만들기||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
+|사용자 지정 및 포함된 보고서 만들기|||||[포함 된 power BI](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**고급 분석**|데이터 과학자||||||  
 |셀프 서비스 예측 분석 수행||||||[Excel용 데이터 마이닝 추가 기능](http://msdn.microsoft.com/library/dn282385.aspx) (Excel 2016 지원됨)|  
-|데이터 마이닝 알고리즘 사용||||||[Analysis Services의 데이터 마이닝](/sql-docs/docs/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+|데이터 마이닝 알고리즘 사용||||||[Analysis Services의 데이터 마이닝](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
   
  *Reporting Services에는 최신, 페이지를 매긴 보고서 배달을 지원하는 여러 기능이 있습니다.  
   

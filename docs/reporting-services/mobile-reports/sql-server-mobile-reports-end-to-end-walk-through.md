@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 180690083e39317694190a89edc2b57fd9d4bbcf
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: ded9d996ffff02c0fc5c239f5dd14d1a6c756bb6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
@@ -37,11 +37,11 @@ ms.lasthandoff: 09/21/2017
 ## <a name="before-we-start"></a>시작하기 전에  
 이러한 단계를 따르려면 다음 제품이 필요합니다.  
   
-* 데이터 원본 및 Kpi를 만들고 데이터 집합 및 모바일 보고서 게시, 하려면에 대 한 액세스는 [! 포함[ssRSCurrent_md](/sql-docs/docs/reporting-services/install-windows/install-reporting-services-native-mode-report-server)합니다.  
-* [공유 데이터 집합을 만들](/sql-docs/docs/reporting-services/install-windows/install-report-builder)합니다.  
+* 데이터 원본 및 Kpi를 만들고 데이터 집합 및 모바일 보고서 게시, 하려면에 대 한 액세스는 [! 포함[ssRSCurrent_md](../install-windows/install-reporting-services-native-mode-report-server.md)합니다.  
+* [공유 데이터 집합을 만들](../install-windows/install-report-builder.md)합니다.  
 * 모바일 보고서를 만들려면 [SQL Server 모바일 보고서 게시자를 설치](http://go.microsoft.com/fwlink/?LinkId=717766)합니다.  
 * [AdventureWorks 예제 데이터베이스 및 스크립트](http://msftdbprodsamples.codeplex.com/)  
-*  OR: Wide World Importers 샘플 데이터베이스에서 사용할 수는 [Microsoft SQL Server Samples](/sql-docs/docs/sample/microsoft-sql-server-samples) 페이지.
+*  OR: Wide World Importers 샘플 데이터베이스에서 사용할 수는 [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) 페이지.
 * 결과를 보려면 
   *   [Power BI 서비스에 등록](http://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
   *  모바일 장치(iOS, Android 휴대폰 또는 Windows 10 장치)에[Power BI 모바일 앱을 다운로드](https://powerbi.microsoft.com/en-us/documentation/powerbi-power-bi-apps-for-mobile-devices/) 합니다.  
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/21/2017
   
 ## <a name="create-a-shared-data-source"></a>공유 데이터 원본 만들기  
   
-Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 보고서에 대한 공유 데이터 원본을 만들 수 있습니다. 참조는 [지원 되는 데이터 원본 목록이](/sql-docs/docs/reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs)합니다.  
+Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 보고서에 대한 공유 데이터 원본을 만들 수 있습니다. 참조는 [지원 되는 데이터 원본 목록이](../report-data/data-sources-supported-by-reporting-services-ssrs.md)합니다.  
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **데이터 원본**을 클릭합니다.  
   
@@ -66,11 +66,11 @@ Reporting Services에서 지원하는 모든 데이터 원본에서 모바일 �
   
    ![PBI_SSMRP_PortlDataSource](../../reporting-services/mobile-reports/media/pbi-ssmrp-portldatasource.png)  
   
-[Reporting Services의 공유 데이터 원본](/sql-docs/docs/reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs)에 대해 자세히 알아보세요.  
+[Reporting Services의 공유 데이터 원본](../report-data/create-modify-and-delete-shared-data-sources-ssrs.md)에 대해 자세히 알아보세요.  
    
 ## <a name="shared-dataset">공유 데이터 집합 만들기</a>  
   
-기존 항목 사용 [! 포함[PRODUCT_NAME](/sql-docs/docs/reporting-services/install-windows/install-report-builder), 웹 포털에서 시작 합니다. 세 개의 데이터 집합, 즉 KPI 값에 대한 데이터 집합, KPI 추세에 데이터 집합 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 집합을 만듭니다.   
+기존 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 클라이언트 도구(예: [!INCLUDE[ssBIDevStudioFull_md](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너)를 사용하여 공유 데이터 집합을 만듭니다.  이 연습에서는 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 사용합니다. [보고서 작성기를 설치](https://msdn.microsoft.com/library/ff519551.aspx)하거나 웹 포털에서 시작합니다. 세 개의 데이터 집합, 즉 KPI 값에 대한 데이터 집합, KPI 추세에 데이터 집합 및 Reporting Services 모바일 보고서의 추가 필드가 포함된 데이터 집합을 만듭니다.     
   
 1. [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에서 **새로 만들기** > **페이지가 매겨진 보고서** 를 클릭하여 [!INCLUDE[PRODUCT_NAME](../../includes/ssrbnoversion.md)]를 시작합니다.  
   

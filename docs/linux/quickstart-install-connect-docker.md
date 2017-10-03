@@ -4,23 +4,23 @@ description: "이 빠른 시작 자습서에는 SQL Server 2017 컨테이너 이
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 09/20/2017
+ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
-ms.openlocfilehash: 7fe6626cf8c5b9b348e95b956cee9ac67db16f97
+ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
+ms.openlocfilehash: dc105fd46a14d241bb375f0d7f3a6c5471797818
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 빠른 시작 자습서를 사용 하 여 Docker pull 및 SQL Server 2017 RC2 컨테이너 이미지를 실행 [mssql-서버-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작 자습서를 사용 하 여 Docker pull 및 SQL Server 2017 컨테이너 이미지를 실행 [mssql-서버-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/)합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 이 이미지는 Ubuntu 16.04에 따라 Linux에서 실행 중인 SQL Server 구성 됩니다. Mac/Windows 용 Docker 엔진 1.8 + linux 또는 Docker에서 사용할 수 있습니다.
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 09/21/2017
 
 ## <a id="requirements"></a> 필수 구성 요소
 
-- docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다.
+- docker 엔진 1.8 + Mac/창에 Linux 배포 또는 Docker를 지원 합니다. 자세한 내용은 참조 [설치 Docker](https://docs.docker.com/engine/installation/)합니다.
 - 최소 4GB의 디스크 공간
 - 최소 4GB의 RAM
 - [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
@@ -58,28 +58,28 @@ ms.lasthandoff: 09/21/2017
 
 ## <a name="pull-and-run-the-container-image"></a>컨테이너 이미지를 실행 하 고 끌어오기
 
-1. Docker 허브에서 컨테이너 이미지를 끌어옵니다.
+1. Docker 허브에서 SQL Server 2017 Linux 컨테이너 이미지를 끌어옵니다.
 
     ```bash
-    docker pull microsoft/mssql-server-linux
+    docker pull microsoft/mssql-server-linux:2017-latest
     ```
 
     > [!TIP]
     > Linux 시스템 및 사용자 구성에 따라 해야 할 수 있습니다 각 앞 `docker` 명령을 `sudo`합니다.
 
     > [!NOTE]
-    > 위의 명령을 최신 SQL Server 컨테이너 이미지를 추출합니다. 태그 이름과 콜론을 추가할 특정 이미지를 끌어오려면 하려는 경우 (예를 들어 `microsoft/mssql-server-linux:rc1`). 사용 가능한 모든 이미지를 보려면 [mssql-서버-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)합니다.
+    > 위의 명령은 SQL Server 2017 GA 컨테이너 이미지를 끌어옵니다. 태그 이름과 콜론을 추가할 특정 이미지를 끌어오려면 하려는 경우 (예를 들어 `microsoft/mssql-server-linux:rc1`). 사용 가능한 모든 이미지를 보려면 [mssql-서버-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)합니다.
 
 1. Docker가 있는 컨테이너 이미지를 실행 하려면 bash 셸의 (Linux/macOS)에서 다음 명령을 사용할 수 있습니다.
 
     ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
     ```
 
     Windows 용 Docker를 사용 하는 경우에 관리자 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용 합니다.
 
     ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sqlcontainer1 -d microsoft/mssql-server-linux
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
     ```
 
     > [!NOTE]
@@ -93,8 +93,8 @@ ms.lasthandoff: 09/21/2017
     | **-e ' MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 사용자 고유의 강력한 암호를 8 자 이상 있고에 맞는 지정 [SQL Server 암호 요구 사항을](../relational-databases/security/password-policy.md)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
     | **-e ' MSSQL_PID 개발자 ='** | 버전 또는 제품 키를 지정합니다. 이 예제에서는 자유롭게 사용이 허가 된 Developer Edition은 비-프로덕션 테스트에 사용 됩니다. 다른 값을 참조 하십시오. [Linux에서 환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다. |
     | **-p 1401:1433** | 호스트 환경에서 TCP 포트 매핑 (첫째 값) 컨테이너의 TCP 포트 (두 번째 값). 이 예제에서는 SQL Server가 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1401 포트에 노출 됩니다. |
-    | **-이름 sqlcontainer1** | 임의로 생성 된 것 보다는 컨테이너에 대 한 사용자 지정 이름을 지정 합니다. 둘 이상의 컨테이너를 실행 하는 경우에이 이름을 다시 사용할 수 없습니다. |
-    | **microsoft/mssql-서버-linux** | SQL Server Linux 컨테이너 이미지입니다. 기본값은 별도로 지정 하지 않으면는 **최신** 이미지입니다. |
+    | **-이름 s q l 1** | 임의로 생성 된 것 보다는 컨테이너에 대 한 사용자 지정 이름을 지정 합니다. 둘 이상의 컨테이너를 실행 하는 경우에이 이름을 다시 사용할 수 없습니다. |
+    | **microsoft/mssql-서버-linux:2017-최신** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
 
 
 1. Docker 컨테이너를 보려면 사용 하 여는 `docker ps` 명령입니다.
@@ -122,34 +122,22 @@ SELECT @@SERVERNAME,
 
 ## <a name="change-the-sa-password"></a>SA 암호를 변경 합니다.
 
-SA 계정이 설치 중 생성 되는 SQL Server 인스턴스에서 시스템 관리자입니다. SQL Server 컨테이너를 만든 후의 `MSSQL_SA_PASSWORD` 지정한 환경 변수를 실행 하 여 검색할 수 `echo $MSSQL_SA_PASSWORD` 컨테이너에 있습니다. 보안을 위해 SA 암호를 변경 합니다.
-
-1. SA 사용자에 사용할 수 있는 강력한 암호를 선택 합니다.
-
-1. 사용 하 여 `docker exec` 실행 **sqlcmd** TRANSACT-SQL을 사용 하 여 암호를 변경 합니다. 대체 `<YourStrong!Passw0rd>` 및 `<YourNewStrong!Passw0rd>` 고유한 암호 값으로.
-
-   ```bash
-   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourStrong!Passw0rd>' -Q 'ALTER LOGIN SA WITH PASSWORD="<YourNewStrong!Passw0rd>"'
-   ```
-
-   ```PowerShell
-   docker exec -it sqlcontainer1 /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P "<YourStrong!Passw0rd>" -Q "ALTER LOGIN SA WITH PASSWORD='<YourNewStrong!Passw0rd>'"
-   ```
+[!INCLUDE [Change docker password](../includes/sql-server-linux-change-docker-password.md)]
 
 ## <a name="connect-to-sql-server"></a>SQL Server에 연결
 
 다음 단계에 SQL Server 명령줄 도구를 사용 하 여 **sqlcmd**, 컨테이너 내에서 SQL Server에 연결 합니다.
 
-1. 사용 하 여는 `docker exec -it` 는 대화형 bash 셸의 실행 중인 컨테이너 내 시작 명령입니다. 다음 예에서 `sqlcontainer1` 으로 이름이 지정 되는 `--name` 컨테이너를 만들 때 매개 변수입니다.
+1. 사용 하 여는 `docker exec -it` 는 대화형 bash 셸의 실행 중인 컨테이너 내 시작 명령입니다. 다음 예에서 `sql1` 으로 이름이 지정 되는 `--name` 컨테이너를 만들 때 매개 변수입니다.
 
     ```bash
-    docker exec -it sqlcontainer1 "bash"
+    docker exec -it sql1 "bash"
     ```
 
 1. 한 번, 컨테이너 내부 연결 로컬로 sqlcmd 합니다. Sqlcmd 아니므로 기본적으로 경로에 전체 경로 지정 해야 합니다.
 
     ```bash
-    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourPassword>'
+    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
     ```
 
    > [!TIP]
@@ -237,7 +225,7 @@ SA 계정이 설치 중 생성 되는 SQL Server 인스턴스에서 시스템 �
 
 1. 컨테이너의 대화형 명령 프롬프트를 종료 하려면 입력 `exit`합니다. 컨테이너에서 대화형 bash 셸의 종료 한 후 실행 계속 합니다.
 
-## <a name="connect-from-outside-the-container"></a>컨테이너 외부에서 연결
+## <a id="connectexternal"></a>컨테이너 외부에서 연결
 
 연결할 수 있습니다도 SQL Server 인스턴스에 Docker 컴퓨터에 SQL 연결을 지 원하는 Linux, Windows 또는 macOS 도구 외부에서.
 
@@ -248,11 +236,11 @@ SA 계정이 설치 중 생성 되는 SQL Server 인스턴스에서 시스템 �
 1. IP 주소와 컨테이너의 포트 1433에 매핑된 포트를 지정 하는 sqlcmd를 실행 합니다. 이 예제에서는 호스트 컴퓨터에 1401 포트입니다.
 
    ```bash
-   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourPassword>'
+   sqlcmd -S 10.3.2.4,1401 -U SA -P '<YourNewStrong!Passw0rd>'
    ```
 
    ```PowerShell
-   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourPassword>"
+   sqlcmd -S 10.3.2.4,1401 -U SA -P "<YourNewStrong!Passw0rd>"
    ```
 
 1. TRANSACT-SQL 명령이 실행된 합니다. 완료 되 면 입력 `QUIT`합니다.

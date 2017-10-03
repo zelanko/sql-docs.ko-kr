@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: b2e9353126b98cdda0753e1ad6dc4d1a2adbb1eb
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 9a639559de35573c7fb6dfdcc98c9d9680312659
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio를 사용 하 여 Linux에서 SQL Server에 대 한 데이터베이스를 만들 수
@@ -37,7 +37,7 @@ SQL Server Data Tools (SSDT)는 Linux에서 SQL Server에 대 한 강력한 개�
 
 ## <a name="upgrade-sql-server-data-tools-to-ssdt-170-rc-release"></a>SQL Server Data Tools를 SSDT 17.0 RC 버전으로 업그레이드
 
-Linux에서 SQL Server 2017 RC2 SSDT 17.0 RC 이상 버전에서 지원 됩니다.
+SQL Server 2017 Linux에서 SSDT 17.0 RC 이상 버전에서 지원 됩니다.
 
 * [다운로드 및 설치 17.0 SSDT RC2](https://go.microsoft.com/fwlink/?linkid=837939)합니다.
 

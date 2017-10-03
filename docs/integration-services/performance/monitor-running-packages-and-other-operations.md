@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: e36aeea4440f7c565e9517ebb1b80d21116b4342
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2555a719c2677c2c573a07dfa803ad80b3946ebf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
@@ -174,7 +174,7 @@ ms.lasthandoff: 09/21/2017
  **모든 유효성 검사 보고서** 에는 서버에서 수행된 모든 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 유효성 검사에 대한 요약 내용이 표시됩니다. 요약 내용으로는 상태, 시작 시간 및 종료 시간과 같은 각 유효성 검사에 대한 정보가 표시됩니다. 각 요약 항목에는 유효성 검사 중 생성된 메시지에 대한 링크가 포함됩니다. Integration Services 대시보드를 사용하는 경우와 마찬가지로 테이블에 필터를 적용하여 표시되는 정보를 좁힐 수 있습니다.  
   
 ### <a name="custom-reports"></a>사용자 지정 보고서  
- ** ** Integration Services 카탈로그 **노드 아래의** SSISDB [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스 >.\< 소유자 >. \<개체 >. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
+ ****  Integration Services 카탈로그 **노드 아래의** SSISDB [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]카탈로그 노드에 사용자 지정 보고서(.rdl 파일)를 추가할 수 있습니다. 보고서를 추가하기 전에 세 부분으로 이루어진 명명 규칙을 사용하여 원본 테이블과 같은 참조 개체를 정규화하고 있는지 확인합니다. 그렇지 않으면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에서 오류를 표시합니다. 명명 규칙은 \<데이터베이스 >.\< 소유자 >. \<개체 >. 일례로 SSISDB.internal.executions를 들 수 있습니다.  
   
 > [!NOTE]  
 >  **데이터베이스** 노드 아래의 **SSISDB** 노드에 사용자 지정 보고서를 추가한 경우에는 SSISDB 접두사가 필요하지 않습니다.  
@@ -203,6 +203,6 @@ ms.lasthandoff: 09/21/2017
     -   **모든 연결**  
 
 ## <a name="see-also"></a>관련 항목:  
- [프로젝트 및 패키지 실행](/sql-docs/docs/integration-services/packages/deploy-integration-services-ssis-projects-and-packages)   
- [패키지 실행 문제 해결 보고서](/sql-docs/docs/integration-services/troubleshooting/troubleshooting-reports-for-package-execution)  
+ [프로젝트 및 패키지 실행](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
+ [패키지 실행 문제 해결 보고서](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
 

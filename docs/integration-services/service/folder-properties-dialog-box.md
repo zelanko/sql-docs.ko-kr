@@ -19,10 +19,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: dc9e7c04025c01db9eee05d467fc9b5317aa11ec
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 942e05985c353e6c6cc433ace0dfddd204b02252
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
@@ -41,7 +41,7 @@ ms.lasthandoff: 09/21/2017
 5.  **확인** 을 클릭하여 변경 사항을 수락하고 **폴더 속성** 대화 상자를 닫습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Integration Services &#40; Ssis&#41; 서버](/sql-docs/docs/integration-services/integration-services-ssis-packages)   
+ [Integration Services &#40; Ssis&#41; 서버](../integration-services-ssis-packages.md)   
  [catalog.grant_permission &#40; SSISDB 데이터베이스 &#41;](../../integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database.md)  
   
   

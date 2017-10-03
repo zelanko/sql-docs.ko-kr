@@ -1,7 +1,7 @@
 ---
 title: "기능 &#39; SAP ASE (SybaseToSQL) 용 SSMA의 새로운 s | Microsoft Docs"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 09/30/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,14 +18,22 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 8c43a46a3fef09fa2c8b3510b541cd545e438313
-ms.openlocfilehash: ceb656fe1a2a210f26ce9f548a6c5ab7c68a29f7
+ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
+ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 09/30/2017
 
 ---
 # <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>기능 &#39;의 새로운 SAP ASE (SybaseToSQL) 용 SSMA
 이 항목에서는 각 릴리스의 SAP ASE (이전의 SSMA for Sybase) 변경에 대 한 SSMA를 나열 합니다. 
+
+## <a name="ssma-v76"></a>SSMA v7.6
+SAP ASE 용 SSMA의 v7.6 릴리스에서 다음 변경 내용이 포함 되어 있습니다.
+- SAP ASE 용 SSMA 품질 및 변환 메트릭을 향상 된 대상으로 지정 된 수정 사항 및 SQL Server 2017 (공개 미리 보기)에 대 한 지원이 향상 되었습니다. Windows 및 Linux에서 SQL Server 2017에 대 한 지원을 공개 미리 보기 이므로 프로덕션 마이그레이션에 사용할 수 없습니다.
+- SSMA SAP ASE에 대 한 지원을 제공 하기 위해 Sybase 함수 변환에 대 한 업데이트 되었습니다.
+
+> [!IMPORTANT]
+> SSMA v7.4 및 이상 버전을 사용 하 여.Net 4.5.2는 설치 필수 구성 요소 이며 도구의 32 비트 버전도 않습니다.
 
 ## <a name="ssma-v75"></a>SSMA v7.5
 SAP ASE 용 SSMA의 v7.5 릴리스에서 다음 변경 내용이 포함 되어 있습니다.
