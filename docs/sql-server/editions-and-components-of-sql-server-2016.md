@@ -39,10 +39,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 49ad187a9cdee375d8e03dfabff37fc110b60d94
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: da8692d3cf786157c5e573e18df51e27c41c19c2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>SQL Server 2016의 버전 및 지원하는 기능
@@ -378,7 +378,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|아니요|아니요| 
 |StreamInsight HA|StreamInsight Premium Edition|아니요|아니오|아니오|아니요|   
   
-> [![SSMS 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) ** 최신 버전의 [SQL Server Management Studio 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![SSMS 다운로드](../ssms/download-sql-server-management-studio-ssms.md)  **최신 버전의 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## <a name="see-also"></a>관련 항목:  
  [SQL Server에 대한 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

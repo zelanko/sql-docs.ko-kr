@@ -40,10 +40,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 0a51b818a33e2ee3eb4ce3c3d5682ee571c1c412
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5625df3149ad6386cf903d00a655e56d070bd792
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
@@ -398,7 +398,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|아니요|아니요| 
 |StreamInsight HA|StreamInsight Premium Edition|아니요|아니오|아니오|아니요|   
   
-> [![SSMS 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)  **최신 버전의 [SQL Server Management Studio 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)**    
+> [![SSMS 다운로드](../ssms/download-sql-server-management-studio-ssms.md)  **최신 버전의 [SQL Server Management Studio 다운로드](../ssms/download-sql-server-management-studio-ssms.md)**    
   
 ## <a name="next-steps"></a>다음 단계 
  [SQL Server에 대한 제품 사양](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   

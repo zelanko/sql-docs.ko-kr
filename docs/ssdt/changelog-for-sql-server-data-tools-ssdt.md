@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 45915dbb8ce5883c379c0cebdbc62e6ff43ede1a
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 0de164b7e0a0330902bc8d967d32d333c5ac15fe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="changelog-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)에 대한 변경 로그
-다음은 [SSDT(SQL Server Data Tools)](/sql-docs/docs/ssdt/download-sql-server-data-tools-ssdt)에 대한 변경 로그입니다.  
+다음은 [SSDT(SQL Server Data Tools)](download-sql-server-data-tools-ssdt.md)에 대한 변경 로그입니다.  
   
 새로운 기능과 변경된 기능에 대한 자세한 게시물은 [SSDT 팀 블로그](https://blogs.msdn.microsoft.com/ssdt/)를 참조하세요.
 
@@ -368,7 +368,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 
 - **릴리스 버전 관리 및 번호 매기기:** 이제 릴리스에 월별이 아니라 번호로 태그가 지정됩니다. 이 변경 내용은 새 SSMS 정책에 부합하며 한 달에 여러 개의 릴리스 또는 핫픽스가 있는 경우를 간소화합니다. 이 릴리스는 16.3으로, RTM 릴리스 후 세 번째 업데이트를 의미합니다. 모든 핫픽스는 16.3.1 등으로 지정되며, 다음 달에 계획된 다음 업데이트는 16.4가 됩니다.
 - **Analysis Services - 테이블 형식 모델 탐색기:** 테이블 형식 모델 탐색기를 사용하면 데이터 원본, 테이블, 측정값, 관계 등 모델의 다양한 메타데이터 개체를 편리하게 탐색할 수 있습니다. Visual Studio에서 보기 메뉴를 열고 다른 창을 가리킨 다음 테이블 형식 모델 탐색기를 클릭하면 표시할 수 있는 별도 도구 창으로 구현됩니다. 테이블 형식 모델 탐색기는 기본적으로 솔루션 탐색기 영역의 별도 탭에 표시됩니다. 테이블 형식 모델 탐색기는 테이블 형식 1200 모델의 스키마와 매우 비슷한 트리 구조로 메타데이터 개체 및 많은 새로운 기능을 구성합니다.
-- **데이터베이스 도구 – Always Encrypted**: 이 릴리스에서는 데이터베이스 프로젝트 또는 SQL Server 개체 탐색기의 라이브 데이터베이스에 열 마스터 키 열 또는 열 암호화 키를 쉽게 추가할 수 있도록 새로운 [Always Encrypted 키 관리](/sql-docs/docs/relational-databases/security/encryption/overview-of-key-management-for-always-encrypted) 대화 상자를 제공합니다. 이 릴리스에서는 Windows 인증서 저장소의 인증서를 지원합니다. 이후 릴리스에서는 Azure Key Vault 및 CNG 공급자가 지원될 예정입니다.
+- **데이터베이스 도구 – Always Encrypted**: 이 릴리스에서는 데이터베이스 프로젝트 또는 SQL Server 개체 탐색기의 라이브 데이터베이스에 열 마스터 키 열 또는 열 암호화 키를 쉽게 추가할 수 있도록 새로운 [Always Encrypted 키 관리](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md) 대화 상자를 제공합니다. 이 릴리스에서는 Windows 인증서 저장소의 인증서를 지원합니다. 이후 릴리스에서는 Azure Key Vault 및 CNG 공급자가 지원될 예정입니다.
     - 열 마스터 키 또는 열 암호화 키를 만드는 동안 데이터베이스 업데이트를 클릭한 후 즉시 변경 내용이 SQL Server 개체 탐색기에 반영되지 않을 수도 있습니다. 문제를 해결하려면 SQL Server 개체 탐색기에서 데이터베이스 노드를 새로 고칩니다.
     - SQL Server 개체 탐색기에서 데이터가 포함된 테이블의 열을 암호화하려는 경우 오류가 발생할 수 있습니다. 이 기능은 현재 SSDT 데이터베이스 프로젝트 및 SSMS에서만 지원됩니다. SQL Server 개체 탐색기에 대한 지원은 이후 릴리스에서 사용할 수 있습니다.
 
@@ -456,7 +456,7 @@ SSAS 테이블 형식 디자이너 DAX 파서에서 큰 DAX 식으로 작업할 
 [SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Data Tools&#40;SSDT 및 SSDT-BI&#41;의 이전 릴리스](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [데이터베이스 엔진의 새로운 기능](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Analysis Services의 새로운 기능](/sql-docs/docs/analysis-services/what-s-new-in-analysis-services)  
-[Integration Services의 새로운 기능](/sql-docs/docs/integration-services/what-s-new-in-integration-services-in-sql-server-2016)  
+[Analysis Services의 새로운 기능](../analysis-services/what-s-new-in-analysis-services.md)  
+[Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
 

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: f12afa26bb406a17c41059b12cc8e1b7a9c411a1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 8675cc8601681a6915281c6d9ea1bfd618db7df6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Changelog (SSMS)
@@ -355,7 +355,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * 테이블에 스파스 열이 둘 이상 있을 때 'Table' 노드의 확장을 일으키는 SSMS 16.5.2의 문제를 해결함.
 
-* 사용자가 Microsoft Dynamics AX/CRM Online 리소스에 연결되는 OData 연결 관리자를 포함하는 SSIS 패키지를 SSIS 카탈로그에 배포할 수 있음. 자세한 내용은 [OData 연결 관리자](/sql-docs/docs/integration-services/connection-manager/odata-connection-manager)를 참조하세요.
+* 사용자가 Microsoft Dynamics AX/CRM Online 리소스에 연결되는 OData 연결 관리자를 포함하는 SSIS 패키지를 SSIS 카탈로그에 배포할 수 있음. 자세한 내용은 [OData 연결 관리자](../integration-services/connection-manager/odata-connection-manager.md)를 참조하세요.
 
 * 기존 테이블에 대한 Always Encrypted 구성이 관련 없는 개체에 대한 오류와 함께 실패함. [Connect ID 3103181](https://connect.microsoft.com/SQLServer/feedback/details/3103181/setting-up-always-encrypted-on-an-existing-table-fails-with-errors-on-unrelated-objects)
 
@@ -481,7 +481,7 @@ http://connect.microsoft.com/SQLServer/feedback/details/3106561/sql-server-manag
 
 * [새 인증 옵션 **'Active Directory 유니버설 인증'**](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/) Azure Active Directory에 의해 구동되는 토큰 기반 인증 메커니즘으로, 다단계, 암호 및 통합 인증 메커니즘을 지원합니다.
 
-* SQL Server Profiler 템플릿 기능과 일치하는 새로운 확장 이벤트 템플릿 [(Microsoft Connect 항목 #2543925)](/sql-docs/docs/tools/sql-server-profiler/sql-server-profiler-templates)
+* SQL Server Profiler 템플릿 기능과 일치하는 새로운 확장 이벤트 템플릿 [(Microsoft Connect 항목 #2543925)](../tools/sql-server-profiler/sql-server-profiler-templates.md)
 
 * Azure SQL 데이터베이스에 대한 새 데이터베이스 만들기 및 데이터베이스 속성 대화 상자
 

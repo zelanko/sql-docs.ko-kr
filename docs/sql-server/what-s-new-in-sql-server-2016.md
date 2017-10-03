@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: fbfcabf1804a8438e07966bac9f612922b37fa4d
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
@@ -38,7 +38,7 @@ ms.lasthandoff: 09/21/2017
 
  **SQL Server를 지금 사용해 보세요.** 
 - **무료** [**SQL Server 2016 Developer 버전**](https://www.microsoft.com/en-us/cloud-platform/sql-server-editions-developers)을 다운로드하세요.
-- 최신 버전의 [SQL Server Management Studio(SSMS)](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)를 다운로드하세요. 
+- 최신 버전의 [SQL Server Management Studio(SSMS)](../ssms/download-sql-server-management-studio-ssms.md)를 다운로드하세요. 
 - Azure 계정이 있으세요? [SQL Server 2016이 이미 설치된 가상 컴퓨터](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/)를 실행해 보세요.
 
 ## <a name="sql-server-2016-database-engine"></a>SQL Server 2016 데이터베이스 엔진
@@ -99,7 +99,7 @@ Microsoft가 이 릴리스에서 Reporting Services를 완전히 개선했습니
 - HTML5를 지원하는 **다시 디자인된 보고서 렌더링 엔진** 
 - 새 트리맵 및 선버스트 **차트 유형** 
 
-[Reporting Services(SSRS)](/sql-docs/docs/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)를 참조하세요.
+[Reporting Services(SSRS)](../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계   
 - [SQL Server 설치](../database-engine/install-windows/installation-for-sql-server-2016.md)   
