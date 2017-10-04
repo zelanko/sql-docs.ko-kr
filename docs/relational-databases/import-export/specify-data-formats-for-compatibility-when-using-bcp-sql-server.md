@@ -20,11 +20,11 @@ caps.latest.revision: 38
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: aecc25b2c402c27d2a425107565573ba0390effa
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 56ca94eab2b7245d3d42c898fbf5d51c4c249026
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp를 사용하여 데이터 형식을 호환 가능하도록 지정(SQL Server)
@@ -62,7 +62,7 @@ ms.lasthandoff: 06/22/2017
   
  명령에서 서식 파일이나 데이터 형식을 지정하지 않기 때문에 **bcp**는 데이터 형식 정보를 묻는 메시지를 표시합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 명령 프롬프트에 다음을 입력합니다.  
   
-```  
+```cmd
 bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T  
 ```  
   

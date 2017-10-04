@@ -25,11 +25,11 @@ caps.latest.revision: 45
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 3abb7e7f582c7699b128d8b9d70b4aec34041424
+ms.translationtype: HT
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
@@ -59,9 +59,9 @@ ms.lasthandoff: 06/22/2017
   
 -   [문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   
--   [네이티브 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
+-   [네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md)  
   
--   [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
+-   [유니코드 문자 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)  
   
 -   [유니코드 네이티브 형식을 사용하여 데이터 가져오기 또는 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
@@ -114,7 +114,7 @@ ms.lasthandoff: 06/22/2017
   
  예를 들어 다음 `BULK INSERT` 문은 `SalesOrderDetail` 라는 데이터 파일의 데이터를 `AdventureWorks` 데이터베이스의 `newdata.txt`테이블로 대량 가져옵니다. 이 데이터 파일은 `\dailyorders` 시스템의 네트워크 공유 디렉터리 `salesforce` 에서 공유 폴더 `computer2`에 있습니다.  
   
-```  
+```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
    FROM '\\computer2\salesforce\dailyorders\neworders.txt';  
 GO  

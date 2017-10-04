@@ -19,10 +19,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bf5b724d58fde9162bc75a4052f569b5218bbe8c
+ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
+ms.openlocfilehash: 77cde7d5ad701ec6d2ae98ade32a77f6af6b9e8a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
@@ -181,7 +181,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfFieldElement"></a> \<FIELD> 요소의 특성  
  이 섹션에서는 \<FIELD> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
   
- \<FIELD  
+ <FIELD  
   
  ID **="***fieldID***"**  
   
@@ -232,7 +232,7 @@ ms.lasthandoff: 08/03/2017
 ####  <a name="AttrOfColumnElement"></a> \<COLUMN> 요소의 특성  
  이 섹션에서는 \<COLUMN> 요소의 특성에 대해 설명합니다. 다음 스키마 구문으로 요약할 수 있습니다.  
   
- \<요소의 Xsi:type 값  
+ <COLUMN  
   
  SOURCE = "*fieldID*"  
   
@@ -313,7 +313,7 @@ ms.lasthandoff: 08/03/2017
 ###  <a name="PutXsiTypeValueIntoDataSet"></a> 데이터 집합에 xsi:type 값 넣기  
  XSD(XML 스키마 정의) 언어를 통해 XML 문서의 유효성이 검사된 경우 xsi:type 값을 데이터 집합에 넣을 수 없습니다. 그러나 다음 코드 조각의 설명과 같이 XML 서식 파일을 XML 문서(예: `myDoc`)에 로드하여 xsi:type 정보를 데이터 집합에 넣을 수 있습니다.  
   
-```  
+```cs
 ...;  
 myDoc.LoadXml(xmlFormat);  
 XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");  
@@ -362,7 +362,7 @@ for(int i=0;i<ColumnList.Count;i++)
   
  데이터 필드는 테이블 열과 일 대 일로 대응합니다. 서식 파일은 `<ROW>` 요소의 `Age` 열을 첫 번째 필드에, `FirstName` 열을 두 번째 필드에, `LastName` 열을 세 번째 필드에 매핑합니다.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -398,7 +398,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  서식 파일은 `<ROW>` 요소의 `Age` 열을 첫 번째 필드에, `FirstName` 열을 세 번째 필드에, `LastName` 열을 두 번째 필드에 매핑합니다.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -433,7 +433,8 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   
  서식 파일은 `<ROW>` 요소의 `Age` 열을 첫 번째 필드에, `FirstName` 열을 세 번째 필드에, `LastName` 열을 네 번째 필드에 매핑합니다.  
   
-```  
+```xml
+<?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -464,7 +465,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="MapXSItype"></a> 4. \<FIELD> xsi:type을 \<COLUMN> xsi:type에 매핑  
  다음 예에서는 다양한 형식의 필드와 함께 해당 필드와 열의 매핑을 보여 줍니다.  
   
-```  
+```xml
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
@@ -501,13 +502,13 @@ xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"
 ###  <a name="MapXMLDataToTbl"></a> 5. XML 데이터를 테이블에 매핑  
  다음 예에서는 두 개의 빈 열을 가진 테이블(`t_xml`)을 만듭니다. 테이블의 첫 번째 열은 `int` 데이터 형식에, 두 번째 열은 `xml` 데이터 형식에 매핑됩니다.  
   
-```  
+```sql
 CREATE TABLE t_xml (c1 int, c2 xml)  
 ```  
   
  다음 XML 서식 파일에서는 `t_xml`테이블에 데이터 파일을 로드합니다.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
@@ -525,7 +526,7 @@ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 ###  <a name="ImportFixedFields"></a> 6. 고정 길이 또는 고정 너비 필드 가져오기  
  다음 예에서는 `10` 자 또는 `6` 자의 각 고정 필드에 대해 설명합니다. 서식 파일은 이러한 필드 길이/너비를 각각 `LENGTH="10"` 및 `LENGTH="6"`으로 나타냅니다. 데이터 파일의 모든 행은 캐리지 리턴-줄바꿈 조합 {CR}{LF}로 끝납니다. 여기서 서식 파일은 `TERMINATOR="\r\n"`로 나타냅니다.  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
