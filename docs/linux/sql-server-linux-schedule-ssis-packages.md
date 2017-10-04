@@ -7,7 +7,7 @@ manager: craigg
 ms.date: 09/26/2017
 ms.topic: article
 ms.prod: sql-linux
-ms.technology: integration-services
+ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
@@ -40,7 +40,7 @@ Cron 작업은 지정된 된 간격으로 정기적으로 실행 되도록 구�
 
 패키지를 실행 하는 단일 명령만 포함 하는 셸 스크립트의 간단한 예는 다음과 같습니다. 필요에 따라 더 많은 명령이 추가할 수 있습니다.
 
-```
+```bash
 # A simple shell script that contains a simple package execution command
 # Script name: SSISpackageName.daily
 
