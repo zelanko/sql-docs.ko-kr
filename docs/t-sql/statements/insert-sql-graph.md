@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
 ---
 
 # <a name="insert-sql-graph"></a>INSERT (SQL 그래프)
-[!INCLUDE[tsql-appliesto-ssvnxt-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssvnxt-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]  
 
   하나 이상의 행이 추가 `node` 또는 `edge` 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 
 
@@ -41,8 +41,6 @@ ms.lasthandoff: 09/01/2017
 노드 테이블에 삽입 하기 위한 구문은 일반 테이블의와 동일 합니다. 
 
 ```  
--- Syntax for SQL Server and Azure SQL Database  
-
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
