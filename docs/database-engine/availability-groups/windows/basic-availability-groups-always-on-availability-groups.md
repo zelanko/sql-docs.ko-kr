@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: fa15061db3da820bccfa15c6ad197611b8af0287
+ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
+ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/25/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>기본 가용성 그룹(Always On 가용성 그룹)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Always On 기본 가용성 그룹은 SQL Server 2016 Standard Edition에 대한 고가용성 솔루션을 제공합니다. 기본 가용성 그룹은 단일 데이터베이스에 장애 조치(failover) 환경을 지원합니다. 기존의(고급) Enterprise Edition [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)과 매우 유사하게 생성 및 관리됩니다. 기본 가용성 그룹의 차이점과 제한 사항은 이 문서에 요약되어 있습니다.  
+  Always On 기본 가용성 그룹은 SQL Server 2016 및 SQL Server 2017 Standard Edition에 대한 고가용성 솔루션을 제공합니다. 기본 가용성 그룹은 단일 데이터베이스에 장애 조치(failover) 환경을 지원합니다. 기존의(고급) Enterprise Edition [Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)과 매우 유사하게 생성 및 관리됩니다. 기본 가용성 그룹의 차이점과 제한 사항은 이 문서에 요약되어 있습니다.  
   
 ## <a name="features"></a>기능  
  Always On 기본 가용성 그룹은 더 이상 사용되지 않는 데이터베이스 미러링 기능을 대체하며 비슷한 수준의 기능 지원을 제공합니다. 기본 가용성 그룹은 주 데이터베이스를 사용하여 단일 복제본을 유지 관리합니다. 이 복제본은 동기 커밋 모드 또는 비동기 커밋 모드를 사용할 수 있습니다. 가용성 모드에 대한 자세한 내용은 [가용성 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/availability-modes-always-on-availability-groups.md)를 참조하세요. 보조 복제본은 장애 조치(Failover)를 취할 필요가 없다면 비활성 상태로 유지됩니다. 장애 조치(failover)는 주 역할 할당과 보조 역할 할당을 뒤바꿔서 보조 복제본이 주 활성 데이터베이스가 되도록 합니다. 장애 조치에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;Always On 가용성 그룹&#41;](../../../database-engine/availability-groups/windows/failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요. 기본 가용성 그룹은 온-프레미스와 Microsoft Azure를 포괄하는 하이브리드 환경에서 작동이 가능합니다.  

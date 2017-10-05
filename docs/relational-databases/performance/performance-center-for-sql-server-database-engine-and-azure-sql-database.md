@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 179a23bbe2d53febcf01d02d5129ca94e18243b1
-ms.openlocfilehash: ebb2cf6bdd6d776fc8f960f7d763f62e82fb15d5
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 6490c2356c0753f68e7ef5261ede3d699a08b863
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 성능 센터
@@ -63,8 +63,8 @@ ms.lasthandoff: 08/12/2017
 |-|-|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[인덱스](../../relational-databases/indexes/indexes.md)**|-   [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)<br />-   [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)<br />-   [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)<br />-   [인덱스에 대한 SORT_IN_TEMPDB 옵션](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md)<br />-   [전체 텍스트 인덱스 성능 향상](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[분할된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)**|-   [분할의 이점](https://msdn.microsoft.com/library/ms190787.aspx#Anchor_0)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[저장 프로시저](../../relational-databases/native-client/ole-db/stored-procedures.md)**|-   [저장 프로시저의 이점](https://msdn.microsoft.com/en-us/library/ms190782.aspx)|  
-|![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)**|-   [사용자 정의 함수의 이점](https://msdn.microsoft.com/en-us/library/ms191007.aspx)|  
+|![security-center-both](../stored-procedures/stored-procedures-database-engine.md)|  
+|![security-center-both](../user-defined-functions/user-defined-functions.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **병렬 처리 최적화**|-   [max worker threads 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)<br />-   [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") **쿼리 최적화 프로그램 최적화**|-   [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)|  
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[통계](../../relational-databases/statistics/statistics.md)**|-   [통계 업데이트 시기](https://msdn.microsoft.com/library/ms190397.aspx#Anchor_3)<br />-   [통계 업데이트](../../relational-databases/statistics/update-statistics.md)|  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Availability Groups [SQL Server], distributed
 ms.assetid: 
 caps.latest.revision: 
-author: MikeRayMSFT
+author: allanhirt
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 978e780dd19e34c27ceef49ff8388f6ae1f155ed
-ms.openlocfilehash: d523a3270815fc263fe0ee6fdf7cbce6350529ed
+ms.sourcegitcommit: 0463d237614b25667c8402da70b7c5e4217d4ef5
+ms.openlocfilehash: ee06ae8d3a3a60d77e72ee9e55ee615a1bcf0cb9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/02/2017
+ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
@@ -40,7 +40,7 @@ ms.lasthandoff: 09/02/2017
 
 분산 가용성 그룹의 경우 기본 가용성 그룹에 수신기가 있어야 합니다. 기존 가용성 그룹에서와 같이 독립 실행형 인스턴스에 대한 기본 서버 이름(또는 SQL Server FCI(장애 조치 클러스터 인스턴스)의 경우 네트워크 이름 리소스와 연결된 값)을 제공하는 대신, 매개 변수를 만들 때 ENDPOINT_URL 매개 변수를 사용하여 분산 가용성 그룹에 대해 구성된 수신기를 지정합니다. 분산 가용성 그룹의 기본 가용성 그룹마다 수신기가 있지만, 분산 가용성 그룹에는 수신기가 없습니다.
 
-다음 그림에서는 각각 고유한 WSFC 클러스터에 구성된 두 개의 가용성 그룹 (AG 1 및 AG 2)에 걸친 분산 가용성 그룹의 고급 수준을 보여 줍니다. 분산 가용성 그룹에는 총 4개의 복제본이 있으며, 각 가용성 그룹에는 2개의 복제본이 있습니다. 각 가용성 그룹마다 최대 수의 복제본을 지원할 수 있으므로 Standard Edition 기반 분산 가용성 그룹에는 최대 4개의 복제본이 있고, Enterprise Edition 기반 분산 가용성 그룹에는 최대 18개의 복제본이 있을 수 있습니다.
+다음 그림에서는 각각 고유한 WSFC 클러스터에 구성된 두 개의 가용성 그룹 (AG 1 및 AG 2)에 걸친 분산 가용성 그룹의 고급 수준을 보여 줍니다. 분산 가용성 그룹에는 총 4개의 복제본이 있으며, 각 가용성 그룹에는 2개의 복제본이 있습니다. 분산된 가용성이 최대 18개의 총 복제본을 가질 수 있도록 각 가용성 그룹은 복제본의 최대 수를 지원할 수 있습니다.
 
 <a name="fig1"></a>
 ![분산 가용성 그룹에 대한 상위 수준 보기][1]
@@ -59,7 +59,7 @@ AG 2의 주 복제본에서 삽입, 업데이트 및 삭제할 수 있도록 하
 분산 가용성 그룹은 현재 동일한 주요 SQL Server 버전으로 만든 가용성 그룹에서만 작동합니다. 예를 들어 분산 가용성 그룹에 참여하는 모든 가용성 그룹은 현재 SQL Server 2016을 사용하여 만들어야 합니다. SQL Server 2012 또는 2014에는 분산 가용성 그룹 기능이 없으므로 이러한 버전으로 만든 가용성 그룹은 분산 가용성 그룹에 참여할 수 없습니다. 
 
 > [!NOTE]
-> 분산 가용성 그룹은 Standard 또는 Enterprise 버전으로 구성할 수 있지만, 분산 가용성 그룹에서 버전을 혼합하는 것은 지원되지 않습니다.
+> Standard Edition 또는 Standard 및 Enterprise Edition의 혼합으로 분산된 가용성 그룹을 구성할 수 있습니다.
 
 별도의 두 개 가용성 그룹이 있으므로 분산 가용성 그룹에 참여하는 복제본에 서비스 팩 또는 누적 업데이트를 설치하는 프로세스는 기존 가용성 그룹과는 약간 다릅니다.
 
@@ -267,8 +267,6 @@ and ag.is_distributed = 1
 * [새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Transact-SQL을 사용하여 가용성 그룹 만들기](create-an-availability-group-transact-sql.md)
-
-이 콘텐츠는 [Allan Hirt](http://mvp.microsoft.com/en-us/PublicProfile/4025254?fullName=Allan%20Hirt)(Microsoft Most Valued Professional)에 의해 작성되었습니다.
 
 <!--Image references-->
 [1]: ./media/dag-01-high-level-view-distributed-ag.png

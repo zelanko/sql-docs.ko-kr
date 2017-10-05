@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dcbeda6b8372b358b6497f78d6139cad91c8097c
-ms.openlocfilehash: a13e098829fdf1ffee42075a57750513234dc997
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 2204d520152b1363657a407e5e0534e5051a4e94
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/21/2017
 
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
@@ -144,7 +144,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 |전체 리소스 사용|실행 메트릭 중 하나에 대한 데이터베이스의 전체 리소스 사용을 분석합니다.<br />리소스 패턴(낮 작업 vs. 밤 작업)을 식별하고 데이터베이스에 대한 전체 사용을 최적화하려면 이 보기를 사용합니다.|  
 |리소스를 최고로 사용 중인 쿼리|관심 있는 메트릭 실행을 선택하고 제공된 시간 간격 동안 가장 값이 높은 쿼리를 식별합니다. <br />데이터베이스 리소스 사용에 가장 큰 영향을 미치는 가장 관련성이 높은 쿼리에 주목하려면 이 보기를 사용합니다.|  
 |강제 계획이 포함된 쿼리|쿼리 저장소를 사용하여 이전 강제 계획을 나열합니다. <br />모든 현재 강제 계획에 빠르게 액세스하려면 이 보기를 사용합니다.|  
-|고변형 쿼리|원하는 시간 간격의 기간, CPU 시간, IO 및 메모리 사용량과 같은 사용 가능한 차원과 관련하여 실행 변형이 높은 쿼리를 분석합니다.<br />이 뷰를 사용하여 응용 프로그램 전체에서 사용자 경험에 영향을 줄 수 있는, 성능 변동이 큰 쿼리를 식별합니다.|  
+|고변형 쿼리|기간, CPU 시간, IO 및 원하는 시간 간격의 메모리 사용량과 같은 사용 가능한 차원과 관련하여 실행 변형이 높은 쿼리를 분석합니다.<br />이 뷰를 사용하여 응용 프로그램 전체에서 사용자 경험에 영향을 줄 수 있는, 성능 변동이 큰 쿼리를 식별합니다.|  
 |추적된 쿼리|가장 중요한 쿼리 실행을 실시간으로 추적합니다. 일반적으로 강제 계획을 사용하는 쿼리가 있고 해당 쿼리 성능이 안정적인지 확인하려고 할 경우 이 보기를 사용합니다.|
   
 > [!TIP]  
@@ -157,7 +157,7 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
      ![query-store-force-plan](../../relational-databases/performance/media/query-store-force-plan.png "query-store-force-plan")  
 
 > [!NOTE]  
-> 위의 그림에서 쿼리 계획에 따라 셰이프가 다를 수 있으며, 가능한 각 셰이프 상태의 의미는 다음과 같습니다.<br />  
+> 위의 그림에서는 쿼리 계획에 따라 셰이프가 다를 수 있으며, 셰이프는 다음과 같이 가능한 각 상태를 의미합니다.<br />  
 > |셰이프|의미|  
 > |-------------------|-------------|
 > |Circle|쿼리 완료됨(정상 실행이 완료됨)|
@@ -320,7 +320,15 @@ WHERE is_forced_plan = 1;
  실행 계획에서는 세 부분으로 된 이름을 참조합니다(`database.schema.object`).   
 
 데이터베이스의 이름을 바꾸면 계획 강제 적용에 실패하여 모든 후속 쿼리 실행 시 다시 컴파일됩니다.  
+
+##  <a name="Recovery"></a> 중요 업무 서버에서 추적 플래그를 사용하여 재해로부터 복구 개선
+ 
+  전역 추적 플래그 7745 및 7752는 고가용성 및 재해 복구 시나리오 중에 쿼리 저장소의 성능을 향상하는 데 사용할 수 있습니다.
   
+  SQL Server를 종료하기 전에 추적 플래그 7745는 쿼리 저장소에서 데이터를 디스크에 기록하는 기본 동작을 방지할 수 있습니다.
+  
+  추적 플래그 7752를 사용하면 쿼리 저장소가 완전히 로드되기 전에 SQL Server에서 쿼리를 실행할 수 있습니다. 기본 쿼리 저장소 동작은 쿼리 저장소가 복구되기 전에 쿼리가 실행되지 않도록 방지합니다.
+
 ## <a name="see-also"></a>관련 항목:  
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   

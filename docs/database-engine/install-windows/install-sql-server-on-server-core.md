@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: 501fac02e6146d417572dfb9f4f3906de7b2eeeb
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: d6ba2f29d8c6c21a6f96c575dbebc354e0885f8d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="install-sql-server-on-server-core"></a>Server Core에 SQL Server 설치
@@ -52,7 +52,7 @@ Server Core 설치 옵션은 특정 서버 역할을 실행하기 위한 최소 
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|아니오||  
 |SSDT([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools)|아니오||  
 |클라이언트 도구 연결|예||  
-|Integration Services 서버|예|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에 포함된 새로운 Integration Services 서버 및 해당 기능에 대한 자세한 내용은 [Integration Services(SSIS) Server](https://msdn.microsoft.com/library/bb522534.aspx)를 참조하세요.|  
+|Integration Services 서버|예|[!INCLUDE[ssCurrent](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)에 포함된 새로운 Integration Services 서버 및 해당 기능에 대한 자세한 내용의 경우|  
 |클라이언트 도구 이전 버전과의 호환성|아니오||  
 |클라이언트 도구 SDK|아니오||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서|아니오||  

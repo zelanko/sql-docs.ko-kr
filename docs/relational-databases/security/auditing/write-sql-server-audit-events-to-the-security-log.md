@@ -1,7 +1,7 @@
 ---
 title: "보안 로그에 SQL Server Audit 이벤트 쓰기 | Microsoft 문서"
 ms.custom: 
-ms.date: 03/14/2017
+ms.date: 09/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -19,45 +19,32 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 268f1fbd8ea57db8626c84999a3454e4c4459511
+ms.translationtype: HT
+ms.sourcegitcommit: f684f0168e57c5cd727af6488b2460eeaead100c
+ms.openlocfilehash: 990b47afdf34cc16f15a658f5a69f840d44a27fe
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/21/2017
 
----
-# <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기
-  보안 수준이 높은 환경에서는 Windows 보안 로그에 개체 액세스를 기록하는 이벤트를 쓰는 것이 좋습니다. 다른 감사 위치도 지원되지만 변조될 가능성이 높습니다.  
+---  
+
+# <a name="write-sql-server-audit-events-to-the-security-log"></a>보안 로그에 SQL Server Audit 이벤트 쓰기  
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]  
+
+보안 수준이 높은 환경에서는 Windows 보안 로그에 개체 액세스를 기록하는 이벤트를 쓰는 것이 좋습니다. 다른 감사 위치도 지원되지만 변조될 가능성이 높습니다.  
   
  Windows 보안 로그에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서버 감사를 쓰려면 두 가지 주요 요구 사항을 충족해야 합니다.  
   
 -   감사 개체 액세스 설정이 이벤트를 캡처하도록 구성되어야 합니다. 이 감사 정책 도구(`auditpol.exe`)는 **감사 개체 액세스** 범주의 여러 하위 정책 설정을 제공합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 개체 액세스를 감사하도록 허용하려면 **응용 프로그램에서 생성된** 설정을 구성합니다.  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스를 실행 중인 계정이 Windows 보안 로그에 쓰려면 **보안 감사 생성** 권한이 있어야 합니다. 기본적으로 LOCAL SERVICE 및 NETWORK SERVICE 계정에는 이 권한이 포함됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 가 이러한 계정 중 하나로 실행 중인 경우에는 이 단계가 필요하지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 대한 모든 권한을 레지스트리 하이브 `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\Security`에 제공합니다.  
+
+  > [!IMPORTANT]  
+  > [!INCLUDE[ssnoteregistry-md](../../../includes/ssnoteregistry-md.md)]   
   
- Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 감사에 영향을 줄 수 있으며 감사 정책이 잘못 구성된 경우 이벤트가 손실될 가능성이 있습니다. 일반적으로 Windows 보안 로그는 이전 이벤트를 덮어쓰도록 설정됩니다. 이렇게 하면 가장 최신 이벤트를 유지할 수 있습니다. 하지만 Windows 보안 로그가 이전 이벤트를 덮어쓰도록 설정되지 않으면 보안 로그가 꽉 찰 경우 시스템에서 Windows 이벤트 1104(로그가 꽉 참)가 발생합니다. 그러면 다음과 같이 됩니다.  
-  
+Windows 감사 정책은 Windows 보안 로그에 기록하도록 구성된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 감사에 영향을 줄 수 있으며 감사 정책이 잘못 구성된 경우 이벤트가 손실될 가능성이 있습니다. 일반적으로 Windows 보안 로그는 이전 이벤트를 덮어쓰도록 설정됩니다. 이렇게 하면 가장 최신 이벤트를 유지할 수 있습니다. 하지만 Windows 보안 로그가 이전 이벤트를 덮어쓰도록 설정되지 않으면 보안 로그가 꽉 찰 경우 시스템에서 Windows 이벤트 1104(로그가 꽉 참)가 발생합니다. 그러면 다음과 같이 됩니다.  
 -   보안 이벤트가 더 이상 기록되지 않습니다.  
-  
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 시스템이 보안 로그에 이벤트를 기록할 수 없다는 것을 감지하지 못하고 따라서 감사 이벤트가 손실될 수 있습니다.  
-  
 -   시스템 관리자가 보안 로그를 수정하면 로깅 동작이 정상으로 돌아옵니다.  
-  
- **항목 내용**  
-  
--   **시작하기 전에:**  
-  
-     [제한 사항](#Restrictions)  
-  
-     [보안](#Security)  
-  
--   **보안 로그에 SQL Server Audit 이벤트를 쓰려면**  
-  
-     [Windows에서 auditpol을 사용하여 감사 개체 액세스 설정 구성](#auditpolAccess)  
-  
-     [Windows에서 secpol을 사용하여 감사 개체 액세스 설정 구성](#secpolAccess)  
-  
-     [secpol을 사용하여 계정에 보안 감사 생성 권한 부여](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -125,3 +112,4 @@ ms.lasthandoff: 06/22/2017
  [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   
+

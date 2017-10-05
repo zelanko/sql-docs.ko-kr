@@ -17,68 +17,65 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: da73d0d20404f513e22dcdf0340e24fe85dc3184
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 20eb76a9e2cc89015167b5199f1a6f8dd5baec16
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="migrate-sensitive-data-protected-by-always-encrypted"></a>상시 암호화로 보호되는 중요한 데이터 마이그레이션
-  대량 복사 작업 중 서버에서 메타데이터 검사를 수행하지 않고 암호화된 데이터를 로드하려면 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션으로 사용자를 만듭니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 버전의 레거시 도구(예: bcp.exe) 또는 상시 암호화를 사용할 수 없는 타사 ETL(추출-변환-로드) 워크플로를 통해 사용하기 위한 것입니다. 이를 통해 사용자는 암호화된 데이터를 암호화된 열이 포함된 하나의 테이블 집합에서 암호화된 열이 있는 다른 테이블 집합(같거나 다른 데이터베이스)으로 안전하게 이동할 수 있습니다.  
-  
-## <a name="the-allowencryptedvaluemodifications-option"></a>The ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션  
- [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) 와 [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) 둘 다 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션이 있습니다. ON으로 설정되어 있는 경우(기본값은 OFF) 이 옵션은 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 억제하여 사용자는 데이터를 암호 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다.  
-  
-## <a name="data-migration-scenarios"></a>데이터 마이그레이션 시나리오  
- 다음 표는 몇 가지 마이그레이션 시나리오에 적합한 권장된 설정을 보여줍니다.  
-  
- ![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
-  
-## <a name="bulk-loading-of-encrypted-data"></a>암호화된 데이터의 대량 로드  
- 다음 프로세스를 사용하여 암호화된 데이터를 로드합니다.  
-  
-1.  데이터베이스에서 대량 복사 작업 대상인 사용자에 대해 이 옵션을 ON으로 설정합니다. 예를 들어  
-  
-    ```  
-    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
-    ```  
-  
-2.  해당 사용자로 연결하는 대량 복사 응용 프로그램 또는 도구를 실행합니다. (응용 프로그램에서 상시 암호화가 사용 설정된 클라이언트 드라이버를 사용하고 있는 경우 암호화된 열에서 검색된 데이터가 암호화를 유지하도록 데이터 원본에 대한 연결 문자열에 **column encryption setting=enabled** 가 포함되지 않아야 합니다. 자세한 내용은 [상시 암호화&#40;클라이언트 개발&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)를 참조하세요.  
-  
-3.  ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션을 다시 OFF로 설정합니다. 예를 들어  
-  
-    ```  
-    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
-    ```  
-  
-## <a name="potential-for-data-corruption"></a>데이터 손상 가능성  
- 이 옵션을 부적절하게 사용할 경우 데이터가 손상될 수 있습니다. **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션을 통해 사용자는 다른 키, 잘못 암호화 또는 전혀 암호화되지 않은 데이터를 포함해 모든 데이터를 데이터베이스의 암호화된 열로 삽입할 수 있습니다. 사용자가 대상 열에 대해 설저된 암호화 구성표(열 암호화 키, 알고리즘, 암호화 유형)를 사용하여 올바르게 암호화되지 않은 데이터를 실수로 복사하는 경우 데이터를 해독할 수 없습니다(데이터가 손상됨). 데이터베이스의 데이터를 손상시킬 수 있으므로, 이 옵션은 신중하게 사용해야 합니다.  
-  
- 다음 시나리오는 데이터를 부적절하게 가져올 경우 어떻게 데이터가 손상될 수 있는지 보여줍니다.  
-  
-1.  옵션은 사용자에 대해 ON으로 설정되어 있습니다.  
-  
-2.  사용자는 데이터베이스에 연결하는 응용 프로그램을 실행합니다. 응용 프로그램은 대량 API를 사용하여 일반 텍스트 값을 암호화된 열에 삽입합니다. 응용 프로그램은 상시 암호화가 사용 설정된 클라이언트 드라이버가 삽입 시 데이터를 암호할 것을 예상합니다. 그러나 응용 프로그램이 잘못 구성되어 있으므로, 상시 암호화를 지원하지 않는 드라이버 사용을 종료하거나 연결 문자열에 **column encryption setting=enabled**가 포함되지 않습니다.  
-  
-3.  응용 프로그램은 서버에 일반 텍스트 값을 보냅니다. 암호화 메타데이터 검사가 사용자에 대해 서버에서 사용하지 않도록 설정되어 있으므로, 서버는 잘못된 데이터(올바르게 암호화된 암호 텍스트 대신 일반 텍스트)를 암호화된 열로 삽입하게 됩니다.  
-  
-4.  같거나 다른 응용 프로그램이 상시 암호화 사용 설정된 드라이버를 사용하고 연결 문자열에서 **column encryption setting=enabled** 상태로 데이터베이스에 연결하며 데이터를 검색합니다. 응용 프로그램은 데이터가 투명하게 암호 해독될 것을 예상합니다. 그러나 데이터가 잘못된 암호 텍스트이므로 데이터의 암호를 해독하지 못합니다.  
-  
-## <a name="best-practice"></a>최선의 구현 방법  
-  
--   이 옵션을 사용하여 장기 실행 작업에 지정된 사용자 계정을 사용합니다.  
-  
--   해독하지 않고 암호화된 데이터를 이동해야 하는 단기 실행 대량 복사 응용 프로그램 또는 도구의 경우 응용 프로그램을 실행하기 직전에 이 옵션을 ON으로 설정하고 작업을 실행한 직후에 다시 OFF로 설정합니다.  
-  
--   새 응용 프로그램 개발에 이 옵션을 사용하지 말고 대신 단일 세션에 대한 암호화 메타데이터 검사 억제에 API를 제공하는 클라이언트 드라이버(예: ADO 4.6.1)를 사용하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [CREATE USER&#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
- [ALTER USER&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
- [상시 암호화&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
- [상시 암호화 마법사](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
- [상시 암호화&#40;클라이언트 개발&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
-  
-  
-
+ <a name="to-load-encrypted-data-without-performing-metadata-checks-on-the-server-during-bulk-copy-operations-create-the-user-with-the-allowencryptedvaluemodifications-option-this-option-is-intended-to-be-used-by-legacy-tools-from-versions-of-includessnoversionincludesssnoversion-mdmd-older-than-includesssql15includessssql15-mdmd-such-as-bcpexe-or-by-using-third-party-extract-transform-load-etl-work-flows-that-cannot-use-always-encrypted-this-allows-a-user-to-securely-move-encrypted-data-from-one-set-of-tables-containing-encrypted-columns-to-another-set-of-tables-with-encrypted-columns-in-the-same-or-a-different-database"></a>대량 복사 작업 중 서버에서 메타데이터 검사를 수행하지 않고 암호화된 데이터를 로드하려면 **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** 옵션으로 사용자를 만듭니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)] 버전의 레거시 도구(예: bcp.exe) 또는 상시 암호화를 사용할 수 없는 타사 ETL(추출-변환-로드) 워크플로를 통해 사용하기 위한 것입니다. 이를 통해 사용자는 암호화된 데이터를 암호화된 열이 포함된 하나의 테이블 집합에서 암호화된 열이 있는 다른 테이블 집합(같거나 다른 데이터베이스)으로 안전하게 이동할 수 있습니다.  
+ -  
+ -## The ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션  
+ - [CREATE USER](https://msdn.microsoft.com/library/ms173463.aspx) 와 [ALTER USER](https://msdn.microsoft.com/library/ms176060.aspx) 둘 다 ALLOW_ENCRYPTED_VALUE_MODIFICATIONS 옵션이 있습니다. ON으로 설정되어 있는 경우(기본값은 OFF) 이 옵션은 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 억제하여 사용자는 데이터를 암호 해독하지 않고 테이블 또는 데이터베이스 간에 암호화된 데이터를 대량 복사할 수 있습니다.  
+ -  
+ -## 데이터 마이그레이션 시나리오  
+ - 다음 표는 몇 가지 마이그레이션 시나리오에 적합한 권장된 설정을 보여줍니다.  
+ -  
+ - ![always-encrypted-migration](../../../relational-databases/security/encryption/media/always-encrypted-migration.PNG "always-encrypted-migration")  
+ -  
+ -## 암호화된 데이터의 대량 로드  
+ - 다음 프로세스를 사용하여 암호화된 데이터를 로드합니다.  
+ -  
+ -1.  데이터베이스에서 대량 복사 작업 대상인 사용자에 대해 이 옵션을 ON으로 설정합니다. 예를 들어  
+ -  
+ -    ```  
+ -    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = ON;  
+ -    ```  
+ -  
+ -2.  Run your bulk copy application or tool connecting as that user. (If your application uses an Always Encrypted enabled client driver, make sure the connection string for the data source does not contain **column encryption setting=enabled** to ensure the data retrieved from encrypted columns remains encrypted. For more information, see [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md).)  
+ -  
+ -3.  Set the ALLOW_ENCRYPTED_VALUE_MODIFICATIONS option back to OFF. For example:  
+ -  
+ -    ```  
+ -    ALTER USER Bob WITH ALLOW_ENCRYPTED_VALUE_MODIFICATIONS = OFF;  
+ -    ```  
+ -  
+ -## Potential for Data Corruption  
+ - Improper use of this option can lead to data corruption. The **ALLOW_ENCRYPTED_VALUE_MODIFICATIONS** option allows the user to insert any data into encrypted columns in the database, including data that is encrypted with different keys, incorrectly encrypted, or not encrypted at all. If the user accidently copies the data that is not correctly encrypted using the encryption scheme (column encryption key, algorithm, encryption type) set up for the target column, you will not be able to decrypt the data (the data will be corrupted). This option must be used carefully, as it can lead to corrupting data in the database.  
+ -  
+ - The following scenario demonstrates how improperly importing data could lead to data corruption:  
+ -  
+ -1.  The option is set to ON for a user.  
+ -  
+ -2.  The user runs the application that connects to the database. The application uses bulk APIs to insert plain text values to encrypted columns. The application expects an Always Encrypted-enabled client driver to encrypt the data on insert. However, the application is misconfigured, so that either it ends up using a driver that does not support Always Encrypted or the connection string does not contain **column encryption setting=enabled**.  
+ -  
+ -3.  The application sends plaintext values to the server. As cryptographic metadata checks are disabled in the server for the user, the server lets the incorrect data (plaintext instead of correctly encrypted ciphertext) to be inserted into an encrypted column.  
+ -  
+ -4.  The same or another application connects to the database using an Always Encrypted-enabled driver and with **column encryption setting=enabled** in the connection string, and retrieves the data. The application expects the data to be transparently decrypted. However, the driver fails to decrypt the data because the data is incorrect ciphertext.  
+ -  
+ -## Best practice  
+ -  
+ --   Use designated user accounts for long running workloads using this option.  
+ -  
+ --   For short running bulk copy applications or tools that need to move encrypted data without decrypting it, set the option to ON immediately before running the application and set it back to OFF immediately after running the operation.  
+ -  
+ --   Do not use this option for developing new applications. Instead, use a client driver (such as  ADO 4.6.1) that offers an API for suppressing cryptographic metadata checks for a single session.  
+ -  
+ -## See Also  
+ - [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md)   
+ - [ALTER USER &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-user-transact-sql.md)   
+ - [Always Encrypted &#40;Database Engine&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
+ - [Always Encrypted Wizard](../../../relational-databases/security/encryption/always-encrypted-wizard.md)   
+ - [Always Encrypted &#40;client development&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  

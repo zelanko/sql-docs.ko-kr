@@ -24,11 +24,11 @@ caps.latest.revision: 76
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: bc3d3e94cd6d5993b9647a394338649fe357f021
+ms.translationtype: HT
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 401b50d1999f5b5c2ffec0391b8703c873abd3ed
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 서버 관리
@@ -74,11 +74,9 @@ ms.lasthandoff: 06/22/2017
      자동화된 정책이 설정되어 있지 않으면 정책 기반 관리가 시스템 성능에 영향을 주지 않습니다.  
   
 ## <a name="terms"></a>용어  
- **정책 기반 관리에 의해 관리되는 대상** 
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스, 데이터베이스, 테이블 또는 인덱스와 같이 정책 기반 관리에 의해 관리되는 엔터티입니다. 서버 인스턴스의 모든 대상이 대상 계층을 구성합니다. 대상 집합은 HumanResources 스키마가 소유하는 데이터베이스의 모든 테이블과 같이 대상 필터 집합을 대상 계층에 적용한 결과인 대상 집합입니다.  
+ **정책 기반 관리에 의해 관리되는 대상** [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스, 데이터베이스, 테이블 또는 인덱스와 같이 정책 기반 관리에 의해 관리되는 엔터티입니다. 서버 인스턴스의 모든 대상이 대상 계층을 구성합니다. 대상 집합은 HumanResources 스키마가 소유하는 데이터베이스의 모든 테이블과 같이 대상 필터 집합을 대상 계층에 적용한 결과인 대상 집합입니다.  
   
- **정책 기반 관리 패싯**
- 특정 유형의 관리되는 대상에 대한 동작 또는 특징을 모델링하는 논리적 속성 집합입니다. 속성의 수 및 특징은 기본적으로 패싯에 포함되며 패싯 작성자에 의해서만 추가 또는 제거될 수 있습니다. 대상 유형은 하나 이상의 관리 패싯을 구현할 수 있으며 관리 패싯은 하나 이상의 대상 유형에 의해 구현될 수 있습니다. 일부 패싯 속성은 특정 버전에만 적용될 수 있습니다.  
+ **정책 기반 관리 패싯** 특정 유형의 관리되는 대상에 대한 동작 또는 특징을 모델링하는 논리적 속성 집합입니다. 속성의 수 및 특징은 기본적으로 패싯에 포함되며 패싯 작성자에 의해서만 추가 또는 제거될 수 있습니다. 대상 유형은 하나 이상의 관리 패싯을 구현할 수 있으며 관리 패싯은 하나 이상의 대상 유형에 의해 구현될 수 있습니다. 일부 패싯 속성은 특정 버전에만 적용될 수 있습니다.  
   
  **정책 기반 관리 조건**  
  관리 패싯과 관련하여 정책 기반 관리에 의해 관리되는 대상의 허용되는 상태 집합을 지정하는 부울 식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 조건을 평가할 때 데이터 정렬을 관측하려고 시도합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 정렬이 Windows 데이터 정렬과 정확하게 일치하지 않을 경우 해당 조건을 테스트하여 알고리즘이 충돌을 어떻게 해결하는지 확인하십시오.  
@@ -108,7 +106,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="links-to-specific-tasks"></a>특정 작업에 대한 링크 
 
- - [정책 기반 관리 정책을 저장합니다.](https://msdn.microsoft.com/library/hh213476.aspx)|  
+ - [정책 기반 관리 정책을 저장합니다.](policy-based-management-storage.md)|  
  - [정책 관리자에서 정책 실패를 알리도록 경고 구성](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
  - [새로운 정책 기반 관리 조건 만들기](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
  - [정책 기반 관리 조건 삭제](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
@@ -121,8 +119,8 @@ ms.lasthandoff: 06/22/2017
 
   
  ## <a name="examples"></a>예
- - [Off By Default 정책 만들기](https://msdn.microsoft.com/library/bb500172.aspx)
-  - [Off By Default 정책을 실행하도록 서버 구성](https://msdn.microsoft.com/library/bb522470.aspx)
+ - [Off By Default 정책 만들기](lesson-1-1-create-the-off-by-default-policy.md)
+  - [Off By Default 정책을 실행하도록 서버 구성](lesson-1-2-configure-a-server-to-run-the-off-by-default-policy.md)
 ## <a name="see-also"></a>참고 항목  
  [정책 기반 관리 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 8b45a33dadae04400fbc0602f2aa4f6fc08d5df1
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
@@ -59,9 +59,9 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- 호환성 수준 120으로 설정된 SQL Server 데이터베이스의 경우 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 활성화하면 시스템에서 CE 버전 70이 사용됩니다.  
+ 호환성 수준 120 이상으로 설정된 SQL Server 데이터베이스의 경우 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 활성화하면 시스템에서 CE 버전 70이 사용됩니다.  
   
- **레거시 CE:** 호환성 수준 130으로 설정된 SQL Server 데이터베이스의 경우 [데이터베이스 범위 구성 변경](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하여 데이터베이스 수준에서 CE 버전 70을 활성화할 수 있습니다.
+ **레거시 CE:** 호환성 수준 120 이상으로 설정된 SQL Server 데이터베이스의 경우 [데이터베이스 범위 구성 변경](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하여 데이터베이스 수준에서 CE 버전 70을 활성화할 수 있습니다.
   
 ```tsql  
 ALTER DATABASE
@@ -74,7 +74,7 @@ SELECT name, value
     WHERE name = 'LEGACY_CARDINALITY_ESTIMATION';  
 ```  
  
- 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)`FORCE_LEGACY_CARDINALITY_ESTIMATION`를 사용할 수 있습니다.
+ 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)`USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')`를 사용할 수 있습니다.
  
  ```tsql  
 SELECT CustomerId, OrderAddedDate  

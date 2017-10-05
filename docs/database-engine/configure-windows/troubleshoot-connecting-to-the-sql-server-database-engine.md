@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: ec8d27f68672ddbb93bbf22624345ecb59e9bb79
+ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
+ms.openlocfilehash: 95a95824ad3bf2b01f01a579fe38c7ab61f6d27d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
@@ -52,7 +52,7 @@ SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 �
 
 1. SQL Server 데이터베이스 엔진 인스턴스가 설치되었으며 실행되고 있는지 확인합니다.
     1.  SQL Server 인스턴스를 호스트하는 컴퓨터에 로그온합니다.
-    2.  SQL Server 구성 관리자를 시작합니다. 구성 관리자는 SQL Server를 설치할 때 컴퓨터에 자동으로 설치됩니다. 구성 관리자를 시작하는 방법에 대한 지침은 SQL Server 및 Windows 버전에 따라 약간씩 다릅니다. 구성 관리자를 시작하는 방법에 대한 도움말은 [SQL Server 구성 관리자](https://msdn.microsoft.com/library/ms174212.aspx)를 참조하세요.
+    2.  SQL Server 구성 관리자를 시작합니다. 구성 관리자는 SQL Server를 설치할 때 컴퓨터에 자동으로 설치됩니다. 구성 관리자를 시작하는 방법에 대한 지침은 SQL Server 및 Windows 버전에 따라 약간씩 다릅니다. 구성 관리자를 시작하는 방법에 대한 도움말은 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 참조하세요.
     3.  구성 관리자의 왼쪽 창에서 **SQL Server 서비스**를 선택합니다. 오른쪽 창에서 데이터베이스 엔진 인스턴스가 있고 실행되고 있는지 확인합니다. 이름이 **SQL Server (MSSQLSERVER)** 인 인스턴스가 기본(명명되지 않은) 인스턴스입니다. 기본 인스턴스는 하나만 있을 수 있습니다. 다른(명명된) 인스턴스의 이름은 괄호 안에 표시됩니다. SQL Server Express는 설치 중에 다른 사용자가 다른 이름으로 지정하지 않은 경우 **SQL Server (SQLEXPRESS)** 라는 이름을 인스턴스 이름으로 사용합니다. 연결하려는 인스턴스의 이름을 적어둡니다. 또한 녹색 화살표를 찾아 인스턴스가 실행되고 있는지 확인합니다. 인스턴스에 빨간색 사각형이 있는 경우 인스턴스를 마우스 오른쪽 단추로 클릭한 다음 **시작**을 클릭합니다. 녹색으로 바뀝니다.
      4. 명명된 인스턴스에 연결하려는 경우 SQL Server Browser 서비스가 실행되고 있는지 확인합니다.
  
@@ -83,15 +83,15 @@ SQL Server 데이터베이스 엔진에 연결할 수 없는 경우 사용할 �
 TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설정할 수 있어야 합니다. `ping` 도구를 사용하여 TCP를 테스트합니다.
 1.  시작 메뉴에서 **실행**을 클릭합니다. **실행** 창에서 **cmd**를 입력하고 **확인**을 클릭합니다. 
 2.  명령 프롬프트 창에서 `ping` 과 SQL Server를 실행하는 컴퓨터의 IP 주소를 입력합니다. 예를 들어 IPv4 주소를 사용하는 경우 `ping 192.168.1.101` , IPv6 주소를 사용하는 경우 `ping fe80::d51d:5ab5:6f09:8f48%11` 를 입력합니다. ping 뒤의 숫자를 앞에서 수집한 컴퓨터의 IP 주소로 바꾸어야 합니다. 
-3.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우TCP/IP가 올바르게 구성되지 않은 것입니다. IP 주소가 맞고 올바르게 입력되었는지 확인합니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 인터넷에 TCP/IP 문제를 해결하기 위한 여러 리소스가 있습니다. 2006년의 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)문서에서 시작하는 것이 좋습니다.
+3.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.**와 같은 오류가 발생하는 경우TCP/IP가 올바르게 구성되지 않은 것입니다. IP 주소가 맞고 올바르게 입력되었는지 확인합니다. 이 시점의 오류는 클라이언트 컴퓨터, 서버 컴퓨터 또는 라우터 등의 네트워크 관련 문제를 나타낼 수 있습니다. 인터넷에 TCP/IP 문제를 해결하기 위한 여러 리소스가 있습니다. 2006년의 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)문서에서 시작하는 것이 좋습니다.
 4.  그런 다음 IP 주소를 사용하여 ping 테스트에 성공한 경우 컴퓨터 이름을 TCP/IP 주소를 확인할 수 있는지 테스트합니다. 클라이언트 컴퓨터의 명령 프롬프트 창에서 `ping` 과 SQL Server를 실행하는 컴퓨터의 컴퓨터 이름을 입력합니다. 예를 들어 IPv4 주소를 사용하는 경우 `ping newofficepc` 
-5.  ipaddress를 ping할 수 있지만 **대상 호스트에 연결할 수 없습니다.**와 같은 오류를 수신합니다. 또는 **요청 시간이 초과되었습니다.** 와 같은 오류가 발생하는 경우 클라이언트 컴퓨터에 이전(오래된) 이름 확인 정보가 캐시되어 있을 수 있습니다. `ipconfig /flushdns` 를 입력하여 DNS(동적 이름 확인) 캐시를 지웁니다. 다시 이름으로 컴퓨터를 ping합니다. DNS 캐시가 비어 있으므로 클라이언트 컴퓨터가 서버 컴퓨터의 IP 주소에 대한 최신 정보를 확인합니다. 
-6.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. IP 주소로 서버 컴퓨터를 ping할 수 있지만 컴퓨터 이름으로 ping할 때 **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.** 등의 오류가 발생하는 경우 이름 확인이 올바르게 구성되지 않은 것입니다. 자세한 내용은 앞에서 참조한 2006년 문서 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)을 참조하세요. SQL Server에 연결하기 위해 이름 확인에 성공해야 하는 것은 아니지만 컴퓨터 이름을 IP 주소로 확인할 수 없는 경우 IP 주소를 지정하여 연결해야 합니다. 이상적인 상태는 아니지만 나중에 이름 확인을 수정할 수 있습니다.
+5.  ipaddress를 ping할 수 있지만 **대상 호스트에 연결할 수 없습니다.**와 같은 오류를 수신합니다. 또는 **요청 시간이 초과되었습니다.**와 같은 오류가 발생하는 경우 클라이언트 컴퓨터에 이전(오래된) 이름 확인 정보가 캐시되어 있을 수 있습니다. `ipconfig /flushdns` 를 입력하여 DNS(동적 이름 확인) 캐시를 지웁니다. 다시 이름으로 컴퓨터를 ping합니다. DNS 캐시가 비어 있으므로 클라이언트 컴퓨터가 서버 컴퓨터의 IP 주소에 대한 최신 정보를 확인합니다. 
+6.  네트워크가 올바르게 구성되었으면 일부 추가 정보가 뒤에 포함된 **\<IP 주소>에서 회신**과 같은 응답을 받게 됩니다. IP 주소로 서버 컴퓨터를 ping할 수 있지만 컴퓨터 이름으로 ping할 때 **대상 호스트에 연결할 수 없습니다.** 또는 **요청 시간이 초과되었습니다.**와 같은 오류가 발생하는 경우 이름 확인이 올바르게 구성되지 않은 것입니다. 자세한 내용은 앞에서 참조한 2006년 문서 [기본적인 TCP/IP 문제를 해결하는 방법](http://support.microsoft.com/kb/169790)을 참조하세요. SQL Server에 연결하기 위해 이름 확인에 성공해야 하는 것은 아니지만 컴퓨터 이름을 IP 주소로 확인할 수 없는 경우 IP 주소를 지정하여 연결해야 합니다. 이상적인 상태는 아니지만 나중에 이름 확인을 수정할 수 있습니다.
   
   
 ## <a name="testing-a-local-connection"></a>로컬 연결 테스트
 
-다른 컴퓨터에서 연결 문제를 해결하기 전에 먼저 SQL Server를 실행하는 컴퓨터에 설치된 클라이언트 응용 프로그램에서 연결할 수 있는지 테스트합니다. 이렇게 하면 방화벽 문제가 개입되지 않습니다. 이 절차에서는 SQL Server Management Studio를 사용합니다. Management Studio가 설치되어 있지 않으면 [SSMS(SQL Server Management Studio) 다운로드](https://msdn.microsoft.com/library/mt238290.aspx)를 참조하세요. Management Studio를 설치할 수 없는 경우 데이터베이스 엔진과 함께 설치된 `sqlcmd.exe` 유틸리티를 사용하여 연결을 테스트할 수 있습니다. `sqlcmd.exe`에 대한 자세한 내용은 [sqlcmd 유틸리티](https://msdn.microsoft.com/library/ms162773.aspx)를 참조하세요.
+다른 컴퓨터에서 연결 문제를 해결하기 전에 먼저 SQL Server를 실행하는 컴퓨터에 설치된 클라이언트 응용 프로그램에서 연결할 수 있는지 테스트합니다. 이렇게 하면 방화벽 문제가 개입되지 않습니다. 이 절차에서는 SQL Server Management Studio를 사용합니다. Management Studio가 설치되어 있지 않으면 [SSMS(SQL Server Management Studio) 다운로드](../../ssms/download-sql-server-management-studio-ssms.md)를 참조하세요. Management Studio를 설치할 수 없는 경우 데이터베이스 엔진과 함께 설치된 `sqlcmd.exe` 유틸리티를 사용하여 연결을 테스트할 수 있습니다. `sqlcmd.exe`에 대한 자세한 내용은 [sqlcmd 유틸리티](../../tools/sqlcmd-utility.md)를 참조하세요.
 1.  SQL Server에 액세스할 수 있는 권한을 가진 로그인을 사용하여 SQL Server가 설치된 컴퓨터에 로그온합니다. 설치 중 SQL Server에 대해 하나 이상의 로그인을 SQL Server 관리자로 지정해야 합니다. 관리자를 모르는 경우 [시스템 관리자가 잠겨 있는 경우 SQL Server에 연결](http://msdn.microsoft.com/library/dd207004.aspx)을 참조하세요.
 2.   시작 페이지에서 **SQL Server Management Studio**를 입력하거나, 이전 버전의 Windows 시작 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**를 차례로 가리킨 다음 **SQL Server Management Studio**를 클릭합니다.
 3.  **서버에 연결** 대화 상자의 **서버** 유형 상자에서 **데이터베이스 엔진**을 선택합니다. **인증** 상자에서 **Windows 인증**을 선택합니다. **서버 이름** 상자에 다음 중 하나를 입력합니다.

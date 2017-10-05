@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 80642503480add90fc75573338760ab86139694c
-ms.openlocfilehash: 01f0e6dfacfab0d8528d3b399267c45afef95a11
+ms.sourcegitcommit: ec9c558fedd7cf0bb96ee4dec34a1c072418a343
+ms.openlocfilehash: 5112630e01953d16f1ed6cec04e16ee5af55d470
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/21/2017
+ms.lasthandoff: 09/20/2017
 
 ---
 
@@ -233,7 +233,10 @@ GO
         );  
        
       ```  
-  
+   >[!NOTE]
+   >일반 가용성 그룹과 마찬가지로 분산된 가용성 그룹의 두 가용성 그룹 복제본 부분 간에 동기화 상태는 두 복제본의 가용성 모드에 따라 다릅니다. 예를 들어 동기 커밋이 발생할 경우 현재 주 가용성 그룹 및 보조 가용성 그룹은 모두 동기 커밋 가용성 모드로 구성되어야 합니다.  
+
+
 1. 분산 가용성 그룹의 상태가 `SYNCHRONIZED`으로 변경될 때까지 대기합니다. 기본 가용성 그룹의 주 복제본을 호스트하는 SQL Server에서 다음 쿼리를 실행합니다. 
     
       ```sql  
@@ -340,3 +343,4 @@ ALTER AVAILABILITY GROUP [SQLFCIDAG]
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-availability-group-transact-sql.md)  
   
   
+
