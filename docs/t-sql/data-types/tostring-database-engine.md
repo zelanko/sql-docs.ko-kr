@@ -106,11 +106,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`hierarchyidRepresentation    StringRepresentation`
-  
-`-------------------------    -----------------------`
-  
-`0x5ADE                       /1/1/3/`
+```
+hierarchyidRepresentation    StringRepresentation
+-------------------------    -----------------------
+0x5ADE                       /1/1/3/
+```
   
 ### <a name="c-clr-example"></a>3. CLR 예  
 다음 코드 조각 tostring () 메서드를 호출합니다.

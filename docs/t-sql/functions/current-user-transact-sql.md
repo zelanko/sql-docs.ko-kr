@@ -104,13 +104,13 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`order_id    cust_id     order_date           order_amt    order_person`
+```
+order_id    cust_id     order_date           order_amt    order_person
+----------- ----------- -------------------- ------------ ------------
+1000        5105        2005-04-03 23:34:00  577.95       Wanida
   
-`----------- ----------- -------------------- ------------ ------------`
-  
-`1000        5105        2005-04-03 23:34:00  577.95       Wanida`
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="c-using-currentuser-from-an-impersonated-context"></a>3. 가장된 컨텍스트에서 CURRENT_USER 사용  
 다음 예에서 `Wanida` 사용자는 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 실행합니다.
@@ -130,11 +130,11 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`Wanida`
-  
-`Arnalfo`
-  
-`Wanida`
+```
+Wanida
+Arnalfo
+Wanida
+```
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

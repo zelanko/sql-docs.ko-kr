@@ -128,11 +128,12 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
+```
+-----------
+0
   
- `0`  
-  
-`(1 row(s) affected)`
+(1 row(s) affected)
+```
   
 ### <a name="d-performing-a-case-sensitive-search"></a>4. 대/소문자 구분 검색 수행  
 다음 예제에서는 문자열에 대 한 대/소문자 구분 검색 수행 `'TEST'` 에서 `'This is a Test``'`합니다.
@@ -148,9 +149,10 @@ SELECT CHARINDEX ( 'TEST',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `0`  
+```
+-----------
+0
+```  
   
 다음 예제에서는 문자열에 대 한 대/소문자 구분 검색 수행 `'Test'` 에서 `'This is a Test'`합니다.
   
@@ -165,9 +167,10 @@ SELECT CHARINDEX ( 'Test',
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ### <a name="e-performing-a-case-insensitive-search"></a>5. 대/소문자를 구분하지 않는 검색 수행  
 다음 예에서는 `'TEST'`의 문자열 `'This is a Test'`에 대해 대/소문자를 구분하지 않는 검색을 수행합니다.
@@ -184,9 +187,10 @@ GO
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`-----------`
-  
- `13`  
+```
+-----------
+13
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -199,9 +203,10 @@ SELECT CHARINDEX('is', 'This is a string');
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `3`  
+```
+---------
+3
+```  
   
 ### <a name="g-searching-from-a-position-other-than-the-first-position"></a>7. 첫 번째 위치 이외의 위치에서 검색  
 첫 번째 위치를 반환 하는 다음 예제는 `is` 문자열에 `This is a string`된 네 번째 위치에서 시작 합니다.
@@ -212,9 +217,10 @@ SELECT CHARINDEX('is', 'This is a string', 4);
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `6`  
+```
+---------
+ 6
+ ```  
   
 ### <a name="h-results-when-the-string-is-not-found"></a>8. 결과 문자열을 찾을 수 없는 경우  
 다음 예제에서는 반환 되는 경우이 값은 *string_pattern* 검색된 되는 문자열에 없습니다.
@@ -225,9 +231,10 @@ SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
-`---------`
-  
- `0`  
+```
+---------
+0
+```  
   
 ## <a name="see-also"></a>참고 항목
 [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  
