@@ -198,13 +198,13 @@ SELECT NEXT VALUE FOR Test.CountBy1 AS SecondUse;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstUse`  
+ ```
+FirstUse  
+1  
   
- `1`  
-  
- `SecondUse`  
-  
- `2`  
+SecondUse  
+2
+```  
   
 ### <a name="b-setting-a-variable-to-the-next-sequence-value"></a>2. 변수를 다음 시퀀스 값으로 설정  
  다음 예에서는 변수를 시퀀스 번호의 다음 값으로 설정하는 세 가지 방법을 보여 줍니다.  

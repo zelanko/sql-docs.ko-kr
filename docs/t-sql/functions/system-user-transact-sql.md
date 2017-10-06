@@ -75,11 +75,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------------------------------------------------------`  
-  
- `The current system user is: WillisJo`  
-  
- `(1 row(s) affected)`  
+ ```
+----------------------------------------------------------
+The current system user is: WillisJo
+
+(1 row(s) affected)
+ ```  
   
 ### <a name="b-using-systemuser-with-default-constraints"></a>2. DEFAULT 제약 조건으로 SYSTEM_USER 사용  
  다음 예에서는 `SYSTEM_USER` 열에 대한 `DEFAULT` 제약 조건으로 `SRep_tracking_user`를 사용하는 테이블을 만듭니다.  
@@ -117,21 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Territory_id Rep_id Last_sale            SRep_tracking_user`  
+ ```
+Territory_id Rep_id Last_sale            SRep_tracking_user
+-----------  ------ -------------------- ------------------
+2000         151    Mar 4 1998 10:36AM   ArvinDak
+2001         293    May 15 1998 12:00AM  ArvinDak
+2003         21392  Mar 4 1998 10:36AM   ArvinDak
+2004         24283  Nov 3 1998 12:00AM   ArvinDak
+2002         27882  Jun 20 1998 12:00AM  ArvinDak
   
- `-----------  ------ -------------------- ------------------`  
-  
- `2000         151    Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2001         293    May 15 1998 12:00AM  ArvinDak`  
-  
- `2003         21392  Mar 4 1998 10:36AM   ArvinDak`  
-  
- `2004         24283  Nov 3 1998 12:00AM   ArvinDak`  
-  
- `2002         27882  Jun 20 1998 12:00AM  ArvinDak`  
-  
- `(5 row(s) affected)`  
+(5 row(s) affected)
+ ```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

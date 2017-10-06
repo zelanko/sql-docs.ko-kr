@@ -100,17 +100,14 @@ ORDER BY EmployeeKey;
   
  다음은 결과 집합의 일부입니다.  
   
- `Name`  
-  
- `-----`  
-  
- `lbert`  
-  
- `Brown`  
-  
- `rello`  
-  
- `lters`  
+ ```
+Name
+-----
+lbert
+Brown
+rello
+lters
+ ```  
   
 ### <a name="c-using-right-with-a-character-string"></a>3. 문자열과 함께 오른쪽을 사용 하 여  
  다음 예제에서는 `RIGHT` 문자는 문자열의 오른쪽에 있는 두 개의 문자를 반환 하려면 `abcdefg`합니다.  
@@ -123,9 +120,10 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-------`  
-  
- `fg`  
+```
+-------  
+fg
+```  
   
 ## <a name="see-also"></a>관련 항목:  
  [CAST 및 convert&#40; Transact SQL &#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)   

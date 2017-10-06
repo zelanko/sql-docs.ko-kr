@@ -137,21 +137,16 @@ ORDER BY Name;
   
  다음 결과 집합의 첫 번째 행은입니다.  
   
- `Name                     ItemCode       FullItemCode`  
-  
- `------------------------ -------------- ---------------`  
-  
- `Adjustable Race          AR-5381        0000AR-5381`  
-  
- `All-Purpose Bike Stand   ST-1401        0000ST-1401`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `AWC Logo Cap             CA-1098        0000CA-1098`  
-  
- `BB Ball Bearing          BE-2349        0000BE-2349`  
+ ```
+Name                     ItemCode       FullItemCode
+------------------------ -------------- ---------------
+Adjustable Race          AR-5381        0000AR-5381
+All-Purpose Bike Stand   ST-1401        0000ST-1401
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+AWC Logo Cap             CA-1098        0000CA-1098
+BB Ball Bearing          BE-2349        0000BE-2349
+ ```  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

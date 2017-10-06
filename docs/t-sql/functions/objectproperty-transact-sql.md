@@ -213,9 +213,10 @@ GO
   
  결과 집합은 `ufnGetProductDealerPrice`가 결정적 함수가 아님을 보여 줍니다.  
   
- `-----`  
-  
- `0`  
+ ```
+-----  
+0
+```  
   
 ### <a name="c-finding-the-objects-that-belong-to-a-specific-schema"></a>3. 특정 스키마에 속하는 개체 찾기  
  다음 예에서는 `SchemaId` 속성을 사용하여 `Production` 스키마에 속하는 모든 개체를 반환합니다.  

@@ -40,7 +40,7 @@ ms.lasthandoff: 10/04/2017
 |**Title**|**nvarchar(50)**|Null 허용|팀 직원의 직함|  
 |**배경**|**nvarchar(50)**|Null이 아님|행이 마지막으로 업데이트된 날짜와 시간 (기본값)|  
   
- **HumanResources.myTeam을 만들려면**  
+**HumanResources.myTeam을 만들려면**  
   
 -   다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 10/04/2017
     GO  
     ```  
   
- **HumanResources.myTeam을 채우려면**  
+**HumanResources.myTeam을 채우려면**  
   
 -   다음 `INSERT` 문을 실행하여 테이블을 두 행으로 채웁니다.  
   

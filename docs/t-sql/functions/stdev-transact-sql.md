@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `398974.27         398450.57`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+398974.27         398450.57
+ ```  
   
 ### <a name="c-using-stdev-with-over"></a>3. STDEV OVER 사용  
  다음 예에서는 각 분기는 역 년에 대 한 판매 할당량 값의 표준 편차를 반환 합니다. 정렬 STDEV는 OVER 절에서 ORDER BY 및 ORDER BY SELECT 문의 결과 집합을 정렬를 확인 합니다.  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              StdDeviation`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             null`  
-  
- `2002  2        140000.0000             34648.23`  
-  
- `2002  3         70000.0000             35921.21`  
-  
- `2002  4        154000.0000             39752.36`  
+ ```
+Year  Quarter  SalesQuota              StdDeviation
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             null
+2002  2        140000.0000             34648.23
+2002  3         70000.0000             35921.21
+2002  4        154000.0000             39752.36
+ ```  
   
 ## <a name="see-also"></a>관련 항목:  
  [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

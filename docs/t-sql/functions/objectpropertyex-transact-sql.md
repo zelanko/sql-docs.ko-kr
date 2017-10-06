@@ -207,11 +207,11 @@ GO
   
  결과 집합은 기본 개체의 기본 유형인 `Employee` 테이블이 사용자 테이블임을 나타냅니다.  
   
- `Base Type`  
-  
- `--------`  
-  
- `U`  
+ ```
+Base Type 
+--------  
+U
+```  
   
 ### <a name="b-returning-a-property-value"></a>2. 속성 값 반환  
  다음 예에서는 지정된 테이블의 UPDATE 트리거 수를 반환합니다.  

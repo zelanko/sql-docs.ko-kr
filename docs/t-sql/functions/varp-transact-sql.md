@@ -102,11 +102,11 @@ FROM dbo.FactSalesQuota;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Distinct_Values   All_Values`  
-  
- `----------------  ----------------`  
-  
- `158146830494.18   157788848582.94`  
+ ```
+Distinct_Values   All_Values
+----------------  ----------------
+158146830494.18   157788848582.94
+```  
   
 ### <a name="c-using-varp-with-over"></a>3. VARP OVER 사용  
  다음 예제에서는 반환 된 `VARP` 역 년의 분기별 판매 할당량 값의 합니다. OVER 절에서 ORDER BY 정렬 통계적 분산을 ORDER BY SELECT 문의 결과 집합을 정렬 방식을 살펴봅니다.  
@@ -123,17 +123,14 @@ ORDER BY CalendarQuarter;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Year  Quarter  SalesQuota              Variance`  
-  
- `----  -------  ----------------------  -------------------`  
-  
- `2002  1         91000.0000             0.00`  
-  
- `2002  2        140000.0000             600250000.00`  
-  
- `2002  3         70000.0000             860222222.22`  
-  
- `2002  4        154000.0000             1185187500.00`  
+ ```
+Year  Quarter  SalesQuota              Variance
+----  -------  ----------------------  -------------------
+2002  1         91000.0000             0.00
+2002  2        140000.0000             600250000.00
+2002  3         70000.0000             860222222.22
+2002  4        154000.0000             1185187500.00
+```  
   
 ## <a name="see-also"></a>관련 항목:  
  [집계 함수 &#40; Transact SQL &#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   

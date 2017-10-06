@@ -69,19 +69,16 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `FirstName      Reverse`  
-  
- `-------------- --------------`  
-  
- `Ken            neK`  
-  
- `Rob            boR`  
-  
- `Roberto        otreboR`  
-  
- `Terri          irreT`  
-  
- `(4 row(s) affected)`  
+ ```
+FirstName      Reverse
+-------------- --------------
+Ken            neK
+Rob            boR
+Roberto        otreboR
+Terri          irreT
+
+(4 row(s) affected)
+```  
   
  다음 예에서는 변수의 문자 순서를 반대로 만듭니다.  
   

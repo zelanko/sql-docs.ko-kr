@@ -83,11 +83,11 @@ SELECT STRING_ESCAPE('\   /
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `escapedText`  
-  
- `-------------------------------------------------------------`  
-  
- `\\\t\/\n\\\\\t\"\t`  
+ ```
+escapedText  
+-------------------------------------------------------------  
+\\\t\/\n\\\\\t\"\t
+```  
   
 ### <a name="b-format-json-object"></a>2. JSON 개체의 서식  
  다음 쿼리는 숫자 및 문자열 변수에서 JSON 텍스트를 만들고 변수에 있는 특수 한 JSON 문자를 이스케이프 합니다.  

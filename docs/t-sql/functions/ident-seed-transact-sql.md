@@ -83,23 +83,17 @@ GO
   
  다음은 결과 집합의 일부입니다.  
   
- `TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED`  
-  
- `------------       ---------------------------  -----------`  
-  
- `Person             Address                                1`  
-  
- `Production         ProductReview                          1`  
-  
- `Production         TransactionHistory                100000`  
-  
- `Person             AddressType                            1`  
-  
- `Production         ProductSubcategory                     1`  
-  
- `Person             vAdditionalContactInfo                 1`  
-  
- `dbo                AWBuildVersion                         1`  
+ ```
+ TABLE_SCHEMA       TABLE_NAME                   IDENT_SEED  
+------------       ---------------------------  -----------  
+Person             Address                                1  
+Production         ProductReview                          1  
+Production         TransactionHistory                100000  
+Person             AddressType                            1  
+Production         ProductSubcategory                     1  
+Person             vAdditionalContactInfo                 1  
+dbo                AWBuildVersion                         1
+```  
   
 ## <a name="see-also"></a>관련 항목:  
  [식 &#40; Transact SQL &#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

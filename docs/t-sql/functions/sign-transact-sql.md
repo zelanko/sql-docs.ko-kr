@@ -109,9 +109,10 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `-----  -----  -----`  
-  
- `-1     0      1`  
+ ```
+-----  -----  -----  
+-1     0      1
+```  
   
 ## <a name="see-also"></a>관련 항목:  
  [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

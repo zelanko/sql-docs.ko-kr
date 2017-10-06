@@ -68,11 +68,12 @@ GO
   
  다음은 세션 사용자가 `Surya`일 때의 결과 집합입니다.  
   
- `--------------------------------------------------------------`  
-  
- `This session's current user is: Surya`  
-  
- `(1 row(s) affected)`  
+ ```
+--------------------------------------------------------------
+This session's current user is: Surya
+
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-sessionuser-with-default-constraints"></a>2. DEFAULT 제약 조건으로 SESSION_USER 사용  
  다음 예에서는 배송물 수령을 기록하는 사람의 이름에 대한 `SESSION_USER` 제약 조건으로 `DEFAULT`를 사용하는 테이블을 만듭니다.  
@@ -127,21 +128,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Order #   Customer #  When Delivered       Received By`  
-  
- `--------  ----------  -------------------  -----------`  
-  
- `5000      7510        2005-03-16 12:02:14  Wanida`  
-  
- `5001      7231        2005-03-16 12:02:14  Wanida`  
-  
- `5002      7028        2005-03-16 12:02:14  Sylvester`  
-  
- `5003      7392        2005-03-16 12:02:14  Alejandro`  
-  
- `5004      7452        2005-03-16 12:02:14  Alejandro`  
-  
- `(5 row(s) affected)`  
+ ```
+Order #   Customer #  When Delivered       Received By
+--------  ----------  -------------------  -----------
+5000      7510        2005-03-16 12:02:14  Wanida
+5001      7231        2005-03-16 12:02:14  Wanida
+5002      7028        2005-03-16 12:02:14  Sylvester
+5003      7392        2005-03-16 12:02:14  Alejandro
+5004      7452        2005-03-16 12:02:14  Alejandro
+
+(5 row(s) affected)
+```  
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   

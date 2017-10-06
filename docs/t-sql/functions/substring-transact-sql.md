@@ -105,13 +105,13 @@ SELECT x = SUBSTRING('abcdef', 2, 3);
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
+ ```
+x  
+----------  
+bcd  
   
- `----------`  
-  
- `bcd`  
-  
- `(1 row(s) affected)`  
+(1 row(s) affected)
+```  
   
 ### <a name="b-using-substring-with-text-ntext-and-image-data"></a>2. text, ntext, image 데이터와 SUBSTRING 사용  
   
@@ -130,13 +130,13 @@ WHERE pub_id = '1756';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `pub_id logo    pr_info`  
-  
- `------ ---------------------- ----------`  
-  
- `1756   0x474946383961E3002500 This is sa`  
-  
- `(1 row(s) affected)`  
+ ```
+ pub_id logo    pr_info
+------ ---------------------- ----------
+1756   0x474946383961E3002500 This is sa
+
+(1 row(s) affected)
+```  
   
  다음 예제에서는 둘 다에서 부분 문자열의 효과 보여 줍니다. **텍스트** 및 **ntext** 데이터입니다. 이 예제는 먼저 `pubs` 데이터베이스에서 `npub_info`라는 새 테이블을 만듭니다. 다음 `pr_info` 열의 처음 80자로 `npub_info` 테이블의 `pub_info.pr_info` 열을 만들고 `ü`를 첫 번째 문자로 추가합니다. 마지막으로, 한 `INNER JOIN` 게시자 id 번호를 모두 검색 및 `SUBSTRING` 둘 다의 **텍스트** 및 **ntext** 게시자 정보 열의 합니다.  
   
@@ -196,15 +196,13 @@ ORDER BY LastName;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `LastName             Initial`  
-  
- `-------------------- -------`  
-  
- `Barbariol            A`  
-  
- `Barber               D`  
-  
- `Barreto de Mattos    P`  
+ ```
+LastName             Initial
+-------------------- -------
+Barbariol            A
+Barber               D
+Barreto de Mattos    P
+```  
   
  다음 예제에서는 두 번째 반환 하는 방법을 보여 줍니다 문자열 상수의 세 번째 및 네 번째 문자 `abcdef`합니다.  
   
@@ -216,11 +214,11 @@ SELECT TOP 1 SUBSTRING('abcdef', 2, 3) AS x FROM dbo.DimCustomer;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `x`  
-  
- `-----`  
-  
- `bcd`  
+ ```
+x
+-----
+bcd
+```  
   
 ## <a name="see-also"></a>관련 항목:  
  [문자열 함수 &#40; Transact SQL &#41;](../../t-sql/functions/string-functions-transact-sql.md)  

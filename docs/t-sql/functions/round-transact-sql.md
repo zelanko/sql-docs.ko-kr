@@ -118,17 +118,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `----------`  
-  
- `123.4500`  
-  
- `(1 row(s) affected)`  
-  
- `--------`  
-  
- `100.00`  
-  
- `(1 row(s) affected)`  
+ ```
+----------
+123.4500
+
+(1 row(s) affected)
+
+--------
+100.00
+
+(1 row(s) affected)
+```
   
 ### <a name="c-using-round-to-truncate"></a>3. ROUND를 사용하여 자르기  
  다음 예에서는 두 개의 `SELECT` 문을 사용하여 반올림과 자르기 간의 차이를 보여 줍니다. 첫 번째 문은 결과를 반올림하고 두 번째 문은 결과를 자릅니다.  
@@ -164,10 +164,11 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ---------`  
-  
- `123.995000    123.995444`  
+
+ ```
+--------  ---------
+123.995000    123.995444
+```
   
 ### <a name="e-using-round-and-rounding-approximations"></a>5. ROUND 사용 및 어림값 반올림  
  다음 예에서는 반올림과 어림값을 보여 줍니다.  
@@ -177,10 +178,11 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- `--------  ----------`  
-  
- `123.45    100.00`  
+
+ ```
+--------  ----------
+123.45    100.00
+```
   
 ## <a name="see-also"></a>관련 항목:  
  [천장 &#40; Transact SQL &#41;](../../t-sql/functions/ceiling-transact-sql.md)   

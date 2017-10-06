@@ -55,23 +55,23 @@ DBCC USEROPTIONS는 SET 옵션의 이름이 포함된 열과 옵션 값이 포�
 
 ```sql
 
-| `Set Option                   Value`  
- `---------------------------- ---------------------------`  
- `textsize                     64512`  
- `language                     us_english`  
- `dateformat                   mdy`  
- `datefirst                    7`  
- `lock_timeout                 -1`  
- `quoted_identifier            SET`  
- `arithabort                   SET`  
- `ansi_null_dflt_on            SET`  
- `ansi_warnings                SET`  
- `ansi_padding                 SET`  
- `ansi_nulls                   SET`  
- `concat_null_yields_null      SET`  
- `isolation level              read committed`  
- `(13 row(s) affected)`  
- `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
+Set Option                   Value`  
+---------------------------- ---------------------------`  
+textsize                     64512 
+language                     us_english 
+dateformat                   mdy  
+datefirst                    7 
+lock_timeout                 -1 
+quoted_identifier            SET 
+arithabort                   SET 
+ansi_null_dflt_on            SET 
+ansi_warnings                SET 
+ansi_padding                 SET 
+ansi_nulls                   SET 
+concat_null_yields_null      SET 
+isolation level              read committed  
+(13 row(s) affected) 
+DBCC execution completed. If DBCC printed error messages, contact your system administrator.
  ```  
   
 ## <a name="remarks"></a>주의  

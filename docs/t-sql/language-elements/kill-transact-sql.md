@@ -116,8 +116,10 @@ JOIN sys.dm_exec_connections AS conn
   
  세션 ID 또는 UOW의 롤백이 완료 될 때 하는 경우 KILL *세션 ID*|*UOW* WITH STATUSONLY 문을 실행할 경우 없는 세션 ID 또는 UOW가 롤백되고 KILL 또는*세션 ID*|*UOW* WITH STATUSONLY는 다음 오류를 반환 합니다.  
   
- `"Msg 6120, Level 16, State 1, Line 1"`  
- `"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."`  
+ ```
+"Msg 6120, Level 16, State 1, Line 1"  
+"Status report cannot be obtained. Rollback operation for Process ID <session ID> is not in progress."
+```  
   
  하지만 같은 kill 동일한 상태 보고를 가져올 수 있습니다 *세션 ID*|*UOW* 문을 WITH STATUSONLY 옵션; 사용 하지 않고 권장 하지는 않습니다이 작업을 수행 합니다. KILL 반복 *세션 ID* 문을 롤백을 완료 되 고 새 KILL 문이 실행 되기 전에 세션 ID가 새 작업을 할당 하는 경우 새 프로세스를 종료할 수 있습니다. WITH STATUSONLY를 지정하면 이런 경우가 발생하는 것을 방지할 수 있습니다.  
   

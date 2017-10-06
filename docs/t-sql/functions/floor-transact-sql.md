@@ -73,9 +73,11 @@ SELECT FLOOR(123.45), FLOOR(-123.45), FLOOR($123.45);
   
  결과 동일한 데이터 형식으로 계산된 된 값의 정수 부분인 *numeric_expression*합니다.  
   
- `-----   ---------    -----------`  
+ ```
+ -----   ---------    -----------  
   
- `123     -124         123`  
+ 123     -124         123
+ ```  
   
 ## <a name="see-also"></a>관련 항목:  
  [수치 연산 함수 &#40; Transact SQL &#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  

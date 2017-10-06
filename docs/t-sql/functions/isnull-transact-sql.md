@@ -76,11 +76,12 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `--------------------------`  
+ ```
+ -------------------------- 
+59.79  
   
- `59.79`  
-  
- `(1 row(s) affected)`  
+ (1 row(s) affected)
+ ```  
   
 ### <a name="b-using-isnull"></a>2. ISNULL 사용  
  다음 예에서는 `AdventureWorks2012`에서 모든 특별 행사에 대한 설명, 할인율, 최소 수량 및 최대 수량을 선택하는 방법을 보여 줍니다. 특정한 특별 행사에 대한 최대 수량이 NULL인 경우 결과 집합의 `MaxQty`는 `0.00`으로 표시됩니다.  
