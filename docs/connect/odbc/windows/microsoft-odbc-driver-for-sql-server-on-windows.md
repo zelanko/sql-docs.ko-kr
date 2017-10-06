@@ -48,7 +48,7 @@ Microsoft ODBC Driver for SQL Server는 새 응용 프로그램을 만드는 데
 -   [ODBC 드라이버를 사용 하 여 항상 암호화를 사용 하 여](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)
 -   [Azure Active Directory를 사용 하 여 ODBC 드라이버](../../../connect/odbc/using-azure-active-directory.md) 
 -   [투명 네트워크 IP 확인을 사용 하 여](../../../connect/odbc/using-transparent-network-ip-resolution.md)   
-  
+
 ## <a name="community"></a>커뮤니티  
 - [Microsoft ODBC Driver for SQL Server 팀 블로그](http://blogs.msdn.com/sqlnativeclient/default.aspx)  
 - [SQL Server 데이터 액세스 포럼](http://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
