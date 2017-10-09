@@ -1,8 +1,10 @@
 ---
 title: "기본 가용성 그룹(Always On 가용성 그룹) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/17/2016
-ms.prod: sql-server-2016
+ms.date: 09/27/2016
+ms.prod:
+- sql-server-2016
+- sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: ff8775c5af9f11abeec6ec04b894010a43f722ef
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: 83bccd06657b880cc4ebf7a21f8b327753dc4bee
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="basic-availability-groups-always-on-availability-groups"></a>기본 가용성 그룹(Always On 가용성 그룹)
@@ -32,23 +34,25 @@ ms.lasthandoff: 09/25/2017
 ## <a name="limitations"></a>제한 사항  
  기본 가용성 그룹은 SQL Server 2016 Enterprise Edition의 고급 가용성 그룹에 비해 기능의 하위 집합을 사용합니다. 기본 가용성 그룹에는 다음과 같은 제한 사항이 포함됩니다.  
   
--   두 개의 복제본(주 및 보조)으로 제한됩니다.  
+- 두 개의 복제본(주 및 보조)으로 제한됩니다.  
   
--   보조 복제본에 대한 읽기 권한이 없습니다.  
+- 보조 복제본에 대한 읽기 권한이 없습니다.  
   
--   보조 복제본에 대한 백업이 없습니다.  
-  
--   SQL Server 2016 CTP3(Community Technology Preview 3) 이전 버전의 SQL Server를 실행하는 서버에서 호스팅되는 복제본은 지원되지 않습니다.  
-  
--   기존의 기본 가용성 그룹에 대한 복제본 추가 또는 제거가 지원되지 않습니다.  
-  
--   하나의 가용성 데이터베이스가 지원됩니다.  
-  
--   기본 가용성 그룹은 고급 가용성 그룹으로 업그레이드할 수 없습니다. 그룹을 삭제하고 SQL Server 2016 Enterprise Edition에서만 실행되는 서버를 포함하는 그룹에 다시 추가해야 합니다.  
-  
--   기본 가용성 그룹은 Standard Edition 서버에 대해서만 지원됩니다. 
+- 보조 복제본에 대한 백업이 없습니다.  
 
--   기본 가용성 그룹은 분산 가용성 그룹의 일부가 될 수 없습니다. 
+- 보조 복제본에 대한 무결성 검사가 없습니다. 
+
+- SQL Server 2016 CTP3(Community Technology Preview 3) 이전 버전의 SQL Server를 실행하는 서버에서 호스팅되는 복제본은 지원되지 않습니다.  
+  
+- 기존의 기본 가용성 그룹에 대한 복제본 추가 또는 제거가 지원되지 않습니다.  
+  
+- 하나의 가용성 데이터베이스가 지원됩니다.  
+  
+- 기본 가용성 그룹은 고급 가용성 그룹으로 업그레이드할 수 없습니다. 그룹을 삭제하고 SQL Server 2016 Enterprise Edition에서만 실행되는 서버를 포함하는 그룹에 다시 추가해야 합니다.  
+  
+- 기본 가용성 그룹은 Standard Edition 서버에 대해서만 지원됩니다. 
+
+- 기본 가용성 그룹은 분산 가용성 그룹의 일부가 될 수 없습니다. 
   
 ## <a name="configuration"></a>Configuration  
  Always On 기본 가용성 그룹은 두 개의 SQL Server 2016 Standard Edition 서버에서 만들 수 있습니다. 기본 가용성 그룹을 만드는 경우에는, 만드는 동안 두 개의 복제본을 모두 지정해야 합니다.  
