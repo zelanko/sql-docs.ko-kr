@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
   
  **시나리오 1: 서비스가 시작되지 않은 경우**  
   
- SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 인스턴스가 시작되지 않았습니다. 만료된 암호로 인해 서비스 실행이 중지됩니다. 암호 변경에 대한 자세한 내용은 [Configure Power Pivot Service Accounts](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) 및 [Start or Stop a Power Pivot for SharePoint Server](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)를 참조하십시오.  
+ SQL Server Analysis Services([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) 인스턴스가 시작되지 않았습니다. 만료된 암호로 인해 서비스 실행이 중지됩니다. 암호 변경에 대한 자세한 내용은 [Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) 및 [SharePoint용 PowerPivot 서버 시작 또는 중지](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md)를 참조하십시오.  
   
  **시나리오 2a: 서버에서 이전 버전의 통합 문서를 여는 경우**  
   

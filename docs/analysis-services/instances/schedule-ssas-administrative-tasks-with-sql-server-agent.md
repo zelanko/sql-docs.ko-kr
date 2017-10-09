@@ -35,7 +35,7 @@ ms.lasthandoff: 09/01/2017
   
  기본적으로 서비스 계정으로 작업이 실행됩니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQL Server 에이전트용 기본 계정은 NT Service\SQLAgent$\<인스턴스 이름 >. 백업 또는 처리 태스크를 수행하려면 이 계정이 Analysis Services 인스턴스의 시스템 관리자여야 합니다. 자세한 내용은 [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)를 참조하세요.  
   
- 또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial](../../analysis-services/install-sample-data-and-projects.md)을(를) 참조하세요.  
+ 또한 작업에 사용할 테스트 데이터베이스가 있어야 합니다. AdventureWorks 다차원 예제 데이터베이스나 Analysis Services 다차원 자습서에 있는 프로젝트를 배포하여 이 연습에서 사용할 수 있습니다. 자세한 내용은 [Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치](../../analysis-services/install-sample-data-and-projects.md)을(를) 참조하세요.  
   
 ## <a name="example-1-processing-a-dimension-in-a-scheduled-task"></a>예제 1: 예약된 태스크에서 차원 처리  
  이 예에서는 차원을 처리하는 작업을 만들고 예약하는 방법을 보여 줍니다.  

@@ -89,7 +89,7 @@ ms.lasthandoff: 09/01/2017
   
 3.  Excel이 열리면 데이터 탭을 사용하여 Analysis Services에 연결합니다. 다른 Windows 사용자로 Excel을 실행하고 있기 때문에 **Windows 인증 사용** 옵션이 역할을 테스트할 때 사용하기에 적합한 자격 증명 유형입니다. 이 단계에서 도움이 필요한 경우 [클라이언트 응용 프로그램에서 연결&#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
   
-     연결에 오류가 발생한 경우 Analysis Services의 포트 구성을 점검하고 서버에서 원격 연결을 수락했는지 확인합니다. 포트 구성에 대해서는 [Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 을 참조하세요.  
+     연결에 오류가 발생한 경우 Analysis Services의 포트 구성을 점검하고 서버에서 원격 연결을 수락했는지 확인합니다. 포트 구성에 대해서는 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 을 참조하세요.  
   
 #### <a name="step-5-script-role-definition-and-assignments"></a>5단계: 역할 정의 스크립팅 및 할당  
   
