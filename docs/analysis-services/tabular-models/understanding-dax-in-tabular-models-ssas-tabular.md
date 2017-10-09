@@ -28,7 +28,7 @@ ms.lasthandoff: 09/01/2017
   
  Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에 DAX가 사용 하는 동안 SQL Server Data Tools (SSDT) 작성 하는 Analysis Services 테이블 형식 모델 프로젝트에이 항목 더 적용 합니다.  
   
-##  <a name="bkmk_DAX"></a> DAX formulas in calculated columns, measures, and row filters  
+##  <a name="bkmk_DAX"></a> 계산 열, 측정값 및 행 필터의 DAX 수식  
  SSDT에서 작성 된 테이블 형식 모델에 대 한 DAX 수식은 계산된 열, 측정값 및 행 필터에 사용 됩니다.  
   
 ### <a name="calculated-columns"></a>계산 열  
@@ -97,10 +97,10 @@ ms.lasthandoff: 09/01/2017
   
  DAX 수식에서 사용되는 연산자에 대한 자세한 내용은 [DAX 연산자 참조](http://msdn.microsoft.com/en-us/1befbddc-6178-472c-8bc4-05dafd62207e)를 참조하세요.  
   
-##  <a name="bkmk_DAX_Formulas"></a> DAX formulas  
+##  <a name="bkmk_DAX_Formulas"></a> DAX 수식  
  DAX 수식은 계산 열 및 측정값에서 계산을 만들고 행 수준 필터를 사용하여 데이터를 보호하는데 필수적입니다. 에 계산된 열 및 측정값에 대 한 수식을 만들려면 모델 디자이너 창 또는 DAX 편집기의 맨 위에 수식 입력줄을 사용 합니다. 행 필터에 대한 수식을 만들려면 역할 관리자 대화 상자를 사용합니다. 이 섹션의 내용은 DAX 수식의 기본 사항에 대한 이해를 돕기 위한 것입니다.  
   
-###  <a name="basics"></a> Formula basics  
+###  <a name="basics"></a> 수식에 대한 기본 정보  
  DAX를 사용하면 테이블 형식 모델 작성자가 계산 열의 일부로, 그리고 직접 표시되지는 않지만 테이블과 연결된 측정값으로 두 모델 테이블에서 사용자 지정 계산을 정의할 수 있습니다. 또한 DAX를 사용하면 모델 작성자가 특정 테이블 또는 관련된 테이블에서 연결된 역할의 멤버 사용자가 쿼리할 수 있는 행을 정의하는 부울 값을 반환하는 계산을 만들어 데이터를 보호할 수 있습니다.  
   
  DAX 수식은 매우 간단할 수도, 매우 복잡할 수도 있습니다. 다음 표에서는 계산 열에서 사용할 수 있는 간단한 수식의 몇 가지 예를 보여 줍니다.  
@@ -175,7 +175,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 > [!NOTE]  
 >  열 사이의 종속성에 필요한 여러 계산 때문에 성능이 저하되지 않도록 측정값 내에서는 함수 중첩에 몇 가지 제한이 있습니다.  
   
-##  <a name="bkmk_DAX_functions"></a> DAX functions  
+##  <a name="bkmk_DAX_functions"></a> DAX 함수  
  이 섹션에서는 DAX에서 지원되는 함수 *유형* 에 대한 개요를 제공합니다. 자세한 내용은 [DAX 함수 참조](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)를 참조하세요.  
   
  DAX는 날짜 및 시간을 사용하여 계산을 수행하고, 조건 값을 만들고, 문자열을 사용하고, 관계를 기반으로 조회를 수행하는 다양한 함수와 테이블을 반복하여 재귀적 계산을 수행하는 기능을 제공합니다. Excel 수식에 익숙한 경우 많은 함수가 비슷해 보이겠지만 DAX 수식에는 다음과 같은 중요한 차이가 있습니다.  
@@ -212,7 +212,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
 ### <a name="time-intelligence-functions"></a>시간 인텔리전스 함수  
  DAX에서 제공 되는 시간 인텔리전스 함수를 통해 달력과 날짜에 대 한 기본 제공 지식을 사용 하는 계산을 만들 수 있습니다. 시간 및 날짜 범위를 집계 또는 계산과 함께 사용하면 비교 가능한 기간에서 판매량, 재고 등에 대한 의미 있는 비교 자료를 작성할 수 있습니다. 자세한 내용은 참조 [시간 인텔리전스 함수 (DAX)](http://msdn.microsoft.com/en-us/91df278d-4b28-40c1-a572-cdb91f081517)합니다.  
   
-###  <a name="bkmk_TableFunc"></a> Table-valued functions  
+###  <a name="bkmk_TableFunc"></a> 테이블 반환 함수  
  테이블을 출력하거나, 테이블을 입력으로 받아들이거나, 둘 다 수행하는 DAX 함수가 있습니다. 테이블에 열이 하나만 있을 수 있기 때문에 테이블 반환 함수는 단일 열도 입력으로 받아들입니다. DAX 수식을 최대한 활용하려면 이러한 테이블 반환 함수를 사용하는 방법을 이해하는 것이 중요합니다. DAX에는 다음과 같은 유형의 테이블 반환 함수가 있습니다.  
   
   **필터 함수** -열, 테이블 또는 현재 행과 관련 된 값을 반환 합니다.  
@@ -221,7 +221,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
     
   **시간 인텔리전스 함수** -날짜 테이블을 반환 하거나 날짜 테이블을 사용 하 여 집계를 계산 합니다.  
   
-##  <a name="bkmk_context"></a> Context in DAX formulas  
+##  <a name="bkmk_context"></a> DAX 수식의 컨텍스트  
  *컨텍스트* 는 DAX를 사용하여 수식을 만들 때 이해해야 하는 중요한 개념입니다. 컨텍스트를 사용하면 수식의 결과가 현재 행 또는 셀 선택과 모든 관련 데이터에 맞게 변경될 수 있는 동적 분석을 수행할 수 있습니다. 우수한 성능의 동적 분석을 작성하고 수식 문제를 해결하려면 컨텍스트를 이해하고 효과적으로 사용해야 합니다.  
   
  테이블 형식 모델의 수식은 다음과 같은 디자인 요소에 따라 각기 다른 컨텍스트에서 계산될 수 있습니다.  
@@ -234,7 +234,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  컨텍스트의 유형으로는 *행 컨텍스트*, *쿼리 컨텍스트*및 *필터 컨텍스트*가 있습니다.  
   
-###  <a name="bkmk_row_context"></a> Row context  
+###  <a name="bkmk_row_context"></a> 행 컨텍스트  
  *행 컨텍스트* 는 "현재 행"으로 생각할 수 있습니다. 계산 열에서 수식을 만드는 경우 해당 수식의 행 컨텍스트에 현재 행에 있는 모든 열의 값이 포함됩니다. 테이블이 다른 테이블과 관련되어 있으면 다른 테이블에서 현재 행과 관련된 모든 값도 내용에 포함됩니다.  
   
  예를 들어 Freight와 Tax라는 두 열의 값을 더하는 `=[Freight] + [Tax]`계산 열을 만든다고 가정합니다. 이 수식은 자동으로 지정된 열에 있는 현재 행의 값만 가져옵니다.  
@@ -264,7 +264,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  요약하자면 EARLIER 함수는 현재 연산보다 먼저 발생한 연산의 행 컨텍스트를 저장합니다. 이 함수는 항상 두 개의 컨텍스트 집합을 메모리에 저장합니다. 하나의 컨텍스트 집합은 수식의 내부 루프에 대한 현재 행을 나타내고, 다른 컨텍스트 집합은 수식의 외부 루프에 대한 현재 행을 나타냅니다. DAX는 두 루프 간에 값을 자동으로 공급하므로 복잡한 집계를 만들 수 있습니다.  
   
-####  <a name="bkmk_query_context"></a> Query context  
+####  <a name="bkmk_query_context"></a> 쿼리 컨텍스트  
  *쿼리 컨텍스트* 는 수식에 대해 암시적으로 검색되는 데이터의 하위 집합을 참조합니다. 사용자가 측정값 또는 기타 값 필드를 피벗 테이블이나 테이블 형식 모델 기반의 보고서에 넣으면 엔진에서 행 머리글과 열 머리글, 슬라이서 및 보고서 필터를 검사하여 컨텍스트를 확인합니다. 그런 다음 필요한 쿼리가 데이터 원본에 대해 실행되어 올바른 데이터 하위 집합을 가져오고 수식으로 정의된 계산을 수행한 후 피벗 테이블 또는 보고서의 각 셀을 채웁니다. 검색되는 데이터 집합은 각 셀의 쿼리 컨텍스트입니다.  
   
 > [!WARNING]  
@@ -278,7 +278,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  열 및 행 머리글을 추가하거나 제거하고 슬라이서를 추가하거나 제거하여 피벗 테이블의 컨텍스트를 변경할 수 있습니다. 사용자가 피벗 테이블에 열 머리글이나 행 머리글을 추가할 때마다 측정값이 평가되는 쿼리 컨텍스트가 변경됩니다. 추출 및 필터링 작업도 컨텍스트에 영향을 줍니다. 따라서 측정값에서 사용되는 동일한 수식은 셀에 따라 다른 *쿼리 컨텍스트* 에서 계산됩니다.  
   
-####  <a name="bkmk_filter_context"></a> Filter context  
+####  <a name="bkmk_filter_context"></a> 필터 컨텍스트  
  *필터 컨텍스트* 는 관련 테이블에서 검색된 값이나 각 열에서 허용되는 값의 집합입니다. 디자이너 또는 표시 계층(보고서 및 피벗 테이블)에서 열에 필터를 적용할 수 있습니다. 수식 내의 필터 식으로 필터를 명시적으로 정의할 수도 있습니다.  
   
  필터 컨텍스트는 수식에 인수를 사용하여 열이나 테이블에 허용되는 값 집합에 대한 필터 제약 조건을 지정하면 추가됩니다. 필터 컨텍스트는 행 컨텍스트 또는 쿼리 컨텍스트와 같은 다른 컨텍스트보다 먼저 적용됩니다.  
@@ -291,7 +291,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  수식 내에서 필터를 선택적으로 지우고 적용하는 방법의 예는 [ALLEXCEPT 함수(DAX)](http://msdn.microsoft.com/en-us/a6f575a1-9803-4bb2-85b3-c95c060f1fb1)를 참조하세요.  
   
-####  <a name="bkmk_determine_context"></a> Determining context in formulas  
+####  <a name="bkmk_determine_context"></a> 수식의 컨텍스트 확인  
  DAX 수식을 만들 때 수식은 먼저 유효한 구문인지 테스트된 다음 수식에 포함된 열과 테이블의 이름을 현재 컨텍스트에서 찾을 수 있는지 테스트됩니다. 수식으로 지정된 열이나 테이블을 찾을 수 없는 경우 오류가 반환됩니다.  
   
  유효성 검사(및 재계산 작업) 중의 컨텍스트는 이전 섹션에 설명된 대로 모델에서 사용 가능한 테이블, 테이블 간의 관계 및 적용된 필터를 사용하여 결정됩니다.  
@@ -312,7 +312,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 5.  [EARLIER 함수(DAX)](http://msdn.microsoft.com/en-us/6d126c4d-2315-49ec-899d-cb396eefbae6) 및 [EARLIEST 함수(DAX)](http://msdn.microsoft.com/en-us/9befa04d-78db-492e-a463-80b8b77206d6) 함수를 사용하면 내부 루프의 값을 참조하면서 계산을 수행하여 테이블을 반복할 수 있습니다. 재귀의 개념과 내부 및 외부 루프에 대해 잘 알고 있다면 EARLIER 및 EARLIEST 함수의 기능이 얼마나 유용한지 확인할 수 있을 것입니다. 이러한 개념을 처음 접하는 경우 예에서 설명된 단계를 수행하여 계산에서 내부 컨텍스트와 외부 컨텍스트가 어떻게 사용되는지를 확인해야 합니다.  
   
-##  <a name="bkmk_RelModel"></a> Formulas and the tabular model  
+##  <a name="bkmk_RelModel"></a> 수식 및 테이블 형식 모델  
  SSDT에서 모델 디자이너는 데이터의 여러 테이블을 작업 하 고 테이블 형식 모델의 테이블을 연결할 수 있는 영역입니다. 이 모델 내에서 테이블은 공통 값(키)이 있는 열에서 관계에 의해 조인됩니다. 테이블 형식 모델을 통해 다른 테이블의 열에 값을 연결하고 더 유용한 계산을 만들 수 있습니다. 관계형 데이터베이스에서와 마찬가지로 많은 수준의 관련 테이블을 연결하고 이러한 테이블의 열을 결과에 사용할 수 있습니다.  
   
  예를 들어 판매 테이블, 제품 테이블 및 제품 범주 테이블을 연결하면 사용자가 피벗 테이블 및 보고서에서 열의 다양한 조합을 사용할 수 있습니다. 관련 필드를 사용하여 연결된 테이블을 필터링하거나 하위 집합에 대한 계산을 만들 수 있습니다. (관계형 데이터베이스와 테이블 및 조인 작업에 익숙하지 않은 경우 참조 [관계](../../analysis-services/tabular-models/relationships-ssas-tabular.md).)  
@@ -325,7 +325,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 -   관계를 사용하여 모델에서 테이블을 연결하면 수식이 계산되는 범위, 즉 *컨텍스트*가 확장됩니다. 새 테이블 또는 새 관계의 추가나 활성 관계의 변경으로 컨텍스트가 변경되면 예기치 않은 방식으로 결과가 변경될 수 있습니다. 자세한 내용은 이 항목의 앞부분에 나오는 [DAX 수식의 컨텍스트](#bkmk_context) 을 참조하십시오.  
   
-##  <a name="bkmk_tables"></a> Working with tables and columns  
+##  <a name="bkmk_tables"></a> 테이블 및 열 작업  
  테이블 형식 모델의 테이블은 Excel 테이블과 비슷해 보이지만 데이터와 수식 작업을 수행하는 방식이 다릅니다.  
   
 -   수식은 개별 셀, 범위 참조 또는 배열에서는 작동하지 않으며 테이블과 열에서만 작동합니다.  
@@ -350,7 +350,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  대부분의 DAX 함수에서 참조한 열을 찾고 의미 있는 결과를 반환하기 위해서는 두 테이블 간이나 여러 테이블 간에 관계가 있어야 합니다. 다른 함수에서는 관계를 확인하려고 시도하지만 최상의 결과를 얻기 위해서는 가능하면 항상 관계를 만들어야 합니다. 자세한 내용은 [수식 및 테이블 형식 모델](#bkmk_RelModel) 을 참조하십시오.  
   
-##  <a name="bkmk_RefreshRecalc"></a> Updating the results of formulas (Process)  
+##  <a name="bkmk_RefreshRecalc"></a> 수식 결과 업데이트(처리)  
  *데이터 프로세스* 및 *다시 계산* 은 두 개의 별개 작업이지만, 연관된 작업입니다. 복잡한 수식, 대용량 데이터 또는 외부 데이터 원본에서 가져온 데이터를 포함하는 데이터 모델을 디자인할 때 이러한 개념을 완벽하게 이해해야 합니다.  
   
  *데이터 처리* 는 모델의 데이터를 외부 데이터 원본의 새 데이터로 업데이트하는 프로세스입니다.  
@@ -365,7 +365,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  자세한 내용은 [데이터 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-data-ssas-tabular.md)를 참조하세요.  
   
-##  <a name="bkmk_troubleshoot"></a> Troubleshooting errors in formulas  
+##  <a name="bkmk_troubleshoot"></a> 수식의 오류 문제 해결  
  수식을 정의할 때 오류가 발생하면 수식에 *구문 오류*, *의미 체계 오류*또는 *계산 오류*가 있는 경우일 수 있습니다.  
   
  구문 오류는 해결하기가 쉽습니다. 대개는 괄호나 쉼표가 누락된 경우가 많습니다. 개별 함수의 구문과 관련된 도움말은 [DAX 함수 참조](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)를 참조하세요.  
@@ -384,7 +384,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
  처음 네 경우에서 DAX는 잘못된 수식이 포함된 열 전체에 플래그를 지정합니다. 마지막 경우 DAX는 열이 처리되지 않은 상태임을 나타내기 위해 열을 회색으로 표시합니다.  
   
-##  <a name="bkmk_addional_resources"></a> Additional resources  
+##  <a name="bkmk_addional_resources"></a> 추가 리소스  
  [테이블 형식 모델링&#40;Adventure Works 자습서&#41;](../../analysis-services/tabular-modeling-adventure-works-tutorial.md)에서 계산 열, 측정값 및 행 필터에 많은 계산을 포함하는 테이블 형식 모델을 만드는 방법에 대한 단계별 지침을 제공합니다. 대부분의 수식에 대해 수식의 용도에 대한 설명이 제공됩니다.  
   
  [Analysis Services 팀 블로그](http://go.microsoft.com/fwlink/?LinkID=220949&clcid=0x409) 최신 정보, 팁, 뉴스 및 알림을 제공 합니다. 
