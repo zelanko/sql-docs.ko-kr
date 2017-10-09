@@ -57,13 +57,12 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>예  
  다음 예에서는 `LineString` 인스턴스의 다각형 근사값인 `CircularString` 인스턴스를 반환합니다.  
   
- `DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';`  
-  
- `DECLARE @g2 geography;`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;`  
+```
+ DECLARE @g1 geography = 'CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653)';  
+ DECLARE @g2 geography;  
+ SET @g2 = @g1.STCurveToLine();  
+ SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
+ ```  
   
 ## <a name="see-also"></a>관련 항목:  
  [Stlength&#40; geography 데이터 형식 &#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   

@@ -113,13 +113,12 @@ ORDER BY Price ASC;
   
  결과 집합은 다음과 같습니다.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `convertible   blue       15000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ convertible   blue       15000.00
+ ```  
   
  ORDER BY 절이 연산자(이 경우 UNION ALL) 결과를 정렬하기 전에 TOP 절이 논리적으로 실행되므로 예기치 않은 결과가 반환됩니다. 즉, 위 쿼리는 임의의 빨간색 차와 임의의 파란색 차를 반환한 다음 이 합집합의 결과를 가격 순으로 정렬합니다. 다음 예에서는 원하는 결과를 얻을 수 있도록 이 쿼리를 올바르게 작성하는 방법을 보여 줍니다.  
   
@@ -141,13 +140,12 @@ FROM (SELECT TOP(1) Model, Color, Price
   
  결과 집합은 다음과 같습니다.  
   
- `Model         Color      Price`  
-  
- `------------- ---------- -------`  
-  
- `sedan         red        10000.00`  
-  
- `van           blue        8000.00`  
+ ```
+ Model         Color      Price  
+ ------------- ---------- -------  
+ sedan         red        10000.00  
+ van           blue        8000.00
+ ```  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  TOP을 INSERT, UPDATE, MERGE 또는 DELETE와 함께 사용할 경우 참조된 행은 어떠한 순서로도 정렬되지 않으며 ORDER BY 절을 이러한 문에서 직접 지정할 수 없습니다. TOP을 사용하여 시간순으로 행을 삽입, 삭제 또는 수정하려면 하위 SELECT 문에서 지정된 ORDER BY 절과 함께 TOP을 사용해야 합니다. 이 항목의 뒷부분에 나오는 예 섹션을 참조하세요.  

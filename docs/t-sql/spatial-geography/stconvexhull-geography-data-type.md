@@ -54,31 +54,34 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-stconvexhull-on-an-uninitialized-geography-instance"></a>1. 초기화되지 않은 인스턴스에 STConvexHull() 사용  
  다음 예제에서는 `STConvexHull()` 초기화 되지 않은 **geography** 인스턴스.  
   
- `DECLARE @g geography;`  
-  
- `SELECT @g.STConvexHull();`  
+```
+ DECLARE @g geography;  
+ SELECT @g.STConvexHull();
+ ```  
   
 ### <a name="b-using-stconvexhull-on-an-empty-geography-instance"></a>2. 빈 geography 인스턴스에 STConvexHull 사용  
  다음 예에서는 빈 `STConvexHull()` 인스턴스에 `Polygon`을 사용합니다.  
   
- `DECLARE @g geography = 'POLYGON EMPTY';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON EMPTY';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
 ### <a name="c-finding-the-convex-hull-of-a-non-convex-polygon-instance"></a>3. 비볼록 Polygon 인스턴스의 볼록 집합 찾기  
  다음 예에서는 `STConvexHull()`을 사용하여 비볼록 `Polygon` 인스턴스의 볼록 집합을 찾습니다.  
   
 ```  
-DECLARE @g geography;  
-SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
-SELECT @g.STConvexHull().ToString();  
+ DECLARE @g geography;  
+ SET @g = geography::Parse('POLYGON((-120.533 46.566, -118.283 46.1, -122.3 47.45, -120.533 46.566))');  
+ SELECT @g.STConvexHull().ToString();  
 ```  
   
 ### <a name="d-finding-the-convex-hull-on-a-geography-instance-with-an-envelope-angle-larger-than-90-degrees"></a>4. 봉투 각도가 90보다 큰 geography 인스턴스에서 볼록 집합 찾기  
  다음 예제에서는 `STConvexHull()` 에 **geography** 봉투 각도가 90 보다 큰 인스턴스.  
   
- `DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';`  
-  
- `SELECT @g.STConvexHull().ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((20.533 46.566, -18.283 46.1, -22.3 47.45, 20.533 46.566))';  
+ SELECT @g.STConvexHull().ToString();
+ ```  
   
   

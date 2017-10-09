@@ -1042,21 +1042,17 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `(1 row(s) affected)`  
-  
- `Test1Col`  
-  
- `-----------`  
-  
- `1`  
-  
- `(1 row(s) affected)`  
-  
- `Test2Col`  
-  
- `-----------`  
-  
- `2`  
+ ```
+ (1 row(s) affected) 
+ Test1Col 
+ ----------- 
+ 1 
+
+ (1 row(s) affected) 
+ Test2Col 
+ ----------- 
+ 2 
+ ```
   
  로컬 또는 전역 임시 테이블을 만들 때 CREATE TABLE 구문은 FOREIGN KEY 제약 조건을 제외한 다른 모든 제약 조건 정의를 지원합니다. 임시 테이블에서 FOREIGN KEY 제약 조건을 지정하면 문에서 해당 제약 조건을 건너뛰었다는 경고 메시지를 반환하며 FOREIGN KEY 제약 조건 없이 테이블을 만듭니다. 임시 테이블은 FOREIGN KEY 제약 조건에서 참조할 수 없습니다.  
   

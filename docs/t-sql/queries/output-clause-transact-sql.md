@@ -548,11 +548,11 @@ GO
   
  다음은 2004년 4월 12일('`2004-04-12'`)에 생성된 결과 집합입니다. `ScrapReasonIDActual` 및 `ModifiedDate` 열은 `INSERT` 문에서 제공된 값 대신 트리거 작업에 의해 생성된 값을 반영합니다.  
   
- `ScrapReasonID  Name             ModifiedDate`  
-  
- `-------------  ---------------- -----------------------`  
-  
- `17             My scrap reason  2004-04-12 16:23:33.050`  
+ ```
+ ScrapReasonID  Name             ModifiedDate  
+ -------------  ---------------- -----------------------  
+ 17             My scrap reason  2004-04-12 16:23:33.050
+ ```  
   
 ### <a name="i-using-output-into-with-identity-and-computed-columns"></a>9. ID 및 계산 열과 함께 OUTPUT INTO 사용  
  다음 예에서는 `EmployeeSales` 테이블을 만들고 `INSERT` 문에 `SELECT` 문을 사용하여 이 테이블에 여러 개의 행을 삽입한 후 원본 테이블에서 데이터를 검색합니다. `EmployeeSales` 테이블에는 ID 열(`EmployeeID`)과 계산 열(`ProjectedSales`)이 포함되어 있습니다.  

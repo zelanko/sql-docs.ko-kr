@@ -57,30 +57,20 @@ UnionAggregate ( geometry_operand )
   
 ## <a name="examples"></a>예  
  집합의 합집합을 반환 하는 다음 예제에서는 **geometry** 테이블 변수에 개체입니다.  
-  
- `-- Setup table variable for UnionAggregate example`  
-  
- `DECLARE @Geom TABLE`  
-  
- `(`  
-  
- `shape geometry,`  
-  
- `shapeType nvarchar(50)`  
-  
- `);`  
-  
- `INSERT INTO @Geom(shape,shapeType)`  
-  
- `VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'),`  
-  
- `('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle');`  
-  
- `-- Perform UnionAggregate on @Geom.shape column`  
-  
- `SELECT geometry::UnionAggregate(shape).ToString()`  
-  
- `FROM @Geom;`  
+ ```
+ -- Setup table variable for UnionAggregate example 
+ DECLARE @Geom TABLE 
+ ( 
+ shape geometry, 
+ shapeType nvarchar(50) 
+ ); 
+ INSERT INTO @Geom(shape,shapeType) 
+ VALUES('CURVEPOLYGON(CIRCULARSTRING(2 3, 4 1, 6 3, 4 5, 2 3))', 'Circle'), 
+ ('POLYGON((1 1, 4 1, 4 5, 1 5, 1 1))', 'Rectangle'); 
+ -- Perform UnionAggregate on @Geom.shape column 
+ SELECT geometry::UnionAggregate(shape).ToString() 
+ FROM @Geom;
+``` 
   
 ## <a name="see-also"></a>관련 항목:  
  [확장 정적 기 하 도형 메서드](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  

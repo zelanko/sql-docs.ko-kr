@@ -60,50 +60,44 @@ ms.lasthandoff: 09/01/2017
 ### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>1. 초기화되지 않은 Geometry 변수 및 빈 인스턴스 사용  
  다음 예에서 첫 번째 **선택** 초기화 되지 않은 문에서 사용 하 여 **geometry** 호출 하는 인스턴스는 `STCurveToLine` 메서드와 두 번째 **선택** 사용 하 여 빈 **geometry** 인스턴스. 따라서 메서드가 반환 **NULL** 첫 번째 문으로 및 **GeometryCollection** 두 번째 문에 컬렉션입니다.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
-  
- `SET @g = geometry::Parse('LINESTRING EMPTY');`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType(); 
+ SET @g = geometry::Parse('LINESTRING EMPTY'); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="b-using-a-linestring-instance"></a>2. LineString 인스턴스 사용  
  **선택** 문은 다음 예제에서 사용 하 여는 **LineString** 인스턴스 STCurveToLine 메서드를 호출 합니다. 따라서 메서드가 반환 된 **LineString** 인스턴스.  
   
- `DECLARE @g geometry;`  
-  
- `SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)');`  
-  
- `SET @g = @g.STCurveToLine();`  
-  
- `SELECT @g.STGeometryType();`  
+```
+ DECLARE @g geometry; 
+ SET @g = geometry::Parse('LINESTRING(1 3, 5 5, 4 3, 1 3)'); 
+ SET @g = @g.STCurveToLine(); 
+ SELECT @g.STGeometryType();
+ ```  
   
 ### <a name="c-using-a-circularstring-instance"></a>3. CircularString 인스턴스 사용  
  첫 번째 **선택** 문은 다음 예제에서 사용 하 여는 **CircularString** 인스턴스 STCurveToLine 메서드를 호출 합니다. 따라서 메서드가 반환 된 **LineString** 인스턴스. 이 **선택** 문 또한 동일 약 요소인 두 인스턴스의 길이 비교 합니다.  마지막으로, 두 번째 **선택** 문이 각 인스턴스의 점 개수를 반환 합니다.  에 대 한 점을 5 개만 반환 된 **CircularString** 인스턴스 중 하나로 대해서는 65 개는 **LineString**인스턴스.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def];`  
-  
- `SELECT @g1.STNumPoints(), @g2.STNumPoints();`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0)'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type], @g1.STLength() AS [G1 Perimeter], @g2.STLength() AS [G2 Perimeter], @g2.ToString() AS [G2 Def]; 
+ SELECT @g1.STNumPoints(), @g2.STNumPoints();
+ ```  
   
 ### <a name="d-using-a-curvepolygon-instance"></a>4. CurvePolygon 인스턴스 사용  
  **선택** 문은 다음 예제에서 사용 하 여는 **CurvePolygon** 인스턴스 STCurveToLine 메서드를 호출 합니다. 따라서 메서드가 반환 된 **다각형** 인스턴스.  
   
- `DECLARE @g1 geometry, @g2 geometry;`  
-  
- `SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))');`  
-  
- `SET @g2 = @g1.STCurveToLine();`  
-  
- `SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];`  
+```
+ DECLARE @g1 geometry, @g2 geometry; 
+ SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(10 0, 0 10, -10 0, 0 -10, 10 0))'); 
+ SET @g2 = @g1.STCurveToLine(); 
+ SELECT @g1.STGeometryType() AS [G1 Type], @g2.STGeometryType() AS [G2 Type];
+ ```  
   
 ## <a name="see-also"></a>관련 항목:  
  [공간 데이터 형식 개요](../../relational-databases/spatial/spatial-data-types-overview.md)   

@@ -271,19 +271,15 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  다음 서식 파일은 `SQLFLT8` 데이터 형식을 사용하여 두 번째 데이터 필드를 두 번째 열로 매핑합니다.  
   
- `<?xml version="1.0"?>`  
-  
- `<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
-  
- `<RECORD>`  
-  
- `<FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/>`  
-  
- `<FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW>`  
-  
- `<COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/>`  
-  
- `<COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT>`  
+ ```
+ <?xml version="1.0"?> 
+ <BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
+ <RECORD> 
+ <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t" MAX_LENGTH="30"/> 
+ <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="\r\n" MAX_LENGTH="30"/>  </RECORD>  <ROW> 
+ <COLUMN SOURCE="1" NAME="c1" xsi:type="SQLFLT8"/> 
+ <COLUMN SOURCE="2" NAME="c2" xsi:type="SQLFLT8"/>  </ROW> </BCPFORMAT> 
+ ```
   
  이 서식 파일(`C:\t_floatformat-c-xml.xml`)을 사용하여 테스트 데이터를 테스트 테이블로 가져오려면 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행합니다.  
   

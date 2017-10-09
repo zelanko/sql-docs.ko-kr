@@ -73,13 +73,12 @@ SELECT @g.STDifference(@h).ToString();
 ### <a name="b-using-a-fullglobe-with-stdifference"></a>2. STDifference()에 FullGlobe 사용  
  다음 예에서는 `FullGlobe` 인스턴스를 사용합니다. 첫 번째 결과는 빈 `GeometryCollection`이고 두 번째 결과는 `Polygon` 인스턴스입니다. `STDifference()` 인스턴스가 매개 변수인 경우 `GeometryCollection`는 빈 `FullGlobe`을 반환합니다. 호출하는 `geography` 인스턴스의 모든 점이 `FullGlobe` 인스턴스에 포함됩니다.  
   
- `DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';`  
-  
- `DECLARE @h geography = 'FULLGLOBE';`  
-  
- `SELECT @g.STDifference(@h).ToString(),`  
-  
- `@h.STDifference(@g).ToString();`  
+```
+ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
+ DECLARE @h geography = 'FULLGLOBE';  
+ SELECT @g.STDifference(@h).ToString(),  
+ @h.STDifference(@g).ToString();
+ ```  
   
 ## <a name="see-also"></a>관련 항목:  
  [Geography 인스턴스의 OGC 메서드](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
