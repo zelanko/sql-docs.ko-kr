@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 0134010294aec01d47271a7e00e6a13e4a3ad208
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: cb93e468300aea6a666ad04e9ce6ad20e1b85fc2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="partitioning-with-temporal-tables"></a>임시 테이블을 사용하여 분할
@@ -28,7 +28,7 @@ ms.lasthandoff: 08/03/2017
   현재 및 기록 테이블에서 모두 독립적으로 분할을 사용할 수 있습니다. 그러나 분할은 시스템 버전 관리 없이 데이터의 내용을 변경하는 데 사용할 수 없습니다.  
   
 > [!NOTE]  
->  분할은 Enterprise Edition 기능입니다.  
+>  분할은 서비스 팩 1 이전인 SQL Server 2016 이전 버전에 있는 Enterprise Edition 기능입니다. 분할은 SQL Server 2016 서비스 팩 1 이상 버전의 모든 버전에서 지원됩니다.
   
 -   **현재 테이블:**  
   

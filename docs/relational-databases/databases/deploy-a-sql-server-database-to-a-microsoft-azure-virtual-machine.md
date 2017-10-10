@@ -38,10 +38,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 2aca87c0050dd501c73bb4da8953a93bf40c0c8e
+ms.sourcegitcommit: b5ac9749e7ba4aecad3f6211750623afa71c9e69
+ms.openlocfilehash: d571407c52dd11d7fec6a8077f1eb5a2837c013d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 09/28/2017
 
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Microsoft Azure 가상 컴퓨터에 SQL Server 데이터베이스 배포
@@ -183,7 +183,7 @@ ms.lasthandoff: 09/14/2017
   
             -   CleanupDisabled = False /> \<!-- 마법사는 중간 파일 및 Microsoft Azure 개체(VM, CS, SA)를 삭제하지 않습니다. -->  
   
-        -   <PublishProfile \<!-- 마지막으로 사용된 게시 프로필 정보입니다. -->  
+        -   \<PublishProfile \<!-- 마지막으로 사용된 게시 프로필 정보입니다. -->  
   
             -   Certificate="12A34B567890123ABCD4EF567A8" \<!-- 마법사에서 사용할 인증서입니다. -->  
   

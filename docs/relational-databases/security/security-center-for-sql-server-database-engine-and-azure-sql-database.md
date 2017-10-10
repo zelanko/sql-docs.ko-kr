@@ -3,7 +3,7 @@ title: "SQL Server 데이터베이스 엔진 및 AAzure SQL Database에 대한 �
 ms.custom:
 - MSDN content
 - MSDN - SQL DB
-ms.date: 06/28/2017
+ms.date: 09/27/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.service: 
@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 7b4f037616e0559ac62bbae5dbe04aeffe529b06
-ms.openlocfilehash: f83091b5d69be9b0096a6f286b1535b354c86883
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: ec39e8b4a49d0a452a4030a18f7b7a4c7a5d9922
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="security-center-for-sql-server-database-engine-and-azure-sql-database"></a>SQL Server 데이터베이스 엔진 및 Azure SQL 데이터베이스에 대한 보안 센터
@@ -44,7 +44,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**누가 인증했습니까?**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") Windows 인증<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증|누가 인증했습니까? (Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
+|**누가 인증했습니까?**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") Windows 인증<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") Azure Active Directory|누가 인증했습니까? (Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])<br /><br /> [인증 모드 선택](../../relational-databases/security/choose-an-authentication-mode.md)<br /><br /> [Azure Active Directory 인증을 사용하여 SQL 데이터베이스에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)|  
 |**어디서 인증했습니까?**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") master 데이터베이스에서: 로그인 및 DB 사용자<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 사용자 데이터베이스에서: 포함된 DB 사용자|master 데이터베이스에서 인증(로그인 및 데이터베이스 사용자)<br /><br /> [SQL Server 로그인 만들기](../../relational-databases/security/authentication-access/create-a-login.md)<br /><br /> [Azure SQL 데이터베이스에서 데이터베이스 및 로그인 관리](http://msdn.microsoft.com/library/ee336235.aspx)<br /><br /> [데이터베이스 사용자 만들기](../../relational-databases/security/authentication-access/create-a-database-user.md)<br /><br /> <br /><br /> 사용자 데이터베이스에서 인증<br /><br /> [포함된 데이터베이스 사용자 - 이식 가능한 데이터베이스 만들기](../../relational-databases/security/contained-database-users-making-your-database-portable.md)|  
 |**다른 ID 사용**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 자격 증명<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") 다른 로그인으로 실행<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 다른 데이터베이스 사용자로 실행|[자격 증명&#40;데이터베이스 엔진&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)<br /><br /> [다른 로그인으로 실행합니다.](../../t-sql/statements/execute-as-transact-sql.md)<br /><br /> [다른 데이터베이스 사용자로 실행](../../t-sql/statements/execute-as-transact-sql.md)|  
   
@@ -75,7 +75,7 @@ ms.lasthandoff: 08/28/2017
   
 |||  
 |-|-|  
-|**감사 자동화**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사(서버 및 DB 수준)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 감사(데이터베이스 수준)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 위협 검색|[SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL 데이터베이스 감사](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL 데이터베이스 위협 검색 시작](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/)|  
+|**감사 자동화**<br /><br /> ![security-center-sqlserver](../../relational-databases/performance/media/security-center-sqlserver.png "security-center-sqlserver") [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사(서버 및 DB 수준)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 감사(데이터베이스 수준)<br /><br /> ![security-center-sqldb](../../relational-databases/security/media/security-center-sqldb.png "security-center-sqldb") 위협 검색| <br /><br /> [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)<br /><br /> [SQL 데이터베이스 감사](http://azure.microsoft.com/documentation/articles/sql-database-auditing-get-started/)<br /><br /> [SQL 데이터베이스 위협 검색 시작](https://azure.microsoft.com/documentation/articles/sql-database-threat-detection-get-started/) <br /><br /> [SQL Database 취약성 평가](https://docs.microsoft.com/en-us/azure/sql-database/sql-vulnerability-assessment) |  
 |**사용자 지정 감사**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 트리거|사용자 지정 감사 구현 [DDL Triggers](../../relational-databases/triggers/ddl-triggers.md) 및 [DML Triggers](../../relational-databases/triggers/dml-triggers.md)만들기|  
 |**호환성**<br /><br /> ![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both") 준수|SQL Server:<br />                        [Common Criteria](http://go.microsoft.com/fwlink/?LinkId=616319)<br /><br /> SQL 데이터베이스:<br />                        [Microsoft Azure 보안 센터: 기능별 준수](http://azure.microsoft.com/support/trust-center/services/)|  
   

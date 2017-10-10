@@ -19,11 +19,11 @@ caps.latest.revision: 27
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 9646e838fa2d1c8e7f22fd8b53287060a871a686
+ms.translationtype: HT
+ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
+ms.openlocfilehash: 77a4561aa148a98a593d0279f217a354d01c7b31
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 09/29/2017
 
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>사용자 정의 데이터 형식 별칭 만들기
@@ -66,8 +66,8 @@ ms.lasthandoff: 06/22/2017
      **데이터 형식**  
      목록 상자에서 기본 데이터 형식을 선택합니다. 목록 상자에는 **geography**, **geometry**, **hierarchyid**, **sysname**, **timestamp** 및 **xml** 데이터 형식을 제외한 모든 데이터 형식이 표시됩니다. 기존 사용자 정의 데이터 형식의 데이터 형식은 편집할 수 없습니다.  
   
-     **기본값**  
-     필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 규칙 또는 기본값을 선택합니다.  
+     **Default**  
+     필요에 따라 사용자 정의 데이터 형식 별칭에 바인딩할 기본값을 선택합니다.  
   
      **길이/전체 자릿수**  
      데이터 형식에 적용되는 길이 또는 전체 자릿수를 표시합니다. **길이** 는 문자 기반 사용자 정의 데이터 형식에 적용되고 **전체 자릿수** 는 숫자 기반 사용자 정의 데이터 형식에 적용됩니다. 이 옵션의 레이블은 이전에 선택한 데이터 형식에 따라 바뀝니다. 선택한 데이터 형식의 길이 또는 전체 자릿수가 고정된 경우에는 이 상자를 편집할 수 없습니다.  
@@ -132,3 +132,4 @@ FROM varchar(11) NOT NULL ;
  [CREATE TYPE&#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   
   
+

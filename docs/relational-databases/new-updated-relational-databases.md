@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: relational-databases
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: ee7d66bcd8720234f4aec97d24ce16ed21888a3c
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 70cb071dc7b6f4ff15c5c7dee3f24bb352d6eb61
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-relational-databases-docs"></a>새로 추가되었거나 최근에 업데이트됨: 관계형 데이터베이스 문서
@@ -34,7 +34,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
+- *업데이트 날짜 범위:*  &nbsp; **2017-09-11** &nbsp; 부터 &nbsp; **2017-09-27**
 - *주제 영역:* &nbsp; **관계형 데이터베이스**
 
 
@@ -47,18 +47,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 다음 링크는 최근에 추가된 새로운 문서로 이동합니다.
 
 
-1. [Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기](import-export/import-data-from-excel-to-sql.md)
-2. [PolyBase Kerberos 연결 문제 해결](polybase/polybase-troubleshoot-connectivity.md)
-3. [TDE(투명한 데이터 암호화)](security/encryption/transparent-data-encryption.md)
-4. [Azure SQL Database 및 데이터 웨어하우스의 투명한 데이터 암호화](security/encryption/transparent-data-encryption-azure-sql.md)
-5. [Azure SQL Database 및 데이터 웨어하우스에 대한 Bring Your Own Key 지원으로 투명한 데이터 암호화](security/encryption/transparent-data-encryption-byok-azure-sql.md)
-6. [PowerShell: Azure Key Vault에서 사용자 고유 키를 사용하여 투명한 데이터 암호화 사용](security/encryption/transparent-data-encryption-byok-azure-sql-configure.md)
-7. [PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 회전](security/encryption/transparent-data-encryption-byok-azure-sql-key-rotation.md)
-8. [PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 제거](security/encryption/transparent-data-encryption-byok-azure-sql-remove-tde-protector.md)
-9. [SMO(SQL Server 공유 관리 개체) 사용 조건](server-management-objects-smo/smo-license-terms.md)
-10. [sys.external_libraries(Transact-SQL)](system-catalog-views/sys-external-libraries-transact-sql.md)
-11. [sys.external_library_files(Transact-SQL)](system-catalog-views/sys-external-library-files-transact-sql.md)
-12. [sp_rxPredict](system-stored-procedures/sp-rxpredict-transact-sql.md)
+1. [SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기](import-export/overview-import-export.md)
 
 
 
@@ -80,11 +69,11 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
+### <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
-1. [자동 조정](#TitleNum_1)
+1. [공간 데이터 형식 개요](#TitleNum_1)
 
 
 
@@ -95,44 +84,34 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="TitleNum_1"/>
 
-### <a name="1-nbsp-automatic-tuningautomatic-tuningautomatic-tuningmd"></a>1. &nbsp; [자동 조정](automatic-tuning/automatic-tuning.md)
+### <a name="1-nbsp-spatial-data-types-overviewspatialspatial-data-types-overviewmd"></a>1. &nbsp; [공간 데이터 형식 개요](spatial/spatial-data-types-overview.md)
 
-*업데이트됨: 2017-08-16* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+*업데이트됨: 2017-09-26* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
-<!-- Source markdown line 64.  ms.author= "jovanpop".  -->
+<!-- Source markdown line 27.  ms.author= "rickbyh".  -->
 
 &nbsp;
 
 
-<!-- git diff --ignore-all-space --unified=0 be765a1acf9bdfd5485520d16160677583e81f8e 135d926227094374e6ec5484e7babee625b44bb2  (PR=2860  ,  Filename=automatic-tuning.md  ,  Dirpath=docs\relational-databases\automatic-tuning\  ,  MergeCommitSha40=e4a6157cb56c6db911406585f841046a431eef99) -->
+<!-- git diff --ignore-all-space --unified=0 96dd44cf49e96d1d543a629d49de297dba9c1753 2e9629f852ea42a213c7c24831bcfa53e40358f2  (PR=0  ,  Filename=spatial-data-types-overview.md  ,  Dirpath=docs\relational-databases\spatial\  ,  MergeCommitSha40=b33976cf92f23fbb13cee0c353fd40608d002d94) -->
 
 
 
-**자동 계획 선택 수정**
-
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]은(는) 계획 선택 재발이 검색될 때마다 알려진 마지막 좋은 계획으로 자동으로 전환할 수 있습니다.
-
-![SQL 계획 선택 수정--media/force-last-good-plan.png "SQL 계획 선택 수정")
-
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]은(는) 잘못된 계획 대신 사용되어야 하는 계획을 포함한 모든 잠재적 계획 선택 재발을 자동으로 검색합니다.
-..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 알려진 마지막 좋은 계획을 적용할 때 강제로 적용된 계획의 성능을 자동으로 모니터링합니다. 강제로 적용된 계획이 재발된 계획보다 낫지 않은 경우 새 계획이 강제적이지 않게 되고 ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 새 계획을 컴파일합니다. ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 강제로 적용된 계획이 재발된 계획보다 낫다는 것을 확인하는 경우 강제로 적용된 계획이 재발된 계획보다 나은 경우 다시 컴파일될 때까지 유지됩니다(예: 다음 통계 또는 스키마 변경 시).
-
-**자동 계획 선택 수정 사용**
-
-
-데이터베이스마다 자동 튜닝을 활성화하고 일부 계획 변경 재발이 검색될 때마다 마지막 좋은 계획이 강제로 적용되어야 함을 지정할 수 있습니다. 다음 명령을 사용하여 자동 튜닝이 활성화됩니다.
-
-```
-ALTER DATABASE current
-SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
-```
-이 옵션을 켜면, ..!NCLUDE-NotShown--ssde_md--../../includes/ssde_md.md)]이(가) 예상된 CPU 이득이 10초보다 높거나 새 계획의 오류 수가 권장된 계획의 오류 수보다 높은 곳에서 모든 권장 사항을 자동으로 강제 적용하고 강제로 적용된 계획이 현재 계획보다 낫다는 것을 확인합니다.
-
-**대안 - 수동 계획 선택 수정**
-
-
-자동 튜닝 없이 사용자는 시스템을 주기적으로 모니터링하고 재발된 쿼리를 찾아야 합니다. 계획이 재발된 경우 사용자는 다음을 찾아야 합니다.
+ -  공간 데이터 형식은 두 가지가 있습니다. **geometry** 데이터 형식은 평면, 즉 유클리드(평평한 표면) 데이터를 지원합니다. **geometry** 데이터 형식은 OGC(Open Geospatial Consortium)의 Simple Features for SQL Specification 버전 1.1.0을 따르며 SQL MM(ISO 표준) 규격을 준수합니다.
+ -
+ - 또한 ..!NCLUDE-NotShown--ssNoVersion--../../includes/ssnoversion-md.md)]에서는 GPS 위도 및 경도 좌표 등의 타원(둥근 표면) 데이터를 저장하는 **geography** 데이터 형식을 지원합니다.
+ -
+ -> [!IMPORTANT]
+ -> 향상된 공간 데이터 형식을 비롯한 ..!NCLUDE-NotShown--ssSQL11--../../includes/sssql11-md.md)]에서 소개된 공간 기능에 대한 자세한 설명 및 예제를 보려면 [SQL Server 코드 이름 "Denali"의 새로운 공간 기능](http://go.microsoft.com/fwlink/?LinkId=226407) 백서를 다운로드하세요.
+ -
+ -##  <a name="objects"></a> 공간 데이터 개체
+ - **geometry** 및 **geography** 데이터 형식은 16개의 공간 데이터 개체 또는 인스턴스 유형을 지원합니다. 그러나 이러한 인스턴스 유형 중 11개만 *인스턴스화할 수 있고*데이터베이스에서 이러한 인스턴스를 만들고 작업(인스턴스화)할 수 있습니다. 이러한 인스턴스는 **Points**에서 이들을 **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** , **geometry** 로 구분하거나 여러 **geography** 또는 **GeometryCollection**인스턴스로 구분하는 부모 데이터 형식에서 특정 속성을 파생시킵니다. **Geography** 형식에는 **FullGlobe**라는 추가 인스턴스 유형이 있습니다.
+ -
+ - 아래 그림에서는 **geometry** 및 **geometry** 데이터 형식의 기반인 **geography** 계층을 보여 줍니다. **geometry** 및 **geography** 의 인스턴스화할 수 있는 형식은 파란색으로 표시되어 있습니다.
+ -
+ - ![geom_hierarchy--../../relational-databases/spatial/media/geom-hierarchy.gif)
+ -
+ - 그림에 표시된 대로 **geometry** 및 **geography** 데이터 형식 중 인스턴스화할 수 있는 10개의 형식은 **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**및 **GeometryCollection**입니다. geography 데이터 형식의 경우 인스턴스화할 수 있는 추가 형식이 하나( **FullGlobe**) 있습니다. **geometry** 및 **geography** 형식은 인스턴스가 명시적으로 정의되어 있지 않더라도 형식이 올바르다면 특정 인스턴스를 인식할 수 있습니다. 예를 들어 STPointFromText() 메서드를 사용하여 **Point** 인스턴스를 명시적으로 정의할 경우, 올바른 형식의 메서드 입력에 한해 **geometry** 및 **geography** 는 해당 인스턴스를 **Point**로 인식합니다. `STGeomFromText()` 메서드를 사용하여 동일한 인스턴스를 정의할 경우 **geometry** 및 **geography** 데이터 형식은 해당 인스턴스를 **Point**로 인식합니다.
 
 
 
@@ -151,24 +130,20 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(3+12): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(5+0): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(5+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(19+82): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(1+8): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(12+1): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(7+1): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(1+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(0+2): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(1+4): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(4+1): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 도구** 문서](../tools/new-updated-tools.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(4+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(17+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(3+0): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(1+1): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(0+1): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL에 연결** 문서](../connect/new-updated-connect.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
@@ -176,6 +151,10 @@ SET AUTOMATIC_TUNING ( FORCE_LAST_GOOD_PLAN = ON );
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(0+0): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
 

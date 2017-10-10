@@ -1,5 +1,5 @@
 ---
-title: "Temporal 테이블 | Microsoft Docs"
+title: "임시 테이블 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/11/2016
@@ -16,40 +16,40 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: fa59193fcedb1d5437d8df14035fadca2b3a28f1
-ms.openlocfilehash: 5f9f128cab773951438aa89998ad76e7ba29bb4d
+ms.sourcegitcommit: 20a301e257244b66e1c149c7cf8cf1f2489eb489
+ms.openlocfilehash: 7115b3aa6dcad15fa26603dfe8555287af015bdf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/29/2017
 
 ---
-# <a name="temporal-tables"></a>Temporal 테이블
+# <a name="temporal-tables"></a>임시 테이블
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016에는 시스템 버전 temporal 테이블에 대한 지원이 데이터베이스 기능으로 도입되었습니다. 이 기능은 현재 시점에 적절한 데이터에 대한 정보만 제공하는 것이 아니라 임의 시점에 테이블에 저장된 데이터에 대한 정보를 제공하는 것을 기본 제공으로 지원합니다. Temporal 테이블은 ANSI SQL 2011에서 도입되었으며 현재 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되는 데이터베이스 기능입니다.  
+  SQL Server 2016에는 시스템 버전 temporal 테이블에 대한 지원이 데이터베이스 기능으로 도입되었습니다. 이 기능은 현재 시점에 적절한 데이터에 대한 정보만 제공하는 것이 아니라 임의 시점에 테이블에 저장된 데이터에 대한 정보를 제공하는 것을 기본적으로 지원합니다. 임시 테이블은 ANSI SQL 2011에서 도입된 데이터베이스 기능입니다.  
   
  **빠른 시작**  
   
 -   **시작하기:**  
   
-    -   [시스템 버전 관리 temporal 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)  
+    -   [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)  
   
-    -   [메모리 최적화 테이블을 포함한 시스템 버전 temporal 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
+    -   [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)  
   
-    -   [Temporal 테이블 사용 시나리오](../../relational-databases/tables/temporal-table-usage-scenarios.md)  
+    -   [임시 테이블 사용 시나리오](../../relational-databases/tables/temporal-table-usage-scenarios.md)  
   
-    -   [Azure SQL 데이터베이스에서 temporal 테이블 시작](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)  
+    -   [Azure SQL 데이터베이스에서 임시 테이블 시작](https://azure.microsoft.com/documentation/articles/sql-database-temporal-tables/)  
   
 -   **예:**  
   
-    -   [시스템 버전 temporal 테이블 만들기](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)  
+    -   [시스템 버전 임시 테이블 만들기](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)  
   
-    -   [메모리 최적화 시스템 버전 temporal 테이블로 작업](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)  
+    -   [메모리 액세스에 최적화된 시스템 버전 임시 테이블로 작업](../../relational-databases/tables/working-with-memory-optimized-system-versioned-temporal-tables.md)  
   
-    -   [시스템 버전 temporal 테이블의 데이터 수정](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)  
+    -   [시스템 버전 임시 테이블의 데이터 수정](../../relational-databases/tables/modifying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   [시스템 버전 temporal 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
+    -   [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Adventure Works 예제 데이터베이스 다운로드:** temporal 테이블을 시작하려면 샘플 스크립트가 포함된 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스](https://www.microsoft.com/download/details.aspx?id=49502) 를 다운로드하고 ‘Temporal’ 폴더의 지침을 따르세요.  
+    -   **Adventure Works 예제 데이터베이스 다운로드:** 임시 테이블을 시작하려면 샘플 스크립트가 포함된 [SQL Server 2016 CTP3용 AdventureWorks 데이터베이스](https://www.microsoft.com/download/details.aspx?id=49502) 를 다운로드하고 'Temporal' 폴더의 지침을 따르세요.  
   
 -   **구문:**  
   
@@ -59,17 +59,17 @@ ms.lasthandoff: 07/31/2017
   
     -   [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **비디오:** Temporal 테이블에 대한 20분간의 논의는 [SQL Server 2016의 temporal 테이블](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)을 참조하세요.  
+-   **비디오:** 임시 테이블에 대한 20분간의 논의는 [SQL Server 2016의 임시 테이블](http://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016)을 참조하세요.  
   
-## <a name="what-is-a-system-versioned-temporal-table"></a>시스템 버전 temporal 테이블이란?  
- 시스템 버전 temporal 테이블은 데이터 변경 내용의 전체 기록을 유지하고 간편한 지정 시간 분석을 허용하도록 설계된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 새로운 사용자 테이블 유형입니다. 이 유형의 temporal 테이블은 각 행의 유효 기간이 시스템(예: 데이터베이스 엔진)에 의해 관리되기 때문에 시스템 버전 temporal 테이블이라고 합니다.  
+## <a name="what-is-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블이란?  
+ 시스템 버전 임시 테이블은 데이터 변경 내용의 전체 기록을 유지하고 간편한 지정 시간 분석을 허용하도록 설계된 사용자 테이블의 종류입니다. 이 유형의 임시 테이블은 각 행의 유효 기간이 시스템(예: 데이터베이스 엔진)에 의해 관리되기 때문에 시스템 버전 임시 테이블이라고 합니다.  
   
- 모든 temporal 테이블에는 명시적으로 정의된 두 개의 열이 있으며, 각 열의 데이터 형식은 **datetime2** 입니다. 이러한 열을 기간 열이라고 합니다. 이러한 기간 열은 행이 수정될 때마다 시스템에서 각 행의 유효 기간을 기록하는 데에만 사용됩니다.  
+ 모든 임시 테이블에는 명시적으로 정의된 두 개의 열이 있으며, 각 열의 데이터 형식은 **datetime2** 입니다. 이러한 열을 기간 열이라고 합니다. 이러한 기간 열은 행이 수정될 때마다 시스템에서 각 행의 유효 기간을 기록하는 데에만 사용됩니다.  
   
- 이러한 기간 열 외에도 temporal 테이블은 미러된 스키마를 사용하는 다른 테이블에 대한 참조를 포함합니다. 시스템에서는 이 테이블을 사용하여 temporal 테이블의 행이 업데이트되거나 삭제될 때마다 이전 버전의 행을 자동으로 저장합니다. 이 추가 테이블을 기록 테이블이라고 하며, 현재(실제) 행 버전을 저장하는 주 테이블을 현재 테이블 또는 temporal 테이블이라고 합니다. Temporal 테이블을 만드는 동안 사용자가 기존 기록 테이블(스키마를 준수해야 함)를 지정하거나 시스템에서 기본 기록 테이블을 만들도록 할 수 있습니다.  
+ 이러한 기간 열 외에도 임시 테이블은 미러된 스키마를 사용하는 다른 테이블에 대한 참조를 포함합니다. 시스템에서는 이 테이블을 사용하여 임시 테이블의 행이 업데이트되거나 삭제될 때마다 이전 버전의 행을 자동으로 저장합니다. 이 추가 테이블을 기록 테이블이라고 하며, 현재(실제) 행 버전을 저장하는 주 테이블을 현재 테이블 또는 임시 테이블이라고 합니다. 임시 테이블을 만드는 동안 사용자가 기존 기록 테이블(스키마를 준수해야 함)를 지정하거나 시스템에서 기본 기록 테이블을 만들도록 할 수 있습니다.  
   
-## <a name="why-temporal"></a>Temporal 테이블을 사용하는 이유  
- 실제 데이터 원본은 동적이며, 비즈니스 의사 결정은 분석가가 데이터 진화에서 얻을 수 있는 통찰력에 의존하는 경우가 많습니다. Temporal 테이블에 대한 사용 사례는 다음과 같습니다.  
+## <a name="why-temporal"></a>임시 테이블을 사용하는 이유  
+ 실제 데이터 원본은 동적이며, 비즈니스 의사 결정은 분석가가 데이터 진화에서 얻을 수 있는 통찰력에 의존하는 경우가 많습니다. 임시 테이블에 대한 사용 사례는 다음과 같습니다.  
   
 -   모든 데이터 변경 내용을 감사하고 필요한 경우 데이터 범죄 분석 수행  
   
@@ -81,7 +81,7 @@ ms.lasthandoff: 07/31/2017
   
 -   실수로 인한 데이터 변경 및 응용 프로그램 오류로부터 복구  
   
-## <a name="how-does-temporal-work"></a>Temporal 테이블의 작동 방식  
+## <a name="how-does-temporal-work"></a>임시 테이블의 작동 방식  
  테이블에 대한 시스템 버전은 현재 테이블과 기록 테이블의 테이블 쌍으로 구현됩니다. 이러한 각 테이블 내에서 다음 두 개의 추가 **datetime2** 열은 각 행의 유효 기간을 정의하는 데 사용됩니다.  
   
 -   기간 시작 열: 시스템에서 이 열의 행에 대한 시작 시간을 기록합니다(일반적으로 **SysStartTime** 열로 표시됨).  
@@ -121,8 +121,8 @@ CREATE TABLE dbo.Employee
 > [!IMPORTANT]  
 >  시스템 datetime2 열에 기록되는 시작 시간은 트랜잭션 자체의 시간을 기반으로 합니다. 예를 들어 단일 트랜잭션 내에 삽입된 모든 행은 **SYSTEM_TIME** 기간의 시작에 해당하는 열에 기록된 것과 UTC 시간이 동일합니다.  
   
-## <a name="how-do-i-query-temporal-data"></a>Temporal 데이터를 쿼리하는 방법  
- **SELECT** 문 **FROM***\<table>* 절은 5개의 temporal 특정 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 temporal 테이블 위의 뷰를 통해 전파됩니다.  
+## <a name="how-do-i-query-temporal-data"></a>임시 데이터를 쿼리하는 방법  
+ **SELECT** 문 **FROM***\<table>* 절은 5개의 임시 하위 절과 함께 새로운 **FOR SYSTEM_TIME** 절을 사용하여 현재 테이블 및 기록 테이블에서 데이터를 쿼리합니다. 이 새로운 **SELECT** 문의 구문은 단일 테이블에서 직접 지원되며, 여러 조인 및 여러 임시 테이블 위의 뷰를 통해 전파됩니다.  
   
  ![Temporal-Querying](../../relational-databases/tables/media/temporal-querying.PNG "Temporal-Querying")  
   
@@ -138,15 +138,15 @@ SELECT * FROM Employee
 > [!NOTE]  
 >  **FOR SYSTEM_TIME**은 유효 기간(**SysStartTime** = **SysEndTime**)이 0인 행을 필터링합니다.  
 > 이러한 행은 동일한 트랜잭션 내의 동일한 기본 키에서 여러 업데이트를 수행하는 경우에 생성됩니다.  
-> 이 경우 temporal 쿼리는 트랜잭션 이전의 행 버전과 트랜잭션 이후에 실제가 된 행 버전만 표시합니다.  
+> 이 경우 임시 쿼리는 트랜잭션 이전의 행 버전과 트랜잭션 이후에 실제가 된 행 버전만 표시합니다.  
 > 이러한 행을 분석에 포함해야 하는 경우 기록 테이블을 직접 쿼리합니다.  
   
- 아래 표에서 행 한정의 SysStartTime 열은 쿼리 중인 테이블의 **SysStartTime** 열 값을 나타내고, **SysEndTime** 은 쿼리 중인 테이블의 **SysEndTime** 열 값을 나타냅니다. 전체 구문 및 예제는 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 및 [시스템 버전 temporal 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)에서 지원되는 데이터베이스 기능입니다.  
+ 아래 표에서 행 한정의 SysStartTime 열은 쿼리 중인 테이블의 **SysStartTime** 열 값을 나타내고, **SysEndTime** 은 쿼리 중인 테이블의 **SysEndTime** 열 값을 나타냅니다. 전체 구문 및 예제는 [FROM&#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) 및 [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)에서 지원되는 데이터베이스 기능입니다.  
   
 |식|행 한정|Description|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|  
-|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 끝점으로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 끝점으로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|  
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|과거의 지정된 시간에 실제(현재)였던 값이 포함된 행이 있는 테이블을 반환합니다. 내부적으로 임시 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간에 유효했던 행의 값을 반환하도록 결과가 *<date_time>* 매개 변수로 필터링됩니다. 행 값은 *system_start_time_column_name* 값이 *<date_time>* 매개 변수 값보다 작거나 같고 *system_end_time_column_name* 값이 *<date_time>* 매개 변수 값보다 큰 경우에 유효한 것으로 간주됩니다.|  
+|**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|FROM 인수에 대한 *<start_date_time>* 매개 변수 값 이전에 활성 상태가 시작되었든 아니면 TO 인수에 대한 *<end_date_time>* 매개 변수 값 이후에 활성 상태가 중단되었든 상관없이 지정된 시간 범위 내에 활성 상태였던 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 내부적으로 임시 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. FROM 끝점으로 정의된 하위 경계에서 정확히 활동이 중지된 행은 포함되지 않고 TO 끝점으로 정의된 상위 경계에서 정확히 활성화된 레코드도 포함되지 않습니다.|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|<end_date_time> 끝점으로 정의된 상위 경계에서 활성화된 행이 반환되는 행 테이블에 포함된다는 점을 제외하고는 위의 **FOR SYSTEM_TIME FROM** <start_date_time>**TO** 설명과 같습니다.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|CONTAINED IN 인수에 대한 두 개의 datetime 값으로 정의된 지정된 시간 범위 내에 열리고 닫힌 모든 행 버전의 값을 포함하는 테이블을 반환합니다. 정확히 하위 경계에서 활성화되거나 상위 경계에서 활성 상태가 중단된 행이 포함됩니다.|  
 |**ALL**|모든 행|현재 테이블 및 기록 테이블에 속하는 행의 합집합을 반환합니다.|  
@@ -158,15 +158,15 @@ SELECT * FROM Employee
  어떤 정보를 찾고 계세요? 정보를 찾으셨나요? 여러분의 의견은 문서의 내용을 개선하는 데 많은 도움이 됩니다. 의견이 있으면 [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Temporal%20Tables%20page)  
   
 ## <a name="see-also"></a>참고 항목  
- [시스템 버전 관리 temporal 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
- [메모리 최적화 테이블을 포함한 시스템 버전 temporal 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
- [Temporal 테이블 사용 시나리오](../../relational-databases/tables/temporal-table-usage-scenarios.md)   
- [Temporal 테이블 고려 사항 및 제한 사항](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
- [시스템 버전 관리된 temporal 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
- [Temporal 테이블을 사용하여 분할](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
- [Temporal 테이블 시스템 일관성 검사](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
- [Temporal 테이블 보안](../../relational-databases/tables/temporal-table-security.md)   
- [Temporal 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
+ [시스템 버전 관리 임시 테이블 시작](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
+ [메모리 액세스에 최적화된 테이블을 포함한 시스템 버전 임시 테이블](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)   
+ [임시 테이블 사용 시나리오](../../relational-databases/tables/temporal-table-usage-scenarios.md)   
+ [임시 테이블 고려 사항 및 제한 사항](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
+ [시스템 버전 관리된 임시 테이블에서 기록 데이터의 보존 관리](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   
+ [임시 테이블을 사용하여 분할](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
+ [임시 테이블 시스템 일관성 검사](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
+ [임시 테이블 보안](../../relational-databases/tables/temporal-table-security.md)   
+ [임시 테이블 메타데이터 뷰 및 함수](../../relational-databases/tables/temporal-table-metadata-views-and-functions.md)  
   
   
 
