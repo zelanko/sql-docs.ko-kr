@@ -18,10 +18,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 77c02b875a22fefec54c59518f4972cbd7aefd4b
+ms.sourcegitcommit: 49a4391c9542ab57ed815dc2670bed997a10a064
+ms.openlocfilehash: 87c5ee7f5c4ab77748b11677994eecc7e5575490
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="project-settings-type-mapping-sybasetosql"></a>프로젝트 설정 (형식 매핑) (SybaseToSQL)
@@ -61,32 +61,32 @@ Sybase 형식 매핑에 대 한 기본 SSMA는 다음 섹션의 표를 참조 �
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
 |**binary**|**binary**|  
-|**이진 [\*...8000]**|**이진 [\*]**|  
+|**이진 [\*... 8000]**|**이진 [\*]**|  
 |**이진 [8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**다양 한 문자**|**varchar**|  
-|**다양 한 char [\*...8000]**|**varchar [\*]**|  
+|**다양 한 char [\*... 8000]**|**varchar [\*]**|  
 |**다양 한 char [8001..\*]**|**varchar(max)**|  
-|**char[\*..8000]**|**char[\*]**|  
-|**char [8001..\& # 42;]**|**varchar(max)**|  
+|**char[\*.. 8000]**|**char[\*]**|  
+|**char [8001..\*;]**|**varchar(max)**|  
 |**문자**|**char**|  
 |**다양 한 문자**|**varchar**|  
-|**다양 한 문자 [\*...8000]**|**varchar [\*]**|  
+|**다양 한 문자 [\*... 8000]**|**varchar [\*]**|  
 |**다양 한 문자 [8001..\*]**|**varchar(max)**|  
-|**문자 [\*...8000]**|**char[\*]**|  
+|**문자 [\*... 8000]**|**char[\*]**|  
 |**문자 [8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2 [3]**|  
 |**년 12 월**|**decimal**|  
-|**dec[\*..\*]**|**10 진수 [\*]**|  
-|**dec[\*..\*][\*..\*]**|**decimal[\*][\*]**|  
+|**dec[\*.. \*]**|**10 진수 [\*]**|  
+|**dec[\*.. \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**decimal**|**decimal**|  
-|**10 진수 [\*...\*]**|**10 진수 [\*]**|  
-|**10 진수 [\*...\*][\*..\*]**|**decimal[\*][\*]**|  
+|**10 진수 [\*... \*]**|**10 진수 [\*]**|  
+|**10 진수 [\*... \*][\*.. \*]**|**decimal[\*][\*]**|  
 |**배정밀도**|**float [53]**|  
 |**float**|**float [53]**|  
-|**float [\*...15]**|**float [24]**|  
+|**float [\*... 15]**|**float [24]**|  
 |**float [16..\*]**|**float [53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
@@ -94,61 +94,61 @@ Sybase 형식 매핑에 대 한 기본 SSMA는 다음 섹션의 표를 참조 �
 |**longsysname**|**nvarchar [255]**|  
 |**money**|**money**|  
 |**국가별 문자**|**nchar**|  
-|**national char [\*...4000]**|**nchar [\*]**|  
+|**national char [\*... 4000]**|**nchar [\*]**|  
 |**다양 한 국가별 문자**|**nvarchar**|  
-|**다양 한 national char [\*...4000]**|**nvarchar [\*]**|  
+|**다양 한 national char [\*... 4000]**|**nvarchar [\*]**|  
 |**다양 한 national char [4001..\*]**|**nvarchar(max)**|  
 |**national char [4001..\*]**|**nvarchar(max)**|  
 |**국가별 문자**|**nchar**|  
-|**국가별 문자 [\*...4000]**|**nchar [\*]**|  
+|**국가별 문자 [\*... 4000]**|**nchar [\*]**|  
 |**국가별 문자 [4001..\*]**|**nvarchar(max)**|  
 |**다양 한 국가별 문자**|**nvarchar**|  
-|**다양 한 국가별 문자 [\*...4000]**|**nvarchar [\*]**|  
+|**다양 한 국가별 문자 [\*... 4000]**|**nvarchar [\*]**|  
 |**다양 한 국가별 문자 [4001..\*]**|**nvarchar(max)**|  
 |**national varchar**|**nvarchar**|  
-|**national varchar [\*...4000]**|**nvarchar [\*]**|  
+|**national varchar [\*... 4000]**|**nvarchar [\*]**|  
 |**national varchar [4001..\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar 다양 한**|**nvarchar**|  
-|**nchar 다양 한 [\*...4000]**|**nvarchar [\*]**|  
+|**nchar 다양 한 [\*... 4000]**|**nvarchar [\*]**|  
 |**nchar 다양 한 [4001..\*]**|**nvarchar(max)**|  
-|**nchar [\*...4000]**|**nchar [\*]**|  
+|**nchar [\*... 4000]**|**nchar [\*]**|  
 |**nchar [4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
-|**숫자 [\*...\*]**|**숫자 [\*]**|  
-|**숫자 [\*...\*][\*..\*]**|**numeric[\*][\*]**|  
+|**숫자 [\*... \*]**|**숫자 [\*]**|  
+|**숫자 [\*... \*][\*.. \*]**|**numeric[\*][\*]**|  
 |**nvarchar**|**nvarchar**|  
-|**nvarchar [\*...4000]**|**nvarchar [\*]**|  
+|**nvarchar [\*... 4000]**|**nvarchar [\*]**|  
 |**nvarchar [4001..\*]**|**nvarchar(max)**|  
 |**real**|**float [24]**|  
 |**smalldatetime**|**smalldatetime**|  
 |**smallint**|**smallint**|  
 |**smallmoney**|**smallmoney**|  
 |**sysname**|**nvarchar [128]**|  
-|**sysname [\*...\*]**|**nvarchar [255]**|  
+|**sysname [\*... \*]**|**nvarchar [255]**|  
 |**text**|**text**|  
 |**time**|**시간 [3]**|  
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**다양 한 unichar**|**nvarchar**|  
-|**다양 한 unichar [\*...4000]**|**nvarchar [\*]**|  
+|**다양 한 unichar [\*... 4000]**|**nvarchar [\*]**|  
 |**다양 한 unichar [4001..\*]**|**nvarchar(max)**|  
-|**unichar [\*...4000]**|**nchar [\*]**|  
+|**unichar [\*... 4000]**|**nchar [\*]**|  
 |**unichar [4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
-|**univarchar [\*...4000]**|**nvarchar [\*]**|  
+|**univarchar [\*... 4000]**|**nvarchar [\*]**|  
 |**univarchar [4001..\*]**|**nvarchar(max)**|  
 |**부호 없는 bigint**|**숫자 [20] [0]**|  
 |**부호 없는 int**|**bigint**|  
 |**부호 없는 smallint**|**int**|  
 |**부호 없는 tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
-|**varbinary [\*...8000]**|**varbinary [\*]**|  
+|**varbinary [\*... 8000]**|**varbinary [\*]**|  
 |**varbinary [8001..\*]**|**varbinary(max)**|  
 |**varchar**|**varchar**|  
-|**varchar [\*...8000]**|**varchar [\*]**|  
+|**varchar [\*... 8000]**|**varchar [\*]**|  
 |**varchar [8001..\*]**|**varchar(max)**|  
   
 
