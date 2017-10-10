@@ -13,7 +13,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
 ms.openlocfilehash: 000325a2e2c53e36f7a74a725962b8dd3be98988
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Microsoft SQL Server를 프로그래밍 하는 클라이언트에 대 한 홈 페이지
@@ -52,9 +52,9 @@ Azure SQL 데이터베이스에 연결 하기 위한 연결 문자열에 대 한
 
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
-| &nbsp;[! [C# 로고] [이미지-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[! [ORM Entity Framework의.NET Framework] [이미지-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[! [Java 로고] [이미지-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp;[! [Node.js 로고] [image-ref-340-노드]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[! [PHP 로고] [이미지-ref-360-php]](#an-170-php-docu) |
-| &nbsp;[! [Python 로고] [이미지-ref-370-python]](#an-180-python-docu) | &nbsp;[! [Ruby 로고] [이미지-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
+| &nbsp;[ ![C# 로고][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp;[ ![ORM Entity Framework는.NET Framework의][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp;[ ![Java 로고][image-ref-330-java]](#an-130-jdbc-docu) |
+| &nbsp;[ ![Node.js 로고][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu) | &nbsp;[ ![PHP 로고][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp;[ ![Python 로고][image-ref-370-python]](#an-180-python-docu) | &nbsp;[ ![Ruby 로고][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
 
@@ -103,7 +103,7 @@ EF 다음 기술과 함께 직접 또는 간접 관계에 있습니다.
 
 - .NET Framework
 - [LINQ to SQL](http://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/), 또는 [LINQ to Entities](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
-- 향상 된 구문은 언어와 같은 ** => ** C#에서 연산자.
+- 향상 된 구문은 언어와 같은  **=>**  C#에서 연산자.
 - SQL 데이터베이스의 테이블에 매핑되는 클래스에 대 한 소스 코드를 생성 하는 편리한 프로그램. 예를 들어, [EdmGen.exe](http://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe)합니다.
 
 
