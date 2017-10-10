@@ -1,7 +1,7 @@
 ---
 title: "Reporting Services 설치 문제 해결 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/30/2017
+ms.date: 09/29/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,11 +14,11 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 79d064c7ddb43531fdff086eda71ba1e28d71fd6
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8a70fbb9bd9f54b06544f8d9b625c7998f74109d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 08/09/2017
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 와 관련된 기타 오류 및 문제에 대한 자세한 내용은 [SSRS 문제 및 오류 문제 해결](http://social.technet.microsoft.com/wiki/contents/articles/ssrs-troubleshooting-issues-and-errors.aspx)을 참조하세요.  
   
- 릴리스 정보에 설명되어 있는 문제가 발생하는 경우 [온라인 릴리스 정보](http://go.microsoft.com/fwlink/?linkid=236893) 를 검토하세요.  
+ 검토는 [온라인 릴리스 정보](http://go.microsoft.com/fwlink/?linkid=236893) 경우 문제가 발생 하는 릴리스 정보에 설명 되어 있습니다.  
   
-##  <a name="bkmk_setuplogs"></a> 설치 로그 확인  
+##  <a name="bkmk_setuplogs"></a>설치 로그 확인  
  설치 오류는 **[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Setup Bootstrap\Log** 폴더의 로그 파일에 기록됩니다. 설치 프로그램을 실행할 때마다 하위 폴더가 만들어지는데 하위 폴더의 이름은 설치 프로그램을 실행한 시간과 날짜입니다. 설치 로그 파일을 확인하는 방법에 대한 지침은 [SQL Server 설치 로그 파일 보기 및 읽기](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
 -   로그 파일에는 파일 모음이 포함되어 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 08/09/2017
   
 -   \_\*설치 정보를 보려면 *_RS [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] _ComponentUpdateSetup.log를 엽니다.  
   
-##  <a name="bkmk_prereq"></a> 필수 구성 요소 확인  
+##  <a name="bkmk_prereq"></a>필수 구성 요소 확인  
  필수 구성 요소는 설치 프로그램에서 자동으로 확인합니다. 그러나 설치 문제를 해결하는 경우 설치 프로그램에서 확인하는 요구 사항을 알고 있으면 도움이 됩니다.  
   
 -   설치 프로그램을 실행하기 위해서는 계정이 로컬 Administrators 그룹의 멤버여야 합니다. 설치 프로그램은 파일 및 레지스트리 설정 추가, 로컬 보안 그룹 만들기 및 사용 권한 설정 등을 수행할 수 있는 권한을 갖고 있어야 합니다. 기본 구성을 설치하는 경우 설치 프로그램은 사용자가 설치 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보고서 서버 데이터베이스를 만들 권한을 갖고 있어야 합니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 08/09/2017
   
  설치 프로그램은 더 이상 인터넷 정보 서비스(IIS) 또는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]이 설치되어 있는지 확인하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 MDAC 2.0 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 버전 2.0이 필요하므로 이들이 설치되어 있지 않은 경우 설치 프로그램에서 설치합니다.  
   
-##  <a name="bkmk_tshoot_sharepoint"></a> SharePoint 모드 설치 관련 문제 해결  
+##  <a name="bkmk_tshoot_sharepoint"></a>SharePoint 모드 설치 oroblems 문제 해결  
   
 -   [Reporting Services 구성 관리자 시작 안 함](#bkmk_configmanager_notstart)  
   
@@ -74,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 -   [PREPAREIMAGE에는 RS_SHP가 지원되지 않는다는 오류 메시지가 표시됩니다.](#bkmk_RS_SHP_notsupported)  
 
-### <a name="bkmk_configmanager_notstart"></a> Reporting Services 구성 관리자 시작 안 함
+### <a name="bkmk_configmanager_notstart"></a>Reporting Services 구성 관리자 시작 되지 않습니다.
 
  **설명:** 이 문제는 SQL Server 2012 이상 설계 합니다. Reporting Services SharePoint 서비스 아키텍처에 맞게 구축 됐습니다. 구성 관리자는 더 이상 SharePoint 모드에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 구성 및 관리하지 않아도 됩니다.  
   
@@ -122,7 +122,7 @@ ms.lasthandoff: 08/09/2017
   
 -   SQL Server 2005 설치 미디어에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드를 설치합니다.  
   
- **참고:** 해결 방법 중 하나를 완료할 때 **SharePoint 2013/2016 관리 셸** 이 열려 있는 경우 관리 셸을 닫고 다시 엽니다.  
+ 경우는 **SharePoint 2013/2016 관리 셸** 는 해결 방법 중 하나를 완료 하 고 닫고 관리 셸을 다시 열 때 열려 있습니다.  
   
  자세한 내용은 다음 항목을 참조하세요.  
   
@@ -197,7 +197,7 @@ ms.lasthandoff: 08/09/2017
   
  ![맨 위 링크를 다시 사용 되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "위쪽 링크를 다시 사용 되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
-##  <a name="bkmk_tshoot_native"></a> 기본 모드 설치 관련 문제 해결  
+##  <a name="bkmk_tshoot_native"></a>기본 모드 설치 관련 문제 해결  
   
 ###  <a name="PerfCounters"></a> Windows Vista 또는 Windows Server 2008로 업그레이드한 후 성능 카운터가 표시되지 않는 경우  
  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] 를 실행하는 컴퓨터에서 운영 체제를 [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] 또는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]로 업그레이드하면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 성능 카운터가 설정되지 않습니다.  

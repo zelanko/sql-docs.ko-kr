@@ -1,5 +1,6 @@
 # [Oracle용 SSMA 설치(OracleToSQL)](installing-ssma-for-oracle-oracletosql.md)
 # [Oracle용 SSMA 시작(OracleToSQL)](getting-started-with-ssma-for-oracle-oracletosql.md)
+# [Oracle HR 스키마를 SQL Server로 변환](sql-server-linux-convert-from-oracle.md)
 # [법적 고지 사항(Oracle용 SSMA)](legal-notice-ssma-for-oracle.md)
 # [Oracle용 SSMA 클라이언트 설치(OracleToSQL)](installing-ssma-for-oracle-client-oracletosql.md)
 # [Oracle용 SSMA의 새로운 기능(OracleToSQL)](what-s-new-in-ssma-for-oracle-oracletosql.md)

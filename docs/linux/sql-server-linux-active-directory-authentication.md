@@ -2,7 +2,7 @@
 title: "Linux에서 SQL Server와 active Directory 인증 | Microsoft Docs"
 description: "이 자습서는 Linux에서 SQL Server에 대 한 AAD 인증에 대 한 구성 단계를 제공합니다."
 author: meet-bhagdev
-ms.date: 09/25/2017
+ms.date: 10/09/2017
 ms.author: meetb
 manager: jhubbard
 ms.topic: article
@@ -11,10 +11,10 @@ ms.technology: database-engine
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 57b03ac7c571bc23477b49c39104fa48220495cb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 09a837b606b0fad62c77db982000cf3d7dc5c48f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="active-directory-authentication-with-sql-server-on-linux"></a>Linux에서 SQL Server와 active Directory 인증
@@ -50,13 +50,15 @@ AD 인증을 구성 하기 전에 해야 합니다.
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 > [!IMPORTANT]
-> 이 경우 데이터베이스 미러링 끝점에 지원 되는 유일한 인증 방법에는 인증서입니다. 이후 릴리스에서 WINDOWS 인증 방법을 사용할 수 있습니다.
+> 제한 사항:
+> - 이 경우 데이터베이스 미러링 끝점에 지원 되는 유일한 인증 방법에는 인증서입니다. 이후 릴리스에서 WINDOWS 인증 방법을 사용할 수 있습니다.
+> - Centrify, Powerbroker Vintela 등 AD 타사 도구는 지원 되지 않습니다. 
 
 ## <a name="join-includessnoversionincludesssnoversion-mdmd-host-to-ad-domain"></a>가입 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 호스트
 
 다음 단계를 사용 하 여 연결할는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Active Directory 도메인에 호스트:
 
-1. 사용 하 여 ** [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html) ** AD 도메인에 호스트 컴퓨터를 가입 합니다. 아직 하지 않는 경우에 realmd와 Kerberos 클라이언트 패키지가 설치는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux 배포판의 패키지 관리자를 사용 하 여 호스트 컴퓨터:
+1. 사용 하 여  **[realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.html)**  AD 도메인에 호스트 컴퓨터를 가입 합니다. 아직 하지 않는 경우에 realmd와 Kerberos 클라이언트 패키지가 설치는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux 배포판의 패키지 관리자를 사용 하 여 호스트 컴퓨터:
 
    ```bash
    # RHEL
@@ -170,7 +172,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
 ## <a name="create-ad-user-for-includessnoversionincludesssnoversion-mdmd-and-set-spn"></a>에 대 한 AD 사용자를 만들고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN을 설정 하 고
 
   > [!NOTE]
-  > 다음 단계는 사용 하면 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 사용 중인 **Azure**, ´ ë ç ** [만드세요](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn) ** 계속 진행 하기 전에.
+  > 다음 단계는 사용 하면 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 사용 중인 **Azure**, ´ ë ç  **[만드세요](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/portal-create-fqdn)**  계속 진행 하기 전에.
 
 1. 도메인 컨트롤러에서 실행 하는 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx) 만료 되지 않는 암호를 사용 하 여 새 AD 사용자를 만들려면 PowerShell 명령입니다. 이 예에서는 "mssql," 계정 이름이 되지만 필요 하면 계정 이름이 될 수 있습니다. 계정의 새 암호를 입력 하 라는 메시지가 표시 됩니다.
 
@@ -206,7 +208,7 @@ AD 인증을 구성 하기 전에 해야 합니다.
    kvno MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**
    ```
 
-2. 이전 단계에서 만든 AD 사용자는 keytab 파일을 만듭니다. 사용 하 여 그렇게 하려면 ** [ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
+2. 이전 단계에서 만든 AD 사용자는 keytab 파일을 만듭니다. 사용 하 여 그렇게 하려면  **[ktutil](https://web.mit.edu/kerberos/krb5-1.12/doc/admin/admin_commands/ktutil.html)**합니다. 메시지가 표시 되 면 해당 AD 계정의 암호를 입력 합니다.
 
    ```bash
    sudo ktutil

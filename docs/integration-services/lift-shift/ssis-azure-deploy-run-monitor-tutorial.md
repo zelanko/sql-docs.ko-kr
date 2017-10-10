@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: c6018dbd63e9762b974ddc05995d5d2e3622ee26
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>배포, 실행 및 Azure에서 SSIS 패키지를 모니터링 합니다.
@@ -22,7 +22,7 @@ ms.lasthandoff: 09/25/2017
 
 시작 하기 전에 17.2 SQL Server Management Studio의 이후 버전 지정 했는지 확인 합니다. 최신 버전의 SSMS 다운로드 하려면 [다운로드 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
 
-또한 SSISDB 데이터베이스를 설정 하 고 Azure SSIS 통합 런타임에서 사용자를 프로 비전 했는지 확인 합니다. Azure에서 SSIS 프로 비전 하는 방법에 대 한 정보를 참조 하십시오. [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)합니다.
+또한 SSISDB 데이터베이스를 설정 하 고 Azure SSIS 통합 런타임에서 사용자를 프로 비전 했는지 확인 합니다. Azure에서 SSIS 프로 비전 하는 방법에 대 한 정보를 참조 하십시오. [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure)합니다.
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB 데이터베이스에 연결
 
@@ -77,7 +77,7 @@ SQL Server Management Studio를 사용 하 여 Azure SQL 데이터베이스 서�
   
 5.  배포 프로세스가 완료 된 후의 **결과** 페이지가 열립니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다.
     -   작업에 실패 한 경우 선택 **실패** 에 **결과** 열 오류에 대 한 설명을 표시 합니다.
-    -   필요에 따라 선택 **보고서 저장... ** XML 파일로 결과 저장할 수 있습니다.
+    -   필요에 따라 선택 **보고서 저장...**  XML 파일로 결과 저장할 수 있습니다.
     -   선택 **닫기** 여 마법사를 종료 합니다.
 
 ## <a name="run-a-package"></a>패키지 실행
@@ -86,7 +86,7 @@ SQL Server Management Studio를 사용 하 여 Azure SQL 데이터베이스 서�
 
 2. 마우스 오른쪽 단추로 클릭 하 고 선택 **Execute** 열려는 **패키지 실행** 대화 상자.
 
-3.  에 **패키지 실행** 대화 상자에서 설정을 사용 하 여 패키지 실행을 구성을 **매개 변수**, **연결 관리자**, 및 **고급 ** 탭 합니다.
+3.  에 **패키지 실행** 대화 상자에서 설정을 사용 하 여 패키지 실행을 구성을 **매개 변수**, **연결 관리자**, 및 **고급**  탭 합니다.
 
 4.  선택 **확인** 패키지를 실행 합니다.
 

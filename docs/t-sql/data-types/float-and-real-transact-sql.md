@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 913aa9c71234d1b170a14f9707be82d45b1cd5b8
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 0ce2e3272c30057f533796e0822256c6235de0c1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="float-and-real-transact-sql"></a>float 및 real(Transact-SQL)
@@ -65,7 +65,7 @@ ms.lasthandoff: 09/01/2017
   
 변환 하려는 경우 **float** 또는 **실제** 문자 데이터에 CAST () 보다 더 유용한 일반적으로 STR 문자열 함수를 사용 하 여 합니다. 이는 STR을 사용하면 서식을 더 많이 제어할 수 있기 때문입니다. 자세한 내용은 참조 [STR &#40; Transact SQL &#41; ](../../t-sql/functions/str-transact-sql.md) 및 [함수 &#40; Transact SQL &#41; ](../../t-sql/functions/functions.md).
   
-변환 **float** 과학적 표기법을 사용 하는 값 **10 진수** 또는 **숫자** 전체 자릿수가 17 자리로의 값으로 제한 됩니다. 17자리를 넘는 값은 0으로 반올림됩니다.
+변환 **float** 과학적 표기법을 사용 하는 값 **10 진수** 또는 **숫자** 전체 자릿수가 17 자리로의 값으로 제한 됩니다. 값 < 0으로 5E-18 내림 합니다.
   
 ## <a name="see-also"></a>참고 항목
 [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

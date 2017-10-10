@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 6fdb36fbf294ea1f109728a1f304b5a3f3662122
+ms.sourcegitcommit: 80c1228faeaaa4012afc0fd27992a2f5cf389f6e
+ms.openlocfilehash: 48e2d1ae54100f7ea83bdd677bf4a98859825b67
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="sql-server-on-linux"></a>Linux의 SQL Server
@@ -28,6 +28,7 @@ SQL Server 2017 Linux에서 실행 됩니다. 많은 유사 기능 및 운영 �
 - [SUSE Linux Enterprise Server에 설치](quickstart-install-connect-suse.md)
 - [Ubuntu 설치](quickstart-install-connect-ubuntu.md)
 - [Docker에서 실행](quickstart-install-connect-docker.md)
+- [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 > [!NOTE]
 > Docker 자체 즉, Linux, Mac 및 Windows에서 Docker 이미지를 실행할 수 있습니다 여러 플랫폼에서 실행 됩니다.

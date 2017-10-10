@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 7efd6f635391afba3133b508fadeeab1132273c0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지의 실행 일정
@@ -58,13 +58,13 @@ Azure SQL 데이터베이스 서버에 저장 된 패키지의 실행 일정을 
 
 ## <a name="elastic"></a>SQL 데이터베이스 탄력적 작업을 사용 하 여 패키지 예약
 
-SQL 데이터베이스 탄력적 작업에 대 한 자세한 내용은 참조 하십시오. [관리 확장 클라우드 데이터베이스](/azure/sql-database/sql-database-elastic-jobs-overview.md)합니다.
+SQL 데이터베이스 탄력적 작업에 대 한 자세한 내용은 참조 하십시오. [관리 확장 클라우드 데이터베이스](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)합니다.
 
 ### <a name="prerequisites"></a>필수 구성 요소
 
 Azure SQL 데이터베이스 서버에 SSISDB 카탈로그 데이터베이스에 저장 하는 SSIS 패키지를 예약 하 탄력적 작업을 사용 하려면 먼저 다음 작업을 수행 해야 합니다.
 
-1.  설치 하 고 탄력적 데이터베이스 작업 구성 요소를 구성 합니다. 자세한 내용은 참조 하십시오. [설치 탄력적 데이터베이스 작업 개요](/azure/sql-database/sql-database-elastic-jobs-service-installation.md)합니다.
+1.  설치 하 고 탄력적 데이터베이스 작업 구성 요소를 구성 합니다. 자세한 내용은 참조 하십시오. [설치 탄력적 데이터베이스 작업 개요](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-service-installation)합니다.
 
 2. 작업은 SSIS 카탈로그 데이터베이스에 명령을 보냅니다 하는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 자세한 내용은 참조 하십시오. [만들 데이터베이스 범위 자격 증명 (Transact SQL)](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)합니다.
 
@@ -110,7 +110,7 @@ Azure 데이터 팩터리 SQL Server 저장 프로시저 활동을 사용 하 �
 3.  일정을 구동 하는 출력 데이터 집합을 만듭니다.
 4.  SQL Server 저장 프로시저 활동을 사용 하 여 SSIS 패키지를 실행 하는 데이터 팩터리 파이프라인을 만듭니다.
 
-이 섹션에서는 이러한 단계의 개요를 제공 합니다. 전체 데이터 팩터리의 자습서는이 문서의 범위를 벗어납니다. 자세한 내용은 참조 하십시오. [SQL Server 저장 프로시저 작업](/azure/data-factory/data-factory-stored-proc-activity.md)합니다.
+이 섹션에서는 이러한 단계의 개요를 제공 합니다. 전체 데이터 팩터리의 자습서는이 문서의 범위를 벗어납니다. 자세한 내용은 참조 하십시오. [SQL Server 저장 프로시저 작업](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)합니다.
 
 ### <a name="created-a-linked-service-for-the-sql-database-that-hosts-ssisdb"></a>SSISDB를 호스팅하는 SQL 데이터베이스에 대 한 연결 된 서비스를 만들었습니다.
 연결 된 서비스 데이터 팩터리의 SSISDB에 연결할 수 있습니다.
@@ -221,4 +221,4 @@ GO
 ## <a name="next-steps"></a>다음 단계
 SQL Server 에이전트에 대 한 자세한 내용은 참조 하십시오. [패키지에 대 한 SQL Server 에이전트 작업](../packages/sql-server-agent-jobs-for-packages.md)합니다.
 
-SQL 데이터베이스 탄력적 작업에 대 한 자세한 내용은 참조 하십시오. [관리 확장 클라우드 데이터베이스](/azure/sql-database/sql-database-elastic-jobs-overview.md)합니다.
+SQL 데이터베이스 탄력적 작업에 대 한 자세한 내용은 참조 하십시오. [관리 확장 클라우드 데이터베이스](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)합니다.

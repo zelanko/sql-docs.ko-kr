@@ -2,8 +2,8 @@
 title: "Linux에서 SQL Server 연결 암호화 | Microsoft Docs"
 description: "이 항목에서는 Linux에서 SQL Server 연결 암호화를 설명 합니다."
 author: tmullaney
-ms.date: 06/14/2017
-ms.author: thmullan;rickbyh
+ms.date: 10/02/2017
+ms.author: meetb;rickbyh
 manager: jhubbard
 ms.topic: article
 ms.prod: sql-linux
@@ -12,10 +12,10 @@ ms.assetid:
 helpviewer_keywords:
 - Linux, encrypted connections
 ms.translationtype: MT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 47a15701730019aaf166743c47c606aa2059b7fe
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: d6beb6350c0d48d35cb3153c2df8eebaec0e4f34
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Linux에서 SQL Server 연결 암호화
@@ -23,88 +23,107 @@ ms.lasthandoff: 08/28/2017
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Linux 수를 사용 하 여 보안 TLS (전송 계층)의 인스턴스와 클라이언트 응용 프로그램 간에 네트워크를 통해 전송 되는 데이터를 암호화 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Windows와 Linux 모두에서 동일한 TLS 프로토콜을 지원: TLS 1.2, 1.1 및 1.0입니다. 그러나 TLS를 구성 하는 단계는 운영 체제를 관련이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 합니다.  
- 
-## <a name="typical-scenario"></a>일반적인 시나리오 
-TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호화 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 올바르게 구성 된 경우 개인 정보 및 클라이언트와 서버 간의 통신에 대 한 데이터 무결성 모두 TLS를 제공 합니다.  
-다음 단계에서는 일반적인 시나리오를 설명합니다.  
 
-1. 데이터베이스 관리자는 개인 키와 인증서 서명 요청 (CSR)를 생성 합니다. CSR의 일반 이름에는 클라이언트가 해당 SQL Server 연결 문자열에 지정 된 서버 이름을 일치 해야 합니다. 이 일반 이름은 일반적으로의 정규화 된 도메인 이름입니다.는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 합니다. 여러 서버에 대 한 동일한 인증서를 사용 하려면 일반 이름에 와일드 카드를 사용할 수 있습니다 (예를 들어 `"*.contoso.com"` 대신 `"node1.contoso.com"`).   
-2. CSR 서명을 위해 인증 기관 (CA)에 전송 됩니다. CA에 연결 하는 모든 클라이언트 컴퓨터에서 신뢰 되어야 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. CA는 데이터베이스 관리자에 서명 된 인증서를 반환합니다.   
-3. 데이터베이스 관리자는 구성 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS 연결에 대 한 개인 키 및 서명 된 인증서를 사용 하도록 합니다.   
-4. 클라이언트는 지정 `"Encrypt=True"` 및 `"TrustServerCertificate=False"` 은 연결 문자열에 있습니다. (특정 매개 변수 이름은 달라질 수 있습니다 사용할 드라이버를 사용 하는 따라)입니다. 이제 SQL Server에 대 한 연결을 암호화 하 고 중간자 개입 공격을 방지 하려면 SQL Server의 인증서의 유효성을 검사 하는 시도 클라이언트입니다.  
- 
-## <a name="configuring-tls-on-linux"></a>Linux에서 TLS를 구성합니다.  
+## <a name="requirements-for-certificates"></a>인증서에 대 한 요구 사항 
+시작 하기 전에 인증서 이러한 요구 사항을 따라야 할 있습니다.
+- 현재 시스템 시간을 인증서의 속성 및 유효 기간 전에 인증서의 속성에서 유효 기간 이후 여야 합니다.
+- 인증서는 서버 인증용이어야 합니다. 이 서버 인증 (1.3.6.1.5.5.7.3.1)을 지정 하려면 인증서의 확장 된 키 사용 속성이 필요 합니다.
+- 인증서에 AT_KEYEXCHANGE KeySpec 옵션을 사용 하 여 만들어야 합니다. 일반적으로 인증서의 키 용도 속성 (KEY_USAGE) 키 암호화 (CERT_KEY_ENCIPHERMENT_KEY_USAGE)도 포함 됩니다.
+- 인증서의 주체 속성과 CN (일반 이름) 호스트 이름이 나 서버 컴퓨터의 정규화 된 도메인 이름 (FQDN)으로 동일한 인지 지정 해야 합니다. 참고: 와일드 카드 인증서 지원 됩니다. 
 
-사용 하 여 `mssql-conf` 의 인스턴스에 대 한 TLS를 구성 하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Linux에서 실행 합니다. 다음 옵션이 지원 됩니다.  
+## <a name="overview"></a>개요
+TLS를 사용 하 여 클라이언트 응용 프로그램에서 연결을 암호화 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 올바르게 구성 된 경우 개인 정보 및 클라이언트와 서버 간의 통신에 대 한 데이터 무결성 모두 TLS를 제공 합니다.  TLS 연결의 클라이언트 intiated 또는 서버 initited 수 있습니다. 
 
-|옵션 |Description |
-|--- |--- |
-|`network.forceencryption` |1 인 경우, 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 암호화에 대 한 모든 연결을 강제로 수행 합니다. 기본적으로이 옵션은 0입니다. |  
-|`network.tlscert` |인증서에 절대 경로 파일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS를 사용 합니다. 예: `/etc/ssl/certs/mssql.pem` 인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |  
-|`network.tlskey` |개인 키에 절대 경로 파일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS를 사용 합니다. 예: `/etc/ssl/private/mssql.key` 인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. | 
-|`network.tlsprotocols` |프로토콜은 SQL Server에서 허용 하는 TLS의 쉼표로 구분 된 목록입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]항상 가장 강력한 허용 된 프로토콜을 협상 하도록 시도 합니다. 클라이언트가 허용 된 모든 프로토콜을 지원 하지 않는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결 시도 거부 합니다.  호환성을 위해 지원 되는 모든 프로토콜은 기본 (1.2, 1.1, 1.0)에서 허용 됩니다.  TLS 1.2를 지원 하려면 클라이언트, TLS 1.2만을 허용 하는 것이 좋습니다. |  
-|`network.tlsciphers` |허용 하는 암호 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS에 대 한 합니다. 이 문자열 당 포맷 해야 [OpenSSL의 암호화 목록 형식](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)합니다. 일반적으로이 옵션을 변경할 필요가 없습니다. <br /> 기본적으로 다음 암호 허용 됩니다. <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |   
-| | |
- 
-## <a name="example"></a>예제 
-이 예제에서는 자체 서명 된 인증서를 사용 합니다. 일반적인 프로덕션 시나리오에서 모든 클라이언트에서 신뢰 하는 CA에서 인증서를 서명 합니다.  
- 
-### <a name="step-1-generate-private-key-and-certificate"></a>1 단계: 개인 키와 인증서를 생성 합니다. 
-Linux 컴퓨터에서 터미널 명령을 열고 여기서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 합니다. 다음 명령을 실행 합니다.  
 
-- 자체 서명 된 인증서를 생성 합니다. /CN SQL Server 호스트 정규화 된 도메인 이름을 일치 하는지 확인 합니다. 사용할 수 있습니다 필요에 따라 와일드 카드, 예를 들어 `'/CN=*.contoso.com'`합니다.    
-   ```  
-   openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
-   ```  
+## <a name="client-initiated-encryption"></a>클라이언트는 암호화 시작 
+- **인증서 생성** (/CN와 일치 해야 SQL Server 호스트 정규화 된 도메인 이름)
 
-- 에 대 한 액세스를 제한 합니다.`mssql`  
-   ```  
-   sudo chown mssql:mssql mssql.pem mssql.key 
-   sudo chmod 600 mssql.pem mssql.key 
-   ```  
- 
-- 시스템 SSL 디렉터리 (선택 사항)으로 이동  
-   ```  
-   sudo mv mssql.pem /etc/ssl/certs/ 
-   sudo mv mssql.key /etc/ssl/private/ 
-   ```  
- 
-### <a name="step-2-configure--includessnoversionincludesssnoversion-mdmd"></a>2 단계: 구성[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
-사용 하 여 `mssql-conf` 구성 하려면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인증서를 사용 하 여 TLS에 대 한 키입니다. 보안 향상된을 위해 허용 되는 프로토콜 유일한으로 TLS 1.2를 설정 하 고 모든 클라이언트가 암호화 된 연결을 사용 하도록 강제 합니다.  
+> [!NOTE]
+> 이 예제에서는 자체 서명 된 인증서 사용에 대 한이 쓰일 수 없습니다 프로덕션 시나리오에 있습니다. CA 인증서를 사용 해야 합니다. 
 
-```  
-sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssql.pem 
-sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssql.key 
-sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
-sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
-```
- 
-### <a name="step-3-restart-includessnoversionincludesssnoversion-mdmd"></a>3 단계: 다시 시작[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]이러한 변경 내용을 적용 하려면 다시 시작 해야 합니다.  
-`sudo systemctl restart mssql-server`  
- 
-### <a name="step-4-copy-self-signed-certificate-to-client-machines"></a>4 단계: 클라이언트 컴퓨터에 자체 서명 된 인증서를 복사 
-이 예제에서 자체 서명 인증서를 사용 하기 때문에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 인증서 (개인 키가 아닌)를 복사 하 여에 연결 하는 모든 클라이언트 컴퓨터에서 신뢰할 수 있는 루트 인증서로 설치 해야 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 인증서에는 모든 클라이언트에서 이미 신뢰할 수 있는 CA에서 서명, 경우에이 단계가 필요 하지 않습니다. 
- 
-### <a name="step-5-connect-from-clients-using-tls"></a>5 단계: TLS를 사용 하는 클라이언트에서 연결 
-연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 암호화 사용을 사용 하 여 클라이언트에서 및 `TrustServerCertificate` 로 설정 `False` 연결 문자열에 있습니다. 다음은 다양 한 도구 및 드라이버를 사용 하 여 이러한 매개 변수를 지정 하는 방법의 몇 가지 예입니다. 
+        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+        sudo chown mssql:mssql mssql.pem mssql.key 
+        sudo chmod 600 mssql.pem mssql.key   
+        sudo mv mssql.pem /etc/ssl/certs/ 
+        sudo mv mssql.key /etc/ssl/private/ 
 
-sqlcmd  
-`sqlcmd -N -C -S mssql.contoso.com -U sa -P '<YourPassword>'`  
+- **SQL Server 구성**
 
-[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]   
+        systemctl stop mssql-server 
+        cat /var/opt/mssql/mssql.conf 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 0 
+
+- **(Windows, Linux 또는 macOS) 클라이언트 컴퓨터의 인증서 등록**
+
+    -   CA 서명된 인증서를 사용 하는 경우 클라이언트 컴퓨터에는 사용자 인증서 대신 CA (인증 기관) 인증서를 복사 해야 합니다. 
+    -   방금 자체 서명 된 인증서를 사용 하는 경우에 다음 폴더를 배포 하려면 각.pem 파일을 복사 하 고 사용할 수 있도록 하려면 명령을 실행합니다 
+        - **Ubuntu** : 인증서를 복사 ```/usr/share/ca-certificates/``` .crt에 이름 바꾸기 확장 dpkg reconfigure ca 인증서를 사용 하 여 시스템 CA 인증서로 사용 하도록 설정 합니다. 
+        - **RHEL** : 인증서를 복사 ```/etc/pki/ca-trust/source/anchors/``` 사용 ```update-ca-trust``` 시스템 CA 인증서로 사용 하도록 설정 합니다.
+        - **SUSE** : 인증서를 복사 ```/usr/share/pki/trust/anchors/``` 사용 ```update-ca-certificates``` 해당으로 사용할 수 있도록 시스템 CA 인증서입니다.
+        - **Windows**:-> 인증서 루트 인증 기관 트러스트 된-> 현재 사용자 인증서로.pem 파일 가져오기
+        - **macOS**: 
+           - 인증서를 복사 합니다.```/usr/local/etc/openssl/certs```
+           - 해시 값을 가져오려면 다음 명령을 실행 합니다.```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
+           - 값은 인증서를 이름을 바꿉니다. 예를 들면 ```mv mssql.pem dc2dd900.0```과 같습니다. Dc2dd900.0에 있는지 확인```/usr/local/etc/openssl/certs```
+    
+-   **연결 문자열 예** 
+
+    - **[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]**   
   ![SSMS 연결 대화 상자](media/sql-server-linux-encrypted-connections/ssms-encrypt-connection.png "SSMS 연결 대화 상자")  
   
-ADO.NET  
-`"Encrypt=true; TrustServerCertificate=true;"`  
+    - **SQLCMD** 
 
-ODBC   
-`"Encrypt=yes; TrustServerCertificate=no;"`  
+            sqlcmd  -S <sqlhostname> -N -U sa -P '<YourPassword>' 
+    - **ADO.NET** 
 
-JDBC  
-`"encrypt=true; trustServerCertificate=false;" `
+            "Encrypt=True; TrustServerCertificate=False;" 
+    - **ODBC** 
 
- 
+            "Encrypt=Yes; TrustServerCertificate=no;" 
+    - **JDBC** 
+    
+            "encrypt=true; trustServerCertificate=false;" 
+
+## <a name="server-initiated-encryption"></a>서버 암호화 시작 
+
+- **인증서 생성** (/CN와 일치 해야 SQL Server 호스트 정규화 된 도메인 이름)
+        
+        openssl req -x509 -nodes -newkey rsa:2048 -subj '/CN=mssql.contoso.com' -keyout mssql.key -out mssql.pem -days 365 
+        sudo chown mssql:mssql mssql.pem mssql.key 
+        sudo chmod 600 mssql.pem mssql.key   
+        sudo mv mssql.pem /etc/ssl/certs/ 
+        sudo mv mssql.key /etc/ssl/private/ 
+
+- **SQL Server 구성**
+
+        systemctl stop mssql-server 
+        cat /var/opt/mssql/mssql.conf 
+        sudo /opt/mssql/bin/mssql-conf set network.tlscert /etc/ssl/certs/mssqlfqdn.pem 
+        sudo /opt/mssql/bin/mssql-conf set network.tlskey /etc/ssl/private/mssqlfqdn.key 
+        sudo /opt/mssql/bin/mssql-conf set network.tlsprotocols 1.2 
+        sudo /opt/mssql/bin/mssql-conf set network.forceencryption 1 
+        
+-   **연결 문자열 예** 
+
+    - **SQLCMD**
+
+            sqlcmd  -S <sqlhostname> -U sa -P '<YourPassword>' 
+    - **ADO.NET** 
+
+            "Encrypt=False; TrustServerCertificate=False;" 
+    - **ODBC** 
+
+            "Encrypt=no; TrustServerCertificate=no;"  
+    - **JDBC** 
+    
+            "encrypt=false; trustServerCertificate=false;" 
+            
+> [!NOTE]
+> 설정 **TrustServerCertificate** 클라이언트 인증서의 신뢰성을 확인 하는 CA에 연결할 수 없는 경우 True로
+
 ## <a name="common-connection-errors"></a>일반적인 연결 오류  
 
 |오류 메시지입니다. |Fix |
@@ -113,5 +132,4 @@ JDBC
 |대상 보안 주체 이름이 올바르지 않습니다.  |SQL Server의 인증서 일반 이름 필드는 클라이언트의 연결 문자열에 지정 된 서버 이름과 일치 하는지 확인 합니다. |  
 |현재 연결은 원격 호스트에 의해 강제로 끊겼습니다. |클라이언트가 SQL Server에 필요한 TLS 프로토콜 버전을 지원 하지 않습니다이 오류가 발생할 수 있습니다. 예를 들어 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS 1.2 필요, 클라이언트도 TLS 1.2 프로토콜을 지원 하는지 확인 하도록 구성 되어 있습니다. |
 | | |   
-
 

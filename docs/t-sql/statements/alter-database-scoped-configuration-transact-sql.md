@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 19d2d42ff513020b5d4bb9492f0714893101bdcb
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact SQL)
@@ -55,13 +55,12 @@ ms.lasthandoff: 09/27/2017
 ## <a name="syntax"></a>구문  
   
 ```  
-  
 ALTER DATABASE SCOPED CONFIGURATION  
 {        
      {  [ FOR SECONDARY] SET <set_options>  }    
 }  
 | CLEAR PROCEDURE_CACHE  
-| SET IDENTITY_CACHE = { ON | OFF }
+| SET < set_options >
 [;]    
   
 < set_options > ::=    
@@ -69,9 +68,9 @@ ALTER DATABASE SCOPED CONFIGURATION
     MAXDOP = { <value> | PRIMARY}    
     | LEGACY_CARDINALITY_ESTIMATION = { ON | OFF | PRIMARY}    
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}    
-    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}    
+    | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
+    | IDENTITY_CACHE = { ON | OFF }
 }  
-  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -131,21 +130,21 @@ PRIMARY
   
 지우기 PROCEDURE_CACHE  
 
-데이터베이스에 대 한 프로시저 캐시를 지웁니다. 주 데이터베이스와 보조 데이터베이스에서 모두 실행할 수 있습니다.  
+데이터베이스에 대 한 절차 (계획) 캐시를 지웁니다. 주 데이터베이스와 보조 데이터베이스에서 모두 실행할 수 있습니다.  
 
-IDENTITY_CACHE = { **ON** | OFF}  
+IDENTITY_CACHE  **=**  { **ON** | OFF}  
 
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서) 
+**적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (기능은 공개 미리 보기 상태에서) 
 
-데이터베이스 수준에서 id 캐시를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 **ON**합니다. Identity 캐싱 Id 열이 있는 테이블에서 삽입 성능을 개선 하기 위해 사용 됩니다. 서버가 예기치 않게 다시 시작 하거나 장애 조치 한 보조 서버에 있는 경우에 Id 열 값 간의 간격을 방지 하려면 IDENTITY_CACHE 옵션을 사용 하지 않도록 설정 합니다. 이 옵션은 제외 하는 서버 수준 에서만 아니라 데이터베이스 수준에서 설정할 수는 기존 SQL Server 추적 플래그 272 비슷합니다.   
+데이터베이스 수준에서 id 캐시를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 **ON**합니다. Identity 캐싱 id 열이 있는 테이블에서 삽입 성능을 개선 하기 위해 사용 됩니다. 서버가 예기치 않게 다시 시작 하거나 장애 조치 한 보조 서버에 있는 경우에 id 열 값 간의 간격을 방지 하려면 IDENTITY_CACHE 옵션을 사용 하지 않도록 설정 합니다. 이 옵션은 기존 비슷합니다 [추적 플래그 272](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)한다는 점을 제외 하는 서버 수준 에서만 아니라 데이터베이스 수준에서 설정할 수 있습니다.   
 
 > [!NOTE] 
-> 이 옵션은 기본 데이터베이스에 설정할 수 있습니다. 자세한 내용은 참조 [Id 열](create-table-transact-sql-identity-property.md)합니다.  
+> 이 옵션은 기본 데이터베이스에 설정할 수 있습니다. 자세한 내용은 참조 [id 열](create-table-transact-sql-identity-property.md)합니다.  
 >
 
 ##  <a name="Permissions"></a> 사용 권한  
  필요한 모든 데이터베이스 범위 구성 변경   
-에 데이터베이스입니다. 데이터베이스에 대 한 CONTROL 권한이 있는 사용자가이 권한을 부여할 수 있습니다.  
+에 데이터베이스입니다. 데이터베이스에 대 한 CONTROL 권한이 있는 사용자가이 사용 권한을 부여할 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  보조 데이터베이스가 해당 주 서로 다른 범위 지정 된 구성 설정이 적용을 구성할 수도 있지만, 모든 보조 데이터베이스가 동일한 구성을 사용 합니다. 각 보조 복제본에 대 한 다양 한 설정은 구성할 수 없습니다.  
@@ -268,7 +267,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE ;
 
 ### <a name="g-set-identitycache"></a>7. IDENTITY_CACHE 설정
 
-**적용 대상**: SQL Server 2017 및 Azure SQL 데이터베이스 (기능은 공개 미리 보기 상태에서) 
+**적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] (기능은 공개 미리 보기 상태에서) 
 
 이 예제는 id 캐시를 해제합니다.
 
@@ -279,6 +278,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 ## <a name="additional-resources"></a>추가 리소스
 
 ### <a name="maxdop-resources"></a>MAXDOP 리소스 
+* [병렬 처리 수준](../../relational-databases/query-processing-architecture-guide.md#DOP)
 * [SQL Server에서 "max degree of parallelism" 구성 옵션에 대 한 지침 및 권장 사항](https://support.microsoft.com/en-us/kb/2806535) 
 
 ### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 리소스    
@@ -286,18 +286,18 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE=OFF ;
 * [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](https://msdn.microsoft.com/library/dn673537.aspx)
 
 ### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 리소스    
+* [매개 변수 검색](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 * ["냄새가 나 매개 변수는!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
 ### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 리소스    
+* [추적 플래그&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 * [SQL Server 쿼리 최적화 프로그램 핫픽스 추적 플래그 4199 서비스 모델](https://support.microsoft.com/en-us/kb/974006)
 
 ## <a name="more-information"></a>자세한 정보  
  [sys.database_scoped_configurations&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)   
  [sys.configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)   
  [데이터베이스 및 파일 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)   
- [서버 구성 옵션&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [추적 플래그 &#40; Transact SQL &#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)   
- [sys.configurations&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
+ [서버 구성 옵션 &#40; SQL Server &#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) [sys.configurations&#40; Transact SQL &#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)  
   
   
 

@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1edcf3e322d8348436d2cfd6b0097226db7ce3e3
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 5d37c9150d19c3e39ea76b48fb0453d159ca0f44
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql"></a>R 모델을 배포 하 고 SQL에서 사용
@@ -213,7 +213,7 @@ PowerShell 스크립트를 처음 실행할 때 일괄 처리 점수 매기기�
 
 + [데이터 과학 시나리오 및 솔루션 템플릿](data-science-scenarios-and-solution-templates.md)
 
-+ [데이터베이스 내 고급 분석](/sqldev-in-database-r-for-sql-developers.md)
++ [데이터베이스 내 고급 분석](sqldev-in-database-r-for-sql-developers.md)
 
 + [Microsoft R - 데이터 분석 살펴보기](https://msdn.microsoft.com/microsoft-r/data-analysis-in-microsoft-r)
 
@@ -221,7 +221,7 @@ PowerShell 스크립트를 처음 실행할 때 일괄 처리 점수 매기기�
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[R 모델을 작성 하 고 SQL Server에 저장](/walkthrough-build-and-save-the-model.md)
+[R 모델을 작성 하 고 SQL Server에 저장](walkthrough-build-and-save-the-model.md)
 
 ## <a name="next-steps"></a>다음 단계
 

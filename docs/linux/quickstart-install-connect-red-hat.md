@@ -10,24 +10,24 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 19493e3abce27068f71ca5640b62fe1b17261eb4
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Red Hat에서 데이터베이스를 만들고 SQL Server 설치
 
 [!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-sslinux-only.md)]
 
-이 빠른 시작 자습서에서는 처음 설치할 SQL Server 2017에 Red Hat Enterprise Linux (RHEL) 7.3 합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작 자습서에서는 처음 설치할 SQL Server 2017에 Red Hat Enterprise Linux (RHEL) 7.3 + 합니다. 다음으로 연결 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
 
 > [!TIP]
 > 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 에 관심이 있는 경우는 [무인](sql-server-linux-setup.md#unattended) 또는 [오프 라인](sql-server-linux-setup.md#offline) 설치 절차 참조 [Linux에서 SQL Server에 대 한 설치 지침](sql-server-linux-setup.md)합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-와 RHEL 7.3 시스템이 있어야 **3.25 GB 이상** 메모리입니다.
+RHEL 7.3 또는 7.4 컴퓨터 있어야 **3.25 GB 이상** 메모리입니다.
 
 Red Hat Enterprise Linux을 사용자의 컴퓨터에 설치 하려면로 이동 [http://access.redhat.com/products/red-hat-enterprise-linux/evaluation](http://access.redhat.com/products/red-hat-enterprise-linux/evaluation)합니다. 또한 Azure에서 RHEL 가상 컴퓨터를 만들 수 있습니다. 참조 [만들기 및 Azure CLI Linux Vm 관리](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 사용 하 여 `--image RHEL` 에 대 한 호출에서 `az vm create`합니다.
 
@@ -52,7 +52,6 @@ RHEL에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령�
 1. SQL Server를 설치 하려면 다음 명령을 실행 합니다.
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-server
    ```
 
@@ -95,14 +94,12 @@ RHEL에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령�
 1. 이전 버전의 경우 **mssql 도구** 설치 이전 unixODBC 패키지를 제거 합니다.
 
    ```bash
-   sudo yum update
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
 1. 설치 하려면 다음 명령을 실행 **mssql 도구** unixODBC 개발자 패키지와 함께 합니다.
 
    ```bash
-   sudo yum update
    sudo yum install -y mssql-tools unixODBC-devel
    ```
 

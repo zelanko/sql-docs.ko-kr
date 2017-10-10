@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017의 새로운 기능 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/14/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,18 +15,16 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 42798d6ad1bf9554be5cb3bffd97f56e70ebbf9e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
+SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 특정 기능 영역의 새로운 기능을 요약하고 추가 세부 정보에 대한 링크를 포함합니다.
 
-SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨테이너 및 Windows에서도 제공하여 SQL Server를 개발 언어, 데이터 형식, 온-프레미스 또는 클라우드, 운영 체제 등을 선택할 수 있는 플랫폼으로 만들기 위한 중요한 진전을 이루었습니다. 이 항목에서는 최신 SQL Server 2017 릴리스 후보(RC2, 2017년 월) 및 CTP(커뮤니티 기술 미리 보기) 릴리스의 특정 기능 영역에 대한 새로운 기능을 요약합니다.
-
-[![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [최신 SQL Server 2017 릴리스 다운로드: RC2, 2017년 8월](http://go.microsoft.com/fwlink/?LinkID=829477)
-이 릴리스에는 버그 수정 및 성능 향상 기능이 포함되어 있습니다.
+[![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [SQL Server 2017 릴리스 다운로드 - 2017년 10월:](http://go.microsoft.com/fwlink/?LinkID=829477).
 
 >**Linux에서 SQL Server 실행!** 자세한 내용은 [SQL Server on Linux Documentation](https://docs.microsoft.com/sql/linux/)을 참조하세요.
 
@@ -38,7 +36,7 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
 - ALTER DATABASE SCOPED CONFIGURATION의 **IDENTITY_CACHE** 옵션을 사용하면 서버가 예기치 않게 다시 시작하거나 보조 서버로 장애 조치(failover)된 후 ID 열의 값이 차이 나지 않도록 할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요. (CTP 2.0)
 - 응용 프로그램 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL Databases의 적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)를 참조하세요.
 - **자동 데이터베이스 튜닝**은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고 솔루션을 추천하며 식별된 문제를 자동으로 해결할 수 있습니다. [Automatic tuning](../relational-databases/automatic-tuning/automatic-tuning.md)(자동 튜닝)을 참조하세요. (CTP 2.0)
-- 다 대 다 관계를 모델링하기 위한 새 **그래프 데이터베이스 기능 **에 노드 및 에지 테이블을 만들기 위한 새 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리를 위한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)(SQL Server 2017에서 그래프 처리)을 참조하세요. (CTP 2.0)
+- 다 대 다 관계를 모델링하기 위한 새 **그래프 데이터베이스 기능** 에 노드 및 에지 테이블을 만들기 위한 새 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리를 위한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. [Graph Processing with SQL Server 2017](../relational-databases/graphs/sql-graph-overview.md)(SQL Server 2017에서 그래프 처리)을 참조하세요. (CTP 2.0)
 - CLR 어셈블리의 보안을 향상하기 위해 `clr strict security`라는 sp_configure 옵션이 기본적으로 사용하도록 설정됩니다. [CLR strict security](../database-engine/configure-windows/clr-strict-security.md)(CLR 엄격한 보안)를 참조하세요. (CTP 2.0)
 - 설치 프로그램에서는 이제 초기 tempdb 파일 크기를 최대 파일당 **256GB**(262,144MB)까지 지정할 수 있으며, IFI를 사용하도록 설정하지 않고 파일 크기를 1GB보다 크게 설정하면 경고가 표시됩니다. (CTP 2.0)
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)의 **modified_extent_page_count** 열에서 각 데이터베이스 파일의 차등 변경 내용을 추적하므로 데이터베이스에서 변경된 페이지의 비율에 따라 차등 백업이나 전체 백업을 수행하는 스마트 백업 솔루션을 지원합니다. (CTP 2.0)

@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 4d2da018be494691ff67b9b200a24b7c615fbbad
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: 8d94b671e88eb512cd763dc7660df6d3ac986370
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="view-and-summarize-data-using-r"></a>보기 및 R을 사용 하 여 데이터를 요약 합니다.
@@ -245,9 +245,9 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds,
 
 ## <a name="next-lesson"></a>다음 단원
 
-[그래프 및 R을 사용 하는 점도 만들기](/walkthrough-create-graphs-and-plots-using-r.md)
+[R을 사용하여 그래프 및 플롯 만들기](walkthrough-create-graphs-and-plots-using-r.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[SQL을 사용 하 여 데이터 탐색](/walkthrough-view-and-explore-the-data.md)
+[SQL을 사용하여 데이터 탐색](walkthrough-view-and-explore-the-data.md)
 

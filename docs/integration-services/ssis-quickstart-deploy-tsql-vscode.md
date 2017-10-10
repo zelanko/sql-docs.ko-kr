@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: cfc4ae035e699ac496760cd0fc540e72fd463a50
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 2dc6de798ca76b43627a3c381fe628506c3e7480
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-visual-studio-code-with-transact-sql"></a>Transact SQL을 사용한 Visual Studio Code에서 SSIS 프로젝트 배포
@@ -21,7 +21,7 @@ ms.lasthandoff: 09/22/2017
 > [!NOTE]
 > VS Code와 Azure SQL 데이터베이스 서버에 연결 하는 경우에이 문서에 설명 된 메서드는 사용할 수 없습니다. `catalog.deploy_project` 프로시저에 대 한 경로 저장된 프로시저는 `.ispac` (온-프레미스) 로컬 파일 시스템의 파일입니다.
 
-Visual Studio 코드는 Windows, macOS 등을 지 원하는 확장을 포함 하 여 Linux 용 코드 편집기는 `mssql` 에 Microsoft SQL Server, Azure SQL 데이터베이스 또는 Azure SQL 데이터 웨어하우스에 연결 하기 위한 확장 합니다. VS Code에 대 한 자세한 내용은 참조 하십시오. [Visual Studio Cod](https://code.visualstudio.com/)합니다.
+Visual Studio 코드는 Windows, macOS 등을 지 원하는 확장을 포함 하 여 Linux 용 코드 편집기는 `mssql` 에 Microsoft SQL Server, Azure SQL 데이터베이스 또는 Azure SQL 데이터 웨어하우스에 연결 하기 위한 확장 합니다. VS Code에 대 한 자세한 내용은 참조 하십시오. [Visual Studio Code](https://code.visualstudio.com/)합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
@@ -31,7 +31,7 @@ Visual Studio 코드는 Windows, macOS 등을 지 원하는 확장을 포함 하
 
 ## <a name="set-language-mode-to-sql-in-vs-code"></a>VS Code에는 SQL로 언어 모드 설정
 
-사용할 수 있도록 `mssql` 집합이 언어 모드가 설정 된 명령 및 T-SQL IntelliSense **SQL** Visual Studio Code에서 합니다.
+사용할 수 있도록 `mssql` 명령 및 T-SQL IntelliSense, 언어 모드를 설정 **SQL** Visual Studio Code에서 합니다.
 
 1. Visual Studio 코드를 열고 새 창을 엽니다. 
 

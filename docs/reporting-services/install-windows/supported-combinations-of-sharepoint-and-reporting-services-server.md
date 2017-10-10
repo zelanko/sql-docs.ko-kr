@@ -1,5 +1,5 @@
 ---
-title: "지원 되는 SharePoint와 Reporting Services 서버 조합은 | Microsoft Docs"
+title: "지원 되는 SharePoint와 Reporting Services 서버의 조합 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/01/2017
@@ -19,15 +19,15 @@ caps.latest.revision: 39
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 507c09d09f22f8326898b557997bc109785f30c0
+ms.translationtype: MT
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: b9fc7191c5ebb97cca0596b40e7db149d8293fd2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint 및 Reporting Services 서버의 지원 되는 조합
+# <a name="supported-combinations-of-sharepoint-and-reporting-services-server"></a>SharePoint와 Reporting Services 서버의 지원 되는 조합
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE [ssrs-appliesto-2016](../../includes/ssrs-appliesto-2016.md)] [!INCLUDE [ssrs-appliesto-not-2017](../../includes/ssrs-appliesto-not-2017.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE [ssrs-appliesto-not-pbirs](../../includes/ssrs-appliesto-not-pbirs.md)]
 
@@ -38,15 +38,15 @@ SharePoint 모드로 설치 된 SQL Server Reporting Services 보고서 서버�
 > [!NOTE]
 > SQL Server 2016 후 SharePoint와 reporting Services 통합을 사용할 수 없습니다.
 
-## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>지원되는 SharePoint와 Reporting Services 구성 요소의 조합
+## <a name="supported-combinations-of-sharepoint-and-reporting-services-components"></a>지원 되는 SharePoint와 Reporting Services 구성 요소 조합
 
  다음 표에서는 보고서 서버, SharePoint 제품용 Reporting Services 추가 기능, SharePoint 제품에 대해 지원되는 조합 형태를 요약해서 보여 줍니다. 다음 표에 나열되지 않은 조합은 지원되지 않습니다.
 
-### <a name="supported-combinations"></a>지원되는 조합
+### <a name="supported-combinations"></a>지원 되는 조합
 
 ||보고서 서버|추가 기능|SharePoint 버전|
 |-|-------------------|-------------|------------------------|
-|1|SQL Server 2016|SQL Server 2016|SharePoint 2016|
+|1.|SQL Server 2016|SQL Server 2016|SharePoint 2016|
 |2|SQL Server 2016|SQL Server 2016|SharePoint 2013|
 |3|SQL Server 2014|SQL Server 2014|SharePoint 2013|
 |4|SQL Server 2014|SQL Server 2014|SharePoint 2010|
@@ -66,7 +66,7 @@ SharePoint 모드로 설치 된 SQL Server Reporting Services 보고서 서버�
 
  추가 기능 다운로드 페이지에 대한 자세한 내용은 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
 
- **참고 사항:**
+ **추가 고려 사항:**
 
 - 팜 내의 모든 SharePoint 서버를 업그레이드해야 합니다. 여기에는 앱 및 웹 프런트 엔드 서버가 포함됩니다.
 
@@ -86,4 +86,4 @@ SharePoint 모드로 설치 된 SQL Server Reporting Services 보고서 서버�
  [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server 2016 설치를 위한 하드웨어 및 소프트웨어 요구 사항](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

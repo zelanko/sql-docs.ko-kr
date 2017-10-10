@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7e1eeda5d365f5c625e68c498c741754bf59c9d7
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 49ff2aa300fc8f8e74424ae6e334bee823e8176c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>데이터베이스 범위 이름 자격 증명 (Transact SQL) 만들기
@@ -103,7 +103,7 @@ GO
 ```  
 
 ### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>2. 공유 액세스 서명에 대 한 자격 증명의 범위는 데이터베이스 만들기.   
-다음 예제에서는 데이터베이스 범위 자격 증명을 만드는 데 사용할 수는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md), 작업을 수행할 수 있는 대량 작업을 같은 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md).   
+다음 예제에서는 데이터베이스 범위 자격 증명을 만드는 데 사용할 수는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md), 작업을 수행할 수 있는 대량 작업을 같은 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). SQL Server, APS 또는 SQL DW에 PolyBase 사용 하 여 공유 액세스 서명에 사용할 수 없습니다.
 ```tsql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',

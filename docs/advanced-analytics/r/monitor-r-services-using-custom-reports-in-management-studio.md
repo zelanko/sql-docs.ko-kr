@@ -1,7 +1,7 @@
 ---
 title: "Management Studio의 사용자 지정 보고서를 사용하여 R Services 모니터링 | Microsoft 문서"
 ms.custom: 
-ms.date: 02/20/2017
+ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,22 +15,25 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 14f6d6d7373afd452f06acae43f7023de136bc71
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 5a1990a7612eab44029c36129e73050854337930
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
-# <a name="monitor-r-services-using-custom-reports-in-management-studio"></a>Management Studio의 사용자 지정 보고서를 사용하여 R Services 모니터링
-SQL Server R Services를 손쉽게 관리할 수 있도록 제품 팀에서 SQL Server Management Studio에 추가할 수 있는 사용자 지정 보고서 샘플을 여러 개 제공하고 있습니다. 이 보고서를 사용하여 다음과 같은 R Service 세부 정보를 볼 수 있습니다.
+# <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio에서 사용자 지정 보고서를 사용 하 여 컴퓨터 학습 서비스 모니터링
 
-- 활성 R 세션의 목록
-- 현재 인스턴스의 R 구성
-- R 런타임에 대한 실행 통계
-- R Services에 대한 확장된 이벤트 목록
-- 현재 인스턴스에 설치된 R 패키지의 목록
+쉽게 기계 학습에 사용 되는 인스턴스 관리 제품 팀은 다양 한 SQL Server Management Studio에 추가할 수 있는 샘플 사용자 지정 보고서를 제공 했습니다. 이러한 보고서에서와 같은 세부 정보를 볼 수 있습니다.
 
-이 항목에서는 보고서를 설치하고 사용하는 방법을 설명합니다. Management Studio의 사용자 지정 보고서에 대한 자세한 내용은 [Management Studio의 사용자 지정 보고서](~/ssms/object/custom-reports-in-management-studio.md)를 참조하세요.
+- Python 또는 R 활성 세션
+- 인스턴스에 대 한 구성 설정
+- 컴퓨터 학습 작업에 대 한 실행 통계
+- R 서비스에 대 한 확장된 이벤트
+- 현재 인스턴스에 설치 된 R, Python 패키지
+
+이 문서에서는 설치 하 고 컴퓨터 leaerning 위해 특별히 제공 되는 사용자 지정 보고서를 사용 하는 방법에 설명 합니다. 
+
+Management Studio의 보고서에 대 한 일반 소개를 참조 하십시오. [Management Studio에서 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)합니다.
 
 ## <a name="how-to-install-the-reports"></a>보고서를 설치하는 방법
 
@@ -45,10 +48,13 @@ SQL Server R Services를 손쉽게 관리할 수 있도록 제품 팀에서 SQL 
 
 ### <a name="step-1-download-the-reports"></a>1단계. 보고서 다운로드
 
-1. [SQL Server 제품 샘플](https://github.com/Microsoft/sql-server-samples)이 들어 있는 GitHub 리포지토리를 열고 이 페이지에서 샘플 보고서를 다운로드합니다. 
+1. 포함 된 GitHub 리포지토리를 열고 [SQL Server 제품 샘플](https://github.com/Microsoft/sql-server-samples), 예제 보고서를 다운로드 합니다. 
 
-   + [SSMS 사용자 지정 보고서](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/r-services/ssms-custom-reports)
-      
+    + [SSMS 사용자 지정 보고서](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
+
+    > [!NOTE]
+    > SQL Server 2017 때문 학습 Services 또는 SQL Server 2016 R 서비스와 보고서를 사용할 수 있습니다.
+
 2. 샘플을 다운로드하려면 GitHub에 로그인하고 샘플의 로컬 분기를 만들면 됩니다. 
 
 ### <a name="step-2-copy-the-reports-to-management-studio"></a>2단계. Management Studio에 보고서 복사
@@ -65,65 +71,52 @@ SQL Server R Services를 손쉽게 관리할 수 있도록 제품 팀에서 SQL 
 ### <a name="step-3-run-the-reports"></a>3단계. 보고서 실행
 
 5. 보고서를 실행할 인스턴스의 **데이터베이스** 노드를 Management Studio에서 마우스 오른쪽 단추로 클릭합니다.
-6. **보고서**를 클릭하고 **사용자 지정 보고서**를 클릭합니다. 
+6. **보고서**를 클릭하고 **사용자 지정 보고서**를 클릭합니다.
 7. **파일 열기** 대화 상자에서 사용자 지정 보고서 폴더를 찾습니다.
 8. 다운로드한 RDL 파일 중 하나를 선택한 다음 **열기**를 클릭합니다.
 
 > [!IMPORTANT]
-> 일부 컴퓨터에서는 이러한 보고서를 사용할 수 없습니다. 예를 들면 DPI가 높거나 해상도가 1080p보다 큰 디스플레이 장치가 있는 컴퓨터입니다. SSMS의 보고서 뷰어 컨트롤에는 보고서와 충돌하는 버그가 있습니다.  
-
+> 일부 컴퓨터에서는 이러한 보고서를 사용할 수 없습니다. 예를 들면 DPI가 높거나 해상도가 1080p보다 큰 디스플레이 장치가 있는 컴퓨터입니다. SSMS의 보고서 뷰어 컨트롤에는 보고서와 충돌하는 버그가 있습니다.
 
 ## <a name="report-list"></a>보고서 목록
 
-현재 GitHub의 제품 샘플 리포지토리에는 SQL Server R Services에 대한 다음과 같은 보고서가 있습니다.
+GitHub에서 제품 샘플 리포지토리에는 현재 다음과 같은 보고서에 포함 됩니다.
 
 + **R Services - 활성 세션**
 
-  이 보고서를 사용하면 SQL 인스턴스에 현재 연결되어 R 작업을 실행 중인 사용자를 볼 수 있습니다. 
+  현재 SQL Server 인스턴스 및 작업을 학습 하는 실행 중인 컴퓨터에 연결 되어 있는 사용자를 보려면이 보고서를 사용 합니다. 
   
 + **R Services - 구성**
 
-  이 보고서를 사용하면 R 런타임의 속성과 R Services의 구성을 볼 수 있습니다. 보고서는 다시 시작이 필요한지 표시하고 필요한 네트워크 프로토콜을 확인합니다. 
+  외부 스크립트 런타임 및 관련된 서비스의 구성을 보려면이 보고서를 사용 합니다. 보고서는 다시 시작이 필요한지 표시하고 필요한 네트워크 프로토콜을 확인합니다. 
   
-  SQL 계산 컨텍스트에서 R을 실행하려면 묵시적 인증이 필요합니다. 보고서는 묵시적 인증이 가능한지 확인하기 위해 데이터베이스가 그룹 SQLRUserGroup에 로그인할 수 있는지 확인합니다.
-
-  > [!NOTE]
-  > 이러한 필드에 대한 자세한 내용은 Hadley Wickam의 [패키지 메타데이터](http://r-pkgs.had.co.nz/description.html)를 참조하세요. 예를 들어 릴리스를 쉽게 구별할 수 있도록 R 런타임에 *애칭* 필드를 도입했습니다. 
+  묵시적 인증이 SQL Server 계산 컨텍스트를 실행 하는 기계 학습 작업에 대 한 필요 합니다. 묵시적된 인증이 구성 된를 확인 하려면 보고서 SQLRUserGroup 그룹에 대 한 데이터베이스 로그인이 있는지 확인 합니다.
 
  + **R Services - 인스턴스 구성** 
 
-   이 보고서는 설치 후 R Services를 쉽게 구성할 수 있도록 만든 것입니다. R Services를 올바르게 구성하지 않은 경우 이전 보고서에서 실행할 수 있습니다.
+   이 보고서는 기계 학습을 구성 하는 데 사용 됩니다. 이전 보고서에서 발견 된 구성 오류를 해결 하려면이 보고서를 실행할 수 있습니다.
  
 + **R Services - 실행 통계**
 
-  이 보고서를 사용하면 R Services의 실행 통계를 볼 수 있습니다. 예를 들어 실행한 R 스크립트의 총 개수, 병렬 실행 개수, 가장 자주 사용한 RevoScaleR 함수 정보를 알 수 있습니다.
+  이 보고서를 사용 하 여 컴퓨터 학습 작업에 대 한 실행 통계를 볼 수 있습니다. 예를 들어 실행한 R 스크립트의 총 개수, 병렬 실행 개수, 가장 자주 사용한 RevoScaleR 함수 정보를 알 수 있습니다. 클릭 **SQL 스크립트 보기** 전체 T-SQL 코드 뒤에이 보고서를 가져올 수 있습니다.
+
   이 보고서는 현재 RevoScaleR 패키지 함수의 통계만 모니터링합니다.
-  **View SQL Script** (SQL 스크립트 보기)를 클릭하여 이 보고서의 T-SQL 코드를 가져올 수 있습니다. 
 
 + **R Services - 확장 이벤트**
 
-  이 보고서를 사용하여 R 스크립트 실행을 모니터링하는 데 사용할 수 있는 확장된 이벤트 목록을 볼 수 있습니다. 
-  **View SQL Script** (SQL 스크립트 보기)를 클릭하여 이 보고서의 T-SQL 코드를 가져올 수 있습니다.
+  이 보고서를 사용 하 여 외부 스크립트는 런타임 관련 된 작업 모니터링에 사용할 수 있는 확장된 이벤트의 목록을 볼 수 있습니다. 클릭 **SQL 스크립트 보기** 전체 T-SQL 코드 뒤에이 보고서를 가져올 수 있습니다.
 
 + **R Services - 패키지**
 
-  이 보고서를 사용하여 SQL Server 인스턴스에 설치된 R 패키지 목록을 볼 수 있습니다. 현재 이 보고서에는 다음 패키지 속성이 들어 있습니다. 
-  + 패키지 이름
-  + 버전 
-  + 개체
-  + 라이선스
-  + 기본 제공
-  + Lib 경로
+  이 보고서를 사용 하 여 SQL Server 인스턴스에 설치 된 R, Python 패키지 목록을 볼 수 있습니다.
 
 + **R Services - 리소스 사용량**
 
-  이 보고서를 사용하여 SQL Server R 스크립트 실행으로 인한 CPU, 메모리 및 I/O 리소스 사용량을 확인할 수 있습니다. 또한 외부 리소스 풀의 메모리 설정도 볼 수 있습니다. 
-
+  이 보고서를 사용 하 여 외부 스크립트 실행 하 여 CPU, 메모리 및 I/O 리소스 사용량을 볼 수 있습니다. 또한 외부 리소스 풀의 메모리 설정도 볼 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
 [R Services 모니터링](../../advanced-analytics/r-services/monitoring-r-services.md)
 
 [R Services에 대한 확장된 이벤트](../../advanced-analytics/r-services/extended-events-for-sql-server-r-services.md)
-
 

@@ -1,7 +1,7 @@
 ---
 title: "계산 열 (SSAS 테이블 형식) | Microsoft Docs"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/03/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,17 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5155ce65d240db9bec2f01ada5dcba61c9926037
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3c36cd3b55617c7ca6c20c244a9488227a2f6ff5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="calculated-columns"></a>계산 열
   테이블 형식 모델에서 계산 된 열을 사용 하 모델에 새 데이터를 추가할 수 있습니다. 열에 값을 붙여넣거나 가져오는 대신, 열의 행 수준 값을 정의하는 DAX 수식을 만듭니다. 그러면 보고서, 피벗 테이블 또는 피벗 차트에서 다른 열과 마찬가지로 계산 열을 사용할 수 있습니다.  
-  
-> [!NOTE]  
->  DirectQuery 모드의 테이블 형식 모델에 대해서는 계산 열이 지원되지 않습니다. 자세한 내용은 참조 [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)합니다.  
+ 
   
   
 ##  <a name="bkmk_understanding"></a> 이점  
@@ -78,7 +76,7 @@ ms.lasthandoff: 09/01/2017
   
 |항목|Description|  
 |-----------|-----------------|  
-|[계산된 열 만들기](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
+|[계산 열 만들기](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md)|이 항목의 태스크에서는 새 계산 열을 테이블에 추가하는 방법을 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)   
@@ -86,3 +84,4 @@ ms.lasthandoff: 09/01/2017
  [계산](../../analysis-services/tabular-models/calculations-ssas-tabular.md)  
   
   
+

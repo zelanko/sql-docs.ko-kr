@@ -31,10 +31,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e8b6972868c221ec0368b689164eff740ae6f1a7
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: 885ff94e3cecb82bb93e0abac26838d6c265275c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="select-clause-transact-sql"></a>SELECT 절(Transact-SQL)
@@ -140,13 +140,12 @@ FROM Cities;
   
  별칭은 식의 결과에 이름을 지정하는 데도 사용됩니다. 다음 예를 참조하세요.  
   
- `USE AdventureWorks2012`;  
-  
- `GO`  
-  
- `SELECT AVG(UnitPrice) AS [Average Price]`  
-  
- `FROM Sales.SalesOrderDetail;`  
+ ```sql
+ USE AdventureWorks2012;  
+ GO  
+ SELECT AVG(UnitPrice) AS [Average Price]  
+ FROM Sales.SalesOrderDetail;
+ ```  
   
  *column_alias를 사용할* ORDER BY 절에 사용할 수 있습니다. WHERE, GROUP BY 또는 HAVING 절에서는 사용할 수 없습니다. 쿼리 식이 DECLARE CURSOR 문의 일부인 경우 *column_alias를 사용할* FOR UPDATE 절에서 사용할 수 없습니다.  
   

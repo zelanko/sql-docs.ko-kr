@@ -9,16 +9,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
-ms.openlocfilehash: a1df574e0436a9fa81e714dfdc21bcbd43c0bda8
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 0f1c7733f0ce6b132c209961a1fd12da80cbd282
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/22/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="deploy-an-ssis-project-from-the-command-prompt-with-isdeploymentwizardexe"></a>ISDeploymentWizard.exe 사용 하 여 명령 프롬프트에서 SSIS 프로젝트 배포
 이 빠른 시작 자습서에서는 Integration Services 배포 마법사를 실행 하 여 명령 프롬프트에서 SSIS 프로젝트를 배포 하는 방법을 보여 줍니다. `ISDeploymentWizard.exe`합니다.
 
-Integration Services 배포 마법사에 대 한 자세한 내용은 참조 하십시오. [Integration Services 배포 마법사](/sql/integration-services/packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)합니다.
+Integration Services 배포 마법사에 대 한 자세한 내용은 참조 하십시오. [Integration Services 배포 마법사](packages/deploy-integration-services-ssis-projects-and-packages.md#integration-services-deployment-wizard)합니다.
 
 ## <a name="start-the-integration-services-deployment-wizard"></a>Integration Services 배포 마법사를 시작 합니다.
 1. 명령 프롬프트 창을 엽니다.
@@ -46,7 +46,7 @@ Integration Services 배포 마법사에 대 한 자세한 내용은 참조 하�
   
 5.  배포 프로세스가 완료 된 후의 **결과** 페이지가 열립니다. 이 페이지는 각 동작의 성공 또는 실패 여부를 표시합니다.
     -   작업에 실패 한 경우 클릭 **실패** 에 **결과** 열 오류에 대 한 설명을 표시 합니다.
-    -   필요에 따라 **보고서 저장... ** XML 파일로 결과 저장할 수 있습니다.
+    -   필요에 따라 **보고서 저장...**  XML 파일로 결과 저장할 수 있습니다.
     -   클릭 **닫기** 여 마법사를 종료 합니다.
 
 ## <a name="next-steps"></a>다음 단계

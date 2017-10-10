@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ccdcc20a9bb66ba18f74975f725f24deb7028265
+ms.sourcegitcommit: 41c2caf816ca412e4a6048713dc66f97da5155ae
+ms.openlocfilehash: 4f3f5463e6a0117780add65feb9916ff78dad68d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/07/2017
 
 ---
 # <a name="create-data-features-using-r-and-sql-walkthrough"></a>R 및 SQL (연습)를 사용 하 여 데이터 기능 만들기
@@ -244,10 +244,10 @@ SQL 사용자 정의 함수 예제를 사용 하 여 데이터 변환의 소요 
 
 ## <a name="next-lesson"></a>다음 단원
 
-[R 모델을 작성 하 고 SQL에 저장](/walkthrough-build-and-save-the-model.md)
+[R 모델을 작성 하 고 SQL에 저장](walkthrough-build-and-save-the-model.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[보기 및 R을 사용 하 여 데이터를 요약 합니다.](/walkthrough-view-and-summarize-data-using-r.md)
+[보기 및 R을 사용 하 여 데이터를 요약 합니다.](walkthrough-view-and-summarize-data-using-r.md)
 
 

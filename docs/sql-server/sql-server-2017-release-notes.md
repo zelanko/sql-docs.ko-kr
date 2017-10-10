@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 2017 릴리스 정보 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/25/2017
+ms.date: 10/02/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -15,21 +15,56 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
-ms.openlocfilehash: 0288cee4b9dee5fba6b67b21e81193bdbe374a94
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 373d01cf6a8032d76c36af0b84be7180c79a7117
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
-이 항목에서는 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
+이 항목에서는 SQL Server 2017의 관련 제한 사항 및 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 - [SQL Server 2017의 새로운 기능](../sql-server/what-s-new-in-sql-server-2017.md)
 - [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)
 
-[![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) **사용해 보기:** [최신 SQL Server 2017 릴리스 다운로드: RC2, 2017년 8월](http://go.microsoft.com/fwlink/?LinkID=829477)
+**SQL Server를 사용해 보세요.**
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
+- [![가상 컴퓨터 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2017이 있는 가상 컴퓨터 실행](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
 
+## <a name="sql-server-2017---general-availability-release-october-2017"></a>SQL Server 2017 - 일반 공급 릴리스(2017년 10월)
+### <a name="database-engine"></a>데이터베이스 엔진
+
+- **문제 및 고객에게 미치는 영향:** 업그레이드 후 기존 FILESTREAM 네트워크 공유를 더 이상 사용할 수 없습니다.
+
+- **해결 방법:** 먼저 컴퓨터를 재부팅하고 FILESTREAM 네트워크 공유를 사용할 수 있는지 확인합니다. 공유를 여전히 사용할 수 없으면 다음을 수행합니다.
+
+    1. SQL Server 구성 관리자에서 SQL Server 인스턴스를 마우스 오른쪽 단추로 클릭하고 **속성**을 클릭합니다. 
+    2. **FILESTREAM** 탭에서 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 선택 취소한 후 **적용**을 클릭합니다.
+    3. 원본 공유 이름으로 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 다시 선택하고 **적용**을 클릭합니다.
+
+### <a name="master-data-services-mds"></a>MDS(Master Data Services)
+- **문제 및 고객에게 미치는 영향:** 사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
+
+- **해결 방법:** 
+  - 루트 수준이 아니라 트리 뷰의 하위 노드에 대한 권한을 부여합니다.
+  - 또는
+  - MDS 팀 블로그 [error applying permission on entity level(엔터티 수준에서 사용 권한 적용 오류)](http://sqlblog.com/blogs/mds_team/archive/2017/09/05/sql-server-2016-sp1-cu4-regression-error-while-applying-permission-on-entity-level-quick-workaround.aspx)에 설명된 스크립트를 실행합니다.
+
+### <a name="analysis-services"></a>Analysis Services
+- **문제 및 고객에게 미치는 영향:** 1400 호환성 수준의 테이블 형식 모델의 경우 데이터 가져오기를 사용할 때 Amazon Redshift, IBM Netezza 및 Impala와 같은 일부 데이터 원본에 대한 데이터 커넥터를 아직 사용할 수 없습니다.
+- **해결 방법:** 없습니다.   
+
+- **문제 및 고객에게 미치는 영향:** 큐브 뷰를 포함하는 1400 호환성 수준의 직접 쿼리 모델은 메타데이터 쿼리 또는 검색에 실패할 수 있습니다.
+- **해결 방법:** 큐브 뷰를 제거하고 다시 배포합니다.
+
+### <a name="tools"></a>Tools
+- **문제 및 고객에게 미치는 영향:** *DReplay*를 실행할 때 다음 메시지와 함께 실패합니다. "DReplay 오류 예기치 않은 오류가 발생했습니다".
+- **해결 방법:** 없습니다.
+
+
+![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc2---august-2017"></a>SQL Server 2017 릴리스 후보(RC2 - 2017년 8월)
 이 릴리스에 대한 Windows 릴리스 정보에는 SQL Server가 없습니다. [Linux 릴리스 노트의 SQL Server](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes)를 참조하세요.
+
 
 ![horizontal_bar](../sql-server/media/horizontal-bar.png)
 ## <a name="sql-server-2017-release-candidate-rc1---july-2017"></a>SQL Server 2017 릴리스 후보(RC1 - 2017년 7월)

@@ -12,6 +12,17 @@
 ## [설치 및 연결 - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [실행 및 연결 - Docker](quickstart-install-connect-docker.md)
 
+# 자습서
+## [1_Windows에서 마이그레이션](sql-server-linux-migrate-restore-database.md)
+## [2_Oracle에서 마이그레이션](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=%2fsql%2flinux%2ftoc.json)
+## [3_Docker에서 마이그레이션](tutorial-restore-backup-in-sql-server-container.md)
+## [4_작업 만들기](sql-server-linux-run-sql-server-agent-job.md)
+## [5_AD 인증 설정](sql-server-linux-active-directory-authentication.md)
+## [6_장애 조치(Failover) 클러스터 인스턴스 만들기](sql-server-linux-shared-disk-cluster-configure.md)
+### [iSCSI](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+### [NFS](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+### [SMB](sql-server-linux-shared-disk-cluster-configure-smb.md)
+
 # 개념
 ## Install
 ### [SQL Server 설치](sql-server-linux-setup.md)
@@ -19,12 +30,13 @@
 ### [SQL Server 에이전트 설치](sql-server-linux-setup-sql-agent.md)
 ### [SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
-### [Azure에서 SQL VM 프로비전](sql-server-linux-azure-virtual-machine.md)
+### [GA 리포지토리 등록](sql-server-linux-change-repo.md)
+### [Azure에서 SQL VM 프로비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
 
 ## 구성
 ### [mssql-conf를 사용하여 구성](sql-server-linux-configure-mssql-conf.md)
 ### [환경 변수](sql-server-linux-configure-environment-variables.md)
-### [Docker](sql-server-linux-configure-docker.md)
+### [Docker 컨테이너 구성](sql-server-linux-configure-docker.md)
 ### [고객 의견](sql-server-linux-customer-feedback.md)
 
 ## [개발](sql-server-linux-develop-overview.md)
@@ -36,12 +48,10 @@
 ## [관리](sql-server-linux-management-overview.md)
 ### [SSMS를 사용하여 관리](sql-server-linux-manage-ssms.md)
 ### [PowerShell을 사용하여 관리](sql-server-linux-manage-powershell.md)
-### [작업 만들기 및 실행](sql-server-linux-run-sql-server-agent-job.md)
 ### [로그 전달 사용](sql-server-linux-use-log-shipping.md)
 ### [DB 메일 및 메일 알림 사용](sql-server-linux-db-mail-sql-agent.md)
 
 ## [마이그레이션](sql-server-linux-migrate-overview.md)
-### [Windows에서 복원](sql-server-linux-migrate-restore-database.md)
 ### [Windows에서 BACPAC 내보내기 및 가져오기](sql-server-linux-migrate-ssms.md)
 ### [SQL Server Migration Assistant를 사용하여 마이그레이션](sql-server-linux-migrate-ssma.md)
 ### [bcp를 사용하여 대량 복사](sql-server-linux-migrate-bcp.md)
@@ -53,7 +63,7 @@
 ## [비즈니스 연속성 구성](sql-server-linux-business-continuity-dr.md)
 ### [백업 및 복원](sql-server-linux-backup-and-restore-database.md)
 #### [Virtual Device Interface - Linux](sql-server-linux-backup-vdi-specification.md)
-### [장애 조치(Failover) 클러스터 인스턴스](sql-server-linux-shared-disk-cluster-configure.md)
+### [장애 조치(Failover) 클러스터 인스턴스](sql-server-linux-shared-disk-cluster-concepts.md)
 #### [Red Hat Enterprise Linux]()
 ##### [구성(HA 추가 기능)](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)
 ##### [운영(HA 추가 기능)](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
@@ -72,9 +82,10 @@
 ## [보안](sql-server-linux-security-overview.md)
 ### [보안 기능 시작](sql-server-linux-security-get-started.md)
 ### [연결 암호화](sql-server-linux-encrypted-connections.md)
-### [Active Directory 인증](sql-server-linux-active-directory-authentication.md)
 
-## [성능 최적화](sql-server-linux-performance-get-started.md)
+## 성능
+### [모범 사례](sql-server-linux-performance-best-practices.md)
+### [성능 기능 시작](sql-server-linux-performance-get-started.md)
 
 # 샘플
 ## 무인 설치
@@ -85,6 +96,11 @@
 # 리소스
 ## [문제 해결](sql-server-linux-troubleshooting-guide.md)
 ## [SQL Server 설명서](../sql-server/sql-server-technical-documentation.md)
+## 파트너
+### [모니터링](../sql-server/partner-monitor-sql-server.md)
+### [고가용성 및 재해 복구](../sql-server/partner-hadr-sql-server.md)
+### [관리](../sql-server/partner-management-sql-server.md)
+### [개발](../sql-server/partner-dev-sql-server.md)
 ## [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
 ## [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
 ## [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)

@@ -20,10 +20,10 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
-ms.openlocfilehash: 3e535ef444e43860e35befbf0f33fe1eb582801d
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: a8c8f93212e62b148671305354599b88e6f3d318
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/17/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="install-reporting-services-native-mode-report-server"></a>Reporting Services 기본 모드 보고서 서버 설치
@@ -62,7 +62,7 @@ ms.lasthandoff: 08/17/2017
   
 -   DSN(데이터 원본 이름)이라고도 하는 보고서 서버 데이터베이스에 대한 연결 정보입니다.  
   
- 설치 프로그램은 무인 실행 계정, 보고서 서버 전자 메일, 암호화 키 백업 또는 확장 배포는 구성하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 이러한 속성을 구성할 수 있습니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)를 참조하세요.
+ 설치 프로그램은 무인 실행 계정, 보고서 서버 전자 메일, 암호화 키 백업 또는 스케일 아웃 배포는 구성하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 이러한 속성을 구성할 수 있습니다. 자세한 내용은 [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)을 참조하세요.
   
 ##  <a name="bkmk_whentoinstalldefaultconfig"></a> 기본 모드용 기본 구성을 설치하는 경우  
  기본 구성은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 작동 상태로 설치하므로 설치가 완료되면 보고서 서버를 즉시 사용할 수 있습니다. 필수 구성 태스크를 생략하여 단계를 줄이려는 경우 이 모드를 지정하세요. 그렇지 않을 경우 이 필수 구성 태스크는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구에서 수행해야 합니다.  
@@ -155,7 +155,7 @@ ms.lasthandoff: 08/17/2017
   
 9. 기능 구성 규칙: 통과한 규칙을 확인합니다. 규칙을 모두 통과하면 설치 마법사가 **설치 준비** 로 자동으로 진행합니다.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]와 관련하여, 이 규칙은 보고서 서버 카탈로그와 임시 카탈로그 데이터베이스가 아직 존재하지 않는지 확인합니다.  
   
-10. ![참고](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")에 **설치 준비 완료** 페이지에서 서버를 초기에 대 한 훌륭한 요약에 대 한 나중에를 참조할 수 있도록 구성 파일의 경로를 확인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정 및 관리자가 설치 된 구성 요소를 포함 하 여 구성 합니다.  
+10. **설치 준비** 페이지에서 구성 파일에 대한 경로를 나중에 참조할 수 있도록 메모해 둡니다. 이 정보는 설치된 구성 요소, 서비스 계정 및 관리자를 포함한 서버 초기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성에 대한 적절한 요약으로 활용합니다.  
   
 11. SQL Server 설치 마법사를 완료한 후에 다음과 같은 기본 단계를 사용하여 기본 모드 설치를 확인합니다.  
   
@@ -191,5 +191,5 @@ ms.lasthandoff: 08/17/2017
 [기본 모드 보고서 서버에서 SSL 연결 구성](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)   
 [Windows 서비스 계정 및 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
 

@@ -20,10 +20,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 143e9ac0dbe042ebbb034dff847cfc01ea5a5411
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: ac2814f7c0b0d1bf6de60d52ea65e54caab0f72d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP 외부 라이브러리 (Transact SQL)  
@@ -32,6 +32,7 @@ ms.lasthandoff: 09/01/2017
 기존 패키지 라이브러리를 삭제합니다.
 
 ## <a name="syntax"></a>구문  
+
 ```
 DROP EXTERNAL LIBRARY library_name  
 [ AUTHORIZATION owner_name ];  
@@ -61,17 +62,17 @@ DROP EXTERNAL LIBRARY library_name
 
 ## <a name="examples"></a>예
 
-Ggplot2 데이터베이스에 추가 합니다.
+명명 된 사용자 지정 R 패키지를 추가 `customPackage`, 데이터베이스에:
 
 ```sql
-CREATE EXTERNAL LIBRARY ggplot2 
-FROM 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\ggplot2.zip';
+CREATE EXTERNAL LIBRARY customPackage 
+FROM 'C:\Users\Username\CustomPackages\customPackage.zip';
 ```
 
-Ggplot2 라이브러리를 삭제 합니다.
+삭제 된 `customPackage` 라이브러리입니다.
 
 ```sql
-DROP EXTERNAL LIBRARY ggplot2 <user_name>;
+DROP EXTERNAL LIBRARY customPackage <user_name>;
 ```
 
 ## <a name="see-also"></a>참고 항목  

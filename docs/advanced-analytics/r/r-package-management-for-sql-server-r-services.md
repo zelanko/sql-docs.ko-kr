@@ -1,7 +1,7 @@
 ---
 title: "SQL Server에 대 한 R 패키지 관리 | Microsoft Docs"
 ms.custom: 
-ms.date: 08/20/2017
+ms.date: 10/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,97 +17,88 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f19982251b629d12215595685c0633b4c6b61c98
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: e0c6725ff2c0c541e2546858dc02f1021812bbc5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="r-package-management-for-sql-server"></a>SQL Server에 대 한 R 패키지 관리
 
-이 항목에서는 SQL Server의 인스턴스에서 실행 되는 R 패키지를 관리 하는 데 사용할 수 있는 패키지 관리 기능에 설명 합니다.
+이 문서에서는 SQL Server 2017 및 SQL Server 2016에서 R 패키지의 관리에 대 한 기능을 설명 합니다.
+
++ 2016 사이의 2017 R 패키지 설치 방법의 변경
++ R 패키지를 관리 하기 위한 권장된 방법
++ SQL Server 2017에 패키지 관리에 대 한 새 데이터베이스 역할
++ SQL Server 2017에 패키지 관리에 대 한 새 T-SQL 문
 
 **적용 대상:** SQL Server 2016 R Services, SQL Server 2017 기계 학습 서비스
 
-## <a name="package-management-using-t-sql"></a>T-SQL을 사용 하 여 패키지 관리
+## <a name="differences-in-package-management-between-sql-server-2016-and-sql-server-2017"></a>패키지 관리 SQL Server 2016 및 SQL Server 2017 간의 차이
 
-서버를 사용 하 여 컴퓨터 학습 작업에 대 한 유일한 사용자 하는 경우 및 해당 권한이 있는 경우 컴퓨터에서 관리자 권한으로 R 패키지 설치 계속 수 있습니다.
+**SQL Server 2017**, 인스턴스 수준에서 패키지 관리를 사용 하도록 설정 하 고 사용자 권한을 추가 하거나 데이터베이스 수준에서 패키지를 사용 하려면 관리할 수 있습니다.
 
-그러나 다른 사용자와 패키지를 공유 해야 할 경우 또는 여러 사용자를 서버에 컴퓨터 학습 작업을 실행 해야 할 경우 공유 패키지 라이브러리를 설정 하 더 효율적입니다. SQL Server 데이터베이스 역할을 통해이 지원합니다.
+이렇게 하려면 데이터베이스 관리자가 필요한 데이터베이스 개체를 만드는 스크립트를 실행 하 여 패키지 관리 기능을 사용 합니다. 자세한 내용은 참조 [R 패키지 관리를 사용 하도록 설정 하는 방법을](r-package-how-to-enable-or-disable.md)합니다.
 
-데이터베이스 관리자는 역할을 설정 하 고 역할에 사용자를 추가 하는 일을 담당 합니다. 역할을 통해 데이터베이스 관리자는 추가 하거나 SQL Server 환경에서 R 패키지를 제거할 수 있는 권한이 사용자 및 패키지 설치를 감사할 수를 제어할 수 있습니다.
+**SQL Server 2016**, 관리자가 인스턴스에 연결 된 R 라이브러리에서 R 패키지를 설치 해야 합니다. 인스턴스에 R 코드를 실행 하는 모든 사용자가 이러한 패키지를 사용 합니다. SQL server에서 실행 되는 R 코드는 사용자 라이브러리에 설치 된 패키지를 사용할 수 없습니다. 그러나 관리자는 개별 사용자가 특정 데이터베이스 내에서 R 스크립트를 실행 하는 기능을 부여할 수 있습니다.
+
+**그 차이점과 장점을의 요약**
+
++ 컴퓨터 학습 서비스 SQL Server 2017을 사용 하는 경우에 관리 하 고 R 도구 또는 새 데이터베이스 역할 및 T-SQL 문을 사용 하 여를 기반으로 하는 일반적인 방법은 중 하나를 사용 하 여 R 패키지를 설치할 수 있습니다.
+
++ 사용자가 원하는 대로와 결합 관리자에 의해를 보다 세부적으로 제어를 제공 하기 때문에 두 번째 방법을 하는 것이 좋습니다. 예를 들어 사용자가 설치할 수 자신의 패키지, 저장된 프로시저를 사용 하거나 또는 다른 사용자와 공유 패키지 및 R 코드를 통해. 
+
+    패키지는 데이터베이스에 범위를 지정할 수 때문에 각 사용자가 격리 패키지 샌드박스 동일한 R 패키지의 다른 버전을 설치할 쉽습니다. 또한 복사 하거나 사용자와 해당 패키지를 데이터베이스 간에 이동할 수 있습니다. 
+
++ SQL Server에서 패키지 관리 기능을 사용 하면 백업 및 복원 작업을 훨씬 더 쉽게 합니다. 작업 데이터베이스를 새 서버로 마이그레이션하는 경우에 모든 패키지의 목록을 읽고 데이터베이스에 새 서버에 설치할 패키지 동기화 함수를 사용할 수 있습니다.
+
++ 서버를 사용 하 여 컴퓨터 학습 작업에 대 한 유일한 사용자 경우 기존 R 도구를 사용 하 여 컴퓨터에서 관리자 권한으로 R 패키지를 설치 하는 편리한 방법을 찾을 수 있습니다.
+
++ SQL Server 2016 R Services를 사용 하는 경우에 R 도구를 사용 하 여 인스턴스에 사용 되는 R 패키지 설치를 계속 해야 > 인스턴스와 연결 된 R 라이브러리를 사용 해야 합니다.
+
+패키지 관리는 방법에 대 한 세부 정보를 제공 하는 다음 섹션에서는 이러한 두 옵션을 사용 하 여 수행 합니다.
+
+## <a name="r-package-management-using-t-sql"></a>T-SQL을 사용 하 여 R 패키지 관리
+
+SQL Server 2017 dba가 데이터베이스 수준에서 R 패키지를 보다 상세하게 제공 하는 새 T-SQL 문을 포함 합니다. 같은 시간에 필요 하며 다른 사용자와 공유할 패키지를 설치 하는 기능 DBA 사용자 제공할 수 있습니다.
+
+를 다른 사용자와 패키지를 공유 해야 하거나 여러 사용자를 서버에서 컴퓨터 학습 작업을 실행 해야 할 경우 패키지 관리를 사용 하는 것이 좋습니다 데이터베이스 역할에 사용자를 할당 하 고 사용자가 공유할 수 있도록 패키지를 업로드 합니다.
+
+패키지 관리 SQL Server 2017에 이러한 새 데이터베이스 개체 및 기능에 의존합니다.
+
++ 패키지 액세스 및 사용을 관리 하기 위한 새 데이터베이스 역할
++ 별도 공유 및 전용 패키지를 위한 패키지 범위
++ 새 코드 라이브러리 서버에 업로드 하는 것에 대 한 외부 라이브러리 만들기 문
++ SQL Server에서 패키지의 설치를 지원 하기 위해 RevoScaleR에 새 R 함수 계산 컨텍스트
++ 패키지의 손쉬운 백업 및 복원 되도록 패키지 동기화
 
 ### <a name="database-roles-for-package-management"></a>패키지 관리에 대한 데이터베이스 역할
 
-다음 새 데이터베이스 역할 SQL Server의 보안 설치 및 R 패키지 관리를 지원합니다.
+데이터베이스 관리자 실행 하 여 설명 된 대로 여기 패키지 관리에 사용 되는 역할을 만들어야: [패키지 관리를 사용할지](r-package-how-to-enable-or-disable.md)합니다.
 
-- `rpkgs-users`: 사용자가의 구성원으로 설치 된 모든 공유 패키지를 사용할 수 있도록는 `rpkgs-shared` 역할입니다.
+이 스크립트를 실행 한 후 다음 새 데이터베이스 역할 표시 되어야 합니다.
 
-- `rpkgs-private`:와 같은 권한으로 패키지 공유에 대 한 액세스를 제공 합니다.는 `rpkgs-users` 역할입니다. 이 역할의 멤버는 비공개로 범위가 지정된 패키지를 설치, 제거 및 사용할 수도 있습니다.
++ `rpkgs-users`:이 역할의 멤버가 다른에 의해 설치 된 모든 공유 패키지 צ ְ ײ `rpkgs-shared` 역할 구성원입니다.
 
--  `rpkgs-shared`: 동일한 권한으로 제공 된 `rpkgs-private` 역할입니다. 이 역할의 멤버인 사용자는 공유 패키지를 설치하거나 제거할 수도 있습니다.
++ `rpkgs-private`:이 역할의 구성원의 구성원으로 동일한 사용 권한이 공유 패키지에 액세스할 수 있는 `rpkgs-users` 역할입니다. 이 역할의 멤버 수 또한 설치, 제거 및 개인적으로 범위가 지정 된 패키지를 사용 합니다.
 
-- `db_owner`:와 같은 권한을 사용에는 `rpkgs-shared` 역할입니다. 공유 패키지와 개인 패키지를 모두 설치하거나 제거할 수 있는 권한을 사용자에게 부여할 수도 있습니다.
++ `rpkgs-shared`:이 역할의 구성원의 구성원으로 동일한 권한이 `rpkgs-private` 역할입니다. 또한이 역할의 멤버를 설치 하거나 공유 패키지를 제거할 수 있습니다.
 
-### <a name="creating-an-external-package-library-using-t-sql"></a>T-SQL을 사용 하 여 외부 패키지 라이브러리 만들기
++ `db_owner`:이 역할의 구성원의 구성원으로 동일한 권한이 `rpkgs-shared` 역할입니다. 또한이 역할의 멤버 수 **부여** 다른 사용자가 공유 하는 설치 또는 둘 다를 제거 하려면 오른쪽 및 개인 패키지 합니다.
 
-또한 SQL Server 2017 지원 T-SQL 문을 **외부 라이브러리 만들기**, 외부 라이브러리의 데이터베이스 관리자가 관리를 지원 합니다. 현재 라이브러리를 만드는 Windows 기반 이후 Python 패키지에 대 한 및 Linux 등 다른 플랫폼에서 실행 용으로 작성 된 패키지에 대 한 지원이 예정 되어 오른쪽 추가 대 한이 문을 사용할 수 있습니다.
+DBA는 패키지를 설치 하는 사용자의 기능을 제어 하는 데이터베이스 단위로을 역할에 사용자를 추가 합니다.
 
-자세한 내용은 참조 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)합니다.
+### <a name="package-scope"></a>패키지 범위
 
-## <a name="package-management-using-r"></a>R을 사용 하는 패키지 관리
+private 또는 여러 사용자가 공유할 수 여부에 따라 패키지를 구분 하는 새 패키지 관리 기능.
 
-**RevoScaleR** 패키지에는 이제을 쉽게 설치 및 R 패키지의 관리를 지 원하는 함수가 포함 됩니다. 패키지 관리에 대 한 데이터베이스 역할을 함께 이러한 새로운 작업을 지 원하는이 시나리오:
++ **공유 범위**
 
-- 데이터 과학자는 SQL Server 컴퓨터에 관리자 권한이 필요 없이 SQL Server에 필요한 R 패키지를 설치할 수 있습니다.
-- 데이터베이스 단위로에 패키지도 설치 하 고 데이터베이스를 이동한 패키지 함께 이동 합니다.
-- 패키지를 다른 사용자와 공유 하는 것이 쉽습니다. 로컬 패키지 저장소를 설정 하면 각 데이터 과학자 저장소를 사용 하 여 자신의 데이터베이스에 패키지를 설치 하 수 있습니다.
-- 데이터베이스 관리자는 R 명령을 실행 하는 방법을 알아보려면 하지 않아도 하 고 복잡 한 패키지 종속성을 추적할 필요가 없습니다.
-- DBA는 친숙 한 데이터베이스 역할을 설치, 제거 또는 패키지를 사용할 권한이 있는 SQL Server 사용자 컨트롤을 사용할 수 있습니다.
+    *공유 범위* 의미 공유 범위 역할에 사용 권한 부여 된 사용자 (`rpkgs-shared`) 설치 하 고 지정된 된 데이터베이스에 패키지를 제거할 수 있습니다. 공유 범위 라이브러리에 설치된 패키지는 SQL Server의 다른 데이터베이스 사용자가 설치된 R 패키지를 사용할 수 있는 경우 사용할 수 있습니다.
 
-### <a name="r-package-management-functions"></a>R 패키지 관리 기능
++ **전용 범위**
 
-다음 패키지 관리 기능, RevoScaleR 패키지는 지정 된 계산 컨텍스트에서 설치 및 제거에 대 한 다음과 같이 제공 됩니다.
-
-+ [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): 지정 된 계산 컨텍스트에서 설치 된 패키지에 대 한 정보입니다.
-
-+ [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): 패키지를 압축 한 계산 컨텍스트를 지정 된 저장소 또는 로컬에 저장 한 읽어에 패키지를 설치 합니다.
-
-+ [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): 계산 컨텍스트에서 설치 된 패키지를 제거 합니다.
-
-+ [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): 지정 된 계산 컨텍스트에서 하나 이상의 패키지에 대 한 경로 가져옵니다.
-
-+ [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): 지정 된 계산 컨텍스트에서 파일 시스템과 데이터베이스 사이의 패키지 라이브러리를 복사 합니다.
-
-+ [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 내에서 실행 하는 동안 패키지에 대 한 라이브러리 트리에 대 한 검색 경로 가져옵니다.
-
-이러한 패키지는 SQL Server 2017에서 기본적으로도 포함 됩니다. 이상에서 사용할 인스턴스를 업그레이드 하는 경우 SQL Server 2016 인스턴스에 패키지를 추가할 수 있습니다 Microsoft R 9.0.1 합니다. 자세한 내용은 참조 [R 업그레이드를 사용 하 여 SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
-
-이러한 함수에 대 한 정보, RevoScaleR 함수 참조 페이지를 참조 하십시오.: (https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)
-
-## <a name="how-package-management-works"></a>패키지 관리의 작동 원리
-
-패키지를 설치할 수 있는 권한이 있으면 R 코드에서 패키지 관리 함수 중 하나를 실행하고 패키지를 추가하거나 제거할 계산 컨텍스트를 지정합니다. 계산 컨텍스트는 로컬 컴퓨터 또는 SQL Server 인스턴스의 데이터베이스일 수 있습니다. 패키지를 설치하는 호출이 SQL Server에서 실행되면 자격 증명이 서버에서 작업을 완료할 수 있는지 여부를 결정합니다. 패키지 설치 함수는 종속성을 확인하고 로컬 계산 컨텍스트의 R 패키지 설치와 마찬가지로 SQL Server에 관련 패키지를 설치할 수 있는지 확인합니다. 패키지를 제거하는 함수도 종속성을 계산하고 SQL Server의 다른 패키지에서 더 이상 사용되지 않는 패키지를 제거하여 리소스를 확보하도록 합니다.
-
-각 데이터 과학자 R 패키지에 대 한 개인 샌드박스를 만드는 다른 사람에 게 표시 되지 않는 개인 패키지를 설치할 수 있습니다. 패키지는 데이터베이스에 범위를 지정할 수 때문에 각 사용자는 각 데이터베이스에 격리 패키지 샌드박스 가져옵니다 동일한 R 패키지의 다른 버전을 설치할 쉽습니다.
-
-새 서버에 작업 데이터베이스를 마이그레이션하는 경우에 모든 패키지의 목록을 읽고 데이터베이스에 새 서버에 설치할 패키지 동기화 함수를 사용할 수 있습니다.
-
-> [!NOTE]
-> 
-> Microsoft R Server 9.0.1 부터는 패키지 관리에 대 한 R 기능 제공 됩니다. RevoScaleR 함수를 찾을 수 없으면, 최신 버전으로 업그레이드 해야 하는 것입니다.
-
-### <a name="bkmk_scope"></a>역할별 패키지의 범위 지정
-
-새 패키지 관리 함수는 SQL Server의 특정 데이터베이스에 패키지를 설치하고 사용하는 데 두 가지 범위를 제공합니다.
-
-- **공유 범위**
-
-  *공유 범위* 의미 공유 범위 역할에 사용 권한 부여 된 사용자 (`rpkgs-shared`) 설치 하 고 지정된 된 데이터베이스에 패키지를 제거할 수 있습니다. 공유 범위 라이브러리에 설치된 패키지는 SQL Server의 다른 데이터베이스 사용자가 설치된 R 패키지를 사용할 수 있는 경우 사용할 수 있습니다.
-
-- **전용 범위**
-
-  *개인 범위* 의미 개인 범위 역할의 멤버 자격이 부여 된 사용자 (`rpkgs-private`)을 설치 또는 사용자 당 정의 된 개인 라이브러리 위치에 패키지를 제거 합니다. 따라서 전용 범위에 설치된 모든 패키지는 해당 패키지를 설치한 사용자만 사용할 수 있습니다. 즉, SQL Server의 사용자는 다른 사용자가 설치한 개인 패키지를 사용할 수 없습니다.
+    *개인 범위* 의미 개인 범위 역할의 멤버 자격이 부여 된 사용자 (`rpkgs-private`)을 설치 또는 사용자 당 정의 된 개인 라이브러리 위치에 패키지를 제거 합니다. 따라서 전용 범위에 설치된 모든 패키지는 해당 패키지를 설치한 사용자만 사용할 수 있습니다. 즉, SQL Server의 사용자는 다른 사용자가 설치한 개인 패키지를 사용할 수 없습니다.
 
 *공유* 및 *전용* 범위에 대한 이러한 모델을 결합하여 SQL Server에서 패키지를 배포하고 관리하기 위한 사용자 지정 보안 시스템을 개발할 수 있습니다.
 
@@ -115,101 +106,94 @@ ms.lasthandoff: 09/01/2017
 
 또 다른 시나리오에서는 사용자 간에 더 큰 격리가 필요하거나 다른 버전의 패키지를 사용할 수 있습니다. 이런 경우 전용 범위를 사용하여 데이터 과학자에게 개별 권한을 부여하면 필요한 패키지만 설치하고 사용하도록 할 수 있습니다. 패키지는 사용자 단위로 설치되므로 한 사용자가 설치한 패키지는 동일한 SQL Server 데이터베이스를 사용하는 다른 사용자의 작업에 영향을 주지 않습니다.
 
-### <a name="synchronizing-r-package-libraries"></a>R 패키지 라이브러리를 동기화합니다.
+### <a name="create-external-library"></a>외부 라이브러리 만들기
+
+[외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) 데이터베이스 관리자에 게 사용자 R 도구를 필요 없이 패키지를 사용할 수 있도록 SQL Server 2017에 도입 된 새 T-SQL 문입니다. 
+
+사용 하면는 **외부 라이브러리 만들기** 압축 된 파일 형식으로 인스턴스를 외부 라이브러리를 업로드 하는 문입니다. 다음 권한이 있는 사용자는 라이브러리를 액세스 하 고 사용을 위해 설치 수입니다.
+
+예를 들어 각각 서로 다른 버전에 대 한 R 프로젝트의 여러 복사본을 만들 수 있습니다. 별도 라이브러리로 업로드 버전 일부를 비공개로 유지 하 고 일부 버전을 다른 사용자와 공유할 수 있습니다.
+
+"라이브러리"는 기본적으로 단일 이름을 사용자가을 사용할 수 있도록 하려면 외부 패키지 모음입니다. 예를 들어 게시 될 수 있습니다는 다음 SQL Server에 외부 라이브러리로:
+
++ 종속성이 없는 작성 한 단일 R 패키지
++ 를 설치 하려는 패키지 및 종속성 설치에 필요한
++ 특정 작업 또는 종속성과 함께 프로젝트와 관련 된 R 패키지의 컬렉션
+
+라이브러리 이름은 패키지 또는 SQL Server에 패키지의 컬렉션을 관리 하기 위한 및 설치 된 패키지에 대해 독립적일 수 있습니다. 그러나 라이브러리 이름 인스턴스 전체에서 고유 해야 합니다.
+
+이 문을 사용 하는 인스턴스에서 패키지 관리 기능 설정 해야 합니다. 자세한 내용은 참조 [외부 라이브러리 만들기](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)합니다.
+
+> [!NOTE]
+> 현재이 문을 오른쪽 지원 하 고 Linux와 같은 다른 플랫폼에서 실행 하는 패키지에 대 한 Python 패키지에 대 한 미래에 예정 되어의 Windows 기반 라이브러리를 만드는 데 사용할 수 있습니다.
+
+외부 라이브러리 서버에 업로드 한 후 인스턴스와 연결 된 R 패키지 라이브러리를 설치 해야 합니다. 이 작업을 수행 하는 방법은 여러 가지가 있습니다.
+
++ 표준 R 명령을 실행 `install.packages` sp_execute_external_script 내 합니다. 패키지를 설치할 수 있는 권한이 있는 계정을 사용 하 여 연결 해야 합니다.
+
++ 원격 클라이언트 R에서에서 SQL Server에 연결 하 고 실행 [rxInstallPackages](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxinstallpackages) SQL Server 계산 컨텍스트에서 합니다. 다시 있어야 패키지를 설치할 수 있는 권한이이 작업을 수행 하려면 전용 또는 공유 범위에 있습니다.
+
+R 및 T-SQL을 모두 사용 하 여 설치 예제를 보려면 [추가 패키지를 SQL Server에 설치](install-additional-r-packages-on-sql-server.md)합니다.
+
+### <a name="new-r-functions-for-package-installation"></a>패키지 설치에 대 한 새로운 R 함수
+
+패키지 관리에 대 한 데이터베이스 역할을 활성화 된 후 사용자 사용 하 여 새 함수에 [ **RevoScaleR** ](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 를 SQL Server 계산 컨텍스트에서로 지정 된 인스턴스에 패키지를 설치 합니다.
+
++ 데이터 과학자는 SQL Server 컴퓨터에 직접 액세스 하지 않고도 SQL Server에 필요한 R 패키지를 설치할 수 있습니다.
+
++ 사용자는 패키지를 설치 하 고 공유 범위를 갖는 패키지를 설치 하 여 다른 사용자와 공유할 수 있습니다. 그런 다음 동일한 SQL Server 데이터베이스의 다른 권한 있는 사용자가 패키지를 액세스할 수 있습니다.
+
++ 사용자가 R 패키지에 대 한 개인 샌드박스를 만드는 다른 사람에 게 표시 되지 않는 개인 패키지를 설치할 수 있습니다.
+
+다음 패키지 관리 기능, RevoScaleR 패키지는 지정 된 계산 컨텍스트에서 설치 및 제거에 대 한 다음과 같이 제공 됩니다.
+
+-   [rxInstalledPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstalledpackages): 지정 된 계산 컨텍스트에서 설치 된 패키지에 대 한 정보입니다.
+
+-   [rxInstallPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinstallpackages): 패키지를 압축 한 계산 컨텍스트를 지정 된 저장소 또는 로컬에 저장 한 읽어에 패키지를 설치 합니다.
+
+-   [rxRemovePackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxremovepackages): 계산 컨텍스트에서 설치 된 패키지를 제거 합니다.
+
+-   [rxFindPackage](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxfindpackage): 지정 된 계산 컨텍스트에서 하나 이상의 패키지에 대 한 경로 가져옵니다.
+
+-   [rxSyncPackages](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsyncpackages): 지정 된 계산 컨텍스트에서 파일 시스템과 데이터베이스 사이의 패키지 라이브러리를 복사 합니다.
+
+-   [rxSqlLibPaths](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqllibpaths): SQL Server 내에서 실행 하는 동안 패키지에 대 한 라이브러리 트리에 대 한 검색 경로 가져옵니다.
+
+이러한 함수를 사용 하려면 있는 필요한 권한이 SQL Server 계산 컨텍스트를 사용 하 여 SQL Server의 인스턴스에 연결 합니다. 연결 하면 사용자의 자격 증명 서버에서 작업을 완료할 수 있는지 여부를 결정 합니다.
+
+패키지 설치 함수는 종속성을 확인하고 로컬 계산 컨텍스트의 R 패키지 설치와 마찬가지로 SQL Server에 관련 패키지를 설치할 수 있는지 확인합니다. 패키지를 제거하는 함수도 종속성을 계산하고 SQL Server의 다른 패키지에서 더 이상 사용되지 않는 패키지를 제거하여 리소스를 확보하도록 합니다.
+
+> [!NOTE]
+> 
+> 이러한 새 함수는 SQL Server 2017에 기본적으로 포함 됩니다. 최신 버전의 Microsoft R Server 9.0.1와 같은 Microsoft R Server를 사용 하는 인스턴스를 업그레이드 하 여 이러한 함수를 가져오려는 RevoScaleR의 버전을 업데이트할 수 있습니다.
+> 
+> 자세한 내용은 참조 [업그레이드 프로그램을 사용 하 여 SqlBindR.exe](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+
+### <a name="synchronization-of-r-package-libraries"></a>R 패키지 라이브러리의 동기화
 
 에 대 한 새로운 R 함수를 포함 하는 SQL Server 2017 (및 Microsoft R server 2017 년 4 월 릴리스) CTP 2.0 릴리스 *패키지 동기화*합니다.
 
 패키지 동기화 데이터베이스 엔진 추적에서 특정 소유자 및 그룹을 사용 하 고 필요한 경우 파일 시스템에 이러한 패키지를 작성할 수 있는 패키지 함을 의미 합니다. 이러한 시나리오에서 패키지 동기화를 사용할 수 있습니다.
 
-+ SQL Server 인스턴스 간에 R 패키지를 이동.
-+ 특정 사용자에 대 한 패키지를 다시 설치 하거나 데이터베이스가 복원 된 후 그룹
++ SQL Server 인스턴스 간에 R 패키지를 이동 하려고 합니다.
++ 데이터베이스가 복원 된 후 그룹 또는 특정 사용자에 대 한 패키지를 다시 설치 해야 합니다.
 
-자세한 내용은 참조 [rxSyncPackages](../r/package-install-uninstall-and-sync.md)합니다.
+이 기능을 사용 하는 방법에 대 한 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 동기화](package-install-uninstall-and-sync.md)합니다.
 
-## <a name="examples"></a>예
+## <a name="r-package-management-using-traditional-r-tools"></a>기존 R 도구를 사용 하 여 R 패키지 관리
 
-이러한 예제 패키지 관리 기능에 대 한 기본 사용법을 보여 줍니다. 이러한 명령을 실행 하려면 인스턴스에서 R 명령을 실행할 수 있는 권한이 필요 합니다.
+기존 인스턴스에 R 패키지를 관리 방법이 설치 하 여 R 도구 및 명령을 사용 하 여 패키지를 나열 합니다. 
 
-+ 원격 R 터미널를 실행할 때 SQL Server 인스턴스를 지정 하는 계산 컨텍스트 개체를 만들 하 고 계산 컨텍스트를 인수로 전달 되는 함수를 실행 하십시오.
++ SQL Server 2016의 초기 버전을 사용 하는 경우이 옵션의 유일한 옵션을 수 있습니다.  
++ 다른 R 패키지의 사용자가 서버에 대 한 관리 액세스가 있는 경우에이 옵션 편리할 수 있습니다.
++ R 패키지 버전 관리를 간단 하 게 사용할 수 있습니다 [miniCRAN](create-a-local-package-repository-using-minicran.md) 를 로컬 저장소를 만들고 인스턴스 간에 공유 합니다.
 
-+ 저장된 프로시저에서 패키지 관리 기능을 실행 하려면 래핑해야 해당 호출에서 `sp_execute_external_script`합니다.
+자세한 내용은 다음이 문서를 참조 합니다.
 
-### <a name="package-scoping"></a>패키지 범위 지정
++ [SQL Server에 추가 R 패키지를 설치 합니다.](install-additional-r-packages-on-sql-server.md)
++ [SQL Server에 설치된 패키지 확인](determine-which-packages-are-installed-on-sql-server.md)
 
-이 예에서는 인스턴스에 설치 된 패키지에 대 한 확인 `myServer`, 데이터베이스에서 `TestDB`합니다. 패키지 관리를 특정 데이터베이스 및 사용자 범위가 지정 됩니다. 사용자를 지정 하지 않으면 계산 컨텍스트 호출을 실행 하는 사용자 가정 합니다. 자세한 내용은 참조 [역할별 패키지의 Scoping](#bkmk_scope)합니다.
-
-```R
-sqlServerCompute <- RxInSqlServer(connectionString = "Driver=SQL Server;Server=myServer;Database=TestDB;Uid=myID;Pwd=myPwd;");
-sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerCompute);
-```
-
-### <a name="get-package-location-on-a-remote-sql-server-compute-context"></a>패키지 위치를에 원격 SQL Server 계산 컨텍스트를 가져옵니다.
-
-이 예제에서는 계산 컨텍스트 **sqlServer** 에서 *RevoScaleR*패키지의 경로를 가져옵니다.
-
-  ```R
-  sqlPackagePaths <- rxFindPackage(package = "RevoScaleR", computeContext = sqlServerL)
-  ```
-
-### <a name="get-locations-for-multiple-packages"></a>여러 패키지의 위치 가져오기
-
-다음 예제에서는 계산 컨텍스트 **sqlServer** 에서 **RevoScaleR** 및 *lattice*패키지의 경로를 가져옵니다. 여러 패키지에 대 한 정보를 얻으려면 패키지 이름을 포함 하는 문자열 벡터를 전달 합니다.
-
-  ```R
-  packagePaths <- rxFindPackage(package = c("RevoScaleR", "lattice"), computeContext = sqlServer)
-  ```
-
-### <a name="use-a-stored-procedure-to-list-packages-in-sql-server"></a>SQL Server에서 패키지를 나열할 저장된 프로시저를 사용 합니다.
-
-Management Studio 또는 원하는 T-SQL, 현재 인스턴스에 설치 된 패키지 목록을 가져올 수 있는 다른 도구에서이 명령을 실행를 사용 하 여 `rxInstalledPackages` 저장된 프로시저에서 합니다.
-
-```SQL
-EXEC sp_execute_external_script 
-  @language=N'R', 
-  @script=N'
-    myPackages <- rxInstalledPackages();
-    OutputDataSet <- as.data.frame(myPackages);
-    '
-```
-
-### <a name="get-package-versions-on-a-remote-compute-context"></a>패키지 버전에는 원격 계산 컨텍스트 가져오기
-
-계산 컨텍스트를에 설치 된 패키지에 대 한 빌드 번호 및 버전 번호를 가져오려는 R 콘솔에서이 명령을 실행 *sqlServer*합니다.
-
-  ```R
-  sqlPackages <- rxInstalledPackages(fields = c("Package", "Version", "Built"), computeContext = sqlServer)
-```
-
-### <a name="install-a-package-on-sql-server"></a>SQL Server에 패키지 설치
-
-이 예제에서는 **ggplot2** 패키지 및 해당 종속성을 계산 컨텍스트 *sqlServer*에 설치합니다.
-
-  ```R
-  pkgs <- c("ggplot2")
-  rxInstallPackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
-  ```
-
-### <a name="remove-a-package-from-sql-server"></a>SQL Server에서 패키지 제거
-
-이 예제에서는 **ggplot2** 패키지 및 해당 종속성을 계산 컨텍스트 *sqlServer*에서 제거합니다.
-
-  ```R
-  pkgs <- c("ggplot2")
-  rxRemovePackages(pkgs = pkgs, verbose = TRUE, scope = "private", computeContext = sqlServer)
-  ```
-
-### <a name="package-synchronization"></a>패키지 동기화
-
-다음 예에서는 데이터베이스에서 관리 되는 패키지의 목록으로 파일 시스템에 설치 된 패키지를 동기화 합니다. 일부 패키지가 없는 경우 파일 시스템에 설치 됩니다.
-
-```R
-# Instantiate the compute context
-connectionString <- "Driver=SQL Server;Server=myServer;Database=TestDB;Trusted_Connection=True;"
-computeContext <- RxInSqlServer(connectionString = connectionString )
-
-# Synchronize the packages in the file system for all scopes and users
-rxSyncPackages(computeContext=computeContext, verbose=TRUE)
-```
+SQL Server 2017 년에 대 한 외부 라이브러리 만들기를 사용 하는 권장 제공 사용자 및 해당 R 패키지를 관리 하는 데이터베이스 역할.
 
 ## <a name="next-steps"></a>다음 단계
 

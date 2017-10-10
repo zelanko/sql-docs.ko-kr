@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 437ec62abb0107e8a70926fd60d0c54cc6064122
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 281f5026bc3aa7dc67cff418eb0868eeb81bc80a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="build-an-r-model-and-save-to-sql-server"></a>R 모델을 작성 하 고 SQL Server에 저장
@@ -146,8 +146,9 @@ ms.lasthandoff: 09/01/2017
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
+    ```
 
-3. Generate a local plot, based on the values stored in the output variable `pred`.
+3. 출력 변수에 저장 된 값에 따라 로컬 플롯을 생성할 `pred`합니다.
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -232,10 +233,10 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-lesson"></a>다음 단원
 
-[R 모델을 배포 하 고 SQL에서 사용](/walkthrough-deploy-and-use-the-model.md)
+[R 모델을 배포 하 고 SQL에서 사용](walkthrough-deploy-and-use-the-model.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[R과 SQL을 사용 하 여 데이터 기능 만들기](/walkthrough-create-data-features.md)
+[R과 SQL을 사용 하 여 데이터 기능 만들기](walkthrough-create-data-features.md)
 
 

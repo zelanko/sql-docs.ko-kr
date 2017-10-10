@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 972ab981eccb6271dfa2f18e0b482f43020ff36b
+ms.sourcegitcommit: 6419c75df8a5b6742b102a3f56adfa7e2efd9ef1
+ms.openlocfilehash: 630c835cf7be720ad235b0f33bb093ac5a1ed926
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/03/2017
 
 ---
 # <a name="analysis-services-backward-compatibility-sql-2017"></a>Analysis Services 이전 버전과 호환성 (SQL 2017)
@@ -40,10 +40,11 @@ A *사용 되지 않는 기능* 이후 릴리스의 제품에서 사용 중단 �
 |||  
 |-|-|  
 |**모드/범주**|**기능**|
-|테이블 형식|원격으로 연결된 측정값 그룹|
+|다차원|데이터 마이닝|
+|다차원|원격으로 연결된 측정값 그룹|
 |테이블 형식|1100 및 1103 호환성 수준에서 모델|
 |테이블 형식|테이블 형식 개체 모델 속성: Column.TableDetailPosition, Column.IsDefaultLabel, Column.IsDefaultImage|
-|다차원|데이터 마이닝|
+
 
 ## <a name="discontinued-features"></a>지원 되지 않는 기능
 A *기능은 지원 되지 않는* 이전 버전에서 사용 되지 않았습니다. 이 계속 현재 릴리스에서 포함 될 수 없습니다 하지만 더 이상 지원 합니다. 지원 되지 않는 기능을 제거 될 수 있습니다 완전히 이후에서 릴리스 또는 업데이트 합니다.
@@ -70,8 +71,9 @@ A *주요 변경 내용* 기능, 데이터 모델, 응용 프로그램 코드 �
 ## <a name="behavior-changes"></a>동작 변경 내용
 A *동작 변경* 이전 릴리스의 비교해 서 현재 버전에서 동일한 기능을 작동 하는 방법에 영향을 줍니다. 중요 한 동작 변경만 설명 합니다. 사용자 인터페이스에 대 한 변경 내용이 포함 되지 않습니다.
 
-이 릴리스에서 동작 변경이 없습니다.
+MDSCHEMA_MEASUREGROUP_DIMENSIONS 및 DISCOVER_CALC_DEPENDENCY, 변경 내용에 자세히 설명 되어는 [Analysis Services에 대 한 SQL Server 2017 CTP 2.1의 새로운 소식](https://blogs.msdn.microsoft.com/analysisservices/2017/05/18/whats-new-in-sql-server-2017-ctp-2-1-for-analysis-services/) 공지 합니다.
 
 
 ## <a name="see-also"></a>참고 항목
 [Analysis Services 이전 버전과 호환성 (SQL Server 2016)](analysis-services-backward-compatibility.md)
+

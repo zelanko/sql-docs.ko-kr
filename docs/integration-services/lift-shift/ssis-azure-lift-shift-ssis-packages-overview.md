@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Integration Services 작업에서 클라우드로 이동할 | Microsoft Docs"
-ms.date: 09/28/2017
+ms.date: 10/09/2017
 ms.topic: article
 ms.prod: sql-server-2017
 ms.technology:
@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: e76675099ab290d29231d434eb74e92b613185b7
-ms.openlocfilehash: a3693b84ed02583cd47921fbfda84c7df9559b68
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: 85ab11747276f0c6c58b13cd409df3e5774915ae
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 작업에서 클라우드로 이동할
@@ -46,12 +46,15 @@ SSIS IR의 프로 비전 할 때을 확장 하 고 다음 옵션에 대 한 값�
 
 한 번 SSIS IR를 프로 비전 하기만 하면 됩니다. 그 후에 배포 하려면 SQL Server Data Tools (SSDT) 및 SQL Server Management Studio (SSMS)를 구성, 실행, 모니터링, 예약 및 관리 패키지와 같은 친숙 한 도구를 사용할 수 있습니다.
 
-데이터 팩터리는 다른 유형의 통합 런타임도 지원합니다. SSIS IR 및 다른 유형의 통합 런타임에 대 한 자세한 참조 [Azure Data Factory에 통합 런타임에서](/azure/data-factory/concepts-integration-runtime.md)합니다.
+> [!NOTE]
+> 이 공개 미리 보기 동안 Azure SSIS 통합 런타임에서 에서만 사용 가능 동부 미국과 유럽 북부 지역에 있습니다.
+
+데이터 팩터리는 다른 유형의 통합 런타임도 지원합니다. SSIS IR 및 다른 유형의 통합 런타임에 대 한 자세한 참조 [Azure Data Factory에 통합 런타임에서](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime)합니다.
 
 ## <a name="prerequisites"></a>필수 구성 요소
 이 항목에서 설명 하는 기능 SQL Server 데이터 도구 (SSDT) 버전 17.2 이상 필요 하지만 SQL Server 2017 또는 SQL Server 2016 필요 하지 않습니다. Azure에 패키지를 배포할 때 패키지 배포 마법사는 패키지를 최신 패키지 형식으로 항상 업그레이드 합니다.
 
-Azure에서 필수 구성 요소에 대 한 자세한 내용은 참조 하십시오. [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)합니다.
+Azure에서 필수 구성 요소에 대 한 자세한 내용은 참조 하십시오. [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)합니다.
 
 ## <a name="ssis-features-on-azure"></a>Azure에서 SSIS 기능
 
@@ -68,7 +71,7 @@ Windows 인증을 사용 하 여 클라우드에서 온-프레미스 데이터 �
 ## <a name="common-tasks"></a>일반 작업
 
 ### <a name="provision"></a>프로비전
-배포 하 고 Azure에서 SSIS 패키지를 실행할 수 있습니다, 전에 SSISDB 카탈로그 데이터베이스와 Azure SSIS 통합 런타임에서 프로 비전 해야 합니다. 이 문서의 단계 프로 비전이 수행: [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)합니다.
+배포 하 고 Azure에서 SSIS 패키지를 실행할 수 있습니다, 전에 SSISDB 카탈로그 데이터베이스와 Azure SSIS 통합 런타임에서 프로 비전 해야 합니다. 이 문서의 단계 프로 비전이 수행: [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)합니다.
 
 ### <a name="deploy-and-run-packages"></a>배포 및 패키지 실행
 프로젝트를 배포 하 고 SQL 데이터베이스에서 패키지를 실행 하려면 여러 친숙 한 도구 및 스크립팅 옵션 중 하나를 사용할 수 있습니다.
@@ -92,6 +95,6 @@ SQL 데이터베이스에 저장 된 패키지의 실행을 예약 하려면 다
 
 ## <a name="next-steps"></a>다음 단계
 Azure에서 SSIS 작업을 시작 하려면 다음 문서를 참조 합니다.
--   [SQL Server Integration Services (SSIS) 패키지를 Azure로 이동할](/azure/data-factory/quickstart-lift-shift-ssis-packages-powershell.md)
+-   [SQL Server Integration Services (SSIS) 패키지를 Azure로 이동할](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)
 -   [배포, 실행 및 Azure에서 SSIS 패키지를 모니터링 합니다.](ssis-azure-deploy-run-monitor-tutorial.md)
 

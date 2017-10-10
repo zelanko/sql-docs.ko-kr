@@ -2,7 +2,7 @@
 title: "기능 &#39; s 컴퓨터 학습 서비스의 새로운 기능 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/29/2017
+ms.date: 10/05/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -16,10 +16,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 0452a71d844cea46ac48871a9e987171a4c241d3
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="whats-new-in-machine-learning-services-in-sql-server"></a>SQL Server의 컴퓨터 학습 서비스의 새로운 기능
@@ -37,6 +37,16 @@ SQL Server 2017 기계 학습 훨씬 더 강력해졌습니다 인기 있는 Pyt
 
 SQL Server에서 Microsoft 컴퓨터 학습 서버는 이제 Python 또는 R에서 컴퓨터 학습 솔루션 작성 하기 위한 포괄적인 지원을 제공 합니다. 다음은이 릴리스의 주요 내용입니다.
 
+> [!IMPORTANT]
+> 
+> 컴퓨터 학습 서비스, Python 또는 R의 사용을 포함 하는 현재 지원 되지 않습니다 linux에서 또는 Azure SQL 데이터베이스에서 SQL Server를 실행 하는 경우. 이후 버전에서 변경 내용을 찾습니다.
+> 
+> 기본 점수 매기기 PREDICT 함수를 사용 하는 현재 Linux 버전에서 지원 됩니다.
+
+### <a name="whats-new-in-cumulative-update-1-for-sql-server-2017"></a>SQL Server 2017 용 누적 업데이트 1의 새로운 기능
+
+이제 컴퓨터 학습 서버로 9.2.1 Python 및 R 구성 요소를 업그레이드할 수 있습니다. 이 릴리스의 기능에 많은 향상 된 기능 **revoscalepy** 및 **RevoScaleR**, 성능 향상을 포함 합니다.
+ 
 ### <a name="in-database-python-integration"></a>데이터베이스에서 Python 통합
 
 저장된 프로시저에서 Python을 실행 하거나 원격으로 SQL Server 컴퓨터를 사용 하 여 계산 컨텍스트로 써 Python을 실행할 수 있습니다. 이러한 통합 이루어진 Python 개발자 및 데이터 과학자의 SQL Server 기능을 사용 하는 데에 대 한 새 경로를 엽니다. 

@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 5522fa5a1ac48f2484c38abd7a545b6b319af71f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: a0d6ff0a983f1d1d1ad8fdcc7de37d9a06032025
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="change-repositories-from-the-preview-repository-to-the-ga-repository"></a>GA 저장소에 미리 보기 저장소에서 저장소 변경
@@ -47,6 +47,12 @@ SQL Server 2017 CTP 2.1, RC1, 또는 r c 2에서 GA (일반 공급) 릴리스 �
    | SLES | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
    | Ubuntu | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server xenial main'` |
 
+1. 에 대 한 **Ubuntu만**, 공용 리포지토리 GPG 키를 가져옵니다.
+
+   ```bash
+   sudo curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+   ```
+
 1. 새 저장소를 구성 합니다.
 
    | 플랫폼 | 리포지토리 | Command |
@@ -55,16 +61,8 @@ SQL Server 2017 CTP 2.1, RC1, 또는 r c 2에서 GA (일반 공급) 릴리스 �
    | RHEL | GDR | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
    | SLES | CU  | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
    | SLES | GDR | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-   | Ubuntu | CU | ' sudo curl https://packages.microsoft.com/keys/microsoft.asc \ \| sudo apt 키 추가-& & sudo-apt-저장소 추가 "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" ' |
-   | Ubuntu | GDR | ' sudo curl https://packages.microsoft.com/keys/microsoft.asc \ \| sudo apt 키 추가-& & sudo-apt-저장소 추가 "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" ' |
-
-1. 시스템을 업데이트 합니다.
-
-   | 플랫폼 | Update 명령 |
-   |-----|-----|
-   | RHEL | `sudo yum update` |
-   | SLES | `sudo zypper --gpg-auto-import-keys refresh` |
-   | Ubuntu | `sudo apt-get update` |
+   | Ubuntu | CU | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)" && sudo apt-get update` |
+   | Ubuntu | GDR | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017-gdr.list)" && sudo apt-get update` |
 
 1. [설치](sql-server-linux-setup.md#platforms) 또는 [업데이트](sql-server-linux-setup.md#upgrade) GA 저장소를 사용 하 여 SQL Server.
 

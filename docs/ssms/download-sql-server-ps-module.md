@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: b68d454230d414ff52d90b4f3f71dd68ee65c6bc
-ms.openlocfilehash: f55266b6ec28e2552047cc36a5060945006b2caa
+ms.sourcegitcommit: d9a995f7d29fe91e14affa9266a9bce73acc9010
+ms.openlocfilehash: 7449932a07aa0284fe2248828270b7f391713175
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 09/27/2017
 
 ---
 # <a name="download-sql-server-powershell-module"></a>SQL Server PowerShell 모듈 다운로드
@@ -30,9 +30,35 @@ Windows Management Framework의 최신 버전 설치에 대한 전체 설명서�
 
 SQL Server 모듈을 설치하는 PowerShell 명령은 다음과 같습니다.
 
-> Install-module -Name SqlServer -Scope CurrentUser
+> Install-Module -Name SqlServer
+
+이 명령은 컴퓨터의 모든 사용자에 대한 모듈을 설치합니다. 관리자 권한으로 PowerShell 프로세스를 실행해야 합니다.
+
+> Install-Module -Name SqlServer -Scope CurrentUser
+
+이 명령은 현재 PowerShell 프로세스를 실행 중인 사용자를 위한 모듈을 설치합니다. 관리자 권한으로 PowerShell 프로세스를 실행할 필요가 없습니다.
 
 컴퓨터에 SQL Server PowerShell 모듈의 이전 버전이 있는 경우 “-AllowClobber” 매개 변수를 제공해야 할 수 있습니다.  
 
-PowerShell 갤러리에 제공되는 SQL Server PowerShell 모듈 버전은 버전 관리를 지원하며 PowerShell 버전 5.0 이상이 필요합니다.
+관리자 권한으로 실행 중이고 컴퓨터의 모든 사용자를 위해 모듈을 설치하는 경우
+
+> Install-Module -Name SqlServer -AllowClobber
+
+관리자 권한으로 실행할 수 없거나 현재 사용자를 위해서만 설치하는 경우
+
+> Install-Module -Name SqlServer -Scope CurrentUser -AllowClobber
+
+업데이트된 버전의 SqlServer 모듈을 사용할 수 있는 경우 Update-Module 명령을 사용하여 버전을 업데이트할 수 있게 됩니다.
+
+> Update-Module -Name SqlServer
+
+컴퓨터에 설치된 모듈의 버전을 보려면 다음을 사용할 수 있습니다.
+
+> Get-Module SqlServer -ListAvailable
+
+스크립트에서 모듈의 특정 버전을 사용하려면 다음과 같이 가져올 수 있습니다.
+
+> Import-Module SqlServer -Version 21.0.17178
+
+PowerShell 갤러리에 제공되는 SQL Server PowerShell 모듈 버전은 버전 관리를 지원하며 PowerShell 버전 5.0 이상이 필요합니다. [PowerShell 갤러리](https://www.powershellgallery.com/packages/Sqlserver/)에서 SqlServer 모듈을 찾을 수 있습니다. 
 

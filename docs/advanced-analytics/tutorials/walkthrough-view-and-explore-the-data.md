@@ -19,10 +19,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3f531d6b3bd3732c6c4d8c257561a3b3c5c865f2
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 3508b4ac9188906a85a272918ae5cabf4628a3eb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="view-and-explore-the-data-using-sql-walkthrough"></a>보기 및 SQL (연습)를 사용 하 여 데이터를 탐색 합니다.
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/01/2017
     ```SQL
     SELECT TOP 1000 * FROM [dbo].[nyctaxi_sample]
     ```
-    테이블의 데이터가 보이지 않는 경우 이전 항목의 [문제 해결](/walkthrough-prepare-the-data.md) 섹션을 참조하세요.
+    테이블의 데이터가 보이지 않는 경우 이전 항목의 [문제 해결](walkthrough-prepare-the-data.md) 섹션을 참조하세요.
 
 4. 이 데이터 테이블은 [columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-overview.md)를 추가하는 방식으로 집합 기반 계산에 최적화되었습니다. 테이블에 대 한 정보를 빠르게 생성 하는이 문을 실행 합니다.
 
@@ -69,9 +69,9 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-lesson"></a>다음 단원
 
-[R을 사용 하 여 데이터를 요약 합니다.](/walkthrough-view-and-summarize-data-using-r.md)
+[R을 사용 하 여 데이터를 요약 합니다.](walkthrough-view-and-summarize-data-using-r.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[PowerShell을 사용 하 여 데이터 준비](/walkthrough-prepare-the-data.md)
+[PowerShell을 사용 하 여 데이터 준비](walkthrough-prepare-the-data.md)
 

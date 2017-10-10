@@ -1,7 +1,7 @@
 ---
-title: "SharePoint 페이지에 보고서 뷰어 웹 파트 추가 | Microsoft Docs"
-ms.custom: Add the Report Viewer web part to a page within your SharePoint site.
-ms.date: 09/15/2017
+title: "SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가 | Microsoft Docs"
+ms.custom: Display a report, from SQL Server Reporting Services or Power BI Report Server, by adding a Report Viewer web part to a SharePoint page.
+ms.date: 09/26/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -14,14 +14,14 @@ author: guyinacube
 ms.author: asaxton
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 033d8092cab4e6aa0889f153d5e2e7d75ae31b03
+ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
+ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 
-# <a name="add-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 보고서 뷰어 웹 파트 추가
+# <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>SharePoint 페이지에 SQL Server Reporting Services 보고서 뷰어 웹 파트 추가
 
 [!INCLUDE [ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-sharepoint-2013-2016i](../../includes/ssrs-appliesto-sharepoint-2013-2016.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
@@ -34,6 +34,8 @@ SharePoint 페이지에는 보고서 뷰어 웹 파트를 추가 하 여 SQL Ser
 * 성공적으로 로드 하려면 보고서에 대 한 Kerberos에 대해 구성 해야 하는 Windows 토큰 서비스 (C2WTS)에 대 한 클레임이 제한 된 위임 합니다. C2WTS를 구성 하는 방법에 대 한 자세한 내용은 참조 하십시오. [Windows 토큰 서비스 (C2WTS) 및 Reporting Services에 대 한 클레임](../install-windows/claims-to-windows-token-service-c2wts-and-reporting-services.md)합니다.
 
 * 보고서 뷰어 웹 파트를 SharePoint 팜에 배포 되어야 합니다. 보고서 뷰어 웹 파트 솔루션 프로젝트를 배포 하는 방법에 대 한 정보를 참조 하십시오. [SharePoint 사이트에서 보고서 뷰어 웹 파트 배포](deploy-report-viewer-web-part.md)합니다.
+
+* 웹 페이지에 웹 파트를 추가 하려면 사이트 수준에서 페이지를 사용자 지정 및 추가 권한이 있어야 합니다. 기본 보안 설정을 사용하는 경우 이 권한은 모든 권한 수준의 사용 권한이 있는 **소유자** 그룹의 멤버에게 부여됩니다.
 
 ## <a name="add-web-part"></a>웹 파트 추가
 
@@ -57,7 +59,7 @@ SharePoint 페이지에는 보고서 뷰어 웹 파트를 추가 하 여 SQL Ser
 
 특정 보고서를 가리키도록 웹 파트를 구성 하려면 다음을 수행 합니다.
 
-1. SharePoint 페이지를 편집할 때 웹 파트의 오른쪽 위에 있는 아래쪽 화살표를 선택 하 고 선택 **편집 웹 파트**합니다.
+1. SharePoint 페이지를 편집할 때 웹 파트의 오른쪽 위에 있는 아래쪽 화살표를 선택 하 고 선택 **웹 파트 편집**합니다.
 
     ![웹 파트 드롭다운 목록에서 웹 페이지를 편집 합니다.](media/sharepoint-edit-web-part.png)
 
@@ -78,6 +80,5 @@ SharePoint 페이지에는 보고서 뷰어 웹 파트를 추가 하 여 SQL Ser
 * SharePoint에 있는 최신 페이지에는 보고서 뷰어 웹 파트를 사용할 수 없습니다.
 * 보고서 뷰어 웹 파트와 power BI 보고서를 사용할 수 없습니다.
 * 보고서 뷰어 웹 파트를 페이지에 추가 하려면 표시 되지 않으면 했는지 확인 [보고서 뷰어 웹 파트 배포](deploy-report-viewer-web-part.md)합니다.
-* 웹 파트의 위쪽에 링크에서 오류가 발생 하 고 아무 곳 이나 이동 하지 않습니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
