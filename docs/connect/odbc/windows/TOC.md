@@ -9,3 +9,10 @@
 # [ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 
 # [비동기 실행(알림 메서드) 샘플](asynchronous-execution-notification-method-sample.md)
+
+# 도움말 항목
+## [데이터 원본 마법사 화면 1](dsn-wizard-1.md)
+## [데이터 원본 마법사 화면 2](dsn-wizard-2.md)
+## [데이터 원본 마법사 화면 3](dsn-wizard-3.md)
+## [데이터 원본 마법사 화면 4](dsn-wizard-4.md)
+## [SQL Server 로그인 대화 상자](sql-server-login-dialog.md)
