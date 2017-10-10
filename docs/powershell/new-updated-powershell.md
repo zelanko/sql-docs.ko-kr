@@ -13,13 +13,13 @@ ms.custom: UpdArt.exe
 ms.workload: powershell
 ms.tgt_pltfrm: na
 ms.devlang: na
-ms.date: 09/11/2017
+ms.date: 09/27/2017
 ms.author: genemi
 ms.translationtype: HT
-ms.sourcegitcommit: 15080827744c19120a8474f3142004c4af7a4064
-ms.openlocfilehash: a5106430bbe73d9bc7cf8761961af451e93e7d0e
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: d447009539b1091aa88beac48ca2d2e5ae222ddc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="new-and-recently-updated-powershell-docs"></a>새로 추가되었거나 최근에 업데이트됨: PowerShell 문서
@@ -34,7 +34,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 
 
-- *업데이트 날짜 범위:* &nbsp; **2017-07-18** &nbsp; -to- &nbsp; **2017-09-11**
+- *업데이트 날짜 범위:*  &nbsp; **2017-09-11** &nbsp;부터 &nbsp; **2017-09-27**까지
 - *주제 영역:* &nbsp; **PowerShell**.
 
 
@@ -69,7 +69,7 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 <a name="compactupdatedlist"/>
 
-## <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
+### <a name="compact-list-of-articles-updated-recently"></a>최근 업데이트된 문서의 간결한 목록
 
 이 간결한 목록에는 발췌 섹션에 나열된 모든 업데이트된 문서로 연결되는 링크가 있습니다.
 
@@ -97,24 +97,20 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 
 #### <a name="subject-areas-which-do-have-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 있는 주제 영역
 
-- [새로 추가되었거나 업데이트됨(3+12): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
-- [새로 추가되었거나 업데이트됨(5+0): **SQL에 연결** 문서](../connect/new-updated-connect.md)
-- [새로 추가되었거나 업데이트됨(5+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
-- [새로 추가되었거나 업데이트됨(19+82): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
-- [새로 추가되었거나 업데이트됨(1+8): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
-- [새로 추가되었거나 업데이트됨(12+1): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
-- [새로 추가되었거나 업데이트됨(7+1): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
-- [새로 추가되었거나 업데이트됨(1+1): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
-- [새로 추가되었거나 업데이트됨(0+2): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
-- [새로 추가되었거나 업데이트됨(1+4): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
-- [새로 추가되었거나 업데이트됨(4+1): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
-- [새로 추가되었거나 업데이트됨(0+1): **SQL용 도구** 문서](../tools/new-updated-tools.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 고급 분석** 문서](../advanced-analytics/new-updated-advanced-analytics.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(4+1): **SQL용 데이터베이스 엔진** 문서](../database-engine/new-updated-database-engine.md)
+- [새로 추가되었거나 업데이트됨(17+0): **SQL용 Integration Services** 문서](../integration-services/new-updated-integration-services.md)
+- [새로 추가되었거나 업데이트됨(3+0): **SQL용 Linux** 문서](../linux/new-updated-linux.md)
+- [새로 추가되었거나 업데이트됨(1+1): **SQL용 관계형 데이터베이스** 문서](../relational-databases/new-updated-relational-databases.md)
+- [새로 추가되었거나 업데이트됨(2+0): **SQL용 Reporting Services** 문서](../reporting-services/new-updated-reporting-services.md)
+- [새로 추가되었거나 업데이트됨(0+1): **SSMS(SQL Server Management Studio)** 문서](../ssms/new-updated-ssms.md)
+- [새로 추가되었거나 업데이트됨(0+1): **Transact-SQL** 문서](../t-sql/new-updated-t-sql.md)
 
 #### <a name="subject-areas-which-have-no-new-or-recently-updated-articles"></a>새로 추가되었거나 최근에 업데이트된 문서가 없는 주제 영역
 
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ADO(ActiveX Data Objects)** 문서](../ado/new-updated-ado.md)
-- [새로 추가되었거나 업데이트됨(0+0): **SQL용 Analysis Services** 문서](../analysis-services/new-updated-analysis-services.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL에 연결** 문서](../connect/new-updated-connect.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 Data Quality Services** 문서](../data-quality-services/new-updated-data-quality-services.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 DMX(Data Mining Extension)** 문서](../dmx/new-updated-dmx.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 MDS(Master Data Services)** 문서](../master-data-services/new-updated-master-data-services.md)
@@ -122,6 +118,10 @@ Microsoft에서는 거의 매일 [Docs.Microsoft.com](http://docs.microsoft.com/
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 ODBC(Open Database Connectivity)** 문서](../odbc/new-updated-odbc.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 PowerShell** 문서](../powershell/new-updated-powershell.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 샘플** 문서](../sample/new-updated-sample.md)
+- [새로 추가되었거나 업데이트됨(0+0): **Microsoft SQL Server** 문서](../sql-server/new-updated-sql-server.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSDT(SQL Server Data Tools)** 문서](../ssdt/new-updated-ssdt.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SSMA(SQL Server Migration Assistant)** 문서](../ssma/new-updated-ssma.md)
+- [새로 추가되었거나 업데이트됨(0+0): **SQL용 도구** 문서](../tools/new-updated-tools.md)
 - [새로 추가되었거나 업데이트됨(0+0): **SQL용 XQuery** 문서](../xquery/new-updated-xquery.md)
 
 

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 기술 설명서 | Microsoft Docs"
-ms.date: 08/07/2017
+ms.date: 10/02/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -23,10 +23,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 0412057a8d3e0849ddaeecfeb199e00b46a96d7b
+ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
+ms.openlocfilehash: 8898a815eac39966c1dd8ced8d6230e2cf8b4cac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/02/2017
 
 ---
 # <a name="sql-server-technical-documentation"></a>SQL Server 기술 설명서
@@ -49,8 +49,8 @@ SQL Server를 설치하고, 구성하고, 사용하는 데 도움이 되는 설�
 **SQL Server를 사용해 보세요.**    
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](http://go.microsoft.com/fwlink/?LinkID=829477) [SQL Server 2017 다운로드](http://go.microsoft.com/fwlink/?LinkID=829477)
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) [SQL Server 2016 다운로드](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 
-- [SQL Server 2016이 이미 설치된 가상 컴퓨터 실행](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
-- [![평가 센터에서 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms) [SSMS(SQL Server Management Studio) 다운로드](/sql-docs/docs/ssms/download-sql-server-management-studio-ssms)   
+- [![가상 컴퓨터 만들기](../includes/media/azure-vm.png)](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) [SQL Server 2016 SP1 또는 SQL Server 2017이 있는 가상 컴퓨터 실행](https://azure.microsoft.com/en-us/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)
+- [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssms/download-sql-server-management-studio-ssms.md) [SSMS(SQL Server Management Studio) 다운로드](../ssms/download-sql-server-management-studio-ssms.md)
 - [![평가 센터에서 다운로드](../includes/media/download2.png)](../ssdt/download-sql-server-data-tools-ssdt.md) [SSDT(SQL Server Data Tools) 다운로드](../ssdt/download-sql-server-data-tools-ssdt.md)
     
 ## <a name="sql-server-technologies"></a>SQL Server 기술    
