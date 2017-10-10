@@ -1,5 +1,5 @@
 # [개요](in-memory-oltp-in-memory-optimization.md)  
-# [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](survey-of-initial-areas-in-in-memory-oltp.md)  
+# [더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술의 인벤토리](survey-of-initial-areas-in-in-memory-oltp.md)  
 # [개요 및 사용 시나리오](overview-and-usage-scenarios.md)
 # [SQL Server 2016 백서의 내부 기능](sql-server-in-memory-oltp-internals-for-sql-server-2016.md) 
 # [SQL Server에 메모리 내 OLTP 기능 채택 계획](plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md)  
