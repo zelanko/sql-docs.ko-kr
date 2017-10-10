@@ -8,6 +8,7 @@
 # [확장 이벤트 엔진](sql-server-extended-events-engine.md)  
 # [확장 이벤트 세션](sql-server-extended-events-sessions.md)  
 # [확장 이벤트 도구](extended-events-tools.md)  
+## [SSMS XEvent Profiler 사용](use-the-ssms-xe-profiler.md)
 ## [system_health 세션 사용](use-the-system-health-session.md)  
 ## [확장 이벤트에 PowerShell 공급자 사용](use-the-powershell-provider-for-extended-events.md)  
 # [확장 이벤트 세션 변경](alter-an-extended-events-session.md)  

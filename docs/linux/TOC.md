@@ -11,6 +11,7 @@
 ## [설치 및 연결 - SUSE](quickstart-install-connect-suse.md)
 ## [설치 및 연결 - Ubuntu](quickstart-install-connect-ubuntu.md)
 ## [실행 및 연결 - Docker](quickstart-install-connect-docker.md)
+## [Azure에서 SQL VM 프로비전](/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine?toc=%2fsql%2flinux%2ftoc.json)
 
 # 자습서
 ## [1_Windows에서 마이그레이션](sql-server-linux-migrate-restore-database.md)
@@ -31,7 +32,6 @@
 ### [SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md)
 ### [SQL Server Integration Services 설치](sql-server-linux-setup-ssis.md)
 ### [GA 리포지토리 등록](sql-server-linux-change-repo.md)
-### [Azure에서 SQL VM 프로비전](https://docs.microsoft.com/azure/virtual-machines/linux/sql/provision-sql-server-linux-virtual-machine)
 
 ## 구성
 ### [mssql-conf를 사용하여 구성](sql-server-linux-configure-mssql-conf.md)
@@ -57,6 +57,7 @@
 ### [bcp를 사용하여 대량 복사](sql-server-linux-migrate-bcp.md)
 
 ## [추출, 변환, 로드](sql-server-linux-migrate-ssis.md)
+### [제한 사항 및 알려진 문제](sql-server-linux-ssis-known-issues.md)
 ### [SSIS 구성](sql-server-linux-configure-ssis.md)
 ### [SSIS 패키지 예약](sql-server-linux-schedule-ssis-packages.md)
 

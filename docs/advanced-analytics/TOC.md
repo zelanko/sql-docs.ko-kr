@@ -104,15 +104,24 @@
 
 # [방법](r/sql-server-machine-learning-tasks.md)
 
-## [R 패키지 관리](r/r-package-management-for-sql-server-r-services.md)
+## [SQL Server에 대한 R 패키지 관리](r/r-package-management-for-sql-server-r-services.md)
+
+### [SQL Server에 새로운 R 패키지 설치](r/install-additional-r-packages-on-sql-server.md)
 
 ### [SQL Server 인스턴스에 대해 R 패키지 관리 사용](r/r-package-how-to-enable-or-disable.md)
-### [R 패키지를 가져올 위치](r/installing-and-managing-r-packages.md)
-### [SQL Server에 추가 기계 학습 패키지 설치](r/install-additional-r-packages-on-sql-server.md)
-### [miniCRAN을 사용하여 로컬 패키지 리포지토리 만들기](r/create-a-local-package-repository-using-minicran.md)
+
 ### [SQL Server에 설치된 패키지 확인](r/determine-which-packages-are-installed-on-sql-server.md)
-### [사용자 패키지 라이브러리](r/packages-installed-in-user-libraries.md)
-### [SQL Server에서 사용하는 R 패키지 동기화](r/package-install-uninstall-and-sync.md)
+
+### [SQL Server에서 RevoScaleR 함수를 사용하여 R 패키지 찾기 또는 설치](r/use-revoscaler-to-manage-r-packages.md)
+
+### [SQL Server에 설치된 R 패키지 동기화](r/package-install-uninstall-and-sync.md)
+
+### [SQL Server에 설치된 R 패키지](r/installing-and-managing-r-packages.md)
+
+### [miniCRAN을 사용하여 로컬 패키지 리포지토리 만들기](r/create-a-local-package-repository-using-minicran.md)
+
+### [R에 대한 사용자 패키지 라이브러리의 오류 방지](r/packages-installed-in-user-libraries.md)
+
 
 ## 데이터 탐색 및 모델링
 
