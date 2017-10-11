@@ -81,7 +81,7 @@ Oracle 및 IBM DB2,에 구독을 만드는 방법은 [Oracle Subscribers](../../
   
     -   Oracle의 경우 한 대의 서버에 데이터베이스가 하나만 있으므로 데이터베이스를 지정할 필요가 없습니다.  
   
-    -   IBM DB2의 경우 데이터베이스는 DB2 연결 문자열에 지정됩니다. 자세한 내용은 [Create a Subscription for a Non-SQL Server Subscriber](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
+    -   IBM DB2의 경우 데이터베이스는 DB2 연결 문자열에 지정됩니다. 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자가 64비트 플랫폼에서 실행되는 경우 적절한 64비트 버전의 OLE DB 공급자를 사용해야 합니다.  
   
