@@ -14,7 +14,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: 2d8ba0dcd52de143cd935eab6e8bba95e924409d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/28/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts-for-sql-server"></a>Visual Studio 코드를 사용 하 여 만들고 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
@@ -23,7 +23,7 @@ ms.lasthandoff: 08/28/2017
 
 이 항목에서는 사용 하는 **mssql** Visual Studio 코드 (VS) SQL Server 데이터베이스를 개발 하기에 대 한 확장입니다.
 
-Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그래픽 코드 편집기입니다. [**mssql** VS Code에 대 한 확장] TRANSACT-SQL (T-SQL) 사용 하 여 쿼리를 SQL Server에 연결 하 고 결과 볼 수 있습니다.
+Visual Studio 코드는 Linux, macOS 등 및 확장을 지 원하는 Windows 그래픽 코드 편집기입니다. [ **mssql** VS Code에 대 한 확장] TRANSACT-SQL (T-SQL) 사용 하 여 쿼리를 SQL Server에 연결 하 고 결과 볼 수 있습니다.
 
 ## <a name="install-vs-code"></a>VS Code 설치
 1. VS Code를 아직 설치 하지 않은 경우 [다운로드 하 고 VS Code 설치] 컴퓨터에 있습니다.
@@ -256,7 +256,7 @@ T-SQL을 처음 접하는 경우 참조 [자습서: TRANSACT-SQL 문 쓰기] 및
 
 VS Code 사용에 대 한 자세한 내용은 참조는 [Visual Studio Code 설명서](https://code.visualstudio.com/docs)합니다.
 
-[**mssql** VS Code에 대 한 확장]:https://aka.ms/mssql-marketplace
+[* * mssql * * VS Code에 대 한 확장 합니다.]:https://aka.ms/mssql-marketplace
 [다운로드 하 고 VS Code 설치]:https://code.visualstudio.com/Download
 [.NET 지침 핵심]:https://www.microsoft.com/net/core
 [연결 프로필을 관리]:https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles
