@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: cde40ec53dafbd750c21e1f4148f29db26e0bbda
+ms.sourcegitcommit: a85dbb34e357d4d00a411e35dce877991337d876
+ms.openlocfilehash: a432f7d48ff537832d76a998bc34c0d012b76b32
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/09/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
@@ -50,10 +50,12 @@ SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 �
     - [sys.dm_db_stats_histogram](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md)은 통계를 검토하기 위해 새로운 동적 관리 뷰입니다. (CTP 1.3)
     - **sys.dm_os_host_info**는 Windows와 Linux 모두에 대한 운영 체제 정보를 제공합니다. (CTP 1.0)
 - **DTA(데이터베이스 튜닝 관리자)**의 성능이 개선되고 옵션이 추가됩니다. (CTP 1.2)
-- **메모리 내 기능이 향상**되어 메모리 액세스에 최적화된 테이블에서 계산 열이 지원되고 고유하게 컴파일된 모듈에서 JSON 함수가 완벽히 지원되며 고유하게 컴파일된 모듈에서 CROSS APPLY 연산자가 지원됩니다. (CTP 1.1)
+- 
+            **메모리 내 기능이 향상**되어 메모리 최적화 테이블에서 계산 열이 지원되고 고유하게 컴파일된 모듈에서 JSON 함수가 완벽히 지원되며 고유하게 컴파일된 모듈에서 CROSS APPLY 연산자가 지원됩니다. (CTP 1.1)
 - **문자열 함수** CONCAT_WS, TRANSLATE 및 TRIM이 새로 제공되며 STRING_AGG 함수에 대해 WITHIN GROUP이 새로 지원됩니다. (CTP 1.1)
 - CSV 및 Azure Blob 파일에 대한 새 **대량 액세스 옵션**(BULK INSERT 및 OPENROWSET(BULK...) )이 제공됩니다. (CTP 1.1)
-- **메모리 액세스에 최적화된 개체의 기능이 향상**되어, sp_spaceused가 제공되고, 메모리 액세스에 최적화된 테이블에 대한 8개 인덱스 제한이 제거되었으며, 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 T-SQL 모듈에 대한 sp_rename과 고유하게 컴파일된 T-SQL 모듈에 대한 CASE 및 TOP (N) WITH TIES가 함께 제공됩니다. 메모리 액세스에 최적화된 파일 그룹 파일을 이제 Azure Storage에서 저장, 백업 및 복원할 수 있습니다. (CTP 1.0)
+- 
+            **메모리 최적화 개체의 기능이 향상**되어, sp_spaceused가 제공되고, 메모리 최적화 테이블에 대한 8개 인덱스 제한이 제거되었으며, 메모리 최적화 테이블과 고유하게 컴파일된 T-SQL 모듈에 대한 sp_rename과 고유하게 컴파일된 T-SQL 모듈에 대한 CASE 및 TOP (N) WITH TIES가 함께 제공됩니다. 메모리 액세스에 최적화된 파일 그룹 파일을 이제 Azure Storage에서 저장, 백업 및 복원할 수 있습니다. (CTP 1.0)
 - **DATABASE SCOPED CREDENTIAL**는 보안 가능하고 보조적인 CONTROL, ALTER, REFERENCES, TAKE OWNERSHIP 및 VIEW DEFINITION 사용 권한의 새 클래스입니다. 이제 ADMINISTER DATABASE BULK OPERATIONS가 sys.fn_builtin_permissions에 표시됩니다. (CTP 1.0)
 - 데이터베이스 **COMPATIBILITY_LEVEL 140**이 추가되었습니다. (CTP 1.0).  
 

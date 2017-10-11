@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/28/2017
+ms.date: 09/28/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: cb4fd4eebca0f88f1b630598be30bca780fad3b9
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: dcc05f9e7bb009bb164f3577b7a82ba7b1c9b215
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi"></a>SQL Server Data Tools(SSDT 및 SSDT-BI)의 이전 릴리스
@@ -34,10 +34,11 @@ SSDT는 이전 버전과 호환되므로 항상 [최신 SSDT](download-sql-serve
 
 ## <a name="recent-downloads"></a>최신 다운로드
 
-[최신 릴리스](download-sql-server-data-tools-ssdt.md)관련 문제가 발생하는 경우 최신 다운로드 3개가 제공됩니다. 
+[최신 릴리스](download-sql-server-data-tools-ssdt.md)관련 문제가 발생하는 경우 몇 개의 최신 다운로드가 제공됩니다. 
 
 |릴리스| Visual Studio 2015|Visual Studio 2013|
 |:---|:---|:---|
+|17.2|[VS2015 17.2용 SSDT](https://go.microsoft.com/fwlink/?linkid=852922)| \* 해당 사항 없음|
 |17.1|[VS2015 17.1용 SSDT](https://go.microsoft.com/fwlink/?linkid=849393)| \* 해당 사항 없음|
 |17.0|[VS2015 17.0용 SSDT](https://go.microsoft.com/fwlink/?linkid=846626)| \* 해당 사항 없음|
 |16.5|[VS2015 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832313)|[VS2013 16.5용 SSDT](https://go.microsoft.com/fwlink/?LinkID=832308)|
