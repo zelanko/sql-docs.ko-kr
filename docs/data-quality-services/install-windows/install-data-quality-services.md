@@ -36,7 +36,7 @@ ms.lasthandoff: 09/12/2017
 >   
 >  Integration Services 패키징 프로세스 내에서 데이터 정리를 수행하고 Integration Services를 설치할 때 자동으로 설치되는 Integration Services의 DQS 정리 변환을 사용할 수 있습니다. Integration Services 설치에 대한 자세한 내용은 [Integration Services 설치](../../integration-services/install-windows/install-integration-services.md)를 참조하세요.  
 >   
->  MDS(Master Data Services)에서 DQS 통합을 사용하도록 설정하여 Excel용 MDS(Master Data Services) 추가 기능에서 DQS 일치 기능을 사용할 수 있습니다. 자세한 내용은 [Enable Data Quality Services Integration with Master Data Services](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)을 참조하세요.  
+>  MDS(Master Data Services)에서 DQS 통합을 사용하도록 설정하여 Excel용 MDS(Master Data Services) 추가 기능에서 DQS 일치 기능을 사용할 수 있습니다. 자세한 내용은 [MDS(Master Data Services)와 Data Quality Services의 통합 설정](../../master-data-services/install-windows/enable-data-quality-services-integration-with-master-data-services.md)을 참조하세요.  
   
  DQS 설치는 3단계로 수행되는 프로세스입니다.  
   
