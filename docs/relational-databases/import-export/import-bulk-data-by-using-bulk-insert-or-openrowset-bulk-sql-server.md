@@ -26,10 +26,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 67952c30acf82b7ad073ab243e0f38ed4a2aa23f
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f594525c8d79e53b6b4ae1b223ab9b50e85e6a5d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="import-bulk-data-by-using-bulk-insert-or-openrowsetbulk-sql-server"></a>BULK INSERT 또는 OPENROWSET(BULK...)를 사용하여 데이터 대량 가져오기
@@ -37,7 +37,8 @@ ms.lasthandoff: 10/04/2017
 
   이 항목에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] BULK INSERT 문 및 INSERT...SELECT * FROM OPENROWSET(BULK...) 문을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 대량으로 가져오는 방법을 간략하게 설명합니다. 또한 BULK INSERT 및 OPENROWSET(BULK…)을 사용할 때와 이러한 방법을 사용하여 원격 데이터 원본에서 데이터를 대량으로 가져올 때의 보안 고려 사항에 대해서도 설명합니다.  
   
-> **참고** BULK INSERT 또는 OPENROWSET(BULK…)을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 가장을 처리하는 방법을 이해해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "보안 고려 사항"을 참조하십시오.  
+> [!NOTE]
+> BULK INSERT 또는 OPENROWSET(BULK…)을 사용할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 가장을 처리하는 방법을 이해해야 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 "보안 고려 사항"을 참조하십시오.  
   
 ## <a name="bulk-insert-statement"></a>BULK INSERT 문  
  BULK INSERT는 데이터 파일의 데이터를 테이블로 로드합니다. 이 기능은 **bcp** 명령의 **in** 옵션이 제공하는 기능과 유사하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 데이터 파일을 읽는다는 점이 다릅니다. BULK INSERT 구문에 대한 자세한 내용은 [BULK INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)를 참조하세요.  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/04/2017
 ## <a name="bulk-importing-from-a-remote-data-file"></a>원격 데이터 파일에서 대량 가져오기  
  BULK INSERT 또는 INSERT...SELECT \* FROM OPENROWSET(BULK...)를 사용하여 다른 컴퓨터에서 데이터를 대량으로 가져오려면 두 컴퓨터 간에 데이터 파일을 공유해야 합니다. 공유 데이터 파일을 지정하려면 **\\\\***Servername***\\***Sharename***\\***Path***\\***Filename*의 일반 형식으로 해당 UNC(범용 명명 규칙) 이름을 사용합니다. 또한 데이터 파일을 액세스하는 데 사용되는 계정에는 원격 디스크의 파일을 읽는 데 필요한 사용 권한이 있어야 합니다.  
   
- 예를 들어 다음 `BULK INSERT` 문은 `SalesOrderDetail` 라는 데이터 파일의 데이터를 `AdventureWorks` 데이터베이스의 `newdata.txt`테이블로 대량 가져옵니다. 이 데이터 파일은 `\dailyorders` 시스템의 네트워크 공유 디렉터리 `salesforce` 에서 공유 폴더 `computer2`에 있습니다.  
+ 예를 들어 다음 `BULK INSERT` 문은 `SalesOrderDetail` 라는 데이터 파일의 데이터를 `AdventureWorks` 데이터베이스의 `newdata.txt`테이블로 대량 가져옵니다. 이 데이터 파일은 `\dailyorders` 시스템의 네트워크 공유 디렉터리 `salesforce`에서 공유 폴더 `computer2`에 있습니다.  
   
 ```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
@@ -120,7 +121,8 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 GO  
 ```  
   
-> **참고** 클라이언트는 **와 독립적으로 파일을 읽기 때문에** bcp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]유틸리티에는 이러한 제한 사항이 적용되지 않습니다.  
+> [!NOTE]
+> 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 독립적으로 파일을 읽기 때문에 **bcp** 유틸리티에는 이러한 제한 사항이 적용되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

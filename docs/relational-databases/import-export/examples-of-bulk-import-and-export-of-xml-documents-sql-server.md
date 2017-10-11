@@ -23,10 +23,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 4e051789fad041a9515e00b01d6025cd2d7e6aed
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 7a79319a6488d3d13d02a5c297f1ee8a99d76806
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
@@ -44,12 +44,12 @@ ms.lasthandoff: 09/27/2017
 -   BULK INSERT  
   
 -   INSERT ... SELECT * FROM OPENROWSET(BULK...)  
-  
- **참고:** 자세한 내용은 다음을 참조하세요. 
-  - [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
-   - [BULK INSERT 또는 OPENROWSET(BULK...)(SQL Server)를 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
-    - [XML 대량 로드 구성 요소를 사용하여 SQL Server에 XML을 가져오는 방법입니다.](https://support.microsoft.com/en-us/kb/316005)
-     - [XML 스키마 컬렉션 [SQL Server]](../xml/xml-schema-collections-sql-server.md)
+
+자세한 내용은 다음 항목을 참조하십시오.
+- [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기(SQL Server)](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)
+- [BULK INSERT 또는 OPENROWSET(BULK...)(SQL Server)를 사용하여 데이터 대량 가져오기](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md) 
+- [XML 대량 로드 구성 요소를 사용하여 SQL Server에 XML을 가져오는 방법입니다.](https://support.microsoft.com/en-us/kb/316005)
+- [XML 스키마 컬렉션 [SQL Server]](../xml/xml-schema-collections-sql-server.md)
   
 ## <a name="examples"></a>예  
  다음과 같은 예가 제공됩니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 09/27/2017
 #### <a name="sample-table"></a>예제 테이블  
  아래의 예제 A를 테스트하려면 `T`예제 테이블을 만듭니다.  
   
-```  
+```sql
 USE tempdb  
 CREATE TABLE T (IntCol int, XmlCol xml);  
 GO  
@@ -79,8 +79,8 @@ GO
 #### <a name="sample-data-file"></a>예제 데이터 파일  
  예제 A를 실행하려면 먼저`C:\SampleFolder\SampleData3.txt`인코딩 체계를 지정하는 다음 예제 인스턴스가 포함된 UTF-8 인코딩 파일( `UTF-8` )을 만들어야 합니다.  
   
-```  
-\<?xml version="1.0" encoding="UTF-8"?>  
+```xml  
+<?xml version="1.0" encoding="UTF-8"?>  
 <Root>  
           <ProductDescription ProductModelID="5">  
              <Summary>Some Text</Summary>  
@@ -91,7 +91,7 @@ GO
 #### <a name="example-a"></a>예 1  
  이 예에서는 `SINGLE_BLOB` 문에 `INSERT ... SELECT * FROM OPENROWSET(BULK...)` 옵션을 사용하여 `SampleData3.txt` 라는 파일에서 데이터를 가져오고 단일 열 테이블( `T`예제 테이블)에 XML 인스턴스를 삽입합니다.  
   
-```  
+```sql
 INSERT INTO T(XmlCol)  
 SELECT * FROM OPENROWSET(  
    BULK 'c:\SampleFolder\SampleData3.txt',  
@@ -120,7 +120,7 @@ SELECT * FROM OPENROWSET(
 #### <a name="sample-data-file"></a>예제 데이터 파일  
  예 2에서는 앞의 예에서 사용된 `SampleData3.txt` 예제 데이터 파일의 수정된 버전을 사용합니다. 이 예를 실행하려면 다음과 같이 이 파일의 내용을 수정합니다.  
   
-```  
+```xml
 <Root>  
           <ProductDescription ProductModelID="10">  
              <Summary>Some New Text</Summary>  
@@ -130,7 +130,7 @@ SELECT * FROM OPENROWSET(
   
 #### <a name="example-b"></a>예 2  
   
-```  
+```sql  
 -- Query before update shows initial state of XmlCol values.  
 SELECT * FROM T  
 UPDATE T  
@@ -166,14 +166,14 @@ GO
 #### <a name="sample-data-file"></a>예제 데이터 파일  
  이 대량 가져오기 예를 테스트하려면 먼저 다음 예제 인스턴스를 포함하는 파일(`C:\temp\Dtdfile.xml`)을 만들어야 합니다.  
   
-```  
+```xml 
 <!DOCTYPE DOC [<!ATTLIST elem1 attr1 CDATA "defVal1">]><elem1>January</elem1>  
 ```  
   
 #### <a name="sample-table"></a>예제 테이블  
  예 3에서는 다음 `T1` 문에 의해 생성된 `CREATE TABLE` 예제 테이블을 사용합니다.  
   
-```  
+```sql  
 USE tempdb;  
 CREATE TABLE T1(XmlCol xml);  
 GO  
@@ -182,7 +182,7 @@ GO
 #### <a name="example-c"></a>예 3  
  이 예에서는 `OPENROWSET(BULK...)` 을 사용하고 `CONVERT` 절에 `SELECT` 옵션을 지정하여 `Dtdfile.xml` 의 XML 데이터를 `T1`예제 테이블로 가져옵니다.  
   
-```  
+```sql
 INSERT T1  
   SELECT CONVERT(xml, BulkColumn, 2) FROM   
     OPENROWSET(Bulk 'c:\temp\Dtdfile.xml', SINGLE_BLOB) [rowsetresults];  
@@ -226,7 +226,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
   
  이 예에서는 `xTable` 예제 테이블에 대해 이 필드 종결자를 사용하는 방법을 보여 줍니다. 이 예제 테이블을 만들려면 다음 `CREATE TABLE` 문을 사용합니다.  
   
-```  
+```sql
 USE tempdb;  
 CREATE TABLE xTable (xCol xml);  
 GO  
@@ -246,7 +246,7 @@ GO
 #### <a name="example-d"></a>예 4  
  이 예에서는 `Xmltable.fmt` 문에 `BULK INSERT` 서식 파일을 사용하여 `Xmltable.dat`라는 XML 데이터 파일의 내용을 가져옵니다.  
   
-```  
+```sql
 BULK INSERT xTable   
 FROM 'C:\Xmltable.dat'  
 WITH (FORMATFILE = 'C:\Xmltable.fmt');  
@@ -258,7 +258,7 @@ GO
 ## <a name="bulk_export_xml_data"></a> XML 데이터 대량 내보내기  
  다음 예에서는 `bcp` 를 사용하여 동일한 XML 서식 파일로 앞의 예에서 만든 테이블에서 XML 데이터를 대량으로 내보냅니다. 다음 `bcp` 명령에서 `<server_name>` 및 `<instance_name>` 은 적절한 값으로 바꿔야 하는 자리 표시자를 나타냅니다.  
   
-```  
+```cmd
 bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>  
 ```  
   
