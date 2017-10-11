@@ -20,6 +20,7 @@
 ### [지원되는 데이터 원본](data-sources-supported-ssas-tabular.md)  
 ### [지원되는 데이터 형식](data-types-supported-ssas-tabular.md)  
 ### [가장](impersonation-ssas-tabular.md)  
+### [원시 쿼리를 사용하여 데이터 가져오기](ssas-import-query.md)
 ### [데이터 가져오기 - 관계형 데이터 원본](ssas-import-data-relational-data-source.md)  
 ### [데이터 가져오기 - 다차원 데이터 원본](ssas-import-data-multidimensional-data-source.md)  
 ### [데이터 가져오기 - 데이터 피드](ssas-import-data-data-feed.md)  
