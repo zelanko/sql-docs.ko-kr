@@ -1,7 +1,7 @@
 ---
 title: "SSMS(SQL Server Management Studio) 다운로드 | Microsoft 문서"
 ms.custom: 
-ms.date: 08/07/2017
+ms.date: 10/09/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 3f12671ace99d5fefc199c7b1c2db31e5b3cfade
-ms.openlocfilehash: a689293fadb1a442f94d88cc06a9e7a4ef06650f
+ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
+ms.openlocfilehash: be3d22491e1cf5e6446f9ac597d613e1d203a28e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/08/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
@@ -44,9 +44,9 @@ SSMS는 SQL Server에서 SQL Database까지 모든 SQL 인프라를 관리하기
 
 SSMS 17.X는 *SQL Server Management Studio*의 최신 세대이며 SQL Server 2017을 지원합니다.
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.2 다운로드](https://go.microsoft.com/fwlink/?linkid=854085)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.3 다운로드](https://go.microsoft.com/fwlink/?linkid=858904)**
 
-**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.2 업그레이드 패키지 다운로드(17.x에서 17.2로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=854087)**
+**[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 17.3 업그레이드 패키지 다운로드(17.x에서 17.3으로 업그레이드)](https://go.microsoft.com/fwlink/?linkid=858906)**
 
 SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하지 않습니다. SSMS 17.x는 이전 버전과 함께 설치되므로 두 버전을 모두 사용할 수 있습니다.
 컴퓨터에 SSMS가 병렬로 설치되어 있으면 특정 요구에 맞는 올바른 버전을 시작해야 합니다. 최신 버전에는 *Microsoft SQL Server Management Studio 17* 레이블이 지정되며 새 아이콘이 추가됩니다. 
@@ -61,58 +61,30 @@ SSMS 17.x 설치는 SSMS 16.x 이전 버전을 업그레이드 또는 대체하�
 
 **버전 정보**
 
-릴리스 번호: 17.2, 이 릴리스에 대한 빌드 번호: 14.0.17177.0
+릴리스 번호: 17.3
+
+이 릴리스에 대한 빌드 번호: 14.0.17199.0
 
 ## <a name="new-in-this-release"></a>이 릴리스의 새로운 기능
 
-SSMS 17.2는 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
+SSMS 17.3은 최신 버전의 SQL Server Management Studio입니다. 17.X 세대의 SSMS는 SQL Server 2017을 통해 SQL Server 2008의 거의 모든 기능 영역을 지원합니다. 버전 17.x는 SQL Analysis Service PaaS도 지원합니다.
 
-17.2 버전에는 다음이 포함됩니다.
+17.3 버전에는 다음이 포함됩니다.
 
-- MFA(Multi-Factor Authentication)
-  - MFA(Multi-Factor Authentication)를 지원하는 UA(유니버설 인증)에 대한 다중 사용자 Azure AD 인증
-  - 다중 사용자 인증을 지원하기 위해서 새 사용자 자격 증명 입력 필드가 MFA를 지원하는 유니버설 인증에 대해 추가되었습니다.
-- 이제 연결 대화 상자는 다음 5개 인증 방법을 지원합니다.
-  - Windows 인증
-  - SQL Server 인증(SQL Server Authentication)
-  - Active Directory - MFA 지원을 포함한 유니버설 인증
-  - Active Directory - 암호
-  - Active Directory - 통합
-
-- 이제 DACFx 마법사에 대한 데이터베이스 가져오기/내보내기는 MFA를 지원하는 유니버설 인증을 사용할 수 있습니다.
-- API 지원에 대해서는 [IUniversalAuthProvider 인터페이스](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.iuniversalauthprovider.aspx)를 참조하세요.
-- MFA를 지원하는 Azure AD 유니버설 인증에 사용되는 ADAL 관리 라이브러리가 버전 3.13.9로 업그레이드되었습니다.
-- SQL Database 및 SQL Data Warehouse에 대한 Azure AD 관리자 설정을 지원하는 새 CLI 인터페이스.
-
- Active Directory 인증 방법에 대한 자세한 내용은 [SQL Database 및 SQL Data Warehouse에 대한 유니버설 인증(MFA에 대한 SSMS 지원)](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication) 및 [SQL Server Management Studio에 대한 Azure SQL Database 다단계 인증 구성](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication-configure)을 참조하세요.
-
-- 출력 창에는 개체 탐색기 노드를 확장하는 동안 실행되는 쿼리에 대한 항목이 있습니다.
-- Azure SQL Database에 대해 뷰 디자이너 사용 설정
-- SSMS의 개체 탐색기에서 개체를 스크립팅하기 위한 기본 스크립팅 옵션이 변경되었습니다.
-  - 이전에는 생성된 스크립트의 대상을 SQL Server의 최신 버전(현재 SQL Server 2017)으로 지정하는 것이 새 설치에 대한 기본값이었습니다.
-  - SSMS 17.2에서는 *스크립트 설정을 원본과 일치* 옵션이 새로 추가되었습니다. *True*로 설정하면 생성된 스크립트의 대상은 스크립팅되는 개체가 있는 서버와 동일한 버전, 엔진 유형 및 엔진 버전이 됩니다.
-  - *스크립트 설정을 원본과 일치* 값은 기본적으로 *True*로 설정되므로 새 SSMS 설치의 기본값은 자동으로 항상 개체를 원본 서버와 동일한 대상으로 스크립팅이 됩니다.
-  - *스크립트 설정을 원본과 일치* 값을 *False*로 설정하면 기본 스크립팅 대상 옵션이 사용하도록 설정되어 이전과 같이 작동합니다.
-  - 또한 모든 스크립팅 옵션이 자체 섹션인 *버전 옵션*으로 이동하였습니다. 따라서 더 이상 *일반 스크립팅 옵션* 아래에 없습니다.
-
-- “URL에서 복원”에서 국가 클라우드에 대한 지원 추가
-- 이제 QueryStoreUI 보고서는 sys.query_store_runtime_stats에서 추가 메트릭(RowCount, DOP, CLR Time 등)을 지원합니다.
-- Azure SQL Database에 IntelliSense 지원
-    - https://connect.microsoft.com/SQLServer/feedback/details/3100677/ssms-2016-would-be-nice-to-have-intellisense-on-azure-sql-databases
-- 보안: 연결 대화 상자가 기본적으로 Azure SQL Database 연결을 위해 신뢰하는 서버 인증서 및 요청 암호화에 연결되지 않음
-- Linux에서 SQL Server에 대한 지원과 관련된 일반 개선 사항:
- - 데이터베이스 메일 노드의 재등장
- - 경로와 관련된 몇 가지 문제 해결
- - 작업 모니터 안정성 개선
- - [연결 속성] 대화 상자에 정확한 플랫폼 표시
-- 성능 대시보드 서버 보고서를 기본 보고서로 제공:
-  - SQL Server 2008 이상의 버전에 연결할 수 있습니다.
-  - 누락된 인덱스 하위 보고서는 점수 매기기를 사용하여 가장 유용한 인덱스를 식별하는 데 도움을 줍니다.
-  - 기록 대기 상태 하위 보고서는 대기 범주를 집계합니다. 유휴 및 중지 대기는 기본적으로 필터링됩니다.
-  - 새 기록 래치 하위 보고서.
-- 실행 계획 노드 검색을 사용하여 계획 속성을 검색할 수 있습니다. 테이블 이름과 같은 연산자 속성을 쉽게 찾을 수 있습니다. 계획을 볼 때 이 옵션을 사용하려면
-  - 계획을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 [노드 찾기] 옵션을 클릭합니다.
-  - CTRL+F 사용
+- 최소한의 사용자 간섭 또는 특수화된 도메인 지식을 요구하는 지능형 프레임워크로 CSV 파일의 가져오기 작업을 단순화하기 위해 새 "플랫 파일 가져오기" 마법사가 추가되었습니다. 자세한 내용은 [SQL 마법사로 플랫 파일 가져오기](../relational-databases/import-export/import-flat-file-wizard.md)를 참조하세요.
+- 개체 탐색기에 "XEvent Profiler" 노드가 추가되었습니다. 자세한 내용은 [SSMS XEvent Profiler 사용](../relational-databases/extended-events/use-the-ssms-xe-profiler.md)을 참조하세요.
+- 성능 대시보드 기록 대기 작업 보고서에 대기 작업 필터링 및 분류가 업데이트되었습니다.
+- "Predict" 함수의 구문 검사가 추가되었습니다.
+- 외부 라이브러리 관리 쿼리의 구문 검사가 추가되었습니다.
+- 외부 라이브러리 관리에 대한 SMO 지원이 추가되었습니다.
+- "등록된 서버" 창에 "PowerShell 시작" 지원이 추가되었습니다(새 SQL PowerShell 모듈 필요).
+- Always On: 가용성 그룹에 대한 [읽기 전용 라우팅 지원](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)이 추가되었습니다.
+- "Active Directory - MFA 지원을 포함한 유니버설 인증" 로그인에 대한 출력 창에 상세 내용 추적을 전송하는 옵션이 추가되었습니다(기본적으로 꺼짐. "도구 > 옵션 > Azure 서비스 > Azure 클라우드 > ADAL 출력 창 추적 수준" 아래의 사용자 설정에서 켜야 함). 
+- 쿼리 저장소: 
+  - 쿼리 저장소 UI는 QDS가 모든 데이터를 기록하는 한 QDS가 OFF인 경우에도 액세스할 수 있습니다.
+  - 이제 쿼리 저장소 UI는 모든 기존 보고서의 대기 분류를 노출합니다. 이를 통해 고객은 상위 대기 중인 쿼리 등의 시나리오를 잠금 해제할 수 있습니다.
+- 스크립팅 매개 변수 헤더 옵션을 포함했습니다(기본적으로 꺼짐. "도구 > 옵션 > SQL Server 개체 탐색기 > 스크립팅 > 스크립팅 매개 변수 헤더 포함" 아래의 사용자 설정에서 활성화될 수 있음). - [연결 항목 3139199](https://connect.microsoft.com/SQLServer/feedback/details/3139199)
+- "RC" 브랜딩이 제거되었습니다.
 
 전체 변경 내용 목록을 보려면 [SQL Server Management Studio - 변경 로그(SSMS)](../ssms/sql-server-management-studio-changelog-ssms.md)를 참조하세요.
 
@@ -158,33 +130,29 @@ SSMS 17.2는 최신 버전의 SQL Server Management Studio입니다. 17.X 세대
 
 이 SSMS 릴리스는 다음 언어로 설치할 수 있습니다.
 
-SQL Server Management Studio 17.2:<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=854085&clcid=0x40a)
+SQL Server Management Studio 17.3:<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=858904&clcid=0x40a)
 
-SQL Server Management Studio 17.2 업그레이드 패키지(17.x에서 17.2로 업그레이드):<br>
-[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=854087&clcid=0x40a)
+SQL Server Management Studio 17.3 업그레이드 패키지(17.x에서 17.3으로 업그레이드):<br>
+[중국어(중국)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x804) | [중국어(대만)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x404) | [영어(미국)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x409) | [프랑스어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40c) | [독일어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x407) | [이탈리아어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x410) | [일본어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x411) | [한국어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x412) | [포르투갈어(브라질)](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x416) | [러시아어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x419) | [스페인어](https://go.microsoft.com/fwlink/?linkid=858906&clcid=0x40a)
 
 ## <a name="release-notes"></a>릴리스 정보
 
-다음은 이 17.2 릴리스의 문제 및 제한 사항입니다.
+다음은 이 17.3 릴리스의 문제 및 제한 사항입니다.
 
-- “Active Directory - MFA를 지원하는 유니버설” 인증을 사용하는 쿼리 창을 한 시간 이상 연 후 쿼리를 실행하면 다음과 유사한 오류가 발생할 수 있습니다.
+**일반 SSMS**
 
-   `Msg 0, Level 11, State 0, Line 0
-The connection is broken and recovery is not possible. The client driver attempted to recover the connection one or more times and all attempts failed. Increase the value of *ConnectRetryCount* to increase the number of recovery attempts.`
+- MFA를 지원하는 UA를 사용하는 Azure AD 인증에는 다른 SSMS 기능이 지원되지 않습니다.
+   - 데이터베이스 엔진 튜닝 관리자는 Azure AD 인증에 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. "예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다." "데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다(DTAClient)". (DTAClient)".
+- 오류의 DTA 결과에서 쿼리 분석 시도: "개체는 IConvertible을 구현해야 합니다(mscorlib)". (mscorlib)".
+- *재발된 쿼리*가 개체 탐색기에서 보고서의 쿼리 저장소 목록에서 누락되었습니다.
+   - 해결 방법: 마우스 오른쪽 단추로 **쿼리 저장소** 노드를 클릭하고 **재발된 쿼리 보기**를 선택합니다.
 
-   쿼리를 다시 실행하면 오류를 통과하고 성공하게 됩니다.
+**IS(Integration Services)**
 
-- MFA를 지원하는 유니버설 인증을 사용하는 Azure AD에는 다른 SSMS 기능이 지원되지 않습니다.
-  - **새 테이블/뷰** 디자이너는 이전 스타일 로그인 프롬프트를 표시하며 Azure AD 인증을 위해 작동하지 않습니다.
-  - **상위 200개의 행 편집** 기능은 Azure AD 인증을 지원하지 않습니다.
-  - **등록된 서버** 구성 요소는 Azure AD 인증을 지원하지 않습니다.
-  - **데이터베이스 엔진 튜닝 관리자**는 Azure AD 인증에 대해 지원되지 않습니다. 사용자에게 제공된 오류 메시지가 유용하지 않은 알려진 문제가 있습니다. *예상과는 달리 파일 또는 어셈블리 'Microsoft.IdentityModel.Clients.ActiveDirectory,...를 로드할 수 없습니다.* *데이터베이스 엔진 튜닝 관리자는 Microsoft Azure SQL Database를 지원하지 않습니다. (DTAClient)*.
+- [catalog].[event_messagea]에서 [execution_path]가 Scale Out에서 패키지 실행에 대해 올바르지 않습니다. [execution_path]는 패키지 실행 파일의 개체 이름 대신 "\Package"로 시작합니다. SSMS에서 패키지 실행의 개요 보고서를 볼 때 실행 개요에서 "실행 경로"의 링크는 작동하지 않습니다. 해결 방법은 개요 보고서에서 "메시지 보기"를 클릭하여 모든 이벤트 메시지를 확인하는 것입니다.
 
-**AS**
 
-- SSAS의 개체 탐색기는 AS Azure 연결 속성에 Windows 인증 사용자 이름을 표시하지 않습니다.
-자세한 내용은 [SSMS 변경 로그](sql-server-management-studio-changelog-ssms.md)를 참조하세요.
 
 ## <a name="previous-releases"></a>이전 릴리스
 
