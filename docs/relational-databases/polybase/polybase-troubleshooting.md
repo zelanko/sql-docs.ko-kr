@@ -21,10 +21,10 @@ author: barbkess
 ms.author: barbkess
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 71ca2fac0a6b9f087f9d434c5a701f5656889b9e
-ms.openlocfilehash: 4026b6c7c7ae2945d49d6c4b63792239608ffea0
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: 240e02e3dd0d40f53f8436e241af228b503a43d9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/13/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="polybase-troubleshooting"></a>PolyBase 문제 해결
@@ -83,7 +83,7 @@ ms.lasthandoff: 09/13/2017
   
      이전 단계에서 기록된 실행 ID를 사용하여 가장 오래 실행되는 단계의 단계 인덱스를 기록합니다.  
   
-     가장 오래 실행되는 단계의 location_type를 확인합니다.  
+     가장 오래 실행되는 단계의 location_type을 확인합니다.  
   
     -   Head 또는 Compute: SQL 작업을 의미합니다. 3a단계를 진행합니다.  
   
@@ -143,13 +143,13 @@ ms.lasthandoff: 09/13/2017
   
 ## <a name="to-view-the--polybase-query-plan"></a>PolyBase 쿼리 계획을 보려면  
   
-1.  SSMS에서 Ctrl+M을 눌러 **실제 실행 계획 포함** 을 사용하도록 설정하고 쿼리를 실행합니다.  
+1.  SSMS에서 Ctrl+M을 눌러 **실제 실행 계획 포함**을 사용하도록 설정하고 쿼리를 실행합니다.  
   
 2.  **실행 계획** 탭을 클릭합니다.  
   
      ![PolyBase 쿼리 계획](../../relational-databases/polybase/media/polybase-query-plan.png "PolyBase 쿼리 계획")  
   
-3.  **원격 쿼리 연산자** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
+3.  **원격 쿼리 연산자**를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
 4.  원격 쿼리 값을 복사한 다음 텍스트 편집기에 붙여넣어 XML 원격 쿼리 계획을 확인합니다.  아래에 예가 나와 있습니다.  
   
@@ -213,13 +213,13 @@ ms.lasthandoff: 09/13/2017
     ```  
   
 ## <a name="to-monitor-nodes-in-a-polybase-group"></a>PolyBase 그룹에서 노드를 모니터링하려면  
- PolyBase 규모 확장 그룹의 일부분으로 컴퓨터 집합을 구성한 후에는 컴퓨터의 상태를 모니터링할 수 있습니다. 규모 확장 그룹을 만드는 방법은 [PolyBase 확장 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  
+ PolyBase 규모 확장 그룹의 일부분으로 컴퓨터 집합을 구성한 후에는 컴퓨터의 상태를 모니터링할 수 있습니다. 스케일 아웃 그룹을 만드는 방법은 [PolyBase 스케일 아웃 그룹](../../relational-databases/polybase/polybase-scale-out-groups.md)을 참조하세요.  
   
 1.  그룹의 헤드 노드에서 SQL Server에 연결합니다.  
   
-2.  DMV [sys.dm_exec_compute_nodes&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md) 를 실행하여 PolyBase 그룹의 모든 노드를 확인합니다.  
+2.  DMV [sys.dm_exec_compute_nodes&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)를 실행하여 PolyBase 그룹의 모든 노드를 확인합니다.  
   
-3.  DMV [sys.dm_exec_compute_node_status&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md) 를 실행하여 PolyBase 그룹의 모든 노드의 상태를 확인합니다.  
+3.  DMV [sys.dm_exec_compute_node_status&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-node-status-transact-sql.md)를 실행하여 PolyBase 그룹의 모든 노드의 상태를 확인합니다.  
   
  ## <a name="known-limitations"></a>알려진 제한 사항
  
@@ -229,6 +229,8 @@ ms.lasthandoff: 09/13/2017
  - SQL Server 또는 Azure SQL Data Warehouse에서 ORC 파일 형식으로 데이터를 내보낼 때 텍스트가 많은 열은 java 메모리 부족 오류로 인해 50개 이내로 제한될 수 있습니다. 이 문제를 해결하려면 열의 하위 집합만 내보냅니다.
  - Hadoop에서 암호화된 미사용 데이터를 읽거나 쓸 수 없습니다. 여기에는 HDFS 암호화 영역 또는 투명 암호화가 포함됩니다.
  - KNOX가 활성화되어 있으면 PolyBase가 Hortonworks 인스턴스에 연결할 수 없습니다. 
+ - 트랜잭션이 true인 Hive 테이블을 사용하는 경우 PolyBase는 Hive 테이블의 디렉터리에 있는 데이터에 액세스할 수 없습니다. 
+
 
 [PolyBase는 SQL Server 2016 장애 조치(Failover) 클러스터에 노드를 추가하는 경우 설치되지 않습니다.](https://support.microsoft.com/en-us/help/3173087/fix-polybase-feature-doesn-t-install-when-you-add-a-node-to-a-sql-server-2016-failover-cluster)
 

@@ -17,10 +17,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 7f4686ae082a68b7c5d866e5c2c885936c5450dc
+ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
+ms.openlocfilehash: f043381909cd5a7fb7146f424163af69a443022c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 10/06/2017
 
 ---
 # <a name="create-a-format-file-sql-server"></a>서식 파일 만들기
@@ -33,10 +33,10 @@ ms.lasthandoff: 10/04/2017
 > [!NOTE]  
 >  서식 파일을 읽는 데 사용되는 **bcp** 유틸리티(Bcp.exe)의 버전은 서식 파일을 만드는 데 사용되는 버전 이상이어야 합니다. 예를 들어 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** 는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**에서 생성된 버전 10.0 서식 파일을 읽을 수 있지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** 는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**에서 생성된 버전 11.0 서식 파일을 읽을 수 없습니다.  
   
- 이 항목에서는 [bcp 유틸리티](../../tools/bcp-utility.md) 를 사용하여 특정 테이블에 대한 서식 파일을 만드는 방법에 대해 설명합니다. 서식 파일은 지정된 데이터 형식 옵션(**-n**, **-c**, **-w**또는 **-N**)과 테이블 또는 뷰 구분 기호를 기반으로 합니다.  
+ 이 항목에서는 [bcp 유틸리티](../../tools/bcp-utility.md)를 사용하여 특정 테이블에 대한 서식 파일을 만드는 방법에 대해 설명합니다. 서식 파일은 지정된 데이터 형식 옵션(**-n**, **-c**, **-w**또는 **-N**)과 테이블 또는 뷰 구분 기호를 기반으로 합니다.  
   
 ## <a name="creating-a-non-xml-format-file"></a>비 XML 서식 파일 만들기  
- **bcp** 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다. **format** 옵션에는 다음과 같이 **-f** 옵션도 필요합니다.  
+ **bcp** 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL**을 사용합니다. **format** 옵션에는 다음과 같이 **-f** 옵션도 필요합니다.  
   
  **bcp** *table_or_view* **format** NUL **-f***format_file_name*  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 10/04/2017
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|비 XML 서식 파일을 지정합니다.|  
 |**-n**|네이티브 데이터 형식을 지정합니다.|  
-|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
+|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T**를 지정하지 않은 경우 성공적으로 로그인하려면 **-U**와 **-P**를 지정해야 합니다.|  
   
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  
   
@@ -99,7 +99,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
 |----------------|-----------------|  
 |**formatnul-f** *format_file*|비 XML 서식 파일을 지정합니다.|  
 |**-c**|문자 데이터를 지정합니다.|  
-|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
+|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T**를 지정하지 않은 경우 성공적으로 로그인하려면 **-U**와 **-P**를 지정해야 합니다.|  
   
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  
   
@@ -139,7 +139,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
  유니코드 문자 데이터를 사용하는 방법에 대한 자세한 내용은 [유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기&#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)를 참조하세요.  
   
 #### <a name="f-using-a-format-file-with-the-code-page-option"></a>6. 코드 페이지 옵션이 있는 형식 파일 사용  
- bcp 명령을 사용하여 서식 파일을 만드는 경우(즉, “`bcp forma`t …” 사용 ) 데이터 정렬/코드 페이지에 대한 정보가 서식 파일에 기록됩니다.   
+bcp 명령을 사용하여 서식 파일을 만들 경우(즉, `bcp format` 사용), 데이터 정렬/코드 페이지에 대한 정보가 서식 파일에 기록됩니다.   
 다음 예제에서는 열이 5개 있는 서식 파일에 데이터 정렬이 포함됩니다.  
   
 ```  
@@ -168,7 +168,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 ```  
   
 ## <a name="creating-an-xml-format-file"></a>XML 서식 파일 만들기  
- **bcp** 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL** 을 사용합니다. 다음과 같이 **format** 옵션에는 항상 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 지정해야 합니다.  
+ **bcp** 명령을 사용하여 서식 파일을 만들려면 데이터 파일 경로 대신 **format** 인수를 지정하고 **NUL**을 사용합니다. 다음과 같이 **format** 옵션에는 항상 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 지정해야 합니다.  
   
  **bcp** *table_or_view* **format nul-f** *format_file_name* **-x**  
   
@@ -199,7 +199,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |**formatnul-f** *format_file* **-x**|XML 서식 파일을 지정합니다.|  
 |**-c**|문자 데이터를 지정합니다.|  
 |**-t** `,`|쉼표(**,**)를 필드 종결자로 지정합니다.<br /><br /> 참고: 데이터 파일이 기본 필드 종결자(`\t`)를 사용하면 **-t** 스위치는 불필요합니다.|  
-|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
+|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T**를 지정하지 않은 경우 성공적으로 로그인하려면 **-U**와 **-P**를 지정해야 합니다.|  
   
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  
   
@@ -238,7 +238,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
 |----------------|-----------------|  
 |**formatnul-f** *format_file* **-x**|XML 서식 파일을 지정합니다.|  
 |**-n**|네이티브 데이터 형식을 지정합니다.|  
-|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T** 를 지정하지 않은 경우 성공적으로 로그인하려면 **-U** 와 **-P** 를 지정해야 합니다.|  
+|**-T**|**bcp** 유틸리티가 통합 보안을 사용하는 트러스트된 연결을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로 연결되도록 지정합니다. **-T**를 지정하지 않은 경우 성공적으로 로그인하려면 **-U**와 **-P**를 지정해야 합니다.|  
   
  Windows 명령 프롬프트에 다음 `bcp` 명령을 입력합니다.  
   

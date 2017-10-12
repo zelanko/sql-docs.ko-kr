@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 8397673c7ed9dfe8ae02871f9077ed7286e49863
-ms.openlocfilehash: da7bf96dbacf57f7086c5cfda298b2e810c43a07
+ms.sourcegitcommit: dd20fe12af6f1dcaf378d737961bc2ba354aabe5
+ms.openlocfilehash: 559172415fef699a60e88111a5e13eb6accbeb3c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/04/2017
 
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드
@@ -66,8 +66,15 @@ ms.lasthandoff: 08/09/2017
 ##  <a name="physical_arch"></a> 트랜잭션 로그 물리 아키텍처  
  데이터베이스의 트랜잭션 로그는 하나 이상의 물리 파일에 매핑됩니다. 개념상으로 로그 파일은 로그 레코드의 문자열입니다. 실제로 로그 레코드의 시퀀스는 트랜잭션 로그를 구현하는 물리적 파일 집합에 효율적으로 저장됩니다. 데이터베이스마다 최소한 하나의 로그 파일이 있어야 합니다.  
   
- [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 은 내부적으로 각 물리 로그 파일을 여러 개의 가상 로그 파일로 나눕니다. 가상 로그 파일의 크기는 고정되어 있지 않으며 물리 로그 파일에 대해 고정된 수의 가상 로그 파일이 있는 것도 아닙니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 로그 파일을 만들거나 확장할 때 동적으로 가상 로그 파일의 크기를 선택합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 적은 수의 가상 파일을 유지하려고 합니다. 로그 파일 확장 후 가상 파일 크기는 기존 로그 크기와 새 파일 증가 크기를 합한 크기입니다. 관리자가 가상 로그 파일의 크기 또는 수를 구성하거나 설정할 수 없습니다.  
-  
+ [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 내부적으로 각 물리적 로그 파일을 여러 개의 VLF(가상 로그 파일)로 나눕니다. 가상 로그 파일의 크기는 고정되어 있지 않으며 물리 로그 파일에 대해 고정된 수의 가상 로그 파일이 있는 것도 아닙니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 로그 파일을 만들거나 확장할 때 동적으로 가상 로그 파일의 크기를 선택합니다. [!INCLUDE[ssDE](../includes/ssde-md.md)]은 적은 수의 가상 파일을 유지하려고 합니다. 로그 파일 확장 후 가상 파일 크기는 기존 로그 크기와 새 파일 증가 크기를 합한 크기입니다. 관리자가 가상 로그 파일의 크기 또는 수를 구성하거나 설정할 수 없습니다.  
+
+> [!NOTE]
+> VLF 생성은 이 메서드를 따릅니다.
+> - 다음 증가가 현재 로그의 물리적 크기의 1/8보다 작은 경우 증가 크기에 충분한 VLF를 하나 만듭니다([!INCLUDE[ssSQL14](../includes/sssql14-md.md)]로 시작).
+> - 증가가 64MB보다 작은 경우 증가 크기에 충분한 4개의 VLF를 만듭니다(예: 1MB 증가의 경우 256KB VLF 4개 생성).
+> - 증가가 64MB에서 최대 1GB인 경우 증가 크기에 충분한 8개의 VLF를 만듭니다(예: 512MB 증가의 경우 64MB VLF 8개 생성).
+> - 증가가 1GB보다 큰 경우 증가 크기에 충분한 16개의 VLF를 만듭니다(예: 8GB 증가의 경우 512MB VLF 16개 생성).
+
  작은 *size* 및 *growth_increment* 값으로 물리적 로그 파일을 정의하는 경우에만 가상 로그 파일이 시스템 성능에 영향을 줍니다. *size* 값은 로그 파일의 처음 크기이며 *growth_increment* 값은 공간이 새로 필요할 때마다 파일에 추가되는 공간 크기입니다. 수많은 작은 증가값으로 인해 로그 파일이 크게 증가하는 경우 가상 로그 파일이 많이 생성됩니다. 이로 인해 데이터베이스 시작뿐 아니라 로그 백업 및 복원 작업이 느려질 수 있습니다. 필요한 최종 크기에 가까운 *size* 값을 로그 파일에 할당하고 *growth_increment* 값을 비교적 크게 지정하는 것이 좋습니다. 이러한 매개 변수에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
  트랜잭션 로그는 순환 파일입니다. 예를 들어 데이터베이스에 4개의 가상 로그 파일로 나뉜 물리 로그 파일이 한 개 있다고 가정합니다. 이 데이터베이스가 생성될 때 물리 로그 파일의 시작 부분에서 논리 로그 파일이 시작됩니다. 새 로그 레코드는 논리 로그의 끝 부분에 추가되며 물리 로그의 끝 방향으로 확장됩니다. 로그 잘림을 수행하면 모든 레코드가 MinLSN(최소 복구 로그 시퀀스 번호) 앞에 있는 가상 로그에 대한 공간이 확보됩니다. *MinLSN* 은 성공적인 데이터베이스 차원의 롤백에 필요한 가장 오래된 로그 레코드의 로그 시퀀스 번호입니다. 예제 데이터베이스의 트랜잭션 로그는 다음 그림의 로그와 유사합니다.  
@@ -82,7 +89,7 @@ ms.lasthandoff: 08/09/2017
   
 -   로그에 대해 FILEGROWTH 설정이 사용하도록 설정되어 있고 디스크에 사용할 수 있는 공간이 있으면 파일은 *growth_increment* 매개 변수에 지정된 크기만큼 확장되며 새 로그 레코드가 확장 부분에 추가됩니다. FILEGROWTH 설정에 대한 자세한 내용은 [ALTER DATABASE 파일 및 파일 그룹 옵션&#40;Transact-SQL&#41;](../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md)을 참조하세요.  
   
--   FILEGROWTH 설정이 사용하도록 설정되어 있지 않거나 로그 파일이 있는 디스크의 사용 가능한 공간이 *growth_increment*에 지정된 크기보다 적으면 9002 오류가 발생합니다.  
+-   FILEGROWTH 설정이 사용하도록 설정되어 있지 않거나 로그 파일이 있는 디스크의 사용 가능한 공간이 *growth_increment*에 지정된 크기보다 적으면 9002 오류가 발생합니다. 자세한 정보는 [전체 트랜잭션 로그 문제 해결](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)을 참조하세요.  
   
  로그에 물리 로그 파일이 여러 개 있으면 논리 로그는 모든 물리 로그 파일을 거친 후 첫 번째 물리 로그 파일의 시작 부분으로 순환됩니다.  
   
@@ -106,7 +113,7 @@ ms.lasthandoff: 08/09/2017
  여러 요소로 인해 로그 잘림이 지연될 수 있습니다. 로그 잘림이 장시간 지연될 경우 트랜잭션 로그가 꽉 찰 수 있습니다. 자세한 내용은 [로그 잘림을 지연시킬 수 있는 요소](../relational-databases/logs/the-transaction-log-sql-server.md#FactorsThatDelayTruncation) 및 [꽉 찬 트랜잭션 로그 문제 해결&#40;SQL Server 오류 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)을 참조하세요.  
   
 ##  <a name="WAL"></a> 미리 쓰기 트랜잭션 로그  
- 이 섹션에서는 데이터 수정 내용을 디스크에 기록할 때 미리 쓰기 트랜잭션 로그의 역할에 대해 설명합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 WAL(미리 쓰기 로그)을 사용하여 연결된 로그 레코드가 디스크에 기록되기 전에는 어떠한 데이터 수정 내용도 디스크에 기록되지 않도록 합니다. 따라서 트랜잭션의 ACID 속성이 유지 관리됩니다.  
+ 이 섹션에서는 데이터 수정 내용을 디스크에 기록할 때 미리 쓰기 트랜잭션 로그의 역할에 대해 설명합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 WAL(미리 쓰기 로그)을 사용하여 연결된 로그 레코드가 디스크에 기록되기 전에는 어떠한 데이터 수정 내용도 디스크에 기록되지 않도록 합니다. 따라서 트랜잭션의 ACID 속성이 유지 관리됩니다.  
   
  미리 쓰기 로그 작동 방식을 이해하려면 수정된 데이터가 디스크에 기록되는 방법을 알아야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 데이터를 검색해야 할 때 데이터 페이지를 읽어오는 버퍼 캐시를 유지 관리합니다. 페이지가 버퍼 캐시에서 수정될 때 페이지는 디스크에 바로 다시 기록되지 않고 대신 *더티*로 표시됩니다. 데이터 페이지는 물리적으로 디스크에 기록되기 전에 두 개 이상의 논리적 쓰기를 수행할 수 있습니다. 각 논리적 쓰기의 경우 트랜잭션 로그 레코드는 수정 사항을 기록하는 로그 캐시에 삽입됩니다. 로그 레코드는 관련된 더티 페이지가 버퍼 캐시에서 디스크로 제거되기 전에 디스크에 기록되어야 합니다. 검사점 프로세스는 주기적으로 버퍼 캐시에서 지정된 특정 데이터베이스의 페이지를 포함하는 버퍼를 검색한 다음 모든 더티 페이지를 디스크에 기록합니다. 검사점은 모든 더티 페이지가 디스크에 기록되었음을 확인하는 지점을 만들어 나중에 복구하는 동안 시간을 절약할 수 있습니다.  
   
@@ -172,7 +179,7 @@ ms.lasthandoff: 08/09/2017
 
 SQL Server 데이터베이스 엔진은 자동 검사점을 생성합니다. 자동 검사점 간의 간격은 마지막 검사점 이후 경과된 시간과 사용된 로그 공간에 따라 결정됩니다. 데이터베이스가 거의 수정되지 않을 경우에는 자동 검사점 간의 시간 간격이 가변적이고 길어질 수 있습니다. 또한 많은 데이터를 수정할 경우에는 자동 검사점이 자주 발생할 수 있습니다.
 
-**복구 간격** 서버 구성 옵션을 사용하여 서버 인스턴스의 모든 데이터베이스에 대한 자동 검사점 간 간격을 계산할 수 있습니다. 이 옵션은 시스템을 다시 시작하는 동안 데이터베이스 엔진이 데이터베이스를 복구하는 데 사용하는 최대 시간을 지정합니다. 데이터베에스 엔진은 복구 작업 중에 해당 **복구 간격** 동안 처리할 수 있는 로그 레코드의 수를 예상합니다. 
+**복구 간격** 서버 구성 옵션을 사용하여 서버 인스턴스의 모든 데이터베이스에 대한 자동 검사점 간 간격을 계산할 수 있습니다. 이 옵션은 시스템을 다시 시작하는 동안 데이터베이스 엔진이 데이터베이스를 복구하는 데 사용하는 최대 시간을 지정합니다. 데이터베이스 엔진은 복구 작업 중에 해당 **복구 간격** 동안 처리할 수 있는 로그 레코드의 수를 예상합니다. 
 
 자동 검사점 간의 간격은 복구 모델에 따라서도 달라집니다.
 
@@ -217,8 +224,11 @@ LSN 148은 트랜잭션 로그의 마지막 레코드입니다. LSN 147에 기�
 ## <a name="additional-reading"></a>더 보기  
  트랜잭션 로그에 대한 자세한 내용은 다음 기사 및 책을 참조하십시오.  
   
- [Paul Randall, "SQL Server의 로깅 및 복구 이해"](http://technet.microsoft.com/magazine/2009.02.logging.aspx)  
-  
+ [트랜잭션 로그 파일의 크기 관리](../relational-databases/logs/manage-the-size-of-the-transaction-log-file.md)   
+ [sys.dm_db_log_info &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-info-transact-sql.md)  
+ [sys.dm_db_log_space_usage &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)     
+ [트랜잭션 로그&#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md)        
+ [Paul Randall, “SQL Server의 로깅 및 복구 이해”](http://technet.microsoft.com/magazine/2009.02.logging.aspx)    
  [Tony Davis 및 Gail Shaw 공저, "SQL Server 트랜잭션 로그 관리"](http://www.simple-talk.com/books/sql-books/sql-server-transaction-log-management-by-tony-davis-and-gail-shaw/)  
   
   

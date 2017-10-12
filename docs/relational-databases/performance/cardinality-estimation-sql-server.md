@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 5ea0741bdfd8ff724390de6bb8c298af2e138648
+ms.sourcegitcommit: b6d6655b1640eff66182c78ea919849194d9714c
+ms.openlocfilehash: 2d334f4397fdbf4097adbbc75d284202fd0fd8df
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/05/2017
 
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
@@ -59,7 +59,7 @@ SELECT d.name, d.compatibility_level
 go  
 ```  
   
- 호환성 수준 120 이상으로 설정된 SQL Server 데이터베이스의 경우 [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481을 활성화하면 시스템에서 CE 버전 70이 사용됩니다.  
+ 호환성 수준 120 이상으로 설정된 SQL Server 데이터베이스의 경우 [추적 플래그 9481](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)을 활성화하면 시스템에서 CE 버전 70이 사용됩니다.  
   
  **레거시 CE:** 호환성 수준 120 이상으로 설정된 SQL Server 데이터베이스의 경우 [데이터베이스 범위 구성 변경](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 사용하여 데이터베이스 수준에서 CE 버전 70을 활성화할 수 있습니다.
   
@@ -83,7 +83,7 @@ SELECT CustomerId, OrderAddedDate
     OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
- **쿼리 저장소:**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016에 처음 도입된 쿼리 저장소는 쿼리의 성능을 검사하는 유용한 도구입니다.  쿼리 저장소가 ON으로 설정된 경우 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)](SSMS.exe)의 데이터베이스 노드 아래에 있는 **개체 탐색기**에 **쿼리 저장소** 노드가 표시됩니다.  
+ **쿼리 저장소:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 처음 도입된 쿼리 저장소는 쿼리의 성능을 검사하는 유용한 도구입니다. 쿼리 저장소가 사용하도록 설정된 경우 [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]의 데이터베이스 노드 아래에 있는 **개체 탐색기**에 **쿼리 저장소** 노드가 표시됩니다.  
   
 ```tsql  
 ALTER DATABASE <yourDatabase>  
@@ -103,9 +103,9 @@ ALTER DATABASE <yourDatabase>
 ```  
   
  > [!TIP] 
- > 매월 [(SSMS.exe)](http://msdn.microsoft.com/library/mt238290.aspx)의 최신 릴리스를 설치하는 것이 좋습니다.  
+ > [Management Studio](http://msdn.microsoft.com/library/mt238290.aspx)의 최신 릴리스를 설치하고 종종 업데이트하는 것이 좋습니다.  
   
- 카디널리티 추정 프로세스를 추적하기 위한 또 다른 옵션은 확장 이벤트 **query_optimizer_estimate_cardinality**를 사용하는 것입니다.  다음 T-SQL 코드 샘플은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행됩니다. C:\Temp\(경로 변경 가능)에 .xel 파일을 씁니다. SSMS에서 .xel 파일을 열면 사용자에게 친숙한 방식으로 세부 정보가 표시됩니다.  
+ 카디널리티 추정 프로세스를 추적하기 위한 또 다른 옵션은 확장 이벤트 **query_optimizer_estimate_cardinality**를 사용하는 것입니다. 다음 T-SQL 코드 샘플은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 실행됩니다. C:\Temp\(경로 변경 가능)에 .xel 파일을 씁니다. [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)]에서 .xel 파일을 열면 사용자에게 친숙한 방식으로 세부 정보가 표시됩니다.  
   
 ```tsql  
 DROP EVENT SESSION Test_the_CE_qoec_1 ON SERVER;  
@@ -134,7 +134,7 @@ ALTER EVENT SESSION Test_the_CE_qoec_1
 go  
 ```  
   
- Azure SQL 데이터베이스용 확장 이벤트에 대한 자세한 내용은 [SQL 데이터베이스의 확장 이벤트](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)를 참조하세요.  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)]용 확장 이벤트에 대한 자세한 내용은 [SQL Database의 확장 이벤트](http://azure.microsoft.com/documentation/articles/sql-database-xevent-db-diff-from-svr/)를 참조하세요.  
   
   
 ## <a name="steps-to-assess-the-ce-version"></a>CE 버전 평가 단계  
