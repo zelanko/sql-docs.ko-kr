@@ -487,7 +487,7 @@ ALLOW_PAGE_LOCKS  **=**  { **ON** | OFF}
   
  *max_degree_of_parallelism* 될 수 있습니다.  
   
- 1.  
+ 1  
  병렬 계획이 생성되지 않습니다.  
   
  \>1  
