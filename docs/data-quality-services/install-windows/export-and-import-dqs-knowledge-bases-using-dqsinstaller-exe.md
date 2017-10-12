@@ -59,7 +59,7 @@ dqsinstaller.exe –importkbs c:\DQSBackup.dqsb
  [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 에 가져오려는 기술 자료와 이름이 같은 기술 자료가 이미 있는 경우 가져온 기술 자료의 이름에 밑줄(_)과 함께 1부터 시작되는 정수 값이 추가됩니다. 예를 들어 "CompanyName" 도메인이 중복된 경우 가져온 도메인 이름은 "CompanyName_1"이 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Run DQSInstaller.exe to Complete Data Quality Server Installation](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
+ [DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md)   
  [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)   
  [.dqs 파일로 기술 자료 내보내기](../../data-quality-services/export-a-knowledge-base-to-a-dqs-file.md)   
  [.dqs 파일에서 기술 자료 가져오기](../../data-quality-services/import-a-knowledge-base-from-a-dqs-file.md)  
