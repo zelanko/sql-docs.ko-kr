@@ -32,7 +32,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2a0e055789734939dacb7074ec6de5765eecbd88
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
@@ -52,7 +52,7 @@ ms.lasthandoff: 09/27/2017
   
  다음 다이어그램은 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너와 **도구 상자** 창을 보여 줍니다.  
   
- ![SSIS의 스크린샷 디자이너 및 도구 상자](../integration-services/media/denali-designerandtoolbox.gif "스크린 샷 ssis 디자이너 및 도구")  
+ ![SSIS 디자이너 및 도구 상자의 스크린 샷](../integration-services/media/denali-designerandtoolbox.gif "SSIS 디자이너 및 도구 상자의 스크린 샷")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에는 패키지에 대한 추가 기능을 제공하는 추가 대화 상자 및 창이 있으며, [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 에는 개발 환경 구성 및 패키지 사용을 위한 창 및 대화 상자가 제공됩니다. 자세한 내용은 [Integration Services 사용자 인터페이스](../integration-services/integration-services-user-interface.md)를 참조하세요.  
   
@@ -158,7 +158,7 @@ ms.lasthandoff: 09/27/2017
  **Delete**  
  이벤트 처리기를 선택하고 **삭제**를 클릭하여 해당 처리기를 패키지에서 제거합니다.  
   
- **만들려면 여기를 클릭 한 \<이벤트 처리기 이름\> 실행 파일에 대 한 \<실행 파일 이름\>**  
+ **실행 파일 \<실행 파일 이름\>**에 대한 \<이벤트 처리기 이름\> 을 만들려면 여기를 클릭하십시오.  
  이벤트 처리기를 만들려면 클릭합니다.  
   
  [!INCLUDE[ssIS](../includes/ssis-md.md)] 태스크 및 컨테이너를 나타내는 그래픽 개체를 **도구 상자** 에서 **이벤트 처리기** 탭의 디자인 화면으로 끌어 온 다음 이러한 태스크 및 컨테이너가 실행되는 순서를 정의하는 선행 제약 조건으로 이러한 개체를 연결하여 제어 흐름을 만듭니다.  
