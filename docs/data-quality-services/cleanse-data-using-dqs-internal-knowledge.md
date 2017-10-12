@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>DQS(내부) 기술 자료를 사용하여 데이터 정리
-  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 품질 프로젝트를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. 데이터 정리는 고품질 데이터 집합에 대해 DQS에 기본 제공된 기술 자료를 사용하여 원본 데이터에서 수행됩니다. 자세한 내용은 [Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md)을 참조하세요.  
+  이 항목에서는 DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 데이터 품질 프로젝트를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. 데이터 정리는 고품질 데이터 집합에 대해 DQS에 기본 제공된 기술 자료를 사용하여 원본 데이터에서 수행됩니다. 자세한 내용은 [기술 자료 구축](../data-quality-services/building-a-knowledge-base.md)을 참조하세요.  
   
  데이터 정리는 4단계로 수행됩니다. *매핑* 단계에서는 정리할 데이터 원본을 확인하여 기술 자료의 필수 도메인에 매핑하고, *컴퓨터 기반 정리* 단계에서는 DQS에서 정리할 데이터에 기술 자료를 적용하고 원본 데이터에 대한 변경 내용을 제안/적용하며, *대화형 정리* 단계에서는 데이터 관리자가 데이터 변경 내용을 분석한 후 데이터 변경을 허용/거부할 수 있고, 마지막 *내보내기* 단계에서는 정리된 데이터를 내보낼 수 있습니다. 이러한 각 프로세스는 정리 작업 마법사의 개별 페이지에서 수행되므로 여러 페이지를 앞뒤로 이동하고, 프로세스를 다시 실행하고, 특정 정리 프로세스를 닫은 후 프로세스의 같은 단계로 돌아갈 수 있습니다. DQS에서는 원본 데이터 및 정리 결과에 대한 통계를 제공하므로 정보를 바탕으로 데이터 정리에 대한 의사를 결정할 수 있습니다.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/09/2017
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
   
--   정리 작업에 대한 적절한 임계값을 지정해야 합니다. 이렇게 하는 방법은 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
+-   정리 작업에 대한 적절한 임계값을 지정해야 합니다. 이렇게 하는 방법은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
 -   비교하고 원본 데이터를 정리할 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 에서 DQS 기술 자료를 사용할 수 있어야 합니다. 또한 정리할 데이터 유형에 대한 정보가 기술 자료에 포함되어 있어야 합니다. 예를 들어 미국 주소가 포함된 원본 데이터를 정리하려면 미국 주소의 "고품질" 예제 데이터에 대해 만든 기술 자료가 있어야 합니다.  
   
@@ -49,7 +49,7 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Create"></a> 정리 데이터 품질 프로젝트 만들기  
  데이터 정리 작업을 수행하려면 데이터 품질 프로젝트를 사용해야 합니다. 정리 데이터 품질 프로젝트를 만들려면  
   
-1.  [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)항목의 1~3단계를 수행합니다.  
+1.  [데이터 품질 프로젝트 만들기](../data-quality-services/create-a-data-quality-project.md)항목의 1~3단계를 수행합니다.  
   
 2.  3.d 단계에서 **정리** 작업을 선택합니다.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 09/09/2017
 2.  **매핑**아래에서 **원본 열** 열에 대한 드롭다운 목록에서 원본 열을 선택한 다음 동일한 행의 **도메인** 열에 대한 드롭다운 목록에서 도메인을 선택하여 원본 데이터의 데이터 열을 기술 자료의 적절한 도메인에 매핑합니다. 이 단계를 반복하여 원본 데이터의 모든 열을 기술 자료의 적절한 도메인에 매핑합니다. 필요한 경우 **열 매핑 추가** 아이콘을 클릭하여 매핑 테이블에 행을 추가할 수 있습니다.  
   
     > [!NOTE]  
-    >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 정리를 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 원본 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+    >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 정리를 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 원본 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
 3.  **데이터 원본 미리 보기** 아이콘을 클릭하여 선택한 SQL Server 테이블이나 뷰 또는 선택한 Excel 워크시트에서 데이터를 확인합니다.  
   
@@ -90,7 +90,7 @@ ms.lasthandoff: 09/09/2017
     >   
     >      두 경우 모두 **예** 를 클릭하여 컴퓨터 기반 정리에 업데이트된 기술 자료를 사용합니다. 또한 현재 매핑과 업데이트된 기술 자료가 충돌하는 경우(예: 도메인이 삭제되었거나 도메인 데이터 형식이 변경된 경우)에도 업데이트된 기술 자료를 사용하여 현재 매핑을 수정할지 여부를 묻는 메시지가 나타납니다. **예** 를 클릭하면 컴퓨터 기반 정리를 계속하기 전에 매핑을 수정할 수 있는 **맵** 페이지로 이동합니다.  
   
-2.  컴퓨터 기반 정리 단계 중에 **프로파일러** 탭을 클릭하면 프로파일러로 전환하여 실시간 데이터 프로파일링 및 알림을 확인할 수 있습니다. 자세한 내용은 [Profiler Statistics](#Profiler)을 참조하세요.  
+2.  컴퓨터 기반 정리 단계 중에 **프로파일러** 탭을 클릭하면 프로파일러로 전환하여 실시간 데이터 프로파일링 및 알림을 확인할 수 있습니다. 자세한 내용은 [프로파일러 통계](#Profiler)을 참조하세요.  
   
 3.  결과에 만족하지 않는 경우 **뒤로** 를 클릭하여 **맵** 페이지로 이동한 후 필요에 따라 하나 이상의 매핑을 수정하고 **정리** 페이지로 돌아가서 **다시 시작**을 클릭합니다.  
   
@@ -99,9 +99,9 @@ ms.lasthandoff: 09/09/2017
 ##  <a name="Interactive"></a> 대화형 정리 단계  
  대화형 정리 단계에서는 DQS에서 제안한 변경 내용을 확인하고, 이를 승인하거나 거부하여 변경 내용을 구현할지 여부를 결정할 수 있습니다. **결과 관리 및 보기** 페이지의 왼쪽 창에는 컴퓨터 기반 정리 단계 중에 각 도메인에 대해 분석한 원본 데이터의 값 수와 함께 이전에 매핑 단계에서 매핑된 모든 도메인 목록이 표시됩니다. **결과 관리 및 보기** 페이지의 오른쪽 창에는 도메인 규칙, 구문 오류 규칙 및 고급 알고리즘의 준수 여부에 따라 *신뢰도 수준*을 사용하여 5개 탭으로 데이터가 분류됩니다. 신뢰도 수준은 수정 또는 제안에 대한 DQS의 확신도를 나타내며, 다음 임계값을 기반으로 합니다.  
   
--   **자동 수정 임계값**: 신뢰도 수준이 이 임계값보다 높은 모든 값이 DQS에 의해 자동으로 수정됩니다. 그러나 데이터 관리자가 대화식 정리 중에 변경 내용을 재정의할 수 있습니다. **구성** 화면의 **일반 설정** 탭에서 자동 수정 임계값을 지정할 수 있습니다. 자세한 내용은 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
+-   **자동 수정 임계값**: 신뢰도 수준이 이 임계값보다 높은 모든 값이 DQS에 의해 자동으로 수정됩니다. 그러나 데이터 관리자가 대화식 정리 중에 변경 내용을 재정의할 수 있습니다. **구성** 화면의 **일반 설정** 탭에서 자동 수정 임계값을 지정할 수 있습니다. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
--   **자동 제안 임계값**: 신뢰도 수준이 이 임계값보다 높지만 자동 수정 임계값보다는 낮은 모든 값이 대체 값으로 제안됩니다. 변경 작업은 데이터 관리자가 승인하는 경우에만 수행됩니다. **구성** 화면의 **일반 설정** 탭에서 자동 제안 임계값을 지정할 수 있습니다. 자세한 내용은 [Configure Threshold Values for Cleansing and Matching](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
+-   **자동 제안 임계값**: 신뢰도 수준이 이 임계값보다 높지만 자동 수정 임계값보다는 낮은 모든 값이 대체 값으로 제안됩니다. 변경 작업은 데이터 관리자가 승인하는 경우에만 수행됩니다. **구성** 화면의 **일반 설정** 탭에서 자동 제안 임계값을 지정할 수 있습니다. 자세한 내용은 [정리 및 일치에 대한 임계값 구성](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)을 참조하세요.  
   
 -   **기타**: 자동 제안 임계값보다 낮은 모든 값이 DQS에 의해 변경되지 않고 유지됩니다.  
   
@@ -135,7 +135,7 @@ ms.lasthandoff: 09/09/2017
     > [!NOTE]  
     >  맞춤법 검사기 기능은 위쪽 창(도메인 값)에서만 사용할 수 있습니다. 또한 복합 도메인에 대해서는 맞춤법 검사기를 사용하거나 사용하지 않도록 설정할 수 없습니다. 복합 도메인에서 맞춤법 검사기 기능이 설정된 문자열 형식의 하위 도메인에는 기본적으로 대화형 정리 단계에서 맞춤법 검사기 기능이 설정됩니다.  
   
-4.  대화형 정리 단계 중에 **프로파일러** 탭을 클릭하면 프로파일러로 전환하여 실시간 데이터 프로파일링 및 알림을 확인할 수 있습니다. 자세한 내용은 [Profiler Statistics](#Profiler)을 참조하세요.  
+4.  대화형 정리 단계 중에 **프로파일러** 탭을 클릭하면 프로파일러로 전환하여 실시간 데이터 프로파일링 및 알림을 확인할 수 있습니다. 자세한 내용은 [프로파일러 통계](#Profiler)을 참조하세요.  
   
 5.  모든 도메인 값을 검토한 후 **다음** 을 클릭하여 내보내기 단계로 이동합니다.  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 09/09/2017
   
     3.  **Excel 파일**: **찾아보기**를 클릭한 다음 정리한 데이터를 내보낼 Excel 파일의 이름과 위치를 지정합니다. 정리한 데이터를 내보낼 전체 경로와 함께 Excel 파일의 파일 이름을 입력할 수도 있습니다. 예를 들어, "c:\ExportedData.xlsx"를 입력합니다. 이 파일은 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 가 설치된 컴퓨터에 저장됩니다.  
   
-2.  **출력 표준화** 확인란을 선택하여 도메인에 대해 선택한 출력 형식에 따라 출력을 표준화합니다. 예를 들어, 문자열 값을 대문자로 변경하거나 단어의 첫 글자를 대문자로 지정합니다. 도메인의 출력 형식을 지정하는 방법은 **Set Domain Properties** 에서 [출력 형식](../data-quality-services/set-domain-properties.md)목록을 참조하세요.  
+2.  **출력 표준화** 확인란을 선택하여 도메인에 대해 선택한 출력 형식에 따라 출력을 표준화합니다. 예를 들어, 문자열 값을 대문자로 변경하거나 단어의 첫 글자를 대문자로 지정합니다. 도메인의 출력 형식을 지정하는 방법은 **도메인 속성 설정** 에서 [출력 형식](../data-quality-services/set-domain-properties.md)목록을 참조하세요.  
   
 3.  그런 다음 데이터 출력을 선택합니다. 정리한 데이터만 내보내거나 정리한 데이터를 정리 정보와 함께 내보낼 수 있습니다.  
   
@@ -228,6 +228,6 @@ ms.lasthandoff: 09/09/2017
   
 -   필드의 정확도 수준이 매우 낮은 경우 - 매핑을 확인하거나 먼저 기술 자료 검색을 실행할 수 있습니다.  
   
- 프로파일링에 대한 자세한 내용은 [Data Profiling and Notifications in DQS](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
+ 프로파일링에 대한 자세한 내용은 [DQS의 데이터 프로파일링 및 알림](../data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   
   

@@ -80,7 +80,7 @@ ms.lasthandoff: 09/09/2017
 4.  **매핑**에서 **원본 열**에 대한 데이터 원본의 필드를 선택한 다음 해당 도메인을 선택합니다. 일치 프로세스에서 사용할 모든 도메인에 대해 작업을 반복합니다. 필요에 따라 **도메인 만들기** 또는 **복합 도메인 만들기**를 클릭하여 도메인을 만듭니다.  
   
     > [!NOTE]  
-    >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 일치 정책을 만드는 동안 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. DQS에서 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+    >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 일치 정책을 만드는 동안 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. DQS에서 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
 5.  **더하기(+)** 컨트롤을 클릭하여 매핑 테이블에 행을 추가하거나 **빼기(–)** 컨트롤을 클릭하여 행을 제거합니다.  
   
@@ -191,7 +191,7 @@ ms.lasthandoff: 09/09/2017
 9. **취소** 를 클릭하면 일치 정책 작업이 저장되지 않고 종료되며 DQS 홈 페이지로 돌아갑니다.  
   
 ##  <a name="FollowUp"></a> 후속 작업: 일치 정책을 만든 후  
- 일치 정책을 만든 후 해당 일치 정책이 포함된 기술 자료를 기반으로 일치 프로젝트를 실행할 수 있습니다. 자세한 내용은 [Run a Matching Project](../data-quality-services/run-a-matching-project.md)을 참조하세요.  
+ 일치 정책을 만든 후 해당 일치 정책이 포함된 기술 자료를 기반으로 일치 프로젝트를 실행할 수 있습니다. 자세한 내용은 [일치 프로젝트 실행](../data-quality-services/run-a-matching-project.md)을 참조하세요.  
   
 ##  <a name="Tabs"></a> 프로파일러 및 결과 탭  
  프로파일러 및 결과 탭에는 일치 정책 페이지와 일치 결과 페이지 모두에 대한 통계가 포함됩니다.  
