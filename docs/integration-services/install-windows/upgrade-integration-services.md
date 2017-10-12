@@ -56,7 +56,7 @@ ms.lasthandoff: 09/26/2017
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 설치 프로그램을 실행하고 **SQL Server 2008, SQL Server 2008 R2, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 업그레이드** 옵션을 선택합니다.  
   
--   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]명령 프롬프트에서 SQL Server 2016 설치 [의 "](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)용 설치 스크립트" 섹션을 참조하세요.  
+-   명령 프롬프트에서 **setup.exe**를 실행하고 **/ACTION=upgrade** 옵션을 지정합니다. 자세한 내용은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md) 의 "용 설치 스크립트" 섹션을 참조하세요.  
   
  다음 동작은 업그레이드를 사용하여 수행할 수 없습니다.  
   
