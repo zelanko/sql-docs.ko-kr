@@ -59,14 +59,14 @@ ms.lasthandoff: 09/09/2017
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Data Quality Client 응용 프로그램을 실행합니다](../data-quality-services/run-the-data-quality-client-application.md).  
   
-2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md) 또는 [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
+2.  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면에서 기술 자료를 열거나 만듭니다. **도메인 관리** 를 작업으로 선택한 다음 **열기** 또는 **만들기**를 클릭합니다. 자세한 내용은 [기술 자료 만들기](../data-quality-services/create-a-knowledge-base.md) 또는 [기술 자료 열기](../data-quality-services/open-a-knowledge-base.md)를 참조하세요.  
   
     > [!NOTE]  
     >  도메인 관리는 별도의 도메인 관리 작업을 위한 5개 탭이 포함된 Data Quality Services 클라이언트의 페이지에서 수행됩니다. 도메인 관리는 마법사 기반 프로세스가 아닙니다. 모든 관리 작업은 별도로 수행할 수 있습니다.  
   
-3.  **도메인 관리** 페이지의 **도메인 목록** 에서 값을 변경할 도메인을 선택하거나 새 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [Create a Domain](../data-quality-services/create-a-domain.md)를 참조하세요. **도메인 값** 탭을 클릭합니다.  
+3.  **도메인 관리** 페이지의 **도메인 목록** 에서 값을 변경할 도메인을 선택하거나 새 도메인을 만듭니다. 새 도메인을 만들어야 하는 경우 [도메인 만들기](../data-quality-services/create-a-domain.md)를 참조하세요. **도메인 값** 탭을 클릭합니다.  
   
-4.  **값** 테이블에서 수정해야 하는 값을 표시합니다. 자세한 내용은 아래의 [How to Display the Appropriate Values](#Display) 를 참조하세요.  
+4.  **값** 테이블에서 수정해야 하는 값을 표시합니다. 자세한 내용은 아래의 [적절한 값을 표시하는 방법](#Display) 를 참조하세요.  
   
 5.  값의 상태를 변경하려면 다음과 같이 계속합니다.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/09/2017
   
  **정리** 작업의 **결과 관리 및 보기** 페이지에서 대화식 데이터 정리를 수행할 때는 **결과 관리 및 보기** 페이지의 **유효하지 않음** 탭에 유효하지 않음 값과 오류 값이 모두 포함됩니다.  
   
-##  <a name="Display"></a> How to Display the Appropriate Values  
+##  <a name="Display"></a> 적절한 값을 표시하는 방법  
  다음과 같이 표시를 수정할 수 있습니다.  
   
 -   **필터** 드롭다운 목록에서 상태를 선택하여 결과의 상태에 따라 테이블에서 원하는 결과를 **필터링합니다** .  
