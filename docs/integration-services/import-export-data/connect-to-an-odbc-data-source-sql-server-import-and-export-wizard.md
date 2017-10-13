@@ -93,7 +93,9 @@ DSN (데이터 원본 이름) 사용 하 여 연결 정보를 제공 하려는 �
 
 이 예제에서는 Microsoft SQL Server에 연결 하는 다음 연결 문자열을 사용 하려고 합니다.
 
+    ```
     Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    ```
 
 에 대 한 연결 문자열을 입력에서 **ConnectionString** 필드에 **데이터 원본을 선택** 또는 **대상 선택** 페이지. 연결 문자열을 입력 한 후 마법사는 문자열을 구문 분석 하 고 목록에서 개별 속성 및 해당 값을 표시 합니다.
 
@@ -138,20 +140,24 @@ DSN (데이터 원본 이름) 사용 하 여 연결 정보를 제공 하려는 �
 
 10. 메모장 이나 다른 텍스트 편집기와 저장된 된 파일을 엽니다. 다음은 SQL Server 예제의 내용입니다.
 
-        [ODBC]  
-        DRIVER=ODBC Driver 13 for SQL Server  
-        TrustServerCertificate=No  
-        DATABASE=WideWorldImporters    
-        WSID=<local computer name>  
-        APP=Microsoft® Windows® Operating System  
-        Trusted_Connection=Yes  
-        SERVER=localhost   
+    ```   
+    [ODBC]  
+    DRIVER=ODBC Driver 13 for SQL Server  
+    TrustServerCertificate=No  
+    DATABASE=WideWorldImporters    
+    WSID=<local computer name>  
+    APP=Microsoft® Windows® Operating System  
+    Trusted_Connection=Yes  
+    SERVER=localhost   
+    ```
         
 11. 복사 하는 이름-값 쌍은 세미콜론으로 구분 하는 연결 문자열에 필요한 값을 붙여 넣습니다.
 
     샘플 파일 DSN에서에서 필요한 값을 조합, 다음 연결 문자열은 사용할 수 있습니다.
     
+        ```
         DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+        ```
 
     일반적으로 작동 하는 연결 문자열을 만들려면 ODBC 데이터 원본 관리자가 만든 DSN에 있는 모든 설정 하지 않아도 됩니다.  
     -   항상 ODBC 드라이버를 지정 해야 합니다.

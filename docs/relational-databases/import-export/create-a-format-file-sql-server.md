@@ -123,7 +123,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>3. 유니코드 네이티브 데이터용 비 XML 서식 파일 만들기  
  `HumanResources.Department` 테이블을 위한 유니코드 네이티브 데이터용 비 XML 서식 파일을 만들려면 다음 명령을 사용합니다.  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
 ```  
   
@@ -132,7 +132,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
 #### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>4. 유니코드 문자 데이터용 비 XML 서식 파일 만들기  
  기본 종결자를 사용하는 `HumanResources.Department` 테이블을 위한 유니코드 문자 데이터용 비 XML 서식 파일을 만들려면 다음 명령을 사용합니다.  
   
-```  
+```cmd
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
 ```  
   

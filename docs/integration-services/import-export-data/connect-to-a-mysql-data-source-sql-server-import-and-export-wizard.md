@@ -80,14 +80,18 @@ MySQL 데이터베이스의 이름입니다.
 ### <a name="connection-string-format"></a>연결 문자열 형식
 일반적인 연결 문자열의 형식은 다음과 같습니다.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+    ```
 
 ### <a name="enter-the-connection-string"></a>연결 문자열 입력
 에 대 한 연결 문자열을 입력의 **ConnectionString** 에 DSN 이름을 입력 하거나 필드는 **Dsn** 필드에 **데이터 원본을 선택** 또는 **대상 선택** 페이지. 연결 문자열을 입력 한 후 마법사는 문자열을 구문 분석 하 고 목록에서 개별 속성 및 해당 값을 표시 합니다.
 
 다음 예제에서는이 연결 문자열을 사용합니다.
 
+    ```
     Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+    ```
 
 다음은 연결 문자열을 입력 한 후 표시 되는 화면입니다.
 

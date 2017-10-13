@@ -39,7 +39,7 @@ ms.lasthandoff: 10/04/2017
  다음을 사용하여 데이터 파일의 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 또는 분할되지 않은 뷰로 대량 가져올 수 있습니다.  
   
 -   **bcp** 유틸리티  
- **bcp** 유틸리티를 사용하면 분할된 뷰를 포함하여 SELECT 문이 작동하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 모든 위치에서 데이터를 내보낼 수도 있습니다.  
+    **bcp** 유틸리티를 사용하면 분할된 뷰를 포함하여 SELECT 문이 작동하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 모든 위치에서 데이터를 내보낼 수도 있습니다.  
   
 -   BULK INSERT  
   

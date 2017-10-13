@@ -42,7 +42,7 @@ SQL Server에서 Azure Blob Storage에 대량 액세스하려면 적어도 [!INC
  
 `SHARED ACCESS SIGNATURE`여야 하는 `IDENTITY`를 사용하여 데이터베이스 범위 자격 증명을 만듭니다. Azure Portal의 암호를 사용합니다. 예를 들어  
 
-```tsql
+```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
@@ -51,7 +51,7 @@ SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Azure Blob Storage 위치를 참조하는 CSV 파일 데이터 액세스   
 다음 예제에서는 Azure 저장소 계정을 가리키는 `newinvoices`라는 외부 데이터 원본을 사용합니다.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -61,7 +61,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 ```   
 
 그러면 `OPENROWSET` 문의 파일 설명에 컨테이너 이름 (`week3`)을 추가합니다. 파일 이름은 `inv-2017-01-19.csv`로 지정됩니다.
-```tsql     
+```sql     
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
@@ -70,7 +70,7 @@ SELECT * FROM OPENROWSET(
 
 `BULK INSERT`를 사용하여 다음과 같이 컨테이너 및 파일 설명을 사용합니다.
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'week3/inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoices',
@@ -80,7 +80,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 ## <a name="accessing-data-in-a-csv-file-referencing-a-container-in-an-azure-blob-storage-location"></a>Azure Blob Storage 위치의 컨테이너를 참조하는 CSV 파일 데이터 액세스   
 
 다음 예제에서는 Azure 저장소 계정의 컨테이너(`week3`)를 가리키는 외부 데이터 원본을 사용합니다.   
-```tsql
+```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
     WITH  (
         TYPE = BLOB_STORAGE,
@@ -90,7 +90,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 ```  
   
 그러면 `OPENROWSET` 문의 파일 설명에 컨테이너 이름을 포함하지 않습니다.
-```tsql
+```sql
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
@@ -99,7 +99,7 @@ SELECT * FROM OPENROWSET(
 
 `BULK INSERT`를 사용하여 다음과 같이 파일 설명에 컨테이너 이름을 사용하지 않습니다. 
 
-```tsql
+```sql
 BULK INSERT Colors2
 FROM 'inv-2017-01-19.csv'
 WITH (DATA_SOURCE = 'MyAzureInvoicesContainer',
