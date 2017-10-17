@@ -31,7 +31,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>& #x 40; & #x 40; LOCK_TIMEOUT (TRANSACT-SQL)
+# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 세션의 현재 잠금 시간 제한 설정(밀리초)을 반환합니다.  
@@ -68,7 +68,7 @@ Lock Timeout
 -1  
 ```  
   
- 이 예에서는 LOCK_TIMEOUT을 1800 밀리초로 설정 하 고 다음 호출@LOCK_TIMEOUT합니다.  
+ 이 예에서는 LOCK_TIMEOUT을 1800 밀리초로 설정 하 고 다음 호출@LOCK_TIMEOUT 합니다.  
   
 ```  
 SET LOCK_TIMEOUT 1800;  
@@ -86,7 +86,7 @@ Lock Timeout
   
 ## <a name="see-also"></a>관련 항목:  
  [구성 함수&#40;Transact-SQL&#41;](../../t-sql/functions/configuration-functions-transact-sql.md)   
- [SET LOCK_TIMEOUT &#40; Transact SQL &#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
+ [SET LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/statements/set-lock-timeout-transact-sql.md)  
   
   
 

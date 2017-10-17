@@ -32,7 +32,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40connections-transact-sql"></a>& #x 40; & #x 40; 연결 (Transact SQL)
+# <a name="x40x40connections-transact-sql"></a>&#x40;&#x40;연결 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
 마지막으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작한 후 시도한 연결 수를 반환합니다.
@@ -53,7 +53,7 @@ ms.lasthandoff: 09/19/2017
   
 몇 가지를 포함 하는 보고서를 표시 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 통계를 실행 하는 연결 시도 포함 하 여 **sp_monitor**합니다.
   
-@@MAX_CONNECTIONS 서버에 동시에 허용 되는 연결의 최대 수입니다. @@CONNECTIONS 증가 각 로그인 시도와 따라서@CONNECTIONS @ 보다 클 수@MAX_CONNECTIONS합니다.
+@@MAX_CONNECTIONS 서버에 동시에 허용 되는 연결의 최대 수입니다. @@CONNECTIONS 증가 각 로그인 시도와 따라서 @@CONNECTIONS 보다 클 수 @@MAX_CONNECTIONS 합니다.
   
 ## <a name="examples"></a>예  
 다음 예에서는 현재 날짜 및 시간의 로그인 시도 수를 반환합니다.
