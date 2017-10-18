@@ -102,10 +102,10 @@ ms.lasthandoff: 08/17/2017
 > [!NOTE]  
 >  SQL Server 또는 Sybase 원본 테이블에서 id 열을 포함 하는 경우 ADO NET 대상 전에 IDENTITY_INSERT를 사용 하도록 설정 하 고 나중에 다시 사용할 수 없도록 SQL 실행 태스크를 사용 해야 합니다. (Identity column 속성 열에 대 한 증분 값을 지정합니다. SET IDENTITY_INSERT 문을 사용 하면 대상 테이블에 id 열에 삽입할 원본 테이블에서 명시적 값.)  
 >   
->   SET IDENTITY_INSERT 문 및 데이터를 성공적으로 로드를 실행 하려면 다음을 수행 해야 합니다.
->       1. ADO.NET 대상 및 SQL 실행 태스크에 대 한 동일한 ADO.NET 연결 관리자를 사용 합니다.
->       2. 연결 관리자에서 설정 된 **RetainSameConnection** 속성 및 **MultipleActiveResultSets** 속성을 True로 합니다.
->       3. ADO.NET 대상에서 설정 된 **UseBulkInsertWhenPossible** 속성을 false로 합니다.
+>   SET IDENTITY_INSERT 문 및 데이터를 성공적으로 로드를 실행 하려면 다음을 수행 해야 합니다. 
+>       1. ADO.NET 대상 및 SQL 실행 태스크에 대 한 동일한 ADO.NET 연결 관리자를 사용 합니다. 
+>       2. 연결 관리자에서 설정 된 **RetainSameConnection** 속성 및 **MultipleActiveResultSets** 속성을 True로 합니다. 
+>       3. ADO.NET 대상에서 설정 된 **UseBulkInsertWhenPossible** 속성을 false로 합니다. 
 >
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/set-identity-insert-transact-sql.md) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql-identity-property.md)를 참조하세요.  
   
@@ -172,3 +172,4 @@ ms.lasthandoff: 08/17/2017
  선택한 셀에 오류 처리 옵션을 적용합니다.  
   
   
+
