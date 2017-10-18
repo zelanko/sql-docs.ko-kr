@@ -17,11 +17,11 @@ caps.latest.revision: 40
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: d90982485ab979118f4f7b02881aa8ea53cc9818
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 9d5d0f33d21e61741bd021dc012c70a43207a13f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑(SQL Server)
@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 |윤곽선|
 |---|
-|[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />[서식 파일 만들기](#create_format_file)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일 만들기](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일 수정](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML 서식 파일 만들기](#xml_format_file)<br />&emsp;&#9679;&emsp;[XML 서식 파일 수정](#modify_xml_format_file)<br />[서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑](#import_data)<br />&emsp;&#9679;&emsp;[bcp 및 비 XML 서식 파일 사용](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[bcp 및 비 XML 서식 파일 사용](#bcp_xml)<br />&emsp;&#9679;&emsp;[BULK INSERT 및 비 XML 서식 파일 사용](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[BULK INSERT 및 XML 서식 파일 사용](#bulk_xml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) 및 비 XML 서식 파일 사용](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) 및 XML 서식 파일 사용](#openrowset_xml)<p>                                                                                                                                                                                                                  </p>|
+|[예제 테스트 조건](#etc)<br />&emsp;&#9679;&emsp;[샘플 테이블](#sample_table)<br />&emsp;&#9679;&emsp;[샘플 데이터 파일](#sample_data_file)<br />[서식 파일 만들기](#create_format_file)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일 만들기](#nonxml_format_file)<br />&emsp;&#9679;&emsp;[비 XML 서식 파일 수정](#modify_nonxml_format_file)<br />&emsp;&#9679;&emsp;[XML 서식 파일 만들기](#xml_format_file)<br />&emsp;&#9679;&emsp;[XML 서식 파일 수정](#modify_xml_format_file)<br />[서식 파일을 사용하여 테이블 열을 데이터 파일 필드에 매핑](#import_data)<br />&emsp;&#9679;&emsp;[bcp 및 비 XML 서식 파일 사용](#bcp_nonxml)<br />&emsp;&#9679;&emsp;[bcp 및 비 XML 서식 파일 사용](#bcp_xml)<br />&emsp;&#9679;&emsp;[BULK INSERT 및 비 XML 서식 파일 사용](#bulk_nonxml)<br />&emsp;&#9679;&emsp;[BULK INSERT 및 XML 서식 파일 사용](#bulk_xml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) 및 비 XML 서식 파일 사용](#openrowset_nonxml)<br />&emsp;&#9679;&emsp;[OPENROWSET(BULK...) 및 XML 서식 파일 사용](#openrowset_xml)|
 
 > [!NOTE]  
 >  비 XML 서식 파일 또는 XML 서식 파일은 [bcp 유틸리티](../../tools/bcp-utility.md) 명령, [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 문 또는 INSERT... SELECT * FROM [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 문을 사용하여 데이터 파일을 테이블에 대량으로 가져오는데 사용될 수 있습니다. 자세한 내용은 [서식 파일을 사용하여 데이터 대량 가져오기&#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)를 참조하세요.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 06/22/2017
 
 ### 샘플 테이블<a name="sample_table"></a>
 아래 스크립트에서는 테스트 데이터베이스와 `myRemap`라는 테이블을 만듭니다.  Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -77,9 +77,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -f D:\BCP\myRemap.fmt -t, -T
 ```
 ### 비 XML 서식 파일 수정 <a name="modify_nonxml_format_file"></a>
 용어는 [비 XML 서식 파일의 구조](../../relational-databases/import-export/non-xml-format-files-sql-server.md#Structure) 를 참조하세요.  메모장에서 `D:\BCP\myRemap.fmt` 를 열고 다음과 같이 수정합니다.
-1) 행이 `myRemap.bcp`의 데이터와 순서가 동일하도록 서식 파일 행 순서를 다시 정렬합니다.
-2) 호스트 파일 필드 순서 값이 순차적인지 확인합니다.
-3) 마지막 서식 파일 행 다음에 캐리지 리턴이 있는지 확인합니다.
+1.  행이 `myRemap.bcp`의 데이터와 순서가 동일하도록 서식 파일 행 순서를 다시 정렬합니다.
+2.  호스트 파일 필드 순서 값이 순차적인지 확인합니다.
+3.  마지막 서식 파일 행 다음에 캐리지 리턴이 있는지 확인합니다.
 
 변경 내용을 비교합니다.     
 **이전**
@@ -115,9 +115,9 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 ```
 ### XML 서식 파일 수정 <a name="modify_xml_format_file"></a>
 용어는 [XML 서식 파일의 스키마 구문](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) 을 참조하세요.  메모장에서 `D:\BCP\myRemap.xml`를 열고 다음과 같이 수정합니다.
-1) 서식 파일에서 \<FIELD> elements가 선언되는 순서는 이들 필드가 데이터 파일에 나열되는 순서로, ID 특성이 2이고 3인 \<FIELD> elements 순서와 반대가 됩니다.
-2) \<필드 > ID 특성 값이 순차적인지 확인합니다.
-3) \<ROW> 요소에서 \<COLUMN> 요소의 순서에 따라 대량 작업에서 반환되는 순서가 정의됩니다.  XML 서식 파일은 각 \<COLUMN> 요소에 대량 가져오기 작업의 대상 테이블에 있는 열과 관계가 없는 로컬 이름을 지정합니다.  \<COLUMN> 요소의 순서는 \<RECORD> 정의에 있는 \<FIELD> 요소의 순서와는 독립적입니다.  각 \<COLUMN> 요소는 ID가 \<COLUMN> 요소의 SOURCE 특성에서 지정되는 \<FIELD> 요소에 해당합니다.  따라서 \<COLUMN> SOURCE에 대한 값은 버전이 필요한 특성뿐입니다.  \<COLUMN> SOURCE 특성 2와 3에 대한 순서를 반대로 설정합니다.
+1. 서식 파일에서 \<FIELD> elements가 선언되는 순서는 이들 필드가 데이터 파일에 나열되는 순서로, ID 특성이 2이고 3인 \<FIELD> elements 순서와 반대가 됩니다.
+2. \<필드 > ID 특성 값이 순차적인지 확인합니다.
+3. \<ROW> 요소에서 \<COLUMN> 요소의 순서에 따라 대량 작업에서 반환되는 순서가 정의됩니다.  XML 서식 파일은 각 \<COLUMN> 요소에 대량 가져오기 작업의 대상 테이블에 있는 열과 관계가 없는 로컬 이름을 지정합니다.  \<COLUMN> 요소의 순서는 \<RECORD> 정의에 있는 \<FIELD> 요소의 순서와는 독립적입니다.  각 \<COLUMN> 요소는 ID가 \<COLUMN> 요소의 SOURCE 특성에서 지정되는 \<FIELD> 요소에 해당합니다.  따라서 \<COLUMN> SOURCE에 대한 값은 버전이 필요한 특성뿐입니다.  \<COLUMN> SOURCE 특성 2와 3에 대한 순서를 반대로 설정합니다.
 
 변경 내용을 비교합니다.  
 **이전**
@@ -180,7 +180,7 @@ bcp TestDatabase.dbo.myRemap IN D:\BCP\myRemap.bcp -f D:\BCP\myRemap.xml -T
 
 ### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="bulk_nonxml"></a> 사용
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -196,7 +196,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="bulk_xml"></a> 사용
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
-```tsql
+```sql
 USE TestDatabase;  
 GO
 
@@ -212,7 +212,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [비 XML 서식 파일](../../relational-databases/import-export/non-xml-format-files-sql-server.md)<a name="openrowset_nonxml"></a> 사용    
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
-```tsql
+```sql
 USE TestDatabase;
 GO
 
@@ -231,7 +231,7 @@ SELECT * FROM TestDatabase.dbo.myRemap;
 
 ### [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) 및 [XML 서식 파일](../../relational-databases/import-export/xml-format-files-sql-server.md)<a name="openrowset_xml"></a> 사용
 Microsoft SSMS(SQL Server Management Studio)에서 다음 TRANSACT-SQL을 실행합니다.
-```tsql
+```sql
 USE TestDatabase;  
 GO
 

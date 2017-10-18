@@ -18,11 +18,11 @@ caps.latest.revision: 63
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 7593a0015328cba74de239f55575217687ff5193
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 990578bd6e9efd4e29f5db35fad27089b04512d5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="non-xml-format-files-sql-server"></a>비 XML 서식 파일(SQL Server)
@@ -46,7 +46,7 @@ ms.lasthandoff: 06/22/2017
   
 -   문자 데이터 또는 네이티브 데이터와 같은 특정 데이터 형식의 서식 파일을 만들 수 있습니다.  
   
-     각 데이터 필드에 대해 대화형으로 지정된 특성을 포함하는 비 XML 서식 파일을 만들 수 있습니다. 자세한 내용은 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
+-   각 데이터 필드에 대해 대화형으로 지정된 특성을 포함하는 비 XML 서식 파일을 만들 수 있습니다. 자세한 내용은 [bcp를 사용하여 데이터 형식을 호환 가능하도록 지정&#40;SQL Server&#41;](../../relational-databases/import-export/specify-data-formats-for-compatibility-when-using-bcp-sql-server.md)을 참조하세요.  
   
 > [!NOTE]  
 >  XML 서식 파일은 비 XML 서식 파일에 비해 몇 가지 이점이 있습니다. 자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
@@ -56,7 +56,7 @@ ms.lasthandoff: 06/22/2017
   
  다음 그림에서는 예제 비 XML 서식 파일에 대한 서식 파일 필드를 보여 줍니다.  
   
- ![비 XML 서식 파일 필드 식별](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif "비 XML 서식 파일 필드 식별")  
+ ![비-XML 형식 파일 필드 식별](../../relational-databases/import-export/media/mydepart-fmt-ident-c.gif)
   
  **버전** 및 **열 개수** 필드는 한 번만 생성해야 합니다. 다음 표에서는 해당 의미에 대해 설명합니다.  
   

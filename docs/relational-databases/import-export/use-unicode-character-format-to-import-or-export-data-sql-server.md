@@ -17,11 +17,11 @@ caps.latest.revision: 37
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
-ms.translationtype: Human Translation
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 63fb68860ade1e0bd64ce87ca98ec4439bf238fa
+ms.translationtype: HT
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: b38f5585ffa79fbfa5ba702d4fdc8acee9924c7c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 06/22/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="use-unicode-character-format-to-import-or-export-data-sql-server"></a>유니코드 문자 형식을 사용하여 데이터 가져오기 및 내보내기(SQL Server)
@@ -98,7 +98,7 @@ Error = [Microsoft][ODBC Driver 13 for SQL Server]Invalid character value for ca
 
 ### **샘플 테이블**<a name="sample_table"></a>
 아래 스크립트는 테스트 데이터베이스인 `myWidechar` 라는 테이블을 만들고 테이블을 몇 가지 초기 값으로 채웁니다.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
-```tsql
+```sql
 CREATE DATABASE TestDatabase;
 GO
 
@@ -187,7 +187,7 @@ bcp TestDatabase.dbo.myWidechar OUT D:\BCP\myWidechar.bcp -T -w
   
 ### **서식 파일 없이 BULK INSERT 및 유니코드 문자 형식 사용**<a name="bulk_widechar"></a>
 **DATAFILETYPE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
     FROM 'D:\BCP\myWidechar.bcp'
@@ -201,7 +201,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **XML 이외의 서식 파일과 함께 BULK INSERT 및 유니코드 문자 형식 사용하기**<a name="bulk_widechar_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar; -- for testing
 BULK INSERT TestDatabase.dbo.myWidechar
    FROM 'D:\BCP\myWidechar.bcp'
@@ -215,7 +215,7 @@ SELECT * FROM TestDatabase.dbo.myWidechar;
   
 ### **XML 이외의 서식 파일과 함께 OPENROWSET 및 유니코드 문자 형식 사용하기**<a name="openrowset_widechar_fmt"></a>
 **FORMATFILE** 인수.  Microsoft SSMS( [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] )에서 다음 Transact-SQL을 실행합니다.
-```tsql
+```sql
 TRUNCATE TABLE TestDatabase.dbo.myWidechar;  -- for testing
 INSERT INTO TestDatabase.dbo.myWidechar
     SELECT *
