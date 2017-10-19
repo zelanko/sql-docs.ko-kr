@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 545d3b5a0635c80f55aeb5b0a7a4e1804098e19c
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 76d0725816d3795715d396639bd213652bdf40f3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="lower-transact-sql"></a>LOWER(Transact-SQL)
@@ -54,29 +54,6 @@ LOWER ( character_expression )
  **varchar** 또는 **nvarchar**  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 가격이 $11에서 $20 사이인 제품 이름을 선택한 것에서 `LOWER` 함수, `UPPER` 함수를 사용하고 `UPPER` 함수 내에 `LOWER` 함수를 중첩하여 사용합니다. 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스를 사용합니다.  
-  
-```  
-SELECT LOWER(SUBSTRING(Name, 1, 20)) AS Lower,   
-   UPPER(SUBSTRING(Name, 1, 20)) AS Upper,   
-   LOWER(UPPER(SUBSTRING(Name, 1, 20))) As LowerUpper  
-FROM Production.Product  
-WHERE ListPrice between 11.00 and 20.00;  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
-Lower                    Upper                    LowerUpper  
----------------------    ---------------------    --------------------  
-minipump                 MINIPUMP                 minipump 
-taillights - battery     TAILLIGHTS - BATTERY     taillights - battery  
-  
-(2 row(s) affected)
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 가격이 $11에서 $20 사이인 제품 이름을 선택한 것에서 `LOWER` 함수, `UPPER` 함수를 사용하고 `UPPER` 함수 내에 `LOWER` 함수를 중첩하여 사용합니다.  
   
 ```  

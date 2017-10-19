@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 3028e409a8218b35bbf7cd4773e80ca27e8db8be
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: c697b619907bb3d80fbbff800b2ac29ef574af8d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="colname-transact-sql"></a>COL_NAME(Transact-SQL)
@@ -65,29 +65,6 @@ COL_NAME ( table_id , column_id )
 테이블 및 열 식별 번호를 구입에 대 한 자세한 내용은 참조 [OBJECT_ID &#40; Transact SQL &#41; ](../../t-sql/functions/object-id-transact-sql.md).
   
 ## <a name="examples"></a>예  
-다음 예에서는 `Employee` 데이터베이스의 `AdventureWorks2012` 테이블에 있는 첫 번째 열의 이름을 반환하는 방법을 보여 줍니다.
-  
-```sql
-USE AdventureWorks2012;  
-GO  
-SET NOCOUNT OFF;  
-GO  
-SELECT COL_NAME(OBJECT_ID('HumanResources.Employee'), 1) AS 'Column Name';  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
-Column Name
-------------------
-BusinessEntityID
-```
-  
-## <a name="examples"></a>예
-
-[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-
 다음 예제에서는 샘플의 첫 번째 열의 이름을 반환 `Employee` 테이블입니다.
   
 ```sql

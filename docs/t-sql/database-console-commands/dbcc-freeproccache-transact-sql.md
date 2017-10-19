@@ -1,7 +1,7 @@
 ---
 title: DBCC FREEPROCCACHE (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -29,10 +29,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: b91dcf6191f6ec3336c9bf3d3588e8f1daad0867
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 58eed9c590594f8c2cff402418aa2ebebd0c65db
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
@@ -62,20 +62,20 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
 ## <a name="arguments"></a>인수  
  ({ *plan_handle* | *sql_handle* | *pool_name 이라는* })  
- *plan_handle* 일괄 처리를 실행 하며 해당 계획은 계획 캐시에 대 한 쿼리 계획을 고유 하 게 식별 합니다. *plan_handle* 은 **varbinary(64)** 이며 다음 동적 관리 개체에서 가져올 수 있습니다.  
+*plan_handle* 일괄 처리를 실행 하며 해당 계획은 계획 캐시에 대 한 쿼리 계획을 고유 하 게 식별 합니다. *plan_handle* 은 **varbinary(64)** 이며 다음 동적 관리 개체에서 가져올 수 있습니다.  
  -   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
 
- *sql_handle* 지우려는 일괄 처리의 SQL 핸들입니다. *sql_handle* 은 **varbinary(64)** 이며 다음 동적 관리 개체에서 가져올 수 있습니다.  
+*sql_handle* 지우려는 일괄 처리의 SQL 핸들입니다. *sql_handle* 은 **varbinary(64)** 이며 다음 동적 관리 개체에서 가져올 수 있습니다.  
  -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
  -   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
  -   [sys.dm_exec_cursors](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cursors-transact-sql.md)  
  -   [sys.dm_exec_xml_handles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-xml-handles-transact-sql.md)  
  -   [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)  
 
- *pool_name 이라는* 리소스 관리자 리소스 풀의 이름입니다. *pool_name 이라는* 은 **sysname** 를 쿼리하여 얻을 수 있습니다는 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 동적 관리 뷰.  
+*pool_name 이라는* 리소스 관리자 리소스 풀의 이름입니다. *pool_name 이라는* 은 **sysname** 를 쿼리하여 얻을 수 있습니다는 [sys.dm_resource_governor_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md) 동적 관리 뷰.  
  리소스 풀 리소스 관리자 작업 그룹을 연결 하려면 쿼리는 [sys.dm_resource_governor_workload_groups](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md) 동적 관리 뷰. 작업 그룹에 대 한 세션에 대 한 정보에 대 한 쿼리는 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) 동적 관리 뷰.  
 
   
@@ -87,11 +87,14 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
   
  ALL  
  각 계산 노드 및 제어 노드가에서 쿼리 계획 캐시를 제거 합니다.  
-  
-## <a name="remarks"></a>주의  
-계획 캐시를 신중하게 지우려면 DBCC FREEPROCCACHE를 사용합니다. 예를 들어 계획 캐시를 해제하면 저장 프로시저가 캐시에서 다시 사용되지 않고 다시 컴파일됩니다. 
 
-이로 인해 쿼리 성능이 일시적으로 갑자기 저하될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "'DBCC FREEPROCCACHE' 또는 'DBCC FREESYSTEMCACHE' 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 계획 캐시의 삭제된 각 캐시스토어에 대한 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
+> [!NOTE]
+> 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE` 데이터베이스 범위에 대 한 절차 (계획) 캐시를 지웁니다.
+
+## <a name="remarks"></a>주의  
+계획 캐시를 신중하게 지우려면 DBCC FREEPROCCACHE를 사용합니다. 모든 이전에 캐시 된 계획을 다시 사용 하지 않고 프로시저 캐시 하면 모든 계획을 제거할 수와 들어오는 쿼리 실행 계획을 새로 컴파일됩니다 (계획)의 선택을 취소 합니다. 
+
+이 새 컴파일 횟수가으로 쿼리 성능이 일시적으로 갑자기 저하를 발생할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "'DBCC FREEPROCCACHE' 또는 'DBCC FREESYSTEMCACHE' 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 계획 캐시의 삭제된 각 캐시스토어에 대한 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 다음과 같은 다시 구성 작업은 프로시저 캐시도 지웁니다.
 -   access check cache bucket count  
@@ -115,16 +118,15 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 WITH NO_INFOMSGS 절을 지정 하지 않으면 DBCC FREEPROCCACHE 반환: "DBCC 실행이 완료 되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
   
 ## <a name="permissions"></a>Permissions  
-적용 대상: SQL Server, 병렬 데이터 웨어하우스 
-
+적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - 서버에 대한 ALTER SERVER STATE 권한이 필요합니다.  
 
-적용 대상: Azure SQL Data Warehouse
+적용 대상:[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
 - DB_OWNER 고정된 서버 역할의 멤버 자격이 필요 합니다.  
 
 ## <a name="general-remarks-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>에 대 한 일반적인 주의 사항 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 여러 DBCC FREEPROCCACHE 명령은 동시에 실행할 수 있습니다.
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 쿼리 계획 캐시를 지우는 경우 발생할 수 있습니다는 임시 쿼리 성능이 저하 쿼리가 모두 다시 컴파일됩니다. 
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 계획 캐시를 지우면 저하 될 수 있습니다는 임시 쿼리 성능이 들어오는 쿼리는 새 계획을 컴파일할 때, 다시 사용 하지 않고 이전에 캐시 된 계획 합니다. 
 
 DBCC FREEPROCCACHE (컴퓨팅)만 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계산 노드에서 실행 될 때 쿼리를 다시 컴파일해야 합니다. 발생 하지 않습니다 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 또는 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 컨트롤 노드에서 생성 되는 병렬 쿼리 계획을 다시 컴파일해야 합니다.
 실행 중 DBCC FREEPROCCACHE는 취소할 수 있습니다.
@@ -135,11 +137,11 @@ DBCC FREEPROCCAHCE 설명 문에서 지원 되지 않습니다.
   
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>메타 데이터에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 DBCC FREEPROCCACHE를 실행할 때 새 행은 sys.pdw_exec_requests 시스템 뷰의에 추가 됩니다.
-  
+
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>예제:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>1. 계획 캐시에서 쿼리 계획 만들기  
-다음 예에서는 쿼리 계획 핸들을 지정하여 계획 캐시에서 계획 지침을 삭제합니다. 예제 쿼리가 계획 캐시에 놓이도록 쿼리가 먼저 실행됩니다. `sys.dm`_`exec` \_ `cached_plans` 및 `sys.dm` \_ `exec` \_ `sql` \_ `text` 동적 관리 뷰를 반환 하도록 쿼리는 쿼리에 대 한 계획 핸들입니다. 
+다음 예에서는 쿼리 계획 핸들을 지정하여 계획 캐시에서 계획 지침을 삭제합니다. 예제 쿼리가 계획 캐시에 놓이도록 쿼리가 먼저 실행됩니다. `sys.dm_exec_cached_plans` 및 `sys.dm_exec_sql_text` 쿼리에 대 한 계획 핸들을 반환할 동적 관리 뷰를 쿼리 합니다. 
 
 그러면 계획 캐시에서 해당 계획만 제거하도록 결과 집합의 계획 핸들 값이 `DBCC FREEPROCACHE` 문에 삽입됩니다.
   
@@ -195,7 +197,7 @@ GO
   
 ```sql
 USE UserDbSales;  
-DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;  
+DBCC FREEPROCCACHE (COMPUTE) WITH NO_INFOMSGS;
 ```  
   
  다음 예제에 모든 이전 예제와 동일한 결과 제외 하 고 결과에 정보 메시지를 표시 합니다.  
@@ -211,12 +213,14 @@ DBCC FREEPROCCACHE (COMPUTE);
 다음 예에서는 DBCC FREEPROCCACHE 실행 David 권한을 로그인을 제공 합니다.  
   
 ```sql
-GRANT ALTER SERVER STATE TO David;  
+GRANT ALTER SERVER STATE TO David; 
+GO
 ```  
   
 ## <a name="see-also"></a>관련 항목:  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)
+[리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)  
+[ALTER DATABASE SCOPED configuration&#40; Transact SQL &#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)
   
   
 

@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 8696a2cff3589b9b756e2ddd9cc1160b465b70d8
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 86c7d027057c851ae52d3627aa5ff2591f95bf8a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="reverse-transact-sql"></a>REVERSE(Transact-SQL)
@@ -101,22 +101,6 @@ GO
   
 ```  
 SELECT name, REVERSE(name) FROM sys.databases;  
-GO  
-```  
-  
- 다음 예에서는 변수의 문자 순서를 반대로 만듭니다.  
-  
-```  
-DECLARE @myvar varchar(10);  
-SET @myvar = 'sdrawkcaB';  
-SELECT REVERSE(@myvar) AS Reversed ;  
-GO  
-```  
-  
- 다음 예제에서는 암시적 변환이 **int** 데이터 형식에 **varchar** 데이터 입력 한 다음 결과 반대로 바꿉니다.  
-  
-```  
-SELECT REVERSE(1234) AS Reversed ;  
 GO  
 ```  
   

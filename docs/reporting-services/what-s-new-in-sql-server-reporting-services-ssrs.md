@@ -1,6 +1,6 @@
 ---
 title: "Reporting Services (SSRS)의 새로운 소식 | Microsoft Docs"
-ms.date: 07/02/2017
+ms.date: 10/10/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -9,21 +9,14 @@ ms.technology:
 - reporting-services-sharepoint
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords:
-- what's new [Reporting Services]
-- Reporting Services, what's new
-- SQL Server Reporting Services, what's new
-- SSRS, what's new
-ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
-caps.latest.revision: 206
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
-ms.openlocfilehash: 3a8ed8433d06f9f0250c42f6e5a190bc64e30235
+ms.translationtype: MT
+ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
+ms.openlocfilehash: 323873f42f6d3abd8442683731deef478dd2ebfb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 10/10/2017
 
 ---
 
@@ -32,20 +25,32 @@ ms.lasthandoff: 08/09/2017
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-not-pbirsi](../includes/ssrs-appliesto-not-pbirs.md)]
 
 SQL Server의 새로운 기능에 대 한 자세한 내용은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]합니다. 여기에서는 주요 기능 영역에 설명하고 출시된 새 항목에 맞게 업데이트되었습니다.
-  
+
   SQL Server의 다른 영역의 새로운 기능에 대 한 자세한 내용은 참조 [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md) 또는 [SQL Server 2016의 새로운](../sql-server/what-s-new-in-sql-server-2016.md)합니다.
-  
+
  **다운로드** ![download](../analysis-services/media/download.png "download")
- 
-- SQL Server Reporting Services에서 2017년 1월 Power BI 기술 미리 보기 보고서와 Power BI Desktop 릴리스(SQL Server Reporting Services)를 다운로드하려면 **[Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=839351)**로 이동하세요.
-  
--   [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]를 다운로드하려면  **[평가 센터](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016)**로 이동하세요.  
-  
--   Azure 계정이 있으세요?  이동 하 여  **[여기](https://azure.microsoft.com/en-us/marketplace/partners/microsoft/sqlserver2016sp1enterprisewindowsserver2016/)**  에 이미 설치 된 SQL Server 가상 컴퓨터를 실행 합니다.  
 
- ![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 현재 릴리스 정보에 대 한 참조 [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md) 또는 [Power BI 보고서 서버 릴리스 정보](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)합니다.
+- SQL Server 2017 Reporting Services를 다운로드 하려면로 이동 된  **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)**합니다.
 
-Power BI 보고서 서버에 대 한 정보를 참조 하십시오. [Power BI 보고서 서버와 함께 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)합니다.
+현재 릴리스 정보에 대 한 참조 [SQL Server 2017 릴리스 정보](../sql-server/sql-server-2017-release-notes.md) 또는 [Power BI 보고서 서버 릴리스 정보](https://powerbi.microsoft.com/documentation/reportserver-release-notes/)합니다. Power BI 보고서 서버에 대 한 정보를 참조 하십시오. [Power BI 보고서 서버와 함께 시작](https://powerbi.microsoft.com/documentation/reportserver-get-started/)합니다.
+
+## <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
+
+### <a name="comments-on-reports"></a>보고서에 대 한 설명
+
+이제 보고서에서 주석을 사용하여 큐브 뷰를 추가하고 다른 사용자와 공동 작업할 수 있습니다. 주석에 첨부 파일도 포함할 수 있습니다.
+
+![보고서 서버 내에서 주석](media/what-s-new-in-sql-server-reporting-services-ssrs/report-server-comments.png)
+
+자세한 내용은 참조 [보고서 서버에서 보고서에 설명을 추가](https://powerbi.microsoft.com/documentation/reportserver-add-comments/)합니다.
+
+### <a name="dax-queries-in-reporting-tools"></a>보고 도구에서 DAX 쿼리
+
+최신 버전의 보고서 작성기와 SQL Server Data Tools에서 필요한 필드를 쿼리 디자이너로 끌어다 놓아 지원되는 SQL Server Analysis Services 테이블 형식 데이터 모델에 대한 네이티브 DAX 쿼리를 만들 수 있습니다. [Reporting Services blog](https://blogs.msdn.microsoft.com/sqlrsteamblog/2017/03/09/query-designer-support-for-dax-now-available-in-report-builder-and-sql-server-data-tools/)(Reporting Services 블로그)를 참조하세요.
+
+### <a name="rest-api-support"></a>REST API 지원
+
+최신 응용 프로그램 및 사용자 지정 개발을 사용 하려면 SQL Server Reporting Services는 이제 완벽 하 게 OpenAPI 규격 RESTful API를 지원 합니다. 전체 API 사양 및 설명서 찾을 수 있습니다에 [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0)합니다.
 
 ## <a name="query-designer-support-for-dax-now-in-report-builder-and-sql-server-data-tools"></a>보고서 작성기 및 SQL Server Data Tools에서 이제 DAX에 대 한 디자이너 지원을 쿼리합니다
 
@@ -69,7 +74,7 @@ Power BI 보고서 서버에 대 한 정보를 참조 하십시오. [Power BI �
   
  ![ssRSPortal](../reporting-services/media/ssrsportal.png "ssRSPortal")  
  
- #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)]에 대한 사용자 지정 브랜딩 
+ #### <a name="custom-branding-for-the-includessrswebportal-non-markdownincludesssrswebportal-non-markdown-mdmd"></a>[!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 
   브랜딩 팩을 사용하여 조직의 로고 및 색상으로 [!INCLUDE[ssRSWebPortal-Non-Markdown](../includes/ssrswebportal-non-markdown-md.md)] 을 사용자 지정할 수 있습니다.  
   
   사용자 지정 브랜딩에 대한 자세한 내용은 [웹 포털 브랜딩](http://msdn.microsoft.com/en-us/6dac97f7-02a6-4711-81a3-e850a6b40bf1)을 참조하세요.
@@ -106,7 +111,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
  
 참조 항목:  
   
--   [지원되는 SharePoint와 Reporting Services 서버 및 추가 기능의 조합&#40;SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
+-   [SharePoint 및 Reporting Services 서버 및 추가 기능을 &#40; 지원 되는 조합 SQL Server 2016&#41;](../reporting-services/install-windows/supported-combinations-of-sharepoint-and-reporting-services-server.md)  
   
 -   [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
@@ -131,7 +136,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
   
  ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
   
- 자세한 내용은 [Power BI 보고서 서버 통합&#40;구성 관리자&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Power BI 대시보드에 Reporting Services 항목 고정](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)을 참조하세요.  
+ 자세한 내용은 참조 [Power BI 보고서 서버 통합 &#40; 구성 관리자 &#41; ](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md) 및 [Reporting Services 항목 고정 Power BI 대시보드에](../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)합니다.  
  
  **PowerPoint 렌더링 및 내보내기:** Microsoft PowerPoint(PPTX) 형식은 새로운 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] 렌더링 확장 프로그램입니다. 일반적인 응용 프로그램(보고서 작성기, 보고서 디자이너 (SSDT), [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)])에서 PPTX 형식으로 보고서를 내보낼 수 있습니다. 예를 들어 다음 이미지는 [!INCLUDE[ssRSWebPortal](../includes/ssrswebportal.md)]의 내보내기 메뉴를 보여 줍니다. 
   
@@ -175,7 +180,7 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
  ![보고서 데이터 창 및 매개 변수 창에서 매개 변수 목록](../reporting-services/media/ssrs-customizeparameter-parameterlist-reportdatapane.png "보고서 데이터 창 및 매개 변수 창에서 매개 변수 목록")  
 
   
-**높은 DPI 지원:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 높은 DPI (인치당 도트 수) 배율 및 장치를 지원 합니다.  높은 DPI에 대한 자세한 내용은 다음을 참조하세요.  
+**높은 DPI 지원:** [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion-md.md)] 는 높은 DPI(인치당 도트 수) 배율 및 장치를 지원합니다.  높은 DPI에 대한 자세한 내용은 다음을 참조하세요.  
   
 -   [Windows 8.1 DPI 배율 향상된 기능](https://blogs.windows.com/windowsexperience/2013/07/15/windows-8-1-dpi-scaling-enhancements/)  
   
@@ -192,4 +197,4 @@ http://servername/ReportServer_THESQLINSTANCE/Pages/ReportViewer.aspx?%2freportf
 [Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)  
 [Power BI 보고서 서버](https://powerbi.microsoft.com/documentation/reportserver-get-started/)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

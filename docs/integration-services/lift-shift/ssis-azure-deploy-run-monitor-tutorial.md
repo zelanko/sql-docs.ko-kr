@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: c2dbdf818ef15dc97020dd7b35f88cfa080537d3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2e16666c412870cc55024e7156752f43ddbc1800
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="deploy-run-and-monitor-an-ssis-package-on-azure"></a>배포, 실행 및 Azure에서 SSIS 패키지를 모니터링 합니다.
@@ -22,7 +22,7 @@ ms.lasthandoff: 10/06/2017
 
 시작 하기 전에 17.2 SQL Server Management Studio의 이후 버전 지정 했는지 확인 합니다. 최신 버전의 SSMS 다운로드 하려면 [다운로드 SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
 
-또한 SSISDB 데이터베이스를 설정 하 고 Azure SSIS 통합 런타임에서 사용자를 프로 비전 했는지 확인 합니다. Azure에서 SSIS 프로 비전 하는 방법에 대 한 정보를 참조 하십시오. [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](https://docs.microsoft.com/en-us/azure/tutorial-deploy-ssis-packages-azure)합니다.
+또한 SSISDB 데이터베이스를 설정 하 고 Azure SSIS 통합 런타임에서 사용자를 프로 비전 했는지 확인 합니다. Azure에서 SSIS 프로 비전 하는 방법에 대 한 정보를 참조 하십시오. [Azure에 SQL Server Integration Services (SSIS) 패키지 리프트 하 고 shift](https://docs.microsoft.com/en-us/azure/data-factory/tutorial-deploy-ssis-packages-azure)합니다.
 
 ## <a name="connect-to-the-ssisdb-database"></a>SSISDB 데이터베이스에 연결
 

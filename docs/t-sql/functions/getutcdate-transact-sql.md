@@ -39,10 +39,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 316ccab8ddcaf138f05d713f41093ea7d767339a
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 19145656955431c4aac52a4082a25eb36c957a9b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="getutcdate-transact-sql"></a>GETUTCDATE(Transact-SQL)
@@ -114,67 +114,6 @@ GETUTCDATE()             2007-05-04
 ```  
   
 ### <a name="c-getting-the-current-system-time"></a>3. 현재 시스템의 시간 가져오기  
-  
-```  
-SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  
-SELECT 'SYSDATETIMEOFFSET()', CONVERT (time, SYSDATETIMEOFFSET());  
-SELECT 'SYSUTCDATETIME()   ', CONVERT (time, SYSUTCDATETIME());  
-SELECT 'CURRENT_TIMESTAMP  ', CONVERT (time, CURRENT_TIMESTAMP);  
-SELECT 'GETDATE()          ', CONVERT (time, GETDATE());  
-SELECT 'GETUTCDATE()       ', CONVERT (time, GETUTCDATE());  
-/* Returned  
-SYSDATETIME()            18:25:01.6958841  
-SYSDATETIMEOFFSET()      18:25:01.6958841  
-SYSUTCDATETIME()         01:25:01.6958841  
-CURRENT_TIMESTAMP        18:25:01.6930000  
-GETDATE()                18:25:01.6930000  
-GETUTCDATE()             01:25:01.6930000  
-*/  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 날짜, 시간 또는 둘 다 반환할 현재 날짜와 시간을 반환 하는 6 개의 시스템 함수를 사용 합니다. 값은 순차적으로 반환되므로 소수 자릿수 초가 서로 다를 수 있습니다.  
-  
-### <a name="d-getting-the-current-system-date-and-time"></a>4. 현재 시스템의 날짜 및 시간 가져오기  
-  
-```  
-SELECT 'SYSDATETIME()      ', SYSDATETIME();  
-SELECT 'SYSDATETIMEOFFSET()', SYSDATETIMEOFFSET();  
-SELECT 'SYSUTCDATETIME()   ', SYSUTCDATETIME();  
-SELECT 'CURRENT_TIMESTAMP  ', CURRENT_TIMESTAMP;  
-SELECT 'GETDATE()          ', GETDATE();  
-SELECT 'GETUTCDATE()       ', GETUTCDATE();  
-/* Returned:  
-SYSDATETIME()            2007-05-03 18:34:11.9351421  
-SYSDATETIMEOFFSET()      2007-05-03 18:34:11.9351421 -07:00  
-SYSUTCDATETIME()         2007-05-04 01:34:11.9351421  
-CURRENT_TIMESTAMP        2007-05-03 18:34:11.933  
-GETDATE()                2007-05-03 18:34:11.933  
-GETUTCDATE()             2007-05-04 01:34:11.933  
-*/  
-```  
-  
-### <a name="e-getting-the-current-system-date"></a>5. 현재 시스템의 날짜 가져오기  
-  
-```  
-SELECT 'SYSDATETIME()      ', CONVERT (date, SYSDATETIME());  
-SELECT 'SYSDATETIMEOFFSET()', CONVERT (date, SYSDATETIMEOFFSET());  
-SELECT 'SYSUTCDATETIME()   ', CONVERT (date, SYSUTCDATETIME());  
-SELECT 'CURRENT_TIMESTAMP  ', CONVERT (date, CURRENT_TIMESTAMP);  
-SELECT 'GETDATE()          ', CONVERT (date, GETDATE());  
-SELECT 'GETUTCDATE()       ', CONVERT (date, GETUTCDATE());  
-  
-/* Returned:   
-SYSDATETIME()            2007-05-03  
-SYSDATETIMEOFFSET()      2007-05-03  
-SYSUTCDATETIME()         2007-05-04  
-CURRENT_TIMESTAMP        2007-05-03  
-GETDATE()                2007-05-03  
-GETUTCDATE()             2007-05-04  
-*/  
-```  
-  
-### <a name="f-getting-the-current-system-time"></a>6. 현재 시스템의 시간 가져오기  
   
 ```  
 SELECT 'SYSDATETIME()      ', CONVERT (time, SYSDATETIME());  

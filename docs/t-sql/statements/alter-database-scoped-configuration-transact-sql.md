@@ -27,10 +27,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 75ab644da296ecc613c803916eb0b70907ad0cf6
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: fce97e74e2b4bbc5ae0fbdadf596734677734155
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact SQL)
@@ -119,7 +119,7 @@ PRIMARY
   
 QUERY_OPTIMIZER_HOTFIXES  **=**  {ON | **OFF** | 기본}  
 
-데이터베이스의 호환성 수준에 관계 없이 쿼리 최적화 핫픽스를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 **OFF**합니다. 이 설정에 해당 하는 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)합니다.   
+데이터베이스의 호환성 수준에 관계 없이 쿼리 최적화 핫픽스를 사용 하지 않도록 설정 하거나 사용 합니다. 기본값은 **OFF**를 해제 합니다. 쿼리 최적화 핫픽스는 특정 버전에 대 한 가장 높은 호환성 수준 도입 된 후에 릴리스된입니다 (post RTM). 이 값을 설정 **ON** 사용 하도록 설정 하는 것과 같습니다 [추적 플래그 4199](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)합니다.   
 
 > [!TIP] 
 > 이를 위해 쿼리 수준에서 추가 된 **QUERYTRACEON** [쿼리 힌트](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)합니다. 부터는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] s p 1이를 위해 쿼리 수준에서 사용 하 여 힌트 추가 [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md) 추적 플래그를 사용 하는 대신 합니다.  
@@ -140,7 +140,6 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
 
 > [!NOTE] 
 > 이 옵션은 기본 데이터베이스에 설정할 수 있습니다. 자세한 내용은 참조 [id 열](create-table-transact-sql-identity-property.md)합니다.  
->
 
 ##  <a name="Permissions"></a> 사용 권한  
  필요한 모든 데이터베이스 범위 구성 변경   
@@ -156,7 +155,7 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
  ALTER_DATABASE_SCOPED_CONFIGURATION 이벤트는 DDL 트리거를 시작 하는 데 사용할 수 있는 DDL 이벤트로 추가 됩니다. 이것이 ALTER_DATABASE_EVENTS 트리거 그룹의 자식입니다.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
- **MAXDOP**  
+**MAXDOP**  
   
  세부적인 설정을 있는 전역 구성을 재정의 하 고 해당 리소스 관리자는 다른 모든 MAXDOP 설정을 닫을 수 있습니다.  MAXDOP 설정에 대 한 논리는 다음과 같습니다.  
   
@@ -170,15 +169,15 @@ IDENTITY_CACHE  **=**  { **ON** | OFF}
   
 -   Sp_configure 설정은 리소스 관리자 설정에 의해 재정의 됩니다.  
   
- **QUERY_OPTIMIZER_HOTFIXES**  
+**QUERY_OPTIMIZER_HOTFIXES**  
   
  레거시 쿼리 최적화 프로그램 또는 쿼리 최적화 프로그램 핫픽스를 사용할 수 있도록 QUERYTRACEON 힌트를 사용 하면 쿼리 힌트 및 데이터베이스 범위 구성 설정, 의미 중 하나를 사용 하는 경우에 옵션이 적용 됩니다 사이 OR 조건을 것입니다.  
   
- **GeoDR**  
+**GeoDR**  
   
  예: Always On 가용성 그룹 및 GeoReplication을 읽기 가능한 보조 데이터베이스는 데이터베이스의 상태를 확인 하 여 보조 값을 사용 합니다. म 하지 않는 장애 조치 시 다시 컴파일하고 기술적으로 새 주 데이터베이스는 보조 설정을 사용 하는 쿼리, 있더라도 개념은 다른 워크 로드를 하 고 따라서 캐시 된 쿼리는 기본 및 보조 간 설정만 달라 집니다. 새 쿼리는 자신에 게 해당 하는 새 설정을 선택 하는 반면 최적의 설정을 사용 하 여 합니다.  
   
- **DacFx**  
+**DacFx**  
   
  내보내기 (데이터 없이 또는) 스키마의 예를 들어 이전 버전의 SQL Server로 가져와야 할 수 ALTER DATABASE SCOPED CONFIGURATION Azure SQL 데이터베이스 및 데이터베이스 스키마에 영향을 주는 SQL Server 2016의 새로운 기능 이므로, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 < c2 > [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] 합니다. 예를 들어로 내보내기를 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) 에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이 새로운 기능을 사용 데이터베이스를 하위 수준 서버로 가져올 수 없게 됩니다.  
   
@@ -245,7 +244,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=OFF ;
 지리적 복제 시나리오입니다.  
   
 ```tsql  
-ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING =PRIMARY ;  
+ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING=PRIMARY ;  
 ```  
   
 ### <a name="e-set-queryoptimizerhotfixes"></a>5. QUERY_OPTIMIZER_HOTFIXES 설정  

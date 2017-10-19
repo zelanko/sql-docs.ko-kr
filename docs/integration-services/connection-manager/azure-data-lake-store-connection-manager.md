@@ -18,10 +18,10 @@ author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: 5acf2de3fccc2f5180358f87bd02591811c59c72
+ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
+ms.openlocfilehash: 0a84b10114d785c9216a0902b2eefbcb0bd3f4c8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Azure Data Lake Store 연결 관리자
@@ -60,7 +60,8 @@ Azure 데이터 레이크 저장소 연결 관리자의 구성 요소인는 [Azu
         4. 연결을 테스트 하려면 선택 **연결 테스트**합니다.  
   
 6.  선택 **확인** 를 닫으려면는 **Azure 데이터 레이크 저장소 연결 관리자 편집기** 대화 상자.  
-  
+
+## <a name="view-the-properties-of-the-connection-manager"></a>연결 관리자의 속성 보기
 작성한 연결 관리자의 속성은 **속성** 창에서 확인할 수 있습니다.  
   
   

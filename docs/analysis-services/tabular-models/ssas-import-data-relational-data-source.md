@@ -1,7 +1,7 @@
 ---
 title: "관계형 데이터 원본 (SSAS 테이블 형식)에서 가져오기 | Microsoft Docs"
 ms.custom: 
-ms.date: 05/22/2017
+ms.date: 10/16/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,15 +17,15 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1db6dd24d059f8c478967bc3c69652aaec0aeb51
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: d45d72ca09a8abce6d29f018fcbaa8f54415a637
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="import-data---relational-data-source"></a>데이터 요금-관계형 데이터 원본 가져오기
-  테이블 가져오기 마법사를 사용하여 다양한 관계형 데이터베이스에서 데이터를 가져올 수 있습니다. 마법사는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]모델 **메뉴의** 에서 사용할 수 있습니다. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다. 지원되는 데이터 원본 및 공급자에 대한 자세한 내용은 [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)을 참조하세요.  
-  
+  1200에서 테이블 형식 모델 및 더 낮은 호환성 수준에 대 한 테이블 가져오기 마법사를 사용 하 여 다양 한 관계형 데이터베이스에서에서 데이터를 가져올 수 있습니다. 마법사는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]모델 **메뉴의** 에서 사용할 수 있습니다. 데이터 원본에 연결하려면 컴퓨터에 적절한 공급자를 설치해야 합니다. 지원되는 데이터 원본 및 공급자에 대한 자세한 내용은 [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)을 참조하세요. 
+ 
  테이블 가져오기 마법사를 사용하면 다음과 같은 데이터 원본에서 데이터를 가져올 수 있습니다.  
   
  **관계형 데이터베이스**  
@@ -69,3 +69,4 @@ ms.lasthandoff: 09/01/2017
  [지원되는 데이터 원본&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

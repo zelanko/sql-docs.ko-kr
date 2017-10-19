@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: de53c64e6292b585418b5e61c17979d4d50874de
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: ed5b9d2b25a0e2c795db4f268149a8655f289d84
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="pi-transact-sql"></a>PI(Transact-SQL)
@@ -46,23 +46,6 @@ PI ( )
  **float**  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `PI`의 값을 반환합니다.  
-  
-```  
-SELECT PI();  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-------------------------  
-3.14159265358979  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 `PI`의 값을 반환합니다.  
   
 ```  

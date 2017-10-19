@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 11cbfa6cc0ca35e5bb5e3358bf9d9dc2dfcfb644
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 5c3cd713bcbb239c037ff0a43083058de117cb9b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY(Transact-SQL)
@@ -100,22 +100,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorseverity-in-a-catch-block"></a>3. CATCH 블록에서 ERROR_SEVERITY 사용  
- 다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류의 심각도가 반환됩니다.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_SEVERITY() AS ErrorSeverity;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>4. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
+### <a name="c-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>3. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 심각도와 함께 오류와 관련된 정보가 반환됩니다.  
   
 ```  

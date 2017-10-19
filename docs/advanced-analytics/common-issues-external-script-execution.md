@@ -2,7 +2,7 @@
 title: "일반적인 문제를 SQL Server의 외부 스크립트 실행 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 08/20/2017
+ms.date: 10/11/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,10 +15,10 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 1837605f8eaf59224b90a2a00f7dffa32a6d63b1
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 2be854d38728670d5f68325da0bcf8136aef53f9
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="common-issues-with-external-script-execution-in-sql-server"></a>일반적인 문제를 SQL Server의 외부 스크립트 실행
@@ -92,7 +92,7 @@ R 설치 하는 볼륨에는 짧은 파일 이름을 지원 하지 않습니다,
 > [!NOTE] 
 > 이 제한은 이후 릴리스에서 제거되었습니다. 이 문제를 발생 하는 경우 다음 중 하나를 설치 합니다.
 > * SQL Server 2016 s p 1과 CU1: [SQL Server에 대 한 누적 업데이트 1](https://support.microsoft.com/help/3208177/cumulative-update-1-for-sql-server-2016-sp1)합니다.
-> * SQL Server 2016 RTM, 서비스 팩 3, 그리고이 [핫픽스](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), 요청에서 사용할 수 있습니다.
+> * SQL Server 2016 RTM, 누적 업데이트 3 및이 [핫픽스](https://support.microsoft.com/help/3210110/on-demand-hotfix-update-package-for-sql-server-2016-cu3), 요청에서 사용할 수 있습니다.
 
 #### <a name="the-user-group-for-launchpad-cannot-log-on-locally"></a>실행 패드에 대 한 사용자 그룹에 로컬로 로그온 수 없습니다.
 
@@ -102,7 +102,7 @@ R 설치 하는 볼륨에는 짧은 파일 이름을 지원 하지 않습니다,
 
 문제를 해결하려면 그룹 **SQLRUserGroup**에 시스템 권한 **로컬 로그온 허용**이 있는지 확인합니다.
 
-자세한 내용은 [Windows 서비스 계정 및 권한 구성](https://msdn.microsoft.com/library/ms143504.aspx#Windows)을 참조하세요.
+자세한 내용은 참조 [Windows 구성 서비스 계정 및 권한](https://msdn.microsoft.com/library/ms143504.aspx#Windows)합니다.
 
 #### <a name="improper-setup-leading-to-mismatched-dlls"></a>앞에 일치 하지 않는 Dll에 잘못 설치
 
@@ -110,19 +110,19 @@ R 설치 하는 볼륨에는 짧은 파일 이름을 지원 하지 않습니다,
 
 이 문제를 방지 하려면 서버 인스턴스와 동일한 패치 수준에 새로운 기능을 설치 해야 합니다.
 
-**업그레이드 하는 잘못 된 방법은**:
+**업그레이드 하는 잘못 된 방법입니다.**
 
 1. R 서비스 없이 SQL Server 2016을 설치 합니다.
 2. SQL Server 2016 누적 업데이트 2를 업그레이드 합니다.
 3. RTM 미디어를 사용 하 여 R Services (In-database)를 설치 합니다.
 
-**업그레이드 하는 올바른 방법은**:
+**업그레이드 하는 올바른 방법입니다.**
 
 1. R 서비스 없이 SQL Server 2016을 설치 합니다.
 2. SQL Server 2016 원하는 패치 수준으로 업그레이드 합니다. 예를 들어 서비스 팩 1 및 누적 업데이트 2를 설치 합니다.
 3. 정확한 패치 수준에 기능을 추가 하려면 s p 1과 c u 2 설치 프로그램을 다시 실행 하 고 R Services (In-database)를 선택 합니다. 
 
-#### <a name="check-to-see-whether-a-user-has-rights-to-run-external-scripts"></a>사용자에 외부 스크립트 실행에 대 한 권한이 있는지 확인
+#### <a name="check-whether-a-user-has-rights-to-run-external-scripts"></a>사용자에 외부 스크립트 실행에 대 한 권한이 있는지 확인 하십시오.
 
 실행 패드를 올바르게 구성 된 경우에 사용자에 Python 또는 R 스크립트를 실행할 수 있는 권한이 없는 경우 오류가 반환 됩니다.
 
@@ -131,8 +131,10 @@ R 설치 하는 볼륨에는 짧은 파일 이름을 지원 하지 않습니다,
 SQL Server Management Studio에서 문제를 해결 하려면 보안 관리자가 SQL 로그인 또는 Windows 사용자 계정을 다음 스크립트를 실행 하 여 수정할 수 있습니다.
 
 ```SQL
-GRANT EXECUTE ANY EXTERNAL SCRIPT
+GRANT EXECUTE ANY EXTERNAL SCRIPT TO <username>
 ```
+
+자세한 내용은 참조 [GRANT (TRANSACT-SQL](../t-sql/statements/grant-transact-sql.md)합니다.
 
 ### <a name="common-launchpad-errors"></a>실행 패드의 일반적인 오류
 
@@ -212,17 +214,17 @@ R 사용자 (Python에도 사용)에 대 한 Windows 그룹 R 서비스를 실�
 
 ## <a name="r-script-issues"></a>R 스크립트 문제
 
-이 섹션에는 R 스크립트 실행 및 R 스크립트 오류에 관련 된 몇 가지 일반적인 문제를 포함 합니다. 목록 않으므로 포괄적는 여러 R 패키지 및 오류는 동일한 R 패키지의 버전 간에 다를 수 있습니다. R 스크립트 오류를 게시 하는 것이 좋습니다는 [Microsoft R Server 포럼](https://social.msdn.microsoft.com/Forums/home?forum=MicrosoftR)를 지 원하는 관련 된 모든 제품: R Services (In-database), Python, Microsoft R Client 및 Microsoft R Server를 사용 하 여 컴퓨터 학습 서비스입니다.
+이 섹션에는 R 스크립트 실행 및 R 스크립트 오류에 관련 된 몇 가지 일반적인 문제를 포함 합니다. 목록 않으므로 포괄적는 여러 R 패키지 및 오류는 동일한 R 패키지의 버전 간에 다를 수 있습니다. R 스크립트 오류를 게시 하는 것이 좋습니다는 [Microsoft R Server 포럼](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR)를 지 원하는 기계 학습 R Services (In-database) 컴퓨터 Microsoft R, Python 및 Microsoft R 클라이언트와 서비스 학습에 사용 되는 구성 요소 서버입니다.
 
 ### <a name="multiple-r-instances-on-the-same-computer"></a>동일한 컴퓨터에서 여러 R 인스턴스
 
-동일한 컴퓨터에서 R의 여러 배포판을 설치 하거나 서로 다른 버전의 동일한 R 패키지의 여러 복사본을 설치할 하기 쉽습니다. 예를 들어 컴퓨터 학습 서버 (독립 실행형)와 컴퓨터 학습 Services (In-database)를 설치 하는 경우 설치 관리자가 서로 다른 버전의 R 라이브러리를 만듭니다. 
+다양 한 버전의 동일한 R 패키지의 여러 복사본 뿐만 아니라 동일한 컴퓨터에는 R의 여러 배포판 직접 찾기 쉬울 수 있습니다. 예를 들어 컴퓨터 학습 서버 (독립 실행형)와 컴퓨터 학습 Services (In-database)를 설치 하는 경우 설치 관리자가 서로 다른 버전의 R 라이브러리를 만듭니다. 
 
-중복 확실 하지 않은 사용 하는 라이브러리를 명령줄에서 스크립트를 실행 하려고 할 때 혼동 될 수 있습니다. 일 수도 있습니다 혼동 잘못 된 라이브러리에 패키지를 설치 하 고 SQL Server에서 실행 하려고 할 때에 패키지를 찾을 수 없습니다.
+이러한 중복 확실 하지 않은 사용 하는 라이브러리를 명령줄에서 스크립트를 실행 하려고 할 때 문제가 됩니다. 또는 잘못 된 라이브러리에 패키지를 설치 하 고 SQL Server에서 패키지를 찾을 수 없는 이유 나중 궁금할 수 있습니다.
 
 + R 라이브러리 및 SQL Server 인스턴스를 사용 하기 위한 문제 해 결과 같은 제한 된 경우를 제외 하 고 설치 된 도구는 직접 사용 하거나 새 패키지를 설치 하지 마세요. 
-+ R 명령줄 도구를 사용 해야 하는 경우 설치할 수 있습니다 [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)합니다.
-+ SQL Server R 패키지의 데이터베이스에서 관리 기능을 제공 합니다. 이것이 사용자 간에 공유할 수 있는 R 패키지 라이브러리를 만드는 가장 쉬운 방법입니다. 자세한 내용은 참조 [R 패키지를 관리 및 설치](r/installing-and-managing-r-packages.md)합니다.
++ R 명령줄 도구를 사용 해야 하는 경우 설치할 수 있습니다 [Microsoft R Client](https://docs.microsoft.com/r-server/r-client/what-is-microsoft-r-client)합니다. 
++ SQL Server R 패키지의 데이터베이스에서 관리 기능을 제공 합니다. 이것이 사용자 간에 공유할 수 있는 R 패키지 라이브러리를 만드는 가장 쉬운 방법입니다. 자세한 내용은 참조 [SQL Server에 대 한 R 패키지 관리](r/r-package-management-for-sql-server-r-services.md)합니다.
 
 ### <a name="avoid-clearing-the-workspace-while-youre-running-r-in-a-sql-compute-context"></a>SQL 계산 컨텍스트에서 R을 실행 하는 동안 작업 영역을 선택 취소 하지 마십시오.
 
@@ -325,7 +327,7 @@ EXEC sp_execute_external_script @language = N'R',
 
 ## <a name="next-steps"></a>다음 단계
 
-[기계 학습 문제 해결 및 알려진 문제](machine-learning-troubleshooting-faq.md)
+[컴퓨터 학습 서비스 문제 해결 및 알려진된 문제](machine-learning-troubleshooting-faq.md)
 
 [기계 학습 문제 해결에 대 한 데이터 수집](data-collection-ml-troubleshooting-process.md)
 

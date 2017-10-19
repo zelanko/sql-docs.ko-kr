@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f989318c49c6782b82ebda2b51636900768dbd39
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: cb65492a3be74474cd5afccdcaf0487d7cbd5167
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER(Transact-SQL)
@@ -99,21 +99,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errornumber-in-a-catch-block"></a>3. CATCH 블록에서 ERROR_NUMBER 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 번호가 반환됩니다.  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_NUMBER() AS ErrorNumber;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>4. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_NUMBER 사용  
+### <a name="c-using-errornumber-in-a-catch-block-with-other-error-handling-tools"></a>3. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_NUMBER 사용  
  다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 번호와 함께 해당 오류와 관련된 정보가 반환됩니다.  
   
 ```  

@@ -17,10 +17,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: e604c8c55cfa0bdb977840ee742d062573abeeeb
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 93fbd5e9429d06e3f011f6f0aff03d76a3db9000
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>플랫 파일 대상 구성(SQL Server 가져오기 및 내보내기 마법사)
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/26/2017
 -   **행 구분 기호**을 참조하세요. 출력에는 데이터의 각 행은 캐리지 리턴-줄 바꿈 조합으로 끝납니다.
 -   **열 구분 기호**을 참조하세요. 각 행 내에서 데이터의 열을 쉼표로 구분 됩니다.
 
- ![가져오기 및 내보내기 마법사의 구성 플랫 파일 페이지](../../integration-services/import-export-data/media/flat-file.png "가져오기 및 내보내기 마법사의 구성 플랫 파일 페이지")  
+ ![구성 가져오기 및 내보내기 마법사의 플랫 파일 페이지](../../integration-services/import-export-data/media/flat-file.png)
   
 ## <a name="pick-a-source-table"></a>소스 테이블 선택
  **원본 테이블 또는 뷰**  

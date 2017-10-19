@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ec170c756fd207c648e210de15df9d18024ea718
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: a31ab0658470cb614e1b9d633f19fbb1d8fe4a29
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="soundex-transact-sql"></a>SOUNDEX(Transact-SQL)
@@ -71,57 +71,6 @@ SOUNDEX ( character_expression )
 -   SOUNDEX로 정의된 지속형 계산 열이 포함된 인덱스(인덱싱된 뷰 포함)는 `ALTER INDEX ALL ON <object> REBUILD` 문을 실행하여 인덱스를 다시 작성한 후에만 쿼리할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 SOUNDEX 함수 및 관련된 DIFFERENCE 함수를 보여 줍니다. 첫 번째 예에서는 모든 자음에 대해 표준 `SOUNDEX` 값이 반환됩니다. `SOUNDEX` 및 `Smith`에 대해 `Smythe`를 반환하면 모든 모음, 문자 `y`, 이중 문자 및 문자 `h`가 포함되지 않으므로 똑같은 결과가 반환됩니다.  
-  
-```  
--- Using SOUNDEX  
-SELECT SOUNDEX ('Smith'), SOUNDEX ('Smythe');  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General 데이터 정렬에 대 한 유효 합니다.  
-  
-```  
-  
------ -----   
-S530  S530    
-  
-(1 row(s) affected)  
-```  
-  
- `DIFFERENCE` 함수는 `SOUNDEX` 패턴 결과의 차이를 비교합니다. 다음 예에서는 모음만 다른 두 문자열을 보여 줍니다. 반환되는 차이는 `4`(가능한 최저 차이)입니다.  
-  
-```  
--- Using DIFFERENCE  
-SELECT DIFFERENCE('Smithers', 'Smythers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General 데이터 정렬에 대 한 유효 합니다.  
-  
-```  
------------   
-4             
-  
-(1 row(s) affected)  
-```  
-  
- 다음 예에서는 문자열의 자음이 다르므로 반환되는 차이는 `2`이며 더 많은 차이가 납니다.  
-  
-```  
-SELECT DIFFERENCE('Anothers', 'Brothers');  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]Latin1_General 데이터 정렬에 대 한 유효 합니다.  
-  
-```  
------------   
-2             
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 SOUNDEX 함수 및 관련된 DIFFERENCE 함수를 보여 줍니다. 첫 번째 예에서는 모든 자음에 대해 표준 `SOUNDEX` 값이 반환됩니다. `SOUNDEX` 및 `Smith`에 대해 `Smythe`를 반환하면 모든 모음, 문자 `y`, 이중 문자 및 문자 `h`가 포함되지 않으므로 똑같은 결과가 반환됩니다.  
   
 ```  

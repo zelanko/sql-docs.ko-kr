@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d8e99fdb0c3383190c140997e619a05feb9bf3ee
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 308bac675b9d2563d45106cf3332e5ed6ce2e6b2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux에서 SQL Server에 대 한 설치 지침
@@ -97,7 +97,7 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 > [!IMPORTANT]
 > 다운 그레이드이 이번에 간의 RTM, RC2 및 r c 1만 지원 됩니다.
 
-## <a id="repositories"></a>소스 저장소 변경
+## <a id="repositories"></a>소스 저장소 구성
 
 를 설치 하거나 SQL Server를 업그레이드 하는 경우 구성 된 Microsoft 리포지토리에서 SQL Server의 최신 버전을 가져옵니다. 같은 두 가지 유형의 각 배포에 대 한 저장소는을 고려해 야 합니다.
 
@@ -110,9 +110,9 @@ SQL Server 2017 Linux에 대 한 다음과 같은 시스템 요구 사항에 있
 > [!NOTE]
 > 업데이트 CU에서 릴리스를 GDR 릴리스 지원 되지 않습니다.
 
-CU 리포지토리에 GDR 저장소에서 변경 하려면 다음 단계를 따르십시오.
+CU 또는 GDR 저장소를 구성 하려면 다음 단계를 사용 합니다.
 
-1. 미리 보기 이전에 구성 된 저장소를 제거 합니다.
+1. 필요한 경우 이전에 구성 된 저장소를 제거 합니다.
 
    | 플랫폼 | 저장소 제거 명령 |
    |-----|-----|

@@ -27,10 +27,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 98b5a1ecfbfd9efd84f8a5cc55454aaaec6f8423
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 2d5448d8dbd738177acbcd407448d7a10d835a23
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE(Transact-SQL)
@@ -105,21 +105,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errorstate-in-a-catch-block"></a>3. CATCH 블록에서 ERROR_STATE 사용  
- 다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류의 상태가 반환됩니다.  
-  
-```  
-BEGIN TRY  
-    -- Generate a divide by zero error  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_STATE() AS ErrorState;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>4. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
+### <a name="c-using-errorstate-in-a-catch-block-with-other-error-handling-tools"></a>3. 다른 오류 처리 도구와 함께 CATCH 블록에서 ERROR_STATE 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 오류 상태와 함께 오류와 관련된 정보가 반환됩니다.  
   
 ```  

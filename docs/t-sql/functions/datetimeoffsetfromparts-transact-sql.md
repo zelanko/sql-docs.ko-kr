@@ -22,10 +22,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fe203e646f1ec0cb9732ff63ba8ee0dbe38c899a
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 665607c3b6ea9411d90137fba416d96d3d46a4c1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="datetimeoffsetfromparts-transact-sql"></a>DATETIMEOFFSETFROMPARTS(Transact-SQL)
@@ -103,56 +103,6 @@ Result
 ### <a name="b-example-with-fractions-of-a-second"></a>2. 소수 단위 초를 사용하는 예  
 다음 예제에서는 *분수* 및 *정밀도* 매개 변수:
 1.   때 *분수* 5 값 및 *정밀도* 에 값이 1 항목이 값 *분수* 5/10 초를 나타냅니다.  
-1.   때 *분수* 50 값 및 *정밀도* 에 값이 2 항목이 값 *분수* 50/100 초를 나타냅니다.  
-1.   때 *분수* 값이 500 및 *정밀도* 값은 값은 값 3 다음 *분수* 500/1000 초를 나타냅니다.  
-  
-```sql
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 50, 12, 30, 2 );  
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 500, 12, 30, 3 );  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-----------------------------------  
-2011-08-15 14:30:00.5 +12:30  
-  
-(1 row(s) affected)  
-  
-----------------------------------  
-2011-08-15 14:30:00.50 +12:30  
-  
-(1 row(s) affected)  
-  
-----------------------------------  
-2011-08-15 14:30:00.500 +12:30  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-simple-example-without-fractions-of-a-second"></a>3. 소수 단위 초를 사용하지 않는 간단한 예  
-  
-```sql
-SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-Result  
--------------------------------------------  
-2010-12-07 00:00:00.0000000 +00:00  
-  
-(1 row(s) affected)  
-```  
-  
-### <a name="d-example-with-fractions-of-a-second"></a>4. 소수 단위 초를 사용하는 예  
-다음 예제에서는 *분수* 및 *정밀도* 매개 변수:
-1.  때 *분수* 5 값 및 *정밀도* 에 값이 1 항목이 값 *분수* 5/10 초를 나타냅니다.  
 1.   때 *분수* 50 값 및 *정밀도* 에 값이 2 항목이 값 *분수* 50/100 초를 나타냅니다.  
 1.   때 *분수* 값이 500 및 *정밀도* 값은 값은 값 3 다음 *분수* 500/1000 초를 나타냅니다.  
   

@@ -33,10 +33,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 15ed174d3f16a70f63973c586a15759afad72565
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 4fe1477de1f1aa087d622d687249ee4a10ad2524
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR Transact SQL
@@ -270,57 +270,6 @@ GO
 ```  
   
 ### <a name="c-using-a-local-variable-to-supply-the-message-text"></a>3. 지역 변수를 사용한 메시지 텍스트 제공  
- 다음 코드 예제에서는 지역 변수를 사용하여 `RAISERROR` 문에 메시지 텍스트를 제공하는 방법을 보여 줍니다.  
-  
-```  
-DECLARE @StringVariable NVARCHAR(50);  
-SET @StringVariable = N'<\<%7.3s>>';  
-  
-RAISERROR (@StringVariable, -- Message text.  
-           10, -- Severity,  
-           1, -- State,  
-           N'abcde'); -- First argument supplies the string.  
--- The message text returned is: <<    abc>>.  
-GO  
-```  
-  
-## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-returning-error-information-from-a-catch-block"></a>4. CATCH 블록의 오류 정보 반환  
- 다음 코드 예제에서는 `RAISERROR` 블록 내의 `TRY`를 사용하여 관련 `CATCH` 블록으로 실행을 이동하는 방법을 보여 줍니다. 또한 `RAISERROR` 블록을 호출한 오류에 관한 정보를 반환하는 방법을 `CATCH`을 사용하여 보여 줍니다.  
-  
-> [!NOTE]  
->  RAISERROR는 1에서 18 사이의 상태의 오류만 생성합니다. PDW 엔진은 상태 0 사용 하 여 오류를 발생 시킬 수 있습니다, 때문에 RAISERROR의 상태 매개 변수 값으로 전달 하기 전에 ERROR_STATE에서 반환 된 오류 상태를 확인 하는 것이 좋습니다.  
-  
-```  
-BEGIN TRY  
-    -- RAISERROR with severity 11-18 will cause execution to   
-    -- jump to the CATCH block.  
-    RAISERROR ('Error raised in TRY block.', -- Message text.  
-               16, -- Severity.  
-               1 -- State.  
-               );  
-END TRY  
-BEGIN CATCH  
-    DECLARE @ErrorMessage NVARCHAR(4000);  
-    DECLARE @ErrorSeverity INT;  
-    DECLARE @ErrorState INT;  
-  
-    SET @ErrorMessage = ERROR_MESSAGE();  
-    SET @ErrorSeverity = ERROR_SEVERITY();  
-    SET @ErrorState = ERROR_STATE();  
-  
-    -- Use RAISERROR inside the CATCH block to return error  
-    -- information about the original error that caused  
-    -- execution to jump to the CATCH block.  
-    RAISERROR (@ErrorMessage, -- Message text.  
-               @ErrorSeverity, -- Severity.  
-               @ErrorState -- State.  
-               );  
-END CATCH;  
-```  
-  
-### <a name="e-using-a-local-variable-to-supply-the-message-text"></a>5. 지역 변수를 사용한 메시지 텍스트 제공  
  다음 코드 예제에서는 지역 변수를 사용하여 `RAISERROR` 문에 메시지 텍스트를 제공하는 방법을 보여 줍니다.  
   
 ```  

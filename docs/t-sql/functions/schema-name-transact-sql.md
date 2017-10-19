@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e507e5a406cb78645489adbab13d16cf513b2448
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: bbc8d08ff59f85544fe3f11712c6780431bc76d7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="schemaname-transact-sql"></a>SCHEMA_NAME(Transact-SQL)
@@ -62,27 +62,9 @@ SCHEMA_NAME ( [ schema_id ] )
   
 ```  
 SELECT SCHEMA_NAME();  
-GO  
 ```  
   
 ### <a name="b-returning-the-name-of-a-schema-by-using-an-id"></a>2. ID를 사용하여 스키마 이름 반환  
-  
-```  
-USE AdventureWorks2012;  
-GO  
-SELECT SCHEMA_NAME(5);  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-returning-the-name-of-the-default-schema-of-the-caller"></a>3. 호출자의 기본 스키마 이름 반환  
-  
-```  
-SELECT SCHEMA_NAME();  
-```  
-  
-### <a name="d-returning-the-name-of-a-schema-by-using-an-id"></a>4. ID를 사용하여 스키마 이름 반환  
   
 ```  
 SELECT SCHEMA_NAME(1);  

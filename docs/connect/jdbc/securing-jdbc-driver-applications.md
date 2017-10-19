@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: e8033e1690fcaa01ca73ce1a7d0d9972ac2d3ba9
+ms.sourcegitcommit: 5051d2d668105bd0a309eb64f2b8becd459d8a6b
+ms.openlocfilehash: 097978fa39709dc3c5cd1b8ef150ce4f4c189b17
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/09/2017
+ms.lasthandoff: 10/12/2017
 
 ---
 # <a name="securing-jdbc-driver-applications"></a>JDBC 드라이버 응용 프로그램 보안
@@ -36,9 +36,10 @@ ms.lasthandoff: 09/09/2017
 |[사용자 입력 유효성 검사](../../connect/jdbc/validating-user-input.md)|사용자 입력의 유효성을 검사하는 기술에 대해 설명합니다.|  
 |[응용 프로그램 보안](../../connect/jdbc/application-security.md)|Java 정책 권한을 사용하여 JDBC 드라이버 응용 프로그램의 보안을 유지하는 방법에 대해 설명합니다.|  
 |[SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)|보안 통신 채널을 설정 하는 방법을 설명는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Secure Sockets Layer (SSL)를 사용 하 여 데이터베이스입니다.|  
-|[FIPS 모드](../../connect/jdbc/fips-mode.md)|FIPS complainant 모드에서 JDBC 드라이버를 사용 하는 방법을 설명 합니다.| 
+|[FIPS 모드](../../connect/jdbc/fips-mode.md)|FIPS 규격 모드에서 JDBC 드라이버를 사용 하는 방법을 설명 합니다.| 
   
 ## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
+

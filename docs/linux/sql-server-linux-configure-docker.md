@@ -11,10 +11,10 @@ ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: H1Hack27Feb2017
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: bdfc7ef9eb8048f1009f3c7f1a61533b6b620f37
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 4b39b8dce2a9d6b940936a6d7072fc41c2b67e8f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="configure-sql-server-2017-container-images-on-docker"></a>Docker에서 SQL Server 2017 컨테이너 이미지를 구성 합니다.
@@ -32,7 +32,47 @@ ms.lasthandoff: 10/02/2017
 
 - [Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.](quickstart-install-connect-docker.md)
 
-이 구성 항목 추가 연결 및 아래 섹션에 사용 시나리오를 제공합니다.
+이 구성 항목 아래 섹션에 추가적인 사용 시나리오를 제공합니다.
+
+## <a id="production"></a>컨테이너 이미지를 프로덕션에 실행
+
+이전 섹션에서 빠른 시작 자습서 Docker 허브에서 SQL Server의 무료 개발자 버전을 실행합니다. 대부분의 정보에는 프로덕션 Enterprise, Standard 또는 Web edition 등의 컨테이너 이미지를 실행 하려는 경우 여전히 적용 됩니다. 그러나 여기에서 설명 하는 몇 가지 차이점이 있습니다.
+
+- 유효한 라이선스가 있는 경우 SQL Server는 프로덕션 환경에서 사용할 수 있습니다. 무료 SQL Server Express 프로덕션 라이선스를 가져올 수 있습니다 [여기](https://go.microsoft.com/fwlink/?linkid=857693)합니다. 통해 사용할 수 있는 SQL Server Standard 및 Enterprise Edition 라이선스 [Microsoft Volume Licensing](https://www.microsoft.com/Licensing/licensing-programs/licensing-programs.aspx)합니다.
+
+- 프로덕션 SQL Server 컨테이너 이미지에서 가져와서 해야 [Docker 저장소](https://store.docker.com)합니다. 이미 없다면 하나에서 Docker 저장소 계정을 만듭니다.
+
+- 프로덕션 버전을 실행 하려면 Docker 스토어에서 개발자 컨테이너 이미지를 구성할 수 있습니다. 다음 단계를 사용 하 여 프로덕션 버전을 실행 하려면:
+
+   1. 먼저 로그인 docker id에 명령줄에서.
+
+      ```bash
+      docker login
+      ```
+
+   1. 다음으로 무료 개발자 Docker 저장소에서 컨테이너 이미지를 가져올 해야 합니다. 로 이동 [https://store.docker.com/images/mssql-server-linux](https://store.docker.com/images/mssql-server-linux), 클릭 **체크아웃으로**, 지시를 따릅니다.
+
+   1. 요구 사항을 검토 하 고 프로시저에서 실행 된 [빠른 시작 자습서](quickstart-install-connect-docker.md)합니다. 하지만 두 가지 차이점이 있습니다. 이미지를 가져와야 **저장소/microsoft/mssql-서버-linux:\<태그 이름을\>**  Docker 저장소에서 합니다. 와 프로덕션 버전을 지정 해야 하는 **MSSQL_PID** 환경 변수입니다. 다음 예제에서는 Enterprise Edition에 대 한 최신 SQL Server 2017 컨테이너 이미지를 실행 하는 방법을 보여 줍니다.
+
+      ```bash
+      docker run --name sqlenterprise \
+         -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
+         -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
+         -d store/microsoft/mssql-server-linux:2017-latest
+      ```
+
+      ```PowerShell
+      docker run --name sqlenterprise `
+         -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
+         -e "MSSQL_PID=Enterprise" -p 1433:1433 `
+         -d "store/microsoft/mssql-server-linux:2017-latest"
+      ```
+
+      > [!IMPORTANT]
+      > 값을 전달 하 여 **Y** 환경 변수에 **ACCEPT_EULA** 와 버전 값을 **MSSQL_PID**에 대 한 유효 하 고 기존 라이선스가 있는지 표현 하는 버전 및 사용 하려는 SQL Server의 버전입니다. 사용자 동의 Docker 컨테이너 이미지에서 실행 되는 SQL Server 소프트웨어의 사용 SQL Server 사용권 조항으로 해당 제어 됩니다.
+
+      > [!NOTE]
+      > 에 대 한 가능한 값의 전체 목록은 **MSSQL_PID**, 참조 [Linux에서 환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
 
 ## <a name="connect-and-query"></a>연결 및 쿼리
 

@@ -39,10 +39,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: e1ea8183c7655af863fe5f6267958f4c8df367dc
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: b7f2f78bbda485de979c76076404f35122b61277
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
@@ -190,7 +190,7 @@ CONVERT 함수를 변환 하는 방법을 지정 하는 정수 식 *식*합니�
   
 ![데이터 형식 변환 표](../../t-sql/data-types/media/lrdatahd.png "데이터 형식 변환 표")
   
-간에 변환 하는 경우 **datetimeoffset** 및 문자 형식 **char**, **varchar**, **nchar**, 및 **nvarchar ** 변환 된 표준 시간대 오프셋된 부분의 HH 및 MM-08 예를 들어, 두 자리는 항상: 00입니다.
+간에 변환 하는 경우 **datetimeoffset** 및 문자 형식 **char**, **varchar**, **nchar**, 및 **nvarchar**  변환 된 표준 시간대 오프셋된 부분의 HH 및 MM-08 예를 들어, 두 자리는 항상: 00입니다.
   
 > [!NOTE]  
 >  유니코드 데이터는 항상 짝수 바이트의 수를 사용 하므로 주의 변환할 때 **이진** 또는 **varbinary** 유니코드 데이터 형식을 지원 합니다. 예를 들어 `SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)` 변환은 16진수 값 41이 아니라 4100을 반환합니다.  
@@ -219,7 +219,7 @@ CAST 또는 CONVERT의 출력이 문자열이고 입력도 문자열이면 출�
 `SELECT CAST('abc' AS varchar(5)) COLLATE French_CS_AS`
   
 ## <a name="truncating-and-rounding-results"></a>결과 잘라내기 및 반올림
-변환 하는 경우 문자 또는 이진 식 (**char**, **nchar**, **nvarchar**, **varchar**, **이진**, 또는 **varbinary**)을 다른 데이터 형식의 식으로 데이터를 자르기 일부만 표시 또는 결과 길이가 너무 짧아 표시 하면 오류가 반환 됩니다. 으로 변환은 **char**, **varchar**, **nchar**, **nvarchar**, **이진**, 및 ** varbinary** 다음 표에 있는 변환을 제외 하 고 잘립니다.
+변환 하는 경우 문자 또는 이진 식 (**char**, **nchar**, **nvarchar**, **varchar**, **이진**, 또는 **varbinary**)을 다른 데이터 형식의 식으로 데이터를 자르기 일부만 표시 또는 결과 길이가 너무 짧아 표시 하면 오류가 반환 됩니다. 으로 변환은 **char**, **varchar**, **nchar**, **nvarchar**, **이진**, 및  **varbinary** 다음 표에 있는 변환을 제외 하 고 잘립니다.
   
 |원래 데이터 형식|변경할 데이터 형식|결과|  
 |---|---|---|
@@ -304,7 +304,7 @@ SELECT  CAST(10.6496 AS int) as trunc1,
   
 `SELECT CAST(10.3496847 AS money);`
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]숫자가 아닌 경우 오류 메시지가 반환 **char**, **nchar**, **varchar**, 또는 **nvarchar** 데이터 변환할 **int **, **float**, **숫자**, 또는 **10 진수**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]빈 문자열이 될 경우 오류도 반환 ("")으로 변환 **숫자** 또는 **10 진수**합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]숫자가 아닌 경우 오류 메시지가 반환 **char**, **nchar**, **varchar**, 또는 **nvarchar** 데이터 변환할 **int** , **float**, **숫자**, 또는 **10 진수**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]빈 문자열이 될 경우 오류도 반환 ("")으로 변환 **숫자** 또는 **10 진수**합니다.
   
 ## <a name="certain-datetime-conversions-are-nondeterministic"></a>일부 datetime 변환은 비결 정적 됩니다.
 다음 표에서는 문자열에서 datetime으로의 변환이 비결정적인 스타일을 나열합니다.
@@ -318,7 +318,7 @@ SELECT  CAST(10.6496 AS int) as trunc1,
 <sup>1</sup> 스타일 20 및 21 제외
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자 (서로게이트 쌍)
-부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SC (보조 문자) 데이터 정렬 캐스트 연산에서 사용 하는 경우, **nchar** 또는 **nvarchar** 에 **nchar** 또는 ** nvarchar** 길이가 더 짧은 형식의 서로게이트 쌍 안에서 자르지 않고; 보충 문자 앞에서 자릅니다. 예를 들어 다음 코드 조각에서는 `@x`만 보유한 `'ab'`를 남깁니다. 공간이 부족하여 보조 문자를 포함할 수 없습니다.
+부터는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]SC (보조 문자) 데이터 정렬 캐스트 연산에서 사용 하는 경우, **nchar** 또는 **nvarchar** 에 **nchar** 또는  **nvarchar** 길이가 더 짧은 형식의 서로게이트 쌍 안에서 자르지 않고; 보충 문자 앞에서 자릅니다. 예를 들어 다음 코드 조각에서는 `@x`만 보유한 `'ab'`를 남깁니다. 공간이 부족하여 보조 문자를 포함할 수 없습니다.
   
 ```sql
 DECLARE @x NVARCHAR(10) = 'ab' + NCHAR(0x10000);  
@@ -391,54 +391,44 @@ Computed
 ```  
   
 ### <a name="c-using-cast-to-concatenate"></a>3. CAST를 사용하여 연결  
-다음 예에서는 `CAST`를 사용하여 문자 및 이진이 아닌 식을 연결합니다.
+다음 예에서는 캐스팅을 사용 하 여 문자가 아닌 식을 연결 합니다. AdventureWorksDW를 사용합니다.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
 SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM Production.Product  
+FROM dbo.DimProduct  
 WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-GO  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
 ListPrice
-------------------
+------------------------
 The list price is 357.06
 The list price is 364.09
 The list price is 364.09
 The list price is 364.09
-The list price is 364.09
-(5 row(s) affected)  
-```
+The list price is 364.09  
+```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>4. CAST를 사용하여 읽기 쉬운 텍스트 만들기  
-다음 예에서는 SELECT 목록에 `CAST`를 사용하여 `Name` 열을 `char(10)` 열로 변환합니다.
+다음 예제에서는 SELECT 목록에서 변환 하려면 CAST가 사용 된 `Name` 열을 한 **char (10)** 열. AdventureWorksDW를 사용합니다.
   
 ```sql
-USE AdventureWorks2012;  
-GO  
-SELECT DISTINCT CAST(p.Name AS char(10)) AS Name, s.UnitPrice  
-FROM Sales.SalesOrderDetail AS s   
-JOIN Production.Product AS p   
-    ON s.ProductID = p.ProductID  
-WHERE Name LIKE 'Long-Sleeve Logo Jersey, M';  
-GO  
+SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
+FROM dbo.DimProduct  
+WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
 ```  
   
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
   
 ```  
-Name       UnitPrice
----------- -----------
-Long-Sleev 31.2437
-Long-Sleev 32.4935
-Long-Sleev 49.99
-(3 row(s) affected)  
-```
+Name        UnitPrice
+----------  ---------
+Long-Sleev  31.2437
+Long-Sleev  32.4935
+Long-Sleev  49.99  
+```  
   
 ### <a name="e-using-cast-with-the-like-clause"></a>5. CAST에 LIKE 절 사용  
 다음 예에서는 `money` 절과 함께 사용할 수 있도록 `SalesYTD` 열인 `int`를 `char(20)`로 변환한 다음 `LIKE` 열로 변환합니다.
@@ -673,47 +663,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-to-concatenate"></a>12. CAST를 사용하여 연결  
-다음 예에서는 캐스팅을 사용 하 여 문자가 아닌 식을 연결 합니다. AdventureWorksDW를 사용합니다.
-  
-```sql
-SELECT 'The list price is ' + CAST(ListPrice AS varchar(12)) AS ListPrice  
-FROM dbo.DimProduct  
-WHERE ListPrice BETWEEN 350.00 AND 400.00;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-ListPrice
-------------------------
-The list price is 357.06
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09
-The list price is 364.09  
-```  
-  
-### <a name="m-using-cast-to-produce-more-readable-text"></a>13. CAST를 사용하여 읽기 쉬운 텍스트 만들기  
-다음 예제에서는 SELECT 목록에서 변환 하려면 CAST가 사용 된 `Name` 열을 한 **char (10)** 열. AdventureWorksDW를 사용합니다.
-  
-```sql
-SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
-FROM dbo.DimProduct  
-WHERE EnglishProductName LIKE 'Long-Sleeve Logo Jersey, M';  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```  
-Name        UnitPrice
-----------  ---------
-Long-Sleev  31.2437
-Long-Sleev  32.4935
-Long-Sleev  49.99  
-```  
-  
-### <a name="n-using-cast-with-the-like-clause"></a>14. CAST에 LIKE 절 사용  
+### <a name="l-using-cast-with-the-like-clause"></a>12. CAST에 LIKE 절 사용  
 다음 예제는 **money** 열 `ListPrice` 에 **int** 형식 다음는 **char(20)** LIKE 절과 함께 사용할 수 있도록 입력 합니다. AdventureWorksDW를 사용합니다.
   
 ```sql
@@ -722,7 +672,7 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="o-using-cast-and-convert-with-datetime-data"></a>15. datetime 데이터와 함께 CAST 및 CONVERT 사용  
+### <a name="m-using-cast-and-convert-with-datetime-data"></a>13. datetime 데이터와 함께 CAST 및 CONVERT 사용  
 다음 예제에서는 표시에서 현재 날짜 및 시간을 사용 하 여 문자 데이터 형식으로 현재 날짜 및 시간을 변경 하려면 CAST 및 CONVERT를 사용 하 여 ISO 8601 형식에 날짜와 시간을 표시 합니다. AdventureWorksDW를 사용합니다.
   
 ```sql

@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: f15d9d23726f7558f0bf73aff3f8c3c5253cb24d
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: ad4e69ea267af2a9575558737e17e79bbdad684f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="errormessage-transact-sql"></a>ERROR_MESSAGE(Transact-SQL)
@@ -100,22 +100,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-using-errormessage-in-a-catch-block"></a>3. CATCH 블록에서 ERROR_MESSAGE 사용  
- 다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 메시지가 반환됩니다.  
-  
-```  
-  
-BEGIN TRY  
-    -- Generate a divide-by-zero error.  
-    SELECT 1/0;  
-END TRY  
-BEGIN CATCH  
-    SELECT ERROR_MESSAGE() AS ErrorMessage;  
-END CATCH;  
-GO  
-```  
-  
-### <a name="d-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>4. 다른 오류 처리 도구로 CATCH 블록에서 ERROR_MESSAGE 사용  
+### <a name="c-using-errormessage-in-a-catch-block-with-other-error-handling-tools"></a>3. 다른 오류 처리 도구로 CATCH 블록에서 ERROR_MESSAGE 사용  
  다음 코드 예에서는 0으로 나누기 오류를 생성하는 `SELECT` 문을 보여 줍니다. 오류 메시지와 함께 오류와 관련된 정보가 반환됩니다.  
   
 ```  
@@ -134,18 +119,6 @@ BEGIN CATCH
 END CATCH;  
 GO  
 ```  
-  
-## <a name="see-also"></a>관련 항목:  
- [sys.messages&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
- [TRY...CATCH&#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
- [ERROR_LINE&#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   
- [ERROR_NUMBER&#40;Transact-SQL&#41;](../../t-sql/functions/error-number-transact-sql.md)   
- [ERROR_PROCEDURE&#40;Transact-SQL&#41;](../../t-sql/functions/error-procedure-transact-sql.md)   
- [ERROR_SEVERITY&#40;Transact-SQL&#41;](../../t-sql/functions/error-severity-transact-sql.md)   
- [Error_state&#40; Transact SQL &#41;](../../t-sql/functions/error-state-transact-sql.md)   
- [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [@@ERROR&#40;Transact-SQL&#41;](../../t-sql/functions/error-transact-sql.md)  
-  
   
 
 

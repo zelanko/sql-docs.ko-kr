@@ -25,10 +25,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 27af210aca06130818fd00fea9d53eebcc8aa016
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 7cddf1af7eba56824e41ad1ebaedb9aecdc37074
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="str-transact-sql"></a>STR(Transact-SQL)
@@ -100,55 +100,6 @@ GO
   
 ```  
 SELECT STR (FLOOR (123.45), 8, 3;)  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---------  
- 123.000  
-  
-(1 row(s) affected)  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
- 다음 예에서는 다섯 자리의 숫자와 소수점으로 구성된 식을 여섯 자리 문자열로 변환합니다. 숫자의 소수 부분은 소수 첫째 자리로 반올림됩니다.  
-  
-```  
-SELECT STR(123.45, 6, 1);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-------  
- 123.5  
-  
-(1 row(s) affected)  
-```  
-  
- 식이 지정한 길이를 초과하면 문자열이 지정된 길이만큼 `**`를 반환합니다.  
-  
-```  
-SELECT STR(123.45, 2, 2);  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
---  
-**  
-  
-(1 row(s) affected)  
-```  
-  
- 숫자 데이터가 `STR` 내에서 중첩되어도 결과는 지정된 형식의 문자 데이터입니다.  
-  
-```  
-SELECT STR (FLOOR (123.45), 8, 3);  
 GO  
 ```  
   

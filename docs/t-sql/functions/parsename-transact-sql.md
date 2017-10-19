@@ -26,10 +26,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 63065dcee0d1f7784e7be396273785f741ef44c7
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 5664c0a98663897f1d0a3cfa46e8dabab0d6ef7a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="parsename-transact-sql"></a>PARSENAME(Transact-SQL)
@@ -76,46 +76,6 @@ PARSENAME ( 'object_name' , object_piece )
  요청한 개체 부분의 길이가 0 이며 유효 하지 않거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자입니다. 길이가 0인 개체 이름은 한정된 이름 전체를 올바르지 않은 이름으로 렌더링합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `PARSENAME`을 사용하여 `Person` 데이터베이스의 `AdventureWorks2012` 테이블에 대한 정보를 반환합니다.  
-  
-```  
-USE AdventureWorks2012;  
-SELECT PARSENAME('AdventureWorks2012..Person', 1) AS 'Object Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 2) AS 'Schema Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 3) AS 'Database Name';  
-SELECT PARSENAME('AdventureWorks2012..Person', 4) AS 'Server Name';  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```
-Object Name
-------------------------------
-Person
-
-(1 row(s) affected)
-
-Schema Name
-------------------------------
-(null)
-
-(1 row(s) affected)
-
-Database Name
-------------------------------
-AdventureWorks2012
-
-(1 row(s) affected)
-
-Server Name
-------------------------------
-(null)
-
-(1 row(s) affected)
- ```
- 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 `PARSENAME`을 사용하여 `Person` 데이터베이스의 `AdventureWorks2012` 테이블에 대한 정보를 반환합니다.  
   
 ```  

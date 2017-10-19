@@ -25,13 +25,13 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: cd64185b31ad5aba9496e55031eae15ae46d5180
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 33fcf5ceb2481b517844cb5334dd67c97b039b77
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/17/2017
 
 ---
-# <a name="x40x40language-transact-sql"></a>& #x 40; & #x 40; 언어 (Transact SQL)
+# <a name="x40x40language-transact-sql"></a>&#x40;&#x40;언어 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 사용 중인 언어의 이름을 반환합니다.  
@@ -51,21 +51,6 @@ ms.lasthandoff: 09/19/2017
  유효한 공식 언어 이름을 포함 하 여 언어 설정에 대 한 정보를 보려면 실행 **sp_helplanguage** 매개 변수 지정 없이 합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 현재 세션의 언어를 반환합니다.  
-  
-```  
-SELECT @@LANGUAGE AS 'Language Name';  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Language Name                   
-------------------------------  
-us_english                      
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예에서는 현재 세션의 언어를 반환합니다.  
   
 ```  

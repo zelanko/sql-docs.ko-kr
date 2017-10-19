@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 2bbb64b775ab59665ac2c8eefdd21e514b4906cd
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 72c648e147b628a4a99ffc9605ba42b11c83883e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux에서 환경 변수를 SQL Server 설정 구성
@@ -34,7 +34,7 @@ SQL Server 2017 Linux에서 구성 하려면 몇 가지 서로 다른 환경 변
 |-----|-----|
 | **ACCEPT_EULA** | 모든 값 (예를 들어, ' Y')로 설정 된 경우 SQL Server 사용권 계약에 동의 합니다. |
 | **MSSQL_SA_PASSWORD** | SA 암호를 구성 합니다. |
-| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값: Evaluation, Developer, Express, 웹, Standard, Enterprise, 또는 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자의 형태로 제품 키를 합니다. |
+| **MSSQL_PID** | SQL Server 버전 또는 제품 키를 설정 합니다. 가능한 값은 다음과 같습니다. </br></br>**Evaluation**</br>**개발자**</br>**Express**</br>**웹**</br>**Standard**</br>**Enterprise**</br>**제품 키**</br></br>제품 키를 지정 하는 경우에 # # #-# # #-# # #-# # #-# # #, '#'은 숫자 이거나 문자 형식에서 이어야 합니다.|
 | **MSSQL_LCID** | SQL Server에 사용할 언어 ID를 설정 합니다. 예를 들어 1036 프랑스어입니다. |
 | **MSSQL_COLLATION** | SQL Server에 대 한 기본 데이터 정렬을 설정합니다. 이 언어 id (LCID) 데이터 정렬의 기본 매핑을 재정의합니다. |
 | **MSSQL_MEMORY_LIMIT_MB** | 메모리 (MB) SQL Server에서 사용할 수 있는 최대 크기를 설정 합니다. 기본적으로 것은 총 실제 메모리의 80%입니다. |
@@ -79,6 +79,9 @@ Windows에서 Docker를 실행 하는 경우에 큰따옴표로 다음 구문을
 ```bash
 docker run -e ACCEPT_EULA=Y -e MSSQL_PID="Developer" -e MSSQL_SA_PASSWORD="<YourStrong!Passw0rd>" -e MSSQL_TCP_PORT=1234 -p 1234:1234 -d microsoft/mssql-server-linux:2017-latest
 ```
+
+> [!NOTE]
+> 컨테이너의 프로덕션 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 참조 [프로덕션 컨테이너 이미지를 실행](sql-server-linux-configure-docker.md#production)합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -24,10 +24,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5070ec59ddd73d68167835a0c20dc4879d5b3b48
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: 3c68b65c2bde2d8b4c5cd8f34452563b433c6a29
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="atn2-transact-sql"></a>ATN2(Transact-SQL)
@@ -50,24 +50,6 @@ ATN2 ( float_expression , float_expression )
 **float**
   
 ## <a name="examples"></a>예  
-다음 예에서는 지정된 `ATN2` 및 `x` 요소에 대한 `y` 값을 계산합니다.
-  
-```sql
-DECLARE @x float = 35.175643, @y float = 129.44;  
-SELECT 'The ATN2 of the angle is: ' + CONVERT(varchar,ATN2(@x,@y ));  
-GO  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```sql
-The ATN2 of the angle is: 0.265345                         
-(1 row(s) affected)  
-```  
-  
-## <a name="examples"></a>예:
- [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
-
 다음 예에서는 지정된 `ATN2` 및 `x` 요소에 대한 `y` 값을 계산합니다.
   
 ```sql

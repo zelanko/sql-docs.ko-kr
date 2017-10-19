@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: dbe6f832d4af55ddd15e12fba17a4da490fe19ae
-ms.openlocfilehash: 646999095957abb4e615b59b316b6ca59155dea3
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: ac121e600c3c616006d79892c50f796ca7cd6b3f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/25/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="connect-to-the-ssisdb-catalog-database-on-azure"></a>Azure에서 SSISDB 카탈로그 데이터베이스에 연결
@@ -48,6 +48,9 @@ Azure SQL 데이터베이스 서버에서 호스팅되는 SSISDB 카탈로그 �
    | **암호** | 서버 관리자 계정의 암호 | 이 서버를 만들 때 지정한 암호입니다. |
 
 3. **SSISDB 데이터베이스에 연결**합니다. 선택 **옵션** 확장 하 고 **서버에 연결** 대화 상자. 확장 된 **서버에 연결** 대화 상자는 **연결 속성** 탭 합니다. 에 **연결할 데이터베이스** 필드를 선택 하거나 입력 `SSISDB`합니다.
+
+    > [!IMPORTANT]
+    > 선택 하지 않으면 `SSISDB` 개체 탐색기에서 SSIS 카탈로그를 보이지 않을 수 있음에 연결할 때.
 
 4. 그런 다음 선택 **연결**합니다.
 

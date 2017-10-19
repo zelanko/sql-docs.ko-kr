@@ -4,16 +4,16 @@ description: "이 빠른 시작 자습서에는 SQL Server 2017 컨테이너 이
 author: rothja
 ms.author: jroth
 manager: jhubbard
-ms.date: 10/02/2017
+ms.date: 10/12/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.translationtype: MT
-ms.sourcegitcommit: 7811cfe9238c92746673fac4fce40a4af44d6dcd
-ms.openlocfilehash: dc105fd46a14d241bb375f0d7f3a6c5471797818
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 99d9395898c4a3ff55bb34278749ec0ea2fae77b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="run-the-sql-server-2017-container-image-with-docker"></a>Docker가 있는 SQL Server 2017 컨테이너 이미지를 실행 합니다.
@@ -60,52 +60,48 @@ ms.lasthandoff: 10/02/2017
 
 1. Docker 허브에서 SQL Server 2017 Linux 컨테이너 이미지를 끌어옵니다.
 
-    ```bash
-    docker pull microsoft/mssql-server-linux:2017-latest
-    ```
+   ```bash
+   docker pull microsoft/mssql-server-linux:2017-latest
+   ```
 
-    > [!TIP]
-    > Linux 시스템 및 사용자 구성에 따라 해야 할 수 있습니다 각 앞 `docker` 명령을 `sudo`합니다.
+   > [!TIP]
+   > Linux 시스템 및 사용자 구성에 따라 해야 할 수 있습니다 각 앞 `docker` 명령을 `sudo`합니다.
 
-    > [!NOTE]
-    > 위의 명령은 SQL Server 2017 GA 컨테이너 이미지를 끌어옵니다. 태그 이름과 콜론을 추가할 특정 이미지를 끌어오려면 하려는 경우 (예를 들어 `microsoft/mssql-server-linux:rc1`). 사용 가능한 모든 이미지를 보려면 [mssql-서버-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)합니다.
+   > [!NOTE]
+   > 위의 명령을 최신 SQL Server 2017 컨테이너 이미지를 추출합니다. 태그 이름과 콜론을 추가할 특정 이미지를 끌어오려면 하려는 경우 (예를 들어 `microsoft/mssql-server-linux:2017-GA`). 사용 가능한 모든 이미지를 보려면 [mssql-서버-linux Docker 허브 페이지](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/)합니다.
 
-1. Docker가 있는 컨테이너 이미지를 실행 하려면 bash 셸의 (Linux/macOS)에서 다음 명령을 사용할 수 있습니다.
+1. Docker가 있는 컨테이너 이미지를 실행 하려면 bash 셸의 (Linux/macOS) 또는 관리자 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용할 수 있습니다. 유일한 차이점은 작은따옴표 및 큰따옴표를 포함 합니다.
 
-    ```bash
-    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -e 'MSSQL_PID=Developer' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
-    ```
+   ```bash
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   ```
 
-    Windows 용 Docker를 사용 하는 경우에 관리자 권한 PowerShell 명령 프롬프트에서 다음 명령을 사용 합니다.
+   ```PowerShell
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
+   ```
 
-    ```PowerShell
-    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -e "MSSQL_PID=Developer" -p 1401:1433 --name sql1 -d microsoft/mssql-server-linux:2017-latest
-    ```
+   > [!NOTE]
+   > 기본적으로 개발자 버전의 SQL Server 2017와 컨테이너를 만듭니다이 있습니다. 컨테이너의 프로덕션 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 참조 [프로덕션 컨테이너 이미지를 실행](sql-server-linux-configure-docker.md#production)합니다.
 
-    > [!NOTE]
-    > Bash (Linux/macOS) 예제와 PowerShell (Windows) 예제 간의 유일한 차이점은 환경 변수 주위 큰따옴표와 작은따옴표 합니다. Docker run 명령에 잘못 된을 사용 하는 경우 실패 합니다. 이 항목의 나머지 bash 및 PowerShell 코드 블록 편의 위해 제공 됩니다. 예제로 이면 Windows를 비롯 한 모든 플랫폼에서 작동 합니다.
+   다음 표에서 이전에 매개 변수 설명을 `docker run` 예제:
 
-    다음 표에서 이전에 매개 변수 설명을 `docker run` 예제:
-
-    | 매개 변수 | Description |
-    |-----|-----|
-    | **-e ' ACCEPT_EULA = Y'** |  설정의 **ACCEPT_EULA** 동의한 것에 어떤 값이 변수는 [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
-    | **-e ' MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 사용자 고유의 강력한 암호를 8 자 이상 있고에 맞는 지정 [SQL Server 암호 요구 사항을](../relational-databases/security/password-policy.md)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
-    | **-e ' MSSQL_PID 개발자 ='** | 버전 또는 제품 키를 지정합니다. 이 예제에서는 자유롭게 사용이 허가 된 Developer Edition은 비-프로덕션 테스트에 사용 됩니다. 다른 값을 참조 하십시오. [Linux에서 환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다. |
-    | **-p 1401:1433** | 호스트 환경에서 TCP 포트 매핑 (첫째 값) 컨테이너의 TCP 포트 (두 번째 값). 이 예제에서는 SQL Server가 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1401 포트에 노출 됩니다. |
-    | **-이름 s q l 1** | 임의로 생성 된 것 보다는 컨테이너에 대 한 사용자 지정 이름을 지정 합니다. 둘 이상의 컨테이너를 실행 하는 경우에이 이름을 다시 사용할 수 없습니다. |
-    | **microsoft/mssql-서버-linux:2017-최신** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
-
+   | 매개 변수 | Description |
+   |-----|-----|
+   | **-e ' ACCEPT_EULA = Y'** |  설정의 **ACCEPT_EULA** 동의한 것에 어떤 값이 변수는 [최종 사용자 사용권 계약](http://go.microsoft.com/fwlink/?LinkId=746388)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
+   | **-e ' MSSQL_SA_PASSWORD =\<YourStrong! Passw0rd\>'** | 8 자 이상 되며 충족 된 강력한 암호를 지정 된 [SQL Server 암호 요구 사항을](../relational-databases/security/password-policy.md)합니다. SQL Server 이미지에 대 한 설정 해야 합니다. |
+   | **-p 1401:1433** | 호스트 환경에서 TCP 포트 매핑 (첫째 값) 컨테이너의 TCP 포트 (두 번째 값). 이 예제에서는 SQL Server가 컨테이너의 TCP 1433에서 수신 하 고 호스트에서 1401 포트에 노출 됩니다. |
+   | **-이름 s q l 1** | 임의로 생성 된 것 보다는 컨테이너에 대 한 사용자 지정 이름을 지정 합니다. 둘 이상의 컨테이너를 실행 하는 경우에이 이름을 다시 사용할 수 없습니다. |
+   | **microsoft/mssql-서버-linux:2017-최신** | SQL Server 2017 Linux 컨테이너 이미지입니다. |
 
 1. Docker 컨테이너를 보려면 사용 하 여는 `docker ps` 명령입니다.
 
-    ```bash
-    docker ps -a
-    ```
+   ```bash
+   docker ps -a
+   ```
 
-    다음 스크린샷과 유사한 출력이 표시 되어야 합니다.
+   다음 스크린샷과 유사한 출력이 표시 되어야 합니다.
 
-    ![Docker ps 명령 출력](./media/sql-server-linux-setup-docker/docker-ps-command.png)
+   ![Docker ps 명령 출력](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
 1. 경우는 **상태** 열 표시의 상태 **를**컨테이너에서 SQL Server가 실행 한 다음, 및에 지정 된 포트에서 수신 하는 **포트** 열입니다. 경우는 **상태** SQL Server 컨테이너 표시에 대 한 열 **Exited**, 참조는 [구성 가이드의 섹션 문제 해결](sql-server-linux-configure-docker.md#troubleshooting)합니다.
 
@@ -130,15 +126,15 @@ SELECT @@SERVERNAME,
 
 1. 사용 하 여는 `docker exec -it` 는 대화형 bash 셸의 실행 중인 컨테이너 내 시작 명령입니다. 다음 예에서 `sql1` 으로 이름이 지정 되는 `--name` 컨테이너를 만들 때 매개 변수입니다.
 
-    ```bash
-    docker exec -it sql1 "bash"
-    ```
+   ```bash
+   docker exec -it sql1 "bash"
+   ```
 
 1. 한 번, 컨테이너 내부 연결 로컬로 sqlcmd 합니다. Sqlcmd 아니므로 기본적으로 경로에 전체 경로 지정 해야 합니다.
 
-    ```bash
-    /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
-    ```
+   ```bash
+   /opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P '<YourNewStrong!Passw0rd>'
+   ```
 
    > [!TIP]
    > 명령줄에서 암호를 생략하여 입력하라는 메시지가 표시되도록 할 수 있습니다.

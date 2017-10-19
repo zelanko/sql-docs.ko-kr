@@ -1,7 +1,7 @@
 ---
 title: DBCC INPUTBUFFER (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 07/16/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -28,10 +28,10 @@ author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: ba54322c814911babe19e172a2cfafc4f00011a7
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 3d9b6acfbfef3125d6ee715708492de1cae2b3a2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/16/2017
 
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER(Transact-SQL)
@@ -49,22 +49,23 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 ```  
   
 ## <a name="arguments"></a>인수  
- *session_id*  
- 각 기본 활성 연결과 연관된 세션 ID입니다.  
+*session_id*  
+각 기본 활성 연결과 연관된 세션 ID입니다.  
   
- *request_id*  
- 현재 세션 내에서 검색할 정확한 요청(일괄 처리)입니다.  
- 다음 쿼리에서 반환 *request_id*:  
+*request_id*  
+현재 세션 내에서 검색할 정확한 요청(일괄 처리)입니다.  
+
+다음 쿼리에서 반환 *request_id*:  
 ```sql
 SELECT request_id   
 FROM sys.dm_exec_requests   
 WHERE session_id = @@spid;  
 ```  
- 의 모든 멘션을  
- 지정할 옵션을 활성화합니다.  
+의 모든 멘션을  
+지정할 옵션을 활성화합니다.  
   
- NO_INFOMSGS  
- 심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
+NO_INFOMSGS  
+심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
 DBCC INPUTBUFFER는 다음과 같은 열이 있는 행 집합을 반환합니다.
@@ -77,7 +78,7 @@ DBCC INPUTBUFFER는 다음과 같은 열이 있는 행 집합을 반환합니다
   
 예를 들어 DBCC INPUTBUFFER는 버퍼의 마지막 이벤트가 DBCC INPUTBUFFER(11)인 경우에 다음과 같은 결과 집합을 반환합니다.
   
-```sql
+```
 EventType      Parameters EventInfo               
 -------------- ---------- ---------------------   
 Language Event 0          DBCC INPUTBUFFER (11)  
@@ -86,7 +87,10 @@ Language Event 0          DBCC INPUTBUFFER (11)
   
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
-  
+
+> [!NOTE]
+> 부터는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s p 2를 사용 하 여 [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md) 의 인스턴스에 제출 된 문에 대 한 정보를 반환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+
 ## <a name="permissions"></a>Permissions  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 중 하나가 필요 합니다.
 -   사용자의 구성원 이어야 합니다.는 **sysadmin** 고정된 서버 역할입니다.  
@@ -120,7 +124,8 @@ DBCC INPUTBUFFER (52);
 
 ## <a name="see-also"></a>관련 항목:  
 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)
+[sp_who&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
+[sys.dm_exec_input_buffer&#40; Transact SQL &#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)
   
   
 

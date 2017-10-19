@@ -23,10 +23,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 1bff42df7f6b0dbb71c980a6a3d3d1321406d508
+ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
+ms.openlocfilehash: cba8b5a9b62a21fc810ff9bb5fcd3d0c6429f9f5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
@@ -110,24 +110,14 @@ GO
  다음 예에서는 반올림과 어림값을 보여 줍니다.  
   
 ```  
-SELECT ROUND(123.4545, 2);  
-GO  
-SELECT ROUND(123.45, -2);  
-GO  
+SELECT ROUND(123.4545, 2), ROUND(123.45, -2);  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
+
  ```
-----------
-123.4500
-
-(1 row(s) affected)
-
---------
-100.00
-
-(1 row(s) affected)
+--------  ----------
+123.45    100.00
 ```
   
 ### <a name="c-using-round-to-truncate"></a>3. ROUND를 사용하여 자르기  
@@ -168,20 +158,6 @@ SELECT ROUND(123.994999, 3), ROUND(123.995444, 3);
  ```
 --------  ---------
 123.995000    123.995444
-```
-  
-### <a name="e-using-round-and-rounding-approximations"></a>5. ROUND 사용 및 어림값 반올림  
- 다음 예에서는 반올림과 어림값을 보여 줍니다.  
-  
-```  
-SELECT ROUND(123.4545, 2), ROUND(123.45, -2);  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-
- ```
---------  ----------
-123.45    100.00
 ```
   
 ## <a name="see-also"></a>관련 항목:  

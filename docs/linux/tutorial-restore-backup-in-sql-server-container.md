@@ -9,10 +9,10 @@ ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 78778dd3f43872fd6d97ae042cc337a68b6bab2c
+ms.sourcegitcommit: 51f60c4fecb56aca3f4fb007f8e6a68601a47d11
+ms.openlocfilehash: 1f3cc214be4eaac2199c17c3bea1da7fd02956f1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/14/2017
 
 ---
 # <a name="restore-a-sql-server-database-in-a-linux-docker-container"></a>Linux Docker 컨테이너에서 SQL Server 데이터베이스 복원
@@ -59,17 +59,22 @@ ms.lasthandoff: 10/02/2017
 
     ```bash
     sudo docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
-       --name 'sql1' -e 'MSSQL_PID=Developer' -p 1401:1433 \
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name 'sql1' -p 1401:1433 \
+       -v sql1data:/var/opt/mssql \
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
     ```PowerShell
     docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
-       --name "sql1" -e "MSSQL_PID=Developer" -p 1401:1433 `
-       -v sql1data:/var/opt/mssql -d microsoft/mssql-server-linux:2017-latest
+       --name "sql1" -p 1401:1433 `
+       -v sql1data:/var/opt/mssql `
+       -d microsoft/mssql-server-linux:2017-latest
     ```
 
-    이 명령은 사용 하 여 SQL Server 2017 컨테이너 만듭니다는 **개발자** 버전입니다. SQL Server 포트 **1433** 포트로 호스트에 노출 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 명명 된 데이터 볼륨 컨테이너를 만듦 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하는이 사용 됩니다.
+    이 명령은 Developer edition (기본값)을 SQL Server 2017 컨테이너를 만듭니다. SQL Server 포트 **1433** 포트로 호스트에 노출 **1401**합니다. 선택적 `-v sql1data:/var/opt/mssql` 매개 변수 명명 된 데이터 볼륨 컨테이너를 만듦 **sql1ddata**합니다. SQL Server에서 만든 데이터를 유지 하는이 사용 됩니다.
+
+   > [!NOTE]
+   > 컨테이너에서 프로덕션 SQL Server 버전을 실행 하기 위한 프로세스는 약간 다릅니다. 자세한 내용은 참조 [프로덕션 컨테이너 이미지를 실행](sql-server-linux-configure-docker.md#production)합니다. 동일한 컨테이너 이름 및 포트를 사용 하는 경우이 연습의 나머지 부분 프로덕션 컨테이너와 계속 작동 합니다.
 
 1. Docker 컨테이너를 보려면 사용 하 여는 `docker ps` 명령입니다.
 
