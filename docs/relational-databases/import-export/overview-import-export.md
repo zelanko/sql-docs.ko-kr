@@ -1,7 +1,7 @@
 ---
 title: "SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/12/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -13,10 +13,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
-ms.openlocfilehash: 3c41be0642b13b63367c5601b716b506808472e7
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 1d37d86ab2e2bac04ceb8ce36fad63ae25f0f92b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/14/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="import-and-export-data-from-sql-server-and-azure-sql-database"></a>SQL Server 및 Azure SQL Database에서 데이터 가져오기 및 내보내기
@@ -31,6 +31,11 @@ ms.lasthandoff: 09/14/2017
 
 ### <a name="use-bcp-from-the-command-prompt"></a>명령 프롬프트에서 BCP 사용
 BCP 명령줄 유틸리티를 사용하여 데이터를 가져오고 내보낼 수 있습니다. 자세한 내용은 [bcp 유틸리티를 사용하여 대량 데이터 가져오기 및 내보내기](import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)를 참조하세요.
+
+### <a name="use-the-import-flat-file-wizard"></a>플랫 파일 가져오기 마법사 사용
+가져오기 및 내보내기 마법사와 기타 도구에서 사용 가능한 모든 구성 옵션이 필요하지 않은 경우 SSMS(SQL Server Management Studio)의 **플랫 파일 가져오기 마법사**를 사용하여 텍스트 파일을 SQL Server로 가져올 수 있습니다. 자세한 내용은 다음 문서를 참조하세요.
+- [SQL Server Management Studio 17.3의 새로운 기능](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [SSMS 17.3의 새로운 플랫 파일 가져오기 마법사 소개](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ### <a name="use-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사 사용
 SQL Server 가져오기 및 내보내기 마법사를 사용하여 다양한 원본 및 대상 간에 데이터를 가져오고 내보낼 수 있습니다. 마법사를 사용하려면 SSIS(SQL Server Integration Services) 또는 SSDT(SQL Server Data Tools)가 설치되어 있어야 합니다. 자세한 내용은 [SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 가져오기 및 내보내기](../../integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)를 참조하세요.

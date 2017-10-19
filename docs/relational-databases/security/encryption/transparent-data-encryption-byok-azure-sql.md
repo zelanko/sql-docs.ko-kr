@@ -18,10 +18,10 @@ ms.topic: article
 ms.date: 08/07/2017
 ms.author: rebeccaz
 ms.translationtype: HT
-ms.sourcegitcommit: 46b16dcf147dbd863eec0330e87511b4ced6c4ce
-ms.openlocfilehash: fddb53ecae2ab1f15ba50a42ea59f30bff740804
+ms.sourcegitcommit: 54e4c8309c290255cb2885fab04bb394bc453046
+ms.openlocfilehash: 2950cf2e403cd0afd337c1578d7bbe656f2a6e53
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/05/2017
+ms.lasthandoff: 10/16/2017
 
 --- 
 
@@ -141,7 +141,7 @@ SQL Database에 대한 백업 복구에 대해 자세히 알아보려면 [Azure 
 
 빠른 키 복구를 보장하고 Azure 외부의 데이터에 액세스하려면 다음을 수행하는 것이 좋습니다.
 - 로컬 HSM 장치에 암호화 키를 로컬로 만듭니다. (이 키는 Azure Key Vault에 저장할 수 있도록 비대칭, RSA 2048 키여야 합니다.)
-- 암호화 키 파일(.pfx, .byok 또는 .backup)을 Azure Key Vault로 가져옵니다. 
+- 암호화 키 파일(.pfx, .byok 또는 .backup)을 Azure Key Vault로 가져옵니다. 우발적인 키 삭제로부터 복구를 보호하기 위해 [일시 삭제](https://docs.microsoft.com/azure/key-vault/key-vault-ovw-soft-delete)를 설정하여 키 자격 증명 모음을 사용하는 것이 좋습니다.
 - Azure Key Vault에 키를 처음 사용하는 경우 먼저 Azure Key Vault 키 백업을 수행합니다. [백업-AzureKeyVaultKey](https://msdn.microsoft.com/library/mt126292.aspx) 명령에 대해 알아 봅니다.
 - 키에 대한 어떤 변경이 발생할 때마다 (예: ACL 추가, 태그 추가, 키 특성 추가) 또 다른 Azure Key Vault 키 백업을 수행해야 합니다.
 - 키 롤오버 중에는 키 자격 증명 모음에 **키의 이전 버전 유지**하여 이전 데이터베이스 백업을 복원할 수 있습니다. 

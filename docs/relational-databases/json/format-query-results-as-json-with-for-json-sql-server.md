@@ -1,5 +1,5 @@
 ---
-title: "FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server) | Microsoft Docs"
+title: "FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server) | Microsoft 문서"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 07/18/2017
@@ -20,10 +20,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: HT
-ms.sourcegitcommit: 9045ebe77cf2f60fecad22672f3f055d8c5fdff2
-ms.openlocfilehash: bfda43cbc97a641a5e2654f7cb4c92cdddaf1532
+ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
+ms.openlocfilehash: 8ee99c52515908e93a44e936504fd8ccbd74793f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>FOR JSON을 사용하여 쿼리 결과를 JSON으로 서식 지정(SQL Server)
@@ -39,14 +39,14 @@ ms.lasthandoff: 07/31/2017
   
 다음은 **FOR JSON** 절을 사용한 **SELECT** 문 및 해당 출력의 예입니다.
   
- ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png "FOR JSON")  
+ ![FOR JSON](../../relational-databases/json/media/jsonslides2forjson.png)
   
 ## <a name="option-1---you-control-output-with-for-json-path"></a>옵션 1 - FOR JSON PATH로 출력 제어
 **PATH** 모드에서는 점 구문(예: `'Item.Price'` )을 사용하여 중첩 출력을 서식 지정할 수 있습니다.  
 
 다음은 **PATH** 모드를 **FOR JSON** 절과 함께 사용하는 예제입니다. 다음 예제에서는 **ROOT** 옵션을 사용하여 명명된 루트 요소를 지정합니다. 
   
- ![FOR JSON 출력의 흐름 다이어그램](../../relational-databases/json/media/forjson-example1.png "Diagram of flow of FOR JSON output")  
+ ![FOR JSON 출력의 흐름 다이어그램](../../relational-databases/json/media/forjson-example1.png) 
 
 ### <a name="more-info-about-for-json-path"></a>FOR JSON PATH에 대한 추가 정보
 자세한 내용과 예제는 [PATH 모드로 중첩 JSON 출력 형식 지정&#40;SQL Server&#41;](../../relational-databases/json/format-nested-json-output-with-path-mode-sql-server.md)을 참조하세요.
@@ -102,7 +102,7 @@ FOR JSON AUTO
         -   기본적으로 SSMS(SQL Server Management Studio)는 출력 설정이 **표 형태로 결과 표시**인 경우 결과를 단일 행으로 연결합니다. SSMS 상태 표시줄에 실제 행 수가 표시됩니다.
         -   다른 클라이언트 응용 프로그램에는 여러 행의 내용을 연결하여 길이가 긴 결과를 하나의 유효한 JSON 문자열로 다시 결합하는 코드가 필요할 수 있습니다. C# 응용 프로그램에서 이 코드의 예는 [C# 클라이언트 앱에서 FOR JSON 출력 사용](https://docs.microsoft.com/en-us/sql/relational-databases/json/use-for-json-output-in-sql-server-and-in-client-apps-sql-server#use-for-json-output-in-a-c-client-app)을 참조하세요.
   
-     ![FOR JSON 출력의 예](../../relational-databases/json/media/forjson-example2.png "Example of FOR JSON output")  
+     ![FOR JSON 출력의 예](../../relational-databases/json/media/forjson-example2.png)  
   
 2.  결과는 JSON 개체의 배열로 서식 지정됩니다.  
   
@@ -121,7 +121,7 @@ FOR JSON AUTO
   
 |||||  
 |-|-|-|-|  
-|**A**|**B**|**C**|**D**|  
+|**변수를 잠그기 위한**|**B**|**C**|**D**|  
 |10|11|12|X|  
 |20|21|22|Y|  
 |30|31|32|Z|  
@@ -148,11 +148,12 @@ FOR JSON AUTO
 ```  
 
  **FOR JSON** 절의 출력에 나타나는 자세한 내용은 다음 항목을 참조하세요.  
+
 -   [FOR JSON을 통해 SQL Server 데이터 형식을 JSON 데이터 형식으로 변환하는 방법&#40;SQL Server&#41;](../../relational-databases/json/how-for-json-converts-sql-server-data-types-to-json-data-types-sql-server.md)  
-**FOR JSON** 절은 이 항목에서 설명하는 규칙을 사용하여 JSON 출력의 SQL 데이터 형식을 JSON 형식으로 변환합니다.  
+    **FOR JSON** 절은 이 항목에서 설명하는 규칙을 사용하여 JSON 출력의 SQL 데이터 형식을 JSON 형식으로 변환합니다.  
 
 -   [FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법&#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md)  
- **FOR JSON** 절은 특수 문자를 이스케이프하고 JSON 출력의 제어 문자를 이 항목에서 설명하는 대로 표시합니다.  
+    **FOR JSON** 절은 특수 문자를 이스케이프하고 JSON 출력의 제어 문자를 이 항목에서 설명하는 대로 표시합니다.  
 
 ## <a name="learn-more-about-the-built-in-json-support-in-sql-server"></a>SQL Server의 기본 제공 JSON 지원에 대한 자세한 정보  
 많은 특정 솔루션, 사용 사례 및 권장 사항은 Microsoft 프로그램 관리자인 Jovan Popovic이 제공하는 SQL Server 및 Azure SQL Database의 [기본 제공 JSON 지원에 대한 블로그 게시물](http://blogs.msdn.com/b/sqlserverstorageengine/archive/tags/json/)을 참조하세요.

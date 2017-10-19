@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 0feecce7b6f80df96d77273863ca1873bd74523e
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 687bddd3ce51c60e286cfa0e2634790a8a492500
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
@@ -349,7 +349,8 @@ model 데이터베이스의 새 값 및 모델을 기반으로 하는 새 데이
 - 이제 [ALTER TABLE&#40;Transact-SQL&#41;](../t-sql/statements/alter-table-transact-sql.md)은 테이블을 사용 가능한 상태로 유지하면서 많은 열 변경 작업을 수행할 수 있게 해줍니다.
 - 전체 텍스트 인덱스 DMV [sys.dm_fts_index_keywords_position_by_document&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-position-by-document-transact-sql.md)는 문서에서 키워드의 위치를 반환합니다. 이 DMV는 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] SP2 및 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1에도 추가되었습니다.
 - 새 쿼리 힌트 **NO_PERFORMANCE_SPOOL** 은 스풀 연산자가 쿼리 계획에 추가되지 않도록 합니다. 그 결과, 스풀 작업에서 많은 동시 쿼리가 실행 중일 때 성능이 향상될 수 있습니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.
-- [FORMATMESSAGE&#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) 문이 msg_string 인수를 적용하도록 향상되었습니다. NONCLUSTERED 인덱스의 최대 인덱스 키 크기가 1700바이트로 증가되었습니다.
+- [FORMATMESSAGE&#40;Transact-SQL&#41;](../t-sql/functions/formatmessage-transact-sql.md) 문이 msg_string 인수를 적용하도록 향상되었습니다.
+- NONCLUSTERED 인덱스의 최대 인덱스 키 크기가 1700바이트로 증가되었습니다.
 - 새 DROP IF 구문이 AGGREGATE, ASSEMBLY, COLUMN, CONSTRAINT, DATABASE, DEFAULT, FUNCTION, INDEX, PROCEDURE, ROLE, RULE, SCHEMA, SECURITY POLICY, SEQUENCE, SYNONYM, TABLE, TRIGGER, TYPE, USER 및 VIEW에 관련된 drop 문에 추가되었습니다. 구문에 대해서는 개별 구문 항목을 참조하세요.
 - 병렬 처리 수준을 지정하기 위해 [DBCC CHECKTABLE&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checktable-transact-sql.md), [DBCC CHECKDB&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKFILEGROUP&#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)에 MAXDOP 옵션이 추가되었습니다.
 - 이제 SESSION_CONTEXT를 설정할 수 있습니다. [SESSION_CONTEXT&#40;Transact-SQL&#41;](../t-sql/functions/session-context-transact-sql.md) 함수, [CURRENT_TRANSACTION_ID&#40;Transact-SQL&#41;](../t-sql/functions/current-transaction-id-transact-sql.md) 함수 및 [sp_set_session_context&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-set-session-context-transact-sql.md) 프로시저를 포함합니다.

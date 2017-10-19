@@ -1,7 +1,7 @@
 ---
 title: "쿼리 처리 아키텍처 가이드 | Microsoft 문서"
 ms.custom: 
-ms.date: 05/03/2017
+ms.date: 10/13/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 70401c6607263bb593d11f0551214d227be1a96a
+ms.sourcegitcommit: 246ea9f306c7d99b835c933c9feec695850a861b
+ms.openlocfilehash: 3189dade2df1e1767ba26263960a59d6b8241aa4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 10/13/2017
 
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
@@ -64,7 +64,7 @@ ms.lasthandoff: 09/07/2017
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 리소스 비용이 가장 낮은 실행 계획만 선택하는 것은 아닙니다. 쿼리 최적화 프로그램은 타당한 리소스 비용을 사용하여 사용자에게 결과를 반환하고 가장 빠른 결과를 반환하는 계획을 선택합니다. 예를 들어 병렬로 쿼리를 처리하는 것은 대개 직렬로 처리하는 것보다 많은 리소스를 사용하지만 쿼리를 좀 더 빠르게 끝냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 서버 로드에 나쁜 영향을 미치지 않는 경우 병렬 실행 계획을 사용하여 결과를 반환합니다.
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 테이블 또는 인덱스에서 정보를 추출하는 다른 방법의 리소스 비용을 예상할 때 배포 통계를 이용합니다. 열 및 인덱스에 대해 배포 통계가 보유됩니다. 배포 통계는 특정 인덱스 또는 열에서 값의 선택도를 표시합니다. 예를 들어 자동차를 나타내는 테이블에서 많은 차가 동일한 제조업체의 것이지만 각 차는 고유의 차량 등록 번호(VIN)를 갖습니다. VIN에 대한 인덱스는 제조업체에 대한 인덱스보다 좀 더 선택적입니다. 인덱스 통계가 현재의 데이터가 아니면 쿼리 최적화 프로그램은 테이블의 현재 상태에 대해 최상의 선택을 하지 못할 수 있습니다. 인덱스 통계를 최신 상태로 유지하는 방법에 대한 자세한 내용은 통계를 사용하여 쿼리 성능 향상을 참조하세요. 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 테이블 또는 인덱스에서 정보를 추출하는 다른 방법의 리소스 비용을 예상할 때 배포 통계를 이용합니다. 열 및 인덱스에 대해 배포 통계가 보유됩니다. 배포 통계는 특정 인덱스 또는 열에서 값의 선택도를 표시합니다. 예를 들어 자동차를 나타내는 테이블에서 많은 차가 동일한 제조업체의 것이지만 각 차는 고유의 차량 등록 번호(VIN)를 갖습니다. VIN에 대한 인덱스는 제조업체에 대한 인덱스보다 좀 더 선택적입니다. 인덱스 통계가 현재의 데이터가 아니면 쿼리 최적화 프로그램은 테이블의 현재 상태에 대해 최상의 선택을 하지 못할 수 있습니다. 인덱스 통계를 최신 상태로 유지하는 방법에 대한 자세한 내용은 [통계](../relational-databases/statistics/statistics.md)를 참조하세요. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 프로그래머나 데이터베이스 관리자의 입력을 요청하지 않고 데이터베이스 서버가 데이터베이스의 조건 변화에 맞춰 동적으로 조정될 수 있게 하므로 중요합니다. 이를 통해 프로그래머는 쿼리의 최종 결과를 설명하는 데 주안점을 둘 수 있습니다. 프로그래머는 문이 실행될 때마다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램이 데이터베이스의 상태에 맞게 효율적인 실행 계획을 세운다는 것을 신뢰할 수 있습니다.
 
@@ -384,6 +384,7 @@ SELECT *
 FROM AdventureWorks2014.Production.Product 
 WHERE ProductSubcategoryID = 1;
 ```
+
 ```tsql
 SELECT * 
 FROM AdventureWorks2014.Production.Product 
@@ -1037,4 +1038,5 @@ GO
  [확장 이벤트](../relational-databases/extended-events/extended-events.md)  
  [쿼리 저장소에 대한 모범 사례](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [카디널리티 추정](../relational-databases/performance/cardinality-estimation-sql-server.md)  
+ [적응 쿼리 처리](../relational-databases/performance/adaptive-query-processing.md)
 
