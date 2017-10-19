@@ -31,7 +31,7 @@ ms.lasthandoff: 06/22/2017
   
 ## <a name="settings"></a>설정  
 **다음을 사용하여 도움말 표시**  
-도움말 표시 방법을 지정합니다. 항목을 외부 부동 창에 표시하려면 드롭다운 목록에서 **외부 도움말 뷰어** 를 선택합니다. 도움말 항목을 **** 내에 도킹된 웹 브라우저 창에 표시하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)][!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)]을 클릭합니다.  
+도움말 표시 방법을 지정합니다. 항목을 외부 부동 창에 표시하려면 드롭다운 목록에서 **외부 도움말 뷰어** 를 선택합니다. 도움말 항목을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio_md.md)] 내에 도킹된 웹 브라우저 창에 표시하려면 **통합 도움말 뷰어**를 선택합니다.  
   
 **페이지 당 검색 결과**  
 단일 **검색 결과** 페이지에 표시할 항목 수를 지정합니다.  

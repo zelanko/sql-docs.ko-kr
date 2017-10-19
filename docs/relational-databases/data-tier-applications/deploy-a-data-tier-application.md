@@ -43,7 +43,7 @@ ms.lasthandoff: 06/22/2017
  동일한 DAC 패키지를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 단일 인스턴스에 여러 번 배포할 수 있지만 한 번에 하나씩 배포를 실행해야 합니다. 지정된 DAC 인스턴스 이름은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스 내에서 각 배포마다 고유해야 합니다.  
   
 ## <a name="managed-instances"></a>관리되는 인스턴스  
- DAC를 데이터베이스 엔진의 관리되는 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티**에 통합됩니다. 그러면 DAC가 **** 유틸리티 탐색기 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **배포된 데이터 계층 응용 프로그램** 노드에 표시되고 **** 세부 정보 페이지에 보고됩니다.  
+ DAC를 데이터베이스 엔진의 관리되는 인스턴스로 배포하는 경우 배포된 DAC는 유틸리티 컬렉션 집합이 인스턴스에서 유틸리티 제어 지점으로 다음에 전송될 때 **SQL Server 유틸리티**에 통합됩니다. DAC에 있게 됩니다는 **배포 된 데이터 계층 응용 프로그램** 의 노드는 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **유틸리티 탐색기** 에 보고 된 **배포 된 데이터 계층 응용 프로그램**세부 정보 페이지입니다.  
   
 ###  <a name="database-options-and-settings"></a>데이터베이스 옵션 및 설정  
  기본적으로 배포 중에 생성된 데이터베이스에는 다음을 제외한 CREATE DATABASE 문의 모든 기본 설정이 적용됩니다.  

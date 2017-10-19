@@ -149,7 +149,7 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>ADO.NET을 사용하여 xml 유형의 열에서 XML 처리  
- ADO.NET 및 **** 를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] you can use the standard behavior of the **SqlCommand** class. 예를 들어 **xml** 데이터 형식 열과 해당 값은 **SqlDataReader**를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 **xml** 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 **XmlReader** 유형에 할당해야 합니다.  
+ ADO.NET 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 **xml** 데이터 형식 열에서 XML을 처리하려면 **SqlCommand** 클래스의 표준 동작을 사용할 수 있습니다. 예를 들어 **xml** 데이터 형식 열과 해당 값은 **SqlDataReader**를 사용하여 SQL 열을 검색하는 것과 같은 방식으로 검색할 수 있습니다. 하지만 **xml** 데이터 형식 열의 콘텐츠를 XML로 사용하려는 경우 이 콘텐츠를 먼저 **XmlReader** 유형에 할당해야 합니다.  
   
  자세한 내용과 코드 예는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK 설명서의 "XML Column Values in a Data Reader"를 참조하십시오.  
   
