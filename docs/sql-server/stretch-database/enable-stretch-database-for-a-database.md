@@ -56,7 +56,7 @@ ms.lasthandoff: 07/29/2017
   
  서버에서 스트레치 데이터베이스를 수동으로 사용하도록 설정하려면 **sp_configure** 를 실행하고 **원격 데이터 보관** 옵션을 설정합니다. 다음 예에서는 값을 1로 설정하여 **remote data archive** 옵션을 활성화합니다.  
   
-```  
+```sql
 EXEC sp_configure 'remote data archive' , '1';  
 GO
 
