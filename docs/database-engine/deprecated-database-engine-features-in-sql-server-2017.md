@@ -157,7 +157,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML 문의 열 이름으로서 ROWGUIDCOL|$rowguid를 사용합니다.|ROWGUIDCOL|182|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|DML 문의 열 이름으로서 IDENTITYCOL|$identity를 사용합니다.|IDENTITYCOL|183|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|임시 테이블 및 임시 저장 프로시저 이름으로서 # 및 ##의 사용|적어도 하나 이상의 추가 문자를 사용해야 합니다.|임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|185|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]|@, @@ 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자로서 @@의 사용|@@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다.|'@' 및 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자 '@@'으로 시작하는 이름 |186.|  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]|@, @@ 또는 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자로서 @@의 사용|@@ 식별자로 시작하는 이름, @@ 또는 @은 사용할 수 없습니다.|' @ ' 및 [!INCLUDE[tsql](../includes/tsql-md.md)] 식별자 ' @@ ' 으로 시작하는 이름 |186.|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|기본값으로서 DEFAULT 키워드의 사용|DEFAULT라는 단어를 기본값으로 사용하지 마십시오.|기본값으로서 DEFAULT 키워드|187|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|테이블 힌트 사이의 구분 기호로서 공백의 사용|쉼표를 사용하여 테이블 힌트를 구분합니다.|쉼표가 없는 여러 테이블 힌트|168|  
 |[!INCLUDE[tsql](../includes/tsql-md.md)]|인덱싱된 집계 뷰의 SELECT 목록은 90의 호환성 모드에서 COUNT_BIG(*)을 포함해야 합니다.|COUNT_BIG(*)을 사용합니다.|COUNT_BIG(*)이 없는 인덱스 뷰 SELECT 목록|2|  
