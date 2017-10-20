@@ -69,7 +69,7 @@ ms.lasthandoff: 07/29/2017
 
     이 명령은 취소할 수 없습니다.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -82,7 +82,7 @@ ms.lasthandoff: 07/29/2017
   
 -   테이블에서 스트레치를 비활성화하고 원격 데이터를 중지하려면 다음 명령을 실행합니다.  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     ALTER TABLE <Stretch-enabled table name>  
@@ -108,7 +108,7 @@ ms.lasthandoff: 07/29/2017
 ### <a name="use-transact-sql-to-disable-stretch-database-for-a-database"></a>Transact-SQL을 사용하여 데이터베이스에서 스트레치 데이터베이스 비활성화  
  다음 명령을 실행합니다.  
   
-```tsql  
+```sql  
 ALTER DATABASE <Stretch-enabled database name>  
     SET REMOTE_DATA_ARCHIVE = OFF ;  
 GO 

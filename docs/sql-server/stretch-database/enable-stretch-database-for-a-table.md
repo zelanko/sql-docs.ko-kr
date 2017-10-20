@@ -85,7 +85,7 @@ ms.lasthandoff: 07/29/2017
   
  전체 테이블을 마이그레이션하고 즉시 마이그레이션을 시작하는 예제는 다음과 같습니다.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -95,7 +95,7 @@ GO
   
  `dbo.fn_stretchpredicate` 인라인 테이블 반환 함수에 의해 식별된 행만 마이그레이션하고 데이터 마이그레이션을 연기하는 예제는 다음과 같습니다. 필터 함수에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <table name>  
@@ -112,7 +112,7 @@ ALTER TABLE <table name>
   
  전체 테이블을 마이그레이션하고 즉시 마이그레이션을 시작하는 예제는 다음과 같습니다.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name>
@@ -123,7 +123,7 @@ GO
   
  `dbo.fn_stretchpredicate` 인라인 테이블 반환 함수에 의해 식별된 행만 마이그레이션하고 데이터 마이그레이션을 연기하는 예제는 다음과 같습니다. 필터 함수에 대한 자세한 내용은 [필터 함수를 사용하여 마이그레이션할 행 선택](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md)을 참조하세요.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 CREATE TABLE <table name> 

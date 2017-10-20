@@ -73,7 +73,7 @@ Azure 포털을 사용하여 삭제된 Azure 데이터베이스를 삭제된 시
   
     -   원격 데이터의 복사본을 만들고 복사본에 연결할 것인지 지정합니다(권장).  
   
-    ```tsql  
+    ```sql  
     USE <Stretch-enabled database name>;
     GO
     EXEC sp_rda_reauthorize_db

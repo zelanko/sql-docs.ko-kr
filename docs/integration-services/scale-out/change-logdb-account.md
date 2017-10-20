@@ -34,7 +34,7 @@ ms.lasthandoff: 08/03/2017
 [Catalog] 저장된 프로시저를 호출 합니다. [update_logdb_info] Sql Server 이름 및 연결 문자열 매개 변수로 사용 합니다.
 
 #### <a name="example"></a>예제
-```tsql
+```sql
 SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
 SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
 EXEC [internal].[update_logdb_info] @serverName, @connectionString

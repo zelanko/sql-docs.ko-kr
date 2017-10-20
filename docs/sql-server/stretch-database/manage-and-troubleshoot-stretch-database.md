@@ -38,7 +38,7 @@ ms.lasthandoff: 04/11/2017
  
  SQL Server에서 스트레치가 활성화된 테이블을 사용하는 공간을 확인하려면 다음 문을 실행합니다.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'LOCAL_ONLY';
@@ -65,7 +65,7 @@ GO
  
 Azure에서 스트레치가 활성화된 테이블을 사용하는 공간을 확인하려면 다음 문을 실행합니다.
  
- ```tsql
+ ```sql
 USE <Stretch-enabled database name>;
 GO
 EXEC sp_spaceused '<Stretch-enabled table name>', 'true', 'REMOTE_ONLY';
@@ -119,7 +119,7 @@ Azure에 이미 마이그레이션된 데이터를 삭제하려는 경우 [sys.s
   
 예를 들어 다음 쿼리는 로컬 결과만 반환합니다.  
   
- ```tsql  
+ ```sql  
 USE <Stretch-enabled database name>;
 GO
 SELECT * FROM <Stretch_enabled table name> WITH (REMOTE_DATA_ARCHIVE_OVERRIDE = LOCAL_ONLY) WHERE ... ;

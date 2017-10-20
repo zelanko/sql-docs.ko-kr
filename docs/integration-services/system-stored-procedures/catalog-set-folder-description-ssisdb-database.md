@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 set_folder_description [ @folder_name = ] folder_name  
     , [ @folder_description = ] folder_description  
 ```  

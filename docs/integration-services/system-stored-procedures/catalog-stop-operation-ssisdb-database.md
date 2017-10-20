@@ -28,7 +28,7 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
+```sql  
 stop_operation [ @operation_id = ] operation_id  
 ```  
   

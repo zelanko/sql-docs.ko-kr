@@ -48,7 +48,7 @@ ms.lasthandoff: 04/11/2017
 ## <a name="basic-requirements-for-the-filter-function"></a>필터 함수에 대한 기본 요구 사항  
  Stretch Database 필터 조건자에 필요한 인라인 테이블 반환 함수는 다음 예제와 유사합니다.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datatype1, @column2 datatype2 [, ...n])  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -94,7 +94,7 @@ RETURN  SELECT 1 AS is_eligible
   
      다음은 *date* 열의 값이 &lt; 1/1/2016인지 확인하는 예제입니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -116,7 +116,7 @@ RETURN  SELECT 1 AS is_eligible
   
      다음은 *shipment_status`IN (N'Completed', N'Returned', N'Cancelled')` 열의 값이* 인지 확인하는 예제입니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate(@column1 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -160,7 +160,7 @@ RETURN  SELECT 1 AS is_eligible
 ## <a name="add-a-filter-function-to-a-table"></a>테이블에 필터 함수 추가  
  **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 예를 들어  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -185,7 +185,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 
 예를 들어 다음 예제와 같이 세 부분으로 이루어진 열 이름을 지정하면 문은 성공적으로 실행되지만 테이블에 대한 후속 쿼리가 실패합니다.
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(dbo.SensorTelemetry.ScanDate),
@@ -195,7 +195,7 @@ ALTER TABLE SensorTelemetry
 
 대신, 다음 예제와 같이 한 부분으로 이루어진 열 이름을 사용하여 필터 함수를 지정합니다.
 
-```tsql
+```sql
 ALTER TABLE SensorTelemetry 
   SET ( REMOTE_DATA_ARCHIVE = ON  (
     FILTER_PREDICATE=dbo.fn_stretchpredicate(ScanDate),
@@ -209,7 +209,7 @@ ALTER TABLE SensorTelemetry
   
 1. 마이그레이션 방향을 반대로 지정하고 이미 마이그레이션된 데이터를 다시 가져옵니다. 이 작업을 시작한 후에는 취소할 수 없습니다. 또한 Azure에서 아웃바운드 데이터 전송(송신) 비용이 발생합니다. 자세한 내용은 [Azure 가격 책정 방식](https://azure.microsoft.com/pricing/details/data-transfers/)을 참조하세요.  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE ( MIGRATION_STATE = INBOUND ) ) ;   
     ```  
@@ -220,7 +220,7 @@ ALTER TABLE SensorTelemetry
   
 4. 테이블에 함수를 추가하고 Azure로 데이터 마이그레이션을 다시 시작합니다.  
   
-    ```tsql  
+    ```sql  
     ALTER TABLE <table name>  
         SET ( REMOTE_DATA_ARCHIVE  
             (           
@@ -233,7 +233,7 @@ ALTER TABLE SensorTelemetry
 ## <a name="filter-rows-by-date"></a>날짜별로 행 필터링  
  다음 예제에서는 **date** 열에 2016년 1월 1일 이전 값이 포함된 행을 마이그레이션합니다.  
   
-```tsql  
+```sql  
 -- Filter by date  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_date(@date datetime2)  
@@ -248,7 +248,7 @@ GO
 ## <a name="filter-rows-by-the-value-in-a-status-column"></a>상태 열의 값으로 행 필터링  
  다음 예제에서는 **status** 열에 지정된 값 중 하나가 포함된 행을 마이그레이션합니다.  
   
-```tsql  
+```sql  
 -- Filter by status column  
 --  
 CREATE FUNCTION dbo.fn_stretch_by_status(@status nvarchar(128))  
@@ -269,7 +269,7 @@ GO
   
  다음 예제와 같이 **systemEndTime** 열에 2016년 1월 1일 이전 값이 포함된 행을 마이그레이션하는 필터 함수로 시작합니다.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_StretchBySystemEndTime20160101(@systemEndTime datetime2)   
 RETURNS TABLE   
 WITH SCHEMABINDING    
@@ -281,7 +281,7 @@ RETURN SELECT 1 AS is_eligible
   
  테이블에 필터 함수를 적용합니다.  
   
-```tsql  
+```sql  
 ALTER TABLE <table name>   
 SET (   
         REMOTE_DATA_ARCHIVE = ON   
@@ -302,7 +302,7 @@ SET (
   
 3.  필요에 따라 **DROP FUNCTION**을 호출하여 더 이상 사용하지 않는 이전 필터 함수를 삭제합니다. 이 단계는 예제에 표시되어 있지 않습니다.  
   
-```tsql  
+```sql  
 BEGIN TRAN  
 GO  
         /*(1) Create new predicate function definition */  
@@ -332,7 +332,7 @@ COMMIT ;
   
 -   다음 예제에서는 AND 논리 연산자를 사용하여 두 개의 기본 조건을 결합합니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate((@column1 datetime, @column2 nvarchar(15))  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -350,7 +350,7 @@ COMMIT ;
   
 -   다음 예제에서는 CONVERT와 함께 여러 조건 및 명확한 변환을 사용합니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example1(@column1 datetime, @column2 int, @column3 nvarchar)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -363,7 +363,7 @@ COMMIT ;
   
 -   다음 예제에서는 수학 연산자 및 함수를 사용합니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example2(@column1 float)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -376,7 +376,7 @@ COMMIT ;
   
 -   다음 예제에서는 BETWEEN 및 NOT BETWEEN 연산자를 사용합니다. 이는 BETWEEN 및 NOT BETWEEN 연산자를 동등한 AND 및 OR 식으로 바꾼 후 결과 함수가 여기에 설명된 규칙을 준수하기 때문에 사용할 수 있습니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -390,7 +390,7 @@ COMMIT ;
   
      위 함수는 BETWEEN 및 NOT BETWEEN 연산자를 동등한 AND 및 OR 식으로 바꾼 후 다음 함수와 동일합니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example4(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -405,7 +405,7 @@ COMMIT ;
   
 -   다음 함수는 명확하지 않은 변환을 포함하기 때문에 유효하지 않습니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example5(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -418,7 +418,7 @@ COMMIT ;
   
 -   다음 함수는 명확하지 않은 함수 호출을 포함하기 때문에 유효하지 않습니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example6(@column1 datetime)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -431,7 +431,7 @@ COMMIT ;
   
 -   다음 함수는 하위 쿼리를 포함하기 때문에 유효하지 않습니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example7(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -444,7 +444,7 @@ COMMIT ;
   
 -   다음 함수는 함수를 정의할 때 대수 연산자 또는 기본 제공 함수를 사용하는 식이 상수로 계산되어야 하기 때문에 유효하지 않습니다. 대수 식 또는 함수 호출에는 열 참조를 포함할 수 없습니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example8(@column1 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -465,7 +465,7 @@ COMMIT ;
   
 -   다음 함수는 BETWEEN 연산자를 동등한 AND 식으로 바꾼 후 여기에 설명된 규칙을 위반하기 때문에 유효하지 않습니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example10(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING  
@@ -478,7 +478,7 @@ COMMIT ;
   
      위 함수는 BETWEEN 연산자를 동등한 AND 식으로 바꾼 후 다음 함수와 동일합니다. 이 함수는 기본 조건에서 OR 논리 연산자만 사용할 수 있으므로 유효하지 않습니다.  
   
-    ```tsql  
+    ```sql  
     CREATE FUNCTION dbo.fn_example11(@column1 int, @column2 int)  
     RETURNS TABLE  
     WITH SCHEMABINDING   
@@ -492,7 +492,7 @@ COMMIT ;
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Stretch Database에서 필터 함수를 적용하는 방법  
  Stretch Database는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어  
   
-```tsql  
+```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
 ```  
   
@@ -501,7 +501,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
 ## <a name="replacePredicate"></a>기존 필터 함수 바꾸기  
  **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 예를 들어  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = dbo.fn_stretchpredicate2(column1, column2),  
     MIGRATION_STATE = <desired_migration_state>  
@@ -523,7 +523,7 @@ ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (
 ### <a name="example-of-a-valid-replacement"></a>유효한 바꾸기의 예제  
  다음 함수를 현재 필터 함수라고 가정합니다.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_old(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -537,7 +537,7 @@ GO
   
  다음 함수는 새 날짜 상수(이후의 구분 날짜를 지정함)가 함수를 덜 제한적으로 만들기 때문에 유효한 바꾸기입니다.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_stretchpredicate_new(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -552,7 +552,7 @@ GO
 ### <a name="examples-of-replacements-that-arent-valid"></a>유효하지 않은 바꾸기의 예제  
  다음 함수는 새 날짜 상수(이전의 구분 날짜를 지정함)가 함수를 덜 제한적으로 만들지 않으므로 유효한 바꾸기가 아닙니다.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_1(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -566,7 +566,7 @@ GO
   
  다음 함수는 비교 연산자 중 하나가 제거되었으므로 유효한 바꾸기가 아닙니다.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_2(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -580,7 +580,7 @@ GO
   
  다음 함수는 AND 논리 연산자와 함께 새 조건이 추가되었으므로 유효한 바꾸기가 아닙니다.  
   
-```tsql  
+```sql  
 CREATE FUNCTION dbo.fn_notvalidreplacement_3(@column1 datetime, @column2 int)  
 RETURNS TABLE  
 WITH SCHEMABINDING   
@@ -596,7 +596,7 @@ GO
 ## <a name="remove-a-filter-function-from-a-table"></a>테이블에서 필터 함수 제거  
  선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 예를 들어  
   
-```tsql  
+```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
     FILTER_PREDICATE = NULL,  
     MIGRATION_STATE = <desired_migration_state>  

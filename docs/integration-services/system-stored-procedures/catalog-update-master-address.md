@@ -27,7 +27,7 @@ ms.lasthandoff: 08/03/2017
 
 ## <a name="syntax"></a>구문
 
-```tsql
+```sql
 update_master_address [@MasterAddress = ] masterAddress
 ```
 

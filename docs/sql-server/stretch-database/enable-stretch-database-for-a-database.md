@@ -84,7 +84,7 @@ GO
   
 3.  스트레치 데이터베이스용으로 SQL Server 데이터베이스를 구성하려면, 데이터베이스에 데이터베이스 마스터 키가 있어야 합니다. 데이터베이스 마스터 키는 스트레치 데이터베이스가 원격 데이터베이스에 연결하기 위해 사용하는 자격 증명을 보호합니다. 새 데이터베이스 마스터 키를 만드는 예제는 다음과 같습니다.  
   
-    ```tsql  
+    ```sql  
     USE <database>; 
     GO  
   
@@ -103,7 +103,7 @@ GO
         
         새 자격 증명을 만드는 예제는 다음과 같습니다.
   
-        ```tsql  
+        ```sql  
         CREATE DATABASE SCOPED CREDENTIAL <db_scoped_credential_name>  
             WITH IDENTITY = '<identity>' , SECRET = '<secret>' ;
         GO   
@@ -127,7 +127,7 @@ GO
   
     2.  CREDENTIAL 인수와 기존 관리자 자격 증명을 제공하거나 FEDERATED_SERVICE_ACCOUNT = ON을 지정합니다. 다음 예에서는 기존 자격 증명을 제공합니다.  
   
-    ```tsql  
+    ```sql  
     ALTER DATABASE <database name>  
         SET REMOTE_DATA_ARCHIVE = ON  
             (  

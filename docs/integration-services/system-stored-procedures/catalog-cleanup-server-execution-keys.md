@@ -94,7 +94,7 @@ ms.lasthandoff: 09/26/2017
 ## <a name="example"></a>예제  
  다음 예제에서는 cleanup_server_execution_keys 저장 프로시저를 호출 합니다.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

@@ -85,7 +85,7 @@ cleanup_server_log
 ## <a name="example"></a>예제  
  다음 예제에서는 cleanup_server_log 저장 프로시저를 호출 합니다.  
   
-```tsql  
+```sql  
 USE [SSISDB]  
 GO  
   

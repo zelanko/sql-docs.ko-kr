@@ -44,7 +44,7 @@ ms.lasthandoff: 04/11/2017
 ### <a name="use-transact-sql-to-pause-data-migration"></a>Transact-SQL을 사용하여 데이터 마이그레이션 일시 중지  
  다음 명령을 실행합니다.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>  
@@ -63,7 +63,7 @@ GO
 ### <a name="use-transact-sql-to-resume-data-migration"></a>Transact-SQL을 사용하여 데이터 마이그레이션 다시 시작  
  다음 명령을 실행합니다.  
   
-```tsql  
+```sql  
 USE <Stretch-enabled database name>;
 GO
 ALTER TABLE <Stretch-enabled table name>   

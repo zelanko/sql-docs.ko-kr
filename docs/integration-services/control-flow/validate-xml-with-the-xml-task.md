@@ -84,7 +84,7 @@ ms.lasthandoff: 08/03/2017
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>Transact-SQL 쿼리를 통해 XML 유효성 검사 출력 분석  
  XML 유효성 검사의 출력에 오류가 많이 포함되어 있으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 출력을 로드할 수 있습니다. 그런 다음 WHERE, GROUP BY, ORDER BY, JOIN 등을 비롯한 T-SQL 언어의 모든 기능을 사용하여 오류 목록을 분석할 수 있습니다.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     
