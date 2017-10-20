@@ -32,8 +32,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```vb  
-Check_schema_version [@use32bitruntime = ] use32bitruntime  
+```sql  
+catalog.check_schema_version [@use32bitruntime = ] use32bitruntime  
 ```  
   
 ## <a name="arguments"></a>인수  

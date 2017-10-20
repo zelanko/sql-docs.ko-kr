@@ -29,12 +29,12 @@ ms.lasthandoff: 09/26/2017
 ## <a name="syntax"></a>구문  
   
 ```sql  
-add_data_tap_by_guid [ @execution_id = ] execution_id  
-[ @dataflow_task_guid = ] dataflow_task_guid   
-[ @dataflow_path_id_string = ] dataflow_path_id_string  
-[ @data_filename = ] data_filename  
-[ @max_rows = ] max_rows  
-[ @data_tap_id = ] data_tap_id  
+catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+, [ @dataflow_task_guid = ] dataflow_task_guid   
+, [ @dataflow_path_id_string = ] dataflow_path_id_string  
+, [ @data_filename = ] data_filename  
+, [ @max_rows = ] max_rows  
+, [ @data_tap_id = ] data_tap_id  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -63,12 +63,11 @@ add_data_tap_by_guid [ @execution_id = ] execution_id
 ## <a name="example"></a>예제  
  다음 예제에서는 데이터 탭을 데이터 흐름 경로에 만듭니다 `Paths[SRC DimDCVentor.OLE DB Source Output]`에 데이터 흐름 태스크 `{D978A2E4-E05D-4374-9B05-50178A8817E8}`합니다. 탭 데이터는 DCVendorOutput.csv 파일에 저장됩니다.  
   
-```  
+```sql
 exec catalog.add_data_tap_by_guid   @execution_id,   
 '{D978A2E4-E05D-4374-9B05-50178A8817E8}',   
 'Paths[SRC DimDCVentor.OLE DB Source Output]',   
 'D:\demos\datafiles\DCVendorOutput.csv'  
-  
 ```  
   
 ## <a name="remarks"></a>주의  
