@@ -76,7 +76,7 @@ SET QUERY_STORE (MAX_STORAGE_SIZE_MB = 1024);
  **통계 수집 간격:** 수집된 런타임 통계에 대한 세분성의 수준을 정의합니다(기본값 - 1시간). 문제를 완화하기 위해 세분성이 더 상세하고 시간을 줄여야 할 경우 값을 낮추는 것을 고려해 볼 수 있지만 쿼리 저장소 데이터 크기에 직접 영향을 미칠 수 있음을 염두에 둬야 합니다. 통계 수집 간격에 대해 다른 값을 설정하려면 SSMS 또는 Transact-SQL을 사용합니다.  
   
 ```tsql  
-ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);  
+ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 60);  
 ```  
   
  **오래된 쿼리 임계값(일):** 지속형 런타임 통계와 비활성 쿼리의 보존 기간을 제어하는 시간 기반 정리 정책입니다.  
@@ -86,7 +86,7 @@ ALTER DATABASE [QueryStoreDB] SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 30);
   
 ```tsql  
 ALTER DATABASE [QueryStoreDB]   
-SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 14));  
+SET QUERY_STORE (CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 90));  
 ```  
   
  **크기 기반 정리 모드:** 쿼리 저장소 데이터 크기가 한도에 도달할 때 자동 데이터 정리의 발생 여부를 지정합니다.  
