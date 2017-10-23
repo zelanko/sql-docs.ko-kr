@@ -623,7 +623,7 @@ SQL Server 2012 Reporting Services에서 Microsoft SQL Server PDW Appliance Upda
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
 ## <a name="SI"></a>9.0 StreamInsight  
-SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsight 2.0을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight&2;.0에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.0 릴리스 정보](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.0을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.0 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=241593) 를 방문하세요.  
+SQL Server 2012에는 StreamInsight 2.0이 포함되어 있습니다. StreamInsight 2.0을 사용하려면 Microsoft SQL Server 2012 라이선스와 .NET Framework 4.0이 필요합니다. StreamInsight 2;.0에서는 여러 가지 버그를 수정하고 성능을 높였습니다. 자세한 내용은 [Microsoft StreamInsight 2.0 릴리스 정보](http://social.technet.microsoft.com/wiki/contents/articles/6539.aspx)를 참조하세요. StreamInsight 2.0을 별도로 다운로드하려면 Microsoft 다운로드 센터의 [Microsoft StreamInsight 2.0 다운로드 페이지](http://go.microsoft.com/fwlink/?LinkId=241593) 를 방문하세요.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
   
