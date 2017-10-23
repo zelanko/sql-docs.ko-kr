@@ -11,9 +11,9 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 caps.latest.revision: 40
-author: BYHAM
-ms.author: rickbyh
-manager: craigg
+author: craigg-msft
+ms.author: craigg
+manager: jhubbard
 ms.translationtype: HT
 ms.sourcegitcommit: 76839e39427e24688609353b8708d59fee772d28
 ms.openlocfilehash: cd54a753fe83bc4b535e31c3cd6481c73424e1bb
@@ -22,8 +22,6 @@ ms.lasthandoff: 07/31/2017
 
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
-[!INCLUDE[feedback_stackoverflow_msdn_connect-md](../includes/feedback-stackoverflow-msdn-connect-md.md)]
-
 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서는 새로운 기술과 기능을 알아볼 수 있는 자습서를 제공합니다. 대개 이전 버전용 자습서를 최신 버전에서도 사용할 수 있습니다. 자습서에서 최신 기능을 설명할 때는 자습서를 완료하는 데 필요한 최소 버전이 표시됩니다.  
      
 -   자습서에서 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 데이터베이스 중 하나를 사용하는 경우에는 CodePlex에서 최신 버전을 다운로드하여 사용해야 합니다. 자세한 내용은 [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502)(SQL Server 2016 CTP3용 AdventureWorks 데이터베이스 및 스크립트)을 참조하세요.    
