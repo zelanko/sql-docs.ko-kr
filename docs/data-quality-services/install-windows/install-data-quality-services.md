@@ -105,9 +105,9 @@ ms.lasthandoff: 09/12/2017
   
     -   **dqs_kb_operator**  
   
-     기본적으로 사용자 계정이 sysadmin 고정 서버 역할의 멤버인 경우 사용자 계정에게 할당된 DQS 역할이 없더라도 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 에 로그온할 수 있습니다. 세 가지 DQS 역할에 대한 자세한 내용은 [DQS Security](../../data-quality-services/dqs-security.md)을 참조하십시오.  
+     기본적으로 사용자 계정이 sysadmin 고정 서버 역할의 멤버인 경우 사용자 계정에게 할당된 DQS 역할이 없더라도 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 를 사용하여 [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 에 로그온할 수 있습니다. 세 가지 DQS 역할에 대한 자세한 내용은 [DQS 보안](../../data-quality-services/dqs-security.md)을 참조하십시오.  
   
-     자세한 내용은 [Grant DQS Roles to Users](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)를 참조하세요.  
+     자세한 내용은 [사용자에게 DQS 역할 부여](../../data-quality-services/install-windows/grant-dqs-roles-to-users.md)를 참조하세요.  
   
     > [!NOTE]  
     >  DQS_PROJECTS 및 DQS_STAGING_DATA 데이터베이스의 경우 이 세 가지 역할을 사용할 수 없습니다.  
