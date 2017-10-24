@@ -15,50 +15,50 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 9c27cff7ad828ab5c19183febd2ad562d5c9b925
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetobjectparametervalue-ssisdb-database"></a>catalog.set_object_parameter_value(SSISDB 데이터베이스)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 매개 변수 값을 설정합니다. 이 값을 환경 변수에 연결하거나, 할당된 다른 값이 없는 경우 기본적으로 사용할 리터럴 값을 할당합니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그의 매개 변수 값을 설정합니다. 환경 변수에 값을 연결 하거나 다른 값이 할당 될 때 기본적으로 사용 되는 리터럴 값을 할당 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
-set_object_parameter_value [ @object_type = ] object_type   
-    , [ @folder_name = ] folder_name   
-    , [ @project_name = ] project_name   
-    , [ @parameter_name = ] parameter _name   
-    , [ @parameter_value = ] parameter_value   
- [  , [ @object_name = ] object_name ]  
- [  , [ @value_type = ] value_type ]  
+```sql  
+catalog.set_object_parameter_value [@object_type =] object_type   
+    , [@folder_name =] folder_name   
+    , [@project_name =] project_name   
+    , [@parameter_name =] parameter _name   
+    , [@parameter_value =] parameter_value   
+ [  , [@object_name =] object_name ]  
+ [  , [@value_type =] value_type ]  
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @object_type =] *object_type*  
+ [@object_type =] *object_type*  
  매개 변수의 유형입니다. 프로젝트 매개 변수를 나타내려면 값 `20`을 사용하고, 패키지 매개 변수를 나타내려면 값 `30`을 사용합니다. *object_type* 은 **smallInt**합니다.  
   
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  매개 변수가 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar (128)**합니다.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  매개 변수가 포함된 프로젝트의 이름입니다. *project_name* 은 **nvarchar (128)**합니다.  
   
- [ @parameter_name =] *p a r a*  
+ [@parameter_name =] *p a r a*  
  매개 변수의 이름입니다. *p a r a* 은 **nvarchar (128)**합니다.  
   
- [ @parameter_value =] *parameter_value*  
+ [@parameter_value =] *parameter_value*  
  매개 변수의 값입니다. *parameter_value* 은 **sql_variant**합니다.  
   
- [ @object_name =] *object_name*  
+ [@object_name =] *object_name*  
  패키지의 이름입니다. 이 인수는 매개 변수가 패키지 매개 변수인 경우에 필요합니다. *object_name* 은 **nvarchar (260)**합니다.  
   
- [ @value_type =] *value_type*  
- 매개 변수 값의 유형입니다. 문자를 사용 하 여 `V` 임을 나타내는 *parameter_value* 실행 전에 할당 된 다른 값의는 기본적으로 사용할 수 있는 리터럴 값은입니다. 문자를 사용 하 여 `R` 임을 나타내는 *parameter_value* 참조 된 값 이며 환경 변수의 이름으로 설정 합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type* 은 **char(1)**합니다.  
+ [@value_type =] *value_type*  
+ 매개 변수 값의 유형입니다. 문자를 사용 하 여 `V` 임을 나타내는 *parameter_value* 실행 전에 할당 된 다른 값이 없는 경우 기본적으로 사용 되는 리터럴 값입니다. 문자를 사용 하 여 `R` 임을 나타내는 *parameter_value* 참조 된 값 이며 환경 변수의 이름으로 설정 합니다. 이 인수는 선택 사항이며, 기본적으로 `V` 문자가 사용됩니다. *value_type* 은 **char(1)**합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  

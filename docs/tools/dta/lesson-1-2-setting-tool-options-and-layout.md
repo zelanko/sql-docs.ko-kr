@@ -18,11 +18,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: f62f296fd14cefdeeb0f13b99d03852eaf44850a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2a741d086567c6255c5259f5d69aac5323cbffb0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="lesson-1-2---setting-tool-options-and-layout"></a>단원 1-2-도구 옵션 및 레이아웃 설정
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/02/2017
     -   데이터베이스 엔진 튜닝 관리자가 작업 분석을 완료하기 전에 튜닝 세션을 실수로 중지하지 않도록 **세션 분석을 중지하기 전에 확인** 이 기본적으로 선택되어 있습니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
-[2 단원: 데이터베이스 엔진 튜닝 관리자를 사용 하 여](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[2단원: 데이터베이스 엔진 튜닝 관리자 사용](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

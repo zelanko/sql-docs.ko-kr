@@ -28,17 +28,18 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e47fdb9e12a632323971558d2e894fb7b181498e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: a8992de1c0eadc11902bae537b97100a4b3cda55
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (와일드카드 - 문자 하나와 일치)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  밑줄 문자를 사용 하 여 `_` 패턴 일치와 같은 포함 하는 문자열 비교 작업에서 임의의 단일 문자와 일치 하도록 `LIKE` 및 `PATINDEX`합니다.  
+밑줄 문자 _를 사용 하 여 패턴 일치와 같은 포함 하는 문자열 비교 작업에서 임의의 단일 문자와 일치 하도록 `LIKE` 및 `PATINDEX`합니다.  
   
 ## <a name="examples"></a>예  
 
@@ -62,10 +63,10 @@ msdb
 여러 개의 문자를 나타내는 여러 밑줄을 사용할 수 있습니다. 변경 된 `LIKE` 두 개의 밑줄을 포함 하는 조건을 `'m__%` master 데이터베이스의 결과에 포함 됩니다.
 
 ### <a name="b-more-complex-example"></a>B: 더 복잡 한 예제
- 다음 예에서는 `_` 연산자를 사용하여 `Person` 테이블에서 `an`으로 끝나는 3개 문자로 된 이름을 가진 모든 사람을 찾습니다.  
+ 다음 예제에서는 _ 연산자를 사용 하 여 모든 사람에 찾을 수는 `Person` 끝나는 세 문자 이름을 가진 테이블 `an`합니다.  
   
 ```tsql  
--- Uses AdventureWorks  
+-- USE AdventureWorks2012
   
 SELECT FirstName, LastName  
 FROM Person.Person  
@@ -104,6 +105,5 @@ db_securityadmin
   [% (와일드 카드-하나 이상의 문자 일치)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   
   [&#91; &#93; (와일드 카드-하나 이상의 문자 일치)](../../t-sql/language-elements/wildcard-character-s-to-match-transact-sql.md)   
  [&#91; ^ &#93; (와일드 카드-일치 하지 않는 문자)](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)     
-  
   
 

@@ -28,11 +28,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1a9f471fd7db7bfbb7a64c856495decff692c40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 285803fe112cc0370b8af6049f48846c7ba55cab
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
@@ -96,7 +97,7 @@ SELECT @ANSI_NULLS AS ANSI_NULLS;
  public 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한 `IS NULL`이 `SET ANSI`_`NULLS` 설정의 영향을 받지 않는다는 것을 보여 줍니다.  
+ 다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한이 예제에서는 `IS NULL` 영향을 받지 않습니다는 `SET ANSI_NULLS` 설정 합니다.  
   
 ```  
 -- Create table t1 and insert values.  
@@ -178,3 +179,4 @@ DROP TABLE dbo.t1;
  [WHILE&#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md)  
   
   
+

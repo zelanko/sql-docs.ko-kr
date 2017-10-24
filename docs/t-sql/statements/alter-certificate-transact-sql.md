@@ -26,11 +26,12 @@ caps.latest.revision: 46
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cb83f32e2187025c916ee7291e5b52725db5af2c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: da51e41cc5adf4fa9f4f57cfe094fe5a72119c70
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="alter-certificate-transact-sql"></a>ALTER CERTIFICATE(Transact-SQL)
@@ -140,17 +141,6 @@ GO
 ```  
 ALTER CERTIFICATE Shipping15   
     WITH PRIVATE KEY (DECRYPTION BY PASSWORD = '95hk000eEnvjkjy#F%');  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="e-importing-a-private-key-for-a-certificate-that-is-already-present-in-the-database"></a>5. 데이터베이스의 기존 인증서에 대한 개인 키 가져오기  
-  
-```  
-ALTER CERTIFICATE Shipping13   
-    WITH PRIVATE KEY (FILE = '\\ServerA7\importedkeys\Shipping13',  
-    DECRYPTION BY PASSWORD = 'GDFLKl8^^GGG4000%');  
 GO  
 ```  
   

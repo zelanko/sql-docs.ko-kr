@@ -34,11 +34,12 @@ caps.latest.revision: 104
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: eee6b205e9e33a8aa5879eddf56ecc60104798a1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 67a2880a573a1b0ff0f1e9a56216ebe8c60ddaf5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="execute-transact-sql"></a>실행-TRANSACT-SQL
@@ -526,7 +527,7 @@ GO
 ```  
   
 ### <a name="h-using-execute-with-recompile"></a>8. EXECUTE WITH RECOMPILE 사용  
- 다음 예제에서는 실행 된 `Proc`_`Test` \_ `Defaults` 저장된 프로시저 강제로 컴파일할 수 새 쿼리 계획을 사용 하는 고 모듈에서 실행 된 후 삭제 됩니다.  
+ 다음 예제에서는 실행 된 `Proc_Test_Defaults` 저장된 프로시저 강제로 컴파일할 수 새 쿼리 계획을 사용 하는 고 모듈에서 실행 된 후 삭제 됩니다.  
   
 ```  
 EXECUTE dbo.Proc_Test_Defaults @p2 = 'A' WITH RECOMPILE;  

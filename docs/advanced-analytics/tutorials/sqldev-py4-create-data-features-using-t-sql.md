@@ -1,7 +1,7 @@
 ---
 title: "4단계: T-SQL을 사용하여 데이터 기능 만들기 | Microsoft 문서"
 ms.custom: 
-ms.date: 05/25/2017
+ms.date: 10/17/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -20,15 +20,17 @@ author: jeannt
 ms.author: jeannt
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: e429c4ee6874538af52784f5dbe841cb0a420b7d
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: aec9f035404cbd08c40d518db576e443b28a210a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="step-4-create-data-features-using-t-sql"></a>4단계: T-SQL을 사용하여 데이터 기능 만들기
 
 데이터 탐색 후 데이터에서 몇 가지 정보를 수집 하 고이로 이동 준비가 *엔지니어링 기능*합니다. 이 프로세스는 원시 데이터에서 기능을 만드는 모델링 하는 고급 분석에 중요 한 단계 될 수 있습니다.
+
+이 문서는 자습서의 일부는 [SQL 개발자를 위해 데이터베이스에서 Python 분석](sqldev-in-database-python-for-sql-developers.md)합니다. 
 
 이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 원시 데이터에서 기능을 만드는 방법을 알아봅니다. 그런 다음 저장 프로시저에서 해당 함수를 호출하여 기능 값이 포함된 테이블을 만듭니다.
 
@@ -121,14 +123,11 @@ ms.lasthandoff: 09/01/2017
 
 ## <a name="next-step"></a>다음 단계
 
-[5단계: T-SQL을 사용하여 모델 학습 및 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[5 단계: 학습 및 T-SQL을 사용 하 여 Python 모델 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>이전 단계
 
 [3단계: 데이터 탐색 및 시각화](sqldev-py3-explore-and-visualize-the-data.md)
 
-## <a name="see-also"></a>관련 항목:
-
-[기계 학습 Python 사용 하 여 서비스](../python/sql-server-python-services.md)
 
 

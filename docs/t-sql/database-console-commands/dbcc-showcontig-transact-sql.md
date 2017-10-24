@@ -28,11 +28,12 @@ caps.latest.revision: 78
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 770b21498e0159c1ac30eb4ea8a192b6597b4ebe
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 901067b9bd9c85887b66ea8d32999cf439873952
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG(Transact-SQL)
@@ -204,7 +205,7 @@ GO
 ```  
   
 ### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>2. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
-다음 예제에서는 `OBJECT`_`ID` 및 `sys.indexes` 카탈로그 뷰를 테이블 ID를 확인 하 고 인덱스에 대 한 ID는 `AK_Product_Name` 의 인덱스는 `Production.Product` 테이블에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다.
+다음 예제에서는 `OBJECT_ID` 및 `sys.indexes` 카탈로그 뷰를 테이블 ID를 확인 하 고 인덱스에 대 한 ID는 `AK_Product_Name` 의 인덱스는 `Production.Product` 테이블에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다.
   
 ```sql  
 USE AdventureWorks2012;  

@@ -1,6 +1,6 @@
 ---
-title: "테이블 형식 모델 디자이너 (SSAS) | Microsoft Docs"
-ms.date: 03/14/2017
+title: "테이블 형식 모델 디자이너 | Microsoft Docs"
+ms.date: 10/19/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -18,10 +18,10 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 7450b51aac58dc148dd1ef37e90ad20aff50883c
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: b660ee5e5923b47c45e3198297042607fa59f874
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="tabular-model-designer-ssas"></a>테이블 형식 모델 디자이너(SSAS)
@@ -32,13 +32,11 @@ ms.lasthandoff: 09/27/2017
   
  [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 환경에서는 전문적인 다차원 및 테이블 형식 모델 솔루션 제작을 위한 새로운 템플릿과 도구뿐만 아니라 디버깅 및 프로젝트 수명 주기 기능을 제공하여 조직에 맞는 가장 강력한 BI 솔루션을 개발할 수 있습니다. [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]에 대한 자세한 내용은 [Visual Studio 시작](http://go.microsoft.com/fwlink/?LinkId=206389)을 참조하십시오.  
   
-##  <a name="bkmk_proj_temp"></a> 프로젝트 템플릿  
+##  <a name="bkmk_proj_temp"></a>프로젝트 템플릿  
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 설치하면 다음과 같은 테이블 형식 모델 프로젝트 템플릿이 비즈니스 인텔리전스 프로젝트 형식에 추가됩니다.  
   
  **Analysis Services 테이블 형식 프로젝트**  
- 이 템플릿은 비어 있는 새 테이블 형식 모델 프로젝트를 만드는 데 사용할 수 있습니다. 호환성 수준은 프로젝트를 만들 때 지정됩니다. **에서 기본 제공되는 모든 기능을 사용하려면 기본값인**SQL Server 2016 RTM(1200) [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]을 선택합니다.  
-  
- ![ssas_tabularproject_compat1200](../../analysis-services/tabular-models/media/ssas-tabularproject-compat1200.jpg "ssas_tabularproject_compat1200")  
+ 이 템플릿은 비어 있는 새 테이블 형식 모델 프로젝트를 만드는 데 사용할 수 있습니다. 호환성 수준은 프로젝트를 만들 때 지정됩니다.
   
  **서버에서 가져오기(테이블 형식)**  
  이 템플릿은 Analysis Services의 기존 테이블 형식 모델에서 메타데이터를 추출하여 새 테이블 형식 모델 프로젝트를 만드는 데 사용할 수 있습니다.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 09/27/2017
  **데이터 뷰**  
  데이터 뷰는 테이블을 표 형식으로 표시합니다. 데이터 뷰에서만 각 테이블에 표시할 수 있는 측정값 표를 사용하여 측정값을 정의할 수도 있습니다.  
   
- **다이어그램 뷰**  
+ **다이어그램 보기**  
  다이어그램 뷰는 테이블을 그래픽 형식의 관계도와 함께 표시합니다. 열, 측정값, 계층 및 KPI를 필터링할 수 있으며 정의된 큐브 뷰를 사용하여 모델을 표시하도록 선택할 수도 있습니다.  
   
  대부분의 모델 제작 태스크를 이 두 가지 뷰에서 수행할 수 있습니다.  
@@ -128,8 +126,8 @@ ms.lasthandoff: 09/27/2017
 ### <a name="toolbar"></a>도구 모음  
  Analysis Services 도구 모음을 통해 신속하고 간편하게 자주 사용하는 모델 작성 명령에 액세스할 수 있습니다.  
   
-##  <a name="bkmk_vsint"></a> Visual Studio 통합  
- **원본 제어**  
+##  <a name="bkmk_vsint"></a>Visual Studio 통합  
+ **소스 제어**  
  Analysis Services 프로젝트는 선택한 원본 제어 플러그 인과 통합됩니다. 원본 제어를 사용하도록 Visual Studio를 구성하면 솔루션 탐색기에서 체크 인/체크 아웃을 사용할 수 있습니다. Team Foundation Server를 사용하도록 구성하려면 [Team Foundation 버전 제어로 Visual Studio 구성](http://msdn.microsoft.com/library/ms253064.aspx)을 참조하십시오. 그 외 다양한 타사 원본 제어 플러그 인도 지원합니다.  
   
  **글꼴**  
@@ -138,8 +136,9 @@ ms.lasthandoff: 09/27/2017
  **바로 가기 키**  
  도구->옵션->키보드 대화 상자를 통해 Analysis Services 키보드 바로 가기를 구성하거나 다시 매핑할 수 있습니다. 빌드, 저장, 디버그, 새 프로젝트 등과 같은 전역 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 바로 가기가 테이블 형식 모델 디자이너 컨텍스트에서 지원됩니다. 그 외 테이블 형식 모델 디자이너용 바로 가기 키는 Analysis Services 컨텍스트에서 지원됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [테이블 형식 모델 프로젝트&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
  [속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/properties-ssas-tabular.md)  
   
   
+

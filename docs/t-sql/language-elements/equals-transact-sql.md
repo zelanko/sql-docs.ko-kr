@@ -24,11 +24,12 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: bf23c40678950000b65a66dc29bdba8b4615c7b1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 5e6a0baf8fb2f060ab1819613cc1b417ff2c9802
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-equals-transact-sql"></a>=(같음)(Transact-SQL)
@@ -91,7 +92,7 @@ DepartmentID Name
 ```  
   
 ### <a name="b-comparing-null-and-non-null-values"></a>2. NULL 값과 NULL이 아닌 값 비교  
- 다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한 `IS NULL`이 `SET ANSI`_`NULLS` 설정의 영향을 받지 않는다는 것을 보여 줍니다.  
+ 다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한이 예제에서는 `IS NULL` 영향을 받지 않습니다는 `SET ANSI_NULLS` 설정 합니다.  
   
 ```  
 -- Create table t1 and insert 3 rows.  

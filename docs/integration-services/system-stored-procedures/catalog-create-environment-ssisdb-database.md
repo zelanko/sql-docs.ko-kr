@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 2d3ff080d50545b75a416e459b73ebd8bbb44666
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 588728b6f86090e5b8f492ba3a117e0ccd47132e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment(SSISDB 데이터베이스)
@@ -28,20 +28,20 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
-create_environment [ @folder_name = ] folder_name  
-     , [ @environment_name = ] environment_name  
-  [  , [ @environment_description = ] environment_description ]  
+```sql  
+catalog.create_environment [@folder_name =] folder_name  
+     , [@environment_name =] environment_name  
+  [  , [@environment_description =] environment_description ]  
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  환경을 포함할 폴더의 이름입니다. *folder_name* 은 **nvarchar (128)**합니다.  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  환경의 이름입니다. *environment_name* 은 **nvarchar (128)**합니다.  
   
- [ @environment_description=] *environment_description*  
+ [@environment_description=] *environment_description*  
  환경에 대한 설명(옵션)입니다. *environment_description* 은 **nvarchar (1024)**합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  

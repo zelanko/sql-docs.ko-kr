@@ -26,11 +26,12 @@ caps.latest.revision: 24
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5230769c1e41d5831d77c3711c9b5c4a215414cb
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 7d5930eba1d286510db59931c9cffccc9dc79cab
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="user-transact-sql"></a>USER(Transact-SQL)
@@ -148,27 +149,6 @@ GO
 DBO
 Mario
 DBO
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-user-to-return-the-database-user-name"></a>4. USER를 사용하여 데이터베이스 사용자 이름 반환  
- 다음 예에서는 변수를 `char`로 선언하고 USER의 현재 값을 변수에 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
-  
-```  
-DECLARE @usr char(30)  
-SET @usr = user  
-SELECT 'The current user''s database username is: '+ @usr  
-GO  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
- ```
------------------------------------------------------------------------  
-The current user's database username is: dbo  
-  
-(1 row(s) affected)
 ```  
   
 ## <a name="see-also"></a>관련 항목:  

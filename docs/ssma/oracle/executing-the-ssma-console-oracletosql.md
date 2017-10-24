@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 2e86935bc6eef3ea1e709cd27c916d972dd13b9f
+ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
+ms.openlocfilehash: 4ca3c3557b7f57b93dc41b23232754c5df046bdb
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA 콘솔 (OracleToSQL)를 실행합니다.
@@ -673,7 +673,7 @@ convert sql 문
   
 -   `write-summary-report-to`보고서를 생성할 수는 경로 지정 합니다. 폴더 경로 지정 된 경우에 다음 이름으로 파일 **ConvertSQLReport.XML** 만들어집니다. (선택 사항 특성)  
   
-    보고서 작성에 2 viz 하위 범주를 추가 합니다..,:  
+    보고서 작성에 2 viz 하위 범주를 추가 합니다.:  
   
     -   -오류를 보고 (= "true/false" 이며 기본값은 "false" (선택 사항 특성)으로).  
   

@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 62aa7f67d7c7b33ac61d63b10fe45d604029500b
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 5636651cccbb43c6c1627d1f28eccd9b3f9b5b0d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable(SSISDB 데이터베이스)
@@ -28,36 +28,36 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
-create_environment_variable [ @folder_name = ] folder_name  
-    , [ @environment_name = ] environment_name  
-    , [ @variable_name = ] variable_name  
-    , [ @data_type = ] data_type  
-    , [ @sensitive = ] sensitive  
-    , [ @value = ] value  
-    , [ @description = ] description  
+```sql  
+catalog.create_environment_variable [@folder_name =] folder_name  
+    , [@environment_name =] environment_name  
+    , [@variable_name =] variable_name  
+    , [@data_type =] data_type  
+    , [@sensitive =] sensitive  
+    , [@value =] value  
+    , [@description =] description  
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  환경이 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar (128)**합니다.  
   
- [ @environment_name =] *environment_name*  
+ [@environment_name =] *environment_name*  
  환경의 이름입니다. *environment_name* 은 **nvarchar (128)**합니다.  
   
- [ @variable_name =] *variable_name*  
+ [@variable_name =] *variable_name*  
  환경 변수의 이름입니다. *variable_name* 은 **nvarchar (128)**합니다.  
   
- [ @data_type =] *data_type*  
- 변수의 데이터 형식입니다. 지원 되는 환경 변수 데이터 형식에는 **부울**, **바이트**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **단일**, **문자열**, **UInt32**, 및 ** UInt64**합니다. 지원 되지 않는 환경 변수 데이터 형식에는 **Char**, **DBNull**, **개체**, 및 **Sbyte**합니다. 데이터 형식이 고 *data_type* 매개 변수는 **nvarchar (128)**합니다.  
+ [@data_type =] *data_type*  
+ 변수의 데이터 형식입니다. 지원 되는 환경 변수 데이터 형식에는 **부울**, **바이트**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **단일**, **문자열**, **UInt32**, 및  **UInt64**합니다. 지원 되지 않는 환경 변수 데이터 형식에는 **Char**, **DBNull**, **개체**, 및 **Sbyte**합니다. 데이터 형식이 고 *data_type* 매개 변수는 **nvarchar (128)**합니다.  
   
- [ @sensitive =] *중요 한*  
+ [@sensitive =] *중요 한*  
  변수에 중요한 값이 포함되었는지 여부를 나타냅니다. 환경 변수 값이 중요함을 나타내려면 값 `1`을 사용하고, 그렇지 않음을 나타내려면 값 `0`을 사용합니다. 중요한 값은 저장될 때 암호화되고, 중요 하지 않은 값이 일반 텍스트로 저장 됩니다. *중요 한* 은 **비트**합니다.  
   
- [ @value =] *값*  
+ [@value =] *값*  
  환경 변수의 값입니다. *값* 은 **sql_variant**합니다.  
   
- [ @description =] *설명*  
+ [@description =] *설명*  
  환경 변수에 대한 설명입니다. *값* 은 **nvarchar (1024)**합니다.  
   
 ## <a name="return-code-value"></a>반환 코드 값  
@@ -92,7 +92,7 @@ create_environment_variable [ @folder_name = ] folder_name
 > [!TIP]  
 >  사용 하는 것이 좋습니다는 **Int16** 의 데이터 형식이 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 지원 되지 않는 대신 **Sbyte** 데이터 형식입니다.  
   
- 와이 저장된 프로시저에 전달 된 값의 *값* 매개 변수에서 변환 됩니다는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 표에 설명 된 내용과 데이터 형식:  
+ 와이 저장된 프로시저에 전달 된 값의 *값* 에서 매개 변수는 변환는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 표에 설명 된 내용과 데이터 형식:  
   
 |Integration Services 데이터 형식|SQL Server 데이터 형식|  
 |------------------------------------|--------------------------|  
@@ -105,7 +105,7 @@ create_environment_variable [ @folder_name = ] folder_name
 |**Int64**|**bigint**|  
 |**단일**|정확한 수치: **10 진수**, **숫자**; 근사 숫자: **float**, **실제**|  
 |**문자열**|**varchar**, **nvarchar**, **char**|  
-|**UInt32**|**int** (에 가장 가까운 매핑 이것이 **Uint32**.)|  
-|**UInt64**|**bigint** (에 가장 가까운 매핑 이것이 **Uint64**.)|  
+|**UInt32**|**int** (**int** 를 사용할 수 있는 가장 가까운 매핑이 **Uint32**.)|  
+|**UInt64**|**bigint** (**int** 를 사용할 수 있는 가장 가까운 매핑이 **Uint64**.)|  
   
   

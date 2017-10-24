@@ -26,11 +26,12 @@ caps.latest.revision: 28
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2074ef0a9e434ac5c427c5438633c61ead0eb25a
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 033442da3e10fd834963df30ea071a220464de6f
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
@@ -76,7 +77,7 @@ GO
 EXECUTE dbo.usp_myproc;   
 ```  
   
- `REVERT`_`usp` 내에 정의된 `myproc` 문은 모듈 내에 설정된 실행 컨텍스트를 전환하지만 모듈 외부에 설정된 실행 컨텍스트에는 영향을 주지 않습니다. 즉, 세션에 설정된 실행 컨텍스트가 `login1`로 유지됩니다.  
+ `REVERT` 문 내에 정의 된 `usp_myproc` 모듈 내에서 설정 실행 컨텍스트를 전환 하지만 모듈 외부에 설정한 실행 컨텍스트는 영향을 주지 않습니다. 즉, 세션에 설정된 실행 컨텍스트가 `login1`로 유지됩니다.  
   
  독립 실행형 문으로 지정하면 REVERT는 일괄 처리나 세션 내에 정의된 EXECUTE AS 문에 적용됩니다. 해당 EXECUTE AS 문에 WITH NO REVERT 절이 있으면 REVERT가 아무런 영향을 주지 않습니다. 이 경우 실행 컨텍스트는 세션이 삭제될 때까지 계속 적용됩니다.  
   

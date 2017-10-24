@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 95c07e2550330ff9a2ac1cc70107d11147ae53dd
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 7e9d38935a91bba81359bee7fdbd64dba86d0d26
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogcreateexecution-ssisdb-database"></a>catalog.create_execution(SSISDB 데이터베이스)
@@ -30,40 +30,40 @@ ms.lasthandoff: 08/03/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
-create_execution [ @folder_name = folder_name  
-     , [ @project_name = ] project_name  
-     , [ @package_name = ] package_name  
-  [  , [ @reference_id = ] reference_id ]  
-  [  , [ @use32bitruntime = ] use32bitruntime ] 
-  [  , [ @runinscaleout = ] runinscaleout ]
-  [  , [ @useanyworker = ] useanyworker ] 
-     , [ @execution_id = ] execution_id OUTPUT  
+```sql  
+catalog.create_execution [@folder_name = folder_name  
+     , [@project_name =] project_name  
+     , [@package_name =] package_name  
+  [  , [@reference_id =] reference_id ]  
+  [  , [@use32bitruntime =] use32bitruntime ] 
+  [  , [@runinscaleout =] runinscaleout ]
+  [  , [@useanyworker =] useanyworker ] 
+     , [@execution_id =] execution_id OUTPUT  
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @folder_name =] *folder_name*  
+ [@folder_name =] *folder_name*  
  실행할 패키지가 있는 폴더의 이름입니다. *folder_name* 은 **nvarchar (128)**합니다.  
   
- [ @project_name =] *project_name*  
+ [@project_name =] *project_name*  
  실행할 패키지가 포함된 프로젝트의 이름입니다. *project_name* 은 **nvarchar (128)**합니다.  
   
- [ @package_name =] *package_name*  
+ [@package_name =] *package_name*  
  실행할 패키지의 이름입니다. *package_name* 은 **nvarchar (260)**합니다.  
   
- [ @reference_id =] *reference_id*  
+ [@reference_id =] *reference_id*  
  환경 참조의 고유 식별자입니다. 이 매개 변수는 선택 사항입니다. *reference_id* 은 **bigint**합니다.  
   
- [ @use32bitruntime =] *use32bitruntime*  
+ [@use32bitruntime =] *use32bitruntime*  
  64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 64 비트 운영 체제에서 실행 될 때 32 비트 런타임 사용 하 여 패키지를 실행할 1의 값을 사용 합니다. 64비트 운영 체제에서 실행할 때 64비트 런타임으로 패키지를 실행하려면 값 0을 사용합니다. 이 매개 변수는 선택 사항입니다. *Use32bitruntime* 은 **비트**합니다.  
  
- [ @runinscaleout =] *runinscaleout*  
- 범위 확장의 실행 여부를 나타냅니다. 스케일 아웃에 패키지를 실행 하려면 1의 값을 사용 합니다. 스케일 아웃 하지 않고 패키지를 실행 하려면 0의 값을 사용 합니다. 이 매개 변수는 선택 사항입니다. [SSISDB]에서 DEFAULT_EXECUTION_MODE에 설정 됩니다. [catalog]입니다. [catalog_properties]를 지정 하지 않은 경우입니다. *runinscaleout* 은 **비트**합니다. 
+ [@runinscaleout =] *runinscaleout*  
+ 범위 확장의 실행 여부를 나타냅니다. 스케일 아웃에 패키지를 실행 하려면 1의 값을 사용 합니다. 스케일 아웃 하지 않고 패키지를 실행 하려면 0의 값을 사용 합니다. 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 해당 값 DEFAULT_EXECUTION_MODE [SSISDB]에서으로 설정 됩니다. [catalog]입니다. [catalog_properties]입니다. *runinscaleout* 은 **비트**합니다. 
  
- [ @useanyworker =] *useanyworker*  
-  실행 작업을 수행 하는 스케일 아웃 작업자 허용 되는지 여부를 나타냅니다. 값 1 사용 하 여 스케일 아웃 작업자를 사용 하 여 패키지를 실행 합니다. 일부 스케일 아웃 작업자 패키지를 실행할 수 있는지를 나타내는 0의 값을 사용 합니다. 이 매개 변수는 선택 사항입니다. 그는 1로 설정 되지 않은 경우 지정 합니다. *useanyworker* 은 **비트**합니다. 
+ [@useanyworker =] *useanyworker*  
+  실행 작업을 수행 하는 스케일 아웃 작업자 허용 되는지 여부를 나타냅니다. 값 1 사용 하 여 스케일 아웃 작업자를 사용 하 여 패키지를 실행 합니다. 일부 스케일 아웃 작업자 패키지를 실행할 수 있는지를 나타내는 0의 값을 사용 합니다. 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 해당 값을 1로 설정 됩니다. *useanyworker* 은 **비트**합니다. 
   
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  실행 인스턴스의 고유 식별자를 반환합니다. *execution_id* 은 **bigint**합니다.  
 
   
@@ -77,7 +77,7 @@ create_execution [ @folder_name = folder_name
 ## <a name="example"></a>예제  
  다음 예에서는 catalog.create_execution을 호출 스케일 아웃에 없는 여 Child1.dtsx 패키지에 대 한 실행 인스턴스를 만듭니다. Integration Services Project1에 패키지가 포함되어 있습니다. 이 예에서는 catalog.set_execution_parameter_value를 호출하여 Parameter1, Parameter2 및 LOGGING_LEVEL 매개 변수에 값을 설정합니다. 이 예에서는 catalog.start_execution을 호출하여 실행 인스턴스를 시작합니다.  
   
-```  
+```sql  
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -89,16 +89,15 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>반환 코드 값  
  0(성공)  
   
 ## <a name="result-sets"></a>결과 집합  
- InclusionThresholdSetting  
+ 없음  
   
-## <a name="permissions"></a>사용 권한  
+## <a name="permissions"></a>Permissions  
  이 저장 프로시저를 실행하려면 다음 권한 중 하나가 필요합니다.  
   
 -   프로젝트에 대한 READ 및 EXECUTE 권한과 해당되는 경우 참조된 환경에 대한 READ 권한  

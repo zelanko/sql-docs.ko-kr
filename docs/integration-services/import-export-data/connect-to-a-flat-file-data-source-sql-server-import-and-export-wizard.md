@@ -15,14 +15,19 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: b765b02717c0eef59fda5dfa12cb64a1b9197587
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 568d02ef58102b47501415d35f64369e997e875b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>플랫 파일 데이터 원본 (SQL Server 가져오기 및 내보내기 마법사)에 연결
-이 항목에 연결 하는 방법을 보여 줍니다.는 **플랫 파일** (텍스트 파일) 데이터 원본에서 **데이터 원본을 선택** 또는 **대상 선택** SQL Server 가져오기 및 내보내기 페이지 마법사입니다. 플랫 파일에 대 한 이러한 두 페이지는 마법사의이 항목의 플랫 파일 원본 및 대상을 설명 별도로 하므로 상이한 옵션을 제공 합니다.
+이 항목에 연결 하는 방법을 보여 줍니다.는 **플랫 파일** (텍스트 파일) 데이터 원본에서 **데이터 원본을 선택** 또는 **대상 선택** SQL Server 가져오기 및 내보내기 페이지 마법사입니다. 플랫 파일에 대 한 이러한 두 페이지는 마법사의이 항목 플랫 파일 원본 및 플랫 파일 대상에서는 별도로 설명 하므로 다른, 옵션 집합을 제공 합니다.
+
+## <a name="an-alternative-for-simple-text-import"></a>간단한 텍스트 가져오기에 대 한 대안
+SQL Server로 텍스트 파일을 가져와야 하는 경우 가져오기 및 내보내기 마법사에서 사용할 수 있는 모든 구성 옵션이 필요 하지 않습니다는 것이 좋습니다를 사용 하는 **플랫 파일 가져오기 마법사** SQL Server Management Studio (SSMS). 자세한 내용은 다음 문서를 참조하세요.
+- [SQL Server Management Studio 17.3의 새로운 기능](https://blogs.technet.microsoft.com/dataplatforminsider/2017/10/10/whats-new-in-sql-server-management-studio-17-3/)
+- [SSMS 17.3의 새로운 플랫 파일 가져오기 마법사 소개](https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173)
 
 ## <a name="connect-to-a-flat-file-source"></a>플랫 파일 원본에 연결
  
@@ -193,7 +198,7 @@ ms.lasthandoff: 09/26/2017
 
 ![구분 하는 플랫 파일, 고급 페이지](../../integration-services/import-export-data/media/flat-file-delimited-advanced-page.jpg)
 
-스크린 샷을에서 **id** 열 번호는 최초 문자열 데이터 형식이 포함 되어 있습니다.
+스크린 샷을, 알 수 있듯이 **id** 열 번호는 최초 문자열 데이터 형식이 포함 되어 있습니다.
 
 ### <a name="options-to-specify-advanced-page"></a>지정 하는 옵션 (**고급** 페이지)
 
@@ -202,10 +207,10 @@ ms.lasthandoff: 09/26/2017
   
 |속성|Description|  
 |--------------|-----------------|  
-|**이름**|설명 열 이름을 지정합니다. 이름을 입력하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 는 자동으로 열 0, 열 1 등과 같은 형식으로 이름을 만듭니다.|
+|**이름**|설명 열 이름을 지정합니다. 이름, 입력 하지 않으면 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 형식 열 0, 열 1 등과 이름을 자동으로 만듭니다.|
 |**ColumnDelimiter**|사용 가능한 열 구분 기호의 목록에서 선택합니다. 텍스트에 거의 사용되지 않는 구분 기호를 선택합니다. 고정 폭 열에 대해서는 이 값이 무시됩니다.<br /><br /> **{CR}{LF}**. 열이 캐리지 리턴-줄 바꿈 조합으로 구분됩니다.<br /><br /> **{CR}**. 열이 캐리지 리턴으로 구분됩니다.<br /><br /> **{LF}**. 열이 줄 바꿈으로 구분됩니다.<br /><br /> **세미콜론{;}**. 열이 세미콜론으로 구분됩니다.<br /><br /> **콜론{:}**. 열이 콜론으로 구분됩니다.<br /><br /> **쉼표{,}**. 열이 쉼표로 구분됩니다.<br /><br /> **탭 {t}**. 열이 탭으로 구분됩니다.<br /><br /> **세로 막대{&#124;}**. 열이 세로 막대로 구분됩니다.|
 |**ColumnType**|열 유형이 구분 기호로 분리됨, 고정 폭 또는 왼쪽 정렬 중 어떤 것인지를 나타냅니다. 이 속성은 읽기 전용입니다. 왼쪽 정렬 파일은 마지막 열을 제외한 모든 열에 고정 폭이 지정된 파일입니다. 마지막 열은 행 구분 기호로 구분됩니다.|  
-|**InputColumnWidth**|저장할 값을 바이트 수로 지정합니다. 유니코드 파일의 경우 문자 수로 표시됩니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|
+|**InputColumnWidth**|바이트 수로 저장할 수 있는 값을 지정 합니다. 유니코드 파일의 경우이 값은 문자 수입니다. 구분 기호로 분리된 열에 대해서는 이 값이 무시됩니다.<br /><br /> **참고** 개체 모델에서 이 속성의 이름은 ColumnWidth입니다.|
 |**DataPrecision**|숫자 데이터의 전체 자릿수를 지정합니다. 전체 자릿수란 숫자의 자릿수를 말합니다.|
 |**DataScale**|숫자 데이터의 소수 자릿수를 지정합니다. 소수 자릿수란 소수점 이하 자릿수를 말합니다.|
 |**DataType**|사용 가능한 데이터 형식의 목록에서 선택합니다.<br/>자세한 내용은 [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md)을 참조하세요.|
@@ -229,7 +234,7 @@ ms.lasthandoff: 09/26/2017
  
 **유형 제안**을 클릭하면 **열 유형 제안** 대화 상자가 표시됩니다. 
 
-![플랫 파일 연결 제안](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
+![플랫 파일 연결 유형 선택 대화 상자를 제안 합니다.](../../integration-services/import-export-data/media/flat-file-connection-suggest.png)
 
 옵션을 선택한 후는 **열 유형 제안** 대화 상자와 클릭 **확인**, 마법사의 일부 열 데이터 형식이 변경 될 수 있습니다.
 
@@ -293,7 +298,7 @@ ms.lasthandoff: 09/26/2017
  파일에서 사용 하는 경우 텍스트 한정자를 지정 합니다. 예를 들어 텍스트 필드를 따옴표로 묶도록 지정할 수 있습니다. (이 속성에만 적용 구분 기호로 분리 된 파일입니다.) 
   
 > [!NOTE] 
-> 다시 선택할 수 없습니다 텍스트 한정자를 선택한 후는 **None** 옵션입니다. 텍스트 한정자의 선택을 취소하려면 **없음** 을 입력합니다.  
+> 다시 선택할 수 없는 텍스트 한정자를 선택한 후는 **None** 옵션입니다. 텍스트 한정자의 선택을 취소하려면 **없음** 을 입력합니다.  
 
 ## <a name="see-also"></a>참고 항목
 [데이터 원본 선택](../../integration-services/import-export-data/choose-a-data-source-sql-server-import-and-export-wizard.md)  

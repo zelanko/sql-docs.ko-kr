@@ -1,7 +1,7 @@
 ---
 title: "테이블 형식 모델 (SSAS 테이블 형식)의 DAX | Microsoft Docs"
 ms.custom: 
-ms.date: 04/10/2017
+ms.date: 10/21/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -17,14 +17,14 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 653c715b8a3b990cc6073b2455887232c71c32b4
+ms.sourcegitcommit: 5bca339c13cb407e497cfa283a08833f2f4e666a
+ms.openlocfilehash: 2a72b3e1ec1dad514eb8394460267b44bca79d7d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/23/2017
 
 ---
 # <a name="dax-in-tabular-models-ssas-tabular"></a>테이블 형식 모델 (SSAS 테이블 형식)의 DAX
-  데이터 분석 식 (DAX)은 분석 서비스, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
+  데이터 분석 식 (DAX)는 Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에서 사용자 지정 계산을 만드는 데 사용 되는 수식 언어입니다. DAX 수식에는 테이블 및 열의 데이터에 대해 고급 계산을 수행하기 위한 함수, 연산자 및 값이 포함됩니다.  
   
  Analysis Services, Power BI Desktop 및 Excel의 파워 피벗에 DAX가 사용 하는 동안 SQL Server Data Tools (SSDT) 작성 하는 Analysis Services 테이블 형식 모델 프로젝트에이 항목 더 적용 합니다.  
   
@@ -202,6 +202,9 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
   
 ### <a name="mathematical-and-trigonometric-functions"></a>수치 연산 및 삼각 함수  
  DAX의 수치 연산 함수는 Excel 수치 연산 및 삼각 함수와 매우 비슷합니다. DAX 함수에서 사용하는 숫자 데이터 형식에는 사소한 몇 가지 차이점이 있습니다. 자세한 내용은 [수학 및 삼각 함수(DAX)](http://msdn.microsoft.com/en-us/1f408ec1-e769-43d6-a68c-567bc30d893f)를 참조하세요.  
+ 
+### <a name="other-functions"></a>다른 함수  
+ 이러한 함수는 고유한 작업을 대부분의 다른 함수에 속한 범주 중 하나로 정의 될 수 없습니다를 수행 합니다. 자세한 내용은 참조 [기타 함수 (DAX)](https://msdn.microsoft.com/mt150101)합니다.
   
 ### <a name="statistical-functions"></a>통계 함수  
  DAX는 집계를 수행하는 통계 함수를 제공 합니다. DAX에서는 합계와 평균을 만들거나 최소값과 최대값을 구할 수 있을 뿐 아니라 관련 테이블을 기준으로 집계를 수행하거나 만들기 전에 열을 필터링할 수도 있습니다. 자세한 내용은 [통계 함수(DAX)](http://msdn.microsoft.com/en-us/ba4c1298-57a0-40fc-b6f6-00e187ace559)를 참조하세요.  
@@ -397,6 +400,7 @@ Days in Current Quarter:=COUNTROWS( DATESBETWEEN( 'Date'[Date], STARTOFQUARTER( 
  [계산 된 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)   
  [역할](../../analysis-services/tabular-models/roles-ssas-tabular.md)   
  [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
- [지원 되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
+ [지원되는 데이터 원본](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
+

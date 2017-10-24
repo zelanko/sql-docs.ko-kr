@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 1708138f5eeb082f022f78dfb685f333f3f0a17b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1b71dbe381c2b1c3db6ac686c40a3065b851c26a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server에 대 한 Red Hat Enterprise Linux 공유 디스크 클러스터를 구성 합니다.
@@ -61,7 +61,7 @@ ms.lasthandoff: 10/02/2017
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> 설치 시 서버 마스터 키를 SQL Server 인스턴스에 대해 생성 된 이며 var/옵트인/mssql/보안/시스템 키에 배치 합니다. Linux에서 SQL Server는 항상 mssql 라는 로컬 계정으로 실행 됩니다. 로컬 계정을 이기 때문에 해당 id 노드 간에 공유 되지 않습니다. 따라서 서버 마스터 키를 해독 하 여 각 로컬 mssql 계정에 액세스할 수 있도록 암호화 키를 주 노드에서 각 보조 노드로 복사 해야 합니다. 
+> 설치 시 서버 마스터 키가 생성 된 SQL Server 인스턴스에 대 한 후 배치에 `/var/opt/mssql/secrets/machine-key`합니다. Linux에서 SQL Server는 항상 mssql 라는 로컬 계정으로 실행 됩니다. 로컬 계정을 이기 때문에 해당 id 노드 간에 공유 되지 않습니다. 따라서 서버 마스터 키를 해독 하 여 각 로컬 mssql 계정에 액세스할 수 있도록 암호화 키를 주 노드에서 각 보조 노드로 복사 해야 합니다. 
 
 1. 주 노드에서 Pacemaker에 대 한 SQL server 로그인을 만들고 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. Pacemaker는 SQL Server를 실행 하는 노드를 확인 하려면이 계정을 사용 합니다. 
 

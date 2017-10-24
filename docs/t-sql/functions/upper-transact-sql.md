@@ -26,11 +26,12 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 7572e82178b211fba9967a88cb16c20d059c7b52
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: c46fb930d1bba04b4a30725cc3c40e196b3f9a8b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="upper-transact-sql"></a>UPPER(Transact-SQL)
@@ -56,16 +57,6 @@ UPPER ( character_expression )
  **varchar** 또는 **nvarchar**  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `UPPER` 및 `RTRIM` 함수를 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `Person` 테이블에 있는 사람의 성을 반환합니다. 성은 대문자로 변환되고 잘린 다음 이름 부분과 연결됩니다.  
-  
-```  
-SELECT UPPER(RTRIM(LastName)) + ', ' + FirstName AS Name  
-FROM Person.Person  
-ORDER BY LastName;  
-GO  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  다음 예제에서는 `UPPER` 및 `RTRIM` 있는 사람의 성을 반환 하는 함수는 `dbo.DimEmployee` 대문자이 고 잘린 이름 부분과 연결 된는 테이블입니다.  
   
 ```  

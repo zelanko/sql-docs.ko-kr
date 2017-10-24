@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: d70cf0645f00dc8a5296588548edb29b56380034
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: d5f7a249e43619e0730da0a30fd5597788441bb8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-red-hat"></a>Red Hat에서 데이터베이스를 만들고 SQL Server 설치
@@ -38,7 +38,7 @@ Red Hat Enterprise Linux을 사용자의 컴퓨터에 설치 하려면로 이동
 RHEL에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령을 실행는 **mssql 서버** 패키지:
 
 > [!IMPORTANT]
-> CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 GA 저장소 중 하나를 등록 하기 전에 이전 저장소를 먼저 제거 해야 있습니다. 자세한 내용은 참조 [GA 저장소에 미리 보기 저장소에서 저장소 변경](sql-server-linux-change-repo.md)
+> CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 GA 저장소 중 하나를 등록 하기 전에 이전 저장소를 먼저 제거 해야 있습니다. 자세한 내용은 참조 [GA 저장소에 미리 보기 저장소에서 리포지토리 변경](sql-server-linux-change-repo.md)합니다.
 
 1. Microsoft SQL Server Red Hat 저장소 구성 파일을 다운로드 합니다.
 

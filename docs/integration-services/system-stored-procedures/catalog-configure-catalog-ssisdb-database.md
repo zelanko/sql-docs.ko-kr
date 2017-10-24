@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: c9e285e62e2b391939d8811b5a194a12ad55636d
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 15bec231bf1de825cea952e07827074d56751386
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogconfigurecatalog-ssisdb-database"></a>catalog.configure_catalog(SSISDB 데이터베이스)
@@ -28,9 +28,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
+```sql
+catalog.configure_catalog [ @property_name = ] property_name , [ @property_value = ] property_value  
 ```  
   
 ## <a name="arguments"></a>인수  
@@ -51,7 +50,7 @@ configure_catalog [ @property_name = ] property_name , [ @property_value = ] pro
   
  이 저장 프로시저는 보류 중이거나, 지연되거나, 실행 중이거나, 일시 중지된 실행과 같은 활성 실행이 없는 경우에만 수행할 수 있습니다.  
   
- 카탈로그를 구성 하는 동안 다른 모든 카탈로그 저장 프로시저 실패 하는 오류 메시지와 함께 "서버는 현재 구성 중인"입니다.  
+ 카탈로그를 구성 하는 동안 다른 모든 카탈로그 저장 프로시저 실패 하는 오류 메시지와 함께 "서버는 현재 구성 중인."
   
  카탈로그가 구성되면 작업 로그에 항목이 기록됩니다.  
   

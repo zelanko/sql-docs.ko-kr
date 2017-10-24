@@ -28,11 +28,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: c433b6c78ce1ce62c9d64d7d6dfd7f8ddbe0ff27
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b0b48a95c9eee3cf2ca77d532deb716c874523b7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR(Transact-SQL)
@@ -179,7 +180,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-simple-cursor-and-syntax"></a>1. 단순 커서 및 구문 사용  
- 다음 커서를 열 때 생성된 결과 집합에는 테이블에 있는 모든 행과 모든 열이 포함됩니다. 이 커서는 업데이트가 가능하며 이 커서에 대해 수행한 인출에는 모든 업데이트와 삭제 내용이 나타납니다. `FETCH``NEXT` 옵션을 지정하지 않았으므로 `SCROLL` 인출만 사용할 수 있습니다.  
+
+다음 커서를 열 때 생성된 결과 집합에는 테이블에 있는 모든 행과 모든 열이 포함됩니다. 이 커서는 업데이트가 가능하며 이 커서에 대해 수행한 인출에는 모든 업데이트와 삭제 내용이 나타납니다. `FETCH NEXT` 옵션을 지정하지 않았으므로 `SCROLL` 인출만 사용할 수 있습니다.  
+
   
 ```  
 DECLARE vend_cursor CURSOR  
@@ -261,3 +264,4 @@ DEALLOCATE vendor_cursor;
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
   
+

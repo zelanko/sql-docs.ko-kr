@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 64781fa0b670cc854f5f8a5ff687c8ab481ce922
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: b55693fd4a51c335db63d879a1c255f9d8a855c5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="osql-utility"></a>osql 유틸리티
@@ -122,7 +123,7 @@ C:\>osql
  출력에 사용할 화면의 너비를 설정할 수 있습니다. 기본값은 80자입니다. 출력 줄이 최대 화면 너비에 도달하면 여러 줄로 나뉘어집니다.  
   
  **-a** *packet_size*  
- 다른 크기의 패킷을 요청할 수 있습니다. 유효한 *packet_size* 값은 512에서 65535까지입니다. 기본값 **osql** 은 서버 기본값입니다. 패킷 크기를 늘리면 GO 명령 사이에 SQL 문이 많은 크기가 큰 스크립트를 실행할 때 성능이 향상됩니다. [!INCLUDE[msCoName](../includes/msconame-md.md)]의 테스트 결과에 의하면 일반적으로 8192를 설정했을 때 대량 복사 작업이 가장 빨리 수행됩니다. 더 큰 패킷 크기를 요청할 수 있지만 요청한 크기를 허용하지 않으면 **osql** 이 서버 기본값을 사용합니다.  
+ 다른 크기의 패킷을 요청할 수 있습니다. 유효한 *packet_size* 값은 512에서 65535까지입니다. 기본값 **osql** 은 서버 기본값입니다. 패킷 크기를 늘리면 GO 명령 사이에 SQL 문이 많은 크기가 큰 스크립트를 실행할 때 성능이 향상됩니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 의 테스트 결과에 의하면 일반적으로 8192를 설정했을 때 대량 복사 작업이 가장 빨리 수행됩니다. 더 큰 패킷 크기를 요청할 수 있지만 요청한 크기를 허용하지 않으면 **osql** 이 서버 기본값을 사용합니다.  
   
  **-e**  
  입력을 에코합니다.  
@@ -173,7 +174,7 @@ osql -E -q "select name, object_id from %table%"
  성능 통계를 출력합니다.  
   
  **-b**  
- 오류가 발생하면 **osql** 을 끝내고 DOS ERRORLEVEL 값을 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 메시지의 심각도가 11 이상이면 DOS ERRORLEVEL 변수에 1을 반환하고 아니면 0을 반환합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)]MS-DOS 배치 파일은 DOS ERRORLEVEL 값을 테스트 오류를 적절 하 게 처리할 수 있으며  
+ 오류가 발생하면 **osql** 을 끝내고 DOS ERRORLEVEL 값을 반환하도록 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 오류 메시지의 심각도가 11 이상이면 DOS ERRORLEVEL 변수에 1을 반환하고 아니면 0을 반환합니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] MS-DOS 배치 파일은 DOS ERRORLEVEL 값을 검사하여 오류를 적절하게 처리할 수 있습니다.  
   
  **-u**  
  *input_file* 형식에 관계없이 *output_file*이 유니코드 형식으로 저장되도록 지정합니다.  
@@ -193,7 +194,7 @@ osql -E -q "select name, object_id from %table%"
  DOS ERRORLEVEL의 기본값을 -1로 설정합니다.  
   
 > [!NOTE]  
->   **-n** , **-O** 및 **-D** 옵션이 더 이상 지원 **osql**합니다.  
+>  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **-n**에서는 **-O** , **-D** 및 **osql**의 이후 버전에서는 이 기능이 제거됩니다.  
   
 ## <a name="remarks"></a>주의  
  위에 나열된 대/소문자를 구분하는 옵션을 사용하여 **osql** 유틸리티를 운영 체제에서 직접 시작할 수 있습니다. **osql**을 시작하면 osql이 SQL 문을 받아서 대화형으로 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에 보냅니다. 결과는 서식 지정되어 화면에 표시됩니다(**stdout**). **osql**을 끝내려면 QUIT 또는 EXIT를 사용합니다.  
@@ -339,9 +340,9 @@ GO
  이 문의 결과는 `10.3496`로 표시됩니다. 모든 소수 자릿수를 그대로 사용하여 값이 저장되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [설명 &#40; Mdx&#41;](../mdx/comment-mdx.md)   
+ [설명&#40;MDX&#41;](../mdx/comment-mdx.md)   
  [-&#40; 설명 &#41; &#40; Mdx&#41;](../mdx/comment-mdx-operator-reference.md)   
- [CAST 및 CONVERT &#40;TRANSACT-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
+ [CAST 및 convert&#40; Transact SQL &#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   
  [Raiserror&#40; Transact SQL &#41;](../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

@@ -21,11 +21,12 @@ caps.latest.revision: 37
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fda26d14c7008d20a975ceeb156ea6b34d208335
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 37a9b92672496c6eebc50a99b2ea0cacee55372a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="retrieving-metadata---working-with-schema-rowsets"></a>스키마 행 집합 작업-모든 메타 데이터 검색
@@ -82,6 +83,7 @@ ms.lasthandoff: 09/01/2017
  [!code-cs[Adomd.NetClient#GetActions](../../analysis-services/multidimensional-models-adomd-net-client/codesnippet/csharp/retrieving-metadata-work_0_1.cs)]  
   
 ## <a name="see-also"></a>관련 항목:  
- [분석 데이터 원본에서 메타 데이터 검색](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
+ [분석 데이터 원본에서 메타데이터 검색](../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
+

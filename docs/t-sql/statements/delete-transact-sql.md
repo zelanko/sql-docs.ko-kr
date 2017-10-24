@@ -29,11 +29,12 @@ caps.latest.revision: 78
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 9b4238aeb45bd18a5b868640af235985f33ccb4c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 339b84a5362bd2011a557bb2f45e2bee8c3eb101
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
@@ -261,7 +262,7 @@ PRINT 'Number of rows deleted is ' + CAST(@@ROWCOUNT as char(3));
 ```  
   
 #### <a name="c-using-a-cursor-to-determine-the-row-to-delete"></a>3. 커서를 사용하여 삭제할 행 확인  
- 한 행을 삭제 하는 다음 예제는 `EmployeePayHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 라는 커서를 사용 하 여 데이터베이스 `my`_`cursor`합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
+ 한 행을 삭제 하는 다음 예제는 `EmployeePayHistory` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 라는 커서를 사용 하 여 데이터베이스 `my_cursor`합니다. 삭제 작업은 현재 커서에서 인출된 한 행에만 영향을 줍니다.  
   
 ```  
 DECLARE complex_cursor CURSOR FOR  

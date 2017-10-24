@@ -38,11 +38,12 @@ caps.latest.revision: 97
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 03f3352a494bef2072ca7527dd3da804a072689e
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6ae83ccf18cac45339d63e4ce1326c72a58c0339
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="from-transact-sql"></a>FROM(Transact-SQL)
@@ -365,7 +366,7 @@ ON (p.ProductID = v.ProductID);
 **적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.
 
   
- 시작 하기 전에 활성 되었든 관계 없이 지정 된 시간 범위 내에 활성 상태 였던 모든 레코드 버전에 대 한 값이 있는 테이블이 반환는  *\<start_date_time >* FROM에 대 한 매개 변수 값 인수 또는 후에 활성화 되 고 상태가 중단 된  *\<end_date_time >* TO 인수에 대 한 매개 변수 값입니다. 내부적으로 임시 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. 정확히 FROM 끝점으로 정의 된 하위 경계에서 활성화 하는 행 포함 되며 정확히 TO 끝점으로 정의 된 상위 경계에서 활성화 된 행이 포함 되지 않습니다.  
+ 시작 하기 전에 활성 되었든 관계 없이 지정 된 시간 범위 내에 활성 상태 였던 모든 레코드 버전에 대 한 값이 있는 테이블이 반환는  *\<start_date_time >* FROM에 대 한 매개 변수 값 인수 또는 후에 활성화 되 고 상태가 중단 된  *\<end_date_time >* TO 인수에 대 한 매개 변수 값입니다. 내부적으로 temporal 테이블과 기록 테이블 간에 합집합이 계산되며, 지정된 시간 범위 중 임의의 시점에 활성 상태였던 모든 행 버전을 반환하도록 결과가 필터링됩니다. 정확히 FROM 끝점으로 정의 된 하위 경계에서 활성화 하는 행 포함 되며 정확히 TO 끝점으로 정의 된 상위 경계에서 활성화 된 행이 포함 되지 않습니다.  
   
  사이의 \<start_date_time > AND \<end_date_time >  
 
@@ -670,18 +671,7 @@ WHERE ManagerID = 5;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="n-using-a-simple-from-clause"></a>14. 간단한 FROM 절 사용  
- 다음 예제에서는 검색 된 `SalesTerritoryID` 및 `SalesTerritoryRegion` 열을는 `DimSalesTerritory` 테이블입니다.  
-  
-```tsql
--- Uses AdventureWorks  
-  
-SELECT SalesTerritoryKey, SalesTerritoryRegion  
-FROM DimSalesTerritory  
-ORDER BY SalesTerritoryKey;  
-```  
-  
-### <a name="o-using-the-inner-join-syntax"></a>15. INNER JOIN 구문 사용  
+### <a name="n-using-the-inner-join-syntax"></a>14. INNER JOIN 구문 사용  
  다음 예제에서는 반환 된 `SalesOrderNumber`, `ProductKey`, 및 `EnglishProductName` 열을는 `FactInternetSales` 및 `DimProduct` where 테이블 조인 키 `ProductKey`, 두 테이블에서 일치 합니다. `SalesOrderNumber` 및 `EnglishProductName` 이러한 별칭은 가독성을 위해 포함; 열에는 각각 있으므로 같이 이러한 열이 있는 테이블 별칭을 지정할 필요가 없습니다만, 테이블 중 하나에 존재 합니다. 단어 **AS** 별칭 하기 전에 이름을 필요 하지 않지만 가독성을 높이기 위해 및 ANSI 표준을 준수 하는 것이 좋습니다.  
   
 ```tsql
@@ -717,7 +707,7 @@ WHERE fis.SalesOrderNumber > 'SO50000'
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="p-using-the-left-outer-join-and-right-outer-join-syntax"></a>16. LEFT OUTER JOIN 및 RIGHT OUTER JOIN 구문 사용  
+### <a name="o-using-the-left-outer-join-and-right-outer-join-syntax"></a>15. LEFT OUTER JOIN 및 RIGHT OUTER JOIN 구문 사용  
  다음 예제에서는 조인을 `FactInternetSales` 및 `DimProduct` 테이블에 `ProductKey` 열입니다. 왼쪽에서 일치 하지 않는 행을 유지 하는 왼쪽된 우선 외부 조인 구문 (`FactInternetSales`) 테이블입니다. 이후는 `FactInternetSales` 테이블 포함 하지 않는 `ProductKey` 값과 일치 하지 않는 `DimProduct` 테이블이이 쿼리는 위의 첫 번째 내부 조인 예제와 같은 행을 반환 합니다.  
   
 ```tsql
@@ -766,7 +756,7 @@ RIGHT OUTER JOIN DimSalesTerritory AS dst
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="q-using-the-full-outer-join-syntax"></a>17. FULL OUTER JOIN 구문 사용  
+### <a name="p-using-the-full-outer-join-syntax"></a>16. FULL OUTER JOIN 구문 사용  
  다음 예제에서는 완전 외부 조인은 조인 된 두 테이블에서 모든 행을 반환 하지만 다른 테이블에서 일치 하지 않는 값에 대 한 NULL을 반환 하는 방법을 보여 줍니다.  
   
 ```tsql
@@ -791,7 +781,7 @@ FULL JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="r-using-the-cross-join-syntax"></a>18. CROSS JOIN 구문 사용  
+### <a name="q-using-the-cross-join-syntax"></a>17. CROSS JOIN 구문 사용  
  교차곱을 반환 하는 다음 예제는 `FactInternetSales` 및 `DimSalesTerritory` 테이블입니다. 가능한 모든 조합 목록이 `SalesOrderNumber` 및 `SalesTerritoryKey` 반환 됩니다. `ON` 크로스 조인 쿼리에서 절.  
   
 ```tsql
@@ -803,7 +793,7 @@ CROSS JOIN FactInternetSales AS fis
 ORDER BY fis.SalesOrderNumber;  
 ```  
   
-### <a name="s-using-a-derived-table"></a>S.는 파생된 테이블 사용  
+### <a name="r-using-a-derived-table"></a>18. 파생된 테이블 사용  
  파생된 테이블을 사용 하 여 다음 예제 (한 `SELECT` 다음 문으로 `FROM` 절) 반환 하는 `CustomerKey` 및 `LastName` 열에 있는 모든 고객의는 `DimCustomer` 테이블의 `BirthDate` 년 1 월 1 일 이후의 값 1970 및 성 'Smith'.  
   
 ```tsql
@@ -817,7 +807,7 @@ WHERE LastName = 'Smith'
 ORDER BY LastName;  
 ```  
   
-### <a name="t-reduce-join-hint-example"></a>20. 조인 힌트 예제 줄이기  
+### <a name="s-reduce-join-hint-example"></a>S.는 조인 힌트 예제 줄이기  
  다음 예제에서는 `REDUCE` 쿼리 내에서 파생 된 테이블의 처리를 변경 하는 조인 힌트입니다. 사용 하는 경우는 `REDUCE` 이 쿼리에서 조인 힌트는 `fis.ProductKey` 프로젝션, 복제 및 distinct, 만든에 `DimProduct` 의 순서 섞기 중 `DimProduct` 에 `ProductKey`합니다. 결과 파생된 테이블에 배포 됩니다 `fis.ProductKey`합니다.  
   
 ```tsql
@@ -833,7 +823,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="u-replicate-join-hint-example"></a>21. 복제 조인 힌트 예제  
+### <a name="t-replicate-join-hint-example"></a>20. 복제 조인 힌트 예제  
  다음 예제에서는이 점을 제외 하 고 앞의 예제와 동일한 쿼리를 보여 줍니다.는 `REPLICATE` 대신 조인 힌트가 사용 되어는 `REDUCE` 조인 힌트입니다. 사용은 `REPLICATE` 힌트에 있는 값 사용 하면는 `ProductKey` (조인) 열에서는 `FactInternetSales` 테이블에 모든 노드에 대해 복제 합니다. `DimProduct` 테이블은 해당 값의 복제 된 버전에 조인 합니다.  
   
 ```tsql
@@ -849,7 +839,7 @@ FROM
 ORDER BY SalesOrderNumber;  
 ```  
   
-### <a name="v-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>22. 배포 호환 되지 않는 조인에 대 한 순서 섞기 이동 되도록 REDISTRIBUTE 힌트를 사용 하 여  
+### <a name="u-using-the-redistribute-hint-to-guarantee-a-shuffle-move-for-a-distribution-incompatible-join"></a>21. 배포 호환 되지 않는 조인에 대 한 순서 섞기 이동 되도록 REDISTRIBUTE 힌트를 사용 하 여  
  다음 쿼리는 배포 호환 되지 않는 조인에서 REDISTRIBUTE 쿼리 힌트를 사용합니다. 이렇게 하면 쿼리 최적화 프로그램이 쿼리 계획의 순서 섞기 이동을 사용 합니다. 이렇게 하면 복제 된 테이블에 분산된 테이블을 이동 하는 브로드캐스트 이동 쿼리 계획을 사용 하지 않습니다.  
   
  다음 예제에서는 REDISTRIBUTE 힌트 ProductKey DimProduct에 대 한 배포 열은 FactInternetSales에 대 한 배포 열 없기 때문에 FactInternetSales 테이블에서 순서 섞기 이동을 강제로 수행 합니다.  

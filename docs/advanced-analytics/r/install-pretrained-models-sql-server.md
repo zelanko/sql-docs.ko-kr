@@ -2,8 +2,8 @@
 title: "미리 학습 된 기계 학습 모델을 SQL Server에 설치 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 07/15/2017
-ms.prod: sql-server-2016
+ms.date: 10/18/2017
+ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -15,34 +15,42 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: b52fcc1e4ac77df2968a4ea6cbd6e546ff1b74ac
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 8f4a145700d12f31a868cc3fc20a9dbdbe6f45ea
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="install-pretrained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 컴퓨터를 설치 합니다.
 
-이 항목에는 어떻게 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R 서비스 또는 컴퓨터 학습 서비스 설치 설명 합니다.
+이 문서에는 어떻게 인스턴스에 SQL Server의 미리 학습 된 모델을 추가할 이미 R 서비스 또는 컴퓨터 학습 서비스 설치 설명 합니다.
 
-미리 학습 된 모델은 Microsoft R Server (또는 Microsoft 학습 서버 컴퓨터에 대 한 업데이트)는 업데이트로 제공 됩니다. 인스턴스 및 Microsoft R의 최신 버전 가져오기 하는 방법에 대 한 정보를 참조 하십시오. [R Services의 인스턴스에 R 구성 요소를 업그레이드](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
+미리 학습 된 모델은 Microsoft R Server를 설치할 때 또는 독립 실행형 설치 관리자를 사용 하 여 컴퓨터 학습 서버 옵션으로 제공 됩니다. 이 설치 관리자를 사용 하 여 미리 학습 된 모델만 가져오려는 또는 기계 학습의 SQL Server 2016 또는 SQl Server 2017 인스턴스의 구성 요소 업그레이드를 사용할 수 있습니다.
 
-R 서버에 대 한 별도 Windows 기반 설치를 실행 해야만 이러한 모델을 설치할 수 있습니다.
-그러나 모델은 SQL Server를 설치할 때 사용 하 여 몇 가지 추가 단계가 있습니다. 이 항목에서는 프로세스를 설명 합니다.
+설치 프로그램을 실행 하 여 미리 학습 된 모델을 다운로드 한 후에 SQL Server와 함께 사용 하기 위해 모델을 구성 하려면 몇 가지 추가 단계. 이 문서는 프로세스를 설명합니다.
+
+자세한 내용은 다음 문서를 참조하세요.
+
++ [미리 학습 된 기계 학습 감성 분석 및 이미지 검색에 대 한 모델](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)
+
++ [R Services의 인스턴스에 R 구성 요소를 업그레이드](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)합니다.
 
 ## <a name="benefits-of-using-pretrained-models"></a>미리 학습 된 모델을 사용할 때의 이점
 
-미리 학습 된 모델 기능 생성, 이미지 또는 감성 분석 등의 작업을 수행할 필요는 없지만 리소스가 큰 데이터 집합을 구하거 나 복잡 한 모델을 학습 하는 고객을 지원 하기 위해 제공 되었습니다. 미리 학습 된 모델을 사용 하 여 텍스트 및 이미지 처리를 가장 효율적으로 시작할 수 있습니다.
+기능 생성, 이미지 또는 감성 분석 등의 작업을 수행할 필요는 없지만 큰 데이터 집합을 구하거 나 복잡 한 모델을 학습 하는 리소스가 고객이 이러한 미리 학습 된 모델을 만들었습니다. 미리 학습 된 모델을 사용 하 여 텍스트 및 이미지 처리를 가장 효율적으로 시작할 수 있습니다.
 
-현재 사용할 수 있는 모델은 감성 분석 및 이미지 분류에 대 한 심층 신경망 (DNN) 모델입니다. 모든 4 개의 미리 학습 된 모델 CNTK에 대해 학습 되었습니다. 각 네트워크의 구성 된 다음 참조 구현이 기반으로 합니다.
+현재 사용할 수 있는 모델은 감성 분석 및 이미지 분류에 대 한 심층 신경망 (DNN) 모델입니다. Microsoft의를 사용 하 여 모든 미리 학습 된 모델의 성향을 습득할 된 [계산 네트워크 도구 키트](https://cntk.ai/Features/Index.html), 또는 **CNTK**합니다. 
+
+각 네트워크의 구성 된 다음 참조 구현이 기반으로 합니다.
 
 + ResNet 18
 + ResNet 50
 + ResNet 101
 + AlexNet
 
-심층 잔여 네트워크와 CNTK를 사용 하 여 구현 하는 방법에 대 한 자세한 내용은 다음이 문서를 참조 합니다.
+심층 학습 네트워크 및 CNTK를 사용 하 여 구현 하는 방법에 대 한 자세한 내용은 다음이 문서를 참조 합니다.
 
 + [Microsoft 연구원 알고리즘 ImageNet 챌린지 마일스 톤 설정](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
@@ -50,60 +58,74 @@ R 서버에 대 한 별도 Windows 기반 설치를 실행 해야만 이러한 �
 
 ## <a name="how-to-install-the-models-on-sql-server"></a>SQL Server에서 모델을 설치 하는 방법
 
-   > [!NOTE]
-   > 
-   > Microsoft R Server를 설치 하거나 SQL Server의 인스턴스는 별도 Windows 기반 설치 관리자를 사용 하면 미리 학습 된 모델은 설치 프로그램에서 사용할 수 있는 합니다. 참조 [Windows 용 R 설치 서버](https://docs.microsoft.com/en-us/r-server/install/r-server-install-windows)합니다.
-   > 
-   > Microsoft R server는 모델을 사용 하 몇 가지 추가 단계가 필요할 수 있습니다. 자세한 내용은 참조 [설치 및 배포 하는 방법을 미리 MicrosoftML와 기계 학습 모델을 학습](https://docs.microsoft.com/r-server/install/microsoftml-install-pretrained-models)
+1. 서버를 학습 하는 컴퓨터에 대 한 별도 Windows 기반 설치를 실행 합니다. 다운로드 위치에 대 한 참조.
 
-1. 미리 학습 된 모델은 SQL Server; 설치할 때 기본적으로 설치 되지 SQL Server 설치 프로그램을 마친 후 설치 프로그램 명령줄 유틸리티를 실행 하 여에 추가 해야 합니다.
+    + [Windows에 대 한 서버를 학습 하는 컴퓨터를 설치 합니다.](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
+    + [Windows 용 R Server 9.1 설치](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
-2. 관리자 권한 명령 프롬프트를 열고도 Microsoft R 설치 관리자를 포함 하는 SQL Server에 대 한 부트스트랩 설치 폴더로 이동 합니다.
+2. 설치할 기능 선택 모델만을 가져오기 또는 설치 관리자를 사용 하 여 다른 업데이트 수행 여부에 따라 달라 집니다.
+ 
+    + 이 서버를 학습 하는 컴퓨터를 새로 설치 하 고 Python 또는 R 구성 요소를 선택에 다른 변경을 수행 하지 않을 경우 **만** 미리 학습 된 모델 옵션입니다. 사용권 계약을 포함 하 여 다른 모든 메시지를 수락 합니다.
 
-    SQL Server 2017 RC 1의 기본 인스턴스에이 합니다.
+    + Python 또는 R 구성 요소를 동시에 업그레이드 하려면 업데이트 언어 (R, Python, 또는 둘 다)을 선택 하 고 미리 학습 된 모델 옵션을 선택 합니다. 이러한 변경 내용을 적용할 하나 이상의 인스턴스를 선택 합니다.
+
+    + 서버를 학습 하는 컴퓨터를 설치 하 고 업데이트 된 Python 또는 R 구성 요소 바인딩 옵션을 사용 하 여 이전에, 이전에 선택한 모든가 종료 **그대로**, 미리 학습 된 모델 옵션을 선택 합니다. 이전에 선택한 옵션을 선택 취소 하지 마십시오 또는 제거 됩니다.
+
+3. Windows 명령 프롬프트를 열고 설치가 완료 되 면 **관리자 권한으로**, 또한 Microsoft R 설치 관리자를 포함 하는 SQL Server에 대 한 설치 부트스트랩 폴더로 이동 합니다. SQL Server 2017의 기본 인스턴스에 폴더가 합니다.
     
-    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017RC1\x64\`
+    `C:\Program Files\Microsoft SQL Server\140\Setup Bootstrap\SQL2017\x64\`
 
-3. 를 설치 하려면 구성 요소와 여기서 미리 학습 된 모델을 추가 하도록 다음 인수를 사용 하 여 폴더를 지정 합니다.
+4. 구성 요소를 설치, 버전 및 다음 예에서 같이 RSetup.exe에 대 한 인수를 사용 하 여 모델 원본 파일을 포함 하는 폴더를 지정 합니다.
 
-  + 사용 하 여 모델을 사용 하려면 **R_SERVICES**
+  + 사용 하 여 모델을 사용 하려면 **R_SERVICES**, 다음 구문 및 경로 사용 하 여:
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-    예를 들어 기본 인스턴스의 SQL Server 2017에서 R을 사용 하 여 미리 학습 된 모델의 사용을 사용 하려면이 문을 실행 합니다.
+    예를 들어 기본 인스턴스의 SQL Server 2017 년에 R에 대 한 미리 학습 된 모델의 최신 버전을 사용할 수 있도록 하려면이 문을 실행 합니다.
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES"`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-  + 사용 하 여 모델을 사용 하려면 **PYTHON_SERVICES**
+    명명 된 인스턴스에서 명령은 다음과 같습니다. 다음과 같이
 
-    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES`
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\R_SERVICES\library\MicrosoftML\mxLibs\x64"`
 
-    예를 들어 Python을 사용 하 여 SQL Server 2017 년 1의 기본 인스턴스에 대 한 미리 학습 된 모델을 사용 하도록 설정 하려면이 문을 실행 합니다.
+  + 사용 하 여 모델을 사용 하려면 **PYTHON_SERVICES**, 다음 구문 및 경로 사용 하 여:
 
-    `RSetup.exe /install /component MLM /version 9.2.0.22 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES"`
+    `RSetup.exe /install /component MLM /version <version> /language 1033 /destdir <SQL_DB_instance_folder>\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-4. 버전 매개 변수는 다음 값이 지원 됩니다.
+    예를 들어 기본 인스턴스의 SQL Server 2017 년 1에서 Python에 대 한 미리 학습 된 모델의 최신 버전을 사용할 수 있도록 하려면이 문을 실행 합니다.
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+    명명 된 인스턴스에서 명령은 다음과 같습니다. 다음과 같이
+
+    `RSetup.exe /install /component MLM /version 9.2.0.24 /language 1033 /destdir "C:\Program Files\Microsoft SQL Server\MSSQL14.MyInstanceName\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs"`
+
+5. 버전 매개 변수는 다음 값이 지원 됩니다.
 
     + 릴리스 후보 0: **9.1.0.0**
     + 릴리스 후보 1: **9.2.0.22**
-    + 최종 버전 번호 (릴리스되지): **9.2.0.100**
+    + RTM: **9.2.0.100**
+    + 누적 업데이트 1: **9.2.0.24**
 
-5. R에 다음과 같은 모델을 추가 해야 설치에 성공한 경우\_서비스 또는 PYTHON\_서비스 폴더:
+6. R에 다음과 같은 모델을 추가 해야 설치에 성공한 경우\_서비스 또는 PYTHON\_서비스 폴더:
 
-    - AlexNet_Updated.model
-    - ImageNet1K_mean.xml
+    - AlexNet\_Updated.model
+    - ImageNet1K\_mean.xml
     - pretrained.model
-    - ResNet_101_Updated.model
-    - ResNet_18_Updated.model
-    - ResNet_50_Updated.model
+    - ResNet\_101\_Updated.model
+    - ResNet\_18\_Updated.model
+    - ResNet\_50\_Updated.model
 
 ## <a name="examples"></a>예
 
-모델을 설치한 후에 R 코드에서 호출 하 여 모델을 사용할 수 있습니다.
+모델을 설치한 후에 사용자 코드에서 호출 하 여 모델을 사용할 수 있습니다.
 
 ### <a name="image-featurization-example"></a>이미지 기능 생성 예제
 
-이미지에 대 한 모델은 전면의 기능 제공 하는 이미지의 생성을 지원 합니다. 모델을 사용 하려면 호출는 **featurizeImage** 변환 합니다.
+이미지에 대 한 모델은 전면의 기능 제공 하는 이미지의 생성을 지원 합니다. 사용 하 여이 특정 모델을 학습 [CNTK](https://docs.microsoft.com/cognitive-toolkit/)합니다. 
+
+모델을 사용 하려면 호출는 **featurizeImage** 변환 합니다.
 
 + [featurizeImage: 컴퓨터 학습 이미지 기능 생성 변형](https://docs.microsoft.com/r-server/r-reference/microsoftml/featurizeimage)
 
@@ -125,12 +147,12 @@ R 서버에 대 한 별도 Windows 기반 설치를 실행 해야만 이러한 �
 ```
 
 > [!NOTE]
-> 
-> 읽기 또는 미리 학습 된 모델 자체를 수정 하는 것이 불가능 합니다. 이 특정 모델 기반 [CNTK](https://docs.microsoft.com/cognitive-toolkit/) 모델 하지만 성능상의 이유로 네이티브 형식을 사용 하 여 압축 됩니다.
+> 수 없으면를 읽거나 수정할 미리 학습 된 모델을 네이티브 형식을 사용 하 여 성능 향상을 위해 압축 때문에 있습니다.
+
 
 ### <a name="text-analysis-example"></a>텍스트 분석 예
 
-이 샘플 분류에 대 한 미리 학습 된 모델의 사용을 보여 줍니다.
+텍스트 분류에 대 한 미리 학습 된 텍스트 기능 생성 모델을 사용 하는 방법 보여 주는 다음 예제를 참조 하십시오.
 
 [텍스트 Featurizer를 사용 하 여 의미 분석](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

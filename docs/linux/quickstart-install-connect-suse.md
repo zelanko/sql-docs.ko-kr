@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: b39414933684939c69bb3fd80d4e8aba21efa824
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: a15f88d8bc7d7684e8e8d0014bb24a082c5b0be2
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>SUSE Linux Enterprise Server에서 데이터베이스를 만들고 SQL Server 설치
@@ -31,6 +31,9 @@ ms.lasthandoff: 10/02/2017
 
 SUSE Linux Enterprise Server를 사용자의 컴퓨터에 설치 하려면로 이동 [https://www.suse.com/products/server](https://www.suse.com/products/server)합니다. 또한 Azure에서 SLES 가상 컴퓨터를 만들 수 있습니다. 참조 [만들기 및 Azure CLI Linux Vm 관리](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 사용 하 여 `--image SLES` 에 대 한 호출에서 `az vm create`합니다.
 
+> [!NOTE]
+> 이번에 [Linux에 대 한 Windows 하위](https://msdn.microsoft.com/commandline/wsl/about) 설치 대상으로 Windows 10은 지원 되지 않습니다.
+
 다른 시스템 요구 사항에 대 한 참조 [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
 
 ## <a id="install"></a>SQL Server 설치
@@ -38,7 +41,7 @@ SUSE Linux Enterprise Server를 사용자의 컴퓨터에 설치 하려면로 �
 SLES에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령을 실행는 **mssql 서버** 패키지:
 
 > [!IMPORTANT]
-> CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 GA 저장소 중 하나를 등록 하기 전에 이전 저장소를 먼저 제거 해야 있습니다. 자세한 내용은 참조 [GA 저장소에 미리 보기 저장소에서 저장소 변경](sql-server-linux-change-repo.md)
+> CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 GA 저장소 중 하나를 등록 하기 전에 이전 저장소를 먼저 제거 해야 있습니다. 자세한 내용은 참조 [GA 저장소에 미리 보기 저장소에서 리포지토리 변경](sql-server-linux-change-repo.md)합니다.
 
 1. Microsoft SQL Server SLES 저장소 구성 파일을 다운로드 합니다.
 

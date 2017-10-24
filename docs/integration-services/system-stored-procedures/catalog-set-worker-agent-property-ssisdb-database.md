@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: cd1366409f9fb0af271b26fad3b8b911f99acc06
-ms.openlocfilehash: d0476bbb67cff44a05aed1441a31d679882b4cb3
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: c1caf4a71e5802968d9471711b8206a26f9c28d5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/08/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (SSISDB 데이터베이스)
@@ -28,19 +28,19 @@ ms.lasthandoff: 09/08/2017
 
 ## <a name="syntax"></a>구문
 
-```tsql
-set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = ] PropertyName, [ @PropertyValue = ] PropertyValue 
+```sql
+catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
 ```
 
 ## <a name="arguments"></a>인수
-[ @WorkerAgentId =] *WorkerAgentId*  
-스케일 아웃 작업자의 작업자 에이전트 id입니다. *WorkerAgentId* 은 **uniqueidentifier**합니다.
+[@WorkerAgentId =] *WorkerAgentId*  
+작업자 에이전트 ID의 스케일 아웃 작업자입니다. *WorkerAgentId* 은 **uniqueidentifier**합니다.
 
-[ @PropertyName =] *PropertyName*  
+[@PropertyName =] *PropertyName*  
 속성의 이름입니다. *PropertyName* 은 **nvarchar (256)**합니다.
 
-[ @PropertyValue =] *PropertyValue*  
-속성의 값입니다. *PropertyValue* 은 **nvarchar (max)**합니다.
+[@PropertyValue =] *PropertyValue*  
+속성 값입니다. *PropertyValue* 은 **nvarchar (max)**합니다.
 
 ## <a name="remarks"></a>주의
 올바른 속성 이름은 **DisplayName**, **설명**, **태그**합니다.
@@ -58,13 +58,13 @@ set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId, [ @PropertyName = 
   
 -   멤버 자격에는 **sysadmin** 서버 역할
 
-## <a name="erros-and-warnings"></a>오류 및 경고
+## <a name="errors-and-warnings"></a>오류 및 경고
   다음 목록에서는 오류나 경고가 발생하는 몇 가지 조건을 설명합니다.  
   
 -   사용자에게 적절한 권한이 없는 경우 
 
--   작업자 에이전트 id가 잘못 되었습니다.
+-   작업자 에이전트 ID가 잘못 되었습니다.
 
 -   속성 이름이 올바르지 않습니다.
 
--   속성 값이 vilid 합니다.  
+-   속성 값이 올바르지 않습니다.  

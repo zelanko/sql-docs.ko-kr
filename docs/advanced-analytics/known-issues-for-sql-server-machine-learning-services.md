@@ -2,7 +2,7 @@
 title: "컴퓨터 학습 서비스의 알려진 문제 | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
-ms.date: 09/19/2017
+ms.date: 10/18/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -15,11 +15,12 @@ caps.latest.revision: 53
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: a6aeda8e785fcaabef253a8256b5f6f7a842a324
-ms.openlocfilehash: 2d21756a05e9e51379faa194ec331517e510988d
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 63ad249e32f259eca850d5b872d940faa313750c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/21/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="known-issues-in-machine-learning-services"></a>컴퓨터 학습 서비스의 알려진된 문제
@@ -167,6 +168,19 @@ data <- RxSqlServerData(sqlQuery = "SELECT CRSDepTimeStr, ArrDelay  FROM Airline
 이 문제를 해결 캐스트를 사용 하려면 SQL 쿼리를 다시 작성할 수 또는 변환 하 고 R에 올바른 데이터 형식을 사용 하 여 데이터를 제공 합니다. 일반적으로 성능이 더 좋아집니다 작업할 때는 데이터 R 코드의 데이터를 변경 하지 않고 SQL을 사용 하 여 합니다.
 
 **적용 대상:** SQL Server 2016 R Services
+
+### <a name="limits-on-size-of-serialized-models"></a>Serialize 된 모델의 크기에 대 한 제한
+
+SQL Server 테이블에는 모델을 저장 하는 경우 모델을 직렬화 하 고 이진 형식으로 저장 해야 합니다. 이론상이 방법으로 저장할 수 있는 모델의 최대 크기에는 SQL Server의 varbinary 열의 최대 크기는 2GB입니다.
+
+더 큰 모델을 사용 해야 하는 경우 다음 해결 방법을 사용할 수 있습니다.
+
++ 사용 하 여는 [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) SQL Server로 전달 하기 전에 모델의 크기를 줄이기 위해 기본 r에서 함수입니다. 이 옵션은 모델이 2GB 제한에 가까우면 가장 합니다.
++ 더 큰 모델을 사용 하지 않고 varbinary 열은 모델을 저장할 수를 사용할 수 있습니다는 [FileTable](..\relational-databases\blob\filetables-sql-server.md) SQL Server에서 제공 하는 기능.
+
+    Filetable을 사용 하려면 SQL server에서는 Filestream 파일 시스템 드라이버에서 Filetable에 저장 된 데이터 관리 되 고 네트워크 파일 액세스를 차단 하는 기본 방화벽 규칙 때문에 방화벽 예외를 추가 해야 합니다. 자세한 내용은 참조 [FileTable에 대 한 필수 구성 요소를 사용 하도록 설정](../relational-databases/blob/enable-the-prerequisites-for-filetable.md)합니다. 
+
+    FileTable을 설정한 후 모델을 작성 하 있습니다 경로 FileTable API를 사용 하 여 SQL에서 가져오고 R 코드에서 해당 위치에 모델을 작성 합니다. 모델 읽이 필요한 경우에 SQL에서 경로 가져옵니다을 다음 R 스크립트에서 경로 사용 하 여 모델을 호출 합니다. 자세한 내용은 참조 [Filetable 액세스 제품 파일 입 / 출력 Api](../relational-databases/blob/access-filetables-with-file-input-output-apis.md)합니다.
 
 ### <a name="avoid-clearing-workspaces-when-you-execute-r-code-in-a-includessnoversionincludesssnoversion-mdmd-compute-context"></a>R 코드를 실행 하는 경우 작업 영역을 선택 취소 하지 마십시오.는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 계산 컨텍스트
 

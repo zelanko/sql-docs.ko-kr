@@ -29,11 +29,12 @@ caps.latest.revision: 83
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
-ms.openlocfilehash: 4dedcfa3e055e9f3b6d71bc14aed71f07260d323
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 6e1a96bb64c8cb6a81311f422d370e36d9489ca4
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/15/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-database-transact-sql"></a>DROP DATABASE(Transact-SQL)
@@ -148,7 +149,7 @@ DROP DATABASE Sales, NewSales;
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 다음 예에서는 원본 데이터베이스에 영향을 주지 않으면서 `sales`_`snapshot0600`이라는 이름의 데이터베이스 스냅숏을 삭제합니다.  
+ 다음 예에서는 이라는 데이터베이스 스냅숏을 제거 `sales_snapshot0600`를 원본 데이터베이스 영향을 주지 않고 합니다.  
   
 ```  
 DROP DATABASE sales_snapshot0600;  

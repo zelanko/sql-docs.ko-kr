@@ -23,14 +23,15 @@ caps.latest.revision: 40
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: c6ea46c5187f00190cb39ba9a502b3ecb6a28bc6
-ms.openlocfilehash: d02995ee7093d311cbdc6f4b69430a8bc66a618c
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 4945bbe718bd8561100a3dd8e296a9f1faa9d93a
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/19/2017
+ms.lasthandoff: 10/24/2017
 
 ---
-# <a name="x40x40nestlevel-transact-sql"></a>& #x 40; & #x 40; Nestlevel은 (Transact SQL)
+# <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;Nestlevel은 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   로컬 서버의 현재 저장 프로시저 실행의 중첩 수준을 반환합니다(초기값 0).  
@@ -89,7 +90,7 @@ Inner Level
 ```  
   
 ### <a name="b-calling-nestlevel"></a>2. 호출@NESTLEVEL  
- 다음 예에서는 `SELECT`, `EXEC` 및 `sp`_`executesql`에서 각각 `@@NESTLEVEL`을 호출할 때 반환되는 값의 차이를 보여 줍니다.  
+ 다음 예제에서 반환 된 값의 차이 보여 줍니다. `SELECT`, `EXEC`, 및 `sp_executesql` 호출 각각 `@@NESTLEVEL`합니다.  
   
 ```  
 CREATE PROC usp_NestLevelValues AS  

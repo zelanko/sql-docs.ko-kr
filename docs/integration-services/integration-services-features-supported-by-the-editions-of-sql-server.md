@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
-ms.openlocfilehash: 365fb52c9808e0402323d52c85371c35555d833e
+ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
+ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/03/2017
+ms.lasthandoff: 10/17/2017
 
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server 버전에서 지 원하는 integration Services 기능
@@ -29,9 +29,9 @@ Evaluation 및 Developer 버전에서 지 원하는 기능, Enterprise Edition�
 최신 릴리스 정보 및 새로운 정보에 대 한 다음 문서를 참조 합니다.
 -   [SQL Server 2016 릴리스 정보](../sql-server/sql-server-2016-release-notes.md)
 -   [SQL Server 2016 Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)
--   [2017 SQL Server에서 Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
+-   [SQL Server 2017 Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2017.md)
     
-**SQL Server 2016 사용해보기**    
+**SQL Server 2016을 사용해 보세요.**    
 
 SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있습니다.  
     
@@ -53,7 +53,7 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 
 |기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|SQL Server 가져오기 및 내보내기 마법사|예|사용자 계정 컨트롤|사용자 계정 컨트롤|사용자 계정 컨트롤|예|  
+|SQL Server 가져오기 및 내보내기 마법사|예|예|예|예|예|  
 
 ## <a name="IS"></a> Integration Services  
   
@@ -70,8 +70,8 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
   
 |기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|Attunity의 성능 우선 Oracle 대상|예|||||  
-|Attunity의 성능 우선 Teradata 대상|예|||||  
+|성능 우선 Oracle 원본 및 대상 by Attunity|예|||||  
+|성능 우선 Teradata 원본 및 대상 by Attunity|예|||||  
 |SAP BW 원본 및 대상|예|||||  
 |데이터 마이닝 모델 학습 대상|예|||||  
 |차원 처리 대상|예|||||  
@@ -81,7 +81,6 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
   
 |기능|Enterprise|Standard|Web|Express with Advanced Services|Express|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|  
-|영구 (성능 우선) 조회|예|||||  
 |변경 데이터 캡처 구성 요소 attunity <sup>1</sup>|예|||||  
 |데이터 마이닝 쿼리 변환|예|||||  
 |유사 항목 그룹화 및 유사 항목 조회 변환|예|||||  

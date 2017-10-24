@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
-ms.openlocfilehash: 84cf217faf0980d3ef1daf9a86a4aa362931d199
+ms.sourcegitcommit: fffb61c4c3dfa58edaf684f103046d1029895e7c
+ms.openlocfilehash: cee7f5dbcf66a5357ae68192703d841ae1601a35
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/19/2017
 
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
@@ -268,34 +268,12 @@ SQL Server 용 Microsoft JDBC 드라이버는 다음과 같은 기본 제공 열
 ### <a name="using-azure-key-vault-provider"></a>Azure 주요 자격 증명 모음 공급자 사용
 Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 응용 프로그램이 Azure에서 호스트되는 경우). SQL Server 용 Microsoft JDBC Driver Azure 키 자격 증명 모음에 저장 된 키가 있는 응용 프로그램에 대 한 기본 제공된 공급자, SQLServerColumnEncryptionAzureKeyVaultProvider가 포함 되어 있습니다. 이 공급자의 이름은 AZURE_KEY_VAULT입니다. Azure 키 자격 증명 모음 저장소 공급자를 사용 하려면 응용 프로그램 개발자를 Azure에서 자격 증명 모음 및 키 만들고 키에 액세스할 수 응용 프로그램을 구성 해야 합니다. 주요 자격 증명 모음을 설정 하 고 열 마스터 키 생성 하는 방법에 대 한 자세한 내용은를 참조 [Azure 키 자격 증명 모음 – 키 자격 증명 모음 설정에 대 한 자세한 내용은 단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/) 및 [Azure 키 자격 증명 모음의열마스터키만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).  
   
-Azure 키 자격 증명 모음을 사용 하려면 클라이언트 응용 프로그램의 SQLServerColumnEncryptionAzureKeyVaultProvider 인스턴스화하고 드라이버에 등록 해야 합니다. JDBC 드라이버 대리자 인증 인터페이스를 통해 응용 프로그램에 키 자격 증명 모음에서 액세스 토큰을 검색 하기 위한 메서드가 들어 있는 SQLServerKeyVaultAuthenticationCallback 호출 됩니다. Azure 키 자격 증명 모음 저장소 공급자를 인스턴스화할 때 응용 프로그램 개발자는 유일한 방법은 호출에 대 한 구현을 제공 해야 **getAccessToken** 를 Azure 키 자격 증명 모음에 저장 된 키에 대 한 액세스 토큰을 검색 합니다.  
-  
-SQLServerKeyVaultAuthenticationCallback 및 SQLServerColumnEncryptionAzureKeyVaultProvider 초기화의 예는 다음과 같습니다.  
+Azure 키 자격 증명 모음을 사용 하려면 클라이언트 응용 프로그램의 SQLServerColumnEncryptionAzureKeyVaultProvider 인스턴스화하고 드라이버에 등록 해야 합니다.
+
+SQLServerColumnEncryptionAzureKeyVaultProvider 초기화의 예는 다음과 같습니다.  
   
 ```  
-// String variables clientID and clientSecret hold the client id and client secret values respectively.  
-  
-ExecutorService service = Executors.newFixedThreadPool(10);  
-SQLServerKeyVaultAuthenticationCallback authenticationCallback = new SQLServerKeyVaultAuthenticationCallback() {  
-       @Override  
-    public String getAccessToken(String authority, String resource, String scope) {  
-        AuthenticationResult result = null;  
-        try{  
-                AuthenticationContext context = new AuthenticationContext(authority, false, service);  
-            ClientCredential cred = new ClientCredential(clientID, clientSecret);  
-  
-            Future<AuthenticationResult> future = context.acquireToken(resource, cred, null);  
-            result = future.get();  
-        }  
-        catch(Exception e){  
-            e.printStackTrace();  
-        }  
-        return result.getAccessToken();  
-    }  
-};  
-  
-SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(authenticationCallback, service);  
-  
+SQLServerColumnEncryptionAzureKeyVaultProvider akvProvider = new SQLServerColumnEncryptionAzureKeyVaultProvider(clientID, clientKey); 
 ```
 
 응용 프로그램을 사용 하 여 SQL Server에 대 한 Microsoft JDBC 드라이버에서 인스턴스를 등록 해야 응용 프로그램 SQLServerColumnEncryptionAzureKeyVaultProvider의 인스턴스를 만든 후의 Sqlserverconnection.registercolumnencryptionkeystoreproviders () 메서드입니다. 이 가장 좋습니다, 그리고 AZURE_KEY_VAULT SQLServerColumnEncryptionAzureKeyVaultProvider.getName() API를 호출 하 여 가져올 수 있는 기본 조회 이름을 사용 하 여 인스턴스에 등록 하는 합니다. 기본 이름을 사용 하 여 하면 프로 비전 할 SQL Server Management Studio 또는 PowerShell 등의 도구를 사용 하 고 상시 암호화 키 (도구 열 마스터 키 메타 데이터 개체를 생성 하는 기본 이름을 사용 하는 데 사용)를 관리할 수 있습니다. 아래 예제에서는 Azure 키 자격 증명 모음 공급자 등록 보여 줍니다. Sqlserverconnection.registercolumnencryptionkeystoreproviders () 메서드에 대 한 자세한 내용은 참조 하십시오. [상시 암호화 API 참조 JDBC 드라이버에 대 한](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)합니다. 
@@ -653,3 +631,4 @@ SQL Server 용 Microsoft JDBC Driver는 데이터가 암호화 되었는지, 또
  [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)  
   
   
+

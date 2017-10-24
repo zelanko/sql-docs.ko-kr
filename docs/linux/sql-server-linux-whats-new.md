@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 456b6f31-6b97-4e31-80ab-b40151ec4868
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: 381dcb3e22f123bfa07c2b387598d3429398e21f
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: f76985a8721e154269b36b0bdcb40a83f6136cb3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="whats-new-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 새로운 기능
@@ -137,6 +137,7 @@ CTP 1.1 릴리스에 다음과 같은 향상 된 기능 및 수정 포함 되어
 
 [서비스 팩 1에서 향상 된 기능](https://blogs.msdn.microsoft.com/sqlreleaseservices/sql-server-2016-service-pack-1-sp1-released/) 이 CTP1.1 릴리스에서:
 - CLR, Filestream/Filetable, 메모리 내 모드와 쿼리 저장소 개체에 대 한 복제 된 데이터베이스입니다.
+  - **2017/18/10 업데이트**: 추가 테스트 시 Filestream 현재 지원 되지 않는 SQL Server 2017 linux의 GA 릴리스에서  
 - **만들** 또는 **ALTER** 프로그래밍 기능 개체에 대 한 연산자입니다.
 - 새 **USE 힌트** 쿼리 옵션 쿼리 프로세서에 대 한 힌트를 제공할 수 있습니다. 자세히 보기: [쿼리 힌트](../t-sql/queries/hints-transact-sql-query.md)합니다.
 - SQL 서비스 계정 이제 프로그래밍 방식으로 식별할 수 페이지 잠금 사용 메모리와 인스턴트 파일 초기화 사용 권한.

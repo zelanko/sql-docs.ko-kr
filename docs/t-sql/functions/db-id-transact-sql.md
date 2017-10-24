@@ -26,11 +26,12 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 60272ce672c0a32738b0084ea86f8907ec7fc0a5
-ms.openlocfilehash: 99497c63e037054daf249ac75ef35073f102a498
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 30d34b3509517d18559d4fbb0aa02a92e6d6cfe8
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/06/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbid-transact-sql"></a>DB_ID(Transact-SQL)
@@ -78,7 +79,7 @@ GO
 ```  
   
 ### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>3. DB_ID를 사용하여 시스템 함수 매개 변수 값 지정  
-다음 예제에서는 `DB`_`ID` 의 데이터베이스 ID를 반환 하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 시스템 함수의 데이터베이스 `sys.dm_db` \_ `index` \_ `operational` \_ `stats`. 함수는 데이터베이스 ID를 첫 번째 매개 변수로 사용합니다.
+다음 예제에서는 `DB_ID` 의 데이터베이스 ID를 반환 하는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 시스템 함수의 데이터베이스 `sys.dm_db_index_operational_stats`합니다. 함수는 데이터베이스 ID를 첫 번째 매개 변수로 사용합니다.
   
 ```sql
 DECLARE @db_id int;  

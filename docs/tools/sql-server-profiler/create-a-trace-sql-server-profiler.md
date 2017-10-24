@@ -16,11 +16,12 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: f0008f30aa031c98e251fd1e4fc764b801a16858
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: adc6db788d4245009d2f70b8af01b84730cb7bb7
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/02/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
@@ -52,14 +53,14 @@ ms.lasthandoff: 08/02/2017
   
 5.  필요에 따라 **추적 중지 시간 설정** 확인란을 선택하여 중지 날짜 및 시간을 지정합니다.  
   
-6.  이벤트, 데이터 열 또는 필터를 추가하거나 제거하려면 **이벤트 선택** 탭을 클릭합니다. 자세한 내용은 [추적 파일에 대해 이벤트 및 데이터 열 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)을 참조하세요.  
+6.  이벤트, 데이터 열 또는 필터를 추가하거나 제거하려면 **이벤트 선택**  탭을 클릭합니다. 자세한 내용은 [추적 파일에 대해 이벤트 및 데이터 열 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)을 참조하세요.  
   
 7.  **실행** 을 클릭하여 추적을 시작합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로파일러 실행에 필요한 권한](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [SQL Server Profiler 템플릿 및 권한](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [SQL Server 프로파일러](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [추적과 Windows 성능 로그 데이터의 상관 관계 지정&#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)  
   
   

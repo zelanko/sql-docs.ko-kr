@@ -27,11 +27,12 @@ caps.latest.revision: 37
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 5179a5d031dbc654f1624f4d64c3e94bf28efe40
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: f51938b0f918a1a85955df4038ded45480bd1a45
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="username-transact-sql"></a>USER_NAME(Transact-SQL)
@@ -128,14 +129,7 @@ DBO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-username"></a>5. USER_NAME 사용  
- 다음 예에서는 사용자 ID `13`에 대한 사용자 이름을 반환합니다.  
-  
-```  
-SELECT USER_NAME(13);  
-```  
-  
-### <a name="f-using-username-without-an-id"></a>6. ID 없이 USER_NAME 사용  
+### <a name="e-using-username-without-an-id"></a>5. ID 없이 USER_NAME 사용  
  다음 예에서는 ID를 지정하지 않고 현재 사용자의 이름을 찾습니다.  
   
 ```  
@@ -144,14 +138,12 @@ SELECT USER_NAME();
   
  현재 로그인 한 사용자에 대 한 결과 집합은 다음과 같습니다.  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
 ```  
 ------------------------------   
 User7                              
 ```  
   
-### <a name="g-using-username-in-the-where-clause"></a>7. WHERE 절에서 USER_NAME 사용  
+### <a name="f-using-username-in-the-where-clause"></a>6. WHERE 절에서 USER_NAME 사용  
  다음 예에서는 `sysusers`에서 `USER_NAME` 시스템 함수를 사용자 ID 번호 `1`에 적용하는 결과와 이름이 동일한 행을 찾습니다.  
   
 ```  

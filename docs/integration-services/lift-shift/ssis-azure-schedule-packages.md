@@ -9,10 +9,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.translationtype: MT
-ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
-ms.openlocfilehash: a3ecfce9a6adac332b72033955ba51271ed8197b
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/06/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="schedule-the-execution-of-an-ssis-package-on-azure"></a>Azure에서 SSIS 패키지의 실행 일정
@@ -47,7 +47,7 @@ Azure SQL 데이터베이스 서버에 저장 된 패키지의 실행 일정을 
     EXEC @return_value = [YourLinkedServer].[SSISDB].[catalog].[create_execution] 
     @folder_name=N'folderName', @project_name=N'projectName', 
     @package_name=N'packageName', @use32bitruntime=0, 
-    @runincluster=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
+    @runinscaleout=1, @useanyworker=1, @execution_id=@exe_id OUTPUT 
  
     EXEC [YourLinkedServer].[SSISDB].[catalog].[start_execution] @execution_id=@exe_id
 
@@ -91,7 +91,7 @@ EXEC jobs.sp_add_jobstep @job_name='ExecutePackageJob',
         EXEC [SSISDB].[catalog].[create_execution]
             @folder_name=N''folderName'', @project_name=N''projectName'',
             @package_name=N''packageName'', @use32bitruntime=0,
-            @runincluster=1, @useanyworker=1, 
+            @runinscaleout=1, @useanyworker=1, 
             @execution_id=@exe_id OUTPUT         
         EXEC [SSISDB].[catalog].[start_execution] @exe_id, @retry_count=0', 
     @credential_name='YourDBScopedCredentials', 
@@ -104,10 +104,17 @@ EXEC jobs.sp_update_job @job_name='ExecutePackageJob', @enabled=1,
 
 ## <a name="sproc"></a>Azure 데이터 팩터리 SQL Server 저장 프로시저 활동을 사용 하 여 패키지 예약
 
+> [!IMPORTANT]
+> JSON 스크립트를 사용 하 여 Azure 데이터 팩터리 버전 1 다음 예제에서 저장 프로시저 작업 합니다.
+
 Azure 데이터 팩터리 SQL Server 저장 프로시저 활동을 사용 하 여 패키지를 예약 하려면 다음 작업을 수행 합니다.
+
 1.  데이터 팩터리를 만듭니다.
+
 2.  SSISDB를 호스팅하는 SQL 데이터베이스에 대 한 연결 된 서비스를 만들었습니다.
+
 3.  일정을 구동 하는 출력 데이터 집합을 만듭니다.
+
 4.  SQL Server 저장 프로시저 활동을 사용 하 여 SSIS 패키지를 실행 하는 데이터 팩터리 파이프라인을 만듭니다.
 
 이 섹션에서는 이러한 단계의 개요를 제공 합니다. 전체 데이터 팩터리의 자습서는이 문서의 범위를 벗어납니다. 자세한 내용은 참조 하십시오. [SQL Server 저장 프로시저 작업](https://docs.microsoft.com/en-us/azure/data-factory/data-factory-stored-proc-activity)합니다.
@@ -122,7 +129,7 @@ Azure 데이터 팩터리 SQL Server 저장 프로시저 활동을 사용 하 �
         "description": "",
         "type": "AzureSqlDatabase",
         "typeProperties": {
-            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30 "
+            "connectionString": "Data Source = tcp: YourSQLDBServer.database.windows.net, 1433; Initial Catalog = SSISDB; User ID = YourUsername; Password = YourPassword; Integrated Security = False; Encrypt = True; Connect Timeout = 30"
         }
     }
 }
@@ -178,16 +185,23 @@ SQL Server 저장 프로시저 활동을 사용 하 여 SSIS 패키지를 실행
 }
 ```
 
-SSIS 패키지 실행 생성 및 시작 하는 데 필요한 TRANSACT-SQL 명령을 캡슐화 하는 새 저장된 프로시저를 만들 필요가 없습니다. 값으로 스크립트를 제공할 수 있습니다는 `stmt` 앞의 예제 JSON 매개 변수입니다. 샘플 스크립트는 다음과 같습니다.
+SSIS 패키지 실행 생성 및 시작 하는 데 필요한 TRANSACT-SQL 명령을 캡슐화 하는 새 저장된 프로시저를 만들 필요가 없습니다. 값으로 전체 스크립트를 제공할 수 있습니다는 `stmt` 앞의 예제 JSON 매개 변수입니다. 샘플 스크립트는 다음과 같습니다.
 
 ```sql
 -- T-SQL script to create and start SSIS package execution using SSISDB catalog stored procedures
 DECLARE @return_value INT,@exe_id BIGINT,@err_msg NVARCHAR(150)
 
-EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runincluster=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
-                                                         
+-- Create the exectuion
+EXEC @return_value=[SSISDB].[catalog].[create_execution] @folder_name=N'folderName', @project_name=N'projectName', @package_name=N'packageName', @use32bitruntime=0, @runinscaleout=1,@useanyworker=1, @execution_id=@exe_id OUTPUT
+
+-- To synchronize SSIS package execution, set the SYNCHRONIZED execution parameter
+EXEC [SSISDB].[catalog].[set_execution_parameter_value] @exe_id, @object_type=50, @parameter_name=N'SYNCHRONIZED', @parameter_value=1
+
+-- Start the execution                                                         
 EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
--- To synchronize SSIS package execution, poll package execution status
+                                          
+-- Raise an error for unsuccessful package execution
+-- Execution status values include the following:
 -- created (1)
 -- running (2)
 -- canceled (3)
@@ -197,20 +211,11 @@ EXEC [SSISDB].[catalog].[start_execution] @execution_id=@exe_id,@retry_count=0
 -- succeeded (7)
 -- stopping (8)
 -- completed (9) 
-                                          
-WHILE(SELECT [status]
-      FROM [SSISDB].[catalog].[executions]
-      WHERE execution_id=@exe_id) NOT IN(3,4,6,7,9)
-BEGIN
-    WAITFOR DELAY '00:00:01';
-END
-
--- Raise an error for unsuccessful package execution
 IF(SELECT [status]
    FROM [SSISDB].[catalog].[executions]
    WHERE execution_id=@exe_id)<>7
 BEGIN
-    SET @err_msg=N'Your package execution did not succeed for execution ID: '+CAST(@exe_id AS NVARCHAR(20))
+    SET @err_msg=N'Your package execution did not succeed for execution ID: ' + CAST(@exe_id AS NVARCHAR(20))
     RAISERROR(@err_msg,15,1)
 END
 GO

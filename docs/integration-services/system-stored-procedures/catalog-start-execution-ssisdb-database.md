@@ -15,10 +15,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 70359d539bc7b4fc6dd70de8bbb7e16be5d71208
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 8edb51596198f27f00c1b78ddc8b3075ad035143
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogstartexecution-ssisdb-database"></a>catalog.start_execution(SSISDB 데이터베이스)
@@ -28,19 +28,19 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```tsql  
-start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_count]  
+```sql  
+catalog.start_execution [@execution_id =] execution_id [, [@retry_count =] retry_count]  
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @execution_id =] *execution_id*  
+ [@execution_id =] *execution_id*  
  실행 인스턴스의 고유 식별자입니다. *execution_id* 은 **bigint**합니다.
  
- [ @retry_count =] *retry_count*  
- 실행이 실패 하면 재시도 횟수입니다. 실행 중인 스케일 아웃 하는 경우에 적용이 됩니다. 이 매개 변수는 선택 사항입니다. 그는 0으로 설정 되지 않은 경우 지정 합니다. *retry_count* 은 **int**합니다.
+ [@retry_count =] *retry_count*  
+ 실행이 실패 하면 재시도 횟수입니다. 실행 중인 스케일 아웃 하는 경우에 적용이 됩니다. 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 해당 값을 0으로 설정 됩니다. *retry_count* 은 **int**합니다.
   
 ## <a name="remarks"></a>주의  
- 실행은 단일 인스턴스의 패키지 실행 중에 패키지에서 사용할 매개 변수 값을 지정하는 데 사용됩니다. 실행 인스턴스가 생성된 후부터 시작되기 전까지 해당 프로젝트가 다시 배포될 수도 있습니다. 이 경우 실행 인스턴스는 오래된 프로젝트를 참조하게 되며, 이로 인해 저장 프로시저가 실패합니다.  
+ 실행은 단일 인스턴스의 패키지 실행 시 패키지에서 사용 되는 매개 변수 값을 지정 하는 데 사용 됩니다. 실행 인스턴스가 생성된 후부터 시작되기 전까지 해당 프로젝트가 다시 배포될 수도 있습니다. 이 경우 실행 인스턴스는 오래 된 프로젝트를 참조 합니다. 이 잘못 된 참조 하면 저장된 프로시저에 실패 합니다.  
   
 > [!NOTE]  
 >  실행은 한 번만 시작할 수 있습니다. 생성 됨 상태 여야 합니다 실행 인스턴스를 시작 하려면 (값 `1` 에 **상태** 의 열은 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 보기).  
@@ -48,7 +48,7 @@ start_execution [ @execution_id = ] execution_id [, [@retry_count = ] retry_coun
 ## <a name="example"></a>예제  
  다음 예에서는 catalog.create_execution을 호출하여 Child1.dtsx 패키지에 대한 실행 인스턴스를 만듭니다. Integration Services Project1에 패키지가 포함되어 있습니다. 이 예에서는 catalog.set_execution_parameter_value를 호출하여 Parameter1, Parameter2 및 LOGGING_LEVEL 매개 변수에 값을 설정합니다. 이 예에서는 catalog.start_execution을 호출하여 실행 인스턴스를 시작합니다.  
   
-```  
+```sql
 Declare @execution_id bigint  
 EXEC [SSISDB].[catalog].[create_execution] @package_name=N'Child1.dtsx', @execution_id=@execution_id OUTPUT, @folder_name=N'TestDeply4', @project_name=N'Integration Services Project1', @use32bitruntime=False, @reference_id=Null  
 Select @execution_id  
@@ -60,7 +60,6 @@ DECLARE @var2 smallint = 1
 EXEC [SSISDB].[catalog].[set_execution_parameter_value] @execution_id, @object_type=50, @parameter_name=N'LOGGING_LEVEL', @parameter_value=@var2  
 EXEC [SSISDB].[catalog].[start_execution] @execution_id  
 GO  
-  
 ```  
   
 ## <a name="return-code-value"></a>반환 코드 값  

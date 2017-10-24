@@ -23,11 +23,12 @@ caps.latest.revision: 35
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a7366ab75865bca6f0e1220799a50c7c8d650863
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 60d3a635b15cd1413b3c7ba6db145cd5717b7e41
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="unicode-transact-sql"></a>UNICODE(Transact-SQL)
@@ -72,95 +73,6 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ```  
   
 ### <a name="b-using-substring-unicode-and-convert"></a>2. SUBSTRING, UNICODE, CONVERT 사용  
- 다음 예에서는 `SUBSTRING`, `UNICODE` 및 `CONVERT` 함수를 사용하여 `Åkergatan 24` 문자열에 있는 각 문자의 문자 번호, 유니코드 문자, UNICODE 값 등을 인쇄하는 방법을 보여 줍니다.  
-  
-```  
--- The @position variable holds the position of the character currently  
--- being processed. The @nstring variable is the Unicode character   
--- string to process.  
-DECLARE @position int, @nstring nchar(12);  
--- Initialize the current position variable to the first character in   
--- the string.  
-SET @position = 1;  
--- Initialize the character string variable to the string to process.   
--- Notice that there is an N before the start of the string, which   
--- indicates that the data following the N is Unicode data.  
-SET @nstring = N'Åkergatan 24';  
--- Print the character number of the position of the string you are at,   
--- the actual Unicode character you are processing, and the UNICODE   
--- value for this particular character.  
-PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';  
-WHILE @position <= DATALENGTH(@nstring)  
--- While these are still characters in the character string,  
-   BEGIN;  
-   SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1));  
-   SELECT @position = @position + 1;  
-   END;  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
-Character # Unicode Character UNICODE Value  
-  
------------ ----------------- -----------   
-1           Å                 197           
-  
------------ ----------------- -----------   
-2           k                 107           
-  
------------ ----------------- -----------   
-3           e                 101           
-  
------------ ----------------- -----------   
-4           r                 114           
-  
------------ ----------------- -----------   
-5           g                 103           
-  
------------ ----------------- -----------   
-6           a                 97            
-  
------------ ----------------- -----------   
-7           t                 116           
-  
------------ ----------------- -----------   
-8           a                 97            
-  
------------ ----------------- -----------   
-9           n                 110           
-  
------------ ----------------- -----------   
-10                            32            
-  
------------ ----------------- -----------   
-11          2                 50            
-  
------------ ----------------- -----------   
-12          4                 52  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="c-using-unicode-and-the-nchar-function"></a>3. UNICODE 및 NCHAR 함수 사용  
- 다음 예에서는 `UNICODE`와 `NCHAR` 함수를 사용하여 `Åkergatan` 24 문자열에 있는 첫 글자의 UNICODE 값을 인쇄하고 실제 첫 글자 `Å`를 인쇄합니다.  
-  
-```  
-DECLARE @nstring nchar(12);  
-SET @nstring = N'Åkergatan 24';  
-SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));  
-```  
-  
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-```  
------------ -   
-197         Å  
-```  
-  
-### <a name="d-using-substring-unicode-and-convert"></a>4. SUBSTRING, UNICODE, CONVERT 사용  
  다음 예에서는 `SUBSTRING`, `UNICODE` 및 `CONVERT` 함수를 사용하여 `Åkergatan 24` 문자열에 있는 각 문자의 문자 번호, 유니코드 문자, UNICODE 값 등을 인쇄하는 방법을 보여 줍니다.  
   
 ```  

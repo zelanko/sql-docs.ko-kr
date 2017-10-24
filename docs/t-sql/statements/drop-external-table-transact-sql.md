@@ -16,11 +16,12 @@ caps.latest.revision: 12
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 0e560c5341abd440f641a988751a6ca2875b9bbb
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 7cf14c5782a5cdc876b04600447892932f9e9921
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="drop-external-table-transact-sql"></a>외부 테이블 삭제 (Transact SQL)
@@ -67,30 +68,6 @@ DROP EXTERNAL TABLE ProductVendor1;
 ```  
   
 ### <a name="c-dropping-a-table-from-another-database"></a>3. 다른 데이터베이스에서 테이블 삭제  
- 다음 예에서는 `EasternDivision` 데이터베이스에서 `SalesPerson` 테이블을 삭제합니다.  
-  
-```  
-DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-  
-### <a name="d-using-basic-syntax"></a>4. 기본 구문을 사용 하 여  
-  
-```  
-DROP EXTERNAL TABLE SalesPerson;  
-DROP EXTERNAL TABLE dbo.SalesPerson;  
-DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
-```  
-  
-### <a name="e-dropping-an-external-table-from-the-current-database"></a>5. 현재 데이터베이스에서 외부 테이블을 삭제 하는 중입니다.  
- 다음 예제에서는 제거 된 `ProductVendor1` 테이블, 데이터, 인덱스 및 현재 데이터베이스에서 모든 종속 보기.  
-  
-```  
-DROP EXTERNAL TABLE ProductVendor1;  
-```  
-  
-### <a name="f-dropping-a-table-from-another-database"></a>6. 다른 데이터베이스에서 테이블 삭제  
  다음 예에서는 `EasternDivision` 데이터베이스에서 `SalesPerson` 테이블을 삭제합니다.  
   
 ```  

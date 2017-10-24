@@ -23,11 +23,12 @@ caps.latest.revision: 56
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: cbd10b32ee6b2d88a97222c3a970452a4a628b83
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 2f793612ff0fa46e2fd72f6a51e48eae30602fdf
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="indexproperty-transact-sql"></a>NDEXPROPERTY(Transact-SQL)
@@ -82,7 +83,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  사용자는 소유하고 있거나 사용 권한을 부여 받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 INDEXPROPERTY와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 에 대 한 값을 반환 하는 다음 예제는 **IsClustered**, **IndexDepth**, 및 **IndexFillFactor** 에 대 한 속성의 `PK`_`Employee` \_ `BusinessEntityID` 의 인덱스는 `Employee` 테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
+ 에 대 한 값을 반환 하는 다음 예제는 **IsClustered**, **IndexDepth**, 및 **IndexFillFactor** 에 대 한 속성의 `PK_Employee_BusinessEntityID` 는 의인덱스`Employee`테이블에 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스입니다.  
   
 ```  
 SELECT   

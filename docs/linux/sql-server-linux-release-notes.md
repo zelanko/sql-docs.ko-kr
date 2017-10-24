@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
 ms.translationtype: MT
-ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
-ms.openlocfilehash: eff73515b09d96c6f86cb4993237f99e4d300c7c
+ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
+ms.openlocfilehash: f9315ca5b46a0dc45a0f8171fa6eea67cd2f4337
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 10/18/2017
 
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>SQL Server 2017 linux에 대 한 릴리스 정보
@@ -50,7 +50,6 @@ SQL Server 2017 Availablity GA (일반) 릴리스의입니다. 이 릴리스에 
 
 > [!NOTE]
 > 최소 3.25 g B 메모리 Linux에서 SQL Server를 실행 해야 합니다.
-> SQL Server 엔진 되었습니다.이 이번에 1.5 t B의 메모리를 테스트 합니다.
 
 ### <a name="package-details"></a>패키지 세부 정보
 
@@ -60,7 +59,11 @@ SQL Server 2017 Availablity GA (일반) 릴리스의입니다. 이 릴리스에 
 - [전체 텍스트 검색 패키지 설치](sql-server-linux-setup-full-text-search.md)
 - [SQL Server 에이전트 패키지를 설치 합니다.](sql-server-linux-setup-sql-agent.md)
 
-| 패키지 | 패키지 버전 | 다운로드 | o |---|---|---| | Red Hat RPM 패키지 | 14.0.1000.169-2 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | | SLES RPM 패키지 | 14.0.1000.169-2 | [mssql 서버 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | | Ubuntu 16.04 Debian 패키지 | 14.0.1000.169-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[높은 가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server 에이전트 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
+| 패키지 | 패키지 버전 | 다운로드 |
+|-----|-----|-----|
+| Red Hat RPM 패키지 | 14.0.1000.169-2 | [엔진 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM 패키지 | 14.0.1000.169-2 | [mssql 서버 엔진 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[높은 가용성 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[전체 텍스트 검색 RPM 패키지](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server 에이전트 RPM 패키지](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
+| Ubuntu 16.04 Debian 패키지 | 14.0.1000.169-2 | [엔진 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[높은 가용성 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[전체 텍스트 검색 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server 에이전트 Debian 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS 패키지](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ### <a name="supported-client-tools"></a>지원 되는 클라이언트 도구
 
@@ -82,7 +85,7 @@ SQL Server 2017 Availablity GA (일반) 릴리스의입니다. 이 릴리스에 
 | &nbsp; | Polybase |
 | &nbsp; | 타사 연결을 통해 분산된 쿼리 |
 | &nbsp; | 시스템 확장 저장된 프로시저 (XP_CMDSHELL 등). |
-| &nbsp; | Filetable |
+| &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | CLR 어셈블리 EXTERNAL_ACCESS 또는 UNSAFE 권한 설정 |
 | &nbsp; | 버퍼 풀 확장 |
 | **SQL Server 에이전트** |  하위 시스템: CmdExec, PowerShell, 큐 판독기, SSIS, SSAS, SSRS |
@@ -95,7 +98,7 @@ SQL Server 2017 Availablity GA (일반) 릴리스의입니다. 이 릴리스에 
 | &nbsp; | 연결 된 서버에 대 한 AD 인증 | 
 | &nbsp; | 가용성 그룹 (Ag)에 대 한 AD 인증 | 
 | &nbsp; | AD 타사 도구 (Centrify, Vintela, Powerbroker) | 
-| **서비스** | SQL Server Browser |
+| **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
@@ -225,7 +228,7 @@ Sqlservr 프로세스 예: 연결 된 서버 또는 가용성 그룹의에서 �
   - Hadoop 및 HDFS 지원
   - Microsoft Connector for SAP BW
 
-목록이 현재 지원 되지 않거나 제한 사항과 함께 지원 되는 기본 제공 SSIS 구성 요소에 대 한 참조 [추출, 변환 및 SSIS와 Linux에서 데이터 로드](sql-server-linux-migrate-ssis.md#components)합니다.
+목록이 현재 지원 되지 않거나 제한 사항과 함께 지원 되는 기본 제공 SSIS 구성 요소에 대 한 참조 [Linux에서 SSIS에 대 한 알려진된 문제 및 제한](sql-server-linux-ssis-known-issues.md#components)합니다.
 
 Linux에서 SSIS에 대 한 자세한 내용은 다음 문서를 참조 합니다.
 -   [Linux에 대 한 SSIS 지원 블로그 게시물 발표](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)합니다.
@@ -318,7 +321,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | &nbsp; | Managed Backup |
 | **고가용성** | 데이터베이스 미러링  |
 | **보안** | 확장 가능 키 관리 |
-| **서비스** | SQL Server Browser |
+| **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
@@ -399,7 +402,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 - 일부 필터는 Office 문서에 대 한 필터를 포함 하 여이 릴리스와 함께 제공 합니다. 지원 되는 필터 목록에 대 한 참조 [Linux에서 SQL Server 전체 텍스트 검색 설치](sql-server-linux-setup-full-text-search.md#filters)합니다.
 
 #### <a name="sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)
-Linux에서 SSIS 패키지를 실행할 수 있습니다. 자세한 내용은 다음 문서를 참조 합니다.
+Linux에서 SSIS 패키지를 실행할 수 있습니다. 자세한 내용은 다음 문서를 참조하세요.
 -   [Linux에 대 한 SSIS 지원 블로그 게시물 발표](https://blogs.msdn.microsoft.com/ssis/2017/05/17/ssis-helsinki-is-available-in-sql-server-vnext-ctp2-1/)합니다.
 -   [Linux에서 SQL Server Integration Services (SSIS)를 설치 합니다.](sql-server-linux-setup-ssis.md)
 -   [추출, 변환 및 SSIS와 Linux에서 데이터 로드](sql-server-linux-migrate-ssis.md)
@@ -503,7 +506,7 @@ Linux에서 SQL Server에 연결 하는 Windows에서 SSMS에 다음과 같은 �
 | **고가용성** | 데이터베이스 미러링  |
 | &nbsp; | 가용성 그룹의 롤링 업그레이드 |
 | **보안** | 확장 가능 키 관리 |
-| **서비스** | SQL Server Browser |
+| **Services** | SQL Server Browser |
 | &nbsp; | SQL Server R 서비스 |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |

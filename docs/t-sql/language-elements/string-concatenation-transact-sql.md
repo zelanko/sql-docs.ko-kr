@@ -24,11 +24,12 @@ caps.latest.revision: 51
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 66f482d424c6be56d89e8ec5b99cff30b2ddab0b
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 1fd13b0b05dcb3b15d37d5a642a734b99ad004e5
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="-string-concatenation-transact-sql"></a>+(문자열 연결)(Transact-SQL)
@@ -158,18 +159,7 @@ GO
  ```  
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="e-using-string-concatenation"></a>5. 문자열 연결 사용  
- 다음 예제에서는 열 머리글의 단일 열 `Name` 에서 여러 문자 열을, 쉼표, 공백 및 연락처의 성 연락처의 성 사용 합니다. 결과 집합에서 성과 이름이 사전 오름차순으로 정렬됩니다.  
-  
-```  
--- Uses AdventureWorks  
-  
-SELECT (LastName + ', ' + FirstName) AS Name  
-FROM DimEmployee  
-ORDER BY LastName ASC, FirstName ASC;  
-```  
-  
-### <a name="f-using-multiple-string-concatenation"></a>6. 여러 문자열의 연결  
+### <a name="e-using-multiple-string-concatenation"></a>5. 여러 문자열의 연결  
  다음 예제에서는 여러 개의 문자열 마지막 이름 및 성의 첫 이니셜 부사장 샘플 데이터베이스에서 표시 하는 하나의 긴 문자열을 연결 합니다. 성 뒤에는 쉼표, 그리고 첫 번째 이니셜 뒤에는 마침표가 추가됩니다.  
   
 ```  

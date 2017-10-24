@@ -27,11 +27,12 @@ caps.latest.revision: 49
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: a1adc4da20dca615254f43c08282ee597b8dad17
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 79750bc5f94a7a2b459d0b3e3266ea7ee91bc4dc
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG(Transact-SQL)
@@ -117,7 +118,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## <a name="examples"></a>예  
 ### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>1. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
-다음 예제에는의 모든 파티션을 조각 모음는 `PK_Product`_`ProductID` 인덱스는 `Production.Product` 테이블에 `AdventureWorks` 데이터베이스입니다.
+다음 예제에는의 모든 파티션을 조각 모음는 `PK_Product_ProductID` 인덱스는 `Production.Product` 테이블에 `AdventureWorks` 데이터베이스입니다.
   
 ```sql  
 DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID);  

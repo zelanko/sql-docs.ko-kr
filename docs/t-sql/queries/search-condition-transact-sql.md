@@ -40,11 +40,12 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: fa99ed46f0d5248f2cb0552a62ec1547d5b4f296
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: ad0a32f2f11c7b0ca781c7e01635204da38fcbdd
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
@@ -187,7 +188,7 @@ ms.lasthandoff: 09/01/2017
 ## <a name="examples"></a>예  
   
 ### <a name="a-using-where-with-like-and-escape-syntax"></a>1. WHERE 절에 LIKE 및 ESCAPE 구문 사용  
- 다음 예에서는 `LargePhotoFileName` 열에 `green_` 문자가 있는 행을 검색하며 `ESCAPE`이 와일드카드 문자이므로 `_` 옵션을 사용합니다. `ESCAPE` 옵션을 지정하지 않으면 이 쿼리는 `green` 다음에 `_` 문자가 아닌 다른 한 문자가 나오는 설명 값을 검색합니다.  
+ 다음 예에서는 있는 행에 대 한 검색는 `LargePhotoFileName` 열에는 문자 `green_`를 사용 하 여는 `ESCAPE` _ 와일드 카드 문자 이므로 옵션입니다. 지정 하지 않고는 `ESCAPE` 옵션을 포함 하는 모든 설명 값에 대 한 쿼리를 검색 합니다 `green` _ 문자 이외의 모든 단일 문자입니다.  
   
 ```  
 USE AdventureWorks2012 ;  

@@ -10,10 +10,10 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.translationtype: MT
-ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
-ms.openlocfilehash: c3d8adf8dedbee9b5c49cda25171f8f327fc5048
+ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
+ms.openlocfilehash: ea8a0eb15a17cb7bc0032cf951c3fce0830761ac
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/02/2017
+ms.lasthandoff: 10/21/2017
 
 ---
 # <a name="install-sql-server-and-create-a-database-on-ubuntu"></a>Ubuntu에서 데이터베이스를 만들고 SQL Server 설치
@@ -27,9 +27,12 @@ ms.lasthandoff: 10/02/2017
 
 ## <a name="prerequisites"></a>필수 구성 요소
 
-와 Ubuntu 시스템이 있어야 **3.25 GB 이상** 메모리입니다.
+와 Ubuntu 16.04 시스템이 있어야 **3.25 GB 이상** 메모리입니다.
 
 Ubuntu을 사용자의 컴퓨터에 설치 하려면로 이동 [http://www.ubuntu.com/download/server](http://www.ubuntu.com/download/server)합니다. 또한 Azure의 Ubuntu 가상 컴퓨터를 만들 수 있습니다. 참조 [만들기 및 관리 Azure CLI 된 Linux Vm](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)합니다.
+
+> [!NOTE]
+> 이번에 [Linux에 대 한 Windows 하위](https://msdn.microsoft.com/commandline/wsl/about) 설치 대상으로 Windows 10은 지원 되지 않습니다.
 
 다른 시스템 요구 사항에 대 한 참조 [Linux에서 SQL Server에 대 한 시스템 요구 사항](sql-server-linux-setup.md#system)합니다.
 
@@ -38,7 +41,7 @@ Ubuntu을 사용자의 컴퓨터에 설치 하려면로 이동 [http://www.ubunt
 Ubuntu에 SQL Server를 구성 하려면 종료를 설치 하려면 다음 명령을 실행는 **mssql 서버** 패키지 합니다.
 
 > [!IMPORTANT]
-> CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 GA 저장소 중 하나를 등록 하기 전에 이전 저장소를 먼저 제거 해야 있습니다. 자세한 내용은 참조 [GA 저장소에 미리 보기 저장소에서 저장소 변경](sql-server-linux-change-repo.md)
+> CTP 또는 SQL Server 2017 RC 릴리스 이전에 설치한 경우 GA 저장소 중 하나를 등록 하기 전에 이전 저장소를 먼저 제거 해야 있습니다. 자세한 내용은 참조 [GA 저장소에 미리 보기 저장소에서 리포지토리 변경](sql-server-linux-change-repo.md)합니다.
 
 1. 공용 저장소 GPG 키를 가져옵니다.
 

@@ -22,11 +22,12 @@ caps.latest.revision: 33
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
-ms.openlocfilehash: 2a453b99d7ab0512e57275b5ad1805f5a66522ba
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 39bd8a393a9cc3e19e457cda98c0521492e07911
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID(Transact-SQL)
@@ -37,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 > [!IMPORTANT]  
 >  개인 정보 보호가 중요한 경우에는 이 함수를 사용하지 마십시오. 다음번에 생성되는 GUID 값을 추측할 수 있으므로 이 GUID와 관련된 데이터에 액세스할 수 있습니다.  
   
- NEWSEQUENTIALID는 창에 대해 래퍼는 [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 함수입니다.  
+ NEWSEQUENTIALID는 창에 대해 래퍼는 [UuidCreateSequential](http://go.microsoft.com/fwlink/?LinkId=164027) 함수 일부와 [바이트 적용 순서 섞기](https://blogs.msdn.microsoft.com/dbrowne/2012/07/03/how-to-generate-sequential-guids-for-sql-server-in-net/)합니다.
   
 > [!WARNING]  
 >  UuidCreateSequential 함수는 하드웨어 종속 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], (예: 포함 된 데이터베이스) 데이터베이스를 다른 컴퓨터로 이동할 때 순차 값의 클러스터를 개발할 수 있습니다. Always On 사용 하는 경우와 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], 다른 컴퓨터에 데이터베이스가 장애 조치 클러스터의 순차 값 개발할 수 있습니다.  

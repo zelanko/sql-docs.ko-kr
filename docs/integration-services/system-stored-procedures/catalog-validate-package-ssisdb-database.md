@@ -18,10 +18,10 @@ author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
 ms.translationtype: MT
-ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
-ms.openlocfilehash: 8b4dbd030c457bfb90ac4ec7fae886de28f96854
+ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
+ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/26/2017
+ms.lasthandoff: 10/20/2017
 
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package(SSISDB 데이터베이스)
@@ -31,9 +31,8 @@ ms.lasthandoff: 09/26/2017
   
 ## <a name="syntax"></a>구문  
   
-```  
-  
-validate_package [ @folder_name = ] folder_name  
+```sql
+catalog.validate_package [ @folder_name = ] folder_name  
     , [ @project_name = ] project_name  
     , [ @package_name = ] package_name  
     , [ @validation_id = ] validation_id OUTPUT  
@@ -59,7 +58,7 @@ validate_package [ @folder_name = ] folder_name
  64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 값을 사용 하 여 `1` 64 비트 운영 체제에서 실행 하는 경우 32 비트 런타임 사용 하 여 패키지를 실행 합니다. 64비트 운영 체제에서 실행할 때 64비트 런타임으로 패키지를 실행하려면 값 `0`을 사용합니다. 이 매개 변수는 선택 사항입니다. *use32bitruntime* 은 **비트**합니다.  
   
  [ @environment_scope =] *environment_scope*  
- 유효성 검사에서 고려되는 환경 참조를 나타냅니다. 값이 `A`이면 프로젝트와 연결된 모든 환경 참조가 유효성 검사에 포함되고, 값이 `S`이면 단일 환경 참조만 포함됩니다. 또한 값이 `D`이면 아무 환경 참조도 포함되지 않습니다. 이 경우 유효성 검사를 통과하려면 각 매개 변수 값이 리터럴 기본값이어야 합니다. 이 매개 변수는 선택 사항이며, 기본적으로 `D` 문자가 사용됩니다. *environment_scope* 은 **Char(1)**합니다.  
+ 유효성 검사에서 고려되는 환경 참조를 나타냅니다. 값이 `A`이면 프로젝트와 연결된 모든 환경 참조가 유효성 검사에 포함되고, 값이 `S`이면 단일 환경 참조만 포함됩니다. 또한 값이 `D`이면 아무 환경 참조도 포함되지 않습니다. 이 경우 유효성 검사를 통과하려면 각 매개 변수 값이 리터럴 기본값이어야 합니다. 이 매개 변수는 선택 사항입니다. 문자 `D` 기본적으로 사용 됩니다. *environment_scope* 은 **Char(1)**합니다.  
   
  [ @reference_id =] *reference_id*  
  환경 참조의 고유 ID입니다. 이 매개 변수는 단일 환경 참조의 유효성 검사에 포함 되어 있는 경우에 필요 때 *environment_scope* 은 `S`합니다. *reference_id* 은 **bigint**합니다.  
@@ -97,6 +96,6 @@ validate_package [ @folder_name = ] folder_name
 -   변수가 패키지 매개 변수에서 참조되지만 유효성 검사에 참조된 환경이 포함되지 않은 경우  
   
 ## <a name="remarks"></a>주의  
- 유효성 검사를 통해 패키지 실행을 방해하는 문제를 확인할 수 있습니다. 사용 하 여는 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 또는 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰를 유효성 검사 상태를 모니터링 합니다.  
+ 유효성 검사는 패키지가 성공적으로 실행 하지 못하게 할 수 있는 문제를 식별 하는 데 도움이 됩니다. 사용 하 여는 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 또는 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰를 유효성 검사 상태를 모니터링 합니다.  
   
   
