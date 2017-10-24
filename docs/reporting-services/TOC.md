@@ -71,6 +71,8 @@
 
 
 # 개발자
+## [REST API](developer/rest-api.md)
+## [REST API 샘플](https://github.com/Microsoft/Reporting-Services)
 ## [응용 프로그램 통합](../reporting-services/application-integration/integrating-reporting-services-into-applications.md)
 ## [보고서 서버 웹 서비스](../reporting-services/report-server-web-service/report-server-web-service.md)
 ## [확장](../reporting-services/extensions/reporting-services-extension-library.md)
@@ -85,7 +87,7 @@
 ### [CSV 장치 정보 설정](csv-device-information-settings.md)  
 ### [Excel 장치 정보 설정](excel-device-information-settings.md)  
 ### [HTML 장치 정보 설정](html-device-information-settings.md)  
-### [이미지 장치 정보 설정](image-device-information-settings.md)###[MHTML 장치 정보 설정](mhtml-device-information-settings.md)  
+### [이미지 장치 정보 설정](image-device-information-settings.md)  ### [MHTML 장치 정보 설정](mhtml-device-information-settings.md)  
 ### [PDF 장치 정보 설정](pdf-device-information-settings.md)  
 ### [PPTX 장치 정보 설정](pptx-device-information-settings.md)  
 ### [XML 장치 정보 설정](xml-device-information-settings.md)  
