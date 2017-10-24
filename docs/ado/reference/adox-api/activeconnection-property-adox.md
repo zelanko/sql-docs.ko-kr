@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b827ec332b89767a030e1925320345a2b78baee
@@ -57,3 +58,4 @@ ADO 나타냅니다 [연결](../../../ado/reference/ado-api/connection-object-ad
  [뷰 컬렉션, CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [뷰는 메서드 예제를 (VB)를 새로 고칩니다.](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [Create 메서드(ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+

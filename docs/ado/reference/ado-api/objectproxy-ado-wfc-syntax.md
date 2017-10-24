@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0bd3aa2bd2cf7b49432e6b29c312e65819d50f4a
@@ -54,3 +55,4 @@ public Object ObjectProxy.( String method, Object[] args)
   
  *args*  
  (선택 사항) 인수는 서버에서 메서드를 개체의 배열입니다. 서버에서 사용 하기 위해 적합 한 데이터 형식으로 Java 데이터 형식 자동 변환 됩니다.
+

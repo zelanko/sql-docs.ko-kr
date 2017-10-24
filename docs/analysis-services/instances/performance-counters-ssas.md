@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0e2d625f6c9060f32fb2a2dc676c84c673f55c8f
@@ -351,3 +352,4 @@ ms.lasthandoff: 09/01/2017
 |Processing  pool  I/O  job  completion  rate|처리 스레드 풀을 통한 I/O 작업 비율입니다.|  
   
   
+

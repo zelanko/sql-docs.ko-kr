@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f3d141fc218101902ae094ff2a4db385d204fa3
@@ -122,3 +123,4 @@ ms.lasthandoff: 09/09/2017
  사용 하는 경우 현재 레코드가 없는 경우는 **GetChunk** 또는 **AppendChunk** 에서 메서드는 **필드** 개체 3021 (현재 레코드 없음) 오류가 발생 합니다.  
   
  이러한 메서드를 사용 하 여 이진 데이터를 조작 하는 예제를 보려면는 [AppendChunk 메서드](../../../ado/reference/ado-api/appendchunk-method-ado.md) 및 [GetChunk 메서드](../../../ado/reference/ado-api/getchunk-method-ado.md) 의 예제는 *ADO Programmer's Reference*합니다.
+

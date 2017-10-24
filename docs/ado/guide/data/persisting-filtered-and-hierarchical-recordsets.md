@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8de12620e57fe9cf7235c2a1f5a1442b429197d0
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]
 >  계층 구조를 저장할 때 몇 가지 제한이 적용 **레코드 집합** (데이터 셰이프)를 XML 형식입니다. 자세한 내용은 참조 [XML 형식의 레코드 지속](../../../ado/guide/data/persisting-records-in-xml-format.md)합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f8b01b8cd08c46f641fbd713f4acbdeca53db5c6
@@ -64,3 +65,4 @@ rsCustomers.Open strShape, cn, adOpenStatic, adLockOptimistic, -1
  [데이터 모양 지정에 필요한 공급자](../../../ado/guide/data/required-providers-for-data-shaping.md)   
  [셰이프 APPEND 절](../../../ado/guide/data/shape-append-clause.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
+

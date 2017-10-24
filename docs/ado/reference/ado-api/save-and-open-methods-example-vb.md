@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad4d79342ae4903e3469f3685210e882d64d318f
@@ -105,3 +106,4 @@ Attribute VB_Name = "Save"
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [지 속성 레코드 집합에 대 한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)
+

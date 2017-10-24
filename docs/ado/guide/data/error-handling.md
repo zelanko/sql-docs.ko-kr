@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1c85fb540f034c5a0a6870c38ea5797948d5fbd
@@ -56,3 +57,4 @@ ADO 오류 발생 하는 응용 프로그램에 알리기 위해 여러 가지 �
 -   [다른 언어로 오류 처리](../../../ado/guide/data/handling-errors-in-other-languages.md)  
   
 -   [오류 예측](../../../ado/guide/data/anticipating-errors.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b9f698c43ffe1e650c5b2057ab35ec597cfab58
@@ -127,3 +128,4 @@ End Sub
  [OriginalValue 속성 (ADO)](../../../ado/reference/ado-api/originalvalue-property-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [UnderlyingValue 속성](../../../ado/reference/ado-api/underlyingvalue-property.md)
+

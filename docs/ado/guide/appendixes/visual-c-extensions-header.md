@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3d9065ef0ee22ce415fa764a8572ec4effdb3c61
@@ -214,3 +215,4 @@ public:
 ## <a name="see-also"></a>관련 항목:  
  [Visual c + + 확장 예제](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Visual C++ 확장 사용](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+

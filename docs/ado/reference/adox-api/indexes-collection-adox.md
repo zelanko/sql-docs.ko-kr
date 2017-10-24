@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 66cc6532a626ee65b8f152eb9bca57dc2a6468ec
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [인덱스 추가 (VB) 메서드 예제](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+

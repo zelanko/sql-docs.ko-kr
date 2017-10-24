@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3213d88fd8f1119ffbb4bb71ab8658e0750f98c6
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/01/2017
  참조 차원에서 세분성은 참조 차원과 주 차원 테이블에 해당되는 측정값 그룹 간의 관계를 정의하는 특성을 식별하여 지정됩니다. 여러 참조 차원이 함께 연결될 때는 참조가 가장 바깥쪽 차원에서 측정값 그룹까지의 관계를 정의합니다.  
   
   
+

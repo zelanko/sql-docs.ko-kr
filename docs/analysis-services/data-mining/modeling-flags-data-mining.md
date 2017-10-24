@@ -27,6 +27,7 @@ caps.latest.revision: 48
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ec1ae22619f8988c6d334dfd501faa221e34d1f7
@@ -119,3 +120,4 @@ WHERE MODEL_NAME = '<model name>'
 |모델 및 구조 관리와 사용법 속성 설정에 대한 자세한 정보|[데이터 마이닝 개체 이동](../../analysis-services/data-mining/moving-data-mining-objects.md)|  
   
   
+

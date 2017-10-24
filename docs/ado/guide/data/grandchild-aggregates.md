@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0785bede442b0f89a9a8a1efacaac03c1aedf2d3
@@ -29,3 +30,4 @@ Shape 명령의 절에 만든 장 열을 지정할 수 있습니다는 *장 별�
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 셰이핑 예제](../../../ado/guide/data/data-shaping-example.md)
+

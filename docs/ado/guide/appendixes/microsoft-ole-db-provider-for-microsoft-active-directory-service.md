@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc6946f6944cf37f85759847f2c8db852d120461
@@ -150,3 +151,4 @@ objectClass='user' AND objectCategory='Person'"
  [공급자 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 메서드](../../../ado/reference/ado-api/supports-method.md)
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a970011085cb3e78c4222d429c5db439ef586586
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 개인 설정 확장 프로그램을 디자인하는 방법에 대해 설명합니다.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 09a30dc2e51e07a9720e0796666c3a89534acdbe
@@ -61,3 +62,4 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
 |[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]: ADOMD.NET이 중앙 관리를 수행하도록 구성된 독립 실행형 WFE에 설치되어 있지 않습니다.|아니오|아니오|SharePoint 2013<br /><br /> SharePoint 2010|ADOMD.NET은 Analysis  Services  데이터베이스에 대한 연결을 지원하는 Analysis  Services  클라이언트 라이브러리입니다. SharePoint용 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 배포 시, ADOMD.NET은 중앙 관리에 있는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 관리 대시보드의 기본 제공 보고서에 대한 액세스를 제공합니다. 실제로 기본 제공 보고서는 포함된 Analysis Services 데이터를 포함하는 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 통합 문서입니다. 관리 대시보드는 ADOMD.NET을 사용하여 통합 문서에 포함된 데이터를 로드하는 서버에 연결 요청을 보냅니다.<br /><br /> 독립 실행형 웹 프런트 엔드 서버에서 실행되는 중앙 관리를 포함하는 토폴로지의 경우 관리 대시보드에서 이러한 보고서를 보려면 ADOMD.NET을 수동으로 설치해야 합니다. 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](http://msdn.microsoft.com/en-us/c2372180-e847-4cdb-b267-4befac3faf7e)를 참조하세요.|  
   
   
+

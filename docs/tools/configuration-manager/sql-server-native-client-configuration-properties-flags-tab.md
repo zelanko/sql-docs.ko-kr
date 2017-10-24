@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5c52f59e6e592be5d181a703236b08803d79303b
@@ -38,3 +39,4 @@ ms.lasthandoff: 08/02/2017
  **서버 인증서 신뢰** 는 **프로토콜 암호화 강제 사용** 이 **예**로 설정된 경우에만 사용할 수 있습니다.  
   
   
+

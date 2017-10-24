@@ -18,6 +18,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9aadb2a81cc93effa0c280f5f74e6403c7403756
@@ -184,3 +185,4 @@ Response.write "</XML>"
   
 ### <a name="remarks"></a>주의  
  이 시점에서 클라이언트 브라우저에 XML 스트리밍된 및 표시 될 준비가 된 것입니다. 이 XML 문서를 HTML에서 제품의 목록을 작성 하는 DOM 및 각 자식 노드 전체 반복의 인스턴스로 바인딩할 클라이언트 측 VBScript를 사용 하 여 수행 됩니다.
+

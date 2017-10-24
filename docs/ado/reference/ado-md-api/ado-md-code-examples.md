@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ecbd9009cabfa7a9cdcccb152af52f59e3c01ce9
@@ -40,3 +41,4 @@ ADO MD 개체, 메서드 및 속성을 사용 하는 방법에 알아보려면 �
  [ADO MD 개체 모델](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD 개체](../../../ado/reference/ado-md-api/ado-md-objects.md)   
  [ADO MD 속성](../../../ado/reference/ado-md-api/ado-md-properties.md)
+

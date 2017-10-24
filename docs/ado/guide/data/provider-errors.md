@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6e4934d8dc43c29629687a19a5d76ae46dab515
@@ -83,3 +84,4 @@ End Function
  **오류** 개체는 이벤트 관련 오류가 발생 하는 경우에 사용 됩니다. ADO 이벤트를 확인 하 여 발생 하는 프로세스에서 오류가 발생 했는지 확인할 수 있습니다는 **오류** 이벤트 매개 변수로 전달 된 개체입니다.  
   
  이벤트를 발생 시키는 작업을 성공적으로 완료 하는 경우는 *adStatus* 이벤트 처리기의 매개 변수를로 설정 됩니다 *adStatusOK*합니다. 반면에, 이벤트를 발생 시킨 작업에 성공 하면는 *adStatus* 로 설정 된 *adStatusErrorsOccurred*합니다. 이 경우에 *pError* 매개 변수가 포함 됩니다는 **오류** 오류를 설명 하는 개체입니다.
+

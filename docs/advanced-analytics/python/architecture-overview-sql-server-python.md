@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1328a346dd9852cba349e38204b49faf32573611
@@ -55,3 +56,4 @@ SQL Server Enterprise Edition에서 관리 하 고 R 스크립트 및 Python 스
 ## <a name="next-steps"></a>다음 단계
 
 [T-SQL을 사용 하 여 Python 실행](../tutorials/run-python-using-t-sql.md)
+

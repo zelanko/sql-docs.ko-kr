@@ -22,6 +22,7 @@ caps.latest.revision: 53
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ce3a87eed86b8f876c8bf9bdde305166c2681d18
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/01/2017
      이전에 “NT Service\ MSOLAP$TABULAR”에 부여된 데이터베이스 및 파일 사용 권한은 더 이상 유효하지 않음을 알 수 있습니다. 서비스가 수행하는 태스크 및 작업이 이전과 같이 실행되도록 하려면 “NT Service\ MSOLAP$TAB2”에 새 데이터베이스 및 파일 사용 권한을 부여해야 합니다.  
   
   
+

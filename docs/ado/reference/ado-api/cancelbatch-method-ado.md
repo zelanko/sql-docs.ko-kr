@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2eced52fb03d47d8f79838d07a45c1d8dde31cf9
@@ -63,3 +64,4 @@ recordset.CancelBatchAffectRecords
  [Clear 메서드 (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)   
  [LockType 속성 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)
+

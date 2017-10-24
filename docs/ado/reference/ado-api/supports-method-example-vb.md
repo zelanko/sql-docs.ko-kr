@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9be77a25c92ac849b8481d3c880d01831fe715e5
@@ -168,3 +169,4 @@ End Sub
 ## <a name="see-also"></a>관련 항목:  
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Supports 메서드](../../../ado/reference/ado-api/supports-method.md)
+

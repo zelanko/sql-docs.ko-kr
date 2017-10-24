@@ -21,6 +21,7 @@ caps.latest.revision: 29
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1c3a2ac9b8831fa97843f8de69efca887a2f8437
@@ -72,3 +73,4 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
+

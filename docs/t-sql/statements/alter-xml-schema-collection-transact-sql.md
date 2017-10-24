@@ -32,6 +32,7 @@ caps.latest.revision: 23
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1f4d5a54d304aba3da37be9d73159060aaf2e794
@@ -273,3 +274,4 @@ WHERE  sys.xml_schema_namespaces.name='';
  [서버의 XML 스키마 컬렉션에 대한 요구 사항 및 제한 사항](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)  
   
   
+

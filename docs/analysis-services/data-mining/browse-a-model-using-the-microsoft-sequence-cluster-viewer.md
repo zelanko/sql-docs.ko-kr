@@ -25,6 +25,7 @@ caps.latest.revision: 38
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 87f8b6d83647639e8c2a807add3df680ff47b6b9
@@ -104,3 +105,4 @@ ms.lasthandoff: 09/01/2017
  [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   
+

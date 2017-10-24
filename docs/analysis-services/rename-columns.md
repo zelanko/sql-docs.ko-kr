@@ -17,6 +17,7 @@ author: Minewiskan
 ms.author: owend
 manager: erikre
 robots: noindex,nofollow
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f1b1656a3e0a715aa8b24e0c791c449ffd6cedf2
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/01/2017
 ---
 # <a name="rename-columns"></a>열 이름 바꾸기
 이 단원에서는 제거 하는 중입니다. 
+

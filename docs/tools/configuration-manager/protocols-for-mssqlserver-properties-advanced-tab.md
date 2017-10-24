@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0cde3e326704f5c2818952817f480d1164c2ff25
@@ -48,3 +49,4 @@ ms.lasthandoff: 08/02/2017
  [Reporting Services 인증에 대한 확장된 보호](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)  
   
   
+

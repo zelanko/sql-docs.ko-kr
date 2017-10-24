@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 530926a4d207cc4c1595539b1d5af1fe96cbd492
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에이전트는 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 예약 된 관리 태스크를 실행 하는 Windows 서비스 호출 *작업*합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "SQL Server 에이전트 정보"를 참조하십시오.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e742ed932bb76434d19fae839f4a39fecc6a2eb8
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser 서비스 및 작동 방식에 대한 자세한 내용은 [SQL Server Browser 서비스](../../tools/configuration-manager/sql-server-browser-service.md)를 참조하세요.  
   
   
+

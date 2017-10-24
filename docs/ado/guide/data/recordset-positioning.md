@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aee0d64d0fe1e310f42d79de36f5cf36c3813bf3
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]
 >  사용 하지 않아야는 **AbsolutePosition** 속성으로 서로게이트 레코드 번호입니다. 지정된 된 레코드의 위치는 이전 레코드를 삭제 하는 경우 변경 됩니다. 또한 없는 확신할 수 같은 특정된 레코드 가질 수 없습니다 **AbsolutePosition** 경우는 **레코드 집합** 개체가 쿼리가 다시 실행 또는 다시 열입니다. 책갈피는 유지 하 고 지정된 된 위치를 반환 하는 권장된 방법 및 모든 종류의에서 위치를 지정 하는 유일한 방법은 **레코드 집합** 개체입니다.
+

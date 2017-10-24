@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 868de22e20887c0d038cf65690649ae6a41530e1
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/01/2017
  [분석 관리 개체 &#40;를 사용 하 여 개발 AMO &#41;](../../../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
   
   
+

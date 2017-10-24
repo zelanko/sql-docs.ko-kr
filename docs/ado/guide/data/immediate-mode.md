@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 072e6f71aca74f4690f26b90887d475a955e3041
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  호출 하는 경우 새 행 추가 하는 경우는 **CancelUpdate** 메서드를 현재 행이 이전의 현재 행에서 **AddNew** 호출 합니다.  
   
  현재 행을 변경 하거나 새 행을 추가 하지, 하는 경우 호출 된 **CancelUpdate** 오류가 발생 합니다.
+

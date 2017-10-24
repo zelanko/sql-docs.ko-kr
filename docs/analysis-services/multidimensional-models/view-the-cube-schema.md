@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a46b1e284d2f75a22f7ac21b0353872db7108a1
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/01/2017
 |데이터 원본 뷰 스키마를 편집합니다.|**데이터 원본 뷰** 메뉴에서 **데이터 원본 뷰 편집**을 클릭합니다.<br /><br /> -또는-<br /><br /> **데이터 원본 뷰** 창의 배경을 마우스 오른쪽 단추로 클릭한 다음 **데이터 원본 뷰 편집**을 클릭합니다.|  
   
   
+

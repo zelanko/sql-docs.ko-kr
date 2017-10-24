@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc9a29f1f46ab56a87b318761b4b0809fd76e6fd
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[Mode 속성(ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
 |[Open 메서드(ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+

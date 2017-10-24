@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c19f0a93a5f7f685d7cd8dcdf6d916ae3955cff8
@@ -59,3 +60,4 @@ ADO [레코드](../../../ado/reference/ado-api/record-object-ado.md) 및 [스트
 >  Msdaipp.dso을 사용 하 여 공급자의 값으로 명시적으로 지정 하는 경우는 *공급자* 연결 문자열 키워드 또는 **공급자** 사용할 수 없는 속성을 "URL =" 연결 문자열에 있습니다. 이렇게 하면 오류가 발생 합니다. 대신, URL만 지정 하면 앞에서 보았듯이 합니다.  
   
  인터넷 게시 공급자에 대 한 보다 구체적인 정보를 참조 하십시오. [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)는 소스 응용 프로그램과 함께 제공 되는 공급자 설명서 나 OLE DB Provider에 대 한 Internet Publishing이 설치 된: Windows 2000, Office 2000 또는 Internet Explorer 5.0입니다.
+

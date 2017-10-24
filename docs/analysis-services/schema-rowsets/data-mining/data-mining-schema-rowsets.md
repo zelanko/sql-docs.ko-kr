@@ -22,6 +22,7 @@ caps.latest.revision: 44
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: ad8ac453d1d299be98f3cb46496685063fd66576
@@ -60,3 +61,4 @@ SELECT * FROM [$system].[DBSCHEMA_TABLES]
  [데이터 마이닝 스키마 행 집합 &#40; Ssas&#41;](../../../analysis-services/data-mining/data-mining-schema-rowsets-ssas.md)  
   
   
+

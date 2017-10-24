@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 75e6a7d65eca38c217b6868dc3fc2a08c4f0eb54
@@ -91,3 +92,4 @@ Attribute VB_Name = "OpenSchema"
 ## <a name="see-also"></a>관련 항목:  
  [OpenSchema 메서드](../../../ado/reference/ado-api/openschema-method.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

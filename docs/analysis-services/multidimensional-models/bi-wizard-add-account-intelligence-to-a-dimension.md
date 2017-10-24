@@ -20,6 +20,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: defce52a3e89858c08eff6626601392066996891
@@ -74,3 +75,4 @@ ms.lasthandoff: 09/01/2017
 4.  **집계 함수** 드롭다운 목록 상자에서 이 계정 유형의 기본 집계 함수를 변경합니다.  
   
   
+

@@ -26,6 +26,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 54c1e299952f042587389631e3220eb241ea598e
@@ -108,3 +109,4 @@ ms.lasthandoff: 09/01/2017
  또한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 유효성 검사 오류를 발생시키지 않고 적절하지 않거나 관련이 없는 속성을 무시합니다. 예를 들어, Y 요소의 값이 특정 값인 경우에만 X 요소가 존재해야 하는 경우 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스는 Y 요소의 값에 대해 X 요소의 유효성을 검사하는 대신 X 요소를 무시합니다.  
   
   
+

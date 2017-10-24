@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56510bc99d0a6a7c20d18b93b22a60decdfcc2e2
@@ -70,3 +71,4 @@ End Sub
 ```  
   
  **연결** 개체에 선언는 **양식** 를 사용 하 여 수준는 **WithEvents** 키워드를 이벤트 처리를 사용 하도록 설정 합니다. Form_Load 이벤트 처리기는 새 할당 하 여 개체를 실제로 만드는 **연결** 개체를 *connEvent* 다음 연결을 엽니다. 물론, 실제 응용 프로그램에서 Form_Load 이벤트 처리기는 여기 표시 된 것 보다 더 많은 처리 작업 방식.
+

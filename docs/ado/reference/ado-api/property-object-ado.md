@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4a0c5a1217cb8143a0b275ea3d0c31e16b7d1cd1
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Properties 컬렉션 (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

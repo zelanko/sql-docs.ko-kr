@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ae5a8c271f819622aabed1d8809e5f6e5579eff
@@ -94,3 +95,4 @@ void ClusteredX() {
 ## <a name="see-also"></a>관련 항목:  
  [Clustered 속성 (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index 개체(ADOX)](../../../ado/reference/adox-api/index-object-adox.md)
+

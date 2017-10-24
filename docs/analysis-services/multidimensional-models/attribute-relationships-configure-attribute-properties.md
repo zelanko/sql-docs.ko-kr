@@ -22,6 +22,7 @@ caps.latest.revision: 17
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b43a3d43e189279b45d5347b746a047f8f76eb88
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/01/2017
 |Visible|특성 관계의 표시 유형을 결정합니다. 사용 가능한 값은 True 또는 False입니다. 기본값은 True입니다.|  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edecd6bcaf8cb7547cf026f68edaf72767c57659
@@ -90,3 +91,4 @@ function alert(str)
 2.  명령 프롬프트 및 cd JScript 파일 (rs.js)를 저장 한 디렉터리를 엽니다.  
   
 3.  형식 `CScript rs.js` 명령 프롬프트에서 합니다.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: dbd29457adf7a3dd05211c2dc0688d45a54e405e
@@ -242,3 +243,4 @@ Resume 일치 하는 시나리오에서 동시성 다음과 같이 설계 되었
 [R-R에 대 한 성능 조정 코드 및 데이터 최적화](../r/r-and-data-optimization-r-services.md)
 
 [성능 튜닝-사례 연구 결과](../r/performance-case-study-r-services.md)
+

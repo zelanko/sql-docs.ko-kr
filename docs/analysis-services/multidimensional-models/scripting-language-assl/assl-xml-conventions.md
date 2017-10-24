@@ -31,6 +31,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a8cd244f64d45ff81ff51cba6b528c81ba743ff1
@@ -188,3 +189,4 @@ ms.lasthandoff: 09/01/2017
  상속 된 기본값에 대 한 자세한 내용은 참조 하십시오. [ASSL 개체 및 개체 특징](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)합니다.  
   
   
+

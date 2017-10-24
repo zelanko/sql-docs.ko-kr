@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19b935d43739d1a1ce19f414cae12b00c311b261
@@ -52,3 +53,4 @@ HRESULT put_Row([in] IUnknown* pRow);
   
 ## <a name="applies-to"></a>적용 대상  
  [ADORecordConstruction 인터페이스](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+

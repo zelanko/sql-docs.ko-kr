@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fc94f80cde09f6ad55de3a108b6fd16ef74444f1
@@ -30,3 +31,4 @@ ADO 저장 및 레코드 집합 개체에서 Open 메서드 Internet Explorer에
   
 ## <a name="see-also"></a>관련 항목:  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7a1313c42582efee8330abb89a03645dc1491217
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 |**adLockBatchOptimistic**|일괄 처리 업데이트<br />-연결이 끊긴된 시나리오를 허용합니다.<br />-다른 사용자가 데이터에 액세스할 수|여러 사용자가 한 번에 데이터를 변경할 수 있습니다.|  
 |**adLockPessimistic**|잠겨 있는 동안 다른 사용자가 데이터를 변경할 수 없습니다.|-잠겨 있는 동안에 데이터에 액세스 하지 못하도록 다른 사용자가 방지 합니다.|  
 |**adLockOptimistic**|-다른 사용자가 데이터에 액세스할 수|여러 사용자가 한 번에 데이터를 변경할 수 있습니다.|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b84d5aef9958c15682c6aeae2942487f30a6581
@@ -78,3 +79,4 @@ HelloData 응용 프로그램이 일반적인 ADO 응용 프로그램의 기본 
   
 ## <a name="formunload"></a>Form_Unload  
  **Form_Unload** 서브루틴은 여러 가지 이유로 중요 합니다. 첫째, 샘플 응용 프로그램 이므로 form_unload 응용 프로그램 종료 되기 전에 데이터베이스에 대 한 변경 내용이 있습니다. 둘째, 코드에 표시 된 명령을 열린에서 직접 실행 하는 방법을 **연결** 사용 하 여 개체는 **Execute** 메서드. 마지막으로 실행 데이터 원본에 대해 행을 반환 아닌 쿼리 (업데이트 쿼리) 예제를 보여 줍니다.
+

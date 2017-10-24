@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 8cde819f27942e78bf67c85356602ad1954420c0
@@ -104,3 +105,4 @@ C:\PS>New-PowerPivotSystemServiceInstance -SystemServiceInstanceName "MyPSSInsta
  이 예에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스 인스턴스를 프로비전하지 않고 이름만 지정합니다. 이름을 지정하지 않으면 기본 이름인 SQL Server Analysis Services 시스템 서비스 인스턴스가 대신 사용됩니다. 필요한 경우 서비스에 대해 사용자 지정 이름을 만들 수 있습니다. 테스트 시나리오를 지원하려는 경우에 또는 이후 단계에서 인스턴스를 제공하는 스크립트나 사용자 지정 도구가 있는 경우에 서비스 이름을 지정할 수 있습니다.  
   
   
+

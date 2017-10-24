@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 368e3b3a793bce6b6182ba262493d9a8ed1ac1bd
@@ -170,3 +171,4 @@ Loop
  원래 닫는 **레코드 집합** 복사본 닫히지 않으며 원본이 나 다른 복사본은 닫기 복사본을 닫으면지 않습니다.  
   
  복제할 수 있습니다는 **레코드 집합** 책갈피를 지원 하는 경우에 개체입니다. 책갈피 값은 교환할 수 있습니다. 즉, 하나에서 책갈피 참조 **레코드 집합** 개체 모든 복제본에서 동일한 레코드를 참조 합니다.
+

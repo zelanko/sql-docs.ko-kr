@@ -19,6 +19,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 86f0ed45ced35aba884f05284f886334d250694d
@@ -135,3 +136,4 @@ SELECT * from $system.DISCOVER_CALC_DEPENDENCY WHERE QUERY = 'EVALUATE CALCULATE
  [사용 하 여 동적 관리 뷰 & #40; Dmv & #41; Analysis Services를 모니터링 하려면](../../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
+

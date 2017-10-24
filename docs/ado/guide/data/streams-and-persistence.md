@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: af1ecf7ed9f4702d986d6f1881b3264ab8171c87
@@ -168,3 +169,4 @@ function GetRs()
  [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)
+

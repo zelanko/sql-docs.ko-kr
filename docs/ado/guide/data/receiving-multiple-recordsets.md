@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ab72906b1f36e22bba58b58ca7917b3399ebc458
@@ -38,3 +39,4 @@ SELECT ProductID, ProductName, UnitPrice
  사용할 수는 **Recordset.NextRecordset** 메서드 두 개체를 열거 합니다.  
   
  자세한 내용은 참조 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)합니다.
+

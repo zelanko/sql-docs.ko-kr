@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55e17b5446e881c1671068c99f8ea03f13dcf82f
@@ -52,3 +53,4 @@ Cellset.Close
  [ADO MD open 메서드](../../../ado/reference/ado-md-api/open-method-ado-md.md)   
  [ADO MD 위치 개체](../../../ado/reference/ado-md-api/position-object-ado-md.md)   
  [State 속성(ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14d9259d613ac1c147dbd054e0cacb2f350cb007
@@ -84,3 +85,4 @@ ms.lasthandoff: 08/02/2017
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 매개 변수에 대한 자세한 내용은[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "방법: 서버 시작 옵션 구성( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자)"을 참조하세요.  
   
   
+

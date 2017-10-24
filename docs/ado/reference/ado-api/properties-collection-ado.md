@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 59671deed9a94192f333401c9d66987f75e4a3cb
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [Property 개체 (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+

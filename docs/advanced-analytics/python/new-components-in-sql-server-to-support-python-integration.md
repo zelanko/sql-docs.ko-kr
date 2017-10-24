@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 07f8e18b4481b2773f3ac16cdea08c27feff1ba3
@@ -149,3 +150,4 @@ Python "내부"를 실행 하는 경우 [!INCLUDE[ssNoVersion_md](../../includes
 ## <a name="next-steps"></a>다음 단계
 
 [SQL Server에서 Python에 대 한 아키텍처 개요](architecture-overview-sql-server-python.md)
+

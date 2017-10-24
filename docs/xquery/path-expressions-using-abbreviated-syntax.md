@@ -19,6 +19,7 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: cd4ed101bc96fb8c5c417ec1c47063d747af29df
@@ -73,3 +74,4 @@ child::ProductDescription[attribute::ProductModelID=19]
 -   **부모:: node ()** 단계에서 이중 점 (.)으로 축약 될 수 있습니다.  
   
   
+

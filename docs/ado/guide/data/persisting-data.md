@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9862fc9f45674d3995b857eec222d8f560870a6
@@ -124,3 +125,4 @@ Destination, PersistFormat
 -   [필터링된 계층적 레코드 집합 유지](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md)  
   
 -   [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

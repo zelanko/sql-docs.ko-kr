@@ -21,6 +21,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 17dc52daa9a1644dec6b26e42857d308932add66
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/01/2017
 4.  **특성 표시 위치**를 가리킨 다음 **트리**, **표**또는 **목록**을 클릭합니다.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 63bf19b58ddd79dc684011b56287f35107e568af
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 |-|-|  
 |[CancelBatch 메서드(ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Delete 메서드(ADO 레코드 집합)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
 |[Resync 메서드](../../../ado/reference/ado-api/resync-method.md)|[UpdateBatch 메서드](../../../ado/reference/ado-api/updatebatch-method.md)|
+

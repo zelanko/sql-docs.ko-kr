@@ -22,6 +22,7 @@ caps.latest.revision: 28
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 548b9695bba6377fcea91b1a1c78578a141e1ba0
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  **원본 열**에서 단항 연산자가 있는 문자열 열을 선택합니다. 이렇게 선택하면 부모 특성에 **UnaryOperatorColumn** 속성이 설정됩니다. 차원 테이블에 단항 롤업 연산자를 지정하는 문자열 열도 있어야 합니다. 이 열의 문자열 값에는 올바른 집계 연산자가 포함되어야 합니다. 행이 비어 있으면 해당 멤버가 정상적으로 계산됩니다. 열의 수식이 유효하지 않으면 멤버를 사용하는 셀 값이 검색될 때마다 런타임 오류가 발생합니다. 자세한 내용은 [부모-자식 차원의 단항 연산자](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)를 참조하세요.  
   
   
+

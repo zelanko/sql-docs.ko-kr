@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93b97bce2562604a01c564a376bd093abb9b1b7c
@@ -83,3 +84,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [Record 개체 (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+

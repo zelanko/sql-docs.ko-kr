@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 36b39d14a4856d882add1e9bafdc9457fa3b8bc1
@@ -58,3 +59,4 @@ XSLT는 다른 형식으로 변환 하는 생성 된 XML에 적용할 수 있습
   
 ## <a name="see-also"></a>관련 항목:  
  [XML 형식으로 레코드 유지](../../../ado/guide/data/persisting-records-in-xml-format.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8d4c04ac80d1d353b07fb78305294803ad69dffe
@@ -84,3 +85,4 @@ oConn.Close
  여기서 트랜잭션 처리는 두 레코드의 작업을 하나의 단위로 업데이트 되 고 교환 또는 전혀 변경 되지 두 개의 제품 이름이 하나 지 확인 하는 데 사용 됩니다.  
   
  자세한 내용은 트랜잭션 처리의 참조에 대 한 [업데이트 및 데이터 유지](../../../ado/guide/data/updating-and-persisting-data.md)합니다.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2fbe33b349def61c3b093079554db626b56f2f09
@@ -109,3 +110,4 @@ ProductModelID Result
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
+

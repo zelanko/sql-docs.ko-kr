@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fb324383dc9321129fdb84475369d899d61adcb
@@ -74,3 +75,4 @@ Cellset.Item ( Positions )Cellset ( Positions )
 ## <a name="see-also"></a>관련 항목:  
  [ADO MD cell 개체](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
  [Cellset 개체(ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7096b27b40d42ce11035feee9871a151c1460c76
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/01/2017
 3.  서버 그룹을 마우스 오른쪽 단추로 클릭한 다음 새 서버 등록을 선택합니다. 서버가 명명된 인스턴스로 설치된 경우 인스턴스 이름을 포함하여 로컬 또는 원격 서버의 네트워크 이름을 입력합니다. 필요에 따라 등록된 서버에 표시되는 등록된 서버 이름을 제공할 수 있습니다. 이 이름은 등록된 서버에서만 사용됩니다. 이 이름은 서버 이름을 바꾸는 데 사용하거나 연결 문자열에서는 사용할 수 없습니다. 등록된 서버 이름은 실제 서버 이름보다 서버에 대해 잘 설명하거나 서버를 다른 서버와 손쉽게 구분할 수 있는 특성을 포함하고 있습니다.  
   
   
+

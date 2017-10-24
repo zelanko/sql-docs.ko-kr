@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0ff03541851ac39c2904cde2f809e196cbd2c40
@@ -35,3 +36,4 @@ ADO 메서드 및 속성을 호출 하기 위한 구문을 개발 환경에 따�
  [Microsoft Visual Basic ADO를 사용 하 여](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Microsoft Visual c + +와 함께 ADO 사용](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
  [스크립트 언어로 ADO 사용](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)
+

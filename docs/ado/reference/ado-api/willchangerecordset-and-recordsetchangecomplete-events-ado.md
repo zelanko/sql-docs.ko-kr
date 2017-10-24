@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a3ff0f75d5e9ef9d71e4eb2a103367a97f263d8
@@ -72,3 +73,4 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
 ## <a name="see-also"></a>관련 항목:  
  [ADO 이벤트 모델 예제 (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO 이벤트 처리기 요약](../../../ado/guide/data/ado-event-handler-summary.md)
+

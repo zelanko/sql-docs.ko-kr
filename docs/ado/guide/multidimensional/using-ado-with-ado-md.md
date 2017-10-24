@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38df55c27ced6e0a7b32c321e2b3968bedb73aa1
@@ -54,3 +55,4 @@ ADO 및 ADO MD는 관련 하지만 별도 개체 모델입니다. ADO는 데이�
  [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD를 사용한 프로그래밍](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [다차원 데이터 작업](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

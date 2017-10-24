@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a8b090a9d5a9ed0a9f63b8f666fa9985089305ed
@@ -94,3 +95,4 @@ SQL Server 2017 CTP 2.0 이상에 R Server에만 사용할 수 있었던 되었�
 5. 계속 구성할는 **mrsdeploy** 여기에 설명 된 대로 서비스: [관리자를 위한 구성](https://docs.microsoft.com/r-server/operationalize/configure-start-for-administrators)
 
 6. 자세한 내용은 참조 [mrsdeploy 함수](https://docs.microsoft.com/r-server/r-reference/mrsdeploy/mrsdeploy-package)합니다.
+

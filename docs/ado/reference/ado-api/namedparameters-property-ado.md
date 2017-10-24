@@ -19,6 +19,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 613f4cb52c6225d573d314b83f26c220e7caabfc
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  [CommandText 속성 (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandStream 속성 (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
  [Parameters 컬렉션(ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+

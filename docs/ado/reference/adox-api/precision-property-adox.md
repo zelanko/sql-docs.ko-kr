@@ -23,6 +23,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c94776e31edda153e8f779425ac8eaef2db58ab
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  [ADOX 코드 예: NumericScale 및 전체 자릿수 속성 예제 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type 속성 (열) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Column 개체(ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+

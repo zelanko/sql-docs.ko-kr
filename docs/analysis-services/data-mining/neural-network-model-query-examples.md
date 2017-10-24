@@ -19,6 +19,7 @@ caps.latest.revision: 29
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 16343214615687c3a2ac39c9083c867c6d1e91c1
@@ -233,3 +234,4 @@ NATURAL PREDICTION JOIN
  [5 단원: 구축 신경망 네트워크 및 로지스틱 회귀 모델 &#40; 중급 데이터 마이닝 자습서 &#41;](http://msdn.microsoft.com/library/42c3701a-1fd2-44ff-b7de-377345bbbd6b)  
   
   
+

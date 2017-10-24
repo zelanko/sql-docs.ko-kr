@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eb9a6385a47030f5d9c9a283b56228ca68f596b
@@ -123,3 +124,4 @@ End Function
 ```  
   
  준비 된 명령을 지원 하지 않는 공급자입니다. 이 속성은로 설정 되는 즉시 오류를 반환할 수 있습니다 공급자 명령 준비를 지원 하지 않는 경우 **True**합니다. 명령 및 집합을 준비 하는 요청을 무시를 오류로 반환 하지는 **Prepared** 속성을 **false**합니다.
+

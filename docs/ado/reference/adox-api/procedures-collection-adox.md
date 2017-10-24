@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 52ea3d1aa490325f3abe4f5fdca80dea6edb5174
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
  [프로시저 컬렉션 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Procedure 개체(ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
+

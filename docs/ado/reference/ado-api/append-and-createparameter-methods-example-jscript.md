@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7650748a6bbddcbc65311cc03b6b52aa86e0d0d9
@@ -151,3 +152,4 @@ body {
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Fields 컬렉션 (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter 개체](../../../ado/reference/ado-api/parameter-object.md)
+

@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 901098e2a656d178932b9b706b70d559bef4f215
@@ -147,3 +148,4 @@ ms.lasthandoff: 09/01/2017
  구성 도구에 대한 자세한 내용은 [Power Pivot Configuration Tools](../../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)를 참조하십시오.  
   
   
+

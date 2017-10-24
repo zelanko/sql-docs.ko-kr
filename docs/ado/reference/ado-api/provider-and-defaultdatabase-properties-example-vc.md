@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 75bef2df222023fe54ec5c890b3321677f2a7a40
@@ -141,3 +142,4 @@ void PrintComError(_com_error &e) {
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [DefaultDatabase 속성](../../../ado/reference/ado-api/defaultdatabase-property.md)   
  [Provider 속성(ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+

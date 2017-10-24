@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8c15a8add685bf62faa307fc420f51a8c547776
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
  [뷰는 메서드 예제를 (VB)를 새로 고칩니다.](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)   
  [카탈로그 개체 (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [View 개체(ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+

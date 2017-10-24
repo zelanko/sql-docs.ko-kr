@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 633ae5b4a31c6b305aada1b6b3984b85caa8a1da
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)   
  [ADO 개체 및 인터페이스](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)   
  [ADO 속성](../../../ado/reference/ado-api/ado-properties.md)
+

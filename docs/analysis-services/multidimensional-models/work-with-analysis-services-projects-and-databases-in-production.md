@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 027e9cfb4f69cbdb89d776b80916afa8ac89eb69
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
 -   방법 3: 온라인 모드의 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 를 사용하여 프로덕션 버전의 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 데이터베이스를 변경합니다. 두 도구는 같은 온라인 서버에서만 작동하기 때문에 다른 버전이 동기화되지 않을 가능성이 없습니다.  
   
   
+

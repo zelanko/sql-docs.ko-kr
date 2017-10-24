@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92e249a7c2d5b0c01e291f4829d5c4f8c580fb2c
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   [레코드 집합 연결 끊기 및 다시 연결](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
 -   [JOIN 결과 업데이트: 고유한 테이블](../../../ado/guide/data/updating-joined-results-unique-table.md)
+

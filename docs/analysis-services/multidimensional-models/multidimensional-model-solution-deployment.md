@@ -20,6 +20,7 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d09db4ead5f0b05d82c40a16aed31a070b16250c
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/01/2017
  [배포 유틸리티를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)  
   
   
+

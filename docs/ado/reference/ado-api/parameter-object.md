@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ed793606962eda3b6d7b29fedad3bb0f0dd18b0
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  [CreateParameter 메서드 (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameters 컬렉션 (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

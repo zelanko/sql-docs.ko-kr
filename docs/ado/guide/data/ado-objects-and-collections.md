@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ec860c8e4d3766b983e38589418637c1d4eb3cc9
@@ -44,3 +45,4 @@ ADO는 다음 9 개의 개체와 4 개의 컬렉션으로 이루어져 있습니
   
 ## <a name="see-also"></a>관련 항목:  
  [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)
+

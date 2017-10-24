@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 72aeaf6c2b31f6f7933bd64065ab57e23ef7e92b
@@ -32,3 +33,4 @@ COM, 대부분의 작업 함수 완료 되었는지 여부를 나타내는 HRESU
  ADO 오류입니다: ADO 작업이 실패에서 하 여 발생 합니다. 기본 공급자에서 반환한 오류로 표시 **오류** 개체에 **연결** 개체의 **오류** 컬렉션입니다.  
   
  #Import 지시문만 ADO.dll에 선언 된 메서드와 속성에 대 한 오류 처리 루틴을 만듭니다. 그러나 사용자 고유의 오류 검사 매크로 또는 인라인 함수를 작성 하 여이 동일한 오류 처리 메커니즘을 활용을 걸릴 수 있습니다. 예제 C++® Extensions 항목을 참조 하십시오.
+

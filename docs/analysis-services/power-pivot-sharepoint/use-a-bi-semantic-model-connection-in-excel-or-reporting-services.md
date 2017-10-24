@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1d99b45a632ed04e68b75f456178844ad59e500d
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  SharePoint에 있는 임시 보고서 디자인의 경우 해당 보고서를 만드는 사용자가 BI 의미 체계 모델 연결(.bism) 파일 및 비즈니스 인텔리전스 의미 체계 model 데이터베이스에 대한 SharePoint 사용 권한을 갖고 있어야 합니다. 연결의 보안 컨텍스트는 보고서를 만들고 있는 대화형 사용자입니다.  
   
   
+

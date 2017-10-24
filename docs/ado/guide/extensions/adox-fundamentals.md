@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dbc8d415e4dfcaeb4bf7e6a489bd407e87335874
@@ -57,3 +58,4 @@ Microsoft® ActiveX® 데이터 개체 확장 데이터 정의 언어 및 보안
  [ADOX 속성](../../../ado/reference/adox-api/adox-properties.md)   
  [ADO (다차원) ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
  [ADO 프로그래머 가이드](../../../ado/guide/ado-programmer-s-guide.md)
+

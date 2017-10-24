@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: abc618942a95b28fd2b93f72e4b511e519c58191
@@ -105,3 +106,4 @@ ms.lasthandoff: 09/01/2017
 11. 컴퓨터 파일 시스템의 다음 폴더에서 파일이 디스크로 캐시되었는지 확인합니다. 배포가 작동하는지 확인하려면 캐시된 파일이 있는지도 확인해야 합니다. 파일 캐시를 보려면 [!INCLUDE[ssInstallPathVar](../../../includes/ssinstallpathvar-md.md)]MSAS13.POWERPIVOT\OLAP\Backup\Sandboxes\Default [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service Application 폴더로 이동합니다. 캐시된 각 데이터베이스는 고유 이름을 사용하도록 GUID 기반 명명 규칙을 사용하여 고유 폴더에 저장됩니다.  
   
   
+

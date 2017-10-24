@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca4098a61984e009a2874fdca55d898938ce702d
@@ -37,3 +38,4 @@ ADO 현재 레코드와 연결 된 편집 버퍼를 유지 관리 합니다. **E
 |**adEditDelete**|현재 레코드 삭제 했을 나타냅니다.|  
   
  **EditMode** 현재 레코드가 있는 경우에 유효한 값을 반환할 수 있습니다. **EditMode** 경우 오류가 반환 됩니다 **BOF** 또는 **EOF** 은 **True** 아니면 현재 레코드를 삭제 합니다.
+

@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d9b5fba856cc40c11f218faf0a61f66ee5451aa4
@@ -68,3 +69,4 @@ R 스크립트를 실행 하는 데 사용 하 여 사용자 계정을 프로 �
 
 + [R에 대 한 보안 개요](security-overview-sql-server-r.md)
 + [Python에 대 한 보안 개요](../python/security-overview-sql-server-python-services.md)
+

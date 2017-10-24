@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: edc5419a18d658d9a0e10dc40b69ceb41c730bd4
@@ -46,3 +47,4 @@ WHERE CategoryID = 7
  이러한 결과 직접 확보 하려는 경우 다음 JScript 예제를 시도해 보십시오.  
   
 -   [레코드 집합을 반환 하려면 JScript 예제](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md)
+

@@ -26,6 +26,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b53eed2fa7d7061958db31576e387e3a4af5b14c
@@ -123,3 +124,4 @@ ms.lasthandoff: 09/01/2017
  AMO는 데이터를 쿼리하는 데는 사용할 수 없습니다. 큐브 및 마이닝 모델을 포함한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터를 쿼리하려면 사용자 응용 프로그램에서 ADOMD.NET을 사용해야 합니다. 자세한 내용은 참조 [ADOMD.NET을 사용 하 여 개발](../../../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)합니다.  
   
   
+

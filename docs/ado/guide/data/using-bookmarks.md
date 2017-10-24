@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0fe945bfb5a0b2460090ccc8376543364693a1de
@@ -53,3 +54,4 @@ End If
  [지원](../../../ado/reference/ado-api/supports-method.md) 메서드 자세히 나중에 설명 됩니다.  
   
  경우를 제외 하 고 복제 된 **레코드 집합**, 책갈피는에 고유 하며는 **레코드 집합** 에 생성 된, 동일한 명령을 사용 하는 경우에 합니다. 즉, 사용할 수 없습니다는 **책갈피** 하나에서 가져온 **레코드 집합** 1 초 동안에서 동일한 레코드로 이동 하려면 **레코드 집합** 동일한 명령으로 연 합니다.
+

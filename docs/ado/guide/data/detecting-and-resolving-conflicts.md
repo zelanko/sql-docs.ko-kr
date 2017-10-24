@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 00a768c70b1945bc573aaca6c48841e665780081
@@ -121,3 +122,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)
+

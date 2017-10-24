@@ -25,6 +25,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 798a8d872b52c21d794e3d1f21cf52e133d56277
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/01/2017
  큐브 뷰는 보안 수단이 아니라 비즈니스 인텔리전스 응용 프로그램에 보다 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 큐브 뷰에 대한 모든 보안은 기본 큐브에서 상속됩니다. 예를 들어 큐브 뷰에서 사용자에게 액세스 권한이 없는 큐브의 개체에 대한 액세스 권한을 부여할 수는 없습니다. 큐브 뷰를 통해 큐브의 개체에 대한 액세스를 제공하려면 먼저 큐브에 대한 보안을 해결해야 합니다.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb25d4ce8ab95f1311460f67b79a2b2199b96e62
@@ -60,3 +61,4 @@ Indexes.Append Index [,Columns]
  [Append 메서드 (ADOX 테이블)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append 메서드 (ADOX 사용자)](../../../ado/reference/adox-api/append-method-adox-users.md)   
  [Append 메서드(ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+

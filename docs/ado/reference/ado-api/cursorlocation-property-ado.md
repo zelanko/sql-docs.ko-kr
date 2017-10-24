@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6679a7a8a83f954039587776e5e668bd5ed05365
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="see-also"></a>관련 항목:  
  [부록 A: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)
+

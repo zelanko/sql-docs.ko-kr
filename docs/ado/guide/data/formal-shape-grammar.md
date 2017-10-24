@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae47b751e9e62d84188927186f186c6c9d344ce0
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/09/2017
  [일반적으로 shape 명령](../../../ado/guide/data/shape-commands-in-general.md)   
  [셰이프 COMPUTE 절](../../../ado/guide/data/shape-compute-clause.md)   
  [Visual Basic for Applications 기능](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+

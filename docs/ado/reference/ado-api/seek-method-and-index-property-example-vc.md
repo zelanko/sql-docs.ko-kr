@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c47cd5616a5a8d093eaeb9d72b74377a4adb23a1
@@ -233,3 +234,4 @@ void PrintComError(_com_error &e) {
  [Index 속성](../../../ado/reference/ado-api/index-property.md)   
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek 메서드](../../../ado/reference/ado-api/seek-method.md)
+

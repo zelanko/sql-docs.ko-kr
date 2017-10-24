@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 912a3560ce2a2c361fe0990dfd12b94a80833430
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  [다차원 스키마 및 데이터 개요](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [ADO MD와 함께 ADO 사용](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [다차원 데이터 작업](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

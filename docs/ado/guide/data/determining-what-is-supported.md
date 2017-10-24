@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2e15f52d48f5870cfe4df8cd6149d56012b42abf
@@ -38,3 +39,4 @@ boolean = recordset.Supports(CursorOptions )
  사용 하는 **지원** 메서드의 기능을 확인할 수 있습니다는 **레코드 집합** 새 레코드를 추가, 책갈피 사용, 사용 하 여 개체는 **찾을** 메서드를 사용 하 여 스크롤을 사용 하 여는 ** 인덱스** 속성을 일괄 처리 업데이트를 수행 합니다. 상수 및 해당 의미의 전체 목록은 참조 하십시오. [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)합니다.  
   
  하지만 **지원** 반환 될 수 있으며 **True** 지정된 된 기능에 대 한 보장 하지는 않습니다 공급자 사용할 수 있는 기능 모든 상황에서. **지원** 메서드는 특정 조건이 충족 된다는 가정 하는 공급자 지정 된 기능을 지원할 수 있는지 여부를 반환 합니다. 예를 들어는 **지원** 메서드를 나타낼 수 있습니다는 **레코드 집합** 커서 여러 테이블 조인에 기반 하는 경우에 개체가 업데이트를 지 원하는-의 일부 열을 업데이트할 수 없는 경우.
+

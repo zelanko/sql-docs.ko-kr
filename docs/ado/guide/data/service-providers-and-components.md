@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f574b00b5c53caef2184d2923e79746d3ef56c
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  와 같은 커서 엔진 예를 들어 [OLE DB에 대 한 커서 서비스](http://msdn.microsoft.com/en-us/57638feb-4ecd-4051-becb-8f828d21cf44)을 스크롤할 수 있는 데이터를 생성 하는 순차적 정방향 전용 데이터 저장소에서 데이터를 사용할 수 있는 서비스 구성 요소입니다. ADO에서 일반적으로 사용 하는 다른 서비스 공급자가 포함 된 [Microsoft OLE DB 지 속성 공급자 (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-ole-db-persistence-provider-ado-service-provider.md) (에 대 한 데이터 파일에 저장)를는 [OLE DB (ADO 서비스 공급자)에 대 한 Microsoft Data Shaping Service ](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) (에 대 한 계층적 **레코드 집합**), 및 [Microsoft OLE DB Remoting Provider (ADO 서비스 공급자)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md) (원격 컴퓨터에서 데이터 공급자 호출용).  
   
  서비스 및 데이터 공급자에 대 한 자세한 내용은 참조 [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)합니다.
+

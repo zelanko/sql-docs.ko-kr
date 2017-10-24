@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c4d15a7f605f130ff4f93c7da66ca9a103195c17
@@ -121,3 +122,4 @@ SQL Server에서 기능을 미리 점수 매기기 실시간 사용 하도록 �
 ## <a name="next-steps"></a>다음 단계
 
 [실시간 점수 매기기를 수행 하는 방법](r/how-to-do-realtime-scoring.md)
+

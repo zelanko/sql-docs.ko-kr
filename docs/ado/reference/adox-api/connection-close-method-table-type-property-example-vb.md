@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 95ea01c8cfb495ce104e60cbb3e24110fac98116
@@ -84,3 +85,4 @@ Attribute VB_Name = "Connection"
  [Table 개체 (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [테이블 컬렉션 (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type 속성(테이블)(ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+

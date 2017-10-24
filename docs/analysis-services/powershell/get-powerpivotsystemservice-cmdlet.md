@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 1b1878ab48daa6c13e633daa62deada76512d3bd
@@ -74,3 +75,4 @@ C:\PS>Get-PowerPivotSystemService
  이 예에서는 팜의 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스 인스턴스가 공유하는 속성을 보여 주는 부모 개체의 전역 속성을 반환합니다.  
   
   
+

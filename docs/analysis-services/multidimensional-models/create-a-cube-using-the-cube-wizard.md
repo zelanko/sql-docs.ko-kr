@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e614476f4a609017a023d39c5d58670ad2f5db
@@ -70,3 +71,4 @@ ms.lasthandoff: 09/01/2017
     >  큐브 마법사를 완료한 후 큐브 디자이너를 사용하여 큐브를 구성할 수 있습니다. 또한 차원 디자이너를 사용하여 만든 차원에서 특성과 계층을 추가, 제거 및 구성할 수도 있습니다.  
   
   
+

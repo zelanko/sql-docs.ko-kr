@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a40f679e60f3779acdf2a91b987c1f699420acd9
@@ -25,3 +26,4 @@ ms.lasthandoff: 08/02/2017
   [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용되는 프로토콜을 구성하려면 콘솔 창에서 원하는 서버 인스턴스의 **프로토콜**을 선택하고 세부 정보 창에서 적절한 프로토콜을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
   
+

@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 926de41ebc897235f336eb00cf5754fb0a54e94b
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [Type 속성 (열) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Type 속성 (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Table 개체(ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+

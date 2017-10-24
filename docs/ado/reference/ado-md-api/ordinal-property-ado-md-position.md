@@ -20,6 +20,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d29ba5afddbdd1aa3f477a8311538dac59611685
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  [Cellset 개체 (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
  [Item 속성 (ADO MD Cellset)](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)   
  [Ordinal 속성(ADO MD Cell)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)
+

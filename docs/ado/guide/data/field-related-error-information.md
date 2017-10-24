@@ -17,6 +17,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3a7609b4c4a0d67f1bade86c2e6ec3bb66b07553
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |**adFieldIntegrityViolation**|10|필드는 계산 된 또는 파생 된 엔터티 이기 때문에 수정 될 수 없음을 나타냅니다.|  
 |**adFieldIsNull**|3|공급자는 null 값을 반환 했음을 나타냅니다.|  
 |**adFieldOutOfSpace**|22|공급자가 충분 한 저장 공간 완료 이동 또는 복사 작업을 가져올 수 있는지를 나타냅니다.|
+

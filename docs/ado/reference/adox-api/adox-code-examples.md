@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aae22d4169b93fa3f3526007a20abaf8cb28f652
@@ -52,3 +53,4 @@ ADOX 개체, 메서드, 속성 및 이벤트를 사용 하는 방법에 알아�
  [뷰 컬렉션, CommandText 속성 예제 (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [뷰 삭제 (VB) 메서드 예제](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
  [Views Refresh 메서드 예제(VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
+

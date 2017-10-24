@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d4879ea2bc89552409e29847ed39c9418ba668c8
@@ -49,3 +50,4 @@ A *트랜잭션* 일련의 연결을 통해 실행 하는 데이터 액세스 �
   
 ## <a name="nested-transactions"></a>중첩된 트랜잭션  
  호출 중첩된 트랜잭션을 지 원하는 공급자에 대 한는 **BeginTrans** 열려 있는 트랜잭션에서 메서드 새, 중첩 된 트랜잭션을 시작 합니다. 반환 값의 중첩 수준을 나타냅니다: "1"의 반환 값은 최상위 트랜잭션을 연 나타냅니다 (즉, 트랜잭션이 중첩 되지 않은 다른 트랜잭션에서), "2" (a 2-수준 트랜잭션 연 나타냅니다. 트랜잭션 최상위 트랜잭션 내에서 중첩), 등입니다. 호출 **CommitTrans** 또는 **RollbackTrans** 에 영향을 가장 최근에 열어 트랜잭션; 맞춤법 검사기를 닫거나 더 높은 수준의 트랜잭션을 해결할 수 전에 현재 트랜잭션을 롤백합니다.
+

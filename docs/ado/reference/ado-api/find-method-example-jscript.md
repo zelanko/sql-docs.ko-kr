@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 44343f325c1d316406363a90019647eed10ad877
@@ -159,3 +160,4 @@ BODY {
 ## <a name="see-also"></a>관련 항목:  
  [Find 메서드 (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

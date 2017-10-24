@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0133ec4e0c30ee6bb2c3d43e46b9c0307a689e19
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [인터넷 게시에 대 한 Microsoft OLE DB Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)   
  [인터넷 게시용 OLE DB 공급자](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md)
+

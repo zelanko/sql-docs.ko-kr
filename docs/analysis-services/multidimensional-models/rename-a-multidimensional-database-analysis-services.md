@@ -18,6 +18,7 @@ caps.latest.revision: 20
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3d822aff82a3f38bd4dd8fdec69a87792e8d56a5
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/01/2017
  [Analysis Services 프로젝트 배포&#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   
+

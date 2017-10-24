@@ -16,6 +16,7 @@ ms.assetid:
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a904cc21ff035388a15b9f985b81ec006aead7e6
@@ -48,3 +49,4 @@ Wide World Importers 샘플 데이터의 새 컬렉션을 SQL Server 2016에 도
 
   
   
+

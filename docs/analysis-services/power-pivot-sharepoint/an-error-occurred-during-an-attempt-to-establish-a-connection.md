@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 226842eb86c8eb7d5981407c805e18495dfb2579
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [Windows 인증을 사용 하는 데이터 연결 및 사용자 자격 증명을 위임할 수 없습니다. 다음과 같은 연결을 새로 고치지 못했습니다: 파워 피벗 데이터](../../analysis-services/power-pivot-sharepoint/the-data-connection-user-could-not-be-delegated.md)  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 11219fe0dd15b594d6c59565226e8f25b8259fe8
@@ -125,3 +126,4 @@ CC:\PS>Remove-PowerPivotServiceApplication -identity 12345678-90ab-cdef-ghijklmn
  이 예에서는 단일 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램과 해당 데이터베이스 및 캐시 파일을 삭제합니다.  
   
   
+

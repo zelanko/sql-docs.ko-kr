@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2fe0916836a44ecb61d1d606a9c894ac22342d57
@@ -73,3 +74,4 @@ Dim obj As New Index
  [Columns 컬렉션 (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
  [인덱스 컬렉션 (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
  [Properties 컬렉션(ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+

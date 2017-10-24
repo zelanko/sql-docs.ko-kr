@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47b51707aac7eab9e24610f7ae72b073432ee120
@@ -54,3 +55,4 @@ ADO 설명서의이 섹션에는 각 ADO 개체, 컬렉션, 속성, 동적 속�
  [부록 c: ADO를 사용한 프로그래밍](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
  [부록 a: 공급자](../../../ado/guide/appendixes/appendix-a-providers.md)   
  [ADO 기록](../../../ado/guide/ado-history.md)
+

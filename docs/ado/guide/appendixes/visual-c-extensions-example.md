@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d1b06997704169ab143b8de9bda65097e0200bf4
@@ -116,3 +117,4 @@ int main() {
 ## <a name="see-also"></a>관련 항목:  
  [Visual c + + 확장을 사용 하 여](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
  [Visual C++ 확장 헤더](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+

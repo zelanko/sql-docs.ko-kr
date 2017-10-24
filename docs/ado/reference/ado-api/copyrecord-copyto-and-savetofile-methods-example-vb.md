@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f7e0bdba854ce12456b80a7f42b29f0b6889e9d2
@@ -138,3 +139,4 @@ End Sub
  [SaveToFile 메서드](../../../ado/reference/ado-api/savetofile-method.md)   
  [스트림 개체 (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
  [Type 속성(ADO 스트림)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+

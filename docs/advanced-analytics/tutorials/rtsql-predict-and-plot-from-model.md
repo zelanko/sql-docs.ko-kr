@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: a84e702b364da8614dd21b8f6adb57e4f2bac487
@@ -183,3 +184,4 @@ R 및 SQL Server를 통합하면 고성능 데이터 처리 및 빠른 R 분석�
 + [MicrosoftML 시작](https://docs.microsoft.com/r-server/r/concept-what-is-the-microsoftml-package)
 
     학습 알고리즘 Microsoft Research에서 신속 하 고 확장 가능한 컴퓨터에 대해 자세히 알아보기
+

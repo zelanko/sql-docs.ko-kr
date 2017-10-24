@@ -20,6 +20,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 40b6e4e67306c225af2ba3d2cd418ceaed2d2541
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/01/2017
  교차 유효성 검사 보고서의 형식은 모든 모델 유형에서 동일하며 구성할 수 없습니다. 그러나 보고서의 내용은 분석하는 모델의 유형 및 예측 가능한 특성의 데이터 형식에 따라 달라집니다. 보고서의 결과를 클립보드에 복사하고 Excel에서 데이터를 사용할 수도 있습니다.  
   
   
+

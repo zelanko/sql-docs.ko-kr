@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19a4275d339132db8efd4b09a313b482fc8cb666
@@ -45,3 +46,4 @@ oRs.Move NumRecords, Start
  책갈피를 전달 하는 경우는 *시작* 인수에이 책갈피와 레코드를 기준으로 이동 가정는 **레코드 집합** 개체 책갈피를 지원 합니다. 책갈피를 사용 하 여 가져온는 [책갈피](../../../ado/reference/ado-api/bookmark-property-ado.md) 속성입니다. 지정 하지 않으면 현재 레코드를 기준으로 이동 합니다.  
   
  사용 하는 경우는 **CacheSize** 속성을 전달 공급자에서 레코드를 로컬로 캐시 한 *NumRecords* 캐시 된 레코드의 현재 그룹 외부 레코드 현재 위치를 이동 하는 인수 하면 ADO 대상 레코드부터 시작 하는 레코드의 새 그룹을 검색 합니다. **CacheSize** 새로 검색된 된 그룹의 크기를 결정 하는 속성 및 대상 레코드는 검색 된 첫 번째 레코드입니다.
+

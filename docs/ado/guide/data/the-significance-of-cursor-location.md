@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4dbeab2366d53499eaab2f21198ab4b7ebe6f570
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  서버 쪽 커서는 사실을 알아야 하는 반면-적어도 일시적으로-모든 활성 클라이언트에 대 한 귀중 한 서버 리소스를 사용 합니다. 서버 하드웨어에 모든 활성 클라이언트에서 요청한 서버 쪽 커서를 관리할 수 있도록 적절 하 게 계획 해야 합니다. 또한 서버 쪽 커서가 수만 단일 행으로의 액세스를 제공 하기 때문에 느려질 수-사용할 수 있는 일괄 처리 커서가 없습니다.  
   
  서버 쪽 커서는 삽입, 업데이트 또는 레코드를 삭제 하는 경우에 유용 합니다. 서버 쪽 커서와 동일한 연결에서 다중 활성 문을 수도 있습니다.
+

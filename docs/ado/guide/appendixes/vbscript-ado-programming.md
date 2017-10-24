@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bc40ecab95aa419ac81ada509133de6dd108a823
@@ -88,3 +89,4 @@ Response.Write("Success!")
 -   사용할 수 없는 **오류 goto에 \<레이블 >** VBScript 내에서.  
   
 -   VBScript와 같은 기본 제공 Visual Basic 함수 중 일부를 지원 **Msgbox**, **날짜**, 및 **IsNumeric**합니다. 그러나 VBScript Visual Basic의 하위 집합 이기 때문에 일부 기본 제공 함수는 지원 됩니다. 예를 들어 VBScript 지원 하지 않습니다는 **형식** 파일 I/O 함수입니다.
+

@@ -25,6 +25,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a029a6efad9ebdbc15e42d593db28f9530b1b8e
@@ -172,3 +173,4 @@ ms.lasthandoff: 09/01/2017
  [연결 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   
+

@@ -18,6 +18,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 459bae71d8b93278b71d29a601c01b0ed4954e97
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/01/2017
 -   비즈니스 인텔리전스를 추가할 차원을 연 다음 도구 모음에서 **비즈니스 인텔리전스 추가** 단추를 클릭합니다. 또는 개체 탐색기 또는 솔루션 탐색기에서 차원을 마우스 오른쪽 단추로 클릭한 다음 **비즈니스 인텔리전스 추가**를 클릭합니다.  
   
   
+

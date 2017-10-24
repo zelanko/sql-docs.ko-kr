@@ -22,6 +22,7 @@ caps.latest.revision: 30
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: eaca145753958228bdecae9b7bdcb2ebcdb8b6cb
@@ -578,3 +579,4 @@ static public String DesignAggregationsOnPartitions(MeasureGroup mg, double opti
  [Analysis Services 다차원 모델링 자습서에 대 한 예제 데이터 및 프로젝트 설치](../../../analysis-services/install-sample-data-and-projects.md)  
   
   
+

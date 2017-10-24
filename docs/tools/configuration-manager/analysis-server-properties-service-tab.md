@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b8d2da25a920e0d5e25f9b7fa72ce48529fa6686
@@ -59,3 +60,4 @@ ms.lasthandoff: 08/02/2017
  이 서비스가 실행 중인지, 중지되었는지 또는 비활성화되었는지 나타냅니다.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b60f1804e6d465a397704b284c30611b42524420
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 -   SharePoint 라이브러리에서 .rsds 공유 보고서 데이터 원본 연결(다차원 모델에 연결되는 .rsds) 옆의 화살표를 클릭한 다음 **파워 뷰 보고서 만들기**를 클릭합니다.  
   
   
+

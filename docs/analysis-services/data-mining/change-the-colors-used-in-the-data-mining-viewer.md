@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 325bc785030aa4606d91e40dfa30cb51ee4b03af
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/01/2017
     >  사용자 지정 색을 사용하는 경우 색은 색 아이콘 및 색의 RBG 값으로 나타냅니다. 시스템 색 또는 웹 색을 사용하는 경우 색은 색 아이콘 및 색 이름으로 나타냅니다.  
   
   
+

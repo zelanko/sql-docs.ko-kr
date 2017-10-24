@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ae76d9acb1ddf47964bef0c55caf6d029686a223
@@ -140,3 +141,4 @@ void PrintComError(_com_error &e) {
 ## <a name="see-also"></a>관련 항목:  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Optimize 속성-동적(ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+

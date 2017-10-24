@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 346dd5d2153a9a318e7bc68d73283278b3a13512
@@ -62,3 +63,4 @@ SQL Server 작업에 대 한 모든 요청을 차단 하 고, 작업 및 Windows
 [R 상호 운용성](r-interoperability-in-sql-server.md)
 
 [보안 개요](security-overview-sql-server-r.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb50826230e46cc71106a2b17d01914eae024f47
@@ -52,3 +53,4 @@ oRs.Open sSQL, sCnStr, adOpenStatic, adLockOptimistic, adCmdText
  이 섹션에는 다음 항목 포함 되어 있습니다.  
   
  [레코드 집합의 경계](../../../ado/guide/data/boundaries-of-a-recordset.md)
+

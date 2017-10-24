@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 0a574a1159d984e59a7a8ee5ff58ae63f16199b0
@@ -111,3 +112,4 @@ C:\PS>New-PowerPivotServiceApplication -ServiceApplicationName "PowerPivot Servi
  이 예에서는 새 서비스 응용 프로그램을 만듭니다. 서비스 응용 프로그램 데이터베이스는 AdvWorks-SRV01이라는 데이터베이스 서버에 만들어집니다. 이 데이터베이스 서버는 대부분의 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치에 대한 일반 구성인 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 명명된 인스턴스로 설치되었습니다. 데이터베이스를 만들려면 SQL Server 인스턴스에 대한 dbcreator 권한이 있어야 합니다. SharePoint 구성 데이터베이스에서 db_owner여야 합니다. 이 응용 프로그램은 팜의 첫 번째 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램이므로 기본 프록시 그룹의 멤버여야 합니다.  
   
   
+

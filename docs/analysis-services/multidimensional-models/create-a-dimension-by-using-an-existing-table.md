@@ -21,6 +21,7 @@ caps.latest.revision: 52
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1828a2a8c2150c4fabfd809be2e5edba5b0e0036
@@ -99,3 +100,4 @@ ms.lasthandoff: 09/01/2017
  [데이터 원본에 시간이 아닌 테이블을 생성 하 여 차원 만들기](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   
+

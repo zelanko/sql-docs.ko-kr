@@ -20,6 +20,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 35faf0a1217f5b558c9781644cb9ea115e602584
@@ -57,3 +58,4 @@ Cellset.Open Source, ActiveConnection
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [ADO MD source 속성](../../../ado/reference/ado-md-api/source-property-ado-md.md)   
  [State 속성(ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)
+

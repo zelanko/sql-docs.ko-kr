@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0722554c3ebfea2f80bc9643db337dd6d181ef11
@@ -184,3 +185,4 @@ ms.lasthandoff: 09/01/2017
 -   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690).  
   
   
+

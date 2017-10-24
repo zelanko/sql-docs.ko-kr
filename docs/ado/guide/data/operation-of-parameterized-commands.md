@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 65f8a1caba2f709e4583613ced4d6aa03b2d6bf1
@@ -96,3 +97,4 @@ APPEND ({SELECT * FROM games WHERE home_team = ? OR visiting_team = ?}
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
+

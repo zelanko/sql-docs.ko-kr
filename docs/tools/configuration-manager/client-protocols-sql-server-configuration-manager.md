@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: baa2fd086747707b67458914513d482f794cfdc6
@@ -27,3 +28,4 @@ ms.lasthandoff: 08/02/2017
  이 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트가 사용하는 클라이언트 프로토콜의 속성을 구성하려면 콘솔 창에서 **ClientProtocols**를 클릭하고 세부 정보 창에서 원하는 프로토콜을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
   
+

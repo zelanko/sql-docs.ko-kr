@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ef92cbf72ad8a8aa3a8076be7ccaf3761f51ab0
@@ -64,3 +65,4 @@ End Sub
  [인터넷 게시 시나리오](../../../ado/guide/data/internet-publishing-scenario.md)   
  [2 단계: 기본 목록 상자를 초기화 합니다.](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)   
  [4단계: 세부 정보 텍스트 상자 채우기](../../../ado/guide/data/step-4-populate-the-details-text-box.md)
+

@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 77c7eb1fcde9b073b3c08f412ac0e46519763c74
 ms.openlocfilehash: 175a9bc664a2032d828ca790312920339f971b9b
@@ -254,3 +255,4 @@ EXEC sp_rxPredict
 + [Azureml 모델-관리 sdk를 사용 하 여 웹 서비스로 Python 모델 배포](https://docs.microsoft.com/machine-learning-server/operationalize/python/quickstart-deploy-python-web-service)
 + [R 코드 블록 또는 실시간 모델을 새 웹 서비스로 게시](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/publishservice)
 + [R에 대 한 mrsdeploy 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/mrsdeploy/mrsdeploy-package)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 47aa7f058db324c7388801ae6a391b6c0c24ae1d
@@ -41,3 +42,4 @@ ADO **연결** 개체 DBMS, 파일 저장소 또는 쉼표로 구분 된 텍스�
 -   [연결 속성 지정](../../../ado/guide/data/specifying-connection-properties.md)  
   
 -   [트랜잭션 제어](../../../ado/guide/data/controlling-transactions-ado.md)
+

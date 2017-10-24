@@ -21,6 +21,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4ebc7cd706986a4be284a0788b1976898fb5d313
@@ -65,3 +66,4 @@ fn:floor ($arg as numeric?) as numeric?
  [xml 데이터 형식에 대한 XQuery 함수](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   
+

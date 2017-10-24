@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a144e0130fec6d62ee55ea68001901815a29fef9
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
+

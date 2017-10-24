@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 44d731d8c9e61c29f1dc9eb0c8ea12d57402639c
@@ -48,3 +49,4 @@ Visual c + + 응용 프로그램에서 ADO의 최신 버전을 사용 하려면 
 -   *msado21.tlb*, ADO 2.1 형식 라이브러리  
   
 -   *msado20.tlb*, ADO 2.0 형식 라이브러리
+

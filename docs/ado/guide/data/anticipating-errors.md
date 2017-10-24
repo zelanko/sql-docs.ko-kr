@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 359dc6c1bd396a0909aea36c5039a4ba5195f326
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  다음 사항을 확인 **레코드 집합** 개체의 경계를 넘어 않습니다는 **레코드 집합** 레코드 포인터를 이동 하기 전에. 하려고 하면 **MoveNext** 때 **EOF** 은 True 또는 **MovePrev** 때 **BOF** 가 True 이면 오류가 발생 합니다. 중 하나를 수행 하는 경우는 **이동** 메서드 때 둘 다 **EOF** 및 **BOF** true, 오류가 생성 됩니다.  
   
  또한 있으면 오류가 발생 합니다와 같은 작업을 수행 하려고 하면 **Seek** 및 **찾을** 빈 **레코드 집합**합니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa319e0fa981b3346232e3d3848bfdfe843d9f31
@@ -49,3 +50,4 @@ ADOX 개체의 특성을 나타냅니다.
  이 섹션에는 다음 항목 포함 되어 있습니다.  
   
 -   [ADOX Property 개체 속성, 메서드 및 이벤트](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)
+

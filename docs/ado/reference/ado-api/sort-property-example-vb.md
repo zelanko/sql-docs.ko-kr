@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 04432fa17ae9f8073dfaa7060a2d32035b4897dc
@@ -116,3 +117,4 @@ Attribute VB_Name = "Sort"
 ## <a name="see-also"></a>관련 항목:  
  [레코드 집합 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort 속성](../../../ado/reference/ado-api/sort-property.md)
+

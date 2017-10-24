@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 32762183ff5273998848978238788cc830319b91
@@ -76,3 +77,4 @@ Python 컴퓨터 학습 서비스의 설치 과정의 일부로 GNU Public Licen
 ## <a name="see-also"></a>관련 항목:
 
 [Python 라이브러리 및 데이터 형식](python-libraries-and-data-types.md)
+

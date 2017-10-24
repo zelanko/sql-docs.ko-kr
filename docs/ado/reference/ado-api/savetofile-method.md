@@ -20,6 +20,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2326257da632839c9b60d630f25adb604018272d
@@ -60,3 +61,4 @@ Stream.SaveToFile FileName, SaveOptions
 ## <a name="see-also"></a>관련 항목:  
  [Open 메서드 (ADO 스트림)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
  [Save 메서드](../../../ado/reference/ado-api/save-method.md)
+

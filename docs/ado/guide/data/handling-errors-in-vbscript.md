@@ -19,6 +19,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 909721266982cdfbaf6a3a58b00b120c47cf736e
@@ -82,3 +83,4 @@ VBScript로 사용 되 고 Visual Basic에서 사용 하는 방법 간에 약간
 </HTML>  
 <!-- EndErrorExampleVBS -->  
 ```
+

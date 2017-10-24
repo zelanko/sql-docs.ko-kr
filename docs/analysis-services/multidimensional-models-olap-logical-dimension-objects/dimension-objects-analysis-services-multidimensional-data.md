@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 68fa5e37c0cc3620417f916ff35dcd6e3402d615
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/01/2017
 |[에서 차원 디자이너의](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 차원 내의 특성은 항상 직접 또는 간접적으로 특성과 관련 된 키입니다. 모든 차원 특성이 동일한 관계형 테이블에서 파생되는 별모양 스키마를 기반으로 차원을 정의할 경우 차원의 키 특성과 각각의 키가 아닌 특성 간에 특성 관계가 자동으로 정의됩니다. 그러나 차원 특성이 관련된 여러 테이블에서 파생되는 눈송이 스키마를 기반으로 차원을 정의하면 다음 사이에서 특성 관계가 자동으로 정의됩니다.<br /><br /> 키 특성과 주 차원 테이블의 열에 바인딩된 각각의 키가 아닌 특성 간<br /><br /> 키 특성과 기본 차원 테이블을 연결하는 보조 테이블의 외래 키에 바인딩된 특성 간<br /><br /> 보조 테이블의 외래 키에 바인딩된 특성과 보조 테이블의 열에 바인딩된 각각의 키가 아닌 특성 간|  
   
   
+

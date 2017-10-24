@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8f084616a0dd548fe9ee939f5e770b1f69f125f1
@@ -87,3 +88,4 @@ ms.lasthandoff: 09/01/2017
     -   **MDX 캡션** 드롭다운 목록에서 캡션이 MDX인지 여부를 지정합니다. 이 필드는 **캡션** 의 내용을 MDX 식으로 계산할지 여부를 서버에 알려 줍니다.  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d16dd3724980cd399366c871cb24015d4b3ad6da
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  [카탈로그 예제 (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [CubeDefs 컬렉션(ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+

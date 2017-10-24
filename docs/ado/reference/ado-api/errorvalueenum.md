@@ -19,6 +19,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9404f406a751ada592bb4a2c6bdaec2b13f57222
@@ -131,3 +132,4 @@ ADO에서 런타임 오류가 유형을 지정합니다.
   
 ## <a name="see-also"></a>관련 항목:  
  [ADO 오류 코드](../../../ado/guide/appendixes/ado-error-codes.md)
+

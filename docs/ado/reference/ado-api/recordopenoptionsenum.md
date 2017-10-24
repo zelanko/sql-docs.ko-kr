@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 157b0683dc9d68e4fb00dce0d4a468fa5f622179
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="applies-to"></a>적용 대상  
  [Open 메서드(ADO 레코드)](../../../ado/reference/ado-api/open-method-ado-record.md)
+

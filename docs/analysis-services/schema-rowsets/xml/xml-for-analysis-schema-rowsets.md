@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0c44abd2ba4be59a86b46a9b0ff74196c570e5e
@@ -82,3 +83,4 @@ ms.lasthandoff: 09/01/2017
  [분석 데이터 원본에서 메타 데이터 검색](../../../analysis-services/multidimensional-models-adomd-net-client/retrieving-metadata-from-an-analytical-data-source.md)  
   
   
+

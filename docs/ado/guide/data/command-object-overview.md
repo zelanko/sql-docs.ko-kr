@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61d296aaafd3e610a244aa4e0831b9bed5ff5855
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 -   전달는 **명령** 개체는 **소스** 속성의는 **레코드 집합** 데이터를 수집 하려면.  
   
 -   전달 된 **스트림** 인터페이스를 지 원하는 공급자에 명령 (예: XML 명령)을 포함 하는 개체입니다.
+

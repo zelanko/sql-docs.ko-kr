@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62aea6f8e996aed9752d153e717e725c4e20566c
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 |**adObjectTypeHierarchy**|2|A [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) 개체입니다.|  
 |**adObjectTypeLevel**|3|A [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 개체입니다.|  
 |**adObjectTypeMember**|4|A [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체입니다.|
+

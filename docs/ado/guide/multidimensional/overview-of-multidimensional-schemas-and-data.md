@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf3e8d6bebd5860df9f52236eecf4d1f287a8f9d
@@ -93,3 +94,4 @@ Hamburg, Munich, Stuttgart}
  [ADO MD를 사용한 프로그래밍](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [ADO MD와 함께 ADO 사용](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [다차원 데이터 작업](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

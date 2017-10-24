@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ea2a55c5e64d324b352e23ff767717bc02a6d5f5
@@ -168,3 +169,4 @@ public void removeOnWillMove(RecordsetEventHandler handler)
   
 ## <a name="see-also"></a>관련 항목:  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

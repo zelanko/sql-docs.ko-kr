@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7b6148a96e9846341dd5635333a891576ea74220
@@ -41,3 +42,4 @@ ms.lasthandoff: 08/02/2017
  이 서비스를 사용하는 인스턴스를 나타냅니다.  
   
   
+

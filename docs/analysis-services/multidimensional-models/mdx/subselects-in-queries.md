@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 918c7727a7af1f85f93d110652da450f1ea770cb
@@ -358,3 +359,4 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 -   기본적으로 계산된 멤버; 하위 select에서 허용 되지 않습니다. 그러나이 제한을 변경할 수 있습니다, 세션 별로에서 값을 할당 하 여는 **하위 쿼리** 의 연결 문자열 속성이 <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> 또는 **DBPROP_MSMD_SUBQUERIES** 속성[ 지원 되는 XMLA 속성 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md). [SubQueries](../../../analysis-services/multidimensional-models/mdx/calculated-members-in-subselects-and-subcubes.md) 또는 **DBPROP_MSMD_SUBQUERIES** 의 값에 따른 계산 멤버의 동작에 대한 자세한 내용은 **하위 SELECT 및 하위 큐브의 계산 멤버**를 참조하세요.  
   
   
+

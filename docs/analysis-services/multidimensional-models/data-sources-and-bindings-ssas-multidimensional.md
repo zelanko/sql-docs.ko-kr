@@ -39,6 +39,7 @@ caps.latest.revision: 40
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0a182451583f04bd52a4f720c4cc057226261e21
@@ -194,3 +195,4 @@ ms.lasthandoff: 09/01/2017
  **Binding** 내에 허용되는, DDL에 직접 존재하지 않는 한 가지 추가 요소는 **ParentColumnID**로, 이 요소는 데이터 마이닝을 위한 중첩 테이블에 사용됩니다. 이 경우 바인딩이 제공되는 중첩 테이블에 있는 부모 열을 식별해야 합니다.  
   
   
+

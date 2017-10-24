@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7b2716ffe745fcbb9359c34c33317e61ac82602
@@ -107,3 +108,4 @@ End Function
 5.  앞의 코드를 복사 하 고 붙여넣습니다는 **코드** 기존 코드를 바꿀 페이지입니다.  
   
 6.  선택 **시작** 에서 **실행** 메뉴를 응용 프로그램을 실행 합니다.
+

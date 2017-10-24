@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9b9156a3dc9dec21187eec8dc0b5a44059fb5e31
@@ -73,3 +74,4 @@ ms.lasthandoff: 09/01/2017
 3.  다시 구성 된 인스턴스에 대 한 SQL Server 서비스를 다시 시작 합니다. 이렇게 자동으로 다시 관련 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 서비스 뿐입니다.
 
 3. 사용자 지정 보안 구성이 있거나 SQL Server를 사용하여 원격 계산 컨텍스트를 지원할 경우 추가 단계가 필요할 수 있습니다. 자세한 내용은 참조 [컴퓨터 학습 설치 문제 해결](../machine-learning-troubleshooting-faq.md)합니다.
+

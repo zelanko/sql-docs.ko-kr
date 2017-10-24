@@ -20,6 +20,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c3e3f666fd96a1b00d78ba364a8df062fa3f6397
@@ -59,3 +60,4 @@ If oRs.BOF Then oRs.MoveFirst
  또 다른 예로, 가운데 특정 행에 위치 하는 경우는 **레코드 집합** 호출 하면 **삭제** 호출 **MoveNext**, 레코드에 대해 현재 위치는 삭제 된 레코드의 바로 다음 합니다. 하지만 호출 **MovePrevious** 레코드는 삭제 된 레코드를 더 이상의 활성 구성원으로 계산 하므로 현재 레코드를 삭제 하는 한 바로 앞에 **레코드 집합**합니다.  
   
  현재 레코드를 기준으로 이동 하는 방법에 대 한 모든 공급자 일관성 있는 이동 의미 체계를 정의 하기가 특히- **MovePrevious**, **MoveNext**, 및 **이동** -현재 레코드의 데이터를 변경 합니다. 예를 들어, 사용 하는 정렬, 필터링 **레코드 집합**, 및 다른 모든 레코드 앞으로 가도록 있도록 현재 레코드의 데이터를 변경 하지만 변경 된 데이터도 더 이상 일치 필터, where 명확 하지 않습니다는 **MoveNext** 작업 소요 됩니다. 결론적 내에서 해당 상대 이동 되는 **레코드 집합** 은 절대 이동 보다 더 위험 (사용 하는 등 **MoveFirst** 또는 **MoveLast**) 데이터는 경우 변경 레코드를 편집 하는 동안 추가 또는 삭제 합니다. 정렬 및 필터링이 유형의 값을 변경 하지 않아야 하기 때문에 기본 키 또는 ID에 따라 해야 합니다.
+

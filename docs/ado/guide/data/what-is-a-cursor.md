@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03b7d4fe16a379e04fe25fe8fef95802aedabe1d
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="scrollability"></a>스크롤 가능 여부  
  결과 집합의 행을 앞 이나 뒤로 이동 하는 기능을도 영향을 줍니다 응용 프로그램에서 사용 하는 커서 유형 이 스크롤 가능 여부 라고도 합니다. 앞으로 이동 하는 기능 *및* 뒤로 결과 집합 커서의 복잡성에 추가 하 고 구현 하는 비용이 많이 드는 되므로 합니다. 이러한 이유로 필요한 경우에이 기능으로는 커서에 대해 문의 해야 합니다.
+

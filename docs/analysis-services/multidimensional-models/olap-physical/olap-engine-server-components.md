@@ -22,6 +22,7 @@ caps.latest.revision: 39
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 86a69dc1076124377e3b916b441dd78edb9a8f82
@@ -74,3 +75,4 @@ ms.lasthandoff: 09/01/2017
  [논리적 아키텍처 &#40; Analysis Services-다차원 데이터 &#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   
+

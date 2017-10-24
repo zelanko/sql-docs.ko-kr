@@ -20,6 +20,7 @@ caps.latest.revision: 32
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b6ee3f4fe47a524fb645040adb6e6a61691decc6
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/01/2017
  [데이터 피드 라이브러리를 사용하여 데이터 피드 공유&#40;SharePoint용 파워 피벗&#41;](../../analysis-services/power-pivot-sharepoint/share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint.md)  
   
   
+

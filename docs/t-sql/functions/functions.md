@@ -23,6 +23,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 53a2a1be1099b2224b14f8c8d856b7ae07d42ac6
@@ -87,3 +88,4 @@ SQL 데이터베이스와 함께 사용할 수 있는 기본 제공 함수의 �
  [저장된 프로시저 &#40;를 사용 하 여 Mdx&#41;](../../mdx/using-stored-procedures-mdx.md)  
   
   
+

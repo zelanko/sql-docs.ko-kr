@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 569f03f0a1444d610462317a5ee19dc60f314d31
@@ -74,3 +75,4 @@ C:\PS>Get-PowerPivotSystemServiceInstance -Identity 1234567-890a-bcde-fghijklm |
  이 예에서는 서버 이름, 버전 및 업그레이드 상태를 포함하여 지정한 인스턴스의 추가 속성을 반환합니다.  
   
   
+

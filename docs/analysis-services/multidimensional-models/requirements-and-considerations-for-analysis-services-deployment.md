@@ -27,6 +27,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c698473d796548f3ed9d7d17dfb19206804f634f
@@ -109,3 +110,4 @@ ms.lasthandoff: 09/01/2017
 -   쿼리 성능이 나쁘지만 로컬 서버의 프로세서와 메모리 리소스를 늘릴 수 없으면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 둘 이상의 프로덕션 서버에 배포해 봅니다. 그런 다음 NLB를 사용하여 서버를 단일 클러스터로 결합할 수 있습니다. NLB 클러스터에서 쿼리는 NLB 클러스터에 속한 모든 서버에 자동으로 분산됩니다.  
   
   
+

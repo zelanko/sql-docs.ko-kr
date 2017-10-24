@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a19b939b0b0eb33d436a3924a04562473b4c06a
@@ -49,3 +50,4 @@ SHAPE {SELECT * FROM Customers}
  [데이터 예제를 셰이핑](../../../ado/guide/data/data-shaping-example.md)   
  [형식 모양 문법](../../../ado/guide/data/formal-shape-grammar.md)   
  [일반적인 셰이핑 명령](../../../ado/guide/data/shape-commands-in-general.md)
+

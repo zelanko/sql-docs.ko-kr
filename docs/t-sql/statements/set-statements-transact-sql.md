@@ -28,6 +28,7 @@ caps.latest.revision: 38
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: f0426730b33f0b70fda11a8cb07242a365d10fae
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/01/2017
      이 옵션 중 하나라도 필요한 값으로 설정하지 않으면 인덱싱된 뷰나 계산 열에 인덱스가 있는 테이블에서의 INSERT, UPDATE, DELETE, DBCC CHECKDB 및 DBCC CHECKTABLE 동작이 실패합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 잘못 설정된 모든 옵션을 나열하는 오류 메시지를 표시합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 옵션이 잘못 설정된 테이블이나 인덱싱된 뷰에 대해 계산 열이나 뷰에 이러한 인덱스가 존재하지 않는 것처럼 SELECT 문을 처리합니다.  
   
   
+

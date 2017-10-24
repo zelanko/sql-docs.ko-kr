@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 001813cf0e7d00e089046d8580108eb10ef4cba0
@@ -184,3 +185,4 @@ RESTORE HEADERONLY
  [데이터베이스 백업 &#40; 병렬 데이터 웨어하우스 &#41;](../../t-sql/statements/backup-database-parallel-data-warehouse.md)  
   
   
+

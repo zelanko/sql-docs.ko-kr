@@ -17,6 +17,7 @@ caps.latest.revision: 15
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49399204f536d32321d46f1a8acba0ae435583c5
@@ -41,3 +42,4 @@ End With
   
 > [!NOTE]
 >  ADO에서 사용 하면 안 세미콜론을 포함 하는 암호 (";")의 암호는 작은따옴표로 묶여 있지 않은 한 합니다.
+

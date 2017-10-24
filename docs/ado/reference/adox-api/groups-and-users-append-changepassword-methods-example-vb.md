@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79fb5b6efc94187fb0da48a532a150216a18c5ca
@@ -135,3 +136,4 @@ End Sub
  [그룹 컬렉션 (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [사용자 개체 (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)   
  [Users 컬렉션(ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+

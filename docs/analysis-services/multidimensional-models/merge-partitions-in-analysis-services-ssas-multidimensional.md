@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a973f81fbb9eef7294b9beec9251569bcce0bf4f
@@ -147,3 +148,4 @@ ms.lasthandoff: 09/01/2017
  [차원 및 파티션에 대 한 문자열 저장소 구성](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   
+

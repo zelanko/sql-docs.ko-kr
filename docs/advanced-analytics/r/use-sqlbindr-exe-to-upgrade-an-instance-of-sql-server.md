@@ -16,6 +16,7 @@ caps.latest.revision: 15
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 560965a241b24a09f50a23faf63ce74d0049d5a7
 ms.openlocfilehash: 9b2d59d860d72207b196ac60a1db66f09baa1228
@@ -218,3 +219,4 @@ Microsoft R Server 9.1.0에 대 한 새 설치 관리자를 실행 하면 SQL Se
 + [R Server의 이전 릴리스에서 기능 공지 사항](https://docs.microsoft.com/r-server/whats-new-in-r-server)
 
 + [사용 되지 않는, 지원 되지 않는 추가 되거나 변경 된 기능](https://docs.microsoft.com/machine-learning-server/resources-deprecated-features)
+

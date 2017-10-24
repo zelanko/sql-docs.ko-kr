@@ -19,6 +19,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a8533cd43964bf7bd2a456ff2cadce1be00b223
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 |--------------|-----------|-----------------|  
 |**adDefaultStream**|-1|기본값을 포함 하는 필드 참조 [스트림](../../../ado/reference/ado-api/stream-object-ado.md) 연관 된 개체는 **레코드**합니다.|  
 |**adRecordURL**|-2|현재에 대 한 절대 URL 문자열을 포함 하는 필드 참조 **레코드**합니다.|
+

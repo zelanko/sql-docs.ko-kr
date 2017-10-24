@@ -23,6 +23,7 @@ caps.latest.revision: 31
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 879c7266c06551aa040a075e4af4ed537e58cab9
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/01/2017
  그런 다음 **조건** 열에서 **키** 또는 **이름**을 중에서 어떤 기준으로 특성 멤버의 순서를 지정할 것인지 선택합니다.  
   
   
+

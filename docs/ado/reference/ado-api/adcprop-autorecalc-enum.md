@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f5639a1e86ce6b9e46b3583c8e092e389dfa422e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="adowfc-equivalent"></a>해당 하는 ADO/WFC  
  이러한 상수는 ADO/wfc 필요가 없습니다.
+

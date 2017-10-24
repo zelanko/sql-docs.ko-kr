@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80680ae03ee8ac059cfe3c9b47c3abe6b67db511
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/01/2017
  **마법사 완료** 페이지에서 새 큐브의 구조를 검토한 후 **큐브 이름** 상자에 큐브 이름을 입력합니다. 선택 사항으로 **지금 스키마 생성** 확인란을 선택하면 스키마 생성 마법사가 시작됩니다. 대부분의 경우 추가 개체를 만들려면 이 확인란을 선택하지 않아야 합니다. 나중에 큐브 디자이너를 사용하여 스키마를 생성할 수 있습니다.  
   
   
+

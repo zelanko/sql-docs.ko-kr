@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: barbkess
 ms.author: barbkess
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4fb36fd89c02ff9ddd5bc33825a387b53ab6e174
@@ -248,3 +249,4 @@ WITH (
  [데이터베이스 복원 &#40; 병렬 데이터 웨어하우스 &#41;](../../t-sql/statements/restore-database-parallel-data-warehouse.md)  
   
   
+

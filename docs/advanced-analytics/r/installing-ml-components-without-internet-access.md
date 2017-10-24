@@ -14,6 +14,7 @@ caps.latest.revision: 30
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: f2b67ff49d5773890ff94f44eddeb01f2d5aaddf
@@ -254,3 +255,4 @@ Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 
 [Microsoft R Server 설치](https://docs.microsoft.com/r-server/install/r-server-install-windows)
 
 R 서비스 지원 팀에서이 문서에서는 SQL Server 2016의 무인된 설치 또는 R services의 업그레이드를 수행 하는 방법을 보여 줍니다: [인터넷 액세스가 없는 컴퓨터에 R 서비스 배포](https://blogs.msdn.microsoft.com/sqlcat/2016/10/20/do-it-right-deploying-sql-server-r-services-on-computers-without-internet-access/)합니다.
+

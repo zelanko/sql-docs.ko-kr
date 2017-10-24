@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4975dd903c6d012976f9288b9758e1acab52f1f
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  이 섹션에서는 다음 항목을 다룹니다.  
   
 -   [잠금의 유형](../../../ado/guide/data/types-of-locks.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5768404342f76eb8c5999678e6c1a4aa4a3bcd42
@@ -44,3 +45,4 @@ ADO에서 대부분의 명령을 호출자에 게 반환 하는 몇 가지 정�
  에 캡슐화 된 각 데이터 집합에 대 한 네트워크를 통해 여러 해야 하는 수단 라운드 트립 둘 이상의 결과 집합을 받을 수는 **레코드 집합** 개체입니다. 느리거나 혼잡 한 네트워크에 대 한 왕복 수를 줄이고 성능을 높일 수 있습니다는 응용 프로그램의 성능입니다. 일부 공급자의 여러 받으려는 지원 제공 따라서 **레코드 집합**s 단일 왕복에서 합니다. 다음 항목에 설명 되어 있음:  
   
 -   [다중 레코드 집합 수신](../../../ado/guide/data/receiving-multiple-recordsets.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74ec85c5907485edc5ad8dbcb6c24826fc21ccf3
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  캐시에서 검색 된 레코드는 다른 사용자가 원본 데이터에 동시 변경 내용을 반영 하지 않습니다. 모든 캐시 된 데이터의 업데이트를 적용 하려면 사용 된 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드.  
   
  경우 **CacheSize** 탐색 방법 1 보다 큰 값으로 설정 됩니다 ([이동](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext 및 MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) 이동 하 여 삭제 될 수 있습니다 삭제 된 레코드를 가져온 후 발생 하는 경우 기록 합니다. 초기 인출 후 후속 삭제 반영 되지 않습니다 데이터 캐시에서 삭제 된 행의 데이터 값에 액세스 하려고 합니다. 그러나 설정 **CacheSize** 1에이 문제가 발생 하지 않습니다이 삭제 된 행을 가져올 수 없습니다.
+

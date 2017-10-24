@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c9c3d117c6c5ed3bf6c9e5e3f5c6822915681fc
@@ -52,3 +53,4 @@ Set oRs = Nothing
 ```  
   
  다음에 유의 **oRs.Open** 연결 문자열 (*sConn*), 대신는 **연결** 개체 (*oConn*), 해당 의값으로** ActiveConnection** 매개 변수입니다. 설정 하 여 클라이언트 쪽 커서 형식이 적용 되는 또한는 **앞** 속성에는 **레코드 집합** 개체입니다. 마찬가지로 이와 반대로와 **HelloData** 예제입니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2d0f84b78c133242fe3f2b432ccd6bbb607012c8
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/01/2017
 
 이 섹션에서 항목을 찾으려면 브라우저 왼쪽에 있는 내용 창을 사용합니다.  
   
+

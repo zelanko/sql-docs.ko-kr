@@ -15,6 +15,7 @@ caps.latest.revision: 38
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 140885b86f0f6fa1a56119246c859f143f596726
@@ -46,3 +47,4 @@ SQL Server 2017 설치 프로그램을 통해 python 시작 하는 데 필요한
 [데이터베이스에서 서비스 학습 Python 컴퓨터 설정](setup-python-machine-learning-services.md)
 
 [Python 자습서](../tutorials/sql-server-python-tutorials.md)
+

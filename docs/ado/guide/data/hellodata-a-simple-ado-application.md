@@ -17,6 +17,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1c7d61c6349945274febc92e4e6b5acfcc379b9
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
 ||캡션|데이터 편집|  
 |명령 단추|이름|cmdUpdateData|  
 ||캡션|업데이트 데이터|
+

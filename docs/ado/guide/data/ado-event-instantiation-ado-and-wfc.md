@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4d46ec3bdad80879ddc4a931d8668a5298972e58
@@ -70,3 +71,4 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
  [이벤트 처리기 함께 작동 하는 방법](../../../ado/guide/data/how-event-handlers-work-together.md)   
  [이벤트 유형](../../../ado/guide/data/types-of-events.md)
+

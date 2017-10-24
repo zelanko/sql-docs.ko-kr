@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8138aeea7e5ea40e659a6fed5f5d5f551b1c69d
@@ -40,3 +41,4 @@ Update 동작 및 기능 크게 의존 하는 모드 (잠금 유형), 커서 유
 -   [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)  
   
 -   [트랜잭션 처리](../../../ado/guide/data/transaction-processing.md)
+

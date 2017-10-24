@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b15df02c70e2dcdc2efb2ba468b76219a233d65a
@@ -65,3 +66,4 @@ ADOX의 특정 기능은 OLE DB 데이터 공급자에 따라 지원 되지 않�
 |**키** 컬렉션|**Append** 및 **삭제** 메서드가 지원 되지 않습니다.|  
 |**사용자가** 컬렉션|**사용자가** 지원 되지 않습니다.|  
 |**그룹** 컬렉션|**그룹** 지원 되지 않습니다.|
+

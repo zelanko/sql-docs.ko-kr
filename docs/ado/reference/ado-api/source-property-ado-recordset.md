@@ -25,6 +25,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ea45eae107fa55355adeb195e7e4fc5cf0a3c762
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  [원본 속성 예제 (VB)](../../../ado/reference/ado-api/source-property-example-vb.md)   
  [Source 속성 (ADO 오류)](../../../ado/reference/ado-api/source-property-ado-error.md)   
  [Source 속성(ADO 레코드)](../../../ado/reference/ado-api/source-property-ado-record.md)
+

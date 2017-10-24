@@ -16,6 +16,7 @@ caps.latest.revision: 4
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a6ddbc392ae0bd0c378a4d08cd2c76f3119d8332
@@ -32,3 +33,4 @@ ADO에서 볼 수 있는 가장 강력한 기능 중 하나에 데이터 원본�
   
 ## <a name="see-also"></a>관련 항목:  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)
+

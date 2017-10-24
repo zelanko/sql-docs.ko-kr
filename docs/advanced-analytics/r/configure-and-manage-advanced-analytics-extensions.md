@@ -15,6 +15,7 @@ caps.latest.revision: 21
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 872acf107d72989b4623a9d5f4ccb85c44d1f2f9
@@ -99,3 +100,4 @@ SQL Server 서비스를 실행하는 데 필요한 권한에 대한 자세한 �
 ## <a name="see-also"></a>관련 항목:
 
 [보안 고려 사항](security-considerations-for-the-r-runtime-in-sql-server.md)
+

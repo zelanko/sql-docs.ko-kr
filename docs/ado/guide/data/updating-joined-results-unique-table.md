@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0913d7a00407381c895c00a0d9076249773429a
@@ -28,3 +29,4 @@ ADO를 사용 하면 밀접 하 게 제어 수정 Unique Table 동적 속성을 
   
 ## <a name="see-also"></a>관련 항목:  
  [일괄 처리 모드](../../../ado/guide/data/batch-mode.md)
+

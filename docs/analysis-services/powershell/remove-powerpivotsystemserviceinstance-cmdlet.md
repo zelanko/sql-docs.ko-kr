@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e44d28106db0c14c293c463d91125b262190350d
@@ -108,3 +109,4 @@ C:\PS>Remove-PowerPivotSystemServiceInstance -identity 1234567-890a-bcde-fghijkl
  이 예에서는 ID를 기준으로 특정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스를 삭제하는 방법을 보여 줍니다.  
   
   
+

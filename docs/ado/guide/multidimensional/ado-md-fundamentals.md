@@ -16,6 +16,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 623350b00e7a855a2d394a0e29dc3618ab327f6f
@@ -48,3 +49,4 @@ Microsoft® ActiveX® Data Objects (다차원) ADO MD 쉽게 액세스할 수 �
  [ADO MD를 사용한 프로그래밍](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [ADO MD와 함께 ADO 사용](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [다차원 데이터 작업](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)
+

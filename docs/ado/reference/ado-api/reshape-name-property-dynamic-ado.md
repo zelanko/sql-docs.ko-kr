@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b14593e427db76994976091e5916ffe49aefe82
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  [Microsoft 데이터를 셰이핑 OLE DB (ADO 서비스 공급자)에 대 한 서비스](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)   
  [일반적으로 shape 명령](../../../ado/guide/data/shape-commands-in-general.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

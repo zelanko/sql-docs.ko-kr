@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d83ded9c35448040c60bb28bd314f39b02c08b05
@@ -102,3 +103,4 @@ ms.lasthandoff: 09/01/2017
  마법사의 **마법사 완료** 페이지에서 새 큐브에 있는 측정값 그룹, 측정값 및 차원을 볼 수 있습니다. **큐브 이름** 상자에 큐브의 이름을 입력합니다. 그런 다음 큐브가 만족스러우면 **마침**을 클릭합니다. 마법사의 이전 페이지로 돌아가서 변경하려면 **뒤로** 를 클릭합니다.  
   
   
+

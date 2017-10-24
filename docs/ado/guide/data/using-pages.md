@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34361d01b914d68cba1ff1e0e0f9378baf035be5
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  사용 하 여는 **AbsolutePage** 속성을 기본값인이 있는 페이지 번호를 식별 합니다. 다시, 공급자는이 속성을 사용할 수에 대 한 적절 한 기능을 지원 해야 합니다.  
   
  **AbsolutePage** 는 1부터 시작 하 고 현재 레코드의 첫 번째 레코드는 경우는 **레코드 집합**합니다. 특정 페이지의 첫 번째 레코드로 이동 하려면이 속성을 설정 합니다. 페이지 합계를 구할는 **PageCount** 속성입니다.
+

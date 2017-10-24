@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2c8df1713f3015e9319f7a1323b43f697bebb625
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  XMLA는 UDM(Unified Dimensional Model) 방법론을 채택한 비즈니스 인텔리전스 응용 프로그램에 사용되는 프로토콜입니다.  
   
   
+

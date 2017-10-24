@@ -19,6 +19,7 @@ caps.latest.revision: 34
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3ebce1becae5b9133d577a81234ee5d2f8fa37a8
@@ -66,3 +67,4 @@ ms.lasthandoff: 09/01/2017
  스키마 생성 마법사가 주제 영역 데이터베이스에서 개체를 생성할 때 사용할 명명 규칙은 마법사의 **명명 규칙 지정** 페이지에서 정의할 수 있습니다. **명명 규칙 지정** 페이지에서 사용할 수 있는 옵션에 대한 자세한 내용은 [명명 규칙 지정&#40;스키마 생성 마법사&#41;&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/02d830ea-5b1f-4485-9f94-d64b8bea592b)을 참조하세요.  
   
   
+

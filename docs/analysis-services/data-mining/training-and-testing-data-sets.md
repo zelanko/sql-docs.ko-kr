@@ -20,6 +20,7 @@ caps.latest.revision: 27
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9465d0eda4b15827cf20c4b9579a5eff672ce1d1
@@ -119,3 +120,4 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
  [테스트 및 유효성 검사&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   
+

@@ -19,6 +19,7 @@ caps.latest.revision: 35
 author: Minewiskan
 ms.author: owend
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 995738c17a385d26e647a6c650c21a791b872a0e
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/01/2017
  [정확도 차트 유형 선택 및 집합 차트 옵션](../../analysis-services/data-mining/choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   
+

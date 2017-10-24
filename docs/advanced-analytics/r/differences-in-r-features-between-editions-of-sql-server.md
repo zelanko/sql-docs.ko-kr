@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b9b520b7fc7e97498f4b46a43ad991558025123a
@@ -114,3 +115,4 @@ SQL Server의 다른 기능에 대 한 자세한 내용은 다음을 참조 하�
 + [SQL Server 2016의 버전과 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) 
 
 큰 데이터 집합에 대 한 솔루션을 최적화 하는 방법 및 Microsoft R 기능에 대 한 자세한 내용은 참조는 [Microsoft R Server](https://docs.microsoft.com/r-server/r/tutorial-large-data-tips) 설명서입니다.
+

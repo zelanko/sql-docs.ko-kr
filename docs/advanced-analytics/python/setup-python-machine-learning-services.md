@@ -12,6 +12,7 @@ ms.topic: article
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 05976158e43d7dfafaf02289462d1537f5beeb36
 ms.openlocfilehash: c7437cff5e2828db7c841e289e329526390e5b69
@@ -290,3 +291,4 @@ Python SQL Server와 함께 사용 하 여 빌드 컴퓨터 학습 솔루션을 
 [Python을 사용 하 여 T-SQL에서](../tutorials/run-python-using-t-sql.md)
 
 [Revoscalepy를 사용 하 여 Python 모델 만들기](../tutorials/use-python-revoscalepy-to-create-model.md)
+

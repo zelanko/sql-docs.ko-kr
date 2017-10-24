@@ -20,6 +20,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e7a2ac4243578480e2b9d3af74b2c78ae4c471ef
@@ -134,3 +135,4 @@ End Function
  [LockType 속성 (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
  [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 32
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 141fb04ee3c89dca748f04dec9c6984d7106d886
@@ -48,3 +49,4 @@ ms.lasthandoff: 08/02/2017
  자세한 내용은 온라인 설명서의 “방법: 데이터베이스 엔진에 암호화 연결 사용(SQL Server 구성 관리자)”을 참조하세요.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 2c96b18bb421d264c99a683af04a51d6e60597d3
@@ -90,3 +91,4 @@ C:\PS>get-PowerPivotServiceApplication -Identity 1234567-890a-bcde-fghijklm
  이 예에서는 표시 이름, 응용 프로그램 유형 및 응용 프로그램 GUID와 함께 단일 서비스 응용 프로그램을 반환합니다. 표시 이름이 긴 경우 잘립니다. 전체 이름을 보려면 format-list 옵션을 사용합니다.  
   
   
+

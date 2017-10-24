@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4a1b4ad6c837bb442af7f5bd5a98ab09527ef707
@@ -88,3 +89,4 @@ WHERE(
  위에서 설명했듯이 WHERE 절에서 집합을 사용하면 해당 집합의 모든 멤버에 대한 값이 암시적으로 집계됩니다. 이 경우 쿼리는 각 셀의 United States 및 United Kingdom에 대한 집계된 값을 표시합니다.  
   
   
+

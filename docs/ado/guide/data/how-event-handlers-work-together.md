@@ -21,6 +21,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a2e603819e2d4c44bf612d62f86f448c560e0828
@@ -62,3 +63,4 @@ Visual Basic의 경우에 대 한 모든 이벤트 처리기에서 프로그래�
  [언어별 ADO 이벤트 인스턴스 생성](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [이벤트 매개 변수](../../../ado/guide/data/event-parameters.md)   
  [이벤트 유형](../../../ado/guide/data/types-of-events.md)
+

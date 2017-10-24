@@ -27,6 +27,7 @@ caps.latest.revision: 30
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: c34c230f6df65610466e087da5707622c3911e42
@@ -245,3 +246,4 @@ WHERE ProductModelID=19
  단일 값이 반환되도록 경로 식에서 `[1]` 조건자가 추가되었습니다.  
   
   
+

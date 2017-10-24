@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 161f42e2559725b41df605c1e1c2ca12acae9c97
@@ -103,3 +104,4 @@ SQL Server 2017 년 1에서 나중에 따라 추가 언어와 동일한 아키�
 + [SQL Server-메서드 및 결과에 R에 대 한 성능 조정](..\r\performance-case-study-r-services.md)
 
     요약 데이터 사용한 두 사례 연구, 성능 테스트 방법 및 최적화 결과 미치는 영향입니다.
+

@@ -27,6 +27,7 @@ caps.latest.revision: 26
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 725f0ac6753947e587b6746528b6efc6d409f269
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  기존 계산을 삭제하려면 **스크립트 구성 도우미** 창의 **계산** 탭에서 삭제할 계산을 선택하고 **편집** 메뉴에서 **삭제** 를 클릭하거나 도구 모음에서 **삭제** 아이콘을 클릭합니다. **스크립트 구성 도우미** 창에서 계산을 마우스 오른쪽 단추로 클릭하고 바로 가기 메뉴에서 **삭제** 를 선택할 수도 있습니다.  
   
   
+

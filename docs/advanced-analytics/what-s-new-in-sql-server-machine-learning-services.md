@@ -15,6 +15,7 @@ caps.latest.revision: 36
 author: jeannt
 ms.author: jeannt
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: bc1321dd91a0fcb7ab76b207301c6302bb3a5e64
 ms.openlocfilehash: 37f3b12dc792060b45e67264e49a4a6180167676
@@ -140,3 +141,4 @@ MicrosoftML 패키지 R와 Python 인터페이스와 함께 제공 하 고 Micro
 + [SQL Server 컴퓨터 학습 서비스에서 R 설정](r/set-up-sql-server-r-services-in-database.md)
 
 + [컴퓨터 학습 자습서 및 샘플](tutorials/machine-learning-services-tutorials.md)
+
