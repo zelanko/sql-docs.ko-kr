@@ -19,16 +19,15 @@
 
 # 릴리스 정보
 
-## [SQL Server 릴리스 정보](sql-server-release-notes.md)
-## [SQL Server 2017 릴리스 정보](sql-server-2017-release-notes.md)
-## [SQL Server 2016 릴리스 정보](sql-server-2016-release-notes.md)
-## [SQL Server 2014 Release Notes](sql-server-2014-release-notes.md)
-## [SQL Server 2012 SP4 릴리스 정보](sql-server-2012-sp4-release-notes.md)
-## [SQL Server 2012 SP3 릴리스 정보](sql-server-2012-sp3-release-notes.md)
-## [SQL Server 2012 SP2 Release Notes](sql-server-2012-sp2-release-notes.md)
-## [SQL Server 2012 SP1 Release Notes](sql-server-2012-sp1-release-notes.md)
-## [SQL Server 2012 릴리스 정보](sql-server-2012-release-notes.md)
-## [SQL Server 2008 R2 SP2 Release Notes](sql-server-2008-r2-sp2-release-notes.md)
+## [SQL Server 2017 참고](sql-server-2017-release-notes.md)
+## [SQL Server 2016 참고](sql-server-2016-release-notes.md)
+## [SQL Server 2014 참고](sql-server-2014-release-notes.md)
+## [SQL Server 2012 SP4 참고](sql-server-2012-sp4-release-notes.md)
+## [SQL Server 2012 SP3 참고](sql-server-2012-sp3-release-notes.md)
+## [SQL Server 2012 SP2 참고](sql-server-2012-sp2-release-notes.md)
+## [SQL Server 2012 SP1 참고](sql-server-2012-sp1-release-notes.md)
+## [SQL Server 2012 참고](sql-server-2012-release-notes.md)
+## [SQL Server 2008 R2 SP2 참고](sql-server-2008-r2-sp2-release-notes.md)
 
 # [Analysis Services](../analysis-services/analysis-services.md)
 # [데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)
@@ -42,4 +41,17 @@
 # [Data Migration Assistant](../dma/dma-overview.md)
 # [Stretch Database](../sql-server/stretch-database/stretch-database.md)
 # [SQL Server 자습서](tutorials-for-sql-server-2016.md)
-# [도움말 뷰어에서의 로컬 콘텐츠](sql-server-help-installation.md)
+
+# 리소스
+## 블로그
+### [SQL Server](https://blogs.technet.microsoft.com/dataplatforminsider/)
+### [SQL Server 데이터베이스 엔진](https://blogs.msdn.microsoft.com/sqlserverstorageengine/)
+### [SQL Server 보안](https://blogs.msdn.microsoft.com/sqlsecurity/)
+
+## 피드백 및 도움말
+### [DBA Stack Exchange](https://dba.stackexchange.com/questions/tagged/sql-server)
+### [Stack Overflow](http://stackoverflow.com/questions/tagged/sql-server)
+### [MSDN 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=sqlserver)
+### [Microsoft Connect](https://connect.microsoft.com/SQLServer/Feedback)
+### [Reddit](https://www.reddit.com/r/SQLServer)
+## [도움말 뷰어에서의 로컬 콘텐츠](sql-server-help-installation.md)
