@@ -1,5 +1,5 @@
 ---
-title: "자습서: 텍스트 (보고서 작성기) 서식을 지정할 | Microsoft Docs"
+title: "자습서: 텍스트 서식 지정(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,7 +16,7 @@ caps.latest.revision: 16
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cfbe1001a049466af839363db29156df6b972556
 ms.contentlocale: ko-kr
@@ -66,7 +66,7 @@ ms.lasthandoff: 08/09/2017
 4.  연결 형식이 Microsoft SQL Server인지 확인한 다음 **연결 문자열** 상자에 다음을 입력합니다. `Data Source = <servername>`  
   
     > [!NOTE]  
-    > `<servername>`식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 자습서에서는 특정 데이터; 필요 하지 않습니다. SQL Server 데이터베이스에 연결을 하기만 합니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 집합을 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > `<servername>`식(예: Report001)은 SQL Server 데이터베이스 엔진의 인스턴스가 설치된 컴퓨터를 지정합니다. 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. SQL Server 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 다음 절차인 "데이터 집합을 만들려면"으로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -364,10 +364,10 @@ ms.lasthandoff: 08/09/2017
 
 ## <a name="next-steps"></a>다음 단계
 
-보고서 작성기에서는 여러 가지 방법으로 텍스트 서식을 지정할 수 있습니다. [자습서: 자유 형식 보고서 만들기](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) 더 많은 예제를 포함 합니다.  
+보고서 작성기에서는 여러 가지 방법으로 텍스트 서식을 지정할 수 있습니다. [자습서: 자유 형식 보고서 만들기](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)에 더 많은 예제가 포함되어 있습니다.  
 
-[보고서 작성기 자습서 ](../reporting-services/report-builder-tutorials.md)  
- [보고서 항목 서식 지정](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
+[보고서 작성기 자습서 ](../reporting-services/report-builder-tutorials.md) 
+[보고서 항목 서식 지정](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
