@@ -1,5 +1,5 @@
 ---
-title: "사용되지 않는 Master Data Services 기능 | Microsoft Docs"
+title: "사용 되지 않는 Master Data Services 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/14/2017
 ms.prod: sql-server-2016
@@ -11,18 +11,18 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 caps.latest.revision: 18
-author: smartysanthosh
-ms.author: nagavo
+author: sabotta
+ms.author: carlasab
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: 37ba9531f4b4a2ba9b5831f5d7e8e121f5d3ad7d
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: e4d9b433e72c916ae6611520498b0eb8fa85c8f6
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="deprecated-master-data-services-features"></a>사용되지 않는 Master Data Services 기능
-  이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
+  이 항목에서는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 계속 제공되지만 더 이상 사용되지 않는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 응용 프로그램에는 이러한 기능을 사용하면 안 됩니다.  
   
 ## <a name="explicit-hierarchies-collections-and-related-components"></a>명시적 계층, 컬렉션 및 관련 구성 요소  
  명시적 계층, 컬렉션 및 관련 구성 요소는 사용되지 않습니다. 이전에는 통합 멤버 유형(명시적 계층 부모) 및 컬렉션 멤버 유형으로 모델링되었던 멤버는 파생 계층의 리프 멤버로 모델링됩니다. 아래의 새로운 기능을 통해 파생 계층을 명시적 계층 대신 사용할 수 있습니다.  
