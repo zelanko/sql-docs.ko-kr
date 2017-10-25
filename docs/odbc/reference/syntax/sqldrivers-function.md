@@ -68,7 +68,7 @@ SQLRETURN SQLDrivers(
  [입력] 길이 **DriverDescription* 문자에서 버퍼입니다.  
   
  *DescriptionLengthPtr*  
- [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *DriverDescription*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength1*에서 드라이버 설명을 \* *DriverDescription* 잘립니다 * BufferLength1* null 종결 문자 길이 뺀 값입니다.  
+ [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *DriverDescription*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength1*에서 드라이버 설명을 \* *DriverDescription* 잘립니다  *BufferLength1* null 종결 문자 길이 뺀 값입니다.  
   
  *DriverAttributes*  
  [출력]\ ("주석" 참조) 드라이버 특성 값 쌍의 목록을 반환 하는 버퍼에 대 한 포인터입니다.  
@@ -76,10 +76,10 @@ SQLRETURN SQLDrivers(
  경우 *DriverAttributes* 이 NULL 이면 *AttributesLengthPtr* 여전히 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 버퍼에서 반환할 수 가 가리키는 *DriverAttributes*합니다.  
   
  *BufferLength2*  
- [입력] 길이 \* *DriverAttributes* 문자에서 버퍼입니다. 경우는 * \*DriverDescription* 값은 유니코드 문자열 (호출할 때 **SQLDriversW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
+ [입력] 길이 \* *DriverAttributes* 문자에서 버퍼입니다. 경우는  *\*DriverDescription* 값은 유니코드 문자열 (호출할 때 **SQLDriversW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
   
  *AttributesLengthPtr*  
- [출력] 바이트 (null 종료 바이트 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *DriverAttributes*합니다. 보다 크거나 반환에 사용할 수 있는 바이트 수가 *BufferLength2*에서 특성 값 쌍의 목록 \* *DriverAttributes* 잘립니다 * BufferLength2* null 종결 문자 길이 뺀 값입니다.  
+ [출력] 바이트 (null 종료 바이트 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *DriverAttributes*합니다. 보다 크거나 반환에 사용할 수 있는 바이트 수가 *BufferLength2*에서 특성 값 쌍의 목록 \* *DriverAttributes* 잘립니다  *BufferLength2* null 종결 문자 길이 뺀 값입니다.  
   
 ## <a name="returns"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
@@ -91,7 +91,7 @@ SQLRETURN SQLDrivers(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|(DM) 드라이버 관리자 별 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|(DM) 버퍼 \* *DriverDescription* 하지 만큼 충분히 큰지 전체 드라이버 설명을 반환 합니다. 따라서 설명을 잘렸습니다. 전체 드라이버 설명의 길이에 반환 됩니다 \* *DescriptionLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> (DM) 버퍼 \* *DriverAttributes* 충분히 특성 값 쌍의 전체 목록을 반환할 수 없습니다. 따라서 목록이 잘렸습니다. 특성 값 쌍의 잘리지 않은 목록의 길이에 반환 됩니다 **AttributesLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버 관리자에서 (DM) 함수는 완료 또는 실행을 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  

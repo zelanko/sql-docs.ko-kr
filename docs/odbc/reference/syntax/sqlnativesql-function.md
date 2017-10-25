@@ -66,10 +66,10 @@ SQLRETURN SQLNativeSql(
  경우 *OutStatementText* 이 NULL 이면 *TextLength2Ptr* 여전히 문자 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 버퍼에서 반환할 수 가 가리키는 *OutStatementText*합니다.  
   
  *BufferLength*  
- [입력] 문자 수는 \* *OutStatementText* 버퍼입니다. 에 값이 반환 하는 경우 * \*InStatementText* 는 유니코드 문자열 (호출할 때 **SQLNativeSqlW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
+ [입력] 문자 수는 \* *OutStatementText* 버퍼입니다. 에 값이 반환 하는 경우  *\*InStatementText* 는 유니코드 문자열 (호출할 때 **SQLNativeSqlW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
   
  *TextLength2Ptr*  
- [출력] \(제외 null 종료) 사용할 수 있는 문자를 반환 하려면의 총 수를 반환 하는 버퍼에 대 한 포인터 \* *OutStatementText*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength*에 SQL 문자열을 번역 \* *OutStatementText* 잘립니다 * BufferLength* null 종결 문자 길이 뺀 값입니다.  
+ [출력] \(제외 null 종료) 사용할 수 있는 문자를 반환 하려면의 총 수를 반환 하는 버퍼에 대 한 포인터 \* *OutStatementText*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength*에 SQL 문자열을 번역 \* *OutStatementText* 잘립니다  *BufferLength* null 종결 문자 길이 뺀 값입니다.  
   
 ## <a name="returns"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
@@ -85,7 +85,7 @@ SQLRETURN SQLNativeSql(
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |22007|잘못 된 날짜/시간 형식|**InStatementText* 날짜, 시간 또는 타임 스탬프 값이 잘못 된 escape 절을 포함 합니다.|  
 |24000|잘못된 커서 상태|문에서 참조 하는 커서 시작 이후 또는 결과 집합의 끝 이후에 결과 집합의 앞에 배치 되었습니다. 기본적인 DBMS 커서 구현이 필요 드라이버에서이 오류를 반환할 수 있습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY009|Null 포인터를 잘못 사용 했습니다.|(DM) **InStatementText* 는 null 포인터입니다.|  
 |HY010|함수 시퀀스 오류입니다.|DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *ConnectionHandle* 호출 되었을 때 계속 실행 하 고 있습니다.|  

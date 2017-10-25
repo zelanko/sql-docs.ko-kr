@@ -87,7 +87,7 @@ BOOL SQLInstallDriverEx(
  함수는 실패 한 경우, FALSE 실패할 경우 TRUE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLInstallDriverEx** 관련 FALSE를 반환 * \*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에 * \*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **SQLInstallDriverEx** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
 |*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
@@ -103,9 +103,9 @@ BOOL SQLInstallDriverEx(
 ## <a name="comments"></a>설명  
  *lpszDriver* 인수는 키워드 / 값 쌍의 형태로 특성 목록입니다. 각 쌍은 null 바이트를으로 종료 되 고 전체 목록을 바이트 null로 종료 됩니다. (즉, 두 개의 null 바이트의 끝을 표시 목록입니다.) 이 목록 형식은 다음과 같습니다.  
   
- *드라이버 desc* ** \\ **0Driver**=***드라이버 DLL-파일 이름* ** \\ **0 [설치**=***설치 프로그램-DLL-filename***\\**0]  
+ *드라이버 desc*  **\\** 0Driver**=***드라이버 DLL-파일 이름*  **\\** 0 [설치**=***설치 프로그램-DLL-filename***\\**0]  
   
- [*드라이버-attr-keyword1***=***value1***\\**0] [*드라이버-attr-keyword2 * ** = ** *value2***\\**0] 중... ** \\ **0  
+ [*드라이버-attr-keyword1***=***value1***\\**0] [*드라이버-attr-keyword2*   **=**  *value2***\\**0] 중...  **\\** 0  
   
  \0은 null 바이트 및 *드라이버-attr-keywordn* 모든 드라이버 특성의 키워드입니다. 키워드는 지정 된 순서로 나타나야 합니다. 예를 들어으로 가정 서식 있는 텍스트 파일에 대 한 드라이버 별도 드라이버 설치 Dll 및.txt 및.csv 확장명을 가진 파일을 사용할 수 있습니다. *lpszDriver* 이 드라이버에 대 한 인수는 다음과 같을 수 있습니다.  
   
