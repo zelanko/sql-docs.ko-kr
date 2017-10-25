@@ -202,7 +202,7 @@ ms.lasthandoff: 09/26/2017
 |ID|정수|출력을 고유하게 식별하는 값입니다.|  
 |IdentificationString|문자열|출력을 식별하는 문자열입니다.|  
 |IsErrorOut|Boolean|출력이 오류 출력인지 여부를 나타냅니다.|  
-|IsSorted|Boolean|출력이 정렬되었는지 여부를 나타냅니다. 기본값은 **False**입니다.<br /><br /> **\*\*중요 한 \* \* ** 의 값을 설정는 **IsSorted** 속성을 **True** 데이터를 정렬 하지 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
+|IsSorted|Boolean|출력이 정렬되었는지 여부를 나타냅니다. 기본값은 **False**입니다.<br /><br /> **\*\*중요 한 \* \***  의 값을 설정는 **IsSorted** 속성을 **True** 데이터를 정렬 하지 않습니다. 이 속성은 데이터가 이전에 정렬되었다는 정보를 다운스트림 구성 요소에 제공하기만 합니다. 자세한 내용은 [병합 및 병합 조인 변환을 위한 데이터 정렬](../../integration-services/data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)을 참조하세요.|  
 |이름|문자열|출력의 이름입니다.|  
 |SynchronousInputID|정수|출력과 동시에 수행되는 입력의 ID입니다.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|행을 처리할 때 발생하는 잘림을 구성 요소가 처리하는 방법을 결정하는 값입니다. 가능한 값은 **Fail component**, **Ignore failure**및 **Redirect row**입니다.|  

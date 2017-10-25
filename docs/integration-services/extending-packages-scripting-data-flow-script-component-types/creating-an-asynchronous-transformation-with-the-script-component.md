@@ -74,9 +74,9 @@ ms.lasthandoff: 09/26/2017
  에 대 한 자세한 내용은 **입 / 출력** 의 페이지는 **스크립트 변환 편집기**, 참조 [스크립트 변환 편집기 &#40; 입력 및 출력 페이지 &#41;](../../integration-services/data-flow/transformations/script-transformation-editor-inputs-and-outputs-page.md)합니다.  
   
 ### <a name="adding-variables"></a>변수 추가  
- 스크립트에서 사용 하려는 값을 가진 모든 기존 변수가 없으면 추가할 수 있습니다 ReadOnlyVariables 및 ReadWriteVariables 속성 필드에 **스크립트** 의 페이지는 **스크립트 변환 편집기 **.  
+ 스크립트에서 사용 하려는 값을 가진 모든 기존 변수가 없으면 추가할 수 있습니다 ReadOnlyVariables 및 ReadWriteVariables 속성 필드에 **스크립트** 의 페이지는 **스크립트 변환 편집기** .  
   
- 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 줄임표를 클릭 하 여 여러 변수를 선택할 수도 있습니다 (**... **) 단추 옆에 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드를 한 다음 변수를 선택 하 고 **변수 선택** 대화 상자입니다.  
+ 속성 필드에 여러 변수를 추가하는 경우 변수 이름을 쉼표로 구분하십시오. 줄임표를 클릭 하 여 여러 변수를 선택할 수도 있습니다 (**...** ) 단추 옆에 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드를 한 다음 변수를 선택 하 고 **변수 선택** 대화 상자입니다.  
   
  스크립트 구성 요소와 변수를 사용 하는 방법에 대 한 일반 정보를 참조 하십시오. [스크립트 구성 요소에서 변수를 사용 하 여](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)합니다.  
   
@@ -112,7 +112,7 @@ ms.lasthandoff: 09/26/2017
  이 예제에서는 하는 데 필요한 ScriptMain 클래스에서 비동기 변환 구성 요소를 만들고 사용자 지정 코드를 보여 줍니다.  
   
 > [!NOTE]  
->  이러한 예에서 사용 된 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는 **intAddressID** 및 ** nvarchar (30) 도시** 데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
+>  이러한 예에서 사용 된 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는 **intAddressID** 및  **nvarchar (30) 도시** 데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
   
  이 예에서는 두 개의 출력을 사용하는 비동기 변환 구성 요소를 보여 줍니다. 이 변환을 통과 **AddressID** 및 **도시** 열 (Redmond 미국 워싱턴주), 특정 도시에 있는 주소의 수를 계산 하는 동안 하나의 출력 및 출력에는 두 번째 출력에 결과 값입니다.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
   
 1.  데이터 흐름 디자이너 화면에 새 스크립트 구성 요소를 추가하고 이 구성 요소를 변환으로 구성합니다.  
   
-2.  디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력 데이터를 제공 해야는 **Person.Address** 목차는 **AdventureWorks** 예제 데이터베이스에 포함 된 적어도 **AddressID** 및 ** 도시** 열입니다.  
+2.  디자이너에서 원본 또는 다른 변환의 출력을 새 변환 구성 요소에 연결합니다. 이 출력 데이터를 제공 해야는 **Person.Address** 목차는 **AdventureWorks** 예제 데이터베이스에 포함 된 적어도 **AddressID** 및  **도시** 열입니다.  
   
 3.  열기는 **스크립트 변환 편집기**합니다. 에 **입력 열** 선택 페이지는 **AddressID** 및 **도시** 열입니다.  
   

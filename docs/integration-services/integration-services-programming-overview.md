@@ -64,9 +64,9 @@ ms.lasthandoff: 09/26/2017
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 응용 프로그래밍 인터페이스는 VBScript 같은 COM 기반 스크립팅 언어와 호환되지 않습니다.  
   
 ## <a name="locating-assemblies"></a>어셈블리 찾기  
- [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. .NET 4에에 대 한 별도 전역 어셈블리 캐시가 * \<드라이브 >*: \Windows\Microsoft.NET\assembly 합니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
+ [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]에서 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리는 .NET 4.0으로 업그레이드되었습니다. .NET 4에에 대 한 별도 전역 어셈블리 캐시가  *\<드라이브 >*: \Windows\Microsoft.NET\assembly 합니다. 이 경로, 주로 GAC_MSIL 폴더에서 모든 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 어셈블리를 찾을 수 있습니다.  
   
- 이전 버전의와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 핵심 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 확장성.dll 파일에도 있습니다 * \<드라이브 >*: files\microsoft SQL Server\100\SDK\Assemblies 합니다.  
+ 이전 버전의와 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 핵심 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 확장성.dll 파일에도 있습니다  *\<드라이브 >*: files\microsoft SQL Server\100\SDK\Assemblies 합니다.  
   
 ## <a name="commonly-used-assemblies"></a>일반적으로 사용되는 어셈블리  
  다음 표에서는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]를 사용하여 [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]를 프로그래밍할 때 자주 사용되는 어셈블리에 대해 설명합니다.  

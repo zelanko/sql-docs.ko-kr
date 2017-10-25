@@ -43,7 +43,7 @@ ms.lasthandoff: 09/26/2017
   
 -   **OdbcCommand** 위치 매개 변수가 필요 합니다. 매개 변수의 위치는 명령 텍스트에서 물음표(?)로 표시됩니다. (반대로 **SqlCommand** 명명 된 매개 변수가 필요 합니다.)  
   
- 사용 하 여이 예제는 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스. 첫 번째 및 네 번째 열 전달는 * *int*AddressID** * 및 **nvarchar (30) 도시** 데이터 흐름을 통해이 테이블의 열입니다. 이 동일한 데이터 원본, 변환 및 대상 예제에는 항목에 사용 됩니다 [개발 특정 Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)합니다.  
+ 사용 하 여이 예제는 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스. 첫 번째 및 네 번째 열 전달는  **int*AddressID** * 및 **nvarchar (30) 도시** 데이터 흐름을 통해이 테이블의 열입니다. 이 동일한 데이터 원본, 변환 및 대상 예제에는 항목에 사용 됩니다 [개발 특정 Types of Script Components](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md)합니다.  
   
 #### <a name="to-configure-this-script-component-example"></a>스크립트 구성 요소 예를 구성하려면  
   

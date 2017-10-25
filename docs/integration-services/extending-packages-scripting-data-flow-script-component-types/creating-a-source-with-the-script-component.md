@@ -77,7 +77,7 @@ ms.lasthandoff: 09/26/2017
 ### <a name="adding-variables"></a>변수 추가  
  스크립트에서 사용 하려는 값을 가진 모든 기존 변수가 없으면에 추가할 수 있습니다는 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 **스크립트** 의 페이지는 **스크립트 변환 편집기**합니다.  
   
- 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. 줄임표를 클릭 하 여 여러 변수를 입력할 수도 있습니다 (**... **) 단추 옆에 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 변수를 선택 하 고 **변수 선택** 대화 상자 .  
+ 속성 필드에 여러 변수를 입력하는 경우 변수 이름을 쉼표로 구분합니다. 줄임표를 클릭 하 여 여러 변수를 입력할 수도 있습니다 (**...** ) 단추 옆에 **ReadOnlyVariables** 및 **ReadWriteVariables** 속성 필드에 변수를 선택 하 고 **변수 선택** 대화 상자 .  
   
  스크립트 구성 요소와 변수를 사용 하는 방법에 대 한 일반 정보를 참조 하십시오. [스크립트 구성 요소에서 변수를 사용 하 여](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md)합니다.  
   
@@ -120,7 +120,7 @@ ms.lasthandoff: 09/26/2017
  다음 예제에 필요한 사용자 지정 코드를 보여 줍니다.는 **ScriptMain** 원본 구성 요소를 만드는 클래스입니다.  
   
 > [!NOTE]  
->  이러한 예에서 사용 된 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는 **intAddressID** 및 ** nvarchar (30) 도시** 데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
+>  이러한 예에서 사용 된 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는 **intAddressID** 및  **nvarchar (30) 도시** 데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
   
 ### <a name="adonet-source-example"></a>ADO.NET 원본 예  
  이 예제에서는 기존를 사용 하는 원본 구성 요소를 보여 줍니다. [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자에서 데이터를 로드 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 흐름에는 테이블입니다.  
@@ -140,7 +140,7 @@ ms.lasthandoff: 09/26/2017
   
 5.  에 **스크립트** 페이지 **스크립트 편집** 뒤에 스크립트를 입력 합니다. 다음 스크립트 개발 환경을 닫습니다 및 **스크립트 변환 편집기**합니다.  
   
-6.  만들기 및 대상 구성 요소와 같은 구성는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 또는에서 보여 준 예제 대상 구성 요소 [스크립트 구성 요소를 사용 하 여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), 예상 되는 ** AddressID** 및 **도시** 열입니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 **AdventureWorks** 데이터베이스:  
+6.  만들기 및 대상 구성 요소와 같은 구성는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 또는에서 보여 준 예제 대상 구성 요소 [스크립트 구성 요소를 사용 하 여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), 예상 되는  **AddressID** 및 **도시** 열입니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 **AdventureWorks** 데이터베이스:  
   
     ```  
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  

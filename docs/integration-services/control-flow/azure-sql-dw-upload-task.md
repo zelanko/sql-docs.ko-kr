@@ -48,7 +48,7 @@ RetainFiles|Azure Storage에 업로드된 파일을 유지할지 여부를 지�
 CompressionType|Azure Storage에 파일 업로드 시 사용할 압축 형식을 지정합니다. 로컬 원본은 영향을 받지 않습니다.
 CompressionLevel|압축 형식에 사용할 압축 수준을 지정합니다.
 AzureDwConnection|Azure SQL DW용 ADO.NET 연결 관리자를 지정합니다.
-TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택 하거나 선택 하 여 새로 만들 ** \<새 테이블 … >**합니다.
+TableName|대상 테이블의 이름을 지정합니다. 기존 테이블 이름을 선택 하거나 선택 하 여 새로 만들  **\<새 테이블 … >**합니다.
 TableDistribution|새 테이블에 대한 배포 방법을 지정합니다. 새 테이블 이름이 **TableName**에 대해 지정된 경우 적용합니다.
 HashColumnName|해시 테이블 배포에 사용되는 열을 지정합니다. **TableDistribution** 에 대해 **HASH**가 지정된 경우 적용합니다.
 

@@ -168,7 +168,7 @@ namespace LaunchSSISPackageAgent_CS
   
 1.  Visual Studio를 열고 원하는 프로그래밍 언어로 웹 서비스 프로젝트를 만듭니다. 예제 코드에서는 프로젝트 이름으로 LaunchSSISPackageService를 사용합니다.  
   
-2.  에 대 한 참조를 추가 **Microsoft.SqlServer.ManagedDTS** 추가 **Imports** 또는 **를 사용 하 여** 문을 대 한 코드 파일에는 ** Microsoft.SqlServer.Dts.Runtime** 네임 스페이스입니다.  
+2.  에 대 한 참조를 추가 **Microsoft.SqlServer.ManagedDTS** 추가 **Imports** 또는 **를 사용 하 여** 문을 대 한 코드 파일에는  **Microsoft.SqlServer.Dts.Runtime** 네임 스페이스입니다.  
   
 3.  LaunchPackage 웹 서비스 메서드의 예제 코드를 클래스에 붙여 넣습니다. 이 예제에서는 코드 창의 전체 내용을 보여 줍니다.  
   
