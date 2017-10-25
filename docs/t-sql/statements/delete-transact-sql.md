@@ -96,7 +96,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  와 \<common_table_expression >  
  DELETE 문 범위 내에 정의되고 공통 테이블 식이라고도 하는 명명된 임시 결과 집합을 지정합니다. 결과 집합은 SELECT 문에서 파생됩니다.  
   
- 공통 테이블 식은 SELECT, INSERT, UPDATE 및 CREATE VIEW 문과 함께 사용될 수도 있습니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 공통 테이블 식은 SELECT, INSERT, UPDATE 및 CREATE VIEW 문과 함께 사용될 수도 있습니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP **(***식***)** [%]  
  삭제될 임의 행의 개수 또는 백분율(%)을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다. INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다. 자세한 내용은 참조 [top&#40; Transact SQL &#41; ](../../t-sql/queries/top-transact-sql.md).  
@@ -481,7 +481,7 @@ OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;
  [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [TRUNCATE table&#40; Transact SQL &#41;](../../t-sql/statements/truncate-table-transact-sql.md)   
  [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
- [Common_table_expression &AMP; #40; Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [Common_table_expression &AMP;#40; Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)  
   
   

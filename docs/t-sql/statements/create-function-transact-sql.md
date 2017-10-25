@@ -727,7 +727,7 @@ SELECT * FROM Sales.ufn_SalesByStore (602);
 ```  
   
 ### <a name="c-creating-a-multi-statement-table-valued-function"></a>3. 다중 문 테이블 반환 함수 만들기  
- 다음 예에서는 AdventureWorks2012 데이터베이스에서 테이블 값 함수 `fn_FindReports(InEmpID)`를 만듭니다. 이 함수에 유효한 직원 ID를 제공하면 해당 직원에게 보고하는 모든 직속 부하 직원 및 관련 부서 직원에 해당하는 테이블이 반환됩니다. 이 함수는 재귀 CTE(공통 테이블 식)를 사용하여 직원의 계층적 목록을 생성합니다. 재귀 Cte에 대 한 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 다음 예에서는 AdventureWorks2012 데이터베이스에서 테이블 값 함수 `fn_FindReports(InEmpID)`를 만듭니다. 이 함수에 유효한 직원 ID를 제공하면 해당 직원에게 보고하는 모든 직속 부하 직원 및 관련 부서 직원에 해당하는 테이블이 반환됩니다. 이 함수는 재귀 CTE(공통 테이블 식)를 사용하여 직원의 계층적 목록을 생성합니다. 재귀 Cte에 대 한 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
 ```tsql  
 CREATE FUNCTION dbo.ufn_FindReports (@InEmpID INTEGER)  
