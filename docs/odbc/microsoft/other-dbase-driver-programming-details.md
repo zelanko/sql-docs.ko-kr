@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f0a09a7af11cf2f8d446906b9c093d5cb1cab57
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQLTransact(dBASE 드라이버)](../../odbc/microsoft/sqltransact-dbase-driver.md)  
   
 -   [dBASE 인덱스 (dBASE 드라이버)](../../odbc/microsoft/dbase-indexes.md)
+

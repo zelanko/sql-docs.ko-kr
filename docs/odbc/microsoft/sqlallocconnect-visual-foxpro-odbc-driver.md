@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5614b69fddd5b5430f15e8266bef6872d4294f4e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  연결 핸들에 대 한 메모리를 할당 *hdbc*로 식별 되는 환경 내에서 *henv*합니다. 드라이버 관리자는이 호출을 처리 하 고 드라이버의 호출 **SQLAllocConnect** 때마다 [SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md), **SQLBrowseConnect**, 또는 [SQLDriverConnect ](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) 라고 합니다.  
   
  자세한 내용은 참조 [SQLAllocConnect](../../odbc/reference/syntax/sqlallocconnect-function.md) 에 *ODBC Programmer's Reference*합니다.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8088c0cb3f85b375423f636d2def8c08c04bbe28
@@ -33,3 +34,4 @@ ODBC 간격 리터럴에 대 한 이스케이프 시퀀스를 사용 합니다. 
  BNF 구문에 대 한 *간격 리터럴*, 참조는 [간격 리터럴 구문을](../../../odbc/reference/appendixes/interval-literal-syntax.md) 이 부록의 뒷부분에 나오는 섹션.  
   
  간격 리터럴의 이스케이프 시퀀스는 데이터 소스에서 interval 데이터 형식을 지 원하는 경우 지원 됩니다. 응용 프로그램 호출 해야 **SQLGetTypeInfo** 를 이러한 데이터 형식이 지원 되는지 확인 합니다.
+

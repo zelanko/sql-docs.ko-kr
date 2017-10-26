@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e2920dce877c3775269bc063234125e2780943a5
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 (Microsoft Access 드라이버를 사용할 경우에이 제한이 적용 됩니다.)  
   
  호출된 된 프로시저에 매개 변수로 식은 지원 되지 않습니다.
+

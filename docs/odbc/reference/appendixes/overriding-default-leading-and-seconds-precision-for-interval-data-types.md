@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1ce549be1e3222f41615e5935418cf3e02e767a4
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램을 호출 하는 경우 **SQLGetData** 날짜/시간 또는 간격 C 형식으로 데이터를 반환 하는 기본 간격 선행 자릿수 및 간격 초의 전체 자릿수가 사용 됩니다. 기본값을 적용할 수 있는 응용 프로그램 호출 해야 합니다 **SQLSetDescField** 설명자 필드 중 하나를 설정 하려면 또는 **SQLSetDescRec** SQL_DESC_PRECISION 설정 하려면. 에 대 한 호출 **SQLGetData** 있어야는 *TargetType* 의 SQL_ARD_TYPE 설명자 필드에 값을 사용 하도록 합니다.  
   
  때 **SQLPutData** 호출 되는 호출에 대 한 APD 필드는 전체 자릿수 및 간격 초 전체 자릿수는 실행 시 데이터 매개 변수 또는 열에 해당 하는 설명자 레코드의 필드에서 읽은 유도 하는 간격 **SQLExecute** 또는 **SQLExecDirect**, 또는 필드에 대 한 호출 **SQLBulkOperations** 또는 **SQLSetPos**합니다.
+

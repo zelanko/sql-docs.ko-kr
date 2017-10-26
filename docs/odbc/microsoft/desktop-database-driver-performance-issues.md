@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1bcedc8266132bf617fe35e78d3a73de10f7876
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Microsoft ODBC 데스크톱 데이터베이스 드라이버를 통해 Jet 3.5 데이터베이스를 사용 하 여 응용 프로그램 버전 4.0으로 업그레이드 되는 경우 일부 성능 저하 및 증가 작업 집합 크기 발생할 수 있습니다. 때문에 이것이 경우 버전 3입니다. *x* 데이터베이스를 새 버전 4.0 드라이버를 사용 하 여 열, Jet 4.0을 로드 합니다. Jet 4.0 데이터베이스 연결을 열고 해당 데이터베이스가 3입니다. *x* 버전을 해당 하는 Jet 3.5 엔진을 로드 하는 설치 가능한 ISAM 드라이버 로드 합니다. 성능 및 크기 페널티를 Jet 3 제거 하려면 *x* Jet 4.0 형식 데이터베이스에 데이터베이스를 압축 해야 합니다. 두 개의 Jet 엔진을 로드 제거 되 고 코드 경로 데이터를 최소화 합니다.  
   
  또한 Jet 4.0 엔진은 유니코드 엔진입니다. 모든 문자열이 저장 되 고 유니코드에서 조작 합니다. 경우 ANSI 응용 프로그램에서는 Jet 3에 액세스 합니다. *x* 유니코드, ANSI 다시로 데이터 Jet 4.0 엔진을 통해 데이터베이스에서 ANSI 변환 됩니다. 데이터베이스 버전 4.0 형식으로 업데이트 되 면 문자열 하나만 Jet 엔진을 통해 이동 하 여 코드 경로 데이터를 최소화할 수 있을 뿐만 아니라 한 수준의 문자열 변환 제거 유니코드로 변환 됩니다.
+

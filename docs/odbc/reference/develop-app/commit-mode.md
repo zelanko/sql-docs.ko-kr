@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0b385a95b8b228e00dedcdb8a078b2c9cadb85c
@@ -35,3 +36,4 @@ ODBC의 트랜잭션은 두 가지 모드 중 하나가 될 수 있습니다: �
 -   [수동 커밋 모드](../../../odbc/reference/develop-app/manual-commit-mode.md)  
   
 -   [커밋 모드 설정](../../../odbc/reference/develop-app/setting-the-commit-mode.md)
+

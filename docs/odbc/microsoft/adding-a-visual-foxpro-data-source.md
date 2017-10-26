@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d158cf38e5755e0e443d6cb47e4053bd05d45287
@@ -53,3 +54,4 @@ Visual FoxPro 데이터의 응용 프로그램에 액세스 하려면 데이터 
      새 데이터 원본 이름은 ODBC 데이터 원본 관리자 대화 상자의 사용자 DSN 탭에서 사용자 데이터 원본 목록에 표시 됩니다.  
   
 6.  새 데이터 원본을 저장 하 여 ODBC 데이터 원본 관리자 대화 상자를 닫습니다 확인을 클릭 합니다.
+

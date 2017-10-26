@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c2ed3fb1d6a68737a894663e1b5c841d6cb1041
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
     ```  
   
  버퍼의 데이터를 해석 하는 C 데이터 형식을 사용 하는 드라이버.
+

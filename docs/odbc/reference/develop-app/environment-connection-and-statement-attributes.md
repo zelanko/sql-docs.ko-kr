@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dfe477bf0ca518d4f4e83d141a24bcb4c2640ed2
@@ -37,3 +38,4 @@ ODBC 환경, 연결 또는 문이 연관 된 특성의 수를 정의 합니다.
  드라이버는 ODBC에 정의 된 특성 뿐 아니라 자체 연결 및 문 특성을 정의할 수 있습니다. 드라이버에서 정의 된 특성 두 드라이버 공급 업체 독점, 서로 다른 특성에 동일한 정수 값을 할당 하지 않습니다 확인 하려면 Open Group으로 등록 되어야 합니다. 자세한 내용은 참조 [드라이버 관련 데이터 형식, 형식 설명자, 정보 유형, 진단 형식 및 특성](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)합니다.  
   
  특성의 전체 목록은 참조 하십시오. [SQLSetEnvAttr](../../../odbc/reference/syntax/sqlsetenvattr-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), 및 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)합니다. 대부분의 특성에 영향을 주는지 ODBC 함수에 대 한 설명을 설명 합니다.
+

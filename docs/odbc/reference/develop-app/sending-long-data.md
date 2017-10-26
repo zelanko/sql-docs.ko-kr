@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f2fad149692bf76c118837daf05e0b77ebf4c38
@@ -49,3 +50,4 @@ Dbms 정의 *긴 데이터* 모든 문자 데이터 또는 254 자 같은 특정
  후 **SQLExecute** 또는 **SQLExecDirect** sql_need_data가 반환 되며 데이터가 마지막 실행 시 데이터 매개 변수에 대 한 완전히 플러시된 전에 문이에서 필요한 데이터 상태입니다. 응용 프로그램만 호출할 수는 문이 필요한 데이터 상태에서 이지만, **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, 또는 **SQLGetDiagRec**; 다른 모든 함수가 반환 SQLSTATE HY010 (함수 시퀀스 오류). 호출 **SQLCancel** 문 실행을 취소 하 고 이전 상태로 돌아갑니다. 자세한 내용은 참조 [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.  
   
  실행 시 데이터를 보내는 예 참조는 [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) 함수 설명 합니다.
+

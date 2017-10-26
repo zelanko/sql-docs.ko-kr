@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d3bc36063659da3cf0cd6b2b837be0c4fce46c6f
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |**SQLSetCursorName**|활성 문 핸들에는 커서 이름을 연결 *hstmt*합니다.|  
 |**SQLSetParam**|ODBC 2의에서 SQLBindParameter로 바뀝니다. *x*합니다.|  
 |**SQLTransact**|연결을 통해 연결 된 모든 문 핸들 (hstmts)의 모든 활성 작업에 대해 또는 환경 핸들에 연결 된 모든 연결에 대 한 커밋 또는 롤백 작업을 요청 *henv*합니다. 수동 모드에 있을 때 커밋 실패 하면 트랜잭션이 활성 상태로 유지 되; 트랜잭션을 롤백 또는 커밋 작업을 다시 시도를 선택할 수 있습니다. 자동 트랜잭션 모드에 있을 때 커밋 작업이 실패 하면 트랜잭션이 롤백됩니다 트랜잭션이 비활성화할 수 없습니다.|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 587acf7ca97d0bce03609b42f6188aa97bd595b3
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
  [이 값을 SQL_NULL_DATA 같은 특수 한 값을 확인 d] 드라이버를 항상 확인 해야 합니다.  
   
  실행 시 매개 변수 값으로 드라이버를 수행 하는 작업은 드라이버에 따라 다릅니다. 필요에 따라 드라이버가 값 SQL 데이터 형식, 전체 자릿수 및 소수 자릿수가 매개 변수를에 바인딩된 변수로의 C 데이터 형식 및 바이트 길이에서 변환 합니다. 대부분의 경우 드라이버 그런 다음 데이터 원본에 값을 보냅니다. 경우에 따라이 클래스는 텍스트로 값의 서식을 데이터 원본에는 문을 보내기 전에 SQL 문에 삽입 합니다.
+

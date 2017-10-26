@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ec2f197029fab2467c7dced5f1cb720cf88f598
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  ODBC는 SQL 유형 식별자의 다양 한를 정의합니다. 그러나, 드라이버는 이러한 식별자의 모든 사용 필요가 없습니다. 대신, 기본 데이터 원본에서 지 원하는 SQL 데이터 형식을 노출 하는 데 필요한 식별자만 사용 합니다. 데이터 원본에 SQL 데이터 형식을 지 원하는 경우 유형 식별자 없이 해당, 드라이버 추가 형식 식별자를 정의할 수 있습니다. 자세한 내용은 참조 [드라이버 관련 데이터 형식, 형식 설명자, 정보 유형, 진단 형식 및 특성](../../../odbc/reference/develop-app/driver-specific-data-types-descriptor-information-diagnostic.md)합니다.  
   
  에 대 한 전체 설명은 SQL 유형 식별자를 참조 하세요. [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.
+

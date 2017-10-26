@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 616dc403fdd23f3233bde4a5db19dd58b6d94cf1
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  예를 들어 응용 프로그램이 이진 데이터 버퍼에 대 한 50 바이트를 할당 합니다. 드라이버의 이진 데이터의 10 바이트, 버퍼에 해당 10 바이트를 반환 합니다. 데이터의 바이트 길이 10, 및 버퍼의 바이트 길이 50입니다. 드라이버의 이진 데이터의 60 바이트, 50 바이트에 데이터를 자릅니다, 그리고 버퍼에 해당 바이트를 반환 하 고 SQL_SUCCESS_WITH_INFO를 반환 합니다. 데이터의 바이트 길이 60 (잘림 전에 길이) 하 고 버퍼의 바이트 길이 여전히 50입니다.  
   
  잘렸습니다. 각 열에 대 한 진단 레코드가 생성 됩니다. 이러한 레코드를 만들려면 드라이버에 대 한 및 처리 하도록 응용 프로그램에 대 한 시간을 사용 하기 때문에 잘림이 성능이 저하 될 수 있습니다. 일반적으로 응용 프로그램이 수는 없습니다 한 long 데이터를 작업할 때 있지만 충분히 큰 버퍼를 할당 하 여이 문제를 방지할 수 있습니다. 응용 프로그램 경우가 더 큰 버퍼를 할당할 수 있습니다 및에서 데이터를 반드시 다시 반입 데이터 잘림이 발생할 경우 모든 경우에 아닙니다. 에 대 한 호출을 사용 하 여 데이터를 가져오는 동안 잘림이 발생 하는 경우 **SQLGetData**, 응용 프로그램을 호출 하지 않아도 **SQLGetData** 반환 되었습니다. 이미 데이터에 대 한;에 대 한 자세한 내용은 참조 [가져오기 Long 데이터](../../../odbc/reference/develop-app/getting-long-data.md)합니다.
+

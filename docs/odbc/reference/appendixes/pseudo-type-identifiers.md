@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e1e6a1b9d98f419bda5963cce913119fff52cd7
@@ -33,3 +34,4 @@ ODBC 응용 프로그램 프로그래밍 편의 위해 다양 한 의사 (pseudo
 -   [SQL_ARD_TYPE](../../../odbc/reference/appendixes/sql-ard-type.md)  
   
 -   [SQL_C_TCHAR](../../../odbc/reference/appendixes/sql-c-tchar.md)
+

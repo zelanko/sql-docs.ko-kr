@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e22537b5ce7b2b1ecfdf579e78859812895671c2
@@ -43,3 +44,4 @@ DBMS SQL 문을 보내기 위한 final 기술은 호출 수준 인터페이스 (
 3.  문이 SELECT 문의 경우 응용 프로그램이 응용 프로그램 버퍼에 결과 반환 하는 CLI 함수를 호출 합니다. 일반적으로이 함수는 한 번에 한 행 또는 하나의 데이터 열을를 반환합니다.  
   
 4.  응용 프로그램 DBMS에서 연결을 끊을 CLI 함수를 호출 합니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8548e95e4b7c0e34ba71f73698174d5c25b1c4b
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |드라이버|필요한 키워드|예|  
 |------------|-----------------------|--------------|  
 |dBASE|드라이버를 DriverID|Driver = {Microsoft dBASE 드라이버 * (.dbf)을 (를); DBQ = c:\temp; DriverID 277 =|
+

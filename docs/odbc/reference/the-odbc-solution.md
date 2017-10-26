@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7288fcb9fad7b2567f7fec16cf0f407b2f6b2e4
@@ -60,3 +61,4 @@ ms.lasthandoff: 09/09/2017
      ODBC에서는 두 가지 기능을 응용 프로그램 기능 드라이버를 결정 하 고 DBMS 지원, 제공 (**SQLGetInfo** 및 **SQLGetFunctions**) 드라이버 및 DBMS에 대 한 일반 정보를 반환 하는 기능 및 함수의 목록은 드라이버 지원합니다. ODBC는 API와 SQL 문법 받는 규칙 수준, 광범위 한 드라이버에서 지 원하는 기능 범위를 지정 하는 정의 합니다. 자세한 내용은 참조 [받는 규칙 수준](../../odbc/reference/develop-app/conformance-levels.md)합니다.  
   
      ODBC 공통 인터페이스를 노출 하는 기능을 모두 정의 되어 있는지를 기억 하는 것이 유용 합니다. 이 인해 응용 프로그램 DBMS 관련 코드가 아니라 기능 관련 코드를 포함 하 고 이러한 기능을 노출 하는 모든 드라이버를 사용할 수 있습니다. 이의 장점 중 하나는 응용 프로그램 때 DBMS에서 지 원하는 기능을 더욱 향상 되었습니다; 업데이트할 필요가 없습니다. 대신 업데이트 된 드라이버가 설치 되 면 응용 프로그램이 자동으로 기능을 사용 해당 코드 기능 관련, 드라이버 관련 말거나 DBMS 전용 이므로 합니다.
+

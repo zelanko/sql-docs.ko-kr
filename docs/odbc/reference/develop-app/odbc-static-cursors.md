@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aaddef08bfea9e1a1820727743e5212557d823d4
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  행 상태 배열이 SQL_ATTR_ROW_STATUS_PTR 문 특성에 지정 된 모든 행에 대 한 SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO, 또는 SQL_ROW_ERROR 포함할 수 있습니다. 업데이트, 삭제 또는 커서 이러한 변경 내용이 감지할 수 가정 커서에 의해 삽입 된 행에 대 한 SQL_ROW_UPDATED은 SQL_ROW_DELETED, 또는 SQL_ROW_ADDED를 반환 합니다.  
   
  정적 커서는 일반적으로 결과 집합의 행을 잠가 또는 복사 하 여 구현 하거나 집합 결과의 스냅숏이 됩니다. 행 잠금 비교적 쉽게 할 경우에 동시성이 크게 감소 단점은 있습니다. 복사본을 만드는 큰 동시성을 허용 하 고 자체 업데이트, 삭제를 추적 하기 위해 커서를 허용 하 고 복사본을 수정 하 여 삽입 합니다. 그러나 복사본 비용이 더 듭니다를 확인 하 고 해당 데이터는 다른 사용자가 변경 될 때마다 기본 데이터에서 벗어날 수 있습니다.
+

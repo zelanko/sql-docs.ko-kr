@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fd665c63873ba8331290ddeae4ad91137ef1e3c7
@@ -82,3 +83,4 @@ ms.lasthandoff: 09/09/2017
 3.  적용 가능한 데이터 원본 필드를 수정 하 고 확인을 클릭 합니다.  
   
  이 대화 상자에서 정보를 수정 했으면 ODBC 관리자 레지스트리 정보를 업데이트 합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 48ed4bc9b52b6a905972e566870e7e2f86fc4734
@@ -95,3 +96,4 @@ ms.lasthandoff: 09/09/2017
  [이 함수는 1] 중요 한 기능이 높은 받는 규칙 수준에만 사용할 수입니다.  
   
  [2]을 기본이 아닌 값으로 특정 특성을 설정 합니다. 규칙 수준에 따라 달라 집니다. 자세한 내용은 다음 섹션을 참조 하십시오. [특성 규칙](../../../odbc/reference/develop-app/attribute-conformance.md)합니다.
+

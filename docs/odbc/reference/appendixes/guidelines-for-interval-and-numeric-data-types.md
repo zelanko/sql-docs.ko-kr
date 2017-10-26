@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 89e9fe2cdaf8511023120e984eb6366491c0288a
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 -   [숫자 리터럴](../../../odbc/reference/appendixes/numeric-literals.md)  
   
 -   [숫자 데이터 형식에 대한 기본 전체 자릿수 및 소수 자릿수 재정의](../../../odbc/reference/appendixes/overriding-default-precision-and-scale-for-numeric-data-types.md)
+

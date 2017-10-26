@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 03bf019ac788e5879667db83855c91ad0a3aa0ad
@@ -33,3 +34,4 @@ ODBC 데스크톱 데이터베이스 드라이버는 Microsoft Jet 데이터베�
 |각 데스크톱 데이터베이스 드라이버에서 사용 되는 파일|ODBC 드라이버 파일|  
 |각 데스크톱 데이터베이스 드라이버에서 사용 되는 Microsoft Jet 파일|Microsoft Jet 파일|  
 |Microsoft Jet 및 다른 DBMS 사이 데이터 액세스를 제공 하는 IISAM 드라이버 파일|설치 가능한 ISAM 드라이버 파일|
+

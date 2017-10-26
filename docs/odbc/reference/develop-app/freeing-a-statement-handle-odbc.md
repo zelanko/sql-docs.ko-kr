@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b33d262c846d9ef8a41bf9440802664ac7d4b75f
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  때 **SQLFreeHandle** 호출 되는 드라이버 릴리스 구조 문에 대 한 정보를 저장 하는 데 사용 합니다.  
   
  **SQLDisconnect** 자동으로 연결 된 모든 문을 해제 합니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9a4d5d0b2feb0a09aafeb441c6b33260e4f0738b
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |MAXSCANROWS|기존 데이터에 따라 열의 데이터 형식을 설정할 때 검사할 행의 수입니다.<br /><br /> 검색할 행에 대 한 16 개가 하 1에서 숫자를 입력할 수 있습니다. 기본값은 8; 0으로 설정 하는 경우 모든 행이 검색 됩니다. (제한 벗어나는 숫자 오류가 반환 됩니다.)<br /><br /> 동일한 옵션을 설정 하는이 **검색할 행** 설정 대화 상자에서 합니다.|  
 |READONLY|파일을 만들기 위해 읽기 전용 이면 TRUE False 이면 읽기 전용 파일을 설정 합니다.<br /><br /> 동일한 옵션을 설정 하는이 **읽기 전용** 설정 대화 상자에서 합니다.|  
 |스레드|사용 하도록 엔진에 대 한 백그라운드 스레드 수를 지정 합니다. Microsoft Access 드라이버에 대 한이 값이 3, 기본적으로 사용 되지만 변경할 수 있습니다. DBASE, MicrosoftExceldriver이 값이 3, 이며 변경할 수 없습니다.<br /><br /> 동일한 옵션을 설정 하는이 **스레드** 설정 대화 상자에서 합니다.|
+

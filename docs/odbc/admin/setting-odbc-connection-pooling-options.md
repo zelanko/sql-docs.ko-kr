@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e22b3c2c09f4bc356b54ed2ecb73988f0de2764
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 |생성 된 풀|활성 있었으며 제거 됨 풀 포함 하 여 현재 풀 수를 지정 합니다. 이 카운터는 연결 풀에서 연결을 관리 하는 드라이버에 대 한 Windows 8에서 추가 되었습니다. 자세한 내용은 참조 [드라이버 인식 연결 풀링](../../odbc/reference/develop-app/driver-aware-connection-pooling.md)합니다.|  
   
  사용자 고유의 모니터링 매개 변수를 지정 해야 합니다. 성능 모니터링에 대 한 예제는이 버전의 ODBC와 설명 되어 있습니다.
+

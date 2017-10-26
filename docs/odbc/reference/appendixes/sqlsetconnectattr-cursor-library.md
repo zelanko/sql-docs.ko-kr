@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bf6a14b8215f981e5e0e9c0ca6e9b2e1a2269f65
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  호출 하는 응용 프로그램 **SQLSetConnectAttr** 호출한 후 커서 라이브러리 사용을 지정 하려면 **SQLAllocHandle** 와 *HandleType* 할당할 sql_handle_dbc 라는의 연결 및 데이터 원본에 연결 하기 전에. 응용 프로그램을 호출 하는 경우 **SQLSetConnectAttr** SQL_ATTR_ODBC_CURSORS 특성으로 연결이 여전히 활성 상태 동안 커서 라이브러리는 오류를 반환 합니다.  
   
  연결과 관련 된 모든 문에 대해 커서 라이브러리에서 지 원하는 문 특성을 설정 하려면 응용 프로그램 호출 해야 **SQLSetConnectAttr** 전에 및 데이터 원본에 연결한 후 해당 문 특성 커서를 엽니다. 응용 프로그램을 호출 하는 경우 **SQLSetConnectAttr** 문을 사용 하 여 특성 및 커서는 열린 연결과 관련 된 문, 문 특성 커서를 닫을 때까지 해당 문에 적용 되지 것입니다 및 다시 열립니다.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b52a9cf8fd5069a19fe1d5488a3bcf428d201633
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
 -   [Paradox용 CREATE INDEX](../../odbc/microsoft/create-index-for-paradox.md)  
   
 -   [다중 hstmts(Paradox 드라이버)](../../odbc/microsoft/multiple-hstmts-paradox-driver.md)
+

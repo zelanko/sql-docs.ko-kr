@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc1da3dfbe7f06e7d98430c5cec8fbaab3176971
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  따라서은 실제로 사용할 문법의 두 가지 선택 사항: SQL 92 문법 (및 이스케이프 시퀀스는 ODBC) 및 DBMS 전용 문법입니다. 둘 중는 SQL 92 문법 되므로 상호 운용성이 있는 모든 상호 운용 가능한 응용 프로그램에서 사용 해야 합니다. SQL 92 문법 또는 특정 DBMS 문법 상호 운용할 수 없는 응용 프로그램을 사용할 수 있습니다. 특정 DBMS 문법 두 가지 이점이 있습니다: SQL 92에서 포함 하지 않는 모든 기능을 악용할 수 있으며 미미 더 빠른 드라이버 수정할 필요가 없기 때문에 합니다. 후자의 기능 검색 및 바꾸기 이스케이프 시퀀스의 드라이버를 중지 하는 SQL_ATTR_NOSCAN 문 특성을 설정 하 여 부분적으로 적용 될 수 있습니다.  
   
  응용 프로그램 수정 된 드라이버에 의해 호출 하 여 검색할 수는 SQL 92 문법을 사용 하는 경우 **SQLNativeSql**합니다. 유용 종종 응용 프로그램을 디버그 합니다. **SQLNativeSql** SQL 문을 받아서 드라이버에이 파일을 수정한 후이 반환 합니다. 이 함수는 핵심 인터페이스 규칙 수준 이므로 모든 드라이버에서 사용할 수 있습니다.
+

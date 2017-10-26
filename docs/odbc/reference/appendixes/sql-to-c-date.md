@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 667ed133862e0ea67f4f995520ead7b372fae74e
@@ -47,3 +48,4 @@ ODBC SQL 데이터 형식이 날짜에 대 한 식별자:
  [c] C 데이터 형식에 해당 크기입니다.  
   
  에 결과 문자열은 날짜 SQL 데이터를 C 문자 데이터로 변환 되 면는 "*yyyy*-*mm*-*dd*" 형식입니다. 이 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다.
+

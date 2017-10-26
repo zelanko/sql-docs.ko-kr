@@ -24,6 +24,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3b1ee296ea292be7287c2cd4a8e93c9e33cb04bb
@@ -53,3 +54,4 @@ DSN=XYZ Corp;
  사용자가 데이터 소스를 선택한 후 드라이버 관리자는 해당 데이터 원본을 지정 하는 연결 문자열을 생성 하 고 드라이버에 전달 합니다. 드라이버는 필요한 추가 정보에 대 한 사용자를 표시 한 다음 수 있습니다.  
   
  드라이버는 사용자를 요청 하는 조건에 의해 제어 됩니다는 *DriverCompletion* 플래그; 항상 확인 하 고, 필요에 따라 메시지를 표시 또는 확인 안 함 하는 옵션이 있습니다. 에 대 한 전체 설명은이 플래그를 참조 하십시오.는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.
+

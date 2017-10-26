@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 464ba066af26c84c35f178b1a008d2e10a852119
@@ -66,3 +67,4 @@ ODBC 드라이버는 다음과 같이 분류할 수 있습니다.
   
 > [!NOTE]  
 >  16 비트 ODBC 드라이버는 ODBC 3와 직접 작동 하지 않습니다. *x* 드라이버 관리자입니다. 그러나 이후에 3까지 썽크는 2.0 ODBC 드라이버 관리자를 사용 하는 16 비트 드라이버에 대 한 같습니다. *x* 드라이버 관리자입니다.
+

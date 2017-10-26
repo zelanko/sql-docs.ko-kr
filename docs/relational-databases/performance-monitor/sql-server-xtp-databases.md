@@ -16,6 +16,7 @@ caps.latest.revision: 3
 author: dagiro
 ms.author: v-dagir
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e2839d276956db1b82bf6b1f236ceae74b973477
@@ -71,3 +72,4 @@ ms.lasthandoff: 06/22/2017
 
 ## <a name="see-also"></a>관련 항목:  
 [SQL Server XTP&#40;메모리 내 OLTP&#41; 성능 카운터](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)
+

@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a1513b2c9576d994ea7eb505c4928fd609e9498c
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  이 기능은 나중 버전의 Windows에서 제거 됩니다. 새 개발 작업에서는이 기능을 사용 하지 마십시오 하 고 현재이 기능을 사용 하는 응용 프로그램은 수정 하세요. 드라이버의 커서 기능을 사용 하는 것이 좋습니다.  
   
  커서 라이브러리는 SQL_ATTR_PARAMSET_SIZE 문 특성은 1 보다 큰 SQL 문을 포함 하는 SQL 문 일괄 처리를 지원 하지 않습니다. 커서 라이브러리를 SQL 문의 일괄 처리를 전송 하는 응용 프로그램, 결과 정의 되지 않습니다.
+

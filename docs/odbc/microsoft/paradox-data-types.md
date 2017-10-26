@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9099d9a84fb79132249c74d1d24cc240bcf8aae0
@@ -65,3 +66,4 @@ ODBC Paradox 드라이버 Paradox 데이터 형식을 ODBC SQL 데이터 형식�
 |timestamp|값은 Paradox 드라이버에 의해 타임 스탬프 열에 삽입 한 다음 이후에 열에서 검색 하는 경우 검색 된 값 따라 다를 수는 삽입 된 값에서 1 초를 반올림으로 인해 합니다.|  
   
  데이터 형식에 대 한 자세한 제한에서 확인할 수 있습니다 [데이터 형식 제한](../../odbc/microsoft/data-type-limitations.md)합니다.
+

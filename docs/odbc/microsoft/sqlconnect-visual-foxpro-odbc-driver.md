@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e0481be69797c1050b901c54b3ffde023bfdfb1a
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  일 수 있는 데이터 원본에 연결 된 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md) 의 디렉터리나 [테이블](../../odbc/microsoft/visual-foxpro-terminology.md)합니다. Visual FoxPro ODBC 드라이버는 무시는 *szUID*, *cbUID*, *szAuthStr*, 및 *cbAuthStr* 인수입니다.  
   
  자세한 내용은 참조 [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) 에 *ODBC Programmer's Reference*합니다.
+

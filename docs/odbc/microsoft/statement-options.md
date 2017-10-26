@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8e73ba4a1fe0bd8a7fb65b8986745f9d2edee550
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_NUMBER|결과 집합 내에서 현재 행의 위치를 지정 하는 32 비트 정수를 반환 합니다. Get만 사용 합니다. 설정할 수 없습니다.|  
 |SQL_ROWSET_SIZE|4294967296 행을 초과할 수 없습니다. 그러나 요청을 처리할 컴퓨터에 가상 메모리가 충분 한 있어야 합니다.|  
 |SQL_USE_BOOKMARKS|에서는 SQL_USE_BOOKMARKS SQL_UB_ON를 설정 하 고 고정 길이의 책갈피를 노출 합니다.|
+

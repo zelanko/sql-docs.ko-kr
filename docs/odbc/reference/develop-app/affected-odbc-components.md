@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a316cf7760534530b5663782532ada9fd6990662
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  표준 호환 응용 프로그램-예를 들어 하는 응용 프로그램 그룹 열기 또는 CLI ISO 표준에 따라 작성 된-은 항상 ODBC 3 작동*.x* ODBC 3를 통해 드라이버*.x*드라이버 관리자입니다. 응용 프로그램을 사용 하 여 기능은 드라이버에서 사용할 수 있는 것으로 간주 합니다. 표준 호환 응용 프로그램에 컴파일된 ODBC 3과 함께 가정*.x* 헤더 파일입니다.
+

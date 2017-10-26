@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c66acd08644176170c56700720a438aa8ffcdb1b
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
  드라이버 관리자의 최종 주 역할은 로드 및 언로드 드라이버입니다. 응용 프로그램이 로드 하 고 드라이버 관리자만을 언로드합니다. 특정 드라이버를 사용 하려는, 연결 함수 호출 (**SQLConnect**, **SQLDriverConnect**, 또는 **SQLBrowseConnect**) 드라이버 관리자에서 지정 하 고 특정 데이터 원본 또는 "회계" 또는 "SQL Server."와 같은 드라이버의 이름 이 이름을 사용 하 여, 드라이버 관리자 Sqlsrvr.dll 같은 드라이버의 파일 이름에 대 한 데이터 원본 정보를 검색 합니다. (아직 로드 되지 않은 것으로 가정) 드라이버를 로드, 드라이버에서 각 함수의 주소를 저장 하 고 자신을 초기화 하 고 데이터 원본에 연결 하는 드라이버에서 연결 함수를 호출 합니다.  
   
  응용 프로그램이 완료 되 면 호출 드라이버를 사용 하 여 **SQLDisconnect** 드라이버 관리자입니다. 드라이버 관리자는 데이터 원본에서 연결을 끊습니다 드라이버에서이 함수를 호출 합니다. 그러나 드라이버 관리자 응용 프로그램에 다시 연결 하는 경우에 드라이버 메모리에 유지 합니다. 드라이버 및 드라이버를 사용 하는 다른 연결은 응용 프로그램, 드라이버에서 사용 하는 연결을 제거 하거나 다른 드라이버에 대 한 연결을 사용 하는 경우에 언로드합니다. 에 대 한 전체 설명은 로드 및 언로드 드라이버에서 드라이버 관리자의 역할, 참조 [연결 과정에서 드라이버 관리자의 역할](../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)합니다.
+

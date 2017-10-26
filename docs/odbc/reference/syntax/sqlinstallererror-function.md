@@ -23,6 +23,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bb17b0ab5da8770c4622c7359c16de6876688c17
@@ -84,3 +85,4 @@ RETCODE SQLInstallerError(
  함수 호출에 대 한 여러 오류를 검색 하려면 응용 프로그램이 호출 **SQLInstallerError** 여러 번입니다.  
   
  추가 정보가 없는 경우 **SQLInstallerError** 에서 SQL_NO_DATA를 반환 된 *pfErrorCode* 인수는 정의 되지는 *pcbErrorMsg* 인수에 0 및 *lpszErrorMsg* 인수에 단일 null 종결 문자 포함 (하지 않는 한는 *cbErrorMsgMax* 인수는 0).
+

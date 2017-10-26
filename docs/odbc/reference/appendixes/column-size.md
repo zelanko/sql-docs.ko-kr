@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 13a50475602b7f71a7da33ebaaecb4c09eeaf534
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/09/2017
 |모든 숫자 형식|PRECISION|  
 |모든 날짜/시간 및 간격 유형|LENGTH|  
 |SQL_BIT|LENGTH|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e110747e53b5c64702b6103e47942c85858901aa
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 |**TransactionRollback**|응용 프로그램이 호출 하는 경우에 생성 **SQLEndTran** 로컬 트랜잭션을 롤백할 수 있습니다.|  
 |**JoinDTC**|응용 프로그램 Distributed Transaction Coordinator (DTC)를 조인 하는 경우 발생 합니다.|  
 |**LeaveDTC**|응용 프로그램 Distributed Transaction Coordinator (DTC)를 벗어날 때 발생 합니다.|
+

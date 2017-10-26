@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1a98ca0b68198dada19e4ac81f8637798a99b95
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   시간 리터럴에 대 한 {t '*값*'을 (를) 여기서 *값을 지정*e는 "hh: mm:" 형식  
   
  타임 스탬프 리터럴에 대 한 {ts'*값*'을 (를) 여기서 *값을 지정*형태로 e는 "h:mm: ss yyyy-월-일 [. f...]"입니다.
+

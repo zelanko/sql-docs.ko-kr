@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ddd78f90927378fd0a7f8dbd78a5c66abb01f4a
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  모든 행 Id는 범위가 SQL_SCOPE_CURROW입니다.  
   
  패턴 일치에 대 한 지원 되지 않습니다는 *szTableQualifier* 또는 *szTableName* 인수입니다.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b09a6daa19b7a8b22ac5f4b3147e6cefde6ffc60
@@ -64,3 +65,4 @@ Odbc 3. *x*, 날짜에 대 한 식별자, SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP�
  [1]의 결과로이 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 카탈로그 함수에서 반환 되는 결과 집합에서 반환 되는 날짜, 시간 또는 타임 스탬프 코드를 사용할 수 있습니다.  
   
  [2]의 결과로이 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 3.* x* 카탈로그 함수에서 반환 되는 결과 집합에서 반환 되는 날짜, 시간 또는 타임 스탬프 코드를 사용할 수 있습니다.
+

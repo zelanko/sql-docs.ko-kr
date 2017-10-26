@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64e6dfe9f31eb983170f08e9fcd3e0705ba9ae62
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   **탭에 대 한** 설치 된 ODBC 구성 요소 파일을 나열 합니다.  
   
  데이터 소스를 추가한 후 사용할 수 있습니다는 **ODBC 데이터 원본 관리자** 대화 상자를 데이터 원본에 대 한 액세스를 구성할 수 있습니다. 데이터 소스를 선택 하 고 편집 하거나 정보를 검토 하는 탭 중 하나를 클릭 합니다.
+

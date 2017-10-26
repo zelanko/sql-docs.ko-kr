@@ -18,6 +18,7 @@ caps.latest.revision: 23
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d03f4b35bfdd2b4fb2cc1fbf90400099142f1cc
@@ -36,3 +37,4 @@ ms.lasthandoff: 06/22/2017
 |[Scan:Stopped 이벤트 클래스](../../relational-databases/event-classes/scan-stopped-event-class.md)|테이블 또는 인덱스 검색이 중지되었음을 나타냅니다.|  
   
   
+

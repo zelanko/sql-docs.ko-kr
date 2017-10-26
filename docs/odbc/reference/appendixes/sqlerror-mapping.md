@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7ebbe17713149276acbe061bfb8ba41503026306
@@ -38,3 +39,4 @@ SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErr
 ```  
   
  와 *HandleType* 를 적절 하 게 SQL_HANDLE_ENV, sql_handle_dbc 라는, 또는 여를 값으로 설정 하는 인수 및 *처리* 인수에 값으로 설정 *henv*, *hdbc*, 또는 *hstmt*를 적절 하 게 합니다. *RecNumber* 인수 드라이버 관리자에 의해 결정 됩니다.
+

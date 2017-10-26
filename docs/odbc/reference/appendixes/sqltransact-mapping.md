@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 252339f7fcd2a3893f030c0ffbc4485ab5441152
@@ -48,3 +49,4 @@ SQLEndTran (SQL_HANDLE_ENV, EnvironmentHandle, CompletionType);
  경우 *ConnectionHandle* SQL_NULL_HDBC 같습니다. *EnvironmentHandle* 인수 값으로 설정 되어 *henv*합니다.  
   
  위의 경우 모두는 *CompletionType* 인수는 동일한 값으로 설정 되어 *fType*합니다.
+

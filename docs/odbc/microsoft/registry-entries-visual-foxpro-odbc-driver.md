@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6a975ff73eb4b2ef48af05ccfdf595ae9c3233f0
@@ -61,3 +62,4 @@ Visual FoxPro ODBC 드라이버를 설치할 때 설치 프로그램이 HKEY_LOC
  이 정보를 직접 액세스 하지 않아야 모든 관리는 레지스트리의 추가, 수정 또는 데이터 원본을 삭제 하는 경우 ODBC 관리자에 의해 처리 됩니다.  
   
  이러한 키워드와 값 중 일부에 매개 변수로 사용할 수 있습니다는 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md) ODBC API 함수입니다.
+

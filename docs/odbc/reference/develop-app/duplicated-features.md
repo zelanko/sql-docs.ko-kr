@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b12ba1b5b8c70e6ab0f7efe6f0811984411a6022
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  함수 **SQLBindParam** 는 특별 한 경우. **SQLBindParam** 기능을 복제 합니다. 이 ODBC 2*.x* 함수, 했지만 Open Group 및 ISO 표준에 존재 하는 함수입니다. 이 함수에 의해 제공 되는 기능에 따라 완전히 포함 됩니다. **SQLBindParameter**합니다. 결과적으로, 드라이버 관리자에 대 한 호출을 매핑합니다 **SQLBindParam** 를 **SQLBindParameter** 때 기본 드라이버는 ODBC 3.* x* 드라이버입니다. 그러나 기본 드라이버는 ODBC 2는*.x* 드라이버를 드라이버 관리자에서이 매핑을 수행 하지 않습니다.
+

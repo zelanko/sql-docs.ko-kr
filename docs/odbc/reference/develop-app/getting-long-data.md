@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0ea30c211e3cfd66acf1588ef9ca2a45fd1037d1
@@ -89,3 +90,4 @@ SQLCloseCursor(hstmt);
  일부 드라이버는 이러한 제한을 적용 하지 않습니다. 상호 운용 가능한 응용 프로그램에는 이러한 없거나 결정 되는 제한을 호출 하 여 적용 되지 않습니다 가정 하거나 해야 **SQLGetInfo** SQL_GETDATA_EXTENSIONS 옵션을 사용 합니다.  
   
  응용 프로그램 문자 또는 이진 데이터 열에 있는 모든 데이터, 필요 하지 않는 경우 문을 실행 하기 전에 SQL_ATTR_MAX_LENGTH 문 특성을 설정 하 여 DBMS 기반 드라이버에서 네트워크 트래픽을 줄일 수 있습니다. 문자 또는 이진 열에 대해 반환 되는 데이터의 바이트 수를 제한 합니다. 예를 들어 열 긴 텍스트 문서에 포함 되어 있다고 가정 합니다. 에서는이 열이 포함 된 테이블을 탐색 하는 응용 프로그램은 각 문서의 첫 번째 페이지에만 표시 해야 할 수 있습니다. 드라이버에서이 문 특성을 시뮬레이션할 수 있지만, 이지만이 작업을 수행할 필요가 없습니다. 특히, 응용 프로그램를 문자 또는 이진 데이터 truncate 하려는 경우 해당 바인딩해야 작은 버퍼의 열에 **SQLBindCol** 드라이버는 데이터가 잘릴 수 있도록 합니다.
+

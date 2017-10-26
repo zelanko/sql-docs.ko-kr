@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 46c1a95015858fbec4ff1e1b5f10bb9b409c9482
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  [이 목록에 있는 c]는 숫자는 SQL_DATE_STRUCT 구조체의 필드에 저장 된 숫자입니다.  
   
  [이 목록에 있는 d]에서 숫자는 SQL_TIMESTAMP_STRUCT 구조체의 필드에 저장 된 숫자입니다.
+

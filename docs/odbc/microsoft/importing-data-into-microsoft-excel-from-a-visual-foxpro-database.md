@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3cd82106bf81b5885f74adf6c1759883110ea913
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 5.  에서 끌어서 테이블 아래에는 디자이너의 절반 쿼리에 대 한 필드를 선택 합니다.  
   
 6.  Microsoft 쿼리를 닫습니다. Microsoft Excel 스프레드시트에 선택한 데이터를 가져옵니다.
+

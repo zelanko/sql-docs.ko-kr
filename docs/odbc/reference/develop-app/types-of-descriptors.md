@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5554b0d7d110db9270230c25ab2bcc29d5a7cb87
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  설명자를 서로 다른 역할을 수행할 수 있습니다. 다른 문을 응용 프로그램에서 명시적으로 할당 하는 모든 설명자를 공유할 수 있습니다. 하나의 문에서 행 설명자를 다른 문에서 매개 변수 설명자 될 수 있습니다.  
   
  항상 알려져 지정 된 설명자는 응용 프로그램 설명자 인지 구현 설명자의 설명자 아직 데이터베이스 작업에 사용 되지 않은 경우에 합니다. 구현에서 암시적으로 할당 하는 설명자에 대 한 구현 문 핸들에 따라 미리 정의 된 행을 기록 합니다. 응용 프로그램에서 호출 하 여 할당 된 모든 설명자 **SQLAllocHandle** 는 응용 프로그램 설명자입니다.
+

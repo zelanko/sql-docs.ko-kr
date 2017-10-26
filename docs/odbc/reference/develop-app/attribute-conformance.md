@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9d615371a5bcf305158cb5f29c22a087110f95ac
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  [2] 수준 2 인터페이스 규칙에 대 한 드라이버 SQL_CONCUR_READ_ONLY 및 다른 값이 하나 이상 지원 해야 합니다.  
   
  [3] 수준 1 인터페이스 규칙에 대 한 드라이버 SQL_CURSOR_FORWARD_ONLY 및 다른 값이 하나 이상 지원 해야 합니다. 수준 2 인터페이스 규칙에 대 한 드라이버는이 문서에 정의 된 모든 값을 지원 해야 합니다.
+

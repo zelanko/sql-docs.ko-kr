@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 54581e6bf4aceebc50a752ee460458671e8047bd
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  드라이버에서 Oracle 서버에 전송 하는 SQL 문을 처리 하는 방식 때문에 Oracle 내부적으로 다음 오류 메시지가 반환: "또는 00964: 테이블 목록에 없는 이름입니다."
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56fa0c8ea21d4cfb620acfb633b3a4297ccd27fd
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |*szTableOwner*|에 대 한 유효한 인수 *szTableOwner* 소유자 이름을 지 원하는 드라이버의 없기 때문에 NULL입니다. 와 *szTableOwner* NULL로 설정 모든 테이블이 반환 됩니다. TABLE_OWNER 열에 NULL이 반환 됩니다.|  
 |*szTableQualifier*|TABLE_QUALIFIER 열에서 **SQLTables** 디렉터리 경로 반환 합니다.|  
 |*SzTableType*|"TABLE"은 테이블 유형만 지원 합니다.<br /><br /> 텍스트 드라이버를 사용 하는 경우, 파일에서 반환 된 목록이 **SQLTables** 파일 확장명에 따라 사용자가 **확장명 목록** 상자에 **ODBC 텍스트 설정** 대화 상자.|
+

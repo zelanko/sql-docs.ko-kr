@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 417603891bee2561c35485b09b6e52648c99cbb8
@@ -39,3 +40,4 @@ ODBC 응용 프로그램에서는 SQL 문을 실행 하 여 데이터베이스�
 -   [비동기 실행(알림 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md)  
   
 -   [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)
+

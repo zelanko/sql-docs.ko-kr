@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 7f89ed5e87b8fd51e8618a8559679225d91b32de
@@ -57,3 +58,4 @@ DTA GUI에서 이 기능을 사용하려면 **일반** 창에서 **쿼리 저장
 [자습서: 데이터베이스 엔진 튜닝 관리자](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
 [쿼리 저장소에서 데이터를 수집하는 방법](../../relational-databases/performance/how-query-store-collects-data.md)     
 [쿼리 저장소 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)
+

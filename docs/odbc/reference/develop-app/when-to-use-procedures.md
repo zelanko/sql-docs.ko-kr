@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7bae5e984d66d8b71a9e4b84708f3ea126c1e0b
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
  두 번째 단점은 여러 Dbms 프로시저를 지원 하지 않습니다. 마찬가지로이 다양 한 Dbms 사용 하 여 실행 하도록 설계 세로 응용 프로그램에 문제가 될 가능성이 가장 높은 합니다. 프로시저를 지원 하는지 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_PROCEDURES 옵션을 사용 합니다.  
   
  특히 응용 프로그램 개발 환경에 적용 되는 세 번째 단점은 ODBC 프로시저를 만들기 위한 표준 문법을 정의 하지 않습니다. 즉, 응용 프로그램 interoperably 프로시저를 호출할 수 있으며, 있지만 만들 수는 없습니다 interoperably 합니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 874aba454df680626a126f19faa821f885e9d040
@@ -36,3 +37,4 @@ Microsoft Excel 또는 텍스트 드라이버에 대 한 CREATE INDEX 문이 지
  DBASE 드라이버를 사용 하는 CREATE UNIQUE INDEX 문에 의해 생성 된 인덱스 실제로 고유 하지 않으며 인덱싱된 열에 중복 값을 삽입할 수 있습니다. 인덱스에 동일한 키 값을 가진 집합에서 레코드를 하나만 추가할 수 있습니다.  
   
  Paradox 드라이버를 사용할 경우 인접 한 하위 집합의 첫 번째 열을 포함 하는 테이블의 열에 고유 인덱스를 정의 합니다. Borland 데이터베이스 엔진의 구현 없이 Paradox 드라이버를 사용 하거나 테이블에 고유 인덱스가 정의 되어 있지 않으면 Paradox 드라이버에서 테이블을 업데이트할 수 없습니다.
+

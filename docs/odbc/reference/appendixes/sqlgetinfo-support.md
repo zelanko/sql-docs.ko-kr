@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fb9afa5b40ffa7628e04ee85e5ddc4f752e98935
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
  ODBC 3*.x* ODBC 3을 사용 하는 응용 프로그램*.x* 드라이버를 호출 하지 않아야 **SQLGetInfo** 와 *정보 항목* 에 설명 된 인수 테이블 위의 있지만 ODBC 3을 사용 해야*.x* *정보 항목* 다음 단락에 인수를 나열 합니다. 간의 한 일 대응 하지는 않습니다 *정보 항목* ODBC 2에서 사용 되는 인수.* x* 고 ODBC 3에서 사용 되는*.x*합니다. ODBC 3*.x* 응용 프로그램을 사용 하는 ODBC 2.* x* 반면에 드라이버를 사용 해야는 *정보 항목* 인수 앞에서 설명한 합니다.  
   
  이전 테이블의 정보 유형 중 일부는 커서 특성 정보 유형이 하기 위해 사용 되지 않습니다. 이러한 유형은 SQL_FETCH_DIRECTION, SQL_LOCK_TYPES, SQL_POS_OPERATIONS, SQL_POSITIONED_STATEMENTS, SQL_SCROLL_CONCURRENCY, 및 SQL_STATIC_SENSITIVITY 정보를 사용 되지 않습니다. 새 커서 특성 유형은 SQL_XXX_CURSOR_ATTRIBUTES1and SQL_XXX_CURSOR_ATTRIBUTES2, 여기서 XXX은 DYNAMIC, FORWARD_ONLY, KEYSET_DRIVEN, 또는 STATIC입니다. 각 새로운 유형의 단일 커서 유형에 대 한 드라이버 기능을 나타냅니다. 이러한 옵션에 대 한 자세한 내용은 참조는 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 함수 설명 합니다.
+

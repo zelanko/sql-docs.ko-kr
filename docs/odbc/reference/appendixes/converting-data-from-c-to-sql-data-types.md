@@ -24,6 +24,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c8f3f8c3c62c7a4d4c6765d52c48d592ff92a21e
@@ -82,3 +83,4 @@ ms.lasthandoff: 09/09/2017
 -   [C에서 SQL로: 날짜-시간 간격](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
 -   [C에서 SQL로 데이터 변환 예제](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
+

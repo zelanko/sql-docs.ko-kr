@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b9acd359d2d99531e3fe4092b3bd20f00e94622a
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |PWD|암호입니다.<br /><br /> 선택적 키워드 이므로 드라이버 파일에 기록 되지 않습니다. 에 대 한 호출에 사용 되는 **SQLDriverConnect** Paradox로 보호 된 파일에 대 한 합니다. 테이블을 열 때마다 사용 되는 암호를 잘못 됩니다. 암호가 연결 문자열에 전달 되 면 해당 테이블에 대 한 암호가 설정 됩니다. 테이블에 다른 암호 경우 둘 이상의 같은 세션에서 열 수 없습니다도 테이블을 조인할 수 없습니다.|  
 |READONLY|파일을 만들기 위해 읽기 전용 이면 TRUE False 이면 읽기 전용 파일을 설정 합니다.<br /><br /> 동일한 옵션을 설정 하는이 **읽기 전용** 설정 대화 상자에서 합니다.|  
 |스레드|사용 하도록 엔진에 대 한 백그라운드 스레드 수를 지정 합니다. 이 값은 3, 되며 변경할 수 없습니다.<br /><br /> 동일한 옵션을 설정 하는이 **스레드** 설정 대화 상자에서 합니다.|
+

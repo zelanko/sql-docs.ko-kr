@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2ab8cb4066a8c5c7ab2e31401dd1e80d003d5b38
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  다음 그림에는 네트워크 파일 서버에 파일 기반 드라이버, 하나는 데이터가 있는 로컬 및 구문이 있는 다른의 서로 다른 두 구성을 보여 줍니다.  
   
  ![파일의 두 가지 구성 &#45; 기반된 드라이버](../../odbc/reference/media/pr06.gif "pr06")
+

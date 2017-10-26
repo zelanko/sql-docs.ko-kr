@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b234123c01d4bdf4590c000b996a4febe4ad485e
@@ -53,3 +54,4 @@ if ((rc1 == SQL_ERROR) || rc1 == SQL_SUCCESS_WITH_INFO) {
 ```  
   
  이 간편 하 게 응용 프로그램을 코딩 합니다. 응용 프로그램에서 사용자가 SQL 문을 작성 하 고 설명의 유효성을 검사 하도록 데이터 원본에 의존 합니다. 적절 하 게 SQL의 고급 기능을 노출 하는 그래픽 사용자 인터페이스를 작성 하는 것 이기 때문에 단순히 SQL 문 텍스트를 입력 하 라는 것이 좋습니다 대신 사용할 수 있습니다. 그러나이 위해서는 사용자 SQL 뿐만 아니라 쿼리 중인 데이터 원본의 스키마에 알아야 합니다. 일부 응용 프로그램 기준이 사용자 기본 SQL 문을 만들고 수도 하는 사용자가 수정할 수 있는 텍스트 인터페이스를 제공 하는 그래픽 사용자 인터페이스를 제공 합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32a6629892ad9667b7d56a6bb6752c68001dddc9
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
  드라이버 관리자 환경 핸들을 잠가 (*henv*) 드라이버의를 호출 하기 전에 **SQLAllocHandle** 및 **SQLFreeHandle** 때 *HandleType* 로 설정 된 **sql_handle_dbc 라는**합니다.  
   
  응용 프로그램 호출 하는 경우 **SQLDisconnect**, 드라이버 관리자를 호출 하 여 **SQLDisconnect** 드라이버에서입니다. 그러나 응용 프로그램이 드라이버에 다시 연결 하는 경우 로드 된 드라이버를 유지 합니다. 응용 프로그램 호출 하는 경우 **SQLFreeHandle** 드라이버 관리자를 sql_handle_dbc 라는 옵션으로 호출 **SQLFreeHandle** 드라이버에서입니다. 드라이버 관리자는 다음 호출 다른 연결에서 드라이버를 사용 하지 않는 경우 **SQLFreeHandle** 옵션는 SQL_HANDLE_ENV 사용 하 여 드라이버에 선택한 드라이버를 언로드합니다.
+

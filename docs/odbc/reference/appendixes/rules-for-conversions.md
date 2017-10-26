@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 06baaaff03f75cbf04da86527a25ea60755a473e
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
          (2) 드라이버 y에서 문자열 (수 있는 0도) 하는 적절 한 범위로을 반올림 하 고 CT.에 결과 기록  
   
          (3) 드라이버 모두 자릅니다 또는 라운드 했지만 방금 CT.에 Y의 첫 번째 LT 문자를 복사
+

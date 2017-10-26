@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ee50a69a6a6f7f9aa4b96fdac42e03d9fb130fd3
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [ODBC의 C 데이터 유형](../../../odbc/reference/develop-app/c-data-types-in-odbc.md)  
   
 -   [데이터 형식 변환](../../../odbc/reference/develop-app/data-type-conversions.md)
+

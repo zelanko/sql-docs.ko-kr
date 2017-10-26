@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 279b6a3c1f8eb2f1eea5bba35ee10f0a6643fb49
@@ -32,3 +33,4 @@ ODBC 3 경우*.x* 드라이버는 ODBC 2 함께 사용할 수 있어야 합니�
 -   SQL_UB_ON SQL_USE_BOOKMARKS 문 옵션에 대 한 값으로. (SQL_UB_ON ODBC 3에서 사용 되지 않는*.x*.)  
   
 -   SQL_GET_BOOKMARK 문 옵션입니다.
+

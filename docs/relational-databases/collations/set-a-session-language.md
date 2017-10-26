@@ -26,6 +26,7 @@ caps.latest.revision: 39
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21c986a0f7e0341826697bb50eb26fb93a1031df
@@ -59,3 +60,4 @@ ms.lasthandoff: 06/22/2017
  ADO.NET의 경우 **ConnectionString** 개체의 **Current Language** 매개 변수를 사용합니다. 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MDAC(데이터 액세스 구성 요소) SDK(소프트웨어 개발 키트) 설명서를 참조하십시오.  
   
   
+

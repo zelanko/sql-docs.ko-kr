@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34b9221b117819988e44196cee0f04578e85d436
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  ANSI 응용 프로그램이 ODBC 데스크톱 데이터베이스 드라이버 4.0을 사용 하 여 및 액세스 하는 Microsoft Access 4.0 되거나 경우 Jet 4.0에서는 다양 한 버전을 지원 하지만 드라이버에서 데이터 형식으로 SQL_CHAR, SQL_VARCHAR 또는 SQL_LONGVARCHAR에 노출 하는 나중 합니다. 이전 버전의 Jet SQL_WCHAR, SQL_WVARCHAR 및 SQL_WLONGVARCHAR 지원 하지 않습니다. 이 제한은 Jet 4.0 데이터베이스 엔진과 함께 사용 되는 이전 형식 하는 경우에도 적용 됩니다.  
   
  유니코드 ODBC 문제에 관한 자세한 내용은 참조 하십시오. [유니코드](../../odbc/reference/develop-app/unicode.md) 프로그래밍 고려 사항에서입니다.
+

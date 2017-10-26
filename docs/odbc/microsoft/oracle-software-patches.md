@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab4a7bed2fdc63224fd7a2f86757d11375f2cd2
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Oracle 현재 버전에서 버그를 수정 하 고 다음에 소프트웨어 패치를 사용 하 여 이전 버전으로 retrofits, 때문에 사용할 수 있는 최신 패치를 다운로드 하는 것이 좋습니다. Oracle Server 클라이언트 구성 요소에 대 한 경우 특히 유용합니다. 이 패치를 설치 하는 방법에 대 한 질문이 있으면 Oracle 지원에 문의 합니다.
+

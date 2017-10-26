@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6359fe8948e670a05a076537e2acf3e28b3cba1d
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 |TABLE_QUALIFIER|데이터베이스 파일의 경로를 반환 됩니다.|  
 |TABLE_OWNER|소유자 이름입니다. 지원 되지 않으므로이 열에 NULL이 반환 됩니다.|  
 |NULLABLE|SQL_NO_NULLS 기본 키 또는 고유 인덱스에 참여 하는 열에 대 한 반환 됩니다.|
+

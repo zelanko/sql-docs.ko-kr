@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 461f41eb5f8ae7481b65d293b0c3a619b59e7f9c
@@ -482,3 +483,4 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버 호출 **SQLSetStmtAttr** 특성을 원본으로 사용 하는 ODBC 2에서 SQL_UB_ON 드라이버 관리자 SQL_ATTR_USE_BOOKMARKS 특성 SQL_UB_VARIABLE을으로 설정 하려면 설정 합니다.* x* 드라이버입니다.
+

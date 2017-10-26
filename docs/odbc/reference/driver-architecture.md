@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a74f6e1b212f570ba9aa47a09310b63b13ee0e42
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   [네트워크 예제](../../odbc/reference/network-example.md)  
   
 -   [기타 드라이버 아키텍처](../../odbc/reference/other-driver-architectures.md)
+

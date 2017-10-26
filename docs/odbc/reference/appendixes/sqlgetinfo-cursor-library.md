@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8e1aa6617d19c9028ff08dcf171abac060bb6f1
@@ -56,3 +57,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  트랜잭션이 커밋 또는 데이터 원본으로 롤백할 때 커서 라이브러리 같은 커서 동작을 구현 합니다. 즉, 커밋 또는 호출 하 여 트랜잭션을 롤백하면 **SQLEndTran** SQL_ATTR_AUTOCOMMIT 연결 특성을 사용 하면이 데이터 원본에 대 한 액세스 계획을 삭제 하 고 모든 문에 대해 커서를 닫습니다 하거나 연결을 사용 합니다. 자세한 내용은 참조에서 SQL_CURSOR_COMMIT_BEHAVIOR 및 SQL_CURSOR_ROLLBACK_BEHAVIOR 정보 유형이 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)합니다.
+

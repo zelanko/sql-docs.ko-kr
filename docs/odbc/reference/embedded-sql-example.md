@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e9f19c26cf77e0f5cfbff8a8ebad193ba9e9cdf2
@@ -77,3 +78,4 @@ bad_number:
 -   **오류 처리** The DBMS는 SQL 통신 영역 또는 SQLCA을 통해 응용 프로그램에 런타임에 오류를 보고 합니다. 위의 코드 예제에서는 첫 번째 포함 된 SQL 문이 포함 SQLCA 경우 프로그램에서 SQLCA 구조를 포함 하도록 프리를 인지를 나타냅니다. 프로그램은 DBMS에 의해 반환 되는 오류를 처리할 때마다 이것이 필요 합니다. WHENEVER 중... GOTO 문의 분기를 특정 레이블 때 오류가 발생 하는 오류 처리 코드를 생성 하려면 프리를 지시 합니다.  
   
 -   **단일 선택** 데이터를 반환 하는 데 사용 하는 문을 단일 SELECT 문입니다; 즉, 데이터의 단일 행만을 반환 합니다. 따라서이 코드 예제에서는 선언 않거나 커서를 사용 합니다.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7b3bc3d656d9083d4bcfc47365f294233bedc581
@@ -35,3 +36,4 @@ ODBC의 트랜잭션은 연결 수준 완료 즉, 응용 프로그램에 트랜�
 -   [트랜잭션 커밋 및 롤백](../../../odbc/reference/develop-app/committing-and-rolling-back-transactions.md)  
   
 -   [커서 및 준비된 문에 트랜잭션이 미치는 영향](../../../odbc/reference/develop-app/effect-of-transactions-on-cursors-and-prepared-statements.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d8ffdb2fa548b03ee38c0f817675cb88ab4acf67
@@ -30,3 +31,4 @@ Microsoft Excel 또는 텍스트 드라이버에 대 한 DELETE 문은 지원 �
  DBASE 드라이버 "deleted" 값을 제거 하려면 테이블을 압축 하는 것을 지원 하지 않습니다.  
   
  테이블에서 행을 삭제 하려면 Paradox 드라이버에 대 한 테이블에 고유 인덱스 (기본 키 Paradox) 있어야 합니다.
+

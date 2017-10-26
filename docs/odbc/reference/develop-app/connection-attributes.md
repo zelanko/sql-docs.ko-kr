@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d62657134276621442c58639d1ef1c7f2a4b63e0
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
  연결한 후 번역 연결 특성 (SQL_ATTR_TRANSLATE_DLL 및 SQL_ATTR_TRANSLATE_OPTION)를 설정 해야 합니다.  
   
  언제 든 지 다른 모든 연결 특성을 설정할 수 있습니다. 자세한 내용은 참조는 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) 함수 설명 합니다. (호출을 통해 환경 수준에 연결 특성을 설정할 수 없습니다 **SQLSetEnvAttr**.)
+

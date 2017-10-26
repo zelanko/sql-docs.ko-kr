@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 30637bacfb73d56528233ea13c4c6daeabecf814
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  설치의 양을 실제 수행 되는 설치 프로그램에서 설치 관리자 DLL에서에서 호출 함수에 따라 달라 집니다. DLL 설치 관리자는 개별 ODBC 구성 요소를 설치 하는 함수를 포함 합니다. 설치 프로그램에서 단순히 호출 **SQLInstallDriverManager**, **SQLInstallDriverEx**, 또는 **SQLInstallTranslatorEx** 설치 관리자의 경로 검색 하는 DLL에는 구성 요소가 설치 되 고 레지스트리에 구성 요소에 대 한 정보를 추가 하는 디렉터리입니다. 이러한 함수 실제로; 파일을 복사 하지 않으려면 설치 프로그램에서 정보를 사용 하 여 이러한 함수의 인수에는 합니다.  
   
  설치 관리자 DLL에는 ODBC 구성 요소를 제거 하는 함수가 포함 되어 있습니다. 설치 프로그램을 호출 하 여 **SQLRemoveDriverManager**, **SQLRemoveDriver**, 또는 **SQLRemoveTranslator** 설치 관리자에서 구성 요소의 사용량 감소 시키기 위해 DLL의 수는 레지스트리 및 구성 요소의 새 사용 횟수를 0으로 뒤쳐지면 레지스트리에서 구성 요소에 대 한 모든 정보를 제거 합니다. 이러한 함수는 구성에 대 한 파일을 완전히 제거 하지 마십시오 설치 프로그램에서는 새 사용 횟수를 0으로 떨어질 경우이 합니다.
+

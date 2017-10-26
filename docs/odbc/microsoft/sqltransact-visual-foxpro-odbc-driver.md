@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9b12fa480f4aef8b669bdd57c4322f8d9f736be6
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  수동 모드에 있을 때 커밋 실패 하면 트랜잭션이 활성 상태로 유지 되; 트랜잭션을 롤백 또는 커밋 작업을 다시 시도를 선택할 수 있습니다. 자동 트랜잭션 모드에 있을 때 커밋 작업이 실패 하면 트랜잭션이 롤백됩니다 트랜잭션이 비활성화할 수 없습니다.  
   
  자세한 내용은 참조 [SQLTransact](../../odbc/reference/syntax/sqltransact-function.md) 에 *ODBC Programmer's Reference*합니다.
+

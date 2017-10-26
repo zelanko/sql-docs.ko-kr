@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 75e5f954065c0b41935aa231c85c093d5ee10226
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQLBulkOperations를 사용하여 행 삽입](../../../odbc/reference/develop-app/inserting-rows-with-sqlbulkoperations.md)  
   
 -   [SQLBulkOperations로 행 페치](../../../odbc/reference/develop-app/fetching-rows-with-sqlbulkoperations.md)
+

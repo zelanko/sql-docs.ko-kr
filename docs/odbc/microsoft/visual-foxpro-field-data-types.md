@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c1ae849d91962cb7d11ca8bac755665217fe1a2
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |N|N|d|숫자 필드 너비의 * n * 와 *d* 소수 자릿수|  
 |T|-|-|DateTime|  
 |Y|-|-|Currency|
+

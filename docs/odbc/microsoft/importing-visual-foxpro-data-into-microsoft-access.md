@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6bdf35fb9c9b7b4688aa7f5bf4173b2a6a9eefb5
@@ -45,3 +46,4 @@ Visual FoxPro 데이터베이스 가져오기 옵션을 사용 하 여 Microsoft
  이제 Microsoft Access를 사용 하 여 가져온된 Visual FoxPro 테이블의 데이터를 조작 합니다. 가져오는 데이터는 Visual FoxPro;에 저장 된 데이터의 스냅숏을 가져온된 데이터의 변경 내용은 Visual FoxPro 데이터 소스에 다시 전송 되지 않습니다.  
   
  참조, Visual FoxPro 데이터 원본의 데이터를 변경 하려면 Microsoft Access에서 수행한 변경 내용을 [쿼리 및 Microsoft Access에서 Visual FoxPro 데이터 업데이트](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)합니다.
+

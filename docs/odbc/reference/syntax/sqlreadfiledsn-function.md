@@ -23,6 +23,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f3d74f900de16f8b2b257d9af6c65e8745139d3c
@@ -97,3 +98,4 @@ BOOL SQLReadFileDSN(
 |내용|참조 항목|  
 |---------------------------|---------|  
 |파일 DSN에 정보를 기록|[SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md)|
+

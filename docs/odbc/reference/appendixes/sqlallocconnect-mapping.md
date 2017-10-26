@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0188c47d6abfd294dc1a9c20c04ea7d271443a18
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
     ```  
   
      사용 하 여 드라이버에서 *InputHandle* 로 설정 *henv*, 및 *OutputHandlePtr* 로 설정 *phdbc*합니다.
+

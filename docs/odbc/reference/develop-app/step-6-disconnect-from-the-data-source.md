@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce3ea03a637e8edce89c83f196e4fcafd97dfdc8
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램 사용 하 여 데이터 소스에서 연결을 끊습니다는 다음으로, **SQLDisconnect** 와 연결 핸들을 해제 하 고 **SQLFreeHandle**합니다. 자세한 내용은 참조 [데이터 원본이 나 드라이버에서 연결 끊기](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)합니다.  
   
  응용 프로그램으로 환경 핸들을 해제 하는 마지막으로, **SQLFreeHandle** 를 드라이버 관리자를 지 속하거나 언로드합니다. 자세한 내용은 참조 [환경 처리할 할당](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)합니다.
+

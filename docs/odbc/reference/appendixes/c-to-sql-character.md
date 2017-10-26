@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e8d6ab676fc351afd7819c1fe60d59a58bfe7207
@@ -68,3 +69,4 @@ ODBC C 데이터 형식 문자에 대 한 식별자는.
   
 > [!NOTE]  
 >  응용 프로그램 개발자는 C 문자 데이터를 이진 SQL 데이터 형식에 바인딩 해서는 안 됩니다. 이 변환은 일반적으로 비효율적인 및 느립니다.
+

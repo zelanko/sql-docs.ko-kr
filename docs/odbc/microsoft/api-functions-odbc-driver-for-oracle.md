@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3671b82eaa3281ff682314943209eb50273eb9dd
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [수준 1](../../odbc/microsoft/level-1-api-functions-odbc-driver-for-oracle.md) 규칙도 추가 기능 트랜잭션과 같은 핵심 수준 인터페이스 기능을 제공 합니다.  
   
 -   [수준 2](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) 규칙에 따라도로 같은 기능 책갈피, 동적 매개 변수 및 ODBC 함수의 비동기 실행 수준 1 기능을 제공 합니다.
+

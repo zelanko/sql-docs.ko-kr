@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 56543f0de0d95bad6fa85fc415dddd7da58f3667
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  ODBC 3입니다. *x* 응용 프로그램을 사용 하지 않아야 **SQLExtendedFetch** 또는 SQL_ROWSET_SIZE 문 특성입니다. 대신 사용 해야 **SQLFetchScroll** 및 SQL_ATTR_ROW_ARRAY_SIZE 문 특성입니다. ODBC 3입니다. *x* 응용 프로그램을 사용 하지 않아야 **SQLSetPos** 와 *작업* SQL_ADD의 사용 해야 하지만 **SQLBulkOperations** 는 와*작업* SQL_ADD입니다.
+

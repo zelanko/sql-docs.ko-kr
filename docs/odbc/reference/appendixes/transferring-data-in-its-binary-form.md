@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8c54b61ec668e9282d723e48f1c50d1005740ac1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 >  이런이 방식으로 모든 데이터 (이진 데이터 제외)를 전송 하는 응용 프로그램 Dbms 간에 상호 운용 되지는 않습니다.  
   
  **SQLCopyDesc** 원본 DBMS에서에서 대상 DBMS에서에서 매개 변수 바인딩의 행 바인딩을 복사할 데 사용할 수 있습니다.
+

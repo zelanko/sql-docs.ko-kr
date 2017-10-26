@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0a5ef0029dd3c59d16bbba7d12ef334c8f2701d7
@@ -25,3 +26,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="sqlprepare-desktop-database-drivers"></a>SQLPrepare (데스크톱 데이터베이스 드라이버)
 잘못 된 수의 열을 사용 하 여 준비 된 문을는 문 준비 될 때가 아니라 실행 시 오류가 반환 됩니다.
+

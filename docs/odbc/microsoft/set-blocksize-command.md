@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d0c98afd9479e1a7de4f7a14834909962f274f1e
@@ -39,3 +40,4 @@ SET BLOCKSIZE TO nBytes
   
 ## <a name="remarks"></a>주의  
  블록 크기 설정의 기본값은 64입니다. 파일이 생성 된 블록 크기를 다른 값으로 다시 설정, 새 값으로 설정 하 고 복사를 사용 하 여 새 테이블을 만들 합니다. 새 테이블에는 지정 된 블록 크기입니다.
+

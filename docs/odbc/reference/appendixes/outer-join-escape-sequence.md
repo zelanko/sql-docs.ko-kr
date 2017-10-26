@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d208b7de815f090e5f61d3d807912c53c4253e31
@@ -54,3 +55,4 @@ ODBC는 외부 조인에 대 한 이스케이프 시퀀스를 사용 합니다. 
  *ODBC esc 종결자* :: =}  
   
  이 문의 부분 사용할 수를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_OJ_CAPABILITIES 정보 유형을 사용 합니다. 외부 조인에 대 한 *검색 조건* 간에 지정 된 조인 조건에만 있어야 합니다. *테이블 이름*합니다.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c3d789288a8963a1f80bc560ab9e80fe5339d29b
@@ -141,3 +142,4 @@ ms.lasthandoff: 08/03/2017
      이벤트 재생을 사용하면 데이터를 캡처한 데이터베이스 환경의 테스트 복사본을 만들고 캡처한 이벤트를 실제 시스템에서 원래 발생했던 대로 반복할 수 있습니다. 이 기능은 Distributed Replay Utility나 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 통해서만 사용할 수 있습니다. 이벤트 재생 속도는 이벤트가 원래 발생한 속도와 같게 하거나 최대한 빠르게 하거나 한 번에 한 단계씩 재생하여 각 이벤트가 발생한 후 시스템을 분석할 수도 있습니다. 같은 이벤트를 테스트 환경에서 분석하여 프로덕션 시스템에 발생할 수 있는 해로운 상황을 미리 방지할 수 있습니다. 자세한 내용은 [추적 재생](../../tools/sql-server-profiler/replay-traces.md)을 참조하세요.  
   
   
+

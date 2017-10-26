@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba3d5db821bbbfa287efb811db0ca616b01df244
@@ -69,3 +70,4 @@ ms.lasthandoff: 09/09/2017
  커서 라이브러리는 커서가 열려 있을 때 APD 또는 카드가 SQL_DESC_BIND_TYPE 필드를 변경 하는 것을 지원 하지 않습니다. 커서를 닫은 후에 하 고 새 커서를 열기 전에 SQL_DESC_BIND_TYPE 필드를 변경할 수 있습니다. 커서 라이브러리는 커서가 열려 있을 때 변경을 지 원하는 유일한 설명자 필드는 SQL_DESC_ARRAY_STATUS_PTR, SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR, 및 SQL_DESC_ROWS_PROCESSED_ PTR입니다.  
   
  커서 라이브러리는 수정 후 카드가의 SQL_DESC_COUNT 필드를 지원 하지 않습니다 **SQLExtendedFetch** 또는 **SQLFetchScroll** 호출한 전에 커서가 닫혔습니다.
+

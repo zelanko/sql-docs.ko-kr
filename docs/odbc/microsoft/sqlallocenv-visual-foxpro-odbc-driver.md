@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ca36f0da35640ca26102f83f33ef93a6dcfae869
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  환경 핸들에 대 한 메모리를 할당 *henv*, 응용 프로그램에서 사용 하기 위해 ODBC 호출 수준 인터페이스를 초기화 합니다.  
   
  자세한 내용은 참조 [SQLAllocEnv](../../odbc/reference/syntax/sqlallocenv-function.md) 에 *ODBC Programmer's Reference*합니다.
+

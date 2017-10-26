@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f021092afb3cf4f404b066a476270feac321869
@@ -68,3 +69,4 @@ ODBC 드라이버는 핵심 및 확장 ODBC 2.5 문법에 최소 ODBC 2.5 문법
 -   [스칼라 함수](../../odbc/microsoft/scalar-functions.md)  
   
 -   [테이블 이름](../../odbc/microsoft/table-names.md)
+

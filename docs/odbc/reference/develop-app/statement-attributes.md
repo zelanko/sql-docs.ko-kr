@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d50c660ed3b405a7ae9fec6b9c66a9b395605025
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 >  ODBC 3에 도입 된 문 특성의 없음. *x* SQL_ATTR_METADATA_ID) (제외 연결 수준에서 설정할 수 있습니다.  
   
  자세한 내용은 참조는 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명 합니다.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78b3b7ac10fae37bb35f88cefaf5983e0df09a4
@@ -35,3 +36,4 @@ WHERE OrderID = ?
  호출할 수 있는 **SQLColumns** OrderID 열에 대 한 합니다.  
   
  사용자가 매개 변수가 있는 문을 입력할 때 응용 프로그램 매개 변수 메타 데이터 확인 쉽게 수 없는 경우에만 표시 합니다. 이 경우 응용 프로그램 호출 **SQLPrepare** 에서 문 준비를 **SQLNumParams** 매개 변수 수를 결정 하 고 **SQLDescribeParam** 설명 하기 위해 각 매개 변수입니다. 그러나가 앞에서 설명한 대로 대부분의 데이터 원본 방법을 제공 하지 않으므로 하므로 매개 변수 메타 데이터를 검색 하도록 드라이버에 대 한 **SQLDescribeParam** 광범위 하 게 지원 되지 않습니다.
+

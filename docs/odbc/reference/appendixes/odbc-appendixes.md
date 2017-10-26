@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3dc97412cf62b1f60b633f301b8adedaefb24ad4
@@ -37,3 +38,4 @@ Microsoft ODBC 인터페이스와 관련 된 기술 세부 정보는 다음 부�
 -   [부록 F: ODBC 커서 라이브러리](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)  
   
 -   [부록 G: 이전 버전과의 호환성을 위한 드라이버 지침](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)
+

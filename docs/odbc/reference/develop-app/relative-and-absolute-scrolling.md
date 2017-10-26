@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cf5155a44827adb972881da17ac2bc05d92a0cd4
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  커서는 결과의 크기를의 행 수 설정, 진단 헤더의 SQL_DIAG_CURSOR_ROW_COUNT 필드로 제공 됩니다. 이 필드의 값은 정의 된 후에 **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResult** 가 호출 되었습니다. 이 개수는 대략적인 개수 또는 드라이버의 기능에 따라 정확한 개수 될 수 있습니다. 드라이버의 지원을 호출 하 여 확인할 수 있습니다 **SQLGetInfo** 커서 특성 정보 유형 및 SQL_CA2_CRC_APPROXIMATE 또는 SQL_CA2_CRC_EXACT 비트 커서의 종류에 반환 되는지 여부를 확인 합니다.  
   
  정확한 행 수는 동적 커서에 대해 지원 되지 않습니다. 다른 유형의 커서에 대 한 드라이버 중 정확한 수 또는 대략적인 행 개수를 하나만 지원할 수 있습니다. 정확한 아니고 대략적인 드라이버가 지 원하는 특정 커서 유형에 대해 행 개수, SQL_DIAG_CURSOR_ROW_COUNT 필드 지금까지 인출 된 행 수를 포함 합니다. 어떤 드라이버 지원에 관계 없이 **SQLFetchScroll** 와 *작업* SQL_FETCH_LAST의 정확한 행 수를 포함 하도록 SQL_DIAG_CURSOR_ROW_COUNT 필드 발생 합니다.
+

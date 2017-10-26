@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 34fe599aee975dc0c01fc1fbc36f1bed6cab6b6b
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_ROW_DELETED|마지막으로 인출 된 이후 행 삭제 되었습니다.|  
 |SQL_ROW_ADDED|의해 삽입 된 행 **SQLBulkOperations**합니다. 행이 다시 인출 됩니다 하거나 새로 고쳐질 **SQLSetPos**, 상태 SQL_ROW_SUCCESS입니다.<br /><br /> 이 값 설정 하지 않으면 **SQLFetch** 또는 **SQLFetchScroll**합니다.|  
 |SQL_ROW_NOROW|행 집합 결과 집합의 끝 겹쳐진 및 행 상태 배열이의이 요소에 상응 하는 행이 반환 되었습니다.|
+

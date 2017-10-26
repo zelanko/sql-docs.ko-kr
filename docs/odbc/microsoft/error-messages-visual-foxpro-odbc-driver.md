@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e561aab3359acb1f236aea38e76da33289e630ef
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/09/2017
  예를 들어, Visual FoxPro ODBC 드라이버를 찾을 수 없는 파일 employee.dbf 하는 경우에 다음과 같은 오류 메시지가 반환할 수 있습니다이:  
   
  "[*Microsoft*] [*ODBC Visual FoxPro 드라이버*] 'employee.dbf' 파일이 존재 하지 않습니다"
+

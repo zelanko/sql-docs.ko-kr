@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d78146d51e6e98e4b21c074838bd4c3dc0aba01d
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 >  이 항목에서는 텍스트 파일 드라이버 관련 정보를 제공 합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하십시오. [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
  이 함수에서는 SQL_COMMIT, 있지만 SQL_ROLLBACK 되지 않습니다.
+

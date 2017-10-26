@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd8c39160ee6cafbbc9f041565a57ea29680bef7
@@ -66,3 +67,4 @@ SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL
   
 > [!NOTE]  
 >  ODBC 1.0에서 매개 변수를 바인딩된 **SQLSetParam**합니다. 드라이버 관리자 간의 호출을 매핑하 **SQLSetParam** 및 **SQLBindParameter**응용 프로그램 및 드라이버에서 사용 하는 ODBC의 버전에 따라 합니다.
+

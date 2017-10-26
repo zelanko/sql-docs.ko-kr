@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41a1e5e42de608f1a67de40d8071af6d3b395f9
@@ -40,3 +41,4 @@ Microsoft ODBC 데스크톱 데이터베이스 드라이버는 다음의 스칼�
 |DAYOFWEEK|MONTH||  
   
  인수 및 반환 값의 스칼라 함수에 대 한 내용은의 부록 F를 참조 하십시오.는 *ODBC 프로그래머 참조 합니다.*
+

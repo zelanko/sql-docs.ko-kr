@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c9392f5ccc17497b6f2c185b22d7cdd9c4873120
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 -   [Visual FoxPro ODBC 드라이버를 사용 하 여 C 또는 c + + 응용 프로그램](../../odbc/microsoft/using-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application.md)  
   
 -   [Microsoft Office에서 Visual FoxPro 데이터에 액세스](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2b630be96f099e1f2553c8d03b9896f32ea3e670
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
  SQL_LOCK_NO_CHANGE 대해서는 *떼*합니다. SQL_LOCK_EXCLUSIVE SQL_LOCK_UNLOCK 지원 되지 않습니다.  
   
  **SQLSetPos** 에서 업데이트할 수 있는 조인을 지원 합니다. (자세한 내용은 참조는 *Microsoft Jet 데이터베이스 엔진 Programmer's Guide*.)
+

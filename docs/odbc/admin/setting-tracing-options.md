@@ -18,6 +18,7 @@ caps.latest.revision: 14
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b11d6337c2e0ca2853838d964842be536454c5f4
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 >  Visual Studio Analyzer에 대 한 지원 (Visual Studio Analyzer 이전 버전의 Visual Studio에만 포함 되었습니다.) Windows 8 부터는 제거 되었습니다. 다른 방법은 문제 해결 메커니즘 BID 추적을 사용 합니다.  
   
  Visual Studio® 분석기 추적 성능 및 ODBC 계층에 대 한 디버깅 정보를 제공합니다. ODBC 구성 요소에 소요 된 시간에 대 한 가능한 그림을 정확한 것으로 표시 하려면 최상위 인터페이스에서 나가는 모든 이벤트 발생 합니다. Visual Studio Analyzer 추적 소스를 설정할 때 등록 하는 이벤트 소스가 필요 합니다. 이러한 종류의 추적에 대 한 자세한 내용은 Visual Studio 설명서를 참조 합니다.
+

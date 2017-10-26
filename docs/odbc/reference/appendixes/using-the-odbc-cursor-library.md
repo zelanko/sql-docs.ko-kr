@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db98c1cee3b31615ee515fd197427724a39c9433
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  바인딩되지 않은 열을 호출 하 여 응용 프로그램에서 데이터를 검색할 **SQLSetPos** 에 원하는 행에 커서를 배치 합니다. 그런 다음 연속 호출 **SQLGetData** 데이터를 검색 합니다.  
   
  데이터 원본에서 가져온 행 수를 확인 하려면 응용 프로그램 호출 **SQLRowCount**합니다.
+

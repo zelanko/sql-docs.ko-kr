@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0f6e7525059640e7ffdadd79ec26a62229eabae9
@@ -36,3 +37,4 @@ CREATE INDEX 문의 구문은 다음과 같습니다.
  Paradox 드라이버를 사용 하는 경우 CREATE INDEX 문은 Paradox 기본 키 파일 및 보조 파일을 만듭니다.  
   
  이 문은 Microsoft Excel 또는 텍스트 드라이버에서 지원 되지 않습니다.
+

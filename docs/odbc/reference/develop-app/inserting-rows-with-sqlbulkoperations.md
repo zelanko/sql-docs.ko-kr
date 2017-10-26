@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd79255e4cda68d1fd4d425544702e589f44336b
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 3.  호출 **SQLBulkOperations** 와 *작업* 인수 SQL_ADD로 설정 합니다.  
   
  후 **SQLBulkOperations** 반환, 현재 행이 변경 되지 않습니다. 책갈피 열 (열 0)에 바인딩된 경우 **SQLBulkOperations** 행 집합 버퍼에 삽입된 된 행의 책갈피는 해당 열에 바인딩된 반환 합니다.
+

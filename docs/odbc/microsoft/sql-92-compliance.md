@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a925896250a307c7d256232377ec6d9325c8db77
@@ -49,3 +50,4 @@ ODBC 데스크톱 데이터베이스 드라이버 및 기본 Microsoft Jet 엔�
   
 > [!NOTE]  
 >  데스크톱 데이터베이스 드라이버를 지 원하는 표준 ANSI 구문을 _ (밑줄) 및 백분율 (%)에 대 한 하지 * (별표) 하 고 있습니까? (물음표)입니다.
+

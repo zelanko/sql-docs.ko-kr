@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 42aedfe48871b04b311fb5de31fb9866e0e2468c
@@ -41,3 +42,4 @@ ODBC에 정의 되어 불연속 *상태* 각 환경, 각 연결 및 각 문에 �
  응용 프로그램의 관점에서 상태 전환을 일반적으로 간단: 손에서 직접 이동 하는 경향이 법적 상태 전환 잘 작성 된 응용 프로그램의 흐름. 상태 전환 드라이버 관리자와 드라이버에 대 한 보다 복잡 한 되므로의 환경, 각 연결과 각 문의 상태를 추적 해야 합니다. 이 작업의 대부분 드라이버 관리자; 이루어진다는 합니다. 드라이버에서 수행 해야 하는 작업의 대부분 보류 중인 결과와 문과 함께 발생 합니다.  
   
  이 설명서의 파트 1 및 2 ("ODBC 소개" 및 "응용 프로그램 및 드라이버 개발") 명시적으로 언급 되어 상태 전환을 하지 않습니다. 대신,이 개체 함수를 호출 해야 하는 순서를 설명 합니다. 예를 들어, "문 실행" 문을 사용 하 여 준비 해야 하에 따르면 **SQLPrepare** 으로 실행 될 수 **SQLExecute**합니다. 상태 및 상태 전이 어떤 변환에는 드라이버 관리자에서 확인 되 고 드라이버에서 확인 해야 합니다를 비롯 한 자세한 내용은 참조 하십시오. [부록 b: ODBC 상태 전환 테이블](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)합니다.
+

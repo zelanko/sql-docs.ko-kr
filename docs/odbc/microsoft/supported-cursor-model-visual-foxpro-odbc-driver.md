@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b80cb7cbbea13dbc6d491d757f28d44d5fda1ea6
@@ -46,3 +47,4 @@ Visual FoxPro ODBC 드라이버는 둘 다 지원 *블록* (*행 집합*) 및 *�
   
 ## <a name="rowset"></a>행 집합(rowset)  
  데이터 원본에서 검색 된 행 수를 나타내는 커서에 저장 된 데이터를 차단 합니다.
+

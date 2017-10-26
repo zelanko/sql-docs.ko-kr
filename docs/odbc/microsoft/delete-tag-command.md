@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c10f0daac2f672b40b3bda050401e9873afe6aa8
@@ -50,3 +51,4 @@ DELETE TAG ALL [OF CDXFileName]
   
 ## <a name="see-also"></a>관련 항목:  
  [INDEX 명령](../../odbc/microsoft/index-command.md)
+

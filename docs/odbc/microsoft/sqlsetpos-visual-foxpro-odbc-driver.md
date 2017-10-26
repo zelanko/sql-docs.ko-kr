@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d255f3c1eac9b46548f10c5c4ef3bf2bc31cafbe
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  행 집합에서 커서 위치를 설정합니다. 사용할 수 있습니다 **SQLSetPos** 와 [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) 행 집합의 특정 행으로 커서를 놓고 후 바인딩되지 않은 열의 행을 검색 합니다.  
   
  자세한 내용은 참조 [SQLSetPos](../../odbc/reference/syntax/sqlsetpos-function.md) 에 *ODBC Programmer's Reference*합니다.
+

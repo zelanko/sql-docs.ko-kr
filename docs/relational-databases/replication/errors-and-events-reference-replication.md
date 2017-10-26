@@ -20,6 +20,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 29667a31a69460d6408a84d21035a1a16cf4dc31
@@ -87,3 +88,4 @@ ms.lasthandoff: 06/22/2017
 |[MSSQL_REPL027183](../../relational-databases/replication/mssql-repl027183.md)|병합 프로세스에서 매개 변수가 있는 행 필터를 사용하여 아티클의 변경 내용을 열거하지 못했습니다. 이 오류가 계속되면 이 프로세스에 대한 쿼리 제한 시간을 늘리고 게시 보존 기간을 줄인 다음 게시된 테이블의 인덱스를 향상시키십시오.|  
   
   
+

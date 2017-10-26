@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ef01b8c5a21d65fb99f5f190fd159d90f3ac78b2
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
  이제 연결 된 Visual FoxPro 테이블에서 데이터를 쿼리 및 업데이트할 Microsoft Access를 사용할 수 있습니다. 연결 된 데이터의 변경 내용은 Visual FoxPro 데이터 소스에 다시 전송 됩니다.  
   
  Visual FoxPro 데이터 원본에서 데이터에 영향을 참조 하십시오. Microsoft Access에서 수행한 변경 하지 않을 경우 [가져오기 Visual FoxPro에 데이터를 Microsoft Access](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)합니다.
+

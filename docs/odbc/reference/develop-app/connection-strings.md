@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8eefb9897492d0b6550b2f3ee80b07119e184b43
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLBrowseConnect**, 연결 문자열은 데이터 소스와 반복적으로 마칩니다.  
   
  **SQLConnect** 연결 문자열을 사용 하지 않습니다; 사용 하 여 **SQLConnect** 는 정확히 세 개의 키워드/값 쌍으로 연결 문자열을 사용 하 여 연결 하는 것과 유사 (데이터 원본 이름 및 필요에 따라 사용자 ID와 암호) .
+

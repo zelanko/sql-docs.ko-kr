@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 79d5ff9920c0340d421d56693470ba4293199fd1
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  와 함께 사용할 [SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md) 문 실행 시 데이터 매개 변수를 지정할 수 있습니다.  
   
  자세한 내용은 참조 [SQLParamData](../../odbc/reference/syntax/sqlparamdata-function.md) 에 *ODBC Programmer's Reference*합니다.
+

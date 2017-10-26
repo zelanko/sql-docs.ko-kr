@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4090e609063b74fdcbef694c400272ee6af090c5
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램에 대 한 환경 핸들을 전달 하는 경우 **SQLEndTran** 하지만 불합격 드라이버 관리자 연결 핸들을 개념적으로 호출지 않습니다 **SQLEndTran** 각 드라이버에 대 한 환경 핸들을 포함 하는 환경에서에 하나 이상의 활성 연결이 합니다. 드라이버에는 다음 환경에서 각 연결에서 트랜잭션을 커밋합니다. 그러나 되기 드라이버 아니고 드라이버 관리자는 환경에 연결에 대해 2 단계 커밋 수행 방법 이 단지 프로그래밍의 편의를 위해 동시에 호출할 **SQLEndTran** 환경에서 모든 연결에 대 한 합니다.  
   
  (A *2 단계 커밋* 분산 되는 여러 데이터 원본 트랜잭션을 커밋하기 위해 일반적으로 사용 됩니다. 첫 번째 단계에서 데이터 원본 트랜잭션의 해당 부분을 커밋할 수 있는지 여부에 대 한 폴링을 수행 합니다. 두 번째 단계에서는 모든 데이터 원본에는 트랜잭션이 커밋 실제로 합니다. 모든 데이터 원본 첫 번째 단계에서는 트랜잭션을 커밋할 수 없습니다 것을 회신 하는 경우 두 번째 단계가 발생 하지 않습니다.)
+

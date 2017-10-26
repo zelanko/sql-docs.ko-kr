@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: df3509e6b13d68858909d0739df1048b79fa8e45
@@ -40,3 +41,4 @@ SQLTables(hstmt2, NULL, 0, NULL, 0, "\"Accounts Payable\"", SQL_NTS, NULL, 0);
  따옴표 붙은 식별자는 동일한 이름의 Oracle에서 ROWID 같은 의사 열에서 true 열 이름을 구분 하는 데 사용 됩니다. "ROWID" 카탈로그 함수의 인수에 전달 되 면이 특성이 있으면 함수는 ROWID 의사 열과 작동 합니다. 의사 열이 없는 경우 함수는 "ROWID" 열과 작동 합니다. ROWID 카탈로그 함수의 인수에 전달 되 면 함수 행 ID 열과 사용 합니다.  
   
  따옴표 붙은 식별자에 대 한 자세한 내용은 참조 [따옴표 붙은 식별자](../../../odbc/reference/develop-app/quoted-identifiers.md)합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 78bdb77c8aa4d9351e040b97d9690bb09374856d
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
 |위치 지정된 delete|SQL_ROW_DELETED|이전 값|이전 값|  
   
  [1] 응용 프로그램 위치 지정된 update 문의 실행 하기 전에 행 집합 버퍼의 값을 업데이트 해야 합니다. 을 위치 지정된 update 문을 실행 한 후 커서 라이브러리는 행 집합 버퍼의 값을 캐시 복사 합니다.
+

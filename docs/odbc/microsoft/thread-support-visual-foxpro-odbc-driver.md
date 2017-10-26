@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd540c727f1e8a77dbb6d8201715c213ff688909
@@ -34,3 +35,4 @@ Visual FoxPro ODBC 드라이버는 스레드로부터 안전 합니다. 환경 �
  드라이버는 별도 스레드를 사용 하 여 점진적 페치를 사용 하는 경우 데이터를 가져옵니다. 데이터 원본에 대해 점진적 페치를 사용 하려면 선택은 **백그라운드에서 데이터를 인출** 확인란은 [ODBC Visual FoxPro 설정 대화 상자](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md) BackgroundFetch 특성 키워드를 사용 하 여 연결에서 하거나 문자열입니다. 다중 스레드 응용 프로그램에서 드라이버를 호출할 때 백그라운드 가져오기를 사용 하지 마십시오. 특성에서 연결 문자열 키워드에 대 한 정보를 참조 하십시오. [연결 문자열을 사용 하 여](../../odbc/microsoft/using-connection-strings.md)합니다.  
   
  스레드에 대 한 자세한 내용은 및 **SQLCancel**, 참조 [SQLCancel](../../odbc/reference/syntax/sqlcancel-function.md) 에 *ODBC Programmer's Reference*합니다.
+

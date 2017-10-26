@@ -22,6 +22,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9e1624febc9b53c654c1b01f5aafb601b97b3cbf
@@ -46,3 +47,4 @@ DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUser
  키워드-값 쌍 **SQLDriverConnect** 특정 구문 규칙을 따라야 합니다. 키워드와 값 포함 되 면 안는 **{} (),? \*=! @** 문자입니다. 값은 **DSN** 키워드는 공백으로 구성할 수 없습니다 및 선행 공백을 포함할 수 없습니다. 키워드 및 데이터 원본 이름 레지스트리 문법 때문에 백슬래시를 포함할 수 없습니다 (\\) 문자. 키워드 / 값 쌍의 등호 엔 공백이 허용 되지 않습니다.  
   
  **FILEDSN** 키워드에 대 한 호출에서 사용할 수 있습니다 **SQLDriverConnect** 데이터 원본 정보를 포함 하는 파일의 이름을 지정 하려면 (참조 [연결 파일을 데이터 원본 사용](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)이 섹션의 뒷부분에 나오는). **SAVEFILE** 에 대 한 호출에서 성공적인 연결 키워드-값 쌍 구성.dsn 파일의 이름을 지정 하려면 키워드를 사용할 수 있습니다 **SQLDriverConnect** 저장 됩니다. 파일 데이터 원본에 대 한 자세한 내용은 참조는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.
+

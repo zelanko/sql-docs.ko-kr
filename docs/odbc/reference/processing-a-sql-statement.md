@@ -21,6 +21,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cdd0b22d4e75e6e665dc07fd8e2be5bb2e178548
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 5.  DBMS는 액세스 계획을 실행 하 여 문을 실행 합니다.  
   
  SQL 문을 처리 하는 데 사용 하는 단계는 데 걸리는 시간 및/또는 필요로 하는 데이터베이스 액세스 입력 다릅니다. SQL 문을 구문 분석 데이터베이스에 대 한 액세스 필요 하지 않으며 매우 신속 하 게 수행할 수 있습니다. 최적화는 반면에 매우 CPU를 많이 사용은 처리 하 고 시스템 카탈로그에 액세스 해야 합니다. 복잡 한 다중 테이블 쿼리를 최적화 프로그램 수천 동일한 쿼리를 수행 하는 다양 한 방법의을 탐색할 수 있습니다. 그러나 비효율적으로 쿼리 실행 비용을 최적화에 소요 된 시간 증가 된 쿼리 실행 속도가 다시 얻으면 보다 더 높은 일반적으로. 이 기능은 반복적인 쿼리를 수행 하려면 동일한 최적화 된 액세스 계획을 반복 해 사용할 수 있으면 훨씬 더 중요 합니다.
+

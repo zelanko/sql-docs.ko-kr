@@ -22,6 +22,7 @@ caps.latest.revision: 42
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5079ed05c18a1a2647ea085e89f26ac7187101e3
@@ -50,3 +51,4 @@ ms.lasthandoff: 06/22/2017
      스크립트 생성 마법사를 사용하여 데이터베이스를 로컬 컴퓨터에서 웹 호스팅 공급자로 전송할 수 있습니다. 자세한 내용은 [스크립트 생성 및 게시 마법사](../../relational-databases/scripting/generate-and-publish-scripts-wizard.md)를 참조하세요.  
   
   
+

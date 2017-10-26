@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f3fa7491ea354cc616d6b58de17e6fa82c785a3a
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |공간 *(개수)*||  
 |부분 문자열 *(string_exp, 시작, 길이)*|SUBSTR *(string_exp, 시작, 길이)*|  
 |UCASE *(string_exp)*|위 *(string_exp)*|
+

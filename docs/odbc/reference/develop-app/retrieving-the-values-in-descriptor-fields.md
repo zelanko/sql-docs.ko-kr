@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f86dd2e2cb625da359c677fedd297b510fee8593
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
 응용 프로그램에서 호출할 수 **SQLGetDescField** 설명자 레코드의 단일 필드를 가져올 수 있습니다. **SQLGetDescField** ODBC에 정의 된 모든 설명자 필드에 시작 및 끝 드라이버에서 정의 된 필드에도 응용 프로그램 액세스를 제공 합니다.  
   
  **SQLGetDescRec** 열 또는 매개 변수 데이터의 저장소 및 데이터 형식에 영향을 주는 여러 설명자 필드의 설정을 검색 하기 위해 호출할 수 있습니다.
+

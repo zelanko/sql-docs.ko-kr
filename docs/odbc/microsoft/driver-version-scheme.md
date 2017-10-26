@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e3a8132d535b764818fb9dcab72b3cba8bb48154
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  와 2.573.2973 릴리스, 명명 규칙을 유발 하 고 일부 혼란이 2.573 2.73 보다 이전 버전은 있지만 빌드 번호의 각 섹션은 개별적으로 고려해 야 합니다. 573 번호 보다 큰 경우 73, 최신 버전 이므로 또한 "2.5" 드라이버의 버전 번호를 나타냅니다.
+

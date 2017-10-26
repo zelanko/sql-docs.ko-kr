@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 55a10004936cc2333eca14fd66123b929e8b9e5c
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  명시적으로 호출 하 여 트랜잭션을 커밋하거나 **SQLEndTran** 또는 자동 커밋 모드에서 작업할으로 설정 하면 일부 데이터 원본에 대 한 연결에 대 한 모든 문이 모든 커서를 닫습니다. 자세한 내용은에서 SQL_CURSOR_COMMIT_BEHAVIOR 및 SQL_CURSOR_ROLLBACK_BEHAVIOR 특성을 참조 하십시오.는 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) 함수 설명 합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f48f9e35793d197efc7a72600a122abc83484ed8
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
 -   [구현 참고 사항](../../../odbc/reference/appendixes/implementation-notes.md)  
   
 -   [ODBC 커서 라이브러리 오류 코드](../../../odbc/reference/appendixes/odbc-cursor-library-error-codes.md)
+

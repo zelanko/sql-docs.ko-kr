@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 19aa94323ee9ad9655e374bd3fe466fcb78f3c48
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetData** 다음 조건이 충족 되는 경우에 호출할 수 있습니다:는 **선택** 문은 결과 집합을 생성, **선택** 문에 조인이 포함 되지 않았습니다는 ** UNION** 절 또는 **GROUP BY** 절이 없습니다; 및 select 목록의 식이나 별칭을 사용 하는 모든 열이 있는 바인딩되지 않은 **SQLBindCol**합니다.  
   
 -   커서 라이브러리는 결과 집합을 실행 하기 전에 나머지 부분을 인출 드라이버 하나의 활성 문만 지 원하는 경우는 **선택** 문과 호출 **SQLGetData**합니다.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9460f4f4bbc522fc421b7e40b261fe17a8410a09
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램 호출 하는 경우 **SQLRowCount** 위치 지정된 update 또는 delete 문이와 관련 된 문을 사용 하 여 커서 라이브러리 문에 의해 영향을 받는 행 수를 반환 합니다.  
   
  응용 프로그램 호출 하는 경우 **SQLRowCount** 후 한 **선택** 문에서 커서 라이브러리는 – 1을 반환 합니다.
+

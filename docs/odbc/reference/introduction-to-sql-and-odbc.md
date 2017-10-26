@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e080a5cb263d0c83b2c77eb483dbc3a032605d18
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 -   [SQL(구조적 쿼리 언어)](../../odbc/reference/structured-query-language-sql.md)  
   
 -   [데이터베이스 액세스 아키텍처](../../odbc/reference/database-access-architecture.md)
+

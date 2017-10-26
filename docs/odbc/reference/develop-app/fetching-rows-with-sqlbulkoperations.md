@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f0e3f46b5dd742ff1e77c87a8486038c41839764
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 4.  호출 **SQLBulkOperations** 와 *작업* 인수 SQL_FETCH_BY_BOOKMARK로 설정 합니다.  
   
  특정 열에 대해 수행할 작업을 방지 하기 위해 행 작업 배열을 사용 하도록 응용 프로그램에 대 한 않아도가 됩니다. 응용 프로그램 하는 행에 대 한 책갈피만 바인딩된 책갈피 배열에 복사 하 여 인출 된 행을 선택 합니다.
+

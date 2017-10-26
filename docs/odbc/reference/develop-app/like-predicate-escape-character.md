@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 132359972cebd3dded36fb911a2ee8e561e5ca64
@@ -42,3 +43,4 @@ SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'
 ```  
   
  확인 하려면 여부는 **같은** 조건자 이스케이프 문자가 데이터 원본에 의해 지원 되는지, 응용 프로그램이 호출 **SQLGetInfo** SQL_LIKE_ESCAPE_CLAUSE 옵션을 사용 합니다.
+

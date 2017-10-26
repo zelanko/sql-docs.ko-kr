@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 09265543685ea8fd573ee20bea90093f920b6e49
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  다음은 DBMS 기반 드라이버의 세 가지 구성입니다. 첫 번째 구성 드라이버와 데이터 원본이 동일한 컴퓨터에 상주합니다. 두 번째, 드라이버 및 데이터 원본의 서로 다른 컴퓨터에 상주합니다. 세 번째, 드라이버 및 데이터 원본에 서로 다른 컴퓨터 있으며 게이트웨이 또 다른 시스템에 있는 해당 사이 배치 합니다.  
   
  ![DBMS에 대 한 세 가지 구성 &#45; 기반된 드라이버](../../odbc/reference/media/pr07.gif "pr07")
+

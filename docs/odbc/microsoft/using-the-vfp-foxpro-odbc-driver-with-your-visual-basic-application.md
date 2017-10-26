@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 37834afc7cc69e0276645d68752e66f68449fbb3
@@ -70,3 +71,4 @@ Microsoft® Visual Basic® 응용 프로그램 Visual FoxPro 데이터 원본에
     ```  
   
 8.  폼을 실행 하 고 고객 id 필드를 통해 Visual FoxPro TasTrade 예제 데이터베이스에서 건너뛸 데이터 컨트롤을 사용 합니다.
+

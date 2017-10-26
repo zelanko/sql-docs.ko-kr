@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6ef94712b2ee34979937968c0f5ef1008af2ebcc
@@ -37,3 +38,4 @@ ODBC의 개발에 질문 중 하나가 표준화를 위한 데이터베이스 �
 -   [표준 데이터베이스 액세스 아키텍처](../../odbc/reference/standard-database-access-architectures.md)  
   
 -   [ODBC 솔루션](../../odbc/reference/the-odbc-solution.md)
+

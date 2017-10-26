@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b424acc8e42f94c23e793a8b811b0c2347a313a1
@@ -49,3 +50,4 @@ ODBC SQL 데이터 형식은 시간에 대 한 식별자:
  [d] C 데이터 형식에 해당 크기입니다.  
   
  결과 문자열의 형식이 시간 SQL 데이터를 C 문자 데이터로 변환 되 면는 "*hh*:*mm*:*ss*" 형식입니다. 이 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6be642b6c64da8193ba97de9df8b21ecb9e5a27c
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  서버 데이터베이스는 Oracle, DB2, 및 SQL Server 등 전체 트랜잭션 지원을 제공 하 고 여러 동시 사용자를 지원 하며 풍부한 sql이 합니다. 훨씬 더 비용이 많이 드는 되며 더 작은 설치 된 자료를 갖게 됩니다. 반면에 소프트웨어 가격 다소 더 작은 잠재적인 시장 오프셋 하는 방법은 더 높은 것으로 경향이 있습니다.  
   
  따라서 대상 Dbms 경우에 따라 응용 프로그램 및 응용 프로그램의 대상 시장에 필요한 기능에 따라 선택할 수 있습니다. 예를 들어 대기업 주문 입력 시스템 적절 한 트랜잭션이 지원 되지 않는 이러한 때문에 데스크톱 데이터베이스 대상화 하지 수도 있습니다. 중소기업을 위해 디자인 된 유사한 시스템 비용 기반으로 대부분의 서버 데이터베이스를 제외 되었을 수 있습니다. 및 일반 응용 프로그램 개발자는 모두 대상으로 하지만 서버 데이터베이스에 대 한 고급 기능을 사용 하지 않도록 수 있습니다.
+

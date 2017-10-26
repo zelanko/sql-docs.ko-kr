@@ -23,6 +23,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3db2f795910c0ee331ad77903b12201f365784e6
@@ -68,3 +69,4 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="using-the-set-ansi-command"></a>SET ANSI 명령을 사용 하 여  
  Visual FoxPro 개발자 인 경우에 기본 설정인 OFF Visual FoxPro에 대 한 달리 드라이버에 대 한 ANSI 설정에 대 한 기본 설정은 ON 인지 알고 있어야 합니다. ANSI 설정에 대 한 설정에 대 한 기본값에는 일반적으로 정확한 비교를 수행 하는 다른 ODBC 데이터 소스와 일관성 있게 동작 하도록 Visual FoxPro 데이터 원본 수 있습니다. 기본 설정은 변경할 수 있습니다. 자세한 내용은 참조 [ANSI 설정](../../odbc/microsoft/set-ansi-command.md)합니다.
+

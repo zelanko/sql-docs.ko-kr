@@ -24,6 +24,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c786c1ce1ea3457da20d4f50c54ea7b797c70c1b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램 및 드라이버를 자주 사용 C 문자열 (null로 끝나는 배열 문자) 문자 데이터를 저장할 수 있지만이 작업을 수행 하는 요구 사항이 있습니다. C에서는 문자 데이터 문자 (null 종료)의 배열 및 길이/표시기 버퍼에 개별적으로 전달 된 바이트 길이으로 처리할 수도 있습니다.  
   
  문자 데이터는 비-null로 끝나는 배열에 저장할 수 있고를 해당 바이트 길이 개별적으로 전달 되므로 문자 데이터에 null 문자를 포함할 수 있습니다. 그러나 ODBC 함수의 동작은 경우 정의 되지 않습니다 이므로 드라이버 관련 여부 드라이버를 정확 하 게 처리이 있습니다. 따라서 상호 운용 가능한 응용 프로그램 이진 데이터가 포함 된 null 문자를 포함할 수 있는 문자 데이터를 항상 처리 해야 합니다.
+

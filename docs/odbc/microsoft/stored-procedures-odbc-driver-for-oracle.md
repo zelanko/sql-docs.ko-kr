@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c52cadf60268dd7272377ad70ace6010381f1c38
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
 -   [저장 프로시저를 사용할 때 권한 취소 및 권한 부여](../../odbc/microsoft/revoking-and-granting-rights-when-using-stored-procedures.md)  
   
 -   [저장 프로시저에서 배열 매개 변수 반환](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md)
+

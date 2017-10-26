@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 601dd559d7bf13d1a12d032d8431a8c3fe0287d4
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 드라이버 Dll 변환을 있습니다.  
   
  자세한 내용은 참조 [SQLGetStmtOption](../../odbc/reference/syntax/sqlgetstmtoption-function.md) 에 *ODBC Programmer's Reference*합니다.
+

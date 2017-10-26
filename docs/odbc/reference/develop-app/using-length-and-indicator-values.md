@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f615aa92da79c391e84539fdf5cf402d523ab690
@@ -75,3 +76,4 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
 -   SQL_DEFAULT_PARAM 합니다. 프로시저 일치 하는 데이터 버퍼에 있는 값 대신 프로시저의 입력된 매개 변수의 기본값을 사용 하는 것입니다.  
   
 -   SQL_COLUMN_IGNORE 합니다. **SQLBulkOperations** 또는 **SQLSetPos** 데이터 버퍼에 값을 무시 하는 것입니다. 호출 하 여 데이터의 행을 업데이트할 때 **SQLBulkOperations** 또는 **SQLSetPos** 열 값이 변경 되지 않습니다. 호출 하 여 데이터의 새 행을 삽입할 때 **SQLBulkOperations**, 열 값은 기본 설정으로 또는 열에 NULL로 기본이 없는 경우.
+

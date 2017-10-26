@@ -18,6 +18,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc949d839cce6ff2c0ede3ec8a88b9384cfe19d9
@@ -47,3 +48,4 @@ ms.lasthandoff: 06/22/2017
 |[TransactionLog 이벤트 클래스](../../relational-databases/event-classes/transactionlog-event-class.md)|트랜잭션이 데이터베이스 트랜잭션 로그에 기록되는 시기를 추적합니다.|  
   
   
+

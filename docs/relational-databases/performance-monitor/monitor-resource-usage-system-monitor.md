@@ -29,6 +29,7 @@ caps.latest.revision: 29
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b7236d0073d38537724d54534729a2f380b892dd
@@ -93,3 +94,4 @@ ms.lasthandoff: 06/22/2017
 |시스템 모니터에서 메모리 내 OLTP 작업을 모니터링하는 데 사용하는 개체 및 카운터를 나열합니다.|[SQL Server XTP&#40;메모리 내 OLTP&#41; 성능 카운터](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)|  
   
   
+

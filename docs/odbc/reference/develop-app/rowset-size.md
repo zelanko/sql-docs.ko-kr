@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b7d3abee6c42fe95205bbb74edc671d8dc02bf87
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLSetPos** 에 대 한 이전 호출을 기준으로 적용 되는 행 집합 크기를 사용 하 여 **SQLFetch** 또는 **SQLFetchScroll**때문에, **SQLSetPos** 에서 작동 하는 이미 설정 된 행 집합입니다. **SQLSetPos** 도 선택 됩니다 새 행 집합 크기가 경우 **SQLBulkOperations** 를 호출한 후 행 집합 크기가 변경 되었습니다.  
   
 -   **SQLBulkOperations** 사용 하 여 행 집합 크기가 적용 호출의 시간에 관계 없이 모든 인출 된 행 집합의 테이블에 대 한 작업을 수행 하기 때문에 있습니다.
+

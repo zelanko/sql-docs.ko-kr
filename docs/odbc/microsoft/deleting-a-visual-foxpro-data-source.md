@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 409f171f2e747123ee1f47e3e32b6e13346110b6
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 4.  제거를 클릭 합니다.  
   
 5.  ODBC 데이터 원본 관리자 대화 상자를 닫고 변경 내용을 저장 하는 확인을 클릭 합니다.
+

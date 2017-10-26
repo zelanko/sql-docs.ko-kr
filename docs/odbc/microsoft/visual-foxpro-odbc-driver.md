@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dab3cacffff383170a6403065c555f5ef105f672
@@ -49,3 +50,4 @@ Microsoft Visual FoxPro에 데이터베이스 생성 및 응용 프로그램 개
 |지원 되는 하드웨어 및 소프트웨어의 목록을 보려면|[시스템 요구 사항](../../odbc/microsoft/system-requirements-visual-foxpro-odbc-driver.md)|  
   
  다운로드 하 고 Visual FoxPro ODBC 드라이버를 설치 하는 방법에 대 한 정보를 참조 하십시오. [Visual FoxPro ODBC 드라이버](http://go.microsoft.com/fwlink/?LinkId=121318) 에서 MSDN 다운로드 합니다.
+

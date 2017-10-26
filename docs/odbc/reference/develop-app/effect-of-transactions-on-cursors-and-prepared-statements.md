@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2533778f9b0e837ce59850d4f70a3c4545f8be60
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램, 특히 화면 기반 응용 프로그램 사용자는 결과 집합 및 업데이트를 스크롤할 또는 행을 삭제 합니다.이 문제를 해결 하는 코드에 주의 해야 합니다.  
   
  데이터 소스는 트랜잭션이 커밋되거나 롤백될 때 동작 하는 방식을 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_CURSOR_COMMIT_BEHAVIOR 및 SQL_CURSOR_ROLLBACK_BEHAVIOR 옵션입니다.
+

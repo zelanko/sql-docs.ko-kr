@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a5e2fb7cf9f54177ce357058e51e541b6a442379
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  파이프 문자 (&#124;) 이름을 따옴표로 백 아닌지 여부를 열 이름에 사용할 수 없습니다.  
   
  텍스트 드라이버를 사용 하면 드라이버는 열 이름을 지정 하지 않으면 기본 이름이 제공 합니다. 예를 들어 첫 번째 열 F1, F2, 두 번째 열 등에 드라이버를 호출합니다.
+

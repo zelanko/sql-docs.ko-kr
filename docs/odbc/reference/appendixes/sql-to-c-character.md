@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3ba39caca1a4ad37437f35918545ed54a5dd2266
@@ -70,3 +71,4 @@ _C_TYPE_TIMESTAMP|데이터 값은 올바른 *타임 스탬프 값 또는 시간
  [g] 타임 스탬프 구조의 날짜 필드를 현재 날짜로 설정 됩니다.  
   
  숫자 문자 SQL 데이터를 변환, 날짜, 시간, 타임 스탬프 또는 데이터 간격 C 선행 공백과 후행 공백은 무시 됩니다.
+

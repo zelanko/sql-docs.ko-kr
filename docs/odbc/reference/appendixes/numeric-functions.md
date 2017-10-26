@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f41ae1e8ad665da3db472941ee47afebefa63dd3
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|제곱근을 반환 *float_exp*합니다.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|탄젠트를 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
 |**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 잘림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124;* integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|
+

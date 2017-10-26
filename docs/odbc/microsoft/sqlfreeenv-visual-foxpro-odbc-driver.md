@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b36bd3b9743c8cdd351ac3c7ed6e2f0afafd7d7e
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 드라이버를 닫고 드라이버와 관련 된 모든 메모리를 해제 합니다.  
   
  자세한 내용은 참조 [SQLFreeEnv](../../odbc/reference/syntax/sqlfreeenv-function.md) 에 *ODBC Programmer's Reference*합니다.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 78b8df4b3bc143c06b2876856dcbd5f26711a3d7
@@ -32,3 +33,4 @@ ms.lasthandoff: 06/22/2017
  시스템 오류 메시지, 가능한 원인, 수행할 수 있는 동작에 대해 설명합니다.  
   
   
+

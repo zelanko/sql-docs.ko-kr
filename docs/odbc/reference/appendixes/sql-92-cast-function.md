@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8389ff0812c91ca5a35007a21d70a2a1ca0baee8
@@ -40,3 +41,4 @@ CAST (value-exp AS data-type) /* SQL92
 1.  호출 **SQLGetInfo** SQL_SQL_CONFORMANCE 정보 유형을 사용 합니다. 정보 유형에 대 한 반환 값은 SQL_SC_FIPS127_2_TRANSITIONAL, SQL_SC_SQL92_INTERMEDIATE, 또는 SQL_SC_SQL92_FULL, 하는 경우는 **캐스트** 함수는 지원 합니다.  
   
 2.  SQL_SQL_CONFORMANCE 정보 형식의 반환 값 SQL_SC_ENTRY_LEVEL 또는 0 이면 호출 **SQLGetInfo** SQL_SQL92_VALUE_EXPRESSIONS 정보 유형을 사용 합니다. SQL_SVE_CAST 비트가 설정 되 고 **캐스트** 함수는 지원 합니다.
+

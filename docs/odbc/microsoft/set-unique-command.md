@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bed7fb14102c754d16409259fe7e1f5177652d05
@@ -42,3 +43,4 @@ SET UNIQUE ON | OFF
   
 ## <a name="remarks"></a>주의  
  인덱스 파일 인덱스 다시 작성을 발급 하는 경우 고유 설정 설정을 유지 합니다. 자세한 내용은 참조 [인덱스](../../odbc/microsoft/index-command.md)합니다.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2af859a38f288507ad87564cfbbfffa2b8f6ecf8
@@ -93,3 +94,4 @@ SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_
  응용 프로그램이 호출을 드라이버 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스를 지원 하는지 여부를 확인 하려면 **SQLGetTypeInfo**합니다. 데이터 원본에서 날짜/시간 간격 데이터 형식의 지 원하는 경우 또한 해당 이스케이프 시퀀스를 지원 해야 합니다.  
   
  데이터 원본에서 날짜/시간 간격 리터럴에 대 한 ODBC 이스케이프 시퀀스는 ANSI sql-92 사양에 정의 된 날짜/시간 리터럴도 지원할 수 있습니다. 데이터 소스에 ANSI 리터럴을 지원 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_ANSI_SQL_DATETIME_LITERALS 옵션을 사용 합니다.
+

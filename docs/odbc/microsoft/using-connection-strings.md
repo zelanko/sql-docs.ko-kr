@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f95e0a2ed1b93e89254e5e357cc3889dc5817554
@@ -37,3 +38,4 @@ DSN=TasTrade;Exclusive=Yes
  특성 키워드 및 연결 문자열에 포함할 수 값의 목록에 대 한 참조 [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)합니다.  
   
  연결 문자열 구문 한 전체 설명은 참조 하십시오. [SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md) 에 *ODBC Programmer's Reference*합니다.
+

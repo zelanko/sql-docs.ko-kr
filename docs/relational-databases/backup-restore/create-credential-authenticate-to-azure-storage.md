@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3bf85ebdf78e42466474e6c68a43219fbb546bd1
@@ -48,3 +49,4 @@ ms.lasthandoff: 06/22/2017
  백업 파일을 저장하는 데 사용할 저장소 계정을 선택합니다.  
   
   
+

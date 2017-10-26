@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c272637e15d95a09862170ec871274adb624c271
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 |209|문 특성 SQL_ATTR_CONCURRENCY를 SQL_CONCUR_READ_ONLY 이외의 값이 하나 이상 설정.|  
 |210|로그인 요청 시간 초과 및 SQL 쿼리 (SQL_ATTR_LOGIN_TIMEOUT 및 SQL_ATTR_QUERY_TIMEOUT) 수 있습니다.|  
 |211|기본 격리 수준 변경 하는 기능 "직렬화" 수준의 격리를 사용 하 여 트랜잭션을 실행 하는 기능입니다.|
+

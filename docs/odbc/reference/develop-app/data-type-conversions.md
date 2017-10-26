@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2369b39ff415a5387205ce62811594fe08a9f324
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  ODBC는 각 SQL 및 C 데이터 형식 간에 데이터를 변환 하는 방법을 정의 합니다. 기본적으로, ODBC는 문자를 정수 및 부동 소수점, 정수 등의 모든 적절 한 변환을 지원 하 고 누계 float 같은 기본 변환을 지원 하지 않습니다. 드라이버가 지 원하는 각 SQL 데이터 형식에 대 한 모든 변환을 지 원하는 데 필요 합니다. SQL 및 C 데이터 형식 간의 변환에 대 한 전체 목록은 참조 하십시오. [SQL에서 C 데이터 형식 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 및 [C에서 SQL 데이터 형식으로 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) 부록 d: 데이터 형식에서입니다.  
   
  또한 ODBC SQL 데이터 형식에서 데이터 변환에 대 한 스칼라 함수를 정의 합니다. **변환** 스칼라 함수는 드라이버 기본 스칼라 함수 또는 변환을 수행 하기 위해 데이터 원본에 정의 된 함수에 의해 매핑됩니다. 이 함수는 DBMS 관련 함수에 매핑되므로 ODBC 어떤 변환이 지원 되어야 합니다 또는 이러한 변환이 작동 하는 방법을 정의 하지 않습니다. 응용 프로그램은 어떤 변환이 SQL_CONVERT 옵션을 통해 특정 드라이버 및 데이터 원본에 의해 지원 됩니다 검색 **SQLGetInfo**합니다. 에 대 한 자세한 내용은 **변환** 스칼라 함수 참조 [odbc에서 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) 및 [명시적 데이터 형식 변환 함수](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)합니다.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7233ad9ab2915c174d545cb08d4abcdeedb99d7b
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   호출 **SQLSetPos** 행 집합의 행에 위치를 지정 하 여 호출 **SQLGetData** 0 열에 대 한 합니다. 호출 하는 기능 항상 지원 해야 하는 드라이버에서 책갈피를 지 원하는 경우 **SQLGetData** 0, 응용 프로그램 호출을 허용 하지 않는 경우에 열에 대 한 **SQLGetData** 마지막 바인딩 하기 전에 다른 열에 대 한 열입니다.  
   
 -   호출 **SQLBulkOperations** 와 *작업* SQL_ADD로 설정 하는 인수 및 바인딩된 열 0입니다. 커서 행을 삽입 하 고 바운드 버퍼의 행에 대 한 책갈피를 반환 합니다.
+

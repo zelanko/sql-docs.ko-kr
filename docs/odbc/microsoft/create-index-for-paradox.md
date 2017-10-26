@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 058677892aa1a3266b1cd93a5ff015ed0a14bcb9
@@ -77,3 +78,4 @@ CREATE INDEX PartNum
   
 > [!NOTE]  
 >  Borland 데이터베이스 엔진만 읽기를 구현 하지 않고 Paradox 드라이버를 사용 하 고 추가 문은 사용할 수 있습니다.
+

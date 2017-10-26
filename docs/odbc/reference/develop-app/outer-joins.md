@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aff4448df5ec42e29da6c49fe0ace7f0334a1174
@@ -50,3 +51,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
 ```  
   
  데이터 소스와 드라이버가 지 원하는 외부 조인의 종류를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** 는 SQL_OJ_CAPABILITIES와 플래그를 지정 합니다. 지원 될 수 있는 외부 조인 유형에 왼쪽, 오른쪽, 전체 또는 중첩 된 외부 조인; 외부 조인에 열 이름에 **ON** 절에서 각 테이블 이름와 순서가 동일 하지 않은 **OUTER JOIN** 절; 외부 조인이; 및 외부 조인을 사용 하 여 함께 내부 조인 모든 ODBC 비교 연산자입니다. SQL_OJ_CAPABILITIES 정보 유형 0을 반환 하면 외부 조인 절 없이 사용할 수 있습니다.
+

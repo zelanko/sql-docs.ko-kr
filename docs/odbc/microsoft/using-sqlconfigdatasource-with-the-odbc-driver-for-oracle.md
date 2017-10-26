@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: aa32db53ef43da7f01200dcf057f9855a4f5707e
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 |TranslationOption|33|""|A/N|번역 옵션입니다.|  
 |TxnCap|2|""|A/N|트랜잭션 지원 합니다. 0 인 경우 드라이버는 트랜잭션을 지원 하지 않습니다 보고 합니다. 1 인 경우 드라이버는 트랜잭션을 수행할 수 있다는 것을 보고 합니다.|  
 |UID|30|""|A/N|사용자 이름입니다.|
+

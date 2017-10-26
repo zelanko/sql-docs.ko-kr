@@ -20,6 +20,7 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 12b8b87460c4cb21776780af955eeecad3b5cda3
@@ -137,3 +138,4 @@ ms.lasthandoff: 07/31/2017
  이 예제 시나리오는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대해 다운로드할 수 있는 AdventureWorks 응용 프로그램 예제에서 구현되었습니다.  
   
   
+

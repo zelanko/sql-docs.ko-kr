@@ -26,6 +26,7 @@ caps.latest.revision: 20
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 53ee7928baad42733f9b9cfaaf699153b993a287
@@ -60,3 +61,4 @@ ms.lasthandoff: 06/22/2017
  많은 클라이언트 요청이 처리되는 경우 사용률이 100%에 가까우면 프로세스가 큐에 대기하고 프로세서 시간을 기다리고 있으며 병목 상태가 발생할 수 있음을 나타냅니다. 빠른 프로세서를 추가하여 문제를 해결할 수 있습니다.  
   
   
+

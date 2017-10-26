@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ff92186a7523904cf9db8f1b5a8ac1814384354
@@ -31,3 +32,4 @@ ODBC 응용 프로그램에서는 SQL 문을 실행 하 여 데이터베이스�
 -   [SQL 문의 상호 운용성](../../../odbc/reference/develop-app/interoperability-of-sql-statements.md)  
   
 -   [ODBC의 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 01686e05dd70c92533ad2d80adc04ea7c17b857e
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="fixed-width-text-file"></a>고정 너비 텍스트 파일
 텍스트 드라이버를 사용 하는 경우 고정 너비 텍스트 파일의 마지막 열에는 가변 길이 수 있습니다.
+

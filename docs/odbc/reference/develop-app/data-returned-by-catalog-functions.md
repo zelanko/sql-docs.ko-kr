@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 39d795314d2333c5d33cb55057b68e652082ae89
@@ -42,3 +43,4 @@ SELECT "Customer Name" FROM "Accounts Payable"
  카탈로그 함수 연결할 사용자 이름 및 암호를 기반 하 고 반환 되는 사용자가 권한 있는 데이터만 있는 SQL 유사 권한 부여 모델을 기반으로 합니다. 이 모델에 맞지 않는는 개별 파일의 암호 보호는 드라이버 정의입니다.  
   
  카탈로그 함수에서 반환 된 결과 집합 업데이트 거의 될 수 있으며 이러한 결과 집합의 데이터를 변경 하 여 데이터베이스의 구조를 변경 하려면 응용 프로그램에 필요 하지 않습니다.
+

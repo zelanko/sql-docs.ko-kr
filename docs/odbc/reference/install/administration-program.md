@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 476c4710a4265214235bdd7b80a330fad5b37f34
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 -   **추가, 수정 또는 데이터 원본을 자동으로 삭제 합니다.** 관리 프로그램 호출 **SQLConfigDataSource** 설치 DLL 및 전달에는 null 창 처리할 것, 추가, 수정 또는 삭제 하는 데이터 원본의 이름과 레지스트리에 대 한 값의 목록입니다. 설치 프로그램 DLL 호출 하 여 **ConfigDSN** 드라이버 설치 DLL 실제로 추가할 수정 또는 데이터 원본을 삭제 합니다.  
   
 -   **추가, 수정 또는 기본 데이터 원본을 삭제 합니다.** 기본 데이터 원본은 해당 이름이 기본 제외 하 고 다른 데이터 원본으로 같습니다. 추가, 수정 하거나 동일한 방식으로 다른 데이터 소스에서 삭제 합니다.
+

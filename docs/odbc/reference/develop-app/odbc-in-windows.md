@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ccc0e89f3e60b8a9ecc3def91c983bd9d9083c11
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
 -   [ODBC 함수에 전달 CString 개체](../../../odbc/reference/develop-app/cstring-class.md)  
   
 -   [스레드 생성 및 종료](../../../odbc/reference/develop-app/creating-and-terminating-threads.md)
+

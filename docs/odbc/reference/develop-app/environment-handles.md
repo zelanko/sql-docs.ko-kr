@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1f563e798c985ebb8ea8ab7925ed39f3d154d144
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
  환경 핸들 ODBC 응용 프로그램에서 자주 사용 되지 않습니다. 에 대 한 호출에서 사용 하는 항상 **SQLDataSources** 및 **SQLDrivers** 에 대 한 호출에 자주 사용 하 고 **SQLAllocHandle**, **SQLEndTran**, **SQLFreeHandle**, **SQLGetDiagField**, 및 **SQLGetDiagRec**합니다.  
   
  각 ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드 조각에는 하나 이상의 환경 핸들을 포함 합니다. 예를 들어 드라이버 관리자 연결 된 각 응용 프로그램에 대 한 별도 환경 핸들을 유지 합니다. 사용 하 여 환경 핸들 할당은 **SQLAllocHandle** 로 해제 및 **SQLFreeHandle**합니다.
+

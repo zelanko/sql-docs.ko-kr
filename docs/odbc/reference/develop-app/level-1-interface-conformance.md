@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c1f9e266e4379b2d1cfc9ee771ac49694cd3c58b
@@ -39,3 +40,4 @@ OLTP 관계형 DBMS에서 일반적으로 사용할 수 있는 트랜잭션과 �
 |107|SQL 문 대신 ODBC 함수를 사용 하 여 특정 데이터베이스 작업을 수행: **SQLSetPos** SQL_POSITION과 SQL_REFRESH 합니다.|  
 |108|호출 하 여 일괄 처리 및 저장된 프로시저에서 생성 된 여러 결과 집합의 내용에 액세스할 **SQLMoreResults**합니다.|  
 |109|완벽 한 원자성 및 SQL_ROLLBACK에서 지정 하는 기능 사용 하 여 몇 가지 ODBC 함수에 걸쳐 있는 트랜잭션을 구분 **SQLEndTran**합니다.|
+

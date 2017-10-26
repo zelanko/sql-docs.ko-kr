@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a551d51a434d17162a5f5bcf0091e593d25f283a
@@ -54,3 +55,4 @@ _C_TYPE_TIMESTAMP|타임 스탬프의 소수 부분 잘리지 [a]<br /><br /> �
  [f] C 데이터 형식에 해당 크기입니다.  
   
  결과 문자열에는 타임 스탬프 SQL 데이터를 C 문자 데이터로 변환 되 면는 "*yyyy*-*mm*-*dd* *hh *:*mm*:*ss*[.* f... *] "형식, 소수 자릿수 초의 최대 9 자리 숫자를 사용할 수 있는 위치입니다. 이 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다. (소수점 및 소수 자릿수 초를 제외한 전체 형식을 사용 되어야 합니다, 타임 스탬프 SQL 데이터 형식의 전체 자릿수에 관계 없이.)
+

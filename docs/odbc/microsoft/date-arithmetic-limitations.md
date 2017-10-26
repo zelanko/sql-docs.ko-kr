@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cc77ced44da302f8cb80e8e6d415664ecdb2ba09
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="date-arithmetic-limitations"></a>날짜 산술 제한 사항
 날짜 계산 뺀 날짜 데이터 형식에서 날짜 데이터 형식에 대 한 지원 되지 않습니다.
+

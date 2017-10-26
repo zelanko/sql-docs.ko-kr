@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f907cf8700a683988277e84b93f9fc3bdae11317
@@ -67,3 +68,4 @@ SQLExecDirect(hstmt, "{call PARTS_IN_ORDERS(?)}", SQL_NTS);
  응용 프로그램을 데이터 소스 프로시저를 지원 하는지 여부를 확인 하려면 호출 **SQLGetInfo** SQL_PROCEDURES 옵션을 사용 합니다.  
   
  프로시저에 대 한 자세한 내용은 참조 [프로시저](../../../odbc/reference/develop-app/procedures-odbc.md)합니다.
+

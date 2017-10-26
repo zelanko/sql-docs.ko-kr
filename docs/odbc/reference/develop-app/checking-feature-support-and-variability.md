@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5528f451adf12d12fe5cdb1c51f5c5d0053c9145
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램은 문 또는 연결 특성 호출 하 여 사용할 수 있는지 여부를 결정할 수 **SQLSetStmtAttr** 또는 **SQLSetConnectAttr** 해당 특성입니다. 함수는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하는 경우 특성은 지원 됩니다. SQLSTATE HYC00 및 SQL_ERROR를 반환 하는 경우 (선택적 기능이 구현 되지 않았습니다)는 특성이 지원 되지 않습니다.  
   
  응용 프로그램 제한 된 양의 정보를 호출 하 여 드라이버에 연결 하기 전에 확인할 수도 **SQLDrivers**합니다.
+

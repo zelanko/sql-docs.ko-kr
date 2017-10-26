@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 085ab9bd928d7a25bd5d9e1d75f3355bdad0fd8e
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 8.  사용을 클릭 합니다.  
   
  이제 쿼리 열기에 테이블을 추가할 수 있습니다. 쿼리를 작성 하는 방법에 대 한 자세한 내용은 참조 [Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져오기](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)합니다.
+

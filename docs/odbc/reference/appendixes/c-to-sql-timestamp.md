@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bbb6396dc1a49d984834ec6f105b3a9ba42d95c4
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
  결과 문자 데이터에는 C 타임 스탬프 데이터를 문자 SQL 데이터로 변환 되 면는 "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.* f... *] "형식입니다.  
   
  드라이버 타임 스탬프 C 데이터 형식에서 데이터를 변환할 때 길이/표시기 값을 무시 하 고 데이터 버퍼의 크기 C 타임 스탬프 데이터 형식의 크기 있다고 가정 합니다. 에 길이/표시기 값이 전달 되는 *StrLen_or_Ind* 인수 **SQLPutData** 및 지정 된 버퍼는 *StrLen_or_IndPtr* 인수**SQLBindParameter**합니다. 지정 된 데이터 버퍼는 *DataPtr* 인수에 **SQLPutData** 및 *ParameterValuePtr* 인수에 **SQLBindParameter**.
+

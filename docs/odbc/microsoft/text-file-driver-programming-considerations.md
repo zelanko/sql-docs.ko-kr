@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad131a8e2b0ea198f8e9623885a1d3b31812b89c
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [텍스트 파일에 대한 SQLGetInfo 반환 값](../../odbc/microsoft/sqlgetinfo-returned-values-for-text-files.md)  
   
 -   [기타 텍스트 파일 드라이버 프로그래밍 세부 정보](../../odbc/microsoft/other-text-file-driver-programming-details.md)
+

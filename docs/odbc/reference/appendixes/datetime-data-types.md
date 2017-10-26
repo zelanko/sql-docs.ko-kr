@@ -25,6 +25,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 92ab5f52282fddf89c48bef73fa7817684ae3496
@@ -44,3 +45,4 @@ ODBC 3에서*.x*, 날짜에 대 한 식별자, SQL_DATE, SQL_TIME, 및 SQL_TIMES
  모든 데이터 형식에 대 한 호출에서 요청 된 경우 **SQLGetTypeInfo**, ODBC 3에 정의 된 함수에서 반환 된 결과 집합 통해 SQL_TYPE_DATE, SQL_TYPE_TIME 및 SQL_TYPE_TIMESTAMP를 포함 됩니다*.x*, 및의 경우 SQL_DATE, SQL_TIME, 및 SQL_TIMESTAMP ODBC 2에 정의 된 대로 합니다. *x*합니다.  
   
  방식 때문에 ODBC 3*.x* 드라이버 관리자가 수행 하는 날짜, 시간 및 타임 스탬프 데이터 형식 매핑, ODBC 3*.x* 드라이버 인식 필요 **#defines** 91의 92, 및 에 입력 된 날짜, 시간 및 타임 스탬프 C 데이터 형식에 대 한 93는 *TargetType* 의 인수 **SQLBindCol** 및 **SQLGetData** 또는 * ValueType* 의 인수 **SQLBindParameter**, 인식 필요 하 고 **#defines** 91의 92, 및 93 날짜, 시간, 및는 에입력된타임스탬프SQL데이터형식을*ParameterType* 의 인수 **SQLBindParameter** 또는 *DataType* 의 인수 **SQLGetTypeInfo**합니다. 자세한 내용은 참조 [Datetime 데이터 형식 변경 내용은](../../../odbc/reference/develop-app/datetime-data-type-changes.md)합니다.
+

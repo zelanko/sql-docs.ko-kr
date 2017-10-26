@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b49962bfce3474269b4d9a91dee74212b0d02234
@@ -46,3 +47,4 @@ Save-SqlMigrationReport [ -MigrationType OLTP ] [ -Server server -Database datab
  -FolderPath 매개 변수에 지정된 폴더에서 Tables 및 Stored Procedures의 두 폴더 이름이 생성됩니다. 대상 개체가 테이블이면 해당 보고서는 Tables 폴더에 저장됩니다. 그렇지 않으면 보고서가 Stored Procedures 폴더에 저장됩니다.  
   
   
+

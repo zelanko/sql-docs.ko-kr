@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 64a772d8a04015060aa717e4153bf6f36e5b74de
@@ -55,3 +56,4 @@ Odbc에서 숫자 리터럴을에 다음 구문이 사용 됩니다.
  *자리* :: 1 &#124; 2 &#124; = 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
  *기간* :: = 합니다.
+

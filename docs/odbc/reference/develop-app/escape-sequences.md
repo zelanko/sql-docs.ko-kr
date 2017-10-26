@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1c648549b41ff607ad34175475c6a2b75603625f
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  드라이버가 날짜, 시간, 타임 스탬프 또는 날짜/시간 간격 리터럴에 대 한 이스케이프 시퀀스를 지 원하는 경우를 확인 하려면 응용 프로그램이 호출 **SQLGetTypeInfo**합니다. 데이터 원본에서 날짜, 시간, 타임 스탬프 또는 datetime 간격 데이터 형식의 지 원하는 경우 또한 해당 이스케이프 시퀀스를 지원 해야 합니다. 다른 이스케이프 시퀀스는 지원 여부를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo**합니다.  
   
  자세한 내용은 참조 [odbc에서 이스케이프 시퀀스](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)이 섹션의 뒷부분에 나오는 합니다.
+

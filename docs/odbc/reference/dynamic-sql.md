@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4c24d1dbab68a1e47b5dfe7b48dc3df86fb9f692
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 3.  프로그램 문을 사용 하 여 EXECUTE 반복 해 서 동적 문이 실행 될 때마다 다른 매개 변수 값을 제공 합니다.  
   
  준비 된 실행이 여전히 정적 SQL와 동일 합니다. 정적 SQL SQL 문 처리의 처음 네 단계 수행 컴파일 타임에 됩니다. 준비 된 실행에서 아직 수행 런타임 시 이러한 단계 하지만; 한 번만 수행 됩니다. 실행 계획의 EXECUTE를 호출할 때에 수행이 됩니다. 이 동적 SQL의 아키텍처에 내재 된 성능 단점 중 일부를 제거할 수 있습니다. 다음 그림은 정적 SQL, 동적 SQL로 즉시 실행 및 동적 SQL로 준비 된 실행 간의 차이점을 보여 줍니다.
+

@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322978a4006460fc61a438c6aff5ed8eca0c6c93
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  때 **SQLFreeHandle** 호출 되는 드라이버 릴리스 구조는 환경에 대 한 정보를 저장 하는 데 사용 합니다. **SQLFreeHandle** 해당 환경 핸들의 모든 연결 핸들 해제 된 후까지 환경 핸들에 대해 호출할 수 없습니다.  
   
  환경 핸들에 대 한 자세한 내용은 참조 [환경 처리](../../../odbc/reference/develop-app/environment-handles.md)합니다.
+

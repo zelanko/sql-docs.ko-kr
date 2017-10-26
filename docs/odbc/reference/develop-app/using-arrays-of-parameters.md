@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a7c6a6ee4f066925d2a7ec46a2186134d75cb7e4
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/09/2017
 -   드라이버는 값을 해석 하지 않으므로 때문에 *ParameterValuePtr* 의 인수 **SQLBindParameter** 실행 시 데이터 매개 변수를 응용 프로그램 하 여 배열에 대 한 포인터를 제공 하는 경우에 대 한 ** SQLParamData** 추출 및 응용 프로그램에이 배열의 요소를 반환 하지 않습니다. 대신, 응용 프로그램 스칼라 값이 제공 하는 반환 합니다. 반환한 값 즉 **SQLParamData** 은 매개 변수를 지정 하는 데 충분 하지 응용 프로그램 데이터를 보내는 응용 프로그램도 현재 행 번호를 고려해 야 합니다.  
   
      실행 시 데이터 매개 변수가 매개 변수 배열의 요소 중 일부에 응용 프로그램 해야 통과 경우 배열 주소 *ParameterValuePtr* 모든 매개 변수에 대해 요소가 들어 있는입니다. 실행 시 데이터 매개 변수가 아닌 매개 변수에 대 한이 배열은 일반적으로 해석 됩니다. 실행 시 데이터 매개 변수 값에 대 한는 **SQLParamData** 를 제공 합니다. 일반적으로 사용할 수 있는이 경우에는 드라이버를 요청 하는 데이터를 확인, 응용 프로그램은 항상 배열의 주소입니다.
+

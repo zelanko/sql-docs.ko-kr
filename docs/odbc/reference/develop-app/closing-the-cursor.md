@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 05cf8dde95111a9f5b530b37fd9a60356f4b77bf
@@ -37,3 +38,4 @@ SQLCloseCursor(hstmt);
 >  커서 닫기, 응용 프로그램 호출 해야 **SQLCloseCursor**이 아니라 **SQLCancel**합니다.  
   
  커서가 열린 상태로 남게 명시적으로 닫았는지 될 때까지 제외는 트랜잭션이 커밋되거나 롤백될 때이 경우 일부 데이터 원본의 커서를 닫습니다. 특히 결과의 끝에 도달한 설정 때 **SQLFetch** sql_no_data가 반환, 커서를 닫지 않습니다. 빈 결과 집합 (결과 집합 생성 하는 문이 성공적으로 실행 되지만 반환 된 행이 없는 경우)에 커서를 명시적으로 닫아야 합니다.
+

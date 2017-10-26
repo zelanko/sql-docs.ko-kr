@@ -20,6 +20,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 068750e91f59a20976113277ad8871723d045acd
@@ -83,3 +84,4 @@ ODBC 사양 आ स ा 호출 수준 인터페이스 (CLI)으로 처리 하는 
 -   저장된 프로시저 이스케이프 시퀀스를 포함 하 여 출력 매개 변수 바인딩 메커니즘 지원과 카탈로그 함수  
   
 -   연결 특성 및 특성 탐색에 대 한 지원을 비롯 하 여 연결 개선 사항
+

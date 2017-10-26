@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c5845411fd329869cc49a5f4caaa5be987135841
@@ -29,3 +30,4 @@ ms.lasthandoff: 09/09/2017
 |태스크|함수 이름|용도|  
 |----------|-------------------|-------------|  
 |데이터 원본 및 변환기 설정|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)<br /><br /> [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)<br /><br /> [ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|설치 하거나 드라이버를 제거 합니다.<br /><br /> 추가, 수정 하거나, 데이터 소스를 삭제 합니다.<br /><br /> 기본 변환 옵션을 반환합니다.|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3fb62d7c916584da7411f398f66a2acf134bfa24
@@ -56,3 +57,4 @@ INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)
 ```  
   
  데이터 원본에 의해 지원 되는 스칼라 함수를 확인 하려면 응용 프로그램이 호출 **SQLGetInfo** SQL_CONVERT_FUNCTIONS, SQL_NUMERIC_FUNCTIONS, SQL_STRING_FUNCTIONS, SQL_SYSTEM_FUNCTIONS, 및 SQL_TIMEDATE_ 사용 함수 옵션입니다. 변환 작업에서 지원 되는지 확인 하는 **변환** 함수, 응용 프로그램이 호출 **SQLGetInfo** SQL_CONVERT로 시작 하는 옵션을 사용 합니다.
+

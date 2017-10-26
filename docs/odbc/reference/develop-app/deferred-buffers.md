@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 94d240284ce0273e0700bfbabfb38fd0a41884cf
@@ -35,3 +36,4 @@ A *지연 된 버퍼* 시간에는 값이 사용 되는 *후* 함수 호출에 �
 |결과에서 행을 삽입 하거나 업데이트할를 보내는 데이터 집합|지연 된 입력|**SQLBindCol**|**SQLSetPos**|  
 |출력 및 입/출력 매개 변수는 데이터 반환|지연 된 출력|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |데이터 집합 결과 반환 합니다.|지연 된 출력|**SQLBindCol**|**SQLFetch**<br /> **SQLFetchScroll SQLSetPos**|
+

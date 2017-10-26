@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0e7fda4fa942519384b2837f6f3f70a880dee74f
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  키 집합 커서와 혼합 커서에 대 한 응용 프로그램 키 집합 크기를 지정할 수도 있습니다. SQL_ATTR_KEYSET_SIZE 문 특성으로 수행합니다. 키 집합 크기의 기본 설정인 0으로 설정 된 경우 키 집합 크기는 결과 집합의 크기를 설정 되 고 키 집합 커서는 데 사용 됩니다. 커서가 열린 후 키 집합 크기를 변경할 수 있습니다.  
   
  응용 프로그램 행 집합 크기를 설정할 수도 자세한 내용은 참조 [블록 커서를 사용 하 여](../../../odbc/reference/develop-app/using-block-cursors.md)이 섹션의 앞부분에 나오는 합니다.
+

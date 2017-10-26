@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c6062933f8f6d144b31da430788e8edd75da2eea
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  커서 라이브러리 잘못 반환한 SQLSTATE 34000 (잘못 된 커서 이름) 위치 지정된 업데이트 또는 delete 문에 전달 되는 커서 이름이 유효 하지 않은 *InStatementText* 의 인수 **SQLNativeSql **. **SQLNativeSql** 문 준비 또는 실행 될 경우에 반환 되는 구문 오류를 반환 하기 위한 용도가 아닙니다.
+

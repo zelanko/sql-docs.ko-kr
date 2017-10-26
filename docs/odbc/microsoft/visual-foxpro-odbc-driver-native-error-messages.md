@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 49c71ee77178b71ed67fbdddf955af1f14643199
@@ -337,3 +338,4 @@ ms.lasthandoff: 09/09/2017
 |988|통화 값 범위를 벗어났습니다.|  
 |990|취소.|  
 |999|함수가 구현 되지 않았습니다.|
+

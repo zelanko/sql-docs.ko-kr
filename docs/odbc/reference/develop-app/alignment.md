@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 412c04f8181997738bac1fc7b457c9ec0c3efcde
@@ -51,3 +52,4 @@ ODBC 응용 프로그램의 맞춤 문제는 일반적으로 서로 다른 응�
  ![최대 정렬 경계로 바인딩](../../../odbc/reference/develop-app/media/pr26.gif "pr26")  
   
  이 솔루션에 더 큰 구멍 해제 되지만 상대적으로 간단 하 고 빠르게 구현 하의 코드가입니다. 대부분의 경우가 사용 되지 않는 메모리에서 유료 페널티에 만큼 오프셋 합니다. 이 메서드를 사용 하는 예제를 참조 하십시오. [를 사용 하 여 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)합니다.
+

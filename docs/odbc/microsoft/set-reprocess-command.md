@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 560d6b98c27cefe438e99e2948decaded827e618
@@ -58,3 +59,4 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
   
 ## <a name="remarks"></a>주의  
  레코드 또는 파일 잠금를 첫 번째 시도가 성공 항상 않습니다. 자주, 레코드 또는 파일을 네트워크에서 다른 사용자에 의해 잠겨 있습니다. 설정 다시 처리 Visual FoxPro 하면 추가 시도가 초기 시도가 성공한 경우 레코드 또는 파일을 잠글 수 있는지 여부를 결정 합니다. 하거나 추가 시도 하거나 기간 시도 대 한 내용이 몇 번 지정할 수 있습니다. ON 오류 루틴 어떻게 실패 한 잠금을 시도 처리 하는 영향을 줍니다.
+

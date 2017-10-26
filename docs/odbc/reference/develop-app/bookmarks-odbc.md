@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 791350c93e2570ad8615e5b378e9979870e02acf
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   [책갈피로 업데이트, 삭제 또는 페치](../../../odbc/reference/develop-app/updating-deleting-or-fetching-by-bookmark.md)  
   
 -   [책갈피 비교](../../../odbc/reference/develop-app/comparing-bookmarks.md)
+

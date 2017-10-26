@@ -19,6 +19,7 @@ caps.latest.revision: 27
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8d1e11870107c27084efc54d0c9901f5f1be0f1a
@@ -46,3 +47,4 @@ ms.lasthandoff: 06/22/2017
 |[Lock:Timeout 이벤트 클래스](../../relational-databases/event-classes/lock-timeout-event-class.md)|요청된 리소스에 대한 다른 트랜잭션의 차단 잠금 때문에 잠금 요청을 완료할 수 없는 시기를 추적합니다.|  
   
   
+

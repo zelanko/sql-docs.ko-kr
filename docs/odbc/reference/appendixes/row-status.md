@@ -19,6 +19,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8f164b8269e1150cdf7a85e486bcc3fd93a9411f
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   성공적으로 사용 하 여 데이터 소스에서 행을 인출할 때 SQL_ROW_SUCCESS **SQLFetch**합니다.  
   
 -   행에 위치 지정된 update 문을 실행할 때 SQL_ROW_UPDATED 합니다.
+

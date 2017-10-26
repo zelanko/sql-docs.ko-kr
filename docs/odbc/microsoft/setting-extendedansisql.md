@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ba6688643c16eef8b6f20ef8f7bb469941b6edb
@@ -36,3 +37,4 @@ ExtendedAnsiSQL 특성을 추가 하 여 연결 문자열에서 특성을 제어
  특성을로 설정 해제 합니다. 0의 새로운 기능입니다. 새 기능을 사용할 수를 1로 설정 합니다.  
   
  특성은 SQLSetConnectAttr()를 사용 하 여 설정할 수 있습니다. 특성 값 65501 되며 앞의 표에 설명 된 대로 SQLINTEGER 값 1 또는 0으로 설정 됩니다. 전이나을 연결한 후 호출 될 수 있지만 연결 특성 및 연결 문자열 드라이버 프로세스 캐시 되는 순서 때문에 연결한 후 호출 하는 것이 좋습니다.
+

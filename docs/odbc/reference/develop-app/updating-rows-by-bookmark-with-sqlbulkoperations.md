@@ -21,6 +21,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4426465ea41b257a4805399b703f28ccc22d704b
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 6.  호출 **SQLBulkOperations** 와 *작업* 인수 SQL_UPDATE_BY_BOOKMARK로 설정 합니다.  
   
  업데이트로 데이터 원본에 전송 된 모든 행에 대해 응용 프로그램 버퍼에 유효한 행 데이터가 있어야 합니다. 행 상태 배열이 유지 되 경우 응용 프로그램 버퍼를 인출 하 여 기록한 및은 SQL_ROW_DELETED, SQL_ROW_ERROR 또는 SQL_ROW_NOROW 행에 대 한 상태 값이 잘못 된 데이터가 데이터 원본에 실수로 보낼 수 있습니다.
+

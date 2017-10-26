@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: eca660cf2c38539dbf4a0fa560bfc67a1b1be115
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |3.0 또는 4.0 Microsoft Excel|드라이버를 DriverID|Driver = {Microsoft Excel Driver (*.xls)을 (를); DBQ = c:\temp; DriverID 278 =|  
 |Microsoft Excel 5.0/7.0|드라이버를 DriverID, DBQ|Driver = {Microsoft Excel Driver (*.xls)을 (를); DBQ=c:\temp\sample.xls; DriverID = 22|  
 |Microsoft Excel 97 이상|드라이버를 DriverID, DBQ|Driver = {Microsoft Excel Driver (*.xls)을 (를); DBQ=c:\temp\sample.xls; DriverID 790 =|
+

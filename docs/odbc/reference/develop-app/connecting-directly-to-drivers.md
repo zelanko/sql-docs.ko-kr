@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bacb659cb6986f86151502998523ade468f7cedd
@@ -37,3 +38,4 @@ DRIVER={Paradox Driver};
 ```  
   
  첫 번째 문자열과 드라이버는 추가 정보를 않아도 됩니다. 두 번째 문자열로 드라이버 데이터 파일이 포함 된 디렉터리의 이름에 대 한 메시지를 표시 해야 합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 192962491095f8c6b8fb212ab7789cb74b609897
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/09/2017
  직렬화 가능 s:  
   
  [b]는 커서를 구현 하는 방법에 따라 달라 집니다. SQL_STATIC_SENSITIVITY 옵션을 통해 보고 되는 커서가 이러한 변경 내용을 검색할 수 있는지 여부 **SQLGetInfo**합니다.
+

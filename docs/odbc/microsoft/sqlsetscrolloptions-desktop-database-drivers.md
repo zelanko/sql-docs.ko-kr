@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd83d7ce68d0a7bc1045aee76c28b9b5c39c9faf
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  *fConcurrency* SQL_CONCUR_ROWVER의 인수가 지원 되지 않습니다.  
   
  동적 커서와 혼합된 커서 지원 되지 않습니다.
+

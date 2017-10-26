@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5b5a9aefccf51cc4b3aac1aeba02c7878c6dceed
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  스크롤는 ODBC 2에서 지원 됩니다. *x* 드라이버 **SQLExtendedFetch**합니다. 자세한 내용은 참조 [블록 커서, 스크롤 가능 커서 및 이전 버전과 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에 있습니다.
+

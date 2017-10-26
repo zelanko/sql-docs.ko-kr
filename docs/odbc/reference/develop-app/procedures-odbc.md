@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5f6ed33a938a990d45d544595b10ebd3a418fd41
@@ -32,3 +33,4 @@ A *프로시저* 는 데이터 원본에 저장 된 실행 개체입니다. 일�
 -   [프로시저 사용 시기](../../../odbc/reference/develop-app/when-to-use-procedures.md)  
   
 -   [프로시저 실행](../../../odbc/reference/develop-app/executing-procedures.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ba20d3fcb6d943f4669774013dcb62c8ad896d8d
@@ -40,3 +41,4 @@ A *연결* 드라이버 및 데이터 원본으로 구성 됩니다. 연결 핸�
  연결 핸들을 데이터 원본에 연결할 때 주로 사용 됩니다 (**SQLConnect**, **SQLDriverConnect**, 또는 **SQLBrowseConnect**) 연결을 끊고 데이터에서 원본 (**SQLDisconnect**), 드라이버 및 데이터 원본에 대 한 정보 가져오기 (**SQLGetInfo**), 진단 검색 (**SQLGetDiagField** 및 **SQLGetDiagRec**), 트랜잭션 수행 하 고 (**SQLEndTran**). 설정 하 고 연결 특성을 가져오는 경우도 사용 됩니다 (**SQLSetConnectAttr** 및 **SQLGetConnectAttr**) 및 SQL 문의 네이티브 형식 가져올 때 (**SQLNativeSql **).  
   
  사용 하 여 연결 핸들 할당은 **SQLAllocHandle** 로 해제 및 **SQLFreeHandle**합니다.
+

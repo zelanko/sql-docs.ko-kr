@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f3348850a76bb831c236fd1c1ee49fb89b97504
@@ -35,3 +36,4 @@ Visual FoxPro ODBC 드라이버가 지 원하는 *읽기 전용 동시성*합니
   
 ## <a name="row-versioning"></a>행 버전 관리(row versioning)  
  기본적으로 타임 스탬프 지원, 행 버전이 업데이트 시 비교 됩니다.
+

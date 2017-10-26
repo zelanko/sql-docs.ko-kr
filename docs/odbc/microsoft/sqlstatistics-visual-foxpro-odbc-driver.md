@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 899a799e2c52a7dbb21ed10ed08512e3aad28fab
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  단일 테이블, 인덱스 또는 테이블에 연결 된 태그 이름에 대 한 통계 목록을 검색 합니다. 드라이버 정보 결과 집합으로 반환 합니다.  
   
  자세한 내용은 참조 [SQLStatistics](../../odbc/reference/syntax/sqlstatistics-function.md) 에 *ODBC Programmer's Reference*합니다.
+

@@ -23,6 +23,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 241cb92786626bfc4674426c67f099f4349a6cb4
@@ -123,3 +124,4 @@ BOOL SQLInstallTranslatorEx(
 |기본 변환 옵션을 반환합니다.|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|  
 |변환기를 선택합니다.|[SQLGetTranslator](../../../odbc/reference/syntax/sqlgettranslator-function.md)|  
 |변환기를 제거합니다.|[SQLRemoveTranslator](../../../odbc/reference/syntax/sqlremovetranslator-function.md)|
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 828fc042a4184bfedccf7c26210f899c1d73f2a4
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  텍스트 드라이버에서 지원 되지 않습니다.  
   
  Microsoft Excel 드라이버 사용 되는 값을 업데이트할 수는 있지만 Microsoft Excel 스프레드시트를 기준으로 테이블에서 행을 삭제할 수 없습니다. 결과적으로, UPDATE 문이 Microsoft Excel 드라이버에서 공식적으로 지원을 간주 되지 않습니다. INSERT 문의 지 원하는 것으로 간주 됩니다.
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82bcebce57cc6034ad629256c1b8ce27038d6ae0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  테이블의 경우 결과 집합은 지정 된 테이블이 나 테이블에 대 한 열 목록을 만듭니다.  
   
  자세한 내용은 참조 [SQLColumns](../../odbc/reference/syntax/sqlcolumns-function.md) 에 *ODBC Programmer's Reference*합니다.
+

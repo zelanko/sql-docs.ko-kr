@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4ddd3e0db3987ed14984a978c88befbd076562b5
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
  .Dsn 파일 또한 수 하지 공유할 수 있습니다. 공유할 수 없는.dsn 파일을 단일 컴퓨터에 상주 하며 컴퓨터 데이터 원본을 가리킵니다. 공유할 수 없는 파일 데이터 원본 파일 데이터 원본만 사용 하도록 응용 프로그램을 디자인할 수 있습니다 수 있도록 파일 데이터 원본에 데이터 원본은 쉬운 변환을 허용 하는 데 주로 존재 합니다. 드라이버 관리자를 공유할 수 없는 파일 데이터 원본에 정보를 보내는 경우.dsn 파일을 가리키는 데이터 원본 컴퓨터에 필요에 따라 연결 합니다.  
   
  파일 데이터 원본에 대 한 자세한 내용은 참조 [를 사용 하 여 파일 데이터 원본 연결](../../odbc/reference/develop-app/connecting-using-file-data-sources.md), 또는 [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) 함수 설명 합니다.
+

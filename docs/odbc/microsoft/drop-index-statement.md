@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ff70e2bf919735de40acec8b7386efd6d66b3ffe
@@ -30,3 +31,4 @@ DROP INDEX 문의 구문은 "DROP INDEX on a b"를 "a"는 인덱스의 이름 �
  Paradox 드라이버를 사용 하는 DROP INDEX 문은 Paradox 보조 인덱스 파일을 삭제 합니다.  
   
  Microsoft Excel 또는 텍스트 드라이버에 대 한 DROP INDEX 문은 지원 되지 않습니다.
+

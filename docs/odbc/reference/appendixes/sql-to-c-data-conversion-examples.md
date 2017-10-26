@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c7dd7b514ce4788a035e6f230f3d0a87a94440f2
@@ -50,3 +51,4 @@ SQL_TYPE_TIMESTAMP|1992-12-31 23:45:55.12|SQL_C_CHAR|22|1992-12-31 23:45:55.1\0 
  [a] "\0" null 종료 바이트를 나타냅니다. 드라이버는 항상 null로 끝냅니다 SQL_C_CHAR 데이터입니다.  
   
  [이 목록에 있는 b]는 숫자는 TIMESTAMP_STRUCT 구조체의 필드에 저장 된 숫자입니다.
+

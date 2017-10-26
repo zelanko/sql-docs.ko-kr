@@ -23,6 +23,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 037d4ffcbe7d81c6e4a9c1a524f5f4977621f277
@@ -102,3 +103,4 @@ BOOL ConfigDriver(
   
 ### <a name="messages"></a>메시지  
  드라이버 설치 루틴에서 null로 끝나는 문자열로 응용 프로그램에 문자 메시지를 보낼 수는 *lpszMsg* 버퍼입니다. 메시지가 잘릴 수 *cbMsgMax* 뺀 하 여 null 종결 문자는 **ConfigDriver** 보다 크거나 같은 경우에 작동 *cbMsgMax* 문자입니다.
+

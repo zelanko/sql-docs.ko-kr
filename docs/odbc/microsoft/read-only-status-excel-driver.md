@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 641c6b6324ccb0f12cb5b28bd25b06dc0fcc5029
@@ -30,3 +31,4 @@ Microsoft Excel 드라이버를 사용 하면 데이터 원본 테이블 읽기 
  Microsoft Excel 드라이버를 통해 Microsoft Excel 데이터에 대해 다른 이름으로 저장 명령을 수행 하는 응용 프로그램, 응용 프로그램이 새 테이블 만들고 새 테이블에 저장 되도록 데이터를 삽입 해야 합니다. 삽입 될 테이블에 추가 합니다. 닫고 다시 될 때까지 테이블에 없는 다른 작업을 수행할 수 있습니다. 테이블을 닫은 후 읽기 전용 테이블은 다음 이므로 없습니다 후속 insert는 수행할 수 있습니다.  
   
  Microsoft Excel 드라이버를 사용 하는 경우 값을 업데이트할 수 있지만 Microsoft Excel 스프레드시트를 공식적으로 Microsoft Excel 드라이버에서 지 원하는 업데이트 된 것으로 간주 되지 기준으로 테이블에서 행을 삭제할 수 없습니다.
+

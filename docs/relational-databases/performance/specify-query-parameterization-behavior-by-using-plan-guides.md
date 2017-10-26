@@ -23,6 +23,7 @@ caps.latest.revision: 35
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 416a4e54d2b5ff881102b42e136a088e00e2d324
@@ -88,3 +89,4 @@ EXEC sp_create_plan_guide
 >  TEMPLATE 계획 지침은 문을 하나의 문으로만 구성되어 있는 일괄 처리에 제출된 쿼리와 일치시킵니다. 다중 문 일괄 처리 내에 있는 문은 TEMPLATE 계획 지침에 일치시킬 수 없습니다.  
   
   
+

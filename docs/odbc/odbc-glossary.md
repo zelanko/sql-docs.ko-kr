@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a3f6211095c5f2a1506b31ca45846c15deb619b2
@@ -503,3 +504,4 @@ ms.lasthandoff: 09/09/2017
 ## <a name="v"></a>V  
  **보기**  
  하나 이상의 테이블에 데이터를 보기는 대체 방법이 있습니다. 뷰는 보통 하나 이상의 테이블에서 열의 하위 집합으로 생성 됩니다. Odbc에서 뷰는 테이블에 일반적으로 동일 합니다.
+

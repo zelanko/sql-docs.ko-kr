@@ -18,6 +18,7 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bad5ad9148bdfd89a6d73bcc359b236491a73dfa
@@ -35,3 +36,4 @@ ms.lasthandoff: 06/22/2017
 |[ExistingConnection 이벤트 클래스](../../relational-databases/event-classes/existingconnection-event-class.md)|추적이 시작될 때의 기존 사용자 연결 속성을 나타냅니다.|  
   
   
+

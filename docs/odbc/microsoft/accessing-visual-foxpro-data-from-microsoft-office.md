@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3b509830bbba4405269a766e95ce7fa585ff7a4
@@ -36,3 +37,4 @@ Windows 98 또는 Windows 95 응용 프로그램에 대 한 Microsoft Office 프
 |Microsoft Access를 사용 하 여|[Visual FoxPro 데이터 액세스에서 쿼리 및 업데이트](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md)<br /><br /> [Microsoft Access로 Visual FoxPro 데이터 가져 오기](../../odbc/microsoft/importing-visual-foxpro-data-into-microsoft-access.md)|  
 |Microsoft Excel을 사용 하 여|[Microsoft Excel에서 Visual FoxPro 데이터 원본에 액세스](../../odbc/microsoft/accessing-a-visual-foxpro-data-source-from-microsoft-excel.md)<br /><br /> [Visual FoxPro 데이터베이스에서 Microsoft Excel로 데이터 가져 오기](../../odbc/microsoft/importing-data-into-microsoft-excel-from-a-visual-foxpro-database.md)|  
 |Microsoft Word를 사용 하 여|[Visual FoxPro 데이터를 사용하여 Microsoft Word에서 우편 레이블 만들기](../../odbc/microsoft/creating-mailing-labels-in-microsoft-word-using-visual-foxpro-data.md)|
+

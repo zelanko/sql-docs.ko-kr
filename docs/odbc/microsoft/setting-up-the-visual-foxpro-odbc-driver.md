@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7805c7099900adcdd3bd660b4e18bbe573eec20d
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   이전에 설치 된 모든 구성 요소를 제거 합니다.  
   
  시스템에 드라이버를 설치한 후 설치 프로그램이 설치 된 드라이버 구성 요소를 인식 하 고 드라이버의 구성을 변경할 수 있도록 하는 추가 대화 상자를 표시 합니다.
+

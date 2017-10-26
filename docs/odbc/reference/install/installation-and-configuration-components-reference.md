@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6f48f97ec373c0b5925b277c57b756d1adf49b8e
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [설치 프로그램](../../../odbc/reference/install/setup-program.md)  
   
 -   [변환기 설치 DLL](../../../odbc/reference/install/translator-setup-dlls.md)
+

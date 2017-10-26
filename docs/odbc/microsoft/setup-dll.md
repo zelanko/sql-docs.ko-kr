@@ -19,6 +19,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ad73ea67d455cf5679448b3d55fe37e82253abaa
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="setup-dll"></a>설치 프로그램 DLL
 함수를 호출 하는 ODBC 관리자 **ConfigDSN** 사용자가 데이터 원본을 구성 하는 경우.
+

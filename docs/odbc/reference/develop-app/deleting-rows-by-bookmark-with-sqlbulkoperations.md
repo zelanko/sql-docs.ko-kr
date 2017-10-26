@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db7e04c5bf76855afdb24676c905c5cccbc60cbc
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 2.  책갈피의 수 SQL_ATTR_ROW_ARRAY_SIZE 문 특성을 설정 하 고 책갈피를 0 열 배열 또는 책갈피 값을 포함 하는 버퍼를 바인딩합니다.  
   
 3.  호출 **SQLBulkOperations** 와 *작업* SQL_DELETE_BY_BOOKMARK로 설정 합니다.
+

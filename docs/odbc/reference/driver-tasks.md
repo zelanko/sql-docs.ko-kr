@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 331e3aee3a4a60cbfa1a1308b71da80bf9772f23
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
 -   데이터를 보내는 및 응용 프로그램에 의해 지정 된 대로 데이터 형식으로 변환 하는 포함 하 여 데이터 원본에서 데이터를 검색 합니다.  
   
 -   DBMS 관련 오류를 ODBC Sqlstate에 매핑합니다.
+

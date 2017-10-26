@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f7263f7814e4ab286d1fd678604b3f84a45108f
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   **특정 DBMS를 한 번에 액세스합니다.** 예를 들어 ODBC 함수를 호출 하 여 데이터를 검색 하는 스프레드시트 포함 될 수 있습니다는 **드라이버** 특정 드라이버를 식별 하는 키워드입니다. 드라이버 이름은 해당 드라이버를 설치한 모든 사용자에 게 의미 이기 때문에 이러한 사용자 간에 스프레드시트를 전달할 수 있습니다. 스프레드시트에서 데이터 원본 이름에 포함 된 각 사용자가 스프레드시트를 사용 하 여 동일한 데이터 원본을 만듭니다 해야 합니다.  
   
 -   **특정 드라이버에 액세스할 수 있는 모든 데이터베이스에 대 한 시스템을 검색 합니다.** 자세한 내용은 참조 [SQLBrowseConnect 연결과](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md)이 섹션의 뒷부분에 나오는 합니다.
+

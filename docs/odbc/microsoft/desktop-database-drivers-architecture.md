@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0b85711437c50ccc246ad1af1432d9475d1cfc3d
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/09/2017
  Odbcjt32.dll은 Microsoft Jet API를 기반으로 ODBC 함수를 구현합니다. 그러나 ODBC 및 Microsoft Jet 함수 간의 직접 매핑되지가 않습니다. 커서 모델 및 SQL 매핑을 등 많은 요인 함수는 직접적인 상관 관계가 방지합니다.  
   
  ODBC 드라이버는 ODBC 드라이버 관리자와 Microsoft Jet 엔진 간의 상주합니다. 응용 프로그램에서 호출 하는 일부 ODBC 함수 드라이버 관리자에서 처리 및 드라이버에 전달 되지 않습니다. 이러한 함수에 대 한 Microsoft Jet는 함수 호출에 직접 연결 드라이버 관리자에 없기 때문에 표시 되지 않습니다.
+

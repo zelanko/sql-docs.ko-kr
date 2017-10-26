@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 63efd04bc43855c08a6de02d5396bea45eabbc68
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 드라이버는 SQL_CONCUR_READ_ONLY;만 지원합니다. 지원 하지 않습니다는 *fConcurrency* SQL_CONCUR_ROWVER 값입니다. 드라이버 경고 ODBC_01S02 SQL_SCROLL_STATIC 하 SQL_KEYSET_SIZE, SQL_CURSOR_DYNAMIC, 및 SQL_CURSOR_KEYSET_DRIVEN를 변환합니다.  
   
  자세한 내용은 참조 [SQLSetScrollOptions](../../odbc/reference/syntax/sqlsetscrolloptions-function.md) 에 *ODBC Programmer's Reference*합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ccb6114eab57030d6555931f0bfcdbe469326442
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  응용 프로그램 개발자가 문자 C 데이터 형식으로 이진 SQL 데이터 바인딩 해서는 안 됩니다. 이 변환은 일반적으로 비효율적인 및 느립니다.
+

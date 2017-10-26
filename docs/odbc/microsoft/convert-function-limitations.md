@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dbe4a62045da6fd493c24fec81b863f504b73750
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 변환 오류 결과 NULL로 설정 되 고 영향을 받는 열에 입력 합니다.  
   
  날짜 아니고 타임 스탬프 데이터 형식은 CONVERT 함수에 의해 다른 데이터 형식 (또는 자체)를 변환할 수 있습니다.
+

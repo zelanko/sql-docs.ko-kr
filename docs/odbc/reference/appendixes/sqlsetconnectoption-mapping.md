@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e531888390bbe4f625d308ad983059634e84ba2b
@@ -63,3 +64,4 @@ SQLSetConnectOption(hdbc, fOption, vParam)
  Odbc 2. *x*, 응용 프로그램에서 호출할 수 **SQLSetConnectOption** 문 옵션을 설정 하려면. 드라이버 문 옵션을 기본값으로 설정 완료 되 면 해당 연결에 할당 된 나중에 문의 합니다. 드라이버-정의 된 여부 드라이버 지정된 연결과 관련 된 모든 기존 문 문 옵션을 설정 합니다.  
   
  ODBC 3에는이 기능을 더 이상 사용 되지*.x*합니다. ODBC 3*.x* 드라이버 설정 ODBC 2를 지원만 필요 합니다.* x* ODBC 2를 사용 하는 경우에 연결 수준 문 특성.* x* 이 작업을 수행 하는 응용 프로그램입니다. ODBC 3*.x* 응용 프로그램 연결 수준에서 문 특성을 설정 해서는 안됩니다. ODBC 3*.x* 연결 특성 및 문 특성 모두에 있으며 수 있는 SQL_ATTR_METADATA_ID 및 SQL_ATTR_ASYNC_ENABLE 특성을 제외 하 고 연결 수준에서 문 특성을 설정할 수 없습니다 연결 수준 또는 문 수준에서 설정 합니다.
+

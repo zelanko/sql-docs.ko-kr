@@ -19,6 +19,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 41ca6ddf1535899ed8e5e0f065cf2f5f0ca19dca
@@ -120,3 +121,4 @@ ms.lasthandoff: 09/09/2017
  [특정 상황에서 5] 드라이버 해야이 기능을 지원 합니다. 자세한 내용은이 함수의 참조 페이지를 참조 하세요.  
   
  [6]의 드라이버 지원 하도록 선택할 수 **SQLGetFunctions** 드라이버에서 지 원하는 기능 집합은 달라 연결에서 연결 하는 경우.
+

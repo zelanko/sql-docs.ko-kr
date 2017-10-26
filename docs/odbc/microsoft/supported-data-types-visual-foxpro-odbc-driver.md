@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: caf58413946e51ae8575b8d068e4a516316eb090
@@ -33,3 +34,4 @@ ODBC API 및 Microsoft 쿼리에서 드라이버에서 지 원하는 데이터 �
   
 ## <a name="data-types-in-applications-using-microsoft-query"></a>Microsoft 쿼리를 사용 하 여 응용 프로그램의 데이터 형식  
  Visual FoxPro 데이터 원본에 새 테이블을 만들려면 Microsoft 쿼리를 사용 하는 응용 프로그램, Microsoft Query 표시는 **새 테이블 정의** 대화 상자. 아래 **필드 설명을**, **형식** 목록 상자 [Visual FoxPro 필드 데이터 유형을](../../odbc/microsoft/visual-foxpro-field-data-types.md)단일 문자로 표현 합니다.
+

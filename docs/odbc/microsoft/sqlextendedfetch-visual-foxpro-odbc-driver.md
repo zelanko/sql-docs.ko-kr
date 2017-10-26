@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 25a9e0b16551ca27a6818fcfd890e56aeabfb44b
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  기본적으로 Visual FoxPro ODBC 드라이버는 FoxPro 테이블에서 삭제 된 것으로 표시 된 행을 반환 하지 않습니다. 삭제 하도록 표시 되었으나 아직 제거 되지 않은 테이블에서 행 결과 집합 커서에 포함 되지 않습니다. 사용 하 여이 동작을 변경할 수는 [삭제 설정](../../odbc/microsoft/set-deleted-command.md) 명령입니다.  
   
  자세한 내용은 참조 [SQLExtendedFetch](../../odbc/reference/syntax/sqlextendedfetch-function.md) 에 *ODBC Programmer's Reference*합니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e37da481e8068edb966b8f8ace4f129989cce990
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |Odbcad32.exe|32 비트 ODBC 관리자 프로그램|  
 |Odbcinst.hlp|설치 관리자 도움말 파일|  
 |Msvcrt40.dll|C 런타임 라이브러리|
+

@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 35a22420b5ecaf21539fd16aecb3870e3f3049dc
@@ -174,3 +175,4 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  [지원 되는 데이터 형식 (Visual FoxPro ODBC 드라이버)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
  [SQL 명령-삽입](../../odbc/microsoft/insert-sql-command.md)   
  [SELECT - SQL 명령](../../odbc/microsoft/select-sql-command.md)
+

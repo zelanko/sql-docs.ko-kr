@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 763f6fdd2790de695e1e2307cbcac4e0ed3018ae
@@ -50,3 +51,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_GUID|16 (GUID 구조체의 크기).|  
   
  [a] 드라이버 변수 형식에 대 한 열 또는 매개 변수 길이 확인할 수 없습니다, SQL_NO_TOTAL을 반환 합니다.
+

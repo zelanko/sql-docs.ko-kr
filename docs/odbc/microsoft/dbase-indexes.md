@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f2725f312691d3cb644f9a096b5f469f1356c55
@@ -44,3 +45,4 @@ ODBC dBASE 드라이버가 자동으로 열리고 dBASE IV 인덱스 파일을 �
 -   인덱스 이름 dBASE 인덱스 명명 규칙을 일치 해야 합니다. dBASE III 각은 확장명이.ndx 별도 파일에 각 인덱스 요구 합니다. DBASE IV 단일.mdx 파일에 저장 된 태그 이름으로 인덱스를 만듭니다. .Mdx 파일은 데이터베이스 파일과 동일한 기본 이름 (예를 들어 Emp.mdx는 Emp.dbf 데이터베이스에 대 한 인덱스 파일).  
   
 -   dBASE 정의 고유 인덱스를 동일한 키 값을 가진 집합에서 레코드를 하나만 인덱스에 추가 됩니다.
+

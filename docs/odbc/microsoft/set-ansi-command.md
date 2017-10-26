@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 2095dc0b30fc2e16d4ce691cc097dcda1614d090
@@ -63,3 +64,4 @@ SET ANSI ON | OFF
 ## <a name="see-also"></a>관련 항목:  
  [SQL 명령 선택](../../odbc/microsoft/select-sql-command.md)   
  [SET EXACT 명령](../../odbc/microsoft/set-exact-command.md)
+

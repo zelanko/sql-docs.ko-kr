@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f4e63f722842846815fd96bed7293388c4f86c75
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  응용 프로그램에 정의 된 순서를 따라야 필드를 개별적으로 설정할 때 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)합니다. 일부 필드를 설정 하면 드라이버를 다른 필드를 설정 합니다. 이렇게 하면 설명자는 언제 든 지는 응용 프로그램에서 데이터 형식이 지정 되 면 사용 하도록 합니다. SQL_DESC_TYPE 필드를 설정 하는 응용 프로그램, 드라이버 유형을 지정 하는 다른 필드는 유효 하 고 일관 된 있는지 확인 합니다.  
   
  설명자 필드를 설정 하는 함수 호출에 실패 하면 설명자 필드의 내용을 정의 되지 않습니다 실패 한 함수 호출 후.
+

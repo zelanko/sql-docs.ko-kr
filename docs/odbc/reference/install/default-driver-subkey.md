@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5c269705f5e4c0c855b5b7f929b1a76ee9523bd7
@@ -43,3 +44,4 @@ Driver : REG_SZ : SQL Server
   
 > [!NOTE]  
 >  기본 하위 키에 포함 된 기본 드라이버는 기본 사용자 DSN 또는 기본 시스템 DSN 참조할 수 있습니다. 기본 사용자 DSN와 기본 시스템 DSN을 만든 경우 기본 드라이버 때문에 처음 생성 된 DSN에 유효한 항목이 아닐 수 마지막으로, 생성 된 DSN으로 결정 됩니다.
+

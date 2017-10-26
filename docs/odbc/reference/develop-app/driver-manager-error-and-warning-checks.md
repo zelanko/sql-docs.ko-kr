@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: ce87b9dbed8cfa6ca621cb72c36220c13ecb0929
@@ -32,3 +33,4 @@ ms.lasthandoff: 09/09/2017
 -   드라이버 관리자는 드라이버를 구현 하는지 확인 **SQLGetFunctions**합니다. 드라이버를 구현 하지 않는 경우 **SQLGetFunctions**, 드라이버 관리자를 구현 하 고 모든 오류 및 경고에 대 한 확인 합니다.  
   
 -   드라이버 관리자를 사용 하는 부분적으로 구현 **SQLAllocHandle**, **SQLConnect**, **SQLDriverConnect**, **SQLBrowseConnect**, ** SQLFreeHandle**, **SQLGetDiagRec**, 및 **SQLGetDiagField** 및 이러한 함수에 일부 오류를 확인 합니다. 드라이브와 같은 오류가 모두 유사한 작업을 수행 하기 때문에 이러한 함수 중 일부에 대해 반환할 수 있습니다. 드라이버 관리자 또는 드라이버 SQLSTATE IM008를 반환할 수 있습니다 예를 들어 (실패 대화 상자) 경우에 대 한 로그인 대화 상자를 표시할 수 없으면 하나 **SQLDriverConnect**합니다.
+

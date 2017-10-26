@@ -22,6 +22,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7c5396150d9b3ae7e3c79fa3568c1468f775cb8e
@@ -41,3 +42,4 @@ Microsoft® ODBC 테스트는 ODBC 드라이버 및 ODBC 드라이버 관리자�
  이제 프로그램을 ODBC 테스트 이전의 설명서의이 섹션에 포함 된 도움말 항목이 포함 되어 있습니다. Odbcte32.exe 열거나 Odbct32w.exe, 열기는 **도움말** 메뉴를 차례로 클릭 **도움말 항목**합니다.  
   
  별도 파일에도 64 비트 Microsoft Windows 운영 체제를 위한 응용 프로그램을 64 비트 버전의 32 비트 버전으로 동일한 이름을 가졌는지 note 합니다. 즉, 64 비트 버전의 ODBC 테스트의 유니코드 버전에 대 한 이름은 odbct32w.exe입니다.
+

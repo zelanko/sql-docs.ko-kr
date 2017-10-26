@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e6d6f9200e590a2f9a9fdaf63536d884aa186175
@@ -33,3 +34,4 @@ ms.lasthandoff: 06/22/2017
  또한 INDEX, FORCESCAN 및 FORCESEEK 테이블 힌트를 쿼리 힌트로 지정할 수도 있습니다. 쿼리 힌트로 지정할 경우 이러한 힌트는 인라인 테이블이나 뷰 힌트처럼 동작합니다. INDEX 힌트는 쿼리 최적화 프로그램이 지정한 인덱스만 사용하여 참조된 테이블이나 뷰에 있는 데이터에 액세스하도록 합니다. FORCESEEK 힌트는 최적화 프로그램이 Index Seek 연산만 사용하여 참조된 테이블이나 뷰에 있는 데이터에 액세스하도록 합니다. 이러한 힌트는 추가 계획 지침 기능을 제공하며 계획 지침을 사용하는 쿼리의 최적화에 보다 많은 영향을 줄 수 있습니다.  
   
   
+

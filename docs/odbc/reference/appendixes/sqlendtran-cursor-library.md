@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 50b6c5ffec8dd088bdc730699cfa88abea860768
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   트랜잭션 경계에서 커서를 닫습니다는 데이터 원본에 대 한 커서 라이브러리는 커서가 닫힙니다 하 고 연결의 모든 문에 대해 캐시를 삭제 합니다.  
   
 -   준비 된 문은 트랜잭션 경계를 삭제 하는 데이터 원본에 대 한 응용 프로그램을 종료할지 하기 전에 연결에서 모든 준비 된 문을 reprepare 해야 합니다.
+

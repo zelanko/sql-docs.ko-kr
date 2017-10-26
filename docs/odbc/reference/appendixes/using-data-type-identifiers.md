@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9f29b6e27866b5893c6875ee5c438d7c13a996e9
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTypeInfo** -지원 되는 데이터 형식 목록을 검색  
   
  데이터 형식 식별자가 설명자의 SQL_DESC_CONCISE_TYPE 필드에 저장 됩니다. 설명자 함수 **SQLSetDescField** 및 **SQLSetDescRec** 위 목록에 나열 된 작업을 수행할 적절 한 형식과 함께 사용할 수 있습니다. 자세한 내용은 참조 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)합니다.
+

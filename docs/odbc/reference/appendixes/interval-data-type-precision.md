@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: dc397e2aade6d016a647f1caf00a91fad48ad8e1
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
  두 번째 필드에 있는 모든 간격 데이터 형식에는 *초의 정밀도*합니다. 소수 자릿수 초 값의 소수 부분에 허용 되는 수입니다. 이것이 다른 데이터 형식에 대 한 다른 여기서 정밀도 소수점 전의 자릿수를 나타냅니다. 간격 데이터 형식의 초 전체 자릿수는 소수점 뒤 자릿수는 합니다. 예를 들어 초 전체 자릿수는 6으로 설정, 있으면.123456 및 번호 1230.001230으로 해석 되으로 번호에서 분수 필드에서 123456 해석 합니다. 다른 데이터 형식에 대 한이 라고 눈금. 간격 초의 전체 자릿수가 SQL_DESC_PRECISION 설명자 필드에 포함 되어 있습니다. SQL 간격 값의 소수 자릿수 초 구성 요소 전체 자릿수 C 간격 구조에 보유할 수 무엇 보다 크면 드라이버-정의 된 SQL 간격에 소수 자릿수 초 값은 C로 변환 될 때 잘립니다 반올림 여부 간격 구조입니다.  
   
  SQL_DESC_TYPE 필드 SQL_INTERVAL 설정은 SQL_DESC_CONCISE_TYPE 필드 간격 데이터 형식으로 설정 되 면는 값을 SQL_DESC_DATETIME_INTERVAL_CODE 간격 데이터 형식에 대 한 코드로 설정 됩니다. SQL_DESC_DATETIME_INTERVAL_PRECISION 필드는 2의 기본 간격 선행 정밀도로 자동으로 설정 하 고 SQL_DESC_PRECISION 필드 간격 (초)의 기본 정밀도 6으로 자동 설정 됩니다. 응용 프로그램에 대 한 호출을 통해 설명자 필드를 명시적으로 설정 해야 이러한 값 중 하나 없는 경우 적절 한 **SQLSetDescField**합니다.
+

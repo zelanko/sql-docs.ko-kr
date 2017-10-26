@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d91c7789fbcd0c4dc197f2da13b23c1da34666bb
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   속도가 정확도 및 오류 보다 작은 일 수 있습니다. 예를 들어 회사는 많은 소규모 영업 및 큰 sales 드문 경우를 가정 합니다. 열려 있는 모든 판매액의 합계 값을 예측 하는 트랜잭션이 Read Uncommitted 격리 수준 안전 하 게 사용 될 수 있습니다. 트랜잭션이 열리거나 닫힐 있으며 이후에 주문을 포함 하지만,이 일반적으로 서로 위배 롤백되고 한다는 이러한 주문 발견 될 때마다 차단 되지 않은 트랜잭션이 훨씬 속도가 더 빠를 수는.  
   
  자세한 내용은 참조 [낙관적 동시성](../../../odbc/reference/develop-app/optimistic-concurrency.md)합니다.
+

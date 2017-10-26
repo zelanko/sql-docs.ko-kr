@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: adb6f66ecfbff558fd163437a56453efb4265185
@@ -41,3 +42,4 @@ Odbc에서 함수는 두 가지 방법으로 진단 정보를 반환합니다. �
 -   [SQLGetDiagRec 및 SQLGetDiagField 구현](../../../odbc/reference/develop-app/implementing-sqlgetdiagrec-and-sqlgetdiagfield.md)  
   
 -   [진단 처리 예제](../../../odbc/reference/develop-app/diagnostic-handling-examples.md)
+

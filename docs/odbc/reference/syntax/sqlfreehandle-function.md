@@ -23,6 +23,7 @@ caps.latest.revision: 35
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bd53996a8107a577cfae703a8f68f036e5ae0eb6
@@ -188,3 +189,4 @@ int main() {
  [ODBC API 참조](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC 헤더 파일](../../../odbc/reference/install/odbc-header-files.md)   
  [샘플 ODBC 프로그램](../../../odbc/reference/sample-odbc-program.md)
+

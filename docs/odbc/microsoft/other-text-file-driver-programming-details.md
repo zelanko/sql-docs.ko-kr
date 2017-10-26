@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 586e2b73c67138ea48c7306e67b5f604bfce8cd9
@@ -62,3 +63,4 @@ ms.lasthandoff: 09/09/2017
 -   [테이블 만들기 및 열 (텍스트 파일 드라이버)](../../odbc/microsoft/creating-and-opening-tables-text-file-driver.md)  
   
 -   [읽기 전용 상태(텍스트 파일 드라이버)](../../odbc/microsoft/read-only-status-text-file-driver.md)
+

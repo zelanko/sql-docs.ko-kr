@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3169ef45acb26b6db6bbb46680163575d5a588f4
@@ -28,3 +29,4 @@ ms.lasthandoff: 09/09/2017
 절 WHERE 절에는 최대 수는 40입니다.  
   
  LONGVARCHAR 및 LONGVARBINARY 열은 최대 255 자 리터럴을 비교할 수 있지만 매개 변수를 사용 하 여 비교할 수 없습니다.
+

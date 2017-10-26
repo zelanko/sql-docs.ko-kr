@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 322246bbb6634386955c8655c2e20e3cfe5b6fed
@@ -45,3 +46,4 @@ Microsoft Visual FoxPro ODBC 드라이버를 지원합니다.
   
 ## <a name="sort-order"></a>정렬 순서(sort order)  
  다른 정렬 규칙을 통합 하는 정렬 순서 *로캘*s, 해당 언어의 데이터를 올바르게 정렬할 수 있습니다. Visual FoxPro 현재 정렬 순서는 결과 문자 식 비교와 레코드에 표시 된 인덱스 또는 테이블을 정렬 순서를 결정 합니다.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b0e11fdd0d5d560cfcacd034745f7ed32cf8fca8
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   **경고** 상태 레코드 (클래스 01) 경고를 설명 하는 가장 낮은 순위입니다. 둘 이상의 레코드가 동일한 경고 조건을 SQLSTATEs Open 그룹 CLI 사양에 정의 된 경고에 대해 설명 하는 경우에 ODBC 정의 하 고 드라이버에서 정의 된 Sqlstate outrank 합니다.  
   
  가장 높은 순위와 두 개 이상의 레코드가 없을 경우 레코드는 첫 번째 레코드 하 여 정의 되지 않았습니다. 다른 모든 레코드의 순서가 정의 되지 않습니다. 특히, 오류 하기 전에 경고가 나타날 수 있습니다, 때문에 함수가 SQL_SUCCESS 이외의 값을 반환 하는 경우 응용 프로그램 모든 상태 레코드를 확인 해야 합니다.
+

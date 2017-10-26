@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d6b2437d1958e2583dabb75c0a4c26a2ed472975
@@ -96,3 +97,4 @@ while (GetPrice(&PartID, &Price)) {
  드라이버는 문 준비를 에뮬레이션 수 없는 경우 문을 저장 때 **SQLPrepare** 라고 하며 실행을 위해 전송 때 **SQLExecute** 호출 됩니다.  
   
  에뮬레이트된 문 준비, 완벽 한 없기 때문에 **SQLExecute** 일반적으로에서 반환한 오류를 반환할 수 **SQLPrepare**합니다.
+

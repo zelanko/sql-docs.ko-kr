@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a80ef1756ca2d106b7a786609fb3bbce9b9539e4
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  문 핸들에 대 한 메모리를 할당 하 고로 지정 된 연결을 문 핸들에 연결 *hdbc*합니다. 드라이버 관리자는이 호출에 대 한 메모리를 할당 하는 드라이버에 전달 된 *hstmt* 구조입니다.  
   
  자세한 내용은 참조 [SQLAllocStmt](../../odbc/reference/syntax/sqlallocstmt-function.md) 에 *ODBC Programmer's Reference*합니다.
+

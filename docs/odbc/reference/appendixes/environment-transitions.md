@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a044161df57f81fee3639fd26c94b5860d5c1913
@@ -135,3 +136,4 @@ ODBC 환경은 다음 세 가지 상태입니다.
 |E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당 된|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(면)|(면)|--|
+

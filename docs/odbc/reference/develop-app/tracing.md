@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b6f35eb779b80b62e6352cef7de901f3b43bdbfc
@@ -36,3 +37,4 @@ ODBC 드라이버 관리자에 대 한 ODBC 응용 프로그램 기록 하 고 �
 -   [추적 사용](../../../odbc/reference/develop-app/enabling-tracing.md)  
   
 -   [동적 추적](../../../odbc/reference/develop-app/dynamic-tracing.md)
+

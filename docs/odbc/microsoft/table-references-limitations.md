@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1582e1a44d14480c74134073719ea6c5dbdab671
@@ -26,3 +27,4 @@ ms.lasthandoff: 09/09/2017
 ---
 # <a name="table-references-limitations"></a>테이블 참조 제한 사항
 쿼리 문에 최대 16 테이블 참조를 포함할 수 있습니다.
+

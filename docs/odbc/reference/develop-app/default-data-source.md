@@ -25,6 +25,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 08c8aab7a9cfcecf18181dacbab6f18aaa59ff64
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 -   에 대 한 호출에서 **SQLDriverConnect** 여기서 *InConnectionString* 중 하나를 지정 **DSN**= 기본값 또는 사용 하 여 지정 된 **DSN** 키워드는 시스템 정보에 포함 되지 않은 데이터 원본입니다.  
   
  드라이버 정의 된 기본 데이터 원본을 지정 하는 방법 이 관리 작업에 포함 될 수 있습니다 및 사용자에 따라 달라질 수 있습니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a893c212f54717425f5414045a2076c35e3d8b3c
@@ -46,3 +47,4 @@ SELECT * FROM Lines
 ```  
   
  동일한 문 핸들에서 첫 번째 결과 집합에 대 한 열 바인딩은 여전히 문의 구조에 저장 하는 바인딩 되입니다. 대부분의 경우에서 낮은 프로그래밍 관행 이며 피해 야 합니다. 대신, 응용 프로그램을 호출 해야 **SQLFreeStmt** 오래 된 모든 열을 바인딩 해제 하 고 다음 새 캠페인을 바인딩할 SQL_UNBIND 옵션과 함께 합니다.
+

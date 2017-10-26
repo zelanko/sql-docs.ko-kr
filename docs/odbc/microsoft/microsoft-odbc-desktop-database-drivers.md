@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 939847cee3b9fb9f8051d98e5def53abf787f148
@@ -75,3 +76,4 @@ ODBC는 데이터베이스 액세스 언어와 언어 SQL (구조적 쿼리)를 
 -   [ODBC 오류](../../odbc/microsoft/odbc-errors.md)  
   
 -   [지원되는 ODBC API 함수](../../odbc/microsoft/supported-odbc-api-functions.md)
+

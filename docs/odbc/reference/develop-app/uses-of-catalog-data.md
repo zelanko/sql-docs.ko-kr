@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 61a112f126eb83d40e350c5cc275f28438f15383
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
      이러한 환경도 사용할 수 **SQLTables** 및 **SQLColumns** 프로그래머는 선택 항목을 만들 수 있는 목록을 만듭니다. 이러한 환경도 사용할 수 있습니다 **SQLPrimaryKeys** 및 **SQLForeignKeys** 자동으로 결정 하 고 선택한 테이블 간의 관계를 표시 및 사용 하 여 **SQLStatistics** 확인 하 고 프로그래머가 효율적인 쿼리를 만들 수 있도록 인덱싱된 필드를 강조 표시 합니다.  
   
 -   **커서를 생성 하는입니다.** 응용 프로그램, 드라이버, 또는 스크롤할 수 있는 커서 엔진을 제공 하는 미들웨어 악용 **SQLSpecialColumns** 결정 열 또는 열에는 행을 고유 하 게 식별 하 합니다. 프로그램을 작성할 수는 *키 집합* 인출 된 각 행에 대해 이러한 열의 값이 들어 있는입니다. 응용 프로그램을 행으로 다시 스크롤하면 이러한 값을 행에 대 한 가장 최근 데이터를 인출 유도할 합니다. 스크롤 가능 커서와 키 집합에 대 한 자세한 내용은 참조 [스크롤 가능 커서](../../../odbc/reference/develop-app/scrollable-cursors.md)합니다.
+

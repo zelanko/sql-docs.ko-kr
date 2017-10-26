@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4723b48732065ccc2f307d9eeef46f8b35574c2d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  특히 임시 쿼리를 지 원하는, 거의 만든 결과 집합의 메타 데이터를 파악 하는 일반 응용 프로그램입니다. 따라서 런타임에 함수를 사용 하 여 메타 데이터를 검색 해야은 **SQLNumResultCols**, **SQLDescribeCol**, 및 **SQLColAttribute**에 다음 섹션, [SQLDescribeCol 및 SQLColAttribute](../../../odbc/reference/develop-app/sqldescribecol-and-sqlcolattribute.md)합니다.  
   
  형식에 관계 없이 모든 응용 프로그램 카탈로그 함수에서 반환 된 결과 집합에 대 한 하드 코딩 메타 데이터를 수 있습니다. 이러한 결과 집합은이 설명서의 참조 섹션에 정의 됩니다.
+

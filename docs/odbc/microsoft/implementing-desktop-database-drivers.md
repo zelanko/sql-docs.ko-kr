@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b3bd82e42daf591e1572536ed0541961f0c41842
@@ -53,3 +54,4 @@ ODBC 데이터 원본 관리자 온라인 도움말의 지침 및 구현 하 고
 -   [데스크톱 데이터베이스 드라이버 호환성](../../odbc/microsoft/desktop-database-driver-compatibility.md)  
   
 -   [데스크톱 데이터베이스 드라이버 성능 문제](../../odbc/microsoft/desktop-database-driver-performance-issues.md)
+

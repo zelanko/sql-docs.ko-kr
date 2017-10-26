@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3f373fe012c2b791329fea35ca853021e70274eb
@@ -35,3 +36,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Driver Manager]Direction option out of range
 ```  
   
  드라이버 관리자에서이 오류가 발생 하기 때문에 있으므로 접두사에 추가 진단 메시지 ([Microsoft]) 공급 업체 및 해당 식별자 ([ODBC 드라이버 관리자])에 대 한 합니다.
+

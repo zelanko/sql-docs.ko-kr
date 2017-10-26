@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9bb45857d47ef145c5693f6718696cbf75ccd666
@@ -42,3 +43,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|드라이버에서 SQL_TXN_READ_COMMITTED만 허용 합니다.<br /><br /> 다음 vParams 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
 |SQL_ATTR_ENLIST_IN_DTC|이 ODBC 3.0 연결 특성을 사용 하면 oracle ODBC 드라이버를 사용 하 여 Microsoft 구성 요소 서비스 (또는 Windows NT를 사용 하는 경우에 MTS)에 의해 조정 된 분산 트랜잭션에 수 있습니다. 인터페이스 포인터를 제공 *pITransaction* 으로 트랜잭션에 *vParam* 인수입니다.|  
 |SQL_ATTR_CONNECTION_DEAD|이 읽기 전용 ODBC 3.5 연결 특성을 사용 하면 Oracle 서버에 연결에 문제가 있는지 여부를 확인 수 있습니다. Get만 사용 합니다. 설정할 수 없습니다.|
+

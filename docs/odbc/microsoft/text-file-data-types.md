@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: cd72cc24ff011559addeabd0bcc95b172db1a60f
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 |LONGCHAR|이론상 제한 중 하나에 있는 LONGCHAR 열의 너비에 고정 길이 또는 구분 기호로 분리 된 테이블은 65500 K. 텍스트 ISAM는 32k 약까지 신뢰할 수 있는 지원을 제공 하기 위해 가능성이 높습니다.|  
   
  데이터 형식에 대 한 자세한 제한에서 확인할 수 있습니다 [데이터 형식 제한](../../odbc/microsoft/data-type-limitations.md)합니다.
+

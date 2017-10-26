@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: fa215150c483776f9188ed16044b59500cb257e7
@@ -40,3 +41,4 @@ ODBC는 프로시저를 실행 하기 위한 표준 이스케이프 시퀀스를
     -   데이터 원본에 프로시저를 호출 하 고 변환 된 매개 변수 값을 보냅니다. 드라이버 관련은 드라이버는 프로시저를 호출 하는 방법입니다. 예를 들어 로그 분석은 데이터 소스의 SQL 문법을 사용 하 고 실행 하기 위해이 문을 제출 하는 SQL 문을 수정할 수 있습니다 또는 DBMS의 데이터 스트림 프로토콜에 정의 된 원격 프로시저 호출 (RPC) 메커니즘을 사용 하 여 직접 프로시저를 호출할 수 있습니다.  
   
     -   모든 입/출력 또는 출력 매개 변수의 값 또는 프로시저가 성공할 것으로 가정 하 여 프로시저 반환 값을 반환 합니다. 다른 모든 결과 (행 개수 및 결과 집합) 생성 프로시저에 의해 처리 된 후 이러한 값 수까지 사용할 수 없습니다. 프로시저가 실패할 경우 드라이버는 모든 오류를 반환 합니다.
+

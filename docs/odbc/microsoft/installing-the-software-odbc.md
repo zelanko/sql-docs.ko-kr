@@ -17,6 +17,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c46b87a3d9ea3f30524a261bc81bd37aa03c9aca
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!CAUTION]  
 >  MDAC/Windows DAC를 통해 Oracle 소프트웨어를 설치 하면 현재 버전의 MDAC 덮어쓸 수 있습니다. ODBC 구성 요소를 사용 하 여 문제가 발생 하면 다시 MDAC를 설치 합니다.
+

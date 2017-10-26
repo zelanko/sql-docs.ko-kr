@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 51f02b5b243286a650897fecdcac5d8778bd3f40
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   [페치된 행 수 및 상태](../../../odbc/reference/develop-app/number-of-rows-fetched-and-status.md)  
   
 -   [SQLGetData 및 블록 커서; 블록 curso](../../../odbc/reference/develop-app/sqlgetdata-and-block-cursors.md)
+

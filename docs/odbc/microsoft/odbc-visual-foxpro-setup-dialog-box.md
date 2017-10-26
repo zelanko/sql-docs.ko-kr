@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 22208bd706e7b8966f54a501e9580b35d99a0555
@@ -81,3 +82,4 @@ DELETED=YES"
   
  **백그라운드에서 데이터를 인출 합니다.**  
  (점진적 인출) 백그라운드에서 인출 되는 레코드 또는 응용 프로그램 결과 집합의 모든 레코드 인출 될 때까지 기다립니다 있는지 여부를 결정 합니다.
+

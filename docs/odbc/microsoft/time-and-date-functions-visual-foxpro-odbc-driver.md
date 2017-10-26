@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bab52b29d54416dca84d18cb0cd2b832da1b4d63
@@ -85,3 +86,4 @@ UPDATE alltypes
   
 ## <a name="remarks"></a>주의  
  이스케이프 시퀀스에 대 한 자세한 내용은 참조 [odbc에서 이스케이프 시퀀스](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) 에 *ODBC Programmer's Reference*합니다.
+

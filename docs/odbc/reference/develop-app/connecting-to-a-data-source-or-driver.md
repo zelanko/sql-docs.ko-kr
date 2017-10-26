@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 040e68738c189ce4711cb94e0d7c5dad258f3994
@@ -43,3 +44,4 @@ ms.lasthandoff: 09/09/2017
 -   [데이터 원본 또는 드라이버 연결 끊기](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)  
   
 -   [연결 과정에서 드라이버 관리자의 역할](../../../odbc/reference/develop-app/driver-manager-s-role-in-the-connection-process.md)
+

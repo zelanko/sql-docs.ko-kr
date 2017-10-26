@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7cbd7ca159b09ee1482139ef76bfff48115a62bd
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
  키 집합 커서는 결과 집합의 각 행에 대 한 키가 포함 된 임시 테이블을 만들어 일반적으로 구현 됩니다. 커서 행 업데이트 되었는지 여부를 결정 해야,이 테이블 열이 행 버전 관리 정보로 일반적으로 포함 됩니다.  
   
  원래 결과 집합에 대해 스크롤해야 키 집합 커서는 임시 테이블에 대해 정적 커서를 엽니다. 따라서 원래 결과 집합의 행을 검색 하려면 커서 먼저 임시 테이블에서 적절 한 키를 검색 하 고 행에 대 한 현재 값을 검색 합니다. 블록 커서를 사용 하는 경우 커서는 여러 개의 키와 행 검색 해야 합니다.
+

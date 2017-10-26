@@ -17,6 +17,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 04e952a79e026697592f8412c48eb2e065da18df
@@ -46,3 +47,4 @@ ODBC 아키텍처에는 네 가지 구성 요소에 있습니다.
 -   [드라이버](../../odbc/reference/drivers.md)  
   
 -   [데이터 원본](../../odbc/reference/data-sources.md)
+

@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 95a0b865d33d96b740a48971bfccbc1334b37807
@@ -88,3 +89,4 @@ ms.lasthandoff: 06/22/2017
 2.  사용자가 **replmonitor** 역할에 속해 있으면 배포 데이터베이스의 배포자에서 [sp_droprolemember&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)를 실행합니다. **@rolename**에는 **replmonitor** 값을 지정하고 **@membername**에는 제거할 데이터베이스 사용자 또는 Windows 로그인의 이름을 지정합니다.  
   
   
+

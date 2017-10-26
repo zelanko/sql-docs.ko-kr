@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f9233e7582083ba08fb1239120e63db819b8724b
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/09/2017
 ```  
   
  텍스트 드라이버를 사용 하면 모든 열 값 선행 공백이 채워질 수 있습니다. 모든 행의 길이 보다 작거나 65,543 바이트가 하 여야 합니다.
+

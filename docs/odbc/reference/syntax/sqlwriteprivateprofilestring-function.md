@@ -23,6 +23,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3025fedee1c5528704c366fa04c5d7ff32e124ee
@@ -83,3 +84,4 @@ BOOL SQLWritePrivateProfileString(
 |내용|참조 항목|  
 |---------------------------|---------|  
 |시스템 정보에서 값 가져오기|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|
+

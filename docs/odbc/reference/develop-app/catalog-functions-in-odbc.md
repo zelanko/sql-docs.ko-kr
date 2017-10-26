@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 74b86dfd62a12938d18b4aa11a8d0502db50da13
@@ -50,3 +51,4 @@ ODBC는 다음과 같은 카탈로그 함수를 포함 되어 있습니다.
 -   [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)  
   
 -   [스키마 뷰](../../../odbc/reference/develop-app/schema-views.md)
+

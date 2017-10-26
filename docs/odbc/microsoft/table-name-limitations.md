@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 690b6242b9e8d38b6a1f26ddbd823215030e2b15
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  Microsoft Access 드라이버를 사용 하면 테이블 이름은 64 자로 제한 됩니다.  
   
  DBASE, 3.0 또는 4.0, 텍스트 또는 Paradox, Microsoft Excel 드라이버를 사용 하면 CON, AUX, LPT1, LPT2 특수 MS-DOS 키워드는 테이블 이름으로 사용할 수 없습니다.
+

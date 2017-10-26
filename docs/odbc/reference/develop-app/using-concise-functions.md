@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5559250002983b942601311b04e1f4ae2eac49a2
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
  **SQLSetDescRec** 및 **SQLGetDescRec** 는 간결 하 게 하는 함수를 한 번의 호출으로 데이터 형식 및 열 또는 매개 변수 데이터의 저장소에 영향을 주는 여러 설명자 필드를 가져오거나 설정 합니다. **SQLSetDescRec** 은 한 번에 열 또는 매개 변수 데이터의 바인딩을 변경 하는 효과적인 방법입니다.  
   
  **SQLSetStmtAttr** 및 **SQLGetStmtAttr** 역할 경우에 따라 간결 하 게 기능을 수행 합니다. (참조 [설명자 필드](../../../odbc/reference/develop-app/descriptor-fields.md).)
+

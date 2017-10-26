@@ -18,6 +18,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f6876496d243cefd2f3d6b7eb0cd5480bf225189
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Version3.5 드라이버 ODBC2와 작동 하도록 설계 되었습니다. *x*합니다. ODBC 3.0 에서도 작동 하지만 모든 ODBC 3.0 기능을 지원 하지 않습니다. 이러한 드라이버 ODBC 3.0과 함께 작동 하는 방식에 대 한 자세한 내용은 참조 [이전 버전과 호환성 및 표준 준수](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)합니다.
+

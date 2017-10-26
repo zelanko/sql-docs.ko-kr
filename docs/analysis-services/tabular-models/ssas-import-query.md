@@ -1,7 +1,7 @@
 ---
 title: "기본 쿼리 (Analysis Services)를 사용 하 여 데이터를 가져올 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/02/2017
+ms.date: 10/26/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -22,6 +22,8 @@ ms.lasthandoff: 10/11/2017
 
 ---
 # <a name="import-data-by-using-a-native-query"></a>기본 쿼리를 사용 하 여 데이터 가져오기
+
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
 테이블 형식 1400 모델에 대 한 Visual Studio의 Analysis Services 프로젝트의 새로운 데이터 가져오기 환경 제공 때 엄청난 유연성 매시업 하는 방법을 데이터 가져오기 중 합니다. 이 문서에서는 데이터 원본에 연결을 만들고 데이터 가져오기를 지정 하는 네이티브 SQL 쿼리가 만드는 설명 합니다.
 

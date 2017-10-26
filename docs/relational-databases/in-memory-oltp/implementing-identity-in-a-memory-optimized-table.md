@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 21133ec5172c13b5d010c9aef1f461282acd35b5
@@ -33,3 +34,4 @@ IDENTITY 초기값을 늘리려면 세션 옵션 `SET IDENTITY_INSERT table_name
  [메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   
+

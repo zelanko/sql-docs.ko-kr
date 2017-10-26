@@ -14,6 +14,7 @@ caps.latest.revision: 20
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d19dea3d8af985f6f937711cbdc2b474b94d6ce7
@@ -53,3 +54,4 @@ Microsoft ODBC Open Database Connectivity () 인터페이스는 응용 프로그
   
 ## <a name="support"></a>지원  
  지원 옵션에 대 한 정보를 확인할 수 있습니다는 [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink?linkid=5521) 웹 사이트입니다.
+

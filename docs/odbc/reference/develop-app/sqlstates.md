@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 0c99959fac35ac1cd312ab3d434f607c3f256dd8
@@ -52,3 +53,4 @@ Sqlstate는 경고 또는 오류의 원인에 대 한 자세한 정보를 제공
  SQLSTATE HYC00 (선택적 기능이 구현 되지 않았습니다)는 유일한 방법은는 응용 프로그램 드라이버가 특정 문 또는 연결 특성을 지원 하는지 여부를 확인할 수 있기 때문에 특히 중요 합니다.  
   
  Sqlstate 및 함수 반환의 전체 목록은 참조 하십시오. [부록 a: ODBC 오류 코드](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md)합니다. 각 함수는 특정 SQLSTATE를 반환할 수 있습니다 조건, 대 한 자세한 내용은 해당 함수를 참조 하세요.
+

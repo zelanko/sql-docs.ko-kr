@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b1c9419b8b26a150e717a690fd9c03395e648845
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [트랜잭션 격리 수준 설정](../../../odbc/reference/develop-app/setting-the-transaction-isolation-level.md)  
   
 -   [스크롤 가능 커서 및 트랜잭션 격리](../../../odbc/reference/develop-app/scrollable-cursors-and-transaction-isolation.md)
+

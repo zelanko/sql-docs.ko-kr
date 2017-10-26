@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d3d5c980047d9c84a1eea6e48d6070ca704377a9
@@ -82,3 +83,4 @@ EXEC sp_create_plan_guide N'TemplateGuide1',
  또한 TEMPLATE 계획 지침은 SQL 계획 지침과도 함께 사용할 수 있습니다. 예를 들어 쿼리 클래스가 매개 변수화되도록 TEMPLATE 계획 지침을 만들 수 있습니다. 그런 다음 매개 변수가 있는 해당 쿼리 형식에 대한 SQL 계획 지침을 만들 수 있습니다.  
   
   
+

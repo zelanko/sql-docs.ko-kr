@@ -21,6 +21,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 32bfeff983ef5dff4ebfe3e575bcf36e855184d0
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!IMPORTANT]  
 >  ODBC 3 다음에 나오는 응용 프로그램입니다. *x* 사양 ODBC 3 새 기능을 사용 하지 않는 조건부 코드를 사용 해야 합니다.* x* ODBC 2 작업할 때.* x* 드라이버입니다. ODBC 2입니다. *x* 드라이버는 ODBC 3 새 기능을 지원 하지 않습니다.* x* 해 서 응용 프로그램 선언 ODBC 3을 따릅니다.* x* 사양입니다. 또한 ODBC 3. *x* ODBC 3 새 기능을 지 원하는 드라이버를 중단 하지 않습니다.* x* 응용 프로그램을 ODBC 2 따릅니다 선언 해 서.* x* 사양입니다.
+

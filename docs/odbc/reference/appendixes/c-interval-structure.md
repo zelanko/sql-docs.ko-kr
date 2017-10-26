@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 146e16608f0f2f790bf49a84de2ef4610df33d0f
@@ -74,3 +75,4 @@ typedef struct tagSQL_DAY_SECOND
 ```  
   
  *interval_type* 필드는 SQL_INTERVAL_STRUCT의 응용 프로그램에 구조 공용 구조체에 유지 되 나타내고 구조체의 멤버에 관련 된도 합니다. *interval_sign* 필드에 SQL_FALSE 값 필드를 유도 하는 간격 서명 되지 않은 경우에 SQL_TRUE 인 경우 선행 필드 음수입니다. 선행 필드 자체의 값은 항상 값에 상관 없이 서명 된 *interval_sign*합니다. *interval_sign* 필드를 부호 비트로 역할입니다.
+

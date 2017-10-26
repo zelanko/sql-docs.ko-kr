@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 4e3228a1a56de7a8220fc634ab46707d20253e37
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  더 많은 결과 보류 중인지 여부를 결정 문 핸들에서 *hstmt*, SELECT, UPDATE, INSERT 또는 DELETE 문이 포함 된 및 그렇다면 이러한 결과 대 한 처리를 초기화 합니다.  
   
  자세한 내용은 참조 [SQLMoreResults](../../odbc/reference/syntax/sqlmoreresults-function.md) 에 *ODBC Programmer's Reference*합니다.
+

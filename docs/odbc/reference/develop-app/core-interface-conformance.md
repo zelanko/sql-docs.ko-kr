@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c535d6756ba2fa5eaa20d6dec9ca3ad7ae3c85b4
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
   
     > [!IMPORTANT]  
     >  ODBC 드라이버는 핵심 인터페이스 규칙 수준에서 기능을 구현 해야 합니다.
+

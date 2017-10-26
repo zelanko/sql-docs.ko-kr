@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: be45f11a17e340fb3a6999c242fce208ae733210
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  SQL_ALL_EXCEPT_LIKE이 반환할 검색 가능한 열의 바이트에 대 한 카운터, Double, 단일, Long 및 Short 데이터 형식입니다. (값 다음 비교를 수행 하는 ODBC 정식 변환 함수를 사용 하 여 문자를 변환 하는 LIKE 기능을 구현할 수 있습니다.)  
   
  텍스트 드라이버를 사용 하면 **SQLGetTypeInfo** CASE_SENSITIVE 값이 FALSE 텍스트에 대 한 데이터 형식 (CHAR 및 LONGCHAR)을 반환 데이터 형식이 실제로 경우 대/소문자 구분 합니다.
+

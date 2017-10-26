@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 725d16d6326d5fb99ce8d923bd35c64351b3e6cb
@@ -154,3 +155,4 @@ ms.lasthandoff: 09/09/2017
 |IM013|추적 파일 오류입니다.|모든 ODBC 함수입니다.|  
 |IM014|파일 DSN의 잘못 된 이름|**SQLDriverConnect**|  
 |IM015|손상 된 파일 데이터 원본|**SQLDriverConnect**|
+

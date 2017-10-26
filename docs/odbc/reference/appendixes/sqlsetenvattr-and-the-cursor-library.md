@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: c08fab3b713e1f1a57d7a81f53ed29b1678893cd
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  이 항목의 사용을 설명는 **SQLSetEnvAttr** 커서 라이브러리에는 함수입니다. 에 대 한 일반적인 내용은 **SQLSetEnvAttr**, 참조 [SQLSetEnvAttr 함수](../../../odbc/reference/syntax/sqlsetenvattr-function.md)합니다.  
   
  커서 라이브러리 SQL_ATTR_ODBC_VERSION 환경 특성 응용 프로그램 버전 또는 드라이버 버전에 관계 없이 설정에 의해 영향을 받지 않습니다.
+

@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 309d575f63a776e90f32ba45239ecbd67771d250
@@ -48,3 +49,4 @@ Windows 8에는 업데이트 된 버전의 ODBC 3.8 포함 되어 있습니다. 
   
 ## <a name="see-also"></a>관련 항목:  
  [ODBC 프로그래머 참조](../../odbc/reference/odbc-programmer-s-reference.md)
+

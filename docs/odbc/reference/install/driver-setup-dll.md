@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d75a8985feff2ddfe26d3e19e8bafd91f228d30e
@@ -44,3 +45,4 @@ ms.lasthandoff: 09/09/2017
 -   **SQLGetTranslator**합니다. 변환기 이름 및 옵션에 대 한 사용자 메시지를 표시 합니다. 이 함수 호출 **ConfigTranslator** 변환기에 DLL을 설치 합니다.  
   
  드라이버 설치 DLL 드라이버 개발자가 작성 됩니다. 드라이버의 일부가 될 수 있습니다 DLL 또는 별도 DLL입니다.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 21b151256f93d77cd0efecedfa8eef2ddcd6482b
@@ -40,3 +41,4 @@ ODBC 드라이버 하위 키 아래의 값 설치 된 드라이버를 나열합�
 Text : REG_SZ : Installed  
 SQL Server : REG_SZ : Installed  
 ```
+

@@ -22,6 +22,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: db557f215db12f95c2dd0a44a8448a138dac3856
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/09/2017
  [집합 다시 처리](../../odbc/microsoft/set-reprocess-command.md)  
   
  [고유한 설정](../../odbc/microsoft/set-unique-command.md)
+

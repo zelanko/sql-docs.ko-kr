@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8a58d17e4095afc92976094926be77ecdab1ad65
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
  Msdadc.h  
   
  Sqlspi.h (드라이버 개발에 사용 되는, 참조 [ODBC 서비스 공급자 인터페이스 (SPI) 참조](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md) 에 대 한 자세한 내용은) Windows 8 SDK부터 사용할 수 있습니다.
+

@@ -21,6 +21,7 @@ caps.latest.revision: 11
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a6250d693414a9d63077bcc5e47438d847ae72ce
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
  블록 및 스크롤 가능 커서는 많은 응용 프로그램에 매우 유용한 추가 됩니다. 그러나 일부 드라이버 블록 및 스크롤 가능 커서를 지원 합니다. 위치 지정된 업데이트의 경우에 동일한 및 delete 문 및 **SQLSetPos**, 데이터 업데이트에 대해서는 설명입니다. 따라서 ODBC 구성 요소에는 Microsoft 데이터 액세스 구성 요소 (MDAC) SDK를 포함 하는 Windows SDK의 커서 라이브러리가 포함 됩니다. 블록, 정적 커서, 위치 지정된 update 및 delete 문은 커서 라이브러리를 구현 하 고 **SQLSetPos** Open 그룹 표준 CLI 규칙 수준을 충족 하는 모든 드라이버에 대 한 합니다. ODBC 응용 프로그램; 함께 커서 라이브러리를 재배포할 수 있습니다. 자세한 내용은 SDK에서 사용권 계약을 참조 하십시오.  
   
  커서 라이브러리를 사용 하려면 응용 프로그램 데이터 원본에 연결 하기 전에 SQL_ATTR_ODBC_CURSORS 연결 특성을 설정 합니다. 커서 라이브러리에 대 한 자세한 내용은 참조 [부록 f: ODBC 커서 라이브러리](../../../odbc/reference/appendixes/appendix-f-odbc-cursor-library.md)합니다.
+

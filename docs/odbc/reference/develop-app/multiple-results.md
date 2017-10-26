@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 62a4b7edd47ca6c9a6b1c7469e18269af3ab907d
@@ -57,3 +58,4 @@ UPDATE Parts SET Price = 0.9 * Price WHERE Price > 100.00
  모든 결과 사용할 수 전에 전체 일괄 처리 문이 실행 되는 여부 드라이버 관련 됩니다. 이 경우; 일부 구현에서 호출, 다른 **SQLMoreResults** 일괄 처리의 다음 문으로 실행을 트리거합니다.  
   
  일괄 처리에서 문 중 하나가 실패 하면 **SQLMoreResults** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 문이 실패 했습니다 되거나 실패 한 문이 된 일괄 처리에서 마지막 문인 경우 일괄 처리가 중단 된 경우 **SQLMoreResults** SQL_ERROR를 반환 합니다. 문이 실패 하 고 실패 한 문을 일괄 처리의 마지막 문이 없습니다. 때 일괄 처리 중단 되지는 않은 경우 **SQLMoreResults** sql_success_with_info가 반환 됩니다. SQL_SUCCESS_WITH_INFO 하나 이상의 결과 집합 또는 개수를 생성 했음을 일괄 처리가 중단 되지 않았음을 나타냅니다.
+

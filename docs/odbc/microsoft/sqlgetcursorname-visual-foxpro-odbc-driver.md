@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a44ce860b8cd09c89597c0fc8ed55a1ba643e4c3
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  연관 된 커서의 이름을 반환 하는 지정 된 *hstmt*합니다. **SQLGetCursorName** 때문에 Visual FoxPro ODBC 드라이버 API에 포함 되는 일부 핵심 수준 API 기능 이지만 드라이버에서 위치 지정된 업데이트를 지원 하지 않으므로 다른 API 함수를 함께 사용할 수 없습니다.  
   
  자세한 내용은 참조 [SQLGetCursorName](../../odbc/reference/syntax/sqlgetcursorname-function.md) 에 *ODBC Programmer's Reference*합니다.
+

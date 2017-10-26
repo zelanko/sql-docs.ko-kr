@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: efe7ea13150afe1eb9df7586df1a1a83e8f3f92f
@@ -98,3 +99,4 @@ INTERVAL[<sign>] 'value' <interval qualifier>
 |{간격 '223.16' 두 번째}<br /><br /> {간격 '223' YEAR}|선행 정밀도 지정 하지 않으면 때문에 기본적으로 2는 너무 작아서 지정 된 리터럴을 보유 합니다.|  
 |{간격 '22.1234567' 두 번째}|초 전체 자릿수 지정 하지 않으므로 기본적으로 6. 리터럴 자릿수는 7 소수점 뒤 합니다.|  
 |{간격 ' 163-13' YEAR(3) 달으로}<br /><br /> {간격 ' 163 65' 시간 DAY(3)}<br /><br /> {간격을 분으로 DAY(3) '163 62:39'을 (를)<br /><br /> {간격 SECOND(3) DAY(3) '163 12:125:59.163'을 (를)<br /><br /> {간격 '163:144' 분으로 HOUR(3)}<br /><br /> {간격 '163:567:234.163' SECOND(4) HOUR(3)}<br /><br /> {간격 '163:591.163' SECOND(5) MINUTE(3)}|후행 필드는 일반 달력의 규칙을 따르지 않습니다.|
+

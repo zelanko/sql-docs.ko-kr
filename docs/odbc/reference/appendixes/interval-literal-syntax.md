@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 472a8a68032c1d5b119bbf1d366b353927eca0dd
@@ -81,3 +82,4 @@ ODBC의 간격 리터럴에 다음 구문을 사용 됩니다.
  *견적* :: = '  
   
  *부호 없는 정수* :: = *자리...*
+

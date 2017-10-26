@@ -16,6 +16,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6d8ca656e63183df424de2ec45c823ac275ef69f
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  이 항목의 사용을 설명는 **SQLGetFunctions** 커서 라이브러리의 함수가 있습니다. 에 대 한 일반적인 내용은 **SQLGetFunctions**, 참조 [SQLGetFunctions 함수](../../../odbc/reference/syntax/sqlgetfunctions-function.md)합니다.  
   
  호출 하는 경우 **SQLGetFunctions**, 커서 라이브러리 지원 된다는 점을 반환 **SQLExtendedFetch**, **SQLFetchScroll**, **SQLSetPos**, 및 **SQLSetScrollOptions**, 드라이버에서 지 원하는 함수 외에도 합니다.
+

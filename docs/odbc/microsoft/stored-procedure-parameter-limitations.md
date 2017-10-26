@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 59beb012675e3f6af8e1aef65fe2905d353e31ab
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
   
 > [!NOTE]  
 >  Oracle 클라이언트 소프트웨어 버전 8.0.3.0.0 초기 릴리스에서이 문제가 발생 하지 않습니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 38967637f505191a5ff353c13b4ebfbbe08e615a
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/09/2017
 -   매개 변수는 문자열이 APD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 null 값을 해당 문자열은 null로 끝나는 드라이버 가정 합니다. 이 필드에 null 값을 출력 동적 매개 변수에 대 한 길이 정보를 반환 합니다. 드라이버를 방지 합니다. (SQL_DESC_TYPE 필드는 문자열 매개 변수를 나타내지 않습니다 SQL_DESC_OCTET_LENGTH_PTR 필드는 무시 됩니다.)  
   
  응용 프로그램 하지 할당을 취소 하거나 필드와 함께 연결 시간 및 드라이버를 읽거나 씁니다 시간 간의 지연 된 필드에 대해 사용 되는 변수를 삭제 해야 합니다.
+

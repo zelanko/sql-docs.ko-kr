@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 637439dfbf7d9d787253d95734996923739df023
@@ -54,3 +55,4 @@ Visual FoxPro ODBC 드라이버 설명서의이 섹션에는 다음 항목이 �
 -   [오류 메시지](../../odbc/microsoft/error-messages-visual-foxpro-odbc-driver.md)  
   
 -   [문제 해결](../../odbc/microsoft/troubleshooting-visual-foxpro-odbc-driver.md)
+

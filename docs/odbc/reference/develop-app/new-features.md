@@ -20,6 +20,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6e2b48097b6c398772e14d2594a583d89e6825e0
@@ -113,3 +114,4 @@ ODBC 3에서 다음과 같은 새로운 기능을 도입 했습니다. *x*합니
  이 섹션에는 다음 항목 포함 되어 있습니다.  
   
 -   [ODBC 3.x 응용 프로그램의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/develop-app/block-cursors-scrollable-backward-compatibility-odbc-3-x-applications.md)
+

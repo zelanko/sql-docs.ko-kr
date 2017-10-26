@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a96949b4ca739e382a547769f496576bf13db8b7
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/09/2017
 -   [상호 운용 가능한 응용 프로그램 작성](../../../odbc/reference/develop-app/writing-an-interoperable-application.md)  
   
 -   [상호 운용 가능한 응용 프로그램 테스트](../../../odbc/reference/develop-app/testing-interoperable-applications.md)
+

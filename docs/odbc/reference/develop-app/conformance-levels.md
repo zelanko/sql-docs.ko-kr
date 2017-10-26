@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d13cad1b6946e1c446faa77a1a193752c05da702
@@ -34,3 +35,4 @@ ODBC 드라이버는 다양 한 데이터 원본에 응용 프로그램 액세�
 -   [인터페이스 적합성 수준](../../../odbc/reference/develop-app/interface-conformance-levels.md)  
   
 -   [SQL 적합성 수준](../../../odbc/reference/develop-app/sql-conformance-levels.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 054c274bc65c0f4ecf149607216f62e9e15df225
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/09/2017
 2.  연결 대화 상자에 대 한 적절 한 정보 입력 한 다음 확인을 누릅니다.  
   
  연결 후 응용 프로그램 Oracle에 대 한 ODBC 드라이버를 사용 하 여 데이터 원본에 포함 된 정보에 액세스할 수 정보 확인 됩니다.
+

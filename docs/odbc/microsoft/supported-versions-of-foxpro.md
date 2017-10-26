@@ -20,6 +20,7 @@ caps.latest.revision: 8
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 425821e0de310c28f18796cb74308600cd91476f
@@ -43,3 +44,4 @@ FoxPro 테이블에 저장 된 데이터에 액세스 하기 위해 Microsoft® 
  데이터 원본에 연결 하는 방법에 대 한 자세한 내용은 참조 [Visual FoxPro 데이터 소스 추가](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md)합니다.  
   
  드라이버를 다운로드 하려면 [Visual FoxPro ODBC 드라이버 다운로드 사이트](http://go.microsoft.com/fwlink/?LinkId=121318)합니다.
+

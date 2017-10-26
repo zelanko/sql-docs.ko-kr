@@ -22,6 +22,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 93432e89688b9028686350f87182ef1b674c8383
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 드라이버는 더블 바이트 문자 집합 (DBCS)를 지원합니다. 자세한 내용은 참조 [다국어 기능 지원](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md)합니다.  
   
  드라이버는 16 비트 Windows 3.1의 Microsoft 응용 프로그램을 지원 하지 않습니다.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 16
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 63ce89349141934c2e4d5cfd5a8507b7d28e2650
@@ -35,3 +36,4 @@ ms.lasthandoff: 06/22/2017
 |[User-Configurable 이벤트 클래스](../../relational-databases/event-classes/user-configurable-event-class.md)|시스템에서 제공하는 다른 이벤트 범주 내의 이벤트로 모니터링할 수 없는 사용자 정의 이벤트를 모니터링하는 데 사용됩니다.|  
   
   
+

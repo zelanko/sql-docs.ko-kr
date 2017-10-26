@@ -20,6 +20,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 26835fa277391f359d628ec25c03d38364e398e7
@@ -84,3 +85,4 @@ ODBC 응용 프로그램을 다음과 같이 분류할 수 있습니다.
     -   조건부 코드 내 에서만 ODBC의 최신 버전에서 새로운 기능을 사용합니다.  
   
     -   제한적으로 조건부 처리 하는 코드 변경 된 동작 또는 ODBC 응용 프로그램의 이전 버전 되도록 등록 되어 있습니다.
+

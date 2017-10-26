@@ -16,6 +16,7 @@ caps.latest.revision: 7
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6e519667f9c91eb05274624e8c8d6eefdea0a1fa
@@ -45,3 +46,4 @@ ms.lasthandoff: 06/22/2017
 |서버 성능 및 작업 모니터링 관련 항목을 연결합니다.|[서버 성능 및 작업 모니터링](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|  
   
   
+

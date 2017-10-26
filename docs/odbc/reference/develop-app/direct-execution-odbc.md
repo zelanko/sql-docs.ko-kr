@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: bdc332f2541fd8537fbd924e1da9ea631d8d3189
@@ -57,3 +58,4 @@ SQLExecDirect(hstmt, SQLStatement, SQL_NTS);
     -   실행에 대 한 데이터 원본에 문과 변환 된 매개 변수 값을 보냅니다.  
   
     -   모든 오류를 반환 합니다. 여기에 시퀀싱 또는 (잘못 된 커서 상태) SQLSTATE 24000 같은 상태 진단, SQLSTATE 42000 (구문 오류 또는 액세스 위반), 예: 구문 오류 및 SQLSTATE 42S02 같은 의미 체계 오류 (기본 테이블 또는 뷰를 찾을 수 없음).
+

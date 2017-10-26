@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 69912ee54db3be2ef7fb068bfe26e76cbf05cdc0
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  결과 집합에 대 한 이전 호출에서 지정한 위치에서에서 한 행을 검색 [SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md)합니다. 드라이버에 대 한 호출에 대 한 준비 [SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md) 바인딩되지 않은 열에 대 한 합니다.  
   
  자세한 내용은 참조 [SQLFetch](../../odbc/reference/syntax/sqlfetch-function.md) 에 *ODBC Programmer's Reference*합니다.
+

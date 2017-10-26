@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 9ac53209063a1204b57e7183501b5901dc8ea248
@@ -33,3 +34,4 @@ ms.lasthandoff: 09/09/2017
  다섯 번째 단계는 호출 하는 **SQLEndTran** 커밋하거나 트랜잭션을 롤백합니다. 응용 프로그램이 트랜잭션 커밋 모드 수동 커밋;로 설정 하는 경우에이 단계를 수행 트랜잭션 커밋 모드는 자동 커밋의 기본 설정인 문이 실행 될 때 트랜잭션이 자동으로 커밋될 때. 자세한 내용은 참조 [트랜잭션을](../../../odbc/reference/develop-app/transactions-odbc.md)합니다.  
   
  새 트랜잭션에 문을 실행 하려면 응용 프로그램 3 단계를 반환 합니다. 데이터 원본에서 연결을 끊을 응용 프로그램은 6 단계로 진행 됩니다.
+

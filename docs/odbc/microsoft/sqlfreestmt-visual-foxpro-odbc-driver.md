@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 673298af856478eb1c94db4f79ef5fb56ee3396b
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  연결에 특정 된 처리를 중지 *hstmt*, 연결 된 열려 있는 모든 커서를 닫습니다는 *hstmt*보류 중인 결과가 삭제 하 고 필요에 따라 문과 연결 된 모든 리소스를 해제 핸들입니다.  
   
  자세한 내용은 참조 [SQLFreeStmt](../../odbc/reference/syntax/sqlfreestmt-function.md) 에 *ODBC Programmer's Reference*합니다.
+

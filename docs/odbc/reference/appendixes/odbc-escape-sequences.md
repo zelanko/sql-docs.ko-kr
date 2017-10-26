@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 525475b3e9d7cdeae9755208da1cb19e9c077fe8
@@ -39,3 +40,4 @@ ms.lasthandoff: 09/09/2017
 -   [프로시저 호출 이스케이프 시퀀스](../../../odbc/reference/appendixes/procedure-call-escape-sequence.md)  
   
 -   [스칼라 함수 이스케이프 시퀀스](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md)
+

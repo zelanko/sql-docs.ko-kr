@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 6d05a47366c0781480fd20c9afee2f5d10b4b84f
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
 -   [Excel에 대한 SQLGetInfo 반환 값](../../odbc/microsoft/sqlgetinfo-returned-values-for-excel.md)  
   
 -   [기타 Excel 드라이버 프로그래밍 세부 정보](../../odbc/microsoft/other-excel-driver-programming-details.md)
+

@@ -20,6 +20,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f37ab932ef230d29a5db23aec920230de0443e37
@@ -33,3 +34,4 @@ DBMS SQL 문을 보내기 위한 두 번째 방법은 모듈을 통해 것입니
  모듈을 응용 프로그램 코드에 연결 된 개체 라이브러리로 생각할 수 있습니다. 그러나 정확 하 게 프로시저와 응용 프로그램의 나머지과 연결 된 방법을 구현에 따라 다릅니다. 예를 들어 프로시저를 개체 코드로 컴파일될와 응용 프로그램 코드에 직접 연결할 수 없습니다, 컴파일 및 DBMS 및 응용 프로그램 코드에 배치 하는 계획 식별자 액세스에 대 한 호출에 저장 된 수 또는 런타임 시 해석 될 수 있습니다.  
   
  모듈의 주요 장점은 프로그래밍 언어에서 SQL 문의 명확 하 게 구분 하는 것입니다. 이론적으로, 다른 변경 하지 않고 하나를 변경 하 여 단순히 다시 연결 수 있어야 합니다.
+

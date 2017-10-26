@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: d664d15e359070b33f5fb9f7ac2c4737ee900351
@@ -35,3 +36,4 @@ Visual FoxPro ODBC 드라이버는 ODBC SQL 문법에 정의 된 세 가지 유�
 -   [숫자 함수(Visual FoxPro ODBC 드라이버)](../../odbc/microsoft/numeric-functions-visual-foxpro-odbc-driver.md)  
   
 -   [날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)](../../odbc/microsoft/time-and-date-functions-visual-foxpro-odbc-driver.md)
+

@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: a60688231bc01f55cf5b49fae3bb8d6da4a54950
@@ -47,3 +48,4 @@ SELECT * FROM Customers WHERE (Name > ?) AND (CustID > ?)
  이 문은 첫 번째 행의 원래 결과 집합의 다음 행 집합은 두 번째 결과 집합을 만듭니다-이 경우 Customers 테이블의 행 집합입니다. 커서는 응용 프로그램에이 행 집합을 반환합니다.  
   
  보면 흥미롭습니다 이런이 방식으로 구현 되는 동적 커서 많은 결과 집합을 생성 하는 실제로 원래 결과 집합에 변경 내용을 검색할 수 있습니다. 이러한 보조 결과 집합이 있는지 식별 되지 응용 프로그램 단순히 커서가 원래 결과 집합에 변경 내용을 검색할 수 있는 처럼 나타납니다.
+

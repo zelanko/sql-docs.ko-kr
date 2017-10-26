@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e642685b670fa872c1a34d2d10fed815e5a6fa7e
@@ -37,3 +38,4 @@ ms.lasthandoff: 09/09/2017
 -   1을 더한 명시적 또는 묵시적 초 전체 자릿수입니다. 초 전체 자릿수를 지정 하지 않으면 기본값은 6입니다.  
   
  각 간격 데이터 형식에 대 한 특정 열 길이 값에 포함 되어 [열 크기](../../../odbc/reference/appendixes/column-size.md)합니다.
+

@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: b267e536535d0df75e1f7c048baa31099c97a704
@@ -41,3 +42,4 @@ SQLINTEGER sdwHighWord;
 ```  
   
  이러한 구조는 64 비트 정수는 8 바이트 경계에 맞춰집니다 때문에 8 바이트 경계에 맞춰야 합니다.
+

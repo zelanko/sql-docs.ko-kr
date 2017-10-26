@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 21d250dab0dd2407cebdbb0626b914867e35288d
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  마지막으로 영향을 받는 행 수를 반환 [업데이트](../../odbc/microsoft/update-sql-command.md), [삽입](../../odbc/microsoft/insert-sql-command.md), 또는 [삭제](../../odbc/microsoft/delete-sql-command.md) 문.  
   
  자세한 내용은 참조 [SQLRowCount](../../odbc/reference/syntax/sqlrowcount-function.md) 에 *ODBC Programmer's Reference*합니다.
+

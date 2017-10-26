@@ -17,6 +17,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 82062fe767847023cd1aa6614173b292b0bff378
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/09/2017
  추적 파일 데이터 형식에는 각 ODBC 함수 호출의 로그 및 모든 인수의 값을 제공합니다. 모든 입력된 함수를 기록 하 고 반환 코드 및 오류 상태 모두를 사용 하 여 반환 된 모든 기능을 기록 합니다.  
   
  ODBC 3에서*.x*, 추적 DLL에 연결 함수에 매개 변수가 제공 되지 않습니다.
+

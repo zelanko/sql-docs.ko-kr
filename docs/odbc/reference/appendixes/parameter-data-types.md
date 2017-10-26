@@ -19,6 +19,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 5dcd41f599a6e57a55d05a8a869363ec70c5f756
@@ -40,3 +41,4 @@ ms.lasthandoff: 09/09/2017
 |사용 하는 값 **IN**|식 또는 식에 매개 변수 표식이 있는 경우 첫 번째 값과 동일|  
 |사용 하는 패턴 값 **같은**|VARCHAR|  
 |함께 사용할 업데이트 값 **업데이트**|업데이트가 열과 동일|
+

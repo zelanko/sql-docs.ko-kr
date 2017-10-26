@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7905a4abae2efdbbb8679e625afea917caebde35
@@ -34,3 +35,4 @@ ms.lasthandoff: 09/09/2017
  데이터 원본 이름을 나열합니다.  
   
  자세한 내용은 참조 [SQLDataSources](../../odbc/reference/syntax/sqldatasources-function.md) 에 *ODBC Programmer's Reference*합니다.
+

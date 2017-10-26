@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 657d0324132b279300e2a61151c790f066e4a3f5
@@ -31,3 +32,4 @@ ms.lasthandoff: 09/09/2017
  Microsoft Access 드라이버를 사용 하면 SQL_COMMIT SQL_ROLLBACK에 지원 됩니다는 *fType* 인수에 대 한 호출에 **SQLTransact**합니다.  
   
  영향을 받는 데이터베이스 Microsoft Access 드라이버 설치 프로그램에서 또는 REPAIR_DB 키워드를 사용 하 여 데이터베이스 복구 옵션을 사용 하 여 복구할 수는 커밋 프로세스가 중에 오류가 발생 하는 경우는 **SQLConfigDataSource** 함수입니다.
+

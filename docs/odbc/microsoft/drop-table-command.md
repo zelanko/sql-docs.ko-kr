@@ -16,6 +16,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: f346bc3701df00cdddf5e6af77f500017570bd51
@@ -55,3 +56,4 @@ DROP TABLE TableName | FileName | ?
 |-----------------|-----------------|--------------------------|  
 |DROP TABLE *기본 테이블 이름*|데이터베이스 (.dbc 파일)|테이블 제거 *TableName* 삭제|  
 ||사용 가능한 테이블 (.dbf 파일)의 디렉터리|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|
+

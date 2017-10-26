@@ -18,6 +18,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 8ccd79048c250c73867752ebaf0b2b7060a6c19b
@@ -77,3 +78,4 @@ int main() {
  런타임 시 SQL 문을 생성 하는 응용 프로그램 사용자에 게 엄청난 유연성을 제공할 수 있습니다. 와 같은 일반적인 작업에도 지원 하지 않는 이전 예제에서 볼 수 있듯이 **여기서** 절 **ORDER BY** 절 또는 런타임 시 SQL 문을 구성 하는 조인에는 훨씬 더 복잡 한 문보다 하드 코딩 합니다. 또한 이러한 응용 프로그램 테스트 문제가 될 수는 임의 개수의 SQL 문 생성할 수 있습니다.  
   
  런타임 시 SQL 문을 생성할 수 있다는 단점이 하드 코드 된 문을 사용 하 여 보다는 문을 생성 하는 데 훨씬 더 많은 시간이 걸리는 경우 다행히이 중요 하지 않은 작업은 거의 없습니다. 이러한 응용 프로그램 사용자 인터페이스를 많이 사용 하 고 응용 프로그램 소요 시간 경향이 SQL 문을 구성 작습니다. 일반적으로 사용자 입력 기준을 소요 시간과 비교 합니다.
+

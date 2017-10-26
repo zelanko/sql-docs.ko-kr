@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 14e3708e58d87a1ab38f4b22e9917320969c105b
@@ -45,3 +46,4 @@ ms.lasthandoff: 09/09/2017
 |SQL_TXN_ISOLATION|드라이버에서 SQL_TXN_READ_COMMITTED만 허용 합니다.<br /><br /> 다음 *vParam*s는 지원 되지 않습니다.<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
  자세한 내용은 참조 [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) 에 *ODBC Programmer's Reference*합니다.
+

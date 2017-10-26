@@ -18,6 +18,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: e326abbc0a10899028bf93d27f219fadd8d7dd29
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/09/2017
 -   [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) -중복 기능을 ODBC 3에서 다르게 구현 되는 기능.* x* 및 ODBC 2.* x*합니다. ODBC 3입니다. *x* 드라이버를 드라이버 관리자는 항상 ODBC 2 매핑되기 때문에 중복 된 기능을 통해 이전 버전과 호환성에 대 한 걱정할 필요가 없습니다.* x* 기능 ODBC 3.* x* ODBC 3을 호출할 때 기능.* x* 드라이버입니다. 따라서 ODBC 3입니다. *x* 드라이버 표시만 ODBC 3.* x* 기능입니다. 자세한 내용은 이러한 매핑에 대 한이 부록의 뒷부분에 나오는 참조 하십시오.  
   
 -   [변경 된 동작 및 ODBC 3.x 드라이버](../../../odbc/reference/appendixes/behavioral-changes-and-odbc-3-x-drivers.md) -동작 변경이 ODBC 3에서 다르게 처리 하는 기능.* x* 및 ODBC 2.* x*합니다. ODBC 3입니다. *x* 드라이버 동작 변경 내용에 대해서는 걱정를 응용 프로그램에 의해 설정 된 SQL_ATTR_ODBC_VERSION 환경 특성에 대 한 응답에서 작업을 수행 해야 합니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 1a9afffd67b839b36e663404048ac741e068b015
@@ -63,3 +64,4 @@ ms.lasthandoff: 09/09/2017
 |**공간 (** *count* **)** (ODBC 2.0)|구성 된 문자열을 반환 *count* 공간입니다.|  
 |**SUBSTRING (** *string_exp*, *시작*, 길이**)** (ODBC 1.0)|파생 된 문자열을 반환 *string_exp*로 지정 된 문자 위치에서 시작, *시작* 에 대 한 *길이* 문자입니다.|  
 |**UCASE (** *string_exp* **)** (ODBC 1.0)|문자열을 반환 *string_exp*, 모든 소문자를 대문자로 변환 합니다.|
+

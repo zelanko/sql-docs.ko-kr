@@ -16,6 +16,7 @@ caps.latest.revision: 5
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3128dca9f473008b5e5fcae234fd9ba119911e81
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/09/2017
  Visual FoxPro ODBC 드라이버는 FoxPro 테이블에 기본 키를 구성 하는 열을 반환 합니다. (참조 [SQLPrimaryKeys](../../odbc/microsoft/sqlprimarykeys-visual-foxpro-odbc-driver.md).) 호출 *fColType* SQL_ROWVER로 설정, 열이 없으면 반환 됩니다. **SQLSpecialColumns** 인 데이터 원본에 대해서만 작동 [데이터베이스](../../odbc/microsoft/visual-foxpro-terminology.md)합니다.  
   
  자세한 내용은 참조 [SQLSpecialColumns](../../odbc/reference/syntax/sqlspecialcolumns-function.md) 에 *ODBC Programmer's Reference*합니다.
+
