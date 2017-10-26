@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 62aab281804991cb4951403876d358ac2c2abf12
@@ -270,3 +271,4 @@ private Boolean CreateTable(
 >  위 코드 조각에는 오류 발생 시 오류 검사 또는 정리 프로시저가 없습니다.  
   
   
+

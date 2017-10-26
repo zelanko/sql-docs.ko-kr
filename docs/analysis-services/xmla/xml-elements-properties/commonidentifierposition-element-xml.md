@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 4fe8eea6f5252adcf17f4c1f350c23042b2aeba6
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 요소의 경우 **CommonIdentifierPosition** 요소는 세부 정보 컬렉션의 공통 식별자 요소 위치를 포함합니다. 기본값인 **false** 는 사용할 공통 식별자가 없음을 나타냅니다.  
   
   
+

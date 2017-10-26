@@ -18,6 +18,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b93ee4d0dcbf746c2df43ea4cf423368e118247f
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 |[SSMS를 사용하여 역할 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)|역할을 만들고 역할의 멤버를 추가 및 제거하고 역할의 사용 권한을 변경하고 DAX를 사용하여 행 수준 필터를 추가, 편집 또는 제거하는 방법을 설명합니다.|  
   
   
+

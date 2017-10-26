@@ -14,6 +14,7 @@ caps.latest.revision: 40
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 27b51025180a1c9a2463c49401589ab459e7ecaf
@@ -141,3 +142,4 @@ Microsoft JDBC Driver 4.2를 사용 하 여 (또는 경우를 줄이려면) SQL 
  [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)  
   
   
+

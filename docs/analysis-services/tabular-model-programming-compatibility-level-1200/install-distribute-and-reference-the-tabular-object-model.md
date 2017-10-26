@@ -15,6 +15,7 @@ caps.latest.revision: 22
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9688a692d25d484b05bca88e0779d2812944f3af
@@ -123,3 +124,4 @@ Microsoft.AnalysisServices.dll Microsoft.AnalysisServices.Tabular.dll, 하지 �
 TOM 및 AMO는 재배포를 통해는 **sql_as_amo.msi** 설치 패키지입니다. AMO 또는 TOM으로 호출 하는 클라이언트 응용 프로그램에 대 한 설치 프로그램을 작성 하는 경우 추가 **sql_as_amo.msi** 실행 파일에 있습니다. TOM 및 AMO 클라이언트 라이브러리를 재배포 하기 위한 유일한 지원 되는 메커니즘입니다.  
   
 패키지 자체 포함 하며 사용자 코드에서 TOM 및 AMO를 호출 하는 데 필요한 모든 어셈블리를 제공 합니다. SQL_AS_OLEDB.msi SQL_AS_ADOMD.msi를 등의 다른 패키지 TOM 프로그래밍 시나리오에 특히 필요 하지 않습니다.
+

@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: d0adb4ce534d0e70a309bf99b6e6a16479c931f3
@@ -79,3 +80,4 @@ ms.lasthandoff: 09/01/2017
 |**Kpi**<br /><br /> **KpiGoal**<br /><br /> **KpiStatus**|하위 요소|측정값 요소가 KPI로 사용됨을 나타냅니다. KPI 하위 요소는 KpiGoal 및 KpiStauts 요소를 사용하여 관련된 표시 이미지 및 대상 범위를 정의합니다.|  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 24
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f57ef9048cc2028ed8e4b056c8120b96ddb29c95
@@ -36,3 +37,4 @@ ms.lasthandoff: 09/01/2017
 |[파워 뷰 보고서의 테이블 동작 속성 구성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|정보 행을 자세히 표시하는 테이블 동작 속성을 구성하는 방법에 대해 설명합니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보의 기본 배치가 향상됩니다.|  
   
   
+

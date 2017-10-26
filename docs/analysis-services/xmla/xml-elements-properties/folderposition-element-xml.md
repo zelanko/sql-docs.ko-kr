@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 35467656ca049a2d81e0322dd4f938f09ccea943
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 요소의 경우 **FolderPosition** 요소는 폴더 컬렉션의 기본 폴더 요소 위치를 포함합니다. 기본값인 **false** 는 사용할 기본 폴더가 없음을 나타냅니다.  
   
   
+

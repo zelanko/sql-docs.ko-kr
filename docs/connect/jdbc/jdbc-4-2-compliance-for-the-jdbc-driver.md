@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3dbb9bbf584caeca1f6d8db034323e6695512f6a
@@ -76,3 +77,4 @@ ms.lasthandoff: 09/09/2017
 |**Java 8의에서 새로운 Java 클래스:**<br /><br /> LocalDate/LocalTime/LocalDateTime<br /><br /> OffsetTime/OffsetDateTime<br /><br /> **새 JDBC 형식:**<br /><br /> TIME_WITH_TIMEZONE<br /><br /> TIMESTAMP_WITH_TIMEZONE<br /><br /> REF_CURSOR|REF_CURSOR는 SQL Server에서 지원되지 않습니다. 이 형식이 사용되는 경우 드라이버에서 SQLFeatureNotSupportedException 예외가 throw됩니다. 드라이버는 JDBC 4.2 사양에 지정된 대로 다른 모든 새 Java 및 JDBC 형식 매핑을 지원합니다.|  
   
   
+

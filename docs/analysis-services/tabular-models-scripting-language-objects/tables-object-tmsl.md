@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 94e61c3077b748c7a2a33f1bcef8ac8b7ebae9e0
@@ -821,3 +822,4 @@ True 이면 테이블은 기호로 처리 숨겨진; 그렇지 않으면 false�
  [TMSL&#40;Tabular Model Scripting Language&#41; 참조](../../analysis-services/tabular-model-scripting-language-tmsl-reference.md)  
   
   
+

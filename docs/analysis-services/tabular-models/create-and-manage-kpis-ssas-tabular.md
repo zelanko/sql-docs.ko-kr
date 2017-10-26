@@ -18,6 +18,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cb8ed295a1070bd8bb80820f43c4f4e5f7b364a5
@@ -94,3 +95,4 @@ ms.lasthandoff: 09/01/2017
  [측정값 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   
   
+

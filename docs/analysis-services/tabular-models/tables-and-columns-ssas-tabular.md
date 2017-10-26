@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e941e6c084842238d429c7a653efbad24fb56520
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/01/2017
 |[데이터 필터링 및 정렬&#40;SSAS 테이블 형식&#41;](http://msdn.microsoft.com/library/55ebd7a6-2458-4398-911f-fcfeb2413f1b)|이 섹션의 항목에서는 모델 디자이너의 컨트롤을 사용하여 데이터를 필터링하거나 정렬하는 방법을 설명합니다.|  
   
   
+

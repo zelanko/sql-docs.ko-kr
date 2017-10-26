@@ -18,6 +18,7 @@ caps.latest.revision: 7
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: bc0a2fd4178189a072a9b194e502ae1c58de3f92
@@ -52,3 +53,4 @@ ms.lasthandoff: 09/01/2017
  기본 필드 집합을 만든 후에는 기본 레이블, 기본 이미지, 기본 그룹 동작 또는 같은 값의 여러 행이 한 행에 함께 그룹화되는지 아니면 따로 나열되는지 지정하여 보고서 디자인 환경을 더 자세히 사용자 지정합니다. 자세한 내용은 [파워 뷰 보고서의 테이블 동작 속성 구성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)을 참조하세요.  
   
   
+

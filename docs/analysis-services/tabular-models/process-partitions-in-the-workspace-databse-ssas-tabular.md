@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 650821073c8c2c15d143ba0fb2ff24e1352c9cb6
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/01/2017
  [작업 영역 데이터베이스에서 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   
+

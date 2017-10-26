@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 03122814773bd2e11b0ea1dc24b91b4c21a8f1a8
@@ -98,3 +99,4 @@ Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 
 |[테이블 형식 모델 파티션 처리&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|배포된 테이블 형식 모델에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 파티션을 처리하는 방법에 대해 설명합니다.|  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: d5b8e44c007766354e5c03058d16a41cbb72ad0e
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/27/2017
 |이제 새로운 데이터 형식 매핑이 PreparedStatement.setObject() 및 PreparedStatement.setNull() 메서드에서 지원됩니다.|1. 새로운 Java와 JDBC 간 형식 매핑<br /><br /> (a) java.math.BigInteger와 JDBC BIGINT<br /><br /> (b) java.util.Date 및 java.util.Calendar와 JDBC TIMESTAMP<br /><br /> 2. 새로운 데이터 형식 변환:<br /><br /> (a) java.math.BigInteger를 CHAR, VARCHAR, LONGVARCHAR 및 BIGINT로 변환<br /><br /> (b) java.util.Date 및 java.util.Calendar를 CHAR, VARCHAR, LONGVARCHAR, DATE, TIME 및 TIMESTAMP로 변환<br /><br /> 자세한 내용은 JDBC 4.1 사양을 참조하세요.|  
   
   
+

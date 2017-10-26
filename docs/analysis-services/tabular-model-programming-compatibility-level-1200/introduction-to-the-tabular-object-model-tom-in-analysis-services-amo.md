@@ -15,6 +15,7 @@ caps.latest.revision: 15
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: ab4bfb890124538878fd4d618dee05d393a4864c
@@ -72,3 +73,4 @@ TMSL와 TOM 모두 동일한 개체를 노출 하지만 (**테이블**, **열**,
  [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)  
 [Analysis Services PowerShell](../../analysis-services/powershell/analysis-services-powershell-reference.md)
   
+

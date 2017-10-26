@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 71352e3066d7964ad6e795563d049368285c79e8
@@ -51,3 +52,4 @@ ms.lasthandoff: 09/01/2017
  Oracle 또는 Teradata를 사용하는 경우 해당 시스템용 추적 모니터링 도구를 사용하세요.  
   
   
+

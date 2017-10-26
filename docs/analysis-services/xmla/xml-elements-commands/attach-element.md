@@ -19,6 +19,7 @@ caps.latest.revision: 12
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9a127b33b88413220977bc264bd97910e599c035
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/01/2017
  [ReadOnly 및 ReadWrite 모드 간 Analysis Services 데이터베이스 전환](../../../analysis-services/multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
   
+

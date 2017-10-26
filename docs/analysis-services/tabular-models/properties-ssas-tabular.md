@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b51561b367c10248daca388c58646e68ecc1534e
@@ -38,3 +39,4 @@ ms.lasthandoff: 09/01/2017
 |[기본 데이터 모델링 및 배포 속성 구성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|기본 모델링 및 배포 속성에 대한 설명 및 구성 단계를 제공합니다. 기본 속성은 새 테이블 형식 모델 프로젝트에 적용됩니다. 프로젝트를 만든 후 요구 사항에 따라 특정 모델 프로젝트에 대해 이러한 속성을 변경할 수 있습니다.|  
   
   
+

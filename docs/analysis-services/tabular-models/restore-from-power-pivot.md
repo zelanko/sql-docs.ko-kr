@@ -18,6 +18,7 @@ caps.latest.revision: 8
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 27541f0f58b11367994d2131eb95b63cbf55a4af
@@ -58,3 +59,4 @@ ms.lasthandoff: 09/01/2017
  [파워 피벗에서 가져오기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)  
   
   
+

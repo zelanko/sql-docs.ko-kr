@@ -16,6 +16,7 @@ caps.latest.revision: 12
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 9009024f08b7c4a4bce3d6b57bd3231025b38a59
@@ -91,3 +92,4 @@ ms.lasthandoff: 09/01/2017
  일반적으로 원본 데이터베이스의 언어 식별자 및 데이터 정렬 순서는 테이블 형식 모델 열에서 값이 저장되는 방식에 거의 영향을 주지 않는다는 점을 주의해야 합니다. 원본 데이터베이스에서 요청된 값을 변환하거나 필터링하는 경우는 예외입니다.  
   
   
+

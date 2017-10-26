@@ -14,6 +14,7 @@ caps.latest.revision: 1
 author: v-nisidh
 ms.author: v-nisidh
 manager: andrela
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 7f344ad84588110372ccb369ae97642ef6c42f07
@@ -100,3 +101,4 @@ JDBC 드라이버 FIPS 규격 모드에서를 실행 하려면 다음 표에 나
 
 
   
+

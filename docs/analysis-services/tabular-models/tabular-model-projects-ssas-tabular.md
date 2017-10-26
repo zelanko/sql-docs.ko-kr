@@ -16,6 +16,7 @@ caps.latest.revision: 10
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c351e2be7d1faf77542b68079b4f413e554e54f1
@@ -35,3 +36,4 @@ ms.lasthandoff: 09/01/2017
 |[파워 피벗에서 가져오기&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/import-from-power-pivot-ssas-tabular.md)|이 항목에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 파일(.xlsx)에서 메타데이터와 데이터를 추출하여 새로운 테이블 형식 모델 프로젝트를 만드는 방법에 대해 설명합니다.|  
   
   
+

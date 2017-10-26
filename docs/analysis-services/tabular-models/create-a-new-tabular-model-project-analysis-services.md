@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 086bcee8a9512b74e0f0c81e73400d8fcc20ad3c
@@ -41,3 +42,4 @@ ms.lasthandoff: 09/01/2017
  [모델 속성&#40;SSAS 테이블 형식&#41;](../../analysis-services/tabular-models/model-properties-ssas-tabular.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e72d34abbe3291010d568d6a7fa7d4bfb23e774d
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 요소의 경우 **DefaultDetailsPosition** 요소는 세부 정보 컬렉션의 기본 세부 정보 요소 위치를 포함합니다. 기본값인 **false** 는 사용할 기본 세부 정보가 없음을 나타냅니다.  
   
   
+

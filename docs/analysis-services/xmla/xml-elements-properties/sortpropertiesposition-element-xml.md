@@ -17,6 +17,7 @@ caps.latest.revision: 6
 author: jeannt
 ms.author: jeannt
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: b4579aa9873c23ad3490763ce5c5900dcc8158aa
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  **RelationshipEndVisualizationProperties** 요소의 경우 **SortPropertiesPosition** 요소는 세부 정보 컬렉션의 정렬 속성 요소 위치를 포함합니다. 기본값은 사용할 정렬 속성이 없음을 나타냅니다.  
   
   
+

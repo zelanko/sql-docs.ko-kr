@@ -23,6 +23,7 @@ caps.latest.revision: 21
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5249b93411e921ba98f23ccd99fe4d3ea475a6ce
@@ -57,3 +58,4 @@ ms.lasthandoff: 09/01/2017
  [DMV&#40;동적 관리 뷰&#41;를 사용하여 Analysis Services 모니터링](../../analysis-services/instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
   
+

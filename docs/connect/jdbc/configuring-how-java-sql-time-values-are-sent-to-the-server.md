@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3fc45c7fc45bb37ea9373c452a2086557ecf62fc
@@ -69,3 +70,4 @@ Note 암호화 된 열에 시간 형식으로 날짜/시간 변환 지원 하지
  [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 64
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: e6434897c1a69ee12d6ce13d0ba4c5d7e5558261
@@ -98,3 +99,4 @@ DirectQuery를 설정했지만 아직 데이터 원본에 연결하지 않은 �
 
 [DirectQuery 모드에서의 DAX 수식 호환성](../../analysis-services/tabular-models/dax-formula-compatibility-in-directquery-mode-ssas-2016.md)
   
+

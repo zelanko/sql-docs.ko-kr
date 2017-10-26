@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: HeidiSteen
 ms.author: heidist
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 225c4aea79b880fd85f118d89bae1339e370aa40
@@ -52,3 +53,4 @@ MaxIntermediateRowsetSize | 1000000 | DAX 쿼리에서 반환된 최대 행 수�
 PredicateCheckSpoolCardinalityThreshold| 5000 | Microsoft 지원의 지침에 따라 변경하는 경우를 제외하고 변경하면 안 되는 고급 속성입니다.
 
 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요. 
+

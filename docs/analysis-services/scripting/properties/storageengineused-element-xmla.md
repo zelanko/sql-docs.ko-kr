@@ -22,6 +22,7 @@ caps.latest.revision: 9
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 876522142756bca05416a1afff3cf10467f4c7f1
 ms.openlocfilehash: 188c9261964839c055b75e2abb4c1e8fc4ec3633
@@ -97,3 +98,4 @@ ms.lasthandoff: 09/01/2017
  부모에 해당 하는 요소 **StorageEngineUsed** Analysis Management Objects (AMO) 개체 모델은 <xref:Microsoft.AnalysisServices.Database>합니다.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 16
 author: Minewiskan
 ms.author: owend
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 6d18cbe5b20882581afa731ce5d207cbbc69be6c
 ms.openlocfilehash: d86b23c7c1b56d7407e0068c2e77e184be1aa36d
@@ -168,3 +169,4 @@ ms.lasthandoff: 10/21/2017
   
  특정 함수 또는 연산자에서 공백을 처리하는 방법은 [DAX 함수 참조](http://msdn.microsoft.com/en-us/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b)섹션에서 각 DAX 함수에 대한 항목을 참조하세요.  
   
+
