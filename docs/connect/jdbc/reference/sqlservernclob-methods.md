@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: 3d68dd0cd7c82754179643c38b55cec454f270f7
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   멤버에 대 한 내용은 [SQLServerNClob](../../../connect/jdbc/reference/sqlservernclob-class.md), 참조 [SQLServerNClob 멤버](../../../connect/jdbc/reference/sqlservernclob-members.md)합니다.  
   
   
+

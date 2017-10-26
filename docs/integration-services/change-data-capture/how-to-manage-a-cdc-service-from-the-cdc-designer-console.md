@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 80fc7320cb47a9fc46b331b119ff91ec0a1cdc19
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  다른 CDC Service 태스크는 CDC Service 구성 콘솔을 사용하여 수행합니다. 서비스 구성 콘솔에서 수행할 수 있는 태스크에 대한 자세한 내용은 서비스 구성 콘솔에 포함된 온라인 도움말을 참조하십시오.  
   
   
+

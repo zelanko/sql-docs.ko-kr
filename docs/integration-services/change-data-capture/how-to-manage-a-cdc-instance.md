@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d368fcacfb8e548647785c8b5f6ef5b73b4ef10b
@@ -57,3 +58,4 @@ ms.lasthandoff: 08/03/2017
  또한 **속성** 을 선택하여 CDC 인스턴스 구성 속성을 편집할 수 있습니다. CDC 인스턴스 속성을 편집하는 방법은 [Edit Instance Properties](../../integration-services/change-data-capture/edit-instance-properties.md)을 참조하십시오.  
   
   
+

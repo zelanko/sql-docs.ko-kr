@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9914672b055d007c76e55f70a87c7af71225de0a
@@ -72,3 +73,4 @@ ms.lasthandoff: 09/09/2017
  .dqs 파일에서 기술 자료를 가져온 후 기술 자료에 정보를 추가하거나 기술 자료의 내용에 따라 정리 또는 일치 프로젝트에서 기술 자료를 사용할 수 있습니다. 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md), [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md), [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md), [데이터 정리](../data-quality-services/data-cleansing.md) 또는 [데이터 일치](../data-quality-services/data-matching.md)를 참조하세요.  
   
   
+

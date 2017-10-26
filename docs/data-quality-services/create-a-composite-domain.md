@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14599472b440d54b9ce247c8c52f9cfad5815a7d
@@ -106,3 +107,4 @@ ms.lasthandoff: 09/09/2017
  기술 자료 구문 분석을 사용할 때 원본 데이터의 값 수가 복합 도메인의 도메인 수보다 적은 경우에는 DQS에서 누락된 도메인에 Null을 삽입합니다. 원본 데이터의 값 수가 복합 도메인의 도메인 수보다 많은 경우에는 DQS에서 열 중 하나에 추가 데이터를 추가합니다. 둘 이상의 도메인에 같은 값이 포함된 경우 데이터 원본은 첫 번째 일치하는 도메인으로 구문 분석됩니다.  
   
   
+

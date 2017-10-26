@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: cc3effea9b3d20e556707d31852d3003b7b27a65
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/03/2017
  Inventory 데이터베이스의 ProductsInventory 테이블에는 ProductID와 StockOnHand 열이 있습니다. ProductID, CustomerID 및 Quantity 열이 있는 Shipments 테이블은 고객에게 보내는 제품 배송을 추적합니다. ProductInventory 테이블은 Shipments 테이블의 정보를 바탕으로 매일 업데이트되어야 합니다. 하나의 MERGE 문은 배송을 기준으로 ProductInventory 테이블의 재고를 줄일 수 있습니다. 또한 제품에 대한 재고가 0이 되면 이 MERGE 문은 ProductInventory 테이블에서 해당 제품 행을 삭제할 수도 있습니다.  
   
   
+

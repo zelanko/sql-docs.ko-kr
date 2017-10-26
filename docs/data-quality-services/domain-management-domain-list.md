@@ -16,6 +16,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 83b1db3be39a5472fd422f23955eff9bafb5265f
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  도메인을.dqs 파일로 내보냅니다. 이 명령은 **데이터 파일로 내보내기** 대화 상자를 표시합니다. 페이지 맨 위에 있는 메뉴 표시줄에서 **내보내기** 메뉴를 클릭하거나 도메인 목록 창에서 마우스 오른쪽 단추를 클릭하면 이 명령을 사용할 수 있습니다. 자세한 내용은 [.dqs 파일로 도메인 내보내기](../data-quality-services/export-a-domain-to-a-dqs-file.md)을 참조하세요.  
   
   
+

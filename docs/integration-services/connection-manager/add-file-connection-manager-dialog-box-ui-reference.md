@@ -18,6 +18,7 @@ caps.latest.revision: 33
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: c189e040ea0fa8981f9f176cd1e89d80a2f7c445
@@ -63,3 +64,4 @@ ms.lasthandoff: 08/03/2017
  [Integration Services 오류 및 메시지 참조](../../integration-services/integration-services-error-and-message-reference.md)  
   
   
+

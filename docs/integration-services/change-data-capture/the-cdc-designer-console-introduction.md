@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b11270e4535868da764601fcce1a2d3c12e077d
 ms.openlocfilehash: 12afe7ad2b83c4ab25e4c0803d015442ef9cfc55
@@ -66,3 +67,4 @@ ms.lasthandoff: 08/03/2017
  제어판의 프로그램 및 기능을 사용하여 CDC Designer 콘솔을 제거합니다.  
   
   
+

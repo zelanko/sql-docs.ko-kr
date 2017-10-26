@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 495047016c4ffe394214115f77ec13846b57d9db
@@ -98,3 +99,4 @@ ms.lasthandoff: 09/09/2017
 -   **일치 정책 – 일치 결과**: 기술 자료가 **일치 정책 – 일치 결과** 페이지에서 닫혔습니다. 기술 자료가 잠겨 있으며 기술 자료 검색 및 도메인 관리 작업을 사용할 수 없습니다.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14a55010cd2adc4ea02f0207b91a8e608ed7b176
@@ -57,3 +58,4 @@ ms.lasthandoff: 08/03/2017
      CDC Designer 콘솔의 가운데 있는 목록에서 서비스를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
   
   
+

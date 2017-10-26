@@ -16,6 +16,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14b11ae1442a695e683aafc60da424cc6c9f9497
@@ -103,3 +104,4 @@ ms.lasthandoff: 09/09/2017
 -   도메인 관리 탭 중 하나에서 연결된 도메인을 두 번 클릭하면 도메인이 편집할 수 있도록 열리고 이름 문자열에 해당 도메인이 연결된 도메인임을 알리는 표시가 나타납니다.  
   
   
+

@@ -15,6 +15,7 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 29b296b2ae7e04871e81a9c236cb990bdd19562b
 ms.openlocfilehash: cbc72958f992e0b5cae12cdfc8c0996378f9708c
@@ -53,3 +54,4 @@ Azure 데이터 레이크 저장소 파일 시스템 태스크는의 구성 요�
 - **AzureDataLakeDirectory:** 다운로드할 파일을 포함 하는 ADLS 소스 디렉터리를 지정 합니다.
 - **SearchRecursively:** 다운로드할 파일에 대 한 원본 디렉터리 내에서 재귀적으로 검색할 것인지 지정 합니다.
 - **LocalDirectory:** 다운로드 한 파일을 저장할 대상 디렉터리를 지정 합니다.
+

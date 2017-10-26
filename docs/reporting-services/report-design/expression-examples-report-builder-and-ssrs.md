@@ -30,7 +30,7 @@ caps.latest.revision: 101
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6cf3c3d62250f84184adc53d66d9ec274a2a1b3d
 ms.contentlocale: ko-kr
@@ -240,7 +240,7 @@ ms.lasthandoff: 08/09/2017
   
     ```  
   
--   날짜 처리에 **[!INCLUDE[dnprdnshort](../Token/dnprdnshort_md.md)]** System.Text.RegularExpressions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 함수는 전화 번호 서식을 지정하는 등 기존 문자열의 서식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화 번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
+-   날짜 처리에 **Regex**[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> 함수는 전화 번호 서식을 지정하는 등 기존 문자열의 서식을 변경하는 데 유용합니다. 다음 식에서는 **Replace** 함수를 사용하여 필드의 10자리 전화 번호 서식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn*-*nnnn*"으로 변경합니다.  
   
     ```  
     =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  

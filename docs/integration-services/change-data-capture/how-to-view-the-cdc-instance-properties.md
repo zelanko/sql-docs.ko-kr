@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4c23f7aa902cedb22cc5df69c8169fea336513e5
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
      이 탭에는 속성 편집기에서 정의하는 고급 속성 목록이 표시됩니다. 이 탭에 표시되는 내용에 대한 자세한 내용은 [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md)을 참조하십시오.  
   
   
+

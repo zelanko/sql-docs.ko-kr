@@ -25,6 +25,7 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 0afd2ce4dc8fc999661455a1655d43d21b37f3f4
@@ -80,3 +81,4 @@ ms.lasthandoff: 08/19/2017
  변환에서 샘플을 만드는 데 사용하는 난수 생성기에 샘플링 초기값을 지정합니다. 이 옵션은 개발 및 테스트 용도로만 사용하는 것이 좋습니다. 임의 초기값을 지정하지 않으면 Microsoft Windows 틱 수가 사용됩니다.  
   
   
+

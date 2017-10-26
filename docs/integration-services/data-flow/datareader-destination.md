@@ -19,6 +19,7 @@ caps.latest.revision: 30
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a7fd213d85558c2c9e114dc2b71854f21ac29a6c
@@ -47,3 +48,4 @@ ms.lasthandoff: 08/03/2017
  속성을 설정하는 방법에 대한 자세한 내용은 [데이터 흐름 구성 요소의 속성 설정](../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md)을 참조하세요.  
   
   
+

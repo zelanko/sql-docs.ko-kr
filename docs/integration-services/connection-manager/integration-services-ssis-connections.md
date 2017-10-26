@@ -27,6 +27,7 @@ caps.latest.revision: 92
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: fb43bfdf7199604e4ab9d967481a7a9dcca881cb
@@ -348,3 +349,4 @@ ms.lasthandoff: 08/03/2017
 -   support.microsoft.com의 기술 자료 - [You get "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" error message when using Oracle connection manager in SSIS](http://go.microsoft.com/fwlink/?LinkId=233696)(SSIS에서 Oracle 연결 관리자를 사용하는 경우 "DTS_E_CANNOTACQUIRECONNECTIONFROMCONNECTIONMANAGER" 오류 메시지가 발생합니다.)  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 9b7406edf9f7234db739730473772d77c42399ec
@@ -55,3 +56,4 @@ ms.lasthandoff: 09/26/2017
 |설치된 항목만 표시|설치된 원본만 볼 것인지 여부를 지정합니다.|  
 |확인|변경 내용을 저장하고 모든 후속 대화 상자를 열어 추가 옵션을 구성하려면 클릭합니다.| 
   
+

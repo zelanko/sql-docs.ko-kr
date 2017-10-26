@@ -14,6 +14,7 @@ caps.latest.revision: 21
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 6e754198cf82a7ba0752fe8f20c3780a8ac551d7
 ms.openlocfilehash: 7fea154af206b964206f7e04eddde0cea6cf08f9
@@ -222,3 +223,4 @@ SQL에서 패키지를 개발할 때 구성 요소가 제대로 작동 하려면
  [CDC 제어 태스크](../../integration-services/control-flow/cdc-control-task.md)  
   
   
+

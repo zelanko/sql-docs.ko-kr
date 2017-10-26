@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 15e3873505601704c4a14d4e5701875b7dc104f5
@@ -127,3 +128,4 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
  [XML 태스크 편집기 &#40; 일반 페이지 &#41;](../../integration-services/control-flow/xml-task-editor-general-page.md)  
   
   
+

@@ -24,6 +24,7 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 0a7b0c3e51d7df76689f16ed91f60972d171bd9a
@@ -89,3 +90,4 @@ End Module
  [프로그래밍 방식으로 데이터 흐름 구성 요소 검색](../../integration-services/building-packages-programmatically/discovering-data-flow-components-programmatically.md)  
   
   
+

@@ -25,6 +25,7 @@ caps.latest.revision: 44
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 78090618d5025a6ab29c888d09db44ddfff278fa
@@ -95,3 +96,4 @@ End Module
  [데이터 흐름 구성 요소를 프로그래밍 방식으로 추가](../../integration-services/building-packages-programmatically/adding-data-flow-components-programmatically.md)  
   
   
+

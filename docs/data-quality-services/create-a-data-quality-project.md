@@ -19,6 +19,7 @@ caps.latest.revision: 10
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 14dd208db2469021918b696d9a66121a708d3a9c
@@ -65,3 +66,4 @@ ms.lasthandoff: 09/09/2017
  데이터 품질 프로젝트를 만든 후에는 선택한 작업(정리 또는 일치)을 수행하는 데 사용할 마법사가 나타납니다. 정리 및 일치 작업에 대한 자세한 내용은 [데이터 정리](../data-quality-services/data-cleansing.md) 및 [데이터 일치](../data-quality-services/data-matching.md)를 참조하세요.  
   
   
+

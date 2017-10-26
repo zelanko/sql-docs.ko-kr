@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 70b39c648fc2d3ddd13db93d3923880edcf56675
@@ -36,3 +37,4 @@ ms.lasthandoff: 08/03/2017
 3.  삭제를 확인하려면 **확인** 을 클릭하고 패키지를 유지하려면 **취소** 를 클릭합니다.  
   
   
+

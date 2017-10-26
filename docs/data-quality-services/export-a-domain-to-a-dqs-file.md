@@ -14,6 +14,7 @@ caps.latest.revision: 18
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 197f51ab86d1ac46ab77d34dd64d98c1034317d6
@@ -59,3 +60,4 @@ ms.lasthandoff: 09/09/2017
  도메인을 .dqs 파일로 내보낸 후 다른 기술 자료로 해당 도메인을 가져올 수 있습니다.  
   
   
+

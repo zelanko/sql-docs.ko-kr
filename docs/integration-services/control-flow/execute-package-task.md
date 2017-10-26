@@ -23,6 +23,7 @@ caps.latest.revision: 63
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8806c102eaec2c2540374bfaddc33b76d8f6e584
 ms.openlocfilehash: 70b2679a86d46c731617d7f607541f60886afb40
@@ -225,3 +226,4 @@ ms.lasthandoff: 08/11/2017
  매개 변수나 변수와 자식 패키지 매개 변수 간의 매핑을 제거하려면 클릭합니다.  
   
   
+

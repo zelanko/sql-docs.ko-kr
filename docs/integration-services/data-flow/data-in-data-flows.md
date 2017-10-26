@@ -21,6 +21,7 @@ caps.latest.revision: 42
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: b9dd44fec24717695813010067b25d14c4a8036d
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 카탈로그에 패키지를 배포한 후 실행 중에 데이터 흐름을 분석하여 성능을 검사하거나 다른 문제를 확인할 수 있습니다. 패키지 상태 및 기록을 볼 수 있는 표준 보고서를 사용할 수 있으며, 패키지 실행에 대한 세부 정보를 제공하는 데이터베이스 뷰를 쿼리할 수 있습니다. 실행 중에 데이터 탭을 동적으로 추가 및 제거하여 패키지의 특정 구성 요소를 대상으로 지정할 수도 있습니다. 자세한 내용은 [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)을 참조하세요.  
   
   
+

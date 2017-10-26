@@ -14,6 +14,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69f36b9b3e01be90cc1f5a4cd19fb80543186620
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/03/2017
  Oracle CDC Service 및 자식 Oracle CDC 인스턴스는 클라이언트인 원본 Oracle 데이터베이스 및 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 통신할 수 있을 뿐이며 네트워크 및 기타 프로토콜에서는 활성으로 수신하지 않습니다. Oracle CDC Service는 CDC 데이터베이스에서 구성 변경을 모니터링하고 업데이트된 구성을 기반으로 작업을 업데이트합니다.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9a33a9e7a45689a4585c4e091d909420f46d8b23
@@ -100,3 +101,4 @@ ms.lasthandoff: 09/09/2017
 -   Excel 파일이 올바른 형식이 아니거나 손상된 경우 가져오기 작업에서 오류가 발생합니다.  
   
   
+

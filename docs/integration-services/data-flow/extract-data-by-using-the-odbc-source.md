@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 236c2b7caf1ec3ade0a140bfabfc32f3a21a9ea1
@@ -60,3 +61,4 @@ ms.lasthandoff: 08/03/2017
  [ODBC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/odbc-source-editor-error-output-page.md)  
   
   
+

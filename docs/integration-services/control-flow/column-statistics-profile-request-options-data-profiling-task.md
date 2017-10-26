@@ -16,6 +16,7 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 10b9dd217872c27b6192bde49bfaf18fbd2f511b
@@ -78,3 +79,4 @@ ms.lasthandoff: 08/03/2017
  [단일 테이블 빠른 프로필 형식 &#40; 데이터 작업 &#41; 프로 파일링](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)  
   
   
+

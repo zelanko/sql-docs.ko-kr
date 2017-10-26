@@ -22,6 +22,7 @@ caps.latest.revision: 60
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: e8b5878513b74faa8df5e7766762f2f7287ec7af
@@ -212,3 +213,4 @@ ms.lasthandoff: 08/17/2017
 -   dougbert.com의 블로그 항목 - [Integration Services의 Excel, 3부 중 3부: 문제 및 대안](http://go.microsoft.com/fwlink/?LinkId=217676)  
   
   
+

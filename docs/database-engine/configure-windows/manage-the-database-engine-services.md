@@ -28,6 +28,7 @@ caps.latest.revision: 43
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f3aa60ecd19dc22669cc98915fb853d4480d1fa5
@@ -78,3 +79,4 @@ ms.lasthandoff: 08/02/2017
  [SQL Server로 로그인](../../database-engine/configure-windows/logging-in-to-sql-server.md)  
   
   
+

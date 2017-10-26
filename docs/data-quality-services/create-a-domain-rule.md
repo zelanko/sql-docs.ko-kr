@@ -17,6 +17,7 @@ caps.latest.revision: 28
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: dc02a0d982ceb08f631fbdf628dff293f1f8e5c7
@@ -136,3 +137,4 @@ ms.lasthandoff: 09/09/2017
 |값이 정규식과 일치하지 않습니다.|피연산자의 정규식과 일치하지 않는 값만 유효한 것으로 간주됩니다.|피연산자 예: [1-5]+(1에서 5 사이의 숫자로만 구성된 문자열이 아니어야 함)<br /><br /> 유효한 값: 456, ABC<br /><br /> 유효하지 않은 값: 123, 123456, 14352|  
   
   
+

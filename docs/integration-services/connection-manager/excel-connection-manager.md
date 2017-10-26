@@ -20,6 +20,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2800075091835b2d6f2b07ee34e9b897fe86634e
 ms.openlocfilehash: a5ce75f3c1715870113626642150028e31a0d58b
@@ -101,3 +102,4 @@ Office 365 구독을 보유 하는 경우 Access 데이터베이스 엔진 2016 
 -   [Excel 통합 문서에 연결](../../integration-services/connection-manager/connect-to-an-excel-workbook.md)  
   
   
+

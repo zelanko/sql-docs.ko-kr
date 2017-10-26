@@ -17,6 +17,7 @@ caps.latest.revision: 39
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 967a838712819e5bdcefe5f88907fe9047da0fa1
@@ -206,3 +207,4 @@ ms.lasthandoff: 09/26/2017
   
  표준 구문 분석은 국가별 데이터에 대한 데이터 형식 변환을 지원하며 데이터 형식이 빠른 구문 분석에서 지원되지 않는 경우에만 사용되어야 합니다. 자동 데이터 형식 변환 API에 대한 자세한 내용은 [MSDN Library(](http://go.microsoft.com/fwlink/?LinkId=79427))의 "데이터 형식 변환 API(Data Type Conversion APIs)"를 참조하십시오. 
  
+

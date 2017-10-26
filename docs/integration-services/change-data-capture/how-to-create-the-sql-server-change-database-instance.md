@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: db156f59fe1e77bd3abb50be85ecca1f693a0b73
@@ -39,3 +40,4 @@ ms.lasthandoff: 08/03/2017
 5.  새 인스턴스 마법사에 필요한 정보를 입력하여 새 인스턴스를 만듭니다. 이 마법사에 필요한 정보에 대한 자세한 내용은 [Use the New Instance Wizard](../../integration-services/change-data-capture/use-the-new-instance-wizard.md)을 참조하십시오.  
   
   
+

@@ -16,6 +16,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0e2423a1d19122a3eb13bd69c4bce495c96d81ff
@@ -178,3 +179,4 @@ ms.lasthandoff: 08/03/2017
      올바른 SMTP 서버를 지정하고 자신의 전자 메일 주소를 입력한 경우 메일 보내기 태스크를 통해 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]의 가상 판매 직원에게 메시지를 보내면 해당 수신인에게 메시지를 배달할 수 없다는 내용의 메시지가 반환됩니다.  
   
   
+

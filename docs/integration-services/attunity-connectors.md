@@ -13,6 +13,7 @@ caps.latest.revision:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 926c0c51b5a55a2869b73666f5620fa56e139cca
 ms.openlocfilehash: fd8b0177227167f6caa3417029bb2acb974fe181
@@ -47,3 +48,4 @@ SSDT의 Visual Studio에서의 설치 된 버전을 확인 **도움말** | **에
 
 최신 버전의 SSDT 여기 가져오기:  
 [SSDT(SQL Server Data Tools) 다운로드](..//ssdt/download-sql-server-data-tools-ssdt.md)
+

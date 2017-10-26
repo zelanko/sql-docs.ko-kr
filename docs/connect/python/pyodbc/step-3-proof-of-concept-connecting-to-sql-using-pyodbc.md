@@ -14,6 +14,7 @@ caps.latest.revision: 2
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: ae1fc34c07fe85e8ecea70f9cc582d2d7908676e
@@ -80,3 +81,4 @@ while row:
   ## <a name="next-steps"></a>다음 단계  
   
 자세한 내용은 참조는 [Python 개발자 센터](https://azure.microsoft.com/en-us/develop/python/)합니다.
+

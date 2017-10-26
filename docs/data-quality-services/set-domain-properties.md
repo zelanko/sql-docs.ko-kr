@@ -16,6 +16,7 @@ caps.latest.revision: 22
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: e097256faccb24e82194edc7247ae7010a601430
@@ -93,3 +94,4 @@ ms.lasthandoff: 09/09/2017
  데이터 형식이 **문자열**인 경우 정리 작업 시 DQS에서 도메인의 구문 오류를 식별하지 않도록 지정하려면 선택합니다. 해당 도메인의 구문 오류 식별이 무의미한 경우 이 확인란을 선택합니다. 예를 들어 일련 번호의 경우 구문 오류 식별이 중요하지 않을 수 있습니다. 이 컨트롤은 문자열 데이터 형식에만 사용할 수 있습니다. DQS는 문자열이 아닌 데이터 형식에서 구문 오류를 검사하지 않습니다.  
   
   
+

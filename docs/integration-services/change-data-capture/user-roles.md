@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3c302cecea6c443e97badeca3737211cdadec239
@@ -177,3 +178,4 @@ ms.lasthandoff: 08/03/2017
  이 사용자의 자격 증명은 저장되지 않습니다. CDC Designer 콘솔에서 필요할 때마다 자격 증명을 요청하며 나머지 UI 세션을 위해 유지됩니다.  
   
   
+

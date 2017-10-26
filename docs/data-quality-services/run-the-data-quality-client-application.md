@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 2937eb9f859184eb6ab2f3ecc5f18155afd1e545
@@ -53,3 +54,4 @@ ms.lasthandoff: 09/09/2017
  [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] 홈 화면이 나타납니다. 자세한 내용은 [데이터 품질 클라이언트 홈 화면](../data-quality-services/data-quality-client-home-screen.md)을 참조하세요.  
   
   
+

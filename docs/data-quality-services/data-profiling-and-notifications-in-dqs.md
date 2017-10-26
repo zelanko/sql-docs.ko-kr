@@ -14,6 +14,7 @@ caps.latest.revision: 25
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 57de348a0ce74aa33b3d19baa60116580ad30b3c
@@ -105,3 +106,4 @@ ms.lasthandoff: 09/09/2017
 |DQS에서 알림을 설정 또는 해제하는 방법에 대해 설명합니다.|[DQS에서 프로파일링 알림 설정 또는 해제](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 73a379b190f05f4eedc361b4557afefd700a9664
@@ -58,3 +59,4 @@ ms.lasthandoff: 08/03/2017
  [데이터 흐름 디버깅](../../integration-services/troubleshooting/debugging-data-flow.md) [데이터 흐름](../../integration-services/data-flow/data-flow.md)  
   
   
+

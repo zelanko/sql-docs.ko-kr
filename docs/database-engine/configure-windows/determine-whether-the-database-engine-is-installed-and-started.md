@@ -19,6 +19,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 93b3736aa15a7e4fc7e7a1df829b96a0efa5ba19
@@ -45,3 +46,4 @@ ms.lasthandoff: 08/02/2017
 >  설치 중에 사용자는 프로그램 파일과 데이터베이스 파일을 설치할 위치를 선택할 수 있습니다. 사용자가 기본 위치를 적용하면 파일은 [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)] 및 C:\Program Files\Microsoft SQL Server\MSSQL.*x*에 설치됩니다. 여기서 *x* 는 숫자입니다.  
   
   
+

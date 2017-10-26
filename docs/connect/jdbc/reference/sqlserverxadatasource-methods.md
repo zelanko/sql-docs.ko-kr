@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: MightyPen
 ms.author: genemi
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
 ms.openlocfilehash: be883feaa8016bd2a6575bb14328d3532d6784ea
@@ -27,3 +28,4 @@ ms.lasthandoff: 09/09/2017
   멤버에 대 한 내용은 [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md), 참조 [SQLServerXADataSource 멤버](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)합니다.  
   
   
+

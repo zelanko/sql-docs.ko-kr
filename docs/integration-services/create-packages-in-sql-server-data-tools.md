@@ -19,6 +19,7 @@ caps.latest.revision: 51
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 0d949644408de74f118d352a89047137cdcd0350
@@ -78,3 +79,4 @@ SSDT(SQL Server Data Tools)를 설치하려면 [SSDT(SQL Server Data Tools) 다�
  SQL Server 2016, SQL Server 2014 또는 SQL Server 2012를 대상으로하는 패키지를 만들고, 유지 관리하고 실행할 수 있습니다.  
   
   
+

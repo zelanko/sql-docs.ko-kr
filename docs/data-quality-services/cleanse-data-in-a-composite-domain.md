@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6e3c99d8f8ee8621925f49e301a4ea95c8b00383
@@ -71,3 +72,4 @@ ms.lasthandoff: 09/09/2017
  정리 작업 중 데이터 프로파일링에 대한 자세한 정보는 [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에서 [프로파일러 통계](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md#Profiler)를 참조하세요.  
   
   
+

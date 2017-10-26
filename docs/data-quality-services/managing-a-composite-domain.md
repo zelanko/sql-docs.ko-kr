@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 32a0bb0592614c496a3ceff5a3cfa82f73032d9f
@@ -48,3 +49,4 @@ ms.lasthandoff: 09/09/2017
 |단일 도메인 만들기 및 단일 도메인에 정보 추가|[도메인 관리](../data-quality-services/managing-a-domain.md)|  
   
   
+

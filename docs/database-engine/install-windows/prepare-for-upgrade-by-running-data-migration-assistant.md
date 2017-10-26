@@ -15,6 +15,7 @@ caps.latest.revision: 7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 467de616546f5efcb819ef4381014c903bded87e
@@ -29,3 +30,4 @@ ms.lasthandoff: 08/02/2017
  [여기](http://go.microsoft.com/fwlink/?LinkID=613421)서 Data Migration Assistant를 다운로드하고 설치합니다. 이 도구는 [!INCLUDE[ssnover](../../includes/ssnoversion-md.md)] 설치 미디어에는 포함되지 않습니다.  
 
   
+

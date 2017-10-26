@@ -16,6 +16,7 @@ caps.latest.revision: 31
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 3181deac2265f069531a37aebad7804a649310d9
@@ -139,3 +140,4 @@ ms.lasthandoff: 09/09/2017
  **도메인 값** 탭의 각 값 테이블에 DQS_NULL 값이 포함되어 있습니다. 데이터 원본의 null은 값 테이블에서 SQL_NULL로 표시됩니다. null에 해당하는 값 하나 이상을 DQS_NULL에 대한 동의어로 설정할 수 있습니다. 이렇게 하면 모든 null 및 null에 해당하는 값이 DQS_NULL로 처리됩니다.  
   
   
+

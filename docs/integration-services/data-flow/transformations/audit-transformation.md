@@ -20,6 +20,7 @@ caps.latest.revision: 46
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 4b557efa62075f7b88e6b70cf5950546444b95d8
 ms.openlocfilehash: 253c8abb921dbd60e571a892f108d283b111e70c
@@ -83,3 +84,4 @@ ms.lasthandoff: 08/19/2017
 |**태스크 ID**|감사 변환이 연결된 데이터 흐름 태스크를 고유하게 식별하는 GUID를 삽입합니다.|  
   
   
+

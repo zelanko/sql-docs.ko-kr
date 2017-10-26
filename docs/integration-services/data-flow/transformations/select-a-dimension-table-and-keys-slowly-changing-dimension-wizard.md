@@ -16,6 +16,7 @@ caps.latest.revision: 27
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 24413b539223f32d8ee808d584bb1a629f3f7e23
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/03/2017
  [느린 변경 차원 마법사를 사용 하 여 출력 구성](../../../integration-services/data-flow/transformations/configure-outputs-using-the-slowly-changing-dimension-wizard.md)  
   
   
+

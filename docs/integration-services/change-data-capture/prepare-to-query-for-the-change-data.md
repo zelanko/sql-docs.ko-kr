@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b15733feeca10976315834b2dfc897cc8a9d1216
@@ -205,3 +206,4 @@ ms.lasthandoff: 08/03/2017
  **다음 항목:** [변경 데이터 검색을 위한 함수 만들기](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)  
   
   
+

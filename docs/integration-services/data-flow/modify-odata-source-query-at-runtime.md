@@ -14,6 +14,7 @@ caps.latest.revision: 7
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
 ms.openlocfilehash: 9da1f1be0a790d01f9403d6fc05a5c1498c0ee8b
@@ -70,3 +71,4 @@ ms.lasthandoff: 08/23/2017
 > 이 방법을 사용 하면 설정한 값은 URL로 인코딩된 제대로 확인 해야 합니다. 사용자 입력에서 값을 받을 때(예를 들어 매개 변수에서 개별 쿼리 옵션을 설정할 때) 잠재적인 SQL 삽입형 공격을 방지하기 위해 값의 유효성을 검사해야 합니다.  
   
   
+

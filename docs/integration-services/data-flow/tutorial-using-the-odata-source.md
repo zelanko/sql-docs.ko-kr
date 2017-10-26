@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ee79d0f1b31963b7d13aa07bf4603246139c3a7c
 ms.openlocfilehash: cbdc4a2e0719e65e378d232c5abcb5404e8342f1
@@ -94,3 +95,4 @@ ms.lasthandoff: 08/23/2017
 SSIS 패키지를 실행 합니다. 출력 파일 이름, ID로 만들어집니다. 피드는 OData 5 명의 직원에 대 한 마지막 이름을 확인 합니다.
   
   
+

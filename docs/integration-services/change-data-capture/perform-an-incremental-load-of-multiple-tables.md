@@ -16,6 +16,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: c3e47e4a5ae297202ba43679fba393421880a7ea
 ms.openlocfilehash: 293e4a68eba8fa8cbc5a01773c948d5b56de1a91
@@ -107,3 +108,4 @@ ms.lasthandoff: 08/03/2017
          이 변환을 사용하여 업데이트 및 삭제를 적용하는 방법의 예는 [대상에 변경 내용 적용](../../integration-services/change-data-capture/apply-the-changes-to-the-destination.md)을 참조하세요.  
   
   
+

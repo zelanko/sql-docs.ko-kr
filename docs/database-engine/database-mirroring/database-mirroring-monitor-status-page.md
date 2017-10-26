@@ -16,6 +16,7 @@ caps.latest.revision: 36
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: faa2f672bccc678270d6a7387d27b40e73688425
@@ -107,3 +108,4 @@ ms.lasthandoff: 08/02/2017
  [데이터베이스 미러링 보안 구성 마법사 시작&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   
+

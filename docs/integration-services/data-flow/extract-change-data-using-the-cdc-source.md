@@ -14,6 +14,7 @@ caps.latest.revision: 8
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 343efa882f37276c6921edc72d2bf1e615ff1a18
@@ -80,3 +81,4 @@ ms.lasthandoff: 08/03/2017
  [CDC 원본 편집기 &#40; 오류 출력 페이지 &#41;](../../integration-services/data-flow/cdc-source-editor-error-output-page.md)  
   
   
+

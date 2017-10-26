@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 4f440bb34a0939653d6708fcc9c46735fc3cdf9a
@@ -67,3 +68,4 @@ ms.lasthandoff: 09/09/2017
  기술 자료를 만든 후에는 기술 자료 검색을 수행하는 데 사용할 수 있는 마법사, 일치 정책을 만드는 데 사용하는 마법사 또는 도메인 관리를 수행할 수 있는 페이지가 나타납니다. 기술 자료 검색, 도메인 관리 또는 일치 정책에 대한 자세한 내용은 [기술 자료 검색 수행](../data-quality-services/perform-knowledge-discovery.md), [도메인 관리](../data-quality-services/managing-a-domain.md) 또는 [일치 정책 만들기](../data-quality-services/create-a-matching-policy.md)를 참조하세요.  
   
   
+

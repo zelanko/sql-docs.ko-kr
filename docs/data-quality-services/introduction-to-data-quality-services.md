@@ -16,6 +16,7 @@ caps.latest.revision: 51
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: aabc21d3007d55d293fdafe5cc0469f7b815e118
@@ -90,3 +91,4 @@ ms.lasthandoff: 09/09/2017
  Data Quality Services 기능은 Microsoft Excel용 Microsoft SQL Server 2014 Master Data Services 추가 기능 내에서 원본 데이터 및 마스터 데이터에 대해 중복 제거를 수행할 수 있도록 MDS(Master Data Services)에 통합되어 있습니다. 일치를 수행하려면 MDS에서 관리되는 데이터를 Excel 워크시트로 로드하고, 이를 MDS에서 관리되지 않는 데이터와 조합한 다음, Excel 내에서 일치를 수행합니다. MDS와 함께 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 구성 요소를 설치해야 합니다. 자세한 내용은 [Excel용 MDS 추가 기능의 데이터 품질 일치](../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)를 참조하세요.  
   
   
+

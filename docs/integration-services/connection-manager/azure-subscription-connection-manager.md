@@ -18,6 +18,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: f34ac8d5c1b6bd117a83d287db1d46ff6f786aab
@@ -49,3 +50,4 @@ ms.lasthandoff: 09/26/2017
 6.  **확인** 을 클릭하여 대화 상자를 닫습니다.  
   
   
+

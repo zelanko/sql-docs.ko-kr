@@ -14,6 +14,7 @@ caps.latest.revision: 5
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a194c2d28916ad348086a02ff521c1b6cbb16542
@@ -35,3 +36,4 @@ ms.lasthandoff: 08/03/2017
 -   Oracle CDC Service는 Oracle RAC 노드 중 하나가 중지되는 경우에도 Oracle 데이터베이스와 통신하여 로그를 처리할 수 있는 Oracle RAC를 지원합니다.  
   
   
+
