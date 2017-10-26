@@ -20,10 +20,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: 1df54edd5857ac2816fa4b164d268835d9713638
-ms.openlocfilehash: aab54d4c1005a11e9c947a02199eec63fb289b22
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: e1b3e7db23ce9435b5d57156f2dcfd920d4d3e11
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/12/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
@@ -137,7 +137,7 @@ GO
   
  출력 매개 변수를 지정하려면 CREATE PROCEDURE 문의 매개 변수 정의에서 OUTPUT 키워드를 반드시 지정해야 합니다. 프로시저는 출력 매개 변수의 현재 값을 프로시저가 끝날 때 호출 프로그램에 반환합니다. 호출 프로그램에서 프로시저를 실행할 때 OUTPUT 키워드도 사용해야 호출 프로그램에서 사용할 수 있는 변수에 매개 변수 값을 저장할 수 있습니다.  
   
- 다음 예에서는 지정된 가격을 초과하지 않는 제품 목록을 반환하는 `Production.usp`_`GetList` 프로시저를 만듭니다. 다음 예에서는 여러 SELECT 문과 여러 OUTPUT 매개 변수의 사용을 보여 줍니다. OUTPUT 매개 변수를 사용하면 프로시저를 실행하는 동안 외부 프로시저, 일괄 처리 또는 한 개 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 값 집합에 액세스할 수 있습니다.  
+ 다음 예에서는 지정된 가격을 초과하지 않는 제품 목록을 반환하는 `Production.usp_GetList` 프로시저를 만듭니다. 다음 예에서는 여러 SELECT 문과 여러 OUTPUT 매개 변수의 사용을 보여 줍니다. OUTPUT 매개 변수를 사용하면 프로시저를 실행하는 동안 외부 프로시저, 일괄 처리 또는 한 개 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 값 집합에 액세스할 수 있습니다.  
   
 ```  
 USE AdventureWorks2012;  

@@ -18,10 +18,10 @@ author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
 ms.translationtype: HT
-ms.sourcegitcommit: d4dc2ff665ff191fb75dd99103a222542262d4c4
-ms.openlocfilehash: 7eb8ea4b29caaf7f1600bbd31db4f669b86476c1
+ms.sourcegitcommit: aecf422ca2289b2a417147eb402921bb8530d969
+ms.openlocfilehash: 715ce3fff853f4eab433d095ffd952033defad69
 ms.contentlocale: ko-kr
-ms.lasthandoff: 07/31/2017
+ms.lasthandoff: 10/24/2017
 
 ---
 # <a name="return-data-from-a-stored-procedure"></a>저장 프로시저에서 데이터 반환
@@ -111,7 +111,7 @@ GO
     >  커서의 닫힌 상태는 반환 시에만 문제가 됩니다. 예를 들어 프로시저를 통해 커서를 일부 닫은 후 프로시저에서 나중에 다시 열어 호출한 일괄 처리, 프로시저, 트리거에 커서의 결과 집합을 반환하는 것은 유효합니다.  
   
 ### <a name="examples-of-cursor-output-parameters"></a>Cursor Output 매개 변수의 예  
- 다음 예에서는 `@currency`cursor`cursor` 데이터 형식을 사용하여 출력 매개 변수 **_** 를 지정하는 프로시저가 생성됩니다. 그런 다음 일괄 처리로 프로시저가 호출됩니다.  
+ 다음 예에서는 **cursor** 데이터 형식을 사용하여 출력 매개 변수 `@currency_cursor`를 지정하는 프로시저가 생성됩니다. 그런 다음 일괄 처리로 프로시저가 호출됩니다.  
   
  먼저 선언된 프로시저를 만들고 Currency 테이블에서 커서를 엽니다.  
   
