@@ -30,7 +30,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40servername-transact-sql"></a>& #x 40; & #x 40; SERVERNAME (Transact SQL)
+# <a name="x40x40servername-transact-sql"></a>&#x40;&#x40;SERVERNAME (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   실행 중인 로컬 서버의 이름을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
