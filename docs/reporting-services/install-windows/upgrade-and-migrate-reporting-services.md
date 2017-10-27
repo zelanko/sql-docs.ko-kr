@@ -24,7 +24,7 @@ ms.translationtype: MT
 ms.sourcegitcommit: 59c7e1cc3c31f77652acb21d375e1294bdc93397
 ms.openlocfilehash: b5706abc4f362ee3bd4f042c1e081951dcd9ad1d
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/27/2017
+ms.lasthandoff: 10/25/2017
 
 ---
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 09/27/2017
   
 3.  SQL Server Reporting services 보고서 서버 중 하나를 업그레이드 합니다.  
   
-4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버를 확장 배포에 다시 추가합니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
+4.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 관리자를 사용하여 보고서 서버를 스케일 아웃 배포에 다시 추가합니다. 자세한 내용은 [기본 모드 보고서 서버 확장 배포 구성&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)을 참조하세요.  
   
      각 서버에 대해 업그레이드 및 확장 단계를 반복합니다.  
   
@@ -252,4 +252,4 @@ ms.lasthandoff: 09/27/2017
 [보고서 업그레이드](../../reporting-services/install-windows/upgrade-reports.md)   
 [설치 마법사를 사용하여 SQL Server 2016으로 업그레이드&#40;설치 프로그램&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
