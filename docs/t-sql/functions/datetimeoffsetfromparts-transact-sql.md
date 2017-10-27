@@ -135,7 +135,7 @@ GO
   
 ## <a name="see-also"></a>참고 항목
 [datetimeoffset&#40;Transact-SQL&#41;](../../t-sql/data-types/datetimeoffset-transact-sql.md)  
-[표준 시간대 &AMP; #40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
+[표준 시간대 &AMP;#40; Transact SQL &#41;](../../t-sql/queries/at-time-zone-transact-sql.md)
   
   
 
