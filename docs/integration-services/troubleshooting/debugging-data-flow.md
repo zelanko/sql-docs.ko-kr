@@ -80,13 +80,12 @@ ms.lasthandoff: 08/03/2017
   
  다음 예에서는 패키지의 구성 요소 간에 보내진 행 수를 표시합니다.  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, source_component_name, destination_component_name, rows_sent  
 from catalog.execution_data_statistics  
 where execution_id = 132  
-order by source_component_name, destination_component_name  
-  
+order by source_component_name, destination_component_name   
 ```  
   
  다음 예에서는 특정 실행 중 각 구성 요소가 보낸 밀리초당 행 수를 계산합니다. 계산되는 값은 다음과 같습니다.  
@@ -110,7 +109,6 @@ where execution_id = 132
 group by source_component_name, destination_component_name  
 having (datediff(ms,min(created_time),max(created_time))) > 0  
 order by source_component_name desc  
-  
 ```  
 
 ## <a name="configure-an-error-output-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 오류 출력 구성
@@ -230,13 +228,11 @@ order by source_component_name desc
   
  다음은 위의 시나리오에 설명된 단계를 수행하는 예제 SQL 스크립트입니다.  
   
-```  
-  
+```sql
 Declare @execid bigint  
 EXEC [SSISDB].[catalog].[create_execution] @folder_name=N'ETL Folder', @project_name=N'ETL Project', @package_name=N'Package.dtsx', @execution_id=@execid OUTPUT  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt'  
 EXEC [SSISDB].[catalog].[start_execution] @execid  
-  
 ```  
   
  create_execution 저장 프로시저의 폴더 이름, 프로젝트 이름 및 패키지 이름 매개 변수는 Integration Services 카탈로그의 폴더, 프로젝트 및 패키지 이름에 해당합니다. 다음 그림에 표시된 것처럼 폴더, 프로젝트 및 패키지 이름을 가져와서 SQL Server Management Studio에서 create_execution 호출을 사용할 수 있습니다. 여기에 SSIS 프로젝트가 나타나지 않으면 프로젝트를 SSIS 서버에 아직 배포하지 않았을 수 있습니다. Visual Studio에서 SSIS 프로젝트를 마우스 오른쪽 단추로 클릭하고 배포를 클릭하여 예상되는 SSIS 서버에 프로젝트를 배포합니다.  
@@ -260,18 +256,16 @@ EXEC [SSISDB].[catalog].[start_execution] @execid
 ### <a name="removing-a-data-tap"></a>데이터 탭 제거  
  [catalog.remove_data_tap](../../integration-services/system-stored-procedures/catalog-remove-data-tap.md) 저장 프로시저를 사용하여 실행을 시작하기 전에 데이터 탭을 제거할 수 있습니다. 이 저장 프로시저는 add_data_tap 저장 프로시저의 출력으로 가져올 수 있는 데이터 탭의 ID를 매개 변수로 사용합니다.  
   
-```  
-  
+```sql
 DECLARE @tap_id bigint  
 EXEC [SSISDB].[catalog].add_data_tap @execution_id = @execid, @task_package_path = '\Package\Data Flow Task', @dataflow_path_id_string = 'Paths[Flat File Source.Flat File Source Output]', @data_filename = 'output.txt' @data_tap_id=@tap_id OUTPUT  
 EXEC [SSISDB].[catalog].remove_data_tap @tap_id  
-  
 ```  
   
 ### <a name="listing-all-data-taps"></a>모든 데이터 탭 나열  
  catalog.execution_data_taps 뷰를 사용하여 모든 데이터 탭을 나열할 수도 있습니다. 다음 예에서는 사양 실행 인스턴스(ID: 54)의 데이터 탭을 추출합니다.  
   
-```  
+```sql 
 select * from [SSISDB].[catalog].execution_data_taps where execution_id=@execid  
 ```  
   

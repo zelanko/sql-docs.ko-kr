@@ -37,7 +37,7 @@ ms.lasthandoff: 08/03/2017
   
  Oracle CDC Designer 콘솔을 사용하는 경우 변경 내용은 자동으로 감지됩니다. SQL을 사용하여 Oracle CDC 구성을 직접 업데이트하는 경우 Oracle CDC Service에서 구성 변경을 알리기 위해 다음 절차를 호출해야 합니다.  
   
-```  
+```sql
 DECLARE @dbname nvarchar(128) = 'HRcdc'  
 EXECUTE [MSXDBCDC].[dbo].[xdbcdc_update_config_version] @dbname  
 GO  
@@ -66,7 +66,7 @@ GO
   
  로그 마이닝 암호는 다음 명령을 통해 자동으로 만들어지는 고정 이름 `xdbcdc_asym_key` 와 함께 비대칭 키를 사용하여 암호화된 상태로 저장됩니다.  
   
-```  
+```sql
 USE [<cdc-database-name>]  
 CREATE ASYMMETRIC KEY xdbcdc_asym_key  
     WITH ALGORITHM = RSA_1024  

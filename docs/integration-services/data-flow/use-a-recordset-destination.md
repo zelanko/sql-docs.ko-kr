@@ -113,7 +113,7 @@ ms.lasthandoff: 08/03/2017
   
     3.  **SQL 명령 텍스트**에 대해 다음 쿼리를 입력합니다.  
   
-        ```  
+        ```sql 
         SELECT     Person.Contact.EmailAddress, Person.Contact.FirstName, CONVERT(float, Sales.SalesPerson.Bonus) AS Bonus  
         FROM         Sales.SalesPerson INNER JOIN  
                               Person.Contact ON Sales.SalesPerson.SalesPersonID = Person.Contact.ContactID  

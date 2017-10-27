@@ -51,7 +51,7 @@ ms.lasthandoff: 09/26/2017
   
 2.  다음 TRANSACT-SQL 명령을 실행 하 여 대상 테이블을 만듭니다는 **AdventureWorks** 데이터베이스:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

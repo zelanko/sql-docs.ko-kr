@@ -161,7 +161,7 @@ else
   
 6.  만들기 및 구성에 필요한 대상 구성 요소는 **AddressID** 및 **도시** 열의 경우와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서보여준예제대상구성요소나대상또는[스크립트 구성 요소를 사용 하 여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)합니다. 그런 다음 변환의 출력을 대상 구성 요소에 연결합니다. 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 **AdventureWorks** 데이터베이스:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -215,7 +215,7 @@ public class ScriptMain:
   
 7.  만들기 및 구성 하는 두 개의 대상 구성 요소는 **AddressID** 및 **도시** 열의 경우와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상, 플랫 파일 대상 또는 예제 대상 구성 요소 에 설명 된 [스크립트 구성 요소를 사용 하 여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)합니다. 그런 다음 변환의 각 출력을 대상 구성 요소 중 하나에 연결합니다. 실행 하 여 대상 테이블을 만들 수 있습니다는 [!INCLUDE[tsql](../../includes/tsql-md.md)] (고유 테이블 이름 포함)에 다음과 비슷한 명령을 **AdventureWorks** 데이터베이스:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2](  
         [AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL  

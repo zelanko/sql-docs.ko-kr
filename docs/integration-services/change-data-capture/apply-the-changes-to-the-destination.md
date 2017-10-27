@@ -65,7 +65,7 @@ ms.lasthandoff: 08/03/2017
   
      예를 들어 Customer 테이블에 대한 UPDATE 문에는 다음 구문이 있을 수 있습니다.  
   
-    ```  
+    ```sql
     update CDCSample.Customer  
     set TerritoryID  = ?,  
         CustomerType  = ?,  
@@ -97,7 +97,7 @@ ms.lasthandoff: 08/03/2017
   
      예를 들어 Customer 테이블에 대한 DELETE 문에는 다음 구문이 있을 수 있습니다.  
   
-    ```  
+    ```sql
     delete from Customer where CustomerID = ?  
   
     ```  

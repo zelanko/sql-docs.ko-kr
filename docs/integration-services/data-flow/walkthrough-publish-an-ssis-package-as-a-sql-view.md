@@ -196,7 +196,7 @@ ms.lasthandoff: 09/27/2017
 ### <a name="create-a-linked-server-using-the-ole-db-provider-for-ssis"></a>SSIS용 OLE DB 공급자를 사용하여 연결된 서버 만들기  
  SQL Server Management Studio에서 다음 쿼리를 실행하여 SSIS용 OLE DB 공급자를 통해 연결된 서버를 만듭니다.  
   
-```  
+```sql 
   
 USE [master]  
 GO  
@@ -217,7 +217,7 @@ GO
   
 1.  뷰를 만들기 전에 새 쿼리 창에서 다음 쿼리를 입력하고 실행합니다. OPENQUERY는 SQL Server에서 지원되는 행 집합 함수입니다. 연결된 서버에 연결된 OLE DB 공급자를 사용하여 지정된 연결된 서버에서 지정된 통과 쿼리를 실행합니다. OPENQUERY는 테이블 이름처럼 쿼리의 FROM 절에서 참조될 수 있습니다. 자세한 내용은 [MSDN 라이브러리의 OPENQUERY 설명서](http://msdn.microsoft.com/library/ms188427.aspx) 를 참조하세요.  
   
-    ```  
+    ```sql
     SELECT * FROM OPENQUERY(SSISFeedServer,N'Folder=Eldorado;Project=SSISPackagePublishing;Package=Package.dtsx')   
     GO  
     ```  
@@ -227,7 +227,7 @@ GO
   
 2.  다음 쿼리를 실행하여 **TestDB** 데이터베이스에서 뷰를 만듭니다.  
   
-    ```  
+    ```sql
   
     USE [TestDB]   
     GO   
@@ -240,14 +240,14 @@ GO
   
 3.  다음 쿼리를 실행하여 뷰를 테스트합니다.  
   
-    ```  
+    ```sql
     SELECT * FROM SSISPackageView  
     ```  
   
 ### <a name="openquery-function"></a>OPENQUERY 함수  
  OPENQUERY 함수에 대한 구문은 다음과 같습니다.  
   
-```  
+```sql 
 SELECT * FROM OPENQUERY(<LinkedServer Name>, N’Folder=<Folder Name from SSIS Catalog>; Project=<SSIS Project Name>; Package=<SSIS Package Name>; Use32BitRuntime=[True | False];Parameters=”<parameter_name_1>=<value1>; parameter_name_2=<value2>”;Timeout=<Number of Seconds>;’)  
 ```  
   

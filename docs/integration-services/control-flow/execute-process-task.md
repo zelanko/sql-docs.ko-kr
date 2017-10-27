@@ -67,7 +67,7 @@ ms.lasthandoff: 08/11/2017
   
 -   Microsoft Visual Basic을 사용하여 응용 프로그램을 작성하는 경우 **My.Application.CommandLineArgs** 속성을 설정합니다. 다음 예에서는 **My.Application.CommandLineArgs** 속성을 설정하여 두 인수를 검색합니다.  
   
-    ```  
+    ```vb  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  
     Dim variable2 As String = My.Application.CommandLineArgs.Item(1)   
     ```  

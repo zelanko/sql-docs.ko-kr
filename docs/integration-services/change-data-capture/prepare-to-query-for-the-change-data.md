@@ -76,7 +76,7 @@ ms.lasthandoff: 08/03/2017
   
     -   C#에서 프로그래밍하는 경우 다음 코드 행을 입력합니다.  
   
-        ```  
+        ```csharp 
         int dataReady;  
         System.DateTime extractStartTime;  
         System.DateTime extractEndTime;  
@@ -102,7 +102,7 @@ ms.lasthandoff: 08/03/2017
   
     -   [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]에서 프로그래밍하는 경우 다음 코드 행을 입력합니다.  
   
-        ```  
+        ```vb  
         Dim dataReady As Integer  
         Dim extractStartTime As Date  
         Dim extractEndTime As Date  
@@ -150,7 +150,7 @@ ms.lasthandoff: 08/03/2017
   
     4.  **SQLStatement**에 다음 SQL 문을 입력합니다.  
   
-        ```  
+        ```sql
         declare @ExtractStartTime datetime,  
         @ExtractEndTime datetime,   
         @DataReady int  

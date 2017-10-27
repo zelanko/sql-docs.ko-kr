@@ -132,7 +132,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  만들기 및 구성에 대 한 첫 번째 출력에는 대상 구성 요소는 **AddressID** 및 **도시** 열의 경우와 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 또는 예제 대상 구성 요소 에 설명 된 [스크립트 구성 요소를 사용 하 여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)합니다. 그런 다음는 변환의 첫 번째 출력 연결 **MyAddressOutput**, 대상 구성 요소입니다. 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 **AdventureWorks** 데이터베이스:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

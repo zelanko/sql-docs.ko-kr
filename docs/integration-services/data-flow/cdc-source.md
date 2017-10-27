@@ -70,7 +70,7 @@ ms.lasthandoff: 08/17/2017
 ### <a name="use-this-script-to-isolate-problems-and-reproduce-them-in-sql-server-management-studio"></a>이 스크립트를 사용하여 문제를 격리하고 SQL Server Management Studio에서 해당 문제를 재현할 수 있습니다.  
  CDC 원본 작업은 CDC 원본을 호출하기 전에 실행되는 CDC 제어 태스크의 작업으로 제어됩니다. CDC 제어 태스크는 시작 및 끝 LSN을 포함하기 위해 CDC 상태 패키지 변수의 값을 준비합니다. 이 태스크는 다음 스크립트에 해당하는 함수를 실행합니다.  
   
-```  
+```sql
 use <cdc-enabled-database-name>  
                declare @start_lsn binary(10), @end_lsn binary(10)  
                set @start_lsn = sys.fn_cdc_increment_lsn(  
