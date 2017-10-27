@@ -45,6 +45,9 @@
                 - name: ADO RDS API(사용되지 않음)
                   href: /sql/ado/reference/rds-api/
                   homepage: /sql/ado/reference/rds-api/rds-api-reference
+        - name: 분석 플랫폼 시스템
+          href: /sql/analytics-platform-system/
+          homepage: /sql/analytics-platform-system/index
         - name: SQL에 클라이언트 연결
           href: /sql/connect/
           homepage: /sql/connect/sql-server-drivers
