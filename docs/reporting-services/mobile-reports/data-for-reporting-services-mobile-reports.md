@@ -27,7 +27,7 @@ ms.lasthandoff: 09/27/2017
   
 다음과 같은 두 가지 유형의 원본에서 데이터를 가져올 수 있습니다.   
   
-* **로컬 Excel 파일**: Excel 문서를 선택하고 가져올 워크시트를 선택합니다. 가져온 데이터는 모바일 보고서 정의 내에 저장됩니다. 원본 Excel 파일에서 데이터를 새로 고치려면 **** 데이터 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. 에 대해 자세히 알아보세요 [SSRS 모바일 보고서용 Excel 데이터 준비](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)합니다.  
+* **로컬 Excel 파일**: Excel 문서를 선택하고 가져올 워크시트를 선택합니다. 가져온 데이터는 모바일 보고서 정의 내에 저장됩니다. 원본 Excel 파일에서 **데이터를 새로 고치려면** 데이터 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-short.md)] **Data** tab. 에 대해 자세히 알아보세요 [SSRS 모바일 보고서용 Excel 데이터 준비](../../reporting-services/mobile-reports/prepare-excel-data-for-reporting-services-mobile-reports.md)합니다.  
   
 * **[!INCLUDE[PRODUCT_NAME](../../includes/server-product-name.md)] 공유 데이터 집합**: 서버에 게시된 데이터 집합 목록을 검색하여 모바일 보고서에 추가할 데이터 집합을 선택합니다. 서버 데이터를 기반으로 하는 모바일 보고서는 항상 원본 서버 데이터 집합에 연결된 상태로 유지되며 서버 데이터의 최신 상태를 반영합니다. [지원되는 데이터 원본 목록](https://msdn.microsoft.com/library/ms159219.aspx)을 참조하세요.   
   
