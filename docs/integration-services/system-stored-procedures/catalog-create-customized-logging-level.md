@@ -24,7 +24,7 @@ ms.lasthandoff: 09/26/2017
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  새 사용자 지정 된 로깅 수준을 만듭니다. 사용자 지정 된 로깅 수준에 대 한 자세한 내용은 참조 하십시오. [Integration services& #40; Ssis& #41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)합니다.  
+  새 사용자 지정 된 로깅 수준을 만듭니다. 사용자 지정 된 로깅 수준에 대 한 자세한 내용은 참조 하십시오. [Integration services&#40; Ssis&#41; 로깅](../../integration-services/performance/integration-services-ssis-logging.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   

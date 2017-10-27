@@ -113,7 +113,7 @@ CTAS 문은 원본 테이블이 분할 된 경우에 기본적으로 분할 되�
 Select 문에 근본적인 차이점 CTAS과 CREATE TABLE입니다.  
 
  `WITH`*common_table_expression*  
- CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 집합을 지정합니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  `SELECT`*select_criteria*  
  SELECT 문에서 결과 함께 새 테이블을 채웁니다. *select_criteria* 데이터를 새 테이블로 복사를 결정 하는 SELECT 문의 본문입니다. SELECT 문에 대 한 정보를 참조 하십시오. [select&#40; Transact SQL &#41; ](../../t-sql/queries/select-transact-sql.md).  
