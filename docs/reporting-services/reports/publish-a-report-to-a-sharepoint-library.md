@@ -19,7 +19,8 @@ caps.latest.revision: 15
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 88caf60aea658972b79c49948d882ce5f96e1d07
 ms.contentlocale: ko-kr
@@ -61,3 +62,4 @@ ms.lasthandoff: 08/09/2017
  [Office 데이터 연결 &#40;를 사용 합니다. odc &#41; 보고서 &#40; 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   
+

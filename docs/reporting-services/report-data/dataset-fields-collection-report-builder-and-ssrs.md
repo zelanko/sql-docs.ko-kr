@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 271d1b4018890ab23db0254b24cbf7664491b848
 ms.contentlocale: ko-kr
@@ -112,9 +113,10 @@ ms.lasthandoff: 08/09/2017
  보고서가 처리될 때 해당 열이 더 이상 데이터 원본에 존재하지 않아 데이터 집합에 대한 결과 집합에서 지정된 일부 열에 대한 값이 누락될 수 있습니다. 필드 속성 IsMissing을 사용하여 필드에 대한 값이 런타임에 반환되었는지를 검색할 수 있습니다. 자세한 내용은 [데이터 집합 필드 컬렉션 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-dataset-fields-collection-references-report-builder.md)를 참조하세요.  
   
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 집합 속성 대화 상자, 필드&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/75c7e54a-3d20-4c9a-88da-ab36dce2ce42)   
  [보고서 파트 및 보고서 작성기에서 데이터 집합](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
  [보고서는 데이터 집합 및 공유 데이터 집합 &#40; 포함 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   
+

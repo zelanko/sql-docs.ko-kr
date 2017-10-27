@@ -17,7 +17,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 66d5312047b516176e8aa1b331b36745bcdb20d9
 ms.contentlocale: ko-kr
@@ -29,7 +30,7 @@ ms.lasthandoff: 08/09/2017
 
   보고서 디자이너에서 프로젝트에 테이블, 차트 및 페이지가 매겨진 기타 보고서 항목을 만든 후에는 자신과 다른 사람이 다른 보고서에서 다시 사용할 수 있도록 이들 항목을 보고서 서버 또는 보고서 서버와 통합된 SharePoint 사이트에 *보고서 파트* 로 게시할 수 있습니다.  
   
- 일반적으로 보고서 파트는 보고서 디자이너와 보고서 작성기에서 같은 방식으로 작동합니다. 기본 기능에 대해 알아보려면 참조 [보고서 파트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
+ 일반적으로 보고서 파트는 보고서 디자이너와 보고서 작성기에서 같은 방식으로 작동합니다. 기본 기능에 대한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
  그러나 보고서 디자이너에서 보고서 파트가 작동하는 방식에는 기본적인 차이점이 있습니다. 가장 큰 차이는 작업 흐름입니다. 보고서 작성기에서는 공동 작성이 가능합니다. 보고서 파트를 만들고 게시합니다. 다시 사용, 수정 및 다시 게시할 수 있습니다. 보고서 디자이너에서 게시는 단방향으로 수행됩니다. 즉, 보고서 디자이너에서 보고서 파트를 게시하면 다른 사람이 다시 사용할 수 있습니다. 하지만 보고서 디자이너에서 보고서를 기존 보고서 파트를 다시 사용할 수는 없습니다. 이 항목에서는 보고서 파트에 대해 간략하게 설명한 후 이러한 차이점에 대해 중점적으로 설명합니다.  
   
@@ -101,3 +102,4 @@ ms.lasthandoff: 08/09/2017
 [보고서 파트 관리](../../reporting-services/report-design/managing-report-parts.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

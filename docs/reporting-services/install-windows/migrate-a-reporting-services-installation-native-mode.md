@@ -23,6 +23,7 @@ caps.latest.revision: 54
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 8b6d83cb8261483890c376121b23f1ffca9f6bbf
@@ -292,3 +293,4 @@ SQL Server Reporting Services의 변경 내용에 대한 자세한 내용은 업
 [Reporting Services 구성 관리자](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

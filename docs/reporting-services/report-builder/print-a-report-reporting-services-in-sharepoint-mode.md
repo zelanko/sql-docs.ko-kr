@@ -18,7 +18,8 @@ caps.latest.revision: 11
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f89c8f0d330561aacd678e4556fdaf2910b5dcc7
 ms.contentlocale: ko-kr
@@ -54,6 +55,7 @@ ms.lasthandoff: 08/09/2017
      인쇄하기 전에 보고서를 보려면 **미리 보기** 단추를 클릭합니다. 이렇게 하면 보고서의 첫 페이지가 별도의 미리 보기 창에서 열립니다. 보고서 서버에서 보고서가 렌더링됨에 따라 추가 페이지도 표시됩니다. 미리 보는 보고서는 EMF 형식으로 렌더링됩니다. 이전 페이지나 다음 페이지로 이동할 수 있으며 마지막 페이지에서는 **다음** 단추가 비활성화됩니다. 미리 보기 페이지에서 인쇄 여백을 수정하려면 **여백** 단추를 클릭합니다. 그러면 **여백** 대화 상자가 표시됩니다. 위쪽, 아래쪽, 오른쪽 및 왼쪽 여백을 구성하고 **확인**을 클릭합니다. 대화 상자가 닫히고 미리 보기 및 인쇄 렌더링 설정이 저장됩니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [사용 하도록 설정 하 고 보고 서비스에 대 한 클라이언트 쪽 인쇄를 사용 하지 않도록 설정](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   
+

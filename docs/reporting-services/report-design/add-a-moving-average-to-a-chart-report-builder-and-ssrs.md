@@ -15,7 +15,8 @@ caps.latest.revision: 13
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f838e4a7e9518587e91dddec6c2cab61c1061232
 ms.contentlocale: ko-kr
@@ -50,9 +51,10 @@ ms.lasthandoff: 08/09/2017
     >  기간은 이동 평균을 계산하는 데 사용되는 일 수입니다. x축에 날짜/시간 값이 지정되지 않으면 이동 평균을 계산하는 데 사용되는 데이터 요소의 수에 따라 기간이 표시됩니다. 데이터 요소가 한 개뿐이면 이동 평균 수식이 계산되지 않습니다. 이동 평균은 두 번째 요소부터 계산됩니다. **첫 번째 요소에서 시작** 옵션을 지정할 경우 차트에서 이동 평균이 첫 번째 요소에서부터 시작됩니다. 데이터 요소가 한 개뿐이면 계산된 이동 평균의 요소는 원본 계열의 첫 번째 요소와 동일합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
-* [자습서: 보고서에 세로 막대형 차트 추가(보고서 작성기)](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
-*  [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
+* [자습서: 보고서 (보고서 작성기)에 세로 막대형 차트 추가](Tutorial:%20Add%20a%20Column%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+*  [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)   
 *  [차트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)   
 *  [차트에 빈 요소 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)  
   
   
+

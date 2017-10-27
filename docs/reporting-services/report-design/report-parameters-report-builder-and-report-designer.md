@@ -22,7 +22,8 @@ caps.latest.revision: 41
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 3f91523a9cf7555e8d42fc546fff450827ab3f41
 ms.contentlocale: ko-kr
@@ -55,13 +56,13 @@ ms.lasthandoff: 08/09/2017
   
 -   매개 변수를 사용하여 주 보고서를 드릴스루 보고서, 하위 보고서 및 링크된 보고서에 연결합니다. 일련의 보고서를 디자인할 때 특정 질문에 응답하도록 각 보고서를 디자인할 수 있습니다. 각 보고서는 관련된 세부 정보를 다른 뷰 또는 다른 수준으로 표시할 수 있습니다. 서로 관련된 일련의 보고서를 제공하려면 대상 보고서의 관련 데이터에 대한 매개 변수를 만듭니다.  
   
-     자세한 내용은 참조 [드릴스루 보고서 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [하위 보고서 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md), 및 [링크 된 보고서 만들기](../../reporting-services/reports/create-a-linked-report.md)합니다.  
+     자세한 내용은 [드릴스루 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-reports-report-builder-and-ssrs.md), [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md) 및 [연결된 보고서 만들기](../../reporting-services/reports/create-a-linked-report.md)를 참조하세요.  
   
 -   여러 사용자에 대한 매개 변수 집합을 사용자 지정합니다. 보고서 서버에서 판매 보고서를 기반으로 하는 링크된 보고서 두 개를 만듭니다. 한 링크된 보고서에서는 영업 사원에 대해 미리 정의된 매개 변수 값을 사용하고 링크된 나머지 보고서에서는 영업 관리자에 대해 미리 정의된 매개 변수 값을 사용합니다. 두 보고서 모두 동일한 보고서 정의를 사용합니다.  
   
  **다양한 보고서 표현**  
   
--   URL 요청을 통해 보고서 서버에 보고서의 렌더링을 사용자 지정하는 명령을 보냅니다. 자세한 내용은 참조 [URL 액세스 &#40; Ssrs&#41; ](../../reporting-services/url-access-ssrs.md) 및 [URL 내에서 보고서 매개 변수를 전달할](../../reporting-services/pass-a-report-parameter-within-a-url.md)합니다.  
+-   URL 요청을 통해 보고서 서버에 보고서의 렌더링을 사용자 지정하는 명령을 보냅니다. 자세한 내용은 [URL 액세스&#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md) 및 [URL에 보고서 매개 변수 전달](../../reporting-services/pass-a-report-parameter-within-a-url.md)을 참조하세요.  
   
 -   사용자가 값을 지정하여 보고서 모양을 사용자 지정할 수 있도록 합니다. 예를 들어 테이블에서 중첩된 모든 행 그룹을 확장하거나 축소할 것인지 여부를 나타내는 부울 매개 변수를 제공합니다.  
   
@@ -126,7 +127,7 @@ ms.lasthandoff: 08/09/2017
  보고서 파트는 보고서 서버에 저장되며 다른 사용자가 자신의 보고서에 사용할 수 있습니다. 매개 변수인 보고서 파트는 보고서 서버에서 관리할 수 없습니다. 보고서 파트 갤러리에서 매개 변수를 검색하여 추가한 후에 보고서에서 구성할 수 있습니다. 자세한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md)를 참조하세요.  
   
 > [!NOTE]  
->  매개 변수는 매개 변수가 포함된 종속 데이터 집합이 있는 데이터 영역에 대해 개별 보고서 파트로 게시할 수 있습니다. 매개 변수는 보고서 파트로 나열되지만 보고서에 보고서 파트 매개 변수를 직접 추가할 수 없습니다. 대신 보고서 파트를 추가하면 보고서 파트에 의해 포함되었거나 참조되는 데이터 집합 쿼리에서 필요한 보고서 매개 변수가 자동으로 생성됩니다. 보고서 파트에 대 한 자세한 내용은 참조 하십시오. [보고서 파트 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) 및 [보고서 디자이너 &#40;의 보고서 파트 Ssrs&#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+>  매개 변수는 매개 변수가 포함된 종속 데이터 집합이 있는 데이터 영역에 대해 개별 보고서 파트로 게시할 수 있습니다. 매개 변수는 보고서 파트로 나열되지만 보고서에 보고서 파트 매개 변수를 직접 추가할 수 없습니다. 대신 보고서 파트를 추가하면 보고서 파트에 의해 포함되었거나 참조되는 데이터 집합 쿼리에서 필요한 보고서 매개 변수가 자동으로 생성됩니다. 보고서 파트에 대한 자세한 내용은 [보고서 파트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md) 및 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
   
 ### <a name="parameter-values"></a>매개 변수 값  
  다음은 보고서에서 매개 변수 값을 선택할 수 있는 옵션입니다.  
@@ -164,7 +165,7 @@ ms.lasthandoff: 08/09/2017
   
  데이터 원본에 쿼리 디자이너를 사용하여 매개 변수가 있는 쿼리를 작성할 수 있습니다.  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 경우 서로 다른 데이터 원본이 매개 변수에 대한 서로 다른 구문을 지원합니다. 위치 또는 이름으로 쿼리에서 식별되는 매개 변수의 범위를 지원합니다. 자세한 내용은에서 특정 외부 데이터 원본 유형에 대 한 항목을 참조 하세요. [보고서 데이터 집합 &#40; Ssrs&#41; ](../../reporting-services/report-data/report-datasets-ssrs.md). 관계형 쿼리 디자이너에서 매개 변수가 있는 쿼리를 만들려면 필터에 대해 매개 변수 옵션을 선택해야 합니다. 자세한 내용은 [관계형 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)를 참조하세요.  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리의 경우 서로 다른 데이터 원본이 매개 변수에 대한 서로 다른 구문을 지원합니다. 위치 또는 이름으로 쿼리에서 식별되는 매개 변수의 범위를 지원합니다. 자세한 내용은 [보고서 데이터 집합&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)에서 특정 외부 데이터 원본 유형에 대한 항목을 참조하세요. 관계형 쿼리 디자이너에서 매개 변수가 있는 쿼리를 만들려면 필터에 대해 매개 변수 옵션을 선택해야 합니다. 자세한 내용은 [관계형 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)를 참조하세요.  
   
 -   Microsoft SQL Server Analysis Services, SAP NetWeaver BI 또는 Hyperion Essbase처럼 다차원 데이터 원본을 기반으로 하는 쿼리에서는 쿼리 디자이너에서 지정한 필터를 기반으로 하는 매개 변수를 만들 것인지 여부를 지정할 수 있습니다. 자세한 내용은 [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)에서 데이터 확장 프로그램에 해당하는 쿼리 디자이너 항목을 참조하세요.  
   
@@ -183,7 +184,7 @@ ms.lasthandoff: 08/09/2017
   
 -   **보고서 구독.** 구독을 통해 데이터를 필터링하고 보고서를 전달하는 매개 변수 값을 지정할 수 있습니다. 자세한 내용은 [구독 및 배달&#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)을 참조하세요.  
   
--   **URL 액세스.** 보고서 URL에 매개 변수 값을 지정할 수 있습니다. URL 액세스를 사용하여 보고서를 실행하고 매개 변수 값을 지정할 수도 있습니다. 자세한 내용은 참조 [URL 액세스 &#40; Ssrs&#41; ](../../reporting-services/url-access-ssrs.md).  
+-   **URL 액세스.** 보고서 URL에 매개 변수 값을 지정할 수 있습니다. URL 액세스를 사용하여 보고서를 실행하고 매개 변수 값을 지정할 수도 있습니다. 자세한 내용은 [URL 액세스&#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)를 참조하세요.  
   
  게시된 보고서에 대한 매개 변수 속성은 일반적으로 보고서 정의를 다시 게시할 경우 유지됩니다. 보고서 정의가 동일한 보고서로 다시 게시되고 매개 변수 이름 및 데이터 형식이 그대로 유지되면 속성 설정도 그대로 유지됩니다. 보고서 정의에서 매개 변수를 추가 또는 삭제하거나 데이터 형식 또는 기존 매개 변수의 이름을 변경할 경우 게시된 보고서의 매개 변수 속성을 변경해야 할 수 있습니다.  
   

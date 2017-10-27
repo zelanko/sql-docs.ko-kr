@@ -156,7 +156,7 @@ ms.lasthandoff: 09/27/2017
   
  다음 SQL 문에서는 패키지 구성 마법사가 제공하는 기본 CREATE TABLE 문을 보여 줍니다.  
   
-```  
+```sql
 CREATE TABLE [dbo].[SSIS Configurations]  
 (  
 ConfigurationFilter NVARCHAR(255) NOT NULL,  

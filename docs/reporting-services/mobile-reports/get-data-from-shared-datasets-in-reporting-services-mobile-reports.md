@@ -15,7 +15,8 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c081588c29dddd792d0b92e6cd9573beeb09fa4f
 ms.contentlocale: ko-kr
@@ -66,7 +67,7 @@ ms.lasthandoff: 08/09/2017
   
 ### <a name="see-also"></a>참고 항목  
 - [SQL Server 모바일 보고서 게시자를 사용하여 모바일 보고서 만들기 및 게시](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md)  
--  [웹 포털(SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
+-  [웹 포털 (SSRS 기본 모드)](../../reporting-services/web-portal-ssrs-native-mode.md)  
 -  [iPad 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-ipad-kpis-mobile-reports)  보기(iOS용 Power BI)  
 -  [iPhone 앱에서 SQL Server 모바일 보고서 및 KPI](https://pbiwebprod-docs.azurewebsites.net/en-us/documentation/powerbi-mobile-iphone-kpis-mobile-reports) 보기(iOS용 Power BI)  
   

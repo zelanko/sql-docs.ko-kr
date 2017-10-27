@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: eb8b6569d75891a2922b283fbde37840910213db
 ms.contentlocale: ko-kr
@@ -100,11 +101,12 @@ ms.lasthandoff: 08/09/2017
   
 16. 계기 근처의 레이블을 마우스 오른쪽 단추로 클릭하고 **레이블 속성**을 클릭한 다음 **텍스트** 상자에 원하는 텍스트를 입력합니다.  
   
-17. 표시기 옆의 레이블을 마우스 오른쪽 단추로 클릭하고 **레이블** 속성을 클릭한 다음 **텍스트** 상자에 원하는 텍스트를 입력합니다.  
+17. 표시기 옆의 레이블을 마우스 오른쪽 단추로 클릭하고 **레이블**속성을 클릭한 다음 **텍스트** 상자에 원하는 텍스트를 입력합니다.  
   
 18. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
+

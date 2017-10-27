@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9518d1bd3ee166a0f21292ca08130214afc841be
 ms.contentlocale: ko-kr
@@ -79,3 +80,4 @@ Setspn -s http/<computername>.<domainname>:<port> <domain-user-account>
  [Reporting Services 기본 모드 보고서 서버를 관리 합니다.](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
+

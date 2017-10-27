@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e963b234c5c3babb4dd2302afca2ca06ac249b1
 ms.contentlocale: ko-kr
@@ -43,3 +44,4 @@ ms.lasthandoff: 08/09/2017
  [보고서 &#40;에 드릴스루 동작 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   
+

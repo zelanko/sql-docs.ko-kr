@@ -19,7 +19,8 @@ caps.latest.revision: 25
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 98afd0f9a34c1b15fce4905fcc1f16c3b9b024fb
 ms.contentlocale: ko-kr
@@ -488,7 +489,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [ReportViewer 컨트롤을 사용 하 여 Reporting Services 통합](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  [ReportViewer 컨트롤 2016에서 데이터 수집](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   

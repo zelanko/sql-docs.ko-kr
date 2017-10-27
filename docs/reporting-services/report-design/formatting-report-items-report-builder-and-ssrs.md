@@ -17,7 +17,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 993571d2e5d70ba0553a0ed747caccfcadb3a0da
 ms.contentlocale: ko-kr
@@ -43,22 +44,23 @@ ms.lasthandoff: 08/09/2017
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [텍스트 및 자리 표시자 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [텍스트 및 자리 표시자 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
  텍스트의 서식을 지정하고 입력란 내의 다양한 텍스트 블록에 대한 서식 옵션을 사용자 지정하는 방법에 대해 설명합니다.  
   
- [보고서 &#40;로 HTML 가져오기 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
+ [보고서로 HTML 가져오기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
  보고서에 HTML을 삽입하여 사용하는 방법에 대해 설명합니다.  
   
- [숫자 및 날짜 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
+ [숫자 및 날짜 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 지원되는 표준 및 사용자 지정 서식 문자열을 사용하는 방법에 대해 설명합니다.  
   
- [선, 색 및 이미지 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
+ [선, 색 및 이미지 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-lines-colors-and-images-report-builder-and-ssrs.md)  
  보고서 항목 및 데이터 영역 내에서 선, 눈금선, 색 및 이미지의 서식을 지정하는 방법에 대해 설명합니다.  
   
- [보고서 또는 입력란 &#40;에 대 한 로캘 설정 Reporting services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [보고서 또는 입력란에 대한 로캘 설정&#40;Reporting Services&#41;](../../reporting-services/report-design/set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  날짜, 통화 및 숫자 값과 같이 언어와 지역에 따라 달라지는 데이터 표시 형식의 설정을 변경하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [차트 &#40; 서식 지정 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
+ [차트 서식 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/formatting-a-chart-report-builder-and-ssrs.md)  
   
   
+

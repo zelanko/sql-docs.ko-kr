@@ -17,7 +17,8 @@ caps.latest.revision: 10
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: b9200dd4152625e0dce4c0c77b10fa2f3ad196ef
 ms.contentlocale: ko-kr
@@ -123,3 +124,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 기본 모드 보고서 서버를 관리 합니다.](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   
   
+

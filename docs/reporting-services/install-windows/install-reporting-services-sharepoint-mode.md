@@ -19,6 +19,7 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 4bba09c0ec60a810faf3d7ef8e75a7a43661dfba
@@ -70,3 +71,4 @@ SharePoint 모드에 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md
  [경고 담당자용 데이터 경고 관리자](../../reporting-services/data-alert-manager-for-alerting-administrators.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

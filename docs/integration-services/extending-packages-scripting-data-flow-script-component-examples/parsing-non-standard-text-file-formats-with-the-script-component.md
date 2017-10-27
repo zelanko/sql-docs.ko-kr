@@ -72,7 +72,7 @@ ms.lasthandoff: 09/26/2017
   
 3.  대상 데이터베이스를 선택하고 새 쿼리 창을 엽니다. 쿼리 창에서 다음 스크립트를 실행하여 대상 테이블을 만듭니다.  
   
-    ```  
+    ```sql
     create table RowDelimitedData  
     (  
     FirstName varchar(32),  
@@ -226,7 +226,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 3.  대상 데이터베이스를 선택하고 새 쿼리 창을 엽니다. 쿼리 창에서 다음 스크립트를 실행하여 대상 테이블을 만듭니다.  
   
-    ```  
+    ```sql
     CREATE TABLE [dbo].[Parents]([ParentID] [int] NOT NULL,  
     [ParentRecord] [varchar](32) NOT NULL,  
      CONSTRAINT [PK_Parents] PRIMARY KEY CLUSTERED   

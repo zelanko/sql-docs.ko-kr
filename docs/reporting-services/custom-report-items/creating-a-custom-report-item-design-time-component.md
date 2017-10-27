@@ -19,6 +19,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 0b1f5649db2f99957ad3b2452b02d2f7b2db01cb
@@ -208,3 +209,4 @@ private void OnProportionalScaling(object sender, EventArgs e)
  [방법: 사용자 지정 보고서 항목 배포](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
+

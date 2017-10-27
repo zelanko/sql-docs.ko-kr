@@ -20,7 +20,8 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 69e4b50bdfd9dcffd285dbd7a37e095efdca621c
 ms.contentlocale: ko-kr
@@ -145,7 +146,7 @@ ms.lasthandoff: 08/09/2017
 13. **허용** 열에서 **계정 사용**, **원격으로부터 사용 가능**및 **보안 읽기**를 선택한 다음 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting Services 구성 관리자 &#40; 기본 모드 &#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
+ [Reporting Services 구성 관리자&#40;기본 모드&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
   
   
 

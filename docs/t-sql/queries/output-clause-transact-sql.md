@@ -101,7 +101,7 @@ ms.lasthandoff: 09/01/2017
   
 -   CHECK 제약 조건 또는 활성화된 규칙을 가질 수 없습니다.  
   
- *column_list*  
+*column_list*  
  INTO 절에 지정되는 대상 테이블의 열 이름 목록입니다(옵션). 에 허용 되는 열 목록과 유사는 [삽입](../../t-sql/statements/insert-transact-sql.md) 문.  
   
  *scalar_expression*  

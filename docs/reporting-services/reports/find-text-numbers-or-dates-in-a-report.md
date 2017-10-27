@@ -17,7 +17,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 75e9c44d9cb75cef338ff2cd684c38969aa1751f
 ms.contentlocale: ko-kr
@@ -48,6 +49,7 @@ ms.lasthandoff: 08/09/2017
 4.  같은 값을 계속 검색하려면 **다음**을 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [웹 페이지 &#40; 보고서 뷰어 웹 파트 추가 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
+ [웹 페이지에 보고서 뷰어 웹 파트 추가&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/add-the-report-viewer-web-part-to-a-web-page.md)  
   
   
+

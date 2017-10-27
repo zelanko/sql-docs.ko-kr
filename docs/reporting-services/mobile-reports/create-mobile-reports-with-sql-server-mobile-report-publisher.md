@@ -16,7 +16,8 @@ caps.latest.revision: 35
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 4fe797ac21e1f659b1a2a196be3f860a65b36896
 ms.contentlocale: ko-kr
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 다양한 데이터 시각화와 함께 모바일 장치용으로 최적화되고 온-프레미스 데이터에 연결된 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 모바일 보고서에 대해 알아봅니다. 
 
 >[!NOTE]
->  대시보드 및 KPI와 같은 Datazen Server 콘텐츠를 SQL Server 2016 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 서버로 마이그레이션해야 하나요? [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)(Datazen용 SQL Server Migration Assistant)을 사용해 보세요. 
+>  SQL Server 2016으로 대시보드 및 Kpi와 같은 Datazen 서버 콘텐츠를 마이그레이션해야 할 있습니다 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 서버? [SQL Server Migration Assistant for Datazen](https://www.microsoft.com/en-us/download/details.aspx?id=53128)(Datazen용 SQL Server Migration Assistant)을 사용해 보세요. 
  
 ![SS_MRP_LayoutTabSm](../../reporting-services/media/ss-mrp-layouttabsm.png)  
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 08/09/2017
 -  보기 [Android 장치용 Power BI 앱에서 Reporting Services 모바일 보고서 및 Kpi](https://powerbi.microsoft.com/documentation/powerbi-mobile-android-kpis-mobile-reports)
 -  [Windows 10 장치용 Power BI 앱에서 Reporting Services 보고서 및 KPI 보기](https://powerbi.microsoft.com/documentation/powerbi-mobile-win10-kpis-mobile-reports/)    
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
   
 -   [공유 데이터 원본 만들기, 수정 및 삭제(SSRS)](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md)  
 -   [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)  

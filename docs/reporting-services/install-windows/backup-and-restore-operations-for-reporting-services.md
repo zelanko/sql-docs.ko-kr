@@ -24,7 +24,8 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: e3247864547983779f4037eb963ba6721a2b7654
 ms.contentlocale: ko-kr
@@ -36,7 +37,7 @@ ms.lasthandoff: 08/09/2017
 
   이 항목에서는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치에 사용되는 모든 데이터 파일에 대해 간략히 설명하고 이러한 파일을 백업하는 시기와 방법을 설명합니다. 보고서 서버 데이터베이스 파일에 대한 백업 및 복원 계획을 세우는 것이 복구 전략에서 가장 중요한 부분입니다. 그러나 복구 전략이 복잡할수록 보고서 암호화 키, 사용자 지정 어셈블리 또는 확장 프로그램, 구성 파일, 보고서 및 모델 원본 파일 등의 백업이 포함됩니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint Mode  
   
  백업 및 복원 작업은 주로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치 전체나 일부를 이동하는 데 사용됩니다.  
   
@@ -46,9 +47,9 @@ ms.lasthandoff: 08/09/2017
   
     -   [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)  
   
-    -   [Reporting Services 설치 &#40; 마이그레이션 SharePoint 모드 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
+    -   [Reporting Services 설치 마이그레이션&#40;SharePoint 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md)  
   
-    -   [Reporting Services 설치 &#40; 마이그레이션 기본 모드 &#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
+    -   [Reporting Services 설치 마이그레이션&#40;기본 모드&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md)  
   
 ## <a name="backing-up-the-report-server-databases"></a>보고서 서버 데이터베이스 백업  
  보고서 서버는 상태 비저장 서버이므로 응용 프로그램 데이터는 모두 **인스턴스에서 실행되는** reportserver **및** reportservertempdb [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 데이터베이스에 저장됩니다. 지원되는 **데이터베이스 백업 방법 중 하나를 사용하여** reportserver **및** reportservertempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업할 수 있습니다. 보고서 서버 데이터베이스에 특정한 권장 사항은 다음과 같습니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 08/09/2017
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 처음으로 구성하는 경우에는 암호화 키를 백업해야 합니다. 서비스 계정의 ID를 변경하거나 컴퓨터 이름을 바꾸는 경우에도 항상 키를 백업해야 합니다. 자세한 내용은 [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)을 참조하세요. SharePoint 모드 보고서 서버에 대한 내용은 [Reporting Services SharePoint 서비스 응용 프로그램 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)의 "키 관리" 섹션을 참조하세요.  
   
 ## <a name="backing-up-the-configuration-files"></a>구성 파일 백업  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서는 구성 파일을 사용하여 응용 프로그램 설정을 저장합니다. 서버를 처음 구성할 때와 사용자 지정 확장 프로그램을 배포한 후에 파일을 백업해야 합니다. 백업할 파일에는 다음이 포함됩니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서는 구성 파일을 사용하여 응용 프로그램 설정을 저장합니다. 서버를 처음 구성할 때와 사용자 지정 확장 프로그램을 배포한 후에 파일을 백업해야 합니다. 백업할 파일에는 다음이 포함됩니다.  
   
 -   Rsreportserver.config  
   
@@ -80,7 +81,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 서버 및 보고서 관리자 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램용 Web.config  
   
--   용 Machine.config[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
+-   Machine.config: [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]  
   
 ## <a name="backing-up-data-files"></a>데이터 파일 백업  
  보고서 디자이너와 모델 디자이너에서 만들어 유지 관리하는 파일을 백업합니다. 여기에는 보고서 정의 파일(.rdl), 보고서 모델 파일(.smdl), 공유 데이터 원본 파일(.rds), 데이터 뷰 파일(.dv), 데이터 원본 파일(.ds), 보고서 서버 프로젝트 파일(.rptproj) 및 보고서 솔루션 파일(.sln)이 포함됩니다.  
@@ -99,3 +100,4 @@ ms.lasthandoff: 08/09/2017
 [암호화 키 구성 및 관리](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

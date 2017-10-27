@@ -15,7 +15,8 @@ caps.latest.revision: 9
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: a192628a5f2f899e96753d98e210bca6bfd426f1
 ms.contentlocale: ko-kr
@@ -78,3 +79,4 @@ SQL Server Reporting Services 데이터 경고 전자 메일을 통해 두 종�
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

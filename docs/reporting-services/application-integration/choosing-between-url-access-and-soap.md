@@ -13,6 +13,7 @@ ms.topic: reference
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 1d9b4df388cd1d6bb96d88b64bf319f5fd9866e9
@@ -53,3 +54,4 @@ ms.lasthandoff: 10/20/2017
  URL 액세스와 통합 된 보고서를 제공 하는 웹 서비스를 결합 하 여 예제를 보려면 [SQL Server Reporting Services 제품 샘플](http://go.microsoft.com/fwlink/?LinkId=177889)합니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

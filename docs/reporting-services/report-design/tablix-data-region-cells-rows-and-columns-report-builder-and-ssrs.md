@@ -20,7 +20,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 79c838b6bc98b64ac57b83e193b25d861e905e38
 ms.contentlocale: ko-kr
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>테이블릭스 데이터 영역 셀, 행 및 열(보고서 작성기 및 SSRS)
-  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 테이블릭스 데이터 영역의 행 및 열 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 참조 [테이블 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md), 또는 [나열](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md) 합니다.  
+  페이지가 매겨진 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서에서 테이블릭스 데이터 영역의 행 및 열 데이터가 표시되는 방식을 제어하려면 정보 데이터, 그룹 데이터 및 레이블과 합계에 대한 행 및 열을 지정하는 방법을 이해해야 합니다. 대부분의 경우 테이블, 행렬 또는 목록의 기본 구조를 사용하여 데이터를 표시할 수 있습니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md), [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md) 또는 [목록](../../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)을 참조하세요.  
   
  테이블릭스 데이터 영역에는 정보 행 및 정보 열 기반의 정보 데이터와 그룹 행 및 그룹 열 기반의 그룹화된 데이터가 표시됩니다. 행 그룹과 열 그룹을 테이블릭스 데이터 영역에 추가하면 데이터가 표시되는 행 및 열이 자동으로 추가됩니다. 행 및 열을 수동으로 추가 및 제거하여 테이블릭스 데이터 영역을 사용자 지정하고 보고서에 데이터가 표시되는 방법을 제어할 수 있습니다.  
   
@@ -85,7 +86,7 @@ ms.lasthandoff: 08/09/2017
   
  세부 정보 그룹이 있는 경우 각 정보 행은 세부 정보 그룹 내부에 있습니다. 이 행은 데이터 집합 쿼리 결과 집합의 각 값에 대해 반복됩니다.  
   
- 그룹 계층 구조에 대 한 자세한 내용은 참조 하십시오. [그룹 이해 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md).  
+ 그룹 계층 구조에 대한 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
  다음 그림에서는 중첩된 행 그룹 및 세부 정보 그룹이 있는 테이블릭스 데이터 영역을 보여 줍니다.  
   
@@ -99,10 +100,10 @@ ms.lasthandoff: 08/09/2017
   
  그룹에 연결된 행 및 열을 제거하려면 그룹을 삭제합니다. 그룹을 삭제한 후에는 그룹 정의만 삭제하거나 그룹과 그룹에 연결된 모든 행 및 열을 삭제할 수 있습니다. 그룹만 삭제하면 데이터 영역에서 행 및 열 레이아웃이 유지됩니다. 그룹과 그룹에 연결된 행 및 열을 삭제하면 이 그룹과 연결된 모든 정적 행 및 열과 동적 행 및 열이 삭제됩니다.  
   
- 행과 열 추가 또는 삭제 하는 방법에 대 한 단계별 지침을 참조 하세요. [삽입 또는 삭제 한 행 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) 및 [삽입 또는 삭제 된 열 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md).  
+ 행과 열을 추가하거나 삭제하는 방법에 대한 단계별 지침은 [행 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) 및 [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="understanding-tablix-cells"></a>테이블릭스 셀 이해  
- 테이블릭스 셀은 테이블릭스 본문, 테이블릭스 행 또는 테이블릭스 열 그룹 영역, 테이블릭스 모퉁이라는 4개의 테이블릭스 영역 중 하나에 속합니다. 각 셀에는 데이터 집합의 값이 표시될 수 있지만 각 셀의 기본 기능은 그 위치에 따라 결정됩니다. 테이블 릭 스 영역에 대 한 자세한 내용은 참조 하십시오. [테이블 릭 스 데이터 영역의 영역 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ 테이블릭스 셀은 테이블릭스 본문, 테이블릭스 행 또는 테이블릭스 열 그룹 영역, 테이블릭스 모퉁이라는 4개의 테이블릭스 영역 중 하나에 속합니다. 각 셀에는 데이터 집합의 값이 표시될 수 있지만 각 셀의 기본 기능은 그 위치에 따라 결정됩니다. 테이블릭스 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)을 참조하세요.  
   
  기본적으로 테이블릭스 행 및 열 그룹 영역의 셀은 그룹 멤버를 나타냅니다. 그룹 멤버는 보고서 정의의 여러 트리 구조로 구성됩니다. 행 그룹 계층은 가로로 확장되며 열 그룹 구조는 세로로 확장됩니다. 이러한 셀은 그룹을 만들 때 자동으로 추가되며 런타임에 그룹에 대해 고유한 값을 표시합니다.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
  테이블릭스 본문 영역의 셀에는 셀이 정보 행 또는 열에 있는 경우 정보 데이터가, 셀이 그룹 행이나 열에 있는 경우 집계된 그룹 데이터가 표시될 수 있습니다. 셀에서 데이터 범위는 셀이 속한 가장 안쪽 행 그룹과 가장 안쪽 열 그룹의 교차 지점입니다.  
   
 > [!NOTE]  
->  각 셀에 대해 표시되는 실제 데이터는 셀에 포함된 보고서 항목(일반적으로 입력란)에 대해 계산된 식입니다. 정보 행 또는 열에 속하는 셀에서 식은 기본적으로 정보 데이터(예: **[LineTotal]**)로 설정됩니다. 정보 행 또는 열에 속하지 않는 셀에서 식은 기본적으로 집계 함수(예: **Sum[LineTotal]**)로 설정됩니다. 셀이 그룹 행이나 열에 속하지만 식에 집계 함수가 지정되지 않은 경우 그룹의 첫 번째 값이 표시됩니다. 집계에 대 한 자세한 내용은 참조 [합계, 집계 및 기본 제공 컬렉션 &#40;에 대 한 식 범위 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  각 셀에 대해 표시되는 실제 데이터는 셀에 포함된 보고서 항목(일반적으로 입력란)에 대해 계산된 식입니다. 정보 행 또는 열에 속하는 셀에서 식은 기본적으로 정보 데이터(예: **[LineTotal]**)로 설정됩니다. 정보 행 또는 열에 속하지 않는 셀에서 식은 기본적으로 집계 함수(예: **Sum[LineTotal]**)로 설정됩니다. 셀이 그룹 행이나 열에 속하지만 식에 집계 함수가 지정되지 않은 경우 그룹의 첫 번째 값이 표시됩니다. 집계에 대한 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
 ### <a name="merging-and-splitting-cells"></a>셀 병합 및 분할  
  테이블릭스 영역 안에서 여러 인접 셀을 함께 병합할 수 있습니다. 예를 들어 여러 행 또는 열에 걸쳐 있는 레이블에 대한 셀을 만들 수 있습니다.  
@@ -128,3 +129,4 @@ ms.lasthandoff: 08/09/2017
  [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-report-builder-and-ssrs.md)  
   
   
+

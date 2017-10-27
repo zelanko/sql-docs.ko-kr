@@ -47,7 +47,7 @@ ms.lasthandoff: 08/03/2017
 > [!WARNING]  
 >  catalog.execution_component_phases 뷰는 패키지 실행의 로깅 수준이 성능 또는 자세히로 설정된 경우에 이 정보를 제공합니다. 자세한 내용은 [Enable Logging for Package Execution on the SSIS Server](../../integration-services/performance/integration-services-ssis-logging.md#server_logging)을 참조하세요.  
   
-```  
+```sql
 use SSISDB  
 select package_name, task_name, subcomponent_name, execution_path,  
     SUM(DATEDIFF(ms,start_time,end_time)) as active_time,  

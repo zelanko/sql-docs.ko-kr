@@ -38,7 +38,7 @@ ms.lasthandoff: 08/03/2017
   
  서수 값을 해당 작업에 일치시키는 것은 작업의 니모닉을 사용하는 것만큼 쉽지 않습니다. 예를 들어 'D'로 쉽게 삭제 작업을 나타내고 'I'로 삽입 작업을 나타낼 수 있습니다. [변경 데이터 검색을 위한 함수 작성](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)항목에서 만든 쿼리 예는 서수 값을 새 열에 반환되는 문자열 값으로 변환합니다. 다음 코드 세그먼트에서는 이 변환을 보여 줍니다.  
   
-```  
+```sql
 select   
     ...  
     case __$operation  

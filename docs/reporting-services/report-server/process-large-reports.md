@@ -21,7 +21,8 @@ caps.latest.revision: 42
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 065902778339650fcd123556acdeabfe8504224f
 ms.contentlocale: ko-kr
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/09/2017
  [캐시 &#40; 미리 로드 보고서 관리자 &#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
   
   
+

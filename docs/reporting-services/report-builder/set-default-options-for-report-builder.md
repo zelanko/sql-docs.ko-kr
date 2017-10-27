@@ -17,7 +17,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 38dd786c1f1caabb5e949784bb4c9dd98eab7281
 ms.contentlocale: ko-kr
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/09/2017
  [보고서 작성기 시작](../../reporting-services/report-builder/start-report-builder.md)  
   
   
+

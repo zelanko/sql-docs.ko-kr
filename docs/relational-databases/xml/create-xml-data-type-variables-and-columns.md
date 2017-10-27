@@ -17,6 +17,7 @@ caps.latest.revision: 13
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 751fccc2a458239715c187a1925046cdf74de98a
@@ -146,3 +147,4 @@ INSERT INTO T values(1,'<Product />')
 -   테이블에 있는 XML 열로 인해 테이블 검색 속도가 느려지는 것을 원치 않습니다. XML 열은 행 안에 있든 행 밖에 있든 간에 공간을 사용합니다.  
   
   
+

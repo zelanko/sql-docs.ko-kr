@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: e97378914a59fab938fc3e4c7926847effcffc94
@@ -76,3 +77,4 @@ ms.lasthandoff: 10/06/2017
 기능이 활성화된 후에는 계속해서 서버 통합을 수행할 수 있습니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

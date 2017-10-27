@@ -15,14 +15,15 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8cf203f17ac149825e0e4d79ed7f6f6041700ae4
 ms.contentlocale: ko-kr
 ms.lasthandoff: 08/09/2017
 
 ---
-# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Reporting Services 모바일 보고서에서 만들 때 디자인 먼저 진행 또는 데이터 먼저 입력
+# <a name="design-first-or-data-first-when-creating-in-reporting-services-mobile-reports"></a>Design first or data first when creating in Reporting Services mobile reports
   
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)]를 사용하면 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 어떤 화면 크기에나 적합하도록 효율적으로 확장되는 모바일 보고서를 빠르게 만들 수 있습니다.   
   

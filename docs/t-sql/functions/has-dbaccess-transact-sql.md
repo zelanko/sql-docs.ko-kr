@@ -1,7 +1,7 @@
 ---
 title: HAS_DBACCESS (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/06/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -37,7 +37,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="hasdbaccess-transact-sql"></a>HAS_DBACCESS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw_md](../../includes/tsql-appliesto-ss2008-asdb-asdw-pdw-md.md)]
 
   지정된 데이터베이스를 사용자가 액세스할 수 있는지에 대한 정보를 반환합니다.  
   

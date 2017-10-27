@@ -15,6 +15,7 @@ caps.latest.revision: 11
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: fd7b39c2600bc683a37f6cec43041ccf8ebb009f
@@ -63,3 +64,4 @@ SharePoint 권한에 대한 자세한 내용은 [사용자 권한 및 권한 수
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

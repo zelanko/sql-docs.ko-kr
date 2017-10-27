@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: c0451f12b68cd45a387bfca4d94c8cf4f71919ea
@@ -65,3 +66,4 @@ SharePoint 경고 관리자는 사이트 사용자가 만든 데이터 경고 �
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

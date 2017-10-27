@@ -15,7 +15,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bfa852d24647ae9553ec05167dc8eba58dfd3f73
 ms.contentlocale: ko-kr
@@ -46,15 +47,15 @@ ms.lasthandoff: 08/09/2017
   
 -   **데이터 집합** 기반이 되는 공유 데이터 원본 또는 보고서와 별도로 데이터 집합을 게시 및 관리할 수 있습니다. 개발자 또는 데이터베이스 소유자는 보고서 작성자가 사용할 최적화된 쿼리를 제공할 수 있습니다. 쿼리를 변경하면 공유 데이터 집합을 사용하는 모든 보고서에 업데이트된 쿼리가 사용됩니다. 성능 향상을 위해 데이터 집합 캐싱을 활성화할 수 있습니다. 특정 시간 동안 쿼리 캐싱 일정을 예약하거나 공유 일정을 사용할 수 있습니다.  
   
--   **보고서 파트에 사용되는 데이터** 보고서 파트는 기반이 되는 데이터를 포함할 수 있습니다. 보고서 파트에 대 한 자세한 내용은 참조 하십시오. [보고서 디자이너 &#40;의 보고서 파트 Ssrs&#41; ](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md).  
+-   **보고서 파트에 사용되는 데이터** 보고서 파트는 기반이 되는 데이터를 포함할 수 있습니다. 보고서 파트에 대한 자세한 내용은 [보고서 디자이너의 보고서 파트&#40;SSRS&#41;](../../reporting-services/report-design/report-parts-in-report-designer-ssrs.md)를 참조하세요.  
   
 -   **데이터 필터링** 쿼리 또는 보고서의 보고서 데이터를 필터링할 수 있습니다. 데이터 집합 및 쿼리 변수를 사용하여 연계 매개 변수를 만들고, 사용자에게 수천 가지의 선택권을 좀 더 관리 가능한 수치로 좁히는 기능을 제공할 수 있습니다. 매개 변수 값이나 지정하는 기타 값을 기반으로 테이블 또는 차트의 데이터를 필터링할 수 있습니다.  
   
--   **매개 변수** 쿼리 변수를 포함하는 데이터 집합 쿼리 명령은 일치하는 보고서 매개 변수를 자동으로 만듭니다. 매개 변수를 직접 만들 수도 있습니다. 보고서를 볼 때 보고서 도구 모음에 매개 변수가 표시됩니다. 사용자는 보고서 데이터 또는 보고서 모양을 제어하는 값을 선택할 수 있습니다. 특정 대상을 위해 보고서 데이터를 사용자 지정하려면 동일한 보고서 정의에 다양한 기본값이 연결된 보고서 매개 변수 집합을 만들거나 기본 제공 **UserID** 필드를 사용할 수 있습니다. 자세한 내용은 참조 [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 및 [식 &#40;의 기본 제공 컬렉션 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+-   **매개 변수** 쿼리 변수를 포함하는 데이터 집합 쿼리 명령은 일치하는 보고서 매개 변수를 자동으로 만듭니다. 매개 변수를 직접 만들 수도 있습니다. 보고서를 볼 때 보고서 도구 모음에 매개 변수가 표시됩니다. 사용자는 보고서 데이터 또는 보고서 모양을 제어하는 값을 선택할 수 있습니다. 특정 대상을 위해 보고서 데이터를 사용자 지정하려면 동일한 보고서 정의에 다양한 기본값이 연결된 보고서 매개 변수 집합을 만들거나 기본 제공 **UserID** 필드를 사용할 수 있습니다. 자세한 내용은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 및 [식의 기본 제공 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md)을 참조하세요.  
   
 -   **데이터 경고** 보고서가 게시된 후 보고서 데이터를 기반으로 경고를 만들어 지정한 규칙에 부합하는 경우 전자 메일 메시지를 수신할 수 있습니다.  
   
--   **데이터 그룹화 및 집계** 쿼리 또는 보고서의 보고서 데이터를 그룹화하고 집계할 수 있습니다. 쿼리의 값을 집계하는 경우 계속해서 유의미한 값 제약 조건 내에서 보고서에 값을 결합할 수 있습니다.  자세한 내용은 참조 [필터, 그룹 및 데이터 정렬 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [함수 &#40; 집계 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-aggregate-function.md).  
+-   **데이터 그룹화 및 집계** 쿼리 또는 보고서의 보고서 데이터를 그룹화하고 집계할 수 있습니다. 쿼리의 값을 집계하는 경우 계속해서 유의미한 값 제약 조건 내에서 보고서에 값을 결합할 수 있습니다.  자세한 내용은 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) 및 [집계 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-function.md)를 참조하세요.  
   
 -   **데이터 정렬** 쿼리 또는 보고서의 보고서 데이터를 정렬할 수 있습니다. 테이블에는 사용자가 정렬 순서를 제어할 수 있도록 대화형 정렬 단추를 추가할 수도 있습니다.  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 08/09/2017
   
 -   사용할 수 있는 데이터 원본은 설치된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 데이터 확장 프로그램에 따라 다릅니다. 데이터 원본에 대한 지원은 클라이언트 제작 도구, 보고서 서버 버전 및 보고서 서버 플랫폼에 따라 다를 수 있습니다. 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
   
--   데이터 원본 자격 증명은 데이터 원본 유형별로 다르며 보고서를 클라이언트에서 보는지 아니면 보고서 서버 또는 SharePoint 사이트에서 보는지에 따라 다릅니다. 자세한 내용은 참조 [#40; SharePoint 사이트에 보고서 서버 항목에 대 한 사용 권한 설정 모드 &#41; 통합 SharePoint의 reporting Services ](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [자격 증명을 지정 하 고 보고서 데이터 원본에 대 한 연결 정보](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md), 자격 증명에 각 도구에 대 한 정보 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)합니다.  
+-   데이터 원본 자격 증명은 데이터 원본 유형별로 다르며 보고서를 클라이언트에서 보는지 아니면 보고서 서버 또는 SharePoint 사이트에서 보는지에 따라 다릅니다. 자세한 내용은 [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md), [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md) 및 [Reporting Services 도구](../../reporting-services/tools/reporting-services-tools.md)의 각 도구에 지정된 자격 증명 정보를 참조하세요.  
   
 ## <a name="related-tasks"></a>관련 작업  
  데이터 연결 만들기, 외부 원본과 데이터 집합 및 쿼리에서 가져온 데이터 추가 등과 관련된 태스크입니다.  
@@ -95,3 +96,4 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="related-content"></a>관련 내용  
   
+

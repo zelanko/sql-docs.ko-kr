@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 98ebdbf63808c31b1e1fc5b9b2bcde91ebe2e33d
-ms.openlocfilehash: 8d7bb0e524b90ac621570da5c2653db6e0a4cb6a
+ms.workload: Inactive
+ms.translationtype: Machine Translation
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 698548e71d8d346d04f0aa93eef8b8074a2417c0
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="cache-shared-datasets-ssrs"></a>공유 데이터 집합 캐시(SSRS)
@@ -75,7 +76,7 @@ ms.lasthandoff: 08/09/2017
   
 -   공유 데이터 집합에 대해 ReadPolicy 및 UpdatePolicy 권한이 있어야 합니다.  
   
- 캐시 새로 고침 계획은 공유 데이터 집합 및 보고서에 모두 적용됩니다. 자세한 내용은 참조 [캐시 새로 고침 옵션 &#40; 보고서 관리자 &#41; ](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ 캐시 새로 고침 계획은 공유 데이터 집합 및 보고서에 모두 적용됩니다. 자세한 내용은 [캐시 새로 고침 옵션&#40;보고서 관리자&#41;](http://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)을 참조하세요.  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>캐시 만료 조건  
  다음 조건에서는 공유 데이터 집합 캐시가 유효하지 않게 될 수 있습니다.  
@@ -104,3 +105,4 @@ ms.lasthandoff: 08/09/2017
  [공유 데이터 집합 관리](../../reporting-services/report-data/manage-shared-datasets.md)  
   
   
+

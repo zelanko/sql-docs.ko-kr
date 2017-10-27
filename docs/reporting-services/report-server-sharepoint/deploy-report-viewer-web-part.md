@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a75ad193204e17e1d053aa4e00adba5f551d684b
@@ -154,3 +155,4 @@ PowerShell을 사용 하 여 웹 파트의 삭제를 시도해 볼 수 있지만
 보고서 뷰어 웹 파트를 배포한 후 activiated SharePoint 페이지에 웹 파트를 추가할 수 있습니다. 자세한 내용은 참조 [SharePoint 페이지에 추가 하는 보고서 뷰어 웹 파트](add-report-viewer-web-part-to-page.md)합니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

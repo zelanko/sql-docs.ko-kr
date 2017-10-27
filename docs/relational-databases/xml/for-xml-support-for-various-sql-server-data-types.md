@@ -17,6 +17,7 @@ caps.latest.revision: 26
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ef7a1e703ffb9d874f81c5540e1da7810ea5e2e6
@@ -37,3 +38,4 @@ ms.lasthandoff: 06/22/2017
 |[timestamp 데이터 형식에 대한 FOR XML 지원](../../relational-databases/xml/for-xml-support-for-the-timestamp-data-type.md)|**timestamp** 데이터 형식에서 FOR XML이 작동하는 방법에 대해 설명합니다.|  
   
   
+

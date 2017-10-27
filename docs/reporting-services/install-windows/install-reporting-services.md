@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 52c2f8fae79884b025e067b7d628cd3154ba93f4
 ms.openlocfilehash: 5ce83ff18d6908441a3eaaf05599068ec5876308
@@ -138,3 +139,4 @@ SQL Server 2016 Reporting Services 기본 모드 설치 하는 방법에 대 한
 SQL Server Data Tools를 사용 하 여 보고서를 만들려면 [SQL Server Data Tools 다운로드](http://go.microsoft.com/fwlink/?LinkID=616714)합니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

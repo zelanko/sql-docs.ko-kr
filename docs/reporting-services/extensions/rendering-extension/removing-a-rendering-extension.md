@@ -21,6 +21,7 @@ caps.latest.revision: 38
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: ea37cf7ac15504a00aeb0f1379e9d48a71231e1c
@@ -40,3 +41,4 @@ ms.lasthandoff: 08/12/2017
  [렌더링 확장 프로그램 배포](../../../reporting-services/extensions/rendering-extension/deploying-a-rendering-extension.md)  
   
   
+

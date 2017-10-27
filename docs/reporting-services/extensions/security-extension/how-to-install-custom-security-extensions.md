@@ -15,7 +15,8 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 47182ebd082dfae0963d761e54c4045be927d627
 ms.openlocfilehash: 58cfeef7d74e0641b965c307551f0fba4a7ff09c
 ms.contentlocale: ko-kr
@@ -131,3 +132,4 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
 [사용자 지정 인증 쿠키를 전달 하도록 보고서 관리자 구성](https://msdn.microsoft.com/library/ms345241(v=sql.120).aspx)
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

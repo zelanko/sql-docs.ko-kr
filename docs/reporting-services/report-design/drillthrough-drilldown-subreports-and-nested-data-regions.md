@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45658226a90008784ca76ab781282dda1dd01dd0
 ms.contentlocale: ko-kr
@@ -49,7 +50,7 @@ ms.lasthandoff: 08/09/2017
 |데이터 검색|주 보고서와 같은 시간에 데이터 검색|한 번에 한 드릴스루 보고서에서 데이터 검색|주 보고서와 같은 시간에 모든 데이터 검색|  
 |처리 및 렌더링|주 보고서를 통해|링크 클릭 시|주 보고서를 통해|  
 |성능|느림(하지만 주 보고서를 통해 모든 데이터 검색)|빠름(하지만 주 보고서를 통해 일부 데이터만 검색)|빠름(그리고 주 보고서를 통해 모든 데이터 검색)|  
-|매개 변수 사용|예|사용자 계정 컨트롤|아니오|  
+|매개 변수 사용|예|예|아니오|  
 |재사용 가능성|보고서로 또는 다른 보고서의 하위 보고서나 드릴스루 보고서로|보고서로 또는 다른 보고서의 하위 보고서나 드릴스루 보고서로|재사용 불가능|  
 |할당|주 보고서 외부, 같거나 다른 보고서 서버|주 보고서 외부, 같은 보고서 서버|주 보고서 내부|  
 |표시|주 보고서에|다른 보고서에|주 보고서에|  
@@ -100,7 +101,8 @@ ms.lasthandoff: 08/09/2017
  [외부 항목에 대한 경로 지정&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md)  
  보고서 정의 파일 외부에 있는 항목을 참조하는 방법을 설명합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   
+

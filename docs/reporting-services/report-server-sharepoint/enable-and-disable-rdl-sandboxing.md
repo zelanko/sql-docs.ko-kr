@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 62c6df096133ec0d41996a4df99173cb8727e408
@@ -186,3 +187,4 @@ RDL (Report Definition Language) 샌드 박싱 기능을 사용 하면 검색 �
  [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

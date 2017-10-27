@@ -18,7 +18,8 @@ caps.latest.revision: 16
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: e9644b5bfcc57b24793684095aba912c688346b8
 ms.contentlocale: ko-kr
@@ -96,3 +97,4 @@ SharePoint 사이트가 데이터 경고 기능을 사용하도록 설정된 경
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

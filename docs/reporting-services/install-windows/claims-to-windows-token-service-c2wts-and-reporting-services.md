@@ -12,6 +12,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a9397f427cac18d0c8bfc663f6bd477b0440b8a3
 ms.openlocfilehash: 8a478bba3cde66967594d5ef02f867de5b33edd7
@@ -104,3 +105,4 @@ C2WTS에서 만들어진 토큰은 제한된 위임(특정 서비스로 제한�
 4. SharePoint 중앙 관리를 통해 Windows 토큰 서비스에 대 한 클레임에서 시작 된 **서버의 서비스 관리** 페이지. 서비스는 동작을 수행하는 서버에서 시작되어야 합니다. 예를 들어 서버 응용 프로그램 서버에서 C2WTS를 시작 하는 WFE / 응용 프로그램 서버를 실행 하는 SQL Server Reporting Services 공유 서비스에만 상태가 다른 서버에 필요 합니다. 보고서 뷰어 웹 파트를 실행 하는 경우 WFE 서버에서 C2WTS 하기만 됩니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

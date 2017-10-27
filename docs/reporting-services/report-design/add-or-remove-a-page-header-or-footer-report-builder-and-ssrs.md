@@ -15,7 +15,8 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 88e933ca66ab9f8f6e90237ef045b12927fab40c
 ms.contentlocale: ko-kr
@@ -68,6 +69,7 @@ ms.lasthandoff: 08/09/2017
 >  페이지 머리글 또는 바닥글을 제거하면 보고서에서 삭제됩니다. 이전에 페이지 머리글 또는 바닥글에 추가한 항목은 이후에 페이지 머리글 또는 바닥글을 다시 추가해도 더 이상 표시되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [페이지 머리글 및 바닥글 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
+ [페이지 머리글 및 바닥글&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/page-headers-and-footers-report-builder-and-ssrs.md)  
   
   
+

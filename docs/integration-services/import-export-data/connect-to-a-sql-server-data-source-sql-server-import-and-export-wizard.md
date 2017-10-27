@@ -98,18 +98,18 @@ SQL Server의 이름입니다.
 ### <a name="connection-string-format"></a>연결 문자열 형식
 Windows 통합된 인증을 사용 하는 연결 문자열의 형식은 다음과 같습니다.
 
-    Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;trusted_connection=Yes;`
 
 Windows 통합된 인증 대신 SQL Server 인증을 사용 하는 연결 문자열의 형식은 다음과 같습니다.
 
-     Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;
+     `Driver={ODBC Driver 13 for SQL Server};server=<server>;database=<database>;uid=<user id>;pwd=<password>;`
 
 ### <a name="enter-the-connection-string"></a>연결 문자열 입력
 에 대 한 연결 문자열을 입력의 **ConnectionString** 에 DSN 이름을 입력 하거나 필드는 **Dsn** 필드에 **데이터 원본을 선택** 또는 **대상 선택** 페이지. 연결 문자열을 입력 한 후 마법사는 문자열을 구문 분석 하 고 목록에서 개별 속성 및 해당 값을 표시 합니다.
 
 다음 예제에서는이 연결 문자열을 사용합니다.
 
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+    `Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;`
 
 다음은 연결 문자열을 입력 한 후 표시 되는 화면입니다.
 

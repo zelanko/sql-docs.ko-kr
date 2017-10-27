@@ -15,7 +15,8 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: cce213fa628dfed0d57304de308377520f60c3d0
 ms.contentlocale: ko-kr
@@ -27,7 +28,7 @@ ms.lasthandoff: 08/09/2017
 
   빈 값이나 null 값이 있는 필드를 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 페이지를 매긴 보고서의 차트에 표시하면 차트가 제대로 표시되지 않을 수 있습니다. 차트에서 빈 값이 처리되는 방법은 지정된 차트 종류에 따라 다릅니다.  
   
--   차트 종류가 선형 차트 종류(가로 막대형, 세로 막대형, 분산형, 꺾은선형, 영역형, 범위형)인 경우 빈 값은 차트에 빈 공간 또는 "간격"으로 표시됩니다. 빈 요소를 표시하려는 경우에는 빈 요소 자리 표시자를 추가해야 합니다. 자세한 내용은 참조 [차트 &#40; 빈 요소 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
+-   차트 종류가 선형 차트 종류(가로 막대형, 세로 막대형, 분산형, 꺾은선형, 영역형, 범위형)인 경우 빈 값은 차트에 빈 공간 또는 "간격"으로 표시됩니다. 빈 요소를 표시하려는 경우에는 빈 요소 자리 표시자를 추가해야 합니다. 자세한 내용은 [차트에 빈 요소 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-empty-points-to-a-chart-report-builder-and-ssrs.md)를 참조하세요.  
   
 -   차트 종류가 연속적 선형 차트 종류(영역형, 가로 막대형, 세로 막대형, 꺾은선형, 분산형)인 경우 계열의 연속성을 유지하기 위해 차트에 빈 데이터 요소가 추가됩니다.  
   
@@ -35,7 +36,7 @@ ms.lasthandoff: 08/09/2017
   
 -   셰이프 차트 종류에서는 Null 값이 생략됩니다.  
   
- 빈 데이터 요소가 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드하는 방법은 [보고서 작성기 및 보고서 디자이너 샘플 보고서](http://go.microsoft.com/fwlink/?LinkId=198283).  
+ 빈 데이터 요소가 있는 차트의 예는 예제 보고서로 제공됩니다. 이 샘플 보고서 및 기타 보고서를 다운로드 하는 방법에 대 한 자세한 내용은 참조 [보고서 작성기 및 보고서 디자이너 예제 보고서](http://go.microsoft.com/fwlink/?LinkId=198283)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/09/2017
 [차트 문제 해결](../../reporting-services/report-design/troubleshoot-charts-report-builder-and-ssrs.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

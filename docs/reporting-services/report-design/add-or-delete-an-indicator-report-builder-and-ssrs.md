@@ -15,7 +15,8 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1356d575f58eb36d00f52bcbac1483ce902b1954
 ms.contentlocale: ko-kr
@@ -46,7 +47,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="to-add-an-indicator-to-a-table-or-matrix"></a>테이블 또는 행렬에 표시기를 추가하려면  
   
-1.  기존 보고서를 열거나 표시할 데이터가 있는 테이블 및 행렬을 포함하는 새 보고서를 만듭니다. 자세한 내용은 참조 [테이블 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) 또는 [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)합니다.  
+1.  기존 보고서를 열거나 표시할 데이터가 있는 테이블 및 행렬을 포함하는 새 보고서를 만듭니다. 자세한 내용은 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md) 또는 [행렬](../../reporting-services/report-design/create-a-matrix-report-builder-and-ssrs.md)을 참조하세요.  
   
 2.  테이블이나 행렬에 열을 삽입합니다. 자세한 내용은 [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -79,3 +80,4 @@ ms.lasthandoff: 08/09/2017
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
+

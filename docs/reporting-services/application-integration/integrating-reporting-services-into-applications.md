@@ -15,6 +15,7 @@ applies_to:
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 26e1da5a720aab965d014cada16f85086e0f70a0
@@ -62,3 +63,4 @@ URL 액세스 또는 SOAP Api를 사용 하 여를 결정 하는 것에 대 한 
 SQL Server 2017 Reporting Services REST API에 대 한 자세한 내용은 참조 하십시오. [Reporting Services에 대 한 REST Api로 개발](../developer/rest-api.md)합니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

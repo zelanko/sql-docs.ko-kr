@@ -15,6 +15,7 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 45d2f680e35666c9958665ac6c687725c6db0eb4
@@ -162,3 +163,4 @@ Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Ext
  SharePoint 2010 중앙 관리에서 SharePoint 서버에 대해 진단 로깅을 구성하는 방법 및 단계는 [진단 로깅 설정 구성(Windows SharePoint Services)](http://go.microsoft.com/fwlink/?LinkID=114423)을 참조하세요.  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

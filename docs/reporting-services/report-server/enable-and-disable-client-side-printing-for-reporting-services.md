@@ -21,7 +21,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee650a09b57ae92abda378fea6fc780b550fbac4
 ms.contentlocale: ko-kr
@@ -93,7 +94,7 @@ ms.lasthandoff: 08/09/2017
   
 -   보고서 서버 시스템 속성 **EnableClientPrinting** 을 **false.**로 설정하는 스크립트나 코드를 작성합니다.  
   
- 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 속성을 **EnableClientPrinting** 로 설정하려면 다음 **False**를 클릭하여 다운로드를 강제로 다시 실행할 수 있습니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
+ 다음 예제 스크립트에서는 클라이언트 쪽 인쇄 기능을 해제하는 한 가지 방법을 보여 줍니다. **EnableClientPrinting** 속성을 **False**로 설정하려면 다음 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] 코드를 컴파일하고 실행합니다. 코드를 실행한 후에는 IIS를 다시 시작합니다.  
   
 ### <a name="sample-script"></a>예제 스크립트  
   

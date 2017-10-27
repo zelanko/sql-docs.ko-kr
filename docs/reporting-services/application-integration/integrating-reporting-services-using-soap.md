@@ -23,6 +23,7 @@ caps.latest.revision: 45
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: f993204ae0c9140a5fba51c125ce1d57d0e3a125
@@ -51,3 +52,4 @@ ms.lasthandoff: 08/12/2017
  [웹 서비스와.NET Framework를 사용 하 여 응용 프로그램 빌드](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   
+

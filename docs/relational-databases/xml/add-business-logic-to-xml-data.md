@@ -16,6 +16,7 @@ caps.latest.revision: 18
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: fcb398dc1cd451f55446efee763d7d33891b7ca4
@@ -68,3 +69,4 @@ WHERE  xCol.exist('/book/title/text()[contains(.,"custom")]') =1;
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 CLR 통합은 XML 데이터를 테이블 또는 속성 승격으로 분해하고 System.Xml 네임스페이스에 있는 관리 클래스를 사용하여 XML 데이터를 쿼리할 수 있는 가능성을 확장합니다. 자세한 내용은 [XML 데이터&#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)를 참조하세요.  
   
   
+

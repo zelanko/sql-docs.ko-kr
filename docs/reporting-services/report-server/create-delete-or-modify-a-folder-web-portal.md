@@ -14,7 +14,8 @@ caps.latest.revision: 6
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 6a9eef590a80442110d49359c789ff5317246791
 ms.contentlocale: ko-kr
@@ -26,9 +27,9 @@ ms.lasthandoff: 08/09/2017
   
 #### <a name="to-create-a-folder"></a>폴더를 만들려면  
   
-1.  시작 된 [보고서 관리자 &#40; SSRS 기본 모드 &#41; ](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  [보고서 관리자&#40;SSRS 기본 모드&#41;](http://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)를 시작합니다.  
   
-2.  웹 포털의 **새로 만들기** 메뉴 드롭다운에서 **폴더** 를 선택합니다. 또는 기존 폴더 아래에 폴더를 만들려면 해당 폴더로 이동한 후 **새로 만들기** 메뉴 드롭다운에서 **폴더** 를 선택합니다.  
+2.  웹 포털의 **새로 만들기** 메뉴 드롭다운에서 **폴더**를 선택합니다. 또는 기존 폴더 아래에 폴더를 만들려면 해당 폴더로 이동한 후 **새로 만들기** 메뉴 드롭다운에서 **폴더** 를 선택합니다.  
   
      **새 폴더 만들기** 대화 상자가 열립니다.  
   
@@ -55,7 +56,7 @@ ms.lasthandoff: 08/09/2017
 6.  **적용** 을 클릭하여 변경 내용을 저장합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [찾기, 보기 및 관리 보고서 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [보고서 찾기, 보기 및 관리&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   
 

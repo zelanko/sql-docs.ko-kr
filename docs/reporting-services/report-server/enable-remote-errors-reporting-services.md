@@ -18,7 +18,8 @@ caps.latest.revision: 12
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 20adc5eb8b830b960fe07d39f3717279abca3f23
 ms.contentlocale: ko-kr
@@ -73,7 +74,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  보고서 서버 노드를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-3.  **고급** 을 클릭하여 속성 페이지를 엽니다. 자세한 내용은 참조 [서버 속성 &#40; 고급 페이지 &#41; Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서.  
+3.  **고급** 을 클릭하여 속성 페이지를 엽니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 [서버 속성&#40;고급 페이지&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md)를 참조하세요.  
   
 4.  **EnableRemoteErrors**에서 **True**를 선택합니다.  
   
@@ -119,3 +120,4 @@ ms.lasthandoff: 08/09/2017
     >  보고서 서버 데이터베이스의 **ConfigurationInfo** 테이블을 편집하여 **EnableRemoteErrors** 를 **True**로 설정할 수 있지만 보고서 서버가 현재 사용 중인 경우 SQL Server Management Studio 또는 스크립트를 사용하여 설정을 수정해야 합니다. 데이터베이스에서 이 설정을 수정하는 경우 변경 내용을 적용하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스를 다시 시작해야 합니다.  
   
   
+

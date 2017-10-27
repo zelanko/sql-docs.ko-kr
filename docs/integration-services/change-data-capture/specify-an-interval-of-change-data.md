@@ -96,7 +96,7 @@ ms.lasthandoff: 08/03/2017
   
     4.  **SQLStatement**에 다음 SQL 문을 입력합니다.  
   
-        ```  
+        ```sql
         SELECT DATEADD(dd,0, DATEDIFF(dd,0,GETDATE()-1)) AS ExtractStartTime,  
           DATEADD(dd,0, DATEDIFF(dd,0,GETDATE())) AS ExtractEndTime  
   

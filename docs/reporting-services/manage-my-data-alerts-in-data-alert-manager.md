@@ -18,6 +18,7 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 7d5bc198ae3082c1b79a3a64637662968b0748b2
 ms.openlocfilehash: 84bd8143bbc487ad38416f7b4c7fed48ab0f0369
@@ -83,3 +84,4 @@ SharePoint 사용자는 자신이 만든 데이터 경고 목록과 경고에 �
 [Reporting Services 데이터 경고](../reporting-services/reporting-services-data-alerts.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

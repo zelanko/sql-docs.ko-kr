@@ -22,7 +22,8 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: f2c66ebf45916b6e820a5599b4b90416703b377e
 ms.contentlocale: ko-kr
@@ -60,7 +61,7 @@ ms.lasthandoff: 08/09/2017
   
  이러한 조건이 발생할 경우 보고서 서버는 구독이 실행되도록 예약된 다음 번에 구독을 해제합니다. 구독을 다시 활성화하려면 구독을 열어서 저장합니다. 구독을 열면 보고서 서버에서 구독 매개 변수 값을 스냅숏에 대해 지정한 값으로 업데이트합니다. 구독에 대 한 자세한 내용은 참조 [구독 및 배달 &#40; Reporting services&#41; ](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [보고서에 실행 속성 구성&#40;보고서 관리자&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Reporting Services 개념 &#40; Ssrs&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
@@ -68,3 +69,4 @@ ms.lasthandoff: 08/09/2017
  [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   
   
+

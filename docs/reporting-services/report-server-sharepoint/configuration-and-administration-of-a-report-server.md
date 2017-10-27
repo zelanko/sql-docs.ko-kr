@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: b521a0a2198d74c8766f18fb8d7a199b25005efe
@@ -68,3 +69,4 @@ SQL Server Reporting Services는 조직에서 사용할 보고서를 작성, 배
  Reporting Services에 대 한 자세한 내용은 참조 하십시오. [Reporting Services](../../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md) 에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서. 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소, 도구 및 리소스에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../sql-server/sql-server-technical-documentation.md)를 참조하십시오.  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

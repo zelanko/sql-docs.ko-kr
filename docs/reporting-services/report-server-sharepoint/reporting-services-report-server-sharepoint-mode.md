@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a8cd1bd00ec92535fff73c5eaa4ff9bbe9274ef2
@@ -147,3 +148,4 @@ ms.lasthandoff: 10/06/2017
 [퀴즈: SharePoint 통합을 위한 SSRS 2012 구성](http://go.microsoft.com/fwlink/?LinkId=306443)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: 73f48b2978055481f1ee93952fb3a35eb84ec416
@@ -131,3 +132,4 @@ SAN을 사용하려면 서버에 SSL 인증서를 등록 및 서명하고 개인
  [보고서 서버 Url 구성](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

@@ -142,7 +142,7 @@ ms.lasthandoff: 09/26/2017
   
 6.  만들기 및 대상 구성 요소와 같은 구성는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 또는에서 보여 준 예제 대상 구성 요소 [스크립트 구성 요소를 사용 하 여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md), 예상 되는  **AddressID** 및 **도시** 열입니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 **AdventureWorks** 데이터베이스:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  
@@ -275,7 +275,7 @@ ms.lasthandoff: 09/26/2017
   
 7.  만들기 및 대상 구성 요소와 같은 구성는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상 또는에서 보여 준 예제 대상 구성 요소 [스크립트 구성 요소를 사용 하 여 대상 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)합니다. 그런 다음 원본 구성 요소를 대상에 연결합니다. 변환하지 않고 원본을 대상에 직접 연결할 수 있습니다. 다음 명령을 실행 하 여 대상 테이블을 만들 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 명령에 **AdventureWorks** 데이터베이스:  
   
-    ```  
+    ```sql
     CREATE TABLE [Person].[Address2]([AddressID] [int] NOT NULL,  
         [City] [nvarchar](30) NOT NULL)  
     ```  

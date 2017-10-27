@@ -15,6 +15,7 @@ caps.latest.revision: 3
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ac4f1eeab19ac0a7468c62ac3fa8dfcc33b12f45
@@ -113,3 +114,4 @@ SQL Server 기술에 대한 표로 이동하려면 해당 링크를 클릭합니
 [SQL Server 2016 설치](../database-engine/install-windows/installation-for-sql-server-2016.md) 
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

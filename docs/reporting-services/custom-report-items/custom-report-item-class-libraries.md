@@ -20,7 +20,8 @@ caps.latest.revision: 27
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: f216228c01e835e88cd9d4c7d7d4190648a386db
 ms.contentlocale: ko-kr
@@ -143,3 +144,4 @@ ms.lasthandoff: 08/09/2017
  [사용자 지정 보고서 항목 디자인 타임 구성 요소 만들기](../../reporting-services/custom-report-items/creating-a-custom-report-item-design-time-component.md)  
   
   
+

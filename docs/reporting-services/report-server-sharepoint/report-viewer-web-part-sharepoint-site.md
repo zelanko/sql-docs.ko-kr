@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: a37ed5efe7c365c601deb95d9fe761d227e7021e
@@ -56,3 +57,4 @@ Reporting Services에 대 한 하나의 설치 모드는 SQL Server 2017 부터�
 ## <a name="next-steps"></a>다음 단계
 
 업데이트 된 보고서 뷰어 웹 파트와 시작 하려면 참조 [SharePoint 사이트에서 보고서 뷰어 웹 파트 배포](deploy-report-viewer-web-part.md)합니다.
+

@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8290d7fe8b7900291d4afe3c944564d8f2aef608
@@ -473,3 +474,4 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
 -   결과에서 <`Col`> 요소의 각 인스턴스는 `xsi:type` 특성을 사용하여 해당 인스턴스 유형을 참조합니다.  
   
   
+

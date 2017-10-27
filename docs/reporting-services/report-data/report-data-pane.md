@@ -21,7 +21,8 @@ caps.latest.revision: 28
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a832dfb9d5e5e3fc57519b8f694bd47fa755852e
 ms.contentlocale: ko-kr
@@ -47,8 +48,9 @@ ms.lasthandoff: 08/09/2017
  **데이터 집합**  
  단일 데이터 집합을 나타냅니다. 데이터 집합은 쿼리에 의해 지정된 필드 컬렉션의 부모 노드이며 계산 필드를 포함합니다. Reporting Services는 쿼리를 지정할 수 있도록 쿼리 디자이너를 지원합니다. 자세한 내용은 참조 [보고서 데이터 집합 &#40; Ssrs&#41; ](../../reporting-services/report-data/report-datasets-ssrs.md) 및 [쿼리 디자인 도구 &#40; Ssrs&#41; ](../../reporting-services/report-data/query-design-tools-ssrs.md).  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [그룹화 창](../../reporting-services/tools/grouping-pane.md)  
   
   
+

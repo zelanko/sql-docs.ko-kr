@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: fbc68b6ff9f1edf5cf6ee13f6e93a3d2d1a8f834
@@ -82,3 +83,4 @@ SharePoint 페이지에는 보고서 뷰어 웹 파트를 추가 하 여 SQL Ser
 * 보고서 뷰어 웹 파트를 페이지에 추가 하려면 표시 되지 않으면 했는지 확인 [보고서 뷰어 웹 파트 배포](deploy-report-viewer-web-part.md)합니다.
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

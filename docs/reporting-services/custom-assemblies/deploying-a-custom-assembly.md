@@ -22,6 +22,7 @@ caps.latest.revision: 46
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 44b3944bcef88371e19d01c0e22e5522d62ef645
@@ -73,3 +74,4 @@ ms.lasthandoff: 08/12/2017
  [어셈블리 및 전역 어셈블리 캐시 사용](http://go.microsoft.com/fwlink/?LinkId=63912)  
   
   
+

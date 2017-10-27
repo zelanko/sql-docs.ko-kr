@@ -16,7 +16,8 @@ caps.latest.revision: 56
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Active
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 5e20b99d995151c14e6c334a647da14d3ff8f365
 ms.contentlocale: ko-kr
@@ -161,7 +162,7 @@ ms.lasthandoff: 08/09/2017
  
 * * 완료 했습니다. 만들기 기본 테이블 보고서 tutorial.* *  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
 [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

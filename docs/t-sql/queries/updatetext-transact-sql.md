@@ -1,7 +1,7 @@
 ---
 title: UPDATETEXT (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 03/16/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -33,7 +33,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   기존 업데이트 **텍스트**, **ntext**, 또는 **이미지** 필드입니다. UPDATETEXT를 사용 하 여의 일부를 변경 하는 **텍스트**, **ntext**, 또는 **이미지** 있던 열입니다. WRITETEXT를 사용 하 여 업데이트 하 고 전체 대체 **텍스트**, **ntext**, 또는 **이미지** 필드입니다.  
   

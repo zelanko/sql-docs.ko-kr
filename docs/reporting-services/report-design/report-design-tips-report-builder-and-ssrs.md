@@ -15,7 +15,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 0d30cf6d4ad8e2a4903172230469f1ba41bab360
 ms.contentlocale: ko-kr
@@ -162,9 +163,10 @@ ms.lasthandoff: 08/09/2017
   
  이러한 동작의 조합, 보고서 항목의 너비 및 높이 속성, 보고서 본문의 크기, 페이지 높이 및 페이지 너비 정의, 부모 보고서의 여백 설정, 페이징에 대한 렌더러 관련 지원 모두가 결합하여 렌더링된 페이지에 잘 맞는 보고서 항목을 결정합니다. 자세한 내용은 [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>참고 항목  
  [SQL Server 2016의 보고서 작성기](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services 자습서 및 &#40;입니다. SSRS &#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)   
  [보고서 작성기 자습서](../../reporting-services/report-builder-tutorials.md)  
   
   
+

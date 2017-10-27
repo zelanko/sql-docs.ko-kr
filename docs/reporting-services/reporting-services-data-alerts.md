@@ -15,7 +15,8 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: 27956feca3ad15233943a447422e2260bd61c913
 ms.contentlocale: ko-kr
@@ -328,3 +329,4 @@ SQL Server Reporting Services 데이터 경고는 기반의 경고 솔루션은 
 [SharePoint 사용자용 데이터 경고 관리자](../reporting-services/data-alert-manager-for-sharepoint-users.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

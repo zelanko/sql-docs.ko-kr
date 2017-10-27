@@ -13,6 +13,7 @@ ms.topic: article
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: ea362cd05de5d1ba17ca717d94354d5786119bab
 ms.openlocfilehash: afd3ad49ecc3ff34938974a685a7695c09776762
@@ -193,3 +194,4 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
 5.  해당 프록시의 상자를 선택하고 **확인**클릭합니다.  
   
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

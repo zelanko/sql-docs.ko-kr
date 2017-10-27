@@ -23,6 +23,7 @@ caps.latest.revision: 34
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 0ace8ba0e6fd98f62280be116e4b80a7931da6ae
@@ -96,3 +97,4 @@ private void Page_Load(object sender, System.EventArgs e)
  [SOAP API를 사용 하 여 Windows 응용 프로그램](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  
   
   
+

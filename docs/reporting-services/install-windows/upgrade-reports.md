@@ -24,6 +24,7 @@ caps.latest.revision: 70
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 640c298b1fbbc22561d04e62e236e683b186ef87
@@ -154,3 +155,4 @@ ms.lasthandoff: 09/27/2017
 [보고서 서버 데이터베이스 업그레이드](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)
+

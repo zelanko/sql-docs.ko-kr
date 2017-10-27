@@ -19,6 +19,7 @@ caps.latest.revision: 33
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: c8da0d4ac6024281315dc2e8b0b398904c8a1e6c
@@ -145,3 +146,4 @@ namespace Microsoft.Samples.ReportingServices
  [방법: 사용자 지정 보고서 항목 배포](../../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md)  
   
   
+

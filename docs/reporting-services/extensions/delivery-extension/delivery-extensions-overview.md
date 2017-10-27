@@ -20,6 +20,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: a6aab5e722e732096e9e4ffdf458ac25088e09ae
 ms.openlocfilehash: 79894381bf493132c1f73d711ecd6d1ba282401e
@@ -67,3 +68,4 @@ Reporting Services 배달 확장 프로그램 검토 및 업데이트 프로그�
  [Reporting Services 확장 프로그램 라이브러리](../../../reporting-services/extensions/reporting-services-extension-library.md)  
   
   
+

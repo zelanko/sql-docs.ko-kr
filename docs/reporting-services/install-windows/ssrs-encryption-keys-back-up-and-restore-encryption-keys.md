@@ -19,7 +19,8 @@ caps.latest.revision: 14
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 670c061b0c624eb321fd00c0f4e2f372b6ba9e71
 ms.contentlocale: ko-kr
@@ -31,7 +32,7 @@ ms.lasthandoff: 08/09/2017
 
   보고서 서버 구성의 중요한 부분은 중요한 정보의 암호화에 사용되는 대칭 키의 백업 복사본을 만드는 것입니다. 대칭 키의 백업 복사본은 여러 일상 작업에 필요하며 새 설치에서 기존 보고서 서버 데이터베이스를 다시 사용할 수 있도록 합니다.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드 | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native Mode | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  다음 이벤트가 발생할 경우 암호화 키의 백업 복사본을 복원해야 합니다.  
   
@@ -65,7 +66,7 @@ ms.lasthandoff: 08/09/2017
   
 3.  강력한 암호를 입력합니다.  
   
-4.  저장된 키를 보관할 파일을 지정합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]파일에.snk 파일 확장명을 붙입니다. 보고서 서버와는 분리되도록 해당 파일을 디스크에 저장하세요.  
+4.  저장된 키를 보관할 파일을 지정합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 해당 파일에 .snk 파일 확장명을 붙입니다. 보고서 서버와는 분리되도록 해당 파일을 디스크에 저장하세요.  
   
 5.  **확인**을 선택합니다.  
   
@@ -111,7 +112,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [구성 및 암호화 키 &#40; 관리 SSRS 구성 관리자 &#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
+ [암호화 키 구성 및 관리&#40;SSRS 구성 관리자&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   
 

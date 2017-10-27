@@ -17,6 +17,7 @@ caps.latest.revision: 17
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9577d5597eff0cb2bd3e30771c4e2765eadb42b6
@@ -77,3 +78,4 @@ ms.lasthandoff: 06/22/2017
  뷰의 이전 이름을 참조하는 모든 개체, 스크립트 및 응용 프로그램이 이제 새 이름을 사용하는지 확인합니다.  
   
   
+

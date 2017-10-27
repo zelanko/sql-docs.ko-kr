@@ -14,7 +14,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7a6554de812f8f85c9adbd7a3338ab744555e9a0
 ms.contentlocale: ko-kr
@@ -44,7 +45,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="change-aggregation"></a>집계 변경 
 차트에서 숫자 필드에 대한 기본 집계는 sum입니다. 집계를 average, count, minimum, maximum, first 또는 last로 변경할 수 있습니다.
 
-* 선택 된 **데이터** 탭 및 **데이터 속성**을 선택 **옵션** 숫자 필드 옆에 있는 > 다른 집계를 선택 합니다.
+* **데이터** 탭을 선택하고 **데이터 속성**에서 숫자 필드 옆에 있는 **옵션**을 선택한 후 > 다른 집계를 선택합니다.
 
 ### <a name="set-or-clear-filters"></a>필터 설정 또는 지우기
 
@@ -66,13 +67,13 @@ ms.lasthandoff: 08/09/2017
 
 2. 기본적으로 누적 가로 막대형 차트입니다. 차트 종류는 **계열 시각화**에서 변경할 수 있습니다.
 
-3. 차트 보고서 되지 않은 데이터를 필요한 경우 선택 된 **데이터** 탭 > **데이터 추가** 를 [Excel 또는 공유 데이터 집합에서 데이터를 가져올](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)합니다.
+3. 차트에 필요한 데이터가 보고서에 아직 없는 경우 **데이터** 탭 > **데이터 추가**를 [Excel 또는 공유 데이터 집합에서 데이터 가져오기](../../reporting-services/mobile-reports/data-for-reporting-services-mobile-reports.md)로 선택합니다.
 
-3. **데이터 속성** 창에서 **주 계열** 은 **SimulatedTable**입니다. 상자에서 화살표를 선택한 다음 > 해당 테이블을 선택합니다.
+3. **데이터 속성** 창에서 **주 계열**은 **SimulatedTable**입니다. 상자에서 화살표를 선택한 다음 > 해당 테이블을 선택합니다.
 
-5. 설정한 경우 **데이터 구조** 를 **열별로** (에 **레이아웃** 탭 > **시각적 속성** 창), 여기에 **데이터 속성** 창 숫자 값의 여러 열을 선택할 수 있습니다.
+5. **데이터 구조**를 **열 기준**로 설정한 경우(**레이아웃** 탭 > **시각적 속성** 창) **데이터 속성** 창에서 숫자 값의 여러 열을 선택할 수 있습니다.
 
-   **데이터 구조** 를 **행 기준**로 설정한 경우에는 **데이터 속성** 창에서 **계열 이름 필드** 하나와 숫자 값 열 하나를 선택할 수 있습니다.
+   **데이터 구조**를 **행 기준**로 설정한 경우에는 **데이터 속성** 창에서 **계열 이름 필드** 하나와 숫자 값 열 하나를 선택할 수 있습니다.
    
 자세한 내용은 [열 또는 행을 기준으로 데이터 그룹화](../../reporting-services/mobile-reports/group-data-by-columns-or-rows-in-a-mobile-report-reporting-services.md)를 참조하세요.
   
