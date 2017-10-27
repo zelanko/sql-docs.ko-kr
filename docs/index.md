@@ -1,7 +1,7 @@
 ---
 layout: HubPage
 hide_bc: true
-title: "Microsoft SQL 문서 | Microsoft Docs"
+title: "Microsoft SQL 문서 | Microsoft 문서"
 description: "SQL에 대한 자세한 정보"
 author: barbkess
 ms.author: barbkess
@@ -9,10 +9,10 @@ ms.topic: article
 ms.technology:
 - database-engine
 ms.translationtype: HT
-ms.sourcegitcommit: fe9ea282b49f3c78a23995816ffd6af8a8802f48
-ms.openlocfilehash: 7ff66f95dece7ba9f866871ca8559628e4ee652d
+ms.sourcegitcommit: e9caa51a68c2f03fb9f3a0354b5eab1eed43bdf1
+ms.openlocfilehash: 46264a1ab74bc97fc3354edf777de556881c9d42
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 10/26/2017
 
 ---
 
@@ -49,8 +49,8 @@ ms.lasthandoff: 10/18/2017
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">SQL </h4>
                                                 <ul>
                                                     <li><a href="/sql/sql-server/sql-server-technical-documentation">SQL Server(2016, 2017)</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/hh278311(v=sql.10).aspx">SQL Server 2014</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx">SQL Server 2014</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
                                                     <li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database*</a></li>
                                                     <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL 데이터 웨어하우스</a></li>
                                                 </ul>
@@ -126,12 +126,12 @@ ms.lasthandoff: 10/18/2017
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">분석</h4>
                                                 <ul>
                                                     <li><a href="/sql/analysis-services/analysis-services">SQL Server Analysis Services(2016, 2017)</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/bb522607(v=sql.120).aspx">SQL Server 2014 Analysis Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/bb522607(v=sql.110).aspx">SQL Server 2012 Analysis Services</a></li>
                                                     <li><a href="/azure/analysis-services/">Azure Analysis Services</a></li> 
                                                     <li><a href="/azure/stream-analytics/">Azure Stream Analytics</a></li>
                                                     <li><a href="/azure/data-lake-analytics/">Azure Data Lake Analytics</a></li>
-                                                    <li><a href="https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoft-ads.standard-data-science-vm">데이터 과학 가상 컴퓨터</a></li>
+                                                    <li><a href="https://azuremarketplace.microsoft.com/marketplace/apps/microsoft-ads.standard-data-science-vm">데이터 과학 가상 컴퓨터</a></li>
                                                 </ul>
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">기계 학습</h4>
                                                 <ul>
@@ -142,9 +142,9 @@ ms.lasthandoff: 10/18/2017
                                                 <h4 class="likeAnH3" style="margin: 1rem 0px;">보고</h4>
                                                 <ul>
                                                     <li><a href="/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports">SQL Server Reporting Services(2016, 2017)</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
-                                                    <li><a href="https://msdn.microsoft.com/en-us/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
-                                                    <li><a href="https://powerbi.microsoft.com/en-us/documentation/powerbi-service-get-started/">Power BI 서비스</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/ms159106(v=sql.120).aspx">SQL Server 2014 Reporting Services</a></li>
+                                                    <li><a href="https://msdn.microsoft.com/library/ms159106(v=sql.110).aspx">SQL Server 2012 Reporting Services</a></li>
+                                                    <li><a href="https://powerbi.microsoft.com/documentation/powerbi-service-get-started/">Power BI 서비스</a></li>
                                                 </ul>
                                             </div>
                                         </div>
