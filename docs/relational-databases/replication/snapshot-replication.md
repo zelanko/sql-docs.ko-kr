@@ -17,6 +17,7 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 6c99d91ab0209eb08c04488ce27043b2ad714781
@@ -108,3 +109,4 @@ ms.lasthandoff: 06/22/2017
 3.  새 스냅숏이 있는 경우 병합 에이전트는 **sysmergeschemachange**에 지정된 위치에 있는 스냅숏 파일을 구독 데이터베이스에 적용합니다.  
   
   
+

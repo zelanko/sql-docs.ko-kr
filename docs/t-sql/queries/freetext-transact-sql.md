@@ -1,7 +1,7 @@
 ---
 title: FREETEXT (Transact SQL) | Microsoft Docs
 ms.custom: 
-ms.date: 08/11/2017
+ms.date: 10/23/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -34,7 +34,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="freetext-transact-sql"></a>FREETEXT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   사용 되는 조건자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [WHERE 절](../../t-sql/queries/where-transact-sql.md) 의 [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 수행 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전체 텍스트 검색 전체 텍스트 인덱싱된 열의 문자 기반 데이터 형식이 포함 된 합니다. 이 조건자는 검색 조건의 의미와 일치하지만 단어가 정확히 일치하지 않는 값을 검색합니다. FREETEXT를 사용 하는 경우 전체 텍스트 쿼리 엔진이 내부적으로 다음 작업이 수행 된 *freetext_string*각 용어에 가중치를 할당 한 다음 일치 항목을 찾습니다.  
   

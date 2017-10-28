@@ -21,6 +21,7 @@ caps.latest.revision: 22
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: bf54eb7974cfdf42314959a4f8907750863af079
@@ -75,3 +76,4 @@ SSMA 스크립트 명령 및 옵션을 실행 시 콘솔 프로그램 결과 및
   
 ## <a name="see-also"></a>참고 항목  
 [SAP ASE &#40; 용 SSMA를 설치합니다. SybaseToSQL &#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  
+

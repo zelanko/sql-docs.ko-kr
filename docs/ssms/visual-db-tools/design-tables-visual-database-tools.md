@@ -21,6 +21,7 @@ caps.latest.revision: 3
 author: stevestein
 ms.author: sstein
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 21f0cfd102a6fcc44dfc9151750f1b3c936aa053
 ms.openlocfilehash: ca37946fadb30837e21255ae67b862a61bd6f68e
@@ -67,3 +68,4 @@ ms.lasthandoff: 08/28/2017
 [인덱스](../../relational-databases/indexes/indexes.md)  
 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
 [SSMS(SQL Server Management Studio) 다운로드](../download-sql-server-management-studio-ssms.md)  
+

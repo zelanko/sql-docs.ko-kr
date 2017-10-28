@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 30529df439a1910573b2e4b8f9e1a5f21075c4d7
@@ -182,3 +183,4 @@ MySQL 용 SSMA의 2010 년 1 월 릴리스에서 초기 릴리스가 했습니�
 -   둘 다에 마이그레이션에 대 한 지원 추가 온-프레미스 SQL Server 및 Azure SQL 합니다.  
   
 -   **기능 스냅숏:** 스키마 및 데이터 마이그레이션을의 MySQL 테이블/인덱스/제약 조건입니다.
+

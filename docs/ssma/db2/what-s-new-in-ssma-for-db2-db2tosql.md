@@ -17,6 +17,7 @@ caps.latest.revision: 8
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 8246a40f5fd59ae4d8a28f1e0315ea1a015e8e7d
@@ -110,3 +111,4 @@ D b 2 용 SSMA의 2016 년 1 월 유지 보수 릴리스는 다음과 같은 변
   
 ## <a name="november-2014"></a>2014 년 11 월  
 D b 2 용 SSMA의 2014 년 11 월 릴리스에서 초기 릴리스가 했습니다.
+

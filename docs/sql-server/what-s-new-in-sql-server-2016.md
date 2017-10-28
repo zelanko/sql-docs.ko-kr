@@ -22,6 +22,7 @@ caps.latest.revision: 224
 author: craigg-msft
 ms.author: craigg
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 2ef79a82259dee5a8767b382ca5ddaa0795dab7e
@@ -112,3 +113,4 @@ Microsoft가 이 릴리스에서 Reporting Services를 완전히 개선했습니
 - [새 SQL PowerShell 모듈](https://blogs.technet.microsoft.com/dataplatforminsider/2016/06/30/sql-powershell-july-2016-update/)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

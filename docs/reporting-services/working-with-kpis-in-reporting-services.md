@@ -13,7 +13,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: dcf26be9dc2e502b2d01f5d05bcb005fd7938017
 ms.openlocfilehash: f8057d09bb9118ef5575645f3fab9ba7a1fede94
 ms.contentlocale: ko-kr
@@ -114,3 +115,4 @@ KPI를 새로 고치려면 공유 데이터 집합에 대 한 캐싱을 구성 �
 [공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

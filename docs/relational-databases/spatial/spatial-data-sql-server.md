@@ -22,6 +22,7 @@ caps.latest.revision: 34
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: a7ed039271847202c8c84a03ec56d55a96593089
@@ -86,3 +87,4 @@ ms.lasthandoff: 06/22/2017
  공간 인덱스를 소개하고 공간 분할 및 공간 분할 구성표에 대해 설명합니다.  
   
   
+

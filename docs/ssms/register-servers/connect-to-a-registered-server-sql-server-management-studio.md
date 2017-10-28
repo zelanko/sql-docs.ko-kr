@@ -17,6 +17,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: ee5bbf86cb33e358b108b9a0bd63fb52913d98d0
@@ -34,3 +35,4 @@ ms.lasthandoff: 07/31/2017
 1.  등록된 서버에서 서버를 마우스 오른쪽 단추로 클릭하고 **연결**을 가리킨 다음 **개체 탐색기**를 클릭합니다.  
   
   
+

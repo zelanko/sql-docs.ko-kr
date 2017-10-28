@@ -17,6 +17,7 @@ caps.latest.revision: 21
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
@@ -207,3 +208,4 @@ SSMA for Sybase의 2006년 7월 릴리스가 첫 버전입니다.
   
 ## <a name="see-also"></a>관련 항목:  
 [SSMA for Sybase &#40; 시작 SybaseToSQL &#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)
+

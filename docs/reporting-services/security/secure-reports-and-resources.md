@@ -21,7 +21,8 @@ caps.latest.revision: 47
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 66e32b412558ec3c06fcbfcb3b4dbd1b7b2e06e0
 ms.contentlocale: ko-kr
@@ -86,3 +87,4 @@ ms.lasthandoff: 08/09/2017
  [Reporting Services 데이터 원본에 자격 증명을 저장 합니다.](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md)  
   
   
+

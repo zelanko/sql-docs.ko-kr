@@ -15,7 +15,8 @@ caps.latest.revision: 5
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 53c07f85e9ec0bfca627b8ff941eddfde03336df
 ms.contentlocale: ko-kr
@@ -124,7 +125,7 @@ ms.lasthandoff: 08/09/2017
 ### <a name="file-names"></a>파일 이름  
  보고서 항목에 대한 URL의 파일 이름에는 파일 확장명이 포함되어야 합니다. 이러한 파일 확장명에 따라 파일 유형이 결정됩니다. 보고서 제작 도구에서 보고서 항목을 게시하는 경우 파일 확장명이 자동으로 포함됩니다. SharePoint 라이브러리에 보고서 항목을 업로드하는 경우에는 파일 확장명을 포함해야 합니다.  
   
- SharePoint 사이트에 업로드하는 항목의 파일 확장명을 지정하지 않으면 **rsInvalidDataSourceReference** 오류가 발생합니다. SharePoint 응용 프로그램에서 올바른 파일 이름 문자로 인식하지 않는 문자는 파일 이름에 사용할 수 없습니다. # % & * : &amp;lt; &amp;gt; ? / { | } 같은 문자는 포함하지  마십시오.  
+ SharePoint 사이트에 업로드하는 항목의 파일 확장명을 지정하지 않으면 **rsInvalidDataSourceReference** 오류가 발생합니다. SharePoint 응용 프로그램에서 올바른 파일 이름 문자로 인식하지 않는 문자는 파일 이름에 사용할 수 없습니다. # % & * : < > ?  같은 문자는 포함하지  마십시오.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>업로드와 게시의 차이점  
  보고서 디자이너 또는 보고서 작성기를 사용하여 보고서 및 관련 파일을 라이브러리에 게시하는 경우 파일이 추가되기 전에 해당 유효성이 검사됩니다. SharePoint 라이브러리의 **업로드** 동작을 사용하여 보고서 및 관련 파일을 업로드하면 유효성 검사가 수행되지 않습니다. 보고서에 액세스하여 관리, 편집 또는 실행할 때까지 파일이 올바른지 여부를 확인할 수 없습니다.  

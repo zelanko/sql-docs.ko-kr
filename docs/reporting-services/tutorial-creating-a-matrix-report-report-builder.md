@@ -16,7 +16,8 @@ caps.latest.revision: 15
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: ee55d7f9499b638828a6312761dd1b7480a7816c
 ms.contentlocale: ko-kr
@@ -57,7 +58,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  **다음**을 클릭합니다.  
   
-6.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 된 데이터 원본을 만드는 방법은 참조 [자습서: 기본 테이블 보고서 &#40; 만들기 보고서 작성기 &#41; ](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  **데이터 원본에 대한 연결 선택** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버를 찾아 데이터 원본을 선택합니다. 데이터 원본을 사용할 수 없거나 보고서 서버에 대한 액세스 권한이 없는 경우 포함된 데이터 원본을 대신 사용할 수 있습니다. 포함된 데이터 원본을 만드는 방법에 대한 자세한 내용은 [자습서: 기본 테이블 보고서 만들기&#40;보고서 작성기&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)를 참조하세요.  
   
 7.  **다음**을 클릭합니다.  
   
@@ -162,7 +163,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  Ctrl 키를 누른 상태로 `[Sum(Sales)]`이 들어 있는 9개의 셀을 선택합니다.  
   
-3.  에 **홈** 탭 > **번호** > **통화**합니다. 셀이 변경되어 형식 지정된 통화가 표시됩니다.  
+3.  On the **Home** tab > **Number** > **Currency**. 셀이 변경되어 형식 지정된 통화가 표시됩니다.  
   
     국가별 설정이 영어(미국)인 경우 기본 예제 텍스트는 [**$12,345.00**]입니다. 예제 통화 값이 표시되지 않는 경우 **숫자** 그룹에서 **자리 표시자 스타일** > **샘플 값**을 클릭합니다.  
     
@@ -170,7 +171,7 @@ ms.lasthandoff: 08/09/2017
   
 4.  `[SalesDate]`가 들어 있는 셀을 클릭합니다.  
   
-5.  에 **번호** 그룹 > **날짜**합니다.  
+5.  **숫자** 그룹 > **날짜**를 선택합니다.  
   
     셀에 예제 날짜 **[1/31/2000]**이 표시됩니다. 예제 날짜가 표시되지 않으면 **숫자** 그룹에서 **자리 표시자 스타일** 을 클릭한 다음 **보기 값**을 클릭합니다.  
   
@@ -268,7 +269,7 @@ ms.lasthandoff: 08/09/2017
   
 5.  새로 병합된 셀을 마우스 오른쪽 단추로 클릭한 다음 **입력란 속성**을 클릭합니다.  
   
-6.  에 **테두리** 탭 > **사전 설정** > **None**합니다.
+6.  On the **Border** tab > **Presets** > **None**.
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -285,7 +286,7 @@ ms.lasthandoff: 08/09/2017
   
 2.  보고서 본문의 맨 위에서 **제목을 추가하려면 클릭하십시오.**가 들어 있는 입력란을 선택한 다음 Delete 키를 누릅니다.  
   
-3.  에 **삽입** 탭 > **헤더** > **헤더 추가**합니다.  
+3.  **삽입** 탭 > **머리글** > **머리글 추가**를 선택합니다.  
   
     머리글이 보고서 본문의 위쪽에 추가됩니다.  
   
@@ -335,7 +336,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="RotateTextBox"></a>9. (선택 사항) 입력란 270도 회전  
 행렬이 있는 보고서는 실행 시 가로 및 세로로 확장될 수 있습니다. 입력란을 세로로 회전하거나 270도 회전하면 가로 공간을 절약할 수 있습니다. 그러면 렌더링된 보고서의 너비가 좁아지며, 보고서가 Microsoft Word 등의 형식으로 내보낼 경우 인쇄되는 페이지에 더 잘 맞게 됩니다.  
   
-입력란에서는 텍스트를 가로 및 세로(위에서 아래로)로 표시할 수도 있습니다. 자세한 내용은 참조 [텍스트 상자 &#40; 보고서 작성기 및 SSRS &#41; ](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md).  
+입력란에서는 텍스트를 가로 및 세로(위에서 아래로)로 표시할 수도 있습니다. 자세한 내용은 [입력란&#40;보고서 작성기 및 SSRS&#41;](../reporting-services/report-design/text-boxes-report-builder-and-ssrs.md)을 참조하세요.  
   
 ### <a name="to-rotate-text-box-270-degrees"></a>입력란을 270도 회전하려면  
   

@@ -19,6 +19,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 802318d2ff9823b5ca0977083230ce625efdd13e
@@ -36,3 +37,4 @@ ms.lasthandoff: 07/31/2017
 -   개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **연결 끊기** 를 클릭하거나 개체 탐색기 도구 모음에서 **연결 끊기** 아이콘을 클릭합니다.  
   
   
+

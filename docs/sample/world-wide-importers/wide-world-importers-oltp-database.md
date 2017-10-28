@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: d55a4e1ce7f1b6e611411eb9a98b0b907bace7e6
@@ -38,3 +39,4 @@ WideWorldImporters 핵심 SQL Server 기능을 활용 하는 방법을 설명 �
 **WideWorldImporters 샘플 쿼리**
 
 WideWorldImporters 데이터베이스에 대 한 샘플 쿼리 합니다.
+

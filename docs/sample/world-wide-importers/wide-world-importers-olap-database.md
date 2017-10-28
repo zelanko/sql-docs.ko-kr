@@ -15,6 +15,7 @@ author: BarbKess
 ms.author: barbkess
 manager: jhubbard
 robots: noindex,nofollow
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: de0880b7c16e2e54a45d7d138a727c3d6b696d15
@@ -44,3 +45,4 @@ WideWorldImportersDW 분석 처리에 대 한 SQL Server 기능을 활용 하는
 **WideWorldImportersDW OLAP 샘플 쿼리**
 
 샘플 분석 쿼리 WideWorldImportersDW 데이터베이스를 활용 합니다.
+

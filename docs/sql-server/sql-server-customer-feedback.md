@@ -9,6 +9,7 @@ ms.topic: article
 ms.prod: sql-server-2016
 ms.technology: database-engine
 ms.assetid: 
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: dd279b20fdf0f42d4b44843244aeaf6f19f04718
 ms.openlocfilehash: de638f50e6c11633859e7cdc3c6ddb208fe64f00
@@ -165,3 +166,4 @@ SSMS는 자체 크래시 덤프를 수집하지 않습니다. SSMS와 관련된 
 "서버에서 레지스트리 하위 키 설정" 섹션에 설명된 대로 사용 현황 데이터를 전송하지 않도록 서비스를 구성할 수 있습니다. 그러나 이렇게 해도 서비스 계정은 제거되지 않습니다. 
  
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
+

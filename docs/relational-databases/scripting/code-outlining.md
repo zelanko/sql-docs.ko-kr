@@ -17,6 +17,7 @@ caps.latest.revision: 14
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 65a303f3cc995daacc29260c6a7ab176414f773f
@@ -88,3 +89,4 @@ GO
  `SELECT *` 줄의 빼기 기호를 클릭하여 해당 `SELECT` 문만 축소할 수 있습니다. 전체 `BEGIN - END` 블록을 축소하려면 `BEGIN` 줄의 빼기 기호를 클릭합니다. 전체 일괄 처리를 `GO` 명령으로 축소하려면 `CREATE PROCEDURE` 줄의 빼기 기호를 클릭합니다. `SELECT GETDATE()` 또는 `SELECT @@VERSION` 줄은 한 줄로 된 문이고 개요 영역이 없기 때문에 개별적으로 축소할 수 없습니다.  
   
   
+

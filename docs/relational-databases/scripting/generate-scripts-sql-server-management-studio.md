@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 1bf73031c7e2e302d6174e6f21a005c3106f4cb2
@@ -89,3 +90,4 @@ ms.lasthandoff: 06/22/2017
 7.  선택된 개체 중 하나를 마우스 오른쪽 단추로 클릭하고 **\<개체 유형> 스크립팅**을 선택합니다.  
   
   
+

@@ -17,6 +17,7 @@ caps.latest.revision: 10
 author: Shamikg
 ms.author: Shamikg
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 759a7084024e1c608431683de6dae5a6fb40304e
 ms.openlocfilehash: aafb1156f2036e09fa4f610380a5a1d24a5dbdad
@@ -119,3 +120,4 @@ SSMA 메뉴가 포함 되어 있습니다.
 ## <a name="see-also"></a>참고 항목  
 [SAP ASE로 데이터베이스 마이그레이션 SQL Server-Azure SQL 데이터베이스 &#40; SybaseToSQL &#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [사용자 인터페이스 참조 &#40; SybaseToSQL &#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+

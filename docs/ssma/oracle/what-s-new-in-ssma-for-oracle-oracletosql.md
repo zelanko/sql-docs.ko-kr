@@ -14,6 +14,7 @@ caps.latest.revision: 24
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: cc5ee3189d00f7124754769b12f5d3cb1b8156b5
@@ -205,3 +206,4 @@ Oracle 용 SSMA의 2007 년 8 월 릴리스는 다음과 같은 변경 내용이
   
 ## <a name="april-2007"></a>2007 년 4 월  
 Oracle 용 SSMA의 2007 년 4 월 릴리스가 첫 버전입니다.
+

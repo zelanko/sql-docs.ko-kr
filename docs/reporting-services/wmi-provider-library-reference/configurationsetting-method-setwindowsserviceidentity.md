@@ -22,7 +22,8 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 935e2d44cbfd0363832eb6401b63d4a0b36623b4
 ms.contentlocale: ko-kr
@@ -70,9 +71,10 @@ public void SetWindowsServiceIdentity(boolean UseBuiltInAccount,
  *Account* 매개 변수에 지정된 계정에는 Windows의 **LogonAsService** 권한이 필요합니다. 이 권한은 메서드를 통해 지정된 계정에 부여됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  
   
   
+

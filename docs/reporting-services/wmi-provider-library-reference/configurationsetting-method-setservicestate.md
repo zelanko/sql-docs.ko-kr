@@ -22,7 +22,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8964b2b0886ffd0483e48c8e9baf91ab9b2dae3d
 ms.contentlocale: ko-kr
@@ -56,7 +57,7 @@ public void SetServiceState(Boolean EnableWindowsService,
  보고서 관리자의 필요한 상태를 나타내는 **Boolean** 값입니다.
  
  > [!NOTE] 
- > 이 설정은 SQL Server 2016 Reporting Services 누적 업데이트 2부터 사용되지 않습니다. 웹 포털은 항상 사용할 수 있습니다. 값이 무시 됩니다.
+ > 이 설정은 SQL Server 2016 Reporting Services 누적 업데이트 2부터 사용 되지 합니다. 웹 포털은 항상 사용할 수 있습니다. 값이 무시 됩니다.
   
  *HRESULT*  
  [out] 호출의 성공 여부를 나타내는 값입니다.  
@@ -67,7 +68,7 @@ public void SetServiceState(Boolean EnableWindowsService,
 ## <a name="remarks"></a>주의  
   
 ## <a name="requirements"></a>요구 사항  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **네임스페이스:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>관련 항목:  
  [MSReportServer_ConfigurationSetting 멤버](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-members.md)  

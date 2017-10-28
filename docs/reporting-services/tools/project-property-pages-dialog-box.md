@@ -19,7 +19,8 @@ caps.latest.revision: 35
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 659be9982440426eee0d8b5a2df8d54b4d32bbc4
 ms.contentlocale: ko-kr
@@ -62,7 +63,7 @@ ms.lasthandoff: 08/09/2017
  보고서가 게시될 때 서버의 데이터 원본을 프로젝트의 데이터 원본으로 덮어쓰려면 **True** 를 선택하고, 서버의 기존 데이터 원본을 그대로 두려면 **False** 를 선택합니다.  
   
  **TargetServerVersion**  
- 적절한 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 선택하거나 **버전 검색** 을 선택하여 **TargetServer URL** 속성이 식별하는 서버에 설치된 버전을 자동으로 확인합니다. 기본값은 **SQL Server 2016**을 클릭합니다.  
+ 적절한 버전의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 선택하거나 **버전 검색** 을 선택하여 **TargetServer URL** 속성이 식별하는 서버에 설치된 버전을 자동으로 확인합니다. 기본값은 **SQL Server 2016**합니다.  
   
  **TargetDataSourceFolder**  
  게시된 공유 데이터 원본을 저장할 폴더의 이름입니다. 폴더를 지정하지 않는 경우 데이터 원본은 보고서와 같은 폴더에 게시됩니다. 보고서 서버에 폴더가 없는 경우 보고서가 게시될 때 보고서 디자이너에서 폴더를 만듭니다.  
@@ -86,13 +87,14 @@ ms.lasthandoff: 08/09/2017
  SharePoint 통합 모드로 실행 중인 보고서 서버에 게시하는 경우 SharePoint 최상위 사이트나 하위 사이트에 대한 URL을 사용합니다. 사이트를 지정하지 않으면 기본 최상위 사이트가 사용됩니다. 예를 들어 
 + `http:\\<servername>`, 
 + `http:\\<servername\<site>` 
-+ `http:\\<servername>\<site>\<subsite>`을 참조하세요.  
++ `http:\\<servername>\<site>\<subsite>`를 참조하세요.  
 
 ## <a name="next-steps"></a>다음 단계
 
 [보고서 게시](http://msdn.microsoft.com/library/ef5a514e-e818-4041-a8b0-15835f9a046b)   
 [SharePoint 라이브러리에 보고서 게시](../../reporting-services/reports/publish-a-report-to-a-sharepoint-library.md)   
-[배포 속성 설정&#40;Reporting Services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
+[배포 속성 설정 &#40; Reporting services&#41;](../../reporting-services/tools/set-deployment-properties-reporting-services.md)   
 [보고서 디자이너 F1 도움말](../../reporting-services/tools/report-designer-f1-help.md)  
 
 문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
+

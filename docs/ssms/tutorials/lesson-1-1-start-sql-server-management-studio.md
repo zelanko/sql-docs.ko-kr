@@ -16,6 +16,7 @@ caps.latest.revision: 45
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: HT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: dab569e1d758587233b6f6a0cd00e966e325fcd1
@@ -70,3 +71,4 @@ ms.lasthandoff: 09/27/2017
 [등록된 서버 및 개체 탐색기와 연결](../../tools/sql-server-management-studio/lesson-1-2-connect-with-registered-servers-and-object-explorer.md)  
 
   
+

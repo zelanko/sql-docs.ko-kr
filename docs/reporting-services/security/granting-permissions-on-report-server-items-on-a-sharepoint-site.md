@@ -20,7 +20,8 @@ caps.latest.revision: 13
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b785da81bc694c8442d2a7a618e2abe8f1cec907
 ms.contentlocale: ko-kr
@@ -28,7 +29,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] SharePoint 사이트 및 라이브러리에서 액세스 하는 보고서 서버 항목에 대 한 액세스 권한을 부여 하는 데 사용할 수 있는 기본 제공 보안 기능을 제공 합니다. 이미 사용자에게 사용 권한을 할당한 경우 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 와 보고서 서버 간의 통합 설정을 구성하는 즉시 해당 사용자가 보고서 서버 항목 및 작업에 액세스할 수 있게 됩니다. 기존 사용 권한을 사용하여 보고서 정의와 기타 문서를 업로드하고, 보고서를 보고, 구독을 만들고, 항목을 관리할 수 있습니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 은 SharePoint 사이트 및 라이브러리에서 액세스하는 보고서 서버 항목에 대한 액세스를 허용하는 데 사용할 수 있는 기본 제공 보안 기능을 제공합니다. 이미 사용자에게 사용 권한을 할당한 경우 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 와 보고서 서버 간의 통합 설정을 구성하는 즉시 해당 사용자가 보고서 서버 항목 및 작업에 액세스할 수 있게 됩니다. 기존 사용 권한을 사용하여 보고서 정의와 기타 문서를 업로드하고, 보고서를 보고, 구독을 만들고, 항목을 관리할 수 있습니다.  
   
  사용 권한을 할당하지 않았거나 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]의 보안 기능에 대해 잘 모르는 경우 다음 지침을 따르세요.  
   
@@ -47,11 +48,11 @@ ms.lasthandoff: 08/09/2017
   
 -   보안 개체에는 사이트, 목록, 라이브러리, 폴더 및 문서가 있습니다.  
   
--   사용 권한은 특정 태스크를 수행하기 위한 권한 부여입니다. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]은 사용 권한 수준으로 결합할 수 있는 33개의 미리 정의된 사용 권한을 제공합니다.  
+-   사용 권한은 특정 태스크를 수행하기 위한 권한 부여입니다. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 은 사용 권한 수준으로 결합할 수 있는 33개의 미리 정의된 사용 권한을 제공합니다.  
   
 -   사용 권한 수준은 사이트, 라이브러리, 목록, 폴더, 항목 또는 문서와 같은 보안 개체에 대해 사용자나 SharePoint 그룹에 부여할 수 있는 사용 권한 집합입니다. 이는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 역할 정의와 같습니다. 5개의 미리 정의된 사용 권한 수준이 제공되며 필요한 경우 이러한 그룹을 사용자 지정하거나 새 그룹을 만들 수 있습니다.  
   
--   SharePoint 그룹은 사이트에 대한 사용 권한을 관리하고 사이트 멤버에 대한 전자 메일 배포 목록을 제공하기 위해 SharePoint 사이트에서 만들 수 있는 사용자 그룹입니다. SharePoint 그룹은 Windows 사용자 및 그룹 계정으로 구성되거나 폼 인증을 사용하는 경우 사용자 로그인으로 구성됩니다. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]에서는 3개의 그룹을 제공합니다. 필요한 경우 이러한 그룹을 사용자 지정하거나 새 그룹을 만들 수 있습니다.  
+-   SharePoint 그룹은 사이트에 대한 사용 권한을 관리하고 사이트 멤버에 대한 전자 메일 배포 목록을 제공하기 위해 SharePoint 사이트에서 만들 수 있는 사용자 그룹입니다. SharePoint 그룹은 Windows 사용자 및 그룹 계정으로 구성되거나 폼 인증을 사용하는 경우 사용자 로그인으로 구성됩니다. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에서는 3개의 그룹을 제공합니다. 필요한 경우 이러한 그룹을 사용자 지정하거나 새 그룹을 만들 수 있습니다.  
   
 -   사용 권한 상속을 통해 하위 사이트, 목록, 라이브러리 및 항목에 부모 사이트의 보안 설정을 상속할 수 있습니다. 상속 받은 사용 권한을 사용하여 SharePoint 라이브러리에 저장된 보고서 서버 항목에 액세스할 수 있습니다. 사용 권한 상속과 미리 정의된 SharePoint 그룹을 사용하면 보다 쉽게 배포 작업을 수행하고 대부분의 보고서 서버 작업에 즉시 액세스할 수 있습니다.  
   
@@ -80,22 +81,23 @@ ms.lasthandoff: 08/09/2017
  기본 제공 보안 기능을 사용하려면 SharePoint 그룹에 Windows 사용자 또는 그룹 계정을 할당해야 합니다. 소프트웨어 설치 시 [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] 에 대한 액세스 권한이 자동으로 부여되는 서버 관리자와 포털 사이트 소유자를 제외한 다른 모든 사용자에게 서버에 액세스할 수 있는 권한을 부여해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [보고서 서버 항목에 대 한 Windows SharePoint Services의 기본 제공 보안 사용](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [보고서 서버 항목에 대해 Windows SharePoint Services의 기본 제공 보안 사용](../../reporting-services/security/use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  미리 정의된 SharePoint 그룹 및 사용 권한 수준을 사용하여 보고서 서버 항목에 액세스할 수 있는 방법을 설명합니다.  
   
- [SharePoint 사이트와 보고서 서버 항목에 대 한 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
+ [보고서 서버 항목에 대한 SharePoint 사이트 및 목록 사용 권한 참조](../../reporting-services/security/sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
  보고서 서버 작업에 액세스하는 데 사용할 수 있는 모든 SharePoint 제품 사용 권한에 대한 참조를 제공합니다.  
   
- [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대 한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
+ [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)  
  임시 보고에 대한 사용 권한 요구 사항을 설명하고 기능을 사용할 수 있게 만드는 방법을 제안합니다.  
   
  [Reporting Services to SharePoint Groups and Permissions의 역할 및 태스크와 비교](../../reporting-services/security/reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)  
  SharePoint 그룹과 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 미리 정의된 역할 정의를 비교하여 간략하게 설명합니다.  
   
- [SharePoint 사이트 &#40;의 보고서 서버 항목에 대 한 사용 권한 설정 모드 &#41; 통합 SharePoint의 reporting Services](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  보고서 작성기를 시작하고 모델 항목 보안을 설정할 수 있는 권한이 있는 새 SharePoint 그룹을 만들기 위한 지침을 제공합니다. 이 항목에는 보고서 서버 항목 또는 작업에 사용자 지정 권한을 설정하는 방법에 대한 일반적인 지침도 들어 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [Reporting Services 보안 및 보호](../../reporting-services/security/reporting-services-security-and-protection.md)  
   
   
+

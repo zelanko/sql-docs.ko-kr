@@ -17,7 +17,8 @@ caps.latest.revision: 20
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: On Demand
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 94cc2ebfc2b11bd6bc3e2ab2ce07b5c22c14a12c
 ms.contentlocale: ko-kr
@@ -30,7 +31,7 @@ ms.lasthandoff: 08/09/2017
 > [!NOTE]  
 >  기존 데이터 원본의 보고서를 미리 보려면 보고서 제작 클라이언트의 데이터 원본에 대한 사용 권한이 있어야 합니다. 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
- 보고서를 추가한 후 데이터 원본 및 데이터 집합을 정의하고 보고서 레이아웃을 디자인할 수 있습니다. 시작 하려면 참조 [기본 테이블 보고서 &#40; 만들기 SSRS 자습서 &#41; ](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 또는 [테이블 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/tables-report-builder-and-ssrs.md).  
+ 보고서를 추가한 후 데이터 원본 및 데이터 집합을 정의하고 보고서 레이아웃을 디자인할 수 있습니다. 시작하려면 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 또는 [테이블&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="to-add-a-new-report-using-the-report-wizard"></a>보고서 마법사를 사용하여 새 보고서를 추가하려면  
   

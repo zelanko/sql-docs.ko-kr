@@ -17,7 +17,8 @@ caps.latest.revision: 36
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: Machine Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ed67f96cd8487703e81ec702505724725e5c13d3
 ms.contentlocale: ko-kr
@@ -60,6 +61,7 @@ ms.lasthandoff: 08/09/2017
     ```  
   
 ## <a name="see-also"></a>관련 항목:  
- [기술 참조 &#40; Ssrs&#41;](../../reporting-services/technical-reference-ssrs.md)  
+ [기술 참조&#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
   
   
+

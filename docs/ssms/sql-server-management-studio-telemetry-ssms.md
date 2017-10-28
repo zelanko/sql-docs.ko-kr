@@ -14,6 +14,7 @@ caps.latest.revision: 72
 author: stevestein
 ms.author: sstein
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 49a53643e94d64fc47932bc2ee8dc3200967ae23
@@ -41,3 +42,4 @@ SSMS에 대한 사용 현황 데이터 수집을 포함하거나 제외하려면
 ## <a name="see-also"></a>참고 항목
 
 [SQL Server 사용 피드백 모음에 대한 로컬 감사](http://msdn.microsoft.com/library/mt743085.aspx)
+

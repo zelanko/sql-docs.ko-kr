@@ -17,6 +17,7 @@ caps.latest.revision: 37
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
 ms.openlocfilehash: 7595c51bf8cc0ec07a464a65c992c2f3a56b15c2
@@ -177,3 +178,4 @@ Access 용 SSMA의 2006 년 11 월 릴리스는 다음과 같은 변경 내용�
   
 ## <a name="july-2006"></a>2006 년 7 월  
 Access 용 SSMA의 2006 년 7 월 릴리스가 첫 버전입니다.
+

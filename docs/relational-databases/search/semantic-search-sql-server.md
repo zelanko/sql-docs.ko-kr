@@ -19,6 +19,7 @@ caps.latest.revision: 20
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ca60c4ada6bd908d5401784db74a9b8b0c93396b
@@ -119,3 +120,4 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  통계 의미 체계 검색을 지원하기 위해 추가되거나 변경된 Transact-SQL 문 및 SQL Server 데이터베이스 개체를 나열합니다.  
   
   
+

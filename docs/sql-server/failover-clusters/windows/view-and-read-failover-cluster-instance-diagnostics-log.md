@@ -14,6 +14,7 @@ caps.latest.revision: 23
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 912c05cd783ead67aaa506f07586387eabcb2ca4
@@ -138,3 +139,4 @@ SET DIAGNOSTICS LOG MAX_SIZE = 10 MB;
  [장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   
+

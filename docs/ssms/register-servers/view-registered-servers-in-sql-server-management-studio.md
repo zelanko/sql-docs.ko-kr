@@ -18,6 +18,7 @@ caps.latest.revision: 19
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 5db067d5a2fe5bbf9953484c9a999ed7b1fcddae
 ms.openlocfilehash: 3a4ea7bec5f6cc8d46a0a2783199a6f9d30cf53c
@@ -37,3 +38,4 @@ ms.lasthandoff: 07/31/2017
      기본적으로 등록된 서버는 주 창의 개체 탐색기 위쪽에 나타납니다.  
   
   
+

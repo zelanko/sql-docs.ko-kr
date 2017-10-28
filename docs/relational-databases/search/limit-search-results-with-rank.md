@@ -22,6 +22,7 @@ caps.latest.revision: 20
 author: JennieHubbard
 ms.author: jhubbard
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3a33b63a182fe1c7f72e2251c3a835867ae8dcf4
@@ -211,3 +212,4 @@ qtf is the frequency of the term in the query.
  [전체 텍스트 검색을 사용한 쿼리](../../relational-databases/search/query-with-full-text-search.md)  
   
   
+

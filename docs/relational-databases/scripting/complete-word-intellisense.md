@@ -19,6 +19,7 @@ caps.latest.revision: 25
 author: BYHAM
 ms.author: rickbyh
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: Human Translation
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 9ae1001b60f61120999ef61b7385464ca7af0fc5
@@ -42,3 +43,4 @@ ms.lasthandoff: 06/22/2017
  입력한 내용에 해당하는 제안이 둘 이상일 경우 단어 자동 완성이 호출되어 제안 목록이 표시됩니다. 이 목록을 사용하여 용어를 찾아 코드에 삽입할 수 있습니다.  
   
   
+
