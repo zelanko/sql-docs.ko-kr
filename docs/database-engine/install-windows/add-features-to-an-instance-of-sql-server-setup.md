@@ -57,7 +57,7 @@ ms.lasthandoff: 09/12/2017
   
 6.  시스템 구성 검사기는 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다.  
   
-7.  설치 유형 페이지에서 ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 인스턴스에 기능 추가** 옵션을 선택하고 업데이트하려는 인스턴스를 선택합니다.  
+7.  설치 유형 페이지에서  **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 기존 인스턴스에 기능 추가** 옵션을 선택하고 업데이트하려는 인스턴스를 선택합니다.  
   
 8.  기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 자유롭게 조합하여 선택할 수 있습니다. 자세한 내용은 [SQL Server 2017의 버전과 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요. 각 구성 요소는 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 한 번만 설치할 수 있습니다. 여러 구성 요소를 설치하려면 추가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 설치해야 합니다.  
   
