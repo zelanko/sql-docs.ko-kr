@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 504d3ca0f18c9ea11105ebb575d2f5db449f91e4
@@ -73,3 +74,4 @@ catalog.rename_environment [ @folder_name = ] folder_name
 >  환경 참조가 유효하지 않으면 이러한 참조를 사용하는 해당 패키지의 유효성 검사 및 실행이 실패합니다.  
   
   
+

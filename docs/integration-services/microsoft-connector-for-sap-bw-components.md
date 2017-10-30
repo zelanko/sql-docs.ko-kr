@@ -14,6 +14,7 @@ caps.latest.revision: 10
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 13877d29b192079361051d4775d09f1f4596c9d3
@@ -44,3 +45,4 @@ ms.lasthandoff: 08/03/2017
  SAP Netweaver BW 시스템에서 데이터를 로드할 수 있도록 해 주는 SAP BW 대상에 대해 설명합니다.  
   
   
+

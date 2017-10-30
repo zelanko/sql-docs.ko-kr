@@ -15,6 +15,7 @@ ms.author: haoqian
 manager: jhubbard
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2c158ae6a711ecb5f5065561c0c8c303e9a09980
@@ -117,3 +118,4 @@ GO
 
 ## <a name="run-package-in-sql-agent-job"></a>SQL 에이전트 작업에서 패키지를 실행 합니다.
 Sql 에이전트 작업에서 작업의 한 단계로 SSIS 패키지를 실행 하도록 선택할 수 있습니다. 스케일 아웃에 패키지를 실행 하려면 위의 기본 실행 모드를 활용할 수 있습니다. 기본 실행 모드를 설정 "스케일 아웃"를, 한 후 Sql 에이전트 작업에서 패키지 범위 확장에서 실행 됩니다.
+

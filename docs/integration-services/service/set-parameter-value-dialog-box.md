@@ -14,6 +14,7 @@ caps.latest.revision: 6
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d2e74c467cc0f94d15bdd4a42a300a842012ecd5
@@ -62,3 +63,4 @@ ms.lasthandoff: 08/03/2017
  프로젝트 또는 패키지에서 참조하는 환경에 저장된 변수 값을 사용하려면 이 옵션을 선택합니다. 프로젝트 또는 패키지에 대한 환경 참조를 추가하려면 **구성** 대화 상자를 사용합니다. 자세한 내용은 [Configure Dialog Box](../../integration-services/service/configure-dialog-box.md)을 참조하세요.  
   
   
+

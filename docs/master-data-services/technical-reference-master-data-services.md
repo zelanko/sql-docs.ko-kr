@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: db936ba2d68b14a5744f0eac22b0abfd6cb44441
@@ -30,3 +31,4 @@ ms.lasthandoff: 09/07/2017
 -   [마스터 데이터 관리자 웹 응용 프로그램](../master-data-services/master-data-manager-web-application.md)  
   
   
+

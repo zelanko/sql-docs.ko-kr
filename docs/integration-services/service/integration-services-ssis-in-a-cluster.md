@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e05af2e5e01c9a0d7970a03af1c5fc0e121ded0f
@@ -135,3 +136,4 @@ ms.lasthandoff: 09/26/2017
 -   **클러스터 관리자**에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스를 선택하고 마우스 오른쪽 단추로 클릭한 다음 팝업 메뉴에서 **온라인 상태로 만들기** 를 선택합니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스가 클러스터 리소스로 온라인 상태가 됩니다.  
   
   
+

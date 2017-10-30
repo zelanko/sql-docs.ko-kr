@@ -17,6 +17,7 @@ caps.latest.revision: 32
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 5e60664352054cd8f62250cc7c6b8082e84f607f
@@ -78,3 +79,4 @@ ms.lasthandoff: 09/26/2017
 >  행 수준 보안이 적용됩니다. 따라서 볼 수 있는 권한이 있는 행만 표시됩니다.  
   
   
+

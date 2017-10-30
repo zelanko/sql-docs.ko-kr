@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: e83d9979ee4736528efb4851848ea3eac717fab8
@@ -75,3 +76,4 @@ catalog.set_environment_reference_location [ @reference_id = reference_id
 >  상대 참조를 지정 하는 경우는 *environment_folder_name* 매개 변수 값을 사용 하지 않으면 및 환경 폴더 이름으로 자동 설정 됩니다 **NULL**합니다. 절대 참조를 지정 하는 경우 환경 폴더 이름이 제공 되어야 합니다는 *environment_folder_name* 매개 변수입니다.  
   
   
+

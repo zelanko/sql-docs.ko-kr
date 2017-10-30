@@ -14,6 +14,7 @@ caps.latest.revision: 19
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 5682cd23cb65e097bccb8cc69d5f2ec88ece7709
@@ -80,3 +81,4 @@ catalog.deploy_project [@folder_name =] folder_name
  이 저장 프로시저는 프로젝트를 배포하거나 업데이트하는 동안 프로젝트의 개별 패키지에 대한 보호 수준을 확인하지 않습니다.  
   
   
+

@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 2970b2b2cc7cf30c18a203ebbb92b5418bfc9be5
@@ -120,3 +121,4 @@ winhttpcertcfg.exe -g -c LOCAL_MACHINE\My -s WorkerMachine -a SSISScaleOutWorker
 #### <a name="5-install-the-client-certificate-to-the-root-store-of-local-machine-on-master-node"></a>5. 마스터 로컬 컴퓨터의 루트 저장소에 클라이언트 인증서를 설치 합니다. 노드
 
 #### <a name="6-restart-scale-out-worker-service"></a>6. 스케일 아웃 작업자 서비스를 다시 시작
+

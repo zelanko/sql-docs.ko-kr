@@ -22,6 +22,7 @@ caps.latest.revision: 48
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 997f393918f0800cad1858df142e909d3a59348d
@@ -115,3 +116,4 @@ ms.lasthandoff: 09/26/2017
      템플릿 목록에 새 SSIS 패키지라는 기본 패키지 템플릿이 포함됩니다. 패키지 아이콘을 통해 패키지 템플릿으로 사용할 수 있는 템플릿을 식별할 수 있습니다.  
   
 4.  **추가**를 클릭합니다.  
+

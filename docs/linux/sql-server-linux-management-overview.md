@@ -10,6 +10,7 @@ ms.prod: sql-linux
 ms.technology: database-engine
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
 ms.custom: H1Hack27Feb2017
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 834bba08c90262fd72881ab2890abaaf7b8f7678
 ms.openlocfilehash: 4639379a65fc28c363f6510c1a393df8840dc7f8
@@ -41,3 +42,4 @@ PowerShell에는 Linux에서 SQL Server를 관리 하는 풍부한 명령줄 환
 ## <a name="next-steps"></a>다음 단계
 
 Linux에서 SQL Server에 대 한 자세한 내용은 참조 [Linux에서 SQL Server](sql-server-linux-overview.md)합니다.
+

@@ -20,6 +20,7 @@ caps.latest.revision: 29
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 09de00344fe94087b6287b07c4b1ffe933d27b7c
@@ -212,3 +213,4 @@ public override void ReleaseConnections()
  [코딩 및 스크립트 구성 요소 디버깅](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   
+

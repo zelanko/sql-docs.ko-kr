@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: d9edd63d224f5d4053133cba28ad31a8fba93522
@@ -56,3 +57,4 @@ ms.lasthandoff: 08/03/2017
  [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector for SAP BW에 포함된 각 구성 요소의 사용자 인터페이스에 대해 설명합니다.  
   
   
+

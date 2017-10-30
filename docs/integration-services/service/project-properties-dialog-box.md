@@ -17,6 +17,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 106987c75957ab90773e49e22b65fd89d3e417e4
@@ -94,3 +95,4 @@ ms.lasthandoff: 08/03/2017
  **거부** 를 선택하면 선택한 사용자 또는 역할에 대해 사용 권한이 거부됩니다.  
   
   
+

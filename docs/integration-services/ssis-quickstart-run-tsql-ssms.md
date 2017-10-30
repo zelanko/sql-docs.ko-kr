@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 656e62f36446db4ef5b232129130a0253d2aebdf
 ms.openlocfilehash: 1c656661f645ac9f5d1659800893290819525f39
@@ -85,3 +86,4 @@ GO
     - [명령 프롬프트에서 SSIS 패키지 실행](./ssis-quickstart-run-cmdline.md)
     - [PowerShell에서 SSIS 패키지 실행](ssis-quickstart-run-powershell.md)
     - [C#과 함께 SSIS 패키지 실행](./ssis-quickstart-run-dotnet.md) 
+

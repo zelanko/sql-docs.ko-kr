@@ -16,6 +16,7 @@ caps.latest.revision: 9
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bdf9a0d6fa3ae9a022b720ff0bac003cd65c00db
@@ -54,3 +55,4 @@ ms.lasthandoff: 08/03/2017
  프로젝트의 이전 버전을 복원하려면 **버전** 테이블에서 버전을 선택하고 **선택한 버전으로 복원**을 클릭합니다. 프로젝트가 선택한 버전으로 복원되고 해당 버전은 **버전** 테이블의 **현재** 열에 확인 표시가 표시됩니다.  
   
   
+

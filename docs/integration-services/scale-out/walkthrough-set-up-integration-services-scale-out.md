@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 685286966599c4dcd3dc2f7029413c77f3ff2689
 ms.openlocfilehash: c386b01043764405872365af379cfdedb036b65f
@@ -156,3 +157,4 @@ GO
 ```
 ## <a name="next-steps"></a>다음 단계
 규모 확장 기능의 설치가 완료되었습니다. 범위 확장에서 이제 패키지를 실행할 수 있습니다. 자세한 내용은 [Integration Services(SSIS) 규모 확장에서 패키지 실행](run-packages-in-integration-services-ssis-scale-out.md)을 참조하세요.
+

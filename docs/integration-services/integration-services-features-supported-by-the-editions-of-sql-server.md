@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 8cc1fcfdeae8742a93916dfb08c9db1215f88721
 ms.openlocfilehash: e9d1b8851f113fa44264230a79d0e496007ed96b
@@ -87,3 +88,4 @@ SQL Server Evaluation 버전은 180일 동안 시험용으로 사용할 수 있�
 |용어 추출 및 용어 조회 변환|예|||||  
 
 <sup>1</sup> by Attunity의 변경 데이터 캡처 구성 요소에는 Enterprise edition 필요 합니다. 그러나 Change Data Capture Service 및 Change Data Capture Designer 필요 하지 않습니다 Enterprise edition. 사용할 수 있습니다는 디자이너와 서비스는 컴퓨터에서 SSIS 설치 되어 있지 않습니다.
+

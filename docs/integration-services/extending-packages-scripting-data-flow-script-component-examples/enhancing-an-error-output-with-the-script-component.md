@@ -21,6 +21,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 4a8ade977c971766c8f716ae5f33cac606c8e22d
 ms.openlocfilehash: 3881b57f4089dbb075d019f9bd1a88a96a307b72
@@ -112,3 +113,4 @@ public class ScriptMain:
  [스크립트 구성 요소를 사용 하 여 동기 변환 만들기](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)   
   
   
+

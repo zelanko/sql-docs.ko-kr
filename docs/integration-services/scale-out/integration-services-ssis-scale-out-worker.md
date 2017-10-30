@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 77cf90268938bada458aa159a5f18f885491b407
@@ -60,3 +61,4 @@ AgentId|확장 규모 작업자의 작업자 에이전트 ID입니다.|자동으
 각 개별 작업의 로그 위치는 TasksRootFolder에 따라 WorkerSettings.config 파일에서 구성 됩니다. 로그는 지정 되지 않은 경우에 \<드라이버\>: \Users\\*[계정]*\AppData\Local\SSIS\ScaleOut\Tasks 폴더 경로입니다. 
 
 *[계정]* 스케일 아웃 작업자 서비스를 실행 하는 계정입니다. 기본적으로 이 계정은 SSISScaleOutWorker140입니다.
+

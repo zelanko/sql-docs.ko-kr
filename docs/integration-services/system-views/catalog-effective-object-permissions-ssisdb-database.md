@@ -17,6 +17,7 @@ caps.latest.revision: 26
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3f836aa3e13623a42a3f2e8fe0d3907b45bde850
@@ -64,3 +65,4 @@ ms.lasthandoff: 09/26/2017
  사용자는 자신이 속한 역할 및 자신에 대한 유효 사용 권한만 볼 수 있습니다.  
   
   
+

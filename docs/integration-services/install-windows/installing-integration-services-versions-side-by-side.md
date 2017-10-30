@@ -17,6 +17,7 @@ caps.latest.revision: 41
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 96ec352784f060f444b8adcae6005dd454b3b460
 ms.openlocfilehash: 114e51f111e4b3dfece42c9510a35bb9be5d5652
@@ -46,3 +47,4 @@ ms.lasthandoff: 09/27/2017
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 **dtexec** 유틸리티 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하여 이전 버전의 개발 도구에서 만든 Integration Services 패키지를 실행할 수 있습니다. 이러한 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 도구는 이전 버전의 개발 도구에서 개발한 패키지를 로드할 때 일시적으로 메모리 내의 패키지를 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)] 에서 사용하는 패키지 형식으로 변환합니다. 패키지에 문제가 있어 정상적으로 변환할 수 없는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 도구는 해당 문제를 해결할 때까지 패키지를 실행할 수 없습니다. 자세한 내용은 [Integration Services 패키지 업그레이드](../../integration-services/install-windows/upgrade-integration-services-packages.md)를 참조하세요.  
   
   
+

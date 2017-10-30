@@ -29,6 +29,7 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: f5acdf3ae4f27685fce7aab56aab423044491ee1
 ms.openlocfilehash: 658f7e77fe821fa4821b61162662175ab5f840c1
@@ -172,3 +173,4 @@ ms.lasthandoff: 08/03/2017
   
 5.  **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 업데이트된 패키지를 저장합니다.  
   
+

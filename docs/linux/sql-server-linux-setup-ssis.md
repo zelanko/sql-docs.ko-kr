@@ -9,6 +9,7 @@ ms.date: 10/02/2017
 ms.topic: article
 ms.prod: sql-linux
 ms.technology: database-engine
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 29122bdf543e82c1f429cf401b5fe1d8383515fc
 ms.openlocfilehash: cd81ffd71eb78a553703fc31650a0e60a8c513aa
@@ -130,3 +131,4 @@ dtexec /F <package name> /DE <protection password>
 ## <a name="next-steps"></a>다음 단계
 
 Linux에서 SSIS를 사용 하 여를 추출, 변환 및 데이터를 로드 하는 방법에 대 한 자세한 내용은 참조 [추출, 변환 및 SSIS와 Linux에서 SQL Server에 대 한 데이터를 로드](sql-server-linux-migrate-ssis.md)합니다.
+

@@ -19,6 +19,7 @@ caps.latest.revision: 53
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: ac549895dbe211f38529f657caa58fc766f911f0
@@ -151,3 +152,4 @@ ms.lasthandoff: 09/26/2017
  blogs.msdn.com의 블로그 항목 - [기존 사용자 지정 SSIS 확장 프로그램 및 응용 프로그램을 Denali에서 사용되도록 설정](http://go.microsoft.com/fwlink/?LinkId=238157)  
   
   
+

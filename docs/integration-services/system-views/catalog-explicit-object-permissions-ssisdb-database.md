@@ -14,6 +14,7 @@ caps.latest.revision: 16
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: ce92a61241cb70f5e1c6d1bab8db8264d6228bd2
@@ -54,3 +55,4 @@ ms.lasthandoff: 09/26/2017
  이 뷰는 현재 보안 주체의 사용 권한에 대한 전체 뷰를 제공하지 않습니다. 사용자는 보안 주체가 사용 권한을 할당한 역할 및 그룹의 멤버인지도 확인해야 합니다.  
   
   
+

@@ -14,6 +14,7 @@ caps.latest.revision: 15
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 8eedfe6919a69759cc6de3645b3e1f965dcdd0c6
@@ -76,3 +77,4 @@ catalog.set_environment_property [ @folder_name = ] folder_name
  이 릴리스에서는 `Description` 속성만 설정할 수 있습니다. `Description` 속성의 속성 값은 4000자를 초과할 수 없습니다.  
   
   
+

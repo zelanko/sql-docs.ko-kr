@@ -17,6 +17,7 @@ caps.latest.revision: 24
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 869b758e3ac922762c293eb8aa9a9537a4397bd6
@@ -99,3 +100,4 @@ catalog.validate_package [ @folder_name = ] folder_name
  유효성 검사는 패키지가 성공적으로 실행 하지 못하게 할 수 있는 문제를 식별 하는 데 도움이 됩니다. 사용 하 여는 [catalog.validations](../../integration-services/system-views/catalog-validations-ssisdb-database.md) 또는 [catalog.operations](../../integration-services/system-views/catalog-operations-ssisdb-database.md) 뷰를 유효성 검사 상태를 모니터링 합니다.  
   
   
+

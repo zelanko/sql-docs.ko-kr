@@ -26,6 +26,7 @@ caps.latest.revision: 40
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: 931196de739980cb889f120b977b82bfb313ddd9
@@ -90,3 +91,4 @@ End WorkThread1
   
  구성 요소에 제공 된 버퍼가 포함 될 가능성이 있기 때문에 해당 입력 또는 출력 열 컬렉션에 구성 요소 보다 더 많은 열에, 구성 요소 개발자가 호출할 수는 <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSBufferManager100.FindColumnByLineageID%2A> 지정 하 여 버퍼에서 열을 찾을 방법의 **LineageID**합니다.  
   
+

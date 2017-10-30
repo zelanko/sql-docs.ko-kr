@@ -13,6 +13,7 @@ caps.latest.revision: 1
 author: haoqian
 ms.author: haoqian
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: e5e560d6011370b3d56ba13c86608d2be3d0dc6e
@@ -48,3 +49,4 @@ catalog.update_master_address [@MasterAddress = ] masterAddress
   
 -   멤버 자격에는 **sysadmin** 서버 역할  
  
+

@@ -17,6 +17,7 @@ caps.latest.revision: 54
 author: MikeRayMSFT
 ms.author: mikeray
 manager: erikre
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: a2e3655bedbb24f2174a62c8792cd168e7642592
 ms.openlocfilehash: b04ba24fd90ec81e735933a45fed18294d77ceab
@@ -81,3 +82,4 @@ ms.lasthandoff: 08/03/2017
  ADODB.dll을 명시적으로 참조하는 스크립트 태스크 및 스크립트 구성 요소 스크립트는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 가 설치되지 않은 시스템에서 실행되거나 업그레이드되지 않을 수 있습니다. 이러한 스크립트 태스크 또는 스크립트 구성 요소 스크립트를 업그레이드하려면 ADODB.dll에 대한 종속성을 제거하는 것이 좋습니다.  Ado.Net은 VB 및 C# 스크립트와 같은 관리 코드에 대한 권장 대안입니다.  
   
   
+

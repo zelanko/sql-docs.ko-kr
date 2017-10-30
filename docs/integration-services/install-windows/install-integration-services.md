@@ -22,6 +22,7 @@ caps.latest.revision: 106
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Active
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 3e91abac8902868dc9edefc1466fb2d25a602462
@@ -96,3 +97,4 @@ ms.lasthandoff: 09/26/2017
 >  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 패키지용 32비트 개발 환경인 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]는 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 64비트 운영 체제에서 지원되지 않으며 [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)] 서버에 설치되지도 않습니다.    
     
   
+

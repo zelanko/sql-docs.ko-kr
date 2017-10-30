@@ -15,6 +15,7 @@ caps.latest.revision: 8
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: c5055942c39ff3805fcdbdbd47f0b3d8e9e2489d
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/07/2017
 |데이터: 셀 형식|표시 형식|도메인 기반 특성의 값을 표시하기 위한 기본 형식을 선택합니다. 옵션은 코드 {Name}, 코드 및 이름 {Code}입니다.|  
   
   
+

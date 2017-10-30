@@ -14,6 +14,7 @@ caps.latest.revision: 17
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 3a5dc70b1e955b3c702dc9e9dbe4776cc4ebd5ac
@@ -99,3 +100,4 @@ catalog.set_object_parameter_value [@object_type =] object_type
 -   값 `30` 에 사용할 수 있습니다. *object_type* 패키지 매개 변수를 나타냅니다. 이 경우 값에 대 한 *object_name* 해당 패키지를 나타내는 데 사용 됩니다. 경우 *object_name* 를 지정 하지 않으면 저장된 프로시저는 오류를 반환 하 고 종료 합니다.  
   
   
+

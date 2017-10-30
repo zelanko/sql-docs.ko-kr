@@ -14,6 +14,7 @@ caps.latest.revision: 13
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: 83439015694f4235af4a67e994e916651ec63cc1
@@ -98,3 +99,4 @@ catalog.validate_project [ @folder_name = ] folder_name
  전체 유효성 검사에서는 참조된 모든 환경 변수가 유효성 검사에 포함된 참조된 환경 내에 있는지를 확인합니다. 전체 유효성 검사 결과에는 유효하지 않은 환경 참조와 유효성 검사에 포함된 참조된 환경에서 찾을 수 없는 참조된 환경 변수가 나열됩니다.  
   
   
+

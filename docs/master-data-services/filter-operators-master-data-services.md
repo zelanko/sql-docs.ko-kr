@@ -14,6 +14,7 @@ caps.latest.revision: 11
 author: smartysanthosh
 ms.author: nagavo
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: HT
 ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
 ms.openlocfilehash: 0d83ee33afcd50635a163a56f977e77fc6e6c68a
@@ -47,3 +48,4 @@ ms.lasthandoff: 09/07/2017
 |**NULL이 아님**|Null이 아닌 특성 값을 반환합니다. **NULL이 아님** 연산자를 선택한 경우에는 **조건** 필드가 비활성화됩니다.|  
   
   
+

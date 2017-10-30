@@ -14,6 +14,7 @@ caps.latest.revision: 12
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: e20b96e38f798c19a74d5f3a32a25e429dc8ebeb
 ms.openlocfilehash: 43d128f9dcc4cea632c810a13d21eb5e1ddb61df
@@ -56,3 +57,4 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
 동일한 이름의 폴더가 이미 있는 경우 저장된 프로시저가 오류를 반환 합니다.  
   
   
+

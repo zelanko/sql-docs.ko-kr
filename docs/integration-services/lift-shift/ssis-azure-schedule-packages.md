@@ -8,6 +8,7 @@ ms.technology:
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2f28400200105e8e63f787cbcda58c183ba00da5
 ms.openlocfilehash: 2130e68d5e29671a2881d8762666cf852ff51259
@@ -227,3 +228,4 @@ GO
 SQL Server 에이전트에 대 한 자세한 내용은 참조 하십시오. [패키지에 대 한 SQL Server 에이전트 작업](../packages/sql-server-agent-jobs-for-packages.md)합니다.
 
 SQL 데이터베이스 탄력적 작업에 대 한 자세한 내용은 참조 하십시오. [관리 확장 클라우드 데이터베이스](https://docs.microsoft.com/en-us/azure/sql-database/sql-database-elastic-jobs-overview)합니다.
+

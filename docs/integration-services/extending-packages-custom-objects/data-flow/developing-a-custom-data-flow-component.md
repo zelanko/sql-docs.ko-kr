@@ -24,6 +24,7 @@ caps.latest.revision: 57
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: On Demand
 ms.translationtype: MT
 ms.sourcegitcommit: 1419847dd47435cef775a2c55c0578ff4406cddc
 ms.openlocfilehash: f25c74b52eaccb6c7b0e92cb7dace3d56f3cdd83
@@ -121,3 +122,4 @@ ms.lasthandoff: 08/03/2017
  [스크립팅 솔루션과 사용자 지정 개체를 비교합니다.](../../../integration-services/extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   
+

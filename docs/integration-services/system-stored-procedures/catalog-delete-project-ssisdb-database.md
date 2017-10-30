@@ -14,6 +14,7 @@ caps.latest.revision: 14
 author: douglaslMS
 ms.author: douglasl
 manager: jhubbard
+ms.workload: Inactive
 ms.translationtype: MT
 ms.sourcegitcommit: 2edcce51c6822a89151c3c3c76fbaacb5edd54f4
 ms.openlocfilehash: abc0280a693be8e0f9fa9b3ec997c1d38d96ed54
@@ -67,3 +68,4 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
  해당 프로젝트의 모든 개체 및 환경 참조는 프로젝트와 함께 삭제됩니다. 그러나 프로젝트 버전 및 관련 작업 레코드는 다음에 작업 정리 작업을 실행할 때까지 유지됩니다.  
   
   
+
