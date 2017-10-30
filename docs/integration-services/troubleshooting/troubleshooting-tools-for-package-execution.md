@@ -57,7 +57,7 @@ ms.lasthandoff: 09/27/2017
   
 -   **오류 출력에 정보 추가** 오류 출력에 제공되는 두 개의 숫자 식별자 외에 오류 메시지 및 열 이름을 추가하여 오류 출력을 분석하기 쉽게 만들 수 있습니다. 스크립트를 사용하여 이러한 두 개의 추가 열을 추가하는 방법에 대한 예는 [Enhancing an Error Output with the Script Component](../../integration-services/extending-packages-scripting-data-flow-script-component-examples/enhancing-an-error-output-with-the-script-component.md)을 참조하세요.  
   
--   **또는 DiagnosticEx 이벤트를 로깅하여 열 이름을 가져옵니다**. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [Error Handling in Data](../../integration-services/data-flow/error-handling-in-data.md)를 참조하십시오.  
+-   **또는 DiagnosticEx 이벤트를 로깅하여 열 이름을 가져옵니다**. 이 이벤트는 로그에 데이터 흐름 계보 지도를 작성합니다. 그런 다음 오류 출력에 의해 캡처된 열 식별자를 사용하여 이 계보 맵에서 열 이름을 조회할 수 있습니다.  자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하십시오.  
   
      **DiagnosticEx** 에 대한 메시지 열 값은 XML 텍스트입니다. 패키지 실행에 대한 메시지 텍스트를 보려면 [catalog.operation_messages&#40;SSISDB 데이터베이스&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) 뷰를 쿼리합니다. **DiagnosticEx** 이벤트는 로그의 크기를 줄이기 위해 해당 XML 출력에서 공백을 유지하지 않습니다. 가독성을 높이기 위해 XML 서식 지정 및 구문 강조를 지원하는 XML 편집기(예: Visual Studio)로 로그를 복사합니다.  
   

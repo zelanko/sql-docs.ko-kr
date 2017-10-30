@@ -65,7 +65,7 @@ ms.lasthandoff: 09/09/2017
 3.  **매핑**에서 **원본 열**에 대한 데이터 원본의 필드를 선택한 다음 해당 도메인을 선택합니다. 일치 프로세스에서 사용할 모든 도메인에 대해 작업을 반복합니다. 일치 정책에 정의된 각 도메인이 해당 원본 열에 매핑되어 있어야 합니다. 맵 페이지에는 일치 정책에 정의된 도메인이 표시되며, 오른쪽 창에 일치 정책의 규칙이 표시됩니다.  
   
     > [!NOTE]  
-    >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. DQS에서 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+    >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. DQS에서 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
 4.  **더하기(+)** 컨트롤을 클릭하여 매핑 테이블에 행을 추가하거나 **빼기(–)** 컨트롤을 클릭하여 행을 제거합니다.  
   
