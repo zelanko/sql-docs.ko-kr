@@ -71,12 +71,12 @@ ms.lasthandoff: 09/09/2017
   
 4.  **매핑** 테이블에서 다음과 같이 기술 자료 검색을 수행할 각 원본 열을 기술 자료의 도메인에 매핑합니다.  
   
-    1.  도메인이 있는 경우 빈 행의 **원본 열** 열에 대한 드롭다운 목록에서 원본 열을 선택한 다음 동일한 행의 **도메인** 열에 대한 드롭다운 목록에서 도메인을 선택하여 매핑을 만듭니다. 도메인이 없는 경우 **도메인 만들기** 또는 **복합 도메인 만들기** 를 클릭하여 도메인을 만듭니다. 자세한 내용은 [Create a Domain Rule](../data-quality-services/create-a-domain-rule.md) 또는 [Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)를 참조하세요.  
+    1.  도메인이 있는 경우 빈 행의 **원본 열** 열에 대한 드롭다운 목록에서 원본 열을 선택한 다음 동일한 행의 **도메인** 열에 대한 드롭다운 목록에서 도메인을 선택하여 매핑을 만듭니다. 도메인이 없는 경우 **도메인 만들기** 또는 **복합 도메인 만들기** 를 클릭하여 도메인을 만듭니다. 자세한 내용은 [도메인 규칙 만들기](../data-quality-services/create-a-domain-rule.md) 또는 [복합 도메인 만들기](../data-quality-services/create-a-composite-domain.md)를 참조하세요.  
   
     2.  각 매핑에 대해 이전 단계를 반복합니다. 테이블의 행 수를 변경하려면 **열 매핑 추가**를 클릭하거나 특정 행을 선택하고 **선택한 열 매핑 제거**를 클릭합니다. 채워진 행이 선택되었을 때 **선택한 열 매핑 제거** 를 클릭하면 채워지지 않은 행이 있는 경우에도 선택된 행이 삭제됩니다.  
   
         > [!NOTE]  
-        >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 기술 자료 검색을 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
+        >  원본 데이터 형식이 DQS에서 지원되고 DQS 도메인 데이터 형식과 일치하는 경우에만 데이터 기술 자료 검색을 수행하기 위해 DQS 도메인에 원본 데이터를 매핑할 수 있습니다. 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하세요.  
   
     3.  정의된 복합 도메인을 표시하려면 **복합 도메인 보기/선택** 을 클릭합니다. 복합 도메인이 정의되지 않은 경우 컨트롤을 사용할 수 없습니다.  
   

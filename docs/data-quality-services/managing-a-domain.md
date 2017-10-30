@@ -30,9 +30,9 @@ ms.lasthandoff: 09/09/2017
  또한 각각 공통 데이터에 대한 정보가 포함된 두 개 이상의 개별 도메인으로 구성되는 복합 도메인을 만들 수도 있습니다. 자세한 내용은 [복합 도메인 관리](../data-quality-services/managing-a-composite-domain.md)를 참조하세요.  
   
 ## <a name="domain-properties"></a>도메인 속성  
- 도메인을 만들 때 원본 데이터에서 도메인을 채우는 방법과 도메인 값을 출력하는 방법에 대해 다음과 같은 옵션을 사용할 수 있습니다. 자세한 내용은 [Set Domain Properties](../data-quality-services/set-domain-properties.md)을 참조하세요.  
+ 도메인을 만들 때 원본 데이터에서 도메인을 채우는 방법과 도메인 값을 출력하는 방법에 대해 다음과 같은 옵션을 사용할 수 있습니다. 자세한 내용은 [도메인 속성 설정](../data-quality-services/set-domain-properties.md)을 참조하세요.  
   
--   도메인을 채우는 데 사용할 데이터 형식을 선택합니다. 각 도메인 데이터 형식에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [Supported SQL Server and SSIS Data Types for DQS Domains](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하십시오.  
+-   도메인을 채우는 데 사용할 데이터 형식을 선택합니다. 각 도메인 데이터 형식에 대해 지원되는 데이터 형식에 대한 자세한 내용은 [DQS 도메인에 대해 지원되는 SQL Server 및 SSIS 데이터 형식](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md)을 참조하십시오.  
   
 -   동의어가 아닌 선행 값만 도메인에서 출력되도록 지정합니다.  
   
