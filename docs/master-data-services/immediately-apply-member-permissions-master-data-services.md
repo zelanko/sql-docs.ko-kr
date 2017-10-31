@@ -1,5 +1,5 @@
 ---
-title: "멤버 권한 즉시 적용(Master Data Services) | Microsoft Docs"
+title: "멤버 권한 (Master Data Services) 즉시 적용 | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -14,15 +14,14 @@ helpviewer_keywords:
 - permissions [Master Data Services], applying member permissions immediately
 ms.assetid: 5b16de66-5c39-49f5-992f-402a9eb319aa
 caps.latest.revision: 6
-author: smartysanthosh
-ms.author: nagavo
-manager: craigg
-ms.workload: Inactive
-ms.translationtype: HT
-ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
-ms.openlocfilehash: a3ac0d4510b77c5e0c6fe95ff7cbf2c6aae433be
+author: sabotta
+ms.author: carlasab
+manager: jhubbard
+ms.translationtype: MT
+ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
+ms.openlocfilehash: 1549958a5c84045eccbb52c5fac2f2f2b09d316e
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/07/2017
+ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="immediately-apply-member-permissions-master-data-services"></a>멤버 권한 즉시 적용(Master Data Services)
@@ -35,11 +34,11 @@ ms.lasthandoff: 09/07/2017
   
 ### <a name="to-immediately-apply-hierarchy-member-permissions"></a>계층 멤버 권한을 즉시 적용하려면  
   
-1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]을(를) 열고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터베이스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 연결합니다.  
+1.  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] 을(를) 열고 [!INCLUDE[ssDE](../includes/ssde-md.md)] 데이터베이스의 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 인스턴스에 연결합니다.  
   
 2.  새 쿼리를 만듭니다.  
   
-3.  다음 텍스트를 입력하여 *database*를 데이터베이스 이름으로 바꾸고 *Model_Name*을 모델 이름으로 바꿉니다.  
+3.  다음 텍스트를 입력하여 *database* 를 데이터베이스 이름으로 바꾸고 *Model_Name* 을 모델 이름으로 바꿉니다.  
   
     ```  
     USE [database];  
@@ -54,8 +53,7 @@ ms.lasthandoff: 09/07/2017
 4.  쿼리를 실행합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [계층 멤버 권한 할당&#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [계층 멤버 권한&#40;Master Data Services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
+ [계층 멤버 권한 &#40; 할당 Master Data services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [계층 멤버 권한 &#40; Master Data services&#41;](../master-data-services/hierarchy-member-permissions-master-data-services.md)  
   
   
-
