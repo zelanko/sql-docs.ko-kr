@@ -17,8 +17,7 @@ caps.latest.revision: 7
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 957ddf233fbbf41f468f8c981c3e8303a3672d9b
 ms.contentlocale: ko-kr
@@ -101,7 +100,6 @@ ms.lasthandoff: 08/09/2017
 |**숨겨진 필드 표시**|SharePoint에 의해 자동으로 생성되지만 일반적으로 보고서에서 사용되지 않는 필드(예: SharePoint 연결 항목의 ProgId 및 Level)를 표시하거나 숨깁니다. 이러한 필드를 숨기면 필드 목록이 간단해져서 사용하기가 쉽습니다.|  
   
 ## <a name="see-also"></a>관련 항목:  
- [쿼리 디자이너&#40;보고서 작성기&#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [쿼리 디자이너 &#40; 보고서 작성기 &#41;](http://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
   
   
-

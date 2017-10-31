@@ -15,8 +15,7 @@ caps.latest.revision: 10
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 8deb7c183ab46007fb0d4c4aee17762676963c4d
 ms.contentlocale: ko-kr
@@ -41,7 +40,7 @@ ms.lasthandoff: 08/09/2017
   
  동일한 데이터 원본의 데이터 그룹을 단일 데이터 영역에 중첩하려면 데이터 영역을 사용합니다. 다른 데이터 원본의 데이터 그룹을 단일 데이터 영역에 중첩하거나, 여러 부모 보고서에서 하위 보고서를 다시 사용하거나, 다른 보고서 내부에 독립 실행형 보고서를 표시하려면 하위 보고서를 사용합니다. 예를 들어 다른 보고서의 본문 안에 하위 보고서를 여러 개 넣어 "요약 책"을 만들 수 있습니다.  
   
- 데이터 영역은 하위 보고서와 같은 기능과 유연성을 제공하면서도 성능은 보다 우수합니다. 보고서 서버에서는 하위 보고서의 각 인스턴스를 개별 보고서로 처리하기 때문에 성능에 영향을 줄 수 있습니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)을 참조하세요.  
+ 데이터 영역은 하위 보고서와 같은 기능과 유연성을 제공하면서도 성능은 보다 우수합니다. 보고서 서버에서는 하위 보고서의 각 인스턴스를 개별 보고서로 처리하기 때문에 성능에 영향을 줄 수 있습니다. 자세한 내용은 [중첩된 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/nested-data-regions-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="using-parameters-in-subreports"></a>하위 보고서에서 매개 변수 사용  
  부모 보고서에서 하위 보고서로 매개 변수를 전달하려면 하위 보고서로 사용하는 보고서에 보고서 매개 변수를 정의합니다. 하위 보고서를 부모 보고서에 배치하면 부모 보고서에서 하위 보고서의 보고서 매개 변수에 전달할 값 및 보고서 매개 변수를 선택할 수 있습니다.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 08/09/2017
   
  하위 보고서를 보고서의 본문이나 데이터 영역에 배치할 수 있습니다. 하위 보고서를 데이터 영역에 배치하면 하위 보고서는 데이터 영역에 있는 그룹 또는 행의 인스턴스마다 반복됩니다. 그룹 또는 행의 값을 하위 보고서에 전달하려면 하위 보고서 값 속성에서 하위 보고서 매개 변수에 전달하려는 값을 포함하는 필드의 식을 사용합니다.  
   
- 하위 보고서 작업에 대한 자세한 내용은 [하위 보고서 및 매개 변수 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)를 참조하세요.  
+ 하위 보고서 작업에 대 한 자세한 내용은 참조 하세요. [하위 보고서 및 매개 변수 사용 &#40; 추가 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md).  
   
 ## <a name="specifying-subreport-names-and-locations"></a>하위 보고서 이름 및 위치 지정  
  주 보고서가 같은 보고서 서버의 다른 폴더에 있는 하위 보고서를 지정하도록 디자인할 수 있습니다.  
@@ -61,7 +60,6 @@ ms.lasthandoff: 08/09/2017
  보고서 작성기에서 주 보고서의 하위 보고서를 미리 보려면 두 보고서가 같은 보고서 서버에 있어야 합니다. 그렇지 않은 경우 하위 보고서의 전체 경로를 지정해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [드릴스루, 드릴 다운, 하위 보고서 및 중첩된 데이터 영역 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

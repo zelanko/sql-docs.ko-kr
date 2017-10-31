@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 088e219e120eeb6b4608db9379811caf1b5406cd
 ms.contentlocale: ko-kr
@@ -39,7 +38,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  **디자인** 뷰에서 보고서를 엽니다.  
   
-2.  디자인 화면의 데이터 영역을 선택 하 고 마우스 오른쪽 단추로 클릭 한 다음  *\<데이터 영역 >***속성**합니다. 계기의 경우 **계기 패널 속성**을 선택합니다.  *\<데이터 영역 >***속성** 대화 상자가 열립니다.  
+2.  디자인 화면의 데이터 영역을 선택 하 고 마우스 오른쪽 단추로 클릭 한 다음  *\<데이터 영역 >***속성**합니다. 계기의 경우 **계기 패널 속성**을 선택합니다. *\<데이터 영역 >***속성** 대화 상자가 열립니다.  
   
     > [!NOTE]  
     >  테이블릭스 데이터 영역에서 모퉁이 셀이나 행 또는 열 핸들을 마우스 오른쪽 단추로 클릭한 다음 **테이블릭스 속성**을 클릭합니다.  
@@ -140,4 +139,3 @@ ms.lasthandoff: 08/09/2017
  [차트 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   
-

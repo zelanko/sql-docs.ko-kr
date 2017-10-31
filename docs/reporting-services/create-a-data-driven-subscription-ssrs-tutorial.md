@@ -20,8 +20,7 @@ caps.latest.revision: 50
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7ca542c75d289b79284c5affeea5095ac032e1e0
 ms.contentlocale: ko-kr
@@ -61,7 +60,7 @@ ms.lasthandoff: 08/09/2017
 ## <a name="requirements"></a>요구 사항  
 데이터 기반 구독은 대개 보고서 서버 관리자가 만들고 유지 관리합니다. 데이터 기반 구독을 만드는 단계를 수행하려면 쿼리 작성, 구독자 데이터가 포함된 데이터 원본에 대한 지식, 보고서 서버에서 승격된 권한이 필요합니다.  
   
-이 자습서에서는 *기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;* 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 보고서와 샘플 데이터베이스 **AdventureWorks2014**의 데이터를 사용합니다.  
+이 자습서에서는 *기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;* 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md) 보고서와 샘플 데이터베이스 **AdventureWorks2014**의 데이터를 사용합니다.  
   
 이 자습서를 사용하려면 컴퓨터에 다음 항목이 설치되어 있어야 합니다.  
   
@@ -71,7 +70,7 @@ ms.lasthandoff: 08/09/2017
   
 -   SQL Server 에이전트 서비스가 실행되고 있어야 합니다.  
   
--   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&#40;SSRS 자습서&#41; [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
+-   매개 변수가 들어 있는 보고서가 필요합니다. 이 자습서에서는 `Sales Orders` 기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41; [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)의 데이터를 사용합니다.  
   
 -   샘플 보고서에 데이터를 제공하는 **AdventureWorks2014** 샘플 데이터베이스가 필요합니다.  
   

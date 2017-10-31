@@ -15,8 +15,7 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: bd7b2f812481abbe3bf541322582804a6a415236
 ms.contentlocale: ko-kr
@@ -28,7 +27,7 @@ ms.lasthandoff: 08/09/2017
   
  ![rs_DrillThru](../../reporting-services/report-design/media/rs-drillthru.gif "rs_DrillThru")  
   
- 드릴스루 보고서의 데이터는 사용자가 주 보고서에서 드릴스루 보고서를 여는 링크를 클릭하기 전에는 검색되지 않습니다. 주 보고서와 드릴스루 보고서의 데이터를 동시에 검색해야 하는 경우에는 하위 보고서를 사용하는 것이 좋습니다. 자세한 내용은 [하위 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md)를 참조하세요.  
+ 드릴스루 보고서의 데이터는 사용자가 주 보고서에서 드릴스루 보고서를 여는 링크를 클릭하기 전에는 검색되지 않습니다. 주 보고서와 드릴스루 보고서의 데이터를 동시에 검색해야 하는 경우에는 하위 보고서를 사용하는 것이 좋습니다. 자세한 내용은 참조 [하위 보고서 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/subreports-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  보고서 작성기에서 작업할 때 주 보고서에서 드릴스루 링크를 클릭하면 열리는 드릴스루 보고서를 보려면 보고서 서버에 연결되어 있어야 합니다.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 08/09/2017
  드릴스루 보고서를 빠르게 시작하려면 [자습서: 드릴스루 보고서 및 주 보고서 만들기&#40;보고서 작성기&#41;](../../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md)를 참조하세요. 
    
 ## <a name="parameters-in-drillthrough-reports"></a>드릴스루 보고서의 매개 변수  
- 드릴스루 보고서는 일반적으로 요약 보고서에 의해 전달되는 매개 변수를 포함합니다. 판매 요약 보고서의 예에서 요약 보고서에는 테이블 셀의 입력란에 [OrderNumber] 필드가 포함됩니다. 드릴스루 보고서는 주문 번호를 값으로 사용하는 매개 변수를 포함합니다. [OrderNumber]에 대한 입력란에 드릴스루 보고서 링크를 설정하는 경우 대상 보고서의 매개 변수도 [OrderNumber]로 설정합니다. 사용자가 요약 보고서에서 주문 번호를 클릭하면 대상 정보 보고서가 열리고 해당 주문 번호에 대한 정보가 표시됩니다. 매개 변수 값을 기반으로 드릴스루 보고서를 사용자 지정하는 지침은 [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 및 [InScope 함수&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-inscope-function.md)를 참조하세요.  
+ 드릴스루 보고서는 일반적으로 요약 보고서에 의해 전달되는 매개 변수를 포함합니다. 판매 요약 보고서의 예에서 요약 보고서에는 테이블 셀의 입력란에 [OrderNumber] 필드가 포함됩니다. 드릴스루 보고서는 주문 번호를 값으로 사용하는 매개 변수를 포함합니다. [OrderNumber]에 대한 입력란에 드릴스루 보고서 링크를 설정하는 경우 대상 보고서의 매개 변수도 [OrderNumber]로 설정합니다. 사용자가 요약 보고서에서 주문 번호를 클릭하면 대상 정보 보고서가 열리고 해당 주문 번호에 대한 정보가 표시됩니다. 매개 변수 값을 기반으로 드릴스루 보고서를 사용자 지정 하는 방법에 대 한 지침을 보려면 [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41; ](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md) 및 [InScope 함수 &#40; 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-design/report-builder-functions-inscope-function.md).  
   
 ## <a name="designing-the-drillthrough-report"></a>드릴스루 보고서 디자인  
  드릴스루 보고서를 만들려면 주 보고서에서 드릴스루 동작을 만들기 전에 먼저 드릴스루 보고서를 디자인해야 합니다.  
@@ -54,7 +53,6 @@ ms.lasthandoff: 08/09/2017
  드릴스루 링크가 있는 요약 보고서를 게시한 후 보려면 드릴스루 보고서가 요약 보고서와 같은 보고서 서버에 있어야 합니다. 어떤 경우에도 사용자는 드릴스루 보고서에 대한 권한이 있어야 드릴스루 보고서를 볼 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
- [드릴스루, 드릴다운, 하위 보고서 및 중첩 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
+ [드릴스루, 드릴 다운, 하위 보고서 및 중첩된 데이터 영역 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/drillthrough-drilldown-subreports-and-nested-data-regions.md)  
   
   
-

@@ -16,8 +16,7 @@ caps.latest.revision: 43
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: be153d2ba1469034cad5e31e5e823d6ac5be4b4e
 ms.contentlocale: ko-kr
@@ -25,7 +24,7 @@ ms.lasthandoff: 08/09/2017
 
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
-이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
+이 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 자습서 단원에서는 웹 포털을 사용하여 받는 사람에게 배달될 보고서를 선택합니다. 사용자가 정의하는 데이터 기반 구독은 **기본 테이블 보고서 만들기&amp;#40;SSRS 자습서&amp;#41;** 자습서에서 만든 [기본 테이블 보고서 만들기&#40;SSRS 자습서&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)보고서를 배포합니다.  다음 단계에서는 보고서에서 데이터를 가져오는 데 사용되는 데이터 원본 연결 정보를 수정합니다. **저장된 자격 증명** 을 사용하여 보고서 데이터 원본에 액세스하는 보고서만 데이터 기반 구독을 통해 배포할 수 있습니다. 저장된 자격 증명은 무인 보고서 처리에 필요합니다.  
   
 또한 구독이 특정 주문 및 렌더링 형식에 대해 보고서의 서로 다른 인스턴스를 출력할 수 있도록 `[Order]` 에 대해 보고서를 필터링하는 매개 변수를 사용하기 위해 데이터 집합 및 보고서를 수정합니다.  
   
@@ -114,7 +113,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="bkmk_redeploy"></a>보고서 다시 배포  
   
-1.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용된 프로젝트 속성에 대한 자세한 내용을 보려면 [6단원: 그룹화 및 합계 추가&#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md)의 '보고서 서버에 보고서를 게시하려면(옵션)' 섹션을 참조하세요.  
+1.  다음 단원의 구독 구성에서 이 단원에 수행한 변경 내용을 활용할 수 있도록 보고서를 다시 배포합니다. 테이블 자습서에 사용 되는 프로젝트 속성에 대 한 자세한 내용은 보고서 서버 (선택 사항)에 보고서를 게시'를 ' 섹션을 참조 하십시오.의 [6 단원: 추가 그룹화 및 합계 &#40; Reporting services&#41; ](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
 2.  도구 모음에서 **빌드** 를 클릭한 후 **자습서 배포**를 클릭합니다.  
   

@@ -16,8 +16,7 @@ caps.latest.revision: 14
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 0c67ffbd38887cd9428551a369a4d864d8b972d8
 ms.contentlocale: ko-kr
@@ -60,7 +59,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 3.  오른쪽 창에서 **테이블 또는 행렬 마법사** 가 선택되어 있는지 확인합니다.  
   
 ## <a name="DConnection"></a>1a. 데이터 연결 지정  
-데이터 연결은 Analysis Services 큐브 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 데이터 연결을 지정하기 위해 보고서 서버의 공유 데이터 원본을 사용하거나 이 보고서에만 사용되는 포함된 데이터 원본을 만들 수 있습니다. 이 자습서에서는 포함된 데이터 원본을 사용합니다. 공유 데이터 원본 사용 방법에 대한 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+데이터 연결은 Analysis Services 큐브 또는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스와 같은 외부 데이터 원본에 연결하는 데 필요한 정보를 포함합니다. 데이터 연결을 지정하기 위해 보고서 서버의 공유 데이터 원본을 사용하거나 이 보고서에만 사용되는 포함된 데이터 원본을 만들 수 있습니다. 이 자습서에서는 포함된 데이터 원본을 사용합니다. 공유 데이터 원본을 사용 하는 방법에 대 한 자세한 참조 [데이터 연결 &#40;에 대 한 대체 방법 보고서 작성기 &#41; ](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>포함된 데이터 원본을 만들려면  
   
@@ -115,7 +114,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    > MDX 쿼리를 수동으로 작성 하지 않을 경우 클릭는 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") 아이콘, 쿼리 디자이너를 쿼리 모드로 토글하 완료 된 MDX 쿼리 디자이너를 붙여 넣고의 6 단계를 진행할 [데이터 집합을 만들려면](#DSkip)합니다.  
+    > MDX 쿼리를 수동으로 작성 하지 않을 경우 클릭는 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘, 쿼리 디자이너를 쿼리 모드로 토글하 완료 된 MDX 쿼리 디자이너를 붙여 넣고의 6 단계를 진행할 [데이터 집합을 만들려면](#DSkip)합니다.  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -406,7 +405,7 @@ ContosoRetail.abf 백업 파일을 추출하여 Contoso_Retail OLAP 데이터베
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    > MDX 쿼리를 수동으로 작성 하지 않을 경우 클릭는 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "Switch to Design mode") 아이콘, 쿼리 디자이너를 쿼리 모드로 토글하 완료 된 MDX 쿼리 디자이너를 붙여 넣고 다음의 5 단계를 진행 [데이터 집합을 만들려면](#MSkip)합니다.  
+    > MDX 쿼리를 수동으로 작성 하지 않을 경우 클릭는 ![디자인 모드로 전환](../reporting-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘, 쿼리 디자이너를 쿼리 모드로 토글하 완료 된 MDX 쿼리 디자이너를 붙여 넣고 다음의 5 단계를 진행 [데이터 집합을 만들려면](#MSkip)합니다.  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
