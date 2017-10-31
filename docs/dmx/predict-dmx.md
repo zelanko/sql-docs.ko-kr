@@ -65,7 +65,7 @@ Predict(<table column reference>, [option1], [option2], [option n], [INCLUDE_NOD
   
  INCLUDE_NODE_ID 매개 변수는 결과로 $NODEID 열을 반환합니다. NODE_ID는 특정 사례에 대한 예측이 실행되는 내용 노드입니다. 테이블 열에 예측을 사용 하는 경우이 매개 변수는 선택 사항입니다.  
   
-  *n*  매개 변수는 테이블 열에 적용 됩니다. 이 매개 변수는 예측 유형을 기반으로 반환되는 행 수를 설정합니다. 기본 열이 시퀀스인 경우 호출 된 **PredictSequence** 함수입니다. 기본 열이 시계열 인 경우 호출 된 **PredictTimeSeries** 함수입니다. 예측의 관련 유형에 대 한 호출에서 **PredictAssociation** 함수입니다.  
+ *n*  매개 변수는 테이블 열에 적용 됩니다. 이 매개 변수는 예측 유형을 기반으로 반환되는 행 수를 설정합니다. 기본 열이 시퀀스인 경우 호출 된 **PredictSequence** 함수입니다. 기본 열이 시계열 인 경우 호출 된 **PredictTimeSeries** 함수입니다. 예측의 관련 유형에 대 한 호출에서 **PredictAssociation** 함수입니다.  
   
  **Predict** 함수는 다형성을 지원 합니다.  
   
