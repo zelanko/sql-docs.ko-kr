@@ -15,7 +15,8 @@ caps.latest.revision: 7
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: b6f41b4d1b42db5ca020841f9363df3f4cf3eb99
 ms.contentlocale: ko-kr
@@ -35,14 +36,14 @@ ms.lasthandoff: 08/09/2017
   
  보고서 데이터 집합의 세부 데이터를 테이블릭스 데이터 영역에 추가하려면 데이터 집합 필드를 보고서 데이터 창에서 정보 행의 각 셀로 끕니다. 테이블릭스 데이터 영역에 있는 기존 셀의 경우 각 셀에서 필드 선택기를 사용하거나 필드를 보고서 데이터 창에서 셀로 끌어 데이터 집합 필드 식을 추가하거나 편집할 수 있습니다. 추가 열을 만들려면 필드를 보고서 데이터 창에서 끌어 기존 테이블릭스 데이터 영역에 삽입하면 됩니다.  
   
- 기본적으로 런타임에 정보 행의 셀에는 세부 데이터가 표시되고 그룹 행의 셀에는 집계 값이 표시됩니다. 테이블릭스 행 및 열에 대한 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기&#41; 및 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)를 참조하세요.  
+ 기본적으로 런타임에 정보 행의 셀에는 세부 데이터가 표시되고 그룹 행의 셀에는 집계 값이 표시됩니다. 테이블릭스 행 및 열에 대한 자세한 내용은 [테이블릭스 데이터 영역 셀, 행 및 열&#40;보고서 작성기&#41; 및 SSRS](../../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)을 참조하세요.  
   
  테이블 템플릿 및 목록 템플릿은 정보 행을 제공하지만 행렬 템플릿에는 정보 행이 없습니다. 테이블릭스 데이터 영역에 정보 행이 없는 경우 세부 정보 그룹을 정의하여 정보 행을 추가할 수 있습니다. 자세한 내용은 [세부 정보 그룹 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-a-details-group-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="adding-grouped-data"></a>그룹화된 데이터 추가  
  그룹화된 데이터는 데이터 집합, 데이터 영역 및 그룹에 필터가 적용된 후 그룹 식으로 지정되는 모든 세부 데이터입니다. 세부 데이터를 그룹으로 구성하려면 보고서 데이터 창의 필드를 그룹화 창으로 끕니다. 그룹을 추가할 때 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 그룹화된 데이터를 표시할 테이블릭스 데이터 영역에 관련 행이나 열을 자동으로 추가합니다. 이러한 행 또는 열의 셀은 그룹화된 데이터와 연결됩니다. 자세한 내용은 [데이터 영역에서 그룹 추가 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)를 참조하세요.  
   
- 숫자 데이터를 나타내는 데이터 집합 필드를 그룹 행 또는 열의 셀에 추가하는 경우 기본적으로 셀의 값은 가장 안쪽 행과 해당 셀에 대한 열 그룹 멤버 자격을 범위로 하는 그룹화된 데이터의 합계로 지정됩니다. 기본 집계 함수 Sum을 Avg 또는 Count와 같은 다른 집계 함수로 변경할 수 있습니다. 예를 들어 집계 계산의 기본 범위를 변경하여 행 그룹에 대한 값의 백분율을 계산할 수 있습니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 나타냅니다.  
+ 숫자 데이터를 나타내는 데이터 집합 필드를 그룹 행 또는 열의 셀에 추가하는 경우 기본적으로 셀의 값은 가장 안쪽 행과 해당 셀에 대한 열 그룹 멤버 자격을 범위로 하는 그룹화된 데이터의 합계로 지정됩니다. 기본 집계 함수 Sum을 Avg 또는 Count와 같은 다른 집계 함수로 변경할 수 있습니다. 예를 들어 집계 계산의 기본 범위를 변경하여 행 그룹에 대한 값의 백분율을 계산할 수 있습니다. 자세한 내용은 [합계, 집계 및 기본 제공 컬렉션의 식 범위&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md)를 참조하세요.  
   
  기본적으로 그룹화된 데이터는 모두 동일한 보고서 데이터 집합에서 가져옵니다. 테이블릭스 데이터 영역에서 데이터 집합 이름을 범위로 지정하여 다른 데이터 집합의 집계 값을 포함할 수 있습니다. 단일 테이블릭스 데이터 영역 안에 있는 여러 데이터 집합의 여러 집계 값을 지정할 수 있습니다. 자세한 내용은 [집계 함수 참조&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/report-builder-functions-aggregate-functions-reference.md)를 참조하세요.  
   
@@ -53,14 +54,15 @@ ms.lasthandoff: 08/09/2017
  그룹 또는 데이터 영역의 레이블을 추가하려면 레이블을 지정할 그룹 외부에 행 또는 열을 추가합니다. 레이블 행 및 열은 합계 표시를 위해 추가하는 행 및 열과 비슷합니다. 자세한 내용은 [행 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-row-report-builder-and-ssrs.md) 또는 [열 삽입 또는 삭제&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/insert-or-delete-a-column-report-builder-and-ssrs.md)를 참조하세요.  
   
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>다른 보고서의 기존 테이블릭스 데이터 영역 추가  
- 다른 보고서에서 데이터 영역을 복사하여 새 보고서나 기존 보고서에 붙여넣을 수 있습니다. 데이터 영역을 붙여넣은 후 데이터 영역에서 사용하는 데이터 집합이 정의되어 있고 데이터 집합 필드의 이름 및 데이터 형식이 원래 보고서의 해당 이름 및 데이터 형식과 동일한지 확인해야 합니다. 한 보고서에서 다른 보고서로 데이터 집합을 복사할 수 없지만 보고서에서 공유 데이터 원본을 사용하는 경우 다른 보고서의 데이터 집합을 신속하게 복제할 수 있습니다. 또한 데이터 집합의 데이터를 검색하는 쿼리의 쿼리 텍스트를 가져올 수 있으므로 보고서의 쿼리를 간단하게 복제할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.  
+ 다른 보고서에서 데이터 영역을 복사하여 새 보고서나 기존 보고서에 붙여넣을 수 있습니다. 데이터 영역을 붙여넣은 후 데이터 영역에서 사용하는 데이터 집합이 정의되어 있고 데이터 집합 필드의 이름 및 데이터 형식이 원래 보고서의 해당 이름 및 데이터 형식과 동일한지 확인해야 합니다. 한 보고서에서 다른 보고서로 데이터 집합을 복사할 수 없지만 보고서에서 공유 데이터 원본을 사용하는 경우 다른 보고서의 데이터 집합을 신속하게 복제할 수 있습니다. 또한 데이터 집합의 데이터를 검색하는 쿼리의 쿼리 텍스트를 가져올 수 있으므로 보고서의 쿼리를 간단하게 복제할 수 있습니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
- [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
- [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
- [대화형 정렬, 문서 구조 및 링크&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
- [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
- [식 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
+ [식 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
+ [보고서 매개 변수 사용 &#40; 보고서 작성기 및 보고서 디자이너 &#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
+ [대화형 정렬, 문서 구조 및 연결 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [데이터 집합 필터, 데이터 영역 필터 및 그룹 필터 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [추가, 편집, 보고서 데이터 창 &#40;에서 필드 새로 고침 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)   
+ [식 &#40; 추가 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   
+

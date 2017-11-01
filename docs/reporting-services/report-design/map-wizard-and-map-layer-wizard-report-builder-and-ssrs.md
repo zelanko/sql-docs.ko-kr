@@ -19,7 +19,8 @@ caps.latest.revision: 12
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
+ms.workload: Inactive
+ms.translationtype: MT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: 8eb09925e1f1b1e1f79cc9e9b7e3fdd56d7ed165
 ms.contentlocale: ko-kr
@@ -254,9 +255,10 @@ ms.lasthandoff: 08/09/2017
   
  보고서 처리기는 사용자가 설정하는 규칙을 적용하고 범례에 표시할 항목의 목록을 자동으로 결정합니다. 기본적으로 모든 계층에 대한 모든 규칙의 결과가 첫 번째 범례에 표시됩니다. 마법사를 완료한 후 이를 조정할 수 있습니다. 자세한 내용은 [규칙 및 분석 데이터를 사용하여 다각형, 선 및 점 표시 변경&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [보고서 문제해결: 지도 보고서&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [지도 보고서 &#40; 계획 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [지도 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   
   
+
