@@ -1,5 +1,5 @@
 ---
-title: "특성 (Master Data Services)를 삭제 합니다. | Microsoft Docs"
+title: "특성 삭제(Master Data Services) | Microsoft Docs"
 ms.custom:
 - SQL2016_New_Updated
 ms.date: 03/15/2017
@@ -15,14 +15,15 @@ helpviewer_keywords:
 - deleting attributes [Master Data Services]
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 caps.latest.revision: 6
-author: sabotta
-ms.author: carlasab
-manager: jhubbard
-ms.translationtype: MT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 1d36564680430b7d35c415e23586c7fd0c47e084
+author: smartysanthosh
+ms.author: nagavo
+manager: craigg
+ms.workload: Inactive
+ms.translationtype: HT
+ms.sourcegitcommit: 0b832a9306244210e693bde7c476269455e9b6d8
+ms.openlocfilehash: 630faa003648c05c9f159b8dfa5fb6369823c040
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/01/2017
+ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="delete-an-attribute-master-data-services"></a>특성 삭제(Master Data Services)
@@ -47,11 +48,11 @@ ms.lasthandoff: 09/01/2017
   
 5.  **특성 관리** 페이지에서 다음 작업 중 하나를 수행합니다.  
   
-    -   리프 멤버용 특성의 경우 **멤버 형식** 목록 상자에서 **리프** 를 선택합니다.  
+    -   리프 멤버용 특성의 경우 **멤버 형식** 목록 상자에서 **리프**를 선택합니다.  
   
-    -   통합 멤버용 특성의 경우 **멤버 형식** 목록 상자에서 **통합** 을 선택합니다.  
+    -   통합 멤버용 특성의 경우 **멤버 형식** 목록 상자에서 **통합**을 선택합니다.  
   
-    -   컬렉션용 특성의 경우 **멤버 형식** 목록 상자에서 **컬렉션** 을 선택합니다.  
+    -   컬렉션용 특성의 경우 **멤버 형식** 목록 상자에서 **컬렉션**을 선택합니다.  
   
 6.  삭제하려는 특성의 행을 선택합니다.  
   
@@ -63,9 +64,10 @@ ms.lasthandoff: 09/01/2017
 8.  확인 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [특성 &#40; Master Data services&#41;](../master-data-services/attributes-master-data-services.md)   
- [도메인 기반 특성 &#40; Master Data services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
- [만들기 텍스트 특성 &#40; Master Data services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
- [도메인 기반 특성 &#40; 만들기 Master Data services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
+ [특성&#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)   
+ [도메인 기반 특성&#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)   
+ [텍스트 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)   
+ [도메인 기반 특성 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
   
+
