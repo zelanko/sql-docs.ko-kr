@@ -108,7 +108,7 @@ ms.lasthandoff: 09/26/2017
  이 예제에서는 필요한 코드를 보여 줍니다.는 **ScriptMain** 대상 구성 요소를 만드는 클래스입니다.  
   
 > [!NOTE]  
->  이러한 예에서 사용 된 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는  **int*AddressID* * * 및 **nvarchar (30) 도시** 데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
+>  이러한 예에서 사용 된 **Person.Address** 테이블에 **AdventureWorks** 예제 데이터베이스를 해당 첫 번째 및 네 번째 열을 전달는 **int*AddressID*** 및 **nvarchar (30) 도시** 데이터 흐름을 통해 열입니다. 이 섹션의 원본, 변환 및 대상 예제에는 동일한 데이터가 사용됩니다. 각 예에 대해 필수 구성 요소 및 가정도 설명되어 있습니다.  
   
 ### <a name="adonet-destination-example"></a>ADO.NET 대상 예  
  이 예제에서는 기존를 사용 하는 대상 구성 요소를 보여 줍니다. [!INCLUDE[vstecado](../../includes/vstecado-md.md)] 연결 관리자에 데이터 흐름에서 데이터를 저장 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블입니다.  
