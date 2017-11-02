@@ -988,7 +988,7 @@ FEDERATED_SERVICE_ACCOUNT = ON | 해제
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 ANSI_PADDING이 항상 ON으로 설정되므로 명시적으로 이 옵션을 OFF로 설정한 응용 프로그램에서는 오류가 발생합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. ANSI_PADDING은 항상 ON으로 설정하는 것이 좋습니다. 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 조작할 때는 ANSI_PADDING을 ON으로 설정해야 합니다.  
   
- **char (*n*) * * 및  **이진 (*n*) * * null ANSI_PADDING이 설정 된 경우 열의 길이로 패딩 됩니다에 대 한 허용 하는 열 on으로 하지만 후행 공백 및 0이 잘립니다 ANSI_PADDING이 OFF입니다. **char (*n*) * * 및  **이진 (*n*) * * null을 허용 하지 않는 열은 항상 열 길이 채워집니다.  
+ **char(*n*)** 및 **이진(*n*)** null ANSI_PADDING이 설정 된 경우 열의 길이로 패딩 됩니다에 대 한 허용 하는 열 on으로 하지만 후행 공백 및 0이 잘립니다 ANSI_PADDING이 OFF입니다. **char(*n*)** 및 **이진(*n*)** null을 허용 하지 않는 열은 항상 열 길이 채워집니다.  
   
  SET 문을 사용하여 설정한 연결 수준의 설정은 ANSI_PADDING에 대한 기본 데이터베이스 수준 설정보다 우선적으로 적용됩니다. 기본적으로 ODBC 및 OLE DB 클라이언트는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 세션의 ANSI_PADDING을 ON으로 설정하여 연결 수준의 SET 문을 실행합니다. 자세한 내용은 [SET ANSI_PADDING&#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)을 참조하세요.  
   
