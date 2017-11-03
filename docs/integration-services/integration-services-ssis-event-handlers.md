@@ -34,7 +34,7 @@ ms.lasthandoff: 09/26/2017
 
 ---
 # <a name="integration-services-ssis-event-handlers"></a>Integration Services(SSIS) 이벤트 처리기
-  런타임 시 실행 개체(패키지 및 Foreach 루프, For 루프, 시퀀스 및 태스크 호스트 컨테이너)는 이벤트를 발생시킵니다. 예를 들어 오류가 발생하면 OnError 이벤트가 발생합니다. 이러한 이벤트에 대한 사용자 지정 이벤트 처리기를 만들면 패키지 기능을 확장하고 런타임 시 패키지를 더 쉽게 관리할 수 있습니다. 이벤트 처리기는 다음과 같은 태스크를 수행할 수 있습니다.  
+  런타임 시 실행 개체(패키지 및 Foreach 루프, For 루프, 시퀀스 및 태스크 호스트 컨테이너)는 이벤트를 발생시킵니다. 예를 들어 오류가 발생하면 OnError 이벤트가 발생합니다. 이러한 이벤트에 대한 사용자 지정 이벤트 처리기를 만들면 패키지 기능을 확장하고 런타임 시 패키지를 더 쉽게 관리할 수 있습니다. 이벤트 처리기는 다음과 같은 태스크를 수행할 수 있습니다:  
   
 -   패키지 또는 태스크 실행이 완료될 때 임시 데이터 저장소를 삭제합니다.  
   
@@ -56,7 +56,7 @@ ms.lasthandoff: 09/26/2017
   
  이벤트 처리기는 이벤트 처리기 컬렉션의 멤버이며 모든 컨테이너에는 이 컬렉션이 포함됩니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 패키지를 만드는 경우에는 **디자이너의** 패키지 탐색기 **탭에 있는** 이벤트 처리기 [!INCLUDE[ssIS](../includes/ssis-md.md)] 폴더에서 이벤트 처리기 컬렉션의 멤버를 확인할 수 있습니다.  
   
- 다음과 같은 방법으로 이벤트 처리기 컨테이너를 구성할 수 있습니다.  
+ 다음과 같은 방법으로 이벤트 처리기 컨테이너를 구성할 수 있습니다:  
   
 -   이벤트 처리기에 대한 이름 및 설명을 지정합니다.  
   
@@ -102,7 +102,7 @@ ms.lasthandoff: 09/26/2017
   
  **이벤트 처리기** 탭에는 또한 이벤트 처리기에서 서버 및 데이터 원본에 연결하는 데 사용하는 연결 관리자를 만들고 수정할 수 있는 **연결 관리자** 영역이 포함됩니다. 자세한 내용은 [연결 관리자 만들기](http://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
   
-### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>이벤트 처리기 탭에서 이벤트 처리기를 추가 합니다.  
+### <a name="add-an-event-handler-on-the-event-handlers-tab"></a>이벤트 처리기 탭에서 이벤트 처리기를 추가 합니다  
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 원하는 패키지가 들어 있는 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 프로젝트를 엽니다.  
   
@@ -127,7 +127,7 @@ ms.lasthandoff: 09/26/2017
 9. **파일** 메뉴에서 **선택한 항목 저장** 을 클릭하여 패키지를 저장합니다.  
 
 ## <a name="set-the-properties-of-an-event-handler"></a>이벤트 처리기의 속성 설정  
- **** 의 속성 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
+ 의 **속성** [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] 창을 사용하거나 프로그래밍 방식으로 속성을 설정할 수 있습니다.  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 이러한 속성을 설정하는 방법에 대한 자세한 내용은 [태스크 또는 컨테이너의 속성 설정](http://msdn.microsoft.com/library/52d47ca4-fb8c-493d-8b2b-48bb269f859b)을 참조하세요.  
   
