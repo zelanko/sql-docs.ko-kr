@@ -293,7 +293,7 @@ ms.lasthandoff: 09/27/2017
   
 3.  **서버 유형** 목록에서 **Integration Services** 를 선택합니다.  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 입력란에 **** 서버의 이름을 입력합니다.  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 입력란에 **서버의 이름을** 입력합니다.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서비스는 인스턴스에 국한되지 않습니다. Integration Services 서버가 실행 중인 컴퓨터의 이름을 사용하여 서비스에 연결합니다.  
