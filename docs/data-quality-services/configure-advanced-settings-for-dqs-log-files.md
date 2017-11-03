@@ -48,7 +48,7 @@ ms.lasthandoff: 09/09/2017
 select * from DQS_MAIN.dbo.A_CONFIGURATION where NAME='ServerLogging'  
 ```  
   
- **** 로깅의 구성 설정을 변경하려면 **ServerLogging** 행의 VALUE [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 열에서 알맞은 정보를 업데이트해야 합니다. 이 예에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정을 업데이트하여 롤링 파일 크기 제한을 25000KB로 설정합니다(기본값은 20000KB).  
+ 로깅의 구성 설정을 변경하려면 **ServerLogging** 행의 **VALUE** [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 열에서 알맞은 정보를 업데이트해야 합니다. 이 예에서는 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] 로그 설정을 업데이트하여 롤링 파일 크기 제한을 25000KB로 설정합니다(기본값은 20000KB).  
   
 1.  Microsoft SQL Server Management Studio를 시작하고 적합한 SQL Server 인스턴스에 연결합니다.  
   
