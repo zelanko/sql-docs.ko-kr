@@ -51,7 +51,7 @@ ms.lasthandoff: 10/26/2017
                                                     <li><a href="/sql/sql-server/sql-server-technical-documentation">SQL Server(2016, 2017)</a></li>
                                                     <li><a href="https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx">SQL Server 2014</a></li>
                                                     <li><a href="https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx">SQL Server 2012</a></li>
-                                                    <li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database*</a></li>
+                                                    <li><a href="/azure/sql-database/sql-database-design-first-database">Azure SQL Database</a></li>
                                                     <li><a href="/azure/sql-data-warehouse/sql-data-warehouse-get-started-tutorial">Azure SQL 데이터 웨어하우스</a></li>
                                                     <li><a href="/sql/analytics-platform-system/index">분석 플랫폼 시스템 - 병렬 데이터 웨어하우스</a></li>
                                                     </ul>

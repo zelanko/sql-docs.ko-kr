@@ -50,7 +50,7 @@ SharePoint 페이지에는 보고서 뷰어 웹 파트를 추가 하 여 SQL Ser
 
     ![Office 리본 메뉴에서 웹 파트를 삽입 합니다.](media/sharepoint-insert-web-part.png)
 
-4. 아래 **범주**선택, * * SQL Server Reporting Services (기본 모드). 아래 **부분**선택, **보고서 뷰어**합니다. 그런 다음 선택 **추가**합니다.
+4. 아래 **범주**선택, **SQL Server Reporting Services (기본 모드). 아래 **부분**선택, **보고서 뷰어**합니다. 그런 다음 선택 **추가**합니다.
 
     ![보고서 뷰어 웹 파트를 추가 합니다.](media/sharepoint-report-viewer-web-part.png)
 

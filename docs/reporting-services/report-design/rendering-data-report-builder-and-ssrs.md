@@ -15,11 +15,12 @@ caps.latest.revision: 6
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
-ms.openlocfilehash: 209938a6f1f5562fb3e5bfb70be713d2eb9b8285
+ms.workload: Inactive
+ms.translationtype: MT
+ms.sourcegitcommit: 5e15fa8674a09821becd437e78cfb0bb472e3bc8
+ms.openlocfilehash: f3f2e9c9028e434482e8eadeb8f8e06ccce82987
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="rendering-data-report-builder-and-ssrs"></a>데이터 렌더링(보고서 작성기 및 SSRS)
@@ -46,16 +47,17 @@ ms.lasthandoff: 08/09/2017
   
 -   DataElementStyle 속성은 XML에서 보고서 항목이 요소와 특성 중 어느 것으로 렌더링될지 제어합니다.  
   
- CSV 내보내기 옵션은 보고서 데이터를 서식 없이 쉼표로 구분된 일반 텍스트 파일로 저장합니다. 기본적으로 이 파일에서는 쉼표(,)를 사용하여 필드 및 행을 구분하지만 이 설정은 장치 정보 설정을 사용하여 구성할 수 있습니다. 결과 파일은 Office SharePoint Server와 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. .csv 파일은 메모장과 같은 텍스트 편집기로 열 수 있습니다. URL로 액세스한 경우 .csv 파일은 **text/csv**의 MIME 형식을 반환합니다. 파일은 MIME 버전 1.0입니다. 보고서를 CSV 파일 형식으로 렌더링하는 방법에 대한 자세한 내용은 [CSV 파일로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md)를 참조하세요.  
+ CSV 내보내기 옵션은 보고서 데이터를 서식 없이 쉼표로 구분된 일반 텍스트 파일로 저장합니다. 기본적으로 이 파일에서는 쉼표(,)를 사용하여 필드 및 행을 구분하지만 이 설정은 장치 정보 설정을 사용하여 구성할 수 있습니다. 결과 파일은 Office SharePoint Server와 같은 스프레드시트 프로그램에서 열거나 다른 프로그램의 가져오기 형식으로 사용할 수 있습니다. .csv 파일은 메모장과 같은 텍스트 편집기로 열 수 있습니다. URL로 액세스한 경우 .csv 파일은 **text/csv**의 MIME 형식을 반환합니다. 파일은 MIME 버전 1.0입니다. CSV 파일 형식과에서 보고서를 렌더링 하는 방법에 대 한 자세한 내용은 참조 [CSV 파일 &#40; 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/exporting-to-a-csv-file-report-builder-and-ssrs.md).  
   
- 보고서 데이터 XML 파일 내보내기 옵션은 보고서를 XML 파일로 저장합니다. 보고서의 XML 스키마는 해당 보고서에만 적용됩니다. XML 내보내기 옵션에서 보고서 레이아웃 정보는 저장되지 않습니다. 이 옵션으로 생성된 XML을 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램에 전송할 수 있습니다. 보고서를 XML 파일 형식으로 렌더링하는 방법에 대한 자세한 내용은 [XML로 내보내기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md)를 참조하세요.  
+ 보고서 데이터 XML 파일 내보내기 옵션은 보고서를 XML 파일로 저장합니다. 보고서의 XML 스키마는 해당 보고서에만 적용됩니다. XML 내보내기 옵션에서 보고서 레이아웃 정보는 저장되지 않습니다. 이 옵션으로 생성된 XML을 데이터베이스로 가져오거나 XML 데이터 메시지로 사용하거나 사용자 지정 응용 프로그램에 전송할 수 있습니다. XML 파일 형식으로 보고서를 렌더링 하는 방법에 대 한 자세한 내용은 참조 [xml&#40;로 내보내기 보고서 작성기 및 SSRS &#41; ](../../reporting-services/report-builder/exporting-to-xml-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>관련 항목:  
- [Reporting services&#40;의 페이지 매김 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
+ [Reporting Services의 페이지 매김&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [렌더링 동작 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [여러 보고서 렌더링 확장 프로그램 &#40;에 대 한 대화형 기능 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [여러 보고서 렌더링 확장 프로그램의 대화형 기능&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [보고서 항목 렌더링 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/rendering-report-items-report-builder-and-ssrs.md)   
- [테이블, 행렬 및 목록 &#40; 보고서 작성기 및 SSRS &#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Reporting Services 장치 정보 설정(Reporting Services Device Information Settings)](http://go.microsoft.com/fwlink/?LinkId=102515)  
+ [테이블, 행렬 및 목록&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Reporting Services 장치 정보 설정](http://go.microsoft.com/fwlink/?LinkId=102515)  
   
   
+

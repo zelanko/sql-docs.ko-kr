@@ -23,11 +23,12 @@ caps.latest.revision: 19
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.translationtype: HT
-ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
-ms.openlocfilehash: 779105655150aae2f1397865c67f8e835fd99646
+ms.workload: Inactive
+ms.translationtype: MT
+ms.sourcegitcommit: dfd05ee367b083d2e7a159cbd659a94edd743886
+ms.openlocfilehash: b1ac3cd31061a749a035c9f4feb6ceef8bdebcd3
 ms.contentlocale: ko-kr
-ms.lasthandoff: 08/09/2017
+ms.lasthandoff: 11/07/2017
 
 ---
 # <a name="reporting-services-roles-tasks-vs-sharepoint-groups-permissions"></a>Reporting Services 역할 작업 vs. SharePoint 그룹 사용 권한
@@ -110,8 +111,9 @@ ms.lasthandoff: 08/09/2017
 ## <a name="see-also"></a>관련 항목:  
  [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [SharePoint 웹 응용 프로그램에서 보고서 서버 작업에 대 한 사용 권한 설정](../../reporting-services/security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [SharePoint 사이트에서 보고서 서버 항목에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [SharePoint 사이트의 보고서 서버 항목에 대한 사용 권한 부여](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [역할 정의](../../reporting-services/security/role-definitions.md)   
- [미리 정의 된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
+ [미리 정의된 역할](../../reporting-services/security/role-definitions-predefined-roles.md)  
   
   
+
