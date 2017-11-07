@@ -4,7 +4,7 @@ description: "코드 조각에 최근에 변경 된 설명서, Microsoft SQL ser
 services: na
 documentationcenter: 
 author: MightyPen
-manager: jhubbard
+manager: kfile
 editor: 
 ms.service: na
 ms.topic: updart-autogen
