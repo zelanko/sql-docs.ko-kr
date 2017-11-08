@@ -17,14 +17,17 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: f4202004a556479779d4884fc42d04ae540ed56d
+ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
+ms.openlocfilehash: 62fd9dd8bf2e11fe39ffaa2e893ded55b214b09c
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="known-issues-in-this-version-of-the-driver"></a>이 버전의 드라이버에서 알려진 문제
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)] 이 항목에는 Linux와 macOS에서 SQL Server에 대 한 Microsoft ODBC Driver 13의 알려진된 문제 목록이 포함 되어 있습니다.
+
+[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+이 항목에는 Linux와 macOS에서 SQL Server에 대 한 Microsoft ODBC Driver 13의 알려진된 문제 목록이 포함 되어 있습니다.
 
 추가 문제는 [Microsoft ODBC 드라이버 팀 블로그](http://blogs.msdn.com/b/sqlnativeclient/)에 게시됩니다.  
 

@@ -1,5 +1,5 @@
 ---
-title: "기능 &#39; SAP ASE (SybaseToSQL) 용 SSMA의 새로운 s | Microsoft Docs"
+title: "SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/30/2017
 ms.prod: sql-non-specified
@@ -19,13 +19,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 91c748f24b360934e160cea8b03c2c2259766a5c
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: 79f9f01b8811f67f252c68192825d17084467da1
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-sap-ase-sybasetosql"></a>기능 &#39;의 새로운 SAP ASE (SybaseToSQL) 용 SSMA
+# <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능
 이 항목에서는 각 릴리스의 SAP ASE (이전의 SSMA for Sybase) 변경에 대 한 SSMA를 나열 합니다. 
 
 ## <a name="ssma-v76"></a>SSMA v7.6

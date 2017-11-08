@@ -1,5 +1,5 @@
 ---
-title: "기능 &#39; Access(AccessToSQL) 용 SSMA의 새로운 s | Microsoft Docs"
+title: "Access(AccessToSQL) 용 SSMA의 새로운 기능 | Microsoft Docs"
 ms.prod: sql-non-specified
 ms.custom: 
 ms.date: 09/22/2017
@@ -19,13 +19,13 @@ ms.author: Shamikg
 manager: craigg
 ms.workload: Inactive
 ms.translationtype: MT
-ms.sourcegitcommit: e3c781449a8f7a1b236508cd21b8c00ff175774f
-ms.openlocfilehash: 7595c51bf8cc0ec07a464a65c992c2f3a56b15c2
+ms.sourcegitcommit: a435479b9cad332215b1f44f7d881f5055b2fefd
+ms.openlocfilehash: 5cc5b9bf49c28b298570e0c867c5b03e8ad99c47
 ms.contentlocale: ko-kr
-ms.lasthandoff: 09/30/2017
+ms.lasthandoff: 11/08/2017
 
 ---
-# <a name="what39s-new-in-ssma-for-access-accesstosql"></a>기능 &#39;의 새로운 (AccessToSQL) Access 용 SSMA
+# <a name="whats-new-in-ssma-for-access-accesstosql"></a>(AccessToSQL) Access 용 SSMA의 새로운 기능
 이 항목에서는 각 릴리스에 대 한 액세스 변경에 대 한 SSMA를 나열 합니다.  
 
 ## <a name="ssma-v76"></a>SSMA v7.6

@@ -1,6 +1,6 @@
 ---
 title: "SQL Server 2017 Analysis Services의 새로운 기능 | Microsoft Docs"
-ms.date: 10/03/2017
+ms.date: 10/27/2017
 ms.prod: sql-server-2017
 ms.reviewer: 
 ms.suite: 
@@ -10,13 +10,13 @@ ms.topic: article
 ms.assetid: 1eb6afc9-76ed-45a2-a188-374a4fc23224
 author: Minewiskan
 ms.author: owend
-manager: erikre
+manager: kfile
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: 12b379c1d02dc07a5581a5a3f3585f05f763dad7
-ms.openlocfilehash: 59f753e85f2d10d70d7784335205e0d231c5ae00
+ms.sourcegitcommit: 14ce5d9110f49ce155e89a96e1f72618f2879661
+ms.openlocfilehash: 68410430d97a0e3033e17deb7d03a0ba8fecd436
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/04/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>SQL Server 2017 Analysis Services의 새로운 기능
@@ -47,9 +47,9 @@ SSDT에서 새 테이블 형식 모델 프로젝트를 만들 때 새 1400 호�
 유의 해야 하면 기존 모델 1400를로 업그레이드 되 면 다운 그레이드할 수 없습니다. 1200 모델 데이터베이스의 백업을 보관 해야 합니다.
 
 ## <a name="modern-get-data-experience"></a>최신 데이터 가져오기 환경
-SQL Server Data Tools (SSDT)는 최신 소개를 테이블 형식 모델에 데이터 원본에서 데이터를 수집 하 고 있어 **데이터 가져오기** 1400 호환성 수준에서 모델에 대 한 환경입니다. 이 새로운 기능은 Power BI Desktop 및 Microsoft Excel 2016의 유사한 기능을 기반으로 합니다. 최신 데이터 가져오기 경험 데이터 가져오기 쿼리 작성기와 M 식을 사용 하 여 거 대 한 데이터 변환 및 데이터 매시업 기능을 제공 합니다.
+SQL Server Data Tools (SSDT)는 최신 소개를 테이블 형식 모델에 데이터 원본에서 데이터 가져오기에 있어서 **데이터 가져오기** 1400 호환성 수준에서 모델에 대 한 환경입니다. 이 새로운 기능은 Power BI Desktop 및 Microsoft Excel 2016의 유사한 기능을 기반으로 합니다. 최신 데이터 가져오기 경험 데이터 가져오기 쿼리 작성기와 M 식을 사용 하 여 거 대 한 데이터 변환 및 데이터 매시업 기능을 제공 합니다.
 
-최신 가져올 데이터에는 다양 한 추가 데이터 원본에 대 한 제공 된 지원을 발생합니다. 향후 업데이트에는 데이터 원본을 추가로 지원 합니다.
+최신 데이터 가져오기 경험 다양 한 데이터 소스에 대 한 지원을 제공합니다. 업데이트는 앞으로 이상용으로에 대 한 지원이 포함 됩니다.
 
 ![AS_Get_Data_in_SSDT](../analysis-services/media/as-get-data-in-ssdt.png)
 

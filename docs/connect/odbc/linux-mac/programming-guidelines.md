@@ -14,14 +14,17 @@ ms.author: genemi
 manager: jhubbard
 ms.workload: On Demand
 ms.translationtype: MT
-ms.sourcegitcommit: f7e6274d77a9cdd4de6cbcaef559ca99f77b3608
-ms.openlocfilehash: 2e3aac41bd87f52998edf366d7c3da2326de3f26
+ms.sourcegitcommit: 50f9efe65f14dbd73ccbc3c6e81307c3893c469f
+ms.openlocfilehash: 85ba8b35fa698769bd390837855729f3edbc7291
 ms.contentlocale: ko-kr
-ms.lasthandoff: 10/10/2017
+ms.lasthandoff: 11/08/2017
 
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
-[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)] 프로그래밍 기능은 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 및에 대 한 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 및 Linux 기반으로 ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client Windows Data Access Components의 ODBC 기반 ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
+
+[!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+프로그래밍 기능은 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 및에 대 한 13.1 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] macOS 및 Linux 기반으로 ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] Native Client ([SQL Server Native Client (ODBC)](http://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]Native Client Windows Data Access Components의 ODBC 기반 ([ODBC Programmer's Reference](http://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 결과 집합 MARS (Multiple Active) 오류 코드 및 기타 ODBC 응용 프로그램이 사용할 수 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 포함 하 여 특정 기능 `/usr/local/include/msodbcsql.h` unixODBC 헤더를 포함 한 후 (`sql.h`, `sqlext.h`, `sqltypes.h`, 및 `sqlucode.h`). 다음에 대해 동일한 기호화 된 이름을 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)]-Windows ODBC 응용 프로그램에서 사용 하는 특정 항목입니다.  
 
