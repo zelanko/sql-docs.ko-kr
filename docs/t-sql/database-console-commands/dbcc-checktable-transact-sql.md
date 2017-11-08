@@ -38,7 +38,7 @@ ms.lasthandoff: 09/01/2017
 
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]모든 페이지와 테이블 또는 인덱싱된 뷰를 구성 하는 구조체의 무결성을 확인 합니다.
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx_md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)] 모든 페이지와 테이블 또는 인덱싱된 뷰를 구성 하는 구조체의 무결성을 확인 합니다.
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
     
 ## <a name="syntax"></a>구문    
@@ -160,7 +160,7 @@ DBCC CHECKTABLE은 지정한 테이블에 대해 다음 사항을 검사합니�
 [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏    
-DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 트랜잭션 일관성을 제공하기 위해 내부 데이터베이스 스냅숏을 사용합니다. 자세한 내용은 참조 [데이터베이스 스냅숏 &#40; 스파스 파일의 크기 보기 Transact SQL &#41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션 및 [DBCC &#40; Transact SQL &#41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
+DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 트랜잭션 일관성을 제공하기 위해 내부 데이터베이스 스냅숏을 사용합니다. 자세한 내용은 참조 [데이터베이스 스냅숏 & #40; 스파스 파일의 크기 보기 Transact SQL & #41; ](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션 및 [DBCC & #40; Transact SQL & #41; ](../../t-sql/database-console-commands/dbcc-transact-sql.md).
 스냅숏을 만들 수 없거나 TABLOCK이 지정된 경우 DBCC CHECKTABLE은 공유 테이블 잠금을 획득하여 필요한 일관성을 확보합니다.
     
 > [!NOTE]    
