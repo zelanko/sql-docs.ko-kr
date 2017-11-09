@@ -2,7 +2,7 @@
 title: "테이블 (Azure SQL 데이터 웨어하우스) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/14/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 

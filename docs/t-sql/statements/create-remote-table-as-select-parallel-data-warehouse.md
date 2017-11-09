@@ -2,7 +2,7 @@
 title: "원격 TABLE AS SELECT (병렬 데이터 웨어하우스) 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 08/10/2017
-ms.prod: sql-non-specified
+ms.prod: 
 ms.reviewer: 
 ms.service: sql-data-warehouse
 ms.suite: 
