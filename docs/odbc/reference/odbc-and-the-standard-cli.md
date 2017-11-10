@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC 및 표준 CLI
-ODBC 사양 आ स ा 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로 맞춥니다. (이러한 표준의 각각의 상위 집합 ODBC 기능에는 있습니다.)  
+ODBC 사양 호출 수준 인터페이스 (CLI)으로 처리 하는 표준으로 맞춥니다. (이러한 표준의 각각의 상위 집합 ODBC 기능에는 있습니다.)  
   
 -   Open Group CAE 사양 "데이터 관리: SQL 호출 수준 인터페이스 (CLI)"  
   
@@ -37,7 +37,7 @@ ODBC 사양 आ स ा 호출 수준 인터페이스 (CLI)으로 처리 하는 
   
  이 맞춤으로 인해 다음에 해당 합니다.  
   
--   ODBC 3은 Open Group 및 ISO CLI 사양에 작성 된 응용 프로그램 작동 합니다. *x* 드라이버 또는 ODBC 3로 컴파일할 때 표준 규격 드라이버입니다.* x* 헤더 파일 및 연결 된 ODBC 3.* x* 라이브러리가 ODBC 3를 통해 드라이버에 액세스할 때 및.* x* 드라이버 관리자입니다.  
+-   ODBC 3은 Open Group 및 ISO CLI 사양에 작성 된 응용 프로그램 작동 합니다. *x* 드라이버 또는 ODBC 3로 컴파일할 때 표준 규격 드라이버입니다. *x* 헤더 파일 및 연결 된 ODBC 3. *x* 라이브러리가 ODBC 3를 통해 드라이버에 액세스할 때 및. *x* 드라이버 관리자입니다.  
   
 -   Open Group 및 ISO CLI 사양을 작성 된 드라이버는 ODBC 3 작동할지*.x* 응용 프로그램 또는 ODBC 3로 컴파일할 때 표준 호환 응용 프로그램*.x* 헤더 파일 및 연결 ODBC 3*.x* 라이브러리, 응용 프로그램에서 ODBC 3를 통해 드라이버에 대 한 액세스를 획득 하는 경우 및*.x* 드라이버 관리자입니다. (자세한 내용은 참조 [표준 호환 응용 프로그램 및 드라이버](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md)합니다.  
   

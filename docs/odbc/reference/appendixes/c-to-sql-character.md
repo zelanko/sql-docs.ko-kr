@@ -42,7 +42,7 @@ ODBC C 데이터 형식 문자에 대 한 식별자는.
 |-------------------------|----------|--------------|  
 |SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|데이터의 바이트 길이 < = 열 길이입니다.<br /><br /> 데이터의 바이트 길이 > 열 길이입니다.|n/a<br /><br /> 22001|  
 |SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|문자 데이터의 길이 < = 열 길이입니다.<br /><br /> 문자 데이터의 길이 > 열 길이입니다.|n/a<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|데이터 잘림 없이 변환<br /><br /> 데이터 잘림 [e] 소수 자릿수로 변환<br /><br /> 데이터 변환 [e] (소수) 대비 전체 자릿수 손실 될 수 있습니다.<br /><br /> 데이터 값이는 *숫자 리터럴*|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|데이터 잘림 없이 변환<br /><br /> 데이터 잘림 [e] 소수 자릿수로 변환<br /><br /> 데이터 변환 [e] \(소수) 대비 전체 자릿수 손실 될 수 있습니다.<br /><br /> 데이터 값이는 *숫자 리터럴*|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
 |SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|숫자를 변환 하는 데이터 형식 범위 내에서 데이터를<br /><br /> 데이터는 숫자를 변환 하는 데이터 형식의 범위를 벗어납니다.<br /><br /> 데이터 값이는 *숫자 리터럴*|n/a<br /><br /> 22003<br /><br /> 22018|  
 |SQL_BIT|데이터는 0 또는 1<br /><br /> 데이터 0, 2, 보다 작음 및 1과 같지 않은 보다 큽니다.<br /><br /> 데이터는 0 보다 작거나 또는 2 보다 크거나<br /><br /> 데이터를 한 *숫자 리터럴*|n/a<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
 |SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(데이터의 바이트 길이) / 2 < = 바이트 길이 열<br /><br /> (데이터의 바이트 길이) / 2 > 열의 바이트 길이<br /><br /> 데이터 값이 16 진수 값|n/a<br /><br /> 22001<br /><br /> 22018|  

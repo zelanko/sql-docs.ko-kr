@@ -31,8 +31,7 @@ ms.lasthandoff: 09/09/2017
   
 |이름|Description|  
 |----------|-----------------|  
-|[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|
-          SQLServerBlob 클래스의 새 인스턴스를 초기화합니다.|  
+|[SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructor-sqlserverconnection-byte.md)|SQLServerBlob 클래스의 새 인스턴스를 초기화합니다.|  
   
 ## <a name="fields"></a>필드  
  없음  

@@ -150,7 +150,7 @@ CREATE CERTIFICATE certificate_name
  개인 키를 암호화 하는 데 사용 되는 암호를 지정 합니다. 암호로 인증서를 암호화하려는 경우에만 이 옵션을 사용합니다. 이 절을 생략 하면 개인 키는 데이터베이스 마스터 키를 사용 하 여 암호화 됩니다. *암호* 의 인스턴스를 실행 하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [Password Policy](../../relational-databases/security/password-policy.md)을 참조하세요.  
   
  제목 ='*certificate_subject_name*'  
- 용어 *주체* 는 X.509 표준에 정의 된 대로 인증서의 메타 데이터에서 필드를 참조 합니다. 주체 ं व 64 자 해야 합니다. 사용 되지 않으며이 한도 대 한 적용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linux. 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] windows에서 주체에는 최대 128 자까지 사용할 수 있습니다. 128 자를 초과 하는 제목은 카탈로그에 저장 된 하지만 인증서가 포함 된 binary large object (BLOB)에 전체 제목 이름이 유지 될 때 잘립니다.  
+ 용어 *주체* 는 X.509 표준에 정의 된 대로 인증서의 메타 데이터에서 필드를 참조 합니다. 제목은 64자를 초과 할 수 없습니다. 사용 되지 않으며이 한도 대 한 적용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linux. 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] windows에서 주체에는 최대 128 자까지 사용할 수 있습니다. 128 자를 초과 하는 제목은 카탈로그에 저장 된 하지만 인증서가 포함 된 binary large object (BLOB)에 전체 제목 이름이 유지 될 때 잘립니다.  
   
  START_DATE ='*datetime*'  
  인증서가 유효하게 되는 날짜입니다. 지정 하지 않으면 START_DATE는 현재 날짜로 설정 되었습니다. START_DATE는 UTC 시간이며 날짜 및 시간으로 변환이 가능한 모든 형식으로 지정할 수 있습니다.  

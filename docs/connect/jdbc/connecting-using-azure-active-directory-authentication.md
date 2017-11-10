@@ -48,7 +48,7 @@ Azure Active Directory 인증을 지원 하기 위해 두 개의 새로운 연�
 *   ActiveDirectoryIntegrated 모드를 사용 하는 경우 (ADALSQL SQL Server 용 Active Directory 인증 라이브러리를 설치 해야 합니다. DLL) 및 sqljdbc_auth.dll 합니다.
     * ADALSQL 합니다. DLL 응용 프로그램을 Azure Active Directory를 사용 하 여 Microsoft Azure SQL 데이터베이스에 인증할 수 있습니다. DLL 다운로드 [Microsoft SQL Server 용 Microsoft Active Directory 인증 라이브러리](http://www.microsoft.com/en-us/download/details.aspx?id=48742)
     * 에 대 한 ADALSQL 합니다. DLL 두 이진 버전 X86 및 X64 다운로드할 수 있는 합니다. 잘못 된 이진 버전은 설치 DLL가 없는 경우 드라이버에서 다음 오류를 발생 한 경우: "adalsql.dll을 로드할 수 없습니다 (Authentication =...). 오류 코드: 0x2. "입니다. 이런 경우에서 ADALSQL의 올바른 버전을 다운로드 합니다. DLL입니다. 
-    * 드라이버 패키지에 sqljdbc_auth.dll ´ ù입니다. JDBC 드라이버를 설치한 컴퓨터에서 Windows 시스템 경로에 있는 디렉터리를 sqljdbc_auth.dll 파일을 복사 합니다. 또는 java.libary.path 시스템 속성에 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 
+    * 드라이버 패키지에 sqljdbc_auth.dll 입니다. JDBC 드라이버를 설치한 컴퓨터에서 Windows 시스템 경로에 있는 디렉터리를 sqljdbc_auth.dll 파일을 복사 합니다. 또는 java.libary.path 시스템 속성에 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 
     * x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오. 
     * 32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. 
     * 예를 들어 32 비트 JVM을 사용 하는 경우 JDBC 드라이버는 기본 디렉터리에 설치 되어 있으면 Java 응용 프로그램을 시작 하는 경우에 다음 가상 컴퓨터 (VM) 인수를 사용 하 여 DLL의 위치를 지정할 수 있습니다.  
