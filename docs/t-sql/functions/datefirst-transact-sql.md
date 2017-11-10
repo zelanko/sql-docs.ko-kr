@@ -43,7 +43,7 @@ ms.contentlocale: ko-kr
 ms.lasthandoff: 09/19/2017
 
 ---
-# <a name="x40x40datefirst-transact-sql"></a>& #x 40; & &#40;x; DATEFIRST (TRANSACT-SQL)
+# <a name="x40x40datefirst-transact-sql"></a>&#x40;&#x40; DATEFIRST (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 세션에 대 한 현재 값을 반환 합니다. [SET DATEFIRST](../../t-sql/statements/set-datefirst-transact-sql.md)합니다.
