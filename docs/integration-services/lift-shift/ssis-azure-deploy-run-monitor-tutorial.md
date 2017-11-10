@@ -112,7 +112,7 @@ Get-AzureRmDataFactoryV2IntegrationRuntime -DataFactoryName $DataFactoryName -Na
 ### <a name="get-the-status-of-the-azure-ssis-integration-runtime"></a>Azure SSIS 통합 런타임 상태를 가져옵니다.
 
 ```powershell
-Get-AzureRmDataFactoryV2IntegrationRuntimeStatus -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
+Get-AzureRmDataFactoryV2IntegrationRuntime -Status -DataFactoryName $DataFactoryName -Name $AzureSsisIRName -ResourceGroupName $ResourceGroupName
 ```
 
 ## <a name="next-steps"></a>다음 단계

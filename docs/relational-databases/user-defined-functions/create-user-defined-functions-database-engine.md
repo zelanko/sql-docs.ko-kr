@@ -1,7 +1,7 @@
 ---
 title: "사용자 정의 함수 만들기(데이터베이스 엔진) | Microsoft 문서"
 ms.custom: 
-ms.date: 10/24/2016
+ms.date: 11/09/2017
 ms.prod: sql-server-2016
 ms.reviewer: 
 ms.suite: 
@@ -75,7 +75,7 @@ ms.lasthandoff: 09/27/2017
 ##  <a name="Scalar"></a> 스칼라 함수  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 다중 문 스칼라 함수를 만듭니다. 함수에 `ProductID`가 단일 입력 값으로 입력되고 지정한 제품의 총 재고 수량이 단일 데이터 값으로 반환됩니다.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufnGetInventoryStock', N'FN') IS NOT NULL  
     DROP FUNCTION ufnGetInventoryStock;  
 GO  
@@ -92,24 +92,21 @@ BEGIN
      IF (@ret IS NULL)   
         SET @ret = 0;  
     RETURN @ret;  
-END;  
-GO  
-  
+END; 
 ```  
   
  다음 예에서는 `ufnGetInventoryStock` 함수를 사용하여 `ProductModelID` 가 75와 80 사이인 제품의 현재 재고 수량을 반환합니다.  
   
-```  
+```t-sql  
 SELECT ProductModelID, Name, dbo.ufnGetInventoryStock(ProductID)AS CurrentSupply  
 FROM Production.Product  
 WHERE ProductModelID BETWEEN 75 and 80;  
-  
 ```  
   
 ##  <a name="TVF"></a> 테이블 반환 함수  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 인라인 테이블 값 함수를 만듭니다. 함수에 고객(상점) ID가 단일 입력 매개 변수로 입력되고 `ProductID`, `Name`및 `YTD Total` (해당 상점에 판매된 각 제품의 연간 총 매출액) 열이 반환됩니다.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'Sales.ufn_SalesByStore', N'IF') IS NOT NULL  
     DROP FUNCTION Sales.ufn_SalesByStore;  
 GO  
@@ -126,19 +123,17 @@ RETURN
     WHERE C.StoreID = @storeid  
     GROUP BY P.ProductID, P.Name  
 );  
-  
 ```  
   
  다음 예에서는 함수를 호출하고 고객 ID 602를 지정합니다.  
   
-```  
+```t-sql  
 SELECT * FROM Sales.ufn_SalesByStore (602);  
-  
 ```  
   
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 테이블 값 함수를 만듭니다. 함수에 `EmployeeID` 가 단일 입력 매개 변수로 입력되고 지정한 직원에게 직접 또는 간접적으로 보고하는 모든 직원의 목록이 반환됩니다. 그런 다음 직원 ID 109를 지정하여 함수를 호출합니다.  
   
-```  
+```t-sql  
 IF OBJECT_ID (N'dbo.ufn_FindReports', N'TF') IS NOT NULL  
     DROP FUNCTION dbo.ufn_FindReports;  
 GO  
@@ -180,13 +175,12 @@ GO
 -- Example invocation  
 SELECT EmployeeID, FirstName, LastName, JobTitle, RecursionLevel  
 FROM dbo.ufn_FindReports(1);  
-  
 ```  
   
 ## <a name="more-examples"></a>추가 예제  
  - [사용자 정의 함수](../../relational-databases/user-defined-functions/user-defined-functions.md)   
  - [CREATE FUNCTION&#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md) 
-  - [Alter Function(Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
+ - [Alter Function(Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md) 
  - [Drop Function(Transact SQL)](../../tools/sql-server-profiler/start-sql-server-profiler.md)
  - [Drop Partition Function(Transact SQL)](https://msdn.microsoft.com/library/ms187759(SQL.130).aspx)
  - [커뮤니티](https://www.bing.com/search?q=user%20defined%20function%20%22sql%20server%202016%22%20examples&qs=n&form=QBRE&pq=user%20defined%20function%20%22sql%20server%202016%22%20examples&sc=0-48&sp=-1&sk=&cvid=C3AD337125A840AD9EEFA3AAC36A3712)에 나와 있는 추가 예제
