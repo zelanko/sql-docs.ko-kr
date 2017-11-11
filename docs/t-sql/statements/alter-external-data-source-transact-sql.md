@@ -1,7 +1,7 @@
 ---
 title: "외부 데이터 원본 (Transact SQL) ALTER | Microsoft Docs"
 ms.custom: 
-ms.date: 12/16/2016
+ms.date: 11/10/2017
 ms.prod: sql-non-specified
 ms.reviewer: 
 ms.suite: 
@@ -31,7 +31,7 @@ ms.lasthandoff: 09/07/2017
 
 ---
 # <a name="alter-external-data-source-transact-sql"></a>ALTER 외부 데이터 원본 (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2016-all_md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   외부 테이블을 만드는 데 외부 데이터 원본을 수정 합니다. 외부 데이터 원본에는 Hadoop 또는 Azure blob 저장소 (WASB) 될 수 있습니다.  
   
