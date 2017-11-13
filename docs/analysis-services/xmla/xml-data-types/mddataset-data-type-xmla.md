@@ -70,12 +70,12 @@ ms.lasthandoff: 09/01/2017
 |파생 요소|없음|  
   
 ## <a name="remarks"></a>주의  
- **MDDataSet** 는 OLAP 기반 행 집합 (또는 데이터 집합) OLAP 데이터를 XML 나타내는 데 필요한 데이터 형식은 제공 합니다. 이 행 집합의 콘텐츠 값에 따라 달라질 수 있습니다는 **콘텐츠** 및 **형식** 속성에는 [속성](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) 의 컬렉션은 ** 실행** 메서드. 에 대 한 자세한 내용은 **콘텐츠** 및 **형식** 속성 참조 [지원 XMLA 속성 & #40; XMLA & #41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
+ **MDDataSet** 는 OLAP 기반 행 집합 (또는 데이터 집합) OLAP 데이터를 XML 나타내는 데 필요한 데이터 형식은 제공 합니다. 이 행 집합의 콘텐츠 값에 따라 달라질 수 있습니다는 **콘텐츠** 및 **형식** 속성에는 [속성](../../../analysis-services/xmla/xml-elements-properties/properties-element-xmla.md) 의 컬렉션은  **실행** 메서드. 에 대 한 자세한 내용은 **콘텐츠** 및 **형식** 속성 참조 [지원 XMLA 속성 &#40; XMLA &#41; ](../../../analysis-services/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties.md).  
   
  OLAP용 OLE DB 데이터 집합 구조에 대한 기본 내용은 XML for Analysis 1.1 사양의 "OLE DB에 MDDataSet 데이터 형식 매핑"을 참조하십시오. 전체 XML 스키마 정의 언어 (XSD) 예제에 대 한는 **MDDataSet** 데이터 형식 "부록 d:: mddataset Example" XML for Analysis 1.1 사양의를 참조 하십시오.  
   
 ## <a name="see-also"></a>관련 항목:  
- [XML 데이터 형식 & #40; XMLA & #41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
+ [XML 데이터 형식 &#40; XMLA &#41;](../../../analysis-services/xmla/xml-data-types/xml-data-types-xmla.md)  
   
   
 

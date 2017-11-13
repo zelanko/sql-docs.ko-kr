@@ -122,7 +122,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  와 \<common_table_expression >  
  UPDATE 문의 범위 내에서 정의된 임시 명명된 결과 집합 또는 뷰를 지정합니다. 이를 CTE(공통 테이블 식)라고 합니다. CTE 결과 집합은 단순 쿼리에서 파생되며 UPDATE 문에서 참조됩니다.  
   
- 공통 테이블 식은 SELECT, INSERT, DELETE 및 CREATE VIEW 문에서도 사용됩니다. 자세한 내용은 참조 [common_table_expression &AMP; #40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
+ 공통 테이블 식은 SELECT, INSERT, DELETE 및 CREATE VIEW 문에서도 사용됩니다. 자세한 내용은 참조 [common_table_expression &AMP;#40; Transact SQL &#41; ](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
  TOP **(** *식***)** [%]  
  수 또는 업데이트 되는 행의 비율을 지정 합니다. *expression* 은 행의 수 또는 비율일 수 있습니다.  
@@ -1223,7 +1223,7 @@ DROP TABLE CTAS_acs
  [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [텍스트 및 이미지 함수 &#40; Transact SQL &#41;](http://msdn.microsoft.com/library/b9c70488-1bf5-4068-a003-e548ccbc5199)   
- [Common_table_expression &AMP; #40; Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
+ [Common_table_expression &AMP;#40; Transact SQL &#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)   
  [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)  
   
   
