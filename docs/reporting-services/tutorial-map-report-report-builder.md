@@ -1,5 +1,5 @@
 ---
-title: "자습서: 지도 보고서 (보고서 작성기) | Microsoft Docs"
+title: "자습서: 맵 보고서(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 08/31/2016
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 18
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: efe91a2e1e8ca7b0744639ed718d63b70e3adc5c
 ms.contentlocale: ko-kr
@@ -98,9 +97,9 @@ ms.lasthandoff: 08/09/2017
   
     디자인 화면에 지도가 추가됩니다.  
   
-13. "지도 제목" 텍스트를 선택하고 **Sales by Store** > Enter 키를 입력합니다.  
+13. “지도 제목” 텍스트를 선택하고 **Sales by Store**를 입력한 후 Enter 키를 누릅니다.  
 
-15. 지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. **지도 계층** 창에는 **포함**계층 유형의 다각형 계층인 PolygonLayer1이 표시됩니다. 각 군은 이 계층의 포함된 지도 요소입니다.  
+15. 지도를 두 번 클릭하여 **지도 계층**창을 표시합니다. **지도 계층** 창에는 **포함**계층 유형의 다각형 계층인 PolygonLayer1이 표시됩니다. 각 군은 이 계층의 포함된 지도 요소입니다.  
   
     > [!NOTE]  
     > **지도 계층** 창이 보이지 않는 경우 현재 보기의 외부에 표시되어 있을 수 있습니다. 디자인 뷰 창의 아래쪽에 있는 스크롤 막대를 사용하여 뷰를 변경합니다. 또는 **보기** 탭에서 **보고서 데이터** 옵션의 선택을 취소하여 디자인 화면 영역을 더 제공합니다.   
@@ -127,7 +126,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  **실행** 탭 > **디자인**을 선택하여 디자인 뷰로 다시 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음을 클릭 하 고 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")합니다. 
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")를 클릭합니다. 
 
     ![report-builder-map-new-layer-wizard-icon](../reporting-services/media/report-builder-map-new-layer-wizard-icon.png) 
   
@@ -138,7 +137,7 @@ ms.lasthandoff: 08/09/2017
 5.  **SQL Server 공간 데이터 원본에 대한 연결을 선택하십시오.** 페이지에서 기존 데이터 원본을 선택하거나 보고서 서버로 이동한 후 데이터 원본을 선택합니다.  
 
     > [!NOTE]  
-    > 적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > 적절한 권한만 가지고 있으면 선택하는 데이터 원본은 중요하지 않습니다. 데이터를 데이터 원본에서 가져오는 것은 아니기 때문입니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 6.  **다음**을 클릭합니다.  
   
@@ -243,7 +242,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음을 클릭 하 고 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")합니다.  
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **새 계층 마법사** 단추 ![rs_IconMapLayerWizard](../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")를 클릭합니다.  
   
 3.  **공간 데이터의 원본 선택** 페이지에서 **SQL Server 공간 쿼리** 를 선택하고 **다음**을 클릭합니다.  
   
@@ -298,7 +297,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 클릭 **계층 추가** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")합니다.  
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가** ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")를 클릭합니다.  
   
 3.  드롭다운 목록에서 **타일 계층**을 클릭합니다.  
   
@@ -462,7 +461,7 @@ ms.lasthandoff: 08/09/2017
   
 1.  디자인 뷰로 전환합니다.  
   
-2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 클릭 **계층 추가**![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer"), 클릭 **점 계층**합니다.    
+2.  지도를 두 번 클릭하여 **지도 계층** 창을 표시합니다. 도구 모음에서 **계층 추가**  ![rs_IconMapAddLayer](../reporting-services/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer")를 클릭한 다음 **점 계층**을 클릭합니다.  
   
     새 점 계층이 지도에 추가됩니다. 기본적으로 점 계층의 공간 데이터 형식은 **포함**입니다.  
   

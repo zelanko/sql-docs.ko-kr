@@ -1,5 +1,5 @@
 ---
-title: "자습서: 보고서 (보고서 작성기)에 스파크 라인 추가 | Microsoft Docs"
+title: "자습서: 보고서에 스파크라인 추가(보고서 작성기) | Microsoft Docs"
 ms.custom: 
 ms.date: 05/30/2017
 ms.prod: sql-server-2016
@@ -16,8 +16,7 @@ caps.latest.revision: 17
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: 0eb007a5207ceb0b023952d5d9ef6d95986092ac
 ms.openlocfilehash: c4cc42eaf9862f2154f598d6f91dafffa906c799
 ms.contentlocale: ko-kr
@@ -40,7 +39,7 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="CreateTable"></a>1. 테이블이 있는 보고서 만들기  
   
-1.  컴퓨터, [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 웹 포털 또는 SharePoint 통합 모드에서 [보고서 작성기를 시작](../reporting-services/report-builder/start-report-builder.md)합니다.  
+1.  컴퓨터,[웹 포털 또는 SharePoint 통합 모드에서](../reporting-services/report-builder/start-report-builder.md) 보고서 작성기를 시작 [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] 합니다.  
   
     **새 보고서 또는 데이터 집합** 대화 상자가 열립니다.  
   
@@ -53,7 +52,7 @@ ms.lasthandoff: 08/09/2017
 4.  **데이터 집합 선택** 페이지에서 **데이터 집합 만들기** > **다음**을 선택합니다. **데이터 원본에 대한 연결 선택** 페이지가 열립니다.  
   
     > [!NOTE]  
-    > 이 자습서에는 특정 데이터에 필요 하지 않습니다. SQL Server 데이터베이스에 연결을 하기만 합니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 10단계로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)을 참조하세요.  
+    > 이 자습서를 사용하기 위해 특정 데이터가 필요하지는 않습니다. SQL Server 데이터베이스에 연결하기만 하면 됩니다. **데이터 원본 연결**에 나열된 데이터 원본 연결이 이미 있는 경우 해당 데이터 원본 연결을 선택하고 10단계로 이동할 수 있습니다. 자세한 내용은 [데이터에 연결하는 다른 방법&#40;보고서 작성기&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)를 참조하세요.  
   
 5.  **새로 만들기**를 클릭합니다. **데이터 원본 속성** 대화 상자가 열립니다.  
   
@@ -326,10 +325,9 @@ ms.lasthandoff: 08/09/2017
   
 ## <a name="next-steps"></a>다음 단계  
 
-이것으로 스파크라인 차트가 있는 테이블 보고서를 만드는 자습서를 마칩니다. 스파크 라인에 대 한 자세한 내용은 참조 [스파크 라인과 데이터 막대](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)합니다.  
+이것으로 스파크라인 차트가 있는 테이블 보고서를 만드는 자습서를 마칩니다. 스파크라인에 대한 자세한 내용은 [스파크라인 및 데이터 막대](../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)를 참조하세요.  
   
 [보고서 작성기 자습서](../reporting-services/report-builder-tutorials.md) 
 [SQL Server 2016의 보고서 작성기](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
 
-문의: [Reporting Services 포럼에서 질문](http://go.microsoft.com/fwlink/?LinkId=620231)
-
+추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](http://go.microsoft.com/fwlink/?LinkId=620231)

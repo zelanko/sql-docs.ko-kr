@@ -1,5 +1,5 @@
 ---
-title: "표시기 아이콘 및 표시기 집합 (보고서 작성기 및 SSRS) 변경 | Microsoft Docs"
+title: "표시기 아이콘 및 표시기 집합 변경(보고서 작성기 및 SSRS) | Microsoft Docs"
 ms.custom: 
 ms.date: 03/01/2017
 ms.prod: sql-server-2016
@@ -15,8 +15,7 @@ caps.latest.revision: 8
 author: maggiesMSFT
 ms.author: maggies
 manager: erikre
-ms.workload: Inactive
-ms.translationtype: Machine Translation
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: 7e9b0deb3a240607b3df2612622803d62749f521
 ms.contentlocale: ko-kr
@@ -100,4 +99,3 @@ ms.lasthandoff: 08/09/2017
  [표시기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/indicators-report-builder-and-ssrs.md)  
   
   
-
