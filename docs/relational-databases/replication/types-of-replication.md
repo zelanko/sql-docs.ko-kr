@@ -25,7 +25,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="types-of-replication"></a>복제 유형
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following types of replication for use in distributed applications:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 분산 응용 프로그램에서 사용할 수 있는 다음 유형의 복제를 제공합니다.  
   
 -   트랜잭션 복제. 자세한 내용은 [트랜잭션 복제](../../relational-databases/replication/transactional/transactional-replication.md)를 참조하세요.  
   
