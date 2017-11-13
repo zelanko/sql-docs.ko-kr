@@ -48,7 +48,7 @@ Visual FoxPro 규칙, 트리거, 기본값 또는 Visual FoxPro ODBC 드라이�
  해당 규칙, 트리거, 기본값, 응용 프로그램 데이터와 상호 작용 하거나 다른 Visual FoxPro 명령이 나 함수를 호출 하는 저장된 프로시저, 드라이버 오류가 발생 합니다. 참조 [지원 되지 않는 Visual FoxPro 명령 및 함수](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) 목록은 한 명령 및 기능 드라이버에서 지원 되지 않습니다.  
   
 > [!TIP]  
->  규칙, 트리거 또는 드라이버에 의해 호출 될 때 실행할 명령을 결정 하는 저장된 프로시저에 조건 코드를 삽입 하려는 경우 사용할 수 있습니다는 **버전 ()** 함수입니다. **버전 ()** 함수에서 반환 "Visual FoxPro ODBC 드라이버 * \<버전 >*" 드라이버에 의해 호출 됩니다.  
+>  규칙, 트리거 또는 드라이버에 의해 호출 될 때 실행할 명령을 결정 하는 저장된 프로시저에 조건 코드를 삽입 하려는 경우 사용할 수 있습니다는 **버전 ()** 함수입니다. **버전 ()** 함수에서 반환 "Visual FoxPro ODBC 드라이버  *\<버전 >*" 드라이버에 의해 호출 됩니다.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Visual FoxPro 명령과 규칙, 트리거, 기본값 및 저장된 프로시저에서 지원 되는 기능  
   

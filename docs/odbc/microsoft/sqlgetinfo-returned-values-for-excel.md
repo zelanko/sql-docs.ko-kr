@@ -101,7 +101,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_DRIVER_HSTMT|드라이버 관리자에서 처리 됩니다.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (* nnnn * 빌드 날짜를 지정)|  
+|SQL_DRIVER_VER|"4.00.*nnnn*" ( *nnnn*  빌드 날짜를 지정)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  

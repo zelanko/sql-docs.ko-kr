@@ -79,7 +79,7 @@ ms.lasthandoff: 09/09/2017
   
 -   인증서가 만료되지 않았습니다.  
   
--   CN (일반 이름) 주체에서 또는 DNS 이름에는 대체 SAN (주체 이름) 인증서의 정확히 일치 하는 **serverName** 연결 문자열에 지정 된 값을 지정 하는 경우는 ** hostNameInCertificate** 속성 값입니다.  
+-   CN (일반 이름) 주체에서 또는 DNS 이름에는 대체 SAN (주체 이름) 인증서의 정확히 일치 하는 **serverName** 연결 문자열에 지정 된 값을 지정 하는 경우는  **hostNameInCertificate** 속성 값입니다.  
   
 -   DNS 이름은 와일드카드 문자를 포함할 수 있습니다. 하지만 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 와일드 카드 일치를 지원 하지 않습니다. 즉, abc.com *.com 일치 하지 것입니다 되지만 \*.com 일치시킬지 \*. com입니다.  
   

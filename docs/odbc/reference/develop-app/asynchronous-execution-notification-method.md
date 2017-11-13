@@ -380,7 +380,7 @@ retcode = SQLSetConnectAttr ( hDBC,
   
  응용 프로그램 전이나 SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE 특성을 설정한 후 SQL_ATTR_ASYNC_DBC_EVENT를 설정할 수 있습니다.  
   
- 응용 프로그램 연결 함수를 호출 하기 전에 ODBC 연결 핸들에 SQL_ATTR_ASYNC_DBC_EVENT 특성을 설정할 수 (**SQLConnect**, **SQLBrowseConnect**, 또는 ** SQLDriverConnect**). ODBC 드라이버 관리자에는 ODBC 드라이버는 응용 프로그램에서 사용할 모르기 때문에 관계 없이 SQL_SUCCESS를 반환 합니다. 연결 함수를 호출 하는 응용 프로그램을 ODBC 드라이버 관리자가 드라이버 비동기 알림을 지원 하는지 여부를 확인 합니다. ODBC 드라이버 관리자와 SQLSTATE S1_118 SQL_ERROR를 반환 합니다 드라이버 비동기 알림의 지원 하지 않으면 (드라이버 비동기 알림을 지원 하지 않음). 드라이버에서 비동기 알림의 지 원하는 경우 ODBC 드라이버 관리자 드라이버를 호출 하 고 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 및 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT 해당 특성을 설정 됩니다.  
+ 응용 프로그램 연결 함수를 호출 하기 전에 ODBC 연결 핸들에 SQL_ATTR_ASYNC_DBC_EVENT 특성을 설정할 수 (**SQLConnect**, **SQLBrowseConnect**, 또는  **SQLDriverConnect**). ODBC 드라이버 관리자에는 ODBC 드라이버는 응용 프로그램에서 사용할 모르기 때문에 관계 없이 SQL_SUCCESS를 반환 합니다. 연결 함수를 호출 하는 응용 프로그램을 ODBC 드라이버 관리자가 드라이버 비동기 알림을 지원 하는지 여부를 확인 합니다. ODBC 드라이버 관리자와 SQLSTATE S1_118 SQL_ERROR를 반환 합니다 드라이버 비동기 알림의 지원 하지 않으면 (드라이버 비동기 알림을 지원 하지 않음). 드라이버에서 비동기 알림의 지 원하는 경우 ODBC 드라이버 관리자 드라이버를 호출 하 고 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK 및 SQL_ATTR_ASYNC_DBC_NOTIFICATION_CONTEXT 해당 특성을 설정 됩니다.  
   
  마찬가지로, 응용 프로그램이 호출 **SQLSetStmtAttr** ODBC 문 핸들 및 문 수준 비동기 알림을 사용 하지 않도록 설정 하거나 설정 하려면 SQL_ATTR_ASYNC_STMT_EVENT 특성을 지정 합니다. 연결이 설정 된 후에 항상 문 함수 호출 되기 때문에 **SQLSetStmtAttr** SQLSTATE S1_118 된 sql_error가 반환 됩니다 (드라이버 비동기 알림을 지원 하지 않음) 경우 즉시 해당 드라이버는 비동기 작업을 지원 하지 않습니다 또는 드라이버는 비동기 작업을 지원 하지만 비동기 알림을 지원 하지 않습니다.  
   

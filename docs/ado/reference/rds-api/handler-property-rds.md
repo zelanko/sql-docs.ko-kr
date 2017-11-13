@@ -54,7 +54,7 @@ DataControl.Handler = String
   
  기본 처리기의 이름은 **MSDFMAP 합니다. 처리기**, 해당 기본 매개 변수는 명명 된 사용자 지정 파일 및 **MSDFMAP 합니다. INI**합니다. 이 속성을 사용 하 여 서버 관리자가 만든 대체 사용자 지정 파일을 호출 합니다.  
   
- 설정 하는 대신은 **처리기** 속성 처리기에서 및 매개 변수를 지정 하는 것은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 즉, "**처리기 =** * handlerName, parameter1, parameter2;... *".  
+ 설정 하는 대신은 **처리기** 속성 처리기에서 및 매개 변수를 지정 하는 것은 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성 즉, "**처리기 =**  *handlerName, parameter1, parameter2;...* ".  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

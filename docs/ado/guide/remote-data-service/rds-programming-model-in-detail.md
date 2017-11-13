@@ -52,7 +52,7 @@ ms.lasthandoff: 09/09/2017
   
  RDS 개체 모델에는이 기능을 구체화는 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체입니다.  
   
- 또한이 개체에는 빈을 만드는 방법을 **레코드 집합** 프로그래밍 방식으로 채울 수 있는 개체 ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)), 및 변환 하는 다른 방법은 **레코드 집합 ** 개체에는 웹 페이지에 텍스트 문자열 ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
+ 또한이 개체에는 빈을 만드는 방법을 **레코드 집합** 프로그래밍 방식으로 채울 수 있는 개체 ([CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md)), 및 변환 하는 다른 방법은 **레코드 집합**  개체에는 웹 페이지에 텍스트 문자열 ([ConvertToString](../../../ado/reference/rds-api/converttostring-method-rds.md)).  
   
  Ado, 일부 표준 연결 및 명령 동작을 재정의할 수 있습니다는 **업데이트할** 와 **DataFactory** 명령 처리기와 연결을 포함 하는 사용자 지정 파일 및 보안 매개 변수입니다.  
   
@@ -63,7 +63,7 @@ ms.lasthandoff: 09/09/2017
   
  RDS 개체 모델에는이 기능을 구체화는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체입니다.  
   
- **.rds입니다 DataControl** 두 가지 측면이 있습니다. 한 가지 측면인 데이터 소스에 적용 됩니다. 명령 및 사용 하 여 연결 정보를 설정 하는 경우는 **연결** 및 **SQL** 의 속성은 **.rds입니다 DataControl**, 자동으로 사용 됩니다는 **.rds입니다 DataSpace** 기본값에 대 한 참조를 만들려면 **업데이트할** 개체입니다. 그런 다음 **업데이트할** ´ ֲ는 **연결** 속성 값을 사용 하 여 데이터 원본에 연결 하려면는 **SQL** 속성 값을 가져오는 한 ** 레코드 집합** 데이터 원본과 반환 된 **레코드 집합** 개체는 **.rds입니다 DataControl**합니다.  
+ **.rds입니다 DataControl** 두 가지 측면이 있습니다. 한 가지 측면인 데이터 소스에 적용 됩니다. 명령 및 사용 하 여 연결 정보를 설정 하는 경우는 **연결** 및 **SQL** 의 속성은 **.rds입니다 DataControl**, 자동으로 사용 됩니다는 **.rds입니다 DataSpace** 기본값에 대 한 참조를 만들려면 **업데이트할** 개체입니다. 그런 다음 **업데이트할** ´ ֲ는 **연결** 속성 값을 사용 하 여 데이터 원본에 연결 하려면는 **SQL** 속성 값을 가져오는 한  **레코드 집합** 데이터 원본과 반환 된 **레코드 집합** 개체는 **.rds입니다 DataControl**합니다.  
   
  두 번째 측면은 표시 되는 관련 반환 된 **레코드 집합** 시각적 컨트롤에 대 한 정보입니다. 시각적 컨트롤과 연결할 수 있습니다는 **.rds입니다 DataControl** (에 프로세스 바인딩)은 연결 된 정보에 액세스 하 고 **레코드 집합** 개체, Microsoft® Internet Explorer에서 웹 페이지에서 쿼리 결과 표시 합니다. 각 **.rds입니다 DataControl** 개체 하나에 바인딩합니다 **레코드 집합** 하나 이상의 컨트롤 (예를 들어, 한 입력란, 콤보 상자, 표 형태 컨트롤 등)는 단일 쿼리의 결과 나타내는 개체입니다. 여러 개 있을 수 있습니다 **.rds입니다 DataControl** 각 페이지에는 개체입니다. 각 **.rds입니다 DataControl** 개체는 다른 데이터 원본에 연결할 수와 별도의 쿼리 결과 포함 합니다.  
   
@@ -73,7 +73,7 @@ ms.lasthandoff: 09/09/2017
  RDS 자체 이벤트는 ADO 이벤트 모델의 독립적인 두 지원 합니다. [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) 이벤트가 호출 될 때마다는 **.rds입니다 DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 속성이 변경 되므로 사용자에 게 알리는 비동기 작업이 완료 된 경우 종료 되거나 오류가 발생 했습니다. [onError](../../../ado/reference/rds-api/onerror-event-rds.md) 는 비동기 작업 중에 오류가 발생 하는 경우에 이벤트는 오류가 발생할 때마다에 호출 됩니다.  
   
 > [!NOTE]
->  RDS에 두 개의 추가 이벤트를 제공 하는 Microsoft Internet Explorer: **onDataSetChanged**, 않는다는 의미는 **레코드 집합** 기능 이지만 여전히 행 검색 및 ** onDataSetComplete**, 않는다는 의미는 **레코드 집합** 행 검색을 완료 합니다.  
+>  RDS에 두 개의 추가 이벤트를 제공 하는 Microsoft Internet Explorer: **onDataSetChanged**, 않는다는 의미는 **레코드 집합** 기능 이지만 여전히 행 검색 및  **onDataSetComplete**, 않는다는 의미는 **레코드 집합** 행 검색을 완료 합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [RDS 프로그래밍 모델 개체와 사용](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)   

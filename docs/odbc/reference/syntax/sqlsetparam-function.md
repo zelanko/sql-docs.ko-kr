@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  ODBC 2.0에서는 ODBC 1.0 함수 **SQLSetParam** 로 대체 되었습니다 **SQLBindParameter**합니다. 자세한 내용은 참조 [SQLBindParameter 함수](../../../odbc/reference/syntax/sqlbindparameter-function.md)합니다.  
   
 > [!NOTE]  
->  자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 경우는 ODBC 2이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 3.* x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)합니다.  
+>  자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 경우는 ODBC 2이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 3. *x* 드라이버 참조 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)합니다.  
   
 ## <a name="remarks"></a>주의  
  참조 [ODBC 64 비트 정보](../../../odbc/reference/odbc-64-bit-information.md)응용 프로그램이 64 비트 운영 체제에서 실행 되는 경우.  

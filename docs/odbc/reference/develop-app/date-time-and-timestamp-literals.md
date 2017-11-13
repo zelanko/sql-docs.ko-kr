@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="date-time-and-timestamp-literals"></a>Date, Time 및 Timestamp 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
   
- **{***-형식* **'** *값* **'을 (를)  **  
+ **{***-형식* **'** *값* **'을 (를)**   
   
  여기서 *리터럴 형식이* 값 중 하나는 다음 표에 나열 됩니다.  
   
@@ -35,7 +35,7 @@ ms.lasthandoff: 09/09/2017
 |---------------------|-------------|-----------------------|  
 |**d**|날짜|*yyyy*-*mm*-*dd*|  
 |**t**|시간 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|타임스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss* [. *f... *] [1]|  
+|**ts**|타임스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss* [. *f...* ] [1]|  
   
  [초 구성 요소가 포함 된 리터럴 시간 또는 타임 스탬프 간격에서 소수점 오른쪽 자릿수입니다 1 수는 SQL_DESC_PRECISION 설명자 필드에 포함 된 초 전체 자릿수에 따라 다릅니다. (자세한 내용은 참조 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

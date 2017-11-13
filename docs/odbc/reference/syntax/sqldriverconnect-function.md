@@ -87,7 +87,7 @@ SQLRETURN SQLDriverConnect(
  [입력] 길이 **OutConnectionString* 문자에서 버퍼입니다.  
   
  *StringLength2Ptr*  
- [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *OutConnectionString*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength*, 연결 문자열에서 완료 \* *OutConnectionString* 잘립니다 * BufferLength* null 종결 문자 길이 뺀 값입니다.  
+ [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *OutConnectionString*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength*, 연결 문자열에서 완료 \* *OutConnectionString* 잘립니다  *BufferLength* null 종결 문자 길이 뺀 값입니다.  
   
  *DriverCompletion*  
  [입력] 드라이버 관리자 또는 드라이버에 연결 하는 방법은 물어야 있는지 여부를 나타내는 플래그:  
@@ -108,14 +108,14 @@ SQLRETURN SQLDriverConnect(
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *OutConnectionString* 충분히 연결 문자열이 잘림 하므로 전체 연결 문자열을 반환할 수 없습니다. 잘리지 않은 연결 문자열의 길이에서 **StringLength2Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S00|잘못 된 연결 문자열 특성입니다.|잘못 된 특성 키워드는 연결 문자열에 지정 되었습니다 (*InConnectionString*), 했지만 드라이버 그래도 데이터 원본에 연결할 수 있습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01 S 02|옵션 값이 변경 됨|드라이버에서 가리키는 지정된 된 값을 지원 하지 않았습니다 고 *ValuePtr* 인수에 **SQLSetConnectAttr** 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01S08|파일 DSN을 저장할 수 없습니다.|문자열에 * \*InConnectionString* 포함 한 **FILEDSN** 키워드, 하지만.dsn 파일 저장 되지 않았습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01S09|잘못 된 키워드|(DM)에 있는 문자열 * \*InConnectionString* 포함 한 **SAVEFILE** 키워드 하지 않고는 **드라이버** 또는 **FILEDSN** 키워드입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S08|파일 DSN을 저장할 수 없습니다.|문자열에  *\*InConnectionString* 포함 한 **FILEDSN** 키워드, 하지만.dsn 파일 저장 되지 않았습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|01S09|잘못 된 키워드|(DM)에 있는 문자열  *\*InConnectionString* 포함 한 **SAVEFILE** 키워드 하지 않고는 **드라이버** 또는 **FILEDSN** 키워드입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08001|클라이언트 연결을 설정할 수 없습니다.|드라이버는 데이터 원본과 연결을 설정할 수 없습니다.|  
 |08002|사용 중인 연결 이름|(DM) 지정 된 *ConnectionHandle* 이미를 사용한 데이터 원본과 연결을 설정 하 고 연결이 아직 열려 있습니다.|  
 |08004|서버 연결을 거부 했습니다.|데이터 원본 구현에서 정의 된 이유로 연결 만들기를 거부 했습니다.|  
 |08S01|통신 연결 오류|드라이버를 드라이버 하려고 했던 연결 데이터 원본 사이의 통신 연결 하기 전에 실패는 **SQLDriverConnect** 처리 함수는 완료 되었습니다.|  
 |28000|잘못 된 권한 지정|사용자 식별자 또는 권한 부여 문자열 또는 연결 문자열에 지정 된 대로 둘 다 (*InConnectionString*), 데이터 원본에 정의 된 제한을 위반 합니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*szMessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*szMessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY000|일반 오류 발생: 잘못 된 파일 dsn|(DM)에 있는 문자열 **InConnectionString* FILEDSN 키워드가 포함 되어 있지만.dsn 파일의 이름을 찾을 수 없습니다.|  
 |HY000|일반 오류: 파일 버퍼를 만들 수 없습니다.|(DM)에 있는 문자열 **InConnectionString* FILEDSN 키워드가 포함 되어 있지만.dsn 파일을 읽을 수 없습니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버 관리자 완료 또는 실행을 지 원하는 데 필요한 메모리를 할당할 수 없습니다.는 **SQLDriverConnect** 함수입니다.<br /><br /> 드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
@@ -139,7 +139,7 @@ SQLRETURN SQLDriverConnect(
 |IM009|변환 DLL을 로드할 수 없습니다.|드라이버 변환 데이터 원본에 대해 또는 연결에 대해 지정 된 DLL을 로드할 수 없습니다.|  
 |IM010|데이터 원본 이름이 너무 깁니다.|DM ()는 DSN 키워드에 대 한 특성 값 SQL_MAX_DSN_LENGTH 자를 초과 했습니다.|  
 |IM011|드라이버 이름이 너무 깁니다.|DM ()는 특성에 대 한 값은 **드라이버** 키워드 255 자를 초과 했습니다.|  
-|IM012|드라이버 키워드 구문 오류입니다.|(DM)에 대 한 키워드-값 쌍으로 **드라이버** 키워드 구문 오류를 포함 합니다.<br /><br /> (DM)에 있는 문자열 * \*InConnectionString* 포함 된 한 **FILEDSN** .dsn 파일 있지만 키워드를 포함 하지 않은 한 **드라이버** 키워드 또는 ** DSN** 키워드입니다.|  
+|IM012|드라이버 키워드 구문 오류입니다.|(DM)에 대 한 키워드-값 쌍으로 **드라이버** 키워드 구문 오류를 포함 합니다.<br /><br /> (DM)에 있는 문자열  *\*InConnectionString* 포함 된 한 **FILEDSN** .dsn 파일 있지만 키워드를 포함 하지 않은 한 **드라이버** 키워드 또는  **DSN** 키워드입니다.|  
 |IM014|지정된 된 DSN 드라이버 및 응용 프로그램 사이 아키텍처 불일치가 포함|64 비트 드라이버;에 연결 하는 DSN을 사용 하 여 (DM) 32 비트 응용 프로그램 또는 그 반대의 경우도 마찬가지입니다.|  
 |IM015|드라이버의 SQLDriverConnect SQL_HANDLE_DBC_INFO_HANDLE에 실패 했습니다.|드라이버가 SQL_ERROR를 반환 하면 드라이버 관리자 응용 프로그램에 sql_error가 반환 하 고 연결이 실패 합니다.<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 참조 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)합니다.|  
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
@@ -159,7 +159,7 @@ SQLRETURN SQLDriverConnect(
   
  *드라이버-정의-속성-키워드* :: = *식별자*  
   
- 여기서 *문자열* 에 0 개 이상의 문자가; *식별자* 에 하나 이상의 문자가; *특성 키워드 * /소문자를 구분 하지 않습니다 *특성-값* 대/소문자 구분; 수 있습니다의 값은 **DSN** 키워드 공백의로 구성 되어 있지 않습니다.  
+ 여기서 *문자열* 에 0 개 이상의 문자가; *식별자* 에 하나 이상의 문자가; *특성 키워드*  /소문자를 구분 하지 않습니다 *특성-값* 대/소문자 구분; 수 있습니다의 값은 **DSN** 키워드 공백의로 구성 되어 있지 않습니다.  
   
  연결 문자열 및 초기화 파일 문법, 키워드 및 특성 값이 문자를 포함 하는 **{} (),? \*=! @** 묶지와 중괄호 피해 야 합니다. 값은 **DSN** 키워드는 공백으로 구성할 수 없습니다 및 선행 공백을 포함할 수 없습니다. 시스템 정보 문법, 인해 키워드 및 데이터 원본 이름은 백슬래시를 포함할 수 없습니다 (\\) 문자.  
   

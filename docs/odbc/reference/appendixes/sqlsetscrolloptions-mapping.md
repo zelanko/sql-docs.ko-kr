@@ -61,7 +61,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     |SQL_CONCUR_ROWVER|SQL_CA2_ROWVER_CONCURRENCY|  
     |SQL_CONCUR_VALUES|SQL_CA2_VALUES_CONCURRENCY|  
   
-     경우는 *동시성* 인수 앞의 표에서에 대 한 호출에서 값 중 하나는 **SQLSetScrollOptions** SQLSTATE S1108 반환 (범위를 벗어났습니다. 동시성 옵션) 다음 단계를 수행 됩니다. 적절 한 비트 (앞의 표에 표시 된)으로 설정 되지 않은 경우 **InfoValuePtr* 해당 하는 값 중 하나에 *동시성* 인수에 대 한 호출 ** SQLSetScrollOptions** SQLSTATE S1C00 반환 (드라이버를 사용할 수 없습니다.) 및 없음 다음 단계를 수행 합니다.  
+     경우는 *동시성* 인수 앞의 표에서에 대 한 호출에서 값 중 하나는 **SQLSetScrollOptions** SQLSTATE S1108 반환 (범위를 벗어났습니다. 동시성 옵션) 다음 단계를 수행 됩니다. 적절 한 비트 (앞의 표에 표시 된)으로 설정 되지 않은 경우 **InfoValuePtr* 해당 하는 값 중 하나에 *동시성* 인수에 대 한 호출  **SQLSetScrollOptions** SQLSTATE S1C00 반환 (드라이버를 사용할 수 없습니다.) 및 없음 다음 단계를 수행 합니다.  
   
 -   에 대 한 호출  
   
@@ -69,7 +69,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     와 * \*ValuePtr* 값에 따라 다음 표의 값 중 하나로 설정 된 *KeysetSize* 인수에 **SQLSetScrollOptions**합니다.  
+     와  *\*ValuePtr* 값에 따라 다음 표의 값 중 하나로 설정 된 *KeysetSize* 인수에 **SQLSetScrollOptions**합니다.  
   
     |*KeysetSize* 인수|*\*ValuePtr*|  
     |---------------------------|------------------|  
@@ -85,7 +85,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     와 * \*ValuePtr* 로 설정 된 *동시성* 인수 **SQLSetScrollOptions**합니다.  
+     와  *\*ValuePtr* 로 설정 된 *동시성* 인수 **SQLSetScrollOptions**합니다.  
   
 -   경우는 *KeysetSize* 호출에 인수 **SQLSetScrollOptions** 이 양수인 경우에 대 한 호출  
   
@@ -93,7 +93,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     와 * \*ValuePtr* 로 설정 된 *KeysetSize* 인수 **SQLSetScrollOptions**합니다.  
+     와  *\*ValuePtr* 로 설정 된 *KeysetSize* 인수 **SQLSetScrollOptions**합니다.  
   
 -   에 대 한 호출  
   
@@ -101,7 +101,7 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     와 * \*ValuePtr* 로 설정 된 *RowsetSize* 인수 **SQLSetScrollOptions**합니다.  
+     와  *\*ValuePtr* 로 설정 된 *RowsetSize* 인수 **SQLSetScrollOptions**합니다.  
   
     > [!NOTE]  
     >  드라이버 관리자에 매핑합니다 **SQLSetScrollOptions** ODBC 3을 사용 하는 응용 프로그램에 대 한*.x* 지원 하지 않는 드라이버 **SQLSetScrollOptions**, 드라이버 관리자 설정 SQL_ROWSET_SIZE 문 옵션 not SQL_ATTR_ROW_ARRAY_SIZE 문 특성에는 *RowsetSize* 인수 **SQLSetScrollOption**합니다. 결과적으로, **SQLSetScrollOptions** 를 호출 하 여 여러 행을 인출할 때 응용 프로그램에서 사용할 수 없습니다 **SQLFetch** 또는 **SQLFetchScroll**합니다. 호출 하 여 행을 가져오는 여러 경우에 사용할 수 있습니다 **SQLExtendedFetch**합니다.

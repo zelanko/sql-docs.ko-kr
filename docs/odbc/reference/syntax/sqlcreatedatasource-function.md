@@ -58,7 +58,7 @@ BOOL SQLCreateDataSource(
  **SQLCreateDataSource** 데이터 원본이 생성 된 경우 TRUE를 반환 합니다. 그렇지 않으면 FALSE를 반환합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLCreateDataSource** 관련 FALSE를 반환 * \*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에 * \*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **SQLCreateDataSource** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
 |*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
@@ -102,7 +102,7 @@ BOOL SQLCreateDataSource(
   
  ![새 데이터 소스 만들기 대화 상자: 검토](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
   
- 경우 **마침** 를 클릭 하 고 **파일 데이터 원본** 데이터 원본 유형으로 선택한 경우는 **이 연결을 확인** 옵션은 TRUE, ** SQLDriverConnect** 로 호출 되는 **SAVEFILE** 및 **드라이버** 키워드입니다. *DriverCompletion* 인수 SQL_DRIVER_COMPLETE로 설정 됩니다. 파일 이름에 대 한는 **SAVEFILE** 키워드는 입력 한 이름 또는 선택 함, 및에 대 한 드라이버 이름을 **드라이버** 키워드는 이름을 선택 합니다. 해당 문자열은 후 추가 고급 마법사 페이지로에 드라이버별 연결 문자열을 지정 하는 경우는 **드라이버** 키워드입니다.  
+ 경우 **마침** 를 클릭 하 고 **파일 데이터 원본** 데이터 원본 유형으로 선택한 경우는 **이 연결을 확인** 옵션은 TRUE,  **SQLDriverConnect** 로 호출 되는 **SAVEFILE** 및 **드라이버** 키워드입니다. *DriverCompletion* 인수 SQL_DRIVER_COMPLETE로 설정 됩니다. 파일 이름에 대 한는 **SAVEFILE** 키워드는 입력 한 이름 또는 선택 함, 및에 대 한 드라이버 이름을 **드라이버** 키워드는 이름을 선택 합니다. 해당 문자열은 후 추가 고급 마법사 페이지로에 드라이버별 연결 문자열을 지정 하는 경우는 **드라이버** 키워드입니다.  
   
  경우 **SQLDriverConnect** 드라이버 관리자와 관계 없이 SQL_SUCCESS를 반환 파일 DSN을 만들었습니다. **SQLCreateDataSource** TRUE를 반환 합니다. 경우 **SQLDriverConnect** 경고 메시지와 관계 없이 SQL_SUCCESS를 반환 하지 않는 상자에 표시 된 연결을 데이터 원본에 설정할 수 없습니다. DSN이 지정 된 최소 연결 정보를 계속 만들 수 있습니다. 이 메시지 상자에는 취소 하거나 파일 DSN 만들기를 계속 사용자 수 있습니다.  
   
@@ -110,7 +110,7 @@ BOOL SQLCreateDataSource(
   
  경우 **파일 데이터 소스** 데이터 원본 유형으로 선택한 및 **이 연결을 확인** 옵션은 FALSE, 사용 하 여 파일 DSN 만들어집니다는 **드라이버** 키워드 및 사용자 지정 연결 문자열 (있는 경우)에서 고급 마법사 페이지로 합니다. 에 대 한 TRUE가 반환 되는 파일 만들기에 성공 하면 **SQLCreateDataSource**합니다. 파일 만들기 성공 하지 못한 경우 오류 메시지 상자 원인 오류는 운영 체제에서 반환 된 사용 하 여 사용자를 알립니다. 에 대 한 FALSE가 반환 **SQLCreateDataSource** ODBC_ERROR_CREATE_DSN_FAILED의 오류 코드입니다. 파일 데이터 원본에 대 한 자세한 내용은 참조 [를 사용 하 여 파일 데이터 원본 연결](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), 참조 또는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)합니다.  
   
- 경우 **사용자** 또는 **시스템 데이터 원본** 데이터 원본 유형으로 선택한 **ConfigDSN** 드라이버 설치 프로그램에서 라이브러리는 ODBC_ADD_DSN으로 호출 * 문제점과*합니다. 자세한 내용은 참조 [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)합니다.  
+ 경우 **사용자** 또는 **시스템 데이터 원본** 데이터 원본 유형으로 선택한 **ConfigDSN** 드라이버 설치 프로그램에서 라이브러리는 ODBC_ADD_DSN으로 호출  *문제점과*합니다. 자세한 내용은 참조 [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)합니다.  
   
 ## <a name="related-functions"></a>관련 함수  
   

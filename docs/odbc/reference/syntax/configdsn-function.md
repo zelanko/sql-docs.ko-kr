@@ -72,7 +72,7 @@ BOOL ConfigDSN(
  함수는 실패 한 경우, FALSE 실패할 경우 TRUE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **ConfigDSN** 관련 FALSE를 반환 * \*pfErrorCode* 를 호출 하 여 설치 관리자 오류 버퍼에 값이 게시 **SQLPostInstallerError** 및 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에 * \*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **ConfigDSN** 관련 FALSE를 반환  *\*pfErrorCode* 를 호출 하 여 설치 관리자 오류 버퍼에 값이 게시 **SQLPostInstallerError** 및 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
 |*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
@@ -114,7 +114,7 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
 ## <a name="modifying-a-data-source"></a>데이터 원본 수정  
  데이터 원본을 수정 하려면 데이터 원본 이름으로 전달 해야 **ConfigDSN** 에 *lpszAttributes*합니다. **ConfigDSN** Odbc.ini 파일 (또는 레지스트리)에서 데이터 원본 이름 인지 확인 합니다.  
   
- 경우 *창은* 매개 변수가 null 이면 **ConfigDSN** 의 정보를 사용 하 여 *lpszAttributes* Odbc.ini 파일 (또는 레지스트리)에 대 한 정보를 수정할 수 있습니다. 경우 *창은* null이 아니면 **ConfigDSN** 의 정보를 사용 하 여 대화 상자를 표시 *lpszAttributes*에 없는 정보에 대 한; *lpszAttributes *, 시스템 정보에서 정보를 사용 합니다. 사용자가 수정할 수 전에 정보 **ConfigDSN** 시스템 정보에 저장 합니다.  
+ 경우 *창은* 매개 변수가 null 이면 **ConfigDSN** 의 정보를 사용 하 여 *lpszAttributes* Odbc.ini 파일 (또는 레지스트리)에 대 한 정보를 수정할 수 있습니다. 경우 *창은* null이 아니면 **ConfigDSN** 의 정보를 사용 하 여 대화 상자를 표시 *lpszAttributes*에 없는 정보에 대 한; *lpszAttributes* , 시스템 정보에서 정보를 사용 합니다. 사용자가 수정할 수 전에 정보 **ConfigDSN** 시스템 정보에 저장 합니다.  
   
  데이터 원본 이름이 변경 된 경우 **ConfigDSN** 첫 번째로 호출 **SQLRemoveDSNFromIni** 설치 관리자에서 기존 데이터를 제거 하는 DLL 소스 Odbc.ini 파일 (또는 레지스트리에서) 사양입니다. 그런 다음 새 데이터 소스 사양을 추가 하려면 이전 섹션의 단계를 따릅니다. 데이터 원본 이름은 변경 되지 않았습니다 경우 **ConfigDSN** 호출 **SQLWritePrivateProfileString** 기타 변경을 수행 하려면 DLL이 설치 관리자에서 합니다. **ConfigDSN** 삭제 하거나 값을 변경할 수는 **드라이버** 키워드입니다.  
   

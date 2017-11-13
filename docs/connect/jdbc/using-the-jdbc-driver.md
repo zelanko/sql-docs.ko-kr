@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  사용 가능한 기능은 사용자의 선택에 따라서도 결정됩니다. JAR 파일 선택에 대 한 자세한 내용은 참조 하십시오. [JDBC 드라이버에 대 한 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)합니다.  
   
 ## <a name="setting-the-classpath"></a>클래스 경로 설정  
- JDBC 드라이버는 Java SDK에 포함되어 있지 않습니다. 포함 하도록 클래스 경로 설정 해야 사용 하려는 경우는 **sqljdbc.jar** 파일인 **sqljdbc4.jar** 파일인은 **sqljdbc41.jar** 파일 또는 ** sqljdbc42.jar** 파일입니다. JDBC 드라이버 6.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.2.1.jre7.jar** 또는 **mssql-jdbc-6.2.1.jre8.jar**합니다. 클래스 경로에 항목이 없으면 응용 프로그램에서 일반적인 "클래스를 찾을 수 없습니다." 예외가 throw됩니다.  
+ JDBC 드라이버는 Java SDK에 포함되어 있지 않습니다. 포함 하도록 클래스 경로 설정 해야 사용 하려는 경우는 **sqljdbc.jar** 파일인 **sqljdbc4.jar** 파일인은 **sqljdbc41.jar** 파일 또는  **sqljdbc42.jar** 파일입니다. JDBC 드라이버 6.2를 사용 하 여 포함 하도록 클래스 경로 설정 하는 경우는 **mssql-jdbc-6.2.1.jre7.jar** 또는 **mssql-jdbc-6.2.1.jre8.jar**합니다. 클래스 경로에 항목이 없으면 응용 프로그램에서 일반적인 "클래스를 찾을 수 없습니다." 예외가 throw됩니다.  
   
 ### <a name="for-microsoft-jdbc-driver-62"></a>Microsoft JDBC 드라이버 6.2
  **mssql-jdbc-6.2.1.jre7.jar** 또는 **mssql-jdbc-6.2.1.jre8.jar** 파일이 다음 위치에 설치 됩니다.  

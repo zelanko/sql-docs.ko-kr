@@ -53,7 +53,7 @@ Stream.CopyTo DestStream, NumChars
   
  기존 문자 또는 대상 스트림은 바이트, 복사가 종료 되는 지점 이후의 모든 내용이 그대로 유지 하 고 잘리지 않습니다. **위치** 은 바이트 바로 다음의 마지막 바이트가 복사 합니다. 이러한 접두사 바이트 truncate 하려면 호출 [SetEOS](../../../ado/reference/ado-api/seteos-method.md)합니다.  
   
- **CopyTo** 데이터를 복사 하는 대상으로 쓰일 수 **스트림** 소스로 같은 유형의 **스트림** (자신의 **형식** 속성 설정은 모두 **adTypeText** 또는 둘 다 **adTypeBinary**). 텍스트에 대 한 **스트림** 개체를 변경할 수는 [Charset](../../../ado/reference/ado-api/charset-property-ado.md) 대상의 속성 설정을 **스트림** 한 문자 집합을 다른 변환 하 합니다. 또한 텍스트 **스트림** 이진 파일에 개체를 성공적으로 복사 하려면 **스트림** 개체가 아니라 이진 **스트림** 텍스트에 개체를 복사할 수 없습니다 **스트림 ** 개체입니다.  
+ **CopyTo** 데이터를 복사 하는 대상으로 쓰일 수 **스트림** 소스로 같은 유형의 **스트림** (자신의 **형식** 속성 설정은 모두 **adTypeText** 또는 둘 다 **adTypeBinary**). 텍스트에 대 한 **스트림** 개체를 변경할 수는 [Charset](../../../ado/reference/ado-api/charset-property-ado.md) 대상의 속성 설정을 **스트림** 한 문자 집합을 다른 변환 하 합니다. 또한 텍스트 **스트림** 이진 파일에 개체를 성공적으로 복사 하려면 **스트림** 개체가 아니라 이진 **스트림** 텍스트에 개체를 복사할 수 없습니다 **스트림**  개체입니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [스트림 개체(ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

@@ -99,7 +99,7 @@ SQLRETURN SQLFetchScroll(
 |07009|잘못 된 설명자 인덱스입니다.|드라이버는 ODBC 2는*.x* 지원 하지 않는 드라이버 **SQLExtendedFetch**, 열에 대 한 바인딩에 지정 된 열 번호는 및입니다.<br /><br /> 열 0, 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|열에 대해 반환 되는 다양 한 길이의 책갈피가 잘렸습니다.|  
-|22002|지표 변수가 필요 하지만 제공 되지 않았습니다.|NULL 데이터를 가져온 열으로 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는 ** SQLSetDescRec**)이 null 포인터입니다.|  
+|22002|지표 변수가 필요 하지만 제공 되지 않았습니다.|NULL 데이터를 가져온 열으로 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는  **SQLSetDescRec**)이 null 포인터입니다.|  
 |22003|숫자 값 범위를 벗어났습니다.|하나 이상의 바인딩된 열에 대 한 숫자 값 (숫자 또는 문자열)으로 반환는 발생할 (소수) 대비 전체 부분의 잘릴 수 있습니다.<br /><br /> 자세한 내용은 참조 [SQL에서 C 데이터 형식 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 에 [부록 d: 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md)합니다.|  
 |22007|잘못 된 날짜/시간 형식|날짜, 시간 또는 타임 스탬프 C 구조에는 문자는 결과 집합 열에에서 바인딩된 되었으며 열에 값을 각각는 잘못 된 날짜, 시간 또는 타임 스탬프.|  
 |22012|0으로 나누기|산술 식에서 값을 반환한, 나누기에서 복원 하려고 시도 했습니다 0입니다.|  
@@ -108,10 +108,10 @@ SQLRETURN SQLFetchScroll(
 |24000|잘못된 커서 상태|*StatementHandle* 실행된 상태에 있지만 결과 집합이 연관 된는 *StatementHandle*합니다.|  
 |40001|Serialization 오류|교착 상태를 방지 하는 페치 실행 된 트랜잭션이 종료 되었습니다.|  
 |40003|알 수 없는 문 완성|이 함수를 실행 하는 동안 관련된 연결 실패 및 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*합니다. 함수에서 다시 호출 된 후의 *StatementHandle*합니다.<br /><br /> 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLFetchScroll** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 지정 된 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 호출 하지 않고 호출 된 **SQLExecDirect**, **SQLExecute** 또는 카탈로그 함수입니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) **SQLFetch** 에 대해 호출 되었습니다는 *StatementHandle* 후 **SQLExtendedFetch** 호출 하기 전에 **SQLFreeStmt** 는 SQL_와 CLOSE 옵션이 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLFetchScroll** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 지정 된 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 호출 하지 않고 호출 된 **SQLExecDirect**, **SQLExecute** 또는 카탈로그 함수입니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) **SQLFetch** 에 대해 호출 되었습니다는 *StatementHandle* 후 **SQLExtendedFetch** 호출 하기 전에 **SQLFreeStmt** 는 SQL_와 CLOSE 옵션이 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|SQL_ATTR_USE_BOOKMARK 문 특성이 SQL_UB_VARIABLE로 설정 된 및 0 열이 결과 집합에 대 한 책갈피에 대 한 최대 길이 길이가 없습니다. 버퍼에 바인딩 되었습니다. (이 길이 IRD의 SQL_DESC_OCTET_LENGTH 필드에서 사용할 수를 호출 하 여 얻을 수 있습니다 **SQLDescribeCol**, **SQLColAttribute**, 또는 **SQLGetDescField**.)|  
 |HY106|인출 유형 범위를 벗어났습니다.|DM) FetchOrientation 인수에 대해 지정 된 값 올바르지 않습니다.<br /><br /> (DM) 인수 FetchOrientation가 SQL_FETCH_BOOKMARK, 고 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.<br /><br /> SQL_ATTR_CURSOR_TYPE 문 특성의 값은 SQL_CURSOR_FORWARD_ONLY, FetchOrientation SQL_FETCH_NEXT 없습니다. 인수 값.<br /><br /> SQL_ATTR_CURSOR_SCROLLABLE 문 특성의 값은 SQL_NONSCROLLABLE, FetchOrientation SQL_FETCH_NEXT 없습니다. 인수 값.|  
@@ -168,7 +168,7 @@ SQLRETURN SQLFetchScroll(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |*시작 하기 전에*|1.|  
-|*CurrRowsetStart + RowsetSize*[1] * \<LastResultRow =*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1]  *\<LastResultRow =*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*종료 후*|  
 |*종료 후*|*종료 후*|  
   

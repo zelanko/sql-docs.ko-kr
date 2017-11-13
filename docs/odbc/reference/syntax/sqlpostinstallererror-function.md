@@ -36,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  ODBC 3.0 도입 된 버전:  
   
  **요약**  
- **SQLPostInstallerError** 드라이버 또는 변환기 설치 라이브러리에 대 한 오류 보고를 위한 메커니즘을 제공 된 **ConfigDriver**, **ConfigDSN**, 및 **ConfigTranslator ** installer 오류 큐에는 함수입니다. 응용 프로그램에이 API를 사용 하지 마십시오 사용할 **SQLInstallerError** 를 오류를 검색 합니다.  
+ **SQLPostInstallerError** 드라이버 또는 변환기 설치 라이브러리에 대 한 오류 보고를 위한 메커니즘을 제공 된 **ConfigDriver**, **ConfigDSN**, 및 **ConfigTranslator**  installer 오류 큐에는 함수입니다. 응용 프로그램에이 API를 사용 하지 마십시오 사용할 **SQLInstallerError** 를 오류를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   

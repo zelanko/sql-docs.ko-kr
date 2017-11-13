@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>응용 프로그램의 이전 버전과 호환성에 대 한 매핑 대체 함수
-ODBC 3*.x* ODBC 3를 통해 작업 하는 응용 프로그램*.x* ODBC 2에 대 한 드라이버 관리자가 작동 합니다.* x* 드라이버 있다면 없는 새로운 기능이 사용 됩니다. 그러나 둘 다 중복 기능 및 변경 된 동작 방식에 영향를 수행 하는 ODBC 3. *x* 응용 프로그램이 ODBC 2에서 작동 합니다.* x* 드라이버입니다. ODBC 2 작업할 때는. *x* 드라이버, 드라이버 관리자 매핑합니다 다음 ODBC 3.* x* 는 하나 이상의 ODBC 2를 대체 하는 함수.* x* 함수에 해당 하는 ODBC 2.* x* 함수입니다.  
+ODBC 3*.x* ODBC 3를 통해 작업 하는 응용 프로그램*.x* ODBC 2에 대 한 드라이버 관리자가 작동 합니다. *x* 드라이버 있다면 없는 새로운 기능이 사용 됩니다. 그러나 둘 다 중복 기능 및 변경 된 동작 방식에 영향를 수행 하는 ODBC 3. *x* 응용 프로그램이 ODBC 2에서 작동 합니다. *x* 드라이버입니다. ODBC 2 작업할 때는. *x* 드라이버, 드라이버 관리자 매핑합니다 다음 ODBC 3. *x* 는 하나 이상의 ODBC 2를 대체 하는 함수. *x* 함수에 해당 하는 ODBC 2. *x* 함수입니다.  
   
 |ODBC 3입니다. *x* 함수|ODBC 2입니다. *x* 함수|  
 |-------------------------|-------------------------|  
@@ -223,7 +223,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  다음 단계를 순서 대로 발생 합니다.  
   
-1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다.* x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
+1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다. *x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
   
 2.  경우 *특성* SQL_ATTR_AUTO_IPD 또는 SQL_ATTR_METADATA_ID, 드라이버 관리자 반환 된 SQLSTATE HY092 SQL_ERROR가 (잘못 된 특성/옵션 식별자)입니다.  
   
@@ -249,7 +249,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  다음 단계를 순서 대로 발생 합니다.  
   
-1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다.* x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
+1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다. *x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
   
 2.  경우 *특성* 다음 중 하나입니다.  
   
@@ -285,7 +285,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
 3.  드라이버 관리자를 보려면 필요한 검사를 수행 하는지 여부를 SQLSTATE HY010 (함수 시퀀스 오류)가 발생 합니다. 드라이버 관리자 SQLSTATE HY010 및 SQL_ERROR를 반환 하는, (함수 시퀀스 오류). 이 섹션의 추가 규칙이 적용 됩니다.  
   
-4.  경우 *특성* SQL_ATTR_ROWS_FETCHED_PTR, 내부 드라이버 관리자 변수에 대 한 포인터 드라이버 관리자 반환 같으면 *cRow*, 것은 사용 되지 않았거나에 대 한 호출에서 사용할 ** SQLExtendedFetch**합니다. 이 섹션의 추가 규칙이 적용 됩니다.  
+4.  경우 *특성* SQL_ATTR_ROWS_FETCHED_PTR, 내부 드라이버 관리자 변수에 대 한 포인터 드라이버 관리자 반환 같으면 *cRow*, 것은 사용 되지 않았거나에 대 한 호출에서 사용할  **SQLExtendedFetch**합니다. 이 섹션의 추가 규칙이 적용 됩니다.  
   
 5.  경우 *특성* 같은지 드라이버 관리자 SQL_DESC_FETCH_BOOKMARK_PTR를를 호출 하는 동안 캐시에 있는 적절 한 포인터를 반환 **SQLSetStmtAttr**합니다.  
   
@@ -308,7 +308,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  다음 단계를 순서 대로 발생 합니다.  
   
-1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다.* x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
+1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다. *x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
   
 2.  경우 *특성* SQL_ATTR_AUTO_IPD, 드라이버 관리자 반환 된 SQLSTATE HY092 sql_error가 같습니다 (잘못 된 특성/옵션 식별자)입니다.  
   
@@ -334,7 +334,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  다음 단계를 순서 대로 발생 합니다.  
   
-1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다.* x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
+1.  경우 *특성* 드라이버에서 정의 된 연결 또는 명령문 특성이 아니므로 및 ODBC 2에 정의 된 특성이 아닙니다. *x*, 드라이버 관리자 SQLSTATE HY092 인 sql_error가 반환 (잘못 된 특성/옵션 식별자)입니다. 이 섹션의 추가 규칙이 적용 됩니다.  
   
 2.  경우 *특성* 다음 중 하나입니다.  
   
@@ -386,7 +386,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      여기서 *hstmt*, *fOption*, 및 *vParam* 의 값으로 설정 됩니다 *StatementHandle*, *특성*, 및 *ValuePtr*각각. *StringLength* 인수는 무시 됩니다.  
   
-     경우에는 ODBC 2입니다. *x* 드라이버 지원 문자열, 드라이버 관련 문 옵션을 ODBC 3.* x* 응용 프로그램 호출 해야 **SQLSetStmtOption** 이러한 옵션을 설정 합니다.  
+     경우에는 ODBC 2입니다. *x* 드라이버 지원 문자열, 드라이버 관련 문 옵션을 ODBC 3. *x* 응용 프로그램 호출 해야 **SQLSetStmtOption** 이러한 옵션을 설정 합니다.  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>매개 변수 배열 처리에 대 한 매핑  
  응용 프로그램 호출 하는 경우:  
@@ -408,18 +408,18 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 ## <a name="error-handling"></a>오류 처리  
  Odbc 3. *x*호출, **SQLFetch** 또는 **SQLFetchScroll** SQL_DESC_ARRAY_STATUS_PTR IRD 및 지정된 된 진단 레코드의 SQL_DIAG_ROW_NUMBER 필드를 채웁니다. 이 레코드에 관련 된 행 집합의 행 수가 포함 됩니다. 이 사용 하 여, 응용 프로그램 간에 상관 관계 수 오류 메시지가 특정된 행 위치와 합니다.  
   
- ODBC 2입니다. *x* 드라이버가이 기능을 제공할 수 없습니다. 그러나 SQLSTATE 01S01와 오류 경계를 제공 합니다 (행에서 오류). ODBC 3입니다. *x* 사용 중인 응용 프로그램이 **SQLFetch** 또는 **SQLFetchScroll** ODBC 2에 대 한 이동 하는 동안.* x* 드라이버가 이러한 사실을 알고 있어야 합니다. 이러한 응용 프로그램을 호출할 수 없게 됩니다는 또한 참고 **SQLGetDiagField** 가져올 실제로 요 SQL_DIAG_ROW_NUMBER 필드에 있습니다. ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버를 호출할 수 **SQLGetDiagField** 에서만 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE, 또는 SQL_DIAG_의 인수 SQLSTATE입니다. ODBC 3*.x* 드라이버 관리자는 ODBC 2 작업할 때 진단 데이터 구조를 유지 합니다.* x* 드라이버, 있지만 ODBC 2.* x* 드라이버는 이러한 4 개의 필드에만 반환 합니다.  
+ ODBC 2입니다. *x* 드라이버가이 기능을 제공할 수 없습니다. 그러나 SQLSTATE 01S01와 오류 경계를 제공 합니다 (행에서 오류). ODBC 3입니다. *x* 사용 중인 응용 프로그램이 **SQLFetch** 또는 **SQLFetchScroll** ODBC 2에 대 한 이동 하는 동안. *x* 드라이버가 이러한 사실을 알고 있어야 합니다. 이러한 응용 프로그램을 호출할 수 없게 됩니다는 또한 참고 **SQLGetDiagField** 가져올 실제로 요 SQL_DIAG_ROW_NUMBER 필드에 있습니다. ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버를 호출할 수 **SQLGetDiagField** 에서만 *DiagIdentifier* SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE, 또는 SQL_DIAG_의 인수 SQLSTATE입니다. ODBC 3*.x* 드라이버 관리자는 ODBC 2 작업할 때 진단 데이터 구조를 유지 합니다. *x* 드라이버, 있지만 ODBC 2. *x* 드라이버는 이러한 4 개의 필드에만 반환 합니다.  
   
- 경우는 ODBC 2. *x* 응용 프로그램이 작동 ODBC 2.* x* 드라이버를 작업에는 드라이버 관리자에 의해 반환 될 여러 오류가 발생할 수 있습니다 하는 경우 서로 다른 오류 반환 되는 ODBC 3*.x* 드라이버 관리자가 ODBC 2.* x* 드라이버 관리자입니다.  
+ 경우는 ODBC 2. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버를 작업에는 드라이버 관리자에 의해 반환 될 여러 오류가 발생할 수 있습니다 하는 경우 서로 다른 오류 반환 되는 ODBC 3*.x* 드라이버 관리자가 ODBC 2. *x* 드라이버 관리자입니다.  
   
 ## <a name="mappings-for-bookmark-operations"></a>책갈피 작업에 대 한 매핑  
- ODBC 3*.x* 드라이버 관리자는 때 ODBC 3 다음 매핑을 수행 합니다.* x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버 책갈피 작업을 수행 합니다.  
+ ODBC 3*.x* 드라이버 관리자는 때 ODBC 3 다음 매핑을 수행 합니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 책갈피 작업을 수행 합니다.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버 호출 **SQLBindCol** 0 열로 바인딩할 *fCType* SQL_C_VARBOOKMARK, ODBC 3 같음*.x* 확인 하는 드라이버 관리자 여부는 *BufferLength* 인수 보다 작거나 4 보다 크거나 4, 이며이 경우 SQLSTATE HY090 반환 (잘못 된 문자열 또는 버퍼 길이). 경우는 *BufferLength* 인수는 4, 드라이버 관리자를 호출 **SQLBindCol** 바꾼 후 드라이버에서 *fCType* SQL_C_BOOKMARK 사용 합니다.  
+ 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출 **SQLBindCol** 0 열로 바인딩할 *fCType* SQL_C_VARBOOKMARK, ODBC 3 같음*.x* 확인 하는 드라이버 관리자 여부는 *BufferLength* 인수 보다 작거나 4 보다 크거나 4, 이며이 경우 SQLSTATE HY090 반환 (잘못 된 문자열 또는 버퍼 길이). 경우는 *BufferLength* 인수는 4, 드라이버 관리자를 호출 **SQLBindCol** 바꾼 후 드라이버에서 *fCType* SQL_C_BOOKMARK 사용 합니다.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버 호출 **SQLColAttribute** 와 *ColumnNumber* 드라이버 관리자 반환 인수를 0으로 설정 된 *FieldIdentifier* 값 다음 표에 나열 합니다.  
+ 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출 **SQLColAttribute** 와 *ColumnNumber* 드라이버 관리자 반환 인수를 0으로 설정 된 *FieldIdentifier* 값 다음 표에 나열 합니다.  
   
 |*FieldIdentifier*|값|  
 |-----------------------|-----------|  
@@ -451,7 +451,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버 호출 **SQLDescribeCol** 와 *ColumnNumber* 0으로 설정 하는 인수를 드라이버 관리자는 다음 표에 나열 된 값을 반환 합니다.  
+ 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출 **SQLDescribeCol** 와 *ColumnNumber* 0으로 설정 하는 인수를 드라이버 관리자는 다음 표에 나열 된 값을 반환 합니다.  
   
 |버퍼|값|  
 |------------|-----------|  
@@ -463,7 +463,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버는 다음 호출을 통해 **SQLGetData** 책갈피를 검색할 수 있습니다.  
+ 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버는 다음 호출을 통해 **SQLGetData** 책갈피를 검색할 수 있습니다.  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -477,10 +477,10 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  여기서 *hstmt* 및 *pvParam* 의 값으로 설정 된 *StatementHandle* 및 *TargetValuePtr*각각. 책갈피 가리키는 버퍼에 반환 되는 *pvParam* (*TargetValuePtr*) 인수입니다. 가리키는 버퍼에 있는 값의 *StrLen_or_IndPtr* 호출에 인수 **SQLGetData** 가 4로 설정 합니다.  
   
- 이 매핑은 되는 경우를 고려 하는 데 필요한 **SQLFetch** 호출 하기 전에 호출 된 **SQLGetData** 및 ODBC 2.* x* 드라이버를 지원 하지 않았으므로 **SQLExtendedFetch**합니다. 이 경우 **SQLFetch** ODBC 2를 통해 전달 될.* x* 드라이버를 사례 책갈피 검색 지원 되지 않습니다.  
+ 이 매핑은 되는 경우를 고려 하는 데 필요한 **SQLFetch** 호출 하기 전에 호출 된 **SQLGetData** 및 ODBC 2. *x* 드라이버를 지원 하지 않았으므로 **SQLExtendedFetch**합니다. 이 경우 **SQLFetch** ODBC 2를 통해 전달 될. *x* 드라이버를 사례 책갈피 검색 지원 되지 않습니다.  
   
- **SQLGetData** ODBC 2에서 여러 번 호출할 수 없습니다.* x* 호출에서 파트, 책갈피를 검색 하도록 드라이버에 **SQLGetData** 와 *BufferLength* 인수는 4 보다 작은 값으로 설정 및 *ColumnNumber*0으로 설정 하는 인수는 SQLSTATE HY090 반환 (잘못 된 문자열 또는 버퍼 길이). **그러나 SQLGetData** 수 동일한 책갈피를 검색 하는 여러 번 호출 합니다.  
+ **SQLGetData** ODBC 2에서 여러 번 호출할 수 없습니다. *x* 호출에서 파트, 책갈피를 검색 하도록 드라이버에 **SQLGetData** 와 *BufferLength* 인수는 4 보다 작은 값으로 설정 및 *ColumnNumber*0으로 설정 하는 인수는 SQLSTATE HY090 반환 (잘못 된 문자열 또는 버퍼 길이). **그러나 SQLGetData** 수 동일한 책갈피를 검색 하는 여러 번 호출 합니다.  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버 호출 **SQLSetStmtAttr** 특성을 원본으로 사용 하는 ODBC 2에서 SQL_UB_ON 드라이버 관리자 SQL_ATTR_USE_BOOKMARKS 특성 SQL_UB_VARIABLE을으로 설정 하려면 설정 합니다.* x* 드라이버입니다.
+ 때 ODBC 3. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출 **SQLSetStmtAttr** 특성을 원본으로 사용 하는 ODBC 2에서 SQL_UB_ON 드라이버 관리자 SQL_ATTR_USE_BOOKMARKS 특성 SQL_UB_VARIABLE을으로 설정 하려면 설정 합니다. *x* 드라이버입니다.
 

@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
   
  표준 호환 응용 프로그램 동작은 다음과 같습니다.  
   
--   표준 호환 응용 프로그램을 호출 하는 경우 **SQLAllocEnv** (때문에 발생할 수 있는 **SQLAllocEnv** 는 Open Group 및 ISO CLI에는 유효한 함수), 호출에 매핑된 ** SQLAllocHandleStd** 컴파일 타임에 있습니다. 결과적으로, 실행 시 응용 프로그램 호출 **SQLAllocHandleStd**합니다. 이 호출을 처리 하는 동안 드라이버 관리자 SQL_OV_ODBC3를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 에 대 한 호출 **SQLAllocHandleStd** 에 대 한 호출에 해당 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV 및에 대 한 호출의 **SQLSetEnvAttr** SQL_OV_ODBC3를 sql_attr_odbc_version으로 설정 합니다.  
+-   표준 호환 응용 프로그램을 호출 하는 경우 **SQLAllocEnv** (때문에 발생할 수 있는 **SQLAllocEnv** 는 Open Group 및 ISO CLI에는 유효한 함수), 호출에 매핑된  **SQLAllocHandleStd** 컴파일 타임에 있습니다. 결과적으로, 실행 시 응용 프로그램 호출 **SQLAllocHandleStd**합니다. 이 호출을 처리 하는 동안 드라이버 관리자 SQL_OV_ODBC3를 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 에 대 한 호출 **SQLAllocHandleStd** 에 대 한 호출에 해당 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV 및에 대 한 호출의 **SQLSetEnvAttr** SQL_OV_ODBC3를 sql_attr_odbc_version으로 설정 합니다.  
   
 -   표준 호환 응용 프로그램을 호출 하는 경우 **SQLBindParam** (때문에 발생할 수 있는 **SQLBindParam** 는 Open Group 및 ISO CLI에는 유효한 함수), ODBC 3*.x* 드라이버 관리자에서 해당 호출에 대 한 호출을 매핑합니다 **SQLBindParameter**합니다. (참조 [SQLBindParam 매핑](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) 이전 버전과 호환성에 대 한 부록 g: 드라이버 지침에서.)  
   

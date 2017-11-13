@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect 매핑
-응용 프로그램 호출 하는 경우 **SQLAllocConnect** ODBC 3.* x* 드라이버에 대 한 호출 **SQLAllocConnect**(*henv*, *phdbc*)에 매핑되어 **SQLAllocHandle** 다음과 같습니다.  
+응용 프로그램 호출 하는 경우 **SQLAllocConnect** ODBC 3. *x* 드라이버에 대 한 호출 **SQLAllocConnect**(*henv*, *phdbc*)에 매핑되어 **SQLAllocHandle** 다음과 같습니다.  
   
 1.  드라이버 관리자는 한 연결을 할당 하 고 응용 프로그램에 반환 합니다.  
   

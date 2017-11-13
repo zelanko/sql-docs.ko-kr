@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="remarks"></a>주의  
  사용 하 여는 [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) 의 변화를 모니터링 하는 이벤트는 **ReadyState** 비동기 쿼리 작업 중에 속성입니다. 이 속성의 값을 주기적으로 검사 보다 더 효율적입니다.  
   
- 비동기 작업 중에 오류가 발생 하는 경우는 **ReadyState** 속성 변경 **adcReadyStateComplete**, [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성이 에서변경**adStateExecuting** 를 **adStateClosed**, 및 **레코드 집합** 개체 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성은 *Nothing *.  
+ 비동기 작업 중에 오류가 발생 하는 경우는 **ReadyState** 속성 변경 **adcReadyStateComplete**, [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성이 에서변경**adStateExecuting** 를 **adStateClosed**, 및 **레코드 집합** 개체 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성은 *Nothing* .  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

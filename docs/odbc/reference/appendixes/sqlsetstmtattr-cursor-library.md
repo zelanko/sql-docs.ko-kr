@@ -46,11 +46,11 @@ ms.lasthandoff: 09/09/2017
   
  커서 라이브러리 SQL_ATTR_SIMULATE_CURSOR 문 특성의 SQL_SC_NON_UNIQUE 값만 지원합니다.  
   
- ODBC 사양에 대 한 호출을 지원 하지만 **SQLSetStmtAttr** 후 SQL_ATTR_PARAM_BIND_TYPE 또는 SQL_ATTR_ROW_BIND_TYPE 특성을 가진 **SQLFetch** 또는 **SQLFetchScroll ** 가 호출 된 커서 라이브러리는 그렇지 않습니다. 커서 라이브러리에서 바인딩 종류를 변경 하기 전에 응용 프로그램이 커서를 닫아야 합니다. 커서 라이브러리가 지원 변경 SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR, 고 때 커서 문 특성을 SQL_ATTR_PARAMS_PROCESSED_PTR 열립니다.  
+ ODBC 사양에 대 한 호출을 지원 하지만 **SQLSetStmtAttr** 후 SQL_ATTR_PARAM_BIND_TYPE 또는 SQL_ATTR_ROW_BIND_TYPE 특성을 가진 **SQLFetch** 또는 **SQLFetchScroll**  가 호출 된 커서 라이브러리는 그렇지 않습니다. 커서 라이브러리에서 바인딩 종류를 변경 하기 전에 응용 프로그램이 커서를 닫아야 합니다. 커서 라이브러리가 지원 변경 SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR, 고 때 커서 문 특성을 SQL_ATTR_PARAMS_PROCESSED_PTR 열립니다.  
   
  응용 프로그램에서 호출할 수 **SQLSetStmtAttr** 와 **특성** sql_attr_row_array_size 라는 커서가 열려 있는 동안 행 집합 크기를 변경할 수 있습니다. 새 행 집합 크기가 적용 됩니다 다음에 **SQLFetchScroll** 또는 **SQLFetch** 호출 됩니다.  
   
- 커서 라이브러리 지원 바인딩 오프셋을 사용 하도록 설정 하려면 SQL_ATTR_PARAM_BIND_OFFSET_PTR 또는 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성을 설정 합니다. 바인딩 오프셋에 대 한 호출에 대 한 사용 되지 것입니다 **SQLFetch** ODBC 2 커서 라이브러리 사용 되는 경우.* x* 드라이버입니다.  
+ 커서 라이브러리 지원 바인딩 오프셋을 사용 하도록 설정 하려면 SQL_ATTR_PARAM_BIND_OFFSET_PTR 또는 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성을 설정 합니다. 바인딩 오프셋에 대 한 호출에 대 한 사용 되지 것입니다 **SQLFetch** ODBC 2 커서 라이브러리 사용 되는 경우. *x* 드라이버입니다.  
   
  커서 라이브러리 SQL_UB_VARIABLE SQL_ATTR_USE_BOOKMARKS 문 특성 설정을 지원 합니다.
 

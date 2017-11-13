@@ -79,7 +79,7 @@ SQLRETURN  SQLRateConnection(
   
  드라이버 관리자 점수가 (99 포함)는 100 보다 엄격 하 게 작으면 연결 다시 사용, 드라이버 관리자는 응용 프로그램에서 요청한 상태에 다시 연결을 다시 설정할 SQLSetConnectAttr(SQL_ATTR_DBC_INFO_TOKEN)를 호출 합니다. 드라이버에서이 함수 호출에서 연결을 다시 설정 해야 합니다.  
   
- 경우 *fRequiredTransactionEnlistment* TRUE이 고, 다시 사용은 *hCandidateConnection* 추가 참여가 필요 (*transId* ! = NULL) 또는 unenlistment (* transId* NULL = =) 합니다. 이 드라이버 참여 / 연결 다시 사용 하려는 경우 연결의 등록을 취소 해야 하는지 여부 및 연결을 다시 사용의 비용을 나타냅니다. 경우 *fRequireTransactionEnlistment* 가 FALSE 이면 드라이버의 값을 무시 해야 *transId*합니다.  
+ 경우 *fRequiredTransactionEnlistment* TRUE이 고, 다시 사용은 *hCandidateConnection* 추가 참여가 필요 (*transId* ! = NULL) 또는 unenlistment ( *transId* NULL = =) 합니다. 이 드라이버 참여 / 연결 다시 사용 하려는 경우 연결의 등록을 취소 해야 하는지 여부 및 연결을 다시 사용의 비용을 나타냅니다. 경우 *fRequireTransactionEnlistment* 가 FALSE 이면 드라이버의 값을 무시 해야 *transId*합니다.  
   
  드라이버 관리자의 처리 HENV 부모 보장 *hRequest* 및 *hCandidateConnection* 동일 합니다. 드라이버 관리자 연결 된 풀 ID를 보장 *hRequest* 및 *hCandidateConnection* 동일 합니다.  
   

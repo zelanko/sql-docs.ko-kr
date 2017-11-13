@@ -38,13 +38,13 @@ ms.lasthandoff: 09/09/2017
  *신뢰할 수 있는 영역 외부 하드 드라이브 액세스가 허용 되지 않습니다.*
 도메인 간 스크립팅 관련 된 트러스트 되지 않은 사이트에서 다음 작업이 비활성화 됩니다: **Stream.SaveToFile**, **Stream.LoadFromFile**, **Recordset.Save**, 및 **Recordset.Open**와 함께에서 사용 되는 **adCmdFile** 플래그 또는 공급자와 함께 Microsoft OLE DB 지 속성 (MSPersist).
 
- **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, 및* **Stream.LoadFromFile***만 실제 파일에서 작동 합니다.        *
+ **Recordset.Open** *,***Recordset.Save** *,***Stream.SaveToFile** *, 및* **Stream.LoadFromFile***만 실제 파일에서 작동 합니다.* 
 이러한 메서드는 이제 파일 핸들이 물리적 파일에만 해당를 가리키는지 확인 합니다.
 
- **Recordset.ActiveCommand***HTML/ASP 페이지에서 호출 될 때 오류를 반환 합니다.  *
+ **Recordset.ActiveCommand***HTML/ASP 페이지에서 호출 될 때 오류를 반환 합니다.* 
 이렇게 하면는 **명령** 의 부적절 한 개체입니다.
 
- *수가***레코드 집합***중첩 된 반환한***셰이프***명령에 상한 값입니다.        *
+ *수가***레코드 집합***중첩 된 반환한***셰이프***명령에 상한 값입니다.* 
 중첩 된 shape 명령에는 이제 최대 512의 반환 **레코드 집합**합니다. 즉, 한 **셰이프** 명령을 모든 수준에서 더 이상 중첩 될 수 없습니다. 대신, 최대 수준 깊이로 512로, 각 명령 (자식)는 단일 결과가 같은 경우 **레코드 집합**합니다. 모든 수준에서 if는 **셰이프** 명령은 여러 반환 **레코드 집합**의 최대 수준을 512 보다 작은 수 있습니다.
 
 ## <a name="ado-27"></a>ADO 2.7

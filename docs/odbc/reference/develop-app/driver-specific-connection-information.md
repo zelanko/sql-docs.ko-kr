@@ -42,7 +42,7 @@ ms.lasthandoff: 09/09/2017
 DSN={MyDataSourceName};UID={MyUserID};PWD={MyServerPassword};UIDDBMS={MyDBMSUserID};PWDDBMS={MyDBMSUserPassword};  
 ```  
   
- **DSN** 데이터 원본 이름을 지정 (데이터 원본 이름) 키워드는 **UID** 및 **PWD** 사용자 ID와 서버에 대 한 암호를 지정 하는 키워드와 **UIDDBMS ** 및 **PWDDBMS** 키워드는 DBMS에 대 한 사용자 ID와 암호를 지정 합니다. 최종 세미콜론은 선택 사항 확인 합니다. **SQLDriverConnect** 이 문자열을 구문 분석; XYZ Corp 데이터 원본 이름을 사용 하 여 서버 주소; 같은 시스템에서 추가 연결 정보를 검색 하 고, 서버 및 지정 된 사용자 Id와 암호를 사용 하 여 DBMS에 로그온 합니다.  
+ **DSN** 데이터 원본 이름을 지정 (데이터 원본 이름) 키워드는 **UID** 및 **PWD** 사용자 ID와 서버에 대 한 암호를 지정 하는 키워드와 **UIDDBMS**  및 **PWDDBMS** 키워드는 DBMS에 대 한 사용자 ID와 암호를 지정 합니다. 최종 세미콜론은 선택 사항 확인 합니다. **SQLDriverConnect** 이 문자열을 구문 분석; XYZ Corp 데이터 원본 이름을 사용 하 여 서버 주소; 같은 시스템에서 추가 연결 정보를 검색 하 고, 서버 및 지정 된 사용자 Id와 암호를 사용 하 여 DBMS에 로그온 합니다.  
   
  키워드-값 쌍 **SQLDriverConnect** 특정 구문 규칙을 따라야 합니다. 키워드와 값 포함 되 면 안는 **{} (),? \*=! @** 문자입니다. 값은 **DSN** 키워드는 공백으로 구성할 수 없습니다 및 선행 공백을 포함할 수 없습니다. 키워드 및 데이터 원본 이름 레지스트리 문법 때문에 백슬래시를 포함할 수 없습니다 (\\) 문자. 키워드 / 값 쌍의 등호 엔 공백이 허용 되지 않습니다.  
   

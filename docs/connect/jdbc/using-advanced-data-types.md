@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
  JDBC 드라이버는 java.sql.Blob, java.sql.Clob 및 java.sql.NClob 인터페이스의 모든 메서드를 구현합니다.  
   
 > [!NOTE]  
->  CLOB 값은 함께 사용할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 이상의 큰 값 데이터 형식입니다. 특히 CLOB 형식은 사용할 수 있습니다는 **varchar (max)** 및 **nvarchar (max)** 데이터 형식 BLOB 형식을 사용 하 여 **varbinary (max)** 및 **이미지 ** NCLOB 형식 및 데이터 형식을 사용 하 여 **ntext** 및 **nvarchar (max)**합니다.  
+>  CLOB 값은 함께 사용할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005_md.md)] 이상의 큰 값 데이터 형식입니다. 특히 CLOB 형식은 사용할 수 있습니다는 **varchar (max)** 및 **nvarchar (max)** 데이터 형식 BLOB 형식을 사용 하 여 **varbinary (max)** 및 **이미지**  NCLOB 형식 및 데이터 형식을 사용 하 여 **ntext** 및 **nvarchar (max)**합니다.  
   
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식  
  이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]특별 한 처리가 필요 큰 값 데이터 형식으로 작업 합니다. 큰 값 데이터 형식은 최대 행 크기가 8KB를 초과하는 데이터 형식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]max 지정자에 대 한 소개 **varchar**, **nvarchar**, 및 **varbinary** 데이터 형식을 저장할 수 있도록 값의 2 ^31 바이트입니다. 테이블 열 및 [!INCLUDE[tsql](../../includes/tsql_md.md)] 변수를 지정할 수 **varchar (max)**, **nvarchar (max)**, 또는 **varbinary (max)** 데이터 형식입니다.  

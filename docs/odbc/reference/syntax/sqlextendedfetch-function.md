@@ -77,7 +77,7 @@ SQLRETURN SQLExtendedFetch(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLExtendedFetch** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLError**합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLExtendedFetch** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다. 하나의 열에 오류가 발생 한 경우 **SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 SQL_DIAG_COLUMN_NUMBER;에서 오류가 발생 하는 열을 확인 하 고 ** SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 해당 열이 포함 된 행을 결정 하는 SQL_DIAG_ROW_NUMBER 합니다.  
+ 때 **SQLExtendedFetch** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLError**합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLExtendedFetch** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다. 하나의 열에 오류가 발생 한 경우 **SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 SQL_DIAG_COLUMN_NUMBER;에서 오류가 발생 하는 열을 확인 하 고  **SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 해당 열이 포함 된 행을 결정 하는 SQL_DIAG_ROW_NUMBER 합니다.  
   
 |SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
@@ -96,10 +96,10 @@ SQLRETURN SQLExtendedFetch(
 |22015|간격 필드 오버플로|정확한 수치 또는 간격 SQL 형식에서 C 간격 유형으로 할당 선행 필드에 유효 자릿수 손실이 발생 합니다.<br /><br /> C 간격 유형으로 데이터를 인출할 때 C 간격 유형에서 SQL 형식의 값으로 표시 되지 했습니다.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |22018|캐스트 사양의 문자 값|정확한 수 또는 대략적인 숫자, datetime, 또는 간격 데이터 형식;가 C 유형은 열의 SQL 형식을 문자 데이터 형식. 및 열에 값이 바인딩된 C 형식의 올바른 리터럴.<br /><br /> (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |24000|잘못된 커서 상태|*StatementHandle* 된 실행된 상태에 있지만 결과 집합이 연관 된는 *StatementHandle*합니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLError** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLError** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*, 함수가 호출 후 및 다시는 *StatementHandle*합니다.<br /><br /> 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLExtendedFetch** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 지정 된 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 호출 하지 않고 호출 된 **SQLExecDirect**, **SQLExecute**, 또는 카탈로그 함수입니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) **SQLExtendedFetch** 에 대 한 호출 된는 *StatementHandle* 후 **SQLFetch** 또는 **SQLFetchScroll** 호출한 하기전에** SQLFreeStmt** SQL_CLOSE 옵션과 함께 호출 되었습니다.<br /><br /> (DM) **SQLBulkOperations** 하기 전에 명령문에 대 한 호출 된 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLExtendedFetch** 를 호출 하 고 그런 다음 **SQLExtendedFetch** 하기 전에 호출 된 **SQLFreeStmt** SQL_CLOSE 옵션과 함께 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLExtendedFetch** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 지정 된 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 호출 하지 않고 호출 된 **SQLExecDirect**, **SQLExecute**, 또는 카탈로그 함수입니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) **SQLExtendedFetch** 에 대 한 호출 된는 *StatementHandle* 후 **SQLFetch** 또는 **SQLFetchScroll** 호출한 하기전에 **SQLFreeStmt** SQL_CLOSE 옵션과 함께 호출 되었습니다.<br /><br /> (DM) **SQLBulkOperations** 하기 전에 명령문에 대 한 호출 된 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLExtendedFetch** 를 호출 하 고 그런 다음 **SQLExtendedFetch** 하기 전에 호출 된 **SQLFreeStmt** SQL_CLOSE 옵션과 함께 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY106|인출 유형 범위를 벗어났습니다.|인수에 대해 지정 된 값 (DM) *FetchOrientation* 올바르지 않습니다. ("주석" 참조)<br /><br /> 인수 *FetchOrientation* SQL_FETCH_BOOKMARK, 였으며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.<br /><br /> 에서는 SQL_CURSOR_TYPE 문 옵션의 값이 SQL_CURSOR_FORWARD_ONLY, 및 인수 값 *FetchOrientation* SQL_FETCH_NEXT 없습니다.<br /><br /> 인수 *FetchOrientation* SQL_FETCH_RESUME 되었습니다.|  
 |HY107|행 값 범위를 벗어났습니다.|에서는 SQL_CURSOR_TYPE 문 옵션으로 지정 된 값 SQL_CURSOR_KEYSET_DRIVEN만 SQL_KEYSET_SIZE 문 특성으로 지정 된 값이 0 보다 크고 SQL_ROWSET_SIZE 문 특성으로 지정 된 값 보다 작음 .|  
@@ -113,7 +113,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="comments"></a>설명  
  동작 **SQLExtendedFetch** 의 동일 **SQLFetchScroll**, 다음을 제외:  
   
--   **SQLExtendedFetch** 및 **SQLFetchScroll** 다양 한 방법을 사용 하 여 인출 된 행 수를 반환 합니다. **SQLExtendedFetch** 에 인출 된 행 수를 반환 * \*RowCountPtr*; **SQLFetchScroll** SQL_ATTR_ROWS_FETCHED_PTR 가리키는 버퍼에 직접 가져온 행 수를 반환 합니다. 자세한 내용은 참조는 *RowCountPtr* 인수입니다.  
+-   **SQLExtendedFetch** 및 **SQLFetchScroll** 다양 한 방법을 사용 하 여 인출 된 행 수를 반환 합니다. **SQLExtendedFetch** 에 인출 된 행 수를 반환  *\*RowCountPtr*; **SQLFetchScroll** SQL_ATTR_ROWS_FETCHED_PTR 가리키는 버퍼에 직접 가져온 행 수를 반환 합니다. 자세한 내용은 참조는 *RowCountPtr* 인수입니다.  
   
 -   **SQLExtendedFetch** 및 **SQLFetchScroll** 다른 배열에서 각 행의 상태를 반환 합니다. 자세한 내용은 참조는 *RowStatusArray* 인수입니다.  
   

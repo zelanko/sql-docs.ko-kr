@@ -44,7 +44,7 @@ ms.lasthandoff: 09/09/2017
   
  특정 공급자 (예를 들어는 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)) 이용할 수는 **필드** 에 대 한 사용 가능한 필드의 하위 집합을 사용 하 여 컬렉션의 **레코드** 또는 **레코드 집합**합니다. 다른 필드 이름으로 참조 또는 코드에 의해 인덱싱된 먼저 될 때까지 컬렉션에 추가 되지 않습니다.  
   
- 이름으로 존재 하지 않는 필드를 참조 하려고 하면 새 **필드** 개체에 추가 됩니다는 **필드** 사용 하 여 컬렉션을 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 의 ** adFieldPendingInsert**합니다. 호출 하는 경우 [업데이트](../../../ado/reference/ado-api/update-method.md), 해당 공급자가 허용 하는 경우 ADO 데이터 원본에 새 필드를 만들려면 됩니다.  
+ 이름으로 존재 하지 않는 필드를 참조 하려고 하면 새 **필드** 개체에 추가 됩니다는 **필드** 사용 하 여 컬렉션을 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 의  **adFieldPendingInsert**합니다. 호출 하는 경우 [업데이트](../../../ado/reference/ado-api/update-method.md), 해당 공급자가 허용 하는 경우 ADO 데이터 원본에 새 필드를 만들려면 됩니다.  
   
  이 섹션에는 다음 항목 포함 되어 있습니다.  
   

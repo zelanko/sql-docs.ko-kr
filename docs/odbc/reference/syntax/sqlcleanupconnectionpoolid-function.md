@@ -55,7 +55,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  응용 프로그램이 드라이버에서 반환 된 오류 메시지를 받을 수 없습니다.  
   
 ## <a name="remarks"></a>주의  
- **SQLCleanupConnectionPoolID** 언제 든 지 호출 될 수 있지만 드라이버 관리자는 다른 스레드에서 호출 동시에 있다는 보장 **SQLGetPoolID** 하며 동시에 다른 스레드에서 호출 ** SQLRateConnection** 및 **SQLPoolConnect** 풀 ID를 가진 지정 된 연결 정보 토큰으로 따라서 드라이버는이 함수는 스레드로부터 안전 하 고 있는지 확인 해야 합니다.  
+ **SQLCleanupConnectionPoolID** 언제 든 지 호출 될 수 있지만 드라이버 관리자는 다른 스레드에서 호출 동시에 있다는 보장 **SQLGetPoolID** 하며 동시에 다른 스레드에서 호출  **SQLRateConnection** 및 **SQLPoolConnect** 풀 ID를 가진 지정 된 연결 정보 토큰으로 따라서 드라이버는이 함수는 스레드로부터 안전 하 고 있는지 확인 해야 합니다.  
   
  드라이버 풀 ID와 연결 된 리소스를 정리할 수 있습니다.  
   

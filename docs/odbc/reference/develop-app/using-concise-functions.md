@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
  간결한 함수 **SQLBindCol** 및 **SQLBindParameter** 해당 인수에 해당 하는 설명자 필드를 설정 하 여 열 또는 매개 변수를 바인딩합니다. 이러한 각 함수는 설명자를 설정 하면 보다 많은 작업을 수행 합니다. **SQLBindCol** 및 **SQLBindParameter** 데이터 열 또는 동적 매개 변수 바인딩이의 완전 한 사양을 제공 합니다. 그러나 응용 프로그램 호출 하 여 바인딩 개인 정보를 변경할 수 **SQLSetDescField** 또는 **SQLSetDescRec** 일련의 적합 한 호출을 하 여 열 또는 매개 변수를 바인딩할 완전히 수 있습니다 이러한 함수입니다.  
   
- 간결한 함수 **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, 및 ** SQLNumResultCols** 설명자 필드에서 값을 검색 합니다.  
+ 간결한 함수 **SQLColAttribute**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLNumParams**, 및  **SQLNumResultCols** 설명자 필드에서 값을 검색 합니다.  
   
  **SQLSetDescRec** 및 **SQLGetDescRec** 는 간결 하 게 하는 함수를 한 번의 호출으로 데이터 형식 및 열 또는 매개 변수 데이터의 저장소에 영향을 주는 여러 설명자 필드를 가져오거나 설정 합니다. **SQLSetDescRec** 은 한 번에 열 또는 매개 변수 데이터의 바인딩을 변경 하는 효과적인 방법입니다.  
   

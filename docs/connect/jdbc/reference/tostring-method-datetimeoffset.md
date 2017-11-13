@@ -38,7 +38,7 @@ public String toString()
  문자열 표현을 **DateTimeOffset** 개체입니다.  
   
 ## <a name="remarks"></a>주의  
- 문자열의 형식은 *YYYY*-*MM*-*DD**hh*:*mm*: *ss*[.* fffffff*] [+ |-]*hh*:*mm*합니다.  
+ 문자열의 형식은 *YYYY*-*MM*-*DD**hh*:*mm*: *ss*[. *fffffff*] [+ |-]*hh*:*mm*합니다.  
   
  반환된 문자열의 소수 자릿수 초는 선언된 전체 자릿수까지 0으로 채워집니다. 예를 들어는 **datetimeoffset(6)** 값이 "2010-03-10 12:34:56.78-08:00" DateTimeOffset.toString으로 형식이 지정 됩니다 "2010-03-10 12:34:56.780000-08:00"입니다.  
   

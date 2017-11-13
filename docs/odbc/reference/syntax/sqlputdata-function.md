@@ -53,7 +53,7 @@ SQLRETURN SQLPutData(
  [입력] 문 핸들입니다.  
   
  *DataPtr*  
- [입력] 매개 변수 또는 열에 대 한 실제 데이터를 포함 하는 버퍼에 대 한 포인터입니다. 데이터에 지정 된 C 데이터 형식에 있어야 합니다.는 *ValueType* 의 인수 **SQLBindParameter** (데이터용 매개 변수) 또는 *TargetType* 인수의 ** SQLBindCol** (데이터용 열)입니다.  
+ [입력] 매개 변수 또는 열에 대 한 실제 데이터를 포함 하는 버퍼에 대 한 포인터입니다. 데이터에 지정 된 C 데이터 형식에 있어야 합니다.는 *ValueType* 의 인수 **SQLBindParameter** (데이터용 매개 변수) 또는 *TargetType* 인수의  **SQLBindCol** (데이터용 열)입니다.  
   
  *StrLen_or_Ind*  
  [입력] 길이 \* *DataPtr*합니다. 에 대 한 호출에서 전송 되는 데이터의 양을 지정 **SQLPutData**합니다. 데이터의 양이 지정 된 매개 변수 또는 열에 대 한 각 호출에 달라질 수 있습니다. *StrLen_or_Ind* 다음 조건 중 하나가 충족 하지 않는 경우 무시 됩니다.  
@@ -86,7 +86,7 @@ SQLRETURN SQLPutData(
 |22012|0으로 나누기|산술 식 입력/출력에 대 한 계산 또는 0으로 나누기에서 발생 한 출력 매개 변수입니다.|  
 |22015|간격 필드 오버플로|정확한 숫자 또는 간격 열에 대 한 데이터는 전송 또는 간격 SQL 데이터 형식에 매개 변수 했기 때문에 유효 자릿수의 손실입니다.<br /><br /> 데이터 간격 열 또는 매개 변수를 둘 이상의 필드에 대 한 전송, 숫자 데이터 형식으로 변환 및 숫자 데이터 형식에 나타나지 발생 했습니다.<br /><br /> 열에 대 한 전송 되는 데이터 또는 매개 변수 데이터 간격 SQL 형식에 할당 된 되었으며 간격 SQL 형식에에서 나타나지 C 형식의 값입니다.<br /><br /> 정확한 수치 또는 간격 C 열 또는 매개 변수를 C 간격 유형 전송 되는 데이터 했기 때문에 유효 자릿수의 손실입니다.<br /><br /> 열에 대 한 전송 되는 데이터 또는 매개 변수 데이터는 간격 C 구조에 할당 된 되었으며 간격 데이터 구조에 있는 데이터의 표현을 없습니다.|  
 |22018|캐스트 사양의 문자 값|정확한 수 또는 대략적인 숫자, datetime, 또는 간격 데이터 형식;가 C 유형은 열의 SQL 형식을 문자 데이터 형식. 및 열 또는 매개 변수에서 값 바인딩된 C 형식의 올바른 리터럴 올바르지 않습니다.<br /><br /> SQL 형식 된 정확한 수 또는 대략적인 숫자, datetime, 또는 간격 데이터 형식입니다. 가 SQL_C_CHAR; C 유형은 및 열 또는 매개 변수에서 값 바인딩된 SQL 형식의 올바른 리터럴 올바르지 않습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*합니다. 함수에서 다시 호출 된 후의 *StatementHandle*합니다.<br /><br /> 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
 |HY009|Null 포인터를 잘못 사용 했습니다.|(DM) 인수 *DataPtr* null 포인터를 인수 *StrLen_or_Ind* 없습니다 0, SQL_DEFAULT_PARAM으로 또는 SQL_NULL_DATA 합니다.|  
@@ -101,14 +101,14 @@ SQLRETURN SQLPutData(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
- 경우 **SQLPutData** 호출 되는 SQL 문의 매개 변수에 대 한 데이터를 전송 하는 동안 문을 실행 하는 호출 되는 함수에서 반환 될 수 있는 모든 SQLSTATE 반환할 수 있습니다 (**SQLExecute** 또는 **SQLExecDirect**). 열에 대 한 데이터를 전송 하는 동안 호출 되 면 업데이트 되거나 추가 된 **SQLBulkOperations** 로 업데이트 또는 **SQLSetPos**, 반환할 수 있지만에서 반환 될 수 있는 모든 SQLSTATE ** SQLBulkOperations** 또는 **SQLSetPos**합니다.  
+ 경우 **SQLPutData** 호출 되는 SQL 문의 매개 변수에 대 한 데이터를 전송 하는 동안 문을 실행 하는 호출 되는 함수에서 반환 될 수 있는 모든 SQLSTATE 반환할 수 있습니다 (**SQLExecute** 또는 **SQLExecDirect**). 열에 대 한 데이터를 전송 하는 동안 호출 되 면 업데이트 되거나 추가 된 **SQLBulkOperations** 로 업데이트 또는 **SQLSetPos**, 반환할 수 있지만에서 반환 될 수 있는 모든 SQLSTATE  **SQLBulkOperations** 또는 **SQLSetPos**합니다.  
   
 ## <a name="comments"></a>설명  
  **SQLPutData** 두 가지 용도 대 한 데이터 실행 시 데이터를 제공 하기 위해 호출할 수:에 대 한 호출에 사용할 매개 변수 데이터 **SQLExecute** 또는 **SQLExecDirect**, 또는 행이 때 사용 되는 데이터 열 업데이트 하거나 호출 하 여 추가할 **SQLBulkOperations** 에 대 한 호출에 의해 업데이트 될 **SQLSetPos**합니다.  
   
  응용 프로그램 호출 하는 경우 **SQLParamData** 데이터 결정을 보내야, 드라이버는 응용 프로그램 매개 변수 데이터를 보낼 결정 하는 데 사용할 수 있는 또는 열 데이터를 찾을 수 있는 표시를 반환 합니다. 또한 호출 해야 하는 응용 프로그램을 나타내는 sql_need_data가 반환 **SQLPutData** 데이터를 보내려고 합니다. 에 *DataPtr* 인수를 **SQLPutData**, 응용 프로그램 매개 변수 또는 열에 대 한 실제 데이터를 포함 하는 버퍼에 대 한 포인터를 전달 합니다.  
   
- 드라이버에 대 한 관계 없이 SQL_SUCCESS를 반환 하는 경우 **SQLPutData**, 응용 프로그램 호출 **SQLParamData** 다시 합니다. **SQLParamData** SQL_NEED_DATA 더 많은 데이터를 전송 하는 경우이 경우 응용 프로그램 호출 반환 **SQLPutData** 다시 합니다. 모든 실행 시 데이터 데이터가 플러시된 경우 SQL_SUCCESS를 반환 합니다. 그런 다음 응용 프로그램 호출 **SQLParamData** 다시 합니다. 드라이버 SQL_NEED_DATA 및 다른 표시기를 반환 하는 경우 * \*ValuePtrPtr*, 다른 매개 변수 또는 열에 대 한 데이터를 필요 하 고 **SQLPutData** 를 다시 호출 합니다. 드라이버가 SQL_SUCCESS, 다음 모든 데이터 실행 시를 반환 하는 경우 데이터 전송 되어 하 고 SQL 문을 실행할 수 있습니다 또는 **SQLBulkOperations** 또는 **SQLSetPos** 호출을 처리할 수 있습니다.  
+ 드라이버에 대 한 관계 없이 SQL_SUCCESS를 반환 하는 경우 **SQLPutData**, 응용 프로그램 호출 **SQLParamData** 다시 합니다. **SQLParamData** SQL_NEED_DATA 더 많은 데이터를 전송 하는 경우이 경우 응용 프로그램 호출 반환 **SQLPutData** 다시 합니다. 모든 실행 시 데이터 데이터가 플러시된 경우 SQL_SUCCESS를 반환 합니다. 그런 다음 응용 프로그램 호출 **SQLParamData** 다시 합니다. 드라이버 SQL_NEED_DATA 및 다른 표시기를 반환 하는 경우  *\*ValuePtrPtr*, 다른 매개 변수 또는 열에 대 한 데이터를 필요 하 고 **SQLPutData** 를 다시 호출 합니다. 드라이버가 SQL_SUCCESS, 다음 모든 데이터 실행 시를 반환 하는 경우 데이터 전송 되어 하 고 SQL 문을 실행할 수 있습니다 또는 **SQLBulkOperations** 또는 **SQLSetPos** 호출을 처리할 수 있습니다.  
   
  문 실행 시 전달 된 방법 데이터 실행 시 매개 변수 데이터에 대 한 자세한 내용은에서 "매개 변수 값 전달" 참조 [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md) 및 [긴 데이터를 보내는](../../../odbc/reference/develop-app/sending-long-data.md)합니다. 어떻게 데이터 실행 시 열 데이터에 대 한 자세한 내용은 업데이트 되거나 추가 된 섹션을 참조 "를 사용 하 여 SQLSetPos"에서 [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md), "수행 대량 업데이트를 사용 하 여"에서 책갈피 [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), 및 [긴 데이터와 SQLSetPos SQLBulkOperations](../../../odbc/reference/develop-app/long-data-and-sqlsetpos-and-sqlbulkoperations.md)합니다.  
   

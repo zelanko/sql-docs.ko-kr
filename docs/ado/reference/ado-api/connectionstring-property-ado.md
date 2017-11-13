@@ -48,7 +48,7 @@ ms.lasthandoff: 09/09/2017
   
  설정한 후의 **ConnectionString** 속성 및 open의 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 공급자 내용을 변경할 수는 속성의 예를 들어 ADO 정의 된 인수 이름에 매핑하는 방법으로 해당 특정 공급자에 해당 합니다.  
   
- **ConnectionString** 속성에 사용 되는 값을 자동으로 상속 된 *ConnectionString* 의 인수는 [열려](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드, 현재 재정의할수있습니다** ConnectionString** 하는 동안 속성에서 **열려** 메서드를 호출 합니다.  
+ **ConnectionString** 속성에 사용 되는 값을 자동으로 상속 된 *ConnectionString* 의 인수는 [열려](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드, 현재 재정의할수있습니다 **ConnectionString** 하는 동안 속성에서 **열려** 메서드를 호출 합니다.  
   
  때문에 *파일 이름* 인수로 인해 연결 된 공급자를 로드 하는 ADO, 모두 전달할 수 없습니다는 *공급자* 및 *파일 이름* 인수입니다.  
   

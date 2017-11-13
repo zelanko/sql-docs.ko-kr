@@ -52,7 +52,7 @@ variable = field.GetChunk(Size)
   
  각 후속 **GetChunk** 어디에서 시작 하는 데이터를 검색 하는 호출 이전 **GetChunk** 호출을 중단 합니다. 그러나 한 필드 및에서 다음을 설정 하거나 현재 레코드의 다른 필드의 값을 읽는 데이터를 검색 하는 경우 ADO 첫 번째 필드에서 데이터를 검색 했으면 가정 합니다. 호출 하는 경우는 **GetChunk** 첫 번째 필드에 다시 ADO 1 보다 크거나 새 호출 **GetChunk** 작업과 데이터의 시작 부분에서 읽기 시작 합니다. 다른 필드에 액세스 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 첫 번째 복제본 없는 개체가 **레코드 집합** 개체에 영향을 주지 **GetChunk** 작업 합니다.  
   
- 경우는 **adFldLong** 비트는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성의는 **필드** 개체로 설정 되어 **True**, 사용할 수 있습니다는 **GetChunk ** 해당 필드에 대 한 메서드.  
+ 경우는 **adFldLong** 비트는 [특성](../../../ado/reference/ado-api/attributes-property-ado.md) 속성의는 **필드** 개체로 설정 되어 **True**, 사용할 수 있습니다는 **GetChunk**  해당 필드에 대 한 메서드.  
   
  사용 하는 경우 현재 레코드가 없는 경우는 **GetChunk** 에서 메서드는 **필드** 개체 3021 (현재 레코드 없음) 오류가 발생 합니다.  
   

@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="c-interval-structure"></a>C 간격 구조
-에 나열 된 각 C 간격 데이터 형식의 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 섹션은 동일한 구조를 사용 하 여 간격 데이터를 포함 시키십시오. 때 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** 은, 드라이버 SQL_INTERVAL_STRUCT 구조에 데이터를 반환 합니다.를 호출 하 여 지정 된 값을 사용 하 여는 C 데이터 형식에 대 한 응용 프로그램 (에 대 한 호출에서 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**) SQL_INTERVAL_STRUCT의 내용을 해석 하려면 정보를 표시 하 고는 *interval_type* 구조의 필드는 *enum* C 형식에 해당 하는 값입니다. 드라이버 읽지 않는 *interval_type* 간격의 유형을 결정 하도록 필드; SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 매개 변수 데이터 구조를 사용 하면 드라이버를 사용 하 여 APD의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에 의해 지정 된 값, SQL_INTERVAL_STRUCT의 내용을 해석 응용 프로그램의 값을 설정 하는 경우에는 * interval_type* 필드 값을 다른 값입니다.  
+에 나열 된 각 C 간격 데이터 형식의 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 섹션은 동일한 구조를 사용 하 여 간격 데이터를 포함 시키십시오. 때 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** 은, 드라이버 SQL_INTERVAL_STRUCT 구조에 데이터를 반환 합니다.를 호출 하 여 지정 된 값을 사용 하 여는 C 데이터 형식에 대 한 응용 프로그램 (에 대 한 호출에서 **SQLBindCol**, **SQLGetData**, 또는 **SQLBindParameter**) SQL_INTERVAL_STRUCT의 내용을 해석 하려면 정보를 표시 하 고는 *interval_type* 구조의 필드는 *enum* C 형식에 해당 하는 값입니다. 드라이버 읽지 않는 *interval_type* 간격의 유형을 결정 하도록 필드; SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 매개 변수 데이터 구조를 사용 하면 드라이버를 사용 하 여 APD의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에 의해 지정 된 값, SQL_INTERVAL_STRUCT의 내용을 해석 응용 프로그램의 값을 설정 하는 경우에는  *interval_type* 필드 값을 다른 값입니다.  
   
  이 구조는 다음과 같이 정의 됩니다.  
   

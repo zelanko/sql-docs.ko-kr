@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 |[BeginTrans, CommitTrans 및 RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)|트랜잭션 내에서 처리를 관리 하는 **연결** 다음과 같이 개체:<br /><br /> **BeginTrans** -새 트랜잭션을 시작 합니다.<br /><br /> **CommitTrans** -변경 내용을 저장 하 고 현재 트랜잭션을 종료 합니다. 새 트랜잭션을 시작할 수도 있습니다.<br /><br /> **RollbackTrans** -모든 변경 내용을 취소 하 고 현재 트랜잭션을 종료 합니다. 새 트랜잭션을 시작할 수도 있습니다.|  
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|실행을 취소는 보류 중인 비동기 메서드 호출 합니다.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|보류 중인 일괄 처리 업데이트를 취소합니다.|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|현재 또는 새 행에 대 한 모든 변경 내용을 취소는 **레코드 집합** 개체 또는 **필드** 의 컬렉션을 **레코드** 개체를 호출 하기 전에 ** 업데이트** 메서드.|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|현재 또는 새 행에 대 한 모든 변경 내용을 취소는 **레코드 집합** 개체 또는 **필드** 의 컬렉션을 **레코드** 개체를 호출 하기 전에  **업데이트** 메서드.|  
 |[지우기](../../../ado/reference/ado-api/clear-method-ado.md)|모든 제거는 **오류** 에서 개체는 **오류** 컬렉션입니다.|  
 |[복제](../../../ado/reference/ado-api/clone-method-ado.md)|복제를 만들어 **레코드 집합** 기존 개체 **레코드 집합** 개체입니다. 필요에 따라 읽기 전용 복제 되도록 지정 합니다.|  
 |[닫기](../../../ado/reference/ado-api/close-method-ado.md)|열려 있는 개체와 모든 종속 개체를 닫습니다.|  

@@ -35,7 +35,7 @@ ADO 프로젝트를 설정 하 고 ADO 코드를 작성은 유사 사용할지 V
 
 #### <a name="to-reference-ado-from-microsoft-visual-basic"></a>Microsoft Visual Basic에서 ADO 참조 하려면
 
-1.  Visual basic에서에서 **프로젝트** 메뉴 선택 **참조 중... **.
+1.  Visual basic에서에서 **프로젝트** 메뉴 선택 **참조 중...** .
 
 2.  선택 **Microsoft ActiveX Data Objects x.x 라이브러리** 목록에서 합니다. 적어도 확인 다음 라이브러리도 선택:
 
@@ -55,7 +55,7 @@ ADO 프로젝트를 설정 하 고 ADO 코드를 작성은 유사 사용할지 V
 
 1.  Microsoft Access에서 선택 하거나에서 모듈을 만듭니다는 **모듈** 탭에 **데이터베이스** 창.
 
-2.  에 **도구** 메뉴 선택 **참조 중... **.
+2.  에 **도구** 메뉴 선택 **참조 중...** .
 
 3.  선택 **Microsoft ActiveX Data Objects x.x 라이브러리** 목록에서 합니다. 적어도 확인 다음 라이브러리도 선택:
 

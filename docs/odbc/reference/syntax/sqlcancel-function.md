@@ -61,7 +61,7 @@ SQLRETURN SQLCancel(
 |SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 인수에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 인수에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLCancel** 함수를 호출 했습니다.<br /><br /> DM ()는 비동기 작업 연관 된 연결 핸들에 진행 중 이므로 실패 했습니다. 작업을 취소 *StatementHandle*합니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
@@ -81,7 +81,7 @@ SQLRETURN SQLCancel(
   
  Odbc 2. *x*응용 프로그램을 호출 하는 경우, **SQLCancel** 문을 없는 처리로 수행 되는 경우 **SQLCancel** 것과 동일한 결과가 **SQLFreeStmt** SQL_CLOSE 옵션입니다. 이 문제는 완전성을 위해서만 정의 되며 응용 프로그램 호출 해야 **SQLFreeStmt** 또는 **SQLCloseCursor** 를 커서를 닫습니다.  
   
- 때 **SQLCancel** 함수, 데이터 요구를 취소 하는 함수에 의해 게시 되는 진단 레코드 선택 취소 하는 문에 대 한 문 또는 함수에서 비동기적으로 실행을 취소 하기 위해 호출 하 고 **SQLCancel 그러나 ** 자체 진단 레코드에 게시 때 **SQLCancel** 문에서 다른 스레드에서 실행 되는 함수를 취소 하려면 지워지지 않습니다 진단 호출 되는 레코드 함수 및 취소 하지 자체 진단 레코드를 게시 합니다.  
+ 때 **SQLCancel** 함수, 데이터 요구를 취소 하는 함수에 의해 게시 되는 진단 레코드 선택 취소 하는 문에 대 한 문 또는 함수에서 비동기적으로 실행을 취소 하기 위해 호출 하 고 **SQLCancel 그러나**  자체 진단 레코드에 게시 때 **SQLCancel** 문에서 다른 스레드에서 실행 되는 함수를 취소 하려면 지워지지 않습니다 진단 호출 되는 레코드 함수 및 취소 하지 자체 진단 레코드를 게시 합니다.  
   
 ## <a name="canceling-asynchronous-processing"></a>비동기 처리를 취소합니다.  
  응용 프로그램 함수를 비동기적으로 호출 후 반복 해 서 처리를 완료 되었는지 여부를 결정 하는 함수를 호출 합니다. 함수를 계속 처리 하는 경우 SQL_STILL_EXECUTING을 반환 합니다. 함수 처리를 완료 하는 경우에 다른 코드를 반환 합니다.  

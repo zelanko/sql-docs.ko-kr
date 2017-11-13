@@ -33,7 +33,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **쿼리에서 매우 큰 결과 집합 생성:** 응용 프로그램에는 응용 프로그램 메모리에 저장할 수 있는 보다 많은 행을 생성 하는 SELECT 문을 실행할 수 있습니다. 이전 버전에서는 응용 프로그램 프로그램 OutOfMemoryError를 방지 하기 위해 서버 커서를 사용 해야 했습니다. 선택 버퍼링을 사용하면 서버 커서 없이도 임의의 큰 결과 집합을 정방향 읽기 전용으로 처리할 수 있습니다.  
   
--   **쿼리로 매우 큰**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**열 또는**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 매개 변수 값: ** 응용 프로그램에는 단일 값을 검색할 수 (열 또는 OUT 매개 변수)는이 너무 커서 응용 프로그램 메모리에 저장할 수 있습니다.         선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 응용 프로그램에서 값을 검색 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스트림에서 읽으면서 합니다.  
+-   **쿼리로 매우 큰**[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)**열 또는**[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)**OUT 매개 변수 값:**  응용 프로그램에는 단일 값을 검색할 수 (열 또는 OUT 매개 변수)는이 너무 커서 응용 프로그램 메모리에 저장할 수 있습니다.         선택 버퍼링 클라이언트 응용 프로그램을 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 이러한 값을 스트림으로 검색할 수 있습니다. 응용 프로그램에서 값을 검색 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 스트림에서 읽으면서 합니다.  
   
 > [!NOTE]  
 >  선택 버퍼링을 사용하면 JDBC 드라이버는 필요한 양의 데이터만 버퍼링합니다. 드라이버는 버퍼 크기를 제어 또는 제한하는 공용 메서드를 제공하지 않습니다.  
@@ -68,7 +68,7 @@ ms.lasthandoff: 09/09/2017
 ## <a name="guidelines-for-using-adaptive-buffering"></a>선택 버퍼링 사용에 대한 지침  
  응용 프로그램의 메모리 사용량을 최소화하기 위해 개발자들이 따라야 할 중요한 지침은 다음과 같습니다.  
   
--   연결 문자열 속성을 사용 하지 않도록 **selectMethod = cursor** 응용 프로그램에서 매우 큰 결과 처리할 수 있도록 설정 합니다. 선택 버퍼링 기능은 응용 프로그램이 서버 커서를 사용하지 않고도 매우 큰 정방향 전용의 읽기 전용 결과 집합을 처리할 수 있도록 합니다. 설정 하는 경우 유의 **selectMethod = cursor**모든 정방향 전용, 해당 연결에서 생성 하는 읽기 전용 결과 집합이 영향을 받습니다. 즉, 응용 프로그램에 정기적으로 몇 행이 있는 간단한 결과 집합 처리를 하는 경우 만들기, 읽기 및 각 결과 집합은 경우 보다 클라이언트 쪽 및 서버측 모두에서 더 많은 리소스를 사용 하 여 서버 커서를 닫으면 여기서는 ** selectMethod** 로 설정 되지 않은 **커서**합니다.  
+-   연결 문자열 속성을 사용 하지 않도록 **selectMethod = cursor** 응용 프로그램에서 매우 큰 결과 처리할 수 있도록 설정 합니다. 선택 버퍼링 기능은 응용 프로그램이 서버 커서를 사용하지 않고도 매우 큰 정방향 전용의 읽기 전용 결과 집합을 처리할 수 있도록 합니다. 설정 하는 경우 유의 **selectMethod = cursor**모든 정방향 전용, 해당 연결에서 생성 하는 읽기 전용 결과 집합이 영향을 받습니다. 즉, 응용 프로그램에 정기적으로 몇 행이 있는 간단한 결과 집합 처리를 하는 경우 만들기, 읽기 및 각 결과 집합은 경우 보다 클라이언트 쪽 및 서버측 모두에서 더 많은 리소스를 사용 하 여 서버 커서를 닫으면 여기서는  **selectMethod** 로 설정 되지 않은 **커서**합니다.  
   
 -   개체는 getBlob 또는 getClob 메서드 대신는 getAsciiStream, getBinaryStream, 또는 getCharacterStream 메서드를 사용 하 여 스트림으로 큰 텍스트 또는 이진 값을 읽습니다. 버전 1.2 릴리스 이상는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스 제공 새 get\<유형 > Stream이 목적을 위해 메서드.  
   

@@ -61,7 +61,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
   
  공급자가 반환 하는 경우 명령을 위한 용도가 아닙니다 (예: SQL UPDATE 쿼리) 결과를 반환할 **아무** 옵션으로 긴 **adExecuteNoRecords** 에 지정 됩니다. 그렇지 않으면 반환을 실행 한 닫힌 **레코드 집합**합니다. 일부 응용 프로그램 언어 사용 되지 않은 경우이 반환 값을 무시 하도록 하면 **레코드 집합** 이 필요 합니다.  
   
- **실행** 사용자에 대 한 값을 지정 하는 경우 오류를 발생 시킵니다. **CommandStream** 때는 **CommandType** 은 **adCmdStoredProc**, ** adCmdTable**, 또는 **adCmdTableDirect**합니다.  
+ **실행** 사용자에 대 한 값을 지정 하는 경우 오류를 발생 시킵니다. **CommandStream** 때는 **CommandType** 은 **adCmdStoredProc**,  **adCmdTable**, 또는 **adCmdTableDirect**합니다.  
   
  현재 값에 대 한 쿼리 매개 변수를 갖는 경우는 **명령** 해당와 함께 전달 된 매개 변수 값으로 재정의 하지 않으면 사용 되는 개체의 매개 변수는 **Execute** 호출 합니다. 호출할 때 매개 변수 중 일부에 대 한 새 값을 생략 하 여 매개 변수의 하위 집합을 재정의할 수 있습니다는 **Execute** 메서드. 매개 변수를 지정 순서가 메서드가 전달 하는 순서와 동일 합니다. 예를 들어, 4 개 (또는 그 이상) 매개 변수가 및 첫 번째 및 네 번째 매개 변수의 새 값을 전달 하려는 경우이 단계를 전달 하는 경우에 `Array(var1,,,var4)` 로 *매개 변수* 인수입니다.  
   

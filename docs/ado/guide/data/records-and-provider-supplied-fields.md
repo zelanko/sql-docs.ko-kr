@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="records-and-provider-supplied-fields"></a>레코드 및 필드 공급자 제공
 경우는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체가 열릴, 소스에서 현재 열린 행 수 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 절대 URL 또는 열린와 함께에서 상대 URL [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 .  
   
- 경우는 **레코드** 에서 열린는 **레코드 집합**, **레코드** 개체 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션은 의모든필드가포함됩니다** 레코드 집합**, 기본 공급자가 추가 된 모든 필드와 합니다.  
+ 경우는 **레코드** 에서 열린는 **레코드 집합**, **레코드** 개체 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션은 의모든필드가포함됩니다 **레코드 집합**, 기본 공급자가 추가 된 모든 필드와 합니다.  
   
  공급자의 보조 특성을 제공 하는 추가 필드를 삽입할 수 있습니다는 **레코드**합니다. 결과적으로, 한 **레코드** 에 있지 않은 고유 필드를 할 수는 **레코드 집합** 전체 호스트 또는 모든 **레코드** 의 다른 행에서 파생 된는 **레코드 집합**.  
   

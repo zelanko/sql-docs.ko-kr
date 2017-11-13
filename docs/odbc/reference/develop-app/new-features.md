@@ -85,7 +85,7 @@ ODBC 3에서 다음과 같은 새로운 기능을 도입 했습니다. *x*합니
   
 -   명명 된 매개 변수입니다.  
   
--   ODBC 3 중 하나입니다. *x*– 특정 **SQLGetInfo** 옵션입니다. (되었으면 ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버 호출을 여러 ODBC 2를 대체 한 SQL_XXX_CURSOR_ATTRIBUTES1 정보 유형.* x* 정보 유형이 정보의 일부 안정적 수 있습니다 하지만 일부 수 없습니다. 자세한 내용은 참조 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   ODBC 3 중 하나입니다. *x*– 특정 **SQLGetInfo** 옵션입니다. (되었으면 ODBC 3입니다. *x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버 호출을 여러 ODBC 2를 대체 한 SQL_XXX_CURSOR_ATTRIBUTES1 정보 유형. *x* 정보 유형이 정보의 일부 안정적 수 있습니다 하지만 일부 수 없습니다. 자세한 내용은 참조 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   오프셋에 바인딩하십시오.  
   

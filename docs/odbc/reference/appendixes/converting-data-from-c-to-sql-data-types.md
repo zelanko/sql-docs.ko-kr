@@ -45,7 +45,7 @@ ms.lasthandoff: 09/09/2017
   
  경우는 *ParameterType* 인수 **SQLBindParameter** 지정된 된 C 데이터 형식에 대 한 테이블에 표시 되지 않는 ODBC SQL 데이터 형식 식별자가 포함 된 **SQLBindParameter**SQLSTATE 07006 반환 (제한 된 데이터 형식 특성 위반). 경우는 *ParameterType* 드라이버 관련 식별자를 포함 하는 인수 및 드라이버 지원 하지 않는 해당 드라이버별 SQL 데이터 형식에 대 한 특정 ODBC C 데이터 형식 변환을 **SQLBindParameter** SQLSTATE HYC00 반환 (선택적 기능이 구현 되지 않음).  
   
- 경우는 *ParameterValuePtr* 및 *StrLen_or_IndPtr* 에 지정 된 인수가 **SQLBindParameter** 해당 함수가 반환 SQLSTATE HY009, 모두 null 포인터인 (유효 하지 않음 null 포인터 사용)입니다. 응용 프로그램에서 가리키는 길이/표시기 버퍼의 값을 설정 하지만 테이블에 표시 되지 않는 *StrLen_or_IndPtr* 의 인수 **SQLBindParameter** 의 값은 * StrLen_or_IndPtr* 의 인수 **SQLPutData** 을 sql_null_data로 SQL NULL 데이터 값을 지정 합니다. (의 *StrLen_or_IndPtr* 인수 APD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 해당 합니다.) 응용 프로그램이 이러한 값을 지정 하는 SQL_NTS의 값을 설정 \* *ParameterValuePtr* 에 **SQLBindParameter** 또는 \* *DataPtr*에 **SQLPutData** 은 null로 끝나는 문자열로 (APD의 SQL_DESC_DATA_PTR 필드가 가리키는 함).  
+ 경우는 *ParameterValuePtr* 및 *StrLen_or_IndPtr* 에 지정 된 인수가 **SQLBindParameter** 해당 함수가 반환 SQLSTATE HY009, 모두 null 포인터인 (유효 하지 않음 null 포인터 사용)입니다. 응용 프로그램에서 가리키는 길이/표시기 버퍼의 값을 설정 하지만 테이블에 표시 되지 않는 *StrLen_or_IndPtr* 의 인수 **SQLBindParameter** 의 값은  *StrLen_or_IndPtr* 의 인수 **SQLPutData** 을 sql_null_data로 SQL NULL 데이터 값을 지정 합니다. (의 *StrLen_or_IndPtr* 인수 APD의 SQL_DESC_OCTET_LENGTH_PTR 필드에 해당 합니다.) 응용 프로그램이 이러한 값을 지정 하는 SQL_NTS의 값을 설정 \* *ParameterValuePtr* 에 **SQLBindParameter** 또는 \* *DataPtr*에 **SQLPutData** 은 null로 끝나는 문자열로 (APD의 SQL_DESC_DATA_PTR 필드가 가리키는 함).  
   
  테이블에는 다음과 같은 용어가 사용 됩니다.  
   

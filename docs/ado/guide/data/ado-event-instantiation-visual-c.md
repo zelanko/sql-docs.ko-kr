@@ -72,7 +72,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  이벤트 클래스에서 상속 **IUnknown**구현 해야 하므로 **QueryInterface**, **AddRef**, 및 **릴리스** 메서드. 클래스 생성자 및 소멸자를 구현할 수도 있습니다. 이 부분에서는 작업을 간소화 하기 위해 가장 능숙 하는 Visual c + + 도구를 선택 합니다.  
   
- 알 수 있는 이벤트 처리기 되어 사용할 수 있는 실행 하 여 확인 **QueryInterface** 에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 에 대 한 개체는 ** IConnectionPointContainer** 및 **IConnectionPoint** 인터페이스입니다. 그런 다음 실행할 **IConnectionPoint::Advise** 각 클래스에 대 한 합니다.  
+ 알 수 있는 이벤트 처리기 되어 사용할 수 있는 실행 하 여 확인 **QueryInterface** 에 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 에 대 한 개체는  **IConnectionPointContainer** 및 **IConnectionPoint** 인터페이스입니다. 그런 다음 실행할 **IConnectionPoint::Advise** 각 클래스에 대 한 합니다.  
   
  예를 들어 사용자가 반환 하는 부울 함수 사용을 가정 **True** 성공적으로 알리는 경우는 **레코드 집합** 이벤트 처리기를 사용할 수 있는 개체입니다.  
   

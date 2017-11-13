@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  **SQLAllocHandle** 환경, 연결, 문 또는 설명자 핸들을 할당 합니다.  
   
 > [!NOTE]  
->  이 함수는 ODBC 2.0 함수를 대체 하는 핸들을 할당 하기 위한 제네릭 함수 **SQLAllocConnect**, **SQLAllocEnv**, 및 **SQLAllocStmt**합니다. 응용 프로그램이 호출할 수 있도록 **SQLAllocHandle** ODBC 2에서 실행 되도록 합니다.* x* 드라이버에 대 한 호출 **SQLAllocHandle** 드라이버 관리자를 매핑된 **SQLAllocConnect**, **SQLAllocEnv**, 또는 ** SQLAllocStmt**를 적절 하 게 합니다. 자세한 내용은 "설명"을 참조 하십시오. 자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 때 ODBC 3이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 2.* x* 드라이버 참조 [이전 버전과 호환성의 응용 프로그램에 대 한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
+>  이 함수는 ODBC 2.0 함수를 대체 하는 핸들을 할당 하기 위한 제네릭 함수 **SQLAllocConnect**, **SQLAllocEnv**, 및 **SQLAllocStmt**합니다. 응용 프로그램이 호출할 수 있도록 **SQLAllocHandle** ODBC 2에서 실행 되도록 합니다. *x* 드라이버에 대 한 호출 **SQLAllocHandle** 드라이버 관리자를 매핑된 **SQLAllocConnect**, **SQLAllocEnv**, 또는  **SQLAllocStmt**를 적절 하 게 합니다. 자세한 내용은 "설명"을 참조 하십시오. 자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 때 ODBC 3이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버 참조 [이전 버전과 호환성의 응용 프로그램에 대 한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -81,9 +81,9 @@ SQLRETURN SQLAllocHandle(
 ## <a name="environment-handle-allocation-errors"></a>환경 핸들 할당 오류  
  환경 할당이 드라이버 관리자 내에서 및 각 드라이버 내에서 발생합니다. 반환 된 오류 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV의 오류가 발생 한 수준에 따라 다릅니다.  
   
- 드라이버 관리자에 대 한 메모리를 할당할 수 없는 경우 * \*OutputHandlePtr* 때 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV의 호출 또는 응용 프로그램에 대 한 null 포인터를 제공 *OutputHandlePtr*, **SQLAllocHandle** SQL_ERROR를 반환 합니다. 드라이버 관리자 설정 **OutputHandlePtr* SQL_NULL_HENV를 (제공 하지 않는 한 응용 프로그램 SQL_ERROR를 반환 하는 null 포인터). 추가 진단 정보를 연결 하는 핸들이 없습니다 있습니다.  
+ 드라이버 관리자에 대 한 메모리를 할당할 수 없는 경우  *\*OutputHandlePtr* 때 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV의 호출 또는 응용 프로그램에 대 한 null 포인터를 제공 *OutputHandlePtr*, **SQLAllocHandle** SQL_ERROR를 반환 합니다. 드라이버 관리자 설정 **OutputHandlePtr* SQL_NULL_HENV를 (제공 하지 않는 한 응용 프로그램 SQL_ERROR를 반환 하는 null 포인터). 추가 진단 정보를 연결 하는 핸들이 없습니다 있습니다.  
   
- 드라이버 관리자가 응용 프로그램 호출할 때까지 드라이버 수준 환경 핸들 할당 함수를 호출 하지 않으면 **SQLConnect**, **SQLBrowseConnect**, 또는 **SQLDriverConnect**. 드라이버 수준에서 오류가 발생 하는 경우 **SQLAllocHandle** 함수, 다음 드라이버 관리자 – 수준 **SQLConnect**, **SQLBrowseConnect**, 또는 ** SQLDriverConnect** 함수 SQL_ERROR를 반환 합니다. 진단 데이터 구조에 SQLSTATE IM004 (드라이버의 **SQLAllocHandle** 실패). 연결 핸들에는 오류가 반환 됩니다.  
+ 드라이버 관리자가 응용 프로그램 호출할 때까지 드라이버 수준 환경 핸들 할당 함수를 호출 하지 않으면 **SQLConnect**, **SQLBrowseConnect**, 또는 **SQLDriverConnect**. 드라이버 수준에서 오류가 발생 하는 경우 **SQLAllocHandle** 함수, 다음 드라이버 관리자 – 수준 **SQLConnect**, **SQLBrowseConnect**, 또는  **SQLDriverConnect** 함수 SQL_ERROR를 반환 합니다. 진단 데이터 구조에 SQLSTATE IM004 (드라이버의 **SQLAllocHandle** 실패). 연결 핸들에는 오류가 반환 됩니다.  
   
  드라이버 관리자와 드라이버 사이의 함수 호출의 흐름에 대 한 자세한 내용은 참조 [SQLConnect 함수](../../../odbc/reference/syntax/sqlconnect-function.md)합니다.  
   
@@ -102,7 +102,7 @@ SQLRETURN SQLAllocHandle(
 |HY014|한도 초과 하는 핸들의 수에|핸들 형식에 대 한 할당 될 수 있는 핸들의 수에 대 한 드라이버에 정의 된 제한으로 표시 된 *HandleType* 인수에 도달 했습니다.|  
 |HY092|잘못 된 특성/옵션 식별자|DM ()는 *HandleType* 인수: SQL_HANDLE_ENV, sql_handle_dbc 라는, 여, 또는 SQL_HANDLE_DESC 합니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
-|HYC00|선택적 기능이 구현 되지 않았습니다|*HandleType* 인수 SQL_HANDLE_DESC 이며 드라이버는 ODBC 2.* x* 드라이버입니다.|  
+|HYC00|선택적 기능이 구현 되지 않았습니다|*HandleType* 인수 SQL_HANDLE_DESC 이며 드라이버는 ODBC 2. *x* 드라이버입니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|DM ()는 *HandleType* 인수 여, 되었으며 유효한 ODBC 드라이버가 없습니다.<br /><br /> DM ()는 *HandleType* 인수 SQL_HANDLE_DESC, 였으며 드라이버 설명자 핸들 할당을 지원 하지 않습니다.|  
   
@@ -111,10 +111,10 @@ SQLRETURN SQLAllocHandle(
   
  여러 할당 드라이버에서 지원 되는 경우 한 번에 응용 프로그램에서 둘 이상의 환경, 연결 또는 문 핸들을 할당할 수 있습니다. ODBC, 환경, 연결, 문 또는 설명자 핸들과 한 번에 할당 될 수 있는 수에 제한이 없음을 정의 됩니다. 드라이버는 특정 유형의; 한 번에 할당 될 수 있는 핸들의 수에 제한을 설정할 수 있습니다. 자세한 내용은 드라이버 설명서를 참조 합니다.  
   
- 응용 프로그램을 호출 하는 경우 **SQLAllocHandle** 와 * \*OutputHandlePtr* 드라이버 덮어씁니다 환경, 연결, 문 또는 이미 존재 하는 설명자 핸들을으로 설정 된 와 관련 된 정보는 *처리*응용 프로그램은 사용 하 여 연결 풀링 (참조 "할당 하는 환경 특성에 대 한 연결 풀링"이이 섹션의 뒷부분에 나오는) 하지 않는 한, 합니다. 드라이버 관리자를 확인 하지 않습니다 여부는 *처리* 에 입력 한 * \*OutputHandlePtr* 이미 사용 중 또는 시키는 핸들의 이전 내용의 덮어쓰기 전에 확인 .  
+ 응용 프로그램을 호출 하는 경우 **SQLAllocHandle** 와  *\*OutputHandlePtr* 드라이버 덮어씁니다 환경, 연결, 문 또는 이미 존재 하는 설명자 핸들을으로 설정 된 와 관련 된 정보는 *처리*응용 프로그램은 사용 하 여 연결 풀링 (참조 "할당 하는 환경 특성에 대 한 연결 풀링"이이 섹션의 뒷부분에 나오는) 하지 않는 한, 합니다. 드라이버 관리자를 확인 하지 않습니다 여부는 *처리* 에 입력 한  *\*OutputHandlePtr* 이미 사용 중 또는 시키는 핸들의 이전 내용의 덮어쓰기 전에 확인 .  
   
 > [!NOTE]  
->  잘못 된 ODBC 응용 프로그램 프로그래밍 호출 하는 **SQLAllocHandle** 에 대해 정의 된 동일한 응용 프로그램 변수를 두고 두 번 * \*OutputHandlePtr* 호출 하지 않고 ** SQLFreeHandle** 를 재할당 하기 전에 핸들을 해제 합니다. ODBC 덮어쓰기 일관 되지 않은 동작이 또는 ODBC 드라이버 안되며 오류 방식으로 처리 될 수 있습니다.  
+>  잘못 된 ODBC 응용 프로그램 프로그래밍 호출 하는 **SQLAllocHandle** 에 대해 정의 된 동일한 응용 프로그램 변수를 두고 두 번  *\*OutputHandlePtr* 호출 하지 않고  **SQLFreeHandle** 를 재할당 하기 전에 핸들을 해제 합니다. ODBC 덮어쓰기 일관 되지 않은 동작이 또는 ODBC 드라이버 안되며 오류 방식으로 처리 될 수 있습니다.  
   
  여러 스레드를 지 원하는 운영 체제에서 응용 프로그램 서로 다른 스레드에서 동일한 환경, 연결, 문 또는 설명자 핸들을 사용할 수 있습니다. 드라이버가이 정보에 대 한 안전 하 고 다중 스레드 액세스를 지원 하므로 해야 합니다. 이 작업을 수행할는 한 가지 방법은 임계 영역 또는 세마포를 사용 하 여은 예를 들어 있습니다. 스레딩에 대 한 자세한 내용은 참조 [다중 스레딩](../../../odbc/reference/develop-app/multithreading.md)합니다.  
   
@@ -131,7 +131,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-an-environment-handle"></a>환경 핸들 할당  
  환경 핸들 유효한 연결 핸들 활성 연결 핸들 등과 같은 전역 정보에 대 한 액세스를 제공합니다. 환경 핸들에 대 한 일반 정보를 참조 하십시오. [환경 핸들](../../../odbc/reference/develop-app/environment-handles.md)합니다.  
   
- 환경 핸들을 요청 하려면 응용 프로그램이 호출 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV의 및 *InputHandle* SQL_NULL_HANDLE입니다. 환경 정보 및 연결된 핸들의 값을 다시 전달에 대 한 메모리를 할당 하는 드라이버는 * \*OutputHandlePtr* 인수입니다. 응용 프로그램 전달은 * \*OutputHandle* 환경 핸들 인수를 필요로 하는 모든 후속 호출에는 값입니다. 자세한 내용은 참조 [환경 처리할 할당](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)합니다.  
+ 환경 핸들을 요청 하려면 응용 프로그램이 호출 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV의 및 *InputHandle* SQL_NULL_HANDLE입니다. 환경 정보 및 연결된 핸들의 값을 다시 전달에 대 한 메모리를 할당 하는 드라이버는  *\*OutputHandlePtr* 인수입니다. 응용 프로그램 전달은  *\*OutputHandle* 환경 핸들 인수를 필요로 하는 모든 후속 호출에는 값입니다. 자세한 내용은 참조 [환경 처리할 할당](../../../odbc/reference/develop-app/allocating-the-environment-handle.md)합니다.  
   
  드라이버 관리자의 환경 핸들을 이미 있을 경우 드라이버의 환경 핸들 다음 아래 **SQLAllocHandle** 와 *HandleType* SQL_HANDLE_ENV의 호출 되지 않습니다 드라이버의 경우는 연결 되 면만 **SQLAllocHandle** 와 *HandleType* sql_handle_dbc 라는의 합니다. 드라이버에서 SQL_HANDLE_ENV HandleType와 SQLAllocHandle와는 HandleType의 sql_handle_dbc 라는와 SQLAllocHandle 운전 환경 핸들 드라이버 관리자 환경 핸들에서 존재 하지 않습니다 있으면 호출 되는 경우 첫 번째 연결 환경 핸들은 드라이버에 연결 되어 있습니다.  
   
@@ -151,7 +151,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-connection-handle"></a>연결 핸들 할당  
  설명자 핸들에 연결 및 트랜잭션이 현재 인지 열 및 연결 핸들 유효한 문 등의 정보에 대 한 액세스를 제공 합니다. 연결 핸들에 대 한 일반 정보를 참조 하십시오. [연결 핸들](../../../odbc/reference/develop-app/connection-handles.md)합니다.  
   
- 연결 핸들을 요청 하려면 응용 프로그램이 호출 **SQLAllocHandle** 와 *HandleType* sql_handle_dbc 라는입니다. *InputHandle* 인수에 대 한 호출에서 반환 된 환경 핸들으로 설정 되어 **SQLAllocHandle** 를 해당 핸들을 할당 합니다. 드라이버는 연결 정보 및 연결된 핸들의 값을 다시 전달에 대 한 메모리를 할당 * \*OutputHandlePtr*합니다. 응용 프로그램 전달은 * \*OutputHandlePtr* 연결 핸들을 필요로 하는 모든 후속 호출에는 값입니다. 자세한 내용은 참조 [연결 핸들 할당](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)합니다.  
+ 연결 핸들을 요청 하려면 응용 프로그램이 호출 **SQLAllocHandle** 와 *HandleType* sql_handle_dbc 라는입니다. *InputHandle* 인수에 대 한 호출에서 반환 된 환경 핸들으로 설정 되어 **SQLAllocHandle** 를 해당 핸들을 할당 합니다. 드라이버는 연결 정보 및 연결된 핸들의 값을 다시 전달에 대 한 메모리를 할당  *\*OutputHandlePtr*합니다. 응용 프로그램 전달은  *\*OutputHandlePtr* 연결 핸들을 필요로 하는 모든 후속 호출에는 값입니다. 자세한 내용은 참조 [연결 핸들 할당](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md)합니다.  
   
  드라이버 관리자가 처리는 **SQLAllocHandle** 함수를 호출 하는 드라이버의 **SQLAllocHandle** 응용 프로그램 호출 될 때 작동 **SQLConnect**, **SQLBrowseConnect**, 또는 **SQLDriverConnect**합니다. (자세한 내용은 참조 [SQLConnect 함수](../../../odbc/reference/syntax/sqlconnect-function.md).)  
   
@@ -164,7 +164,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="allocating-a-statement-handle"></a>문 핸들 할당  
  문 핸들 SQL 문 처리에 대 한 오류 메시지, 커서 이름, 상태 정보 등 문 정보에 대 한 액세스를 제공합니다. 문 핸들에 대 한 일반 정보를 참조 하십시오. [문 핸들](../../../odbc/reference/develop-app/statement-handles.md)합니다.  
   
- 문 핸들을 요청 하려면 응용 프로그램 데이터 원본에 연결 하 고 다음 호출 **SQLAllocHandle** SQL 문을 전송 하기 전에. 이 호출에서 *HandleType* 여로 설정 해야 하 고 *InputHandle* 연결 핸들에 대 한 호출에서 반환 된로 설정 해야 **SQLAllocHandle** 해당 핸들을 할당 합니다. 드라이버는 문 정보에 대 한 메모리를 할당, 지정 된 연결 및 연결된 핸들의 값을 다시 전달 문 핸들 연결 * \*OutputHandlePtr*합니다. 응용 프로그램 전달은 * \*OutputHandlePtr* 문 핸들을 필요로 하는 모든 후속 호출에는 값입니다. 자세한 내용은 참조 [문 핸들 할당](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)합니다.  
+ 문 핸들을 요청 하려면 응용 프로그램 데이터 원본에 연결 하 고 다음 호출 **SQLAllocHandle** SQL 문을 전송 하기 전에. 이 호출에서 *HandleType* 여로 설정 해야 하 고 *InputHandle* 연결 핸들에 대 한 호출에서 반환 된로 설정 해야 **SQLAllocHandle** 해당 핸들을 할당 합니다. 드라이버는 문 정보에 대 한 메모리를 할당, 지정 된 연결 및 연결된 핸들의 값을 다시 전달 문 핸들 연결  *\*OutputHandlePtr*합니다. 응용 프로그램 전달은  *\*OutputHandlePtr* 문 핸들을 필요로 하는 모든 후속 호출에는 값입니다. 자세한 내용은 참조 [문 핸들 할당](../../../odbc/reference/develop-app/allocating-a-statement-handle-odbc.md)합니다.  
   
  문 핸들 할당 되 면 드라이버 자동으로 4 개의 설명자의 집합을 할당 하 고 SQL_ATTR_APP_ROW_DESC, SQL_ATTR_APP_PARAM_DESC, SQL_ATTR_IMP_ROW_DESC, 및 SQL_ATTR_IMP_PARAM_DESC에 이러한 설명자에 대 한 핸들을 할당 합니다. 문 특성입니다. 이 라고 *암시적으로* 설명자를 할당 합니다. 응용 프로그램 설명자를 명시적으로 할당 하려면 다음 섹션인 "설명자 핸들을 할당 합니다."를 참조 하십시오.  
   

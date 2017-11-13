@@ -76,7 +76,7 @@ SQLRETURN SQLGetFunctions(
 |--------|-----|-----------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) **SQLGetFunctions** 하기 전에 호출 된 **SQLConnect**, **SQLBrowseConnect**, 또는 **SQLDriverConnect**합니다.<br /><br /> (DM) **SQLBrowseConnect** 에 대 한 호출 된는 *ConnectionHandle* SQL_NEED_DATA를 반환 합니다. 이 함수를 호출 **SQLBrowseConnect** SQL_SUCCESS_WITH_INFO 또는 관계 없이 SQL_SUCCESS를 반환 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *ConnectionHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
@@ -133,7 +133,7 @@ SQLRETURN SQLGetFunctions(
 |SQL_API_SQLFOREIGNKEYS|SQL_API_SQLTABLEPRIVILEGES|  
 |SQL_API_SQLMORERESULTS| |  
   
- [1]는 ODBC 2를 작업할 때*.x* 드라이버 **SQLBulkOperations** 는 반환 에서만 지원 되는 경우 다음 두 가지 모두: ODBC 2*.x* 드라이버 지원** SQLSetPos**, 정보 유형 SQL_POS_OPERATIONS SQL_POS_ADD 비트 집합으로 반환 합니다.  
+ [1]는 ODBC 2를 작업할 때*.x* 드라이버 **SQLBulkOperations** 는 반환 에서만 지원 되는 경우 다음 두 가지 모두: ODBC 2*.x* 드라이버 지원 **SQLSetPos**, 정보 유형 SQL_POS_OPERATIONS SQL_POS_ADD 비트 집합으로 반환 합니다.  
   
  다음은에 대 한 유효한 값 목록이 *FunctionId* 이상 버전에서 ODBC 3.8을 도입 하는 함수에 대 한:  
   
@@ -141,16 +141,16 @@ SQLRETURN SQLGetFunctions(
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   
- [2] **SQLCancelHandle** 반환할만 지원 드라이버가 둘 다를 지 원하는 **SQLCancel** 및 **SQLCancelHandle**합니다. 경우 **SQLCancel** 사용할 수 있지만 **SQLCancelHandle** 는 사용 되지 않는 응용 프로그램이 호출할 수 **SQLCancelHandle** 문 핸들에서 에매핑됩니다때문에** SQLCancel**합니다.  
+ [2] **SQLCancelHandle** 반환할만 지원 드라이버가 둘 다를 지 원하는 **SQLCancel** 및 **SQLCancelHandle**합니다. 경우 **SQLCancel** 사용할 수 있지만 **SQLCancelHandle** 는 사용 되지 않는 응용 프로그램이 호출할 수 **SQLCancelHandle** 문 핸들에서 에매핑됩니다때문에 **SQLCancel**합니다.  
   
 ## <a name="sqlfuncexists-macro"></a>SQL_FUNC_EXISTS 매크로  
- SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) 매크로 ODBC 3의 지원을 확인 하는 데 사용 됩니다*.x* 또는 이전 함수 후 **SQLGetFunctions ** 호출한는 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS의 인수입니다. 응용 프로그램으로 SQL_FUNC_EXISTS 호출는 *SupportedPtr* 인수로 설정는 *SupportedPtr* 전달 된 *SQLGetFunctions*와 * FunctionID* 인수로 설정 된 **#define** 함수에 대 한 합니다. SQL_FUNC_EXISTS는 그렇지 않으면 함수는 지원 되는 경우에 SQL_TRUE 및 SQL_FALSE 반환 합니다.  
+ SQL_FUNC_EXISTS (*SupportedPtr*, *FunctionID*) 매크로 ODBC 3의 지원을 확인 하는 데 사용 됩니다*.x* 또는 이전 함수 후 **SQLGetFunctions**  호출한는 *FunctionId* SQL_API_ODBC3_ALL_FUNCTIONS의 인수입니다. 응용 프로그램으로 SQL_FUNC_EXISTS 호출는 *SupportedPtr* 인수로 설정는 *SupportedPtr* 전달 된 *SQLGetFunctions*와  *FunctionID* 인수로 설정 된 **#define** 함수에 대 한 합니다. SQL_FUNC_EXISTS는 그렇지 않으면 함수는 지원 되는 경우에 SQL_TRUE 및 SQL_FALSE 반환 합니다.  
   
 > [!NOTE]  
 >  ODBC 2 작업할 때*.x* 드라이버에서 ODBC 3*.x* 드라이버 관리자에 대 한 SQL_TRUE를 반환 합니다 **SQLAllocHandle** 및 **SQLFreeHandle**때문에 **SQLAllocHandle** 에 매핑된 **SQLAllocEnv**, **SQLAllocConnect**, 또는 **SQLAllocStmt**, 및 때문에 **SQLFreeHandle** 에 매핑된 **SQLFreeEnv**, **SQLFreeConnect**, 또는 **SQLFreeStmt**합니다. **SQLAllocHandle** 또는 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_DESC의 인수 지원 되지 않는 반면 SQL_TRUE 있기 때문에 함수에 대해 반환 되는 경우에 없습니다 ODBC 2*.x* 이 예제의를 매핑하 함수입니다.  
   
 ## <a name="code-example"></a>코드 예  
- 다음 세 가지 예제 응용 프로그램에서 사용 하는 방법을 보여 줍니다 **SQLGetFunctions** 드라이버를 지원 하는지 확인 하 **SQLTables**, **SQLColumns**, 및 ** SQLStatistics**합니다. 드라이버는 이러한 함수를 지원 하지 않으면, 응용 프로그램이 드라이버에서 연결을 끊습니다. 첫 번째 예제에서는 호출 **SQLGetFunctions** 각 함수에 대해 한 번씩입니다.  
+ 다음 세 가지 예제 응용 프로그램에서 사용 하는 방법을 보여 줍니다 **SQLGetFunctions** 드라이버를 지원 하는지 확인 하 **SQLTables**, **SQLColumns**, 및  **SQLStatistics**합니다. 드라이버는 이러한 함수를 지원 하지 않으면, 응용 프로그램이 드라이버에서 연결을 끊습니다. 첫 번째 예제에서는 호출 **SQLGetFunctions** 각 함수에 대해 한 번씩입니다.  
   
 ```  
 SQLUSMALLINT TablesExists, ColumnsExists, StatisticsExists;  

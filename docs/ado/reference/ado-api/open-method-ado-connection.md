@@ -57,7 +57,7 @@ connection.Open ConnectionString, UserID, Password, Options
   
  선택적를 사용 하 여 *ConnectionString* 계열을 포함 하는 연결 문자열 중 하나를 지정 하려면 인수 *인수* *= value* 세미콜론으로 구분 하는 문 또는 URL로 식별 된 리소스 파일 또는 디렉터리입니다. **ConnectionString** 속성에 사용 되는 값을 자동으로 상속 된 *ConnectionString* 인수입니다. 설정 하거나 따라서 할 수 있습니다는 **ConnectionString** 속성은 **연결** 또는 사용을 열기 전에 개체는 *ConnectionString* 인수를 설정 하거나 재정의 하는 동안 현재 연결 매개 변수는 **열려** 메서드를 호출 합니다.  
   
- 사용자 및 암호 정보 둘 다에 전달 하는 경우는 *ConnectionString* 인수와 선택 사항인 *UserID* 및 *암호* 인수는 *사용자 Id * 및 *암호* 인수에 지정 된 값을 재정의 *ConnectionString*합니다.  
+ 사용자 및 암호 정보 둘 다에 전달 하는 경우는 *ConnectionString* 인수와 선택 사항인 *UserID* 및 *암호* 인수는 *사용자 Id*  및 *암호* 인수에 지정 된 값을 재정의 *ConnectionString*합니다.  
   
  열려 있는 작업을 완료 한 경우 **연결**를 사용 하 여는 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 관련 시스템 리소스를 해제 하는 메서드. 개체를 닫아도 제거 되지 않고 메모리;에서 으로 설정 하 고 사용 하 여는 **열고** 나중에 다시 열 수 있습니다. 메모리에서 개체를 완전히 제거 하려면 개체 변수를 설정 *Nothing*합니다.  
   

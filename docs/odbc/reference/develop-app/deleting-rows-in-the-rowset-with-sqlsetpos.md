@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
   
  후 **SQLSetPos** 삭제 된 행이 현재 행 및 해당 상태는 sql_row_deleted가 반환 됩니다. 행에 대 한 호출 등의 추가 위치 지정 작업에서 사용할 수 없습니다 **SQLGetData** 또는 **SQLSetPos**합니다.  
   
- 행 집합의 모든 행을 삭제할 때 (*RowNumber* 가 0), 응용 프로그램이 드라이버의 업데이트 작업의 경우와 마찬가지로 행 작업 배열을 사용 하 여 특정 행을 삭제 하지 못할 수 있습니다 **SQLSetPos **. (참조 [SQLSetPos와 행 집합의 행이 업데이트](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).)  
+ 행 집합의 모든 행을 삭제할 때 (*RowNumber* 가 0), 응용 프로그램이 드라이버의 업데이트 작업의 경우와 마찬가지로 행 작업 배열을 사용 하 여 특정 행을 삭제 하지 못할 수 있습니다 **SQLSetPos** . (참조 [SQLSetPos와 행 집합의 행이 업데이트](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).)  
   
  삭제되는 모든 행은 결과 집합에 있는 행이여야 합니다. 응용 프로그램 버퍼를 인출 하 여 기록한 및 행 상태 배열이 유지 된 경우 이러한 각 행 위치에서 값을은 SQL_ROW_DELETED, SQL_ROW_ERROR 또는 SQL_ROW_NOROW 안 됩니다.
 

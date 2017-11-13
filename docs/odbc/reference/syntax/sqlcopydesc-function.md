@@ -68,14 +68,14 @@ SQLRETURN SQLCopyDesc(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY007|관련 된 문이 준비 되지 않았습니다.|*SourceDescHandle* IRD, 연관 된 및 관련 된 문 핸들이 준비 또는 실행 된 상태가 아닙니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM)에서 처리 된 설명자 *SourceDescHandle* 또는 *TargetDescHandle* 연결 된는 *StatementHandle* 입니다 (not는 비동기적으로 실행 중인 함수 이 중 하나)가 호출 하 고이 함수를 호출할 때 계속 실행 합니다.<br /><br /> (DM)에서 처리 된 설명자 *SourceDescHandle* 또는 *TargetDescHandle* 연결 된 한 *StatementHandle* 를 **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 호출 했으나 SQL_NEED_DATA를 반환 했습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *SourceDescHandle* 또는 *TargetDescHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLCopyDesc** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한는 *SourceDescHandle* 또는 *TargetDescHandle* SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY016|구현 행 설명자를 수정할 수 없습니다.|*TargetDescHandle* IRD에 연결 되었습니다.|  
 |HY021|일관성 없는 설명자 정보|일관성 확인을 하는 동안 체크 설명자 정보 일관 되지 않았습니다. 자세한 내용은 "일관성 검사"의 참조 **SQLSetDescField**합니다.|  
-|HY092|잘못 된 특성/옵션 식별자|에 대 한 호출 **SQLCopyDesc** 에 대 한 호출을 묻는 메시지가 표시 **SQLSetDescField**, 하지만 * \*ValuePtr* 에 대해 올바르지 않습니다는 *FieldIdentifier* 인수 *TargetDescHandle*합니다.|  
+|HY092|잘못 된 특성/옵션 식별자|에 대 한 호출 **SQLCopyDesc** 에 대 한 호출을 묻는 메시지가 표시 **SQLSetDescField**, 하지만  *\*ValuePtr* 에 대해 올바르지 않습니다는 *FieldIdentifier* 인수 *TargetDescHandle*합니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
 |IM001|드라이버는이 함수를 지원 하지 않습니다.|(DM)와 관련 된 드라이버의 *SourceDescHandle* 또는 *TargetDescHandle* 함수를 지원 하지 않습니다.|  
@@ -97,7 +97,7 @@ SQLRETURN SQLCopyDesc(
   
  다양 한 환경에서 연결을 하는 경우에 설명자 핸들과 연결 전체에서 복사할 수 있습니다. 드라이버 관리자에서 발견 된 원본 서버와 대상 설명자 핸들 두 연결과 동일한 연결에 속하지 않는 드라이버를 별도 속한 구현 하는 경우 **SQLCopyDesc** 는-필드를 수행 하 여 사용 하 여 복사 **SQLGetDescField** 및 **SQLSetDescField**합니다.  
   
- 때 **SQLCopyDesc** 로 호출 되는 *SourceDescHandle* 하나의 드라이버에는 및 *TargetDescHandle* 다른 드라이버의 오류 큐에는 * SourceDescHandle* 지워집니다. 이 때문에 발생 **SQLCopyDesc** 이 경우에 대 한 호출에 의해 구현 됩니다 **SQLGetDescField** 및 **SQLSetDescField**합니다.  
+ 때 **SQLCopyDesc** 로 호출 되는 *SourceDescHandle* 하나의 드라이버에는 및 *TargetDescHandle* 다른 드라이버의 오류 큐에는  *SourceDescHandle* 지워집니다. 이 때문에 발생 **SQLCopyDesc** 이 경우에 대 한 호출에 의해 구현 됩니다 **SQLGetDescField** 및 **SQLSetDescField**합니다.  
   
 > [!NOTE]  
 >  응용 프로그램 된 명시적으로 할당 된 설명자 핸들에 연결할 수 있습니다는 *StatementHandle*를 호출 하는 대신 **SQLCopyDesc** 한 설명자를 필드 복사 하 합니다. 명시적으로 할당 된 설명자를 다른 연결 될 수 있습니다 *StatementHandle* 동일한 *ConnectionHandle* SQL_ATTR_APP_ROW_DESC 또는 SQL_ATTR_APP_PARAM_DESC 문을 설정 하 여 명시적으로 할당 된 설명자 핸들에 특성입니다. 이 도구를 실행 하는 경우 **SQLCopyDesc** 다른 하나의 설명자의 설명자 필드 값을 복사 하기 위해 호출할 필요는 없습니다. 설명자 핸들와 연결 될 수 없습니다는 *StatementHandle* 다른 *ConnectionHandle*그러나; 설명자 필드 값이 같은에서 사용 하도록 *StatementHandles*다른에 *ConnectionHandles*, **SQLCopyDesc** 을 호출 해야 합니다.  

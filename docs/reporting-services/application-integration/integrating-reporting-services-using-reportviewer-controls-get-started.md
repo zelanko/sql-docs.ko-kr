@@ -243,7 +243,7 @@ ms.lasthandoff: 09/13/2017
 
     ![ssRS-제거-오래-rvcontrol-도구 상자](../../reporting-services/application-integration/media/ssrs-remove-old-rvcontrol-toolbox.png)
 
-3. 도구 상자에서 아무 곳 이나 클릭 마우스 오른쪽 단추로 선택한 후 **항목 선택... **.
+3. 도구 상자에서 아무 곳 이나 클릭 마우스 오른쪽 단추로 선택한 후 **항목 선택...** .
 
     ![ssRS-도구 상자--항목 선택](../../reporting-services/application-integration/media/ssrs-toolbox-choose-item.png)
     

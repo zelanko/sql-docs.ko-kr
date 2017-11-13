@@ -42,7 +42,7 @@ ms.lasthandoff: 09/09/2017
 -   **doNotPrompt = true**  
   
 ## <a name="remarks"></a>주의  
- 이전에 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], 응용 프로그램에서 통합된 인증 (Kerberos 또는 NTLM을 사용 하 여, 사용 하지 않는에 따라)를 지정할 수를 사용 하 여는 **integratedSecurity** 연결 속성 및 참조 하 여 ** sqljdbc_auth.dll**에 설명 된 대로 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)합니다.  
+ 이전에 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], 응용 프로그램에서 통합된 인증 (Kerberos 또는 NTLM을 사용 하 여, 사용 하지 않는에 따라)를 지정할 수를 사용 하 여는 **integratedSecurity** 연결 속성 및 참조 하 여  **sqljdbc_auth.dll**에 설명 된 대로 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)합니다.  
   
  부터는 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], 응용 프로그램에서 사용할 수는 **authenticationScheme** Kerberos를 사용 하 여 데이터베이스에 연결 하려고 한다는 것을 나타내기 위해 연결 속성 통합 순수한 Java Kerberos를 사용 하 여 인증 구현:  
   

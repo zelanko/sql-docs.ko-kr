@@ -58,10 +58,10 @@ ms.lasthandoff: 09/09/2017
 |**POWER (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|값을 반환 *numeric_exp* 의 *integer_exp*합니다.|  
 |**RADIANS (** *numeric_exp* **)** (ODBC 2.0)|변환 된 라디안의 수를 반환 *numeric_exp* 도 합니다.|  
 |**RAND (**[*integer_exp*]**)** (ODBC 1.0)|사용 하 여 부동 소수점 난수를 반환 *integer_exp* 선택적 시드 값으로.|  
-|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 반올림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 반올림 &#124;* integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|  
+|**ROUND (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 반올림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 반올림 &#124; *integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|  
 |**기호 (** *numeric_exp* **)** (ODBC 1.0)|부호의 표시를 반환 *numeric_exp*합니다. 경우 *numeric_exp* 은 0,-1 보다 작은 반환 됩니다. 경우 *numeric_exp* = 0, 0이 반환 됩니다. 경우 *numeric_exp* 0 보다 큰 1이 반환 됩니다.|  
 |**SIN (** *float_exp* **)** (ODBC 1.0)|사인을 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
 |**SQRT (** *float_exp* **)** (ODBC 1.0)|제곱근을 반환 *float_exp*합니다.|  
 |**TAN (** *float_exp* **)** (ODBC 1.0)|탄젠트를 반환 *float_exp*여기서 *float_exp* 라디안에서으로 표시 되는 각도입니다.|  
-|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 잘림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124;* integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|
+|**TRUNCATE (** *numeric_exp*, *integer_exp***)** (ODBC 2.0)|반환 *numeric_exp* 잘림 *integer_exp* 는 소수점 오른쪽에 배치 합니다. 경우 *integer_exp* 가 음수 이면 *numeric_exp* 잘립니다 &#124; *integer_exp*&#124; 소수점의 왼쪽에 위치 합니다.|
 

@@ -80,10 +80,10 @@ SQLRETURN SQLGetDiagField(
  *DiagInfoPtr*  
  [출력] 진단 정보를 반환 하는 버퍼에 대 한 포인터입니다. 데이터 형식 값에 따라 달라 집니다 *DiagIdentifier*합니다. 경우 *DiagInfoPtr* 는 정수 형식, 응용 프로그램 SQLULEN의 버퍼를 사용 해야 및 초기화 값을 일부 드라이버도이 함수를 호출 하기 전에 0만 있습니다 하위 32 비트 또는 16 비트는 버퍼의 작성 및 더 높은 순서를 그대로 둡니다. 비트 변경 되지 않습니다.  
   
- 경우 *DiagInfoPtr* 이 NULL 이면 *StringLengthPtr* 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에서반환할수* DiagInfoPtr*합니다.  
+ 경우 *DiagInfoPtr* 이 NULL 이면 *StringLengthPtr* 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에서반환할수 *DiagInfoPtr*합니다.  
   
  *BufferLength*  
- [입력] 경우 *DiagIdentifier* 은 ODBC 정의 진단 및 *DiagInfoPtr* 문자열 또는 이진 버퍼를 가리키거나,이 인수 길이 여야 \* *DiagInfoPtr *. 경우 *DiagIdentifier* 은 ODBC 정의 된 필드 및 \* *DiagInfoPtr* 정수 이면 *BufferLength* 는 무시 됩니다. 경우에 값 * \*DiagInfoPtr* 는 유니코드 문자열 (호출할 때 **SQLGetDiagFieldW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
+ [입력] 경우 *DiagIdentifier* 은 ODBC 정의 진단 및 *DiagInfoPtr* 문자열 또는 이진 버퍼를 가리키거나,이 인수 길이 여야 \* *DiagInfoPtr* . 경우 *DiagIdentifier* 은 ODBC 정의 된 필드 및 \* *DiagInfoPtr* 정수 이면 *BufferLength* 는 무시 됩니다. 경우에 값  *\*DiagInfoPtr* 는 유니코드 문자열 (호출할 때 **SQLGetDiagFieldW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
   
  경우 *DiagIdentifier* 드라이버에서 정의 된 필드는 응용 프로그램을 설정 하 여 드라이버 관리자에 필드의 특성을 나타내는 *BufferLength* 인수입니다. *BufferLength* 다음 값을 가질 수 있습니다.  
   
@@ -93,7 +93,7 @@ SQLRETURN SQLGetDiagField(
   
 -   경우 *DiagInfoPtr* 문자열이 나 이진 문자열 이외의 값에 대 한 포인터 *BufferLength* SQL_IS_POINTER 값이 있어야 합니다.  
   
--   경우 * \*DiagInfoPtr* 고정 길이 데이터 형식이 들어 *BufferLength* SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT, 또는 SQL_IS_USMALLINT, 적절 하 게 됩니다.  
+-   경우  *\*DiagInfoPtr* 고정 길이 데이터 형식이 들어 *BufferLength* SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT, 또는 SQL_IS_USMALLINT, 적절 하 게 됩니다.  
   
  *StringLengthPtr*  
  [출력] 바이트 (null 종결 문자에 필요한 바이트 수가 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *DiagInfoPtr*, 문자 데이터에 대 한 합니다. 보다 크거나 반환에 사용할 수 있는 바이트 수가 *BufferLength*에 있는 텍스트 \* *DiagInfoPtr* 잘립니다 *BufferLength* 빼기 null 종료 문자 길이입니다.  
@@ -129,7 +129,7 @@ SQLRETURN SQLGetDiagField(
   
 1.  함수 호출 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 했습니다 때 특정 오류 또는 경고 정보를 얻으려면 (또는 대 한 SQL_NEED_DATA는 **SQLBrowseConnect** 함수).  
   
-2.  데이터 원본에 삽입, 삭제 또는 업데이트 작업에 대 한 호출을 사용 하 여 수행 하는 경우 영향을 받는 행의 수를 확인 하려면 **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, 또는 **SQLSetPos** (SQL_DIAG_ROW_COUNT 헤더 필드에서), 드라이버는이 정보를 제공할 수 있는 경우 현재 열린 커서에 존재 하는 행 수를 확인 하려면 (에서 SQL_DIAG_CURSOR_ROW_COUNT 헤더 필드)입니다.  
+2.  데이터 원본에 삽입, 삭제 또는 업데이트 작업에 대 한 호출을 사용 하 여 수행 하는 경우 영향을 받는 행의 수를 확인 하려면 **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, 또는 **SQLSetPos** (SQL_DIAG_ROW_COUNT 헤더 필드에서), 드라이버는이 정보를 제공할 수 있는 경우 현재 열린 커서에 존재 하는 행 수를 확인 하려면 (에서 SQL_DIAG_CURSOR_ROW_COUNT 헤더 필드)입니다.  
   
 3.  함수를 호출 하 여 실행을 확인 하려면 **SQLExecDirect** 또는 **SQLExecute** (에서 SQL_DIAG_DYNAMIC_FUNCTION 및 SQL_DIAG_DYNAMIC_FUNCTION_CODE 헤더 필드).  
   
@@ -238,7 +238,7 @@ n-정의 *|"도메인 만들기"|SQL_DIAG_CREATE_DOMAIN|
 -   특정 행에 관련 된 모든 레코드에 대 한 레코드가 SQL_DIAG_ROW_NUMBER 필드에 값으로 정렬 됩니다. 모든 오류 및 영향을 받는 첫 번째 행의 경고 나열 되 고 모든 오류 및 경고는 다음의 행이 영향을 받는, 고 까지입니다.  
   
 > [!NOTE]  
->  ODBC 3*.x* 드라이버 관리자 정렬 되지 않은 상태 레코드 진단 큐에 있는 경우 SQLSTATE 01S01 (행에서 오류)는 ODBC 2가 반환한*.x* 드라이버 경우 SQLSTATE 01S01는 ODBC에서 반환 (행에서 오류) 3*.x* 드라이버 때 **SQLExtendedFetch** 라고 또는 **SQLSetPos** 으로 배치 된 하는 커서에 라고 **SQLExtendedFetch **.  
+>  ODBC 3*.x* 드라이버 관리자 정렬 되지 않은 상태 레코드 진단 큐에 있는 경우 SQLSTATE 01S01 (행에서 오류)는 ODBC 2가 반환한*.x* 드라이버 경우 SQLSTATE 01S01는 ODBC에서 반환 (행에서 오류) 3*.x* 드라이버 때 **SQLExtendedFetch** 라고 또는 **SQLSetPos** 으로 배치 된 하는 커서에 라고 **SQLExtendedFetch** .  
   
  각 행 내에서 또는 또는 행에 있는 행 번호 알 수 없는, 해당 하지 않는 모든 레코드에 대 한 SQL_NO_ROW_NUMBER 같은 행 번호를 가진 이러한 모든 레코드를 나열 된 첫 번째 레코드 집합 정렬 규칙을 사용 하 여 결정 됩니다. 첫 번째 레코드를 다음 행에 영향을 주는 다른 레코드의 순서 정의 되지 않습니다. 응용 프로그램 오류 경고를 앞에 첫 번째 레코드 후 가정할 수 없습니다. 응용 프로그램 완전 한 진단 데이터 구조는 함수에 대 한 실패 한 호출에 대 한 전체 정보를 검색 해야 합니다.  
   

@@ -71,11 +71,11 @@ SQLRETURN SQLGetTypeInfo(
 |24000|잘못된 커서 상태|에 커서가 열린는 *StatementHandle,* 및 **SQLFetch** 또는 **SQLFetchScroll** 호출한 합니다. 이 오류는 경우 드라이버 관리자에서 반환 됩니다 **SQLFetch** 또는 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환 되지 않은 경우 드라이버에서 반환 되 고 **SQLFetch** 또는 **SQLFetchScroll** SQL_NO_DATA를 반환 했습니다.<br /><br /> 결과 집합에 열려 있었던는 *StatementHandle*, 하지만 **SQLFetch** 또는 **SQLFetchScroll** 마치 호출 합니다.|  
 |40001|Serialization 오류|트랜잭션이 다른 트랜잭션 사용 하 여 리소스 교착 상태로 인해 롤백 되었습니다.|  
 |40003|알 수 없는 문 완성|이 함수를 실행 하는 동안 관련된 연결 실패 및 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY004|잘못 된 SQL 데이터 형식|인수에 대해 지정 된 값 *DataType* 유효한 ODBC SQL 데이터 형식 식별자도 아니고 드라이버에서 지 원하는 드라이버 관련 데이터 형식 식별자가 있습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*다음 함수가 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 되었습니다 호출 된 *StatementHandle*합니다. 함수에서 다시 호출 된 후의 *StatementHandle*합니다.<br /><br /> 함수가 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLGetTypeInfo** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLGetTypeInfo** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYC00|선택적 기능이 구현 되지 않았습니다|SQL_ATTR_CURSOR_TYPE 및 SQL_ATTR_CONCURRENCY 문 특성의 현재 설정의 조합 드라이버 또는 데이터 원본에서 지원 되지 않았습니다.<br /><br /> SQL_ATTR_USE_BOOKMARKS 문 특성이 SQL_UB_VARIABLE로 설정 된 및 SQL_ATTR_CURSOR_TYPE 문 특성 드라이버 책갈피에 지원 하지 않으면 커서 유형으로 설정 되었습니다.|  
@@ -101,7 +101,7 @@ SQLRETURN SQLGetTypeInfo(
 |MONEY|FIXED_PREC_SCALE|  
 |AUTO_INCREMENT|AUTO_UNIQUE_VALUE|  
   
- 다음 열에서 반환 된 결과 집합에 추가 된 **SQLGetTypeInfo** ODBC 3.* x*:  
+ 다음 열에서 반환 된 결과 집합에 추가 된 **SQLGetTypeInfo** ODBC 3. *x*:  
   
 -   SQL_DATA_TYPE  
   
@@ -126,7 +126,7 @@ SQLRETURN SQLGetTypeInfo(
 |CREATE_PARAMS (ODBC 2.0)|6|Varchar|목록에 해당 하는 응용 프로그램 TYPE_NAME 필드에서 반환 되는 이름을 사용 하는 경우 괄호 안에 지정 될 수 있습니다 각 매개 변수의 쉼표로 구분 된 키워드입니다. 키워드 목록에는 다음 중 하나일 수 있습니다: 길이, 전체 자릿수 또는 소수 자릿수입니다. 구문 해야 사용할 수 있는지 순서로 나타납니다. 예를 들어, 10 진수에 대 한 CREATE_PARAMS 것 "정밀도, 배율"; Varchar CREATE_PARAMS "길이입니다."와 같습니다. 데이터 형식 정의;에 대 한 매개 변수가 없는 경우 NULL이 반환 됩니다. 예를 들어 정수입니다.<br /><br /> 드라이버에서 국가/지역으로 사용 된 언어 CREATE_PARAMS 텍스트를 제공 합니다.|  
 |NULL 허용 (ODBC 2.0)|7|NULL이 아닌 Smallint|데이터 형식이 NULL 값을 수락할지 여부:<br /><br /> 데이터 형식이 NULL 값을 허용 하지 않는 경우 SQL_NO_NULLS 합니다.<br /><br /> 데이터 형식이 NULL 값을 허용 하는 경우 SQL_NULLABLE 합니다.<br /><br /> SQL_NULLABLE_UNKNOWN 경우 열이 NULL 값 허용 여부를 알 수 없습니다.|  
 |CASE_SENSITIVE (ODBC 2.0)|8|NULL이 아닌 Smallint|문자 데이터 형식 인지 데이터 정렬 및 비교에서 대/소문자 구분:<br /><br /> Sql_true는 해당 데이터 형식이 문자 데이터 형식이 대/소문자 구분 하는 경우.<br /><br /> 데이터 형식이 문자 데이터 유형이 아니거나 대/소문자 구분 없는 경우 SQL_FALSE입니다.|  
-|검색 가능한 (ODBC 2.0)|9|NULL이 아닌 Smallint|데이터 형식에서 어떻게 사용 되는 **여기서** 절:<br /><br /> 열에 사용할 수 없는 경우 SQL_PRED_NONE는 **여기서** 절. (이 ODBC 2에서 SQL_UNSEARCHABLE 값과 동일 합니다. *x*.)<br /><br /> SQL_PRED_CHAR 열에 사용할 수 있는 경우는 **여기서** 절을 통해서만 **같은** 조건자입니다. (이 ODBC 2에서 SQL_LIKE_ONLY 값과 동일 합니다. *x*.)<br /><br /> 열에 사용할 수 있는 경우 SQL_PRED_BASIC는 **여기서** 절을 제외한 모든 비교 연산자를 **같은** (비교, 정량화 된 비교 **BETWEEN**, ** 고유한**, **IN**, **일치**, 및 **UNIQUE**). (이 ODBC 2에서 SQL_ALL_EXCEPT_LIKE 값과 동일 합니다. *x*.)<br /><br /> 열에 사용할 수 있는 경우 SQL_SEARCHABLE는 **여기서** 모든 비교 연산자와 함께 절.|  
+|검색 가능한 (ODBC 2.0)|9|NULL이 아닌 Smallint|데이터 형식에서 어떻게 사용 되는 **여기서** 절:<br /><br /> 열에 사용할 수 없는 경우 SQL_PRED_NONE는 **여기서** 절. (이 ODBC 2에서 SQL_UNSEARCHABLE 값과 동일 합니다. *x*.)<br /><br /> SQL_PRED_CHAR 열에 사용할 수 있는 경우는 **여기서** 절을 통해서만 **같은** 조건자입니다. (이 ODBC 2에서 SQL_LIKE_ONLY 값과 동일 합니다. *x*.)<br /><br /> 열에 사용할 수 있는 경우 SQL_PRED_BASIC는 **여기서** 절을 제외한 모든 비교 연산자를 **같은** (비교, 정량화 된 비교 **BETWEEN**,  **고유한**, **IN**, **일치**, 및 **UNIQUE**). (이 ODBC 2에서 SQL_ALL_EXCEPT_LIKE 값과 동일 합니다. *x*.)<br /><br /> 열에 사용할 수 있는 경우 SQL_SEARCHABLE는 **여기서** 모든 비교 연산자와 함께 절.|  
 |UNSIGNED_ATTRIBUTE (ODBC 2.0)|10|Smallint|데이터 형식이 부호 없는 여부:<br /><br /> Sql_true는 해당 데이터 형식을 서명 되지 않은 경우.<br /><br /> 데이터 형식이 서명 하는 경우 SQL_FALSE입니다.<br /><br /> 특성 데이터 형식에 적용할 수 없거나 데이터 형식이 숫자 NULL이 반환 됩니다.|  
 |FIXED_PREC_SCALE (ODBC 2.0)|11|NULL이 아닌 Smallint|데이터 형식에 미리 정의 되어 있는지 여부 고정 전체 자릿수 및 소수 (임 데이터 원본에 따른 특정), 예: money 데이터 형식:<br /><br /> 에 미리 정의 된 경우에 SQL_TRUE 정밀도 배율이 고정 합니다.<br /><br /> 미리 정의 된 정밀도 배율이 고정 되지 않은 SQL_FALSE입니다.|  
 |AUTO_UNIQUE_VALUE (ODBC 2.0)|12|Smallint|자동 증가 인지 여부는 데이터 형식:<br /><br /> Sql_true는 해당 데이터 형식이 자동 증가 합니다.<br /><br /> 데이터 형식이 자동 증가 않으면 SQL_FALSE입니다.<br /><br /> 특성 데이터 형식에 적용할 수 없거나 데이터 형식이 숫자 NULL이 반환 됩니다.<br /><br /> 응용 프로그램에이 특성이 열에 값을 삽입할 수 있지만 일반적으로 열에 값을 업데이트할 수 없습니다.<br /><br /> 자동 증가 열에 대 한 insert 이루어지면 삽입 시 고유 값 열에 삽입 됩니다. 증가값은 정의 되지 않은 이지만 데이터 원본에 따른 특정 합니다. 응용 프로그램 특정 값으로 자동 증가 열 단위로 일부나 특정 지점에서 시작 하는 것을 가정 하지 않아야 합니다.|  

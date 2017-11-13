@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 |**ConnectRetryCount**| 0에서 255 사이의 정수|1.|까지 끊어진된 연결을 다시 시도의 최대 수입니다. 기본적으로 나누는 경우 연결을 다시 시도 하는 단일 이루어집니다. 0은 의미 없는 재연결을 시도 하는 값입니다.|
 |**ConnectRetryInterval**| 1에서 60 (포함) 사이의 정수|1.| 연결을 다시 시도 간격 (초) 시간입니다. 응용 프로그램 끊어진된 연결에 따라 즉시 다시 연결 하려고 시도 하며 다음 대기할 **ConnectRetryInterval** 초 후에 다시 시도 합니다. 이 키워드는 무시 됩니다 **ConnectRetryCount** 은 0과 같습니다.
 
-하는 경우의 제품 **ConnectRetryCount** 곱한 **ConnectRetryInterval** 보다 크면 **LoginTimeout**, 클라이언트 중단 한 번 연결 하려고 하는 다음 ** LoginTimeout** ;에 도달 하면 될 때까지 다시 연결 하 고, 그러지 계속 됩니다 **ConnectRetryCount** 에 도달 합니다.
+하는 경우의 제품 **ConnectRetryCount** 곱한 **ConnectRetryInterval** 보다 크면 **LoginTimeout**, 클라이언트 중단 한 번 연결 하려고 하는 다음  **LoginTimeout** ;에 도달 하면 될 때까지 다시 연결 하 고, 그러지 계속 됩니다 **ConnectRetryCount** 에 도달 합니다.
 
 #### <a name="remarks"></a>주의
 

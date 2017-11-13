@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 -   호출 하 여 커서 및 커서 이름 관리 **SQLCloseCursor**, **SQLGetCursorName**, 및 **SQLSetCursorName**합니다.  
   
--   호출 하 여 결과 집합의 설명 (메타 데이터)에 대 한 액세스를 위해 **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, 및 **SQLRowCount **. (책갈피 메타 데이터를 검색할 열 번호는 0에서 이러한 기능을 사용 하는 기능을에서 204 [수준 2 인터페이스 규칙에 따라](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   호출 하 여 결과 집합의 설명 (메타 데이터)에 대 한 액세스를 위해 **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, 및 **SQLRowCount** . (책갈피 메타 데이터를 검색할 열 번호는 0에서 이러한 기능을 사용 하는 기능을에서 204 [수준 2 인터페이스 규칙에 따라](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
 -   카탈로그 함수를 호출 하 여 데이터 사전 쿼리 **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, 및 **SQLTables**합니다.  
   

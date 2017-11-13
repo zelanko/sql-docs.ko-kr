@@ -68,7 +68,7 @@ SQLRETURN SQLParamData(
 |22026|문자열 데이터, 길이가 일치하지 않음|SQL_NEED_LONG_DATA_LEN 정보 유형을 **SQLGetInfo** "Y" 였으며가 지정 된 것 보다 적은 양의 데이터 (데이터 형식이 SQL_LONGVARCHAR, SQL_LONGVARBINARY, 또는 긴 데이터 원본에 따른 특정 데이터 형식) 긴 매개 변수에 대 한 전송 와 *StrLen_or_IndPtr* 인수 **SQLBindParameter**합니다.<br /><br /> SQL_NEED_LONG_DATA_LEN 정보 유형을 **SQLGetInfo** "Y" 였으며에 지정 된 것 보다 긴 열 (데이터 형식이 SQL_LONGVARCHAR, SQL_LONGVARBINARY, 또는 긴 데이터 원본에 따른 특정 데이터 형식)에 대 한 전송 하지 않는 데이터는 추가 되었거나 업데이트 된 데이터의 행에 열에 해당 하는 길이 버퍼 **SQLBulkOperations** 또는와 업데이트 된 **SQLSetPos**합니다.|  
 |40001|Serialization 오류|트랜잭션이 다른 트랜잭션 사용 하 여 리소스 교착 상태로 인해 롤백 되었습니다.|  
 |40003|알 수 없는 문 완성|이 함수를 실행 하는 동안 관련된 연결 실패 및 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*; 함수가에서 다시 호출 후 *StatementHandle*합니다.<br /><br /> 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) 함수 호출 없습니다에 대 한 호출 **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, 또는 **SQLSetPos** 위치는 반환 코드 sql_need_data가 없거나 이전 함수 호출에 대 한 호출 **SQLPutData**합니다.<br /><br /> 이전 함수 호출에 대 한 호출을 했습니다 **SQLParamData**합니다.<br /><br /> DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLParamData** 함수를 호출 했습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 *StatementHandle* 및 SQL_NEED_DATA를 반환된 합니다. **SQLCancel** 모든 실행 시 데이터 매개 변수 또는 열에 대 한 전송 된 데이터에 호출 되었습니다.|  
@@ -79,12 +79,12 @@ SQLRETURN SQLParamData(
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
 |IM018|**SQLCompleteAsync** 이 핸들에서 이전 비동기 작업을 완료 하는 호출 되지 않았습니다.|핸들에 대해 이전 함수 호출이 SQL_STILL_EXECUTING을 반환 하 고 알림 모드를 설정 하는 경우 **SQLCompleteAsync** 사후 처리를 수행 하 고 작업을 완료에 대 한 핸들에서 호출 해야 합니다.|  
   
- 경우 **SQLParamData** 호출 되는 SQL 문의 매개 변수에 대 한 데이터를 전송 하는 동안 문을 실행 하는 호출 되는 함수에서 반환 될 수 있는 모든 SQLSTATE 반환할 수 있습니다 (**SQLExecute** 또는 **SQLExecDirect**). 열에 대 한 데이터를 전송 하는 동안 호출 되 면 업데이트 되거나 추가 된 **SQLBulkOperations** 로 업데이트 또는 **SQLSetPos**, 반환할 수 있지만에서 반환 될 수 있는 모든 SQLSTATE ** SQLBulkOperations** 또는 **SQLSetPos**합니다.  
+ 경우 **SQLParamData** 호출 되는 SQL 문의 매개 변수에 대 한 데이터를 전송 하는 동안 문을 실행 하는 호출 되는 함수에서 반환 될 수 있는 모든 SQLSTATE 반환할 수 있습니다 (**SQLExecute** 또는 **SQLExecDirect**). 열에 대 한 데이터를 전송 하는 동안 호출 되 면 업데이트 되거나 추가 된 **SQLBulkOperations** 로 업데이트 또는 **SQLSetPos**, 반환할 수 있지만에서 반환 될 수 있는 모든 SQLSTATE  **SQLBulkOperations** 또는 **SQLSetPos**합니다.  
   
 ## <a name="comments"></a>설명  
  **SQLParamData** 두 가지 용도 대 한 데이터 실행 시 데이터를 제공 하기 위해 호출할 수:에 대 한 호출에서 사용할 수 있는 매개 변수 데이터 **SQLExecute** 또는 **SQLExecDirect**, 또는 사용 되는 열 데이터 행이 업데이트 되거나 추가를 호출 하 여이 **SQLBulkOperations** 에 대 한 호출에 의해 업데이트 **SQLSetPos**합니다. 실행 시 **SQLParamData** 표시기는 데이터의 드라이버 필요한 응용 프로그램에 반환 합니다.  
   
- 응용 프로그램 호출 하는 경우 **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos**, 드라이버 SQL_NEED_를 반환 합니다. 실행 시 데이터 데이터가 필요한 경우 데이터입니다. 응용 프로그램이 호출 **SQLParamData** 보낼 데이터를 확인 하려면. 드라이버 매개 변수 데이터가 필요한 경우 드라이버에서 반환 된 * \*ValuePtrPtr* 출력 버퍼는 행 집합 버퍼에 응용 프로그램이 포함 하는 값입니다. 응용 프로그램은 드라이버가 요청 하는 매개 변수 데이터를 확인 하려면이 값을 사용할 수 있습니다. 드라이버에 열 데이터가 필요한 경우 드라이버에서 반환 된 * \*ValuePtrPtr* 버퍼 열에, 다음과 같이 바인딩된 원래 주소:  
+ 응용 프로그램 호출 하는 경우 **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos**, 드라이버 SQL_NEED_를 반환 합니다. 실행 시 데이터 데이터가 필요한 경우 데이터입니다. 응용 프로그램이 호출 **SQLParamData** 보낼 데이터를 확인 하려면. 드라이버 매개 변수 데이터가 필요한 경우 드라이버에서 반환 된  *\*ValuePtrPtr* 출력 버퍼는 행 집합 버퍼에 응용 프로그램이 포함 하는 값입니다. 응용 프로그램은 드라이버가 요청 하는 매개 변수 데이터를 확인 하려면이 값을 사용할 수 있습니다. 드라이버에 열 데이터가 필요한 경우 드라이버에서 반환 된  *\*ValuePtrPtr* 버퍼 열에, 다음과 같이 바인딩된 원래 주소:  
   
  *주소 바인딩된* + *오프셋 바인딩* + ((*행 번호* – 1) x *요소 크기*)  
   
@@ -99,7 +99,7 @@ SQLRETURN SQLParamData(
   
  또한 호출 해야 하는 응용 프로그램을 나타내는 sql_need_data가 반환 **SQLPutData** 데이터를 보내려고 합니다.  
   
- 응용 프로그램 호출 **SQLPutData** 열 이나 매개 변수에 데이터 실행 시 데이터를 보내는 데 필요한 만큼 반복 합니다. 응용 프로그램 호출 하는 열 이나 매개 변수에 있는 모든 데이터를 보낸 후 **SQLParamData** 다시 합니다. 경우 **SQLParamData** 다시 sql_need_data가 반환 다른 매개 변수 또는 열에 대 한 데이터를 전송 해야 합니다. 따라서 응용 프로그램을 다시 호출 **SQLPutData**합니다. 모든 실행 시 데이터 데이터 보내진 경우 모든 매개 변수 또는 열에 대해 다음 **SQLParamData** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를에서 값 반환 * \*ValuePtrPtr* 이 정의 되지 않습니다 SQL 문을 실행할 수 있습니다 및 또는 **SQLBulkOperations** 또는 **SQLSetPos** 호출을 처리할 수 있습니다.  
+ 응용 프로그램 호출 **SQLPutData** 열 이나 매개 변수에 데이터 실행 시 데이터를 보내는 데 필요한 만큼 반복 합니다. 응용 프로그램 호출 하는 열 이나 매개 변수에 있는 모든 데이터를 보낸 후 **SQLParamData** 다시 합니다. 경우 **SQLParamData** 다시 sql_need_data가 반환 다른 매개 변수 또는 열에 대 한 데이터를 전송 해야 합니다. 따라서 응용 프로그램을 다시 호출 **SQLPutData**합니다. 모든 실행 시 데이터 데이터 보내진 경우 모든 매개 변수 또는 열에 대해 다음 **SQLParamData** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를에서 값 반환  *\*ValuePtrPtr* 이 정의 되지 않습니다 SQL 문을 실행할 수 있습니다 및 또는 **SQLBulkOperations** 또는 **SQLSetPos** 호출을 처리할 수 있습니다.  
   
  경우 **SQLParamData** 는 검색 결과 대 한 매개 변수 데이터를 공급 업데이트 또는 삭제는 데이터 원본에 대 한 호출에 모든 행에 영향을 미치지 않는 문이 **SQLParamData** SQL_NO_DATA를 반환 합니다.  
   

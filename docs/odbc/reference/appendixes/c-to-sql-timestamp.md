@@ -45,7 +45,7 @@ ms.lasthandoff: 09/09/2017
   
  SQL_C_TIMESTAMP 구조에서 유효한 값에 대 한 정보를 참조 하십시오. [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md)이 부록 앞부분에 나오는 합니다.  
   
- 결과 문자 데이터에는 C 타임 스탬프 데이터를 문자 SQL 데이터로 변환 되 면는 "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.* f... *] "형식입니다.  
+ 결과 문자 데이터에는 C 타임 스탬프 데이터를 문자 SQL 데이터로 변환 되 면는 "*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[. *f...* ] "형식입니다.  
   
  드라이버 타임 스탬프 C 데이터 형식에서 데이터를 변환할 때 길이/표시기 값을 무시 하 고 데이터 버퍼의 크기 C 타임 스탬프 데이터 형식의 크기 있다고 가정 합니다. 에 길이/표시기 값이 전달 되는 *StrLen_or_Ind* 인수 **SQLPutData** 및 지정 된 버퍼는 *StrLen_or_IndPtr* 인수**SQLBindParameter**합니다. 지정 된 데이터 버퍼는 *DataPtr* 인수에 **SQLPutData** 및 *ParameterValuePtr* 인수에 **SQLBindParameter**.
 

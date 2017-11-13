@@ -36,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  도입 된 버전: ODBC 1.0 표준 준수: ODBC  
   
  **요약**  
- **SQLMoreResults** 더 많은 결과에 포함 하는 문을 사용할 수 있는지 확인 **선택**, **업데이트**, **삽입**, 또는 ** 삭제** 문 및 초기화 그 결과 대 한 처리 그렇다면 합니다.  
+ **SQLMoreResults** 더 많은 결과에 포함 하는 문을 사용할 수 있는지 확인 **선택**, **업데이트**, **삽입**, 또는  **삭제** 문 및 초기화 그 결과 대 한 처리 그렇다면 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -63,10 +63,10 @@ SQLRETURN SQLMoreResults(
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |40001|Serialization 오류|트랜잭션이 다른 트랜잭션 사용 하 여 리소스 교착 상태로 인해 롤백 되었습니다.|  
 |40003|알 수 없는 문 완성|이 함수를 실행 하는 동안 관련된 연결 실패 및 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. **SQLMoreResults** 함수 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle *. 그런 다음 **SQLMoreResults** 에서 다시 호출 된 함수는 *StatementHandle*합니다.<br /><br /> **SQLMoreResults** 함수 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle * 다중 스레드 응용 프로그램에서 다른 스레드에서 합니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLMoreResults** 함수를 호출 했습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
+|HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. **SQLMoreResults** 함수 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* . 그런 다음 **SQLMoreResults** 에서 다시 호출 된 함수는 *StatementHandle*합니다.<br /><br /> **SQLMoreResults** 함수 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*  다중 스레드 응용 프로그램에서 다른 스레드에서 합니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLMoreResults** 함수를 호출 했습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
@@ -77,7 +77,7 @@ SQLRETURN SQLMoreResults(
 ## <a name="comments"></a>설명  
  **선택** 문은 결과 집합을 반환 합니다. **업데이트**, **삽입**, 및 **삭제** 문의 영향을 받는 행 수를 반환 합니다. 이러한 명령문은 일괄 처리 제출 된 배열 (일괄 처리에 나타나는 순서 대로 매개 변수 오름차순으로 번호가 지정) 하는 매개 변수 또는 프로시저에서 여러 결과 집합을 반환할 수 있습니다 또는 행 수를 계산 합니다. 문의 일괄 처리 및 매개 변수 배열에 대 한 정보를 참조 하십시오. [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md) 및 [매개 변수 값의 배열](../../../odbc/reference/develop-app/arrays-of-parameter-values.md)합니다.  
   
- 일괄 처리를 실행 한 후 응용 프로그램은 첫 번째 결과 집합에 배치 됩니다. 응용 프로그램에서 호출할 수 **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll **, **SQLSetPos**, 및 단일 결과 집합에만 있는 경우와 마찬가지로 정당한 첫 번째 또는 모든 후속 결과 집합에서 모든 메타 데이터 기능을 합니다. 첫 번째 결과 집합으로 완료 된 후 호출 **SQLMoreResults** 다음 결과 집합으로 이동할 수 있습니다. 다른 결과 집합 또는 수를 사용할 수 있으면 **SQLMoreResults** 관계 없이 SQL_SUCCESS를 반환 하 고 결과 집합 또는 추가 처리를 위한 개수를 초기화 합니다. 문 집합 – 생성 될 행 개수 – 생성 문 사이 표시 하는 경우, 호출를 하나씩 실행할 수 있습니다 **SQLMoreResults**합니다. 호출한 후 **SQLMoreResults** 에 대 한 **업데이트**, **삽입**, 또는 **삭제** 문은, 응용 프로그램 를호출할수**SQLRowCount**합니다.  
+ 일괄 처리를 실행 한 후 응용 프로그램은 첫 번째 결과 집합에 배치 됩니다. 응용 프로그램에서 호출할 수 **SQLBindCol**, **SQLBulkOperations**, **SQLFetch**, **SQLGetData**, **SQLFetchScroll** , **SQLSetPos**, 및 단일 결과 집합에만 있는 경우와 마찬가지로 정당한 첫 번째 또는 모든 후속 결과 집합에서 모든 메타 데이터 기능을 합니다. 첫 번째 결과 집합으로 완료 된 후 호출 **SQLMoreResults** 다음 결과 집합으로 이동할 수 있습니다. 다른 결과 집합 또는 수를 사용할 수 있으면 **SQLMoreResults** 관계 없이 SQL_SUCCESS를 반환 하 고 결과 집합 또는 추가 처리를 위한 개수를 초기화 합니다. 문 집합 – 생성 될 행 개수 – 생성 문 사이 표시 하는 경우, 호출를 하나씩 실행할 수 있습니다 **SQLMoreResults**합니다. 호출한 후 **SQLMoreResults** 에 대 한 **업데이트**, **삽입**, 또는 **삭제** 문은, 응용 프로그램 를호출할수**SQLRowCount**합니다.  
   
  현재 결과 집합 인출된 행 되었으면 **SQLMoreResults** 해당 결과 집합을 삭제 하 고 다음 결과 집합 또는 사용 가능한 계산을 만듭니다. 모든 결과 처리 경우 **SQLMoreResults** SQL_NO_DATA를 반환 합니다. 일부 드라이버에 대 한 출력 매개 변수 및 반환 값 사용할 수 없는 모든 결과 집합 및 행 개수 처리 될 때까지 합니다. 이러한 드라이버에 대 한 출력 매개 변수 및 반환 값을 사용할 수 있을 때 **SQLMoreResults** SQL_NO_DATA를 반환 합니다.  
   

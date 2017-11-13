@@ -90,7 +90,7 @@ objectClass='user' AND objectCategory='Person'"
 ## <a name="recordset-behavior"></a>레코드 집합 동작  
  다음 표에서에서 사용할 수 있는 기능을 나열는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체가이 공급자를 사용 하 여 열립니다. 정적 커서 유형만 (**adOpenStatic**)를 사용할 수 있습니다.  
   
- 에 대 한 자세한 내용은 **레코드 집합** 실행 공급자 구성에 대 한 동작의 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드 열거는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 는 의컬렉션** 레코드 집합** 공급자별 동적 속성은 있는지 여부를 확인 하려면.  
+ 에 대 한 자세한 내용은 **레코드 집합** 실행 공급자 구성에 대 한 동작의 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드 열거는 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 는 의컬렉션 **레코드 집합** 공급자별 동적 속성은 있는지 여부를 확인 하려면.  
   
  **사용 가능한 표준 ADO 레코드 집합 속성:**  
   

@@ -48,7 +48,7 @@ ms.lasthandoff: 09/09/2017
 'EndEditIntro  
 ```  
   
- 코드에는 중요 한 변경 사항에 설정 해야는 **앞** 의 속성은 **연결** 개체와 같은 **adUseClient** 에 * GetNewConnection* 함수 (다음 예제에 표시), 클라이언트 커서의 사용을 나타냅니다. 클라이언트 쪽 및 서버측 커서 차이점에 대 한 자세한 내용은 참조 [커서 및 잠금 이해](../../../ado/guide/data/understanding-cursors-and-locks.md)합니다.  
+ 코드에는 중요 한 변경 사항에 설정 해야는 **앞** 의 속성은 **연결** 개체와 같은 **adUseClient** 에  *GetNewConnection* 함수 (다음 예제에 표시), 클라이언트 커서의 사용을 나타냅니다. 클라이언트 쪽 및 서버측 커서 차이점에 대 한 자세한 내용은 참조 [커서 및 잠금 이해](../../../ado/guide/data/understanding-cursors-and-locks.md)합니다.  
   
  **앞** 속성의 **adUseClient** 설정 (SQL Server,이 경우) 데이터 원본에서 클라이언트 코드 (데스크톱 워크스테이션)의 위치를 커서의 위치를 이동 합니다. 이 설정을 하면 ADO 만들어 커서를 관리 하려면 클라이언트에서 OLE DB에 대 한 클라이언트 커서 엔진을 호출 합니다.  
   

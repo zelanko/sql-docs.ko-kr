@@ -46,13 +46,13 @@ mixed PDO::getAttribute ( $attribute )
 |Attribute|처리기|지원되는 값|Description|  
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|특정 사례에 열 이름이 있는지 여부를 지정합니다. PDO::CASE_LOWER는 열 이름을 소문자로 지정하고, PDO::CASE_NATURAL은 열 이름을 데이터베이스에서 반환된 대로 유지하며, PDO::CASE_UPPER는 열 이름을 대문자로 지정합니다.<br /><br />기본값은 PDO::CASE_NATURAL입니다.<br /><br />이 특성은 PDO::setAttribute를 사용하여 설정할 수도 있습니다.|  
-|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열 배열|드라이버 및 관련 라이브러리의 버전을 설명합니다. 다음 요소로 배열을 반환 합니다: ODBC 버전 (*MajorVer*.* MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client DLL 이름과 버전, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 (*MajorVer*.* MinorVer*.* BuildNumber*.* 수정 버전*)|  
+|PDO::ATTR_CLIENT_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열 배열|드라이버 및 관련 라이브러리의 버전을 설명합니다. 다음 요소로 배열을 반환 합니다: ODBC 버전 (*MajorVer*. *MinorVer*), [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] Native Client DLL 이름과 버전, [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 (*MajorVer*. *MinorVer*. *BuildNumber*. *수정 버전*)|  
 |PDO::ATTR_DRIVER_NAME|PDO|문자열|항상 "sqlsrv"를 반환합니다.|  
-|PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열|나타냅니다는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 (*MajorVer*.* MinorVer*.* BuildNumber*.* 수정 버전*)|  
+|PDO::ATTR_DRIVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열|나타냅니다는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 버전 (*MajorVer*. *MinorVer*. *BuildNumber*. *수정 버전*)|  
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|드라이버에서 오류를 처리하는 방법을 지정합니다.<br /><br />PDO::ERRMODE_SILENT(기본값)에서는 오류 코드 및 정보를 설정합니다.<br /><br />PDO::ERRMODE_WARNING은 E_WARNING을 발생시킵니다.<br /><br />PDO::ERRMODE_EXCEPTION은 예외를 발생시킵니다.<br /><br />이 특성은 PDO::setAttribute를 사용하여 설정할 수도 있습니다.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|PDO 설명서를 참조하세요.|PDO 설명서를 참조하세요.|  
 |PDO::ATTR_SERVER_INFO|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|3개 요소 배열|현재 데이터베이스, SQL Server 버전 및 SQL Server 인스턴스를 반환합니다.|  
-|PDO::ATTR_SERVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열|SQL Server 버전을 나타냅니다 (*주요*.* 사소한*.* BuildNumber*)|  
+|PDO::ATTR_SERVER_VERSION|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|문자열|SQL Server 버전을 나타냅니다 (*주요*. *사소한*. *BuildNumber*)|  
 |PDO::ATTR_STRINGIFY_FETCHES|PDO|PDO 설명서를 참조하세요.|PDO 설명서를 참조하세요.|  
 |PDO::SQLSRV_ATTR_CLIENT_BUFFER_MAX_KB_SIZE|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|1부터 PHP 메모리 제한까지입니다.|클라이언트 쪽 커서에 대한 결과 집합을 보유하는 버퍼의 크기를 구성합니다.<br /><br />기본값은 10, 240 기술 자료 (10MB).<br /><br />클라이언트 쪽 커서에 대 한 자세한 내용은 참조 [커서 유형 &#40; SQLSRV 드라이버 &#41; ](../../connect/php/cursor-types-sqlsrv-driver.md).|  
 |PDO::SQLSRV_ATTR_DIRECT_QUERY|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]|true<br /><br />false|직접 또는 준비된 쿼리 실행을 지정합니다. 자세한 내용은 [Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)(PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비된 문 실행)를 참조하세요.|  

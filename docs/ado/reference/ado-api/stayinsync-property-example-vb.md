@@ -29,7 +29,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="stayinsync-property-example-vb"></a>StayInSync 속성 예제 (VB)
 이 예제에서는 방법을 [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) 속성에 액세스 하는 중 행을 계층적 용이 하 게 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
- 외부 루프에는 각 저자의 성과 이름, 상태 및 식별 표시 됩니다. 추가 된 **레코드 집합** 에서 각 행이 검색에 대 한는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 자동으로 할당 하 고 **rstTitleAuthor** 여는 **StayInSync ** 속성 때마다 부모 **레코드 집합** 새 행으로 이동 합니다. 내부 루프에는 추가 된 레코드 집합의 각 행에서 4 개의 필드가 표시 됩니다.  
+ 외부 루프에는 각 저자의 성과 이름, 상태 및 식별 표시 됩니다. 추가 된 **레코드 집합** 에서 각 행이 검색에 대 한는 [필드](../../../ado/reference/ado-api/fields-collection-ado.md) 컬렉션에 자동으로 할당 하 고 **rstTitleAuthor** 여는 **StayInSync**  속성 때마다 부모 **레코드 집합** 새 행으로 이동 합니다. 내부 루프에는 추가 된 레코드 집합의 각 행에서 4 개의 필드가 표시 됩니다.  
   
 ```  
 'BeginStayInSyncVB  

@@ -56,7 +56,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  에서는 Will 이벤트는 작업을 계속 해야 하는 경우 둡니다는 *상태* 변경 하지 않고 매개 변수입니다. 들어오는 상태 매개 변수가 설정 되지 않은 상태로 **adStatusCantDeny**을 변경 하 여 보류 중인 작업을 취소할 수 있습니다 *상태* 를 **adStatusCancel**합니다. 이렇게 하면 해당 작업과 연결 된 전체 이벤트에 해당 *상태* 매개 변수 설정 **adStatusErrorsOccurred**합니다. **오류** 완료 이벤트에 전달 된 개체의 값이 포함 될 **adErrOperationCancelled**합니다.  
   
- 설정할 수 없습니다 더 이상 이벤트를 처리 하려면 *상태* 를 **adStatusUnwantedEvent** 및 응용 프로그램에 해당 이벤트의 알림을 더 이상 받지 것입니다. 단, 여러 가지 원인에 대 한 일부 이벤트를 발생할 수 있습니다. 이 경우 지정 해야 **adStatusUnwantedEvent** 가능한 각 원인에 대 한 합니다. 예를 들어, 보류 중인 알림 수신을 중지 하려면 **RecordChange** 설정 해야 이벤트에는 *상태* 매개 변수를 **adStatusUnwantedEvent** 에 대 한 ** adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, 및 **adRsnFirstChange** 발생 합니다.  
+ 설정할 수 없습니다 더 이상 이벤트를 처리 하려면 *상태* 를 **adStatusUnwantedEvent** 및 응용 프로그램에 해당 이벤트의 알림을 더 이상 받지 것입니다. 단, 여러 가지 원인에 대 한 일부 이벤트를 발생할 수 있습니다. 이 경우 지정 해야 **adStatusUnwantedEvent** 가능한 각 원인에 대 한 합니다. 예를 들어, 보류 중인 알림 수신을 중지 하려면 **RecordChange** 설정 해야 이벤트에는 *상태* 매개 변수를 **adStatusUnwantedEvent** 에 대 한  **adRsnAddNew**, **adRsnDelete**, **adRsnUpdate**, **adRsnUndoUpdate**, **adRsnUndoAddNew**, **adRsnUndoDelete**, 및 **adRsnFirstChange** 발생 합니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -64,7 +64,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|수행 하려는 작업의 취소를 요청 합니다.|  
   
 ## <a name="error-parameter"></a>오류 매개 변수  
- *오류* 매개 변수는 ADO에 대 한 참조 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. 경우는 *상태* 로 설정 된 **adStatusErrorsOccurred**, **오류** 작업 실패에 대 한 세부 정보를 포함 하는 개체입니다. 전체 이벤트와 연결 된 Will 이벤트를 설정 하 여 작업을 취소 했습니다 하는 경우는 *상태* 매개 변수를 **adStatusCancel**, error 개체는 항상으로 설정 ** adErrOperationCancelled**합니다.  
+ *오류* 매개 변수는 ADO에 대 한 참조 [오류](../../../ado/reference/ado-api/error-object.md) 개체입니다. 경우는 *상태* 로 설정 된 **adStatusErrorsOccurred**, **오류** 작업 실패에 대 한 세부 정보를 포함 하는 개체입니다. 전체 이벤트와 연결 된 Will 이벤트를 설정 하 여 작업을 취소 했습니다 하는 경우는 *상태* 매개 변수를 **adStatusCancel**, error 개체는 항상으로 설정  **adErrOperationCancelled**합니다.  
   
 ## <a name="object-parameter"></a>개체 매개 변수  
  각 이벤트는 작업에 포함 되는 개체를 나타내는 하나 이상의 개체를 수신 합니다. 예를 들어는 **ExecuteComplete** 이벤트 수신는 **명령** 개체는 **레코드 집합** 개체 및 **연결** 개체입니다.  

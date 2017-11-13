@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 2.  폼의 위쪽에 명령 단추 4 개를 만들기는 **이름** 및 **캡션** 속성을이 항목의 끝에 있는 테이블에 표시 된 값입니다.  
   
-3.  아래 단추를 추가 **Microsoft DataGrid 컨트롤** (Msdatgrd.ocx). Msdatgrd.ocx 파일 Visual Basic을 사용한에 포함 되며 \windows\system32 또는 \winnt\system32 디렉터리에 위치 합니다. Visual Basic 도구 상자 창에 DataGrid 컨트롤을 추가 하려면 선택 **구성 요소 중... ** 에서 **프로젝트** 메뉴. 다음의 확인란 옆에 "합니다 (SP3) (OLEDB)"을 클릭 한 다음 **확인**합니다. 컨트롤 프로젝트를 추가 하려면 도구 상자에서 DataGrid 컨트롤을 Visual Basic 폼으로 끕니다.  
+3.  아래 단추를 추가 **Microsoft DataGrid 컨트롤** (Msdatgrd.ocx). Msdatgrd.ocx 파일 Visual Basic을 사용한에 포함 되며 \windows\system32 또는 \winnt\system32 디렉터리에 위치 합니다. Visual Basic 도구 상자 창에 DataGrid 컨트롤을 추가 하려면 선택 **구성 요소 중...**  에서 **프로젝트** 메뉴. 다음의 확인란 옆에 "합니다 (SP3) (OLEDB)"을 클릭 한 다음 **확인**합니다. 컨트롤 프로젝트를 추가 하려면 도구 상자에서 DataGrid 컨트롤을 Visual Basic 폼으로 끕니다.  
   
 4.  만들기는 **TextBox** 표 아래의 폼에 테이블에 표시 된 대로 속성을 설정 합니다. 양식을 완료 했으면 다음 그림을 비슷해야 합니다.  
   

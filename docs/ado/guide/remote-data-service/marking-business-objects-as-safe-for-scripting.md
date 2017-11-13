@@ -48,7 +48,7 @@ Categories\{7DD95802-9882-11CF-9FA9-00AA006C42C4}]
   
  응용 프로그램 설치 마법사는 마지막 단계에서.htm 및.cab 파일을 만듭니다. 다음 대상 컴퓨터에이 두 파일을 복사 하 고 페이지를 로드 하 고 서버를 올바르게 등록 하 고.htm 파일을 두 번 클릭 수 있습니다.  
   
- 비즈니스 개체를 설치할 예정 Windows\System32\Occache 디렉터리에 기본적으로 하기 때문에 Windows\System32 디렉터리 이동 하 고 변경 된 **HKEY_CLASSES_ROOT\CLSID\\ ** \< *MyActiveXGUID*>\\**InprocServer32** 레지스트리 키를 올바른 경로 일치 합니다.
+ 비즈니스 개체를 설치할 예정 Windows\System32\Occache 디렉터리에 기본적으로 하기 때문에 Windows\System32 디렉터리 이동 하 고 변경 된 **HKEY_CLASSES_ROOT\CLSID\\**  \< *MyActiveXGUID*>\\**InprocServer32** 레지스트리 키를 올바른 경로 일치 합니다.
 
 
 

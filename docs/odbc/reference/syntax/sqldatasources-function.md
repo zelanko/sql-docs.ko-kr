@@ -84,7 +84,7 @@ SQLRETURN SQLDataSources(
  [입력] 문자 길이 **설명* 버퍼입니다.  
   
  *NameLength2Ptr*  
- [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *설명*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength2*에서 드라이버 설명을 \* *설명* 잘립니다 *BufferLength2 * null 종결 문자 길이 뺀 값입니다.  
+ [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *설명*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength2*에서 드라이버 설명을 \* *설명* 잘립니다 *BufferLength2*  null 종결 문자 길이 뺀 값입니다.  
   
 ## <a name="returns"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
@@ -96,7 +96,7 @@ SQLRETURN SQLDataSources(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|(DM) 드라이버 관리자 별 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|(DM) 버퍼 \* *ServerName* 충분히 완전 한 데이터 원본 이름을 반환할 수 없습니다. 따라서 이름이 잘렸습니다. 전체 데이터 원본 이름의 길이가 반환 됩니다 \* *NameLength1Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> (DM) 버퍼 \* *설명* 하지 만큼 충분히 큰지 전체 드라이버 설명을 반환 합니다. 따라서 설명을 잘렸습니다. 잘리지 않은 데이터 원본 설명의 길이에서 **NameLength2Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|HY000|일반 오류|(DM)에 대 한 특정 없는 SQLSTATE 했습니다는 하는 오류가 발생 없는 구현 별 SQLSTATE가 정의 된 합니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|(DM)에 대 한 특정 없는 SQLSTATE 했습니다는 하는 오류가 발생 없는 구현 별 SQLSTATE가 정의 된 합니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버 관리자에서 (DM) 함수는 완료 또는 실행을 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  

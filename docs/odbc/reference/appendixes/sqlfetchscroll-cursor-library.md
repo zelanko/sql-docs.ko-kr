@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  커서 라이브러리를 사용 하는 경우에 대 한 호출이 **SQLFetchScroll** 에 대 한 호출 함께 **SQLFetch** 또는 **SQLExtendedFetch**합니다.  
   
- 커서 라이브러리를 사용 하는 경우에 대 한 호출이 **SQLFetchScroll** 는 ODBC 2에 대 한 지원.* x* 고 odbc 3.* x* 드라이버입니다.  
+ 커서 라이브러리를 사용 하는 경우에 대 한 호출이 **SQLFetchScroll** 는 ODBC 2에 대 한 지원. *x* 고 odbc 3. *x* 드라이버입니다.  
   
 ## <a name="rowset-buffers"></a>버퍼 행 집합  
  커서 라이브러리에 드라이버 경우 응용 프로그램에서 제공 하는 행 집합 버퍼의 데이터 전송을 최적화 합니다.  

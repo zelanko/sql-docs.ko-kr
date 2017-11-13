@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  **SQLEndTran** 연결과 관련 된 모든 문에 대 한 모든 활성 작업에 대 한 커밋 또는 롤백 작업을 요청 합니다. **SQLEndTran** 커밋 또는 롤백 작업 하는 환경과 관련 된 모든 연결에 대해 수행할 수를 요청할 수도 있습니다.  
   
 > [!NOTE]  
->  자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 때 ODBC 3이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 2.* x* 드라이버 참조 [이전 버전과 호환성의 응용 프로그램에 대 한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
+>  자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 때 ODBC 3이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버 참조 [이전 버전과 호환성의 응용 프로그램에 대 한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -73,13 +73,13 @@ SQLRETURN SQLEndTran(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08003|연결이 열려 있지 않습니다|DM ()는 *HandleType* sql_handle_dbc 라는, 되었습니다 및 *처리* 가 연결 된 상태가 아닙니다.|  
-|08007|트랜잭션 중 연결 오류|*HandleType* sql_handle_dbc 라는, 였으며와 관련 된 연결의 *처리* 함수를 실행 하는 동안 실패 했으며 수 없습니다 되었는지를 확인할 요청 된 ** 커밋** 또는 **롤백** 실패 하기 전에 발생 했습니다.|  
+|08007|트랜잭션 중 연결 오류|*HandleType* sql_handle_dbc 라는, 였으며와 관련 된 연결의 *처리* 함수를 실행 하는 동안 실패 했으며 수 없습니다 되었는지를 확인할 요청 된  **커밋** 또는 **롤백** 실패 하기 전에 발생 했습니다.|  
 |25S01|트랜잭션 상태를 알 수 없음된|에 연결 중 하나 이상이 *처리* , 지정 된 결과 함께 트랜잭션을 완료 하지 못하고 결과 알 수 없습니다.|  
 |25S02|트랜잭션이 여전히 활성 상태입니다.|드라이버는 전역 트랜잭션의 모든 작업을 개별적으로 완료할 수 없습니다 및 트랜잭션이 여전히 활성 상태인 보장할 수 없습니다.|  
 |25S03|트랜잭션이 롤백|전역 트랜잭션의 모든 작업을 개별적으로 완료할 수 없습니다 및에서 활성 상태인 트랜잭션의 모든 작업을 보장할 수 없습니다 *처리* 롤백 되었습니다.|  
 |40001|Serialization 오류|트랜잭션이 다른 트랜잭션 사용 하 여 리소스 교착 상태로 인해 롤백 되었습니다.|  
 |40002|무결성 제약 조건 위반|*CompletionType* SQL_COMMIT, 였으며 커밋에 변경 내용 무결성 제약 조건 위반이 발생 합니다. 결과적으로, 트랜잭션이 롤백 되었습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*szMessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*szMessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *ConnectionHandle*합니다. 함수를 호출 하 고 실행을 완료 하기 전에 [SQLCancelHandle 함수](../../../odbc/reference/syntax/sqlcancelhandle-function.md) 에서 호출 된는 *ConnectionHandle*합니다. 함수에서 다시 호출 된 후의 *ConnectionHandle*합니다.<br /><br /> 함수를 호출 하 고 실행을 완료 하기 전에 **SQLCancelHandle** 에서 호출 된는 *ConnectionHandle* 다중 스레드 응용 프로그램에서 다른 스레드에서 합니다.|  
 |HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한와 관련 된 문 핸들에는 *ConnectionHandle* 때 계속 실행 하 고 **SQLEndTran** 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *ConnectionHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 와 관련 된 문 핸들에 대해 호출한는 *ConnectionHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대 한 호출한는 *처리* 와 *HandleType* SQL_HANDLE_DBC로 설정 하 고이 함수를 호출할 때 계속 실행 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한 *처리* 및 반환 된 SQL_PARAM_DATA_AVAILABLE 합니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  

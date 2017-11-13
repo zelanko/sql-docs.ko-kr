@@ -70,7 +70,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 와 동일 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)제외 드라이버 관리자에서 사용 하는 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의 및 **처리** 의 *hDbcInfoToken *.  
+ 와 동일 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)제외 드라이버 관리자에서 사용 하는 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의 및 **처리** 의 *hDbcInfoToken* .  
   
 ## <a name="remarks"></a>주의  
  **SQLSetConnectAttrForDbcInfo** 동일 **SQLSetConnectAttr**, 하지만 연결 핸들에 연결 정보 토큰에 있는 특성 대신 설정 합니다. 예를 들어 경우 **SQLSetConnectAttr** 특성을 인식 하지 않으므로 **SQLSetConnectAttrForDbcInfo** 해당 특성에 대 한도 SQL_ERROR를 반환 해야 합니다.  

@@ -98,10 +98,10 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- CREATION_DISPOSITION ** = ** CREATE_NEW  
+ CREATION_DISPOSITION  **=**  CREATE_NEW  
  확장 가능 키 관리 장치에 새 키를 만듭니다.  키가 이미 장치에 있는 경우 문이 오류와 함께 실패합니다.  
   
- CREATION_DISPOSITION ** = ** OPEN_EXISTING  
+ CREATION_DISPOSITION  **=**  OPEN_EXISTING  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대칭 키를 기존 EKM(확장 가능 키 관리) 키에 매핑합니다. CREATION_DISPOSITION = OPEN_EXISTING을 지정하지 않으면 기본값은 CREATE_NEW입니다.  
   
  *certificate_name*  

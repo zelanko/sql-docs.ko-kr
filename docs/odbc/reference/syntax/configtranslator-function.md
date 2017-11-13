@@ -58,7 +58,7 @@ BOOL ConfigTranslator(
  함수는 실패 한 경우, FALSE 실패할 경우 TRUE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **ConfigTranslator** 관련 FALSE를 반환 * \*pfErrorCode* 를 호출 하 여 설치 관리자 오류 버퍼에 값이 게시 **SQLPostInstallerError**를 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에 * \*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **ConfigTranslator** 관련 FALSE를 반환  *\*pfErrorCode* 를 호출 하 여 설치 관리자 오류 버퍼에 값이 게시 **SQLPostInstallerError**를 호출 하 여 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
 |*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  

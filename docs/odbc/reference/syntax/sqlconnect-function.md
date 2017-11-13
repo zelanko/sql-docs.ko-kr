@@ -89,7 +89,7 @@ SQLRETURN SQLConnect(
 |08004|서버 연결을 거부 했습니다.|데이터 원본 구현에서 정의 된 이유로 연결 만들기를 거부 했습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버를 드라이버 연결 하려고 데이터 소스 간의 통신 링크 하지 못했습니다.|  
 |28000|잘못 된 권한 지정|인수에 대해 지정 된 값 *UserName* 인수에 대해 지정 된 값 또는 *인증* 데이터 원본에 정의 된 제한을 위반 합니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버 관리자에서 (DM) 함수는 완료 또는 실행을 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *ConnectionHandle*합니다. **SQLConnect** 함수를 호출 하 고, 실행을 완료 하기 전에 [SQLCancelHandle 함수](../../../odbc/reference/syntax/sqlcancelhandle-function.md) 에서 호출 된는 *ConnectionHandle*, 및 다음 **SQLConnect** 에서 다시 호출 된 함수는 *ConnectionHandle*합니다.<br /><br /> 또는 **SQLConnect** 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancelHandle** 에서 호출 된는 *ConnectionHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
 |HY010|함수 시퀀스 오류입니다.|DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *ConnectionHandle* 호출 되었을 때 계속 실행 하 고 있습니다.|  
@@ -105,7 +105,7 @@ SQLRETURN SQLConnect(
 |IM005|드라이버의 SQLAllocHandle sql_handle_dbc 라는에 실패 했습니다.|(DM) 중 **SQLConnect**, 드라이버 관리자를 호출 했지만 드라이버의 **SQLAllocHandle** 작동 한 *HandleType* sql_handle_dbc 라는 드라이버의 오류를 반환 합니다.|  
 |IM006|드라이버의 SQLSetConnectAttr 못했습니다.|동안 **SQLConnect**, 드라이버 관리자를 호출 했지만 드라이버의 **SQLSetConnectAttr** 함수 및 드라이버에서 오류를 반환 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |IM009|변환 DLL에 연결할 수 없습니다.|드라이버 변환 데이터 원본에 대해 지정 된 DLL에 연결할 수 없습니다.|  
-|IM010|데이터 원본 이름이 너무 깁니다.|(DM) * \*ServerName* SQL_MAX_DSN_LENGTH 자를 초과 합니다.|  
+|IM010|데이터 원본 이름이 너무 깁니다.|(DM)  *\*ServerName* SQL_MAX_DSN_LENGTH 자를 초과 합니다.|  
 |IM014|지정된 된 DSN 드라이버 및 응용 프로그램 사이 아키텍처 불일치가 포함|64 비트 드라이버;에 연결 하는 DSN을 사용 하 여 (DM) 32 비트 응용 프로그램 또는 그 반대의 경우도 마찬가지입니다.|  
 |IM015|드라이버의 SQLConnect SQL_HANDLE_DBC_INFO_HANDLE에 실패 했습니다.|드라이버가 SQL_ERROR를 반환 하면 드라이버 관리자 응용 프로그램에 sql_error가 반환 하 고 연결이 실패 합니다.<br /><br /> SQL_HANDLE_DBC_INFO_TOKEN에 대 한 자세한 내용은 참조 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)합니다.|  
 |IM017|폴링 비동기 알림 모드 사용 불가능|알림 모델을 사용할 때마다 폴링 사용할 수 없습니다.|  
@@ -125,7 +125,7 @@ SQLRETURN SQLConnect(
   
  그런 다음 드라이버 핸들을 할당 하 고 자체를 초기화 합니다.  
   
- 응용 프로그램 호출 하는 경우 **SQLDisconnect**, 드라이버 관리자를 호출 하 여 **SQLDisconnect** 드라이버에서입니다. 그러나, 드라이버를 끊어지지 않습니다. 그러면 드라이버 반복 해 서 연결 하 고 데이터 원본에서 분리 하는 응용 프로그램에 대 한 메모리에 유지 됩니다. 응용 프로그램 호출 하는 경우 **SQLFreeHandle** 와 *HandleType* 드라이버 관리자를 호출 sql_handle_dbc 라는의 **SQLFreeHandle** 와 *HandleType * sql_handle_dbc 라는의 차례로 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_ENV 드라이버에서의 다음 드라이버 연결을 끊습니다.  
+ 응용 프로그램 호출 하는 경우 **SQLDisconnect**, 드라이버 관리자를 호출 하 여 **SQLDisconnect** 드라이버에서입니다. 그러나, 드라이버를 끊어지지 않습니다. 그러면 드라이버 반복 해 서 연결 하 고 데이터 원본에서 분리 하는 응용 프로그램에 대 한 메모리에 유지 됩니다. 응용 프로그램 호출 하는 경우 **SQLFreeHandle** 와 *HandleType* 드라이버 관리자를 호출 sql_handle_dbc 라는의 **SQLFreeHandle** 와 *HandleType*  sql_handle_dbc 라는의 차례로 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_ENV 드라이버에서의 다음 드라이버 연결을 끊습니다.  
   
  ODBC 응용 프로그램이 둘 이상의 연결을 설정할 수 있습니다.  
   
@@ -155,7 +155,7 @@ SQLRETURN SQLConnect(
   
  **SQLAllocHandle** 와 *HandleType* sql_handle_dbc 라는의 연결을 할당 하기 위해 호출 합니다. 드라이버 관리자는 기존 응용 프로그램에서 설정한 환경 특성을 일치 하는 공유 환경 찾으려고 합니다. 이러한 환경이 있는 경우 암시적으로 만들어집니다 하나 *공유 환경*합니다. 일치 하는 공유 환경 발견 되 면 환경 핸들이 응용 프로그램에 반환 되 고 참조 개수가 증가 합니다.  
   
- 그러나 사용 되는 연결 될 때까지 확인 되지 않으면 **SQLConnect** 호출 됩니다. 이 시점에서 드라이버 관리자는 응용 프로그램에서 요청한 조건과 일치 하는 연결 풀에서 기존 연결을 찾을 하려고 시도 합니다. 이러한 조건에 대 한 호출에서 요청 된 연결 옵션에 포함 **SQLConnect** (의 값은 *ServerName*, *UserName*, 및 * 인증* 키워드) 이후 연결 특성을 설정 하 고 **SQLAllocHandle** 와 *HandleType* sql_handle_dbc 라는의 호출 되었습니다. 드라이버 관리자는 해당 연결 키워드 및 풀에서 연결의 특성에 대해 이러한 조건을 확인합니다. 일치 하는 항목이 없는 경우 풀에서 연결 사용 됩니다. 일치 하는 항목이 새 연결이 생성 됩니다.  
+ 그러나 사용 되는 연결 될 때까지 확인 되지 않으면 **SQLConnect** 호출 됩니다. 이 시점에서 드라이버 관리자는 응용 프로그램에서 요청한 조건과 일치 하는 연결 풀에서 기존 연결을 찾을 하려고 시도 합니다. 이러한 조건에 대 한 호출에서 요청 된 연결 옵션에 포함 **SQLConnect** (의 값은 *ServerName*, *UserName*, 및  *인증* 키워드) 이후 연결 특성을 설정 하 고 **SQLAllocHandle** 와 *HandleType* sql_handle_dbc 라는의 호출 되었습니다. 드라이버 관리자는 해당 연결 키워드 및 풀에서 연결의 특성에 대해 이러한 조건을 확인합니다. 일치 하는 항목이 없는 경우 풀에서 연결 사용 됩니다. 일치 하는 항목이 새 연결이 생성 됩니다.  
   
  SQL_CP_STRICT_MATCH를 SQL_ATTR_CP_MATCH 환경 특성을 설정 하는 경우 일치 하는 사용할 풀에서 연결에 대 한 정확 하 게 해야 합니다. SQL_ATTR_CP_MATCH 환경 특성이 SQL_CP_RELAXED_MATCH로 설정 된, 연결 옵션에 대 한 호출을 **SQLConnect** 해야 일치 하지만 일부 연결 특성 일치 해야 합니다.  
   

@@ -44,7 +44,7 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
   
  호출 하는 경우 새 행 추가 하는 경우는 **CancelUpdate** 메서드를 현재 행이 이전의 현재 행에서 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 호출 합니다.  
   
- 편집 모드에 있고 현재 레코드를 이동 하려면 (사용 하 여 예를 들어는 [이동](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), 또는 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 메서드)를 사용할 수 있습니다 ** CancelUpdate** 보류 중인 변경 내용을 취소 합니다. 데이터 소스에 업데이트를 게시할 수 없는 경우이 작업을 수행 해야 합니다. 예를 들어 삭제 참조 무결성 위반으로 인해 실패 하도록 할는 **레코드 집합** 를 호출한 후 편집 모드에 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md)합니다.  
+ 편집 모드에 있고 현재 레코드를 이동 하려면 (사용 하 여 예를 들어는 [이동](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), 또는 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 메서드)를 사용할 수 있습니다  **CancelUpdate** 보류 중인 변경 내용을 취소 합니다. 데이터 소스에 업데이트를 게시할 수 없는 경우이 작업을 수행 해야 합니다. 예를 들어 삭제 참조 무결성 위반으로 인해 실패 하도록 할는 **레코드 집합** 를 호출한 후 편집 모드에 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md)합니다.  
   
 ## <a name="record"></a>레코드  
  **CancelUpdate** 메서드 취소 삽입 또는 삭제 보류 중인 [필드](../../../ado/reference/ado-api/field-object.md) 개체 및 기존 필드의 보류 중인 업데이트를 취소 하 고, 원래 값으로 복원 합니다. [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성의 모든 필드는 **필드** 컬렉션이에 설정 되어 **adFieldOK**합니다.  

@@ -41,7 +41,7 @@ ms.lasthandoff: 09/09/2017
   
 ## <a name="enablingdisabling-connection-pooling"></a>활성화/비활성화 해도 연결 풀링
 ### <a name="windows"></a>Windows
-드라이버의 값을 설정 하 여 연결 풀에서 동일한 연결을 찾는) (대신 새 연결을 만들려고 할 수 있습니다는 *ConnectionPooling* 특성에 대 한 연결 문자열 **false ** (또는 0).  
+드라이버의 값을 설정 하 여 연결 풀에서 동일한 연결을 찾는) (대신 새 연결을 만들려고 할 수 있습니다는 *ConnectionPooling* 특성에 대 한 연결 문자열 **false**  (또는 0).  
   
 경우는 *ConnectionPooling* 특성이 연결 문자열에서 생략 되거나로 설정 되 면 **true** (또는 1), 드라이버는 해당 연결에 존재 하지 않는 경우에 새 연결을 만들는 연결 풀입니다.  
   

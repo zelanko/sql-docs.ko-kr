@@ -58,7 +58,7 @@ ODBC 연결 상태를 갖습니다.
   
  [이 행 4]이 표시 되며 여기 전환 때 *HandleType* SQL_HANDLE_DESC 되었습니다.  
   
- [5] 호출 **SQLAllocHandle** 와 *OutputHandlePtr* 유효한 핸들을 가리키는 이전 내용 ofthat 핸들에 관계 없이 해당 핸들 파일을 덮어쓰고 ODBC 드라이버에 대 한 문제가 발생할 수 있습니다. 잘못 된 ODBC 응용 프로그램 프로그래밍 호출 하는 **SQLAllocHandle** 에 대해 정의 된 동일한 응용 프로그램 변수로 두 번 * \*OutputHandlePtr* 호출 하지 않고 ** SQLFreeHandle** 를 재할당 하기 전에 핸들을 해제 합니다. ODBC를 덮어쓰지 핸들 방식으로 일관 되지 않은 동작이 또는 ODBC 드라이버 안되며 오류 발생할 수 있습니다.  
+ [5] 호출 **SQLAllocHandle** 와 *OutputHandlePtr* 유효한 핸들을 가리키는 이전 내용 ofthat 핸들에 관계 없이 해당 핸들 파일을 덮어쓰고 ODBC 드라이버에 대 한 문제가 발생할 수 있습니다. 잘못 된 ODBC 응용 프로그램 프로그래밍 호출 하는 **SQLAllocHandle** 에 대해 정의 된 동일한 응용 프로그램 변수로 두 번  *\*OutputHandlePtr* 호출 하지 않고  **SQLFreeHandle** 를 재할당 하기 전에 핸들을 해제 합니다. ODBC를 덮어쓰지 핸들 방식으로 일관 되지 않은 동작이 또는 ODBC 드라이버 안되며 오류 발생할 수 있습니다.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   

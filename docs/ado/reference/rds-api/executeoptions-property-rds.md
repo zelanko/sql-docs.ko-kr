@@ -47,7 +47,7 @@ ms.lasthandoff: 09/09/2017
   
  호출 하려고 하면 [재설정](../../../ado/reference/rds-api/reset-method-rds.md), [새로 고침](../../../ado/reference/rds-api/refresh-method-rds.md), [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md), 또는 [레코드 집합](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) 다른 비동기 작업이 변경 될 수 있는 반면는 [.rds입니다 DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **레코드 집합** 를 실행 하면 오류가 발생 합니다.  
   
- 비동기 작업 중에 오류가 발생 하는 경우는 **.rds입니다 DataControl** 개체의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 값에서 변경 **adcReadyStateLoaded** 를 **adcReadyStateComplete**, 및 ** 레코드 집합** 속성 값은 남아 *Nothing*합니다.  
+ 비동기 작업 중에 오류가 발생 하는 경우는 **.rds입니다 DataControl** 개체의 [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) 값에서 변경 **adcReadyStateLoaded** 를 **adcReadyStateComplete**, 및  **레코드 집합** 속성 값은 남아 *Nothing*합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [DataControl 개체(RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

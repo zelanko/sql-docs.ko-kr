@@ -52,7 +52,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  개체 변수를 나타내는 **레코드 집합** 개체입니다.  
   
 ## <a name="remarks"></a>주의  
- [연결](../../../ado/reference/rds-api/connect-property-rds.md), [서버](../../../ado/reference/rds-api/server-property-rds.md), 및 [SQL](../../../ado/reference/rds-api/sql-property.md) 사용 하기 전에 속성을 설정 해야 합니다는 **SubmitChanges** 메서드는 ** .RDS DataControl** 개체입니다.  
+ [연결](../../../ado/reference/rds-api/connect-property-rds.md), [서버](../../../ado/reference/rds-api/server-property-rds.md), 및 [SQL](../../../ado/reference/rds-api/sql-property.md) 사용 하기 전에 속성을 설정 해야 합니다는 **SubmitChanges** 메서드는  **.RDS DataControl** 개체입니다.  
   
  호출 하는 경우는 [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) 메서드를 호출한 후 **SubmitChanges** 동일한 컴퓨터에 대해 **레코드 집합** 개체는 **CancelUpdate** 변경 내용을 이미 커밋 되었는지 호출이 실패 합니다.  
   

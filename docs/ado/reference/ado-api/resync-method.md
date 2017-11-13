@@ -58,14 +58,14 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  원본 데이터와 충돌이 발생 하 여 다시 동기화 할 경우 실패 (예를 들어 레코드가 삭제 되었습니다 다른 사용자에 의해), 공급자에 대 한 경고를 반환는 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 컬렉션 및 런타임 오류가 발생 합니다. 사용 하 여는 [필터](../../../ado/reference/ado-api/filter-property.md) 속성 (**adFilterConflictingRecords**) 및 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성 충돌 레코드를 찾을 수 있습니다.  
   
- 경우는 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) 동적 속성을 설정 및 **레코드 집합** 는 다음여러테이블에서조인작업을실행한결과** 다시 동기화** 메서드는에 지정 된 명령을 실행 합니다.는 **Resync Command** 속성에 명명 된 테이블에 대해서만 **고유 테이블** 속성입니다.  
+ 경우는 [고유 테이블](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) 및 [Resync Command](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) 동적 속성을 설정 및 **레코드 집합** 는 다음여러테이블에서조인작업을실행한결과 **다시 동기화** 메서드는에 지정 된 명령을 실행 합니다.는 **Resync Command** 속성에 명명 된 테이블에 대해서만 **고유 테이블** 속성입니다.  
   
 ## <a name="fields"></a>필드  
  사용 하 여는 **Resync** 메서드는 값의 다시 동기화를 **필드** 의 컬렉션은 **레코드** 데이터 원본 개체입니다. [Count](../../../ado/reference/ado-api/count-property-ado.md) 속성이이 메서드에 의해 영향을 받지 않습니다.  
   
  경우 *ResyncValues* 로 설정 된 **adResyncAllValues** (기본값)는 [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [값](../../../ado/reference/ado-api/value-property-ado.md), 및 [ OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) 의 속성 [필드](../../../ado/reference/ado-api/field-object.md) 개체 컬렉션에 동기화 됩니다. 경우 *ResyncValues* 로 설정 된 **adResyncUnderlyingValues**만 **UnderlyingValue** 속성 동기화 됩니다.  
   
- 값은 **상태** 각 속성이 **필드** 메서드를 호출할 때에는 개체의 동작에도 영향을 줍니다 **다시 동기화**합니다. 에 대 한 **필드** 개체 **상태** 값 **adFieldPendingUnknown** 또는 **adFieldPendingInsert**, **다시 동기화 ** 영향을 주지 않습니다. 에 대 한 **상태** 값 **adFieldPendingChange** 또는 **adFieldPendingDelete**, **Resync** 필드에 대 한 데이터 값을 동기화 하는 데이터 원본에 여전히 존재 합니다.  
+ 값은 **상태** 각 속성이 **필드** 메서드를 호출할 때에는 개체의 동작에도 영향을 줍니다 **다시 동기화**합니다. 에 대 한 **필드** 개체 **상태** 값 **adFieldPendingUnknown** 또는 **adFieldPendingInsert**, **다시 동기화**  영향을 주지 않습니다. 에 대 한 **상태** 값 **adFieldPendingChange** 또는 **adFieldPendingDelete**, **Resync** 필드에 대 한 데이터 값을 동기화 하는 데이터 원본에 여전히 존재 합니다.  
   
  **다시 동기화** 수정 하지는 것입니다 **상태** 값 **필드** 오류가 발생 하지 않는 한 개체 때 **다시 동기화** 호출 됩니다. 예를 들어 필드가 더 이상 존재 하는 경우 하면 공급자는 반환 적절 한 **상태** 에 대 한 값은 **필드** 와 같은 개체를 **adFieldDoesNotExist**합니다. 반환 된 **상태** 값으로 값을 논리적으로 결합할 수는 **상태** 속성입니다.  
   

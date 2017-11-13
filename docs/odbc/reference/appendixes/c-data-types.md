@@ -138,7 +138,7 @@ struct tagSQLGUID {
   
  [ODBC 2 c]의. *x*, SQL_C_DATE, SQL_C_TIME, 및 SQL_C_TIMESTAMP C date, time 및 timestamp 데이터 형식은 됩니다.  
   
- [d] ODBC 3*.x* 응용 프로그램 SQL_C_VARBOOKMARK, 하지 SQL_C_BOOKMARK 사용 해야 합니다. ODBC 3 때*.x* 응용 프로그램이 작동 ODBC 2.* x* 드라이버에서 ODBC 3*.x* 드라이버 관리자가 SQL_C_BOOKMARK를 SQL_C_VARBOOKMARK에 매핑합니다.  
+ [d] ODBC 3*.x* 응용 프로그램 SQL_C_VARBOOKMARK, 하지 SQL_C_BOOKMARK 사용 해야 합니다. ODBC 3 때*.x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버에서 ODBC 3*.x* 드라이버 관리자가 SQL_C_BOOKMARK를 SQL_C_VARBOOKMARK에 매핑합니다.  
   
  [e] 번호에 저장 됩니다는 *val* little endian 모드 (최하위 바이트 되 고 왼쪽에 있는 바이트)의 크기 조정 된 정수로 SQL_NUMERIC_STRUCT 구조체의 필드입니다. 예를 들어, 4, 배율이 10.001 밑수 10 숫자를 정수로 100010의 크기가 조정 됩니다. SQL_NUMERIC_STRUCT 값 "AA 86 01 00 00... 것 이기 때문에 186AA 16 진수 형식 00"는 SQL_MAX_NUMERIC_LEN에 정의 된 바이트 수와 **#define**합니다.  
   
@@ -152,7 +152,7 @@ struct tagSQLGUID {
   
  [ODBC 3에서 i] _SQL_C_BOOKMARK를 더 이상 사용 되지*.x*합니다.  
   
- [j] _SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT으로 대체 되었습니다 ODBC의 부호 있는 정수와 부호 없는 형식: SQL_C_SSHORT 및 SQL_C_USHORT, SQL_C_SLONG SQL_C_ULONG, 및 SQL_C_STINYINT 및 SQL_C_UTINYINT 합니다. ODBC 3*.x* ODBC 2를 사용 해야 하는 드라이버.* x* 호출 될 때 드라이버 관리자를 통해 드라이버에 전달 하기 때문에 응용 프로그램 SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT를 지원 해야 합니다.  
+ [j] _SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT으로 대체 되었습니다 ODBC의 부호 있는 정수와 부호 없는 형식: SQL_C_SSHORT 및 SQL_C_USHORT, SQL_C_SLONG SQL_C_ULONG, 및 SQL_C_STINYINT 및 SQL_C_UTINYINT 합니다. ODBC 3*.x* ODBC 2를 사용 해야 하는 드라이버. *x* 호출 될 때 드라이버 관리자를 통해 드라이버에 전달 하기 때문에 응용 프로그램 SQL_C_SHORT, SQL_C_LONG, 및 SQL_C_TINYINT를 지원 해야 합니다.  
   
  [k] SQL_C_GUID SQL_CHAR 또는 SQL_WCHAR에만 변환할 수 있습니다.  
   

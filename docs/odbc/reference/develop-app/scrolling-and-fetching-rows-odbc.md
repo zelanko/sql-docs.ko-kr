@@ -28,7 +28,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>스크롤 및 인출 행 (ODBC)
-응용 프로그램 호출 하는 스크롤 가능한 커서를 사용할 때 **SQLFetchScroll** cursor와 fetch 행 위치입니다. **SQLFetchScroll** 상대 스크롤 지원 (다음, 이전, 및 상대 * n * 행), 절대 스크롤 (이름, 성 및 행 * n *), 및 책갈피에서 위치 지정입니다. *FetchOrientation* 및 *FetchOffset* 인수에 **SQLFetchScroll** 다음 다이어그램에 나와 있는 것 처럼를 인출 하는 행 집합을 지정 합니다.  
+응용 프로그램 호출 하는 스크롤 가능한 커서를 사용할 때 **SQLFetchScroll** cursor와 fetch 행 위치입니다. **SQLFetchScroll** 상대 스크롤 지원 (다음, 이전, 및 상대  *n*  행), 절대 스크롤 (이름, 성 및 행  *n* ), 및 책갈피에서 위치 지정입니다. *FetchOrientation* 및 *FetchOffset* 인수에 **SQLFetchScroll** 다음 다이어그램에 나와 있는 것 처럼를 인출 하는 행 집합을 지정 합니다.  
   
  ![다음으로, 이전, 첫 번째 및 마지막 행 집합을 인출](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   

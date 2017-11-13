@@ -57,15 +57,15 @@ URL을 로컬 또는 네트워크 컴퓨터에 저장 된 대상의 위치를 �
   
  2.7 이상을 ado, 절대 URL도 컨텍스트를 정의할 수 있습니다. 예를 들어,는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 절대 URL을 열지는 **연결** URL로 지정 된 리소스를 나타내는 개체가 암시적으로 만들어집니다.  
   
- 에 컨텍스트를 정의 하는 절대 URL을 지정할 수 있습니다는 *ActiveConnection* 의 매개 변수는 **레코드** 개체 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 URL의 값으로 지정할 수도 있습니다는 "URL**=**" 키워드는 **연결** 개체 [열려](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드 * ConnectionString* 매개 변수 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *ActiveConnection* 매개 변수입니다.  
+ 에 컨텍스트를 정의 하는 절대 URL을 지정할 수 있습니다는 *ActiveConnection* 의 매개 변수는 **레코드** 개체 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 URL의 값으로 지정할 수도 있습니다는 "URL**=**" 키워드는 **연결** 개체 [열려](../../../ado/reference/ado-api/open-method-ado-connection.md) 메서드  *ConnectionString* 매개 변수 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드 *ActiveConnection* 매개 변수입니다.  
   
- 열어 컨텍스트를 정의할 수도 있습니다는 **레코드** 또는 **레코드 집합** 이미 있기 때문에 이러한 개체는 암시적 또는 명시적으로 선언 된 디렉터리를 나타내는 개체 **연결 ** 컨텍스트를 지정 하는 개체입니다.  
+ 열어 컨텍스트를 정의할 수도 있습니다는 **레코드** 또는 **레코드 집합** 이미 있기 때문에 이러한 개체는 암시적 또는 명시적으로 선언 된 디렉터리를 나타내는 개체 **연결**  컨텍스트를 지정 하는 개체입니다.  
   
 ## <a name="scoped-operations"></a>범위가 지정 된 작업  
  컨텍스트 범위 정의-즉, 디렉터리 및 후속 작업에 참여할 수 있는 하위 디렉터리입니다. **레코드** 개체 디렉터리에서 작동 하는 여러 범위 지정 된 메서드 및 모든 하위 디렉터리에 있습니다. 이러한 방법 포함 [범위란](../../../ado/reference/ado-api/copyrecord-method-ado.md), [범위란](../../../ado/reference/ado-api/moverecord-method-ado.md), 및 [참여할 수 있는](../../../ado/reference/ado-api/deleterecord-method-ado.md)합니다.  
   
 ## <a name="relative-urls-as-command-text"></a>명령 텍스트로 상대 Url  
- 문자열을 입력 하 여 데이터 원본에 대해 실행할 명령을 지정할 수 있습니다는 *CommandText* 의 매개 변수는 **연결** 개체의 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드, 및는 * 소스* 의 매개 변수는 **레코드 집합** 개체의 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드.  
+ 문자열을 입력 하 여 데이터 원본에 대해 실행할 명령을 지정할 수 있습니다는 *CommandText* 의 매개 변수는 **연결** 개체의 [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) 메서드, 및는  *소스* 의 매개 변수는 **레코드 집합** 개체의 [열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드.  
   
  에 대 한 상대 URL을 지정할 수 있습니다는 *CommandText* 또는 *소스* 매개 변수입니다. 상대 URL이 SQL 명령; 등의 명령을 실제로 나타내지 않습니다. 단지 매개 변수를 지정 합니다. 활성 연결의 컨텍스트는 절대 URL 이어야 합니다. 및 *옵션* 로 매개 변수를 설정 해야 **adCmdTableDirect**합니다.  
   

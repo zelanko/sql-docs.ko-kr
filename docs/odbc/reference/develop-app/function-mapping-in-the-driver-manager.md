@@ -31,7 +31,7 @@ ms.lasthandoff: 09/09/2017
   
  ODBC 헤더 파일에서는로 데코 레이트 된 함수는 *A,* (**: SQLDriverConnectA**) 혼합된 ANSI/유니코드 응용 프로그램의 편의 위해 합니다. 에 대 한 호출에서 **A** 함수는 데코 레이트 되지 않은 진입점을 실제로 호출 (**SQLDriverConnect**.)  
   
- _UNICODE를 사용 하 여 응용 프로그램은 컴파일한 **#define**, ODBC 헤더 파일에는 데코 레이트 되지 않은 함수 호출 매핑됩니다 (**SQLDriverConnect**)을 유니코드 버전 (**: SQLDriverConnectW **.)  
+ _UNICODE를 사용 하 여 응용 프로그램은 컴파일한 **#define**, ODBC 헤더 파일에는 데코 레이트 되지 않은 함수 호출 매핑됩니다 (**SQLDriverConnect**)을 유니코드 버전 (**: SQLDriverConnectW** .)  
   
  드라이버 관리자 경우 유니코드 드라이버는 드라이버 인식 **SQLConnectW** 드라이버에서 지원 됩니다.  
   

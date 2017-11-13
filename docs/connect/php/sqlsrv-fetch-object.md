@@ -133,7 +133,7 @@ sqlsrv_close( $conn);
 ```  
   
 ## <a name="example"></a>예제  
-다음 예제는 결과 집합의 각 행을 스크립트에서 정의된 *Product* 클래스의 인스턴스로 검색합니다. 제품 정보를 검색 하는 예제는 *Purchasing.PurchaseOrderDetail* 및 *Production.Product* 지정 된 제품에 대 한 AdventureWorks 데이터베이스의 테이블 (기한* DueDate*), 및 재고량 (*StockQty*) 지정된 된 값 보다 작아야 합니다. 예제에서는 **sqlsrv_fetch_object**에 대한 호출에서 클래스를 지정할 때 적용하는 일부 규칙을 강조합니다.  
+다음 예제는 결과 집합의 각 행을 스크립트에서 정의된 *Product* 클래스의 인스턴스로 검색합니다. 제품 정보를 검색 하는 예제는 *Purchasing.PurchaseOrderDetail* 및 *Production.Product* 지정 된 제품에 대 한 AdventureWorks 데이터베이스의 테이블 (기한 *DueDate*), 및 재고량 (*StockQty*) 지정된 된 값 보다 작아야 합니다. 예제에서는 **sqlsrv_fetch_object**에 대한 호출에서 클래스를 지정할 때 적용하는 일부 규칙을 강조합니다.  
   
 -   *$product* 변수는 *Product* 클래스의 인스턴스입니다. 그 이유는 "제품"이 *$className* 매개 변수로 지정되었고 *Product* 클래스가 존재하기 때문입니다.  
   

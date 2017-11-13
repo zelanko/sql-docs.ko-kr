@@ -53,9 +53,9 @@ ms.lasthandoff: 09/09/2017
 ## <a name="data-at-execution-parameters"></a>실행 시 데이터 매개 변수  
  SQL_DATA_AT_EXEC 또는 SQL_LEN_DATA_AT_EXEC 결과 길이/표시기 배열에 있는 값 중 하나일 경우 (*길이*) 매크로 해당 값에 대 한 데이터와 함께 보내집니다 **SQLPutData** 일반적인 방식입니다. 이 프로세스의 다음 양상 띄지 되지 않기 때문에 특수 주석을 해야 합니다.  
   
--   드라이버에서 sql_need_data가 반환 될 때 필요한 데이터 행에 행 번호 변수의 주소를 설정 합니다. 마찬가지로 단일 값, 응용 프로그램이 드라이버에서 단일 매개 변수 집합 내에서 매개 변수 값을 요청 하는 데는 순서에 대 한 가정을 만들 수 없습니다. SQL_ATTR_PARAMS_PROCESSED_PTR 매개 변수 특성으로 지정 된 버퍼에 오류가 발생 한, 변수로 지정 된 행 상태 배열에 있는 행에 대 한 상태 행의 수로 설정 되어 실행 시 데이터 매개 변수를 실행 하는 오류가 발생 하는 경우 SQL_ATTR_PARAM_STATUS_PTR 문 특성이 SQL_PARAM_ERROR, 및에 대 한 호출으로 설정 된 **SQLExecute**, **SQLExecDirect**, **SQLParamData**, 또는 ** SQLPutData** SQL_ERROR를 반환 합니다. 경우에이 버퍼의 내용을 정의 되지 않습니다 **SQLExecute**, **SQLExecDirect**, 또는 **SQLParamData** SQL_STILL_EXECUTING을 반환 합니다.  
+-   드라이버에서 sql_need_data가 반환 될 때 필요한 데이터 행에 행 번호 변수의 주소를 설정 합니다. 마찬가지로 단일 값, 응용 프로그램이 드라이버에서 단일 매개 변수 집합 내에서 매개 변수 값을 요청 하는 데는 순서에 대 한 가정을 만들 수 없습니다. SQL_ATTR_PARAMS_PROCESSED_PTR 매개 변수 특성으로 지정 된 버퍼에 오류가 발생 한, 변수로 지정 된 행 상태 배열에 있는 행에 대 한 상태 행의 수로 설정 되어 실행 시 데이터 매개 변수를 실행 하는 오류가 발생 하는 경우 SQL_ATTR_PARAM_STATUS_PTR 문 특성이 SQL_PARAM_ERROR, 및에 대 한 호출으로 설정 된 **SQLExecute**, **SQLExecDirect**, **SQLParamData**, 또는  **SQLPutData** SQL_ERROR를 반환 합니다. 경우에이 버퍼의 내용을 정의 되지 않습니다 **SQLExecute**, **SQLExecDirect**, 또는 **SQLParamData** SQL_STILL_EXECUTING을 반환 합니다.  
   
--   드라이버는 값을 해석 하지 않으므로 때문에 *ParameterValuePtr* 의 인수 **SQLBindParameter** 실행 시 데이터 매개 변수를 응용 프로그램 하 여 배열에 대 한 포인터를 제공 하는 경우에 대 한 ** SQLParamData** 추출 및 응용 프로그램에이 배열의 요소를 반환 하지 않습니다. 대신, 응용 프로그램 스칼라 값이 제공 하는 반환 합니다. 반환한 값 즉 **SQLParamData** 은 매개 변수를 지정 하는 데 충분 하지 응용 프로그램 데이터를 보내는 응용 프로그램도 현재 행 번호를 고려해 야 합니다.  
+-   드라이버는 값을 해석 하지 않으므로 때문에 *ParameterValuePtr* 의 인수 **SQLBindParameter** 실행 시 데이터 매개 변수를 응용 프로그램 하 여 배열에 대 한 포인터를 제공 하는 경우에 대 한  **SQLParamData** 추출 및 응용 프로그램에이 배열의 요소를 반환 하지 않습니다. 대신, 응용 프로그램 스칼라 값이 제공 하는 반환 합니다. 반환한 값 즉 **SQLParamData** 은 매개 변수를 지정 하는 데 충분 하지 응용 프로그램 데이터를 보내는 응용 프로그램도 현재 행 번호를 고려해 야 합니다.  
   
      실행 시 데이터 매개 변수가 매개 변수 배열의 요소 중 일부에 응용 프로그램 해야 통과 경우 배열 주소 *ParameterValuePtr* 모든 매개 변수에 대해 요소가 들어 있는입니다. 실행 시 데이터 매개 변수가 아닌 매개 변수에 대 한이 배열은 일반적으로 해석 됩니다. 실행 시 데이터 매개 변수 값에 대 한는 **SQLParamData** 를 제공 합니다. 일반적으로 사용할 수 있는이 경우에는 드라이버를 요청 하는 데이터를 확인, 응용 프로그램은 항상 배열의 주소입니다.
 

@@ -35,5 +35,5 @@ ms.lasthandoff: 09/09/2017
   
  응용 프로그램을 호출 하는 경우 **SQLGetData** SQL_C_NUMERIC 구조로 데이터를 반환 하려면 기본 자릿수가 SQL_DESC_SCALE 및 SQL_DESC_PRECISION 필드를 사용 합니다. 기본값이 허용 되지 않는 경우에 응용 프로그램 호출 해야 **SQLSetDescRec** 또는 **SQLSetDescField** 필드를 설정 하 여 호출 **SQLGetData** 는 와*TargetType* 의 SQL_ARD_TYPE 설명자 필드에 값을 사용 하도록 합니다.  
   
- 때 **SQLPutData** 은 실행 시 데이터 매개 변수 또는 열에 해당 하는 설명자 레코드의 자릿수가 SQL_DESC_SCALE 및 SQL_DESC_PRECISION 필드를 사용 하 여 호출을 호출 하는 APD 필드에 대 한 호출 ** SQLExecute** 또는 **SQLExecDirect**, 또는 필드에 대 한 호출 **SQLBulkOperations** 또는 **SQLSetPos**합니다.
+ 때 **SQLPutData** 은 실행 시 데이터 매개 변수 또는 열에 해당 하는 설명자 레코드의 자릿수가 SQL_DESC_SCALE 및 SQL_DESC_PRECISION 필드를 사용 하 여 호출을 호출 하는 APD 필드에 대 한 호출  **SQLExecute** 또는 **SQLExecDirect**, 또는 필드에 대 한 호출 **SQLBulkOperations** 또는 **SQLSetPos**합니다.
 

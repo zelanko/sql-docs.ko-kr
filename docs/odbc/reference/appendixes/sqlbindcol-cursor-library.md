@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
  응용 프로그램에서 호출할 수 **SQLBindCol** 호출한 후 집합 열에 결과 다시 바인딩하려면 **SQLExtendedFetch**, **SQLFetch**, 또는 **SQLFetchScroll**로 C 데이터 형식, 열 크기 및 연결된 된 필드의 10 진수 동일 하 게 유지 합니다. 응용 프로그램 서로 다른 주소에는 열을 바인딩할 커서를 닫지 필요 합니다.  
   
- 커서 라이브러리 지원 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성 바인딩 오프셋을 사용 하도록 설정 합니다. (**SQLBindCol** 되려면 리바인딩이 대해 호출할 필요는 없습니다.) ODBC 3 커서 라이브러리 사용 됩니다*.x* 드라이버를 바인딩 오프셋이 잘못 되었습니다. 경우에 사용 **SQLFetch** 호출 됩니다. Bind 오프셋 하는 경우 사용 됩니다 **SQLFetch** 커서 라이브러리는 ODBC 2 함께 사용할 때 호출 됩니다.* x* 드라이버 때문에 **SQLFetch** 에 **SQLExtendedFetch**합니다.  
+ 커서 라이브러리 지원 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성 바인딩 오프셋을 사용 하도록 설정 합니다. (**SQLBindCol** 되려면 리바인딩이 대해 호출할 필요는 없습니다.) ODBC 3 커서 라이브러리 사용 됩니다*.x* 드라이버를 바인딩 오프셋이 잘못 되었습니다. 경우에 사용 **SQLFetch** 호출 됩니다. Bind 오프셋 하는 경우 사용 됩니다 **SQLFetch** 커서 라이브러리는 ODBC 2 함께 사용할 때 호출 됩니다. *x* 드라이버 때문에 **SQLFetch** 에 **SQLExtendedFetch**합니다.  
   
  커서 라이브러리 호출을 지 원하는 **SQLBindCol** 책갈피 열을 바인딩할 합니다.  
   

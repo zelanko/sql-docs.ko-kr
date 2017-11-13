@@ -66,7 +66,7 @@ ODBC 문 상태를 갖습니다.
   
  [이 행 4]이 표시 되며 여기 전환 때 *HandleType* SQL_HANDLE_DESC 되었습니다.  
   
- [5] 호출 **SQLAllocHandle** 와 *OutputHandlePtr* 유효한 핸들을 가리키는 된 이전 내용을 처리 하 고 ODBC 드라이버에 대 한 문제를 일으킬 수에 대 한 관계 없이 해당 핸들을 덮어씁니다. 잘못 된 ODBC 응용 프로그램 프로그래밍 호출 하는 **SQLAllocHandle** 에 대해 정의 된 동일한 응용 프로그램 변수로 두 번 * \*OutputHandlePtr* 호출 하지 않고 ** SQLFreeHandle** 를 재할당 하기 전에 핸들을 해제 합니다. ODBC를 덮어쓰지 핸들 방식으로 일관 되지 않은 동작이 또는 ODBC 드라이버 안되며 오류 발생할 수 있습니다.  
+ [5] 호출 **SQLAllocHandle** 와 *OutputHandlePtr* 유효한 핸들을 가리키는 된 이전 내용을 처리 하 고 ODBC 드라이버에 대 한 문제를 일으킬 수에 대 한 관계 없이 해당 핸들을 덮어씁니다. 잘못 된 ODBC 응용 프로그램 프로그래밍 호출 하는 **SQLAllocHandle** 에 대해 정의 된 동일한 응용 프로그램 변수로 두 번  *\*OutputHandlePtr* 호출 하지 않고  **SQLFreeHandle** 를 재할당 하기 전에 핸들을 해제 합니다. ODBC를 덮어쓰지 핸들 방식으로 일관 되지 않은 동작이 또는 ODBC 드라이버 안되며 오류 발생할 수 있습니다.  
   
 ## <a name="sqlbindcol"></a>SQLBindCol  
   
@@ -255,7 +255,7 @@ ODBC 문 상태를 갖습니다.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000|24000 [1]|24000|  
   
- [1]이이 오류는 경우 드라이버 관리자에서 반환은 **SQLFetch** 또는 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환 되지 않은 경우 드라이버에서 반환 되 고 **SQLFetch** 또는 ** SQLFetchScroll** SQL_NO_DATA를 반환 했습니다.  
+ [1]이이 오류는 경우 드라이버 관리자에서 반환은 **SQLFetch** 또는 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환 되지 않은 경우 드라이버에서 반환 되 고 **SQLFetch** 또는  **SQLFetchScroll** SQL_NO_DATA를 반환 했습니다.  
   
 ## <a name="sqlexecute"></a>SQLExecute  
   
@@ -279,7 +279,7 @@ ODBC 문 상태를 갖습니다.
 |-------------------|---------------------------------------|-----------------------------|  
 |24000 [p] HY010 [np]|24000 [p], [1] HY010 [np]|24000 [p] HY010 [np]|  
   
- [1]이이 오류는 경우 드라이버 관리자에서 반환은 **SQLFetch** 또는 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환 되지 않은 경우 드라이버에서 반환 되 고 **SQLFetch** 또는 ** SQLFetchScroll** SQL_NO_DATA를 반환 했습니다.  
+ [1]이이 오류는 경우 드라이버 관리자에서 반환은 **SQLFetch** 또는 **SQLFetchScroll** 에서 SQL_NO_DATA를 반환 되지 않은 경우 드라이버에서 반환 되 고 **SQLFetch** 또는  **SQLFetchScroll** SQL_NO_DATA를 반환 했습니다.  
   
 ## <a name="sqlextendedfetch"></a>SQLExtendedFetch  
   
@@ -328,7 +328,7 @@ ODBC 문 상태를 갖습니다.
   
  [1]이이 행 표시 전환 때 *옵션* SQL_CLOSE 되었습니다.  
   
- [2]이이 행 표시 전환 때 *옵션* SQL_UNBIND 되었거나 SQL_RESET_PARAMS 합니다. 경우는 *옵션* 인수 SQL_DROP 였으며 기본 드라이버는 ODBC 3*.x* 드라이버, 드라이버 관리자 매핑합니다이에 대 한 호출을 **SQLFreeHandle** 와 * HandleType* 여로 설정 합니다. 자세한 내용은 전환 표를 참조 하십시오. [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
+ [2]이이 행 표시 전환 때 *옵션* SQL_UNBIND 되었거나 SQL_RESET_PARAMS 합니다. 경우는 *옵션* 인수 SQL_DROP 였으며 기본 드라이버는 ODBC 3*.x* 드라이버, 드라이버 관리자 매핑합니다이에 대 한 호출을 **SQLFreeHandle** 와  *HandleType* 여로 설정 합니다. 자세한 내용은 전환 표를 참조 하십시오. [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)합니다.  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   

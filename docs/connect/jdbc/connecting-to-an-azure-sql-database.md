@@ -82,7 +82,7 @@ shutdown /r /t 1
  4.0 버전 이전는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], 연결 문자열에 사용자 Id에 서버 이름을 추가 해야 합니다. user@servername)을 입력합니다. 4.0 버전부터는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 추가할 필요가 없게 되었습니다 @servername 을 연결 문자열에 사용자 Id입니다.  
   
  암호화 사용에 hostNameInCertificate 설정 필요  
- 에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true**합니다. (서버 이름이 연결 문자열의 경우 *shortName*.* domainName*로 설정 된 **hostNameInCertificate** 속성을 \*.* domainName*.)  
+ 에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true**합니다. (서버 이름이 연결 문자열의 경우 *shortName*. *domainName*로 설정 된 **hostNameInCertificate** 속성을 \*. *domainName*.)  
   
  예를 들어  
   

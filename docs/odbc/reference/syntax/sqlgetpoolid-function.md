@@ -53,7 +53,7 @@ SQLRETURN  SQLGetPoolID (
  때 **SQLGetPoolID** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 드라이버 관리자는를 사용 하 여 한 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의 및 **처리** 의*hDbcInfoToken*합니다.  
   
 ## <a name="remarks"></a>주의  
- **SQLGetPoolID** 연결 정보 집합이 제공 된 풀 ID를 가져오는 데 사용 됩니다 (에서 **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, 및 ** SQLSetConnectInfo**). ID를 사용 하 여 교대로 사용 될 수 있는 연결의 집합을 식별 하는이 풀 (추가 재설정 해야 할 수)입니다. 연결의 해당 그룹에 대 한 연결 풀을 식별 하는 풀 ID 사용 됩니다.  
+ **SQLGetPoolID** 연결 정보 집합이 제공 된 풀 ID를 가져오는 데 사용 됩니다 (에서 **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, 및  **SQLSetConnectInfo**). ID를 사용 하 여 교대로 사용 될 수 있는 연결의 집합을 식별 하는이 풀 (추가 재설정 해야 할 수)입니다. 연결의 해당 그룹에 대 한 연결 풀을 식별 하는 풀 ID 사용 됩니다.  
   
  드라이버 관리자 응용 프로그램에 오류를 반환 하는 드라이버 SQL_ERROR 또는 SQL_INVALID_HANDLE 반환 될 때마다 (에서 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 또는 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   

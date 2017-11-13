@@ -36,7 +36,7 @@ ms.lasthandoff: 09/09/2017
  설정 하거나 반환는 **문자열** 연결이 닫힌 경우 또는 연결에 대 한 정의 포함 하는 값 **Variant** 현재 포함 된 **연결** 경우 개체는 연결이 열려 있습니다. 기본값은 null 개체 참조입니다. 참조는 [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) 속성입니다.  
   
 ## <a name="remarks"></a>주의  
- 사용 하 여는 **ActiveConnection** 속성을 확인는 **연결** 개체는 지정 된 **명령** 개체는 실행 또는 지정 된 ** 레코드 집합** 열립니다.  
+ 사용 하 여는 **ActiveConnection** 속성을 확인는 **연결** 개체는 지정 된 **명령** 개체는 실행 또는 지정 된  **레코드 집합** 열립니다.  
   
 ## <a name="command"></a>Command  
  에 대 한 **명령** 개체는 **ActiveConnection** 속성은 읽기/쓰기가 가능 합니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 09/09/2017
 ### <a name="note"></a>참고  
  **Microsoft Visual Basic** 설정은 **ActiveConnection** 속성을 *Nothing* 연결을 끊습니다는 **명령** 개체는 현재 **연결** 때문에 공급자 데이터 원본에 연결 된 리소스를 해제 하 고 있습니다. 그런 다음 연결할 수는 **명령** 개체를 동일한 문서나 다른 **연결** 개체입니다. 일부 공급자를 사용 하면 하나에서 속성 설정을 변경할 수 있도록 **연결** 먼저 속성을 설정 하지 않고도 다른 *Nothing*합니다.  
   
- 경우는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 의 컬렉션은 **명령** 공급자가 제공 하는 매개 변수를 포함 하는 개체, 컬렉션 설정 하는 경우 선택이 취소 되는 **ActiveConnection** 속성을 *Nothing* 또는 다른 **연결** 개체입니다. 수동으로 만드는 경우 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체를 사용 하 여 채울 수는 **매개 변수** 의 컬렉션은 **명령** 설정 개체는 **ActiveConnection ** 속성을 *Nothing* 또는 다른 **연결** 리프 개체는 **매개 변수** 컬렉션 그대로 유지 합니다.  
+ 경우는 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 의 컬렉션은 **명령** 공급자가 제공 하는 매개 변수를 포함 하는 개체, 컬렉션 설정 하는 경우 선택이 취소 되는 **ActiveConnection** 속성을 *Nothing* 또는 다른 **연결** 개체입니다. 수동으로 만드는 경우 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체를 사용 하 여 채울 수는 **매개 변수** 의 컬렉션은 **명령** 설정 개체는 **ActiveConnection**  속성을 *Nothing* 또는 다른 **연결** 리프 개체는 **매개 변수** 컬렉션 그대로 유지 합니다.  
   
  닫기는 **연결** 개체와 개체는 **명령** 개체는 관련된 set는 **ActiveConnection** 속성을 *Nothing*합니다. 이 속성을 닫힌 **연결** 개체에 오류가 발생 합니다.  
   
@@ -62,12 +62,12 @@ ms.lasthandoff: 09/09/2017
  설정 하는 경우는 **소스** 의 속성은 **레코드 집합** 을 유효한 개체 **명령** 개체 변수는 **ActiveConnection** 의 속성 **레코드 집합** 의 설정을 상속 된 **명령** 개체의 **ActiveConnection** 속성입니다.  
   
 > [!NOTE]
->  **원격 데이터 서비스 사용** 클라이언트 쪽에서 사용할 때 **레코드 집합** 개체, 연결 문자열 또는 (Microsoft Visual Basic 또는 Visual Basic Scripting Edition)에이 속성을 설정할 수 있습니다를 *Nothing *.  
+>  **원격 데이터 서비스 사용** 클라이언트 쪽에서 사용할 때 **레코드 집합** 개체, 연결 문자열 또는 (Microsoft Visual Basic 또는 Visual Basic Scripting Edition)에이 속성을 설정할 수 있습니다를 *Nothing* .  
   
 ## <a name="record"></a>레코드  
  이 속성은 읽기/쓰기 때는 **레코드** 개체 닫혀 있고 연결 문자열이 나 열린에 대 한 참조를 포함할 수 **연결** 개체입니다. 이 속성은 읽기 전용 시기는 **레코드** 개체를 열면 및 열기에 대 한 참조를 포함 **연결** 개체입니다.  
   
- A **연결** 개체가 암시적으로 만들어진 때의 **레코드** URL에서 개체를 열입니다. 열기는 **레코드** 기존, 사용 하 여 열 **연결** 할당 하 여 개체는 **연결** 이 속성을 가지 거 나 사용 하 여는 **연결** 개체의 매개 변수로 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드를 호출 합니다. 경우는 **레코드** 기존 열릴 **레코드** 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 자동 연결 하는 것이 **레코드** 또는 ** 레코드 집합** 개체의 **연결** 개체입니다.  
+ A **연결** 개체가 암시적으로 만들어진 때의 **레코드** URL에서 개체를 열입니다. 열기는 **레코드** 기존, 사용 하 여 열 **연결** 할당 하 여 개체는 **연결** 이 속성을 가지 거 나 사용 하 여는 **연결** 개체의 매개 변수로 [열려](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드를 호출 합니다. 경우는 **레코드** 기존 열릴 **레코드** 또는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 자동 연결 하는 것이 **레코드** 또는  **레코드 집합** 개체의 **연결** 개체입니다.  
   
 > [!NOTE]
 >  Url은 http 체계를 사용 하 여 자동으로 호출 됩니다는 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)합니다. 자세한 내용은 참조 [절대 경로 상대 Url](../../../ado/guide/data/absolute-and-relative-urls.md)합니다.  

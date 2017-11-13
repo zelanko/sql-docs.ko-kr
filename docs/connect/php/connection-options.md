@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
 
 1. `ConnectionPooling` 특성을 설정/해제 Linux와 Mac.에서 연결 풀링을 사용할 수 없습니다 참조 [연결 풀링 (Microsoft Drivers for PHP for SQL Server)](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)합니다.
 
-2. 지정 된 데이터베이스에 설정된 된 연결에서 실행 되는 모든 쿼리 적용는 *데이터베이스* 특성입니다. 그러나 사용자에 적절 한 권한이 있으면 다른 데이터베이스의에서 데이터 정규화 된 이름을 사용 하 여 액세스할 수 있습니다. 예를 들어 경우는 *마스터* 으로 설정 된 데이터베이스는 *데이터베이스* 계속 액세스 하는 Transact SQL 쿼리를 실행할 수는 연결 특성은 * AdventureWorks.HumanResources.Employee* 정규화 된 이름을 사용 하 여 테이블입니다.  
+2. 지정 된 데이터베이스에 설정된 된 연결에서 실행 되는 모든 쿼리 적용는 *데이터베이스* 특성입니다. 그러나 사용자에 적절 한 권한이 있으면 다른 데이터베이스의에서 데이터 정규화 된 이름을 사용 하 여 액세스할 수 있습니다. 예를 들어 경우는 *마스터* 으로 설정 된 데이터베이스는 *데이터베이스* 계속 액세스 하는 Transact SQL 쿼리를 실행할 수는 연결 특성은  *AdventureWorks.HumanResources.Employee* 정규화 된 이름을 사용 하 여 테이블입니다.  
 
 3. *암호화* 를 사용하도록 설정하면 데이터를 암호화하는 데 필요한 계산 오버헤드로 인해 일부 응용 프로그램의 성능에 영향을 줄 수 있습니다.  
 

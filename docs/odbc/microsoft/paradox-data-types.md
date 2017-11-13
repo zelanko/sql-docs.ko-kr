@@ -51,7 +51,7 @@ ODBC Paradox 드라이버 Paradox 데이터 형식을 ODBC SQL 데이터 형식�
   
  Paradox 버전 5에 대 한 유효 기간 [1]입니다. *x*합니다.  
   
- Paradox 버전 4에 대 한 올바른 ' [2]. *x* 5.* x*합니다.  
+ Paradox 버전 4에 대 한 올바른 ' [2]. *x* 5. *x*합니다.  
   
 > [!NOTE]  
 >  **SQLGetTypeInfo** ODBC SQL 데이터 형식을 반환 합니다. 부록 d의 모든 변환이 *ODBC Programmer's Reference* 이 항목의 앞부분에 나열 된 ODBC SQL 데이터 형식에 대해 지원 됩니다.  

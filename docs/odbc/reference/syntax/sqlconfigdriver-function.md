@@ -88,7 +88,7 @@ BOOL SQLConfigDriver(
  함수는 실패 한 경우, FALSE 실패할 경우 TRUE를 반환 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLConfigDriver** 관련 FALSE를 반환 * \*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에 * \*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **SQLConfigDriver** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
 |*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  
@@ -111,7 +111,7 @@ BOOL SQLConfigDriver(
 ## <a name="setting-connection-pooling-timeout"></a>연결 풀링 시간 제한 설정  
  드라이버의 구성을 설정 하는 경우에 연결 풀링 시간 제한 속성을 설정할 수 있습니다. **SQLConfigDriver** 로 호출 되는 *문제점과* ODBC_CONFIG_DRIVER의 및 *lpszArgs* 로 설정 **CPTimeout**합니다. **CPTimeout** 연결을 사용 하지 않고 연결 풀에서 유지 될 수 있는 기간을 결정 합니다. 제한 시간이 만료 되 면 연결이 닫히고 풀에서 제거 합니다. 기본 제한 시간은 60 초입니다.  
   
- 때 **SQLConfigDriver** 사용 하 여 호출 *문제점과* ODBC_INSTALL_DRIVER 또는 ODBC_REMOVE_DRIVER로 설정, 드라이버 관리자 로드 적절 한 드라이버 설치 DLL 및 호출 된 ** ConfigDriver** 함수입니다. 때 **SQLConfigDriver** 로 호출 되는 *문제점과* ODBC_CONFIG_DRIVER의 모든 처리가 수행 되는 ODBC 설치 관리자에 드라이버 설치 DLL에서 로드 되지 않도록 합니다.  
+ 때 **SQLConfigDriver** 사용 하 여 호출 *문제점과* ODBC_INSTALL_DRIVER 또는 ODBC_REMOVE_DRIVER로 설정, 드라이버 관리자 로드 적절 한 드라이버 설치 DLL 및 호출 된  **ConfigDriver** 함수입니다. 때 **SQLConfigDriver** 로 호출 되는 *문제점과* ODBC_CONFIG_DRIVER의 모든 처리가 수행 되는 ODBC 설치 관리자에 드라이버 설치 DLL에서 로드 되지 않도록 합니다.  
   
 ## <a name="messages"></a>메시지  
  드라이버 설치 루틴에서 null로 끝나는 문자열로 응용 프로그램에 문자 메시지를 보낼 수는 *lpszMsg* 버퍼입니다. 메시지가 잘릴 수 *cbMsgMax* 뺀 하 여 null 종결 문자는 **ConfigDriver** 보다 크거나 같은 경우에 작동 *cbMsgMax* 문자입니다.  

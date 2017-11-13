@@ -87,19 +87,19 @@ SQLRETURN SQLSetDescField(
 |SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다 * \*ValuePtr* (경우 *ValuePtr* 는 포인터) 값과 *ValuePtr* (경우 *ValuePtr * 이 정수 값), 또는 * \*ValuePtr* 드라이버 유사한 값을 대체 하도록 구현 작업 조건 때문에 잘못 되었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|07009|잘못 된 설명자 인덱스입니다.|*FieldIdentifier* 레코드 필드에 인수가 *RecNumber* 되었습니다. 0, 인수 및 *DescriptorHandle* IPD 핸들에 인수를 참조 합니다.<br /><br /> *RecNumber* 에 0 보다 작은 인수가 및 *DescriptorHandle* 인수는 카드가 또는 APD을 참조 합니다.<br /><br /> *RecNumber* 인수 열 또는 매개 변수를 데이터 원본에서 지원할 수 있는 최대 수보다 큽니다. 및 *DescriptorHandle* 인수 APD 또는 참조 합니다.<br /><br /> DM ()는 *FieldIdentifier* SQL_DESC_COUNT, 되었습니다 및 * \*ValuePtr* 인수가 0 보다 작습니다.<br /><br /> *RecNumber* 0에 인수가 및 *DescriptorHandle* 암시적으로 할당 된 APD 인수 라고 합니다. (명시적으로 할당 된 응용 프로그램 설명자를 사용 하 여이 오류가 발생 하지 않으면 되므로 명시적으로 할당 된 응용 프로그램 설명자 APD 또는까지 카드가 인지 알 수 없습니다 실행 시간.)|  
+|01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다  *\*ValuePtr* (경우 *ValuePtr* 는 포인터) 값과 *ValuePtr* (경우 *ValuePtr*  이 정수 값), 또는  *\*ValuePtr* 드라이버 유사한 값을 대체 하도록 구현 작업 조건 때문에 잘못 되었습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
+|07009|잘못 된 설명자 인덱스입니다.|*FieldIdentifier* 레코드 필드에 인수가 *RecNumber* 되었습니다. 0, 인수 및 *DescriptorHandle* IPD 핸들에 인수를 참조 합니다.<br /><br /> *RecNumber* 에 0 보다 작은 인수가 및 *DescriptorHandle* 인수는 카드가 또는 APD을 참조 합니다.<br /><br /> *RecNumber* 인수 열 또는 매개 변수를 데이터 원본에서 지원할 수 있는 최대 수보다 큽니다. 및 *DescriptorHandle* 인수 APD 또는 참조 합니다.<br /><br /> DM ()는 *FieldIdentifier* SQL_DESC_COUNT, 되었습니다 및  *\*ValuePtr* 인수가 0 보다 작습니다.<br /><br /> *RecNumber* 0에 인수가 및 *DescriptorHandle* 암시적으로 할당 된 APD 인수 라고 합니다. (명시적으로 할당 된 응용 프로그램 설명자를 사용 하 여이 오류가 발생 하지 않으면 되므로 명시적으로 할당 된 응용 프로그램 설명자 APD 또는까지 카드가 인지 알 수 없습니다 실행 시간.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|*FieldIdentifier* SQL_DESC_NAME, 되었습니다 및 *BufferLength* SQL_MAX_IDENTIFIER_LEN 보다 큰 값 되었습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 *DescriptorHandle* 연결 된 한 *StatementHandle* 는, 비동기적으로 실행 중인 (하지이 하나)를 호출한 함수와이 함수가 호출 될 때 계속 실행에 대 한 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* 입니다는 *DescriptorHandle* 연결 했으며 SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *DescriptorHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLSetDescField** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한는 *DescriptorHandle* SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 *DescriptorHandle* 연결 된 한 *StatementHandle* 는, 비동기적으로 실행 중인 (하지이 하나)를 호출한 함수와이 함수가 호출 될 때 계속 실행에 대 한 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* 입니다는 *DescriptorHandle* 연결 했으며 SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *DescriptorHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLSetDescField** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한는 *DescriptorHandle* SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY016|구현 행 설명자를 수정할 수 없습니다.|*DescriptorHandle* 인수는 IRD 연관 된 및 *FieldIdentifier* 인수 되지 않았거나 SQL_DESC_ARRAY_STATUS_PTR SQL_DESC_ROWS_PROCESSED_PTR 합니다.|  
 |HY021|일관성 없는 설명자 정보|SQL_DESC_TYPE 및 값을 SQL_DESC_DATETIME_INTERVAL_CODE 필드 (Apd 또는 ARDs)에 유효한 ODBC SQL 형식 또는 유효한 드라이버별 SQL 형식 (Ipd)에 대 한 유효한 ODBC C 형식을 형성 하지 않습니다.<br /><br /> 일관성 확인을 하는 동안 체크 설명자 정보 일관 되지 않았습니다. ("일관성 확인이"를 참조 하십시오. **SQLSetDescRec**.)|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) * \*ValuePtr* , 문자열 및 *BufferLength* 가 0 보다 작은 SQL_NTS이 아닙니다.<br /><br /> (DM) 드라이버는 ODBC 2는*.x* 드라이버, 설명자에서는 카드가 *ColumnNumber* 인수는 0이 고, 인수에 대해 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4과 같지 않습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)  *\*ValuePtr* , 문자열 및 *BufferLength* 가 0 보다 작은 SQL_NTS이 아닙니다.<br /><br /> (DM) 드라이버는 ODBC 2는*.x* 드라이버, 설명자에서는 카드가 *ColumnNumber* 인수는 0이 고, 인수에 대해 지정 된 값으로 설정 된 *BufferLength* 되었습니다 4과 같지 않습니다.|  
 |HY091|잘못 된 설명자 필드 식별자입니다.|에 지정 된 값은 *FieldIdentifier* 인수 ODBC 정의 필드 되었으며 구현에서 정의 된 값이 아닙니다.<br /><br /> *FieldIdentifier* 인수에 대해 올바르지 않습니다는 *DescriptorHandle* 인수입니다.<br /><br /> *FieldIdentifier* ODBC 정의 읽기 전용 필드에 인수가 있습니다.|  
-|HY092|잘못 된 특성/옵션 식별자|값 * \*ValuePtr* 에 대해 올바르지 않습니다는 *FieldIdentifier* 인수입니다.<br /><br /> *FieldIdentifier* SQL_DESC_UNNAMED, 되었습니다 및 *ValuePtr* SQL_NAMED 되었습니다.|  
+|HY092|잘못 된 특성/옵션 식별자|값  *\*ValuePtr* 에 대해 올바르지 않습니다는 *FieldIdentifier* 인수입니다.<br /><br /> *FieldIdentifier* SQL_DESC_UNNAMED, 되었습니다 및 *ValuePtr* SQL_NAMED 되었습니다.|  
 |HY105|잘못 된 매개 변수 형식|(DM)으로 필드에 대 한 지정 된 값 올바르지 않습니다. (자세한 내용은 참조는 "*InputOutputType* 인수" 섹션 **SQLBindParameter**.)|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [What's New in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  
@@ -209,7 +209,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
  이 읽기 전용 SQLSMALLINT 헤더 필드 드라이버에 의해 또는 응용 프로그램에서 명시적으로 설명자가 자동으로 할당 여부를 지정 합니다. 응용 프로그램을 가져올 수 있지만 수정할 수 없으며이 필드. 필드는 설명자 드라이버에 의해 자동으로 할당 된 경우 드라이버에서 SQL_DESC_ALLOC_AUTO에 설정 됩니다. 설정은 SQL_DESC_ALLOC_USER 드라이버에서 설명자 응용 프로그램에서 명시적으로 할당 된 경우.  
   
  **SQL_DESC_ARRAY_SIZE [응용 프로그램 설명자]**  
- ARDs,이 SQLULEN 헤더 필드는 행 집합의 행 수를 지정합니다. 이에 대 한 호출에서 반환 될 행의 수는 **SQLFetch** 또는 **SQLFetchScroll** 또는 호출 하 여 작업을 수행할 **SQLBulkOperations** 또는 **SQLSetPos **.  
+ ARDs,이 SQLULEN 헤더 필드는 행 집합의 행 수를 지정합니다. 이에 대 한 호출에서 반환 될 행의 수는 **SQLFetch** 또는 **SQLFetchScroll** 또는 호출 하 여 작업을 수행할 **SQLBulkOperations** 또는 **SQLSetPos** .  
   
  Apd,이 SQLULEN 헤더 필드는 각 매개 변수에 대해 값의 수를 지정합니다.  
   
@@ -319,7 +319,7 @@ SQL_DESC_TYPE_NAME|SQLCHAR *|카드가: 사용 되지 않는 APD: 사용 되지 
   
  이 SQLUINTEGER는 IPD의 * 헤더 필드 가리키는 처리 되 면 오류 집합을 포함 하 여 매개 변수 집합의 수를 포함 하는 버퍼입니다. 이 null 포인터 이면 번호가 없으면 반환 됩니다.  
   
- SQL_DESC_ROWS_PROCESSED_PTR는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 호출한 후 반환 된 후에 유효한 **SQLFetch** 또는 **SQLFetchScroll** (IRD 필드)에 대 한 또는 **SQLExecute **, **SQLExecDirect**, 또는 **SQLParamData** (에 대해 IPD 필드). 가 가리키는 버퍼에 입력 하는 호출 하는 경우이 필드 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않는에서 SQL_NO_DATA를 0으로 설정 되어 있는 경우에는 버퍼의 값을 반환 하지 않는 한 버퍼의 내용을 정의 되지 않습니다.  
+ SQL_DESC_ROWS_PROCESSED_PTR는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 호출한 후 반환 된 후에 유효한 **SQLFetch** 또는 **SQLFetchScroll** (IRD 필드)에 대 한 또는 **SQLExecute** , **SQLExecDirect**, 또는 **SQLParamData** (에 대해 IPD 필드). 가 가리키는 버퍼에 입력 하는 호출 하는 경우이 필드 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않는에서 SQL_NO_DATA를 0으로 설정 되어 있는 경우에는 버퍼의 값을 반환 하지 않는 한 버퍼의 내용을 정의 되지 않습니다.  
   
  이 필드에는 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_ROWS_FETCHED_PTR 특성을 사용 합니다. APD의이 필드를 호출 하 여 설정할 수도 있습니다 **SQLSetStmtAttr** SQL_ATTR_PARAMS_PROCESSED_PTR 특성을 사용 합니다.  
   
@@ -406,7 +406,7 @@ QL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|
  **SQL_DESC_INDICATOR_PTR [응용 프로그램 설명자]**  
  ARDs,이 SQLLEN에서에서 * 필드 포인트는 표시자 변수를 기록 합니다. 이 변수는 열 값이 NULL을 SQL_NULL_DATA를 포함 합니다. Apd, 표시자 변수 NULL 동적 인수를 지정 하려면 SQL_NULL_DATA로 설정 됩니다. 그렇지 않으면 변수는 0 (하지 않는 한 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 값이 동일한 포인터)입니다.  
   
- 카드가에서 SQL_DESC_INDICATOR_PTR 필드가 null 포인터 이면 드라이버를 자동으로 열의 NULL 인지 여부에 대 한 정보를 반환 하지 않습니다. 열이 NULL 이면 SQL_DESC_INDICATOR_PTR이 null 포인터 이면 22002 (지표 변수가 필요 하지만 제공 되지 않은) SQLSTATE 때 반환 됩니다 드라이버에 대 한 호출 후 버퍼를 채우는 데 시도 **SQLFetch** 또는 ** SQLFetchScroll**합니다. 경우에 대 한 호출 **SQLFetch** 또는 **SQLFetchScroll** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 버퍼의 내용 정의 되지 않습니다. 반환 하지 않았습니다.  
+ 카드가에서 SQL_DESC_INDICATOR_PTR 필드가 null 포인터 이면 드라이버를 자동으로 열의 NULL 인지 여부에 대 한 정보를 반환 하지 않습니다. 열이 NULL 이면 SQL_DESC_INDICATOR_PTR이 null 포인터 이면 22002 (지표 변수가 필요 하지만 제공 되지 않은) SQLSTATE 때 반환 됩니다 드라이버에 대 한 호출 후 버퍼를 채우는 데 시도 **SQLFetch** 또는  **SQLFetchScroll**합니다. 경우에 대 한 호출 **SQLFetch** 또는 **SQLFetchScroll** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 버퍼의 내용 정의 되지 않습니다. 반환 하지 않았습니다.  
   
  SQL_DESC_INDICATOR_PTR 필드 SQL_DESC_OCTET_LENGTH_PTR 가리키는 필드 설정 되는지 여부를 결정 합니다. 열에 대 한 데이터 값이 NULL 이면 드라이버는 표시자 변수 SQL_NULL_DATA로 설정 합니다. SQL_DESC_OCTET_LENGTH_PTR 가리키는 필드 다음 설정 되지 않았습니다. NULL 값은 페치 중 발생 하지 않으면, SQL_DESC_INDICATOR_PTR 가리키는 버퍼가 0으로 설정 하 고 SQL_DESC_OCTET_LENGTH_PTR 가리키는 버퍼 데이터의 길이에 설정 됩니다.  
   

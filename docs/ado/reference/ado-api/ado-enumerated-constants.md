@@ -37,7 +37,7 @@ ms.lasthandoff: 09/09/2017
 |[BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md)|작업을 시작할 위치를 나타내는 책갈피를 지정 합니다.|  
 |[CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md)|명령 인수를 해석 하는 방법을 지정 합니다.|  
 |[CompareEnum](../../../ado/reference/ado-api/compareenum.md)|책갈피를 나타내는 두 레코드의 상대적 위치를 지정 합니다.|  
-|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|데이터 수정에 대 한 사용할 수 있는 사용 권한을 지정는 **연결**열고는 **레코드**, 또는 대 한 값을 지정 하는 **모드** 의 속성은 ** 레코드** 및 **스트림** 개체입니다.|  
+|[ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md)|데이터 수정에 대 한 사용할 수 있는 사용 권한을 지정는 **연결**열고는 **레코드**, 또는 대 한 값을 지정 하는 **모드** 의 속성은  **레코드** 및 **스트림** 개체입니다.|  
 |[ConnectOptionEnum](../../../ado/reference/ado-api/connectoptionenum.md)|지정 여부는 **열려** 의 메서드는 **연결** 후 개체를 반환 합니다 (동기) (비동기) 연결이 설정 되기 전에 합니다.|  
 |[ConnectPromptEnum](../../../ado/reference/ado-api/connectpromptenum.md)|ODBC 데이터 원본에 대 한 연결을 열 때 누락 된 매개 변수를 요구 하는 대화 상자를 표시할지 여부를 지정 합니다.|  
 |[CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)|동작을 지정 된 **범위란** 메서드.|  

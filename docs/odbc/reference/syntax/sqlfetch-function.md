@@ -54,7 +54,7 @@ SQLRETURN SQLFetch(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLFetch** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 [SQLGetDiagRec 함수](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 와 *HandleType*여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLFetch** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다. 하나의 열에 오류가 발생 한 경우 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 호출할 수는 *DiagIdentifier* 의 SQL_DIAG_COLUMN_NUMBER;에서 오류가 발생 하는 열을 확인 하 고 ** SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 해당 열이 포함 된 행을 결정 하는 SQL_DIAG_ROW_NUMBER 합니다.  
+ 때 **SQLFetch** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 관련된 된 SQLSTATE 값을 가져올 수 있습니다 [SQLGetDiagRec 함수](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 와 *HandleType*여의 및 *처리* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환 하는 SQLSTATE 값 **SQLFetch** 컨텍스트에서이 함수를 각각에 설명 하 고 "DM ()" 표기법 앞의 드라이버 관리자에서 반환 된 Sqlstate 설명 합니다. 각 SQLSTATE 값과 관련 된 반환 코드는 다른 설명이 없는 경우 SQL_ERROR를는 합니다. 하나의 열에 오류가 발생 한 경우 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 호출할 수는 *DiagIdentifier* 의 SQL_DIAG_COLUMN_NUMBER;에서 오류가 발생 하는 열을 확인 하 고  **SQLGetDiagField** 호출할 수는 *DiagIdentifier* 의 해당 열이 포함 된 행을 결정 하는 SQL_DIAG_ROW_NUMBER 합니다.  
   
  다중 행 작업의 하나 또는 더 전부가 아닌 행에 오류가 발생 하 고에서 오류가 발생할 경우 SQL_ERROR가 반환 되는 경우 모든 해당 SQLSTATEs SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (제외 01xxx SQLSTATEs) 반환할 수 있는, sql_success_with_info가 반환 됩니다는 단일 행 작업입니다.  
   
@@ -68,7 +68,7 @@ SQLRETURN SQLFetch(
 |07009|잘못 된 설명자 인덱스입니다.|드라이버는 ODBC 2는*.x* 지원 하지 않는 드라이버 **SQLExtendedFetch**, 열에 대 한 바인딩에 지정 된 열 번호는 및입니다.<br /><br /> 열 0, 바인딩되며 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
 |22001|문자열 데이터 오른쪽 잘림|열에 대해 반환 되는 다양 한 길이의 책갈피가 잘렸습니다.|  
-|22002|지표 변수가 필요 하지만 제공 되지 않았습니다.|NULL 데이터를 가져온 열으로 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는 ** SQLSetDescRec**)이 null 포인터입니다.|  
+|22002|지표 변수가 필요 하지만 제공 되지 않았습니다.|NULL 데이터를 가져온 열으로 갖는 *StrLen_or_IndPtr* 설정한 **SQLBindCol** (또는 설정한 SQL_DESC_INDICATOR_PTR **SQLSetDescField** 또는  **SQLSetDescRec**)이 null 포인터입니다.|  
 |22003|숫자 값 범위를 벗어났습니다.|숫자 값을 숫자로 또는 하나 이상의 바인딩된 열에 대 한 문자열을 반환 것 발생할 (소수) 대비 전체 부분의 잘릴 수 있습니다.<br /><br /> 자세한 내용은 참조 [SQL에서 C 데이터 형식 변환 데이터](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부록 d: 데이터 형식에서입니다.|  
 |22007|잘못 된 날짜/시간 형식|날짜, 시간 또는 타임 스탬프 C 구조에는 문자는 결과 집합 열에에서 바인딩된 되었으며 열에 값을 각각는 잘못 된 날짜, 시간 또는 타임 스탬프.|  
 |22012|0으로 나누기|산술 식에서 값을 반환한, 나누기에서 복원 하려고 시도 했습니다 0입니다.|  
@@ -77,10 +77,10 @@ SQLRETURN SQLFetch(
 |24000|잘못된 커서 상태|*StatementHandle* 실행된 상태에 있지만 결과 집합이 연관 된는 *StatementHandle*합니다.|  
 |40001|Serialization 오류|교착 상태를 방지 하는 페치 실행 된 트랜잭션이 종료 되었습니다.|  
 |40003|알 수 없는 문 완성|이 함수를 실행 하는 동안 관련된 연결 실패 및 트랜잭션의 상태를 확인할 수 없습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. **SQLFetch** 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*. 그런 다음 **SQLFetch** 에서 다시 호출 된 함수는 *StatementHandle*합니다.<br /><br /> 또는 **SQLFetch** 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle * 다중 스레드 응용 프로그램에서 다른 스레드에서 합니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLFetch** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 지정 된 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 호출 하지 않고 호출 된 **SQLExecDirect**, **SQLExecute** 또는 카탈로그 함수입니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) **SQLFetch** 에 대해 호출 되었습니다는 *StatementHandle* 후 **SQLExtendedFetch** 호출 하기 전에 **SQLFreeStmt** 는 SQL_와 CLOSE 옵션이 호출 되었습니다.|  
+|HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. **SQLFetch** 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*. 그런 다음 **SQLFetch** 에서 다시 호출 된 함수는 *StatementHandle*합니다.<br /><br /> 또는 **SQLFetch** 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*  다중 스레드 응용 프로그램에서 다른 스레드에서 합니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLFetch** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 지정 된 *StatementHandle* 가 실행 된 상태가 아닙니다. 함수가 먼저 호출 하지 않고 호출 된 **SQLExecDirect**, **SQLExecute** 또는 카탈로그 함수입니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> (DM) **SQLFetch** 에 대해 호출 되었습니다는 *StatementHandle* 후 **SQLExtendedFetch** 호출 하기 전에 **SQLFreeStmt** 는 SQL_와 CLOSE 옵션이 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|SQL_ATTR_USE_BOOKMARK 문 특성이 SQL_UB_VARIABLE로 설정 된 및 0 열이 결과 집합에 대 한 책갈피에 대 한 최대 길이 길이가 없습니다. 버퍼에 바인딩 되었습니다. (이 길이 IRD의 SQL_DESC_OCTET_LENGTH 필드에서 사용할 수를 호출 하 여 얻을 수 있습니다 **SQLDescribeCol**, **SQLColAttribute**, 또는 **SQLGetDescField**.)|  
 |HY107|행 값 범위를 벗어났습니다.|SQL_ATTR_CURSOR_TYPE 문 특성으로 지정 된 값 SQL_CURSOR_KEYSET_DRIVEN만 SQL_ATTR_KEYSET_SIZE 문 특성으로 지정 된 값이 0 보다 크고는 SQL_ATTR_ROW_ARRAY_로 지정 된 값 보다 작음 크기 문 특성입니다.|  
@@ -141,7 +141,7 @@ SQLRETURN SQLFetch(
 |종료 후|SQL_NO_DATA|없음|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>바인딩된 열에 데이터를 반환합니다.  
- 으로 **SQLFetch** 반환 각 행에서 해당 열에 바인딩된 버퍼에 바인딩된 각 열에 대 한 데이터를 저장 합니다. 열에 바인딩된 경우 **SQLFetch** 데이터를 반환 하지 않지만 앞으로 블록 커서 이동 합니다. 사용 하 여 데이터를 검색할 수 있습니다 **SQLGetData**합니다. 다중 행 커서는 커서가 있는 경우 (즉, SQL_ATTR_ROW_ARRAY_SIZE가 1 보다 큰) 경우 **SQLGetData** SQL_GD_BLOCK이 반환 하는 경우에 호출할 수 **SQLGetInfo** 로 호출 되는 * 정보 항목* SQL_GETDATA_EXTENSIONS입니다. (자세한 내용은 참조 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
+ 으로 **SQLFetch** 반환 각 행에서 해당 열에 바인딩된 버퍼에 바인딩된 각 열에 대 한 데이터를 저장 합니다. 열에 바인딩된 경우 **SQLFetch** 데이터를 반환 하지 않지만 앞으로 블록 커서 이동 합니다. 사용 하 여 데이터를 검색할 수 있습니다 **SQLGetData**합니다. 다중 행 커서는 커서가 있는 경우 (즉, SQL_ATTR_ROW_ARRAY_SIZE가 1 보다 큰) 경우 **SQLGetData** SQL_GD_BLOCK이 반환 하는 경우에 호출할 수 **SQLGetInfo** 로 호출 되는  *정보 항목* SQL_GETDATA_EXTENSIONS입니다. (자세한 내용은 참조 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
   
  행에 바인딩된 각 열에 대 한 **SQLFetch** 다음 작업을 수행 합니다.  
   

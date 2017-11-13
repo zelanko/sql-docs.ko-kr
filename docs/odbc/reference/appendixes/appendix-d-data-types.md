@@ -32,7 +32,7 @@ ODBC에는 두 가지 데이터 형식 정의: SQL 데이터 형식 및 C 데이
   
  SQL 데이터 형식은 sql-92 표준에 따라 각 DBMS에 의해 정의 됩니다. Sql-92 표준에 지정 된 각 SQL 데이터 형식에 대 한 ODBC 형식 식별자가 이미 정의 되어는 **#define** ODBC 함수에 인수로 전달 하거나 결과 집합의 메타 데이터의 반환 값을 합니다. 유일한 SQL 92 ODBC에서 지원 되지 않는 데이터 형식 (ODBC SQL_BIT 형식이 각기 다른 특징이) 비트, BIT_VARYING, TIME_WITH_TIMEZONE, TIMESTAMP_WITH_TIMEZONE, 및 NATIONAL_CHARACTER는 합니다. 드라이버는 ODBC SQL 데이터 형식 식별자 및 드라이버별 SQL 데이터 형식 식별자에 데이터 원본에 따른 특정 SQL 데이터 형식에 매핑합니다. SQL 데이터 형식은 구현 설명자의 SQL_DESC_CONCISE_TYPE 필드에 지정 됩니다.  
   
- ODBC C 데이터 형식 및 해당 ODBC 형식 식별자가 정의합니다. 응용 프로그램에 적절 한 C 유형 식별자를 전달 하 여 결과 집합 데이터를 수신할 버퍼의 C 데이터 형식을 지정 된 *TargetType* 인수에 대 한 호출에 **SQLBindCol** 또는 ** SQLGetData**합니다. 적절 한 C 형식 식별자를 전달 하 여 문 매개 변수를 포함 하는 버퍼의 C 형식을 지정 된 *ValueType* 인수에 대 한 호출에 **SQLBindParameter**합니다. C 데이터 형식은 응용 프로그램 설명자의 SQL_DESC_CONCISE_TYPE 필드에 지정 됩니다.  
+ ODBC C 데이터 형식 및 해당 ODBC 형식 식별자가 정의합니다. 응용 프로그램에 적절 한 C 유형 식별자를 전달 하 여 결과 집합 데이터를 수신할 버퍼의 C 데이터 형식을 지정 된 *TargetType* 인수에 대 한 호출에 **SQLBindCol** 또는  **SQLGetData**합니다. 적절 한 C 형식 식별자를 전달 하 여 문 매개 변수를 포함 하는 버퍼의 C 형식을 지정 된 *ValueType* 인수에 대 한 호출에 **SQLBindParameter**합니다. C 데이터 형식은 응용 프로그램 설명자의 SQL_DESC_CONCISE_TYPE 필드에 지정 됩니다.  
   
 > [!NOTE]  
 >  드라이버 관련 C 데이터 형식은 없습니다.  

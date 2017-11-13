@@ -64,7 +64,7 @@ ms.lasthandoff: 09/09/2017
   
  **이름** 속성은 읽기/쓰기 [열](../../../ado/reference/adox-api/column-object-adox.md), [그룹](../../../ado/reference/adox-api/group-object-adox.md), [키](../../../ado/reference/adox-api/key-object-adox.md), [인덱스](../../../ado/reference/adox-api/index-object-adox.md), [ 테이블](../../../ado/reference/adox-api/table-object-adox.md), 및 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체입니다. **이름** 속성은 읽기 전용 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md), [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md), 및 [보기](../../../ado/reference/adox-api/view-object-adox.md) 개체입니다.  
   
- 읽기/쓰기 개체에 대 한 (**열**, **그룹**, **키**, **인덱스**, **테이블** 및 ** 사용자** 개체), 기본값은 빈 문자열 ("").  
+ 읽기/쓰기 개체에 대 한 (**열**, **그룹**, **키**, **인덱스**, **테이블** 및  **사용자** 개체), 기본값은 빈 문자열 ("").  
   
 > [!NOTE]
 >  키의 경우이 속성은 읽기 전용 **키** 컬렉션에 이미 추가 된 개체입니다. 테이블의 경우이 속성은 읽기 전용입니다 **테이블** 컬렉션에 이미 추가 된 개체입니다.  

@@ -52,7 +52,7 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- 위의 세 가지 경우는 *ConnectionHandle* 인수에 있는 값으로 설정 되어 *hdbc*, *특성* 인수에 있는 값으로 설정 되어 *fOption *, 및 *ValuePtr* 인수는 동일한 값으로 설정 되어 *pvParam*합니다.  
+ 위의 세 가지 경우는 *ConnectionHandle* 인수에 있는 값으로 설정 되어 *hdbc*, *특성* 인수에 있는 값으로 설정 되어 *fOption* , 및 *ValuePtr* 인수는 동일한 값으로 설정 되어 *pvParam*합니다.  
   
  ODBC 정의 문자열 연결 옵션에 대 한 드라이버 관리자는 다음과 같이 설정 됩니다.는 *BufferLength* 호출에 인수 **SQLGetConnectAttr** 미리 정의 된 최대 길이 (SQL_MAX_OPTION_STRING_LENGTH); 문자열이 아닌 연결 옵션에 대 한 *BufferLength* 0으로 설정 됩니다.  
   

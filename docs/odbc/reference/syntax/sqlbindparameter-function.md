@@ -109,11 +109,11 @@ SQLRETURN SQLBindParameter(
 |HY003|잘못 된 응용 프로그램 버퍼 형식|인수로 지정한 값 *ValueType* 유효한 C 데이터 형식 또는 SQL_C_DEFAULT 없습니다.|  
 |HY004|잘못 된 SQL 데이터 형식|인수에 대해 지정 된 값 *ParameterType* 유효한 ODBC SQL 데이터 형식 식별자도 아니고 드라이버에서 지 원하는 드라이버별 SQL 데이터 형식 식별자가 있습니다.|  
 |HY009|잘못 된 인수 값|(DM) 인수 *ParameterValuePtr* 인수는 null 포인터 *StrLen_or_IndPtr* null 포인터를 인수 *InputOutputType* SQL_PARAM_ 없습니다 출력입니다.<br /><br /> (DM) SQL_PARAM_OUTPUT 여기서 인수 *ParameterValuePtr* 는 null 포인터 char 또는 binary, 및는 BufferLength가 C 유형은 (*cbValueMax*) 0 보다 큽니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때 **SQLBindParameter** 호출 되었습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때 **SQLBindParameter** 호출 되었습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY021|일관성 없는 설명자 정보|일관성 확인을 하는 동안 체크 설명자 정보 일관 되지 않았습니다. ("일관성 검사" 섹션을 참조 **SQLSetDescField**.)<br /><br /> 인수에 대해 지정 된 값 *DecimalDigits* 로 지정 된 SQL 데이터 형식의 열에 대 한 데이터 원본에 의해 지원 되는 값의 범위 밖에 *ParameterType* 인수입니다.|  
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)에 있는 값 *BufferLength* 0 보다 작습니다. (에 SQL_DESC_DATA_PTR 필드의 설명을 참조 **SQLSetDescField**.)|  
-|HY104|잘못 된 정밀도 또는 배율 값|인수에 대해 지정 된 값 *ColumnSize* 또는 *DecimalDigits* 로 지정 된 SQL 데이터 형식의 열에 대 한 데이터 원본에 의해 지원 되는 값의 범위 밖에 * ParameterType* 인수입니다.|  
+|HY104|잘못 된 정밀도 또는 배율 값|인수에 대해 지정 된 값 *ColumnSize* 또는 *DecimalDigits* 로 지정 된 SQL 데이터 형식의 열에 대 한 데이터 원본에 의해 지원 되는 값의 범위 밖에  *ParameterType* 인수입니다.|  
 |HY105|잘못 된 매개 변수 형식|인수에 대해 지정 된 값 (DM) *InputOutputType* 올바르지 않습니다. ("주석" 참조)|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYC00|선택적 기능이 구현 되지 않았습니다|드라이버 또는 데이터 원본 지원 하지 않는 인수에 대해 지정 된 값의 조합에 의해 지정 된 변환을 *ValueType* 및 인수에 대해 지정 된 드라이버 관련 값 *ParameterType*.<br /><br /> 인수에 대해 지정 된 값 *ParameterType* ODBC의 버전 드라이버에서 지원 되지만 드라이버 또는 데이터 원본에서 지원 하지 않아 유효한 ODBC SQL 데이터 형식 식별자가 있습니다.<br /><br /> 드라이버는 ODBC 2만 지원합니다. *x* 인수 *ValueType* 다음 중 하나 였습니다.<br /><br /> SQL_C_NUMERIC SQL_C_SBIGINT SQL_C_UBIGINT<br /><br /> 에 나열 된 모든 간격 C 데이터 형식 및 [C 데이터 형식을](../../../odbc/reference/appendixes/c-data-types.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 드라이버 지원 3.50, 및 인수는 이전 ODBC 버전 *ValueType* SQL_C_GUID 되었습니다.|  
@@ -133,13 +133,13 @@ SQLRETURN SQLBindParameter(
   
  *InputOutputType* 인수는 다음 값 중 하나입니다.  
   
--   SQL_PARAM_INPUT 합니다. 매개 변수 표시와 같은 프로시저를 호출 하지 않는 SQL 문에서 매개 변수는 **삽입** 문 또는 그 프로시저에서 입력된 매개 변수를 표시 합니다. 예를 들어, 매개 변수 **직원 값으로 삽입 (?,?,?) ** 입력된 매개 변수는 매개 변수 **{AddEmp 호출 (?,?,?)을 (를) ** 될 수 있지만 입력된 매개 변수가 필요 합니다.  
+-   SQL_PARAM_INPUT 합니다. 매개 변수 표시와 같은 프로시저를 호출 하지 않는 SQL 문에서 매개 변수는 **삽입** 문 또는 그 프로시저에서 입력된 매개 변수를 표시 합니다. 예를 들어, 매개 변수 **직원 값으로 삽입 (?,?,?)**  입력된 매개 변수는 매개 변수 **{AddEmp 호출 (?,?,?)을 (를)**  될 수 있지만 입력된 매개 변수가 필요 합니다.  
   
      드라이버; 데이터 원본에는 매개 변수에 대 한 데이터를 보냅니다는 문이 실행 될 때 \* *ParameterValuePtr* 버퍼에 유효한 입력된 값이 있어야 합니다. 또는 **StrLen_or_IndPtr* 버퍼 SQL_NULL_DATA, SQL_DATA_AT_EXEC로 또는 SQL_LEN_DATA_AT 결과 있어야 합니다. _EXEC 매크로입니다.  
   
      응용 프로그램에서 프로시저 호출에서 매개 변수 형식의 확인할 수 없는 경우 설정 *InputOutputType* SQL_PARAM_INPUT;에 데이터 원본이 매개 변수에 값을 반환 하는 경우 드라이버를 무시 합니다.  
   
--   SQL_PARAM_INPUT_OUTPUT 합니다. 매개 변수는 프로시저에서는 입/출력 매개 변수를 표시합니다. 예를 들어, 매개 변수 **{GetEmpDept(?) 호출} ** 직원의 이름을 허용 하 고 직원의 부서 이름을 반환 하는 입/출력 매개 변수입니다.  
+-   SQL_PARAM_INPUT_OUTPUT 합니다. 매개 변수는 프로시저에서는 입/출력 매개 변수를 표시합니다. 예를 들어, 매개 변수 **{GetEmpDept(?) 호출}**  직원의 이름을 허용 하 고 직원의 부서 이름을 반환 하는 입/출력 매개 변수입니다.  
   
      드라이버; 데이터 원본에는 매개 변수에 대 한 데이터를 보냅니다는 문이 실행 될 때 \* *ParameterValuePtr* 버퍼에 유효한 입력된 값이 있어야 합니다. 또는 \* *StrLen_or_IndPtr* 버퍼 SQL_NULL_DATA, SQL_DATA_AT_EXEC로 또는 결과를 포함 해야 합니다 SQL_LEN_DATA_AT_EXEC 매크로입니다. 드라이버; 응용 프로그램에는 매개 변수에 대 한 데이터를 반환 문이 실행 된 후 드라이버를 설정 하는 데이터 원본에서 입/출력 매개 변수의 값을 반환 하지 않으면는 **StrLen_or_IndPtr* SQL_NULL_DATA로 버퍼입니다.  
   
@@ -198,7 +198,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
 ## <a name="columnsize-argument"></a>ColumnSize 인수  
  *ColumnSize* 인수는 열 또는 매개 변수 표식에 해당 데이터 또는 둘 다의 길이에 해당 하는 식의 크기를 지정 합니다. SQL 데이터 형식에 따라 IPD의 다른 필드를 설정 하는이 인수 (의 *ParameterType* 인수). 이 매핑은 다음 규칙이 적용 됩니다.  
   
--   경우 *ParameterType* SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, 되었거나 간결한 SQL 날짜/시간 또는 간격 데이터 형식의는 IPD의 SQL_DESC_LENGTH 필드 하나 의값으로설정된* ColumnSize*합니다. (자세한 내용은 참조는 [열 크기, 10 진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에는 섹션입니다.)  
+-   경우 *ParameterType* SQL_CHAR, SQL_VARCHAR, SQL_LONGVARCHAR, SQL_BINARY, SQL_VARBINARY, SQL_LONGVARBINARY, 되었거나 간결한 SQL 날짜/시간 또는 간격 데이터 형식의는 IPD의 SQL_DESC_LENGTH 필드 하나 의값으로설정된 *ColumnSize*합니다. (자세한 내용은 참조는 [열 크기, 10 진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식에는 섹션입니다.)  
   
 -   경우 *ParameterType* SQL_DECIMAL, SQL_NUMERIC, SQL_FLOAT, SQL_REAL, 또는 SQL_DOUBLE는 IPD의 SQL_DESC_PRECISION 필드의 값으로 설정 되어 *ColumnSize*합니다.  
   
@@ -210,7 +210,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
  경우 *ParameterType* SQL_TYPE_TIME, SQL_TYPE_TIMESTAMP, SQL_INTERVAL_SECOND, SQL_INTERVAL_DAY_TO_SECOND, SQL_INTERVAL_HOUR_TO_SECOND, 또는 SQL_INTERVAL_MINUTE_TO_SECOND는 IPD의 SQL_DESC_PRECISION 필드 설정 되어 *DecimalDigits*합니다. 경우 *ParameterType* SQL_NUMERIC 또는 SQL_DECIMAL는 IPD의 자릿수가 SQL_DESC_SCALE 필드 설정 되어 *DecimalDigits*합니다. 다른 모든 데이터 형식에 대 한는 *DecimalDigits* 인수는 무시 됩니다.  
   
 ## <a name="parametervalueptr-argument"></a>ParameterValuePtr 인수  
- *ParameterValuePtr* 인수는 버퍼를 가리키는 하는 경우, **SQLExecute** 또는 **SQLExecDirect** 호출 되 면 매개 변수에 대해 실제 데이터를 포함 합니다. 데이터는 지정 된 형식에서 이어야 합니다는 *ValueType* 인수입니다. 이 인수는 APD의 SQL_DESC_DATA_PTR 필드가 설정합니다. 응용 프로그램을 설정할 수는 *ParameterValuePtr* 인수는 null 포인터를 * \*StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC입니다. (만 입력 또는 입/출력 매개 변수 적용 됨)  
+ *ParameterValuePtr* 인수는 버퍼를 가리키는 하는 경우, **SQLExecute** 또는 **SQLExecDirect** 호출 되 면 매개 변수에 대해 실제 데이터를 포함 합니다. 데이터는 지정 된 형식에서 이어야 합니다는 *ValueType* 인수입니다. 이 인수는 APD의 SQL_DESC_DATA_PTR 필드가 설정합니다. 응용 프로그램을 설정할 수는 *ParameterValuePtr* 인수는 null 포인터를  *\*StrLen_or_IndPtr* SQL_NULL_DATA 또는 SQL_DATA_AT_EXEC입니다. (만 입력 또는 입/출력 매개 변수 적용 됨)  
   
  경우 \* *StrLen_or_IndPtr* 는 SQL_LEN_DATA_AT_EXEC의 결과입니다 (*길이*) 매크로 또는 SQL_DATA_AT_EXEC로 다음 *ParameterValuePtr* 되는 매개 변수 연관 된 응용 프로그램 정의 포인터 값입니다. 통해 응용 프로그램에 반환 되기 **SQLParamData**합니다. 예를 들어 *ParameterValuePtr* 매개 변수 번호, 데이터에 대 한 포인터 또는 응용 프로그램 입력된 매개 변수를 바인딩하는 데 사용 하는 구조에 대 한 포인터와 같은 0이 아닌 토큰 수 있습니다. 그러나 경우에 유의 매개 변수는 입/출력 매개 변수는 *ParameterValuePtr* 출력 값을 저장할 버퍼에 대 한 포인터 여야 합니다. SQL_ATTR_PARAMSET_SIZE 문 특성의 값이 1 보다 크면 응용 프로그램와 함께 문 특성 SQL_ATTR_PARAMS_PROCESSED_PTR가 가리키는 값을 사용할 수는 *ParameterValuePtr* 인수입니다. 예를 들어 *ParameterValuePtr* 값 배열을 가리키는 있으며 응용 프로그램 배열에서 올바른 값을 검색 하려면 SQL_ATTR_PARAMS_PROCESSED_PTR 가리키는 값을 사용할 수도 있습니다. 자세한 내용은이 섹션의 뒷부분에 나오는 "매개 변수 값 전달"을 참조 하십시오.  
   
@@ -221,16 +221,16 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
 ## <a name="bufferlength-argument"></a>BufferLength 인수  
  문자 및 이진 C 데이터에 대 한는 *BufferLength* 의 길이 지정 하는 인수는 \* *ParameterValuePtr* 버퍼 (단일 요소 경우) 또는 요소에는 길이\* *ParameterValuePtr* 배열 (SQL_ATTR_PARAMSET_SIZE 문 특성의 값은 1 보다 큰). 이 인수는 APD의 SQL_DESC_OCTET_LENGTH 레코드 필드를 설정합니다. 응용 프로그램에 여러 값을 지정 하는 경우 *BufferLength* 에 있는 값의 위치를 확인 하는 데 사용 되는 **ParameterValuePtr* 입력 및 출력에서 모두 배열입니다. 입/출력 및 출력 매개 변수에 대 한 문자 및 이진 C 데이터 출력에 truncate 것인지 결정 사용 됩니다.  
   
--   C 문자 데이터를 반환할 수 있는 바이트 수 보다 크거나 같은 경우에 대 한 *BufferLength*, 데이터에 \* *ParameterValuePtr* 잘립니다 * BufferLength* null 종결 문자 길이 여백을 제외 하 고 드라이버에 의해 null 종료 합니다.  
+-   C 문자 데이터를 반환할 수 있는 바이트 수 보다 크거나 같은 경우에 대 한 *BufferLength*, 데이터에 \* *ParameterValuePtr* 잘립니다  *BufferLength* null 종결 문자 길이 여백을 제외 하 고 드라이버에 의해 null 종료 합니다.  
   
 -   이진 C 데이터를 반환할 수 있는 바이트 수 이상인 경우에 대 한 *BufferLength*, 데이터에 \* *ParameterValuePtr* 잘립니다 *BufferLength*바이트입니다.  
   
- 다른 모든 유형의 C 데이터는 *BufferLength* 인수는 무시 됩니다. 길이 \* *ParameterValuePtr* 버퍼 (단일 요소 경우) 또는 요소 길이 \* *ParameterValuePtr* (응용 프로그램 를호출하는경우배열** SQLSetStmtAttr** 와 *특성* 의 각 매개 변수에 대해 여러 값을 지정 SQL_ATTR_PARAMSET_SIZE 인수) C 데이터 형식의 길이 것으로 간주 됩니다.  
+ 다른 모든 유형의 C 데이터는 *BufferLength* 인수는 무시 됩니다. 길이 \* *ParameterValuePtr* 버퍼 (단일 요소 경우) 또는 요소 길이 \* *ParameterValuePtr* (응용 프로그램 를호출하는경우배열 **SQLSetStmtAttr** 와 *특성* 의 각 매개 변수에 대해 여러 값을 지정 SQL_ATTR_PARAMSET_SIZE 인수) C 데이터 형식의 길이 것으로 간주 됩니다.  
   
  스트리밍된 출력 또는 스트리밍된 입/출력 매개 변수는 *BufferLength* 인수는 버퍼 길이에 지정 되어 있으므로 무시 됩니다 **SQLGetData**합니다.  
   
 > [!NOTE]  
->  ODBC 1.0 응용 프로그램 호출 하는 경우 **SQLSetParam** ODBC 3에서.* x* 드라이버를 드라이버 관리자는이를 변환에 대 한 호출 **SQLBindParameter** 는 *BufferLength* 인수는 항상 SQL_SETPARAM_VALUE_MAX 합니다. 드라이버 관리자에서 오류가 반환 ODBC 3 때문에. *x* 응용 프로그램 집합 *BufferLength* 를 SQL_SETPARAM_VALUE_MAX, ODBC 3.* x* 드라이버는 ODBC 1.0 응용 프로그램에서 호출 될 때 결정 하는 데 사용할 수 있습니다.  
+>  ODBC 1.0 응용 프로그램 호출 하는 경우 **SQLSetParam** ODBC 3에서. *x* 드라이버를 드라이버 관리자는이를 변환에 대 한 호출 **SQLBindParameter** 는 *BufferLength* 인수는 항상 SQL_SETPARAM_VALUE_MAX 합니다. 드라이버 관리자에서 오류가 반환 ODBC 3 때문에. *x* 응용 프로그램 집합 *BufferLength* 를 SQL_SETPARAM_VALUE_MAX, ODBC 3. *x* 드라이버는 ODBC 1.0 응용 프로그램에서 호출 될 때 결정 하는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  **SQLSetParam**, 응용 프로그램의 길이 지정 하는 방식으로 **ParameterValuePtr* 드라이버는 문자 또는 이진 데이터 및 응용 프로그램에서 보내는 방식으로 반환 될 수 있도록 버퍼는 배열 문자 또는 이진 매개 변수 값이 드라이버는 드라이버 별로 정의 됩니다.  
@@ -244,7 +244,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
   
 -   SQL_NULL_DATA 합니다. 매개 변수 값은 NULL입니다.  
   
--   SQL_DEFAULT_PARAM 합니다. 프로시저는 응용 프로그램에서 검색 하는 값 대신 매개 변수의 기본값을 사용 하는 것입니다. 이 값은 ODBC 정식 구문을에서 호출 하는 프로시저에만 유효 하 고 다음 경우에만 *InputOutputType* SQL_PARAM_INPUT 또는 SQL_PARAM_INPUT_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM 인수는 합니다. 때 \* *StrLen_or_IndPtr* SQL_DEFAULT_PARAM으로가 *ValueType*, *ParameterType*, *ColumnSize*, * DecimalDigits*, *BufferLength*, 및 *ParameterValuePtr* 인수에 대 한 입력된 매개 변수가 무시 되 고 입력에 대 한 출력 매개 변수 값을 정의 하는 데에 사용 됩니다 / 출력 매개 변수입니다.  
+-   SQL_DEFAULT_PARAM 합니다. 프로시저는 응용 프로그램에서 검색 하는 값 대신 매개 변수의 기본값을 사용 하는 것입니다. 이 값은 ODBC 정식 구문을에서 호출 하는 프로시저에만 유효 하 고 다음 경우에만 *InputOutputType* SQL_PARAM_INPUT 또는 SQL_PARAM_INPUT_OUTPUT, SQL_PARAM_INPUT_OUTPUT_STREAM 인수는 합니다. 때 \* *StrLen_or_IndPtr* SQL_DEFAULT_PARAM으로가 *ValueType*, *ParameterType*, *ColumnSize*,  *DecimalDigits*, *BufferLength*, 및 *ParameterValuePtr* 인수에 대 한 입력된 매개 변수가 무시 되 고 입력에 대 한 출력 매개 변수 값을 정의 하는 데에 사용 됩니다 / 출력 매개 변수입니다.  
   
 -   결과 SQL_LEN_DATA_AT_EXEC (*길이*) 매크로입니다. 매개 변수에 대 한 데이터 전송 **SQLPutData**합니다. 경우는 *ParameterType* 인수는 SQL_LONGVARBINARY, SQL_LONGVARCHAR 또는 long, 데이터 원본에 따른 특정 데이터 형식, 및 드라이버 반환 "Y" SQL_NEED_LONG_DATA_LEN 정보 유형에 대해에서 **SQLGetInfo**, *길이* ; 매개 변수에 대해 전달할 데이터의 바이트 수는 그렇지 않은 경우 *길이* 음수가 아닌 값 이어야 하며 무시 됩니다. 자세한 내용은 "전달 매개 변수 값"이이 섹션의 뒷부분에 나오는 참조 하십시오.  
   
@@ -297,7 +297,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
   
  호출 **SQLExecute** 또는 **SQLExecDirect** 문을 SQL_NEED_DATA 상태에 넣습니다. 이 시점에서 응용 프로그램 에서만 호출할 수 **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**, 또는 **SQLPutData** 문을 사용 하 여 또는 *연결 핸들* 문과 연결 된입니다. 함수 반환 SQLSTATE HY010 문이나 문과 연결 된 연결 된 다른 함수를 호출 하는 경우 (함수 시퀀스 오류). SQL_NEED_DATA 상태의 문 leaves **SQLParamData** 또는 **SQLPutData** 에서 오류를 반환 **SQLParamData** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 또는 문을 취소 됩니다.  
   
- 응용 프로그램을 호출 하는 경우 **SQLCancel** 드라이버 문 실행을 취소 하는 동안 드라이버 실행 시 데이터 매개 변수에 대 한 데이터를 여전히 필요 합니다; 응용 프로그램이 호출할 수 **SQLExecute** 또는 ** SQLExecDirect** 다시 합니다.  
+ 응용 프로그램을 호출 하는 경우 **SQLCancel** 드라이버 문 실행을 취소 하는 동안 드라이버 실행 시 데이터 매개 변수에 대 한 데이터를 여전히 필요 합니다; 응용 프로그램이 호출할 수 **SQLExecute** 또는  **SQLExecDirect** 다시 합니다.  
   
 ## <a name="retrieving-streamed-output-parameters"></a>스트리밍된 출력 매개 변수 검색  
  응용 프로그램 설정 하는 경우 *InputOutputType* SQL_PARAM_INPUT_OUTPUT_STREAM 또는 SQL_PARAM_OUTPUT_STREAM 출력 매개 변수 값은 하나 이상의 호출을 통해 검색 해야 **SQLGetData**합니다. 드라이버는 응용 프로그램에 반환할 스트리밍된 출력 매개 변수 값이 0이 반환 됩니다 SQL_PARAM_DATA_AVAILABLE 다음과 같은 기능에 대 한 호출에 대 한 응답에서: **SQLMoreResults**, **SQLExecute**, 및 **SQLExecDirect**합니다. 응용 프로그램이 호출 **SQLParamData** 사용할 수 있는 매개 변수 값을 확인 하려면.  
@@ -372,7 +372,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
  이 정보를 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오. "*ParameterValuePtr* 인수"이이 섹션의 뒷부분에 나오는 합니다. 매개 변수의 행 단위 바인딩에 대 한 자세한 내용은 참조는 [바인딩 배열의 매개 변수](../../../odbc/reference/develop-app/binding-arrays-of-parameters.md)합니다.  
   
 ## <a name="error-information"></a>오류 정보  
- 드라이버 (SQL_PARAM_ARRAY_ROW_COUNTS 옵션은 SQL_PARC_NO_BATCH 같음) 일괄 처리로 매개 변수 배열 구현 하지 않으면, 오류 상황이 하나의 문이 실행 된 경우 처럼 처리 됩니다. 드라이버가 일괄 처리로 매개 변수 배열을 구현 하는 경우 응용 프로그램의 SQL 문 또는 매개 변수 배열에 있는 매개 변수 발생 되는 매개 변수를 확인 하는 IPD의 SQL_DESC_ARRAY_STATUS_PTR 헤더 필드를 사용할 수 ** SQLExecDirect** 또는 **SQLExecute** 오류를 반환 합니다. 이 필드는 매개 변수 값의 각 행에 대 한 상태 정보를 포함합니다. 필드 나타나면 오류가 발생 했습니다 진단 데이터 구조의 필드에 실패 한 매개 변수 행 및 매개 변수 수가 표시 됩니다. 배열의 요소 수가 SQL_ATTR_PARAMSET_SIZE 문 특성에 의해 설정 될 수 있는 APD의 SQL_DESC_ARRAY_SIZE 헤더 필드에 따라 정의 됩니다.  
+ 드라이버 (SQL_PARAM_ARRAY_ROW_COUNTS 옵션은 SQL_PARC_NO_BATCH 같음) 일괄 처리로 매개 변수 배열 구현 하지 않으면, 오류 상황이 하나의 문이 실행 된 경우 처럼 처리 됩니다. 드라이버가 일괄 처리로 매개 변수 배열을 구현 하는 경우 응용 프로그램의 SQL 문 또는 매개 변수 배열에 있는 매개 변수 발생 되는 매개 변수를 확인 하는 IPD의 SQL_DESC_ARRAY_STATUS_PTR 헤더 필드를 사용할 수  **SQLExecDirect** 또는 **SQLExecute** 오류를 반환 합니다. 이 필드는 매개 변수 값의 각 행에 대 한 상태 정보를 포함합니다. 필드 나타나면 오류가 발생 했습니다 진단 데이터 구조의 필드에 실패 한 매개 변수 행 및 매개 변수 수가 표시 됩니다. 배열의 요소 수가 SQL_ATTR_PARAMSET_SIZE 문 특성에 의해 설정 될 수 있는 APD의 SQL_DESC_ARRAY_SIZE 헤더 필드에 따라 정의 됩니다.  
   
 > [!NOTE]  
 >  APD의 SQL_DESC_ARRAY_STATUS_PTR 헤더 필드 매개 변수를 무시 하도록 사용 됩니다. 매개 변수는 무시 하는 방법에 대 한 자세한 내용은 다음 섹션인 "매개 변수 집합을 무시 합니다."를 참조 하십시오.  
@@ -388,7 +388,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
  일부 단일 매개 변수 집합이 처리 발생할 후속 매개 변수 집합이의 처리를 중지 배열에. 다른 오류 후속 매개 변수 처리는 영향을 주지 않습니다. 기록할 오류 처리가 중지는 드라이버 정의입니다. 처리 중지 되지 않은 배열에 있는 모든 매개 변수 처리, SQL_SUCCESS_WITH_INFO가 반환 하는 오류의 결과로 하 고 SQL_ATTR_PARAMS_PROCESSED_PTR 정의한 버퍼 처리 하는 매개 변수 집합의 총 수로 설정 되어 (에 정의 된 대로 SQL_ATTR_PARAMSET_SIZE 문 특성), 오류 집합을 포함 하 합니다.  
   
 > [!CAUTION]  
->  ODBC의 매개 변수 배열 처리에서 오류가 발생 하는 경우은 다른 ODBC 3에서입니다. *x* 보다 ODBC 2.* x*합니다. Odbc 2. *x*, 함수 반환 상태가 중단 SQL_ERROR 및 처리 합니다. 가 가리키는 버퍼는 *pirow* 의 인수 **SQLParamOptions** 오류 행의 번호를 포함 합니다. Odbc 3. *x*, SQL_SUCCESS_WITH_INFO를 반환 하는 함수 및 중지 하거나 계속 하거나 년 5 월을 처리 합니다. 계속 해 서을 SQL_ATTR_PARAMS_PROCESSED_PTR로 지정 된 버퍼의 모든 매개 변수 처리를 수행 하면 오류가 발생 하는 것을 비롯 하 값으로 설정 됩니다. 동작의이 변경에는 기존 응용 프로그램에 문제가 발생할 수 있습니다.  
+>  ODBC의 매개 변수 배열 처리에서 오류가 발생 하는 경우은 다른 ODBC 3에서입니다. *x* 보다 ODBC 2. *x*합니다. Odbc 2. *x*, 함수 반환 상태가 중단 SQL_ERROR 및 처리 합니다. 가 가리키는 버퍼는 *pirow* 의 인수 **SQLParamOptions** 오류 행의 번호를 포함 합니다. Odbc 3. *x*, SQL_SUCCESS_WITH_INFO를 반환 하는 함수 및 중지 하거나 계속 하거나 년 5 월을 처리 합니다. 계속 해 서을 SQL_ATTR_PARAMS_PROCESSED_PTR로 지정 된 버퍼의 모든 매개 변수 처리를 수행 하면 오류가 발생 하는 것을 비롯 하 값으로 설정 됩니다. 동작의이 변경에는 기존 응용 프로그램에 문제가 발생할 수 있습니다.  
   
  때 **SQLExecute** 또는 **SQLExecDirect** 상태 배열에 포함 된 SQL_ERROR 또는 SQL_NEED_DATA가 반환 되는 경우와 같은 매개 변수 배열에서 모든 매개 변수 집합의 처리를 완료 하기 전에 반환 이미 처리 된 해당 매개 변수에 대 한 상태입니다. SQL_DESC_ROWS_PROCESSED_PTR 필드는 IPD의 가리키는 위치 SQL_ERROR 또는 SQL_NEED_DATA 오류 코드가 발생 하는 매개 변수 배열에서 행 번호를 포함 합니다. 상태 배열 값의 가용성은 드라이버 정의; SELECT 문에 매개 변수 배열의 보내면 결과 집합이 인출 또는 문이 실행 된 후 찾아볼 수 있습니다.  
   
@@ -472,7 +472,7 @@ L_PARAM_INPUT_OUTPUT_STREAM|SQL_LEN_DATA_AT_EXEC (*len*) 또는 SQL_DATA_AT_EXEC
  경우에 대 한 호출 **SQLBindParameter** 실패 APD의 설정한 것과 설명자 필드의 내용이 정의 하 고 APD의 SQL_DESC_COUNT 필드는 변경 되지 않습니다. 그리고 SQL_DESC_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE, 및 SQL_DESC_TYPE 필드는 IPD의 적절 한 레코드의 정의 되지 않습니다.는 IPD의 SQL_DESC_COUNT 필드는 변경 되지 않습니다.  
   
 ## <a name="conversion-of-calls-to-and-from-sqlsetparam"></a>SQLSetParam 간에서 호출의 변환  
- ODBC 1.0 응용 프로그램 호출 하는 경우 **SQLSetParam** ODBC 3에서.* x* 드라이버에서 ODBC 3.* x* 드라이버 관리자는 다음 표에 나와 있는 것 처럼 호출을 매핑합니다.  
+ ODBC 1.0 응용 프로그램 호출 하는 경우 **SQLSetParam** ODBC 3에서. *x* 드라이버에서 ODBC 3. *x* 드라이버 관리자는 다음 표에 나와 있는 것 처럼 호출을 매핑합니다.  
   
 |ODBC 1.0 응용 프로그램에 의해 호출|ODBC 3 호출 합니다. *x* 드라이버|  
 |----------------------------------|-------------------------------|  

@@ -74,7 +74,7 @@ SQLRETURN SQLSetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01 S 02|옵션 값이 변경 됨|드라이버에 지정 된 값을 지원 하지 않았습니다 *ValuePtr* 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY009|Null 포인터를 잘못 사용 했습니다.|특성 인수는 문자열 값을 필요한 환경 특성을 식별 및 *ValuePtr* 인수가 null 포인터입니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM)에 할당 된 연결 핸들 *EnvironmentHandle*합니다.<br /><br /> (DM) **SQL_ATTR_ODBC_VERSION** 으로 설정 되지 않은 **SQLSetEnvAttr** 및 *특성* 과 같지 않은 **SQL_ATTR_ODBC_VERSION**합니다. 설정할 필요가 없습니다 **SQL_ATTR_ODBC_VERSION** 사용 하는 경우에 명시적으로 **SQLAllocHandleStd**합니다.|  

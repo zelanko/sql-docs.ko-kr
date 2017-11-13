@@ -111,7 +111,7 @@ ms.lasthandoff: 09/09/2017
   
 -   **데이터 의존 (z)**: Java **문자열** 내부에 형식 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식은 다음 조건에 따라 다릅니다.: 드라이버 보냅니다는 **문자열** 값을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 필요할 경우, 변환을 수행 합니다. SendStringParametersAsUnicode 연결 속성이 true이 고 내부로 설정 되 면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 로 변환을 허용 하지 않는 **nvarchar** 를**이미지** sqlserverexception이 발생 하 고 있습니다. SendStringParametersAsUnicode가 false로 설정 되며 기본 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 데이터 형식이 **이미지**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 의 변환을 허용 **varchar** 를 **이미지**하며 예외를 throw 하지 않습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]대량 설정 변환을 수행 하 고 문제가 있는 경우 JDBC 드라이버에 오류를 전달 합니다. 클라이언트 쪽 변환은 예외 이며만의 경우에 수행 **날짜**, **시간**, **타임 스탬프**, **부울**, 및 ** 문자열** 값입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)]대량 설정 변환을 수행 하 고 문제가 있는 경우 JDBC 드라이버에 오류를 전달 합니다. 클라이언트 쪽 변환은 예외 이며만의 경우에 수행 **날짜**, **시간**, **타임 스탬프**, **부울**, 및  **문자열** 값입니다.  
   
  경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion_md.md)] 열 데이터 형식이 **XML**, 데이터 값은 올바른 이어야 합니다 **XML**합니다. setObject(byte[], SQLXML), setObject(inputStream, SQLXML) 또는 setObject(Blob, SQLXML) 메서드를 호출하는 경우 데이터 값은 XML 문자의 16진수 문자열 표현이어야 합니다. 예를 들어  
   

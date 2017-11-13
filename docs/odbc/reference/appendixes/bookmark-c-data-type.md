@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
  다음 표에서 값을 나열 *CType* 책갈피 C 데이터 형식에 대 한 책갈피 C 데이터 형식 및이 데이터의 정의 구현 하는 ODBC C 데이터 형식을 SQL에서 형식입니다. 8.  
   
 > [!NOTE]  
->  SQL_C_BOOKMARK 데이터 형식이 더 이상 사용 되지 않습니다. ODBC 3*.x* SQL_C_BOOKMARK 응용 프로그램을 사용 하지 않아야 합니다. ODBC 3*.x* 드라이버에서 ODBC 2를 사용 하려는 경우에 SQL_C_BOOKMARK를 지원 해야 합니다.* x* 을 사용 하는 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램이 ODBC 2와 작동 하는 경우의 SQL_C_VARBOOKMARK를 SQL_C_BOOKMARK 매핑합니다. *x* 드라이버입니다.  
+>  SQL_C_BOOKMARK 데이터 형식이 더 이상 사용 되지 않습니다. ODBC 3*.x* SQL_C_BOOKMARK 응용 프로그램을 사용 하지 않아야 합니다. ODBC 3*.x* 드라이버에서 ODBC 2를 사용 하려는 경우에 SQL_C_BOOKMARK를 지원 해야 합니다. *x* 을 사용 하는 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램이 ODBC 2와 작동 하는 경우의 SQL_C_VARBOOKMARK를 SQL_C_BOOKMARK 매핑합니다. *x* 드라이버입니다.  
   
 |C 형식 식별자|ODBC C typedef|C 형식|  
 |-----------------------|--------------------|------------|  

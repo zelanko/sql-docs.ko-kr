@@ -50,7 +50,7 @@ ms.lasthandoff: 09/09/2017
   
  고유한 기본 테이블을 찾을 수 없습니다 실행 시 오류가 발생 합니다.  
   
- 이러한 동적 속성 모두에 추가 되는 **레코드 집합** 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이 ** adUseClient**합니다.  
+ 이러한 동적 속성 모두에 추가 되는 **레코드 집합** 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때는 [앞](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이  **adUseClient**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  
  [레코드 집합 개체(ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

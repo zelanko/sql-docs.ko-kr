@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
   
 -   설정의 [앞 속성 (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 **adUseClient**합니다.  
   
--   사용 하는 처리기의 이름을 지정는 [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **처리기** 속성 또는 [Recordset 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) "개체의연결문자열** 처리기**= "키워드입니다. (처리기 설정할 수 없습니다는 **연결** 개체 연결 문자열입니다.)  
+-   사용 하는 처리기의 이름을 지정는 [DataControl 개체 (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) 개체의 **처리기** 속성 또는 [Recordset 개체 (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) "개체의연결문자열 **처리기**= "키워드입니다. (처리기 설정할 수 없습니다는 **연결** 개체 연결 문자열입니다.)  
   
  명명 된 서버에서 기본 처리기를 제공 하는 RDS **MSDFMAP 합니다. 처리기**합니다. (기본 사용자 지정 파일 MSDFMAP 이름은입니다. INI입니다.)  
   
@@ -71,7 +71,7 @@ Dim rs as New ADODB.Recordset
 rs.CursorLocation = adUseClient  
 ```  
   
- 지정 된 [처리기 속성 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) 속성 또는 키워드입니다;는 [공급자 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) 속성 또는 키워드입니다; 및 *CustomerById* 및 * CustomerDatabase* 식별자입니다. 다음 열은 **레코드 집합** 개체  
+ 지정 된 [처리기 속성 (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) 속성 또는 키워드입니다;는 [공급자 속성 (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) 속성 또는 키워드입니다; 및 *CustomerById* 및  *CustomerDatabase* 식별자입니다. 다음 열은 **레코드 집합** 개체  
   
  rs 합니다. "CustomerById(4)" 열기 "처리기 MSDFMAP = 합니다. 처리기;"& _  
   

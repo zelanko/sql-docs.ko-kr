@@ -62,7 +62,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
  이 메서드는 자동으로 추가 하지 않습니다는 **매개 변수** 개체는 **매개 변수** 의 컬렉션은 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 이렇게 하면 추가 하는 경우 ADO에서 해당 값은 유효성을 검사 하는 추가 속성을 설정할 수 있습니다는 **매개 변수** 개체 컬렉션입니다.  
   
- 가변 길이 데이터 형식에 지정 하는 경우는 *형식* 인수 중 하나를 전달 해야 합니다는 *크기* 인수 또는 설정은 [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md) 의 속성은 **매개 변수 ** 개체에 추가 하기 전에 **매개 변수** 컬렉션, 그렇지 않으면 오류가 발생 합니다.  
+ 가변 길이 데이터 형식에 지정 하는 경우는 *형식* 인수 중 하나를 전달 해야 합니다는 *크기* 인수 또는 설정은 [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md) 의 속성은 **매개 변수**  개체에 추가 하기 전에 **매개 변수** 컬렉션, 그렇지 않으면 오류가 발생 합니다.  
   
  숫자 데이터 형식을 지정 하면 (**adNumeric** 또는 **adDecimal**)에 *형식* 다음 인수를 설정 해야는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [정밀도](../../../ado/reference/ado-api/precision-property-ado.md) 속성입니다.  
   

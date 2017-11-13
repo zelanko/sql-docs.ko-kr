@@ -36,7 +36,7 @@ ADO에 대 한 Windows Foundation Class (ADO/WFC) ADO 이벤트 모델을 바탕
     }  
     ```  
   
-2.  처리기 개체를 나타내는 이벤트 처리기를 정의 합니다. 처리기 개체 데이터 형식 이어야 합니다 **ConnectEventHandler** 형식의 이벤트에 대 한 **ConnectionEvent**, 또는 데이터 형식 **RecordsetEventHandler** 형식의이벤트에대한** RecordsetEvent**합니다. 예를 들어 코드에 대 한 다음 프로그램 **ConnectComplete** 이벤트 처리기.  
+2.  처리기 개체를 나타내는 이벤트 처리기를 정의 합니다. 처리기 개체 데이터 형식 이어야 합니다 **ConnectEventHandler** 형식의 이벤트에 대 한 **ConnectionEvent**, 또는 데이터 형식 **RecordsetEventHandler** 형식의이벤트에대한 **RecordsetEvent**합니다. 예를 들어 코드에 대 한 다음 프로그램 **ConnectComplete** 이벤트 처리기.  
   
     ```  
     ConnectionEventHandler handler =   

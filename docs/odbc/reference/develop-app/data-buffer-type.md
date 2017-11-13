@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="data-buffer-type"></a>데이터 버퍼 종류
 버퍼의 C 데이터 형식은 응용 프로그램에 의해 지정 됩니다. 을 단일 변수로 경우가이 응용 프로그램 변수를 할당 합니다. 일반적인 메모리 사용-메모리 즉, void 형식의 포인터에서 가리키는-이 응용 프로그램 메모리를 특정 형식으로 캐스팅 때 발생 합니다. 드라이버는이 이와 같은 두 가지 방법으로 검색 됩니다.  
   
--   **데이터 버퍼 형식 인수입니다.** 연결 된 버퍼와 같은 매개 변수 값 및 결과 집합 데이터를 전송 하는 데 사용 하는 버퍼 *TargetValuePtr* 에 **SQLBindCol**, 일반적으로 등 연결 된 형식 인수에 포함 되어는 * TargetType* 인수 **SQLBindCol**합니다. 이 인수를 응용 프로그램 버퍼 형식에 해당 하는 C 형식 식별자를 전달 합니다. 예를 들어, 다음에 호출에서 **SQLBindCol**, SQL_C_TYPE_DATE 값 지시 드라이버 하는 *날짜* 버퍼가 SQL_DATE_STRUCT:  
+-   **데이터 버퍼 형식 인수입니다.** 연결 된 버퍼와 같은 매개 변수 값 및 결과 집합 데이터를 전송 하는 데 사용 하는 버퍼 *TargetValuePtr* 에 **SQLBindCol**, 일반적으로 등 연결 된 형식 인수에 포함 되어는  *TargetType* 인수 **SQLBindCol**합니다. 이 인수를 응용 프로그램 버퍼 형식에 해당 하는 C 형식 식별자를 전달 합니다. 예를 들어, 다음에 호출에서 **SQLBindCol**, SQL_C_TYPE_DATE 값 지시 드라이버 하는 *날짜* 버퍼가 SQL_DATE_STRUCT:  
   
     ```  
     SQL_DATE_STRUCT Date;  

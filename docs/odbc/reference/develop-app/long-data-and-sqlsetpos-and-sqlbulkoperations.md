@@ -34,7 +34,7 @@ ms.lasthandoff: 09/09/2017
 > [!NOTE]  
 >  응용 프로그램 실제로 수를 보낼 모든 종류의 데이터와 실행 시간에 **SQLPutData**문자 및 이진 데이터 부분에 보낼 수 있지만, 합니다. 그러나 데이터를 단일 버퍼로 수 있을 정도로 작고 경우 없기 일반적으로 사용할 이유가 없습니다 **SQLPutData**합니다. 훨씬 버퍼를 바인딩하고 버퍼에서 데이터를 검색 하는 드라이버를 사용 하는 것이 쉽습니다.  
   
- 응용 프로그램 호출 하기 전에 열을 바인딩해야 long 데이터가 열 일반적으로 바인딩되지, **SQLBulkOperations** 또는 **SQLSetPos** 호출한 후 바인딩 해제 **SQLBulkOperations ** 또는 **SQLSetPos**합니다. 때문에 열을 바인딩해야 **SQLBulkOperations** 또는 **SQLSetPos** 바인딩된 열에 대해서만 작동 하며 바인딩 해제 해야 있도록 **SQLGetData** 는 데이터를 검색 하는 데 사용할 수 열입니다.  
+ 응용 프로그램 호출 하기 전에 열을 바인딩해야 long 데이터가 열 일반적으로 바인딩되지, **SQLBulkOperations** 또는 **SQLSetPos** 호출한 후 바인딩 해제 **SQLBulkOperations**  또는 **SQLSetPos**합니다. 때문에 열을 바인딩해야 **SQLBulkOperations** 또는 **SQLSetPos** 바인딩된 열에 대해서만 작동 하며 바인딩 해제 해야 있도록 **SQLGetData** 는 데이터를 검색 하는 데 사용할 수 열입니다.  
   
  응용 프로그램 실행 시 데이터를 보내려면 다음을 수행 합니다.  
   

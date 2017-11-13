@@ -59,7 +59,7 @@ SQLRETURN SQLGetCursorName(
  경우 *m e* 이 NULL 이면 *NameLengthPtr* 문자 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는 버퍼에서 반환할 수 *M e*합니다.  
   
  *BufferLength*  
- [입력] 길이 \* *m e*, 문자 수입니다. 경우에 값 * \*m e* 는 유니코드 문자열 (호출할 때 **SQLGetCursorNameW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
+ [입력] 길이 \* *m e*, 문자 수입니다. 경우에 값  *\*m e* 는 유니코드 문자열 (호출할 때 **SQLGetCursorNameW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
   
  *NameLengthPtr*  
  [출력] 문자 (null 종결 문자 제외)의 총 수를 반환 하는 메모리에 대 한 포인터를 반환 하려면 사용 가능한 \* *m e*합니다. 반환할 수 있는 문자 수는 보다 크거나 같은 경우 *BufferLength*, 커서 이름 \* *m e* 잘립니다 *BufferLength*null 종결 문자 길이 뺀 값입니다.  
@@ -74,9 +74,9 @@ SQLRETURN SQLGetCursorName(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *m e* 충분히 커서 이름이 잘렸습니다 하므로 전체 커서 이름을 반환할 수 없습니다. 잘리지 않은 커서 이름의 길이가 반환 됩니다 **NameLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLGetCursorName** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때는 **SQLGetCursorName** 함수를 호출 했습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY015|커서 이름이 없습니다.|(DM) 드라이버는 ODBC 2는*.x* 드라이버 문에서 했습니다 열려 있는 커서 및 커서 이름이으로 설정 된 **SQLSetCursorName**합니다.|  
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.|  

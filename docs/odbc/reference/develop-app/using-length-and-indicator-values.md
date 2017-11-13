@@ -57,7 +57,7 @@ SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);
   
  다음과 같은 길이 길이/표시기 값으로 사용할 수 있습니다.  
   
--   *n*여기서 * n * > 0입니다.  
+-   *n*여기서  *n*  > 0입니다.  
   
 -   0.  
   

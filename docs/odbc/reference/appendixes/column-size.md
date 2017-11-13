@@ -56,7 +56,7 @@ ms.lasthandoff: 09/09/2017
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*여기서 *p* 전체 자릿수를 유도 하는 간격입니다. [ d]|  
 |SQL_GUID|36 (의 문자 수는 *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* 형식)|  
   
- [a]는 ODBC 1.0에 대 한 응용 프로그램 호출 **SQLSetParam** ODBC 2.0 드라이버에서 및 ODBC 2.0 응용 프로그램 호출에 대 한 **SQLBindParameter** 1.0 ODBC 드라이버에서 때 \* * StrLen_or_IndPtr* SQL_LONGVARCHAR 또는 SQL_LONGVARBINARY 유형에 대해 SQL_DATA_AT_EXEC은 *ColumnSize* 를 보낼 정밀도 하지이 테이블에 정의 된 데이터의 총 길이를 설정 해야 합니다.  
+ [a]는 ODBC 1.0에 대 한 응용 프로그램 호출 **SQLSetParam** ODBC 2.0 드라이버에서 및 ODBC 2.0 응용 프로그램 호출에 대 한 **SQLBindParameter** 1.0 ODBC 드라이버에서 때 \*  *StrLen_or_IndPtr* SQL_LONGVARCHAR 또는 SQL_LONGVARBINARY 유형에 대해 SQL_DATA_AT_EXEC은 *ColumnSize* 를 보낼 정밀도 하지이 테이블에 정의 된 데이터의 총 길이를 설정 해야 합니다.  
   
  [b] 드라이버 변수 형식에 대 한 열 또는 매개 변수 길이 확인할 수 없는 경우 SQL_NO_TOTAL을 반환 합니다.  
   

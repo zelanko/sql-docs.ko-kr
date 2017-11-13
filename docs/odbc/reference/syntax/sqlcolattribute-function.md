@@ -39,7 +39,7 @@ ms.lasthandoff: 09/09/2017
  **SQLColAttribute** 결과 집합의 열에 대 한 설명자 정보를 반환 합니다. 설명자 정보 문자열, 설명자 종속 값 또는 정수 값으로 반환 됩니다.  
   
 > [!NOTE]  
->  자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 때 ODBC 3이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 2.* x* 드라이버 참조 [이전 버전과 호환성의 응용 프로그램에 대 한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
+>  자세한 내용은 관리자에 대 한 어떤는 드라이버에 대 한 때 ODBC 3이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버 참조 [이전 버전과 호환성의 응용 프로그램에 대 한 대체 함수 매핑](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -73,7 +73,7 @@ SQLRETURN SQLColAttribute (
  경우 *CharacterAttributePtr* 이 NULL 이면 *StringLengthPtr* 여전히 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 버퍼에서 반환할 수 가 가리키는 *CharacterAttributePtr*합니다.  
   
  *BufferLength*  
- [입력] 경우 *FieldIdentifier* 은 ODBC 정의 된 필드 및 *CharacterAttributePtr* 문자열이 나 이진 버퍼를 가리키거나,이 인수 길이 여야 \* * CharacterAttributePtr*합니다. 경우 *FieldIdentifier* 은 ODBC 정의 된 필드 및 \* *CharacterAttribute*Ptr는 정수,이 필드는 무시 됩니다. 경우는 * \*CharacterAttributePtr* 는 유니코드 문자열 (호출할 때 **SQLColAttributeW**), *BufferLength* 인수 수는 짝수 여야 합니다. 경우 *FieldIdentifier* 드라이버에서 정의 된 필드는 응용 프로그램을 설정 하 여 드라이버 관리자에 필드의 특성을 나타내는 *BufferLength* 인수입니다. *BufferLength* 다음 값을 가질 수 있습니다.  
+ [입력] 경우 *FieldIdentifier* 은 ODBC 정의 된 필드 및 *CharacterAttributePtr* 문자열이 나 이진 버퍼를 가리키거나,이 인수 길이 여야 \*  *CharacterAttributePtr*합니다. 경우 *FieldIdentifier* 은 ODBC 정의 된 필드 및 \* *CharacterAttribute*Ptr는 정수,이 필드는 무시 됩니다. 경우는  *\*CharacterAttributePtr* 는 유니코드 문자열 (호출할 때 **SQLColAttributeW**), *BufferLength* 인수 수는 짝수 여야 합니다. 경우 *FieldIdentifier* 드라이버에서 정의 된 필드는 응용 프로그램을 설정 하 여 드라이버 관리자에 필드의 특성을 나타내는 *BufferLength* 인수입니다. *BufferLength* 다음 값을 가질 수 있습니다.  
   
 -   경우 *CharacterAttributePtr* 포인터에 대 한 포인터 *BufferLength* SQL_IS_POINTER 값이 있어야 합니다.  
   
@@ -86,7 +86,7 @@ SQLRETURN SQLColAttribute (
  *StringLengthPtr*  
  [출력] 바이트 (문자 데이터에 대 한 null 종료 바이트 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용할 수 있는 **CharacterAttributePtr*합니다.  
   
- 문자 데이터를 반환할 수 있는 바이트 수 보다 크거나 같은 경우에 대 한 *BufferLength*에서 설명자 정보 \* *CharacterAttributePtr* 잘립니다* BufferLength* null 종결 문자 길이 만큼 뺀 길이로 고 드라이버에서 null로 종료 합니다.  
+ 문자 데이터를 반환할 수 있는 바이트 수 보다 크거나 같은 경우에 대 한 *BufferLength*에서 설명자 정보 \* *CharacterAttributePtr* 잘립니다 *BufferLength* null 종결 문자 길이 만큼 뺀 길이로 고 드라이버에서 null로 종료 합니다.  
   
  다른 모든 유형의 데이터를 값에 대 한 *BufferLength* 는 무시 됩니다 드라이버의 크기를 가정 하 고 **CharacterAttributePtr* 은 32 비트입니다.  
   
@@ -108,9 +108,9 @@ SQLRETURN SQLColAttribute (
 |HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagField** 진단 데이터의 구조에는 오류와 원인을 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY008|작업이 취소 됨|비동기 처리를 사용 하도록 설정할는 *StatementHandle*합니다. 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle*합니다. 함수에서 다시 호출 된 후의 *StatementHandle*합니다.<br /><br /> 함수를 호출 하 고, 실행을 완료 하기 전에 **SQLCancel** 또는 **SQLCancelHandle** 에서 호출 된는 *StatementHandle* 의 서로 다른 스레드에서 다중 스레드 응용 프로그램입니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. SQLColAttribute가 호출 될 때이 aynchronous 함수 계속 실행 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 함수가 호출 하기 전에 호출 된 **SQLPrepare**, **SQLExecDirect**, 또는 대 한 카탈로그 함수는 *StatementHandle*합니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. SQLColAttribute가 호출 될 때이 aynchronous 함수 계속 실행 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> (DM) 함수가 호출 하기 전에 호출 된 **SQLPrepare**, **SQLExecDirect**, 또는 대 한 카탈로그 함수는 *StatementHandle*합니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수 (하지이 하나)에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) * \*CharacterAttributePtr* , 문자열 및 *BufferLength* 같지 않음 SQL_NTS 하지만 0 보다 작습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)  *\*CharacterAttributePtr* , 문자열 및 *BufferLength* 같지 않음 SQL_NTS 하지만 0 보다 작습니다.|  
 |HY091|잘못 된 설명자 필드 식별자입니다.|인수에 대해 지정 된 값 *FieldIdentifier* 를 정의 된 값 중 하나가 없어서 구현에서 정의 된 값이 아닙니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYC00|드라이버를 사용할 수 없습니다.|인수에 대해 지정 된 값 *FieldIdentifier* 드라이버에서 지원 하지 않았습니다.|  
@@ -126,7 +126,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="comments"></a>설명  
  응용 프로그램에서 반환 된 정보를 사용 하는 방법에 대 한 내용은 **SQLColAttribute**, 참조 [결과 집합 메타 데이터](../../../odbc/reference/develop-app/result-set-metadata.md)합니다.  
   
- **SQLColAttribute** 하거나 정보를 반환에 \* *NumericAttributePtr* 또는 \* *CharacterAttributePtr*합니다. 정수 정보에 반환 됩니다 \* *NumericAttributePtr* SQLLEN 값으로 정보의 다른 모든 형식에 반환될지 \* *CharacterAttributePtr*합니다. 정보에 반환 될 때 \* *NumericAttributePtr*, 무시 *CharacterAttributePtr*, *BufferLength*, 및 * StringLengthPtr*합니다. 정보에 반환 될 때 \* *CharacterAttributePtr*, 무시 *NumericAttributePtr*합니다.  
+ **SQLColAttribute** 하거나 정보를 반환에 \* *NumericAttributePtr* 또는 \* *CharacterAttributePtr*합니다. 정수 정보에 반환 됩니다 \* *NumericAttributePtr* SQLLEN 값으로 정보의 다른 모든 형식에 반환될지 \* *CharacterAttributePtr*합니다. 정보에 반환 될 때 \* *NumericAttributePtr*, 무시 *CharacterAttributePtr*, *BufferLength*, 및  *StringLengthPtr*합니다. 정보에 반환 될 때 \* *CharacterAttributePtr*, 무시 *NumericAttributePtr*합니다.  
   
  **SQLColAttribute** IRD의 설명자 필드에서 값을 반환 합니다. 설명자 핸들을 검색 하지 않고 문 핸들으로 함수가 호출 됩니다. 반환 값 **SQLColAttribute** 에 대 한는 *FieldIdentifier* 호출 하 여이 섹션의 뒷부분에 나열 된 값을 검색할 수도 있습니다 **SQLGetDescField** 으로 적절 한 IRD 핸들입니다.  
   
@@ -135,20 +135,20 @@ SQLRETURN SQLColAttribute (
  ODBC 3입니다. *x* 드라이버의 각 설명자 필드에 대 한 값을 반환 해야 합니다. 설명자 필드는 드라이버 또는 데이터 원본에 적용 되지 않으며 따로 명시 하지 않는 드라이버에서 0을 반환 하는 경우 \* *StringLengthPtr* 에 빈 문자열 또는 **CharacterAttributePtr*합니다.  
   
 ## <a name="backward-compatibility"></a>이전 버전과의 호환성  
- ODBC 3입니다. *x* 함수 **SQLColAttribute** 대체 사용 되지 않는 ODBC 2.* x* 함수 **SQLColAttributes**합니다. 매핑할 때 **SQLColAttributes** 를 **SQLColAttribute** (때 ODBC 2.* x* 응용 프로그램이 작동 ODBC 3.* x* 드라이버), 또는 매핑을 **SQLColAttribute** 를 **SQLColAttributes** (때 ODBC 3.* x* 응용 프로그램이 작동 ODBC 2.* x* 드라이버), 드라이버 관리자의 값을 통과 *FieldIdentifier* 다음과 같은 오류를 반환 하거나, 새 값에 매핑됩니다.  
+ ODBC 3입니다. *x* 함수 **SQLColAttribute** 대체 사용 되지 않는 ODBC 2. *x* 함수 **SQLColAttributes**합니다. 매핑할 때 **SQLColAttributes** 를 **SQLColAttribute** (때 ODBC 2. *x* 응용 프로그램이 작동 ODBC 3. *x* 드라이버), 또는 매핑을 **SQLColAttribute** 를 **SQLColAttributes** (때 ODBC 3. *x* 응용 프로그램이 작동 ODBC 2. *x* 드라이버), 드라이버 관리자의 값을 통과 *FieldIdentifier* 다음과 같은 오류를 반환 하거나, 새 값에 매핑됩니다.  
   
 > [!NOTE]  
->  사용 되는 접두사 *FieldIdentifier* 값 ODBC 3에서.* x* 에 사용 되는 ODBC 2에서에서 변경 되었습니다.* x*합니다. 새 접두사는 "SQL_DESC"; 이전 접두사 "SQL_COLUMN" 했습니다.  
+>  사용 되는 접두사 *FieldIdentifier* 값 ODBC 3에서. *x* 에 사용 되는 ODBC 2에서에서 변경 되었습니다. *x*합니다. 새 접두사는 "SQL_DESC"; 이전 접두사 "SQL_COLUMN" 했습니다.  
   
--   경우는 **#define** 값이 ODBC 2.* x* *FieldIdentifier* 동일는 **#define** 값 ODBC 3.* x* *FieldIdentifier*, 함수 호출에 값 전달 됩니다.  
+-   경우는 **#define** 값이 ODBC 2. *x* *FieldIdentifier* 동일는 **#define** 값 ODBC 3. *x* *FieldIdentifier*, 함수 호출에 값 전달 됩니다.  
   
--   **#define** 값 ODBC 2.* x* *FieldIdentifiers* SQL_COLUMN_LENGTH, SQL_COLUMN_PRECISION, 및 SQL_COLUMN_SCALE 다릅니다는 **#define** 값 ODBC 3.* x* *FieldIdentifiers* SQL_DESC_PRECISION, SQL_DESC_SCALE, 및 SQL_DESC_LENGTH 합니다. ODBC 2입니다. *x* 드라이버는 ODBC 2를 지원만 필요 합니다.* x* 값입니다. ODBC 3입니다. *x* 드라이버가 세이 가지에 대 한 "SQL_COLUMN" 및 "SQL_DESC" 값 모두를 지원 해야 *FieldIdentifiers*합니다. 전체 자릿수, 소수 자릿수 및 길이 ODBC 3에서는 다르게 정의 되기 때문에 이러한 값 서로 다릅니다. *x* 보다 ODBC 2.* x*합니다. 자세한 내용은 참조 [열 크기, 10 진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)합니다.  
+-   **#define** 값 ODBC 2. *x* *FieldIdentifiers* SQL_COLUMN_LENGTH, SQL_COLUMN_PRECISION, 및 SQL_COLUMN_SCALE 다릅니다는 **#define** 값 ODBC 3. *x* *FieldIdentifiers* SQL_DESC_PRECISION, SQL_DESC_SCALE, 및 SQL_DESC_LENGTH 합니다. ODBC 2입니다. *x* 드라이버는 ODBC 2를 지원만 필요 합니다. *x* 값입니다. ODBC 3입니다. *x* 드라이버가 세이 가지에 대 한 "SQL_COLUMN" 및 "SQL_DESC" 값 모두를 지원 해야 *FieldIdentifiers*합니다. 전체 자릿수, 소수 자릿수 및 길이 ODBC 3에서는 다르게 정의 되기 때문에 이러한 값 서로 다릅니다. *x* 보다 ODBC 2. *x*합니다. 자세한 내용은 참조 [열 크기, 10 진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md)합니다.  
   
--   경우는 **#define** 값이 ODBC 2.* x* *FieldIdentifier* 간에 차이가 있는 **#define** 값 ODBC 3.* x* *FieldIdentifier*, 이름, 개수와 마찬가지로 발생 및 null 허용 값, 함수 호출에서 값은 해당 값에 매핑됩니다. 예를 들어 SQL_COLUMN_COUNT 매핑됩니다 SQL_DESC_COUNT, 매핑 방향에 따라 SQL_DESC_COUNT SQL_COLUMN_COUNT에 매핑됩니다.  
+-   경우는 **#define** 값이 ODBC 2. *x* *FieldIdentifier* 간에 차이가 있는 **#define** 값 ODBC 3. *x* *FieldIdentifier*, 이름, 개수와 마찬가지로 발생 및 null 허용 값, 함수 호출에서 값은 해당 값에 매핑됩니다. 예를 들어 SQL_COLUMN_COUNT 매핑됩니다 SQL_DESC_COUNT, 매핑 방향에 따라 SQL_DESC_COUNT SQL_COLUMN_COUNT에 매핑됩니다.  
   
--   경우 *FieldIdentifier* 새 값인 ODBC 3에서.* x*에 있는 값이 없습니다. 해당 ODBC 2에서.* x*때 ODBC 3 매핑할 수 있습니다.* x* 응용 프로그램에 대 한 호출에 사용 **SQLColAttribute** ODBC 2에서.* x* 드라이버 및 호출에서 SQLSTATE HY091를 반환 합니다 (잘못 된 설명자 필드 식별자)입니다.  
+-   경우 *FieldIdentifier* 새 값인 ODBC 3에서. *x*에 있는 값이 없습니다. 해당 ODBC 2에서. *x*때 ODBC 3 매핑할 수 있습니다. *x* 응용 프로그램에 대 한 호출에 사용 **SQLColAttribute** ODBC 2에서. *x* 드라이버 및 호출에서 SQLSTATE HY091를 반환 합니다 (잘못 된 설명자 필드 식별자)입니다.  
   
- 다음 표에서 의해 반환 된 설명자 형식 **SQLColAttribute**합니다. 에 대 한 형식 *NumericAttributePtr* 값은 **SQLLEN \* **합니다.  
+ 다음 표에서 의해 반환 된 설명자 형식 **SQLColAttribute**합니다. 에 대 한 형식 *NumericAttributePtr* 값은 **SQLLEN \*** 합니다.  
   
 |*FieldIdentifier*|정보<br /><br /> 반환|Description|  
 |-----------------------|---------------------------------|-----------------|  
@@ -175,7 +175,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_SCHEMA_NAME (ODBC 2.0)|*CharacterAttributePtr*|열이 포함 된 테이블의 스키마입니다. 반환 되는 값은 구현에서 정의 된 열이 식 또는 열이 보기의 일부입니다. 데이터 원본에서 스키마를 지원 하지 않거나 스키마 이름을 확인할 수 없는, 빈 문자열이 반환 됩니다. 이 VARCHAR 레코드 필드 128 자로 제한 됩니다.|  
 |SQL_DESC_SEARCHABLE (ODBC 1.0)|*NumericAttributePtr*|SQL_PRED_NONE WHERE 절에 열을 사용할 수 없는 경우. (이 ODBC 2에서 SQL_UNSEARCHABLE 값과 동일 합니다. *x*.)<br /><br /> 열을 사용 하는 WHERE 절에 있지만 LIKE 조건자에만 SQL_PRED_CHAR 합니다. (이 ODBC 2에서 SQL_LIKE_ONLY 값과 동일 합니다. *x*.)<br /><br /> SQL_PRED_BASIC 비슷한 제외 하 고 모든 비교 연산자가 있는 WHERE 절에 열을 사용할 수 있는 경우. (이 ODBC 2에서 SQL_EXCEPT_LIKE 값과 동일 합니다. *x*.)<br /><br /> SQL_PRED_SEARCHABLE 모든 비교 연산자와 함께 WHERE 절에 열을 사용할 수 있는 경우.<br /><br /> 열에는 일반적으로 반환 SQL_PRED_CHAR SQL_LONGVARBINARY 및 SQL_LONGVARCHAR 입력합니다.|  
 |SQL_DESC_TABLE_NAME (ODBC 2.0)|*CharacterAttributePtr*|열을 포함하는 테이블의 이름입니다. 반환 되는 값은 구현에서 정의 된 열이 식 또는 열이 보기의 일부입니다.<br /><br /> 테이블 이름을 확인할 수 없으면 빈 문자열이 반환 됩니다.|  
-|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL 데이터 형식을 지정 하는 숫자 값입니다.<br /><br /> 때 *ColumnNumber* 같으면 0으로 SQL_BINARY 가변 길이 책갈피에 대 한 반환 되 고 SQL_INTEGER 고정 길이의 책갈피에 대 한 반환 됩니다.<br /><br /> 이 필드는 날짜/시간 및 간격 데이터 형식에 대 한 자세한 데이터 형식 반환: SQL_DATETIME 또는 sql_interval 인 합니다. (자세한 내용은 참조 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_TYPE 레코드 필드에서 반환 됩니다. **참고:** ODBC 2에 대해 작동 하도록 합니다.* x* 드라이버, SQL_DESC_CONCISE_TYPE를 대신 사용 합니다.|  
+|SQL_DESC_TYPE (ODBC 3.0)|*NumericAttributePtr*|SQL 데이터 형식을 지정 하는 숫자 값입니다.<br /><br /> 때 *ColumnNumber* 같으면 0으로 SQL_BINARY 가변 길이 책갈피에 대 한 반환 되 고 SQL_INTEGER 고정 길이의 책갈피에 대 한 반환 됩니다.<br /><br /> 이 필드는 날짜/시간 및 간격 데이터 형식에 대 한 자세한 데이터 형식 반환: SQL_DATETIME 또는 sql_interval 인 합니다. (자세한 내용은 참조 [데이터 형식 식별자 및 설명자](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) 부록 d: 데이터 형식에서입니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_TYPE 레코드 필드에서 반환 됩니다. **참고:** ODBC 2에 대해 작동 하도록 합니다. *x* 드라이버, SQL_DESC_CONCISE_TYPE를 대신 사용 합니다.|  
 |SQL_DESC_TYPE_NAME (ODBC 1.0)|*CharacterAttributePtr*|데이터 소스에 따라 다릅니다 데이터 형식 이름입니다. 예를 들어 "CHAR", "VARCHAR", "MONEY", "LONG VARBINARY" 또는 "CHAR () FOR BIT DATA"입니다.<br /><br /> 종류를 알 수 없는 경우 빈 문자열이 반환 됩니다.|  
 |SQL_DESC_UNNAMED (ODBC 3.0)|*NumericAttributePtr*|SQL_NAMED 또는 하면 합니다. IRD의 SQL_DESC_NAME 필드 열 별칭 또는 열 이름이 있으면 SQL_NAMED 반환 됩니다. 열 이름 또는 열 별칭 없을 하면 반환 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_UNNAMED 레코드 필드에서 반환 됩니다.|  
 |SQL_DESC_UNSIGNED (ODBC 1.0)|*NumericAttributePtr*|Sql_true는 해당 열이 서명 되지 않은 (또는 숫자가 아닌).<br /><br /> 열을 서명 하는 경우 SQL_FALSE입니다.|  

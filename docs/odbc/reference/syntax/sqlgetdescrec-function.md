@@ -66,7 +66,7 @@ SQLRETURN SQLGetDescRec(
  *이름*  
  [출력] 설명자 레코드에 대 한 SQL_DESC_NAME 필드를 반환 하는 버퍼에 대 한 포인터입니다.  
   
- 경우 *이름* 이 NULL 이면 *StringLengthPtr* 는 문자 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에반환하는사용할수* 이름*합니다.  
+ 경우 *이름* 이 NULL 이면 *StringLengthPtr* 는 문자 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에반환하는사용할수 *이름*합니다.  
   
  *BufferLength*  
  [입력] 길이 **이름* 문자에서 버퍼입니다.  
@@ -108,10 +108,10 @@ SQLRETURN SQLGetDescRec(
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *이름* 충분히 전체 설명자 필드를 반환할 수 없습니다. 따라서 필드가 잘렸습니다. 잘리지 않은 설명자 필드의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07009|잘못 된 설명자 인덱스입니다.|*FieldIdentifier* 레코드 필드에 인수가 *RecNumber* 인수는 0으로 설정 된 및 *DescriptorHandle* IPD 핸들 되었습니다.<br /><br /> DM ()는 *RecNumber* 인수가 0으로 설정 되어 있고 SQL_ATTR_USE_BOOKMARKS 문 특성 SQL_UB_OFF로 설정 되었다면 및 *DescriptorHandle* IRD 핸들 되었습니다.<br /><br /> *RecNumber* 인수가 0 보다 작습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY007|관련 된 문이 준비 되지 않았습니다.|*DescriptorHandle* IRD, 연관 된 및 관련 된 문 핸들이 준비 또는 실행 된 상태가 아닙니다.|  
-|HY010|함수 시퀀스 오류입니다.|(DM) *DescriptorHandle* 연결 된 한 *StatementHandle* 는, 비동기적으로 실행 중인 (하지이 하나)를 호출한 함수와이 함수가 호출 될 때 계속 실행에 대 한 합니다.<br /><br /> (DM) *DescriptorHandle* 연결 된 한 *StatementHandle* 를 **SQLExecute**, **SQLExecDirect**, ** SQLBulkOperations**, 또는 **SQLSetPos** 호출 했으나 SQL_NEED_DATA를 반환 했습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *DescriptorHandle*합니다. 이 비동기 함수 계속 실행 될 때 **SQLGetDescRec** 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|(DM) *DescriptorHandle* 연결 된 한 *StatementHandle* 는, 비동기적으로 실행 중인 (하지이 하나)를 호출한 함수와이 함수가 호출 될 때 계속 실행에 대 한 합니다.<br /><br /> (DM) *DescriptorHandle* 연결 된 한 *StatementHandle* 를 **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, 또는 **SQLSetPos** 호출 했으나 SQL_NEED_DATA를 반환 했습니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *DescriptorHandle*합니다. 이 비동기 함수 계속 실행 될 때 **SQLGetDescRec** 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYT01|연결 제한 시간이 만료 되었습니다.|데이터 소스는 요청에 응답 하기 전에 연결 제한 시간에 만료 되었습니다. 연결 제한 시간을 통해 설정 됩니다 **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT 합니다.|  

@@ -81,7 +81,7 @@ SQLRETURN SQLFreeHandle(
   
 |SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|DM ()는 *HandleType* 인수 SQL_HANDLE_ENV, 한 연결이 하나 이상 할당 또는 연결 된 상태 였습니다. **SQLDisconnect** 및 **SQLFreeHandle** 와 *HandleType* sql_handle_dbc 라는의 호출 하기 전에 각 연결에 대해 호출 되어야 합니다 **SQLFreeHandle** 와 *HandleType* SQL_HANDLE_ENV입니다.<br /><br /> DM ()는 *HandleType* 인수 sql_handle_dbc 라는, 였으며 함수가 호출 하기 전에 호출 된 **SQLDisconnect** 연결에 대 한 합니다.<br /><br /> DM ()는 *HandleType* sql_handle_dbc 라는 되었습니다. 비동기적으로 실행 중인 함수를 호출 했습니다 *처리* 함수를 호출 되었을 때 여전히 실행 하 고 있습니다.<br /><br /> DM ()는 *HandleType* 여 되었습니다. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 문 핸들을 사용 하 여 호출 였으며 SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.<br /><br /> DM ()는 *HandleType* 여 되었습니다. 문 핸들에서 또는 관련 된 연결 핸들에 대 한 비동기적으로 실행 중인 함수가 호출 된 하 고이 함수를 호출할 때 함수 계속 실행 합니다.<br /><br /> DM ()는 *HandleType* SQL_HANDLE_DESC 되었습니다. 관련된 연결 핸들에서 비동기적으로 실행 중인 함수 호출 된 및이 함수를 호출할 때 함수 계속 실행 합니다.<br /><br /> (DM) 모든 자회사 핸들 및 기타 리소스가 릴리스되지 않았기 전에 **SQLFreeHandle** 호출 되었습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한는 *처리* 및 *HandleType* 여로 설정 된 또는 SQL_HANDLE_DESC SQL_PARAM_DATA_AVAILABLE를 반환 합니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|*HandleType* 인수 여 되었거나 SQL_HANDLE_DESC, 및 기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
@@ -106,7 +106,7 @@ SQLRETURN SQLFreeHandle(
  자세한 내용은 참조 [연결 핸들](../../../odbc/reference/develop-app/connection-handles.md) 및 [데이터 원본이 나 드라이버에서 연결 끊기](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md)합니다.  
   
 ## <a name="freeing-a-statement-handle"></a>문 핸들 해제  
- 에 대 한 호출 **SQLFreeHandle** 와 *HandleType* 여의에 대 한 호출에 의해 할당 된 모든 리소스를 해제 **SQLAllocHandle** 와 * HandleType* 여입니다. 응용 프로그램 호출 하는 경우 **SQLFreeHandle** 보류 중인 결과 있는 문으로 확보 하기 위해 보류 중인 결과가 삭제 됩니다. 문 핸들을 해제 하는 응용 프로그램, 드라이버는 핸들과 관련 된 4 개의 자동으로 할당 된 설명자를 해제 합니다. 자세한 내용은 참조 [문은 처리](../../../odbc/reference/develop-app/statement-handles.md) 및 [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)합니다.  
+ 에 대 한 호출 **SQLFreeHandle** 와 *HandleType* 여의에 대 한 호출에 의해 할당 된 모든 리소스를 해제 **SQLAllocHandle** 와  *HandleType* 여입니다. 응용 프로그램 호출 하는 경우 **SQLFreeHandle** 보류 중인 결과 있는 문으로 확보 하기 위해 보류 중인 결과가 삭제 됩니다. 문 핸들을 해제 하는 응용 프로그램, 드라이버는 핸들과 관련 된 4 개의 자동으로 할당 된 설명자를 해제 합니다. 자세한 내용은 참조 [문은 처리](../../../odbc/reference/develop-app/statement-handles.md) 및 [문 핸들 해제](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md)합니다.  
   
  다음에 유의 **SQLDisconnect** 자동으로 연결에서 모든 문 및 설명자 열기를 삭제 합니다.  
   

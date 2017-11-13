@@ -27,7 +27,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="scalar-function-calls"></a>스칼라 함수 호출
 스칼라 함수는 각 행에 대 한 값을 반환합니다. 예를 들어 절대 값의 스칼라 함수는 숫자 열을 인수로 사용 하 고 열에 각 값의 절대값을 반환 합니다. 스칼라 함수를 호출 하기 위한 이스케이프 시퀀스는  
   
- **{fn***스칼라 함수* **}  **  
+ **{fn***스칼라 함수* **}**   
   
  여기서 *스칼라 함수* 에 나열 된 함수 중 하나인 [부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)합니다. 스칼라 함수 이스케이프 시퀀스에 대 한 자세한 내용은 참조 [스칼라 함수 이스케이프 시퀀스](../../../odbc/reference/appendixes/scalar-function-escape-sequence.md) 부록 c: SQL 문법에 있습니다.  
   

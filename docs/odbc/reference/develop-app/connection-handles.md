@@ -38,7 +38,7 @@ A *연결* 드라이버 및 데이터 원본으로 구성 됩니다. 연결 핸�
   
  ODBC는 드라이버가 지 원하는 경우 여러 개의 동시 연결을 방해 되지는 않습니다. 따라서 특정 한 ODBC 환경에서 다양 한 드라이버와 같은 드라이버를 데이터 원본 및 데이터 원본 또는 데이터 원본 및 동일한 드라이버에 여러 연결에도 다양 한 여러 연결 핸들 가리킬 수 있습니다. 일부 드라이버 지 원하는; 활성 연결 수를 제한 합니다. 옵션에 SQL_MAX_DRIVER_CONNECTIONS **SQLGetInfo** 특정 드라이버에서 지 원하는 활성 연결 수를 지정 합니다.  
   
- 연결 핸들을 데이터 원본에 연결할 때 주로 사용 됩니다 (**SQLConnect**, **SQLDriverConnect**, 또는 **SQLBrowseConnect**) 연결을 끊고 데이터에서 원본 (**SQLDisconnect**), 드라이버 및 데이터 원본에 대 한 정보 가져오기 (**SQLGetInfo**), 진단 검색 (**SQLGetDiagField** 및 **SQLGetDiagRec**), 트랜잭션 수행 하 고 (**SQLEndTran**). 설정 하 고 연결 특성을 가져오는 경우도 사용 됩니다 (**SQLSetConnectAttr** 및 **SQLGetConnectAttr**) 및 SQL 문의 네이티브 형식 가져올 때 (**SQLNativeSql **).  
+ 연결 핸들을 데이터 원본에 연결할 때 주로 사용 됩니다 (**SQLConnect**, **SQLDriverConnect**, 또는 **SQLBrowseConnect**) 연결을 끊고 데이터에서 원본 (**SQLDisconnect**), 드라이버 및 데이터 원본에 대 한 정보 가져오기 (**SQLGetInfo**), 진단 검색 (**SQLGetDiagField** 및 **SQLGetDiagRec**), 트랜잭션 수행 하 고 (**SQLEndTran**). 설정 하 고 연결 특성을 가져오는 경우도 사용 됩니다 (**SQLSetConnectAttr** 및 **SQLGetConnectAttr**) 및 SQL 문의 네이티브 형식 가져올 때 (**SQLNativeSql** ).  
   
  사용 하 여 연결 핸들 할당은 **SQLAllocHandle** 로 해제 및 **SQLFreeHandle**합니다.
 

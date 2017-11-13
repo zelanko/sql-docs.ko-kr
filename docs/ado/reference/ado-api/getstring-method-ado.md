@@ -43,7 +43,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### <a name="parameters"></a>매개 변수  
  *StringFormat*  
- A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) 값을 지정 하는 방법을 **레코드 집합** 문자열로 변환 해야 합니다. *RowDelimiter*, *ColumnDelimiter*, 및 *NullExpr* 매개 변수 에서만 사용 되는 *StringFormat* 의 ** adClipString**합니다.  
+ A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) 값을 지정 하는 방법을 **레코드 집합** 문자열로 변환 해야 합니다. *RowDelimiter*, *ColumnDelimiter*, 및 *NullExpr* 매개 변수 에서만 사용 되는 *StringFormat* 의  **adClipString**합니다.  
   
  *NumRows*  
  (선택 사항) 식을 변환할 수는 행 개수는 **레코드 집합**합니다. 경우 *NumRows* 를 지정 하지 않으면에 있는 행의 총 개수 보다 큰 경우 또는 **레코드 집합**, 다음의 모든 행은 **레코드 집합** 변환 됩니다.  

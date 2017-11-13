@@ -43,7 +43,7 @@ ms.lasthandoff: 09/09/2017
   
 6.  호출 **SQLFetch** 또는 **SQLFetchScroll** 한 번 이상 나타나는 결과 집합을 스크롤할 수 있습니다.  
   
- 응용 프로그램 행 집합 버퍼에 데이터 값을 변경할 수 있습니다. 커서 라이브러리 캐시에서 데이터를 사용 하 여 행 집합 버퍼를 새로 고치려면 응용 프로그램이 호출 **SQLFetchScroll** 와 *FetchOrientation* 인수 SQL_FETCH_RELATIVE로 설정 및 * FetchOffset* 인수는 0으로 설정 합니다.  
+ 응용 프로그램 행 집합 버퍼에 데이터 값을 변경할 수 있습니다. 커서 라이브러리 캐시에서 데이터를 사용 하 여 행 집합 버퍼를 새로 고치려면 응용 프로그램이 호출 **SQLFetchScroll** 와 *FetchOrientation* 인수 SQL_FETCH_RELATIVE로 설정 및  *FetchOffset* 인수는 0으로 설정 합니다.  
   
  바인딩되지 않은 열을 호출 하 여 응용 프로그램에서 데이터를 검색할 **SQLSetPos** 에 원하는 행에 커서를 배치 합니다. 그런 다음 연속 호출 **SQLGetData** 데이터를 검색 합니다.  
   

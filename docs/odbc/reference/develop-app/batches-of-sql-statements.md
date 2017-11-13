@@ -53,7 +53,7 @@ SQL 문의 일괄 처리는 그룹 두 개 이상의 SQL 문 또는 두 개 이�
           WHERE CustID = @CustomerID AND Status = 'OPEN'  
     ```  
   
-     **CREATE PROCEDURE** 자체 문은 일괄 처리 SQL 문의 아닙니다. 그러나 생성 하는 절차는 SQL 문의 일괄 처리 합니다. 세미콜론 두 **선택** 문 때문에 **CREATE PROCEDURE** 문을 특정 SQL Server에 적용 되며 SQL Server는 에서여러문을구분하려면세미콜론을사용하지않아도** CREATE PROCEDURE** 문.  
+     **CREATE PROCEDURE** 자체 문은 일괄 처리 SQL 문의 아닙니다. 그러나 생성 하는 절차는 SQL 문의 일괄 처리 합니다. 세미콜론 두 **선택** 문 때문에 **CREATE PROCEDURE** 문을 특정 SQL Server에 적용 되며 SQL Server는 에서여러문을구분하려면세미콜론을사용하지않아도 **CREATE PROCEDURE** 문.  
   
 -   **매개 변수 배열을** 대량 작업을 수행 하는 효과적인 방법으로 매개 변수가 있는 SQL 문을 사용 하 여 매개 변수 배열을 사용할 수 있습니다. 예를 들어 매개 변수 배열을 사용 하 여 다음 **삽입** 문을 단일 SQL 문만 실행 하는 동안 줄 테이블에 여러 행을 삽입할 수 있습니다.  
   

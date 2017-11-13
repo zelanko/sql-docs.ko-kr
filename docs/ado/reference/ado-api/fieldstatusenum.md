@@ -30,7 +30,7 @@ ms.lasthandoff: 09/09/2017
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 지정 된 [상태](../../../ado/reference/ado-api/status-property-ado-field.md) 의 [Field 개체](../../../ado/reference/ado-api/field-object.md)합니다.  
   
- **adFieldPending\* ** 값 나타냅니다 작업을 설정할 수 상태 발생 한 다른 상태 값과 결합 될 수 있습니다.  
+ **adFieldPending\***  값 나타냅니다 작업을 설정할 수 상태 발생 한 다른 상태 값과 결합 될 수 있습니다.  
   
 |상수|값|Description|  
 |--------------|-----------|-----------------|  

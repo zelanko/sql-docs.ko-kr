@@ -60,13 +60,13 @@ SQLRETURN SQLGetEnvAttr(
  *ValuePtr*  
  [출력] 에 의해 지정 된 특성의 현재 값을 버퍼에 대 한 포인터 *특성*합니다.  
   
- 경우 *ValuePtr* 이 NULL 이면 *StringLengthPtr* 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에서반환할수* ValuePtr*합니다.  
+ 경우 *ValuePtr* 이 NULL 이면 *StringLengthPtr* 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에서반환할수 *ValuePtr*합니다.  
   
  *BufferLength*  
- [입력] 경우 *ValuePtr* 문자열을 가리키는이 인수 길이 여야 \* *ValuePtr*합니다. 경우 \* *ValuePtr* 정수 이면 *BufferLength* 는 무시 됩니다. 경우 * \*ValuePtr* 는 유니코드 문자열 (호출할 때 **SQLGetEnvAttrW**), *BufferLength* 인수 수는 짝수 여야 합니다. 특성 값이 문자열이 없으면 *BufferLength* 는 사용 되지 않습니다.  
+ [입력] 경우 *ValuePtr* 문자열을 가리키는이 인수 길이 여야 \* *ValuePtr*합니다. 경우 \* *ValuePtr* 정수 이면 *BufferLength* 는 무시 됩니다. 경우  *\*ValuePtr* 는 유니코드 문자열 (호출할 때 **SQLGetEnvAttrW**), *BufferLength* 인수 수는 짝수 여야 합니다. 특성 값이 문자열이 없으면 *BufferLength* 는 사용 되지 않습니다.  
   
  *StringLengthPtr*  
- [출력] 바이트 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 * \*ValuePtr*합니다. 경우 *ValuePtr* 가 null 포인터 이면 길이가 반환 됩니다. 특성 값은 문자열 및 반환할 수 있는 바이트 수는 보다 크거나 경우 *BufferLength*, 데이터에 \* *ValuePtr* 잘립니다 * BufferLength* null 종결 문자 길이 만큼 뺀 길이로 고 드라이버에서 null로 종료 합니다.  
+ [출력] 바이트 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한  *\*ValuePtr*합니다. 경우 *ValuePtr* 가 null 포인터 이면 길이가 반환 됩니다. 특성 값은 문자열 및 반환할 수 있는 바이트 수는 보다 크거나 경우 *BufferLength*, 데이터에 \* *ValuePtr* 잘립니다  *BufferLength* null 종결 문자 길이 만큼 뺀 길이로 고 드라이버에서 null로 종료 합니다.  
   
 ## <a name="returns"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
@@ -78,7 +78,7 @@ SQLRETURN SQLGetEnvAttr(
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|반환 되는 데이터 \* *ValuePtr* 되도록 잘렸습니다 *BufferLength* null 종결 문자가 뺀 값입니다. 잘리지 않은 문자열 값의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) **SQL_ATTR_ODBC_VERSION** 통해 아직 설정 되지 않은 **SQLSetEnvAttr**합니다. 설정할 필요가 없습니다 **SQL_ATTR_ODBC_VERSION** 사용 하는 경우에 명시적으로 **SQLAllocHandleStd**합니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  

@@ -89,7 +89,7 @@ Microsoft JDBC Driver 4.2를 사용 하 여 (또는 경우를 줄이려면) SQL 
  주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 **ApplicationIntent=ReadOnly**가 포함되어 있으면 연결이 실패합니다.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>데이터베이스 미러링에서 다중 서브넷 클러스터를 사용하도록 업그레이드  
- 업그레이드 하는 경우는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 제거 해야 하는 다중 서브넷 시나리오에 데이터베이스 미러링을 사용 중인 응용 프로그램의 **failoverPartner** 연결 속성이로 바꿉니다 **multiSubnetFailover ** 로 설정 **true** 가용성 그룹 수신기를 연결 문자열에서 서버 이름을 바꿉니다. 연결 문자열을 사용 하는 경우 **failoverPartner** 및 **multiSubnetFailover = true**, 드라이버에서 오류가 발생 합니다. 그러나 연결 문자열을 사용 하는 경우 **failoverPartner** 및 **multiSubnetFailover = false** (또는 **ApplicationIntent = ReadWrite**), 응용 프로그램에서는 데이터베이스를 사용 합니다. 미러링입니다.  
+ 업그레이드 하는 경우는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 제거 해야 하는 다중 서브넷 시나리오에 데이터베이스 미러링을 사용 중인 응용 프로그램의 **failoverPartner** 연결 속성이로 바꿉니다 **multiSubnetFailover**  로 설정 **true** 가용성 그룹 수신기를 연결 문자열에서 서버 이름을 바꿉니다. 연결 문자열을 사용 하는 경우 **failoverPartner** 및 **multiSubnetFailover = true**, 드라이버에서 오류가 발생 합니다. 그러나 연결 문자열을 사용 하는 경우 **failoverPartner** 및 **multiSubnetFailover = false** (또는 **ApplicationIntent = ReadWrite**), 응용 프로그램에서는 데이터베이스를 사용 합니다. 미러링입니다.  
   
  드라이버는 AG의 주 데이터베이스에서 데이터베이스 미러링이 사용 되 고 오류가 반환 됩니다 **multiSubnetFailover = true** 대신 가용성 그룹에 주 데이터베이스에 연결 하는 연결 문자열에 사용 됩니다 수신기 수 있습니다.  
   

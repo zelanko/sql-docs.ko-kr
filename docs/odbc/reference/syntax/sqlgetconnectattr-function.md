@@ -63,23 +63,23 @@ SQLRETURN SQLGetConnectAttr(
  *ValuePtr*  
  [출력] 메모리에 의해 지정 된 특성의 현재 값을 반환에 대 한 포인터 *특성*합니다. 정수 형식 특성에 대 한 일부 드라이버 수만 하위 32 비트 쓰거나 16 비트 버퍼 및 연결 해제의 상위 비트 변경 되지 않습니다. 따라서 응용 프로그램 SQLULEN의 버퍼를 사용 하 고이 함수를 호출 하기 전에 값을 0으로 초기화 해야 합니다.  
   
- 경우 *ValuePtr* 이 NULL 이면 *StringLengthPtr* 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에서반환할수* ValuePtr*합니다.  
+ 경우 *ValuePtr* 이 NULL 이면 *StringLengthPtr* 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는버퍼에서반환할수 *ValuePtr*합니다.  
   
  *BufferLength*  
- [입력] 경우 *특성* 은 ODBC 정의 된 특성 및 *ValuePtr* 문자열 또는 이진 버퍼를 가리키거나,이 인수 길이 여야 \* *ValuePtr*. 경우 *특성* 은 ODBC 정의 된 특성 및 \* *ValuePtr* 정수 이면 *BufferLength* 는 무시 됩니다. 경우에 값 * \*ValuePtr* 는 유니코드 문자열 (호출할 때 **SQLGetConnectAttrW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
+ [입력] 경우 *특성* 은 ODBC 정의 된 특성 및 *ValuePtr* 문자열 또는 이진 버퍼를 가리키거나,이 인수 길이 여야 \* *ValuePtr*. 경우 *특성* 은 ODBC 정의 된 특성 및 \* *ValuePtr* 정수 이면 *BufferLength* 는 무시 됩니다. 경우에 값  *\*ValuePtr* 는 유니코드 문자열 (호출할 때 **SQLGetConnectAttrW**), *BufferLength* 인수 수는 짝수 여야 합니다.  
   
  경우 *특성* 드라이버에서 정의 된 특성은 응용 프로그램을 설정 하 여 드라이버 관리자 특성의 특성을 나타내는 *BufferLength* 인수입니다. *BufferLength* 다음 값을 가질 수 있습니다.  
   
--   경우 * \*ValuePtr* 문자 문자열에 대 한 포인터 *BufferLength* 문자열의 길이입니다.  
+-   경우  *\*ValuePtr* 문자 문자열에 대 한 포인터 *BufferLength* 문자열의 길이입니다.  
   
--   경우 * \*ValuePtr* 이진 버퍼를 교차 하는 응용 프로그램 위치에 대 한 포인터는 SQL_LEN_BINARY_ATTR의 결과입니다 (*길이*) 매크로에서 *BufferLength*합니다. 이렇게 하면 배치에 음수 값 *BufferLength*합니다.  
+-   경우  *\*ValuePtr* 이진 버퍼를 교차 하는 응용 프로그램 위치에 대 한 포인터는 SQL_LEN_BINARY_ATTR의 결과입니다 (*길이*) 매크로에서 *BufferLength*합니다. 이렇게 하면 배치에 음수 값 *BufferLength*합니다.  
   
--   경우 * \*ValuePtr* 문자열이 나 이진 문자열 이외의 값에 대 한 포인터 *BufferLength* SQL_IS_POINTER 값이 있어야 합니다.  
+-   경우  *\*ValuePtr* 문자열이 나 이진 문자열 이외의 값에 대 한 포인터 *BufferLength* SQL_IS_POINTER 값이 있어야 합니다.  
   
--   경우 * \*ValuePtr* 고정 길이 데이터 형식이 들어 *BufferLength* 되었거나 SQL_IS_INTEGER SQL_IS_UINTEGER를 적절 하 게 합니다.  
+-   경우  *\*ValuePtr* 고정 길이 데이터 형식이 들어 *BufferLength* 되었거나 SQL_IS_INTEGER SQL_IS_UINTEGER를 적절 하 게 합니다.  
   
  *StringLengthPtr*  
- [출력] 바이트 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *ValuePtr*합니다. 경우 \* *ValuePtr* 가 null 포인터 이면 길이가 반환 됩니다. 특성 값은 문자열 및 반환할 수 있는 바이트 수는 보다 큰 경우 *BufferLength* 데이터에 null 종결 문자의 길이 만큼 뺀 길이로 * \*ValuePtr*잘립니다 *BufferLength* null 종결 문자의 길이 만큼 뺀 길이로 고 드라이버에서 null로 종료 합니다.  
+ [출력] 바이트 (null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 \* *ValuePtr*합니다. 경우 \* *ValuePtr* 가 null 포인터 이면 길이가 반환 됩니다. 특성 값은 문자열 및 반환할 수 있는 바이트 수는 보다 큰 경우 *BufferLength* 데이터에 null 종결 문자의 길이 만큼 뺀 길이로  *\*ValuePtr*잘립니다 *BufferLength* null 종결 문자의 길이 만큼 뺀 길이로 고 드라이버에서 null로 종료 합니다.  
   
 ## <a name="returns"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
@@ -97,7 +97,7 @@ SQLRETURN SQLGetConnectAttr(
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) **SQLBrowseConnect** 에 대 한 호출 된는 *ConnectionHandle* SQL_NEED_DATA를 반환 합니다. 이 함수를 호출 **SQLBrowseConnect** SQL_SUCCESS_WITH_INFO 또는 관계 없이 SQL_SUCCESS를 반환 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *ConnectionHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM) * \*ValuePtr* 문자열을이 고 BufferLength를 0 보다 작지만 SQL_NTS 같지 않습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|(DM)  *\*ValuePtr* 문자열을이 고 BufferLength를 0 보다 작지만 SQL_NTS 같지 않습니다.|  
 |HY092|잘못 된 특성/옵션 식별자|인수에 대해 지정 된 값 *특성* ODBC 드라이버에서 지 원하는 버전에 대해 올바르지 않습니다.|  
 |HY114|드라이버가 연결 수준의 비동기 함수 실행을 지원 하지 않습니다.|(DM) 응용 프로그램 SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE 사용 하 여 비동기 연결 작업을 지원 하지 않는 드라이버에 대 한 비동기 함수 실행을 사용 하도록 설정 하려고 합니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
@@ -114,7 +114,7 @@ SQLRETURN SQLGetConnectAttr(
   
  경우 *특성* SQL_ATTR_ 추적 또는 SQL_ATTR_ TRACEFILE *ConnectionHandle* 유효 하지 않아도 및 **SQLGetConnectAttr** SQL_ 또는 SQL_ERROR를 반환 하지 것입니다 INVALID_HANDLE 경우 *ConnectionHandle* 올바르지 않습니다. 이러한 특성은 모든 연결에 적용 됩니다. **SQLGetConnectAttr** 다른 인수가 유효 하지 않을 경우 SQL_ERROR 또는 SQL_INVALID_HANDLE 반환 합니다.  
   
- 응용 프로그램 사용 하 여 문 특성을 설정할 수 있지만 **SQLSetConnectAttr**, 응용 프로그램을 사용할 수 없습니다 **SQLGetConnectAttr** 문 특성을 검색 하려면 값, 호출 해야 ** SQLGetStmtAttr** 문 특성 설정을 검색할 수 있습니다.  
+ 응용 프로그램 사용 하 여 문 특성을 설정할 수 있지만 **SQLSetConnectAttr**, 응용 프로그램을 사용할 수 없습니다 **SQLGetConnectAttr** 문 특성을 검색 하려면 값, 호출 해야  **SQLGetStmtAttr** 문 특성 설정을 검색할 수 있습니다.  
   
  연결 특성 SQL_ATTR_CONNECTION_DEAD와 SQL_ATTR_AUTO_IPD에 대 한 호출에서 반환할 수 **SQLGetConnectAttr** 를 호출 하 여 설정할 수 없습니다 **SQLSetConnectAttr**합니다.  
   

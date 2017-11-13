@@ -37,13 +37,13 @@ ms.lasthandoff: 09/09/2017
   
  다음 표에서 ODBC SQL에서 지원 되는 변환은 데이터 형식을 ODBC C 데이터 형식에를 보여 줍니다. 채워진된 원이 나타냅니다 SQL 데이터 형식에 대 한 기본 변환 (C 데이터 형식에 데이터 변환할 때의 값 *TargetType* SQL_C_DEFAULT는). 흰색 원 변환이 지원된를 나타냅니다.  
   
- ODBC 3에 대 한*.x* 응용 프로그램을 사용 하는 ODBC 2.* x* 드라이버, 드라이버 관련 데이터 형식이 지원 되지 않는 변환 합니다.  
+ ODBC 3에 대 한*.x* 응용 프로그램을 사용 하는 ODBC 2. *x* 드라이버, 드라이버 관련 데이터 형식이 지원 되지 않는 변환 합니다.  
   
  변환된 된 데이터의 형식은 Windows® 국가 설정에 의해 영향을 받지 않습니다.  
   
  다음 섹션의 표에서 드라이버나 데이터 원본 변환 하는 과정은 데이터 소스에서 검색 된 데이터에 설명 드라이버가 지 원하는 ODBC SQL 데이터 유형 으로부터의 모든 ODBC C 데이터 형식 변환을 지 원하는 데 필요 합니다. 테이블의 첫 번째 열을 지정된 된 ODBC SQL 데이터 형식에 대 한 법적 입력된 값을 나열 합니다는 *TargetType* 인수 **SQLBindCol** 및 **SQLGetData**합니다. 두 번째 열에서 자주 사용 하는 테스트의 결과 나열는 *BufferLength* 인수에 지정 된 **SQLBindCol** 또는 **SQLGetData**, 드라이버를 수행 하는 데이터를 변환할 수 있는지 여부를 결정 합니다. 각 결과 대 한 세 번째 및 네 번째 열 목록으로 지정 된 버퍼에 배치 하는 값은 *TargetValuePtr* 및 *StrLen_or_IndPtr* 에 지정 된 인수가 **SQLBindCol** 또는 **SQLGetData** 후 드라이버는 데이터를 변환 하려고 했습니다. (의 *StrLen_or_IndPtr* 인수는 카드가의 SQL_DESC_OCTET_LENGTH_PTR 필드에 해당 합니다.) 마지막 열을 나열 하 여 각 결과 대해 반환 된 SQLSTATE **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData**합니다.  
   
- 경우는 *TargetType* 인수 **SQLBindCol** 또는 **SQLGetData** 지정된 된 ODBC SQL 데이터 형식에 대 한 테이블에 표시 되지는 ODBC C 데이터 형식에 대 한 식별자가 포함 된 ** SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** SQLSTATE 07006 반환 (제한 된 데이터 형식 특성 위반). 경우는 *TargetType* 인수 지정 드라이버별 SQL 데이터 형식에서 ODBC C 데이터 형식으로 변환 하는 식별자가 포함 되며 드라이버에 의해이 변환은 지원 되지 않습니다 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** SQLSTATE HYC00 반환 (선택적 기능이 구현 되지 않음).  
+ 경우는 *TargetType* 인수 **SQLBindCol** 또는 **SQLGetData** 지정된 된 ODBC SQL 데이터 형식에 대 한 테이블에 표시 되지는 ODBC C 데이터 형식에 대 한 식별자가 포함 된  **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** SQLSTATE 07006 반환 (제한 된 데이터 형식 특성 위반). 경우는 *TargetType* 인수 지정 드라이버별 SQL 데이터 형식에서 ODBC C 데이터 형식으로 변환 하는 식별자가 포함 되며 드라이버에 의해이 변환은 지원 되지 않습니다 **SQLFetch**, **SQLFetchScroll**, 또는 **SQLGetData** SQLSTATE HYC00 반환 (선택적 기능이 구현 되지 않음).  
   
  드라이버에 의해 지정 된 버퍼 SQL_NULL_DATA 테이블에 표시 되지 않는 있지만 반환 하는 *StrLen_or_IndPtr* 인수 SQL 데이터 값이 NULL입니다. 에 대 한 설명은 사용 *StrLen_or_IndPtr* 검색 데이터를 여러 번 호출 하면 참조는 [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)함수 설명 합니다. 문자 수에 반환 되는 SQL 데이터를 C 문자 데이터로 변환 되 면 \* *StrLen_or_IndPtr* null 종료 바이트를 포함 하지 않습니다. 경우 *TargetValuePtr* null 포인터가 **SQLGetData** SQLSTATE HY009 반환 (null 포인터를 잘못 사용), **SQLBindCol**,이 열을 바인딩 해제 합니다.  
   

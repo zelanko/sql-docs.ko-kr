@@ -66,7 +66,7 @@ SQLRETURN SQLCancelHandle(
 |SQLSTATE|오류|Description|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 인수에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 인수에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|와 관련 된 문 핸들 중 하나에 대해 비동기적으로 실행 중인 문을 관련 함수를 호출한는 *처리*, 및 *HandleType* SQL_HANDLE_DBC로 설정 되었습니다. 비동기 함수 계속 실행 될 때 **SQLCancelHandle** 호출 되었습니다.<br /><br /> DM ()는 *HandleType* 인수 여; 관련된 연결 핸들에서 비동기적으로 실행 중인 함수 호출 된 였으며이 함수를 호출할 때 함수 계속 실행 합니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 와 관련 된 문 핸들 중 하나에 대해 호출한는 *처리* 및 *HandleType* 를 SQL_HANDLE_DBC로 설정 하 고 SQL_PARAM_DATA_AVAILABLE 반환 되었습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> **SQLBrowseConnect** 위해 호출 된 *ConnectionHandle*, SQL_NEED_DATA를 반환 합니다. 이 함수는 검색 프로세스를 완료 하기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  

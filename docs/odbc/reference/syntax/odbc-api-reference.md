@@ -46,7 +46,7 @@ ms.lasthandoff: 09/09/2017
   
 -   관련 된 기능에 대 한 참조  
   
- 표준 CLI 규칙 수준에서 다음 중 하나일 수 있습니다: 92 ISO, Open Group, ODBC 또는 사용 되지 않습니다. Open Group ISO 92의 순수 상위 집합 이므로 ISO 92 –와 호환 되는 또한 Open Group 버전 1에 나타나는 태그를 지정 하는 함수입니다. Open 그룹 규격으로 태그가 지정 된 함수 ODBC 3에도 나타납니다. *x*때문에 ODBC 3.* x* Open Group 버전 1의 순수 상위 집합입니다. ODBC 호환으로 태그를 지정 하는 함수는 모두 표준에 나타납니다. 사용 중단으로 태그가 지정 된 함수에서에서 사용 되지 ODBC 3. *x*합니다.  
+ 표준 CLI 규칙 수준에서 다음 중 하나일 수 있습니다: 92 ISO, Open Group, ODBC 또는 사용 되지 않습니다. Open Group ISO 92의 순수 상위 집합 이므로 ISO 92 –와 호환 되는 또한 Open Group 버전 1에 나타나는 태그를 지정 하는 함수입니다. Open 그룹 규격으로 태그가 지정 된 함수 ODBC 3에도 나타납니다. *x*때문에 ODBC 3. *x* Open Group 버전 1의 순수 상위 집합입니다. ODBC 호환으로 태그를 지정 하는 함수는 모두 표준에 나타납니다. 사용 중단으로 태그가 지정 된 함수에서에서 사용 되지 ODBC 3. *x*합니다.  
   
  진단 정보 처리에 설명 된 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명 합니다. SQLSTATE 값과 연결 된 텍스트 조건에 대 한 설명을 제공 포함 되었지만 특정 텍스트를 지시할 위한 용도가 아닙니다.  
   

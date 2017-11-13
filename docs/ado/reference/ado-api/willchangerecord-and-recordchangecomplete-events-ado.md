@@ -58,7 +58,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  때 **RecordChangeComplete** 은 호출,이 매개 변수 설정 **adStatusOK** 이벤트를 발생 시킨 작업에 성공 하면 또는 **adStatusErrorsOccurred** 경우 작업에 실패 했습니다.  
   
- 하기 전에 **WillChangeRecord** 반환 되 면이 매개 변수를 설정 **adStatusCancel** 이 이벤트를 발생 시킨 또는이 매개 변수를 설정 하는 작업의 취소 요청에 ** adStatusUnwantedEvent** 알림 메시지가 방지 하기 위해 합니다.  
+ 하기 전에 **WillChangeRecord** 반환 되 면이 매개 변수를 설정 **adStatusCancel** 이 이벤트를 발생 시킨 또는이 매개 변수를 설정 하는 작업의 취소 요청에  **adStatusUnwantedEvent** 알림 메시지가 방지 하기 위해 합니다.  
   
  하기 전에 **RecordChangeComplete** 반환 되 면이 매개 변수를 설정 **adStatusUnwantedEvent** 알림 메시지가 방지 하기 위해 합니다.  
   

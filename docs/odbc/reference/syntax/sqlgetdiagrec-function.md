@@ -90,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
  [입력] 길이 **MessageText* 문자 단위의 버퍼입니다. 진단 메시지 텍스트의 최대 길이 없음 있습니다.  
   
  *TextLengthPtr*  
- [출력] 문자 (null 종결 문자에 대 한 필요한 문자 수는 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한 * \*MessageText*합니다. 반환할 수 있는 문자 개수 보다 큰 경우 *BufferLength*, 진단 메시지 텍스트에 * \*MessageText* 잘립니다 *BufferLength* null 종결 문자 길이 뺀 값입니다.  
+ [출력] 문자 (null 종결 문자에 대 한 필요한 문자 수는 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용 가능한  *\*MessageText*합니다. 반환할 수 있는 문자 개수 보다 큰 경우 *BufferLength*, 진단 메시지 텍스트에  *\*MessageText* 잘립니다 *BufferLength* null 종결 문자 길이 뺀 값입니다.  
   
 ## <a name="returns"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  

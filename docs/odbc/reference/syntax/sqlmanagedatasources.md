@@ -54,7 +54,7 @@ BOOL SQLManageDataSources(
  **SQLManageDataSources** 경우 FALSE를 반환 합니다. *hwnd* 은 유효한 창 핸들이 아닙니다. 그렇지 않으면 TRUE를 반환합니다.  
   
 ## <a name="diagnostics"></a>진단  
- 때 **SQLManageDataSources** 관련 FALSE를 반환 * \*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에 * \*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
+ 때 **SQLManageDataSources** 관련 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 **SQLInstallerError**합니다. 다음 표에  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 컨텍스트에서이 함수를 각각에 설명 합니다.  
   
 |*\*pfErrorCode*|오류|Description|  
 |---------------------|-----------|-----------------|  

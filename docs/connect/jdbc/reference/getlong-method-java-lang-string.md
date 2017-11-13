@@ -53,7 +53,7 @@ public long getLong(java.lang.String sCol)
 ## <a name="remarks"></a>주의  
  이 getLong 메서드는 java.sql.CallableStatement 인터페이스의 getLong 메서드에 의해 지정 됩니다.  
   
- 이 메서드는의 경우에 지원 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 와 같이 정수 값 반환할 안전 하 게 수 있는 데이터 형식을 **bigint**, **int**, **smallint**, **tinyint **, 및 **비트**합니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는의 경우에 지원 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion_md.md)] 와 같이 정수 값 반환할 안전 하 게 수 있는 데이터 형식을 **bigint**, **int**, **smallint**, **tinyint** , 및 **비트**합니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [getLong 메서드 &#40; SQLServerCallableStatement &#41;](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)   

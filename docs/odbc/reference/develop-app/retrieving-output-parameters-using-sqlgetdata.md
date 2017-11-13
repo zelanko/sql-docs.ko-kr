@@ -34,7 +34,7 @@ ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사�
  이 기능은 ODBC 3.8 응용 프로그램에서 사용할 수 있습니다 또는 ODBC를 다시 컴파일될 3.x 및 ODBC 2.x 응용 프로그램 및 이러한 응용 프로그램에 검색 하는 동안 출력 매개 변수를 사용 하 여 지원 되는 ODBC 3.8 드라이버가 있어야 **SQLGetData** 및 ODBC 3.8 드라이버 관리자입니다. ODBC의 새로운 기능을 사용 하도록 이전 응용 프로그램을 사용 하도록 설정 하는 방법에 대 한 정보를 참조 하십시오. [호환성 매트릭스](../../../odbc/reference/develop-app/compatibility-matrix.md)합니다.  
   
 ## <a name="usage-example"></a>사용 예  
- 예를 들어 저장된 프로시저를 실행 하는 것이 좋습니다 **{호출 sp_f(?,?)} **, 여기서 SQL_PARAM_OUTPUT_STREAM, 두 매개 변수에 바인딩된 및 없는 결과 집합을 반환 하는 저장된 프로시저 (이 항목의 뒷부분에 있습니다. 더 복잡 한 시나리오):  
+ 예를 들어 저장된 프로시저를 실행 하는 것이 좋습니다 **{호출 sp_f(?,?)}** , 여기서 SQL_PARAM_OUTPUT_STREAM, 두 매개 변수에 바인딩된 및 없는 결과 집합을 반환 하는 저장된 프로시저 (이 항목의 뒷부분에 있습니다. 더 복잡 한 시나리오):  
   
 1.  각 매개 변수에 대 한 호출 **SQLBindParameter** 와 *InputOutputType* SQL_PARAM_OUTPUT_STREAM로 설정 하 고 *ParameterValuePtr* 매개 변수 번호를 비롯 한 토큰으로 설정 데이터에 대 한 포인터 또는 입력된 매개 변수를 바인딩할 응용 프로그램을 사용 하는 구조에 대 한 포인터입니다. 이 예제에서는 토큰으로 서 수 매개 변수를 사용 합니다.  
   
@@ -64,7 +64,7 @@ ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사�
   
  처리할 SQL_PARAM_INPUT_OUTPUT_STREAM 매개 변수가 **SQLExecute** 또는 **SQLExecDirect** 먼저 SQL_NEED_DATA를 반환 합니다. 응용 프로그램에서 호출할 수 **SQLParamData** 및 **SQLPutData** 디지털 오디오 매개 변수 데이터를 보내려고 합니다. 모든 디지털 오디오 입력된 매개 변수를 처리 하는 경우 **SQLParamData** SQL_PARAM_DATA_AVAILABLE 스트리밍된 출력 매개 변수를 나타내는 반환 합니다.  
   
- 출력 매개 변수 및 바인딩된 출력 매개 변수 처리 스트리밍되는 기 하는 경우 드라이버는 출력 매개 변수를 처리 하는 것에 대 한 순서를 결정 합니다. 따라서 출력 매개 변수 버퍼에 바인딩된 경우 (의 **SQLBindParameter** 매개 변수 *InputOutputType* SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT로 설정), 버퍼 될때까지구성될수없습니다** SQLParamData** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 응용 프로그램에 바인딩된 읽어야 후에 버퍼 **SQLParamData** 처리 SQL_SUCCESS 또는 출력 매개 변수 모두 스트리밍되는 SQL_SUCCESS_WITH_INFO를 반환 합니다.  
+ 출력 매개 변수 및 바인딩된 출력 매개 변수 처리 스트리밍되는 기 하는 경우 드라이버는 출력 매개 변수를 처리 하는 것에 대 한 순서를 결정 합니다. 따라서 출력 매개 변수 버퍼에 바인딩된 경우 (의 **SQLBindParameter** 매개 변수 *InputOutputType* SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT로 설정), 버퍼 될때까지구성될수없습니다 **SQLParamData** SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 응용 프로그램에 바인딩된 읽어야 후에 버퍼 **SQLParamData** 처리 SQL_SUCCESS 또는 출력 매개 변수 모두 스트리밍되는 SQL_SUCCESS_WITH_INFO를 반환 합니다.  
   
  데이터 소스는 경고 및 결과 집합, 또한 스트리밍된 출력 매개 변수를 반환할 수 있습니다. 일반적으로 경고 및 결과 집합이 개별적으로 처리 되는 스트림된 출력 매개 변수에서 호출 하 여 **SQLMoreResults**합니다. 프로세스 경고 및 결과 집합의 스트리밍된 출력 매개 변수를 처리 하기 전에 합니다.  
   

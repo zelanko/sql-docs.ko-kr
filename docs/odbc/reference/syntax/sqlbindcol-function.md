@@ -123,10 +123,10 @@ SQLRETURN SQLBindCol(
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성 위반|DM ()는 *ColumnNumber* 되었습니다. 0, 인수 및 *TargetType* 인수 되지 않았거나 SQL_C_BOOKMARK SQL_C_VARBOOKMARK 합니다.|  
 |07009|잘못 된 설명자 인덱스입니다.|인수에 대해 지정 된 값 *ColumnNumber* 최대 결과 집합의 열 수를 초과 합니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY003|잘못 된 응용 프로그램 버퍼 형식|인수 *TargetType* SQL_C_DEFAULT 아니고 데이터 형식이 잘못 되었습니다.|  
-|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때 **SQLBindCol** 호출 되었습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서 * StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
+|HY010|함수 시퀀스 오류입니다.|DM ()는 비동기적으로 실행 중인 함수를 호출한 연관 된 연결 핸들에 대 한는 *StatementHandle*합니다. 이 비동기 함수 계속 실행 될 때 **SQLBindCol** 호출 되었습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.<br /><br /> DM ()를 비동기적으로 실행 중인 함수에 대해 호출 되었습니다는 *StatementHandle* 호출 되었을 때 계속 실행 하 고 있습니다.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, 또는 **SQLSetPos** 가 대 한 호출에서  *StatementHandle* SQL_NEED_DATA를 반환 합니다. 이 함수는 모든 실행 시 데이터 매개 변수 또는 열에 대 한 데이터를 보내기 전에 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 대해 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.<br /><br /> DM ()는 드라이버에서 ODBC 2. *x* 드라이버는 *ColumnNumber* 인수는 0이 고, 인수에 대해 지정 된 값으로 설정 된 *BufferLength* 수준이 4 없습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
@@ -148,7 +148,7 @@ SQLRETURN SQLBindCol(
 ## <a name="binding-columns"></a>열 바인딩  
  응용 프로그램이 호출 하는 열을 바인딩하려면 **SQLBindCol** 열 번호, 유형, 주소, 및 데이터 버퍼의 길이 및 길이/표시기 버퍼의 주소를 전달 합니다. 이러한 주소를 사용 하는 방법에 대 한 자세한 내용은 "버퍼 주소를"이이 섹션의 뒷부분에 나오는 참조 하세요. 바인딩 열에 대 한 자세한 내용은 참조 [를 사용 하 여 SQLBindCol](../../../odbc/reference/develop-app/using-sqlbindcol.md)합니다.  
   
- 이러한 버퍼를 사용 하는 지연 됩니다. 즉, 응용 프로그램 바인딩합니다에서 **SQLBindCol** 하지만 드라이버는 다른 기능과 액세스-즉 **SQLBulkOperations**, **SQLFetch**, ** SQLFetchScroll**, 또는 **SQLSetPos**합니다. 포인터에 지정 되었는지 확인 해야 하는 응용 프로그램의 **SQLBindCol** 바인딩을 적용 동안은 계속 유효 합니다. 이 응용 프로그램에서는 이러한 포인터를 사용할 수 없게 하는 경우-예를 들어 버퍼 해제-및 다음에 유효한 것으로 예상 하는 함수 호출, 그 결과가 정의 되지 않습니다. 자세한 내용은 참조 [지연 버퍼](../../../odbc/reference/develop-app/deferred-buffers.md)합니다.  
+ 이러한 버퍼를 사용 하는 지연 됩니다. 즉, 응용 프로그램 바인딩합니다에서 **SQLBindCol** 하지만 드라이버는 다른 기능과 액세스-즉 **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, 또는 **SQLSetPos**합니다. 포인터에 지정 되었는지 확인 해야 하는 응용 프로그램의 **SQLBindCol** 바인딩을 적용 동안은 계속 유효 합니다. 이 응용 프로그램에서는 이러한 포인터를 사용할 수 없게 하는 경우-예를 들어 버퍼 해제-및 다음에 유효한 것으로 예상 하는 함수 호출, 그 결과가 정의 되지 않습니다. 자세한 내용은 참조 [지연 버퍼](../../../odbc/reference/develop-app/deferred-buffers.md)합니다.  
   
  새 바인딩 대체 될, 해당 열이 바인딩된, 또는 문을 해제 될 때까지 바인딩이 적용 됩니다.  
   
@@ -258,7 +258,7 @@ SQLRETURN SQLBindCol(
   
 1.  호출 **SQLGetStmtAttr** 카드가 핸들을 가져올 수 있습니다.  
   
-2.  호출 **SQLGetDescField** 이 설명자 SQL_DESC_COUNT 필드를 가져오지 경우 값은 *ColumnNumber* SQL_DESC_COUNT, 호출의 값을 초과 하는 인수 **SQLSetDescField ** SQL_DESC_COUNT에 값을 늘리려면 다음 *ColumnNumber*합니다.  
+2.  호출 **SQLGetDescField** 이 설명자 SQL_DESC_COUNT 필드를 가져오지 경우 값은 *ColumnNumber* SQL_DESC_COUNT, 호출의 값을 초과 하는 인수 **SQLSetDescField**  SQL_DESC_COUNT에 값을 늘리려면 다음 *ColumnNumber*합니다.  
   
 3.  호출 **SQLSetDescField** 여러 번는 카드가의 다음 필드에 값을 할당 합니다.  
   

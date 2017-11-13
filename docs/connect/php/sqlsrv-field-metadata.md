@@ -53,7 +53,7 @@ sqlsrv_field_metadata( resource $stmt)
 |크기|문자 형식 필드(char(n), varchar(n), nchar(n), nvarchar(n), XML)의 문자 수입니다. 이진 형식 필드(binary(n), varbinary(n), UDT)의 바이트 수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |전체 자릿수|가변 전체 자릿수 형식(real, numeric, decimal, datetime2, datetimeoffset, time)의 전체 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
 |소수 자릿수|가변 소수 자릿수 형식(numeric, decimal, datetime2, datetimeoffset, time)의 소수 자릿수입니다. 기타 SQL Server 데이터 형식의 경우**NULL** 입니다.|  
-|Null 허용|열이 null을 허용 하는지 여부를 나타내는 열거형된 값 (**SQLSRV_NULLABLE_YES**), 열이 nullable이 아닌 (**SQLSRV_NULLABLE_NO**), 또는 열이 null을 허용 하는 경우 알려지지 않은 (** SQLSRV_NULLABLE_UNKNOWN**).|  
+|Null 허용|열이 null을 허용 하는지 여부를 나타내는 열거형된 값 (**SQLSRV_NULLABLE_YES**), 열이 nullable이 아닌 (**SQLSRV_NULLABLE_NO**), 또는 열이 null을 허용 하는 경우 알려지지 않은 ( **SQLSRV_NULLABLE_UNKNOWN**).|  
   
 다음 표에서는 각 하위 배열 키에 대한 자세한 내용을 제공합니다. 이러한 형식에 대한 자세한 내용은 SQL Server 설명서를 참조하세요.  
   

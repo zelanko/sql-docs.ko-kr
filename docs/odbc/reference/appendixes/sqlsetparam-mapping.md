@@ -26,7 +26,7 @@ ms.lasthandoff: 09/09/2017
 
 ---
 # <a name="sqlsetparam-mapping"></a>SQLSetParam 매핑
-**SQLSetParam** 위쪽에 매핑할 수는 계속 **SQLBindParameter** 에서처럼 ODBC 2.* x*합니다. 개념적으로 유사한 것 **SQLBindParam**, 드라이버 관리자를 매핑하지 않습니다 **SQLSetParam** 를 **SQLBindParam**합니다. 즉, 특정 기존 ODBC 2. *x* 의 특수 한 값을 사용 하는 드라이버 *BufferLength* (SQL_SETPARAM_VALUE_MAX) 매핑하므로 때 드라이버 관리자에서 생성 하 **SQLSetParam** 맨 위에 ** SQLBindParameter** 1로 호출 될 때 확인 하려면.* x* ODBC 응용 프로그램입니다.  
+**SQLSetParam** 위쪽에 매핑할 수는 계속 **SQLBindParameter** 에서처럼 ODBC 2. *x*합니다. 개념적으로 유사한 것 **SQLBindParam**, 드라이버 관리자를 매핑하지 않습니다 **SQLSetParam** 를 **SQLBindParam**합니다. 즉, 특정 기존 ODBC 2. *x* 의 특수 한 값을 사용 하는 드라이버 *BufferLength* (SQL_SETPARAM_VALUE_MAX) 매핑하므로 때 드라이버 관리자에서 생성 하 **SQLSetParam** 맨 위에  **SQLBindParameter** 1로 호출 될 때 확인 하려면. *x* ODBC 응용 프로그램입니다.  
   
  에 대 한 호출  
   

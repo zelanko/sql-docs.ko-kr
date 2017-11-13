@@ -65,14 +65,14 @@ SQLRETURN SQLGetInfo(
  경우 *InfoValuePtr* 이 NULL 이면 *StringLengthPtr* 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 여전히 가리키는 버퍼에서 반환할 수 *InfoValuePtr*합니다.  
   
  *BufferLength*  
- [입력] 길이 \* *InfoValuePtr* 버퍼입니다. 경우에 값 * \*InfoValuePtr* 문자 문자열이 아닙니다 경우 *InfoValuePtr* 가 null 포인터는 *BufferLength* 인수는 무시 됩니다. 드라이버를 가정 하는 크기 * \*InfoValuePtr* SQLUSMALLINT 인지에 따라 SQLUINTEGER는 *정보 항목*합니다. 경우 * \*InfoValuePtr* 는 유니코드 문자열 (호출할 때 **SQLGetInfoW**), *BufferLength* SQLSTATE HY090 (그렇지 않은 경우 인수는 짝수; 이어야 합니다 문자열 또는 버퍼 길이가 잘못 되었습니다)가 반환 됩니다.  
+ [입력] 길이 \* *InfoValuePtr* 버퍼입니다. 경우에 값  *\*InfoValuePtr* 문자 문자열이 아닙니다 경우 *InfoValuePtr* 가 null 포인터는 *BufferLength* 인수는 무시 됩니다. 드라이버를 가정 하는 크기  *\*InfoValuePtr* SQLUSMALLINT 인지에 따라 SQLUINTEGER는 *정보 항목*합니다. 경우  *\*InfoValuePtr* 는 유니코드 문자열 (호출할 때 **SQLGetInfoW**), *BufferLength* SQLSTATE HY090 (그렇지 않은 경우 인수는 짝수; 이어야 합니다 문자열 또는 버퍼 길이가 잘못 되었습니다)가 반환 됩니다.  
   
  *StringLengthPtr*  
  [출력] 바이트 (문자 데이터에 대 한 null 종결 문자 제외)의 총 수를 반환 하는 버퍼에 대 한 포인터를 반환 하려면 사용할 수 있는 **InfoValuePtr*합니다.  
   
- 문자 데이터를 반환할 수 있는 바이트 수 보다 크거나 같은 경우에 대 한 *BufferLength*, 정보 \* *InfoValuePtr* 잘립니다 * BufferLength* null 종료의 길이 만큼 뺀 길이로 바이트 문자 및 드라이버에 의해 null로 종료 합니다.  
+ 문자 데이터를 반환할 수 있는 바이트 수 보다 크거나 같은 경우에 대 한 *BufferLength*, 정보 \* *InfoValuePtr* 잘립니다  *BufferLength* null 종료의 길이 만큼 뺀 길이로 바이트 문자 및 드라이버에 의해 null로 종료 합니다.  
   
- 다른 모든 유형의 데이터를 값에 대 한 *BufferLength* 는 무시 됩니다 드라이버의 크기를 가정 하 고 \* *InfoValuePtr* 인지 SQLUSMALLINT SQLUINTEGER에 따라는 * 정보 항목*합니다.  
+ 다른 모든 유형의 데이터를 값에 대 한 *BufferLength* 는 무시 됩니다 드라이버의 크기를 가정 하 고 \* *InfoValuePtr* 인지 SQLUSMALLINT SQLUINTEGER에 따라는  *정보 항목*합니다.  
   
 ## <a name="return-value"></a>반환 값  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR 또는 SQL_INVALID_HANDLE 합니다.  
@@ -86,12 +86,12 @@ SQLRETURN SQLGetInfo(
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *InfoValuePtr* 충분히 요청된 된 모든 정보를 반환할 수 없습니다. 따라서 정보가 잘렸습니다. 잘리지 않은 형태의 요청된 된 정보의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08003|연결이 열려 있지 않습니다|(DM)에서 요청 된 정보의 유형을 *정보 항목* 열린 연결이 필요 합니다. ODBC에서 예약 된 정보 유형 중 SQL_ODBC_VER만 열려 있는 연결 없이 반환할 수 있습니다.|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버 연결 된 데이터 원본 간에 통신 링크 하지 못했습니다.|  
-|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에 * \*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
+|HY000|일반 오류|오류가 없는 특정 SQLSTATE 했습니다는 대 한 구현 별 SQLSTATE 없는 정의 된 발생 했습니다. 반환 된 오류 메시지 **SQLGetDiagRec** 에  *\*MessageText* 버퍼에는 오류와 원인에 설명 합니다.|  
 |HY001|메모리 할당 오류가 발생 했습니다.|드라이버가 실행 또는 함수 완료를 지 원하는 데 필요한 메모리를 할당할 수 없습니다.|  
 |HY010|함수 시퀀스 오류입니다.|(DM) **SQLExecute**, **SQLExecDirect**, 또는 **SQLMoreResults** 에 대 한 호출 된는 *StatementHandle* SQL_PARAM_DATA_ 반환 사용할 수 있습니다. 모든 스트리밍된 매개 변수에 대 한 데이터를 검색 하기 전에이 함수가 호출 되었습니다.|  
 |HY013|메모리 관리 오류입니다.|기본 메모리 개체에 액세스할 수 없습니다, 가능한 메모리 부족 때문에 함수 호출을 처리할 수 없습니다.|  
 |HY024|잘못 된 특성 값|DM ()는 *정보 항목* 인수 SQL_DRIVER_HSTMT, 였으며 가리키는 값 *InfoValuePtr* 유효한 문 핸들이 없습니다.<br /><br /> DM ()는 *정보 항목* 인수 SQL_DRIVER_HDESC, 였으며 가리키는 값 *InfoValuePtr* 유효한 설명자 핸들 없습니다.|  
-|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 대해 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.<br /><br /> (DM)에 대 한 지정 된 값 *BufferLength* 홀수, 및 * \*InfoValuePtr* 유니코드 데이터 형식의 했습니다.|  
+|HY090|문자열 또는 버퍼 길이가 잘못 되었습니다.|인수에 대해 지정 된 값 (DM) *BufferLength* 0 보다 작습니다.<br /><br /> (DM)에 대 한 지정 된 값 *BufferLength* 홀수, 및  *\*InfoValuePtr* 유니코드 데이터 형식의 했습니다.|  
 |HY096|정보 유형 범위를 벗어났습니다.|인수에 대해 지정 된 값 *정보 항목* ODBC 드라이버에서 지 원하는 버전에 대해 올바르지 않습니다.|  
 |HY117|연결 알 수 없는 트랜잭션 상태로 인해 일시 중단 됩니다. 만 연결을 끊고 읽기 전용 함수를 사용할 수 있습니다.|(DM) 일시 중단 된 상태에 대 한 자세한 내용은 참조 [SQLEndTran 함수](../../../odbc/reference/syntax/sqlendtran-function.md)합니다.|  
 |HYC00|구현 되지 않았습니다 (옵션) 필드|인수에 대해 지정 된 값 *정보 항목* 드라이버에서 지원 되지 않는 드라이버 관련 값이 있습니다.|  
@@ -527,7 +527,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_CU_PROCEDURE_INVOCATION = ODBC 프로시저 호출 문에 카탈로그 지원 됩니다.  
   
- SQL_CU_TABLE_DEFINITION = 모든 테이블 정의 문에 카탈로그 지원 됩니다: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE **, 및 **놓기 보기**합니다.  
+ SQL_CU_TABLE_DEFINITION = 모든 테이블 정의 문에 카탈로그 지원 됩니다: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , 및 **놓기 보기**합니다.  
   
  SQL_CU_INDEX_DEFINITION = 모든 인덱스 정의 문에 카탈로그 지원 됩니다: **CREATE INDEX** 및 **DROP INDEX**합니다.  
   
@@ -1005,7 +1005,7 @@ SQLRETURN SQLGetInfo(
   
  응용 프로그램 사용자는 데이터를 선택 하는 방법을 확인 하려면이 사용할 수 있습니다. 예를 들어, ORACLE 및 Microsoft Access 사용자가 일반적으로 생각 하는 데이터 테이블에 저장 하는 반면 Xbase 사용자 파일에 저장 되어 있는 데이터 인지 종종 있습니다.  
   
- 응용 프로그램 창을 표시할 수는 사용자가 Xbase 데이터 소스를 선택 **파일 열기** 일반 대화 상자, 사용자가 Microsoft Access 또는 ORACLE 데이터 소스를 선택 하는 경우 응용 프로그램 사용자 지정을 표시할 수 ** 테이블 선택** 대화 상자.  
+ 응용 프로그램 창을 표시할 수는 사용자가 Xbase 데이터 소스를 선택 **파일 열기** 일반 대화 상자, 사용자가 Microsoft Access 또는 ORACLE 데이터 소스를 선택 하는 경우 응용 프로그램 사용자 지정을 표시할 수  **테이블 선택** 대화 상자.  
   
  SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1(ODBC 3.0)  
  드라이버에서 지원 되는 정방향 전용 커서의 특성을 설명 하는 SQLUINTEGER 비트 마스크입니다. 특성의 첫 번째 하위 집합을 포함 하는이 비트 마스크 두 번째 하위 집합 SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2를 참조 하십시오.  
@@ -1433,7 +1433,7 @@ SQLRETURN SQLGetInfo(
   
  SQL_SU_PROCEDURE_INVOCATION = ODBC 프로시저 호출 문에 스키마를 지원 합니다.  
   
- SQL_SU_TABLE_DEFINITION = 모든 테이블 정의 문에 스키마는 지원: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE **, 및 **놓기 보기**합니다.  
+ SQL_SU_TABLE_DEFINITION = 모든 테이블 정의 문에 스키마는 지원: **CREATE TABLE**, **CREATE VIEW**, **ALTER TABLE**, **DROP TABLE** , 및 **놓기 보기**합니다.  
   
  SQL_SU_INDEX_DEFINITION = 모든 인덱스 정의 문에 스키마는 지원: **CREATE INDEX** 및 **DROP INDEX**합니다.  
   
