@@ -21,8 +21,7 @@ caps.latest.revision: 37
 author: guyinacube
 ms.author: asaxton
 manager: erikre
-ms.workload: On Demand
-ms.translationtype: MT
+ms.translationtype: HT
 ms.sourcegitcommit: f3481fcc2bb74eaf93182e6cc58f5a06666e10f4
 ms.openlocfilehash: ff14ec3cc15847f7285690869ec9544f01d57708
 ms.contentlocale: ko-kr
@@ -74,4 +73,3 @@ ms.lasthandoff: 08/09/2017
  [기본 모드 보고서 서버에 대 한 권한 부여](../../reporting-services/security/granting-permissions-on-a-native-mode-report-server.md)  
   
   
-
