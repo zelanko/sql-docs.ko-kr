@@ -374,6 +374,6 @@ function FormatErrors( $errors )
 }
 ?>
 ```
-Http://localhost/testsql.php (MacOS에서 http://localhost:8080/testsql.php) 브라우저를 가리킵니다. 이제 SQL Server/Azure SQL 데이터베이스에 연결할 수 있습니다.
+http://localhost/testsql.php (MacOS에서 http://localhost:8080/testsql.php) 브라우저를 가리킵니다. 이제 SQL Server/Azure SQL 데이터베이스에 연결할 수 있습니다.
 
 
