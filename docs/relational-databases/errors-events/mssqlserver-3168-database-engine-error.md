@@ -53,7 +53,7 @@ ms.lasthandoff: 06/22/2017
 -   사용자가 동일한 서버에서 수행한 백업에서 시스템 데이터베이스를 복원하려고 합니다. 그러나 백업을 수행할 당시에는 서버가 다른 빌드를 실행하고 있었습니다. 즉, 백업을 수행한 이후에 서버가 업그레이드되었습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
-이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[You cannot restore system database backups to a different build of SQL Server](http://support.microsoft.com/kb/264474)(시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다.)"를 참조하세요.  
+이 시나리오에는 복원 프로세스가 마지막 수단으로 이미 시도되었습니다. 자세한 내용은 "[시스템 데이터베이스 백업을 SQL Server의 다른 빌드로 복원할 수 없습니다](http://support.microsoft.com/kb/264474)"를 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목:  
 [시스템 데이터베이스 백업 및 복원&#40;SQL Server&#41;](~/relational-databases/backup-restore/back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  

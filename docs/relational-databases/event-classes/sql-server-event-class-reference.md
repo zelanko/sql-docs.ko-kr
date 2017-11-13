@@ -29,7 +29,7 @@ ms.lasthandoff: 06/22/2017
 
 ---
 # <a name="sql-server-event-class-reference"></a>SQL Server 이벤트 클래스 참조
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] lets you record events as they occur in an instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. 기록된 이벤트는 추적 정의에 있는 이벤트 클래스의 인스턴스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서는 **추적 파일 속성** 대화 상자의 **이벤트 선택** 탭에서 이벤트 클래스와 해당 이벤트 범주를 사용할 수 있습니다.  
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 를 사용하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 인스턴스에서 이벤트가 발생할 경우 해당 이벤트를 기록할 수 있습니다. 기록된 이벤트는 추적 정의에 있는 이벤트 클래스의 인스턴스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]에서는 **추적 파일 속성** 대화 상자의 **이벤트 선택** 탭에서 이벤트 클래스와 해당 이벤트 범주를 사용할 수 있습니다.  
   
  다음 표에서는 이벤트 범주를 설명하고 연관된 이벤트 클래스를 나열합니다.  
   
