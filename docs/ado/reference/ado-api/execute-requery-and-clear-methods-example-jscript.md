@@ -1,12 +1,15 @@
 ---
 title: "실행 하 고, Requery 메서드 예제 (JScript)의 선택을 취소 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: reference
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:

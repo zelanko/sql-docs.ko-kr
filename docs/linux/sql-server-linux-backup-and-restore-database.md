@@ -28,7 +28,7 @@ ms.lasthandoff: 10/02/2017
 다음 예에서 `sqlcmd` 로컬 SQL Server 인스턴스에 연결 하 고 전체 라는 사용자 데이터베이스의 백업을 가져갑니다 `demodb`합니다.
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
+sqlcmd -S localhost -U SA -Q "BACKUP DATABASE [demodb] TO DISK = N'/var/opt/mssql/data/demodb.bak' WITH NOFORMAT, NOINIT, NAME = 'demodb-full', SKIP, NOREWIND, NOUNLOAD, STATS = 10"
 ```
 
 명령을 실행 하면 SQL Server 암호를 입력 합니다. 암호를 입력 한 후 셸 백업 진행률 결과 반환 합니다. 예를 들어
@@ -55,16 +55,15 @@ BACKUP DATABASE successfully processed 298 pages in 0.064 seconds (36.376 MB/sec
 다음 예에서 `sqlcmd` 로컬 SQL Server 인스턴스에 연결 하 고 비상 로그 백업입니다. 비상 로그 백업이 완료 된 후 데이터베이스를 복원 상태로 됩니다. 
 
 ```bash
-sqlcmd -H localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO  DISK = N'/var/opt/mssql/data/demodb_LogBackup_2016-11-14_18-09-53.bak' WITH NOFORMAT, NOINIT,  NAME = N'demodb_LogBackup_2016-11-14_18-09-53', NOSKIP, NOREWIND, NOUNLOAD,  NORECOVERY ,  STATS = 5"
 ```
-
 
 ## <a name="restore-with-sqlcmd"></a>Sqlcmd를 사용 하 여 복원
 
 다음 예에서 `sqlcmd` SQL Server의 로컬 인스턴스에 연결 하 고 데이터베이스를 복원 합니다.
 
 ```bash
-sqlcmd -H localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
+sqlcmd -S localhost -U SA -Q "RESTORE DATABASE [demodb] FROM  DISK = N'/var/opt/mssql/data/demodb.bak' WITH  FILE = 1,  NOUNLOAD,  REPLACE,  STATS = 5"
 ```
 
 ## <a name="backup-and-restore-with-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS)를 사용한 백업 및 복원

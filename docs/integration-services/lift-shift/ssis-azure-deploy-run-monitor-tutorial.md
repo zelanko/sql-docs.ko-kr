@@ -36,7 +36,7 @@ SQL Server Management Studio를 사용 하 여 Azure SQL 데이터베이스 서�
 
 2. **서버에 연결**합니다. 에 **서버에 연결** 대화 상자에서 다음 정보를 입력 합니다.
 
-   | 설정       | 제안 된 값 | Description | 
+   | 설정       | 제안 된 값 | Description | 
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **서버 유형** | 데이터베이스 엔진 | 이 값은 필수 사항입니다. |
    | **서버 이름** | 정규화 된 서버 이름 | 이 형식 이름 이어야 합니다: **mysqldbserver.database.windows.net**합니다. 서버 이름이 필요한 경우 참조 [Azure에서 SSISDB 카탈로그 데이터베이스에 연결](ssis-azure-connect-to-catalog-database.md)합니다. |

@@ -1,12 +1,15 @@
 ---
 title: "데이터 정의 언어 및 보안 (ADOX) ADO 확장 | Microsoft Docs"
 ms.prod: sql-non-specified
+ms.prod_service: drivers
+ms.service: 
+ms.component: guide
 ms.technology:
 - drivers
 ms.custom: 
 ms.date: 01/19/2017
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c6579b5b-a93e-48c5-8847-743fc4590cd2
