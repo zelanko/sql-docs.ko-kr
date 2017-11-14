@@ -1,9 +1,13 @@
 ---
 title: "테이블 형식 모델 디자이너 | Microsoft Docs"
 ms.date: 10/19/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
+ms.custom: 
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular

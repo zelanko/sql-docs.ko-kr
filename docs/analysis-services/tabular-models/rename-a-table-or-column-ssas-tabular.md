@@ -2,9 +2,12 @@
 title: "테이블 또는 열 (SSAS 테이블 형식) 이름 바꾸기 | Microsoft Docs"
 ms.custom: 
 ms.date: 05/22/2017
-ms.prod: sql-server-2016
+ms.prod: sql-non-specified
+ms.prod_service: analysis-services
+ms.service: 
+ms.component: tabular-models
 ms.reviewer: 
-ms.suite: 
+ms.suite: sql
 ms.technology:
 - analysis-services
 - analysis-services/multidimensional-tabular
