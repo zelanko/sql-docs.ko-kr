@@ -1,0 +1,6 @@
+# [CLR 사용자 정의 함수](clr-user-defined-functions.md)
+# [CLR 스칼라 반환 함수](clr-scalar-valued-functions.md)
+# [CLR 테이블 반환 함수](clr-table-valued-functions.md)
+# [CLR 사용자 정의 집계-함수 호출](clr-user-defined-aggregate-invoking-functions.md)
+# [CLR 사용자 정의 집계-요구 사항](clr-user-defined-aggregates-requirements.md)
+# [CLR 사용자 정의 집계](clr-user-defined-aggregates.md)

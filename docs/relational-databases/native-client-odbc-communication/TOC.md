@@ -1,0 +1,6 @@
+# [SQL Server (ODBC)와 통신](communicating-with-sql-server-odbc.md)
+# [연결 핸들 할당](allocating-a-connection-handle.md)
+# [환경 핸들 할당](allocating-an-environment-handle.md)
+# [데이터 원본 (ODBC)에 연결](connecting-to-a-data-source-odbc.md)
+# [데이터 원본에서 연결 끊기](disconnecting-from-a-data-source.md)
+# [SQL Server Native Client ODBC 데이터 원본](sql-server-native-client-odbc-data-sources.md)

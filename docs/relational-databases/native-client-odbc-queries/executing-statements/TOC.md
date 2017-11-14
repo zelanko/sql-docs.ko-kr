@@ -1,0 +1,6 @@
+# [문 실행 (ODBC)](executing-statements-odbc.md)
+# [문의 일괄 처리](batches-of-statements.md)
+# [직접 실행](direct-execution.md)
+# [ISO 옵션의 효과](effects-of-iso-options.md)
+# [준비 된 실행](prepared-execution.md)
+# [프로시저](procedures.md)

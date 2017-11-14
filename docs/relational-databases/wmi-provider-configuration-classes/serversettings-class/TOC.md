@@ -1,0 +1,8 @@
+# [GeneralFlags 속성 (ServerSettings 클래스)](generalflags-property-serversettings-class.md)
+# [GetCurrentCertificate 메서드 (ServerSettings 클래스)](getcurrentcertificate-method-serversettings-class.md)
+# [InstanceName 속성 (ServerSettings 클래스)](instancename-property-serversettings-class.md)
+# [NumberOfFlags 속성 (ServerSettings 클래스)](numberofflags-property-serversettings-class.md)
+# [RemoveCertificate 메서드 (ServerSettings 클래스)](removecertificate-method-serversettings-class.md)
+# [ServerSettings 클래스](serversettings-class.md)
+# [SetCurrentCertificate 메서드 (ServerSettings 클래스)](setcurrentcertificate-method-serversettings-class.md)
+# [SetDefaults 메서드 (ServerSettings 클래스)](setdefaults-method-serversettings-class.md)

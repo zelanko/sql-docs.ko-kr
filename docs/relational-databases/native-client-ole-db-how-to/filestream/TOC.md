@@ -1,0 +1,5 @@
+# [Filestream 및 OLE DB](filestream-and-ole-db.md)
+# [IBCPSession (OLE DB)를 사용 하 여 파일에 대 한 FILESTREAM 열 읽기](read-a-filestream-column-to-file-using-ibcpsession-ole-db.md)
+# [ISequentialStream (OLE DB)를 사용 하 여 FILESTREAM 열에서 데이터를 검색 합니다.](retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db.md)
+# [IRowsetFastUpload (OLE DB)를 사용 하 여 FILESTREAM 열에 데이터 보내기](send-data-to-a-filestream-column-using-irowsetfastupload-ole-db.md)
+# [FILESTREAM-ICommandText 변수에 바인딩된 ISequentialStream 데이터 보내기](send-data-to-filestream-isequentialstream-bound-to-icommandtext.md)

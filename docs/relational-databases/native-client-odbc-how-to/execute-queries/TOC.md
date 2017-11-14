@@ -1,0 +1,5 @@
+# [쿼리 실행 방법 도움말 항목 (ODBC)](executing-queries-how-to-topics-odbc.md)
+# [직접 문 실행 (ODBC)](execute-a-statement-directly-odbc.md)
+# [준비 문 및 실행 (ODBC)](prepare-and-execute-a-statement-odbc.md)
+# [커서 옵션 설정 (ODBC)](set-cursor-options-odbc.md)
+# [(ODBC) 문을 사용 하 여](use-a-statement-odbc.md)

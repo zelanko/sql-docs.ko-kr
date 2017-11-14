@@ -1,0 +1,5 @@
+# [FlagName 속성 (ServerSettingsGeneralFlag 클래스)](flagname-property-serversettingsgeneralflag-class.md)
+# [FlagValue 속성 (ServerSettingsGeneralFlag 클래스)](flagvalue-property-serversettingsgeneralflag-class.md)
+# [InstanceName 속성 (ServerSettingsGeneralFlag 클래스)](instancename-property-serversettingsgeneralflag-class.md)
+# [ServerSettingsGeneralFlag 클래스](serversettingsgeneralflag-class.md)
+# [SetValue 메서드 (ServerSettingsGeneralFlag 클래스)](setvalue-method-serversettingsgeneralflag-class.md)

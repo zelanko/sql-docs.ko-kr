@@ -1,0 +1,6 @@
+# [ClientSettingsGeneralFlag 클래스](clientsettingsgeneralflag-class.md)
+# [FlagIndex 속성 (ClientSettingsGeneralFlag 클래스)](flagindex-property-clientsettingsgeneralflag-class.md)
+# [FlagName 속성 (ClientSettingsGeneralFlag 클래스)](flagname-property-clientsettingsgeneralflag-class.md)
+# [FlagValue 속성 (ClientSettingsGeneralFlag 클래스)](flagvalue-property-clientsettingsgeneralflag-class.md)
+# [InstanceName 속성 (ClientSettingsGeneralFlag 클래스)](instancename-property-clientsettingsgeneralflag-class.md)
+# [SetValue 메서드 (ClientSettingsGeneralFlag 클래스)](setvalue-method-clientsettingsgeneralflag-class.md)
